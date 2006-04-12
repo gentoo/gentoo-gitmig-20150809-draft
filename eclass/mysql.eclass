@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.28 2006/04/11 17:23:42 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.29 2006/04/12 21:15:17 chtekk Exp $
 # $ID: $
 
 # Author: Francesco Riosa <vivo at gentoo.org>
@@ -77,7 +77,7 @@ mysql_init_vars() {
 
 	MY_SHAREDSTATEDIR=${MY_SHAREDSTATEDIR:-"/usr/share/mysql"}
 	MY_SYSCONFDIR=${MY_SYSCONFDIR="/etc/mysql"}
-	MY_LIBDIR=${MY_LIBDIR="/usr/$(get_libdir)/mysql$"}
+	MY_LIBDIR=${MY_LIBDIR="/usr/$(get_libdir)/mysql"}
 	MY_LOCALSTATEDIR=${MY_LOCALSTATEDIR="/var/lib/mysql"}
 	MY_LOGDIR=${MY_LOGDIR="/var/log/mysql"}
 	MY_INCLUDEDIR=${MY_INCLUDEDIR="/usr/include/mysql"}
@@ -272,14 +272,12 @@ mysql_src_compile() {
 			fi
 		fi
 
-		if ! mysql_version_is_at_least "5.00.00.00" ; then
-			if mysql_version_is_at_least "4.01.00.00" ; then
-				myconf="${myconf} --with-charset=utf8"
-				myconf="${myconf} --with-collation=utf8_general_ci"
-			else
-				myconf="${myconf} --with-charset=latin1"
-				myconf="${myconf} --with-collation=latin1_swedish_ci"
-			fi
+		if mysql_version_is_at_least "4.01.00.00" ; then
+			myconf="${myconf} --with-charset=utf8"
+			myconf="${myconf} --with-collation=utf8_general_ci"
+		else
+			myconf="${myconf} --with-charset=latin1"
+			myconf="${myconf} --with-collation=latin1_swedish_ci"
 		fi
 
 		# optional again from 2005-12-05
