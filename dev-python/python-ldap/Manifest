@@ -1,18 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8974290d72b03a624ef45e4da75ebe32 ChangeLog 5044
+MD5 12dce2ec0f1594e7702b6e0a9b708501 ChangeLog 5155
+RMD160 1283bc5b1c1a864ee6e4927d4f64173434ad35da ChangeLog 5155
+SHA256 7b1b72b401911f48c337066ef89cfb1d8106aaf50a544261e42202f39ab909d6 ChangeLog 5155
 MD5 69d713e85c4b770343fa03ed0e8c01b7 files/digest-python-ldap-2.0.10 147
+RMD160 15dcfcf7d7e82bd2bad88e77bb3a65cbb29e05ed files/digest-python-ldap-2.0.10 147
+SHA256 e66aee0e60c3fea6e8f175dc301ce1a8015a36dc630c470798d1d5219c4587b3 files/digest-python-ldap-2.0.10 147
 MD5 150055e48f2631fffd32bdb4e40b067b files/digest-python-ldap-2.0.11 147
+RMD160 9228f68eadeecd32911828fe1e8d7fd95d66fde5 files/digest-python-ldap-2.0.11 147
+SHA256 c64222112a92eb4bca07cee5eca09807faa8ef864e93ce12080d8aaab476da7e files/digest-python-ldap-2.0.11 147
 MD5 a817aea8eb27cfeb4925d7aef1a0df05 files/digest-python-ldap-2.0.6 146
+RMD160 366b048a7be355fbe19749ee5eb9a996e5413901 files/digest-python-ldap-2.0.6 146
+SHA256 0c0852ebfc3f470de935647063426dbc311cef45f96058f252968b8776c5e2d1 files/digest-python-ldap-2.0.6 146
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
+SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
 MD5 a42b1bf591212834005bfc07fae44dc9 python-ldap-2.0.10.ebuild 1537
-MD5 d6ea8238c5cf21635dce7e96f9e26bb3 python-ldap-2.0.11.ebuild 1537
+RMD160 9bcd6b554e73d6b5d4af3ee8ffe7a09854564f70 python-ldap-2.0.10.ebuild 1537
+SHA256 0d94b9d2baa10efee5f941164da622d199cec802bc300af8e18e93bf8c120ddc python-ldap-2.0.10.ebuild 1537
+MD5 0e397b956efc4e5f26a8922efe2ab419 python-ldap-2.0.11.ebuild 1534
+RMD160 19334a9358b8a55b60688edc27d5eaf1e390d73c python-ldap-2.0.11.ebuild 1534
+SHA256 651471a47d4dc0c7423f0e5d52b65c6e484cde7d6ea65c29a5dad205031603e4 python-ldap-2.0.11.ebuild 1534
 MD5 0d58c818214b1bc1e5c4f0fd7c93749e python-ldap-2.0.6.ebuild 1499
+RMD160 bc5f1f607a484afb2b6b910c8fcad22416175992 python-ldap-2.0.6.ebuild 1499
+SHA256 031f88cf84a2bff9cf7cf92efef9c3f01960a9247c639d395016c5a495251c99 python-ldap-2.0.6.ebuild 1499
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD/c5WKRy60XGEcJIRAkWvAJ0VVI043DYupDdL2/Hpyq45f51g0ACfSNDe
-sVTaeTizKwdNjBj5QkxVbWI=
-=6ilt
+iD8DBQFEPVkEugEuf3OQ0akRAn9QAJ4mWtumjs0gJsAjub0S7HUeLthVqACgnjR6
+gcU3nvx0ou6oR+DnJGTi8z8=
+=idaa
 -----END PGP SIGNATURE-----
