@@ -19,21 +19,6 @@ diff -ur sys/conf/kern.mk sys-gentoo/conf/kern.mk
  		-mno-mmx -mno-3dnow -mno-sse -mno-sse2
  INLINE_LIMIT?=	8000
  .endif
-Only in sys-gentoo/conf: kern.mk.orig
-diff -ur sys/conf/kern.pre.mk sys-gentoo/conf/kern.pre.mk
---- sys/conf/kern.pre.mk	2005-03-16 17:51:56 +0000
-+++ sys-gentoo/conf/kern.pre.mk	2005-07-21 11:08:20 +0000
-@@ -72,7 +72,8 @@
- CFLAGS+= -fno-common -finline-limit=${INLINE_LIMIT}
- CFLAGS+= --param inline-unit-growth=100
- CFLAGS+= --param large-function-growth=1000
--WERROR?= -Werror
-+# Gentoo's GCC outputs a few more warnings
-+#WERROR?= -Werror
- .endif
- 
- # XXX LOCORE means "don't declare C stuff" not "for locore.s".
-Only in sys-gentoo/conf: kern.pre.mk.orig
 diff -ur sys/dev/aic7xxx/aicasm/Makefile sys-gentoo/dev/aic7xxx/aicasm/Makefile
 --- sys/dev/aic7xxx/aicasm/Makefile	2005-02-13 07:23:32 +0000
 +++ sys-gentoo/dev/aic7xxx/aicasm/Makefile	2005-07-21 11:08:20 +0000
