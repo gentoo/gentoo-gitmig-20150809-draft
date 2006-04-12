@@ -1,0 +1,19 @@
+--- libs/libTw/libTw.c
++++ libs/libTw/libTw.c
+@@ -81,6 +81,8 @@
+ 
+ #define Min2(a,b) ((a) < (b) ? (a) : (b))
+ 
++static void DeleteAllListeners(tlistener);
++
+ #ifdef CONF_SOCKET_PTHREADS
+ 
+ typedef struct s_tw_errno {
+@@ -1221,7 +1223,6 @@
+  * closes a server connection
+  */
+ void Tw_Close(tw_d TwD) {
+-    static void DeleteAllListeners(tlistener);
+     s_tw_errno *E;
+     byte *q;
+     int i;

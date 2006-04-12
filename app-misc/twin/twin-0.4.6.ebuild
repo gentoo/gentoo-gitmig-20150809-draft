@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.6.ebuild,v 1.8 2006/02/04 04:02:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.6.ebuild,v 1.9 2006/04/12 00:10:39 vapier Exp $
 
 inherit eutils fixheadtails
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-autotools.patch
+	epatch "${FILESDIR}"/${P}-gcc.patch
 	ht_fix_file configure
 }
 
