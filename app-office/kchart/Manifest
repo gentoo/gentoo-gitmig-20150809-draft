@@ -1,40 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a866bed0946b2cadc856f21a9ac23136 ChangeLog 3736
-RMD160 8ab2920e89d0111a4b99f46cc6536b1dd65827f2 ChangeLog 3736
-SHA256 2b0af0fe200f0a0cd158ae340e76f52a95a94764d14b110bd134b28da75e5146 ChangeLog 3736
+MD5 e9aa6066f5bb49e146916b7ac3011893 ChangeLog 3853
 MD5 902823ac54984271d00a3e72454440b1 files/digest-kchart-1.4.2 250
-RMD160 c2b4361538cd32dbfd79218c5fef8e4d6818ac3f files/digest-kchart-1.4.2 250
-SHA256 40d4d888fb4050306c03d0ea47b3c6c6448301faea176ef95e616071a57aba1e files/digest-kchart-1.4.2 250
+MD5 b2c444dbd353b179d6f2f5a770240183 files/digest-kchart-1.5.0 68
 MD5 82af01b67d83c02945f1e26ae9529232 files/digest-kchart-1.5_beta1 253
-RMD160 0e78237b9b17a1c13e8f3a1031875bddec8bafdb files/digest-kchart-1.5_beta1 253
-SHA256 43ee5c0ab325495515723afb3fc2e4bc79eba3f6987fbc2dad504492e5a6e076 files/digest-kchart-1.5_beta1 253
 MD5 a08e04910037e4b3b9e9cbfb92eda61e files/digest-kchart-1.5_beta2 69
-RMD160 2a7080ad773e7a7dd0db34f5523a21240af939ee files/digest-kchart-1.5_beta2 69
-SHA256 50df51ad875d7ac8e423e0fbb5f1185aafeb523ba6d47aa5a74c7088290335b6 files/digest-kchart-1.5_beta2 69
 MD5 f01ddda79b7e0afa602b27c09ae05217 files/digest-kchart-1.5_rc1 72
-RMD160 e96aec58348575d06ee4dc88ec0ee1aaa61416f3 files/digest-kchart-1.5_rc1 72
-SHA256 652e84b739d2576136b16e2dd8a23fdf713a49112ca3419921a84974f4851a39 files/digest-kchart-1.5_rc1 72
 MD5 b2be4f48d6c3a22f2b019b15f3901e52 kchart-1.4.2.ebuild 908
-RMD160 b72b6bd533a6e76ef0ebcf1537edfc124b7180bf kchart-1.4.2.ebuild 908
-SHA256 b026bc8550f4b9e076a6d97064a36d5bdc8164c2600d631d86388f878a8d66b4 kchart-1.4.2.ebuild 908
+MD5 ccd720eaac7e71e78e57335104c8a7ac kchart-1.5.0.ebuild 1096
 MD5 ccd720eaac7e71e78e57335104c8a7ac kchart-1.5_beta1.ebuild 1096
-RMD160 4863d90f18fc7e4c105760376bf9f35ae752db10 kchart-1.5_beta1.ebuild 1096
-SHA256 f7cee35d86e41cf89a288ec0e37fc150ac0ad40376f62e522824e4e3c639cbef kchart-1.5_beta1.ebuild 1096
 MD5 3eb68f06d95c02b23d1a4c497fc89b5d kchart-1.5_beta2.ebuild 1096
-RMD160 2447355f3563c44b952d8d18506c679f18af73c9 kchart-1.5_beta2.ebuild 1096
-SHA256 c1db9310a95b8e916be0c421ccce300f6e6cb7067019603c5d90a1e088209ecc kchart-1.5_beta2.ebuild 1096
 MD5 b91fc610273349b8050d275714e73c0c kchart-1.5_rc1.ebuild 1100
-RMD160 db0dd1efa5b3e0416ff37f5ea41bc9db88e32a6e kchart-1.5_rc1.ebuild 1100
-SHA256 2a3caa9cac336173cbbebbc88c608039f243500607e72b4bae07cbbec997f7c0 kchart-1.5_rc1.ebuild 1100
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
-SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEOAkwoFw4q70f3SsRAjH1AKCAufCvnXigT8tquKzC1sph13FbrQCgjfIK
-Q0nIkrb8s+DY2u2syiRBsrA=
-=Ae3X
------END PGP SIGNATURE-----

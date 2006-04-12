@@ -1,67 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8ba6c91fc460948078a29573d0ffadbb ChangeLog 22303
-RMD160 c15e8754365f2a400780806c15cb6f4f007596d1 ChangeLog 22303
-SHA256 e69384dbe67b6c32eadfa1d356347526d6500964ef0b25cb54dcb99ea1012955 ChangeLog 22303
+MD5 e914db0eca0b3bf50fbf4706a637465a ChangeLog 22422
 MD5 6ee3768e50296eb2a8158093ee518133 files/CAN-2005-0064.patch 829
-RMD160 1cbb2387398e03e2f44a64e345c1d6cbe765b926 files/CAN-2005-0064.patch 829
-SHA256 a08221584863aea7a4361dcd6e0e8d6b4b273891cea1e64fd54ae21fa0c0550c files/CAN-2005-0064.patch 829
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-koffice-1.4.2-r4 68
-RMD160 4fbdb279d7cdc49eeb424654474ff4b15dce2c5b files/digest-koffice-1.4.2-r4 68
-SHA256 7791e992f4d48e943f3d513459c63a8e5280d4052a33f729f6ef1a8be3b9cc81 files/digest-koffice-1.4.2-r4 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-koffice-1.4.2-r6 68
-RMD160 4fbdb279d7cdc49eeb424654474ff4b15dce2c5b files/digest-koffice-1.4.2-r6 68
-SHA256 7791e992f4d48e943f3d513459c63a8e5280d4052a33f729f6ef1a8be3b9cc81 files/digest-koffice-1.4.2-r6 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-koffice-1.4.2-r7 68
-RMD160 4fbdb279d7cdc49eeb424654474ff4b15dce2c5b files/digest-koffice-1.4.2-r7 68
-SHA256 7791e992f4d48e943f3d513459c63a8e5280d4052a33f729f6ef1a8be3b9cc81 files/digest-koffice-1.4.2-r7 68
+MD5 b2c444dbd353b179d6f2f5a770240183 files/digest-koffice-1.5.0 68
 MD5 82af01b67d83c02945f1e26ae9529232 files/digest-koffice-1.5_beta1 253
-RMD160 0e78237b9b17a1c13e8f3a1031875bddec8bafdb files/digest-koffice-1.5_beta1 253
-SHA256 43ee5c0ab325495515723afb3fc2e4bc79eba3f6987fbc2dad504492e5a6e076 files/digest-koffice-1.5_beta1 253
 MD5 a08e04910037e4b3b9e9cbfb92eda61e files/digest-koffice-1.5_beta2 69
-RMD160 2a7080ad773e7a7dd0db34f5523a21240af939ee files/digest-koffice-1.5_beta2 69
-SHA256 50df51ad875d7ac8e423e0fbb5f1185aafeb523ba6d47aa5a74c7088290335b6 files/digest-koffice-1.5_beta2 69
 MD5 f01ddda79b7e0afa602b27c09ae05217 files/digest-koffice-1.5_rc1 72
-RMD160 e96aec58348575d06ee4dc88ec0ee1aaa61416f3 files/digest-koffice-1.5_rc1 72
-SHA256 652e84b739d2576136b16e2dd8a23fdf713a49112ca3419921a84974f4851a39 files/digest-koffice-1.5_rc1 72
 MD5 5f3683b6817935e4f6269bd64398c479 files/kexi-1.4.2-gcc41.patch 1094
-RMD160 ffc028b187ec7437aab156f3e575b945b390845c files/kexi-1.4.2-gcc41.patch 1094
-SHA256 7c0790dacdc090b8cb176a8289facc471d6ef4ea2c93bb6ac985e6497fac1eef files/kexi-1.4.2-gcc41.patch 1094
 MD5 7d57f921f9a3827f925a3457413914b8 files/krita-1.4.2-gcc41.patch 656
-RMD160 38a6dddfb244c2b65525edd8bd219854397eff8a files/krita-1.4.2-gcc41.patch 656
-SHA256 4f7fdc791cc6f811ed375741d1e1cc97eec7fbc72f0b23a22e0520afdf37f108 files/krita-1.4.2-gcc41.patch 656
 MD5 f1f58cce115f40fcba31a4976b61d260 files/kspread-1.4.2-gcc41.patch 451
-RMD160 c0d17048a7b1dcb14cd00910a400287652c2b2f1 files/kspread-1.4.2-gcc41.patch 451
-SHA256 67d8e5722ad1aadab5811397c68aacd1d8a1d9d5363f95488231f00bb1fd047a files/kspread-1.4.2-gcc41.patch 451
 MD5 32ff061a8fba0e82d069a8a6fa6932e0 files/post-1.3-koffice-CAN-2005-3193.diff 6760
-RMD160 756f949cfcbf9fd2ce9237504d9c596970308f88 files/post-1.3-koffice-CAN-2005-3193.diff 6760
-SHA256 efd30eca9230905c884925bd6f6264e885ab2610d7f56a7a65db8f7ab48f548a files/post-1.3-koffice-CAN-2005-3193.diff 6760
 MD5 7185dbf038a28ae5e5e7b7256bd7fa51 koffice-1.4.2-r4.ebuild 1605
-RMD160 07b8cfc53eb3ef0ef7bcb9d90f1e848a93461c28 koffice-1.4.2-r4.ebuild 1605
-SHA256 0a51d4008b0fd02683789e169b32a1074f574fdc8dbcd3f306424d893014ec9d koffice-1.4.2-r4.ebuild 1605
 MD5 b3d9b72fb4595e51d7b48af3c1f1cf9c koffice-1.4.2-r6.ebuild 1605
-RMD160 b94567f9333ef8ff8857839a57e112cc912c06a3 koffice-1.4.2-r6.ebuild 1605
-SHA256 deed07bcb9cd35d1b76bc6418853043cdc70faaad50454acdee83fc28b7129fd koffice-1.4.2-r6.ebuild 1605
 MD5 6a1d2ec12afd0fcb1117d7f8e22d7152 koffice-1.4.2-r7.ebuild 1732
-RMD160 b20211d3779bc019cbb6623db1cabf77c534ce55 koffice-1.4.2-r7.ebuild 1732
-SHA256 db4b667d4c4abf14ae06932614aea18e7af2119dbb651b7f298b33f5e2437a3f koffice-1.4.2-r7.ebuild 1732
+MD5 2989d63d43edc39b629204e17f863f03 koffice-1.5.0.ebuild 1706
 MD5 36b3cd2605fdb937061e52d6a24a3e69 koffice-1.5_beta1.ebuild 1707
-RMD160 6ab87d258cde19198bb0548535a80bd15db9d96b koffice-1.5_beta1.ebuild 1707
-SHA256 b52439350460d7edba90b28540d1d998d145c4b28cbb9bdc9d27ba434f6c95e8 koffice-1.5_beta1.ebuild 1707
 MD5 7127d511c3e24cd0aac27e1b9fe2ca9c koffice-1.5_beta2.ebuild 1703
-RMD160 8c06eed8bb8ad4cdc53b6dbaf6f43ec7fa6ed765 koffice-1.5_beta2.ebuild 1703
-SHA256 fa8a6476291509c4f3695610168849a26855becb584799caa75b97ae0096e7a9 koffice-1.5_beta2.ebuild 1703
 MD5 11bf8c947481d8c85df86a2d6a1dd4ea koffice-1.5_rc1.ebuild 1778
-RMD160 cafb73923e777e2fa54aad57102596b357544366 koffice-1.5_rc1.ebuild 1778
-SHA256 0b9dc13b132954325192f6182a62201ed7cfd54ddf4244ccc863c83c7543dfde koffice-1.5_rc1.ebuild 1778
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
-SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEOBVcoFw4q70f3SsRAjt1AJsHkfi+rVkrdRDmaAV4YvmnOy3WAACfZ9HR
-X4HLUOVcqs5st2TtDtKG8Hk=
-=/p4M
------END PGP SIGNATURE-----

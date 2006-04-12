@@ -1,40 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1515663433ba2577f0c4e5927e1201f1 ChangeLog 3724
-RMD160 9c9bb9ff80a908425afa94161d6f6280df9bd7a5 ChangeLog 3724
-SHA256 89fa524af9e0ed6430cce424bd009be8a77193c6408a0ec1ec3d0398b1d836b2 ChangeLog 3724
+MD5 4adc75a3b9d52cc15669f21cd2e5ddbb ChangeLog 3849
 MD5 902823ac54984271d00a3e72454440b1 files/digest-kpresenter-1.4.2 250
-RMD160 c2b4361538cd32dbfd79218c5fef8e4d6818ac3f files/digest-kpresenter-1.4.2 250
-SHA256 40d4d888fb4050306c03d0ea47b3c6c6448301faea176ef95e616071a57aba1e files/digest-kpresenter-1.4.2 250
+MD5 b2c444dbd353b179d6f2f5a770240183 files/digest-kpresenter-1.5.0 68
 MD5 82af01b67d83c02945f1e26ae9529232 files/digest-kpresenter-1.5_beta1 253
-RMD160 0e78237b9b17a1c13e8f3a1031875bddec8bafdb files/digest-kpresenter-1.5_beta1 253
-SHA256 43ee5c0ab325495515723afb3fc2e4bc79eba3f6987fbc2dad504492e5a6e076 files/digest-kpresenter-1.5_beta1 253
 MD5 a08e04910037e4b3b9e9cbfb92eda61e files/digest-kpresenter-1.5_beta2 69
-RMD160 2a7080ad773e7a7dd0db34f5523a21240af939ee files/digest-kpresenter-1.5_beta2 69
-SHA256 50df51ad875d7ac8e423e0fbb5f1185aafeb523ba6d47aa5a74c7088290335b6 files/digest-kpresenter-1.5_beta2 69
 MD5 f01ddda79b7e0afa602b27c09ae05217 files/digest-kpresenter-1.5_rc1 72
-RMD160 e96aec58348575d06ee4dc88ec0ee1aaa61416f3 files/digest-kpresenter-1.5_rc1 72
-SHA256 652e84b739d2576136b16e2dd8a23fdf713a49112ca3419921a84974f4851a39 files/digest-kpresenter-1.5_rc1 72
 MD5 51b7bbc480bdd8687058bfa6aa393ebb kpresenter-1.4.2.ebuild 1087
-RMD160 21d74a7f0ddcba536487364e93ec22b3abc39b4c kpresenter-1.4.2.ebuild 1087
-SHA256 753101ee013c1ff41c66e8cef3804f85e5441b15297419ec1557008076e1b8ec kpresenter-1.4.2.ebuild 1087
+MD5 1fd49bcf56fb436e2af790bfc4a83998 kpresenter-1.5.0.ebuild 1179
 MD5 1fd49bcf56fb436e2af790bfc4a83998 kpresenter-1.5_beta1.ebuild 1179
-RMD160 b737d7c178b77e0df530f9532af67ac6330b3288 kpresenter-1.5_beta1.ebuild 1179
-SHA256 31295f6077532402d37a1bf6f2d49da0206a20aba3bbb70cb46743452b2e3987 kpresenter-1.5_beta1.ebuild 1179
 MD5 bee6d48e07f1c2621e55c405909d6ddb kpresenter-1.5_beta2.ebuild 1179
-RMD160 ba317cbb76f16744177eb7a8dfda2b8c91b42e7c kpresenter-1.5_beta2.ebuild 1179
-SHA256 35e13ce255c36c748bb43e2eef86165c875f4d659a0ae2425793d3e9d6132f23 kpresenter-1.5_beta2.ebuild 1179
 MD5 e0b4c270c7180055308efe0ce02f79bc kpresenter-1.5_rc1.ebuild 1183
-RMD160 eadc355bc70454ecb6dc0cd5de4bb5407310fce8 kpresenter-1.5_rc1.ebuild 1183
-SHA256 1730d4440b6e7918caddf347d02b8c06b36aca247405f4cec09c4a12d02203ad kpresenter-1.5_rc1.ebuild 1183
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
-SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEOBNjoFw4q70f3SsRAvxOAKCrIOUZUPk+B0S4nYUTPOmdgFDzGgCg0C1e
-hTHmTN/yZyJBUpCXSSKhHKM=
-=czuv
------END PGP SIGNATURE-----

@@ -1,40 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 915d90588a59a7a9c9e50dd99e6568ed ChangeLog 3584
-RMD160 a90448ed4a4edd09e4c3e4123d1bd12285443a69 ChangeLog 3584
-SHA256 31350dff563478e89724af15d54c68a489b816455941797c8ab9bd36686c2a1b ChangeLog 3584
+MD5 dbcbe463636612da490e48167f0b4cbe ChangeLog 3699
 MD5 902823ac54984271d00a3e72454440b1 files/digest-kugar-1.4.2 250
-RMD160 c2b4361538cd32dbfd79218c5fef8e4d6818ac3f files/digest-kugar-1.4.2 250
-SHA256 40d4d888fb4050306c03d0ea47b3c6c6448301faea176ef95e616071a57aba1e files/digest-kugar-1.4.2 250
+MD5 b2c444dbd353b179d6f2f5a770240183 files/digest-kugar-1.5.0 68
 MD5 82af01b67d83c02945f1e26ae9529232 files/digest-kugar-1.5_beta1 253
-RMD160 0e78237b9b17a1c13e8f3a1031875bddec8bafdb files/digest-kugar-1.5_beta1 253
-SHA256 43ee5c0ab325495515723afb3fc2e4bc79eba3f6987fbc2dad504492e5a6e076 files/digest-kugar-1.5_beta1 253
 MD5 a08e04910037e4b3b9e9cbfb92eda61e files/digest-kugar-1.5_beta2 69
-RMD160 2a7080ad773e7a7dd0db34f5523a21240af939ee files/digest-kugar-1.5_beta2 69
-SHA256 50df51ad875d7ac8e423e0fbb5f1185aafeb523ba6d47aa5a74c7088290335b6 files/digest-kugar-1.5_beta2 69
 MD5 f01ddda79b7e0afa602b27c09ae05217 files/digest-kugar-1.5_rc1 72
-RMD160 e96aec58348575d06ee4dc88ec0ee1aaa61416f3 files/digest-kugar-1.5_rc1 72
-SHA256 652e84b739d2576136b16e2dd8a23fdf713a49112ca3419921a84974f4851a39 files/digest-kugar-1.5_rc1 72
 MD5 ee48955eae30f71e2331f2b92438a578 kugar-1.4.2.ebuild 857
-RMD160 fb55ef41b593659742f77fcc2124ad5fc84434b0 kugar-1.4.2.ebuild 857
-SHA256 3477c9e8fdf9ec7c1402e2a00186a8a6dff87bb77eb6841373d1aa4571fdd52f kugar-1.4.2.ebuild 857
+MD5 b774a204d14051e9b9aa161667a48dde kugar-1.5.0.ebuild 851
 MD5 b774a204d14051e9b9aa161667a48dde kugar-1.5_beta1.ebuild 851
-RMD160 796393ac85127b96144fab7d1fb0479f6ac1d39d kugar-1.5_beta1.ebuild 851
-SHA256 07887a7b46999fb3f8586d73c5181383407f23745f4fdd7e48a4535db24cc727 kugar-1.5_beta1.ebuild 851
 MD5 68ac0537803745d4a81b0840b044d25d kugar-1.5_beta2.ebuild 851
-RMD160 cf33a8c75a48b36d7d9b7e3304afa454b70d441a kugar-1.5_beta2.ebuild 851
-SHA256 0fccf6b215312d969f14eb90c11fb881db40fc96743e61edba9d41017709740a kugar-1.5_beta2.ebuild 851
 MD5 cbe6fa961c7aa4a65880ed708c5a27a0 kugar-1.5_rc1.ebuild 855
-RMD160 813d55baf2e61c79f027ae2d2c2e6df67ae020c2 kugar-1.5_rc1.ebuild 855
-SHA256 8e22aa49c513e63fca1c409454f866dc69097ec49c11d7af1979b1ccc5eac1bc kugar-1.5_rc1.ebuild 855
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
-SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEOBGJoFw4q70f3SsRAupAAJ9bMbGzOECxSqiGKWim8btqmHRkmwCfeT3N
-wLKdMlJ0qSuKzNHqhc2/pMM=
-=AN97
------END PGP SIGNATURE-----

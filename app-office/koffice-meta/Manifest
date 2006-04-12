@@ -1,40 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7d4697625b4d9415035e40607b9617a6 ChangeLog 4250
-RMD160 061569fe2b6d7522476b2546256225b1b976867f ChangeLog 4250
-SHA256 0285024a6f158b84768e2790afdcdf35441c56be46f6771aacc3cb93da4d569d ChangeLog 4250
+MD5 0938b6ffc9cc4d23e3e1e9e8acb87c40 ChangeLog 4379
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-koffice-meta-1.4.2 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-koffice-meta-1.4.2 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-koffice-meta-1.4.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-koffice-meta-1.5.0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-koffice-meta-1.5_beta1 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-koffice-meta-1.5_beta1 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-koffice-meta-1.5_beta1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-koffice-meta-1.5_beta2 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-koffice-meta-1.5_beta2 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-koffice-meta-1.5_beta2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-koffice-meta-1.5_rc1 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-koffice-meta-1.5_rc1 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-koffice-meta-1.5_rc1 0
 MD5 ce70c764a24d97876befe4715202f25e koffice-meta-1.4.2.ebuild 1144
-RMD160 3b5c5cd4bfcd1f095d48d28f85e69b32affa33e2 koffice-meta-1.4.2.ebuild 1144
-SHA256 1e977d70647c34002f5065afcf1c35f3d8a3edafcd4d3228ba261c1863387268 koffice-meta-1.4.2.ebuild 1144
+MD5 dbe17e4f71fc77433ea3376582603b6d koffice-meta-1.5.0.ebuild 1184
 MD5 dbe17e4f71fc77433ea3376582603b6d koffice-meta-1.5_beta1.ebuild 1184
-RMD160 ad75d025cc09488fa0ce078c34f18c7102072ec7 koffice-meta-1.5_beta1.ebuild 1184
-SHA256 74b102575211ded5ea9753ecfb06e440e976c66a685dd9ca4fd63648245c7041 koffice-meta-1.5_beta1.ebuild 1184
 MD5 e38218bfc32c72b426ed1f9cac1d1b1c koffice-meta-1.5_beta2.ebuild 1184
-RMD160 d812b78d7df42cdc7150bfbe68a1556fff6c7691 koffice-meta-1.5_beta2.ebuild 1184
-SHA256 2d27e9e89538f42994d00889e9bde269c4d77626e8e7b069b219c7fdf8d9a089 koffice-meta-1.5_beta2.ebuild 1184
 MD5 ebb3f05b4f5a27afda96f3be4d7f40fa koffice-meta-1.5_rc1.ebuild 1188
-RMD160 04ccb311e9ad4b06ed7bbaafcc9ffa9b4078e9d9 koffice-meta-1.5_rc1.ebuild 1188
-SHA256 b6e46ecd6b8c8ac8790a30cc23d5370b29c6830b619f86ceee354828b8c6a004 koffice-meta-1.5_rc1.ebuild 1188
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
-SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEOBSJoFw4q70f3SsRAnWJAKDU8S8xe6P+xI/bKH1dBCGYhHuzgACgvZBt
-hxTvOSgL99zkgVl11M514M0=
-=NscE
------END PGP SIGNATURE-----

@@ -1,34 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b17e87486c56b5103aca1258ebff5c88 ChangeLog 1001
-RMD160 945550da1455867b0256fa8e5df7baf8188ac66f ChangeLog 1001
-SHA256 4e801eebaeebcdddc5038bf99c1bbe8e85c1b73bf17340161b34e665e90fa62e ChangeLog 1001
+MD5 f299dea261fa3dfbd8b4714b8ebfe5fe ChangeLog 1118
+MD5 b2c444dbd353b179d6f2f5a770240183 files/digest-kplato-1.5.0 68
 MD5 82af01b67d83c02945f1e26ae9529232 files/digest-kplato-1.5_beta1 253
-RMD160 0e78237b9b17a1c13e8f3a1031875bddec8bafdb files/digest-kplato-1.5_beta1 253
-SHA256 43ee5c0ab325495515723afb3fc2e4bc79eba3f6987fbc2dad504492e5a6e076 files/digest-kplato-1.5_beta1 253
 MD5 a08e04910037e4b3b9e9cbfb92eda61e files/digest-kplato-1.5_beta2 69
-RMD160 2a7080ad773e7a7dd0db34f5523a21240af939ee files/digest-kplato-1.5_beta2 69
-SHA256 50df51ad875d7ac8e423e0fbb5f1185aafeb523ba6d47aa5a74c7088290335b6 files/digest-kplato-1.5_beta2 69
 MD5 f01ddda79b7e0afa602b27c09ae05217 files/digest-kplato-1.5_rc1 72
-RMD160 e96aec58348575d06ee4dc88ec0ee1aaa61416f3 files/digest-kplato-1.5_rc1 72
-SHA256 652e84b739d2576136b16e2dd8a23fdf713a49112ca3419921a84974f4851a39 files/digest-kplato-1.5_rc1 72
+MD5 eefb570dca3e3c1a6f83ae776e51305e kplato-1.5.0.ebuild 757
 MD5 eefb570dca3e3c1a6f83ae776e51305e kplato-1.5_beta1.ebuild 757
-RMD160 613ef056291984bb388627920eaf6158734420ad kplato-1.5_beta1.ebuild 757
-SHA256 a7ab584d9959937f035ddca6e1fe566586d1c290047b3bad50e3430fba38e348 kplato-1.5_beta1.ebuild 757
 MD5 4c7171adbbf94bce6a3af2c15185a264 kplato-1.5_beta2.ebuild 757
-RMD160 c670ed97149edb68966d4d8a69ff6a4f609c1971 kplato-1.5_beta2.ebuild 757
-SHA256 85d029b9d74ba9d79d37c581270fafb75570552df3ddc0dedfc31ea396fa279d kplato-1.5_beta2.ebuild 757
 MD5 95b9f5dec0a3df89a1450771d954b621 kplato-1.5_rc1.ebuild 761
-RMD160 5e8b7fcf16663f83c6877dc8fe4e8715e7c8e002 kplato-1.5_rc1.ebuild 761
-SHA256 b99122391fe03e4d1c92a20188570cfb60c99c49aa06a60fe7a5d5a9fc1f4a6a kplato-1.5_rc1.ebuild 761
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
-SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEOBAUoFw4q70f3SsRAjlzAJ47R2pbQPFA9OWGOg+Nj7iBK1bgQgCdFDU1
-R8KmrKLT6wIDcwlGpO2oCQg=
-=c2Sr
------END PGP SIGNATURE-----
