@@ -1,0 +1,12 @@
+http://bugs.gentoo.org/128247
+--- scanelf.c
++++ scanelf.c
+@@ -1683,7 +1683,7 @@ static void parseargs(int argc, char *ar
+ 		load_ld_so_conf(0, "/etc/ld.so.conf");
+ 	if (scan_ldpath) scanelf_ldpath();
+ 	if (scan_envpath) scanelf_envpath();
+-	if (!from_file && ttyname(0) == NULL)
++	if (!from_file && optind == argc && ttyname(0) == NULL)
+ 		from_file = "-";
+ 	if (from_file) {
+ 		scanelf_from_file(from_file);

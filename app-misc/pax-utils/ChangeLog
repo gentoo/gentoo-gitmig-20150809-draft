@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.61 2006/03/30 13:13:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.62 2006/04/12 04:01:11 vapier Exp $
+
+*pax-utils-0.1.11-r1 (12 Apr 2006)
+
+  12 Apr 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/pax-utils-0.1.11.patch, +pax-utils-0.1.11-r1.ebuild:
+  Fix scanelf hang due to grep-style changes with stdin #128247 by Matteo Azzali.
 
 *pax-utils-0.1.11 (30 Mar 2006)
 
