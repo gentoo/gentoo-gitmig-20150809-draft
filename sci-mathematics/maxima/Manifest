@@ -1,9 +1,21 @@
-MD5 0b4c1d7d1db2db9f9c27ed927af1506f ChangeLog 5626
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b81d16cacb806b94d84a2b855f9e85fc ChangeLog 5825
 MD5 6957a9bafd71a24b58e148bb2ee58257 files/50maxima-gentoo.el 346
 MD5 6f3becd603f999b2bb7488753ec07518 files/digest-maxima-5.9.1 65
 MD5 6f3becd603f999b2bb7488753ec07518 files/digest-maxima-5.9.1-r5 65
+MD5 801d6f51244585c2fa72877f708e9843 files/maxima-5.9.1-fix-clisp-getpid.patch 473
+MD5 3fdd1a597381634159c90b916ede48ae files/maxima-5.9.1-no-kill-minus-one.patch 871
 MD5 9d2fde2c70ca34c55c220ac2e46fe463 files/maxima-5.9.1-unicode-fix.patch 9157
 MD5 55d928e715074355a442baf0934487de files/maxima-emacs.patch 826
-MD5 65aeae0558c1a592484ff36436d84116 maxima-5.9.1-r5.ebuild 2379
+MD5 f653050981b2fed1501454602f59ad11 maxima-5.9.1-r5.ebuild 2571
 MD5 a5bd93bd68dec962956ea5ed64b5c276 maxima-5.9.1.ebuild 2532
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD4DBQFEPJTP/NoSW7FuNV8RArpGAJQKQ8WjjLNQRPuTC8ubCFhDqiLZAKCTV6wE
+GV5LtW3Po0KRSTIT2TeURQ==
+=tD/L
+-----END PGP SIGNATURE-----

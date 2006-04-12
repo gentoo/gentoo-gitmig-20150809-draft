@@ -1,0 +1,12 @@
+--- maxima-5.9.1/src/server.lisp.orig	2006-04-06 22:28:19.000000000 -0700
++++ maxima-5.9.1/src/server.lisp	2006-04-06 22:37:00.000000000 -0700
+@@ -70,7 +70,8 @@
+ (deff getpid (symbol-function
+ 	      ;; Decide at load time which function to use.
+ 	      (or (and (memq :unix *features*)
+-		       (find-symbol "PROGRAM-ID" "SYS"))
++           (or (find-symbol "PROCESS-ID" "SYS")
++               (find-symbol "PROGRAM-ID" "SYS")))
+ 		  'getpid-from-environment)))
+ 
+ #+cmu

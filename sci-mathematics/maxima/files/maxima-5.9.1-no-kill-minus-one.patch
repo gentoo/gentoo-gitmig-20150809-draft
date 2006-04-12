@@ -1,0 +1,24 @@
+--- maxima-5.9.1/interfaces/xmaxima/Tkmaxima/RunMaxima.tcl.orig	2004-06-21 15:46:32.000000000 -0700
++++ maxima-5.9.1/interfaces/xmaxima/Tkmaxima/RunMaxima.tcl	2006-04-04 22:33:51.000000000 -0700
+@@ -451,13 +451,18 @@
+ proc CMkill {  signal pid } {
+     global maxima_priv tcl_platform
+ 
+-    # Windows pids can be negative
+     if {[string is int $pid]} {
+-	gui status "Signaling $pid with $signal"
++        # Windows pids can be negative
+ 	if {$tcl_platform(platform) == "windows" } {
++	    gui status "Signaling $pid with $signal"
+ 	    exec $maxima_priv(kill) $signal $pid
+ 	} else {
+-	    exec $maxima_priv(kill) $signal $pid
++            if {$pid > 1} {
++	        gui status "Signaling $pid with $signal"
++		exec $maxima_priv(kill) $signal $pid
++            } else {
++	        gui status "Bad PID $pid!! Refusing to send signal $signal"
++            }
+ 	}
+     }
+ }

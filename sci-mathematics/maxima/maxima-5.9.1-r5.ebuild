@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.1-r5.ebuild,v 1.3 2006/01/29 19:42:31 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.1-r5.ebuild,v 1.4 2006/04/12 06:16:35 wormo Exp $
 
 inherit eutils elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 AECA"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE="cmucl clisp sbcl tetex emacs auctex"
 
 DEPEND="tetex? ( virtual/tetex )
@@ -27,6 +27,9 @@ RDEPEND=">=dev-lang/tk-8.3.3
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/maxima-${PV}-unicode-fix.patch
+	# next 2 patches fix xmaxmima-kills-everything problem (Bug #111062)
+	epatch "${FILESDIR}"/maxima-${PV}-fix-clisp-getpid.patch
+	epatch "${FILESDIR}"/maxima-${PV}-no-kill-minus-one.patch
 	cd "${S}"/interfaces/emacs/emaxima
 	epatch "${FILESDIR}"/maxima-emacs.patch
 }
