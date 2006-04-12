@@ -1,4 +1,4 @@
-MD5 c3393ba920b796f3d6fc6efbcecded12 ChangeLog 19286
+MD5 6f3dd4cfa3246d55e23029c8edb34734 ChangeLog 19397
 MD5 2a4dc345919a4094ead16d7a122e40bf files/2.2.5/gnomerc 235
 MD5 d0cb338160e3be8790524af8071cc4df files/2.2.5/pam.d/gdm 380
 MD5 89cc8ab9525284af6babcb9c86122443 files/2.2.5/pam.d/gdmconfig 288
@@ -17,6 +17,6 @@ MD5 427dde842f39e8008ac1bb9afed23a00 files/gdm-2.8-CVE-2006-1057.patch 3670
 MD5 7f2ef4108eac825ee4b666f53b92e369 gdm-2.14.1.ebuild 4361
 MD5 06ae905e1c548b97c7c4d22a35c2d77c gdm-2.2.5.4-r5.ebuild 4688
 MD5 57c0a6f28f964d41ed6595024438b7aa gdm-2.8.0.3.ebuild 3924
-MD5 419d87fff754a530deb9ad85ee1db513 gdm-2.8.0.7-r1.ebuild 3994
+MD5 884bb210f04e3adb134293425ca78fb9 gdm-2.8.0.7-r1.ebuild 3991
 MD5 cbd0f292e5cfc3271386b503391f03a8 gdm-2.8.0.7.ebuild 3885
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
