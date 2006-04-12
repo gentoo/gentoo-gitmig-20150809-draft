@@ -1,7 +1,7 @@
 # /lib/rcscripts/addons/dm-crypt-start.sh
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dm-crypt-start.sh,v 1.5 2005/05/21 06:10:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dm-crypt-start.sh,v 1.6 2006/04/12 02:52:43 vapier Exp $
 
 # Setup mappings for an individual mount/swap
 #
@@ -52,7 +52,7 @@ dm-crypt-execute-checkfs() {
 			done
 			eend ${ret}
 		else
-			einfo "You have to install app-crypt/gpg first"
+			einfo "You have to install app-crypt/gnupg first"
 		fi
 	fi
 	splash svc_input_end checkfs
