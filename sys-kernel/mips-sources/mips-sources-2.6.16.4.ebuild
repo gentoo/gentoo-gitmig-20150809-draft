@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.16.3.ebuild,v 1.1 2006/04/11 17:50:05 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.16.4.ebuild,v 1.1 2006/04/12 20:25:27 kumba Exp $
 
 
 # INCLUDED:
