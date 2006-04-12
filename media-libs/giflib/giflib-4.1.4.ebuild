@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.4.ebuild,v 1.12 2005/11/27 17:25:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.4.ebuild,v 1.13 2006/04/12 14:36:34 flameeyes Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="Library to handle, display and manipulate GIF images"
 HOMEPAGE="http://sourceforge.net/projects/libungif/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/libungif/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc-macos ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="rle X"
 
 DEPEND="X? ( || ( ( x11-libs/libXt x11-libs/libX11 x11-libs/libICE x11-libs/libSM ) virtual/x11 ) )
@@ -19,6 +19,7 @@ DEPEND="X? ( || ( ( x11-libs/libXt x11-libs/libX11 x11-libs/libICE x11-libs/libS
 
 src_unpack() {
 	unpack ${A}
+	elibtoolize
 	epunt_cxx
 }
 

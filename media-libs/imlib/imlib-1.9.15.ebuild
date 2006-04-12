@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15.ebuild,v 1.2 2005/12/17 03:22:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15.ebuild,v 1.3 2006/04/12 14:38:09 flameeyes Exp $
 
 inherit eutils gnome.org libtool
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.enlightenment.org/Libraries/Imlib.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="gtk static"
 
 RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )
