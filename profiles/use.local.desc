@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1840 2006/04/12 00:42:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1841 2006/04/12 07:57:10 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -668,6 +668,7 @@ media-gfx/maya:bundled-libs - Use the bundled versions of libs rather than syste
 media-gfx/maya:maya-shaderlibrary - Install the maya shader library
 media-gfx/optipng:ext-png - Link with the system libpng, rather than the bundled optimised version.
 media-gfx/optipng:ext-zlib - Link with the system zlib, rather than the bundled version optimised specifically for use with png.
+media-gfx/pixie:openexr - build OpenEXR display module
 media-gfx/pornview:mplayer - Enables mplayer support
 media-gfx/sane-frontends:gimp - Build a plugin for the GIMP
 media-gfx/showimg:kipi - Support for the KDE Image Plugin Interface.
