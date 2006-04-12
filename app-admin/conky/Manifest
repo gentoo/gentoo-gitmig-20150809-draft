@@ -1,52 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 04862a98648c74dc6da5c9a60c41095d ChangeLog 4914
-RMD160 b52c65c98c247bf12d63da0ce20f8d8ff3e223ce ChangeLog 4914
-SHA256 b44ef78837f7adeb1021bdd4462d1f6790b1cafbe4bce34c9232053b63341aa9 ChangeLog 4914
+MD5 5890908d774dd3444af454573cf7a609 ChangeLog 5015
 MD5 daec6353bf84e62c4edd4d82d00cd350 conky-1.3.4-r2.ebuild 2662
-RMD160 cb44f4d794c053ce408b57c4efadb8ada3239204 conky-1.3.4-r2.ebuild 2662
-SHA256 a5f19b74b6edcbf2b1e307239add9960b8e2b3e01f8f32e1da90e2cc79ab1736 conky-1.3.4-r2.ebuild 2662
 MD5 18290bbc2ed560becdfe5c1eed21f28a conky-1.3.5-r1.ebuild 2247
-RMD160 a37dedf494b4b89e7656a175590b4b971fa2e6f0 conky-1.3.5-r1.ebuild 2247
-SHA256 b59fc2bfcf438818650a43063a569d69e927cb040f52bb24c812bd22b4c37222 conky-1.3.5-r1.ebuild 2247
 MD5 c3175ce58ebe987a364225b0e57247d1 conky-1.4.0-r1.ebuild 2557
-RMD160 5dd5357a15f8b6b8ede0aa42e7d06bb454bb032c conky-1.4.0-r1.ebuild 2557
-SHA256 0006c6fbe8f4921b95e91471d35d0f88d8818fb99240c16296e6a740249e5462 conky-1.4.0-r1.ebuild 2557
-MD5 a9e940fc1638b722bd8c27a27b26af4f conky-1.4.1.ebuild 2677
-RMD160 a3eb28168c2e1d944bf9ca7edbc34c5dcd1aade1 conky-1.4.1.ebuild 2677
-SHA256 6cf039085b14cdcda700680f1260fdf357f482473735c91990ef04d67cd1fe93 conky-1.4.1.ebuild 2677
+MD5 05f78f1fbc20a4cc5d1de8a1638bbbfd conky-1.4.1.ebuild 2678
 MD5 d9296cc5c3fc007026e784f5825b153e files/conky-1.3.4-arraybounds.patch 1560
-RMD160 dcb1c9b195a03e19b2e477dbc149228930588b52 files/conky-1.3.4-arraybounds.patch 1560
-SHA256 4d1eb88c938305b680e4880a8b0f34264b72d4083ce660ef8afdaead8a752710 files/conky-1.3.4-arraybounds.patch 1560
 MD5 3f930afeab86d38688b8c7fe8a610bc7 files/conky-1.3.4-miscbug.patch 2591
-RMD160 dd4495070c8c5acc6ba60328536325b126e8ef92 files/conky-1.3.4-miscbug.patch 2591
-SHA256 5ebd3da731900f6db25c6cc1a3dbbb71d33e458b9f4d9b3fb1771bb7abdc218b files/conky-1.3.4-miscbug.patch 2591
 MD5 2ecd81682f750b475c15c805a96b497f files/conky-sigaction.patch 408
-RMD160 17519cf444661e3c227103fed5b3c1f611f98f8d files/conky-sigaction.patch 408
-SHA256 59cd8f7a8634f6ec89370db16dff6c75156ada06459bc4725514e8f328546335 files/conky-sigaction.patch 408
 MD5 c5c1fb804afb4bd1255b602c8894a317 files/digest-conky-1.3.4-r2 64
-RMD160 9f59088f6ea3f519eb67f2ae7e798fb72e7366e6 files/digest-conky-1.3.4-r2 64
-SHA256 c2ba6df2c3b68c39c7ba6ab81d23388e515bf9c9095bd0e6ed9df03c36625312 files/digest-conky-1.3.4-r2 64
 MD5 2441f16c8370649ea372b69c895f0bd1 files/digest-conky-1.3.5-r1 64
-RMD160 b2cabf5d33d7915ced97e820f8b87a9d23887c90 files/digest-conky-1.3.5-r1 64
-SHA256 4b2c1d690aafb4a33771921f6425cdb31ca0fd8bb57a839b7ce6bda1d2aeb7c3 files/digest-conky-1.3.5-r1 64
 MD5 dd1c99f09b0ec583eadca05832f8c5ea files/digest-conky-1.4.0-r1 238
-RMD160 4743c690e8a6d5923fd3a83d25c1f021549978cb files/digest-conky-1.4.0-r1 238
-SHA256 61e0266fd2231aa366ed5009e12d8667da17bc789f026bf0dd082af02853261f files/digest-conky-1.4.0-r1 238
 MD5 bb654fedea893b35ec7677d0dd6e1912 files/digest-conky-1.4.1 238
-RMD160 576e0ac8989b47af56c33f02bf634fac1f72b230 files/digest-conky-1.4.1 238
-SHA256 97f947b3bba8cb1c747b19c99b6a4500e7b6acaa709e667c8919564669872109 files/digest-conky-1.4.1 238
 MD5 5d84594f42f7e10ad9b8a6bf8617b5bd files/portmon-mpd.patch 7143
-RMD160 fe1ccafec1903de6c9b1db99e8278c06c86be2c9 files/portmon-mpd.patch 7143
-SHA256 6952b4756e2d59d34d00896b6e1a53d6514993dd0b53312c9b464ac9ba91b4b8 files/portmon-mpd.patch 7143
 MD5 32bd4230c3ee12a8d5502d4bd57a9a3d metadata.xml 588
-RMD160 b40ff9a4903b330dcef016836e32f78709f10d0a metadata.xml 588
-SHA256 6cf91473c528b64d87041a3088f4930e270349ebdebd3c6dca06dc4943370b5a metadata.xml 588
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEPN1WmdTrptrqvGERAtj5AJ0QP/ugc+PA2RDH7YOvLNVBFfxSMgCfaCJ0
-2B0T0wAzu6dZO5IGeddQr0s=
-=MDNF
------END PGP SIGNATURE-----
