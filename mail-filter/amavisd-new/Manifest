@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4e27bdf3e8ea04f14b0c248faa24ea63 ChangeLog 17540
-RMD160 16009c8f47f771484700019b9ab179cb0da2cbef ChangeLog 17540
-SHA256 f853d2f13d8f5c1894eb8b32d03d032309e0cae9c0ce3ba0b58b42d8009f59d7 ChangeLog 17540
+MD5 bc29664f36a50e484d0f035be5d759f0 ChangeLog 17742
+RMD160 7c885da5fee60bccc20dd370a4722c230665538e ChangeLog 17742
+SHA256 5b47171cfd49d91f43887c7ec0446ca31ec2e8ec8200e472cd3d72906a87f73c ChangeLog 17742
 MD5 de7d1997fec041935959665b31b9269e amavisd-new-2.3.3-r2.ebuild 5489
 RMD160 e1957c225187e0d85652adb83e2b3fe4c4b2a559 amavisd-new-2.3.3-r2.ebuild 5489
 SHA256 883d41ea495fe942dc20078a38fc897634fab91b0a0d248f78e23dbeee876a51 amavisd-new-2.3.3-r2.ebuild 5489
@@ -19,9 +19,9 @@ SHA256 df9b91d6bbc0ff7b051e5dd155362607906969f862d9d610379d7e79b42e72bf files/am
 MD5 bfca14b90ddc76f513a6f96752003da5 files/amavisd-new-2.3.3-bsmtp-quarantine.patch 949
 RMD160 2f393892399dc29ebbc76e08e2249be59607f083 files/amavisd-new-2.3.3-bsmtp-quarantine.patch 949
 SHA256 2815958cca7bbccdf6b7aecb345cba9a25177f9158c1867880db69bef71f2036 files/amavisd-new-2.3.3-bsmtp-quarantine.patch 949
-MD5 956f3b18584ab42ac4d05ae69a962583 files/amavisd-new-2.4-amavisd.conf-gentoo.patch 5152
-RMD160 b3941e5c5b0025c4b235c67b108afebaeb9d53c4 files/amavisd-new-2.4-amavisd.conf-gentoo.patch 5152
-SHA256 eaf79bc4b583547c2dbf486715acce7916902223c955cfaf5aab80918c0f3804 files/amavisd-new-2.4-amavisd.conf-gentoo.patch 5152
+MD5 5016ca81ad91de76977e2e10bdd8f10c files/amavisd-new-2.4-amavisd.conf-gentoo.patch 5152
+RMD160 5753f65df108557cc8dcedb18696d4da2863127e files/amavisd-new-2.4-amavisd.conf-gentoo.patch 5152
+SHA256 03d03a35e9addac5f6d56ebd6e763609a3dbffcaed7f36c342dfc1f4104e12cb files/amavisd-new-2.4-amavisd.conf-gentoo.patch 5152
 MD5 94e64bc4551facaccf22f62feca69b5d files/amavisd-new-2.4-qmail-lf-workaround.patch 722
 RMD160 e7d9bfc83343ca63ffc56f85e0dd216c4a2aff30 files/amavisd-new-2.4-qmail-lf-workaround.patch 722
 SHA256 988aeb0c74c8d644f716532d8dafbe2a6ace6f0a2aa826cb4c41ece8be662c13 files/amavisd-new-2.4-qmail-lf-workaround.patch 722
@@ -40,7 +40,7 @@ SHA256 d51011aa837db802ef539a1321a4af0a4a00879d475b92fd58f3c01df7320b58 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEOsGKOpjtAl+gMRURAn8SAJ0c/MjCW9vTLDdN4e8z+KGNhPd8mQCfW/Rw
-F/0orNHwNJvg+Vsvf4uIMJ4=
-=uv5S
+iD8DBQFEPJHAQlM6RnzZP+IRAvFUAKChHumQogn/pTzQcqj8i2quNFUq6gCdH7d3
+Zjv47l9GzkA7pHBlaJdjp3s=
+=8QSg
 -----END PGP SIGNATURE-----

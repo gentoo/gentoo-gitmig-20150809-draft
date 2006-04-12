@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.81 2006/04/10 20:35:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.82 2006/04/12 05:35:49 ticho Exp $
+
+  12 Apr 2006; Andrej Kacian <ticho@gentoo.org>
+  files/amavisd-new-2.4-amavisd.conf-gentoo.patch:
+  Fixed quoting in the config patch. Bug #129636, reported by David Girault
+  <dfgweb at dfg.homedns.org>.
 
   10 Apr 2006; Jeremy Huddleston <eradicator@gentoo.org>
   amavisd-new-2.3.3-r2.ebuild, amavisd-new-2.4.0.ebuild:
