@@ -1,31 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3cd7d0653ee79c2fec70fafe0ff92930 ChangeLog 2446
-RMD160 90b8f269b992cb01d353406330975014fbaca333 ChangeLog 2446
-SHA256 9d849875d954286b6c5426ae2fa8bbcd1d4437405478de3c62ed0fdcbcc07ed7 ChangeLog 2446
-MD5 7d42c5df68ad45602fc10e19633adc89 files/digest-freebsd-mk-defs-6.0 71
-RMD160 870093a61b136c922a2da1b08a5605b79a5bab0d files/digest-freebsd-mk-defs-6.0 71
-SHA256 9fcd217b73e1816c2cfa3991a0feaf5fddc52c83d619584d0d9036ed6e84422a files/digest-freebsd-mk-defs-6.0 71
+MD5 5a4ab9b4261c94961e34d7df03fdd203 ChangeLog 2696
+RMD160 9e8ea147a10437d170a358054f8d8ce52221c8c9 ChangeLog 2696
+SHA256 ecae49fc58ccceaa86e26feec6d9251cfbcdf63add3684907d481c3be3d7be13 ChangeLog 2696
+MD5 51273e3fe46983612a5f1fed9ca2b0e3 files/digest-freebsd-mk-defs-6.0-r1 259
+RMD160 46a82d1522095372780a69656537ff13cd6e636e files/digest-freebsd-mk-defs-6.0-r1 259
+SHA256 5cb4a1ab23ba7aeafa13416f967472520b4db1da1a8ad7fc9433df48ac754ed1 files/digest-freebsd-mk-defs-6.0-r1 259
 MD5 11bb5712e904671490b5260166dfd721 files/freebsd-mk-defs-6.0-gentoo.patch 8015
 RMD160 9fe1ed2b7515a61a2365dd35c9da75c53fa0cbd4 files/freebsd-mk-defs-6.0-gentoo.patch 8015
 SHA256 2e43c5f758eeae5702a253bed7ccf2d12749446e6862e34b09f4379381aa5b39 files/freebsd-mk-defs-6.0-gentoo.patch 8015
+MD5 f2bd3fffc2716aee32086f2b87276cf6 files/freebsd-mk-defs-6.0-nowerror.patch 659
+RMD160 fd514be7e9b998f57d84efc226e16ef146c35b6f files/freebsd-mk-defs-6.0-nowerror.patch 659
+SHA256 967eedd2540e3e384f44f330d514bf4c950628ef7b9cb0cbc43ba787cf3dd1b7 files/freebsd-mk-defs-6.0-nowerror.patch 659
 MD5 05422b14418bece763450063c220e305 files/freebsd-mk-defs-6.0-strip.patch 1235
 RMD160 7aa18593c915a54aeec16b270e41fb3e3e645b33 files/freebsd-mk-defs-6.0-strip.patch 1235
 SHA256 f7e976c5f699a8c968babbcee9b813ee62fb96ea220ddf52005468973d9bb063 files/freebsd-mk-defs-6.0-strip.patch 1235
 MD5 7c6bf2b68cd685a9f76af8c0ea652599 files/freebsd-mk-defs-flex.patch 867
 RMD160 a6515de4317f00ec47765987ae3f5bbdd02bc489 files/freebsd-mk-defs-flex.patch 867
 SHA256 3373ded64bf6447a06e1a4e33acd0c3d758fee20488173ab9d6e891ed2399498 files/freebsd-mk-defs-flex.patch 867
-MD5 3113de4da1ec4e43f81e228f2403c08f freebsd-mk-defs-6.0.ebuild 794
-RMD160 46beea6aeb7cb260e1c4568113a4acdd0479f7b5 freebsd-mk-defs-6.0.ebuild 794
-SHA256 4942ce1b1357f7e5782f43dd4f6851de6e3a8384572c5aae3f1ac97c547230d0 freebsd-mk-defs-6.0.ebuild 794
+MD5 4042c616604d95ae1c0ee9c3255c463e freebsd-mk-defs-6.0-r1.ebuild 846
+RMD160 d79d0b67741eb223398151d217272861dee7891c freebsd-mk-defs-6.0-r1.ebuild 846
+SHA256 aa687a07f37b8b9d060092c1844998270bce07ec6d6376b844915ae03ea40b0b freebsd-mk-defs-6.0-r1.ebuild 846
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
 SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEME+TAiZjviIA2XgRAvnhAKDmb6PmWcUgDZbH7MJmPrT8CP6gsgCfYFgD
-/kp9WFEryNvoGG2by0YDnWk=
-=XbcA
+iD8DBQFEPQaGAiZjviIA2XgRAiYBAKC0MGXpVkBJF9kq989sPSwVY2HijwCaAh+P
+Bar7H+ssdLkzkl08C0+BRRs=
+=KOgh
 -----END PGP SIGNATURE-----
