@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 df5d83f665d81ca6e5347472628d680f ChangeLog 5253
+MD5 0984262531db128f882310a1f871c3d7 ChangeLog 5356
+RMD160 d44d118284b9a5de8fff9afa30e3106d8cfe4dcd ChangeLog 5356
+SHA256 7ce8ea02322306ae7ffa6a17efde1b454f121f5761c7a48a5ad546dae6150deb ChangeLog 5356
 MD5 249b41b845e39ccae3a4022bead066e9 files/digest-imlib-1.9.14-r3 65
+RMD160 2e77c10f3d8331fd992efd253c4df1ee2c286ef4 files/digest-imlib-1.9.14-r3 65
+SHA256 dd1f1a172261d8af0c72326364a289fc194b4e5fc5a82bbefc62071ceb0ba924 files/digest-imlib-1.9.14-r3 65
 MD5 4ef17ea1031ab4006a8c1c28fcd4d6b0 files/digest-imlib-1.9.15 65
+RMD160 517994d76af09a9e8120d1f0aff25d77f903d3d7 files/digest-imlib-1.9.15 65
+SHA256 f3de59461654485c2f6c0d3188b90426f959bdcb1e26593c4d1b52581a03c912 files/digest-imlib-1.9.15 65
 MD5 785e01e32ee3640d632ac61e28d14aa4 files/imlib-1.9.14-bound.patch 11764
+RMD160 df5062158d71f7aadbdfdbc99bacc5c4c247d51c files/imlib-1.9.14-bound.patch 11764
+SHA256 e4fc097e9e8aa893b8af40146a5c2326488d581d67378b3ecf66c7966c5f79bf files/imlib-1.9.14-bound.patch 11764
 MD5 8e77a50e166c6610a16692c5e35adfe9 files/imlib-1.9.14-m4.patch 436
+RMD160 b6fb39be5db68e2bb4ef1ad8da53483538839bf6 files/imlib-1.9.14-m4.patch 436
+SHA256 eb442e227dc20a5aa574cd1334c2e8d2062c54a4f0a45ad9418ea1e46091962f files/imlib-1.9.14-m4.patch 436
 MD5 b273d36aa60adbfaacaf6062234e4c1f files/imlib-1.9.14-sec2.patch 13040
+RMD160 432377938bd85f9974bff8f08aca6d93d310057c files/imlib-1.9.14-sec2.patch 13040
+SHA256 d67a7faa2dba8d361cf25b6fc8125c1da92f25b612bffe909daacdeda577dd57 files/imlib-1.9.14-sec2.patch 13040
 MD5 2d810b6b736520a0b248a989e9195a9e files/imlib-1.9.15-gdk_flag.patch 888
+RMD160 9ea1c287e3b24b9b29262d416fe5aa2739c7a1a9 files/imlib-1.9.15-gdk_flag.patch 888
+SHA256 971e2971a23a627c389769b5c164bdd9d1bd3644e4ab1b1929982080a16e0dee files/imlib-1.9.15-gdk_flag.patch 888
 MD5 ac3b0328aeae0bf5eac495c713277088 imlib-1.9.14-r3.ebuild 1162
-MD5 41d225d4c8b4521615ff2d565fe6adfe imlib-1.9.15.ebuild 1795
+RMD160 94bfe1cfa2055a8889f03a3d681b4ac3d51251d2 imlib-1.9.14-r3.ebuild 1162
+SHA256 536b5321e2cf4099dc3eb3e01420bbbaaff41aaf040e88c99dace934d7ae880e imlib-1.9.14-r3.ebuild 1162
+MD5 c77291331b417e618d6224c00529505b imlib-1.9.15.ebuild 1808
+RMD160 b8d3b5a216730abc8d0b3c39314ea4ff633d5d5f imlib-1.9.15.ebuild 1808
+SHA256 565234d1f5328eef899bc8eae8a8e221d74742681e8ffdc3a2651eb525026ac4 imlib-1.9.15.ebuild 1808
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDo4SZ2+ySkm8kpY0RAtQwAJ4iR2sIQIDW9vn2/6VFgk2rFjm7QQCgnJTX
-3TkFimc9suQTx3gfyLEImYk=
-=6VhK
------END PGP SIGNATURE-----
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158

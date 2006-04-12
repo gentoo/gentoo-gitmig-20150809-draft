@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0d8224583d739faf7367e68216b685a4 ChangeLog 4923
+MD5 62f65732871425256840ed2504ae1d64 ChangeLog 5026
+RMD160 532bb1062439d022e4c40d0f50286b4d470b574f ChangeLog 5026
+SHA256 f652a35679c7ba5a1e525fcb07c653f5bdc523eccf50ea5af5e26ebd461ae3e5 ChangeLog 5026
 MD5 eff137a49d638c20405a6f8c9c4ad5b5 files/digest-giflib-4.1.3 64
+RMD160 3273ad849181a236050b60eb93af142f52122fff files/digest-giflib-4.1.3 64
+SHA256 5bff8fb0362a708d9fbec8680106522428bd3fdc358fde7c7daa83df1d2c3794 files/digest-giflib-4.1.3 64
 MD5 eff137a49d638c20405a6f8c9c4ad5b5 files/digest-giflib-4.1.3-r1 64
+RMD160 3273ad849181a236050b60eb93af142f52122fff files/digest-giflib-4.1.3-r1 64
+SHA256 5bff8fb0362a708d9fbec8680106522428bd3fdc358fde7c7daa83df1d2c3794 files/digest-giflib-4.1.3-r1 64
 MD5 eff137a49d638c20405a6f8c9c4ad5b5 files/digest-giflib-4.1.3-r2 64
+RMD160 3273ad849181a236050b60eb93af142f52122fff files/digest-giflib-4.1.3-r2 64
+SHA256 5bff8fb0362a708d9fbec8680106522428bd3fdc358fde7c7daa83df1d2c3794 files/digest-giflib-4.1.3-r2 64
 MD5 9a1e5d96731f8a129a1ae6aa5e4983e2 files/digest-giflib-4.1.4 64
+RMD160 bde21885875c256dab9ebf383cb71a8d99d99ca7 files/digest-giflib-4.1.4 64
+SHA256 71a90ced26869ba09a3443c9e2646ded42655a5a8891d391b12335942631bed8 files/digest-giflib-4.1.4 64
 MD5 b9e664b4e74671655579f4fb136e4797 giflib-4.1.3-r1.ebuild 931
+RMD160 599e7069a08152373516cd71a15ace63e14251d4 giflib-4.1.3-r1.ebuild 931
+SHA256 baf02235aeaa83f3d46a7a2d80a7e10ec6fccd1e1e9629f9746e07db09c6b6ef giflib-4.1.3-r1.ebuild 931
 MD5 556bcf27151fa78d17677f951bc7f1fb giflib-4.1.3-r2.ebuild 1087
+RMD160 197596e7665fe347d9aab00a97389f8e40c47b6b giflib-4.1.3-r2.ebuild 1087
+SHA256 6b55e59d0edc19037c001c8721f5f05c0f72f79593c808b02fa6e8866f72c383 giflib-4.1.3-r2.ebuild 1087
 MD5 70abac308378271f9afde1e5dc3870a0 giflib-4.1.3.ebuild 1505
-MD5 227f3666f17c5e85308370017ec26746 giflib-4.1.4.ebuild 1199
+RMD160 93d726d95e96ea8f75af5abafb9165ee1293e225 giflib-4.1.3.ebuild 1505
+SHA256 06cebd8361c6d14f15908ad2ab2ac4177f8b77a0f2e36b635ffbc14f7f2a2c59 giflib-4.1.3.ebuild 1505
+MD5 c346303c00475df6c00e534033bac9d1 giflib-4.1.4.ebuild 1233
+RMD160 7455a2cfedac3db40d7e4c49a24fb8ec8111bd33 giflib-4.1.4.ebuild 1233
+SHA256 129eeea592294c3f8fc977bf76d60b38905e11f6dc8a7f87b428ee80bc2dcc64 giflib-4.1.4.ebuild 1233
 MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDiexygIKl8Uu19MoRAuuhAJ47vlpHCzevMhLGg6qpXdNasc1C9gCfcepY
-uYqQNl3nFUyGdQjb3vwbfOI=
-=f1qJ
------END PGP SIGNATURE-----
+RMD160 60f70b15d67f0e6aafc59833b2f0a30e30b51765 metadata.xml 161
+SHA256 e8daadc5e27e3ef1148993b5b48d96e93bc36d798a1f416693f7f8c84be427e1 metadata.xml 161
