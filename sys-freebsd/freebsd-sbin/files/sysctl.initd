@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/files/sysctl.initd,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/files/sysctl.initd,v 1.2 2006/04/12 16:07:48 flameeyes Exp $
 
 start() {
     ebegin "Setting sysctl variables"
@@ -14,7 +14,7 @@ start() {
 		name="${var%%=*}"
 		val="${var#*=}"
 		if [[ $(sysctl -N ${name} 2>/dev/null) == ${name} ]]; then
-		    sysctl ${name}=${value} &>/dev/null
+		    sysctl ${name}=${val} &>/dev/null
 		else
 		    eerror "Kernel doesn't like ${name}"
 		    success=1
