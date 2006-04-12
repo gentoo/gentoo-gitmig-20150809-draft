@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/driconf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/ChangeLog,v 1.5 2006/03/19 18:29:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/ChangeLog,v 1.6 2006/04/12 14:53:24 dang Exp $
+
+  12 Apr 2006; Daniel Gryniewicz <dang@gentoo.org> driconf-0.9.0.ebuild:
+  Mark ~amd64
 
   19 Mar 2006; <nixnut@gentoo.org> driconf-0.9.0.ebuild:
   Added ~ppc. Bug #126816
