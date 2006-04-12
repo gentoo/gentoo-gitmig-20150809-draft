@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.8 2006/04/12 14:36:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.9 2006/04/12 19:30:24 corsair Exp $
+
+  12 Apr 2006; Markus Rothe <corsair@gentoo.org> kplato-1.5_beta1.ebuild,
+  kplato-1.5_beta2.ebuild, kplato-1.5_rc1.ebuild, kplato-1.5.0.ebuild:
+  Added ~ppc64; bug #122204
 
 *kplato-1.5.0 (12 Apr 2006)
 
