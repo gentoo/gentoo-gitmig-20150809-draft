@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.9.ebuild,v 1.1 2006/04/12 00:22:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.9.ebuild,v 1.2 2006/04/12 00:42:38 vapier Exp $
 
 inherit eutils
 
@@ -13,20 +13,16 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
-IUSE=""
+IUSE="maildrop"
 
 DEPEND="virtual/qmail
 	>=net-mail/vpopmail-5.3
-	net-mail/autorespond"
+	net-mail/autorespond
+	maildrop? ( >=mail-filter/maildrop-2.0.1 )"
 RDEPEND="${DEPEND}
 	net-www/apache"
 
 S=${WORKDIR}/${MY_P}
-
-pkg_preinst() {
-	einfo "If you would like support for ezmlm mailing lists inside qmailadmin,"
-	einfo "please emerge some variant of ezmlm-idx."
-}
 
 src_unpack() {
 	unpack ${A}
@@ -48,7 +44,15 @@ src_compile() {
 	local dir_ezmlm="/usr/bin"
 	local dir_autorespond="/var/qmail/bin"
 
-	econf ${myopts} \
+	# Pass spam stuff through $@ so we get the quoting right
+	if use maildrop ; then
+		set -- --enable-modify-spam \
+			--enable-spam-command='|preline maildrop /etc/maildroprc'
+	else
+		set --
+	fi
+
+	econf \
 		--enable-valias \
 		--enable-vpopmaildir=${dir_vpopmail} \
 		--enable-htmldir=${dir_htdocs} \
@@ -68,6 +72,7 @@ src_compile() {
 		--enable-maxaliasesperpage=50 \
 		--enable-vpopuser=vpopmail \
 		--enable-vpopgroup=vpopmail \
+		"$@" \
 		|| die "econf failed"
 	emake || die
 }
@@ -75,4 +80,9 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS INSTALL README.hooks BUGS TODO ChangeLog TRANSLATORS NEWS FAQ README contrib/*
+}
+
+pkg_postinst() {
+	einfo "If you would like support for ezmlm mailing lists inside qmailadmin,"
+	einfo "please emerge some variant of ezmlm-idx."
 }
