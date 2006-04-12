@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.25 2005/12/31 09:44:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.26 2006/04/12 16:00:18 flameeyes Exp $
 
 inherit libtool eutils
 
@@ -40,7 +40,8 @@ src_install() {
 
 	dolib.so "${S}"/src-glut/.libs/libglut.so.${PV}
 	dosym libglut.so.${PV} /usr/$(get_libdir)/libglut.so || die "libraries"
-	preplib
+	dosym libglut.so.${PV} /usr/$(get_libdir)/libglut.so.${PV//\.*/} \
+		|| die "libraries"
 
 	insinto /usr/include/GL
 	doins "${S}"/include/GL/glut* || die "headers"
