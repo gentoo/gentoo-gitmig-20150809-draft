@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdaemon
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.23 2006/02/06 19:44:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.24 2006/04/12 20:23:22 tcort Exp $
+
+  12 Apr 2006; Thomas Cort <tcort@gentoo.org> libdaemon-0.10.ebuild:
+  Added ~alpha keyword.
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> libdaemon-0.8.ebuild:
   stable on amd64
