@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.4.2-r2.ebuild,v 1.2 2006/04/10 17:04:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.4.2-r2.ebuild,v 1.3 2006/04/12 05:51:57 bass Exp $
 
 inherit eutils virtualx
 
@@ -26,7 +26,8 @@ RDEPEND=">=media-libs/gstreamer-0.10.0
 	flac? ( >=media-plugins/gst-plugins-flac-0.10.0 )
 	aac? ( >=media-plugins/gst-plugins-faad-0.10.0
 			dev-python/ctypes )
-	ipod? ( >=media-libs/libgpod-0.3.2-r1 )"
+	ipod? ( >=media-libs/libgpod-0.3.2-r1 )
+	cdr? ( app-cdr/serpentine )"
 
 DEPEND="${RDEPEND}
 	>=x11-libs/gtk+-2.8
