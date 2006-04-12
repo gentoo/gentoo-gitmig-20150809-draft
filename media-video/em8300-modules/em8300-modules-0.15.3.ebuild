@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.1.ebuild,v 1.2 2005/11/22 22:37:11 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.3.ebuild,v 1.1 2006/04/12 20:15:06 arj Exp $
 
 inherit eutils linux-info
 
@@ -19,7 +19,6 @@ IUSE=""
 src_unpack () {
 
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-fix-isa.patch
 	cd ${S}
 }
 
@@ -62,6 +61,8 @@ src_install () {
 	insinto /etc/modules.d
 	newins ${FILESDIR}/modules.em8300 em8300
 
+	insinto /etc/udev/rules.d
+	newins em8300-udev.rules 15-em8300.rules
 }
 
 pkg_postinst () {
