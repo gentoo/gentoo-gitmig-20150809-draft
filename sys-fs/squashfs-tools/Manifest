@@ -1,12 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dc5cb21b1ecca107095ed8a7d9976e43 ChangeLog 4778
-RMD160 6625dbbae34a4e75e7c190e026704d9a7b4a1a40 ChangeLog 4778
-SHA256 d970e55558ac72988e0505e588e9eae760600322f26fcbb6cf37100cfe8caba0 ChangeLog 4778
-MD5 79b98e5d18ebd17486dca6802a1ac7d4 files/digest-squashfs-tools-2.1_p2-r1 66
-RMD160 0ba02053b00423cbe218c3e63325045d9e9f8671 files/digest-squashfs-tools-2.1_p2-r1 66
-SHA256 dc9411ad5faf997aa80841a1caf4b1822bad6cc4b8f05a1f99fe305f50c4cca0 files/digest-squashfs-tools-2.1_p2-r1 66
+MD5 3e042a5834e4dfaf0a25a65cd5d03f45 ChangeLog 4900
+RMD160 099fab26bef443943f17764626aeab6fbdafc3fe ChangeLog 4900
+SHA256 fc40603b8b9a7ea2db0ddbd939e1d1184ce0126d746ce9bb15dbeddc3f0e7040 ChangeLog 4900
 MD5 8e1ba2a524f27a8d5629ea4c5082d4cc files/digest-squashfs-tools-2.2_p2 65
 RMD160 4f6053e49cfe5330af1c314d1200e1099e5481bd files/digest-squashfs-tools-2.2_p2 65
 SHA256 2c9cf420b0ab35839e5306fa7be27195c7aa5079924704eac321a918fb8cabf9 files/digest-squashfs-tools-2.2_p2 65
@@ -16,19 +10,9 @@ SHA256 4b725d37a84d61672a1c02690225d8bee7fef4e46507bf378101c9e7cd73c6f8 files/di
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 RMD160 8db5ed254a6b9baf8f53368da9e71c5532a46073 metadata.xml 159
 SHA256 b6e17484225400d76c65d178bf5a10dc0a8da7f345993c2acc63d1093a77c90d metadata.xml 159
-MD5 775b98e784ddd48e7168e2e4cce3cf12 squashfs-tools-2.1_p2-r1.ebuild 952
-RMD160 ac14beda699db7b69bcdbb6fc1300bb60a195057 squashfs-tools-2.1_p2-r1.ebuild 952
-SHA256 9896ea57ed44ce93c68871532a2e3d6af0c082d06c9e74883b202d79b8bca4d8 squashfs-tools-2.1_p2-r1.ebuild 952
 MD5 72f216a02126991f82f3e8537d65718d squashfs-tools-2.2_p2.ebuild 948
 RMD160 c42318f265896959febf21539840b068a7070e07 squashfs-tools-2.2_p2.ebuild 948
 SHA256 d9f5d05b18df8b1866571e40f74b6269363c7124d0344fafe078f38b1eaefcb6 squashfs-tools-2.2_p2.ebuild 948
 MD5 4d5d5107148fd7637cac329574f69fcc squashfs-tools-3.0.ebuild 930
 RMD160 23029e662d78b189d99bec015dda6270b79b18ac squashfs-tools-3.0.ebuild 930
 SHA256 e893cc16d9710fdf8972790948eec0f85ec4b088f16283100d9f67e69aff314d squashfs-tools-3.0.ebuild 930
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEPUWbugEuf3OQ0akRAqPoAJ4/+f0NSuHG+30yiPvZi/+heI5t7wCfdbiS
-hAn6wo/WB5vc0hrJHPY6LrA=
-=NbpB
------END PGP SIGNATURE-----
