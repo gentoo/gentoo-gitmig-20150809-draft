@@ -16,15 +16,9 @@ SHA256 02e7a275423bbb0f9ce5002e485f501d4367ad21a27772ab9a16e36fc2d7d656 baselayo
 MD5 1477c97f802e043d07a97bda08cf279b baselayout-1.12.0_pre16-r3.ebuild 19378
 RMD160 09fd44e7b8e7088bd022d0aff3bf5c17d7e47758 baselayout-1.12.0_pre16-r3.ebuild 19378
 SHA256 bd5def9cf7b389e7866ae944344d95c6383aab20b46224f9ef7707a8f66c639c baselayout-1.12.0_pre16-r3.ebuild 19378
-MD5 cce7d94746ff6e496e9053bcf921961b baselayout-1.12.0_pre17-r1.ebuild 19919
-RMD160 011a365f240c5498355f754ab8a8c15661e7404f baselayout-1.12.0_pre17-r1.ebuild 19919
-SHA256 a2cff5bfae0590291586a368ef151f22a90bf0988fc8601094c4e29571bd0781 baselayout-1.12.0_pre17-r1.ebuild 19919
 MD5 7df3797665384f6effe09377232349a2 baselayout-1.12.0_pre17-r2.ebuild 19919
 RMD160 ec0ab4269c481e634cc66e053162a089e42cf358 baselayout-1.12.0_pre17-r2.ebuild 19919
 SHA256 468cb9377fe2def3b9f7985bba84939fd1a09aa6587cccb4efa64fb3174fbd93 baselayout-1.12.0_pre17-r2.ebuild 19919
-MD5 1d3a41684700da19c585deb8a07b6829 baselayout-1.12.0_pre17.ebuild 19786
-RMD160 4fa8a52da6f8c8161f7acd3aad61cff4d3ce3da9 baselayout-1.12.0_pre17.ebuild 19786
-SHA256 38c26b33e33728d92fe514ce81efcbeb4a393fcc985895424962ddc1fd213f70 baselayout-1.12.0_pre17.ebuild 19786
 MD5 8d10a229861f862fca52cd8e3bc655d9 files/baselayout-1.11.0-split-out-udev.patch 7413
 RMD160 48eef541397ec0a21230de93518eed8a1ea63c16 files/baselayout-1.11.0-split-out-udev.patch 7413
 SHA256 397221c066cbbb65d572df431b4babde766dc92d9177005e522e0df8faa25030 files/baselayout-1.11.0-split-out-udev.patch 7413
@@ -55,9 +49,6 @@ SHA256 2e8b48e891a0ebd487f0c2ff70203ecca02521a0b9e584a4c5146dc3a3cba3b6 files/ba
 MD5 1bfe1cc270a840e3a8fd6762445485ea files/baselayout-1.12.0_pre16-sv.patch 473
 RMD160 ed1c71c282895e5b40d78ec78b6dfeb074d4a517 files/baselayout-1.12.0_pre16-sv.patch 473
 SHA256 e68b407eabbfd65e097dc6863b5cd8aa834a59a6051df952c1a522c980bb626a files/baselayout-1.12.0_pre16-sv.patch 473
-MD5 ddd83e64a002a0e78c72faf4502224c4 files/baselayout-1.12.0_pre17-1975.patch 8299
-RMD160 a59144710782422c1cbfdf62c4457f096269ccbf files/baselayout-1.12.0_pre17-1975.patch 8299
-SHA256 7850e0aa4c25e5ef427de5376dde696f86e026b40ea65bba30fed98159c8e47e files/baselayout-1.12.0_pre17-1975.patch 8299
 MD5 6e9439c8b6f41c85bfc029b3b407cb08 files/baselayout-1.12.0_pre17-1980.patch 8763
 RMD160 10fda47b32f59c96001b9ae335f20489e3704899 files/baselayout-1.12.0_pre17-1980.patch 8763
 SHA256 c834da93cbcc58852472d07a45cd0f702e587c686dc1129b0e8053a01affeb0f files/baselayout-1.12.0_pre17-1980.patch 8763
@@ -76,12 +67,6 @@ SHA256 939da19d06f033b18784c7ab4a9d168d9b68caaf4cdbafde33ae754a10af754d files/di
 MD5 324a8c9e6f96a33dc71431b9acf77759 files/digest-baselayout-1.12.0_pre16-r3 274
 RMD160 7744288e0c7416ec5ea044a9b0f51b30e3c2583d files/digest-baselayout-1.12.0_pre16-r3 274
 SHA256 4800938394cdc3186eb178b7e9a0dc7d2f24954b860f697d00dfdb02fce94e74 files/digest-baselayout-1.12.0_pre16-r3 274
-MD5 9320336a070776b1cbb6b259829e7f14 files/digest-baselayout-1.12.0_pre17 274
-RMD160 f9d171553d6780f16569e2982362574d0d4d404c files/digest-baselayout-1.12.0_pre17 274
-SHA256 b402993965f1966e2b1dc15bb82ae7ca967c39ee6c11323bdb235700864b8fc4 files/digest-baselayout-1.12.0_pre17 274
-MD5 9320336a070776b1cbb6b259829e7f14 files/digest-baselayout-1.12.0_pre17-r1 274
-RMD160 f9d171553d6780f16569e2982362574d0d4d404c files/digest-baselayout-1.12.0_pre17-r1 274
-SHA256 b402993965f1966e2b1dc15bb82ae7ca967c39ee6c11323bdb235700864b8fc4 files/digest-baselayout-1.12.0_pre17-r1 274
 MD5 9320336a070776b1cbb6b259829e7f14 files/digest-baselayout-1.12.0_pre17-r2 274
 RMD160 f9d171553d6780f16569e2982362574d0d4d404c files/digest-baselayout-1.12.0_pre17-r2 274
 SHA256 b402993965f1966e2b1dc15bb82ae7ca967c39ee6c11323bdb235700864b8fc4 files/digest-baselayout-1.12.0_pre17-r2 274
@@ -91,7 +76,7 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEPSNsEbVyYKaZ/NERAtofAJ92tgo87FUisFo9McWtRZ42FbpX6QCdH2kr
-MWazSyMEDWLX8GK2VIkuUug=
-=Z4WS
+iD8DBQFEPSQoEbVyYKaZ/NERAkIuAJwLVN+lU9wg5LOaBCKJL/yIC7XMfgCeLfrK
+YNhGxroJFYbTdX/OZ7rbYZw=
+=1Mhl
 -----END PGP SIGNATURE-----
