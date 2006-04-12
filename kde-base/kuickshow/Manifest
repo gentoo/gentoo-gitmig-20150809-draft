@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8edf7d640def9acdf6da87673e8b1b7d ChangeLog 4151
-RMD160 73a5d96218cc9a95c6392d63e7756f52eeb3cf7a ChangeLog 4151
-SHA256 a9cd511d2a942bb6da68f6c5fa62c8804b42e291598a03a6d9529c728263fb7a ChangeLog 4151
+MD5 0f2cbad153d64ae7a0e09723bc586df7 ChangeLog 4254
+RMD160 17f3a3550da46ee9fc44c98c5feb029966cb944e ChangeLog 4254
+SHA256 516fb9c2b6a4a1798bbc26fc00acfa37b507eb2999ef38769d84c87a06c29e5c ChangeLog 4254
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kuickshow-3.4.1 221
 RMD160 ce80baa4c1806e9aacce02a4860a401e0ed7408f files/digest-kuickshow-3.4.1 221
 SHA256 a5c43c1dc911a886d673620d40b300bcc9d5847fd0c55deaa7fa4fbc3b435c71 files/digest-kuickshow-3.4.1 221
@@ -13,16 +13,16 @@ SHA256 087152d6d869b8938c16752f1b5571e63dc1db0fa19f2e8913c00e77cebe3970 files/di
 MD5 587d1694de2e3a791e141d9915afee5a kuickshow-3.4.1.ebuild 450
 RMD160 68b58ab7a023bd6a1ff1edb047d4100facea17a3 kuickshow-3.4.1.ebuild 450
 SHA256 8f66d3628e549ef28e319762a9d128c0d6ff97400b30637f3a5ecb38f4d7ca6b kuickshow-3.4.1.ebuild 450
-MD5 def50cdc063fd47587dfeff2fee8bea1 kuickshow-3.5.2.ebuild 454
-RMD160 2a0c743bd6cbbe0cb024ae5015808363db0f987b kuickshow-3.5.2.ebuild 454
-SHA256 1f7b72f1b3f742750a266b730163d96f757b110f4713c85e56e5b960210f80b3 kuickshow-3.5.2.ebuild 454
+MD5 79963c33fba65da8bed18024dd6e076f kuickshow-3.5.2.ebuild 465
+RMD160 3a23dd029a1a4ae422fe6aa60b2757a4edaaca46 kuickshow-3.5.2.ebuild 465
+SHA256 595af7ea44fb3eef3f298bc9c48cc9f5f442b930b81af203d8efc7d03007bdfb kuickshow-3.5.2.ebuild 465
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFENIQsAiZjviIA2XgRAp2yAJ9F7mYPBEJkHi3jLpE3ysgnPsgZuACgmZBW
-MSusc8qWze8HxFzh4pbAQzk=
-=Y1em
+iD8DBQFEPRK7AiZjviIA2XgRAlFgAJ0ZooN+HBAZBKZaT+DVNfQMgg5vkACgszYq
+Ac1w27EQNN/4z5cUuNBTDjc=
+=TL5a
 -----END PGP SIGNATURE-----
