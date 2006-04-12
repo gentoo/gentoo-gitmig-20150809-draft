@@ -1,6 +1,6 @@
 # ChangeLog for app-text/enchant
-# Copyright 2000-20065 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.53 2006/04/03 16:35:14 foser Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.54 2006/04/12 16:29:53 swegener Exp $
 
 *enchant-1.2.5 (03 Apr 2006)
 
