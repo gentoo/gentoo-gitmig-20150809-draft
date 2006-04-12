@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.3-r1.ebuild,v 1.1 2006/02/05 22:05:04 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.5.ebuild,v 1.1 2006/04/12 19:40:04 arj Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ src_unpack() {
 
 	cd ${P}
 	epatch ${FILESDIR}/sqlite-3.3.3-tcl-fix.patch
-	epatch ${FILESDIR}/sqlite-3-test-fix.patch
+	epatch ${FILESDIR}/sqlite-3-test-fix-3.3.4.patch
 
 	epatch ${FILESDIR}/sandbox-fix1.patch
 	epatch ${FILESDIR}/sandbox-fix2.patch
