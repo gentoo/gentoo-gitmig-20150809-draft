@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.3 2006/04/11 04:50:06 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.4 2006/04/12 14:02:23 markusle Exp $
 
 inherit toolchain-funcs fortran
 
@@ -23,6 +23,12 @@ DEPEND="${RDEPEND}
 	   || ( x11-misc/imake virtual/x11 )"
 
 S="${WORKDIR}/${NAME}_${PV}"
+
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}"/raster3d-gcc-4.1-gentoo.patch
+}
+
 
 src_compile() {
 	cd "${S}"

@@ -1,0 +1,61 @@
+diff -Naur Raster3D_2.7c/normal3d.f Raster3D_2.7c-patched/normal3d.f
+--- Raster3D_2.7c/normal3d.f	2003-10-20 17:50:11.000000000 -0500
++++ Raster3D_2.7c-patched/normal3d.f	2006-04-11 01:04:15.000000000 -0500
+@@ -443,7 +443,8 @@
+ 	READ (INPUT,'(A)',ERR=101) TITLE
+ 	IF (TITLE(1:1).EQ.'#') GOTO 100
+ 	GOTO 102
+-  101	WRITE (NOISE,'(A,A)') ' >> Cannot open or read file ',TITLE(2:132)
++  101	WRITE (NOISE,'(A,A)') ' >> Cannot open or read file ',
++     * TITLE(2:132)
+ 	CALL EXIT(-1)
+   102	CONTINUE
+       ENDIF
+diff -Naur Raster3D_2.7c/rastep.f Raster3D_2.7c-patched/rastep.f
+--- Raster3D_2.7c/rastep.f	2004-02-12 11:01:31.000000000 -0600
++++ Raster3D_2.7c-patched/rastep.f	2006-04-11 00:55:05.000000000 -0500
+@@ -133,7 +133,7 @@
+ c
+ c     Support for validation of similarity of bonded atoms
+       logical	suvflag
+-      integer	suvlun, suvbad
++      integer	suvlun, suvbad, defcols
+       real	anisov(6)
+ c
+ c     Default to CPK colors and VDW radii
+diff -Naur Raster3D_2.7c/render.f Raster3D_2.7c-patched/render.f
+--- Raster3D_2.7c/render.f	2003-10-20 17:50:11.000000000 -0500
++++ Raster3D_2.7c-patched/render.f	2006-04-11 00:56:26.000000000 -0500
+@@ -792,9 +792,9 @@
+ *     Get background colour
+       READ (INPUT,*,ERR=104) BKGND
+       if (XBG.NE.0) then
+-	BKGND(3) = FLOAT(iand(XBG,'00FF'X)) / 255.
+-	BKGND(2) = FLOAT(iand(XBG,'FF00'X)/256) / 255.
+-	BKGND(1) = FLOAT(iand(XBG,'FF0000'X)/65536) / 255.
++	BKGND(3) = REAL(iand(XBG,'00FF'X)) / 255.
++	BKGND(2) = REAL(iand(XBG,'FF00'X)/256) / 255.
++	BKGND(1) = REAL(iand(XBG,'FF0000'X)/65536) / 255.
+ 	BKGND(3) = BKGND(3)**2
+ 	BKGND(2) = BKGND(2)**2
+ 	BKGND(1) = BKGND(1)**2
+@@ -3679,7 +3679,7 @@
+ 	        FRAC = DETAIL(K+8)
+ 	        INEXT = INDTOP + 1
+   	        IF (TYPE(INEXT).EQ.VERTEXRGB) INEXT = INEXT + 1
+-	        CALL ASSERT(TYPE(INEXT).EQ.VERTRANSP,'lost vertex transp')
++	    CALL ASSERT(TYPE(INEXT).EQ.VERTRANSP,'lost vertex transp')
+ 	        K = LIST(INEXT)
+ 	        CLRITY = FRAC*DETAIL(K+1) + (1.-FRAC)*DETAIL(K+2)
+ 	      ELSE IF (TYPE(INDTOP).EQ.TRIANG) THEN
+diff -Naur Raster3D_2.7c/rings3d.f Raster3D_2.7c-patched/rings3d.f
+--- Raster3D_2.7c/rings3d.f	2003-10-20 17:50:11.000000000 -0500
++++ Raster3D_2.7c-patched/rings3d.f	2006-04-11 01:03:13.000000000 -0500
+@@ -16,7 +16,6 @@
+ 	integer input, output, noise
+ 	parameter (input=5, output=6, noise=0)
+ 	integer 	iargc, narg
+-	external	iargc
+ 	character*64	options
+ 	logical		bflag, pflag, sflag
+ c
