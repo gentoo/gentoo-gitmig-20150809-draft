@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.2.0_alpha20060408.ebuild,v 1.1 2006/04/12 02:00:16 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.2.0_alpha20060408.ebuild,v 1.2 2006/04/12 02:47:05 vapier Exp $
 
 ETYPE="gcc-compiler"
 
@@ -42,6 +42,13 @@ DEPEND="${RDEPEND}
 
 PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )
 	x86? ( !nocxx? ( !elibc_uclibc? ( !build? ( =virtual/libstdc++-3.3 ) ) ) )"
+
+src_unpack() {
+	gcc_src_unpack
+
+	# Fix cross-compiling
+	epatch "${FILESDIR}"/4.0.2/gcc-4.0.2-cross-compile.patch
+}
 
 pkg_postinst() {
 	toolchain_pkg_postinst
