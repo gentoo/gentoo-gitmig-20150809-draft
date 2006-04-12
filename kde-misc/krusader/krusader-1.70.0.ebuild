@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.70.0.ebuild,v 1.7 2006/04/10 00:52:22 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.70.0.ebuild,v 1.8 2006/04/12 07:58:23 cryos Exp $
 
 inherit kde
 
@@ -26,9 +26,9 @@ pkg_postinst() {
 	einfo "Krusader can use various external applications, including:"
 	einfo "- KMail   (kde-base/kdepim)"
 	einfo "- Kompare (kde-base/kdesdk)"
-	einfo "- KDiff3  (app-misc/kdiff3)"
+	einfo "- KDiff3  (kde-misc/kdiff3)"
 	einfo "- XXdiff  (dev-util/xxdiff)"
-	einfo "- KRename (app-misc/krename)"
+	einfo "- KRename (kde-misc/krename)"
 	einfo "- Eject   (virtual/eject)"
 	einfo ""
 	einfo "It supports also quite a few archive formats, including:"

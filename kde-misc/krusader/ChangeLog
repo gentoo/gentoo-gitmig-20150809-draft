@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.37 2006/04/10 00:52:22 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.38 2006/04/12 07:58:23 cryos Exp $
+
+  12 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org> krusader-1.70.0.ebuild:
+  Fixed wrong categories for krename and kdiff3, closes bug 129648.
 
   10 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org> -krusader-1.60.0.ebuild,
   -krusader-1.60.1.ebuild, -krusader-1.60.1-r1.ebuild,
