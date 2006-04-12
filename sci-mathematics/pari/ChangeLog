@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.30 2006/04/11 18:01:16 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.31 2006/04/12 05:00:40 wormo Exp $
+
+  11 Apr 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  pari-2.1.7-r1.ebuild:
+  mark ppc (Bug #111062)
 
   11 Apr 2006; Ferris McCormick <fmccor@gentoo.org> pari-2.1.7-r1.ebuild:
   Stable on sparc.  (Has been fine for about 10 weeks, runs all tests.)
