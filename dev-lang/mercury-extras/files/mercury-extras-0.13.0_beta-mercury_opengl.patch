@@ -25,7 +25,7 @@
  # Specify what libraries we need to link against for Tcl/Tk on this system.
 -TCLTK_LIBS = -ltcl$(TCLTK_VERSION) -ltk$(TCLTK_VERSION) -ldl
 +TCLTK_LIBS = -ltcl -ltk -ldl
-+GL_LIBS = -lGl -lGLU -lX11 -lXmu
++GL_LIBS = -lGL -lGLU -lX11 -lXmu
  
  # Tell mmake to use the `mercury_tcltk' library.
 -VPATH 		= $(MERCURY_TCLTK_DIR):$(MMAKE_VPATH)
