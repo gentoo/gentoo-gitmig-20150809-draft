@@ -1,61 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0eafd7079083abfa39c142ac1646b92b ChangeLog 1997
-RMD160 765eb0339d6c7ff48d6407235e2c37a635de515e ChangeLog 1997
-SHA256 3aac66291efe560adcf371348f905bea11cda4f7b9b644471d1d3c7a4532d785 ChangeLog 1997
+MD5 02f964e906163574ad26c0c991967a90 ChangeLog 2091
 MD5 9b290a87b003d331cb125c04c3b2b6e1 files/digest-gst-python-0.10.0 69
-RMD160 cd9375c24f2fe5701903233686f09893ac35303e files/digest-gst-python-0.10.0 69
-SHA256 a0671184aee914aa85818cd89fd39a3ce5da83f3d5f51f4cd1151fb36ce675fd files/digest-gst-python-0.10.0 69
 MD5 9bdb0c78af880876cfce8b5fb89b0ee6 files/digest-gst-python-0.10.1 69
-RMD160 6856dff15c75c5a66b4f23d581cde4f157ab5de0 files/digest-gst-python-0.10.1 69
-SHA256 613f0a283b5a5e87f360bb2384578d7cca37e1ae40866e429becadabb8f7ab25 files/digest-gst-python-0.10.1 69
 MD5 aa071a0fdfeb6210bc954438e6eea22b files/digest-gst-python-0.10.2 69
-RMD160 28c5624531e429f14b9f0d341dec531335a87b08 files/digest-gst-python-0.10.2 69
-SHA256 98d40a834bbe453d04583230b61ec4db0259588e50de0a92706724a7a55036e2 files/digest-gst-python-0.10.2 69
 MD5 14b7a354c8df40eb5fb92dc77994bc0a files/digest-gst-python-0.10.3 253
-RMD160 9150c2d1c738cb4672a51386f6e2b7d5b82ee7ba files/digest-gst-python-0.10.3 253
-SHA256 799008dd056565ec405cc29acdb5681ec4dbb59f00158ee9739bcd5d9d07054d files/digest-gst-python-0.10.3 253
 MD5 039da23a793cf44bd7aa29fcc8d92bae files/digest-gst-python-0.8.1 68
-RMD160 b2a6321563c97efa9c57dfc754522d268276d451 files/digest-gst-python-0.8.1 68
-SHA256 ed1d8d88ddeb4517b37a0c1b2c7377a32d76b4b8d2b1e3847cfe0761505705ec files/digest-gst-python-0.8.1 68
 MD5 748805d980ac67b8fa34ce7ce8914846 files/digest-gst-python-0.8.2 68
-RMD160 4a541fc91fe6d3e5105a9dad055babafb09f1573 files/digest-gst-python-0.8.2 68
-SHA256 8b36abf4c46562b4c2e325381a2514fab41980629b315985fc82cf00a8dd4798 files/digest-gst-python-0.8.2 68
 MD5 5cd6413f8588595d04a024a705786c97 files/digest-gst-python-0.8.4 250
-RMD160 94c0f85002f1c838a0dfbec91e9c253ee93847cc files/digest-gst-python-0.8.4 250
-SHA256 d8a661a907047231e3aee07143ca65a44a599a0f47686b02ad787cf7948f2b53 files/digest-gst-python-0.8.4 250
 MD5 f7aebafaa0c99bda57ec9eb09490e3ae files/gst-python-0.10-leakfix.diff 1197
-RMD160 892e859741ecd12111b6dcccf185394cd39718f8 files/gst-python-0.10-leakfix.diff 1197
-SHA256 f9dea160835e6011a9f30c8fa70fc3bdafd01b0191a9660f214161d738c98e89 files/gst-python-0.10-leakfix.diff 1197
 MD5 59c8e19b7b9cf3a9e889ec4b6fb89466 gst-python-0.10.0.ebuild 1221
-RMD160 4714bb9566255eae2e83ac24a9ca794385bba15f gst-python-0.10.0.ebuild 1221
-SHA256 5621e9d92ba47ec2290a9b0b2de85eae2cb7618bffcf40fa2a74334ecf6e514c gst-python-0.10.0.ebuild 1221
 MD5 6e187aeec03c7a64bee061491609e279 gst-python-0.10.1.ebuild 1215
-RMD160 0c9c67751d50d1b7334e0d6d1cc4e882b48ae1f6 gst-python-0.10.1.ebuild 1215
-SHA256 588fc92ddd7ba00d1549558bfc59b7d2532e3b039361bd00bdebb44bf71b8bf3 gst-python-0.10.1.ebuild 1215
 MD5 6322e3fbb127d9d8085e3a6620b21e85 gst-python-0.10.2.ebuild 1263
-RMD160 2cf4745af51b4b178a28471896834b9e04951d53 gst-python-0.10.2.ebuild 1263
-SHA256 e81123820f10bbce9756885a533e37c8c60e16fc907d7b207c678b1e2b52e0b6 gst-python-0.10.2.ebuild 1263
-MD5 d33979c8793175b81daa85405fc9b6fa gst-python-0.10.3.ebuild 1221
-RMD160 a9384afbb288affc7300be006eb86d1e6106968a gst-python-0.10.3.ebuild 1221
-SHA256 bfcfc7df3b319ad02769898f0a7016b4c1b9f135733b8078d617e4feb2e35508 gst-python-0.10.3.ebuild 1221
+MD5 cb7efa334cec5c06cff4905c1bd180f7 gst-python-0.10.3.ebuild 1225
 MD5 8d29b3eae4d026dcfb578979bf1d31cb gst-python-0.8.1.ebuild 1201
-RMD160 66f4e206cc11b9afb6d59ae2460781618ae68709 gst-python-0.8.1.ebuild 1201
-SHA256 bf5c88a54cd4011cf561f287a3f928f7162915b4b47d522613498d10bb78c325 gst-python-0.8.1.ebuild 1201
 MD5 b9fb951de303323517f4b82bb9671c1d gst-python-0.8.2.ebuild 1201
-RMD160 52fd63a2e127bc254f0a7bc35441d1d64d55e6e1 gst-python-0.8.2.ebuild 1201
-SHA256 65e97752eb8a94e1c218496a3b44b9b5e4765d83ac6ef5d4eb51ac42b8500e99 gst-python-0.8.2.ebuild 1201
 MD5 446e112581b0abc759e364ebea3bdaa7 gst-python-0.8.4.ebuild 1202
-RMD160 c533a3abf35fba0913e34eb424ba68d56164f642 gst-python-0.8.4.ebuild 1202
-SHA256 7f892e03fb8e421d75c3b73714895b4fb9d56cec91e5f97f99891cd3475a554e gst-python-0.8.4.ebuild 1202
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
-RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 metadata.xml 162
-SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1 metadata.xml 162
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFELpWPJrHF4yAQTrARAjHlAJ9nmK4bNpfPDG/3h0GpNnxOQxZjWgCgp2la
-lSWqyqvDwDR2VLCzGBM103M=
-=Wm+e
------END PGP SIGNATURE-----

@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 24219fc54369433d2f3631e76e523244 ChangeLog 869
-RMD160 8e6582a7915df5e3e212eba3ff795589cdc573ca ChangeLog 869
-SHA256 8551e4d0f1ed57c3f10fda178b290a4f21233e80fd9a9b1ccf782bb1292a679b ChangeLog 869
+MD5 b27697aa78a26e692eb13ddfe76dd870 ChangeLog 960
 MD5 9b18aef59e3434127d643002b1b40d6b feedparser-3.3.ebuild 529
-RMD160 f9b8446112854fc5e52f47d3f0a99238a12af47f feedparser-3.3.ebuild 529
-SHA256 a4b673166ef315c96e26be89c3f4212ac9a0f31ee3841ac4ae008678c01f8caf feedparser-3.3.ebuild 529
 MD5 911dfda87934d40698ba5d35e4d216bd feedparser-4.0.2.ebuild 589
-RMD160 9344f4a8df56460195952e7e44562ba62e11f8eb feedparser-4.0.2.ebuild 589
-SHA256 3f06876452ae3ae510a6dee2af7f57b0d72f424afe913e41dbd781a4305bcd7c feedparser-4.0.2.ebuild 589
-MD5 f818114dc81baf919a7abd81854547ef feedparser-4.1.ebuild 589
-RMD160 c2bc2c9261a139bacdd803c3717320469db7f1ee feedparser-4.1.ebuild 589
-SHA256 8674356cd7d6772f177c698ea29b8c3719f1a208eedb60921bf18b2a3516b50e feedparser-4.1.ebuild 589
+MD5 ce55d7429d8c696813e6cd93c2006b56 feedparser-4.1.ebuild 593
 MD5 b0222ca706868c50f88eb300754aef0a files/digest-feedparser-3.3 63
-RMD160 681bbbdb94224e10691f7a7f3e65ba535339592f files/digest-feedparser-3.3 63
-SHA256 0e7e3f482f179507c02bcfb63854843afe0664953aa880dee55e86b8471aa7ea files/digest-feedparser-3.3 63
 MD5 018a36a7d8917e63c612fc37dae540c0 files/digest-feedparser-4.0.2 65
-RMD160 275803c81b719b4b03794e5a7f8ca8d5381f7a3e files/digest-feedparser-4.0.2 65
-SHA256 0cade050d32b2c8bc4e5bf7bc60caede440ba0d69054cf5e8664bba3460f4251 files/digest-feedparser-4.0.2 65
 MD5 99020132d88101ea57fd2a2c2be13972 files/digest-feedparser-4.1 235
-RMD160 74bc7234d2498b09e6e157018d65628d6a59462f files/digest-feedparser-4.1 235
-SHA256 dc26c864d6289162c5fdb1e819bf3bc9940fff3c537ad88ad4d66da224633c4f files/digest-feedparser-4.1 235
 MD5 539454f93a140308dd2f8c03c20bf6ed metadata.xml 262
-RMD160 a3cefad4b9969818c51b29821e04decd168b8d42 metadata.xml 262
-SHA256 663d5f1be72528c4e41547424ce620b40f15c584f2d543c8f61fe3e78a46475e metadata.xml 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFELpQZJrHF4yAQTrARAtDVAJ9ALVJnq4HvGZUFpciDyz/chXJemgCeP3o9
-unqw8M0iAcJ/KnrnYt4Z/KM=
-=BV5y
------END PGP SIGNATURE-----
