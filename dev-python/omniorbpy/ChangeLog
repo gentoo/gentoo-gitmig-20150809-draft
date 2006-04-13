@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/omniorbpy
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.11 2006/04/01 15:11:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.12 2006/04/13 19:49:51 fmccor Exp $
+
+  13 Apr 2006; Ferris McCormick <fmccor@gentoo.org> omniorbpy-2.6.ebuild:
+  Add ~sparc keyword.  Builds fine and runs examples across different
+  architectures (sparc <--> amd64 in my test case).
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> omniorbpy-2.6.ebuild:
   Mark 2.6 ~ia64
