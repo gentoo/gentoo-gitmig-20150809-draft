@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2005.11.11.ebuild,v 1.6 2006/04/09 17:19:58 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2005.11.11.ebuild,v 1.7 2006/04/13 19:01:24 flameeyes Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -12,10 +12,6 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""
 KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~mips ppc ~ppc64 sparc x86"
-
-RDEPEND="virtual/libc"
-DEPEND="${RDEPEND}
-	sys-apps/findutils"
 
 S="${WORKDIR}/${PN}"
 
@@ -52,8 +48,9 @@ src_install() {
 	# each library in a subdirectory with same name as
 	# the lib
 	local lib dir
-	for lib in $(find -type f -name "*.a" -printf "%P\n"); do
-		dir="${lib%%/*}"
+	for lib in $(find . -type f -name "*.a"); do
+		dir="${lib/.\//}"
+		dir="${dir%%/*}"
 		insinto "/usr/$(get_libdir)/${PN}/${dir}"
 		doins "${lib}"
 		insinto "/usr/$(get_libdir)/${PN}/${dir}/include"
