@@ -38,3 +38,4 @@ move sys-devel/mips32 sys-apps/setarch
 move sys-devel/ppc32 sys-apps/setarch
 move sys-devel/sparc32 sys-apps/setarch
 move games-arcade/marbleblastdemo games-arcade/marbleblast-demo
+move games-arcade/marbleblastgolddemo games-arcade/marbleblastgold-demo
