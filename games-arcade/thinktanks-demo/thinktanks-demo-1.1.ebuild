@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/thinktanks-demo-1.1.ebuild,v 1.1 2006/04/13 20:19:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/thinktanks-demo-1.1.ebuild,v 1.2 2006/04/13 20:22:08 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -15,12 +15,8 @@ IUSE=""
 
 DEPEND=""
 
+GAMES_CHECK_LICENSE="yes"
 S=${WORKDIR}
-
-pkg_setup() {
-	check_license THINKTANKS
-	games_pkg_setup
-}
 
 src_unpack() {
 	unpack_makeself
@@ -34,7 +30,7 @@ src_install() {
 
 	exeinto ${dir}
 	doexe bin/Linux/x86/thinktanksdemo
-	dosym ${dir}/thinktanksdemo ${GAMES_BINDIR}/thinktanksdemo
+	dosym ${dir}/thinktanksdemo ${GAMES_BINDIR}/thinktanks-demo
 
 	insinto ${dir}
 	doins icon.xpm
