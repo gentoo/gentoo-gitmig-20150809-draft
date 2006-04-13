@@ -1,6 +1,11 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.23 2006/02/14 04:07:37 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.24 2006/04/13 05:17:39 mr_bones_ Exp $
+
+*gcompris-7.4 (13 Apr 2006)
+
+  13 Apr 2006; Michael Sterrett <mr_bones_@gentoo.org> +gcompris-7.4.ebuild:
+  version bump
 
   14 Feb 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   gcompris-6.5.3-r1.ebuild, gcompris-7.2.ebuild:
