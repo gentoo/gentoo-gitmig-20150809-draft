@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.3 2006/04/06 13:59:17 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.4 2006/04/13 13:23:24 tcort Exp $
+
+  13 Apr 2006; Thomas Cort <tcort@gentoo.org> gst-plugins-bad-0.10.1.ebuild:
+  Added ~alpha keyword.
 
   06 Apr 2006; Zaheer Abbas Merali <zaheerm@gentoo.org>
   gst-plugins-bad-0.10.1.ebuild:

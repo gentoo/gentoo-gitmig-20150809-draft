@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.17 2006/04/08 12:08:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.18 2006/04/13 13:19:19 tcort Exp $
+
+  13 Apr 2006; Thomas Cort <tcort@gentoo.org>
+  gst-plugins-base-0.10.4-r1.ebuild:
+  Added ~alpha keyword.
 
   08 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   gst-plugins-base-0.10.4-r1.ebuild:
