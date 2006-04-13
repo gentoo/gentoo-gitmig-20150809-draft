@@ -36,3 +36,10 @@ input_devices_wacom
 bmp
 # as is bmpx
 bmpx
+
+# Mask the various *BSD libcs a part from the various subprofiles
+elibc_FreeBSD
+elibc_NetBSD
+elibc_OpenBSD
+elibc_Darwin
+elibc_DragonFly
