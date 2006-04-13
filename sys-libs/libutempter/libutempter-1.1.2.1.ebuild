@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.2.1.ebuild,v 1.9 2006/03/31 00:07:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.2.1.ebuild,v 1.10 2006/04/13 19:02:57 flameeyes Exp $
 
 inherit rpm eutils flag-o-matic versionator
 
@@ -52,6 +52,7 @@ src_install() {
 		DESTDIR="${D}" \
 		libdir=/usr/$(get_libdir) \
 		libexecdir=/usr/$(get_libdir) \
+		includedir=/usr/include \
 		install || die
 
 	fowners root:utmp /usr/$(get_libdir)/utempter/utempter
