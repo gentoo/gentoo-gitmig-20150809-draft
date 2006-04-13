@@ -87,3 +87,6 @@ postgres
 # breaks clisp builds
 fastcgi
 
+# Re-add Darwin libc
+-elibc_Darwin
+
