@@ -1,0 +1,18 @@
+# ChangeLog for games-arcade/thinktanksdemo
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/ChangeLog,v 1.1 2006/04/13 20:19:00 wolf31o2 Exp $
+
+*thinktanks-demo-1.1 (13 Apr 2006)
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +thinktanks-demo-1.1.ebuild:
+  Moved from games-arcade/thinktanksdemo to games-arcade/thinktanks-demo.
+
+  21 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  thinktanksdemo-1.1.ebuild:
+  Changed check_license to explicitly list license to check.
+
+*thinktanksdemo-1.1 (07 Oct 2003)
+
+  07 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
