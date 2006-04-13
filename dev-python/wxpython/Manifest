@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c4bc4e06bd874c242ec17be6a110a54b ChangeLog 11302
-RMD160 22366db659355b950e484c5efd7c9e829d1cdb1b ChangeLog 11302
-SHA256 91f89198dbdf7a93f2902c4d81135467d46f8d6f512f97c83e4b580902d1998a ChangeLog 11302
+MD5 edaa32afe666feb2c16a613391636bf4 ChangeLog 11465
+RMD160 0bf4ef398846cb5bb2ff5be6ce06849a5f2cb7bc ChangeLog 11465
+SHA256 63ba3b56cb40e56bb645178be64893ecf2d95372287a1ef45d411315c712ba72 ChangeLog 11465
 MD5 d1efabd4c6bcd5edd9e61ca070e20ff0 files/digest-wxpython-2.4.2.4 73
 RMD160 9a0a53b77982f7f8d8b3ec429c3aca09f8d1e7e6 files/digest-wxpython-2.4.2.4 73
 SHA256 97ebdc0443473d44a8a82049333188f2063074825a890143e7ac8fa10ad2ffe3 files/digest-wxpython-2.4.2.4 73
@@ -16,6 +16,9 @@ SHA256 630a811eabfc6001cc47d311b379b6af254622b49d99501647e901e57802aa62 files/di
 MD5 28179f7df1afe227ca36d593ff6aab33 files/digest-wxpython-2.6.1.0 74
 RMD160 fb407d40e09183cb0743e46059fb678bf9a7cf5b files/digest-wxpython-2.6.1.0 74
 SHA256 dcf64efb92ec21ede1eddb6c6652635ac107cc70f890f9ab54ede9a131250210 files/digest-wxpython-2.6.1.0 74
+MD5 f154a877dfb1ee91361196176dcfaa5b files/digest-wxpython-2.6.3.2 268
+RMD160 50c151bcd8e0f1a42b9adddd13263e094f7fe958 files/digest-wxpython-2.6.3.2 268
+SHA256 ec01ef53b8d527a2c26c2b1d8bbd1a3657cca61292f23b16304d2bc0af48f1b9 files/digest-wxpython-2.6.3.2 268
 MD5 d69bb360ce49f76f26ef1ae017f4bc31 files/scripts-multiver-2.6.0.0.diff 3373
 RMD160 377cfeba11d5c91106d8ab57c50ed7534d3004b6 files/scripts-multiver-2.6.0.0.diff 3373
 SHA256 504cb13fe5e13d75274fc965be2d78618fae99693ff6b8c1cf0ff50852cf8084 files/scripts-multiver-2.6.0.0.diff 3373
@@ -43,10 +46,13 @@ SHA256 dc0f56cf81568107b8d93b08049438e965803a3917f90a149b883dd71d16714f wxpython
 MD5 b7e08422f599125874b8a8b9e77139ef wxpython-2.6.1.0.ebuild 3799
 RMD160 21174a37b98de635cd51669362b1d072bf7e8fad wxpython-2.6.1.0.ebuild 3799
 SHA256 f126cc324972aa9bd5ff7e359153b46ca10bd472e8a954565d449e1baeab0a49 wxpython-2.6.1.0.ebuild 3799
+MD5 8ec938719c6ca5ee984f9436a2a78c03 wxpython-2.6.3.2.ebuild 3085
+RMD160 ce75681f38f3149e99b3a23cd542a57e663ccf8c wxpython-2.6.3.2.ebuild 3085
+SHA256 3e84cf816a7c6947f4aa9fb7788518a598d928987c57912f9c4a055450166273 wxpython-2.6.3.2.ebuild 3085
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFD6osyV3J2n04EauwRAhbKAJsFP+aytGtlhuUwYE/rGdy5nvJlggCgoUaT
-A4IBG+tjSVjWqM4NCR2KjTQ=
-=m3Os
+iD8DBQFEPp1wCRZPokWLroQRAnvKAJ0WEPL9pCX3pgtm7SjEo1RjVjCTsACg5lHH
+2Reu2LgdLYmTSCfyn+XG3tU=
+=OY6U
 -----END PGP SIGNATURE-----
