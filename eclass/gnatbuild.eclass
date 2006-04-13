@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.10 2006/04/12 15:00:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.11 2006/04/13 16:37:18 george Exp $
 
 # ATTN!
 # set HOMEPAGE and LICENSE in appropriate ebuild, as we have
@@ -17,6 +17,8 @@ IUSE="nls"
 
 DEPEND="!dev-lang/gnat"
 RDEPEND="app-admin/eselect-gnat"
+
+PROVIDE="virtual/gnat"
 
 #---->> globals and SLOT <<----
 
