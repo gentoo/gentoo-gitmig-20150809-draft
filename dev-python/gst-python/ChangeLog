@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.13 2006/04/01 15:00:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.14 2006/04/13 13:40:02 tcort Exp $
+
+  13 Apr 2006; Thomas Cort <tcort@gentoo.org> gst-python-0.10.3.ebuild:
+  Added ~alpha keyword.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> gst-python-0.10.3.ebuild:
   Mark 0.10.3 ~ia64

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ctypes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ChangeLog,v 1.6 2006/03/02 17:01:48 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ChangeLog,v 1.7 2006/04/13 13:41:45 tcort Exp $
+
+  13 Apr 2006; Thomas Cort <tcort@gentoo.org> ctypes-0.9.9.3.ebuild:
+  Added ~alpha keyword.
 
   02 Mar 2006; Luis Medinas <metalgod@gentoo.org> ctypes-0.9.9.3.ebuild:
   Added ~amd64 keyword.
