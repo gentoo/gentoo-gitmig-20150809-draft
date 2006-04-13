@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.5 2006/04/10 23:07:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.6 2006/04/13 19:40:20 flameeyes Exp $
+
+*freebsd-baselayout-20060401-r3 (13 Apr 2006)
+
+  13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -freebsd-baselayout-20060401-r2.ebuild,
+  +freebsd-baselayout-20060401-r3.ebuild:
+  Restore rc-daemon and bump dependency on pidof.
 
 *freebsd-baselayout-20060401-r2 (10 Apr 2006)
 

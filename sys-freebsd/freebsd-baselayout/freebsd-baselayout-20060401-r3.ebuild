@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/freebsd-baselayout-20060401-r2.ebuild,v 1.1 2006/04/10 23:07:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/freebsd-baselayout-20060401-r3.ebuild,v 1.1 2006/04/13 19:40:21 flameeyes Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools
 
@@ -24,7 +24,7 @@ RDEPEND="userland_GNU? (
 			>=sys-apps/coreutils-5.2.1
 		) )
 	)
-	|| ( >=sys-apps/sysvinit-2.86-r3 sys-process/pidof-bsd )
+	|| ( >=sys-apps/sysvinit-2.86-r3 >=sys-process/pidof-bsd-20050501-r2 )
 	!build? ( !bootstrap? (
 		>=sys-libs/readline-5.0-r1
 		>=app-shells/bash-3.0-r10
@@ -426,11 +426,6 @@ src_install() {
 
 	# Hack to fix bug 9849, continued in pkg_postinst
 	unkdir
-
-	# On FreeBSD rc-daemon.sh doesn't seem to behave correctly; provide useful
-	# working system until this is fixed by removing it and forcing use of s-s-d
-	# directly.
-	rm -f ${D}/lib/rcscripts/sh/rc-daemon.sh
 }
 
 # Support function for remapping old wireless dns vars
