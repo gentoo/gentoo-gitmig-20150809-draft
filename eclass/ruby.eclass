@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.51 2006/02/27 14:19:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.52 2006/04/13 11:50:56 caleb Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -157,6 +157,11 @@ erubydoc() {
 			fi
 		done
 	fi
+
+	# Pattern matching will mismatch for locales without case based
+	# character sorting (from bug #129526)
+	export LC_COLLATE=C
+	unset LC_ALL
 
 	for i in ChangeLog* [A-Z][A-Z]* ; do
 		[ -e $i ] && dodoc $i
