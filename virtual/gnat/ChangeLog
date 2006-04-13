@@ -1,0 +1,10 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnat/ChangeLog,v 1.1 2006/04/13 12:18:08 george Exp $
+
+*gnat-3.4 (13 Apr 2006)
+
+  13 Apr 2006; George Shapovalov <george@gentoo.org> +metadata.xml,
+  +gnat-3.4.ebuild:
+  added a new virtual for new gnat compilers
+
