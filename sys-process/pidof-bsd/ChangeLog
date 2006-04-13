@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/pidof-bsd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/pidof-bsd/ChangeLog,v 1.1 2006/04/01 17:01:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/pidof-bsd/ChangeLog,v 1.2 2006/04/13 19:34:15 flameeyes Exp $
+
+*pidof-bsd-20050501-r2 (13 Apr 2006)
+
+  13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/pidof-bsd-20050501-firstarg.patch, +pidof-bsd-20050501-r2.ebuild:
+  Add patch to check only first argument when using pidof -x, fixes rc-daemon.
 
 *pidof-bsd-20050501-r1 (01 Apr 2006)
 
