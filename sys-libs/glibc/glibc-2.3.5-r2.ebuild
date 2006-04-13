@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.26 2006/01/25 04:39:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.27 2006/04/13 05:45:54 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1010,7 +1010,7 @@ RESTRICT="nostrip multilib-pkg-force"
 #
 # The gcc-config dep is for the cross-compile multilib stuff
 DEPEND=">=sys-devel/gcc-3.2.3-r1
-	nptl? ( >=sys-devel/gcc-3.3.1-r1 >=sys-kernel/linux-headers-2.6.5 )
+	nptl? ( >=sys-devel/gcc-3.3.1-r1 >=sys-kernel/linux-headers-${NPTL_KERNEL_VERSION} )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/gcc-config-1.3.9
 	virtual/os-headers

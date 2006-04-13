@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r2.ebuild,v 1.19 2005/12/03 00:55:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r2.ebuild,v 1.20 2006/04/13 05:45:54 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -56,7 +56,7 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 	nptl? ( >=sys-devel/gcc-3.3.1-r1 )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	virtual/os-headers
-	nptl? ( >=sys-kernel/linux-headers-2.6 )
+	nptl? ( >=sys-kernel/linux-headers-${MIN_KERNEL_VERSION} )
 	nls? ( sys-devel/gettext )"
 RDEPEND="nls? ( sys-devel/gettext )"
 

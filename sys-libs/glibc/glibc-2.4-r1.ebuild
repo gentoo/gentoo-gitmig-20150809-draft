@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r1.ebuild,v 1.4 2006/04/02 23:02:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r1.ebuild,v 1.5 2006/04/13 05:45:54 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -1091,7 +1091,7 @@ DEPEND=">=sys-devel/gcc-3.4.4
 	arm? ( >=sys-devel/binutils-2.16.90 >=sys-devel/gcc-4.1.0 )
 	ppc? ( >=sys-devel/gcc-4.1.0 )
 	ppc64? ( >=sys-devel/gcc-4.1.0 )
-	nptl? ( >=sys-kernel/linux-headers-2.6.5 )
+	nptl? ( >=sys-kernel/linux-headers-${NPTL_KERNEL_VERSION} )
 	>=sys-devel/binutils-2.15.94
 	>=sys-devel/gcc-config-1.3.12
 	>=app-misc/pax-utils-0.1.10
