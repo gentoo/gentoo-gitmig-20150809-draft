@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.100 2006/03/30 13:34:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.101 2006/04/13 20:07:52 flameeyes Exp $
+
+  13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> gettext-0.14.5.ebuild:
+  Change dependency to virtual/libiconv.
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> gettext-0.14.5.ebuild:
   Add ~x86-fbsd keyword.
