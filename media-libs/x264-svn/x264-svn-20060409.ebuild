@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060409.ebuild,v 1.3 2006/04/10 23:41:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060409.ebuild,v 1.4 2006/04/13 19:44:06 flameeyes Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ RDEPEND="mp4? ( >=media-video/gpac-0.4.1_pre20060122 )"
 
 DEPEND="${RDEPEND}
 	amd64? ( dev-lang/yasm )
-	x86? ( dev-lang/nasm )"
+	x86? ( dev-lang/nasm ) x86-fbsd? ( dev-lang/nasm )"
 
 S=${WORKDIR}/${PN}
 
