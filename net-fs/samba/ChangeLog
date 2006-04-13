@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.230 2006/04/09 16:28:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.231 2006/04/13 13:05:44 flameeyes Exp $
+
+  13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> samba-3.0.22.ebuild:
+  Add ~x86-fbsd keyword and make sys-apps/acl dep under kernel_linux conditional.
 
   09 Apr 2006; Markus Rothe <corsair@gentoo.org> samba-3.0.22.ebuild:
   Stable on ppc64
