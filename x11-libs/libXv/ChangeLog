@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.16 2006/03/09 14:13:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.17 2006/04/13 13:35:58 flameeyes Exp $
+
+  13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> libXv-1.0.1.ebuild:
+  Add ~x86-fbsd keyword.
 
   09 Mar 2006; Aron Griffis <agriffis@gentoo.org> libXv-1.0.1.ebuild:
   Mark 1.0.1 ~ia64
