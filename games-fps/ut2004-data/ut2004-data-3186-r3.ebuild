@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r2.ebuild,v 1.3 2006/04/11 11:47:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.1 2006/04/13 17:50:23 wolf31o2 Exp $
 
 inherit games games-ut2k4mod
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 RESTRICT="strip"
 IUSE=""
 
@@ -21,6 +21,15 @@ S=${WORKDIR}
 GAMES_LICENSE_CHECK="yes"
 dir=${GAMES_PREFIX_OPT}/ut2004
 Ddir=${D}/${dir}
+
+grabdirs() {
+	for d in {Music,Sounds,Speech,StaticMeshes,Textures} ; do
+		if [[ -d "${CDROM_ROOT}/$1/${d}" ]] ; then
+			echo "Copying ${CDROM_ROOT}$1${d}"
+			cp -r "${CDROM_ROOT}/$1/${d}" "${Ddir}" || die "copying $1"
+		fi
+	done
+}
 
 pkg_setup() {
 	ewarn "This is a huge package.  If you do not have at least 7GB of free"
@@ -44,20 +53,22 @@ pkg_setup() {
 				"${DISK3}"Textures/ONSDeadVehicles-TX.utx.uz2 \
 				"${DISK4}"Textures/XGameShaders2004.utx.uz2 \
 				"${DISK5}"Speech/ons.xml \
-				"${DISK6}"/DirectX9/BDA.cab
+				"${DISK6}"/Sounds/TauntPack.det_uax.uz2
 		else
 			cdrom_get_cds "${DISK1}"/System/UT2004.ini \
 				"${DISK2}"/Textures/2K4Fonts.utx.uz2 \
 				"${DISK3}"/Textures/ONSDeadVehicles-TX.utx.uz2 \
-				"${DISK4}"/Music/KR-UT2004-Menu.ogg \
-				"${DISK5}"/Speech/ons.xml "${DISK6}"/DirectX9/BDA.cab
+				"${DISK4}"/StaticMeshes/AlienTech.usx.uz2 \
+				"${DISK5}"/Speech/ons.xml \
+				"${DISK6}"/Sounds/TauntPack.det_uax.uz2
 		fi
 	else
 		cdrom_get_cds System/UT2004.ini \
 			Textures/2K4Fonts.utx.uz2 \
 			Textures/ONSDeadVehicles-TX.utx.uz2 \
-			Music/KR-UT2004-Menu.ogg \
-			Speech/ons.xml DirectX9/BDA.cab
+			StaticMeshes/AlienTech.usx.uz2 \
+			Speech/ons.xml \
+			Sounds/TauntPack.det_uax.uz2
 	fi
 }
 
@@ -87,42 +98,27 @@ src_install() {
 
 	# Disk 2
 	einfo "Copying files from Disk 2..."
-	cp -r "${CDROM_ROOT}/${DISK2}"{Sounds,Textures} "${Ddir}" || die "copying files"
+	grabdirs "${DISK2}"
 	cdrom_load_next_cd
 
 	# Disk 3
 	einfo "Copying files from Disk 3..."
-	cp -r "${CDROM_ROOT}/${DISK3}"Textures "${Ddir}" || die "copying files"
+	grabdirs "${DISK3}"
 	cdrom_load_next_cd
 
 	# Disk 4
 	einfo "Copying files from Disk 4..."
-	if [[ "${USE_ECE_DVD}" -eq 1 ]]
-	then
-		cp -r "${CDROM_ROOT}/${DISK4}"{StaticMeshes,Textures} "${Ddir}" \
-			|| die "copying files"
-	else
-		cp -r "${CDROM_ROOT}/${DISK4}"{Music,StaticMeshes,Textures} "${Ddir}" \
-			|| die "copying files"
-	fi
+	grabdirs "${DISK4}"
 	cdrom_load_next_cd
 
 	# Disk 5
 	einfo "Copying files from Disk 5..."
-	if [[ "${USE_ECE_DVD}" -eq 1 ]]
-	then
-		cp -r "${CDROM_ROOT}/${DISK5}"{Music,Sounds,Speech,StaticMeshes} "${Ddir}" \
-			|| die "copying files"
-	else
-		cp -r "${CDROM_ROOT}/${DISK5}"{Music,Sounds,Speech} "${Ddir}" \
-			|| die "copying files"
-	fi
+	grabdirs "${DISK5}"
 	cdrom_load_next_cd
 
 	# Disk 6
 	einfo "Copying files from Disk 6..."
-	cp -r "${CDROM_ROOT}/${DISK6}"/Sounds "${Ddir}" \
-		|| die "copying files"
+	grabdirs "${DISK6}"
 
 	# Create empty files in Benchmark
 	for j in {CSVs,Logs,Results}
@@ -167,12 +163,23 @@ src_install() {
 		games_ut_unpack "${Ddir}/${j}" || die "uncompressing files"
 	done
 
-	# Removing unneccessary files in System and Help
+	# Removing unneccessary files
 	rm -f "${Ddir}"/Help/{InstallerLogo.bmp,SAPI-EULA.txt,{Unreal,UnrealEd}.ico}
+	rm -rf "${Ddir}"/Speech/Redist
 	rm -f "${Ddir}"/System/*.tar
 	rm -f "${Ddir}"/System/{{License,Manifest}.smt,{ucc,StdOut}.log}
 	rm -f "${Ddir}"/System/{User,UT2004,Manifest}.ini
 	rm -f "${Ddir}"/System/{Manifest.int,Packages.md5}
+
+	# Removing file collisions with ut2004-bonuspack-ece
+	rm -f "${Ddir}"/Animations/{MechaSkaarjAnims,MetalGuardAnim,NecrisAnim,ONSBPAnimations}.ukx
+	rm -f "${Ddir}"/Help/BonusPackReadme.txt
+	rm -f "${Ddir}"/Maps/ONS-{Adara,IslandHop,Tricky,Urban}.ut2
+	rm -f "${Ddir}"/Sounds/{CicadaSnds,DistantBooms,ONSBPSounds}.uax
+	rm -f "${Ddir}"/StaticMeshes/{BenMesh02,BenTropicalSM01,HourAdara,ONS-BPJW1,PC_UrbanStatic}.usx
+	rm -f "${Ddir}"/System/{ONS-Adara.int,ONS-IslandHop.int,ONS-Tricky.int,ONS-Urban.int,OnslaughtBP.int,xaplayersl3.upl}
+	rm -f "${Ddir}"/Textures/{AW-2k4XP,BenTex02,BenTropical01,BonusParticles,CicadaTex,Construction_S}.utx
+	rm -f "${Ddir}"/Textures/{HourAdaraTexor,ONSBPTextures,ONSBP_DestroyedVehicles,PC_UrbanTex,UT2004ECEPlayerSkins}.utx
 
 	# Installing documentation/icon
 	dodoc "${S}"/README.linux || die "dodoc README.linux"
