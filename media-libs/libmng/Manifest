@@ -1,40 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e6b93f25e6b7be1d475a39200069c30d ChangeLog 4444
-RMD160 0363f77c4b90d892ae1cbce76b7b2b96dd5c7938 ChangeLog 4444
-SHA256 858a16de8275c2cff507ff509cdff8e81004cd59fdb51581f8c053f7fc25fd1c ChangeLog 4444
-MD5 e54a953532ee82caa95fc0ea5fe0e498 files/digest-libmng-1.0.4 64
-RMD160 2474a455bcb79bba289e1a166dd6ca5cedb89f5a files/digest-libmng-1.0.4 64
-SHA256 a610e57e5a3dfb70fa98a62013622c8522b182573749ac4588e5f72dc924700d files/digest-libmng-1.0.4 64
-MD5 f628f6ff3a3af16da957bf57ba7c2fdb files/digest-libmng-1.0.5 64
-RMD160 f62056bb10252e2fb079ff8be2fc84a399599269 files/digest-libmng-1.0.5 64
-SHA256 1872f577eb51f2ea5fdb78bffeec5b34f61b9f71901d25b25ed23a5ed2d06b2b files/digest-libmng-1.0.5 64
+MD5 28a9887b8d2b90a7d133a5d632bd6d5a ChangeLog 4774
+RMD160 43c87092dc052c5c8da0f74e88a4adbf53292cfc ChangeLog 4774
+SHA256 16a7ae3676a5ad2915b1f34541978004acd5191d2260c0a7041020bc9aa266bf ChangeLog 4774
 MD5 f14cb8c3ba7ee37dff6203db2f0a2259 files/digest-libmng-1.0.8-r1 64
 RMD160 a056184329618768f9d60f7c2b7b1de15549ae52 files/digest-libmng-1.0.8-r1 64
 SHA256 c13327e717e1fcf3fa4a4b280d8b809c3c987f4f507f0573b63ca812041d094f files/digest-libmng-1.0.8-r1 64
 MD5 cc6be5c9011a96b40386013d76291276 files/digest-libmng-1.0.8-r2 238
 RMD160 9e2c5f3c74e776375fb9e442073c918117580a03 files/digest-libmng-1.0.8-r2 238
 SHA256 f602a5651d88da68fd80138129bdfc2cb19505a501bd7406f2ef9771500b66af files/digest-libmng-1.0.8-r2 238
-MD5 88e9b3aef9fc330c0ebbb2160f296087 libmng-1.0.4.ebuild 942
-RMD160 0cf262f9cff661b9363815da76892ceb9e86fc39 libmng-1.0.4.ebuild 942
-SHA256 6bfaeac53c52edbc0eb8ee083176d71b750e7c1d080f6efd6124eb57d0c38f4b libmng-1.0.4.ebuild 942
-MD5 f383100879a3356001fed2867cba2999 libmng-1.0.5.ebuild 940
-RMD160 fc7c9a46ba64ba861e6c6fbe801210209f38b4b4 libmng-1.0.5.ebuild 940
-SHA256 93846691392ea76112ada58d76c73bbb9f3b36e76fa50dd25ce0ffcdb44f77eb libmng-1.0.5.ebuild 940
-MD5 580bfb491bcb54e1f1a5860fcd156b81 libmng-1.0.8-r1.ebuild 1146
-RMD160 c2d43d05a23b6e3d03ad8c71ff05019af1d64ef7 libmng-1.0.8-r1.ebuild 1146
-SHA256 b6d0bebbde58ea18622ab4d449dd7b4f77ab6b049fc4450dcf26e07f0b45db45 libmng-1.0.8-r1.ebuild 1146
-MD5 298012e8432b5afee5a1f25f4272f9ba libmng-1.0.8-r2.ebuild 1060
-RMD160 85e2e4163559e3ab2d950f6eb31f61e7ea4846a5 libmng-1.0.8-r2.ebuild 1060
-SHA256 e05609cb58ba32ca074570bcc28a6396d887fcab801c31a6f781927497019ad3 libmng-1.0.8-r2.ebuild 1060
+MD5 4df919f7fa4000927e41ebedab127bed files/digest-libmng-1.0.9 238
+RMD160 bcc8a40a5761d2e9fcad760bf29cbd648ca8c97c files/digest-libmng-1.0.9 238
+SHA256 65996eee4f53b9b30ef995e9704f0b47dfa1ce4e9eb8d55bd90dd471cf2e428c files/digest-libmng-1.0.9 238
+MD5 2ff024914dec3222d951366a29e4290e libmng-1.0.8-r1.ebuild 1134
+RMD160 608534e90845a4781446452a2c0eb5faccf46ae5 libmng-1.0.8-r1.ebuild 1134
+SHA256 f80ca018a1dbf3917b6d34abb809cb11ce428cb3b3c2120030f420f98126b3e8 libmng-1.0.8-r1.ebuild 1134
+MD5 85ce8eee3cd2c6f9d33cf32723644195 libmng-1.0.8-r2.ebuild 1047
+RMD160 621ac0724a2553aeeae4a710aa753308a71ee79d libmng-1.0.8-r2.ebuild 1047
+SHA256 2b7d52fe6ab00523865caa1f043c36848dde6f5d6193f79a2750311bdf16e4f9 libmng-1.0.8-r2.ebuild 1047
+MD5 69076f55a79e9693a01541f553fa2835 libmng-1.0.9.ebuild 995
+RMD160 d0dc19bb0d473000b2d122d72880972a334bf3aa libmng-1.0.9.ebuild 995
+SHA256 acdc95c6709cc2eaf88da512bda2e32f130e4d412fbdd1613dfb3dbf312564de libmng-1.0.9.ebuild 995
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
 SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFELd01AiZjviIA2XgRAgjgAKDWD8A2Wq1gFRbU78wCN6miJM4H4wCdHVcp
-/EcbcGCLYzzW1+v9Q9lR5OQ=
-=XONQ
+iD8DBQFEPa9SCRZPokWLroQRAu90AJ0axi425fypWiNFhtTbAxx6hEiN/QCdGoKa
+R5p0MxBfb3F9L4fbpRIkpWI=
+=Rk22
 -----END PGP SIGNATURE-----
