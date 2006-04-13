@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.1 2006/04/13 17:50:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.2 2006/04/13 17:51:53 wolf31o2 Exp $
 
 inherit games games-ut2k4mod
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 RESTRICT="strip"
 IUSE=""
 
