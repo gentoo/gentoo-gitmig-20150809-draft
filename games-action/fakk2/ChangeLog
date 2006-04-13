@@ -1,6 +1,10 @@
 # ChangeLog for games-action/fakk2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/ChangeLog,v 1.13 2006/03/31 20:19:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/ChangeLog,v 1.14 2006/04/13 19:45:25 wolf31o2 Exp $
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> fakk2-1.02.ebuild:
+  Moved games_pkg_setup to the beginning of pkg_setup and changed to use
+  GAMES_CHECK_LICENSE variable.
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> fakk2-1.02.ebuild:
   Changing nostrip to strip.
