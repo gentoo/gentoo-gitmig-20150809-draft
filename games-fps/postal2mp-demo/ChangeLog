@@ -1,0 +1,57 @@
+# ChangeLog for games-fps/postal2mpdemo
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/ChangeLog,v 1.1 2006/04/13 20:47:24 wolf31o2 Exp $
+
+*postal2mp-demo-1407 (13 Apr 2006)
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +postal2mp-demo-1407.ebuild:
+  Moved from games-fps/postal2mpdemo to games-fps/postal2mp-demo.
+
+  31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  postal2mpdemo-1407.ebuild:
+  Changed nomirror to mirror.
+
+  21 Mar 2006; <Tupone@gentoo.org> postal2mpdemo-1407.ebuild:
+  Adding desktop entry, bug #123505 by Alexander Nicolaysen Sørnes
+
+  14 Feb 2006; <Tupone@gentoo.org> postal2mpdemo-1407.ebuild:
+  modular X dependency fix
+
+  21 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  postal2mpdemo-1407.ebuild:
+  Changed check_license to explicitly list license to check.
+
+  03 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  postal2mpdemo-1407.ebuild:
+  Removed reference to emul-linux-x86-nvidia.
+
+  30 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  postal2mpdemo-1407.ebuild:
+  Changed to match new 3dgamers mirrors structure in thirdpartymirrors.
+
+  26 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  postal2mpdemo-1407.ebuild:
+  nvidia-glx satisfies opengl on amd64.
+
+  15 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  postal2mpdemo-1407.ebuild:
+  call games_pkg_setup from pkg_setup
+
+  17 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  postal2mpdemo-1407.ebuild:
+  Added RESTRICT=nomirror.
+
+  17 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  postal2mpdemo-1407.ebuild:
+  Adding mirrors, removing RESTRICT=fetch, adding ~amd64 KEYWORD, and closing
+  bug #59168.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  postal2mpdemo-1407.ebuild:
+  virtual/glibc -> virtual/libc
+
+*postal2mpdemo-1407 (09 Jan 2004)
+
+  09 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me for #36707.
