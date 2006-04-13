@@ -1,6 +1,10 @@
 # ChangeLog for games-action/powermanga
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.8 2006/04/03 22:20:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.9 2006/04/13 19:49:56 wolf31o2 Exp $
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -powermanga-0.78.ebuild, powermanga-0.79.ebuild, powermanga-0.80.ebuild:
+  Moved games_pkg_setup to the beginning of pkg_setup and removing older ebuilds.
 
 *powermanga-0.80 (03 Apr 2006)
 

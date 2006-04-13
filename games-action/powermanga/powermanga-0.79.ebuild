@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.79.ebuild,v 1.4 2006/03/15 22:59:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.79.ebuild,v 1.5 2006/04/13 19:49:56 wolf31o2 Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://linux.tlk.fr/games/Powermanga/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -18,12 +18,12 @@ DEPEND="virtual/libc
 	media-libs/sdl-mixer"
 
 pkg_setup() {
+	games_pkg_setup
 	if ! built_with_use media-libs/sdl-mixer mikmod
 	then
 		eerror "${PN} needs sdl-mixer compiled with mikmod use-flag enabled!"
 		die "sdl-mixer without mikmod detected"
 	fi
-	games_pkg_setup
 }
 
 src_compile() {
