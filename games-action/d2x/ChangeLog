@@ -1,6 +1,9 @@
 # ChangeLog for games-action/d2x
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.14 2006/01/03 20:53:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.15 2006/04/13 19:43:16 wolf31o2 Exp $
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> -d2x-0.2.5-r1.ebuild:
+  Removing old ebuild.
 
   03 Jan 2006; Michael Sterrett <mr_bones_@gentoo.org> d2x-0.2.5-r2.ebuild:
   fix up LICENSE (bug #117344)
