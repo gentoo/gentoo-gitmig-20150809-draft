@@ -1,5 +1,6 @@
---- configure	2001-10-27 00:44:43.000000000 +0200
-+++ configure.new	2002-05-26 01:52:20.000000000 +0200
+diff -Nru gtkesms-0.0.4.orig/configure gtkesms-0.0.4/configure
+--- gtkesms-0.0.4.orig/configure	2006-04-13 22:25:47.000000000 +0300
++++ gtkesms-0.0.4/configure	2006-04-13 22:26:04.233772750 +0300
 @@ -1133,6 +1133,8 @@
  # Para no buscar en todo el disco duro, solo miro algunos directorios 'standar'
  	if test -e /usr/lib/perl5/Gtk.pm; then

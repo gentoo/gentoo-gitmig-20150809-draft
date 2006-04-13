@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gtkesms
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gtkesms/ChangeLog,v 1.2 2005/06/05 12:01:43 mrness Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gtkesms/ChangeLog,v 1.3 2006/04/13 19:29:44 mrness Exp $
+
+  13 Apr 2006; Alin Nastac <mrness@gentoo.org> files/gtkesms.patch,
+  gtkesms-0.0.4.ebuild:
+  Sanitize the ebuild code.
 
   15 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml:
   Moved from net-misc/gtkesms to app-mobilephone/gtkesms.
