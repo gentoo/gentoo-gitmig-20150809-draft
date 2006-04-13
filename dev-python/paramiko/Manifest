@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8ea539e9a039a1da3fb122bdbc734198 ChangeLog 1627
-RMD160 b830ca54353fcada5f2dfd7d6b44e55ec60cab20 ChangeLog 1627
-SHA256 a598ff846e1ee00144e8f5ace362eb69771ba18e0b86c04e40f1332f15a6d91c ChangeLog 1627
+MD5 4b156096c9b4e8a74988b7f81d5ef30d ChangeLog 1753
+RMD160 bbd902db045cb5e7af0be413c5a2315aa90fbe42 ChangeLog 1753
+SHA256 290d28a5304e7c379b999b0e6dca9c079d60a33aae70a612e8496a6e0c099173 ChangeLog 1753
 MD5 c117912a6af93099a7e2bc82fb50526f files/digest-paramiko-0.9h 68
 RMD160 21a40d203dcedcb6f9718bb09a5768764a19ecc6 files/digest-paramiko-0.9h 68
 SHA256 ff447fbefcae7a5bcd1f7c34df44b0ea1338c468a3d89c5b441f0d398efa0264 files/digest-paramiko-0.9h 68
@@ -16,6 +16,9 @@ SHA256 bd36fadeda5d58c7bf1cb0ef0bbac8868e2bcec950c131299296e51d11c5ff09 files/di
 MD5 36c542c1f7a1181e82cdc75af28f635f files/digest-paramiko-1.5.2 63
 RMD160 7e14ce17c49c54af82c18dbb863f21be2b407ba4 files/digest-paramiko-1.5.2 63
 SHA256 2c0d22bae595fdb2f3d640b6f7c26075db5b9cf80d1e192e0587314e66060f02 files/digest-paramiko-1.5.2 63
+MD5 2d6345e29c6ce170c06668d5759d3c1b files/digest-paramiko-1.5.4 235
+RMD160 ff90fd698780549fc47c11ddc4e73552f1eec290 files/digest-paramiko-1.5.4 235
+SHA256 ec3dbdb657276b724941cf657cfbd9dcfd65744e3989ee7edc07bcab4c238675 files/digest-paramiko-1.5.4 235
 MD5 4d5b7b5bcf6a70511e46ad6a06420b39 metadata.xml 897
 RMD160 53d2f82df4ad314ad8543ca95e82037f7e4e3a50 metadata.xml 897
 SHA256 2706e534ea7bc52cf5fbc3ce6ee4008ec371db4869a76edcbbbd78782b63fd17 metadata.xml 897
@@ -28,13 +31,16 @@ SHA256 e54ac22b2e9a1ee9acd80293b39e88d1389ec55a99b5da99f5e5008702b5c44e paramiko
 MD5 bdd250275b6aa4e3ad225696e93c0e09 paramiko-1.5.2.ebuild 722
 RMD160 9f360e8235e871ff8657798f67e4811eb372ee3e paramiko-1.5.2.ebuild 722
 SHA256 94e9ab064b1e767f6091b6fc368e997c3974f4b5d8288f074b9edfcf9d4f35a0 paramiko-1.5.2.ebuild 722
+MD5 6271505a657212ff3fb1952ed0b6ecf6 paramiko-1.5.4.ebuild 700
+RMD160 3203314a3c24bd87260e3112549c1644af580e3e paramiko-1.5.4.ebuild 700
+SHA256 2447ef87b13f2969a84b626a9e3c238510d78a19cd8c890c655303d1137066e6 paramiko-1.5.4.ebuild 700
 MD5 725ae933b503280d10ebac123c10bd6c paramiko-1.5.ebuild 647
 RMD160 f68d230775fd32458dc5432ea8f82f540248bfdf paramiko-1.5.ebuild 647
 SHA256 f8f3f9a241700fb8fcec417bd441ca7d19111769f1ecef94d129d570123c9b7d paramiko-1.5.ebuild 647
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFELphyJrHF4yAQTrARAocJAJ4h4aROa9+RNcvkLGLFXHbwQ26hvACgrz3t
-A7kqgX8+dwTkHtHi6Gu7nKc=
-=wX2j
+iD8DBQFEPgqU2jLqHNfbg2URAnh/AKCLaVxShx3IfGXnu9qbnI/wJF0UnACgi2S+
+29mT5yaL43xWpddgdEP3+9g=
+=uoco
 -----END PGP SIGNATURE-----
