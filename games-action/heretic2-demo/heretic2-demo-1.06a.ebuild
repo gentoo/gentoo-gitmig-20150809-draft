@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/heretic2-demo-1.06a.ebuild,v 1.1 2006/04/12 21:17:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/heretic2-demo-1.06a.ebuild,v 1.2 2006/04/13 22:14:08 wolf31o2 Exp $
 
 inherit eutils multilib games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://lokigames/loki_demos/${PN}.run"
 
 LICENSE="LOKI-EULA"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="nostrip"
 
