@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/ut2004-bonuspack-ece
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ChangeLog,v 1.7 2006/04/11 11:47:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ChangeLog,v 1.8 2006/04/13 17:49:43 wolf31o2 Exp $
+
+*ut2004-bonuspack-ece-1-r2 (13 Apr 2006)
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -ut2004-bonuspack-ece-1-r1.ebuild, +ut2004-bonuspack-ece-1-r2.ebuild:
+  I have forced a revision bump here since this package will now *always*
+  install the ECE content. I'm sure some users are going to hate me for this,
+  but it had to be done. Closing bug #97726.
 
   11 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-bonuspack-ece-1-r1.ebuild:
