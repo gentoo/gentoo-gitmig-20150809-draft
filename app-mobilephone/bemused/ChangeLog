@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/bemused
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bemused/ChangeLog,v 1.1 2005/05/16 17:51:52 mrness Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bemused/ChangeLog,v 1.2 2006/04/13 18:58:17 mrness Exp $
+
+  13 Apr 2006; Alin Nastac <mrness@gentoo.org> bemused-1.73.ebuild:
+  Remove unnecessary src_compile().
 
   16 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml,
   bemused-1.73.ebuild:

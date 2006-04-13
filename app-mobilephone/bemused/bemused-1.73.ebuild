@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bemused/bemused-1.73.ebuild,v 1.1 2005/05/16 17:51:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bemused/bemused-1.73.ebuild,v 1.2 2006/04/13 18:58:17 mrness Exp $
 
 MY_P=${PN}linuxserver-${PV/./_}
 
@@ -17,10 +17,6 @@ S="${WORKDIR}/${PN}linuxserver${PV}"
 
 DEPEND="media-sound/xmms
 	net-wireless/bluez-libs"
-
-src_compile() {
-	make || die
-}
 
 src_install() {
 	dobin bemusedlinuxserver
