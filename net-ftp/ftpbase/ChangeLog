@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftpbase
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.10 2005/10/05 17:27:33 uberlord Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.11 2006/04/13 07:26:11 uberlord Exp $
+
+  13 Apr 2006; Roy Marples <uberlord@gentoo.org> ftpbase-0.00.ebuild:
+  Fixed up some quoting issues and remove eindent command, #129774.
 
   05 Oct 2005; Roy Marples <uberlord@gentoo.org> ftpbase-0.00.ebuild:
   Use "egethome ftp" instead of greping and cuting /etc/passwd.
