@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.265 2006/04/12 02:36:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.266 2006/04/13 05:26:24 vapier Exp $
 
-HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
+HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
 RESTRICT="nostrip" # cross-compilers need controlled stripping
 
