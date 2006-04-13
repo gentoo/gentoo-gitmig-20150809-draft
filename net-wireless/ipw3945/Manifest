@@ -1,2 +1,4 @@
+MD5 b4da5d5a7f8aa48dde75433ddc606113 ChangeLog 456
 MD5 4975d1c9d861e3564b8487bc3f14916f files/digest-ipw3945-0.0.74 63
-MD5 ef95a0f48e12dc33ee2aaf800d235399 ipw3945-0.0.74.ebuild 2487
+MD5 284f821ba4132d66cc0c058fdc89d54b ipw3945-0.0.74.ebuild 2589
+MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
