@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.21 2006/03/30 08:12:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.22 2006/04/13 13:18:59 flameeyes Exp $
+
+  13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  mDNSResponder-107.5.ebuild:
+  Set LOCALBASE to force installing in /usr, and keyword ~x86-fbsd.
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   mDNSResponder-107.5.ebuild:

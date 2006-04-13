@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.5.ebuild,v 1.2 2006/03/30 08:12:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.5.ebuild,v 1.3 2006/04/13 13:18:59 flameeyes Exp $
 
 inherit eutils multilib base toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="APSL-2 BSD"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug java"
 
 PATCHES="${FILESDIR}/${P}-Makefiles.patch"
@@ -28,9 +28,11 @@ mdnsmake() {
 	use java && jdk="JDK=$(java-config -O)"
 	use debug && debug='DEBUG=1'
 	einfo "Running emake " os="${os}" CC="$(tc-getCC)" LD="$(tc-getCC) -shared" \
-		${jdk} ${debug} OPT_CFLAGS="${CFLAGS}" LIBFLAGS="${LDFLAGS}" STRIP="true" "$@"
+		${jdk} ${debug} OPT_CFLAGS="${CFLAGS}" LIBFLAGS="${LDFLAGS}" \
+		STRIP="true" LOCALBASE="/usr" "$@"
 	emake os="${os}" CC="$(tc-getCC)" LD="$(tc-getCC) -shared" \
-		${jdk} ${debug} OPT_CFLAGS="${CFLAGS}" LIBFLAGS="${LDFLAGS}" STRIP="true" "$@"
+		${jdk} ${debug} OPT_CFLAGS="${CFLAGS}" LIBFLAGS="${LDFLAGS}" \
+		STRIP="true" LOCALBASE="/usr" "$@"
 }
 
 src_compile() {
@@ -63,7 +65,7 @@ src_install() {
 		objdir=debug
 	fi
 
-	make DESTDIR="${D}" os=${os} ${debug} install || die "install failed"
+	make LOCALBASE="/usr" DESTDIR="${D}" os=${os} ${debug} install || die "install failed"
 
 	dosbin ${S}/mDNSPosix/build/${objdir}/dnsextd
 	dosbin ${S}/mDNSPosix/build/${objdir}/mDNSResponderPosix
