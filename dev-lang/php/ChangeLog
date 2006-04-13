@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.83 2006/03/28 21:35:40 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.84 2006/04/13 20:28:58 chtekk Exp $
+
+*php-5.1.2-r1 (13 Apr 2006)
+*php-4.4.2-r1 (13 Apr 2006)
+
+  13 Apr 2006; Luca Longinotti <chtekk@gentoo.org> +php-4.4.2-r1.ebuild,
+  +php-5.1.2-r1.ebuild:
+  Add new revisions to fix an issue with the MySQL charsets.
+  See bug #129761 about it.
 
   28 Mar 2006; Luca Longinotti <chtekk@gentoo.org>
   files/70_mod_php.conf-apache1, files/70_mod_php.conf-apache2,
