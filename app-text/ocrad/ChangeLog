@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ocrad
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.15 2006/04/10 11:02:58 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.16 2006/04/13 14:26:42 ehmsen Exp $
+
+  13 Apr 2006; Martin Ehmsen <ehmsen@gentoo.org>
+  +files/ocrad-0.14-gcc-4-compilation.patch, ocrad-0.14.ebuild:
+  Fixed gcc-4 compilation problem, bug #129651.
 
 *ocrad-0.14 (10 Apr 2006)
 

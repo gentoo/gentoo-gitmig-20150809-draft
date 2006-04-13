@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ocrad-0.14.ebuild,v 1.1 2006/04/10 11:02:58 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ocrad-0.14.ebuild,v 1.2 2006/04/13 14:26:42 ehmsen Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 IUSE=""
 
@@ -16,6 +16,11 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}/${P}-gcc-4-compilation.patch" || die "Patching failed"
+}
 
 src_compile() {
 	# econf doesn't work (unrecognized option --host)
