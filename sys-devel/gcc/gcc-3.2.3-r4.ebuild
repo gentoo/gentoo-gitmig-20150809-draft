@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.19 2006/03/28 05:17:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.20 2006/04/13 05:54:35 vapier Exp $
 
 inherit eutils flag-o-matic libtool versionator
 
@@ -93,7 +93,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/${P}-tls-update.patch.bz2"
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
-HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
+HOMEPAGE="http://gcc.gnu.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 # this is a glibc-propolice forced bump to a gcc without guard 

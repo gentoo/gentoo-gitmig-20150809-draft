@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r9.ebuild,v 1.3 2005/11/05 21:12:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r9.ebuild,v 1.4 2006/04/13 05:54:35 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs versionator fixheadtails gnuconfig
 
@@ -41,7 +41,7 @@ STDCXX_INCDIR="${LIBPATH}/include/g++"
 
 PATCH_VER=1.2
 DESCRIPTION="Modern C/C++ compiler written by the GNU people"
-HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
+HOMEPAGE="http://gcc.gnu.org/"
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
 	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 

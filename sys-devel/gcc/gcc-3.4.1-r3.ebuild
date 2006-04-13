@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.22 2006/03/28 05:17:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.23 2006/04/13 05:54:35 vapier Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened n32 n64 emul-linux-x86"
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie and ssp extensions"
-HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
+HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
 
 # previous release known to b0rk glibc on hppa... i dont know if this bug

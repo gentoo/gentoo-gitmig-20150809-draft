@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.26 2006/03/28 05:17:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.27 2006/04/13 05:54:35 vapier Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj emul-linux-x86"
 
@@ -98,7 +98,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/${P}-manpages.tar.bz2"
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
-HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
+HOMEPAGE="http://gcc.gnu.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 
