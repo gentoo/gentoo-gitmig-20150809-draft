@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.4.2-r2.ebuild,v 1.3 2006/04/12 05:51:57 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.4.2-r2.ebuild,v 1.4 2006/04/13 12:14:32 bass Exp $
 
 inherit eutils virtualx
 
@@ -58,6 +58,13 @@ pkg_setup() {
 		die "sys-apps/dbus is missing the python binding."
 	fi
 
+	if ! built_with_use gnome-base/gnome-vfs hal ; then
+		echo
+		eerror "In order to install Listen, you need to have gnome-base/gnome-vfs"
+		eerror "with 'hal' in your USE flags. Please add that flag,"
+		eerror "re-emerge gnome-vfs, and then emerge listen."
+		die "gnome-base/gnome-vfs is missing the hal binding."
+	fi
 }
 
 src_compile() {
