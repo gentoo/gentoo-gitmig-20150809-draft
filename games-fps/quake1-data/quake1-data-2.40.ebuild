@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.6 2006/01/04 13:58:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.7 2006/04/13 21:05:47 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -19,8 +19,8 @@ RDEPEND=""
 S=${WORKDIR}
 
 pkg_setup() {
-	export CDROM_SET_NAMES=("Existing Install" "Quake CD" "Ultimate Quake Collection")
 	games_pkg_setup
+	export CDROM_SET_NAMES=("Existing Install" "Quake CD" "Ultimate Quake Collection")
 	cdrom_get_cds id1:q101_int.1:Setup/ID1
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake1-data
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/ChangeLog,v 1.3 2006/01/04 13:58:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/ChangeLog,v 1.4 2006/04/13 21:05:45 wolf31o2 Exp $
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake1-data-2.40.ebuild:
+  Moved games_pkg_setup to the beginning of pkg_setup.
 
   04 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   quake1-data-2.40.ebuild:

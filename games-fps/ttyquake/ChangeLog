@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ttyquake
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ttyquake/ChangeLog,v 1.5 2005/10/23 21:29:11 mr_bones_ Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ttyquake/ChangeLog,v 1.6 2006/04/13 21:14:52 wolf31o2 Exp $
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> ttyquake-0.4.2.ebuild:
+  Moved games_pkg_setup to the beginning of pkg_setup.
 
   23 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org>
   ttyquake-0.4.2.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.13 2006/03/31 21:06:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.14 2006/04/13 21:09:21 wolf31o2 Exp $
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake3-bin-1.31.ebuild:
+  Moved games_pkg_setup to the beginning of pkg_setup.
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   quake3-bin-1.31.ebuild, quake3-bin-1.32b-r4.ebuild,

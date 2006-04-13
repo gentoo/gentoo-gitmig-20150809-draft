@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.12 2006/03/31 21:21:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.13 2006/04/13 21:13:57 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -22,14 +22,14 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}
 
+GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
 pkg_setup() {
-	check_license LOKI-EULA
+	games_pkg_setup
 	ewarn "The installed game takes about 507MB of space!"
 	cdrom_get_cds README.tribes2d
-	games_pkg_setup
 }
 
 src_unpack() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ttyquake/ttyquake-0.4.2.ebuild,v 1.7 2005/10/23 21:29:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ttyquake/ttyquake-0.4.2.ebuild,v 1.8 2006/04/13 21:14:52 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -19,9 +19,9 @@ RDEPEND="games-fps/quake1"
 S="${WORKDIR}"
 
 pkg_setup() {
+	games_pkg_setup
 	[ -x "${GAMES_BINDIR}/squake" ] \
 		|| die "You must emerge quake1 with svga in your USE"
-	games_pkg_setup
 }
 
 src_install() {

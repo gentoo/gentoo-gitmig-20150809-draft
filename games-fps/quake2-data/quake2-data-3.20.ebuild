@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.17 2006/03/15 22:33:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.18 2006/04/13 21:06:48 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -19,9 +19,9 @@ RDEPEND=""
 S=${WORKDIR}
 
 pkg_setup() {
+	games_pkg_setup
 	export CDROM_SET_NAMES=("Existing Install" "Ultimate Quake Edition" "Quake2 CD" "Quake4 Bonus DVD")
 	cdrom_get_cds baseq2:Install/patch:Install:Movies
-	games_pkg_setup
 }
 
 src_unpack() {

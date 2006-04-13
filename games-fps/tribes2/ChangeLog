@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/tribes2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/ChangeLog,v 1.12 2006/03/31 21:21:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/ChangeLog,v 1.13 2006/04/13 21:13:57 wolf31o2 Exp $
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> tribes2-25034.ebuild:
+  Moved games_pkg_setup to the beginning of pkg_setup.
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> tribes2-25034.ebuild:
   Changed nomirror to mirror and nostrip to strip.

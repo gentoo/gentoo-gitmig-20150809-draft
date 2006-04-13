@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.31.ebuild,v 1.7 2006/03/31 21:06:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.31.ebuild,v 1.8 2006/04/13 21:09:21 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -35,13 +35,10 @@ RDEPEND="sys-libs/glibc
 			>=x11-drivers/ati-drivers-8.8.25-r1 ) ) )"
 
 S=${WORKDIR}
+
+GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/quake3
 Ddir=${D}/${dir}
-
-pkg_setup() {
-	check_license Q3AEULA
-	games_pkg_setup
-}
 
 src_unpack() {
 	unpack_makeself
