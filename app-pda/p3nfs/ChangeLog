@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/p3nfs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.12 2006/02/27 23:02:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.13 2006/04/13 20:31:55 mrness Exp $
+
+  13 Apr 2006; Alin Nastac <mrness@gentoo.org> p3nfs-5.19.ebuild:
+  Stable on x86.
 
 *p3nfs-5.19 (27 Feb 2006)
 
