@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/labplot
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.3 2006/04/04 23:45:10 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.4 2006/04/13 19:14:46 chutzpah Exp $
+
+  13 Apr 2006; Patrick McLean <chutzpah@gentoo.org> labplot-1.5.0.5.ebuild,
+  labplot-1.5.1.ebuild:
+  Drop amd64 keyword from 1.5 versions since they have a hard dep on
+  media-gfx/pstoedit (1.4 had the dep conditional on x86). Feel free to re-add
+  the keyword if you can make the dep optional in 1.5 as well. (see bug #127328
+  for why I am dropping the keyword on pstoedit).
 
 *labplot-1.5.1 (04 Apr 2006)
 

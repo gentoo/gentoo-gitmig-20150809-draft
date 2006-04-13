@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.0.5.ebuild,v 1.1 2006/01/29 20:01:29 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.0.5.ebuild,v 1.2 2006/04/13 19:14:46 chutzpah Exp $
 
 inherit eutils gnuconfig kde
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://labplot.sourceforge.net/"
 SRC_URI="mirror://sourceforge/labplot/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86"
 SLOT="0"
 IUSE="audiofile cdf fftw imagemagick jpeg2k kexi opengl tiff"
 
