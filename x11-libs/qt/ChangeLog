@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.301 2006/04/11 15:13:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.302 2006/04/13 12:02:22 caleb Exp $
+
+  13 Apr 2006; Caleb Tennis <caleb@gentoo.org> qt-3.3.6.ebuild:
+  Fix CHOST naming scheme from bug #128528
 
   11 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> qt-3.3.4-r8.ebuild,
   qt-3.3.4-r9.ebuild, qt-3.3.6.ebuild:
