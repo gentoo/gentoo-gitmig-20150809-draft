@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.6 2006/03/31 20:16:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.7 2006/04/13 19:44:26 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -36,6 +36,7 @@ dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
 pkg_setup() {
+	games_pkg_setup
 	if use videos ; then
 		ewarn "The installed game takes about 1.2GB of space!"
 		cdrom_get_cds missions/d3.mn3 movies/level1.mve
@@ -47,7 +48,6 @@ pkg_setup() {
 	else
 		ewarn "The installed game takes about 220MB of space!"
 	fi
-	games_pkg_setup
 }
 
 src_unpack() {

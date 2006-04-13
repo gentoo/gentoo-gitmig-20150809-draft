@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.4.20050930-r1.ebuild,v 1.4 2006/03/23 01:18:45 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.4.20050930-r1.ebuild,v 1.5 2006/04/13 19:40:07 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -21,10 +21,10 @@ DEPEND=">=net-misc/curl-7.15.0
 		media-libs/libsdl )"
 
 pkg_setup() {
+	games_pkg_setup
 	# comment in bug #107792
 	# only do the libsdl checks for !dedicated
 	use dedicated || GAMES_USE_SDL="nojoystick"
-	games_pkg_setup
 }
 
 src_unpack() {

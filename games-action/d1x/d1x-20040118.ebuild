@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/d1x-20040118.ebuild,v 1.5 2005/09/25 07:13:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/d1x-20040118.ebuild,v 1.6 2006/04/13 19:41:04 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -17,16 +17,16 @@ RDEPEND="media-libs/libsdl
 	opengl? (
 		virtual/opengl
 		media-libs/libpng
-		sys-libs/zlib
-	)"
+		sys-libs/zlib )"
+
 DEPEND="${RDEPEND}
 	>=dev-lang/nasm-0.97"
 
 S=${WORKDIR}/${PN}
 
 pkg_setup() {
-	cdrom_get_cds descent
 	games_pkg_setup
+	cdrom_get_cds descent
 }
 
 src_unpack() {
