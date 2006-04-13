@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/xinetd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.38 2006/01/29 09:20:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.39 2006/04/13 13:01:56 flameeyes Exp $
+
+  13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> xinetd-2.3.14.ebuild:
+  Add ~x86-fbsd keyword.
 
   29 Jan 2006; Mike Frysinger <vapier@gentoo.org> xinetd-2.3.14.ebuild:
   Make perl depend optional #120565 by Natanael Copa.

@@ -1,32 +1,76 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f88ca6b409289744e9affe98d4cdb961 ChangeLog 5753
+MD5 285d60cd5a4ef2675f52ff2498eb15d5 ChangeLog 5857
+RMD160 bbd6d693399a8dc978cfa8735b3ec66c6e40569f ChangeLog 5857
+SHA256 ba1ba3cb5afc1bbcd41837ffd72efd6cf1bc4edaf06efafbfb23f1140e27ad4b ChangeLog 5857
 MD5 3b6428878ffb5338d7eaff85ccbe6f6a files/digest-xinetd-2.3.13 65
+RMD160 03132887af760756da62531fad0faed2ee776aca files/digest-xinetd-2.3.13 65
+SHA256 c50a455cf0289643089642044e135880f4c2b37d5fd3f964a81bbaf00252ab7e files/digest-xinetd-2.3.13 65
 MD5 1664118097dcca0bdd6c3f9dc6da4b86 files/digest-xinetd-2.3.14 65
+RMD160 556df6485956d4345defe7da317d7cacae4bf5d5 files/digest-xinetd-2.3.14 65
+SHA256 6a67285cb3daf05f265c7046525660e52b30d5d843be5fe8c02ed67748a3a167 files/digest-xinetd-2.3.14 65
 MD5 f9591814c08ab763ace5c8969ce6d457 files/etc.xinetd.d/README.services 643
+RMD160 44c6cd5dacd44cf3ed3c25e66220da1a016a9f65 files/etc.xinetd.d/README.services 643
+SHA256 0383c2898a5b21a75af197998e57c49c77758716894c9e88fbf3ad9e82a25a5b files/etc.xinetd.d/README.services 643
 MD5 7d04f6175ae493c8aa988e3728e959b3 files/etc.xinetd.d/chargen-tcp 246
+RMD160 dcf63b048f5b4f8975005a6a72864b91f3efb408 files/etc.xinetd.d/chargen-tcp 246
+SHA256 c9ac1f047712da37f3d8b171fe0478b4ded77c0a47b63d4663d0949d12bebb69 files/etc.xinetd.d/chargen-tcp 246
 MD5 a26dbc5cae6b20e71846bff26600eb89 files/etc.xinetd.d/chargen-udp 266
+RMD160 fefd998de3e35d503b8c593b82d7c1ff26b98ffb files/etc.xinetd.d/chargen-udp 266
+SHA256 8e108f521dcdcb6f99fde3c251b0d21f0ee7e317a07875b0253a8f5685e7e553 files/etc.xinetd.d/chargen-udp 266
 MD5 2444f1a969860075d1d7fe9974a62575 files/etc.xinetd.d/daytime-tcp 246
+RMD160 6f3d5b676ac2e1458869a5f999d6bc9a45451812 files/etc.xinetd.d/daytime-tcp 246
+SHA256 b3ca856f63766e9403bc67766122c933d75a627b3febba1b3698fa8862fca20a files/etc.xinetd.d/daytime-tcp 246
 MD5 79665fc4e88391cc1d5f8f0f4fd391d8 files/etc.xinetd.d/daytime-udp 272
+RMD160 b9a74eaca34dec469bfea093156a42ae45c3cfe4 files/etc.xinetd.d/daytime-udp 272
+SHA256 5dc2e34a3dea9de1f15f66c66ef19bb70ce20e1df3bdec78a095a8d72641b140 files/etc.xinetd.d/daytime-udp 272
 MD5 6eb573e86ba7cad19ea240848a88767a files/etc.xinetd.d/echo-tcp 238
+RMD160 e229ebb1395e1ba00ba1d1dd222c18faeb16abf4 files/etc.xinetd.d/echo-tcp 238
+SHA256 2b4005d27369d017e073f7eb426aa45226557a7bcde8ed25a3b3a89bb2d49ea7 files/etc.xinetd.d/echo-tcp 238
 MD5 15e73cb0db884334cef7ac44ced9fa6c files/etc.xinetd.d/echo-udp 263
+RMD160 91384db79f3167ced66f567b4e29cd888c2366f3 files/etc.xinetd.d/echo-udp 263
+SHA256 594836488f2d23ba3cf5c514bc93d72f7934130498693a16f936dc1bbf7f1fdd files/etc.xinetd.d/echo-udp 263
 MD5 02bc3d5745432ee4b5b11b9c2e03c731 files/etc.xinetd.d/time-tcp 270
+RMD160 2148ec99eacc092930ef23cafdb522a16beeaf4e files/etc.xinetd.d/time-tcp 270
+SHA256 46f802b6ff5ceef9158a9d297035b2d2398606583a369290973cc48fb733af88 files/etc.xinetd.d/time-tcp 270
 MD5 70829ea9fe03a6e343efa635c9f263e0 files/etc.xinetd.d/time-udp 272
+RMD160 7138ccd9f496af727e59fceb1c6c4ee268d73f97 files/etc.xinetd.d/time-udp 272
+SHA256 6c39c7a1fb0b788ca075b478ec79d94cf55990a13090ded13a91b690bbf94c80 files/etc.xinetd.d/time-udp 272
 MD5 04e66e7da7e59b3282511ec586d14035 files/xinetd-2.3.13-gcc4.patch 893
+RMD160 3a77bc5db1e63fae0a1b12eb2e7425eca7ccc65e files/xinetd-2.3.13-gcc4.patch 893
+SHA256 9de0dc8f8149ed6b26c878d5de4a7c9523be3632ed0316a502fd69e5cf6b97e2 files/xinetd-2.3.13-gcc4.patch 893
 MD5 a45cfc68a8e7dde7901a14589922e7d0 files/xinetd-2.3.14-DESTDIR.patch 1725
+RMD160 db439670f48e887cb79574507eba85a1b3fc7e35 files/xinetd-2.3.14-DESTDIR.patch 1725
+SHA256 928e078070c2b662cd53808c16c5217a9f7f46e31132254bbf19f5efc39b0bc4 files/xinetd-2.3.14-DESTDIR.patch 1725
 MD5 fdf790b5a295391a26ef6ac67326fec5 files/xinetd-2.3.14-config.patch 154
+RMD160 2bc92051859da103070d3b26a2922b2fb3eacbe1 files/xinetd-2.3.14-config.patch 154
+SHA256 9aa8641d7462a2566770ad93efe13004c5b8c02374221f7b7bd1382c805ffc2e files/xinetd-2.3.14-config.patch 154
 MD5 94bb9c3595723d892b66f3b6bbb27916 files/xinetd-2.3.14-install-contrib.patch 728
+RMD160 85f9ed2fd5c932ee5a63e02218242a6f84dbd5ee files/xinetd-2.3.14-install-contrib.patch 728
+SHA256 e76479ccf5f5763a1365f3ad59edf30f20e77147b8e012d2cee179fc72298d8a files/xinetd-2.3.14-install-contrib.patch 728
 MD5 3d9334251f4b1f43443eb7cb2a5082fc files/xinetd.conf 259
+RMD160 a8f40b11f94d302ac6b2d3828e5a1b6b01d6fe2a files/xinetd.conf 259
+SHA256 93610a90ec8050cd0567f42b66d99fc01459cb30db9b6afcdafb43141fdfca9e files/xinetd.conf 259
 MD5 75be0d5e24dbed7c74493053f455383b files/xinetd.confd 90
+RMD160 e06f0c374f4a3f05f9509d9aa3571692a0e4e783 files/xinetd.confd 90
+SHA256 e401e2cf7c0180a170d3dc3e91d7e98002bae7b013df72813b7bcf89b864fb3a files/xinetd.confd 90
 MD5 5e5499c1d0e11aa5ef488642d7c3e5db files/xinetd.rc6 868
+RMD160 509323618560309a6c42f830b0ecdf07bba756b2 files/xinetd.rc6 868
+SHA256 eb382cdf1fa828cb6bc5025b9c52cc562210589202d2dfc9fae26cf11aea1b99 files/xinetd.rc6 868
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 MD5 0ab919c245efca6ef554559091b2ae33 xinetd-2.3.13.ebuild 1999
-MD5 2ee113960bd0163d92b7755139ae4901 xinetd-2.3.14.ebuild 1690
+RMD160 8d5cd2229d9d83e801d4331352ef06e8b5374fa8 xinetd-2.3.13.ebuild 1999
+SHA256 fb0f06e68df64c8d3a9d5b04b7003d47b293da44fb86ec3e851fbe2157dc4a0e xinetd-2.3.13.ebuild 1999
+MD5 826759068d613b6d5537d73deb3c45c8 xinetd-2.3.14.ebuild 1703
+RMD160 2796942225f9d18c6cc802122a27c0357a7e8ba3 xinetd-2.3.14.ebuild 1703
+SHA256 6a48e63954090660dcd75ca7c755f12ee2ea3c69643a3572492363c2d89d8403 xinetd-2.3.14.ebuild 1703
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD3Ijl2+ySkm8kpY0RAlV4AKChxdgKXG/F534vh4YL93Lq7yBuMQCgnK6/
-xi1E1ZqkSZrJxTLifh2U6zM=
-=9U1J
+iD8DBQFEPkvTAiZjviIA2XgRAlOwAJ9fgJRXykPORP1oICUfsFUumJk9tgCfZwP0
+Y/mQLbiDs1ljEhT9cTmGzsY=
+=H4X3
 -----END PGP SIGNATURE-----
