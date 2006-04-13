@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23.ebuild,v 1.2 2006/03/15 02:01:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23.ebuild,v 1.3 2006/04/13 20:09:06 tove Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,7 +19,7 @@ DEPEND="net-firewall/iptables
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-gcc41.patch"
 }
@@ -32,7 +32,9 @@ src_compile() {
 		`use_with mysql` \
 		`use_with postgres pgsql` \
 		|| die "configure failed"
-	emake || die "make failed"
+
+	# not parallel make safe: bug #128976
+	emake -j1 || die "make failed"
 }
 
 src_install() {
@@ -40,10 +42,10 @@ src_install() {
 	# it relies on the existance of /usr, /etc ..
 	dodir /usr/sbin
 
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 
 	exeinto /etc/init.d/
-	newexe ${FILESDIR}/ulogd-0.98 ulogd
+	newexe "${FILESDIR}"/ulogd-0.98 ulogd
 
 	dodoc README AUTHORS Changes
 	cd doc/
