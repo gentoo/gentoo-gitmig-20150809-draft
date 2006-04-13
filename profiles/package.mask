@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5214 2006/04/13 19:51:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5215 2006/04/13 21:19:33 keri Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -91,8 +91,8 @@ sci-electronics/tclspice
 # Keri Harris <keri@gentoo.org> (08 Apr 2006)
 # Development release, requires careful testing.
 # Some grades fail spectacularly with gcc4.
-=dev-lang/mercury-0.13.0_beta
-=dev-lang/mercury-extras-0.13.0_beta
+>=dev-lang/mercury-0.13.0_beta
+>=dev-lang/mercury-extras-0.13.0_beta
 
 # Markus Ullmann <jokey@gentoo.org> (06 Apr 2006)
 # adding language pack builder, needs testing
