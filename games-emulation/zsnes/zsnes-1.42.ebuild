@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.42.ebuild,v 1.11 2006/03/15 21:38:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.42.ebuild,v 1.12 2006/04/13 20:36:47 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -26,8 +26,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${PN}_${PV//./_}"
 
 pkg_setup() {
-	use amd64 && export ABI=x86
 	games_pkg_setup
+	use amd64 && export ABI=x86
 }
 
 src_unpack() {

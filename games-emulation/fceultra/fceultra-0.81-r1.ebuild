@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/fceultra-0.81-r1.ebuild,v 1.9 2005/05/17 18:01:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/fceultra-0.81-r1.ebuild,v 1.10 2006/04/13 20:32:39 wolf31o2 Exp $
 
 inherit toolchain-funcs games
 
@@ -19,6 +19,7 @@ DEPEND="svga? ( media-libs/svgalib )
 	sdl? ( media-libs/libsdl )"
 
 pkg_setup() {
+	games_pkg_setup
 	if [ `gcc-major-version` == 3 ] && [ `gcc-minor-version` == 2 ] && [ ${ARCH} == "x86" ] ; then
 		eerror "Do not use gcc 3.2.x to compile the source code"
 		eerror "on 80x86/IA32 platforms. It has a code generation"
@@ -26,7 +27,6 @@ pkg_setup() {
 		die "cant compile on x86 with gcc-3.2.x"
 	fi
 
-	games_pkg_setup
 	use sdl && return 0
 	use svga && return 0
 

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/fceultra
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/ChangeLog,v 1.16 2005/07/08 22:25:18 mr_bones_ Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/ChangeLog,v 1.17 2006/04/13 20:32:39 wolf31o2 Exp $
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  fceultra-0.81-r1.ebuild:
+  Moved games_pkg_setup to the beginning of pkg_setup.
 
   08 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org>
   fceultra-0.98.12.ebuild:
