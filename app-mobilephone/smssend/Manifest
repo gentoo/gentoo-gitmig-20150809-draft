@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 45363daf513558e1cf6168aa0cd1f0ec ChangeLog 1942
-MD5 d40efbd929fb44aee56a7e39f32cdd76 metadata.xml 222
-MD5 cea5c50860974402dc20e81b94bacd80 smssend-3.4.ebuild 936
+MD5 afccd4ce61e0f03a91e82119328afff2 ChangeLog 2059
 MD5 85e9b56fffa5b05a7a3a6acf4d89a920 files/digest-smssend-3.4 63
 MD5 0aca853e97a2597cfc64a9cb6d546cae files/smssend-3.4-verizon.diff 14249
+MD5 d40efbd929fb44aee56a7e39f32cdd76 metadata.xml 222
+MD5 0c270899cfbd805c1ddd31c302072e0a smssend-3.4.ebuild 848
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDumMGjG8pv1lIUX4RArMyAKCChhr6qWEhywJrOVf6Qbn3md4L4wCg5zFp
-PzWTJfEUOmbjKuq6bvxiWXo=
-=zT0v
+iD8DBQFEPrNpjG8pv1lIUX4RAgn+AJwIZ1HfUneobtWFWwCbL/GGWhZFfwCdFedf
+uI6fKK0nfbdo/pERNgQuzZQ=
+=hekB
 -----END PGP SIGNATURE-----
