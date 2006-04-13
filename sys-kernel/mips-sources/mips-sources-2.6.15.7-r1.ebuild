@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.15.7.ebuild,v 1.1 2006/03/28 19:22:31 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.15.7-r1.ebuild,v 1.1 2006/04/13 03:43:26 kumba Exp $
 
 
 # INCLUDED:
@@ -22,7 +22,7 @@
 OKV=${PV/_/-}
 GITDATE="20060109"			# Date of diff between kernel.org and lmo GIT
 SECPATCHVER="1.15"			# Tarball version for security patches
-GENPATCHVER="1.19"			# Tarball version for generic patches
+GENPATCHVER="1.21"			# Tarball version for generic patches
 EXTRAVERSION="-mipsgit-${GITDATE}"
 KV="${OKV}${EXTRAVERSION}"
 F_KV="${OKV}"				# Fetch KV, used to know what mipsgit diff to grab.
