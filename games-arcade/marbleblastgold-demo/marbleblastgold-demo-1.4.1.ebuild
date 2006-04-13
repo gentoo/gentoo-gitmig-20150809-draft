@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgold-demo/marbleblastgold-demo-1.4.1.ebuild,v 1.1 2006/04/13 20:08:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgold-demo/marbleblastgold-demo-1.4.1.ebuild,v 1.2 2006/04/13 20:11:50 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -10,17 +10,13 @@ SRC_URI="ftp://ggdev-1.homelan.com/marbleblastgold/MarbleBlastGoldDemo-${PV}.sh.
 
 LICENSE="MARBLEBLAST"
 SLOT="0"
-KEYWORDS="-* x86 ~amd64"
+KEYWORDS="-* ~amd64 x86"
 IUSE=""
 
-DEPEND=""
+RDEPEND="sys-libs/glibc"
 
+GAMES_CHECK_LICENSE="yes"
 S=${WORKDIR}
-
-pkg_setup() {
-	check_license MARBLEBLAST
-	games_pkg_setup
-}
 
 src_unpack() {
 	unpack_makeself
@@ -34,7 +30,7 @@ src_install() {
 
 	exeinto ${dir}
 	doexe bin/Linux/x86/marbleblastgolddemo
-	dosym ${dir}/marbleblastgolddemo ${GAMES_BINDIR}/marbleblastgolddemo
+	dosym ${dir}/marbleblastgolddemo ${GAMES_BINDIR}/marbleblastgold-demo
 
 	insinto ${dir}
 	doins MarbleBlast.xpm

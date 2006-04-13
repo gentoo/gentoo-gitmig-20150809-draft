@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/marbleblastgolddemo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgold-demo/ChangeLog,v 1.1 2006/04/13 20:08:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgold-demo/ChangeLog,v 1.2 2006/04/13 20:11:50 wolf31o2 Exp $
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  marbleblastgold-demo-1.4.1.ebuild:
+  Fixed marbleblastgolddemo/marbleblastgold-demo thanks to stupid epkgmove.
 
 *marbleblastgold-demo-1.4.1 (13 Apr 2006)
 
