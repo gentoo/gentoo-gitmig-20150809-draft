@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.14.1.ebuild,v 1.1 2006/04/12 22:39:37 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.14.1.ebuild,v 1.2 2006/04/13 16:32:41 foser Exp $
 
 inherit eutils gnome2
 
@@ -49,6 +49,7 @@ DOCS="AUTHORS ChangeLog NEWS README"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
+
 	G2CONF="--disable-scrollkeeper \
 		--enable-flags \
 		$(use_enable ipv6)
@@ -64,6 +65,7 @@ pkg_setup() {
 }
 
 src_install() {
+
 	gnome2_src_install
 
 	for applet in \
@@ -78,4 +80,13 @@ src_install() {
 		done
 
 	done
+}
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}/cpufreq/src
+	epatch ${FILESDIR}/${PN}-2.14.0-prefs_startup-r1.patch
+
 }
