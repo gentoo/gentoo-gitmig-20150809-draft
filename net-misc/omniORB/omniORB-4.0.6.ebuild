@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.0.6.ebuild,v 1.1 2005/04/20 15:31:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.0.6.ebuild,v 1.2 2006/04/13 17:48:35 fmccor Exp $
 
 inherit python
 
@@ -12,7 +12,7 @@ IUSE="ssl"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ia64 ~amd64 ~ppc ~ppc64"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND="dev-lang/python
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
