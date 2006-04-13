@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.135 2006/04/13 19:30:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.136 2006/04/13 19:37:45 wolf31o2 Exp $
+
+*genkernel-3.3.11c (13 Apr 2006)
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +genkernel-3.3.11c.ebuild:
+  Added a new revision 3.3.11c which upgrades the unionfs support and has some
+  general code cleanup. This should close bug #114266, bug #117114, bug
+  #121334, bug #124251, bug #124936, and bug #125380.
 
   13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   genkernel-3.3.11a.ebuild:
