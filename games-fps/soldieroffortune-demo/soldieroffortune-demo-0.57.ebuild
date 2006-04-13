@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/soldieroffortune-demo-0.57.ebuild,v 1.1 2006/04/12 21:18:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/soldieroffortune-demo-0.57.ebuild,v 1.2 2006/04/13 22:12:48 wolf31o2 Exp $
 
-inherit eutils multilib games
+inherit eutils games
 
 MY_PN=${PN/soldieroffortune/sof}
 
@@ -12,12 +12,28 @@ SRC_URI="mirror://lokigames/loki_demos/${MY_PN}.run"
 
 LICENSE="LOKI-EULA"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="nostrip"
 
 DEPEND="games-util/loki_patch"
-RDEPEND="media-libs/openal"
+RDEPEND="virtual/opengl
+	x86? (
+		|| (
+			(
+				x11-libs/libX11
+				x11-libs/libXext
+				x11-libs/libXau
+				x11-libs/libXdmcp )
+			virtual/x11 )
+		media-libs/libvorbis
+		media-libs/libogg
+		media-libs/smpeg )
+	amd64? (
+		app-emulation/emul-linux-x86-baselibs
+		app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-sdl
+		app-emulation/emul-linux-x86-soundlibs )"
 
 S=${WORKDIR}
 
@@ -41,7 +57,9 @@ src_install() {
 	doexe "${demo}/${exe}" || die "doexe failed"
 
 	# Replace bad library
-	dosym /usr/$(get_libdir)/libSDL.so "${dir}"/libSDL-1.1.so.0 || die
+	use x86 && dosym /usr/lib/libSDL.so "${dir}"/libSDL-1.1.so.0
+	use amd64 && dosym /emul/linux/x86/usr/lib/libSDL.so \
+		"${dir}"/libSDL-1.1.so.0
 
 	games_make_wrapper ${PN} "./${exe}" "${dir}" "${dir}"
 	newicon "${demo}"/launch/box.png ${PN}.png || die
