@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.5.ebuild,v 1.1 2006/04/12 19:40:04 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.5.ebuild,v 1.2 2006/04/13 16:46:24 arj Exp $
 
 inherit eutils
 
@@ -36,10 +36,6 @@ src_unpack() {
 
 	epatch ${FILESDIR}/sandbox-fix1.patch
 	epatch ${FILESDIR}/sandbox-fix2.patch
-
-	if use debug; then
-	   epatch ${FILESDIR}/sqlite3-configure-debug.patch
-	fi
 
 	# Fix broken tests that are not portable to 64 arches
 	epatch ${FILESDIR}/sqlite-64bit-test-fix.patch

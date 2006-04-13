@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.105 2006/04/12 19:40:03 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.106 2006/04/13 16:46:24 arj Exp $
+
+  13 Apr 2006; Anders Rune Jensen <arj@gentoo.org> sqlite-3.3.5.ebuild:
+  Fix bug #129764 (compile with debug fails).
 
 *sqlite-3.3.5 (12 Apr 2006)
 
