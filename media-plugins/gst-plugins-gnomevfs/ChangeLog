@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-gnomevfs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gnomevfs/ChangeLog,v 1.82 2006/04/08 12:02:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gnomevfs/ChangeLog,v 1.83 2006/04/13 13:37:44 tcort Exp $
+
+  13 Apr 2006; Thomas Cort <tcort@gentoo.org>
+  gst-plugins-gnomevfs-0.10.4.ebuild:
+  Added ~alpha keyword.
 
   08 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   gst-plugins-gnomevfs-0.10.4.ebuild:
