@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55.ebuild,v 1.7 2005/03/23 01:58:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55.ebuild,v 1.8 2006/04/13 20:25:10 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -22,12 +22,12 @@ DEPEND="virtual/opengl
 	media-libs/sdl-mixer"
 
 pkg_setup() {
+	games_pkg_setup
 	if ! built_with_use media-libs/sdl-mixer mikmod ; then
 		eerror "Tomatoes doesn't work properly if sdl-mixer"
 		eerror "is built with USE=-mikmod"
 		die "Please emerge sdl-mixer with USE=mikmod"
 	fi
-	games_pkg_setup
 }
 
 src_unpack() {
