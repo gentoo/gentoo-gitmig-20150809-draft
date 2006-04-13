@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/avp-cvs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp-cvs/ChangeLog,v 1.9 2006/03/09 22:57:03 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp-cvs/ChangeLog,v 1.10 2006/04/13 20:38:02 wolf31o2 Exp $
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  avp-cvs-20031110.ebuild:
+  Moved games_pkg_setup to the beginning of pkg_setup.
 
   09 Mar 2006; <Tupone@gentoo.org> +files/avp-cvs-20031110-gcc34.patch,
   avp-cvs-20031110.ebuild:
