@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.7 2005/11/21 07:06:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.8 2006/04/13 19:55:16 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -25,9 +25,9 @@ RDEPEND="media-libs/libsdl
 S=${WORKDIR}/gishdemo
 
 pkg_setup() {
+	games_pkg_setup
 	# Binary x86 package
 	has_multilib_profile && ABI="x86"
-	games_pkg_setup
 }
 
 src_install() {
