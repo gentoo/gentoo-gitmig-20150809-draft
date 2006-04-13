@@ -1,0 +1,56 @@
+--- mercury-extras-0.13.0-beta-2006-04-03.orig/trailed_update/Mmakefile	2004-07-30 19:03:46.000000000 +1200
++++ mercury-extras-0.13.0-beta-2006-04-03/trailed_update/Mmakefile	2006-03-26 22:00:13.000000000 +1200
+@@ -4,6 +4,10 @@
+ # Public License - see the file COPYING.LIB in the Mercury distribution.
+ #-----------------------------------------------------------------------------#
+ 
++LIBGRADES := 	$(foreach grade,$(LIBGRADES), \
++		$(subst .tr.,$(grade),$(findstring .tr.,$(grade))) \
++		$(filter %.tr,$(grade)))
++
+ GRADEFLAGS += --use-trail
+ 
+ # enable C debugging
+@@ -25,6 +29,8 @@
+ 	cd samples && mmake $(MMAKEFLAGS) depend
+ 	cd tests && mmake $(MMAKEFLAGS) depend
+ 
++install: libtrailed_update.install
++
+ .PHONY: check
+ check: libtrailed_update
+ 	cd samples && mmake $(MMAKEFLAGS) check
+--- mercury-extras-0.13.0-beta-2006-04-09.orig/trailed_update/var.m	2006-03-30 13:21:19.000000000 +1200
++++ mercury-extras-0.13.0-beta-2006-04-09/trailed_update/var.m	2006-04-12 21:16:27.000000000 +1200
+@@ -831,12 +831,12 @@
+ 
+ :- pragma export(var.rep_unify(in(ptr(var_rep_any)), in(ptr(var_rep_any))),
+ 	"ML_var_unify").
+-:- impure pred var.rep_unify(var_rep(T), var_rep(T)).
++:- pred var.rep_unify(var_rep(T), var_rep(T)).
+ :- mode var.rep_unify(in(ptr(var_rep_any)), in(ptr(var_rep_any))) is semidet.
+ 
+ var.rep_unify(XPtr, YPtr) :-
+ 	XPtr = alias(X),
+-	(
++	promise_pure (
+ 		X = alias(_),
+ 		impure var.rep_unify(X, YPtr)
+ 	;
+@@ -880,14 +880,14 @@
+ 
+ 	% This is the case when the first var is free(DelayedGoals).
+ 	%
+-:- impure pred var.rep_unify_fr(var_rep(T), var_rep(T), var_rep(T)).
++:- pred var.rep_unify_fr(var_rep(T), var_rep(T), var_rep(T)).
+ :- mode var.rep_unify_fr(in(ptr(var_rep_any)), % really deref_delayed
+ 			in(ptr(var_rep_any)),
+ 			in(var_rep_deref_delayed)) is semidet.
+ 
+ var.rep_unify_fr(XPtr, YPtr, X) :-
+ 	YPtr = alias(Y),
+-	(
++	promise_pure (
+ 		Y = alias(_),
+ 		impure var.rep_unify_fr(XPtr, Y, X)
+ 	;

@@ -1,0 +1,11 @@
+--- mercury-extras-0.13.0-beta-2006-04-09.orig/posix/posix.exec.m	2001-07-16 15:08:18.000000000 +1200
++++ mercury-extras-0.13.0-beta-2006-04-09/posix/posix.exec.m	2006-04-12 20:18:11.000000000 +1200
+@@ -12,7 +12,7 @@
+ 
+ :- interface.
+ 
+-:- import_module string, list, map.
++:- import_module string, list, map, pair.
+ 
+ :- type argv == list(string).
+ 
