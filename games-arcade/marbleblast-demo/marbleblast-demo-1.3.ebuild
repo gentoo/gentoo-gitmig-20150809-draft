@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblast-demo/marbleblast-demo-1.3.ebuild,v 1.1 2006/04/13 20:00:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblast-demo/marbleblast-demo-1.3.ebuild,v 1.2 2006/04/13 20:04:03 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -15,12 +15,8 @@ IUSE=""
 
 DEPEND=""
 
+GAMES_CHECK_LICENSE="yes"
 S=${WORKDIR}
-
-pkg_setup() {
-	check_license MARBLEBLAST
-	games_pkg_setup
-}
 
 src_unpack() {
 	unpack_makeself
@@ -34,7 +30,7 @@ src_install() {
 
 	exeinto ${dir}
 	doexe bin/Linux/x86/marbleblastdemo
-	dosym ${dir}/marbleblast-demo ${GAMES_BINDIR}/marbleblast-demo
+	dosym ${dir}/marbleblastdemo ${GAMES_BINDIR}/marbleblast-demo
 
 	dodoc README_DEMO.txt
 
