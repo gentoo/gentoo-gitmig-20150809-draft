@@ -1,0 +1,11 @@
+# ChangeLog for net-wireless/ipw3945-ucode
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945-ucode/ChangeLog,v 1.1 2006/04/13 21:28:33 brix Exp $
+
+*ipw3945-ucode-1.13 (13 Apr 2006)
+
+  13 Apr 2006; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml,
+  +ipw3945-ucode-1.13.ebuild:
+  Initial version. Thank you to Intel's Open Source Technology Center for
+  sponsoring the hardware for testing this.
+
