@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9da1fd9be5bd8ebf6f55f76cc9cc89d6 ChangeLog 4179
-RMD160 9cdc9ed2bfddf5301153dd12585387c04b27e986 ChangeLog 4179
-SHA256 0a6a43496f2f7e3651b04841fb5e1428a7dcdfda7aeaab27cf1208e3206c119e ChangeLog 4179
+MD5 ea3605dbcfa4c94cf0a2ad2d53ed44d7 ChangeLog 4284
+RMD160 d2c7b02090955fdfc7a94b12cd1babb81df45369 ChangeLog 4284
+SHA256 105ed3ea5eee7d6a4af3706e86d0e2aa37e151536de472f6bbfe65f8150c2b3b ChangeLog 4284
 MD5 a556924d584687a8f363eed4bb9c743f files/digest-loudmouth-0.17.2-r2 69
 RMD160 62ec29854a03843a7722eb4cefa0770b8574a35c files/digest-loudmouth-0.17.2-r2 69
 SHA256 4ac10e37f0beec486ceb516fe0d799b3f0632bcf7e658dacbf507260541b7858 files/digest-loudmouth-0.17.2-r2 69
@@ -22,19 +19,12 @@ SHA256 035f9dafe2d66fb127c2758fb4da804e5a9bcc2a9a398040722a62c71a1f6869 files/lo
 MD5 d3a8e167c56545ba1a2aaf703d9c894c loudmouth-0.17.2-r2.ebuild 908
 RMD160 66904e39e24d616744ff94815038d9a2749f9f50 loudmouth-0.17.2-r2.ebuild 908
 SHA256 5bcb9c8d5707f7054b685ec842bcfb1e8efe68976f287e4b7546e27a97a4f169 loudmouth-0.17.2-r2.ebuild 908
-MD5 dcfdaa51ef5e17b2515cb585999fecf8 loudmouth-1.0.1.ebuild 613
-RMD160 82246749bb3c1c0a98ae85cf4e692dbb2f849a12 loudmouth-1.0.1.ebuild 613
-SHA256 4b9ae194cf77ce6b0273b594e48c2f0f3a9668403116be76fc5a227f4645a411 loudmouth-1.0.1.ebuild 613
+MD5 e8fdf7ef17a63141816eddeaf5d77eee loudmouth-1.0.1.ebuild 611
+RMD160 83e2044e97f0693690c6401b1147f9728bb86ef4 loudmouth-1.0.1.ebuild 611
+SHA256 0e3c60703f21a65cc9a0cbee9558bdb801242217dd0db76ed716c5e1226cf1b0 loudmouth-1.0.1.ebuild 611
 MD5 9bdd56e7008e5c077a6fea0c2062f0b8 loudmouth-1.0.2.ebuild 835
 RMD160 733fb0d8036125741b36a0466facb027a699d7dc loudmouth-1.0.2.ebuild 835
 SHA256 87636e00f789d98baabfeadd4d0239640f2541e4493616e70b854828767305e2 loudmouth-1.0.2.ebuild 835
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEOV2soFw4q70f3SsRAqV9AJ0cKtabqZXT0wpEZcuNjhE758PYGACgi/iW
-iZMNeR8GeD20YswNA3jRj6w=
-=tLZu
------END PGP SIGNATURE-----
