@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.13 2006/03/24 22:10:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.14 2006/04/13 21:10:55 wolf31o2 Exp $
 
 inherit games
 
@@ -21,10 +21,7 @@ RDEPEND="dedicated? ( app-misc/screen )
 
 S=${WORKDIR}
 
-pkg_setup() {
-	check_license Q3AEULA
-	games_pkg_setup
-}
+GAMES_CHECK_LICENSE="yes"
 
 src_unpack() {
 	unpack_makeself
