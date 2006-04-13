@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.3 2006/04/02 21:57:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.4 2006/04/13 21:13:17 flameeyes Exp $
+
+  13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-usbin-6.0.ebuild:
+  Touch files needed to run syslog, bug #129685.
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/freebsd-usbin-5.3-r1-makefile-docpaths.patch,

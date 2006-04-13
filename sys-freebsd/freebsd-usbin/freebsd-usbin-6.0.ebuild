@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.0.ebuild,v 1.2 2006/04/02 15:07:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.0.ebuild,v 1.3 2006/04/13 21:13:17 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -138,3 +138,11 @@ EOS
 	doperiodic daily daily/*.accounting
 	doperiodic monthly monthly/*.accounting
 }
+
+pkg_postinst() {
+	for logfile in messages security auth.log maillog lpd-errs xferlog cron \
+		debug.log slip.log ppp.log; do
+		[[ -f ${ROOT}/var/log/${logfile} ]] || touch ${ROOT}/var/log/${logfile}
+	done
+}
+
