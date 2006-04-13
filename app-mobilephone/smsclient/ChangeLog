@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/smsclient
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smsclient/ChangeLog,v 1.2 2006/02/25 10:42:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smsclient/ChangeLog,v 1.3 2006/04/13 20:18:59 mrness Exp $
+
+  13 Apr 2006; Alin Nastac <mrness@gentoo.org>
+  -files/smsclient-2.0.8y_client-makefile.patch,
+  -files/smsclient-2.0.8y_docs-makefile.patch,
+  -files/smsclient-2.0.8y_logfile-makefile.patch,
+  -files/smsclient-2.0.8y_sms-makefile.patch, -smsclient-2.0.8y.ebuild:
+  Remove obsolete version.
 
 *smsclient-2.0.9a (25 Feb 2006)
 
