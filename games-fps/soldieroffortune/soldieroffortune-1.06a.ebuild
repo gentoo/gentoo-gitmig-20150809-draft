@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.14 2006/04/13 21:12:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.15 2006/04/13 22:18:17 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -10,13 +10,29 @@ SRC_URI="mirror://lokigames/sof/sof-${PV}-cdrom-x86.run"
 
 LICENSE="LOKI-EULA"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 RESTRICT="strip"
 IUSE=""
 
-DEPEND="virtual/libc
+DEPEND="sys-libs/glibc
 	games-util/loki_patch"
-RDEPEND="virtual/opengl"
+RDEPEND="virtual/opengl
+	x86? (
+		|| (
+			(
+				x11-libs/libX11
+				x11-libs/libXext
+				x11-libs/libXau
+				x11-libs/libXdmcp )
+			virtual/x11 )
+		media-libs/libvorbis
+		media-libs/libogg
+		media-libs/smpeg )
+	amd64? (
+		app-emulation/emul-linux-x86-baselibs
+		app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-sdl
+		app-emulation/emul-linux-x86-soundlibs )"
 
 S=${WORKDIR}
 
@@ -32,6 +48,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack_makeself
+	tar xzf ${CDROM_ROOT}/paks.tar.gz -C ${Ddir} \
+		|| die "uncompressing data"
+	tar xzf ${CDROM_ROOT}/binaries.tar.gz -C ${Ddir} \
+		|| die "uncompressing binaries"
 }
 
 src_install() {
@@ -41,11 +61,6 @@ src_install() {
 	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/sof
 	insinto ${dir}
 	doins ${CDROM_ROOT}/{README,kver.pub,sof.xpm}
-
-	tar xzf ${CDROM_ROOT}/paks.tar.gz -C ${Ddir} \
-		|| die "uncompressing data"
-	tar xzf ${CDROM_ROOT}/binaries.tar.gz -C ${Ddir} \
-		|| die "uncompressing binaries"
 
 	cd ${S}
 	loki_patch --verify patch.dat
@@ -58,9 +73,9 @@ src_install() {
 
 	games_make_wrapper sof ./sof "${dir}" "${dir}"
 	doicon ${CDROM_ROOT}/sof.xpm
+	make_desktop_entry sof "Soldier of Fortune" sof.xpm
 
 	prepgamesdirs
-	make_desktop_entry sof "Soldier of Fortune" sof.xpm
 }
 
 pkg_postinst() {
