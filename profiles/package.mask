@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5208 2006/04/12 14:42:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5209 2006/04/13 05:08:43 mrness Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1328,10 +1328,6 @@ kde-base/dcopjava
 =app-editors/vim-core-7.0_alpha*
 =app-editors/vim-7.0_alpha*
 =app-editors/gvim-7.0_alpha*
-
-# <pythonhead@gentoo.org (13 Nov 2004)
-# 2.6.0 is now in portage but will remove this soon as deps in other ebuilds are fixed
-=x11-libs/wxGTK-2.5*
 
 # Robert Coie <rac@gentoo.org> (28 Sep 2004)
 # FEATURES=maketest is still dodgy, and even when I got the whole
