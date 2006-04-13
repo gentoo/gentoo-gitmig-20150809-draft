@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/fxruby
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.28 2005/09/23 14:24:10 fmccor Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.29 2006/04/13 12:01:44 fmccor Exp $
+
+  13 Apr 2006; Ferris McCormick <fmccor@gentoo.org> fxruby-1.2.6.ebuild:
+  Add ~amd64 keyword.  Builds and runs well enough for testing and for use, but
+  there appear to be problems with the install if USE=doc. (Notice also that some
+  examples are not completely converted to fox12.  Notice further that this will
+  not install with FEATURES=multilib-strict; appears to be a general conflict
+  between portage requirements and general ruby conventions:  ruby installs in
+  /usr/lib/ruby/site_ruby/1.8/x86_64-linux, which portage prohibits.)
 
   23 Sep 2005; Ferris McCormick <fmccor@gentoo.org> fxruby-1.2.2.ebuild,
   fxruby-1.2.6.ebuild:
