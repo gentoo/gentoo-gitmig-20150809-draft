@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gscmxx/gscmxx-0.4.1-r1.ebuild,v 1.2 2005/11/28 12:05:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gscmxx/gscmxx-0.4.1-r1.ebuild,v 1.3 2006/04/13 19:19:11 mrness Exp $
 
 inherit perl-app eutils
 
@@ -22,6 +22,6 @@ RDEPEND=">=app-mobilephone/scmxx-0.6
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-destdir.diff
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-destdir.diff"
 }
