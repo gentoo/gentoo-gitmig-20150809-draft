@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.32 2006/04/13 15:50:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.33 2006/04/13 19:18:38 carlo Exp $
+
+  13 Apr 2006; Carsten Lohrke <carlo@gentoo.org> kexi-1.5.0.ebuild:
+  Missing ~ppc keyword.
 
   13 Apr 2006; <nixnut@gentoo.org> kexi-1.5.0.ebuild:
   Dropping ~ppc keyword because of unmarked deps, will remark everything 
