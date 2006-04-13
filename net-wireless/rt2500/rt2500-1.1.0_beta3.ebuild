@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta3.ebuild,v 1.8 2006/04/08 13:29:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta3.ebuild,v 1.9 2006/04/13 22:34:01 genstef Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -34,6 +34,10 @@ pkg_setup() {
 
 src_compile() {
 	sed -i "s:#if RT2500_DBG:#ifdef RT2500_DBG:" Module/oid.h || die "sed failed"
+
+	# Fix module parameter registration
+	sed -i 's:MODULE_PARM(debug, "i"):module_param(debug, int, 0):'	Module/rtmp_main.c || die "module parameter sed failed"
+	sed -i 's:MODULE_PARM(ifname, "s"):module_param(ifname, charp, 0):'	Module/rtmp_main.c || die "module parameter sed failed"
 
 	if use qt; then
 		cd ${S}/Utilitys
