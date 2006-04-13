@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.ebuild,v 1.2 2006/03/19 14:38:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.ebuild,v 1.3 2006/04/13 13:54:28 wolf31o2 Exp $
 
 inherit eutils linux-info debug
 
@@ -50,7 +50,7 @@ function notify_uevent_2_6_16() {
 	eerror
 	eerror "You must enable Kernel Userspace Events in your kernel."
 	eerror "For this you need to enable 'Hotplug' under 'General Setup' and"
-	eerror "basic networking.  They are marked CONFIG_HOTPLUT and CONFIG_NET"
+	eerror "basic networking.  They are marked CONFIG_HOTPLUG and CONFIG_NET"
 	eerror "in the config file."
 	eerror
 	ebeep 5
