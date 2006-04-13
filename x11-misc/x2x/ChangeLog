@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x2x
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.16 2006/03/18 16:57:27 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.17 2006/04/13 11:13:55 fmccor Exp $
+
+  13 Apr 2006; Ferris McCormick <fmccor@gentoo.org> x2x-1.27-r1.ebuild:
+  Stable for sparc (X-modular compliance).
 
   18 Mar 2006; Krzysiek Pawlik <nelchael@gentoo.org> x2x-1.27.ebuild,
   x2x-1.27-r1.ebuild:
