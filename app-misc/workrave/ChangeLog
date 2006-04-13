@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.37 2006/04/09 19:19:17 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.38 2006/04/13 21:16:46 halcy0n Exp $
+
+  13 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/workrave-1.8.2-gcc41.patch, workrave-1.8.2.ebuild:
+  Add patch to fix compilation with gcc-4.1 by Marcin Deranek <gringo AT
+  slonko DOT net>; bug #129721
 
   09 Apr 2006; Leonardo Boshell <leonardop@gentoo.org>
   workrave-1.8.1-r1.ebuild, workrave-1.8.2.ebuild:
