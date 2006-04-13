@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.2 2006/04/01 20:26:03 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.3 2006/04/13 01:52:37 ribosome Exp $
+
+*scipy-0.4.8-r1 (13 Apr 2006)
+
+  13 Apr 2006; Olivier Fisette <ribosome@gentoo.org> +scipy-0.4.8-r1.ebuild:
+  Added ATLAS profile check in pk_setup() (fixes bug #129524).
 
 *scipy-0.4.8 (01 Apr 2006)
 
