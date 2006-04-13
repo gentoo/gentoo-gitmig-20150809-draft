@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5f8373d0e1c9eebcbceda7f0798bfdd0 ChangeLog 4734
+MD5 49c46ad2597ad50f9cb67d6510ce4c4e ChangeLog 4875
 MD5 8cc61f953fee63457dbbb4aa96c04efa MIME-tools-5.415.ebuild 748
 MD5 ed65e5de43006199267d775278e1e3ed MIME-tools-5.416.ebuild 753
 MD5 8caec598ffa6fe73c5b4a73f5509fc61 MIME-tools-5.417.ebuild 759
+MD5 e730616110c4b39f0c0022af793e8ce0 MIME-tools-5.420.ebuild 765
 MD5 102e5bbb02994f63b2087054f46da6c8 files/digest-MIME-tools-5.415 68
 MD5 76d65045d01f5330cd063a67be7def08 files/digest-MIME-tools-5.416 68
 MD5 305cee6270d79087582794066b7129d3 files/digest-MIME-tools-5.417 68
+MD5 a7256b4d79d8a25d02005c192f0a42ff files/digest-MIME-tools-5.420 68
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD8IVNtG5z4I8BtQoRAow8AJ4k6D858Z4w1mm3iH3u2B0AJIfSogCfQEGa
-H0pK7DbsRQg9zZBSjvK7ruM=
-=kiQx
+iD8DBQFEPrnHtG5z4I8BtQoRAhXbAJ4sHIbVT4iRgoEtAwe70dElq+MY5gCfe/kZ
+mLtQoGughitvxnV3JUlh/Vc=
+=J5lC
 -----END PGP SIGNATURE-----
