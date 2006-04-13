@@ -1,0 +1,19 @@
+# ChangeLog for games-arcade/marbleblastgolddemo
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgold-demo/ChangeLog,v 1.1 2006/04/13 20:08:17 wolf31o2 Exp $
+
+*marbleblastgold-demo-1.4.1 (13 Apr 2006)
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +marbleblastgold-demo-1.4.1.ebuild:
+  Moved from games-arcade/marbleblastgolddemo to
+  games-arcade/marbleblastgold-demo.
+
+  21 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  marbleblastgolddemo-1.4.1.ebuild:
+  Changed check_license to explicitly list license to check.
+
+*marbleblastgolddemo-1.4.1 (07 Oct 2003)
+
+  07 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
