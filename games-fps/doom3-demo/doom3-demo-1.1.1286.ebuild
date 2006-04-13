@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.12 2006/03/31 20:45:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.13 2006/04/13 20:39:04 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -30,13 +30,9 @@ RDEPEND="virtual/libc
 
 S=${WORKDIR}
 
+GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
-
-pkg_setup() {
-	check_license DOOM3
-	games_pkg_setup
-}
 
 src_unpack() {
 	unpack_makeself doom3-linux-${PV}-demo.x86.run

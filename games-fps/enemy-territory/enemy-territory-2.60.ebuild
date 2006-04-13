@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60.ebuild,v 1.15 2006/03/31 21:01:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60.ebuild,v 1.16 2006/04/13 20:41:59 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -26,13 +26,10 @@ RDEPEND="dedicated? ( app-misc/screen )
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0-r1 )"
 
 S="${WORKDIR}"
+
+GAMES_CHECK_LICENSE="yes"
 dir="${GAMES_PREFIX_OPT}/${PN}"
 Ddir="${D}/${dir}"
-
-pkg_setup() {
-	check_license RTCW-ETEULA
-	games_pkg_setup
-}
 
 src_unpack() {
 	unpack_makeself et-linux-${PV}.x86.run
