@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.76 2006/02/07 09:48:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.77 2006/04/14 16:18:41 nelchael Exp $
+
+*redhat-artwork-0.241 (14 Apr 2006)
+
+  14 Apr 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -redhat-artwork-0.122.1-r1.ebuild, +redhat-artwork-0.241.ebuild:
+  Version bump, ebuild by Simon Strandman, see bug #127029.
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org>
   redhat-artwork-0.131.ebuild:

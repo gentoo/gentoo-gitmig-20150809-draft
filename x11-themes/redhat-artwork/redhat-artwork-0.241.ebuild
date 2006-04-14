@@ -1,17 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.122.1-r1.ebuild,v 1.9 2006/01/11 18:17:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.241.ebuild,v 1.1 2006/04/14 16:18:42 nelchael Exp $
 
 inherit eutils rpm versionator kde-functions
 
-MY_PV=$(replace_version_separator 2 '-')
+MY_PV="${PV}-1"
 DESCRIPTION="RedHat's Bluecurve theme for GTK1, GTK2, KDE, GDM, Metacity and Nautilus"
 HOMEPAGE="http://www.redhat.com"
 SRC_URI="http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/${PN}-${MY_PV}.src.rpm"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="gtk kde xmms"
 
 RDEPEND=">=x11-libs/gtk+-2.0
@@ -21,15 +21,15 @@ RDEPEND=">=x11-libs/gtk+-2.0
 	            kde-base/kdebase ) )"
 
 DEPEND="${RDEPEND}
-	sys-devel/autoconf
-	sys-devel/automake
 	media-gfx/icon-slicer
-	dev-util/intltool"
+	dev-util/intltool
+	|| ( x11-apps/xcursorgen virtual/x11 )"
 
 MY_SV=$(get_version_component_range 1-2)
 S=${WORKDIR}/${PN}-${MY_SV}
 
 src_compile() {
+
 	if use kde; then
 		set-qtdir 3
 		set-kdedir 3
@@ -42,7 +42,7 @@ src_compile() {
 	export WANT_AUTOCONF=2.5
 	export WANT_AUTOMAKE=1.8
 
-	rm configure
+	rm -f configure
 	sed -i -e "s|.*MCOPIDL.*||" \
 	       -e "s|.*ARTSCCONFIG.*||" \
 		acinclude.m4
@@ -80,18 +80,23 @@ src_compile() {
 	sed -i -e 's| $(datadir)| $(DESTDIR)$(datadir)|' \
 		art/cursor/Bluecurve/Makefile.am \
 		art/cursor/Bluecurve-inverse/Makefile.am \
+		art/cursor/LBluecurve/Makefile.am \
+		art/cursor/LBluecurve-inverse/Makefile.am \
 		art/icon/Makefile.am \
 		art/icon/Bluecurve/sheets/Makefile.am || die
 
 	autoreconf --force --install || die "autoreconf failed"
+	intltoolize --force
 
 	sed -i -e "s|GtkStyle|4|" art/qt/Bluecurve/bluecurve.cpp || die
 
 	econf || die
 	emake QTDIR="${QTDIR}" styledir="${QTDIR}/plugins/styles" || die
+
 }
 
 src_install () {
+
 	# dies if LANG has UTF-8
 	export LANG=C
 	export LC_ALL=C
@@ -114,10 +119,6 @@ src_install () {
 	# Theme copyright notice left intact... do not modify it
 	sed -i -e 's|Screenshot=|#Screenshot=|' GdmGreeterTheme.desktop
 
-	# move cursors to /usr/share/cursors/${X11_IMPL}
-	#X11_IMPLEM_P="$(best_version virtual/x11)"
-	#X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
-	#X11_IMPLEM="${X11_IMPLEM##*\/}"
 	X11_IMPLEM="xorg-x11"
 
 	for x in Bluecurve Bluecurve-inverse; do
@@ -131,4 +132,5 @@ src_install () {
 
 	cd ${S}
 	dodoc AUTHORS NEWS README ChangeLog
+
 }

@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 452fef58b0f1a41bde3ef09d44935123 ChangeLog 10405
-RMD160 8981bdc7846fbebf8777479e794c26fa35839fe0 ChangeLog 10405
-SHA256 80d088e8e624498498df68bb2cd7ce11baa4b942fe99e231292d855e5c17ccbf ChangeLog 10405
-MD5 5d907e18affa414570d39790d791b072 files/digest-redhat-artwork-0.122.1-r1 76
-RMD160 24b624127d21f99c9b786767e2b063676dc96d96 files/digest-redhat-artwork-0.122.1-r1 76
-SHA256 873e747740c7201b4d790f3511a3ece008bc8718696d3655a438dfc6237ab0bd files/digest-redhat-artwork-0.122.1-r1 76
+MD5 08b25cf2d3255dd35ae82b7be15d0976 ChangeLog 10623
+RMD160 a8a24ba24c8d8ff6e04f27c35f1b5f13cdd2dda5 ChangeLog 10623
+SHA256 1bcc3e8b76bc1daa9cc7ce071c521e5b7e724630a3db3524ad5f0d6bf75873d3 ChangeLog 10623
 MD5 690317a55f016474c485164477473e87 files/digest-redhat-artwork-0.131 78
 RMD160 a4c6a7c645054c8635968cc1aa1516a65dc489e5 files/digest-redhat-artwork-0.131 78
 SHA256 604308e11b06e16abd9e369436bc35372fca6be5a2abb696c3ea7350841b3871 files/digest-redhat-artwork-0.131 78
+MD5 c88ba39bb6351804cb94f8683141088f files/digest-redhat-artwork-0.241 274
+RMD160 5e50948671c15fd025ec9c15a00a6abceaf4e586 files/digest-redhat-artwork-0.241 274
+SHA256 ecc2b626b201d6761387e5adfe7385a9b63cc4866ffcfdbd3b245a4878ec26be files/digest-redhat-artwork-0.241 274
 MD5 1c94384c99f530fc87eab2d9b0e16385 metadata.xml 318
 RMD160 859b460cd0491f4da02222344414b9a384bb309a metadata.xml 318
 SHA256 ffcf55c4ff84e5a102a2a19e68d4f8839f2af2f268efc403b7c1af1136445972 metadata.xml 318
-MD5 7f6ccbfceac5af8d20da39774eb1cc83 redhat-artwork-0.122.1-r1.ebuild 3984
-RMD160 78b842482752fe6cd0a45d4f8a6ed8b2620186a0 redhat-artwork-0.122.1-r1.ebuild 3984
-SHA256 0b6cbb21ba8abae86ad4673ee058985eac578ae4b51a9562bc3c1d74d2e07cea redhat-artwork-0.122.1-r1.ebuild 3984
 MD5 352c56fc56c51e54f0d377425ed03d54 redhat-artwork-0.131.ebuild 3996
 RMD160 db81c4e8b689f003e6303bcb40ebc4f323d4466e redhat-artwork-0.131.ebuild 3996
 SHA256 95bac5462cbaf1e8331f1c13f2b94d290984e4060a000f139c45582d725cb71c redhat-artwork-0.131.ebuild 3996
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6GztJrHF4yAQTrARAo1QAJ9BMJBnweRzKkM2UPOGPhQRj2G2ngCggP6z
-kJEGPKdQkzG4khR0Qm/95MA=
-=/40W
------END PGP SIGNATURE-----
+MD5 593b12d0e9bfe848d47387dd1ce40c73 redhat-artwork-0.241.ebuild 3904
+RMD160 d86896c0cc15a062a3afa064b4dfa0b41a7ac8de redhat-artwork-0.241.ebuild 3904
+SHA256 ac24170f753e3d108d4982af0a56cf0091d46827bd3ff7c62fe2ccaf73b12cec redhat-artwork-0.241.ebuild 3904
