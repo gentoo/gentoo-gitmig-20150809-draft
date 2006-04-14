@@ -1,0 +1,11 @@
+# ChangeLog for net-firewall/pftop
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pftop/ChangeLog,v 1.1 2006/04/14 17:08:23 flameeyes Exp $
+
+*pftop-0.5 (14 Apr 2006)
+
+  14 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +pftop-0.5.ebuild:
+  Add pftop ebuild based on the one contributed by Javier Villavicencio in bug
+  #110722.
+
