@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r2.ebuild,v 1.2 2005/12/21 21:33:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r2.ebuild,v 1.3 2006/04/14 10:39:42 flameeyes Exp $
 
-inherit eutils
+inherit eutils libtool
 
 MY_P=OpenEXR-${PV}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.openexr.com"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~hppa"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc examples"
 
 RDEPEND="virtual/opengl"
@@ -26,6 +26,8 @@ src_unpack() {
 	sed -i -e "s:NVSDK_CXXFLAGS=\"\":NVSDK_CXXFLAGS=\"-DUNIX\":" ${S}/acinclude.m4
 
 	epatch ${FILESDIR}/openexr-1.2.2-gcc4.patch
+
+	elibtoolize
 }
 
 src_compile() {

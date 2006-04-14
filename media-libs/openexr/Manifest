@@ -1,10 +1,40 @@
-MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 3379f5d209ef0bacfba7d43d93e169f1 openexr-1.2.2-r2.ebuild 1265
-MD5 6f69b195aab90aaa3d98f058bc0f584d openexr-1.0.7.ebuild 1006
-MD5 c9c0d28408bc3c035ac3d1de86ea72ac openexr-1.2.2.ebuild 1005
-MD5 0274d54f8a52b1cd78a2f5c36a230371 ChangeLog 4144
-MD5 ae16061f11f8add38c447314c0f8724c files/digest-openexr-1.2.2 66
-MD5 ae16061f11f8add38c447314c0f8724c files/digest-openexr-1.2.2-r2 66
-MD5 bc17a0faf5bb747f36271992bc598a15 files/openexr-1.2.2-gcc4.patch 311
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bad37618e564ab6fd75f77cbc184ccca ChangeLog 4263
+RMD160 123c3b9f7b8e01886c01a8d8588ae960e3dde958 ChangeLog 4263
+SHA256 46f9c8729e3ff5c8682e2d98065f9f4628aafea920a8f78f772ad0ab20fe3d8a ChangeLog 4263
 MD5 21ea9ea0c3fabd1e25cd34b7de57dc62 files/digest-openexr-1.0.7 66
+RMD160 bbea053efc258336437c50326c6850947099f08d files/digest-openexr-1.0.7 66
+SHA256 23b372afef82ef93757596966bd5f2039bd03509fd6129d153d369c8ce12ec3d files/digest-openexr-1.0.7 66
+MD5 ae16061f11f8add38c447314c0f8724c files/digest-openexr-1.2.2 66
+RMD160 4970ce236c0d4955c8fc2793b5f425f2a3061328 files/digest-openexr-1.2.2 66
+SHA256 d484f89afd5a367454af4208a6d1e5344073cb7f24d902ec207047a652abffb4 files/digest-openexr-1.2.2 66
+MD5 ae16061f11f8add38c447314c0f8724c files/digest-openexr-1.2.2-r2 66
+RMD160 4970ce236c0d4955c8fc2793b5f425f2a3061328 files/digest-openexr-1.2.2-r2 66
+SHA256 d484f89afd5a367454af4208a6d1e5344073cb7f24d902ec207047a652abffb4 files/digest-openexr-1.2.2-r2 66
 MD5 dd45e17d712e65d12cb5a8cb704fc11c files/openexr-1.0.7-gentoo.patch 993
+RMD160 f0853223f91d2021034e1b30417f38ee01080f8c files/openexr-1.0.7-gentoo.patch 993
+SHA256 3b509d5e16d15463a3329e83eb4714c5872671ceba0252e4ea8d7915f72c3a5b files/openexr-1.0.7-gentoo.patch 993
+MD5 bc17a0faf5bb747f36271992bc598a15 files/openexr-1.2.2-gcc4.patch 311
+RMD160 d119ca7f5338205e424b221cbd19ff9a6864b808 files/openexr-1.2.2-gcc4.patch 311
+SHA256 82f9e3c48a23d185a13330f1beb5dda467eccc8eab9aed9114ef0e57b6711423 files/openexr-1.2.2-gcc4.patch 311
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 metadata.xml 158
+SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata.xml 158
+MD5 6f69b195aab90aaa3d98f058bc0f584d openexr-1.0.7.ebuild 1006
+RMD160 c5a491a3dbc4253ea7078884f64e7b62f3738e66 openexr-1.0.7.ebuild 1006
+SHA256 25855e6424215de4978ccb10408c6832576dbf8d25256e9cec7ed800f549e593 openexr-1.0.7.ebuild 1006
+MD5 92ca974de8e31978dedeb90f2cf2e795 openexr-1.2.2-r2.ebuild 1297
+RMD160 7906c3bfa8e4be2832caca3c46a613dc59d927db openexr-1.2.2-r2.ebuild 1297
+SHA256 51d80e44edc414872c8346b0cb2321df8267d51d2852001a0ae2403b51ebb84c openexr-1.2.2-r2.ebuild 1297
+MD5 c9c0d28408bc3c035ac3d1de86ea72ac openexr-1.2.2.ebuild 1005
+RMD160 a3339d760b8572dfcd64c1f262c45909dd5e6092 openexr-1.2.2.ebuild 1005
+SHA256 2b31810b57151a58146f7e81964553f19cf775d0e802cf7a6eb82b0daf1146fc openexr-1.2.2.ebuild 1005
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEP3wKAiZjviIA2XgRAlC8AKCvLOc6THTgt7xIVLwmTuEp3nWiywCfXB02
+5aO8RINA0N8CSnnhf+37Q/s=
+=ihLF
+-----END PGP SIGNATURE-----
