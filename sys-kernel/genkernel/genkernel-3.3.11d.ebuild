@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.3.11c.ebuild,v 1.1 2006/04/13 19:37:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.3.11d.ebuild,v 1.1 2006/04/14 14:48:38 plasmaroo Exp $
 
 VERSION_DMAP='1.00.17'
 VERSION_DMRAID='1.0.0.rc10'
@@ -8,12 +8,12 @@ VERSION_E2FSPROGS='1.38'
 VERSION_LVM2='2.00.25'
 VERSION_PKG='3.3.11a'
 VERSION_UNIONFS='1.1.4'
-VERSION_UDEV="087"
+VERSION_UDEV="077"
 VERSION_KLIBC="1.2.1"
 
 DESCRIPTION="Gentoo autokernel script"
 HOMEPAGE="http://www.gentoo.org"
-SRC_URI="http://dev.gentoo.org/~wolf31o2/${P}.tar.bz2
+SRC_URI="http://dev.gentoo.org/~plasmaroo/patches/kernel/genkernel/${P}.tar.bz2
 	http://dev.gentoo.org/~plasmaroo/patches/kernel/genkernel/genkernel-pkg-${VERSION_PKG}.tar.bz2
 	http://people.redhat.com/~heinzm/sw/dmraid/src/dmraid-${VERSION_DMRAID}.tar.bz2
 	ftp://sources.redhat.com/pub/lvm2/old/LVM2.${VERSION_LVM2}.tgz
