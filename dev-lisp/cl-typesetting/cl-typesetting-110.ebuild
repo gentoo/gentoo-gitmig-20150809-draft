@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-typesetting/cl-typesetting-110.ebuild,v 1.1 2005/12/31 08:23:44 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-typesetting/cl-typesetting-110.ebuild,v 1.2 2006/04/14 10:03:27 swegener Exp $
 
 inherit common-lisp eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.fractalconcept.com/asp/BCg/sdataQ0709qxv9wpLDM==/asdataQucg
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~sparc ~amd64 ~sparc ~x86"
+KEYWORDS="~sparc ~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-lisp/cl-pdf"

@@ -2,14 +2,24 @@
 Hash: SHA1
 
 MD5 258c42dc2c024ed2f2e430bf608370de ChangeLog 458
-MD5 d31aad031c1707f1b2675b83e2515106 cl-typesetting-110.ebuild 1273
+RMD160 c13684f35be72de0c5e2d0c3c8de7e9d2f8013fa ChangeLog 458
+SHA256 e9f736047cc82f44284a86f4b40611453a9fa947157d00d9c1181b08d82b4ff0 ChangeLog 458
+MD5 a6e2d872723761422b334df5781bd6d2 cl-typesetting-110.ebuild 1266
+RMD160 cb587d9410f8fcdae169a80aec4d1cac5c931544 cl-typesetting-110.ebuild 1266
+SHA256 5e4817b220cc0dcb2a6862c6931cdc39a1d122c3a8b388ce1055be558d7603eb cl-typesetting-110.ebuild 1266
 MD5 e3f2e856c28a43bf2cc259465c218874 files/110-gentoo.patch 5066
+RMD160 831bae9e842816fd582ec339807200a17da98a29 files/110-gentoo.patch 5066
+SHA256 73047b50c1a8aad836bd70e005ae8e2978fa60dc597ca847acb3ad40ed3677f7 files/110-gentoo.patch 5066
 MD5 8ef53811dd3a0a22dd1f3338162f1957 files/digest-cl-typesetting-110 71
+RMD160 c94bab2064cb26879ff46b72ff62a92b7037fd42 files/digest-cl-typesetting-110 71
+SHA256 34981d1a3a6c4932b6559e3b46dcc9654cbcff71e46980e9b6ef77d83e2b112f files/digest-cl-typesetting-110 71
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+RMD160 5edb79931b874dc3a72128f0742b9d4c4eb3c8c1 metadata.xml 164
+SHA256 f8efc9385015233c71f279f85bd0a327525b7136cf8714cc04449d8bea4ce22f metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDtkAcyiNZaEAZA+ARAupsAJ0cT6yS5unM+Qgh5GY+kaCsaIBsTgCfbU8V
-tAbZnXzqTE/5aQZVxgb1g8A=
-=2x1d
+iD8DBQFEP3M2I1lqEGTUzyQRAkT9AKCvrl78mxyZ2lRpijEbc10OlUvrhQCghJ78
+izrsSIC+9tpzrW+gdXQPhFM=
+=Te+w
 -----END PGP SIGNATURE-----
