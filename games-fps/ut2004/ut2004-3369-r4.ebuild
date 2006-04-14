@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.6 2006/04/11 11:49:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.7 2006/04/14 12:06:47 wolf31o2 Exp $
 
 inherit eutils multilib games
 
@@ -40,13 +40,9 @@ RDEPEND=">=games-fps/ut2004-data-3186-r2
 
 S=${WORKDIR}/UT2004-Patch
 
+GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
-
-pkg_setup() {
-	check_license ut2003
-	games_pkg_setup
-}
 
 src_install() {
 	# These files are owned by ut2004-bonuspack-mega
