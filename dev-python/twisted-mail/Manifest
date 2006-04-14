@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 15f15967b9f5904808081ffb75392695 ChangeLog 1556
-RMD160 b1f2b21639bdd4e97195f9c80b22efb56ab98fd1 ChangeLog 1556
-SHA256 a9426925e4eccd925856ce6e40fd4061a80271d945eb466937cb7fee832aab91 ChangeLog 1556
+MD5 eee28d9e30bd6a39202e3b46fe34bdc9 ChangeLog 1645
+RMD160 fc2f1f47010a7ade736f0f1740097144678b7afa ChangeLog 1645
+SHA256 f45435bcaeb1d1614f7df9da2b8937fd0b89c5d3eafa81b19d2d1b14396b5e0e ChangeLog 1645
 MD5 c04aee3a8274e3e757ba9635e16ce0c3 files/digest-twisted-mail-0.1.0-r1 69
 RMD160 6971d39b953c82f2c65ab61f3e4b3d8e03257213 files/digest-twisted-mail-0.1.0-r1 69
 SHA256 cad16117a2a1173d124ad35db4a4373cfd5aed51179666863a255851f879566e files/digest-twisted-mail-0.1.0-r1 69
@@ -19,13 +16,6 @@ SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata
 MD5 d1bbd0c81fb1948c7d5a5354c399edcc twisted-mail-0.1.0-r1.ebuild 413
 RMD160 91c9ddd2f2f3b3ebda1936157f2473d714f64466 twisted-mail-0.1.0-r1.ebuild 413
 SHA256 6340a0fada14a641254359977f0edc0961116528b7a18432bebe20aa22861ef8 twisted-mail-0.1.0-r1.ebuild 413
-MD5 11fec6a129467ede53a81a75985cb015 twisted-mail-0.2.0.ebuild 529
-RMD160 8e4eba63548a30f6dede156d17a6ec99dde0efc9 twisted-mail-0.2.0.ebuild 529
-SHA256 b00f323f8d927b604198c64d0e3b9088e17c263f1c21510da215939d1bbb4bb5 twisted-mail-0.2.0.ebuild 529
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEOY/6W78445TWHXcRAm1NAJ9qw/kXoVh+OSoSmuc4zfU8mEHnJQCcDzVw
-I70i4vDnE14BXQjipj+eLnU=
-=Q4FG
------END PGP SIGNATURE-----
+MD5 b91f95b49bd7d9484b39b09e2e3babbd twisted-mail-0.2.0.ebuild 533
+RMD160 e4717983396ff5bbe25de4e7dbed9c6dbd422363 twisted-mail-0.2.0.ebuild 533
+SHA256 46f8f52be9eda17b8e198402e4c1765e9dea44d161afabca58f9ffef4512cc77 twisted-mail-0.2.0.ebuild 533
