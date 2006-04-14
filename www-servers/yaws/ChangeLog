@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/yaws
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/yaws/ChangeLog,v 1.2 2005/08/07 00:07:30 mkennedy Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/yaws/ChangeLog,v 1.3 2006/04/14 06:10:54 mkennedy Exp $
+
+*yaws-1.58 (14 Apr 2006)
+
+  14 Apr 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/1.58-true_nozip.patch, +files/TODO.Gentoo, +files/yaws.conf.d,
+  +files/yaws.init.d, +yaws-1.58.ebuild:
+  New upstream version (with true_nozip patch); Install our own conf.d and
+  init.d files.
 
   07 Aug 2005; Matthew Kennedy <mkennedy@gentoo.org> yaws-1.56.ebuild:
   Keywording ~sparc, ~amd64, ~ppc
