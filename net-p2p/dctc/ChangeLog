@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/dctc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.29 2004/11/06 16:50:41 squinky86 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.30 2006/04/14 05:38:46 halcy0n Exp $
+
+  14 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/dctc-0.85.9-gcc41.patch, dctc-0.85.9.ebuild:
+  Add patch to fix compilation with gcc-4.1 by Ryan Hill <dirtyepic DOT sk AT
+  gmail DOT com>; bug #126556
 
   06 Nov 2004; Jon Hood <squinky86@gentoo.org> dctc-0.85.9.ebuild:
   Fix homepage irt #70088, thanks Daniel Armyr <daniel.armyr@home.se>.
