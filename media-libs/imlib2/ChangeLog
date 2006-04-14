@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/imlib2
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.46 2005/12/11 23:52:11 spyderous Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.47 2006/04/14 18:18:02 flameeyes Exp $
+
+  14 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  imlib2-1.2.1.009.ebuild:
+  Move KEYWORDS out of enlightenment eclass and add ~x86-fbsd. Run elibtoolize.
 
   11 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   imlib2-1.2.1.009.ebuild, imlib2-9999.ebuild:

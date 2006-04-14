@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.1.009.ebuild,v 1.4 2006/02/10 05:07:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.1.009.ebuild,v 1.5 2006/04/14 18:18:02 flameeyes Exp $
 
 EKEY_STATE="release"
-inherit enlightenment toolchain-funcs
+inherit enlightenment toolchain-funcs libtool
 
 MY_P=${P/_/-}
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
@@ -21,6 +21,8 @@ DEPEND="=media-libs/freetype-2*
 	X? ( || ( ( x11-libs/libXext x11-proto/xextproto ) virtual/x11 ) )
 	mp3? ( media-libs/libid3tag )"
 
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+
 src_compile() {
 	local mymmx=""
 #	if [[ $(tc-arch) == "amd64" ]] ; then
@@ -28,6 +30,8 @@ src_compile() {
 #	else
 		mymmx="--disable-amd64 $(use_enable mmx)"
 #	fi
+
+	elibtoolize
 
 	export MY_ECONF="
 		$(use_with X x) \
