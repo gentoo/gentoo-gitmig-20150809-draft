@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.8.ebuild,v 1.3 2006/03/15 23:32:05 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.8.ebuild,v 1.4 2006/04/14 13:56:52 brix Exp $
 
 inherit eutils toolchain-funcs
 
@@ -21,7 +21,7 @@ DEPEND="gsm? ( sys-apps/pcsc-lite )
 		readline? ( sys-libs/ncurses
 					sys-libs/readline )
 		ssl? ( dev-libs/openssl )
-		madwifi? ( >=net-wireless/madwifi-driver-0.1401.20060117 )"
+		madwifi? ( || ( net-wireless/madwifi-old net-wireless/madwifi-ng ) )"
 
 src_unpack() {
 	local CONFIG=${S}/.config
@@ -135,8 +135,8 @@ pkg_postinst() {
 	einfo
 	if use madwifi; then
 		einfo "This package now compiles against the headers installed by"
-		einfo "net-wireless/madwifi-driver. You should remerge ${PN} after"
-		einfo "upgrading net-wireless/madwifi-driver."
+		einfo "the madwifi driver. You should remerge ${PN} after"
+		einfo "upgrading your madwifi driver."
 		einfo
 	fi
 }
