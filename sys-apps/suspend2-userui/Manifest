@@ -1,52 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9516355b696ca8db898c7c285484992e ChangeLog 1865
-RMD160 b80552e4edc8e88bd9fcea8c1e56cd3c8c83377c ChangeLog 1865
-SHA256 00dd5084ff90f2abca5baf3d2f94b87d5e3deb216697f327656ac5624e95fecd ChangeLog 1865
-MD5 9189b784d36ef34bf204fc33245c0980 files/digest-suspend2-userui-0.5.1 72
-RMD160 75d1d9ebd9707d7539f8360e049e5e45c9488e15 files/digest-suspend2-userui-0.5.1 72
-SHA256 b28760d4e1eb7553058c505d32f5881ffa80a670321884db831e151f777b796d files/digest-suspend2-userui-0.5.1 72
-MD5 8c01c12e7560cac8c27088d6f90f647b files/digest-suspend2-userui-0.6.1 72
-RMD160 9199755db4a4c81de3c5e47425062ff384441db1 files/digest-suspend2-userui-0.6.1 72
-SHA256 ef993dbe243bb61a7afab0603cb3cb9b70e5e30c977e80e3f4467872b6780080 files/digest-suspend2-userui-0.6.1 72
-MD5 50a14df881aec01f7f1c060f0b54d647 files/digest-suspend2-userui-0.6.2 72
-RMD160 01d1b42c83e3aabae838cc991c5c270d594d51ec files/digest-suspend2-userui-0.6.2 72
-SHA256 230f64b2a02b8224ba45828df2f9304e6b9bb6ca6f9660d5c770702893737762 files/digest-suspend2-userui-0.6.2 72
+MD5 950b803eb148416049cf5a5b8ebd0795 ChangeLog 2037
 MD5 d2b5ea7a0c825bf76dd8f6db96f80bb2 files/digest-suspend2-userui-0.6.3 73
-RMD160 efa0fff16f6c80a0c929afe998860f358160e643 files/digest-suspend2-userui-0.6.3 73
-SHA256 25ac9815113f329264ef7bf9b95e99143c32ca4520ac8b76ef202774c5ac0ea2 files/digest-suspend2-userui-0.6.3 73
 MD5 4989e8ce8a7fa00ac2be8b099fb14c50 files/digest-suspend2-userui-0.6.3-r1 265
-RMD160 17ea9dd6f7739952fdc8a70de55348b487b138f8 files/digest-suspend2-userui-0.6.3-r1 265
-SHA256 be8981601c9a3ef3022498c45d37507b6dfc7321c2527237fcdb14715f0bde29 files/digest-suspend2-userui-0.6.3-r1 265
 MD5 7ebbb292a7fc3672467e7f2fd7255c70 files/suspend2-userui-0.6.3-skewed-image.patch 1551
-RMD160 e28e0b0b5072d6477e79f1f3116607de830fa8c9 files/suspend2-userui-0.6.3-skewed-image.patch 1551
-SHA256 0f74c62af276072743d0b42de5b1adeddb6d8effdf21d144acd539485e7e28b1 files/suspend2-userui-0.6.3-skewed-image.patch 1551
 MD5 ad0e358f60075a903529f7e8d4b64d3f files/suspend2-userui-0.6.3-skewed-text.patch 416
-RMD160 09daa415e2e09958f5e4c8e6a7c9940732042e72 files/suspend2-userui-0.6.3-skewed-text.patch 416
-SHA256 a62cf316af1e9cc93afe3a50e627bbd56c4b06a8d7d56896835a5aa5db0dd427 files/suspend2-userui-0.6.3-skewed-text.patch 416
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
-RMD160 e6f6333d659d443f0290a257c2b23772ab1cf526 metadata.xml 255
-SHA256 255c7b73ddde5e979b6b53de0f9f5b858e22e602e0495f484b2a33cd2987edf9 metadata.xml 255
-MD5 cd7fdd45f1bc8f0cb307a9e6147d6fb4 suspend2-userui-0.5.1.ebuild 1504
-RMD160 ab492fc44c0ab400a3fa47c3cff4268f498c1545 suspend2-userui-0.5.1.ebuild 1504
-SHA256 35bf5352911713429d4cb1f6e67dc5d86e335a1b46675662eaaba31445dc1dbc suspend2-userui-0.5.1.ebuild 1504
-MD5 4ffd8254bbe84baa2868d9efddec7bb9 suspend2-userui-0.6.1.ebuild 1504
-RMD160 fe4204089203e0f295f24c5f00174f91ef919e93 suspend2-userui-0.6.1.ebuild 1504
-SHA256 91d260202f0929705fc8ab670e51b8a2ec9417c6e8b570e47ed7c7273a689da7 suspend2-userui-0.6.1.ebuild 1504
-MD5 b10fdb770ad3ff62d474720c4821bde0 suspend2-userui-0.6.2.ebuild 1505
-RMD160 255d2547d634857116263d1effc37f1c5a135ae8 suspend2-userui-0.6.2.ebuild 1505
-SHA256 cb02e6cbaefb1e0ead46d53656c301a202bdabf1aec7c01c5a84a179d9ed983d suspend2-userui-0.6.2.ebuild 1505
 MD5 376e0f947a0813eda94da95fe21faa36 suspend2-userui-0.6.3-r1.ebuild 1645
-RMD160 ba38e694dd575898c545c0fd0070919e863f8a74 suspend2-userui-0.6.3-r1.ebuild 1645
-SHA256 67b3fb22feb60d8302305d1bf18b40b83818d709095137fdb14d2ce72d9a00ec suspend2-userui-0.6.3-r1.ebuild 1645
 MD5 5345fa27c2ab0794eef342edea123154 suspend2-userui-0.6.3.ebuild 1504
-RMD160 e783650f45a6ad34016030897d305a8c7c04a40d suspend2-userui-0.6.3.ebuild 1504
-SHA256 6a82ae9965b4de1cfb1f6bbf4e15050b55ffb238f8bbce8983c0c06e0d0345c7 suspend2-userui-0.6.3.ebuild 1504
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEPW3W/aM9DdBw91cRAnbnAJoD0RpY0D1HisjYJbVHq+xSgTdZbwCghr7U
-slMwTxfHvMqGEtUtwDcMxus=
-=86GK
------END PGP SIGNATURE-----
