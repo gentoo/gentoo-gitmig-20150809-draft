@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/xfishtank-2.1.ebuild,v 1.10 2006/01/21 17:18:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/xfishtank-2.1.ebuild,v 1.11 2006/04/14 16:02:37 nelchael Exp $
 
 inherit eutils
 
@@ -38,6 +38,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make BINDIR=/usr/bin DESTDIR=${D} install || die "install failed"
 	dodoc README README.Linux README.TrueColor README.Why.2.1tp
 }
