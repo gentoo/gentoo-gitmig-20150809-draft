@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/ntl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ChangeLog,v 1.8 2005/09/19 22:31:20 halcy0n Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ChangeLog,v 1.9 2006/04/14 00:16:38 halcy0n Exp $
+
+*ntl-5.4 (14 Apr 2006)
+
+  14 Apr 2006; Mark Loeser <halcy0n@gentoo.org> +ntl-5.4.ebuild:
+  Bump to version 5.4; bug #129747
 
   19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> +metadata.xml:
   Adding to cpp herd
