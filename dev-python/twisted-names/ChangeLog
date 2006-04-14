@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-names
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.6 2006/04/08 06:13:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.7 2006/04/14 09:08:34 nixnut Exp $
+
+  14 Apr 2006; <nixnut@gentoo.org> twisted-names-0.2.0.ebuild:
+  Added ~ppc. Bug #128688
 
   08 Apr 2006; <nixnut@gentoo.org> twisted-names-0.1.0-r1.ebuild:
   Added ~ppc. bug #128688

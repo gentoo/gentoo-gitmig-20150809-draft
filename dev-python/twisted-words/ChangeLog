@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-words
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.8 2006/04/08 06:21:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.9 2006/04/14 09:11:38 nixnut Exp $
+
+  14 Apr 2006; <nixnut@gentoo.org> twisted-words-0.3.0.ebuild:
+  Added ~ppc. Bug #128688
 
   08 Apr 2006; <nixnut@gentoo.org> twisted-words-0.1.0-r1.ebuild:
   Added ~ppc. bug #128688
