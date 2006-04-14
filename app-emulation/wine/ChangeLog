@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.138 2006/04/14 23:31:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.139 2006/04/14 23:43:31 vapier Exp $
+
+*wine-0.9.12 (14 Apr 2006)
+
+  14 Apr 2006; Mike Frysinger <vapier@gentoo.org> +wine-0.9.12.ebuild:
+  Version bump #129896 by toto.
 
   14 Apr 2006; Mike Frysinger <vapier@gentoo.org>
   +files/wine-0.9.11-winegcc-short-libnames.patch, wine-0.9.11.ebuild:
