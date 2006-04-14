@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.52 2006/03/19 22:50:48 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.53 2006/04/14 20:07:07 flameeyes Exp $
+
+  14 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> libwww-5.4.0-r5.ebuild:
+  Add ~x86-fbsd keyword.
 
   19 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org>
   +files/libwww-5.4.0-respectflags.patch, libwww-5.4.0-r5.ebuild:
