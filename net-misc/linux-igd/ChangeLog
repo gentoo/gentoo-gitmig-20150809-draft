@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/linux-igd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.10 2006/04/14 21:59:04 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.11 2006/04/14 22:10:31 tester Exp $
+
+  14 Apr 2006; Olivier Crête <tester@gentoo.org> linux-igd-0.75.ebuild,
+  linux-igd-0.92.ebuild:
+  Marking ~amd64, fixed upnp dep according to bug #101924
 
   14 Apr 2006; Olivier Crête <tester@gentoo.org> files/rc_upnpd:
   Fix init script according to bug #76010

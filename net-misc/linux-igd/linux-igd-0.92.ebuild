@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.92.ebuild,v 1.7 2005/07/30 18:14:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.92.ebuild,v 1.8 2006/04/14 22:10:31 tester Exp $
 
 MY_PN="linuxigd"
 S="${WORKDIR}/${PN}"
@@ -11,11 +11,12 @@ HOMEPAGE="http://linux-igd.sourceforge.net"
 SRC_URI="mirror://sourceforge/linux-igd/${MY_PN}-${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE=""
 
-DEPEND="net-misc/upnp
+DEPEND="<net-misc/upnp-1.1
 	net-firewall/iptables"
+
 
 src_compile() {
 	mv Makefile Makefile.orig
