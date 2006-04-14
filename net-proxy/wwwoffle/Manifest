@@ -9,11 +9,11 @@ MD5 f710c01ec4b28de6014c40ee7f4f6046 files/wwwoffle-online.initd 696
 MD5 9976f6cc21d8fd01b67cb72fc7cf3198 files/wwwoffle.initd 539
 MD5 2f092f7d958b226c98713d29cff08f9d metadata.xml 502
 MD5 b32055c6ea5422b6186b09203a4315e2 wwwoffle-2.8e.ebuild 5140
-MD5 c0c821a804b72008a7dc2bcd37901ceb wwwoffle-2.9.ebuild 5211
+MD5 c2610a4d885521cc16f354895cfb556c wwwoffle-2.9.ebuild 5251
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFEP5bmjG8pv1lIUX4RAn/tAJ9pT4xZWW8Cd8avCDy378uqD+FgaQCgy91E
-VgIO6y4DaXq2VCJBupPYz2U=
-=KRxu
+iD8DBQFEP5gTjG8pv1lIUX4RAmIpAKCfQVVhb+hQtBsHT+3arDaTaHNc+wCdGied
+BW0/XOiY8Z+qauqEbKs55Us=
+=DpvK
 -----END PGP SIGNATURE-----

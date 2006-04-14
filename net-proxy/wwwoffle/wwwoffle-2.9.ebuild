@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9.ebuild,v 1.1 2006/04/14 12:34:30 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9.ebuild,v 1.2 2006/04/14 12:39:33 mrness Exp $
 
 inherit eutils
 
@@ -38,7 +38,8 @@ src_compile() {
 	# TODO confdir back to default /etc/wwwoffle
 	# allows to change config file using web interface.
 
-	econf $(use_with ipv6) || die "econf failed"
+	econf $(use_with zlib) $(use_with gnutls) \
+		$(use_with ipv6) || die "econf failed"
 	emake || die "emake failed"
 
 	if [ -f "${ROOT}/etc/wwwoffle.conf" ] ;	then
