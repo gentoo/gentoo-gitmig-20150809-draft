@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.2 2006/04/02 15:34:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.3 2006/04/14 11:20:05 flameeyes Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -86,11 +86,12 @@ freebsd_src_compile() {
 			6.*) mymakeopts="${mymakeopts} NO_PROFILE= " ;;
 		esac
 
+	# Many things breaks when using ricer flags here
+	strip-flags
+
 	# Make sure to use FreeBSD definitions while crosscompiling
 	[[ -z ${BMAKE} ]] && BMAKE="$(freebsd_get_bmake)"
 
-	# Dirt hack to test a thing
-	export LD="ld"
 	bsdmk_src_compile
 }
 
