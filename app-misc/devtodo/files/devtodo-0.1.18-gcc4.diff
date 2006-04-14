@@ -9,3 +9,14 @@
  class Todo {
  	public :
  		friend class TodoDB;
+--- src/TodoDB.h	2006-03-17 16:49:41.000000000 -0500
++++ src/TodoDB.h	2006-03-17 16:50:12.000000000 -0500
+@@ -108,7 +108,7 @@
+ 		void initColour();
+ 		void initColourPost();
+ 		Todo::Priority getPriority(string current = "");
+-		int TodoDB::markDone(Todo &todo);
++		int markDone(Todo &todo);
+ 
+ 		void formatItem(ostream &out, int depth, Todo const &item, string const &format);
+ 
