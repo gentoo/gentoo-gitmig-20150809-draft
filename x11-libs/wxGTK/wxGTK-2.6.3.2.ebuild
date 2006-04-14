@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.2.ebuild,v 1.1 2006/04/13 18:49:39 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.2.ebuild,v 1.2 2006/04/14 06:15:58 halcy0n Exp $
 
 inherit wxlib gnuconfig versionator
 
@@ -9,7 +9,7 @@ DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit and
 wxbase non-gui library"
 
 SRC_URI="mirror://sourceforge/wxpython/wxPython-src-${PV}.tar.gz
-    doc? ( mirror://sourceforge/wxwindows/wxWidgets-${HTML_PV}-HTML.tar.gz )"
+	doc? ( mirror://sourceforge/wxwindows/wxWidgets-${HTML_PV}-HTML.tar.gz )"
 
 SLOT="2.6"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
