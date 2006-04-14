@@ -1,25 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 caf205a1052b20efb9b55d1f5c66a807 ChangeLog 889
-RMD160 ee258a46e3e2baf575794e331fb889174b20aee4 ChangeLog 889
-SHA256 1137581cb2ab7bfb9c4080b3ed988a1bda8738615974294b3b311c8f3b1981d8 ChangeLog 889
+MD5 c6739bfc8d46076c5da416504228abab ChangeLog 1187
+RMD160 6522d7d1a8765ea2dd3e805e6fb5a331519f4ec1 ChangeLog 1187
+SHA256 029d217e4a7f81d8322832c82021bde3b9fc8da5b4b7c58270f4c5002d5271b0 ChangeLog 1187
 MD5 68b92d3c2b4c05993fe9bea01d6b5cf0 files/digest-ktechlab-0.1.3 67
 RMD160 07d15d595fddf8ff22a002c93dbcc1bf4bc644fd files/digest-ktechlab-0.1.3 67
 SHA256 7dee8ce32392669a572128d465ea122878ef7ae3bffdf81096cc7fdaeb314d24 files/digest-ktechlab-0.1.3 67
+MD5 ec9f4416479a83cab847f9a8b0fee394 files/digest-ktechlab-0.3 244
+RMD160 9ecbfd09dc975d9116d2c42c7d12f16dbd07ded3 files/digest-ktechlab-0.3 244
+SHA256 e04e89212794238cc2c0bc182f6af8441ab0d94d08c54a483c2f062b29c154b0 files/digest-ktechlab-0.3 244
 MD5 d8eac6551ef3367f2b51dc3d6d4d235b files/ktechlab-0.1.3-gcc41.patch 1062
 RMD160 8929263f5598d1f58353f459b8db827ac2213f17 files/ktechlab-0.1.3-gcc41.patch 1062
 SHA256 cb438c12cf57893166aa64ed62d5ec5b709cfc7f1409ad1a215186d5901920bf files/ktechlab-0.1.3-gcc41.patch 1062
+MD5 2a5ce05e9393261fba290ac466f7f761 files/ktechlab-0.3-gcc-4.1.patch 277
+RMD160 1a58d5476b953276eb2950a35f78e6d0f981d87c files/ktechlab-0.3-gcc-4.1.patch 277
+SHA256 e620f27aa9ba40c3e287d38dc15facd7c99d72ce81667fb449ae26c5db507795 files/ktechlab-0.3-gcc-4.1.patch 277
 MD5 6bb686257bab23d758d7eb60a4927dda ktechlab-0.1.3.ebuild 604
 RMD160 d0565eb3e971d91546d496dc6a3523e9480b8ad6 ktechlab-0.1.3.ebuild 604
 SHA256 b3672e6d92e812f36edbe011d83a592eda2b18765194898d40e439ee0c0e21f0 ktechlab-0.1.3.ebuild 604
-MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-RMD160 bfa92d311ac4e8cc9a2190f578925f333ae096a8 metadata.xml 253
-SHA256 8e0389110e0cd8cc331b484cde34c22dd93f9f49df16c2263eea4d8e84093976 metadata.xml 253
+MD5 16392bae9fd4b5a9490e437fc9ae1df6 ktechlab-0.3.ebuild 599
+RMD160 24eb940148222c817978775b9e678023bf7fa790 ktechlab-0.3.ebuild 599
+SHA256 dda690f0a36a4873fc36a2d78439fd33c4fad613742e29579bab0007c88dc8e2 ktechlab-0.3.ebuild 599
+MD5 b2baa4f3a6fb4d91c71a3860b008ada4 metadata.xml 259
+RMD160 4846fb3aa27b7b535e68ad2c70e7e3db23ba3406 metadata.xml 259
+SHA256 525a5517f72acdc8afcbfc576268cad112ed6d1c2149aca4ff33399ac5d09cdc metadata.xml 259
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEJbXjAiZjviIA2XgRAitFAKC13zCTZicgVeLeLapJUZu+kHICYwCgzNm1
-xv7KRjVl9s299VzTTXpOvM0=
-=xv4Y
+iD8DBQFEP/lVntT9W3vfTuoRAi1sAKCczWJLmu7lZP8ga1cr6thEzz7wVACeNs3F
+J+FYAPUDc+CXhwoTrnJbIWs=
+=qHMT
 -----END PGP SIGNATURE-----

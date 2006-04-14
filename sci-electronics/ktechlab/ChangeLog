@@ -1,6 +1,14 @@
 # ChangeLog for sci-electronics/ktechlab
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ChangeLog,v 1.4 2006/03/25 21:28:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ChangeLog,v 1.5 2006/04/14 19:34:33 cryos Exp $
+
+*ktechlab-0.3 (14 Apr 2006)
+
+  14 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/ktechlab-0.3-gcc-4.1.patch, metadata.xml, +ktechlab-0.3.ebuild:
+  Version bump and GCC 4.1 patch (thanks to Matteo Azzali
+  <matte.az@libero.it>), closes bugs 99051, 122773 and 129499. Also added sci
+  as herd.
 
   25 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/ktechlab-0.1.3-gcc41.patch, ktechlab-0.1.3.ebuild:
