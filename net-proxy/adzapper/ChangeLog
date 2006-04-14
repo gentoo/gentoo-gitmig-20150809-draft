@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/adzapper
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/ChangeLog,v 1.27 2006/03/30 16:31:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/ChangeLog,v 1.28 2006/04/14 07:44:40 mrness Exp $
+
+*adzapper-20060414 (14 Apr 2006)
+
+  14 Apr 2006; Alin Nastac <mrness@gentoo.org> +adzapper-20060414.ebuild:
+  Version bump.
 
   30 Mar 2006; Alin Nastac <mrness@gentoo.org> -adzapper-20050524.ebuild,
   -adzapper-20050712.ebuild, -adzapper-20051024.ebuild:
