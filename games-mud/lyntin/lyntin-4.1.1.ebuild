@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.1.1.ebuild,v 1.7 2005/07/11 14:05:47 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.1.1.ebuild,v 1.8 2006/04/14 16:55:27 wolf31o2 Exp $
 
 inherit games distutils
 
@@ -18,13 +18,13 @@ DEPEND=">=dev-lang/python-2.2.3"
 DOCS="COMMANDS PKG-INFO HACKING README"
 
 pkg_setup() {
+	games_pkg_setup
 	if ! built_with_use dev-lang/python tcltk ; then
 		eerror "You need to recompile python with Tkinter support."
 		eerror "Example: USE='X -build tcltk' emerge python"
 		echo
 		die "missing tkinter support with installed python"
 	fi
-	games_pkg_setup
 }
 
 src_install() {
