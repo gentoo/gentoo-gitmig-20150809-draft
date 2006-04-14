@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/wxruby
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/ChangeLog,v 1.13 2006/03/30 04:02:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/ChangeLog,v 1.14 2006/04/14 12:06:53 fmccor Exp $
+
+  14 Apr 2006; Ferris McCormick <fmccor@gentoo.org> wxruby-0.6-r1.ebuild:
+  Add ~amd64 keyword.  Builds, installs, and runs tests and examples as
+  expected.
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> wxruby-0.6-r1.ebuild:
   Mark 0.6-r1 ~ia64
