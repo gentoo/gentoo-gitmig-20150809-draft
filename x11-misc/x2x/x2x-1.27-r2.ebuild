@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r1.ebuild,v 1.8 2006/04/14 18:55:08 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r2.ebuild,v 1.1 2006/04/14 18:55:08 nelchael Exp $
 
 inherit eutils
 
@@ -10,9 +10,10 @@ LICENSE="as-is"
 SRC_URI="http://ftp.digital.com/pub/Digital/SRC/x2x/${P}.tar.gz
 	mirror://debian/pool/main/x/x2x/x2x_1.27-8.diff.gz
 	mirror://gentoo/x2x_1.27-8-initvars.patch.gz
-	mirror://gentoo/x2x-1.27-license.patch.gz"
+	mirror://gentoo/${P}-license.patch.gz
+	mirror://gentoo/${P}-keymap.diff.gz"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~mips ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="|| ( (
@@ -38,7 +39,11 @@ src_unpack() {
 	epatch ${DISTDIR}/x2x_1.27-8-initvars.patch.gz
 
 	# Patch to add LICENSE
-	epatch ${DISTDIR}/x2x-1.27-license.patch.gz
+	epatch ${DISTDIR}/${P}-license.patch.gz
+
+	# Patch to fix bug #126939
+	# AltGr does not work in x2x with different keymaps:
+	epatch ${DISTDIR}/${P}-keymap.diff.gz
 
 	# Man-page is packaged as x2x.1 but needs to be x2x.man for building
 	mv x2x.1 x2x.man || die
