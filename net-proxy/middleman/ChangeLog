@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/middleman
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/middleman/ChangeLog,v 1.4 2005/07/30 07:48:33 mrness Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/middleman/ChangeLog,v 1.5 2006/04/14 09:20:26 mrness Exp $
+
+  14 Apr 2006; Alin Nastac <mrness@gentoo.org> middleman-2.0.1-r2.ebuild:
+  Simplify dependencies.
 
   30 Jul 2005; Alin Nastac <mrness@gentoo.org> -middleman-2.0.1.ebuild:
   Remove obsolete version.

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/middleman/middleman-2.0.1-r2.ebuild,v 1.3 2005/07/15 00:02:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/middleman/middleman-2.0.1-r2.ebuild,v 1.4 2006/04/14 09:20:26 mrness Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="pam zlib"
 
-DEPEND="virtual/libc
-	dev-libs/libpcre
+DEPEND="dev-libs/libpcre
 	pam? ( sys-libs/pam )
 	zlib? (	sys-libs/zlib )"
 
