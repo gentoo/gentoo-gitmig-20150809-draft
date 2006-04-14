@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gturing/gturing-0.1.1.ebuild,v 1.2 2005/08/23 02:47:35 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gturing/gturing-0.1.1.ebuild,v 1.3 2006/04/14 20:06:19 cryos Exp $
 
 inherit eutils
 
@@ -18,7 +18,8 @@ DEPEND=">=gnome-base/libgnomeui-2.0.0"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gettext.patch
+	epatch ${FILESDIR}/${P}-gettext.patch
+	epatch ${FILESDIR}/${P}-gcc-41.patch
 }
 
 src_compile() {

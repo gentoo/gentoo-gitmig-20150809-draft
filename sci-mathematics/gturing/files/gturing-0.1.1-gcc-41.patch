@@ -1,0 +1,13 @@
+diff -ur gturing-0.1.1-orig/src/turing.h gturing-0.1.1/src/turing.h
+--- gturing-0.1.1-orig/src/turing.h	2006-04-14 00:11:59.000000000 -0400
++++ gturing-0.1.1/src/turing.h	2006-04-14 00:13:35.000000000 -0400
+@@ -56,9 +56,6 @@
+ }
+ turing;
+ 
+-extern gchar states_fname[1024];
+-extern gchar tape_string[1024];
+-
+ extern turing *turing_new(void);
+ extern gchar *turing_states_to_string(turing_state *state);
+ extern gint turing_fread_states(turing *machine, gchar *filename);
