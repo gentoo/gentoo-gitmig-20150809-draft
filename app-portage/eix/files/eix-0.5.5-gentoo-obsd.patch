@@ -1,0 +1,26 @@
+diff -ruN eix-0.5.5.orig/src/eixTk/sysutils.cc eix-0.5.5/src/eixTk/sysutils.cc
+--- eix-0.5.5.orig/src/eixTk/sysutils.cc	2006-03-21 22:33:38 +0100
++++ eix-0.5.5/src/eixTk/sysutils.cc	2006-03-31 12:17:26 +0200
+@@ -30,6 +30,7 @@
+ #include <sys/types.h>
+ #include <pwd.h>
+ #include <grp.h>
++#include <unistd.h>
+ #include <sys/stat.h>
+ 
+ static bool is_on_list (char *const *list, const char *member)
+diff -ruN eix-0.5.5.orig/src/portage/cache/cdb/cdb.cc eix-0.5.5/src/portage/cache/cdb/cdb.cc
+--- eix-0.5.5.orig/src/portage/cache/cdb/cdb.cc	2006-03-21 22:33:40 +0100
++++ eix-0.5.5/src/portage/cache/cdb/cdb.cc	2006-03-31 12:18:35 +0200
+@@ -38,7 +38,11 @@
+ #include <sys/stat.h>
+ #include <sys/mman.h>
+ #include <fcntl.h>
++
++#if !defined(__OpenBSD__)
+ #include <stdint.h>
++#endif
++
+ #include <unistd.h>
+ 
+ #include <config.h>
