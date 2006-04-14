@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.2-r3.ebuild,v 1.2 2006/03/31 20:16:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.2-r3.ebuild,v 1.3 2006/04/14 16:04:12 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -41,7 +41,7 @@ RDEPEND="x11-libs/libXfont
 	x11-libs/libXrender
 	x11-libs/libXi
 	media-libs/freetype
-	>=media-libs/mesa-6
+	<media-libs/mesa-6.5-r2
 	media-fonts/font-adobe-75dpi
 	media-fonts/font-misc-misc
 	media-fonts/font-cursor-misc
