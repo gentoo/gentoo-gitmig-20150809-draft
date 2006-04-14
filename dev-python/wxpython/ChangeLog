@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.38 2006/04/13 18:50:12 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.39 2006/04/14 19:19:15 halcy0n Exp $
+
+  14 Apr 2006; Mark Loeser <halcy0n@gentoo.org> wxpython-2.6.3.2.ebuild:
+  Fix dependencies so that wxpython and wxGTK versions always match; bug #129937
 
 *wxpython-2.6.3.2 (13 Apr 2006)
 
