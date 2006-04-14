@@ -1,0 +1,13 @@
+Index: ffmpeg-0.4.9-p20060302/configure
+===================================================================
+--- ffmpeg-0.4.9-p20060302.orig/configure
++++ ffmpeg-0.4.9-p20060302/configure
+@@ -336,7 +336,7 @@ bktr="yes"
+ audio_oss="yes"
+ dv1394="no"
+ make="gmake"
+-CFLAGS="-pthread"
++CFLAGS="$CFLAGS -pthread"
+ LDFLAGS="$LDFLAGS -export-dynamic -pthread"
+ ;;
+ BSD/OS)
