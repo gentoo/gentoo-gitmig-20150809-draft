@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.3.2_alpha.ebuild,v 1.1 2006/01/08 13:27:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.6.2_alpha.ebuild,v 1.1 2006/04/14 08:40:32 mrness Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="clamav kaspersky debug ntlm pcre"
 
 DEPEND="!net-proxy/dansguardian-dgav
-	pcre? ( dev-libs/libpcre )
+	pcre? ( >=dev-libs/libpcre-6.0 )
 	clamav? ( app-antivirus/clamav )"
 
 S=${WORKDIR}/${MY_P}
@@ -43,8 +43,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/${P}-gentoo.patch
-	epatch ${FILESDIR}/${P}-kaspersky-response.patch
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 }
 
 src_compile() {
@@ -70,23 +69,23 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make "DESTDIR=${D}" install || die "make install failed"
 
 	# Copying init script
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/dansguardian.init dansguardian
+	newexe "${FILESDIR}/dansguardian.init" dansguardian
 
 	if use clamav; then
-		sed -r -i -e 's/[ \t]+need net.*/& clamd/' ${D}/etc/init.d/dansguardian
-		sed -r -i -e 's/^#( *contentscanner *=.*clamdscan[.]conf.*)/\1/' ${D}/etc/dansguardian/dansguardian.conf
-		sed -r -i -e 's/^#( *clamdudsfile *=.*)/\1/' ${D}/etc/dansguardian/contentscanners/clamdscan.conf
+		sed -r -i -e 's/[ \t]+need net.*/& clamd/' "${D}/etc/init.d/dansguardian"
+		sed -r -i -e 's/^#( *contentscanner *=.*clamdscan[.]conf.*)/\1/' "${D}/etc/dansguardian/dansguardian.conf"
+		sed -r -i -e 's/^#( *clamdudsfile *=.*)/\1/' "${D}/etc/dansguardian/contentscanners/clamdscan.conf"
 	elif use kaspersky; then
-		sed -r -i -e 's/^#( *contentscanner *=.*kavdscan[.]conf.*)/\1/' ${D}/etc/dansguardian/dansguardian.conf
+		sed -r -i -e 's/^#( *contentscanner *=.*kavdscan[.]conf.*)/\1/' "${D}/etc/dansguardian/dansguardian.conf"
 	fi
 
 	# Copying logrotation file
 	exeinto /etc/logrotate.d
-	newexe ${FILESDIR}/dansguardian.logrotate dansguardian
+	newexe "${FILESDIR}/dansguardian.logrotate" dansguardian
 
 	keepdir /var/log/dansguardian
 	fperms o-rwx /var/log/dansguardian
