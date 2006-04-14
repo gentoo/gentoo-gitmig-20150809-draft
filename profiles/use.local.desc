@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1844 2006/04/14 13:28:12 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1845 2006/04/14 15:04:30 brix Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1215,21 +1215,21 @@ net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch (http://www.it-ac
 net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
 net-wireless/bluez-utils:udev - Enable udev rules file installation
 net-wireless/hostapd:logwatch - Install support files for logwatch
-net-wireless/hostapd:madwifi - Add support for madwifi-driver (Atheros chipset)
+net-wireless/hostapd:madwifi - Add support for madwifi (Atheros chipset)
 net-wireless/ipw2200:radiotap - Use radiotap headers in monitor mode
 net-wireless/ipw3945:radiotap - Use radiotap headers in monitor mode
 net-wireless/kdebluetooth:irmc - Enable the kitchensync(Multisynk)'s IrMCSync konnector
 net-wireless/linux-wlan-ng-modules:pci - Enable the Prism2.5 native PCI (_pci) driver
 net-wireless/linux-wlan-ng-modules:plx - Enable the Prism2 PLX9052 based PCI (_plx) adapter driver
-net-wireless/madwifi-driver:amrr - Use Adaptive Multi Rate Retry bit rate control algorithm
-net-wireless/madwifi-driver:onoe - Use Atsushi Onoe's bit rate control algorithm
+net-wireless/madwifi-ng:amrr - Use Adaptive Multi Rate Retry bit rate control algorithm
+net-wireless/madwifi-ng:onoe - Use Atsushi Onoe's bit rate control algorithm
 net-wireless/madwifi-old:amrr - Use Adaptive Multi Rate Retry bit rate control algorithm
 net-wireless/madwifi-old:onoe - Use Atsushi Onoe's bit rate control algorithm
-net-wireless/madwifi-tools:udev - Enable udev rules file installation
+net-wireless/madwifi-ng-tools:udev - Enable udev rules file installation
 net-wireless/wepattack:john - Build with johntheripper support
 net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
 net-wireless/wpa_supplicant:gsm - Add support for EAP-SIM authentication algorithm
-net-wireless/wpa_supplicant:madwifi - Add support for madwifi-driver (Atheros chipset)
+net-wireless/wpa_supplicant:madwifi - Add support for madwifi (Atheros chipset)
 net-www/apache:lingerd - Enable support for lingerd
 net-www/apache:mpm-event - (experimental) Event MPM - a varient of the worker MPM that tries to solve the keep alive problem - requires epoll support and kernel 2.6
 net-www/apache:mpm-leader - (experimental) Leader MPM - leaders/followers varient of worker MPM
