@@ -1,19 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7d4ac62aa1f0c51836b83ab52b35baf8 ChangeLog 1390
-MD5 29dbdcc955084e46c80de2d05f68c0fe files/digest-webscarab-20050519 87
+MD5 3ce08e480da3e2e109f323efd1579d75 ChangeLog 1537
 MD5 a2ff5c6889fe3a9eede8f09dc147c96f files/digest-webscarab-20050620 87
 MD5 6b697d647e0c8dcd025f210b73ff89b4 files/digest-webscarab-20051017 87
 MD5 5cb4880cfa82a9c95f56a036d0b74529 files/webscarab.sh 49
 MD5 ca053d1e95015fb10ae3772bf20fa65d metadata.xml 509
-MD5 e4447dbe211b59e4ad876b05d71320c6 webscarab-20050519.ebuild 690
 MD5 9d03424762774daaa25ccb9bcb4a5dae webscarab-20050620.ebuild 703
-MD5 328f8d95d5156ed80d96c18f502f17b1 webscarab-20051017.ebuild 704
+MD5 a612fa7cc3e30ac582fcca5d2d8bce3c webscarab-20051017.ebuild 703
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFEDLTxjG8pv1lIUX4RAgwzAKDOyDWwDQamajra1jQw4nO8cHSGEACfbG8+
-MoUyDJChuFA5+uR08T9qHbo=
-=KuAu
+iD8DBQFEP48RjG8pv1lIUX4RApPoAKDKvywjoBBVz7sjRA38CHb59jgTjwCeJgb2
+1eKKU9lIA5XIpd5L3mu6EJw=
+=ggab
 -----END PGP SIGNATURE-----
