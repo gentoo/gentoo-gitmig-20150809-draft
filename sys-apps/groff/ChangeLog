@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.63 2006/03/30 15:16:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.64 2006/04/14 04:35:36 halcy0n Exp $
+
+  14 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/groff-1.18.1.1-gcc41.patch, groff-1.18.1.1.ebuild:
+  Add patch to fix compilation with gcc-4.1, thanks to KIMURA Masaru <hiyuh
+  DOT root AT gmail DOT com>; bug #125533
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> groff-1.19.2-r1.ebuild:
   Add ~x86-fbsd keyword.

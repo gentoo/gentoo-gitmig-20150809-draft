@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a41402b23bff4695781bc35d462778db ChangeLog 9042
-RMD160 162c33d535180b82199997d37af943124cd2deb8 ChangeLog 9042
-SHA256 107c6b6086032567800ecd70d55a57abf4dc82824d3b7ed9f1a56222c0d70769 ChangeLog 9042
+MD5 4a5e9f7b7b3b655543845e781dc315e0 ChangeLog 9267
+RMD160 d8aa0d0d5fa9fef616b02e1464ff25939743066f ChangeLog 9267
+SHA256 1f7a4074dd3740ff02614e0025ec359eca9e7aa08790c448212857b7425d4552 ChangeLog 9267
 MD5 b887e99fa5e1252f1bf827af9892a238 files/digest-groff-1.18.1-r4 132
 RMD160 542d5e394f4950d5cadeecd00372fd1fa7b7e2aa files/digest-groff-1.18.1-r4 132
 SHA256 13fc487e39a0cf34a6341bdf91bf68ff00954f556fb0d86849c99d5c9303ce52 files/digest-groff-1.18.1-r4 132
-MD5 5ad2fe2219d24cfa7f9513e0671c0643 files/digest-groff-1.18.1.1 137
-RMD160 41c2bf6fd7f74a87b00badfcc509bbefaa35c988 files/digest-groff-1.18.1.1 137
-SHA256 a0adab80810edfcb611e2e94beccc3bbcb72560a77dc17b6c6df598323685004 files/digest-groff-1.18.1.1 137
+MD5 575f798d8fda54b207e9d8cefc88d50b files/digest-groff-1.18.1.1 317
+RMD160 ea0e5d9e460953792f95acf108645e1f84b0a544 files/digest-groff-1.18.1.1 317
+SHA256 0ee91abe53a38ffa2dfd11c52f2f747499fef62abf3ab1c6c6e4c415090496ae files/digest-groff-1.18.1.1 317
 MD5 b79e74dab8ceadf74f153032ad30eea3 files/digest-groff-1.19.1-r2 65
 RMD160 2b0caeb45fa054f3dfa728ac06d0a19f4ef7caf2 files/digest-groff-1.19.1-r2 65
 SHA256 6c32cff1c2632082e182e118be7f0f79611d4e78c0ac2972b67e11acc9183871 files/digest-groff-1.19.1-r2 65
@@ -25,6 +25,9 @@ SHA256 069de596ec7aba98433b62cfbce3097d65b714d9046708060fa3c8c5609b1b20 files/gr
 MD5 98060417290f3c427f5a3406b21f8da9 files/groff-1.18.1-no-color-segfault.patch 896
 RMD160 e74b67a9bf7d813e9516a167cfe637f51ad696c2 files/groff-1.18.1-no-color-segfault.patch 896
 SHA256 1db198df6ac473df970739f8145168f25c64abccbea6b7c5ffa7b5bb3a9cb93e files/groff-1.18.1-no-color-segfault.patch 896
+MD5 93b70e3f3d0449be014ab1b34d84b735 files/groff-1.18.1.1-gcc41.patch 6413
+RMD160 c39eef849f6dfca6e7813ab80e1a7cdcf20d0570 files/groff-1.18.1.1-gcc41.patch 6413
+SHA256 b0615162a9348a7a58f9de055a787bb16d3704cdc326ba2d5e813a4b6c817c51 files/groff-1.18.1.1-gcc41.patch 6413
 MD5 b3ba6be5518b9eb78377d4ed60d90f95 files/groff-1.19.1-gcc-4.1.patch 1696
 RMD160 13ff11aad553fd5f9336b4dd7e4ef93d73774a86 files/groff-1.19.1-gcc-4.1.patch 1696
 SHA256 26267eea19519b4cd0b085da63dda71d0761493c5be1759edc510f9135f4c7d9 files/groff-1.19.1-gcc-4.1.patch 1696
@@ -55,9 +58,9 @@ SHA256 9199ffeedbd05a5f8644ba25231dba4c922bbbb01448009f5dfbaf06e8e930b7 files/gr
 MD5 032db38ca66c2fbc5929992a4f313944 groff-1.18.1-r4.ebuild 3142
 RMD160 b044ddb12c3c52327b96debd90ff8d8b61f2b447 groff-1.18.1-r4.ebuild 3142
 SHA256 f01b9d9578487ee7bd940bf77db79ffc0165f3840312e6a0cdfead466e7c3965 groff-1.18.1-r4.ebuild 3142
-MD5 dee06c655e952d21181ff84957b4cc8b groff-1.18.1.1.ebuild 3155
-RMD160 043271e169025321cc835bc38fcca1ce37ff1272 groff-1.18.1.1.ebuild 3155
-SHA256 ac1a40f0e6c9b04fb486424af45c228fc4ac4bd9be9f4450e0f8a6d21e41cbf9 groff-1.18.1.1.ebuild 3155
+MD5 9e78a54855f6981bfc6091af1ac987d8 groff-1.18.1.1.ebuild 3205
+RMD160 f583b7ed7b444248fdd380eb44b119a2f6667faf groff-1.18.1.1.ebuild 3205
+SHA256 c6906bbd7e49dd27e81f95f0a0f52f0e56585a239a2690c782a67d19bb93a3b3 groff-1.18.1.1.ebuild 3205
 MD5 9b2efbaa87afb361bcc139cd3ff76155 groff-1.19.1-r2.ebuild 3289
 RMD160 a10a5745046ac0a53677069334a15ce8cdc73561 groff-1.19.1-r2.ebuild 3289
 SHA256 9e41cd710085c25f9a0a623a7a3d28e732213a75f70a9bdfb8a658069bff8a9d groff-1.19.1-r2.ebuild 3289
@@ -70,7 +73,7 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEK/ZZAiZjviIA2XgRAhjAAJsEFs5/7OEP4z1k/y8CX1IwWHykJwCeOzNc
-2teqibiWrJYS2UaSxip2YL8=
-=DgcM
+iD8DBQFEPyajCRZPokWLroQRAgCAAKCuyKRvoo64D1V0hW/9j7uTX+55ugCdG0gk
+iLmCVS23dCZDWoTgKMEZRoE=
+=0cWN
 -----END PGP SIGNATURE-----

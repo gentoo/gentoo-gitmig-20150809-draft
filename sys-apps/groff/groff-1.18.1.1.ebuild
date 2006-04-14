@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1.1.ebuild,v 1.1 2005/10/29 02:07:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1.1.ebuild,v 1.2 2006/04/14 04:35:36 halcy0n Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -29,7 +29,7 @@ src_unpack() {
 	else
 		# Do not segfault if no color is defined in input, bug #14329
 		# <azarah@gentoo.org> (08 Feb 2003)
-		epatch ${FILESDIR}/${P}-no-color-segfault.patch
+		epatch ${FILESDIR}/groff-1.18.1-no-color-segfault.patch
 	fi
 
 	# Fix the info pages to have .info extensions,
@@ -44,6 +44,8 @@ src_unpack() {
 	# can search for it. Fixes #17580 and #16108
 	# Thanks to James Cloos <cloos@jhcloos.com>
 	epatch ${FILESDIR}/${PN}-man-UTF-8.diff
+
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 
 	# Fix syntax error in pic2graph. Closes #32300.
 	sed -i -e "s:groffpic_opts=\"-U\":groffpic_opts=\"-U\";;:" contrib/pic2graph/pic2graph.sh
