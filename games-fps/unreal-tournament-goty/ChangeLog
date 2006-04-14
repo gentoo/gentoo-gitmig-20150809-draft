@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/unreal-tournament-goty
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/ChangeLog,v 1.9 2006/02/10 16:22:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/ChangeLog,v 1.10 2006/04/14 11:49:39 wolf31o2 Exp $
+
+  14 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  unreal-tournament-goty-436.ebuild, unreal-tournament-goty-451.ebuild:
+  Moved games_pkg_setup to the beginning of pkg_setup.
 
   10 Feb 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   unreal-tournament-goty-436.ebuild, unreal-tournament-goty-451.ebuild:

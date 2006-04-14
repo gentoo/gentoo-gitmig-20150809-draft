@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-436.ebuild,v 1.12 2006/02/15 19:18:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-436.ebuild,v 1.13 2006/04/14 11:50:58 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -27,9 +27,8 @@ RDEPEND="|| (
 S=${WORKDIR}
 
 pkg_setup() {
-	check_license
-	cdrom_get_cds System/
 	games_pkg_setup
+	cdrom_get_cds System/
 }
 
 src_unpack() {
