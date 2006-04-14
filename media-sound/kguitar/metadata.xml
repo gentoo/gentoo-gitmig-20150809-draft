@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>sound</herd>
+<maintainer>
+	<email>eldad@gentoo.org</email>
+	<name>Eldad Zack</name>
+</maintainer>
+<longdescription>An efficient and easy-to-use environment for a guitarist</longdescription>
+</pkgmetadata>
