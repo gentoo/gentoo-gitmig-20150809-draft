@@ -1,9 +1,46 @@
-MD5 908f92eff383fb8d1ea74cb6da319514 ChangeLog 1533
-MD5 1a2cf0a0af114411fcdef81f0d0d7a1a geos-2.1.1.ebuild 958
-MD5 4b491a816a154aafb3877b71ae44bda2 metadata.xml 180
-MD5 4de704faa5d2869d6c5f04850c589bca geos-2.1.2.ebuild 875
-MD5 1a20c0fed610b39195c9a802e4fb0934 geos-2.1.4.ebuild 1596
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 97d9010dc99629ddf3852364573f5f5e ChangeLog 1923
+RMD160 2e58524892cfcb722066b9a2a61b03ceebfabf0c ChangeLog 1923
+SHA256 08f1d9a4ab6e031f900bd56f4bef7540ad23764cdbd1960c282e36d0bd94ddb8 ChangeLog 1923
 MD5 e64702857a489d4d24706066fb8b9edb files/digest-geos-2.1.1 63
-MD5 ccfdc64d67bd756e8681dbcedf4a7ee4 files/geos-2.1.1-multilib.patch 901
+RMD160 cac3331204631781eb7b92e4b4fbe5175de93481 files/digest-geos-2.1.1 63
+SHA256 1c7bfac04b17f699a29800305fcdac5d50ee692c559ac82748eda479aef349a6 files/digest-geos-2.1.1 63
 MD5 10716de046c293dcbc7acead1c63aa13 files/digest-geos-2.1.2 63
+RMD160 e0854437fa0af881d54d5a7112f1491d123799cd files/digest-geos-2.1.2 63
+SHA256 f3741d0aff819ac88315be2e11e953987fa58687989b5242d9b19e7c528f5e28 files/digest-geos-2.1.2 63
 MD5 6702e1ce86d53d86b0fb87ef6796a141 files/digest-geos-2.1.4 63
+RMD160 0fc946e4a5f8def28dadde548dbe6ae2a086fd50 files/digest-geos-2.1.4 63
+SHA256 8a78b97221c099e4445f0d0a12ca6193db0b4f7f9ea9dd0288928693afce0224 files/digest-geos-2.1.4 63
+MD5 faa7651b50a08cee639893e0c9c53450 files/digest-geos-2.2.1 235
+RMD160 c6c20740bb2e6cb2f0d616ce84178add5344486e files/digest-geos-2.2.1 235
+SHA256 ecf5ce26ed26092be852d3df9d20506f8481d776be4c1091dfd91fde39f6ecd4 files/digest-geos-2.2.1 235
+MD5 ccfdc64d67bd756e8681dbcedf4a7ee4 files/geos-2.1.1-multilib.patch 901
+RMD160 3a3cf86040c104ae856f59f139b9661351752888 files/geos-2.1.1-multilib.patch 901
+SHA256 36cab3bf09b1f6ee8cd204b1edcc3f316df47098fd07d8bce77ce7760ee8a3ee files/geos-2.1.1-multilib.patch 901
+MD5 02aa9da6a542bbc1d1f69beee9fbd377 files/geos-2.2.1-gcc-41.patch 2888
+RMD160 579e1c58ed74c66c75fbb01de9e397d277804cd8 files/geos-2.2.1-gcc-41.patch 2888
+SHA256 f43992b255f32ec816e84684cf4d9c0d1381dd51a4dee87b756fc2bca193c030 files/geos-2.2.1-gcc-41.patch 2888
+MD5 1a2cf0a0af114411fcdef81f0d0d7a1a geos-2.1.1.ebuild 958
+RMD160 06967fd6de6ab68043bb222ce9bfd8e734d353d9 geos-2.1.1.ebuild 958
+SHA256 683a0824de88fd493e97f5d9aa1f96233bda9d5824f00b8545f863762900f783 geos-2.1.1.ebuild 958
+MD5 4de704faa5d2869d6c5f04850c589bca geos-2.1.2.ebuild 875
+RMD160 f7ef594ac474bd509ee828b32f89b4cd8e2ddfa7 geos-2.1.2.ebuild 875
+SHA256 67a61bd156a6905bbdd41db31b1f7a92f451c841b31b58a04a5cf616085893fa geos-2.1.2.ebuild 875
+MD5 1a20c0fed610b39195c9a802e4fb0934 geos-2.1.4.ebuild 1596
+RMD160 2cc3b8f2aa0735544a98088bb4baf2368de2214d geos-2.1.4.ebuild 1596
+SHA256 83dca743352a77363eea491391e74c4c7b98190363645bb936a107bb1ab76827 geos-2.1.4.ebuild 1596
+MD5 6d3921aabd739a297a5f2e7d69a86b8a geos-2.2.1.ebuild 1651
+RMD160 fc03f0487eaf8d4a058e09a51c717cbe172a29ef geos-2.2.1.ebuild 1651
+SHA256 3d3e949349c8a5ece8fbadb9a9b40169b627aae950b2c69d5431d9e0d8aa70bf geos-2.2.1.ebuild 1651
+MD5 4b491a816a154aafb3877b71ae44bda2 metadata.xml 180
+RMD160 b794acbc3e99d1c695e2851d3991709ff2ec0910 metadata.xml 180
+SHA256 5baf5e15e90a096c52238fc2e896074db1940cf64120309895a1133ff4065bdb metadata.xml 180
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEP/5hntT9W3vfTuoRAtk+AKCMO5YS1nFZ3L5MGsDkk0X+iUgFugCbBdyT
+Z90jrrVJ3oIAPbb/PHvMpBQ=
+=qv/x
+-----END PGP SIGNATURE-----

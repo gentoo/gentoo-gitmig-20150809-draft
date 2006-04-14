@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/geos
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.10 2005/11/21 19:36:08 blubb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.11 2006/04/14 19:56:06 cryos Exp $
+
+*geos-2.2.1 (14 Apr 2006)
+
+  14 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/geos-2.2.1-gcc-41.patch, +geos-2.2.1.ebuild:
+  Version bump, thanks to Etienne Dube <etdube@globetrotter.net> for the
+  bumped ebuild and Lucas Chiesa <lucas.chiesa@gmail.com> for his work on it,
+  closes bug 120479. Thanks to Bret Towe <magnade@gmail.com> for the GCC 4.1
+  patch, closes bug 126490.
 
   21 Nov 2005; Simon Stelling <blubb@gentoo.org> geos-2.1.2.ebuild:
   stable on amd64
