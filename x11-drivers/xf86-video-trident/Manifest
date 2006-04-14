@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 df9095c94bd44ff638c2285123acd88b ChangeLog 2296
-RMD160 9920f7bf65251c47c8bbc49f4eec59e12032111f ChangeLog 2296
-SHA256 42fb75e629e5a5ae14d4b2248e36beb82267eb1a7b619dee44d5d529d6c9223d ChangeLog 2296
+MD5 4196307430c3b831f67248836b1103ef ChangeLog 2455
+RMD160 e4152b5026fe39609010cb9fb474496854377d3f ChangeLog 2455
+SHA256 e9ab6e975effcaa3c0edb25b0c7e0b5e28f6f575ec01a4b90c28de6aa66b853e ChangeLog 2455
 MD5 42a1a151176ce96f664e18c36fc005f2 files/digest-xf86-video-trident-1.0.1.3 539
 RMD160 b68fce3abbfa2669e4bc7a8ad30ba728ccc31e19 files/digest-xf86-video-trident-1.0.1.3 539
 SHA256 f808e8bb1594ad7ed4ca80be6a08f2fb701fc7f79558bc1c4c21496232331982 files/digest-xf86-video-trident-1.0.1.3 539
+MD5 2271c381eeaeee1a1a1a2c878cfb5a61 files/digest-xf86-video-trident-1.2.1 533
+RMD160 c75d8825e77e371e090eadeb45a1166fbaf2c532 files/digest-xf86-video-trident-1.2.1 533
+SHA256 1ee63311a69153431ac7babff15d83ff5c33033019fd18689240ca9cbacedbcb files/digest-xf86-video-trident-1.2.1 533
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
 MD5 996fe1cad4bc750c18c7b92802635b7e xf86-video-trident-1.0.1.3.ebuild 621
 RMD160 7c3feff2c2fa65d9869b1fc6908bce8dc84e2014 xf86-video-trident-1.0.1.3.ebuild 621
 SHA256 bc9e5ffd26c65ab75df4190b2dee30618c4b49a7567131c92c4fdb2b82525bd0 xf86-video-trident-1.0.1.3.ebuild 621
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6dp2+ySkm8kpY0RAm/8AKCvzfXSGN2xPe19+XfDj7Wv/DCL6ACfcyIt
-fRxcVvyXCEtYEYmelWEiBN0=
-=UmPH
------END PGP SIGNATURE-----
+MD5 6377550b6df493134238d24e861574fe xf86-video-trident-1.2.1.ebuild 635
+RMD160 4f0bd515fa32b5c3dab70f0f0081cf43041687d0 xf86-video-trident-1.2.1.ebuild 635
+SHA256 247d5f004a6872bf69fe7be8f64ce4ba494ad04912deae8d142af51feac282e2 xf86-video-trident-1.2.1.ebuild 635

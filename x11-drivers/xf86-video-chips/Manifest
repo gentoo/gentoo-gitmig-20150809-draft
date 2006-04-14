@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3a6886dc29c98ade536e6601252e348c ChangeLog 1985
-RMD160 dc12f513ff5533b3350de90a3a5226e74d4ff461 ChangeLog 1985
-SHA256 78bcd91aa9e3e019f5a764953fb6a98a1dad77c935df241a416482ba76c3e91a ChangeLog 1985
+MD5 90696d97d7fb2ac4d50d42029bbb90de ChangeLog 2140
+RMD160 478618913763c5eb7c8094b16f44442a9ae574e2 ChangeLog 2140
+SHA256 bbd7feac085a47d1a30a427b9f1f4963074c11378f8046e166ab51ba73a3bc87 ChangeLog 2140
 MD5 2b2faec6ed7a5ae07aacbdca27208c50 files/digest-xf86-video-chips-1.0.1.3 147
 RMD160 5cbe70ab56c79c638c2cad95dd5d03bf99319d5b files/digest-xf86-video-chips-1.0.1.3 147
 SHA256 16caa8e9c07e7abe364749b3082e4c5a84d1810a43e63689c2014d6a94fd37bd files/digest-xf86-video-chips-1.0.1.3 147
+MD5 a6538d2a0ceae37bdd508281f45ef960 files/digest-xf86-video-chips-1.1.1 527
+RMD160 a74960d74e2247d4dc98899283a473bc204434a3 files/digest-xf86-video-chips-1.1.1 527
+SHA256 94684d18fbbc048086805d1a33a646edcbd4cf48aacf77fd5cdec06ca12ee8c8 files/digest-xf86-video-chips-1.1.1 527
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
 MD5 d04240bbc7a98fe3965675c06238dcbc xf86-video-chips-1.0.1.3.ebuild 570
 RMD160 c19a2941b1eb2d97b712cffb2552756a9c5f1633 xf86-video-chips-1.0.1.3.ebuild 570
 SHA256 23bb8fbf1655fad6e5fd9b8937909a379debcd526ab493f476a0d47c19e5e3fa xf86-video-chips-1.0.1.3.ebuild 570
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6eU2+ySkm8kpY0RAiN7AKC7EZyQi0/s8g7aViHznf8VWrHAVgCfYTeO
-dc1eADdKzCuyYD09Rmqcwr0=
-=jELk
------END PGP SIGNATURE-----
+MD5 e90487c3bc2413f9d7966279a19442a6 xf86-video-chips-1.1.1.ebuild 584
+RMD160 701f16eca4184e5fa7d0fcdd76d3fcf7eeccfefb xf86-video-chips-1.1.1.ebuild 584
+SHA256 7d1300424bbfdabcc8b2553cb447eb9c74f083725e4f5b9e5fadd054c9847d66 xf86-video-chips-1.1.1.ebuild 584

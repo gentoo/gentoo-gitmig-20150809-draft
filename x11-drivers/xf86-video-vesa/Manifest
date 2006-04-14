@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bd097820adac80c1e9035e9c887eb73c ChangeLog 2037
-RMD160 6d763d182dd43b9027cfb618a891791859ed104e ChangeLog 2037
-SHA256 9627c716a3b92dfa4afeebc12ac6275fc62bf04ee270f4cd0ead5d59dbcde14c ChangeLog 2037
+MD5 e0d691a929a6605b20f9364b4dc71fce ChangeLog 2192
+RMD160 d01c9ad0eee887a1dd37b6b4c78269d66277b066 ChangeLog 2192
+SHA256 9491ee34831944972defc24b1f62f91202ba460f0415a1cb6d0a35f905bde126 ChangeLog 2192
 MD5 084d258ae785aa6af84dc251a3656da0 files/digest-xf86-video-vesa-1.0.1.3 146
 RMD160 1e7ce54b0b9e0b3f078c4880922de2391bc49fdb files/digest-xf86-video-vesa-1.0.1.3 146
 SHA256 4290ebb5c12b83b40954d56e3b834a39641274dc1ea7e9a87e3c20d6ea80a2d6 files/digest-xf86-video-vesa-1.0.1.3 146
+MD5 7f08ef929e3a6f9a8fb8deba4a0a4d70 files/digest-xf86-video-vesa-1.1.0 524
+RMD160 7d1d7860a06c2f6d65ea739bbd6c13badaa196e6 files/digest-xf86-video-vesa-1.1.0 524
+SHA256 0494084f467933bf2aac674b858b3dc703bc4c2b61385044d333f2013d1727a6 files/digest-xf86-video-vesa-1.1.0 524
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
 MD5 064b5ee1d5ec4fc3702d5666dff8226b xf86-video-vesa-1.0.1.3.ebuild 570
 RMD160 e796e3b95232a780ede701a7d678bada055f5df8 xf86-video-vesa-1.0.1.3.ebuild 570
 SHA256 2cc80b3f22219925c879a4aa586dcb0eaa2aac552736c304c98b9c0ed71450a4 xf86-video-vesa-1.0.1.3.ebuild 570
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6Tj2+ySkm8kpY0RAv7uAJ446e8YYab84XPNrnwGezHPbEhJwgCfTqzJ
-GE4W4+kV6x7CABSTmTTccSk=
-=nKYg
------END PGP SIGNATURE-----
+MD5 af91090b60d741dbe0785e7bf0505e22 xf86-video-vesa-1.1.0.ebuild 584
+RMD160 c3a7ea6df8697e4587c8d32be6dd2a0f96926c73 xf86-video-vesa-1.1.0.ebuild 584
+SHA256 2c84e56a51da65fc530e7bc1d86c71fff69a062d522a869313e8c72848fc175a xf86-video-vesa-1.1.0.ebuild 584

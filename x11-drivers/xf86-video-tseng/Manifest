@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8e89e95168cffb24bab2400dd793d87b ChangeLog 1868
-RMD160 e2b0483ebe50415e1e9c8242f00856c5b753d7b9 ChangeLog 1868
-SHA256 911a473addbe6ef9ca9e54fd6db9336c4e7b1ae27f661f89f5e886283f6c9e87 ChangeLog 1868
+MD5 9d183f889436384a27a751bcbbf31626 ChangeLog 2024
+RMD160 bb026c336ae11e54aabea0dc0cee67b09edb4556 ChangeLog 2024
+SHA256 cc3fcfbdcc82b2093cd113e9ea00e8d59ec0e6b1d1b5a2f33ad4356fade21948 ChangeLog 2024
 MD5 f182c298e2d3212ed70ca05078b02530 files/digest-xf86-video-tseng-1.0.0.5 147
 RMD160 2ffc0792f84daff279fd9400feae4ff84a41c48d files/digest-xf86-video-tseng-1.0.0.5 147
 SHA256 fd6ea43335e3c26c8e1a90f27ca47f20556b4dec2caecd530045d56b9ca8dbf7 files/digest-xf86-video-tseng-1.0.0.5 147
+MD5 99f09326e5f5ff008ed2a0c69dbf84b8 files/digest-xf86-video-tseng-1.1.0 527
+RMD160 f2345ad6688b91637c9f868b76516ad7c109ad1b files/digest-xf86-video-tseng-1.1.0 527
+SHA256 46be8793d5f28ed374426a97ba5f56524af852abf9631eb09c5e347bc884130b files/digest-xf86-video-tseng-1.1.0 527
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
 MD5 2151efc88ae768806d67e6b7f1f27856 xf86-video-tseng-1.0.0.5.ebuild 581
 RMD160 8648d1a0739970e2e3441248f12ace9ac0afe37f xf86-video-tseng-1.0.0.5.ebuild 581
 SHA256 bee70a393d0b46d8c67874204f4f2ecf74d8c9f7164fb2f38812bd6902e1cf7d xf86-video-tseng-1.0.0.5.ebuild 581
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6TO2+ySkm8kpY0RAuxtAJ4noulBl+bmIDp4h8xLCM0Wqvs0wgCfYM39
-gcnR3JieYKStSM753AEOBRI=
-=i7Ze
------END PGP SIGNATURE-----
+MD5 52411ac6640c79ead0721a7b4889dbf7 xf86-video-tseng-1.1.0.ebuild 595
+RMD160 35b4efc3d8e3dd56dc9662ea8a5e349ecf46373d xf86-video-tseng-1.1.0.ebuild 595
+SHA256 bce0216a8d348d833ea72ef62a97f8c8a3148513c827d29038a6c93e89f841a0 xf86-video-tseng-1.1.0.ebuild 595

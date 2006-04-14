@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d3f7e38d1a5eb490b9373f40bb57c7c8 ChangeLog 2496
-RMD160 cda39fc57b9ea4f66915ae538bc1c8fa8d4da80f ChangeLog 2496
-SHA256 b44df750699a49abc5bdb3a1fd28d167ec66a9a9b8a7c5d30a739733c817cfaa ChangeLog 2496
+MD5 a0342215a272f36ca1a6ac1e26d6c88b ChangeLog 2655
+RMD160 12df0f3cbde65d2f36bdd8049f2f1e345c1fec04 ChangeLog 2655
+SHA256 87afe6bf42bb185a8fccdc29c2debe1f6b829a200145c11b0c209b82bfedd0c4 ChangeLog 2655
 MD5 e881f7445e87247c999e3782b40b5b4c files/digest-xf86-video-savage-2.0.2.3 334
 RMD160 68339f1133baab1fae3c691b8eee6a72959b92f7 files/digest-xf86-video-savage-2.0.2.3 334
 SHA256 111822af28c1f24a7de6864140ce2249bdb42461421c57bcd88a79fe30a1aef9 files/digest-xf86-video-savage-2.0.2.3 334
+MD5 42e3807d3b729bb6d0d2d6727f057753 files/digest-xf86-video-savage-2.1.1 530
+RMD160 6ba360f1e5c4a11dc956fd75f0c18b3f150f6e28 files/digest-xf86-video-savage-2.1.1 530
+SHA256 c087d0c23a137990ce71d6ddc3035dd38bc12d5248a419d79ae376e7a1bbfb39 files/digest-xf86-video-savage-2.1.1 530
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
 MD5 2a9b985098a2be2b407dc21e3366a924 xf86-video-savage-2.0.2.3.ebuild 847
 RMD160 f40f5e4e0f2ae9250228e488f74b3dbc12a959aa xf86-video-savage-2.0.2.3.ebuild 847
 SHA256 d0748c72104ee6a3e0108f133f122b85ec6e10c0835adde3ceae1b2dc680cc4b xf86-video-savage-2.0.2.3.ebuild 847
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6YM2+ySkm8kpY0RAjO/AJwKmvNF9WpP8U2sXZMXoFkzeJtLUACfd7+/
-dROm5rPRPcDc/JDPMptG3Bc=
-=GPPG
------END PGP SIGNATURE-----
+MD5 740e9e29458f183ab3b89c7bb18cc475 xf86-video-savage-2.1.1.ebuild 861
+RMD160 0e47e39453d90d766aa1e14d314825f33c0dcffd xf86-video-savage-2.1.1.ebuild 861
+SHA256 0db67d7119364cc2cb759c9d24662e1ffafa923ee66e59fa89bd91cfd76b68b7 xf86-video-savage-2.1.1.ebuild 861

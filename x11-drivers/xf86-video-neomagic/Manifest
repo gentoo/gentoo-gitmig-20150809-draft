@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 45dec742d3cbc5716570d1b86d1985b8 ChangeLog 1931
-RMD160 4f8ec67e3becf184a2a6850250b9643401d8a215 ChangeLog 1931
-SHA256 7aedd9949272a42ff921460ac722464da7c95038329f510887184e12426a757b ChangeLog 1931
+MD5 d989e26e32480debcc63868e5a6020e7 ChangeLog 2093
+RMD160 e57b7bb683bee61ac34fbf533bf8fab50d23774d ChangeLog 2093
+SHA256 a6cf320ae952f73e10b6f824fe6fe279c3dd1a6bbdcaabdb965d283b938de447 ChangeLog 2093
 MD5 0ef1208a4228cad6d317d58e1e4454c6 files/digest-xf86-video-neomagic-1.0.0.5 150
 RMD160 5e6d6928e7a0913c4eefc7fb8e62a6ae31206ca3 files/digest-xf86-video-neomagic-1.0.0.5 150
 SHA256 e56fa45298fede646973a502c156271f398f528e5a52c6a2aa2aebc7fff2edd9 files/digest-xf86-video-neomagic-1.0.0.5 150
+MD5 606799a4efeb328debf1bf45b01e0d39 files/digest-xf86-video-neomagic-1.1.1 536
+RMD160 a5e6e3d98082f6ebfbc7cacbd6d5046524a8119d files/digest-xf86-video-neomagic-1.1.1 536
+SHA256 ce75024bfefad1e1b9b6b20f2b99581cda5abc3605f31cc8f2e5bd9442e75170 files/digest-xf86-video-neomagic-1.1.1 536
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
 MD5 326a709c8f6431ad33911661c6921298 xf86-video-neomagic-1.0.0.5.ebuild 614
 RMD160 dfa95195a1f7d0872851a6f2f140a35d913ca66f xf86-video-neomagic-1.0.0.5.ebuild 614
 SHA256 3ace3f4134d25ba223b7e8da82452184c8d6964b4476b692d5688d5a3cb016f3 xf86-video-neomagic-1.0.0.5.ebuild 614
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6R42+ySkm8kpY0RAgUvAJ9Rb/OqyyYm5vx9Af5TZb16wIUGHQCguEko
-8tX4uaN8y8yIjUJn9w6aoPw=
-=+wdM
------END PGP SIGNATURE-----
+MD5 c0c4fc9ece1abe96775db011239656bd xf86-video-neomagic-1.1.1.ebuild 628
+RMD160 2b837a81c5554b3d4189be7fff49d29238300d13 xf86-video-neomagic-1.1.1.ebuild 628
+SHA256 be0ac7d5c39f58d8e8397788aa25a8db2945fd7f6264cdbf01e635ae4e55a0e3 xf86-video-neomagic-1.1.1.ebuild 628

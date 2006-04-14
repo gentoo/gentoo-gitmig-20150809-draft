@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 03584e4d1e8631258b7f8143c8d9cea6 ChangeLog 2896
-RMD160 ab7dd5acb9e0f2322b6e9edc4e7ba91f3e3a5142 ChangeLog 2896
-SHA256 b53e49d37c7d1367814ae28453778d3e6da7ddd5d9bbdbd39a15c2a7fb154220 ChangeLog 2896
+MD5 d8ebbb90d883e2de4d89cbe565a8f9cd ChangeLog 3048
+RMD160 5fcac2024bea3ef8bbc8bc94ea4729b8cb2734e8 ChangeLog 3048
+SHA256 ac2ba6774f7de06b22ba85b81252c6b391e0fe4c826effac8c0734f62b01af2f ChangeLog 3048
 MD5 2eccf8fe0fb3245a0585cc3d7fe49d49 files/digest-xf86-video-via-0.1.33.2 146
 RMD160 d1c34b27721df6358eff1255cc178fbd0b513bbe files/digest-xf86-video-via-0.1.33.2 146
 SHA256 0532b3c97f22d279e1af828306c79c947963d3e45d32a800a3a4e9211806a591 files/digest-xf86-video-via-0.1.33.2 146
+MD5 ff8e98184b9ee52525a92ae0489e21e8 files/digest-xf86-video-via-0.2.1 521
+RMD160 4f5fa2adf8619be3bec8876bbb170e47fdc7906e files/digest-xf86-video-via-0.2.1 521
+SHA256 60b482d04c3a5856a8e5fca95806bb35e41aa938afd86d13de6ecdaed519d710 files/digest-xf86-video-via-0.2.1 521
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
 MD5 1b24d209bf268ba3572dd33fa529f7af xf86-video-via-0.1.33.2.ebuild 840
 RMD160 3c9889f8437ae50901696c1f5da462a24f40076d xf86-video-via-0.1.33.2.ebuild 840
 SHA256 650598fbc4ec6f27ea783964cf119afa89117a797bce16d7eaca4d4186f9acc7 xf86-video-via-0.1.33.2.ebuild 840
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6gn2+ySkm8kpY0RAi7OAJ4uBxB57mGyPIz5gBNvYwIKbE7/eACfbyNo
-3xqZ0P7GDY+ri+0H5EHFZMA=
-=I3Mn
------END PGP SIGNATURE-----
+MD5 702f0ca9b165f7a2e4323c99e29c8081 xf86-video-via-0.2.1.ebuild 853
+RMD160 6ac745b8bc1d99f145fcde28907fc9bcd7e6cd3c xf86-video-via-0.2.1.ebuild 853
+SHA256 92d6bff68572b8018207706aa6e2754fb1114a20ae1c84f06eae5abdb4c0423e xf86-video-via-0.2.1.ebuild 853

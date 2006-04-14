@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bee933dd4fc086dbd205adbc69531d98 ChangeLog 2230
-RMD160 74d87b580c78375d04c641cbb343b03565cff670 ChangeLog 2230
-SHA256 92277471eb7760e131c991134531b78d33e15ba1a8c139307ec4a39381333664 ChangeLog 2230
+MD5 1ebed22c38c803f89f56764ec2fec7bb ChangeLog 2387
+RMD160 007b831a94a69ed5b7930f6d72409dc35ac28d33 ChangeLog 2387
+SHA256 0e735000df801539211fdd741f048ae00aab8dbc12c9d86542152df7e0f23fb5 ChangeLog 2387
 MD5 dab79eb5b14b66fd1efd189bdb4c17ca files/digest-xf86-video-glint-1.0.1.3 333
 RMD160 8a34ad9d649530c2bae49c550e9458453e668981 files/digest-xf86-video-glint-1.0.1.3 333
 SHA256 3cebb9baa10e000d01b936417c0b6d21e072b2c4400861a3dc7465ea9a489eda files/digest-xf86-video-glint-1.0.1.3 333
+MD5 bbe169f1a19381b12fa191a627308a5c files/digest-xf86-video-glint-1.1.1 527
+RMD160 86bb27cb2b643fa35b7e80773889e90555170cd2 files/digest-xf86-video-glint-1.1.1 527
+SHA256 8b372855a767a1913ac906ccb2a53501559849a6f57e41ed1bbaa11b9516658e files/digest-xf86-video-glint-1.1.1 527
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
 MD5 afb2db71b193a43187b140c27baf8694 xf86-video-glint-1.0.1.3.ebuild 868
 RMD160 07d9af72af2e6ef8401e47fdf1594dad4203fc5c xf86-video-glint-1.0.1.3.ebuild 868
 SHA256 67f8e12a864239b0c401186f9959a5270d4d00f933004d2f023e500e31b7bf67 xf86-video-glint-1.0.1.3.ebuild 868
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6VO2+ySkm8kpY0RAoKCAJ4gbaUZSd7ZS5KUZ0rtE+XnOpjGiQCfewdq
-j6WOyHxURoEdsJfquBQYyk8=
-=cSId
------END PGP SIGNATURE-----
+MD5 edebec3edfc2e26f88bcf0b273fddcf8 xf86-video-glint-1.1.1.ebuild 882
+RMD160 26d19823d9798b9e8a88be7ee80f33cb0773621c xf86-video-glint-1.1.1.ebuild 882
+SHA256 b5fadaa6782c84f94095c8f033f02af0ea89a8bf2880516cbb9eebcdf1abd208 xf86-video-glint-1.1.1.ebuild 882

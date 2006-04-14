@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8e52f7ef25a4caca4bdbf81b60ccbc28 ChangeLog 2451
-RMD160 c284cb57891ab59400488ddc7d7ed57f9d6126e0 ChangeLog 2451
-SHA256 7dada12fb353dd9ed02936d9ba26fc0ead1421c6c67577d0cbfcd461564e8a3f ChangeLog 2451
+MD5 313e93421ad67918728563ef3eac6c70 ChangeLog 2610
+RMD160 92e503ffd88607b0a12bc333cab7fac024824556 ChangeLog 2610
+SHA256 bd5649bdd31bce9eb99338eff741218a3384086c4a24c8509b9b1f901143faf2 ChangeLog 2610
 MD5 a214008b6a9044505ecea99bd4c8f8f7 files/digest-xf86-video-sisusb-0.7.1.3 334
 RMD160 3c85393619f31dcee652ce7df742af3ef120284c files/digest-xf86-video-sisusb-0.7.1.3 334
 SHA256 1ba0d454405d4b6898e6469bf88b9a0f8b61c82475a47bf718892626df575302 files/digest-xf86-video-sisusb-0.7.1.3 334
+MD5 044c2da4e7e185905802056a5295a5c4 files/digest-xf86-video-sisusb-0.8.1 530
+RMD160 4a2ee484fd169a6b735a7e14a7bfc97cb0328d53 files/digest-xf86-video-sisusb-0.8.1 530
+SHA256 c238284a5d749cc77bcdf5fb896bae5ea3c332f7e71c09ea58d24d166b979fef files/digest-xf86-video-sisusb-0.8.1 530
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
 MD5 8f764a5ce79a27bb5dd95b3b2712ea18 xf86-video-sisusb-0.7.1.3.ebuild 665
 RMD160 4e5956be62289c8b254d7b122966598b3ca67ee2 xf86-video-sisusb-0.7.1.3.ebuild 665
 SHA256 a4a7720b4128aafba028f0d04fb2b03c949ba01e4b23da612fd0d9f79ddc3d84 xf86-video-sisusb-0.7.1.3.ebuild 665
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEBlPU2+ySkm8kpY0RAhP2AJ4tOnuG/xqwHfmWFbSd3zHcO8p1KwCfTaq/
-KbNJ8u+t3q8calowCSkklrE=
-=9ykU
------END PGP SIGNATURE-----
+MD5 bd315593c2c242c392b3163f2c8d9a61 xf86-video-sisusb-0.8.1.ebuild 679
+RMD160 02bd1487bb34a15daa185134d5f201597ef60944 xf86-video-sisusb-0.8.1.ebuild 679
+SHA256 31eccb6abc96a9c5eb70983f18a91279bb1a7753eab02ddd4a002157c57553e7 xf86-video-sisusb-0.8.1.ebuild 679

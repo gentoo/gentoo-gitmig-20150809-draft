@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f2a5cfbd7e02b7372de5f131cf4c7e92 ChangeLog 2700
-RMD160 12bfb9dc6793bccafa78dafcf24bb616a3f9d6b1 ChangeLog 2700
-SHA256 a59e3c09d602abb23bbf01a1b15a777e0cdfd6e40f6f16613e41b048251a2494 ChangeLog 2700
+MD5 0d7ca809d43fd565e62d1d9d6912085f ChangeLog 2861
+RMD160 7084ad6f22272c9f92e2f71c384761a88c448e3c ChangeLog 2861
+SHA256 e9facf1ce8c86945b24354c2447541aea750da68967160d3d9c68b6351d1d7ff ChangeLog 2861
 MD5 34dd17b533a9156404f7a4fd34accda7 files/digest-xf86-input-keyboard-1.0.1.3 150
 RMD160 8084a084f72a8e0f02bb66ec0bb5ed6346b30197 files/digest-xf86-input-keyboard-1.0.1.3 150
 SHA256 4829212ce3d07175401b3fb40e80785f1190398d2394ff609191951023ba0651 files/digest-xf86-input-keyboard-1.0.1.3 150
+MD5 da2d2f34367cc4705424c80a6339a2d0 files/digest-xf86-input-keyboard-1.1.0 536
+RMD160 18d6ca113cd2f0f823915850f36b24fe0a0f8f88 files/digest-xf86-input-keyboard-1.1.0 536
+SHA256 cde8b9a4643dcb95695675f3daae1c75a407b4b6f79137c6a1b52add80623886 files/digest-xf86-input-keyboard-1.1.0 536
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
 MD5 d50d3704f18ba0b20360fd5f373b7186 xf86-input-keyboard-1.0.1.3.ebuild 607
 RMD160 e5ed9490ead6b33291566d61a53cb909e9020346 xf86-input-keyboard-1.0.1.3.ebuild 607
 SHA256 898c5dbbd88097a4b8c1265ac620bb54bae1febf10de50758387a915909925ca xf86-input-keyboard-1.0.1.3.ebuild 607
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELY5KAiZjviIA2XgRArL/AJ9AoduVj70vCvWN2DRBAee3VYaZGACfcptk
-gXMWxy0+VYfA9wl8+xwOC3I=
-=oj6h
------END PGP SIGNATURE-----
+MD5 80ee92498b049382be470cf567cb1251 xf86-input-keyboard-1.1.0.ebuild 618
+RMD160 b6bb2450158aa0a277104e21e1b5e3c544d0c86d xf86-input-keyboard-1.1.0.ebuild 618
+SHA256 de400802acec9fd8f2053fb1347610e68c7bf674eea86a65eb0638fec6686407 xf86-input-keyboard-1.1.0.ebuild 618

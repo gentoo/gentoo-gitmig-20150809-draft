@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 447bd9f58bbb5fd7b65209e3759fc6d9 ChangeLog 2446
-RMD160 e940c79d85a02b8a2fee3955e95268aad2c6cc62 ChangeLog 2446
-SHA256 b72c54b113733f087c4f931ed8792d8b7793416e4915996a84bf5e66f9c09c4e ChangeLog 2446
+MD5 ee8d4c36fc0156bacb2f1b0ece853257 ChangeLog 2601
+RMD160 4a6d66f2d8df387f932b46fa03efc256b6972fd8 ChangeLog 2601
+SHA256 167c10dc3213e1d4b45a1ac83f0c7dd66259570ccb00a8a85053d61fa62fb3e6 ChangeLog 2601
 MD5 f58e7d90f3cac6cd5f23e3f530bbd5ce files/digest-xf86-video-tdfx-1.1.1.3 332
 RMD160 bb715526a904e367d617509d0dc4939166a8350a files/digest-xf86-video-tdfx-1.1.1.3 332
 SHA256 eabc0d42d3906f024959b13d7603fe46daee821eca1c5dddccf5a021db9ef268 files/digest-xf86-video-tdfx-1.1.1.3 332
+MD5 843eae396e4a7dd72653f1085e6a2537 files/digest-xf86-video-tdfx-1.2.1 524
+RMD160 a0cb159a46b963feca78a5e4d21cf5e8c00093f9 files/digest-xf86-video-tdfx-1.2.1 524
+SHA256 c3f7dc28d8f76b3234b4112a74d97200220061a3caf71159022f84194d4ca80e files/digest-xf86-video-tdfx-1.2.1 524
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
 MD5 18db9ee96b2367bf6cdac8ab2dda9935 xf86-video-tdfx-1.1.1.3.ebuild 841
 RMD160 2ac699219a05183c4181cef22e306abef1ae30c1 xf86-video-tdfx-1.1.1.3.ebuild 841
 SHA256 ff00f7be880e384b3a8720270d600d037c89f66f50c2319181755d782bf3ba07 xf86-video-tdfx-1.1.1.3.ebuild 841
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6Vj2+ySkm8kpY0RAgsgAJ9rgE9RaAl8W9DUQx0yIyxH5lJDwwCfRiXM
-lQK+hNJCgkaXqnw8HQ66f/U=
-=kSrn
------END PGP SIGNATURE-----
+MD5 98a43f66facea76477d1e64980d0e25b xf86-video-tdfx-1.2.1.ebuild 855
+RMD160 70473857f0b235bec47dfa154a4414cda1e584ea xf86-video-tdfx-1.2.1.ebuild 855
+SHA256 3418e944cd58f51d86a6a9c2e8b32fd02fd6305e9b9f1709fecf7fc70663673a xf86-video-tdfx-1.2.1.ebuild 855

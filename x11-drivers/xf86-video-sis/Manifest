@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 456cb3d0a79dd529cc6c8c04e29504fe ChangeLog 1941
-RMD160 267eafb17d255f71470048512dc1695cfabddba3 ChangeLog 1941
-SHA256 efacfe54df3aef054c9feb1ff11e5edbe12c35108293867a8fac17401717582a ChangeLog 1941
+MD5 b4164ec7aca1dcb818ee8a8f73a6847a ChangeLog 2092
+RMD160 9598c1848f109e9a782c6e9711347b270e898d3f ChangeLog 2092
+SHA256 a6c98e13d4c71bbbf1e0c2ca1d2a740415abf792596e7b24d8fbaecab8615021 ChangeLog 2092
 MD5 c34bb6a479e9013959a369acf0859a10 files/digest-xf86-video-sis-0.8.1.3 145
 RMD160 c60c12668434fa3ee08aaac7a31e29dca8c00ba9 files/digest-xf86-video-sis-0.8.1.3 145
 SHA256 e25e113ce0bdeddb36d258ef16308d95faa46706fcbef3737756cec37505dd9a files/digest-xf86-video-sis-0.8.1.3 145
+MD5 324232dbca215277da82c24f9592bb5d files/digest-xf86-video-sis-0.9.1 521
+RMD160 7d3d3fd3ee2871f2c6db8920061419cecf685dcb files/digest-xf86-video-sis-0.9.1 521
+SHA256 cebc718b0b52ab4ad968cb68774d438b29d56cc070a572c9154e3d692c7cffaa files/digest-xf86-video-sis-0.9.1 521
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
 MD5 c256ead88fe89e04417c23eafa1c4280 xf86-video-sis-0.8.1.3.ebuild 898
 RMD160 b4aff86dd3028692157341d77d255dedc87a2da9 xf86-video-sis-0.8.1.3.ebuild 898
 SHA256 177b9ec2ee09d5bc6060450fd70e82c773b801bb7a326d1e560b82fb2ea72a9d xf86-video-sis-0.8.1.3.ebuild 898
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEB6bt2+ySkm8kpY0RAiqgAJ4v7uDu3GRLjY0WptixXcdyTnGn0QCfRbXH
-TQk7PwQ+XXWves/0TW66dgc=
-=hKwG
------END PGP SIGNATURE-----
+MD5 86f62581a9fa12d177825db8cc9edac7 xf86-video-sis-0.9.1.ebuild 912
+RMD160 dc518e562301c2ae67203702f9c0969c4e7f3e7b xf86-video-sis-0.9.1.ebuild 912
+SHA256 41973360f8ba591802d28c81136ec5cfd5d7a6ad5e9439854b0078b7f998a404 xf86-video-sis-0.9.1.ebuild 912
