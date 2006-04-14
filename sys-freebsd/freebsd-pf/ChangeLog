@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-pf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.3 2006/04/04 07:18:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.4 2006/04/14 15:26:29 flameeyes Exp $
+
+*freebsd-pf-6.0-r1 (14 Apr 2006)
+
+  14 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> +files/pf.confd,
+  +files/pf.initd, -freebsd-pf-6.0.ebuild, +freebsd-pf-6.0-r1.ebuild:
+  Add init script for pf, based on the one contributed by Robert Sebastian
+  Gerus in bug #129171.
 
   04 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> freebsd-pf-6.0.ebuild:
   Add dependency over libpcap.

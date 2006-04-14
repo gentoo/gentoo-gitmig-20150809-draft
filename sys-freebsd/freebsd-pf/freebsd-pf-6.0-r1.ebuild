@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.0.ebuild,v 1.3 2006/04/04 07:18:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.0-r1.ebuild,v 1.1 2006/04/14 15:26:29 flameeyes Exp $
 
-inherit bsdmk freebsd flag-o-matic
+inherit bsdmk freebsd
 
 DESCRIPTION="FreeBSD's base system libraries"
 SLOT="0"
@@ -53,4 +53,7 @@ src_install() {
 	cd ${WORKDIR}/etc
 	insinto /etc
 	doins pf.conf pf.os
+
+	newinitd "${FILESDIR}/pf.initd" pf
+	newconfd "${FILESDIR}/pf.confd" pf
 }
