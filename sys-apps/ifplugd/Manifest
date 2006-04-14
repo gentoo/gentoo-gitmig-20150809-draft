@@ -1,30 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b201936153611274b14dcfd1f7ba8d65 ChangeLog 6302
-RMD160 681d6e99953caf2eb13945562abd19b282bd588b ChangeLog 6302
-SHA256 d9c95b5fda34cba86bd4e6b20d53126e91ed4adeb032048a879965fef478479b ChangeLog 6302
-MD5 c110adefe6c3d268c4c1e861d120fe3a files/digest-ifplugd-0.28 64
-RMD160 506b7bfbae8b5b3f1290a5cc221aee60cc936d4b files/digest-ifplugd-0.28 64
-SHA256 a6fa9a1f897727614b45915d01da3539bf77bef614661817e38332b4185e18d5 files/digest-ifplugd-0.28 64
-MD5 c110adefe6c3d268c4c1e861d120fe3a files/digest-ifplugd-0.28-r4 64
-RMD160 506b7bfbae8b5b3f1290a5cc221aee60cc936d4b files/digest-ifplugd-0.28-r4 64
-SHA256 a6fa9a1f897727614b45915d01da3539bf77bef614661817e38332b4185e18d5 files/digest-ifplugd-0.28-r4 64
+MD5 d72dc607b05d3e3a9873aea6c010c812 ChangeLog 6745
+RMD160 7a633c246845c5ff5cd9776f4a31cd8b9ec08011 ChangeLog 6745
+SHA256 cd82caf4607a8e69068877e3fee568fbac3a8ca11d6896c2aeb59c96d9f7289d ChangeLog 6745
 MD5 83ebee09d9faecc03912ee8631d7f372 files/digest-ifplugd-0.28-r5 238
 RMD160 f0dc5bf3ea7253ad7658562a12c7d2ed991069f1 files/digest-ifplugd-0.28-r5 238
 SHA256 b94ae260a7fcdbd983c2809b8df46f528f65e42a61fa3402316fb67bb17939e5 files/digest-ifplugd-0.28-r5 238
-MD5 046da68d6aa7665b0d3a9fd9e5a67b6a files/gentoo-ifplugd-conf-v3 2248
-RMD160 260115623472e1f55cccf1d0f7e9c2fd00fc5833 files/gentoo-ifplugd-conf-v3 2248
-SHA256 cd5cc217d9e9b77ac720fcbb7052514fd656e696f81bdaca07d773e3b8ee8571 files/gentoo-ifplugd-conf-v3 2248
-MD5 35e218c1d5eadc7f98f2759eecb9c651 files/gentoo-ifplugd-init-v3 2685
-RMD160 963774a8a66c466fdf560e5e96b7d418afb0a071 files/gentoo-ifplugd-init-v3 2685
-SHA256 63df2c0d2e30026b6ed1aa8dc963bcd665d924a878970241fb61594724dd3570 files/gentoo-ifplugd-init-v3 2685
-MD5 0f11772693878629fb851b68920004c5 files/gentoo-ifplugd.action-v2 703
-RMD160 ead98c0d4bb7e93c25e947f0a6e3b5c3c4295e8d files/gentoo-ifplugd.action-v2 703
-SHA256 f1ef30a8084bbbb1e6371b2b8db97fd9122d4934109db059eab84f16f79aa607 files/gentoo-ifplugd.action-v2 703
-MD5 e4322329d76406800bd7810f7d1869cd files/ifplugd-0.28-gentoo.diff 1119
-RMD160 1b5d171af4748956a93d5b2d9c06b30bb5258c26 files/ifplugd-0.28-gentoo.diff 1119
-SHA256 cf08094a51f29b638f2683766a7ccc465c7818318de665174a6aa2641d900760 files/ifplugd-0.28-gentoo.diff 1119
+MD5 83ebee09d9faecc03912ee8631d7f372 files/digest-ifplugd-0.28-r6 238
+RMD160 f0dc5bf3ea7253ad7658562a12c7d2ed991069f1 files/digest-ifplugd-0.28-r6 238
+SHA256 b94ae260a7fcdbd983c2809b8df46f528f65e42a61fa3402316fb67bb17939e5 files/digest-ifplugd-0.28-r6 238
+MD5 54eb22844b5aeed161c0b80aa9008570 files/ifplugd-0.28-interface.patch 314
+RMD160 279d2241107413a3d818f7ec3658898a41300dae files/ifplugd-0.28-interface.patch 314
+SHA256 1bdbe17f26f467be2a5f300f20f2f8aa332ffa48cbe50bfc4bbff37de8f1bc67 files/ifplugd-0.28-interface.patch 314
 MD5 d16fbcdc0a1c6f5be1aa3bf0c3a932f6 files/ifplugd-0.28-nlapi.diff 639
 RMD160 2fbf6329fb16118de0f1122aa41bca6a2906d0f3 files/ifplugd-0.28-nlapi.diff 639
 SHA256 f648c027fb446d0b25cc5dbca9db57dc33f5b8bff8dfbf1009847504f2229dfb files/ifplugd-0.28-nlapi.diff 639
@@ -37,22 +22,12 @@ SHA256 d318c611efa481ab845112c12af0242093219633a980b722c14d06c1eabe5875 files/if
 MD5 518fd2b1b26794a727e1da6243866c11 files/ifplugd.init 4237
 RMD160 079baef3c50c287122e19b64ee697813770508e4 files/ifplugd.init 4237
 SHA256 854926883a73744574463a98b1b11234efb4c9d1e73ba0e3466f00ff9e970554 files/ifplugd.init 4237
-MD5 5a05ef908e1630011bc176b67cfd3f12 ifplugd-0.28-r4.ebuild 1323
-RMD160 9611af66e94c0e685b82b907d95acd168833867f ifplugd-0.28-r4.ebuild 1323
-SHA256 44fc1758f70c08c497a224f828604c8af87f61bcb2792e3e9e720581cfb0dcfb ifplugd-0.28-r4.ebuild 1323
 MD5 db8e3e67f45bdd5d06bcdba1387708aa ifplugd-0.28-r5.ebuild 1326
 RMD160 0a7c2d51b6629611717c1d285b1b61ef7d7598af ifplugd-0.28-r5.ebuild 1326
 SHA256 dd959b2b28da61ee19f613c60ee4ee2a14d18ddaeb2d8c417b84cc4365f6efd9 ifplugd-0.28-r5.ebuild 1326
-MD5 e6ac7d869a0eb46fcd8069766bcf9370 ifplugd-0.28.ebuild 1445
-RMD160 ea4c5c05dcc45751d3731bfaab294e34027baa81 ifplugd-0.28.ebuild 1445
-SHA256 72cf833ee7a6c829e800ce570340ebbfa5427032e827b47cb883d1fdfbde1b17 ifplugd-0.28.ebuild 1445
+MD5 ccb5c08de2ab301ac6212f25a70b37cc ifplugd-0.28-r6.ebuild 1372
+RMD160 02f83cf0c1080c4f964cdf271bb34d9c243498b8 ifplugd-0.28-r6.ebuild 1372
+SHA256 ec80d400d124bd23b46378fc3e8231d2dc4f001aa2c91b79f2fe0df7df452bd1 ifplugd-0.28-r6.ebuild 1372
 MD5 d13433a9981e2386ff10934a71b003a6 metadata.xml 359
 RMD160 a6e7020e754414ebf691db22495b6adf36c080dc metadata.xml 359
 SHA256 c2255a7d82e88d539b6acdb44db885d353f8943602c36acbe256910d776ec955 metadata.xml 359
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENQg6EbVyYKaZ/NERAkhsAJ4/95XdqvDcZleXQ99J0VlEjgIOyACePlua
-SDWjwaac2ZlZx7+hb8n1NfE=
-=Mdv4
------END PGP SIGNATURE-----

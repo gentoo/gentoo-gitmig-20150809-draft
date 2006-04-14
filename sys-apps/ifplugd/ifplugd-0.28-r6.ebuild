@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r4.ebuild,v 1.4 2005/12/24 16:32:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r6.ebuild,v 1.1 2006/04/14 11:59:13 uberlord Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://0pointer.de/lennart/projects/ifplugd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 
 DEPEND="dev-util/pkgconfig
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-nlapi.diff"
+	epatch "${FILESDIR}/${P}-interface.patch"
 }
 
 src_compile() {
