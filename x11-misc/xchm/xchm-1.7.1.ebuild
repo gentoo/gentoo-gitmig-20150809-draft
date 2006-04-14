@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.7.1.ebuild,v 1.1 2006/04/14 17:40:53 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.7.1.ebuild,v 1.2 2006/04/14 17:42:37 nelchael Exp $
 
 inherit wxwidgets
 
@@ -32,11 +32,6 @@ src_compile() {
 src_install() {
 	einstall || die
 	dodoc AUTHORS README
-
-	if use doc; then
-		cd ${S}"-doc"
-		dohtml html/*
-	fi
 
 	# fixes dekstop and icon problems
 	rm ${D}/usr/share/pixmaps/xchm-*.xpm
