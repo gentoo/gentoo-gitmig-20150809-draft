@@ -38,18 +38,20 @@ test_broken_flags() {
 
 if [[ ${EBUILD_PHASE} == "setup" ]]; then
 	trigger=0
+	CFLAGS=" ${CFLAGS} "
 	for flag in ${CFLAGS} ; do
 		 broken_flag=$(test_broken_flags $(getPROG CC gcc) ${flag})
 		 if [[ -n ${broken_flag} ]]; then
 		 	ewarn "Filtering out the non-existing CFLAG \"${broken_flag}\""
-			CFLAGS=${CFLAGS//${broken_flag}}
+			CFLAGS=${CFLAGS//" ${broken_flag} "}
 		fi
 	done
+	CXXFLAGS=" ${CXXFLAGS} "
 	for flag in ${CXXFLAGS} ; do
 		broken_flag=$(test_broken_flags $(getPROG CXX g++) ${flag})
 		if [[ -n ${broken_flag} ]]; then
 			ewarn "Filtering out the non-existing CXXFLAG \"${broken_flag}\"" 
-			CXXFLAGS=${CXXFLAGS//${broken_flag}}
+			CXXFLAGS=${CXXFLAGS//" ${broken_flag} "}
 		fi
 	done
 	for flag in "-fvisibility=hidden" "-fvisibility-hidden" "-fvisibility-inlines-hidden" "-fPIC" "-fpic" "-m32" "-m64" "-g3" "-ggdb3" ; do
@@ -60,7 +62,6 @@ if [[ ${EBUILD_PHASE} == "setup" ]]; then
 		ewarn ""
 		ewarn "Before you file a bug please remove these flags and "
 		ewarn "re-compile the package in question as well as all its dependencies"
-		sleep 5
 	fi
 unset trigger broken_flag
 fi
