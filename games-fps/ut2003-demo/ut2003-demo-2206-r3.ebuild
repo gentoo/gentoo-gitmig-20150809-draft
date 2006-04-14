@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.16 2006/03/31 21:24:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.17 2006/04/14 12:00:47 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -29,13 +29,10 @@ RDEPEND="virtual/opengl
 		app-emulation/emul-linux-x86-xlibs )"
 
 S="${WORKDIR}"
+
+GAMES_CHECK_LICENSE="yes"
 dir="${GAMES_PREFIX_OPT}/${PN}"
 Ddir="${D}/${dir}"
-
-pkg_setup() {
-	check_license ut2003-demo
-	games_pkg_setup
-}
 
 src_unpack() {
 	unpack_makeself ${DISTDIR}/ut2003demo-lnx-${PV}.sh.bin \

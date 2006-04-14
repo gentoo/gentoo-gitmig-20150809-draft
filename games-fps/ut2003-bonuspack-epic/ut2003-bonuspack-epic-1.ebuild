@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.12 2006/03/31 21:23:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.13 2006/04/14 11:59:06 wolf31o2 Exp $
 
 inherit games
 
@@ -23,10 +23,6 @@ S=${WORKDIR}/UT2003-BonusPack
 
 dir=${GAMES_PREFIX_OPT}/ut2003
 Ddir=${D}/${dir}
-
-pkg_setup() {
-	games_pkg_setup
-}
 
 src_unpack() {
 	unzip ${DISTDIR}/${A} || die "unpacking"
