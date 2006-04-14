@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/3proxy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/ChangeLog,v 1.6 2006/03/14 01:51:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/ChangeLog,v 1.7 2006/04/14 07:34:59 mrness Exp $
+
+  14 Apr 2006; Alin Nastac <mrness@gentoo.org> 3proxy-0.5.2.ebuild:
+  Stable on x86.
 
 *3proxy-0.5.2 (14 Mar 2006)
 
