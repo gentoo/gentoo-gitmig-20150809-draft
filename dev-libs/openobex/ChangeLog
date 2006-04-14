@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openobex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.28 2006/02/25 11:09:08 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.29 2006/04/14 23:03:27 mrness Exp $
+
+*openobex-1.2 (14 Apr 2006)
+
+  14 Apr 2006; Alin Nastac <mrness@gentoo.org> +openobex-1.2.ebuild:
+  Version bump.
 
   25 Feb 2006; Andrej Kacian <ticho@gentoo.org> openobex-1.1.ebuild:
   Added usb flag to IUSE, and removed nostrip from RESTRICT. Bug #123946.
