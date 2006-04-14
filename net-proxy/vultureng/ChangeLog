@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/vultureng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/vultureng/ChangeLog,v 1.9 2006/02/28 21:00:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/vultureng/ChangeLog,v 1.10 2006/04/14 11:52:27 mrness Exp $
+
+  14 Apr 2006; Alin Nastac <mrness@gentoo.org> -vultureng-0.8.ebuild:
+  Remove obsolete version.
 
 *vultureng-1.1 (28 Feb 2006)
 
