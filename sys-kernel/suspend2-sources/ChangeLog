@@ -1,6 +1,39 @@
 # ChangeLog for sys-kernel/suspend2-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.47 2006/04/12 21:30:12 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.48 2006/04/14 14:40:25 brix Exp $
+
+  14 Apr 2006; Henrik Brix Andersen <brix@gentoo.org>
+  -files/suspend2-2.2-rc13-filewriter.patch,
+  -files/suspend2-2.2-rc14-do-correct-init-routine.patch,
+  -files/suspend2-2.2-rc14-freeze-fses-in-reverse-mount-order.patch,
+  -files/suspend2-2.2-rc14-remove-pfn_to_kaddr.patch,
+  -files/suspend2-2.2-rc14-select-hotplug-cpu-instead-of-depending-on.patch,
+  -files/suspend2-2.2-rc14-test-filewriter.patch,
+  -files/suspend2-2.2-rc15-get-next-bit-on.patch,
+  -files/suspend2-2.2-rc15-listen-to-abort-request.patch,
+  -files/suspend2-2.2-rc15-mce-config.patch,
+  -files/suspend2-2.2-rc15-no-pageflags.patch,
+  -files/suspend2-2.2-rc15-pageflags.h.patch,
+  -files/suspend2-2.2-rc16-amd64-is-ram.patch,
+  -files/suspend2-2.2-rc16-amd64-temporary-mapping.patch,
+  -files/suspend2-2.2-rc16-clean-prepare-image-result-testing.patch,
+  -files/suspend2-2.2-rc16-debug-rodata-define.patch,
+  -files/suspend2-2.2-rc16-debug-writing-header.patch,
+  -files/suspend2-2.2-rc16-filewriter-fix.patch,
+  -files/suspend2-2.2-rc16-remove-block-dump.patch,
+  -files/suspend2-2.2-rc16-swapwriter-selects-swap.patch,
+  -files/suspend2-2.2-rc16-workqueue-post-suspend2.patch,
+  -files/suspend2-2.2-rc16-workqueue-pre-suspend2.patch,
+  -files/suspend2-2.2-rc16-write-header-chunk-finish.patch,
+  -suspend2-sources-2.6.14.ebuild, -suspend2-sources-2.6.14-r4.ebuild,
+  -suspend2-sources-2.6.14-r5.ebuild, -suspend2-sources-2.6.14-r6.ebuild,
+  -suspend2-sources-2.6.14-r7.ebuild, -suspend2-sources-2.6.14-r8.ebuild,
+  -suspend2-sources-2.6.14-r10.ebuild, -suspend2-sources-2.6.15.ebuild,
+  -suspend2-sources-2.6.15-r1.ebuild, -suspend2-sources-2.6.15-r2.ebuild,
+  -suspend2-sources-2.6.15-r3.ebuild, -suspend2-sources-2.6.15-r4.ebuild,
+  -suspend2-sources-2.6.15-r5.ebuild, -suspend2-sources-2.6.15-r6.ebuild,
+  -suspend2-sources-2.6.15-r7.ebuild:
+  Pruned old ebuilds.
 
   12 Apr 2006; Daniel Goller <morfic@gentoo.org>
   suspend2-sources-2.6.16-r2.ebuild:
