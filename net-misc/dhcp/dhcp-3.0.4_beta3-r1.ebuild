@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4_beta3-r1.ebuild,v 1.5 2006/03/22 17:49:30 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4_beta3-r1.ebuild,v 1.6 2006/04/14 21:19:05 flameeyes Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -107,9 +107,14 @@ src_compile() {
 	VARDB = /var/lib/dhcp
 	VARRUN = /var/run/dhcp
 	ADMMANDIR = /usr/share/man/man8
+	ADMMANEXT = .8
 	FFMANDIR = /usr/share/man/man5
+	FFMANEXT = .5
 	LIBMANDIR = /usr/share/man/man3
+	LIBMANEXT = .3
 	USRMANDIR = /usr/share/man/man1
+	USRMANEXT = .1
+	MANCAT = man
 	END
 
 	./configure --copts "-DPARANOIA -DEARLY_CHROOT ${CFLAGS}" \
