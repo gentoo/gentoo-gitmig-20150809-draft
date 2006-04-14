@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krename
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.29 2006/04/11 03:27:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.30 2006/04/14 09:47:02 nixnut Exp $
+
+  14 Apr 2006; <nixnut@gentoo.org> krename-3.0.11.ebuild:
+  Stable on ppc. Bug # 129474
 
   11 Apr 2006; Jason Wever <weeve@gentoo.org> krename-3.0.11.ebuild:
   Stable on SPARC wrt bug #129474.
