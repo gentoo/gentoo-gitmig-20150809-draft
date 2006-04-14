@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.27 2006/04/06 23:28:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.28 2006/04/14 13:15:30 caleb Exp $
+
+*activerecord-1.14.2 (14 Apr 2006)
+
+  14 Apr 2006; Caleb Tennis <caleb@gentoo.org> +activerecord-1.14.2.ebuild:
+  Version bump
 
 *activerecord-1.14.1 (06 Apr 2006)
 

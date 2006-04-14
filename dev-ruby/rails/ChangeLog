@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.41 2006/04/08 12:16:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.42 2006/04/14 13:20:59 caleb Exp $
+
+*rails-1.1.2 (14 Apr 2006)
+
+  14 Apr 2006; Caleb Tennis <caleb@gentoo.org> +rails-1.1.2.ebuild:
+  Version bump
 
   08 Apr 2006; Caleb Tennis <caleb@gentoo.org> rails-1.1.1.ebuild:
   make it dep on rake 0.7.1
