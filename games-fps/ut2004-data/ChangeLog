@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-data
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ChangeLog,v 1.13 2006/04/13 17:54:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ChangeLog,v 1.14 2006/04/14 12:04:04 wolf31o2 Exp $
+
+  14 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-data-3186-r3.ebuild:
+  Moved games_pkg_setup to the beginning of pkg_setup.
 
   13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   -ut2004-data-3186.ebuild:

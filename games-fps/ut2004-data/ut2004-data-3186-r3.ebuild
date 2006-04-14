@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.2 2006/04/13 17:51:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.3 2006/04/14 12:04:04 wolf31o2 Exp $
 
 inherit games games-ut2k4mod
 
@@ -32,10 +32,10 @@ grabdirs() {
 }
 
 pkg_setup() {
+	games_pkg_setup
 	ewarn "This is a huge package.  If you do not have at least 7GB of free"
 	ewarn "disk space in ${PORTAGE_TMPDIR} and also in ${GAMES_PREFIX_OPT} then"
 	ewarn "you should abort this installation now and free up some space."
-	games_pkg_setup
 	check_dvd
 
 	if [[ "${USE_DVD}" -eq 1 ]]
