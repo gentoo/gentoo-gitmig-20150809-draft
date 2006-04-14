@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-pvr350
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/ChangeLog,v 1.1 2006/03/21 13:54:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/ChangeLog,v 1.2 2006/04/14 23:08:18 zzam Exp $
+
+  14 Apr 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-pvr350-0.0.4_pre1-vdr-1.3.42.diff,
+  vdr-pvr350-0.0.4_pre1.ebuild:
+  Added patch to work with vdr-1.3.42 and greater - Thanks to Harri Kaimio
+  <harri@kaimio.fi> - See Bug #128867
 
 *vdr-pvr350-0.0.4_pre1 (21 Mar 2006)
 
