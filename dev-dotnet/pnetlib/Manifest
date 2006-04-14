@@ -1,13 +1,49 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e6389d189e6aeb29baa1de221caab127 ChangeLog 5041
+RMD160 7c7ca82e95528b6b84b9be0ba79559cfebe969fa ChangeLog 5041
+SHA256 32e59d03edb4f8a0f1434774042366ea1bee5beead06b8ec4af9632bec703610 ChangeLog 5041
 MD5 7a91fa4737dbff178231abf061f83052 files/0.6.12-resgen.patch 538
+RMD160 35c2f6af082e17bec6d9014afdfd7b5fb81a5436 files/0.6.12-resgen.patch 538
+SHA256 180618948a8e520f8e1de567bd7da47b91d012386f5b12f975580053ea1fb57e files/0.6.12-resgen.patch 538
 MD5 7a91fa4737dbff178231abf061f83052 files/0.7.0-resgen.patch 538
+RMD160 35c2f6af082e17bec6d9014afdfd7b5fb81a5436 files/0.7.0-resgen.patch 538
+SHA256 180618948a8e520f8e1de567bd7da47b91d012386f5b12f975580053ea1fb57e files/0.7.0-resgen.patch 538
 MD5 1b3d4d2a65f581b39e06269baf380594 files/configure-freetype.patch 391
+RMD160 3359ebb8b01a4c6ea2a0f2a1b6c5febd4cce67dd files/configure-freetype.patch 391
+SHA256 7690886d562034321492446160de23a630be51bf546807b627a3b620f534233f files/configure-freetype.patch 391
 MD5 d41d3bba0e845a33aee40504dd5b8631 files/digest-pnetlib-0.6.10 67
+RMD160 56d905c9e5cb147fe2dd7321555427f965a14ca1 files/digest-pnetlib-0.6.10 67
+SHA256 b72c1d688ff2d90732c8d80e553aa8a22d3f5ac2d6e3ee61bbdd64140e87f54b files/digest-pnetlib-0.6.10 67
 MD5 82854df0fe6e2698163ff953a55fe761 files/digest-pnetlib-0.6.12 67
+RMD160 a14f6422e197c432c8fdc657ba84de73c89027a4 files/digest-pnetlib-0.6.12 67
+SHA256 adc74c69c7acf1e75f2e7e0d232fc2e74d620fad1013e412faf3b1f182792912 files/digest-pnetlib-0.6.12 67
 MD5 cd9cb55d031bce14d44d1912ffd54f7a files/digest-pnetlib-0.7.0 66
+RMD160 432c01dd4c5a87bfbd0d71631b1b22cd7662415b files/digest-pnetlib-0.7.0 66
+SHA256 a15d6972bc9b06ce16b754ef8a2672633ffd2d05052d2c6623439cbaecb71553 files/digest-pnetlib-0.7.0 66
 MD5 7c8cf72a79375749876093b5d29b3af3 files/digest-pnetlib-0.7.2 66
-MD5 d77c6b7044ab8edb43cde04d4dfc28d9 metadata.xml 218
+RMD160 67a1dfd8437e36478b33bccecde0472df87f3124 files/digest-pnetlib-0.7.2 66
+SHA256 67a3574b688a1b2158eaecea9d16fbd763157bcd2e86117030536ead25cc48bf files/digest-pnetlib-0.7.2 66
+MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
+RMD160 41527b6d3fa74dfdcd619b7d91c478b72ecc8ae8 metadata.xml 159
+SHA256 986c3e2fa3baa5d6e8c0b5c27a2550601780d0cc7857f7f1c01523491706d909 metadata.xml 159
 MD5 a68373bb94e5543d868a2ffe58488222 pnetlib-0.6.10.ebuild 840
+RMD160 fe0396158e6d9fe73f3372fe5910b0d5c5bd4532 pnetlib-0.6.10.ebuild 840
+SHA256 98b97d1ce93914c15c1d77526cc05eea084b04fe629f5afa7e1d45d5ee661a09 pnetlib-0.6.10.ebuild 840
 MD5 44e3a71136efb185faa6d1683a9664f7 pnetlib-0.6.12.ebuild 1188
+RMD160 8d1cc27dc29476ec4890e4ae0c2224c7ba092116 pnetlib-0.6.12.ebuild 1188
+SHA256 9d294895c8626b9c47c23ae6787b9728f79f24834bb1e4a4d17a177fa99b700e pnetlib-0.6.12.ebuild 1188
 MD5 fd4d49f5dfe7fff2c258c6ac24168710 pnetlib-0.7.0.ebuild 1172
+RMD160 329779ecb16840e7db5c6864346b821c16f545b1 pnetlib-0.7.0.ebuild 1172
+SHA256 403735be793854b7817ce689f60007d3cec8f1ab84f51efe1ed89157bd0c20f1 pnetlib-0.7.0.ebuild 1172
 MD5 0224f1feb7b37057274082bddf4e23fa pnetlib-0.7.2.ebuild 1174
+RMD160 049fffd59f8f0e6f80208ef34f15baeec5f19a36 pnetlib-0.7.2.ebuild 1174
+SHA256 277100ce781010b46478af16fbbcdaca5919f9e5e2214c82480715635f211323 pnetlib-0.7.2.ebuild 1174
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEP2sPV3J2n04EauwRAkyMAKC/wHNTPsCKSsMpDvGCMt4c1VLsiQCfWauA
+6/a67nVpkaRohPoTRAyytxo=
+=KsE6
+-----END PGP SIGNATURE-----
