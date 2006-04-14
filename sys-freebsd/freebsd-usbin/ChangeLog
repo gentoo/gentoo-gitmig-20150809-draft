@@ -1,6 +1,14 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.4 2006/04/13 21:13:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.5 2006/04/14 14:15:36 flameeyes Exp $
+
+*freebsd-usbin-6.0-r1 (14 Apr 2006)
+
+  14 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> +files/powerd.confd,
+  +files/powerd.initd, -freebsd-usbin-6.0.ebuild,
+  +freebsd-usbin-6.0-r1.ebuild:
+  Add powerd's init script based on the one contributed by Stefano Takekawa in
+  bug #129933.
 
   13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-usbin-6.0.ebuild:

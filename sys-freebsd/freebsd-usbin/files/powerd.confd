@@ -1,0 +1,13 @@
+# Copyright 2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/files/powerd.confd,v 1.1 2006/04/14 14:15:37 flameeyes Exp $
+
+# Mode allowed: maximum, minimum, adaptive
+
+AC_MODE="adaptive"
+
+#BATTERY_MODE="minimum"
+
+POWERD_OPTS=""
+
+
