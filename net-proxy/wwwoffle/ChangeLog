@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/wwwoffle
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.8 2006/03/06 22:54:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.9 2006/04/14 12:34:30 mrness Exp $
+
+*wwwoffle-2.9 (14 Apr 2006)
+
+  14 Apr 2006; Alin Nastac <mrness@gentoo.org> +wwwoffle-2.9.ebuild:
+  Version bump. Add gnutls and zlib USE flags.
 
   06 Mar 2006; Alin Nastac <mrness@gentoo.org> -files/wwwoffled-online-2.8b,
   -files/wwwoffled, -wwwoffle-2.8b.ebuild, wwwoffle-2.8e.ebuild:
