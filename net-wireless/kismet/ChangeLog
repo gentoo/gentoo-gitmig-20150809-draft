@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.78 2006/03/24 16:16:10 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.79 2006/04/14 11:33:38 brix Exp $
+
+*kismet-2006.04.1 (14 Apr 2006)
+
+  14 Apr 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +files/kismet-2006.04.1-conf.d, +files/kismet-2006.04.1-init.d,
+  +kismet-2006.04.1.ebuild:
+  Version bump, bug #129894.
 
 *kismet-2005.08.1-r1 (24 Mar 2006)
 
