@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eclipse-subclipse-bin
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-subclipse-bin/ChangeLog,v 1.1 2005/06/09 12:23:02 luckyduck Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-subclipse-bin/ChangeLog,v 1.2 2006/04/14 03:26:34 nichoj Exp $
+
+  14 Apr 2006; <nichoj@gentoo.org> eclipse-subclipse-bin-0.9.31.ebuild:
+  Fixed dependencies to allow for installation with eclipse-sdk-3.1. See bug
+  #105329.
 
 *eclipse-subclipse-bin-0.9.31 (09 Jun 2005)
 
