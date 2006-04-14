@@ -58,6 +58,7 @@ update_interface()
 
 update_routes()
 {
+	[[ -n "${PEER_ROUTERS}" ]] && [[ "${PEER_ROUTERS}" != "yes" ]] && return
 	while route del default dev "${interface}" 2>/dev/null ; do
 		:
 	done
