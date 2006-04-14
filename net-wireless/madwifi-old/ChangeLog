@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/madwifi-old
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-old/ChangeLog,v 1.1 2006/04/14 13:28:22 brix Exp $
+
+*madwifi-old-0.1417.20060128 (14 Apr 2006)
+
+  14 Apr 2006; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml,
+  +madwifi-old-0.1417.20060128.ebuild:
+  Added madwifi-old branch to portage, bug #125440.
+
