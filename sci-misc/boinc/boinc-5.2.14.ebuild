@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.2.14.ebuild,v 1.4 2006/02/25 19:44:22 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.2.14.ebuild,v 1.5 2006/04/14 19:14:47 cryos Exp $
 
 inherit eutils
 
@@ -44,6 +44,7 @@ src_unpack() {
 	# Applu patches, most of which from Debian
 	EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" epatch
 	epatch ${FILESDIR}/08_all_Makefile.patch
+	epatch ${FILESDIR}/${P}-gcc-4.1.patch
 
 	# point to a proper mouse device
 	sed -e "s:/dev/mouse:/dev/input/mice:g" -i client/hostinfo_unix.C || die

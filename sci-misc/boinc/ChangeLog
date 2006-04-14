@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.19 2006/02/25 19:44:22 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.20 2006/04/14 19:14:47 cryos Exp $
+
+  14 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/boinc-5.2.14-gcc-4.1.patch, boinc-5.2.14.ebuild:
+  Added GCC 4.1 patch supplied by Mark Loeser <halcy0n@gentoo.org>, closes bug
+  129592.
 
   25 Feb 2006; Marcus D. Hanwell <cryos@gentoo.org> boinc-5.2.14.ebuild:
   Add warning about client password, bug 121896.
