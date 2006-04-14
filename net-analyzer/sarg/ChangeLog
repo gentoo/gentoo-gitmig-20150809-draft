@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/sarg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.22 2006/01/08 15:22:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.23 2006/04/14 06:57:37 pva Exp $
+
+*sarg-2.1-r1 (14 Apr 2006)
+
+  14 Apr 2006; Volkov Peter <pva@gentoo.org>
+  +files/sarg-2.1-sort-options.patch, +sarg-2.1-r1.ebuild:
+  Obsolete origin-zero syntax in sort changed with POSIX compatible one.
+  Bug 129719. Thank Jeremy Heslop for fix and report.
 
 *sarg-2.1 (08 Jan 2006)
 

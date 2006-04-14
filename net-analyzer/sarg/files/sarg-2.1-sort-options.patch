@@ -1,0 +1,15 @@
+diff -Naur sarg-2.1/index.c sarg-2.1-patched/index.c
+--- sarg-2.1/index.c	2005-11-29 11:39:45.000000000 -0500
++++ sarg-2.1-patched/index.c	2006-04-12 13:49:25.000000000 -0400
+@@ -369,9 +369,9 @@
+       unlink(wdir_tmp2);
+    } else {
+       if(strcmp(IndexSortOrder,"A") == 0)
+-         sprintf(warea,"sort -t';' +6.5n +6.2M +6.0n '%s' -o '%s'", wdir_tmp, wdir_tmp2);
++         sprintf(warea,"sort -t';' -k 7,5n -k 7,2M -k 7n '%s' -o '%s'", wdir_tmp, wdir_tmp2);
+       else
+-         sprintf(warea,"sort -t';' +6.5nr +6.2Mr +6.0nr '%s' -o '%s'", wdir_tmp, wdir_tmp2);
++         sprintf(warea,"sort -t';' -k 7,5nr -k 7,2Mr -k 7nr '%s' -o '%s'", wdir_tmp, wdir_tmp2);
+       system(warea);
+       unlink(wdir_tmp);
+       if((fp_ou=fopen(wdir,"w"))==NULL) {
