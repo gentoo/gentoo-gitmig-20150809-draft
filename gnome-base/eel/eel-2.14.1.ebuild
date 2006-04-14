@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.14.1.ebuild,v 1.1 2006/04/12 15:51:25 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.14.1.ebuild,v 1.2 2006/04/14 10:09:36 steev Exp $
 
 inherit virtualx gnome2
 
@@ -23,7 +23,7 @@ RDEPEND=">=media-libs/libart_lgpl-2.3.8
 	>=gnome-base/gail-0.16
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-desktop-2.1.4
-	>=gnome-base/gnome-menus-2.11.1
+	>=gnome-base/gnome-menus-2.14.0
 	>=dev-util/desktop-file-utils-0.9"
 
 DEPEND="${RDEPEND}
