@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-6.0.ebuild,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-6.0.ebuild,v 1.2 2006/04/14 15:47:01 flameeyes Exp $
 
 inherit bsdmk freebsd
 
@@ -43,7 +43,10 @@ PATCHES="${FILESDIR}/${PN}-5.3-doc-locations.patch
 src_unpack() {
 	freebsd_src_unpack
 
+	# Remove make.conf manpage as it describes bsdmk's make.conf.
 	sed -i -e 's:make.conf.5::' ${S}/man/man5/Makefile
+	# Don't install the arch-specific directories in subdirectories
+	sed -i -e '/MANSUBDIR/d' ${S}/man/man4/man4.{alpha,i386,sparc64}/Makefile
 
 	# Remove them so that they can't be included by error
 	rm -rf ${S}/mk/*.mk

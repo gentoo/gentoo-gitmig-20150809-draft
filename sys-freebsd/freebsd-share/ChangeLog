@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-share
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.3 2006/04/02 22:26:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.4 2006/04/14 15:47:01 flameeyes Exp $
+
+  14 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-share-6.0.ebuild:
+  Install arch-specific manpages in man4 catalog. Thanks to Javier
+  Villavicencio in bug #129889.
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/freebsd-share-5.3-colldef-makefile_links.patch:
