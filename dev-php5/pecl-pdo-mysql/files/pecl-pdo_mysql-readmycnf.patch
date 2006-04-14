@@ -1,0 +1,33 @@
+--- mysql_driver.c	2006-04-13 19:39:36.000000000 +0200
++++ mysql_driver.c	2006-04-13 19:42:30.000000000 +0200
+@@ -32,7 +32,7 @@
+ #include "php_pdo_mysql_int.h"
+ #include <mysqld_error.h>
+ #include "zend_exceptions.h"
+-
++#include "SAPI.h"
+ 
+ const char *pdo_mysql_get_sqlstate(unsigned int my_errno) {
+ 	switch (my_errno) {
+@@ -390,7 +390,7 @@
+ {
+ 	pdo_mysql_db_handle *H;
+ 	int i, ret = 0;
+-	char *host = NULL, *unix_socket = NULL;
++	char *host = NULL, *unix_socket = NULL, *option_section = NULL;
+ 	unsigned int port = 3306;
+ 	char *dbname;
+ 	struct pdo_data_src_parser vars[] = {
+@@ -475,6 +475,12 @@
+ 		}
+ 	}
+ 
++	/* Read settings from my.cnf */
++	option_section = emalloc(strlen("php-%s") + strlen(sapi_module.name));
++	sprintf(option_section, "php-%s", sapi_module.name);
++	mysql_options(H->server, MYSQL_READ_DEFAULT_GROUP, option_section);
++	efree(option_section);
++
+ 	dbname = vars[1].optval;
+ 	host = vars[2].optval;	
+ 	if(vars[3].optval) {
