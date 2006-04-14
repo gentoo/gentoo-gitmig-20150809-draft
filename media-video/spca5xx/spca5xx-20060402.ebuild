@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/spca5xx-20051105.ebuild,v 1.2 2005/12/11 01:07:00 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/spca5xx-20060402.ebuild,v 1.1 2006/04/14 15:54:11 kingtaco Exp $
 
 inherit linux-mod
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://mxhaard.free.fr/spca5xx.html"
 SRC_URI="http://mxhaard.free.fr/spca50x/Download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 RESTRICT=""
 DEPEND=""
@@ -27,5 +27,4 @@ src_unpack() {
 src_install() {
 	dodoc CHANGELOG INSTALL README
 	linux-mod_src_install
-	ewarn "Warning:  The module name has been changed from spca50x to spca5xx."
 }
