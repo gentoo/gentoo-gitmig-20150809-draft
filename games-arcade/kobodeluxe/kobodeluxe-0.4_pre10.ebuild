@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.12 2006/02/28 06:40:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.13 2006/04/14 04:01:37 halcy0n Exp $
 
-inherit flag-o-matic games
+inherit flag-o-matic eutils games
 
 MY_P="KoboDeluxe-${PV/_/}"
 DESCRIPTION="An SDL port of xkobo, a addictive space shoot-em-up"
@@ -18,12 +18,13 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-image
 	opengl? ( virtual/opengl )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
 src_unpack() {
 	filter-flags -fforce-addr
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 	# Fix paths
 	sed -i \
 		-e 's:\$(datadir)/games/kobo-deluxe:$(datadir)/kobodeluxe:' \

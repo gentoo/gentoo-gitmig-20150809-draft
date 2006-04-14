@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/kobodeluxe
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/ChangeLog,v 1.16 2006/02/28 06:40:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/ChangeLog,v 1.17 2006/04/14 04:01:37 halcy0n Exp $
+
+  14 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/kobodeluxe-0.4_pre10-gcc41.patch, kobodeluxe-0.4_pre10.ebuild:
+  Add patch to fix compilation with gcc-4.1 by TGL <degrenier AT easyconnect
+  DOT fr>; bug #126015
 
   28 Feb 2006; Michael Sterrett <mr_bones_@gentoo.org>
   kobodeluxe-0.4_pre10.ebuild:

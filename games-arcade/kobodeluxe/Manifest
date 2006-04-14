@@ -1,12 +1,25 @@
-MD5 3352b3c2d259aed0759f88d18f8d85a9 ChangeLog 3154
-RMD160 15670dafc863697063d9b63cd9ec847fdee77d5a ChangeLog 3154
-SHA256 7b063c060156c3aee6c9430061160b4bf1762a80ffb5c6772da1cb94c85d3dba ChangeLog 3154
-MD5 0b7b71a5722fbfd078b1b3c0e47019c3 files/digest-kobodeluxe-0.4_pre10 71
-RMD160 13e2efcefee141428962ffb5012a76fccabebb85 files/digest-kobodeluxe-0.4_pre10 71
-SHA256 e0e0f092dc6e3d22524d5a40d8cd015ebe88b643548b5c1718c534bdaf444c8b files/digest-kobodeluxe-0.4_pre10 71
-MD5 44184c8fe90f4390ba25183ef99047cd kobodeluxe-0.4_pre10.ebuild 1771
-RMD160 8f84047962589c49e82bc469df756ecac58a1343 kobodeluxe-0.4_pre10.ebuild 1771
-SHA256 4d80da682e8906a66edb6f45e7ec2f14adeaa77f5093dce918594d720e0357a5 kobodeluxe-0.4_pre10.ebuild 1771
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 62977d8099f24ff199b19b1100b2895c ChangeLog 3373
+RMD160 ae4f2487595bcd2d78be2e7def40c1f4f469d6b4 ChangeLog 3373
+SHA256 270cc733c8a0aa887a45d9ba2e374a5f5f331f8e2dfee826da73cc0ba8c126dd ChangeLog 3373
+MD5 6f1bd299a28d7f68b9b490c385894298 files/digest-kobodeluxe-0.4_pre10 259
+RMD160 e2191ce32686a7efdccf40baf09b2aea25f9ce9b files/digest-kobodeluxe-0.4_pre10 259
+SHA256 8c5704018cfb49ca2c82851b7738f9e38601b7b1003c0eb6cab04282819ca1bb files/digest-kobodeluxe-0.4_pre10 259
+MD5 74e1dd46fd885b5d5a3376cc5aad2807 files/kobodeluxe-0.4_pre10-gcc41.patch 278
+RMD160 f54640058ac50e33a92167c2544eab60c2151289 files/kobodeluxe-0.4_pre10-gcc41.patch 278
+SHA256 a349e3801ce34bb52946257e4601eb7cd6c83878f614f7b6453ab05a3a818aad files/kobodeluxe-0.4_pre10-gcc41.patch 278
+MD5 aee3e9c14041dd86c4d3b845fa0445d2 kobodeluxe-0.4_pre10.ebuild 1817
+RMD160 795d165c11772f8f5c7d3ec02f5318ca0db94366 kobodeluxe-0.4_pre10.ebuild 1817
+SHA256 97a26b504091146cc8603772577412029f6cb5d6bab725b3ca657e7da754688c kobodeluxe-0.4_pre10.ebuild 1817
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEPx6xCRZPokWLroQRAkwAAJ0Tp+mV3KnDyyoAiou/ph9PtvXRTACgzySL
+N/0O63iPaBtw3aDxIHgvV9U=
+=7ohV
+-----END PGP SIGNATURE-----
