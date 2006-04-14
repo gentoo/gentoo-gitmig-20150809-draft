@@ -1,6 +1,31 @@
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 bd9fc81e611531471bf14a09a15863ba ChangeLog 1348
-MD5 2985bdd294112beb7a2073b0f141c74f meterbridge-0.9.2.ebuild 621
-MD5 e133c0604d65895e1c861d93b96f5ac2 meterbridge-0.9.0.ebuild 646
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 73fffb5401348134050256a07cbbe1a0 ChangeLog 1591
+RMD160 b9fbc1e9244246f0a1e6bd9d4aa4b982ecd68d6d ChangeLog 1591
+SHA256 2575cc80f435d7de9da9eae07d136da44c794562185e6369bb6a6b5173507fba ChangeLog 1591
 MD5 c50f792290721fb1e38d3eb3f55be86e files/digest-meterbridge-0.9.0 69
+RMD160 091d23b134685af2f9d7c7dd40fd60a5635fbb72 files/digest-meterbridge-0.9.0 69
+SHA256 02271db8cb70c39f637b3b18abd046ca6afd227abd7632622fbcb3e3aa3925cf files/digest-meterbridge-0.9.0 69
 MD5 5cb258c131d546109669030240fc59ab files/digest-meterbridge-0.9.2 69
+RMD160 9e7647921181c6a3c2bb8c4c9eec2802fab2b0f0 files/digest-meterbridge-0.9.2 69
+SHA256 6b32394ee097e3668b08cc0e5eed4914a6e37d8512c22271b3e3bb78f3f1bb6f files/digest-meterbridge-0.9.2 69
+MD5 942ad2cb8a56466050eef28787b71d11 files/meterbridge-0.9.2-gcc41.patch 490
+RMD160 a7202e0730986f3d7a20fc2cb1678f329dd85aeb files/meterbridge-0.9.2-gcc41.patch 490
+SHA256 3c112824a5eea44fae1e6607f9aad2efeab37e8cbffccd1c180fe968ed078190 files/meterbridge-0.9.2-gcc41.patch 490
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 e133c0604d65895e1c861d93b96f5ac2 meterbridge-0.9.0.ebuild 646
+RMD160 4e51e0e089e6e93810c68e64edf78c74117dee4b meterbridge-0.9.0.ebuild 646
+SHA256 c799e9ba9a31180eca67d6ad5dba7963c31ee44434b741ef4dd8b58aa889d172 meterbridge-0.9.0.ebuild 646
+MD5 38cba7527c54f3eb404c47fcdfdc3953 meterbridge-0.9.2.ebuild 708
+RMD160 c4c3be5e68b9b036555e902e001a3b0ce2b58c1e meterbridge-0.9.2.ebuild 708
+SHA256 fd1b883f7c8a3d8d875c2a08b9fe7bd7b37ba63db4929c7e3184c7f1fc58be71 meterbridge-0.9.2.ebuild 708
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEPznNCRZPokWLroQRAh5LAJ9sBzECx4N8ZQv9rb23PpJz65U0wwCZAaL4
+eA+SYWbcgWBFXoE1UcAda18=
+=aYrA
+-----END PGP SIGNATURE-----
