@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.3-r1.ebuild,v 1.2 2006/01/15 22:34:36 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.3-r1.ebuild,v 1.3 2006/04/14 00:07:27 halcy0n Exp $
 
 inherit eutils
 
@@ -22,6 +22,8 @@ SB_QT_MT="${S}-build_qt-mt"
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${P}-std-streamsize.patch
+	epatch "${FILESDIR}"/${P}-doxygen.patch
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 }
 
 src_compile() {

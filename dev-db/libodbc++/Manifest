@@ -1,17 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fe0f38624f7d70f3db19e389b96d4b6a ChangeLog 1113
+MD5 20245a95fb3aa8c94b87a5700fd84ed5 ChangeLog 1353
+RMD160 3a6fbc00552c58c3c9c4346cdaf62e83b4ab0b26 ChangeLog 1353
+SHA256 460583331082ecfba532c1dd87fe91d3f5a8a43fb0e946d7d0c0f46e1df24a05 ChangeLog 1353
 MD5 76859551271b481b467298625eca2fbf files/digest-libodbc++-0.2.3 67
+RMD160 3e3d0fa0b4171f342ea017368612061a01e4c34a files/digest-libodbc++-0.2.3 67
+SHA256 52378aae79196166c84e1847d71392ba357bad2daa24de7c0c1caee6af053ad6 files/digest-libodbc++-0.2.3 67
 MD5 76859551271b481b467298625eca2fbf files/digest-libodbc++-0.2.3-r1 67
+RMD160 3e3d0fa0b4171f342ea017368612061a01e4c34a files/digest-libodbc++-0.2.3-r1 67
+SHA256 52378aae79196166c84e1847d71392ba357bad2daa24de7c0c1caee6af053ad6 files/digest-libodbc++-0.2.3-r1 67
+MD5 eccd0bcfb5758a5768fc689a152da572 files/libodbc++-0.2.3-doxygen.patch 561
+RMD160 644cf99e74ae874ae3c3dc287c751adb1d5e1d68 files/libodbc++-0.2.3-doxygen.patch 561
+SHA256 2642d896e705ab56fc378547ae9eb27e1db136bd54d6ac6656463de24d79f825 files/libodbc++-0.2.3-doxygen.patch 561
+MD5 67661c17e8f970de320f0f3bb9d42ca9 files/libodbc++-0.2.3-gcc41.patch 456
+RMD160 b944a42fdd6dc3069244b40f8a294afb73a66c36 files/libodbc++-0.2.3-gcc41.patch 456
+SHA256 ad380ec268435405146431e47a9a9bd354be8c0edc1229b315f31c60990a3c43 files/libodbc++-0.2.3-gcc41.patch 456
 MD5 a99a6a9bdf9dffba15a2aeeb1d2bcecb files/libodbc++-0.2.3-std-streamsize.patch 358
-MD5 ec335ee1e74b97bfc82a7b995a76b098 libodbc++-0.2.3-r1.ebuild 2089
+RMD160 0ca0ef123943fa4e80e3a8d4edc6b6f5a115322f files/libodbc++-0.2.3-std-streamsize.patch 358
+SHA256 0ee73b37752273016a2b18ceb8c301412128883e86d61d61a4f43a39811681b9 files/libodbc++-0.2.3-std-streamsize.patch 358
+MD5 a615e73a50531f0a0fade298910e7279 libodbc++-0.2.3-r1.ebuild 2169
+RMD160 571cd9475e62c00a6f60a17208ddb53c8e67e1c4 libodbc++-0.2.3-r1.ebuild 2169
+SHA256 27abd87ee685e2b41433a2d79181b5d217a52748c4d88f1f13b92bdfc07d258f libodbc++-0.2.3-r1.ebuild 2169
 MD5 c0d850ab79376dbc9aef722e2f88b242 libodbc++-0.2.3.ebuild 1393
+RMD160 f8726cb71a869e13b26f633e9abf928a84b6d128 libodbc++-0.2.3.ebuild 1393
+SHA256 26572b7ee774bef04c7e698212387119af722323773233dbe5cc028882e1244f libodbc++-0.2.3.ebuild 1393
 MD5 514696112b44a9f879fd54be4de53dc5 metadata.xml 219
+RMD160 38db0f8e5f44d75870709f7d3c98f081451875ef metadata.xml 219
+SHA256 3335b69d39a6e311a24d996131a068c8846b17ea832eac15a646e25a6a73c5d7 metadata.xml 219
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDys4GCRZPokWLroQRAigOAJ441MuG6+XN7pbkUZEgsUqBsYxDjgCfWV6d
-5v7bfOpBBejiLWwhLCCKEGE=
-=abhn
+iD8DBQFEPufTCRZPokWLroQRAgWHAKDBmYboHND5DuzxVzmoRCKZjMXyPACgyNFi
+9mrKNnLLSa/JqfLx/+MqZeI=
+=1UTs
 -----END PGP SIGNATURE-----
