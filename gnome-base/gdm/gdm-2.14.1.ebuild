@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.14.1.ebuild,v 1.1 2006/04/11 18:35:52 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.14.1.ebuild,v 1.2 2006/04/14 11:07:49 foser Exp $
 
 inherit eutils pam gnome2
 
@@ -16,7 +16,7 @@ IUSE="accessibility ipv6 pam selinux tcpd xinerama"
 GDM_EXTRA="${PN}-2.8-gentoo-files-r2"
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/gentoo-gdm-theme-r2.tar.bz2
+	mirror://gentoo/gentoo-gdm-theme-r3.tar.bz2
 	mirror://gentoo/${GDM_EXTRA}.tar.bz2"
 
 RDEPEND="pam? ( virtual/pam )
