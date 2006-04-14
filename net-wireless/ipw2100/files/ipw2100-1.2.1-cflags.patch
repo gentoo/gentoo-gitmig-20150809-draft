@@ -1,0 +1,55 @@
+diff -u ipw2100-1.2.1/ipw2100.c ipw2100-1.2.1-cflags/ipw2100.c
+--- ipw2100-1.2.1/ipw2100.c	2006-02-21 19:46:17.000000000 +0100
++++ ipw2100-1.2.1-cflags/ipw2100.c	2006-04-04 18:07:42.000000000 +0200
+@@ -184,7 +184,9 @@
+ MODULE_AUTHOR(DRV_COPYRIGHT);
+ MODULE_LICENSE("GPL");
+ 
++#ifdef CONFIG_IPW2100_DEBUG
+ static int debug = 0;
++#endif
+ static int mode = 0;
+ static int channel = 0;
+ static int associate = 1;
+@@ -194,13 +196,17 @@
+ #endif
+ 
+ #include <linux/moduleparam.h>
++#ifdef CONFIG_IPW2100_DEBUG
+ module_param(debug, int, 0444);
++#endif
+ module_param(mode, int, 0444);
+ module_param(channel, int, 0444);
+ module_param(associate, int, 0444);
+ module_param(disable, int, 0444);
+ 
+-MODULE_PARM_DESC(debug, "debug level");
++#ifdef CONFIG_IPW2100_DEBUG
++MODULE_PARM_DESC(debug, "debug output mask");
++#endif
+ MODULE_PARM_DESC(mode, "network mode (0=BSS,1=IBSS,2=Monitor)");
+ MODULE_PARM_DESC(channel, "channel");
+ MODULE_PARM_DESC(associate, "auto associate when scanning (default on)");
+Only in ipw2100-1.2.1-cflags/: ipw2100.c~
+diff -u ipw2100-1.2.1/Makefile ipw2100-1.2.1-cflags/Makefile
+--- ipw2100-1.2.1/Makefile	2006-02-21 19:46:16.000000000 +0100
++++ ipw2100-1.2.1-cflags/Makefile	2006-04-04 18:03:09.000000000 +0200
+@@ -70,14 +70,11 @@
+ EXTRA_CFLAGS += -DCONFIG_PM
+ 
+ ifeq ($(EXTERNAL_BUILD),y)
+-ifdef CONFIG_IPW2100_DEBUG
+-EXTRA_CFLAGS += -DCONFIG_IPW2100_DEBUG=$(CONFIG_IPW2100_DEBUG)
++ifeq ($(CONFIG_IPW2100_DEBUG),y)
++EXTRA_CFLAGS += -DCONFIG_IPW2100_DEBUG
+ endif
+-ifdef CONFIG_IPW2100_MONITOR
+-EXTRA_CFLAGS += -DCONFIG_IPW2100_MONITOR=$(CONFIG_IPW2100_MONITOR)
+-endif
+-ifdef CONFIG_IPW_QOS
+-EXTRA_CFLAGS += -DCONFIG_IPW_QOS=$(CONFIG_IPW_QOS)
++ifeq ($(CONFIG_IPW2100_MONITOR),y)
++EXTRA_CFLAGS += -DCONFIG_IPW2100_MONITOR
+ endif
+ endif
+ 

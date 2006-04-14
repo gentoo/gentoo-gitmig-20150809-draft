@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.97 2006/03/26 16:47:22 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.98 2006/04/14 11:13:05 brix Exp $
+
+*ipw2100-1.2.1-r1 (14 Apr 2006)
+
+  14 Apr 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +files/ipw2100-1.2.1-cflags.patch, +ipw2100-1.2.1-r1.ebuild:
+  Added patch from upstream.
 
   26 Mar 2006; Henrik Brix Andersen <brix@gentoo.org> ipw2100-1.2.1.ebuild:
   Stable on x86.
