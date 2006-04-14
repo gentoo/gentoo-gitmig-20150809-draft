@@ -1,6 +1,15 @@
 # ChangeLog for sys-freebsd/freebsd-baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.6 2006/04/13 19:40:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.7 2006/04/14 15:32:45 flameeyes Exp $
+
+*freebsd-baselayout-20060414 (14 Apr 2006)
+
+  14 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -files/profile,
+  -files/ssd-fbsd.patch, -freebsd-baselayout-20060401-r3.ebuild,
+  +freebsd-baselayout-20060414.ebuild:
+  Bump baselayout version with more fixes to init system, all the patches for
+  s-s-d and rc-daemon in place and working routing support in networking
+  scripts.
 
 *freebsd-baselayout-20060401-r3 (13 Apr 2006)
 

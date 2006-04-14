@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/freebsd-baselayout-20060401-r3.ebuild,v 1.1 2006/04/13 19:40:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/freebsd-baselayout-20060414.ebuild,v 1.1 2006/04/14 15:32:45 flameeyes Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools
 
@@ -62,9 +62,6 @@ src_unpack() {
 	# take the sources from released baselayout
 	rm -rf "${WORKDIR}/${origbaselayout}/src/"{awk,filefuncs}
 	cp -r "${WORKDIR}/${origbaselayout}/src" "${S}"
-
-	cd "${S}/src"
-	epatch "${FILESDIR}/ssd-fbsd.patch"
 }
 
 src_compile() {
@@ -414,7 +411,6 @@ src_install() {
 	if ! use build ; then
 		doman "${S}"/man/*.*
 		docinto /
-		dodoc ${FILESDIR}/copyright
 		dodoc "${S}"/ChangeLog
 	fi
 
