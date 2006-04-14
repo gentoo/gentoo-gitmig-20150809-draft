@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5541f54031efac9304a85bbdafad106a ChangeLog 32330
-RMD160 95eb54a7e977236ca138f0f74e89a98bb5e3855b ChangeLog 32330
-SHA256 161ad6759c4cf032323ffb13790cbe21921614eb977733f191453b51f3d9c4b6 ChangeLog 32330
+MD5 487e8eb5b04a5f5e7e51e623d351b1a6 ChangeLog 32549
+RMD160 d4edebffa6d2007be1bf0539467daf1006f04ecd ChangeLog 32549
+SHA256 64b1a5dcdb61f760b335d1558bd01f61455563199d385f8c8ca0e5d9eac87eba ChangeLog 32549
 MD5 7e423c353b08a2c05693d13f21e067d0 files/depreorder-topsort.py 1958
 RMD160 4192ad9ed14064a9da42ce1faedcf28996094da3 files/depreorder-topsort.py 1958
 SHA256 7406f639d17b8acab6a1db7e398e74379b44950d4821bc36901abd3455d63b3d files/depreorder-topsort.py 1958
@@ -28,9 +28,15 @@ SHA256 3de51f78c316afe5c15cc2ab80088eeb2bdab1674ac979814eea0b00f1abb480 files/di
 MD5 074466092860a2451d114cf7fad357f2 files/digest-python-2.4.3 503
 RMD160 71a7eceb40337728f36e0d2970e1fb3956b7496a files/digest-python-2.4.3 503
 SHA256 cb1f85d43ffcb62f214711b3ab7231ad711ac382ab729dc9013e4e482eaaf238 files/digest-python-2.4.3 503
+MD5 28820c76c538a4a9d3fb4ef860ac3370 files/python-2.4.2-gentoo_obsd.patch 1554
+RMD160 c93e34df155440e68e7db283d709c3ef301933d2 files/python-2.4.2-gentoo_obsd.patch 1554
+SHA256 89a870d045246c66a67e7931afd38260c8b1e3d0c8f2db9b73e36cf014e98dee files/python-2.4.2-gentoo_obsd.patch 1554
 MD5 99edd492f449d6b61456ea8d5fd71ee9 files/python-2.4.3-db4.patch 1602
 RMD160 59a533ba6dc0ee4702c22ecd1b28c1b95a54e4c7 files/python-2.4.3-db4.patch 1602
 SHA256 6366623ed12d682210931211d8dc0edb78c4ea9256fd2357661762864f5a7611 files/python-2.4.3-db4.patch 1602
+MD5 bc6e04d48b56dad72d894d0c143371df files/python-2.4.3-gentoo_obsd.patch 1023
+RMD160 8d467ff543a86ad6fd554071e502f6f73dc806d9 files/python-2.4.3-gentoo_obsd.patch 1023
+SHA256 fe23caefc82bf813481839fb87df7c0bdb28f67897daddaeebfa8fd1b94c980f files/python-2.4.3-gentoo_obsd.patch 1023
 MD5 b530d6f9dbcf30239061be3de80932cc files/python-config-2.2 178
 RMD160 3e69689ed295971149007f5db27b1fbd345d6d60 files/python-config-2.2 178
 SHA256 77a801661f573c04b0afe36bb94a7deb0885c90b69872a9825f2a2e2ba0e1141 files/python-config-2.2 178
@@ -58,19 +64,19 @@ SHA256 c7a10e8195449160f2c19a74d66e4a367107e2f197571b8b052f01d33f162174 python-2
 MD5 111d0fe04be52386fcc80b7bab28e003 python-2.3.5-r2.ebuild 8330
 RMD160 300ba245465531193a8f5cd23f2025a5ddcc4d37 python-2.3.5-r2.ebuild 8330
 SHA256 ad899576c9160ee0fdf519c41fc3c25dbc32ccbb7efa3d9b46434cd760f8eb26 python-2.3.5-r2.ebuild 8330
-MD5 5c3df991cf4558960fc141ed5ff9b51b python-2.4.2-r1.ebuild 9902
-RMD160 19840b50380f69cff81c98065bbf2eeaa55f0f41 python-2.4.2-r1.ebuild 9902
-SHA256 11b98d4b168924a3d8d912b9b48ea89c8118a6eab7ff81e46e72e41393e66b2c python-2.4.2-r1.ebuild 9902
+MD5 9f4e7fbfbbcc92225ba7f4afb13d4a07 python-2.4.2-r1.ebuild 10001
+RMD160 b6a247a3e716e6a4bd51a656261bae1dac589aef python-2.4.2-r1.ebuild 10001
+SHA256 5bb5efd25d48d5b48a23144c146bd68f1f055a3e161ae7aa5746f3f0e5563b3d python-2.4.2-r1.ebuild 10001
 MD5 c39f1b9e762a9b08dc70f53719e09583 python-2.4.2.ebuild 9547
 RMD160 1196d63070f8667afc63008ec79b8544a3906d20 python-2.4.2.ebuild 9547
 SHA256 7395e5e8f8b702ded8911958866b8096ccd204f1195bb2d18e18c38d62c38d9d python-2.4.2.ebuild 9547
-MD5 2f0ec8149a2fb84ac4173152d58602da python-2.4.3.ebuild 9744
-RMD160 8c83855e9441baca8242db97e9ad981899cc5c1d python-2.4.3.ebuild 9744
-SHA256 07baa5889537517a514e96b04d92df85a5ff05881b4afb9906ee8f2bc7c44aed python-2.4.3.ebuild 9744
+MD5 d9d346f4dc59bbf3b41adfbb2c48b6a2 python-2.4.3.ebuild 9839
+RMD160 659d39923c8caf87dc36aef4497e5ebce8bed3b1 python-2.4.3.ebuild 9839
+SHA256 039200857e5f5c07c2e6a3364d1fb6f43240e2d6da2779e5b14564860de10dab python-2.4.3.ebuild 9839
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEPi5OugEuf3OQ0akRAg+XAKCiJe8IUgvDxa4zEXD4tpyo9BwMsACfaiBs
-pfvQepOBqg8txIgiuuNPUds=
-=5UvU
+iD8DBQFEP5utugEuf3OQ0akRAosFAJ9Rid/ZZbAVidFoTVOoWoTh1jcpfQCfSIjC
+aJrYoZvdrl+Wsor0qeL7M3U=
+=xutM
 -----END PGP SIGNATURE-----

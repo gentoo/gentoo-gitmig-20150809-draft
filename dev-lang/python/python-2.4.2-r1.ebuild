@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.2-r1.ebuild,v 1.4 2006/03/30 17:41:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.2-r1.ebuild,v 1.5 2006/04/14 12:54:54 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -102,6 +102,9 @@ src_unpack() {
 		epatch "${WORKDIR}/${PATCHTAR}"/python-2.4.1-bindir-libdir.patch
 		epatch "${WORKDIR}/${PATCHTAR}"/python-2.4.1-crosscompile.patch
 	fi
+
+	# fix gentoo/obsd problems (bug 117261)
+	epatch "${FILESDIR}/python-2.4.2-gentoo_obsd.patch"
 }
 
 src_configure() {
@@ -279,7 +282,7 @@ src_test() {
 
 	#skip all tests that fail during emerge but pass without emerge:
 	#(See bug# 67970)
-	local skip_tests="distutils global mimetools minidom mmap strptime subprocess tcl time urllib urllib2"
+	local skip_tests="distutils global mimetools minidom mmap strptime subprocess syntax tcl time urllib urllib2"
 
 	for test in ${skip_tests} ; do
 		mv ${S}/Lib/test/test_${test}.py ${T}
