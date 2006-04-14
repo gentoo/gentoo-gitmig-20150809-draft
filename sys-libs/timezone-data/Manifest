@@ -1,12 +1,18 @@
-MD5 4a001e3e1002435863a9a4d5f38710db ChangeLog 3085
-RMD160 e674904052ed4ef216fc3d39c60a504c1c0489b3 ChangeLog 3085
-SHA256 7584bc3b4b3127c32788f8f2d63f30e78704533a0592458ef918f21b3504f8b3 ChangeLog 3085
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 226ac8437d79a24d391119eb2d73c6e8 ChangeLog 3217
+RMD160 22cc72b4f2fa37f6c331823af8ec2293d43ada8d ChangeLog 3217
+SHA256 0215790eaf39c12af97e79853f03e9d4bbdf9ef0fdda06cde6579aceef665ed9 ChangeLog 3217
 MD5 4c2f960c03eccba94f44dcbb468cfd59 files/digest-timezone-data-2006a 126
 RMD160 6efcf4d8a760cf22996c22fc68cca20c788d4a76 files/digest-timezone-data-2006a 126
 SHA256 39c9ea429aae2d3153e84dd4f520d2917c04c0c5012f7161bcdb4cfb538dc889 files/digest-timezone-data-2006a 126
 MD5 4ea3ff149003fd3e011d1f17e9a73723 files/digest-timezone-data-2006b 476
 RMD160 4b8d4f338133a0eef11260fda0e606f7253f50e3 files/digest-timezone-data-2006b 476
 SHA256 c0b3f0197d170438ce5f806b29d6fa251370127e54e963101425f4d3f7cf72de files/digest-timezone-data-2006b 476
+MD5 e4a8274693daed929aab56154467532a files/digest-timezone-data-2006c 470
+RMD160 72db8bc34e5736dd94fbc33f16da106957ad94c0 files/digest-timezone-data-2006c 470
+SHA256 e3ec41e8acce398aa384c66b6d76f161df3c8e1f22d6258ad083b2c2bcd70ea9 files/digest-timezone-data-2006c 470
 MD5 e9e827c595ba2803b1090afe0cbf4cfa files/timezone-data-2005n-makefile.patch 3138
 RMD160 da24e48311546da1f9afbb0bcb09e0170ec06b01 files/timezone-data-2005n-makefile.patch 3138
 SHA256 8cc60da044c6bc744000dd899019513306f379959b62a48402d5a305dee9f65f files/timezone-data-2005n-makefile.patch 3138
@@ -19,3 +25,13 @@ SHA256 03f8e6995435701b40e2e8ee0e9f4b51ee0c30fad77fca1e340af2a812f95d22 timezone
 MD5 fa9228560d5d18a5170ce6e042657ade timezone-data-2006b.ebuild 853
 RMD160 05d7a732b4ece0ad174d5851750222df6885f7ce timezone-data-2006b.ebuild 853
 SHA256 d66586bb8d6a8389eed7ad85fbf60e4c2d57a546ab9bb5e3ef3eb6fb50be13e1 timezone-data-2006b.ebuild 853
+MD5 6be6d564fdf50d30cd8869baaa0ff694 timezone-data-2006c.ebuild 828
+RMD160 24df834187bd7467d82188e848e511a89bb40e41 timezone-data-2006c.ebuild 828
+SHA256 a64e60c8138c7e98d98bd8bdb5026d3e720551086a2951823b8fd275bca39b53 timezone-data-2006c.ebuild 828
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQDSi2+ySkm8kpY0RAqZVAKCQCwNwQ0BWmqqZGhLtInu2pYmV/QCgtDEI
+YzuH+plqQyJQeqJ3H2kPBbI=
+=B+FE
+-----END PGP SIGNATURE-----
