@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mupen64-alsasnd
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/ChangeLog,v 1.8 2005/09/20 15:04:28 mr_bones_ Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/ChangeLog,v 1.9 2006/04/14 04:06:37 halcy0n Exp $
+
+  14 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/mupen64-alsasnd-0.4-gcc41.patch, mupen64-alsasnd-0.4.ebuild:
+  Add patch to fix compilation with gcc-4.1; bug #126596
 
   20 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org>
   mupen64-alsasnd-0.4.ebuild:

@@ -1,0 +1,32 @@
+diff -ur alsa_plugin-orig/gtk1_gui.cpp alsa_plugin/gtk1_gui.cpp
+--- alsa_plugin-orig/gtk1_gui.cpp	2006-03-18 01:50:47.000000000 -0500
++++ alsa_plugin/gtk1_gui.cpp	2006-03-18 01:54:53.000000000 -0500
+@@ -54,6 +54,16 @@
+ 	void setupAboutDialog();
+ };
+ 
++//Forward declarations
++void begin_testing();
++bool key_press_event_func( GtkWidget *, GdkEventKey * );
++void loadDefaultValues();
++void loadConfigurationFromFile();
++void saveConfigurationToFile();
++void ok_pressed();
++void cancel_config();
++
++
+ void CreateGUIObject( Plugin_Graphical_Interface **GUI, Plugin_Audio_Driver *drv )
+ {
+ 	*GUI = dynamic_cast<Plugin_Graphical_Interface *>(new GTK1_Interface( drv ));
+diff -ur alsa_plugin-orig/qt3_gui.cpp alsa_plugin/qt3_gui.cpp
+--- alsa_plugin-orig/qt3_gui.cpp	2006-03-18 01:50:47.000000000 -0500
++++ alsa_plugin/qt3_gui.cpp	2006-03-18 01:58:45.000000000 -0500
+@@ -90,7 +90,7 @@
+ 
+ void CreateGUIObject( Plugin_Graphical_Interface **GUI, Plugin_Audio_Driver *drv )
+ {
+-	( ( QT3_Interface * )( *GUI ) ) = new QT3_Interface( drv );
++	( *GUI ) = new QT3_Interface( drv );
+ }
+ 
+ void DeleteGUIObject( Plugin_Graphical_Interface **GUI )

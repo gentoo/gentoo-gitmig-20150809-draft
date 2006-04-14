@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/mupen64-alsasnd-0.4.ebuild,v 1.13 2005/09/20 15:04:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/mupen64-alsasnd-0.4.ebuild,v 1.14 2006/04/14 04:06:37 halcy0n Exp $
 
 inherit eutils games
 
@@ -32,7 +32,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PV}-gentoo.patch" \
-		"${FILESDIR}/${PV}-gtk.patch"
+		"${FILESDIR}/${PV}-gtk.patch" \
+		"${FILESDIR}"/${P}-gcc41.patch
 }
 
 src_compile() {
