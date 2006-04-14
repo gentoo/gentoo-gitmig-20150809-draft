@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r3.ebuild,v 1.2 2006/04/13 20:42:56 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r3.ebuild,v 1.3 2006/04/14 20:08:55 flameeyes Exp $
 
 inherit tetex-3 flag-o-matic versionator virtualx
 
@@ -21,7 +21,7 @@ SRC_URI="http://dev.gentoo.org/~nattfodd/tetex/${TETEX_SRC}
 	${SRC_PATH_TETEX}/${TETEX_TEXMF}
 	http://dev.gentoo.org/~nattfodd/tetex/${P}-gentoo.tar.gz"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
 
 # these are defined in tetex.eclass and tetex-3.eclass
 IUSE=""
