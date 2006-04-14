@@ -1,0 +1,259 @@
+# ChangeLog for net-wireless/madwifi-ng
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.1 2006/04/14 13:52:48 brix Exp $
+
+*madwifi-ng-0.1502.20060414 (14 Apr 2006)
+*madwifi-ng-0.1485.20060325 (14 Apr 2006)
+*madwifi-ng-0.1473.20060312 (14 Apr 2006)
+*madwifi-ng-0.1443.20060207 (14 Apr 2006)
+*madwifi-ng-0.1440.20060206 (14 Apr 2006)
+*madwifi-ng-0.1420.20060201 (14 Apr 2006)
+*madwifi-ng-0.1401.20060117 (14 Apr 2006)
+
+  14 Apr 2006; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml,
+  +madwifi-ng-0.1401.20060117.ebuild, +madwifi-ng-0.1420.20060201.ebuild,
+  +madwifi-ng-0.1440.20060206.ebuild, +madwifi-ng-0.1443.20060207.ebuild,
+  +madwifi-ng-0.1473.20060312.ebuild, +madwifi-ng-0.1485.20060325.ebuild,
+  +madwifi-ng-0.1502.20060414.ebuild:
+  Renamed from net-wireless/madwifi-driver to net-wireless/madwifi-ng.
+
+*madwifi-driver-0.1485.20060325 (27 Mar 2006)
+
+  27 Mar 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +madwifi-driver-0.1485.20060325.ebuild:
+  New madwifi-ng snapshot.
+
+*madwifi-driver-0.1473.20060312 (12 Mar 2006)
+
+  12 Mar 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +madwifi-driver-0.1473.20060312.ebuild:
+  New snapshot, bug #125933.
+
+  05 Mar 2006; Henrik Brix Andersen <brix@gentoo.org>
+  madwifi-driver-0.1443.20060207.ebuild:
+  Stable on x86.
+
+  17 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
+  madwifi-driver-0.1_pre20050420-r1.ebuild,
+  madwifi-driver-0.1401.20060117.ebuild,
+  madwifi-driver-0.1420.20060201.ebuild,
+  madwifi-driver-0.1440.20060206.ebuild,
+  madwifi-driver-0.1443.20060207.ebuild:
+  Added note about remerging wpa_supplicant/hostapd after upgrading
+  madwifi-driver. Thanks to Chris Bainbridge in bug #122553.
+
+*madwifi-driver-0.1443.20060207 (07 Feb 2006)
+
+  07 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +madwifi-driver-0.1443.20060207.ebuild:
+  New snapshot. The udev rules are no longer needed, bug #121913.
+
+*madwifi-driver-0.1440.20060206 (06 Feb 2006)
+
+  06 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +madwifi-driver-0.1440.20060206.ebuild:
+  Version bump, bug #121783.
+
+  01 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
+  -madwifi-driver-0.1_pre20051111.ebuild:
+  Removed broken version.
+
+*madwifi-driver-0.1420.20060201 (01 Feb 2006)
+
+  01 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +madwifi-driver-0.1420.20060201.ebuild:
+  New snapshot. Fixes bug #120290.
+
+  17 Jan 2006; Roy Marples <uberlord@gentoo.org>
+  madwifi-driver-0.1401.20060117.ebuild:
+  Marked ~amd64.
+
+*madwifi-driver-0.1401.20060117 (17 Jan 2006)
+
+  17 Jan 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +madwifi-driver-0.1401.20060117.ebuild:
+  New snapshot, changed naming scheme to match upstream. Fixes bug #112853 and
+  bug #102104. Thank you to Sebastian Siewior, Uberlord and cryos for testing.
+
+  16 Nov 2005; Stefan Schweizer <genstef@gentoo.org>
+  madwifi-driver-0.1_pre20051111.ebuild:
+  Remove ath_rate_amrr if it is leftover from an old installation, #112728
+
+  15 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  madwifi-driver-0.1_pre20051111.ebuild:
+  Marked -amd64, kernel oops caused by traffic over the interface.
+
+*madwifi-driver-0.1_pre20051111 (13 Nov 2005)
+
+  13 Nov 2005; Stefan Schweizer <genstef@gentoo.org>
+  -files/madwifi-driver-0.1-arp-packets-33958.patch,
+  -files/madwifi-driver-2.6.8-20040814-proc_dointvec.patch,
+  -files/madwifi-multi-ssid-support.patch,
+  -madwifi-driver-0.1_pre20050107.ebuild,
+  -madwifi-driver-0.1_pre20050224.ebuild,
+  -madwifi-driver-0.1_pre20050420.ebuild,
+  -madwifi-driver-0.1_pre20050809.ebuild,
+  -madwifi-driver-0.1_pre20050809-r1.ebuild,
+  -madwifi-driver-0.1_pre20051031.ebuild,
+  +madwifi-driver-0.1_pre20051111.ebuild:
+  Version bump, remove old ebuilds
+
+  12 Nov 2005; Stefan Schweizer <genstef@gentoo.org>
+  madwifi-driver-0.1_pre20051031.ebuild:
+  Add wlan_scan_sta, wlan_scan_ap, postinst einfo note, new homepage, extra
+  docs, madwifi-tools DEPEND
+
+*madwifi-driver-0.1_pre20051031 (09 Nov 2005)
+
+  09 Nov 2005; Peter Johanson <latexer@gentoo.org>
+  +madwifi-driver-0.1_pre20051031.ebuild:
+  Bump with new CVS snapshot.
+
+*madwifi-driver-0.1_pre20050809-r1 (22 Aug 2005)
+*madwifi-driver-0.1_pre20050420-r1 (22 Aug 2005)
+
+  22 Aug 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +madwifi-driver-0.1_pre20050420-r1.ebuild,
+  +madwifi-driver-0.1_pre20050809-r1.ebuild:
+  Install header files for use by net-wireless/hostapd and
+  net-wireless/wpa_supplicant.
+
+*madwifi-driver-0.1_pre20050809 (10 Aug 2005)
+
+  10 Aug 2005; Stefan Schweizer <genstef@gentoo.org>
+  +madwifi-driver-0.1_pre20050809.ebuild:
+  Version bump thanks to Miles Lubin <miles@lubin.us> in bug 101872
+
+  30 Jun 2005; Joseph Jezak <josejx@gentoo.org>
+  madwifi-driver-0.1_pre20050420.ebuild:
+  Added ~ppc and PPC target, bug #97001.
+
+*madwifi-driver-0.1_pre20050420 (25 Apr 2005)
+
+  25 Apr 2005; <solar@gentoo.org> -madwifi-driver-0.1_pre20041019.ebuild,
+  -madwifi-driver-0.1_pre20050106.ebuild,
+  +madwifi-driver-0.1_pre20050420.ebuild:
+  - remove older snapshots that were using kernel-mod.eclass and updated snapshot
+
+*madwifi-driver-0.1_pre20050224 (27 Feb 2005)
+
+  27 Feb 2005; Stefan Schweizer <genstef@gentoo.org>
+  +madwifi-driver-0.1_pre20050224.ebuild:
+  New madwifi cvs-snapshot, bug 81766, and module build order restructure, bug
+  82752
+
+  09 Jan 2005; <solar@gentoo.org> madwifi-driver-0.1_pre20050107.ebuild:
+  - removing masking and put ebuild in ~arch
+
+  08 Jan 2005; Stefan Schweizer <genstef@gentoo.org>
+  madwifi-driver-0.1_pre20050107.ebuild:
+  S= --> S=/madwifi, thanks to Dominic Battre <dominic.battre@gmx.de> in bug
+  75654 comment #22
+
+*madwifi-driver-0.1_pre20050107 (07 Jan 2005)
+
+  07 Jan 2005; <solar@gentoo.org> +madwifi-driver-0.1_pre20050107.ebuild:
+  - linux-mod update from Stefan Schweizer
+
+*madwifi-driver-0.1_pre20050106 (07 Jan 2005)
+
+  07 Jan 2005; <solar@gentoo.org> -madwifi-driver-0.1_pre20040824-r1.ebuild,
+  -madwifi-driver-0.1_pre20040906.ebuild,
+  +madwifi-driver-0.1_pre20050106.ebuild:
+  - version bump for 2.6.x kernels
+
+  22 Oct 2004; <solar@gentoo.org> madwifi-driver-0.1_pre20041019.ebuild:
+  added app-arch/sharutils to DEPEND
+
+*madwifi-driver-0.1_pre20041019 (19 Oct 2004)
+
+  19 Oct 2004; <solar@gentoo.org> -madwifi-driver-0.1_pre20031213-r1.ebuild,
+  -madwifi-driver-0.1_pre20040108.ebuild,
+  -madwifi-driver-0.1_pre20040212.ebuild,
+  -madwifi-driver-0.1_pre20040514.ebuild,
+  -madwifi-driver-0.1_pre20040726.ebuild,
+  madwifi-driver-0.1_pre20040906.ebuild,
+  +madwifi-driver-0.1_pre20041019.ebuild:
+  Flushed a few of the older ebuilds and added a new 20041019 snapshot for
+  kernel 2.6.9 - madwifi-multi-ssid.patch still appears to be needed
+
+*madwifi-driver-0.1_pre20040906 (06 Sep 2004)
+
+  06 Sep 2004; <solar@gentoo.org> -madwifi-driver-0.1_pre20040824.ebuild,
+  +madwifi-driver-0.1_pre20040906.ebuild:
+  updated the cvs snapshot of madwifi-driver. The WPA branch was merged back
+  into HEAD
+
+*madwifi-driver-0.1_pre20040824-r1 (29 Aug 2004)
+
+  29 Aug 2004; <solar@gentoo.org>
+  +files/madwifi-driver-2.6.8-20040814-proc_dointvec.patch,
+  +files/madwifi-multi-ssid-support.patch,
+  +madwifi-driver-0.1_pre20040824-r1.ebuild:
+  update for 2.6.8 kernels
+
+  24 Aug 2004; <solar@gentoo.org> :
+  updated snapshot, pulling from the wpa branch
+
+*madwifi-driver-0.1_pre20040726 (26 Jul 2004)
+
+  26 Jul 2004; <solar@gentoo.org> madwifi-driver-0.1_pre20040726.ebuild,
+  files/madwifi-driver-0.1-arp-packets-33958.patch:
+  new snapshot and added patch from madwifi mailing list which resolves corrupt
+  frames on wlan0 when ath0 and wlan0 are in the same bridge
+
+  15 May 2004; Peter Johanson <latexer@gentoo.org>
+  madwifi-driver-0.1_pre20040514.ebuild:
+  Small fix for 2.6 kernels. Silly me.
+
+*madwifi-driver-0.1_pre20040514 (14 May 2004)
+
+  14 May 2004; Peter Johanson <latexer@gentoo.org>
+  madwifi-driver-0.1_pre20040514.ebuild:
+  Bump with new CVS snapshot. Includes small changes to handing of makefile variables.
+
+*madwifi-driver-0.1_pre20040212 (12 Feb 2004)
+
+  12 Feb 2004; Stephen Diener <sediener@gentoo.org>
+  madwifi-driver-0.1_pre20030702.ebuild,
+  madwifi-driver-0.1_pre20030802.ebuild,
+  madwifi-driver-0.1_pre20031110.ebuild,
+  madwifi-driver-0.1_pre20031213-r1.ebuild,
+  madwifi-driver-0.1_pre20031213.ebuild,
+  madwifi-driver-0.1_pre20040212.ebuild:
+  Cleared out all but the last three monthly snapshots.  Added Febs snap.
+
+*madwifi-driver-0.1_pre20040108 (08 Jan 2004)
+
+  08 Jan 2004; Stephen Diener <sediener@gentoo.org>
+  madwifi-driver-0.1_pre20040108.ebuild:
+  monthly CVS snapshot for Jan
+
+*madwifi-driver-0.1_pre20031213-r1 (19 Dec 2003)
+
+  19 Dec 2003; Stephen Diener <sediener@gentoo.org>
+  madwifi-driver-0.1_pre20031213-r1.ebuild:
+  Modified to work with 2.6 kernels: thanks to flokno@gmx.net and Jani Vaarala
+  <flame@pymgyprojects.com> for debugging
+
+*madwifi-driver-0.1_pre20031213 (13 Dec 2003)
+
+  13 Dec 2003; Stephen Diener <sediener@gentoo.org>
+  madwifi-driver-0.1_pre20031213.ebuild:
+  new monthly snapshot as promised
+
+  11 Nov 2003; Peter Johanson <latexer@gentoo.org> metadata.xml:
+  Now in the better "mobile" herd
+
+*madwifi-driver-0.1_pre20030802 (03 Aug 2003)
+
+  03 Aug 2003; Stephen Diener <sediener@gentoo.org>
+  madwifi-driver-0.1_pre20030802.ebuild:
+  New release
+
+*madwifi-driver-0.1_pre20030702 (18 Jul 2003)
+
+  18 Jul 2003; Peter Johanson <latexer@gentoo.org>
+  madwifi-driver-0.1_pre20030702.ebuild:
+  Initial import. Drivers for the Atheros chipset (a/b/g)
+
