@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.78 2006/04/12 02:49:02 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.79 2006/04/14 15:58:02 joshuabaergen Exp $
+
+*mesa-6.5-r2 (14 Apr 2006)
+
+  14 Apr 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/change-default-dri-driver-dir-X7.1.patch, +mesa-6.5-r2.ebuild:
+  Revision bump to use new paths for drivers.  Drivers now sit in
+  /usr/$(get_libdir)/dri, rather than /usr/$(get_libdir)/xorg/modules/dri .
 
 *mesa-6.5-r1 (12 Apr 2006)
 
