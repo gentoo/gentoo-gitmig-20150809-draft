@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.3 2006/04/14 12:04:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.4 2006/04/14 16:43:53 wolf31o2 Exp $
 
 inherit games games-ut2k4mod
 
@@ -25,7 +25,7 @@ Ddir=${D}/${dir}
 grabdirs() {
 	for d in {Music,Sounds,Speech,StaticMeshes,Textures} ; do
 		if [[ -d "${CDROM_ROOT}/$1/${d}" ]] ; then
-			echo "Copying ${CDROM_ROOT}$1${d}"
+			echo "Copying ${CDROM_ROOT}/$1${d}"
 			cp -r "${CDROM_ROOT}/$1/${d}" "${Ddir}" || die "copying $1"
 		fi
 	done
@@ -170,6 +170,24 @@ src_install() {
 	rm -f "${Ddir}"/System/{{License,Manifest}.smt,{ucc,StdOut}.log}
 	rm -f "${Ddir}"/System/{User,UT2004,Manifest}.ini
 	rm -f "${Ddir}"/System/{Manifest.int,Packages.md5}
+
+	# Removing file collisions with ut2004-3369-r4
+	rm -f "${Ddir}"/Help/UT2004Logo.bmp
+	rm -f "${Ddir}"/System/{ALAudio.kot,AS-{Convoy,FallenCity,Glacier}.kot,bonuspack.{det,est,frt},BonusPack.{int,itt,u}}
+	rm -f "${Ddir}"/System/{Build.ini,CacheRecords.ucl,Core.{est,frt,int,itt,u},CTF-January.kot,D3DDrv.kot,DM-1on1-Squader.kot}
+	rm -f "${Ddir}"/System/{{Editor,Engine,Gameplay,GamePlay,UnrealGame,UT2k4Assault,XInterface,XPickups,xVoting,XVoting,XWeapons,XWebAdmin}.{det,est,frt,int,itt,u}}
+	rm -f "${Ddir}"/System/{Fire.u,IpDrv.u,License.int,ONS-ArcticStronghold.kot}
+	rm -f "${Ddir}"/System/{{OnslaughtFull,onslaughtfull,UT2k4AssaultFull}.{det,est,frt,itt,u}}
+	rm -f "${Ddir}"/System/{{GUI2K4,Onslaught,skaarjpack,SkaarjPack,XGame}.{det,est,frt,int,itt,kot,u}}
+	rm -f "${Ddir}"/System/{{Setup,Window}.{det,est,frt,int,itt,kot}}
+	rm -f "${Ddir}"/System/{XPlayers.{det,est,frt,int,itt}}
+	rm -f "${Ddir}"/System/{ucc-bin,UnrealEd.u,ut2004-bin,UTClassic.u,UTV2004c.u,UTV2004s.u,UWeb.u,Vehicles.kot,Vehicles.u,Xweapons.itt}
+	rm -f "${Ddir}"/System/{XAdmin.kot,XAdmin.u,XMaps.det,XMaps.est}
+	rm -f "${Ddir}"/Web/ServerAdmin/{admins_home.htm,current_bots.htm,ut2003.css}
+	rm -f "${Ddir}"/Web/ServerAdmin/ClassicUT/current_bots.htm
+	rm -f "${Ddir}"/Web/ServerAdmin/UnrealAdminPage/{adminsframe.htm,admins_home.htm,admins_menu.htm,current_bots.htm,currentframe.htm,current_menu.htm}
+	rm -f "${Ddir}"/Web/ServerAdmin/UnrealAdminPage/{defaultsframe.htm,defaults_menu.htm,footer.inc,mainmenu.htm,mainmenu_itemd.inc,rootframe.htm,UnrealAdminPage.css}
+	rm -f "${Ddir}"/Web/ServerAdmin/UT2K3Stats/{admins_home.htm,current_bots.htm,ut2003stats.css}
 
 	# Removing file collisions with ut2004-bonuspack-ece
 	rm -f "${Ddir}"/Animations/{MechaSkaarjAnims,MetalGuardAnim,NecrisAnim,ONSBPAnimations}.ukx
