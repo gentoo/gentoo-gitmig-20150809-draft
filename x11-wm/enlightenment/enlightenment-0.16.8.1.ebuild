@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.1.ebuild,v 1.1 2006/03/31 03:22:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.1.ebuild,v 1.2 2006/04/14 18:42:06 flameeyes Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Enlightenment Window Manager"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/enlightenment/e16-${PV/_/-}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="esd nls xinerama xrandr doc"
 
 RDEPEND="esd? ( >=media-sound/esound-0.2.19 )
@@ -31,12 +31,22 @@ RDEPEND="esd? ( >=media-sound/esound-0.2.19 )
 		x11-proto/xf86vidmodeproto
 		xinerama? ( x11-libs/libXinerama x11-proto/xineramaproto )
 		x11-proto/xproto
-		) virtual/x11 )"
+		) virtual/x11 )
+	nls? ( virtual/libintl )
+	virtual/libiconv"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 PDEPEND="doc? ( app-doc/edox-data )"
 
 S=${WORKDIR}/e16-${PV/_pre?}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/e16-${PV}-iconv.patch"
+	eautomake
+}
 
 src_compile() {
 	econf \

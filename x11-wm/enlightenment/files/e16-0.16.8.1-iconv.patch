@@ -1,0 +1,12 @@
+Index: e16-0.16.8.1/src/Makefile.am
+===================================================================
+--- e16-0.16.8.1.orig/src/Makefile.am
++++ e16-0.16.8.1/src/Makefile.am
+@@ -123,6 +123,7 @@ e16_SOURCES = \
+ LDADD = \
+ 	@LIBINTL@		\
+ 	@ecore_libs@		\
++	$(LTLIBICONV)		\
+ 	$(ESD_LIBS) 		\
+ 	$(IMLIB_LIBS) 		\
+ 	$(X_PRE_LIBS) 		\

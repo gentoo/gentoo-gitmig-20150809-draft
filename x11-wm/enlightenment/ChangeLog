@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.43 2006/03/31 03:22:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.44 2006/04/14 18:42:06 flameeyes Exp $
+
+  14 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/e16-0.16.8.1-iconv.patch, enlightenment-0.16.8.1.ebuild:
+  Fix virtual/libintl and virtual/libiconv dependencies, add patch to link
+  against libintl when the libc doesn't provide the iconv functions. Add
+  ~x86-fbsd keyword.
 
 *enlightenment-0.16.8.1 (31 Mar 2006)
 
