@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.81 2006/04/14 23:19:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.82 2006/04/14 23:22:47 zzam Exp $
+
+  14 Apr 2006; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.0.ebuild:
+  Marked stable on x86
 
   14 Apr 2006; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.0.ebuild:
   Moved WANT_AUTOCONF to pkg_setup - Thanks to Przemyslaw Maciag
