@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ut2004-bonuspack-ece-1-r2.ebuild,v 1.2 2006/04/13 17:51:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ut2004-bonuspack-ece-1-r2.ebuild,v 1.3 2006/04/14 11:29:16 wolf31o2 Exp $
 
 inherit games games-ut2k4mod
 
@@ -27,6 +27,11 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/UT2004MegaPack
 dir=${GAMES_PREFIX_OPT}/ut2004
 Ddir=${D}/${dir}
+
+src_unpack() {
+	# Override games-ut2k4mod
+	unpack ${A}
+}
 
 src_install() {
 	# Remove megapack files which are not in ece
