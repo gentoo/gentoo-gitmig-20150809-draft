@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.44 2006/02/08 21:20:29 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.45 2006/04/14 09:35:04 ehmsen Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -77,6 +77,7 @@ RDEPEND="${DEPEND}
 	!dev-tex/eurosym
 	!dev-tex/extsizes
 	>=dev-lang/perl-5.2
+	dev-perl/perl-tk
 	dev-util/dialog"
 PROVIDE="virtual/tetex"
 
