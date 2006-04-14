@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/icon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.16 2006/04/11 13:34:41 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.17 2006/04/14 23:47:26 halcy0n Exp $
+
+  14 Apr 2006; Mark Loeser <halcy0n@gentoo.org> icon-9.4.3-r2.ebuild:
+  Stable on x86; bug #125258
 
 *icon-9.4.3-r2 (11 Apr 2006)
 
