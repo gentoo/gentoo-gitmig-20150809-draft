@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.20 2006/04/02 23:38:09 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.21 2006/04/14 16:28:33 kugelfang Exp $
+
+*eselect-1.0.2 (14 Apr 2006)
+
+  14 Apr 2006; Danny van Dyk <kugelfang@gentoo.org> -eselect-1.0.1.ebuild,
+  +eselect-1.0.2.ebuild:
+  Added bugfix release 1.0.2. Removed 1.0.1 due to a slightly broken env.eselect.
 
 *eselect-1.0.1 (02 Apr 2006)
 
