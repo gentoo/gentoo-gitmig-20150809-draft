@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0.ebuild,v 1.1 2006/02/20 08:59:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0.ebuild,v 1.2 2006/04/14 22:55:43 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -85,6 +85,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	#epatch ${FILESDIR}/lirc-0.7.0-xbox.patch.bz2
+	epatch ${FILESDIR}/${P}-kernel-2.6.16.diff
 
 	filter-flags -Wl,-O1
 	sed -i -e 's:CFLAGS="-O2:CFLAGS=""\n#CFLAGS="-O2:' configure.in

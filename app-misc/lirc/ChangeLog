@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.79 2006/03/06 20:18:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.80 2006/04/14 22:55:43 zzam Exp $
+
+  14 Apr 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/lirc-0.8.0-kernel-2.6.16.diff, lirc-0.8.0.ebuild:
+  Added patch to compile against Kernel 2.6.16 - Thanks to Paul Marks
+  <pmarks@purdue.edu> and Marc Rodarte <mrodarte19@gmail.com> - See Bug
+  #127122
 
   06 Mar 2006; Simon Stelling <blubb@gentoo.org> lirc-0.7.0-r1.ebuild:
   somehow the files vanished from SRC_URI.. fixing that

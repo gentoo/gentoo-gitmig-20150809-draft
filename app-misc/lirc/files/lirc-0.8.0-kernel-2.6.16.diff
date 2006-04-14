@@ -1,0 +1,133 @@
+diff -Naur lirc-0.8.0/drivers/kcompat.h lirc-0.8.0p1/drivers/kcompat.h
+--- lirc-0.8.0/drivers/kcompat.h	2006-01-07 14:51:31.000000000 -0600
++++ lirc-0.8.0p1/drivers/kcompat.h	2006-04-05 17:07:44.000000000 -0500
+@@ -5,6 +5,12 @@
+ 
+ #include <linux/version.h>
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,16)
++#define LIRC_THIS_MODULE(x) x,
++#else /* >= 2.6.16 */
++#define LIRC_THIS_MODULE(x)
++#endif
++
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
+ 
+ #include <linux/device.h>
+@@ -245,6 +251,11 @@
+ #   define I2C_ALGO_BIT 0
+ #endif
+ 
++/* removed in 2.6.16 */
++#ifndef I2C_DRIVERID_EXP3
++#  define I2C_DRIVERID_EXP3 0xf003
++#endif
++
+ /*************************** USB specific *****************************/
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2, 4, 0)
+ #include <linux/usb.h>
+diff -Naur lirc-0.8.0/drivers/lirc_atiusb/lirc_atiusb.c lirc-0.8.0p1/drivers/lirc_atiusb/lirc_atiusb.c
+--- lirc-0.8.0/drivers/lirc_atiusb/lirc_atiusb.c	2005-10-29 09:18:53.000000000 -0500
++++ lirc-0.8.0p1/drivers/lirc_atiusb/lirc_atiusb.c	2006-04-05 17:12:34.000000000 -0500
+@@ -1180,7 +1180,7 @@
+ }
+ 
+ static struct usb_driver usb_remote_driver = {
+-	.owner =	THIS_MODULE,
++	LIRC_THIS_MODULE(.owner = THIS_MODULE)
+ 	.name =		DRIVER_NAME,
+ 	.probe =	usb_remote_probe,
+ 	.disconnect =	usb_remote_disconnect,
+diff -Naur lirc-0.8.0/drivers/lirc_i2c/lirc_i2c.c lirc-0.8.0p1/drivers/lirc_i2c/lirc_i2c.c
+--- lirc-0.8.0/drivers/lirc_i2c/lirc_i2c.c	2005-10-20 13:25:58.000000000 -0500
++++ lirc-0.8.0p1/drivers/lirc_i2c/lirc_i2c.c	2006-04-05 17:07:44.000000000 -0500
+@@ -360,9 +360,16 @@
+ static int ir_command(struct i2c_client *client, unsigned int cmd, void *arg);
+ 
+ static struct i2c_driver driver = {
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 16)
+         name:           "i2c ir driver",
+-        id:             I2C_DRIVERID_EXP3, /* FIXME */
+         flags:          I2C_DF_NOTIFY,
++#else
++	.driver = {
++		owner:  THIS_MODULE,
++		name:   "i2c ir driver",
++	},
++#endif
++        id:             I2C_DRIVERID_EXP3, /* FIXME */
+         attach_adapter: ir_probe,
+         detach_client:  ir_detach,
+         command:        ir_command,
+diff -Naur lirc-0.8.0/drivers/lirc_igorplugusb/lirc_igorplugusb.c lirc-0.8.0p1/drivers/lirc_igorplugusb/lirc_igorplugusb.c
+--- lirc-0.8.0/drivers/lirc_igorplugusb/lirc_igorplugusb.c	2005-03-21 08:39:38.000000000 -0600
++++ lirc-0.8.0p1/drivers/lirc_igorplugusb/lirc_igorplugusb.c	2006-04-05 17:13:00.000000000 -0500
+@@ -615,7 +615,7 @@
+ };
+ 
+ static struct usb_driver usb_remote_driver = {
+-	.owner =	THIS_MODULE,
++	LIRC_THIS_MODULE(.owner = THIS_MODULE)
+ 	.name =		DRIVER_NAME,
+ 	.probe =	usb_remote_probe,
+ 	.disconnect =	usb_remote_disconnect,
+diff -Naur lirc-0.8.0/drivers/lirc_imon/lirc_imon.c lirc-0.8.0p1/drivers/lirc_imon/lirc_imon.c
+--- lirc-0.8.0/drivers/lirc_imon/lirc_imon.c	2005-12-03 09:18:07.000000000 -0600
++++ lirc-0.8.0p1/drivers/lirc_imon/lirc_imon.c	2006-04-05 22:47:28.000000000 -0500
+@@ -201,7 +201,7 @@
+ 
+ /* USB Device data */
+ static struct usb_driver imon_driver = {
+-	.owner 		= THIS_MODULE,
++	LIRC_THIS_MODULE(.owner = THIS_MODULE)
+ 	.name 		= MOD_NAME,
+ 	.probe 		= imon_probe,
+ 	.disconnect 	= imon_disconnect,
+diff -Naur lirc-0.8.0/drivers/lirc_mceusb/lirc_mceusb.c lirc-0.8.0p1/drivers/lirc_mceusb/lirc_mceusb.c
+--- lirc-0.8.0/drivers/lirc_mceusb/lirc_mceusb.c	2005-10-29 09:18:53.000000000 -0500
++++ lirc-0.8.0p1/drivers/lirc_mceusb/lirc_mceusb.c	2006-04-05 17:13:47.000000000 -0500
+@@ -222,7 +222,7 @@
+ 
+ /* usb specific object needed to register this driver with the usb subsystem */
+ static struct usb_driver mceusb_driver = {
+-	.owner =	THIS_MODULE,
++	LIRC_THIS_MODULE(.owner = THIS_MODULE)
+ 	.name =		DRIVER_NAME,
+ 	.probe =	mceusb_probe,
+ 	.disconnect =	mceusb_disconnect,
+diff -Naur lirc-0.8.0/drivers/lirc_mceusb2/lirc_mceusb2.c lirc-0.8.0p1/drivers/lirc_mceusb2/lirc_mceusb2.c
+--- lirc-0.8.0/drivers/lirc_mceusb2/lirc_mceusb2.c	2005-10-29 09:18:53.000000000 -0500
++++ lirc-0.8.0p1/drivers/lirc_mceusb2/lirc_mceusb2.c	2006-04-05 17:14:49.000000000 -0500
+@@ -585,7 +585,7 @@
+ }
+ 
+ static struct usb_driver usb_remote_driver = {
+-	.owner =	THIS_MODULE,
++	LIRC_THIS_MODULE(.owner = THIS_MODULE)
+ 	.name =		DRIVER_NAME,
+ 	.probe =	usb_remote_probe,
+ 	.disconnect =	usb_remote_disconnect,
+diff -Naur lirc-0.8.0/drivers/lirc_sasem/lirc_sasem.c lirc-0.8.0p1/drivers/lirc_sasem/lirc_sasem.c
+--- lirc-0.8.0/drivers/lirc_sasem/lirc_sasem.c	2005-12-03 09:18:07.000000000 -0600
++++ lirc-0.8.0p1/drivers/lirc_sasem/lirc_sasem.c	2006-04-05 17:16:34.000000000 -0500
+@@ -189,7 +189,7 @@
+ 
+ /* USB Device data */
+ static struct usb_driver sasem_driver = {
+-	.owner 		= THIS_MODULE,
++	LIRC_THIS_MODULE(.owner = THIS_MODULE)
+ 	.name 		= MOD_NAME,
+ 	.probe 		= sasem_probe,
+ 	.disconnect 	= sasem_disconnect,
+diff -Naur lirc-0.8.0/drivers/lirc_streamzap/lirc_streamzap.c lirc-0.8.0p1/drivers/lirc_streamzap/lirc_streamzap.c
+--- lirc-0.8.0/drivers/lirc_streamzap/lirc_streamzap.c	2006-01-06 01:18:03.000000000 -0600
++++ lirc-0.8.0p1/drivers/lirc_streamzap/lirc_streamzap.c	2006-04-05 17:17:39.000000000 -0500
+@@ -177,7 +177,7 @@
+ /* usb specific object needed to register this driver with the usb subsystem */
+ 
+ static struct usb_driver streamzap_driver = {
+-	.owner =	THIS_MODULE,
++	LIRC_THIS_MODULE(.owner = THIS_MODULE)
+ 	.name =		DRIVER_NAME,
+ 	.probe =	streamzap_probe,
+ 	.disconnect =	streamzap_disconnect,
