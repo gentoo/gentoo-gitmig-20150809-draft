@@ -7,5 +7,5 @@ MD5 c6d1b2e0c7ae03ce2de856f00f4718d8 files/wpa_supplicant-0.4.8-wpa_cli.action 1
 MD5 7557dcc784bddabf268e1c49eee4fb59 files/wpa_supplicant-0.5.2-wpa_cli.sh 1229
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 e160e685fea1c7c2717acebbe4fe6dff wpa_supplicant-0.4.7.ebuild 3564
-MD5 5703ff36abc693c802f60f54bdcc121f wpa_supplicant-0.4.8.ebuild 3898
-MD5 8866ba8d5dd8198dd80c7b0430e9a2b8 wpa_supplicant-0.5.2.ebuild 4309
+MD5 3ecc467d6e993983e8fc11a3a021b0e1 wpa_supplicant-0.4.8.ebuild 3898
+MD5 5655216e36f10baca198b03f253ea260 wpa_supplicant-0.5.2.ebuild 4309
