@@ -1,23 +1,7 @@
 # ChangeLog for games-fps/unreal
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.8 2005/10/21 17:43:48 wolf31o2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.9 2006/04/14 11:57:46 wolf31o2 Exp $
 
-  21 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org> unreal-226.ebuild:
-  Added addition dir variable to games_make_wrapper for bug #109793.
+  14 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> unreal-226.ebuild:
+  Moved games_pkg_setup to beginning of pkg_setup and ported to modular X.
 
-  16 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> unreal-226.ebuild:
-  needs app-arch/unzip; tidy
-
-  27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> unreal-226.ebuild:
-  add missing opengl to IUSE
-
-  28 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> :
-  Fixing digest and closing bug #43206.
-
-*unreal-226 (23 Oct 2002)
-
-  08 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
-  Re-do somewhat to fix issues with newer UT #30611.
-
-  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
-  Initial import. Ebuild submitted by me.

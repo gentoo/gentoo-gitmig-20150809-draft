@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.12 2005/10/21 17:43:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.13 2006/04/14 11:57:46 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -17,16 +17,27 @@ IUSE="X opengl"
 
 DEPEND="sys-libs/lib-compat
 	app-arch/unzip"
-RDEPEND="X? ( virtual/x11 )
-	opengl? ( virtual/opengl )"
+RDEPEND="!amd64? (
+		|| (
+			(
+				x11-libs/libXext
+				x11-libs/libX11
+				x11-libs/libXau
+				x11-libs/libXdmcp )
+			virtual/x11 )
+		=media-libs/libsdl-1.2*
+		opengl? ( virtual/opengl ) )
+	amd64? ( app-emulation/emul-linux-x86-sdl
+		app-emulation/emul-linux-x86-baselibs
+		app-emulation/emul-linux-x86-xlibs )"
 
 S="${WORKDIR}"
 
 pkg_setup() {
+	games_pkg_setup
 	export CDROM_NAME_1="Unreal CD"
 	export CDROM_NAME_2="Unreal Tournament CD"
 	cdrom_get_cds System/Unreal.ini System/UnrealTournament.ini
-	games_pkg_setup
 }
 
 src_unpack() {
