@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.2.ebuild,v 1.1 2006/04/14 22:50:28 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.2.ebuild,v 1.2 2006/04/15 19:39:03 nixnut Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
@@ -24,7 +24,7 @@ for X in ${SHORTLANGS} ; do
 	SRC_URI="${SRC_URI} linguas_${X%%-*}? ( mirror://gentoo/firefox-${X}-${PV}.xpi )"
 done
 
-KEYWORDS="-* ~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="-* ~amd64 ~ia64 ppc ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="java mozdevelop"
