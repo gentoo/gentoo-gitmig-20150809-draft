@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.163 2006/04/13 18:53:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.164 2006/04/15 18:12:16 kingtaco Exp $
+
+  15 Apr 2006; Mike Doty <kingtaco@gentoo.org> koffice-1.5.0.ebuild:
+  ~amd64 per jhuebel
 
   13 Apr 2006; Carsten Lohrke <carlo@gentoo.org> koffice-1.5.0.ebuild:
   Missing ~ppc keyword.
