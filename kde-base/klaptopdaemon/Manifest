@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 552082392ff16c90d0a57be50cf9093d ChangeLog 6074
-RMD160 356da9eac5e770870bf57eb50c876194c4636ae5 ChangeLog 6074
-SHA256 324e2e9ad581c4ec0f2b08b6d49a7cdf80227f2d691bb9c7cfde69a5d0a882ce ChangeLog 6074
+MD5 41d26f19a9b23190e353eb0484dac11e ChangeLog 6183
+RMD160 16890c5f4265c34b9ead4b66b22f640eef74e9e9 ChangeLog 6183
+SHA256 64cce1bd153abf04b13dec6688220af15eeb2fb8c147d2575818740d18be3585 ChangeLog 6183
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-klaptopdaemon-3.4.1 212
 RMD160 082e4ebaa6fdaa57b2afd3b86f625546fd132255 files/digest-klaptopdaemon-3.4.1 212
 SHA256 1d91d34c31e6b41919fab52855c22eac84a1d67cf046f583b321ad6cbc2a460e files/digest-klaptopdaemon-3.4.1 212
@@ -34,16 +31,9 @@ SHA256 03f55322c3d9a68b47d1e3971b15c52917b9f1cd235c9f5b5fe4d74e91f52791 klaptopd
 MD5 9feddbacae796c4cdcf24de62ba31573 klaptopdaemon-3.4.3.ebuild 456
 RMD160 55556cd219fd4c5df4e90703a63821d672262845 klaptopdaemon-3.4.3.ebuild 456
 SHA256 cd8867dbb54c451cdd4ada79313f562e4bc9ccbeea7b9b916b10a12f96ca289e klaptopdaemon-3.4.3.ebuild 456
-MD5 43a4c8530146bb40df8b6f66dc8bdb94 klaptopdaemon-3.5.2.ebuild 743
-RMD160 e376538f20d0543ef0cebf4c9a3e23ab2afeef55 klaptopdaemon-3.5.2.ebuild 743
-SHA256 4097d9452164045aca88b5f653c5cd263004fda4661576425445f69d337d81f4 klaptopdaemon-3.5.2.ebuild 743
+MD5 b43792724a2477b27a780bc72f7e143d klaptopdaemon-3.5.2.ebuild 754
+RMD160 a9b8c610f4e074c63d27aa156a81ce52344d0a45 klaptopdaemon-3.5.2.ebuild 754
+SHA256 c66af87305b18972478a6e479a12c91fc90b74d4aebb24d45911631881ed6241 klaptopdaemon-3.5.2.ebuild 754
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENHXyAiZjviIA2XgRAhtQAKDQshzTfHL/vknJ8ZP3mBEIMNreQgCfQs18
-8nLKRtSchdAo0WQy7v+BfXU=
-=m9lU
------END PGP SIGNATURE-----
