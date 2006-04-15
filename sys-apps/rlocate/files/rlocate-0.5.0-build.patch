@@ -1,0 +1,36 @@
+--- src/Makefile.in
++++ src/Makefile.in
+@@ -192,9 +192,9 @@
+ 		  rlocate.h rlocate.c cmds.c cmds.h conf.c conf.h utils.c \
+ 	   	  utils.h
+ 
+-SUBDIRS = rlocate-daemon rlocate-module rlocate-scripts
++SUBDIRS = rlocate-daemon rlocate-scripts
+ EXTRA_DIST = rlocate.cron rlocate-scripts
+-AM_CFLAGS = -O2 -Wall
++AM_CFLAGS = -Wall
+ all: all-recursive
+ 
+ .SUFFIXES:
+--- src/rlocate-daemon/Makefile.in
++++ src/rlocate-daemon/Makefile.in
+@@ -171,7 +171,7 @@
+ 	      -DRLOCATE_GRP=\"$(rlocate_group)\"
+ 
+ rlocated_SOURCES = ../pidfile.h ../pidfile.c rlocated.c
+-AM_CFLAGS = -O2 -Wall
++AM_CFLAGS = -Wall
+ all: all-am
+ 
+ .SUFFIXES:
+--- src/rlocate-scripts/Makefile.in
++++ src/rlocate-scripts/Makefile.in
+@@ -345,8 +345,6 @@
+ 	rm $(srcdir)/rlocate-checkpoint.temp
+ 
+ install-exec-hook:
+-@FREEBSD_TRUE@	-/usr/sbin/pw groupadd $(rlocate_group)
+-@FREEBSD_FALSE@	-/usr/sbin/groupadd $(rlocate_group)
+ 	chown $(root_uid):$(rlocate_group) $(DESTDIR)$(bindir)/rlocate-checkpoint
+ 	chmod 2755 $(DESTDIR)$(bindir)/rlocate-checkpoint
+ 
