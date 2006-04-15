@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.95 2006/03/16 19:28:45 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.96 2006/04/15 01:21:48 geoman Exp $
+
+  15 Apr 2006; Stephen P. Becker <geoman@gentoo.org> atk-1.10.3.ebuild:
+  stable on mips
 
 *atk-1.11.3 (16 Mar 2006)
 
