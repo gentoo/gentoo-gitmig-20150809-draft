@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 01d0aff5c93baecf88e75e360c7c69b6 ChangeLog 3618
 RMD160 3c56f75859c92fcbb21036e2309a39fc79088ecc ChangeLog 3618
 SHA256 ad5a40827fed9b410cde65cd6a73adfd5527edfc418d499ebf9aa67e4e4c10d5 ChangeLog 3618
@@ -28,3 +31,10 @@ SHA256 8e262c7ffe726d7d290c6a67d1678b0792061d3edaa03b0926b2366b4a82f7c2 xfce4-se
 MD5 c62cc782948fd9fa1ef40adaff7ec1c4 xfce4-session-4.2.3.ebuild 573
 RMD160 bbda6e2a3be60ba85c657b3796fe715e33d86c95 xfce4-session-4.2.3.ebuild 573
 SHA256 fdd340f8958451bf9918cadc05dd9dfba9535e4547e64c0560b35498e582f34c xfce4-session-4.2.3.ebuild 573
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQFM8CRZPokWLroQRAquOAKC0mgkk19Fg5pRbFSRRgS9rsYegeQCcDLqS
++v6l1q0OZ/PF3bqQ9md8pTY=
+=gKut
+-----END PGP SIGNATURE-----
