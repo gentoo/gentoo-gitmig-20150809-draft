@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-art
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-art/ChangeLog,v 1.9 2006/02/18 20:06:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-art/ChangeLog,v 1.10 2006/04/15 12:16:21 blubb Exp $
+
+  15 Apr 2006; Simon Stelling <blubb@gentoo.org>
+  files/gnome-splashscreen-manager.desktop:
+  gnome-splashscreen-manager doesn't require a terminal to run; bug 126844.
+  Thanks to Adam Babcock for the updated file
 
 *gnome-art-0.2-r2 (18 Feb 2006)
 
