@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 193f12026530b6fa23054aadb19e392b ChangeLog 42970
-RMD160 b6383aabc9d1178243a7d87bebce90bfe10ae9cc ChangeLog 42970
-SHA256 e9630ff1e559983b2afee1a889fec6361687667b14306b1deedc2c37b8010b5b ChangeLog 42970
+MD5 d08cfe4dab6296b42c8892022647f346 ChangeLog 43090
+RMD160 b42196cb54a382bbc44b63a6a57efaadb7c6bebe ChangeLog 43090
+SHA256 b0f273327f7ca8c912df25c0069b64c313682cd0e57539ad0685176115012af1 ChangeLog 43090
 MD5 328c58524dbe1f58eea781194cc7de94 files/1.5/mozilla-firefox-1.5-history.patch 2376
 RMD160 2e6a58c257c5a1455c9440b5d1f3829a2149c970 files/1.5/mozilla-firefox-1.5-history.patch 2376
 SHA256 bad2ff1c2534fb55851fb43bbb1a123511e828eca52e88589f8fbdad42e6a6ef files/1.5/mozilla-firefox-1.5-history.patch 2376
@@ -61,9 +58,9 @@ SHA256 0cc5126362a12cee42ec1197c528a804cf36859329dd2c6d9225726831d14b8b metadata
 MD5 88a8a7b16c2a9376c68e91be09ea0ba5 mozilla-firefox-1.0.7-r4.ebuild 9847
 RMD160 539d5c3ce8b2d225fa8871fd2722b52506ab5eef mozilla-firefox-1.0.7-r4.ebuild 9847
 SHA256 6dd31547c54e7ddb6e0faca73242aa74a7405ee4c27124a3404fcbbd518536a2 mozilla-firefox-1.0.7-r4.ebuild 9847
-MD5 6c2425113c4748adfcfb8ff3179a3186 mozilla-firefox-1.0.8.ebuild 9723
-RMD160 de247ad1e43e8c6d9121af02350b147165309f5a mozilla-firefox-1.0.8.ebuild 9723
-SHA256 322dea646ae757bf33c402810db98eb2aad5fdf3bc829e3703cdc984f81024cf mozilla-firefox-1.0.8.ebuild 9723
+MD5 7fc50d302afc30bfc6b0c20be8f87af9 mozilla-firefox-1.0.8.ebuild 9720
+RMD160 905f1e4dc0d2d38331474ee33be939c29f1f79f0 mozilla-firefox-1.0.8.ebuild 9720
+SHA256 c8e8e4a485137053ab83fdc3ee83b37e80762d230bc0592dfe04040c10ab0680 mozilla-firefox-1.0.8.ebuild 9720
 MD5 e3cf634bcdf4ad0ecf557403b85ff6c0 mozilla-firefox-1.5-r11.ebuild 9412
 RMD160 e48189d4e7c0225585ea57a26ce650a51b7f0642 mozilla-firefox-1.5-r11.ebuild 9412
 SHA256 9fc7917cdb2275adb873f1683bbaa2fb57ff9ca56daf6337fad68c5393a60c4f mozilla-firefox-1.5-r11.ebuild 9412
@@ -82,10 +79,3 @@ SHA256 261ec3b716ba36b57ed094acc2542ffa4039d1494717fb409d18a50efb13060b mozilla-
 MD5 14ed5982c79043c8dc8926bc3be71855 mozilla-firefox-1.5.0.2.ebuild 9014
 RMD160 0643d17dcf882bcd7002eaa7d6546e4a1ca73466 mozilla-firefox-1.5.0.2.ebuild 9014
 SHA256 c465d7fc11a8efae5fd73dc33e263f0fa9e94fe92fef35a9bfbd2295f956def8 mozilla-firefox-1.5.0.2.ebuild 9014
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEQUt8oFw4q70f3SsRApCDAKDIQywIZOJfqZCFFOb49BQtnEmEPQCfVWBr
-JL6BiUti6DY+ToflprGutS0=
-=FhCn
------END PGP SIGNATURE-----
