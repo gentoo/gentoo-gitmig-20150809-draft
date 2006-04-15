@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kregexpeditor
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kregexpeditor/ChangeLog,v 1.40 2006/04/06 02:40:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kregexpeditor/ChangeLog,v 1.41 2006/04/15 00:12:01 flameeyes Exp $
+
+  15 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kregexpeditor-3.5.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kregexpeditor-3.5.0.ebuild, -kregexpeditor-3.5.1.ebuild:

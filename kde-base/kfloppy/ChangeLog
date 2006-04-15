@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfloppy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.32 2006/04/06 01:48:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.33 2006/04/15 00:16:12 flameeyes Exp $
+
+  15 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> kfloppy-3.5.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kfloppy-3.5.0.ebuild,
   -kfloppy-3.5.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.38 2006/04/06 01:42:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.39 2006/04/15 00:09:19 flameeyes Exp $
+
+  15 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> kdf-3.5.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kdf-3.5.0.ebuild,
   -kdf-3.5.1.ebuild:

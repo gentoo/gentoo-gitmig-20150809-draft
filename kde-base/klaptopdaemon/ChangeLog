@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/klaptopdaemon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.45 2006/04/06 02:00:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.46 2006/04/15 00:14:38 flameeyes Exp $
+
+  15 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  klaptopdaemon-3.5.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -klaptopdaemon-3.5.0.ebuild, -klaptopdaemon-3.5.1.ebuild:

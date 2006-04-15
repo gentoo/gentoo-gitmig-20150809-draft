@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kjots
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.36 2006/04/06 01:59:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.37 2006/04/15 00:15:11 flameeyes Exp $
+
+  15 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> kjots-3.5.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kjots-3.5.0.ebuild,
   -kjots-3.5.1.ebuild:

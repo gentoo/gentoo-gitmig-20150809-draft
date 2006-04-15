@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwalletmanager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletmanager/ChangeLog,v 1.38 2006/04/06 03:05:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletmanager/ChangeLog,v 1.39 2006/04/15 00:13:59 flameeyes Exp $
+
+  15 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kwalletmanager-3.5.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   06 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kwalletmanager-3.5.0.ebuild, -kwalletmanager-3.5.1.ebuild:

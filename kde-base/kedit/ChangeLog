@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kedit/ChangeLog,v 1.39 2006/04/06 01:45:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kedit/ChangeLog,v 1.40 2006/04/15 00:11:18 flameeyes Exp $
+
+  15 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> kedit-3.5.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kedit-3.5.0.ebuild,
   -kedit-3.5.1.ebuild:
