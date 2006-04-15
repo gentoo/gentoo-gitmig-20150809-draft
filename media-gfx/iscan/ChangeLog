@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.4 2006/04/06 22:36:42 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.5 2006/04/15 00:05:28 sbriesen Exp $
+
+*iscan-2.0.0-r1 (15 Apr 2006)
+
+  15 Apr 2006; Stefan Briesenick <sbriesen@gentoo.org> +files/iscan-usb.sh,
+  +iscan-2.0.0-r1.ebuild:
+  auto-add 'epkowa' entry to dll.conf (bug #129198), fixing -X compile errors
+  if GTK isn't available (bug #129953), adding optional UDEV hotplug support
+  ('udev' use flag), adding hints that firmware files can be used also with
+  'snapscan' backend + adding firmware entries to snapscan.conf.
 
   06 Apr 2006; Stefan Briesenick <sbriesen@gentoo.org> -iscan-1.17.0.ebuild:
   removed old version.
