@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.4.ebuild,v 1.1 2006/03/13 02:02:37 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.4.ebuild,v 1.2 2006/04/15 16:03:45 xmerlin Exp $
 
 inherit flag-o-matic
 
@@ -19,7 +19,7 @@ DEPEND="
 	dev-util/pkgconfig
 	dev-lang/perl
 	net-misc/iputils
-	net-misc/openssh
+	virtual/ssh
 	net-libs/gnutls
 	ldirectord? (	sys-cluster/ipvsadm
 			dev-perl/Net-DNS

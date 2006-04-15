@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.43 2006/03/13 02:02:37 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.44 2006/04/15 16:03:45 xmerlin Exp $
+
+  15 Apr 2006; Christian Zoffoli <xmerlin@gentoo.org>
+  heartbeat-2.0.4.ebuild:
+  Changed ssh dep to virtual/ssh.
 
 *heartbeat-2.0.4 (13 Mar 2006)
 
