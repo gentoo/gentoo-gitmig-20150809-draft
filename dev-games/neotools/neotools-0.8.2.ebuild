@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.8.2.ebuild,v 1.1 2006/03/03 20:45:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.8.2.ebuild,v 1.2 2006/04/15 11:19:05 tupone Exp $
 
 inherit eutils autotools
 
@@ -25,6 +25,9 @@ src_unpack() {
 		-e 's/BUILD_STATIC/BUILD_DYNAMIC/g' \
 		-e 's/_static//g' \
 		nscemake/Makefile.am || die "makefile sed failed"
+	sed -i \
+		-e 's/ -Werror//' \
+		configure.in
 
 	epatch ${FILESDIR}/${P}-errno.patch
 
