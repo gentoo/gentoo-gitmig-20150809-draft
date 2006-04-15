@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.63 2006/03/30 04:05:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.64 2006/04/15 00:42:39 flameeyes Exp $
+
+  15 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  lighttpd-1.4.10-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> lighttpd-1.4.10-r1.ebuild:
   Mark 1.4.10-r1 ~ia64
