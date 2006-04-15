@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.109 2005/12/07 23:11:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.110 2006/04/15 17:18:34 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -114,8 +114,8 @@ prepgamesdirs() {
 		[[ ! -d ${D}/${dir} ]] && continue
 		(
 			gamesowners -R "${D}/${dir}"
-			find "${D}/${dir}" -type d -print0 | xargs --null chmod 750
-			find "${D}/${dir}" -type f -print0 | xargs --null chmod o-rwx,g+r
+			find "${D}/${dir}" -type d -print0 | xargs -0 chmod 750
+			find "${D}/${dir}" -type f -print0 | xargs -0 chmod o-rwx,g+r
 		) &>/dev/null
 		f=$(find "${D}/${dir}" -perm +4000 -a -uid 0 2>/dev/null)
 		if [[ -n ${f} ]] ; then
@@ -187,9 +187,10 @@ games_pkg_postinst() {
 	ewarn "Remember, in order to play games, you have to"
 	ewarn "be in the '${GAMES_GROUP}' group."
 	echo
-	case ${USERLAND} in
-		GNU)    einfo "Just run 'gpasswd -a <USER> ${GAMES_GROUP}'";;
-		DARWIN) einfo "Just run 'niutil -appendprop / /groups/games users <USER>'";;
+	case ${CHOST} in
+	*-darwin*)               einfo "Just run 'niutil -appendprop / /groups/games users <USER>'";;
+	*-freebsd*|*-dragonfly*) einfo "Just run 'pw groupmod ${GAMES_GROUP} -m <USER>'";;
+	*)                       einfo "Just run 'gpasswd -a <USER> ${GAMES_GROUP}'";;
 	esac
 	echo
 	einfo "For more info about Gentoo gaming in general, see our website:"
