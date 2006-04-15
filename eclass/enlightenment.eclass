@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.62 2006/03/28 07:54:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.63 2006/04/15 00:27:40 flameeyes Exp $
 #
 # Author: vapier@gentoo.org
 
-inherit eutils
+inherit eutils libtool
 
 # ECVS_STATE's:
 #	release      [default]
@@ -142,6 +142,7 @@ enlightenment_src_compile() {
 		fi
 	fi
 	epunt_cxx
+	elibtoolize
 	econf ${MY_ECONF} || enlightenment_die "econf failed"
 	emake || enlightenment_die "emake failed"
 	use doc && [[ -x ./gendoc ]] && { ./gendoc || enlightenment_die "gendoc failed" ; }
