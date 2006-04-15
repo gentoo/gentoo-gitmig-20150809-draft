@@ -16,9 +16,9 @@ SHA256 770e5c75971ef568d36f80731d0f54b29ca76ba370dc1dfa38dbbe0db73fc737 debianut
 MD5 c2a83b7cc35cd0a76df37cf57c8f6563 files/debianutils-2.14.1-no-bs-namespace.patch 1412
 RMD160 20226c9f11a6e3708c39c426f46391c5e828c1b9 files/debianutils-2.14.1-no-bs-namespace.patch 1412
 SHA256 1cac8819abad2ae16568461ccddfd27e98e2adc3103a61d647358f05ef6eb365 files/debianutils-2.14.1-no-bs-namespace.patch 1412
-MD5 ae87a5fea54d5a0eee0b4316f36070cc files/debianutils-2.15-palo.patch 1262
-RMD160 190487507a2b8b9001f880b6f985799ac7a20ade files/debianutils-2.15-palo.patch 1262
-SHA256 93f128143c75e9fe3a9d1c505fd23a974b8886cb9a8c4ffba187c3f040636e98 files/debianutils-2.15-palo.patch 1262
+MD5 b9331751395171524e7c943ad81ec195 files/debianutils-2.15-palo.patch 1311
+RMD160 5b708d3a1cfb9f5fd1845529b15855a59e6e97bb files/debianutils-2.15-palo.patch 1311
+SHA256 4088134bee6d343be87689f82b35813402227d1a50ca3d6f9b74d00702715d5b files/debianutils-2.15-palo.patch 1311
 MD5 930d33ac394a1a72aa0023368f998b2d files/digest-debianutils-2.13.1-r1 70
 RMD160 3f013b0c28742072ad752d20cca094cdeea43286 files/digest-debianutils-2.13.1-r1 70
 SHA256 29bf85eaf812546ab6f04b97575389478739bcc3398618e5e0869fa8cd29ea77 files/digest-debianutils-2.13.1-r1 70

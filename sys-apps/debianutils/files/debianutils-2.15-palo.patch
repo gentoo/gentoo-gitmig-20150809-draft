@@ -1,5 +1,5 @@
---- mkboot.	2006-04-02 19:17:59.000000000 +0200
-+++ mkboot	2006-04-15 20:41:00.000000000 +0200
+--- mkboot.        2006-04-02 19:17:59.000000000 +0200
++++ mkboot        2006-04-15 20:41:00.000000000 +0200
 @@ -1,4 +1,4 @@
 -#!/bin/sh
 +#!/bin/bash
@@ -24,11 +24,11 @@
 -        exit 0
 +        palo="$(which palo)"
 +        printf "\nShould I run $palo? (y/N) "
-+	read input
-+	if [ "$input" = "y" ] ; then
-+	    palo && exit 0
-+	fi
-+	echo "There was a problem running $palo."
++        read input
++        if [ "$input" = "y" ] ; then
++            palo && exit 0
++        fi
++        echo "There was a problem running $palo."
      fi
  
      printf "\nShould I make a bootdisk? (y/N) "
