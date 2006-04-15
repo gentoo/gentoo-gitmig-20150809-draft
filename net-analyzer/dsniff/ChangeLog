@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/dsniff
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.31 2006/03/31 19:55:49 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.32 2006/04/15 23:22:29 jokey Exp $
+
+  15 Apr 2006; Markus Ullmann <jokey@gentoo.org> dsniff-2.3-r7.ebuild,
+  dsniff-2.3-r8.ebuild, dsniff-2.4_beta1-r1.ebuild:
+  Fixing dependencies wrt bug #130038
 
   31 Mar 2006; Markus Ullmann <jokey@gentoo.org> dsniff-2.3-r7.ebuild,
   dsniff-2.3-r8.ebuild:
