@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.13,v 1.4 2006/04/03 01:05:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.13,v 1.5 2006/04/15 00:45:53 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -281,7 +281,7 @@ switch_profile() {
 	# http://bugs.gentoo.org/60190
 	#
 	# The funky move magic is required for proper updating of in-use files.
-	if ! is_cross_compiler && [[ ${ROOT} == "/" ]] ; then
+	if ! is_cross_compiler ; then
 		# Need to cut out extra paths in multilib case and pray the first path
 		# is the "root" multilib path ... maybe some day change this to use
 		# `gcc -print-file-name` ...
