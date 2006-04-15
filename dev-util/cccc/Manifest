@@ -1,6 +1,34 @@
-MD5 e3304fceaf06ac88b0011b95cdc60309 ChangeLog 619
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1989becc2a917a00c4a903cca062139a ChangeLog 760
+RMD160 3ee9325f69e7e294658ace8ce61e00aeda8be382 ChangeLog 760
+SHA256 1870bc8ccf72ef210f78e5ad2ebeb451475554a6586264d5320d20e071e4e49d ChangeLog 760
 MD5 ec5d0745c8750237279f8a64d74ae374 cccc-3.0_pre63.ebuild 642
+RMD160 6634264b4651c93572a9cf109a0b70b38fc66188 cccc-3.0_pre63.ebuild 642
+SHA256 d05ece11e50a05548029c869d06ed5a5b693c284e39b8961fce50b552c9d17c6 cccc-3.0_pre63.ebuild 642
 MD5 cdf1f02eb0fd1b00439adaa6641120cd cccc-3.0_pre84.ebuild 778
-MD5 2da17f45542dc619f7a4c106e47575d1 files/digest-cccc-3.0_pre63 64
+RMD160 c315bb229cf10947a38ffba58f55b8f080e0ba6d cccc-3.0_pre84.ebuild 778
+SHA256 7c3e757a2ed9ee0d4f52dd9d6c2e490f364ca5b251fa45f46cbdf56fc6e72980 cccc-3.0_pre84.ebuild 778
+MD5 ee50768db77c6f8dea072cd813338873 cccc-3.1.4.ebuild 651
+RMD160 46cdfc2b8c76ef7d99e7778c1c109ea63ede17b7 cccc-3.1.4.ebuild 651
+SHA256 885d6d53129d98531dbf646600023c0b2f1e15231e6884676f4fdeea86a568e7 cccc-3.1.4.ebuild 651
 MD5 f7e7665ffd064e34c8ebf0263510e2ae files/cccc-3.0_pre84-gcc34.patch 1103
+RMD160 06914ea6f8913ada83c49bd687a692227b143b89 files/cccc-3.0_pre84-gcc34.patch 1103
+SHA256 ee4f27083adbad7983378c5cd07a1e84b2a1c1bc64ffc8df59b1a6acf871299d files/cccc-3.0_pre84-gcc34.patch 1103
+MD5 2da17f45542dc619f7a4c106e47575d1 files/digest-cccc-3.0_pre63 64
+RMD160 fd894affaffe76928b4a3436937261832d8aff4d files/digest-cccc-3.0_pre63 64
+SHA256 5f0b3ca17a52dd332e0fdd890af745cd9b93cc527d4d0c9e5c839f80f848e34d files/digest-cccc-3.0_pre63 64
 MD5 839834a3c7480259fefd02232c935bf1 files/digest-cccc-3.0_pre84 64
+RMD160 86bf3bae3dda6a1c8ead2b4775c6fa3be8924e4d files/digest-cccc-3.0_pre84 64
+SHA256 30d29ba7f09b2d7df58be89aeaca3e517519df0e5e692e37b046e799018efd57 files/digest-cccc-3.0_pre84 64
+MD5 cfc5466f95078d002ed99085d736bc8a files/digest-cccc-3.1.4 232
+RMD160 ce67f26a0872e5c381a78fd266bd6b07bdbac3bb files/digest-cccc-3.1.4 232
+SHA256 c01326419179a7f2cfa105d1951953221044648e3b640b5c7b9b3c95ba60cbb0 files/digest-cccc-3.1.4 232
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQJiY2+ySkm8kpY0RAt5gAKCz/CZYPu/yc+kAAmBRbwsqRc7dLwCgk7TR
+hnKySLqSPL+TgDfZt7VE7Mc=
+=lCzj
+-----END PGP SIGNATURE-----
