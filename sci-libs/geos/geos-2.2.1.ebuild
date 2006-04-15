@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.1.ebuild,v 1.1 2006/04/14 19:56:06 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.1.ebuild,v 1.2 2006/04/15 04:38:08 mr_bones_ Exp $
 
 inherit eutils
 
@@ -26,13 +26,13 @@ src_unpack() {
 src_compile() {
 	cd ${S}
 	libtoolize --force
-	
+
 	local myconf
 	myconf=""
 	use static && myconf="$(use_enable static)"
-	
+
 	econf ${myconf} || die "Error: econf failed"
-	
+
 	emake || die "Error: emake failed"
 	if use python; then
 		einfo "Compilling PyGEOS"
@@ -49,7 +49,7 @@ src_test() {
 #	if use python; then
 #		cd ${S}/swig/python
 #		python tests/runtests.py -v
-#	fi		
+#	fi
 }
 
 src_install(){
