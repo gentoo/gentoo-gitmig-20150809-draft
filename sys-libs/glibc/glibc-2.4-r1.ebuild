@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r1.ebuild,v 1.5 2006/04/13 05:45:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r1.ebuild,v 1.6 2006/04/15 02:18:53 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -24,7 +24,7 @@
 #  CHOST = CTARGET  - install into /
 #  CHOST != CTARGET - install into /usr/CTARGET/
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~ia64 ~x86"
 
 BRANCH_UPDATE=""
 
