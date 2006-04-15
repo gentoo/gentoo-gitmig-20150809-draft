@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 68fbbfd2e13304178ee4ec898d36de75 ChangeLog 7395
+MD5 8b0409e531ed51d55316459da54be939 ChangeLog 7498
+RMD160 c32d7e41347b13e61638ba9d4fdcda5ae8591322 ChangeLog 7498
+SHA256 1918d1035c513daa2a1a2126371b545729784addb95b0d832bcc4d7ccb75f9e0 ChangeLog 7498
 MD5 1769451c4836775c50d544c89d652a2f files/digest-xfce-utils-4.2.1 68
+RMD160 7b4f0ae7bc525f245c583b25400e68900585405c files/digest-xfce-utils-4.2.1 68
+SHA256 c958f624c48619ae39dbf54b27ba2ab60c5375120adacba1b3042a1950ba54bb files/digest-xfce-utils-4.2.1 68
 MD5 aa9d857dda85eef063aa95799c7d4e3e files/digest-xfce-utils-4.2.2 69
+RMD160 1b39f6b60b7ca4cd0c685aa2cdee84010b78a74e files/digest-xfce-utils-4.2.2 69
+SHA256 b13ba5b800b6bea0cb954551c8e01b29d0f6162c800d8e5f33b61df8cbdaf5fa files/digest-xfce-utils-4.2.2 69
 MD5 aa9d857dda85eef063aa95799c7d4e3e files/digest-xfce-utils-4.2.2-r1 69
+RMD160 1b39f6b60b7ca4cd0c685aa2cdee84010b78a74e files/digest-xfce-utils-4.2.2-r1 69
+SHA256 b13ba5b800b6bea0cb954551c8e01b29d0f6162c800d8e5f33b61df8cbdaf5fa files/digest-xfce-utils-4.2.2-r1 69
 MD5 02cae7c98cc291113db7e17773ec5657 files/digest-xfce-utils-4.2.3 69
+RMD160 447642553b3a0b883c670ca4a93b7d0db41c1e53 files/digest-xfce-utils-4.2.3 69
+SHA256 c97ea509af5f0c85e4ea0d126eb744c743a6d13f6b744ca3847ab89b2cffb9d0 files/digest-xfce-utils-4.2.3 69
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 c3448e2f16a6d3a18902ed4b5b35389e xfce-utils-4.2.1.ebuild 490
+RMD160 9167d6a4f05cbe3f4077286589461ec20d3c4917 xfce-utils-4.2.1.ebuild 490
+SHA256 86e74d753d68699436ae4b91d6cc2dbf8c6b3fc8f4852c6a601da33cef2741bb xfce-utils-4.2.1.ebuild 490
 MD5 488d223db503c6dddb0ebc7c768f9382 xfce-utils-4.2.2-r1.ebuild 652
+RMD160 151778fdf3945945e235b19af708830c3fd5fe8d xfce-utils-4.2.2-r1.ebuild 652
+SHA256 80f89be9894ec3f08e49d477e4fefeb20d192c1c85a0fe54d0e42fedff84ca92 xfce-utils-4.2.2-r1.ebuild 652
 MD5 7ec05ea198399260e8e0298ba61d4e07 xfce-utils-4.2.2.ebuild 481
-MD5 78cec20f8b956ca38a02059a193cf34d xfce-utils-4.2.3.ebuild 647
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEOrqNKRy60XGEcJIRAlQsAKCyXW6jDfULabYPyx8zrUJqdUBGDwCgm13h
-+tU2WlNZ9w6gVjarFnhwO9E=
-=wlwc
------END PGP SIGNATURE-----
+RMD160 ed85a5d99e65a39266bcd2b39d9723bc4c7bec7e xfce-utils-4.2.2.ebuild 481
+SHA256 7cb88287ef19ea100b60dd9c8a9b3b062a4709258675c4cf6be14283f57caa33 xfce-utils-4.2.2.ebuild 481
+MD5 e5d0e678286bda71a9f69802cc181872 xfce-utils-4.2.3.ebuild 646
+RMD160 8ee12b2d90b14f73e516a2a44422f1fd1ee09554 xfce-utils-4.2.3.ebuild 646
+SHA256 3370427c8b320cd1ce689bf4f40911aae7de3e308c60529cab35296c4dd45230 xfce-utils-4.2.3.ebuild 646

@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5664da0c2cee68210d3e7a3c5a048444 ChangeLog 7583
+MD5 672a25f7a67cab08decf63d011e2247f ChangeLog 7687
+RMD160 f40b1a22f74d17d0e5c6db32ffe86d0aa75d211a ChangeLog 7687
+SHA256 214c54f8c8262b6e802e9a385d365fdc07844996b752f39dcfab55ef591d2689 ChangeLog 7687
 MD5 039b1dd6ff838607023a3b25944c1158 files/digest-libxfce4mcs-4.2.1 69
+RMD160 6e8e07f4f23a44c62ac898501b1f348317295271 files/digest-libxfce4mcs-4.2.1 69
+SHA256 9a02cf18fd3aa94b89e10c4f858527b720af080cfa8d2319f7283db099da22a8 files/digest-libxfce4mcs-4.2.1 69
 MD5 9a54e5597f04ba2e82ea3f0845f8e9ee files/digest-libxfce4mcs-4.2.2 69
+RMD160 b54fe8f1cc3042b60ea56ab269c442b2eb592c2b files/digest-libxfce4mcs-4.2.2 69
+SHA256 67c4fa84f9fb05e926001a53b63400e5a2645c1651aae8986b9ab65e08c28d10 files/digest-libxfce4mcs-4.2.2 69
 MD5 9a54e5597f04ba2e82ea3f0845f8e9ee files/digest-libxfce4mcs-4.2.2-r1 69
+RMD160 b54fe8f1cc3042b60ea56ab269c442b2eb592c2b files/digest-libxfce4mcs-4.2.2-r1 69
+SHA256 67c4fa84f9fb05e926001a53b63400e5a2645c1651aae8986b9ab65e08c28d10 files/digest-libxfce4mcs-4.2.2-r1 69
 MD5 d583bba5a005219d3efaf1e1b35e503a files/digest-libxfce4mcs-4.2.3 69
+RMD160 5100b4a0fcbfd729b86651eeaf7fcd5e26f24057 files/digest-libxfce4mcs-4.2.3 69
+SHA256 743879e96325c6c8b738ef7a3bf174d0dcfa2635a763e2cc4a67288637100786 files/digest-libxfce4mcs-4.2.3 69
 MD5 7583c3d3dd2e5a8a115a280d93ea8b84 libxfce4mcs-4.2.1.ebuild 439
+RMD160 511a05b67fe6795f862a5bef4fddd0aa6660846a libxfce4mcs-4.2.1.ebuild 439
+SHA256 361b4b9785ef33634dc9b5550aef4e83a3daea3a82402da98549ba55262ce3d8 libxfce4mcs-4.2.1.ebuild 439
 MD5 9ec11be8d719b7d73693a20d5e74cb76 libxfce4mcs-4.2.2-r1.ebuild 610
+RMD160 9c74548ecb0f4f6e2dd632dcde0c1b48e588ef74 libxfce4mcs-4.2.2-r1.ebuild 610
+SHA256 b138f3774aee7988ca1727cb6a9f8b7d02a72de219966f29a8b8f89b75b7ae4b libxfce4mcs-4.2.2-r1.ebuild 610
 MD5 6ef8bc1d0db9b10375dc20a39c3753f3 libxfce4mcs-4.2.2.ebuild 429
-MD5 7717fafe411103189010cd46553e5eaf libxfce4mcs-4.2.3.ebuild 608
+RMD160 01ceea88d6768191ad562cbd2d4d17a072b5210a libxfce4mcs-4.2.2.ebuild 429
+SHA256 c18187152b42bd9e58298fe7906360978482dfb88d8f3d45ece793bb0c33080d libxfce4mcs-4.2.2.ebuild 429
+MD5 df300538e12987d56dd3f216c97da906 libxfce4mcs-4.2.3.ebuild 607
+RMD160 d58051e7b87e1407bcce8beb0afc7a62651a6a15 libxfce4mcs-4.2.3.ebuild 607
+SHA256 0a304506307233b991b2586d9c2e91567601740a839563bb8a392be5d3219db6 libxfce4mcs-4.2.3.ebuild 607
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEOrfJKRy60XGEcJIRAr64AJ9vX8LQYCVqiGFFPSDaIClr0dXuxgCgnArs
-xidMvIAYZqFEAIVqLlh0sfw=
-=9dOd
------END PGP SIGNATURE-----
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157

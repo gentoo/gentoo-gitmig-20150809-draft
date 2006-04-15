@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.2.3.ebuild,v 1.4 2006/04/10 20:05:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.2.3.ebuild,v 1.5 2006/04/15 01:56:49 halcy0n Exp $
 
 inherit xfce42
 
 DESCRIPTION="Xfce 4 utilities"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
 IUSE="gtkhtml"
 
 RDEPEND="|| ( ( x11-libs/libX11

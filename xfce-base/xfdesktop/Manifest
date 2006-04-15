@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 37ef0e8136daffe12035e3d26623e6f7 ChangeLog 7042
+MD5 67762e2156359e4c117e1b3b4038823d ChangeLog 7144
+RMD160 a7291b929a2a34180773703a405a6fc41cdc85f5 ChangeLog 7144
+SHA256 73524c9990a030a6f6e460671d6263c22826c68b8ba62669d04255e25a7a5385 ChangeLog 7144
 MD5 0221c41a8f6129158a6601fb55c4b278 files/digest-xfdesktop-4.2.1 68
+RMD160 b2c49fdfdbfb27a9a98716e6d0c6b87404ac1ad8 files/digest-xfdesktop-4.2.1 68
+SHA256 ac116f706e2620d735bb29d9be84bf2e33a736caeadb57f5ea2a9ce3a86e3b37 files/digest-xfdesktop-4.2.1 68
 MD5 8ce305caf352d642269cf9e81e838735 files/digest-xfdesktop-4.2.2 68
+RMD160 edc08085177bc8368d2bffa4d2750c2857f84c9e files/digest-xfdesktop-4.2.2 68
+SHA256 65a7a8da0ae41e1fb3e8a204f38c94a0bb19f753acf7158f71cdb282e9e3b807 files/digest-xfdesktop-4.2.2 68
 MD5 8ce305caf352d642269cf9e81e838735 files/digest-xfdesktop-4.2.2-r1 68
+RMD160 edc08085177bc8368d2bffa4d2750c2857f84c9e files/digest-xfdesktop-4.2.2-r1 68
+SHA256 65a7a8da0ae41e1fb3e8a204f38c94a0bb19f753acf7158f71cdb282e9e3b807 files/digest-xfdesktop-4.2.2-r1 68
 MD5 d6cf573e69fd991e380d6274f5b428e6 files/digest-xfdesktop-4.2.3 68
+RMD160 094c72bdd366c19021a24c70f85fc8d33148a263 files/digest-xfdesktop-4.2.3 68
+SHA256 1fb1330a1e666a17a825de0942be7b3075808e5c12edc24a4500d50bfb0c759f files/digest-xfdesktop-4.2.3 68
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 5b1e4188fb5367dd1a3cb35b856efe36 xfdesktop-4.2.1.ebuild 392
+RMD160 bbec67ca6827c95428acf17c222e85a2c989e370 xfdesktop-4.2.1.ebuild 392
+SHA256 ca8e0fd9deeb7cf0d2233a6d8e1ae1adaa5976f1e46ea5bc81a2d3e8c67539bc xfdesktop-4.2.1.ebuild 392
 MD5 a13c479b5483dceb7fdd3f982d136198 xfdesktop-4.2.2-r1.ebuild 535
+RMD160 169a030d4b3686afbf7da82b51bf036d85749fad xfdesktop-4.2.2-r1.ebuild 535
+SHA256 94c17014f462f1a6430deefd9af2674a414f8c8a9fb928520e1c70937f1d4e86 xfdesktop-4.2.2-r1.ebuild 535
 MD5 eb65a40d7f627a9f2f1cb7c6671dcf7c xfdesktop-4.2.2.ebuild 379
-MD5 aec5a18e5d109414c96a0fe56031afbd xfdesktop-4.2.3.ebuild 533
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEOrl8KRy60XGEcJIRAgW/AKCdox0qkhV+EcVHqPyTxrC75w3CcwCgqlF/
-0cftKqpfm1FhUewrqtXOyrk=
-=cytv
------END PGP SIGNATURE-----
+RMD160 08db88be3e52cee26bf578270e184a6a626baa9a xfdesktop-4.2.2.ebuild 379
+SHA256 aba66ac104488b96ca6743e40702abeac8e764fe6bda1f8b9745ff0a7ece0585 xfdesktop-4.2.2.ebuild 379
+MD5 ad94236b0c2289cf5e7024b96c7ed65e xfdesktop-4.2.3.ebuild 532
+RMD160 fb59d6626a27081b4a14682a896a413f0c02f497 xfdesktop-4.2.3.ebuild 532
+SHA256 9c3fd8b3d1313fed7c829e5f49a2f3c9eddcca41c703917d8b3b221d3ef8c01e xfdesktop-4.2.3.ebuild 532

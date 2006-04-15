@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2216b28a1a5836887cf20a82af8886a6 ChangeLog 3513
+MD5 212cf13d179979d9b64b0aba5d62fe03 ChangeLog 3619
+RMD160 e38e4b03350f192a27bbbd76af40c698e50ebd4f ChangeLog 3619
+SHA256 0a4ea22cc684df59cfca6673641502f9d686cf651ac7c5fba458b6eeb6c47ed4 ChangeLog 3619
 MD5 109df59e49b0b80e4d6162c6e5c05134 files/digest-xfce4-session-4.2.1 72
+RMD160 75e23bb5e18b0a9b3ad7ef93243c481aadfcf1cc files/digest-xfce4-session-4.2.1 72
+SHA256 5d6b4615a635da9830766314406ea5bd446f2004772a089da7985181ce96fa1d files/digest-xfce4-session-4.2.1 72
 MD5 106aee433474affbdf9da61d4781861a files/digest-xfce4-session-4.2.2 72
+RMD160 f37e332c41af6f52e38280d68c70e643ed5e56df files/digest-xfce4-session-4.2.2 72
+SHA256 60145adf52bccf693e1c9f1d85283ebdaa663d013ac624d61713bd64d18ddedd files/digest-xfce4-session-4.2.2 72
 MD5 106aee433474affbdf9da61d4781861a files/digest-xfce4-session-4.2.2-r1 72
+RMD160 f37e332c41af6f52e38280d68c70e643ed5e56df files/digest-xfce4-session-4.2.2-r1 72
+SHA256 60145adf52bccf693e1c9f1d85283ebdaa663d013ac624d61713bd64d18ddedd files/digest-xfce4-session-4.2.2-r1 72
 MD5 942827067df0733d710968d22c22979c files/digest-xfce4-session-4.2.3 72
+RMD160 043db75e28a1369a8683fc8aee1e1a50e0db4965 files/digest-xfce4-session-4.2.3 72
+SHA256 da313f233abf47decdfa2ab22a741e924769c666476a364ff36e036dc9aeeb4b files/digest-xfce4-session-4.2.3 72
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 6e646b96523740637e5530caf1475de1 xfce4-session-4.2.1.ebuild 410
+RMD160 3ac89aff11699da1c1dd1c2c5bacfdba3b617aea xfce4-session-4.2.1.ebuild 410
+SHA256 c79f2c2272c4914345b906c32a74b356d66a6bf77e5114ae5a8a40b76407e430 xfce4-session-4.2.1.ebuild 410
 MD5 e129842656f8b7db6b9a6c970ef960ea xfce4-session-4.2.2-r1.ebuild 578
+RMD160 f21a3686c3d0705eb1753782ff9ec851d6bbe518 xfce4-session-4.2.2-r1.ebuild 578
+SHA256 de20b812ee8e87bcb9a1660288de386e2558d1ffc3785c1faf90073277e8ea23 xfce4-session-4.2.2-r1.ebuild 578
 MD5 f9cb380a8a350737e7afda39570e1150 xfce4-session-4.2.2.ebuild 400
-MD5 0d6e68f009eef2bb1247c9e9c4a56f79 xfce4-session-4.2.3.ebuild 575
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEOr0nKRy60XGEcJIRAsNJAJ9qyx9CZH97bOm34AmnCpeCcAAQSgCfaHeh
-2vyUwkfjVbo23u6jwS8681Y=
-=AChv
------END PGP SIGNATURE-----
+RMD160 c940add3daa0ef629d4284054838dd33f1093a74 xfce4-session-4.2.2.ebuild 400
+SHA256 8e262c7ffe726d7d290c6a67d1678b0792061d3edaa03b0926b2366b4a82f7c2 xfce4-session-4.2.2.ebuild 400
+MD5 d16d22bf12f5632726c985f1895c296b xfce4-session-4.2.3.ebuild 574
+RMD160 92bf8b9c8c4530152e6d072f79758ad2cb9f6432 xfce4-session-4.2.3.ebuild 574
+SHA256 562127f54f4cc7ede96efe2bd4711622c9c55e88717cf8bc1d95ff85a478370e xfce4-session-4.2.3.ebuild 574

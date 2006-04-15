@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.60 2006/04/10 19:57:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.61 2006/04/15 01:57:37 halcy0n Exp $
+
+  15 Apr 2006; Mark Loeser <halcy0n@gentoo.org> xfce4-panel-4.2.3.ebuild:
+  Stable on x86; bug #129371
 
   10 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   xfce4-panel-4.2.3.ebuild:

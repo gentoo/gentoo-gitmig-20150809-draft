@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d5341ed86608b93a1c488cef882cb564 ChangeLog 7418
+MD5 fd8829557b83e640fcc99952e1c702b4 ChangeLog 7522
+RMD160 877e418c8c84218687d326dccabbbb083caa34f5 ChangeLog 7522
+SHA256 5cf4b78f3fad212771300c327852730421b53dde7e978a0616529b97aa9ab404 ChangeLog 7522
 MD5 853ce8fb1c4e5be3a458a582f8b6f4fa files/digest-xfce4-panel-4.2.1.1 71
+RMD160 5734e3a625659044478ce8f7157cf15e4541cab1 files/digest-xfce4-panel-4.2.1.1 71
+SHA256 20f0d81ee7b19e165cbeb9910e92b6e67e8494c0c3763c9ad4e574e3320a2c30 files/digest-xfce4-panel-4.2.1.1 71
 MD5 a527ebb4eb261ae3006d7804f3e9254d files/digest-xfce4-panel-4.2.2 70
+RMD160 8035b20a27311b247926a0f55457b0e96b8d531b files/digest-xfce4-panel-4.2.2 70
+SHA256 95e99422d725de7ed21e66f7d339062afdac93661c790b03aea402731bfe707e files/digest-xfce4-panel-4.2.2 70
 MD5 a527ebb4eb261ae3006d7804f3e9254d files/digest-xfce4-panel-4.2.2-r1 70
+RMD160 8035b20a27311b247926a0f55457b0e96b8d531b files/digest-xfce4-panel-4.2.2-r1 70
+SHA256 95e99422d725de7ed21e66f7d339062afdac93661c790b03aea402731bfe707e files/digest-xfce4-panel-4.2.2-r1 70
 MD5 ba71d4a169aafabe5dfec28e5069916f files/digest-xfce4-panel-4.2.3 70
+RMD160 c3eadf9d3456c39a66b893f62f809d39eab9abb4 files/digest-xfce4-panel-4.2.3 70
+SHA256 4068a0a8163ef5e6b0c6352a597d660abc22b7cecf48ac750fff89ed64b9a90b files/digest-xfce4-panel-4.2.3 70
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 fe929cfeaa54ea6244cf3815beb234ae xfce4-panel-4.2.1.1.ebuild 415
+RMD160 60e564623dd97ea3d7c5ac41d4ea2b06b12926b4 xfce4-panel-4.2.1.1.ebuild 415
+SHA256 b54657db8380ab6ff921d7d88dfc4b913211ee37a75152545328b22a5da4af61 xfce4-panel-4.2.1.1.ebuild 415
 MD5 d2f8c426808e57b6cf67cdedf4a4aa03 xfce4-panel-4.2.2-r1.ebuild 589
+RMD160 6f2df4c7458e9d28c9b09a5e03c0e48a0658e5f0 xfce4-panel-4.2.2-r1.ebuild 589
+SHA256 81e06f93d22a27d71deac011943c70ee04cbfc27a39c3df3a3f19c84d0c795cb xfce4-panel-4.2.2-r1.ebuild 589
 MD5 e55e6f7af14b76922a5f29b9d862e2e5 xfce4-panel-4.2.2.ebuild 378
-MD5 e18246d64dceb7c20300d70eec8c3f00 xfce4-panel-4.2.3.ebuild 586
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEOri9KRy60XGEcJIRAl/IAJwNtgIgr4/sL/1q5WenhW5izhh0GgCePuw2
-iI47Ajz301R9zK+OfPxoKYM=
-=9wxr
------END PGP SIGNATURE-----
+RMD160 ebb0d55975423d9039866e03040cf48defdc6b24 xfce4-panel-4.2.2.ebuild 378
+SHA256 ce27ca39e1def1ab5405b2f7c686f29a87bd13da6ee79dbb3d17525b3a7203a4 xfce4-panel-4.2.2.ebuild 378
+MD5 331f5f4d0ab8cc659403860ec3575985 xfce4-panel-4.2.3.ebuild 585
+RMD160 579ae0cfcc33fd598191f2752607ec5696084c42 xfce4-panel-4.2.3.ebuild 585
+SHA256 fc267f81d22061f972f23f05587c05077e6404bc9cddbefe2e9166d80b6c25f2 xfce4-panel-4.2.3.ebuild 585
