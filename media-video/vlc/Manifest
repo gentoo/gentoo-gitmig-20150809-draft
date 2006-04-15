@@ -1,4 +1,4 @@
-MD5 136baebcd4f3f65c35e6a4fd909ebd98 ChangeLog 29714
+MD5 0f8cbe405f459b8be58daf3a5a5eaeec ChangeLog 29809
 MD5 74246bab222d2b95ef62223ce754e6f6 files/digest-vlc-0.8.1-r1 127
 MD5 260130c48f890b87819fbb2df43836e3 files/digest-vlc-0.8.2-r2 127
 MD5 d84791584b167d4cf96f365498050a62 files/digest-vlc-0.8.4 127
@@ -11,4 +11,4 @@ MD5 2a4d85def1d0fd31aa4dd3917c4050e9 vlc-0.8.2-r2.ebuild 7470
 MD5 abdad82efe9b21f65e728a3ba20d48c7 vlc-0.8.4.ebuild 6923
 MD5 1070e4986007224939cd981051edd322 vlc-0.8.4a-r1.ebuild 7313
 MD5 2908bdb33796f25e21e2d4ee6dbdba2c vlc-0.8.4a.ebuild 7481
-MD5 8a1c5f2a92499662ee0213f2936bdeed vlc-0.8.5_beta2.ebuild 7005
+MD5 6fc75ee19e7e0ff5fcb7d12ed3a531c5 vlc-0.8.5_beta2.ebuild 7008
