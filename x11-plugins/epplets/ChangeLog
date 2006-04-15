@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/epplets
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.8 2005/09/17 02:10:11 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.9 2006/04/15 20:09:47 vapier Exp $
+
+*epplets-0.9 (15 Apr 2006)
+
+  15 Apr 2006; Mike Frysinger <vapier@gentoo.org> +epplets-0.9.ebuild:
+  Version bump #111638 by Peter Hyman.
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> epplets-0.7-r1.ebuild:
   Mark 0.7-r1 stable on alpha
