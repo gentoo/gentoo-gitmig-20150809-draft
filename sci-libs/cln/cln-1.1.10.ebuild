@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.1.10.ebuild,v 1.3 2006/02/13 19:18:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.1.10.ebuild,v 1.4 2006/04/15 14:28:50 cryos Exp $
 
 inherit flag-o-matic toolchain-funcs multilib
 
@@ -23,6 +23,9 @@ src_compile() {
 	replace-flags -O[3..9] -O2
 	# It also doesn't seem to get on with -Os, bug 112741.
 	replace-flags -Os -O2
+
+	# Fragile build, -ftracer causes compilation issues, bug 121773.
+	filter-flags -ftracer
 
 	# and with gcc 2.95.3, it doesn't like funroll-loops as well...
 	if [ "$( gcc-fullversion )" == "2.95.3" ]; then

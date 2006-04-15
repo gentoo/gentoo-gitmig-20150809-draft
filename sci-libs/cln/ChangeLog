@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cln
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.10 2006/03/20 15:31:57 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.11 2006/04/15 14:28:50 cryos Exp $
+
+  15 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org> cln-1.1.10.ebuild:
+  Added a filter for -ftracer, closes bug 121773.
 
   20 Mar 2006; Markus Dittrich <markusle@gentoo.org> cln-1.1.6.ebuild:
   Replace -Os flag by -O2 since it breaks things. This fixes
