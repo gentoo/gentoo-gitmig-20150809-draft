@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a5aa408d7bd9e958414023e80a37dcf9 ChangeLog 10817
-RMD160 893de6bf9d631db213ff19e7fd109e7fbd1cb8de ChangeLog 10817
-SHA256 02f8de24fe78f0285e9c219b441be85f4f26478e67bdb839d8eca81bf9043889 ChangeLog 10817
+MD5 b956c6fd9f9613a8ad7870d15df991d8 ChangeLog 10934
+RMD160 d56965240a56e852ab17840f4685f996164d7f91 ChangeLog 10934
+SHA256 026b70b10813eaaddc6bf598d9328d6f5006512ae0197e7fd93bea0ed2b6a549 ChangeLog 10934
 MD5 58901e14592bd22f99f6634711471faa files/digest-xbox-sources-2.4.31 223
 RMD160 f01addd11928192d9e639040c571c9cd728fb206 files/digest-xbox-sources-2.4.31 223
 SHA256 628d3813a784d4136f3798554167b0c0328bcbefb445cbf2a7d17f05ef7b215d files/digest-xbox-sources-2.4.31 223
@@ -25,6 +22,9 @@ SHA256 1125bba2e1f7c36b84aeab2ee81260a784f4805607ddbe03ac96e96d00d4cece files/di
 MD5 0038232b9367a03efedda07beb7662c3 files/digest-xbox-sources-2.6.14.3 212
 RMD160 f770481878de905aa1190feab0b5fcbc2afa6b4f files/digest-xbox-sources-2.6.14.3 212
 SHA256 aaca604477dbe23bda1fdb4936a6f4800784d34b68fa2679c367aa0df80fee5d files/digest-xbox-sources-2.6.14.3 212
+MD5 85a75896289b038fcd978b77bc078508 files/digest-xbox-sources-2.6.16.5 738
+RMD160 b5659d9e011a9e7d705ce03c055ebb5debd601e6 files/digest-xbox-sources-2.6.16.5 738
+SHA256 61cb2e6b470ab25865eabc41786efb46e89bb48d33d961180ede94df5aecb040 files/digest-xbox-sources-2.6.16.5 738
 MD5 7695b79187fcc27339ab62af1112ec11 files/xbox-sources-2.6.10.74070.patch 525
 RMD160 102148e31948d5f8cfdef47efa7ee00ef0aff230 files/xbox-sources-2.6.10.74070.patch 525
 SHA256 18a391f2cbfd86699cd341ca80a23ae42cf776875e5b5f6e0c0d523b303a713d files/xbox-sources-2.6.10.74070.patch 525
@@ -79,10 +79,6 @@ SHA256 a3269b8b3b29036bbbd239200716c45a836a47aad8584ed311c111281c199814 xbox-sou
 MD5 a50e11c191e044e7ca74d45bd8ba3ada xbox-sources-2.6.14.3.ebuild 623
 RMD160 1a7ef4cf42be66d3c9bc93692da941d3ed60c46e xbox-sources-2.6.14.3.ebuild 623
 SHA256 d7c07643361d580b0b39f6b94c54be752c6f275f11987fa3fc540236693e942d xbox-sources-2.6.14.3.ebuild 623
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEB2AYD78nYLRGtEERArSVAJ9M++T2ApTozc2wdanc1FKI7FgwKACeJZH7
-dxoOld5x5FD6FXqUkme33qE=
-=lDLC
------END PGP SIGNATURE-----
+MD5 ff96888ba36ac60316dacb82cb6be356 xbox-sources-2.6.16.5.ebuild 626
+RMD160 7c2705c912468cd3c710146f1857c6e365c26548 xbox-sources-2.6.16.5.ebuild 626
+SHA256 373685e1d971e1bf8884282b13421f2ca7e778d0a66340aafb933ab11f453f36 xbox-sources-2.6.16.5.ebuild 626
