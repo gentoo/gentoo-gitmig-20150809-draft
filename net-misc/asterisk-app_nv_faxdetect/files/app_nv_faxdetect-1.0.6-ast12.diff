@@ -1,0 +1,48 @@
+--- app_nv_faxdetect-1.0.6/app_nv_backgrounddetect.c.orig	2006-04-06 16:29:59 +0000
++++ app_nv_faxdetect-1.0.6/app_nv_backgrounddetect.c	2006-04-06 16:30:31 +0000
+@@ -22,7 +22,11 @@
+  * This program is free software, distributed under the terms of
+  * the GNU General Public License
+  */
+- 
++
++#include <stdio.h> 
++#include <string.h>
++#include <stdlib.h>
++
+ #include <asterisk/lock.h>
+ #include <asterisk/file.h>
+ #include <asterisk/logger.h>
+@@ -32,8 +36,6 @@
+ #include <asterisk/translate.h>
+ #include <asterisk/utils.h>
+ #include <asterisk/dsp.h>
+-#include <string.h>
+-#include <stdlib.h>
+ 
+ static char *tdesc = "Newman's playback with talk and fax detection";
+ 
+--- app_nv_faxdetect-1.0.6/app_nv_faxdetect.c.orig	2006-04-06 16:29:52 +0000
++++ app_nv_faxdetect-1.0.6/app_nv_faxdetect.c	2006-04-06 16:30:53 +0000
+@@ -22,7 +22,11 @@
+  * This program is free software, distributed under the terms of
+  * the GNU General Public License
+  */
+- 
++
++#include <stdio.h> 
++#include <string.h>
++#include <stdlib.h>
++
+ #include <asterisk/lock.h>
+ #include <asterisk/file.h>
+ #include <asterisk/logger.h>
+@@ -32,8 +36,6 @@
+ #include <asterisk/translate.h>
+ #include <asterisk/dsp.h>
+ #include <asterisk/utils.h>
+-#include <string.h>
+-#include <stdlib.h>
+ 
+ static char *tdesc = "Newman's fax detection application";
+ 

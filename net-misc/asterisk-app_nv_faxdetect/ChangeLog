@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk-app_nv_faxdetect
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_nv_faxdetect/ChangeLog,v 1.5 2005/09/19 18:30:06 stkn Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_nv_faxdetect/ChangeLog,v 1.6 2006/04/15 23:41:18 stkn Exp $
+
+  15 Apr 2006; Stefan Knoblich <stkn@gentoo.org>
+  +files/app_nv_faxdetect-1.0.6-ast10.diff,
+  +files/app_nv_faxdetect-1.0.6-ast12.diff,
+  -files/app_nv_faxdetect-1.0.6-aststable.diff,
+  asterisk-app_nv_faxdetect-1.0.6.ebuild:
+  Add patch for asterisk-1.2.x, submitted by Brad House
+  <brad@mainstreetsoftworks.com> in bug #119417.
 
   19 Sep 2005; Stefan Knoblich <stkn@gentoo.org>
   asterisk-app_nv_faxdetect-1.0.6.ebuild:
