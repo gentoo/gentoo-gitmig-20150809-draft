@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5218 2006/04/14 17:12:35 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5219 2006/04/15 04:46:23 halcy0n Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Mark Loeser <halcy0n@gentoo.org> (15 Apr 2006)
+# Stable version does not compile, and has no maintainer; bug #128109
+dev-util/cccc
 
 # Joshua Baergen <joshuabaergen@gentoo.org> (14 Apr 2006)
 # Mask for X7.1 RC
