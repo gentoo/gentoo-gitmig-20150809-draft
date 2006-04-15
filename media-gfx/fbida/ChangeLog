@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.15 2006/04/09 17:13:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.16 2006/04/15 21:39:19 spock Exp $
+
+*fbida-2.03-r3 (15 Apr 2006)
+
+  15 Apr 2006; Michał Januszewski <spock@gentoo.org> -fbida-2.03.ebuild,
+  +fbida-2.03-r3.ebuild:
+  Removed an old ebuild. Added a fix for an insecure temp. file creation
+  problem in fbgs (bug #129470).
 
   09 Apr 2006; Jeroen Roovers <jer@gentoo.org> fbida-2.03-r2.ebuild:
   Marked ~hppa (bug #119923).

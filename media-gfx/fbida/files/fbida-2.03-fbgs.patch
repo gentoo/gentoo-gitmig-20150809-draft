@@ -1,0 +1,14 @@
+diff -Naurp fbida-2.03-orig/fbgs fbida-2.03/fbgs
+--- fbida-2.03-orig/fbgs	2006-04-15 22:40:55.000000000 +0200
++++ fbida-2.03/fbgs	2006-04-15 22:41:56.000000000 +0200
+@@ -1,8 +1,8 @@
+ #!/bin/bash
+ 
+ # tmp dir
+-DIR="${TMPDIR-/var/tmp}/fbps-$$"
+-mkdir -p $DIR	|| exit 1
++DIR=`mktemp -dtp /tmp fbgs-XXXXXX`
++[ -d $DIR ]  || exit 1
+ trap "rm -rf $DIR" EXIT
+ 
+ # parse options
