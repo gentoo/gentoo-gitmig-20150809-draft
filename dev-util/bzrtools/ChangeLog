@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bzrtools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/ChangeLog,v 1.4 2006/02/01 17:21:42 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/ChangeLog,v 1.5 2006/04/15 00:24:53 wormo Exp $
+
+  14 Apr 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  bzrtools-0.7.ebuild:
+  mark ~ppc (Bug #129993, reported by Jacob Smullyan)
 
   01 Feb 2006; Marien Zwart <marienz@gentoo.org> bzrtools-0.7.ebuild:
   Run unit tests.
