@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/icon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.17 2006/04/14 23:47:26 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.18 2006/04/15 23:03:36 fmccor Exp $
+
+  15 Apr 2006; Ferris McCormick <fmccor@gentoo.org> icon-9.4.3-r2.ebuild:
+  Stable on sparc (Bug #125258).  Still fails one test (general/table),
+  but is a little better than before.
 
   14 Apr 2006; Mark Loeser <halcy0n@gentoo.org> icon-9.4.3-r2.ebuild:
   Stable on x86; bug #125258
