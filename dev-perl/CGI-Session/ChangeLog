@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/CGI-Session
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/ChangeLog,v 1.8 2006/03/30 22:14:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/ChangeLog,v 1.9 2006/04/15 11:35:19 mcummings Exp $
+
+*CGI-Session-4.13 (15 Apr 2006)
+
+  15 Apr 2006; <mcummings@gentoo.org> +CGI-Session-4.13.ebuild:
+  Version bump, bug 130021.
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> CGI-Session-4.03.ebuild:
   Mark 4.03 ~ia64
