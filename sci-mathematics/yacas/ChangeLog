@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/yacas
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.7 2006/04/15 08:54:38 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.8 2006/04/15 08:58:46 cryos Exp $
+
+  15 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org> ChangeLog:
+  Pruned old version.
 
   15 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org> yacas-1.0.61.ebuild:
   Replace -Os with -O2, closes bug 126779. Also stabilised on amd64.
