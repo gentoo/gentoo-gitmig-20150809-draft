@@ -1,6 +1,10 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.3 2006/03/31 17:42:53 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.4 2006/04/15 08:59:03 zzam Exp $
+
+  15 Apr 2006; Matthias Schwarzott <zzam@gentoo.org> noad-0.6.0-r2.ebuild:
+  Set correct homepage, thanks to Lars Gregori
+  <gentoo.bugzilla@beidfarbig.de>, Bug #129990
 
   31 Mar 2006; Joerg Bornkessel <hd_brummy@gentoo.org> noad-0.6.0-r2.ebuild:
   ~amd64 added; thanks to Bjoern Mueller for reporting/testing this
