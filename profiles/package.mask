@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5220 2006/04/15 07:12:04 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5221 2006/04/15 07:23:57 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -542,29 +542,6 @@ dev-util/glimmer
 # Pre-releases outside of KDE release cycle
 >=net-im/kopete-0.12_alpha1
 
-# Tony Vroon <chainsaw@gentoo.org> (18 Feb 2006)
-# Masked pending removal - upstream has discontinued this project
-# Your upgrade path is media-sound/audacious; removal of this package is planned on 04/03/2006
-media-sound/beep-media-player
-media-plugins/bmp-arts
-media-plugins/bmp-crossfade
-media-plugins/bmp-docklet
-media-plugins/bmp-find
-media-plugins/bmp-infopipe
-media-plugins/bmp-itouch
-media-plugins/bmp-libvisual
-media-plugins/bmp-lirc
-media-plugins/bmp-midi
-media-plugins/bmp-mp4
-media-plugins/bmp-musepack
-media-plugins/bmp-rootvis
-media-plugins/bmp-scrobbler
-media-plugins/bmp-songchange
-media-plugins/bmp-wma
-media-plugins/dumb-bmp
-media-plugins/modplugbmp
-x11-themes/bmp-themes
-
 # Doug Goldstein <cardoe@gentoo.org> (16 Feb 2006)
 # Working on the next cairo/glitz release
 >=media-libs/glitz-0.5.3
@@ -671,7 +648,7 @@ app-cdr/cdrx
 
 # Michael Imhof <tantive@gentoo.org> (17 Jan 2006)
 # masked pending removal - upstream discontinued this project
-app-sci/zetagrid
+sci-misc/zetagrid
 
 # George Shapovalov <george@gentoo.org> (17 Jan 2006)
 # masked for testing - initial commit of the eclass and split gnat
@@ -690,12 +667,6 @@ sys-fs/convertfs
 # Masking openldap 2.3.x for testing
 >net-nds/openldap-2.3
 
-# Matthew Kennedy <mkennedy@gentoo.org> (13 Jan 2006)
-# OPEN ... :IF-EXISTS :APPEND causes data loss (see: 
-# http://sourceforge.net/tracker/index.php?func=detail&aid=1399709&group_id=1355&atid=101355 
-# and http://bugs.gentoo.org/show_bug.cgi?id=118849)
-=dev-lisp/clisp-2.37
-
 # Diego Pettenò <flameeyes@gentoo.org> (13 Jan 2006)
 # Vulnerable to security issue. See bug #115760
 media-video/xmovie
@@ -711,13 +682,6 @@ media-video/xmovie
 # Alexandre Buisse <nattfodd@gentoo.org> (12 Jan 2006)
 # Masked for testing purposes
 dev-tex/mpm
-
-# Doug Goldstein <cardoe@gentoo.org> (10 Jan 2006)
-# masked for testing of the snapshot
-=media-tv/mythtv-0.19_pre8642
-=www-apps/mythweb-0.19_pre8642
-=media-plugins/mythdvd-0.19_pre8642
-=media-plugins/mythvideo-0.19_pre8642
 
 # Tuan Van <langthang@gentoo.org> (10 Jan 2006)
 # Testing release.
@@ -823,10 +787,7 @@ sys-apps/gli
 # Luca Barbato <lu_zero@gentoo.org> (18 Dec 2005)
 # avifile isn't mantained anymore and doesn't build with the
 # current ffmpeg, removing it and packages alike
-
 media-gfx/zphoto
-media-tv/vcr
-media-video/avifile
 
 # Stefan Knoblich <stkn@gentoo.org> (17 Dec 2005)
 # Bug #115798
@@ -1040,7 +1001,6 @@ games-rpg/nwn-data
 # Gregorio Guidi <greg_g@gentoo.org> (19 Sep 2005)
 # Qt-3.3.5 causes a lot of compilation failures.
 # See bug #106402.
-~x11-libs/qt-3.3.5
 ~x11-libs/qt-embedded-3.3.5
 ~dev-db/qt-unixODBC-3.3.5
 
@@ -1052,10 +1012,6 @@ games-rpg/nwn-data
 # Masked for security reasons, bug 103524
 dev-python/py2play
 games-action/slune
-
-# Joshua Baergen <joshuabaergen@gentoo.org> (9 Sep 2005)
-# Masking for removal
-x11-base/y-windows
 
 # Joshua Baergen <joshuabaergen@gentoo.org> (8 Sep 2005)
 # Only tested against modular x
@@ -1311,11 +1267,6 @@ www-client/netscape
 # Masked until arrival of userland tools. At least.
 >=sys-kernel/openmosix-sources-2.5
 
-# Peter Johanson <latexer@gentoo.org> (11 Apr 2005)
-# Masked as a new cairo innevitably breaks cairo using apps
-=x11-libs/cairo-0.4.0
-=media-libs/glitz-0.4.0
-
 # Jon Portnoy <avenj@gentoo.org> (29 Mar 2005)
 # 2.21 introduces more severe bugs than it fixes. See bug 87091.
 =net-dns/dnsmasq-2.21
@@ -1329,12 +1280,6 @@ dev-db/pgcluster
 # moving to bese-2004@common-lisp.net/arnesi--dev--1.2 patch scheme
 =dev-lisp/cl-arnesi-1.2.0
 =dev-lisp/cl-arnesi-1.2.3*
-
-# <robbat2@gentoo.org> (14 Feb 2005)
-# progsreiserfs does bad things when modifying reiserfs partitions but is the
-# only API with read operations, so we need to keep it.  the latest rc version
-# is the most stable of the lot, but still don't trust it's write ops!
-<sys-fs/progsreiserfs-0.3.1_rc8
 
 # <pylon@gentoo.org> (13 Feb 2005)
 # From website: "We know that 0.4.x is a bit buggy on trades :), for people who
