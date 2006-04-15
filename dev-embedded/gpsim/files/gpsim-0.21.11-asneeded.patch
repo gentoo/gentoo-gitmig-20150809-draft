@@ -1,0 +1,12 @@
+Index: gpsim-0.21.11/cli/Makefile.am
+===================================================================
+--- gpsim-0.21.11.orig/cli/Makefile.am
++++ gpsim-0.21.11/cli/Makefile.am
+@@ -46,6 +46,7 @@ libgpsimcli_la_SOURCES = \
+ 	cmd_version.h misc.h cmd_disasm.h  cmd_list.h  cmd_quit.h \
+ 	cmd_stimulus.h cmd_x.h symbol_t.h cmd_frequency.h cmd_icd.h \
+ 	cmd_macro.h ui_gpsim.h
++libgpsimcli_la_LIBADD = $(LIBREADLINE)
+ 
+ 
+ AM_YFLAGS = -dvt
