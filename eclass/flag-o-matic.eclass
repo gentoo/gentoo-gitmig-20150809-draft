@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.106 2006/02/19 23:18:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.107 2006/04/15 00:44:16 vapier Exp $
 
 
 # need access to emktemp()
@@ -99,6 +99,7 @@ setup-allowed-flags() {
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fbounds-checking -fno-bounds-checking"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-PIE -fno-pie -fno-unit-at-a-time"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -g -g0 -g1 -g2 -g3 -ggdb -ggdb0 -ggdb1 -ggdb2 -ggdb3"
+		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-ident"
 	fi
 	# allow a bunch of flags that negate features / control ABI
 	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-stack-protector -fno-stack-protector-all"
