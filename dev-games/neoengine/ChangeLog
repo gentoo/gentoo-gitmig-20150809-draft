@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/neoengine
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/ChangeLog,v 1.10 2006/03/03 20:26:37 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/ChangeLog,v 1.11 2006/04/15 01:00:58 tupone Exp $
+
+  15 Apr 2006; <Tupone@gentoo.org> -files/0.7.0-execute.patch,
+  -files/0.7.0-ppc.patch, +files/neoengine-0.8.2-gcc41.patch,
+  neoengine-0.8.2.ebuild:
+  Fix for gcc-4.1.
+  Purge old patches
 
   03 Mar 2006; <Tupone@gentoo.org> neoengine-0.8.2.ebuild:
   Forget to die
