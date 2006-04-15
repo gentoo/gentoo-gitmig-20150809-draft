@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e01374d8107675e7a9337f58a811b42e ChangeLog 3360
+MD5 d3a054cf58773e90cf9d9eb3343be147 ChangeLog 3470
+RMD160 f88640d15f1baa98676de54f5a57eebf402701c5 ChangeLog 3470
+SHA256 92c858443c3ceefb26654ac0e927b569783fc43d607c38e4ba666757cde50a1d ChangeLog 3470
 MD5 2b2b57f0a3081b3994ca2a75b18bda75 files/digest-xfce4-appfinder-4.2.1 73
+RMD160 6506a77cdac065c5ab060a18e3abb7db55ea6d90 files/digest-xfce4-appfinder-4.2.1 73
+SHA256 ae3d58150a7c3c816c0c3b788030a058ac848a348ee413479c822a1ed3be12c1 files/digest-xfce4-appfinder-4.2.1 73
 MD5 40caedb5905dd010d04ffcbb0c4f9073 files/digest-xfce4-appfinder-4.2.2 73
+RMD160 60d568bba30aa173c89f042f23641cbc3447a84b files/digest-xfce4-appfinder-4.2.2 73
+SHA256 f87f986e67cee3ed188cd7f332e7f625bd01eb84200114f349cb4278bdb02e91 files/digest-xfce4-appfinder-4.2.2 73
 MD5 40caedb5905dd010d04ffcbb0c4f9073 files/digest-xfce4-appfinder-4.2.2-r1 73
+RMD160 60d568bba30aa173c89f042f23641cbc3447a84b files/digest-xfce4-appfinder-4.2.2-r1 73
+SHA256 f87f986e67cee3ed188cd7f332e7f625bd01eb84200114f349cb4278bdb02e91 files/digest-xfce4-appfinder-4.2.2-r1 73
 MD5 b52717ce63ed7d1ab44f53ac9637a4e4 files/digest-xfce4-appfinder-4.2.3 73
+RMD160 76001e7b7f4819b41294cf3e591ab9d3c110b393 files/digest-xfce4-appfinder-4.2.3 73
+SHA256 2a88443b29367a650e9064daf2c2053c959b37903961d9de95fc482aa4388b75 files/digest-xfce4-appfinder-4.2.3 73
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 a21173dc8cfdee45d47ff15bbcbf6f58 xfce4-appfinder-4.2.1.ebuild 404
+RMD160 5168da27f682e4eeeb0278f1b795846726c0eb3d xfce4-appfinder-4.2.1.ebuild 404
+SHA256 c721daa66e83fd4c76dc107c7f89f619856d2c8f5b78c903b5b5feed9af9e7c6 xfce4-appfinder-4.2.1.ebuild 404
 MD5 a057d9e51ccfdcf6e89ae26f0e055931 xfce4-appfinder-4.2.2-r1.ebuild 496
+RMD160 70e9ef156d285559e0a6849f8afb5ea047a50c7a xfce4-appfinder-4.2.2-r1.ebuild 496
+SHA256 d70ff8cfaf602942a3f96b4c6b3da376a5b975349af7b07267adb8851820cac5 xfce4-appfinder-4.2.2-r1.ebuild 496
 MD5 1448da78574ec85a732dc554e83a2f49 xfce4-appfinder-4.2.2.ebuild 395
-MD5 cd5e9538bfcd6421b18937b087af8017 xfce4-appfinder-4.2.3.ebuild 494
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEOrsKKRy60XGEcJIRArwQAJ9WSG6eR2T98hPP9yZTE6kHBK4CcgCfURNZ
-xDpbk/+9B5Bpt1uIkVBNYAU=
-=DvHI
------END PGP SIGNATURE-----
+RMD160 a8a98e368413465059bdf2b540eec5ba21b4ea93 xfce4-appfinder-4.2.2.ebuild 395
+SHA256 e9d1112a8065b651e22b64989dd988ba1d23df52b410e5dfa4b69c3b46d12da8 xfce4-appfinder-4.2.2.ebuild 395
+MD5 341e1001588ebd295a56a5cf3d739f01 xfce4-appfinder-4.2.3.ebuild 493
+RMD160 a5dea9136e8cc9e4b8bb0186b31ac751d4f512e9 xfce4-appfinder-4.2.3.ebuild 493
+SHA256 cc0fe1212445b71502d56c5bb0f85f8116f96db4813325029bfa8cf44471c481 xfce4-appfinder-4.2.3.ebuild 493
