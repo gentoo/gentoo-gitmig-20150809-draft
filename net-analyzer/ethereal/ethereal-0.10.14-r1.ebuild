@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.14-r1.ebuild,v 1.2 2006/02/15 22:13:06 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.14-r1.ebuild,v 1.3 2006/04/15 16:36:44 flameeyes Exp $
 
-inherit libtool flag-o-matic eutils
+inherit libtool flag-o-matic eutils autotools libtool
 
 DESCRIPTION="A commercial-quality network protocol analyzer"
 HOMEPAGE="http://www.ethereal.com/"
@@ -48,6 +48,10 @@ src_unpack() {
 	cd "${S}"
 	# bug 117716
 	epatch "${FILESDIR}"/${PN}-0.10.14-capture_loop.patch
+	epatch "${FILESDIR}/${P}-asneeded.patch"
+
+	AT_M4DIR="${S}/aclocal-fallback" eautomake
+	elibtoolize
 }
 
 src_compile() {

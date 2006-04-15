@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.170 2006/03/10 00:22:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.171 2006/04/15 16:36:44 flameeyes Exp $
+
+  15 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/ethereal-0.10.14-asneeded.patch, ethereal-0.10.14-r1.ebuild:
+  Add patch to build with --as-needed and adns useflag. Bug #129906 reported
+  by Patrizio Bassi.
 
   10 Mar 2006; Aron Griffis <agriffis@gentoo.org> ethereal-0.10.14.ebuild:
   Mark 0.10.14 stable on ia64
