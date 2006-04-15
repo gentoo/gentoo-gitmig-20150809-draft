@@ -1,6 +1,9 @@
-MD5 55036a819aa6b491181d88613aceaceb ChangeLog 2444
-RMD160 6150c0d746700fa47a99d08388eace7b4ab5eb05 ChangeLog 2444
-SHA256 5320fd15c02afa89bb2c6d67b58002af1e3e7fec3eff648efe164d66e8e942e6 ChangeLog 2444
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0b70ed19cfee10397fcc64e6f3de6fec ChangeLog 2545
+RMD160 2e0427326b209d53a51626f1de2d6c18e115ce46 ChangeLog 2545
+SHA256 c682047c3e032b78b33b009034e2d6f96ecc8ba3747fdd0ed80071e633d5ec7a ChangeLog 2545
 MD5 a8864951b56c2a4abc07e4cb8a4067f2 files/build-1.0_beta4.xml 6500
 RMD160 2e5fb0fad0b54a79d185c51867e79fb3c1f764f7 files/build-1.0_beta4.xml 6500
 SHA256 165fb65cca421f53a2b985c396c9f80de9445a1a22636e1513856de6d107c523 files/build-1.0_beta4.xml 6500
@@ -16,6 +19,13 @@ SHA256 11842e69211e4ca21cfb7ec13510ce4daf8b17ad73487680773af302371d54d4 metadata
 MD5 060ece1ec17c9d9bd8089c751264435c picocontainer-1.0_beta4.ebuild 1095
 RMD160 9822d278eb51a6651bde7d039c57f4c53818dd27 picocontainer-1.0_beta4.ebuild 1095
 SHA256 7fd7f21f8864dd9e944f7023755bd5ed84b437a42c9c27b78dbb12b747f53c1b picocontainer-1.0_beta4.ebuild 1095
-MD5 d064a91e35dbae30d905e2b27bb016ef picocontainer-1.1.ebuild 1124
-RMD160 06b37b5373f3f8ecebf05f9c8dee70205c0c5eec picocontainer-1.1.ebuild 1124
-SHA256 c55d7c2a20bb96926bb085f5a1345f4ad7f61c8861546ed5b92e21f7e803bf58 picocontainer-1.1.ebuild 1124
+MD5 4b2c6a031a57a658de634daa27f589ce picocontainer-1.1.ebuild 1120
+RMD160 fa674f2c54afeec90a740d4af4d919b5d7cd5843 picocontainer-1.1.ebuild 1120
+SHA256 dadf4fddf18cbd57b635eeb0937f70105326b8ca7a334c2c56a9136b55f1ce20 picocontainer-1.1.ebuild 1120
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQDsCCRZPokWLroQRAm5BAKCbhquAMu6mNJR5Ng2Sg7MKkyW80wCgooNp
+aZu1e9IztUyPXn5vPYGAwws=
+=E9X4
+-----END PGP SIGNATURE-----
