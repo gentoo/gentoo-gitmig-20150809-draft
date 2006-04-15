@@ -1,18 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.0.61.ebuild,v 1.1 2006/01/16 01:27:57 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.0.61.ebuild,v 1.2 2006/04/15 08:54:38 cryos Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 IUSE="glut"
 
-DESCRIPTION="very powerful general purpose Computer Algebra System"
+DESCRIPTION="very powerful general purpose computer algebra system"
 HOMEPAGE="http://yacas.sourceforge.net/"
 SRC_URI="http://${PN}.sourceforge.net/backups/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="amd64 ~ppc ~x86"
 
 DEPEND="virtual/libc
 	>=sys-apps/sed-4
@@ -30,6 +30,8 @@ src_unpack() {
 }
 
 src_compile() {
+	# Filter -Os due to reported issues with it in bug 126779.
+	replace-flags -Os -O2
 	econf --with-numlib=native || die "./configure failed"
 	emake || die
 }
