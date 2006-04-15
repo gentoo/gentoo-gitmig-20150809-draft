@@ -1,6 +1,13 @@
 # ChangeLog for app-text/wv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.27 2005/10/31 13:12:47 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.28 2006/04/15 11:37:02 foser Exp $
+
+*wv-1.2.1 (15 Apr 2006)
+
+  15 Apr 2006; Marinus Schraal <foser@gentoo.org> wv-1.2.1.ebuild :
+  New release (#129830)
+  Remove internal header install
+  API breakage, add preserve_old_lib*
 
 *wv-1.2.0 (31 Oct 2005)
 
