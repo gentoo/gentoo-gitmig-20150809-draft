@@ -1,0 +1,43 @@
+--- mkboot.	2006-04-02 19:17:59.000000000 +0200
++++ mkboot	2006-04-15 20:41:00.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/sh
++#!/bin/bash
+ # mkboot: make the system bootable
+ # Debian GNU/Linux
+ # Copyright 1996-1997 Guy Maor <maor@debian.org>
+@@ -85,7 +85,7 @@
+ # check whether PALO is installed
+ palocheck() {
+     printf "\nChecking for PALO..."
+-    if [ -f /etc/palo.conf ] && [ -x /sbin/palo ]; then
++    if [ -f /etc/palo.conf ] && which palo > /dev/null; then
+        echo "Yes"
+        return 0
+     fi
+@@ -380,9 +380,13 @@
+     fi
+ 
+     if palocheck; then
+-        printf "\nPALO is installed. To automatically switch to new kernels, point your\n"
+-        echo "default entry in palo.conf to $1"
+-        exit 0
++        palo="$(which palo)"
++        printf "\nShould I run $palo? (y/N) "
++	read input
++	if [ "$input" = "y" ] ; then
++	    palo && exit 0
++	fi
++	echo "There was a problem running $palo."
+     fi
+ 
+     printf "\nShould I make a bootdisk? (y/N) "
+@@ -392,7 +396,7 @@
+     fi
+ 
+     printf "\nWARNING: Your system is probably unbootable now.  After correcting any\n"
+-    echo "problems, rerun this script with the command \`mkboot -installkernel'."
++    echo "problems, rerun this script with the command \`mkboot -i'."
+     exit 1
+ fi
+ 

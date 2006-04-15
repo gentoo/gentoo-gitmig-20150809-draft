@@ -1,37 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4d93d1c110776fb319473d337099d705 ChangeLog 8843
-RMD160 983d5366c8ff4f332790cd1948d61f8e32cb8069 ChangeLog 8843
-SHA256 38f799ca62517f0f5053ddb72cbb115c7433af18e3877ba29793165bc111a4f2 ChangeLog 8843
+MD5 7e8524f8a2f56dfb45f595a349288b6b ChangeLog 9071
+RMD160 4e1c4e72b87338f1c46ac5521ad1cc63c28115b2 ChangeLog 9071
+SHA256 2b165faee762b8d7ce2d3ba3e014cccd98c8539ba0373e47d09910a86bebe87c ChangeLog 9071
 MD5 b98e33513bbc6f2222bca2b81df815f8 debianutils-2.13.1-r1.ebuild 1040
 RMD160 25125ff53925e1abcac6fb25d58aa64f6d4ea49f debianutils-2.13.1-r1.ebuild 1040
 SHA256 7aa60bdcd764e263191fc0a980034711109f0cf055a16dc62de1e9eea627e6bc debianutils-2.13.1-r1.ebuild 1040
 MD5 dde4623a7e4629ff3ae7a5c872e7acdf debianutils-2.14.1-r1.ebuild 1129
 RMD160 19cfbf6c147f0129c027cb5eee43e92e618ea2c6 debianutils-2.14.1-r1.ebuild 1129
 SHA256 5223d1d575184878a914e6b93dbb7fccd5f44f16db4eea35f19452c57d8c410a debianutils-2.14.1-r1.ebuild 1129
+MD5 da541a1bec7e0b76e453054cab836a04 debianutils-2.15-r1.ebuild 1188
+RMD160 c354385e7a6dccce0883defd8915e268cee3e007 debianutils-2.15-r1.ebuild 1188
+SHA256 dcdc586c229d0474f91161b55df6a2d940ee1999731e75605116ae6f6a953112 debianutils-2.15-r1.ebuild 1188
 MD5 c256bb3241a1a34e9030b0ffde676f11 debianutils-2.15.ebuild 1133
 RMD160 b1f9809be845ffb0e14fdabe0ddcaefcf7de1cae debianutils-2.15.ebuild 1133
 SHA256 770e5c75971ef568d36f80731d0f54b29ca76ba370dc1dfa38dbbe0db73fc737 debianutils-2.15.ebuild 1133
 MD5 c2a83b7cc35cd0a76df37cf57c8f6563 files/debianutils-2.14.1-no-bs-namespace.patch 1412
 RMD160 20226c9f11a6e3708c39c426f46391c5e828c1b9 files/debianutils-2.14.1-no-bs-namespace.patch 1412
 SHA256 1cac8819abad2ae16568461ccddfd27e98e2adc3103a61d647358f05ef6eb365 files/debianutils-2.14.1-no-bs-namespace.patch 1412
+MD5 ae87a5fea54d5a0eee0b4316f36070cc files/debianutils-2.15-palo.patch 1262
+RMD160 190487507a2b8b9001f880b6f985799ac7a20ade files/debianutils-2.15-palo.patch 1262
+SHA256 93f128143c75e9fe3a9d1c505fd23a974b8886cb9a8c4ffba187c3f040636e98 files/debianutils-2.15-palo.patch 1262
 MD5 930d33ac394a1a72aa0023368f998b2d files/digest-debianutils-2.13.1-r1 70
 RMD160 3f013b0c28742072ad752d20cca094cdeea43286 files/digest-debianutils-2.13.1-r1 70
 SHA256 29bf85eaf812546ab6f04b97575389478739bcc3398618e5e0869fa8cd29ea77 files/digest-debianutils-2.13.1-r1 70
 MD5 1139a531f41ec299352621154a9f8cca files/digest-debianutils-2.14.1-r1 70
 RMD160 8b62e025f92b2161f9c9ba6b593fdca43fc30ce4 files/digest-debianutils-2.14.1-r1 70
 SHA256 e9c296abd7e386ded37670a0afc88a2bf8958ffb5104bf66d4676fe15250144d files/digest-debianutils-2.14.1-r1 70
-MD5 2003427638987c496d640728278cf18a files/digest-debianutils-2.15 68
-RMD160 ecfb70426dc69ef4667c2e27009d65a1cca49fe7 files/digest-debianutils-2.15 68
-SHA256 9624aced5c2caaecc6c2464bae76136d844ed5f0e2cb8f59e705b3c19de8d0ec files/digest-debianutils-2.15 68
+MD5 d30e26a9ea91d5454308017a7bbcc684 files/digest-debianutils-2.15 250
+RMD160 7cb6e56ae3e64d9f32d470b64132364b736fb6c6 files/digest-debianutils-2.15 250
+SHA256 91a2e89dbc7288812733d6c0b9f6c0eecd70a387dd84ea5a4f495246d26cbfa9 files/digest-debianutils-2.15 250
+MD5 d30e26a9ea91d5454308017a7bbcc684 files/digest-debianutils-2.15-r1 250
+RMD160 7cb6e56ae3e64d9f32d470b64132364b736fb6c6 files/digest-debianutils-2.15-r1 250
+SHA256 91a2e89dbc7288812733d6c0b9f6c0eecd70a387dd84ea5a4f495246d26cbfa9 files/digest-debianutils-2.15-r1 250
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEL/2sugEuf3OQ0akRAnvOAJ9s6aIy7TjfezRuIR0ztiy+480s9gCeIUj1
-5YnYaAZgayeNz308DrMWTv4=
-=gdc1
------END PGP SIGNATURE-----
