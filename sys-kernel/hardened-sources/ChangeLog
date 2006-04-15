@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.87 2006/04/14 18:48:29 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.88 2006/04/15 16:33:07 johnm Exp $
+
+*hardened-sources-2.6.16-r3 (15 Apr 2006)
+
+  15 Apr 2006; John Mylchreest <johnm@gentoo.org>
+  +hardened-sources-2.6.16-r3.ebuild:
+  Removing silly localversion which I missed
 
 *hardened-sources-2.6.14-r7 (14 Apr 2006)
 
