@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5221 2006/04/15 07:23:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5222 2006/04/15 14:03:00 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -248,10 +248,6 @@ net-misc/trickle
 # Marinus Schraal <foser@gentoo.org> (29 Mar 2006)
 # mask for removal
 media-gfx/sodipodi
-
-# Diego Pettenò <flameeyes@gentoo.org> (28 Mar 2006)
-# CVS snapshot for AAC testing, mask for now
-=media-libs/xine-lib-1.1.2_pre*
 
 # Duncan Coutts <dcoutts@gentoo.org> (26 Mar 2006)
 # New revisions, mainly for ia64. Needs testing.
