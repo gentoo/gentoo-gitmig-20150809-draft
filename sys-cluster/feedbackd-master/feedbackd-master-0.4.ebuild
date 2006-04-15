@@ -1,16 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-master/feedbackd-master-0.4.ebuild,v 1.5 2005/07/10 01:01:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-master/feedbackd-master-0.4.ebuild,v 1.6 2006/04/15 16:00:05 xmerlin Exp $
 
 inherit eutils
 
-DESCRIPTION="Feedbackd is a client/server system that provides dynamic feedback of server
-load in a Linux Virtual Server (LVS)-based cluster. Monitor plugins are used to
-measure the health of each server, allowing a flexible way to report load back
-to the load balancer. It also facilitates the addition and removal of servers
-from the cluster.
-
-This is the master process for feedbackd, which is run on the LVS director."
+DESCRIPTION="Feedbackd is an add-on to the Linux Virtual Server project (LVS) to provide
+dynamic feedback of server health."
 
 HOMEPAGE="http://ozlabs.org/~jk/projects/feedbackd/"
 LICENSE="GPL-2"

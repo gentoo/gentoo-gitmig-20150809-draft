@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/feedbackd-master
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-master/ChangeLog,v 1.4 2005/03/08 02:49:52 xmerlin Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-master/ChangeLog,v 1.5 2006/04/15 16:00:05 xmerlin Exp $
+
+  15 Apr 2006; Christian Zoffoli <xmerlin@gentoo.org>
+  feedbackd-master-0.4.ebuild:
+  Fixed description length. Closed bug #128803, thanks to Pietro Franchi
+  <tinaught@gmail.com>.
 
   08 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org>
   feedbackd-master-0.4.ebuild:
