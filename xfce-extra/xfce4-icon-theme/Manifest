@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 40e535d3a2003e3b0a879a8e4a0d603c ChangeLog 3327
+MD5 62cae41dc7ffac93cb236e3b7cf728a1 ChangeLog 3438
+RMD160 cbe62d69ce13e571156f1a498be68ff2a2f4e82d ChangeLog 3438
+SHA256 b4dc6a5ce337cb15616720cf5b906bbcd28a810284a6823759912f4f223017c6 ChangeLog 3438
 MD5 8c987fb00f1a32cdf0cef9020b4936e3 files/digest-xfce4-icon-theme-4.2.1 75
+RMD160 05d09a5f706235a4c38104847c39d34d2e447164 files/digest-xfce4-icon-theme-4.2.1 75
+SHA256 0c51a0df74241ab9771ed55454df1eeb22b840753e59b6c998cc73f0983abe2a files/digest-xfce4-icon-theme-4.2.1 75
 MD5 e92b83a4cdb4400d15f7061e1569aa02 files/digest-xfce4-icon-theme-4.2.2 75
+RMD160 85f96ed95ddcff8ed102ab015fd3b95b380075d3 files/digest-xfce4-icon-theme-4.2.2 75
+SHA256 b3054042a042f84cf8207d976288c0dffc45ea67e791e81c92f3c66c24f40284 files/digest-xfce4-icon-theme-4.2.2 75
 MD5 e92b83a4cdb4400d15f7061e1569aa02 files/digest-xfce4-icon-theme-4.2.2-r1 75
+RMD160 85f96ed95ddcff8ed102ab015fd3b95b380075d3 files/digest-xfce4-icon-theme-4.2.2-r1 75
+SHA256 b3054042a042f84cf8207d976288c0dffc45ea67e791e81c92f3c66c24f40284 files/digest-xfce4-icon-theme-4.2.2-r1 75
 MD5 5dc4d9450346fc318300a561df3b2cc3 files/digest-xfce4-icon-theme-4.2.3 75
+RMD160 d76937ca0ae4fb2f0f99650a7d42b960da24116f files/digest-xfce4-icon-theme-4.2.3 75
+SHA256 d7de0a0d86c751bbe9762ac4f577e1eba119ffc81de8b4612d4f2bf5c74835f3 files/digest-xfce4-icon-theme-4.2.3 75
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 e3c514ca94bb602609999e14469ed3d5 xfce4-icon-theme-4.2.1.ebuild 359
+RMD160 75d4653efd871b4d29b2fc856a2ec4e5b692d526 xfce4-icon-theme-4.2.1.ebuild 359
+SHA256 f4f71ba9573daf03751a2c43eb4f3eed1de2b83f5e10cc97c4644d118a108fb8 xfce4-icon-theme-4.2.1.ebuild 359
 MD5 b1d471f940c70561175a02c0dd9b4009 xfce4-icon-theme-4.2.2-r1.ebuild 376
+RMD160 5c825f6b053b182f20df46ae411a29c6b4d1a020 xfce4-icon-theme-4.2.2-r1.ebuild 376
+SHA256 6e7395a80a5c4821c96d822a8fe985e940e8c67fa898c78960ecbb98b1833fa4 xfce4-icon-theme-4.2.2-r1.ebuild 376
 MD5 9941a60c91179a55e8d7c9d440bcab3e xfce4-icon-theme-4.2.2.ebuild 349
-MD5 0a58c4a2df75dffce2683ea546630284 xfce4-icon-theme-4.2.3.ebuild 374
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEOrt5KRy60XGEcJIRAj8CAKCNxs4H0u3vjouSyCM8rerx3VV29wCffVJG
-farBDVNhiOw5pmQjIAoHAZk=
-=JkGO
------END PGP SIGNATURE-----
+RMD160 929d864d9cd04555a347f44f95275c145d4c847c xfce4-icon-theme-4.2.2.ebuild 349
+SHA256 c624cec543327bb0dc0d55e52201a7b5f47e3552443e706e63d2b11a2190acaf xfce4-icon-theme-4.2.2.ebuild 349
+MD5 2e5e70f8b074eae758f194c68703b441 xfce4-icon-theme-4.2.3.ebuild 373
+RMD160 bdfc3f0289f6ee440587b20be73446f7d8da5a99 xfce4-icon-theme-4.2.3.ebuild 373
+SHA256 ff925736c08a5b0c2dac287c9a1fb5cefcc4bcf0c9a0a9180d9cd33c67027390 xfce4-icon-theme-4.2.3.ebuild 373

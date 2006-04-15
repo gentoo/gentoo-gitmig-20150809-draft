@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a485e68ed5afa598c68b8bb3be7394a7 ChangeLog 7413
+MD5 9f552289a18db164171ece6c77b6db6b ChangeLog 7519
+RMD160 b2a5a6daa622f772fbf1f1011f16e622f76d0a43 ChangeLog 7519
+SHA256 6e56789364d88cba6232a44f3fcff5035a1224aeb45d4803c7d8d2814001258a ChangeLog 7519
 MD5 0aa5db9678036981185253b94aeec8c7 files/digest-xfce4-systray-4.2.1 71
+RMD160 3e1613df0dcea64cb0c095054306e0e020d1de33 files/digest-xfce4-systray-4.2.1 71
+SHA256 b9a3dfe017e3d3bc75536f8137d21c1a068ddb50e54239c6539e471dd73094cc files/digest-xfce4-systray-4.2.1 71
 MD5 752f77ba62486a16f4c5ccf533c6ac1d files/digest-xfce4-systray-4.2.2 71
+RMD160 003a93f84bf2576b03ff1a8079f656785635c839 files/digest-xfce4-systray-4.2.2 71
+SHA256 9d2bdf0732313afafffcdff0a41438023f5db079176cc29808b9ed380d266bcc files/digest-xfce4-systray-4.2.2 71
 MD5 752f77ba62486a16f4c5ccf533c6ac1d files/digest-xfce4-systray-4.2.2-r1 71
+RMD160 003a93f84bf2576b03ff1a8079f656785635c839 files/digest-xfce4-systray-4.2.2-r1 71
+SHA256 9d2bdf0732313afafffcdff0a41438023f5db079176cc29808b9ed380d266bcc files/digest-xfce4-systray-4.2.2-r1 71
 MD5 7e41a73635021dae4829e92e61b8c581 files/digest-xfce4-systray-4.2.3 71
+RMD160 c3fdfe5e40bee52bd16aff83417f530b32ef6e01 files/digest-xfce4-systray-4.2.3 71
+SHA256 b657924d561fa4f60971b5dae46137659a0c6cacefa76b516c2a6e089b824574 files/digest-xfce4-systray-4.2.3 71
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 a7466a11d8acb482e674e2468f649a77 xfce4-systray-4.2.1.ebuild 398
+RMD160 528840de20ca4f7fa881579724add8b16079081a xfce4-systray-4.2.1.ebuild 398
+SHA256 98e0449a9f945c3913d57e877d666dbac111de76253bd07dd981088d4fe49683 xfce4-systray-4.2.1.ebuild 398
 MD5 9c45512c5e5d558053cbb2442e472c71 xfce4-systray-4.2.2-r1.ebuild 412
+RMD160 e55fd42f43f44f53640849fc09992a31dc526f4e xfce4-systray-4.2.2-r1.ebuild 412
+SHA256 24a2833fdae71269cc9acd23892774ac45caff43f0893b4a5dcbb15373e86ff4 xfce4-systray-4.2.2-r1.ebuild 412
 MD5 b9dcc84bffd08594913efcc003654f23 xfce4-systray-4.2.2.ebuild 385
-MD5 d04f462de9824d86faa3f37071016803 xfce4-systray-4.2.3.ebuild 410
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEOrxyKRy60XGEcJIRAj+FAJ4xnT1hV4r/QUahNZ8DByD4odubXQCfREHD
-QaLgYA4zLM+szqeVh14LMZw=
-=LBCh
------END PGP SIGNATURE-----
+RMD160 acfc62c58b488c4f6e85f2f9e31335088a811656 xfce4-systray-4.2.2.ebuild 385
+SHA256 9e333bd1a976f661d31a24925c14be16b406041263aef5dac799a3e7301fa0a4 xfce4-systray-4.2.2.ebuild 385
+MD5 0799d87bb4c298fc39df1806573d1a16 xfce4-systray-4.2.3.ebuild 409
+RMD160 ae5c7673f484aba0e9abe94103811cfa29726ca6 xfce4-systray-4.2.3.ebuild 409
+SHA256 c766f8d4acd7eee7e4883ee99865dd81a35a96ef2da1033ebae88f6ae34d42aa xfce4-systray-4.2.3.ebuild 409
