@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.7.1.ebuild,v 1.2 2006/04/14 17:42:37 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.7.1.ebuild,v 1.3 2006/04/15 13:06:09 nelchael Exp $
 
 inherit wxwidgets
 
@@ -15,6 +15,36 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="unicode"
 DEPEND=">=app-doc/chmlib-0.31
 	>=x11-libs/wxGTK-2.6.0"
+
+src_unpack() {
+
+	unpack ${A}
+
+	# Fix "time stamp 2006-04-22 16:14:39 is 609667 s in the future"
+	# bug #130059:
+	# SHOULD BE REMOVED AFTER 2006/04/22!
+	cd "${S}"
+	touch -r Makefile.in \
+		src/chmframe.h \
+		art/Makefile.in \
+		art/Makefile.am \
+		po/zh_TW.gmo \
+		po/sk.gmo \
+		po/ru.gmo \
+		po/ro.gmo \
+		po/pt.gmo \
+		po/pl.gmo \
+		po/lv.gmo \
+		po/it.gmo \
+		po/hu.gmo \
+		po/zh_CN.gmo \
+		po/fr.gmo \
+		po/es.gmo \
+		po/cs.gmo \
+		po/de.gmo \
+		po/bg.gmo
+
+}
 
 src_compile() {
 	local myconf
