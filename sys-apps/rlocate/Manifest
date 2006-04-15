@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 19f972c6ae8170cc816c44fa5b811d03 ChangeLog 2116
-RMD160 f10a1cc05673f2e5e84473cfb897493d7f748f60 ChangeLog 2116
-SHA256 b9b3d5ce2470b8bdd83e7638bd8f9ac06f7e12c7d308fb1287cbbbe70588cdce ChangeLog 2116
+MD5 12e40825d0e8a8b71e3cb6f76b82bb07 ChangeLog 2317
+RMD160 8577cc6dfe86329b4d8d754e639fd785062dcda7 ChangeLog 2317
+SHA256 863d32189e5c582bbfd5a4c594b679640eaf426d2c997067861d4f21c85c0dfe ChangeLog 2317
 MD5 c394abbcaaac16e12cbe56b3e639c634 files/digest-rlocate-0.4.0 65
 RMD160 779ef4e39e97564e47a33ee7b246259832b10423 files/digest-rlocate-0.4.0 65
 SHA256 6af91668306abaf45d0ed6c5bb7b38a31ce501b50ddd193c0e2145339b8fe299 files/digest-rlocate-0.4.0 65
@@ -16,9 +16,9 @@ SHA256 85b80e90dd7222ba5327a1109d7aa1049790e783163710e06ca3cd5d07f0d9ad files/di
 MD5 062913d72d8c29796164f03223b77685 files/digest-rlocate-0.4.3 241
 RMD160 27038f33ffa4efacb4b5b4eac216e7eda31a177e files/digest-rlocate-0.4.3 241
 SHA256 ff424af8869035f3d224720a1acaa177b3975ab826f734acb3b6c4d09a61efee files/digest-rlocate-0.4.3 241
-MD5 b9c82f508e75e5d48b7095747400822a files/digest-rlocate-0.5.0 241
-RMD160 35ed90e05cb795905a974dd79a283fac800fbb9e files/digest-rlocate-0.5.0 241
-SHA256 30afa8219e4b45f4d06d462bab4d06067349f42f0899373a5ac9f4f35e9f3486 files/digest-rlocate-0.5.0 241
+MD5 b9c82f508e75e5d48b7095747400822a files/digest-rlocate-0.5.0-r1 241
+RMD160 35ed90e05cb795905a974dd79a283fac800fbb9e files/digest-rlocate-0.5.0-r1 241
+SHA256 30afa8219e4b45f4d06d462bab4d06067349f42f0899373a5ac9f4f35e9f3486 files/digest-rlocate-0.5.0-r1 241
 MD5 43fee28c090b20de0b2c57b15e97caba files/rlocate-0.3.3-build.patch 2655
 RMD160 796455ca5fcd5f14c47ffb65868a65c8ef1753ad files/rlocate-0.3.3-build.patch 2655
 SHA256 979cea75fae4b6c812f60cc73b31e83b68038b61bdf9e9c91dfa16df6b0caf83 files/rlocate-0.3.3-build.patch 2655
@@ -34,6 +34,9 @@ SHA256 d0821dd88cdce1b77e7f34270535d8f4b7e29ed5de6c8a052fc56b7f8fbf4af5 files/rl
 MD5 0146c2d51220faa67b75cbce12f41912 files/rlocate-0.5.0-build.patch 1013
 RMD160 ab1fe40714fcfcc77441e7561a1d683775d2b801 files/rlocate-0.5.0-build.patch 1013
 SHA256 a7b11a6872407bc75476c24314a93fda9e0e8f2628192b542df39db680e6ae3e files/rlocate-0.5.0-build.patch 1013
+MD5 3a9bb999abc0a3bf6ef17a07885386cb files/rlocate-0.5.0-settings.patch 758
+RMD160 ce1e7616a7d6f362d6766bf8c24ec8d0fa905a11 files/rlocate-0.5.0-settings.patch 758
+SHA256 b41d65a315b3df2990d6b36dfca7c5f06e3a8e3d1cbb5b1587336046b9e51b38 files/rlocate-0.5.0-settings.patch 758
 MD5 56da5f78d234dc0928277d6d34b85de9 files/rlocated.rc 534
 RMD160 bb6c985f67b2c8e30005e12198e9ef1208b353dc files/rlocated.rc 534
 SHA256 f9437eb1eafba03b8c736bbb6bad329a2c10f2e086b95c28925f136f24c52a14 files/rlocated.rc 534
@@ -52,13 +55,13 @@ SHA256 bbebf3968e99c3c067dbbfaa0e878961c87edc45cedf6c88f7365bcd9411c617 rlocate-
 MD5 4bfc313b502e4c967c5fa669de8d7cb2 rlocate-0.4.3.ebuild 1161
 RMD160 e9e972c7d08a8f900aee9641476210a3f48f9381 rlocate-0.4.3.ebuild 1161
 SHA256 8fb27e910d85cf481ded91f5b59a6dd47d22df661e3ba0616a1904172aa64b62 rlocate-0.4.3.ebuild 1161
-MD5 94cf82a97d4d6cb8aeb2ae2232a818e7 rlocate-0.5.0.ebuild 1165
-RMD160 5bd787aa9f5d7289272e479b7800d9e39c6afad5 rlocate-0.5.0.ebuild 1165
-SHA256 fddaddfe8eda1e6bd59c3e3ce6e3d205d7097415efe3f9bc4dedd450f75e4e86 rlocate-0.5.0.ebuild 1165
+MD5 8230e5db322bd60153409b599b0c3ede rlocate-0.5.0-r1.ebuild 1221
+RMD160 2c1ddcf4da9138502f93bf3cfbec71848dcabb17 rlocate-0.5.0-r1.ebuild 1221
+SHA256 fec6e30606ad7c8cd14f2484d194c4f48fbc5abb042c6b2c33fd2da92eec4e34 rlocate-0.5.0-r1.ebuild 1221
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEQFlx2+ySkm8kpY0RAugjAKCIBdtXJsWwlTy8CJH5i4kGg8Oh7gCgqMJd
-euY06o9E/wsUzrQjTaRECUQ=
-=jD4k
+iD8DBQFEQTjO2+ySkm8kpY0RAhFoAKCLpyIbdrBjVrFOfhEl+K5ApS8aawCeLusm
+Y0gFcMxCHPSy7Y0jEAvfI2c=
+=iD7d
 -----END PGP SIGNATURE-----

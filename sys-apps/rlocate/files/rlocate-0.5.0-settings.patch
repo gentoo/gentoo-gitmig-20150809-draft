@@ -1,0 +1,26 @@
+--- src/slocate.h
++++ src/slocate.h
+@@ -35,20 +35,11 @@
+ #define MTAB_FILE "/etc/mtab"
+ #define UPDATEDB_FILE "/etc/updatedb.conf"
+ 
+-/* More fitting paths for FreeBSD -matt */
+-#if defined(__FreeBSD__)
+-# define DEFAULT_DB "/var/db/slocate/slocate.db"
+-# define DEFAULT_DB_DIR "/var/db/slocate/"
+-#elif defined(__SunOS__)
+-# define DEFAULT_DB "/var/db/slocate/slocate.db"
+-# define DEFAULT_DB_DIR "/var/db/slocate/"
+-#else
+-# define DEFAULT_DB "/usr/local/var/rlocate/rlocate.db"
+-# define DEFAULT_DB_DIR "/usr/local/var/rlocate/"
+-#endif
++#define DEFAULT_DB "/var/lib/rlocate/rlocate.db"
++#define DEFAULT_DB_DIR "/var/lib/rlocate/"
+ 
+ #define DB_UID 0
+-#define DB_GROUP "rlocate"
++#define DB_GROUP "locate"
+ #define DB_MODE 00640
+ 
+ #define SLOC_ESC -0x80
