@@ -22,9 +22,9 @@ SHA256 24e247e83b6165e86655fa7e1cf7ccc9e9d6840c7fcedf87cb6b3bbf15a9f9ae files/di
 MD5 d8bcee45204677e9c9180e209a021067 files/digest-openssh-4.3_p2-r1 359
 RMD160 5bb8208617ebb5b90910d92ee2f069100042e989 files/digest-openssh-4.3_p2-r1 359
 SHA256 d70fe365d290c5d79b434004dbbfedf32577ad92983d56646e916deab7599aad files/digest-openssh-4.3_p2-r1 359
-MD5 87593c73e26e1a3825fcb51f2270b694 files/openssh-3.9_p1-chroot.patch 3027
-RMD160 bdbdcadc59c1eda5cb516f8a601d1c8912b36ebb files/openssh-3.9_p1-chroot.patch 3027
-SHA256 14653a7eb8d0458f5a74baa4bbc6ba026d141432af745c5d52f3728328badc04 files/openssh-3.9_p1-chroot.patch 3027
+MD5 c4edd6a7aa1418ce5bf74aeb46627dbf files/openssh-3.9_p1-chroot.patch 3026
+RMD160 23b2a1c819580b0f2fcb927c13c63e4f16387333 files/openssh-3.9_p1-chroot.patch 3026
+SHA256 014158a32c707b2a79ac606aeefb6bc09f24c3f07ce5df353ddad96095518597 files/openssh-3.9_p1-chroot.patch 3026
 MD5 7937a17eb31fc6139ef42fa04521de27 files/openssh-3.9_p1-configure-openct.patch 995
 RMD160 311073097835d8fdd4b2127df6c6d9a8e063272c files/openssh-3.9_p1-configure-openct.patch 995
 SHA256 663a0d7978861bed2ba41cbbd9c5344e5d898623cd5adcb699d1c5fca06b6b34 files/openssh-3.9_p1-configure-openct.patch 995
@@ -127,7 +127,7 @@ SHA256 91544ad164a967efaffab4dc5c09be67708b5c433354c41c21812751e7435a42 openssh-
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEMjjYAiZjviIA2XgRAv+8AKDNvERbHDUI5C+rI2EbRaYG3qHJ/gCgwODg
-t420YR64mp+5AlZXklJ/zNo=
-=E52O
+iD8DBQFEQKHz2+ySkm8kpY0RAg6wAJ0UcJHjmKorOoyfasJML41KGAPGTwCdFetv
+kBnnNwd/dA9qZAX36mn0GCo=
+=6mUo
 -----END PGP SIGNATURE-----

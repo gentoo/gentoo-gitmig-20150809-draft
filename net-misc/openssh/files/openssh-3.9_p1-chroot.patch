@@ -60,7 +60,7 @@ diff -uNr openssh-3.7.1p2/session.c openssh-3.7.1p2-chroot/session.c
 +               new_root += 2;
 +
 +               if(chroot(user_dir) != 0)
-+                   fatal("Couldn't chroot to user directory % s", user_dir);
++                   fatal("Couldn't chroot to user directory %s", user_dir);
 +                   pw->pw_dir = new_root;
 +                   break;
 +               }
