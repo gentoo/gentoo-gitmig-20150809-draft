@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.234 2006/04/12 14:40:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.235 2006/04/15 01:25:21 geoman Exp $
+
+  15 Apr 2006; Stephen P. Becker <geoman@gentoo.org> gtk+-2.8.12.ebuild:
+  stable on mips
 
   12 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> gtk+-1.2.10-r11.ebuild:
   Add ~x86-fbsd keyword.
