@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk-app_notify
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_notify/ChangeLog,v 1.1 2005/08/27 21:50:26 stkn Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_notify/ChangeLog,v 1.2 2006/04/15 23:49:22 stkn Exp $
+
+*asterisk-app_notify-1.0_rc2 (15 Apr 2006)
+
+  15 Apr 2006; Stefan Knoblich <stkn@gentoo.org>
+  asterisk-app_notify-0.9.ebuild, +asterisk-app_notify-1.0_rc2.ebuild:
+  Version bump, 1.0_rc2 verified to compile with asterisk-1.2.x, block
+  unsupported versions in DEPEND.
 
 *asterisk-app_notify-0.9 (27 Aug 2005)
 
