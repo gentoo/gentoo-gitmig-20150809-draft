@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cccc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cccc/ChangeLog,v 1.8 2006/04/15 07:10:47 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cccc/ChangeLog,v 1.9 2006/04/15 07:14:21 halcy0n Exp $
+
+  15 Apr 2006; Mark Loeser <halcy0n@gentoo.org> +metadata.xml:
+  Adding metadata
 
   15 Apr 2006; Mark Loeser <halcy0n@gentoo.org> cccc-3.0_pre63.ebuild:
   This version doesn't compile with a stable system, and the new version still
