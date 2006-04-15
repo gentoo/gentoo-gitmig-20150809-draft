@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.142 2006/04/14 14:04:44 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.143 2006/04/15 15:13:34 dertobi123 Exp $
+
+  15 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  cyrus-sasl-2.1.21-r2.ebuild:
+  ppc stable, bug #129523
 
   14 Apr 2006; Rene Nussbaumer <killerfox@gentoo.org>
   cyrus-sasl-2.1.21-r2.ebuild:
