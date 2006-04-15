@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bd5a836f94e74b25c55541704d2eb0d6 ChangeLog 3251
 RMD160 3df144c9f47b73da0780de0f3167e10ae6c0f3ef ChangeLog 3251
 SHA256 3c90fdbe3af853b8136b28af7f5966f0b81b1357a76137b19cb9edde896b615d ChangeLog 3251
@@ -16,3 +19,10 @@ SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata
 MD5 258fb23670b9744cad3a31e708d1a7ed superkaramba-3.5.2.ebuild 545
 RMD160 4c72b5a42c0ea7aa3df8931389cce327dc1a4159 superkaramba-3.5.2.ebuild 545
 SHA256 e49aef7ab3a6826bd3c7acffd48e3022a3e4437c81eb662d941929cd2b27bd1b superkaramba-3.5.2.ebuild 545
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQDltAiZjviIA2XgRAhB3AJ4sMwhfqqJU8QuG7aDQcjqI6x0Q/wCdG4OQ
+IJJ+JBkm+ryOL/rmumkdXzw=
+=A3ig
+-----END PGP SIGNATURE-----
