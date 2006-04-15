@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.35 2006/03/21 23:01:42 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.36 2006/04/15 22:30:11 jokey Exp $
+
+  15 Apr 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/iptraf-3.0.0-headerfix.patch,
+  +files/iptraf-3.0.0-ipv6-headerfix.patch, iptraf-3.0.0-r2.ebuild:
+  Adding header patches to fix bug #128965, thanks to plasmaroo
 
 *iptraf-3.0.0-r2 (21 Mar 2006)
 *iptraf-2.7.0-r2 (21 Mar 2006)

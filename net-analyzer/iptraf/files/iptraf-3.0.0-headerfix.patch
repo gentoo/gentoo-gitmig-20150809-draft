@@ -1,0 +1,13 @@
+diff -urN ./iptraf-3.0.0.orig/src/tr.c ./iptraf-3.0.0/src/tr.c
+--- ./iptraf-3.0.0.orig/src/tr.c	2005-09-13 08:42:54.000000000 +0200
++++ ./iptraf-3.0.0/src/tr.c	2006-04-16 00:20:06.000000000 +0200
+@@ -7,8 +7,8 @@
+  */
+ 
+ #include <asm/types.h>
+-#include <linux/if_tr.h>
+ #include <netinet/in.h>
++#include <linux/if_tr.h>
+ 
+ unsigned int get_tr_ip_offset(unsigned char *pkt)
+ {
