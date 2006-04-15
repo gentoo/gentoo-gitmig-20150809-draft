@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.8 2006/04/13 16:04:26 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.9 2006/04/15 02:19:44 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -250,7 +250,7 @@ toolchain-glibc_src_compile() {
 }
 
 toolchain-glibc_headers_compile() {
-	GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-headers
+	local GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-headers
 	mkdir -p "${GBUILDDIR}"
 	cd "${GBUILDDIR}"
 
@@ -320,11 +320,11 @@ toolchain-glibc_src_install() {
 	# zoneinfo do not always get installed ...
 	unset LANGUAGE LANG LC_ALL
 
-	local MYMAINBUILDDIR
+	local GBUILDDIR
 	if want_linuxthreads ; then
-		MYMAINBUILDDIR=build-${ABI}-${CTARGET}-linuxthreads
+		GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-linuxthreads
 	else
-		MYMAINBUILDDIR=build-${ABI}-${CTARGET}-nptl
+		GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-nptl
 	fi
 
 	local install_root=${D}
@@ -440,7 +440,7 @@ toolchain-glibc_src_install() {
 		esac
 	fi
 
-	cd "${WORKDIR}"/${MYMAINBUILDDIR}
+	cd "${GBUILDDIR}"
 
 	setup_locales
 
@@ -499,7 +499,7 @@ toolchain-glibc_src_install() {
 }
 
 toolchain-glibc_headers_install() {
-	GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-headers
+	local GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-headers
 	cd "${GBUILDDIR}"
 	make install_root="${D}" install-headers || die "install-headers failed"
 	# Copy over headers that are not part of install-headers ... these
@@ -833,7 +833,7 @@ want__thread() {
 
 install_locales() {
 	unset LANGUAGE LANG LC_ALL
-	cd "${WORKDIR}"/${MYMAINBUILDDIR} || die "${WORKDIR}/${MYMAINBUILDDIR}"
+	cd "${GBUILDDIR}"
 	make PARALLELMFLAGS="${MAKEOPTS} -j1" \
 		install_root="${D}" localedata/install-locales || die
 }
@@ -948,11 +948,11 @@ glibc_do_configure() {
 	# since the glibc build will re-run configure on itself
 	export libc_cv_slibdir=/$(get_libdir)
 
-	has_version app-admin/eselect-compiler || export CC="$(tc-getCC ${CTARGET})"
+	has_version app-admin/eselect-compiler || export CC=$(tc-getCC ${CTARGET})
 
-	GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-$1
-	mkdir -p ${GBUILDDIR}
-	cd ${GBUILDDIR}
+	local GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-$1
+	mkdir -p "${GBUILDDIR}"
+	cd "${GBUILDDIR}"
 	einfo "Configuring GLIBC for $1 with: ${myconf// /\n\t\t}"
 	"${S}"/configure ${myconf} || die "failed to configure glibc"
 }
