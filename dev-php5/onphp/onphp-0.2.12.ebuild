@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/onphp-0.4.1.ebuild,v 1.1 2006/04/09 15:57:19 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/onphp-0.2.12.ebuild,v 1.1 2006/04/16 21:20:51 voxus Exp $
 
 inherit php-lib-r1
 
