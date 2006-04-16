@@ -1,6 +1,10 @@
 # ChangeLog for games-server/crossfire-server
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.8 2006/03/28 22:47:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.9 2006/04/16 22:55:02 hansmi Exp $
+
+  16 Apr 2006; Michael Hanselmann <hansmi@gentoo.org>
+  crossfire-server-1.9.0.ebuild:
+  Stable on ppc.
 
   28 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org>
   crossfire-server-1.9.0.ebuild:
