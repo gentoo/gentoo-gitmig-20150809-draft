@@ -1,4 +1,4 @@
-MD5 55bd1f6a296b7bdec74c7e2ae89e098e ChangeLog 8364
+MD5 9f73c803e39d976b12db0548d68fcb49 ChangeLog 8461
 MD5 18d017187b228dd614d7ae00283f788a files/digest-libfwbuilder-1.0.2-r2 72
 MD5 8d7d58dd8f04faf069a57566a94b8bab files/digest-libfwbuilder-2.0.10 259
 MD5 9b58f8101e121abf1132f09b9edd9f3f files/digest-libfwbuilder-2.0.11 71
@@ -15,4 +15,4 @@ MD5 990394895c89adcecd264ca76a39f1bd libfwbuilder-2.0.6.ebuild 799
 MD5 4968e44d4179ddba6e7ad31bb6fb2215 libfwbuilder-2.0.7.ebuild 804
 MD5 f3ec80a11a8b755aa603285aaf303172 libfwbuilder-2.0.8.ebuild 804
 MD5 7b940aa96bd322bd7f08ec693cb72b1b libfwbuilder-2.0.9.ebuild 811
-MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
+MD5 4eda2fda81ea6a89d8f1f4a2dcd12a85 metadata.xml 233
