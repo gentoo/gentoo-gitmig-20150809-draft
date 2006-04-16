@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/dante
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.27 2006/04/14 08:49:31 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.28 2006/04/16 22:29:30 hansmi Exp $
+
+  16 Apr 2006; Michael Hanselmann <hansmi@gentoo.org> dante-1.1.19.ebuild:
+  Stable on ppc.
 
   14 Apr 2006; Alin Nastac <mrness@gentoo.org> dante-1.1.19.ebuild:
   Stable on x86.
