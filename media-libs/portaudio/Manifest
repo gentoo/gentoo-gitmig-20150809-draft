@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 51d7e50e9c4cbce1a5ddb6f13298e8b8 ChangeLog 3693
-RMD160 c97b88cdcaa61ffa885c0e9f29a7a582d09d7ac7 ChangeLog 3693
-SHA256 a6dea4f267926acba52c6c4e134a13c25a90b2c850ef4569448c965e37c26f5c ChangeLog 3693
+MD5 0728e9294787275df89f10686597553c ChangeLog 3789
+RMD160 da5ba8f32fac40e5f8accd06daa9b71056edfbd2 ChangeLog 3789
+SHA256 9e279e1dee7008d01121b6fdc88dc776e03359a8014adede915b2582cb355e81 ChangeLog 3789
 MD5 24037d452fff400001cf4a3a4dec3585 files/digest-portaudio-18.1 64
 RMD160 775558d35644e94c97b1afe2df619dadafebb5f4 files/digest-portaudio-18.1 64
 SHA256 e49d248e0713ad34446f0519fb353e006889a7c7c996b09f934382f1bbecef78 files/digest-portaudio-18.1 64
@@ -31,16 +28,9 @@ SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata
 MD5 5d4fa3720f192e7f11ed3e169d275324 portaudio-18.1-r3.ebuild 998
 RMD160 61d6806a813636a19ddba42b4fea6c80dea8e9a4 portaudio-18.1-r3.ebuild 998
 SHA256 ecdf055b128bcabf7bd231d83cfa4d699e4b2c386ae7a53d121881ccf1841d34 portaudio-18.1-r3.ebuild 998
-MD5 1d3be2361ab80fa2454607d3dfa47300 portaudio-18.1-r4.ebuild 1050
-RMD160 f4c9a0ed307f996c24cb617058f80a0edd59cc0a portaudio-18.1-r4.ebuild 1050
-SHA256 d25eed2a976a8202a4e04e1abd77c550a21b0e36cdfbe8c446fa57a9ae903ccc portaudio-18.1-r4.ebuild 1050
+MD5 c026f6c2e238f9f5ce3d40363bfa9540 portaudio-18.1-r4.ebuild 1049
+RMD160 9c69332e2c86447f1cbfd3b28d96cd92f960ebb4 portaudio-18.1-r4.ebuild 1049
+SHA256 33efa4cdaac6fb750a0faaaddd7fad812369690cd0ec602e17e3a75a79b07cd6 portaudio-18.1-r4.ebuild 1049
 MD5 e7355796f0c381e5e8128913f94e4b8a portaudio-18.1.ebuild 995
 RMD160 af0edc7d988953321519eefd4fb7610a326ab8aa portaudio-18.1.ebuild 995
 SHA256 0279febaa02eb0c390c3ee207239ab650ccef9d361397f0620c17719039efd71 portaudio-18.1.ebuild 995
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELvyy2+ySkm8kpY0RAsPyAKCdEbtGsOPLDc51usIdg2BgDUJdLgCdE4Je
-zgqpSaKd8jD9JYmUKVKzd7E=
-=BZvy
------END PGP SIGNATURE-----
