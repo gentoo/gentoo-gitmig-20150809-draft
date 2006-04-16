@@ -1,4 +1,4 @@
-MD5 221e6f123930a17d4db9658c43623312 ChangeLog 4237
+MD5 5e6ea02580d23d42509959112f5856e5 ChangeLog 4343
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-krita-1.4.2 68
 MD5 b2c444dbd353b179d6f2f5a770240183 files/digest-krita-1.5.0 68
 MD5 82af01b67d83c02945f1e26ae9529232 files/digest-krita-1.5_beta1 253
@@ -6,7 +6,7 @@ MD5 a08e04910037e4b3b9e9cbfb92eda61e files/digest-krita-1.5_beta2 69
 MD5 f01ddda79b7e0afa602b27c09ae05217 files/digest-krita-1.5_rc1 72
 MD5 7d57f921f9a3827f925a3457413914b8 files/krita-1.4.2-gcc41.patch 656
 MD5 6899eb2eb91d5005991e4680ace4f505 krita-1.4.2.ebuild 1004
-MD5 a5db3af4ca245d1a48a31be337feb635 krita-1.5.0.ebuild 1178
+MD5 cff6e90412772d358a7020fa8d749a60 krita-1.5.0.ebuild 1180
 MD5 0a4771e46a324b59fc1a4fb26165c4e7 krita-1.5_beta1.ebuild 1180
 MD5 d2e7b603df78baf76c3c7957d461073a krita-1.5_beta2.ebuild 1179
 MD5 300b32ad1dbcec1c7fa07aa7ab711edd krita-1.5_rc1.ebuild 1181

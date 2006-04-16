@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.5.0.ebuild,v 1.2 2006/04/13 19:08:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.5.0.ebuild,v 1.3 2006/04/16 14:55:08 carlo Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="opengl"
 
 RDEPEND="$(deprange $PV $MAXKOFFICEVER app-office/koffice-libs)
-	>=media-gfx/imagemagick-5.5.2
+	>=media-gfx/imagemagick-6.2.5.5
 	>=media-libs/lcms-1.14-r1
 	opengl? ( virtual/opengl virtual/glu )"
 
