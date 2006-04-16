@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6f090efa6472b6cac2f0fb60a0896507 ChangeLog 3031
 RMD160 56490a194fdc16cdb015116ff5d09be5b20973c6 ChangeLog 3031
 SHA256 101c7d2df0ea7d1ba933e855aaba742e4959dfd15ddb78f4f110c74fd60773ae ChangeLog 3031
@@ -16,3 +19,10 @@ SHA256 fb5439198e790a3db2b7af3e8cdb4024cc63d656cb8624af0ee1fc526aba23a0 xf86-inp
 MD5 38776528fc44088fb7bc68352e462e72 xf86-input-citron-2.2.0.ebuild 577
 RMD160 f0fe68ba3f5a4e8d3f029ea62a36298fea4639c5 xf86-input-citron-2.2.0.ebuild 577
 SHA256 e59f92a7fb6abb4bf20985b4befb09cbd4f2b0039116ef43086e8c646be3e9e4 xf86-input-citron-2.2.0.ebuild 577
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQleMAiZjviIA2XgRAgqlAJ9mcio1eQiFKx+NSqJU0KL0r4/TSwCcDxvW
+O+hBhejYY1DEPePCYhD8J3g=
+=y+Vu
+-----END PGP SIGNATURE-----
