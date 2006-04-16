@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.32-r2.ebuild,v 1.1 2006/01/03 15:25:17 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.32-r3.ebuild,v 1.1 2006/04/16 21:52:30 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel-2
 detect_version
 
-KEYWORDS="~x86 -ppc"
+KEYWORDS="x86 -ppc"
 IUSE=""
 
 UNIPATCH_STRICTORDER='Y'
