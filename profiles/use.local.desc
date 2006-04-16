@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1849 2006/04/16 20:29:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1850 2006/04/16 20:32:53 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -85,9 +85,11 @@ app-emulation/bochs:vnc - Enable vnc support
 app-emulation/emul-linux-ppc-glibc:nptlonly - Disables installing the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 app-emulation/emul-linux-x86-glibc:nptlonly - Disables installing the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 app-emulation/emul-linux-x86-qtlibs:immqt-bc - Enable binary compatible version of immodule for Qt
-app-emulation/emul-linux-x86-xlibs:video_cards_ati - VIDEO_CARDS setting to install driver for ati video cards
 app-emulation/emul-linux-x86-xlibs:video_cards_i810 - VIDEO_CARDS setting to install driver for i810 video cards
+app-emulation/emul-linux-x86-xlibs:video_cards_mach64 - VIDEO_CARDS setting to install driver for mach64 video cards
 app-emulation/emul-linux-x86-xlibs:video_cards_mga - VIDEO_CARDS setting to install driver for mga video cards
+app-emulation/emul-linux-x86-xlibs:video_cards_r128 - VIDEO_CARDS setting to install driver for r128 video cards
+app-emulation/emul-linux-x86-xlibs:video_cards_radeon - VIDEO_CARDS setting to install driver for radeon video cards
 app-emulation/emul-linux-x86-xlibs:video_cards_s3virge - VIDEO_CARDS setting to install driver for s3virge video cards
 app-emulation/emul-linux-x86-xlibs:video_cards_savage - VIDEO_CARDS setting to install driver for savage video cards
 app-emulation/emul-linux-x86-xlibs:video_cards_sis - VIDEO_CARDS setting to install driver for sis video cards
