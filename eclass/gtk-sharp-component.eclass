@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.24 2006/03/16 07:02:44 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.25 2006/04/16 18:29:43 latexer Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
 
-inherit eutils mono multilib
+inherit eutils mono multilib autotools
 
 
 LICENSE="LGPL-2"
@@ -64,8 +64,6 @@ S=${WORKDIR}/${MY_P}
 
 # Make sure we're building with the same version.
 DEPEND="=dev-dotnet/${MY_P}*
-	sys-devel/automake
-	sys-devel/autoconf
 	>=sys-apps/sed-4"
 
 
@@ -109,22 +107,20 @@ gtk-sharp-component_src_unpack() {
 
 	# Make the components configurable
 	epatch ${WORKDIR}/${MY_P}-configurable.diff
-	aclocal || die "aclocal failed"
-	# See bug #73563, comment #9
-	libtoolize --copy --force || die "libtoolize failed"
-	automake || die "automake failed"
 
 	# fixes support with pkgconfig-0.17, bug #92503
-	sed -i -e 's/\<PKG_PATH\>/GTK_SHARP_PKG_PATH/g' configure.in
+	sed -i -e 's/\<PKG_PATH\>/GTK_SHARP_PKG_PATH/g' \
+		-e ':^CFLAGS=:d' \
+		${S}/configure.in
 
 	# Use correct libdir in pkgconfig files
 	sed -i -e 's:^libdir.*:libdir=@libdir@:' \
 		${S}/*/{,GConf}/*.pc.in || die
 
-	autoconf || die "autoconf failed"
-
 	# disable building of samples (#16015)
-	sed -i -e "s:sample::" ${S}/Makefile.in || die
+	sed -i -e "s:sample::" ${S}/Makefile.am || die
+
+	eautoreconf
 
 	cd ${S}/${GTK_SHARP_COMPONENT_BUILD_DIR}
 
