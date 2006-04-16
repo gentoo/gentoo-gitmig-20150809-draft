@@ -5,4 +5,7 @@ MD5 56e9dbed29bf8cd34bf9a5e049e096e7 ibm-java2-javacomm-50-linux-x86_64.tgz 1213
 MD5 756ee68e2f74a597ebd92b4e8a4c0e07 ibm-java2-sdk-50-linux-i386.tgz 58162719
 MD5 48be7a4f3104abc73286e0c5bab41839 ibm-java2-sdk-50-linux-ppc.tgz 65733869
 MD5 37c0f46595f1c36354befadc130c1afb ibm-java2-sdk-50-linux-ppc64.tgz 67100609
+MD5 63ddb4cd9cceff9460f0224b24e2cc02 ibm-java2-sdk-50-linux-s390.tgz 63680823
+RMD160 2b0155ee5509c99d221556c6299e11b77328aad1 ibm-java2-sdk-50-linux-s390.tgz 63680823
+SHA256 0094a287fb5f7b5c9b0e22d665540c4e560cff8953f35ae5ce6c1535dccb531b ibm-java2-sdk-50-linux-s390.tgz 63680823
 MD5 dd515ab0ee22dbc9d32f2f9b2ac1c8c1 ibm-java2-sdk-50-linux-x86_64.tgz 62861140

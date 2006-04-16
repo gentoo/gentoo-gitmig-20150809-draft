@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.5 2006/03/12 13:35:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.6 2006/04/16 07:15:17 vapier Exp $
 
 inherit java eutils
 
@@ -10,20 +10,22 @@ SRC_URI="x86? ( ibm-java2-sdk-50-linux-i386.tgz )
 	amd64? ( ibm-java2-sdk-50-linux-x86_64.tgz )
 	ppc? ( ibm-java2-sdk-50-linux-ppc.tgz )
 	ppc64? ( ibm-java2-sdk-50-linux-ppc64.tgz )
+	s390? ( ibm-java2-sdk-50-linux-s390.tgz )
 	javacomm? (
 		x86? ( ibm-java2-javacomm-50-linux-i386.tgz )
 		amd64? ( ibm-java2-javacomm-50-linux-x86_64.tgz )
 		ppc? ( ibm-java2-javacomm-50-linux-ppc.tgz )
 		ppc64? ( ibm-java2-javacomm-50-linux-ppc64.tgz )
 		)"
-PROVIDE="virtual/jdk
-	virtual/jre"
-SLOT="1.5"
-LICENSE="IBM-J1.5"
-KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
-RESTRICT="fetch"
+#		s390? ( ibm-java2-javacomm-50-linux-s390.tgz )
 
-DEPEND="virtual/libc
+LICENSE="IBM-J1.5"
+SLOT="1.5"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~s390 ~x86"
+RESTRICT="fetch"
+IUSE="X javacomm browserplugin mozilla"
+
+DEPEND="sys-libs/glibc
 		X? ( || (
 					(
 						x11-libs/libXt
@@ -42,8 +44,8 @@ DEPEND="virtual/libc
 				)
 			)"
 RDEPEND="${DEPEND}"
-
-IUSE="X javacomm browserplugin mozilla"
+PROVIDE="virtual/jdk
+	virtual/jre"
 
 if use x86; then
 	S="${WORKDIR}/ibm-java2-i386-50"
@@ -53,6 +55,8 @@ elif use ppc; then
 	S="${WORKDIR}/ibm-java2-ppc-50"
 elif use ppc64; then
 	S="${WORKDIR}/ibm-java2-ppc64-50"
+elif use s390; then
+	S="${WORKDIR}/ibm-java2-s390-50"
 fi
 
 

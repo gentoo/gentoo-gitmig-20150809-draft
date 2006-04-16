@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.04.ebuild,v 1.3 2006/04/11 03:44:16 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.04.ebuild,v 1.4 2006/04/16 07:15:17 vapier Exp $
 
 inherit java eutils
 
@@ -24,6 +24,11 @@ elif use ppc64 ; then
 	JDK_DIST_GENTOO="IBMJava2-SDK-142.ppc64-SR4.tgz"
 	JAVACOMM_DIST="IBMJava2-JAVACOMM-142.ppc64.tgz"
 	JAVACOMM_DIST_GENTOO="IBMJava2-JAVACOMM-142.ppc64-SR4.tgz"
+elif use s390 ; then
+	JDK_DIST="IBMJava2-SDK-142.s390.tgz"
+	JDK_DIST_GENTOO="IBMJava2-SDK-142.s390.tgz"
+	JAVACOMM_DIST="IBMJava2-SDK-142.s390.tgz"
+	JAVACOMM_DIST_GENTOO="IBMJava2-SDK-142.s390.tgz"
 fi
 
 DESCRIPTION="IBM Java Development Kit"
@@ -34,19 +39,21 @@ SRC_URI="x86? ( IBMJava2-SDK-142-SR4.tgz )
 		 amd64? ( IBMJava2-SDK-AMD64-142.x86_64-SR4.tgz )
 		 ppc? ( IBMJava2-SDK-142.ppc-SR4.tgz )
 		 ppc64? ( IBMJava2-SDK-142.ppc64-SR4.tgz )
+		 s390? ( IBMJava2-SDK-142.s390.tgz )
 		 javacomm? (
 		 			x86? ( IBMJava2-JAVACOMM-142-SR4.tgz )
 					amd64? ( IBMJava2-JAVACOMM-AMD64-142.x86_64-SR4.tgz )
 					ppc? ( IBMJava2-JAVACOMM-142.ppc-SR4.tgz )
 					ppc64? ( IBMJava2-JAVACOMM-142.ppc64-SR4.tgz )
 		 		   )"
+#					s390? ( IBMJava2-JAVACOMM-142.s390-SR4.tgz )
 
 LICENSE="IBM-J1.4"
 SLOT="1.4"
-KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~s390 ~x86"
 IUSE="X doc javacomm nsplugin"
 
-DEPEND="virtual/libc
+DEPEND="sys-libs/glibc
 		X? ( || (
 					(
 						x11-libs/libXt
@@ -65,7 +72,8 @@ DEPEND="virtual/libc
 				)
 			)"
 RDEPEND="${DEPEND}
-		 !ppc64? ( !amd64? ( sys-libs/lib-compat ) )"
+		 ppc? ( sys-libs/lib-compat )
+		 x86? ( sys-libs/lib-compat )"
 PDEPEND="doc? ( =dev-java/java-sdk-docs-1.4.2* )"
 
 PROVIDE="virtual/jdk
@@ -79,6 +87,8 @@ elif use ppc64; then
 	S="${WORKDIR}/IBMJava2-ppc64-142"
 elif use amd64; then
 	S="${WORKDIR}/IBMJava2-amd64-142"
+elif use s390; then
+	S="${WORKDIR}/IBMJava2-s390-142"
 else
 	S="${WORKDIR}/IBMJava2-142"
 fi
