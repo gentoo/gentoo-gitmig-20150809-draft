@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libbinio
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbinio/ChangeLog,v 1.17 2006/04/16 06:27:44 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbinio/ChangeLog,v 1.18 2006/04/16 13:12:53 tcort Exp $
+
+  16 Apr 2006; Thomas Cort <tcort@gentoo.org> libbinio-1.4.ebuild:
+  Stable on alpha.
 
   16 Apr 2006; Chris White <chriswhite@gentoo.org> libbinio-1.4.ebuild:
   marked x86 stable bug #130123 depend.
