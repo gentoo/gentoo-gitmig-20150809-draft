@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre8-r5.ebuild,v 1.1 2006/04/14 11:07:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_pre8-r5.ebuild,v 1.2 2006/04/16 20:10:25 blubb Exp $
 
 inherit toolchain-funcs
 
@@ -29,6 +29,13 @@ RDEPEND="!build? ( >=sys-apps/sed-4.0.5 \
 PROVIDE="virtual/portage"
 
 S=${WORKDIR}/${PN}-${PV}
+
+portage_docs() {
+	einfo ""
+	einfo "For help with using portage please consult the Gentoo Handbook"
+	einfo "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
+	einfo ""
+}
 
 src_unpack() {
 	unpack ${A}
@@ -194,4 +201,6 @@ pkg_postinst() {
 	einfo "to restore the previous ordering."
 	echo
 	einfo "See NEWS and RELEASE-NOTES for further changes."
+
+	portage_docs
 }

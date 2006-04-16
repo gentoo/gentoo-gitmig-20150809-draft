@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.112 2006/04/14 11:07:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.113 2006/04/16 20:10:26 blubb Exp $
+
+  16 Apr 2006; Simon Stelling <blubb@gentoo.org> portage-2.0.54.ebuild,
+  portage-2.1_pre8-r5.ebuild:
+  mention the portage handbook after merging; credits to antarus; bug 77345
 
 *portage-2.1_pre8-r5 (14 Apr 2006)
 

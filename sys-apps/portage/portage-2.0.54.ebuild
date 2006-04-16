@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.54.ebuild,v 1.14 2006/03/14 03:25:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.54.ebuild,v 1.15 2006/04/16 20:10:26 blubb Exp $
 
 inherit toolchain-funcs
 
@@ -19,6 +19,12 @@ PROVIDE="virtual/portage"
 
 S=${WORKDIR}/${PN}-${PV}
 
+portage_docs() {
+	einfo ""
+	einfo "For help with using portage please consult the Gentoo Handbook"
+	einfo "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
+	einfo ""
+}
 
 src_unpack() {
 	unpack ${A}
@@ -124,4 +130,6 @@ pkg_postinst() {
 		# Overwrite the globals file automatically.
 		[ -e "${x}" ] && mv -f "${x}" "${ROOT}etc/make.globals"
 	done
+
+	portage_docs
 }
