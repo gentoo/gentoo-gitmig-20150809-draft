@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060415.ebuild,v 1.4 2006/04/16 04:11:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060415.ebuild,v 1.5 2006/04/16 23:21:55 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ BLUV=1.4
 SVGV=1.9.17
 
 # Handle PREversions as well
-SRC_URI="mirror://mplayer/releases/${P}.tar.bz2
+SRC_URI="mirror://gentoo/${P}.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2
