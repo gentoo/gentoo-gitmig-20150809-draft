@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e9e453fd4a255b1b43f61df5a7b31b10 ChangeLog 2086
 RMD160 1a7b532bec5800996befd0cfe83e082c659a7f59 ChangeLog 2086
 SHA256 9cfb07240b349e9de1c4a2f0ff62aa5dbeea47371be148ec4ad908f56024caf4 ChangeLog 2086
@@ -16,3 +19,10 @@ SHA256 2b37644f442d293dc0ea402202ee68e0d02f63cf1954996354afdb3bbf48ae4a xf86-vid
 MD5 7b6f631a77b84ce5fdc892ac1ebd780c xf86-video-apm-1.1.1.ebuild 614
 RMD160 2bf5c4aa3d968faea9dbf1b980488e8aad710b27 xf86-video-apm-1.1.1.ebuild 614
 SHA256 672a80c97fe581dad11bdaa7cc1bcc610b7807bd24c3388b229f95cb5e0fe0f4 xf86-video-apm-1.1.1.ebuild 614
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQk3nAiZjviIA2XgRAr1YAJwJoVsPHK4StMW1kZ6mnEteVjcpfQCgmyBb
+yq8Lp6M41MCcw4VL5APd4R0=
+=I92T
+-----END PGP SIGNATURE-----
