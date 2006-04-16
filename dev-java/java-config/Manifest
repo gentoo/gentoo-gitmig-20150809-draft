@@ -10,16 +10,16 @@ SHA256 da2af16dd2d187eb5301706d751663c290362f05f8a84eed14ecf5c21284c7da files/di
 MD5 882665d94cc943f315ec729d990afadf files/java-config-1.2.11-shebang.patch 229
 RMD160 e201dafad76307123139861371ade56f03887342 files/java-config-1.2.11-shebang.patch 229
 SHA256 4068a51515b7510260de57a5872d6e04b1a33d2f9728d77ed00fe7f41cced83a files/java-config-1.2.11-shebang.patch 229
-MD5 764a6ebfa6d60ee66c8778d1eff6bcd0 java-config-1.2.11-r1.ebuild 820
-RMD160 bf18d7e87c2ebe08d2a2a9ff0973892e83149387 java-config-1.2.11-r1.ebuild 820
-SHA256 642757384ca0b6a105541dafd185aea463ada8b837328f64469f69566356efe5 java-config-1.2.11-r1.ebuild 820
+MD5 a7944193c9345079f28600fe4150355a java-config-1.2.11-r1.ebuild 830
+RMD160 65b35f5307d894f9da87652ff0093be351bc407f java-config-1.2.11-r1.ebuild 830
+SHA256 b128a7171538ece5c3c7f2ddf4cd611d18980d3c296dcc87437f21476de1764d java-config-1.2.11-r1.ebuild 830
 MD5 ff83dbd41edf207798f367c723ab813f metadata.xml 486
 RMD160 158f1d9652c83644739d40c8014d65d487dca4e6 metadata.xml 486
 SHA256 5d3e4a1780efad67e6265b82a4397a2b4fe26c2c0785ee65a3390dd8218c82ce metadata.xml 486
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD5cmiQiJ/wx066S4RAqQ5AJ9T5ma/rvaSafNp39wqNWy4bob6LACfQIap
-DlScDu7p9KtjKqBXLt1ylaA=
-=81rY
+iD8DBQFEQenK2+ySkm8kpY0RAiMpAJ0WAy8KjebBW3pXh8hUe2tiyyAb9wCgxr7s
+K/BookGC5etIhRyxeDGknQQ=
+=0ms6
 -----END PGP SIGNATURE-----
