@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.31 2006/04/16 06:34:50 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.32 2006/04/16 13:14:25 tcort Exp $
+
+  16 Apr 2006; Thomas Cort <tcort@gentoo.org> audacious-0.2.3.ebuild:
+  Stable on alpha wrt Bug #130123
 
   16 Apr 2006; Chris White <chriswhite@gentoo.org> audacious-0.2.3.ebuild:
   marked x86 stable bug #130123
