@@ -36,6 +36,9 @@ for x in $@; do
 	esac
 done
 
+# strip --update and -u from emerge options (breaks re-emerging)
+EMERGE_OPTS="$(echo $@ | sed -e "s:--update\|-u::")"
+
 echo ">>> Scanning modules in /usr/lib/asterisk/modules..."
 
 # create list of modules
@@ -68,29 +71,33 @@ if [[ -n "${modules_list}" ]]; then
 		# strip version from package
 		pkgname="${x%-[0-9.]*}"
 
-		if ! emerge -pq "=${x}" &>/dev/null; then
-			if ! emerge -pq ">${x}" &>/dev/null; then
+		if [[ $UPDATE -eq 0 ]]; then
+			# try to emerge same version
+			if ! emerge -pq "=${x}" &>/dev/null; then
+				if ! emerge -pq ">${x}" &>/dev/null; then
 
-				# ebuild is gone
-				fail_list="${fail_list} ${x}"
+					# ebuild is gone
+					fail_list="${fail_list} ${x}"
+				else
+
+					# ebuild is available in a newer version, 
+					# add it to the update list
+					update_list="${update_list} ${x}"
+				fi
 			else
-
-				# ebuild is available in a newer version, 
-				# add it to the update list
-				update_list="${update_list} ${x}"
+				tmp_list="${tmp_list} =${x}"
 			fi
 		else
-			if [[ $UPDATE -eq 1 ]]; then
-				# user wants to update all ebuilds...
-				if emerge -pq ">${x}" &>/dev/null; then
+			# try to update ebuild
+			if ! emerge -pq ">=${x}" &>/dev/null; then
+				if ! emerge -pq ">${x}" &>/dev/null; then
 
-					# add ebuild without version information to the update list
-					update_list="${update_list} ${x}"
-					continue
+					# ebuild is gone
+					fail_list="${fail_list} ${x}"
 				fi
+			else
+				tmp_list="${tmp_list} >=${x}"
 			fi
-
-			tmp_list="${tmp_list} =${x}"
 		fi
 	done
 
@@ -133,8 +140,8 @@ if [[ -n "${modules_list}" ]]; then
 	fi
 
 	if [[ -n "${tmp_list}" ]]; then
-		echo ">>> Feeding list of ebuilds to emerge $@..."
-		emerge ${tmp_list} $@
+		echo ">>> Feeding list of ebuilds to emerge ${EMERGE_OPTS}..."
+		emerge ${tmp_list} ${EMERGE_OPTS}
 	else
 		echo -e "*** Nothing to emerge..."
 	fi
