@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-user
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.9 2006/04/01 15:51:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.10 2006/04/16 23:00:31 hansmi Exp $
+
+  16 Apr 2006; Michael Hanselmann <hansmi@gentoo.org>
+  qemu-user-0.8.0.ebuild:
+  Stable on ppc.
 
   01 Apr 2006; Luca Barbato <lu_zero@gentoo.org> qemu-user-0.8.0.ebuild:
   Restricted test feature
