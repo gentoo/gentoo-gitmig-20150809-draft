@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cb74a331e9d424c23994a44b359087a6 ChangeLog 1543
-RMD160 3db26884bab5f049a9b6f0bd8712a21ce660ca2f ChangeLog 1543
-SHA256 6fdd362beef014ef1f8a67221f4b2b10db1b49e7da831298e52d1fe0ec8988ce ChangeLog 1543
+MD5 aa7818b348c51c7326ecdda2f4faf50d ChangeLog 1628
 MD5 5009236d8b451fecef858961aed24428 files/digest-libmodplug-0.7 66
-RMD160 7e7b0a438de10bf76da0d1c96111548761540c38 files/digest-libmodplug-0.7 66
-SHA256 41053000021ec22c91a3b7328c9da9a5dd8b1d3c6f03e9f425d74f263a4e75ec files/digest-libmodplug-0.7 66
 MD5 6099a721c7a188eabdc91042dac3de3d files/digest-libmodplug-0.8 244
-RMD160 deea679a926392dd22bec1017cc644f8ed5764f1 files/digest-libmodplug-0.8 244
-SHA256 6aab7593739988a695fcbdba006f50c78d520cabe81cfaac7de84f5934363bf0 files/digest-libmodplug-0.8 244
 MD5 b10f6248932b7fd4ce0df1a025df6e8a files/libmodplug-0.7-amd64.patch 1550
-RMD160 b3bb1b94f9abfa921b06556640e39017cf0238f9 files/libmodplug-0.7-amd64.patch 1550
-SHA256 2d11e29894222c3b4332019fabb1757701ad57e5027b114c01e98ba06e5793bc files/libmodplug-0.7-amd64.patch 1550
 MD5 9ad05c4679d06d99935b79cc3ad19026 files/libmodplug-0.7-asneeded.patch 421
-RMD160 453028054887c5366aee85a34bfb7571c787fff4 files/libmodplug-0.7-asneeded.patch 421
-SHA256 221ce05b1f727f2c22747463db6b3917f32d74a9cd26ad6c24f96738975568e3 files/libmodplug-0.7-asneeded.patch 421
-MD5 f640c78e8755ba1c0bbffae63b9b3cb8 libmodplug-0.7.ebuild 818
-RMD160 5f0d6e690053bbffbe7ca18a671062497a1a2543 libmodplug-0.7.ebuild 818
-SHA256 bd98e95dc3016a367234e9689cf7e9bdae61589c1a8377c33f6ea2418552d35e libmodplug-0.7.ebuild 818
+MD5 a62827da4992e7af31977e7ab8759657 libmodplug-0.7.ebuild 816
 MD5 1fe712fc57886b2fd95d6a74b3f91fdc libmodplug-0.8.ebuild 860
-RMD160 9c603dfac0f93c590055539189cb02d332f92e8d libmodplug-0.8.ebuild 860
-SHA256 9b3b8da674209d698bb04049039d5a7a4abac56b79cc628d5f49cc75f167d167 libmodplug-0.8.ebuild 860
 MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
-RMD160 f9de13e16a150195633b055ebe61bb4cea95160d metadata.xml 248
-SHA256 6a8ca116bded5cdd92cb700f92acd22b01ae159ef1b69c60a03fc9859bb9b3d6 metadata.xml 248
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEJKkOAiZjviIA2XgRAkRJAJ4ti9o54yF4QiAqra1uWM1pLu8PBwCeKE/7
-rRKg4qfKsFA53ThV5NfdW+Q=
-=rk5q
------END PGP SIGNATURE-----
