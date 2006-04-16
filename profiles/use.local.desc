@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1846 2006/04/15 00:10:30 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1847 2006/04/16 00:59:06 stkn Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1115,6 +1115,7 @@ net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
 net-misc/asterisk-addons:h323 - Build the chan_ooh323c H.323 channel driver
 net-misc/asterisk-chan_capi:fax - Build chan_capi with fax support
 net-misc/asterisk:bri - Enable ISDN BRI support (bristuff)
+net-misc/asterisk:genericjb - Enable experimental generic jitter buffer
 net-misc/asterisk:h323 - Build the H.323 channel driver bundled with Asterisk
 net-misc/asterisk:lowmem - Build Asterisk for environments with low amounts of memory (embedded devices)
 net-misc/asterisk:mysqlfriends - Enable MySQL friends support in chan_sip
