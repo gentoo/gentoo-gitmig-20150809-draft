@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nemerle/nemerle-0.9.2.ebuild,v 1.1 2006/03/16 08:00:29 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nemerle/nemerle-0.9.2.ebuild,v 1.2 2006/04/16 06:56:27 latexer Exp $
 
 inherit mono eutils multilib
 
@@ -29,6 +29,7 @@ src_unpack() {
 src_compile() {
 	./configure --net-engine=/usr/bin/mono \
 		--prefix=/usr \
+		--libdir=/usr/$(get_libdir) \
 		--mandir=/usr/share/man/man1 || die "configure failed!"
 	emake -j1 || die "make failed!"
 }
