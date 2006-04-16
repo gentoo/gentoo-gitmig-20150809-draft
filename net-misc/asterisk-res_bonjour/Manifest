@@ -1,5 +1,25 @@
-MD5 b083b797f557021322c4ddc6b5abd85d ChangeLog 541
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0c4429b3cdc5f8f4ef0577e3c8e1e5db ChangeLog 535
+RMD160 aea2ecac545448621717f950926c35b45c3dc02d ChangeLog 535
+SHA256 a8bb0cc71aa325134260be29e53ad68589d79e7e08ed8096d3a217b1df3c6348 ChangeLog 535
 MD5 0d0cc2866b96f8d0b5b95c3433fc38cf asterisk-res_bonjour-1.0_rc1.ebuild 1026
+RMD160 ba7113302102cee620488eed57d5fffc5c9f3fd7 asterisk-res_bonjour-1.0_rc1.ebuild 1026
+SHA256 b6da77aa66b71dac08d88e32dc66fd1c13a16d3c4c2c3b56469bbff2ecd0c933 asterisk-res_bonjour-1.0_rc1.ebuild 1026
 MD5 f9f54c3f5509ace2a2ffac089da4d5c0 files/digest-asterisk-res_bonjour-1.0_rc1 241
+RMD160 47958ed29c20fea31be7f61b8a0ba7a0cb85ae23 files/digest-asterisk-res_bonjour-1.0_rc1 241
+SHA256 37a42c0d8cc9f33dcd43ce22334a9cd01a906bd4e4877da013275db325370112 files/digest-asterisk-res_bonjour-1.0_rc1 241
 MD5 034590c85bb581b5108f30b856ff0226 files/res_bonjour-1.0_rc1-astcfg.diff 814
+RMD160 c723dcb198d636d24798fb7ba07f4bf6a64eb05f files/res_bonjour-1.0_rc1-astcfg.diff 814
+SHA256 805e93a4b97cd31f63daba97f6fb43071107cbd3900d7abd83d62d7fcf62f429 files/res_bonjour-1.0_rc1-astcfg.diff 814
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
+RMD160 275af641d8134ee438c8e2c9f89eb3b0a286a386 metadata.xml 217
+SHA256 c3eb09d27b1a9cf05b690524903c7faf096829ef1d19c0264769c277ac28d0a1 metadata.xml 217
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQnD0I1lqEGTUzyQRAuvCAKDdqVOieQGhVQYyhAunZYpAJ0B9IwCgvgol
+5UzJi5El1zk2anLqpW7j4zs=
+=sEBw
+-----END PGP SIGNATURE-----
