@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.16.4-r1.ebuild,v 1.1 2006/04/13 03:43:26 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.16.4-r1.ebuild,v 1.2 2006/04/16 21:37:17 kumba Exp $
 
 
 # INCLUDED:
@@ -44,6 +44,7 @@ SLOT="${OKV}"
 PROVIDE="virtual/linux-sources virtual/alsa"
 KEYWORDS="-* ~mips"
 IUSE="cobalt ip27 ip28 ip30 ip32r10k"
+DEPEND=">=sys-devel/gcc-3.4.6"
 
 
 # Version Control Variables

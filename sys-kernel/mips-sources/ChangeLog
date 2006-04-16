@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.89 2006/04/13 03:43:26 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.90 2006/04/16 21:37:17 kumba Exp $
+
+  16 Apr 2006; Joshua Kinard <kumba@gentoo.org>
+  mips-sources-2.6.16.4-r1.ebuild:
+  Add a dependency for >=gcc-3.4.6 on 2.6.16.4.
 
 *mips-sources-2.6.16.4-r1 (13 Apr 2006)
 *mips-sources-2.6.15.7-r1 (13 Apr 2006)
