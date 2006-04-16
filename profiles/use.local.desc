@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1847 2006/04/16 00:59:06 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1848 2006/04/16 20:28:06 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -694,10 +694,12 @@ media-libs/libsdl:noflagstrip - Allow users to use any CFLAGS they like complete
 media-libs/libsdl:nojoystick - Allow users to disable joystick support completely (at their own risk)
 media-libs/libsdl:novideo - Allow users to disable video support completely (at their own risk)
 media-libs/libvorbis:aotuv - Allow users to enable aoTuV encoder enhancements
-media-libs/mesa:video_cards_ati - VIDEO_CARDS setting to build driver for ati video cards
 media-libs/mesa:video_cards_i810 - VIDEO_CARDS setting to build driver for i810 video cards
+media-libs/mesa:video_cards_mach64 - VIDEO_CARDS setting to build driver for mach64 video cards
 media-libs/mesa:video_cards_mga - VIDEO_CARDS setting to build driver for mga video cards
 media-libs/mesa:video_cards_none - VIDEO_CARDS setting to build no drivers
+media-libs/mesa:video_cards_r128 - VIDEO_CARDS setting to build driver for r128 video cards
+media-libs/mesa:video_cards_radeon - VIDEO_CARDS setting to build driver for radeon video cards
 media-libs/mesa:video_cards_s3virge - VIDEO_CARDS setting to build driver for s3virge video cards
 media-libs/mesa:video_cards_savage - VIDEO_CARDS setting to build driver for savage video cards
 media-libs/mesa:video_cards_sis - VIDEO_CARDS setting to build driver for sis video cards
@@ -1553,10 +1555,12 @@ x11-base/kdrive:font-server - Enables font server support
 x11-base/kdrive:speedo - Enables Speedo font support
 x11-base/kdrive:type1 - Enables Type1 font support
 x11-base/x11-drm:gatos - Installs DRM built to work alongside GATOS features
-x11-base/x11-drm:video_cards_ati - VIDEO_CARDS setting to build driver for video_cards_ati cards
 x11-base/x11-drm:video_cards_i810 - VIDEO_CARDS setting to build driver for video_cards_i810 cards
+x11-base/x11-drm:video_cards_mach64 - VIDEO_CARDS setting to build driver for video_cards_mach64 cards
 x11-base/x11-drm:video_cards_mga - VIDEO_CARDS setting to build driver for video_cards_mga cards
 x11-base/x11-drm:video_cards_nv - VIDEO_CARDS setting to build driver for video_cards_nv cards
+x11-base/x11-drm:video_cards_r128 - VIDEO_CARDS setting to build driver for video_cards_r128 cards
+x11-base/x11-drm:video_cards_radeon - VIDEO_CARDS setting to build driver for video_cards_radeon cards
 x11-base/x11-drm:video_cards_sis - VIDEO_CARDS setting to build driver for video_cards_sis cards
 x11-base/x11-drm:video_cards_savage - VIDEO_CARDS setting to build driver for video_cards_savage cards
 x11-base/x11-drm:video_cards_sunffb - VIDEO_CARDS setting to build driver for video_cards_ffb cards
@@ -1604,7 +1608,6 @@ x11-base/xorg-x11:truetype-fonts - Build TrueType fonts
 x11-base/xorg-x11:type1-fonts - Build Type1 fonts
 x11-base/xorg-x11:video_cards_apm - VIDEO_CARDS setting to build driver for apm video cards
 x11-base/xorg-x11:video_cards_ark - VIDEO_CARDS setting to build driver for ark video cards
-x11-base/xorg-x11:video_cards_ati - VIDEO_CARDS setting to build driver for ati video cards
 x11-base/xorg-x11:video_cards_chips - VIDEO_CARDS setting to build driver for chips video cards
 x11-base/xorg-x11:video_cards_cirrus - VIDEO_CARDS setting to build driver for cirrus video cards
 x11-base/xorg-x11:video_cards_cyrix - VIDEO_CARDS setting to build driver for cyrix video cards
@@ -1616,12 +1619,15 @@ x11-base/xorg-x11:video_cards_i128 - VIDEO_CARDS setting to build driver for i12
 x11-base/xorg-x11:video_cards_i740 - VIDEO_CARDS setting to build driver for i740 video cards
 x11-base/xorg-x11:video_cards_i810 - VIDEO_CARDS setting to build driver for i810 video cards
 x11-base/xorg-x11:video_cards_imstt - VIDEO_CARDS setting to build driver for imstt video cards
+x11-base/xorg-x11:video_cards_mach64 - VIDEO_CARDS setting to build driver for mach64 video cards
 x11-base/xorg-x11:video_cards_mga - VIDEO_CARDS setting to build driver for mga video cards
 x11-base/xorg-x11:video_cards_neomagic - VIDEO_CARDS setting to build driver for neomagic video cards
 x11-base/xorg-x11:video_cards_newport - VIDEO_CARDS setting to build driver for newport video cards
 x11-base/xorg-x11:video_cards_nsc - VIDEO_CARDS setting to build driver for nsc video cards
 x11-base/xorg-x11:video_cards_nv - VIDEO_CARDS setting to build driver for nv video cards
 x11-base/xorg-x11:video_cards_nvidia - VIDEO_CARDS setting to build driver for nvidia video cards
+x11-base/xorg-x11:video_cards_r128 - VIDEO_CARDS setting to build driver for r128 video cards
+x11-base/xorg-x11:video_cards_radeon - VIDEO_CARDS setting to build driver for radeon video cards
 x11-base/xorg-x11:video_cards_rendition - VIDEO_CARDS setting to build driver for rendition video cards
 x11-base/xorg-x11:video_cards_s3 - VIDEO_CARDS setting to build driver for s3 video cards
 x11-base/xorg-x11:video_cards_s3virge - VIDEO_CARDS setting to build driver for s3virge video cards
