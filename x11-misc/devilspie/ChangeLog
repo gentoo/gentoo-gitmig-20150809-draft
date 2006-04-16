@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/devilspie
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/ChangeLog,v 1.22 2006/04/10 20:09:44 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/ChangeLog,v 1.23 2006/04/16 22:58:11 hansmi Exp $
+
+  16 Apr 2006; Michael Hanselmann <hansmi@gentoo.org> devilspie-0.16.ebuild:
+  Stable on ppc.
 
 *devilspie-0.17.1 (10 Apr 2006)
 
