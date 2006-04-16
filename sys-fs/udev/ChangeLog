@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.191 2006/04/09 16:30:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.192 2006/04/16 22:30:49 hansmi Exp $
+
+  16 Apr 2006; Michael Hanselmann <hansmi@gentoo.org> udev-087.ebuild:
+  Stable on ppc.
 
   09 Apr 2006; Markus Rothe <corsair@gentoo.org> udev-087.ebuild:
   Stable on ppc64
