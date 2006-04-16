@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-input-digitaledge
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-digitaledge/ChangeLog,v 1.17 2006/04/14 17:30:40 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-digitaledge/ChangeLog,v 1.18 2006/04/16 12:48:30 flameeyes Exp $
+
+  16 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add ~x86-fbsd keyword.
 
 *xf86-input-digitaledge-1.1.0 (14 Apr 2006)
 

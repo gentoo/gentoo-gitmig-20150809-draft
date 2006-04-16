@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-magellan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-magellan/ChangeLog,v 1.17 2006/04/14 17:30:41 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-magellan/ChangeLog,v 1.18 2006/04/16 12:56:13 flameeyes Exp $
+
+  16 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xf86-input-magellan-1.0.0.5.ebuild:
+  Add ~x86-fbsd keyword.
 
 *xf86-input-magellan-1.1.0 (14 Apr 2006)
 
