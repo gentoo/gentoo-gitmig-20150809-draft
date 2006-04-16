@@ -1,6 +1,12 @@
 # ChangeLog for rox-base/rox-session
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.5 2006/01/18 20:36:58 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.6 2006/04/16 13:04:46 svyatogor Exp $
+
+*rox-session-0.27 (16 Apr 2006)
+
+  16 Apr 2006; Sergey Kuleshov <svyatogor@gentoo.org>
+  +rox-session-0.27.ebuild:
+  New version prepared by Peter Hymn (bug #122699).
 
   18 Jan 2006; Marcelo Goes <vanquirius@gentoo.org>
   rox-session-0.1.20.ebuild, rox-session-0.1.21.ebuild,
