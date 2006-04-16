@@ -1,5 +1,5 @@
  - Fix up default paths
- - Support env DESTDIR / LDFLAGS / CFLAGS
+ - Support env DESTDIR / LDFLAGS / CFLAGS / CC
  - Use awk instead of nawk
  - Don't build/install libtz.a
  - Don't install man-pages provided by sys-apps/man-pages
@@ -58,6 +58,16 @@
 +AWK=		awk
  
  # The path where SGML DTDs are kept.
+@@ -241,8 +241,7 @@
+ 
+ ###############################################################################
+ 
+-cc=		cc
+-CC=		$(cc) -DTZDIR=\"$(TZDIR)\"
++CC+=		-DTZDIR=\"$(TZDIR)\"
+ 
+ TZCSRCS=	zic.c localtime.c asctime.c scheck.c ialloc.c
+ TZCOBJS=	zic.o localtime.o asctime.o scheck.o ialloc.o
 @@ -281,11 +281,13 @@
  ALL:		all date
  

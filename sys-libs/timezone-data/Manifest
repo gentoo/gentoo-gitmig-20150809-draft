@@ -13,9 +13,9 @@ SHA256 c0b3f0197d170438ce5f806b29d6fa251370127e54e963101425f4d3f7cf72de files/di
 MD5 e4a8274693daed929aab56154467532a files/digest-timezone-data-2006c 470
 RMD160 72db8bc34e5736dd94fbc33f16da106957ad94c0 files/digest-timezone-data-2006c 470
 SHA256 e3ec41e8acce398aa384c66b6d76f161df3c8e1f22d6258ad083b2c2bcd70ea9 files/digest-timezone-data-2006c 470
-MD5 e9e827c595ba2803b1090afe0cbf4cfa files/timezone-data-2005n-makefile.patch 3138
-RMD160 da24e48311546da1f9afbb0bcb09e0170ec06b01 files/timezone-data-2005n-makefile.patch 3138
-SHA256 8cc60da044c6bc744000dd899019513306f379959b62a48402d5a305dee9f65f files/timezone-data-2005n-makefile.patch 3138
+MD5 e2a93415d9e744e796aa870f2fde7ab9 files/timezone-data-2005n-makefile.patch 3432
+RMD160 b394008ee7a97f16abcb6d5ca31069a3181c4998 files/timezone-data-2005n-makefile.patch 3432
+SHA256 ff424aedb50fbc89f4e7841e1416fbf82312a8e62b24f9654c44fd9f39d55087 files/timezone-data-2005n-makefile.patch 3432
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
 SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
@@ -31,7 +31,7 @@ SHA256 a64e60c8138c7e98d98bd8bdb5026d3e720551086a2951823b8fd275bca39b53 timezone
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEQEJF2+ySkm8kpY0RAtlBAJ9XDnEx14rle9NlvtlAWlfhnyHbtQCeP89+
-P1DE99L9q8v8hLgFsGLyvuw=
-=PgpP
+iD8DBQFEQeI62+ySkm8kpY0RAnGAAKCysAp0keqebOR8+yXnPecP7JMVhQCbBjqv
+Xmk3DAGKjAWViSyT7Caz89U=
+=KXnp
 -----END PGP SIGNATURE-----
