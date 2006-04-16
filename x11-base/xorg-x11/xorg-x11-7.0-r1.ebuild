@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.19 2006/04/06 21:42:18 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.20 2006/04/16 20:24:46 spyderous Exp $
 
 inherit eutils
 
@@ -45,7 +45,6 @@ IUSE_INPUT_DEVICES="
 IUSE_VIDEO_CARDS="
 	video_cards_apm
 	video_cards_ark
-	video_cards_ati
 	video_cards_chips
 	video_cards_cirrus
 	video_cards_cyrix
@@ -56,11 +55,14 @@ IUSE_VIDEO_CARDS="
 	video_cards_i740
 	video_cards_i810
 	video_cards_imstt
+	video_cards_mach64
 	video_cards_mga
 	video_cards_neomagic
 	video_cards_newport
 	video_cards_nsc
 	video_cards_nv
+	video_cards_r128
+	video_cards_radeon
 	video_cards_rendition
 	video_cards_s3
 	video_cards_s3virge
@@ -231,7 +233,6 @@ RDEPEND="${RDEPEND}
 			(
 				video_cards_apm? ( x11-drivers/xf86-video-apm )
 				video_cards_ark? ( x11-drivers/xf86-video-ark )
-				video_cards_ati? ( x11-drivers/xf86-video-ati )
 				video_cards_chips? ( x11-drivers/xf86-video-chips )
 				video_cards_cirrus? ( x11-drivers/xf86-video-cirrus )
 				video_cards_cyrix? ( x11-drivers/xf86-video-cyrix )
@@ -242,11 +243,14 @@ RDEPEND="${RDEPEND}
 				video_cards_i740? ( x11-drivers/xf86-video-i740 )
 				video_cards_i810? ( x11-drivers/xf86-video-i810 )
 				video_cards_imstt? ( x11-drivers/xf86-video-imstt )
+				video_cards_mach64? ( x11-drivers/xf86-video-ati )
 				video_cards_mga? ( x11-drivers/xf86-video-mga )
 				video_cards_neomagic? ( x11-drivers/xf86-video-neomagic )
 				video_cards_newport? ( x11-drivers/xf86-video-newport )
 				video_cards_nsc? ( x11-drivers/xf86-video-nsc )
 				video_cards_nv? ( x11-drivers/xf86-video-nv )
+				video_cards_r128? ( x11-drivers/xf86-video-ati )
+				video_cards_radeon? ( x11-drivers/xf86-video-ati )
 				video_cards_rendition? ( x11-drivers/xf86-video-rendition )
 				video_cards_s3? ( x11-drivers/xf86-video-s3 )
 				video_cards_s3virge? ( x11-drivers/xf86-video-s3virge )
