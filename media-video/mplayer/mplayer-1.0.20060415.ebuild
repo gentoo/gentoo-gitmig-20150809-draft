@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060415.ebuild,v 1.3 2006/04/16 01:14:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060415.ebuild,v 1.4 2006/04/16 04:11:49 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -173,6 +173,8 @@ src_unpack() {
 
 	# minor fix
 	sed -i -e "s:-O4:-O4 -D__STDC_LIMIT_MACROS:" configure
+
+	epatch ${FILESDIR}/gcc-3-register_allocation.patch
 
 }
 
