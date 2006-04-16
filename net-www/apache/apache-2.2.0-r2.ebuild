@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r2.ebuild,v 1.4 2006/03/08 04:03:54 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r2.ebuild,v 1.5 2006/04/16 21:20:52 vericgar Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -23,8 +23,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="debug doc ldap no-suexec ssl static-modules threads selinux mpm-prefork mpm-worker mpm-event mpm-peruser"
 
 RDEPEND="dev-lang/perl
-	~dev-libs/apr-1.2.2
-	~dev-libs/apr-util-1.2.2
+	>=dev-libs/apr-1.2.2
+	>=dev-libs/apr-util-1.2.2
 	dev-libs/expat
 	app-misc/mime-types
 	sys-libs/zlib
