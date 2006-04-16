@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-app_icd
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_icd/ChangeLog,v 1.6 2005/09/19 18:33:33 stkn Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_icd/ChangeLog,v 1.7 2006/04/16 00:09:14 stkn Exp $
+
+  16 Apr 2006; Stefan Knoblich <stkn@gentoo.org>
+  asterisk-app_icd-1.0.0.ebuild:
+  Update DEPEND to block asterisk-1.2.x (unsupported).
 
   19 Sep 2005; Stefan Knoblich <stkn@gentoo.org>
   asterisk-app_icd-1.0.0.ebuild:
