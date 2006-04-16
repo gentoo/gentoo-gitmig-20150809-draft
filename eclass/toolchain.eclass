@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.267 2006/04/16 06:45:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.268 2006/04/16 18:52:52 flameeyes Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1318,15 +1318,17 @@ gcc_do_make() {
 		${GCC_MAKE_TARGET} \
 		|| die "emake failed with ${GCC_MAKE_TARGET}"
 
-	einfo "Running make LDFLAGS=\"${LDFLAGS}\" STAGE1_CFLAGS=\"${STAGE1_CFLAGS}\" LIBPATH=\"${LIBPATH}\" BOOT_CFLAGS=\"${BOOT_CFLAGS}\" proto"
-	# Build protoize
-	emake -C gcc \
-		LDFLAGS="${LDFLAGS}" \
-		STAGE1_CFLAGS="${STAGE1_CFLAGS}" \
-		LIBPATH="${LIBPATH}" \
-		BOOT_CFLAGS="${BOOT_CFLAGS}" \
-		proto \
-		|| die "emake failed with proto"
+	if [[ ${CHOST} != *-freebsd* ]]; then
+		einfo "Running make LDFLAGS=\"${LDFLAGS}\" STAGE1_CFLAGS=\"${STAGE1_CFLAGS}\" LIBPATH=\"${LIBPATH}\" BOOT_CFLAGS=\"${BOOT_CFLAGS}\" proto"
+		# Build protoize
+		emake -C gcc \
+			LDFLAGS="${LDFLAGS}" \
+			STAGE1_CFLAGS="${STAGE1_CFLAGS}" \
+			LIBPATH="${LIBPATH}" \
+			BOOT_CFLAGS="${BOOT_CFLAGS}" \
+			proto \
+			|| die "emake failed with proto"
+	fi
 
 	if ! use build && ! is_crosscompile && ! use nocxx && use doc ; then
 		if type -p doxygen > /dev/null ; then
