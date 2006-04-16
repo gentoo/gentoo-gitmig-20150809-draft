@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-apps/gorm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.15 2006/03/25 18:58:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.16 2006/04/16 08:55:56 grobian Exp $
+
+*gorm-1.0.6 (16 Apr 2006)
+
+  16 Apr 2006; Fabian Groffen <grobian@gentoo.org> +gorm-1.0.6.ebuild:
+  Version bump to 1.0.6 (bug #129801)
 
 *gorm-1.0.4 (25 Mar 2006)
 

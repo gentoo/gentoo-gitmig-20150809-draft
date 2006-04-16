@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-0.9.10.ebuild,v 1.3 2006/04/16 08:55:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-1.0.6.ebuild,v 1.1 2006/04/16 08:55:56 grobian Exp $
 
 inherit gnustep
 
 S=${WORKDIR}/${P/g/G}
 
 IUSE="doc"
-DESCRIPTION="Gorm is a clone of the NeXTstep Interface Builder application for GNUstep."
+DESCRIPTION="A clone of the NeXTstep Interface Builder application for GNUstep"
 HOMEPAGE="http://www.gnustep.org/experience/Gorm.html"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/dev-apps/${P/g/G}.tar.gz"
 
