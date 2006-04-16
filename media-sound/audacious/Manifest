@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 144e0c94341e2b3a2fcdefeebdf00946 ChangeLog 5648
-RMD160 d917fbfe10a4394a74a425fca82693e40685b722 ChangeLog 5648
-SHA256 d9ef8e4ee639225225cac6b43f60da39b765ae69aef3b2bacbdc2e9b17a42824 ChangeLog 5648
+MD5 6edd33e3013778ed140b10c1a887c1c9 ChangeLog 5798
+RMD160 07e1b4df53d668b8b57c3cffcaa3523c36cbc2d8 ChangeLog 5798
+SHA256 9461932ca1c20fbe2fda7e11af6866fa54a9a209d2865066edd8163852d00a48 ChangeLog 5798
 MD5 fe1ea03aa4a3e638681490e809f8d7c1 audacious-0.1.2.ebuild 2342
 RMD160 fc643500baae9af216f74163860dda1aae007aeb audacious-0.1.2.ebuild 2342
 SHA256 980088a1af4e1d0ac35809314eb7b7f7d6f14dc57e32d7ca0e98c5e61f47473f audacious-0.1.2.ebuild 2342
@@ -19,6 +19,9 @@ SHA256 817cec7522bfccd1450c1ad70b3bfc9fba56ce6af51d25e4904569c514e694a7 audaciou
 MD5 2e32b929336d205a750ed27970d78803 audacious-0.2.3.ebuild 2556
 RMD160 aec24e71352e373ada7245c6bc7e96d7571316b8 audacious-0.2.3.ebuild 2556
 SHA256 d35e35c02db7ae241b935d784f5713ea0d704978bc8ef40f4edda94e1c5574db audacious-0.2.3.ebuild 2556
+MD5 c81132c30362be6170e33b0948af5f15 audacious-1.0.0.ebuild 2611
+RMD160 1a3718ccdbd406937f7a7a22dd80382ff0544006 audacious-1.0.0.ebuild 2611
+SHA256 82da5580623f3da52468195d07680b41a6c22b0a78d175b04e666d66ede9e466 audacious-1.0.0.ebuild 2611
 MD5 f136cb1abd33101806a7879f4f5ae7d8 files/0.2-no-sigabrt-on-null-path.diff 442
 RMD160 d937400e5fcacf6992efddd2f2490eff04443853 files/0.2-no-sigabrt-on-null-path.diff 442
 SHA256 d34083f23c74d3e75ffbe55b21c23120089bddf7be523de4725ba85b630c3449 files/0.2-no-sigabrt-on-null-path.diff 442
@@ -43,13 +46,16 @@ SHA256 1d20ca09fc01b2e615db174f0713d26c9edff429b0982f4d639d8cba22553f78 files/di
 MD5 9cbe86544380e509bd1111cbb1d15a33 files/digest-audacious-0.2.3 136
 RMD160 4561bfb4a57dc7b7683951c21eb31d22c869eae2 files/digest-audacious-0.2.3 136
 SHA256 732ad1b58fe671bc7b51df695e2d4da9b61da73b1a1476b1f6adb8a294ef3f39 files/digest-audacious-0.2.3 136
+MD5 c208147e974fdba9e399a029cea95bd1 files/digest-audacious-1.0.0 500
+RMD160 1c5fa06b79d45af42b7ececac7e21e4a45f6be37 files/digest-audacious-1.0.0 500
+SHA256 578452a3884065ca25e3a5c6d84a876afceee8a31638c1495a3b20016ca49ad1 files/digest-audacious-1.0.0 500
 MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
 RMD160 f9de13e16a150195633b055ebe61bb4cea95160d metadata.xml 248
 SHA256 6a8ca116bded5cdd92cb700f92acd22b01ae159ef1b69c60a03fc9859bb9b3d6 metadata.xml 248
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEQnRxp5vW4rUFj5oRAozAAJ44reB8x8uCO7Yzpoh4O+O/WpmYvwCfaUHO
-CYzhje0yr2g2oTt0GbJ0c+k=
-=7iNI
+iD8DBQFEQp7wp5vW4rUFj5oRAnD0AJ9wK5EB3vqoEMz8znF9dLI2CiMnggCcCkJW
+MM8RqiGZ8uEpU5RObYae9lc=
+=0Xge
 -----END PGP SIGNATURE-----
