@@ -1,8 +1,7 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/clock-2.1.6.ebuild,v 1.2 2005/11/28 22:27:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/clock-2.1.6.ebuild,v 1.3 2006/04/16 11:55:53 svyatogor Exp $
 
-inherit rox
 
 MY_PN="Clock"
 
@@ -20,3 +19,4 @@ SET_PERM=true
 APPNAME=Clock
 S=${WORKDIR}
 
+inherit rox
