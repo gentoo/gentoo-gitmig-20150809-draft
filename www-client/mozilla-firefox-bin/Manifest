@@ -1,6 +1,9 @@
-MD5 85a2bf41cb00ea57002a29522a440393 ChangeLog 568
-RMD160 2537afe8f77de574213b99a44c383236ad82d9c4 ChangeLog 568
-SHA256 244772b064203db135f5d7b7b575f32a933a7c7d7eb109967ff5db7e5b24531c ChangeLog 568
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ad891263d3d9fdadfaf430dc0d20505a ChangeLog 682
+RMD160 96c7819c9f52a90f0e01fe709bd98d550f80b03b ChangeLog 682
+SHA256 8ba805bf8c811e6ca599e1a0eb3e77d7dde3996c8af80c194b7c64f991f1a72a ChangeLog 682
 MD5 82be77a0991a01a626a24995353b9c7d files/digest-mozilla-firefox-bin-1.0.7 66
 RMD160 06c60c1fc4bf95476dd2f6f60354fe586734e4f1 files/digest-mozilla-firefox-bin-1.0.7 66
 SHA256 39635f59337b3040b94d1a2056143c82df247e4284a974c108d6e03186881fbf files/digest-mozilla-firefox-bin-1.0.7 66
@@ -22,9 +25,16 @@ SHA256 0cc5126362a12cee42ec1197c528a804cf36859329dd2c6d9225726831d14b8b metadata
 MD5 18245262491b055758b3426f5367e9bf mozilla-firefox-bin-1.0.7.ebuild 1940
 RMD160 00c7a90084a0a219e64d2ac5058e674b598a98e1 mozilla-firefox-bin-1.0.7.ebuild 1940
 SHA256 88db90fcf2ae2b91bbf1fa8ce380faa5f8dda31ff0e1a3488f7c6cb0512b771c mozilla-firefox-bin-1.0.7.ebuild 1940
-MD5 68a95cf941731118a5d760ec3f079ad0 mozilla-firefox-bin-1.0.8.ebuild 1942
-RMD160 bd620bfe1eb73b7e7c0b432e303f0afec9d95b60 mozilla-firefox-bin-1.0.8.ebuild 1942
-SHA256 efaea95f5870171ada8fb684419032d679cf138226891c5587f18d77550b765b mozilla-firefox-bin-1.0.8.ebuild 1942
+MD5 2480a009896af6da276b7513b17ba10a mozilla-firefox-bin-1.0.8.ebuild 1941
+RMD160 d0922930f07d0a11932d29a762f493aeacc52f89 mozilla-firefox-bin-1.0.8.ebuild 1941
+SHA256 3bf246e5160dbff945925d5fc1ce245ad85de14962aebcb393da40aba3d19b04 mozilla-firefox-bin-1.0.8.ebuild 1941
 MD5 98ae81743d005838c0beaf1f741b918a mozilla-firefox-bin-1.5.0.2.ebuild 3572
 RMD160 f1f733c7e45492a9f3717ab1b33809f848f1d336 mozilla-firefox-bin-1.5.0.2.ebuild 3572
 SHA256 863c4a8e1b5dfdbd49be9171a0b6a63936981eff52d4dbecfa3a00d91b2f77c8 mozilla-firefox-bin-1.5.0.2.ebuild 3572
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQYq0CRZPokWLroQRApFqAJ0d0TT7G3K7ETds/QZtxzjM0pjSbwCgvISI
+q+urnTkj43+KZcwYAXsHkVE=
+=qDoc
+-----END PGP SIGNATURE-----
