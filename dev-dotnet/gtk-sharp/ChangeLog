@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gtk-sharp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.60 2006/03/20 00:14:54 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.61 2006/04/16 18:29:10 latexer Exp $
+
+  16 Apr 2006; Peter Johanson <latexer@gentoo.org> gtk-sharp-2.4.2.ebuild,
+  gtk-sharp-2.8.2.ebuild:
+  Use autotools eclass. See bug #125950.
 
   20 Mar 2006; Luis Medinas <metalgod@gentoo.org> gtk-sharp-1.0.10.ebuild:
   Stable on amd64.

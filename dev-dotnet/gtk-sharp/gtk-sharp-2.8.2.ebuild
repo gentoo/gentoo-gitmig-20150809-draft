@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.8.2.ebuild,v 1.2 2006/03/17 03:51:42 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.8.2.ebuild,v 1.3 2006/04/16 18:29:10 latexer Exp $
 
-inherit eutils mono
+inherit eutils mono autotools
 
 DESCRIPTION="Gtk# is a C# language binding for the GTK2 toolkit and GNOME libraries"
 SRC_URI="http://go-mono.com/sources/${PN}-2.8/${P}.tar.gz
@@ -21,9 +21,6 @@ RDEPEND=">=dev-lang/mono-1.1.9
 
 DEPEND="${RDEPEND}
 	doc? ( >=dev-util/monodoc-1.1.8 )
-	>=sys-apps/sed-4.0
-	sys-devel/automake
-	sys-devel/autoconf
 	dev-util/pkgconfig"
 
 KEYWORDS="~x86 ~ppc ~amd64"
@@ -33,18 +30,18 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${WORKDIR}/${P}-configurable.diff
-	#fixes support with pkgconfig-0.17, bug #92503
-	sed -i -e 's/\<PKG_PATH\>/GTK_SHARP_PKG_PATH/g' configure.in
+
+	# fixes support with pkgconfig-0.17, bug #92503
+	# as well as remove zapping of CFLAGS
+	sed -i -e 's/\<PKG_PATH\>/GTK_SHARP_PKG_PATH/g' \
+		-e ':^CFLAGS=:d' \
+		${S}/configure.in
 
 	# Use correct libdir in pkgconfig files
 	sed -i -e 's:^libdir.*:libdir=@libdir@:' \
 		${S}/*/{,GConf}/*.pc.in || die
 
-	export WANT_AUTOMAKE="1.8"
-	aclocal || die
-	automake || die
-	autoconf || die
-	libtoolize --copy --force
+	eautoreconf
 
 	# disable building of samples (#16015)
 	sed -i -e "s:sample::" Makefile.in
