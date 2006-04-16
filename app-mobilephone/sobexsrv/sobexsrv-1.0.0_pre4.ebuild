@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/sobexsrv-1.0.0_pre4.ebuild,v 1.1 2006/03/21 16:57:06 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/sobexsrv-1.0.0_pre4.ebuild,v 1.2 2006/04/16 04:14:04 joker Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.mulliner.org/bluetooth/sobexsrv.php"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86 ~sparc"
+KEYWORDS="~amd64 sparc ~x86"
 
 DEPEND="dev-libs/openobex
 	net-wireless/bluez-libs"

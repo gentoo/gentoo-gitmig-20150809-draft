@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 358dd5c3db843a1872cb78f3f006a078 ChangeLog 428
-RMD160 a22076fbc5574e850e07a9b0d04120b2d3992877 ChangeLog 428
-SHA256 4440d5a07c83944e006bdb3329f28d4c9f2290f5083b418d9212e91e6b3a337c ChangeLog 428
+MD5 25599283b470b31c5a08522a11654007 ChangeLog 540
 MD5 e59cf7a4f30f909594c004064b20a45a files/conf.d_sobexsrv 1095
-RMD160 ce4a8bc70d304f0cd3193b71426488e54eb00df7 files/conf.d_sobexsrv 1095
-SHA256 7c7bf16790f4c813a5460566de28161c9357fc6d814f5e05228c6a7e0fab5494 files/conf.d_sobexsrv 1095
 MD5 267d0e55cb698de3bac2b718cdef9a61 files/digest-sobexsrv-1.0.0_pre4 69
-RMD160 5818645e1ab24817d4fa0a327b0c5a7720128b29 files/digest-sobexsrv-1.0.0_pre4 69
-SHA256 e68fc857d9a89a38011bf2fe714174f7223e5b75005dd182a14b7340e7298306 files/digest-sobexsrv-1.0.0_pre4 69
 MD5 ac35423bdc2fcbff8074a59f53cc5197 files/init.d_sobexsrv 1618
-RMD160 947f0f563455b98549cd3fcf7b94e365d4a0fb21 files/init.d_sobexsrv 1618
-SHA256 5472af188dc46af1b68dc2e148b0dab5aea0513667ec57d1ce3904382a2bc34b files/init.d_sobexsrv 1618
 MD5 9b0651d1bb1439c467fcbfe40dbcdaa2 metadata.xml 914
-RMD160 83c1f4c6fbb493ec3e444d9507b670638ba7f4a7 metadata.xml 914
-SHA256 924c51707354563db86f534b161674b591760fd8c000fe009a8e30d512390dc2 metadata.xml 914
-MD5 5dba8f9cc5d20ac74d03e95e8ee7ff8e sobexsrv-1.0.0_pre4.ebuild 1578
-RMD160 e67ee6f29ddfcf9674be744a075d2d70bf6e920e sobexsrv-1.0.0_pre4.ebuild 1578
-SHA256 ef1f0df572bd4636c590e43193d7401aed9acd050ba8c203735fa87ca4ebc52a sobexsrv-1.0.0_pre4.ebuild 1578
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEJvR1I1lqEGTUzyQRAlWkAKDLWoEdZuaMna40U0aF4ukJDs6SKACgur+X
-TLNi+uc9McrAgabzZydEg9M=
-=zMzA
------END PGP SIGNATURE-----
+MD5 01f3fce7914d689424dcdbe3390676e5 sobexsrv-1.0.0_pre4.ebuild 1577
