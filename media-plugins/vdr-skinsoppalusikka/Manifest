@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f6ed2de9f888afab357762629b030013 ChangeLog 2806
 MD5 5c5cc0f6f7870dc957fa04f338204091 files/digest-vdr-skinsoppalusikka-0.0.5 74
 MD5 aa882b352db47df8b30dc370fec6aa65 files/digest-vdr-skinsoppalusikka-0.0.6 268
@@ -13,3 +16,11 @@ MD5 2bacb5ab8624835a3efa056d641d8aba vdr-skinsoppalusikka-0.0.5.ebuild 965
 MD5 ab045a56581506a3659512ad9a87309a vdr-skinsoppalusikka-0.0.6.ebuild 1003
 MD5 fef1b3f131ea63a9ae344478522c11ce vdr-skinsoppalusikka-0.0.7.ebuild 795
 MD5 038fb02e4583ad8b462a2ebcc33bd635 vdr-skinsoppalusikka-0.1.0.ebuild 753
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFEQovHdn07HTTCgIoRAjkvAJ47yp73yE54jMz9trz9dKwi/bQPJgCfdRQ9
+Q9pcb8k75V57GCKAhJuw9WU=
+=AzOE
+-----END PGP SIGNATURE-----
