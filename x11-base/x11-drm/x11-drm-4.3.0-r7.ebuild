@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-4.3.0-r7.ebuild,v 1.7 2006/01/28 21:46:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-4.3.0-r7.ebuild,v 1.8 2006/04/16 20:16:03 spyderous Exp $
 
 IUSE="gatos"
-IUSE_VIDEO_CARDS="3dfx gamma i810 i830 mga rage128 radeon sis mach64"
+IUSE_VIDEO_CARDS="3dfx gamma i810 i830 mga r128 radeon sis mach64"
 
 inherit eutils x11
 
@@ -58,9 +58,9 @@ pkg_setup() {
 	# gatos doesn't build on anything but radeon
 	if use gatos
 	then
-		if ! use video_cards_radeon && ! use video_cards_rage128
+		if ! use video_cards_radeon && ! use video_cards_r128
 		then
-			die "Remove gatos from your USE flags. It does not build for cards other than radeon and rage128."
+			die "Remove gatos from your USE flags. It does not build for cards other than radeon and r128."
 		fi
 	fi
 
@@ -200,7 +200,7 @@ set_vidcards() {
 		VIDCARDS="${VIDCARDS} mga.o"
 	use video_cards_3dfx && \
 		VIDCARDS="${VIDCARDS} tdfx.o"
-	use video_cards_rage128 && \
+	use video_cards_r128 && \
 		VIDCARDS="${VIDCARDS} r128.o"
 	use video_cards_radeon && \
 		VIDCARDS="${VIDCARDS} radeon.o"
