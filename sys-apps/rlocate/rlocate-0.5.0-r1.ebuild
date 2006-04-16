@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/rlocate-0.5.0-r1.ebuild,v 1.1 2006/04/15 18:17:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/rlocate-0.5.0-r1.ebuild,v 1.2 2006/04/16 01:51:32 vapier Exp $
 
 inherit eutils linux-mod
 
@@ -42,7 +42,6 @@ src_compile() {
 }
 
 src_install() {
-die
 	make install DESTDIR="${D}" || die
 	newinitd "${FILESDIR}"/rlocated.rc rlocated
 	linux-mod_src_install

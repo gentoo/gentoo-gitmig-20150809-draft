@@ -55,13 +55,13 @@ SHA256 bbebf3968e99c3c067dbbfaa0e878961c87edc45cedf6c88f7365bcd9411c617 rlocate-
 MD5 4bfc313b502e4c967c5fa669de8d7cb2 rlocate-0.4.3.ebuild 1161
 RMD160 e9e972c7d08a8f900aee9641476210a3f48f9381 rlocate-0.4.3.ebuild 1161
 SHA256 8fb27e910d85cf481ded91f5b59a6dd47d22df661e3ba0616a1904172aa64b62 rlocate-0.4.3.ebuild 1161
-MD5 8230e5db322bd60153409b599b0c3ede rlocate-0.5.0-r1.ebuild 1221
-RMD160 2c1ddcf4da9138502f93bf3cfbec71848dcabb17 rlocate-0.5.0-r1.ebuild 1221
-SHA256 fec6e30606ad7c8cd14f2484d194c4f48fbc5abb042c6b2c33fd2da92eec4e34 rlocate-0.5.0-r1.ebuild 1221
+MD5 241dd1e7a0ad40138cd7b65bef446aaa rlocate-0.5.0-r1.ebuild 1217
+RMD160 08bd90ebdfd42e0d06062202fc7b96e07f3c07b2 rlocate-0.5.0-r1.ebuild 1217
+SHA256 1826e67a7634b53c7fc7aed01e811b416508e55045f61a5924f6a1ab1ff64c8f rlocate-0.5.0-r1.ebuild 1217
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEQTjO2+ySkm8kpY0RAhFoAKCLpyIbdrBjVrFOfhEl+K5ApS8aawCeLusm
-Y0gFcMxCHPSy7Y0jEAvfI2c=
-=iD7d
+iD8DBQFEQaNV2+ySkm8kpY0RAv9kAJ0dG6iV2ZG2nNZcxSzdbhtftlAo3wCeL+fR
+IMY8xYddNS4NdTzdi20PYlE=
+=q7HR
 -----END PGP SIGNATURE-----
