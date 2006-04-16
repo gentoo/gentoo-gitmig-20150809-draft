@@ -1,15 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-7.0-r1.ebuild,v 1.2 2006/04/05 15:43:33 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-7.0-r1.ebuild,v 1.3 2006/04/16 20:31:48 spyderous Exp $
 
 inherit multilib
 
 DESCRIPTION="X11R6 libraries for emulation of 32bit x86 on amd64"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/emul-linux-x86-xlibs-${PVR}.tar.bz2
-		video_cards_ati? mirror://gentoo/emul-linux-x86-xlibs-ati_dri-${PV}.tar.bz2
 		video_cards_i810? mirror://gentoo/emul-linux-x86-xlibs-i810_dri-${PV}.tar.bz2
+		video_cards_mach64? mirror://gentoo/emul-linux-x86-xlibs-ati_dri-${PV}.tar.bz2
 		video_cards_mga? mirror://gentoo/emul-linux-x86-xlibs-mga_dri-${PV}.tar.bz2
+		video_cards_r128? mirror://gentoo/emul-linux-x86-xlibs-ati_dri-${PV}.tar.bz2
+		video_cards_radeon? mirror://gentoo/emul-linux-x86-xlibs-ati_dri-${PV}.tar.bz2
 		video_cards_s3virge? mirror://gentoo/emul-linux-x86-xlibs-s3virge_dri-${PV}.tar.bz2
 		video_cards_savage? mirror://gentoo/emul-linux-x86-xlibs-savage_dri-${PV}.tar.bz2
 		video_cards_sis? mirror://gentoo/emul-linux-x86-xlibs-sis_dri-${PV}.tar.bz2
@@ -23,9 +25,11 @@ SLOT="0"
 KEYWORDS="-* ~amd64"
 
 IUSE_VIDEO_CARDS="
-	video_cards_ati
 	video_cards_i810
+	video_cards_mach64
 	video_cards_mga
+	video_cards_r128
+	video_cards_radeon
 	video_cards_s3virge
 	video_cards_savage
 	video_cards_sis

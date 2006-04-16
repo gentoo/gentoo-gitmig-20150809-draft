@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.40 2006/04/05 15:43:33 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.41 2006/04/16 20:31:48 spyderous Exp $
+
+  16 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  emul-linux-x86-xlibs-7.0-r1.ebuild:
+  Split out ATI cards into mach64, r128 and radeon.
 
   05 Apr 2006; Patrick McLean <chutzpah@gentoo.org>
   emul-linux-x86-xlibs-7.0-r1.ebuild:
