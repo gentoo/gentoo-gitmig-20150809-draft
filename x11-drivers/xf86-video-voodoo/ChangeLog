@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-voodoo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-voodoo/ChangeLog,v 1.15 2006/04/14 17:30:44 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-voodoo/ChangeLog,v 1.16 2006/04/16 14:31:20 flameeyes Exp $
+
+  16 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xf86-video-voodoo-1.0.0.5.ebuild:
+  Add ~x86-fbsd keyword.
 
 *xf86-video-voodoo-1.1.0 (14 Apr 2006)
 

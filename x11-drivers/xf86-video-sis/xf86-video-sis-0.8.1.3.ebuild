@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sis/xf86-video-sis-0.8.1.3.ebuild,v 1.6 2006/03/03 02:15:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sis/xf86-video-sis-0.8.1.3.ebuild,v 1.7 2006/04/16 14:23:33 flameeyes Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="X.Org driver for sis cards"
-KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sh ~x86"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sh ~x86 ~x86-fbsd"
 IUSE="dri"
 RDEPEND="x11-base/xorg-server"
 DEPEND="${RDEPEND}
