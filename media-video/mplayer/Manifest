@@ -19,9 +19,9 @@ SHA256 14dc9d80cd0d8529576e31742a8b5a6d8d182e3c819eb2bc010df19ae387e88e files/di
 MD5 bdc2a05b83ca16773f288d75afe99b33 files/digest-mplayer-1.0_pre7-r1 432
 RMD160 e15bccf47441f6210b2f1cb1cdfb0ae1a2fb54a7 files/digest-mplayer-1.0_pre7-r1 432
 SHA256 1eb44a0c360f6baa94988cf4a0cad549e1ba0f8d21475d70ca4fbf160d853670 files/digest-mplayer-1.0_pre7-r1 432
-MD5 5845aa7caf50af7a75e77bbeea4d4871 files/gcc-3-register_allocation.patch 511
-RMD160 bde8d6df1041a003be19673280041ac965dec52f files/gcc-3-register_allocation.patch 511
-SHA256 29bc6211ad26c9ed3f04afeb2675821456bf12ae1397a163745c9b03d0356bc9 files/gcc-3-register_allocation.patch 511
+MD5 163307ed3acfb473135a2a4a9319401d files/gcc-3-register_allocation.patch 544
+RMD160 336b637aebe38457d86ddaca25e0a3395cde2f4b files/gcc-3-register_allocation.patch 544
+SHA256 316e0a9ef50b0caebb4443fe0864c2d6c93ac014c64d6e6af59823983af8cb10 files/gcc-3-register_allocation.patch 544
 MD5 9c52b8b6d2256cc936201aad760823c6 files/mplayer-1.0_pre7-gcc4-amd64.patch 2521
 RMD160 6fdfd5eb60ae9893f74a5bd22ddc59acee1f9126 files/mplayer-1.0_pre7-gcc4-amd64.patch 2521
 SHA256 b59bc7328d50cfb0f1b18ae768ebc90051325a311bc54e4ace2acfc033d5ee8c files/mplayer-1.0_pre7-gcc4-amd64.patch 2521
