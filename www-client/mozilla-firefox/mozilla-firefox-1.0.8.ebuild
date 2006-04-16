@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.8.ebuild,v 1.2 2006/04/15 21:59:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.8.ebuild,v 1.3 2006/04/16 00:14:22 halcy0n Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -22,7 +22,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/source/fi
 	mirror://gentoo/${PN}-${PVER}.tar.bz2
 	http://dev.gentoo.org/~anarchy/dist/${PN}-${PVER}.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc sparc x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="gnome java mozdevelop mozsvg mozcalendar"
