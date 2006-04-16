@@ -1,14 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20051223.ebuild,v 1.7 2006/04/16 20:17:18 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20051223.ebuild,v 1.8 2006/04/16 20:21:34 spyderous Exp $
 
 inherit eutils x11 linux-mod
 
 IUSE_VIDEO_CARDS="
-	video_cards_ati
 	video_cards_i810
+	video_cards_mach64
 	video_cards_mga
 	video_cards_nv
+	video_cards_r128
+	video_cards_radeon
 	video_cards_savage
 	video_cards_sis
 	video_cards_sunffb
@@ -149,7 +151,7 @@ pkg_postinst() {
 		einfo "SiS framebuffer also needs to be enabled in the kernel."
 	fi
 
-	if use video_cards_ati
+	if use video_cards_mach64
 	then
 		einfo "The Mach64 DRI driver is insecure."
 		einfo "Malicious clients can write to system memory."
@@ -175,14 +177,18 @@ set_vidcards() {
 	VIDCARDS=""
 
 	if [[ -n "${VIDEO_CARDS}" ]]; then
-		use video_cards_ati && \
-			VIDCARDS="${VIDCARDS} mach64.${KV_OBJ} r128.${KV_OBJ} radeon.${KV_OBJ}"
 		use video_cards_i810 && \
 			VIDCARDS="${VIDCARDS} i810.${KV_OBJ} i830.${KV_OBJ} i915.${KV_OBJ}"
+		use video_cards_mach64 && \
+			VIDCARDS="${VIDCARDS} mach64.${KV_OBJ}"
 		use video_cards_mga && \
 			VIDCARDS="${VIDCARDS} mga.${KV_OBJ}"
 		use video_cards_nv && \
 			VIDCARDS="${VIDCARDS} nv.${KV_OBJ}"
+		use video_cards_r128 && \
+			VIDCARDS="${VIDCARDS} r128.${KV_OBJ}"
+		use video_cards_radeon && \
+			VIDCARDS="${VIDCARDS} radeon.${KV_OBJ}"
 		use video_cards_savage && \
 			VIDCARDS="${VIDCARDS} savage.${KV_OBJ}"
 		use video_cards_sis && \
