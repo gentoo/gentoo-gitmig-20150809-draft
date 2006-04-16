@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.266 2006/04/13 05:26:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.267 2006/04/16 06:45:38 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -966,7 +966,7 @@ gcc_src_unpack() {
 	for x in contrib/test_summary libstdc++-v3/scripts/check_survey.in ; do
 		[[ -e ${x} ]] && fix_files="${fix_files} ${x}"
 	done
-	ht_fix_file ${fix_files} */configure *.sh
+	ht_fix_file ${fix_files} */configure *.sh */Makefile.in
 
 	if ! is_crosscompile && is_multilib && \
 	   [[ ( $(tc-arch) == "amd64" || $(tc-arch) == "ppc64" ) && -z ${SKIP_MULTILIB_HACK} ]] ; then
