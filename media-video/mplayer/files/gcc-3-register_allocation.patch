@@ -1,0 +1,19 @@
+Index: ppc/gcc_fixes.h
+===================================================================
+RCS file: /cvsroot/ffmpeg/ffmpeg/libavcodec/ppc/gcc_fixes.h,v
+retrieving revision 1.8
+diff -u -r1.8 gcc_fixes.h
+--- ppc/gcc_fixes.h	7 Apr 2006 12:40:28 -0000	1.8
++++ ppc/gcc_fixes.h	16 Apr 2006 11:41:09 -0000
+@@ -23,9 +23,9 @@
+ #define AVV(x...) {x}
+ 
+ #if (__GNUC__ < 4)
+-# define REG_v(a) asm ( #a )
+-#else
+ # define REG_v(a)
++#else
++# define REG_v(a) asm ( #a )
+ #endif
+ 
+ #if (__GNUC__ * 100 + __GNUC_MINOR__ < 303)
