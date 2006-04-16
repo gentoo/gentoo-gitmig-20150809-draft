@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/hyperic-hq-agent
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/ChangeLog,v 1.13 2006/02/04 04:01:54 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/ChangeLog,v 1.14 2006/04/16 08:22:37 mattm Exp $
+
+*hyperic-hq-agent-2.6.22 (16 Apr 2006)
+
+  16 Apr 2006; Matthew Marlowe <mattm@gentoo.org>
+  -files/hyperic-hq-agent.init-2.1.30, -files/hyperic-hq-agent.init-2.5.10,
+  +files/hyperic-hq-agent.init-2.6.22, -hyperic-hq-agent-2.1.30.ebuild,
+  -hyperic-hq-agent-2.5.10.ebuild, +hyperic-hq-agent-2.6.22.ebuild:
+  Upstream version bump.
 
 *hyperic-hq-agent-2.5.15 (04 Feb 2006)
 
