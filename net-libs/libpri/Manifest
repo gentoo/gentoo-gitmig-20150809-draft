@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 edcd00b4805785108ad1642c30bc2942 ChangeLog 6183
+MD5 77d0b20944601cf14b6dcfa800c3dd0f ChangeLog 6336
 MD5 287da2d882869ddba4be296407e0632f files/digest-libpri-1.0.7-r1 134
 MD5 434c5302587dc0457610cdb0fa7b3627 files/digest-libpri-1.0.8 134
 MD5 4794bc9f4c11421a31a1d665ee5adef2 files/digest-libpri-1.0.9-r1 134
@@ -9,6 +6,7 @@ MD5 fede299e3209681e8a1f8265a9c6158f files/digest-libpri-1.0.9-r2 134
 MD5 04841b1acd89fb3086a38ea577643160 files/digest-libpri-1.2.0 135
 MD5 a3ffe8323b3c23d0958a6c8afb9b4198 files/digest-libpri-1.2.1 149
 MD5 095a7eef986bcbeaed21e2d33d9640d3 files/digest-libpri-1.2.2 136
+MD5 9d36dc01cf44063cbe2deaa1a9214093 files/digest-libpri-1.2.2-r1 500
 MD5 3a2b30f73ce69b5676222b6050648531 files/libpri-1.2.0-gentoo.diff 2007
 MD5 58b3a9cd96f1dcf510bb49a5feab8893 files/libpri-1.2.2-gentoo.diff 1921
 MD5 d988d508ed6a6b40c542b1af643e2446 libpri-1.0.7-r1.ebuild 1002
@@ -17,12 +15,6 @@ MD5 57a84bfa8a8a1dae9eff85b7e259fda4 libpri-1.0.9-r1.ebuild 999
 MD5 19eeb1cbce34e5c02a2504cf8c171ebe libpri-1.0.9-r2.ebuild 1002
 MD5 9bd3548f8ca43c199e931c4b9f93a49d libpri-1.2.0.ebuild 1164
 MD5 f0df101c78ccf4490209602056e7b367 libpri-1.2.1.ebuild 1405
+MD5 b77728098ae0b43d00fa5bb5a8b61f9c libpri-1.2.2-r1.ebuild 1368
 MD5 56a0a2d8be59952ff0d9a1f0a67c2315 libpri-1.2.2.ebuild 1328
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEDEYsKRy60XGEcJIRAlGeAKCLEyVpoVfahhhr9V7YY3lAYKghhACeJEih
-P0PG663oXNmD4AevXW43Zhc=
-=U1Ci
------END PGP SIGNATURE-----
