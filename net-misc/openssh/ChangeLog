@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.165 2006/04/15 21:14:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.166 2006/04/16 12:53:08 kloeri Exp $
+
+  16 Apr 2006; Bryan Østergaard <kloeri@gentoo.org
+  openssh-4.3_p2-r1.ebuild:
+  Stable on alpha, bug 130027.
 
   15 Apr 2006; Jason Wever <weeve@gentoo.org> openssh-4.3_p2-r1.ebuild:
   Stable on SPARC wrt bug #130027.
