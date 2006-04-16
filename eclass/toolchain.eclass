@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.268 2006/04/16 18:52:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.269 2006/04/16 22:38:58 flameeyes Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -355,6 +355,8 @@ XGCC() { get_make_var GCC_FOR_TARGET ; }
 # 2) PIE by default
 # 3) SSP by default
 hardened_gcc_works() {
+	[[ ${CTARGET} == *-freebsd* ]] && return 1
+
 	if [[ $1 == "pie" ]] ; then
 		want_pie || return 1
 		hardened_gcc_is_stable pie && return 0
