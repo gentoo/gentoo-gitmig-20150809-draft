@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.3 2006/04/15 00:36:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.4 2006/04/16 22:39:00 flameeyes Exp $
 
 # TCL/TK still to test
 tcltk
@@ -8,6 +8,10 @@ tcltk
 # MySQL requires changes as it doesn't build/start on FreeBSD at least
 # Remove after it's tested working.
 mysql
+
+# PIE and SSP doesn't work on FreeBSD, so just mask the two flags, as the eclass drops them entirely
+nopie
+nossp
 
 # Unmask freebsd-specific variables
 -elibc_FreeBSD
