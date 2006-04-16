@@ -1,23 +1,39 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2b396a20042172f029500234be60d6e5 ChangeLog 7376
+MD5 0048b7d262133eba686c64c852bc96ab ChangeLog 7540
+RMD160 f33e4449112dcda9d4ec9a68c69dc1ea36bda9b5 ChangeLog 7540
+SHA256 b86c77a90efb42f9cafadb6bec15f695a85441ac6bdacfa949efbf22075c0b08 ChangeLog 7540
 MD5 971e2c067f8f28bd0f7c882607650469 files/cpuinfo 12
+RMD160 ae173b2d66cd4becce06fbd7e01a0b62aa2bab2d files/cpuinfo 12
+SHA256 b90ea3549103fa261cd711ecb3d11158c984bc20a020630aa3ebc3f8b402ec11 files/cpuinfo 12
 MD5 d32d7e0e95c351ef33523cb7c9477b55 files/digest-ibm-jdk-bin-1.4.2.03 626
-MD5 0e86e204e1c606149d0f93f2752ff7c4 files/digest-ibm-jdk-bin-1.4.2.04 626
-MD5 9ac027f56be716fae31993669346cb7f files/digest-ibm-jdk-bin-1.5.0 640
+RMD160 71eda6abd64e576028eeb669b4d4f28533945cee files/digest-ibm-jdk-bin-1.4.2.03 626
+SHA256 1e6fbc4beb98763ba3485e535cba9312cd5c21f8052219c1bd3c639c8384d38b files/digest-ibm-jdk-bin-1.4.2.03 626
+MD5 0a7e396eae1cf68c623e562100a0b183 files/digest-ibm-jdk-bin-1.4.2.04 888
+RMD160 9c9020708c18ab0f8ba50aecd231ca3a4f1cc504 files/digest-ibm-jdk-bin-1.4.2.04 888
+SHA256 0427afcbd29d5e11ccb27e9178b314517e850882a5b0419dca060c6b16b930ae files/digest-ibm-jdk-bin-1.4.2.04 888
+MD5 56fdb06ee54c05dc1f05141d97e1c332 files/digest-ibm-jdk-bin-1.5.0 920
+RMD160 903f080d8e3c5aeec0b484877546f21cc02934c0 files/digest-ibm-jdk-bin-1.5.0 920
+SHA256 77aad186f0d6094813ca28f949625e1aab301f4917bef771db4d11f11cdc7a3f files/digest-ibm-jdk-bin-1.5.0 920
 MD5 605642c801114b645d12bc93a5f3e911 files/ibm-jdk-bin-1.4.2 472
+RMD160 5f2f570d4fe640d352caea7218eb27d8e3d3aab8 files/ibm-jdk-bin-1.4.2 472
+SHA256 c2997f95e82fc393598ae357e1815da50ce2c5eccc2625328e0f034dbb376b93 files/ibm-jdk-bin-1.4.2 472
 MD5 5b500b891d15c0d61d2d0e7d6638176b files/ibm-jdk-bin-1.4.2.03 479
+RMD160 29bc15274c1c71ef2301905e62e3a42a837a55ab files/ibm-jdk-bin-1.4.2.03 479
+SHA256 069f3e182f643462241f82c860d00e60c7acc9c9eab42dd63ddccf3497bd154b files/ibm-jdk-bin-1.4.2.03 479
 MD5 1142b9690eaac5ef742b4ecc78870599 files/ibm-jdk-bin-1.4.2.04 479
+RMD160 fca62d654151599d1ae4c157891c36dd2bf1cf7d files/ibm-jdk-bin-1.4.2.04 479
+SHA256 8804f419bbb9e1ccf8ff4f7684116d9e5bc6c3da94957201a1c32b7877b9da2e files/ibm-jdk-bin-1.4.2.04 479
 MD5 82fe1e3d7bdd38cf0c0a1e3ceed4b29f files/ibm-jdk-bin-1.5.0 474
+RMD160 5ee7d05ce258e4a4e3cdffaebe5c6dcd28ac5439 files/ibm-jdk-bin-1.5.0 474
+SHA256 87403cfbbe8ee41c0ff3622a0f20e34fec024f12dcafad158bcbce1a36168634 files/ibm-jdk-bin-1.5.0 474
 MD5 a61ddd9d0b50e743e78dabbe9c15547b ibm-jdk-bin-1.4.2.03.ebuild 4411
-MD5 d895d4079e53b14223739bcd77d26646 ibm-jdk-bin-1.4.2.04.ebuild 4356
-MD5 84be2e1702d40b2b997f30ae5f0d5235 ibm-jdk-bin-1.5.0.ebuild 3072
+RMD160 edd5625303228134d59dcf2b2385f05377ba0f51 ibm-jdk-bin-1.4.2.03.ebuild 4411
+SHA256 8b191a95c360dd32310be868272cda32582e272379fb5ac2aa78da10944936e9 ibm-jdk-bin-1.4.2.03.ebuild 4411
+MD5 56fbd63154abac579d175e1ecde9d74d ibm-jdk-bin-1.4.2.04.ebuild 4723
+RMD160 cb12ef307770d708f5b5e2b89942b89cdc7119ff ibm-jdk-bin-1.4.2.04.ebuild 4723
+SHA256 a6e30ca3b272676e0db348f4b404b07edf61cf71259d773e3d28083d29e07607 ibm-jdk-bin-1.4.2.04.ebuild 4723
+MD5 1244952e6a8c0baae103669d435aae03 ibm-jdk-bin-1.5.0.ebuild 3223
+RMD160 83065acddf43c5105ab977ea72b73def3944ef89 ibm-jdk-bin-1.5.0.ebuild 3223
+SHA256 73ec3f59af9d77652515b86a9b061de91f113a5b30b6066b821f31c1650de091 ibm-jdk-bin-1.5.0.ebuild 3223
 MD5 2f88465cd5ad6adb1c76759ff3078666 metadata.xml 348
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFEOx/M/NoSW7FuNV8RAmZUAKCI5NdjEbzbVXMVaJnvkKeRSLbarQCfVSRc
-n8UYykrsTbiwVYGT39yZCdo=
-=NpTO
------END PGP SIGNATURE-----
+RMD160 2c018b6bb7a6e6751096600b2a06e485c0a692f8 metadata.xml 348
+SHA256 1e5bc3ab0655be8a83c3ec76e8574ff2575e9c8e46060f3bc0ad4cf7576bc1a7 metadata.xml 348
