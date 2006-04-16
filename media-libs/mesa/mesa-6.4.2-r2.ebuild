@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2-r2.ebuild,v 1.5 2006/04/08 21:57:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2-r2.ebuild,v 1.6 2006/04/16 20:10:52 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -17,13 +17,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE_VIDEO_CARDS="
 	video_cards_ati
-	video_cards_sunffb
 	video_cards_i810
 	video_cards_mga
 	video_cards_none
 	video_cards_s3virge
 	video_cards_savage
 	video_cards_sis
+	video_cards_sunffb
 	video_cards_tdfx
 	video_cards_trident
 	video_cards_via"
@@ -117,9 +117,6 @@ src_unpack() {
 	if use video_cards_ati; then
 		add_drivers mach64 r128 radeon r200 r300
 	fi
-	if use video_cards_sunffb; then
-		add_drivers ffb
-	fi
 	if use video_cards_i810; then
 		add_drivers i810 i830 i915
 	fi
@@ -134,6 +131,9 @@ src_unpack() {
 	fi
 	if use video_cards_sis; then
 		add_drivers sis
+	fi
+	if use video_cards_sunffb; then
+		add_drivers ffb
 	fi
 	if use video_cards_tdfx; then
 		add_drivers tdfx
