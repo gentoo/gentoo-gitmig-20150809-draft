@@ -1,0 +1,5 @@
+MD5 b083b797f557021322c4ddc6b5abd85d ChangeLog 541
+MD5 0d0cc2866b96f8d0b5b95c3433fc38cf asterisk-res_bonjour-1.0_rc1.ebuild 1026
+MD5 f9f54c3f5509ace2a2ffac089da4d5c0 files/digest-asterisk-res_bonjour-1.0_rc1 241
+MD5 034590c85bb581b5108f30b856ff0226 files/res_bonjour-1.0_rc1-astcfg.diff 814
+MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
