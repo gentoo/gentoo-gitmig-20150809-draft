@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/rox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.15 2006/02/17 16:45:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.16 2006/04/16 12:17:41 svyatogor Exp $
+
+*rox-2.4.1 (16 Apr 2006)
+
+  16 Apr 2006; Sergey Kuleshov <svyatogor@gentoo.org> +rox-2.4.1.ebuild:
+  New version of Rox. All credits go to Peter Hyman. Bug #115616
 
   17 Feb 2006; Simon Stelling <blubb@gentoo.org>
   -files/2.1.2-crash-save-display-settings.patch.bz2:
