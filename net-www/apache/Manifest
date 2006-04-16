@@ -52,9 +52,9 @@ SHA256 b9048c96a2f8103c755b9640fb25993eddbb3cf49134ea7703cea0d2a58c4f5e apache-2
 MD5 55f89417afabbd3e95fd74c2af364c4e apache-2.2.0-r1.ebuild 14076
 RMD160 0ab52a7488ed52f48c9ddf828682f3e1cf8e252c apache-2.2.0-r1.ebuild 14076
 SHA256 f0087fa3698f2059316416fa58f2b95a46a7a34dbd569c5d9bd9822b7e170a4c apache-2.2.0-r1.ebuild 14076
-MD5 70636a71786d5daf411d050e461e21e4 apache-2.2.0-r2.ebuild 14192
-RMD160 ab1c13eb465ec99bddf03a38b3c0c44c159e90cb apache-2.2.0-r2.ebuild 14192
-SHA256 04e43da67b4606fdaefef34eafeecce02fcfcc97dab09d9781af865923e08047 apache-2.2.0-r2.ebuild 14192
+MD5 fd50f9d277be79f925411420b090e199 apache-2.2.0-r2.ebuild 14262
+RMD160 00be577c6cd0ed6b1ddfb9759d4a66b4eca8735a apache-2.2.0-r2.ebuild 14262
+SHA256 750773b51487bbded24f8f4df9fb6618d36b48c54f5edd44eaf1bd943a5cbf2f apache-2.2.0-r2.ebuild 14262
 MD5 8b12871dd74fcd3f4fdf451c9d8c259e files/00_apache_manual.conf 781
 RMD160 d2e6224ca1621f7cf29c163c3c04e06aca7b7bde files/00_apache_manual.conf 781
 SHA256 068450680c6fec43b963360e0291f1e47cc1a1c0296efb46a0a4eb75eb891f4b files/00_apache_manual.conf 781
@@ -196,9 +196,9 @@ SHA256 51ab077ab1e2adca8a62417c09f3c8870e1cd52946db2e8279396ea75813e1d1 files/di
 MD5 658a784ac412b6489bad9d6522ad214c files/digest-apache-2.2.0-r1 536
 RMD160 250f73fa520dacab1f72303a2b78297311793c9b files/digest-apache-2.2.0-r1 536
 SHA256 33e99840918bb5d10d5d4ecf2368b3246cd91a640e0c9a094256e4025ca0425b files/digest-apache-2.2.0-r1 536
-MD5 48cbdc6490c43868f9e23b4b2f02f0e3 files/digest-apache-2.2.0-r2 536
-RMD160 cb22045888ae2e75df66de168adc075cef4426c5 files/digest-apache-2.2.0-r2 536
-SHA256 156b784dcf683dc705d27d9e498f57ad7d4f9bd0d9191dc648b04552297bb393 files/digest-apache-2.2.0-r2 536
+MD5 b7db57ee172c09170afffd74a77d3dbc files/digest-apache-2.2.0-r2 536
+RMD160 0bc246f9c4f2c1707c3f393ea1fa3baa2d140287 files/digest-apache-2.2.0-r2 536
+SHA256 da35bf941e330235aa37b4fffe5d32cb6c006f12f754ac7ee7955e171f51b6e3 files/digest-apache-2.2.0-r2 536
 MD5 b9ff3534313dae1b8ac96df0e3e01373 files/httpd-2.0.48-ipv6.patch 865
 RMD160 0309ce8d85fe499997a879205e4909e604599051 files/httpd-2.0.48-ipv6.patch 865
 SHA256 aba5ff0caafc53ac3cc391f1776ad3c49d44ca878ba81330e81578ab9dcaad67 files/httpd-2.0.48-ipv6.patch 865

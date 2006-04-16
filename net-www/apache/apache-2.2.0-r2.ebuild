@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r2.ebuild,v 1.5 2006/04/16 21:20:52 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r2.ebuild,v 1.6 2006/04/16 23:25:05 vericgar Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -394,17 +394,17 @@ pkg_postinst() {
 	# we do this here because the default webroot is a copy of the files
 	# that exist elsewhere and we don't want them managed/removed by portage
 	# when apache is upgraded.
-	if [ -e "/var/www/localhost" ]; then
+	if [ -e "${ROOT}/var/www/localhost" ]; then
 		einfo "The default webroot has not been installed into"
-		einfo "/var/www/localhost because the directory already exists"
+		einfo "${ROOT}/var/www/localhost because the directory already exists"
 		einfo "and we do not want to overwrite any files you have put there."
 		einfo
 		einfo "If you would like to install the latest webroot, please run"
 		einfo "emerge --config =${PF}"
 	else
-		einfo "Installing default webroot to /var/www/localhost"
-		cp -r /usr/share/doc/${PF}/webroot/* /var/www/localhost
-		chown -R apache: /var/www/localhost
+		einfo "Installing default webroot to ${ROOT}/var/www/localhost"
+		cp -r ${ROOT}/usr/share/doc/${PF}/webroot/* ${ROOT}/var/www/localhost
+		chown -R apache: ${ROOT}/var/www/localhost
 	fi
 
 	# Check for dual/upgrade install
@@ -439,9 +439,9 @@ pkg_postinst() {
 
 pkg_config() {
 
-	einfo "Installing default webroot to /var/www/localhost"
-	cp -r /usr/share/doc/${PF}/webroot/* /var/www/localhost
-	chown -R apache: /var/www/localhost
+	einfo "Installing default webroot to ${ROOT}/var/www/localhost"
+	cp -r ${ROOT}/usr/share/doc/${PF}/webroot/* ${ROOT}/var/www/localhost
+	chown -R apache: ${ROOT}/var/www/localhost
 
 }
 
