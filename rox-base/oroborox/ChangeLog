@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/oroborox
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.2 2005/11/19 18:07:18 svyatogor Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.3 2006/04/16 14:13:11 svyatogor Exp $
+
+  16 Apr 2006; Sergey Kuleshov <svyatogor@gentoo.org>
+  oroborox-0.9.7.9.ebuild:
+  fixed bug #124133 (CHOICESPATH should be unset)
 
 *oroborox-0.9.7.9 (19 Nov 2005)
 

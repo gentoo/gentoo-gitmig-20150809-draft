@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.7.9.ebuild,v 1.2 2005/11/19 19:30:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.7.9.ebuild,v 1.3 2006/04/16 14:13:11 svyatogor Exp $
 
 MY_PN="OroboROX"
 
@@ -25,6 +25,10 @@ SET_PERM=TRUE
 APPNAME=${MY_PN}
 
 inherit rox
+
+# OroboROX fails to build if CHOICESPATH is set to any path.
+# see bug #124133
+unset CHOICESPATH
 
 # Special processing to remove =build AND
 # to change perms for all AppRun statements
