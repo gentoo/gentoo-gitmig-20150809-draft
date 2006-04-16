@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.33.ebuild,v 1.1 2006/03/31 23:30:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.33.ebuild,v 1.2 2006/04/16 12:08:14 flameeyes Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="svga jpeg tiff png zlib"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b )
@@ -50,6 +50,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/netpbm-10.31-build.patch
 	epatch "${FILESDIR}"/netpbm-10.33-lib-objs.patch
+	epatch "${FILESDIR}/${P}-memmem.patch"
 
 	rm -f configure
 	cp Makefile.config.in Makefile.config
