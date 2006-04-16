@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10-r1.ebuild,v 1.3 2006/03/14 16:42:40 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10-r1.ebuild,v 1.4 2006/04/16 19:59:40 spock Exp $
 
 inherit eutils multilib linux-mod
 
@@ -93,6 +93,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/splashutils-1.1.9.10-ppc-2.6.14.patch
+	epatch ${FILESDIR}/splashutils-1.1.9.10-makefile.patch
 
 	# Check whether the kernel tree has been patched with fbsplash.
 	if [[ ! -e ${KV_DIR}/include/linux/console_splash.h ]]; then
