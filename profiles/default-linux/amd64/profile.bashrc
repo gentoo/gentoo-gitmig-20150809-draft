@@ -60,6 +60,10 @@ filter_invalid_flags() {
 	done
 }
 
+bashrc_has() {
+	[[ " ${*:2} " == *" $1 "* ]]
+}
+
 if [[ ${EBUILD_PHASE} == "setup" ]]; then
 
 	filter_invalid_flags
@@ -67,11 +71,11 @@ if [[ ${EBUILD_PHASE} == "setup" ]]; then
 	unset trigger
 
 	for flag in "${BAD_FLAGS[@]}"; do
-		if has ${flag} ${CFLAGS}; then
+		if bashrc_has ${flag} ${CFLAGS}; then
 			trigger=1
 			ewarn "Your CFLAGS contain(s) \"${flag}\" which can break packages."
 		fi
-		if has ${flag} ${CXXFLAGS}; then
+		if bashrc_has ${flag} ${CXXFLAGS}; then
 			trigger=1
 			ewarn "Your CXXFLAGS contain(s) \"${flag}\" which can break packages."
 		fi
