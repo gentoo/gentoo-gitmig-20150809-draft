@@ -1,0 +1,103 @@
+--- CMFPlone/MembershipTool.py (revision 5844)
++++ CMFPlone/MembershipTool.py (revision 9512)
+@@ -1,4 +1,4 @@
+-from Products.CMFCore.CMFCorePermissions import SetOwnPassword
+ from Products.CMFCore.utils import getToolByName
++from Products.CMFCore.utils import _checkPermission
+ from Products.CMFDefault.MembershipTool import MembershipTool as BaseTool
+ from Products.CMFPlone import ToolNames
+@@ -9,4 +9,7 @@
+ from Globals import InitializeClass
+ from Acquisition import aq_base, aq_parent, aq_inner
++from Products.CMFCore.CMFCorePermissions import ManagePortal
++from Products.CMFCore.CMFCorePermissions import SetOwnProperties
++from Products.CMFCore.CMFCorePermissions import SetOwnPassword
+ from Products.CMFCore.CMFCorePermissions import View
+ from Products.CMFPlone.PloneBaseTool import PloneBaseTool
+@@ -40,4 +43,5 @@
+     security.declareProtected(View, 'getPortalRoles')
+ 
++    security.declarePublic('getAuthenticatedMember')
+     def getAuthenticatedMember(self):
+         """ """
+@@ -52,4 +56,5 @@
+         return _user
+ 
++    security.declarePublic('getPersonalPortrait')
+     def getPersonalPortrait(self, member_id = None, verifyPermission=0):
+         """
+@@ -58,7 +63,4 @@
+         membertool   = getToolByName(self, 'portal_memberdata')
+ 
+-        # what are we doing with that
+-        #if verifyPermission and not _checkPermission('View', portrait):
+-        #    return None
+         if not member_id:
+             member_id = self.getAuthenticatedMember().getUserName()
+@@ -67,5 +69,8 @@
+         if type(portrait) == type(''):
+             portrait = None
+-        #portrait = None
++        if portrait is not None:
++            if verifyPermission and not _checkPermission(View, portrait):
++                # Don't return the portrait if the user can't get to it
++                portrait = None
+         if portrait is None:
+             portal = getToolByName(self, 'portal_url').getPortalObject()
+@@ -74,4 +79,5 @@
+         return portrait
+ 
++    security.declareProtected(SetOwnProperties, 'deletePersonalPortrait')
+     def deletePersonalPortrait(self, member_id = None):
+         """
+@@ -85,4 +91,5 @@
+         membertool._deletePortrait(member_id)
+ 
++    security.declarePublic('getPersonalFolder')
+     def getPersonalFolder(self, member_id=None):
+         """
+@@ -98,4 +105,5 @@
+         return personal
+ 
++    security.declareProtected(SetOwnProperties, 'changeMemberPortrait')
+     def changeMemberPortrait(self, portrait, member_id=None):
+         """
+@@ -112,4 +120,5 @@
+             membertool._setPortrait(portrait, member_id)
+ 
++    security.declarePublic('createMemberarea')
+     def createMemberarea(self, member_id=None, minimal=0):
+         """
+@@ -242,4 +251,5 @@
+     createMemberArea = createMemberarea
+ 
++    security.declareProtected(ManagePortal, 'listMembers')
+     def listMembers(self):
+         '''Gets the list of all members.
+@@ -251,4 +261,5 @@
+             return BaseTool.listMembers(self)
+ 
++    security.declareProtected(ManagePortal, 'listMemberIds')
+     def listMemberIds(self):
+         '''Lists the ids of all members.  This may eventually be
+@@ -263,5 +274,5 @@
+ 
+     # this should probably be in MemberDataTool.py
+-    #security.declarePublic( 'searchForMembers' )
++    security.declarePublic('searchForMembers')
+     def searchForMembers( self, REQUEST=None, **kw ):
+         """ """
+@@ -319,10 +330,10 @@
+         return res
+ 
+-    def testCurrentPassword(self, password, username=None):
++    security.declareProtected(SetOwnPassword, 'testCurrentPassword')
++    def testCurrentPassword(self, password):
+         """ test to see if password is current """
+         portal=getToolByName(self, 'portal_url').getPortalObject()
+         REQUEST=getattr(self, 'REQUEST', {})
+-        if username is None:
+-            username=self.getAuthenticatedMember().getUserName()
++        username=self.getAuthenticatedMember().getUserName()
+         acl_users = self._findUsersAclHome(username)
+         if not acl_users:
