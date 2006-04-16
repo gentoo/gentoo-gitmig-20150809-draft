@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.81 2006/04/16 20:01:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.82 2006/04/16 20:02:31 spyderous Exp $
+
+  16 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; mesa-6.5-r2.ebuild:
+  Append -fno-strict-aliasing, many drivers have issues.
 
   16 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; mesa-6.5-r2.ebuild:
   Alphabetize ordering of drivers for easier parsing.
