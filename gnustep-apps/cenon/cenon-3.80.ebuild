@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/cenon-3.80.ebuild,v 1.1 2006/03/26 13:39:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/cenon-3.80.ebuild,v 1.2 2006/04/16 09:15:28 grobian Exp $
 
 inherit gnustep
 
@@ -16,5 +16,10 @@ LICENSE="Cenon"
 DEPEND="${GS_DEPEND}"
 RDEPEND="${GS_RDEPEND}
 	>=gnustep-libs/cenonlibrary-3.80"
+
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}/${P}"-install.patch
+}
 
 egnustep_install_domain "Local"

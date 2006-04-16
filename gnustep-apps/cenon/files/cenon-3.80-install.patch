@@ -1,0 +1,12 @@
+--- Cenon/GNUmakefile.postamble
++++ Cenon/GNUmakefile.postamble
+@@ -21,7 +21,8 @@
+ after-install::
+ 	# copy library
+ 	#rm -R $(GNUSTEP_INSTALLATION_DIR)/Library/$(APP_NAME)
+-	cp -R Library/$(APP_NAME)/ $(GNUSTEP_INSTALLATION_DIR)/Library/
++	mkdir -p $(GNUSTEP_INSTALLATION_DIR)/Library
++	cp -R Library/$(APP_NAME) $(GNUSTEP_INSTALLATION_DIR)/Library/
+ 	# set permissions (rrr)
+ 	chmod -R ugo+rX $(GNUSTEP_APPS)/$(APP_NAME).*
+ 	#chmod -R ugo+rX $(GNUSTEP_INSTALLATION_DIR)/Library/$(APP_NAME)

@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-apps/cenon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.1 2006/03/26 13:39:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.2 2006/04/16 09:15:28 grobian Exp $
+
+  16 Apr 2006; Fabian Groffen <grobian@gentoo.org>
+  +files/cenon-3.80-install.patch, cenon-3.80.ebuild:
+  Fix a building issue with latest GNUmake as reported by Jouni Rinne (bug
+  #130125)
 
 *cenon-3.80 (26 Mar 2006)
 
