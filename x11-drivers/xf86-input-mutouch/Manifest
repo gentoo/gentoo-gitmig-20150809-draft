@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c6cb454942df999154efe316fe0db3d1 ChangeLog 2766
 RMD160 ac6f9427eb25972bf2431f44ba9e919218bfc6fa ChangeLog 2766
 SHA256 79b483611b7bcdece9a2b8de0e2fb5b341515604fb7c7dfc9f976fb6579e7e85 ChangeLog 2766
@@ -16,3 +19,10 @@ SHA256 61a1dbfc9f8d286b7ddb59db1498fbde83760c90bd71e3216bd94622b65d787f xf86-inp
 MD5 a5deaf7b7bcdf63d7ebdc2ea6c0f9e9a xf86-input-mutouch-1.1.0.ebuild 580
 RMD160 714b8ce21445539b159afcbf6e8c1ecd4420a272 xf86-input-mutouch-1.1.0.ebuild 580
 SHA256 6f72d99ec0f94dc49677f6eae7b2bcf3d4e54f62217c70ef33422b1172eae712 xf86-input-mutouch-1.1.0.ebuild 580
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQj7BAiZjviIA2XgRAn0FAJ9zJ8XahwFylXqemKZuvt7QGoXQxgCglfLx
+8J6Yh0PlaAsPwX+1w/luVnk=
+=7J8w
+-----END PGP SIGNATURE-----
