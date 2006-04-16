@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.6-r2.ebuild,v 1.15 2005/10/21 14:15:53 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.6-r2.ebuild,v 1.16 2006/04/16 22:12:00 vericgar Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 
 	cd ${S} || die
 
-	epatch "${FILESDIR}/apr-util-0.9.x-161086:161087.patch" \
+	epatch "${FILESDIR}/apr-util-0.9.x-161086-161087.patch" \
 		|| die "patching failed"
 }
 
