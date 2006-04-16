@@ -1,4 +1,4 @@
-MD5 d5a4668a19536cb96c45533290e8c698 ChangeLog 21510
+MD5 aebbb80012ae2a29466b34b9733b0f8f ChangeLog 22006
 MD5 5331ab3504762b397113ab2996b7ba61 asterisk-1.0.10-r1.ebuild 14665
 MD5 5a641e52c52eded4766e31c8520fe83b asterisk-1.0.7-r2.ebuild 13672
 MD5 f47f423dec3c8c0aaca9c4f117a8c5fc asterisk-1.0.7-r3.ebuild 13676
@@ -8,6 +8,7 @@ MD5 d334b99433aa96e3eaf99bc98bc073e8 asterisk-1.0.9-r3.ebuild 13841
 MD5 ccf3f74b0df577c747f8f1c51846f3e2 asterisk-1.2.0.ebuild 8468
 MD5 725495d05db613d568e01624e2bc9736 asterisk-1.2.1.ebuild 9907
 MD5 84defab07755ef90b4693969d1028e24 asterisk-1.2.4.ebuild 10133
+MD5 09d2b6905923ef8beadadb6fc592d62c asterisk-1.2.7_p1.ebuild 13073
 MD5 88e8cfc364e9767f104159b374eb5bea files/1.0.0/asterisk-1.0.10-misdn.patch 607
 MD5 e53fcb073e317364213099fe6a00b7b9 files/1.0.0/asterisk-1.0.10-vmail.cgi.patch 9038
 MD5 27bf961621fb1f521bc11293df8b5ec9 files/1.0.0/asterisk-1.0.10-weak-references.diff 8579
@@ -34,6 +35,9 @@ MD5 fe0af9ff2c4dea24a7c1d62754dee092 files/1.0.0/asterisk.rc6.sec 1230
 MD5 ab552fbbe803766b5291d61942dbcd9f files/1.0.0/res_perl-1.0.7-bristuff-0.2.0.diff 860
 MD5 3932983fb155e026eb10533425174f59 files/1.2.0/asterisk-1.2.0_beta-ukcid.patch 5787
 MD5 18c24f2fcea3594b683d1c23643ad7b1 files/1.2.0/asterisk-1.2.1-uclibc-getloadavg.diff 317
+MD5 08c434a101bdfe7f558d1ef67c3336a9 files/1.2.0/asterisk-updater 2871
+MD5 1c243de2cb0b294af772955e7244dbc4 files/1.2.0/asterisk.confd 2200
+MD5 f1da7c89617ab1b859b6b87d69f729fc files/1.2.0/asterisk.rc6 5569
 MD5 c4df1f7c307b1ed6df4b93df7c307e51 files/digest-asterisk-1.0.10-r1 771
 MD5 48a3518349e2abfe20fa918a9db5eea2 files/digest-asterisk-1.0.7-r2 210
 MD5 225681e768dff47ab88ef2cec2e4bac8 files/digest-asterisk-1.0.7-r3 768
@@ -43,4 +47,5 @@ MD5 e9e9701fad77824bcfdff1f02b9634e3 files/digest-asterisk-1.0.9-r3 768
 MD5 770c431ec679210d12c9e486a2fc2e92 files/digest-asterisk-1.2.0 217
 MD5 a129c7144790bae1af36d42252618118 files/digest-asterisk-1.2.1 306
 MD5 f69ef36e0e37920142654d01e205cf28 files/digest-asterisk-1.2.4 306
+MD5 03e2e55422979c602afee0c184679bba files/digest-asterisk-1.2.7_p1 1421
 MD5 488aea6fbdb7537394cc049b0ff9e5d5 metadata.xml 384

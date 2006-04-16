@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.107 2006/03/13 21:53:22 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.108 2006/04/16 01:04:44 stkn Exp $
+
+*asterisk-1.2.7_p1 (16 Apr 2006)
+
+  16 Apr 2006; Stefan Knoblich <stkn@gentoo.org>
+  +files/1.2.0/asterisk.confd, +files/1.2.0/asterisk.rc6,
+  +files/1.2.0/asterisk-updater, +asterisk-1.2.7_p1.ebuild:
+  New version, add experimental generic jitter buffer patch (use at your own
+  risk), cleanups, add asterisk-updater script and check for asterisk-1.0.x
+  modules after update, initgroups patch has been dropped (update your conf.d
+  and init.d files!), add work-in-progress wrapper initscript.
 
   13 Mar 2006; Stefan Knoblich <stkn@gentoo.org> asterisk-1.2.4.ebuild:
   Getloadavg fix for uclibc is still necessary for >=asterisk-1.2.4 (jaervosz++).
