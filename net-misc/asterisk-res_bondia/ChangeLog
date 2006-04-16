@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-res_bondia
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-res_bondia/ChangeLog,v 1.1 2005/09/04 22:07:09 stkn Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-res_bondia/ChangeLog,v 1.2 2006/04/16 14:48:28 stkn Exp $
+
+  16 Apr 2006; Stefan Knoblich <stkn@gentoo.org>
+  asterisk-res_bondia-0.9.ebuild:
+  Does not work with asterisk-1.2, block unsupported versions in DEPEND.
 
 *asterisk-res_bondia-0.9 (05 Sep 2005)
 

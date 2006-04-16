@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-res_bondia/asterisk-res_bondia-0.9.ebuild,v 1.1 2005/09/04 22:07:09 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-res_bondia/asterisk-res_bondia-0.9.ebuild,v 1.2 2006/04/16 14:48:28 stkn Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND="net-misc/mDNSResponder
-	>=net-misc/asterisk-1.0.7-r1"
+	>=net-misc/asterisk-1.0.7-r1
+	!>=net-misc/asterisk-1.2.0"
 
 S=${WORKDIR}/${MY_PN}
 
