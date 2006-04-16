@@ -1,4 +1,4 @@
-MD5 039978421a1dbedb79a48ef58c802460 ChangeLog 13486
+MD5 e729eec152fb24afc800f24541a895ef ChangeLog 13603
 MD5 5d92c84f7e556e1552efc5531483a727 files/digest-zaptel-1.0.10 136
 MD5 9be11ef13f32ceaffef87920fe47a93e files/digest-zaptel-1.0.7-r1 212
 MD5 f46e4409c0bb701f8a6214e793de72a2 files/digest-zaptel-1.0.8 212
@@ -6,6 +6,7 @@ MD5 69d0c3831715ccac6422b13a99fc6557 files/digest-zaptel-1.0.9_p2 214
 MD5 f574df759efe80013bc3e7fa04d95232 files/digest-zaptel-1.2.0 136
 MD5 a43d347e67130e0ab4f15e17b34c8ba0 files/digest-zaptel-1.2.1 216
 MD5 cd2c0020b56060f6ba55d0b9a2d04a00 files/digest-zaptel-1.2.3 217
+MD5 da865311bc3aaa4dc53c3cc0e79a6017 files/digest-zaptel-1.2.5 789
 MD5 24ffa9ff867ef807083a53f61465fe02 files/zaptel-1.0.10-devfs26.diff 6026
 MD5 64804093a66dad967c34de55d3f0633a files/zaptel-1.0.10-gentoo.diff 5489
 MD5 699723eb0b0ad059702af4fc4de7bf95 files/zaptel-1.0.10-ukcid.patch 3787
@@ -37,3 +38,4 @@ MD5 f0c8a8a514efa543a36618d72d4ade3d zaptel-1.0.9_p2.ebuild 6641
 MD5 a170d2a6dba63bc4de86eb9766c8d8f3 zaptel-1.2.0.ebuild 9102
 MD5 5f7d588d0581d344b87cc078bf54af1f zaptel-1.2.1.ebuild 9125
 MD5 41f515d16e0e167a57019df913cef4f4 zaptel-1.2.3.ebuild 9247
+MD5 8aa98093c199df2bc70cca0d5420a48a zaptel-1.2.5.ebuild 9221
