@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.0.0-r1.ebuild,v 1.1 2006/04/15 00:05:28 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.0.0-r1.ebuild,v 1.2 2006/04/16 11:16:36 sbriesen Exp $
 
 inherit eutils multilib toolchain-funcs autotools rpm
 
@@ -122,7 +122,7 @@ pkg_setup() {
 				for i in ${BIN_GCC34}; do MY_A="${MY_A} ${i##*/}"; done
 			fi
 			;;
-		3.4|4.[01])  # 4.x seems to work (tested with Perfection 3490 PHOTO)
+		3.4|4.[012])  # 4.x seems to work (tested with Perfection 3490 PHOTO)
 			MY_A="${SRC_GCC34##*/}"
 			for i in ${BIN_GCC34}; do MY_A="${MY_A} ${i##*/}"; done
 			;;

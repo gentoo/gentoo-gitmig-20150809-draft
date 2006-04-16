@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.6 2006/04/15 00:07:28 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.7 2006/04/16 11:16:36 sbriesen Exp $
+
+  16 Apr 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  iscan-2.0.0-r1.ebuild:
+  added GCC 4.2 support (see bug #130118).
 
   15 Apr 2006; Stefan Briesenick <sbriesen@gentoo.org> -iscan-2.0.0.ebuild:
   remove buggy revision.
