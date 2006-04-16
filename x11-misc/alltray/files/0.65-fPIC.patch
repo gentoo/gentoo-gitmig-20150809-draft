@@ -1,0 +1,14 @@
+diff -Nur alltray-0.65.orig/acinclude.m4 alltray-0.65/acinclude.m4
+--- alltray-0.65.orig/acinclude.m4	2005-09-23 23:27:43.000000000 +0000
++++ alltray-0.65/acinclude.m4	2006-04-16 09:54:40.192977750 +0000
+@@ -34,8 +34,8 @@
+ _HAVE_LD_PRELOAD=no
+ 
+ if AC_TRY_COMMAND($CC -c ./ld_preload.c); then
+- if AC_TRY_COMMAND($CC -shared -o ./ld_preload_lib1.so ./ld_preload_lib1.c); then
+-  if AC_TRY_COMMAND($CC -shared -o ./ld_preload_lib2.so ./ld_preload_lib2.c); then
++ if AC_TRY_COMMAND($CC -shared -fPIC -o ./ld_preload_lib1.so ./ld_preload_lib1.c); then
++  if AC_TRY_COMMAND($CC -shared -fPIC -o ./ld_preload_lib2.so ./ld_preload_lib2.c); then
+    if AC_TRY_COMMAND($CC $CFLAGS $CPPFLAGS -o conftest ./ld_preload.o ./ld_preload_lib1.so); then
+     LD_PRELOAD=./ld_preload_lib2.so; export LD_PRELOAD
+     if ./conftest; then
