@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1848 2006/04/16 20:28:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1849 2006/04/16 20:29:20 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1555,17 +1555,17 @@ x11-base/kdrive:font-server - Enables font server support
 x11-base/kdrive:speedo - Enables Speedo font support
 x11-base/kdrive:type1 - Enables Type1 font support
 x11-base/x11-drm:gatos - Installs DRM built to work alongside GATOS features
-x11-base/x11-drm:video_cards_i810 - VIDEO_CARDS setting to build driver for video_cards_i810 cards
-x11-base/x11-drm:video_cards_mach64 - VIDEO_CARDS setting to build driver for video_cards_mach64 cards
-x11-base/x11-drm:video_cards_mga - VIDEO_CARDS setting to build driver for video_cards_mga cards
-x11-base/x11-drm:video_cards_nv - VIDEO_CARDS setting to build driver for video_cards_nv cards
-x11-base/x11-drm:video_cards_r128 - VIDEO_CARDS setting to build driver for video_cards_r128 cards
-x11-base/x11-drm:video_cards_radeon - VIDEO_CARDS setting to build driver for video_cards_radeon cards
-x11-base/x11-drm:video_cards_sis - VIDEO_CARDS setting to build driver for video_cards_sis cards
-x11-base/x11-drm:video_cards_savage - VIDEO_CARDS setting to build driver for video_cards_savage cards
-x11-base/x11-drm:video_cards_sunffb - VIDEO_CARDS setting to build driver for video_cards_ffb cards
-x11-base/x11-drm:video_cards_tdfx - VIDEO_CARDS setting to build driver for video_cards_3dfx cards
-x11-base/x11-drm:video_cards_via - VIDEO_CARDS setting to build driver for video_cards_via" cards
+x11-base/x11-drm:video_cards_i810 - VIDEO_CARDS setting to build driver for i810 cards
+x11-base/x11-drm:video_cards_mach64 - VIDEO_CARDS setting to build driver for mach64 cards
+x11-base/x11-drm:video_cards_mga - VIDEO_CARDS setting to build driver for mga cards
+x11-base/x11-drm:video_cards_nv - VIDEO_CARDS setting to build driver for nv cards
+x11-base/x11-drm:video_cards_r128 - VIDEO_CARDS setting to build driver for r128 cards
+x11-base/x11-drm:video_cards_radeon - VIDEO_CARDS setting to build driver for radeon cards
+x11-base/x11-drm:video_cards_sis - VIDEO_CARDS setting to build driver for sis cards
+x11-base/x11-drm:video_cards_savage - VIDEO_CARDS setting to build driver for savage cards
+x11-base/x11-drm:video_cards_sunffb - VIDEO_CARDS setting to build driver for ffb cards
+x11-base/x11-drm:video_cards_tdfx - VIDEO_CARDS setting to build driver for 3dfx cards
+x11-base/x11-drm:video_cards_via - VIDEO_CARDS setting to build driver for via" cards
 x11-base/xorg-server:glx - Enable OpenGL extension for X
 x11-base/xorg-server:nvidia - Enable binary Nvidia driver support
 x11-base/xorg-x11:bitmap-fonts - Builds the crappy 100 DPI and 75 DPI fonts
