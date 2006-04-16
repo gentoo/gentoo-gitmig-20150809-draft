@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libtlen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/ChangeLog,v 1.8 2006/04/15 21:56:02 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/ChangeLog,v 1.9 2006/04/16 07:09:54 spock Exp $
+
+  16 Apr 2006; Michał Januszewski <spock@gentoo.org>
+  libtlen-20060309.ebuild:
+  Fixed fPIC patch name (for amd64).
 
 *libtlen-20060309 (15 Apr 2006)
 
