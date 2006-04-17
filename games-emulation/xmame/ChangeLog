@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.64 2006/03/26 08:44:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.65 2006/04/17 08:52:58 mr_bones_ Exp $
+
+*xmame-0.105 (17 Apr 2006)
+
+  17 Apr 2006; Michael Sterrett <mr_bones_@gentoo.org> +xmame-0.105.ebuild:
+  version bump
 
   26 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.104.ebuild:
   check for existence of utilities before installing them (bug #127601)
