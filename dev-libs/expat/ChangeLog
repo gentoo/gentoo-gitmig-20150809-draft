@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.52 2006/04/12 22:14:26 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.53 2006/04/17 21:33:48 exg Exp $
+
+  17 Apr 2006; Emanuele Giaquinta <exg@gentoo.org>
+  files/expat-2.0.0-test-64bit.patch, +files/expat-2.0.0-test-cpp.patch,
+  expat-2.0.0.ebuild:
+  Add patch to fix bug #128143 (thanks Flameeyes) and to add missing
+  definition for CXX in Makefile.in; use elibtoolize again since the
+  bundled ltmain.sh behaves correctly now.
 
   12 Apr 2006; Emanuele Giaquinta <exg@gentoo.org>
   +files/expat-2.0.0-test-64bit.patch, expat-2.0.0.ebuild:
