@@ -298,6 +298,31 @@ LABEL="persistent_end"
 SUBSYSTEM=="usb_device", PROGRAM="/bin/sh -c 'K=%k; K=$${K#usbdev}; printf bus/usb/%%03i/%%03i $${K%%%%.*} $${K#*.}'", NAME="%c", MODE="0644"
 
 
+# Module autoloading
+
+# Autoload modules that lack aliases but have them defined inutoload modules
+SYSFS{modalias}=="?*", ACTION=="add", RUN+="/sbin/modprobe $env{MODALIAS}"
+
+# /etc/modprobe.conf.
+SUBSYSTEM=="pnp", ENV{MODALIAS}!="?*", RUN+="/bin/sh -c 'while read id; do /sbin/modprobe pnp:d$$id; done < /sys$devpath/id'"
+# If you have problems with some pnp modules being loaded, please enter the
+# following aliases into the modprobe configuration files.  These are needed by
+# udev to autoload some modules
+# alias pnp:dPNP0510 irtty-sir
+# alias pnp:dPNP0511 irtty-sir
+# alias pnp:dPNP0700 floppy
+# alias pnp:dPNP0800 pcspkr
+# alias pnp:dPNP0b00 rtc
+# alias pnp:dPNP0303 atkbd
+# alias pnp:dPNP0f13 psmouse
+# alias pnp:dPNPb02f analog
+
+
+
+# Load firmware (not quite yet...)
+# SUBSYSTEM=="firmware", ACTION=="add", RUN+="/lib/udev/firmware_helper"
+
+
 # be backward compatible for a while with the /etc/dev.d and /etc/hotplug.d/ systems
 # run /etc/hotplug.d/ stuff only if we came from a hotplug event, not for udevstart
 ENV{UDEVD_EVENT}=="1", RUN+="/sbin/udev_run_hotplugd $env{SUBSYSTEM}"

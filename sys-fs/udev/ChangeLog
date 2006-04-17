@@ -1,6 +1,20 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.192 2006/04/16 22:30:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.193 2006/04/17 16:25:39 gregkh Exp $
+
+*udev-090 (17 Apr 2006)
+
+  17 Apr 2006; Greg Kroah-Hartman <gregkh@gentoo.org> files/udev.rules-089,
+  +files/udev-start-090.sh, +udev-090.ebuild:
+  090 udev release.
+  Lots of little bug fixes from 089.
+  pnp modules should now be autoloaded (if not, please read comments
+  in the 050-udev.rules file in the /etc/udev/rules/ directory on what
+  you need to add to the modules.conf file).
+  "safer" ebuild now, we do error checking and warn about coldplug
+  still being present on the box.
+  We also create device nodes directly on the root fs, not in /var
+  to help those who mount /var -nodev.
 
   16 Apr 2006; Michael Hanselmann <hansmi@gentoo.org> udev-087.ebuild:
   Stable on ppc.
