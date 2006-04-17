@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.19 2006/02/03 13:39:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.20 2006/04/17 10:42:11 flameeyes Exp $
+
+  17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  nvidia-settings-1.0.20051122-r3.ebuild:
+  Accept nvidia-freebsd in alternative to nvidia-kernel package.
 
   03 Feb 2006; Simon Stelling <blubb@gentoo.org> +files/libXNVCtrl.a,
   -files/libXNVCtrl.a.bz2, nvidia-settings-1.0.6111.ebuild,
