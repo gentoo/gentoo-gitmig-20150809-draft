@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.20 2006/04/16 20:24:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.21 2006/04/17 10:58:56 flameeyes Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://xorg.freedesktop.org"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE_INPUT_DEVICES="
 	input_devices_acecad
 	input_devices_aiptek
@@ -185,7 +185,6 @@ RDEPEND="${RDEPEND}
 			)
 			(
 				x11-drivers/xf86-input-acecad
-				x11-drivers/xf86-input-aiptek
 				x11-drivers/xf86-input-calcomp
 				x11-drivers/xf86-input-citron
 				x11-drivers/xf86-input-digitaledge
@@ -193,7 +192,6 @@ RDEPEND="${RDEPEND}
 				x11-drivers/xf86-input-dynapro
 				x11-drivers/xf86-input-elo2300
 				x11-drivers/xf86-input-elographics
-				x11-drivers/xf86-input-evdev
 				x11-drivers/xf86-input-fpit
 				x11-drivers/xf86-input-hyperpen
 				x11-drivers/xf86-input-jamstudio
@@ -209,13 +207,19 @@ RDEPEND="${RDEPEND}
 				x11-drivers/xf86-input-spaceorb
 				x11-drivers/xf86-input-summa
 				x11-drivers/xf86-input-tek4957
-				x11-drivers/xf86-input-ur98
 				x11-drivers/xf86-input-void
+
+				kernel_linux? (
+					x11-drivers/xf86-input-aiptek
+					x11-drivers/xf86-input-evdev
+					x11-drivers/xf86-input-ur98
+				)
 
 				x86? ( x11-drivers/xf86-input-vmmouse
 					x11-drivers/synaptics
 					x11-misc/linuxwacom
 				)
+				x86-fbsd? ( x11-drivers/xf86-input-vmmouse )
 				amd64? ( x11-drivers/xf86-input-vmmouse
 					x11-drivers/synaptics
 					x11-misc/linuxwacom
@@ -289,7 +293,8 @@ RDEPEND="${RDEPEND}
 					x11-drivers/xf86-video-mga
 
 					x11-drivers/xf86-video-sisusb
-					x11-drivers/xf86-video-v4l )
+					kernel_linux? ( x11-drivers/xf86-video-v4l )
+				)
 
 				3dfx? ( >=media-libs/glide-v3-3.10 )
 
@@ -434,6 +439,8 @@ RDEPEND="${RDEPEND}
 					x11-drivers/xf86-video-via
 					x11-drivers/xf86-video-vmware
 					x11-drivers/xf86-video-voodoo )
+				x86-fbsd? (
+					x11-drivers/xf86-video-vmware )
 			)
 		)"
 

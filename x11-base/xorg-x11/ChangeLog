@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.532 2006/04/16 20:24:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.533 2006/04/17 10:58:56 flameeyes Exp $
+
+  17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> xorg-x11-7.0-r1.ebuild:
+  Mark ~x86-fbsd and put under conditional the drivers that requires Linux
+  kernel.
 
   16 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-7.0-r1.ebuild:
