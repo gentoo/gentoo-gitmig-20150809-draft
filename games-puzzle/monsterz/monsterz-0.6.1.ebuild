@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/monsterz-0.6.1.ebuild,v 1.2 2005/10/30 18:11:50 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/monsterz-0.6.1.ebuild,v 1.3 2006/04/17 13:12:40 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -16,10 +16,10 @@ IUSE=""
 DEPEND="dev-python/pygame"
 
 pkg_setup() {
+	games_pkg_setup
 	if ! built_with_use media-libs/sdl-mixer mikmod ; then
 		die "${PN} requires that media-libs/sdl-mixer be built with USE=mikmod"
 	fi
-	games_pkg_setup
 }
 
 src_unpack() {
