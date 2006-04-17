@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-sky
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sky/ChangeLog,v 1.1 2006/03/21 14:25:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sky/ChangeLog,v 1.2 2006/04/17 17:01:50 zzam Exp $
+
+*vdr-sky-0.3.5 (17 Apr 2006)
+
+  17 Apr 2006; Matthias Schwarzott <zzam@gentoo.org> +vdr-sky-0.3.5.ebuild:
+  Version bumped.
 
 *vdr-sky-0.3.4 (21 Mar 2006)
 
