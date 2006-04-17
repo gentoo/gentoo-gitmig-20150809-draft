@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r30.ebuild,v 1.4 2005/09/23 04:36:51 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r30.ebuild,v 1.5 2006/04/17 16:19:12 vericgar Exp $
 
 inherit eutils gnuconfig
 
@@ -21,8 +21,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="apache2 debug doc ldap mpm-leader mpm-peruser mpm-prefork mpm-threadpool mpm-worker no-suexec ssl static-modules threads selinux"
 
 RDEPEND="dev-lang/perl
-	~dev-libs/apr-0.9.6
-	~dev-libs/apr-util-0.9.6
+	|| ( ~dev-libs/apr-0.9.12 ~dev-libs/apr-0.9.7 ~dev-libs/apr-0.9.6 )
+	|| ( ~dev-libs/apr-util-0.9.12 ~dev-libs/apr-util-0.9.7 ~dev-libs/apr-0.9.6 )
 	dev-libs/expat
 	net-www/gentoo-webroot-default
 	app-misc/mime-types
