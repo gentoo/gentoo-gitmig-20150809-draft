@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/extensions
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/extensions/ChangeLog,v 1.2 2006/03/30 03:27:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/extensions/ChangeLog,v 1.3 2006/04/17 23:43:38 caleb Exp $
+
+  17 Apr 2006; Caleb Tennis <caleb@gentoo.org> extensions-0.6.0.ebuild:
+  x86 stable
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> extensions-0.6.0.ebuild:
   Mark 0.6.0 ~ia64
