@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.1.19317-r2.ebuild,v 1.1 2006/03/30 23:29:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.1.19317-r3.ebuild,v 1.1 2006/04/17 14:04:03 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -9,7 +9,7 @@
 inherit eutils
 
 S=${WORKDIR}/vmware-player-distrib
-ANY_ANY="vmware-any-any-update99"
+ANY_ANY="vmware-any-any-update101"
 NP="VMware-player-1.0.1-19317"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/player/"
