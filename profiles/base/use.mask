@@ -43,3 +43,4 @@ elibc_NetBSD
 elibc_OpenBSD
 elibc_Darwin
 elibc_DragonFly
+kernel_FreeBSD
