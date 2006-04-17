@@ -1,19 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c89f16721d8b0101dbd3e959c092c8db ChangeLog 589
+MD5 04a727778aac133ddc5fbba1e748865c ChangeLog 717
+RMD160 57c47892fc29ed787b4be5ef432f5439e859669b ChangeLog 717
+SHA256 04c52e8f0142f2e96b0e6c3544587d6557f22504fc56c7f720fc1293dd1bd1c8 ChangeLog 717
 MD5 9e9f28f1db0fc474d6b6031552a37292 files/confd 438
+RMD160 03278d125bc7383855b829452e1821f118b9787e files/confd 438
+SHA256 8e1ffbe3e2bba72f7aed1799bd15b5b55220f6a68ce2d2da5274add699e8703c files/confd 438
 MD5 a661530dbfd06339933c307f5c91fb03 files/digest-vdr-dvdswitch-0.1.0 71
+RMD160 2c5317d65e8d9bbc1a0052684e2101c4ce9b1116 files/digest-vdr-dvdswitch-0.1.0 71
+SHA256 69e28dc96bc22b436e0ebd609366b4bd7b9812ff62b91895bb936d5da8f0812c files/digest-vdr-dvdswitch-0.1.0 71
 MD5 40387ecf98a6e56e7deb50ae3fe95b7c files/digest-vdr-dvdswitch-0.1.1 71
+RMD160 a4bbcbe6eba6a2f6fe443c36c5197d936c39de86 files/digest-vdr-dvdswitch-0.1.1 71
+SHA256 7664285b9167b9ae8f0de05e04ead48cd9b923319df6734e61814840dcacb32d files/digest-vdr-dvdswitch-0.1.1 71
 MD5 520f0be6e94ea65d198e5acb33f76ff5 files/rc-addon.sh 405
+RMD160 042e18888e4b4006e85fa7980e66d6caebe4357c files/rc-addon.sh 405
+SHA256 a40cf7d111a4eca1d3423d53b625554365174537487e045b1cd3ca7e9ba85776 files/rc-addon.sh 405
 MD5 2b547c9031a9710165a2be3ad3393292 metadata.xml 451
-MD5 085629b2f1d6529780084fbda75959a6 vdr-dvdswitch-0.1.0.ebuild 795
-MD5 48d87dc2ea8d1e3ae22728572f439d9e vdr-dvdswitch-0.1.1.ebuild 795
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-Comment: no further Information
-
-iD8DBQFEEevvdn07HTTCgIoRAq1eAJwNwXOntSBERoz2xH/asHO67klzVACcD9NQ
-a3a6YQfbdZviXSIUsIqu4pM=
-=kOt3
------END PGP SIGNATURE-----
+RMD160 789a409a64104d7f5cf6aa5359b8c3cbe9da5a57 metadata.xml 451
+SHA256 b19c3a400e96fc9f9644d4d8f60c7cd6039f96f1e1c3fef2e7eef5eea088b32c metadata.xml 451
+MD5 87817923e8541ee9aebb79fba1b4114c vdr-dvdswitch-0.1.0.ebuild 799
+RMD160 c09f7c19bdb1a3a42856e1fc41a91edae2478286 vdr-dvdswitch-0.1.0.ebuild 799
+SHA256 7bd0b448804ddd0765dd207c9e5b94a69efd1085e27d1515820390ab51f35b28 vdr-dvdswitch-0.1.0.ebuild 799
+MD5 148b568f92e5e2f48f2e7403230c2fd8 vdr-dvdswitch-0.1.1.ebuild 799
+RMD160 91aedd1d02b60dca70211853cf1250c56771f79f vdr-dvdswitch-0.1.1.ebuild 799
+SHA256 d4904ae03804853e31771e546dd54cabb1c26bf8b9ef300b2c3a566cc72d1686 vdr-dvdswitch-0.1.1.ebuild 799

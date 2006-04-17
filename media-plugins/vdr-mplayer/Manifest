@@ -1,7 +1,31 @@
-MD5 0f990562f98e279e7953ddc0309b35e2 ChangeLog 501
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0b98a831345b70eec865b59dda02e944 ChangeLog 630
+RMD160 d1c68d75da4ab4f3a14e79260e40634334b14e9d ChangeLog 630
+SHA256 c2527c41e93bd6e772d86a4710c2ef0ad0b6b1dfb5e6363088b8a536a84c80b2 ChangeLog 630
 MD5 b7de4186db3fbb5635de8bb610ac00f3 files/digest-vdr-mplayer-0.9.14 66
+RMD160 4ac593dde65d225393d371df073661703fb97657 files/digest-vdr-mplayer-0.9.14 66
+SHA256 10d076e56dfac454babe0f1e72cf7b07125aeb27b222481c353cf816ad338294 files/digest-vdr-mplayer-0.9.14 66
 MD5 955192f29c395d3439388eaf3982ce11 files/mplayersources.conf 40
+RMD160 61d3691f404fbb9fbd4f70f69821f347ba64b50b files/mplayersources.conf 40
+SHA256 126740b54a73fdfa851847fdb2c1f7c0bcbebac431189af7617f53d56119c3f2 files/mplayersources.conf 40
 MD5 6ea7c41051b0cc0288353a2f6a4efcd1 files/rc-addon.sh 529
+RMD160 8b813dd562443717dacb3d8a603efcd594e6834e files/rc-addon.sh 529
+SHA256 5342705f9b914a3674ef5841311bf33c7d04371ff51a0e4553afa2e0f2228d92 files/rc-addon.sh 529
 MD5 2c64b25f82c7f467d26efa6787530258 files/vdr-mplayer-0.9.14-gentoo.diff 1190
+RMD160 a2f7ef7d7047409516019dd393123207eb766a76 files/vdr-mplayer-0.9.14-gentoo.diff 1190
+SHA256 878cf7f8a1430e09e1293a1187bd16ac09c5ee50d94acc1ad1e0d90f7526d50e files/vdr-mplayer-0.9.14-gentoo.diff 1190
 MD5 bbe1275ce1f4cde2cb3d401105b029b1 metadata.xml 512
-MD5 a9305ea020a984cc7c3698324c3b18a9 vdr-mplayer-0.9.14.ebuild 1261
+RMD160 969a7e1b3885e90ebe6f1eb5cfcba3c3a520afa0 metadata.xml 512
+SHA256 9581dee17491aaa1dadf47977f627db5f25bea00341e21a087e7dae1490775b0 metadata.xml 512
+MD5 f207614c602fb114490c1f64fdf64988 vdr-mplayer-0.9.14.ebuild 1262
+RMD160 ee2d79de5580bb0ec4df1f6f8819d3897c1a9678 vdr-mplayer-0.9.14.ebuild 1262
+SHA256 95fa1ccc2c7ba5e3755d3f1a3fa867ced2f71ae2ffd2e8d5327654f60a3e81e5 vdr-mplayer-0.9.14.ebuild 1262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQ80hZfSl1Kp5KmoRArTkAJ9k2x2B7ABfE8R5Eaja9owTNo6ORgCdEuQO
+Ley9C92CrDwtwwRGeVz8FkQ=
+=VrzU
+-----END PGP SIGNATURE-----
