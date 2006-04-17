@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5224 2006/04/17 19:01:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5225 2006/04/17 19:16:32 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -977,6 +977,7 @@ www-apps/open-xchange
 # This needs some testing before I unleash it on the world.
 games-rpg/nwn-data
 =games-rpg/nwn-1.66-r1
+=games-rpg/nwn-cep-1.52-r1
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (19 Sep 2005)
 # Adding new GGZ ebuilds to portage.  I am masking them all
