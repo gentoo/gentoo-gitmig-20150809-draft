@@ -1,43 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d57fd57240e1a8ad63413d4253ee4c5a ChangeLog 6077
-RMD160 6c2651e5fdc40b860914e99c35e45ce0e1933219 ChangeLog 6077
-SHA256 291391ddd0d7ddb5afdf3a93f62c4d1cfa590a7a3822bf6c3012ea7b5c0e5a58 ChangeLog 6077
+MD5 58b2a13d6c3c8eeec5335cfa05269610 ChangeLog 6278
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kwin-3.4.1 212
-RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-kwin-3.4.1 212
-SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-kwin-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kwin-3.4.2 287
-RMD160 db88376c4259165535f83f3529f0834fb2209612 files/digest-kwin-3.4.2 287
-SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/digest-kwin-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kwin-3.4.3 68
-RMD160 fe4b253b0a7c2e30a2aa1d0d796dfcb11e30590a files/digest-kwin-3.4.3 68
-SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/digest-kwin-3.4.3 68
 MD5 5efe75301bc0d47d1f2af0ce2feb2603 files/digest-kwin-3.5.2-r1 68
-RMD160 e75b5aeaf92e72ffb4e94df99d0f81490f287b93 files/digest-kwin-3.5.2-r1 68
-SHA256 19fc0b34e2f9464359bac8b07b2aec31b9b080ecc053164cc9bf8ee952e564a1 files/digest-kwin-3.5.2-r1 68
+MD5 5efe75301bc0d47d1f2af0ce2feb2603 files/digest-kwin-3.5.2-r2 68
+MD5 37dffebcd3f6d1641ccc80e50852fa46 files/kwin-3.5.2-alt_tab_and_focus_chain_fix.diff 15189
 MD5 1ea48b1904f323b5937b4168048a5561 files/kwin-3.5.2-alt_tab_crash.diff 642
-RMD160 1872cd6d0b0c8fa3e54ff0abad7d2a17ae0dcef8 files/kwin-3.5.2-alt_tab_crash.diff 642
-SHA256 f9af5896d7c16739882eeb330d821f8b0a292fd46c2772949537bb8cc20fb21f files/kwin-3.5.2-alt_tab_crash.diff 642
 MD5 2809511699650a8a076be8791e4d1567 kwin-3.4.1.ebuild 384
-RMD160 9a05f5adc449a45161e31c56572035a16fbe3242 kwin-3.4.1.ebuild 384
-SHA256 2df5424cc7c9de3f78cf0970a1ec4a5d7ae9a4b0101c8227d60aa542bc014f3d kwin-3.4.1.ebuild 384
 MD5 83701c6ee016cca9476c28a71b8b6f8d kwin-3.4.2.ebuild 388
-RMD160 7ce7c0b74db6fa7a3c76018c309cd3398da9d9f5 kwin-3.4.2.ebuild 388
-SHA256 aafcc1381c3fe9bf479f3f01ecabd448c97e42cd7dac30009826c0edb44a25a7 kwin-3.4.2.ebuild 388
 MD5 695a5f6ea3a7c5784b476831098018d8 kwin-3.4.3.ebuild 389
-RMD160 7928293c7f4ff1d108deb42785c31ccb4f0b2952 kwin-3.4.3.ebuild 389
-SHA256 ec86ae544ffc1b7330b1fb5de0331fe2a7620df50e9beeb9c4087f805d49c9f3 kwin-3.4.3.ebuild 389
 MD5 aae40c7a7e69745391f451e8f1adf61c kwin-3.5.2-r1.ebuild 809
-RMD160 e0dbbc008dc89abcdf81fe5071db1eaf06ee4c49 kwin-3.5.2-r1.ebuild 809
-SHA256 9ad09b416ec14f60335d670d6aebaf1bb10f56ac197cfb4e4dfd0fbb02bb62c2 kwin-3.5.2-r1.ebuild 809
+MD5 f6dd03936bb305a77e5a19c69a887a92 kwin-3.5.2-r2.ebuild 809
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENIV4AiZjviIA2XgRAma0AJ0fz+qlyk5uzELyfsWrm2EqU51QbQCgg/hx
-NyUBnmUs6YlcTFUWxBKqF3I=
-=tOG3
------END PGP SIGNATURE-----

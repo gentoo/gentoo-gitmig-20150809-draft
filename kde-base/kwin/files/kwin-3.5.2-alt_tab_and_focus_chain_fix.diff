@@ -1,0 +1,391 @@
+diff -ur kwin.orig/activation.cpp kwin/activation.cpp
+--- kdebase/kwin.orig/activation.cpp	2006-04-16 14:50:58.000000000 +0200
++++ kdebase/kwin/activation.cpp	2006-04-16 15:17:55.000000000 +0200
+@@ -231,7 +231,7 @@
+         last_active_client = active_client;
+     if ( active_client ) 
+         {
+-        updateFocusChains( active_client, true ); // make it first in focus chain
++        updateFocusChains( active_client, FocusChainMakeFirst );
+         active_client->demandAttention( false );
+         }
+     pending_take_activity = NULL;
+diff -ur kwin.orig/client.cpp kwin/client.cpp
+--- kdebase/kwin.orig/client.cpp	2006-04-16 14:50:58.000000000 +0200
++++ kdebase/kwin/client.cpp	2006-04-16 15:18:17.000000000 +0200
+@@ -578,7 +578,7 @@
+     updateAllowedActions();
+     workspace()->updateMinimizedOfTransients( this );
+     updateWindowRules();
+-    workspace()->updateFocusChains( this, false ); // make it last in the focus chain
++    workspace()->updateFocusChains( this, Workspace::FocusChainMakeLast );
+     }
+ 
+ void Client::unminimize( bool avoid_animation )
+@@ -895,7 +895,16 @@
+         }
+     if( show )
+         {
+-        if( workspace()->showingDesktop())
++        bool belongs_to_desktop = false;
++        for( ClientList::ConstIterator it = group()->members().begin();
++             it != group()->members().end();
++             ++it )
++            if( (*it)->isDesktop())
++                {
++                belongs_to_desktop = true;
++                break;
++                }
++        if( !belongs_to_desktop && workspace()->showingDesktop())
+             workspace()->resetShowingDesktop( true );
+         if( isShade())
+             setMappingState( IconicState );
+@@ -1149,7 +1158,8 @@
+     info->setState( b?NET::SkipTaskbar:0, NET::SkipTaskbar );
+     updateWindowRules();
+     if( was_wants_tab_focus != wantsTabFocus())
+-        workspace()->updateFocusChains( this, isActive());
++        workspace()->updateFocusChains( this,
++            isActive() ? Workspace::FocusChainMakeFirst : Workspace::FocusChainUpdate );
+     }
+ 
+ void Client::setSkipPager( bool b )
+@@ -1191,7 +1201,7 @@
+         }
+     if( decoration != NULL )
+         decoration->desktopChange();
+-    workspace()->updateFocusChains( this, true );
++    workspace()->updateFocusChains( this, Workspace::FocusChainMakeFirst );
+     updateVisibility();
+     updateWindowRules();
+     }
+diff -ur kwin.orig/events.cpp kwin/events.cpp
+--- kdebase/kwin.orig/events.cpp	2006-04-16 14:50:58.000000000 +0200
++++ kdebase/kwin/events.cpp	2006-04-16 15:18:35.000000000 +0200
+@@ -370,7 +370,7 @@
+             if( c )
+                 {
+                 c->windowEvent( e );
+-                updateFocusChains( c, true );
++                updateFocusChains( c, FocusChainUpdate );
+                 return true;
+                 }
+             break;
+@@ -402,15 +402,15 @@
+             if ( e->xconfigurerequest.parent == root ) 
+                 {
+                 XWindowChanges wc;
+-                unsigned int value_mask = 0;
+-                wc.border_width = 0;
++                wc.border_width = e->xconfigurerequest.border_width;
+                 wc.x = e->xconfigurerequest.x;
+                 wc.y = e->xconfigurerequest.y;
+                 wc.width = e->xconfigurerequest.width;
+                 wc.height = e->xconfigurerequest.height;
+                 wc.sibling = None;
+                 wc.stack_mode = Above;
+-                value_mask = e->xconfigurerequest.value_mask | CWBorderWidth;
++                unsigned int value_mask = e->xconfigurerequest.value_mask
++                    & ( CWX | CWY | CWWidth | CWHeight | CWBorderWidth );
+                 XConfigureWindow( qt_xdisplay(), e->xconfigurerequest.window, value_mask, &wc );
+                 return true;
+                 }
+diff -ur kwin.orig/geometry.cpp kwin/geometry.cpp
+--- kdebase/kwin.orig/geometry.cpp	2006-04-16 14:50:58.000000000 +0200
++++ kdebase/kwin/geometry.cpp	2006-04-16 15:18:58.000000000 +0200
+@@ -1281,7 +1281,21 @@
+         { // update to match restrictions
+         QSize new_size = adjustedSize();
+         if( new_size != size() && !isFullScreen())
++            {
++            QRect orig_geometry = geometry();
+             resizeWithChecks( new_size );
++            if( ( !isSpecialWindow() || isToolbar()) && !isFullScreen())
++                {
++                // try to keep the window in its xinerama screen if possible,
++                // if that fails at least keep it visible somewhere
++                QRect area = workspace()->clientArea( MovementArea, this );
++                if( area.contains( orig_geometry ))
++                    keepInArea( area );
++                area = workspace()->clientArea( WorkArea, this );
++                if( area.contains( orig_geometry ))
++                    keepInArea( area );
++                }
++            }
+         }
+     updateAllowedActions(); // affects isResizeable()
+     }
+@@ -1840,7 +1854,7 @@
+ 
+     // maximing one way and unmaximizing the other way shouldn't happen
+     Q_ASSERT( !( vertical && horizontal )
+-        || (( max_mode & MaximizeVertical != 0 ) == ( max_mode & MaximizeHorizontal != 0 )));
++        || ((( max_mode & MaximizeVertical ) != 0 ) == (( max_mode & MaximizeHorizontal ) != 0 )));
+ 
+     QRect clientArea = workspace()->clientArea( MaximizeArea, this );
+ 
+diff -ur kwin.orig/layers.cpp kwin/layers.cpp
+--- kdebase/kwin.orig/layers.cpp	2006-04-16 14:50:58.000000000 +0200
++++ kdebase/kwin/layers.cpp	2006-04-16 15:19:23.000000000 +0200
+@@ -100,7 +100,7 @@
+     {
+     if( block_stacking_updates > 0 )
+         {
+-        blocked_propagating_new_clients |= propagate_new_clients;
++        blocked_propagating_new_clients = blocked_propagating_new_clients || propagate_new_clients;
+         return;
+         }
+     ClientList new_stacking_order = constrainedStackingOrder();
+@@ -441,6 +441,21 @@
+                 }
+             }
+       	}
++    // the same for global_focus_chain
++    if( c->wantsTabFocus() && global_focus_chain.contains( active_client ))
++        {
++        global_focus_chain.remove( c );
++        for( ClientList::Iterator it = global_focus_chain.fromLast();
++             it != global_focus_chain.end();
++             --it )
++            {
++            if( Client::belongToSameApplication( active_client, *it ))
++                {
++                global_focus_chain.insert( it, c );
++                break;
++                }
++            }
++      	}
+     updateStackingOrder();
+     }
+ 
+diff -ur kwin.orig/tabbox.cpp kwin/tabbox.cpp
+--- kdebase/kwin.orig/tabbox.cpp	2006-04-16 14:50:58.000000000 +0200
++++ kdebase/kwin/tabbox.cpp	2006-04-16 15:19:43.000000000 +0200
+@@ -763,7 +763,7 @@
+         return;
+     if ( tab_grab || control_grab )
+         return;
+-    if ( options->altTabStyle == Options::CDE )
++    if ( options->altTabStyle == Options::CDE || !options->focusPolicyIsReasonable())
+         {
+         //XUngrabKeyboard(qt_xdisplay(), qt_x_time); // need that because of accelerator raw mode
+         // CDE style raise / lower
+@@ -789,7 +789,7 @@
+         return;
+     if( tab_grab || control_grab )
+         return;
+-    if ( options->altTabStyle == Options::CDE )
++    if ( options->altTabStyle == Options::CDE || !options->focusPolicyIsReasonable())
+         {
+         // CDE style raise / lower
+         CDEWalkThroughWindows( false );
+@@ -926,7 +926,23 @@
+ 
+ void Workspace::CDEWalkThroughWindows( bool forward )
+     {
+-    Client* c = activeClient();
++    Client* c = NULL;
++// this function find the first suitable client for unreasonable focus
++// policies - the topmost one, with some exceptions (can't be keepabove/below,
++// otherwise it gets stuck on them)
++    Q_ASSERT( block_stacking_updates == 0 );
++    for( ClientList::ConstIterator it = stacking_order.fromLast();
++         it != stacking_order.end();
++         --it )
++        {
++        if ( (*it)->isOnCurrentDesktop() && !(*it)->isSpecialWindow()
++            && (*it)->isShown( false ) && (*it)->wantsTabFocus()
++            && !(*it)->keepAbove() && !(*it)->keepBelow())
++            {
++            c = *it;
++            break;
++            }
++        }
+     Client* nc = c;
+     bool options_traverse_all;
+         {
+@@ -952,7 +968,7 @@
+             }
+         } while (nc && nc != c &&
+             (( !options_traverse_all && !nc->isOnDesktop(currentDesktop())) ||
+-             nc->isMinimized() || !nc->wantsTabFocus() ) );
++             nc->isMinimized() || !nc->wantsTabFocus() || nc->keepAbove() || nc->keepBelow() ) );
+     if (nc)
+         {
+         if (c && c != nc)
+@@ -1152,14 +1168,13 @@
+ */
+ Client* Workspace::nextFocusChainClient( Client* c ) const
+     {
+-    int desktop = c->isOnAllDesktops() ? currentDesktop() : c->desktop();
+-    if ( focus_chain[desktop].isEmpty() )
++    if ( global_focus_chain.isEmpty() )
+         return 0;
+-    ClientList::ConstIterator it = focus_chain[desktop].find( c );
+-    if ( it == focus_chain[desktop].end() )
+-        return focus_chain[desktop].last();
+-    if ( it == focus_chain[desktop].begin() )
+-        return focus_chain[desktop].last();
++    ClientList::ConstIterator it = global_focus_chain.find( c );
++    if ( it == global_focus_chain.end() )
++        return global_focus_chain.last();
++    if ( it == global_focus_chain.begin() )
++        return global_focus_chain.last();
+     --it;
+     return *it;
+     }
+@@ -1170,15 +1185,14 @@
+ */
+ Client* Workspace::previousFocusChainClient( Client* c ) const
+     {
+-    int desktop = c->isOnAllDesktops() ? currentDesktop() : c->desktop();
+-    if ( focus_chain[desktop].isEmpty() )
++    if ( global_focus_chain.isEmpty() )
+         return 0;
+-    ClientList::ConstIterator it = focus_chain[desktop].find( c );
+-    if ( it == focus_chain[desktop].end() )
+-        return focus_chain[desktop].first();
++    ClientList::ConstIterator it = global_focus_chain.find( c );
++    if ( it == global_focus_chain.end() )
++        return global_focus_chain.first();
+     ++it;
+-    if ( it == focus_chain[desktop].end() )
+-        return focus_chain[desktop].first();
++    if ( it == global_focus_chain.end() )
++        return global_focus_chain.first();
+     return *it;
+     }
+ 
+diff -ur kwin.orig/workspace.cpp kwin/workspace.cpp
+--- kdebase/kwin.orig/workspace.cpp	2006-04-16 14:50:58.000000000 +0200
++++ kdebase/kwin/workspace.cpp	2006-04-16 15:20:05.000000000 +0200
+@@ -512,7 +512,7 @@
+         }
+     else
+         {
+-        updateFocusChains( c, true );
++        updateFocusChains( c, FocusChainUpdate ); // add to focus chain if not already there
+         clients.append( c );
+         }
+     if( !unconstrained_stacking_order.contains( c ))
+@@ -564,6 +564,7 @@
+          i <= numberOfDesktops();
+          ++i )
+         focus_chain[ i ].remove( c );
++    global_focus_chain.remove( c );
+     attention_chain.remove( c );
+     if( c->isTopMenu())
+         removeTopMenu( c );
+@@ -590,7 +591,7 @@
+     updateClientArea();
+     }
+ 
+-void Workspace::updateFocusChains( Client* c, bool make_first )
++void Workspace::updateFocusChains( Client* c, FocusChainChange change )
+     {
+     if( !c->wantsTabFocus()) // doesn't want tab focus, remove
+         {
+@@ -598,16 +599,21 @@
+              i<= numberOfDesktops();
+              ++i )
+             focus_chain[i].remove(c);
++        global_focus_chain.remove( c );
+         return;
+         }
+     if(c->desktop() == NET::OnAllDesktops)
+         { //now on all desktops, add it to focus_chains it is not already in
+         for( int i=1; i<= numberOfDesktops(); i++)
+-            { // make_first works only on current desktop, don't affect all desktops
+-            if( make_first && i == currentDesktop())
++            { // making first/last works only on current desktop, don't affect all desktops
++            if( i == currentDesktop()
++                && ( change == FocusChainMakeFirst || change == FocusChainMakeLast ))
+                 {
+                 focus_chain[ i ].remove( c );
+-                focus_chain[ i ].append( c );
++                if( change == FocusChainMakeFirst )
++                    focus_chain[ i ].append( c );
++                else
++                    focus_chain[ i ].prepend( c );
+                 }
+             else if( !focus_chain[ i ].contains( c ))
+                 focus_chain[ i ].prepend( c ); // otherwise add as the last one
+@@ -619,11 +625,16 @@
+             {
+             if( i == c->desktop())
+                 {
+-                if( make_first )
++                if( change == FocusChainMakeFirst )
+                     {
+                     focus_chain[ i ].remove( c );
+                     focus_chain[ i ].append( c );
+                     }
++                else if( change == FocusChainMakeLast )
++                    {
++                    focus_chain[ i ].remove( c );
++                    focus_chain[ i ].prepend( c );
++                    }
+                 else if( !focus_chain[ i ].contains( c ))
+                     focus_chain[ i ].prepend( c );
+                 }
+@@ -631,6 +642,18 @@
+                 focus_chain[ i ].remove( c );
+             }
+         }
++    if( change == FocusChainMakeFirst )
++        {
++        global_focus_chain.remove( c );
++        global_focus_chain.append( c );
++        }
++    else if( change == FocusChainMakeLast )
++        {
++        global_focus_chain.remove( c );
++        global_focus_chain.prepend( c );
++        }
++    else if( !global_focus_chain.contains( c ))
++        global_focus_chain.prepend( c );
+     }
+ 
+ void Workspace::updateCurrentTopMenu()
+diff -ur kwin.orig/workspace.h kwin/workspace.h
+--- kdebase/kwin.orig/workspace.h	2006-04-16 14:50:58.000000000 +0200
++++ kdebase/kwin/workspace.h	2006-04-16 15:20:32.000000000 +0200
+@@ -251,7 +251,8 @@
+         bool checkStartupNotification( Window w, KStartupInfoId& id, KStartupInfoData& data );
+ 
+         void focusToNull(); // SELI public?
+-        void updateFocusChains( Client* c, bool make_first );
++        enum FocusChainChange { FocusChainMakeFirst, FocusChainMakeLast, FocusChainUpdate };
++        void updateFocusChains( Client* c, FocusChainChange change );
+         
+         bool forcedGlobalMouseGrab() const;
+         void clientShortcutUpdated( Client* c );
+@@ -510,6 +511,7 @@
+         ClientList unconstrained_stacking_order;
+         ClientList stacking_order;
+         QValueVector< ClientList > focus_chain;
++        ClientList global_focus_chain; // this one is only for things like tabbox's MRU
+         ClientList should_get_focus; // last is most recent
+         ClientList attention_chain;
+         
+--- kdebase/kwin/utils.h	2006/02/28 13:01:47	514432
++++ kdebase/kwin/utils.h	2006/04/11 12:49:12	528574
+@@ -232,15 +232,13 @@
+ inline
+ int timestampCompare( Time time1, Time time2 ) // like strcmp()
+     {
+-    if( time1 == time2 )
+-        return 0;
+-    return ( time1 - time2 ) < 1000000000 ? 1 : -1; // time1 > time2 -> 1, handle wrapping
++    return NET::timestampCompare( time1, time2 );
+     }
+ 
+ inline
+ Time timestampDiff( Time time1, Time time2 ) // returns time2 - time1
+-    { // no need to handle wrapping?
+-    return time2 - time1;
++    {
++    return NET::timestampDiff( time1, time2 );
+     }
+ 
+ bool isLocalMachine( const QCString& host );
