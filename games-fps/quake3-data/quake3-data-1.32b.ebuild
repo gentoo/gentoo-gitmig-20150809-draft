@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/quake3-data-1.32b.ebuild,v 1.7 2006/03/15 22:28:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/quake3-data-1.32b.ebuild,v 1.8 2006/04/17 21:50:15 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -28,8 +28,6 @@ src_unpack() {
 
 src_install() {
 	ebegin "Copying files from linux client ..."
-	insinto "${GAMES_DATADIR}"/quake3/missionpack
-	doins missionpack/*.pk3 || die "missionpack"
 	insinto "${GAMES_DATADIR}"/quake3/baseq3
 	doins baseq3/*.pk3 || die "baseq3"
 	eend 0
