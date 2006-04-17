@@ -1,20 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0dfbc148604f005df7511ba255ce93c9 ChangeLog 1287
+MD5 1ee5c147327e864f6cdd450e30694072 ChangeLog 1383
+RMD160 9c1f445148c45fa7380248c0c8d2fa7ba8353bdb ChangeLog 1383
+SHA256 42bf06a10ee7fa46dcbb66f670e0e0eb0b2e985464127f24c2354aab2d961f43 ChangeLog 1383
 MD5 adae2ccfe37f39d4a68bc1d959716d0e files/digest-vdr-image-0.2.4 67
+RMD160 b9f4d59c4cba72217f2120f7815abddd2a56f20b files/digest-vdr-image-0.2.4 67
+SHA256 54706e55a916f561da9e6e8fc7a95b82289082e2165eec16642de6dff2e3e6be files/digest-vdr-image-0.2.4 67
 MD5 72bc4fe734271d52d845e97722484824 files/digest-vdr-image-0.2.5 67
+RMD160 c4b2f65cdbb0e632cc771ac544598ac60ac32f01 files/digest-vdr-image-0.2.5 67
+SHA256 2071571a789fbfffe2a2ab1aca4da49ab80c69afd5ef3339fba91136030f6e63 files/digest-vdr-image-0.2.5 67
 MD5 5f738db9836efeb2362cc79961d8b236 files/rc-addon.sh 664
+RMD160 fbe1e5138ba4c27c592bdd0855814a771dc5d4cf files/rc-addon.sh 664
+SHA256 c394a54c2767d29b17d115943d1964b00aa4dfd74bd44d60fe75afb8a71952a2 files/rc-addon.sh 664
 MD5 f2dfff6d98dce8de321be81a251c45ac files/vdr-image-0.2.4-gentoo.diff 3468
+RMD160 0307cde85efc19f7a11ff551e5ef7104fb6f0d96 files/vdr-image-0.2.4-gentoo.diff 3468
+SHA256 9e3883bc68eac86737171cfa1f3fd5f5f513688e5737c256abacc776e0493658 files/vdr-image-0.2.4-gentoo.diff 3468
 MD5 6cdf1cbf04e79395a00e2e0893207adf files/vdr-image-0.2.5-gentoo.diff 3497
+RMD160 29973423e45e4211a69bff6dca01915a82aa2479 files/vdr-image-0.2.5-gentoo.diff 3497
+SHA256 64cd28a8513bccfef99d3ab3f007e3df29aa255c2f1663dd89a3c9d104229903 files/vdr-image-0.2.5-gentoo.diff 3497
 MD5 e7055a92958497a9a028c06b8223f110 metadata.xml 439
-MD5 6c233f3c73f3a6aef576a600ba2095c8 vdr-image-0.2.4.ebuild 1324
+RMD160 3fd25c256ba582fda2b5f71d5285d62ebbc3dc73 metadata.xml 439
+SHA256 593088a9eacd289fd136ff1dc3ba9f7fc8146dc9ac54eda0f6f625f698653a71 metadata.xml 439
+MD5 7568857a0dc010e19cdb6e8f0a54879d vdr-image-0.2.4.ebuild 1325
+RMD160 15d1d086e44c2189370b204946ab983e0032431b vdr-image-0.2.4.ebuild 1325
+SHA256 d333cc7dc78911ba00e5892e723658040809649fba5efbead595eb5fe3113221 vdr-image-0.2.4.ebuild 1325
 MD5 25f4f49bb96fe691a88384eb76426ee3 vdr-image-0.2.5.ebuild 1423
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-Comment: no further Information
-
-iD8DBQFEDDahdn07HTTCgIoRAuziAJ9FJ/e6PGb2z6HZU9lpA5cp2Nd77QCfRIpB
-qBJS+AMbPYhNvxJl7N/jSBE=
-=IKlp
------END PGP SIGNATURE-----
+RMD160 c2ae271f046abc54009f9b1fdb6c984884aea01d vdr-image-0.2.5.ebuild 1423
+SHA256 63a9738dd16c19f03fbe720b359a2b272cbde182d6884345f2b9d7b77060d57c vdr-image-0.2.5.ebuild 1423
