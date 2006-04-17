@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ec97d409450d29079c67804f7b95fc01 ChangeLog 9485
-RMD160 54ee755bb7fd3b82b5d913b5630d1c405842b42d ChangeLog 9485
-SHA256 949b1bcd3a91ad7140451d9d4455268a53a84213d0ff29caf01ce46e7f437f2c ChangeLog 9485
+MD5 b29cf50a257e282909c3a7b955430b36 ChangeLog 9597
+RMD160 d5c44047ca76bea5c116d847696d7a272c4320cf ChangeLog 9597
+SHA256 7370c0f7de528be3e22bb11de85154248e30ddfe03e6c40c69e3bc9a6df8f33b ChangeLog 9597
 MD5 fa1f6ce69e8ecaf989509674ffa0ce00 files/digest-gentoo-vdr-scripts-0.2.2-r1 262
 RMD160 54252ac78215ccc47966955b3c87474c2cb3feb4 files/digest-gentoo-vdr-scripts-0.2.2-r1 262
 SHA256 bd1595a4fe85c584f3c8a10157a4876943a7c98fd966bf28f5ec91bbbb0a527c files/digest-gentoo-vdr-scripts-0.2.2-r1 262
@@ -34,9 +34,9 @@ SHA256 cb7448a1ab1f9751d44ed32eb42d6ac84b75cbe1e365a0e2e08bd3f08b7cfe02 gentoo-v
 MD5 e4c8ffc5ee0d7068b4d2a3c440a15fd4 gentoo-vdr-scripts-0.2.3-r1.ebuild 2826
 RMD160 545b87c0776cbd8564bc8da07271bcf6bb87a1c5 gentoo-vdr-scripts-0.2.3-r1.ebuild 2826
 SHA256 08592ca39aa0157f9a6668a84627fc8c9ead5b5f72fb36371e9dc26d439500e1 gentoo-vdr-scripts-0.2.3-r1.ebuild 2826
-MD5 2258dd86970e500ecc22acb0e4c9b478 gentoo-vdr-scripts-0.2.4.ebuild 2640
-RMD160 c09afe78f0f935a2e29243e5603b2e86a236cd89 gentoo-vdr-scripts-0.2.4.ebuild 2640
-SHA256 9b4155703a00af75c85f884bb8a8e0150769704c49951f3dd7295cb8648bd913 gentoo-vdr-scripts-0.2.4.ebuild 2640
+MD5 e1d5ba21dbf5aa8624de55dcde390b83 gentoo-vdr-scripts-0.2.4.ebuild 2639
+RMD160 3df93ecd8573f0112402048c4e1856e8394020a6 gentoo-vdr-scripts-0.2.4.ebuild 2639
+SHA256 ce2a47e372cd6d1a97666a77730ca9e85c6b5c8b05331c3392e261d69b0b84bf gentoo-vdr-scripts-0.2.4.ebuild 2639
 MD5 51fa20c231aebee4808afa40a7e85328 gentoo-vdr-scripts-0.3.0.ebuild 2644
 RMD160 6733f3a2e18b0be13453cf9b592e0be52ee07635 gentoo-vdr-scripts-0.3.0.ebuild 2644
 SHA256 848265ccf7054e022be70c781e8a2970fc685e58e9e0898db95b64f80f844351 gentoo-vdr-scripts-0.3.0.ebuild 2644
@@ -46,7 +46,7 @@ SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEIG15ZfSl1Kp5KmoRAnQ7AJ9ZOaP/rQ7bXNFfHzdF0gJSH4yIPQCgjFCY
-Yf2k4DMp8+4kXVUUSZCao88=
-=3hy1
+iD8DBQFEQ8xeZfSl1Kp5KmoRAquZAJ9yj94qnGmpWJnW/jJE3Dd5PljaoQCgzM3s
+UYWIxm5QZRh9ltKw71p2kJM=
+=jzAo
 -----END PGP SIGNATURE-----
