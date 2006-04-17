@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 19bcf7cc3e1997b9557559d63418cf70 ChangeLog 5293
-RMD160 b17612ba73cc74d60531c1c69b5ce4ddbd9e7222 ChangeLog 5293
-SHA256 6e217731c2c839e856d03f496fd8a5f0bde78d185bde4ee9e13d49dde2ca4d53 ChangeLog 5293
+MD5 6d1c38f38750d40c0aab1b46f3153414 ChangeLog 5406
+RMD160 b32d937999b5f33023a2a57c3c11e9051bd319ae ChangeLog 5406
+SHA256 c97ef68b852ae8a7b345b04efbb47e5afa26af49110a078c833d855ab52cdab2 ChangeLog 5406
 MD5 18aa703af0f97e5656a5907b30b592d1 files/consolelog.sh 258
 RMD160 bf64a3d0fb8c2788b64ce8afceb668f9d8d28e35 files/consolelog.sh 258
 SHA256 dc66fed4ab8395b6406b35535ab03bbbb7bcfff09741fe0173ec4c6008037407 files/consolelog.sh 258
@@ -46,16 +43,9 @@ SHA256 b393aee50e9b4d67ae39e693f0e145b0811772e7c35de0ee0a808680f67e12f3 metalog-
 MD5 06d4be1607e8b72d0e6eccc4891460f6 metalog-0.8_rc1-r1.ebuild 1437
 RMD160 52e16a784d581283dc4074f665db5929c99b9c58 metalog-0.8_rc1-r1.ebuild 1437
 SHA256 a64af6a920f5b27a6ee12808a9202f445b65ecc5bfae0a01a10da55ce2d45918 metalog-0.8_rc1-r1.ebuild 1437
-MD5 ad78a6fbb158ac000dcd4de4bb2f8e22 metalog-0.8_rc1-r2.ebuild 1450
-RMD160 9e758880a179e2c50fcb7102bb8303eda88acd65 metalog-0.8_rc1-r2.ebuild 1450
-SHA256 cbf6c46a39ee0824c4db828dd6ca21faf33ddbd1ad9c6f66004aa103f6c63182 metalog-0.8_rc1-r2.ebuild 1450
+MD5 f9bd907a0c8b1df3c88a75455c797969 metalog-0.8_rc1-r2.ebuild 1450
+RMD160 865e584e7748d6aa5d4acf7f0fc7cd09ceee51eb metalog-0.8_rc1-r2.ebuild 1450
+SHA256 280740ba9b4e25968b28ff208ea38ae4ab4dc83bedde5089fef7c28ada3a01ee metalog-0.8_rc1-r2.ebuild 1450
 MD5 87de1e175edc04567a2c0af08e17fef0 metalog-0.8_rc1.ebuild 1405
 RMD160 7d38f8b670252e0a967d328010c20c5e51bd751c metalog-0.8_rc1.ebuild 1405
 SHA256 25cfda5d9bf72839f2306981dc4c6418bda5b5be9bce908459c618848219407f metalog-0.8_rc1.ebuild 1405
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEMD8qAiZjviIA2XgRApS2AKDlOb36exBfhMiXA7tAobiuCQMOLgCggzYR
-VBtGqJ9VQLsaqv21YxE69aA=
-=w2+l
------END PGP SIGNATURE-----

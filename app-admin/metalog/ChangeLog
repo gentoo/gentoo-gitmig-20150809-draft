@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.41 2006/04/02 21:16:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.42 2006/04/17 09:12:39 dertobi123 Exp $
+
+  17 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  metalog-0.8_rc1-r2.ebuild:
+  ppc stable, bug #130221
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   metalog-0.8_rc1-r2.ebuild:
