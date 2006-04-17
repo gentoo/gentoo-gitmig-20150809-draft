@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e17f8c1fbd92b8f7907e65df31fb99c4 ChangeLog 774
 RMD160 9d3d7cdcc4eadbc6d3e1957f6ae92be72a8cfdcb ChangeLog 774
 SHA256 f08b7c106bffe8336db21644b112713529d025ad23e3658533e620bf41174fb2 ChangeLog 774
@@ -10,3 +13,10 @@ SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata
 MD5 45c2be4b1eaff19327edbbfeffb8c501 vdr-channelscan-0.2.0.ebuild 998
 RMD160 2308e56c8d0145594c7e413a537b6952bffb1477 vdr-channelscan-0.2.0.ebuild 998
 SHA256 87ad2e3cd12bc374be6e077a62589893a43e4446ea30140940bf4dcfd31cb52d vdr-channelscan-0.2.0.ebuild 998
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQ8vEZfSl1Kp5KmoRAozsAJ9UbdEQek98iZ4sFrm/3Nde9Jb1VwCg5/CB
++Lc5CfNyZlo32C9pl2MTfGw=
+=eiyT
+-----END PGP SIGNATURE-----
