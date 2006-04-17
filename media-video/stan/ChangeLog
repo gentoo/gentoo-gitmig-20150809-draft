@@ -1,6 +1,11 @@
 # ChangeLog for media-video/stan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/stan/ChangeLog,v 1.2 2006/01/08 12:05:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/stan/ChangeLog,v 1.3 2006/04/17 15:18:00 flameeyes Exp $
+
+  17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/stan-0.4.1-errno.patch, stan-0.4.1.ebuild:
+  Add patch to include errno.h instead of definining errno on the spot from
+  Alexey Maximof in bug #114567.
 
   08 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Remove retiring dev from metadata.
