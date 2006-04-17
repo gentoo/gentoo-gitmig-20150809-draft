@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.4 2006/04/14 16:43:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.5 2006/04/17 21:56:58 wolf31o2 Exp $
 
 inherit games games-ut2k4mod
 
@@ -23,10 +23,15 @@ dir=${GAMES_PREFIX_OPT}/ut2004
 Ddir=${D}/${dir}
 
 grabdirs() {
+	local srcdir
+
 	for d in {Music,Sounds,Speech,StaticMeshes,Textures} ; do
-		if [[ -d "${CDROM_ROOT}/$1/${d}" ]] ; then
-			echo "Copying ${CDROM_ROOT}/$1${d}"
-			cp -r "${CDROM_ROOT}/$1/${d}" "${Ddir}" || die "copying $1"
+		srcdir=${CDROM_ROOT}/$1/${d}
+		# Is flexible to handle CD_ROOT vs CD_ROOT_1 mixups
+		[[ -d "${srcdir}" ]] || srcdir=${CDROM_ROOT}/${d}
+		if [[ -d "${srcdir}" ]] ; then
+			echo "Copying ${srcdir}"
+			cp -r "${srcdir}" "${Ddir}" || die "copying ${srcdir}"
 		fi
 	done
 }
