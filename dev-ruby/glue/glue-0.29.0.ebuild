@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/glue/glue-0.23.0.ebuild,v 1.1 2005/09/15 22:35:40 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/glue/glue-0.29.0.ebuild,v 1.1 2006/04/17 23:39:04 caleb Exp $
 
 inherit ruby gems
 
@@ -12,9 +12,9 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ia64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/ruby-1.8.2
-	>=dev-ruby/nano-methods-0.8.2
-	>=dev-ruby/mega-modules-0.3.1"
+DEPEND=">=dev-lang/ruby-1.8.3
+	=dev-ruby/facets-1.0.3
+	=dev-ruby/cmdparse-2.0.0"

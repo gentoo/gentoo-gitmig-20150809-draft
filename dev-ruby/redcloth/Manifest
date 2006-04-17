@@ -1,12 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6ec52c0f93e4544eafdb121bb9d7012c ChangeLog 1345
-RMD160 170906f8e7328220ef37a1bbb7c33ce09b32075f ChangeLog 1345
-SHA256 f58e15aa1cf3eb8d747066b2507c080b1145ffb794be3c1421b352870e6e2a04 ChangeLog 1345
-MD5 b9838cf4682185a89eca06878760ad48 files/digest-redcloth-3.0.2 65
-RMD160 e64aca86c01e4eeeb99034836c80f536029b9ff6 files/digest-redcloth-3.0.2 65
-SHA256 afad667e23ebf1fd409d90ceb7efc937e71cda1f1c9c921e7320a72f83df899e files/digest-redcloth-3.0.2 65
+MD5 4a93d3814d475bc31e1bf5406ba4cd67 ChangeLog 1435
+RMD160 b2bc07f7aacdb89a8f675070de5050ff9c9139ce ChangeLog 1435
+SHA256 faec9aab5f1489d163c0a03efd985383ef4b6641d4e8f1d5941f12191857003b ChangeLog 1435
 MD5 063890b46cdc8872cd1fcc32263e3b21 files/digest-redcloth-3.0.3 62
 RMD160 c98de30db5cf86a79e1fb70ac4be4f026368dc9f files/digest-redcloth-3.0.3 62
 SHA256 c3d34ce68b595d6bfda6eca63c3bb163514a54c60fad760d3d2daecb63f579fb files/digest-redcloth-3.0.3 62
@@ -16,19 +10,9 @@ SHA256 82bdcbcb487a4b69835009324f2e5b7d5934500f8fd17430ede62c4025ee0bb4 files/di
 MD5 1a24e0b48460c02e20931fceded24e1a metadata.xml 254
 RMD160 45352e67c97e6f541e16e45effa6cc89a075efa4 metadata.xml 254
 SHA256 793f01b5f7ab962d5845ec1c730edf86460cf792428710ef7bf6aeb046fc08bf metadata.xml 254
-MD5 579dbfc457f6f2e8e8974f5043227e9c redcloth-3.0.2.ebuild 913
-RMD160 c27d63014e254a9deb0fc3dfa81268c897742fb9 redcloth-3.0.2.ebuild 913
-SHA256 b960bb4408a10b80b1ce55a6ace3819d051b64ed4e181f0d31a41694bdef16a0 redcloth-3.0.2.ebuild 913
 MD5 8122c0feddd8e526eaaf0215c022f383 redcloth-3.0.3.ebuild 951
 RMD160 d7b60480dc4dbf973ad2d75f1eb1c1d9e5413e20 redcloth-3.0.3.ebuild 951
 SHA256 86981dd5d525aafd1d3adb2c0deacb4de5565bf89832bb72d5d4ef4ac8cc4824 redcloth-3.0.3.ebuild 951
 MD5 ec4f6e24735a335167c7f2b4c6b10254 redcloth-3.0.4.ebuild 940
 RMD160 75d115150184ec0eb3039e4fae0515120e90d500 redcloth-3.0.4.ebuild 940
 SHA256 0c32c6596d6c32c5c10b11f6168aed5dcadcf21ada6fe57434d258629c687cd3 redcloth-3.0.4.ebuild 940
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEK1O8JrHF4yAQTrARAv1LAJ9hQp8CG7kHcU5sUvIyRMgOLLRrkACghfbH
-Un7UkINFJlXsvHsQev6xh+c=
-=JptP
------END PGP SIGNATURE-----
