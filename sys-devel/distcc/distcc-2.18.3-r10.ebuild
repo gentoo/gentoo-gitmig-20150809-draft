@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r9.ebuild,v 1.1 2006/04/15 16:13:48 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r10.ebuild,v 1.1 2006/04/17 11:25:31 lisa Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -15,19 +15,14 @@ SRC_URI="http://distcc.samba.org/ftp/distcc/distcc-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-
-IUSE="crosscompile gnome gtk ipv6 selinux"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+IUSE="gnome gtk selinux ipv6"
 
 DEPEND=">=sys-apps/portage-2.0.49-r6
 	>=sys-devel/gcc-config-1.3.1
 	sys-apps/shadow
-	gnome? (
-	  dev-util/pkgconfig
-	)
-	gtk? (
-	  dev-util/pkgconfig
-	)"
+	gnome? ( dev-util/pkgconfig )
+	gtk? ( dev-util/pkgconfig )"
 RDEPEND="
 	gnome? (
 		>=x11-libs/gtk+-2.0.0
@@ -84,7 +79,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D%/}" install
 
-	insinto /usr/share/doc/${PF}
+	insinto /usr/share/doc/${PN}
 	doins "${S}/survey.txt"
 
 	exeinto /usr/bin
@@ -97,16 +92,18 @@ src_install() {
 	newexe "${FILESDIR}/${PATCHLEVEL}/init" distccd
 
 	# create and keep the symlink dir
+	dodir /usr/lib/distcc/bin
 	keepdir /usr/lib/distcc/bin
 
 	# create the distccd pid directory
+	dodir /var/run/distccd
 	keepdir /var/run/distccd
 
 	if use gnome || use gtk; then
 	  einfo "Renaming /usr/bin/distccmon-gnome to /usr/bin/distccmon-gui"
 	  einfo "This is to have a little sensability in naming schemes between distccmon programs"
 	  mv ${D}/usr/bin/distccmon-gnome ${D}/usr/bin/distccmon-gui
-	  dosym distccmon-gui /usr/bin/distccmon-gnome
+	  dosym /usr/bin/distccmon-gui /usr/bin/distccmon-gnome
 	fi
 
 }
@@ -130,9 +127,6 @@ pkg_postinst() {
 	  ewarn "will fail. Please install shadow and re-emerge distcc."
 	  ebeep 2
 	fi
-
-	#patching distcc-config to use shell script for multi arch environments
-	use crosscompile && epatch ${FILESDIR}/2.18/distcc-config.patch
 
 	# By now everyone should be using the right envfile
 
