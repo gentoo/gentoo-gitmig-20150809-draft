@@ -1,4 +1,4 @@
-MD5 38dccc615def203360fb8f14595d7434 ChangeLog 9650
+MD5 24d4e4ba732a7272c1a5bf8c708e862c ChangeLog 9771
 MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-gnomevfs-0.10.0 77
 MD5 0558db8f3c6a0a66bc61b6a02f9aeb8d files/digest-gst-plugins-gnomevfs-0.10.1 77
 MD5 4d9a06718bb82db62ea71d1b2fc00ae3 files/digest-gst-plugins-gnomevfs-0.10.2 77
@@ -12,7 +12,7 @@ MD5 181ff489f1b0b4782017558c76e41612 gst-plugins-gnomevfs-0.10.0.ebuild 376
 MD5 ba705d7a18851951bd671d91829746ff gst-plugins-gnomevfs-0.10.1.ebuild 377
 MD5 c94d24e19ef6a17ad8974a06e95a5071 gst-plugins-gnomevfs-0.10.2.ebuild 377
 MD5 0b9bcca00cdaa7a36e1f1b078e5f50d7 gst-plugins-gnomevfs-0.10.3.ebuild 377
-MD5 a9307ade57aed9c9a6c8860ed78fda99 gst-plugins-gnomevfs-0.10.4.ebuild 588
+MD5 d5f86f1a69225aefefa2fd8191a85c71 gst-plugins-gnomevfs-0.10.4.ebuild 589
 MD5 3b69d2e3c742642e0e3fbc106af4f174 gst-plugins-gnomevfs-0.8.10.ebuild 411
 MD5 ac74ea93927c496532f79fb4bec9ee07 gst-plugins-gnomevfs-0.8.11.ebuild 413
 MD5 dc7614bc9a916a0464755a9bf9b3f95b gst-plugins-gnomevfs-0.8.12.ebuild 420
