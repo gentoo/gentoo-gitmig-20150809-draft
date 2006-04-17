@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/plone
 # Copyright 2003-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.30 2006/04/17 14:20:55 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.31 2006/04/17 15:45:41 halcy0n Exp $
+
+  17 Apr 2006; Mark Loeser <halcy0n@gentoo.org> plone-2.0.5-r2.ebuild:
+  Stable on x86; bug #129705
 
   17 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   plone-2.0.5-r2.ebuild:

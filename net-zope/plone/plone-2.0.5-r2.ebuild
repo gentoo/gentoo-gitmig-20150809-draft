@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.5-r2.ebuild,v 1.2 2006/04/17 14:20:55 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.5-r2.ebuild,v 1.3 2006/04/17 15:45:43 halcy0n Exp $
 
 inherit zproduct eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/plone/PloneBase-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2.0"
-KEYWORDS="~amd64 ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 
 RDEPEND="=net-zope/cmf-1.4*
 	=net-zope/zope-2.7*
