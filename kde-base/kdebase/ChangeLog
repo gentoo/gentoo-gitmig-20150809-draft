@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.270 2006/04/05 22:55:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.271 2006/04/17 18:36:53 carlo Exp $
+
+*kdebase-3.5.2-r1 (17 Apr 2006)
+
+  17 Apr 2006; Carsten Lohrke <carlo@gentoo.org> +kdebase-3.5.2-r1.ebuild:
+  Updated patch set, fixing various issues.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/kdebase-3.5.1-kicker.patch, -files/kwin-3.5.1-systray.patch,
