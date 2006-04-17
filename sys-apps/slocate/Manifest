@@ -1,37 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 55c33a42a024fc98eb6151e2c401c62e ChangeLog 8075
-RMD160 46980a7e89e07f1c2be781b729f271fc6da36a7f ChangeLog 8075
-SHA256 cd067f9ef8c24053c3ceea98ff7669d5b2c42fc2f84d80a2fe4102fb0d075502 ChangeLog 8075
+MD5 b69c845d4de4f0469ccd15abcd4e43a6 ChangeLog 8176
 MD5 4109d0757229d079e30f8ea33b676f00 files/digest-slocate-2.7-r7 211
-RMD160 5d9e294ec1a71d4b301364ba63595b661b532612 files/digest-slocate-2.7-r7 211
-SHA256 24391d142dca36313aad503d4bfedce7d3b26db888096d21ef6c2aeaed130e5f files/digest-slocate-2.7-r7 211
 MD5 7c430ab5a8d8e7fb8fbb4d6665f4a560 files/digest-slocate-2.7-r8 569
-RMD160 90f5c9d8fe6643fbf9b2dd236e7c71428d43aaa7 files/digest-slocate-2.7-r8 569
-SHA256 2413b09678d3b38cf62fd8db526fbfb3853a838c2765ff96c80bb9af433fdbcc files/digest-slocate-2.7-r8 569
 MD5 6cd691d75d501eb87ed12cf31c1e1ff6 files/slocate-2.7-bounds.patch 305
-RMD160 df8f220cdf25d98e2fa9fd0e054b2151b3a4b1ad files/slocate-2.7-bounds.patch 305
-SHA256 59ce3339cacaa817d65031fae80c0bd96962f01915511a096e47fafa295d5e8f files/slocate-2.7-bounds.patch 305
 MD5 798bd427c87de3cfdb9ecd6854f2e56b files/slocate-2.7-really-long-paths.patch 538
-RMD160 d592621e92a5fd3c5e15e64fad4c307eddbdfb86 files/slocate-2.7-really-long-paths.patch 538
-SHA256 3d2ab6ec4cbb2b87a358e93018e6f77f6bbad18eaffbd47d8b6acdec20480e83 files/slocate-2.7-really-long-paths.patch 538
 MD5 708503ec255083a2b20b230070147a62 files/updatedb.conf 567
-RMD160 021353a0cf3c57d904765f96f03148cd5cfbb0c3 files/updatedb.conf 567
-SHA256 cac29ac9c8ae30606ed40f66cb0c465a821e4f481f38640c09d0157ea0422eb9 files/updatedb.conf 567
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
-SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 MD5 1711c302c7546e0a7210bce15849fa43 slocate-2.7-r7.ebuild 2323
-RMD160 aec5124784c999fac4500594b750885ccb0bec31 slocate-2.7-r7.ebuild 2323
-SHA256 2513a42414f13f26832dd868a20b47cc1489b92b48f788bd3d6189eeb080b7aa slocate-2.7-r7.ebuild 2323
-MD5 9f4c8e827817cd061113f02ad484ea51 slocate-2.7-r8.ebuild 2772
-RMD160 d5a89c3eaf2de8995d3fdb6ca118b3d57c08c931 slocate-2.7-r8.ebuild 2772
-SHA256 e245b9c328e36f4ad43098020b23c34b95a637f2cea9c5080b5e815a87acbe96 slocate-2.7-r8.ebuild 2772
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEQ95XFdQwWVoAgN4RAjkpAJ40wjZJHeb8aezVoHrypY3M0XootACg5R5Q
-NIRa/Qz8hOqbNY+m8kVHNU8=
-=4Ldz
------END PGP SIGNATURE-----
+MD5 d27d9020fc6dfdcd4f6730e62335c067 slocate-2.7-r8.ebuild 2768
