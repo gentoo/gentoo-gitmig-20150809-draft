@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/chemtool
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.12 2006/04/13 21:23:54 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.13 2006/04/17 13:52:54 markusle Exp $
+
+*chemtool-1.6.9-r1 (17 Apr 2006)
+
+  17 Apr 2006; Markus Dittrich <markusle@gentoo.org>
+  +chemtool-1.6.9-r1.ebuild:
+  Removed unnecessary parts which installed files into /. 
+  This fixes bug #130238.
 
   08 Apr 2006; Markus Dittrich <markusle@gentoo.org> 
   +chemtool-1.6.9.ebuild:
