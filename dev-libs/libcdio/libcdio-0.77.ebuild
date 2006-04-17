@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.77.ebuild,v 1.3 2006/03/30 18:28:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.77.ebuild,v 1.4 2006/04/17 14:30:40 flameeyes Exp $
 
 inherit libtool autotools
 
@@ -18,6 +18,8 @@ RDEPEND="cddb? ( >=media-libs/libcddb-1.0.1 )
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
+
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
