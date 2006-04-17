@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/vdr-analogtv-0.9.37.ebuild,v 1.1 2006/03/05 12:08:57 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/vdr-analogtv-0.9.37.ebuild,v 1.2 2006/04/17 16:36:21 zzam Exp $
 
 inherit vdr-plugin
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.akool.homepage.t-online.de/analogtv/download/vdr-${VDRPLUGIN
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.2.6
@@ -55,7 +55,7 @@ src_install()
 	cd ${S}/rte/mp1e
 	doman mp1e.1
 	docinto mp1e
-	dodoc COPYING BUGS ChangeLog
+	dodoc BUGS ChangeLog
 	insinto /usr/bin
 	dobin mp1e
 }
