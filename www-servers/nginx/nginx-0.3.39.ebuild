@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.3.38.ebuild,v 1.1 2006/04/14 09:46:08 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.3.39.ebuild,v 1.1 2006/04/17 21:36:27 voxus Exp $
 
 inherit eutils
 
