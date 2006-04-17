@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-analogtv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/ChangeLog,v 1.2 2006/04/17 16:36:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/ChangeLog,v 1.3 2006/04/17 17:17:57 zzam Exp $
+
+  17 Apr 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-analogtv-0.9.37.ebuild:
+  Now inherits eutils.eclass
 
   17 Apr 2006; Matthias Schwarzott <zzam@gentoo.org>
   vdr-analogtv-0.9.37.ebuild:

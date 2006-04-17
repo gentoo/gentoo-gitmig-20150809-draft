@@ -1,8 +1,8 @@
 # Copyright 2004-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-screenshot/vdr-screenshot-0.0.7.ebuild,v 1.1 2006/02/03 11:15:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-screenshot/vdr-screenshot-0.0.7.ebuild,v 1.2 2006/04/17 17:12:57 zzam Exp $
 
-inherit vdr-plugin
+inherit vdr-plugin eutils
 
 DESCRIPTION="Video Disk Recorder Screenshot PlugIn"
 HOMEPAGE="http://www.joachim-wilke.de/vdr.htm"

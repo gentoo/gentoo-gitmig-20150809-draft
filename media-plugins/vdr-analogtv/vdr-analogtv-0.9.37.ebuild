@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/vdr-analogtv-0.9.37.ebuild,v 1.2 2006/04/17 16:36:21 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/vdr-analogtv-0.9.37.ebuild,v 1.3 2006/04/17 17:17:57 zzam Exp $
 
-inherit vdr-plugin
+inherit vdr-plugin eutils
 
 #S=${WORKDIR}/${VDRPLUGIN}-${PV}
 DESCRIPTION="Video Disk Recorder ${VDRPLUGIN} Plugin"
