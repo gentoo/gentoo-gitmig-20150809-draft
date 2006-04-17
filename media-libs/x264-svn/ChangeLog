@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/x264-svn
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.19 2006/04/17 03:48:01 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.20 2006/04/17 09:04:54 dertobi123 Exp $
+
+  17 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  x264-svn-20060409.ebuild:
+  ppc stable, bug #127969
 
   17 Apr 2006; Joshua Jackson <tsunam@gentoo.org> x264-svn-20060409.ebuild:
   Stable on x86 for security bug #127969
