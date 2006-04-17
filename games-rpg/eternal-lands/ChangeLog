@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/eternal-lands
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.13 2006/04/17 19:54:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.14 2006/04/17 19:55:18 wolf31o2 Exp $
+
+  17 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  eternal-lands-1.2.0_p1-r1.ebuild:
+  Dependency update: media-libs/alut -> media-libs/freealut.
 
   17 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   eternal-lands-1.2.0_p1.ebuild:
