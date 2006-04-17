@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fdfd6c6eaba050ed0621a20bef32a503 ChangeLog 1174
 RMD160 7af2cfae4d438966aeb6a9fc99b6eec582d99c13 ChangeLog 1174
 SHA256 413fe3652bad4e3fd5d2aedd6c9ba6f1a8414c94dffe292cacfd1a19f5dd2f68 ChangeLog 1174
@@ -10,3 +13,10 @@ SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata
 MD5 7d359845d5f54af60de068f082b68eb8 ruby-postgres-0.7.1.ebuild 582
 RMD160 e84e3261ca6093c94cf48b9310d3bbe41cca7213 ruby-postgres-0.7.1.ebuild 582
 SHA256 99f702c5218f7fbc0fec0a1927d8396bed80053c1f259c8f8bd331a78faaf7bd ruby-postgres-0.7.1.ebuild 582
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQ9mJAiZjviIA2XgRAleRAKDG1jH+ePne6sSvleALJGdhEvqNLACfdgbZ
+ZV85w0jlme0LbTUXz1o+oaE=
+=zF6k
+-----END PGP SIGNATURE-----
