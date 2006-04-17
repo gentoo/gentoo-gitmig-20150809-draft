@@ -1,8 +1,22 @@
-MD5 ae62e75c6221a0bd17ef90eb0cf1e978 ChangeLog 1313
-MD5 dc3df7e8504c15fb7558f1f2ec5a8277 files/digest-vdr-zaphistory-0.9.1 250
-MD5 298e55ff27ac071695910c28221eace1 files/digest-vdr-zaphistory-0.9.2 250
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d0b5ffeb220c0402bcc119db00e98fac ChangeLog 1454
+RMD160 f02dc71f4d74a66ff24033e61041944aae28424c ChangeLog 1454
+SHA256 6086d3671613e10101ffe542f58bd3d1f4650c2c2908585d7bdb4676971136ea ChangeLog 1454
 MD5 490a9e11d397116e381c2b6dc1fb0626 files/digest-vdr-zaphistory-0.9.4 68
+RMD160 5c9c7dbcc0f7255a49a483dd5a230eb3b5d9c7e9 files/digest-vdr-zaphistory-0.9.4 68
+SHA256 52cef801c9004cceb082a1648b773fc70f0998fa46fee05656f288ec7098e90d files/digest-vdr-zaphistory-0.9.4 68
 MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
-MD5 056bc41b29f5ee36b18bd5ef8e000241 vdr-zaphistory-0.9.1.ebuild 562
-MD5 be5c0831f42322f41fb9fd4524128e15 vdr-zaphistory-0.9.2.ebuild 562
+RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
+SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
 MD5 bf9d55d1103a961270c26d40e0e82ee9 vdr-zaphistory-0.9.4.ebuild 562
+RMD160 b80341044020566e6a021950af13298619919c3b vdr-zaphistory-0.9.4.ebuild 562
+SHA256 14a237a360a01ca90c0b8dfb11cc648604d68231334745f08fee4567f3d91a9a vdr-zaphistory-0.9.4.ebuild 562
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQ3hhZfSl1Kp5KmoRAgQ/AJ9Q19GJgZVjXUDRU1q/EcxvWh6JFgCeKyJb
+puyLDg+rgpHHIAGLFDAnVZ0=
+=PcZD
+-----END PGP SIGNATURE-----
