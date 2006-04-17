@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/facets
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/ChangeLog,v 1.8 2006/04/17 23:31:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/ChangeLog,v 1.9 2006/04/17 23:40:09 caleb Exp $
+
+  17 Apr 2006; Caleb Tennis <caleb@gentoo.org> -facets-0.7.2.ebuild,
+  -facets-20051030.ebuild:
+  remove old versions
 
 *facets-1.0.3 (17 Apr 2006)
 
