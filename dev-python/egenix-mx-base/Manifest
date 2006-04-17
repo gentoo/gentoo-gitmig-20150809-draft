@@ -1,6 +1,28 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b5d0da9073ae12d4ee67e78f07a24dde ChangeLog 3761
+RMD160 7f842b78e1bdcb37de1390a7a98ac0d69233c339 ChangeLog 3761
+SHA256 03ac43854ba69f1fd20ae13e7995e87cbc5f8f604c67e37188f8f254ed917b20 ChangeLog 3761
 MD5 f36b67167f0b07894763ab742845d3b9 egenix-mx-base-2.0.5.ebuild 794
-MD5 7c8c4c04eb76d3e2436cb0e9c6f266c2 ChangeLog 3648
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 35bae7be436fa7ddcabcb235af6e5a46 egenix-mx-base-2.0.6.ebuild 805
+RMD160 47d9bae7e48861ebcbfee81050c6c831c1cd54fa egenix-mx-base-2.0.5.ebuild 794
+SHA256 ad342cebd823a5d05b409e4e5809c3e69c1c2ffb1f4a004d8a599798f7e8671c egenix-mx-base-2.0.5.ebuild 794
+MD5 bc4b18cafec438a07b246e657e3ae2d2 egenix-mx-base-2.0.6.ebuild 818
+RMD160 162a0922af28d3faf3c20b1197f781a39bea1158 egenix-mx-base-2.0.6.ebuild 818
+SHA256 43c4e925a6e448956ef6b7f489dcd7ab960a60ed6527dd9c36c1622ef4879cfd egenix-mx-base-2.0.6.ebuild 818
 MD5 af47a948e9145473f867071766ddee18 files/digest-egenix-mx-base-2.0.5 72
+RMD160 9a2f8caf0c313649e6eca9dcffc6e32f713d46fc files/digest-egenix-mx-base-2.0.5 72
+SHA256 860bcdc1fd9f3bcc514a42c9f61b34d3d73e61c822fb85e17b0307a53b6bcee3 files/digest-egenix-mx-base-2.0.5 72
 MD5 678bcf931e0d79b1625885bc71dcba7a files/digest-egenix-mx-base-2.0.6 72
+RMD160 ac92cdabe00b3e44581eaa5963fe2d5bb16d8f1f files/digest-egenix-mx-base-2.0.6 72
+SHA256 32fcde29a92a34fdb61a97f39c049a4a028736f1e78105009e138cc22eb1d1e1 files/digest-egenix-mx-base-2.0.6 72
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
+SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQ9JBAiZjviIA2XgRAjSGAKCYoghXUsbi/q4gDGwjGHXeDn5HHgCgrVpF
+poYCS06XzxotBE5M8dCBPnM=
+=mvjk
+-----END PGP SIGNATURE-----
