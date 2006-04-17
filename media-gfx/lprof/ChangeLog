@@ -1,6 +1,17 @@
 # ChangeLog for media-gfx/lprof
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/lprof/ChangeLog,v 1.6 2005/07/27 13:20:04 blubb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/lprof/ChangeLog,v 1.7 2006/04/17 19:57:11 genstef Exp $
+
+*lprof-1.11.3.1 (17 Apr 2006)
+
+  17 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/lprof-1.11.3.1-gcc4.1fix.patch,
+  +files/lprof-1.11.3.1-noincludehint.patch, +lprof-1.11.3.1.ebuild:
+  Version bump thanks to Hal Engel <hvengel@astound.net>, Colin Bennett
+  <colin@gibibit.com>, Chris Smith <chris@realcomputerguy.com>, Paul de Vries
+  <phsdv@tiscali.fr>, Brice Studer <brice@creao.fr>, Martin Mokrejs
+  <mmokrejs@ribosome.natur.cuni.cz> and rob miller <rob@janerob.com> as well
+  as vanquirius and metalgod in bug 103779
 
   27 Jul 2005; Simon Stelling <blubb@gentoo.org> lprof-1.09.ebuild:
   added ~amd64 keyword
