@@ -1,0 +1,366 @@
+--- kdelibs/kate/part/katedocument.cpp	2006/01/08 19:00:12	495724
++++ kdelibs/kate/part/katedocument.cpp	2006/04/02 12:12:26	525537
+@@ -699,6 +699,10 @@
+ 
+   bool replacetabs = ( config()->configFlags() & KateDocumentConfig::cfReplaceTabsDyn && ! m_isInUndo );
+   uint tw = config()->tabWidth();
++  uint insertPosExpanded = insertPos;
++  KateTextLine::Ptr l = m_buffer->line( line );
++  if (l != 0)
++    insertPosExpanded = l->cursorX( insertPos, tw );
+ 
+   for (uint pos = 0; pos < len; pos++)
+   {
+@@ -706,28 +710,30 @@
+ 
+     if (ch == '\n')
+     {
++      editInsertText (line, insertPos, buf);
++
+       if ( !blockwise )
+       {
+-        editInsertText (line, insertPos, buf);
+         editWrapLine (line, insertPos + buf.length());
++        insertPos = insertPosExpanded = 0;
+       }
+       else
+       {
+-        editInsertText (line, col, buf);
+-
+         if ( line == lastLine() )
+-          editWrapLine (line, col + buf.length());
++          editWrapLine (line, insertPos + buf.length());
+       }
+ 
+       line++;
+-      insertPos = 0;
+       buf.truncate(0);
++      l = m_buffer->line( line );
++      if (l)
++        insertPosExpanded = l->cursorX( insertPos, tw );
+     }
+     else
+     {
+       if ( replacetabs && ch == '\t' )
+       {
+-        uint tr = tw - ( ((blockwise?col:insertPos)+buf.length())%tw ); //###
++        uint tr = tw - ( insertPosExpanded+buf.length() )%tw;
+         for ( uint i=0; i < tr; i++ )
+           buf += ' ';
+       }
+@@ -736,10 +742,7 @@
+     }
+   }
+ 
+-  if ( !blockwise )
+-    editInsertText (line, insertPos, buf);
+-  else
+-    editInsertText (line, col, buf);
++  editInsertText (line, insertPos, buf);
+ 
+   editEnd ();
+   emit textInserted(line,insertPos);
+@@ -3097,29 +3100,7 @@
+       if (pos < 0 || pos >= (int)colX)
+       {
+         // only spaces on left side of cursor
+-        // search a line with less spaces
+-        int y = line;
+-        while (--y >= 0)
+-        {
+-          // this is save, y <= line, and line was already success
+-          textLine = m_buffer->plainLine(y);
+-
+-          pos = textLine->firstChar();
+-
+-          if (pos >= 0)
+-          {
+-            pos = textLine->cursorX(pos, config()->tabWidth());
+-            if (pos < (int)colX)
+-            {
+-              replaceWithOptimizedSpace(line, col, pos, config()->configFlags());
+-              break;
+-            }
+-          }
+-        }
+-        if (y < 0) {
+-          // FIXME: what shoud we do in this case?
+-          removeText(line, 0, line, col+complement);
+-        }
++        indent( view, line, -1);
+       }
+       else
+         removeText(line, col-1, line, col+complement);
+--- kdelibs/kate/data/ada.xml	2005/07/26 18:54:59	438982
++++ kdelibs/kate/data/ada.xml	2006/04/01 13:39:45	525264
+@@ -73,14 +73,16 @@
+       <context attribute="Normal Text" lineEndContext="#stay" name="Default">
+         <RegExpr attribute="Keyword" context="#stay" String="if " insensitive="TRUE" beginRegion="Region1" firstNonSpace="true"/>
+         <StringDetect attribute="Keyword" context="#stay" String="end if" insensitive="TRUE" endRegion="Region1"/>
+-        <RegExpr attribute="Keyword" context="#stay" String="case " insensitive="TRUE" beginRegion="Region2" firstNonSpace="true"/>
+-        <StringDetect attribute="Keyword" context="#stay" String="end case" insensitive="TRUE" endRegion="Region2"/>
+         <RegExpr attribute="Keyword" context="#stay" String="\sloop\s+" insensitive="TRUE" beginRegion="Region3"/>
+         <RegExpr attribute="Keyword" context="#stay" String="\sloop$" insensitive="TRUE" beginRegion="Region3"/>
+         <StringDetect attribute="Keyword" context="#stay" String="end loop;" insensitive="TRUE" endRegion="Region3"/>
+         <RegExpr attribute="Keyword" context="#stay" String="\sselect\s+" insensitive="TRUE" beginRegion="Region4"/>
+         <RegExpr attribute="Keyword" context="#stay" String="\sselect$" insensitive="TRUE" beginRegion="Region4"/>
+         <StringDetect attribute="Keyword" context="#stay" String="end select;" insensitive="TRUE" endRegion="Region4"/>
++        <RegExpr attribute="Keyword" context="#stay" String="\b(begin|case|record)\b" insensitive="true" beginRegion="Region5"/>
++        <RegExpr attribute="Keyword" context="#stay" String="\bend(?=((\{[^}]*(\}|$)|\(\*.*(\*\)|$))*)([.;\s]|$)|//|$)" insensitive="true" endRegion="Region5"/>
++        <StringDetect attribute="Region Marker" context="Region Marker" String="--  BEGIN" beginRegion="RegionMarker" firstNonSpace="true" />
++        <StringDetect attribute="Region Marker" context="Region Marker" String="--  END" endRegion="RegionMarker" firstNonSpace="true" />
+         <keyword attribute="Keyword" context="#stay" String="keywords"/>
+         <Float attribute="Float" context="#stay"/>
+         <Int attribute="Decimal" context="#stay"/>
+@@ -88,6 +90,7 @@
+         <DetectChar attribute="String" context="String" char="&quot;"/>
+         <Detect2Chars attribute="Comment" context="Comment" char="-" char1="-"/>
+       </context>
++      <context attribute="Region Marker" lineEndContext="#pop" name="Region Marker"/>
+       <context attribute="String" lineEndContext="#pop" name="String">
+         <DetectChar attribute="String" context="#pop" char="&quot;"/>
+       </context>
+@@ -102,6 +105,7 @@
+       <itemData name="Char"        defStyleNum="dsChar" />
+       <itemData name="String"      defStyleNum="dsString" />
+       <itemData name="Comment"     defStyleNum="dsComment" />
++      <itemData name="Region Marker" defStyleNum="dsRegionMarker" />
+     </itemDatas>
+   </highlighting>
+   <general>
+--- kdelibs/kate/data/cpp.xml	2006/01/02 21:02:02	493660
++++ kdelibs/kate/data/cpp.xml	2006/04/01 13:39:45	525264
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE language SYSTEM "language.dtd">
+-<language name="C++" version="1.34" kateversion="2.4" section="Sources" extensions="*.cxx;*.cpp;*.cc;*.C;*.h;*.hh;*.H;*.hxx;*.hpp;*.hcc;*.moc" mimetype="text/x-c++src;text/x-c++hdr;text/x-chdr" priority="9">
++<language name="C++" version="1.36" kateversion="2.4" section="Sources" extensions="*.c++;*.cxx;*.cpp;*.cc;*.C;*.h;*.H;*.h++;*.hxx;*.hpp;*.hcc;*.moc" mimetype="text/x-c++src;text/x-c++hdr;text/x-chdr" priority="9">
+   <highlighting>
+     <list name="keywords">
+       <item> asm </item>
+@@ -31,6 +31,7 @@
+       <item> private </item>
+       <item> protected </item>
+       <item> public </item>
++      <item> qobject_cast </item>
+       <item> reinterpret_cast </item>
+       <item> return </item>
+       <item> sizeof </item>
+@@ -79,6 +80,33 @@
+       <item> Q_OVERRIDE </item>
+       <item> Q_PROPERTY </item>
+       <item> Q_SETS </item>
++      <item> Q_SIGNALS </item>
++      <item> Q_SLOTS </item>
++      <item> Q_FOREACH </item>
++      <item> Q_DECLARE_FLAGS </item>
++      <item> Q_INIT_RESOURCE </item>
++      <item> Q_CLEANUP_RESOURCE </item>
++      <item> Q_GLOBAL_STATIC </item>
++      <item> Q_GLOBAL_STATIC_WITH_ARGS </item>
++      <item> Q_DECLARE_TYPEINFO </item>
++      <item> Q_DECLARE_SHARED </item>
++      <item> Q_DECLARE_FLAGS </item>
++      <item> Q_DECLARE_OPERATORS_FOR_FLAGS </item>
++      <item> Q_FOREVER </item>
++      <item> Q_DECLARE_PRIVATE </item>
++      <item> Q_DECLARE_PUBLIC </item>
++      <item> Q_D </item>
++      <item> Q_Q </item>
++      <item> Q_DISABLE_COPY </item>
++      <item> Q_INTERFACES </item>
++      <item> Q_FLAGS </item>
++      <item> Q_SCRIPTABLE </item>
++      <item> Q_INVOKABLE </item>
++      <item> Q_GADGET </item>
++      <item> Q_ARG </item>
++      <item> Q_RETURN_ARG </item>
++      <item> Q_ASSERT </item>
++      <item> Q_ASSERT_X </item>
+       <item> TRUE </item>
+       <item> FALSE </item>
+       <item> connect </item>
+@@ -87,6 +115,7 @@
+       <item> signals </item>
+       <item> slots </item>
+       <item> foreach </item>
++      <item> forever </item>
+     </list>
+     <list name="types">
+       <item> auto </item>
+--- kdelibs/kate/data/logtalk.xml	2005/07/26 18:54:59	438982
++++ kdelibs/kate/data/logtalk.xml	2006/04/01 13:39:45	525264
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE language SYSTEM "language.dtd">
+ 
+-<language name="Logtalk" version="1.40" kateversion="2.4" section="Sources" extensions="*.lgt;*.config" mimetype="text/x-logtalk" author="Paulo Moura (pmoura@logtalk.org)" license="Artistic License 2.0">
++<language name="Logtalk" version="1.51" kateversion="2.4" section="Sources" extensions="*.lgt;*.config" mimetype="text/x-logtalk" author="Paulo Moura (pmoura@logtalk.org)" license="Artistic License 2.0">
+ 
+ 	<highlighting>
+ 
+@@ -17,11 +17,11 @@
+ 				<!-- Reflection -->
+ 				<RegExpr String = "\b(current_predicate|predicate_property)(?=[(])" attribute = "Built-in" context = "#stay" />
+ 				<!-- DCGs -->
+-				<RegExpr String = "\b(expand_term|phrase)(?=[(])" attribute = "Built-in" context = "#stay" />
++				<RegExpr String = "\b(expand_term|term_expansion|phrase)(?=[(])" attribute = "Built-in" context = "#stay" />
+ 				<!-- Entity -->
+ 				<RegExpr String = "\b(abolish|c(reate|urrent))_(object|protocol|category)(?=[(])" attribute = "Built-in" context = "#stay" />
+ 				<RegExpr String = "\b(object|protocol|category)_property(?=[(])" attribute = "Built-in" context = "#stay" />
+-				<!-- Event handlers -->
++				<!-- Entity relations -->
+ 				<RegExpr String = "\bextends_(object|protocol)(?=[(])" attribute = "Built-in" context = "#stay" />
+ 				<RegExpr String = "\bimplements_protocol(?=[(])" attribute = "Built-in" context = "#stay" />
+ 				<RegExpr String = "\b(instantiates|specializes)_class(?=[(])" attribute = "Built-in" context = "#stay" />
+@@ -48,7 +48,7 @@
+ 				<RegExpr String = "\b(rem|mod|abs|sign)(?=[(])" attribute = "Built-in" context = "#stay" />
+ 				<RegExpr String = "\bfloat(_(integer|fractional)_part)?(?=[(])" attribute = "Built-in" context = "#stay" />
+ 				<RegExpr String = "\b(floor|truncate|round|ceiling)(?=[(])" attribute = "Built-in" context = "#stay" />
+-				<!-- Other arithemtic functors -->
++				<!-- Other arithmetic functors -->
+ 				<RegExpr String = "\b(cos|atan|exp|log|s(in|qrt))(?=[(])" attribute = "Built-in" context = "#stay" />
+ 				<!-- Term testing -->
+ 				<RegExpr String = "\b(var|atom(ic)?|integer|float|compound|n(onvar|umber))(?=[(])" attribute = "Built-in" context = "#stay" />
+@@ -149,15 +149,16 @@
+ 				<!-- Entity directives -->
+ 				<RegExpr String = "\b(category|object|protocol)(?=[(])" attribute = "Directive" context = "entityrelations" beginRegion = "Entity"/>
+ 				<RegExpr String = "\bend_(category|object|protocol)[.]" attribute = "Directive" context = "#pop" endRegion = "Entity" />
++				<RegExpr String = "\bmodule(?=[(])" attribute = "Directive" context = "#pop"/>
+  				<!-- Predicate scope directives -->
+ 				<RegExpr String = "\bp(ublic|r(otected|ivate))(?=[(])" attribute = "Directive" context = "#pop" />
+ 				<!-- Other directives -->
+-				<RegExpr String = "\bencoding(?=[(])" attribute = "Directive" context = "#pop" />
++				<RegExpr String = "\be(ncoding|xport)(?=[(])" attribute = "Directive" context = "#pop" />
+ 			   	<RegExpr String = "\bin(fo|itialization)(?=[(])" attribute = "Directive" context = "#pop" />
+ 				<RegExpr String = "\bdynamic[.]" attribute = "Directive" context = "#pop" />
+-				<RegExpr String = "\b(alias|d(ynamic|iscontiguous)|m(etapredicate|ode|ultifile))(?=[(])" attribute = "Directive" context = "#pop" />
++				<RegExpr String = "\b(alias|d(ynamic|iscontiguous)|meta_predicate|m(etapredicate|ode|ultifile))(?=[(])" attribute = "Directive" context = "#pop" />
+ 				<RegExpr String = "\bop(?=[(])" attribute = "Directive" context = "#pop" />
+-				<RegExpr String = "\b(calls|uses)(?=[(])" attribute = "Directive" context = "#pop" />
++				<RegExpr String = "\b(calls|use(s|_module))(?=[(])" attribute = "Directive" context = "#pop" />
+ 			</context>
+ 
+ 			<context name = "entityrelations" attribute = "Normal" lineEndContext = "#stay" >
+--- kdelibs/kate/data/lua.xml	2005/07/26 18:54:59	438982
++++ kdelibs/kate/data/lua.xml	2006/04/01 13:39:45	525264
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE language SYSTEM "language.dtd">
+-<language name="Lua" version="0.22" kateversion="2.3" section="Scripts" extensions="*.lua" mimetype="text/x-lua">
++<language name="Lua" version="0.23" kateversion="2.3" section="Scripts" extensions="*.lua" mimetype="text/x-lua">
+   <highlighting>
+     <list name="keywords">
+       <item> and </item>
+@@ -19,7 +19,7 @@
+       <item> else </item>
+       <item> or </item>
+       <item> while </item>
+-      <item> elsif </item>
++      <item> elseif </item>
+       <item> in </item>
+       <item> repeat </item>
+     </list>
+--- kdelibs/kate/data/php.xml	2005/09/29 19:26:30	465432
++++ kdelibs/kate/data/php.xml	2006/04/01 13:39:45	525264
+@@ -1,6 +1,12 @@
+ <?xml version="1.0" encoding="UTF-8"?>
++<!--
++	Changes: version 1.25 -> 1.26
++	Date: 26/01/2006
++	Change author: Nicola Gigante
++		Added alternative syntax control structures and named logical operators (and or xor)
++-->
+ <!DOCTYPE language SYSTEM "language.dtd">
+-<language name="PHP/PHP" version="1.25" kateversion="2.4" section="Scripts" extensions="" priority="5" mimetype="" hidden="true">
++<language name="PHP/PHP" version="1.26" kateversion="2.4" section="Scripts" extensions="" priority="5" mimetype="" hidden="true">
+   <highlighting>
+     <list name="control structures">
+       <item>as</item>
+@@ -21,6 +27,11 @@
+       <item>include</item>
+       <item>require_once</item>
+       <item>include_once</item>
++      <item>endif</item>
++      <item>endwhile</item>
++      <item>endfor</item>
++      <item>endforeach</item>
++      <item>endswitch</item>
+     </list>
+     <list name="keywords">
+       <item> abstract </item>
+@@ -42,6 +53,9 @@
+       <item> public </item>
+       <item> throw </item>
+       <item> try </item>
++      <item> and </item>
++      <item> or </item>
++      <item> xor </item>
+ 	<item> var </item>
+ 	<item> __FILE__ </item>
+ 	<item> __LINE__ </item>
+--- kdelibs/kate/data/ruby.xml	2006/02/14 17:22:27	509424
++++ kdelibs/kate/data/ruby.xml	2006/03/28 19:38:13	523673
+@@ -34,7 +34,7 @@
+ -->
+ 
+ <!-- Hold the "language" opening tag on a single line, as mentioned in "language.dtd". -->
+-<language name="Ruby" version="1.17" kateversion="2.4" section="Scripts" extensions="*.rb;*.rxml" mimetype="application/x-ruby" author="Stefan Lang (langstefan@gmx.at), Sebastian Vuorinen (sebastian.vuorinen@helsinki.fi)" license="LGPL">
++<language name="Ruby" version="1.17" kateversion="2.4" section="Scripts" extensions="*.rb;*.rjs;*.rxml" mimetype="application/x-ruby" author="Stefan Lang (langstefan@gmx.at), Sebastian Vuorinen (sebastian.vuorinen@helsinki.fi)" license="LGPL">
+ 	
+ 	<highlighting>
+ 	
+--- kdelibs/kate/part/katedialogs.cpp	2005/12/26 02:23:26	491408
++++ kdelibs/kate/part/katedialogs.cpp	2006/04/06 12:43:37	526985
+@@ -1634,7 +1634,7 @@
+   // Start a KProcess that creates a diff
+   KProcIO *p = new KProcIO();
+   p->setComm( KProcess::All );
+-  *p << "diff" << "-ub" << "-" <<  m_doc->url().path();
++  *p << "diff" << "-u" << "-" <<  m_doc->url().path();
+   connect( p, SIGNAL(processExited(KProcess*)), this, SLOT(slotPDone(KProcess*)) );
+   connect( p, SIGNAL(readReady(KProcIO*)), this, SLOT(slotPRead(KProcIO*)) );
+ 
+@@ -1644,7 +1644,7 @@
+ 
+   uint lastln =  m_doc->numLines();
+   for ( uint l = 0; l <  lastln; l++ )
+-    p->writeStdin(  m_doc->textLine( l ), l < lastln );
++    p->writeStdin( m_doc->textLine( l ) );
+ 
+   p->closeWhenDone();
+ }
+@@ -1656,15 +1656,32 @@
+     m_tmpfile = new KTempFile();
+   // put all the data we have in it
+   QString stmp;
++  bool dataRead = false;
+   while ( p->readln( stmp, false ) > -1 )
++  {
+     *m_tmpfile->textStream() << stmp << endl;
++    dataRead = true;
++  }
+ 
+-  p->ackRead();
++  // dominik: only ackRead(), when we *really* read data, otherwise, this slot
++  // is called initity times, which leads to a crash
++  if( dataRead )
++    p->ackRead();
+ }
+ 
+ void KateModOnHdPrompt::slotPDone( KProcess *p )
+ {
+   setCursor( ArrowCursor );
++  if( ! m_tmpfile )
++  {
++    // dominik: there were only whitespace changes, so that the diff returned by
++    // diff(1) has 0 bytes. So slotPRead() is never called, as there is
++    // no data, so that m_tmpfile was never created and thus is NULL.
++    // NOTE: would be nice, if we could produce a fake-diff, so that kompare
++    //       tells us "The files are identical". Right now, we get an ugly
++    //       "Could not parse diff output".
++    m_tmpfile = new KTempFile();
++  }
+   m_tmpfile->close();
+ 
+   if ( ! p->normalExit() /*|| p->exitStatus()*/ )

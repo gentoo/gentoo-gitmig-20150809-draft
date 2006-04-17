@@ -1,0 +1,446 @@
+--- kdelibs/kparts/factory.cpp	2005/09/29 09:47:40	465272
++++ kdelibs/kparts/factory.cpp	2006/04/05 22:48:19	526923
+@@ -64,7 +64,7 @@
+     if ( !factory )
+         return 0;
+     KParts::Factory *pfactory = dynamic_cast<KParts::Factory *>( factory );
+-    if ( !factory )
++    if ( !pfactory )
+         return 0;
+     return pfactory->partInstance();
+ }
+--- kdelibs/kdeui/kcmodule.cpp	2005/09/29 09:47:40	465272
++++ kdelibs/kdeui/kcmodule.cpp	2006/04/05 17:22:08	526823
+@@ -79,7 +79,12 @@
+ {
+     init();
+     d->_instance = instance;
+-    KGlobal::locale()->insertCatalogue(instance->instanceName());
++
++    if (instance)
++    {
++        KGlobal::locale()->insertCatalogue(instance->instanceName());
++    }
++
+     d->_hasOwnInstance = false;
+     KGlobal::setActiveInstance(this->instance());
+ }
+--- kdelibs/kdeui/kcolordialog.cpp	2006/02/14 13:21:59	509356
++++ kdelibs/kdeui/kcolordialog.cpp	2006/04/07 13:50:45	527264
+@@ -242,7 +242,7 @@
+ 		p = (uint *) image.scanLine( ySize - s - 1 );
+ 		for( h = 0; h < xSize; h++ )
+ 		{
+-			col.setHsv( 359*h/(xSize-1), 255*s/(ySize-1), 192 );
++			col.setHsv( 359*h/(xSize-1), 255*s/((ySize == 1) ? 1 : ySize-1), 192 );
+ 			*p = col.rgb();
+ 			p++;
+ 		}
+@@ -305,7 +305,7 @@
+ 
+ 			for( int x = 0; x < xSize; x++ )
+ 			{
+-				col.setHsv( _hue, _sat, 255*x/(xSize-1) );
++				col.setHsv( _hue, _sat, 255*x/((xSize == 1) ? 1 : xSize-1) );
+ 				rgb = col.rgb();
+ 				*p++ = rgb;
+ 			}
+@@ -317,7 +317,7 @@
+ 		for ( int v = 0; v < ySize; v++ )
+ 		{
+ 			p = (uint *) image.scanLine( ySize - v - 1 );
+-			col.setHsv( _hue, _sat, 255*v/(ySize-1) );
++			col.setHsv( _hue, _sat, 255*v/((ySize == 1) ? 1 : ySize-1) );
+ 			rgb = col.rgb();
+ 			for ( int i = 0; i < xSize; i++ )
+ 				*p++ = rgb;
+@@ -426,7 +426,7 @@
+ 
+ void KColorCells::mouseMoveEvent( QMouseEvent *e )
+ {
+-    if( !(e->state() && LeftButton)) return;
++    if( !(e->state() & LeftButton)) return;
+ 
+     if(inMouse) {
+         int delay = KGlobalSettings::dndEventDelay();
+@@ -530,7 +530,7 @@
+ void KColorPatch::mouseMoveEvent( QMouseEvent *e )
+ {
+         // Drag color object
+-        if( !(e->state() && LeftButton)) return;
++        if( !(e->state() & LeftButton)) return;
+ 	KColorDrag *d = new KColorDrag( color, this);
+ 	d->dragCopy();
+ }
+@@ -1253,30 +1253,26 @@
+ void
+ KColorDialog::readSettings()
+ {
+-  KConfig* config = KGlobal::config();
++  KConfigGroup group( KGlobal::config(), "Colors" );
+ 
+-  QString oldgroup = config->group();
+-
+-  config->setGroup("Colors");
+-  QString palette = config->readEntry("CurrentPalette");
++  QString palette = group.readEntry("CurrentPalette");
+   d->table->setPalette(palette);
+-  config->setGroup( oldgroup );
+ }
+ 
+ void
+ KColorDialog::slotWriteSettings()
+ {
+-  KConfig* config = KGlobal::config();
+-  config->setGroup("Colors");
++  KConfigGroup group( KGlobal::config(), "Colors" );
++
+   QString palette = d->table->palette();
+-  if (!config->hasDefault("CurrentPalette") &&
++  if (!group.hasDefault("CurrentPalette") &&
+       (d->table->palette() == d->originalPalette))
+   {
+-     config->revertToDefault("CurrentPalette");
++     group.revertToDefault("CurrentPalette");
+   }
+   else
+   {
+-     config->writeEntry("CurrentPalette", d->table->palette());
++     group.writeEntry("CurrentPalette", d->table->palette());
+   }
+ }
+ 
+--- kdelibs/kdeui/kdialogbase.cpp	2005/09/29 09:47:40	465272
++++ kdelibs/kdeui/kdialogbase.cpp	2006/04/05 16:45:10	526809
+@@ -668,7 +668,7 @@
+     return;
+   }
+ 
+-  if( style < 0 || style > ActionStyleMAX ) { style = ActionStyle0; }
++  if( style < 0 || style >= ActionStyleMAX ) { style = ActionStyle0; }
+   d->mButton.style = style;
+ 
+   const int *layout;
+--- kdelibs/kdecore/kglobalaccel_x11.cpp	2005/09/29 09:47:40	465272
++++ kdelibs/kdecore/kglobalaccel_x11.cpp	2006/04/09 09:06:52	527729
+@@ -212,7 +212,7 @@
+ 		if( failed ) {
+ 			kdDebug(125) << "grab failed!\n";
+ 			for( uint m = 0; m <= 0xff; m++ ) {
+-				if( m & keyModMaskX == 0 )
++				if(( m & keyModMaskX ) == 0 )
+ 					XUngrabKey( qt_xdisplay(), keyCodeX, keyModX | m, qt_xrootwin() );
+ 				}
+                 }
+--- kdelibs/kdecore/network/kresolver.cpp	2006/02/26 18:55:08	513854
++++ kdelibs/kdecore/network/kresolver.cpp	2006/04/13 14:57:25	529483
+@@ -609,7 +609,7 @@
+ 
+ QStrList KResolver::protocolName(int protonum)
+ {
+-  struct protoent *pe;
++  struct protoent *pe = 0L;
+ #ifndef HAVE_GETPROTOBYNAME_R
+   QMutexLocker locker(&getXXbyYYmutex);
+ 
+@@ -628,6 +628,7 @@
+       if (getprotobynumber_r(protonum, &protobuf, buf, buflen, &pe) == ERANGE)
+ # endif
+ 	{
++          pe = 0L;
+ 	  buflen += 1024;
+ 	  delete [] buf;
+ 	}
+@@ -655,7 +656,7 @@
+ 
+ QStrList KResolver::protocolName(const char *protoname)
+ {
+-  struct protoent *pe;
++  struct protoent *pe = 0L;
+ #ifndef HAVE_GETPROTOBYNAME_R
+   QMutexLocker locker(&getXXbyYYmutex);
+ 
+@@ -674,6 +675,7 @@
+       if (getprotobyname_r(protoname, &protobuf, buf, buflen, &pe) == ERANGE)
+ # endif
+ 	{
++          pe = 0L;
+ 	  buflen += 1024;
+ 	  delete [] buf;
+ 	}
+@@ -701,7 +703,7 @@
+ 
+ int KResolver::protocolNumber(const char *protoname)
+ {
+-  struct protoent *pe;
++  struct protoent *pe = 0L;
+ #ifndef HAVE_GETPROTOBYNAME_R
+   QMutexLocker locker(&getXXbyYYmutex);
+ 
+@@ -720,6 +722,7 @@
+       if (getprotobyname_r(protoname, &protobuf, buf, buflen, &pe) == ERANGE)
+ # endif
+ 	{
++          pe = 0L;
+ 	  buflen += 1024;
+ 	  delete [] buf;
+ 	}
+@@ -743,7 +746,7 @@
+ 
+ int KResolver::servicePort(const char *servname, const char *protoname)
+ {
+-  struct servent *se;
++  struct servent *se = 0L;
+ #ifndef HAVE_GETSERVBYNAME_R
+   QMutexLocker locker(&getXXbyYYmutex);
+ 
+@@ -762,6 +765,7 @@
+       if (getservbyname_r(servname, protoname, &servbuf, buf, buflen, &se) == ERANGE)
+ # endif
+ 	{
++          se = 0L;
+ 	  buflen += 1024;
+ 	  delete [] buf;
+ 	}
+@@ -785,7 +789,7 @@
+ 
+ QStrList KResolver::serviceName(const char* servname, const char *protoname)
+ {
+-  struct servent *se;
++  struct servent *se = 0L;
+ #ifndef HAVE_GETSERVBYNAME_R
+   QMutexLocker locker(&getXXbyYYmutex);
+ 
+@@ -804,6 +808,7 @@
+       if (getservbyname_r(servname, protoname, &servbuf, buf, buflen, &se) == ERANGE)
+ # endif
+ 	{
++          se = 0L;
+ 	  buflen += 1024;
+ 	  delete [] buf;
+ 	}
+@@ -831,7 +836,7 @@
+ 
+ QStrList KResolver::serviceName(int port, const char *protoname)
+ {
+-  struct servent *se;
++  struct servent *se = 0L;
+ #ifndef HAVE_GETSERVBYPORT_R
+   QMutexLocker locker(&getXXbyYYmutex);
+ 
+@@ -850,6 +855,7 @@
+       if (getservbyport_r(port, protoname, &servbuf, buf, buflen, &se) == ERANGE)
+ # endif
+ 	{
++          se = 0L;
+ 	  buflen += 1024;
+ 	  delete [] buf;
+ 	}
+--- kdelibs/kdecore/ktempdir.cpp	2006/03/01 10:20:31	514742
++++ kdelibs/kdecore/ktempdir.cpp	2006/04/13 14:57:25	529483
+@@ -107,6 +107,8 @@
+ {
+    if (bAutoDelete)
+       unlink();
++
++   delete d;
+ }
+ 
+ int
+--- kdelibs/kdecore/netsupp.cpp	2005/09/29 09:47:40	465272
++++ kdelibs/kdecore/netsupp.cpp	2006/04/13 14:57:25	529483
+@@ -352,15 +352,9 @@
+   return 0;
+ 
+  out:
+-  // Normal exit of the function
+-  if (err == 0)
+-    *result = res;
+-  else
+-    {
+-      if (res->data != NULL)
+-	freeaddrinfo(res->data);
+-      free(res);
+-    }
++  if (res->data != NULL)
++      freeaddrinfo(res->data);
++  free(res);
+   return err;
+ }
+ 
+--- kdelibs/kdeui/kdockwidget.cpp	2005/09/29 09:47:40	465272
++++ kdelibs/kdeui/kdockwidget.cpp	2006/04/13 21:35:27	529609
+@@ -762,9 +762,11 @@
+ void KDockWidget::setEnableDocking( int pos )
+ {
+   eDocking = pos;
+-  if( header && header->inherits( "KDockWidgetHeader" ) )
+-     ( ( KDockWidgetHeader* ) header )->showUndockButton( pos & DockDesktop );
+-  updateHeader();
++  if( header ) {
++     if (header->inherits( "KDockWidgetHeader" ) )
++         ( ( KDockWidgetHeader* ) header )->showUndockButton( pos & DockDesktop );
++    updateHeader();
++  }
+ }
+ 
+ void KDockWidget::updateHeader()
+--- kdelibs/kdecore/netwm_def.h	2006/01/06 15:07:18	494899
++++ kdelibs/kdecore/netwm_def.h	2006/04/11 12:48:50	528573
+@@ -606,6 +606,20 @@
+         FromApplication,
+         FromTool
+     };
++    
++    /**
++     Compares two X timestamps, taking into account wrapping and 64bit architectures.
++     Return value is like with strcmp(), 0 for equal, -1 for time1 < time2, 1 for time1 > time2.
++     @since 3.5.3
++    */
++    static int timestampCompare( unsigned long time1, unsigned long time2 );
++    /**
++     Returns a difference of two X timestamps, time2 - time1, where time2 must be later than time1,
++     as returned by timestampCompare().
++     @since 3.5.3
++    */
++    static int timestampDiff( unsigned long time1_, unsigned long time2_ );
++
+ };
+ 
+ 
+--- kdelibs/kdecore/kapplication.cpp	2006/03/15 13:08:02	518842
++++ kdelibs/kdecore/kapplication.cpp	2006/04/11 12:48:50	528573
+@@ -960,14 +960,13 @@
+ static int my_system (const char *command) {
+    int pid, status;
+ 
+-   QApplication::flushX();
+    pid = fork();
+    if (pid == -1)
+       return -1;
+    if (pid == 0) {
+       const char* shell = "/bin/sh";
+       execl(shell, shell, "-c", command, (void *)0);
+-      ::exit(127);
++      ::_exit(127);
+    }
+    do {
+       if (waitpid(pid, &status, 0) == -1) {
+@@ -1684,7 +1683,7 @@
+                     && _event->xclient.data.l[ 3 ] != 0 )
+                     {
+                     if( qt_x_user_time == 0
+-                        || ( _event->xclient.data.l[ 3 ] - qt_x_user_time ) < 100000U )
++                        || NET::timestampCompare( _event->xclient.data.l[ 3 ], qt_x_user_time ) > 0 )
+                         { // and the timestamp looks reasonable
+                         qt_x_user_time = _event->xclient.data.l[ 3 ]; // update our qt_x_user_time from it
+                         }
+@@ -1692,7 +1691,7 @@
+                 else // normal DND, only needed until Qt updates qt_x_user_time from XdndDrop
+                     {
+                     if( qt_x_user_time == 0
+-                        || ( _event->xclient.data.l[ 2 ] - qt_x_user_time ) < 100000U )
++                        || NET::timestampCompare( _event->xclient.data.l[ 2 ], qt_x_user_time ) > 0 )
+                         { // the timestamp looks reasonable
+                         qt_x_user_time = _event->xclient.data.l[ 2 ]; // update our qt_x_user_time from it
+                         }
+@@ -1812,7 +1811,7 @@
+         XDestroyWindow( qt_xdisplay(), w );
+     }
+     if( qt_x_user_time == 0
+-        || time - qt_x_user_time < 1000000000U ) // check time > qt_x_user_time, handle wrapping
++        || NET::timestampCompare( time, qt_x_user_time ) > 0 ) // check time > qt_x_user_time
+         qt_x_user_time = time;
+ #endif
+ }
+--- kdelibs/kdecore/kprocess.cpp	2006/01/29 09:42:40	503447
++++ kdelibs/kdecore/kprocess.cpp	2006/03/30 22:04:03	524676
+@@ -355,8 +355,6 @@
+   if (pipe(fd))
+      fd[0] = fd[1] = -1; // Pipe failed.. continue
+ 
+-  QApplication::flushX();
+-
+   // we don't use vfork() because
+   // - it has unclear semantics and is not standardized
+   // - we do way too much magic in the child
+@@ -768,7 +766,7 @@
+     d->shell = shell;
+   else
+ // #ifdef NON_FREE // ... as they ship non-POSIX /bin/sh
+-#if !defined(__linux__) && !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__GNU__)
++#if !defined(__linux__) && !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__GNU__) && !defined(__DragonFly__)
+   // Solaris POSIX ...
+   if (!access( "/usr/xpg4/bin/sh", X_OK ))
+     d->shell = "/usr/xpg4/bin/sh";
+--- kdelibs/kdecore/kxerrorhandler.cpp	2005/07/26 18:54:59	438982
++++ kdelibs/kdecore/kxerrorhandler.cpp	2006/04/11 13:28:02	528591
+@@ -28,6 +28,7 @@
+ #include "kxerrorhandler.h"
+ #include <assert.h>
+ #include <stdlib.h>
++#include <netwm_def.h>
+ 
+ KXErrorHandler** KXErrorHandler::handlers = NULL;
+ int KXErrorHandler::pos = 0;
+@@ -101,13 +102,14 @@
+ int KXErrorHandler::handle( Display* dpy, XErrorEvent* e )
+     {
+     if( dpy == display
+-        && e->serial - first_request < 1000000000 ) // e->serial > first_request, with wrapping
++        // e->serial >= first_request , compare like X timestamps to handle wrapping
++        && NET::timestampCompare( e->serial, first_request ) >= 0 )
+         { // it's for us
+         //qDebug( "Handling: %p", static_cast< void* >( this ));
+-        if( user_handler1 != NULL )
+-            was_error |= user_handler1( e->request_code, e->error_code, e->resourceid );
+-        else if( user_handler2 != NULL )
+-            was_error |= ( user_handler2( dpy, e ) != 0 );
++        if( user_handler1 != NULL && user_handler1( e->request_code, e->error_code, e->resourceid ))
++            was_error = true;
++        if( user_handler2 != NULL && user_handler2( dpy, e ) != 0 )
++            was_error = true;
+         else // no handler set, simply set that there was an error
+             was_error = true;
+         return 0;
+--- kdelibs/kdecore/netwm.cpp	2005/07/26 18:54:59	438982
++++ kdelibs/kdecore/netwm.cpp	2006/04/11 12:48:50	528573
+@@ -4401,4 +4401,38 @@
+ void NETWinInfo::virtual_hook( int, void* )
+ { /*BASE::virtual_hook( id, data );*/ }
+ 
++// Functions for X timestamp comparing. For Time being 32bit they're fairly simple
++// (the #if 0 part), but on 64bit architectures Time is 64bit unsigned long,
++// so there special care needs to be taken to always use only the lower 32bits.
++#if 0
++int NET::timestampCompare( Time time1, Time time2 ) // like strcmp()
++    {
++    if( time1 == time2 )
++        return 0;
++    return ( time1 - time2 ) < 0x7fffffffU ? 1 : -1; // time1 > time2 -> 1, handle wrapping
++    }
++
++Time NET::timestampDiff( Time time1, Time time2 ) // returns time2 - time1
++    { // no need to handle wrapping?
++    return time2 - time1;
++    }
++#else
++int NET::timestampCompare( unsigned long time1_, unsigned long time2_ ) // like strcmp()
++    {
++    Q_UINT32 time1 = time1_;
++    Q_UINT32 time2 = time2_;
++    if( time1 == time2 )
++        return 0;
++    return Q_UINT32( time1 - time2 ) < 0x7fffffffU ? 1 : -1; // time1 > time2 -> 1, handle wrapping
++    }
++
++int NET::timestampDiff( unsigned long time1_, unsigned long time2_ ) // returns time2 - time1
++    { // no need to handle wrapping?
++    Q_UINT32 time1 = time1_;
++    Q_UINT32 time2 = time2_;
++    return Q_UINT32( time2 - time1 );
++    }
++#endif
++
++
+ #endif

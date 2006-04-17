@@ -1,0 +1,177 @@
+--- kdelibs/kio/kio/job.cpp	2006/02/27 23:07:01	514315
++++ kdelibs/kio/kio/job.cpp	2006/03/24 13:29:00	522108
+@@ -2786,7 +2786,7 @@
+     {
+         m_conflictError = job->error();
+         if ( (m_conflictError == ERR_DIR_ALREADY_EXIST)
+-             || (m_conflictError == ERR_FILE_ALREADY_EXIST) )
++             || (m_conflictError == ERR_FILE_ALREADY_EXIST) ) // can't happen?
+         {
+             KURL oldURL = ((SimpleJob*)job)->url();
+             // Should we skip automatically ?
+@@ -3050,7 +3050,8 @@
+             m_conflictError = job->error(); // save for later
+             // Existing dest ?
+             if ( ( m_conflictError == ERR_FILE_ALREADY_EXIST )
+-                 || ( m_conflictError == ERR_DIR_ALREADY_EXIST ) )
++                 || ( m_conflictError == ERR_DIR_ALREADY_EXIST )
++                 || ( m_conflictError == ERR_IDENTICAL_FILES ) )
+             {
+                 subjobs.remove( job );
+                 assert ( subjobs.isEmpty() );
+@@ -3132,7 +3133,8 @@
+         m_reportTimer->stop();
+ 
+     if ( ( m_conflictError == ERR_FILE_ALREADY_EXIST )
+-      || ( m_conflictError == ERR_DIR_ALREADY_EXIST ) )
++         || ( m_conflictError == ERR_DIR_ALREADY_EXIST )
++         || ( m_conflictError == ERR_IDENTICAL_FILES ) )
+     {
+         // Its modification time:
+         time_t destmtime = (time_t)-1;
+@@ -3161,6 +3163,7 @@
+         // Offer overwrite only if the existing thing is a file
+         // If src==dest, use "overwrite-itself"
+         RenameDlg_Mode mode;
++        bool isDir = true;
+ 
+         if( m_conflictError == ERR_DIR_ALREADY_EXIST )
+             mode = (RenameDlg_Mode) 0;
+@@ -3172,6 +3175,7 @@
+                 mode = M_OVERWRITE_ITSELF;
+             else
+                 mode = M_OVERWRITE;
++            isDir = false;
+         }
+ 
+ 	if ( m_bSingleFileCopy )
+@@ -3179,7 +3183,7 @@
+ 	else
+             mode = (RenameDlg_Mode) ( mode | M_MULTI | M_SKIP );
+ 
+-        res = Observer::self()->open_RenameDlg( this, m_conflictError == ERR_FILE_ALREADY_EXIST ?
++        res = Observer::self()->open_RenameDlg( this, !isDir ?
+                                 i18n("File Already Exists") : i18n("Already Exists as Folder"),
+                                 (*it).uSource.url(),
+                                 (*it).uDest.url(),
+@@ -3602,7 +3606,9 @@
+         // In that case it's the _same_ dir, we don't want to copy+del (data loss!)
+         if ( m_currentSrcURL.isLocalFile() && m_currentSrcURL.url(-1) != dest.url(-1) &&
+              m_currentSrcURL.url(-1).lower() == dest.url(-1).lower() &&
+-             ( err == ERR_FILE_ALREADY_EXIST || err == ERR_DIR_ALREADY_EXIST ) )
++             ( err == ERR_FILE_ALREADY_EXIST ||
++               err == ERR_DIR_ALREADY_EXIST ||
++               err == ERR_IDENTICAL_FILES ) )
+         {
+             kdDebug(7007) << "Couldn't rename directly, dest already exists. Detected special case of lower/uppercase renaming in same dir, try with 2 rename calls" << endl;
+             QCString _src( QFile::encodeName(m_currentSrcURL.path()) );
+@@ -3643,7 +3649,9 @@
+         Q_ASSERT( m_currentSrcURL == *m_currentStatSrc );
+ 
+         // Existing dest?
+-        if ( ( err == ERR_DIR_ALREADY_EXIST || err == ERR_FILE_ALREADY_EXIST )
++        if ( ( err == ERR_DIR_ALREADY_EXIST ||
++               err == ERR_FILE_ALREADY_EXIST ||
++               err == ERR_IDENTICAL_FILES )
+              && isInteractive() )
+         {
+             if (m_reportTimer)
+@@ -3693,7 +3701,7 @@
+ 
+                 RenameDlg_Result r = Observer::self()->open_RenameDlg(
+                     this,
+-                    err == ERR_FILE_ALREADY_EXIST ? i18n("File Already Exists") : i18n("Already Exists as Folder"),
++                    err != ERR_DIR_ALREADY_EXIST ? i18n("File Already Exists") : i18n("Already Exists as Folder"),
+                     m_currentSrcURL.url(),
+                     dest.url(),
+                     mode, newPath,
+--- kdelibs/kio/kio/authinfo.cpp	2005/09/29 09:47:40	465272
++++ kdelibs/kio/kio/authinfo.cpp	2006/04/05 22:35:54	526917
+@@ -326,6 +326,7 @@
+   }
+ 
+   delete [] buf;
++  fclose (fstream);
+   close (fd);
+   return true;
+ }
+--- kdelibs/kio/kio/forwardingslavebase.cpp	2006/02/27 23:07:01	514315
++++ kdelibs/kio/kio/forwardingslavebase.cpp	2006/04/12 09:57:56	528985
+@@ -69,10 +69,8 @@
+     kdDebug() << "ForwardingSlaveBase::prepareUDSEntry: listing=="
+               << listing << endl;
+ 
+-    bool mimetype_found = false;
+-    bool name_found = false;
+     bool url_found = false;
+-    QString name, mimetype;
++    QString name;
+     KURL url;
+ 
+     KIO::UDSEntry::iterator it = entry.begin();
+@@ -85,7 +83,6 @@
+         switch( (*it).m_uds )
+         {
+         case KIO::UDS_NAME:
+-            name_found = true;
+             name = (*it).m_str;
+             kdDebug() << "Name = " << name << endl;
+ 	    break;
+@@ -100,36 +97,7 @@
+             kdDebug() << "URL = " << url << endl;
+             kdDebug() << "New URL = " << (*it).m_str << endl;
+             break;
+-        case KIO::UDS_MIME_TYPE:
+-            mimetype_found = true;
+-            mimetype = (*it).m_str;
+-            kdDebug() << "Mimetype = " << (*it).m_str << endl;
+-            break;
+-        }
+-    }
+-
+-    if (!mimetype_found)
+-    {
+-        KURL new_url = m_processedURL;
+-        if (url_found && listing)
+-        {
+-            new_url.addPath( url.fileName() );
+-        }
+-        else if (name_found && listing)
+-        {
+-            new_url.addPath( name );
+         }
+-
+-        KMimeType::Ptr mime = KMimeType::findByURL(new_url);
+-        mimetype = mime->name();
+-
+-        KIO::UDSAtom atom;
+-        atom.m_uds = KIO::UDS_MIME_TYPE;
+-        atom.m_long = 0;
+-        atom.m_str = mimetype;
+-        entry.append(atom);
+-
+-        kdDebug() << "New Mimetype = " << mime->name() << endl;
+     }
+ 
+     if ( m_processedURL.isLocalFile() )
+--- kdelibs/kio/misc/kpac/kpac_dhcp_helper.c	2005/12/09 20:37:46	487225
++++ kdelibs/kio/misc/kpac/kpac_dhcp_helper.c	2006/04/14 14:45:22	529823
+@@ -94,6 +94,7 @@
+ 		exit(1);
+ 
+ 	if (setsockopt(sock, SOL_SOCKET, SO_BROADCAST, &bcast, sizeof(bcast)) == -1 ||
++		setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, &bcast, sizeof(bcast)) == -1 ||
+ 		bind(sock, (struct sockaddr *)&addr, sizeof(addr)) == -1)
+ 		exit(1);
+ 
+--- kdelibs/kio/kssl/ksslinfodlg.cc	2005/09/29 09:47:40	465272
++++ kdelibs/kio/kssl/ksslinfodlg.cc	2006/04/13 14:57:25	529483
+@@ -433,7 +433,7 @@
+             KURLLabel *mail = new KURLLabel(tmp, tmp, _frame);
+             connect(mail, SIGNAL(leftClickedURL(const QString &)), mailCatcher, SLOT(mailClicked(const QString &)));
+         } else {
+-            new QLabel(tmp, _frame);
++            label = new QLabel(tmp, _frame);
+         }
+     }
+     if (label && viewport()) {
