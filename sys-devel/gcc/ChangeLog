@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.522 2006/04/17 00:41:40 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.523 2006/04/17 21:00:45 voxus Exp $
+
+  17 Apr 2006; Konstantin Arkhipov <voxus@gentoo.org>
+  +gcc-4.2.0_alpha20060415.ebuild:
+  Added ~amd64.
 
 *gcc-4.2.0_alpha20060415 (17 Apr 2006)
 
