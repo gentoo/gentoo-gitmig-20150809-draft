@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/kiax
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/ChangeLog,v 1.7 2006/04/16 23:52:23 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/ChangeLog,v 1.8 2006/04/17 00:06:46 stkn Exp $
+
+  17 Apr 2006; Stefan Knoblich <stkn@gentoo.org> kiax-0.8.5.ebuild:
+  Add fix for icon/i18n path suggested by Christoph Perez <chris@novazur.fr>
+  in bug #123839.
 
 *kiax-0.8.5 (16 Apr 2006)
 

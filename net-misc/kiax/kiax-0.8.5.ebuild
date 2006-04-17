@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/kiax-0.8.5.ebuild,v 1.1 2006/04/16 23:52:24 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/kiax-0.8.5.ebuild,v 1.2 2006/04/17 00:06:46 stkn Exp $
 
 inherit eutils kde-functions
 
@@ -27,10 +27,14 @@ src_unpack() {
 	# add prefix for make install
 	sed -i -e "s:\(\$(DEST_PATH)\):\${INSTALL_ROOT}\1:" \
 		bin/Makefile
+
+	# fix icon/i18n prefix (bug #123839)
+	sed -i -e "s:/usr/local:/usr:g" \
+		src/src.pro.or
 }
 
 src_compile() {
-	econf || die "configure failed"
+	./configure --prefix=/usr || die "configure failed"
 	emake -j1 || die "make failed"
 }
 
