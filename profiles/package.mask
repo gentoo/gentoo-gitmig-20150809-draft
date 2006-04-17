@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5226 2006/04/17 19:48:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5227 2006/04/17 19:59:47 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -908,6 +908,7 @@ games-strategy/scorched3d
 >=media-libs/openal-20051024
 media-libs/alut
 media-libs/freealut
+~media-libs/openal-0.0.8
 
 # Thomas Matthijs <axxo@gentoo.org> (23 Oct 2005)
 # Preview release
