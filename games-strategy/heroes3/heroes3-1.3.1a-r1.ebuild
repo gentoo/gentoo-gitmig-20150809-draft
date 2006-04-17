@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.9 2006/03/31 22:11:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.10 2006/04/17 13:29:32 wolf31o2 Exp $
 
 # 	[x] Base Install Required (+4 MB) 
 #	[x] Scenarios (+7 MB)
@@ -33,13 +33,13 @@ RDEPEND="sys-libs/lib-compat-loki"
 
 S=${WORKDIR}
 
+GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
 pkg_setup() {
-	check_license LOKI-EULA
-	use nocd && ewarn "The full installation takes about 341 MB of space!"
 	games_pkg_setup
+	use nocd && ewarn "The full installation takes about 341 MB of space!"
 }
 
 src_unpack() {
