@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/kirbybase
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kirbybase/ChangeLog,v 1.4 2006/04/17 23:18:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kirbybase/ChangeLog,v 1.5 2006/04/17 23:19:22 caleb Exp $
+
+  17 Apr 2006; Caleb Tennis <caleb@gentoo.org> -kirbybase-2.3.ebuild:
+  remove old version
 
   17 Apr 2006; Caleb Tennis <caleb@gentoo.org> kirbybase-2.5.2.ebuild:
   x86 stable
