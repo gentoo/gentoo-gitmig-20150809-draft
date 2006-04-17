@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-1.0.3.ebuild,v 1.1 2006/04/15 22:47:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-1.0.3.ebuild,v 1.2 2006/04/17 13:23:14 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -33,12 +33,12 @@ DEPEND="${RDEPEND}
 	>=dev-util/jam-2.5"
 
 pkg_setup() {
+	games_pkg_setup
 	if ! built_with_use -o media-libs/sdl-mixer vorbis oggvorbis ; then
 		eerror "lincity-ng doesn't work properly if"
 		eerror "sdl-mixer is built without vorbis support"
 		die "Please emerge sdlmixer with USE=vorbis"
 	fi
-	games_pkg_setup
 }
 
 src_compile() {
