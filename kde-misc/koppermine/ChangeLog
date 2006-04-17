@@ -1,0 +1,9 @@
+# ChangeLog for kde-misc/koppermine
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/koppermine/ChangeLog,v 1.1 2006/04/17 21:49:54 deathwing00 Exp $
+
+*koppermine-1.1 (17 Apr 2006)
+
+  17 Apr 2006; Ioannis Aslanidis <deathwing00@gentoo.org> koppermine-1.1.ebuild:
+  Initial revision; resolves bug #130081. Thanks to Kai Blaschke.
+
