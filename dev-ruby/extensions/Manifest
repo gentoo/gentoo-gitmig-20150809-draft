@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7021f8b92311c4d7a5898e1dcb985466 ChangeLog 449
-RMD160 21f7d8853a357ac2d61907ce1bcadd2af1cd1065 ChangeLog 449
-SHA256 0444bbe67bf6eda4388d11d15a91405c6fc8a4c68af84f3d3c8b947a4b22f3eb ChangeLog 449
-MD5 ba4767381a4c9726164a6276fc8021b4 extensions-0.6.0.ebuild 648
-RMD160 df1fd185fe2ac3f510ddf485b1adf502b0d7d5cf extensions-0.6.0.ebuild 648
-SHA256 6678eb1b7a31516ecde76ba5f1bc2943cb17aca127abf8f0a9d31207546ac873 extensions-0.6.0.ebuild 648
+MD5 4e2d6143d4cab573547807bfcd047720 ChangeLog 532
+RMD160 598741ed3ea4be31a15f000031fd5896dd45faf8 ChangeLog 532
+SHA256 a1d73a67334ae9c8bf72ff73e2f9ab1f10e92cbb35eb0e3c07dea04720cc65cf ChangeLog 532
+MD5 32f79c4037effd8788963525b241da25 extensions-0.6.0.ebuild 644
+RMD160 22a5108ccdcd848e9c369fcb6c3de3021c702ea6 extensions-0.6.0.ebuild 644
+SHA256 76141dedbdf46c84273f3d8924b2d8cde1056c42dc86cc23cfc0556fb7088b52 extensions-0.6.0.ebuild 644
 MD5 5c2b395c8053e5768457f358d04efb9e files/digest-extensions-0.6.0 64
 RMD160 339e9e0b4425f177f8cb461ceb7baf2e6891ac81 files/digest-extensions-0.6.0 64
 SHA256 e7b6a1fa65d64811261f9df9b5bbc40d1b4684ee5f2213b559860c9d90298ea3 files/digest-extensions-0.6.0 64
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
 SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEK1AjJrHF4yAQTrARAiBAAKC2Z0dqjkRiMrpp1v25Y835gy4M2wCeIQwg
-ujDPUUCfyrW1VXhgUafD8UE=
-=yuEF
------END PGP SIGNATURE-----
