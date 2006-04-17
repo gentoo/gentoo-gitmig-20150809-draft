@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1850 2006/04/16 20:32:53 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1851 2006/04/17 19:18:30 wolf31o2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -491,6 +491,8 @@ games-mud/mmucl:mccp - adds support for the Mud Client Compression Protocol
 games-rpg/eternal-lands:mapeditor - Install the mapeditor as well as the game
 games-rpg/eternal-lands:nomusic - Disable install of music files
 games-rpg/eternal-lands-data:music - Install optional music files (extra 30 meg)
+games-rpg/nwn-cep:hou - Adds support for the Hordes of the Underdark expansion pack
+games-rpg/nwn-cep:sou - Adds support for the Shadows of Undrentide expension pack
 games-rpg/nwn-data:hou - Install the Hordes of the Underdark expansion pack
 games-rpg/nwn-data:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
 games-rpg/nwn-data:sou - Installs the Shadows of Undrentide expension pack
