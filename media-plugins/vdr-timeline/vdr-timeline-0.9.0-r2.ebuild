@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-timeline/vdr-timeline-0.9.0-r2.ebuild,v 1.3 2006/02/05 19:04:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-timeline/vdr-timeline-0.9.0-r2.ebuild,v 1.4 2006/04/17 13:27:55 zzam Exp $
 
-inherit vdr-plugin
+inherit vdr-plugin eutils
 
 DESCRIPTION="Video Disk Recorder Timeline PlugIn"
 HOMEPAGE="http://www.js-home.org/vdr/timeline/"

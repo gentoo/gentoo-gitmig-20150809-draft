@@ -1,19 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5bdd7926873b0624211bd2b509aeea9b ChangeLog 842
-MD5 e2e5bde0bb92e9de8bd3b087dbdae81d files/digest-vdr-timeline-0.9.0-r2 69
+MD5 65687afd4eeb9919e32035b316f7a851 ChangeLog 948
+RMD160 06f21b4743b73d9b2aec447edec6c77930729614 ChangeLog 948
+SHA256 54333fa22ee7ccfd0fb2c485fa98998d3ab529b091c4a9cadf8ec3e6d8ce2eb7 ChangeLog 948
+MD5 64b2976ceb3e5f2934ea850a739a4a34 files/digest-vdr-timeline-0.9.0-r2 253
+RMD160 faaefa86fa0bb427481d353e7d0f0fcbc08c864d files/digest-vdr-timeline-0.9.0-r2 253
+SHA256 cf78a8795469b763daf8c3a7ed2692e2c58208a9514582f449c2461c555c24a2 files/digest-vdr-timeline-0.9.0-r2 253
 MD5 6c17a26f6bc70cda6094ced3019e13d6 files/vdr-1.3.18-vdr-timeline-0.9.0.diff 3021
+RMD160 b994d1546f0f44006513f23ee4a8ce6d4dd9484b files/vdr-1.3.18-vdr-timeline-0.9.0.diff 3021
+SHA256 8e5459e46c45754984f1a00505e8a7044ef0996a877f9ee37ae82895e23dfdc2 files/vdr-1.3.18-vdr-timeline-0.9.0.diff 3021
 MD5 a878554b2ea0c24071543a524feb3617 files/vdr-1.3.23-vdr-timeline-0.9.0.diff 5167
+RMD160 1b55303ee93641b69504ddcd0291224f5aa4d5b5 files/vdr-1.3.23-vdr-timeline-0.9.0.diff 5167
+SHA256 ec99229a5d7d1d3ff7887b97e9c16c308fb8296ac7f6257a360ac1a22be88eab files/vdr-1.3.23-vdr-timeline-0.9.0.diff 5167
 MD5 da258cf005e658ff0a661624dd95e2c6 files/vdr-1.3.32-vdr-timeline-0.9.0.diff 839
+RMD160 7778969d532fb12f9af688357a86de916c19a631 files/vdr-1.3.32-vdr-timeline-0.9.0.diff 839
+SHA256 a09bd348e6639c9600a0141ae85b99ced22afa9c7a4ae7ef1580e6987b14b98e files/vdr-1.3.32-vdr-timeline-0.9.0.diff 839
 MD5 52d88a8e01d23e6880880538eaf641c4 files/vdr-1.3.37-vdr-timeline-0.9.0.diff 5559
+RMD160 534be275b16d3f32d9323a38357188023318e3e9 files/vdr-1.3.37-vdr-timeline-0.9.0.diff 5559
+SHA256 563ef2ec41625f2b908ddaa2a77611b63e72c3515464b94fea65dbbfa3eead7b files/vdr-1.3.37-vdr-timeline-0.9.0.diff 5559
 MD5 062384770da6e845313567b5c7083e43 metadata.xml 936
-MD5 bcfdd479d1229136bf79f38cd5f19fac vdr-timeline-0.9.0-r2.ebuild 976
+RMD160 521cdf173996f3792baf308f65efb4d089f10bcb metadata.xml 936
+SHA256 ef159e889bd4ae9747b20969b2219b8ed108d9eeb37fdb7a03b8f1ccba950751 metadata.xml 936
+MD5 c522343c51cf1c13375cb2de7fc1eef5 vdr-timeline-0.9.0-r2.ebuild 978
+RMD160 f4adac4abf8664ad942ecc9c6ac7cfddfc5c25ce vdr-timeline-0.9.0-r2.ebuild 978
+SHA256 6c4bf20499424859de9e40eea340c4f02221e6c7e981e7d4e731085c741ec018 vdr-timeline-0.9.0-r2.ebuild 978
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-Comment: no further Information
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD5kxDdn07HTTCgIoRArKxAJ0bK+9lhNjIJAATXLaOVRNuavBkUACfZlNo
-9NcCjL5DxivuDMp54Cdl0b4=
-=Cobt
+iD8DBQFEQ5glZfSl1Kp5KmoRAhkIAJ9MGwPwv3TvKsGBnCyhjK+9oEUqTgCg4XtP
+FbHnypgvC/yF7CkIFpKzwGg=
+=2quM
 -----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-timeline
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-timeline/ChangeLog,v 1.3 2006/02/05 19:04:20 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-timeline/ChangeLog,v 1.4 2006/04/17 13:27:55 zzam Exp $
+
+  17 Apr 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-timeline-0.9.0-r2.ebuild:
+  Included eutils.eclass
 
   05 Feb 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/vdr-1.3.37-vdr-timeline-0.9.0.diff, vdr-timeline-0.9.0-r2.ebuild:
