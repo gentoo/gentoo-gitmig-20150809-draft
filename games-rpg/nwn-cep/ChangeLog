@@ -1,6 +1,16 @@
 # ChangeLog for games-rpg/nwn-cep
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.1 2005/01/20 06:48:15 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.2 2006/04/17 19:40:39 wolf31o2 Exp $
+
+*nwn-cep-1.52-r1 (17 Apr 2006)
+*nwn-cep-1.52 (17 Apr 2006)
+
+  17 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> +nwn-cep-1.52.ebuild,
+  +nwn-cep-1.52-r1.ebuild:
+  Added new 1.52 versions and closing bug #81248 and bug #129900. There are
+  two ebuilds here, 1.52 and 1.52-r1, which are different. The 1.52-r1 ebuild
+  goes with the split nwn/nwn-data ebuilds and is now masked along with them.
+  The 1.52 ebuild should work with the current stable 1.66 nwn ebuild.
 
 *nwn-cep-1.50 (20 Jan 2004)
 
