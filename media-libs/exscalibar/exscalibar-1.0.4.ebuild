@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/exscalibar-1.0.4.ebuild,v 1.6 2006/04/11 03:09:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/exscalibar-1.0.4.ebuild,v 1.7 2006/04/17 01:00:36 wormo Exp $
 
 inherit eutils qt3
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="mp3 vorbis fftw jack alsa doc"
 DEPEND="$(qt_min_version 3.2)
 	>=media-libs/libsndfile-1.0.0
