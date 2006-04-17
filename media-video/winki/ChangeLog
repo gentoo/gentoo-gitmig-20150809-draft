@@ -1,6 +1,10 @@
 # ChangeLog for media-video/winki
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/winki/ChangeLog,v 1.6 2005/12/01 09:33:26 chriswhite Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/winki/ChangeLog,v 1.7 2006/04/17 15:03:59 flameeyes Exp $
+
+  17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> winki-0.3.2.ebuild:
+  Add a check for encode useflag in mplayer package, bug #114396. Thanks to
+  Arun Raghavan.
 
   01 Dec 2005; Chris White <chriswhite@gentoo.org> -winki-0.3.11.ebuild:
   Removal of 0.3.11.

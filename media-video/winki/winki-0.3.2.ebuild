@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/winki/winki-0.3.2.ebuild,v 1.3 2005/11/07 09:48:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/winki/winki-0.3.2.ebuild,v 1.4 2006/04/17 15:03:59 flameeyes Exp $
 
 inherit distutils eutils
 
@@ -23,6 +23,14 @@ RDEPEND="${DEPEND}
 		media-sound/ogmtools
 		media-sound/vorbis-tools
 		vcd? ( media-video/vcdimager )"
+
+pkg_setup() {
+	if ! built_with_use media-video/mplayer encode; then
+		eerror "You need media-video/mplayer built with the \"encode\" useflag to"
+		eerror "use winki. Please rebuild mplayer with the \"encode\" useflag."
+		die "Missing \"encode\" useflag on mplayer."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
