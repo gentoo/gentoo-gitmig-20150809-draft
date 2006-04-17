@@ -1,8 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.521 2006/04/12 13:15:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.522 2006/04/17 00:41:40 halcy0n Exp $
 
-  12 Apr 2006; Bryan Østergaard <kloeri@gentoo.org gcc-3.4.6.ebuild:
+*gcc-4.2.0_alpha20060415 (17 Apr 2006)
+
+  17 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
+  -gcc-4.2.0_alpha20060408.ebuild, +gcc-4.2.0_alpha20060415.ebuild:
+  4.2 snapshot bump
+
+  12 Apr 2006; Bryan Østergaard <kloeri@gentoo.org> gcc-3.4.6.ebuild:
   ~alpha 3.4.6 - solves a ld segfault in binutils when emerging gmp.
 
 *gcc-4.2.0_alpha20060408 (11 Apr 2006)
