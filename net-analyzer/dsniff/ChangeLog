@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/dsniff
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.32 2006/04/15 23:22:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.33 2006/04/17 01:08:27 jokey Exp $
+
+*dsniff-2.4_beta1-r2 (17 Apr 2006)
+*dsniff-2.3-r9 (17 Apr 2006)
+
+  17 Apr 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/dsniff-httppostfix.patch, +dsniff-2.3-r9.ebuild,
+  +dsniff-2.4_beta1-r2.ebuild:
+  Adding HTTP POST patch wrt bug #125084
 
   15 Apr 2006; Markus Ullmann <jokey@gentoo.org> dsniff-2.3-r7.ebuild,
   dsniff-2.3-r8.ebuild, dsniff-2.4_beta1-r1.ebuild:
