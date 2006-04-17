@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_authenticate_ldap/asterisk-app_authenticate_ldap-0.1.3.ebuild,v 1.1 2005/08/27 22:25:39 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_authenticate_ldap/asterisk-app_authenticate_ldap-0.1.3.ebuild,v 1.2 2006/04/17 18:59:21 stkn Exp $
 
 inherit eutils
 
@@ -18,7 +18,8 @@ KEYWORDS="~x86"
 
 # depends on iconv support
 DEPEND="sys-libs/glibc
-	>=net-misc/asterisk-1.0.7-r1
+	>=net-misc/asterisk-1.2.0
+	!=net-misc/asterisk-1.0*
 	net-misc/asterisk-app_ldap"
 
 S=${WORKDIR}/apps
@@ -29,6 +30,9 @@ src_unpack() {
 	cd ${S}
 	# use asterisk-config...
 	epatch ${FILESDIR}/${MY_PN}-0.1.3-astcfg.diff
+
+	# fix include order for asterisk-1.2.x
+	epatch ${FILESDIR}/${MY_PN}-0.1.3-include.diff
 }
 
 src_compile() {

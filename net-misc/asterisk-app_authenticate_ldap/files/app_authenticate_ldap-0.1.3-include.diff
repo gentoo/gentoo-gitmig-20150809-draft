@@ -1,0 +1,29 @@
+--- apps/app_authenticate_ldap.c.orig	2006-04-15 18:51:59.000000000 +0000
++++ apps/app_authenticate_ldap.c	2006-04-15 18:52:08.000000000 +0000
+@@ -11,6 +11,13 @@
+  * the GNU General Public License
+  */
+ 
++#include <stdlib.h>
++#include <unistd.h>
++#include <string.h>
++#include <errno.h>
++#include <stdlib.h>
++#include <stdio.h>
++
+ #include <asterisk/lock.h>
+ #include <asterisk/file.h>
+ #include <asterisk/logger.h>
+@@ -21,12 +28,6 @@
+ #include <asterisk/astdb.h>
+ #include <asterisk/utils.h>
+ #include <asterisk/options.h>
+-#include <stdlib.h>
+-#include <unistd.h>
+-#include <string.h>
+-#include <errno.h>
+-#include <stdlib.h>
+-#include <stdio.h>
+ 
+ static char *tdesc = "Authentication Application";
+ 
