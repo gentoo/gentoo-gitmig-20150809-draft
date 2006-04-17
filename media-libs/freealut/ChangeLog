@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/alut
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/ChangeLog,v 1.1 2006/04/17 19:51:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/ChangeLog,v 1.2 2006/04/17 20:57:28 wolf31o2 Exp $
+
+*freealut-1.0.1 (17 Apr 2006)
+
+  17 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +freealut-1.0.1.ebuild, -freealut-20051024.ebuild:
+  Version bumped to 1.0.1 and closing bug #122965. I am also removing the
+  older CVS snapshot version since upstream has finally made release tarballs
+  available.
 
 *freealut-20051024 (17 Apr 2006)
 
