@@ -1,22 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 04c1b5f028a7244394245fa304b096a9 ChangeLog 561
 RMD160 6e7f92a79671f0c1624226030b33e1d3860d1a7e ChangeLog 561
 SHA256 0eadc20924cab841fde7b8cdf9ac3f043f8b6c8f5233409d2f8694451c6099d1 ChangeLog 561
 MD5 c0c9c95d056c88f7aef08da5f5adb4f5 files/digest-markaby-0.3 223
 RMD160 d69c3251fff566db077bc4e2efef7e741bf12559 files/digest-markaby-0.3 223
 SHA256 b2e620b5d2ef5dc8a43c021a204f02acc683e9e65ca25c58b771baefcb95c8ff files/digest-markaby-0.3 223
+MD5 eaaa3b06163babde5b6cb36bea5f1243 files/digest-markaby-0.4 223
+RMD160 0b4cf77c8aadb3d124b7be4c0b9c7a947f015250 files/digest-markaby-0.4 223
+SHA256 f7721e58ee6be939af596ca8e4c07c7724c46713c32504fdaa864aa1811f0e93 files/digest-markaby-0.4 223
 MD5 4eefd5cba9fb046e38dd7c48a3f43b30 markaby-0.3.ebuild 566
 RMD160 9c5121955e8a5c853d299b7134b7ca0a95f02a84 markaby-0.3.ebuild 566
 SHA256 89a0f55a2d80f685eddf5f62389c48f68812fadb2bf055779c9608b1e5d5b066 markaby-0.3.ebuild 566
+MD5 e3b44355a7be8289a61fb057c27dbe75 markaby-0.4.ebuild 566
+RMD160 58373a59d935fbc2614a634bf0bb8c5b36fc085e markaby-0.4.ebuild 566
+SHA256 7d9cd01e1f6aeafe85ab5909a700e1318904c3eadfbc72df25dcbb41999f1166 markaby-0.4.ebuild 566
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
 SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEK1F3JrHF4yAQTrARAtPxAJ92a0MfQ6VAUhaW0j5UQTeVQeCf7QCffsm8
-Adz9mYec0OUqRu/WFBVJ2XI=
-=iN8z
------END PGP SIGNATURE-----

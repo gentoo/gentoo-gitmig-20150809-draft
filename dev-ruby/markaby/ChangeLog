@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/markaby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/ChangeLog,v 1.3 2006/03/30 03:33:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/ChangeLog,v 1.4 2006/04/17 23:10:03 caleb Exp $
+
+*markaby-0.4 (17 Apr 2006)
+
+  17 Apr 2006; Caleb Tennis <caleb@gentoo.org> +markaby-0.4.ebuild:
+  version bump
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> markaby-0.3.ebuild:
   Mark 0.3 ~ia64
