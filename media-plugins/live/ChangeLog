@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/live
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.62 2006/04/13 19:01:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.63 2006/04/17 19:08:14 corsair Exp $
+
+  17 Apr 2006; Markus Rothe <corsair@gentoo.org> live-2005.11.11.ebuild:
+  Stable on ppc64; bug #128600
 
   13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> live-2005.11.11.ebuild:
   Drop redundant deps, use a more common find syntax.
