@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/mp3gain
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.15 2005/11/20 21:18:01 chainsaw Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.16 2006/04/17 21:29:36 chainsaw Exp $
+
+*mp3gain-1.4.6-r1 (17 Apr 2006)
+
+  17 Apr 2006; Tony Vroon <chainsaw@gentoo.org>
+  +files/1.4.6-option-parser.patch, +mp3gain-1.4.6-r1.ebuild:
+  Respect user CFLAGS except for any -O flags as that causes segfaults on
+  48kHz files, closes bug #117266. Much improved option parser by Stephan
+  Sokolow <from_gentoo_bugzilla@ssokolow.com>, closes bug #126104.
 
   20 Nov 2005; <chainsaw@gentoo.org> mp3gain-1.4.6.ebuild:
   Respect user CFLAGS & use proper CC, closes bug #113047.
