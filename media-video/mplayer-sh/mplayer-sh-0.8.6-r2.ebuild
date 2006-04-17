@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-sh/mplayer-sh-0.8.6-r2.ebuild,v 1.1 2006/03/26 21:57:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-sh/mplayer-sh-0.8.6-r2.ebuild,v 1.2 2006/04/17 11:42:19 zzam Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Video Disk Recorder Mplayer API Script"
 HOMEPAGE="http://batleth.sapienti-sat.org/"
 SRC_URI="http://batleth.sapienti-sat.org/projects/VDR/mplayer.sh-${PV}.tar.gz"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 SLOT="0"
 LICENSE="as-is"
 IUSE=""
