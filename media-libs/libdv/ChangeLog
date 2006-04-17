@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.50 2006/03/28 07:02:17 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.51 2006/04/17 14:59:09 flameeyes Exp $
+
+  17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libdv-0.104-inline.patch, libdv-0.104-r1.ebuild:
+  Add patch to fix building the inline function from OKUMURA N. Shn-ya. Bug
+  #111323.
 
   28 Mar 2006; Daniel Goller <morfic@gentoo.org> libdv-0.104-r1.ebuild:
   Added ~ppc keyword

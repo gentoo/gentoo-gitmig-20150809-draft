@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d1aa6a804000a2f5e4c783f737f17f3b ChangeLog 6990
-RMD160 2e465fb63767c28bcef36b72fabdc79f95f09012 ChangeLog 6990
-SHA256 f5792e77a70d2dc3e1b19a90a78acb1f98649e937ce3fb73b802b3879f37c23e ChangeLog 6990
+MD5 cfe5c04d6e333e4599725fd9a0ae2eac ChangeLog 7192
+RMD160 42da55b8d45c3ac1a74b76b0a379d9686145e0bb ChangeLog 7192
+SHA256 a7bf93d451b378dcf56c0247ed2c2217c218b08ee10ced77c80525be30fb5eff ChangeLog 7192
 MD5 21abc06a6e969b1a6b5b1ca2f1f09474 files/digest-libdv-0.101 63
 RMD160 67d8e0b620064f9fe2ac2591b2204a01655c30ae files/digest-libdv-0.101 63
 SHA256 9732318f48c3713f34c233de2ecb9aa5c890697616176a725d74d0ab08dc4223 files/digest-libdv-0.101 63
@@ -13,9 +13,9 @@ SHA256 41916f10e5b8333e4e920ea648444634a9f3ea384144913f6a5b2a71ebf21516 files/di
 MD5 2524a27d2f6e849452d1d5d1f97580ec files/digest-libdv-0.104 63
 RMD160 ca2d05aee8df66121ecba5ad1f88c98483c22b41 files/digest-libdv-0.104 63
 SHA256 59e557dbd0afeeb8ddb795f54ee496b72ae902a1e109e6462d681b13ea7e82d7 files/digest-libdv-0.104 63
-MD5 eb5a28a360cc8abef3b68c49d666758e files/digest-libdv-0.104-r1 135
-RMD160 30ff6b15da731894a71db1579c3f1aaee251f33f files/digest-libdv-0.104-r1 135
-SHA256 c16796e3ac7d6d27aa03b90f90952d3e3e2234ef7132ecc8c0a4711d5f1ad651 files/digest-libdv-0.104-r1 135
+MD5 fa5df55d82685057029fd795159017ad files/digest-libdv-0.104-r1 497
+RMD160 ae201f32dc2503434fd4bb8f7d7b400d2fdc9409 files/digest-libdv-0.104-r1 497
+SHA256 8db2da8c4437b67b846dcd3a50862b32ac306065be7970e0c2a8404d78b9d51f files/digest-libdv-0.104-r1 497
 MD5 3d3bbf2ecd039329fe6b73dc9ada38bf files/digest-libdv-0.99-r1 62
 RMD160 5ff13b02a01518faf9c931d11f3a74619794ee72 files/digest-libdv-0.99-r1 62
 SHA256 8fcd2519bb397f8d1bbd1fb22c9b8c1fbf39c2941c1f576a91ae3f7eb9401e3b files/digest-libdv-0.99-r1 62
@@ -28,6 +28,9 @@ SHA256 02d44df887e461b23e2bffae2d5f024a3cc9af8fd01abc7fc42ff7be2c8b2ba0 files/li
 MD5 9c164b3ac9ace66bb2fcefc9ca939d28 files/libdv-0.104-gcc4.patch 1445
 RMD160 bd150c6b3ae4082fef0bd4347240af9764b47cfc files/libdv-0.104-gcc4.patch 1445
 SHA256 32c301e574c598328c2b72e54cec93431820b823b56aba55969350d46d936977 files/libdv-0.104-gcc4.patch 1445
+MD5 d37b5565316dd34a5eba98749a734d3c files/libdv-0.104-inline.patch 507
+RMD160 dd0ea1fc8707d7728e10e0514235029d6ad5abc2 files/libdv-0.104-inline.patch 507
+SHA256 48f3c9db161bec3df679d80949fa0df03f45c573d3884a5928027c316ad2ba0e files/libdv-0.104-inline.patch 507
 MD5 aa87e4d4bdd76b94e1f9536680c9fdda files/libdv-0.104-no-exec-stack.patch 2678
 RMD160 740c2a50357985bc660e6fde1ecabfc707bea20e files/libdv-0.104-no-exec-stack.patch 2678
 SHA256 e635e83fd242f2bc17f15c8141527fedbcbb3043d92a98ba92164480b02fd3d4 files/libdv-0.104-no-exec-stack.patch 2678
@@ -43,9 +46,9 @@ SHA256 02e7d004fc639b4db55582b3a395db3ddbe694f2ad087529fd00284dbeace638 libdv-0.
 MD5 c26a71dccb152be11ab822dc61fc4ae8 libdv-0.102.ebuild 1242
 RMD160 14f8761d90e57e3904c3e03d95e1d2b39a51dc5f libdv-0.102.ebuild 1242
 SHA256 4e5a6e28146796ea00e51d80c7bef0171bf5435ea9daf9a4c573e75871b5c853 libdv-0.102.ebuild 1242
-MD5 802949d93ff5f483dbbfee0702f510d9 libdv-0.104-r1.ebuild 1553
-RMD160 fcdee40279b6ebd0a115eee05d42782a1c1d02b0 libdv-0.104-r1.ebuild 1553
-SHA256 6e6565cd038667f2cfbcce0ae726ceba327c50983d91f70cb81cf3679da6e6c9 libdv-0.104-r1.ebuild 1553
+MD5 53e6ef9966f59e8131da31b2ff57e12c libdv-0.104-r1.ebuild 1618
+RMD160 1dbda24b453cba882285bd4b354e534509491daa libdv-0.104-r1.ebuild 1618
+SHA256 608d98385867642a2bf9c1432ced691d6ba1b6b495b337575bb179740e01339e libdv-0.104-r1.ebuild 1618
 MD5 9af0184f9281e6dbf633dec4dd9173ec libdv-0.104.ebuild 1315
 RMD160 2724f17fc8fb46ad9db1455e80f34e007aaca971 libdv-0.104.ebuild 1315
 SHA256 4e9570cbef32f705b7d4f2ae222a55bae9d21870733fb37d6334d1f02b3eb801 libdv-0.104.ebuild 1315
@@ -56,9 +59,9 @@ MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 metadata.xml 158
 SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEKN9+/aM9DdBw91cRAvqSAJ9Lgdp+RgZpOXU8rwALmPsG4yE/4gCgwGmK
-9yUKBj2mK1pnjfccyfUGl1o=
-=MjAc
+iD8DBQFEQ6yZAiZjviIA2XgRAmeLAKDNLWlwqo5LezkJqDa7qA6rUBCJ/QCeNj+e
+epO5tWwFFDxYxhAlYtbTKVc=
+=QXnD
 -----END PGP SIGNATURE-----

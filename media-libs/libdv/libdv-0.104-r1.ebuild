@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.104-r1.ebuild,v 1.8 2006/03/28 07:02:17 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.104-r1.ebuild,v 1.9 2006/04/17 14:59:09 flameeyes Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic libtool
 
 DESCRIPTION="Software codec for dv-format video (camcorders etc)"
 HOMEPAGE="http://libdv.sourceforge.net/"
@@ -35,6 +35,9 @@ src_unpack() {
 	# fix from fedora
 	epatch "${FILESDIR}"/${PN}-0.103-mmx.patch
 
+	epatch "${FILESDIR}/${P}-inline.patch"
+
+	elibtoolize
 	epunt_cxx #74497
 }
 
