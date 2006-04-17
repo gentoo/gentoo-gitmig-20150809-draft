@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.12.ebuild,v 1.1 2006/04/16 22:04:38 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.12.ebuild,v 1.2 2006/04/17 14:47:41 vericgar Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="berkdb gdbm ldap"
 RESTRICT="test"
 
 DEPEND="dev-libs/expat
-	~dev-libs/apr-0.9.7
+	~dev-libs/apr-${PV}
 	berkdb? ( =sys-libs/db-4* )
 	gdbm? ( sys-libs/gdbm )
 	ldap? ( =net-nds/openldap-2* )"
