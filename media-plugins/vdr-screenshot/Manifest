@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 64066703cfff4543d24334fa1442466a ChangeLog 539
 RMD160 d6e58f840ac21dff8010cbfc74d3abe5d74f26f3 ChangeLog 539
 SHA256 b358923bf327b5e89c96ca0b294eed1e1a0c6cce6911a6d9e4ba6caa62b5fbad ChangeLog 539
@@ -16,13 +13,6 @@ SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata
 MD5 d4a808d023a444bf966a00bf64632c55 vdr-screenshot-0.0.7.ebuild 626
 RMD160 e07e4aa58cb485d8f6208825f95471080b0ad250 vdr-screenshot-0.0.7.ebuild 626
 SHA256 0d35e4a549565dc5d73798eae7348f71c969a00b2f57b326df1d5903e1e30220 vdr-screenshot-0.0.7.ebuild 626
-MD5 971c60f335b6b76553295d3a944eded7 vdr-screenshot-0.0.8.ebuild 495
-RMD160 9e9b9506442cd2725e5871218dabefc3482ae80e vdr-screenshot-0.0.8.ebuild 495
-SHA256 0674ebe0857efc1882d14e372cc30a786bcbbf3ee50fd7604bb4a0ef00549e50 vdr-screenshot-0.0.8.ebuild 495
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDe6MZfSl1Kp5KmoRAjUnAJ4nNwjPa87A/qY5FnzsRQNnsYNDrgCgpGOS
-DKzcIjTn2UjUnyQ6AYdixqo=
-=UbX8
------END PGP SIGNATURE-----
+MD5 dd704aac33b2caf5aa2856c2d9b03453 vdr-screenshot-0.0.8.ebuild 494
+RMD160 762c290c14adfd8b0fcc7f49746e7045d79f4757 vdr-screenshot-0.0.8.ebuild 494
+SHA256 9ef0f467c761768373f20537b5b3e23e6a62994577251e067d4a956d984a6fb3 vdr-screenshot-0.0.8.ebuild 494
