@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.4.0.ebuild,v 1.2 2005/07/09 02:51:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.4.0.ebuild,v 1.3 2006/04/17 13:26:28 wolf31o2 Exp $
 
 inherit games
 
@@ -20,6 +20,7 @@ DEPEND=">=virtual/jdk-1.4
 S=${WORKDIR}/${PN}
 
 pkg_setup() {
+	games_pkg_setup
 	if [ -z "${JAVA_HOME}" ]; then
 		einfo
 		einfo "\${JAVA_HOME} not set!"
@@ -27,7 +28,6 @@ pkg_setup() {
 		einfo
 		die "\${JAVA_HOME} not set."
 	fi
-	games_pkg_setup
 }
 
 src_unpack() {

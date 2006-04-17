@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-39.1.ebuild,v 1.4 2005/10/28 06:39:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-39.1.ebuild,v 1.5 2006/04/17 13:30:05 wolf31o2 Exp $
 
 inherit wxwidgets games
 
@@ -24,8 +24,8 @@ DEPEND="virtual/opengl
 S=${WORKDIR}/scorched
 
 pkg_setup() {
-	need-wxwidgets gtk2 || die "You need to emerge wxGTK with USE='gtk2'"
 	games_pkg_setup
+	need-wxwidgets gtk2 || die "You need to emerge wxGTK with USE='gtk2'"
 }
 
 src_compile() {
