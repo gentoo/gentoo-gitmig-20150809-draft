@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.141 2006/04/16 22:27:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.142 2006/04/17 19:36:19 corsair Exp $
+
+  17 Apr 2006; Markus Rothe <corsair@gentoo.org> gstreamer-0.10.4.ebuild:
+  Stable on ppc64; bug #128737
 
   16 Apr 2006; Michael Hanselmann <hansmi@gentoo.org>
   gstreamer-0.10.4.ebuild:
