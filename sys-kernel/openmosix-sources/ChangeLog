@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.94 2005/08/03 14:04:39 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.95 2006/04/17 21:28:20 voxus Exp $
+
+*openmosix-sources-2.4.32 (17 Apr 2006)
+
+  17 Apr 2006; Konstantin Arkhipov <voxus@gentoo.org>
+  +openmosix-sources-2.4.32.ebuild:
+  Bump.
 
 *openmosix-sources-2.6.12.577 (03 Aug 2005)
 
