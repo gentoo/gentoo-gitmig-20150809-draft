@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.35 2006/04/13 02:45:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.36 2006/04/17 17:56:20 corsair Exp $
+
+  17 Apr 2006; Markus Rothe <corsair@gentoo.org> loudmouth-1.0.1.ebuild:
+  Stable on ppc64; bug #124659
 
   13 Apr 2006; Jason Wever <weeve@gentoo.org> loudmouth-1.0.1.ebuild:
   Stable on SPARC wrt bug #124659.
