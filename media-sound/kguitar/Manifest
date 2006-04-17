@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 041cf6ad59f0d9b84fbc27416eaa4219 ChangeLog 382
+MD5 7671f9411e9a9991481b59c118aebac3 ChangeLog 489
 MD5 3dd00c977c9fcdff62caff37915ed5b0 files/digest-kguitar-0.5 64
-MD5 ddd856583ebddc8bb18598dcc0a23d67 kguitar-0.5.ebuild 953
+MD5 3dbe1090435a51d65e66d81f7a0968db kguitar-0.5.ebuild 652
 MD5 c246bd99c40c6083173ba3c6d0e4f281 metadata.xml 335
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEQDaoT+MN7JbqCpMRAu7TAKCBYoSD8qLOYhvkfueU2cz/dBOV1QCcD6+v
-vZemklL4eNTe766LmE1gAUc=
-=4Eeo
+iD8DBQFEQvCGT+MN7JbqCpMRAl4ZAJ9hLypu4qx1UW9PLIXS1LcFeKXDxQCfR0rA
+L1vueptf8+LKYNnHa6+NQCQ=
+=kKmL
 -----END PGP SIGNATURE-----

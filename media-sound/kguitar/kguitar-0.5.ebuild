@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kguitar/kguitar-0.5.ebuild,v 1.2 2006/04/14 23:56:08 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kguitar/kguitar-0.5.ebuild,v 1.3 2006/04/17 01:33:43 eldad Exp $
 
 inherit kde
 
@@ -14,24 +14,12 @@ KEYWORDS="~x86"
 
 SLOT="0"
 
-IUSE="tetex"
+IUSE=""
 
 # hard-dep on tse3, without it causes Settings->Configure KGuitar to crash. (eldad 15 April 2006)
-DEPEND=">=media-libs/tse3-0.2.3
-	tetex? ( app-text/tetex )"
+DEPEND=">=media-libs/tse3-0.2.3"
 
 src_compile() {
-	myconf="--with-tse3 $(use_with tetex kgtabs)"
+	myconf="--with-tse3"
 	kde_src_compile
-}
-
-pkg_postinst() {
-	if use tetex ; then
-		einfo "Running texhash"
-		texhash
-
-		ewarn "In order to print chords you'll need musixtex, which provides tetex macros and fonts."
-		ewarn "See:"
-		ewarn "	 http://directory.fsf.org/MusiXTex.html"
-	fi
 }
