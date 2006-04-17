@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.1.ebuild,v 1.1 2006/03/26 05:46:55 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.1.ebuild,v 1.2 2006/04/17 20:50:20 exg Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,7 +19,7 @@ IUSE="7zip X gpm ncurses nls pam samba slang unicode"
 
 PROVIDE="virtual/editor"
 
-RDEPEND=">=sys-fs/e2fsprogs-1.19
+RDEPEND="kernel_linux? ( >=sys-fs/e2fsprogs-1.19 )
 	ncurses? ( >=sys-libs/ncurses-5.2-r5 )
 	=dev-libs/glib-2*
 	pam? ( >=sys-libs/pam-0.72 )
