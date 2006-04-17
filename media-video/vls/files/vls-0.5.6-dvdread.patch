@@ -1,0 +1,25 @@
+Index: vls-0.5.6/configure.in
+===================================================================
+--- vls-0.5.6.orig/configure.in
++++ vls-0.5.6/configure.in
+@@ -312,7 +312,7 @@ AC_HELP_STRING(--disable-dvd, DVD suppor
+ if test x$enable_dvd != xno
+ then
+   AC_CHECK_HEADER(dvdread/dvd_reader.h,
+-                  HAVE_LIBDVDREAD=1, HAVE_LIBDVDREAD=0)
++                  HAVE_LIBDVDREAD=1, HAVE_LIBDVDREAD=0, [#include <stdint.h>])
+   if test ${HAVE_LIBDVDREAD} = 1
+   then
+     if test ${SYS} != mingw32 && test ${SYS} != darwin
+Index: vls-0.5.6/src/modules/dvdreader/dvdreader.cpp
+===================================================================
+--- vls-0.5.6.orig/src/modules/dvdreader/dvdreader.cpp
++++ vls-0.5.6/src/modules/dvdreader/dvdreader.cpp
+@@ -34,6 +34,7 @@
+ 
+ #include "../../core/iso_lang.h"
+ 
++#include <stdint.h>
+ #include <dvdread/dvd_reader.h>
+ #include <dvdread/ifo_types.h>
+ #include <dvdread/ifo_read.h>
