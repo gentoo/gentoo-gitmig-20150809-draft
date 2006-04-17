@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eba49a64fe264350db01218b66518c34 ChangeLog 6947
-RMD160 94ccfb6ad0306d0fe78dcfa2a6c2f2de7abd69a6 ChangeLog 6947
-SHA256 07d338492164083664844e830437a5ee0dbc8f51944227b228cba9ab0020d479 ChangeLog 6947
+MD5 c361ae676b2d324efc488f28d95909e6 ChangeLog 7064
+RMD160 0c47dfecfe079ceebfd09a79f84b0f826ee0999f ChangeLog 7064
+SHA256 dc9f965a4ba6fe9a3585d3f214c12be0d4ea74bd2a398f2920ff8ce30a85d7f4 ChangeLog 7064
 MD5 d4eb558579e68c9b60f916c299e109bd files/digest-xfwm4-themes-4.2.1 70
 RMD160 5815fe1add5d2ece50222abf66b344266e0bf89d files/digest-xfwm4-themes-4.2.1 70
 SHA256 7c35eb9cfa34754ea1fdccf2e28258dd9cfde118dd4e5b4c391cc529d028d4af files/digest-xfwm4-themes-4.2.1 70
@@ -28,13 +25,6 @@ SHA256 0d94903bcdc1333110465881adaed42193ee8ed1f6969928c526d8d4735bf768 xfwm4-th
 MD5 acbb64ec4cf98266c79474e6991de992 xfwm4-themes-4.2.2.ebuild 386
 RMD160 efe906dff4a89623c148e3737dc4aa548b871a20 xfwm4-themes-4.2.2.ebuild 386
 SHA256 33cb024430fc656d4bf4a769f07e554de65d134a9bc5f231899cb601634cf9e0 xfwm4-themes-4.2.2.ebuild 386
-MD5 52685df4107aed29871699523084989b xfwm4-themes-4.2.3.ebuild 411
-RMD160 4a7d53fbeaf09cceee4988c446459c2a8629126f xfwm4-themes-4.2.3.ebuild 411
-SHA256 5b797052184cd5fa4f9fb75e26acef3850a5fbedad11cbe324ada170979ea9ae xfwm4-themes-4.2.3.ebuild 411
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEQFJiCRZPokWLroQRAjgmAJ0QfCv9DBJ543QFtXK9KvwM7CKgvgCgopvR
-DsqFf+p7MGaUVh42OCc1GrY=
-=GHdD
------END PGP SIGNATURE-----
+MD5 c5af1faf6fee4a95aaaf2c601a543100 xfwm4-themes-4.2.3.ebuild 409
+RMD160 2fb458631a3772ae207a3eb833a9b72f4f69a42f xfwm4-themes-4.2.3.ebuild 409
+SHA256 96a79ed0b0080271e42d607fa75eeb7302985fe470e0960ce0ff112d3fdd9fde xfwm4-themes-4.2.3.ebuild 409
