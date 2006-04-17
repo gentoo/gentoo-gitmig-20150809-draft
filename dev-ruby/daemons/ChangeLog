@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.4 2006/04/17 23:16:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.5 2006/04/17 23:17:07 caleb Exp $
+
+*daemons-0.4.4 (17 Apr 2006)
+
+  17 Apr 2006; Caleb Tennis <caleb@gentoo.org> +daemons-0.4.4.ebuild:
+  version bump
 
   17 Apr 2006; Caleb Tennis <caleb@gentoo.org> daemons-0.4.3.ebuild:
   x86 stable
