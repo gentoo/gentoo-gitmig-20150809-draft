@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.10 2006/04/08 22:19:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.11 2006/04/17 20:22:57 corsair Exp $
+
+  17 Apr 2006; Markus Rothe <corsair@gentoo.org> libgpod-0.3.2-r1.ebuild:
+  Added ~ppc64; bug #129409
 
 *libgpod-0.3.2-r1 (08 Apr 2006)
 
