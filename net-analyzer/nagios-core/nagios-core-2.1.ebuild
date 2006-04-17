@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.1.ebuild,v 1.1 2006/04/03 02:38:04 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.1.ebuild,v 1.2 2006/04/17 00:16:27 eldad Exp $
 
 inherit eutils apache-module toolchain-funcs gnuconfig
 
@@ -161,15 +161,15 @@ src_install() {
 	for dir in etc/nagios usr/nagios var/nagios ; do
 		chown -R nagios:nagios ${D}/${dir} || die "Failed chown of ${D}/${dir}"
 	done
-}
 
-pkg_preinst() {
 	keepdir /etc/nagios
 	keepdir /var/nagios
 	keepdir /var/nagios/archives
 	keepdir /usr/nagios/share/ssi
 	keepdir /var/nagios/rw
+}
 
+pkg_preinst() {
 	if use noweb; then
 		chown -R nagios:nagios ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 	else
