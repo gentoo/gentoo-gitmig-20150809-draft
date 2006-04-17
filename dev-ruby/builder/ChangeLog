@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.2 2006/03/30 03:22:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.3 2006/04/17 23:08:58 caleb Exp $
+
+*builder-2.0.0 (17 Apr 2006)
+
+  17 Apr 2006; Caleb Tennis <caleb@gentoo.org> +builder-2.0.0.ebuild:
+  verison bump
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> builder-1.2.4.ebuild:
   Mark 1.2.4 ~ia64
