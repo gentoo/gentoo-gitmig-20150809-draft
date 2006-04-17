@@ -44,7 +44,7 @@ echo ">>> Scanning modules in /usr/lib/asterisk/modules..."
 # create list of modules
 for x in $(ls -1 /usr/lib/asterisk/modules/*.so); do
 
-	if $(readelf -s "${x}" | grep -q "\(ast_load\|ast_destroy\)$"); then
+	if $(readelf -s "${x}" | grep -q "\(ast_load\|ast_save\|ast_destroy\|ast_pthread_create\|ast_strcasestr\)$"); then
 		modules_list="${modules_list} $(basename ${x})"
 	fi
 done
