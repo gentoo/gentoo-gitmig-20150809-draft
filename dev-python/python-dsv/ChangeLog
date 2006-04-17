@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/python-dsv
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dsv/ChangeLog,v 1.1 2006/04/17 21:39:20 mrness Exp $
+
+*python-dsv-1.4.0 (17 Apr 2006)
+
+  17 Apr 2006; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +python-dsv-1.4.0.ebuild:
+  Initial import from bug 57323, thanks to Sourav Mandal <sourav@sourav.net>.
+

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bbbbf2b8fbcbaf64617eb9714b74d48c ChangeLog 417
+MD5 b88a92ab1d4a2137815e37e115e00d68 files/digest-python-dsv-1.4.0 60
+MD5 1bc776cfa7ddbe62778b8109b4db4873 metadata.xml 426
+MD5 607ae33a2ca9215d8466c3ca5da0bc59 python-dsv-1.4.0.ebuild 535
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERAsZjG8pv1lIUX4RAnEnAJ4l4Pfbdqwcr3Ywd29l5Zt+x5fhMQCgvlHR
+oBfmh/GTfkjlxzGt95PTfz4=
+=437K
+-----END PGP SIGNATURE-----
