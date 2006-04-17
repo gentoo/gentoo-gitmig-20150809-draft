@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/gen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gen/ChangeLog,v 1.2 2006/03/30 03:28:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gen/ChangeLog,v 1.3 2006/04/17 23:32:55 caleb Exp $
+
+*gen-0.29.0 (17 Apr 2006)
+
+  17 Apr 2006; Caleb Tennis <caleb@gentoo.org> +gen-0.29.0.ebuild:
+  version bump
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> gen-0.25.0.ebuild:
   Mark 0.25.0 ~ia64
