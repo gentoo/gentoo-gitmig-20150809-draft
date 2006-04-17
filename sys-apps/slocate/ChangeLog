@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.61 2006/04/16 10:07:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.62 2006/04/17 13:48:04 wolf31o2 Exp $
+
+  17 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> slocate-2.7-r8.ebuild:
+  Stable on x86 wrt bug #130079.
 
   16 Apr 2006; Bryan Østergaard <kloeri@gentoo.org slocate-2.7-r8.ebuild:
   Stable on alpha, bug 130079.
