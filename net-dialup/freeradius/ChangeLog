@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.51 2006/04/09 17:52:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.52 2006/04/17 07:21:48 mrness Exp $
+
+  17 Apr 2006; Alin Nastac <mrness@gentoo.org> freeradius-1.1.1-r1.ebuild:
+  Remove old versioned .la symlinks in pkg_setup instead pkg_postinst (bug
+  129228 comment 4).
 
 *freeradius-1.1.1-r1 (09 Apr 2006)
 

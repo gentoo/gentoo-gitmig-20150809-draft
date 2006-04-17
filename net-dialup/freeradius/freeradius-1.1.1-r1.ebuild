@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.1-r1.ebuild,v 1.1 2006/04/09 17:52:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.1-r1.ebuild,v 1.2 2006/04/17 07:21:48 mrness Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -35,6 +35,26 @@ pkg_setup() {
 	fi
 	enewgroup radiusd
 	enewuser radiusd -1 -1 /var/log/radius radiusd
+
+	#TODO: Remove this function 6 months after all <1.1.1-r1 versions 
+	#      has been removed from the tree.
+	if cd "${ROOT}/usr/lib" ; then
+		einfo "Cleaning up lefovers from previous versions..."
+
+		local la_prefix file
+		for la_prefix in libradius libeap rlm_acct_unique rlm_always rlm_attr_filter rlm_attr_rewrite \
+			rlm_chap rlm_checkval rlm_counter rlm_cram rlm_dbm rlm_detail rlm_digest rlm_eap rlm_eap_gtc \
+			rlm_eap_leap rlm_eap_md5 rlm_eap_mschapv2 rlm_eap_peap rlm_eap_sim rlm_eap_tls rlm_eap_ttls \
+			rlm_example rlm_exec rlm_expr rlm_fastusers rlm_files rlm_ippool rlm_krb5 rlm_ldap rlm_mschap \
+			rlm_ns_mta_md5 rlm_otp rlm_pam rlm_pap rlm_passwd rlm_perl rlm_preprocess rlm_python rlm_radutmp \
+			rlm_realm rlm_sim_files rlm_smb rlm_sql rlm_sqlcounter rlm_sql_log rlm_unix ; do
+				for file in ${la_prefix}-{0.8.1,0.9.0,0.9.3,1.0.1,1.0.2,1.0.4,1.0.5,1.1.0,1.1.1}.la ; do
+					if [ -f "${file}" ] ; then
+						rm "${file}"
+					fi
+				done
+		done
+	fi
 }
 
 src_unpack() {
@@ -126,28 +146,6 @@ src_install() {
 pkg_preinst() {
 	enewgroup radiusd
 	enewuser radiusd -1 -1 /var/log/radius radiusd
-}
-
-pkg_postinst() {
-	#TODO: Remove this function 6 months after all <1.1.1-r1 versions 
-	#      has been removed from the tree.
-	if cd "${ROOT}/usr/lib" ; then
-		einfo "Cleaning up lefovers from previous versions..."
-
-		local la_prefix file
-		for la_prefix in libradius libeap rlm_acct_unique rlm_always rlm_attr_filter rlm_attr_rewrite \
-			rlm_chap rlm_checkval rlm_counter rlm_cram rlm_dbm rlm_detail rlm_digest rlm_eap rlm_eap_gtc \
-			rlm_eap_leap rlm_eap_md5 rlm_eap_mschapv2 rlm_eap_peap rlm_eap_sim rlm_eap_tls rlm_eap_ttls \
-			rlm_example rlm_exec rlm_expr rlm_fastusers rlm_files rlm_ippool rlm_krb5 rlm_ldap rlm_mschap \
-			rlm_ns_mta_md5 rlm_otp rlm_pam rlm_pap rlm_passwd rlm_perl rlm_preprocess rlm_python rlm_radutmp \
-			rlm_realm rlm_sim_files rlm_smb rlm_sql rlm_sqlcounter rlm_sql_log rlm_unix ; do
-				for file in ${la_prefix}-{0.8.1,0.9.0,0.9.3,1.0.1,1.0.2,1.0.4,1.0.5,1.1.0,1.1.1}.la ; do
-					if [ -f "${file}" ] ; then
-						rm "${file}"
-					fi
-				done
-		done
-	fi
 }
 
 pkg_prerm() {
