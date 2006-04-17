@@ -1,3 +1,4 @@
 move net-wireless/madwifi-tools net-wireless/madwifi-ng-tools
 move net-wireless/madwifi-driver net-wireless/madwifi-ng
 move games-simulation/bcsdemo games-simulation/bcs-demo
+move media-libs/alut media-libs/freealut
