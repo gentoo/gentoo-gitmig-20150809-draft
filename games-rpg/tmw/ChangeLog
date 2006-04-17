@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/tmw
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.15 2006/03/11 21:41:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.16 2006/04/17 13:16:08 wolf31o2 Exp $
+
+  17 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> tmw-0.0.18.ebuild,
+  tmw-0.0.18.1.ebuild, tmw-0.0.19.ebuild:
+  Moved games_pkg_setup to beginning of pkg_setup.
 
 *tmw-0.0.19 (11 Mar 2006)
 
