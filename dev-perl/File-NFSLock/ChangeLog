@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/File-NFSLock
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NFSLock/ChangeLog,v 1.1 2006/04/17 06:08:15 chriswhite Exp $
+
+*File-NFSLock-1.20 (17 Apr 2006)
+
+  17 Apr 2006; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +File-NFSLock-1.20.ebuild:
+  Initial import into the tree. Depend of bug #118928. Thanks to distances and
+  Adam Penser for the ebuilds.
+
