@@ -1,12 +1,14 @@
---- CMFPlone/MembershipTool.py (revision 5844)
-+++ CMFPlone/MembershipTool.py (revision 9512)
-@@ -1,4 +1,4 @@
+--- CMFPlone/MembershipTool.py	2004-12-01 15:54:09.000000000 +0100
++++ CMFPlone/MembershipTool.py	2006-04-17 15:11:56.000000000 +0200
+@@ -1,5 +1,5 @@
 -from Products.CMFCore.CMFCorePermissions import SetOwnPassword
  from Products.CMFCore.utils import getToolByName
 +from Products.CMFCore.utils import _checkPermission
  from Products.CMFDefault.MembershipTool import MembershipTool as BaseTool
  from Products.CMFPlone import ToolNames
-@@ -9,4 +9,7 @@
+ from Products.CMFPlone.PloneUtilities import translate
+@@ -8,6 +8,9 @@
+ from AccessControl import ClassSecurityInfo, getSecurityManager
  from Globals import InitializeClass
  from Acquisition import aq_base, aq_parent, aq_inner
 +from Products.CMFCore.CMFCorePermissions import ManagePortal
@@ -14,19 +16,24 @@
 +from Products.CMFCore.CMFCorePermissions import SetOwnPassword
  from Products.CMFCore.CMFCorePermissions import View
  from Products.CMFPlone.PloneBaseTool import PloneBaseTool
-@@ -40,4 +43,5 @@
+ 
+@@ -39,6 +42,7 @@
+     #    in CMFCore.MembershipTool - but in Plone we are not so anal ;-)
      security.declareProtected(View, 'getPortalRoles')
  
 +    security.declarePublic('getAuthenticatedMember')
      def getAuthenticatedMember(self):
          """ """
-@@ -52,4 +56,5 @@
+         _user=self.REQUEST.get('_portaluser', None)
+@@ -51,28 +55,30 @@
+             self.REQUEST.set('_portaluser', _user)
          return _user
  
 +    security.declarePublic('getPersonalPortrait')
      def getPersonalPortrait(self, member_id = None, verifyPermission=0):
          """
-@@ -58,7 +63,4 @@
+         returns the Portait for a member_id
+         """
          membertool   = getToolByName(self, 'portal_memberdata')
  
 -        # what are we doing with that
@@ -34,7 +41,8 @@
 -        #    return None
          if not member_id:
              member_id = self.getAuthenticatedMember().getUserName()
-@@ -67,5 +69,8 @@
+ 
+         portrait = membertool._getPortrait(member_id)
          if type(portrait) == type(''):
              portrait = None
 -        #portrait = None
@@ -44,50 +52,65 @@
 +                portrait = None
          if portrait is None:
              portal = getToolByName(self, 'portal_url').getPortalObject()
-@@ -74,4 +79,5 @@
+             portrait = getattr(portal, default_portrait)
+ 
          return portrait
  
 +    security.declareProtected(SetOwnProperties, 'deletePersonalPortrait')
      def deletePersonalPortrait(self, member_id = None):
          """
-@@ -85,4 +91,5 @@
+         deletes the Portait of member_id
+@@ -84,6 +90,7 @@
+ 
          membertool._deletePortrait(member_id)
  
 +    security.declarePublic('getPersonalFolder')
      def getPersonalFolder(self, member_id=None):
          """
-@@ -98,4 +105,5 @@
+         returns the Personal Item folder for a member
+@@ -97,6 +104,7 @@
+                             , None )
          return personal
  
 +    security.declareProtected(SetOwnProperties, 'changeMemberPortrait')
      def changeMemberPortrait(self, portrait, member_id=None):
          """
-@@ -112,4 +120,5 @@
+         given a portrait we will modify the users portrait
+@@ -111,6 +119,7 @@
+             membertool   = getToolByName(self, 'portal_memberdata')
              membertool._setPortrait(portrait, member_id)
  
 +    security.declarePublic('createMemberarea')
      def createMemberarea(self, member_id=None, minimal=0):
          """
-@@ -242,4 +251,5 @@
+         Create a member area for 'member_id' or the authenticated user.
+@@ -241,6 +250,7 @@
+     security.declarePublic('createMemberArea')
      createMemberArea = createMemberarea
  
 +    security.declareProtected(ManagePortal, 'listMembers')
      def listMembers(self):
          '''Gets the list of all members.
-@@ -251,4 +261,5 @@
+         '''
+@@ -250,6 +260,7 @@
+         else:
              return BaseTool.listMembers(self)
  
 +    security.declareProtected(ManagePortal, 'listMemberIds')
      def listMemberIds(self):
          '''Lists the ids of all members.  This may eventually be
-@@ -263,5 +274,5 @@
+         replaced with a set of methods for querying pieces of the
+@@ -262,7 +273,7 @@
+             return self.__getPUS().getUserNames()
  
      # this should probably be in MemberDataTool.py
 -    #security.declarePublic( 'searchForMembers' )
 +    security.declarePublic('searchForMembers')
      def searchForMembers( self, REQUEST=None, **kw ):
          """ """
-@@ -319,10 +330,10 @@
+         if REQUEST:
+@@ -318,12 +329,12 @@
+             res.append(member)
          return res
  
 -    def testCurrentPassword(self, password, username=None):
@@ -101,3 +124,4 @@
 +        username=self.getAuthenticatedMember().getUserName()
          acl_users = self._findUsersAclHome(username)
          if not acl_users:
+             return 0
