@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1cab8c3da0265d12c6b7b451594248d0 ChangeLog 431
+RMD160 b778e031827ac17beb6accb4839b62c505caae9d ChangeLog 431
+SHA256 7f34c343ad52b3d1f3c3b52df6d1edeb9916046728641479dba5db2e62a44063 ChangeLog 431
+MD5 e4b84ff6b5b2ca153044419d947cf150 files/digest-nvidia-freebsd-1.0.8178 286
+RMD160 bf4c941f4eff9b2b284ca38721216283e932cd00 files/digest-nvidia-freebsd-1.0.8178 286
+SHA256 a6d0f36c41009fcb509a37f1f461410245f09e79736db02ae2e51304c75efafc files/digest-nvidia-freebsd-1.0.8178 286
+MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
+RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
+SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata.xml 156
+MD5 9a63d0ed2cc6aea549f89fa1b29b687b nvidia-freebsd-1.0.8178.ebuild 826
+RMD160 7285cea2d86abba22449310cb437204e48b19aad nvidia-freebsd-1.0.8178.ebuild 826
+SHA256 129390f513447e143bcb335ab48fa3818e645775232451148cc941eed95bb0ef nvidia-freebsd-1.0.8178.ebuild 826
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQ2tSAiZjviIA2XgRArzvAKCr/du3CCYoxVlSt/qIYe8owWbduACg4CKL
+UaTNOzjrLiMJcZIjejmM7JQ=
+=cQBP
+-----END PGP SIGNATURE-----

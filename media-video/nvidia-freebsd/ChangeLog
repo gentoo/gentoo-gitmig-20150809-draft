@@ -1,0 +1,10 @@
+# ChangeLog for media-video/nvidia-freebsd
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-freebsd/ChangeLog,v 1.1 2006/04/17 10:20:36 flameeyes Exp $
+
+*nvidia-freebsd-1.0.8178 (17 Apr 2006)
+
+  17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +nvidia-freebsd-1.0.8178.ebuild:
+  Add ebuild for nvidia drivers kernel module for FreeBSD.
+
