@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-postgres
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ChangeLog,v 1.8 2006/04/09 13:01:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ChangeLog,v 1.9 2006/04/17 18:10:34 flameeyes Exp $
+
+  17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  ruby-postgres-0.7.1.ebuild:
+  Add ~x86-fbsd keyword.
 
   09 Apr 2006; Caleb Tennis <caleb@gentoo.org> ruby-postgres-0.7.1.ebuild:
   Change homepage and inherit ruby from bug #129271

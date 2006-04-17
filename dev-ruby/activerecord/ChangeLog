@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.28 2006/04/14 13:15:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.29 2006/04/17 18:19:03 flameeyes Exp $
+
+  17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  activerecord-1.14.2.ebuild:
+  Add ~x86-fbsd keyword.
 
 *activerecord-1.14.2 (14 Apr 2006)
 

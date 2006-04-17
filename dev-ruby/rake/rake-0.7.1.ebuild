@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.7.1.ebuild,v 1.1 2006/04/08 12:15:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.7.1.ebuild,v 1.2 2006/04/17 18:20:11 flameeyes Exp $
 
 inherit ruby gems
 
@@ -14,7 +14,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/9498/${P}.gem
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 RESTRICT="test"
 
