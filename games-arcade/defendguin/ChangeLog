@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/defendguin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/ChangeLog,v 1.7 2006/01/31 16:56:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/ChangeLog,v 1.8 2006/04/17 21:59:53 wolf31o2 Exp $
+
+  17 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  defendguin-0.0.10.ebuild, defendguin-0.0.11.ebuild:
+  Added patch to check for mikmod USE on sdl-mixer and closing bug #130089.
 
 *defendguin-0.0.11 (31 Jan 2006)
 
