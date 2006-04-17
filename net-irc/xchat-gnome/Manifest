@@ -1,46 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4f3845746f6968212b147eba4ee5af21 ChangeLog 3271
-RMD160 ff2e88ee45b9294dc6e1b4c3524f66bfafef072a ChangeLog 3271
-SHA256 2bfaa30ad18582eb3668d9a1dc57dd6e9f47188534eb3b35498b2a079e33994c ChangeLog 3271
-MD5 d716befa826af4aff08e7d9177b72760 files/0.10-libnotify-libsexy-configure.patch 2348
-RMD160 0ff5be061f86caafb19ec00752ddb5ac24d4691e files/0.10-libnotify-libsexy-configure.patch 2348
-SHA256 2792e8763b349b6beaff08d34c4567b8646082efae41001a8d9bfcbe9018fada files/0.10-libnotify-libsexy-configure.patch 2348
-MD5 354edd83113bb2f99ca8eed3f136f4fd files/0.9-libnotify-api-changes.patch 652
-RMD160 3091991b6fef3b7b3f6c032cae9cfd007df32953 files/0.9-libnotify-api-changes.patch 652
-SHA256 1a49c84bf75b4e1c720e29bee23c9324d7d85c88f1cfb51545c59f801fb04850 files/0.9-libnotify-api-changes.patch 652
-MD5 8cffb05e320e9b284e8b1d24561d0346 files/0.9-libnotify-libsexy-configure.patch 1935
-RMD160 f0e58cc4b802a29f1ae789a1800e173d735f36b8 files/0.9-libnotify-libsexy-configure.patch 1935
-SHA256 550446d93972664dcbfcf096a736ed8ee5ec89cbc86fc090607726d8b9fb33b7 files/0.9-libnotify-libsexy-configure.patch 1935
-MD5 275f90aa5a730301d36aa554d2c16a38 files/digest-xchat-gnome-0.10 256
-RMD160 acdb8478aaa1afb4847b8b03ed27b0d65af351b2 files/digest-xchat-gnome-0.10 256
-SHA256 f9134b37491ce6b515b36689ffeb28062d50ff88b092f7461fd831cbf8109574 files/digest-xchat-gnome-0.10 256
-MD5 c5e82da1d480886fc63fc2011b5389b3 files/digest-xchat-gnome-0.9 253
-RMD160 0a62933ffda8f7f80790f05a7f5f5e2f7db18021 files/digest-xchat-gnome-0.9 253
-SHA256 0601c3dc3e8b9cb2819a6921d8bcca4fbfec2a1775ed3e310131959a29cca3d0 files/digest-xchat-gnome-0.9 253
-MD5 0d26332d12259a97fb9a312fdf574a89 files/digest-xchat-gnome-0.9-r1 69
-RMD160 5cbb615589ac71a761201e3e74d319d70d6b6a92 files/digest-xchat-gnome-0.9-r1 69
-SHA256 e1c35fae3a52b2f9b67e7c369f81ec4f2d1852cacc114bc5006be121d99080fc files/digest-xchat-gnome-0.9-r1 69
-MD5 c7599a8531a6130925ead14ec1489bc5 files/xchat-gnome-0.7-scrollkeeper.patch 386
-RMD160 60b7b4ece62cc519f0d42d2c1a18f4a6ead70158 files/xchat-gnome-0.7-scrollkeeper.patch 386
-SHA256 b9c1b513c03819aa3ab65df551ed69d06214b4088a2cb70e7d4bd2490d4e0226 files/xchat-gnome-0.7-scrollkeeper.patch 386
+MD5 363ebfc888404aef4a67cf571a871dd7 ChangeLog 3713
+RMD160 59698ff74e0f62b7ba20cf07dbb8d8c03392fcce ChangeLog 3713
+SHA256 d29da26c5b93a094bde6cf4377f35ba66f4cf1fc7612239954e2991f2b82e84e ChangeLog 3713
+MD5 b1ea0b635587713b2f680d6bb6528069 files/0.11-libnotify-libsexy-configure.patch 2400
+RMD160 b928e0d6d20a5dabf80f67f2b714aef8b29678a8 files/0.11-libnotify-libsexy-configure.patch 2400
+SHA256 cb713b86de4418a3bed1c86d54fdea6bdb519cb90519867dda3ce269a8ab0f00 files/0.11-libnotify-libsexy-configure.patch 2400
+MD5 3a8ead5daadb18a5bfbc2ba8921c173e files/digest-xchat-gnome-0.11 256
+RMD160 885045d995d8a145f4b23088ef4f75159011fe5e files/digest-xchat-gnome-0.11 256
+SHA256 8491d0d12c03c479b71677f042c04e0e4b87d8f4aefd90090768856661089b3b files/digest-xchat-gnome-0.11 256
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 RMD160 279429d1df694561fc2b163cb81c09387b9d940c metadata.xml 160
 SHA256 5e058419199e306612929b80a996e3d16c6b20de674a56bb60558d3d36524fe2 metadata.xml 160
-MD5 e958f5221219c5705603e6245c643369 xchat-gnome-0.10.ebuild 2037
-RMD160 8332c0dca6b764c67104758d82197ff55ea79b5d xchat-gnome-0.10.ebuild 2037
-SHA256 d9d96b3aec84f74e16e75cfda1529cfe6114cdf9a2a41e96850e1405b7059fc5 xchat-gnome-0.10.ebuild 2037
-MD5 9e2f8493ad513f623ef8ed69774e169a xchat-gnome-0.9-r1.ebuild 2081
-RMD160 a1671d80bfba1d7a0a1989d42553335c6199ecbd xchat-gnome-0.9-r1.ebuild 2081
-SHA256 c8030f99223914396ee04fb2a5fc0e227bf2eed35dfb608c987a83ffefdf4835 xchat-gnome-0.9-r1.ebuild 2081
-MD5 e930ac7749a74c7c40307afe4fc37ce3 xchat-gnome-0.9.ebuild 1643
-RMD160 69db7aa2d561e43a78f9cd897a43de4d1a2e9fa4 xchat-gnome-0.9.ebuild 1643
-SHA256 da81244989e2e6c9fbae07389032733e3b84b7f273c47f5908984f156ee49bdf xchat-gnome-0.9.ebuild 1643
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFECx5XI1lqEGTUzyQRAgk5AKCxeTAVC0VQ41U/w1T1xw1YC2hSfQCgpuV/
-mFBDUDo4OO9oFAOSGhZKr3Y=
-=g18I
------END PGP SIGNATURE-----
+MD5 c896fe2285060cd34ebb010348af51ce xchat-gnome-0.11.ebuild 2074
+RMD160 8085795f93b719594ef7ae7a6dbb90190048fdee xchat-gnome-0.11.ebuild 2074
+SHA256 32be6568b02e7bd934ecb45e60a36387cfc832fa50fe931fa738a44866ee0d8d xchat-gnome-0.11.ebuild 2074

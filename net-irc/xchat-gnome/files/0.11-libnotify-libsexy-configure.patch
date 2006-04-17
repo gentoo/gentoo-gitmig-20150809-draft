@@ -1,7 +1,7 @@
-diff -Nur xchat-gnome-0.9.orig/configure.ac xchat-gnome-0.9/configure.ac
---- xchat-gnome-0.9.orig/configure.ac	2006-01-19 22:54:01.000000000 +0000
-+++ xchat-gnome-0.9/configure.ac	2006-02-19 17:57:55.394803381 +0000
-@@ -104,21 +104,42 @@
+diff -Nur xchat-gnome-0.11.orig/configure.ac xchat-gnome-0.11/configure.ac
+--- xchat-gnome-0.11.orig/configure.ac	2006-04-05 18:16:47.000000000 +0000
++++ xchat-gnome-0.11/configure.ac	2006-04-17 19:28:12.502578000 +0000
+@@ -110,24 +110,40 @@
  
  AM_CONDITIONAL([ENABLE_DBUS],[test "x$dbus" = "xyes"])
  
@@ -16,13 +16,16 @@ diff -Nur xchat-gnome-0.9.orig/configure.ac xchat-gnome-0.9/configure.ac
 -AC_SUBST([LIBSEXY_LIBS])
 +if test "x$enable_libsexy" = "xyes"; then
 +	PKG_CHECK_MODULES([LIBSEXY], [libsexy >= $LIBSEXY_REQUIRED], libsexy=yes, libsexy=no)
++	AC_DEFINE(HAVE_LIBSEXY, 1, [Enable libsexy])
 +	AC_SUBST([LIBSEXY_CFLAGS])
 +	AC_SUBST([LIBSEXY_LIBS])
 +fi
 +
  AM_CONDITIONAL([ENABLE_LIBSEXY],[test "x$libsexy" = "xyes"])
--if test "x$libsexy" = xyes; then
+-if test "x$libsexy" = "xyes"; then
 -	AC_DEFINE(HAVE_LIBSEXY, 1, [Enable libsexy])
+-else
+-	AC_MSG_WARN([Library requirements (libsexy >= $LIBSEXY_REQUIRED) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.])
 +
 +if test "x$enable_libsexy" = "xyes" && test "x$libsexy" != "xyes"; then
 +	AC_MSG_ERROR([libsexy not found])
@@ -44,11 +47,10 @@ diff -Nur xchat-gnome-0.9.orig/configure.ac xchat-gnome-0.9/configure.ac
 +fi
 +
  AM_CONDITIONAL([ENABLE_LIBNOTIFY],[test "x$libnotify" = "xyes"])
- 
+-if test "x$libnotify" != "xyes"; then
+-	AC_MSG_WARN([Library requirements (libnotify >= $LIBNOTIFY_REQUIRED) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.])
 +if test "x$enable_libnotify" = "xyes" && test "x$libnotify" != "xyes"; then
 +	AC_MSG_ERROR([libnotify not found])
-+fi
-+
+ fi
+ 
  # GConf
- AM_GCONF_SOURCE_2
- AC_PATH_PROG(GCONFTOOL, gconftool-2, no)

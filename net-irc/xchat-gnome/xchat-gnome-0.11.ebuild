@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.9-r1.ebuild,v 1.4 2006/02/26 20:25:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.11.ebuild,v 1.1 2006/04/17 19:51:50 swegener Exp $
 
 inherit gnome2 eutils autotools
 
@@ -11,7 +11,7 @@ SRC_URI="http://releases.navi.cx/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="perl tcltk python ssl mmx ipv6 nls dbus libsexy libnotify"
+IUSE="perl tcltk python ssl mmx ipv6 nls dbus libsexy libnotify spell"
 
 RDEPEND=">=dev-libs/glib-2.0.3
 	>=gnome-base/libgnome-2
@@ -20,6 +20,7 @@ RDEPEND=">=dev-libs/glib-2.0.3
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-vfs-2
 	>=x11-libs/gtk+-2.8
+	spell? ( app-text/gtkspell )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( >=dev-lang/perl-5.6.1 )
 	python? ( dev-lang/python )
@@ -31,6 +32,7 @@ RDEPEND=">=dev-libs/glib-2.0.3
 DEPEND="${RDEPEND}
 	gnome-base/gnome-common
 	>=dev-util/pkgconfig-0.7
+	>=app-text/gnome-doc-utils-0.3.2
 	nls? ( sys-devel/gettext )"
 
 # gnome-base/gnome-common is temporarily needed for re-creating configure
@@ -38,9 +40,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/xchat-gnome-0.7-scrollkeeper.patch
-	epatch ${FILESDIR}/0.9-libnotify-libsexy-configure.patch
-	epatch ${FILESDIR}/0.9-libnotify-api-changes.patch
+
+	epatch ${FILESDIR}/0.11-libnotify-libsexy-configure.patch
 
 	AT_M4DIR="m4" eautoreconf
 }
@@ -49,6 +50,8 @@ src_compile() {
 	econf \
 		--enable-gnomefe \
 		--enable-shm \
+		--disable-schemas-install \
+		--disable-scrollkeeper \
 		$(use_enable ssl openssl) \
 		$(use_enable perl) \
 		$(use_enable python) \
@@ -64,8 +67,6 @@ src_compile() {
 }
 
 src_install() {
-	addpredict /var/lib/scrollkeeper/scrollkeeper_docs
-
 	USE_DESTDIR="1" gnome2_src_install || die "gnome2_src_install failed"
 
 	# install plugin development header
@@ -77,4 +78,5 @@ src_install() {
 
 pkg_postinst() {
 	gnome2_gconf_install
+	gnome2_scrollkeeper_update
 }

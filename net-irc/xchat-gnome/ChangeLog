@@ -1,6 +1,18 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.19 2006/03/05 17:22:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.20 2006/04/17 19:51:50 swegener Exp $
+
+*xchat-gnome-0.11 (17 Apr 2006)
+
+  17 Apr 2006; Sven Wegener <swegener@gentoo.org>
+  -files/0.9-libnotify-api-changes.patch,
+  -files/0.10-libnotify-libsexy-configure.patch,
+  -files/xchat-gnome-0.7-scrollkeeper.patch,
+  -files/0.9-libnotify-libsexy-configure.patch,
+  +files/0.11-libnotify-libsexy-configure.patch, -xchat-gnome-0.9.ebuild,
+  -xchat-gnome-0.9-r1.ebuild, -xchat-gnome-0.10.ebuild,
+  +xchat-gnome-0.11.ebuild:
+  Version bump.
 
   05 Mar 2006; Sven Wegener <swegener@gentoo.org> xchat-gnome-0.10.ebuild:
   Add gnome-doc-utils to dependencies, closes bug #124734.
