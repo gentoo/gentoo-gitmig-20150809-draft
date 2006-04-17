@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 650465d1c2040b75bad8c9f94da1de81 ChangeLog 1022
-RMD160 b0a5974cd0f9d8d00bcf067984d8770f32f168c8 ChangeLog 1022
-SHA256 bdcf47670c60fb75aea8a4135a589b1e64550615cf49b3498792648e96ddcb98 ChangeLog 1022
+MD5 17b5d3ab37981efee0103b42b32af28b ChangeLog 1131
+RMD160 84b76b9d5fbb841572d6ec4c548e44243c7f0374 ChangeLog 1131
+SHA256 dca3e7d73de97bbdf6f2e999f7873b4dfc94ff6e70a658b30139d4c499f6d75c ChangeLog 1131
 MD5 befac8d612501d53c9cd28a673362f09 files/digest-vdr-epgsearch-0.9.10 491
 RMD160 a482f233e5eaffdc3102184032285395fa7eec16 files/digest-vdr-epgsearch-0.9.10 491
 SHA256 aa4311c139837d7a867e29b3b8e344801c04ed825df91515d687e242827f8f66 files/digest-vdr-epgsearch-0.9.10 491
@@ -28,13 +25,6 @@ SHA256 208e4cdd232afe77609dfa96fe90d04c19eca7127601ed0bbc3dc943f4799464 vdr-epgs
 MD5 b8c86d6fdc82398e29470f4e85e1d612 vdr-epgsearch-0.9.14.ebuild 518
 RMD160 07649890c28cf1ecc8a2a9bfd216c43bee9f9cbd vdr-epgsearch-0.9.14.ebuild 518
 SHA256 b15956816c250484338db1d07761171445c7e71c503440fe48cc54bfb6fdac7b vdr-epgsearch-0.9.14.ebuild 518
-MD5 e4bf5a7486c12dc37b30999b54db9ddb vdr-epgsearch-0.9.14a.ebuild 519
-RMD160 ccb64285f6e26f3d0a5b7228719aa826d91b4c79 vdr-epgsearch-0.9.14a.ebuild 519
-SHA256 09daa757eafa2c037b25024189777eabc8f7f5f27c8322ae447d969c0220bffe vdr-epgsearch-0.9.14a.ebuild 519
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEC80MZfSl1Kp5KmoRAmMQAJ413kNXWJPfhP90qrgA7ug+XQbGFgCeIRcY
-sCWUAO/MQJfJKBitw87Xv+U=
-=QBOP
------END PGP SIGNATURE-----
+MD5 1cd75273adc424eb41d7d6ec630c44c9 vdr-epgsearch-0.9.14a.ebuild 518
+RMD160 6aa1a08e5d7aeb484519fbdd605fd3fa3382121d vdr-epgsearch-0.9.14a.ebuild 518
+SHA256 bfe9c475e35a3397d24dc919cd8dbda94e148cfb742cebf1cb71237a2dccece2 vdr-epgsearch-0.9.14a.ebuild 518

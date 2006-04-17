@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0dc0e75e3d4495d810db3c45d200c226 ChangeLog 398
-RMD160 0414f82be986de586da0076b220fdba79d0f729e ChangeLog 398
-SHA256 9d9e0c8e58d4cf2a5170a03d57cbdc858638c95a499289af35359f9a7e1052ee ChangeLog 398
+MD5 854defca3ca63705ce35c45f08e5ab74 ChangeLog 506
+RMD160 1c55ec5323076b94c4b56d7d1a361a310b123fbb ChangeLog 506
+SHA256 a2a1c73f5f70f37f103b6a2f121550eb5d48b8ac9e839578e1b14cb3e0a345f1 ChangeLog 506
 MD5 e5d4d7894054346e0c1d4d83828d52b9 files/digest-vdr-skincurses-0.0.5 235
 RMD160 12b98848b371207cd6437a7c515bea1f6fb29b18 files/digest-vdr-skincurses-0.0.5 235
 SHA256 aa857c9e9efbf5abd80792cab8692096574f90a332b7821a14ecf711a07e48fb files/digest-vdr-skincurses-0.0.5 235
 MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
 RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
 SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
-MD5 ef97a1a2c90aaa98fa195febb4e8b353 vdr-skincurses-0.0.5.ebuild 578
-RMD160 950a9ceffb63ee35192e4cd2bec3fc636b243b5d vdr-skincurses-0.0.5.ebuild 578
-SHA256 b39a4e4be6acfae5281247d7c2118b6e1b94a01caa6f4970bebad8808df184aa vdr-skincurses-0.0.5.ebuild 578
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEFYlWZfSl1Kp5KmoRAryhAJ9oBoy/cNrk9ruPKn1nO83MgFQmTQCfUQT1
-ra3+vD60N8hDkOoHB/YaMaI=
-=I3yI
------END PGP SIGNATURE-----
+MD5 a1f3b134ee113856c8d0c7e4ad8c7b1f vdr-skincurses-0.0.5.ebuild 577
+RMD160 b3942c081d213d819542f3e5a85cb0cc413814e0 vdr-skincurses-0.0.5.ebuild 577
+SHA256 404c8d46694a71aef63413566db064e354efcfa8f318d22ac78ec7584ca4747b vdr-skincurses-0.0.5.ebuild 577

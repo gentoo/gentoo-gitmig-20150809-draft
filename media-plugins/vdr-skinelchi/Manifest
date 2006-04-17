@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4a725502df864bee162dca425e3a2fdf ChangeLog 405
+MD5 2f240570e231e86a674b20ee23406fdc ChangeLog 507
+RMD160 316f905fcc56ad3d2d08db93e416a0d467268fa8 ChangeLog 507
+SHA256 2e9d7b7820b9478b800d51bdf8b5ce5d4287363650a99cebaf83295f6047e260 ChangeLog 507
 MD5 085d42d9f37f7dfaf85168f91d931fbb files/digest-vdr-skinelchi-0.1.1 67
+RMD160 dc83df0a0f31dbc0cbfc47b668ca7ed9973744f0 files/digest-vdr-skinelchi-0.1.1 67
+SHA256 82020b234043a7c72e8af55f78ac7cb2b2d4613d26dad176d1b3eae5f9309e12 files/digest-vdr-skinelchi-0.1.1 67
 MD5 dc2500e0bc291cb8d5d685d8e4ae3279 metadata.xml 509
-MD5 93b4e3e01126ad6d5d1cd24e2d869abf vdr-skinelchi-0.1.1.ebuild 516
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-Comment: no further Information
-
-iD8DBQFEDGg7dn07HTTCgIoRAhpfAJ9xIeLNz6b5iQNE0FFC1ZfzERG2cACfRMNW
-GxdAt35naDyTYnQbLLO+sZE=
-=Tv+j
------END PGP SIGNATURE-----
+RMD160 9458e133116ad616557c1a339b69c12fe1db69d0 metadata.xml 509
+SHA256 2c757e1d12ebaa83e1094dd54b0d5ea949a85b3165549753b04c93dcb2d22d65 metadata.xml 509
+MD5 5e01ca6c27b4921aec2ac9860128b549 vdr-skinelchi-0.1.1.ebuild 510
+RMD160 0555e4cb669ceac1062908233a6e50b5d81cdd77 vdr-skinelchi-0.1.1.ebuild 510
+SHA256 eee7e4cdbdba99da7097c8b8c3f98efe6b01711ca2c8987d1c44833d7d2d2a9a vdr-skinelchi-0.1.1.ebuild 510
