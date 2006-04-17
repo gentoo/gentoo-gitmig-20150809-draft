@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.98 2006/04/16 13:43:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.99 2006/04/17 20:46:16 corsair Exp $
+
+  17 Apr 2006; Markus Rothe <corsair@gentoo.org> bash-3.1_p16.ebuild:
+  Stable on ppc64; bug #129885
 
   16 Apr 2006; Bryan Østergaard <kloeri@gentoo.org bash-3.1_p16.ebuild:
   Stable on alpha, bug 129885.
