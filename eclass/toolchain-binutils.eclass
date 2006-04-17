@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.58 2006/04/02 22:55:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.59 2006/04/17 04:05:01 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -182,7 +182,7 @@ toolchain-binutils_src_compile() {
 	# only build info pages if we user wants them, and if
 	# we have makeinfo (may not exist when we bootstrap)
 	if ! has noinfo ${FEATURES} ; then
-		if type -p makeinfo ; then
+		if type -p makeinfo > /dev/null ; then
 			make info || die "make info failed"
 		fi
 	fi
