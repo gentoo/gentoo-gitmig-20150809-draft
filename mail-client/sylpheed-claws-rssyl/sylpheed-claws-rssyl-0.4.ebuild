@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-rssyl/sylpheed-claws-rssyl-0.4.ebuild,v 1.3 2006/03/20 17:14:22 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-rssyl/sylpheed-claws-rssyl-0.4.ebuild,v 1.4 2006/04/17 18:33:24 corsair Exp $
 
 MY_P="${P##sylpheed-claws-}"
 SC_BASE="2.0.0_rc1"
@@ -10,7 +10,7 @@ HOMEPAGE="http://claws.sylpheed.org"
 SRC_URI="http://ticho.yweb.sk/rssyl/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 x86"
+KEYWORDS="~alpha ~amd64 ~ppc64 x86"
 IUSE="nls"
 DEPEND=">=mail-client/sylpheed-claws-${SC_BASE}
 	net-misc/curl

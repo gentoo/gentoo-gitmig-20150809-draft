@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-fetchinfo/sylpheed-claws-fetchinfo-0.4.10.ebuild,v 1.1 2006/02/10 18:18:34 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-fetchinfo/sylpheed-claws-fetchinfo-0.4.10.ebuild,v 1.2 2006/04/17 18:39:41 corsair Exp $
 
 MY_P="${P##sylpheed-claws-}"
 MY_PN="${PN##sylpheed-claws-}"
@@ -12,7 +12,7 @@ HOMEPAGE="http://claws.sylpheed.org"
 SRC_URI="mirror://sourceforge/sylpheed-claws/${SC_BASE_NAME}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 DEPEND=">=mail-client/sylpheed-claws-${SC_BASE}"
 

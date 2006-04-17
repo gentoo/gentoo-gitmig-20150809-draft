@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-etpan-privacy/sylpheed-claws-etpan-privacy-0.13.ebuild,v 1.1 2006/02/10 18:16:14 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-etpan-privacy/sylpheed-claws-etpan-privacy-0.13.ebuild,v 1.2 2006/04/17 18:40:25 corsair Exp $
 
 MY_P="${P##sylpheed-claws-}"
 MY_P="${MY_P%%[-_]plugin}"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/sylpheed-claws/sylpheed-claws-extra-plugins-${SC_B
 #SRC_URI="http://claws.sylpheed.org/downloads/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 DEPEND=">=mail-client/sylpheed-claws-${SC_BASE}
 		net-libs/libetpan

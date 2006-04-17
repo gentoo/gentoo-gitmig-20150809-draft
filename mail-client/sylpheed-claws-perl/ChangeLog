@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws-perl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-perl/ChangeLog,v 1.4 2006/02/10 18:24:46 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-perl/ChangeLog,v 1.5 2006/04/17 18:38:58 corsair Exp $
+
+  17 Apr 2006; Markus Rothe <corsair@gentoo.org>
+  sylpheed-claws-perl-0.6.ebuild:
+  Added ~ppc64
 
 *sylpheed-claws-perl-0.6 (10 Feb 2006)
 
