@@ -35,7 +35,7 @@ plugins_ppp0=( 'pppoa 0.38' )
 # 'man pppd' shows other options. Compression is disabled because it is
 # rarely taken advantage of, and may interfere with the connection.
 # Add option 'usepeerdns' to populate /etc/resolv.conf
-pppd_ppp0=( updetach debug defaultroute noaccomp nobsdcomp noccp
+pppd_ppp0=( updetach noauth debug defaultroute noaccomp nobsdcomp noccp
 	nodeflate nopcomp novj novjccomp )
 username_ppp0='username@isp.com'  # E.g. 'fredbloggs@hg5.btclick.com'
 password_ppp0='password'  # ADSL password, assigned by your ISP
@@ -59,7 +59,7 @@ plugins_ppp0=( pppoe )
 # 'man pppd' shows other options. Compression is disabled because it is
 # rarely taken advantage of, and may interfere with the connection.
 # Add option 'usepeerdns' to populate /etc/resolv.conf
-pppd_ppp0=( updetach debug defaultroute noaccomp nobsdcomp noccp
+pppd_ppp0=( updetach noauth debug defaultroute noaccomp nobsdcomp noccp
 	nodeflate nopcomp novj novjccomp )
 username_ppp0='username@isp.com'  # E.g. 'fredbloggs@hg5.btclick.com'
 password_ppp0='password'  # ADSL password, assigned by your ISP
@@ -76,8 +76,8 @@ function preup() {
 		# they are separated by a dot. Choose here, or ask your ISP:
 		#   http://www.linux-usb.org/SpeedTouch/faq/index.html#q12
 		eval local nasifname=\$\{link_$1\}
-		start-stop-daemon --start --pidfile /var/run/${nasifname}.pid --makepid -- \
-			br2684ctl -c ${nasifname#nas} -e 0 -a 0.38
+		start-stop-daemon --start --background --pidfile /var/run/${nasifname}.pid --make-pidfile \
+			--exec /sbin/br2684ctl -- -c ${nasifname#nas} -e 0 -a 0.38
 	fi
 }
 
@@ -85,6 +85,7 @@ function postdown() {
 	if [[ "$1" = "ppp0" ]] ; then
 		eval local nasifname=\$\{link_$1\}
 		start-stop-daemon --stop --pidfile /var/run/${nasifname}.pid
+		return 0
 	fi
 }
 
