@@ -1,0 +1,24 @@
+http://bugs.gentoo.org/130104
+
+--- lib/rcscripts/net.modules.d/wpa_supplicant	(revision 1787)
++++ lib/rcscripts/net.modules.d/wpa_supplicant	(working copy)
+@@ -99,7 +99,8 @@
+ # Note that just because we are associated does not mean we are using the
+ # correct encryption keys
+ wpa_supplicant_associated() {
+-	local -a status=( "$( wpa_cli -i${1} status | awk -F= '/^key_mgmt|^wpa_state|^EAP state/ { print "\""$2"\"" }' )" )
++	local -a status
++	eval status=( $( wpa_cli -i"$1" status | awk -F= '/^key_mgmt|^wpa_state|^EAP state/ { print "\""$2"\"" }' ) )
+ 
+ 	case ${status[0]} in
+ 		"NONE"	)		[[ ${status[1]} == "ASSOCIATED" || ${status[1]} == "COMPLETED" ]] ;;
+@@ -214,7 +215,8 @@
+ 
+ 	# Set ESSID for essidnet and report
+ 	ESSID=$( wpa_supplicant_get_essid ${iface} )
+-	local -a status=( "$( wpa_cli -i${iface} status | awk -F= '/^bssid|^pairwise_cipher|^key_mgmt/ { print "\""$2"\"" }' )" )
++	local -a status
++	eval status=( $( wpa_cli -i"${iface}" status | awk -F= '/^bssid|^pairwise_cipher|^key_mgmt/ { print "\""$2"\"" }' ) )
+ 	local mac=$( echo ${status[0]} | tr '[:lower:]' '[:upper:]' )
+ 	einfo "${iface} connected to \"${ESSID//\\\\/\\\\}\" at ${mac}"
+ 
