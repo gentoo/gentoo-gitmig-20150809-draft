@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.441 2006/04/14 11:35:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.442 2006/04/17 16:52:35 vapier Exp $
+
+  17 Apr 2006; Mike Frysinger <vapier@gentoo.org> glibc-2.4-r2.ebuild:
+  Kill USE=userlocales and replace with Debian locale-gen #22565.
 
   14 Apr 2006; Bryan Østergaard <kloeri@gentoo.org glibc-2.3.6-r3.ebuild:
   ~alpha keyword 2.3.6-r3, needed by vlc-0.8.5.

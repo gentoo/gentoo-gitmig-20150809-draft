@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.10 2006/04/17 07:33:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.11 2006/04/17 16:52:35 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -27,7 +27,7 @@ GLIBC_MANPAGE_VERSION="none"
 GLIBC_INFOPAGE_VERSION="none"
 
 # Gentoo patchset
-PATCH_VER="1.5"
+PATCH_VER="1.6"
 
 # Fedora addons (like c_stubs)
 # sniped from RHEL's glibc-2.4-4.src.rpm
@@ -45,7 +45,7 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 LICENSE="LGPL-2"
 
-IUSE="nls build nptl nptlonly hardened userlocales multilib selinux glibc-omitfp profile"
+IUSE="nls build nptl nptlonly hardened multilib selinux glibc-omitfp profile"
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -312,7 +312,7 @@ toolchain-glibc_pkg_preinst() {
 	fi
 
 	# Shouldnt need to keep this updated
-	[[ -e ${ROOT}/etc/locales.build ]] && rm -f "${D}"/etc/locales.build
+	[[ -e ${ROOT}/etc/locale.gen ]] && rm -f "${D}"/etc/locale.gen
 }
 
 toolchain-glibc_src_install() {
@@ -442,7 +442,19 @@ toolchain-glibc_src_install() {
 
 	cd "${GBUILDDIR}"
 
-	setup_locales
+	# Files for Debian-style locale updating
+	dodir /usr/share/i18n
+	sed \
+		-e "/^#/d" \
+		-e "/SUPPORTED-LOCALES=/d" \
+		-e "s: \\\\::g" -e "s:/: :g" \
+		"${S}"/localedata/SUPPORTED > "${D}"/usr/share/i18n/SUPPORTED \
+		|| die "generating /usr/share/i18n/SUPPORTED failed"
+	cd "${WORKDIR}"/extra/locale
+	dosbin locale-gen || die
+	doman *.[0-8]
+	insinto /etc
+	doins locale.gen || die
 
 	if ! has noinfo ${FEATURES} && [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
 		einfo "Installing info pages..."
@@ -464,7 +476,7 @@ toolchain-glibc_src_install() {
 	insinto /etc
 	doins "${FILESDIR}"/nscd.conf
 	doins "${FILESDIR}"/nsswitch.conf
-
+	doins "${FILESDIR}"/2.3.6/host.conf
 	doinitd "${FILESDIR}"/nscd
 
 	cd "${S}"
@@ -473,12 +485,6 @@ toolchain-glibc_src_install() {
 	# Prevent overwriting of the /etc/localtime symlink.  We'll handle the
 	# creation of the "factory" symlink in pkg_postinst().
 	rm -f "${D}"/etc/localtime
-
-	insinto /etc
-	# This is our new config file for building locales
-	doins "${FILESDIR}"/locales.build
-	# example host.conf with multicast dns disabled by default
-	doins "${FILESDIR}"/2.3.6/host.conf
 
 	# simple test to make sure our new glibc isnt completely broken.
 	# for now, skip the multilib scenario.  also make sure we don't
@@ -538,9 +544,16 @@ toolchain-glibc_pkg_postinst() {
 		ln -s ld64.so.1 ${ROOT}/lib/ld.so.1
 	fi
 
-	# Reload init ...
 	if ! is_crosscompile && [[ ${ROOT} == "/" ]] ; then
+		# Reload init ...
 		/sbin/init U &> /dev/null
+
+		# if the host locales.gen contains no entries, we'll install everything
+		local locale_list="${ROOT}etc/locale.gen"
+		if [[ -z $(locale-gen --list --config "${locale_list}") ]] ; then
+			locale_list="${ROOT}usr/share/i18n/SUPPORTED"
+		fi
+		locale-gen --config "${locale_list}"
 	fi
 
 	echo
@@ -715,43 +728,36 @@ check_kheader_version() {
 }
 
 check_nptl_support() {
-	local min_kernel_version="$(KV_to_int "${NPTL_KERNEL_VERSION}")"
+	local min_kernel_version=$(KV_to_int "${NPTL_KERNEL_VERSION}")
 
 	echo
 
-	einfon "Checking gcc for __thread support ... "
-	if want__thread ; then
-		echo "yes"
-	else
-		echo "no"
+	ebegin "Checking gcc for __thread support"
+	if ! eend $(want__thread) ; then
 		echo
 		eerror "Could not find a gcc that supports the __thread directive!"
-		eerror "please update to gcc-3.2.2-r1 or later, and try again."
+		eerror "Please update your binutils/gcc and try again."
 		die "No __thread support in gcc!"
 	fi
 
-	# Building fails on an non-supporting kernel
-	einfon "Checking kernel version (>=${NPTL_KERNEL_VERSION}) ... "
-	if [ "`get_KV`" -lt "${min_kernel_version}" ] ; then
-		echo "no"
-		echo
-		eerror "You need a kernel of at least version ${NPTL_KERNEL_VERSION}"
-		eerror "for NPTL support!"
-		die "Kernel version too low!"
-	else
-		echo "yes"
+	if ! is_crosscompile && ! tc-is-cross-compiler ; then
+		# Building fails on an non-supporting kernel
+		ebegin "Checking kernel version (>=${NPTL_KERNEL_VERSION})"
+		if ! eend $([[ $(get_KV) -ge ${min_kernel_version} ]]) ; then
+			echo
+			eerror "You need a kernel of at least version ${NPTL_KERNEL_VERSION}"
+			eerror "for NPTL support!"
+			die "Kernel version too low!"
+		fi
 	fi
 
 	# Building fails with too low linux-headers
-	einfon "Checking linux-headers version (>=${NPTL_KERNEL_VERSION}) ... "
-	if ! check_kheader_version "${min_kernel_version}"; then
-		echo "no"
+	ebegin "Checking linux-headers version (>=${NPTL_KERNEL_VERSION})"
+	if ! eend $(check_kheader_version "${min_kernel_version}") ; then
 		echo
 		eerror "You need linux-headers of at least version ${NPTL_KERNEL_VERSION}"
 		eerror "for NPTL support!"
 		die "linux-headers version too low!"
-	else
-		echo "yes"
 	fi
 
 	echo
@@ -814,37 +820,6 @@ want__thread() {
 	rm -f "${T}"/test-__thread.[co]
 
 	return ${WANT__THREAD}
-}
-
-install_locales() {
-	unset LANGUAGE LANG LC_ALL
-	cd "${GBUILDDIR}"
-	make PARALLELMFLAGS="${MAKEOPTS} -j1" \
-		install_root="${D}" localedata/install-locales || die
-}
-
-setup_locales() {
-	if use !userlocales ; then
-		einfo "userlocales not enabled, installing -ALL- locales..."
-		install_locales || die
-	elif [ -e /etc/locales.build ] ; then
-		einfo "Installing locales in /etc/locales.build..."
-		echo 'SUPPORTED-LOCALES=\' > SUPPORTED.locales
-		cat /etc/locales.build | grep -v -e ^$ -e ^\# | sed 's/$/\ \\/g' \
-			>> SUPPORTED.locales
-		cat SUPPORTED.locales > ${S}/localedata/SUPPORTED || die
-		install_locales || die
-	elif [[ -e ${FILESDIR}/locales.build ]] ; then
-		einfo "Installing locales in ${FILESDIR}/locales.build..."
-		echo 'SUPPORTED-LOCALES=\' > SUPPORTED.locales
-		cat "${FILESDIR}"/locales.build | grep -v -e ^$ -e ^\# | sed 's/$/\ \\/g' \
-			>> SUPPORTED.locales
-		cat SUPPORTED.locales > ${S}/localedata/SUPPORTED || die
-		install_locales || die
-	else
-		einfo "Installing -ALL- locales..."
-		install_locales || die
-	fi
 }
 
 glibc_do_configure() {
@@ -1082,7 +1057,6 @@ pkg_setup() {
 
 	# give some sort of warning about the nptl logic changes...
 	if want_nptl && want_linuxthreads ; then
-
 		ewarn "Warning! Gentoo's GLIBC with NPTL enabled now behaves like the"
 		ewarn "glibc from almost every other distribution out there. This means"
 		ewarn "that glibc is compiled -twice-, once with linuxthreads and once"
