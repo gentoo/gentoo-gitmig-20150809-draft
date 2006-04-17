@@ -1,11 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.12 2005/07/18 22:02:57 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.13 2006/04/17 03:47:44 nichoj Exp $
 
-# Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
+# Original Author: Karl Trygve Kalleberg <karltk@gentoo.org>
+# Maintainers:
+#		Development Tools Team <dev-tools@gentoo.org>
+#		Java Team <java@gentoo.org>
 
-inherit eutils
+inherit eutils multilib
+
 
 # Must be listed in oldest->newest order!
 known_eclipse_slots="2 3 3.1"
@@ -118,7 +121,6 @@ function eclipse-ext_create-ext-layout {
 #         1 - if require-slot was not called
 # ---------------------------------------------------------------------------
 function eclipse-ext_install-features {
-
 	if [ ${eclipse_ext_slot} == 0 ] ; then
 		eerror "You must call require-slot prior to calling ${FUNCNAME}!"
 		return 1
@@ -148,7 +150,6 @@ function eclipse-ext_install-features {
 # ---------------------------------------------------------------------------
 
 function eclipse-ext_install-plugins {
-
 	if [ ${eclipse_ext_slot} == 0 ] ; then
 		eerror "You must call require-slot prior to calling ${FUNCNAME}!"
 		return 1
@@ -163,13 +164,10 @@ function eclipse-ext_install-plugins {
 	done
 }
 
+# TODO really should have a page hosted on gentoo's infra
 function eclipse-ext_pkg_postinst() {
 	einfo "For tips, tricks and general info on running Eclipse on Gentoo, go to:"
 	einfo "http://gentoo-wiki.com/Eclipse"
-}
-
-function pkg_postinst() {
-	eclipse-ext_pkg_postinst
 }
 
 # ---------------------------------------------------------------------------
@@ -184,7 +182,6 @@ function pkg_postinst() {
 # ---------------------------------------------------------------------------
 
 eclipse-ext_get-classpath() {
-
 	local file=$1
 	local envvar="classpath"
 
@@ -226,7 +223,6 @@ _get-plugin-content() {
 # @return - echo of :-separated resolved files
 # ---------------------------------------------------------------------------
 eclipse-ext_resolve-jars() {
-
 	local resolved=""
 
 	for x in $1 ; do
@@ -242,3 +238,5 @@ eclipse-ext_resolve-jars() {
 	done
 	echo ${resolved}
 }
+
+EXPORT_FUNCTIONS pkg_postinst
