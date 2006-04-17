@@ -1,22 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 da689b4db34da0b7e1093d6b73b2cd64 ChangeLog 687
-RMD160 27c304d1822d068d4c756447b8278c51f7990cc7 ChangeLog 687
-SHA256 fec5ec706f51a89c201a1f0d6aa837d73d43af43b944cdd34a24e8dd7b6de503 ChangeLog 687
+MD5 bed8f7d08543b407aa7da6c07b1172e1 ChangeLog 921
 MD5 222b4c8ee3a7125ba0a9e275d2ee3a45 files/digest-libifp-module-1.0.0.2 66
-RMD160 c2a39cb8642896a65b316949dff94cdbc29dacd6 files/digest-libifp-module-1.0.0.2 66
-SHA256 59829518269c099723991662b99bd7146b7cdd780acba3fb80daa327f21a3bae files/digest-libifp-module-1.0.0.2 66
-MD5 637ea952c31b90e330b2f3424b1086d1 libifp-module-1.0.0.2.ebuild 686
-RMD160 3b80fe2ac97c5762f24bed72486dd63aff2d338b libifp-module-1.0.0.2.ebuild 686
-SHA256 1adc79c11d26ddfefa1c4b0072eeeb229a398f68699cb22aa965967bd993609f libifp-module-1.0.0.2.ebuild 686
+MD5 bdffe15c0a2dc79fa71a769f8c6ac84d libifp-module-1.0.0.2.ebuild 688
 MD5 2a8fbd9c7f76cf00c7ebbb94ff62bceb metadata.xml 365
-RMD160 99b93bef6f818027873fc8cd9d10bf5593bdab2b metadata.xml 365
-SHA256 19952326d3d012a44c485c875f064ef9bfa7a22cbc4ce4164f0483e0bfc6159a metadata.xml 365
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFELtsmJrHF4yAQTrARAhH0AJ4n6crD2oPf3AMojohWeuxbRkZ/GACbBV4w
-DYUC3VCLu1AtRaydf3WAXfc=
-=ubxt
+iD8DBQFEQtrQ/NoSW7FuNV8RAnOxAKDRMc51zNRzD7ZLxj3zf1foWps+2ACgzNr/
+WyaHe2OLmLh7yL5qlHGFkb4=
+=GzDY
 -----END PGP SIGNATURE-----
