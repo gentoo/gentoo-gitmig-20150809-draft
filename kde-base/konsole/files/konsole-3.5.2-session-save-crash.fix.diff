@@ -1,0 +1,10 @@
+--- kdebase/konsole/konsole/konsole.cpp	2006/02/26 19:37:06	513867
++++ kdebase/konsole/konsole/konsole.cpp	2006/04/03 17:02:58	526028
+@@ -214,6 +214,7 @@
+ ,selectScrollbar(0)
+ ,selectTabbar(0)
+ ,selectBell(0)
++,selectSetEncoding(0)
+ ,m_clearHistory(0)
+ ,m_findHistory(0)
+ ,m_saveHistory(0)

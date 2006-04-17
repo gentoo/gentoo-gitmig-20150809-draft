@@ -1,43 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9900bdd3c61338b61bed6da6d2a2f278 ChangeLog 5562
-RMD160 88e5d8a33a739f7249c2a75edc630dfa8f7cfb32 ChangeLog 5562
-SHA256 6023e6586de24f4c4dedd54b2f7a7d764d0015507980825e5f5927018b6470db ChangeLog 5562
+MD5 4a960f745328f06cdd4a5fae97610348 ChangeLog 5757
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-konsole-3.4.1 212
-RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-konsole-3.4.1 212
-SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-konsole-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-konsole-3.4.2 287
-RMD160 db88376c4259165535f83f3529f0834fb2209612 files/digest-konsole-3.4.2 287
-SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/digest-konsole-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-konsole-3.4.3 68
-RMD160 fe4b253b0a7c2e30a2aa1d0d796dfcb11e30590a files/digest-konsole-3.4.3 68
-SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/digest-konsole-3.4.3 68
 MD5 612323f8728d639ddab8f055f88070ff files/digest-konsole-3.5.2 250
-RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-konsole-3.5.2 250
-SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-konsole-3.5.2 250
+MD5 5efe75301bc0d47d1f2af0ce2feb2603 files/digest-konsole-3.5.2-r1 68
 MD5 568485759876c71e1165233732805315 files/konsole-3.5.1-detach-send2all.patch 951
-RMD160 e299f233a2960feb34ceea378ce80e09bebfbf33 files/konsole-3.5.1-detach-send2all.patch 951
-SHA256 7502f1ff32ccdd0d1570b51cee2c3519e490b10654485f7b4d200d4f41f91962 files/konsole-3.5.1-detach-send2all.patch 951
+MD5 3c84180623f74d6a6ed74f7c18a5f769 files/konsole-3.5.2-session-save-crash.fix.diff 290
 MD5 6633760e033c5f04ab794e91bfdbff8f konsole-3.4.1.ebuild 392
-RMD160 7984a92f4e35cb4b7d8150003989c648cf6f0f9e konsole-3.4.1.ebuild 392
-SHA256 96b8864d613a03481da8e387256eaad27e253962df8d8867ad3347f291f39d67 konsole-3.4.1.ebuild 392
 MD5 caded7869fdce4348fc731037bbcc504 konsole-3.4.2.ebuild 405
-RMD160 ea73f1285b809857686d20c74de0e98e5a589afb konsole-3.4.2.ebuild 405
-SHA256 d15e69c4e107847d9b33c268bd74b994576fe6e538a1cc172c5a2b693de74e4e konsole-3.4.2.ebuild 405
 MD5 9811302868cc54800e8db391afab300a konsole-3.4.3.ebuild 406
-RMD160 0cc02536bf85c117a0fadf2ba6205904d167bda3 konsole-3.4.3.ebuild 406
-SHA256 2278bbc3ba2c401ba37e870a8e2ff7650a93a8b19d628c3834f662626317b64f konsole-3.4.3.ebuild 406
+MD5 112e50216357c9624a473dcf023038d5 konsole-3.5.2-r1.ebuild 711
 MD5 8f4c65c9fc8d9aeaef78aff34c38c8c6 konsole-3.5.2.ebuild 659
-RMD160 eef53e13db2a0e1d978c520f43a66de0c3e8ed79 konsole-3.5.2.ebuild 659
-SHA256 3d5d0017b657473e14f9c29266323aaac5baa389b2379cec2f55450ac398f91b konsole-3.5.2.ebuild 659
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENNKMAiZjviIA2XgRAs80AJwOMFDKbKkEkImosSm6RairZa6QOQCfcz4n
-1B9ucwCch3wQdmeVkpbPQ8E=
-=RTo0
------END PGP SIGNATURE-----
