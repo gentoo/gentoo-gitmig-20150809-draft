@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 288f3834f825c7c8cc742d3ea2ae864b ChangeLog 26222
-RMD160 b1dd35d27af45492e5e64ff8872f9bd82a15aa81 ChangeLog 26222
-SHA256 9b9739a26b8fbe3e74b798c1213bb958b3fd862f16136ea2ac02d803a5d3d848 ChangeLog 26222
+MD5 f721f9d69ba3f4a6d03a9baac28114d7 ChangeLog 26328
 MD5 03b7d892f34025e0c5854e0977b5fb49 files/digest-transcode-0.6.14-r3 144
-RMD160 8b70da9f0103e5df85d020819183ead70ad0db59 files/digest-transcode-0.6.14-r3 144
-SHA256 cb2f22a71deddfef9664cba639308c71e3050ccb90316b7f83e1dd45fd27c01e files/digest-transcode-0.6.14-r3 144
 MD5 9c8ef7a1b3cb0f04ff6e37e1bc6e05e7 files/digest-transcode-1.0.2-r2 136
-RMD160 7356676bbe1543f64485cec1f3d6b1a082a8b8ca files/digest-transcode-1.0.2-r2 136
-SHA256 74c597e6316498e2673e4545885d27ac5773c4f3cfd90dba6e41ce76de58e436 files/digest-transcode-1.0.2-r2 136
 MD5 09d908064da685a17f52adb57e0c8075 files/transcode-1.0.2-bigdir.patch 10634
-RMD160 dca043f16a24d58802ead53b41e26adf9336c7b9 files/transcode-1.0.2-bigdir.patch 10634
-SHA256 306f238ceb11bf81a01f27b684b0ec014aa576fb48c4072e1e67324a86c99bab files/transcode-1.0.2-bigdir.patch 10634
 MD5 07f7315638c5e4058ed39d914aed0d0f files/transcode-1.0.2-lzo2.patch 2922
-RMD160 669ee845670e4cd007d613be9ab10d84a56d73da files/transcode-1.0.2-lzo2.patch 2922
-SHA256 e1b0631a4e790821160fa5cef7ffc14d80556ff51daf01a5df250d331e0b4b7b files/transcode-1.0.2-lzo2.patch 2922
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 metadata.xml 158
-SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata.xml 158
 MD5 dbd54f7c4e4fb6fc64e00def38bddc6d transcode-0.6.14-r3.ebuild 3567
-RMD160 5d17e5b54c5ccad941095570064ac858247db2e9 transcode-0.6.14-r3.ebuild 3567
-SHA256 a9e1528d6d215a34384bb42fa378dfe0b6ff00c104e57a1800807d5e53cf3310 transcode-0.6.14-r3.ebuild 3567
-MD5 b5f72c6b81106fdd920340a41b67849f transcode-1.0.2-r2.ebuild 3971
-RMD160 34042ec91f05b237017afd060c9dd08629d526a7 transcode-1.0.2-r2.ebuild 3971
-SHA256 b5ff4a86be6a050429f26058ac18b6725b44cc44964d109f9f88b3560d4f6142 transcode-1.0.2-r2.ebuild 3971
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEF1h0AiZjviIA2XgRApZEAKDhvwMPO3I9Dakmor2HFX7UiGqstQCgmvvP
-ojibXWaidI0pZj7+4VQCYco=
-=Xe1A
------END PGP SIGNATURE-----
+MD5 c6a6b8995a7954a05106ac758c5c2701 transcode-1.0.2-r2.ebuild 3968
