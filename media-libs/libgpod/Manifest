@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7d17dc73a6cc876abcd79835c9a18e67 ChangeLog 1582
+MD5 05a4974c0c785e4419ec934a2bb8124a ChangeLog 1686
 MD5 58ab9db0046c8764986a9f6fcde3ad11 files/digest-libgpod-0.3.0 65
 MD5 3172313ab1547ae8d2daeb001324750e files/digest-libgpod-0.3.2 65
 MD5 3172313ab1547ae8d2daeb001324750e files/digest-libgpod-0.3.2-r1 65
 MD5 a87b6f5715acd8e479e1be7152f9f2b9 files/libgpod-0.3.0-config-enables.diff 2433
 MD5 909f670b6b60528492693c96425f2f8f libgpod-0.3.0.ebuild 1334
-MD5 5b48113a6eb8f5263bd825d3fb336f2f libgpod-0.3.2-r1.ebuild 1837
+MD5 808e8721a0ec8e803d88c1e0657bb5fe libgpod-0.3.2-r1.ebuild 1845
 MD5 598b127a194512ec0f0fc664fd162304 libgpod-0.3.2.ebuild 1356
 MD5 41c5337491a2b640b8d2edfbdd109d29 metadata.xml 423
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEODbtoGcCqvCmTSIRAgtkAKDGbiIjPPTxNno4h/yDVt3J50rNXwCfewwA
-QpWTG/p1ZzmvamXdm6M2A3I=
-=lp5N
------END PGP SIGNATURE-----

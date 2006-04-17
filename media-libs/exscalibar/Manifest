@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2d26c5ae573091152e10b5551d4f8b5e ChangeLog 1133
-MD5 4cdf72e7c882381bfdb9cebb83b59062 exscalibar-1.0.4.ebuild 1693
+MD5 0281abcf3fd523a5b5020ad3423b6632 ChangeLog 1238
+MD5 33f4915137bd4d04c6cc5faf7e00fc5d exscalibar-1.0.4.ebuild 1702
 MD5 87632b2e0e2cba931319f1e98874c54a files/digest-exscalibar-1.0.4 69
 MD5 9c62e7295131f1e5b2a4caf4f1b4d10f files/exscalibar-1.0.4-gcc4-amd64.diff 2410
 MD5 25502ff1fad3f11b96935ae9abaaf0d8 files/exscalibar-configure-disable-features.diff 2003
 MD5 2b0e9087ef8939ab0578160c97b115e0 metadata.xml 215
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFEQuIq/NoSW7FuNV8RAjZRAJ9rJyGFpZriHLOc12RQJNdGC1mYmgCdF+5u
-yRkNulwzzx2ALVu4LE/UXFg=
-=g+Bd
------END PGP SIGNATURE-----

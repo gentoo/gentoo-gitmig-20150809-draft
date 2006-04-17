@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1caeb9c91971038a830a542081ed4c65 ChangeLog 940
+MD5 bdda339a9d6674df54401e00b986eb9c ChangeLog 1043
 MD5 222b4c8ee3a7125ba0a9e275d2ee3a45 files/digest-libifp-1.0.0.2 66
-MD5 122e0480f16d3809b814780deea0d1dd libifp-1.0.0.2.ebuild 1361
+MD5 493fea28be9ac18a26e9db58b9496f4d libifp-1.0.0.2.ebuild 1370
 MD5 e40401b5ef2b72207a56070209442827 metadata.xml 377
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFEQtur/NoSW7FuNV8RAkYeAJwMXUOslpe2HemzMsId1szlTch4+wCfdG/h
-P9uhgVmIKG4I0vPHr5WUGw8=
-=bDpj
------END PGP SIGNATURE-----
