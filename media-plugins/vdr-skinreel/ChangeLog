@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-skinreel
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinreel/ChangeLog,v 1.1 2006/03/07 20:55:31 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinreel/ChangeLog,v 1.2 2006/04/17 13:10:00 zzam Exp $
+
+  17 Apr 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-skinreel-0.0.1.ebuild:
+  Marked stable on x86
 
 *vdr-skinreel-0.0.1 (07 Mar 2006)
 
