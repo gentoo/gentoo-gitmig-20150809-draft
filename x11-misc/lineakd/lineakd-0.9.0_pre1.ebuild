@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0_pre1.ebuild,v 1.1 2006/03/26 00:23:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0_pre1.ebuild,v 1.2 2006/04/17 00:39:07 robbat2 Exp $
 
 inherit eutils
 
@@ -38,7 +38,9 @@ src_compile() {
 src_install () {
 	sed -i 's:$(DESTDIR)${DESTDIR}:$(DESTDIR):' lineakd/Makefile
 
-	make DESTDIR=${D} install || die "make install failed"
+	dodir /usr/share/man/man8
+
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS README TODO
 	keepdir /usr/lib/lineakd/plugins
 
