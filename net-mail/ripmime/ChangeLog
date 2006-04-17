@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ripmime
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.24 2006/03/18 00:40:25 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.25 2006/04/17 19:56:22 ticho Exp $
+
+  17 Apr 2006; <ticho@gentoo.org> ripmime-1.4.0.6.ebuild:
+  Stable on x86.
 
 *ripmime-1.4.0.6 (18 Mar 2006)
 
