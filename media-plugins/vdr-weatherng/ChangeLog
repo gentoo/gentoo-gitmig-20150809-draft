@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-weatherng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.5 2006/03/26 20:11:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.6 2006/04/17 16:54:37 zzam Exp $
+
+  17 Apr 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-weatherng-0.0.8_pre2.ebuild:
+  Marked stable on x86
 
   21 Mar 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-weatherng-0.0.8_pre2.ebuild:

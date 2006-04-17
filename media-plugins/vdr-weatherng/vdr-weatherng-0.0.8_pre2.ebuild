@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre2.ebuild,v 1.3 2006/04/06 19:51:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre2.ebuild,v 1.4 2006/04/17 16:54:37 zzam Exp $
 
 inherit vdr-plugin
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://vdrfiles/${PN}/${MY_P}.tgz"
 
 LICENSE="GPL-2 stardock-images"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND="media-libs/imlib2
