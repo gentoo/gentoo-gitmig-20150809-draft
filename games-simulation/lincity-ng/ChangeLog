@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/lincity-ng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/ChangeLog,v 1.5 2006/04/15 22:47:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/ChangeLog,v 1.6 2006/04/17 13:24:57 wolf31o2 Exp $
+
+  17 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
+  Moved games_pkg_setup to beginning of pkg_setup.
 
 *lincity-ng-1.0.3 (15 Apr 2006)
 
