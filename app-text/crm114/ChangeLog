@@ -1,6 +1,14 @@
 # ChangeLog for app-text/crm114
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.22 2005/05/21 16:43:48 slarti Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.23 2006/04/17 12:41:24 slarti Exp $
+
+*crm114-20060118 (17 Apr 2006)
+
+  17 Apr 2006; Tom Martin <slarti@gentoo.org>
+  +files/crm114-20060118-fataltraptest.patch, +crm114-20060118.ebuild:
+  Version bump. Include a src_test this time; ${P}-fataltraptest.patch is
+  there to fix sandbox violations and a misleading diff at the end of the
+  test.
 
 *crm114-20050518 (21 May 2005)
 

@@ -1,0 +1,32 @@
+--- megatest_knowngood.log.orig	2006-01-18 22:34:42.000000000 +0000
++++ megatest_knowngood.log	2006-04-17 14:30:35.000000000 +0100
+@@ -23,12 +23,6 @@
+  For some reason, I was unable to read-open the file named  zoob.zipulrlfjf
+  Sorry, but this program is very sick and probably should be killed off.
+ This happened at line 19 of file fataltraptest.crm
+-  --- and again, the next thing you see SHOULD be an error "unable to write-open"--- 
+- Caught the error  - fault text was 
+-crm: *ERROR* 
+- For some reason, I was unable to write-open the file named /No/Such/Directory/frotz.mumble
+- Sorry, but this program is very sick and probably should be killed off.
+-This happened at line 29 of file fataltraptest.crm
+  
+ 
+ Start of insert processor testing 
+--- fataltraptest.crm.orig	2006-01-18 22:34:42.000000000 +0000
++++ fataltraptest.crm	2006-04-17 14:35:22.000000000 +0100
+@@ -23,14 +23,4 @@
+ 		output / Caught the error  - fault text was :*:my_fault: / 
+ 	}
+ }
+-output / --- and again, the next thing you see SHOULD be an error "unable to write-open"--- :*:_nl:/
+-{
+-	{
+-		output [/No/Such/Directory/frotz.mumble] (:hi:)
+-	}
+-	trap (:my_fault:) /.*/
+-	{
+-		output / Caught the error  - fault text was :*:my_fault: / 
+-	}
+-}
+ output /:*:_nl:/
