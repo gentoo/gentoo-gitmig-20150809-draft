@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 539cb9e93c991bfe7d8fe1e798f67a50 ChangeLog 665
 RMD160 cc04d4e679780ea7374c9ab95748a7ffdb0a8381 ChangeLog 665
 SHA256 aa7447592beeef0b33d2bd45f95e4095b7810bd1fd5e9e6250aa54c53049cc74 ChangeLog 665
@@ -10,13 +7,6 @@ SHA256 79605bb1652de5b2dbb855a6ac5ac3253270a112438576322423e1748d32427f files/di
 MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
 RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
 SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
-MD5 951cc6f71ff4636c3e7399ff4940cb57 vdr-channelscan-0.2.0.ebuild 999
-RMD160 55d5e533969c16b094b1b2e1354c72bb965e256d vdr-channelscan-0.2.0.ebuild 999
-SHA256 02dfa9fc9ddd7a3230b130bdf4af7aa20f14d505b17db99649cc3a6b2c832aba vdr-channelscan-0.2.0.ebuild 999
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEFu7FZfSl1Kp5KmoRAmmMAKCzEylb5FIa2hZhPjLIyZvbynG5jgCeOHgl
-6SLtA1BQUwVszCV2zc4NM5E=
-=Z69j
------END PGP SIGNATURE-----
+MD5 466b0cbdc5373f64dbed20ea63285484 vdr-channelscan-0.2.0.ebuild 998
+RMD160 700cb6c05b9b00e7fc2d90acac325a469b6a188f vdr-channelscan-0.2.0.ebuild 998
+SHA256 fd1472d5f22bdcfe0fbdd80943b857d499b0c1a90aee4a7bb09f4f100c95e6d1 vdr-channelscan-0.2.0.ebuild 998

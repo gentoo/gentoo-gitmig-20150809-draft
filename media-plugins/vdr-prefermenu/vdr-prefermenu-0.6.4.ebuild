@@ -1,6 +1,6 @@
 # Copyright 2003-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-prefermenu/vdr-prefermenu-0.6.4.ebuild,v 1.1 2006/03/05 12:01:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-prefermenu/vdr-prefermenu-0.6.4.ebuild,v 1.2 2006/04/17 17:06:08 zzam Exp $
 
 
 inherit vdr-plugin
@@ -12,7 +12,7 @@ SRC_URI="http://famillejacques.free.fr/vdr/prefermenu/vdr-${VDRPLUGIN}-${PV}.tgz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.3.9"

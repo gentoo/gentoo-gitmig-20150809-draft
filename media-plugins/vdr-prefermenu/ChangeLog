@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-prefermenu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-prefermenu/ChangeLog,v 1.1 2006/03/05 12:01:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-prefermenu/ChangeLog,v 1.2 2006/04/17 17:06:08 zzam Exp $
+
+  17 Apr 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-prefermenu-0.6.4.ebuild:
+  Marked stable on x86
 
 *vdr-prefermenu-0.6.4 (05 Mar 2006)
 
