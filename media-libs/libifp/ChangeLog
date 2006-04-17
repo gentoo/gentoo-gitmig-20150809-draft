@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libifp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/ChangeLog,v 1.4 2006/04/01 19:56:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/ChangeLog,v 1.5 2006/04/17 00:32:45 wormo Exp $
+
+  16 Apr 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  libifp-1.0.0.2.ebuild:
+  mark ~ppc -- library compiles and links ok, and ppc is a supported platform
+  upstream so I'm giving it the benefit of the doubt (Bug #129409)
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> libifp-1.0.0.2.ebuild:
   Mark 1.0.0.2 ~ia64
