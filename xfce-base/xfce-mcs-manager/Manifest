@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4d22d338ad01972d1ce3a5f148964e48 ChangeLog 7656
-RMD160 02ae050ef715bc4399fba5b35207bbb3760fe95b ChangeLog 7656
-SHA256 c6516b91743111976a30f7eca190e9d5f3080d26d7316096ca20b793b75c5997 ChangeLog 7656
+MD5 cb1585d3642e2a2cc8ec0ea968e59bdd ChangeLog 7777
+RMD160 40e4a6813b736cac45b63b010d1ac344df4827b6 ChangeLog 7777
+SHA256 7f01cd4917ccc4cb9aa0f230989ca0965724b26c980bf4e830e7c4e369b37252 ChangeLog 7777
 MD5 9cf685c1a7049e32d13f8e38a4825c0c files/digest-xfce-mcs-manager-4.2.1 74
 RMD160 70c7db272c08985a62c5fe9441915c7f837e0972 files/digest-xfce-mcs-manager-4.2.1 74
 SHA256 929617e38899c004137f22cb15ef54aa8f8be5f36d7ca3dcf3825308050837aa files/digest-xfce-mcs-manager-4.2.1 74
@@ -28,13 +25,6 @@ SHA256 31538be7fa352c984935b3026a3f98fc6c214ab97c42722e34ee6143e0dcd816 xfce-mcs
 MD5 3e940ebfaaee1dab650813e07a2c9e28 xfce-mcs-manager-4.2.2.ebuild 406
 RMD160 46e67e75984725e648f5b193a418855834f3a240 xfce-mcs-manager-4.2.2.ebuild 406
 SHA256 b88df85201fbee04ae021c65c05a62992b59f7a89a7a4dec669f743f320ca2f5 xfce-mcs-manager-4.2.2.ebuild 406
-MD5 8a14149fbd2727ab34dbb6e26d6aca88 xfce-mcs-manager-4.2.3.ebuild 503
-RMD160 ff65a14eb74be5378ab903f2244e7178a40a1325 xfce-mcs-manager-4.2.3.ebuild 503
-SHA256 98c8c17152ab4c52b409a46fcae5b0024fbe5acadc547b5a6e4589ec38def5cc xfce-mcs-manager-4.2.3.ebuild 503
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEQFKyCRZPokWLroQRAiXJAKCifiRUgx5LUKng2XOa1Bx9ONh7nQCggeE0
-ZZoIipSJa4EScYr8fspkfqM=
-=UVbU
------END PGP SIGNATURE-----
+MD5 701dba1ec793ca9ce76556e06a5fcf8e xfce-mcs-manager-4.2.3.ebuild 501
+RMD160 c71d65969229bf061b69c30c2c353e7a0f62968e xfce-mcs-manager-4.2.3.ebuild 501
+SHA256 545c519c9f7905895f8ccf20322aa8656372ee8ea18367d25b2b19bf25777bc2 xfce-mcs-manager-4.2.3.ebuild 501
