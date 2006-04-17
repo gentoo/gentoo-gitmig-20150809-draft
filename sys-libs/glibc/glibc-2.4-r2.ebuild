@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.9 2006/04/15 02:19:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.10 2006/04/17 07:33:22 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -526,21 +526,6 @@ toolchain-glibc_pkg_postinst() {
 				fi
 			done
 		done
-	fi
-
-	# Correct me if I am wrong here, but my /etc/localtime is a file
-	# created by zic ....
-	# I am thinking that it should only be recreated if no /etc/localtime
-	# exists, or if it is an invalid symlink.
-	#
-	# For invalid symlink:
-	#   -f && -e  will fail
-	#   -L will succeed
-	#
-	if [[ ! -e ${ROOT}/etc/localtime ]] ; then
-		echo "Please remember to set your timezone using the zic command."
-		rm -f "${ROOT}"/etc/localtime
-		ln -s ../usr/share/zoneinfo/Factory "${ROOT}"/etc/localtime
 	fi
 
 	if ! tc-is-cross-compiler && [[ -x ${ROOT}/usr/sbin/iconvconfig ]] ; then

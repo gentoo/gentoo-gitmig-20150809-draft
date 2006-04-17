@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r2.ebuild,v 1.16 2006/04/13 05:45:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r2.ebuild,v 1.17 2006/04/17 07:33:22 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -559,21 +559,6 @@ toolchain-glibc_pkg_postinst() {
 				fi
 			done
 		done
-	fi
-
-	# Correct me if I am wrong here, but my /etc/localtime is a file
-	# created by zic ....
-	# I am thinking that it should only be recreated if no /etc/localtime
-	# exists, or if it is an invalid symlink.
-	#
-	# For invalid symlink:
-	#   -f && -e  will fail
-	#   -L will succeed
-	#
-	if [ ! -e "${ROOT}/etc/localtime" ] ; then
-		echo "Please remember to set your timezone using the zic command."
-		rm -f ${ROOT}/etc/localtime
-		ln -s ../usr/share/zoneinfo/Factory ${ROOT}/etc/localtime
 	fi
 
 	if ! is_crosscompile && [ -x "${ROOT}/usr/sbin/iconvconfig" ] ; then
