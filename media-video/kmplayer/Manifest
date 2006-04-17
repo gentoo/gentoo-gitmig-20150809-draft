@@ -1,18 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9df4f8992fc396ab8b23dd26d9821bfa ChangeLog 7623
+MD5 647b08df1e77e57ec94ec1fbdde26970 ChangeLog 7810
 MD5 cc7843dcf532036a977b880a100fb2ac files/digest-kmplayer-0.9.0c 68
 MD5 f29e659db42381b323bdabe29fa20a09 files/digest-kmplayer-0.9.1 67
 MD5 e1cdd9e874e967b80de458c838bbbe89 files/digest-kmplayer-0.9.1a 68
+MD5 724f7405f8e22e81af2890d330321856 files/digest-kmplayer-0.9.1c 68
+MD5 35961d0f27549cf71b0a7411b64d7c44 files/digest-kmplayer-0.9.2_rc1 71
 MD5 9344f66708447fa8ef3ebedd060dfc47 kmplayer-0.9.0c.ebuild 1106
 MD5 2ccc18c481ce9db85156eb1380a34574 kmplayer-0.9.1.ebuild 1108
 MD5 f2e543a65881ff6d14bb8330285fdb8a kmplayer-0.9.1a.ebuild 1336
+MD5 812570a27813f4aaa6573b238db42844 kmplayer-0.9.1c.ebuild 1339
+MD5 286fcb4738d9cada5d14abcbbe3c7c27 kmplayer-0.9.2_rc1.ebuild 1194
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDya/pntT9W3vfTuoRAvb/AJ9W5BWPjms9YxIpOcbQmZZAZLMrtACfXaSJ
-elHV5gR3ChiFha7/muXvxdk=
-=lZun
------END PGP SIGNATURE-----
