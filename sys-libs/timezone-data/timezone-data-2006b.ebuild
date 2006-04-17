@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2006b.ebuild,v 1.3 2006/02/27 15:43:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2006b.ebuild,v 1.4 2006/04/17 07:28:08 vapier Exp $
 
 inherit eutils
 
@@ -29,4 +29,12 @@ src_install() {
 	rm -rf "${D}"/usr/share/zoneinfo-leaps
 	dodoc README Theory
 	dohtml *.htm *.jpg
+}
+
+pkg_postinst() {
+	if [[ ! -e ${ROOT}/etc/localtime ]] ; then
+		ewarn "Please remember to set your timezone using the zic command."
+		rm -f "${ROOT}"/etc/localtime
+		ln -s ../usr/share/zoneinfo/Factory "${ROOT}"/etc/localtime
+	fi
 }
