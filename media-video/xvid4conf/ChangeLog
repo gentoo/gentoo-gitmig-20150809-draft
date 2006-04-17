@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xvid4conf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvid4conf/ChangeLog,v 1.10 2006/04/03 18:06:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvid4conf/ChangeLog,v 1.11 2006/04/17 15:50:32 flameeyes Exp $
+
+  17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> xvid4conf-1.12.ebuild:
+  Drop homepage and set the SRC_URI to use Gentoo mirrors, bug #128742 thanks
+  to Alexandru Toma.
 
   03 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> xvid4conf-1.12.ebuild:
   Stable on sparc
