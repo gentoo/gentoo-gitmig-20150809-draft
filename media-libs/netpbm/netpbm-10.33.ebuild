@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.33.ebuild,v 1.2 2006/04/16 12:08:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.33.ebuild,v 1.3 2006/04/17 00:12:53 flameeyes Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -36,8 +36,8 @@ netpbm_libsuffix() {
 }
 netpbm_ldshlib() {
 	case ${CHOST} in
-		*-darwin*) echo '-dynamiclib -install_name $(SONAME)';;
-		*)         echo '-shared -Wl,-soname,$(SONAME)';;
+		*-darwin*) echo '$(LDFLAGS) -dynamiclib -install_name $(SONAME)';;
+		*)         echo '$(LDFLAGS) -shared -Wl,-soname,$(SONAME)';;
 	esac
 }
 netpbm_config() {

@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.112 2006/04/16 12:08:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.113 2006/04/17 00:12:53 flameeyes Exp $
+
+  17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/netpbm-10.33-memmem.patch, netpbm-10.33.ebuild:
+  Change the patch to behave like upstream decided: rename memmem to another
+  name so that it doesn't collide with extensions from various libc, allowing
+  to build on NetBSD 3 that defines a memmem itself. Also respect LDFLAGS
+  while linking the library.
 
   16 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/netpbm-10.33-memmem.patch, netpbm-10.33.ebuild:
