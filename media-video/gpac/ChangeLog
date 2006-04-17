@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.11 2006/03/18 16:16:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.12 2006/04/17 03:37:12 tsunam Exp $
+
+  17 Apr 2006; Joshua Jackson <tsunam@gentoo.org>
+  gpac-0.4.1_pre20060122.ebuild:
+  Marking Stable for x264 and Mplayer; bug #127969
 
   18 Mar 2006; Markus Rothe <corsair@gentoo.org>
   gpac-0.4.1_pre20060122.ebuild:
