@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.1.3-r1.ebuild,v 1.1 2006/04/10 14:49:58 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.1.3-r1.ebuild,v 1.2 2006/04/17 17:48:18 flameeyes Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://postgresql/source/v${PV}/${PN}-base-${PV}.tar.bz2
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 #IUSE="ssl nls python tcltk perl libg++ pam readline xml2 zlib doc selinux kerberos pg-intdatetime pg-hier"
 IUSE="ssl nls python tcltk perl libg++ pam readline xml2 zlib doc selinux kerberos pg-intdatetime threads"
 
@@ -187,38 +187,42 @@ pkg_config() {
 		eerror "(database directory = ${PG_DIR})."
 		exit 1
 	else
-		local SEM=`sysctl -n kernel.sem | cut -f-3`
-		local SEMMNI=`sysctl -n kernel.sem | cut -f4`
-		local SEMMNI_MIN=`expr \( ${MAX_CONNECTIONS} + 15 \) / 16`
-		local SHMMAX=`sysctl -n kernel.shmmax`
-		local SHMMAX_MIN=`expr 250000 + 8200 \* 1000 + 14200 \* 100`
+		if use kernel_linux; then
+			local SEM=`sysctl -n kernel.sem | cut -f-3`
+			local SEMMNI=`sysctl -n kernel.sem | cut -f4`
+			local SEMMNI_MIN=`expr \( ${MAX_CONNECTIONS} + 15 \) / 16`
+			local SHMMAX=`sysctl -n kernel.shmmax`
+			local SHMMAX_MIN=`expr 250000 + 8200 \* 1000 + 14200 \* 100`
 
-		if [ ${SEMMNI} -lt ${SEMMNI_MIN} ]; then
-			eerror "The current value of SEMMNI is too low"
-			eerror "for postgresql to run ${MAX_CONNECTIONS} connections"
-			eerror "Temporary setting this value to ${SEMMNI_MIN} while creating the initial database."
-			echo ${SEM} ${SEMMNI_MIN} > /proc/sys/kernel/sem
+			if [ ${SEMMNI} -lt ${SEMMNI_MIN} ]; then
+				eerror "The current value of SEMMNI is too low"
+				eerror "for postgresql to run ${MAX_CONNECTIONS} connections"
+				eerror "Temporary setting this value to ${SEMMNI_MIN} while creating the initial database."
+				echo ${SEM} ${SEMMNI_MIN} > /proc/sys/kernel/sem
+			fi
+			su postgres -c "/usr/bin/initdb --pgdata ${PG_DIR}/data"
+
+			if [ ! `sysctl -n kernel.sem | cut -f4` -eq ${SEMMNI} ] ; then
+				echo ${SEM} ${SEMMNI} > /proc/sys/kernel/sem
+				ewarn "Restoring the SEMMNI value to the previous value"
+				ewarn "Please edit the last value of kernel.sem in /etc/sysctl.conf"
+				ewarn "and set it to at least ${SEMMNI_MIN}"
+				ewarn ""
+				ewarn "  kernel.sem = ${SEM} ${SEMMNI_MIN}"
+				ewarn ""
+			fi
+
+			if [ ${SHMMAX} -lt ${SHMMAX_MIN} ]; then
+				eerror "The current value of SHMMAX is too low for postgresql to run."
+				eerror "Please edit /etc/sysctl.conf and set this value to at least ${SHMMAX_MIN}."
+				eerror ""
+				eerror "  kernel.shmmax = ${SHMMAX_MIN}"
+				eerror ""
+			fi
+		else
+			su postgres -c "/usr/bin/initdb --pgdata ${PG_DIR}/data"
 		fi
-		su postgres -c "/usr/bin/initdb --pgdata ${PG_DIR}/data"
 
-		if [ ! `sysctl -n kernel.sem | cut -f4` -eq ${SEMMNI} ] ; then
-			echo ${SEM} ${SEMMNI} > /proc/sys/kernel/sem
-			ewarn "Restoring the SEMMNI value to the previous value"
-			ewarn "Please edit the last value of kernel.sem in /etc/sysctl.conf"
-			ewarn "and set it to at least ${SEMMNI_MIN}"
-			ewarn ""
-			ewarn "  kernel.sem = ${SEM} ${SEMMNI_MIN}"
-			ewarn ""
-		fi
-
-		if [ ${SHMMAX} -lt ${SHMMAX_MIN} ]; then
-			eerror "The current value of SHMMAX is too low for postgresql to run."
-			eerror "Please edit /etc/sysctl.conf and set this value to at least ${SHMMAX_MIN}."
-			eerror ""
-			eerror "  kernel.shmmax = ${SHMMAX_MIN}"
-			eerror ""
-
-		fi
 		einfo ""
 		einfo "You can use /etc/init.d/postgresql script to run PostgreSQL instead of pg_ctl."
 		einfo ""

@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.51 2006/04/10 14:52:52 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.52 2006/04/17 17:44:53 flameeyes Exp $
+
+  17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> libpq-8.1.3-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
 *libpq-8.1.3-r1 (10 Apr 2006)
 
