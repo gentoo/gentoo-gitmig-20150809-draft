@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ca7a6d2518966244703bfeff71af613e ChangeLog 915
+MD5 230cb262b186f037323def99d480dcef ChangeLog 1017
 MD5 42b9d917b2857228cfc0225c811be300 files/digest-sylpheed-claws-rssyl-0.3 229
 MD5 b59a4a79c4d74da4b7cd005303055878 files/digest-sylpheed-claws-rssyl-0.4 229
 MD5 392c658e5dc9532cceaaf2a2d63c6d8b metadata.xml 270
 MD5 d841acb1787be4ef5561067e1103c7fb sylpheed-claws-rssyl-0.3.ebuild 828
-MD5 2834a977681e615944a9e3b70547f7ab sylpheed-claws-rssyl-0.4.ebuild 968
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEHuMJViELBEf1JB0RAllyAJ4gBbtxdIkpJf9I25k42fQz7IwtawCfXiL2
-8/8eeYzmdzSrj9512Q0EW2M=
-=OESh
------END PGP SIGNATURE-----
+MD5 d71916da1f065a77e2d12867b3c66b85 sylpheed-claws-rssyl-0.4.ebuild 977

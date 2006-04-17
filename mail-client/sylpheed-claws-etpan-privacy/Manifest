@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ea1209eb42773dc65155bd875107e7e0 ChangeLog 842
-RMD160 57d45b4c1d9bbb587156a4abb8c3b87531bd0445 ChangeLog 842
-SHA256 81234385d92cbeb4c566dbb7c3daaeaf272e525a331007b5a2bbe1b3a973d9fa ChangeLog 842
+MD5 a0e004d4748e3ba0efb1d712264eaaa1 ChangeLog 952
 MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-etpan-privacy-0.13 310
-RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-etpan-privacy-0.13 310
-SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-etpan-privacy-0.13 310
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
-SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
-MD5 54c9838d41de06c22ee5f0c569ae21cf sylpheed-claws-etpan-privacy-0.13.ebuild 983
-RMD160 18aaf42434001a12f41c0161bd2235754269d591 sylpheed-claws-etpan-privacy-0.13.ebuild 983
-SHA256 f1833d810b0644fdde097e470688c998a7ca2392bb7d9a9de2a45bdfc2f93094 sylpheed-claws-etpan-privacy-0.13.ebuild 983
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFD7Nit6J2i8a8J4okRAt75AJY/v4Sg78djbaSMdBjc9o/4qzMlAJ9jHGDz
-aYUhedwlln1oO5o2MJXSGQ==
-=mSOB
------END PGP SIGNATURE-----
+MD5 43a908c4463106044e8375be24a927bc sylpheed-claws-etpan-privacy-0.13.ebuild 991

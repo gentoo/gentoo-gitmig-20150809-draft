@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0f9cb17b02ece084cec67fd8e10edeeb ChangeLog 993
-RMD160 3d9b7e39bb5de78c3aa4b534ffbc731f7b555777 ChangeLog 993
-SHA256 1a1111a11aeeee80c9e9993fd79f8b47c6f6518a6982d79a62c0647b697cd087 ChangeLog 993
+MD5 24677e5dd665eec103303fe6f0276001 ChangeLog 1093
 MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-perl-0.6 310
-RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-perl-0.6 310
-SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-perl-0.6 310
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
-SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
-MD5 cdee847aae7b5e53deb50840a1a23cdb sylpheed-claws-perl-0.6.ebuild 1321
-RMD160 4c2f3ab7c29a3ed12322b2208d58e8df795ea057 sylpheed-claws-perl-0.6.ebuild 1321
-SHA256 7566684aef9fed4404e27b5c1f31164c1b5a2e5e3da4acb592f4ccb1d74fde3b sylpheed-claws-perl-0.6.ebuild 1321
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD7Nqc6J2i8a8J4okRAkFgAKCmd8XFzHjHuqv8KE3mNnKhfL5VpACfaGSa
-hph9GP6KMDteZolRWeQoekk=
-=eHmz
------END PGP SIGNATURE-----
+MD5 1cedaef1bfe8d0a63222762f9523788a sylpheed-claws-perl-0.6.ebuild 1329

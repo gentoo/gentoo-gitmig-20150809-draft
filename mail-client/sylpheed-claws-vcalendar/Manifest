@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 13f2f34c8756efd24383737d16ad0af1 ChangeLog 1884
-RMD160 2a4d77c5e5a7fe382477000c0a134a7b5880b797 ChangeLog 1884
-SHA256 777293e66c597ed15d9c092d17e47693c4951055cc83a430999e800ff9fce529 ChangeLog 1884
+MD5 6c4a74886c3f9d03406f23c317c7531b ChangeLog 1991
 MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-vcalendar-1.29 310
-RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-vcalendar-1.29 310
-SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-vcalendar-1.29 310
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
-SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
-MD5 00fe3da7cfd99eae3c561286aa3f2112 sylpheed-claws-vcalendar-1.29.ebuild 945
-RMD160 637219a9d5a65662fba238c36b73482987a549c4 sylpheed-claws-vcalendar-1.29.ebuild 945
-SHA256 9085d70a367d886624a08326cfb68f411b59e600d1c8e95bfa7945ee8431d11a sylpheed-claws-vcalendar-1.29.ebuild 945
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFEIfkS10xuJSrg3/sRApprAJ0ZyYDPW61tqdcV/lgPSvbRjBDNTQCeIT2w
-pcKtT9gsQMEcDo/crSNrfRw=
-=g5yU
------END PGP SIGNATURE-----
+MD5 b5ca210b768e91706278c23545ab0b75 sylpheed-claws-vcalendar-1.29.ebuild 954
