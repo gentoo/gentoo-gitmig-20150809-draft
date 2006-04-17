@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.16.92.ebuild,v 1.1 2006/04/17 05:59:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.16.92.ebuild,v 1.2 2006/04/17 15:50:18 vapier Exp $
 
 PATCHVER="1.0"
 UCLIBC_PATCHVER="1.0"
@@ -10,7 +10,7 @@ inherit toolchain-binutils
 # ARCH - packages to test before marking
 KEYWORDS="-*"
 
-fsrc_unpack() {
+src_unpack() {
 	tc-binutils_unpack
 
 	# need to figure out how to make these work ...
