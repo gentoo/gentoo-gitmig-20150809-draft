@@ -1,16 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e7af30c3129fc863c7ab0383b8ffbfeb ChangeLog 444
+MD5 d5786654c0427094cefae27849a5dc86 ChangeLog 546
+RMD160 058f786b386ed6c281b3c8b5b458f61ce46eb7f7 ChangeLog 546
+SHA256 8577bcb4908a92e7c63d5980ceff3a6e587441e58449bcc8705c1bae6d96ee47 ChangeLog 546
 MD5 75d38d043c64aa3a04f881efd3d218f4 files/digest-vdr-clock-0.0.5b-r1 65
+RMD160 412762126c78b8864da0ac9d820c40d10458284e files/digest-vdr-clock-0.0.5b-r1 65
+SHA256 c23681f95ad9ac3b4b58cc098a3e56cbb2a355faf2c69273e1a656ac05aaff2c files/digest-vdr-clock-0.0.5b-r1 65
 MD5 65762d5c2aae48a810627abb4b7409a2 files/vdr-clock-0.0.5b-makefile.diff 552
+RMD160 8c0c1e8bd77b976c2212699a82167dfbc77fd01b files/vdr-clock-0.0.5b-makefile.diff 552
+SHA256 5051b5baeee9f1f1c3161ffdabd77deb3376fc4d9af0133e363685557a4f837e files/vdr-clock-0.0.5b-makefile.diff 552
 MD5 be5c8d8b0c1571a394981c8eed960cf0 metadata.xml 522
-MD5 f86a99cac7a3348b53f5dab839e31744 vdr-clock-0.0.5b-r1.ebuild 604
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-Comment: no further Information
-
-iD8DBQFEA2zzdn07HTTCgIoRArNbAKCTeonb+cKKXeEoHc4+xxVH8JpCNQCfXj6Q
-STsxt4weU+0l7eBugoB/1B8=
-=9EJ0
------END PGP SIGNATURE-----
+RMD160 0091344447f28453b519fe638576f5e3748bd2e2 metadata.xml 522
+SHA256 8d881d92bef6d6e2e542074b042a5cd5419f8854190ec29f301069b03a232516 metadata.xml 522
+MD5 31de5753d37ba400925d19ef2240795f vdr-clock-0.0.5b-r1.ebuild 598
+RMD160 64bd570602c4c0f11d32e5969a0b2a846fdda107 vdr-clock-0.0.5b-r1.ebuild 598
+SHA256 eb1c9dcf7ba1c06ba7f8d3ce145d35be69f65cdc951b9e705f6506943fd24c4c vdr-clock-0.0.5b-r1.ebuild 598
