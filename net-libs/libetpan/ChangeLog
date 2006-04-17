@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.25 2006/04/08 13:19:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.26 2006/04/17 18:28:15 corsair Exp $
+
+  17 Apr 2006; Markus Rothe <corsair@gentoo.org> libetpan-0.43.ebuild,
+  libetpan-0.45.ebuild:
+  Added ~ppc64
 
   08 Apr 2006; Simon Stelling <blubb@gentoo.org> libetpan-0.42.ebuild:
   stable on amd64
