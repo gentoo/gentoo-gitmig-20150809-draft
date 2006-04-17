@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.58 2006/02/06 12:41:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.59 2006/04/17 14:25:41 flameeyes Exp $
+
+*xvid-1.1.0-r1 (17 Apr 2006)
+
+  17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/xvid-1.1.0-3dnow.patch, +xvid-1.1.0-r1.ebuild:
+  Add a patch that changes the default emms function on x86_64 architecture to
+  the MMX version, not using 3DNow! instructions in EM64T systems.
 
 *xvid-1.1.0 (06 Feb 2006)
 
