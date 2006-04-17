@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 efcf9a650b8fa911ec06c53cc7f28e11 ChangeLog 399
-RMD160 1be8a364aa500301166e6c653ddec5d3cfbf4083 ChangeLog 399
-SHA256 f5f3666c8c01bca5dacc3425aeb11eaa4e063725cb9d56a5d637d3b0d1fa9a6b ChangeLog 399
+MD5 9db02cc35403337db6f6d4d95ddb7a99 ChangeLog 505
+RMD160 e08bc47cbd7a6bb83aba50e254a5238ff2789366 ChangeLog 505
+SHA256 6a69bf5ed5e902030b200f11ebbcdb1ca35a4db4785a273c7b1e39afe6972c65 ChangeLog 505
 MD5 60a3feb5c408d70a6f392d4a02f56bb6 files/digest-vdr-skinreel-0.0.1 244
 RMD160 79b6b71f78afc8b4db9e134cb784defbb6c72fdd files/digest-vdr-skinreel-0.0.1 244
 SHA256 dca8c1be623d597fbc1f55822609abc347588126389f5e7751c0c233b98f2a5c files/digest-vdr-skinreel-0.0.1 244
 MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
 RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
 SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
-MD5 dc6777b5bce37ee4c24934d7c4dff2a1 vdr-skinreel-0.0.1.ebuild 650
-RMD160 099cfc188c8735da199837e144da16f9aa064c3e vdr-skinreel-0.0.1.ebuild 650
-SHA256 1c7b53d0f6f5dc3bbb66b66dcb31ac7d1031a717f6a6484b5270ad766a471ccc vdr-skinreel-0.0.1.ebuild 650
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDfN6ZfSl1Kp5KmoRAlxOAJ9uMKYJiBPcHFV1Ra7Lb2ikdHZH3ACgnWrw
-UA+eCFrc4C2DAWZla97abUo=
-=4wtT
------END PGP SIGNATURE-----
+MD5 ac4875e27f76f99a12fa74b41ae8dd1f vdr-skinreel-0.0.1.ebuild 649
+RMD160 22d8dbf19faad2c04800594ce4d817576a6ff176 vdr-skinreel-0.0.1.ebuild 649
+SHA256 aff3e1342a39a5eb040967976f25d17223b3785bdac5ef8e5cff4b8db2f67977 vdr-skinreel-0.0.1.ebuild 649

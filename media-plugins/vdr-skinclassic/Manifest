@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f540733c20d23a65851311d8dfc9e388 ChangeLog 537
-RMD160 9eadcf240d6044fb3c399c1309956a8b12ff3ff1 ChangeLog 537
-SHA256 853163516f3db3cff8cfec8cc2f81636bb0bed8d60cdbbbc7292ff647754bd6a ChangeLog 537
+MD5 eeb9b19611cd4f42ea345e97386147a2 ChangeLog 647
+RMD160 be56d6fd9e0ad54cab5b7b250ed53359aaf809f1 ChangeLog 647
+SHA256 3ef47583aa7f44464fa314f31089795258783c9c86af87d6720f5076132eead7 ChangeLog 647
 MD5 242e7d7a56e1d83a6100df11601b1773 files/digest-vdr-skinclassic-0.0.1b 256
 RMD160 ef697f2199228f3e9d8e52c156cd356987937961 files/digest-vdr-skinclassic-0.0.1b 256
 SHA256 a08fea3dc006ec6a9a909ec285c58e9c5dec1b4e935004a375857bf13009d24f files/digest-vdr-skinclassic-0.0.1b 256
 MD5 7c30ab7528b676a1a0c2737821599b29 metadata.xml 300
 RMD160 c85719cef743cf573efe73f8f84564292085c91c metadata.xml 300
 SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata.xml 300
-MD5 643370b5019ba5a78c118346e9893ba2 vdr-skinclassic-0.0.1b.ebuild 501
-RMD160 435a0ebef2c82cdac8732e73e4e292d306f47ec8 vdr-skinclassic-0.0.1b.ebuild 501
-SHA256 53160e8370a978d4c359642bbdb7477a63e8222493ba0a4c5670f5bbfde801d8 vdr-skinclassic-0.0.1b.ebuild 501
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDHZeZfSl1Kp5KmoRAl6KAKCOsKym5+26v5X2fEZ7+agUDg992wCfanqO
-q8fqejvOZv/jCgws+hklTpU=
-=W9yA
------END PGP SIGNATURE-----
+MD5 18bf5e99ecb63a94ebda43455053f3d4 vdr-skinclassic-0.0.1b.ebuild 500
+RMD160 c2dd2f122621867abe03d362dd7400287296e59f vdr-skinclassic-0.0.1b.ebuild 500
+SHA256 f842e42a9a447ab126e3d1beff9dcc9604d8b680aacbb96d26f55e79b4746565 vdr-skinclassic-0.0.1b.ebuild 500
