@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.2.ebuild,v 1.2 2006/04/06 19:12:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.2.ebuild,v 1.3 2006/04/17 11:58:22 dertobi123 Exp $
 
 inherit eutils
 
@@ -76,6 +76,12 @@ src_install() {
 	# share info
 	cd ${S}/instantclient_10_2/sdk/demo
 	dodoc *
+
+	# Add OCI libs to library path
+	dodir /etc/env.d
+	echo "ORACLE_HOME=/usr/lib/oracle/${PV}/client" >> ${D}/etc/env.d/50oracle-instantclient-basic
+	echo "LDPATH=/usr/lib/oracle/${PV}/client/lib" >> ${D}/etc/env.d/50oracle-instantclient-basic
+	echo "C_INCLUDE_PATH=/usr/lib/oracle/${PV}/client/include" >> ${D}/etc/env.d/50oracle-instantclient-basic
 }
 
 pkg_postinst() {
