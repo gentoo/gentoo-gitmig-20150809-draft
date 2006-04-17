@@ -1,8 +1,34 @@
-MD5 b6fdf6e3f166ec00e4ae5c1d070bdc9e ChangeLog 25128
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f126dc21bce0ed59f5503d2f24f87c82 ChangeLog 25321
+RMD160 12096dc0305bf7b20d138c61aac50995e979b5f7 ChangeLog 25321
+SHA256 02ef8da8404e8a356a66361885fd9e925e924bb309fc5c1df8fcebf9eef2098b ChangeLog 25321
 MD5 4a70a1198dbbc1b64b20071aacdee503 files/digest-xine-lib-1.1.1-r3 138
+RMD160 58a9ed42c2a8800b52a54810e73472fad33f23d2 files/digest-xine-lib-1.1.1-r3 138
+SHA256 c7e3bb0f349b3ce5f05541400a85c74ad5c66107d357719146061c344ae98e88 files/digest-xine-lib-1.1.1-r3 138
 MD5 03b781772b1a9204d5a65e742838f80d files/digest-xine-lib-1.1.1-r5 506
-MD5 ed495f2519c8928388ab9c74e22972bb files/digest-xine-lib-1.1.2_pre20060328 539
+RMD160 0fa83a2e75dd0f5f52df71232fe55bf45936c18d files/digest-xine-lib-1.1.1-r5 506
+SHA256 b7c311a183763850128a63d14436887a4be4e11f3d4966e00ba8bbdaeb312528 files/digest-xine-lib-1.1.1-r5 506
+MD5 419c39e5d591bc4c40ff9464930c99a0 files/digest-xine-lib-1.1.2_pre20060328 539
+RMD160 83370b61462dd6dfa5d03491dddbad986eee0f0b files/digest-xine-lib-1.1.2_pre20060328 539
+SHA256 9a8349fbb37289525198699b054c04c80513e23f84312a6389133aa0197a704d files/digest-xine-lib-1.1.2_pre20060328 539
 MD5 40462be9f1caff6326630fc3b93e7105 metadata.xml 330
+RMD160 19830d3a2049c3ad75c580173d0436d7ec9dc8f2 metadata.xml 330
+SHA256 b36ce82ff9c321a5ed63eded0c3a191e78752cd38220b86bd8639a0d70ac9d92 metadata.xml 330
 MD5 578712f99de216da48aefcc69567dcf1 xine-lib-1.1.1-r3.ebuild 7232
+RMD160 6a7024dedd3646e054cbe2731af58eed8013e9bd xine-lib-1.1.1-r3.ebuild 7232
+SHA256 1a281ed1ce771661ae909ecfe5de3e83e8fe5be6b93ed1ebc07b59227301cc25 xine-lib-1.1.1-r3.ebuild 7232
 MD5 851200dff0a9b56fae1c0f14dfe09318 xine-lib-1.1.1-r5.ebuild 7640
-MD5 76db1bad6f5a1659ec529981a6049bb7 xine-lib-1.1.2_pre20060328.ebuild 8133
+RMD160 68064d5bd401ee79cae0809e5c510dda09e6c630 xine-lib-1.1.1-r5.ebuild 7640
+SHA256 0308c7d2bc6fc214b270dc06b638ea915253ab9548ac8383b9cc9fb8e38f4009 xine-lib-1.1.1-r5.ebuild 7640
+MD5 75becebc4a62de08618ec33b8a80e7b0 xine-lib-1.1.2_pre20060328.ebuild 8164
+RMD160 bd2aa0be2bc16d77f972404e95d5228c0add5033 xine-lib-1.1.2_pre20060328.ebuild 8164
+SHA256 c0f2ff2d8ba8f3924957ccf61337d66f93c83407cf8bf1c68d66aa28afd73273 xine-lib-1.1.2_pre20060328.ebuild 8164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQ5jVAiZjviIA2XgRAiXTAKDmQVx75tSXadUkwYPjD0t4KM6/ugCgzXJg
+ofi8BVDri12jRKioQbgwZdM=
+=SDE9
+-----END PGP SIGNATURE-----

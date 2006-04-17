@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328.ebuild,v 1.3 2006/04/06 11:04:33 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328.ebuild,v 1.4 2006/04/17 13:34:38 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -18,7 +18,7 @@ else
 	SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 fi
 
-PATCHLEVEL="29"
+PATCHLEVEL="30"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -72,6 +72,8 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	dts? ( media-libs/libdts )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20051120 )
 	modplug? ( media-libs/libmodplug )
+	nls? ( virtual/libintl )
+	virtual/libiconv
 	!=media-libs/xine-lib-0.9.13*"
 
 DEPEND="${RDEPEND}
@@ -81,10 +83,10 @@ DEPEND="${RDEPEND}
 			x11-proto/xextproto
 			x11-proto/xproto
 			x11-proto/videoproto
-			x11-proto/xf86vidmodeproto )
+			x11-proto/xf86vidmodeproto
+			xinerama? ( x11-proto/xineramaproto ) )
 		virtual/x11 )
 		)
-	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
 	v4l? ( virtual/os-headers )
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
