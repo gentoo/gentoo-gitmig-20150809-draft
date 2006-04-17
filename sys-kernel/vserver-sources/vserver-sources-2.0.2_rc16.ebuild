@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.0.2_rc16.ebuild,v 1.1 2006/04/13 11:23:51 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.0.2_rc16.ebuild,v 1.2 2006/04/17 07:41:21 phreak Exp $
 
 ETYPE="sources"
 CKV="2.6.16"
@@ -14,7 +14,6 @@ MY_PN=${PN/-sources/-patches}
 
 inherit kernel-2
 detect_version
-detect_arch
 
 KEYWORDS="~amd64 ~x86"
 IUSE=""
