@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1a.ebuild,v 1.6 2006/04/07 08:08:07 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1a.ebuild,v 1.7 2006/04/18 16:34:13 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ppc64 s390 sh ~sparc ~x86 ~x86-fbsd"
 IUSE="build nls static"
 
-RDEPEND=""
+RDEPEND="nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
@@ -34,8 +34,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.5.1-restrict_arr.patch
 	epatch "${FILESDIR}"/2.5.1-utf8-case.patch
 	epatch "${FILESDIR}"/${PN}-2.5.1-perl-segv.patch #95495
-	epatch "${FILESDIR}"/${PN}-2.5.1-libintl.patch #92586
 	epatch "${FILESDIR}"/${PN}-2.5.1-fix-devices-skip.patch #113640
+	epatch "${FILESDIR}"/${P}-nls.patch
 
 	# retarded
 	sed -i 's:__mempcpy:mempcpy:g' lib/*.c || die
