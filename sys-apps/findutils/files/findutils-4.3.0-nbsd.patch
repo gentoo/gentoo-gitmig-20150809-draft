@@ -1,0 +1,21 @@
+--- findutils-4.3.0.orig/gnulib/lib/mountlist.c	2005-12-12 06:23:41.000000000 -0200
++++ findutils-4.3.0/gnulib/lib/mountlist.c	2006-02-18 07:26:20.000000000 -0200
+@@ -257,6 +257,7 @@
+ # endif /* ! HAVE_F_FSTYPENAME_IN_STATFS */
+ 
+ /* __NetBSD__ || BSD_NET2 || __OpenBSD__ */
++#define statfs statvfs
+ static char *
+ fsp_to_string (const struct statfs *fsp)
+ {
+--- findutils-4.3.0.orig/gnulib/m4/fstypename.m4	2005-12-12 06:23:42.000000000 -0200
++++ findutils-4.3.0/gnulib/m4/fstypename.m4	2006-02-18 07:07:28.000000000 -0200
+@@ -22,7 +22,7 @@
+ #include <sys/types.h>
+ #include <sys/mount.h>
+ 	  ],
+-	  [struct statfs s; int i = sizeof s.f_fstypename;],
++	  [struct statvfs s; int i = sizeof s.f_fstypename;],
+ 	  fu_cv_sys_f_fstypename_in_statfs=yes,
+ 	  fu_cv_sys_f_fstypename_in_statfs=no
+ 	)

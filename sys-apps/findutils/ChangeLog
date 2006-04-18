@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.69 2006/04/07 19:58:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.70 2006/04/18 19:03:02 flameeyes Exp $
+
+  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/findutils-4.3.0-nbsd.patch, +files/gnulib-openat-mode_t.patch,
+  findutils-4.2.27.ebuild, findutils-4.3.0.ebuild:
+  Add workaround for the glibc 'fix' that breaks Gentoo/FreeBSD, keyword also
+  4.3 version. Add workaround for NetBSD systems. Bug #123253.
 
   07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
   Remove ciaranm from metadata.xml.

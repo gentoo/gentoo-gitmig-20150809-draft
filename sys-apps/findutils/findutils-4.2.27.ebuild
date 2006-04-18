@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.2.27.ebuild,v 1.3 2006/04/11 04:45:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.2.27.ebuild,v 1.4 2006/04/18 19:03:02 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -31,15 +31,20 @@ src_unpack() {
 	# Patches for selinux
 	use selinux && epatch "${FILESDIR}/${SELINUX_PATCH}"
 
-	# Use the system-provided regex.h, bug #114747
-	echo "#include_next <regex.h>" > gnulib/lib/regex.h
+	if [[ ${ELIBC} == "glibc" || ${ELIBC} == "uclibc" ]]; then
+		# Use the system-provided regex.h, bug #114747
+		echo "#include_next <regex.h>" > gnulib/lib/regex.h
+	fi
 }
 
 src_compile() {
 	use static && append-ldflags -static
 
-	local myconf="--without-included-regex"
+	local myconf
 	use userland_GNU || myconf=" --program-prefix=g"
+
+	[[ ${ELIBC} == "glibc" || ${ELIBC} == "uclibc" ]] && \
+		myconf="${myconf} --without-included-regex"
 
 	econf $(use_enable nls) ${myconf} || die "configure failed"
 	emake libexecdir=/usr/lib/find AR="$(tc-getAR)" || die "make failed"

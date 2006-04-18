@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.3.0.ebuild,v 1.4 2005/12/24 04:53:22 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.3.0.ebuild,v 1.5 2006/04/18 19:03:02 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -13,10 +13,11 @@ SRC_URI="ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="nls build selinux static"
 
-RDEPEND="selinux? ( sys-libs/libselinux )"
+RDEPEND="selinux? ( sys-libs/libselinux )
+	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
@@ -31,15 +32,24 @@ src_unpack() {
 	# Patches for selinux
 	use selinux && epatch "${FILESDIR}/${SELINUX_PATCH}"
 
-	# Use the system-provided regex.h, bug #114747
-	echo "#include_next <regex.h>" > gnulib/lib/regex.h
+	if [[ ${ELIBC} == "glibc" || ${ELIBC} == "uclibc" ]]; then
+		# Use the system-provided regex.h, bug #114747
+		echo "#include_next <regex.h>" > gnulib/lib/regex.h
+	fi
+
+	[[ ${ELIBC} == "NetBSD" ]] && epatch "${FILESDIR}/${P}-nbsd.patch"
+
+	epatch "${FILESDIR}/gnulib-openat-mode_t.patch"
 }
 
 src_compile() {
 	use static && append-ldflags -static
 
-	local myconf="--without-included-regex"
+	local myconf
 	use userland_GNU || myconf=" --program-prefix=g"
+
+	[[ ${ELIBC} == "glibc" || ${ELIBC} == "uclibc" ]] && \
+		myconf="${myconf} --without-included-regex"
 
 	econf $(use_enable nls) ${myconf} || die "configure failed"
 	emake libexecdir=/usr/lib/find AR="$(tc-getAR)" || die "make failed"

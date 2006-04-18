@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e9d51dec0b074b992a3d8842aaa32123 ChangeLog 10308
-RMD160 5c7714a85acdb1f041616c869b131e13ecf40484 ChangeLog 10308
-SHA256 b4200ab32aa48df31f7bdf129886f19ad24692b568433a4f5bded8ca48b53bb1 ChangeLog 10308
+MD5 43e130ddaa2c71b5c85fb9619ae4bd5d ChangeLog 10629
+RMD160 81c3be39a476b842f7c009cab80070829590ba76 ChangeLog 10629
+SHA256 afb5f3d5a6a29fb4c719ba0b75e6ab96d6ba52a6cfe444204224914e793a72a3 ChangeLog 10629
 MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20-r1 68
 RMD160 929a43acead985a6baba0460a07215b2579680e1 files/digest-findutils-4.1.20-r1 68
 SHA256 fcb369bb0fb9bfea9b8ee90642882c137f6c7c029f513521aa7e09bbf4ac7cfd files/digest-findutils-4.1.20-r1 68
@@ -34,12 +34,18 @@ SHA256 c39e57df81ec6d9495a7e4ddeaa4fb2e7e6659e6430883d16f2abe4f584c1b0f files/fi
 MD5 0b8c5e1bc2e54e46c292ad6a90729f75 files/findutils-4.2.24-selinux.diff 14356
 RMD160 d9e28cacdfd7cec1f766d2465466c472847df056 files/findutils-4.2.24-selinux.diff 14356
 SHA256 4e5df1395f80328c750d980ecb356aedd989b517e98cc52810ef03fe4f362bef files/findutils-4.2.24-selinux.diff 14356
+MD5 62b7c51441c602f20cca2c9a22b95c52 files/findutils-4.3.0-nbsd.patch 794
+RMD160 22f1781e18e1eea158dc991d3e12099459e62b66 files/findutils-4.3.0-nbsd.patch 794
+SHA256 1422fcbb063b4413ef54e0b6e29968ebf6e7b6a3166d13773d63b75862e986e1 files/findutils-4.3.0-nbsd.patch 794
 MD5 564a526b2ac65b70eebdb60a97f7e1ed files/findutils-4.3.0-selinux.diff 15741
 RMD160 e86bc5c15bc11d41a57f31be60345eb8f98d9963 files/findutils-4.3.0-selinux.diff 15741
 SHA256 48792046d281c88f4455292eb1948274b2ea3e96d8c617adf8165a7684a21356 files/findutils-4.3.0-selinux.diff 15741
 MD5 0315b5033cf65d15f24b1c252070db45 files/findutils-env-size.patch 672
 RMD160 8a88bf1346d7c54bf9936a037975558e4490e5c2 files/findutils-env-size.patch 672
 SHA256 5d83294b209acbe6dc12b941becc0556e86a80d5f4de4ab3af4dd1c182b7af95 files/findutils-env-size.patch 672
+MD5 1afc09366a422ccff1c34d76697f5062 files/gnulib-openat-mode_t.patch 770
+RMD160 943c9e3bfc026ce8d9305c45ca7e9e7021b68b47 files/gnulib-openat-mode_t.patch 770
+SHA256 b35282e68e7ee989e9de319118e1ce4e53078de9ffe3f2234446bc0a5e067b58 files/gnulib-openat-mode_t.patch 770
 MD5 054571cd32e981304231461745b82e07 findutils-4.1.20-r1.ebuild 2070
 RMD160 b07f276fba50bec3c4564faf985bb0dc1b5ff21e findutils-4.1.20-r1.ebuild 2070
 SHA256 36bcb3d385d464af2a6c1b01587578291a4b85a1afb1ae12cb8f592758cbd959 findutils-4.1.20-r1.ebuild 2070
@@ -52,19 +58,19 @@ SHA256 b944b6bd028760419889b70510939481fce015babdc8a16d7fc2dc961dc0dfb8 findutil
 MD5 03ce983ed4a749d09b6264da58d82b05 findutils-4.2.25.ebuild 1705
 RMD160 da2cde80104ddcdf3f044be9d83d38f12532cbc8 findutils-4.2.25.ebuild 1705
 SHA256 0a921a5037e9b53cdf040ee0cd35eef413e93ca638221e0cbc1f6e49f7ebd703 findutils-4.2.25.ebuild 1705
-MD5 f8fbaf5107ed809e43e78481a21f151d findutils-4.2.27.ebuild 1804
-RMD160 b0357fcb86d7b8a5902f5e210b8fb6c3f14dd3ab findutils-4.2.27.ebuild 1804
-SHA256 a2b695b9e298c7f4afbe5d2a82332053581e2b8512e21e2d336682d352c40ad2 findutils-4.2.27.ebuild 1804
-MD5 83e4e673d3cfa579a82d471f53a61a50 findutils-4.3.0.ebuild 1805
-RMD160 93b9b44653a992c04a32f78f7bd12e25e8be0655 findutils-4.3.0.ebuild 1805
-SHA256 824ad63e7a9c07c771f5f172a77d7e22c83726e9087779409d4a203ba07e0040 findutils-4.3.0.ebuild 1805
+MD5 9d8bed03016597a0b7e0904e448892b9 findutils-4.2.27.ebuild 1949
+RMD160 6791221680a1b776139607b572ec78656fa8d2e5 findutils-4.2.27.ebuild 1949
+SHA256 f2d714ff9e752ed92a6dd85ebcca7f413ef7a75f0b98121f8252109a60f2b5c0 findutils-4.2.27.ebuild 1949
+MD5 159e412c5fd052e614d95eb33b87f34d findutils-4.3.0.ebuild 2103
+RMD160 d02a9e4c6e90c6178ea1755c406b717c58f8e33e findutils-4.3.0.ebuild 2103
+SHA256 47588521a57f8d192e28de410dd1154869f4ee2a7ec455c3d2c557608d9f02ba findutils-4.3.0.ebuild 2103
 MD5 6fe58567b648100d4ff11902921b6889 metadata.xml 165
 RMD160 84307ea324cd4f0f46d52f2fa096a1873e2fbe53 metadata.xml 165
 SHA256 23a8851c12bd4cf7cf0528250ad5605be6b0780bbec0c51331d6d2c618c13f6a metadata.xml 165
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEOzRp2+ySkm8kpY0RAneHAJ4rMGbmik6v9w40VdLR/y9QZ3XSewCfdEdu
-tz6KQ1J7aJ/NbLb+RaZ/64U=
-=RrKo
+iD8DBQFERTc3AiZjviIA2XgRAjjuAJ93u2fl4FDhyuj9q16jovFcy/TAXgCfUyV4
+r4De37WJseHIoIkZQsxbDP8=
+=TR5/
 -----END PGP SIGNATURE-----
