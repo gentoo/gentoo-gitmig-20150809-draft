@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/vstgl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/vstgl/ChangeLog,v 1.4 2006/03/17 15:56:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/vstgl/ChangeLog,v 1.5 2006/04/18 02:13:28 markusle Exp $
+
+  18 Apr 2006; Markus Dittrich <markusle@gentoo.org> vstgl-0.6.2.ebuild:
+  Force compilation with QT3. This fixes bug #124843.
 
   17 Mar 2006; Caleb Tennis <caleb@gentoo.org> vstgl-0.6.2.ebuild:
   Fix compilation issue with Qt4
