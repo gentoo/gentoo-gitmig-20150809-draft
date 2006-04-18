@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.523 2006/04/17 21:00:45 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.524 2006/04/18 00:21:09 halcy0n Exp $
+
+*gcc-3.4.6-r1 (18 Apr 2006)
+
+  18 Apr 2006; Mark Loeser <halcy0n@gentoo.org> +gcc-3.4.6-r1.ebuild:
+  Bump 3.4.6 patchset to fix bugs #127190 #126279 and #126871
 
   17 Apr 2006; Konstantin Arkhipov <voxus@gentoo.org>
   +gcc-4.2.0_alpha20060415.ebuild:
