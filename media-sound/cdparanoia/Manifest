@@ -1,15 +1,18 @@
-MD5 4a0cdb0cc37c08b5646844c6b2ac8bbe ChangeLog 4655
-RMD160 a44b731c79fe68c085b85ded0c6d9bcb066c7dbb ChangeLog 4655
-SHA256 e0cf9fc070ed1bcb812ba71d030f720c19865881c0ccd7386202167fc3a66718 ChangeLog 4655
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3f3e852a53c67506c8bcd5064a8c9538 ChangeLog 4835
+RMD160 ddcd04dd93e19df5a1371d050032e4bbead9da24 ChangeLog 4835
+SHA256 d4bae9bce21da90eba41f4b887ebc91ae5c8c944c08ae2eddd35b67c90c6ddbf ChangeLog 4835
 MD5 db7d595d5d3f1a47417d753e763467df cdparanoia-3.9.8-r1.ebuild 1303
 RMD160 8ea33b580860b90a133909ee3e6cd05dbd455813 cdparanoia-3.9.8-r1.ebuild 1303
 SHA256 4ffe0e0da1385dfae6a0f4aee0ba81b449654484f2b55763d108869a92b79ed1 cdparanoia-3.9.8-r1.ebuild 1303
 MD5 a58184eb94cb4488ede5c28ddca40219 cdparanoia-3.9.8-r2.ebuild 1534
 RMD160 1712e1d282ea7a6c9b601f75bdcf7e9b0d0fdb76 cdparanoia-3.9.8-r2.ebuild 1534
 SHA256 08c29ecea581d02182639741ab128be3a1a5d829ac3dd8bd178de24d8faf8369 cdparanoia-3.9.8-r2.ebuild 1534
-MD5 e09456706aae96f098df9841b70c986b cdparanoia-3.9.8-r3.ebuild 1865
-RMD160 d94d6332918e9e3b4edd2cb2a1e9eba349d20aab cdparanoia-3.9.8-r3.ebuild 1865
-SHA256 1e1111309b343968f68dd9b346fd0b3c3668e561abecbb064be71364f00b029e cdparanoia-3.9.8-r3.ebuild 1865
+MD5 b444bb4fb1a20ab44d3be3c8f111af57 cdparanoia-3.9.8-r3.ebuild 1986
+RMD160 4db9324bfd8282aae42ecc942face18ffb0e9df8 cdparanoia-3.9.8-r3.ebuild 1986
+SHA256 5e22d84a829c05e5a6088005d725f7da39eabba74a1298c5873138a48328e39c cdparanoia-3.9.8-r3.ebuild 1986
 MD5 8dfcb53296c1e66ba13fb02d81eef39b files/3.9.8-gcc34.patch 772
 RMD160 c13aac76c54ac969e45a87b26f56fc62a4a72d07 files/3.9.8-gcc34.patch 772
 SHA256 ffe735303a300d358ba99fc85f6d28c4bc7bc7ce90bf42b9838803fcc99cf150 files/3.9.8-gcc34.patch 772
@@ -40,6 +43,16 @@ SHA256 24ecb403d8ece294b94bfb7ec956d90df45337d714239e27e54d115c08c6ee66 files/di
 MD5 63c43a2585dbf441f9360bac92e0e36e files/digest-cdparanoia-3.9.8-r3 157
 RMD160 12574e06d7dd4d758d43c0cf1a659ffca11d2134 files/digest-cdparanoia-3.9.8-r3 157
 SHA256 f66572ca34772c5b2611a7086eeac6b570706760ecc9fed46c836764de932b8d files/digest-cdparanoia-3.9.8-r3 157
+MD5 e0ebf10eb8bf4542ae57ba591daa68a4 files/flex-configure-LANG.patch 1686
+RMD160 4ff8355af81705058fd411910dfae94887bcd884 files/flex-configure-LANG.patch 1686
+SHA256 dc9386b88eac48c282d63d0be7e7be81d4a0a08035a8b97138a61133e057bcea files/flex-configure-LANG.patch 1686
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERSosAiZjviIA2XgRAsDGAKCKHFI6LAKR/Cgq283Sj1DcseElSQCdFKVK
+WfygKBMeuREHIH2qSOeQrsk=
+=1P/g
+-----END PGP SIGNATURE-----

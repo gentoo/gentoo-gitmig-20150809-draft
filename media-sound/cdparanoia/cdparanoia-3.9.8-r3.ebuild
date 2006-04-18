@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r3.ebuild,v 1.6 2006/04/03 20:58:36 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r3.ebuild,v 1.7 2006/04/18 18:07:25 flameeyes Exp $
 
 inherit eutils flag-o-matic gnuconfig linux-info
 
@@ -40,6 +40,9 @@ src_unpack() {
 		epatch ${FILESDIR}/${P}-respectflags-pio.patch
 	fi
 
+	# Use directly the same exact patch as flex as it works
+	epatch "${FILESDIR}/flex-configure-LANG.patch"
+
 	# Let portage handle the stripping of binaries
 	sed -i -e "/strip cdparanoia/d" Makefile.in
 
@@ -47,6 +50,8 @@ src_unpack() {
 	ln -s configure.sub config.sub
 	gnuconfig_update
 	rm config.{guess,sub}
+
+	elibtoolize
 }
 
 src_compile() {
