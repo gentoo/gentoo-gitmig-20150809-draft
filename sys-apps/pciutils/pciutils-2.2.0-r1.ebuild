@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.0-r1.ebuild,v 1.13 2006/02/19 22:11:48 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.0-r1.ebuild,v 1.14 2006/04/18 17:05:48 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
