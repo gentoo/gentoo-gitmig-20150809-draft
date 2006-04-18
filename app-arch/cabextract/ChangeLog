@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.30 2006/01/05 11:41:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.31 2006/04/18 20:12:20 flameeyes Exp $
+
+  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/cabextract-1.1-mempcpy.patch, cabextract-1.1.ebuild:
+  Add patch to fix mempcpy check unconditionally. Mark ~x86-fbsd.
 
   05 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> cabextract-1.1.ebuild:
   Don't apply the -configure patch conditional to userland, and as FreeBSD
