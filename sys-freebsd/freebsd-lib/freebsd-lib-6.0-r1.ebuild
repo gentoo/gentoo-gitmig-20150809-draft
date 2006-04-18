@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.0-r1.ebuild,v 1.1 2006/04/05 17:40:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.0-r1.ebuild,v 1.2 2006/04/18 23:35:22 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -82,6 +82,8 @@ REMOVE_SUBDIRS="libncurses libform libmenu libpanel \
 	libcom_err libtelnet"
 
 src_unpack() {
+	use _E_CROSS_HEADERS_ONLY && return 0
+
 	freebsd_src_unpack
 
 	ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
@@ -95,7 +97,14 @@ portage-to-fbsd-arch() {
 	esac
 }
 
+src_compile() {
+	use _E_CROSS_HEADERS_ONLY && return 0
+
+	freebsd_src_compile
+}
+
 src_install() {
+	use _E_CROSS_HEADERS_ONLY && return 0
 	mkinstall || die "Install failed"
 
 	# make crt1.o schg so that gcc doesn't remove it
