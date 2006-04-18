@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.2.ebuild,v 1.1 2006/03/25 19:47:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.2.ebuild,v 1.2 2006/04/18 19:50:23 flameeyes Exp $
 
 inherit kde-dist
 
@@ -23,7 +23,12 @@ DEPEND="~kde-base/kdebase-${PV}
 	               media-libs/musicbrainz )
 	encode? ( mp3? ( media-sound/lame )
 	          vorbis? ( media-sound/vorbis-tools )
-	          flac? ( media-libs/flac ) )"
+	          flac? ( media-libs/flac ) )
+	|| ( (
+			x11-libs/libXext
+			x11-libs/libXxf86dga
+			x11-libs/libXxf86vm
+		) virtual/x11 )"
 
 RDEPEND="${DEPEND}
 	gstreamer? ( mp3? ( =media-plugins/gst-plugins-mad-0.8* )
@@ -32,7 +37,13 @@ RDEPEND="${DEPEND}
 		     flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
 
 DEPEND="${DEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	|| ( (
+			x11-proto/xf86dgaproto
+			x11-proto/xf86vidmodeproto
+			x11-proto/videoproto
+			x11-proto/xextproto
+		) virtual/x11 )"
 
 src_compile() {
 	local myconf="--with-cdparanoia --with-taglib

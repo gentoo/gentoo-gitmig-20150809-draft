@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/mpeglib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/ChangeLog,v 1.29 2006/04/06 03:19:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/ChangeLog,v 1.30 2006/04/18 19:48:24 flameeyes Exp $
+
+  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> mpeglib-3.5.1.ebuild:
+  Fix dependencies for modular X. See bug #130341.
 
   06 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -mpeglib-3.5.0.ebuild:
   Removed old 3.5.0/3.5.1 packages.

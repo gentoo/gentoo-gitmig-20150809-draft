@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.198 2006/04/05 22:59:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.199 2006/04/18 19:50:23 flameeyes Exp $
+
+  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdemultimedia-3.5.2.ebuild:
+  Fix dependencies for modular X. See bug #130341.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kdemultimedia-3.5.0.ebuild, -kdemultimedia-3.5.1.ebuild:
