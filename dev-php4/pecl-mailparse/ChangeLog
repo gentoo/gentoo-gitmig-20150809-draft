@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/pecl-mailparse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-mailparse/ChangeLog,v 1.6 2006/04/10 21:23:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-mailparse/ChangeLog,v 1.7 2006/04/18 12:31:12 chtekk Exp $
+
+  18 Apr 2006; Luca Longinotti <chtekk@gentoo.org>
+  pecl-mailparse-2.1.1.ebuild:
+  nls use flag changed to unicode for mbstring extension.
 
   10 Apr 2006; Simon Stelling <blubb@gentoo.org>
   pecl-mailparse-2.1.1.ebuild:
