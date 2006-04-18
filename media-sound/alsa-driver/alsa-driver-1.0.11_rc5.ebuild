@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.11_rc5.ebuild,v 1.1 2006/04/11 19:34:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.11_rc5.ebuild,v 1.2 2006/04/18 20:44:26 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils multilib
 
@@ -71,6 +71,8 @@ src_unpack() {
 	cd ${S}
 
 	epatch "${FILESDIR}"/${PN}-1.0.10_rc1-include.patch
+
+	epatch "${FILESDIR}/${P}-powermac.patch"
 
 	convert_to_m ${S}/Makefile
 	sed -i -e 's:\(.*depmod\):#\1:' ${S}/Makefile

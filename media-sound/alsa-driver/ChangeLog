@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.203 2006/04/11 19:34:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.204 2006/04/18 20:44:26 flameeyes Exp $
+
+  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/alsa-driver-1.0.11_rc5-powermac.patch,
+  alsa-driver-1.0.11_rc5.ebuild:
+  Add patch to fix powermac driver on ppc. Thanks to Alberto Zennaro in bug
+  #130402.
 
 *alsa-driver-1.0.11_rc5 (11 Apr 2006)
 

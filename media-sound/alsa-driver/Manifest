@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eab9fc93825ca3da1a44a2c352502cd3 ChangeLog 34922
-RMD160 ab614babffaf095ad8f6a276e3a7c1af959490e8 ChangeLog 34922
-SHA256 99f0ae1fddaeaca208d0f7e8d3023ef5407dba24452deb87571ab621f07084b9 ChangeLog 34922
+MD5 4dcf9501dbe6d2412345e77e51a93b64 ChangeLog 35144
+RMD160 5ced94b171556347ee59a2e1eadd8ceaa0c4dfaf ChangeLog 35144
+SHA256 66d30fced6e268b474eb7e1c95b680ee3ec53c3a3de1165f1636a496d34ab6e7 ChangeLog 35144
 MD5 9916e84eeec916e6f6ec0f3aeffccb6a alsa-driver-1.0.10-r2.ebuild 4791
 RMD160 4940a1d64edb487b93b0d29f48d937fa2563c3cc alsa-driver-1.0.10-r2.ebuild 4791
 SHA256 ed09529fa8e9c98adc6dc3671ca6e61e79fb40095fd62fb0e06177ed20bf0ca7 alsa-driver-1.0.10-r2.ebuild 4791
@@ -13,9 +13,9 @@ SHA256 bf5ede710428f340a046aca1e8448e0c0363ac25346323d3d5ac3338de4cd09e alsa-dri
 MD5 60c719c894533fe39e30bbab38e9f73a alsa-driver-1.0.11_rc4.ebuild 4758
 RMD160 559797866ec2ad0a7be93bc281ee01b2c0759c55 alsa-driver-1.0.11_rc4.ebuild 4758
 SHA256 5ea2837c6fe9b6a6c7df945e5fd297e4c5da0c33822d510fc329b573c7464559 alsa-driver-1.0.11_rc4.ebuild 4758
-MD5 6e979997c6857448464c1f608bfc1a5d alsa-driver-1.0.11_rc5.ebuild 4762
-RMD160 dfa4d90b59a2782c1142dd45f773cb2ab5a9ab48 alsa-driver-1.0.11_rc5.ebuild 4762
-SHA256 9d241d7263a7a9c49a38831f2baf2505d509054a667f2520f0ed0359ada452a4 alsa-driver-1.0.11_rc5.ebuild 4762
+MD5 c58ef85722445047ed50637d2b757abc alsa-driver-1.0.11_rc5.ebuild 4805
+RMD160 4e5bab0948a79c35cba2e6f856817f972d247267 alsa-driver-1.0.11_rc5.ebuild 4805
+SHA256 f55fdb0c13510d195a4469de16309484ebe9c771263a87e606f27d9c5dc814fb alsa-driver-1.0.11_rc5.ebuild 4805
 MD5 075d7776dfb62176431e206a9cd5fc84 files/alsa-driver-1.0.10-gfp-flags.patch 955
 RMD160 ed4d383d6608110c5c3a7ebef2a0fc636ea77d82 files/alsa-driver-1.0.10-gfp-flags.patch 955
 SHA256 f7976e121aad036e11550212b26f2d4568cc688687e950bcdc14ef5932f3eb66 files/alsa-driver-1.0.10-gfp-flags.patch 955
@@ -25,6 +25,9 @@ SHA256 6532594628a77d37eaac2ef6dacd179846f5955915d9696a5ded843b7d017a13 files/al
 MD5 ed352c464a295465543d8933c162f101 files/alsa-driver-1.0.10_rc1-include.patch 346
 RMD160 ec6016414723673e089a4c8cda7e7efe54904280 files/alsa-driver-1.0.10_rc1-include.patch 346
 SHA256 ad4f3c447e3b0f2b0ebdd5dfa9723875660b58210ddab7fc6fbb669d4628135d files/alsa-driver-1.0.10_rc1-include.patch 346
+MD5 9c883e0a6c145380aa4a26788880b1e5 files/alsa-driver-1.0.11_rc5-powermac.patch 336
+RMD160 14545220136b9e96fe4b0483d22c01cf1146571e files/alsa-driver-1.0.11_rc5-powermac.patch 336
+SHA256 52a31e573b3d92d7dc3048ec872349ffeff17960647a3a0468c3f917186fa7ad files/alsa-driver-1.0.11_rc5-powermac.patch 336
 MD5 5474546fa4977a1fa63fbab0a155fd15 files/digest-alsa-driver-1.0.10-r2 72
 RMD160 4bd20e9c6e23de3d2647cb707b5f446ce11323c4 files/digest-alsa-driver-1.0.10-r2 72
 SHA256 cef008f05a44e097d4881973af7b5147fd9ab893efe4bbc8ee16c35d8edac386 files/digest-alsa-driver-1.0.10-r2 72
@@ -43,7 +46,7 @@ SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEPATLAiZjviIA2XgRAnMcAKDyK8w3+8RJ8wuHoqDEZhtBsYy9rgCgjheH
-40jLbaaKHhN84JLYrl6rfW8=
-=7ZoJ
+iD8DBQFERU8EAiZjviIA2XgRAjhiAJ9p7hYvDKZNlmFgTBtRdpqMDU+xAwCcD/gf
+a70kqZ57yKg2S/ta0GrS3BU=
+=X06M
 -----END PGP SIGNATURE-----
