@@ -1,31 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 79ba1b973d1ab20256206f2f30b3ad22 ChangeLog 31038
-RMD160 44cbc4d498c56e74e777782f8f78ba60cd623d11 ChangeLog 31038
-SHA256 65abc5f499a5f7e9e4df177308ee44a15ac258c2a0c6d1d5a91ea93732e2deea ChangeLog 31038
+MD5 10721cf391c061e0fdbe12c588b8ef7d ChangeLog 31374
+RMD160 a6a551ea7a968a2346180582aef0b4f2a9c2e43a ChangeLog 31374
+SHA256 801d5f7f81235f2e30438af28a4fa8c5c8e60dc1a1c2fc83e97da3c64910e744 ChangeLog 31374
 MD5 c288111d23145da40395fec1b16e5d0b catalyst-1.1.10.10.ebuild 2236
 RMD160 36a6ad29c0dea85bf4bf805e0502eed23a6a10f4 catalyst-1.1.10.10.ebuild 2236
 SHA256 2c235bb7a4459d4b9d9a90d206a2dd0f5e9daed8b613389514abb9f065da73c1 catalyst-1.1.10.10.ebuild 2236
-MD5 49bbb2d7bfcc1c23153b5150993a4611 catalyst-2.0_rc41.ebuild 3224
-RMD160 0599dedc528557b54dc883b306a37502dda57ee9 catalyst-2.0_rc41.ebuild 3224
-SHA256 2a15b3e4178c2fce4c06467d2392a774390f4da06e1947e7bd77e6c4971ea3d5 catalyst-2.0_rc41.ebuild 3224
-MD5 32c5c782d0330485221adfcc28ac3900 files/catalyst-2.0_rc41-slot.patch 1267
-RMD160 9ffe149423460f631d8e3c39bd60c60c5a59f5b8 files/catalyst-2.0_rc41-slot.patch 1267
-SHA256 18d6736a6d9f6954eb1d5cf10398ce0fcd6d1067c3adc675e5c59ba527eb5792 files/catalyst-2.0_rc41-slot.patch 1267
+MD5 178107557f77d72b4e2077080eb13542 catalyst-2.0_rc42.ebuild 3226
+RMD160 fac53ad881fafe328d403a81a03cab22323d4981 catalyst-2.0_rc42.ebuild 3226
+SHA256 cbeeb41e20ecfb6b632b1921ea07e9c87ec65064f33d24ce9fb1fa63c46e851d catalyst-2.0_rc42.ebuild 3226
+MD5 080d1a83983ca26a21d3c13e6daf53a1 files/catalyst-2.0_rc42-slot.patch 1267
+RMD160 c4acf58d5f09823fa4e326e8df55d8fd2034bf06 files/catalyst-2.0_rc42-slot.patch 1267
+SHA256 604e9e19b014ad884bb3ab281b19e880abb4dacd022ba6e6e70bfcf844efd786 files/catalyst-2.0_rc42-slot.patch 1267
 MD5 1579d7c79eaa1035a84a4247cd4a5fb6 files/digest-catalyst-1.1.10.10 71
 RMD160 b17e3c8d0e219600ad0b22ab63fd157ad92fb65e files/digest-catalyst-1.1.10.10 71
 SHA256 c73c68283081b07af3faf137aa5852f2414ca0f3831fa3b1a1ef2eb4dd9f179b files/digest-catalyst-1.1.10.10 71
-MD5 d6c241f67348ec736cf205a17512c639 files/digest-catalyst-2.0_rc41 256
-RMD160 d80225100448a5e634a42b66ed048785e5dc9fe7 files/digest-catalyst-2.0_rc41 256
-SHA256 a449ba9e4df6d7162d8986859cd265fd2c0c8bc49260df61d0b88ed27d6350d0 files/digest-catalyst-2.0_rc41 256
+MD5 c6e49c9281675829aca21a81dc713e27 files/digest-catalyst-2.0_rc42 256
+RMD160 e71fc89331639a06203727b1c230dbde998c678d files/digest-catalyst-2.0_rc42 256
+SHA256 f0469fa0fcf2cb146fca239b86dd7927bd7ad38ebd8abb40b73bdaf1e486fa6a files/digest-catalyst-2.0_rc42 256
 MD5 8c971ca7e043237b69754a9d88238bd4 metadata.xml 223
 RMD160 cd1cc28ce9a44a5bcf0835859270b312c2a9c057 metadata.xml 223
 SHA256 df88f8a951c171af2582027db09973af5e5f0a5f578636a8f836ecea8c55cd4d metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEPDqk2+ySkm8kpY0RAnLvAKCpqw2ByGP2eMBfvWCM3Uat3cGHggCeKN99
-+ONwETLnhsNilYmqdKSCQ7E=
-=HuEE
------END PGP SIGNATURE-----

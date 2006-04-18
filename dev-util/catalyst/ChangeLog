@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.142 2006/04/11 14:28:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.143 2006/04/18 21:04:49 wolf31o2 Exp $
+
+*catalyst-2.0_rc42 (18 Apr 2006)
+
+  18 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/catalyst-2.0_rc41-slot.patch, +files/catalyst-2.0_rc42-slot.patch,
+  -catalyst-2.0_rc41.ebuild, +catalyst-2.0_rc42.ebuild:
+  Version bump. This closes bug #123584, bug #124662, bug #125498, bug
+  #126900, bug #129890, and bug #130103.
 
   11 Apr 2006; Simon Stelling <blubb@gentoo.org> catalyst-1.1.10.10.ebuild,
   catalyst-2.0_rc41.ebuild:
