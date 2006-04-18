@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bombermaze/bombermaze-0.6.6.ebuild,v 1.6 2005/05/24 00:59:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bombermaze/bombermaze-0.6.6.ebuild,v 1.7 2006/04/18 21:04:42 tupone Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,7 +21,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc.patch
+	epatch "${FILESDIR}"/${P}-gcc.patch \
+		"${FILESDIR}"/${P}-gcc41.patch
 	sed -i \
 		-e 's:destdir=:destdir=$(DESTDIR):' \
 		po/Makefile.in.in || die "sed po"

@@ -1,5 +1,28 @@
-MD5 a717a19832af838a33a88c8159cf80f9 ChangeLog 1606
-MD5 5cf06a0ca03ea44a9ba48272a8feea45 bombermaze-0.6.6.ebuild 1069
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 dc0ab4d1a401a11e130c325d259c45e1 files/digest-bombermaze-0.6.6 68
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 13161e8eda595aea1bdf11ff8bd02ab9 ChangeLog 1724
+RMD160 1e5988dda7098624c99b5f2dc99f2df38ab6c385 ChangeLog 1724
+SHA256 29e85f2e28ba5cb546411f61bdbf613460d9c5d7ff3bc23e75bacab1a67de0c3 ChangeLog 1724
+MD5 368458f49648cd12e650f3700f42e3f2 bombermaze-0.6.6.ebuild 1104
+RMD160 03029cf2ca592b08cbbdf6535df89ac3b6c6f0aa bombermaze-0.6.6.ebuild 1104
+SHA256 7e56aab8cb4562ef92bec9ad39078e7e6c4ad9a70f52f2a0a8a1f236aa1c3eb8 bombermaze-0.6.6.ebuild 1104
 MD5 faee577061ad012fa54f267d5ee81d56 files/bombermaze-0.6.6-gcc.patch 372
+RMD160 0a465255e91d1c5d00ec290b24c7c734db2b0db1 files/bombermaze-0.6.6-gcc.patch 372
+SHA256 40773a219cbe64a403015a751b40d3aeacd5d53b9389567e86492405ee2434b5 files/bombermaze-0.6.6-gcc.patch 372
+MD5 48b3018833898d444217bf81abc5f77a files/bombermaze-0.6.6-gcc41.patch 463
+RMD160 a7708f431bce2c2c5397cea19f8b445776fb1149 files/bombermaze-0.6.6-gcc41.patch 463
+SHA256 c195900e434275b599d4adf3e5f3f58b0fb6e40f593db5cddc389856edb84e82 files/bombermaze-0.6.6-gcc41.patch 463
+MD5 655e403872b32a8140a2518e9e453069 files/digest-bombermaze-0.6.6 250
+RMD160 686c7a2b1a624476fde936fccac6f8c9cf387933 files/digest-bombermaze-0.6.6 250
+SHA256 8717ebae5eef9f3f5488d87c91a81dd1d2d1d55a9fd08327dea24015c62e0a52 files/digest-bombermaze-0.6.6 250
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERVSF2CTtIKiFlQIRAgw6AJ93DGtnAgNGanlSSndAWanw4UW5qwCffCc5
+uE9Ybr34/GvTz9NG1OQnJ24=
+=4A5a
+-----END PGP SIGNATURE-----

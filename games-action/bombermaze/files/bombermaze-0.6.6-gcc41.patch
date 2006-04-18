@@ -1,0 +1,11 @@
+--- src/map.hh.old	2006-04-18 22:55:14.000000000 +0200
++++ src/map.hh	2006-04-18 22:55:27.000000000 +0200
+@@ -569,7 +569,7 @@
+   static unsigned Shatter_Frame_Duration;
+ 
+   static float Probability_Of_PowerUp;
+-  static const float PowerUp::DefaultProbability[NUMBER_OF_CREATABLE_POWERUPS];
++  static const float DefaultProbability[NUMBER_OF_CREATABLE_POWERUPS];
+   static float Probability[NUMBER_OF_CREATABLE_POWERUPS];
+ 
+   void determine_powerup_type(void);
