@@ -1,6 +1,9 @@
 # ChangeLog for games-action/chromium
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.15 2005/12/13 16:26:07 spyderous Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.16 2006/04/18 12:14:57 weeve Exp $
+
+  18 Apr 2006; Jason Wever <weeve@gentoo.org> chromium-0.9.12-r5.ebuild:
+  Stable on SPARC.
 
   13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   chromium-0.9.12-r5.ebuild:

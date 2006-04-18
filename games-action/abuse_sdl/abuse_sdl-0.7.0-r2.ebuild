@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/abuse_sdl-0.7.0-r2.ebuild,v 1.9 2006/03/24 21:19:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/abuse_sdl-0.7.0-r2.ebuild,v 1.10 2006/04/18 12:14:14 weeve Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.labyrinth.net.au/~trandor/abuse/files/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.1.6"
