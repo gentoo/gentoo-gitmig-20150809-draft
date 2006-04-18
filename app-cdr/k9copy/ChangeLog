@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.11 2006/04/09 15:06:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.12 2006/04/18 21:45:55 flameeyes Exp $
+
+*k9copy-1.0.4 (18 Apr 2006)
+
+  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -k9copy-1.0.4_beta2.ebuild, -k9copy-1.0.4_beta3.ebuild,
+  +k9copy-1.0.4.ebuild:
+  Version bump and remove beta versions.
 
   09 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> k9copy-1.0.3b.ebuild,
   k9copy-1.0.4_beta2.ebuild, k9copy-1.0.4_beta3.ebuild:
