@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v.ebuild,v 1.6 2005/10/18 21:46:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v.ebuild,v 1.7 2006/04/18 17:46:49 flameeyes Exp $
 
 IUSE="static 16bit esd"
 
@@ -47,6 +47,8 @@ src_unpack() {
 
 	# Bug #109699; console redirection to /dev/tty makes no sense
 	sed -i -e 's/$(LDADD) &> $(LOGFILE)/$(LDADD)/' Makefile
+
+	epatch "${FILESDIR}/${P}-execstack.patch"
 }
 
 src_compile() {
@@ -55,6 +57,7 @@ src_compile() {
 	use static && export BLD_STATIC=1
 
 	append-flags -I${S}
+
 	ARCH= emake mppenc mppdec replaygain || die
 }
 

@@ -1,0 +1,44 @@
+Index: sv7/cpu_feat.nas
+===================================================================
+--- sv7.orig/cpu_feat.nas
++++ sv7/cpu_feat.nas
+@@ -140,3 +140,6 @@ proc    Init_FPU2
+ endproc
+ 
+         end
++%ifidn __OUTPUT_FORMAT__,elf
++section .note.GNU-stack noalloc noexec nowrite progbits
++%endif
+Index: sv7/fft4gasm.nas
+===================================================================
+--- sv7.orig/fft4gasm.nas
++++ sv7/fft4gasm.nas
+@@ -422,3 +422,6 @@ lbl5:
+ 
+ 
+ ;##################################################################
++%ifidn __OUTPUT_FORMAT__,elf
++section .note.GNU-stack noalloc noexec nowrite progbits
++%endif
+Index: sv7/list_korr_asm.nas
+===================================================================
+--- sv7.orig/list_korr_asm.nas
++++ sv7/list_korr_asm.nas
+@@ -98,3 +98,6 @@ lbl2:
+         fstp    tword [eax+ 8]          ; x
+         ret
+ ;
++%ifidn __OUTPUT_FORMAT__,elf
++section .note.GNU-stack noalloc noexec nowrite progbits
++%endif
+Index: sv7/synthasm.nas
+===================================================================
+--- sv7.orig/synthasm.nas
++++ sv7/synthasm.nas
+@@ -2225,3 +2225,6 @@ endproc
+ ;
+ ; end of synthasm.nas
+ ;
++%ifidn __OUTPUT_FORMAT__,elf
++section .note.GNU-stack noalloc noexec nowrite progbits
++%endif
