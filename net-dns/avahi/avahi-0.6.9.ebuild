@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 2000-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.9.ebuild,v 1.4 2006/04/12 20:28:29 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.9.ebuild,v 1.5 2006/04/18 20:01:41 swegener Exp $
 
 inherit eutils qt3 mono python
 
@@ -13,6 +13,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sh sparc ~x86"
 IUSE="bookmarks howl-compat mdnsresponder-compat gdbm dbus doc mono gtk python qt"
 
+# We have USE flags depending on each other, which leads to this logic. We
+# prefer an activated USE flag and override the dependent USE flags.
+
 RDEPEND=">=dev-libs/libdaemon-0.5
 	dev-libs/expat
 	>=dev-libs/glib-2
@@ -22,24 +25,26 @@ RDEPEND=">=dev-libs/libdaemon-0.5
 		>=x11-libs/gtk+-2
 		>=gnome-base/libglade-2
 	)
-	mono? ( >=dev-lang/mono-1.1.10 )
+	mono? (
+		>=dev-lang/mono-1.1.10
+		>=sys-apps/dbus-0.30
+	)
 	dbus? (
 		>=sys-apps/dbus-0.30
+		howl-compat? ( !net-misc/howl )
+		mdnsresponder-compat? ( !net-misc/mDNSResponder )
 	)
 	python? (
 		>=virtual/python-2.4
-		dbus? (
-			bookmarks? (
-				dev-python/twisted
-				dev-python/twisted-web
-			)
-		)
 		gtk? ( >=dev-python/pygtk-2 )
 	)
-	dbus? (
-		howl-compat? ( !net-misc/howl )
-		mdnsresponder-compat? ( !net-misc/mDNSResponder )
-	)"
+	bookmarks? (
+		>=virtual/python-2.4
+		>=sys-apps/dbus-0.30
+		dev-python/twisted
+		dev-python/twisted-web
+	)
+	"
 DEPEND="${RDEPEND}
 	doc? (
 		app-doc/doxygen
@@ -75,9 +80,16 @@ src_compile() {
 		use gtk && myconf="${myconf} --enable-pygtk"
 	fi
 
-	if use mono && use doc
+	if use mono
 	then
-		myconf="${myconf} --enable-monodoc"
+		myconf="${myconf} --enable-dbus"
+
+		use doc && myconf="${myconf} --enable-monodoc"
+	fi
+
+	if use bookmarks
+	then
+		myconf="${myconf} --enable-python --enable-dbus --enable-python-dbus"
 	fi
 
 	econf \
