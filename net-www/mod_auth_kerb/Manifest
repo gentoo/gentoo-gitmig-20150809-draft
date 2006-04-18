@@ -1,21 +1,39 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7024ad263908c49daf6cb65673d91cf6 ChangeLog 1173
+MD5 8c8a67e27a61753ac5bd5536eb8c6cb3 ChangeLog 1316
+RMD160 bad2bd1366940d2551d45d1fdde0ed6c149f9c88 ChangeLog 1316
+SHA256 548e3d0d71c705c4b74025e358d47c0a170ffd77f12429ef9d2e9c477b01a2a7 ChangeLog 1316
 MD5 c9bbfd002811a674505b3844837a63ee files/11_mod_auth_kerb.conf 180
+RMD160 57e08fb341a79457b30846723e57b363812682a8 files/11_mod_auth_kerb.conf 180
+SHA256 bd8488de93178f3e6af11c6a2aff169ae463d38cef52908c9ecf3b9267220353 files/11_mod_auth_kerb.conf 180
 MD5 0e8d91e6c3aa51e78b989b56d2b4028c files/4.11-r1/11_mod_auth_kerb.conf 362
+RMD160 2a435853dff47dc92d44f1e29af856ed880f37ee files/4.11-r1/11_mod_auth_kerb.conf 362
+SHA256 b91623b079f36e597b3e92fa422c7fae2ce6daa5a7fc0b6b5a51938b9a9d5bc8 files/4.11-r1/11_mod_auth_kerb.conf 362
 MD5 7e465f540fb90976cd1c7959ae94e6ab files/digest-mod_auth_kerb-4.11 69
+RMD160 aa9aaa38f8f3283b3d83b96193b62f1d79e55bde files/digest-mod_auth_kerb-4.11 69
+SHA256 5417178a86b4912f9c58a2d478119027fbb85056766b9e3bc8832caa7fcd1dca files/digest-mod_auth_kerb-4.11 69
 MD5 7e465f540fb90976cd1c7959ae94e6ab files/digest-mod_auth_kerb-4.11-r1 69
+RMD160 aa9aaa38f8f3283b3d83b96193b62f1d79e55bde files/digest-mod_auth_kerb-4.11-r1 69
+SHA256 5417178a86b4912f9c58a2d478119027fbb85056766b9e3bc8832caa7fcd1dca files/digest-mod_auth_kerb-4.11-r1 69
 MD5 738a52c466673dc44a3cd64f54d85390 files/digest-mod_auth_kerb-5.0_rc6 72
+RMD160 7bf0cdfb5efb09b6c44e329e331c52ebb4b26dc9 files/digest-mod_auth_kerb-5.0_rc6 72
+SHA256 8246bfcc0c812a6cdecf8e7a1c8026829993bc9f5b7a7890d65286a2203bf3c2 files/digest-mod_auth_kerb-5.0_rc6 72
+MD5 fc55498aaa35d757cea367eba2c831be files/digest-mod_auth_kerb-5.0_rc7 259
+RMD160 0f4f3f0812f45c3e16393cb17873f7d9cbb38eb2 files/digest-mod_auth_kerb-5.0_rc7 259
+SHA256 cfeffa27bace1ffa987700b0c868278af65e71c6b8265639e4ada382eeadf0b9 files/digest-mod_auth_kerb-5.0_rc7 259
 MD5 05d525e36b7e86f564e3a15608eca8e4 files/mod_auth_kerb_register.patch 782
+RMD160 4cb6711a3058f4eb9a9256b358e7c724623346b8 files/mod_auth_kerb_register.patch 782
+SHA256 4120ed453d5bfe4cec6213eea7c9e928077bf871b687bf6c251bb9b9fef41f76 files/mod_auth_kerb_register.patch 782
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
+RMD160 d11ce73e47adf4b3d91309ec6489fded2f4d4e0e metadata.xml 226
+SHA256 376a327f91f69eb96f0c1b05cc1481dd7017a0570f631a03b1f6d14d58215ca8 metadata.xml 226
 MD5 862f1e12609fd86384b8bae627fab5cf mod_auth_kerb-4.11-r1.ebuild 864
+RMD160 c6b987785f6e77f6ed6a102a5e23274996c0ccd4 mod_auth_kerb-4.11-r1.ebuild 864
+SHA256 80c1d73b141c8e8e9bb70a0f8a55747a2bba4e072359d23a850d6ad068d2e5b7 mod_auth_kerb-4.11-r1.ebuild 864
 MD5 305a2884f3d786ee45d11ca24a2f5859 mod_auth_kerb-4.11.ebuild 1079
+RMD160 420a9fc95d8a6a2310ced17d5d053175d932d99b mod_auth_kerb-4.11.ebuild 1079
+SHA256 fb71e53a3a7e6d772dfe4eb7fec85a79a44a07b81da2e3f324e980b6a3b3a721 mod_auth_kerb-4.11.ebuild 1079
 MD5 fd00de2aa1d22981a01aaf63fc70082e mod_auth_kerb-5.0_rc6.ebuild 1019
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDSXVRKf2g/qXtneoRAjdoAJ9sLrV8MqcaLC814izBQmqK1NREbACgthJW
-ZawonC995nLsdNmosM3aDkg=
-=t8sS
------END PGP SIGNATURE-----
+RMD160 a58e3b9b3ed57d9ff4a7c4187e82cfa541763000 mod_auth_kerb-5.0_rc6.ebuild 1019
+SHA256 fc21443ced9f8f98f5793b1739f3a95893c4128312762b7196c80685e74db7e3 mod_auth_kerb-5.0_rc6.ebuild 1019
+MD5 ede0b3d8af8a9b150e3c1addc239c4fa mod_auth_kerb-5.0_rc7.ebuild 1018
+RMD160 bae3edb3e45cad51695d6e3f7f809bcc9c0d97d9 mod_auth_kerb-5.0_rc7.ebuild 1018
+SHA256 1e345bf155b7fd99274d452dd9797faca362ef2fd59526b96cb746ecdb0b66f4 mod_auth_kerb-5.0_rc7.ebuild 1018
