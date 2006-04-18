@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/dejavu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.18 2006/04/02 17:53:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.19 2006/04/18 21:18:01 flameeyes Exp $
+
+*dejavu-2.5 (18 Apr 2006)
+
+  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> +dejavu-2.5.ebuild:
+  Version bump.
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> dejavu-2.4.1.ebuild:
   Add ~x86-fbsd keyword.
