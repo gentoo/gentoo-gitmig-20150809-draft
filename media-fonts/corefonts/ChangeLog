@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/corefonts
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.22 2006/03/23 20:50:25 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.23 2006/04/18 20:15:15 flameeyes Exp $
+
+  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> corefonts-1-r2.ebuild:
+  Add ~x86-fbsd keyword.
 
   23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>; -corefonts-1.ebuild,
   -corefonts-1-r1.ebuild:
