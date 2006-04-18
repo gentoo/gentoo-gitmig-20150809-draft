@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/watermelons
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/watermelons/ChangeLog,v 1.1 2006/04/18 07:36:35 mr_bones_ Exp $
+
+*watermelons-1.1.1 (18 Apr 2006)
+
+  18 Apr 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +watermelons-1.1.1.ebuild:
+  initial commit - ebuild submitted by Cristiano Chiucchiolo via bug #130192
+
