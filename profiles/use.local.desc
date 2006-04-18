@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1851 2006/04/17 19:18:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1852 2006/04/18 00:10:51 metalgod Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -802,6 +802,7 @@ media-sound/rhythmbox:avahi - support for avahi mdns daemon
 media-sound/rhythmbox:daap - support for daap
 media-sound/rhythmbox:gstreamer010 - support for gstreamer-0.10
 media-sound/rhythmbox:ipod - support for ipod devices via libgpod
+media-sound/rhythmbox:libnotify - support for libnotify
 media-sound/rhythmbox:musicbrainz - support for muzicbrains
 media-sound/rhythmbox:tagwriting - support for tag wriring in certian audio files
 media-sound/snd:gsl - Use the GNU scientific library for calculations
