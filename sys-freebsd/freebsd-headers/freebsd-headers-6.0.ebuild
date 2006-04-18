@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-headers/freebsd-headers-6.0.ebuild,v 1.1 2006/04/01 16:43:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-headers/freebsd-headers-6.0.ebuild,v 1.2 2006/04/18 23:29:09 flameeyes Exp $
 
 inherit bsdmk freebsd toolchain-funcs
 
@@ -15,7 +15,8 @@ SRC_URI="mirror://gentoo/${INCLUDE}.tar.bz2
 	mirror://gentoo/${ETC}.tar.bz2"
 
 RDEPEND=""
-DEPEND="=sys-freebsd/freebsd-mk-defs-${RV}*"
+DEPEND="=sys-freebsd/freebsd-mk-defs-${RV}*
+	|| ( sys-apps/mtree sys-freebsd/freebsd-ubin )"
 
 PROVIDE="virtual/os-headers"
 
@@ -23,19 +24,28 @@ RESTRICT="nostrip"
 
 S=${WORKDIR}/include
 
-export CTARGET=${CTARGET:-${CHOST}}
-if [[ ${CTARGET} == ${CHOST} && ${CATEGORY/cross-} != ${CATEGORY} ]]; then
-	export CTARGET=${CATEGORY/cross-}
-fi
+src_unpack() {
+	freebsd_src_unpack
+
+	[[ -n $(install --version 2> /dev/null | grep GNU) ]] && sed -i -e 's:${INSTALL} -C:${INSTALL}:' ${S}/Makefile
+}
 
 src_compile() {
 	$(freebsd_get_bmake) CC=$(tc-getCC) || die "make failed"
 }
 
 src_install() {
+	CTARGET=${CTARGET:-${CHOST}}
+	if [[ ${CTARGET} == ${CHOST} && ${CATEGORY/cross-} != ${CATEGORY} ]]; then
+		CTARGET=${CATEGORY/cross-}
+	fi
+
 	[[ ${CTARGET} == ${CHOST} ]] \
 		&& INCLUDEDIR="/usr/include" \
 		|| INCLUDEDIR="/usr/${CTARGET}/include"
 
-	$(freebsd_get_bmake) install DESTDIR="${D}" INCLUDEDIR="${INCLUDEDIR}" || die "Install failed"
+	einfo "Installing for ${CTARGET} in ${CHOST}.."
+
+	dodir "${INCLUDEDIR}"
+	$(freebsd_get_bmake) installincludes DESTDIR="${D}" INCLUDEDIR="${INCLUDEDIR}" || die "Install failed"
 }
