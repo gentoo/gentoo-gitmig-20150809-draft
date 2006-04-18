@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.2-r1.ebuild,v 1.3 2006/03/27 10:47:21 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.2-r1.ebuild,v 1.4 2006/04/18 17:57:13 flameeyes Exp $
 
 inherit kde-functions autotools libtool multilib
 
@@ -19,16 +19,14 @@ RDEPEND="|| ( ( x11-libs/libXt )
 	=x11-libs/qt-3*
 	media-libs/alsa-lib"
 
-DEPEND="${RDEPEND}
-	sys-devel/autoconf
-	sys-devel/libtool
-	>=sys-devel/automake-1.7"
-
 set-qtdir 3
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch "${FILESDIR}/${P}-qualifications.patches"
+
 	eautoreconf
 	elibtoolize
 }

@@ -1,0 +1,13 @@
+Index: libmustux-0.20.2/MustuxAudioDeviceMapper.hh
+===================================================================
+--- libmustux-0.20.2.orig/MustuxAudioDeviceMapper.hh
++++ libmustux-0.20.2/MustuxAudioDeviceMapper.hh
+@@ -160,7 +160,7 @@ namespace MustuxAudioDeviceMapper
+ 	int find_bus_out(int rate, int bitDepth, int channels);
+ 	int find_bus_in(int rate, int bitDepth, int channels);
+ 
+-	snd_pcm_format_t MustuxAudioDeviceMapper::get_format(int bitDepht);
++	snd_pcm_format_t get_format(int bitDepht);
+ 	};
+ 
+ #include "MustuxAudioBus.hh"

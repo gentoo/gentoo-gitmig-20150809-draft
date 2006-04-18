@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmustux
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.25 2006/03/27 10:47:21 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.26 2006/04/18 17:57:12 flameeyes Exp $
+
+  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libmustux-0.20.2-qualifications.patch, libmustux-0.20.2-r1.ebuild:
+  Add patch to fix extra qualifications as per bug #118175.
 
   27 Mar 2006; Luis Medinas <metalgod@gentoo.org> -libmustux-0.20.1.ebuild,
   libmustux-0.20.2.ebuild, libmustux-0.20.2-r1.ebuild:
