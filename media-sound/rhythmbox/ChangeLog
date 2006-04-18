@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.69 2006/04/08 14:16:04 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.70 2006/04/18 00:16:43 metalgod Exp $
+
+*rhythmbox-0.9.4_p1 (18 Apr 2006)
+*rhythmbox-0.9.4 (18 Apr 2006)
+
+  18 Apr 2006; Luis Medinas <metalgod@gentoo.org> +rhythmbox-0.9.4.ebuild,
+  +rhythmbox-0.9.4_p1.ebuild:
+  Version Bump from upstream. I added libnotify support for both packages.
+  Closes bug #128417 and #130210.
 
   08 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   rhythmbox-0.9.3.1_p1.ebuild:

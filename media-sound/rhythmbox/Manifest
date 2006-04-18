@@ -1,6 +1,9 @@
-MD5 c12217e9ffc1b73988b311e4ce77b141 ChangeLog 8497
-RMD160 5904394a1e82a82bbdd7d7df02d647acaf16c96a ChangeLog 8497
-SHA256 b7dc8210a222bb098468ac7989673930bb097fc5d21d13725c6314d0a5c4184d ChangeLog 8497
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3a8e3307b34deddc10978152dcdb849b ChangeLog 8776
+RMD160 fdde09022fb0e6b617c63c69f8b26e56d81c6466 ChangeLog 8776
+SHA256 ecbdc9f86a1d2afde81307408fcce74f79933cac94961a06a221efe333f3d767 ChangeLog 8776
 MD5 44a42f72ca8c0f3136fded12f1aa7172 files/digest-rhythmbox-0.8.8-r1 69
 RMD160 990badbc4f189bd890ce4e4ebbea99917de7a121 files/digest-rhythmbox-0.8.8-r1 69
 SHA256 aaf41e966028c1d21185ea950161be8b8916189a77f7147fbdaeba26b8ebb30f files/digest-rhythmbox-0.8.8-r1 69
@@ -13,6 +16,12 @@ SHA256 8dc25fd528fe6f957533779502e6da111ef4d3f2a4b1f7b42319f17452f8273b files/di
 MD5 f1335da386c60b0cf4f0c5c67fa9743c files/digest-rhythmbox-0.9.3.1_p1 71
 RMD160 0809c53b4b0db677c96f425e775a977c00093d96 files/digest-rhythmbox-0.9.3.1_p1 71
 SHA256 8dc25fd528fe6f957533779502e6da111ef4d3f2a4b1f7b42319f17452f8273b files/digest-rhythmbox-0.9.3.1_p1 71
+MD5 954c4f44bcf7a699ba6bc40c654b0ff2 files/digest-rhythmbox-0.9.4 253
+RMD160 1b3df0f615af3547ca0ae641550d98c1109ecacc files/digest-rhythmbox-0.9.4 253
+SHA256 d346f8d31393b3b5aa412e65e08d3e89a0ff64483141b2c40dea74cf5224a5fb files/digest-rhythmbox-0.9.4 253
+MD5 954c4f44bcf7a699ba6bc40c654b0ff2 files/digest-rhythmbox-0.9.4_p1 253
+RMD160 1b3df0f615af3547ca0ae641550d98c1109ecacc files/digest-rhythmbox-0.9.4_p1 253
+SHA256 d346f8d31393b3b5aa412e65e08d3e89a0ff64483141b2c40dea74cf5224a5fb files/digest-rhythmbox-0.9.4_p1 253
 MD5 7c49ce1b3d4a78dc9adba805fd3b82fb files/rhythmbox-0.8.7-gst_shn_support.patch 665
 RMD160 8f8eec7bf19405ea70b7ab5984c5d5a96e834822 files/rhythmbox-0.8.7-gst_shn_support.patch 665
 SHA256 1c4fbabdff94741c88fb92f37c84ae70e05be9054481241efcab49f8c2c19018 files/rhythmbox-0.8.7-gst_shn_support.patch 665
@@ -40,3 +49,16 @@ SHA256 4cfc913b2847ea4d7b1e17f909f74e96273af17674e70ec22bd6d4cb2f962b69 rhythmbo
 MD5 5e66f44207349857fa04c9756a0ecade rhythmbox-0.9.3.1_p1.ebuild 3452
 RMD160 77544b73ad190d348c2b4db4eb1af66110872745 rhythmbox-0.9.3.1_p1.ebuild 3452
 SHA256 94c758926aa960853536a35ac316482f8c006a2b1bb0cadb6f82ead784b4ba6f rhythmbox-0.9.3.1_p1.ebuild 3452
+MD5 f53a26152fc6cb677de0bd5387ba64eb rhythmbox-0.9.4.ebuild 2641
+RMD160 3598591e672b581ac1dbc66d4f03211f2c62b0cd rhythmbox-0.9.4.ebuild 2641
+SHA256 028eeef9a29e326d7ebd8f693c887df383c821d50019c3b658294f2fe275b0ed rhythmbox-0.9.4.ebuild 2641
+MD5 ed7317d9bccac3b490f3eb83e789d284 rhythmbox-0.9.4_p1.ebuild 3447
+RMD160 11e8d2ea30e0741ec399eb6c64aa1de1f30f8604 rhythmbox-0.9.4_p1.ebuild 3447
+SHA256 66c3539166e19db5e3018a373aa51d28c8086425c3b7e616555f8879be82d65d rhythmbox-0.9.4_p1.ebuild 3447
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERC6FwUpWvClEHQoRApqDAKCFr558exmO0KECJ0kranpz/+AJOACfXiFa
+nH++zDCVP/mB1oPZ0jTXG+w=
+=SCKw
+-----END PGP SIGNATURE-----
