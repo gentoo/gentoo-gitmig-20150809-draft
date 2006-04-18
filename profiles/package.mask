@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5227 2006/04/17 19:59:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5228 2006/04/18 00:12:35 metalgod Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -581,6 +581,7 @@ net-print/hpoj
 #Mask version with optional gstreamer-0.10 support
 #since gstreamer-0.10 is still masked
 =media-sound/rhythmbox-0.9.3.1_p1
+=media-sound/rhythmbox-0.9.4_p1
 
 # Marcelo Goes <vanquirius@gentoo.org> (06 Feb 2006)
 # Mask tcpreplay beta branch. If you want it, unmask it.
