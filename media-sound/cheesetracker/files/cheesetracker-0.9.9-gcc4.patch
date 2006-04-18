@@ -1,0 +1,265 @@
+diff -Naur cheesetracker-0.9.9.old/cheesetracker/interface__QT/interface.cpp cheesetracker-0.9.9/cheesetracker/interface__QT/interface.cpp
+--- cheesetracker-0.9.9.old/cheesetracker/interface__QT/interface.cpp	2006-04-01 00:03:44.000000000 -0500
++++ cheesetracker-0.9.9/cheesetracker/interface__QT/interface.cpp	2006-04-01 00:03:43.000000000 -0500
+@@ -42,7 +42,7 @@
+ #include <qmessagebox.h>
+ 
+ 
+-Saver::Error  Interface::save_song() {
++Audio::Saver::Error  Interface::save_song() {
+ 
+ 	FILE *f=fopen(tracker.song.variables.filename.c_str(),"rb");
+ 	if (!f) { //file doesnt exist, cant do direct save
+@@ -53,14 +53,14 @@
+         if (tracker.format_manager.save_module(tracker.song.variables.filename.c_str())) {
+ 
+ 		QMessageBox::warning( this, "Oops!","Error saving song!","Ok");
+-		return Saver::SAVE_ERROR;
++		return Audio::Saver::SAVE_ERROR;
+ 	}
+ 
+-	return Saver::SAVE_OK;
++	return Audio::Saver::SAVE_OK;
+ 
+ }
+ 
+-Saver::Error  Interface::save_song_as() {
++Audio::Saver::Error  Interface::save_song_as() {
+ 
+ 	QString s=QString::null;
+ 
+@@ -87,7 +87,7 @@
+ 
+ 
+ 	if (s==QString::null)
+-		return Saver::SAVE_OK; //nothing selected
++		return Audio::Saver::SAVE_OK; //nothing selected
+ 
+ 
+ 
+@@ -97,19 +97,19 @@
+ 		if ( QMessageBox::warning( this, "Question:","File exists! Overwrite?","Yes", "No") ) {
+ 
+ //			//printf("Leaving file alone!\n");
+-			return Saver::SAVE_OK;
++			return Audio::Saver::SAVE_OK;
+ 		}
+ 	}
+ 
+         if (tracker.format_manager.save_module(s.ascii())) {
+ 
+ 		QMessageBox::warning( this, "Oops!","Error saving song!","Ok");
+-		return Saver::SAVE_ERROR;
++		return Audio::Saver::SAVE_ERROR;
+ 	}
+ 
+ 	tracker.song.variables.filename=s.ascii();
+ 
+-	return Saver::SAVE_OK;
++	return Audio::Saver::SAVE_OK;
+ }
+ 
+ string Interface::get_song_name() {
+diff -Naur cheesetracker-0.9.9.old/cheesetracker/interface__QT/interface.h cheesetracker-0.9.9/cheesetracker/interface__QT/interface.h
+--- cheesetracker-0.9.9.old/cheesetracker/interface__QT/interface.h	2006-04-01 00:03:44.000000000 -0500
++++ cheesetracker-0.9.9/cheesetracker/interface__QT/interface.h	2006-04-01 00:03:43.000000000 -0500
+@@ -112,8 +112,8 @@
+ 	PageList get_current_page();
+ 
+ 	Loader::Error  open_song(string p_name);
+-	Saver::Error  save_song();
+-	Saver::Error  save_song_as();
++	Audio::Saver::Error  save_song();
++	Audio::Saver::Error  save_song_as();
+ 
+ 
+     Interface(QWidget *p_widget);
+diff -Naur cheesetracker-0.9.9.old/cheesetracker/savers/saver_ct.h cheesetracker-0.9.9/cheesetracker/savers/saver_ct.h
+--- cheesetracker-0.9.9.old/cheesetracker/savers/saver_ct.h	2006-04-01 00:03:44.000000000 -0500
++++ cheesetracker-0.9.9/cheesetracker/savers/saver_ct.h	2006-04-01 00:03:43.000000000 -0500
+@@ -15,6 +15,8 @@
+ #include "trackercore/saver.h"
+ #include "components/audio/dds_helpers.h"
+ 
++using namespace Audio;
++
+ /**
+ @author Juan Linietsky
+ */
+diff -Naur cheesetracker-0.9.9.old/cheesetracker/savers/saver_it.h cheesetracker-0.9.9/cheesetracker/savers/saver_it.h
+--- cheesetracker-0.9.9.old/cheesetracker/savers/saver_it.h	2006-04-01 00:03:44.000000000 -0500
++++ cheesetracker-0.9.9/cheesetracker/savers/saver_it.h	2006-04-01 00:03:43.000000000 -0500
+@@ -51,7 +51,7 @@
+ ********************************/
+ 
+ 
+-
++using namespace Audio;
+ 
+ 
+ class Saver_IT : public Saver {
+diff -Naur cheesetracker-0.9.9.old/cheesetracker/savers/saver_raw.h cheesetracker-0.9.9/cheesetracker/savers/saver_raw.h
+--- cheesetracker-0.9.9.old/cheesetracker/savers/saver_raw.h	2006-04-01 00:03:44.000000000 -0500
++++ cheesetracker-0.9.9/cheesetracker/savers/saver_raw.h	2006-04-01 00:03:43.000000000 -0500
+@@ -42,7 +42,7 @@
+   *@author red
+   */
+ 
+-
++using namespace Audio;
+ 
+ 
+ class Saver_Raw : public Saver  {
+diff -Naur cheesetracker-0.9.9.old/cheesetracker/savers/saver_wav.h cheesetracker-0.9.9/cheesetracker/savers/saver_wav.h
+--- cheesetracker-0.9.9.old/cheesetracker/savers/saver_wav.h	2006-04-01 00:03:44.000000000 -0500
++++ cheesetracker-0.9.9/cheesetracker/savers/saver_wav.h	2006-04-01 00:03:43.000000000 -0500
+@@ -39,7 +39,7 @@
+   *@author red
+   */
+ 
+-
++using namespace Audio;
+ 
+ 
+ class Saver_Wav : public Saver  {
+diff -Naur cheesetracker-0.9.9.old/cheesetracker/trackercore/file_format_manager.cpp cheesetracker-0.9.9/cheesetracker/trackercore/file_format_manager.cpp
+--- cheesetracker-0.9.9.old/cheesetracker/trackercore/file_format_manager.cpp	2006-04-01 00:03:44.000000000 -0500
++++ cheesetracker-0.9.9/cheesetracker/trackercore/file_format_manager.cpp	2006-04-01 00:04:22.000000000 -0500
+@@ -35,7 +35,7 @@
+ 
+ #include "file_format_manager.h"
+ 
+-
++using namespace Audio;
+ 
+ 
+ File_Format_Manager::File_Format_Manager(){
+@@ -78,7 +78,7 @@
+ 	return temperr;
+ }
+ 
+-void File_Format_Manager::register_saver(Saver *p_saver) {
++void File_Format_Manager::register_saver(Audio::Saver *p_saver) {
+ 
+ 	if (song==NULL) {
+ 
+@@ -93,11 +93,11 @@
+ int File_Format_Manager::save_module(const char *p_filename) {
+ 	
+ 	Saver_List::const_iterator I;
+-	int temperr=Saver::UNKNOWN_TYPE;
++	int temperr=Audio::Saver::UNKNOWN_TYPE;
+ 
+ 	for (I=saver_list.begin();I!=saver_list.end();I++) {
+ 
+-		if ((temperr=(*I)->save(p_filename))!=Saver::UNKNOWN_TYPE) {
++		if ((temperr=(*I)->save(p_filename))!=Audio::Saver::UNKNOWN_TYPE) {
+ 
+ 				return temperr;
+ 		}
+@@ -109,11 +109,11 @@
+ int File_Format_Manager::save_sample(const char *p_filename, int p_index) {
+ 
+ 	Saver_List::const_iterator I;
+-	int temperr=Saver::UNKNOWN_TYPE;
++	int temperr=Audio::Saver::UNKNOWN_TYPE;
+ 
+ 	for (I=saver_list.begin();I!=saver_list.end();I++) {
+ 
+-		if ((temperr=(*I)->save_sample(p_filename,p_index))!=Saver::UNKNOWN_TYPE) {
++		if ((temperr=(*I)->save_sample(p_filename,p_index))!=Audio::Saver::UNKNOWN_TYPE) {
+ 
+ 				return temperr;
+ 		}
+@@ -124,11 +124,11 @@
+ int File_Format_Manager::save_instrument(const char *p_filename, int p_index) {
+ 
+ 	Saver_List::const_iterator I;
+-	int temperr=Saver::UNKNOWN_TYPE;
++	int temperr=Audio::Saver::UNKNOWN_TYPE;
+ 
+ 	for (I=saver_list.begin();I!=saver_list.end();I++) {
+ 
+-		if ((temperr=(*I)->save_instrument(p_filename,p_index))!=Saver::UNKNOWN_TYPE) {
++		if ((temperr=(*I)->save_instrument(p_filename,p_index))!=Audio::Saver::UNKNOWN_TYPE) {
+ 
+ 				return temperr;
+ 		}
+diff -Naur cheesetracker-0.9.9.old/cheesetracker/trackercore/file_format_manager.h cheesetracker-0.9.9/cheesetracker/trackercore/file_format_manager.h
+--- cheesetracker-0.9.9.old/cheesetracker/trackercore/file_format_manager.h	2006-04-01 00:03:44.000000000 -0500
++++ cheesetracker-0.9.9/cheesetracker/trackercore/file_format_manager.h	2006-04-01 00:03:43.000000000 -0500
+@@ -60,7 +60,7 @@
+ class File_Format_Manager {
+ 
+ 	typedef list<Loader*> Loader_List;
+-	typedef list<Saver*> Saver_List;
++	typedef list<Audio::Saver*> Saver_List;
+ 
+ 	Loader_List loader_list;
+ 	Saver_List saver_list;
+@@ -80,7 +80,7 @@
+ 
+         Loader* load_sample_library(const char *p_filename); // Usually, from an instrument, but soundfonds would be cool!
+ 
+-	void register_saver(Saver *p_saver);
++	void register_saver(Audio::Saver *p_saver);
+         int save_module(const char *p_filename);
+ 
+ 	int save_sample(const char *p_filename, int p_index);
+diff -Naur cheesetracker-0.9.9.old/cheesetracker/trackercore/saver.h cheesetracker-0.9.9/cheesetracker/trackercore/saver.h
+--- cheesetracker-0.9.9.old/cheesetracker/trackercore/saver.h	2006-04-01 00:03:44.000000000 -0500
++++ cheesetracker-0.9.9/cheesetracker/trackercore/saver.h	2006-04-01 00:03:43.000000000 -0500
+@@ -53,7 +53,7 @@
+ 
+ 
+ 
+-
++namespace Audio{
+ class Saver {
+ protected:
+ 	Song *song;
+@@ -78,7 +78,7 @@
+ 	Saver();
+ 	virtual ~Saver();
+ };
+-
++}
+ 
+ 
+ #endif
+diff -Naur cheesetracker-0.9.9.old/common/components/audio/resampler_manager.h cheesetracker-0.9.9/common/components/audio/resampler_manager.h
+--- cheesetracker-0.9.9.old/common/components/audio/resampler_manager.h	2006-04-01 00:03:44.000000000 -0500
++++ cheesetracker-0.9.9/common/components/audio/resampler_manager.h	2006-04-01 00:03:43.000000000 -0500
+@@ -34,7 +34,7 @@
+ 
+ public:
+ 
+-	static Resampler_Manager * Resampler_Manager::get_resampler_manager();
++	static Resampler_Manager * get_resampler_manager();
+ 	int get_resampler_count();
+ 	Resampler * get_resampler(int p_index);
+ 
+diff -Naur cheesetracker-0.9.9.old/common/components/data/property_bridges.h cheesetracker-0.9.9/common/components/data/property_bridges.h
+--- cheesetracker-0.9.9.old/common/components/data/property_bridges.h	2006-04-01 00:03:44.000000000 -0500
++++ cheesetracker-0.9.9/common/components/data/property_bridges.h	2006-04-01 00:03:43.000000000 -0500
+@@ -41,7 +41,7 @@
+   */
+ 
+   #define BRIDGE_COPY_VALUE(T) \
+-	virtual bool T::copy_value(const Property_Bridge& rvalue) {\
++	virtual bool copy_value(const Property_Bridge& rvalue) {\
+ 		T* rcast = dynamic_cast<T*>((T*)&rvalue);\
+ 		if (rcast) {\
+ 			set(rcast->get());\
+diff -Naur cheesetracker-0.9.9.old/common/drivers/posix/sound_driver_jack.h cheesetracker-0.9.9/common/drivers/posix/sound_driver_jack.h
+--- cheesetracker-0.9.9.old/common/drivers/posix/sound_driver_jack.h	2006-04-01 00:03:44.000000000 -0500
++++ cheesetracker-0.9.9/common/drivers/posix/sound_driver_jack.h	2006-04-01 00:03:43.000000000 -0500
+@@ -72,7 +72,7 @@
+ 
+ 	int jack_callback_nframes;
+ 
+-	Sound_Driver::Status Sound_Driver_JACK::process();
++	Sound_Driver::Status process();
+ 
+         static int process_jack_callback(jack_nframes_t nframes,void *arg);
+         static int jack_set_mixfreq(jack_nframes_t nframes,void *arg);

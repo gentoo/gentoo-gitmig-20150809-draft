@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/cheesetracker-0.9.9.ebuild,v 1.13 2006/02/07 21:46:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/cheesetracker-0.9.9.ebuild,v 1.14 2006/04/18 18:25:01 flameeyes Exp $
 
 inherit eutils
 
@@ -21,7 +21,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-64bit-clean.diff
+	epatch "${FILESDIR}/${P}-64bit-clean.diff"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 }
 
 src_compile() {
