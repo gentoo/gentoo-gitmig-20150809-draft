@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/defendguin-0.0.11.ebuild,v 1.2 2006/04/17 21:59:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/defendguin-0.0.11.ebuild,v 1.3 2006/04/18 00:11:05 mr_bones_ Exp $
 
 inherit eutils games
 DESCRIPTION="A clone of the arcade game Defender, but with a Linux theme"
@@ -16,10 +16,10 @@ DEPEND="media-libs/sdl-mixer
 	media-libs/libsdl"
 
 pkg_setup() {
-	games_pkg_setup
 	if ! built_with_use media-libs/sdl-mixer mikmod; then
 		die "You need to build media-libs/sdl-mixer with mikmod USE flag enabled!"
 	fi
+	games_pkg_setup
 }
 
 src_unpack() {
