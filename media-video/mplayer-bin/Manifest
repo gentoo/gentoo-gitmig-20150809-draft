@@ -1,46 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f86613b47e08ea29df12711a5ca2e1ac ChangeLog 2506
-RMD160 1c79e507eebe1332e6633adf06feb66ec0d74b0b ChangeLog 2506
-SHA256 d117ecd71b9144c91889c8758afcb34069e2fbf271eed51c8865ee1b1548890d ChangeLog 2506
-MD5 cc3c9b950addd0bf2607ddc24c081c78 files/digest-mplayer-bin-1.0.20060217 271
-RMD160 13bc8d235acb66e7610c6d0171616b72f8cdc613 files/digest-mplayer-bin-1.0.20060217 271
-SHA256 fd8e62c0f4568694a200a090ce4b4c10742beb0f290ec3b3da8e0e369ec5c907 files/digest-mplayer-bin-1.0.20060217 271
-MD5 bdd6524bff605d969e902ffd5d0f3144 files/digest-mplayer-bin-1.0.20060302 271
-RMD160 e90fcd5b9d494def3cc965cd13976cf455810eaa files/digest-mplayer-bin-1.0.20060302 271
-SHA256 191c17064faf049f153f48dad3ca1b4a143afa58fbb1e9a7f88c95a0d53b03ba files/digest-mplayer-bin-1.0.20060302 271
+MD5 0e82971a4167e6a4a116d477133d7f26 ChangeLog 2687
+RMD160 6c6dc3ff6114276ae905f3d4fe780b8d154fb863 ChangeLog 2687
+SHA256 aa2ab6ab7468f8fcfdb195ce588d5e194c1611cf45e4f978c2e0fb35136bab5f ChangeLog 2687
 MD5 b90aa995dbf2900b4c84850962fbbe7a files/digest-mplayer-bin-1.0.20060408 271
 RMD160 b9f79fc90b83b1c426d9f7d86571588735384d4d files/digest-mplayer-bin-1.0.20060408 271
 SHA256 58764c7cd8235b11b85be58ef4dc6cea191c37d98f7e15ce9169ef30a4f592f7 files/digest-mplayer-bin-1.0.20060408 271
 MD5 3e91bc8d3ad125948d735f1732861652 files/digest-mplayer-bin-1.0.20060415 271
 RMD160 2682d2fdb137e2557981b43734b015ef46b0f175 files/digest-mplayer-bin-1.0.20060415 271
 SHA256 9ddc45c6303fb8ac26ebae8ab3eead011f499aa865a58238f321c8344beacefe files/digest-mplayer-bin-1.0.20060415 271
-MD5 6de0d18bfdfdfe51517d3eb29b2d4df1 files/digest-mplayer-bin-1.0_pre7-r3 77
-RMD160 e1924d886f9c6243b3a2397f1fd8afd9f4206ebe files/digest-mplayer-bin-1.0_pre7-r3 77
-SHA256 74bcdd104886565bac83de6e95cf5bb42162182c7188c1d18b68ca510495285f files/digest-mplayer-bin-1.0_pre7-r3 77
 MD5 d138fbd38b04f78fe9b3766051723a5b metadata.xml 218
 RMD160 cbc93b26738b5e98e127744c5a949cf2f0920778 metadata.xml 218
 SHA256 0522168dc16d1a5fe22d19e63237544b3bdbb06dcefb1df3d4fe8c54975a6d3b metadata.xml 218
-MD5 fd9dbde8a88ff0accff19984e12b8cd3 mplayer-bin-1.0.20060217.ebuild 1170
-RMD160 034b9db67ff941bfd50bad1afa27bab1de4eccc7 mplayer-bin-1.0.20060217.ebuild 1170
-SHA256 95a8259dbd77fbf4f1079c89338641eb9fca4788fe802645645f0bd039276ec9 mplayer-bin-1.0.20060217.ebuild 1170
-MD5 9a0869396a7d9f9b4d829239cbe41a74 mplayer-bin-1.0.20060302.ebuild 1165
-RMD160 cdc7c3ee2da5786de85eaae0fd83ac1e167e7194 mplayer-bin-1.0.20060302.ebuild 1165
-SHA256 03bed2b1d0bfdcbe387d52cb4cec3dba8dce7ca7659209e59e25d481095b1d4a mplayer-bin-1.0.20060302.ebuild 1165
 MD5 083859dff87e27635c16d4b747504dac mplayer-bin-1.0.20060408.ebuild 1165
 RMD160 e3bc7d61e5ab114c5f00b33ba75cd78a13fbf8c9 mplayer-bin-1.0.20060408.ebuild 1165
 SHA256 d79a53fbacda0c6b41974fe7138bdda2c5b1a9c1e4867bb4c20e61359caafb91 mplayer-bin-1.0.20060408.ebuild 1165
 MD5 ef4ca348363f63aa057738fba0f23964 mplayer-bin-1.0.20060415.ebuild 1363
 RMD160 9a433ebf501e8eb59678d082db41839da187b94b mplayer-bin-1.0.20060415.ebuild 1363
 SHA256 5fd9eda0942336577a593fd3642cb1eae6aa45a406d7d8c7d5e4e772bd1b28ea mplayer-bin-1.0.20060415.ebuild 1363
-MD5 9d25ef604b15917a5ca84cf520c83e6b mplayer-bin-1.0_pre7-r3.ebuild 1172
-RMD160 9e0d53bf48a0acf3cbacbfa5f872fe4977349659 mplayer-bin-1.0_pre7-r3.ebuild 1172
-SHA256 8bc714ad81e4843a8d0ae6cfbd445b6576be21a86fd0abd0525bc5085f7ec225 mplayer-bin-1.0_pre7-r3.ebuild 1172
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFERVhYomPajV0RnrERAkahAJ48aKlQsVt/LBgrrZLe2P+dJ3atDwCfQTbE
-FzY0Caje+pQUcD96XX5JcIo=
-=B/hM
+iD8DBQFERVkvomPajV0RnrERAhd8AJ9qLagsS/byc8fDwy/ecIhKXc8yNQCeNN1g
+vAFmm/RoNO6cVgK6Qd8+IUQ=
+=tEc0
 -----END PGP SIGNATURE-----
