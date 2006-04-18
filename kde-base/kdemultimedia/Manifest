@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 17491ea5164483165b974596852ec800 ChangeLog 28549
-RMD160 2cdba583bde6d0c5fee85fba9d19b2eb4f852730 ChangeLog 28549
-SHA256 a9590c8440a58e4b9f887a5adc6b6b67dbc01aee2104567f0c36ff733e871e2d ChangeLog 28549
+MD5 8cc6390e76f209c9b38d34fb5d0390e2 ChangeLog 28684
+RMD160 7a794979c7aa023e78396ffb191564f6a36668a2 ChangeLog 28684
+SHA256 26b5a01e39a20e5c67de91b601881fed64f92bb977b71ec4354f5b5db764fb33 ChangeLog 28684
 MD5 d860129d92634080c3f7368ed282e098 files/artsplugin-akode-3.5.2-memleak.patch 797
 RMD160 593b8a40af0b373259d37410f57989cdfb9ec568 files/artsplugin-akode-3.5.2-memleak.patch 797
 SHA256 1a6d341f130430ca7faef4188899e4fe98c4ba808ea9702d352a9b28eb2b3642 files/artsplugin-akode-3.5.2-memleak.patch 797
@@ -58,16 +55,9 @@ SHA256 60ee40c5f90a6d64ba0c2409bc0e8fbc07ccefe83024218e86e5afd59ab5c730 kdemulti
 MD5 ff9ba3df7335338a5e9a65f187d54102 kdemultimedia-3.5.2-r1.ebuild 2260
 RMD160 27c630c73ce3ec1240c504744e0e2cc4712859da kdemultimedia-3.5.2-r1.ebuild 2260
 SHA256 773a0e2657dba9196ff6aacf5bdb108d578e2093d7da6c24a46fc3d27a77a329 kdemultimedia-3.5.2-r1.ebuild 2260
-MD5 10e197281851ecde07593f23bc4f4ffe kdemultimedia-3.5.2.ebuild 2196
-RMD160 72d9dc45f5cdab07ce7fc91faffb6441a86e46a0 kdemultimedia-3.5.2.ebuild 2196
-SHA256 9e19d0ea84597d6a4d2dab3666d1954978ce4ba6e730b6c6bcb605c714161a25 kdemultimedia-3.5.2.ebuild 2196
+MD5 0c03cae32e413805e0d1e2cf0c9b7818 kdemultimedia-3.5.2.ebuild 2419
+RMD160 1db45e03b43e0f575a4aa5642babc89c812bf6e3 kdemultimedia-3.5.2.ebuild 2419
+SHA256 788b8e74d142f600ab8eb609d005b40c52809cb478c094f4ae04c459b7b7bba3 kdemultimedia-3.5.2.ebuild 2419
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENEtkAiZjviIA2XgRAqh8AKCDEdEICYfMhiY14s9LaAFDIv7fqQCglRuI
-4NtEyxavjt0R2weTbPFRCoc=
-=yXM7
------END PGP SIGNATURE-----
