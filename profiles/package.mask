@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5234 2006/04/18 18:00:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5235 2006/04/18 21:36:42 marienz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Marien Zwart <marienz@gentoo.org> (18 Apr 2006)
+# Masked for testing.
+=dev-util/bzr-0.8_rc1
 
 # Diego Pettenò <flameeyes@gentoo.org> (18 Apr 2006)
 # Masked because of open bugs and no maintainer available with hardware
