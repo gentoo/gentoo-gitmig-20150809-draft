@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.4.ebuild,v 1.3 2006/02/20 08:07:39 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.4.ebuild,v 1.4 2006/04/18 01:40:06 halcy0n Exp $
 
 inherit mono eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://user.cs.tu-berlin.de/~nowozin/autopano-sift/"
 SRC_URI="http://user.cs.tu-berlin.de/~nowozin/autopano-sift/${P}.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 SLOT="0"
 IUSE=""
 

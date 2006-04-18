@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 fd6597a610b7faffd43e02ca74e73bb9 ChangeLog 1860
 RMD160 56b939af7f074d6f1f502246b5763a1954fd5d65 ChangeLog 1860
 SHA256 c0f1e3bed51bd8b6d6d4d557ba70f17a7f59114407e72a7a33c435c8e28cd6af ChangeLog 1860
-MD5 4c6cac29aa5eaec6ae74cbd9988a61d9 files/digest-hugin-0.5 62
-RMD160 6c30f9296a4007c6887dea6f1af3b686101cf992 files/digest-hugin-0.5 62
-SHA256 c8a8c006d7e6ea276a0115e7cfc399f86089e74221ea6405a797f4e6a0c7bc6b files/digest-hugin-0.5 62
+MD5 1cd0f13a3f2bb50ad20834dcd7a05173 files/digest-hugin-0.5 232
+RMD160 e34a969439f720264ccf7a05536f2dd80972aa7c files/digest-hugin-0.5 232
+SHA256 364c76286a55f9821cc78f715c10aead85b4cfc6ae3bbb65bdfc30b2b4debdd9 files/digest-hugin-0.5 232
 MD5 549db5b9b4146eb8aff8a35d39eabf1e files/digest-hugin-0.5_rc1-r2 67
 RMD160 0a6ccb435b69260fdbbabf7f89cfc0747e4894f9 files/digest-hugin-0.5_rc1-r2 67
 SHA256 bff0d93e10c3d5d6f84426a61ab8810479d7fa5b0a9af659bbd21b686f04aef7 files/digest-hugin-0.5_rc1-r2 67
@@ -16,19 +13,12 @@ SHA256 3c07a0df02d5b9655327f64494fac05835920150fbd99c669c7265247f3fa66c files/hu
 MD5 6cf4d590cbb78ac98c424c8d58d1cc4f files/hugin-0.5_rc2-gcc4.patch 1356
 RMD160 a4ae253c5fe37bd575148fec94f497a145f9ff46 files/hugin-0.5_rc2-gcc4.patch 1356
 SHA256 7af013d7eedfce78f0c9e21ab5e76fdd14bf4baff8f5df767a873b800c59ab86 files/hugin-0.5_rc2-gcc4.patch 1356
-MD5 bf55cee24d6f3ec3ad386d9a84822535 hugin-0.5.ebuild 1477
-RMD160 da2a519d6a65609d53f50aa7bcd50ff5cc947b41 hugin-0.5.ebuild 1477
-SHA256 4336334b5a1ab21122acfdba060944f0d386ca56406b298d1f75a7d923e3c9fe hugin-0.5.ebuild 1477
+MD5 12b0e9c449574e6cd51c6983767bd76d hugin-0.5.ebuild 1476
+RMD160 0ce56d5d282a79b90f512de1445b96447c313fa5 hugin-0.5.ebuild 1476
+SHA256 d983ecb20ff8563d1a30de0cb7d9131e16382e5a2d8a69e72e46443360c6ed2f hugin-0.5.ebuild 1476
 MD5 497db1fa2082827dd88807dffec1fe22 hugin-0.5_rc1-r2.ebuild 1483
 RMD160 aef376650de7739c41364d40e3add8176d7f95a7 hugin-0.5_rc1-r2.ebuild 1483
 SHA256 a3c369277d1b154e85ab4b0803fce049ecd2255a01593866881992dedaf1b026 hugin-0.5_rc1-r2.ebuild 1483
 MD5 d9a322b6535250ef6a8ff7c572f70ef0 metadata.xml 328
 RMD160 04f9bf359f17012819bf3309be49004cc7bdf26f metadata.xml 328
 SHA256 2f0dda13d5009f8e00f470eb35a2296620d6a0148519da5308575b74ba430f15 metadata.xml 328
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD+XgCCRZPokWLroQRAqq1AKDjQWvc/LSST+RN8y3BpdjTgXfOqgCgpMDL
-+hv51XaMPFaosQ46+KASuyU=
-=j/J6
------END PGP SIGNATURE-----
