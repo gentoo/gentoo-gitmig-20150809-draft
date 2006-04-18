@@ -1,0 +1,16 @@
+--- portage-2.0.54/bin/prepallstrip	2005-12-30 04:12:16.000000000 -0500
++++ portage-2.0.55/bin/prepallstrip	2006-03-24 18:01:03.000000000 -0500
+@@ -1,11 +1,6 @@
+ #!/bin/bash
+-# Copyright 1999-2004 Gentoo Foundation
++# Copyright 1999-2006 Gentoo Foundation
+ # Distributed under the terms of the GNU General Public License v2
+ # $Id: bin_prepallstrip.patch,v 1.1 2006/04/18 11:13:58 solar Exp $
+ 
+-if [ "${FEATURES//*nostrip*/true}" == "true" ] || [ "${RESTRICT//*nostrip*/true}" == "true" ] ; then
+-	exit 0
+-fi
+-
+-echo "prepallstrip:"
+-prepstrip "${D}"
++exec prepstrip "${D}"

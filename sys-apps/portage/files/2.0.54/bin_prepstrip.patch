@@ -1,0 +1,114 @@
+--- portage-2.0.54/bin/prepstrip	2005-12-30 04:12:16.000000000 -0500
++++ portage-2.0.55/bin/prepstrip	2006-03-24 18:20:33.000000000 -0500
+@@ -1,48 +1,75 @@
+ #!/bin/bash
+-# Copyright 1999-2005 Gentoo Foundation
++# Copyright 1999-2006 Gentoo Foundation
+ # Distributed under the terms of the GNU General Public License v2
+ # $Id: bin_prepstrip.patch,v 1.1 2006/04/18 11:13:58 solar Exp $
+ 
+-if [ "${FEATURES//*nostrip*/true}" == "true" ] || [ "${RESTRICT//*nostrip*/true}" == "true" ] ; then
+-	echo "nostrip"
+-	STRIP="/bin/false"
+-	PORTAGE_STRIP_FLAGS=""
+-else
+-	STRIP="${STRIP:-${CHOST}-strip}"
+-	type -p ${STRIP} > /dev/null || STRIP=strip
+-	PORTAGE_STRIP_FLAGS=${PORTAGE_STRIP_FLAGS:---strip-unneeded}
++if [[ " ${FEATURES} " == *" nostrip "* ]] || \
++   [[ " ${RESTRICT} " == *" nostrip "* ]] || \
++   [[ " ${RESTRICT} " == *" strip "* ]]
++then
++	exit 0
+ fi
+ 
++STRIP=${STRIP:-${CHOST}-strip}
++type -p -- ${STRIP} > /dev/null || STRIP=strip
++OBJCOPY=${OBJCOPY:-${CHOST}-objcopy}
++type -p -- ${OBJCOPY} > /dev/null || OBJCOPY=objcopy
++
++PORTAGE_STRIP_FLAGS=${PORTAGE_STRIP_FLAGS:---strip-unneeded}
++
+ banner=1
+-retval=0
+ 
+-for x in "$@" ; do
+-	if [ -d "${x}" ]; then
+-		# We only want files. So make a pass for each directory and call again.
+-		find "${x}" -type f \( -perm -0100 -or -perm -0010 -or -perm -0001 -or -name '*.so' -or -name '*.so.*' \) -print0 |
+-				$XARGS -0 -n500 prepstrip
+-	else
+-		if [ ${banner} -eq 1 ] ; then
+-			echo "strip: ${STRIP} ${PORTAGE_STRIP_FLAGS}"
+-			banner=0
++save_elf_debug() {
++	local x=$1
++	local y="${D}/usr/lib/debug/${x:${#D}:${#x}}.debug"
++
++	[[ " ${FEATURES} " != *" splitdebug "* ]] && return 0
++
++	# dont save debug info twice.
++	[[ ${x:7} == ".debug" ]] && return 0
++
++	mkdir -p $(dirname "${y}")
++	${OBJCOPY} --only-keep-debug "${x}" "${y}"
++	${OBJCOPY} --add-gnu-debuglink="${y}" "${x}"
++	chmod a-x "${y}"
++
++	[[ " ${FEATURES} " != *" installsources "* ]] && return 0
++
++	if [[ -x "/usr/bin/debugedit" ]] ; then
++		debugedit -b "${WORKDIR}" -d /usr/src/debug/${PF} -l "${T}"/debug.sources "${x}"
++		if [[ -s ${T}/debug.sources ]] ; then 
++			[[ -d ${D}/usr/src/debug/${PF} ]] || mkdir -p "${D}/usr/src/debug/${PF}"
++			cat "${T}"/debug.sources | (cd "${WORKDIR}"; LANG=C sort -z -u | xargs -0 -- cp --parents -p --target-directory="${D}/usr/src/debug/${PF}" )
+ 		fi
++	fi
++}
+ 
+-		f=$(file "${x}") || continue
+-		[ -z "${f}" ] && continue
++for x in $(scanelf -yRBF%F "$@") $(for y in "$@"; do find "${y}" -type f -name '*.a' -print0 ; done); do
++	if [[ ${banner} -eq 1 ]] ; then
++		echo "strip: ${STRIP} ${PORTAGE_STRIP_FLAGS}"
++		banner=0
++	fi
+ 
+-		if [ -z "${f/*current ar archive*/}" ]; then
+-			echo "   ${x:${#D}:${#x}}"
+-			${STRIP} -g "${x}"
+-		fi
+-		if [ -z "${f/*SB executable*/}" ]; then
+-			echo "   ${x:${#D}:${#x}}"
+-			${STRIP} "${x}"
+-		fi
+-		if [ -z "${f/*SB shared object*/}" ]; then
+-			echo "   ${x:${#D}:${#x}}"
+-			${STRIP} ${PORTAGE_STRIP_FLAGS} "${x}"
+-		fi
++	f=$(file "${x}") || continue
++	[[ -z ${f} ]] && continue
++
++	# The noglob funk is to support STRIP_MASK="/*/booga" and to keep
++	#  the for loop from expanding the globs.
++	# The eval echo is to support STRIP_MASK="/*/{booga,bar}" sex.
++	set -o noglob
++	stripitbaby=1
++	for m in $(eval echo ${STRIP_MASK}) ; do
++		[[ ${x} == ${m} ]] && stripitbaby=1 && break
++	done
++	set +o noglob
++
++	if [[ ${f} == *"current ar archive"* ]] ; then
++		echo "   ${x:${#D}:${#x}}"
++		[[ ${stripitbaby} -eq 1 ]] && ${STRIP} -g "${x}"
++	fi
++	if [[ ${f} == *"SB executable"* || ${f} == *"SB shared object"* ]] ; then
++		echo "   ${x:${#D}:${#x}}"
++		save_elf_debug "${x}"
++		[[ ${stripitbaby} -eq 1 ]] && ${STRIP} ${PORTAGE_STRIP_FLAGS} "${x}"
+ 	fi
+ done
+-
+-exit ${retval}
+Files portage-2.0.54/bin/tbz2tool and portage-2.0.55/bin/tbz2tool differ

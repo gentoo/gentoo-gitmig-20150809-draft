@@ -1,0 +1,139 @@
+--- portage-2.0.54/bin/ebuild.sh	2005-12-30 04:12:16.000000000 -0500
++++ portage-2.0.55/bin/ebuild.sh	2006-03-24 18:07:20.000000000 -0500
+@@ -1,5 +1,5 @@
+ #!/bin/bash
+-# Copyright 1999-2005 Gentoo Foundation
++# Copyright 1999-2006 Gentoo Foundation
+ # Distributed under the terms of the GNU General Public License v2
+ # $Id: bin_ebuild.sh.patch,v 1.1 2006/04/18 11:13:58 solar Exp $
+ 
+@@ -759,50 +759,28 @@ docinto() {
+ }
+ 
+ insopts() {
+-	INSOPTIONS=""
+-	for x in $*; do
+-		#if we have a debug build, let's not strip anything
+-		if hasq nostrip $FEATURES $RESTRICT && [ "$x" == "-s" ]; then
+-			continue
+-		else
+-			INSOPTIONS="$INSOPTIONS $x"
+-		fi
+-	done
+-	export INSOPTIONS
++	export INSOPTIONS="$@"
++
++	# `install` should never be called with '-s' ...
++	[[ " ${INSOPTIONS} " == *" -s "* ]] && die "Never call insopts() with -s"
+ }
+ 
+ diropts() {
+-	DIROPTIONS=""
+-	for x in $*; do
+-		DIROPTIONS="${DIROPTIONS} $x"
+-	done
+-	export DIROPTIONS
++	export DIROPTIONS="$@"
+ }
+ 
+ exeopts() {
+-	EXEOPTIONS=""
+-	for x in $*; do
+-		#if we have a debug build, let's not strip anything
+-		if hasq nostrip $FEATURES $RESTRICT && [ "$x" == "-s" ]; then
+-			continue
+-		else
+-			EXEOPTIONS="$EXEOPTIONS $x"
+-		fi
+-	done
+-	export EXEOPTIONS
++	export EXEOPTIONS="$@"
++
++	# `install` should never be called with '-s' ...
++	[[ " ${EXEOPTIONS} " == *" -s "* ]] && die "Never call exeopts() with -s"
+ }
+ 
+ libopts() {
+-	LIBOPTIONS=""
+-	for x in $*; do
+-		#if we have a debug build, let's not strip anything
+-		if hasq nostrip $FEATURES $RESTRICT && [ "$x" == "-s" ]; then
+-			continue
+-		else
+-			LIBOPTIONS="$LIBOPTIONS $x"
+-		fi
+-	done
+-	export LIBOPTIONS
++	export LIBOPTIONS="$@"
++
++	# `install` should never be called with '-s' ...
++	[[ " ${LIBOPTIONS} " == *" -s "* ]] && die "Never call libopts() with -s"
+ }
+ 
+ abort_handler() {
+@@ -944,7 +922,10 @@ dyn_compile() {
+ 	bzip2 -9 environment
+ 
+ 	cp "${EBUILD}" "${PF}.ebuild"
+-	if hasq nostrip $FEATURES $RESTRICT; then
++	if [[ " ${FEATURES} " == *" nostrip "* ]] || \
++	   [[ " ${RESTRICT} " == *" nostrip "* ]] || \
++	   [[ " ${RESTRICT} " == *" strip "* ]]
++	then
+ 		touch DEBUGBUILD
+ 	fi
+ 	trap SIGINT SIGQUIT
+@@ -1045,16 +1026,21 @@ dyn_install() {
+ 		# Don't want paths that point to the tree where the package was built
+ 		# (older, broken libtools would do this).  Also check for null paths
+ 		# because the loader will search $PWD when it finds null paths.
+-		f=$(scanelf -qyRF '%r %p' "${D}" | grep -E "(${BUILDDIR}|: |::|^ )")
++		f=$(scanelf -qyRF '%r %p' "${D}" | grep -E "(${BUILDDIR}|: |::|^:|^ )")
+ 		if [[ -n ${f} ]] ; then
+-			echo -ne '\a\n'
++			echo -ne '\a\n'                        
+ 			echo "QA Notice: the following files contain insecure RUNPATH's"
+-			echo " Please file a bug about this at http://bugs.gentoo.org/"
+-			echo " For more information on this issue, kindly review:"
+-			echo " http://bugs.gentoo.org/81745"
++			echo " Please file a bug about this at http://bugs.gentoo.org/"                        
++			echo " with the maintaining herd of the package."
++			echo " Summary: $CATEGORY/$PN: insecure RPATH ${f}"                        
+ 			echo "${f}"
+ 			echo -ne '\a\n'
+-			die "Insecure binaries detected"
++			if has stricter ${FEATURES}; then
++				insecure_rpath=1
++			else
++				echo "Auto fixing rpaths for ${f}"
++				TMPDIR=${BUILDDIR} scanelf -BXr ${f} -o /dev/null
++			fi
+ 		fi
+ 
+ 		# Check for setid binaries but are not built with BIND_NOW
+@@ -1403,7 +1389,10 @@ dyn_help() {
+ 	echo "  c++ flags   : ${CXXFLAGS}"
+ 	echo "  make flags  : ${MAKEOPTS}"
+ 	echo -n "  build mode  : "
+-	if hasq nostrip $FEATURES $RESTRICT; then
++	if [[ " ${FEATURES} " == *" nostrip "* ]] || \
++	   [[ " ${RESTRICT} " == *" nostrip "* ]] || \
++	   [[ " ${RESTRICT} " == *" strip "* ]]
++	then
+ 		echo "debug (large)"
+ 	else
+ 		echo "production (stripped)"
+@@ -1776,7 +1765,12 @@ set -f
+ KEYWORDS="`eval echo ${KEYWORDS//~/\\~}`"
+ set +f
+ 
+-hasq nostrip ${RESTRICT} && export DEBUGBUILD=1
++if [[ " ${FEATURES} " == *" nostrip "* ]] || \
++   [[ " ${RESTRICT} " == *" nostrip "* ]] || \
++   [[ " ${RESTRICT} " == *" strip "* ]]
++then
++	export DEBUGBUILD=1
++fi
+ 
+ #a reasonable default for $S
+ if [ "$S" = "" ]; then

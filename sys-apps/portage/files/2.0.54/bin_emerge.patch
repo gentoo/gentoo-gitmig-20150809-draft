@@ -1,0 +1,16 @@
+--- portage-2.0.54/bin/emerge	2005-12-30 04:12:16.000000000 -0500
++++ portage-2.0.55/bin/emerge	2006-03-26 12:42:04.000000000 -0500
+@@ -2776,6 +2776,13 @@ if myaction in ["sync","rsync","metadata
+ 
+ 	chk_updated_cfg_files()
+ 
++	if myaction != "metadata":
++		if os.access(portage.USER_CONFIG_PATH + "/bin/post_sync", os.X_OK):
++			try:
++				portage.spawn(portage.USER_CONFIG_PATH + "/bin/post_sync " + dosyncuri, portage.settings, free=1)
++                        except:
++				print red(" * ")+bold("spawn failed of "+ portage.USER_CONFIG_PATH + "/bin/post_sync")
++
+ 	if(mybestpv != mypvs):
+ 		print
+ 		print red(" * ")+bold("An update to portage is available.")+" It is _highly_ recommended"
