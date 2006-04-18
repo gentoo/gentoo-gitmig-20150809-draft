@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5231 2006/04/18 09:00:21 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5232 2006/04/18 15:54:06 vericgar Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,90 @@
 ##
 ##   End example
 ##
+
+# Michael Stewart <vericgar@gentoo.org> (18 Apr 2006)
+# These packages all old-style apache, which is no longer supported.
+# See http://www.gentoo.org/doc/en/apache-upgrading.xml
+# These will be removed from the tree at some point in the future
+# Will be masked when bug 128189 is taken care of.
+#=net-www/mod_auth_kerb-4.11
+#=net-www/mod_auth_kerb-4.11-r1
+
+# Michael Stewart <vericgar@gentoo.org> (18 Apr 2006)
+# These packages all old-style apache, which is no longer supported.
+# See http://www.gentoo.org/doc/en/apache-upgrading.xml
+# These will be removed from the tree at some point in the future
+=net-www/mod_auth_external-2.2.7
+=net-www/mod_auth_ldap-2.4.2
+=net-www/mod_auth_mysql-2.0.0_pre20030510
+=net-www/mod_auth_pam-1.1.1
+=net-www/mod_auth_pgsql-2.0.2-r2
+=net-www/mod_bandwidth-2.0.4
+=net-www/mod_bandwidth-2.0.5
+=net-www/mod_contribs-1.0.8-r1
+=net-www/mod_dav-1.0.3-r1
+=net-www/mod_dav-1.0.3-r2
+=net-www/mod_encoding-20021209
+=net-www/mod_fastcgi-2.4.2
+=net-www/mod_ftpd-0.12.3
+=net-www/mod_gzip-1.3.19.1a-r1
+=net-www/mod_gzip-1.3.26.1a
+=net-www/mod_gzip-1.3.26.1a-r1
+=net-www/mod_injection-0.3.0
+=net-www/mod_injection-0.3.1
+=net-www/mod_layout-3.2.1
+=net-www/mod_layout-4.0.1a
+=net-www/mod_ldap_userdir-1.1.1
+=net-www/mod_ldap_userdir-1.1.4
+=net-www/mod_ldap_userdir-1.1.4-r1
+=net-www/mod_limitipconn-0.22
+=net-www/mod_log_sql-1.97
+=net-www/mod_log_sql-1.98-r1
+=net-www/mod_loopback-1.04
+=net-www/mod_loopback-2.01
+=net-www/mod_loopback-2.0
+=net-www/mod_mp3-0.35-r1
+=net-www/mod_mp3-0.35-r2
+=net-www/mod_mp3-0.39
+=net-www/mod_mp3-0.40
+=net-www/mod_pcgi2-2.0.1
+=net-www/mod_protection-0.0.2
+=net-www/mod_random-1.4
+=net-www/mod_random-2.0
+=net-www/mod_roaming-2.0.0
+=net-www/mod_security-1.7.6
+=net-www/mod_security-1.8.6
+=net-www/mod_security-1.8.7_rc2
+=net-www/mod_ssl-2.8.21
+=net-www/mod_ssl-2.8.22
+=net-www/mod_ssl-2.8.22-r1
+=net-www/mod_ssl-2.8.24
+=net-www/mod_ssl-2.8.24-r1
+=net-www/mod_ssl-2.8.25-r1
+=net-www/mod_throttle-3.1.2-r1
+=net-www/mod_transform-0.4.0
+=net-www/mod_vdbh-1.0.2
+=net-www/mod_vdbh-1.0.2-r1
+=net-www/mod_vdbh-1.0.3
+=net-www/mod_watch-3.18
+=net-www/mod_watch-4.03
+=net-www/mod_xslt-1.0.5a
+=net-www/mod_xslt-1.0.5a-r1
+=net-www/apache-1.3.32-r1
+=net-www/apache-1.3.33-r13
+=net-www/apache-1.3.33-r6
+=net-www/apache-1.3.34-r1
+=net-www/apache-1.3.34-r2
+=net-www/apache-2.0.54-r15
+=net-www/apache-2.0.54-r16
+=net-www/apache-2.0.54-r30
+=net-www/apache-2.0.54-r9
+=www-apache/mod_chroot-0.2
+=www-apache/mod_fcgid-1.06
+=www-apache/mod_fcgid-1.06-r1
+=www-apache/mod_fcgid-1.07
+=www-apache/mod_tcl-1.0
+
 
 # Andrea Barisani <lcars@gentoo.org> (18 Apr 2006)
 # masked for initial import
