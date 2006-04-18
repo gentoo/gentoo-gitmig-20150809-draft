@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/kimdaba
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimdaba/ChangeLog,v 1.13 2005/07/22 21:25:00 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimdaba/ChangeLog,v 1.14 2006/04/18 20:44:17 deathwing00 Exp $
+
+  18 Apr 2006; Ioannis Aslanidis <deathwing00@gentoo.org> kimdaba-2.1.ebuild,
+  kimdaba-2.0.ebuild, kimdaba-1.1.ebuild, kimdaba-1.0.1.ebuild:
+  Bug #130327. This is the last release of kimdaba under this name. To
+  access next releases, please unmerge kimdaba and merge kphotoalbum.
 
   22 Jul 2005; David Holm <dholm@gentoo.org> kimdaba-2.1.ebuild:
   Added to ~ppc.

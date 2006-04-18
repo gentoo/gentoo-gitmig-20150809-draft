@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimdaba/kimdaba-2.1.ebuild,v 1.4 2005/07/22 21:25:00 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimdaba/kimdaba-2.1.ebuild,v 1.5 2006/04/18 20:44:17 deathwing00 Exp $
 
 inherit kde
 
@@ -14,7 +14,8 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="media-libs/libkipi
+DEPEND="!media-gfx/kphotoalbum
+	media-libs/libkipi
 	|| ( kde-base/kdegraphics-kfile-plugins kde-base/kdegraphics )"
 
 need-kde 3.2
@@ -25,3 +26,12 @@ src_unpack()
 	find ${S}/translations -name Makefile.in | xargs \
 		sed -i -e 's|LANG)/doc|LANG)/kimdaba|g'
 }
+
+pkg_postinst()
+{
+	einfo "Version 2.1 of media-gfx/kimdaba is the last one released"
+	einfo "under that name. From version 2.2 and on, please use"
+	einfo "media-gfx/kphotoalbum, after removing your current"
+	einfo "media-gfx/kimdaba."
+}
+
