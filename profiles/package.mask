@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5229 2006/04/18 01:06:14 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5230 2006/04/18 02:02:28 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Markus Dittrich <markusle@gentoo.org> (17 Apr 2006)
+# masked for further additional testing
+=sci-chemistry/vmd-1.8.4
 
 # Carsten Lohrke <carlo@gentoo.org> (17 Apr 2006)
 # Stable version in testing, developer version stays masked.
