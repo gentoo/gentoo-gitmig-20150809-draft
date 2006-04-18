@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.15 2006/03/24 23:05:49 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.16 2006/04/18 12:21:14 chtekk Exp $
 #
 # ########################################################################
 #
@@ -39,7 +39,7 @@ if [[ "${PHP_PACKAGE}" == 1 ]] ; then
 	S="${WORKDIR}/${MY_PHP_P}"
 fi
 
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl db2 dbase dbmaker dbx debug doc empress empress-bcs esoob exif expat fastbuild frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-internal java-external kerberos ldap libedit mcal mcve memlimit mhash ming mnogosearch msql mssql mysql ncurses nls oci8 oci8-instant-client odbc oracle7 overload ovrimos pcntl pcre pfpro pic posix postgres readline recode sapdb session sharedext sharedmem snmp sockets solid spell sqlite ssl sybase sybase-ct sysvipc threads tokenizer truetype wddx xml xmlrpc xpm xsl yaz zip zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl db2 dbase dbmaker dbx debug doc empress empress-bcs esoob exif expat fastbuild frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-internal java-external kerberos ldap libedit mcal mcve memlimit mhash ming mnogosearch msql mssql mysql ncurses nls oci8 oci8-instant-client odbc oracle7 overload ovrimos pcntl pcre pfpro pic posix postgres readline recode sapdb session sharedext sharedmem snmp sockets solid spell sqlite ssl sybase sybase-ct sysvipc threads tokenizer truetype unicode wddx xml xmlrpc xpm xsl yaz zip zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="${DEPEND}
@@ -66,6 +66,7 @@ DEPEND="${DEPEND}
 	gd-external? ( media-libs/gd )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	gmp? ( dev-libs/gmp )
+	iconv? ( virtual/libiconv )
 	imap? ( virtual/imap-c-client )
 	iodbc? ( dev-db/libiodbc >=dev-db/unixODBC-1.8.13 )
 	java-internal? ( =virtual/jdk-1.4* dev-java/java-config !dev-php4/php-java-bridge )
@@ -94,9 +95,9 @@ DEPEND="${DEPEND}
 	sybase? ( dev-db/freetds )
 	truetype? ( =media-libs/freetype-2* >=media-libs/t1lib-5.0.0 !gd? ( !gd-external? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib ) ) )
 	xml? ( dev-libs/libxml2 sys-libs/zlib xsl? ( dev-libs/libxslt ) )
-	xmlrpc? ( dev-libs/expat )
+	xmlrpc? ( dev-libs/expat virtual/libiconv )
 	xpm? ( || ( x11-libs/libXpm virtual/x11 ) >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib )
-	xsl? ( app-text/sablotron dev-libs/expat )
+	xsl? ( app-text/sablotron dev-libs/expat virtual/libiconv )
 	zlib? ( sys-libs/zlib )
 	virtual/mta"
 
@@ -155,6 +156,8 @@ php4_4-sapi_check_use_flags() {
 	phpconfutils_use_depend_all "xpm"               "gd"
 	phpconfutils_use_depend_all "gd"				"zlib"
 	phpconfutils_use_depend_all "xml"				"zlib"
+	phpconfutils_use_depend_all "xmlrpc"			"iconv"
+	phpconfutils_use_depend_all "xsl"				"iconv"
 	phpconfutils_use_depend_all "java-external"		"session"
 	phpconfutils_use_depend_all "mcve"				"ssl"
 	phpconfutils_use_depend_all "adabas"			"odbc"
@@ -184,6 +187,9 @@ php4_4-sapi_check_use_flags() {
 
 	# Java support
 	php_check_java
+
+	# PostgreSQL support
+	php_check_pgsql
 
 	# Oracle support
 	php_check_oracle_all
@@ -250,11 +256,7 @@ php4_4-sapi_src_unpack() {
 
 	# Change PHP branding
 	PHPPR=${PR/r/}
-	if [[ "${PHPPR}" != "0" ]] ; then
-		sed -e "s|^EXTRA_VERSION=\"\"|EXTRA_VERSION=\"-pl${PHPPR}-gentoo\"|g" -i configure.in || die "Unable to change PHP branding to -pl${PHPPR}-gentoo"
-	else
-		sed -e "s|^EXTRA_VERSION=\"\"|EXTRA_VERSION=\"-gentoo\"|g" -i configure.in || die "Unable to change PHP branding to -gentoo"
-	fi
+	sed -e "s|^EXTRA_VERSION=\"\"|EXTRA_VERSION=\"-pl${PHPPR}-gentoo\"|g" -i configure.in || die "Unable to change PHP branding to -pl${PHPPR}-gentoo"
 
 	# multilib-strict support
 	if [[ -n "${MULTILIB_PATCH}" ]] && [[ -f "${WORKDIR}/${MULTILIB_PATCH}" ]] ; then
@@ -360,7 +362,7 @@ php4_4-sapi_src_compile() {
 	phpconfutils_extension_with		"informix"		"informix"		1
 	phpconfutils_extension_disable	"ipv6"			"ipv6"			0
 	phpconfutils_extension_with		"kerberos"		"kerberos"		0 "/usr"
-	phpconfutils_extension_enable	"mbstring"		"nls"			1
+	phpconfutils_extension_enable	"mbstring"		"unicode"		1
 	phpconfutils_extension_with		"mcal"			"mcal"			1 "/usr"
 	phpconfutils_extension_with		"mcrypt"		"crypt"			1
 	phpconfutils_extension_with		"mcve"			"mcve"			1
@@ -523,8 +525,11 @@ php4_4-sapi_src_compile() {
 		my_conf="--with-libdir=$(get_libdir) ${my_conf}"
 	fi
 
+	# Support user-passed configuration parameters
+	[[ -z "${MY_CONF}" ]] && MY_CONF=""
+
 	# We don't use econf, because we need to override all of its settings
-	./configure --prefix=${destdir} --sysconfdir=/etc --cache-file=./config.cache ${my_conf} || die "configure failed"
+	./configure --prefix=${destdir} --sysconfdir=/etc --cache-file=./config.cache ${my_conf} ${MY_CONF} || die "configure failed"
 	emake || die "make failed"
 }
 

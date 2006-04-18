@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.17 2006/03/24 23:05:49 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.18 2006/04/18 12:21:14 chtekk Exp $
 #
 # ########################################################################
 #
@@ -39,7 +39,7 @@ if [[ "${PHP_PACKAGE}" == 1 ]] ; then
 	S="${WORKDIR}/${MY_PHP_P}"
 fi
 
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl curlwrappers db2 dbase dbmaker debug doc empress empress-bcs esoob exif frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-external kerberos ldap libedit mcve memlimit mhash ming mnogosearch msql mssql mysql mysqli ncurses nls oci8 oci8-instant-client odbc oracle7 ovrimos pcntl pcre pdo-external pfpro pic posix postgres qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tokenizer truetype wddx xml xmlrpc xpm xsl yaz zip zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl curlwrappers db2 dbase dbmaker debug doc empress empress-bcs esoob exif frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-external kerberos ldap libedit mcve memlimit mhash ming mnogosearch msql mssql mysql mysqli ncurses nls oci8 oci8-instant-client odbc oracle7 ovrimos pcntl pcre pdo-external pfpro pic posix postgres qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tokenizer truetype unicode wddx xml xmlrpc xpm xsl yaz zip zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="${DEPEND}
@@ -66,6 +66,7 @@ DEPEND="${DEPEND}
 	gd-external? ( media-libs/gd )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	gmp? ( dev-libs/gmp )
+	iconv? ( virtual/libiconv )
 	imap? ( virtual/imap-c-client )
 	iodbc? ( dev-db/libiodbc >=dev-db/unixODBC-1.8.13 )
 	kerberos? ( virtual/krb5 )
@@ -99,7 +100,7 @@ DEPEND="${DEPEND}
 	truetype? ( =media-libs/freetype-2* >=media-libs/t1lib-5.0.0 !gd? ( !gd-external? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib ) ) )
 	wddx? ( >=dev-libs/libxml2-2.6.8 )
 	xml? ( >=dev-libs/libxml2-2.6.8 )
-	xmlrpc? ( >=dev-libs/libxml2-2.6.8 )
+	xmlrpc? ( >=dev-libs/libxml2-2.6.8 virtual/libiconv )
 	xpm? ( || ( x11-libs/libXpm virtual/x11 ) >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib )
 	xsl? ( dev-libs/libxslt >=dev-libs/libxml2-2.6.8 )
 	zlib? ( sys-libs/zlib )
@@ -162,6 +163,7 @@ php5_0-sapi_check_use_flags() {
 	phpconfutils_use_depend_all	"wddx"				"xml"
 	phpconfutils_use_depend_all	"xmlrpc"			"xml"
 	phpconfutils_use_depend_all	"xsl"				"xml"
+	phpconfutils_use_depend_all "xmlrpc"			"iconv"
 	phpconfutils_use_depend_all "java-external"		"session"
 	phpconfutils_use_depend_all	"sasl"				"ldap"
 	phpconfutils_use_depend_all	"mcve"				"ssl"
@@ -189,6 +191,9 @@ php5_0-sapi_check_use_flags() {
 
 	# Mail support
 	php_check_mta
+
+	# PostgreSQL support
+	php_check_pgsql
 
 	# Oracle support
 	php_check_oracle_all
@@ -252,11 +257,7 @@ php5_0-sapi_src_unpack() {
 
 	# Change PHP branding
 	PHPPR=${PR/r/}
-	if [[ "${PHPPR}" != "0" ]] ; then
-		sed -e "s|^EXTRA_VERSION=\"\"|EXTRA_VERSION=\"-pl${PHPPR}-gentoo\"|g" -i configure.in || die "Unable to change PHP branding to -pl${PHPPR}-gentoo"
-	else
-		sed -e "s|^EXTRA_VERSION=\"\"|EXTRA_VERSION=\"-gentoo\"|g" -i configure.in || die "Unable to change PHP branding to -gentoo"
-	fi
+	sed -e "s|^EXTRA_VERSION=\"\"|EXTRA_VERSION=\"-pl${PHPPR}-gentoo\"|g" -i configure.in || die "Unable to change PHP branding to -pl${PHPPR}-gentoo"
 
 	# multilib-strict support
 	if [[ -n "${MULTILIB_PATCH}" ]] && [[ -f "${WORKDIR}/${MULTILIB_PATCH}" ]] ; then
@@ -355,7 +356,7 @@ php5_0-sapi_src_compile() {
 	phpconfutils_extension_disable	"ipv6"			"ipv6"			0
 	phpconfutils_extension_with		"kerberos"		"kerberos"		0 "/usr"
 	phpconfutils_extension_disable	"libxml"		"xml"			0
-	phpconfutils_extension_enable	"mbstring"		"nls"			1
+	phpconfutils_extension_enable	"mbstring"		"unicode"		1
 	phpconfutils_extension_with		"mcrypt"		"crypt"			1
 	phpconfutils_extension_enable	"memory-limit"	"memlimit"		0
 	phpconfutils_extension_with		"mhash"			"mhash"			1
@@ -489,7 +490,7 @@ php5_0-sapi_src_compile() {
 	if ! useq sqlite && ! phpconfutils_usecheck sqlite ; then
 		phpconfutils_extension_without	"sqlite"		"sqlite"		0
 	else
-		phpconfutils_extension_enable	"sqlite-utf8"	"nls"			0
+		phpconfutils_extension_enable	"sqlite-utf8"	"unicode"		0
 	fi
 
 	# Fix ELF-related problems
@@ -512,8 +513,11 @@ php5_0-sapi_src_compile() {
 		my_conf="--with-libdir=$(get_libdir) ${my_conf}"
 	fi
 
+	# Support user-passed configuration parameters
+	[[ -z "${MY_CONF}" ]] && MY_CONF=""
+
 	# We don't use econf, because we need to override all of its settings
-	./configure --prefix=${destdir} --sysconfdir=/etc --cache-file=./config.cache ${my_conf} || die "configure failed"
+	./configure --prefix=${destdir} --sysconfdir=/etc --cache-file=./config.cache ${my_conf} ${MY_CONF} || die "configure failed"
 	emake || die "make failed"
 }
 
@@ -528,7 +532,7 @@ php5_0-sapi_src_install() {
 	make INSTALL_ROOT="${D}" ${PHP_INSTALLTARGETS} || die "install failed"
 
 	# Install missing header files
-	if useq nls || phpconfutils_usecheck nls ; then
+	if useq unicode || phpconfutils_usecheck unicode ; then
 		dodir ${destdir}/include/php/ext/mbstring/libmbfl/mbfl
 		insinto ${destdir}/include/php/ext/mbstring/libmbfl/mbfl
 		for x in mbfilter.h mbfl_consts.h mbfl_encoding.h mbfl_language.h mbfl_string.h mbfl_convert.h mbfl_ident.h mbfl_memory_device.h mbfl_allocators.h mbfl_defs.h mbfl_filter_output.h mbfilter_pass.h mbfilter_wchar.h mbfilter_8bit.h ; do

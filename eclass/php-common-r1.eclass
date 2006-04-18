@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-common-r1.eclass,v 1.6 2006/03/24 23:05:49 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-common-r1.eclass,v 1.7 2006/04/18 12:21:14 chtekk Exp $
 
 # ########################################################################
 #
@@ -201,6 +201,23 @@ php_check_oracle_8() {
 			ewarn "want to use 'dev-db/oracle-instantclient-basic' as Oracle client."
 			ewarn
 		fi
+	fi
+}
+
+# ########################################################################
+# POSTGRESQL SUPPORT
+# ########################################################################
+
+php_check_pgsql() {
+	if useq "postgres" \
+	&& useq "apache2" && useq "threads" \
+	&& has_version ">=dev-db/libpq-8.1.3-r1" \
+	&& ! built_with_use ">=dev-db/libpq-8.1.3-r1" "threads" ; then
+		eerror
+		eerror "You must build dev-db/libpq with the 'threads' USE flag"
+		eerror "turned on if you want to build PHP with threads support!"
+		eerror
+		die "Rebuild dev-db/libpq with 'threads' USE flag enabled"
 	fi
 }
 

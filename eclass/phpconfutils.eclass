@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/phpconfutils.eclass,v 1.1 2006/03/24 23:05:49 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/phpconfutils.eclass,v 1.2 2006/04/18 12:21:14 chtekk Exp $
 #
 # ########################################################################
 #
@@ -395,7 +395,7 @@ phpconfutils_warn_about_external_deps() {
 
 	for x in ${CONFUTILS_MISSING_DEPS} ; do
 		if useq "${x}" || phpconfutils_usecheck "${x}" ; then
-			ewarn "USE flag ${x} enables support for software not present in Portage"
+			ewarn "USE flag ${x} enables support for software not present in Portage!"
 			my_found="1"
 		fi
 	done
@@ -405,6 +405,9 @@ phpconfutils_warn_about_external_deps() {
 		ewarn "This ebuild will continue, but if you haven't already installed the"
 		ewarn "software required to satisfy the list above, this package will probably"
 		ewarn "fail to compile later on."
+		ewarn "*DO NOT* file bugs about compile failures or issues you're having"
+		ewarn "when using one of those flags, as we aren't able to support them."
+		ewarn "|=|=|=|=|=|=| You are on your own if you use them! |=|=|=|=|=|=|"
 		ewarn
 		sleep 5
 	fi
