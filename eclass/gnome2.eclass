@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.68 2006/03/29 13:02:27 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.69 2006/04/18 20:49:04 dang Exp $
 
 # GNOME 2 ECLASS
 inherit libtool gnome.org debug fdo-mime eutils
@@ -28,8 +28,7 @@ GCONFTOOL_BIN=${GCONFTOOL_BIN:="${ROOT}/usr/bin/gconftool-2"}
 
 IUSE="debug"
 
-DEPEND=">=sys-apps/sed-4
-		  sys-apps/findutils"
+DEPEND=">=sys-apps/sed-4"
 
 gnome2_src_unpack() {
 	unpack ${A}
