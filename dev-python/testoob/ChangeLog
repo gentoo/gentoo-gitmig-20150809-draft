@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testoob
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.3 2006/04/01 19:08:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.4 2006/04/18 12:24:29 weeve Exp $
+
+  18 Apr 2006; Jason Wever <weeve@gentoo.org> testoob-0.9.ebuild:
+  Added ~sparc keyword.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> testoob-0.9.ebuild:
   Mark 0.9 ~ia64

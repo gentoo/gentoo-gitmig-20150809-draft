@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/testoob-0.9.ebuild,v 1.2 2006/04/01 19:08:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/testoob-0.9.ebuild,v 1.3 2006/04/18 12:24:29 weeve Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/testoob/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~ia64 ~x86"
+KEYWORDS="~ia64 ~sparc ~x86"
 IUSE="threads"
 
 DEPEND="virtual/python"
