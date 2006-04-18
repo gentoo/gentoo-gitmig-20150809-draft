@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r13.ebuild,v 1.13 2006/03/11 10:53:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r13.ebuild,v 1.14 2006/04/18 18:06:07 nelchael Exp $
 
 inherit flag-o-matic eutils
 
@@ -26,7 +26,16 @@ RDEPEND=">=sys-fs/e2fsprogs-1.19
 	slang? ( >=sys-libs/slang-1.4.9-r1 )
 	samba? ( >=net-fs/samba-3.0.0 )
 	unicode? ( >=sys-libs/slang-1.4.9-r1 )
-	X? ( virtual/x11 )"
+	X? ( || ( (
+			x11-libs/libX11
+			x11-libs/libICE
+			x11-libs/libXau
+			x11-libs/libXdmcp
+			x11-libs/libSM
+			)
+			virtual/x11
+		)
+	)"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
