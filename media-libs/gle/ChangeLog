@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gle
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.16 2005/07/02 01:09:07 hardave Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.17 2006/04/18 14:42:28 flameeyes Exp $
+
+  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> gle-3.0.1-r2.ebuild:
+  Replace malloc.h inclusions with stdlib.h inclusions to build on FreeBSD and
+  OSX. Bug #130340.
 
   02 Jul 2005; Hardave Riar <hardave@gentoo.org> gle-3.0.1-r2.ebuild:
   Stable on mips
