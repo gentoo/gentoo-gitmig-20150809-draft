@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 102cd81428df9f60de92cb454fea71b3 ChangeLog 1932
-RMD160 8be879e32b24fd72fb6274c773a1575eeb79e693 ChangeLog 1932
-SHA256 2fb4e253131ce3840c13cb3a9acf9e5e05e391d352253f338b906a043e7eae02 ChangeLog 1932
-MD5 63e4d1d36058bc20596e77701b0fe98e files/digest-font-bh-type1-1.0.0 72
-RMD160 cd3344c741aedea25a6f0d5ca4ac2d4bef51cc61 files/digest-font-bh-type1-1.0.0 72
-SHA256 3f451c11eb1152865d71272ac4e0e4acd4da2d7952e7a00dadabd533ddf7f234 files/digest-font-bh-type1-1.0.0 72
-MD5 c072c91301db3489b0a9b378ef901171 font-bh-type1-1.0.0.ebuild 508
-RMD160 833f3515af090a575fe84be2f2439f6febb0f555 font-bh-type1-1.0.0.ebuild 508
-SHA256 389dcbdd1e31671cc23def9d7c3eaee8db6683fbad77167b9b3b81c6b3f87f4b font-bh-type1-1.0.0.ebuild 508
+MD5 3b919554a8a0f2a77b75746c12bb0c5e ChangeLog 2135
+RMD160 c3b633d0f7d995ae386f6ecef3d68f6e9cee8b90 ChangeLog 2135
+SHA256 f94a26e7335bbda1c444f8e1d8316a434b77760b49bfa4e6eb647e6b10169d8e ChangeLog 2135
+MD5 53fea3228efb823fa85563b4f513f267 files/digest-font-bh-type1-1.0.0 262
+RMD160 912c00842ea230817166f8dc73275c63c2f78cf1 files/digest-font-bh-type1-1.0.0 262
+SHA256 7b22ce5c164209f21c5404e02dfc6046f8575bfe84c7e9e5362a19a3909a8960 files/digest-font-bh-type1-1.0.0 262
+MD5 c0feded69f5bb5f82d0e56f4acc9921c font-bh-type1-1.0.0.ebuild 526
+RMD160 3076653d16bc453e1f8ca5032813756be79c6f35 font-bh-type1-1.0.0.ebuild 526
+SHA256 0eba08f1615bbe6f67e9292ad51a830ff33b335bca02281dbd608222561db01e font-bh-type1-1.0.0.ebuild 526
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEPBKjAiZjviIA2XgRAk8gAKCS8GWvkH439Q7leog8Cmxcuz4pQgCghbOx
-dFeYOiFj/nzYd9lEn1qfyi8=
-=4Kn4
------END PGP SIGNATURE-----

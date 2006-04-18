@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9c332ec7c410a2fc7e3981164a7152f5 ChangeLog 2663
-RMD160 a82fe77129a3e2aafbe182ba62c4cb205271d81f ChangeLog 2663
-SHA256 9536b08a2a586183ecfd998ddfab3c9f14e2671286b5a022eaf1820ce9702b2b ChangeLog 2663
-MD5 79b995827503e67b6dc3dd29d1a5a83f files/digest-font-util-1.0.0 67
-RMD160 e26cdc7c7677c077c1bcd0e69bbd6815039fa925 files/digest-font-util-1.0.0 67
-SHA256 c092b906aef1cc8b55ecbc21644bab1c0b46ddeed3f43894b1dd50a3ded2127a files/digest-font-util-1.0.0 67
-MD5 cfea0883f26a6ff2b156c4d25d9ad67b font-util-1.0.0.ebuild 533
-RMD160 7a1cd23b7c65dc9d11d15fff07ea334866a70fd0 font-util-1.0.0.ebuild 533
-SHA256 086f7c02d5afd0ab23fc61d58f495baa72da1f06ece953c67a1ff8825804d0f2 font-util-1.0.0.ebuild 533
+MD5 89bc3735b2d445020f850b4664f35277 ChangeLog 2862
+RMD160 191a1b741a222e1aa6f19391af4c14340cb40794 ChangeLog 2862
+SHA256 e06855574acf2a5109992c15931e8af57f28179e3a3eb636efeab45c948e6a1b ChangeLog 2862
+MD5 20a3f2e268614a89dcb2b77d73e34a3e files/digest-font-util-1.0.0 247
+RMD160 e6769149df2d5a48d21a122e3817a88b1aa76e4c files/digest-font-util-1.0.0 247
+SHA256 5ef4606482cb15c0629e94856ac2e5e72856bcf845b4ebec79036c1f89632c3a files/digest-font-util-1.0.0 247
+MD5 f20c9ba7af7baf5f81da3467c6f06b21 font-util-1.0.0.ebuild 551
+RMD160 536babb995bb8a8f815936e88fc06fd8a26619bb font-util-1.0.0.ebuild 551
+SHA256 da8828b9c6e582cd88e9b9b240548cc9db47cc9b5bd2ff1ce0ef5a53a76acb9f font-util-1.0.0.ebuild 551
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFELYloAiZjviIA2XgRAsrAAKC9aiszhXf+eB1f1dYfMtoFtxCuZwCfSqiA
-bAG1OOPeJXqWk7WbFX+5Ito=
-=QTlW
------END PGP SIGNATURE-----
