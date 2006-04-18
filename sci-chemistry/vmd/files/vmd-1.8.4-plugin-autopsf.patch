@@ -1,0 +1,24 @@
+diff -Naur plugins/autopsf/src/psftype.C plugins-new/autopsf/src/psftype.C
+--- plugins/autopsf/src/psftype.C	2005-11-07 11:01:31.000000000 -0600
++++ plugins-new/autopsf/src/psftype.C	2006-04-17 18:50:15.000000000 -0500
+@@ -31,7 +31,7 @@
+ 	}
+ }
+ 
+-bool PsfType::equals(PsfType compatom) {
++bool PsfType::equals(PsfType &compatom) {
+ 	return (strcmp(compatom.type(),atomtype) == 0);
+ }
+ 
+diff -Naur plugins/autopsf/src/psftype.h plugins-new/autopsf/src/psftype.h
+--- plugins/autopsf/src/psftype.h	2005-09-07 16:12:27.000000000 -0500
++++ plugins-new/autopsf/src/psftype.h	2006-04-17 18:50:02.000000000 -0500
+@@ -9,7 +9,7 @@
+ 
+ 		~PsfType(); 
+ 
+-		bool equals(PsfType);
++		bool equals(PsfType&);
+ 
+ 		void setnext(PsfType*);
+ 
