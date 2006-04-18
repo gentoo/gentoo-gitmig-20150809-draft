@@ -1,0 +1,14 @@
+Index: madman-0.93/designer/mainwin.ui
+===================================================================
+--- madman-0.93.orig/designer/mainwin.ui
++++ madman-0.93/designer/mainwin.ui
+@@ -1039,9 +1039,4 @@
+     <slot>fileExitAction_activated()</slot>
+ </slots>
+ <layoutdefaults spacing="6" margin="2"/>
+-<includehints>
+-    <includehint>tsonglistview.h</includehint>
+-    <includehint>tsetlistview.h</includehint>
+-    <includehint>tsonglistview.h</includehint>
+-</includehints>
+ </UI>
