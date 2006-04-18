@@ -1,10 +1,13 @@
-MD5 9b5d8c4568dffa2188a95b1fb6c6736d ChangeLog 19047
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 36d3ba30f5e9bf73271e30fc82df372d ChangeLog 19155
 MD5 1b20b4f87ce25d15dad8e6333d4fd716 bash-2.05b-r11.ebuild 3408
 MD5 16754b03572d3f626d6afa2e1103e619 bash-3.0-r12.ebuild 5073
 MD5 2410e998db269d50d993310e079fc641 bash-3.0-r13.ebuild 4622
 MD5 b9e9d65af4b321ef366f64f47bc5a37d bash-3.0-r14.ebuild 4733
 MD5 b15bf6a92e7bfb5ee68948dbc5885d6d bash-3.1_p14.ebuild 4473
-MD5 5a111df67df7e357c67e2d8df58007cf bash-3.1_p16.ebuild 4460
+MD5 52b1776ffb6ff670f063ed1e6b6de5ae bash-3.1_p16.ebuild 4460
 MD5 65695205d9f3b1ae06e56f4d716f4e55 bash-3.1_p17.ebuild 4470
 MD5 edf95b873162f4548435c379e4998b4e files/bash-2.05b-empty-herestring.patch 836
 MD5 ca64aff9caa582e07e0b34ed87d60d80 files/bash-2.05b-jobs.patch 876
@@ -62,3 +65,10 @@ MD5 7d8a8ef90c1818a0cd66808ac2740638 files/dot-bash_logout 127
 MD5 d76b9aa6b733175df21c2bb6afe8900d files/dot-bash_profile 193
 MD5 31989efc0a6237652d344f7f6fce15cc files/dot-bashrc 976
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFERUGsKRy60XGEcJIRAhlYAJ9TqSJC51wdpObN5mJjKnzIxm9hKACbBfus
+w2cpdAUtuEx/zf3pU7Dmatc=
+=bty0
+-----END PGP SIGNATURE-----
