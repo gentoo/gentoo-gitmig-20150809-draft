@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.140 2006/04/11 19:38:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.141 2006/04/18 17:06:38 flameeyes Exp $
+
+*alsa-utils-1.0.11_rc5-r1 (18 Apr 2006)
+
+  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/alsa-utils-1.0.11_rc5-alsaconf-redirect.patch,
+  +alsa-utils-1.0.11_rc5-r1.ebuild:
+  Fix alsaconf trying to load snd-*** module, thanks grdscarabe@grdscarabe.net
+  for the patch in bug #96467.
 
 *alsa-utils-1.0.11_rc5 (11 Apr 2006)
 
