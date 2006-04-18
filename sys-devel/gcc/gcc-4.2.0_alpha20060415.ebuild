@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.2.0_alpha20060415.ebuild,v 1.2 2006/04/17 21:00:46 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.2.0_alpha20060415.ebuild,v 1.3 2006/04/18 16:18:35 flameeyes Exp $
 
 ETYPE="gcc-compiler"
 
@@ -13,6 +13,7 @@ KEYWORDS="-* ~x86 ~amd64"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )
+	virtual/libiconv
 	fortran? (
 	  dev-libs/gmp
 	  dev-libs/mpfr

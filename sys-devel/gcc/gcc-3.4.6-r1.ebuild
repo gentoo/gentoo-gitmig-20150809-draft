@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r1.ebuild,v 1.1 2006/04/18 00:21:09 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r1.ebuild,v 1.2 2006/04/18 16:18:35 flameeyes Exp $
 
 MAN_VER=""
 PATCH_VER="1.1"
@@ -48,6 +48,7 @@ KEYWORDS="-* ~alpha ~amd64 ~arm ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 # well tested in gentoo on any arch other than amd64!!
 RDEPEND="|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )
 	>=sys-libs/zlib-1.1.4
+	virtual/libiconv
 	elibc_glibc? (
 		>=sys-libs/glibc-2.3.3_pre20040420-r1
 		hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
@@ -124,7 +125,7 @@ src_unpack() {
 			# this patch does, because if you are, you are probably already aware of what
 			# it does.
 			# All that said, the abilities of this patch are disabled by default and need
-			# to be enabled by passing -mip28-cache-barrier.  Only used to build kernels, 
+			# to be enabled by passing -mip28-cache-barrier.  Only used to build kernels,
 			# There is the possibility it may be used for very specific userland apps too.
 			if use ip28 or use ip32r10k; then
 				epatch ${FILESDIR}/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch

@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.524 2006/04/18 00:21:09 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.525 2006/04/18 16:18:35 flameeyes Exp $
+
+  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> gcc-3.4.6-r1.ebuild,
+  gcc-4.1.0.ebuild, gcc-4.2.0_alpha20060415.ebuild:
+  Add dependency over virtual/libiconv (for three series of gcc) as it's
+  needed to build gcc also without nls.
 
 *gcc-3.4.6-r1 (18 Apr 2006)
 
