@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/lyskom-elisp-client
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lyskom-elisp-client/ChangeLog,v 1.9 2006/03/13 06:54:07 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lyskom-elisp-client/ChangeLog,v 1.10 2006/04/18 23:19:35 weeve Exp $
+
+  18 Apr 2006; Jason Wever <weeve@gentoo.org>
+  lyskom-elisp-client-0.48.ebuild:
+  Stable on SPARC wrt bug #106051.
 
   13 Mar 2006; Joshua Jackson <tsunam@gentoo.org>
   lyskom-elisp-client-0.48.ebuild:

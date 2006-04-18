@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dfb63e42ade4fe9be8e81ae10d9e817f ChangeLog 1252
-RMD160 f2429305789a3619f5e06188b2bf885900e047f0 ChangeLog 1252
-SHA256 0fc496d7b315d21f4c255630c8d0efc4cf5115b6f6eebef984f932a6b7e140e5 ChangeLog 1252
+MD5 f2f851db798b6c18f4882943da7e2137 ChangeLog 1369
+RMD160 320b0537acbdfa0fb736b1be988ab4a88e23bd12 ChangeLog 1369
+SHA256 57e34f8ea3c51f5ae5bdbc13b1c569bd0d988afcd9fc1f23593b1a70785da51c ChangeLog 1369
 MD5 68506112aa782d22a6f1ba8751f5362c files/50lyskom-elisp-client-gentoo.el 120
 RMD160 a0d041900e06c759655c45dddd4f5a32b5484b30 files/50lyskom-elisp-client-gentoo.el 120
 SHA256 df195a3753c44fbe41a472f9df158fed26a34ee3d481be6d369c69e0f6576a98 files/50lyskom-elisp-client-gentoo.el 120
@@ -16,16 +13,9 @@ SHA256 856859c3a92c119c272fb1609f2c73c2682ea315f4ea3cffccb288908ca24adf files/di
 MD5 dd4b558dc2e1bb3a5c75f02bb5be8802 lyskom-elisp-client-0.47.1.ebuild 1072
 RMD160 109c34e1b7dfaec71fbf7b6da130d7910bb8a56e lyskom-elisp-client-0.47.1.ebuild 1072
 SHA256 67011af2c562b9bbb28f44d087be2879fb0f46b0349202eafb9df787a917275f lyskom-elisp-client-0.47.1.ebuild 1072
-MD5 25aef63e40d240ac3f6f2c55f239363e lyskom-elisp-client-0.48.ebuild 1055
-RMD160 e3d248b45dcee75ad48f9b0d56f835a4d8ac92c1 lyskom-elisp-client-0.48.ebuild 1055
-SHA256 eefeac8e4549f3c11c030c0bc23fc9662e46852b56852215a90e4f9cbbf6973f lyskom-elisp-client-0.48.ebuild 1055
+MD5 d078043e708e6294106efaae56786e6b lyskom-elisp-client-0.48.ebuild 1053
+RMD160 3b544c0e6bc04263a9bea8a3fd249a29b7f99bbb lyskom-elisp-client-0.48.ebuild 1053
+SHA256 9458bd22f7405584e605e09151a95dbeb68f9f290a0d6bcf7b9439bbab0c95dd lyskom-elisp-client-0.48.ebuild 1053
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 RMD160 415d172437ca754d24fc5ab186ba8e77934d96e4 metadata.xml 158
 SHA256 1393bdef3a74343fdb40a112c7096a1af16f67e7a43413250de28dfe73810eab metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEFRceSENan+PfizARAuo/AJwKg+iZsnoBvHk9LjN3mW53lH/BEgCeJgff
-kNy4ncgRjZ7a0zrkJwz5UGw=
-=DIKz
------END PGP SIGNATURE-----
