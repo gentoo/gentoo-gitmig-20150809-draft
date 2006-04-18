@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.5.1.ebuild,v 1.1 2006/03/15 23:47:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.5.1.ebuild,v 1.2 2006/04/18 22:52:14 vapier Exp $
 
 inherit eutils
 
@@ -18,8 +18,9 @@ SLOT="0"
 KEYWORDS="s390"
 IUSE=""
 
-DEPEND="app-admin/genromfs"
-RDEPEND=""
+RDEPEND="sys-fs/sysfsutils"
+DEPEND="${RDEPEND}
+	app-admin/genromfs"
 PROVIDE="virtual/bootloader"
 
 src_unpack() {
