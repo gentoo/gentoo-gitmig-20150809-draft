@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5233 2006/04/18 16:10:11 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5234 2006/04/18 18:00:19 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (18 Apr 2006)
+# Masked because of open bugs and no maintainer available with hardware
+# Pending removal on 18-05-2006
+media-sound/nforce-audio
 
 # Stefan Knoblich <stkn@gentoo.org> (18 Apr 2006)
 # Masking until asterisk-1.2 gets released into the wild
