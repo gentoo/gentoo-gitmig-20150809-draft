@@ -1,24 +1,30 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/files/rlocated.rc,v 1.1 2005/12/19 23:38:11 vapier Exp $
-
-checkconfig() {
-	if [[ ! -e /proc/rlocate ]] ; then
-		modprobe rlocate || return 1
-	fi
-	return 0
-}
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/files/rlocated.rc,v 1.2 2006/04/18 22:37:21 vapier Exp $
 
 start() {
-	checkconfig || return 1
+	if [[ ! -e /proc/rlocate ]] ; then
+		ebegin "Loading rlocate kernel module"
+		modprobe rlocate
+		eend $? || return 1
+	fi
+
 	ebegin "Starting rlocated"
 	rlocated
 	eend $?
 }
 
 stop() {
+	local ret
 	ebegin "Stopping rlocated"
 	start-stop-daemon --stop --quiet --pidfile /var/run/rlocated.pid
+	ret=$?
+	eend ${ret}
+
+	ebegin "Removing rlocate kernel module"
+	rmmod rlocate
 	eend $?
+
+	return ${ret}
 }
