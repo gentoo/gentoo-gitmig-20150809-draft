@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/pmacct
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.39 2006/03/22 21:15:23 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.40 2006/04/18 22:37:21 vanquirius Exp $
+
+*pmacct-0.10.1 (18 Apr 2006)
+
+  18 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> +pmacct-0.10.1.ebuild:
+  0.10.1 version bump. New HOMEPAGE at pmacct.net.
 
 *pmacct-0.10.0 (22 Mar 2006)
 
