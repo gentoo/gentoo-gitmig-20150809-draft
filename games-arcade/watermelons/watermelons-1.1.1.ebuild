@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/watermelons/watermelons-1.1.1.ebuild,v 1.1 2006/04/18 07:36:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/watermelons/watermelons-1.1.1.ebuild,v 1.2 2006/04/18 17:42:17 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/python-2.4"
+RDEPEND=">=dev-lang/python-2.4
+	dev-python/pygame"
 
 S=${WORKDIR}/${MY_PN}
 
