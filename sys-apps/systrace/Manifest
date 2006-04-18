@@ -1,0 +1,5 @@
+MD5 b9e3a4190d7fd4a5a04b7d9a2d36fe7d ChangeLog 288
+MD5 272032d7c512e67c7dff7c0ab971a786 files/digest-systrace-1.6d 65
+MD5 cc2c0fd87a1ad91d7fafa55aa8652cb3 files/systrace-regress.patch 599
+MD5 c9457d9cbc8395414fa86b30c6f61612 metadata.xml 362
+MD5 7f59d4f49aec6da2010023669120a590 systrace-1.6d.ebuild 1148

@@ -1,0 +1,7 @@
+# ChangeLog for sys-apps/systrace
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/ChangeLog,v 1.9 2006/04/18 09:11:00 lcars Exp $
+
+  18 Apr 2006; Andrea Barisani <lcars@gentoo.org>
+  Resurrecting systrace.
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd></herd>
+<maintainer>
+ <email>lcars@gentoo.org</email>
+</maintainer>
+<longdescription>
+Systrace enforces system call policies for applications by constraining the
+application's access to the system.
+</longdescription>
+</pkgmetadata>
