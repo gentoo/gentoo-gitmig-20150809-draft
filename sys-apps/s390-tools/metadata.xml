@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>base-system</herd>
+<herd>s390</herd>
 <longdescription>
-	A set of user space utilities that should be used together with the  zSeries
-	(s390) Linux kernel and device drivers
+A set of user space utilities that should be used together with the zSeries
+(s390) Linux kernel and device drivers
 </longdescription>
 </pkgmetadata>
