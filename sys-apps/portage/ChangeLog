@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.114 2006/04/17 07:11:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.115 2006/04/18 10:34:17 zmedico Exp $
+
+*portage-2.1_pre9-r1 (18 Apr 2006)
+
+  18 Apr 2006; <zmedico@gentoo.org> +portage-2.1_pre9-r1.ebuild,
+  +files/2.1/pre9/1000_r3171_readDigests.patch,
+  +files/2.1/pre9/1010_r3173_bug_57445_gpgsign.patch:
+  Bug fix revbump for #57445.
 
 *portage-2.1_pre9 (17 Apr 2006)
 
