@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cccc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cccc/ChangeLog,v 1.9 2006/04/15 07:14:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cccc/ChangeLog,v 1.10 2006/04/18 16:12:37 tchiwam Exp $
+
+  15 Apr 2006; Philippe Trottier <tchiwam@gentoo.org> :
+  Added myself as a maintainer.
 
   15 Apr 2006; Mark Loeser <halcy0n@gentoo.org> +metadata.xml:
   Adding metadata

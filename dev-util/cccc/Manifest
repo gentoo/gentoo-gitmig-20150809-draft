@@ -1,37 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c6f68179d2c90cbe736620dd3a9da9b ChangeLog 1035
-RMD160 93f69b82ddfc3594c8bea0fb578ff3e7859ecfbb ChangeLog 1035
-SHA256 c0dc71941cfa0981ed1f4d52d89e8cb8a919dbf17fdb661f6879ddeb1db08767 ChangeLog 1035
+MD5 82128af8a36e6831968cdfcb0b85d0d7 ChangeLog 1125
 MD5 444c3b315cb6ed40032fb1f3e82e7681 cccc-3.0_pre63.ebuild 642
-RMD160 95515e6e6f865b311c2b6d1b81b38cdddde4af3c cccc-3.0_pre63.ebuild 642
-SHA256 0b4d3345e6bca0c694e6e0992e546bf7462b2f8b09b99650a1b383e60abc33a2 cccc-3.0_pre63.ebuild 642
 MD5 cdf1f02eb0fd1b00439adaa6641120cd cccc-3.0_pre84.ebuild 778
-RMD160 c315bb229cf10947a38ffba58f55b8f080e0ba6d cccc-3.0_pre84.ebuild 778
-SHA256 7c3e757a2ed9ee0d4f52dd9d6c2e490f364ca5b251fa45f46cbdf56fc6e72980 cccc-3.0_pre84.ebuild 778
 MD5 ee50768db77c6f8dea072cd813338873 cccc-3.1.4.ebuild 651
-RMD160 46cdfc2b8c76ef7d99e7778c1c109ea63ede17b7 cccc-3.1.4.ebuild 651
-SHA256 885d6d53129d98531dbf646600023c0b2f1e15231e6884676f4fdeea86a568e7 cccc-3.1.4.ebuild 651
 MD5 f7e7665ffd064e34c8ebf0263510e2ae files/cccc-3.0_pre84-gcc34.patch 1103
-RMD160 06914ea6f8913ada83c49bd687a692227b143b89 files/cccc-3.0_pre84-gcc34.patch 1103
-SHA256 ee4f27083adbad7983378c5cd07a1e84b2a1c1bc64ffc8df59b1a6acf871299d files/cccc-3.0_pre84-gcc34.patch 1103
 MD5 2da17f45542dc619f7a4c106e47575d1 files/digest-cccc-3.0_pre63 64
-RMD160 fd894affaffe76928b4a3436937261832d8aff4d files/digest-cccc-3.0_pre63 64
-SHA256 5f0b3ca17a52dd332e0fdd890af745cd9b93cc527d4d0c9e5c839f80f848e34d files/digest-cccc-3.0_pre63 64
 MD5 839834a3c7480259fefd02232c935bf1 files/digest-cccc-3.0_pre84 64
-RMD160 86bf3bae3dda6a1c8ead2b4775c6fa3be8924e4d files/digest-cccc-3.0_pre84 64
-SHA256 30d29ba7f09b2d7df58be89aeaca3e517519df0e5e692e37b046e799018efd57 files/digest-cccc-3.0_pre84 64
 MD5 cfc5466f95078d002ed99085d736bc8a files/digest-cccc-3.1.4 232
-RMD160 ce67f26a0872e5c381a78fd266bd6b07bdbac3bb files/digest-cccc-3.1.4 232
-SHA256 c01326419179a7f2cfa105d1951953221044648e3b640b5c7b9b3c95ba60cbb0 files/digest-cccc-3.1.4 232
-MD5 8e53a4e000887f6bb029ca30c434e207 metadata.xml 232
-RMD160 854b06094287201d0b98f2b21d36054db25d81cd metadata.xml 232
-SHA256 21382e863647add08888c924279a4b931b2b90ccd0cf5e526ee74a3d5e1fd0df metadata.xml 232
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFEQJ1aCRZPokWLroQRAo7+AKC5aWhFLztdq8Ll3Dx2rC8WHCU+NgCfXEAe
-CiX+9pCkC8K/5dqmpGWasmA=
-=W+Pe
------END PGP SIGNATURE-----
+MD5 00ed7e3b713a19510af1ecadaa7de227 metadata.xml 222
