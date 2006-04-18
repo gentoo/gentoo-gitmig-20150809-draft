@@ -1,6 +1,13 @@
 # ChangeLog for games-action/accelerator3d
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/ChangeLog,v 1.1 2005/10/22 05:58:25 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/ChangeLog,v 1.2 2006/04/18 20:23:15 tupone Exp $
+
+*accelerator3d-0.1.1 (18 Apr 2006)
+
+  18 Apr 2006; <Tupone@gentoo.org>
+  +files/accelerator3d-0.1.1-gentoo-paths.patch,
+  +accelerator3d-0.1.1.ebuild:
+  Version bump, bug #130373 by Alexandru Toma
 
 *accelerator3d-0.1.0 (22 Oct 2005)
 
