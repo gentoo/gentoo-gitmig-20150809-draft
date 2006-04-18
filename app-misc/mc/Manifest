@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 177652bd2c2af1501737403b73861cee ChangeLog 13992
+MD5 4ad0501b5c65254a4766e5513fa6d737 ChangeLog 14097
 MD5 9f528fa7b6b4d2c202ce5f4e3a5173ba files/chdir-4.6.0.gentoo 159
 MD5 f73f42d12436a5b630604df092ce3fa2 files/digest-mc-4.6.0-r12 858
 MD5 f73f42d12436a5b630604df092ce3fa2 files/digest-mc-4.6.0-r13 858
 MD5 12eefa2f5d1a08a0101af33a27ebf7f4 files/digest-mc-4.6.0-r14 1126
-MD5 3ef06152e915e8603f9064ee6ee375b4 files/digest-mc-4.6.1 711
+MD5 6c318640289edb0ecfab600303127a1d files/digest-mc-4.6.1 191
 MD5 33aafc4a9c8134eb13d62fed6b81888e files/ebuild.syntax 2588
 MD5 d157d2a6836514f758dc3ae9149ae178 files/mc-4.6.0-7zip.patch 631
 MD5 d9519efa7db0aaf795556ac29cadd4ad files/mc-4.6.0-bug-102356.patch 1378
@@ -26,12 +26,12 @@ MD5 7fadf4867e255f1d7254181267759775 files/mc.ini 43
 MD5 7236d1c1d640501f262fcaee02286569 mc-4.6.0-r12.ebuild 3420
 MD5 9c8999e48a7fd76bb656386574e07005 mc-4.6.0-r13.ebuild 3524
 MD5 da0e80d1aa4cd507e06461fb59049a18 mc-4.6.0-r14.ebuild 4081
-MD5 83c9ea9f082182f61d4882ee4377adfa mc-4.6.1.ebuild 3566
+MD5 d8b2ca90d0a72cf7a269397188d5ab48 mc-4.6.1.ebuild 3562
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFERUCwKRy60XGEcJIRAjJ2AKCt4kW0ejWUgu66z7Iv3ywpBd6zPQCeOTol
-9q7MLHLsd0Fn0pGEspHXNZs=
-=Ephh
+iD8DBQFERUqV/NoSW7FuNV8RAsn8AKDSbdUpwke6yxkaSL1BkjQfqXgY3gCgggM1
+b5NW1Hm8pOcbhgCmmmH6M7A=
+=XzSn
 -----END PGP SIGNATURE-----
