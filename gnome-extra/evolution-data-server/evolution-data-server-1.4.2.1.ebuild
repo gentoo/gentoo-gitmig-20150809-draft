@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.4.2.1.ebuild,v 1.11 2006/02/03 16:51:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.4.2.1.ebuild,v 1.12 2006/04/18 18:38:19 flameeyes Exp $
 
 inherit eutils gnome2
 
@@ -39,6 +39,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 USE_DESTDIR="1"
 DOCS="ChangeLog MAINTAINERS NEWS TODO"
 
+RESTRICT="confcache"
 
 pkg_setup() {
 	G2CONF="$(use_with ldap openldap) \

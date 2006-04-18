@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.78 2006/03/30 23:47:41 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.79 2006/04/18 18:38:19 flameeyes Exp $
+
+  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  evolution-data-server-1.2.3.ebuild, evolution-data-server-1.4.2.1.ebuild,
+  evolution-data-server-1.6.0.ebuild:
+  Restrict confcache as per bug #130117.
 
   30 Mar 2006; Leonardo Boshell <leonardop@gentoo.org>
   -files/evolution-data-server-1.0.2-amd64_mutex.patch,
