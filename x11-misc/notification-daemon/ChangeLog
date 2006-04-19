@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.4 2006/03/20 18:51:31 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.5 2006/04/19 15:26:02 gustavoz Exp $
+
+  19 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  notification-daemon-0.3.4-r1.ebuild:
+  Keyworded ~sparc wrt #130313
 
 *notification-daemon-0.3.4-r1 (20 Mar 2006)
 
