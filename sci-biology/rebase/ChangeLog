@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.62 2006/04/19 15:04:44 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.63 2006/04/19 15:11:09 ribosome Exp $
+
+  19 Apr 2006; Olivier Fisette <ribosome@gentoo.org> -rebase-602.ebuild:
+  Removed old version.
 
 *rebase-604 (19 Apr 2006)
 
