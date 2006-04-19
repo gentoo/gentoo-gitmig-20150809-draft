@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/llgal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/ChangeLog,v 1.9 2006/04/05 18:31:06 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/ChangeLog,v 1.10 2006/04/19 11:34:28 nattfodd Exp $
+
+*llgal-0.13.1 (19 Apr 2006)
+
+  19 Apr 2006; Alexandre Buisse <nattfodd@gentoo.org> +llgal-0.13.1.ebuild:
+  Bump to 0.13.1 (0.13 was buggy). News include exif support and modularized
+  code. Removed ~sparc from KEYWORDS because this version now depends on
+  media-libs/exiftool which isn't keyworded there.
 
   05 Apr 2006; Ferris McCormick <fmccor@gentoo.org> llgal-0.12.2.ebuild:
   Add ~sparc keyword.  Runs (but noisily) and does what it's supposed to do.
