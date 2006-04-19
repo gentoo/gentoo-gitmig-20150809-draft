@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r2.ebuild,v 1.9 2006/04/17 20:44:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r2.ebuild,v 1.10 2006/04/19 04:32:56 weeve Exp $
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://transcode/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 sparc ~x86"
 IUSE="X 3dnow a52 altivec dv dvdread extrafilters mp3 fame truetype gtk imagemagick jpeg
 lzo mjpeg mpeg mmx network ogg vorbis quicktime sdl sse sse2 theora v4l2
 xvid xml"
