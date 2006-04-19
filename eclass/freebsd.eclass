@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.3 2006/04/14 11:20:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.4 2006/04/19 00:20:35 flameeyes Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -52,7 +52,7 @@ doperiodic() {
 freebsd_get_bmake() {
 	local bmake
 	bmake=$(get_bmake)
-	[[ ${CHOST} == *-freebsd* ]] || bmake="${bmake} -I /usr/share/mk/freebsd"
+	[[ ${CBUILD} == *-freebsd* ]] || bmake="${bmake} -m /usr/share/mk/freebsd"
 
 	echo ${bmake}
 }
