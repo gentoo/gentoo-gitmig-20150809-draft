@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.11 2006/04/13 16:37:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.12 2006/04/19 21:19:40 george Exp $
 
 # ATTN!
 # set HOMEPAGE and LICENSE in appropriate ebuild, as we have
@@ -99,18 +99,7 @@ fi
 S="${WORKDIR}/gcc-${GCCVER}"
 
 # bootstrap globals, common to src_unpack and src_compile
-case $(tc-arch) in
-	ppc)
-		GNATBOOT="${WORKDIR}/gnat-3.15p-powerpc-unknown-linux-gnu"
-		GNATBOOTINST="${GNATBOOT}"
-		GCC_EXEC_BASE="${GNATBOOT}/lib/gcc-lib"
-		;;
-	amd64 | x86)
-		GNATBOOT="${WORKDIR}/usr"
-		;;
-esac
-
-# some buildtime globals
+GNATBOOT="${WORKDIR}/usr"
 GNATBUILD="${WORKDIR}/build"
 
 # necessary for detecting lib locations and creating env.d entry
