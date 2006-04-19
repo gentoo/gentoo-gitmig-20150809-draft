@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.155 2006/03/30 14:46:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.156 2006/04/19 16:23:22 seemant Exp $
+
+  19 Apr 2006; Seemant Kulleen <seemant@gentoo.org> ChangeLog:
+  fix the Manifest -- got hit by this on a few different build boxes
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> openssl-0.9.7i.ebuild:
   Add ~x86-fbsd keyword.
