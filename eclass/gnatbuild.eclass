@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.12 2006/04/19 21:19:40 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.13 2006/04/19 21:26:57 george Exp $
 
 # ATTN!
 # set HOMEPAGE and LICENSE in appropriate ebuild, as we have
@@ -145,6 +145,7 @@ create_gnat_env_entry() {
 #	gnat_specs_file=""
 
 	echo "PATH=\"${BINPATH}:${LIBEXECPATH}\"" > ${gnat_envd_file}
+	echo "ROOTPATH=\"${BINPATH}:${LIBEXECPATH}\"" >> ${gnat_envd_file}
 
 	LDPATH="${LIBPATH}"
 	for path in 32 64 o32 ; do
