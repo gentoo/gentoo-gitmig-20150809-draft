@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.32 2006/04/17 20:42:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.33 2006/04/19 04:32:09 weeve Exp $
+
+  19 Apr 2006; Jason Wever <weeve@gentoo.org> lzo-2.02-r1.ebuild:
+  Stable on SPARC wrt bug #129748.
 
   17 Apr 2006; Markus Rothe <corsair@gentoo.org> lzo-2.02-r1.ebuild:
   Stable on ppc64; bug #129748
