@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16-r1.ebuild,v 1.12 2006/04/02 10:21:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16-r1.ebuild,v 1.13 2006/04/19 07:04:11 genstef Exp $
 
 inherit eutils
 
@@ -42,7 +42,8 @@ RDEPEND="X? ( || ( (	x11-libs/libXt
 	>=media-libs/libpng-1.2.5
 	>=sys-libs/zlib-1.2.0
 	cups? ( >=net-print/cups-1.1.20 )
-	"
+	!app-text/ghostscript-afpl
+	!app-text/ghostscript-esp"
 
 S=${WORKDIR}/${MY_P}
 
