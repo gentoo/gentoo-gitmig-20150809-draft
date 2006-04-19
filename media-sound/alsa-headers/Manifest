@@ -1,24 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 03c1673d1a48b282e14881b450c1ed92 ChangeLog 9362
-RMD160 db222c7403eac90929b85f08423543b97b402b9e ChangeLog 9362
-SHA256 3de980d8888ca2418c02612269b6fb5cf277ac1f105d6d85a421d5f44d299ce5 ChangeLog 9362
+MD5 0cdf884994f99d988666889fec621c24 ChangeLog 9554
+RMD160 b7ebfd3fd290f588699f2db58262c7c9541c6a68 ChangeLog 9554
+SHA256 5b9e860ac36c6ded98dbd66c35085eb4737f5fdb982385694420c8aca627ab2d ChangeLog 9554
 MD5 3b984bc3c1bbbd5d32bdbb7d98d9d663 alsa-headers-1.0.10.ebuild 1053
 RMD160 ec0906c3d58a43010a55199ee83adfc89bcfe982 alsa-headers-1.0.10.ebuild 1053
 SHA256 a531b7a196d95ac96e622b6063d1aec4ec024f392ed892557c52f7a45a657dd6 alsa-headers-1.0.10.ebuild 1053
 MD5 b8c302ca96a14218e2246c704dfa6afe alsa-headers-1.0.11.ebuild 1065
 RMD160 444c5c76b4c4126dca0a07d9d173f595d0e72709 alsa-headers-1.0.11.ebuild 1065
 SHA256 122f60cb6db5aeac4b14af76a8364280162fa730b20c8d7bca9c3ba9d2a07233 alsa-headers-1.0.11.ebuild 1065
-MD5 d870261a98b67b08d01ad024bc33ed97 alsa-headers-1.0.11_rc3.ebuild 1066
-RMD160 794b3c7e5d6bef672a35997911ba48680315000c alsa-headers-1.0.11_rc3.ebuild 1066
-SHA256 070f306c79fb6971d84f9274bcc5f27fe1b7cb92054e625f1fe9281c71fe8873 alsa-headers-1.0.11_rc3.ebuild 1066
-MD5 28ff41e5fb0787597cddd869e240651a alsa-headers-1.0.11_rc4.ebuild 1069
-RMD160 80a51ab8b40a861041f04ff5939edd8092702622 alsa-headers-1.0.11_rc4.ebuild 1069
-SHA256 e2e709540c0d7203db5b82e020d37df9cba97948588e4badca00c6ff19c2ab53 alsa-headers-1.0.11_rc4.ebuild 1069
-MD5 7309a1f2e8bb3fc7063f15a4d9e67a91 alsa-headers-1.0.11_rc5.ebuild 1069
-RMD160 15d6883d09b85b28ea326686719ff2cc2e1e291b alsa-headers-1.0.11_rc5.ebuild 1069
-SHA256 78f52b2417ba3935e135531e554f15531927dcf5d89a7e9f09dd548440152d2c alsa-headers-1.0.11_rc5.ebuild 1069
 MD5 c6fb273cd23828076b44c689f5363999 alsa-headers-1.0.8.ebuild 1045
 RMD160 28e50f854f7e902c52f595e273cc3ff9f2ba4010 alsa-headers-1.0.8.ebuild 1045
 SHA256 aae901ffb3a4e2c215c6cbc31c9c1734ac9773910743be7e664897ad3728c5f3 alsa-headers-1.0.8.ebuild 1045
@@ -31,25 +19,9 @@ SHA256 cef008f05a44e097d4881973af7b5147fd9ab893efe4bbc8ee16c35d8edac386 files/di
 MD5 22644311058526795f233aaa7a6fc155 files/digest-alsa-headers-1.0.11 262
 RMD160 daeedeaa4b2d5bfa3dd386358fc231486bc0f895 files/digest-alsa-headers-1.0.11 262
 SHA256 685909b916bf91fe04291a0f9dcb11865ed4efb588efb3b876ec3e367fede2ad files/digest-alsa-headers-1.0.11 262
-MD5 bad9db801cc32a096f6afb03f6f48439 files/digest-alsa-headers-1.0.11_rc3 271
-RMD160 4a657d4d7679a5dd64a241a0d963cc1cf4f35e90 files/digest-alsa-headers-1.0.11_rc3 271
-SHA256 53dc683ef507689fecbe33ff0615deb88adf131799241ee655ac281a1978c20b files/digest-alsa-headers-1.0.11_rc3 271
-MD5 09e9346d55ab2091eba9aa5c52fc5270 files/digest-alsa-headers-1.0.11_rc4 271
-RMD160 8cdbc46bd08d711c2d6c1e46c64b209eb5ab550a files/digest-alsa-headers-1.0.11_rc4 271
-SHA256 a2d1c5b0dff007ee76f6ad487d5938bb3a82ef3657c66615db07e4b4a4aa9efa files/digest-alsa-headers-1.0.11_rc4 271
-MD5 0a6446e4d78eea67548ef389b87581a7 files/digest-alsa-headers-1.0.11_rc5 271
-RMD160 f820669b70b58507dc69740e3648ab0ae0348824 files/digest-alsa-headers-1.0.11_rc5 271
-SHA256 40cf5da27580788064d53a1e8572c0039f436aa133e2de97ffea684ca20d7a77 files/digest-alsa-headers-1.0.11_rc5 271
 MD5 14b6c8d954e36bb9d40c97cf051220f0 files/digest-alsa-headers-1.0.8 71
 RMD160 02f30ed0141ab935e43eb46292abff8c3ac5361a files/digest-alsa-headers-1.0.8 71
 SHA256 b56ca4d158953d9311806044c9aa4bd36a03875cea99bfc220250764a69c7ca2 files/digest-alsa-headers-1.0.8 71
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFERsacAiZjviIA2XgRAp2iAJ9bfKnhpIh+10vMceehwXcYabsVLACfc/pk
-Nr3UWtv09vp/ETeIODN3dUc=
-=zc2y
------END PGP SIGNATURE-----

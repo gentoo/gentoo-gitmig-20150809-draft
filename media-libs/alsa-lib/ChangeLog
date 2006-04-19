@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.161 2006/04/19 23:24:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.162 2006/04/19 23:34:51 flameeyes Exp $
+
+  19 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -alsa-lib-1.0.11_rc3.ebuild, -alsa-lib-1.0.11_rc4.ebuild,
+  -alsa-lib-1.0.11_rc5.ebuild:
+  Drop release candidate versions.
 
 *alsa-lib-1.0.11 (19 Apr 2006)
 

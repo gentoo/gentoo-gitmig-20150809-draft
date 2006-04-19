@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-oss
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.72 2006/04/19 23:28:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.73 2006/04/19 23:34:29 flameeyes Exp $
+
+  19 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -alsa-oss-1.0.11_rc3.ebuild:
+  Drop release candidate versions.
 
 *alsa-oss-1.0.11 (19 Apr 2006)
 

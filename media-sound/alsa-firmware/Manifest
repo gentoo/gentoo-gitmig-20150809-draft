@@ -1,18 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2f8c09779bc7d1d9fcf9b6145bf173d2 ChangeLog 3715
-RMD160 a0e3de5a122f470ceab8749daa138c500e384feb ChangeLog 3715
-SHA256 b23a97e3501a31bcbf1ba954cc485d1a336f1a7e86f8b780c490f844b0a79ba3 ChangeLog 3715
+MD5 d5b39ff6ee4ec8aaf16fac0ecd0388bb ChangeLog 3840
+RMD160 b8755a636df8f2d422c45c6dbceab7f5fe83dc52 ChangeLog 3840
+SHA256 f4d6851077084b11e85b932f1de5a8355212f5e391e2def748c420e7b95a3c2b ChangeLog 3840
 MD5 e77ab16ed47e8bf397d1cb7e04aa191b alsa-firmware-1.0.10.ebuild 676
 RMD160 c1fb753c62bd6564fcc60b9e90bdec2c0efd8e69 alsa-firmware-1.0.10.ebuild 676
 SHA256 05c3126cfc3a20b62730dd3ed4c435c663924fb59d9c9d5148d3938ac40bba53 alsa-firmware-1.0.10.ebuild 676
 MD5 4a63729ded38e505547e4fe6b1670ed4 alsa-firmware-1.0.11.ebuild 725
 RMD160 211f8dd47d6ccab33c0688f2662237654c772dc9 alsa-firmware-1.0.11.ebuild 725
 SHA256 342ec9fac3d153120217e830822aab35a7f52adc7ecee4e974a6ff543af3214e alsa-firmware-1.0.11.ebuild 725
-MD5 7ea7ac8e01bc54bf8439cdbf5e189719 alsa-firmware-1.0.11_rc3.ebuild 729
-RMD160 9a0c2683df61032ac003fa338ee24546d3eb6e7e alsa-firmware-1.0.11_rc3.ebuild 729
-SHA256 6ed5ccc5698c2ad5a03f43093415b588d3eba6b2328be7c6ad08ac80694fb3b8 alsa-firmware-1.0.11_rc3.ebuild 729
 MD5 3420599c69435348716238fa365b5215 alsa-firmware-1.0.8-r1.ebuild 649
 RMD160 228b4c3982b71ca119a4d0d94c1e53ffc1e78bd4 alsa-firmware-1.0.8-r1.ebuild 649
 SHA256 676a699a9fc9723645c8aa1510ba214877cdc7b5a7554b3e727620b99f70717f alsa-firmware-1.0.8-r1.ebuild 649
@@ -22,19 +16,9 @@ SHA256 f535e1249d6aa514bfd1acfb763bb09ac50ae799b780078b40c429192bd0aecc files/di
 MD5 bbd9f4a416e2bf901b5857ae93dfa03e files/digest-alsa-firmware-1.0.11 268
 RMD160 d20f9076ad8b9703430a08e43ea7975792182554 files/digest-alsa-firmware-1.0.11 268
 SHA256 d16675d43108ab975461b8bfd770e5fbfd21018c55b14d08dd6374aca5821936 files/digest-alsa-firmware-1.0.11 268
-MD5 28cabb2a3ebc48043f20666e494fca93 files/digest-alsa-firmware-1.0.11_rc3 277
-RMD160 35bf7549b0ef3c2330267642a9805800b3250c7d files/digest-alsa-firmware-1.0.11_rc3 277
-SHA256 5e69a8698f546a871b5b9df6ab4bc2a3c2ea613a556902775a8a871dbe678fb2 files/digest-alsa-firmware-1.0.11_rc3 277
 MD5 455a8b164a15d1dfd6a5784479456b7e files/digest-alsa-firmware-1.0.8-r1 73
 RMD160 8907d73789d78ee4bf3ff898de1f88f84f202960 files/digest-alsa-firmware-1.0.8-r1 73
 SHA256 0c077a7463be8d5c67f23c7f7477825ed4480ec17bd5dcbc9af2de89315ae0ac files/digest-alsa-firmware-1.0.8-r1 73
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFERsZTAiZjviIA2XgRAuC+AJsHWvPeoIqAm4ewEY3djsVEOp9isQCgqdi7
-ScTWm3ExMcm4w8lAZWEaxg4=
-=kvFN
------END PGP SIGNATURE-----
