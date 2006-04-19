@@ -1,13 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c0267fb1d56ecdfd8c752fc4b3a5c2bf ChangeLog 8044
+MD5 29d9e23d9157de9f2a2e597c9e5dddbc ChangeLog 8187
 MD5 c8c25561d4871462ea03dc0490ced91b files/check_swap.c.patch 2212
 MD5 39af7074b023625d9a75730bd6932437 files/digest-nagios-plugins-1.3.1-r1 72
 MD5 639ea6f5791cdf3ad540489c66d1f356 files/digest-nagios-plugins-1.4 70
 MD5 da07ad1aeef96a19b0a44da14dac23ca files/digest-nagios-plugins-1.4.1 72
 MD5 64ead1ebbfd3bdb60ac19dc617dd96bf files/digest-nagios-plugins-1.4.2 72
 MD5 64ead1ebbfd3bdb60ac19dc617dd96bf files/digest-nagios-plugins-1.4.2-r1 72
+MD5 2684e00e63a5ff25efe54a69a32d4e27 files/digest-nagios-plugins-1.4.3 73
 MD5 acb0b2b914b27b67b9a33807b1e6838e files/install-opts-fix.diff 3168
 MD5 73ee36e67ff5948e0db8c99963a9e89f files/nagios-plugins-1.4-noradius.patch 666
 MD5 ee71da291efd7427bd9786591a98df34 files/nagios-plugins-noradius.patch 2661
@@ -16,11 +14,5 @@ MD5 167afaeaa89ede0c04d49c15d14da5cf nagios-plugins-1.3.1-r1.ebuild 3261
 MD5 3f909cf7b9e1321b9be00f8bc60662d8 nagios-plugins-1.4.1.ebuild 3386
 MD5 ace250f43f05a43e83aec3629cdda075 nagios-plugins-1.4.2-r1.ebuild 3445
 MD5 6b2c7a0cd3db0524589e75e88cf85375 nagios-plugins-1.4.2.ebuild 3384
+MD5 413d23b288bf3ec25cbaaf9e50111a56 nagios-plugins-1.4.3.ebuild 3473
 MD5 6b8c13bd0d1ade8611baf2a2bc064ba1 nagios-plugins-1.4.ebuild 3277
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD3BSlT+MN7JbqCpMRAgUcAJ9AoIIx75WGnbTiH3wDFQy9zT4EQQCghWzj
-9PfTClB9A4erJpkkBMbTcdo=
-=oczY
------END PGP SIGNATURE-----

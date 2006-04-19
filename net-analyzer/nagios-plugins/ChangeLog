@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.46 2006/01/29 01:04:23 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.47 2006/04/19 06:15:17 ramereth Exp $
+
+*nagios-plugins-1.4.3 (19 Apr 2006)
+
+  19 Apr 2006; Lance Albertson <ramereth@gentoo.org>
+  +nagios-plugins-1.4.3.ebuild:
+  * Version bump
 
   29 Jan 2006; Eldad Zack <eldad@gentoo.org> nagios-plugins-1.3.1-r1.ebuild,
   nagios-plugins-1.4.ebuild, nagios-plugins-1.4.1.ebuild,
