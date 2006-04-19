@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4554b139fe6c1c36a8491d21a2499026 ChangeLog 1961
-MD5 0c098a3c9837a7e5771887b9f80d5a9f files/digest-paros-3.2.8 65
+MD5 809546fba55aa0a86dc5f349dff8452a ChangeLog 2187
+MD5 7675b64460027d6c61aaaecdacc90d2b files/digest-paros-3.2.10 66
 MD5 a74dd1f3bc0b99d7f69be66c8087180c files/digest-paros-3.2.9 65
+MD5 319209aae27e6f05fac3e5572fcb4e06 files/without_embed.patch 468
 MD5 4b03e120ede9dfedec0594e35156b38c metadata.xml 256
-MD5 1f54a8876ea9b7f223d9e152ac4b9a1b paros-3.2.8.ebuild 879
+MD5 a1a90fc9e33a5aa9753bd5f6c47de752 paros-3.2.10.ebuild 967
 MD5 ed976bff6d6ff8a802edd4bcb2ed6a86 paros-3.2.9.ebuild 891
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFEDJ9bjG8pv1lIUX4RAgrQAJ0ab4NtjZK/GU2SdviKNUE32H9HowCgr2lw
-ndnLotRz5i4kBpt6uefmEeM=
-=IOln
+iD8DBQFERdjdjG8pv1lIUX4RAvSXAJ4rdMlX3mQcTAsLzl1IUdQ73N81nACgyQc+
+F+w0/nca96iYhdO+z5oENxY=
+=fCzM
 -----END PGP SIGNATURE-----
