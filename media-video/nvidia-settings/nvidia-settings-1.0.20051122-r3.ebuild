@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20051122-r3.ebuild,v 1.2 2006/04/17 10:42:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20051122-r3.ebuild,v 1.3 2006/04/19 14:49:39 augustus Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* ~x86 amd64"
 IUSE=
 
 # xorg-server is used in the depends as nvidia-settings builds against some

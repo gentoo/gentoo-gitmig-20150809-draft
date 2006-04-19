@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.20 2006/04/17 10:42:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.21 2006/04/19 14:49:39 augustus Exp $
+
+  19 Apr 2006; Kristopher Kersey <augustus@gentoo.org>
+  nvidia-settings-1.0.20051122-r3.ebuild:
+  Marking nvidia-settings-1.0.20051122-r3 stable for amd64 to match stable
+  nvidia-kernel and nvidia-glx.  Should fix bug #129404.
 
   17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   nvidia-settings-1.0.20051122-r3.ebuild:
