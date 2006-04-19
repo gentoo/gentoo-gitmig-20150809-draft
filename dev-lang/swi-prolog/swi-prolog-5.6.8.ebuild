@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.8.ebuild,v 1.2 2006/03/20 10:27:22 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.8.ebuild,v 1.3 2006/04/19 07:29:27 keri Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="berkdb doc gmp java minimal odbc readline ssl static tetex threads X"
 
-DEPEND="sys-libs/ncurses
+DEPEND="!dev-lang/swi-prolog-lite
+	sys-libs/ncurses
 	odbc? ( dev-db/unixODBC )
 	berkdb? ( sys-libs/db )
 	readline? ( sys-libs/readline )
