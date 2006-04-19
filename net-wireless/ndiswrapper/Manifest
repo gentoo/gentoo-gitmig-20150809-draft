@@ -1,6 +1,9 @@
-MD5 4ea144855f4e3c443bc7a2cad5d0fafc ChangeLog 8487
-RMD160 d4d857e8d3caa1366120c0345ae68ddb60b81546 ChangeLog 8487
-SHA256 ce132821a608fd7b3b49f943701315c8ee132fec95c6c4c9acc47cf2f04ab410 ChangeLog 8487
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3a33fd3e04070a6bc3636ad5f86545ee ChangeLog 8643
+RMD160 d1e955fe2f299668483681adf84a9429bc4f7e70 ChangeLog 8643
+SHA256 12fa3bc11c088c67678033909fedb6aeab32f0fcd5047ec244abbd1c81b0eebb ChangeLog 8643
 MD5 663461736d6cdc328d369c15e7d7f914 files/digest-ndiswrapper-1.11 250
 RMD160 67c4c2df135bd81ead6a870532d306315213f9d3 files/digest-ndiswrapper-1.11 250
 SHA256 b504bc8064372ad0ca13d88a2dbe2b7ebf116ee874ba368f921e768f0434e6fb files/digest-ndiswrapper-1.11 250
@@ -16,6 +19,9 @@ SHA256 4876ef27c86f076938e3d90bada70721613ddc69a50b482fdba2783c901043e1 files/di
 MD5 69ca885f3c7039ffb61da23aa194653c files/ndiswrapper-1.2-kernel-2.6.14.patch 1162
 RMD160 fc4078f52227336d697d8538c49b875bef7a6984 files/ndiswrapper-1.2-kernel-2.6.14.patch 1162
 SHA256 e81a2692ca682858efde3c33c1566d077d5b1a80ebd86e70975ad443291b4670 files/ndiswrapper-1.2-kernel-2.6.14.patch 1162
+MD5 3fc1c05a324162393f95dd2bb263c3e7 files/ndiswrapper-1.2-kernel-2.6.16.patch 600
+RMD160 12f141184b1aacf291d45635c53359d98b769ee3 files/ndiswrapper-1.2-kernel-2.6.16.patch 600
+SHA256 b3de023be40b27a0a795e4c8995d2738e11da1b1029f39272f2fbce5331d764c files/ndiswrapper-1.2-kernel-2.6.16.patch 600
 MD5 9cf5a13dc78b9840d419f0656d1dd920 files/ndiswrapper-1.2-suspend2.patch 553
 RMD160 8d3c771105181ab3e4489008d0b6127b6566ae48 files/ndiswrapper-1.2-suspend2.patch 553
 SHA256 34134d00fc5a3ab921e17c87bbd00818e11f6393c2110cc98426eb47ed5cc853 files/ndiswrapper-1.2-suspend2.patch 553
@@ -28,9 +34,16 @@ SHA256 5c8def3745009bada1920cb7dbbf0e58bb811f8459601ba3d17679aa131a71b4 ndiswrap
 MD5 f7e5e35b1a62c56986d9649e3fc3cca6 ndiswrapper-1.13.ebuild 2662
 RMD160 76cf01192ea41387af3c1a8ddc9e16700bc2ce16 ndiswrapper-1.13.ebuild 2662
 SHA256 ab0572bfe710e79b64e3f3e01bbf6b2f6e9a100031342dc271532697c3b14446 ndiswrapper-1.13.ebuild 2662
-MD5 7fb20fd0abf610e5d3111796144ed2fe ndiswrapper-1.2-r1.ebuild 2582
-RMD160 eb35ccb33c2c8f486fafac3e19bb1d71889cc9f3 ndiswrapper-1.2-r1.ebuild 2582
-SHA256 9090da1e86fb1de5252cfe0baa3d04f86a710887344128a30880e5faea437597 ndiswrapper-1.2-r1.ebuild 2582
+MD5 f371d88cd65180a2854954cf393168e3 ndiswrapper-1.2-r1.ebuild 2656
+RMD160 9b99a7990186e09057d58b000b6d3db92f68c7e5 ndiswrapper-1.2-r1.ebuild 2656
+SHA256 44224f665d5fac129d19f71ee2b69128d65aa5ee022d2a535be0462fabc3bea7 ndiswrapper-1.2-r1.ebuild 2656
 MD5 905378c25f6d366418563cf581cf1d9f ndiswrapper-1.9.ebuild 2497
 RMD160 f2a44a4bd845a68cc55563a51ff6980c32ce77c3 ndiswrapper-1.9.ebuild 2497
 SHA256 42a7d416682142da1cbb231230493f001bc49c94f86e2d74b12b28d858caec8c ndiswrapper-1.9.ebuild 2497
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERpN5TOXg++0VvJQRAvCeAKDbvjwaedLUT3S+yVmtC1KWD2BjgQCgvsMX
+/bOX9hHwjABLClXxCcZZ6JY=
+=YsuA
+-----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.45 2006/04/11 15:41:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.46 2006/04/19 19:31:36 dsd Exp $
+
+  19 Apr 2006; Daniel Drake <dsd@gentoo.org>
+  +files/ndiswrapper-1.2-kernel-2.6.16.patch, ndiswrapper-1.2-r1.ebuild:
+  Small compile fix for 2.6.16, bug #127569
 
 *ndiswrapper-1.13 (11 Apr 2006)
 

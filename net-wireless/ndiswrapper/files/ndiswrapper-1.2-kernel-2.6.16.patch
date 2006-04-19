@@ -1,0 +1,12 @@
+--- ndiswrapper-1.2/driver/loader.c.orig	2006-04-19 11:59:32.000000000 +0100
++++ ndiswrapper-1.2/driver/loader.c	2006-04-19 12:00:51.000000000 +0100
+@@ -972,7 +972,9 @@ static int register_devices(struct load_
+ 	if (ndiswrapper_usb_devices) {
+ 		memset(&ndiswrapper_usb_driver, 0,
+ 			       sizeof(ndiswrapper_usb_driver));
++#if LINUX_VERSION_CODE <= KERNEL_VERSION(2,6,15)
+ 		ndiswrapper_usb_driver.owner = THIS_MODULE;
++#endif
+ 		ndiswrapper_usb_driver.name = DRIVER_NAME;
+ 		ndiswrapper_usb_driver.id_table = ndiswrapper_usb_devices;
+ 		ndiswrapper_usb_driver.probe = ndiswrapper_add_usb_device;

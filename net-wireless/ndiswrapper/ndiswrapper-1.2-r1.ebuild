@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.2-r1.ebuild,v 1.2 2006/01/07 16:22:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.2-r1.ebuild,v 1.3 2006/04/19 19:31:36 dsd Exp $
 
 inherit eutils linux-mod
 
@@ -35,6 +35,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-1.2-suspend2.patch || die "suspend2 patch failed"
 	epatch "${FILESDIR}"/${PN}-1.2-kernel-2.6.14.patch || die "2.6.14 patch failed"
+	epatch "${FILESDIR}"/${PN}-1.2-kernel-2.6.16.patch || die "2.6.16 patch failed"
 
 	convert_to_m ${S}/driver/Makefile
 }
