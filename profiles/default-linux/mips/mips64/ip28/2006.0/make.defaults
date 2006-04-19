@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/ip28/2006.0/make.defaults,v 1.4 2006/03/14 14:55:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/ip28/2006.0/make.defaults,v 1.5 2006/04/19 14:48:02 wolf31o2 Exp $
 
 ARCH="mips"
 
@@ -22,6 +22,3 @@ ACCEPT_KEYWORDS="mips"
 
 STAGE1_USE="ip28"
 USE="readline fortran gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips ip28"
-
-# These are added to make dev-lang/php behave properly.  See bug #120088
-USE="${USE} apache2 cli ctype dba expat fastbuild force-cgi-redirect ftp gd memlimit nls pcre posix session simplexml soap sockets spl ssl tokenizer truetype xml xsl zlib"

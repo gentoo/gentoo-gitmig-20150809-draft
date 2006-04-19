@@ -1,2 +1,0 @@
-# These are added to make dev-lang/php behave properly.  See bug #120088
-USE="${USE} apache2 cli ctype dba expat fastbuild force-cgi-redirect ftp gd memlimit nls pcre posix session simplexml soap sockets spl ssl tokenizer truetype xml xsl zlib"

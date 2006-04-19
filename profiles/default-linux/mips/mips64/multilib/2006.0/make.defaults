@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/multilib/2006.0/make.defaults,v 1.5 2006/03/14 14:55:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/multilib/2006.0/make.defaults,v 1.6 2006/04/19 14:48:02 wolf31o2 Exp $
 
 USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses readline zlib -java bitmap-fonts truetype-fonts type1-fonts oss alsa crypt fortran f77 jpeg nls userlocales png xml acpi gif jp2 lzw lzw-tiff png tiff truetype usb xpm xrandr xv"
 
@@ -33,6 +33,3 @@ LIBDIR_n64="lib64"
 # In case someone wants to help out by setting FEATURES="multilib-strict"
 MULTILIB_STRICT_DIRS="/lib /usr/lib /usr/kde/*/lib /usr/qt/*/lib /usr/X11R6/lib"
 MULTILIB_STRICT_DENY="(64-bit|32-bit N32).*shared object"
-
-# These are added to make dev-lang/php behave properly.  See bug #120088
-USE="${USE} apache2 cli ctype dba expat fastbuild force-cgi-redirect ftp gd memlimit nls pcre posix session simplexml soap sockets spl ssl tokenizer truetype xml xsl zlib"

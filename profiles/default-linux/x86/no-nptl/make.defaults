@@ -1,10 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/make.defaults,v 1.5 2006/03/14 16:59:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/make.defaults,v 1.6 2006/04/19 14:48:02 wolf31o2 Exp $
 
 STAGE1_USE="-nptl"
 
 USE="alsa apm arts avi bitmap-fonts cups eds emboss encode fortran foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib jpeg kde libg++ libwww mad mikmod motif mp3 mpeg -nptl ogg opengl oss pdflib png qt quicktime sdl spell truetype truetype-fonts type1-fonts vorbis X xml xmms xv"
 
-# These are added to make dev-lang/php behave properly.  See bug #120088
-USE="${USE} apache2 cli ctype dba expat fastbuild force-cgi-redirect ftp gd memlimit nls pcre posix session simplexml soap sockets spl ssl tokenizer truetype xml xsl zlib"
+# 2006/03/29 - Stefan Schweizer <genstef@gentoo.org>
+# isdn USE flag defaults
+USE="${USE} pppd isdnlog"

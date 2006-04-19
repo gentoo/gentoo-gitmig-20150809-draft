@@ -1,12 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc32/2006.0/make.defaults,v 1.3 2006/03/29 19:15:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc32/2006.0/make.defaults,v 1.4 2006/04/19 14:48:02 wolf31o2 Exp $
 
 STAGE1_USE="unicode"
 USE="${STAGE1_USE} alsa apache2 apm arts avi bitmap-fonts bonobo cdr cups dvd eds emboss encode esd foomaticdb fortran gdbm gif gnome gpm gstreamer gtk gtk2 gtkhtml imlib jpeg kde ldap libg++ libwww mad mikmod motif mozilla mp3 mpeg ogg opengl pam pdflib png qt quicktime ruby sdl spell truetype truetype-fonts type1-fonts udev vorbis X xml xmms xv"
-
-# These are added to make dev-lang/php behave properly.  See bug #120088
-USE="${USE} apache2 cli ctype dba expat fastbuild force-cgi-redirect ftp gd memlimit nls pcre posix session simplexml soap sockets spl ssl tokenizer truetype xml xsl zlib"
 
 # 2006/03/29 - Stefan Schweizer <genstef@gentoo.org>
 # isdn USE flag defaults

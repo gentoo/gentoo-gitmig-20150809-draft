@@ -1,8 +1,5 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/2006.0/make.defaults,v 1.3 2006/03/14 14:53:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/2006.0/make.defaults,v 1.4 2006/04/19 14:48:02 wolf31o2 Exp $
 
 USE="apache2 cups eds encode foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib jpeg kde libg++ libwww mikmod motif ogg opengl oss pdflib png qt quicktime sdl spell truetype udev vorbis X xml2 xmms xv"
-
-# These are added to make dev-lang/php behave properly.  See bug #120088
-USE="${USE} apache2 cli ctype dba expat fastbuild force-cgi-redirect ftp gd memlimit nls pcre posix session simplexml soap sockets spl ssl tokenizer truetype xml xsl zlib"
