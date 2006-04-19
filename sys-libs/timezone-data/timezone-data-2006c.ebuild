@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2006c.ebuild,v 1.2 2006/04/17 07:28:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2006c.ebuild,v 1.3 2006/04/19 04:53:26 vapier Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Timezone data (/usr/share/zoneinfo) and utilities (tzselect/zic/zdump)"
 HOMEPAGE="ftp://elsie.nci.nih.gov/pub/"
@@ -21,6 +21,11 @@ S=${WORKDIR}
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${PN}-2005n-makefile.patch
+}
+
+src_compile() {
+	tc-export CC
+	emake || die "emake failed"
 }
 
 src_install() {
