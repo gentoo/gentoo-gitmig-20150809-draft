@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bsdmk.eclass,v 1.2 2006/04/01 15:49:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bsdmk.eclass,v 1.3 2006/04/19 01:13:24 flameeyes Exp $
 #
 # Otavio R. Piske "AngusYoung" <angusyoung@gentoo.org>
 # Diego Pettenò <flameeyes@gentoo.org>
@@ -67,11 +67,9 @@ fix_lazy_bindings() {
 }
 
 bsdmk_src_compile() {
-	cd ${S}
 	mkmake || die "make failed"
 }
 
 bsdmk_src_install() {
-	cd ${S}
 	mkinstall || die "install failed"
 }
