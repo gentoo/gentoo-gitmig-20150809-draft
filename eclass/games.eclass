@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.110 2006/04/15 17:18:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.111 2006/04/19 19:38:23 mr_bones_ Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -138,12 +138,6 @@ EOF
 games_pkg_setup() {
 	[[ ${GAMES_CHECK_LICENSE} == "yes" ]] && check_license ${LICENSE}
 
-	enewgroup "${GAMES_GROUP}" 35
-	[[ ${GAMES_USER} != "root" ]] \
-		&& enewuser "${GAMES_USER}" 35 -1 /usr/games "${GAMES_GROUP}"
-	[[ ${GAMES_USER_DED} != "root" ]] \
-		&& enewuser "${GAMES_USER_DED}" 36 /bin/bash /usr/games "${GAMES_GROUP}"
-
 	# Make sure SDL was built in a certain way
 	if [[ -n ${GAMES_USE_SDL} ]] ; then
 		if built_with_use -o media-libs/libsdl ${GAMES_USE_SDL} ; then
@@ -153,6 +147,12 @@ games_pkg_setup() {
 			die "your libsdl sucks"
 		fi
 	fi
+
+	enewgroup "${GAMES_GROUP}" 35
+	[[ ${GAMES_USER} != "root" ]] \
+		&& enewuser "${GAMES_USER}" 35 -1 /usr/games "${GAMES_GROUP}"
+	[[ ${GAMES_USER_DED} != "root" ]] \
+		&& enewuser "${GAMES_USER_DED}" 36 /bin/bash /usr/games "${GAMES_GROUP}"
 
 	# Dear portage team, we are so sorry.  Lots of love, games team.
 	# See Bug #61680
