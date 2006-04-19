@@ -1,12 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 28f17a8c49b01d4b3677edce02105f3a ChangeLog 9167
 RMD160 aa6aa23eaffd2cd9dfefce4c5b9f1165cdb260c9 ChangeLog 9167
 SHA256 5357fefa163b12eefda3efe2c4b5f838acce21a7d307747ed9d2324771ed5e7b ChangeLog 9167
 MD5 3b984bc3c1bbbd5d32bdbb7d98d9d663 alsa-headers-1.0.10.ebuild 1053
 RMD160 ec0906c3d58a43010a55199ee83adfc89bcfe982 alsa-headers-1.0.10.ebuild 1053
 SHA256 a531b7a196d95ac96e622b6063d1aec4ec024f392ed892557c52f7a45a657dd6 alsa-headers-1.0.10.ebuild 1053
+MD5 7309a1f2e8bb3fc7063f15a4d9e67a91 alsa-headers-1.0.11.ebuild 1069
+RMD160 15d6883d09b85b28ea326686719ff2cc2e1e291b alsa-headers-1.0.11.ebuild 1069
+SHA256 78f52b2417ba3935e135531e554f15531927dcf5d89a7e9f09dd548440152d2c alsa-headers-1.0.11.ebuild 1069
 MD5 d870261a98b67b08d01ad024bc33ed97 alsa-headers-1.0.11_rc3.ebuild 1066
 RMD160 794b3c7e5d6bef672a35997911ba48680315000c alsa-headers-1.0.11_rc3.ebuild 1066
 SHA256 070f306c79fb6971d84f9274bcc5f27fe1b7cb92054e625f1fe9281c71fe8873 alsa-headers-1.0.11_rc3.ebuild 1066
@@ -25,6 +25,9 @@ SHA256 fbe9dfbbdfdf83b2c895a5d401cec13c16a490a03617419be701f167c38cab09 files/al
 MD5 5474546fa4977a1fa63fbab0a155fd15 files/digest-alsa-headers-1.0.10 72
 RMD160 4bd20e9c6e23de3d2647cb707b5f446ce11323c4 files/digest-alsa-headers-1.0.10 72
 SHA256 cef008f05a44e097d4881973af7b5147fd9ab893efe4bbc8ee16c35d8edac386 files/digest-alsa-headers-1.0.10 72
+MD5 22644311058526795f233aaa7a6fc155 files/digest-alsa-headers-1.0.11 262
+RMD160 daeedeaa4b2d5bfa3dd386358fc231486bc0f895 files/digest-alsa-headers-1.0.11 262
+SHA256 685909b916bf91fe04291a0f9dcb11865ed4efb588efb3b876ec3e367fede2ad files/digest-alsa-headers-1.0.11 262
 MD5 bad9db801cc32a096f6afb03f6f48439 files/digest-alsa-headers-1.0.11_rc3 271
 RMD160 4a657d4d7679a5dd64a241a0d963cc1cf4f35e90 files/digest-alsa-headers-1.0.11_rc3 271
 SHA256 53dc683ef507689fecbe33ff0615deb88adf131799241ee655ac281a1978c20b files/digest-alsa-headers-1.0.11_rc3 271
@@ -40,10 +43,3 @@ SHA256 b56ca4d158953d9311806044c9aa4bd36a03875cea99bfc220250764a69c7ca2 files/di
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEPARmAiZjviIA2XgRAv1qAJ9OjpByfh6vQZG6keKYVqGkRVrnkwCeMY+p
-eWF2sdBVr0yD5LfqBjwhRzY=
-=OxGU
------END PGP SIGNATURE-----

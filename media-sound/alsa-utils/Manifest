@@ -1,12 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 051533e73c93b02f54e53191dc4d1300 ChangeLog 21771
 RMD160 a0b2c74ca2a70483e6eb04fbfa135ec733fc92ca ChangeLog 21771
 SHA256 514aaf6daca3b8b5fa032dccdcfdb2a331e2b0a090f70e77aeebed42a823f4eb ChangeLog 21771
 MD5 9dbe3716444af3250a790093b0d653d7 alsa-utils-1.0.10.ebuild 2417
 RMD160 857568f75c1b3e51db84761a52abdfff5631d03c alsa-utils-1.0.10.ebuild 2417
 SHA256 e0d80978078dc577bfe1909fa6e04f7683a3ae40573519d97be87735e2e53c2a alsa-utils-1.0.10.ebuild 2417
+MD5 3389cae74594006bde491bc3434a4e42 alsa-utils-1.0.11.ebuild 2509
+RMD160 8540ac6431e1fcfeed18f8a673b0ee5904231d43 alsa-utils-1.0.11.ebuild 2509
+SHA256 5bcbf0129ba82fc84c00be6c51b024d10e5b8b6b541886c386a0ebdbb778424f alsa-utils-1.0.11.ebuild 2509
 MD5 3aecd60e3cad237e4564621169ec8a5a alsa-utils-1.0.11_rc2.ebuild 2494
 RMD160 48e3394179bd48d40fb8da0b03c3eeb69fe5e1e8 alsa-utils-1.0.11_rc2.ebuild 2494
 SHA256 7aad8e4e9ea34dcb56671fef13127ee6c0cb188d0890698bc520f08165f8ba97 alsa-utils-1.0.11_rc2.ebuild 2494
@@ -43,6 +43,9 @@ SHA256 01f2c85c61cd9b40124945f31ece9ecabc3aefe3c57c53dd3c1eda994e2c2827 files/al
 MD5 a86ec4a87712d028c83f9066f4505551 files/digest-alsa-utils-1.0.10 70
 RMD160 15c0ea3978818f4ca64aa0b9ab98fec5087afe6e files/digest-alsa-utils-1.0.10 70
 SHA256 b9863e0104e486c1d7fa59697f4f87bace7c3130fd7444b2270251cff0cd7050 files/digest-alsa-utils-1.0.10 70
+MD5 a24eb6c8877ac01761cb398d4935e6ed files/digest-alsa-utils-1.0.11 256
+RMD160 422fb507940fa0ced1e6c8e2c90ae663c9cfed36 files/digest-alsa-utils-1.0.11 256
+SHA256 8443ae03e8421713892de04e3bb5e0ade613531cf69a437349b5cc2bf9f04f3b files/digest-alsa-utils-1.0.11 256
 MD5 d97909af462b2d708b5c64c15d4983d6 files/digest-alsa-utils-1.0.11_rc2 73
 RMD160 fb31742b090facd03f8023906c98c7631f21b250 files/digest-alsa-utils-1.0.11_rc2 73
 SHA256 7a186bc986232cb3647ca0e9be4f7083e74dd2684b156fe862aeef57c7ff43a1 files/digest-alsa-utils-1.0.11_rc2 73
@@ -61,10 +64,3 @@ SHA256 9b4130f0aadcea0c239581f1fd222e447d97b1d75b9d9a3c6f9a895fdc47e4f6 files/di
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFERRvtAiZjviIA2XgRAgI+AJ9ZYgArpsiSiGbHganfp4WS6V5LQgCfZI+l
-n/THxxpxgIvzpLt8ZIYTygg=
-=o+P6
------END PGP SIGNATURE-----

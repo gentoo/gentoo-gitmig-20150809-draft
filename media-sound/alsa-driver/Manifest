@@ -1,12 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4dcf9501dbe6d2412345e77e51a93b64 ChangeLog 35144
 RMD160 5ced94b171556347ee59a2e1eadd8ceaa0c4dfaf ChangeLog 35144
 SHA256 66d30fced6e268b474eb7e1c95b680ee3ec53c3a3de1165f1636a496d34ab6e7 ChangeLog 35144
 MD5 9916e84eeec916e6f6ec0f3aeffccb6a alsa-driver-1.0.10-r2.ebuild 4791
 RMD160 4940a1d64edb487b93b0d29f48d937fa2563c3cc alsa-driver-1.0.10-r2.ebuild 4791
 SHA256 ed09529fa8e9c98adc6dc3671ca6e61e79fb40095fd62fb0e06177ed20bf0ca7 alsa-driver-1.0.10-r2.ebuild 4791
+MD5 c58ef85722445047ed50637d2b757abc alsa-driver-1.0.11.ebuild 4805
+RMD160 4e5bab0948a79c35cba2e6f856817f972d247267 alsa-driver-1.0.11.ebuild 4805
+SHA256 f55fdb0c13510d195a4469de16309484ebe9c771263a87e606f27d9c5dc814fb alsa-driver-1.0.11.ebuild 4805
 MD5 92b347c5f047c41ce94593621464e00b alsa-driver-1.0.11_rc3.ebuild 4683
 RMD160 e3b23ab4972fc2e84ff06f9408b7a510ffebd24f alsa-driver-1.0.11_rc3.ebuild 4683
 SHA256 bf5ede710428f340a046aca1e8448e0c0363ac25346323d3d5ac3338de4cd09e alsa-driver-1.0.11_rc3.ebuild 4683
@@ -31,6 +31,9 @@ SHA256 52a31e573b3d92d7dc3048ec872349ffeff17960647a3a0468c3f917186fa7ad files/al
 MD5 5474546fa4977a1fa63fbab0a155fd15 files/digest-alsa-driver-1.0.10-r2 72
 RMD160 4bd20e9c6e23de3d2647cb707b5f446ce11323c4 files/digest-alsa-driver-1.0.10-r2 72
 SHA256 cef008f05a44e097d4881973af7b5147fd9ab893efe4bbc8ee16c35d8edac386 files/digest-alsa-driver-1.0.10-r2 72
+MD5 22644311058526795f233aaa7a6fc155 files/digest-alsa-driver-1.0.11 262
+RMD160 daeedeaa4b2d5bfa3dd386358fc231486bc0f895 files/digest-alsa-driver-1.0.11 262
+SHA256 685909b916bf91fe04291a0f9dcb11865ed4efb588efb3b876ec3e367fede2ad files/digest-alsa-driver-1.0.11 262
 MD5 bad9db801cc32a096f6afb03f6f48439 files/digest-alsa-driver-1.0.11_rc3 271
 RMD160 4a657d4d7679a5dd64a241a0d963cc1cf4f35e90 files/digest-alsa-driver-1.0.11_rc3 271
 SHA256 53dc683ef507689fecbe33ff0615deb88adf131799241ee655ac281a1978c20b files/digest-alsa-driver-1.0.11_rc3 271
@@ -43,10 +46,3 @@ SHA256 40cf5da27580788064d53a1e8572c0039f436aa133e2de97ffea684ca20d7a77 files/di
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFERU8EAiZjviIA2XgRAjhiAJ9p7hYvDKZNlmFgTBtRdpqMDU+xAwCcD/gf
-a70kqZ57yKg2S/ta0GrS3BU=
-=X06M
------END PGP SIGNATURE-----
