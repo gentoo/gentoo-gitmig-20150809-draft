@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bing/bing-1.1.3.ebuild,v 1.12 2005/06/18 21:11:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bing/bing-1.1.3.ebuild,v 1.13 2006/04/19 04:06:26 weeve Exp $
 
 DESCRIPTION="A point-to-point bandwidth measurement tool."
 SRC_URI="mirror://debian/pool/main/b/bing/${PN}_${PV}.orig.tar.gz"
 HOMEPAGE="http://fgouget.free.fr/bing/index-en.shtml"
 RESTRICT="nomirror"
 
-KEYWORDS="x86 ~sparc ia64 ~amd64 ppc"
+KEYWORDS="~amd64 ia64 ppc sparc x86"
 SLOT="0"
 LICENSE="as-is"
 IUSE=""
