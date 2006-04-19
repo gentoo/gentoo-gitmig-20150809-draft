@@ -5,12 +5,12 @@ MD5 1eeead9a7f1701ae9d2d073e023d879a ChangeLog 1272
 MD5 1414639cc28842758780e256d8c72d3f files/digest-squidclam-0.20 65
 MD5 316eeeb74f24b6448027938cba3c2e84 files/digest-squidclam-0.21 65
 MD5 0fcd3e06211b4df6185d71e97e6ff23f metadata.xml 296
-MD5 b9264b63388e294dbc4e293725b96e91 squidclam-0.20.ebuild 1558
-MD5 25f7dcc38d70d53531ae3099e91a9588 squidclam-0.21.ebuild 1559
+MD5 959cf79fa5ffe3643bc2b09b689ac9a3 squidclam-0.20.ebuild 1559
+MD5 d1ee835aff020a69d72e81aedfbf719e squidclam-0.21.ebuild 1560
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEP4sVjG8pv1lIUX4RAizwAKCPCFDAaVCpEO/tCOj0E+j3GL7/WACgsCRt
-7Hfer5P4fXPSbsF+SZsla8M=
-=lepw
+iD8DBQFERnyVjG8pv1lIUX4RAnZ1AJ9bmekbM/jFrNRtfJtFcxxYBwK+1QCg5+bu
+Sg8oVLRCweQR5fjrKXdHt68=
+=zXRJ
 -----END PGP SIGNATURE-----

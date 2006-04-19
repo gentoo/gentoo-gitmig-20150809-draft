@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclam/squidclam-0.20.ebuild,v 1.1 2006/02/24 22:19:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclam/squidclam-0.20.ebuild,v 1.2 2006/04/19 18:07:59 mrness Exp $
 
 DESCRIPTION="A redirector for Squid which scans accessed URLs for viruses, using Clam Anti-Virus"
 HOMEPAGE="http://squidclam.sourceforge.net/"
@@ -29,7 +29,7 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "THIS PACKAGE IS IN ITS EARLY DEVELOPMENT STAGE!"
-	ewarn "See ${HOMEPAGE} for more info.
+	ewarn "See ${HOMEPAGE} for more info."
 	echo
 	einfo "Add following lines to your squid.conf:"
 	einfo "${HILITE}    redirect_program /usr/bin/squidclam ${NORMAL}"
