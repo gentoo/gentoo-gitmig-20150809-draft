@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5236 2006/04/18 21:49:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5237 2006/04/19 01:42:17 ranger Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,15 @@
 ##
 ##   End example
 ##
+
+# Brent Baude <ranger@gentoo.org> (18 Apr 2006)
+# Masked pending removal. This package had been deprecated
+# in favor of sys-apps/ibm-powerpc-utils and an optional
+# package called sys-apps/ibm-powerpc-utils-papr.  Please
+# unmerge ppc64-utils and emerge ibm-powerpc-utils. And if you 
+# if you are running on IBM hardware, emerge ibm-powerpc-utils-papr
+# as well.
+sys-apps/ppc64-utils
 
 # Marien Zwart <marienz@gentoo.org> (18 Apr 2006)
 # Masked for testing.
