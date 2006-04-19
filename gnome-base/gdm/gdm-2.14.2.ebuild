@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.14.1.ebuild,v 1.2 2006/04/14 11:07:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.14.2.ebuild,v 1.1 2006/04/19 07:29:15 leonardop Exp $
 
 inherit eutils pam gnome2
 
@@ -91,9 +91,6 @@ src_unpack() {
 
 	# Fix missing intllib
 	epatch "${FILESDIR}"/${PN}-2.13.0.7-gdm-dmx-intllibs.patch
-
-	# Missing file from the tarball
-	cp -f "${FILESDIR}"/${P}-gdmthemetester.in gui/greeter/gdmthemetester.in
 
 	gnome2_omf_fix docs/*/Makefile.in docs/Makefile.in
 }
