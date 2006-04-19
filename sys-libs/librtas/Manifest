@@ -1,25 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c2dddace3e186a7b967bb9636289f902 ChangeLog 428
-RMD160 0ad383bf0b37f1b1b9f8246ff60fed935f04dd02 ChangeLog 428
-SHA256 129d855cad9ec7e67942389991094a9a8b5d5e5ee004014523f00198fc02db2f ChangeLog 428
+MD5 65cb7500dcd6dc1f8cc71929548acd36 ChangeLog 587
 MD5 4999365d095cb8f019bf095a5489184d files/digest-librtas-2.0.0 64
-RMD160 68dbc43a376e1641ebb6e9c90799e417bb326c01 files/digest-librtas-2.0.0 64
-SHA256 bb114fc00c4338171abbc4209dbedff45b41fb509a3acc350f4a2d051730f7d0 files/digest-librtas-2.0.0 64
 MD5 9ac28076298d5466a7326e296d302538 files/librtas-2.0.0-remove-doc.patch 430
-RMD160 db1e6b7c64ff3f300a485fb4f5df5e6c1e040b16 files/librtas-2.0.0-remove-doc.patch 430
-SHA256 d0cd54b73f2536e56b346590bff971b160c6fe52543b4ad11b2207f71b8607e3 files/librtas-2.0.0-remove-doc.patch 430
-MD5 554ef190aebd6223d7eeaa732e104cb8 librtas-2.0.0.ebuild 726
-RMD160 1f92e2761d0ebfc160a8febecb77c295e17726ff librtas-2.0.0.ebuild 726
-SHA256 07c77505a68dc9735e55663dabfdb82143ed05319b9873c8081ab6f216611bad librtas-2.0.0.ebuild 726
+MD5 42cb04e3cb36f65ea2fdbeb07547a5a9 librtas-2.0.0.ebuild 723
 MD5 702fa4fed6bdb3969c5e5bad5b654368 metadata.xml 245
-RMD160 8638b7d90df2c413afd9c975553010d6bfa97965 metadata.xml 245
-SHA256 a09ece2e39954e335916376b6a82a1c14d4168b114ebbfbf2d50ee27ef06fd26 metadata.xml 245
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFEALJbCRZPokWLroQRAtlPAJwPTEo6KnCNPJ9udVLTafiU+DaliQCgxVYH
-2PUPkW1P8GHoH5rYzCHavZg=
-=0qrw
------END PGP SIGNATURE-----
