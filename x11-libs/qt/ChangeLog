@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.302 2006/04/13 12:02:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.303 2006/04/19 13:45:03 caleb Exp $
+
+  19 Apr 2006; Caleb Tennis <caleb@gentoo.org> qt-4.1.2.ebuild:
+  Add a die to the ebuild if using nodoc feature
 
   13 Apr 2006; Caleb Tennis <caleb@gentoo.org> qt-3.3.6.ebuild:
   Fix CHOST naming scheme from bug #128528
