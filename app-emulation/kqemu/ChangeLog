@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/kqemu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/ChangeLog,v 1.6 2006/04/02 10:25:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/ChangeLog,v 1.7 2006/04/19 21:54:59 lu_zero Exp $
+
+  19 Apr 2006; Luca Barbato <lu_zero@gentoo.org> kqemu-0.7.2.ebuild,
+  kqemu-1.3.0_pre5.ebuild:
+  Fix for enewgroup call in src_install, thanks to Erik Zeek
+  <zeekec@mad.scientist.com>
 
   02 Apr 2006; Luca Barbato <lu_zero@gentoo.org>
   +files/kqemu-1.3.0_pre5-fix_module_parm.patch, kqemu-1.3.0_pre5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-0.7.2.ebuild,v 1.4 2006/03/29 08:02:55 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-0.7.2.ebuild,v 1.5 2006/04/19 21:54:59 lu_zero Exp $
 
 inherit eutils flag-o-matic linux-mod toolchain-funcs
 
@@ -78,7 +78,6 @@ src_install() {
 	# udev rule
 	dodir /etc/udev/rules.d/
 	echo 'KERNEL="kqemu*", NAME="%k", GROUP="qemu", MODE="0660"' > ${D}/etc/udev/rules.d/48-qemu.rules
-	enewgroup qemu
 
 	# Module doc
 	dodoc ${S}/kqemu/README
@@ -90,6 +89,7 @@ src_install() {
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
+	enewgroup qemu
 	einfo "Make sure you have the kernel module loaded before running qemu"
 	einfo "and your user is in the qemu group"
 }
