@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/znf/znf-0.7.6.ebuild,v 1.2 2006/01/25 20:05:27 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/znf/znf-0.7.6.ebuild,v 1.3 2006/04/19 01:37:53 weeve Exp $
 
 inherit php-pear-lib-r1
 
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 DESCRIPTION="PHP5 MVC framework for enterprise web applications."
 HOMEPAGE="http://znf.zeronotice.com/"
 LICENSE="LGPL-2.1"
