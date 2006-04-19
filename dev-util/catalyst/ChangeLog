@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.143 2006/04/18 21:04:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.144 2006/04/19 13:29:32 wolf31o2 Exp $
+
+  19 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  catalyst-2.0_rc42.ebuild:
+  Made sed for ccache actually be determined by USE=ccache and removed sed for
+  crc32->md5 since we no longer use Archive-Zip.
 
 *catalyst-2.0_rc42 (18 Apr 2006)
 

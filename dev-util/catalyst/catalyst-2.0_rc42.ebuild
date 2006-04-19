@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc42.ebuild,v 1.1 2006/04/18 21:04:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0_rc42.ebuild,v 1.2 2006/04/19 13:29:32 wolf31o2 Exp $
 
 inherit eutils
 
@@ -81,11 +81,9 @@ src_install() {
 		/etc/catalyst2/catalyst2.conf
 	dosed "s:/var/tmp/catalyst:/var/tmp/catalyst2:" \
 		/etc/catalyst2/catalyst2.conf
-	# This is the dirty hack for missing dev-perl/Archive-Zip
-	dosed 's:hash_function="crc32":hash_function="md5":' \
-		/etc/catalyst2/catalyst2.conf
 	# Here is where we actually enable ccache
-	dosed 's:options="autoresume kern:options="autoresume ccache kern:' \
+	use ccache && \
+		dosed 's:options="autoresume kern:options="autoresume ccache kern:' \
 		/etc/catalyst2/catalyst2.conf
 }
 
