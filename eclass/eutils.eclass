@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.232 2006/03/22 21:18:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.233 2006/04/19 03:53:19 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -439,6 +439,13 @@ egetent() {
 # groups:	none
 # extra:	comment of 'added by portage for ${PN}'
 enewuser() {
+	case ${EBUILD_PHASE} in
+		unpack|compile|test|install)
+		eerror "'enewuser()' called from '${EBUILD_PHASE}()' which is not a pkg_* function."
+		eerror "Package fails at QA and at life.  Please file a bug."
+		die "Bad package!  enewuser is only for use in pkg_* functions!"
+	esac
+
 	# get the username
 	local euser=$1; shift
 	if [[ -z ${euser} ]] ; then
@@ -634,6 +641,13 @@ enewuser() {
 # gid:		next available (see groupadd(8))
 # extra:	none
 enewgroup() {
+	case ${EBUILD_PHASE} in
+		unpack|compile|test|install)
+		eerror "'enewgroup()' called from '${EBUILD_PHASE}()' which is not a pkg_* function."
+		eerror "Package fails at QA and at life.  Please file a bug."
+		die "Bad package!  enewgroup is only for use in pkg_* functions!"
+	esac
+
 	# get the group
 	local egroup="$1"; shift
 	if [ -z "${egroup}" ]
