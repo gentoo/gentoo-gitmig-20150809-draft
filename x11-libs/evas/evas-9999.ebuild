@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.14 2006/03/22 04:07:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.15 2006/04/19 22:31:38 vapier Exp $
 
 inherit enlightenment flag-o-matic
 
@@ -39,7 +39,6 @@ src_compile() {
 		--enable-font-loader-eet \
 		--enable-image-loader-edb \
 		$(use_enable mmx cpu-mmx) \
-		$(use_enable sse cpu-mmx) \
 		$(use_enable sse cpu-sse) \
 		$(use_enable altivec cpu-altivec) \
 		$(use_enable cairo cairo-x11) \
