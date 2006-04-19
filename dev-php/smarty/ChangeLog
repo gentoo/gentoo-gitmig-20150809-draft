@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/smarty
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.49 2006/04/17 22:15:53 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.50 2006/04/19 01:39:09 weeve Exp $
+
+  19 Apr 2006; Jason Wever <weeve@gentoo.org> smarty-2.6.13.ebuild:
+  Stable on SPARC wrt bug #130301.
 
   17 Apr 2006; Mark Loeser <halcy0n@gentoo.org> smarty-2.6.13.ebuild:
   Stable on x86; bug #130301
