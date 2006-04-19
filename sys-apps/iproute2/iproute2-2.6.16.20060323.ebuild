@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.16.20060323.ebuild,v 1.1 2006/04/18 23:02:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.16.20060323.ebuild,v 1.2 2006/04/19 00:32:49 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,6 +27,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i -e "s:-O2:${CFLAGS}:" Makefile || die "sed Makefile failed"
+
+	epatch "${FILESDIR}"/${P}-ifcfg-catch-missing-argument.patch #130243
 
 	#68948 - esfq/wrr patches
 	epatch "${FILESDIR}"/${PN}-051007-esfq-2.6.13.patch
