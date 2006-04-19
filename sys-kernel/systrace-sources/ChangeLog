@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/systrace-sources
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/systrace-sources/ChangeLog,v 1.1 2006/04/19 14:21:45 lcars Exp $
+
+*systrace-sources-2.6.16 (19 Apr 2006)
+
+  19 Apr 2006; Andrea Barisani <lcars@gentoo.org> +metadata.xml,
+  +systrace-sources-2.6.16.ebuild:
+  Resurrecting systrace.
+

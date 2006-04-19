@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>kernel</herd>
+<herd>hardened</herd>
+<maintainer>
+  <email>lcars@gentoo.org</email>
+  <name>Andrea Barisani</name>
+  <description>Maintainer</description>
+</maintainer>
+<longdescription>This kernel source provides /dev/systrace for sys-apps/systrace
+functionality on top of standard gentoo Linux Kernel.
+</longdescription>
+</pkgmetadata>
