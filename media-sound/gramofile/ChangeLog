@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gramofile
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.13 2006/02/11 20:31:04 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.14 2006/04/19 22:22:35 malc Exp $
+
+  19 Apr 2006; <malc@gentoo.org> gramofile-1.6-r1.ebuild:
+  Undefine -DREDHAT50 in bplaysrc/Makefile to get a valid prototype for
+  basename on amd64 to avoid segfault - bug #128378
 
   11 Feb 2006; Patrick McLean <chutzpah@gentoo.org> metadata.xml,
   gramofile-1.6.ebuild, gramofile-1.6-r1.ebuild:

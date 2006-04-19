@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6-r1.ebuild,v 1.2 2006/02/11 20:31:04 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6-r1.ebuild,v 1.3 2006/04/19 22:22:35 malc Exp $
 
 inherit eutils
 
@@ -29,6 +29,9 @@ src_unpack() {
 
 src_compile() {
 	sed -i -e "s/CFLAGS = -Wall -O2 -DTURBO_MEDIAN -DTURBO_BUFFER/CFLAGS \= -Wall `echo ${CFLAGS}` -DTURBO_MEDIAN -DTURBO_BUFFER/" Makefile
+	# We need the prototype on amd64 or basename defaults to returning int -
+	# causint segfault... bug #128378
+	sed -i -e "s/-DREDHAT50//" bplaysrc/Makefile
 	make || die
 }
 
