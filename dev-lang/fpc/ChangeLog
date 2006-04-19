@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.27 2005/12/22 13:09:38 herbs Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.28 2006/04/19 19:33:35 carlo Exp $
+
+  19 Apr 2006; Carsten Lohrke <carlo@gentoo.org> fpc-2.0.2.ebuild:
+  Do not install .svn directories, bug #119597.
 
   22 Dec 2005; Herbie Hopkins <herbs@gentoo.org> files/digest-fpc-2.0.2:
   fix digest on fpc-2.0.0.x86_64-linux.tar, bug 116370.

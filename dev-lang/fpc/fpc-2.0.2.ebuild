@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.2.ebuild,v 1.1 2005/12/17 01:39:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.2.ebuild,v 1.2 2006/04/19 19:33:35 carlo Exp $
 
 inherit eutils
 
@@ -115,6 +115,7 @@ src_install() {
 		--exclude="*.xvpics" \
 		--exclude="*.~*" \
 		--exclude="CVS" \
+		--exclude=".svn" \
 		--exclude="fpcmade.i386-linux" \
 		${WORKDIR}/fpc/ ${D}usr/lib/fpc/src
 		eend $? || die
