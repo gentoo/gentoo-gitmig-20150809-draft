@@ -1,5 +1,25 @@
-MD5 b9e3a4190d7fd4a5a04b7d9a2d36fe7d ChangeLog 288
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 20ca94095ec0af4105a25c949826105c ChangeLog 282
+RMD160 e283c04edb3875844b6f66b74c507a3d49c797ce ChangeLog 282
+SHA256 fad660bac8c672b0aeb818d895c9cbc7295e2e14a203a81d9bed6a1aec22322d ChangeLog 282
 MD5 272032d7c512e67c7dff7c0ab971a786 files/digest-systrace-1.6d 65
+RMD160 3811a7ee4e8b8206a1992d826518d883ba8bb241 files/digest-systrace-1.6d 65
+SHA256 d21c3d84738b732d321be9d49fc2fce2e23f6fe93ac8bd30e6229d6284312d0b files/digest-systrace-1.6d 65
 MD5 cc2c0fd87a1ad91d7fafa55aa8652cb3 files/systrace-regress.patch 599
+RMD160 f1359551d8bc275a90b369fc5c94e767622a2a44 files/systrace-regress.patch 599
+SHA256 2b6b2c37bb17b61aa5ae04c96cd3bd5ad218dae064a0fa056bd5454041bfc1e9 files/systrace-regress.patch 599
 MD5 c9457d9cbc8395414fa86b30c6f61612 metadata.xml 362
+RMD160 87dfb9a98fbe0a1164ffc587a2be85201758faea metadata.xml 362
+SHA256 e23ff20ff8e1cb3cc5a92a152e2db1b7a4f2505761abfd6398fd34ca5c42a22f metadata.xml 362
 MD5 7f59d4f49aec6da2010023669120a590 systrace-1.6d.ebuild 1148
+RMD160 d3224e78296fb08b057074549f7e748a0b1710de systrace-1.6d.ebuild 1148
+SHA256 4f1a8993c427ffcd301981dcece348a2f05fb1915fea7ff614fac4cf6db7d356 systrace-1.6d.ebuild 1148
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERnvoI1lqEGTUzyQRApSeAJ9dsi+Ou8bh8U/lnzFQ2koZtxp02QCfQgBj
+MfLi9arGZE5QnlphivS9Jec=
+=evlV
+-----END PGP SIGNATURE-----
