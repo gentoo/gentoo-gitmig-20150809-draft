@@ -1,25 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4c35eae66b37fc6f70858343f6e22b32 ChangeLog 1096
-RMD160 9fc60be4b12e39e91fc48adc21d2907e9da4f5c2 ChangeLog 1096
-SHA256 a552ec3396e720800f514085c9f5b985db887ddd7c956c0f039d27fdaeab1a2b ChangeLog 1096
-MD5 fee7438d9cb9580ae2fc00c849fe235a cdtool-2.1.5-r1.ebuild 1156
-RMD160 d508ba20db0e6eb00af50a811f7f2d1f8a744217 cdtool-2.1.5-r1.ebuild 1156
-SHA256 ba8e2770580633d77fc3b13fb9e05cb90fc25ad4f5879a3e4ad427150818a0c6 cdtool-2.1.5-r1.ebuild 1156
+MD5 ec9cfb0c5541b5a5193d6e496a815cd0 ChangeLog 1264
+MD5 f0b2a6f1fe01347225d13a3052325fdf cdtool-2.1.5-r1.ebuild 1176
 MD5 c9634364512cf7e6f5fae3d6dc16d9fc files/cdtool-2.1.5-ldflags.patch 793
-RMD160 76aecf056494c1e38657892d8593439086b541f2 files/cdtool-2.1.5-ldflags.patch 793
-SHA256 4f34965659f18b1ac0fd08071c94888a9cdb838c4a6c6835e0a96eb0ec89b2cf files/cdtool-2.1.5-ldflags.patch 793
 MD5 d29e321ea1fc813d76ee1f28bf711a47 files/digest-cdtool-2.1.5-r1 63
-RMD160 b78dd17d860311f2733d58cf7296fd15b636b533 files/digest-cdtool-2.1.5-r1 63
-SHA256 70a05db700001a2c5de40021abed5e58bce95d99e87d7baf09b24360554643b2 files/digest-cdtool-2.1.5-r1 63
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
-SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDZGIAiZjviIA2XgRAiAEAJsF6XnZDyaFnOcWgzcp5VMDUr98bACdH+M4
-x5RqfnJg9WNM/2fwlPVclJ8=
-=5/FO
------END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cdtool
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/ChangeLog,v 1.10 2006/03/07 13:58:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/ChangeLog,v 1.11 2006/04/19 12:24:33 tcort Exp $
+
+  19 Apr 2006; Thomas Cort <tcort@gentoo.org> cdtool-2.1.5-r1.ebuild:
+  Added HOMEPAGE wrt Bug #130432. Thanks to clbustos <clbustos@apsique.com>
+  for pointing this out.
 
   07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/cdtool-2.1.5-ldflags.patch, cdtool-2.1.5-r1.ebuild:

@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/cdtool-2.1.5-r1.ebuild,v 1.2 2006/03/07 13:58:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/cdtool-2.1.5-r1.ebuild,v 1.3 2006/04/19 12:24:33 tcort Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A package of command-line utilities to play and catalog cdroms."
-HOMEPAGE="none"
+HOMEPAGE="http://hinterhof.net/cdtool/"
 SRC_URI="http://www.ibiblio.org/pub/linux/apps/sound/cdrom/cli/cdtool-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
