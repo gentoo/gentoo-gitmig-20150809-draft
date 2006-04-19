@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.56 2006/03/29 18:48:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.57 2006/04/19 22:01:35 rocket Exp $
+
+*lvm2-2.02.03 (19 Apr 2006)
+
+  19 Apr 2006; Eric Edgar <rocket@gentoo.org> lvm2-2.01.14-r1.ebuild,
+  -lvm2-2.02.01.ebuild, -lvm2-2.02.02.ebuild, +lvm2-2.02.03.ebuild:
+  Add lvm2-2.02.03.ebuild to fix cluster issues
 
   29 Mar 2006; Markus Rothe <corsair@gentoo.org> lvm2-2.02.02.ebuild:
   Added ~ppc64

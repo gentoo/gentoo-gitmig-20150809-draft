@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.01.14-r1.ebuild,v 1.1 2006/01/31 23:27:59 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.01.14-r1.ebuild,v 1.2 2006/04/19 22:01:35 rocket Exp $
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://sources.redhat.com/lvm2/"
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S} || die
 	epatch ${FILESDIR}/lvm2-2.01.14.patch
+	epatch ${FILESDIR}/lvm2-2.01.14-static.patch
 }
 src_compile() {
 	# Static compile of lvm2 so that the install described in the handbook works

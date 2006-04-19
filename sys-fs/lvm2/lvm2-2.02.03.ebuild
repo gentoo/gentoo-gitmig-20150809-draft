@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.01.ebuild,v 1.4 2006/03/22 09:07:25 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.03.ebuild,v 1.1 2006/04/19 22:01:35 rocket Exp $
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://sources.redhat.com/lvm2/"
@@ -8,12 +8,13 @@ SRC_URI="ftp://sources.redhat.com/pub/lvm2/${PN/lvm/LVM}.${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="readline nolvmstatic clvm nocman nolvm1 nosnapshots nomirrors selinux"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="readline nolvmstatic clvm cman gulm nolvm1 nosnapshots nomirrors selinux"
 
-DEPEND=">=sys-fs/device-mapper-1.02
+DEPEND=">=sys-fs/device-mapper-1.02.03
 		clvm? ( >=sys-cluster/dlm-1.01.00
-			!nocman? ( >=sys-cluster/cman-1.01.00 ) )"
+			cman? ( >=sys-cluster/cman-1.01.00 )
+			gulm? ( >=sys-cluster/gulm-1.00.00 ) )"
 
 RDEPEND="${DEPEND}
 	!sys-fs/lvm-user
@@ -59,10 +60,17 @@ src_compile() {
 		else
 			myconf="${myconf} --with-cluster=internal"
 		fi
-		if use nocman; then
-			myconf="${myconf} --with-clvmd=gulm"
-		else
+		if useq cman && useq gulm; then
+			myconf="${myconf} --with-clvmd=all"
+		fi
+		if useq cman && ! useq gulm; then
 			myconf="${myconf} --with-clvmd=cman"
+		fi
+		if useq gulm && ! useq cman; then
+			myconf="${myconf} --with-clvmd=gulm"
+		fi
+		if ! useq gulm && ! useq cman; then
+			myconf="${myconf} --with-clvmd=none"
 		fi
 	fi
 
@@ -81,4 +89,10 @@ src_install() {
 	if use clvm; then
 		newinitd ${FILESDIR}/clvmd.rc clvmd || die
 	fi
+
+	ewarn "use flag nocman is deprecated and replaced"
+	ewarn "with cman and gulm use flags."
+	ewarn ""
+	ewarn "use flags clvm,cman and gulm are masked"
+	ewarn "by default and need to be unmasked to use them"
 }
