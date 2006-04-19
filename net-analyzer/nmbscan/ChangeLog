@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmbscan
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmbscan/ChangeLog,v 1.6 2005/12/04 20:52:38 tgall Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmbscan/ChangeLog,v 1.7 2006/04/19 04:20:21 weeve Exp $
+
+  19 Apr 2006; Jason Wever <weeve@gentoo.org> nmbscan-1.2.4.ebuild:
+  Stable on SPARC.
 
   04 Dec 2005; Tom Gall <tgall@gentoo.org> nmbscan-1.2.4.ebuild:
   stable on ppc64
