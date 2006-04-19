@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/speex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.47 2006/04/18 15:42:40 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.48 2006/04/19 13:11:09 chutzpah Exp $
+
+  19 Apr 2006; Patrick McLean <chutzpah@gentoo.org> +speex-1.1.5.ebuild:
+  Re-add speex-1.1.5 since media-plugins/xmms-speex depends on it
 
 *speex-1.1.12 (18 Apr 2006)
 
