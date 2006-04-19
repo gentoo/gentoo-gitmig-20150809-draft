@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/otpcalc-0.97-r1.ebuild,v 1.4 2006/02/27 15:15:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/otpcalc-0.97-r1.ebuild,v 1.5 2006/04/19 13:35:40 taviso Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/otpcalc-man-table-format.diff
 	epatch ${FILESDIR}/otpcalc-0.97-badindex.diff
+	epatch ${FILESDIR}/otpcalc-crypto-proto.diff
 
 	# print correct version in manpage
 	sed -i -e "s/VERSION/${PV}/g" ${S}/otpCalc.man

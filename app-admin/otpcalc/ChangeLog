@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/otpcalc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/ChangeLog,v 1.18 2006/02/27 15:15:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/ChangeLog,v 1.19 2006/04/19 13:35:40 taviso Exp $
+
+  19 Apr 2006; Tavis Ormandy <taviso@gentoo.org>
+  +files/otpcalc-crypto-proto.diff, otpcalc-0.97-r1.ebuild:
+  correct cypto prototypes with patch from tcort #123993
 
   27 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   otpcalc-0.97-r1.ebuild:

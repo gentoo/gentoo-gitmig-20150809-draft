@@ -1,20 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 99145d8653b17be03ac9d2d061156dfe ChangeLog 1929
+MD5 ded776c9915279e88af019594ffda994 otpcalc-0.97.ebuild 795
+MD5 bf1e7bcbeba547a6212c1983a999d0d2 otpcalc-0.97-r1.ebuild 952
+MD5 2da57917cc18ce178900650519046289 otpcalc-0.96.ebuild 729
+MD5 1546bb33a8310fb47dbcb23b1f0bc8c9 ChangeLog 2094
+MD5 78714bd1cdeb6709df0a6dcc4c5347ce metadata.xml 410
+MD5 fb4ade24812b14dd5fc4c2d89dc6a9a5 files/digest-otpcalc-0.97-r1 64
 MD5 1ce297d1a90353ea4e3ee49a9d21be6d files/digest-otpcalc-0.96 64
 MD5 fb4ade24812b14dd5fc4c2d89dc6a9a5 files/digest-otpcalc-0.97 64
-MD5 fb4ade24812b14dd5fc4c2d89dc6a9a5 files/digest-otpcalc-0.97-r1 64
-MD5 9f150d63ce347efb91f683233ff9b53d files/otpcalc-0.97-badindex.diff 300
 MD5 79ac858c43e67fdc670c1092b51a03ad files/otpcalc-man-table-format.diff 507
-MD5 78714bd1cdeb6709df0a6dcc4c5347ce metadata.xml 410
-MD5 2da57917cc18ce178900650519046289 otpcalc-0.96.ebuild 729
-MD5 560a1686654b7118bc4e09308af42824 otpcalc-0.97-r1.ebuild 908
-MD5 ded776c9915279e88af019594ffda994 otpcalc-0.97.ebuild 795
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEAxekKRy60XGEcJIRAsw3AJ9gwpCrm8B5wMqHTRP1v3z3SuJX9QCgjWym
-eMWHj7Bo9L68geWOtNnOBrA=
-=SF2G
------END PGP SIGNATURE-----
+MD5 9f150d63ce347efb91f683233ff9b53d files/otpcalc-0.97-badindex.diff 300
+MD5 2d197e8e21678130894cb4fbeb7c1899 files/otpcalc-crypto-proto.diff 528
