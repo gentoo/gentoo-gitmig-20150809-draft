@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5a4ab9b4261c94961e34d7df03fdd203 ChangeLog 2696
-RMD160 9e8ea147a10437d170a358054f8d8ce52221c8c9 ChangeLog 2696
-SHA256 ecae49fc58ccceaa86e26feec6d9251cfbcdf63add3684907d481c3be3d7be13 ChangeLog 2696
+MD5 cbc797eb602e2440c192debb972d8202 ChangeLog 2860
+RMD160 22ff6f1ca1dd13ba39b9be704ce998eefa94ba7f ChangeLog 2860
+SHA256 6ef6a2b1981c84a25bed1cf4cfe4fdb11c80dbaa7d7620cba31d67be31b7aacd ChangeLog 2860
 MD5 51273e3fe46983612a5f1fed9ca2b0e3 files/digest-freebsd-mk-defs-6.0-r1 259
 RMD160 46a82d1522095372780a69656537ff13cd6e636e files/digest-freebsd-mk-defs-6.0-r1 259
 SHA256 5cb4a1ab23ba7aeafa13416f967472520b4db1da1a8ad7fc9433df48ac754ed1 files/digest-freebsd-mk-defs-6.0-r1 259
@@ -19,16 +19,16 @@ SHA256 f7e976c5f699a8c968babbcee9b813ee62fb96ea220ddf52005468973d9bb063 files/fr
 MD5 7c6bf2b68cd685a9f76af8c0ea652599 files/freebsd-mk-defs-flex.patch 867
 RMD160 a6515de4317f00ec47765987ae3f5bbdd02bc489 files/freebsd-mk-defs-flex.patch 867
 SHA256 3373ded64bf6447a06e1a4e33acd0c3d758fee20488173ab9d6e891ed2399498 files/freebsd-mk-defs-flex.patch 867
-MD5 4042c616604d95ae1c0ee9c3255c463e freebsd-mk-defs-6.0-r1.ebuild 846
-RMD160 d79d0b67741eb223398151d217272861dee7891c freebsd-mk-defs-6.0-r1.ebuild 846
-SHA256 aa687a07f37b8b9d060092c1844998270bce07ec6d6376b844915ae03ea40b0b freebsd-mk-defs-6.0-r1.ebuild 846
+MD5 b05bccfac212655258b7b3888413a7b7 freebsd-mk-defs-6.0-r1.ebuild 928
+RMD160 ad7a4389f2a85fb8696d4c3caea6a379bfbf6f1d freebsd-mk-defs-6.0-r1.ebuild 928
+SHA256 a5bba5c0513e2a12f56f80a74a802e77392f44c24d06b02a5316b9eba5720554 freebsd-mk-defs-6.0-r1.ebuild 928
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
 SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEPQaGAiZjviIA2XgRAiYBAKC0MGXpVkBJF9kq989sPSwVY2HijwCaAh+P
-Bar7H+ssdLkzkl08C0+BRRs=
-=KOgh
+iD8DBQFERX7wAiZjviIA2XgRAhIMAKDg8pD35AAeGw0GvLd7RxIma3mFMACggqyK
+z/WunrJIJ0CpZQj/P6Qdbzc=
+=bttG
 -----END PGP SIGNATURE-----

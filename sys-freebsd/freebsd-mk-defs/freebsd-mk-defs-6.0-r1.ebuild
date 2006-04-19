@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-6.0-r1.ebuild,v 1.1 2006/04/12 13:53:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-6.0-r1.ebuild,v 1.2 2006/04/19 00:09:00 flameeyes Exp $
 
 inherit bsdmk freebsd
 
@@ -33,6 +33,10 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/share/mk
+	if [[ ${CHOST} != *-freebsd* ]]; then
+		insinto /usr/share/mk/freebsd
+	else
+		insinto /usr/share/mk
+	fi
 	doins *.mk
 }
