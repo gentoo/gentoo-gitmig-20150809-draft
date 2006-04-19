@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/aircrack-ng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.1 2006/04/18 22:55:44 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.2 2006/04/19 17:00:03 dang Exp $
+
+  19 Apr 2006; Daniel Gryniewicz <dang@gentoo.org> aircrack-ng-0.4.ebuild:
+  mark ~amd64 per bug# 127210
 
 *aircrack-ng-0.4 (18 Apr 2006)
 

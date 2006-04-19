@@ -1,4 +1,22 @@
-MD5 714fc04ee1f011263178455c46600174 ChangeLog 422
-MD5 44224647f7f7a4c79d3be28f545ba32a aircrack-ng-0.4.ebuild 679
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 79b9c3dacda9ebb1dd0f7eea753da046 ChangeLog 522
+RMD160 48a0ba320d1bc824e2b18a096a9dd654e1d7a28b ChangeLog 522
+SHA256 ee616a7c8313dde064736d8082f5223f46d334cdc783771d1ca2739d6ff70118 ChangeLog 522
+MD5 68730de4b5dcbb45bd2417da5d99ce24 aircrack-ng-0.4.ebuild 680
+RMD160 8cae017e2bdb3cc033917b575fc6ae007184f99e aircrack-ng-0.4.ebuild 680
+SHA256 5ad78add68f6dca5966e667f13f3a67630cade2b096e753f2d5b220047274755 aircrack-ng-0.4.ebuild 680
 MD5 b0a4ba8e160e9532da3a69fb3db0aa0f files/digest-aircrack-ng-0.4 67
+RMD160 63a516cd362f54d48ea174bea3547a1d136a11c5 files/digest-aircrack-ng-0.4 67
+SHA256 4ddcf182fdde1ef9aa5a53a5a69f18c4dd34f9c065c55979196bb0b7baa63df9 files/digest-aircrack-ng-0.4 67
 MD5 fa1e307730dae389bd54c27130c69ec5 metadata.xml 545
+RMD160 74b28f94434b9af081b71806679b128b42cb8068 metadata.xml 545
+SHA256 af8903a9f2e95968febae6760b251c2145e3a26569f71ff64266ae2b4fcbbb2a metadata.xml 545
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFERmyAomPajV0RnrERAjZ2AKCD99jtuvwkrzAcxxdP9oTH0ij6uwCfSneb
+avZbxy2s8P4uI043Gm21oPE=
+=Lbuo
+-----END PGP SIGNATURE-----
