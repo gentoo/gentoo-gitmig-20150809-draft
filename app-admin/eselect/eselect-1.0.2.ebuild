@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.2.ebuild,v 1.1 2006/04/14 16:28:33 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.2.ebuild,v 1.2 2006/04/19 11:45:18 flameeyes Exp $
 
 DESCRIPTION="Modular -config replacement utility"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
@@ -15,6 +15,7 @@ DEPEND="sys-apps/sed
 	doc? ( dev-python/docutils )
 	|| (
 		sys-apps/coreutils
+		sys-freebsd/freebsd-bin
 		app-admin/realpath
 	)"
 RDEPEND="sys-apps/sed
