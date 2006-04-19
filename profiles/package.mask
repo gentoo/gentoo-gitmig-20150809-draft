@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5237 2006/04/19 01:42:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5238 2006/04/19 13:07:35 lcars Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Andrea Barisani <lcars@gentoo.org> (19 Apr 2006)
+# masked for initial import
+sys-kernel/systrace-sources
 
 # Brent Baude <ranger@gentoo.org> (18 Apr 2006)
 # Masked pending removal. This package had been deprecated
