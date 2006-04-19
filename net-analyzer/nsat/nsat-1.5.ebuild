@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5.ebuild,v 1.13 2006/02/15 23:37:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5.ebuild,v 1.14 2006/04/19 00:31:08 vanquirius Exp $
 
 inherit eutils
 
@@ -14,18 +14,20 @@ KEYWORDS="~ppc ~sparc x86"
 IUSE="X"
 
 RDEPEND="X? ( || ( x11-libs/libX11 virtual/x11 )
-				dev-lang/tk )
+		dev-lang/tk )
 	net-libs/libpcap"
 
 DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-configure.patch
+	epatch "${FILESDIR}"/${P}-configure.patch
+	# bug 128204
+	epatch "${FILESDIR}"/${P}-lvalue-gcc4.patch
 
 	sed -i "s:^#CGIFile /usr/local/share/nsat/nsat.cgi$:#CGIFile /usr/share/nsat/nsat.cgi:g" \
 		nsat.conf
@@ -55,6 +57,6 @@ src_install () {
 	insinto /etc/nsat
 	doins nsat.conf
 
-	dodoc README doc/LICENSE doc/CHANGES
+	dodoc README doc/CHANGES
 	doman doc/nsat.8
 }
