@@ -1,6 +1,6 @@
---- DenyHosts-2.2/denyhosts.cfg-dist	2006-02-28 10:28:21.000000000 +0000
-+++ DenyHosts-2.2-new/denyhosts.cfg-dist	2006-02-28 10:42:13.000000000 +0000
-@@ -9,13 +9,16 @@
+--- DenyHosts-2.4/denyhosts.cfg-dist	2006-04-09 13:37:46.000000000 +0000
++++ DenyHosts-2.4-new/denyhosts.cfg-dist	2006-04-19 16:25:57.000000000 +0000
+@@ -9,20 +9,22 @@
  # argument
  #
  # Redhat or Fedora Core:
@@ -14,13 +14,20 @@
 -#SECURE_LOG = /var/log/messages
 +# Gentoo/SuSE:
 +SECURE_LOG = /var/log/messages
-+#
+ #
 +# Metalog:
-+#SECURE_LOG = /var/log/sshd/current
++SECURE_LOG = /var/log/sshd/current
+ # Mac OS X (v10.4 or greater - 
+ #   also refer to:   http://www.denyhosts.net/faq.html#macos
+ #SECURE_LOG = /private/var/log/asl.log
+ #
+ # Mac OS X (v10.3 or earlier):
+-SECURE_LOG=/private/var/log/system.log
++#SECURE_LOG=/private/var/log/system.log
  #
  ########################################################################
  
-@@ -126,7 +129,7 @@
+@@ -150,7 +152,7 @@
  # Note: it is recommended that you use an absolute pathname
  # for this value (eg. /home/foo/denyhosts/data)
  #
@@ -29,49 +36,17 @@
  #
  #######################################################################
  
-@@ -168,11 +171,14 @@
+@@ -192,10 +194,10 @@
  # running at a time.
  #
  # Redhat/Fedora:
 -LOCK_FILE = /var/lock/subsys/denyhosts
 +#LOCK_FILE = /var/lock/subsys/denyhosts
  #
- # Debian
- #LOCK_FILE = /var/run/denyhosts.pid
- #
-+# Gentoo
+-# Debian
+-#LOCK_FILE = /var/run/denyhosts.pid
++# Gentoo/Debian
 +LOCK_FILE = /var/run/denyhosts.pid
-+#
+ #
  # Misc
  #LOCK_FILE = /tmp/denyhosts.lock
- #
-diff -urN DenyHosts-2.1/setup.py DenyHosts-2.1-new/setup.py
---- DenyHosts-2.1/setup.py	2006-02-10 01:03:39.000000000 +0000
-+++ DenyHosts-2.1-new/setup.py	2006-02-13 11:03:08.000000000 +0000
-@@ -20,17 +20,17 @@
-       author="Phil Schwartz",
-       author_email="phil_schwartz@users.sourceforge.net",
-       url="http://denyhosts.sourceforge.net",
--      scripts=['denyhosts.py'],
-+##      scripts=['denyhosts.py'],
-       package_dir={'DenyHosts': 'DenyHosts'},
-       packages=["DenyHosts"],
--      data_files=[(libpath, glob("denyhosts.cfg-dist")),
--                  (libpath, glob("setup.py")),
--                  (libpath, glob("daemon-control-dist")),
--                  (libpath, glob("CHANGELOG.txt")),
--                  (libpath, glob("README.txt")),
--                  (scriptspath, glob("scripts/*")),
--                  (pluginspath, glob("plugins/*")),
--                  (libpath, glob("LICENSE.txt"))],
-+##      data_files=[(libpath, glob("denyhosts.cfg-dist")),
-+##                  (libpath, glob("setup.py")),
-+##                  (libpath, glob("daemon-control-dist")),
-+##                  (libpath, glob("CHANGELOG.txt")),
-+##                  (libpath, glob("README.txt")),
-+##                  (scriptspath, glob("scripts/*")),
-+##                  (pluginspath, glob("plugins/*")),
-+##                  (libpath, glob("LICENSE.txt"))],
-       license="GPL v2",
-       ##extra_path='denyhosts',
-       long_description="""
