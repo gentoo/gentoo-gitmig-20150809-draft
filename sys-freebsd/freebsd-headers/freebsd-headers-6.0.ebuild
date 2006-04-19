@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-headers/freebsd-headers-6.0.ebuild,v 1.2 2006/04/18 23:29:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-headers/freebsd-headers-6.0.ebuild,v 1.3 2006/04/19 00:30:45 flameeyes Exp $
 
 inherit bsdmk freebsd toolchain-funcs
 
@@ -47,5 +47,7 @@ src_install() {
 	einfo "Installing for ${CTARGET} in ${CHOST}.."
 
 	dodir "${INCLUDEDIR}"
-	$(freebsd_get_bmake) installincludes DESTDIR="${D}" INCLUDEDIR="${INCLUDEDIR}" || die "Install failed"
+	$(freebsd_get_bmake) installincludes \
+		MACHINE=$(tc-arch-kernel) \
+		DESTDIR="${D}" INCLUDEDIR="${INCLUDEDIR}" || die "Install failed"
 }

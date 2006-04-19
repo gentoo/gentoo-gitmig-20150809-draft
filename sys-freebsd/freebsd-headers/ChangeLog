@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-headers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-headers/ChangeLog,v 1.3 2006/04/18 23:29:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-headers/ChangeLog,v 1.4 2006/04/19 00:30:43 flameeyes Exp $
+
+  19 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-headers-6.0.ebuild:
+  Set MACHINE correctly depending on CTARGET.
 
   18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-headers-6.0.ebuild:
