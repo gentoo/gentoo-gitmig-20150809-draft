@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1857 2006/04/19 22:09:37 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1858 2006/04/19 22:14:02 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -112,10 +112,10 @@ app-emulation/qemu:qemu-fast - Enables the vl/qemu-fast on the x86 cpu
 app-emulation/qemu:softmmu - Support for softmmu targets
 app-emulation/uade:audacious - Enables support for media-sound/audacious
 app-emulation/vmware-console:esx - Enable VMware ESX Server documentation instead of GSX server documentation
-app-emulation/xen:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS 
+app-emulation/xen:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS (not supported)
 app-emulation/xen:pae - Enable support for PAE kernels (usually x86-32 with >4GB memory)
 app-emulation/xen:screen - Enable support for running domain U consoles in a screen session
-app-emulation/xen-tools:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS 
+app-emulation/xen-tools:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS (not supported)
 app-emulation/xen-tools:screen - Enable support for running domain U consoles in a screen session
 app-forensics/samhain:login-watch - Compile in the module to watch for login/logout events
 app-forensics/samhain:mounts-check - Compile in the module to check for correct mount options
@@ -861,7 +861,7 @@ media-video/mpeg4ip:x264 - Enable x264 codec for mp4live (using x264-svn)
 media-video/mplayer:3dnowext - Enables 3dnow extensions in mplayer
 media-video/mplayer:bl - Enables Blinkenlights support in mplayer
 media-video/mplayer:cpudetection - Enables runtime cpudetection
-media-video/mplayer:custom-cflags - Enables custom cflags
+media-video/mplayer:custom-cflags - Enables custom cflags (not supported)
 media-video/mplayer:edl - Enables usage of Edit Decision Lists
 media-video/mplayer:i8x0 - Enables support for the i8x0 xvmc video driver
 media-video/mplayer:live - Enables live.com streaming media support
@@ -1354,7 +1354,7 @@ sys-boot/arcboot:cobalt - Disables support for Cobalt Microserver hardware (Qube
 sys-boot/arcboot:ip27 - Disables support for SGI Origin (IP27)
 sys-boot/arcboot:ip28 - Disables support for SGI Indigo2 Impact R10000 (IP28)
 sys-boot/arcboot:ip30 - Disables support for SGI Octane (IP30)
-sys-boot/grub:custom-cflags - Enables custom cflags
+sys-boot/grub:custom-cflags - Enables custom cflags (not supported)
 sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
 sys-cluster/charm:cmkopt - Enable CMK optimisation
