@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.4 2006/02/28 22:31:50 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.5 2006/04/19 15:27:00 gustavoz Exp $
+
+  19 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  libnotify-0.3.2.ebuild:
+  Keyworded ~sparc wrt #130313
 
   28 Feb 2006; Saleem Abdulrasool <compnerd@gentoo.org> metadata.xml:
   Marking myself as primary maintainer

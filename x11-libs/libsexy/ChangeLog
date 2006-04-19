@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libsexy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.3 2006/03/20 05:01:14 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.4 2006/04/19 15:24:34 gustavoz Exp $
+
+  19 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> libsexy-0.1.8.ebuild:
+  Keyworded ~sparc wrt #130313
 
 *libsexy-0.1.8 (20 Mar 2006)
 
