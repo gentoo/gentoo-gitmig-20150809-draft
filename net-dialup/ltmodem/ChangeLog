@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/ltmodem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.25 2006/03/12 17:04:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.26 2006/04/19 18:49:14 mrness Exp $
+
+  19 Apr 2006; Alin Nastac <mrness@gentoo.org>
+  +files/ltmodem-2.6-alk-8-module_param.patch,
+  ltmodem-8.31_alpha10-r2.ebuild:
+  Convert MODULE_PARM to module_param (#130412).
 
   12 Mar 2006; Alin Nastac <mrness@gentoo.org>
   -ltmodem-8.31_alpha10-r1.ebuild, ltmodem-8.31_alpha10-r2.ebuild:
