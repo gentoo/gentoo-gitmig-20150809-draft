@@ -1,6 +1,14 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.10 2006/02/01 03:03:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.11 2006/04/19 23:17:16 robbat2 Exp $
+
+*audit-1.2.1 (19 Apr 2006)
+*audit-1.1.6 (19 Apr 2006)
+
+  19 Apr 2006; Robin H. Johnson <robbat2@gentoo.org> -audit-1.1.3.ebuild,
+  +audit-1.1.6.ebuild, +audit-1.2.1.ebuild:
+  Put new 1.1.6 and 1.2.1 versions into tree. Still unusable until 2.6.17-rc1
+  headers get out.
 
   01 Feb 2006; Robin H. Johnson <robbat2@gentoo.org> audit-1.1.3.ebuild:
   Fix typo.
