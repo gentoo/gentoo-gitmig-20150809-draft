@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/aespipe
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.10 2005/08/10 16:44:12 kito Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.11 2006/04/19 03:47:29 weeve Exp $
+
+  19 Apr 2006; Jason Wever <weeve@gentoo.org> aespipe-2.2a.ebuild:
+  Stable on SPARC.
 
   10 Aug 2005; Kito <kito@gentoo.org> aespipe-2.3b.ebuild:
   ~ppc-macos keyword.
