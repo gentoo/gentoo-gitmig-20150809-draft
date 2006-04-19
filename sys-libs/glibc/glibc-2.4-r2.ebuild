@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.11 2006/04/17 16:52:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.12 2006/04/19 00:49:54 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -551,6 +551,7 @@ toolchain-glibc_pkg_postinst() {
 		# if the host locales.gen contains no entries, we'll install everything
 		local locale_list="${ROOT}etc/locale.gen"
 		if [[ -z $(locale-gen --list --config "${locale_list}") ]] ; then
+			ewarn "Generating all locales; edit /etc/locale.gen to save time/space"
 			locale_list="${ROOT}usr/share/i18n/SUPPORTED"
 		fi
 		locale-gen --config "${locale_list}"
