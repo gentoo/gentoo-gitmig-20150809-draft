@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r14.ebuild,v 1.2 2006/03/14 19:06:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r14.ebuild,v 1.3 2006/04/19 20:38:52 robbat2 Exp $
 
 inherit eutils toolchain-funcs fixheadtails
 
@@ -14,7 +14,7 @@ SRC_URI="
 	mirror://qmail/ucspi-rss.diff
 	ssl? (
 		!ipv6? ( http://www.nrg4u.com/qmail/ucspi-tcp-ssl-20050405.patch.gz )
-		ipv6? ( mirror://ucspi-tcp-0.88-ipv6-ssl-20050405.patch )
+		ipv6? ( mirror://gentoo/ucspi-tcp-0.88-ipv6-ssl-20050405.patch )
 	)
 "
 

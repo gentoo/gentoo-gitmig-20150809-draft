@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.43 2006/03/14 19:06:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.44 2006/04/19 20:38:52 robbat2 Exp $
+
+  19 Apr 2006; Robin H. Johnson <robbat2@gentoo.org>
+  ucspi-tcp-0.88-r14.ebuild:
+  Fix typo in SRC_URI for patch.
 
   14 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
   ucspi-tcp-0.88-r14.ebuild:
