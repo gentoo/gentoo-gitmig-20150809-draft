@@ -2,14 +2,27 @@
 Hash: SHA1
 
 MD5 a78db37c104932ff0370f27e111fae7a ChangeLog 2767
+RMD160 66968046ab85d12a343c5afae3c93bec772f9de1 ChangeLog 2767
+SHA256 9d50f75f8a28149c1de994c8ea9d2a7b89d0fba18a15c6b5285e04ccc8ed2fea ChangeLog 2767
 MD5 34628d3f6507592703856c82761becf0 files/digest-unace-1.2b-r1 61
+RMD160 2e773d1107b0ed655c5db4e88ab3612bb2a04d1d files/digest-unace-1.2b-r1 61
+SHA256 b3da938cd759b00df186cfb71f9cc371e613c38a99b49c4b9df5611199f7a2ea files/digest-unace-1.2b-r1 61
 MD5 dd6ae2184aa3e8f4767d5298880afee6 files/unace-1.2b-64bit.patch 1604
+RMD160 fb7cc31a9b73f918da5907d54ba7ec54e450b4b9 files/unace-1.2b-64bit.patch 1604
+SHA256 ce7233f16b6001079749cfc5bfc4d52d2f0711c3cc2943c3272d58644c59caa8 files/unace-1.2b-64bit.patch 1604
 MD5 5ec540a4e79c388d1b3e270f2c7083f8 files/unace-1.2b-CAN-2005-0160-CAN-2005-0161.patch 4618
+RMD160 e638448a91f1017f62bd1d351ef3762370beee04 files/unace-1.2b-CAN-2005-0160-CAN-2005-0161.patch 4618
+SHA256 c8327d6ae8bf1b905e7faaf43a54cae7e01ace9eb8aefb61b9a6fabbf4d78c74 files/unace-1.2b-CAN-2005-0160-CAN-2005-0161.patch 4618
+MD5 d828e2c5c074c17310d60011b4bdda08 metadata.xml 303
+RMD160 1be4070a07fb83737bfeac8626a0d3ef653a3f53 metadata.xml 303
+SHA256 b57b72eea37b59d126aec96a9f2fc236c32ad5d044735bb76e889442dc79507a metadata.xml 303
 MD5 979fd28cb1aac325c9a6d86edefc17bf unace-1.2b-r1.ebuild 866
+RMD160 f63519031a4df592368c4f5ebc2d978c371a20cf unace-1.2b-r1.ebuild 866
+SHA256 47af2b6bc35dc2b89ddfcbb0d3ea7fce7adfabeaccc815188f351c79fbea4e02 unace-1.2b-r1.ebuild 866
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDi8TjgIKl8Uu19MoRAtHBAJ9mT3TLg8oMuHpPFsfry/tc2my2swCfS+Wr
-xujFZpl6sVXfo/BiU/1FsgM=
-=aC7X
+iD8DBQFERbJ+SENan+PfizARAusjAJ0VMgZkXS6Jy++n/56tFKtDJTJE+gCeLoIO
+qcHPP3nBH/ZE0CNu6TC86tM=
+=mxJv
 -----END PGP SIGNATURE-----
