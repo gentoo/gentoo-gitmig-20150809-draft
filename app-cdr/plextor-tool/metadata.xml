@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>vapier@gentoo.org</email>
+</maintainer>
+<longdescription>A console utility that can set certain parameters of
+	Plextor/MMC cdrom and cd-rw drives.</longdescription>
+</pkgmetadata>
