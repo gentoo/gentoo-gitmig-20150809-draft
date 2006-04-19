@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-titlecase/quodlibet-titlecase-2980.ebuild,v 1.1 2006/04/18 16:45:12 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-titlecase/quodlibet-titlecase-2980.ebuild,v 1.2 2006/04/19 20:26:30 tcort Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.py.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=media-sound/quodlibet-0.19.1"
