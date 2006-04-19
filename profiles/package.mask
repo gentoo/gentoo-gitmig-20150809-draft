@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5239 2006/04/19 17:34:53 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5240 2006/04/19 18:22:41 swegener Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1052,10 +1052,6 @@ dev-lisp/cmucl-source
 # Buggy and seemingly not maintained upstream
 # Using media-gfx/gqview is a much better choice.
 media-gfx/gtksee
-
-# Sven Wegener <swegener@gentoo.org> (13 Oct 2005)
-# CVS Development Snapshot
-=net-irc/xchat-2.5.0*
 
 # Akinori Hattori <hattya@gentoo.org> (06 Oct 2005)
 # development branch
