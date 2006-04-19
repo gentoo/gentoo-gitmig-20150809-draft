@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.0-r3.ebuild,v 1.1 2006/04/12 13:58:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.0-r4.ebuild,v 1.1 2006/04/19 23:44:38 flameeyes Exp $
 
 inherit bsdmk freebsd
 
@@ -37,6 +37,7 @@ src_unpack() {
 	epatch "${FILESDIR}/SA-06-06-kmem60.patch"
 	epatch "${FILESDIR}/SA-06-07-pf.patch"
 	epatch "${FILESDIR}/SA-06-11-ipsec.patch"
+	epatch "${FILESDIR}/SA-06-14-fpu.patch"
 
 	sed -i -e "s:%GENTOOPVR%:${PVR}:" conf/newvers.sh
 }
@@ -51,7 +52,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [[ ! -L ${ROOT}usr/src/sys ]]; then
+	if [[ ! -L ${ROOT}/usr/src/sys ]]; then
 		einfo "/usr/src/sys symlink doesn't exist; creating..."
 		ln -sf sys-${MY_PVR} ${ROOT}/usr/src/sys || \
 			eerror "Couldn't create ${ROOT}/usr/src/sys symlink."
@@ -59,7 +60,7 @@ pkg_postinst() {
 			eerror "Couldn't create ${ROOT}/usr/src/sys-${RV} symlink."
 	elif use symlink; then
 		einfo "Updating /usr/src/sys symlink..."
-		rm ${ROOT}/usr/src/sys
+		rm ${ROOT}/usr/src/sys ${ROOT}/usr/src/sys-${RV}
 		ln -sf sys-${MY_PVR} ${ROOT}/usr/src/sys || \
 			eerror "Couldn't create ${ROOT}/usr/src/sys symlink."
 		ln -sf sys-${MY_PVR} ${ROOT}/usr/src/sys-${RV} || \
