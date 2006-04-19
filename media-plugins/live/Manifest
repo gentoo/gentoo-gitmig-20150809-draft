@@ -1,4 +1,4 @@
-MD5 f3e4e9235a37efa0305dc4bf30f5b74d ChangeLog 7429
+MD5 8559f0a4faa721463b8617d87cf6b0aa ChangeLog 7533
 MD5 2351d6af96c8b0b3bd8bc5bd838b949c files/digest-live-2004.03.27 68
 MD5 11468abfa77dd248fa59bc2adf5fae2c files/digest-live-2004.07.20 67
 MD5 ad8ee57b807e858f0f5d7de2c4caf587 files/digest-live-2004.09.30 67
@@ -12,5 +12,5 @@ MD5 89948cc5466a62b22c61fc5a27bdb9ef live-2004.07.20.ebuild 1917
 MD5 7adfcab55e4fee6c3ab94c332d713bed live-2004.09.30.ebuild 1949
 MD5 da80c01b6f5a4bfea9dc18909ea9bd2e live-2005.01.29.ebuild 2075
 MD5 ec681df189ca718d6693d9f140c30e72 live-2005.08.26.ebuild 2176
-MD5 b2d6d91f82fd6b2c8dc208ecf879a3c2 live-2005.11.11.ebuild 2006
+MD5 d9bf2acc69d6c56808c4290c4a5aafef live-2005.11.11.ebuild 2003
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
