@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r16.ebuild,v 1.8 2006/01/19 08:42:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r16.ebuild,v 1.9 2006/04/19 17:24:59 chtekk Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -201,12 +201,14 @@ src_compile() {
 	make ab || die
 }
 
-src_install () {
-	set_filter_flags
-
+pkg_preinst() {
 	# setup apache user and group
 	enewgroup apache 81
 	enewuser apache 81 -1 /var/www apache
+}
+
+src_install () {
+	set_filter_flags
 
 	local i
 	make DESTDIR=${D} install || die

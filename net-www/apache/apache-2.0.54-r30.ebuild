@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r30.ebuild,v 1.5 2006/04/17 16:19:12 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r30.ebuild,v 1.6 2006/04/19 17:24:59 chtekk Exp $
 
 inherit eutils gnuconfig
 
@@ -175,11 +175,13 @@ src_compile() {
 	fi
 }
 
-src_install () {
+pkg_preinst() {
 	# setup apache user and group
 	enewgroup apache 81
 	enewuser apache 81 -1 /var/www apache
+}
 
+src_install () {
 	# general install
 	make DESTDIR=${D} install || die
 	dodoc ABOUT_APACHE CHANGES INSTALL LAYOUT LICENSE README* ${GENTOO_PATCHDIR}/docs/robots.txt

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r2.ebuild,v 1.6 2006/04/16 23:25:05 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r2.ebuild,v 1.7 2006/04/19 17:24:59 chtekk Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -205,14 +205,15 @@ src_compile() {
 #	fi
 }
 
-src_install () {
-
-
-	#### DEFAULT SETUP & INSTALL
-
+pkg_preinst() {
 	# setup apache user and group
 	enewgroup apache 81
 	enewuser apache 81 -1 /var/www apache
+}
+
+src_install () {
+
+	#### DEFAULT SETUP & INSTALL
 
 	# general install
 	einfo "Beginning install phase"

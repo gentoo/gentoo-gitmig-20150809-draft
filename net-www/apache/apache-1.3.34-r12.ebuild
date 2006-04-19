@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.34-r12.ebuild,v 1.2 2006/04/01 23:24:37 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.34-r12.ebuild,v 1.3 2006/04/19 17:24:59 chtekk Exp $
 
 inherit eutils fixheadtails multilib
 
@@ -144,11 +144,13 @@ src_compile() {
 	fi
 }
 
-src_install() {
+pkg_preinst() {
 	# setup apache user and group
 	enewgroup apache 81
 	enewuser apache 81 -1 /var/www apache
+}
 
+src_install() {
 	# general install
 	make install-quiet root=${D} || die
 	dodoc ABOUT_APACHE Announcement INSTALL LICENSE README* ${GENTOO_PATCHDIR}/docs/robots.txt
