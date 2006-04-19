@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r1.ebuild,v 1.12 2006/04/17 20:51:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r1.ebuild,v 1.13 2006/04/19 13:28:04 lcars Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 	hpn? ( http://www.psc.edu/networking/projects/hpn-ssh/${HPN_PATCH} )
 	X509? ( http://roumenpetrov.info/openssh/x509-5.3/${X509_PATCH} )
 	smartcard? ( http://www.omniti.com/~jesus/projects/${SECURID_PATCH} )
-	ldap? ( http://www.opendarwin.org/en/projects/openssh-lpk/files/${LDAP_PATCH} )"
+	ldap? ( http://dev.gentoo.org/~lcars/ldap/${LDAP_PATCH} )"
 
 LICENSE="as-is"
 SLOT="0"

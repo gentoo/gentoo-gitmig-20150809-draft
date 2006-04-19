@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.168 2006/04/17 20:51:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.169 2006/04/19 13:28:04 lcars Exp $
+
+  19 Apr 2006; <lcars@gentoo.org> openssh-4.3_p1.ebuild,
+  openssh-4.3_p2-r1.ebuild:
+  Moving ldap patch to dev.gentoo.org waiting for mirror to get the updated version
+  and fixing digest issues. bug #130354
 
   17 Apr 2006; Markus Rothe <corsair@gentoo.org> openssh-4.3_p2-r1.ebuild:
   Stable on ppc64; bug #130027
