@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 335c951a31edd31a9be9d67c6f86a6aa ChangeLog 809
 MD5 18c70aefbb9166e2c5b7feffb02b32b0 files/digest-libnotify-0.3.2 247
 MD5 cd94d307379b9d58a49aab12c89b3130 libnotify-0.3.2.ebuild 705
 MD5 d16211c4cb4eb6ad762a7b3481d04417 metadata.xml 309
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFERlcEKRy60XGEcJIRAuCAAJ9kSQj3HJ7IznmApyXhfZ+5f4gz5ACffjbC
++/lpZGGB8oauIlWbbnLXAPc=
+=wZUB
+-----END PGP SIGNATURE-----

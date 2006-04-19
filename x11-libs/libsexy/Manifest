@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 67e9597b3b2c8d1469a0abcff364ace7 ChangeLog 752
 MD5 81dd956759c4566e392c51ea95ac379e files/digest-libsexy-0.1.4 65
 MD5 e3613abc0c271bc70a83e965f0e1a120 files/digest-libsexy-0.1.5 241
@@ -6,3 +9,10 @@ MD5 0cb62c78090dd62185b47632e298f11b libsexy-0.1.4.ebuild 701
 MD5 76ec79ecc7282a90fa66b55725985d93 libsexy-0.1.5.ebuild 701
 MD5 b7fc714509d0d26e5ca3fbbdfc157b03 libsexy-0.1.8.ebuild 730
 MD5 715c5480cdc2603baa75a13cf20e3d24 metadata.xml 312
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFERlZFKRy60XGEcJIRAgioAJwP4aobhvxBoooB++eeppytFodNZQCdGcbW
+lHHiQRhyPXoCK561ooseSOg=
+=54fj
+-----END PGP SIGNATURE-----
