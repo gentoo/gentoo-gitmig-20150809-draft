@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.64 2006/04/17 20:55:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.65 2006/04/19 04:47:10 vapier Exp $
+
+*slocate-3.1 (19 Apr 2006)
+
+  19 Apr 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/slocate-3.1-build.patch, +files/slocate-3.1-incompat-warning.patch,
+  +slocate-3.1.ebuild:
+  Version bump 130286 by F. Steinel.
 
   17 Apr 2006; Markus Rothe <corsair@gentoo.org> slocate-2.7-r8.ebuild:
   Stable on ppc64; bug #130079

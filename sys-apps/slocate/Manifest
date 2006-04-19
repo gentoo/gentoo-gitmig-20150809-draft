@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX slocate-2.7-bounds.patch 305 RMD160 df8f220cdf25d98e2fa9fd0e054b2151b3a4b1ad SHA1 a82e6f131ecc6109ac8e8546ba543913e151f39e SHA256 59ce3339cacaa817d65031fae80c0bd96962f01915511a096e47fafa295d5e8f size 305
 MD5 6cd691d75d501eb87ed12cf31c1e1ff6 files/slocate-2.7-bounds.patch 305
 RMD160 df8f220cdf25d98e2fa9fd0e054b2151b3a4b1ad files/slocate-2.7-bounds.patch 305
@@ -54,3 +57,10 @@ MD5 dae9a79a94d9e7f6f19cbe6255a86347 files/digest-slocate-3.1 232
 RMD160 0321f108f5da4e100ea515a23e40c96162760fb4 files/digest-slocate-3.1 232
 SHA256 88814468d0d142ef8d368f35c29b0a2ba64cd7868069d4e96ad22da2bc943c2c files/digest-slocate-3.1 232
 size 232 files/digest-slocate-3.1 232
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERcEg2+ySkm8kpY0RAvNGAJ4nKMAuUfC827TAa6t0XVYlw/B1fwCgmfqw
+xY3Cwbypv2vMteakUkdDhgE=
+=FBB0
+-----END PGP SIGNATURE-----
