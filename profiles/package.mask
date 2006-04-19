@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5238 2006/04/19 13:07:35 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5239 2006/04/19 17:34:53 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -627,10 +627,6 @@ www-client/seamonkey
 # Dead upstream, breaks with recent mono versions
 # No maintainer
 media-video/mvideo
-
-# Alec Warner <antarus@gentoo.org> (27 Feb 2006)
-# Maintainer did not respond and dead upstrea; bug # 20201
-x11-misc/bbapm
 
 # John N. Laliberte <allanonjl@gentoo.org> (24 Feb 2006)
 # old gtk+-1 edit
