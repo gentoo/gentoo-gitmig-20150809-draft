@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.3.0.ebuild,v 1.1 2006/04/18 22:13:02 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.3.0-r1.ebuild,v 1.1 2006/04/19 18:21:30 ferdy Exp $
 
 inherit python toolchain-funcs eutils
 
-DOC_VER=${PV}
+DOC_VER=${PV}-r1
 
 DESCRIPTION="GIT - the stupid content tracker"
 HOMEPAGE="http://kernel.org/pub/software/scm/git/"
@@ -15,7 +15,7 @@ SRC_URI="mirror://kernel/software/scm/git/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="mozsha1 ppcsha1 doc curl X gitsendemail webdav"
+IUSE="mozsha1 ppcsha1 doc curl X webdav"
 
 DEPEND="dev-libs/openssl
 		sys-libs/zlib
@@ -26,9 +26,7 @@ RDEPEND="${DEPEND}
 		dev-lang/perl
 		>=dev-lang/python-2.3
 		app-text/rcs
-		X? ( dev-lang/tk )
-		dev-perl/String-ShellQuote
-		gitsendemail? ( dev-perl/Mail-Sendmail dev-perl/Email-Valid )"
+		X? ( dev-lang/tk )"
 
 # This is needed because for some obscure reasons future calls to make don't
 # pick up these exports if we export them in src_unpack()
@@ -48,7 +46,7 @@ exportmakeopts() {
 		use webdav && ewarn "USE=webdav only matters with USE=curl. Ignoring."
 	fi
 
-	use gitsendemail && myopts="${myopts} WITH_SEND_EMAIL=YesPlease"
+	myopts="${myopts} WITH_SEND_EMAIL=YesPlease"
 
 	# Older python versions need own subproccess.py
 	python_version
@@ -110,5 +108,8 @@ pkg_postinst() {
 	einfo
 	einfo "If you want to import svn repositories into git, consider using the"
 	einfo "git-svnimport command. You should install dev-util/subversion before"
+	einfo
+	einfo "If you want to use the included CVS server you will need to install"
+	einfo "dev-perl/DBI and dev-perl/DBD-SQLite"
 	einfo
 }
