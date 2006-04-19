@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.7.ebuild,v 1.10 2006/03/30 19:35:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.7.ebuild,v 1.11 2006/04/19 01:00:25 vericgar Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="Apache Portable Runtime Library"
 HOMEPAGE="http://apr.apache.org/"
@@ -21,6 +21,7 @@ DEPEND="dev-libs/expat
 	ldap? ( =net-nds/openldap-2* )"
 
 src_compile() {
+	elibtoolize || die "elibtoolize failed"
 
 	local myconf=""
 
