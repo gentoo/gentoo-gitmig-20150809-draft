@@ -1,0 +1,9 @@
+# ChangeLog for app-editors/XML-XSH2
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH2/ChangeLog,v 1.1 2006/04/19 00:13:17 mcummings Exp $
+
+*XML-XSH2-2.0.2 (19 Apr 2006)
+
+  19 Apr 2006; <mcummings@gentoo.org> +metadata.xml, +XML-XSH2-2.0.2.ebuild:
+  Version bump, successor to XML-XSH
+
