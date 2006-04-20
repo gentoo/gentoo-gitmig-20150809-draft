@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pylint
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.27 2006/04/01 15:24:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.28 2006/04/20 12:33:03 marienz Exp $
+
+*pylint-0.11.0 (20 Apr 2006)
+
+  20 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  +files/pylint-0.11.0-gui-no-tkinter.patch, +pylint-0.11.0.ebuild:
+  Version bump with more robust cleanup of test files and a friendlier failure
+  if pylint-gui is run without Tkinter present (bug #120771)
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pylint-0.10.0.ebuild:
   Mark 0.10.0 ~ia64
