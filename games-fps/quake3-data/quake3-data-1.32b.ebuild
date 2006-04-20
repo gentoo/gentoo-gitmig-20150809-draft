@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/quake3-data-1.32b.ebuild,v 1.8 2006/04/17 21:50:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/quake3-data-1.32b.ebuild,v 1.9 2006/04/20 19:10:03 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -16,6 +16,7 @@ IUSE="cdinstall"
 RDEPEND=""
 
 S=${WORKDIR}
+dir=${GAMES_DATADIR}/quake3
 
 pkg_setup() {
 	games_pkg_setup
@@ -47,7 +48,8 @@ pkg_postinst() {
 	games_pkg_postinst
 	if ! use cdinstall ; then
 		echo
-		einfo "You need to copy pak0.pk3 from your Quake3 CD into ${dir}/baseq3."
+		einfo "You need to copy pak0.pk3 from your Quake3 CD into:"
+		einfo " ${dir}/baseq3."
 		einfo "Or if you have got a Window installation of Q3 make a symlink to save space."
 		echo
 		einfo "Or, re-emerge quake3-data with USE=cdinstall."
