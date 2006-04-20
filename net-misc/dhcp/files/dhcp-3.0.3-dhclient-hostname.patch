@@ -1,6 +1,6 @@
 --- client/scripts/linux 
 +++ client/scripts/linux 
-@@ -141,9 +141,8 @@
+@@ -138,9 +138,8 @@
     [ x$reason = xREBIND ] || [ x$reason = xREBOOT ]; then
    current_hostname=`hostname`
    if [ x$current_hostname = x ] || \

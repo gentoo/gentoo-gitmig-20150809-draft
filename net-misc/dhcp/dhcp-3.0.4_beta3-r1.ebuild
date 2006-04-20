@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4_beta3-r1.ebuild,v 1.6 2006/04/14 21:19:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4_beta3-r1.ebuild,v 1.7 2006/04/20 20:06:16 uberlord Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.isc.org/isc/dhcp/${MY_P}.tar.gz"
 
 LICENSE="isc-dhcp"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="static selinux"
 
 RDEPEND="selinux? ( sec-policy/selinux-dhcp )
@@ -37,13 +37,15 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-ntp.patch"
 	# resolvconf support in dhclient-script
 	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-resolvconf.patch"
-	# Allow dhclient to use IF_METRIC to set route metrics
-	# Also, stop doing ifconfig down on Linux as that kills wpa_supplicant
-	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-metric.patch"
 	# Fix setting hostnames on Linux
 	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-hostname.patch"
 	# Allow mtu settings
 	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-mtu.patch"
+	# Allow dhclient to use IF_METRIC to set route metrics
+	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-metric.patch"
+	# Stop downing the interface on Linux as that breaks link dameons
+	# such as wpa_supplicant and netplug
+	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-no-down.patch"
 	# Quiet the isc blurb
 	epatch "${FILESDIR}/${PN}-3.0.3-no_isc_blurb.patch"
 	# Enable dhclient to get extra configuration from stdin
