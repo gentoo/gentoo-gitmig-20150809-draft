@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-RSA
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.37 2006/04/16 22:54:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.38 2006/04/20 20:22:38 tcort Exp $
+
+  20 Apr 2006; Thomas Cort <tcort@gentoo.org>
+  Crypt-OpenSSL-RSA-0.22-r1.ebuild:
+  Added ~amd64 keyword wrt Bug #123488.
 
   16 Apr 2006; Michael Hanselmann <hansmi@gentoo.org>
   Crypt-OpenSSL-RSA-0.22-r1.ebuild:
