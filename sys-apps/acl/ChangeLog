@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/acl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.52 2006/02/19 21:51:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.53 2006/04/20 01:36:08 vapier Exp $
+
+  20 Apr 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/acl-2.2.34-LDFLAGS.patch, acl-2.2.34.ebuild:
+  Respect user LDFLAGS #126825 by Diego Pettenò.
 
   19 Feb 2006; Joshua Kinard <kumba@gentoo.org> acl-2.2.32.ebuild:
   Marked stable on mips.
