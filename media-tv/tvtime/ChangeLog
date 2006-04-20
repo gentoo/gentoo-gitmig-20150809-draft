@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.25 2006/03/15 00:51:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.26 2006/04/20 05:00:49 flameeyes Exp $
+
+  20 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/tvtime-1.0.2-xinerama.patch, tvtime-1.0.2.ebuild:
+  Add patch to allow disabling xinerama and add xinerama useflag.
 
   15 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> files/tvtime-pic.patch:
   Fix PIC handling on AMD64 systems when PIE is enabled, bug #122437. Many
