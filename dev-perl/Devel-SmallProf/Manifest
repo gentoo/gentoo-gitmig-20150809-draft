@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 92175d44fc6d1298344cdbf039ac6db4 ChangeLog 417
 MD5 f575354e956436dd06aada9ddae6d2fe Devel-SmallProf-1.15.ebuild 482
 MD5 c38170dc0d0b63c54115687eba2919a8 files/digest-Devel-SmallProf-1.15 70
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERu/wtG5z4I8BtQoRAujkAJ0dSKn9Koe+g/vFPaGB5x/jgnC/wgCeO/vr
+ZCDv9wjkUwW80/Ej6PosTUY=
+=9yCI
+-----END PGP SIGNATURE-----

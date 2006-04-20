@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Devel-SmallProf
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-SmallProf/ChangeLog,v 1.1 2006/04/20 02:20:26 mcummings Exp $
+
+*Devel-SmallProf-1.15 (20 Apr 2006)
+
+  20 Apr 2006; <mcummings@gentoo.org> +metadata.xml,
+  +Devel-SmallProf-1.15.ebuild:
+  Initial import. Used for profiling, such as in app-vim/perl-support
+
