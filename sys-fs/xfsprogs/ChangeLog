@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.45 2006/04/10 23:02:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.46 2006/04/20 01:38:56 vapier Exp $
+
+  20 Apr 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/xfsprogs-2.7.11-LDFLAGS.patch, xfsprogs-2.7.11.ebuild:
+  Respect user LDFLAGS #126825 by Diego Pettenò.
 
   10 Apr 2006; Mike Frysinger <vapier@gentoo.org>
   +files/xfsprogs-2.7.11-no-compress-docs.patch, xfsprogs-2.7.11.ebuild:

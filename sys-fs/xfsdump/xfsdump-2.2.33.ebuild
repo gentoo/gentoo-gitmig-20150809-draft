@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.33.ebuild,v 1.1 2006/01/27 00:57:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.33.ebuild,v 1.2 2006/04/20 01:40:49 vapier Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/xfsdump-2.2.30-docs.patch
+	epatch "${FILESDIR}"/${P}-LDFLAGS.patch #126825
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:=.*:= /usr/share/doc/${PF}:" \
 		-e '/^GCFLAGS/s:-O1::' \
