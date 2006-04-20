@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.11.ebuild,v 1.2 2006/04/20 20:13:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.10.ebuild,v 1.4 2006/04/20 20:13:43 swegener Exp $
 
 inherit gnome2 eutils autotools
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="perl tcltk python ssl mmx ipv6 nls dbus libsexy libnotify spell"
 
 RDEPEND=">=dev-libs/glib-2.8.0
-	>=gnome-base/libgnome-2.13
+	>=gnome-base/libgnome-2
 	>=gnome-base/gconf-2.8.0
 	>=gnome-base/libgnomeui-2.6.0
 	>=gnome-base/libglade-2.3.0
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.8.0
 	python? ( dev-lang/python )
 	tcltk? ( dev-lang/tcl )
 	dbus? ( >=sys-apps/dbus-0.35 )
-	libsexy? ( >=x11-libs/libsexy-0.1.7 )
+	libsexy? ( >=x11-libs/libsexy-0.1.4 )
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )"
 
 DEPEND="${RDEPEND}
@@ -41,7 +41,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/0.11-libnotify-libsexy-configure.patch
+	epatch ${FILESDIR}/0.10-libnotify-libsexy-configure.patch
 
 	AT_M4DIR="m4" eautoreconf
 }
