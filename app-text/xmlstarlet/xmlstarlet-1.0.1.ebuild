@@ -1,20 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.1.ebuild,v 1.4 2006/03/24 12:19:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.1.ebuild,v 1.5 2006/04/20 23:18:50 vapier Exp $
 
 inherit flag-o-matic
 
-DESCRIPTION="XMLStarlet is a set of XML command line utilities"
+DESCRIPTION="set of XML command line utilities"
 HOMEPAGE="http://xmlstar.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xmlstar/${P}.tar.gz"
 
 LICENSE="MIT"
-
 SLOT="0"
-
-KEYWORDS="x86 ~amd64 ~ppc"
-
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
+
 DEPEND=">=dev-libs/libxml2-2.6.12
 	>=dev-libs/libxslt-1.1.9
 	dev-libs/libgcrypt
@@ -29,7 +27,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	dohtml -r *
