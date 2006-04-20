@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>kde</herd>
+<maintainer>
+	<email>deathwing00@gentoo.org</email>
+	<name>deathwing00</name>
+</maintainer>
 </pkgmetadata>
