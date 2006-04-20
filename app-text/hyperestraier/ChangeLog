@@ -1,6 +1,10 @@
 # ChangeLog for app-text/hyperestraier
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.17 2006/04/20 14:57:01 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.18 2006/04/20 14:58:06 hattya Exp $
+
+  20 Apr 2006; Akinori Hattori <hattya@gentoo.org>
+  hyperestraier-1.1.5.ebuild:
+  stable on x86.
 
 *hyperestraier-1.2.2 (20 Apr 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.1.5.ebuild,v 1.1 2006/03/20 14:40:14 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.1.5.ebuild,v 1.2 2006/04/20 14:58:06 hattya Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://hyperestraier.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 SLOT="0"
 
 DEPEND=">=dev-db/qdbm-1.8.46
