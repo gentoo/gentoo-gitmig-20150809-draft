@@ -1,4 +1,14 @@
-MD5 b90a3a5079746cd0a4da5cd6745b80ec ChangeLog 1004
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1859ebf9b86a0f5c33336e56f367d0fa ChangeLog 1113
 MD5 d704e10b648e0e41a152a662d25b64d8 files/digest-mutagen-1.1 62
 MD5 bb06a2f53cdc5a7c45ee2dd9511e4b08 metadata.xml 248
-MD5 d35c5485ea1f434501ad884cd1a09ab0 mutagen-1.1.ebuild 749
+MD5 699fb11854b896fece19fa1da8ad929c mutagen-1.1.ebuild 754
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFERwgL/NoSW7FuNV8RAnw2AKCqd5V4KOmk/f91AoACGt8a9BxzswCfVhgI
+sopZSSjz6Kj9Wy6CbwehU70=
+=egNG
+-----END PGP SIGNATURE-----
