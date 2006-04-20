@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Unicode-MapUTF8
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-MapUTF8/ChangeLog,v 1.6 2006/03/13 21:02:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-MapUTF8/ChangeLog,v 1.7 2006/04/20 16:43:11 tcort Exp $
+
+  20 Apr 2006; Thomas Cort <tcort@gentoo.org> Unicode-MapUTF8-1.11.ebuild:
+  Added ~alpha keyword wrt Bug #125189.
 
   13 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   Unicode-MapUTF8-1.11.ebuild:
