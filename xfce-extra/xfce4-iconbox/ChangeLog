@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-iconbox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-iconbox/ChangeLog,v 1.61 2006/04/17 18:27:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-iconbox/ChangeLog,v 1.62 2006/04/20 15:12:25 kingtaco Exp $
+
+  20 Apr 2006; Mike Doty <kingtaco@gentoo.org> xfce4-iconbox-4.2.3.ebuild:
+  amd64 stable, bug 129371
 
   17 Apr 2006; Michael Hanselmann <hansmi@gentoo.org>
   xfce4-iconbox-4.2.3.ebuild:
