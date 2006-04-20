@@ -1,0 +1,11 @@
+# ChangeLog for app-doc/opengl-manpages
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/opengl-manpages/ChangeLog,v 1.1 2006/04/20 03:21:51 spyderous Exp $
+
+*opengl-manpages-20001215 (20 Apr 2006)
+
+  20 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  +opengl-manpages-20001215.ebuild:
+  (#120375) Add package to provide OpenGL manpages, since they disappeared in
+  the X modularization process (Ed Catmur).
+
