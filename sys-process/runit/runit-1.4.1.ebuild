@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/runit-1.4.1.ebuild,v 1.1 2006/03/29 00:42:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/runit-1.4.1.ebuild,v 1.2 2006/04/20 03:16:02 vapier Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -51,7 +51,8 @@ src_install() {
 	doman man/*.[18]
 
 	exeinto /etc/runit
-	doexe "${FILESDIR}"/{1,2,3,ctrlaltdel} || die
+	doexe "${FILESDIR}"/{1,2,ctrlaltdel} || die
+	newexe "${FILESDIR}"/3-1.4 3 || die
 	for tty in tty1 tty2 tty3 tty4 tty5 tty6; do
 		exeinto /etc/runit/runsvdir/all/getty-$tty/
 		for script in run finish; do
