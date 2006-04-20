@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.41 2006/01/14 05:20:33 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.42 2006/04/20 07:28:28 latexer Exp $
+
+*monodevelop-0.10 (20 Apr 2006)
+
+  20 Apr 2006; Peter Johanson <latexer@gentoo.org> +monodevelop-0.10.ebuild:
+  Bumpity bump.
 
 *monodevelop-0.9-r1 (14 Jan 2006)
 
