@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0de9b004fd6d9367bd2152d72ab45352 ChangeLog 2664
+MD5 1d130f6b6dad0dd45cdc8f89744b4191 ChangeLog 2770
 MD5 f453b4d6b6a22cb668907a49c86988ee File-Slurp-9999.09.ebuild 544
-MD5 129d1ff6176851bfc14560b5dd614df4 File-Slurp-9999.11.ebuild 544
+MD5 b9178db5f57e49590dd643114d720a94 File-Slurp-9999.11.ebuild 540
 MD5 1620c79fbde9d85490bb4cc2a2c7b0dc files/digest-File-Slurp-9999.09 69
 MD5 b878024eef46ee8874a4fe6c4a56fa73 files/digest-File-Slurp-9999.11 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEFdUQKRy60XGEcJIRAsSGAKCcloqdSzeLZFZTng837kcrinCq5QCdEYvT
-B+mbXII/f7t64d1cPH2/194=
-=7FL9
------END PGP SIGNATURE-----
