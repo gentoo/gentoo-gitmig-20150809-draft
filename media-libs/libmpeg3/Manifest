@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0e99b70e9cfe7971a5bcaa2833050c07 ChangeLog 6545
-RMD160 22bac3dc514482e8ba18e6317032b0c40f7dfe96 ChangeLog 6545
-SHA256 d7de9ab98ffa251d4742663720090655b8508b5dba211e1b97447384f9532f52 ChangeLog 6545
+MD5 c512f9454de2f947b2088e66b04faff3 ChangeLog 6747
+RMD160 db79575d85191dac783e56715567945cf94c24c0 ChangeLog 6747
+SHA256 f4ff60d3255d6c265e52a3a548e79b2ee15d42b3abc56d539a5441a04bb4ed26 ChangeLog 6747
 MD5 eab6c819f36fbf2566019eee669caa90 files/digest-libmpeg3-1.5.2 140
 RMD160 d0ef1dadc916502aa873af816ba236c193fe4ade files/digest-libmpeg3-1.5.2 140
 SHA256 eb07ace03e96dfd6609ae05f65b2a47288ea93750cb20f6621d19bf8ae22da1c files/digest-libmpeg3-1.5.2 140
@@ -13,12 +13,21 @@ SHA256 eb07ace03e96dfd6609ae05f65b2a47288ea93750cb20f6621d19bf8ae22da1c files/di
 MD5 80a0c734edfea0d53c9ea85e058f5c26 files/digest-libmpeg3-1.5.2-r2 140
 RMD160 a995830d5c105e948ff992ab0f121bcc309b8622 files/digest-libmpeg3-1.5.2-r2 140
 SHA256 d1d65194b85d04e52b7f71500d71ca7719668a6c5bd860e39a2959334ca41d50 files/digest-libmpeg3-1.5.2-r2 140
+MD5 652f940c23f681542d125f3b67d215f4 files/digest-libmpeg3-1.5.2-r3 512
+RMD160 573794a437d10297f713321e47cc622e51d551f0 files/digest-libmpeg3-1.5.2-r3 512
+SHA256 03fa862c63807b3b16bbc35844b17048cdadc729742d7dc9f3a0c6474f4c977c files/digest-libmpeg3-1.5.2-r3 512
+MD5 5a8203b4e0f074a75883fec16e2c883a files/libmpeg3-1.5.2-a52.patch 2866
+RMD160 9661ab5b21dbeed9d016694027a88139f6c9fac6 files/libmpeg3-1.5.2-a52.patch 2866
+SHA256 08cfa24a53e5413e0d0dccb1ca64fe818d0f2af840c8b8b2de7d33e491ec75da files/libmpeg3-1.5.2-a52.patch 2866
 MD5 116d5918c4dc0b76e0b82da0185afffa libmpeg3-1.5.2-r1.ebuild 2611
 RMD160 d6c5f36ebb80eb0eb9ee3f2af8de253e39ca4dd0 libmpeg3-1.5.2-r1.ebuild 2611
 SHA256 05b5b516868400e1456349eec1e47567e4a6a0eaae192d4686a323c7e1edf05d libmpeg3-1.5.2-r1.ebuild 2611
 MD5 730caa4f16fc47c0c379a4b1e8c87baf libmpeg3-1.5.2-r2.ebuild 2610
 RMD160 babb4aa25f3e5dac0ed8dcb7bc8404c9a1e099c4 libmpeg3-1.5.2-r2.ebuild 2610
 SHA256 49f05d4fdebd8f30705714e04f67b2eadb8ea4fc0d5e7dbd015fd89effc458e0 libmpeg3-1.5.2-r2.ebuild 2610
+MD5 449f1a5a6b0e29e13e27462cd4115320 libmpeg3-1.5.2-r3.ebuild 1939
+RMD160 4ce07121e7eefb782f73c7deb266c902f663efa2 libmpeg3-1.5.2-r3.ebuild 1939
+SHA256 22775a8b0b3dfacb587374f64134fbc7c3f327aae56c5be1e62e433707d90d90 libmpeg3-1.5.2-r3.ebuild 1939
 MD5 c6c6825ba565aae9d3a5d7399745e98f libmpeg3-1.5.2.ebuild 2008
 RMD160 c68202364954b2d073a6a61cdacae9b5d60827b1 libmpeg3-1.5.2.ebuild 2008
 SHA256 9a258c25505a73d5a924f972b8d0eecfacfb5132495ef072cc863b1131ba617d libmpeg3-1.5.2.ebuild 2008
@@ -26,9 +35,9 @@ MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 metadata.xml 158
 SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEDFw7AiZjviIA2XgRAiZ+AKDUtWtPZ3Je/LbQerRCgI5SKRtThQCgh6Un
-F/tbp5ZVQserbdH5so1oYgA=
-=ybZC
+iD8DBQFERwDHAiZjviIA2XgRAptTAJ47huTpCcL6bTHCp551Gd4lWtyF+QCdHvJi
+6cgpWpHM7c9qTYmxUkQ4iyM=
+=qCK+
 -----END PGP SIGNATURE-----

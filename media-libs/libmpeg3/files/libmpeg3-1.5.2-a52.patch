@@ -1,0 +1,90 @@
+Index: libmpeg3-1.5.2/Makefile
+===================================================================
+--- libmpeg3-1.5.2.orig/Makefile
++++ libmpeg3-1.5.2/Makefile
+@@ -2,9 +2,11 @@ CC = gcc
+ NASM =
+ USE_MMX = 0
+ USE_CSS = 1
+-A52DIR := $(shell expr a52dec* )
++#A52DIR := $(shell expr a52dec* )
+ 
+ HAVE_NASM := $(shell if [ -x /usr/bin/nasm -o -x /usr/local/bin/nasm ]; then echo y; else echo n; fi)
++
++.SUFFIXES: .lo
+                                                                                 
+ #ifeq ($(HAVE_NASM), n)
+ #$(error "Nasm is required.  Download it from nasm.sourceforge.net.")
+@@ -66,8 +68,7 @@ endif
+ 
+ CFLAGS += \
+ 	-I. \
+-	-I$(A52DIR)/include \
+-	-I$(A52DIR)/liba52
++	-I/usr/include/a52dec
+ 
+ #CFLAGS += -g
+ 
+@@ -113,6 +114,9 @@ OBJS = \
+ 	$(OBJDIR)/video/vlc.o \
+ 	$(OBJDIR)/workarounds.o
+ 
++LTOBJS = $(OBJS:%.o=%.lo)
++LTASMOBJS = $(ASMOBJS:%.o=%.lo)
++
+ #OBJS = \
+ #	$(OBJDIR)/audio/ac3.o \
+ #	$(OBJDIR)/audio/bit_allocation.o \
+@@ -132,9 +136,9 @@ DIRS := \
+ 	$(OBJDIR)/audio \
+ 	$(OBJDIR)/video
+ 
+-include Makefile.a52
++#include Makefile.a52
+ 
+-DIRS += $(A52DIRS)
++#DIRS += $(A52DIRS)
+ 
+ 
+ INSTALL_HEADERS = \
+@@ -168,10 +172,10 @@ UTILS = $(OBJDIR)/mpeg3dump $(OBJDIR)/mp
+ 
+ LIBS = -lm -lpthread -L${ROOT}usr/lib64  -la52
+ 
+-$(shell if ! test -d $(OBJDIR) \; then mkdir -p $(OBJDIR) \; fi )
++#$(shell if ! test -d $(OBJDIR) \; then mkdir -p $(OBJDIR) \; fi )
+ 
+ $(shell echo $(CFLAGS) > $(OBJDIR)/c_flags)
+-$(shell echo $(A52CFLAGS) > $(OBJDIR)/a52_flags)
++#$(shell echo $(A52CFLAGS) > $(OBJDIR)/a52_flags)
+ $(shell echo $(OBJS) $(ASMOBJS) $(A52OBJS) $(NASMOBJS) > $(OBJDIR)/objs)
+ $(shell mkdir -p $(DIRS) )
+ 
+@@ -181,8 +185,8 @@ all: $(OUTPUT) $(SHAREDOUTPUT) $(UTILS)
+ $(OUTPUT): $(OBJS) $(ASMOBJS) $(NASMOBJS) $(A52OBJS)
+ 	ar rcs $(OUTPUT) `cat $(OBJDIR)/objs`
+ 
+-$(SHAREDOUTPUT): $(OBJS) $(ASMOBJS) $(NASMOBJS)
+-	gcc -shared -o $(SHAREDOUTPUT) $(OBJS) $(ASMOBJS) $(NASMOBJS) $(LIBS)
++$(SHAREDOUTPUT): $(LTOBJS) $(LTASMOBJS) $(NASMOBJS)
++	gcc -shared -o $(SHAREDOUTPUT) $(LTOBJS) $(LTASMOBJS) $(NASMOBJS) $(LIBS)
+ 
+ $(OBJDIR)/mpeg3dump: $(OUTPUT) mpeg3dump.c
+ 	$(CC) `cat $(OBJDIR)/c_flags` -o $(OBJDIR)/mpeg3dump mpeg3dump.c $(OUTPUT) $(LIBS)
+@@ -234,10 +238,14 @@ $(OBJS): 
+ 	$(CC) -c `cat $(OBJDIR)/c_flags` $(subst $(OBJDIR)/,, $*.c) -o $*.o
+ $(ASMOBJS): 
+ 	$(CC) -c `cat $(OBJDIR)/c_flags` $(subst $(OBJDIR)/,, $*.S) -o $*.o
++$(LTOBJS): 
++	$(CC) -fPIC -c `cat $(OBJDIR)/c_flags` $(subst $(OBJDIR)/,, $*.c) -o $*.lo
++$(LTASMOBJS): 
++	$(CC) -fPIC -c `cat $(OBJDIR)/c_flags` $(subst $(OBJDIR)/,, $*.S) -o $*.lo
+ $(NASMOBJS): 
+ 	$(NASM) -f elf $(subst $(OBJDIR)/,, $*.s) -o $*.o
+-$(A52OBJS):
+-	$(CC) -c `cat $(OBJDIR)/a52_flags` $(subst $(OBJDIR)/,, $*.c) -o $*.o
++#$(A52OBJS):
++#	$(CC) -c `cat $(OBJDIR)/a52_flags` $(subst $(OBJDIR)/,, $*.c) -o $*.o
+ 
+ $(OBJDIR)/bitstream.o:  			    bitstream.c
+ $(OBJDIR)/mpeg3dump.o: 				    mpeg3dump.c
