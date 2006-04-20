@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/convert-pem
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/ChangeLog,v 1.28 2006/03/09 22:44:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/ChangeLog,v 1.29 2006/04/20 20:08:50 tcort Exp $
+
+  20 Apr 2006; Thomas Cort <tcort@gentoo.org> convert-pem-0.07.ebuild:
+  Added ~amd64 keyword wrt Bug #112279.
 
   09 Mar 2006; Aron Griffis <agriffis@gentoo.org> convert-pem-0.07.ebuild:
   Mark 0.07 stable on ia64
