@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.9 2006/04/01 14:42:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.10 2006/04/20 12:29:07 marienz Exp $
+
+*astng-0.16.0 (20 Apr 2006)
+
+  20 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  +files/astng-0.16.0-revert-test.patch, +astng-0.16.0.ebuild:
+  Version bump.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> astng-0.15.1.ebuild:
   Mark 0.15.1 ~ia64
