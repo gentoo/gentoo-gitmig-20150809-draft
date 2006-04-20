@@ -6,4 +6,5 @@
 XSTATICVT="yes"
 
 # What display manager do you use ?  [ xdm | gdm | kdm | entrance ]
+# NOTE: If this is set in /etc/rc.conf, that setting will override this one.
 DISPLAYMANAGER="xdm"

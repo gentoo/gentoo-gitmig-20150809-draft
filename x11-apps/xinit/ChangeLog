@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.44 2006/04/20 06:28:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.45 2006/04/20 06:37:42 spyderous Exp $
+
+  20 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; files/xdm.confd:
+  Add a note that rc.conf overrides this DISPLAYMANAGER setting, even though
+  rc.conf is deprecated.
 
 *xinit-1.0.2-r2 (20 Apr 2006)
 
