@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.168 2006/04/08 20:46:43 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.169 2006/04/20 15:57:35 rl03 Exp $
+
+*phpmyadmin-2.8.0.3 (20 Apr 2006)
+
+  20 Apr 2006; Renat Lumpau <rl03@gentoo.org>
+  files/postinstall-en-2.8.0.txt, -phpmyadmin-2.7.0_p2.ebuild,
+  +phpmyadmin-2.8.0.3.ebuild:
+  Version bump (#129850); fixed postinstall instructions (#129590).
 
   08 Apr 2006; Mark Loeser <halcy0n@gentoo.org> phpmyadmin-2.8.0.2.ebuild:
   Stable on x86; bug #129037
