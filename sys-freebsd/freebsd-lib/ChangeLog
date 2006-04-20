@@ -1,6 +1,14 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.6 2006/04/18 23:35:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.7 2006/04/20 07:40:12 flameeyes Exp $
+
+*freebsd-lib-6.0-r2 (20 Apr 2006)
+
+  20 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -freebsd-lib-6.0-r1.ebuild, +freebsd-lib-6.0-r2.ebuild:
+  Add new version that now merges freebsd-headers in a single package. The
+  upgrade path from old system it's not impossible albeit a bit difficult. New
+  stage will follow.
 
   18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-lib-6.0-r1.ebuild:

@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.0-r1.ebuild,v 1.2 2006/04/18 23:35:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.0-r2.ebuild,v 1.1 2006/04/20 07:40:12 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
 DESCRIPTION="FreeBSD's base system libraries"
-SLOT="${RV}"
+SLOT="6.0"
 KEYWORDS="~x86-fbsd"
 
 IUSE="atm bluetooth ssl ipv6 kerberos nis gpib"
@@ -18,19 +18,28 @@ SRC_URI="mirror://gentoo/${LIB}.tar.bz2
 		mirror://gentoo/${CRYPTO}.tar.bz2
 		mirror://gentoo/${LIBEXEC}.tar.bz2
 		mirror://gentoo/${ETC}.tar.bz2
-		nis? ( mirror://gentoo/${USBIN}.tar.bz2 )"
+		mirror://gentoo/${INCLUDE}.tar.bz2
+		nis? ( mirror://gentoo/${USBIN}.tar.bz2 )
+		!kernel_FreeBSD? (
+			mirror://gentoo/${SYS}.tar.bz2 )"
 
 RDEPEND="ssl? ( dev-libs/openssl )
-	kerberos? ( virtual/krb5 )"
+	kerberos? ( virtual/krb5 )
+	!sys-freebsd/freebsd-headers"
 DEPEND="${RDEPEND}
 	>=sys-devel/flex-2.5.31-r2
 	=sys-freebsd/freebsd-mk-defs-${RV}*
-	=sys-freebsd/freebsd-sources-${RV}*
-	=sys-freebsd/freebsd-headers-${RV}*"
+	=sys-freebsd/freebsd-sources-${RV}*"
 
-PROVIDE="virtual/libc"
+PROVIDE="virtual/libc
+	virtual/os-headers"
 
 S="${WORKDIR}/lib"
+
+export CTARGET=${CTARGET:-${CHOST}}
+if [[ ${CTARGET} == ${CHOST} && ${CATEGORY/cross-} != ${CATEGORY} ]]; then
+	export CTARGET=${CATEGORY/cross-}
+fi
 
 pkg_setup() {
 	[[ -c /dev/zero ]] || \
@@ -51,8 +60,11 @@ pkg_setup() {
 	mymakeopts="${mymakeopts} NO_OPENSSH= NO_BIND= NO_SENDMAIL= "
 
 	replace-flags "-O?" -"O1"
-	append-flags -static-libgcc
-	append-ldflags -static-libgcc
+
+	if [[ ${CTARGET} != ${CHOST} ]]; then
+		mymakeopts="${mymakeopts} MACHINE=$(tc-arch-kernel ${CTARGET})"
+		mymakeopts="${mymakeopts} MACHINE_ARCH=$(tc-arch-kernel ${CTARGET})"
+	fi
 }
 
 PATCHES="${FILESDIR}/${PN}-bsdxml.patch
@@ -82,33 +94,66 @@ REMOVE_SUBDIRS="libncurses libform libmenu libpanel \
 	libcom_err libtelnet"
 
 src_unpack() {
-	use _E_CROSS_HEADERS_ONLY && return 0
-
 	freebsd_src_unpack
 
-	ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
-	ln -s "/usr/include" "${WORKDIR}/include"
-}
+	if [[ ${CTARGET} == ${CHOST} ]]; then
+		ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
+	else
+		sed -i -e 's:/usr/include:/usr/'${CTARGET}'/include:g' \
+			"${S}/libc/"{yp,rpc}"/Makefile.inc"
+	fi
 
-portage-to-fbsd-arch() {
-	case "$(tc-arch)" in
-		x86) echo "i386" ;;
-		*)	 echo $(tc-arch) ;;
-	esac
+	[[ -n $(install --version 2> /dev/null | grep GNU) ]] && \
+		sed -i -e 's:${INSTALL} -C:${INSTALL}:' "${WORKDIR}/include/Makefile"
 }
 
 src_compile() {
+	cd "${WORKDIR}/include"
+	$(freebsd_get_bmake) CC=$(tc-getCC) || die "make include failed"
+
 	use _E_CROSS_HEADERS_ONLY && return 0
 
+	cd "${S}"
+
+	if [[ ${CTARGET} != ${CHOST} ]]; then
+		cd "${S}/libc"
+		export YACC='yacc -by'
+		CHOST=${CTARGET} tc-export CC LD CXX
+
+		append-flags "-isystem /usr/${CTARGET}/include"
+	fi
 	freebsd_src_compile
 }
 
 src_install() {
+	cd "${WORKDIR}/include"
+
+	[[ ${CTARGET} == ${CHOST} ]] \
+		&& INCLUDEDIR="/usr/include" \
+		|| INCLUDEDIR="/usr/${CTARGET}/include"
+
+	einfo "Installing for ${CTARGET} in ${CHOST}.."
+
+	dodir "${INCLUDEDIR}"
+	$(freebsd_get_bmake) installincludes \
+		MACHINE=$(tc-arch-kernel) \
+		DESTDIR="${D}" INCLUDEDIR="${INCLUDEDIR}" || die "Install failed"
+
+	# Install math.h when crosscompiling, at this point
+	if [[ ${CHOST} != ${CTARGET} ]]; then
+		insinto "/usr/${CTARGET}/include"
+		doins "${S}/msun/src/math.h"
+	fi
+
 	use _E_CROSS_HEADERS_ONLY && return 0
+
+	cd "${S}"
+
+	[[ ${CTARGET} != ${CHOST} ]] && cd "${S}/libc"
 	mkinstall || die "Install failed"
 
-	# make crt1.o schg so that gcc doesn't remove it
-	chflags schg ${D}/usr/lib/crt1.o
+	# Don't install the rest of the configuration files if crosscompiling
+	[[ ${CTARGET} != ${CHOST} ]] && return 0
 
 	# install libstand files
 	dodir /usr/include/libstand
@@ -120,5 +165,6 @@ src_install() {
 	doins auth.conf nls.alias mac.conf netconfig
 
 	# Install ttys file
-	doins "etc.$(portage-to-fbsd-arch)"/*
+	doins "etc.$(tc-arch-kernel)"/*
 }
+
