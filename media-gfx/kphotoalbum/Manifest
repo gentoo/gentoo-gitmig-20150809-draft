@@ -4,9 +4,9 @@ SHA256 678aacea8de68e9345989ceb06b737c1c82dbadd1999dbce965a4fad721dcd3a ChangeLo
 MD5 3e836749cd7570a18d1e331a77790a5c files/digest-kphotoalbum-2.2 256
 RMD160 56e0479023ea05a4f4f5621ae8b896e9a6abbc96 files/digest-kphotoalbum-2.2 256
 SHA256 b8112ffe966fc4b0fab6e95ca6ae4dd17c64656f6e4333adc3c912a660c98092 files/digest-kphotoalbum-2.2 256
-MD5 3b256079232a1883f8edeb449ca87d57 kphotoalbum-2.2.ebuild 948
-RMD160 f8359081efc50eab70c92805ce253ac4be4fe679 kphotoalbum-2.2.ebuild 948
-SHA256 0e391a51a213bfe9bec0827371c5ef4f224426b6dd38269f90ac1c76406dac86 kphotoalbum-2.2.ebuild 948
+MD5 05dfab5b918d8b1ba6155ad3e2a038dc kphotoalbum-2.2.ebuild 1230
+RMD160 014678e6e2747f429ce674de5bd9acc5d6a720a2 kphotoalbum-2.2.ebuild 1230
+SHA256 777b00bdc4fe3375ded656a9ac038dae01c195b4e2d3047149f2419e2e2af954 kphotoalbum-2.2.ebuild 1230
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
