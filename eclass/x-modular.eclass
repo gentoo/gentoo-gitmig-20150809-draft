@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.52 2006/04/03 23:49:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.53 2006/04/20 23:43:48 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -176,6 +176,17 @@ RDEPEND="${RDEPEND}
 #	x11-base/x11-env"
 
 x-modular_unpack_source() {
+	# (#120057) Enabling DRI in drivers requires that the server was built with
+	# support for it
+	if [[ -n "${DRIVER}" ]]; then
+		if has dri ${IUSE} && use dri; then
+			einfo "Checking for direct rendering capabilities ..."
+			if ! built_with_use x11-base/xorg-server dri; then
+				die "You must build x11-base/xorg-server with USE=dri."
+			fi
+		fi
+	fi
+
 	unpack ${A}
 	cd ${S}
 
