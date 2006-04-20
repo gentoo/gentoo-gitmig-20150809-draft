@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.28-r1.ebuild,v 1.2 2006/04/01 05:11:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.28-r1.ebuild,v 1.3 2006/04/20 01:24:26 vapier Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.4.24-only-symlink-when-needed.patch
 	epatch "${FILESDIR}"/${P}-list-compat-segv.patch #127547
 	epatch "${FILESDIR}"/${P}-no-compress-docs.patch
+	epatch "${FILESDIR}"/${P}-LDFLAGS.patch #126825
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:=.*:= /usr/share/doc/${PF}:" \
 		include/builddefs.in \
