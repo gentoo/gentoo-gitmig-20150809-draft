@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.169 2006/04/20 15:57:35 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.170 2006/04/20 19:02:47 dertobi123 Exp $
+
+  20 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  phpmyadmin-2.8.0.3.ebuild:
+  ppc stable, bug #129850
 
 *phpmyadmin-2.8.0.3 (20 Apr 2006)
 
