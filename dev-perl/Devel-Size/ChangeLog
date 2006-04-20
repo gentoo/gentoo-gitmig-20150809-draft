@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-Size
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size/ChangeLog,v 1.3 2006/03/30 22:31:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size/ChangeLog,v 1.4 2006/04/20 19:56:29 tcort Exp $
+
+  20 Apr 2006; Thomas Cort <tcort@gentoo.org> Devel-Size-0.64.ebuild:
+  Added ~amd64 keyword wrt Bug #103950.
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Devel-Size-0.64.ebuild:
   Mark 0.64 ~ia64
