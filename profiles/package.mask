@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5241 2006/04/20 04:22:17 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5242 2006/04/20 07:49:34 hollow Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Benedikt Böhm <hollow@gentoo> (20 Apr 2006)
+# Upstream dead; obsoleted by sys-apps/lomoco
+sys-apps/lmctl
 
 ## Daniel Ostrow <dostrow@gentoo.org> (20 Apr 2006)
 ## XFCE 4.4 beta1
