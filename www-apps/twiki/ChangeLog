@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/twiki
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.26 2006/04/20 14:37:05 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.27 2006/04/20 14:38:34 rl03 Exp $
+
+  20 Apr 2006; Renat Lumpau <rl03@gentoo.org> -files/CVE-2006-1386.patch,
+  -files/CVE-2006-1387.patch, -twiki-4.0.1-r2.ebuild:
+  Removed old version
 
 *twiki-4.0.2 (20 Apr 2006)
 
