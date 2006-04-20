@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r1.ebuild,v 1.2 2006/03/31 20:49:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r1.ebuild,v 1.3 2006/04/20 20:30:54 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -28,7 +28,8 @@ DEPEND="berkdb? ( sys-libs/db )
 	<sys-devel/libperl-5.9
 	!<perl-core/ExtUtils-MakeMaker-6.17
 	!<perl-core/File-Spec-0.87
-	!<perl-core/Test-Simple-0.47-r1"
+	!<perl-core/Test-Simple-0.47-r1
+	|| ( sys-apps/coreutils app-admin/realpath sys-freebsd/freebsd-bin )"
 
 RDEPEND="~sys-devel/libperl-${PV}
 	berkdb? ( sys-libs/db )
@@ -98,10 +99,10 @@ src_unpack() {
 	# MakeMaker module, bug #105054.
 	epatch ${FILESDIR}/${PN}-5.8.7-MakeMaker-RUNPATH.patch
 
-	# Starting and hopefully ending with 5.8.7 we observe stack 
-	# corruption with the regexp handling in perls DynaLoader code 
-	# with ssp enabled. This become fatal during compile time so we 
-	# temporally disable ssp on two regexp files till upstream has a 
+	# Starting and hopefully ending with 5.8.7 we observe stack
+	# corruption with the regexp handling in perls DynaLoader code
+	# with ssp enabled. This become fatal during compile time so we
+	# temporally disable ssp on two regexp files till upstream has a
 	# chance to work it out. Bug #97452
 	[[ -n $(test-flags -fno-stack-protector) ]] && \
 		epatch ${FILESDIR}/${PN}-regexp-nossp.patch
@@ -325,7 +326,7 @@ EOF
 	done
 
 	# Note: find out from psm why we would need/want this.
-	# ( use berkdb && has_version '=sys-libs/db-1*' ) || 
+	# ( use berkdb && has_version '=sys-libs/db-1*' ) ||
 	#	find ${D} -name "*NDBM*" | xargs rm -f
 
 	dodoc Changes* Artistic Copying README Todo* AUTHORS
@@ -564,7 +565,12 @@ pkg_postinst() {
 		mv -f ${ROOT}usr/$(get_libdir)/libperl$(get_libname) ${ROOT}usr/$(get_libdir)/libperl$(get_libname).old
 	fi
 
-	local perllib="`readlink -f ${ROOT}usr/$(get_libdir)/libperl$(get_libname) | sed -e 's:^.*/::'`"
+	local perllib
+	if [[ -z $(type -p realpath) ]]; then
+		perllib="`readlink -f ${ROOT}usr/$(get_libdir)/libperl$(get_libname) | sed -e 's:^.*/::'`"
+	else
+		perllib="`realpath ${ROOT}usr/$(get_libdir)/libperl$(get_libname) | sed -e 's:^.*/::'`"
+	fi
 
 	# If we are installing perl, we need the /usr/lib/libperl.so symlink to
 	# point to the version of perl we are running, else builing something
