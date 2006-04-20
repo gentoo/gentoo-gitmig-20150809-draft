@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.157 2006/04/12 17:03:05 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.158 2006/04/20 23:15:10 allanonjl Exp $
+
+*metacity-2.14.3 (20 Apr 2006)
+
+  20 Apr 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -metacity-2.14.0.ebuild, -metacity-2.14.1.ebuild, -metacity-2.14.2.ebuild,
+  +metacity-2.14.3.ebuild:
+  new version. cleanup old 2.14 ebuilds. fixes #129731
 
 *metacity-2.14.2 (12 Apr 2006)
 

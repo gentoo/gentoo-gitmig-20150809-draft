@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.14.2.ebuild,v 1.1 2006/04/12 17:03:05 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.14.3.ebuild,v 1.1 2006/04/20 23:15:10 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -27,7 +27,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.28"
 
-USE_DESTDIR="1"
 DOCS="AUTHORS ChangeLog HACKING NEWS README *.txt doc/*.txt"
 
 
