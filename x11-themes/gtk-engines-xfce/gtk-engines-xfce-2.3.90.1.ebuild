@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Technologies, Inc.
+# Copyright 1999-2006 Gentoo Foundation, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.3.90.1.ebuild,v 1.1 2006/04/20 06:25:45 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.3.90.1.ebuild,v 1.2 2006/04/20 06:26:52 dostrow Exp $
 
 MY_P="gtk-xfce-engine-${PV}"
 S="${WORKDIR}/${MY_P}"
