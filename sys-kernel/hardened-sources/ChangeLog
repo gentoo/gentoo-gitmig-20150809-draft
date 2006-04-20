@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.92 2006/04/20 21:09:21 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.93 2006/04/20 21:23:12 johnm Exp $
+
+  20 Apr 2006; John Mylchreest <johnm@gentoo.org> ChangeLog:
+  fix digest
 
 *hardened-sources-2.6.14-r8 (20 Apr 2006)
 
