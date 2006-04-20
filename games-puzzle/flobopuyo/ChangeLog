@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/flobopuyo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/ChangeLog,v 1.9 2006/04/11 19:45:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/ChangeLog,v 1.10 2006/04/20 05:27:18 flameeyes Exp $
+
+*flobopuyo-0.20-r1 (20 Apr 2006)
+
+  20 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +flobopuyo-0.20-r1.ebuild:
+  Add icon and .desktop file, plus check for useflags needed on sdl-image. Bug
+  #128909.
 
   11 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> flobopuyo-0.20.ebuild:
   Add ~x86-fbsd keyword.

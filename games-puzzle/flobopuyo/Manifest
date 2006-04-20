@@ -1,12 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 17c8d66bd4351ece4c69f215b9d38ce7 ChangeLog 1555
-RMD160 1d5635bd6db479dccd6cbb61b00c4421abb4418d ChangeLog 1555
-SHA256 f9d55fcfae96be876c114ddaf73a2da4e9ef5984e1fc54c2e5fcaab8d8b5b5dc ChangeLog 1555
+MD5 4658423311b66ee303a74bfd60539538 ChangeLog 1763
+RMD160 37daf21315ffdf8979abc65db50743411b962543 ChangeLog 1763
+SHA256 da8da626f7349f5114111829f19c745746a8c20c7a921aa79dae589614ab3042 ChangeLog 1763
 MD5 be0bda1e61a418231b438f1d8ac57d2a files/digest-flobopuyo-0.20 64
 RMD160 ba05e9366060b4c27a6f62fc6024ff52f3a56884 files/digest-flobopuyo-0.20 64
 SHA256 b58145d77d76ae811f45bda793698f438f082987d221a4505d744b33378be685 files/digest-flobopuyo-0.20 64
+MD5 91f325952f7e7029579410be9f4dbc02 files/digest-flobopuyo-0.20-r1 455
+RMD160 f1661cfa22ad65b10d71ad9ecaa4968b6a4c6048 files/digest-flobopuyo-0.20-r1 455
+SHA256 2f322016122fecd4e7b046bf1b5f8437cff7eeb692a820b2c8e76e218f1cba9f files/digest-flobopuyo-0.20-r1 455
 MD5 bb8afd6e04bde08fd33e22c466674878 files/flobopuyo-0.20-gcc4.patch 967
 RMD160 dddee5afb874c4d0a2f5c276b516a4c908c408a9 files/flobopuyo-0.20-gcc4.patch 967
 SHA256 fa0a34621cd7700109fb317ab394eaf4860646ef776d291318e759173d7e5f80 files/flobopuyo-0.20-gcc4.patch 967
@@ -16,6 +19,9 @@ SHA256 a3cbc69a50dcdbe810353afbba1eaab3dc44341ddccff9f913ff1cb70d079da2 files/fl
 MD5 9ebc7b7f7dd4085ca3dd01bb2b43eed4 files/flobopuyo-0.20-libs.patch 1763
 RMD160 18223569555d9223f1027ce8ebf09a43f814fa72 files/flobopuyo-0.20-libs.patch 1763
 SHA256 6b33ec6f589e62faa5e2340034041576228357c32278522bde50f35417c3cb72 files/flobopuyo-0.20-libs.patch 1763
+MD5 cc3205b61dbe9f22e346bf5a0f42af8f flobopuyo-0.20-r1.ebuild 1897
+RMD160 f73cb4406b277355fea8432f08d222e279f84dbb flobopuyo-0.20-r1.ebuild 1897
+SHA256 17012ad0055a6446c2b2935c3d41b2c82a02baba3f77a67d8578191e8c4c74c6 flobopuyo-0.20-r1.ebuild 1897
 MD5 c905374ee1ce42d1559aa2ca2febba61 flobopuyo-0.20.ebuild 1359
 RMD160 94baca3c93861c371b6f48b3cff612a67869f406 flobopuyo-0.20.ebuild 1359
 SHA256 65bf24a959ca613437a83e146147a6c01adec95b1afd1b0e8457a79e70bbbbcf flobopuyo-0.20.ebuild 1359
@@ -25,7 +31,7 @@ SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEPAd/AiZjviIA2XgRAovZAKCqxji73EdrVxgthMhOgDHy/xpFWwCgmUox
-RTdyJcBbuvAq6TZOud0HnDc=
-=vp+S
+iD8DBQFERxsFAiZjviIA2XgRAkZeAJwMPIS4chEtJeaqxUwEN7PJPt9J0QCfYbDO
+Ei9YSKoZrufHFHnJAj1kSdM=
+=HOs3
 -----END PGP SIGNATURE-----
