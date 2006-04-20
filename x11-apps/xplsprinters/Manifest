@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2828ed17a77b91cb9c086cb37c136d49 ChangeLog 1640
 RMD160 9ee097504ff37040fd5f6a85e5349c344d1f6fd3 ChangeLog 1640
 SHA256 70289c1fd70c53e3682faf5d2a65e7e6c807edb084e5c5849acfaca79a5abe39 ChangeLog 1640
@@ -10,3 +13,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 d914c141e6d87daeb14253fdef6a79da xplsprinters-1.0.1.ebuild 504
 RMD160 23ae23bc6ca9cff05f09b961b91f7e020f799fe5 xplsprinters-1.0.1.ebuild 504
 SHA256 f423550a1c29f1cd284aabd43a15eaec040bd75c51c57bf6ae250deaae1203eb xplsprinters-1.0.1.ebuild 504
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERxweAiZjviIA2XgRAkCXAJ93rEuHVsHjCl9z+u83xQuLOTujMgCg6VGT
+nHIRWRGCqTqcZyLrY04R9II=
+=m6aM
+-----END PGP SIGNATURE-----
