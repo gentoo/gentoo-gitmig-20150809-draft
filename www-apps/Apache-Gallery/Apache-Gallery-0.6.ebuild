@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.6.ebuild,v 1.11 2006/02/13 15:12:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.6.ebuild,v 1.12 2006/04/20 03:37:36 weeve Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/author/LEGART/${P}"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ~sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
 

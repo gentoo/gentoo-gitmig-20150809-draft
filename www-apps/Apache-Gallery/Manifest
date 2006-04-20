@@ -1,21 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6494bdb45b9fcc121d7d6c7a47bf4c0e Apache-Gallery-0.6.ebuild 1416
+MD5 000fa9b5ef5d35e5ca0aaef75681ef9f Apache-Gallery-0.6.ebuild 1411
+RMD160 483dd7bf92dc36f321f0df5bce3fded2db09ebe3 Apache-Gallery-0.6.ebuild 1411
+SHA256 cdb72d1b1d3af88f8b721e7b6ca108d428a9c8f8e00d5f802f021b9408d1e74e Apache-Gallery-0.6.ebuild 1411
 MD5 8e45319acd5d3d97de4287482876d74b Apache-Gallery-1.0_rc3.ebuild 1612
-MD5 7321030106591b9787ccebad7274a96a ChangeLog 4374
+RMD160 635737ebc8239849d1cd66fd2ae889b6c061454a Apache-Gallery-1.0_rc3.ebuild 1612
+SHA256 b48aa91ef2e7a14568b88b62680d74cbe0740a17e5b40953cdcbca4f451bcba7 Apache-Gallery-1.0_rc3.ebuild 1612
+MD5 5e79ed5d3555036c6ebcdfa27580f4a4 ChangeLog 4463
+RMD160 4dc3097c75d3b41e73f72a89474f2b01e6766adb ChangeLog 4463
+SHA256 56cf65832d701a426bba359376c3652161752e7df44a0a7dbf9cb10f2449fcf0 ChangeLog 4463
 MD5 862b7db14e194f66c345bdaee71e0d00 files/76_apache-gallery.conf 1461
+RMD160 030e59073d909e3d9102c19b138bacf0634daa33 files/76_apache-gallery.conf 1461
+SHA256 9b4c23adf32a6f75525e1c46394b25d60d66e88e6837a5fda002e8f62513268c files/76_apache-gallery.conf 1461
 MD5 9e0a44b67c66dc689a3769827946f3f8 files/76_apache1-gallery.conf 738
+RMD160 b8f7924d1e7932e24cd9f6a3aada68e90d16557f files/76_apache1-gallery.conf 738
+SHA256 2d45cf1d8979fb511b67e5592361eab2c6e82991bae6f7d47ba7c9cb5d545eca files/76_apache1-gallery.conf 738
 MD5 004b7af7fb9d52598cf9ed7db91697c6 files/76_apache2-gallery.conf 1442
+RMD160 8f67efcebb0e340d65555088721c65a02d72b479 files/76_apache2-gallery.conf 1442
+SHA256 f6c0099476bdec5f495e7de4cbdff088ed0ce01ef8993ba657a463cdb365a7ab files/76_apache2-gallery.conf 1442
 MD5 d9a1361f6d0f1dac9def27a0b57cf30c files/apache-gallery.conf 757
+RMD160 bf624af252a3401281914b738cf332cf6f8e5f2e files/apache-gallery.conf 757
+SHA256 e58154cd6feccb2d2560c428b0523f161377bc921768d79a863fdf1c6649fdea files/apache-gallery.conf 757
 MD5 f372bf3342f63c4d3a680051e80b5571 files/digest-Apache-Gallery-0.6 69
+RMD160 56ba9f715f340a2edbd6f38eca070e936b0f1228 files/digest-Apache-Gallery-0.6 69
+SHA256 762a7423c0d45bf5c6a8a9997db99137533406325bd17dc63f8d85f52e2b08b5 files/digest-Apache-Gallery-0.6 69
 MD5 af084bb70094ac69911af16d31ebf83f files/digest-Apache-Gallery-1.0_rc3 72
+RMD160 e82cc8ef9947bae762583d3173c2f44bf09605a9 files/digest-Apache-Gallery-1.0_rc3 72
+SHA256 ef22902ff1a5e511ce7c8ed296e963694fa62ea79b24b56014137cedbf92e5fa files/digest-Apache-Gallery-1.0_rc3 72
 MD5 5edd6a9688af26ad0b3f71d8e2ad8770 files/postinstall-en.txt 90
+RMD160 66f525195a80158ecca50bbf3628d5a9f8c53eeb files/postinstall-en.txt 90
+SHA256 d46f8343e97402107390a651ee3e31adfcd9034d9f88d4ae5dcc83061851dfc1 files/postinstall-en.txt 90
 MD5 2a5bdc93be7720976d88be5034a17df2 metadata.xml 444
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD8KHJtG5z4I8BtQoRAiNKAJ9k5qqy6nXQyqjSOcJHnzsLB4iI7QCgkBMQ
-S3FRt1t/JFT1aOft9SIe1OQ=
-=N6Qj
------END PGP SIGNATURE-----
+RMD160 76bcdd678f035f6db8d3b4614ece057afdc3cdff metadata.xml 444
+SHA256 0ac26539638d4ffc9930bc7edc25018e360593d700345d7d0568ea131f987606 metadata.xml 444

@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/Apache-Gallery
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.19 2006/02/13 15:12:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.20 2006/04/20 03:37:36 weeve Exp $
+
+  20 Apr 2006; Jason Wever <weeve@gentoo.org> Apache-Gallery-0.6.ebuild:
+  Stable on SPARC.
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   Apache-Gallery-0.6.ebuild, Apache-Gallery-1.0_rc3.ebuild:
