@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.14 2005/02/01 17:43:3# Author: Brad Cowan <bcowan@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce42.eclass,v 1.6 2006/04/20 04:40:44 dostrow Exp $
 
 # Xfce42 Eclass
 #
@@ -20,7 +20,7 @@ ZIP=""
 
 INSTALL="make DESTDIR=${D} install"
 
-XFCE_VERSION="4.2.0"
+XFCE_VERSION="4.2"
 
 ## plugins and base packages default to tar.gz unless bzipped is called
 ## ZIP is added to the src directory for when the Xfce team releases .tar.bz2 packages
@@ -32,22 +32,24 @@ bzipped() {
 ## plugin function adds the -plugin string to $P and adds the depend on panel version
 plugin() {
 	[[ -z ${MY_P} ]] && MY_P="${PN}-plugin-${PV}"
-	S=${WORKDIR}/${MY_P}
-	RDEPEND="${RDEPEND} >=xfce-base/xfce4-panel-${XFCE_VERSION}"
+	S="${WORKDIR}/${MY_P}"
+	RDEPEND="${RDEPEND}
+		=xfce-base/xfce4-panel-${XFCE_VERSION}*
+		!>=xfce-base/xfce4-panel-4.3"
 }
 
 ## goodies function sets SRC_URI and HOMEPAGE to berlios
 goodies() {
 	SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P:-${P}}${COMPRESS}"
 	[[ -z ${HOMEPAGE} ]] && HOMEPAGE="http://xfce-goodies.berlios.de/"
-	S=${WORKDIR}/${MY_P:-${P}}
+	S="${WORKDIR}/${MY_P:-${P}}"
 }
 
 ## goodies_plugin calls plugin and goodies funtions in correct order
 goodies_plugin() {
 	plugin
 	goodies
-	S=${WORKDIR}/${MY_P}
+	S="${WORKDIR}/${MY_P}"
 }
 
 ## core_package sets SRC_URI and HOMPAGE for all Xfce core pacgages
