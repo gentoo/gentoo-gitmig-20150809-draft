@@ -1,9 +1,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/virtuals,v 1.8 2006/02/23 21:24:08 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/virtuals,v 1.9 2006/04/20 16:40:53 chtekk Exp $
 
 virtual/alsa				sys-kernel/mips-sources
 virtual/linux-sources		sys-kernel/mips-sources
 virtual/os-headers			sys-kernel/mips-headers
-virtual/httpd-php			dev-php/mod_php
-virtual/php					dev-php/mod_php

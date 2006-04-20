@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/mips/use.mask,v 1.3 2005/07/05 13:06:52 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/mips/use.mask,v 1.4 2006/04/20 16:40:54 chtekk Exp $
 
 # Henrik Brix Andersen <brix@gentoo.org>
 # According to the mips herd, we currently have no way of testing
@@ -9,3 +9,7 @@ pcmcia
 
 # PPC instructions
 altivec
+
+# Luca Longinotti <chtekk@gentoo.org>
+# Mask php USE on MIPS profiles
+php

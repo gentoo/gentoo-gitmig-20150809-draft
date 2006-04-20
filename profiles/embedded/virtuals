@@ -30,8 +30,6 @@ virtual/modutils		sys-apps/modutils
 virtual/mta			mail-mta/ssmtp
 virtual/opengl			x11-base/xorg-x11
 virtual/os-headers		sys-kernel/linux-headers
-virtual/php			dev-php/mod_php
-virtual/httpd-php				dev-php/mod_php
 virtual/python			dev-lang/python
 virtual/quicktime		media-libs/libquicktime
 virtual/ruby			dev-lang/ruby
