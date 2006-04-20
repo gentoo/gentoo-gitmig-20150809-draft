@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rufus/rufus-0.7.0.ebuild,v 1.3 2006/04/20 03:55:16 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rufus/rufus-0.7.0.ebuild,v 1.4 2006/04/20 04:08:33 tsunam Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.tsunam.org/files/overlay/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="${RDEPEND}
