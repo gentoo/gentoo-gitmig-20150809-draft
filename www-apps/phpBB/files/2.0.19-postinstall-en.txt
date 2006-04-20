@@ -1,3 +1,0 @@
-Please use install/install.php to configure a new install of phpBB.
-Use install/update_to_219.php to upgrade your existing version.
-After that, please delete the contribs/ and install/ directories
