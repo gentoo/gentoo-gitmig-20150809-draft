@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.39.ebuild,v 1.1 2006/04/20 01:07:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.39.ebuild,v 1.2 2006/04/20 01:10:39 wolf31o2 Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.legendsthegame.net/files/${MY_P}.sh
 	http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}.png"
 
 RESTRICT="mirror"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 LICENSE="as-is"
 SLOT="0"
 IUSE="dedicated"

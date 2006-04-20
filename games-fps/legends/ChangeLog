@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/legends
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.15 2006/04/20 01:07:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.16 2006/04/20 01:10:39 wolf31o2 Exp $
+
+  20 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  legends-0.4.1.39.ebuild, -legends-0.4.1c.ebuild:
+  Marking stable on x86 because of bug #128264 and removing the older version.
 
 *legends-0.4.1.39 (20 Apr 2006)
 
