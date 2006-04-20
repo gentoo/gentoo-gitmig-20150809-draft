@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/kscope
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.22 2006/03/08 17:23:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.23 2006/04/20 02:53:28 flameeyes Exp $
+
+*kscope-1.3.4 (20 Apr 2006)
+
+  20 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> +files/kscoperc,
+  +kscope-1.3.4.ebuild:
+  Bump now that the legal troubles seems to be fixed, fix dependencies for the
+  new release. Move the .desktop file in standard location rather than the old
+  KDE one, install a base configuration file with programs' paths.
 
   08 Mar 2006; Carsten Lohrke <carlo@gentoo.org> kscope-1.2.0.ebuild:
   Missing Kate dependency.
