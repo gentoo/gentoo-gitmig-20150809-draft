@@ -1,0 +1,11 @@
+--- xdm-1.0.3.orig/config/xdm-config.cpp	2006-04-19 22:40:45.000000000 -0700
++++ xdm-1.0.3/config/xdm-config.cpp	2006-04-19 23:10:44.000000000 -0700
+@@ -18,7 +18,7 @@
+ DisplayManager.servers:		XDMCONFIGDIR/Xservers
+ DisplayManager.accessFile:	XDMCONFIGDIR/Xaccess
+ DisplayManager*resources:	XDMCONFIGDIR/Xresources
+-DisplayManager.willing:		SU nobody -c XDMSCRIPTDIR/Xwilling
++DisplayManager.willing:		XDMSCRIPTDIR/Xwilling
+ ! All displays should use authorization, but we cannot be sure
+ ! X terminals may not be configured that way, so they will require
+ ! individual resource settings.
