@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.0-r1.ebuild,v 1.1 2006/04/12 16:07:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.0-r1.ebuild,v 1.2 2006/04/20 06:22:13 flameeyes Exp $
 
 inherit flag-o-matic bsdmk freebsd
 
@@ -18,7 +18,8 @@ SRC_URI="mirror://gentoo/${SBIN}.tar.bz2
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 	=sys-freebsd/freebsd-libexec-${RV}*
 	ssl? ( dev-libs/openssl )
-	sys-libs/readline"
+	sys-libs/readline
+	sys-process/vixie-cron"
 DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-sources-${RV}*
 	=sys-freebsd/freebsd-headers-${RV}*
@@ -63,6 +64,10 @@ src_install() {
 	insinto /etc
 	doins devd.conf pccard_ether defaults/pccard.conf minfree rc.firewall \
 		sysctl.conf
+
+	# Install a crontab for adjkerntz
+	insinto /etc/cron.d
+	newins "${FILESDIR}/adjkerntz-crontab" adjkerntz
 
 	# Install the periodic stuff (needs probably to be ported in a more
 	# gentooish way)

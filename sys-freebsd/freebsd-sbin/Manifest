@@ -1,9 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 81258dacfa923b14b736f4a9a88517d7 ChangeLog 3480
-RMD160 6f8d4dbb7190492f1aeb81db7ff84bb3e337a6a8 ChangeLog 3480
-SHA256 1852ff931061ed8bfda739e71bc0c580e537518b143f4ba89c9087635202dafc ChangeLog 3480
+MD5 753163da9d3ce1fcced5c5bcc4e3eb63 ChangeLog 3829
+RMD160 425457a1a1d812b5e633f8596770969d64f52a92 ChangeLog 3829
+SHA256 d9c1fa5d309c123c894152fed1d6f72d444a88e1708911ea8fda25d43fe35954 ChangeLog 3829
+MD5 5e4bed7f6569cca0f9da4ba63c1d52d2 files/adjkerntz-crontab 178
+RMD160 90804fcf4151686b974dda339ab2d63b63d1707c files/adjkerntz-crontab 178
+SHA256 2497d575bb7c9675d218cc147514e89dea0ba5972ae0b205846809b518bfac0d files/adjkerntz-crontab 178
 MD5 5fd83bcbf48686bcd615b60799613cce files/digest-freebsd-sbin-6.0 1548
 RMD160 bf64735bbceeed83ebccd22f2b3a989100e6ec31 files/digest-freebsd-sbin-6.0 1548
 SHA256 c10cfdca82d0a375d105c9ec1834a52f8ebab8e1ab244cedb63ff06f29d39c05 files/digest-freebsd-sbin-6.0 1548
@@ -22,9 +25,9 @@ SHA256 f1629c547de16228304a19d13027288da507086faef40b9e722e7443a3c629ce files/ip
 MD5 edcf04ea876f3ac2275867633fa4e96d files/sysctl.initd 778
 RMD160 09ed017c2dd767db57cfa71da6c9d656a8fbb23b files/sysctl.initd 778
 SHA256 12f1bbcd72244579ae3b23d2455a00739cc6ff074f68cbb7db1410d19c0f69f4 files/sysctl.initd 778
-MD5 555320756ee84a699fd296f843dba6f1 freebsd-sbin-6.0-r1.ebuild 2033
-RMD160 b56d06a035efdab6f25dccdee9d0ee121137330d freebsd-sbin-6.0-r1.ebuild 2033
-SHA256 534fcebda41d47c4939562b389a611ccd224836805aefbab5e2e58e336929484 freebsd-sbin-6.0-r1.ebuild 2033
+MD5 feb38d045f080037f2aa6f14719e3ac7 freebsd-sbin-6.0-r1.ebuild 2164
+RMD160 3f1367adae97a1cca4f2783a7f9909c4e0b1b624 freebsd-sbin-6.0-r1.ebuild 2164
+SHA256 b46061384d1c5a3394cbe2f534329bebf24e4169d3cfc10124c4ae42234de509 freebsd-sbin-6.0-r1.ebuild 2164
 MD5 3fee67932e9e930db90bde7d2967b06a freebsd-sbin-6.0.ebuild 2026
 RMD160 3e52890b638e78163c7346a5ce0f353eeb38bfa5 freebsd-sbin-6.0.ebuild 2026
 SHA256 79d23f12b370de8958872e1b298bfe44294465cda2a7a7335fdb4e7476d78f13 freebsd-sbin-6.0.ebuild 2026
@@ -34,7 +37,7 @@ SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEPSXlAiZjviIA2XgRAkxIAJ4uI43+t1OW49GxSYj4bnI/er/nogCeMmIw
-szcPplfjbH4M2aHylfyZf5A=
-=jdX7
+iD8DBQFERyfiAiZjviIA2XgRAvrhAKCh4bZ7VFGGi96gBucN4tQKZrKHrACgukem
+e3GAmAXhBaZHfSXs9KhWv3A=
+=fL9C
 -----END PGP SIGNATURE-----
