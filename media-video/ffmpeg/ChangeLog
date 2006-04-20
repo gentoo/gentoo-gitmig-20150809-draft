@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.134 2006/04/14 21:45:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.135 2006/04/20 21:57:34 dang Exp $
+
+  20 Apr 2006; Daniel Gryniewicz <dang@gentoo.org>
+  +files/ffmpeg-0.4.9_p20060302-amr-64bit.patch,
+  ffmpeg-0.4.9_p20060302.ebuild:
+  Fix amr on 64-bit arches per bug# 130530
 
   14 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/ffmpeg-0.4.9_p20060302-fbsd-flags.patch,
