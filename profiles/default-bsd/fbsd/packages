@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/packages,v 1.1 2006/03/30 12:42:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/packages,v 1.2 2006/04/20 06:48:00 flameeyes Exp $
 
 # This files contains a small list of packages that define a 
 # minimal FreeBSD system. DO NOT change this without contacting
@@ -8,7 +8,6 @@
 #
 *sys-freebsd/freebsd-mk-defs
 *sys-freebsd/freebsd-sources
-*sys-freebsd/freebsd-headers
 
 *sys-devel/gettext
 *dev-libs/libiconv
