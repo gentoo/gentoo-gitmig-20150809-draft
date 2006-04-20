@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Base
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.10 2006/03/10 12:39:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.11 2006/04/20 16:50:34 tcort Exp $
+
+  20 Apr 2006; Thomas Cort <tcort@gentoo.org> Test-Base-0.50.ebuild:
+  Added ~alpha keyword wrt Bug #119199.
 
   10 Mar 2006; Aron Griffis <agriffis@gentoo.org> Test-Base-0.50.ebuild:
   Mark 0.50 ~ia64. #119199
