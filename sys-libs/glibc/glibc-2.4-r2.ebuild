@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.12 2006/04/19 00:49:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.13 2006/04/20 23:06:53 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -35,8 +35,14 @@ FEDORA_VER="20060306T1239"
 FEDORA_TARBALL="glibc-fedora-${FEDORA_VER}.tar.bz2"
 FEDORA_URI="mirror://gentoo/${FEDORA_TARBALL}"
 
+# PPC cpu addon
+# http://penguinppc.org/dev/glibc/glibc-powerpc-cpu-addon.html
+PPC_CPU_ADDON_VER="0.01"
+PPC_CPU_ADDON_TARBALL="glibc-powerpc-cpu-addon-v${PPC_CPU_ADDON_VER}.tgz"
+PPC_CPU_ADDON_URI="http://penguinppc.org/dev/glibc/${PPC_CPU_ADDON_TARBALL}"
+
 GENTOO_TOOLCHAIN_BASE_URI="mirror://gentoo"
-GENTOO_TOOLCHAIN_DEV_URI="http://dev.gentoo.org/~azarah/glibc"
+GENTOO_TOOLCHAIN_DEV_URI="http://dev.gentoo.org/~azarah/glibc/XXX http://dev.gentoo.org/~vapier/dist/XXX"
 
 ### PUNT OUT TO ECLASS?? ###
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
@@ -126,39 +132,30 @@ get_glibc_src_uri() {
 
 	if [[ -n ${BRANCH_UPDATE} ]] ; then
 		GLIBC_SRC_URI="${GLIBC_SRC_URI}
-			${GENTOO_TOOLCHAIN_BASE_URI}/glibc-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2"
-		[[ -n ${GENTOO_TOOLCHAIN_DEV_URI} ]] &&
-			GLIBC_SRC_URI="${GLIBC_SRC_URI}
-				${GENTOO_TOOLCHAIN_DEV_URI}/glibc-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2"
+			${GENTOO_TOOLCHAIN_BASE_URI}/glibc-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
+			${GENTOO_TOOLCHAIN_DEV_URI//XXX/glibc-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2}"
 	fi
 
 	if [[ -n ${PATCH_VER} ]] ; then
 		GLIBC_SRC_URI="${GLIBC_SRC_URI}
-			${GENTOO_TOOLCHAIN_BASE_URI}/glibc-${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2"
-		[[ -n ${GENTOO_TOOLCHAIN_DEV_URI} ]] &&
-			GLIBC_SRC_URI="${GLIBC_SRC_URI}
-				${GENTOO_TOOLCHAIN_DEV_URI}/glibc-${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2"
+			${GENTOO_TOOLCHAIN_BASE_URI}/glibc-${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
+			${GENTOO_TOOLCHAIN_DEV_URI//XXX/glibc-${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2}"
 	fi
 
 	if [[ ${GLIBC_MANPAGE_VERSION} != "none" ]] ; then
 		GLIBC_SRC_URI="${GLIBC_SRC_URI}
-			${GENTOO_TOOLCHAIN_BASE_URI}/glibc-manpages-${GLIBC_MANPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2"
-		[[ -n ${GENTOO_TOOLCHAIN_DEV_URI} ]] &&
-			GLIBC_SRC_URI="${GLIBC_SRC_URI}
-				${GENTOO_TOOLCHAIN_DEV_URI}/glibc-manpages-${GLIBC_MANPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2"
+			${GENTOO_TOOLCHAIN_BASE_URI}/glibc-manpages-${GLIBC_MANPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
+			${GENTOO_TOOLCHAIN_DEV_URI//XXX/glibc-manpages-${GLIBC_MANPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2}"
 	fi
 
 	if [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
 		GLIBC_SRC_URI="${GLIBC_SRC_URI}
-			${GENTOO_TOOLCHAIN_BASE_URI}/glibc-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2"
-		[[ -n ${GENTOO_TOOLCHAIN_DEV_URI} ]] &&
-			GLIBC_SRC_URI="${GLIBC_SRC_URI}
-				${GENTOO_TOOLCHAIN_DEV_URI}/glibc-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2"
+			${GENTOO_TOOLCHAIN_BASE_URI}/glibc-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
+			${GENTOO_TOOLCHAIN_DEV_URI//XXX/glibc-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2}"
 	fi
 
-	if [[ -n ${FEDORA_URI} ]] ; then
-		GLIBC_SRC_URI="${GLIBC_SRC_URI} ${FEDORA_URI}"
-	fi
+	GLIBC_SRC_URI="${GLIBC_SRC_URI} ${FEDORA_URI}"
+	GLIBC_SRC_URI="${GLIBC_SRC_URI} ${PPC_CPU_ADDON_URI}"
 
 	echo "${GLIBC_SRC_URI}"
 }
@@ -186,6 +183,10 @@ toolchain-glibc_src_unpack() {
 		mv c_stubs "${S}"/ || die
 		cd "${S}"
 		rm -r "${WORKDIR}"/fedora
+	fi
+	if [[ -n ${PPC_CPU_ADDON_TARBALL} ]] ; then
+		cd "${S}"
+		unpack ${PPC_CPU_ADDON_TARBALL}
 	fi
 
 	if [[ -n ${PATCH_VER} ]] ; then
@@ -836,6 +837,13 @@ glibc_do_configure() {
 		-e 's!^!,!' \
 		-e '/^,\*$/d')
 	popd > /dev/null
+
+	if [[ -n ${PPC_CPU_ADDON_VER} ]] && [[ $(tc-arch) == ppc* ]] ; then
+		ADDONS="${ADDONS},powerpc-cpu"
+		case $(get-flag mcpu) in
+			970|power4|power5|power5+) myconf="${myconf} --with-cpu=$(get-flag mcpu)"
+		esac
+	fi
 
 	use nls || myconf="${myconf} --disable-nls"
 	myconf="${myconf} $(use_enable hardened stackguard-randomization)"

@@ -13,3 +13,6 @@ SHA256 2f29ec2b2b2f75f787a1eed8fdea20aff212dc3bad97651ca376914c49181977 glibc-li
 MD5 7bb1b35654e94994925e66676acabd4e glibc-ports-2.4.tar.bz2 381472
 RMD160 72987098f9fbd5a1ad617bf2136081c0db80a429 glibc-ports-2.4.tar.bz2 381472
 SHA256 2fbbcaad8a9f8560485c398a9066959fe2713c8bc7e653ec476fb56fed21d19a glibc-ports-2.4.tar.bz2 381472
+MD5 f576b5601b86a89165c17fdddb92d1cc glibc-powerpc-cpu-addon-v0.01.tgz 22422
+RMD160 3483c94ec55819b36aa66fc60462317f8d15e4df glibc-powerpc-cpu-addon-v0.01.tgz 22422
+SHA256 0ffa9a432fffb9bfed99c529b631a27534ba848c7ec1d707732338b73a4a8ce9 glibc-powerpc-cpu-addon-v0.01.tgz 22422
