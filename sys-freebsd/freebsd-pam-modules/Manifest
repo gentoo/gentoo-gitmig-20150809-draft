@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5297e89ee31e5d8153cab215e1d56d8b ChangeLog 2324
-RMD160 0b5d9a46a9adf6fab0175dff7b307953d0221848 ChangeLog 2324
-SHA256 2e7591f5cfb5997d8973dfff029507917a1e3d49a4f462536518754e632d2227 ChangeLog 2324
+MD5 508689a2407f91871c2fb3b552dcbd03 ChangeLog 2450
+RMD160 e235f7aed09b100d9e0e552090ecf950a53bc940 ChangeLog 2450
+SHA256 3bbd373f6559ec6c948a82186263d5f11383cd6a61518ffaadee2f5023d536b7 ChangeLog 2450
 MD5 de018e5e74aa6beb993e5fc22afc48ca files/5.4/README.pamd 2970
 RMD160 70629aa275cec059cf7f599d565e435d0315bfde files/5.4/README.pamd 2970
 SHA256 ab09a002c9c7f2cef797ec5554a8d8666fe60c69196c32968845bff171e5fcc0 files/5.4/README.pamd 2970
@@ -25,16 +22,9 @@ SHA256 ec7e5e70c42f5524c65e2baec1623dd53c74c2a1953fd0f8cea1776b9a258904 files/di
 MD5 252ec73a62c30ee7a502aab5f4ed4c3b files/freebsd-pam-modules-6.0-gentoo.patch 701
 RMD160 f907769f6f0ded416fac03a1fb6b5531ff682070 files/freebsd-pam-modules-6.0-gentoo.patch 701
 SHA256 8346d95aa5b4f283fedf4387ebb85a61f5f10fac38dc45bdea8c2c345fdc633d files/freebsd-pam-modules-6.0-gentoo.patch 701
-MD5 f9d47ac8941147489c18f9eb34fda2ae freebsd-pam-modules-6.0.ebuild 1351
-RMD160 b6bef9a2bd1c39a2816665d8af52fec8cbf8f9de freebsd-pam-modules-6.0.ebuild 1351
-SHA256 281d46f8381ebb4553863569a569d86e2607993cb62550fedc712e7a599a90cf freebsd-pam-modules-6.0.ebuild 1351
+MD5 0c5072a8ce386c4c91203999f8af4097 freebsd-pam-modules-6.0.ebuild 1314
+RMD160 3ff22b76d89ddc271518b5e8237387944adab479 freebsd-pam-modules-6.0.ebuild 1314
+SHA256 1ef6c0be49991f23577f282dcf252a60034cd07cd2dda53febe3630068d8458c freebsd-pam-modules-6.0.ebuild 1314
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
 SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEME+SAiZjviIA2XgRAvcnAJ9VOetis39DtXUlr0d+DfZY4T9k2QCeLvZ2
-94CakUvWekFAnmk08S1JlBk=
-=dDRv
------END PGP SIGNATURE-----

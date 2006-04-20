@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 89ff73f851640bffc497a7e9764f77c2 ChangeLog 1196
-RMD160 add9ab2f85a3d2adb3abea2f386ddbc5f3022533 ChangeLog 1196
-SHA256 3142a03e9e6985a6593f22ab6f6aea62f7634ff13556483b7effa42a5e7bd9d4 ChangeLog 1196
+MD5 008e7aa3fc8c3e66903119912e47dd18 ChangeLog 1317
+RMD160 28752c5ae0ebb59a2694c8ca3f060e32e8bb4007 ChangeLog 1317
+SHA256 dfb9f435da4049c9ed57b0e276c08dbd7d548b44f8f501428d5d5fad65d1b5ac ChangeLog 1317
 MD5 650eecb0e0799e16115bd3bf604bc239 files/digest-freebsd-rescue-6.0 701
 RMD160 f7dd64ea1b8cf1a8d5d416c19b8f114b3fee109f files/digest-freebsd-rescue-6.0 701
 SHA256 e05761976223123879c1e32da501d6931c8a715e210b934cb0854cb2194889cf files/digest-freebsd-rescue-6.0 701
@@ -13,16 +10,9 @@ SHA256 b745e48667803a62217d4e15e147c6b06d4251a1eea77f048f5cf0bec442931e files/fr
 MD5 1eb113940f2deb194fc0e8050a998b93 files/freebsd-rescue-5.4-sbin-gentoo.patch 817
 RMD160 00982cbcd0922847d8754388e5a5e27df7cf7436 files/freebsd-rescue-5.4-sbin-gentoo.patch 817
 SHA256 8e9c30fb3a3e1344fadc63039165080bfb50ef8ea989383b67b8a343f7436fed files/freebsd-rescue-5.4-sbin-gentoo.patch 817
-MD5 590198b5c247278d7c6459eafacc1836 freebsd-rescue-6.0.ebuild 1381
-RMD160 8fd394d2f2b4bf92d76138c43f9e11f059e9dc5c freebsd-rescue-6.0.ebuild 1381
-SHA256 abaeddd9b239b543bec0ae324f32d265ec16ada00f3f5aca515c59832a825481 freebsd-rescue-6.0.ebuild 1381
+MD5 05bdcef7237378530928df5e003f542f freebsd-rescue-6.0.ebuild 1344
+RMD160 53841752e1a05e70c2e05fbba53cf6492c708d2e freebsd-rescue-6.0.ebuild 1344
+SHA256 482ab9af3857e6a4b998de390ff5c9f21886a5179efcf925e50e37c1c4db2915 freebsd-rescue-6.0.ebuild 1344
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
 SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEMEg4AiZjviIA2XgRArqWAKDp2XrGiPTpXk/h09IYqUoBcB0uLQCbBCpV
-3I1TodFcdHDO959Khva19NY=
-=7lgr
------END PGP SIGNATURE-----

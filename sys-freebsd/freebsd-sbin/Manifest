@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5f1623ba182c35f61c51c1b59d3dd7ed ChangeLog 3931
-RMD160 b590ca35f83d37feb7eebef4a09eb2cc408f836c ChangeLog 3931
-SHA256 ef67aa881bf533715c69b230a50550752ca4e603f3058547548b4df6943cebf8 ChangeLog 3931
+MD5 4231fc56323445dbe3b13df2eed5c0fb ChangeLog 4053
+RMD160 b4931eea96a7244dc0d95cd64fd246ebf7c0bd92 ChangeLog 4053
+SHA256 8efbfa20ab322b21f51aaad0eed9e540a1679bca3d9c064dd49dab0ee950fbc7 ChangeLog 4053
 MD5 5e4bed7f6569cca0f9da4ba63c1d52d2 files/adjkerntz-crontab 178
 RMD160 90804fcf4151686b974dda339ab2d63b63d1707c files/adjkerntz-crontab 178
 SHA256 2497d575bb7c9675d218cc147514e89dea0ba5972ae0b205846809b518bfac0d files/adjkerntz-crontab 178
@@ -22,16 +19,9 @@ SHA256 f1629c547de16228304a19d13027288da507086faef40b9e722e7443a3c629ce files/ip
 MD5 edcf04ea876f3ac2275867633fa4e96d files/sysctl.initd 778
 RMD160 09ed017c2dd767db57cfa71da6c9d656a8fbb23b files/sysctl.initd 778
 SHA256 12f1bbcd72244579ae3b23d2455a00739cc6ff074f68cbb7db1410d19c0f69f4 files/sysctl.initd 778
-MD5 feb38d045f080037f2aa6f14719e3ac7 freebsd-sbin-6.0-r1.ebuild 2164
-RMD160 3f1367adae97a1cca4f2783a7f9909c4e0b1b624 freebsd-sbin-6.0-r1.ebuild 2164
-SHA256 b46061384d1c5a3394cbe2f534329bebf24e4169d3cfc10124c4ae42234de509 freebsd-sbin-6.0-r1.ebuild 2164
+MD5 226f3c852e244b961b05828ee84cef56 freebsd-sbin-6.0-r1.ebuild 2127
+RMD160 b0bc72f6c2a9a62b23297e431feedc12f32c76e6 freebsd-sbin-6.0-r1.ebuild 2127
+SHA256 09ece1d5395fbb75a039746906ad4fc4d0cb815763188eac38c9282b765e958f freebsd-sbin-6.0-r1.ebuild 2127
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
 SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFERyxZAiZjviIA2XgRAtE9AJ9VIJ7Tjm+tsHOuCCTiy3LfCdlVBwCfeJFG
-2K3aq7SygTqb1zIwfBswOOM=
-=ED7H
------END PGP SIGNATURE-----

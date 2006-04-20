@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fe8b6bcb9c96dd7e27015bd021dca598 ChangeLog 1463
-RMD160 1bac0c471166fbb6513743f3229e67e6389d3bf5 ChangeLog 1463
-SHA256 88ea7a96b9788f8e1fb350ab95399970baf317051c3948a1c5778bcbdea938a9 ChangeLog 1463
+MD5 431ecc54c6f623de5c92b4a3fe717b79 ChangeLog 1585
+RMD160 4aba18e181be5fbd8546544ff66b1e3075625bb2 ChangeLog 1585
+SHA256 45da3d9d3ae3b1102a60e155c5f77a6391223a3c5076c4ecb614c4cb06645e28 ChangeLog 1585
 MD5 60f5670617e4ddbd6d9727af35f4319e files/digest-freebsd-contrib-6.0 213
 RMD160 78000cf42adb75175bc9b1cc330f6e8032dd1f79 files/digest-freebsd-contrib-6.0 213
 SHA256 ae4e54c2a8ed87d59e6482e534d0b41e1236e9dede9bac19966af8965c8f17cd files/digest-freebsd-contrib-6.0 213
 MD5 19ed07f6a51e25c4021e799825aa6273 files/freebsd-contrib-5.3-lib_csu-makefile.patch 327
 RMD160 d2817b79e134cdd24f6163f0a72c5284cee1bdba files/freebsd-contrib-5.3-lib_csu-makefile.patch 327
 SHA256 ee3ec95497ceea4e88101f10f89b7e161eed1684a624ea9eae257a20408080da files/freebsd-contrib-5.3-lib_csu-makefile.patch 327
-MD5 8312d0e08818bfaf7760099b4aeae2f1 freebsd-contrib-6.0.ebuild 1467
-RMD160 3ab471d341e7e232267cc48859969f2ff396d0c8 freebsd-contrib-6.0.ebuild 1467
-SHA256 209a24a6583fe1c05027cbf7f0f8ecb919019205dc54ee9f68b8654299fbbd58 freebsd-contrib-6.0.ebuild 1467
+MD5 33e86cc7aa4036521be3f2bc635dd81a freebsd-contrib-6.0.ebuild 1430
+RMD160 86afe865d2a94d5fe5a489d9e44f50cdc9b71b19 freebsd-contrib-6.0.ebuild 1430
+SHA256 368238ad7f0411387db6853293396e39a5f583ac5fb24b4d3a608f31d81fba35 freebsd-contrib-6.0.ebuild 1430
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
 SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEME+SAiZjviIA2XgRAiwtAJ4xhNz/0FR6bqfwBGsSCSUpWa75XQCeKRa+
-hEoiik49NylKhSAYTupp28I=
-=nr3U
------END PGP SIGNATURE-----
