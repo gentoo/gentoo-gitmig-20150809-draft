@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.35 2006/04/16 00:07:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.36 2006/04/20 04:13:57 tester Exp $
+
+  20 Apr 2006; Olivier Crête <tester@gentoo.org>
+  mozilla-firefox-bin-1.5.0.2.ebuild:
+  Stable on amd64 per security bug #129924, restored changelog
 
   15 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
   mozilla-firefox-bin-1.0.8.ebuild:
@@ -13,4 +17,322 @@
   +mozilla-firefox-bin-1.0.8.ebuild, -mozilla-firefox-bin-1.5-r2.ebuild,
   -mozilla-firefox-bin-1.5.0.1.ebuild, +mozilla-firefox-bin-1.5.0.2.ebuild:
   security bump for both 1.5.x and 1.0.x branch
+
+*mozilla-firefox-bin-1.5.0.1 (05 Feb 2006)
+
+  05 Feb 2006; <anarchy@gentoo.org> files/icon/mozillafirefox-bin.desktop,
+  +mozilla-firefox-bin-1.5.0.1.ebuild:
+  revision bump, comment change for desktop entry
+
+*mozilla-firefox-bin-1.5-r2 (08 Jan 2006)
+
+  08 Jan 2006; Jory A. Pratt <anarchy@gentoo.org>
+  -mozilla-firefox-bin-1.0.6-r2.ebuild, -mozilla-firefox-bin-1.5.ebuild,
+  -mozilla-firefox-bin-1.5-r1.ebuild, +mozilla-firefox-bin-1.5-r2.ebuild:
+  revision which includes linguas support
+
+  24 Dec 2005; Mark Loeser <halcy0n@gentoo.org>
+  mozilla-firefox-bin-1.5-r1.ebuild:
+  Use the libstdc++ virtual instead
+
+  24 Dec 2005; Jory A. Pratt <anarchy@gentoo.org>
+  mozilla-firefox-bin-1.5-r1.ebuild:
+  correction in dep wrt bug#116622
+
+*mozilla-firefox-bin-1.5-r1 (18 Dec 2005)
+
+  18 Dec 2005; Jory A. Pratt <anarchy@gentoo.org>
+  +mozilla-firefox-bin-1.5-r1.ebuild:
+  fixed manifest wrt bug#114448, modular X compatible
+
+*mozilla-firefox-bin-1.5 (29 Nov 2005)
+
+  29 Nov 2005; Jory A. Pratt <anarchy@gentoo.org>
+  +mozilla-firefox-bin-1.5.ebuild:
+  revision bump
+
+  29 Sep 2005; Mark Loeser <halcy0n@gentoo.org>
+  mozilla-firefox-bin-1.0.7.ebuild:
+  Stable on x86; bug #105396
+
+  27 Sep 2005; Simon Stelling <blubb@gentoo.org>
+  mozilla-firefox-bin-1.0.7.ebuild:
+  stable on amd64 wrt bug 105396
+
+*mozilla-firefox-bin-1.0.7 (27 Sep 2005)
+
+  27 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
+  +mozilla-firefox-bin-1.0.7.ebuild:
+  New release.
+
+  11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  mozilla-firefox-bin-1.0.6-r2.ebuild:
+  Call has_multilib_profile from pkg_setup instead of global scope.
+
+*mozilla-firefox-bin-1.0.6-r2 (02 Aug 2005)
+
+  02 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  -files/firefox-bin-0.9-init.tar.bz2, -mozilla-firefox-bin-1.0.5-r1.ebuild,
+  -mozilla-firefox-bin-1.0.6-r1.ebuild,
+  +mozilla-firefox-bin-1.0.6-r2.ebuild:
+  Bump rev to push out mozilla-launcher.eclass change which sets
+  MOZ_PLUGIN_PATH correctly in /usr/bin/firefox-bin #100378
+
+  25 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-bin-1.0.5-r1.ebuild, -mozilla-firefox-bin-1.0.6.ebuild,
+  mozilla-firefox-bin-1.0.6-r1.ebuild:
+  Need to inherit multilib for has_multilib_profile. Remove obsolete ~arch
+  ebuild
+
+  22 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-bin-1.0.6-r1.ebuild:
+  Push to stable for security and extensions issues
+
+*mozilla-firefox-bin-1.0.6-r1 (22 Jul 2005)
+
+  22 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-firefox-bin-1.0.6-r1.ebuild:
+  Require mozilla-launcher-1.41 so that we can get rid of nsplugins.eclass and
+  stop calling src_mv_plugins and pkg_mv_plugins.  Don't drop in initial tarball
+  because it is no longer necessary.  However, don't attempt to call
+  mozilla-launcher -register either, because the -bin packages don't provide
+  regchrome and regxpcom.  This is fine, doesn't matter for a fresh install, just
+  means that we won't be able to install extensions via portage for the -bin
+  ebuilds.
+
+*mozilla-firefox-bin-1.0.6 (20 Jul 2005)
+
+  20 Jul 2005; Jory A. Pratt <anarchy@gentoo.org>
+  +mozilla-firefox-bin-1.0.6.ebuild:
+  revision bump, fixes API
+
+  18 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-bin-1.0.5-r1.ebuild:
+  Update dependency to mozilla-launcher-1.35 to help with #99084
+
+*mozilla-firefox-bin-1.0.5-r1 (18 Jul 2005)
+
+  18 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  -mozilla-firefox-bin-1.0.4.ebuild, -mozilla-firefox-bin-1.0.5.ebuild,
+  +mozilla-firefox-bin-1.0.5-r1.ebuild:
+  Install /usr/bin/firefox-bin stub using install_mozilla_launcher_stub from
+  mozilla-launcher.eclass #99084
+
+  14 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-bin-1.0.5.ebuild:
+  stable on x86 #95199
+
+  13 Jul 2005; Herbie Hopkins <herbs@gentoo.org>
+  mozilla-firefox-bin-1.0.5.ebuild:
+  Stable on amd64 wrt bug #95199.
+
+*mozilla-firefox-bin-1.0.5 (13 Jul 2005)
+
+  13 Jul 2005; Jory A. Pratt <anarchy@gentoo.org>
+  -mozilla-firefox-bin-1.0.3.ebuild, +mozilla-firefox-bin-1.0.5.ebuild:
+  Security update bug #95199
+
+  14 May 2005; Olivier Crête <tester@gentoo.org>
+  mozilla-firefox-bin-1.0.4.ebuild:
+  Stable on x86 per security bug #92393
+
+  14 May 2005; Simon Stelling <blubb@gentoo.org>
+  mozilla-firefox-bin-1.0.4.ebuild:
+  stable on amd64 wrt bug #92393
+
+  12 May 2005; Aron Griffis <agriffis@gentoo.org>
+  -files/firebird-0.7-antialiasing-patch, -files/firefox,
+  -files/icon/firefox-icon.png, -files/icon/mozillafirefox.desktop,
+  -mozilla-firefox-bin-1.0.1.ebuild, -mozilla-firefox-bin-1.0.1-r1.ebuild,
+  -mozilla-firefox-bin-1.0.2.ebuild:
+  trim old versions
+
+*mozilla-firefox-bin-1.0.4 (12 May 2005)
+
+  12 May 2005; <anarchy@gentoo.org> +mozilla-firefox-bin-1.0.4.ebuild:
+  security fixes bug#91859
+
+  17 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  mozilla-firefox-bin-1.0.3.ebuild:
+  stable on amd64 wrt #89303
+
+*mozilla-firefox-bin-1.0.3 (16 Apr 2005)
+
+  16 Apr 2005; Brad Laue <brad@gentoo.org> -mozilla-firefox-bin-1.0.ebuild,
+  +mozilla-firefox-bin-1.0.3.ebuild:
+  Bump to 1.0.3. Stable on x86 for bug #89303.
+
+  25 Mar 2005; <blubb@gentoo.org> mozilla-firefox-bin-1.0.2.ebuild:
+  stable on amd64 wrt bug #86148
+
+*mozilla-firefox-bin-1.0.2 (23 Mar 2005)
+
+  23 Mar 2005; Brad Laue <brad@gentoo.org> +mozilla-firefox-bin-1.0.2.ebuild:
+  Bump to 1.0.2 and stable on x86 for security updates.
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
+  mozilla-firefox-bin-1.0.ebuild, mozilla-firefox-bin-1.0.1.ebuild,
+  mozilla-firefox-bin-1.0.1-r1.ebuild:
+  mozilla-launcher to www-client from net-www
+
+*mozilla-firefox-bin-1.0.1-r1 (23 Mar 2005)
+
+  23 Mar 2005; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-firefox-bin-1.0.1-r1.ebuild:
+  Use a stub script instead of symlink to mozilla-launcher. This in
+  combination with mozilla-launcher-1.28 should fix #78890
+
+  18 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/firebird-0.7-antialiasing-patch,
+  +files/firefox-bin-0.9-init.tar.bz2, +files/firefox,
+  +files/icon/firefox-icon.png, +files/icon/mozillafirefox.desktop,
+  +files/icon/mozillafirefox-bin.desktop,
+  +files/icon/mozillafirefox-bin-icon.png, +metadata.xml,
+  +mozilla-firefox-bin-1.0.ebuild, +mozilla-firefox-bin-1.0.1.ebuild:
+  Moved from net-www/mozilla-firefox-bin to www-client/mozilla-firefox-bin.
+
+  03 Mar 2005; Chris White <chriswhite@gentoo.org>
+  mozilla-firefox-bin-1.0.1.ebuild:
+  Marking x86 stable as requested.
+
+  02 Mar 2005; Simon Stelling <blubb@gentoo.org>
+  mozilla-firefox-bin-1.0.1.ebuild:
+  stable on amd64 wrt bug #83267
+
+*mozilla-firefox-bin-1.0.1 (26 Feb 2005)
+
+  26 Feb 2005; Brad Laue <brad@gentoo.org> +mozilla-firefox-bin-1.0.1.ebuild:
+  Bump to version 1.0.1 - stability and security fixes.
+
+*mozilla-firefox-bin-1.0_rc1 (18 Nov 2004)
+
+  18 Nov 2004; Aron Griffis <agriffis@gentoo.org>
+  -mozilla-firefox-bin-0.9.3.ebuild, mozilla-firefox-bin-1.0.ebuild,
+  -mozilla-firefox-bin-1.0_pre-r1.ebuild, -mozilla-firefox-bin-1.0_rc1.ebuild:
+  Remove extra virtual/x11. Mark 1.0 stable on x86 and amd64. Trim older
+  versions
+
+*mozilla-firefox-bin-1.0 (14 Nov 2004)
+
+  14 Nov 2004; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-firefox-bin-1.0.ebuild, -mozilla-firefox-bin-1.0_pre.ebuild:
+  Bump to 1.0, update mozilla-launcher dep to >=1.22.  Trim older ebuild
+
+  07 Oct 2004; Simon Stelling <blubb@gentoo.org>
+  mozilla-firefox-bin-1.0_pre-r1.ebuild:
+  stable on amd64
+
+*mozilla-firefox-bin-1.0_pre-r1 (02 Oct 2004)
+
+  02 Oct 2004; Brad Laue <brad@gentoo.org>
+  +mozilla-firefox-bin-1.0_pre-r1.ebuild:
+  Version bump. Forcing into stable on x86, as this is a security update.
+
+  17 Sep 2004; Travis Tilley <lv@gentoo.org>
+  mozilla-firefox-bin-1.0_pre.ebuild:
+  stable on amd64
+
+  15 Sep 2004; Olivier Crete <tester@gentoo.org>
+  mozilla-firefox-bin-1.0_pre.ebuild:
+  Stable on x86 per security bug 63996
+
+*mozilla-firefox-bin-1.0_pre (14 Sep 2004)
+
+  14 Sep 2004; Brad Laue <brad@gentoo.org>
+  +mozilla-firefox-bin-1.0_pre.ebuild:
+  Update to Mozilla Firefox 1.0PR 
+
+  05 Aug 2004; Tom Martin <slarti@gentoo.org>
+  mozilla-firefox-bin-0.9.3.ebuild:
+  Marked stable on amd64 for bug 59419.
+
+*mozilla-firefox-bin-0.9.3 (04 Aug 2004)
+
+  04 Aug 2004; Aron Griffis <agriffis@gentoo.org>
+  files/icon/mozillafirefox-bin.desktop, +mozilla-firefox-bin-0.9.3.ebuild:
+  Update to 0.9.3 for security meta-bug 59419.
+
+*mozilla-firefox-bin-0.9.1 (04 Jul 2004)
+
+  04 Jul 2004; Brad Laue <brad@gentoo.org> +mozilla-firefox-bin-0.9.1.ebuild:
+  Update to 0.9.1
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mozilla-firefox-bin-0.8-r1.ebuild, mozilla-firefox-bin-0.8.ebuild,
+  mozilla-firefox-bin-0.9-r1.ebuild:
+  virtual/glibc -> virtual/libc
+
+  18 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  files/icon/mozillafirefox-bin.desktop, mozilla-firefox-bin-0.9-r1.ebuild:
+  - Fix bug 54179: Install mozillafirefox-bin.desktop to
+    /usr/share/applications instead of /usr/share/gnome/apps/Internet.
+    This also necessitated some changes to the .desktop file which I
+    based on epiphany.desktop
+  - Fix bug 54295: Move init file unpacking from pkg_postinst to
+    src_install
+
+  16 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-bin-0.9-r1.ebuild:
+  Check both possible URLs for mozilla-firefox-0.9 since mozilla.org seems to be
+  doing some rearranging
+
+  16 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  -mozilla-firefox-bin-0.9.ebuild:
+  Remove 0.9 version in favor of 0.9-r1 to reduce confusion
+
+*mozilla-firefox-bin-0.9-r1 (16 Jun 2004)
+
+  16 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/firefox-bin-0.9-init.tar.bz2, +mozilla-firefox-bin-0.9-r1.ebuild:
+  Add initialization files for firefox-bin-0.9 to defeat the need to run as root
+  the first time. Remove bogus truetype font initialization from src_install;
+  not sure what it was trying to do, but as written it was a no-op. Remove
+  previous installation completely prior to merging as is done with firefox when
+  built from source.
+
+*mozilla-firefox-bin-0.9 (16 Jun 2004)
+
+  16 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-bin-0.9.ebuild:
+  Depend on more recent mozilla-launcher that supports -a programname for -bin
+  releases
+
+  06 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-bin-0.8-r1.ebuild:
+  Fix typo: pkg_postun -> pkg_postrm
+
+  02 Jun 2004; Travis Tilley <lv@gentoo.org>
+  mozilla-firefox-bin-0.8-r1.ebuild:
+  stable on amd64
+
+*mozilla-firefox-bin-0.8-r1 (27 May 2004)
+
+  27 May 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/icon/mozillafirefox-bin-icon.png,
+  +files/icon/mozillafirefox-bin.desktop, +mozilla-firefox-bin-0.8-r1.ebuild:
+  Update to use mozilla-launcher.  Allow both firefox and firefox-bin
+  to be installed simultaneously for testing purposes.
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-bin-0.8.ebuild:
+  Remove accidental dependency on mozilla-launcher (until m-l is updated to work
+  with mozilla-firefox-bin
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-bin-0.8.ebuild:
+  Fix bug 45698 (mozilla-firefox forces downgrade to gtk+-2.2*)
+
+  14 Feb 2004; Brad Laue <brad@gentoo.org> files/icon/firefox-icon.png:
+  Fix the firefox icon background
+
+  14 Feb 2004; Brad Laue <brad@gentoo.org> mozilla-firefox-bin-0.8.ebuild:
+  Stable on x86
+
+*mozilla-firefox-bin-0.8 (12 Feb 2004)
+
+  12 Feb 2004; Brad Laue <brad@gentoo.org> mozilla-firefox-bin-0.8.ebuild,
+  files/firebird-0.7-antialiasing-patch, files/firefox,
+  files/icon/firefox-icon.png, files/icon/mozillafirefox.desktop:
+  mozilla-firefox-bin, soon to replace firebird. This ebuild features the GTK+2
+  binary with antialiased fonts, and that groovy groovy icon.
 
