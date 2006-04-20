@@ -1,6 +1,6 @@
-MD5 cb1585d3642e2a2cc8ec0ea968e59bdd ChangeLog 7777
-RMD160 40e4a6813b736cac45b63b010d1ac344df4827b6 ChangeLog 7777
-SHA256 7f01cd4917ccc4cb9aa0f230989ca0965724b26c980bf4e830e7c4e369b37252 ChangeLog 7777
+MD5 443b0eb4bef5c0a6a186de60f8a797ee ChangeLog 7937
+RMD160 f8381d35685fd2b6aa33bbdab076437dcab0ba00 ChangeLog 7937
+SHA256 22c6fddf616abfec9d933697c5140a04c08f3e34727d0bf197942cd1537934ba ChangeLog 7937
 MD5 9cf685c1a7049e32d13f8e38a4825c0c files/digest-xfce-mcs-manager-4.2.1 74
 RMD160 70c7db272c08985a62c5fe9441915c7f837e0972 files/digest-xfce-mcs-manager-4.2.1 74
 SHA256 929617e38899c004137f22cb15ef54aa8f8be5f36d7ca3dcf3825308050837aa files/digest-xfce-mcs-manager-4.2.1 74
@@ -13,6 +13,9 @@ SHA256 e95ea4f6f5e32986a4d9cc06449203c21dd03d1788f487edd086f2770a884eda files/di
 MD5 f0e258de6c8f87c77f2f20ca5eb9123b files/digest-xfce-mcs-manager-4.2.3 74
 RMD160 539b7665a9d2ecbe8f999a38de45a728e82b14ca files/digest-xfce-mcs-manager-4.2.3 74
 SHA256 5e4b96e3206772b5dc68b2161d02b27f3b35ccd0a31564ecc0fdcb63b446389e files/digest-xfce-mcs-manager-4.2.3 74
+MD5 087fa81fbdd2f651cc82b9d48d6f4718 files/digest-xfce-mcs-manager-4.3.90.1 280
+RMD160 0ed43984d8d897480211df13cfe64d0d2381f428 files/digest-xfce-mcs-manager-4.3.90.1 280
+SHA256 96d6f0f9d8df7420f89606f2b48986c652914cdb383a994789108b0031f11e6b files/digest-xfce-mcs-manager-4.3.90.1 280
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
@@ -28,3 +31,6 @@ SHA256 b88df85201fbee04ae021c65c05a62992b59f7a89a7a4dec669f743f320ca2f5 xfce-mcs
 MD5 701dba1ec793ca9ce76556e06a5fcf8e xfce-mcs-manager-4.2.3.ebuild 501
 RMD160 c71d65969229bf061b69c30c2c353e7a0f62968e xfce-mcs-manager-4.2.3.ebuild 501
 SHA256 545c519c9f7905895f8ccf20322aa8656372ee8ea18367d25b2b19bf25777bc2 xfce-mcs-manager-4.2.3.ebuild 501
+MD5 ee89dc452f89a0cb6c836ead613e945a xfce-mcs-manager-4.3.90.1.ebuild 552
+RMD160 1aca43a95ca97457c5996857df9c18df27746173 xfce-mcs-manager-4.3.90.1.ebuild 552
+SHA256 266e56f1a410a647542f87ab42a9df8752f60ba28f39153c7aee233d14b96c58 xfce-mcs-manager-4.3.90.1.ebuild 552

@@ -1,6 +1,6 @@
-MD5 50781b89a196c2de0b40c4302558466c ChangeLog 7806
-RMD160 667546eee45670ef34e0e50d00a10493d0659eb4 ChangeLog 7806
-SHA256 4cb842191637ab6b431f67cdef34d66eb4f30bf9d2a81865e4dbca084626fc4e ChangeLog 7806
+MD5 4c8c3201ae034ed6deb3e28c43b8082e ChangeLog 7966
+RMD160 dd3efc4453dd410a103530e226b0df2575e6f2a2 ChangeLog 7966
+SHA256 3313dd239eb521dbf249c30938768aecbde65eeb718e9d272ea0c1c5d2a7a7e1 ChangeLog 7966
 MD5 103c43e0a9b46b65ec2f821e01c208ea files/digest-xfce-mcs-plugins-4.2.1 74
 RMD160 15839c863bb17d6f251bf76a12112207832e8629 files/digest-xfce-mcs-plugins-4.2.1 74
 SHA256 000d8eb661642db2a20bca0300690a68bbb87ffa4bf60844185ae1abd6ce9b4f files/digest-xfce-mcs-plugins-4.2.1 74
@@ -13,6 +13,9 @@ SHA256 66fa31fd1702d1a4566907dcae7a5bf6a716785b51586c4f98fcadfbb75ae8ff files/di
 MD5 fc286b2b8ee89f149fe21a0a4dfb1903 files/digest-xfce-mcs-plugins-4.2.3 75
 RMD160 a25b540fbdceea72af7dfb75111937b2316452c9 files/digest-xfce-mcs-plugins-4.2.3 75
 SHA256 2e8fcc6ef00ebc1a82a34a7d43583c5dc5c4409529e1c4b649494973cd435c6a files/digest-xfce-mcs-plugins-4.2.3 75
+MD5 bdb25a8f976553bfa15efe79ed194442 files/digest-xfce-mcs-plugins-4.3.90.1 280
+RMD160 133fdc319f27cad5f952ff0b66801c09cfe33a83 files/digest-xfce-mcs-plugins-4.3.90.1 280
+SHA256 a86ad8bf564b7031a2cbb89ebfb3f33833993112c957a3c42367c1c45af6fbb8 files/digest-xfce-mcs-plugins-4.3.90.1 280
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
@@ -28,3 +31,6 @@ SHA256 4cdc2135d524636c08c323f46d74123e04d11c31de2a5e17fba42f2196eea808 xfce-mcs
 MD5 78f7e18a9054240c5b5759cbf0bfcb45 xfce-mcs-plugins-4.2.3.ebuild 765
 RMD160 4896819a98ab2dbb5b832ed313a2b39d4b39c859 xfce-mcs-plugins-4.2.3.ebuild 765
 SHA256 709f4660a81e9b9ed94b1417aa8343188277148dae882ba89c8ed8e9d1bc3d76 xfce-mcs-plugins-4.2.3.ebuild 765
+MD5 5493feeffffd4fd6ebc029c05c96cd58 xfce-mcs-plugins-4.3.90.1.ebuild 938
+RMD160 4083c92a1fecc3c68c219b0f4948fe5ac815cbfa xfce-mcs-plugins-4.3.90.1.ebuild 938
+SHA256 cdbe25e9db94d7a913ce730cf0781513e98f01f9a215f43ff956183796d683db xfce-mcs-plugins-4.3.90.1.ebuild 938
