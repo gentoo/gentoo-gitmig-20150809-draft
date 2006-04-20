@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.2.ebuild,v 1.1 2006/04/04 00:52:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.2-r1.ebuild,v 1.1 2006/04/20 05:30:14 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # This is enabled due to modified Makefile.am from the patches

@@ -28,7 +28,14 @@ fi
 # First try ~/.xinitrc
 if [ -f "$HOME/.xinitrc" ]; then
 	XINITRC="$HOME/.xinitrc"
-	exec /bin/sh "$HOME/.xinitrc"
+	if [ -e $XINITRC ]; then
+		# if the x bit is set on .xinitrc
+		# it means the xinitrc is not a
+		# shell script but something else
+		exec $XINITRC
+	else
+		exec /bin/sh "$HOME/.xinitrc"
+	fi
 # If not present, try the system default
 elif [ -n "`/etc/X11/chooser.sh`" ]; then
 	exec "`/etc/X11/chooser.sh`"
