@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.144 2006/04/19 05:03:32 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.145 2006/04/20 14:08:10 wolf31o2 Exp $
+
+  20 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  transcode-1.0.2-r2.ebuild:
+  Marking stable on x86 for bug #129748.
 
   19 Apr 2006; Daniel Goller <morfic@gentoo.org> transcode-1.0.2-r2.ebuild:
   Stable on ppc and amd64 wrt bug #129748.
