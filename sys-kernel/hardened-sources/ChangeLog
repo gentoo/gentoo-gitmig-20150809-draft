@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.90 2006/04/20 17:48:26 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.91 2006/04/20 17:50:07 johnm Exp $
+
+  20 Apr 2006; John Mylchreest <johnm@gentoo.org> ChangeLog:
+  Turning on gpg-signing again, and recomitting
 
 *hardened-sources-2.6.16-r4 (20 Apr 2006)
 
