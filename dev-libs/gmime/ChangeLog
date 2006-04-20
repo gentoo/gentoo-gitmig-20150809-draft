@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.41 2006/03/18 16:59:38 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.42 2006/04/20 19:26:52 ticho Exp $
+
+*gmime-2.2.1 (20 Apr 2006)
+
+  20 Apr 2006; Andrej Kacian <ticho@gentoo.org> +gmime-2.2.1.ebuild:
+  Version bump. Do not install tutorial html compressed.
 
   18 Mar 2006; <ticho@gentoo.org> gmime-2.1.19.ebuild:
   Fixed gtk-sharp depend. Closes bug #126669, reported by Christoph M <golloza
