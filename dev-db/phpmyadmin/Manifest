@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 43eca5166bf51b56d70d8c86e611115f ChangeLog 24038
+MD5 16ad926914ee00233319d562ba71fc8e ChangeLog 24159
 MD5 ab6e8b5ecc163d415aebb7d2c42238a3 files/config.default.php-2.7.0.patch 5533
 MD5 9dc203a856638d41f9992d0e54f8c8f8 files/config.default.php-2.8.0.patch 5553
 MD5 1d85eb9be97d60027aaf8510dfa9f6d5 files/digest-phpmyadmin-2.7.0_p1 268
@@ -15,11 +12,4 @@ MD5 cf0af0543cb29eb88163220df6f14669 files/reconfig-2.8 329
 MD5 7b6e6cf3eaafa0480ab619fadfb37e2e metadata.xml 162
 MD5 ed2bb53f46dfc48ddbc758d5dc07fdc6 phpmyadmin-2.7.0_p1.ebuild 2097
 MD5 507b890a51276164800c48e5b6568a51 phpmyadmin-2.8.0.2.ebuild 2381
-MD5 850b54e93cb254adb87808bf47475e1e phpmyadmin-2.8.0.3.ebuild 2385
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFER/9gKRy60XGEcJIRArx+AJ9ZIkoizu3ovcvh3LVoJPA2Xm7WvgCffT7u
-eoqDMn4/T75RtKF7FF97IHk=
-=rJws
------END PGP SIGNATURE-----
+MD5 dc2d203939aaf013c23bf1f30051d824 phpmyadmin-2.8.0.3.ebuild 2383
