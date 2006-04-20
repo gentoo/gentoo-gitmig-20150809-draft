@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>dotnet</herd>
+<maintainer>
+<email>latexer@gentoo.org</email>
+<name>Peter Johanson</name>
+</maintainer>
+<longdescription lang="en">
+Dopi is an application that allows you to update the songs stored on your Apple
+iPod®.
+</longdescription>
+</pkgmetadata>
+

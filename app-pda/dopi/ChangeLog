@@ -1,0 +1,10 @@
+# ChangeLog for app-pda/dopi
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/dopi/ChangeLog,v 1.1 2006/04/20 07:51:58 latexer Exp $
+
+*dopi-0.3.2 (20 Apr 2006)
+
+  20 Apr 2006; Peter Johanson <latexer@gentoo.org> +metadata.xml,
+  +dopi-0.3.2.ebuild:
+  New package. Ebuild by yours truly.
+
