@@ -1,0 +1,9 @@
+# Tell X to always start on VT7. Otherwise it autodetects the first available
+# VT, which means it has to wait until all gettys are started so it doesn't suck
+# up a VT that should have had a login prompt (very slow).
+# If XSTATICVT is on, the login manager will start as soon as possible during
+# the login process.
+XSTATICVT="yes"
+
+# What display manager do you use ?  [ xdm | gdm | kdm | entrance ]
+DISPLAYMANAGER="xdm"
