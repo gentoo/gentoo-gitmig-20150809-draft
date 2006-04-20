@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.89 2006/04/20 20:06:16 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.90 2006/04/20 22:08:03 uberlord Exp $
 
   20 Apr 2006; Roy Marples <uberlord@gentoo.org>
   files/dhcp-3.0.3-dhclient-hostname.patch,
@@ -10,6 +10,7 @@
   dhcp-3.0.4_beta3-r1.ebuild:
   metric patch now applies to ifconfig on all OS's apart from Linux.
   Split no down interface into seperate patch.
+  Make SEDMANPAGES instead of CATMANPAGES, #130251.
 
   14 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> dhcp-3.0.3-r6.ebuild,
   dhcp-3.0.4_beta3-r1.ebuild:

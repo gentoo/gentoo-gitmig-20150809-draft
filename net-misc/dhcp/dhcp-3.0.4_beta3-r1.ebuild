@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4_beta3-r1.ebuild,v 1.7 2006/04/20 20:06:16 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4_beta3-r1.ebuild,v 1.8 2006/04/20 22:08:03 uberlord Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -71,6 +71,12 @@ src_unpack() {
 
 	# Remove these options from the sample config
 	sed -i -e "/\(script\|host-name\|domain-name\) / d" client/dhclient.conf
+
+	# Build sed man pages as we don't ever support BSD 4.4 and older, #130251.
+	local x=
+	for x in Makefile.dist $(ls */Makefile.dist) ; do
+		sed -i -e 's/$(CATMANPAGES)/$(SEDMANPAGES)/g' "${x}"
+	done
 
 	# Only install different man pages if we don't have en
 	if [[ " ${LINGUAS} " != *" en "* ]]; then
