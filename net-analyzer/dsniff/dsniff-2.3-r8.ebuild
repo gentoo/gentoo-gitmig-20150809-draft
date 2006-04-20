@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r8.ebuild,v 1.3 2006/04/15 23:22:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r8.ebuild,v 1.4 2006/04/20 22:54:59 jokey Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,8 +18,7 @@ RDEPEND="net-libs/libpcap
 	=net-libs/libnids-1.18
 	>=dev-libs/openssl-0.9.6e
 	~sys-libs/db-3.2.9
-	sys-apps/sed
-	|| ( virtual/x11 x11-libs/libXmu )"
+	sys-apps/sed"
 
 src_unpack() {
 	unpack ${A}
