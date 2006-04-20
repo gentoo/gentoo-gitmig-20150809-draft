@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.39 2006/04/08 21:00:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.40 2006/04/20 05:38:24 spyderous Exp $
+
+  20 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; -files/xdm.start:
+  Remove unused file.
 
   08 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; -xdm-1.0.1.ebuild:
   Pull old ebuild.
