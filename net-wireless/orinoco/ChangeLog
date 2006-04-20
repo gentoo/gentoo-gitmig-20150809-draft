@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/orinoco
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.17 2006/02/02 15:32:19 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.18 2006/04/20 16:00:09 brix Exp $
+
+  20 Apr 2006; Henrik Brix Andersen <brix@gentoo.org> metadata.xml:
+  Transferred ownership to steev.
 
   02 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
   -files/orinoco-0.15rc2-2.6.10.patch,
