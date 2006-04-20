@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.0-r1.ebuild,v 1.1 2006/04/14 15:26:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.0-r1.ebuild,v 1.2 2006/04/20 07:04:29 flameeyes Exp $
 
 inherit bsdmk freebsd
 
@@ -20,8 +20,7 @@ SRC_URI="mirror://gentoo/${USBIN}.tar.bz2
 RDEPEND="net-libs/libpcap"
 DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-mk-defs-${RV}*
-	=sys-freebsd/freebsd-sources-${RV}*
-	=sys-freebsd/freebsd-headers-${RV}*"
+	=sys-freebsd/freebsd-sources-${RV}*"
 
 S="${WORKDIR}"
 

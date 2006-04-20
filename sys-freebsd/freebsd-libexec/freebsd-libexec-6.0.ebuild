@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-6.0.ebuild,v 1.2 2006/04/09 19:10:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-6.0.ebuild,v 1.3 2006/04/20 07:00:59 flameeyes Exp $
 
 inherit bsdmk freebsd pam
 
@@ -22,8 +22,7 @@ RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-mk-defs-${RV}*
-	=sys-freebsd/freebsd-sources-${RV}*
-	=sys-freebsd/freebsd-headers-${RV}*"
+	=sys-freebsd/freebsd-sources-${RV}*"
 
 S="${WORKDIR}/libexec"
 
