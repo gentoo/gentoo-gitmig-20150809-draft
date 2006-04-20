@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.12 2006/04/18 21:45:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.13 2006/04/20 00:56:00 flameeyes Exp $
+
+  20 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> k9copy-1.0.4.ebuild:
+  Add Categories to the .desktop file to make it appear on the right menu.
 
 *k9copy-1.0.4 (18 Apr 2006)
 
