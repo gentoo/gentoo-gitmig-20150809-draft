@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 2.3.1/glibc-2.3.1-ctype-compat-v3.patch 2823 RMD160 f1162b7f313f7ea18fb178157d3bd6205d818e3a SHA1 d1dceb79689e9c627ebd630389ec1948d7a0a6e4 SHA256 0bc07eb47578d5bfb98774b18bf07aee2af44a7ccd947602c223b34e0d88394a size 2823
 MD5 941f13d27badc76c1e3704c59acaff26 files/2.3.1/glibc-2.3.1-ctype-compat-v3.patch 2823
 RMD160 f1162b7f313f7ea18fb178157d3bd6205d818e3a files/2.3.1/glibc-2.3.1-ctype-compat-v3.patch 2823
@@ -629,3 +632,10 @@ MD5 fd8122937b645a3a64c7a28293ef36b7 files/digest-glibc-2.4-r2 1569
 RMD160 9c3c55f33ed6a57f40ef0adb36eb5a43f2cc50b7 files/digest-glibc-2.4-r2 1569
 SHA256 135947d568535100cb005bd702affb3e62cf41068cee0c85d1720fcfcefd8593 files/digest-glibc-2.4-r2 1569
 size 1569 files/digest-glibc-2.4-r2 1569
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFESBbu2+ySkm8kpY0RAh6ZAJwLiM9aHGCo55cVbgdYlCQAdWJ4ZgCgiaYh
+lJxFQV6nW3Qt27OKD+HxSe8=
+=sHo2
+-----END PGP SIGNATURE-----
