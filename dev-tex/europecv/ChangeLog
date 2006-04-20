@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/europecv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.9 2006/04/08 13:04:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.10 2006/04/20 19:33:09 ehmsen Exp $
+
+*europecv-20060123-r1 (20 Apr 2006)
+
+  20 Apr 2006; Martin Ehmsen <ehmsen@gentoo.org>
+  +europecv-20060123-r1.ebuild:
+  Upstream apparently choose to alter the package without bumping the version,
+  so a new revision with the "new" version, bug #130160.
 
   08 Apr 2006; Simon Stelling <blubb@gentoo.org> europecv-20040603.ebuild:
   stable on amd64
