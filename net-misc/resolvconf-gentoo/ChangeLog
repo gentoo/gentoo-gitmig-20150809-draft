@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/resolvconf-gentoo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/resolvconf-gentoo/ChangeLog,v 1.1 2006/04/08 00:09:45 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/resolvconf-gentoo/ChangeLog,v 1.2 2006/04/20 17:42:17 uberlord Exp $
+
+*resolvconf-gentoo-0.2 (20 Apr 2006)
+
+  20 Apr 2006; Roy Marples <uberlord@gentoo.org>
+  +resolvconf-gentoo-0.2.ebuild:
+  New version tries to handle domain/search a little better for libc
 
 *resolvconf-gentoo-0.1 (08 Apr 2006)
 
