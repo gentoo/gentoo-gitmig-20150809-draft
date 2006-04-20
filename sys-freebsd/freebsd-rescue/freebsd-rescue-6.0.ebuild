@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-rescue/freebsd-rescue-6.0.ebuild,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-rescue/freebsd-rescue-6.0.ebuild,v 1.2 2006/04/20 07:17:17 flameeyes Exp $
 
 inherit bsdmk freebsd
 
@@ -24,7 +24,6 @@ SRC_URI="mirror://gentoo/${UBIN}.tar.bz2
 RDEPEND=""
 DEPEND="sys-devel/flex
 	=sys-freebsd/freebsd-sources-${RV}*
-	=sys-freebsd/freebsd-headers-${RV}*
 	=sys-freebsd/freebsd-mk-defs-${RV}*"
 
 S="${WORKDIR}/rescue"

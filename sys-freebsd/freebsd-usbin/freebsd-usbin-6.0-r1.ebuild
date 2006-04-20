@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.0-r1.ebuild,v 1.1 2006/04/14 14:15:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.0-r1.ebuild,v 1.2 2006/04/20 07:16:22 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -27,7 +27,6 @@ RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-mk-defs-${RV}*
 	=sys-freebsd/freebsd-sources-${RV}*
-	=sys-freebsd/freebsd-headers-${RV}*
 	sys-apps/texinfo
 	sys-devel/flex"
 

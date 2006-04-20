@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/freebsd-pam-modules-6.0.ebuild,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/freebsd-pam-modules-6.0.ebuild,v 1.2 2006/04/20 07:19:10 flameeyes Exp $
 
 inherit bsdmk freebsd multilib pam
 
@@ -17,8 +17,7 @@ RDEPEND=">=sys-auth/openpam-20050201-r1
 		virtual/krb5 )"
 DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-mk-defs-${RV}*
-	=sys-freebsd/freebsd-sources-${RV}*
-	=sys-freebsd/freebsd-headers-${RV}*"
+	=sys-freebsd/freebsd-sources-${RV}*"
 
 S=${WORKDIR}/lib/libpam/modules
 
