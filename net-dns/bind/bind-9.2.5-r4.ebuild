@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r4.ebuild,v 1.12 2006/02/23 18:24:15 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r4.ebuild,v 1.13 2006/04/20 13:34:36 voxus Exp $
 
 inherit eutils libtool
 
@@ -24,6 +24,13 @@ DEPEND="sys-apps/groff
 	ldap? ( net-nds/openldap )"
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )"
+
+pkg_setup() {
+	ebegin "Creating named group and user"
+	enewgroup named 40
+	enewuser named 40 -1 /etc/bind named
+	eend ${?}
+}
 
 src_unpack() {
 	use threads && {
