@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.0.ebuild,v 1.3 2006/03/30 22:32:54 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.0-r1.ebuild,v 1.1 2006/04/20 23:43:20 allanonjl Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -112,7 +112,10 @@ pkg_setup() {
 	fi
 
 	# The special cases
-	use gstreamer && plugins="${plugins} audio-inline"
+
+	# remove this due to bug #128035 re-enable later if it doesn't dep on
+	# gstreamer-0.8
+	# use gstreamer && plugins="${plugins} audio-inline"
 	use dbus && plugins="${plugins} new-mail-notify"
 	use mono && plugins="${plugins} mono"
 
