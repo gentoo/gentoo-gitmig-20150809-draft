@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/xorg-cf-files-1.0.1-r1.ebuild,v 1.3 2006/04/09 14:30:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/xorg-cf-files-1.0.1-r2.ebuild,v 1.1 2006/04/20 03:18:51 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # SNAPSHOT="yes"
@@ -16,4 +16,5 @@ src_install() {
 	x-modular_src_install
 
 	echo "#define ProjectRoot /usr" > ${D}/usr/$(get_libdir)/X11/config/host.def
+	echo "#define ManDirectoryRoot /usr/share/man" > ${D}/usr/$(get_libdir)/X11/config/host.def
 }
