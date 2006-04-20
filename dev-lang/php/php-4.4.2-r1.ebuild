@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.2-r1.ebuild,v 1.1 2006/04/13 20:28:58 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.2-r1.ebuild,v 1.2 2006/04/20 12:35:09 chtekk Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
@@ -38,6 +38,8 @@ SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-patchset-${MY_PHP_PV}-r${PHP
 [[ -n "${HARDENEDPHP_PATCH}" ]] && SRC_URI="${SRC_URI} hardenedphp? ( http://gentoo.longitekk.com/${HARDENEDPHP_PATCH} )"
 
 pkg_setup() {
+	PHPCONFUTILS_AUTO_USE=""
+
 	# make sure the user has specified a SAPI
 	einfo "Determining SAPI(s) to build"
 	phpconfutils_require_any "  Enabled  SAPI:" "  Disabled SAPI:" cli cgi apache apache2
@@ -81,7 +83,7 @@ php_determine_sapis() {
 	# holds the list of sapis that we want to build
 	PHPSAPIS=
 
-	if useq cli ; then
+	if useq cli || phpconfutils_usecheck cli ; then
 		PHPSAPIS="${PHPSAPIS} cli"
 	fi
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.3.11-r5.ebuild,v 1.10 2006/03/24 23:04:27 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.3.11-r5.ebuild,v 1.11 2006/04/20 12:35:09 chtekk Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~alpha arm ia64 ~ppc s390 sh sparc x86"
@@ -41,6 +41,8 @@ SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-patchset-${MY_PHP_PV}-r${PHP
 SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-pcrelib-new-secpatch.tar.bz2"
 
 pkg_setup() {
+	PHPCONFUTILS_AUTO_USE=""
+
 	# make sure the user has specified a SAPI
 	einfo "Determining SAPI(s) to build"
 	phpconfutils_require_any "  Enabled  SAPI:" "  Disabled SAPI:" cli cgi apache apache2
@@ -103,7 +105,7 @@ php_determine_sapis() {
 	# holds the list of sapis that we want to build
 	PHPSAPIS=
 
-	if useq cli ; then
+	if useq cli || phpconfutils_usecheck cli ; then
 		PHPSAPIS="${PHPSAPIS} cli"
 	fi
 
