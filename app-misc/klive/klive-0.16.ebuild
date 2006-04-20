@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/klive-0.16.ebuild,v 1.5 2006/04/10 11:48:53 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/klive-0.16.ebuild,v 1.6 2006/04/20 05:13:51 flameeyes Exp $
 
 inherit eutils
 
@@ -19,8 +19,11 @@ RDEPEND="sys-apps/pciutils"
 
 S=${WORKDIR}/${PN}
 
-src_install() {
+pkg_setup() {
 	enewuser klive -1 /bin/bash
+}
+
+src_install() {
 	insinto /usr/share/${PN}
 	doins client/klive.tac
 	newinitd ${FILESDIR}/klive.init.d klive || die "init.d failed"
