@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xfsprogs-2.7.11-LDFLAGS.patch 611 RMD160 92927ece6c525908542c4a97a4cbb75c3daf54fe SHA1 aa688c7841371ca65aa222acb467f29567007411 SHA256 82989176be09cec7fb1af9843f3d5936a78512910bc1d2d1fdbcdda3a910ad1b size 611
 MD5 fd221ded991b5761c2d69503d90a0d3f files/xfsprogs-2.7.11-LDFLAGS.patch 611
 RMD160 92927ece6c525908542c4a97a4cbb75c3daf54fe files/xfsprogs-2.7.11-LDFLAGS.patch 611
@@ -32,3 +35,10 @@ MD5 4d65b91d5a7f47fb8d11d3998e768fd4 files/digest-xfsprogs-2.7.3 256
 RMD160 385a582158edb635ac607488b02bcd198a55ed22 files/digest-xfsprogs-2.7.3 256
 SHA256 d170fb98dab5fe551c08e20820191e97286c660cd4614b1d9564d2fdd4b8f40f files/digest-xfsprogs-2.7.3 256
 size 256 files/digest-xfsprogs-2.7.3 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERugv2+ySkm8kpY0RAiBzAKCLvV6Zpl8M+W4M1komhO2J24GWewCgus2S
+sCThClBQeLKzzvZRQxQa3+k=
+=xUnf
+-----END PGP SIGNATURE-----
