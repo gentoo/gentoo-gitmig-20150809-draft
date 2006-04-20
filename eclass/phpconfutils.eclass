@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/phpconfutils.eclass,v 1.2 2006/04/18 12:21:14 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/phpconfutils.eclass,v 1.3 2006/04/20 12:15:35 chtekk Exp $
 #
 # ########################################################################
 #
@@ -93,6 +93,7 @@ phpconfutils_require_any() {
 	shift
 
 	local required_flags="$@"
+	local default_flag="$1"
 	local success="0"
 
 	while [[ -n "$1" ]] ; do
@@ -112,13 +113,15 @@ phpconfutils_require_any() {
 
 	# If we get here, then none of the required USE flags were enabled
 	eerror
-	eerror "You *must* enable one or more of the following USE flags:"
+	eerror "You should enable one or more of the following USE flags:"
 	eerror "  ${required_flags}"
 	eerror
 	eerror "You can do this by enabling these flags in /etc/portage/package.use:"
 	eerror "    =${CATEGORY}/${PN}-${PVR} ${required_flags}"
 	eerror
-	die "Missing USE flags found"
+	eerror "The ${default_flag} USE flag was automatically enabled now."
+	eerror
+	PHPCONFUTILS_AUTO_USE="${PHPCONFUTILS_AUTO_USE} ${default_flag}"
 }
 
 # ========================================================================

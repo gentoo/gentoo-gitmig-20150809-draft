@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.19 2006/04/18 22:29:31 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.20 2006/04/20 12:15:35 chtekk Exp $
 #
 # ########################################################################
 #
@@ -148,8 +148,6 @@ EXPORT_FUNCTIONS pkg_setup src_compile src_install src_unpack pkg_postinst
 # ========================================================================
 
 php5_0-sapi_check_use_flags() {
-	PHPCONFUTILS_AUTO_USE=""
-
 	# Multiple USE dependencies
 	phpconfutils_use_depend_any "truetype" "gd" "gd" "gd-external"
 	phpconfutils_use_depend_any "cjk" "gd" "gd" "gd-external"
@@ -597,7 +595,7 @@ php5_0-sapi_pkg_postinst() {
 	fi
 
 	# Create the symlinks for php-cli
-	if useq cli ; then
+	if useq cli || phpconfutils_usecheck cli ; then
 		"${ROOT}/usr/sbin/php-select" -t php php5 > /dev/null 2>&1
 		exitStatus=$?
 		if [[ ${exitStatus} == 5 ]] ; then

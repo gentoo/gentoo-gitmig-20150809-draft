@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.12 2006/03/24 23:05:47 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.13 2006/04/20 12:15:35 chtekk Exp $
 #
 # ========================================================================
 #
@@ -162,7 +162,7 @@ require_php_sapi_from() {
 	einfo "Checking for compatible SAPI(s)"
 
 	for x in $@ ; do
-		if built_with_use =${PHP_PKG} ${x} ; then
+		if built_with_use =${PHP_PKG} ${x} || phpconfutils_built_with_use =${PHP_PKG} ${x} ; then
 			einfo "  Discovered compatible SAPI ${x}"
 			has_sapi="1"
 		fi
@@ -266,7 +266,7 @@ require_php_with_any_use() {
 has_zts() {
 	has_php
 
-	if built_with_use =${PHP_PKG} apache2 threads ; then
+	if built_with_use =${PHP_PKG} apache2 threads || phpconfutils_built_with_use =${PHP_PKG} apache2 threads ; then
 		return 0
 	fi
 
@@ -278,7 +278,7 @@ has_zts() {
 has_hardenedphp() {
 	has_php
 
-	if built_with_use =${PHP_PKG} hardenedphp ; then
+	if built_with_use =${PHP_PKG} hardenedphp || phpconfutils_built_with_use =${PHP_PKG} hardenedphp ; then
 		return 0
 	fi
 
@@ -290,7 +290,7 @@ has_hardenedphp() {
 has_debug() {
 	has_php
 
-	if built_with_use =${PHP_PKG} debug ; then
+	if built_with_use =${PHP_PKG} debug || phpconfutils_built_with_use =${PHP_PKG} debug ; then
 		return 0
 	fi
 
@@ -323,12 +323,12 @@ require_pdo() {
 	fi
 
 	# Was PHP5 compiled with internal PDO support?
-	if built_with_use =${PHP_PKG} pdo ; then
+	if built_with_use =${PHP_PKG} pdo || phpconfutils_built_with_use =${PHP_PKG} pdo ; then
 		return
 	fi
 
 	# Ok, maybe PDO was built as an external extension?
-	if built_with_use =${PHP_PKG} pdo-external && has_version 'dev-php5/pecl-pdo' ; then
+	if ( built_with_use =${PHP_PKG} pdo-external || phpconfutils_built_with_use =${PHP_PKG} pdo-external ) && has_version 'dev-php5/pecl-pdo' ; then
 		return
 	fi
 
@@ -368,7 +368,7 @@ require_php_cli() {
 	if has_version '=dev-lang/php-4*' ; then
 		PHP_PACKAGE_FOUND="1"
 		pkg="`best_version '=dev-lang/php-4*'`"
-		if built_with_use =${pkg} cli ; then
+		if built_with_use =${pkg} cli || phpconfutils_built_with_use =${pkg} cli ; then
 			PHP_VERSION="4"
 		fi
 	fi
@@ -376,7 +376,7 @@ require_php_cli() {
 	if has_version '=dev-lang/php-5*' ; then
 		PHP_PACKAGE_FOUND="1"
 		pkg="`best_version '=dev-lang/php-5*'`"
-		if built_with_use =${pkg} cli ; then
+		if built_with_use =${pkg} cli || phpconfutils_built_with_use =${pkg} cli ; then
 			PHP_VERSION="5"
 		fi
 	fi
@@ -411,7 +411,7 @@ require_php_cgi() {
 	if has_version '=dev-lang/php-4*' ; then
 		PHP_PACKAGE_FOUND="1"
 		pkg="`best_version '=dev-lang/php-4*'`"
-		if built_with_use =${pkg} cgi ; then
+		if built_with_use =${pkg} cgi || phpconfutils_built_with_use =${pkg} cgi ; then
 			PHP_VERSION="4"
 		fi
 	fi
@@ -419,7 +419,7 @@ require_php_cgi() {
 	if has_version '=dev-lang/php-5*' ; then
 		PHP_PACKAGE_FOUND="1"
 		pkg="`best_version '=dev-lang/php-5*'`"
-		if built_with_use =${pkg} cgi ; then
+		if built_with_use =${pkg} cgi || phpconfutils_built_with_use =${pkg} cgi ; then
 			PHP_VERSION="5"
 		fi
 	fi
@@ -507,7 +507,7 @@ php_binary_extension() {
 	# API version, so they can't be installed when USE flags
 	# are enabled wich change the PHP API version
 
-	if built_with_use =${PHP_PKG} hardenedphp ; then
+	if built_with_use =${PHP_PKG} hardenedphp || phpconfutils_built_with_use =${PHP_PKG} hardenedphp ; then
 		eerror
 		eerror "You cannot install binary PHP extensions"
 		eerror "when the 'hardenedphp' USE flag is enabled!"
@@ -517,7 +517,7 @@ php_binary_extension() {
 		PUSE_ENABLED="1"
 	fi
 
-	if built_with_use =${PHP_PKG} debug ; then
+	if built_with_use =${PHP_PKG} debug || phpconfutils_built_with_use =${PHP_PKG} debug ; then
 		eerror
 		eerror "You cannot install binary PHP extensions"
 		eerror "when the 'debug' USE flag is enabled!"
