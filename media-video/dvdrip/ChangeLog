@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.70 2006/04/11 23:19:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.71 2006/04/20 13:59:30 wolf31o2 Exp $
+
+  20 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  dvdrip-0.52.7-r1.ebuild:
+  Stable on x86 wrt bug #127495.
 
   11 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> dvdrip-0.97.8.ebuild:
   Keyworded ~sparc

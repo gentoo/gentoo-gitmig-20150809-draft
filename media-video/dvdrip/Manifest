@@ -1,20 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cce1e8998779f105e40078f15554bbdb ChangeLog 12285
+MD5 feb0848efd67654737413306a68cb207 ChangeLog 12400
+RMD160 55e4b7bdda522164f134be9c4622bde5a818ca30 ChangeLog 12400
+SHA256 af8d2acca204a83ca9010d62d6536e3dda707bdaa59a47b28aa7a84c24fbbeca ChangeLog 12400
 MD5 61280c21350839fd2f2ee8f4fc446c4c dvdrip-0.52.0.ebuild 1525
-MD5 7687be3269bfa7ab5ea336a1bd71b79b dvdrip-0.52.7-r1.ebuild 1877
+RMD160 00c3a5fcc36b2ff7a7f3440d0deaba622173b536 dvdrip-0.52.0.ebuild 1525
+SHA256 8b6de3a23a4b8635d7174de35a9b00f8cd9eb69e21363e6fec0cbe63e1a762dd dvdrip-0.52.0.ebuild 1525
+MD5 9e1da9240549162a0de2449bfdde7ce4 dvdrip-0.52.7-r1.ebuild 1878
+RMD160 60a7aeaff132ea68bcd2f7dae00d1db9cbe0dd86 dvdrip-0.52.7-r1.ebuild 1878
+SHA256 e8d85b5a4b15914ceb6b2208898cfc2a6e0df20a6af335d8d2b4335493a8deac dvdrip-0.52.7-r1.ebuild 1878
 MD5 d361783509a39658a1ce9c9692abe0a6 dvdrip-0.52.7.ebuild 1929
+RMD160 dd2408786cb390c244a17eed2a094b1cde1ea960 dvdrip-0.52.7.ebuild 1929
+SHA256 f8909f0c0a264ccd15e3a484b1e5d704df57fe00bf1f865e89c4ae3185742266 dvdrip-0.52.7.ebuild 1929
 MD5 0c2e36305696ada94d26f1846acb17d0 dvdrip-0.97.8.ebuild 1942
+RMD160 efe0848e29ec865b07eb084188b38a6491314549 dvdrip-0.97.8.ebuild 1942
+SHA256 12d23f6681be1af96ea3592234e59ac72ff1eed90b760e54c9523c11c3e3c1b0 dvdrip-0.97.8.ebuild 1942
 MD5 748c8776c847405991432e3a345432fd files/digest-dvdrip-0.52.0 71
+RMD160 a32ed0fc88fa7e04305f98e1c82cd29e33aeca84 files/digest-dvdrip-0.52.0 71
+SHA256 f5844858eaab2e2c28f34c644b52ddb18e478ad93c49902d9fb7bc45a7119a7c files/digest-dvdrip-0.52.0 71
 MD5 7628fbda6ff70d4c8f195b8119e852f2 files/digest-dvdrip-0.52.7 259
+RMD160 002a5cf266be8df6d90359b9b845ebee708de4e8 files/digest-dvdrip-0.52.7 259
+SHA256 be354c80003dc98535439c0a300ac22c43aa81e87be2de0be7ebebbb13908384 files/digest-dvdrip-0.52.7 259
 MD5 7628fbda6ff70d4c8f195b8119e852f2 files/digest-dvdrip-0.52.7-r1 259
+RMD160 002a5cf266be8df6d90359b9b845ebee708de4e8 files/digest-dvdrip-0.52.7-r1 259
+SHA256 be354c80003dc98535439c0a300ac22c43aa81e87be2de0be7ebebbb13908384 files/digest-dvdrip-0.52.7-r1 259
 MD5 787bb1a8c36a799cdc42cdd253fb99ed files/digest-dvdrip-0.97.8 259
+RMD160 73b9a0165249ce66565dc331bd35d554db818ebc files/digest-dvdrip-0.97.8 259
+SHA256 b744cc524e380a8fe7bc2ac97b9c1de6175e35b51a66f584c86e2e0b98d7d720 files/digest-dvdrip-0.97.8 259
 MD5 6f041773f1239601a17e6201405f82ac metadata.xml 218
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEPDmhKRy60XGEcJIRAgttAJ4uQnGNKgWpVmFbx/jujPtoZhg64ACfRE9U
-wCoS6gwKbX1FCNbUdmoNnUs=
-=wxw6
------END PGP SIGNATURE-----
+RMD160 0c2523650ec2f9a9695776a42ef16b2f4af167f2 metadata.xml 218
+SHA256 74c9891ed16db7f87d1b57d7df7f9b71c7acba33112ac40bc631360b64517949 metadata.xml 218
