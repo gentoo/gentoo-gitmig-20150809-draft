@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.118.ebuild,v 1.10 2006/04/18 20:59:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.118.ebuild,v 1.11 2006/04/20 04:36:52 vapier Exp $
 
 inherit eutils
 
@@ -33,6 +33,7 @@ src_unpack() {
 	cd "${S}"
 	EPATCH_SUFFIX="patch" \
 	epatch "${WORKDIR}"/patch/
+	epatch "${FILESDIR}"/${P}-glibc-hacks.patch #130121
 	epatch "${FILESDIR}"/${P}-libelf-link.patch
 	epatch "${FILESDIR}"/${P}-PaX-support.patch
 	epatch "${FILESDIR}"/${P}-no-nested-functions.patch #116968

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.78 2006/04/18 20:59:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.79 2006/04/20 04:36:52 vapier Exp $
+
+  20 Apr 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/elfutils-0.118-glibc-hacks.patch, elfutils-0.118.ebuild:
+  Add a hack for old glibc installs #130121.
 
   18 Apr 2006; Markus Rothe <corsair@gentoo.org> elfutils-0.118.ebuild:
   Stable on ppc64; bug #130121

@@ -1,0 +1,15 @@
+http://bugs.gentoo.org/130121#c8
+
+--- src/strings.c
++++ src/strings.c
+@@ -480,6 +480,10 @@
+       if (mem != MAP_FAILED)
+ 	{
+ 	  /* We will go through the mapping sequentially.  */
++/* hack for old glibc systems */
++#ifndef POSIX_MADV_SEQUENTIAL
++# define POSIX_MADV_SEQUENTIAL 2
++#endif
+ 	  (void) posix_madvise (mem, map_size, POSIX_MADV_SEQUENTIAL);
+ 	  break;
+ 	}
