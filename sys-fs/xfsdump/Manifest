@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xfsdump-2.2.30-docs.patch 456 RMD160 a25f0aefc53da10aeb51411be1433d44316d4b11 SHA1 f6218843faf5532e900dcb4382162cae1a3e576c SHA256 63b668ce7a01d5b7902dc39a379cfc5a67cefe5f35a2005d5e1d503c6d0d5f9f size 456
 MD5 e6c3a4b8814bbbc2914e1a7c105d9de0 files/xfsdump-2.2.30-docs.patch 456
 RMD160 a25f0aefc53da10aeb51411be1433d44316d4b11 files/xfsdump-2.2.30-docs.patch 456
@@ -41,3 +44,10 @@ MD5 068d73ba9154523893ed061b660c7aeb files/digest-xfsdump-2.2.33 256
 RMD160 07587d2927d4bc5482db1fcd42555bfaf6df5428 files/digest-xfsdump-2.2.33 256
 SHA256 8153642b7e366aa980fe26b34d0cf393541b07b401a00a78bfb8680e9c7a640e files/digest-xfsdump-2.2.33 256
 size 256 files/digest-xfsdump-2.2.33 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERub12+ySkm8kpY0RAuvlAKCWDVoWlBwUpB2hlZIVaEWU94KNRwCfTm/6
+RBFHyA+W6xpKgoZmq0I6t0w=
+=QFhy
+-----END PGP SIGNATURE-----

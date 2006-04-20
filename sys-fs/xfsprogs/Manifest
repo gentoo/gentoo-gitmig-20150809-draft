@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 2.6.13-configure.patch 238 RMD160 2cbe03dceb688b33369eb643636e5b6d98449b99 SHA1 6f1c72166e90aae672955dbe3f61b5c5b41da82b SHA256 92a4a8ad233ec91a8677cc4a324d967212a32da060ed3183b0c47e806f1a3d75 size 238
 MD5 911b4db00dda0d9aad7d79c8f2de99c3 files/2.6.13-configure.patch 238
 RMD160 2cbe03dceb688b33369eb643636e5b6d98449b99 files/2.6.13-configure.patch 238
@@ -66,3 +69,10 @@ MD5 4d65b91d5a7f47fb8d11d3998e768fd4 files/digest-xfsprogs-2.7.3 256
 RMD160 385a582158edb635ac607488b02bcd198a55ed22 files/digest-xfsprogs-2.7.3 256
 SHA256 d170fb98dab5fe551c08e20820191e97286c660cd4614b1d9564d2fdd4b8f40f files/digest-xfsprogs-2.7.3 256
 size 256 files/digest-xfsprogs-2.7.3 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERuaF2+ySkm8kpY0RAhftAKDF0apyQ8GvybNdtiIzcAmX7jAxEACeIuYj
+DV1GAWNM+5Ae0+VOWNLa/O8=
+=Rm2F
+-----END PGP SIGNATURE-----
