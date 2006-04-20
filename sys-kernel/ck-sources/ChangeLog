@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.139 2006/04/19 04:34:20 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.140 2006/04/20 00:51:22 marineam Exp $
+
+*ck-sources-2.6.16_p6-r1 (20 Apr 2006)
+
+  20 Apr 2006; Michael Marineau <marineam@gentoo.org>
+  -ck-sources-2.6.16_p6.ebuild, +ck-sources-2.6.16_p6-r1.ebuild:
+  Security version bump to gentpatches 5. Includes 2.6.16.9
 
 *ck-sources-2.6.16_p6 (19 Apr 2006)
 
