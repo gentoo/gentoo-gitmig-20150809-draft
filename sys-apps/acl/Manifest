@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX acl-2.2.32-only-symlink-when-needed.patch 836 RMD160 5b36f392f12d2382dd051c9766ae128a71b659ec SHA1 79fefd16a84e51797165fc8438382382156a149b SHA256 fede0dc42499b8903e42ea976d2ebfe8965750a8b2b116433364e657fbc8189d size 836
 MD5 6204834fe8dda5a8e61bb52b8db06673 files/acl-2.2.32-only-symlink-when-needed.patch 836
 RMD160 5b36f392f12d2382dd051c9766ae128a71b659ec files/acl-2.2.32-only-symlink-when-needed.patch 836
@@ -32,3 +35,10 @@ MD5 ad882197a3fb0aef8e4fac0acb183f25 files/digest-acl-2.2.34 244
 RMD160 66164956e64eafd18f354b0a71c3b5734089b927 files/digest-acl-2.2.34 244
 SHA256 98e224b93279b22366b3cbd48ea87c81fa784a2ece6ca9ef3186db5d8bcba134 files/digest-acl-2.2.34 244
 size 244 files/digest-acl-2.2.34 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERuia2+ySkm8kpY0RAsDxAJ40pe56QrnTnGZjSwsZHfkoLKnTOwCghYDk
+X0AN2G1z7WuFk8UqYmLhHmU=
+=VP9t
+-----END PGP SIGNATURE-----

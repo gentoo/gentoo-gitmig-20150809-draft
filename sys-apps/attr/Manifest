@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX attr-2.4.24-only-symlink-when-needed.patch 836 RMD160 5b36f392f12d2382dd051c9766ae128a71b659ec SHA1 79fefd16a84e51797165fc8438382382156a149b SHA256 fede0dc42499b8903e42ea976d2ebfe8965750a8b2b116433364e657fbc8189d size 836
 MD5 6204834fe8dda5a8e61bb52b8db06673 files/attr-2.4.24-only-symlink-when-needed.patch 836
 RMD160 5b36f392f12d2382dd051c9766ae128a71b659ec files/attr-2.4.24-only-symlink-when-needed.patch 836
@@ -40,3 +43,10 @@ MD5 49f032859772544facc2fe4ca148c180 files/digest-attr-2.4.28-r1 247
 RMD160 e894a50d8e770748517a7c05d87d5a25128bf8dd files/digest-attr-2.4.28-r1 247
 SHA256 ce3656f691b3ca4f20fb9124677f09f52a67d8ba4573c6b6617abd614a8378c0 files/digest-attr-2.4.28-r1 247
 size 247 files/digest-attr-2.4.28-r1 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERujk2+ySkm8kpY0RApqNAKC9el+puhkz1IiRQtgpDZD8zvZaIwCgtVqC
+QS2wVQfoPqjauJyp0o+RHRs=
+=o//n
+-----END PGP SIGNATURE-----
