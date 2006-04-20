@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.66 2006/03/24 04:55:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.67 2006/04/20 00:01:53 wolf31o2 Exp $
+
+*hotplug-20040923-r2 (20 Apr 2006)
+
+  20 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +hotplug-20040923-r2.ebuild:
+  Revision bump to add eth1394 and shpchp to blacklist.  Closing bug #128962.
 
   24 Mar 2006; Robin H. Johnson <robbat2@gentoo.org>
   +files/hotplug-20040923-scsi-agent-timeout.patch,
