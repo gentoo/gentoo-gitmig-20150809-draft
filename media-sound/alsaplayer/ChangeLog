@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.42 2006/03/10 22:07:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.43 2006/04/20 16:42:17 flameeyes Exp $
+
+*alsaplayer-0.99.76-r3 (20 Apr 2006)
+
+  20 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/alsaplayer-0.99.76-join-null-thread.patch,
+  +alsaplayer-0.99.76-r3.ebuild:
+  Add patch to void crashing on cleanup, thanks to Matthias Langer for the
+  help testing in bug #125479.
 
   10 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   alsaplayer-0.99.76-r2.ebuild:

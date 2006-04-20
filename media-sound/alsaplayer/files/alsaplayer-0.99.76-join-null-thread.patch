@@ -1,0 +1,13 @@
+Index: alsaplayer-0.99.76/app/AlsaNode.cpp
+===================================================================
+--- alsaplayer-0.99.76.orig/app/AlsaNode.cpp
++++ alsaplayer-0.99.76/app/AlsaNode.cpp
+@@ -473,7 +473,7 @@ void AlsaNode::StopStreaming()
+ 	}	
+ 	
+ 	looping = false;
+-	if (pthread_join(looper_thread, NULL)) {
++	if (looper_thread != NULL && pthread_join(looper_thread, NULL)) {
+ 		// Hmmm
+ 	}
+ }
