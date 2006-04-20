@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.5_beta3.ebuild,v 1.1 2006/04/20 03:03:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.5_beta3.ebuild,v 1.2 2006/04/20 04:29:05 flameeyes Exp $
 
 inherit eutils wxwidgets nsplugins multilib autotools toolchain-funcs
 
 MY_P="${P/_beta/-test}"
 
-PATCHLEVEL="17"
+PATCHLEVEL="18"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 
@@ -136,6 +136,13 @@ src_compile () {
 		myconf="${myconf} --enable-vlm --enable-sout" || \
 		myconf="${myconf} --disable-vlm"
 
+	if use directfb; then
+		myconf="${myconf} --enable-directfb --with-directfb=/usr"
+		append-flags "-I /usr/include/directfb"
+	else
+		myconf="${myconf} --disable-directfb"
+	fi
+
 	econf \
 		$(use_enable altivec) \
 		$(use_enable stream sout) \
@@ -195,7 +202,6 @@ src_compile () {
 		$(use_enable hal) \
 		$(use_enable avahi bonjour) \
 		$(use_enable ffmpeg) \
-		$(use_enable directfb) \
 		$(use_enable upnp) \
 		--disable-jack \
 		--disable-dv \

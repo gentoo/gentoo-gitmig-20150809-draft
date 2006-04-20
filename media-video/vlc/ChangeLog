@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.153 2006/04/20 03:03:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.154 2006/04/20 04:29:05 flameeyes Exp $
+
+  20 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.5_beta3.ebuild:
+  Bump patchset to fix directfb support, and make ebuild handle that, too.
 
 *vlc-0.8.5_beta3 (20 Apr 2006)
 
