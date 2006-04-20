@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sort-Tree
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sort-Tree/ChangeLog,v 1.3 2006/03/30 23:18:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sort-Tree/ChangeLog,v 1.4 2006/04/20 19:14:33 tcort Exp $
+
+  20 Apr 2006; Thomas Cort <tcort@gentoo.org> Sort-Tree-1.09.ebuild:
+  Added ~amd64 keyword wrt Bug #121761.
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Sort-Tree-1.09.ebuild:
   Mark 1.09 ~ia64
