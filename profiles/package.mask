@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5244 2006/04/20 20:12:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5245 2006/04/20 22:40:09 allanonjl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -478,6 +478,7 @@ net-libs/enet
 #Don't unmask these and don't file bugs for them
 # Start GNOME 2.14 mask
 >=gnome-base/gnome-2.14.0
+>=gnome-base/gnome-light-2.14.0
 >=gnome-base/gconf-2.13
 >=gnome-base/orbit-2.13
 >=gnome-extra/at-spi-1.7
