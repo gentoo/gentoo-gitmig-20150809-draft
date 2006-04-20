@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 66e45567629fc16ccdcab30bcb600ffd ChangeLog 373
 MD5 396f228cf514d3e784b176140bac3022 Module-Pluggable-2.97.ebuild 553
 MD5 4e9bd28326da891eef2109e0d2fb99a5 files/digest-Module-Pluggable-2.97 72
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERvE/tG5z4I8BtQoRAoDgAJ4vjqqegDMRrSDS3UGbyq24iJcDdwCfcgpo
+NebqVABB812VmFnEVMc1U1I=
+=sBAp
+-----END PGP SIGNATURE-----
