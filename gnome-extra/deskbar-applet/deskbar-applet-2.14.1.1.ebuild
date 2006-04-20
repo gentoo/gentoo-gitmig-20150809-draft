@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.14.0.1.ebuild,v 1.6 2006/04/07 20:58:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.14.1.1.ebuild,v 1.1 2006/04/20 23:00:38 allanonjl Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils autotools
 
 DESCRIPTION="An Omnipresent Versatile Search Interface"
 HOMEPAGE="http://raphael.slinckx.net/deskbar/"
@@ -31,14 +31,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	gnome2_src_unpack
 
 	# Fix installing libs into pythondir
 	epatch ${FILESDIR}/${PN}-2.13.91-multilib.patch
 
-	automake || die "automake failed"
-	autoconf || die "autoconf failed"
-
-	gnome2_omf_fix
+	AT_M4DIR="m4" \
+	eautoreconf
 }
