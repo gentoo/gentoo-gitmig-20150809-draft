@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/kicad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.1 2006/04/13 20:18:51 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.2 2006/04/20 17:25:10 calchan Exp $
+
+  20 Apr 2006; Denis Dupeyron <calchan@gentoo.org> kicad-20060328.ebuild:
+  Add ~amd64.
 
 *kicad-20060328 (13 Apr 2006)
 
