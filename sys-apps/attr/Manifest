@@ -9,10 +9,10 @@ AUX attr-2.4.24-only-symlink-when-needed.patch 836 RMD160 5b36f392f12d2382dd051c
 MD5 6204834fe8dda5a8e61bb52b8db06673 files/attr-2.4.24-only-symlink-when-needed.patch 836
 RMD160 5b36f392f12d2382dd051c9766ae128a71b659ec files/attr-2.4.24-only-symlink-when-needed.patch 836
 SHA256 fede0dc42499b8903e42ea976d2ebfe8965750a8b2b116433364e657fbc8189d files/attr-2.4.24-only-symlink-when-needed.patch 836
-AUX attr-2.4.28-LDFLAGS.patch 563 RMD160 9226d22666cee09c7800aa352ec8dd7377abe90c SHA1 ca39cc6e9564a837797f21c803b49528b1b4e18f SHA256 185529ab0dffac90eee599541c37358f79fe23ec20655f72e00b52f3902b2a08 size 563
-MD5 d29fd2a72bbecc1a0806f3a62470b0a3 files/attr-2.4.28-LDFLAGS.patch 563
-RMD160 9226d22666cee09c7800aa352ec8dd7377abe90c files/attr-2.4.28-LDFLAGS.patch 563
-SHA256 185529ab0dffac90eee599541c37358f79fe23ec20655f72e00b52f3902b2a08 files/attr-2.4.28-LDFLAGS.patch 563
+AUX attr-2.4.28-LDFLAGS.patch 611 RMD160 92927ece6c525908542c4a97a4cbb75c3daf54fe SHA1 aa688c7841371ca65aa222acb467f29567007411 SHA256 82989176be09cec7fb1af9843f3d5936a78512910bc1d2d1fdbcdda3a910ad1b size 611
+MD5 fd221ded991b5761c2d69503d90a0d3f files/attr-2.4.28-LDFLAGS.patch 611
+RMD160 92927ece6c525908542c4a97a4cbb75c3daf54fe files/attr-2.4.28-LDFLAGS.patch 611
+SHA256 82989176be09cec7fb1af9843f3d5936a78512910bc1d2d1fdbcdda3a910ad1b files/attr-2.4.28-LDFLAGS.patch 611
 AUX attr-2.4.28-list-compat-segv.patch 2427 RMD160 cd55c82b2a5c94f86a5cfa9053a89491a33d4e0c SHA1 c781dcfc4f73956e2acb9ee6931dc76382459a8c SHA256 0bc53e74e7ffa170b0e8a07a4bfbe8045b6762940ea36b7a4e5f831aa573658a size 2427
 MD5 9c0ffcfd988d513cb9ec5aad45551373 files/attr-2.4.28-list-compat-segv.patch 2427
 RMD160 cd55c82b2a5c94f86a5cfa9053a89491a33d4e0c files/attr-2.4.28-list-compat-segv.patch 2427
@@ -72,7 +72,7 @@ size 247 files/digest-attr-2.4.28-r1 247
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFERuMc2+ySkm8kpY0RAgCeAJ4jgRX3z/ZocRJqXeZWjZj9qYZOVgCgslmS
-NeOMeIJ19Ndvpp4ysr0xyxM=
-=BHH6
+iD8DBQFERuWI2+ySkm8kpY0RAjxXAKDAEUwUgQPI/iN0b1u5gSwdsZDKqgCgrT72
+cgch2v33iwhCgVlfijFvDHk=
+=fJaH
 -----END PGP SIGNATURE-----

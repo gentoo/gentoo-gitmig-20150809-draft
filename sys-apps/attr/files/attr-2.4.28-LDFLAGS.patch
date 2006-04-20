@@ -4,12 +4,13 @@ http://bugs.gentoo.org/126825
 
 --- include/buildmacros
 +++ include/buildmacros
-@@ -9,7 +9,7 @@
+@@ -9,7 +9,8 @@
  # $(CXXFILES), or $(HFILES) and is used to construct the manifest list
  # during the "dist" phase (packaging).
  
 -LDFLAGS = $(LLDFLAGS)
-+LDFLAGS += $(LLDFLAGS)
++LDFLAGS += $(LDFLAGS_OPT) $(LLDFLAGS)
++LTLDFLAGS += $(LDFLAGS_OPT)
  LDLIBS = $(LLDLIBS) $(PLDLIBS) $(MALLOCLIB)
  
  MAKEOPTS = --no-print-directory
@@ -19,7 +20,7 @@ http://bugs.gentoo.org/126825
  
  DEBUG = @debug_build@
  OPTIMIZER = @opt_build@
-+LDFLAGS = @LDFLAGS@
++LDFLAGS_OPT = @LDFLAGS@
  MALLOCLIB = @malloc_lib@
  
  LIBATTR = $(TOPDIR)/libattr/libattr.la
