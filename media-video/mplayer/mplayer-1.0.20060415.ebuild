@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060415.ebuild,v 1.9 2006/04/17 18:52:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060415.ebuild,v 1.10 2006/04/20 23:46:03 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -213,34 +213,35 @@ linguas_warn() {
 src_compile() {
 
 	# have fun with LINGUAS variable
-	if [[ -n $LINGUAS ]]
-	then
-		# LINGUAS has stuff in it, start the logic
-		LANG=( $LINGUAS )
-		if [ -e ${S}/help/help_mp-${LANG[0]}.h ]
-		then
-			einfo "Setting MPlayer messages to language: ${LANG[0]}"
-		else
-			LANG_CC=${LANG[0]}
-			if [ ${#LANG_CC} -ge 2 ]
-			then
-				LANG_CC=${LANG_CC:0:2}
-				if [ -e ${S}/help/help_mp-${LANG_CC}.h ]
-				then
-					einfo "Setting MPlayer messages to language ${LANG_CC}"
-					export LINGUAS="${LANG_CC} ${LINGUAS}"
-				else
-					linguas_warn
-				fi
-			else
-				linguas_warn
-			fi
-		fi
-	else
-		# sending blank LINGUAS, make it default to en
-		einfo "No LINGUAS given, defaulting to English"
-		export LINGUAS="en ${LINGUAS}"
-	fi
+#	if [[ -n $LINGUAS ]]
+#	then
+#		# LINGUAS has stuff in it, start the logic
+#		LANG=( $LINGUAS )
+#		if [ -e ${S}/help/help_mp-${LANG[0]}.h ]
+#		then
+#			einfo "Setting MPlayer messages to language: ${LANG[0]}"
+#		else
+#			LANG_CC=${LANG[0]}
+#			if [ ${#LANG_CC} -ge 2 ]
+#			then
+#				LANG_CC=${LANG_CC:0:2}
+#				if [ -e ${S}/help/help_mp-${LANG_CC}.h ]
+#				then
+#					einfo "Setting MPlayer messages to language ${LANG_CC}"
+#					export LINGUAS="${LANG_CC} ${LINGUAS}"
+#				else
+#					linguas_warn
+#				fi
+#			else
+#				linguas_warn
+#			fi
+#		fi
+#	else
+#		# sending blank LINGUAS, make it default to en
+#		einfo "No LINGUAS given, defaulting to English"
+#		export LINGUAS="en ${LINGUAS}"
+export LINGUAS="en"
+#	fi
 
 
 
