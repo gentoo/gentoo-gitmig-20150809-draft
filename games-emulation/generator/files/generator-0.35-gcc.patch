@@ -1,0 +1,32 @@
+--- cmz80/z80stb.h
++++ cmz80/z80stb.h
+@@ -128,8 +128,6 @@
+ /* inline */ BYTE Srl(BYTE b);
+ /* inline */ BYTE Sla(BYTE b);
+ /* inline */ BYTE Sra(BYTE b);
+-/* inline */ BYTE Inc(BYTE b);
+-/* inline */ BYTE Dec(BYTE b);
+ 
+ /* inline */ WORD Add_2(WORD wArg1, WORD wArg2);
+ /* inline */ WORD Adc_2(WORD wArg1, WORD wArg2);
+--- cpu68k/def68k.c
++++ cpu68k/def68k.c
+@@ -1318,7 +1318,7 @@
+   } /* block */
+ }
+ 
+-int clocks_movetable[] = {
++static int clocks_movetable[] = {
+    4,   4,  8,  8,  8, 12, 14, 12, 16,
+    4,   4,  8,  8,  8, 12, 14, 12, 16,
+    8,   8, 12, 12, 12, 16, 18, 16, 20,
+--- raze/raze.asm.in
++++ raze/raze.asm.in
+@@ -4372,3 +4372,7 @@
+ DB  6,19,5,19,4,19,3,19,2,19,1,19
+ 
+ ;- the end ------ (blimey) --------------------------------------------------;
++
++%ifidn ___OUTPUT_FORMAT__,elf
++section .note.GNU-stack noalloc noexec nowrite progbits
++%endif
