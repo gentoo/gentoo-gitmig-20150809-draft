@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5243 2006/04/20 18:34:51 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5244 2006/04/20 20:12:43 swegener Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,9 +21,9 @@
 ##   End example
 ##
 
-# Carsten Lohrke <carlo@gentoo.org> (10 Apr 2006)
-# Couple of issues with this version, waiting for the next release.
-~kde-misc/kdiff3-0.9.89
+# Sven Wegener <swegener@gentoo.org> (20 Apr 2006)
+# Needs >=libgnome-2.13
+>=net-irc/xchat-gnome-0.11
 
 # Benedikt Böhm <hollow@gentoo> (20 Apr 2006)
 # Upstream dead; obsoleted by sys-apps/lomoco
@@ -288,6 +288,10 @@ virtual/gnat
 # Marcus D. Hanwell <cryos@gentoo.org> (10 Apr 2006)
 # Testing beta version.
 >=app-text/kbibtex-0.1.4_beta4
+
+# Carsten Lohrke <carlo@gentoo.org> (10 Apr 2006)
+# Couple of issues with this version, waiting for the next release.
+~kde-misc/kdiff3-0.9.89
 
 # Sven Wegener <swegener@gentoo.org> (09 Apr 2006)
 # unstable betas
