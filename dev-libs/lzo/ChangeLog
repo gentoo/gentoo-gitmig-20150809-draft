@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.34 2006/04/19 04:59:46 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.35 2006/04/20 14:07:00 wolf31o2 Exp $
+
+  20 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> lzo-2.02-r1.ebuild:
+  Marking stable on x86 for bug #129748.
 
   19 Apr 2006; Daniel Goller <morfic@gentoo.org> lzo-2.02-r1.ebuild:
   Stable on ppc and amd64 as dep. for transcode-1
