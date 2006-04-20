@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.04.ebuild,v 1.1 2006/04/20 19:12:15 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.04.ebuild,v 1.2 2006/04/20 20:06:47 rocket Exp $
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://sources.redhat.com/lvm2/"
@@ -95,4 +95,7 @@ src_install() {
 	ewarn ""
 	ewarn "use flags clvm,cman and gulm are masked"
 	ewarn "by default and need to be unmasked to use them"
+
+	ewarn ""
+	ewarn "Rebuild your genkernel initramfs if you are using lvm"
 }
