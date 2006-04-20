@@ -1,25 +1,38 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.0.4.ebuild,v 1.3 2005/12/16 10:13:29 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.2.2.ebuild,v 1.1 2006/04/20 14:57:01 hattya Exp $
 
 inherit java-pkg
 
-IUSE="debug java ruby"
+IUSE="bzip2 debug java ruby"
 
 DESCRIPTION="a full-text search system for communities"
 HOMEPAGE="http://hyperestraier.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~ppc x86"
+KEYWORDS="~ppc ~x86"
 SLOT="0"
 
-DEPEND=">=dev-db/qdbm-1.8.33
-	sys-libs/zlib"
+DEPEND=">=dev-db/qdbm-1.8.48
+	sys-libs/zlib
+	bzip2? ( app-arch/bzip2 )"
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+
+	sed -i -e "/^LDENV/d" Makefile.in 
+
+}
 
 src_compile() {
 
-	econf `use_enable debug` || die
+	econf \
+		`use_enable bzip2 bzip` \
+		`use_enable debug` \
+		|| die
 	emake || die
 
 	local binding
@@ -66,7 +79,7 @@ src_test() {
 src_install() {
 
 	make DESTDIR=${D} MYDATADIR=/usr/share/doc/${P} install || die
-	dodoc COPYING README* ChangeLog THANKS
+	dodoc README* ChangeLog THANKS
 
 	if use java; then
 		cd javanative
