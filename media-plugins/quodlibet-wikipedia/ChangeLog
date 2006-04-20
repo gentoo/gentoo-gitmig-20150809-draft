@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/quodlibet-wikipedia
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-wikipedia/ChangeLog,v 1.1 2006/04/20 01:33:33 tcort Exp $
+
+*quodlibet-wikipedia-3017 (20 Apr 2006)
+
+  20 Apr 2006; Thomas Cort <tcort@gentoo.org> +metadata.xml,
+  +quodlibet-wikipedia-3017.ebuild:
+  Initial Import. Ebuild by Kai Huuhko <kai.huuhko@gmail.com> and Thomas Cort
+  <tcort@gentoo.org>.
+
