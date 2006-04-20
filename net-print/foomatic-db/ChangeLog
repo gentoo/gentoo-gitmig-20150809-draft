@@ -1,6 +1,9 @@
 # ChangeLog for net-print/foomatic-db
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.43 2006/04/19 13:38:04 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.44 2006/04/20 02:25:32 tcort Exp $
+
+  20 Apr 2006; Thomas Cort <tcort@gentoo.org> foomatic-db-20050910.ebuild:
+  Stable on alpha wrt Bug #130209.
 
   19 Apr 2006; Patrick McLean <chutzpah@gentoo.org>
   foomatic-db-20050910.ebuild:
