@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c529c6f3d5f5bc2cacf8037373df2e9a ChangeLog 472
 MD5 b7739190eb0ec40f360b58a98f415a32 Perl-Critic-0.15.ebuild 676
 MD5 4459a3788ce63f7846a194e81099966c files/digest-Perl-Critic-0.15 68
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFERvIBtG5z4I8BtQoRAgvYAJ0Vn7W7jy+TPCwGdhkiE10Xau0JOQCcDSm0
+gO5ZmOafs+njMowbEvPzv/I=
+=Wmoe
+-----END PGP SIGNATURE-----

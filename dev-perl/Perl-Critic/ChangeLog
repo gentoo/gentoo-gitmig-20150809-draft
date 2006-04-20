@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Perl-Critic
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.1 2006/04/20 02:29:16 mcummings Exp $
+
+*Perl-Critic-0.15 (20 Apr 2006)
+
+  20 Apr 2006; <mcummings@gentoo.org> +metadata.xml,
+  +Perl-Critic-0.15.ebuild:
+  Initial import of Perl-Critic, used to criticize perl code based on Conways
+  Perl Best Practices. Used in app-vim/perl-support optionally
+
