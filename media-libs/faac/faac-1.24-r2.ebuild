@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.24-r2.ebuild,v 1.1 2006/04/18 16:46:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.24-r2.ebuild,v 1.2 2006/04/20 15:12:58 hanno Exp $
 
 inherit libtool eutils autotools
 
@@ -27,6 +27,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-faad.patch"
 	epatch "${FILESDIR}/${P}-tracknumber.patch"
+	epatch "${FILESDIR}/${P}-as-needed.patch"
 
 	eautoreconf
 	elibtoolize
