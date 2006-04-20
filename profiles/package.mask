@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5242 2006/04/20 07:49:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5243 2006/04/20 18:34:51 carlo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Carsten Lohrke <carlo@gentoo.org> (10 Apr 2006)
+# Couple of issues with this version, waiting for the next release.
+~kde-misc/kdiff3-0.9.89
 
 # Benedikt Böhm <hollow@gentoo> (20 Apr 2006)
 # Upstream dead; obsoleted by sys-apps/lomoco
