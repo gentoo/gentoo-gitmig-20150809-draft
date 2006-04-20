@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/dsniff
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.34 2006/04/20 22:54:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.35 2006/04/20 23:57:27 jokey Exp $
+
+*dsniff-2.4_beta1-r3 (20 Apr 2006)
+*dsniff-2.3-r10 (20 Apr 2006)
+
+  20 Apr 2006; Markus Ullmann <jokey@gentoo.org> +dsniff-2.3-r10.ebuild,
+  +dsniff-2.4_beta1-r3.ebuild:
+  Adding X USE flag for webspy
 
   20 Apr 2006; Markus Ullmann <jokey@gentoo.org> dsniff-2.3-r7.ebuild,
   dsniff-2.3-r8.ebuild, dsniff-2.3-r9.ebuild, dsniff-2.4_beta1-r1.ebuild,
