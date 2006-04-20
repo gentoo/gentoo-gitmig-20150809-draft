@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1858 2006/04/19 22:14:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1859 2006/04/20 04:36:01 dostrow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1718,3 +1718,16 @@ x11-wm/sawfish:pango - Enable pango support
 x11-wm/stumpwm-cvs:sbcl - Use SBCL for the runtime
 x11-wm/stumpwm-cvs:clisp - Use CLISP for the runtime
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
+xfce-base/libxfcegui4:startup-notification - Enable application startup notification
+xfce-base/thunar:startup-notification - Enable application startup notification
+xfce-base/thunar:thumbnail - enable thumbnail support in the file browser.
+xfce-base/thunar:xslt - Build HTML based docs from xml.
+xfce-base/xfce4-panel:startup-notification - Enable application startup notification
+xfce-base/xfdesktop:exo - Build with libexo support (required for thunar-vfs integration).
+xfce-base/xfdesktop:panel-plugin - Enable the xfdesktop menu plugin for xfce4-panel.
+xfce-base/xfdesktop:thunar-vfs - Enable thunar-vfs support for desktop icons.
+xfce-base/xfprint:lpr - Build LPr/LPd support
+xfce-base/xfwm4:startup-notification - Enable application startup notification
+xfce-base/xfwm4:xcomposite - Support for Xorg composite extension.
+xfce-extra/terminal:startup-notification - Enable application startup notification
+xfce-extra/terminal:xslt - Build HTML based docs from xml.
