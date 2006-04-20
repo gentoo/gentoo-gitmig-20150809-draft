@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1.2-r1.ebuild,v 1.1 2006/04/19 04:39:41 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1.2-r2.ebuild,v 1.1 2006/04/20 13:49:19 nichoj Exp $
 
 inherit eutils java-utils flag-o-matic check-reqs
 
@@ -9,7 +9,7 @@ RELEASE_DATE="200601181600"
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download.eclipse.org/eclipse/downloads/drops/R-${PV}-${RELEASE_DATE}/${MY_A}"
-IUSE="gecko-sdk gnome jikes source doc atk"
+IUSE="nogecko-sdk gnome jikes nosrc nodoc atk"
 SLOT="3.1"
 LICENSE="CPL-1.0"
 KEYWORDS="~x86 ~ppc ~amd64"
@@ -17,7 +17,7 @@ S="${WORKDIR}"
 
 RDEPEND=">=virtual/jre-1.4.2
 	>=x11-libs/gtk+-2.2.4
-	gecko-sdk? ( net-libs/gecko-sdk )
+	!nogecko-sdk? ( net-libs/gecko-sdk )
 	atk? ( >=dev-libs/atk-1.6 )
 	gnome? ( =gnome-base/gnome-vfs-2* =gnome-base/libgnomeui-2* )"
 
@@ -39,7 +39,8 @@ ECLIPSE_LINKS_DIR="${ECLIPSE_DIR}/links"
 #   - also submit patch to bugs.eclipse.org
 # - ppc support not tested, but not explicitly broken either
 # - make a extension location in /var/lib that's writable by 'eclipse' group
-# -use make_desktop_entry from eutils instead of our own stuff
+# - use make_desktop_entry from eutils instead of our own stuff
+# - 
 
 pkg_setup() {
 	debug-print "Checking for sufficient physical RAM"
@@ -100,7 +101,7 @@ src_compile() {
 	# Figure out VM, set up ant classpath and native library paths
 	setup-jvm-opts
 
-	if use gecko-sdk ; then
+	if use !nogecko-sdk ; then
 		einfo "Will compile embedded Mozilla support against net-libs/gecko-sdk"
 		setup-mozilla-opts
 	else
@@ -154,12 +155,12 @@ src_install() {
 	doexe eclipse-gtk || die "Failed to install eclipse binary"
 	# need to rename inf file to eclipse-gtk.ini, see bug #128128
 
-	if use "!source" ; then
+	if use nosrc; then
 		debug-print "Removing source code"
 		strip-src
 	fi
 
-	if use "!doc" ; then
+	if use nodoc ; then
 		debug-print "Removing documentation"
 		strip-docs
 	fi
@@ -198,7 +199,7 @@ fix_makefiles() {
 		libs="${libs} make_gnome"
 	fi
 
-	if use gecko-sdk ; then
+	if use !nogecko-sdk ; then
 		einfo "Building Mozilla embed support"
 		libs="${libs} make_mozilla"
 	fi

@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 30e24ab0588beec94d4da1afd3298d5d ChangeLog 20514
-RMD160 fcf10ede1f57c2b071968a10cdf960862b2bc9bb ChangeLog 20514
-SHA256 575789ddd4ccb662a78e1c6d50643fb7ff1245b18f6a76e124b73fd5aa582aed ChangeLog 20514
+MD5 438211f4ebe5d7e39f9fd3f37f1d8998 ChangeLog 20713
+RMD160 4ca523ca89f6f6002f8d58ee0339513b56cf993c ChangeLog 20713
+SHA256 63653a07a934087787d369bd831a2378117f1587a4e6b6fc7514d50d55fe11c0 ChangeLog 20713
 MD5 784f7f8fdf82be12bba512c56169050e eclipse-sdk-2.1.3-r5.ebuild 9905
 RMD160 c4c052548ad75e997b2ecb6246773e4cdea6c925 eclipse-sdk-2.1.3-r5.ebuild 9905
 SHA256 6357db93f7dfb6937db14f5a0f13ace7af42bc9ff2570b74f6f1688993c8c7b1 eclipse-sdk-2.1.3-r5.ebuild 9905
@@ -19,9 +16,9 @@ SHA256 01312d059ea42f34b6819306dc06b08098850e18ed1a64cb5d8b18349f9f7154 eclipse-
 MD5 e56bed895cd713529b60cb5dc49e4b0a eclipse-sdk-3.1.1.ebuild 10393
 RMD160 9b5c6e089102ee34a8fb05a4a8164213065a195e eclipse-sdk-3.1.1.ebuild 10393
 SHA256 6432c3d38373ad2f472b7a002312a3c64dcb24ab5a4a16dc85cdb39efaa50058 eclipse-sdk-3.1.1.ebuild 10393
-MD5 7b43ff2a928ebff95b8aa4afd37b389d eclipse-sdk-3.1.2-r1.ebuild 10577
-RMD160 da9f300e4a962bc09bf8d16b31d3bb0fc25e02b0 eclipse-sdk-3.1.2-r1.ebuild 10577
-SHA256 470df9418b4e76e21cb3552a36c4ce6f53425e3251458a17492ec7a13bdda1db eclipse-sdk-3.1.2-r1.ebuild 10577
+MD5 d66b9f5f02d400fd68a6232a44894963 eclipse-sdk-3.1.2-r2.ebuild 10589
+RMD160 11e9371b267f0d421b613a5488e1103261561a4c eclipse-sdk-3.1.2-r2.ebuild 10589
+SHA256 e5c4b679d39d4e748591b22874e935a3101677bb194ddfc9d7189e51b8a2a3d9 eclipse-sdk-3.1.2-r2.ebuild 10589
 MD5 ab0f6620b4767e065bd533b06245b0fc files/01-distribute_ant_target-2.1.patch 1103
 RMD160 b1e41e2a202fcd91135b9df0573b3611c27bc046 files/01-distribute_ant_target-2.1.patch 1103
 SHA256 98b71329db9aae0bbeef88613939c68a9220764e8c207f4301f38a9087e72cd3 files/01-distribute_ant_target-2.1.patch 1103
@@ -58,9 +55,9 @@ SHA256 da189a7c7ddd6b1661391f5e149d905d79779d4863502d4b769216b19a5fed42 files/di
 MD5 cffbffb2d9d08ac2123a1a393df33aa7 files/digest-eclipse-sdk-3.1.1 88
 RMD160 ca27938bbb231a3b6f26aee1002c56af1cae68de files/digest-eclipse-sdk-3.1.1 88
 SHA256 8c5f1687cc5701180e20605b6672f79a2a1d3b9d6800a63f28b02b26e5e39346 files/digest-eclipse-sdk-3.1.1 88
-MD5 0dd05cebf3928888ff566c433da96335 files/digest-eclipse-sdk-3.1.2-r1 310
-RMD160 dea902b88d52673c42f034ab9451e145bc52b30c files/digest-eclipse-sdk-3.1.2-r1 310
-SHA256 01187ce1cad8c9037d48c130cd9d98167d7c934e075d42c7c55f3adae8105749 files/digest-eclipse-sdk-3.1.2-r1 310
+MD5 0dd05cebf3928888ff566c433da96335 files/digest-eclipse-sdk-3.1.2-r2 310
+RMD160 dea902b88d52673c42f034ab9451e145bc52b30c files/digest-eclipse-sdk-3.1.2-r2 310
+SHA256 01187ce1cad8c9037d48c130cd9d98167d7c934e075d42c7c55f3adae8105749 files/digest-eclipse-sdk-3.1.2-r2 310
 MD5 de999f62aa03505bfd16a01f7e1a28a3 files/eclipse-2 956
 RMD160 0045f44e9e47f4e3b80535c3a25de590c7ab92e2 files/eclipse-2 956
 SHA256 a842d3ee3f135d695e659811598340bc2b3b42222d44bf3d2155c9c59ac4e778 files/eclipse-2 956
@@ -88,10 +85,3 @@ SHA256 5165b07f736763eab05decb39397be0be8ae03b77f614ba3794eff71d411537b files/ec
 MD5 8de14dda7d318d8fb514fdbcecd4058b metadata.xml 782
 RMD160 5b8dc4f4b6bdd457da62f967ec176bee2ae7e5e4 metadata.xml 782
 SHA256 a1e6bbc5427799b8607d355e3e09ce7d4de98f2a365417ec158eb56f4f00746f metadata.xml 782
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFERcCfndWRXhKOboURAt0yAKDwvhVufg2XKgA9GFzH7CSGPcompwCfd/77
-SHk9A7DHwJO2M6Uyj3ZdDKc=
-=7+Q0
------END PGP SIGNATURE-----
