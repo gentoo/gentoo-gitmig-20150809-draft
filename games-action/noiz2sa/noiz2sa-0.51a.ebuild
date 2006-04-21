@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/noiz2sa/noiz2sa-0.51a.ebuild,v 1.5 2006/03/21 22:40:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/noiz2sa/noiz2sa-0.51a.ebuild,v 1.6 2006/04/21 18:29:40 tupone Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Abstract Shooting Game"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -22,6 +22,7 @@ S="${WORKDIR}/${PN}"
 src_unpack(){
 	unpack ${A}
 	cd "${S}/src"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 	sed -e "s/-lglut/-lGL/" makefile.lin > Makefile || die "sed failed"
 
 	sed -i \

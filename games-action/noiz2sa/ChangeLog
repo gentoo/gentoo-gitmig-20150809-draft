@@ -1,6 +1,10 @@
 # ChangeLog for games-action/noiz2sa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/noiz2sa/ChangeLog,v 1.4 2006/03/20 20:12:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/noiz2sa/ChangeLog,v 1.5 2006/04/21 18:29:40 tupone Exp $
+
+  21 Apr 2006; <Tupone@gentoo.org> +files/noiz2sa-0.51a-gcc41.patch,
+  noiz2sa-0.51a.ebuild:
+  Fix for gcc-4.1 series
 
   20 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> noiz2sa-0.51a.ebuild:
   Added pkg_postinst section to inform the user about how to get sound support
