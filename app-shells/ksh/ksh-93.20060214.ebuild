@@ -1,23 +1,20 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20050202.ebuild,v 1.5 2006/04/21 17:13:34 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20060214.ebuild,v 1.1 2006/04/21 17:13:34 taviso Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
-RELEASE="2005-02-02"
+RELEASE="2006-02-14"
 DESCRIPTION="The Original Korn Shell, 1993 revision (ksh93)"
 HOMEPAGE="http://www.kornshell.com/"
-#SRC_URI="http://www.research.att.com/~gsf/download/tgz/INIT.${RELEASE}.tgz
-#	http://www.research.att.com/~gsf/download/tgz/ast-ksh.${RELEASE}.tgz
-#	nls? ( http://www.research.att.com/~gsf/download/tgz/ast-ksh-locale.${RELEASE}.tgz )"
-SRC_URI="mirror://gentoo/INIT.${RELEASE}.tgz
-	mirror://gentoo/ast-ksh.${RELEASE}.tgz
-	nls? ( mirror://gentoo/ast-ksh-locale.${RELEASE}.tgz )"
+SRC_URI="nls? ( mirror://gentoo/ast-ksh-locale.${RELEASE}.tgz )
+	mirror://gentoo/INIT.${RELEASE}.tgz
+	mirror://gentoo/ast-ksh.${RELEASE}.tgz"
 
 LICENSE="CPL-1.0"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~alpha ~arm ~s390 ~ia64 ~ppc"
-IUSE="static nls"
+IUSE="nls"
 
 DEPEND="virtual/libc !app-shells/pdksh"
 
@@ -42,14 +39,13 @@ src_unpack() {
 }
 
 src_compile() {
-	use static && append-ldflags -static
+	strip-flags; export CCFLAGS="${CFLAGS}"
 
-	export CCFLAGS="${CFLAGS}"
 	cd ${S}; ./bin/package only make ast-ksh CC="$(tc-getCC)" || die
 
 	# install the optional locale data.
 	if use nls; then
-		cd ${S}; ./bin/package only make ast-ksh-locale CC=${CC:-gcc}
+		cd ${S}; ./bin/package only make ast-ksh-locale CC="$(tc-getCC)"
 	fi
 }
 
