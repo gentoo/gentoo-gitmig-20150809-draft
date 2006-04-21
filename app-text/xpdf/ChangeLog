@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.140 2006/04/02 09:35:30 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.141 2006/04/21 17:15:29 vanquirius Exp $
+
+  21 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> xpdf-3.01-r7.ebuild,
+  xpdf-3.01-r8.ebuild:
+  Remove virtual/pdfviewer PROVIDE for bug 130746, reported by Carsten Lohrke
+  <carlo at gentoo dot org>.
 
   02 Apr 2006; Stefan Schweizer <genstef@gentoo.org> xpdf-3.01-r7.ebuild:
   Fix xpdf-3.01-r7 DEPs thanks to Stefan Tittel <bugreports@tittel.net> in bug
