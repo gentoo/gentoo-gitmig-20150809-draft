@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.90 2006/04/20 22:08:03 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.91 2006/04/21 15:17:07 uberlord Exp $
+
+*dhcp-3.0.4_rc1 (21 Apr 2006)
+*dhcp-3.0.3-r7 (21 Apr 2006)
+
+  21 Apr 2006; Roy Marples <uberlord@gentoo.org>
+  +files/dhcp-3.0.3-dhclient-dbus.patch, +files/dhcp-3.0.3-x-option.patch,
+  +dhcp-3.0.3-r7.ebuild, +dhcp-3.0.4_rc1.ebuild:
+  New patches for dbus and eXtended option environment support
+  which should allow us to be used by NetworkManager.
 
   20 Apr 2006; Roy Marples <uberlord@gentoo.org>
   files/dhcp-3.0.3-dhclient-hostname.patch,
