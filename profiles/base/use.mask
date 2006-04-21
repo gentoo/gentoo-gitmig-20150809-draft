@@ -34,8 +34,6 @@ input_devices_wacom
 
 # beep-media-player is in package.mask
 bmp
-# as is bmpx
-bmpx
 
 # Mask the various *BSD libcs a part from the various subprofiles
 elibc_FreeBSD
