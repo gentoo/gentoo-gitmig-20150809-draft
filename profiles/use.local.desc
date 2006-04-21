@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1863 2006/04/21 11:52:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1864 2006/04/21 14:40:48 chutzpah Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -767,6 +767,7 @@ media-sound/banshee:ipod - Build with ipod support
 media-sound/banshee:njb - Build with njb audio player support
 media-sound/banshee:real - Build with real/helix player support
 media-sound/beep-media-player:old-eq - Use old-style XMMS equalizer (not recommended)
+media-sound/bmpx:amazon - Enable Amazon album cover fetching
 media-sound/bmpx:irssi - Install irssi script (need dbus and perl)
 media-sound/bmpx:xchat - Install xchat script (need dbus and perl/python)
 media-sound/ecasound:libsamplerate - Build with libsamplerate support
