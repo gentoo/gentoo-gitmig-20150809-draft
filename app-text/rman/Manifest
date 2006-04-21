@@ -1,4 +1,4 @@
-MD5 a145a7e7f58e81005228e28a372bddda ChangeLog 2788
+MD5 b03c898bbeb4dd9e2351059dd23872d9 ChangeLog 2869
 MD5 056057d8a5eaf7203c9f2316465ba33e files/digest-rman-3.0.9 55
 MD5 e6b97eb40694d5c78aaf96e3dcf20f87 files/digest-rman-3.1 59
 MD5 d069a53087473d981c5734071b9ca57b files/digest-rman-3.2 223
@@ -8,4 +8,4 @@ MD5 7c24cf8147972b5fc9a74dcd11a345f3 files/rman-3.2-gentoo.diff 560
 MD5 44e8755ec775c2af1e58de5ca72af616 files/rman-3.2-ldflags.patch 451
 MD5 fbbc1086058fd13785ae3f050787a9ec rman-3.0.9.ebuild 671
 MD5 d6a1189f73825b18a8d5b4dabe577d42 rman-3.1.ebuild 719
-MD5 52525b9794571bc5d2c7f6d3149810da rman-3.2.ebuild 833
+MD5 b4d465f69081f02c4e5751501ef908b6 rman-3.2.ebuild 837
