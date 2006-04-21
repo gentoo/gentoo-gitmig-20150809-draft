@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.4 2006/03/27 16:37:41 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.5 2006/04/21 02:18:26 markusle Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
@@ -31,7 +31,7 @@ RDEPEND="java? ( virtual/jdk )
 	|| ( x11-libs/libXmu virtual/x11 )"
 
 DEPEND="${RDEPEND}
-		>=dev-util/cmake-2.0.6
+		>=dev-util/cmake-2.2.3
 		qt3? ( $(qt_min_version 3.3.4) )
 		qt4? ( >=x11-libs/qt-4.1.0 )"
 
