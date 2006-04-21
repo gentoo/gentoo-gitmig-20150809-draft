@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>kingtaco@gentoo.org</email>
+  <email>jhuebel@gentoo.org</email>
 </maintainer>
 <longdescription>Simple network monitoring tool</longdescription>
 </pkgmetadata>
