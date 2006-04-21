@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5247 2006/04/21 00:59:31 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5248 2006/04/21 08:46:05 mrness Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -738,15 +738,6 @@ net-print/hpoj
 # Marcelo Goes <vanquirius@gentoo.org> (06 Feb 2006)
 # Mask tcpreplay beta branch. If you want it, unmask it.
 >=net-analyzer/tcpreplay-3.0_beta1
-
-# Andrej Kacian <andrej@kacian.sk> (04 Feb 2006)
-# Mask for testing, there has been a complete code layout change and at least
-# latest obexftp doesn't build with this version.
-# Added obexftp. 
-# Bug #122262 has been opened for this openobex situation. (09 Feb 2006)
->=dev-libs/openobex-1.1
->=app-mobilephone/obexftp-0.19
->=app-mobilephone/obexfs-0.8
 
 # Michael Stewart <vericgar@gentoo.org> (03 Feb 2006)
 # Mask for testing of new version
