@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.40 2006/03/31 21:38:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.41 2006/04/21 14:28:05 wolf31o2 Exp $
+
+  21 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.66.ebuild:
+  Fixing unpacking. This resolves the issue where /opt/nwn/nwn is a directory
+  since we were erroneously unpacking nwresources129.tar.gz twice.
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.66.ebuild,
   nwn-1.66-r1.ebuild:

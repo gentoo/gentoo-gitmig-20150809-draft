@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66.ebuild,v 1.14 2006/03/31 21:38:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66.ebuild,v 1.15 2006/04/21 14:28:05 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -64,17 +64,14 @@ src_unpack() {
 	mkdir -p "${S}"
 	cd "${S}"
 	unpack nwclient129.tar.gz
-	if use nowin
-	then
-		cd "${WORKDIR}"
-		unpack nwresources129.tar.gz
-		cd "${S}"
-	fi
 	rm -rf override/*
 	# the following is so ugly, please pretend it doesnt exist
 	declare -a Aarray=(${A})
-	use nowin && if [ "${#Aarray[*]}" == "5" ]; then
+	use nowin && if [ "${#Aarray[*]}" == "5" ]
+	then
+		cd "${WORKDIR}"
 		unpack ${Aarray[3]}
+		cd "${S}"
 	fi
 	unpack ${Aarray[1]}
 	unpack ${Aarray[2]}
