@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh_agent/pam_ssh_agent-0.2-r1.ebuild,v 1.2 2005/07/03 12:05:43 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh_agent/pam_ssh_agent-0.2-r1.ebuild,v 1.3 2006/04/21 15:54:12 flameeyes Exp $
 
 inherit toolchain-funcs flag-o-matic eutils pam
 
@@ -14,8 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="net-misc/keychain
-	virtual/pam
-	dev-tcltk/expect"
+	virtual/pam"
 
 src_unpack() {
 	unpack ${A}
