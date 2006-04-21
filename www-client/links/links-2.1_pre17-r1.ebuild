@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre17-r1.ebuild,v 1.19 2006/02/16 15:17:36 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre17-r1.ebuild,v 1.20 2006/04/21 17:04:40 vanquirius Exp $
 
 inherit eutils
 
@@ -49,8 +49,6 @@ DEPEND="${RDEPEND}
 	sys-devel/gcc
 	dev-util/pkgconfig
 	javascript? ( >=sys-devel/flex-2.5.4a )"
-
-PROVIDE="virtual/textbrowser"
 
 pkg_setup (){
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre18.ebuild,v 1.17 2006/02/16 15:17:36 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre18.ebuild,v 1.18 2006/04/21 17:04:40 vanquirius Exp $
 
 inherit eutils toolchain-funcs
 
@@ -49,8 +49,6 @@ DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	sys-devel/gcc
 	dev-util/pkgconfig"
-
-PROVIDE="virtual/textbrowser"
 
 pkg_setup (){
 	if ! use gpm && use fbcon ; then

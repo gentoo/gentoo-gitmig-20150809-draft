@@ -1,43 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 24eaece236ed26d6031b0470fabae220 ChangeLog 19105
-RMD160 19245d7daa9661c7984279ec18af5937c6801070 ChangeLog 19105
-SHA256 55d3d4e00a34da7ed22b61f6a88725deb9d2be6755f3c04f0b16f291b1aa5504 ChangeLog 19105
+MD5 4bdee68d9d6183f5a95b21c85b143104 ChangeLog 19371
 MD5 f2c353a99f6cbaaa4af971adf5c95c0d files/digest-links-2.1_pre17-r1 139
-RMD160 2cd79f86c0aa874f3bdc7d58f4786f9ba7012b1f files/digest-links-2.1_pre17-r1 139
-SHA256 4267bc3f20001566bd949c8091ed83299dec15447527f05d6f5b4c451276b508 files/digest-links-2.1_pre17-r1 139
 MD5 931f4ef9020491726707c7bbe071789b files/digest-links-2.1_pre18 139
-RMD160 79d1e4476b1da5d85121a65bebbbd2a79b74b251 files/digest-links-2.1_pre18 139
-SHA256 6c093630f53f41d3d9e37f51a27f3ce5301d9a805cff5fa8a939e28445dace00 files/digest-links-2.1_pre18 139
 MD5 6fd45df1f15b1f0ba4d72ec4d6011611 files/digest-links-2.1_pre19 139
-RMD160 23787df6fd4f891ffb9c11868f969f237a94f6fd files/digest-links-2.1_pre19 139
-SHA256 af4eac9075ccb2a791be8f8e7c78cb23558f5674f45da2557571b6d3ae140da9 files/digest-links-2.1_pre19 139
 MD5 2e769a55cec4cc09246d5130bb8ec02a files/digest-links-2.1_pre20 139
-RMD160 dfb3010e36074b8aaf8d7c3a2a699c92a168be6f files/digest-links-2.1_pre20 139
-SHA256 c6685e8c94193d73157093bcbd2eda8be6865cd7581090e50c68d53f28915555 files/digest-links-2.1_pre20 139
 MD5 5b8b5b21da5582f7c332b2a2d6afafcd files/links-2.1pre18-no-javascript-fix.patch 575
-RMD160 a43c946407196358ec6ee2aa8326bae0642165a6 files/links-2.1pre18-no-javascript-fix.patch 575
-SHA256 a78bebd89317fd0c27428e47e361066e63adb14adc8568cd35087258bca1d52b files/links-2.1pre18-no-javascript-fix.patch 575
-MD5 d5afe5a36fa089d1020d9f7f1d04b230 links-2.1_pre17-r1.ebuild 3515
-RMD160 2cc1b918307efab701a4db949b3f8f1d6abe2a4f links-2.1_pre17-r1.ebuild 3515
-SHA256 45d326b400e7e5876ef8c80f2acf23c29f464d437f38485d9a693db8282f1ca4 links-2.1_pre17-r1.ebuild 3515
-MD5 e8ff65721f5c1b5f52d714a7700efde0 links-2.1_pre18.ebuild 3655
-RMD160 ccf4720193a61085a7b5ea86e9b78ebf9710bfed links-2.1_pre18.ebuild 3655
-SHA256 682155c5da28f66cdf2e02b8624a5d6898512c3d3662971334cccab0407230b2 links-2.1_pre18.ebuild 3655
-MD5 8efab0eb449cf677a20370b5cb0e2f9e links-2.1_pre19.ebuild 3627
-RMD160 6f993b0125c7845c8a7cfb7301c824c4ad9bf947 links-2.1_pre19.ebuild 3627
-SHA256 b3355f6065903920a664bbec028fb0ea3e7a16ed35586d8d8588235478757fd2 links-2.1_pre19.ebuild 3627
-MD5 f0cd5323ecf311dd5c5cb7e2736e586c links-2.1_pre20.ebuild 3426
-RMD160 8bb874f4741b50c5957db23045da38100d35eb11 links-2.1_pre20.ebuild 3426
-SHA256 adaf5ad42bb5cb17a464dcf56bb3e27fc8057f329b37bcad9b16df6e80a80c0a links-2.1_pre20.ebuild 3426
+MD5 ad5f73c30eda00de3414780cdc2dd878 links-2.1_pre17-r1.ebuild 3484
+MD5 cc90e7c202f4750e1d54bb6dbf4c13d5 links-2.1_pre18.ebuild 3624
+MD5 911358752143320149ccfb087341e849 links-2.1_pre19.ebuild 3597
+MD5 7b3f85d7e8ad9158db127dcdcc7b368f links-2.1_pre20.ebuild 3396
 MD5 82cf55f144e0f9e258fd08a572852147 metadata.xml 498
-RMD160 5cc5739e4f206a0eb7a2cf7f474b1dd9c6d23191 metadata.xml 498
-SHA256 2f7d9178e22068e1b35bf6b452d8b818de533c97779c3a89ed71c70a36fecfcb metadata.xml 498
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENvrfAiZjviIA2XgRApTuAKCoecfqckw0v935EWzhtbpji+1rVACgt+OQ
-DQqSrj+uJ7w6KPJCWh/dA/U=
-=tvHh
------END PGP SIGNATURE-----

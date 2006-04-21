@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre20.ebuild,v 1.13 2006/04/07 23:50:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre20.ebuild,v 1.14 2006/04/21 17:04:42 vanquirius Exp $
 
 inherit eutils toolchain-funcs
 
@@ -48,8 +48,6 @@ DEPEND="${RDEPEND}
 	sys-devel/gcc
 	dev-util/pkgconfig
 	javascript? ( >=sys-devel/flex-2.5.4a )"
-
-PROVIDE="virtual/textbrowser"
 
 src_unpack (){
 	unpack ${A}; cd "${S}"
