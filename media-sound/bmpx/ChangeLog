@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.28 2006/04/21 14:53:30 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.29 2006/04/21 14:57:51 chutzpah Exp $
 
 *bmpx-0.14.3 (21 Apr 2006)
 
@@ -8,8 +8,8 @@
   -bmpx-0.12.6.1.ebuild, -bmpx-0.12.9.ebuild, -bmpx-0.12.9-r1.ebuild,
   +bmpx-0.14.3.ebuild:
   Take over maintainership, do a version bump to 0.14.3 (using a somewhat
-  modified version of the ebuild provided by upstream) and clean up some old
-  versions.
+  modified version of the ebuild provided by Samuli Suominen in bug #122930),
+  and clean up some old versions.
 
   06 Jan 2006; Markus Rothe <corsair@gentoo.org> bmpx-0.12.9-r2.ebuild:
   Added ~ppc64
