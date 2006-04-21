@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5248 2006/04/21 08:46:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5249 2006/04/21 09:54:07 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (21 Apr 2006)
+# Working on this, it's in a very fluid state
+=sys-libs/pam-0.99*
 
 # Marcelo Goes <vanquirius@gentoo.org> (20 Apr 2006)
 # Masked for testing with elfutils
