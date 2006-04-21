@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.68 2006/04/01 07:53:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.69 2006/04/21 07:17:16 mrness Exp $
+
+*rp-pppoe-3.8 (21 Apr 2006)
+
+  21 Apr 2006; Alin Nastac <mrness@gentoo.org>
+  +files/rp-pppoe-3.8-gentoo-netscripts.patch,
+  +files/rp-pppoe-3.8-plugin-options.patch,
+  +files/rp-pppoe-3.8-username-charset.patch, +rp-pppoe-3.8.ebuild:
+  Version bump. The new version fixes a bug in MD5 code that caused
+  pppoe-server to segfault on 64-bit arches (#130571).
 
   01 Apr 2006; Alin Nastac <mrness@gentoo.org> rp-pppoe-3.7.ebuild:
   Bail out in pkg_setup if the old /etc/init.d/rp-pppoe still exist.
