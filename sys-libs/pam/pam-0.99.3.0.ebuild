@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.3.0.ebuild,v 1.1 2006/04/21 11:04:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.3.0.ebuild,v 1.2 2006/04/21 11:31:11 flameeyes Exp $
 
 inherit libtool multilib eutils autotools pam
 
@@ -16,10 +16,10 @@ SLOT="0"
 KEYWORDS="-*"
 IUSE="nls"
 
-DEPEND="nls? ( sys-devel/gettext )
-	dev-util/pkgconfig"
+DEPEND="nls? ( sys-devel/gettext )"
 RDEPEND="nls? ( virtual/libintl )
-	>=sys-libs/cracklib-2.8.3"
+	>=sys-libs/cracklib-2.8.3
+	sys-libs/pwdb"
 DEPEND="${DEPEND} ${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
