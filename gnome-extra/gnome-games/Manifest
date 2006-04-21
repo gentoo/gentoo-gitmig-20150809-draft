@@ -1,4 +1,4 @@
-MD5 1155a73ac755f583745c1673bedb334d ChangeLog 18449
+MD5 fb3cd524582233b7da7dccb121e084c5 ChangeLog 18555
 MD5 2301a09a3e02fd7e40f6ee5a7e79e95c files/digest-gnome-games-1.4.0.3-r3 72
 MD5 d12063544c92d2ed0dff801d3d593707 files/digest-gnome-games-2.10.0 72
 MD5 c33cfe151eccd5d14201388ceb3f4adc files/digest-gnome-games-2.10.1 72
@@ -20,6 +20,6 @@ MD5 9ed71061f446aff2e93e225eb55417da gnome-games-2.10.1-r1.ebuild 2174
 MD5 912aa8f2b8e5f66a9ec63d7101ab51f3 gnome-games-2.10.1.ebuild 2056
 MD5 aca7011ab34842973269355083ac4086 gnome-games-2.12.1.ebuild 2059
 MD5 a3bbbbbb490cbd20646280e630745361 gnome-games-2.12.2.ebuild 2052
-MD5 42f9d4a674f6166b4a422624965c7d3d gnome-games-2.12.3.ebuild 2051
+MD5 f5792788aae78b0c36e31231ec0318f4 gnome-games-2.12.3.ebuild 2048
 MD5 71505071fd7e616a7bf5c6b488aea238 gnome-games-2.14.0.ebuild 1970
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
