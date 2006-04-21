@@ -1,0 +1,57 @@
+--- Mail-SpamAssassin-3.1.1/rules/30_text_de.cf.orig	2006-03-10 20:30:02.000000000 +0100
++++ Mail-SpamAssassin-3.1.1/rules/30_text_de.cf	2006-04-21 21:01:07.582002500 +0200
+@@ -583,6 +583,15 @@
+ lang de describe BAYES_80 Spamwahrscheinlichkeit nach Bayes-Test: 80-95%
+ lang de describe BAYES_95 Spamwahrscheinlichkeit nach Bayes-Test: 95-99%
+ lang de describe BAYES_99 Spamwahrscheinlichkeit nach Bayes-Test: 99-100%
++lang de describe USER_IN_BLACKLIST Absenderadresse steht in Ihrer persönlichen schwarzen Liste
++lang de describe USER_IN_WHITELIST Absenderadresse steht in Ihrer persönlichen weißen Liste
++lang de describe USER_IN_DEF_WHITELIST Absenderadresse steht in der allgemeinen weißen Liste
++lang de describe USER_IN_BLACKLIST_TO Empfängeradresse steht in Ihrer persönlichen schwarzen Liste
++lang de describe USER_IN_WHITELIST_TO Empfängeradresse steht in Ihrer persönlichen weißen Liste
++lang de describe USER_IN_MORE_SPAM_TO Empfängeradresse soll fast alle (Spam-) Nachrichten erhalten
++lang de describe USER_IN_ALL_SPAM_TO Empfängeradresse soll alle (Spam-) Nachrichten erhalten
++
++ifplugin Mail::SpamAssassin::Plugin::Hashcash
+ lang de describe HASHCASH_20 Enthält korrekte Hashcash-Kennzeichnung (20 bits)
+ lang de describe HASHCASH_21 Enthält korrekte Hashcash-Kennzeichnung (21 bits)
+ lang de describe HASHCASH_22 Enthält korrekte Hashcash-Kennzeichnung (22 bits)
+@@ -591,27 +600,30 @@
+ lang de describe HASHCASH_25 Enthält korrekte Hashcash-Kennzeichnung (25 bits)
+ lang de describe HASHCASH_HIGH Enthält korrekte Hashcash-Kennzeichnung (> 25 bits)
+ lang de describe HASHCASH_2SPEND Hashcash-Markierung bereits in anderer Nachricht verwendet
++endif
++
++ifplugin Mail::SpamAssassin::Plugin::SPF
+ lang de describe SPF_PASS SPF: Senderechner entspricht SPF-Datensatz
+ lang de describe SPF_FAIL SPF: Senderechner entspricht nicht SPF-Datensatz (fail)
+ lang de describe SPF_SOFTFAIL Senderechner entspricht nicht SPF-Datensatz (softfail)
+ lang de describe SPF_HELO_PASS SPF: HELO-Name entspricht dem SPF-Datensatz
+ lang de describe SPF_HELO_FAIL HELO-Name entspricht nicht SPF-Datensatz (fail)
+ lang de describe SPF_HELO_SOFTFAIL HELO-Name entspricht nicht SPF-Datensatz (softfail)
++endif
++
++ifplugin Mail::SpamAssassin::Plugin::URIDNSBL
+ lang de describe URIBL_SBL Enthält URL in SBL-Liste (http://www.spamhaus.org/sbl/)
+ lang de describe URIBL_SC_SURBL Enthält URL in SC-Liste  (www.surbl.org)
+ lang de describe URIBL_WS_SURBL Enthält URL in WS-Liste (www.surbl.org)
+ lang de describe URIBL_PH_SURBL Enthält URL in PH-Liste (www.surbl.org)
+ lang de describe URIBL_OB_SURBL Enthält URL in OB-Liste (www.surbl.org)
+ lang de describe URIBL_AB_SURBL Enthält URL in AB-Liste (www.surbl.org)
+-lang de describe AWL Absenderadresse in der automatischen weißen Liste
+-lang de describe USER_IN_BLACKLIST Absenderadresse steht in Ihrer persönlichen schwarzen Liste
+-lang de describe USER_IN_WHITELIST Absenderadresse steht in Ihrer persönlichen weißen Liste
+-lang de describe USER_IN_DEF_WHITELIST Absenderadresse steht in der allgemeinen weißen Liste
+-lang de describe USER_IN_BLACKLIST_TO Empfängeradresse steht in Ihrer persönlichen schwarzen Liste
+-lang de describe USER_IN_WHITELIST_TO Empfängeradresse steht in Ihrer persönlichen weißen Liste
+-lang de describe USER_IN_MORE_SPAM_TO Empfängeradresse soll fast alle (Spam-) Nachrichten erhalten
+-lang de describe USER_IN_ALL_SPAM_TO Empfängeradresse soll alle (Spam-) Nachrichten erhalten
++lang de describe URIBL_JP_SURBL Enthält URL in JP-Liste (www.surbl.org)
++endif
+ 
++ifplugin Mail::SpamAssassin::Plugin::AWL
++lang de describe AWL Absenderadresse in der automatischen weißen Liste
++endif
+ 
+ ifplugin Mail::SpamAssassin::Plugin::AntiVirus
+ lang de describe MIME_SUSPECT_NAME MIME-Dateiname entspricht nicht dem MIME-Typ

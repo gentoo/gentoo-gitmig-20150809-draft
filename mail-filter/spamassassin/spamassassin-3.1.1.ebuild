@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.1.ebuild,v 1.7 2006/04/08 19:36:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.1.ebuild,v 1.8 2006/04/21 19:08:33 hanno Exp $
 
-inherit perl-module
+inherit perl-module eutils
 
 MY_P=Mail-SpamAssassin-${PV//_/-}
 S=${WORKDIR}/${MY_P}
@@ -51,6 +51,11 @@ DEPEND=">=dev-lang/perl-5.8.2-r1
 	ipv6? (
 		dev-perl/IO-Socket-INET6
 	)"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-lint-de.diff
+}
 
 src_compile() {
 	# - Set SYSCONFDIR explicitly so we can't get bitten by bug 48205 again
