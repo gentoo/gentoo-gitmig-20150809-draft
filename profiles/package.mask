@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5251 2006/04/21 14:19:12 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5252 2006/04/21 14:51:30 chutzpah Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# <chutzpah@gentoo.org> (21 Apr 2006)
+# masking versions >= 0.14 until Gnome 2.14 is
+# unmasked (deps on dev-libs/glib-2.10 which is
+# in the 2.14 mask)
+>=media-sound/bmpx-0.14
 
 # Tavis Ormandy <taviso@gentoo.org> (21 Apr 2006)
 # unresolved security issues #125491
@@ -653,17 +659,6 @@ www-apache/mod_csv
 # so upgrading to it will probably break lots of things that rely on lua
 # import it into the tree anyhow for testing and development
 =dev-lang/lua-5.1
-
-# Martin Schlemmer <azarah@gentoo.org (01 Mar 2006)
-# Have multiple issues, and 0.13 release have segfaults (fixed in svn, but
-# _only_ after 0.13 release although the fact was known before the 0.13
-# release).  Either way, no bugfix release was made, and upstream was very
-# agro about the fact that I did not still want to add the 0.13 with known
-# issues.  I dont want to maintain this anymore as working with upstream
-# needs a lot of patience and diplomacy, and I do not have the energy any
-# longer.  I will remove it from the tree if nobody steps up shortly to
-# take over.
-media-sound/bmpx
 
 # Jory A. Pratt <anarchy@gentoo.org> (27 Feb 2006)
 # Initial Import to tree, testing needed
