@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/upnpscan
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.2 2005/12/10 22:42:53 vanquirius Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.3 2006/04/21 22:35:19 vanquirius Exp $
+
+  21 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> upnpscan-0.4.ebuild:
+  Mark 0.4 x86 stable.
 
   10 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> metadata.xml:
   Add longdescription to metadata.xml.
