@@ -15,5 +15,5 @@
 +		nice /usr/bin/updatedb -f proc
  	fi
 -	chown root.slocate /var/lib/slocate/slocate.db
-+	chown root.locate /var/lib/slocate/slocate.db
++	chown root:locate /var/lib/slocate/slocate.db
  fi

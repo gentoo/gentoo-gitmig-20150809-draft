@@ -1,70 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX slocate-2.7-bounds.patch 305 RMD160 df8f220cdf25d98e2fa9fd0e054b2151b3a4b1ad SHA1 a82e6f131ecc6109ac8e8546ba543913e151f39e SHA256 59ce3339cacaa817d65031fae80c0bd96962f01915511a096e47fafa295d5e8f size 305
-MD5 6cd691d75d501eb87ed12cf31c1e1ff6 files/slocate-2.7-bounds.patch 305
-RMD160 df8f220cdf25d98e2fa9fd0e054b2151b3a4b1ad files/slocate-2.7-bounds.patch 305
-SHA256 59ce3339cacaa817d65031fae80c0bd96962f01915511a096e47fafa295d5e8f files/slocate-2.7-bounds.patch 305
-AUX slocate-2.7-really-long-paths.patch 538 RMD160 d592621e92a5fd3c5e15e64fad4c307eddbdfb86 SHA1 b3e9918d171eeb35c4ef569e590bff1586aeee78 SHA256 3d2ab6ec4cbb2b87a358e93018e6f77f6bbad18eaffbd47d8b6acdec20480e83 size 538
-MD5 798bd427c87de3cfdb9ecd6854f2e56b files/slocate-2.7-really-long-paths.patch 538
-RMD160 d592621e92a5fd3c5e15e64fad4c307eddbdfb86 files/slocate-2.7-really-long-paths.patch 538
-SHA256 3d2ab6ec4cbb2b87a358e93018e6f77f6bbad18eaffbd47d8b6acdec20480e83 files/slocate-2.7-really-long-paths.patch 538
-AUX slocate-3.1-build.patch 1258 RMD160 1eaac141880c84e33e1673b253d6b0a6bb1f37f3 SHA1 328c1d36e26c7f47ac4ea8f0619efd6a45bbb918 SHA256 aded9d720df1ca41c83acabb29e97e37079df9cf214b524d419e4b8692d13733 size 1258
-MD5 976ec6cbddb7afb61aadb4c0c94d9d75 files/slocate-3.1-build.patch 1258
-RMD160 1eaac141880c84e33e1673b253d6b0a6bb1f37f3 files/slocate-3.1-build.patch 1258
-SHA256 aded9d720df1ca41c83acabb29e97e37079df9cf214b524d419e4b8692d13733 files/slocate-3.1-build.patch 1258
-AUX slocate-3.1-cron.patch 477 RMD160 317b50b1b5bb9f777dc07c301c86f4a6d1c5fc4a SHA1 ebacfcdaad191fe0cec1afed304fb5feef3e7c57 SHA256 8fcad486e37d4bb9d035dd50aafbdcdeda1fb526bf6fd37f7a365b6ac19349f3 size 477
-MD5 5b81cf72d95d8e0ea5767e8d5a3f285a files/slocate-3.1-cron.patch 477
-RMD160 317b50b1b5bb9f777dc07c301c86f4a6d1c5fc4a files/slocate-3.1-cron.patch 477
-SHA256 8fcad486e37d4bb9d035dd50aafbdcdeda1fb526bf6fd37f7a365b6ac19349f3 files/slocate-3.1-cron.patch 477
-AUX slocate-3.1-incompat-warning.patch 528 RMD160 4220d1c38e050e8eeff4f524ed1cd6b2da5d62d4 SHA1 2cd98e3f83ea8bd8466e7ece5ca747020bcb54ed SHA256 ba9c9806c2e2058e5644f74b7697d58ea8a3f004e4f35885cbb97354a89dd9ac size 528
-MD5 32c7c4bae68a67d4a6d3c4dd54a3ae2a files/slocate-3.1-incompat-warning.patch 528
-RMD160 4220d1c38e050e8eeff4f524ed1cd6b2da5d62d4 files/slocate-3.1-incompat-warning.patch 528
-SHA256 ba9c9806c2e2058e5644f74b7697d58ea8a3f004e4f35885cbb97354a89dd9ac files/slocate-3.1-incompat-warning.patch 528
-AUX updatedb.conf 567 RMD160 021353a0cf3c57d904765f96f03148cd5cfbb0c3 SHA1 f64fe505f0300e82b60e9cd721532d62fcaa7b28 SHA256 cac29ac9c8ae30606ed40f66cb0c465a821e4f481f38640c09d0157ea0422eb9 size 567
-MD5 708503ec255083a2b20b230070147a62 files/updatedb.conf 567
-RMD160 021353a0cf3c57d904765f96f03148cd5cfbb0c3 files/updatedb.conf 567
-SHA256 cac29ac9c8ae30606ed40f66cb0c465a821e4f481f38640c09d0157ea0422eb9 files/updatedb.conf 567
-DIST slocate-2.7-debian.patch.bz2 2623 RMD160 9e6e96dfe2ca8b203f657993a3a81378459841c5 SHA256 ccacaa44d29a739f67916bc74ae5154c1090d2555aca345cefc5aaba212d4c4a size 2623
-DIST slocate-2.7-uclibc-sl_fts.patch.bz2 7566 RMD160 bc614e9717e6c4a2bc8247d7140cfcefae8f3219 SHA256 a980650613df9524f428ad2f6722a24149fe348f3422b60c59673dc6400fab77 size 7566
-DIST slocate-2.7.tar.gz 87240 RMD160 0aa08da7b958be5c8fec7c4655e42373d8faf2cc SHA256 ddff733fcc5f240d40361c5acbce0011b2204efc506efb0da63c8d0e38947dcf size 87240
-DIST slocate-3.1.tar.gz 37748 RMD160 d3b1e818cc35ce8e87ec1b0764f6b2145a319e13 SHA256 6abec68ab50fa743739fb78a5063c295ae2f7d04d2e538f7c3108120e49a3266 size 37748
-EBUILD slocate-2.7-r7.ebuild 2323 RMD160 aec5124784c999fac4500594b750885ccb0bec31 SHA1 17776b2dfa013304d658d397ff0b0b27cd13342f SHA256 2513a42414f13f26832dd868a20b47cc1489b92b48f788bd3d6189eeb080b7aa size 2323
-MD5 1711c302c7546e0a7210bce15849fa43 slocate-2.7-r7.ebuild 2323
-RMD160 aec5124784c999fac4500594b750885ccb0bec31 slocate-2.7-r7.ebuild 2323
-SHA256 2513a42414f13f26832dd868a20b47cc1489b92b48f788bd3d6189eeb080b7aa slocate-2.7-r7.ebuild 2323
-EBUILD slocate-2.7-r8.ebuild 2768 RMD160 886ad4019bae3b2eadb55033f1f88399fb1d1bb1 SHA1 a380f6114bd69fd3fb70bd2087e60d453c8967c6 SHA256 79f27d4241988b4075b409fda85f27ee788f53f70f81d95bf4dfd48dbba82b75 size 2768
-MD5 d27d9020fc6dfdcd4f6730e62335c067 slocate-2.7-r8.ebuild 2768
-RMD160 886ad4019bae3b2eadb55033f1f88399fb1d1bb1 slocate-2.7-r8.ebuild 2768
-SHA256 79f27d4241988b4075b409fda85f27ee788f53f70f81d95bf4dfd48dbba82b75 slocate-2.7-r8.ebuild 2768
-EBUILD slocate-3.1-r1.ebuild 2264 RMD160 7e9c75463410b507aa653ab4b240888e0607bebb SHA1 f658f7c9e5e18fbe451e8f33f937b35f272529c3 SHA256 40cdc6a2e006bc752b1ba7932aa0509f5fe435447058b980f4750c1a7dae43e8 size 2264
-MD5 2f390742766f35f2529b21ce02aa325c slocate-3.1-r1.ebuild 2264
-RMD160 7e9c75463410b507aa653ab4b240888e0607bebb slocate-3.1-r1.ebuild 2264
-SHA256 40cdc6a2e006bc752b1ba7932aa0509f5fe435447058b980f4750c1a7dae43e8 slocate-3.1-r1.ebuild 2264
-MISC ChangeLog 8569 RMD160 00b065d3b91f978983823f210bba57d12ca6a918 SHA1 9be63802f0d11bdc7d9f423c48d8751e3aea81e1 SHA256 f176b01b3c95bdff5de9ee7ceeb0d6f49728555246d15358481ec8eea0c02337 size 8569
-MD5 97a0143ed5a1ee22472239a535a80354 ChangeLog 8569
-RMD160 00b065d3b91f978983823f210bba57d12ca6a918 ChangeLog 8569
-SHA256 f176b01b3c95bdff5de9ee7ceeb0d6f49728555246d15358481ec8eea0c02337 ChangeLog 8569
-MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 size 164
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
-SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 4a47120ef18a3e0fb1976af8917ce50a ChangeLog 8767
+RMD160 0320a73d83736a9c8c7dab5d47844a68ec7edb73 ChangeLog 8767
+SHA256 5f73baf96dd1a4b710207a1503391c1858c0205ae934f1ddbc2ebfe3bc6c1dd0 ChangeLog 8767
 MD5 d6bea8ecfe3e1743ea5cb28c75cbb27c files/digest-slocate-2.7-r7 771
 RMD160 9351e228b3ae4c4a455b84cf16d7bee22efd9289 files/digest-slocate-2.7-r7 771
 SHA256 c2936289fe94a06720fd500d8a1fc686435dd19525b9a4cf3d8174215237749e files/digest-slocate-2.7-r7 771
-size 771 files/digest-slocate-2.7-r7 771
 MD5 d6bea8ecfe3e1743ea5cb28c75cbb27c files/digest-slocate-2.7-r8 771
 RMD160 9351e228b3ae4c4a455b84cf16d7bee22efd9289 files/digest-slocate-2.7-r8 771
 SHA256 c2936289fe94a06720fd500d8a1fc686435dd19525b9a4cf3d8174215237749e files/digest-slocate-2.7-r8 771
-size 771 files/digest-slocate-2.7-r8 771
 MD5 dae9a79a94d9e7f6f19cbe6255a86347 files/digest-slocate-3.1-r1 232
 RMD160 0321f108f5da4e100ea515a23e40c96162760fb4 files/digest-slocate-3.1-r1 232
 SHA256 88814468d0d142ef8d368f35c29b0a2ba64cd7868069d4e96ad22da2bc943c2c files/digest-slocate-3.1-r1 232
-size 232 files/digest-slocate-3.1-r1 232
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFESGyE2+ySkm8kpY0RAveRAJ9sfowoSQF13mhtfpI5SZ7XHVskLACePxaX
-IrcFxbUowRSdlQTLHvnYRVc=
-=rjBD
------END PGP SIGNATURE-----
+MD5 6cd691d75d501eb87ed12cf31c1e1ff6 files/slocate-2.7-bounds.patch 305
+RMD160 df8f220cdf25d98e2fa9fd0e054b2151b3a4b1ad files/slocate-2.7-bounds.patch 305
+SHA256 59ce3339cacaa817d65031fae80c0bd96962f01915511a096e47fafa295d5e8f files/slocate-2.7-bounds.patch 305
+MD5 798bd427c87de3cfdb9ecd6854f2e56b files/slocate-2.7-really-long-paths.patch 538
+RMD160 d592621e92a5fd3c5e15e64fad4c307eddbdfb86 files/slocate-2.7-really-long-paths.patch 538
+SHA256 3d2ab6ec4cbb2b87a358e93018e6f77f6bbad18eaffbd47d8b6acdec20480e83 files/slocate-2.7-really-long-paths.patch 538
+MD5 976ec6cbddb7afb61aadb4c0c94d9d75 files/slocate-3.1-build.patch 1258
+RMD160 1eaac141880c84e33e1673b253d6b0a6bb1f37f3 files/slocate-3.1-build.patch 1258
+SHA256 aded9d720df1ca41c83acabb29e97e37079df9cf214b524d419e4b8692d13733 files/slocate-3.1-build.patch 1258
+MD5 6f8f5e5cf8956acd3549e7e6fecd144a files/slocate-3.1-cron.patch 477
+RMD160 34f9f3e59f0da7c8834b8db8cd6c90a00d62bfcd files/slocate-3.1-cron.patch 477
+SHA256 8124fcfbc4001ec335fc89fad0cbcf7362e933f093f12b4eb3d7e1df65dd5811 files/slocate-3.1-cron.patch 477
+MD5 32c7c4bae68a67d4a6d3c4dd54a3ae2a files/slocate-3.1-incompat-warning.patch 528
+RMD160 4220d1c38e050e8eeff4f524ed1cd6b2da5d62d4 files/slocate-3.1-incompat-warning.patch 528
+SHA256 ba9c9806c2e2058e5644f74b7697d58ea8a3f004e4f35885cbb97354a89dd9ac files/slocate-3.1-incompat-warning.patch 528
+MD5 708503ec255083a2b20b230070147a62 files/updatedb.conf 567
+RMD160 021353a0cf3c57d904765f96f03148cd5cfbb0c3 files/updatedb.conf 567
+SHA256 cac29ac9c8ae30606ed40f66cb0c465a821e4f481f38640c09d0157ea0422eb9 files/updatedb.conf 567
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 1711c302c7546e0a7210bce15849fa43 slocate-2.7-r7.ebuild 2323
+RMD160 aec5124784c999fac4500594b750885ccb0bec31 slocate-2.7-r7.ebuild 2323
+SHA256 2513a42414f13f26832dd868a20b47cc1489b92b48f788bd3d6189eeb080b7aa slocate-2.7-r7.ebuild 2323
+MD5 d27d9020fc6dfdcd4f6730e62335c067 slocate-2.7-r8.ebuild 2768
+RMD160 886ad4019bae3b2eadb55033f1f88399fb1d1bb1 slocate-2.7-r8.ebuild 2768
+SHA256 79f27d4241988b4075b409fda85f27ee788f53f70f81d95bf4dfd48dbba82b75 slocate-2.7-r8.ebuild 2768
+MD5 2f390742766f35f2529b21ce02aa325c slocate-3.1-r1.ebuild 2264
+RMD160 7e9c75463410b507aa653ab4b240888e0607bebb slocate-3.1-r1.ebuild 2264
+SHA256 40cdc6a2e006bc752b1ba7932aa0509f5fe435447058b980f4750c1a7dae43e8 slocate-3.1-r1.ebuild 2264
