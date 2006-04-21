@@ -1,4 +1,4 @@
-MD5 06d69877f8127edbc4d08d46ac733514 ChangeLog 830
+MD5 8a7f041d205ede1345fe6fbf93c047a2 ChangeLog 948
 MD5 0618d5ea1ec245f87bc3db68fe5b2d16 files/digest-gnap-ext-1.7 202
 MD5 f8f52d58d25583332ca3ba474d6ec780 files/digest-gnap-ext-1.7.1 208
 MD5 3bdd5f3e2e5596e8b12a1bd1f78ac4fe files/digest-gnap-ext-1.8 204
@@ -10,5 +10,5 @@ MD5 2b423ca1aa52a13ed95f76818372f3c3 gnap-ext-1.7.ebuild 1014
 MD5 aed4860ce545ff6b9388bb0e42dd6d30 gnap-ext-1.8.1.ebuild 1023
 MD5 c0cf2728d3e6041e63762ef782bd2fd0 gnap-ext-1.8.2.ebuild 1023
 MD5 f6ee961f73224c23f3f98b4a83a30a89 gnap-ext-1.8.ebuild 1021
-MD5 f607688de4c3d23d1df9e586bfe575c6 gnap-ext-2.0.ebuild 1057
+MD5 fe3566ea471fc74719cd8b6431dc2a75 gnap-ext-2.0.ebuild 1055
 MD5 1efa026a8d6a0dde12242d80980203ba metadata.xml 250
