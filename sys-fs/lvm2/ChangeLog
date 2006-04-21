@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.61 2006/04/21 14:56:30 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.62 2006/04/21 18:14:57 rocket Exp $
+
+*lvm2-2.02.04-r1 (21 Apr 2006)
+
+  21 Apr 2006; Eric Edgar <rocket@gentoo.org>
+  +files/lvm2-2.01.14-static.patch, +files/lvm2-2.02.04-vgid.patch,
+  +lvm2-2.02.04-r1.ebuild:
+  lvm2-2.02.04 with vgid termination patch to fix bug# 130626. Patch obtained
+  from upstream cvs. Will be included in lvm2-2.02.05 Replace missing
+  lvm2-2.01.14-static patch
 
   21 Apr 2006; Eric Edgar <rocket@gentoo.org> -lvm2-2.02.03.ebuild,
   -lvm2-2.02.04.ebuild:
