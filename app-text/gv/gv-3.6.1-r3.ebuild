@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.1-r3.ebuild,v 1.1 2006/04/10 14:08:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.1-r3.ebuild,v 1.2 2006/04/21 17:13:03 vanquirius Exp $
 
 inherit eutils
 
@@ -32,16 +32,13 @@ DEPEND="${RDEPEND}
 		x11-libs/libXt
 		virtual/x11
 	)"
-PROVIDE="virtual/pdfviewer
-	virtual/psviewer"
-
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-landscape.patch
-	epatch ${FILESDIR}/${P}-setenv.patch
-	epatch ${FILESDIR}/${P}-a0.patch
-	epatch ${WORKDIR}/gv_3.6.1-13.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-landscape.patch
+	epatch "${FILESDIR}"/${P}-setenv.patch
+	epatch "${FILESDIR}"/${P}-a0.patch
+	epatch "${WORKDIR}"/gv_3.6.1-13.diff
 	epatch ${P}/debian/patches/*.dpatch
 }
 
@@ -51,6 +48,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog INSTALL README TODO
 }

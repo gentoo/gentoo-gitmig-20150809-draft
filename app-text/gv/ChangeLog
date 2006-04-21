@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.48 2006/04/10 14:08:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.49 2006/04/21 17:13:02 vanquirius Exp $
+
+  21 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> gv-3.6.1-r3.ebuild:
+  Remove virtual/pdfviewer and virtual/psviewer PROVIDE for bug 130746,
+  reported by Carsten Lohrke <carlo at gentoo dot org>. Also, added quotes for
+  S, D, FILESDIR and WORKDIR.
 
 *gv-3.6.1-r3 (10 Apr 2006)
 
