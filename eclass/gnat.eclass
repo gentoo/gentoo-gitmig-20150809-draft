@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.11 2005/12/15 12:06:30 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.12 2006/04/21 11:51:05 george Exp $
 #
 # Author: David Holm <dholm@gentoo.org>
 #
@@ -11,8 +11,6 @@
 inherit flag-o-matic
 
 EXPORT_FUNCTIONS pkg_setup
-
-DEPEND="dev-lang/gnat"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
