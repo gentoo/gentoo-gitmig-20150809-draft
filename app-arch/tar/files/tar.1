@@ -450,11 +450,12 @@ create/list/extract multi-volume archive
 .BR --mode " PERMISSIONS"
 apply PERMISSIONS while adding files (see \fBchmod\fR(1))
 .TP
-.BR -N ", " --after-date DATE ", " --newer " DATE"
-only store files newer than DATE
+.BR -N ", " --after-date " DATE, " --newer " DATE"
+only store files that were modified or had status updates (permissions,
+ACLs, extended attributes,...) since DATE
 .TP
 .BR --newer-mtime " DATE"
-like \fI--newer\fR, but with a DATE
+like \fI--newer\fR, but only store files that were modified since DATE
 .TP
 .BR --no-anchored
 match any subsequenceof the name's components with \fI--exclude\fR
