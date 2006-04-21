@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.141 2006/04/19 22:03:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.142 2006/04/21 19:28:53 tcort Exp $
+
+  21 Apr 2006; Thomas Cort <tcort@gentoo.org> mozilla-firefox-1.0.8.ebuild:
+  Stable on alpha wrt security Bug #129924.
 
   19 Apr 2006; Joseph Jezak <josejx@gentoo.org>
   mozilla-firefox-1.0.8.ebuild:
