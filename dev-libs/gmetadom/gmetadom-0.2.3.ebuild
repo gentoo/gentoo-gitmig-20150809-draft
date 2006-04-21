@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/gmetadom-0.2.3.ebuild,v 1.2 2006/02/22 00:04:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/gmetadom-0.2.3.ebuild,v 1.3 2006/04/21 19:55:00 tcort Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gmetadom/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ocaml"
 
 RDEPEND=">=dev-libs/gdome2-0.8.0"

@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f7197f385fd2e45ca418b76c22cc8ddf ChangeLog 2398
+MD5 7479a8490eef9e0f414cafe884588a81 ChangeLog 2505
 MD5 7192830dc2daf239e593ee9d302af67e files/digest-gmetadom-0.0.3-r3 66
 MD5 61a42bb68511dea925d7f7860eb7027c files/digest-gmetadom-0.1.8 66
 MD5 51735b8a4a855394319affc43667b6de files/digest-gmetadom-0.2.1-r2 66
@@ -18,12 +15,5 @@ MD5 1efffaeae461cb2e5c3a26b73985e367 gmetadom-0.1.8.ebuild 732
 MD5 4a0d1d405250503757bedff7ef793dd6 gmetadom-0.2.1-r2.ebuild 1184
 MD5 5578c616df51a968ff3887634a5d3afb gmetadom-0.2.2-r1.ebuild 1283
 MD5 66f606b975a4b66c5572d166e0d871d1 gmetadom-0.2.2.ebuild 1196
-MD5 08906a097005101e6172341da28b85aa gmetadom-0.2.3.ebuild 1343
+MD5 5803d09d89b40bcc0806a22de6f79700 gmetadom-0.2.3.ebuild 1347
 MD5 e10a0da4fac2882942ffa8360ccdd921 metadata.xml 201
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD+6qhJrHF4yAQTrARAjZBAJ9xkQBDnltLwbHCJ2jj5c31GvIoIwCfZRvF
-vsoKLas8JWSaAf6x4dTm1sg=
-=B+9n
------END PGP SIGNATURE-----

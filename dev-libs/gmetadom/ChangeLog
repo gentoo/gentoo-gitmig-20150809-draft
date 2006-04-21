@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmetadom
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/ChangeLog,v 1.16 2006/02/22 00:04:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/ChangeLog,v 1.17 2006/04/21 19:54:59 tcort Exp $
+
+  21 Apr 2006; Thomas Cort <tcort@gentoo.org> gmetadom-0.2.3.ebuild:
+  Added ~alpha keyword wrt Bug #110858.
 
   21 Feb 2006; Aron Griffis <agriffis@gentoo.org> gmetadom-0.2.3.ebuild:
   Mark 0.2.3 ~ia64
