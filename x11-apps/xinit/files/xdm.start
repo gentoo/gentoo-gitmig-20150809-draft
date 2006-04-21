@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.start,v 1.1 2005/09/06 19:33:51 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.start,v 1.2 2006/04/21 22:26:37 spyderous Exp $
 
 # This is here to serve as a note to myself, and future developers.
 #
@@ -39,7 +39,15 @@
 
 # Start X Font Server before X
 depend() {
-	use xfs hotplug
+	need localmount
+
+	# this should start as early as possible
+	# we can't do 'before *' as that breaks it
+	after bootmisc
+	before alsasound net.lo
+
+	# Start before X
+	use acpid xfs
 }
 
 setup_dm() {
@@ -110,10 +118,16 @@ start() {
 		ebegin "Setting up ${SERVICE}"
 		#save the prefered DM
 		save_options "service" "${EXE}"
-		#tell init to run /etc/X11/startDM.sh after current
-		#runlevel is finished (should *not* be in the "boot"
-		#                      runlevel).
-		/sbin/telinit a &>/dev/null
+
+		# Start as soon as possible if XSTATICVT is set
+		if [ "${XSTATICVT}" = "yes" ] ; then
+			/etc/X11/startDM.sh
+		else
+			#tell init to run /etc/X11/startDM.sh after current
+			#runlevel is finished (should *not* be in the "boot"
+			#                      runlevel).
+			/sbin/telinit a &>/dev/null
+		fi
 		eend 0
 	fi
 
