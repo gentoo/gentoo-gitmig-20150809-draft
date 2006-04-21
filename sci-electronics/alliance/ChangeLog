@@ -1,0 +1,10 @@
+# ChangeLog for sci-electronics/alliance
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/ChangeLog,v 1.1 2006/04/21 20:12:14 calchan Exp $
+
+*alliance-5.0.20060329 (21 Apr 2006)
+
+  21 Apr 2006; Denis Dupeyron <calchan@gentoo.org>
+  +alliance-5.0.20060329.ebuild:
+  Initial commit, bug #91842.
+
