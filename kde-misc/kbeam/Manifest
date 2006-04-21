@@ -1,4 +1,17 @@
-MD5 2834f1cb97eea873f19ab95ccad6bc6d metadata.xml 216
-MD5 5878b62f167a899122af6e0c9116d52c kbeam-0.61.ebuild 564
-MD5 cd1d41903d1659f36cb466dac1ecc4cc ChangeLog 1063
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ad7a43394d0ea7c0acbf45e1386a5716 ChangeLog 1346
 MD5 ba873639f681c915eb79da03aecaa9b3 files/digest-kbeam-0.61 62
+MD5 ba873639f681c915eb79da03aecaa9b3 files/digest-kbeam-0.61-r1 62
+MD5 2fdf369b38b2ceb17e7d66a967e7f734 files/kbeam-0.61-aclocal_openobex.patch 2289
+MD5 b76f64250b4142a0eec08270917fde08 kbeam-0.61-r1.ebuild 802
+MD5 5878b62f167a899122af6e0c9116d52c kbeam-0.61.ebuild 564
+MD5 2834f1cb97eea873f19ab95ccad6bc6d metadata.xml 216
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFESJuJjG8pv1lIUX4RAv6QAJ0ep6DdorzDWvTB9n13aaCFXkvjYACfbnQJ
+4qfpOgaaPYyj13vIpsjqUQE=
+=D00G
+-----END PGP SIGNATURE-----
