@@ -1,4 +1,4 @@
-MD5 9f62e19f02cfe97658b31d82c779678a ChangeLog 3979
+MD5 cfe582220fb3a8ec67ee3a96e6a81d1f ChangeLog 4097
 MD5 946729e7340edc6a1bae2e1a5e02a1d2 files/digest-system-tools-backends-1.2.0 80
 MD5 54db3221ddfb6a9393e2f1576f8d7a5e files/digest-system-tools-backends-1.4.0 80
 MD5 db143143d44f996cd2407f556fc67c92 files/digest-system-tools-backends-1.4.1 80
@@ -7,4 +7,4 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 aab38d32daaa9ee6e5c99cd978603fac system-tools-backends-1.2.0.ebuild 754
 MD5 481c8379524aaefeedacf79c8438321b system-tools-backends-1.4.0.ebuild 763
 MD5 fae31db36d742218cec23f62d63ecbce system-tools-backends-1.4.1.ebuild 764
-MD5 e690b7d65639c31cbb762731d1ea64fd system-tools-backends-1.4.2.ebuild 776
+MD5 016e762fd91b5db7162228088bbf4caa system-tools-backends-1.4.2.ebuild 773
