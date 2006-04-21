@@ -1,4 +1,4 @@
-MD5 de7f18ec3463c05c016ed179b244599a ChangeLog 13856
+MD5 8e0c74db58ccad5ca120857d5f55badd ChangeLog 13958
 MD5 5ad99f98086de45658268d8d707429b5 files/digest-libwnck-2.10.3 67
 MD5 15f2cc35cebe826791d622e3c9845093 files/digest-libwnck-2.12.1 247
 MD5 6c5076328d127bdc6c524c2b71295204 files/digest-libwnck-2.12.2 247
@@ -9,7 +9,7 @@ MD5 18b803208062c76b65f948628222f371 files/libwnck-2.8-multimon-tasklist.patch 3
 MD5 52bc3c10678ec2d639c99a3a5966e6ea libwnck-2.10.3.ebuild 704
 MD5 788f4d2ee710c759b0be18eb17a1064f libwnck-2.12.1.ebuild 744
 MD5 816fa28eaaf094161c613fb21943de86 libwnck-2.12.2.ebuild 737
-MD5 9be335d7eb22c05e94dbf2884b92d1dd libwnck-2.12.3.ebuild 737
+MD5 c78d3553a2ef4d87d525fee7f4a2ce68 libwnck-2.12.3.ebuild 733
 MD5 42b20470b5b528af116086114d080b65 libwnck-2.14.0.ebuild 740
 MD5 5c8fc7c865b134e91d23b93aa761ed65 libwnck-2.8.1-r1.ebuild 827
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
