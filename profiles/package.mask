@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5249 2006/04/21 09:54:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5250 2006/04/21 10:54:02 george Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -265,10 +265,6 @@ sys-apps/systrace
 
 # Francesco Riosa <vivo@gentoo.org> (13 Dec 2005)
 =dev-db/mysql-4.1.14
-
-# George Shapovalov <george@gentoo.org> (13 Apr 2006)
-# masked virtual untill dev-lang/gnat-gcc gets unmasked (soon now)
-virtual/gnat
 
 # Bryan Østergaard <kloeri@gentoo.org> (13 Apr 2006)
 # Mask python-2.4.3 for testing
@@ -791,11 +787,6 @@ app-cdr/cdrx
 # Michael Imhof <tantive@gentoo.org> (17 Jan 2006)
 # masked pending removal - upstream discontinued this project
 sci-misc/zetagrid
-
-# George Shapovalov <george@gentoo.org> (17 Jan 2006)
-# masked for testing - initial commit of the eclass and split gnat
-dev-lang/gnat-gcc
-dev-lang/gnat-gpl
 
 # Marius Mauch <genone@gentoo.org> (17 Jan 2006)
 # Development version
