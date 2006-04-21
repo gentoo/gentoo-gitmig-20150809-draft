@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 073335ef6732a6f3b9f68ff4cc1c7d8c ChangeLog 2865
-RMD160 4de5f151fc44189e5532e492c64385eb74c05076 ChangeLog 2865
-SHA256 6aaa7274b56fcde6bf57957f6e0a25eb4edc8a27a9bbe96a3a76c354bfd9918d ChangeLog 2865
+MD5 0e34487b8f167e8b9791c729afe07aa9 ChangeLog 2967
 MD5 00d684da74cd7e31b78c9d86ada1bf19 files/digest-ripmime-1.4.0.5 67
-RMD160 72d0310c27926858718b30ee8b2089b44dfa871e files/digest-ripmime-1.4.0.5 67
-SHA256 cc16d263c780ce82236724d51cce8e04d9f2014dbc4ad9e5a9466d6c733c3994 files/digest-ripmime-1.4.0.5 67
 MD5 bf62ce5bc3e9bf9c709ef472ebd99647 files/digest-ripmime-1.4.0.6 247
-RMD160 735054c2ad20a2c7cdfebbfa2a15c381e8114b09 files/digest-ripmime-1.4.0.6 247
-SHA256 1e491caea2db162fe5571a05919098a60dbf16345d0e5d2082a49d7c66a47de0 files/digest-ripmime-1.4.0.6 247
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
-SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
 MD5 49c1d8f8a6d4d86b42e1a3a3018ea29b ripmime-1.4.0.5.ebuild 604
-RMD160 159c190a9e143c6826dcfdf773be250633ed74b5 ripmime-1.4.0.5.ebuild 604
-SHA256 75261929a47dbdf6474d9d65ab26ee9e60b48ab48f7ab5cad89a35ec4524455d ripmime-1.4.0.5.ebuild 604
-MD5 da094c41036c0985383d683bba822e2a ripmime-1.4.0.6.ebuild 607
-RMD160 802ad67506347c00583bf9b9179f3a6a800036a7 ripmime-1.4.0.6.ebuild 607
-SHA256 58d242827ed3dc07cc51ddefa5defdc9029b395dab9ce490a52560b31ef4dc1b ripmime-1.4.0.6.ebuild 607
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFEQ/L210xuJSrg3/sRAl6qAJ46zM7ckLjaIjXn98eJfBvq9UgGxwCfVV/V
-838ni/pnJIy3YLumdmGgcp8=
-=/Imh
------END PGP SIGNATURE-----
+MD5 993524404c10255e0f1cd9ef3f177033 ripmime-1.4.0.6.ebuild 609
