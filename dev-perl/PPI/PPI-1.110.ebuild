@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/PPI-1.110.ebuild,v 1.1 2006/04/20 02:27:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/PPI-1.110.ebuild,v 1.2 2006/04/21 20:37:56 mcummings Exp $
 
 inherit perl-module
 
@@ -18,6 +18,7 @@ SRC_TEST="do"
 DEPEND="dev-perl/File-Remove
 		dev-perl/Test-SubCalls
 		dev-perl/Test-ClassAPI
+		>=virtual/perl-Scalar-List-Utils-1.17
 		>=dev-perl/Params-Util-0.05
 		>=dev-perl/Clone-0.17
 		dev-perl/List-MoreUtils"
