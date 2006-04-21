@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.54 2006/04/21 06:58:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.55 2006/04/21 07:01:00 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -185,7 +185,7 @@ x-modular_specs_check() {
 	fi
 }
 
-x-modular_unpack_source() {
+x-modular_dri_check() {
 	# (#120057) Enabling DRI in drivers requires that the server was built with
 	# support for it
 	if [[ -n "${DRIVER}" ]]; then
@@ -196,7 +196,9 @@ x-modular_unpack_source() {
 			fi
 		fi
 	fi
+}
 
+x-modular_unpack_source() {
 	unpack ${A}
 	cd ${S}
 
@@ -253,6 +255,7 @@ x-modular_reconf_source() {
 
 x-modular_src_unpack() {
 	x-modular_specs_check
+	x-modular_dri_check
 	x-modular_unpack_source
 	x-modular_patch_source
 	x-modular_reconf_source
