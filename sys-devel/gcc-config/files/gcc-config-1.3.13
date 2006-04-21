@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.13,v 1.5 2006/04/15 00:45:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.13,v 1.6 2006/04/21 23:50:31 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -590,7 +590,7 @@ for x in "$@" ; do
 		-h|--help)
 			usage 0
 			;;
-		-v|--version)
+		-V|--version)
 			echo "gcc-config-PORTAGE-VERSION"
 			exit 0
 			;;
