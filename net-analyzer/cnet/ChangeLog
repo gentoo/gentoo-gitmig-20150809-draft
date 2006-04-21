@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/cnet
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.9 2005/01/31 13:55:30 ka0ttic Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.10 2006/04/21 01:00:59 vanquirius Exp $
+
+*cnet-2.0.10 (21 Apr 2006)
+
+  21 Apr 2006; Marcelo Goes <vanquirius@gentoo.org>
+  +files/cnet-2.0.10-gentoo.patch, -cnet-2.0.5.ebuild, +cnet-2.0.10.ebuild:
+  2.0.10 version bump for bug 130634, thanks to Kesara Rathnayake <kesara at
+  bcs dot org>.
 
   31 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> cnet-2.0.9.ebuild:
   Marked stable on x86.
