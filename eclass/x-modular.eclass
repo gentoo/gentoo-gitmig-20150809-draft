@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.53 2006/04/20 23:43:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.54 2006/04/21 06:58:52 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -175,6 +175,16 @@ RDEPEND="${RDEPEND}
 # Provides virtual/x11 for temporary use until packages are ported
 #	x11-base/x11-env"
 
+x-modular_specs_check() {
+	if [[ ${PN:0:11} = "xorg-server" ]] || [[ -n "${DRIVER}" ]]; then
+		if gcc-specs-now; then
+			msg="${PN} does not work with hardened gcc specs. Switch to vanilla gcc specs to emerge ${PN}."
+			eerror "$msg"
+			die "$msg"
+		fi
+	fi
+}
+
 x-modular_unpack_source() {
 	# (#120057) Enabling DRI in drivers requires that the server was built with
 	# support for it
@@ -236,24 +246,16 @@ x-modular_reconf_source() {
 		fi
 	fi
 
-}
-
-x-modular_src_unpack() {
-	if [[ ${PN:0:11} = "xorg-server" ]] || [[ -n "${DRIVER}" ]]; then
-		if gcc-specs-now; then
-			msg="${PN} does not work with hardened gcc specs. Switch to vanilla gcc specs to emerge ${PN}."
-			eerror "$msg"
-			die "$msg"
-		fi
-	fi
-
-	x-modular_unpack_source
-	x-modular_patch_source
-	x-modular_reconf_source
-
 	# Joshua Baergen - October 23, 2005
 	# Fix shared lib issues on MIPS, FBSD, etc etc
 	elibtoolize
+}
+
+x-modular_src_unpack() {
+	x-modular_specs_check
+	x-modular_unpack_source
+	x-modular_patch_source
+	x-modular_reconf_source
 }
 
 x-modular_font_configure() {
