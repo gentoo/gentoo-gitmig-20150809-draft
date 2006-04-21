@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXcomposite
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.20 2006/04/13 13:30:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.21 2006/04/21 16:12:57 spyderous Exp $
+
+  21 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  libXcomposite-0.3.ebuild:
+  (#130720) Add x11-proto/xextproto to DEPEND, since it isn't in libXext's
+  RDEPEND (Fredrik Blom).
 
   13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   libXcomposite-0.3.ebuild:
