@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/apachetop
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.34 2005/10/02 13:06:22 rl03 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.35 2006/04/21 17:55:24 rl03 Exp $
+
+*apachetop-0.12.6 (21 Apr 2006)
+
+  21 Apr 2006; Renat Lumpau <rl03@gentoo.org> +apachetop-0.12.6.ebuild:
+  Version bump (#129568).
 
   02 Oct 2005; Renat Lumpau <rl03@gentoo.org> -apachetop-0.12.5.ebuild:
   Removing vulnerable version
