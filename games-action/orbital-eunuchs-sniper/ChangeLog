@@ -1,6 +1,11 @@
 # ChangeLog for games-action/orbital-eunuchs-sniper
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/ChangeLog,v 1.7 2004/11/09 08:57:23 mr_bones_ Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/ChangeLog,v 1.8 2006/04/21 19:40:39 tupone Exp $
+
+  21 Apr 2006; <Tupone@gentoo.org>
+  +files/orbital-eunuchs-sniper-1.29-gcc41.patch,
+  orbital-eunuchs-sniper-1.29.ebuild:
+  Fixing crash like the one at bug #103403 by Simon Koch
 
   09 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> +files/1.29-ai.patch,
   orbital-eunuchs-sniper-1.29.ebuild:

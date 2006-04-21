@@ -1,0 +1,34 @@
+--- src/ui.cpp.old	2006-04-21 21:27:16.000000000 +0200
++++ src/ui.cpp	2006-04-21 21:32:36.000000000 +0200
+@@ -1285,6 +1285,7 @@
+   if (!widget) return 0;
+   objtype = oesui_props_get_string(widget->props, "type");
+   if (!objtype) return 0;
++  updatefunc = NULL;
+   if (0 == strcasecmp(objtype, "toplevel"))
+       updatefunc = oesui_toplevel_update;
+   else if (0 == strcasecmp(objtype, "button"))
+@@ -1304,6 +1305,7 @@
+   objtype = oesui_props_get_string(widget->props, "type");
+ //printf("widget_signal on %s\n", objtype);
+   if (!objtype) return 0;
++  sigfunc = NULL;
+   if (0);
+   else if (0 == strcasecmp(objtype, "toplevel"))
+       sigfunc = oesui_toplevel_signal;
+@@ -1323,6 +1325,7 @@
+ 
+   objtype = oesui_props_get_string(widget->props, "type");
+   if (!objtype) return 0;
++  openfunc=NULL;
+   if (0);
+   else if (0 == strcasecmp(objtype, "toplevel"))
+       openfunc = oesui_toplevel_open;
+@@ -1340,6 +1343,7 @@
+ 
+   objtype = oesui_props_get_string(widget->props, "type");
+   if (!objtype) return 0;
++  closefunc=NULL;
+   if (0);
+   else if (0 == strcasecmp(objtype, "toplevel"))
+       closefunc = oesui_toplevel_close;

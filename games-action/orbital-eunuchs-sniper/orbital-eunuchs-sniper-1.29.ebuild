@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/orbital-eunuchs-sniper-1.29.ebuild,v 1.9 2004/11/09 08:57:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/orbital-eunuchs-sniper-1.29.ebuild,v 1.10 2006/04/21 19:40:39 tupone Exp $
 
 inherit eutils games
 
@@ -27,7 +27,8 @@ src_unpack() {
 		-e 's:datadir="$with_games_dir"::' configure \
 		|| die "sed configure failed"
 	cp -rf "${S}"{,.orig}
-	epatch "${FILESDIR}/${PV}-gentoo-paths.patch"
+	epatch "${FILESDIR}/${PV}-gentoo-paths.patch" \
+		"${FILESDIR}/${P}"-gcc41.patch
 	sed -i \
 		-e "s:GENTOO_DIR:${GAMES_DATADIR}/${MY_PN}:" src/snipe2d.cpp \
 		|| die "sed src/snipe2d.cpp failed"
