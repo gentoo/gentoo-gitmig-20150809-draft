@@ -1,0 +1,11 @@
+enable shared libs on m68k
+
+patch by Kolbjørn Barmen
+
+http://bugs.gentoo.org/113807
+
+--- Configure
++++ Configure
+@@ -407,1 +407,1 @@
+-"linux-m68k",   "gcc:-DB_ENDIAN -DTERMIO -O2 -fomit-frame-pointer -Wall::-D_REENTRANT:::BN_LLONG::",
++"linux-m68k",   "gcc:-DB_ENDIAN -DTERMIO -O2 -Wall::-D_REENTRANT::-ldl:BN_LLONG MD2_CHAR RC4_INDEX::::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",

@@ -1,117 +1,173 @@
-MD5 8a78591fccf51f1470f4cefd6e65c094 ChangeLog 24726
-RMD160 f4b1ffe5e79296b27482fde132d35d6fbe8c9bc5 ChangeLog 24726
-SHA256 61c6581d1852f2df7a75d3aab6aaf9c8cf3a4b8f5e86df9c0e3434e06127843c ChangeLog 24726
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX addppc64support.diff 1327 RMD160 ddb8de67c7f9980354ae678cb724ef8d76169140 SHA1 43f0b6ea4257e0c3bd1e714b12d4a62c5fbe2f5b SHA256 d1e3fbdb2d8799a421e7812d0d5104fdd9d4b9a9435882416358e24b2e299294 size 1327
 MD5 744b358cd3b68b2ca6561c214c541fc0 files/addppc64support.diff 1327
 RMD160 ddb8de67c7f9980354ae678cb724ef8d76169140 files/addppc64support.diff 1327
 SHA256 d1e3fbdb2d8799a421e7812d0d5104fdd9d4b9a9435882416358e24b2e299294 files/addppc64support.diff 1327
-MD5 2e6ed24d513a8f2b1b6f03709ab5ba18 files/digest-openssl-0.9.6m 67
-RMD160 ed287c25ff8ced02103fbb4c6ffacdb3fd53d7d6 files/digest-openssl-0.9.6m 67
-SHA256 d0934ae14767a668c3f663283af9c736bfb7c7f900ffd8bf09ea918159306b8f files/digest-openssl-0.9.6m 67
-MD5 275256f0f0c2a035cbc2b9ede7a1e21a files/digest-openssl-0.9.7i 67
-RMD160 41454a322ac90411a57fc6775390dae68d6d8e23 files/digest-openssl-0.9.7i 67
-SHA256 c65a367dd64596b4641b9e6997625615c4db38ebb574614b5a508114e1a01519 files/digest-openssl-0.9.7i 67
-MD5 b8f72a6ed636d44f938a026b12abc7e2 files/digest-openssl-0.9.8a 67
-RMD160 61244f8117ec63acc9a485b8366e00ef85f804de files/digest-openssl-0.9.8a 67
-SHA256 65b07eb7ed4d563628f2a39c08dd99c83b8d518f34b77fcbcf9660bc27c12741 files/digest-openssl-0.9.8a 67
+AUX gentoo.config-0.9.7g 3356 RMD160 8e83cecd44f2dc6b0863bf10b920cae2490250d7 SHA1 9dc82ecc34677b9b9f2758d3c86ae5a8b4d86720 SHA256 1935ea31cf0d4c4a7f5ed0fa4434e9960c7ccef5cb43abcee26cff09472991eb size 3356
 MD5 5479124566140e079c2493abe59a1c90 files/gentoo.config-0.9.7g 3356
 RMD160 8e83cecd44f2dc6b0863bf10b920cae2490250d7 files/gentoo.config-0.9.7g 3356
 SHA256 1935ea31cf0d4c4a7f5ed0fa4434e9960c7ccef5cb43abcee26cff09472991eb files/gentoo.config-0.9.7g 3356
+AUX gentoo.config-0.9.8 3384 RMD160 23c28bfd7aaa2ad8d9e3bf30e95ea9b3ee8d3bb6 SHA1 d56c571d261feb3d8e364a5b25a46526bd81bfaa SHA256 2255d2c6d414fc17b83e3f6a2d4c1e1f5bc084362060e280b55842de3f88ed89 size 3384
 MD5 93df29b0f95820463d02f9104b6ef1fc files/gentoo.config-0.9.8 3384
 RMD160 23c28bfd7aaa2ad8d9e3bf30e95ea9b3ee8d3bb6 files/gentoo.config-0.9.8 3384
 SHA256 2255d2c6d414fc17b83e3f6a2d4c1e1f5bc084362060e280b55842de3f88ed89 files/gentoo.config-0.9.8 3384
+AUX openssl-0.9.6-mips.diff 1487 RMD160 421e0fc73726f48b27a6c3b3a6a5b96a8ac43199 SHA1 8525136852266e0ccbdd561e9f2300e153eb3c0b SHA256 290eefe97418ec728a69e8a7c69a20317c2fc0cdcc79cef6a2fc5d6fe6b92772 size 1487
 MD5 b901850df9952252974316e78775673b files/openssl-0.9.6-mips.diff 1487
 RMD160 421e0fc73726f48b27a6c3b3a6a5b96a8ac43199 files/openssl-0.9.6-mips.diff 1487
 SHA256 290eefe97418ec728a69e8a7c69a20317c2fc0cdcc79cef6a2fc5d6fe6b92772 files/openssl-0.9.6-mips.diff 1487
+AUX openssl-0.9.6m-gentoo.diff 1591 RMD160 e656e12c6a7a1fe60fbff71c9a2d05985f825237 SHA1 ac245da0a4a1c9cd6ffc63598aad375c440b4389 SHA256 d1ac927cbd04e7fccdb3b81342fcd0aac2dc8e50bd57066e969b9225d31c0fb4 size 1591
 MD5 cebd09d1819c07b0fab14ad90b0da884 files/openssl-0.9.6m-gentoo.diff 1591
 RMD160 e656e12c6a7a1fe60fbff71c9a2d05985f825237 files/openssl-0.9.6m-gentoo.diff 1591
 SHA256 d1ac927cbd04e7fccdb3b81342fcd0aac2dc8e50bd57066e969b9225d31c0fb4 files/openssl-0.9.6m-gentoo.diff 1591
+AUX openssl-0.9.7-CAN-2005-2969.patch 2173 RMD160 51ac2ba2c08cfe5a06b147cd9ea309833f28dfe7 SHA1 52f301f01396ec65e51a659c60238949c8ebfcb6 SHA256 010b20d5690a3b4fddbd2db7d3921342fd3c494da5533e691b52bb8f6a8e1828 size 2173
 MD5 24c7fa75a1a2ecbc73d0964525d22299 files/openssl-0.9.7-CAN-2005-2969.patch 2173
 RMD160 51ac2ba2c08cfe5a06b147cd9ea309833f28dfe7 files/openssl-0.9.7-CAN-2005-2969.patch 2173
 SHA256 010b20d5690a3b4fddbd2db7d3921342fd3c494da5533e691b52bb8f6a8e1828 files/openssl-0.9.7-CAN-2005-2969.patch 2173
+AUX openssl-0.9.7-alpha-default-gcc.patch 533 RMD160 ea2d91421aa4d3f463034b40c2c81c195a71c0dd SHA1 f5ee85db45ab80b66225a222c7655b74760b94fe SHA256 814ae7c09359414e7dcd96008c82d868fba0565de2d1b3e6a4275f8cdbeefb5c size 533
 MD5 f8ff492f66404c732e4661cc4443a2e8 files/openssl-0.9.7-alpha-default-gcc.patch 533
 RMD160 ea2d91421aa4d3f463034b40c2c81c195a71c0dd files/openssl-0.9.7-alpha-default-gcc.patch 533
 SHA256 814ae7c09359414e7dcd96008c82d868fba0565de2d1b3e6a4275f8cdbeefb5c files/openssl-0.9.7-alpha-default-gcc.patch 533
+AUX openssl-0.9.7-arm-big-endian.patch 1074 RMD160 b835e01e82924b942c456bb8bc624378199e95b4 SHA1 d556acb1da306c6f6e76cfc41c1a1e98a81b4c7d SHA256 879702be98a2281bf29160b5d36c1c241fa70e2aa59cab7389f321e61b7463da size 1074
 MD5 bef2724dccc11edf27916526d9c08576 files/openssl-0.9.7-arm-big-endian.patch 1074
 RMD160 b835e01e82924b942c456bb8bc624378199e95b4 files/openssl-0.9.7-arm-big-endian.patch 1074
 SHA256 879702be98a2281bf29160b5d36c1c241fa70e2aa59cab7389f321e61b7463da files/openssl-0.9.7-arm-big-endian.patch 1074
+AUX openssl-0.9.7-hppa-fix-detection.patch 1718 RMD160 cc9f87f8da1cbcd1043160c0f90bc7a15cdd3e9e SHA1 742c5558883f1e0c5e9f5ec07249ff8b1f881d8b SHA256 bea60d8f4fcf213ddfe75f2e68af1cd203cf43b06f2400e5954cb1401b9129f0 size 1718
 MD5 4e6c2cbbc1ff9e36ff6d83b6c5356b7c files/openssl-0.9.7-hppa-fix-detection.patch 1718
 RMD160 cc9f87f8da1cbcd1043160c0f90bc7a15cdd3e9e files/openssl-0.9.7-hppa-fix-detection.patch 1718
 SHA256 bea60d8f4fcf213ddfe75f2e68af1cd203cf43b06f2400e5954cb1401b9129f0 files/openssl-0.9.7-hppa-fix-detection.patch 1718
+AUX openssl-0.9.7c-tempfile.patch 2178 RMD160 75f9bdc4c96b5caf1be41af1446dea831edf5521 SHA1 2ec0fe534dd6e475d7ba14365a3a844c88476d97 SHA256 9d1ae278f54acd7f3d81a9d8aa544f54671cd4ad7b679fd11a7478a6c4327b50 size 2178
 MD5 f804ea4df3b388d22451cde6e9458f2b files/openssl-0.9.7c-tempfile.patch 2178
 RMD160 75f9bdc4c96b5caf1be41af1446dea831edf5521 files/openssl-0.9.7c-tempfile.patch 2178
 SHA256 9d1ae278f54acd7f3d81a9d8aa544f54671cd4ad7b679fd11a7478a6c4327b50 files/openssl-0.9.7c-tempfile.patch 2178
+AUX openssl-0.9.7d-gentoo.diff 936 RMD160 87f074b26dfe36c4012e6b35d3974cd70858bbb4 SHA1 e1979c4c9ce6ee7df5bb57899a485cac54633083 SHA256 61a09d718f4f22d97c4ddb35cf1819c152cc6290d4ac0ea7e06a601a51f2c40e size 936
 MD5 7483d6f0412e857e9063dce4aecf2991 files/openssl-0.9.7d-gentoo.diff 936
 RMD160 87f074b26dfe36c4012e6b35d3974cd70858bbb4 files/openssl-0.9.7d-gentoo.diff 936
 SHA256 61a09d718f4f22d97c4ddb35cf1819c152cc6290d4ac0ea7e06a601a51f2c40e files/openssl-0.9.7d-gentoo.diff 936
+AUX openssl-0.9.7d-smime.patch 641 RMD160 97300ffcc9fac43c036c0ee42e3c80a153d57cd5 SHA1 4964bb63004987c314eb15a74a0dac233a3daece SHA256 fe2a08e1b597592b5c74908cf4e01302305e018a8bd3b1e639a0f1fc2ad32ff3 size 641
 MD5 91854bcd6c83f040927d490b104bb5a0 files/openssl-0.9.7d-smime.patch 641
 RMD160 97300ffcc9fac43c036c0ee42e3c80a153d57cd5 files/openssl-0.9.7d-smime.patch 641
 SHA256 fe2a08e1b597592b5c74908cf4e01302305e018a8bd3b1e639a0f1fc2ad32ff3 files/openssl-0.9.7d-smime.patch 641
+AUX openssl-0.9.7e-gentoo.patch 460 RMD160 60969fd05a15fe00d0d1c27b9098acfde28ba65e SHA1 73ff3c336dfdbeed903ac7b82486674ab4ec66a2 SHA256 ddb8d47429f3aadf3f5142293a2c38cbb9eb3927edfd1b497771337c48a11641 size 460
 MD5 f886f4a6a62eb4ec7bc718952d76900d files/openssl-0.9.7e-gentoo.patch 460
 RMD160 60969fd05a15fe00d0d1c27b9098acfde28ba65e files/openssl-0.9.7e-gentoo.patch 460
 SHA256 ddb8d47429f3aadf3f5142293a2c38cbb9eb3927edfd1b497771337c48a11641 files/openssl-0.9.7e-gentoo.patch 460
+AUX openssl-0.9.7e-no-fips.patch 1344 RMD160 ead07b5b286b4d19a5a7abff8682ef292182b302 SHA1 de9a8d2983ccae4219f07b95a463e657653a5541 SHA256 2f7cf96d7a6eea8aff4e2bdd7591f883f11ea6e9081c6c833f5b3fcb6cf1cc5b size 1344
 MD5 53599279769faf50e5247b68d2907b10 files/openssl-0.9.7e-no-fips.patch 1344
 RMD160 ead07b5b286b4d19a5a7abff8682ef292182b302 files/openssl-0.9.7e-no-fips.patch 1344
 SHA256 2f7cf96d7a6eea8aff4e2bdd7591f883f11ea6e9081c6c833f5b3fcb6cf1cc5b files/openssl-0.9.7e-no-fips.patch 1344
+AUX openssl-0.9.7e-ptr-casting.patch 440 RMD160 653da3587a6c3baf31cd4b818fede2294a2d28f5 SHA1 8292c443d2ad1641027b7f95f15626218868c3a8 SHA256 2a520d481c16fca5c3c9519bf32621afe0df296d79b8b8be27da23296c29954b size 440
 MD5 82e3908837b5066c7ec907812de8da25 files/openssl-0.9.7e-ptr-casting.patch 440
 RMD160 653da3587a6c3baf31cd4b818fede2294a2d28f5 files/openssl-0.9.7e-ptr-casting.patch 440
 SHA256 2a520d481c16fca5c3c9519bf32621afe0df296d79b8b8be27da23296c29954b files/openssl-0.9.7e-ptr-casting.patch 440
+AUX openssl-0.9.7e-superh.patch 1360 RMD160 347e63553c1c226264539a4d73567271c45e2cda SHA1 bca2bebdecc18695a87f9a56ed0e49ef04d6bb1f SHA256 bb622b12f0f5a31bf006d310fd8dffeb52119f9f96e412c35fde302719016926 size 1360
 MD5 b8c4478048193b7570d920282616ed32 files/openssl-0.9.7e-superh.patch 1360
 RMD160 347e63553c1c226264539a4d73567271c45e2cda files/openssl-0.9.7e-superh.patch 1360
 SHA256 bb622b12f0f5a31bf006d310fd8dffeb52119f9f96e412c35fde302719016926 files/openssl-0.9.7e-superh.patch 1360
+AUX openssl-0.9.7e-x86_64-bn-asm.patch 3881 RMD160 a01d3619fad65b915a6f7c8f74a2b26392b4cd17 SHA1 55b5323418ad23594d2eb15c516eb42a178b3c5b SHA256 16b0d534b23d19b8ceb04b38bab5d4e97e0adbc69fd8deb8e41d5ec779bb6d8c size 3881
 MD5 86106e28e408bdd53dd64ad0ecab7f1d files/openssl-0.9.7e-x86_64-bn-asm.patch 3881
 RMD160 a01d3619fad65b915a6f7c8f74a2b26392b4cd17 files/openssl-0.9.7e-x86_64-bn-asm.patch 3881
 SHA256 16b0d534b23d19b8ceb04b38bab5d4e97e0adbc69fd8deb8e41d5ec779bb6d8c files/openssl-0.9.7e-x86_64-bn-asm.patch 3881
+AUX openssl-0.9.7g-ABI-compat.patch 1880 RMD160 5431303ab6660b7f00086ec3b1c624cc8ace9ca3 SHA1 ba2206c3f9ea267abc686930ee991d2b4b505cf9 SHA256 c222b1ba9db6ac1a9abb9809008f3da355ae6f04b276940c0a47410da4c13168 size 1880
 MD5 257fcbed4f939cd3e0113af18df66a92 files/openssl-0.9.7g-ABI-compat.patch 1880
 RMD160 5431303ab6660b7f00086ec3b1c624cc8ace9ca3 files/openssl-0.9.7g-ABI-compat.patch 1880
 SHA256 c222b1ba9db6ac1a9abb9809008f3da355ae6f04b276940c0a47410da4c13168 files/openssl-0.9.7g-ABI-compat.patch 1880
+AUX openssl-0.9.7g-amd64-fbsd.patch 1695 RMD160 b4f6d67791dbb307d0f178adefbacc68e5c8f8f1 SHA1 4a8c935e9286a5a10e37d4d2949799f5fef630df SHA256 79cf3189845a4c7147914c5d514f041ce0ee33759a37acd4131aa7f05df2a977 size 1695
 MD5 451e4a94e086f2512ebe97bcefd553f9 files/openssl-0.9.7g-amd64-fbsd.patch 1695
 RMD160 b4f6d67791dbb307d0f178adefbacc68e5c8f8f1 files/openssl-0.9.7g-amd64-fbsd.patch 1695
 SHA256 79cf3189845a4c7147914c5d514f041ce0ee33759a37acd4131aa7f05df2a977 files/openssl-0.9.7g-amd64-fbsd.patch 1695
+AUX openssl-0.9.7g-mem-clr-ptr-cast.patch 637 RMD160 77a5b2d4df1d2a48f107a6d7e5de3539d25ed0f3 SHA1 0701f68a04e1098100e389b2518d436f3d742613 SHA256 4678af61ba6cbd6cc4de86025e00102a2c0461f1db1d99697bc091bf2248b7c5 size 637
 MD5 ef2c8d5afa47da8a58e464f43e6ecc67 files/openssl-0.9.7g-mem-clr-ptr-cast.patch 637
 RMD160 77a5b2d4df1d2a48f107a6d7e5de3539d25ed0f3 files/openssl-0.9.7g-mem-clr-ptr-cast.patch 637
 SHA256 4678af61ba6cbd6cc4de86025e00102a2c0461f1db1d99697bc091bf2248b7c5 files/openssl-0.9.7g-mem-clr-ptr-cast.patch 637
+AUX openssl-0.9.7g-no-fips.patch 333 RMD160 41c93cfd7dab28938f796c1276b8cee19ad14a47 SHA1 c2f937ec8d9a182a39911e43dce32f06177e9ecf SHA256 4d8c16b2b6c6b512d7daff10115862076d74be0ea6c0302967c381efe10860f7 size 333
 MD5 90fac5947e771433132723442dc90ab0 files/openssl-0.9.7g-no-fips.patch 333
 RMD160 41c93cfd7dab28938f796c1276b8cee19ad14a47 files/openssl-0.9.7g-no-fips.patch 333
 SHA256 4d8c16b2b6c6b512d7daff10115862076d74be0ea6c0302967c381efe10860f7 files/openssl-0.9.7g-no-fips.patch 333
+AUX openssl-0.9.7g-ppc64.patch 856 RMD160 943ddada0fc2193788e948ca244e9219c50bed5e SHA1 edb4fa25e8c5de72c8c899ba2430b36239b1cae0 SHA256 9bdcff5df5345e71e458ebde5850afb2d8e3d16e4178d765e3ae5ac65020c406 size 856
 MD5 be045f45d974ec215ec4986c6c7b6ffb files/openssl-0.9.7g-ppc64.patch 856
 RMD160 943ddada0fc2193788e948ca244e9219c50bed5e files/openssl-0.9.7g-ppc64.patch 856
 SHA256 9bdcff5df5345e71e458ebde5850afb2d8e3d16e4178d765e3ae5ac65020c406 files/openssl-0.9.7g-ppc64.patch 856
+AUX openssl-0.9.7g-ptr-casting.patch 714 RMD160 7a1aa5ec90628ea91a9f83d6ebf8d634786a6780 SHA1 a64e5ed1603d0c08fb3ddc5e514f601de17fb495 SHA256 b1c6b260893321d77e95a81c76d21a31d39b76f7b20de4ad4eeb7eff99eff97c size 714
 MD5 cde67bc688a59d0178f1a6e1bb1db7cf files/openssl-0.9.7g-ptr-casting.patch 714
 RMD160 7a1aa5ec90628ea91a9f83d6ebf8d634786a6780 files/openssl-0.9.7g-ptr-casting.patch 714
 SHA256 b1c6b260893321d77e95a81c76d21a31d39b76f7b20de4ad4eeb7eff99eff97c files/openssl-0.9.7g-ptr-casting.patch 714
+AUX openssl-0.9.7g-superh.patch 1380 RMD160 90943f8d80364d52fdae82c3b582a567dc496302 SHA1 d184e4f185995c0c2190300539bd4878b593b005 SHA256 f6cf075b501d73d93ba41d8b5347bfd3690e32503b20fedb6f414dbf2d974665 size 1380
 MD5 b1b3eafc93c66f16be0730d45a659526 files/openssl-0.9.7g-superh.patch 1380
 RMD160 90943f8d80364d52fdae82c3b582a567dc496302 files/openssl-0.9.7g-superh.patch 1380
 SHA256 f6cf075b501d73d93ba41d8b5347bfd3690e32503b20fedb6f414dbf2d974665 files/openssl-0.9.7g-superh.patch 1380
+AUX openssl-0.9.7h-ABI-compat.patch 1131 RMD160 0b68f7abeabb4f76fd37f5371fe0f779265aee95 SHA1 85008cc58ab04dca57982dc7887bf294ea841af6 SHA256 10e54c23e9785a588bbc1af509645407b5b7483fbd3afdf0c8ed60f50c4887f1 size 1131
 MD5 2d07dd2e6c4f2c0df485ec5b007763c3 files/openssl-0.9.7h-ABI-compat.patch 1131
 RMD160 0b68f7abeabb4f76fd37f5371fe0f779265aee95 files/openssl-0.9.7h-ABI-compat.patch 1131
 SHA256 10e54c23e9785a588bbc1af509645407b5b7483fbd3afdf0c8ed60f50c4887f1 files/openssl-0.9.7h-ABI-compat.patch 1131
+AUX openssl-0.9.7i-m68k.patch 408 RMD160 e3d6c310fc2aac42915c8b5de409a12af76c30bd SHA1 4c0877f388ffc141ea0152b79db8f16e7e592e52 SHA256 13bcd35320c59b3d8eb5038698b80fb703a8aabb8af452831228c69db9e8cf9d size 408
+MD5 fe112407865186dff890a7cff71016ca files/openssl-0.9.7i-m68k.patch 408
+RMD160 e3d6c310fc2aac42915c8b5de409a12af76c30bd files/openssl-0.9.7i-m68k.patch 408
+SHA256 13bcd35320c59b3d8eb5038698b80fb703a8aabb8af452831228c69db9e8cf9d files/openssl-0.9.7i-m68k.patch 408
+AUX openssl-0.9.8-CAN-2005-2969.patch 4169 RMD160 a945ec02acc98fe213eb58088d19a379f9aaee38 SHA1 f603449366d46a5d7692d0729b46f9a1f19eef3c SHA256 224e161ca0adee59f2494d4222401b6136f495a99f94be2dea37a3e1e0403488 size 4169
 MD5 5c3fdb5362f72b49a3d1b393514cc315 files/openssl-0.9.8-CAN-2005-2969.patch 4169
 RMD160 a945ec02acc98fe213eb58088d19a379f9aaee38 files/openssl-0.9.8-CAN-2005-2969.patch 4169
 SHA256 224e161ca0adee59f2494d4222401b6136f495a99f94be2dea37a3e1e0403488 files/openssl-0.9.8-CAN-2005-2969.patch 4169
+AUX openssl-0.9.8-hppa-fix-detection.patch 724 RMD160 31f4b589133900521ac28ae200bc1a1107f3d8de SHA1 9f68d4baabd199c3478deae74194970f138f9768 SHA256 7e5a1e78eff2c32233f274df4bac528566aeece9efffd753a17aee4bbdcd05d7 size 724
 MD5 f402ee8807a8a089d1b53d0e4101bcab files/openssl-0.9.8-hppa-fix-detection.patch 724
 RMD160 31f4b589133900521ac28ae200bc1a1107f3d8de files/openssl-0.9.8-hppa-fix-detection.patch 724
 SHA256 7e5a1e78eff2c32233f274df4bac528566aeece9efffd753a17aee4bbdcd05d7 files/openssl-0.9.8-hppa-fix-detection.patch 724
+AUX openssl-0.9.8-make-engines-dir.patch 461 RMD160 78938bd399d705a2364d5f12b412a23111967944 SHA1 17b6deafa1e002f69584f9fb2d096038358f9185 SHA256 1cc5a34eb0c3c687846e4a0e3bf72c81eecf414742e9327f206ba9875f2d16b3 size 461
 MD5 8c5ab963e60bc0744408eebf48596981 files/openssl-0.9.8-make-engines-dir.patch 461
 RMD160 78938bd399d705a2364d5f12b412a23111967944 files/openssl-0.9.8-make-engines-dir.patch 461
 SHA256 1cc5a34eb0c3c687846e4a0e3bf72c81eecf414742e9327f206ba9875f2d16b3 files/openssl-0.9.8-make-engines-dir.patch 461
+AUX openssl-0.9.8-parallel-build.patch 649 RMD160 51691a12bd0d31354c2b88131666d8cac9e031b0 SHA1 56f5a2cb14d7c9e0c0a2218df2cfb807a483860d SHA256 e4c7a41bf8452fe227d983f02a9b247898435b517d50feec28ceff2f460af4dc size 649
 MD5 e476b45b7b15df41a0e3f06c187201ee files/openssl-0.9.8-parallel-build.patch 649
 RMD160 51691a12bd0d31354c2b88131666d8cac9e031b0 files/openssl-0.9.8-parallel-build.patch 649
 SHA256 e4c7a41bf8452fe227d983f02a9b247898435b517d50feec28ceff2f460af4dc files/openssl-0.9.8-parallel-build.patch 649
+AUX openssl-0.9.8-ppc64.patch 1463 RMD160 d285eabc77ad8c8f8720d9047c868168ce1c8973 SHA1 261863f2e864f9850935231612e9068d8644a653 SHA256 b38d4178098df3c2f487a542035d5de747f8c2d2a921f2d85eea324518dc2064 size 1463
 MD5 4a170a962292bdd019fe303ba981e3ab files/openssl-0.9.8-ppc64.patch 1463
 RMD160 d285eabc77ad8c8f8720d9047c868168ce1c8973 files/openssl-0.9.8-ppc64.patch 1463
 SHA256 b38d4178098df3c2f487a542035d5de747f8c2d2a921f2d85eea324518dc2064 files/openssl-0.9.8-ppc64.patch 1463
+AUX openssl-0.9.8-toolchain.patch 991 RMD160 2a8a3cc1ed798219bc3679f96ddc22f432eeeed6 SHA1 77162af3f64b2528a5a44533ca4bb665e2bd5e82 SHA256 7eb44911807102d488c75d2e2be1e44c5c532c04ed67e1a1803a8fa5cb45b0c9 size 991
 MD5 933bb8d7ab02ba7e55a104ec9030c51a files/openssl-0.9.8-toolchain.patch 991
 RMD160 2a8a3cc1ed798219bc3679f96ddc22f432eeeed6 files/openssl-0.9.8-toolchain.patch 991
 SHA256 7eb44911807102d488c75d2e2be1e44c5c532c04ed67e1a1803a8fa5cb45b0c9 files/openssl-0.9.8-toolchain.patch 991
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
-SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+DIST openssl-0.9.6m.tar.gz 2184918 RMD160 888036dac2b20c954f4b26fc1316569a85a6f506 SHA256 a778c07b5de248e1ab8b37343bcc6033fb3ad955cdd57995e9ac0a44ce942fd6 size 2184918
+DIST openssl-0.9.7i.tar.gz 3280907 RMD160 0dce52c5793a0c37f17b620f7d26bbf9e4fcf755 SHA256 2fdd9235fc08c4353875d0981741947f2fa9f8835f04d97c30461cc14a986dd0 size 3280907
+DIST openssl-0.9.8a.tar.gz 3271435 RMD160 f92bb3cc4097cbeb5365f205b6412999d8fc3389 SHA256 30f8f61fb1316f4fb51410c740b4879b8e26b417c8d870e486144b10b8041c73 size 3271435
+EBUILD openssl-0.9.6m.ebuild 3109 RMD160 c664b7690c4aa4ec9aeb6d4dc8b2a755e464e4bc SHA1 f9554d16574b27eb19f1c7c43d5d2e5c4184c233 SHA256 94c91f074fa46df2de62ae18e0f69b884cbfdb9fc5c37934b52633c0a01ee64a size 3109
 MD5 3e4c6c91a1c7a1a12f8c19ba6e7f40e1 openssl-0.9.6m.ebuild 3109
 RMD160 c664b7690c4aa4ec9aeb6d4dc8b2a755e464e4bc openssl-0.9.6m.ebuild 3109
 SHA256 94c91f074fa46df2de62ae18e0f69b884cbfdb9fc5c37934b52633c0a01ee64a openssl-0.9.6m.ebuild 3109
-MD5 cae7ddc26603850ee99650690504a568 openssl-0.9.7i.ebuild 5478
-RMD160 ceb534b74de1fc2d0bd34504643b36add74a13c2 openssl-0.9.7i.ebuild 5478
-SHA256 e6799881a3b8fba6fe9ceaef2e0eb7c6b1ca0bbe8a60e6cacf5e1e82ef5d5c01 openssl-0.9.7i.ebuild 5478
+EBUILD openssl-0.9.7i.ebuild 5521 RMD160 c7b84c11b69920b771bff8270ac6effd7d2d77b4 SHA1 9d539c83d896a1e2f809544a235c3179653e4e34 SHA256 f1da1a8ee170ba559d29d3db35b82a4aa00ded1c8f456de814e6caea5687dd21 size 5521
+MD5 6380e505056bcf03d9135240ab0d8970 openssl-0.9.7i.ebuild 5521
+RMD160 c7b84c11b69920b771bff8270ac6effd7d2d77b4 openssl-0.9.7i.ebuild 5521
+SHA256 f1da1a8ee170ba559d29d3db35b82a4aa00ded1c8f456de814e6caea5687dd21 openssl-0.9.7i.ebuild 5521
+EBUILD openssl-0.9.8a.ebuild 4608 RMD160 2495a4eeb485a2496f839b526fb58e3021f7c8ab SHA1 8503a2c1940ece79f5f256fe332405434dba4aec SHA256 0fe5ee32fbce112702c36eb54ea12db124b9f62504b4803f6d0afb6fd1f0939f size 4608
 MD5 7afd296589e04cd941c954449f493d4e openssl-0.9.8a.ebuild 4608
 RMD160 2495a4eeb485a2496f839b526fb58e3021f7c8ab openssl-0.9.8a.ebuild 4608
 SHA256 0fe5ee32fbce112702c36eb54ea12db124b9f62504b4803f6d0afb6fd1f0939f openssl-0.9.8a.ebuild 4608
+MISC ChangeLog 24899 RMD160 088f0c869be73920f3c85a30f8e0101d96101c20 SHA1 4f23208e8790a62491eb89deaa77399204cae364 SHA256 7f5f6a5c0ca79c82ff75d6e2d70175162ae7856444af79c1cd5ee6001da21a2e size 24899
+MD5 5fc98cf187de5145063155c493d79f6b ChangeLog 24899
+RMD160 088f0c869be73920f3c85a30f8e0101d96101c20 ChangeLog 24899
+SHA256 7f5f6a5c0ca79c82ff75d6e2d70175162ae7856444af79c1cd5ee6001da21a2e ChangeLog 24899
+MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 size 164
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 d31669e2b93d71616331349c114b768c files/digest-openssl-0.9.6m 247
+RMD160 3ffec7ed7958abf7ce3dc35e034e3c2d6950c4cb files/digest-openssl-0.9.6m 247
+SHA256 5a5fedfc3009915054be70ad6f7f15089099b3aeaa789e0826ca995ac07e4316 files/digest-openssl-0.9.6m 247
+size 247 files/digest-openssl-0.9.6m 247
+MD5 09e02928f182395d682821828d9dcd38 files/digest-openssl-0.9.7i 247
+RMD160 f25db4bc374e5bcf140db966960c46f9d94b6a49 files/digest-openssl-0.9.7i 247
+SHA256 3f7edeec3c2c8265919614bb929cde7e2d1cbf1adc13e698d136e092ad36919a files/digest-openssl-0.9.7i 247
+size 247 files/digest-openssl-0.9.7i 247
+MD5 7dff6cd1160dc521a60ad95f7d9cc2d4 files/digest-openssl-0.9.8a 247
+RMD160 d4b01d79413b8ae1af392b70f9be7c0c0ba3bf75 files/digest-openssl-0.9.8a 247
+SHA256 48a4a3b74d7366da468dc8a3215ce62df011b30e516a8b6f6b3e2f823118b7ee files/digest-openssl-0.9.8a 247
+size 247 files/digest-openssl-0.9.8a 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFESCfL2+ySkm8kpY0RAkFhAJ9UZsQYZ6sA3PTAJd6glHVZjAZUYQCfc96E
+9S0zAiCrCn/d1EVObT/Acvg=
+=hwLr
+-----END PGP SIGNATURE-----
