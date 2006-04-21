@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.1.1.ebuild,v 1.4 2005/10/21 11:58:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.1.1.ebuild,v 1.5 2006/04/21 17:00:40 vanquirius Exp $
 
 inherit eutils nsplugins rpm versionator
 
@@ -35,7 +35,6 @@ RDEPEND="virtual/libc
 			ldap? ( net-nds/openldap ) )
 	amd64? ( >=app-emulation/emul-linux-x86-baselibs-2.0
 			>=app-emulation/emul-linux-x86-gtklibs-2.0 )"
-PROVIDE="virtual/pdfviewer"
 
 INSTALLDIR=/opt/Acrobat7
 

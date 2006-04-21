@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.10.ebuild,v 1.8 2005/08/11 20:21:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.10.ebuild,v 1.9 2006/04/21 17:00:40 vanquirius Exp $
 
 inherit nsplugins eutils
 
@@ -19,7 +19,6 @@ DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 RDEPEND="amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.2-r1 )"
 PDEPEND="cjk? ( =media-fonts/acroread-asianfonts-5* )"
-PROVIDE="virtual/pdfviewer"
 
 INSTALLDIR=/opt/Acrobat5
 
