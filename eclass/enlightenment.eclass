@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.63 2006/04/15 00:27:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.64 2006/04/21 00:59:05 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -121,6 +121,9 @@ enlightenment_src_unpack() {
 }
 
 enlightenment_src_compile() {
+	# gstreamer sucks, work around it doing stupid stuff
+	export GST_REGISTRY="${S}/registry.xml"
+
 	if [[ ! -e configure ]] ; then
 		export WANT_AUTOMAKE=${EAUTOMAKE:-1.8}
 		env \
