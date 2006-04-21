@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.16.ebuild,v 1.5 2006/04/07 11:25:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.16.ebuild,v 1.6 2006/04/21 16:34:33 foser Exp $
 
 inherit gnome.org flag-o-matic eutils debug autotools virtualx
 
@@ -10,60 +10,49 @@ HOMEPAGE="http://www.gtk.org/"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug doc jpeg png tiff xinerama"
+IUSE="debug doc jpeg tiff xinerama"
 
-RDEPEND="||	(
-				(
-					x11-libs/libXrender
-					x11-libs/libX11
-					x11-libs/libXi
-					x11-libs/libXt
-					x11-libs/libXext
-					x11-libs/libXcursor
-					x11-libs/libXrandr
-					x11-libs/libXfixes
-					xinerama? ( x11-libs/libXinerama )
-				)
-				virtual/x11
-			)
-
-		>=dev-libs/glib-2.10.1
-		>=x11-libs/pango-1.9
-		>=dev-libs/atk-1.10.1
-		>=x11-libs/cairo-0.9.2
-		  media-libs/fontconfig
-		  x11-misc/shared-mime-info
-		png? ( >=media-libs/libpng-1.2.1 )
-		jpeg? ( >=media-libs/jpeg-6b-r2 )
-		tiff? ( >=media-libs/tiff-3.5.7 )"
+RDEPEND="|| ( (	x11-libs/libXrender
+		x11-libs/libX11
+		x11-libs/libXi
+		x11-libs/libXt
+		x11-libs/libXext
+		x11-libs/libXcursor
+		x11-libs/libXrandr
+		x11-libs/libXfixes
+		xinerama? ( x11-libs/libXinerama ) )
+	virtual/x11 )
+	>=dev-libs/glib-2.10.1
+	>=x11-libs/pango-1.9
+	>=dev-libs/atk-1.10.1
+	>=x11-libs/cairo-0.9.2
+	  media-libs/fontconfig
+	  x11-misc/shared-mime-info
+	>=media-libs/libpng-1.2.1
+	jpeg? ( >=media-libs/jpeg-6b-r2 )
+	tiff? ( >=media-libs/tiff-3.5.7 )"
 
 DEPEND="${RDEPEND}
-		  sys-devel/autoconf
-		>=dev-util/pkgconfig-0.9
-		>=sys-devel/automake-1.7.9
-
-		||	(
-				(
-					x11-proto/xextproto
-					x11-proto/xproto
-					x11-proto/inputproto
-					x11-proto/xineramaproto
-				)
-				virtual/x11
-			)
-
-		doc?	(
-					>=dev-util/gtk-doc-1.4
-					~app-text/docbook-xml-dtd-4.1.2
-				)"
+	sys-devel/autoconf
+	>=dev-util/pkgconfig-0.9
+	>=sys-devel/automake-1.7.9
+	|| ( (	x11-proto/xextproto
+		x11-proto/xproto
+		x11-proto/inputproto
+		x11-proto/xineramaproto )
+	virtual/x11 )
+	doc? (	>=dev-util/gtk-doc-1.4
+		~app-text/docbook-xml-dtd-4.1.2 )"
 
 RESTRICT="confcache"
 
 pkg_setup() {
+
 	if ! built_with_use x11-libs/cairo X; then
 		einfo "Please re-emerge x11-libs/cairo with the X USE flag set"
 		die "cairo needs the X flag set"
 	fi
+
 }
 
 set_gtk2_confdir() {
@@ -74,6 +63,7 @@ set_gtk2_confdir() {
 }
 
 src_unpack() {
+
 	unpack ${A}
 	cd "${S}"
 
@@ -99,15 +89,18 @@ src_unpack() {
 	eautoreconf
 
 	epunt_cxx
+
 }
 
 src_compile() {
+
+	# png always on to display icons (foser)
 	local myconf="$(use_enable doc gtk-doc) \
 		$(use_with jpeg libjpeg) \
-		$(use_with png libpng)   \
 		$(use_with tiff libtiff) \
-		$(use_enable xinerama)   \
-		--with-gdktarget=x11     \
+		$(use_enable xinerama) \
+		--with-libpng \
+		--with-gdktarget=x11 \
 		--with-xinput"
 
 	# Passing --disable-debug is not recommended for production use
@@ -119,10 +112,13 @@ src_compile() {
 }
 
 src_test() {
+
 	Xmake check || die
+
 }
 
 src_install() {
+
 	make DESTDIR="${D}" install || die "Installation failed"
 
 	set_gtk2_confdir
@@ -134,9 +130,11 @@ src_install() {
 	echo "GDK_USE_XFT=1" > ${D}/etc/env.d/50gtk2
 
 	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
+
 }
 
 pkg_postinst() {
+
 	set_gtk2_confdir
 
 	if [ -d "${ROOT}${GTK2_CONFDIR}" ]; then
@@ -154,4 +152,5 @@ pkg_postinst() {
 	einfo "If you experience text corruption issues, turn off RenderAccel"
 	einfo "in your xorg.conf.  NVIDIA is working on this issue. "
 	einfo "See http://bugs.gentoo.org/113123 for more information."
+
 }
