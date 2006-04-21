@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.14.0.ebuild,v 1.3 2006/03/19 18:21:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.14.0.ebuild,v 1.4 2006/04/21 13:45:37 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -22,6 +22,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=media-libs/gstreamer-0.10
 	>=gnome-extra/gnome-media-2.11.91
 	>=media-libs/musicbrainz-2.1
+	>=dev-libs/libcdio-0.70
 	>=media-libs/gst-plugins-base-0.10
 	>=media-plugins/gst-plugins-gconf-0.10
 	>=media-plugins/gst-plugins-gnomevfs-0.10
