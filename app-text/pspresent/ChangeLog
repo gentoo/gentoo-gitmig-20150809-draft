@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pspresent
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/ChangeLog,v 1.15 2006/02/14 02:59:07 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/ChangeLog,v 1.16 2006/04/21 16:14:00 carlo Exp $
+
+  21 Apr 2006; Carsten Lohrke <carlo@gentoo.org> metadata.xml,
+  pspresent-1.1.ebuild, pspresent-1.2.ebuild, pspresent-1.2-r1.ebuild:
+  Removed PROVIDE as of bug #130746.
 
 *pspresent-1.2-r1 (14 Feb 2006)
 
