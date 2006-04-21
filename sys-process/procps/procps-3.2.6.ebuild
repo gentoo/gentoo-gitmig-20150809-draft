@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.6.ebuild,v 1.9 2006/03/25 12:52:28 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.6.ebuild,v 1.10 2006/04/21 22:23:32 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -10,24 +10,19 @@ SRC_URI="http://procps.sourceforge.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="n32"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
-
-pkg_setup() {
-	#124772
-	ABI=${KERNEL_ABI}
-}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Fix terminal breakage when sorting first column in top #80296
 	epatch "${FILESDIR}"/3.2.5-top-sort.patch
-	# Pretty up the /proc mount error message
 	epatch "${FILESDIR}"/procps-3.2.5-proc-mount.patch
+	epatch "${FILESDIR}"/procps-3.2.3-noproc.patch
+	epatch "${FILESDIR}"/procps-3.2.6-links.patch
 
 	# Clean up the makefile
 	#  - we do stripping ourselves

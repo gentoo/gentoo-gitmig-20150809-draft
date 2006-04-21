@@ -1,0 +1,25 @@
+Generate soft links, not hard links
+
+--- procps-3.2.6/Makefile
++++ procps-3.2.6/Makefile
+@@ -227,8 +227,8 @@
+ 	$(install) --mode a=r $(notdir $@) $@
+ 
+ install: $(filter-out $(SKIP) $(addprefix $(DESTDIR),$(SKIP)),$(INSTALL))
+-	cd $(usr/bin) && $(ln_f) skill snice
+-	cd $(usr/proc/bin) && $(ln_f) pgrep pkill
++	cd $(usr/bin) && $(ln_sf) skill snice
++	cd $(usr/proc/bin) && $(ln_sf) pgrep pkill
+ 
+ ############ prog.c --> prog.o
+ 
+@@ -254,7 +254,7 @@
+ ############ progX --> progY
+ 
+ snice kill: skill
+-	ln -f skill $@
++	$(ln_sf) skill $@
+ 
+ pkill: pgrep
+-	ln -f pgrep pkill
++	$(ln_sf) pgrep pkill

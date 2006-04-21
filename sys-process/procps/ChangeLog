@@ -1,9 +1,12 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.15 2006/03/25 12:52:28 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.16 2006/04/21 22:23:32 vapier Exp $
 
-  25 Mar 2006; Simon Stelling <blubb@gentoo.org> procps-3.2.6.ebuild:
-  always use KERNEL_ABI; bug 124772
+  21 Apr 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/procps-3.2.3-noproc.patch, +files/procps-3.2.6-links.patch,
+  procps-3.2.6.ebuild:
+  Remove ABI cruft, use softlinks instead of hardlinks, and grab patch from
+  Fedora for top bugs when /proc isnt mounted.
 
   10 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> procps-3.2.6.ebuild:
   Stable on alpha wrt bug #125546
