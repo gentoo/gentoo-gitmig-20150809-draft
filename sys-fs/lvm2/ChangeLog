@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.60 2006/04/20 20:07:38 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.61 2006/04/21 14:56:30 rocket Exp $
+
+  21 Apr 2006; Eric Edgar <rocket@gentoo.org> -lvm2-2.02.03.ebuild,
+  -lvm2-2.02.04.ebuild:
+  Removed lvm2-2.02.03 and lvm2-2.02.04 as they have issue reading metadata on
+  disk. Downgrade to lvm2-2.02.02-r1 until upstream can fix
 
   20 Apr 2006; Eric Edgar <rocket@gentoo.org> ChangeLog:
   Add warning to rerun genkernel after the emerge of lvm if lvm is in the
