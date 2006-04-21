@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.22 2006/04/20 20:27:54 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.23 2006/04/21 07:17:36 phreak Exp $
+
+  21 Apr 2006; Christian Heim <phreak@gentoo.org> vzctl-3.0.0.7.ebuild:
+  Ripping of the CONFIG_CHECK's and the VZKERNEL_HEADERS
 
   20 Apr 2006; Christian Heim <phreak@gentoo.org> -vzctl-2.7.0.26.ebuild:
   Removing old ebuild(s)

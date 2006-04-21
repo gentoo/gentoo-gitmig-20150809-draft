@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.0.7.ebuild,v 1.2 2006/04/20 20:24:17 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.0.7.ebuild,v 1.3 2006/04/21 07:17:36 phreak Exp $
 
-inherit eutils toolchain-funcs versionator linux-info flag-o-matic
+inherit eutils toolchain-funcs versionator flag-o-matic
 
 VVER="$(get_version_component_range 1-3 ${PV})"
 VREL="$(get_version_component_range 4 ${PV})"
@@ -37,12 +37,8 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-CONFIG_CHECK="FAIRSCHED VE VE_CALLS VE_NETDEV VE_IPTABLES"
-
 pkg_setup() {
 	filter-ldflags -Wl,--as-needed --as-needed
-	linux-info_pkg_setup
-	check_kernel_built
 }
 
 src_unpack() {
@@ -57,7 +53,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake VZKERNEL_HEADERS=${KV_DIR}/include || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
