@@ -1,9 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/files/dbus.init-0.61,v 1.1 2006/03/27 03:40:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/files/dbus.init-0.61,v 1.2 2006/04/21 22:02:36 steev Exp $
 
 opts="reload"
+
+depend() {
+   after nscd dns
+}
 
 start() {
 	ebegin "Starting D-BUS system messagebus"
