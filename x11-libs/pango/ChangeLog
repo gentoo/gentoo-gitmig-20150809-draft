@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.133 2006/04/15 01:23:47 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.134 2006/04/21 20:22:37 tcort Exp $
+
+  21 Apr 2006; Thomas Cort <tcort@gentoo.org> pango-1.10.3.ebuild:
+  Stable on alpha wrt Bug #126321.
 
   15 Apr 2006; Stephen P. Becker <geoman@gentoo.org> pango-1.10.3.ebuild:
   stable on mips

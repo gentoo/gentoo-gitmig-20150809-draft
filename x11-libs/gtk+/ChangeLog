@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.236 2006/04/21 16:34:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.237 2006/04/21 20:20:00 tcort Exp $
+
+  21 Apr 2006; Thomas Cort <tcort@gentoo.org> gtk+-2.8.12.ebuild:
+  Stable on alpha wrt Bug #126321.
 
   21 Apr 2006; Marinus Schraal <foser@gentoo.org> gtk+-2.8.16.ebuild :
   Always enable png, so we actually can display icons
