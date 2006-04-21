@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 66186894e3b4ff5e9d198a6a9968a24c ChangeLog 2162
 MD5 055bec7b162cde0be26751ca36ab4526 Net-CIDR-Lite-0.15.ebuild 515
 MD5 6ce0f8fb7eec1a394f08ab7812eaf1b1 Net-CIDR-Lite-0.18.ebuild 535
 MD5 34f1589b60a85a71fbc9f038543ae820 files/digest-Net-CIDR-Lite-0.15 68
 MD5 dca9ffe72a4da6a1c2a3e2fdb60bda6e files/digest-Net-CIDR-Lite-0.18 68
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFESU/WKRy60XGEcJIRAvewAJ9sLLxT9LFuBJv8ajd6qf6gYqDGyACff+HX
+n/kRSSU8vWZdHgoAEVNpJto=
+=xT9o
+-----END PGP SIGNATURE-----

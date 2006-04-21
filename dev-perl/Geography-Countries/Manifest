@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8e35a83bcb4346377b7a48e98d78c864 ChangeLog 1266
 MD5 e2b8326c5a8b35efb5fd63ab24b41043 Geography-Countries-1.4.ebuild 546
 MD5 50276bba0955436a110e1d4da1f80d14 files/digest-Geography-Countries-1.4 73
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFESVBpKRy60XGEcJIRAve9AJ9KxaE7p1wzuOSwuXpznyRCNgQnaACghs1f
+pX0kajfd+QoXN28E/Oy+lbk=
+=/7OF
+-----END PGP SIGNATURE-----

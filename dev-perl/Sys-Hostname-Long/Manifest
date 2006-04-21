@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5f7ae3be689900ecbd5aab955002cfa9 ChangeLog 1967
 MD5 122bdf800aa165102f6ed415bd0062b0 Sys-Hostname-Long-1.2.ebuild 528
 MD5 5c1e07ebe3341c5761a161ed6678b558 Sys-Hostname-Long-1.4.ebuild 539
 MD5 2902d9dcf3573609ada284f2d3f90e35 files/digest-Sys-Hostname-Long-1.2 71
 MD5 c57b50e7ea1ccf19867e55e649024371 files/digest-Sys-Hostname-Long-1.4 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFESVALKRy60XGEcJIRAkKjAJ4/7+AouFUpUfEbGZCLuclIyj63YACgqsAJ
+wo/CiNA6xJly3rEBPzoIdn8=
+=CHE8
+-----END PGP SIGNATURE-----
