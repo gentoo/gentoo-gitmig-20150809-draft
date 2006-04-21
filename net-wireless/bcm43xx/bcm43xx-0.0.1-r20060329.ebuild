@@ -1,15 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/bcm43xx-0.0.1-r20060329.ebuild,v 1.2 2006/03/30 01:14:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx/bcm43xx-0.0.1-r20060329.ebuild,v 1.3 2006/04/21 13:10:30 josejx Exp $
 
 inherit linux-mod eutils
 
-FWCUTTER_VERSION="004"
-
 DESCRIPTION="Driver for Broadcom 43xx based wireless network devices"
 HOMEPAGE="http://bcm43xx.berlios.de"
-SRC_URI="http://tara.shadowpimps.net/~bcm43xx/bcm43xx-snapshots/standalone/${PN}/${PN}-standalone-${PR#r20}.tar.bz2
-	http://download.berlios.de/${PN}/${PN}-fwcutter-${FWCUTTER_VERSION}.tar.bz2"
+SRC_URI="http://tara.shadowpimps.net/~bcm43xx/bcm43xx-snapshots/standalone/${PN}/${PN}-standalone-${PR#r20}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,6 +15,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
 DEPEND=">=net-wireless/ieee80211softmac-0.1-r${PR#r20}"
 RDEPEND="${DEPEND}
+	net-wireless/bcm43xx-fwcutter
 	>=net-wireless/wireless-tools-28_pre4
 	>=sys-apps/hotplug-20040923-r1"
 
@@ -29,8 +27,6 @@ use debug && CONFIG_CHECK="$CONFIG_CHECK DEBUG_FS"
 ERROR_NET_RADIO="${P} requires support for \"Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)\"."
 ERROR_FW_LOADER="${P} requires \"Hotplug firmware loading support (CONFIG_FW_LOADER)\"."
 ERROR_DEBUG_FS="${P} requires Debug Filesystem support (CONFIG_DEBUG_FS) for building with USE=\"debug\"."
-
-FWCUTTER_DIR="${WORKDIR}/bcm43xx-fwcutter-${FWCUTTER_VERSION}"
 
 S="${WORKDIR}/${PN}-standalone-${PR#r20}"
 
@@ -59,17 +55,9 @@ src_compile() {
 	BUILD_PARAMS="DEBUG=$(use debug && echo y || echo n) KSRC=${KV_DIR} \
 		KSRC_OUTPUT=${KV_OUT_DIR} KDIR=${ROOT}/lib/modules/${KV_FULL}/build" \
 		linux-mod_src_compile
-	cd ${FWCUTTER_DIR}
-	make || die "Can't compile fwcutter."
 }
 
 src_install() {
-	# Install fwcutter
-	exeinto /usr/bin
-	doexe ${FWCUTTER_DIR}/${PN}-fwcutter
-	doman ${FWCUTTER_DIR}/${PN}-fwcutter.1
-	dodoc ${FWCUTTER_DIR}/README
-
 	# Install the module
 	linux-mod_src_install
 }
@@ -83,14 +71,6 @@ pkg_postinst() {
 		einfo "remove those modules by running the following commands:"
 		einfo "  # rm -f /lib/modules/${KV_FULL}/net/${PN}.ko"
 		einfo "  # depmod -a"
-		einfo
-	fi
-
-	if ! [ -f /lib/firmware/${PN}_microcode2.fw ]; then
-		einfo
-		einfo "You'll need to use bcm43xx-fwcutter to install the bcm43xx firmware."
-		einfo "Please read the bcm43xx-fwcutter readme for more details:"
-		einfo "/usr/share/doc/${PN}-${PVR}/README.gz"
 		einfo
 	fi
 
