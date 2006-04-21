@@ -1,4 +1,4 @@
-MD5 8ca9ad75f8231b714fd210cfee5adea8 ChangeLog 15109
+MD5 6ad25c04378fd58c5806a3ca23368cf4 ChangeLog 15216
 MD5 4b0e6d1d01dbc931144e227f599f63de files/digest-gnome-themes-2.10.0 73
 MD5 569c1a7b6f5f7b22f3cd324eace70ec8 files/digest-gnome-themes-2.10.2 73
 MD5 e0786e4199c35c46375b932318360ed0 files/digest-gnome-themes-2.12.1 73
@@ -7,6 +7,6 @@ MD5 e7476610a823567a11b7da6adaaf593d files/digest-gnome-themes-2.14.0 265
 MD5 e1c49ff37c594aac6041439c4333eff9 gnome-themes-2.10.0.ebuild 1379
 MD5 195ef943d847e6ebd9958d34016d74cc gnome-themes-2.10.2.ebuild 736
 MD5 55ffa7813d39cf80931508c497fec946 gnome-themes-2.12.1.ebuild 719
-MD5 a5036f651ab9b4149f28d6903daaed26 gnome-themes-2.12.3.ebuild 720
+MD5 1c8bc3b7d129ef5f67a24746aa9b048f gnome-themes-2.12.3.ebuild 716
 MD5 395e305d4813666be9943b97ea9659f9 gnome-themes-2.14.0.ebuild 733
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
