@@ -1,0 +1,95 @@
+--- kdebase/ksysguard/gui/SensorDisplayLib/DancingBars.cc	2005/09/29 13:24:25	465343
++++ kdebase/ksysguard/gui/SensorDisplayLib/DancingBars.cc	2006/04/10 09:13:08	528138
+@@ -45,7 +45,8 @@
+   : KSGRD::SensorDisplay( parent, name, title, noFrame_, isApplet )
+ {
+   mBars = 0;
+-  mFlags = 0;
++  mFlags = QBitArray(100);
++  mFlags.fill( false );
+ 
+   if ( noFrame() )
+     mPlotter = new BarGraph( this );
+@@ -245,16 +246,16 @@
+ 	
+   if ( id < 100 ) {
+     mSampleBuffer[ id ] = answer.toDouble();
+-    if ( mFlags & ( 1 << id ) ) {
++    if ( mFlags.testBit( id ) == true ) {
+       kdDebug(1215) << "ERROR: DancingBars lost sample (" << mFlags
+                     << ", " << mBars << ")" << endl;
+       sensorError( id, true );
+     }
+-    mFlags |= 1 << id;
++    mFlags.setBit( id, true );
+ 
+-    if ( mFlags == (uint)( ( 1 << mBars ) - 1 ) ) {
++    if ( mFlags.testBit( ( 1 << mBars ) - 1 ) == true ) {
+       mPlotter->updateSamples( mSampleBuffer );
+-      mFlags = 0;
++      mFlags.fill( false );
+     }
+   } else if ( id >= 100 ) {
+     KSGRD::SensorIntegerInfo info( answer );
+--- kdebase/ksysguard/gui/SensorDisplayLib/DancingBars.h	2005/09/29 13:24:25	465343
++++ kdebase/ksysguard/gui/SensorDisplayLib/DancingBars.h	2006/04/10 09:13:08	528138
+@@ -25,6 +25,7 @@
+ #define KSG_DANCINGBARS_H
+ 
+ #include <SensorDisplay.h>
++#include <qbitarray.h>
+ 
+ class KIntNumInput;
+ 
+@@ -83,7 +84,7 @@
+       been received.
+      */
+     QMemArray<double> mSampleBuffer;
+-    ulong mFlags;
++    QBitArray mFlags;
+ };
+ 
+ #endif
+--- kdebase/ksysguard/gui/ksgrd/SensorShellAgent.cc	2005/09/29 13:24:25	465343
++++ kdebase/ksysguard/gui/ksgrd/SensorShellAgent.cc	2006/03/27 09:04:59	523046
+@@ -41,7 +41,7 @@
+   if ( mDaemon ) {
+     mDaemon->writeStdin( "quit\n", strlen( "quit\n" ) );
+     delete (KShellProcess*)mDaemon;
+-		mDaemon = 0;
++    mDaemon = 0;
+   }
+ }
+ 	
+@@ -50,9 +50,9 @@
+ {
+   mDaemon = new KShellProcess;
+ 
+-	setHostName( host );
+-	mShell = shell;
+-	mCommand = command;
++  setHostName( host );
++  mShell = shell;
++  mCommand = command;
+ 
+   connect( mDaemon, SIGNAL( processExited( KProcess* ) ),
+            SLOT( daemonExited( KProcess* ) ) );
+@@ -84,7 +84,7 @@
+ {
+   shell = mShell;
+   command = mCommand;
+-	port = -1;
++  port = -1;
+ }
+ 
+ void SensorShellAgent::msgSent( KProcess* )
+@@ -122,7 +122,8 @@
+   sensorManager()->hostLost( this );
+   sensorManager()->disengage( this );
+ 
+-  process->deleteLater();
++  if ( mDaemon )
++    mDaemon->deleteLater();
+ }
+ 
+ bool SensorShellAgent::writeMsg( const char *msg, int len )
