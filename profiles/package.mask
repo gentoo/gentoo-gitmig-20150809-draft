@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5245 2006/04/20 22:40:09 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5246 2006/04/21 00:22:56 vapier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1257,10 +1257,6 @@ media-sound/ipodder
 # Masked because of "UnixAppOpenFilePerform() Buffer Overflow", #98101
 <=app-text/acroread-5.10
 =media-fonts/acroread-asianfonts-5.0.20020815
-
-# Martin Schlemmer <azarah@gentoo.org> (05 Jul 2005)
-# Masked for testing, as it breaks api
->=dev-libs/openssl-0.9.8
 
 # Caleb Tennis <caleb@gentoo.org> (01 Jul 2005)
 # Seems to not be compatible with kde 3.4 though
