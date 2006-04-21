@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.166 2006/04/13 16:32:41 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.167 2006/04/21 20:41:25 tcort Exp $
+
+  21 Apr 2006; Thomas Cort <tcort@gentoo.org> gnome-applets-2.12.3.ebuild:
+  Stable on alpha wrt Bug #126321.
 
   13 Apr 2006; Marinus Schraal <foser@gentoo.org>
   gnome-applets-2.14.{0,1}.ebuild, files/gnome-applets-2.14.0-prefs_startup-r1.patch :
