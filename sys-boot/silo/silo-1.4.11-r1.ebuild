@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.11.ebuild,v 1.1 2006/03/09 22:33:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.11-r1.ebuild,v 1.1 2006/04/21 14:00:36 gustavoz Exp $
 
 inherit mount-boot flag-o-matic toolchain-funcs
 
@@ -25,6 +25,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/silo-1.4.x-noglibc_time.patch
+	epatch ${FILESDIR}/${P}-timer.patch
 }
 
 src_compile() {

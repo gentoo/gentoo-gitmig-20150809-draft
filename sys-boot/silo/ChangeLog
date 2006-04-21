@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/silo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.26 2006/03/09 22:33:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.27 2006/04/21 14:00:36 gustavoz Exp $
+
+*silo-1.4.11-r1 (21 Apr 2006)
+
+  21 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  +files/silo-1.4.11-timer.patch, -silo-1.4.11.ebuild,
+  +silo-1.4.11-r1.ebuild:
+  Fix default/timer issues on IIi/IIe machines
 
 *silo-1.4.11 (09 Mar 2006)
 
