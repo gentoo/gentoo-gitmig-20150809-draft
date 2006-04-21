@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.15 2006/04/02 13:24:25 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.16 2006/04/21 17:00:33 flameeyes Exp $
+
+  21 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/cppunit-1.10.2-asneeded.patch, cppunit-1.10.2.ebuild:
+  Add patch to allow linking with --as-needed. Bug #130199.
 
   02 Apr 2006; George Shapovalov <george@gentoo.org> cppunit-1.10.2.ebuild:
   fixed dependencies - graphviz is only needed for docs(#125723). Thanks to

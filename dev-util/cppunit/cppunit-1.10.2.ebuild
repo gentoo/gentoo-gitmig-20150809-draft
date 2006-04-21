@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.10.2.ebuild,v 1.12 2006/04/02 13:24:25 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.10.2.ebuild,v 1.13 2006/04/21 17:00:33 flameeyes Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="C++ port of the famous JUnit framework for unit testing"
 HOMEPAGE="http://cppunit.sourceforge.net/"
@@ -16,11 +16,16 @@ RESTRICT="test"
 
 DEPEND="doc? ( app-doc/doxygen
 	media-gfx/graphviz )"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-m4.patch
+	epatch "${FILESDIR}/${P}-asneeded.patch"
+	AT_M4DIR="${S}/config" eautomake
+
+	elibtoolize
 }
 
 src_compile() {
