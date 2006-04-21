@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/opengl-manpages
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/opengl-manpages/ChangeLog,v 1.3 2006/04/20 13:28:40 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/opengl-manpages/ChangeLog,v 1.4 2006/04/21 07:31:26 corsair Exp $
+
+  21 Apr 2006; Markus Rothe <corsair@gentoo.org>
+  opengl-manpages-20001215.ebuild:
+  Added ~ppc64; bug #120375
 
   20 Apr 2006; Patrick McLean <chutzpah@gentoo.org>
   opengl-manpages-20001215.ebuild:
