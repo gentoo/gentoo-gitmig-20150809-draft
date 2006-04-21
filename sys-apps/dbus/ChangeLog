@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.111 2006/04/21 22:02:36 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.112 2006/04/21 22:17:04 steev Exp $
+
+  21 Apr 2006; Steev Klimaszewski <steev@gentoo.org> files/dbus.init-0.60:
+  Update the dbus 0.60 init script as well with the nscd/dns dependencies.
 
   21 Apr 2006; Steev Klimaszewski <steev@gentoo.org> files/dbus.init-0.61:
   Update the 0.61 init script to start after nscd/dns, fixes an apparent problem
