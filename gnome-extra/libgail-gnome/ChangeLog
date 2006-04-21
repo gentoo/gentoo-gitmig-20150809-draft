@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgail-gnome
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.70 2006/03/24 13:05:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.71 2006/04/21 20:53:46 tcort Exp $
+
+  21 Apr 2006; Thomas Cort <tcort@gentoo.org> libgail-gnome-1.1.3.ebuild:
+  Stable on alpha wrt Bug #126321.
 
   24 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   libgail-gnome-1.1.3.ebuild:
