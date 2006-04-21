@@ -1,0 +1,13 @@
+Modified: bin/ebuild.sh
+===================================================================
+--- bin/ebuild.sh	2006-04-18 22:54:25 UTC (rev 3175)
++++ bin/ebuild.sh	2006-04-19 04:52:34 UTC (rev 3176)
+@@ -384,7 +384,7 @@
+ 					gzip -dc "${srcdir}${x}" > ${x%.*} || die "$myfail"
+ 				fi
+ 				;;
+-			bz2)
++			bz2|bz)
+ 				if [ "${y}" == "tar" ]; then
+ 					bzip2 -dc "${srcdir}${x}" | tar xf - ${tarvars}
+ 					assert "$myfail"

@@ -1,0 +1,27 @@
+Modified: bin/isolated-functions.sh
+===================================================================
+--- bin/isolated-functions.sh	2006-04-20 05:48:30 UTC (rev 3177)
++++ bin/isolated-functions.sh	2006-04-20 18:06:37 UTC (rev 3178)
+@@ -16,7 +16,7 @@
+ 			return 1
+ 			;;
+ 	esac
+-	echo "$*" >> ${T}/logging/${EBUILD_PHASE}.${messagetype}
++	echo "$*" >> ${T}/logging/${EBUILD_PHASE:-other}.${messagetype}
+ 	return 0
+ }
+ 
+
+Modified: pym/portage_const.py
+===================================================================
+--- pym/portage_const.py	2006-04-20 05:48:30 UTC (rev 3177)
++++ pym/portage_const.py	2006-04-20 18:06:37 UTC (rev 3178)
+@@ -43,7 +43,8 @@
+ 
+ INCREMENTALS=["USE","USE_EXPAND","USE_EXPAND_HIDDEN","FEATURES","ACCEPT_KEYWORDS","ACCEPT_LICENSE","CONFIG_PROTECT_MASK","CONFIG_PROTECT","PRELINK_PATH","PRELINK_PATH_MASK"]
+ STICKIES=["KEYWORDS_ACCEPT","USE","CFLAGS","CXXFLAGS","MAKEOPTS","EXTRA_ECONF","EXTRA_EINSTALL","EXTRA_EMAKE"]
+-EBUILD_PHASES			= ["setup","unpack","compile","test","install","preinst","postinst","prerm","postrm"]
++EBUILD_PHASES           = ["setup", "unpack", "compile", "test", "install",
++                          "preinst", "postinst", "prerm", "postrm", "other"]
+ 
+ EAPI = 0

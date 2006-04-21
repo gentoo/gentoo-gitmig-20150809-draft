@@ -1,0 +1,15 @@
+Modified: bin/repoman
+===================================================================
+--- bin/repoman	2006-04-19 04:52:34 UTC (rev 3176)
++++ bin/repoman	2006-04-20 05:48:30 UTC (rev 3177)
+@@ -795,6 +795,10 @@
+ 				fails["CVS/Entries.IO_error"].append(checkdir+"/files/CVS/Entries")
+ 			continue
+ 
++	if mymode == "commit":
++		repoman_settings["O"] = checkdir
++		portage.digestgen([], repoman_settings, manifestonly=1)
++
+ 	mf = Manifest(checkdir,
+ 		portage.FetchlistDict(checkdir, repoman_settings),
+ 		repoman_settings["DISTDIR"])
