@@ -278,3 +278,15 @@ Most changes taken from Debian.
      memset(ad, 0, sizeof(*ad));
      archdata_sec->header.sh_size = sizeof(*ad);
      ad->__start___ftr_fixup = sec->header.sh_addr;
+--- obj/obj_mips.c
++++ obj/obj_mips.c
+@@ -244,7 +244,8 @@
+   archdata_sec->header.sh_size = 0;
+   sec = obj_find_section(f, "__dbe_table");
+   if (sec) {
+-    ad = (struct archdata *) (archdata_sec->contents) = xmalloc(sizeof(*ad));
++    archdata_sec->contents = xmalloc(sizeof(*ad));
++    ad = (struct archdata *) (archdata_sec->contents);
+     memset(ad, 0, sizeof(*ad));
+     archdata_sec->header.sh_size = sizeof(*ad);
+     ad->__start___dbe_table = sec->header.sh_addr;

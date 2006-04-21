@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 41572d8f3b7b83d37b675ea88b5a63f3 ChangeLog 18843
-RMD160 6862a5c1a59b184ecca0318ce0d2ff6511d1f688 ChangeLog 18843
-SHA256 3e624ed1f2566ed233a9658328843e3ac3ca1b6177aa84660ca2d0e723d327af ChangeLog 18843
+MD5 f797cdc3fb8171aa5473767d2475b0ca ChangeLog 18958
+RMD160 7c69789bd3a7e90312099dd45a48818de1fbfb54 ChangeLog 18958
+SHA256 5191117b723bd188a4dd2dfbd3534b85571d235d2a17dead529a0d45fe5cf8bb ChangeLog 18958
 MD5 469d7fc1f915c60585afc8d895b1668a files/digest-module-init-tools-3.0-r2 142
 RMD160 0d26f3361053137115d905842be1abb049ac3ffe files/digest-module-init-tools-3.0-r2 142
 SHA256 43f84a15bd3067664b6427646045e5e7e9d7479fc7b2dcfc2507c3ebb953b66c files/digest-module-init-tools-3.0-r2 142
@@ -34,9 +31,9 @@ SHA256 453e3ab982088e2e85164e63b4944af58cd01c2b2d45d75fdcda6649a339878f files/mo
 MD5 27a62130de1c51fc678efc0e9ad67ddd files/modutils-2.4.27-flex.patch 805
 RMD160 aa0806e61e5287a5ce821bce66cbfa028e50576b files/modutils-2.4.27-flex.patch 805
 SHA256 dbe0c3207751157e7b104d66bdfeea280343ceabe856dc5d51849c206fdccad9 files/modutils-2.4.27-flex.patch 805
-MD5 8ecc5aa24faa96fe32a15688f3e023ac files/modutils-2.4.27-gcc.patch 6963
-RMD160 6234dbc09c93da469b6e84761dbc883e2d571cf3 files/modutils-2.4.27-gcc.patch 6963
-SHA256 48af5c56a1e6e616278b8ee16dd6e5a5df42fdfc852acf6bc76287f1dc33f2d4 files/modutils-2.4.27-gcc.patch 6963
+MD5 71f215bc89dfcca141f4f91b8dac54a9 files/modutils-2.4.27-gcc.patch 7438
+RMD160 a3d1fa1e6dd865e531684882daab881b90d0e142 files/modutils-2.4.27-gcc.patch 7438
+SHA256 8ecda7ac4010c54e7fbdd8b2109b5c19ea2266f67d430ab6413188c63cdca2a6 files/modutils-2.4.27-gcc.patch 7438
 MD5 4f6eb067ab56884adab12c53346dc793 files/modutils-2.4.27-no-nested-function.patch 1422
 RMD160 6c34f6ff25019884495c21af525e88a63e449b3c files/modutils-2.4.27-no-nested-function.patch 1422
 SHA256 3e9961a7c9411e8c01eb48d9053d7901ec7a90ee0e070e85bd766385f36d563d files/modutils-2.4.27-no-nested-function.patch 1422
@@ -55,10 +52,3 @@ SHA256 e1731fabd92e919d5c7e6e44e418da0fddca195aa505e2ed4dd13aac923abc54 module-i
 MD5 cf9cd5eaa065e208551fdd004fc04b40 module-init-tools-3.2.2.ebuild 5874
 RMD160 fc6dbac0b1dfec66ea6ed08019c5460b9546d184 module-init-tools-3.2.2.ebuild 5874
 SHA256 ee4307c886eafaf6b281baf164445ce96c8e7626fd0a4f376fb9692a21cb25f1 module-init-tools-3.2.2.ebuild 5874
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEC7cv2+ySkm8kpY0RAveNAJwOmeLvEFjSlOAPwlbEuz0B5XfSywCgmwtd
-p9Mjr0K3eVZANdBaJhY7AXA=
-=8Via
------END PGP SIGNATURE-----
