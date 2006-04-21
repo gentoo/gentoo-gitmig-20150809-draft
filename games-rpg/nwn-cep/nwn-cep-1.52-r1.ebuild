@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/nwn-cep-1.52-r1.ebuild,v 1.1 2006/04/17 19:40:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/nwn-cep-1.52-r1.ebuild,v 1.2 2006/04/21 14:51:31 wolf31o2 Exp $
 
 inherit games
 
-DESCRIPTION="The Community Expansion Pack is a high quality custom content addon"
+DESCRIPTION="The Community Expansion Pack is a high quality custom content addon for Neverwinter Nights"
 HOMEPAGE="http://nwn.bioware.com/players/cep.html"
 SRC_URI="cepv${PV//.}_man.zip"
 

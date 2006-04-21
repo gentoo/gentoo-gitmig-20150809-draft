@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/nwn-cep
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.2 2006/04/17 19:40:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.3 2006/04/21 14:51:31 wolf31o2 Exp $
+
+  21 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> -nwn-cep-1.50.ebuild,
+  nwn-cep-1.52.ebuild, nwn-cep-1.52-r1.ebuild:
+  Changed DESCRIPTION to mention NWN, marked 1.52 stable on amd64 and x86, and
+  removing older ebuilds.
 
 *nwn-cep-1.52-r1 (17 Apr 2006)
 *nwn-cep-1.52 (17 Apr 2006)
