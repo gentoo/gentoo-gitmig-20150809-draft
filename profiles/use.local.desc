@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1864 2006/04/21 14:40:48 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1865 2006/04/21 20:06:15 rl03 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1488,6 +1488,7 @@ www-apps/dspam-web:maildrop - Build with delivery options for maildrop
 www-apps/dspam-web:neural - Build neural support for dspam
 www-apps/dspam-web:procmail - Build procmail filter support
 www-apps/dspam-web:virtual-users  - Build with virtual-users support
+www-apps/egroupware:jpgraph - Add jpgraph support
 www-apps/gallery:dcraw - Add dcraw support
 www-apps/gallery:graphicsmagick - Add graphicsmagick support
 www-apps/gallery:netpbm - Add NetPBM support
