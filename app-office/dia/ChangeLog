@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.77 2006/04/20 21:41:35 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.78 2006/04/21 01:37:09 tcort Exp $
+
+  21 Apr 2006; Thomas Cort <tcort@gentoo.org> dia-0.94-r5.ebuild:
+  Stable on alpha wrt security Bug #128107.
 
 *dia-0.94-r5 (20 Apr 2006)
 
