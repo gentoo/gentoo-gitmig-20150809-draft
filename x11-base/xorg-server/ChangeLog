@@ -1,6 +1,22 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.104 2006/04/17 23:27:05 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.105 2006/04/21 09:12:50 spyderous Exp $
+
+*xorg-server-1.0.99.901-r1 (21 Apr 2006)
+
+  21 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/1.0.99.901-fix-kdrive-build.patch,
+  +files/1.0.99.901-wrap-sdk-headers.patch, -xorg-server-1.0.99.901.ebuild,
+  +xorg-server-1.0.99.901-r1.ebuild:
+  Add option to build kdrive, tiny X servers; also add VIDEO_CARDS settings to
+  select kdrive servers to build. Add option to build AIGLX with TLS support
+  (USE=nptl) -- mesa and xorg-server must be in sync on this. Update some
+  deps: glproto, scrnsaverproto. Don't need to inherit flag-o-matic, x-modular
+  eclass does this for us. Make Xdmx build its own USE flag, instead of part
+  of minimal. Force xorg-x11 OpenGL to build, because it needs a newer
+  glxtokens.h than some binary drivers provide. Add a server_based_install()
+  function for any actions dependent on which servers get built. Add USE=xorg
+  to build the Xorg X server, which will be on by default.
 
   17 Apr 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.0.2-r3.ebuild:
