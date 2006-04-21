@@ -1,0 +1,24 @@
+Because there is no llseek defined for mips n32, we will use lseek instead.
+
+--- util-linux-2.12r/fdisk/sfdisk.c.orig
++++ util-linux-2.12r/fdisk/sfdisk.c
+@@ -172,7 +172,7 @@
+  * Note: we use 512-byte sectors here, irrespective of the hardware ss.
+  */
+ #undef use_lseek
+-#if defined (__alpha__) || defined (__ia64__) || defined (__x86_64__) || defined (__s390x__)
++#if defined (__alpha__) || defined (__ia64__) || defined (__x86_64__) || defined (__s390x__) || defined (__mips__)
+ #define use_lseek
+ #endif
+ 
+--- util-linux-2.12r/partx/partx.c.orig
++++ util-linux-2.12r/partx/partx.c
+@@ -333,7 +333,7 @@
+ /*
+  * sseek: seek to specified sector
+  */
+-#if !defined (__alpha__) && !defined (__ia64__) && !defined (__s390x__) && !defined(__x86_64__)
++#if !defined (__alpha__) && !defined (__ia64__) && !defined (__s390x__) && !defined(__x86_64__) && !defined(__mips__)
+ #define NEED__llseek
+ #endif
+ 

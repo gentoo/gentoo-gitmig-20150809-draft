@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r4.ebuild,v 1.1 2006/04/11 00:36:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r4.ebuild,v 1.2 2006/04/21 16:02:12 geoman Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -113,6 +113,9 @@ src_unpack() {
 
 	# Patches from Fedora
 	epatch "${FILESDIR}"/${PN}-2.12r-umount-nosysfs.patch
+
+	# fix mips n32 (no llseek syscall)
+	epatch "${FILESDIR}"/${PN}-2.12-mips-lseek.patch
 
 	# Enable random features
 	local mconfigs="MCONFIG"
