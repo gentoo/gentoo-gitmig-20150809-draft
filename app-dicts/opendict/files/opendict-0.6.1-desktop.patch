@@ -1,0 +1,19 @@
+diff -urN OpenDict-0.6.1.orig/misc/opendict.desktop OpenDict-0.6.1/misc/opendict.desktop
+--- OpenDict-0.6.1.orig/misc/opendict.desktop	2006-04-20 19:29:01.000000000 +0300
++++ OpenDict-0.6.1/misc/opendict.desktop	2006-04-20 20:25:48.000000000 +0300
+@@ -4,10 +4,10 @@
+ Name[lt]=Žodynas „OpenDict“
+ Comment=Lookup words in a local or Internet dictionary 
+ Comment[lt]=Ieškoti žodžių kompiuterio arba Interneto žodyne
+-Exec=/usr/bin/opendict
+-Icon=/usr/share/opendict/pixmaps/icon-48x48.png
++Exec=opendict
++Icon=opendict.png
++StartupNotify=true
+ Terminal=false
+-MultipleArgs=false
++X-MultipleArgs=false
+ Type=Application
+-Categories=Application;Utility;
+-
++Categories=GTK;Utility;Dictionary;

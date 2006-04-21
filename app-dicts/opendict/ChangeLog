@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/opendict
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.7 2005/05/18 14:11:21 swegener Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.8 2006/04/21 04:25:21 halcy0n Exp $
+
+*opendict-0.6.1 (21 Apr 2006)
+
+  21 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/opendict-0.6.1-desktop.patch, +opendict-0.6.1.ebuild:
+  Bump to version 0.6.1 by Mart Raudsepp <leio AT dustbite DOT net>; fixes
+  bugs #111343, #127544, #98544
 
   18 May 2005; Sven Wegener <swegener@gentoo.org> opendict-0.5.7.ebuild:
   Removed * postfix from >= dependency.
