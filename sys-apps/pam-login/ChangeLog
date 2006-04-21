@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.69 2006/03/26 11:26:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.70 2006/04/21 12:05:11 flameeyes Exp $
+
+  21 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> pam-login-3.17.ebuild:
+  Pass ${myconf} correctly. Thanks to Michael Carns in bug #119035.
 
   26 Mar 2006; Bryan Østergaard <kloeri@gentoo.org pam-login-4.0.14.ebuild:
   Stable on alpha, bug 125419.
