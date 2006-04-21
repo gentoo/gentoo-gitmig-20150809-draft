@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328-r1.ebuild,v 1.1 2006/04/20 09:51:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328-r1.ebuild,v 1.2 2006/04/21 17:03:44 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -264,13 +264,5 @@ pkg_postinst() {
 		einfo "formats like AVI or Matroska, but not in WMV/WMA files."
 		einfo ""
 		einfo "To be able to play WMV/WMA files, please add asf useflag."
-	fi
-
-	if ! use mad; then
-		einfo "MAD decoding library is disabled."
-		einfo "This means that playing mp3 will not be possible with xine-lib"
-		einfo "based players. amaroK will crash if you try to."
-		einfo ""
-		einfo "To be able to play mp3 files, please add mad useflag."
 	fi
 }
