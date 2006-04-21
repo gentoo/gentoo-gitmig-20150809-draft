@@ -1,10 +1,52 @@
-MD5 3dcbd40067be2d5ae9ec4171a2966426 ChangeLog 1338
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e741170b50a0d0e1919f42415eb0e792 ChangeLog 1677
+RMD160 a20687b98e3738dc300e1e334752ebc814b792e1 ChangeLog 1677
+SHA256 2a41d2e8160c9c6be524640d9a670ca2efeea5b363178c2530c17ebf988004d7 ChangeLog 1677
 MD5 5cd5460fb7b7377b0e576eac476bc830 files/1.9-standard-prompt.patch 378
+RMD160 f2687cfccf3d8d636dd36fb32b7d181c7116845a files/1.9-standard-prompt.patch 378
+SHA256 525c87beab1dd329cee9f3036e33e18c7278d90b63f14a893864cb74344ef990 files/1.9-standard-prompt.patch 378
 MD5 2da9f0064c9caa03f6d298f3f3f6a169 files/digest-pam_ssh-1.9 64
+RMD160 b9abcd680a094c19b856999cacaa1169ea2bebd0 files/digest-pam_ssh-1.9 64
+SHA256 6244ff0d5072ea191a36560328cd6253e668c45292b98250fa85205aa160f828 files/digest-pam_ssh-1.9 64
 MD5 d42a0e20bf5fa8783aa3a7c6de9a935e files/digest-pam_ssh-1.91 65
+RMD160 584e864a0d687e007990d5898f0f2bd0826d8832 files/digest-pam_ssh-1.91 65
+SHA256 68ea650542431df8243ce2a5524719dbbb42c2a52eec13e6cf87b02e6672bba2 files/digest-pam_ssh-1.91 65
 MD5 d42a0e20bf5fa8783aa3a7c6de9a935e files/digest-pam_ssh-1.91-r1 65
+RMD160 584e864a0d687e007990d5898f0f2bd0826d8832 files/digest-pam_ssh-1.91-r1 65
+SHA256 68ea650542431df8243ce2a5524719dbbb42c2a52eec13e6cf87b02e6672bba2 files/digest-pam_ssh-1.91-r1 65
+MD5 70cacb21c3e0f6b4340ad071c3c35d44 files/digest-pam_ssh-1.91-r2 241
+RMD160 8e452c34304c53c30b23af6794d078a4f3d1a9fd files/digest-pam_ssh-1.91-r2 241
+SHA256 23b39e3fd624a55dff632be9852ac954561213c4bcf5289283a4551611ff52ac files/digest-pam_ssh-1.91-r2 241
+MD5 837bc88d6356de6f0bcc6d8a1033f47f files/pam_ssh-1.91-debian.patch 13855
+RMD160 35cea4b64425351e94f8e5ec4689f17cb97332e7 files/pam_ssh-1.91-debian.patch 13855
+SHA256 a64647467fb05b71a08fe718d371e62356ad8bbf7b7f5a7bc4827b08ca5c91cf files/pam_ssh-1.91-debian.patch 13855
+MD5 4e13ec4ec8aa59c856cda00ee17765a9 files/pam_ssh-1.91-syslog.patch 308
+RMD160 f06a704155b76052bdd536e8b27a579cf9d0a4bb files/pam_ssh-1.91-syslog.patch 308
+SHA256 b581d3422f93a8de7cd8b7dbc23c58da133eb63127059e6ff0b1f3e93e63a802 files/pam_ssh-1.91-syslog.patch 308
 MD5 4d93b0a0bbf019434f9c7a6da68c5e9f files/system-auth.example 612
+RMD160 ffbcbc7535cd654c5a9e8ce2d3584b841aea6e53 files/system-auth.example 612
+SHA256 3699db4595de56f31448c85a83c34277d1bebb5c805871b1c449446a49fb1989 files/system-auth.example 612
 MD5 393d06cf4b76671f8e6ce72ac71bdad8 metadata.xml 218
+RMD160 1955c7446d4ceb77506ba7b58ee35913c576a72c metadata.xml 218
+SHA256 e0bb49cab71cc84d8bdad26876197164073722b378d27a5bf55bbfd2afdbd19c metadata.xml 218
 MD5 e0412d38c87c68a94db0f947b09dd260 pam_ssh-1.9.ebuild 854
+RMD160 8ffc9574d17deacadfed706ce6fc6e0d763411a4 pam_ssh-1.9.ebuild 854
+SHA256 a85f03646f82c21bba8cabb8dd9cdd9b1e184bb8784ee3a41cfd6e683a424cc6 pam_ssh-1.9.ebuild 854
 MD5 c6a80814e16dbf637777dae90dca00c7 pam_ssh-1.91-r1.ebuild 971
+RMD160 fb55fc91e78a10b6d6044f20acb21b5bd17f1d24 pam_ssh-1.91-r1.ebuild 971
+SHA256 533f76e403c5d3fc46baf8815b98c717c5468e3a7721cd7ba423f232ad342156 pam_ssh-1.91-r1.ebuild 971
+MD5 ac7abe9ad619a9a5ba807af4af8d2579 pam_ssh-1.91-r2.ebuild 1133
+RMD160 f609627056c6706858207c16dacb904cb2a7c8ad pam_ssh-1.91-r2.ebuild 1133
+SHA256 8179256c35cb9623b822d59678626ad25b7cad46c022e180d3901f9affdc5dcc pam_ssh-1.91-r2.ebuild 1133
 MD5 62f8e13a5948e373d0046ffa544e339a pam_ssh-1.91.ebuild 825
+RMD160 df21bd8e04b1f30c43deff87f3db6933ea9c654d pam_ssh-1.91.ebuild 825
+SHA256 4b4b221104b6ae2fca442b7edbf31698ca5d02b62e4cbb0f9b2204f30db1a51d pam_ssh-1.91.ebuild 825
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFESMQzAiZjviIA2XgRAjtSAJ41jwPRwhqlKjXLg4jDgy86sUWR2gCfcjuw
+lNoTm6dwsmPM34lmP21YAS4=
+=Xd5E
+-----END PGP SIGNATURE-----
