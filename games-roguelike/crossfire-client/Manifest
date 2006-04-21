@@ -1,34 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a30a6aa4b6cce1b17a90e9b9bf0e2964 ChangeLog 3093
 RMD160 23ecbe47e964b242f06fb9f4a6a8cf8b1123e4f9 ChangeLog 3093
 SHA256 051f178b519a3748e9cf4c36803d0a6671a867993859f324bd858321d676c642 ChangeLog 3093
-MD5 b58c50b8f2a0ae2e90dc683a2dc5c3d6 crossfire-client-1.7.1.ebuild 1448
-RMD160 0e02249b5d666f5d4db9a12322523da120536821 crossfire-client-1.7.1.ebuild 1448
-SHA256 117bf4e026d048645a1d01cc54f244f07490daf6425fff7dd9adcfe9cd146c14 crossfire-client-1.7.1.ebuild 1448
-MD5 6991452459ef4598fda6515542a1a5bb crossfire-client-1.8.0.ebuild 1447
-RMD160 bf965842e9ecf4ee74bd26dacf93bb1169f7ea87 crossfire-client-1.8.0.ebuild 1447
-SHA256 22b534ee0f04cf2cd41d263fdf755d320d537fc2c5548376868a09d983449b36 crossfire-client-1.8.0.ebuild 1447
-MD5 abb70cbf20a32471a481d5da637bdd5c crossfire-client-1.9.0.ebuild 1493
-RMD160 13938b9af035ed0d7f12f862057f536974e8270e crossfire-client-1.9.0.ebuild 1493
-SHA256 c0dd8382af95d2b1fc640d39b7e58628b98440b5b1e51dbce22e5dcc074adf7b crossfire-client-1.9.0.ebuild 1493
-MD5 88be26521277f1cf1eec6dcdfb35bcf8 files/digest-crossfire-client-1.7.1 74
-RMD160 a6b4f06008204ae13291ad83a62cb327fd158204 files/digest-crossfire-client-1.7.1 74
-SHA256 0253f23fb5090d6d5a46763b9db274265ae311c77b4552e3d20107ce861c2fce files/digest-crossfire-client-1.7.1 74
-MD5 5f6e9f388a8529fb8caec99c17126fe3 files/digest-crossfire-client-1.8.0 74
-RMD160 a6e99b3b9bd4559429196d157b66cddb58e691d9 files/digest-crossfire-client-1.8.0 74
-SHA256 898ace472dace4d79f1d5c2fe1ac57f0622e983869356ca1974da1c183059e70 files/digest-crossfire-client-1.8.0 74
+MD5 18cd9052bb6f710e5070323e9f26f10b crossfire-client-1.9.0.ebuild 1494
+RMD160 661beeb5709fc8cd59fdd52ca99ddc13a43c862c crossfire-client-1.9.0.ebuild 1494
+SHA256 e5a92598c427ac4778ec161c512c50275d160f4c35c7580e4d7339321110cf17 crossfire-client-1.9.0.ebuild 1494
 MD5 e10439cf030124833abb0a7b564671be files/digest-crossfire-client-1.9.0 268
 RMD160 0facd2e72fee2d3601ce2cc0b63c7cb6926e27ed files/digest-crossfire-client-1.9.0 268
 SHA256 f3b0418cc9a6dc4415d15be8b496a9aa4922a180322e4256881db6ffc6d8bb32 files/digest-crossfire-client-1.9.0 268
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEPsub2CTtIKiFlQIRApNVAKCqTdy5c7+pGM0VLHH6TzYZZ2EPPQCgrx1B
-KRRZ0maLal1hvo82upNOjKY=
-=x98f
------END PGP SIGNATURE-----
