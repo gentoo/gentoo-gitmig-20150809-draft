@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/rrootage-0.23a.ebuild,v 1.5 2006/03/21 22:41:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/rrootage-0.23a.ebuild,v 1.6 2006/04/21 21:58:00 tupone Exp $
 
-inherit games
+inherit eutils games
 
 MY_PN="rRootage"
 MY_P="${MY_PN}-${PV}"
@@ -27,6 +27,7 @@ S="${WORKDIR}/${MY_PN}/src"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 	sed -e "s/-lglut/-lGL -lGLU/" makefile.lin > Makefile || die "sed failed"
 
 	sed -i \

@@ -1,12 +1,25 @@
-MD5 558d3810776725ce4b06e026c11842dc ChangeLog 695
-RMD160 bf4eb4ee1fe9958714132580d0e6d1eaac90f629 ChangeLog 695
-SHA256 decefedb773cfd47b0a52ff4b300286d17978e85683625a4ee3e5f7f15b50e79 ChangeLog 695
-MD5 282b52d17f5c68430f3db79cb1cd8cfd files/digest-rrootage-0.23a 67
-RMD160 60f3372246eed9c197ae944f1a42fe2baf06ab07 files/digest-rrootage-0.23a 67
-SHA256 2223c559b8306a0d03c79ee7ba791d0346217eeaca6def1f00c1ffe8d129f565 files/digest-rrootage-0.23a 67
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1d2f501591f9f1e6a255e7b942502069 ChangeLog 810
+RMD160 cd87578e5ef631ba1a5ca64c5354ef4143e572e8 ChangeLog 810
+SHA256 a2803d7c665360a1bf193ec4b104a306cd5d4dfe96abf54b5ae0281fa4714899 ChangeLog 810
+MD5 6abe8847003975420bf19ad86e379c5e files/digest-rrootage-0.23a 247
+RMD160 a04d06f6909e2102bebbb4533b792798f18aedb6 files/digest-rrootage-0.23a 247
+SHA256 b3746b017031be3d7f4ccfc5a800321b7f35ca9495d26bff61d6cf4c3b00c039 files/digest-rrootage-0.23a 247
+MD5 b436ae9ae121ee18ea265cc5479bd02b files/rrootage-0.23a-gcc41.patch 959
+RMD160 ab8aa82263f1dcf9db65c7b43e8841c7ac6abf3f files/rrootage-0.23a-gcc41.patch 959
+SHA256 0bf69bcf48f434a62b22a893c3e07bc3c9412deee756081b2626118af58b08cb files/rrootage-0.23a-gcc41.patch 959
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 079a8e1886157c7245c238dcbd8efebf rrootage-0.23a.ebuild 1499
-RMD160 0095020c2618d375a13c1e9158da6b4be6ecac83 rrootage-0.23a.ebuild 1499
-SHA256 cc723b2ff1e13c58142f593a0c9cf692f21e58b9fbad3b66828226e4134ae606 rrootage-0.23a.ebuild 1499
+MD5 2ae31794afd1ab72dbd53e56e1b1bd1d rrootage-0.23a.ebuild 1542
+RMD160 66b9eb911eb48cdabb0703f256ede3a6758a4ee2 rrootage-0.23a.ebuild 1542
+SHA256 24ca71829986ecf4a3c35e2e70667cc755f8eb661295f84c280fa1809cabcafb rrootage-0.23a.ebuild 1542
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFESVV/2CTtIKiFlQIRAlx2AJ9Tkpmo1hkx0rbilY+kHTGcy43bvwCeP9Wz
+FVoxubpA6F1L1a7PTtA60us=
+=QQmv
+-----END PGP SIGNATURE-----
