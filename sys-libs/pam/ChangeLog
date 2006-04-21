@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.98 2006/03/05 04:53:52 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.99 2006/04/21 11:04:38 flameeyes Exp $
+
+*pam-0.99.3.0 (21 Apr 2006)
+
+  21 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/Linux-PAM-0.99.3.0-prelude.patch, +pam-0.99.3.0.ebuild:
+  Add first try to get a newer version of Linux-PAM in the tree, version
+  0.99.3.0. Notable regression: no RedHat patches, thus no pam_stack.so. This
+  might change in future revision. Not for production systems.
 
 *pam-0.78-r5 (05 Mar 2006)
 
