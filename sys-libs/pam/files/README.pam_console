@@ -53,7 +53,7 @@ to follow these advices:
    following lines:
 
   #!/bin/sh
-  exec /sbin/pam_console_apply
+  exec /usr/sbin/pam_console_apply
  
    and make it executable:
 
