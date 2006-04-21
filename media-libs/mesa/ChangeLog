@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.86 2006/04/21 07:15:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.87 2006/04/21 07:17:44 spyderous Exp $
+
+  21 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; -mesa-6.5.ebuild,
+  -mesa-6.5-r1.ebuild, -mesa-6.5-r2.ebuild:
+  Pull old masked ebuilds.
 
 *mesa-6.5-r3 (21 Apr 2006)
 
