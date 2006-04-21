@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBIx-DBSchema
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-DBSchema/ChangeLog,v 1.9 2006/04/20 16:29:10 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-DBSchema/ChangeLog,v 1.10 2006/04/21 21:19:29 gustavoz Exp $
+
+  21 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  DBIx-DBSchema-0.28.ebuild:
+  Stable on hppa
 
   20 Apr 2006; Thomas Cort <tcort@gentoo.org> DBIx-DBSchema-0.28.ebuild:
   Added ~alpha keyword wrt Bug #112414.

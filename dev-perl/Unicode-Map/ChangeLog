@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unicode-Map
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map/ChangeLog,v 1.8 2006/03/13 20:59:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map/ChangeLog,v 1.9 2006/04/21 21:08:57 gustavoz Exp $
+
+  21 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  Unicode-Map-0.112.ebuild:
+  Stable on hppa
 
   13 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   Unicode-Map-0.112.ebuild:

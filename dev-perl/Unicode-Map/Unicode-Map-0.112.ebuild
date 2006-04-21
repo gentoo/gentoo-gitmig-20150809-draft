@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map/Unicode-Map-0.112.ebuild,v 1.9 2006/03/13 20:59:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map/Unicode-Map-0.112.ebuild,v 1.10 2006/04/21 21:08:57 gustavoz Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/~mschwartz/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 SRC_TEST="do"
