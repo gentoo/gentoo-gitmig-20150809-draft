@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a8e7061b74c4bd09fb7f7e9ea3048fff ChangeLog 2698
 MD5 1cfae4f1173ae5fe839889ef982c1b55 Devel-Symdump-2.03.ebuild 527
 MD5 aa517ef1e40dca2cf273ff82ab633a15 Devel-Symdump-2.06.ebuild 527
 MD5 e458f60d0c6560fd4ffef60ac20bbd6b files/digest-Devel-Symdump-2.03 68
 MD5 a24ba419693aa9d8647b05e2fe7523fd files/digest-Devel-Symdump-2.06 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFESUvXKRy60XGEcJIRAkX/AJ4qgk4W6vWvXKMtyQbzHu6TwAJwPwCfRz0t
+y/8iVxrLUH7xMXaRiikhbiw=
+=eLlu
+-----END PGP SIGNATURE-----

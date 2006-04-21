@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1a92a89f7f75cc56a0b84d61e6a28c12 ChangeLog 970
 MD5 ef58afeb24661b7c83f47eba729738b7 Crypt-Rijndael-0.05.ebuild 519
 MD5 909c14c26e7897799a5ec0085022d7e7 files/digest-Crypt-Rijndael-0.05 70
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFESUkkKRy60XGEcJIRAnvLAJsG9QipK0QzOlq+AYT9UpQzjRgw9ACcC2RA
+ivqQ3u4tjRuclKJ64RfDAwg=
+=uqQQ
+-----END PGP SIGNATURE-----
