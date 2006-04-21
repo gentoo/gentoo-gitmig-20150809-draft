@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7bd80146e371b6503c582694d874b3b6 ChangeLog 17402
-RMD160 2599c6ea958d76f41d1d1bc1dc1b4519dec55182 ChangeLog 17402
-SHA256 9fdbf91fb3536ebbc3e11949ea033baafccaa1db48aac3771c86a3c04bf93d1a ChangeLog 17402
+MD5 2229be84d052c2662f095098305ba2f5 ChangeLog 17538
+RMD160 6ae914c2fecb7c9a4258e87cdbfa9c6e199d4d1e ChangeLog 17538
+SHA256 1c7b7e91b3fe20ccbe410dfb170953a5926806e2a25c35de06ff25559cd01234 ChangeLog 17538
 MD5 79c8cb7777a1a9aaee6cf55091178161 files/digest-gnome-desktop-2.10.0 74
 RMD160 f16d5ed30e7e260a73d34109dfd6b464ac1116ae files/digest-gnome-desktop-2.10.0 74
 SHA256 7a90cb9601b2f2de7da62bdcae7f02b70756847e27fafb45ecbf92fb39ae4534 files/digest-gnome-desktop-2.10.0 74
@@ -49,16 +46,9 @@ SHA256 3c843a3b3446b91910caaf11f8f9734055f5b14846509ee8427d9f2da6254505 gnome-de
 MD5 e740a59553bc9a33bf0dc5c809e78e57 gnome-desktop-2.14.0.ebuild 1217
 RMD160 b40013fdfbfabe3482cc8928734575a0b03594fd gnome-desktop-2.14.0.ebuild 1217
 SHA256 6bd7f3ba08d2527b12e3c2dedfb7478b9b1fcaf65a2b76d6035b241e3362ab3f gnome-desktop-2.14.0.ebuild 1217
-MD5 226dcdd521d37af8895e532693ed2593 gnome-desktop-2.14.1.1.ebuild 1256
-RMD160 46c527fe0d78327190b7cb7eda4197f3a28a18ca gnome-desktop-2.14.1.1.ebuild 1256
-SHA256 9b8b4f3ff0202f37749bb37b0457a97180f0982cb55ebd5b9e3ef6933720d6f8 gnome-desktop-2.14.1.1.ebuild 1256
+MD5 1d726963dc0bf7d880485a7629686938 gnome-desktop-2.14.1.1.ebuild 1257
+RMD160 7eb9edbe1713510a8667b9442b77d7f6f4dde712 gnome-desktop-2.14.1.1.ebuild 1257
+SHA256 e5af52cdcaa8911d9c643a802f9b0158a8c788e5d9ea3933307ead99ab9dc64d gnome-desktop-2.14.1.1.ebuild 1257
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEQ70uomPajV0RnrERAk0FAJ0S+qz33Up5Jvb/+Ek89xGr2YUqhwCbB8aU
-/jJOYRFE5FvdRlUqqJOsCco=
-=1BNa
------END PGP SIGNATURE-----
