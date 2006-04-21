@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r3.ebuild,v 1.2 2006/01/12 09:11:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r3.ebuild,v 1.3 2006/04/21 12:01:54 flameeyes Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -18,7 +18,6 @@ GLIB_VER="2.6.5"
 PAM_REDHAT_VER="0.78-3"
 
 HOMEPAGE="http://www.kernel.org/pub/linux/libs/pam/"
-DESCRIPTION="Pluggable Authentication Modules"
 
 S="${WORKDIR}/Linux-PAM-${PV}"
 S2="${WORKDIR}/pam-${PV}-patches"
@@ -54,6 +53,8 @@ PROVIDE="virtual/pam"
 
 #inherit needs to be after DEPEND definition to protect RDEPEND
 inherit toolchain-funcs eutils flag-o-matic gnuconfig pam
+
+DESCRIPTION="Pluggable Authentication Modules"
 
 apply_pam_patches() {
 	local x=

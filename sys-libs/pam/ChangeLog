@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.101 2006/04/21 11:58:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.102 2006/04/21 12:01:54 flameeyes Exp $
+
+  21 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> pam-0.78-r3.ebuild,
+  pam-0.78-r5.ebuild:
+  Move DESCRIPTION after inherit line. Thanks to Alexandru Toma in bug #114010.
 
   21 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/pam-0.77-console-reset.patch, -pam-0.77-r6.ebuild,
