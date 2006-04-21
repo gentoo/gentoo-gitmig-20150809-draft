@@ -1,6 +1,12 @@
 # ChangeLog for dev-ada/adabroker
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/ChangeLog,v 1.7 2005/01/01 17:22:31 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/ChangeLog,v 1.8 2006/04/21 11:46:05 george Exp $
+
+  21 Apr 2006; George Shapovalov <george@gentoo.org>
+  adabroker-1.0_pre4.ebuild:
+  adjusted DEPEND to point simply to dev-lang/gnat. gnat-5.0 is not even in
+  the tree and will never be. legacy dev-lang/gnat is going to be subsumed by
+  dev-lang/gnat-xxx compilers..
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> adabroker-1.0_pre4.ebuild:
   add sed-4 dep
