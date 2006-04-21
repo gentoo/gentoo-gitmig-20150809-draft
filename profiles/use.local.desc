@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1861 2006/04/20 13:46:19 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1862 2006/04/21 09:10:00 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1575,8 +1575,21 @@ x11-base/x11-drm:video_cards_savage - VIDEO_CARDS setting to build driver for sa
 x11-base/x11-drm:video_cards_sunffb - VIDEO_CARDS setting to build driver for ffb cards
 x11-base/x11-drm:video_cards_tdfx - VIDEO_CARDS setting to build driver for 3dfx cards
 x11-base/x11-drm:video_cards_via - VIDEO_CARDS setting to build driver for via" cards
-x11-base/xorg-server:glx - Enable OpenGL extension for X
-x11-base/xorg-server:nvidia - Enable binary Nvidia driver support
+x11-base/xorg-server:dmx - Build the Distributed Multiheaded X server
+x11-base/xorg-server:kdrive - Build the kdrive X servers
+x11-base/xorg-server:video_cards_chips - VIDEO_CARDS setting to build driver for chips video cards
+x11-base/xorg-server:video_cards_epson - VIDEO_CARDS setting to build driver for epson video cards
+x11-base/xorg-server:video_cards_glint - VIDEO_CARDS setting to build driver for glint video cards
+x11-base/xorg-server:video_cards_i810 - VIDEO_CARDS setting to build driver for i810 video cards
+x11-base/xorg-server:video_cards_mach64 - VIDEO_CARDS setting to build driver for mach64 video cards
+x11-base/xorg-server:video_cards_mga - VIDEO_CARDS setting to build driver for mga video cards
+x11-base/xorg-server:video_cards_neomagic - VIDEO_CARDS setting to build driver for neomagic video cards
+x11-base/xorg-server:video_cards_nv - VIDEO_CARDS setting to build driver for nv video cards
+x11-base/xorg-server:video_cards_r128 - VIDEO_CARDS setting to build driver for r128 video cards
+x11-base/xorg-server:video_cards_radeon - VIDEO_CARDS setting to build driver for radeon video cards
+x11-base/xorg-server:video_cards_siliconmotion - VIDEO_CARDS setting to build driver for siliconmotion video cards
+x11-base/xorg-server:video_cards_via - VIDEO_CARDS setting to build driver for via video cards
+x11-base/xorg-server:xorg - Build the Xorg X server
 x11-base/xorg-x11:bitmap-fonts - Builds the crappy 100 DPI and 75 DPI fonts
 x11-base/xorg-x11:dlloader - Enable dynamic module loader instead of ELF loader
 x11-base/xorg-x11:dmx - Build Distributed Multiheaded X
