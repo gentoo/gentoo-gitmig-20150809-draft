@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.8.ebuild,v 1.2 2006/04/02 22:14:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.8.ebuild,v 1.3 2006/04/21 17:08:17 vanquirius Exp $
 
 inherit eutils
 
@@ -18,8 +18,6 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	app-text/epstool
 	virtual/ghostscript"
 DEPEND="app-arch/unzip"
-PROVIDE="virtual/pdfviewer
-	virtual/psviewer"
 
 src_unpack() {
 	unpack ${A}
