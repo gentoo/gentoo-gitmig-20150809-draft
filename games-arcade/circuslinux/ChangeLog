@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/circuslinux
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/ChangeLog,v 1.11 2006/01/06 00:44:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/ChangeLog,v 1.12 2006/04/21 20:43:44 mr_bones_ Exp $
+
+  21 Apr 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  circuslinux-1.0.3.ebuild:
+  don't install docs in /usr/games/share (bug #130510); use DESTDIR in
+  src_install
 
   06 Jan 2006; Michael Sterrett <mr_bones_@gentoo.org>
   circuslinux-1.0.3.ebuild:
