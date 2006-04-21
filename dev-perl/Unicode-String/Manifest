@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7f9bd99a6f45c3d6845693b1622dc79a ChangeLog 3362
+MD5 51a6cf21161552264fc7c6a26236c364 ChangeLog 3464
 MD5 873bcc19aabf3c349432aea3d184c17b Unicode-String-2.06-r1.ebuild 527
 MD5 ef7db8c8b392ae558c5c3c3808346a3f Unicode-String-2.06-r2.ebuild 527
-MD5 db4a277bfd1b8f214731f2edeb6163d5 Unicode-String-2.07.ebuild 558
+MD5 b7ef92a378cd5713f354e7f257240264 Unicode-String-2.07.ebuild 557
 MD5 fa359ad11869fbbfc5496ca07b56abe7 Unicode-String-2.09.ebuild 564
 MD5 a934ebb5e6e9eb778760039627a0ed3f files/digest-Unicode-String-2.06-r1 70
 MD5 a934ebb5e6e9eb778760039627a0ed3f files/digest-Unicode-String-2.06-r2 70
 MD5 6c071e04e9154bac4c6ec04d785f3efe files/digest-Unicode-String-2.07 70
 MD5 a44054b1ce61eb7ac57a6b9a730fec05 files/digest-Unicode-String-2.09 71
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEFdv8KRy60XGEcJIRAq4HAJ9eN3U6pUGnPbeFaO/6Hz5zEOEsoACdHii8
-ngw4Jb/wcKbdLcSiFuKafTc=
-=taUT
------END PGP SIGNATURE-----

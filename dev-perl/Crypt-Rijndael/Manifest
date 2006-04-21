@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ed89a3b4cbe420fe3b0e7b6f4fc1c4c6 ChangeLog 868
-RMD160 e5bb5e6e2fcd9185c6e20e7f00d31d0aab5ce310 ChangeLog 868
-SHA256 8945bbd8d37206371c196f89549bd5b8f54b5adc433cc3a25473cc6ffdc7f8ab ChangeLog 868
-MD5 74509424236173719a279cfd014cebc6 Crypt-Rijndael-0.05.ebuild 520
-RMD160 4c0c68b2a2d718b65dc00f75c0dbea96466fe3cd Crypt-Rijndael-0.05.ebuild 520
-SHA256 b4811fb5f27bc294b5756e0ff9658038467b38c19e4d98d98ef706d6d159e6c5 Crypt-Rijndael-0.05.ebuild 520
+MD5 1a92a89f7f75cc56a0b84d61e6a28c12 ChangeLog 970
+MD5 ef58afeb24661b7c83f47eba729738b7 Crypt-Rijndael-0.05.ebuild 519
 MD5 909c14c26e7897799a5ec0085022d7e7 files/digest-Crypt-Rijndael-0.05 70
-RMD160 94f5e15cfb9a6c3eb46a6226c20234a98e7b84df files/digest-Crypt-Rijndael-0.05 70
-SHA256 36d4fca29cc7401bc25acb29dbf17b2b157ecfd2fa19da859f4cf4e983b898ff files/digest-Crypt-Rijndael-0.05 70
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFELFr8JrHF4yAQTrARAoNjAJ9r4/yzvxcpaWkzsPTjGpd4GTSGFQCfXeIU
-pib43kracRWV8fQZai9yOO4=
-=g75A
------END PGP SIGNATURE-----
