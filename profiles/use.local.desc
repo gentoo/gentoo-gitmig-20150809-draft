@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1862 2006/04/21 09:10:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1863 2006/04/21 11:52:37 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -360,7 +360,6 @@ dev-libs/log4cxx:smtp - offer SMTP support via libsmtp
 dev-libs/openobex:irda - enable IrDA support
 dev-libs/openobex:syslog - enable syslog support
 dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
-dev-libs/pam_pkcs11:pcsc-lite - build with pcsc-lite instead of openct
 dev-libs/pwlib:v4l2 - Enable video4linux2 support
 dev-libs/qsa:ide - enable the qsa ide
 dev-libs/wx-xmingw:gdb - Enable gdb debugging
@@ -1343,6 +1342,7 @@ sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/util-linux:old-crypt - build support for the older cryptoapi that earlier util-linux's included
 sys-auth/nss-mdns:avahi - enable support for Avahi
+sys-auth/pam_pkcs11:pcsc-lite - build with pcsc-lite instead of openct
 sys-block/gparted:fat - Include FAT16/FAT32 support
 sys-block/gparted:hfs - Include HFS support
 sys-block/gparted:jfs - Include JFS support
