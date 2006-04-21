@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyzor
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.25 2006/04/04 13:51:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.26 2006/04/21 21:38:07 gustavoz Exp $
+
+  21 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> pyzor-0.4.0-r2.ebuild:
+  Stable on hppa
 
   04 Apr 2006; Daniel Gryniewicz pyzor-0.4.0-r2.ebuild:
   Marked stable on amd64 per bug #125725
