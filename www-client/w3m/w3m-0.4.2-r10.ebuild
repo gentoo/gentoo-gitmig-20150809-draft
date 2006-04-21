@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.4.2-r10.ebuild,v 1.2 2005/07/09 15:03:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.4.2-r10.ebuild,v 1.3 2006/04/21 17:32:14 flameeyes Exp $
 
 inherit eutils
 
@@ -43,8 +43,7 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	>=sys-devel/autoconf-2.58"
 
-PROVIDE="virtual/textbrowser
-	virtual/w3m"
+PROVIDE="virtual/w3m"
 
 src_unpack() {
 	unpack ${W3M_P}.tar.gz

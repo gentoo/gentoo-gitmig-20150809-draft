@@ -1,6 +1,10 @@
 # ChangeLog for www-client/w3m
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.19 2005/12/14 05:29:39 spyderous Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.20 2006/04/21 17:32:14 flameeyes Exp $
+
+  21 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> w3m-0.4.2.ebuild,
+  w3m-0.4.2-r10.ebuild, w3m-0.5.1-r1.ebuild, w3m-0.5.1-r3.ebuild:
+  Drop virtual/textbrowser as per bug #130746.
 
   14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; w3m-0.5.1-r3.ebuild:
   Add modular X dependencies.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r6.ebuild,v 1.5 2006/01/21 14:12:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r6.ebuild,v 1.6 2006/04/21 17:33:44 flameeyes Exp $
 
 inherit alternatives eutils
 
@@ -28,8 +28,7 @@ DEPEND=">=sys-libs/ncurses-5.2-r3
 	nls? ( sys-devel/gettext )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
 
-PROVIDE="virtual/textbrowser
-	virtual/w3m"
+PROVIDE="virtual/w3m"
 
 S="${WORKDIR}/${MY_P}"
 
