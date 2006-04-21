@@ -1,3 +1,5 @@
+Slightly prettier error message
+
 --- proc/readproc.c
 +++ proc/readproc.c
 @@ -858,2 +858,2 @@
