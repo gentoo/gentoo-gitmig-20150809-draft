@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5db9ac3a4dfc6a9763f0f8cca7553529 ChangeLog 9094
+MD5 e989836153977c2e45c79ef3a5abd4ff ChangeLog 9265
 MD5 7dc694a1ee1c374e37a40f81bcaf28a3 files/digest-freeradius-1.1.0-r1 69
 MD5 0936eb82363dd9098d21fc7787f8e4cc files/digest-freeradius-1.1.1-r1 69
 MD5 7dc1f8c829f2d44978b414662997041a files/freeradius-1.1.0-dict-attr-sizeof.patch 478
@@ -12,13 +12,13 @@ MD5 542dfb5aa04290906b1e9fd5ef99673b files/freeradius-1.1.1-versionless-la-files
 MD5 73e25b78f2cdb07ed8bbddbcdb9ac08b files/freeradius-1.1.1-whole-archive-gentoo.patch 1728
 MD5 fc6693f3df5a0694610110287a28568a files/radius.conf 129
 MD5 adc7e9af3a2ab37f1ab021de3e279d41 files/radius.init 1675
-MD5 e7a9476cc2e95753463494b2950c8786 freeradius-1.1.0-r1.ebuild 3999
-MD5 e0d65000fc1c18334722bde2812b47b9 freeradius-1.1.1-r1.ebuild 4887
+MD5 9f4c975063c5297db33e25e406213d0e freeradius-1.1.0-r1.ebuild 3986
+MD5 3d99f4cdc58eb12e4ab9bc0ec8e9b54f freeradius-1.1.1-r1.ebuild 4874
 MD5 1542bf76e28581e9d6bcfdc75e46f33d metadata.xml 252
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEQ0K6jG8pv1lIUX4RAjqXAKCdwREsgd7Fvfa/2kMreTsdGMtNUgCbBWiI
-B9eyFfLTKPTG4svsjxoxlZY=
-=w2FH
+iD8DBQFESTbEjG8pv1lIUX4RAixaAJ0SyABg0sZHXCLT+6S+RJ7+VUqlDwCfSogl
+ZMe8RQcmLlDTkyBipPxJmp8=
+=qjYz
 -----END PGP SIGNATURE-----

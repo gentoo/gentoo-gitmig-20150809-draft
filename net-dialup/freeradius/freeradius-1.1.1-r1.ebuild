@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.1-r1.ebuild,v 1.2 2006/04/17 07:21:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.1-r1.ebuild,v 1.3 2006/04/21 19:46:59 mrness Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -116,7 +116,6 @@ src_install() {
 	dodir /etc
 	dodir /var/log
 	dodir /var/run
-	pkg_preinst
 	diropts -m0750 -o root -g radiusd
 	dodir /etc/raddb
 	diropts -m0750 -o radiusd -g radiusd
