@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5253 2006/04/21 14:59:14 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5254 2006/04/21 15:14:52 uberlord Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Roy Marples <uberlord@gentoo.org> (21 Apr 2006)
+# Masked for testing
+=net-misc/dhcp-3.0.4_rc*
 
 # <chutzpah@gentoo.org> (21 Apr 2006)
 # masking versions >= 0.14 until Gnome 2.14 is
