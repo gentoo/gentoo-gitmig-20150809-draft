@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8bb0753f3240aec1cbe4955f8dc89121 sword-modules-20040503.ebuild 3446
-MD5 2777fbe810af3a4bf524101216a263c0 ChangeLog 2040
-MD5 e06d7f4244adad68e75e4bb971ad41a3 metadata.xml 320
-MD5 f680ea515114e9cf5c719216d13b0289 sword-modules-20041209.ebuild 2926
+MD5 875d21dcd3375fd30a6b38e1f2d5cb79 ChangeLog 2172
+RMD160 83351d71c577b384310f2ef39509a0eca7dd8582 ChangeLog 2172
+SHA256 4fab30b014cb39a4db20268dbc41281206b52b3a6f5c54488c9d5a6db87e2e06 ChangeLog 2172
 MD5 00040b9f01af53ea1931334b6b94f9ac files/digest-sword-modules-20040503 1124
-MD5 d7110219d400db21bb885c37f49cc75b files/digest-sword-modules-20041209 1407
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDIMOrV3J2n04EauwRAj6/AJ97/jdJs37MYbsldmGdIZRYSlNArwCfRTnb
-kzMgpVmVsrSeuyizS8Gk3pI=
-=C75y
------END PGP SIGNATURE-----
+RMD160 ab5e62756c012ad13e6c7c43e88a3528cff6815b files/digest-sword-modules-20040503 1124
+SHA256 8f9bd4583510e5fb3b4adb5c3b9831588ef2920bf1f322fe843bc9bd3f6e43ef files/digest-sword-modules-20040503 1124
+MD5 999e67ded00bb7dd22b504793c56e89e files/digest-sword-modules-20041209 5371
+RMD160 bb792f2f90e4148045a954ef120b6458469dba53 files/digest-sword-modules-20041209 5371
+SHA256 a7f7198375871d1b3bedc90be32bd7ed794f8b83f8da156f757be47aa3a6e6cd files/digest-sword-modules-20041209 5371
+MD5 3bf65659ea82bad97dc1d108005eb4a0 metadata.xml 409
+RMD160 55c068f84e439410f41de82732b1bd9125cc4fa9 metadata.xml 409
+SHA256 3a081d9f1423172e65c67e914516cbc5fd5fc341411222ae3e7a11a9a9597abe metadata.xml 409
+MD5 8bb0753f3240aec1cbe4955f8dc89121 sword-modules-20040503.ebuild 3446
+RMD160 0a4fa6fc4fe1333e6fa9f77cd3a0bcce1f27a59c sword-modules-20040503.ebuild 3446
+SHA256 bc37630d52ccbfe95f5842e83f6ff3d07dea19eef7978fb22ceb366c1b1bbeb9 sword-modules-20040503.ebuild 3446
+MD5 82b64febc55eb3d49de61100e9c9baac sword-modules-20041209.ebuild 2930
+RMD160 0665171a639c2feb93f9d3920c059ac85efc3825 sword-modules-20041209.ebuild 2930
+SHA256 5ab04e866b605522b66082fa2041cc9a4a87dc477a2a60a66f7f63460e4e0872 sword-modules-20041209.ebuild 2930
