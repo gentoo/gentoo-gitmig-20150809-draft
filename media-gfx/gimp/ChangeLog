@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.142 2006/04/04 20:07:33 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.143 2006/04/21 00:15:08 allanonjl Exp $
+
+  21 Apr 2006; John N. Laliberte <allanonjl@gentoo.org> gimp-2.2.10.ebuild:
+  conditionally add fomit-frame-pointer when mmx is set. fixes #128547
 
   04 Apr 2006; Thomas Cort <tcort@gentoo.org> gimp-2.2.10.ebuild:
   Added ~alpha keyword wrt Bug #93749
