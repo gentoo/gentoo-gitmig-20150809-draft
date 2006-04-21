@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/neon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.55 2006/03/30 18:59:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.56 2006/04/21 03:41:51 flameeyes Exp $
+
+  21 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> neon-0.25.5.ebuild:
+  Add missing elibtoolize.
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> neon-0.25.5.ebuild:
   Add ~x86-fbsd keyword.

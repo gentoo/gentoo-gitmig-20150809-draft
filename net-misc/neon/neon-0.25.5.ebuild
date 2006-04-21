@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.25.5.ebuild,v 1.2 2006/03/30 18:59:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.25.5.ebuild,v 1.3 2006/04/21 03:41:51 flameeyes Exp $
+
+inherit libtool
 
 DESCRIPTION="HTTP and WebDAV client library"
 HOMEPAGE="http://www.webdav.org/neon/"
@@ -26,6 +28,8 @@ src_unpack() {
 	if use userland_Darwin ; then
 		sed -i -e "s:GXX:GCC:g" ${S}/configure || die "sed failed"
 	fi
+
+	elibtoolize
 }
 
 src_compile() {
@@ -34,7 +38,7 @@ src_compile() {
 
 #	if use gnutls
 #	then
-#		myc="${myc} --with-ssl=gnutls"		
+#		myc="${myc} --with-ssl=gnutls"
 #	else
 #		myc="${myc} $(use_with ssl ssl openssl)"
 #	fi
