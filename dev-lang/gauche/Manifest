@@ -6,6 +6,6 @@ MD5 7bc4cbd7c32584661896116bd48fdee0 files/gauche-aclocal.m4-cc.diff 479
 MD5 62aab943eb7c2154815470d7b813948f files/gauche-gauche.m4-cc.diff 489
 MD5 177cc4fa4c84d465bab80e5b3adb5cc1 files/gauche-gdbm-gentoo.diff 729
 MD5 c69e08c5d4d4342092d1d973bc0eeed2 files/gauche-runpath.diff 509
-MD5 98f0d059112a6f223d373b505b7e2cc7 gauche-0.8.6-r1.ebuild 1212
+MD5 ea57384f7f353370b350e67960791ba7 gauche-0.8.6-r1.ebuild 1180
 MD5 60a83089825cde5ef0b3f0f8c6032cd4 gauche-0.8.7.ebuild 1179
 MD5 e9fa98743d1cf3b213a4b04f52baf5f8 metadata.xml 619
