@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 59a286e4f61491bc5694c3d26a477b35 ChangeLog 548
 RMD160 9b02b5dc681d567d09baf5e9104c95500751cfa9 ChangeLog 548
 SHA256 f1c9e30575527412cf9a69b2cba94db8d27563e031acd018a44d32b0205043ec ChangeLog 548
 MD5 42a69bbf391513d85cdd61e11826f9fd files/digest-kxdocker-trayiconlogger-1.0.0-r1 82
 RMD160 9f206f90f93518a8a89a3bc8e7aa4d27f1e03071 files/digest-kxdocker-trayiconlogger-1.0.0-r1 82
 SHA256 e27daa138b976b6527d68d346ba8cea3f9ded0501b7ec131f0ae7c3c25d5b76c files/digest-kxdocker-trayiconlogger-1.0.0-r1 82
-MD5 10b9b728d527f54a34f1fb3f0df02650 kxdocker-trayiconlogger-1.0.0-r1.ebuild 614
-RMD160 9bbdd4a1411fa4529cadf39a6b0c1f96d2f80acb kxdocker-trayiconlogger-1.0.0-r1.ebuild 614
-SHA256 20bc38b26ac8f5767b1e925fa38b30205bfa3d9b8d913dd9f0538a79c2b43af2 kxdocker-trayiconlogger-1.0.0-r1.ebuild 614
+MD5 e2bd9d8767db49719f4e94b37f9f3bea kxdocker-trayiconlogger-1.0.0-r1.ebuild 614
+RMD160 6f5e3748975658b5e2b757219cb8510c2ea4cd27 kxdocker-trayiconlogger-1.0.0-r1.ebuild 614
+SHA256 5bac524e83992945aeb025e8cf8a22dbdf98fcbeacdedf109597be4fbe20fcb3 kxdocker-trayiconlogger-1.0.0-r1.ebuild 614
 MD5 af0f2c1aa4185c52dd4f4ea588f22286 metadata.xml 349
 RMD160 d2ff75e9ad34ca5bd7bf1af21510d2c4e20ca084 metadata.xml 349
 SHA256 56e8b49cdda4e9edda2aa32fd91aae96b0c89d3b4774867a5cea4c5c58c62545 metadata.xml 349
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFESaZZmdTrptrqvGERAm9cAJ4s+pHRedbzKLhEuWY3TFBiBQ76ZQCeJhp5
-xCu86TK6uKzzjtIILh3RuBA=
-=RT4X
------END PGP SIGNATURE-----
