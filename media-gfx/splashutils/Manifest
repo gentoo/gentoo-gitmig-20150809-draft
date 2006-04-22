@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a6c4e69059c951a406fcbfca89873dfe ChangeLog 12150
-RMD160 6aec2e4341b10f0a9e671ccef7c8461940f6de14 ChangeLog 12150
-SHA256 906aaadc6f508c3cca5e54ef00944aba49b7fe2411c206cbcab5fa586f94f2f0 ChangeLog 12150
+MD5 67a1f67c4fcf5dbc47ad7f992fcd0a62 ChangeLog 12283
+RMD160 9ef54dc2a9406d3ac4ec7f2b7611dcb5c7260de2 ChangeLog 12283
+SHA256 098c2246c091b725c96fe2b5544eb4ed7a8a9f4617b7716a00c613eeeedad60d ChangeLog 12283
 MD5 35cc14c0e9021cf2b900e89588015f07 files/digest-splashutils-1.1.9.10-r1 1774
 RMD160 12af3f46f7d493c35d5411de6ef76478b4d34145 files/digest-splashutils-1.1.9.10-r1 1774
 SHA256 ae313288aa756133eb20f3c3f738003bcdf7176636cabd47918916dae8fbd036 files/digest-splashutils-1.1.9.10-r1 1774
@@ -16,9 +16,6 @@ SHA256 777d5a6f59d49d00573cf4e99510abfc82865a16c27a67190b78b4e4a0e30d78 files/sp
 MD5 6b70ab6899c37465a35de0f0a89c6365 files/splashutils-1.1.9.10-ppc-2.6.14.patch 749
 RMD160 0642a987ff97cc18294840c37a2f88aa4f252450 files/splashutils-1.1.9.10-ppc-2.6.14.patch 749
 SHA256 3995fd9d153a80f709882cbafc9c2330061eb0c8b6187b136ce79e956617f000 files/splashutils-1.1.9.10-ppc-2.6.14.patch 749
-MD5 c9591cbde5eca614a8e1694ee01c315f files/splashutils-1.1.9.9-external-klibc.patch 10294
-RMD160 5fc49641fddfd9fae387c7b7d994110f506f71cf files/splashutils-1.1.9.9-external-klibc.patch 10294
-SHA256 112dab3f2d432949d3110ebb9475b1405171ab196062be6f7dd244815e64f75b files/splashutils-1.1.9.9-external-klibc.patch 10294
 MD5 d78ee27cab85b59044d8ef3e7e5be4af files/splashutils-depscan.patch 2197
 RMD160 044f771f4d971abc177a1da9563cba76bc101d71 files/splashutils-depscan.patch 2197
 SHA256 ea06dec56d412a30abe7da31ab3485ab9748cf58740aa1f08b128b0b5e1e6df9 files/splashutils-depscan.patch 2197
@@ -34,7 +31,7 @@ SHA256 98cab7e9ba08fce1d1944296d8cf5f282faa40a7d7a3c24271ccbf6ec5ddb410 splashut
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFESkMRchej4aZK9/cRAuavAJ44vfMr+UlRGR727RqUeWft/gnSzwCfVG1p
-nF4gqIi/an3RlaHUC5/fM6g=
-=bTLU
+iD8DBQFESkO6chej4aZK9/cRAg/hAJwN5/BdLY9iZxNMtLhbA7MivHMwKQCdHBwP
+oQEKdD2UFKJAfS/BkH9xn3Q=
+=u5Ls
 -----END PGP SIGNATURE-----

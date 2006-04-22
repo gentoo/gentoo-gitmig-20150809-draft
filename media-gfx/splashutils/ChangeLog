@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.55 2006/04/22 14:51:38 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.56 2006/04/22 14:54:37 spock Exp $
+
+  22 Apr 2006; Michał Januszewski <spock@gentoo.org>
+  -files/splashutils-1.1.9.9-external-klibc.patch:
+  Removed an unused patch.
 
   22 Apr 2006; Michał Januszewski <spock@gentoo.org>
   -splashutils-1.1.9.9-r1.ebuild, -splashutils-1.1.9.10.ebuild:
