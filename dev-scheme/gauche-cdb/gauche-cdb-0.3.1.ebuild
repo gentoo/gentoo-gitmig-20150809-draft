@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/gauche-cdb-0.3.1.ebuild,v 1.5 2006/04/22 15:17:17 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/gauche-cdb-0.3.1.ebuild,v 1.6 2006/04/22 15:30:27 hattya Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://sourceforge.jp/projects/gauche/"
 SRC_URI="mirror://sourceforge.jp/gauche/8407/${MY_P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="x86 ia64"
+KEYWORDS="ia64 x86"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
@@ -33,13 +33,6 @@ src_unpack() {
 
 	aclocal
 	autoconf
-
-}
-
-src_compile() {
-
-	econf || die
-	emake || die
 
 }
 
