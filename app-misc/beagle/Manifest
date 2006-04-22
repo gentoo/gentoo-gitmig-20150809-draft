@@ -4,12 +4,6 @@ Hash: SHA1
 MD5 873aa552300af3296525ce031acef4ed ChangeLog 5034
 RMD160 b9259994c50aa4989519800c16ca73780b541600 ChangeLog 5034
 SHA256 0cb9ef9a5269ddf12a6c90e1e06ef0a7a17d124e977663bf17f9f301b03acbe1 ChangeLog 5034
-MD5 a33caf56fdf32402acce053372e6433a beagle-0.2.3-r1.ebuild 3145
-RMD160 d8e45344d7c43a93cf89d6506a33befa5d5c4f42 beagle-0.2.3-r1.ebuild 3145
-SHA256 24855cf6f2b5a7c3635035d403156c4071c55c3416e2f6ee3edef3b096594461 beagle-0.2.3-r1.ebuild 3145
-MD5 d2242ab4867cf09038545c5ce6ec6d0d beagle-0.2.4-r1.ebuild 3766
-RMD160 30c4208fa1e3c8cf85160a8dc0d7f5a71d30ed78 beagle-0.2.4-r1.ebuild 3766
-SHA256 0e0bbf690aeec67e80aadbac629a76b39a86eec9f660540f0ed63acf06b1f913 beagle-0.2.4-r1.ebuild 3766
 MD5 e59d44e766fd810cabe8b914d40d09b4 beagle-0.2.4-r2.ebuild 3807
 RMD160 c309299442ef95c41298be3bbcce94ff706c8356 beagle-0.2.4-r2.ebuild 3807
 SHA256 a6bb41b3e7e08524ecae01578d93ed2c52e9429c3f4e57ba800dca3fba98093f beagle-0.2.4-r2.ebuild 3807
@@ -34,15 +28,9 @@ SHA256 b7c847520a4f68ea3b9ea0cdefbc61cc8447f4b99af7fd7f8a444be373fd394d files/be
 MD5 6a176c3c40db57456ec64629fc70e106 files/crawl-portage 239
 RMD160 43f2980af52308c2bf9d5da87cd2cf4b9884636c files/crawl-portage 239
 SHA256 b0cfb78e4455508a32396e8173708aa74d2e0d89121a2c4b9b805203a6eec8c2 files/crawl-portage 239
-MD5 61cf8ee79bc77bbf9093a7565d4a3454 files/digest-beagle-0.2.3-r1 244
-RMD160 e71c7ab57f0fa065302d460c2059307ff93c831c files/digest-beagle-0.2.3-r1 244
-SHA256 ba59a434d430c770e1bafd469dd29265b9302e2196032a0f67142b2ec78b0d8f files/digest-beagle-0.2.3-r1 244
 MD5 5c3dbe77ffde45cb741b4ca94991fbd9 files/digest-beagle-0.2.4 244
 RMD160 48fde338edc40a4429d5cceaad4d4d08349a9f88 files/digest-beagle-0.2.4 244
 SHA256 a62f3cd6363b760d83f091c12cb18cab0f48590d44dbc144cd159fad62d848b1 files/digest-beagle-0.2.4 244
-MD5 5c3dbe77ffde45cb741b4ca94991fbd9 files/digest-beagle-0.2.4-r1 244
-RMD160 48fde338edc40a4429d5cceaad4d4d08349a9f88 files/digest-beagle-0.2.4-r1 244
-SHA256 a62f3cd6363b760d83f091c12cb18cab0f48590d44dbc144cd159fad62d848b1 files/digest-beagle-0.2.4-r1 244
 MD5 5c3dbe77ffde45cb741b4ca94991fbd9 files/digest-beagle-0.2.4-r2 244
 RMD160 48fde338edc40a4429d5cceaad4d4d08349a9f88 files/digest-beagle-0.2.4-r2 244
 SHA256 a62f3cd6363b760d83f091c12cb18cab0f48590d44dbc144cd159fad62d848b1 files/digest-beagle-0.2.4-r2 244
@@ -52,7 +40,7 @@ SHA256 1a2e1ce6af1bd26a8f0a16c348c39be963f09c5c4986b66c3622f32c4e4f367e metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEPLJwAiZjviIA2XgRAm3WAKC2HCo0FrckkUJk013gXwrmlqSwHgCcDMMi
-B92YxHPsrHRrmR0oR5o3LVU=
-=WQXY
+iD8DBQFESloKwUpWvClEHQoRAnNdAKCKLTiK0U2PQMpB4Mww4QXaIqU8hwCfVRpi
+r0xZ2FvCKCaoq2Vx+ZLcCvI=
+=rIQ9
 -----END PGP SIGNATURE-----
