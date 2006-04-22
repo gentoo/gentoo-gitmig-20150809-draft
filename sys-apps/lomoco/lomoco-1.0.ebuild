@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0.ebuild,v 1.1 2006/04/20 07:45:44 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0.ebuild,v 1.2 2006/04/22 10:28:18 hollow Exp $
 
 inherit autotools
 
@@ -15,11 +15,12 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
+DEPEND="dev-libs/libusb"
+
 src_compile() {
 	eautoreconf
 	econf
 	emake || die "make failed"
-	emake udev-rules || die "udev-rules failed"
 }
 
 src_install() {
