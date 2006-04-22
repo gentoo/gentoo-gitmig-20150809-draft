@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.2-r1.ebuild,v 1.3 2006/04/10 13:24:18 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.2-r1.ebuild,v 1.4 2006/04/22 09:16:45 satya Exp $
 
 
 inherit eutils
@@ -11,7 +11,8 @@ SRC_URI="http://samba.idealx.org/dist/${P}.tgz"
 HOMEPAGE="http://samba.idealx.org"
 
 IUSE="doc"
-DEPEND=">sys-apps/sed-4
+
+RDEPEND="
 	net-nds/openldap
 	>=net-fs/samba-3.0.1
 	dev-perl/perl-ldap
@@ -20,6 +21,9 @@ DEPEND=">sys-apps/sed-4
 	dev-perl/Unicode-MapUTF8
 	"
 
+DEPEND="${DEPEND}
+	>sys-apps/sed-4
+	"
 LICENSE="GPL-2"
 SLOT="0"
 # Waiting for the test of dev-perl/Unicode-MapUTF8
