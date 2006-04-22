@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/kxdocker-1.1.4a.ebuild,v 1.1 2006/04/22 03:28:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/kxdocker-1.1.4a.ebuild,v 1.2 2006/04/22 04:03:12 dragonheart Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.xiaprojects.com/www/downloads/files/kxdocker/1.0.0/${P}.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="nls net"
 
 RDEPEND=">=kde-misc/kxdocker-resources-1.1.0
@@ -23,9 +23,9 @@ RDEPEND=">=kde-misc/kxdocker-resources-1.1.0
 #		>=kde-misc/kxdocker-arpmanager-1.0.0
 #		>=kde-misc/kxdocker-gpipe-1.0.0 )
 
-#PDEPEND="net? ( >=kde-misc/kxdocker-trayiconlogger-1.0.0-r1
-#			>=kde-misc/kxdocker-dcop-1.0.0-r1
-#			>=kde-misc/kxdocker-configurator-1.0.2 )"
+PDEPEND="net? ( >=kde-misc/kxdocker-trayiconlogger-1.0.0-r1
+			>=kde-misc/kxdocker-dcop-1.0.0-r1
+			>=kde-misc/kxdocker-configurator-1.0.2 )"
 
 # List of needed plugins (to run kxdocker)
 #kde-misc/kxdocker-resources-1.1.0

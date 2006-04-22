@@ -25,16 +25,16 @@ SHA256 0966a5a06c06e5c4e9516947cb244a86680c0dbbe991b5b828638d6f8fd42a79 kxdocker
 MD5 6d75368b4fb2c8947d891b422bb132e2 kxdocker-1.0.0a.ebuild 2068
 RMD160 62b78f664058fdf4ad10996f1a5d0491ec5c66a2 kxdocker-1.0.0a.ebuild 2068
 SHA256 e996176ac2ce2095994a281bab5169c2d039d8b5f707cdcdfad105fa0ae1e981 kxdocker-1.0.0a.ebuild 2068
-MD5 579a761300598b9485bff91a9f8d59e1 kxdocker-1.1.4a.ebuild 2400
-RMD160 23cf13370ec81ebe07e316b0e59bfb2d3a81e9f2 kxdocker-1.1.4a.ebuild 2400
-SHA256 61e18a333f45204279c5a88fd614137118b88d85c5a446036221a80144c60dee kxdocker-1.1.4a.ebuild 2400
+MD5 bbfa78bb9ea2075a7d328c5fa1f398d9 kxdocker-1.1.4a.ebuild 2404
+RMD160 5a171b34e539069f971544de6bb6c8a708401cda kxdocker-1.1.4a.ebuild 2404
+SHA256 a7d8a220cdbcd887c55bd458c4fcc94c6773b3c574c94233ca3a97f8cbc3e11e kxdocker-1.1.4a.ebuild 2404
 MD5 af0f2c1aa4185c52dd4f4ea588f22286 metadata.xml 349
 RMD160 d2ff75e9ad34ca5bd7bf1af21510d2c4e20ca084 metadata.xml 349
 SHA256 56e8b49cdda4e9edda2aa32fd91aae96b0c89d3b4774867a5cea4c5c58c62545 metadata.xml 349
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFESaMdmdTrptrqvGERAjHmAJ9LA0nPtrpsXGUy2ffnfUA/zluKcQCglAyl
-f5od68YL4FSsq6rr52szzQA=
-=wSVe
+iD8DBQFESas3mdTrptrqvGERAkSmAJ4vFunVdbyu+SEaSyoza/7UauhKAQCeOgIC
+OO7m0fwVMuG4YbVtrnqdvD4=
+=bbMn
 -----END PGP SIGNATURE-----
