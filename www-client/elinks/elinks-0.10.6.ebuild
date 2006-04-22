@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.6.ebuild,v 1.13 2006/02/28 01:50:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.6.ebuild,v 1.14 2006/04/22 14:37:34 spock Exp $
 
 inherit eutils
 
@@ -30,7 +30,6 @@ DEPEND=">=dev-libs/expat-1.95.4
 	ruby? ( dev-lang/ruby )
 	!hppa? ( !mips? ( !alpha? ( javascript? ( dev-lang/spidermonkey ) ) ) )
 	samba? ( net-fs/samba )"
-PROVIDE="virtual/textbrowser"
 
 S=${WORKDIR}/${MY_P}
 

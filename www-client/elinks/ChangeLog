@@ -1,6 +1,10 @@
 # ChangeLog for www-client/elinks
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.41 2006/04/09 13:42:16 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.42 2006/04/22 14:37:34 spock Exp $
+
+  22 Apr 2006; Michał Januszewski <spock@gentoo.org> elinks-0.10.5.ebuild,
+  elinks-0.10.5-r1.ebuild, elinks-0.10.6.ebuild, elinks-0.11.0.ebuild:
+  Removed PROVIDED=virtual/textbrowser (bug #130746).
 
   09 Apr 2006; Michał Januszewski <spock@gentoo.org>
   +files/elinks-0.10.1-utf_8_io-default.patch, elinks-0.11.0.ebuild:
