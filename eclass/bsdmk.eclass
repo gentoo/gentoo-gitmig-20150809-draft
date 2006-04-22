@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bsdmk.eclass,v 1.3 2006/04/19 01:13:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bsdmk.eclass,v 1.4 2006/04/22 21:14:50 flameeyes Exp $
 #
 # Otavio R. Piske "AngusYoung" <angusyoung@gentoo.org>
 # Diego Pettenò <flameeyes@gentoo.org>
@@ -17,6 +17,8 @@ DEPEND="|| (
 		sys-freebsd/freebsd-ubin
 		sys-openbsd/openbsd-ubin
 	)"
+
+ESED="/usr/bin/sed"
 
 #### append-opt <options>
 # append options to enable or disable features
