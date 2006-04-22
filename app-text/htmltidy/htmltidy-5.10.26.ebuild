@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-5.10.26.ebuild,v 1.1 2006/02/13 17:38:10 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-5.10.26.ebuild,v 1.2 2006/04/22 22:35:59 flameeyes Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ SRC_URI="http://tidy.sourceforge.net/src/${MY_P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc xml"
 
 DEPEND="virtual/libc
