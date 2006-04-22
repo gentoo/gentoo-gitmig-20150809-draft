@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/egroupware
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.51 2005/09/25 15:23:08 rl03 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.52 2006/04/22 15:29:41 rl03 Exp $
+
+*egroupware-1.2 (22 Apr 2006)
+
+  22 Apr 2006; Renat Lumpau <rl03@gentoo.org> +files/postinstall-en-1.2.txt,
+  +egroupware-1.2.ebuild:
+  Version bump (#124316). Dropped ~hppa, see bug #130838.
 
   25 Sep 2005; Renat Lumpau <rl03@gentoo.org> -egroupware-1.0.0.009.ebuild,
   -egroupware-1.0.0.009_p2.ebuild:
