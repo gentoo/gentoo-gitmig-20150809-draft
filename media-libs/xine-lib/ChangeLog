@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.326 2006/04/22 00:33:20 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.327 2006/04/22 09:31:23 corsair Exp $
+
+  22 Apr 2006; Markus Rothe <corsair@gentoo.org>
+  xine-lib-1.1.2_pre20060328-r1.ebuild:
+  Stable on ppc64
 
   22 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
   xine-lib-1.1.2_pre20060328-r1.ebuild:
