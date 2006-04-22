@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c03a76f37eb856aa4d572471b57e16b6 ChangeLog 2290
-RMD160 312f69db59e669c76f3c98a0315f87219782d8df ChangeLog 2290
-SHA256 41d112a47639fc4420073de661889cda321e4d7776eeb648376b33c9187d4020 ChangeLog 2290
-MD5 9df18c09e00bb435178f47309da0022c files/digest-freebsd-share-6.0 629
-RMD160 5a4221a9c17f7dee7bfbbaf03ef384731bd16909 files/digest-freebsd-share-6.0 629
-SHA256 1f27c5f30a05af922bf8d1f71572760ca643eae7793b9e1d7e8f8137f1adefef files/digest-freebsd-share-6.0 629
+MD5 dcad90eef90f4a752814a794fd59d4fa ChangeLog 2508
+RMD160 7bcfb161f6742ef5d9f47129c0760145f65903ef ChangeLog 2508
+SHA256 fdb85c5cf38949e3408b6588eae7a3cff163015718629ea0b8c8c4bf7d4d3c8a ChangeLog 2508
+MD5 19fcc8bd1bce9e9f8789a41a4dc2bb42 files/digest-freebsd-share-6.0-r1 2301
+RMD160 051abc7348b55916a5cdc3a2d7182938839a7c4a files/digest-freebsd-share-6.0-r1 2301
+SHA256 1ce361c768542499214da47548a18e3482adb79ee88aef42d5e8fd3fb5db32d1 files/digest-freebsd-share-6.0-r1 2301
 MD5 d56dde6f046f8f97d2c2995dacf16751 files/freebsd-share-5.3-doc-locations.patch 608
 RMD160 62c5b4b8cfe410c41bab4b64e4c47828512a8595 files/freebsd-share-5.3-doc-locations.patch 608
 SHA256 d949e9081a181ab9443a18e56949905a77eff2cbd16d09d37b8abb5771cee3b6 files/freebsd-share-5.3-doc-locations.patch 608
@@ -16,16 +13,9 @@ SHA256 5480127971c2a5df5faf44355d5ed6a8586923577d37e6cff10805626726c767 files/fr
 MD5 5b3ed8d353ad16881f8786815724678a files/freebsd-share-6.0-links.patch 539
 RMD160 272e428e61ceb22e204bf82bce94bc808c67f4b3 files/freebsd-share-6.0-links.patch 539
 SHA256 4858d5ba24d64ff41111142eeeecdb226703501b7a637b03baa3a7f5d0af9261 files/freebsd-share-6.0-links.patch 539
-MD5 64bdd7aca36593cbea7e0840a4147e60 freebsd-share-6.0.ebuild 1722
-RMD160 2f0de33e494e7cf5e282ff2717523a5678d29bd0 freebsd-share-6.0.ebuild 1722
-SHA256 cc338e116bea859250225bc4d5ad694359956867eac32dbe0195215acb4230d6 freebsd-share-6.0.ebuild 1722
+MD5 81b5b0be188ed81fd608e066a07b5d93 freebsd-share-6.0-r1.ebuild 1734
+RMD160 6c04383d4f924bfa305909cabbd9d6c2e10f4f38 freebsd-share-6.0-r1.ebuild 1734
+SHA256 8214dd31e0b0c7b20b5ddb0efaacdc41126acb59def01b5edbaf080e0b71c489 freebsd-share-6.0-r1.ebuild 1734
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
 SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEP8QEAiZjviIA2XgRAv7IAKCyfUhxUzFV75EEqybpksdd3b0zOgCgtwhD
-lfaYwLd7dSqBeggb86UYyEk=
-=qFuW
------END PGP SIGNATURE-----

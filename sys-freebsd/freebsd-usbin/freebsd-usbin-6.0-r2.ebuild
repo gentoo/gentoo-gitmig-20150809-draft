@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.0-r1.ebuild,v 1.2 2006/04/20 07:16:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.0-r2.ebuild,v 1.1 2006/04/22 13:35:01 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -74,7 +74,7 @@ REMOVE_SUBDIRS="
 	sendmail praliases editmap mailstats makemap
 	sysinstall cron mailwrapper ntp bsnmpd mount_smbfs
 	tcpdump ndp traceroute pkg_install inetd
-	wpa/wpa_supplicant wpa/hostapd"
+	wpa/wpa_supplicant wpa/hostapd zic"
 
 src_unpack() {
 	freebsd_src_unpack

@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.6 2006/04/20 07:16:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.7 2006/04/22 13:35:01 flameeyes Exp $
+
+*freebsd-usbin-6.0-r2 (22 Apr 2006)
+
+  22 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -freebsd-usbin-6.0-r1.ebuild, +freebsd-usbin-6.0-r2.ebuild:
+  Drop zic, now provided by timezone-data.
 
   20 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-usbin-6.0-r1.ebuild:
