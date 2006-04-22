@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.44 2006/04/06 01:43:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.45 2006/04/22 11:15:57 carlo Exp $
+
+  22 Apr 2006; Carsten Lohrke <carlo@gentoo.org> kdm-3.5.2.ebuild:
+  Missing dependency, bug #120258.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kdm-3.5.0.ebuild,
   -kdm-3.5.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.2.ebuild,v 1.4 2006/04/01 17:35:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.2.ebuild,v 1.5 2006/04/22 11:15:57 carlo Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -20,10 +20,12 @@ KMEXTRA="kdmlib/"
 KMEXTRACTONLY="libkonq/konq_defaults.h"
 #	    kioslave/thumbnail/configure.in.in"
 KMCOMPILEONLY="kcontrol/background"
-DEPEND="$DEPEND
-	pam? ( kde-base/kdebase-pam )
+DEPEND="pam? ( kde-base/kdebase-pam )
 	$(deprange $PV $MAXKDEVER kde-base/kcontrol)"
 	# Requires the desktop background settings and kdm kcontrol modules
+RDEPEND="${DEPEND}
+	kde-base/kdepasswd"
+
 
 src_unpack() {
 	unpack "kdebase-3.5.0-patches-1.tar.bz2"
