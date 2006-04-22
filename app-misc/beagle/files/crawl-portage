@@ -1,4 +1,7 @@
-# Beagle Crawl Setup
+# Beagle Portage Crawl Setup
+
+source /etc/make.globals
+source /etc/make.conf
 
 CRAWL_ENABLED="no"
 
