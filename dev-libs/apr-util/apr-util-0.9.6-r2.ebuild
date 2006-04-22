@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.6-r2.ebuild,v 1.17 2006/04/19 01:00:25 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.6-r2.ebuild,v 1.18 2006/04/22 12:49:02 chtekk Exp $
 
 inherit eutils libtool
 
@@ -27,7 +27,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/apr-util-0.9.x-161086-161087.patch" \
 		|| die "patching failed"
-		
+
 	elibtoolize || die "elibtoolize failed"
 }
 
