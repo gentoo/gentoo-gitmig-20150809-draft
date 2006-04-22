@@ -1,0 +1,18 @@
+--- kdepim/kaddressbook/addresseeeditorwidget.cpp	2005/08/22 20:40:57	452218
++++ kdepim/kaddressbook/addresseeeditorwidget.cpp	2006/04/17 19:42:19	530843
+@@ -572,7 +572,14 @@
+ 
+   mAddressee.setRole( mRoleEdit->text() );
+   mAddressee.setOrganization( mOrgEdit->text() );
+-  mAddressee.setUrl( KURL( mURLEdit->text().stripWhiteSpace() ) );
++  QString homepage = mURLEdit->text().stripWhiteSpace();
++  if ( homepage.isEmpty() )
++     mAddressee.setUrl( KURL() );
++  else {
++     if( !homepage.startsWith("http") )
++       homepage = "http://" + homepage;
++     mAddressee.setUrl( KURL( homepage ) );
++  }
+   if ( !mBlogEdit->text().isEmpty() )
+     mAddressee.insertCustom( "KADDRESSBOOK", "BlogFeed", mBlogEdit->text() );
+   else

@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.43 2006/04/06 00:54:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.44 2006/04/22 10:53:54 carlo Exp $
+
+*kaddressbook-3.5.2-r1 (22 Apr 2006)
+
+  22 Apr 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/kaddressbook-3.5.2-addressee-hompage-fix.diff,
+  +kaddressbook-3.5.2-r1.ebuild:
+  Handle homepage url properly.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kaddressbook-3.5.0.ebuild, -kaddressbook-3.5.1.ebuild:
