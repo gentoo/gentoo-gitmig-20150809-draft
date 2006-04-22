@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/kxdocker-trayiconlogger
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker-trayiconlogger/ChangeLog,v 1.1 2006/04/22 03:42:31 dragonheart Exp $
+
+*kxdocker-trayiconlogger-1.0.0-r1 (22 Apr 2006)
+
+  22 Apr 2006; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +kxdocker-trayiconlogger-1.0.0-r1.ebuild:
+  inital ebuild by Alessio Cassibba (X-Drum) bug #124157. ~amd keyword as this
+  was a derivitave of kxdocker-resources in its the prev version
+
