@@ -1,16 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20060212.ebuild,v 1.2 2006/02/14 22:13:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20060415.ebuild,v 1.1 2006/04/22 11:22:17 grobian Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="mutt-ng -- fork of mutt with added features"
 HOMEPAGE="http://www.muttng.org/"
 SRC_URI="http://nion.modprobe.de/mutt-ng/snapshots/${P}.tar.gz"
-IUSE="berkdb buffysize cjk crypt debug gdbm gnutls gpgme idn imap mbox nls nntp pop qdbm sasl slang smime smtp ssl"
+IUSE="berkdb buffysize cjk crypt debug gdbm gnutls gpgme idn imap mbox nls nntp pop qdbm sasl slang smime smtp ssl doc"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ~sparc ~x86"
 RDEPEND="nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.2
 	idn?     ( net-dns/libidn )
@@ -31,20 +31,32 @@ RDEPEND="nls? ( sys-devel/gettext )
 		!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6 ) )
 		sasl?    ( >=dev-libs/cyrus-sasl-2 )
 	)
-	gpgme?   ( >=app-crypt/gpgme-0.9.0 )"
+	gpgme?   ( >=app-crypt/gpgme-0.9.0 )
+	doc?     (
+		www-client/lynx
+		dev-libs/libxslt
+		app-text/htmltidy
+		app-text/openjade
+		app-text/tetex
+	)"
 DEPEND="${RDEPEND}
 	sys-devel/automake
 	>=sys-devel/autoconf-2.5
 	net-mail/mailbase"
 
 src_unpack() {
-	unpack ${P}.tar.gz && cd ${S} || die "unpack failed"
+	unpack ${A}                     || die "unpack failed"
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-20060309-smarttime.patch"
+	epatch "${FILESDIR}/${PN}-20060317-sigremovereply.patch"
 
-	aclocal -I m4					|| die "aclocal failed"
-	autoheader						|| die "autoheader failed"
-	emake -C m4 -f Makefile.am.in	|| die "emake in m4 failed"
-	automake --foreign				|| die "automake failed"
-	WANT_AUTOCONF=2.5 autoconf		|| die "autoconf failed"
+	use doc || epatch "${FILESDIR}/${PN}-20060309-nodoc.patch"
+
+#	aclocal -I m4					|| die "aclocal failed"
+#	autoheader						|| die "autoheader failed"
+#	emake -C m4 -f Makefile.am.in	|| die "emake in m4 failed"
+#	automake --foreign				|| die "automake failed"
+#	WANT_AUTOCONF=2.5 autoconf		|| die "autoconf failed"
 }
 
 src_compile() {

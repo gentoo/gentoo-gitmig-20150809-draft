@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/muttng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/ChangeLog,v 1.16 2006/03/30 15:58:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/ChangeLog,v 1.17 2006/04/22 11:22:17 grobian Exp $
+
+*muttng-20060415 (22 Apr 2006)
+
+  22 Apr 2006; Fabian Groffen <grobian@gentoo.org> -muttng-20060212.ebuild,
+  +muttng-20060415.ebuild:
+  New snapshot, removal of old snapshot
 
 *muttng-20060329 (30 Mar 2006)
 
