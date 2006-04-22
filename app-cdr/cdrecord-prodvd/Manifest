@@ -1,17 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d8544dae2e375622e9afa29cec5fb1ed ChangeLog 4032
+MD5 c5f48874661e75208026354e12465ec0 ChangeLog 4148
+RMD160 5b12b81a264c033520747dddd504da59a407023a ChangeLog 4148
+SHA256 900ac08be1132861b4e0aa6b6abccb2dde16df0435f5f996154187675e48aa0a ChangeLog 4148
 MD5 3995b97c3f5bc9cc62600062c8ca3ae1 cdrecord-prodvd-2.01.01-r1.ebuild 1007
-MD5 3dea55b8fe7200d8f64adcd8c918824e cdrecord-prodvd-2.01.01_p03.ebuild 1034
+RMD160 b7fd339c97a0e8d883c1660270ec43dbcafbeafc cdrecord-prodvd-2.01.01-r1.ebuild 1007
+SHA256 24599c42d3085f62e858cda995c521aac88cd946327ba486b7530e71e5730b30 cdrecord-prodvd-2.01.01-r1.ebuild 1007
+MD5 feb57ecdef1fa978b270581b95c937d9 cdrecord-prodvd-2.01.01_p03.ebuild 1031
+RMD160 c3f65241542538eff5816136ac5fdc1c14a0c038 cdrecord-prodvd-2.01.01_p03.ebuild 1031
+SHA256 600013709e5f92d746ecdd0b20fd395632de6ea45e07e0d7426b1891660a1a3b cdrecord-prodvd-2.01.01_p03.ebuild 1031
 MD5 8ba43898fc4c438d425a90b0ff202b1f files/cdrecord-wrapper.sh 511
+RMD160 8ebfa212e9e13bda99187559f3c3a5cfb35d2d5e files/cdrecord-wrapper.sh 511
+SHA256 5b0398c289c8836f79b97da14870ee7f26887b482ea1ab7e4644a4084c2211db files/cdrecord-wrapper.sh 511
 MD5 b634591137522e7730456a726a32c008 files/digest-cdrecord-prodvd-2.01.01-r1 86
+RMD160 143bf87bd713331bf604376c03f4cb8a0ebe1fbd files/digest-cdrecord-prodvd-2.01.01-r1 86
+SHA256 6495aad82bfb21d48114c158afcc71a50260d39319327e2a49c0a938d89d1e19 files/digest-cdrecord-prodvd-2.01.01-r1 86
 MD5 e4cb8f69e07c52161e17a8073e6a7b1d files/digest-cdrecord-prodvd-2.01.01_p03 89
+RMD160 568cecedbfad4799af57b1190ddc83fe30dc0169 files/digest-cdrecord-prodvd-2.01.01_p03 89
+SHA256 332b38da5dca112a0ffb39d44b07aaf422d30fc98e1281a8044969333a03a56a files/digest-cdrecord-prodvd-2.01.01_p03 89
 MD5 633ccd280dcf79b90685de1788edd027 metadata.xml 241
+RMD160 515f9bc4af5ff230718fd9a070ca5bf3f5802e65 metadata.xml 241
+SHA256 096fcbf7b84ac4fa1802c88cfd759108a37b3cb2d2ad0fbe54767291efd60e2d metadata.xml 241
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDxttKwUpWvClEHQoRAvcVAJ42x/QF3+La2wBzGP4XcH6XfbTx4QCfX/lZ
-+jYkj8IiQHS1O26s5Ur1mFw=
-=D8Ga
+iD8DBQFESaKdSENan+PfizARAlvPAJ9YAHsOyfukg7b4Bj+rH60cXRe1FgCfTPed
+4QDBFuTGtGRy7NhUO+JVg2I=
+=BBZg
 -----END PGP SIGNATURE-----
