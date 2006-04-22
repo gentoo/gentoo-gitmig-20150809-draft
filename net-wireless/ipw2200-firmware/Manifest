@@ -1,4 +1,4 @@
-MD5 e18c8440b7193b883b764655168f9e54 ChangeLog 1467
+MD5 a442bf1a2d6aaa77a455986c5189573c ChangeLog 1570
 MD5 66bedfb1e8704df26af76ca30695949e files/digest-ipw2200-firmware-2.2 63
 MD5 ec14ec4f0f93f3efe90fa33e20d960c8 files/digest-ipw2200-firmware-2.3 63
 MD5 72ae47780570d5981f3e9787604e067d files/digest-ipw2200-firmware-2.4 63
@@ -6,5 +6,5 @@ MD5 5c5ab66621abb247bb889e75d7378da1 files/digest-ipw2200-firmware-3.0 63
 MD5 98801d8301dabdb7731da56b553f1bff ipw2200-firmware-2.2.ebuild 644
 MD5 7e2bdd25cbff53268b013ff6a3e0b359 ipw2200-firmware-2.3.ebuild 644
 MD5 ed5825a57f818d8af1697a83a980d98e ipw2200-firmware-2.4.ebuild 660
-MD5 5e8ea667092e69ea63fbbb29199764e4 ipw2200-firmware-3.0.ebuild 658
+MD5 5b3aa7b2f3ccd54e1ad74287e0b5303d ipw2200-firmware-3.0.ebuild 657
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
