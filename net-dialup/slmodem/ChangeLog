@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.58 2006/04/08 16:12:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.59 2006/04/22 11:44:08 mrness Exp $
+
+  22 Apr 2006; Alin Nastac <mrness@gentoo.org>
+  +files/slmodem-2.9.11-modem-makefile.patch, metadata.xml,
+  slmodem-2.9.11_pre20051101.ebuild:
+  Fix broken compilation when LDFLAGS=-Wl,--as-needed (#130796). Quote $S, $D,
+  $ROOT, $WORKDIR and $FILESDIR.
 
   08 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
   slmodem-2.9.11_pre20051101.ebuild:
