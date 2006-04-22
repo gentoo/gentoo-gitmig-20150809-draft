@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r5.ebuild,v 1.6 2006/04/22 07:08:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r5.ebuild,v 1.7 2006/04/22 11:59:26 tcort Exp $
 
 inherit eutils gnome2 libtool
 
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI}
 	mirrors://gentoo/${P}-sheets-png.tar.bz2"
 
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ~mips ppc ppc64 sparc x86"
 IUSE="gnome png python static zlib"
 
 RDEPEND=">=x11-libs/gtk+-2
