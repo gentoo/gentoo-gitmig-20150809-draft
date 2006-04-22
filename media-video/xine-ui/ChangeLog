@@ -1,6 +1,12 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.111 2006/03/01 11:01:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.112 2006/04/22 10:14:35 flameeyes Exp $
+
+*xine-ui-0.99.4-r5 (22 Apr 2006)
+
+  22 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +xine-ui-0.99.4-r5.ebuild:
+  Bump patchset to fix another format string.
 
 *xine-ui-0.99.4-r4 (01 Mar 2006)
 
