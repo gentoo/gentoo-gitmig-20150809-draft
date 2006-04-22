@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.59 2006/04/17 04:05:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.60 2006/04/22 07:57:05 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -116,6 +116,10 @@ tc-binutils_apply_patches() {
 	elif [[ ${CTARGET} == *-uclibc ]] ; then
 		die "sorry, but this binutils doesn't yet support uClibc :("
 	fi
+
+	# fix locale issues if possible #122216
+	[[ -e ${FILESDIR}/binutils-configure-LANG.patch ]] \
+		&& epatch "${FILESDIR}"/binutils-configure-LANG.patch
 
 	# Fix po Makefile generators
 	sed -i \
