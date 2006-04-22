@@ -1,16 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2fbbf5c905cded9e28b5d708c2cce710 ChangeLog 6954
+MD5 2cc5ed0f36d4035fd3e3a477a0dc1b37 ChangeLog 7068
+RMD160 94c231a7a905a58e0ba99e4c881a341d20d3df3d ChangeLog 7068
+SHA256 82bcd0e27fd80111636146509b6f1ad1065a69f1bbcca73d4bf30d8402cf44b4 ChangeLog 7068
 MD5 ca3c4eb21a9ecf8e0cf1036b5b9aba36 files/digest-phpsysinfo-2.4.1 68
+RMD160 30104345a3f9375b3dfe66b87c453bbc074d45a3 files/digest-phpsysinfo-2.4.1 68
+SHA256 5bd6fa4c205d4ff8dbe0be1114ed7bdfe5864f8833c9a9e72b38d366b0335d8c files/digest-phpsysinfo-2.4.1 68
 MD5 a45f813b274eee480c5857db44b5bf51 files/digest-phpsysinfo-2.5.1-r2 68
+RMD160 6923e1d90f18af21cb700052efde8d5cf07eaa04 files/digest-phpsysinfo-2.5.1-r2 68
+SHA256 4629b73e1353432f289d13992dd724962477ad2403228127cf8a2bf4fd89c902 files/digest-phpsysinfo-2.5.1-r2 68
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
+RMD160 c449ad35e8af3f158d8f8305f8a02ff98a420970 metadata.xml 280
+SHA256 fd37fa0f441b1b68ef8dc4bffbb0a51f0414aa7c370b48369453af5f4bff177a metadata.xml 280
 MD5 9766ceff7fe19150c68db121240d41f7 phpsysinfo-2.4.1.ebuild 1204
-MD5 d762c9958dc5ce70e204796e1aafd3c4 phpsysinfo-2.5.1-r2.ebuild 832
+RMD160 4c6bc3bf5a607b062dc982728bc498b5c929dedc phpsysinfo-2.4.1.ebuild 1204
+SHA256 6eadc375bc5e68f3d2b96051fac27c9b4c01d6ed42a050580d6596bdaf1dd61f phpsysinfo-2.4.1.ebuild 1204
+MD5 b289fa58cb212051254a26d00bb16061 phpsysinfo-2.5.1-r2.ebuild 847
+RMD160 810d7df4acbbab6e1509dfdf53eb77ab526055d8 phpsysinfo-2.5.1-r2.ebuild 847
+SHA256 dfaec7b0ca0dd4570e9a26f5b3a909327f3e12ab770daa7f2b468d179ea3b4b6 phpsysinfo-2.5.1-r2.ebuild 847
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD2kSbEzitwsaoONoRAqOxAJ91qugYWfI1SkexQp3BkXkZqwbrEACgkBqD
-Udeg5chMVRUqTEhKcOXa3kA=
-=3CMF
+iD8DBQFESqYaAiZjviIA2XgRAvjBAKCDOABQRY4KWrpmh7uFqHlcDBRHggCgrVg1
+LlZFnxbxb3GGhuie7lff3LU=
+=8bHV
 -----END PGP SIGNATURE-----
