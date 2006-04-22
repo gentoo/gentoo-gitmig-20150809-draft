@@ -1,0 +1,110 @@
+diff -Nru bitpim-0.8.12.orig/src/common.py bitpim-0.8.12/src/common.py
+--- bitpim-0.8.12.orig/src/common.py	2006-04-11 05:50:29.000000000 +0300
++++ bitpim-0.8.12/src/common.py	2006-04-20 20:13:54.116823750 +0300
+@@ -681,4 +681,4 @@
+         # windows running from exe, return as is
+         return os.path.abspath(os.path.dirname(sys.executable))
+     # running from src, up one
+-    return os.path.split(os.path.abspath(os.path.dirname(sys.argv[0])))[0]
++    return os.path.abspath(os.path.dirname(sys.argv[0]))
+diff -Nru bitpim-0.8.12.orig/src/conversions.py bitpim-0.8.12/src/conversions.py
+--- bitpim-0.8.12.orig/src/conversions.py	2006-03-04 01:37:32.000000000 +0200
++++ bitpim-0.8.12/src/conversions.py	2006-04-20 20:13:54.116823750 +0300
+@@ -20,11 +20,11 @@
+ 
+ class ConversionFailed(Exception): pass
+ 
+-helperdir=os.path.join(common.get_main_dir(), "helpers")
++helperdir="/usr/bin"
+ 
+ osext={'win32': '.exe',
+        'darwin': '.mbin',
+-       'linux2': '.lbin'} \
++       'linux2': ''} \
+        [sys.platform]
+ 
+ # This shortname crap is needed because Windows programs (including ffmpeg)
+@@ -125,14 +125,14 @@
+     p=sys.path[0]
+     if os.path.isfile(p):
+         p=os.path.dirname(p)
+-    helpersdirectory=os.path.abspath(os.path.join(p, 'helpers'))
++    helpersdirectory="/usr/bin"
+     print "Helper Directory: "+helpersdirectory
+     if sys.platform=='win32':
+         osext=".exe"
+     if sys.platform=='darwin':
+         osext=".mbin"
+     if sys.platform=='linux2':
+-        osext=".lbin"
++        osext=""
+         
+     pngtopnmbin=gethelperbinary('pngtopnm')
+     ppmquantbin=gethelperbinary('ppmquant')
+diff -Nru bitpim-0.8.12.orig/src/native/av/bmp2avi/Makefile bitpim-0.8.12/src/native/av/bmp2avi/Makefile
+--- bitpim-0.8.12.orig/src/native/av/bmp2avi/Makefile	2005-02-18 08:55:03.000000000 +0200
++++ bitpim-0.8.12/src/native/av/bmp2avi/Makefile	2006-04-20 20:15:01.029005500 +0300
+@@ -11,9 +11,6 @@
+ $(error PLATFORM not defined.  Valid PLATFORM are windows, linux, mac)
+ endif
+ 
+-CXXFLAGS=
+-LDFLAGS=
+-
+ ifeq ($(PLATFORM), windows)
+ EXT=exe
+ # define this for cygwin/mingw
+@@ -22,7 +19,7 @@
+ endif
+ 
+ ifeq ($(PLATFORM), linux)
+-EXT=lbin
++EXT=
+ endif
+ 
+ ifeq ($(PLATFORM), mac)
+@@ -31,13 +28,9 @@
+ CXXFLAGS+=-D__BIG_ENDIAN__
+ endif
+ 
+-ifeq ($(EXT),)
+-$(error PLATFORM $(PLATFORM) is invalid.  Valid PLATFORM are windows, linux, mac)
+-endif
+-
+ SRC=avi_file.cxx bmp_file.cxx b2a.cxx
+ OBJ=$(SRC:.cxx=.o)
+-EXE=bmp2avi.$(EXT)
++EXE=bmp2avi
+ CXX=g++
+ 
+ all: $(EXE)
+diff -Nru bitpim-0.8.12.orig/src/package.py bitpim-0.8.12/src/package.py
+--- bitpim-0.8.12.orig/src/package.py	2006-03-21 06:13:27.000000000 +0200
++++ bitpim-0.8.12/src/package.py	2006-04-20 20:13:54.140825250 +0300
+@@ -116,7 +116,7 @@
+         exts=exts+['*.chm', '*.manifest', '*.ico']
+         exts=exts+['helpers/*.exe','helpers/*.dll']
+     if sys.platform=='linux2':
+-        exts=exts+['helpers/*.lbin', '*.htb']
++        exts=exts+['*.htb']
+     if sys.platform=='darwin':
+         exts=exts+['helpers/*.mbin', '*.htb']
+     # list of directories to look in
+@@ -203,7 +203,7 @@
+ def copyresources(destdir):
+     import packageutils
+     packageutils.copysvndir('resources', os.path.join(destdir, 'resources'), resourcefilter)
+-    packageutils.copysvndir('helpers', os.path.join(destdir, 'helpers'), resourcefilter)
++    # packageutils.copysvndir('helpers', os.path.join(destdir, 'helpers'), resourcefilter)
+ 
+ def resourcefilter(srcfilename, destfilename):
+     exts=[ '.xy', '.png', '.ttf', '.wav', '.jpg', '.css', '.pdc', '.ids', '.ico']
+@@ -211,7 +211,7 @@
+         # on windows we also want the chm help file 
+         exts=exts+['.chm', '.exe', '.dll']
+     if sys.platform=='linux2':
+-        exts=exts+['.lbin', '.htb']
++        exts=exts+['.htb']
+     if sys.platform=='darwin':
+         exts=exts+['.mbin', '.htb']
+     if os.path.splitext(srcfilename)[1] in exts:
