@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/estraier/estraier-1.2.28.ebuild,v 1.4 2006/03/22 21:13:41 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/estraier/estraier-1.2.28.ebuild,v 1.5 2006/04/22 14:57:24 hattya Exp $
 
 IUSE="chasen debug kakasi mecab zlib"
 
@@ -53,10 +53,10 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} install || die
-	dodoc COPYING README* ChangeLog
+	dodoc README* ChangeLog
 	dohtml *.html
 
-	rm ${D}/usr/share/${PN}/{COPYING,ChangeLog}
-	rm ${D}/usr/share/${PN}/*.html
+	rm -f ${D}/usr/share/${PN}/{COPYING,ChangeLog}
+	rm -f ${D}/usr/share/${PN}/*.html
 
 }

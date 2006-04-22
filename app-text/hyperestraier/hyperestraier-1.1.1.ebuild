@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.1.1.ebuild,v 1.2 2006/03/20 14:37:31 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.1.1.ebuild,v 1.3 2006/04/22 15:01:50 hattya Exp $
 
 inherit java-pkg
 
@@ -66,7 +66,7 @@ src_test() {
 src_install() {
 
 	make DESTDIR=${D} MYDATADIR=/usr/share/doc/${P} install || die
-	dodoc COPYING README* ChangeLog THANKS
+	dodoc README* ChangeLog THANKS
 
 	if use java; then
 		cd javanative
