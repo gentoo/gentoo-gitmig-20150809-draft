@@ -1,37 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1dd8a42b5dc36b71a4fd29ecad6e6c81 ChangeLog 5706
-RMD160 a1a04be938cf5c1ccdb862cdaeba3446a0037f69 ChangeLog 5706
-SHA256 6fa3d003c60c6fd1dd55c4c2d56b28f842ef52018044836e08775e8955cb491e ChangeLog 5706
+MD5 63c5028410d7fe8608e27a9b120236cd ChangeLog 5809
 MD5 136f0f72a38f70865f50397f0a5a3412 files/0.7.2-libcap.patch 910
-RMD160 21292ff64730826431d78d1f96a1909cb2c8997c files/0.7.2-libcap.patch 910
-SHA256 4d142f836bcbcbfcf21412d891335e6d4351ebced3c5a699e493e5f6a4599701 files/0.7.2-libcap.patch 910
 MD5 7d8048c5acbc16a530110855e138fb4b files/digest-pinentry-0.7.2 244
-RMD160 6a932f6a2c823cd50888292148c57a74dfe696f6 files/digest-pinentry-0.7.2 244
-SHA256 bbae1d7066b9be143e20e3537349feb9f7f3eaa6e0ef1aa12289140f1693c2d5 files/digest-pinentry-0.7.2 244
 MD5 7d8048c5acbc16a530110855e138fb4b files/digest-pinentry-0.7.2-r2 244
-RMD160 6a932f6a2c823cd50888292148c57a74dfe696f6 files/digest-pinentry-0.7.2-r2 244
-SHA256 bbae1d7066b9be143e20e3537349feb9f7f3eaa6e0ef1aa12289140f1693c2d5 files/digest-pinentry-0.7.2-r2 244
 MD5 7d8048c5acbc16a530110855e138fb4b files/digest-pinentry-0.7.2-r3 244
-RMD160 6a932f6a2c823cd50888292148c57a74dfe696f6 files/digest-pinentry-0.7.2-r3 244
-SHA256 bbae1d7066b9be143e20e3537349feb9f7f3eaa6e0ef1aa12289140f1693c2d5 files/digest-pinentry-0.7.2-r3 244
 MD5 f5775272cd7e22ae38566107c416c1e4 metadata.xml 275
-RMD160 7aca4724ede81b0eaad9b4536f00a6a805727cef metadata.xml 275
-SHA256 1e9c7343efc06a4d4143421f4bf3740c30f71ed6ce5011231505e7e911f31548 metadata.xml 275
 MD5 bd4879c422d925ecce8ef6dc7d3d9c11 pinentry-0.7.2-r2.ebuild 1869
-RMD160 d50d7287679a99a5a050066a055e94766daa78ec pinentry-0.7.2-r2.ebuild 1869
-SHA256 48081544bd89860fe48df7c25937f0228cdb0a0196271cf6b012f7d5d4492985 pinentry-0.7.2-r2.ebuild 1869
-MD5 98b26dcd829ed5ea15c47f9fd6c07988 pinentry-0.7.2-r3.ebuild 2141
-RMD160 966adcb0893879ea61471a51260b4a9f8f823637 pinentry-0.7.2-r3.ebuild 2141
-SHA256 400fcb2f735c1ae2ed902ab53dfe7483b33f2677a349af6255f91f0d13afcf6e pinentry-0.7.2-r3.ebuild 2141
+MD5 83913e47c7424b26ed48daa6b1ffb10f pinentry-0.7.2-r3.ebuild 2147
 MD5 0807a36278225cc9824f5466b1a0e0e6 pinentry-0.7.2.ebuild 2023
-RMD160 edf3dfb26806d79d38059fb6295f5b4e0bebd7d9 pinentry-0.7.2.ebuild 2023
-SHA256 cf5fedeac334a77d2ca85f0c04c2bbebda06b39cf6b5ff75b1e72a4d2410786f pinentry-0.7.2.ebuild 2023
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD/j3gI1lqEGTUzyQRAtHPAJ9jCtDr846iopJzhlZISgnlFoaOEwCg305l
-CmG6UmOF05j5GiHrIXZV2Nc=
-=t9OE
------END PGP SIGNATURE-----
