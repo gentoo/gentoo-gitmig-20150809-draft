@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libvformat
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvformat/ChangeLog,v 1.1 2006/04/22 08:29:10 mrness Exp $
+
+*libvformat-1.13 (22 Apr 2006)
+
+  22 Apr 2006; Alin Nastac <mrness@gentoo.org>
+  +files/libvformat-nodoc.patch, +metadata.xml, +libvformat-1.13.ebuild:
+  Initial import from bug #102224.
+
