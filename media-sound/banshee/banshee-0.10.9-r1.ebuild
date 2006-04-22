@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.9-r1.ebuild,v 1.3 2006/04/08 15:00:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.9-r1.ebuild,v 1.4 2006/04/22 16:51:35 metalgod Exp $
 
 inherit eutils gnome2 mono
 
@@ -61,7 +61,7 @@ pkg_setup() {
 		die "sys-apps/dbus is missing the .NET binding."
 	fi
 
-	if ! built_with_use net-dns/avahi mono ; then
+	if use daap && ! built_with_use net-dns/avahi mono ; then
 		echo
 		eerror "In order to compile banshee with daap support"
 		eerror "you need to have net-dns/avahi emerged"
