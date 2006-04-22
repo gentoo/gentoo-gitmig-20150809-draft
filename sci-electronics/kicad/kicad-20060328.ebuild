@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20060328.ebuild,v 1.2 2006/04/20 17:25:10 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20060328.ebuild,v 1.3 2006/04/22 20:15:19 calchan Exp $
 
 inherit eutils wxwidgets
 
@@ -64,19 +64,19 @@ src_install() {
 	make_desktop_entry kicad Kicad kicad.png Electronics
 
 	# kicad requires everything to be in the same place
-	cp -a library ${D}/usr/lib/${PN}
-	cp -a internat ${D}/usr/lib/${PN}
-	cp -a template ${D}/usr/lib/${PN}
-	cp -a help ${D}/usr/lib/${PN}
+	cp -pPR library ${D}/usr/lib/${PN}
+	cp -pPR internat ${D}/usr/lib/${PN}
+	cp -pPR template ${D}/usr/lib/${PN}
+	cp -pPR help ${D}/usr/lib/${PN}
 	if ! use minimal ; then
-		cp -a ${WORKDIR}/kicad/library ${D}/usr/lib/${PN}
-		cp -a ${WORKDIR}/kicad/modules ${D}/usr/lib/${PN}
-		cp -a ${WORKDIR}/kicad/template ${D}/usr/lib/${PN}
+		cp -pPR ${WORKDIR}/kicad/library ${D}/usr/lib/${PN}
+		cp -pPR ${WORKDIR}/kicad/modules ${D}/usr/lib/${PN}
+		cp -pPR ${WORKDIR}/kicad/template ${D}/usr/lib/${PN}
 		if use doc ; then
-			cp -a ${WORKDIR}/kicad/help ${D}/usr/lib/${PN}
+			cp -pPR ${WORKDIR}/kicad/help ${D}/usr/lib/${PN}
 		fi
 		if use examples ; then
-			cp -a ${WORKDIR}/kicad/demos ${D}/usr/lib/${PN}
+			cp -pPR ${WORKDIR}/kicad/demos ${D}/usr/lib/${PN}
 		fi
 	fi
 	dodoc author.txt copyright.txt news.txt contrib.txt version.txt
