@@ -1,23 +1,64 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 397a698313fdb032e973b37771f2773f ChangeLog 7241
-MD5 6cf2ecfcee6a47d187e99cc1fa3081f0 files/digest-heartbeat-1.2.3 68
-MD5 6cf2ecfcee6a47d187e99cc1fa3081f0 files/digest-heartbeat-1.2.3-r1 68
-MD5 6cf2ecfcee6a47d187e99cc1fa3081f0 files/digest-heartbeat-1.2.3-r2 68
-MD5 cae8a5342b1daa811a2421e405972387 files/digest-heartbeat-2.0.4 68
+AUX heartbeat-1.2.3-lvm.patch 1660 RMD160 51a306157b3b17deb5f54bf3a888a39058022c94 SHA1 5cf699b3e83c0d29ed001fbef0b1e81ea784ad9d SHA256 43b7751eae64fa2ec8dd4ed3c38c43acfff46a7d572fb5dd953f55719441ba4b size 1660
 MD5 4382b0b2d64b5483957114b7123e4a94 files/heartbeat-1.2.3-lvm.patch 1660
+RMD160 51a306157b3b17deb5f54bf3a888a39058022c94 files/heartbeat-1.2.3-lvm.patch 1660
+SHA256 43b7751eae64fa2ec8dd4ed3c38c43acfff46a7d572fb5dd953f55719441ba4b files/heartbeat-1.2.3-lvm.patch 1660
+AUX heartbeat-1.2.3-misc_security_fixes.patch 7756 RMD160 373a1091443afdf6d2a376293b20b3e125aac982 SHA1 9da2d220e845dc85c9a75bfda0f94e63e86e249e SHA256 5c56152c7283f928eba5b39690bf198685447b54bcf66a25c8a9bd9543a37940 size 7756
 MD5 30657e79d1e3630eed837297364fe17c files/heartbeat-1.2.3-misc_security_fixes.patch 7756
+RMD160 373a1091443afdf6d2a376293b20b3e125aac982 files/heartbeat-1.2.3-misc_security_fixes.patch 7756
+SHA256 5c56152c7283f928eba5b39690bf198685447b54bcf66a25c8a9bd9543a37940 files/heartbeat-1.2.3-misc_security_fixes.patch 7756
+AUX heartbeat-init 821 RMD160 31e45797c2c9f08e23845262f3afd26aa8c8d8a1 SHA1 19710874f56041f0eb39ac2287aa3f3883c2e8f5 SHA256 f478a656df5ebd43ae2612a9dacb54aeb2fe25e30dca989335d31a94a1fea5bf size 821
 MD5 343f80e3711eec80114c5ca01d38b8b0 files/heartbeat-init 821
+RMD160 31e45797c2c9f08e23845262f3afd26aa8c8d8a1 files/heartbeat-init 821
+SHA256 f478a656df5ebd43ae2612a9dacb54aeb2fe25e30dca989335d31a94a1fea5bf files/heartbeat-init 821
+DIST heartbeat-1.2.3.tar.gz 1772513 size 1772513
+DIST heartbeat-2.0.4.tar.gz 2807110 size 2807110
+EBUILD heartbeat-1.2.3-r1.ebuild 2100 RMD160 ad770c6f19db4f66464fb9607cacac15be85993a SHA1 fe084e17812f5147a6ff6188fb4a95e5a901734f SHA256 4a9cd43da95d4acc27ef2052834455b7204478db711057f01ea704db2418a4b2 size 2100
 MD5 4a49236960a441f4fecb1530de623e76 heartbeat-1.2.3-r1.ebuild 2100
+RMD160 ad770c6f19db4f66464fb9607cacac15be85993a heartbeat-1.2.3-r1.ebuild 2100
+SHA256 4a9cd43da95d4acc27ef2052834455b7204478db711057f01ea704db2418a4b2 heartbeat-1.2.3-r1.ebuild 2100
+EBUILD heartbeat-1.2.3-r2.ebuild 2154 RMD160 6d6d68390bcac5b14faf8d4d1fece1242e19382e SHA1 949bd104fb51b9ed7137aea863f4e4aea3d2438c SHA256 eaf875004987a4a2e8a66e075520376f24d49a12d62ab794a3cb73fac17647bc size 2154
 MD5 f2b532351a9e4594ec5489b3855a2737 heartbeat-1.2.3-r2.ebuild 2154
+RMD160 6d6d68390bcac5b14faf8d4d1fece1242e19382e heartbeat-1.2.3-r2.ebuild 2154
+SHA256 eaf875004987a4a2e8a66e075520376f24d49a12d62ab794a3cb73fac17647bc heartbeat-1.2.3-r2.ebuild 2154
+EBUILD heartbeat-1.2.3.ebuild 1880 RMD160 8400023513dff095beb35aece475a06552759506 SHA1 cf546fd7664ffbb0b7c412d436e81366fb696bd4 SHA256 4cf500c1d8a3b6696a1d21776c3d8507565bfb96ca80ef0f6abccc5612f4ef52 size 1880
 MD5 89f57373b255558325c63fbdd7f578f2 heartbeat-1.2.3.ebuild 1880
-MD5 7878a3befe2aded4dab6ee8c1f4f6c26 heartbeat-2.0.4.ebuild 2659
+RMD160 8400023513dff095beb35aece475a06552759506 heartbeat-1.2.3.ebuild 1880
+SHA256 4cf500c1d8a3b6696a1d21776c3d8507565bfb96ca80ef0f6abccc5612f4ef52 heartbeat-1.2.3.ebuild 1880
+EBUILD heartbeat-2.0.4.ebuild 2664 RMD160 95e5b03413c89059c70066a9cf382ef93836c266 SHA1 90d5b7593ac520dbea6d0229595a7d87b8abb463 SHA256 916dcc16e48e3cd7f8c489e36a5c7a5af2595a88158b0ba2fb28595927b6ecbd size 2664
+MD5 7758875c1a9e5f1d66933e6dbe1b8905 heartbeat-2.0.4.ebuild 2664
+RMD160 95e5b03413c89059c70066a9cf382ef93836c266 heartbeat-2.0.4.ebuild 2664
+SHA256 916dcc16e48e3cd7f8c489e36a5c7a5af2595a88158b0ba2fb28595927b6ecbd heartbeat-2.0.4.ebuild 2664
+MISC ChangeLog 7241 RMD160 40d0d1b4d909e2d75a8e23a7037c6dafcab93bef SHA1 9ce747bcfd8d020036fd17adbf6310818e9107fc SHA256 e55b7ddf6b1fdfd9467590179f5857f42dafc5c97f72c9d78cd037b3fb9ef686 size 7241
+MD5 397a698313fdb032e973b37771f2773f ChangeLog 7241
+RMD160 40d0d1b4d909e2d75a8e23a7037c6dafcab93bef ChangeLog 7241
+SHA256 e55b7ddf6b1fdfd9467590179f5857f42dafc5c97f72c9d78cd037b3fb9ef686 ChangeLog 7241
+MISC metadata.xml 339 RMD160 503ff4e79821bcf9851a8a6f8df0d43b3be8aa99 SHA1 7af6b38347db8330de0f27dbe2677156b524ebf9 SHA256 bb453c6b308cf1dfcbd818320ea43b654620a2b28dc24296c35367d803062635 size 339
 MD5 469a4f6cad0c54b4faed31a2852af816 metadata.xml 339
+RMD160 503ff4e79821bcf9851a8a6f8df0d43b3be8aa99 metadata.xml 339
+SHA256 bb453c6b308cf1dfcbd818320ea43b654620a2b28dc24296c35367d803062635 metadata.xml 339
+MD5 6cf2ecfcee6a47d187e99cc1fa3081f0 files/digest-heartbeat-1.2.3 68
+RMD160 967410361c3395b8a334380bd8f86655e4ea5394 files/digest-heartbeat-1.2.3 68
+SHA256 6db6cdac3b40c6a8f38871acd8d0cb5201ecd1bb1784ca627fb47d1c5dc32570 files/digest-heartbeat-1.2.3 68
+size 68 files/digest-heartbeat-1.2.3 68
+MD5 6cf2ecfcee6a47d187e99cc1fa3081f0 files/digest-heartbeat-1.2.3-r1 68
+RMD160 967410361c3395b8a334380bd8f86655e4ea5394 files/digest-heartbeat-1.2.3-r1 68
+SHA256 6db6cdac3b40c6a8f38871acd8d0cb5201ecd1bb1784ca627fb47d1c5dc32570 files/digest-heartbeat-1.2.3-r1 68
+size 68 files/digest-heartbeat-1.2.3-r1 68
+MD5 6cf2ecfcee6a47d187e99cc1fa3081f0 files/digest-heartbeat-1.2.3-r2 68
+RMD160 967410361c3395b8a334380bd8f86655e4ea5394 files/digest-heartbeat-1.2.3-r2 68
+SHA256 6db6cdac3b40c6a8f38871acd8d0cb5201ecd1bb1784ca627fb47d1c5dc32570 files/digest-heartbeat-1.2.3-r2 68
+size 68 files/digest-heartbeat-1.2.3-r2 68
+MD5 cae8a5342b1daa811a2421e405972387 files/digest-heartbeat-2.0.4 68
+RMD160 11624b2679b69202b8c649fc92b696cadb8f5983 files/digest-heartbeat-2.0.4 68
+SHA256 94851e3c0988981d02d6134499c781530d41abb4ae31d0bc9bac5bf198337794 files/digest-heartbeat-2.0.4 68
+size 68 files/digest-heartbeat-2.0.4 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEQSg5gMUyd/cdjWsRAjW7AJ9lLPnCi8umZHOFcMdfC9lnyyHbLQCgjd5k
-un0/M7oKOVQtdQAmvF5panA=
-=Arjb
+iD8DBQFEScTv2+ySkm8kpY0RAl+4AJ40KHSry8S5dZllAtNFCkk+nEOCSACgieSP
+Ng8Rhiuedx6//3NLPm6ikLo=
+=8wQF
 -----END PGP SIGNATURE-----
