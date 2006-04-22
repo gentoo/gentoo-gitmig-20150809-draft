@@ -1,4 +1,4 @@
-MD5 5dcb96e669feb5d66cc8d6f0a61f3a62 ChangeLog 17396
+MD5 6575ab0041ca441f658234e3f39d28a3 ChangeLog 17494
 MD5 529d6ae5875e5eff1f3ec62dd5234e81 files/digest-kdevelop-3.1.2 68
 MD5 3e9fd708ae657cffd1d68041f52aabc8 files/digest-kdevelop-3.2.1-r1 68
 MD5 a94b1b00d38f496db64b8fcbd85bbb9b files/digest-kdevelop-3.2.2 68
@@ -21,5 +21,5 @@ MD5 dec73ae3a6b2e0c29b673b50e83e7f49 kdevelop-3.2.3-r1.ebuild 2999
 MD5 9a9549087cbbd316790c894ca0c96ce3 kdevelop-3.2.3.ebuild 2882
 MD5 09f0712642adef858165f66654af4131 kdevelop-3.3.0.ebuild 2968
 MD5 9f79d94a4a2ea9d4457ab62fae6d7f56 kdevelop-3.3.1.ebuild 2841
-MD5 5bdba86137be449f8321f3e8eec959b0 kdevelop-3.3.2.ebuild 3040
+MD5 a628d3c612a56c75a5fdea16e18636be kdevelop-3.3.2.ebuild 3061
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
