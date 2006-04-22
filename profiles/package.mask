@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5257 2006/04/22 13:19:38 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5258 2006/04/22 14:34:02 brix Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -396,11 +396,6 @@ sys-apps/systrace
 >=x11-drivers/xf86-video-via-0.2.1
 >=x11-drivers/xf86-video-vmware-10.13.0
 >=x11-drivers/xf86-video-voodoo-1.1.0
-
-# Henrik Brix Andersen <brix@gentoo.org> (14 Apr 2006)
-# Masked due to segmentation fault in "iwconfig rate", bug #129871
-=net-wireless/wireless-tools-29_pre7
-=net-wireless/wireless-tools-29_pre8
 
 # Francesco Riosa <vivo@gentoo.org> (13 Dec 2005)
 =dev-db/mysql-4.1.14
