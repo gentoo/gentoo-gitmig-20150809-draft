@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/udhcp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.21 2006/04/07 22:31:26 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.22 2006/04/22 18:12:25 uberlord Exp $
+
+*udhcp-0.9.9_pre20041216-r3 (22 Apr 2006)
+
+  22 Apr 2006; Roy Marples <uberlord@gentoo.org>
+  +files/udhcp-0.9.9_pre20041216-env.patch, files/udhcpc.sh,
+  +udhcp-0.9.9_pre20041216-r3.ebuild:
+  Adds the --env,-e option to pass environment variables to the setup script.
+  This will be used by baselayout-1.12.0_pre18 and later.
 
 *udhcp-0.9.9_pre20041216-r2 (07 Apr 2006)
 

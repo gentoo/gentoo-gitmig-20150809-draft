@@ -1,7 +1,8 @@
 #!/bin/sh
 # udhcp setup script
-# Ideally this should be in /etc/udhcp, but Spanky insists it belongs in
-# rcscripts as it's only baselayout that forces it. Ce la vie.
+
+# Ideally this should be the defalt udhcpc script, but I doubt upstream
+# will accept it.
 
 PATH=/bin:/usr/bin:/sbin:/usr/sbin
 
@@ -58,7 +59,6 @@ update_interface()
 
 update_routes()
 {
-	[[ -n "${PEER_ROUTERS}" ]] && [[ "${PEER_ROUTERS}" != "yes" ]] && return
 	while route del default dev "${interface}" 2>/dev/null ; do
 		:
 	done
@@ -76,10 +76,6 @@ deconfig()
 	ifconfig "${interface}" 0.0.0.0
 	[[ -x /sbin/resolvconf ]] && resolvconf -d "${interface}"
 }
-
-# As udhcp will not pass as any custom env vars, we load this file instead.
-[[ -e /var/run/udhcpc-"${interface}".conf ]] \
-	&& . /var/run/udhcpc-"${interface}".conf
 
 case "$1" in
 	bound|renew)
