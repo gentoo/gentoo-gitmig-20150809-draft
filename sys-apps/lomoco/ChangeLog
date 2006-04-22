@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lomoco
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/ChangeLog,v 1.2 2006/04/22 10:28:18 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/ChangeLog,v 1.3 2006/04/22 12:15:04 tcort Exp $
+
+  22 Apr 2006; Thomas Cort <tcort@gentoo.org> lomoco-1.0.ebuild:
+  Added ~alpha keyword. Tested by Mike Hlavac <mike@flyingpenguins.org>.
 
   22 Apr 2006; Benedikt Boehm <hollow@gentoo.org> lomoco-1.0.ebuild:
   fix #130777
