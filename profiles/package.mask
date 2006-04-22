@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5262 2006/04/22 17:25:13 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5263 2006/04/22 18:34:43 zmedico Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -405,10 +405,6 @@ sys-apps/systrace
 # GCC 4.2 snapshots; use with extreme care and only report bugs if you have
 # a patch
 =sys-devel/gcc-4.2*
-
-# Zac Medico <zmedico@gentoo.org> (11 Apr 2006)
-# New Manifest2 support (see glep 44) needs testing.
->=sys-apps/portage-2.1_pre8
 
 # Jonathan Smith <smithj@gentoo.org> (19 Apr 2006)
 # Masked due to masked dependencies (>=glib-2.9). see bug #126830
