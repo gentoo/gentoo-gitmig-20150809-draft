@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r3.ebuild,v 1.5 2006/04/22 16:32:11 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r3.ebuild,v 1.6 2006/04/22 20:10:24 dertobi123 Exp $
 
 inherit eutils gnustep-funcs flag-o-matic multilib
 
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~mips ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ~mips ppc ~sparc x86"
 
 if use gnustep; then
 	egnustep_install_domain "Local"
