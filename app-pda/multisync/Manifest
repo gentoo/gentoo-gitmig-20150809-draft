@@ -1,31 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 038c38450ee60ccc4440aad05fb51dd4 ChangeLog 5296
-RMD160 ea122ff3568e7da353f56f7b0154e50f6f606532 ChangeLog 5296
-SHA256 58c883698d2a138276de43362ca6835a7b0ebe0786f20038f874662c13aae2d5 ChangeLog 5296
+MD5 78b3d0adb3631bf7502ae32a8f35d9be ChangeLog 5517
 MD5 c668aca6eec704faa03632e0588bbe3e files/digest-multisync-0.83_pre20050414-r2 71
-RMD160 a69fb0f02fb31237a39196d5cca8530d20e52400 files/digest-multisync-0.83_pre20050414-r2 71
-SHA256 99d0e08768d85d3ec7a8fb78a88fba2cf7bdaa8b0208854381017bca7c7522dc files/digest-multisync-0.83_pre20050414-r2 71
 MD5 c668aca6eec704faa03632e0588bbe3e files/digest-multisync-0.83_pre20050414-r3 71
-RMD160 a69fb0f02fb31237a39196d5cca8530d20e52400 files/digest-multisync-0.83_pre20050414-r3 71
-SHA256 99d0e08768d85d3ec7a8fb78a88fba2cf7bdaa8b0208854381017bca7c7522dc files/digest-multisync-0.83_pre20050414-r3 71
+MD5 c668aca6eec704faa03632e0588bbe3e files/digest-multisync-0.83_pre20050414-r4 71
+MD5 06a3cc9f82ee514d66cd7b2a36f558f3 files/multisync-0.83_pre20050414-evo2.patch 626
 MD5 e1a658a1c5b7926e4f64119c14b71024 files/multisync-gcc4.patch 4578
-RMD160 071dfdcb731f81ebf64b6589392f5fa4dea944d3 files/multisync-gcc4.patch 4578
-SHA256 6e5e34e14709276b72f4efff6ec8aa622d5d5727fc0010673ab24a9b65ce0922 files/multisync-gcc4.patch 4578
 MD5 4eb51641834063e986569d108f657719 metadata.xml 450
-RMD160 cb27bb1e32585a1eea51391b3e46a4906535bdc7 metadata.xml 450
-SHA256 7bd44367e407f89392bf88f1e9de93e92b1eeeff4dc82e1901437ec1daa06ad0 metadata.xml 450
 MD5 1b02a3193fee90560f759fa0f4f9e33e multisync-0.83_pre20050414-r2.ebuild 3331
-RMD160 d2edd0a52b5e20afc4fc580a86a1fcfb8139b5e2 multisync-0.83_pre20050414-r2.ebuild 3331
-SHA256 2e8eb8b59f578dcf3618d133617c6a5da7d8fc9b1f0a37b67499f8b7bc8fed7b multisync-0.83_pre20050414-r2.ebuild 3331
 MD5 5d2b9955aa13d8e4a696aec3a3f2a5dc multisync-0.83_pre20050414-r3.ebuild 3541
-RMD160 0081c985228b1a13deb4e84db5d69df697ee61bf multisync-0.83_pre20050414-r3.ebuild 3541
-SHA256 f67c3bdaa3da6f8664cad6dd0c918026b01a479ab5a0c73a437f05c6489125b1 multisync-0.83_pre20050414-r3.ebuild 3541
+MD5 5bb118b7db83f9d19ce9d5c18492a679 multisync-0.83_pre20050414-r4.ebuild 3724
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEGbGKub4+zaPCR/oRAmWtAJ0dKghmuLMHIF7yvbza3LtUAI+RNwCfYUb6
-1+xYfb2pqo+zBVV47nPT1G0=
-=Tc0X
+iD8DBQFESe7FjG8pv1lIUX4RAqqSAJ0fMQU61AYRUEKZBZ0ivMAyiBs4LACgyvRD
+jx0w1wEe0x3MO1DxJoOhXKg=
+=1V6A
 -----END PGP SIGNATURE-----

@@ -1,0 +1,13 @@
+diff -ruaN multisync.orig/plugins/evolution2_sync/src/Makefile.am multisync/plugins/evolution2_sync/src/Makefile.am
+--- multisync.orig/plugins/evolution2_sync/src/Makefile.am	2006-01-31 07:39:29.000000000 +1100
++++ multisync/plugins/evolution2_sync/src/Makefile.am	2006-01-31 07:39:15.000000000 +1100
+@@ -22,7 +22,7 @@
+ 	callbacks.c
+ 
+ 
+-libevolution2_sync_la_LDFLAGS = @EVO_LDFLAGS@ -avoid-version -export-dynamic -module
+-libevolution2_sync_la_LIBADD = @PACKAGE_LIBS@ -lpthread @EVO_LIBS@ 
++libevolution2_sync_la_LDFLAGS = -avoid-version -export-dynamic -module
++libevolution2_sync_la_LIBADD = @PACKAGE_LIBS@ -lpthread 
+ 
+ 
