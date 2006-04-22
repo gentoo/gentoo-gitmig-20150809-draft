@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060415.ebuild,v 1.10 2006/04/20 23:46:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060415.ebuild,v 1.11 2006/04/22 22:41:26 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -247,7 +247,7 @@ export LINGUAS="en"
 
 
 	local myconf="--disable-external-faad --disable-tv-bsdbt848"
-	myconf="--disable-external-vidix"
+	myconf="${myconf} --disable-external-vidix"
 	################
 	#Optional features#
 	###############
@@ -258,7 +258,7 @@ export LINGUAS="en"
 
 	myconf="${myconf} $(use_enable bidi fribidi)"
 	if use unicode; then
-		myconf="${myconf} --charset=utf8"
+		myconf="${myconf} --charset=UTF-8"
 	fi
 	myconf="${myconf} $(use_enable cdparanoia)"
 	if use dvd; then
