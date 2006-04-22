@@ -1,40 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 949f78cda84b2f3ab9f39e35dd95678c ChangeLog 7747
-RMD160 229cf804dcb0cc849337c192f99bac7c7c14b1c1 ChangeLog 7747
-SHA256 a2ff28d0b59b978d0d8925cc611eb82b4f95cecc1e6bb755a9424139041b80a1 ChangeLog 7747
+MD5 409d5f6e2aee2d3a6b39bf4a4aab4fc7 ChangeLog 7842
 MD5 5f893748301a580b15184398cf6613bc files/digest-xfce4-iconbox-4.2.1 71
-RMD160 9b03fed6b64ca6f1872fc43f8382ccc808e9fa3a files/digest-xfce4-iconbox-4.2.1 71
-SHA256 ccdda3bc5f25196aff96823a58fa28cddfaee08f930872eb642f9d800b30474f files/digest-xfce4-iconbox-4.2.1 71
 MD5 aa53567f90f6508bc2d48db4fdeda41c files/digest-xfce4-iconbox-4.2.2 71
-RMD160 59270e165d01817c1e93f63f2bed9b204b94affc files/digest-xfce4-iconbox-4.2.2 71
-SHA256 305e665a8d8f834d51c3ef6554c67888d4e6300fd12251ff900f1f2f4d088f31 files/digest-xfce4-iconbox-4.2.2 71
 MD5 aa53567f90f6508bc2d48db4fdeda41c files/digest-xfce4-iconbox-4.2.2-r1 71
-RMD160 59270e165d01817c1e93f63f2bed9b204b94affc files/digest-xfce4-iconbox-4.2.2-r1 71
-SHA256 305e665a8d8f834d51c3ef6554c67888d4e6300fd12251ff900f1f2f4d088f31 files/digest-xfce4-iconbox-4.2.2-r1 71
 MD5 a380e4fa96c66f556f086da63b3757ec files/digest-xfce4-iconbox-4.2.3 71
-RMD160 38d09f8861155063255781786a30a1295f431d3c files/digest-xfce4-iconbox-4.2.3 71
-SHA256 82669ecb46f89b714e7b3477e2756afaa34f7b36a9cc99c89ea2d3c13a9e6e1f files/digest-xfce4-iconbox-4.2.3 71
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
-SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 1e9dbbf03132ef8c5abfbdabe720614d xfce4-iconbox-4.2.1.ebuild 394
-RMD160 9115a0f78585f7ad35f6543269b412bbee3ac8d9 xfce4-iconbox-4.2.1.ebuild 394
-SHA256 cb7a75427ddd86dc616d7aa6413eaf33018c3a3349c532c4ac3b2091769759ac xfce4-iconbox-4.2.1.ebuild 394
 MD5 def301c52eb8072ff5ab441efe3fdbf5 xfce4-iconbox-4.2.2-r1.ebuild 537
-RMD160 bd6a4b22df0730c01ebc78e3424d23a7b057f8f5 xfce4-iconbox-4.2.2-r1.ebuild 537
-SHA256 e87a2b83be42c7f11c2714f0e75d95bac78be776368bc7ac3e430c0a1b4dd9f6 xfce4-iconbox-4.2.2-r1.ebuild 537
 MD5 3114250c061b866fa14c1c134691392f xfce4-iconbox-4.2.2.ebuild 381
-RMD160 b4b11005da1dd8335ef3f8000acb086caf56bc1f xfce4-iconbox-4.2.2.ebuild 381
-SHA256 5541b8c625a2c382783846c9c90ec55c1141241c255ddac8ed41f304cbe907e0 xfce4-iconbox-4.2.2.ebuild 381
-MD5 2dd1ceb64ac1afcaa717d0bb02eacfc9 xfce4-iconbox-4.2.3.ebuild 532
-RMD160 3ee6b34887bc56df653a143789bdc6a480b2290b xfce4-iconbox-4.2.3.ebuild 532
-SHA256 b250c35fbfceed3ac77c47a334683c2cba63518c2272e23fbc452eaa71986eb8 xfce4-iconbox-4.2.3.ebuild 532
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFER6Tk0K3RJaeXx6cRAryTAKCYZTnc5awnUfoXtr5S4O/dxICrIACeNGhh
-OLyDiErxMZ5KsOMt2X86MLY=
-=esRN
------END PGP SIGNATURE-----
+MD5 669ae2e06eeda4030c7a9ce3c14e3597 xfce4-iconbox-4.2.3.ebuild 530

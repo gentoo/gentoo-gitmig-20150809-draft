@@ -1,40 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 34fe97fd6caffff737db00f215561326 ChangeLog 5764
-RMD160 5ad106f0cb7fd7ed87b276fa9a7df998f59073bc ChangeLog 5764
-SHA256 b03731e3aca01a2938fef6f5ce46d1ec9670772d93ff1337d4bd722f33ed41c6 ChangeLog 5764
+MD5 53c614508919ad79e9e9154e80d916de ChangeLog 5856
 MD5 0047196ef8e2fe442f00cdff0c61907f files/digest-xfcalendar-4.2.1 68
-RMD160 a1451fa169fc2662e1b5f24997320a52a28fbddd files/digest-xfcalendar-4.2.1 68
-SHA256 ab3f458b3dbe95829ffcf7740050412dc8f4215849e87913ffa78f1dc982d3fa files/digest-xfcalendar-4.2.1 68
 MD5 4571c4e24da4f2fb380ae0bc37fe5435 files/digest-xfcalendar-4.2.2 68
-RMD160 09595b4aed0d397ca92fa9fe6c9f0c8d4241392a files/digest-xfcalendar-4.2.2 68
-SHA256 a8ac2d1bb66d9e226c696e55f4c1beb6b891097bf26785f2d3a0d22380c19a39 files/digest-xfcalendar-4.2.2 68
 MD5 4571c4e24da4f2fb380ae0bc37fe5435 files/digest-xfcalendar-4.2.2-r1 68
-RMD160 09595b4aed0d397ca92fa9fe6c9f0c8d4241392a files/digest-xfcalendar-4.2.2-r1 68
-SHA256 a8ac2d1bb66d9e226c696e55f4c1beb6b891097bf26785f2d3a0d22380c19a39 files/digest-xfcalendar-4.2.2-r1 68
 MD5 c5c6c905738dcc3d9f7829c13841a2c8 files/digest-xfcalendar-4.2.3 68
-RMD160 00d7dec09ad7af55e32e46cd680e34083566cdad files/digest-xfcalendar-4.2.3 68
-SHA256 b425daabb07fa922ac4fd69980887c44475a2273a8e5733d47c265f999b744cd files/digest-xfcalendar-4.2.3 68
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
-SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 48d442e83461de6354f1854c9f115f6c xfcalendar-4.2.1.ebuild 386
-RMD160 7830671a0226ef0823affbce87b760fbd719f4f3 xfcalendar-4.2.1.ebuild 386
-SHA256 efbf7756040287ad6d015609791247fafc1509e7108ff7a4fdab8ecc947448a7 xfcalendar-4.2.1.ebuild 386
 MD5 25a6f870d9aa82b1017fbe9ef31c72fa xfcalendar-4.2.2-r1.ebuild 475
-RMD160 f2ddf2e2be1d7ec7e9b6d08c10bfbb9df2d9f821 xfcalendar-4.2.2-r1.ebuild 475
-SHA256 e54c4a2ce963ac88f35f55e9eb764da2e5c5d2c836cff7c8550f2455555cce61 xfcalendar-4.2.2-r1.ebuild 475
 MD5 a9b73361d532a91a9eff64cb7cf8a613 xfcalendar-4.2.2.ebuild 373
-RMD160 1fa4905707ec97c49815c5b0e175c1631550066b xfcalendar-4.2.2.ebuild 373
-SHA256 afde42ced97f048a2a383fa311b0742e925488e186e6ab0e7e1bbda6e8ecdab3 xfcalendar-4.2.2.ebuild 373
-MD5 859d12a08d39e835b4718d09429c9c2f xfcalendar-4.2.3.ebuild 470
-RMD160 c2034696b92124d82f01e01671f3da4bfd70e06f xfcalendar-4.2.3.ebuild 470
-SHA256 cf23b3c0830f792e35c7c86a7f4e405261e9cc5e54c2350b910bb5f96578b588 xfcalendar-4.2.3.ebuild 470
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFER6FK0K3RJaeXx6cRAjZCAKDUNZ349NXqSrgjpX+4eypiFgvCKQCfRgoZ
-joPJrButlD/GoD6T/2kwLss=
-=RijE
------END PGP SIGNATURE-----
+MD5 e46ccc8b4913a95d96768e7888a4c806 xfcalendar-4.2.3.ebuild 468

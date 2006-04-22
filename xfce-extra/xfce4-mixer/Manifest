@@ -1,46 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 777604f9c8f024e704e674130dd7463a ChangeLog 7436
-RMD160 b4e7275ecfb40bf7280122086c9eae905239d9ce ChangeLog 7436
-SHA256 fd047ec5af812b2ad88b61c2896ed2dab8e857535eb2593115aa4bf8970f68cd ChangeLog 7436
+MD5 017af953c11b8f5b31184d60f0d0edee ChangeLog 7529
 MD5 2d86e2f0849e0f4d12d8f67113b15a30 files/digest-xfce4-mixer-4.2.1 69
-RMD160 19830d24d19b8f789d2455ecea8e27b185279b83 files/digest-xfce4-mixer-4.2.1 69
-SHA256 5f079409b36e199df49837d1f70c8db2745bd27835e242774b9dcae55e4d6cf1 files/digest-xfce4-mixer-4.2.1 69
 MD5 59cce41ce2bd2a76d432307069e945c1 files/digest-xfce4-mixer-4.2.2 69
-RMD160 acc0c760dc05b3db52c996737958b738aa7e9f14 files/digest-xfce4-mixer-4.2.2 69
-SHA256 86b6379d6b815cd32290057757e9f137f80650f0cd6209e69425a40a73a4f161 files/digest-xfce4-mixer-4.2.2 69
 MD5 59cce41ce2bd2a76d432307069e945c1 files/digest-xfce4-mixer-4.2.2-r1 69
-RMD160 acc0c760dc05b3db52c996737958b738aa7e9f14 files/digest-xfce4-mixer-4.2.2-r1 69
-SHA256 86b6379d6b815cd32290057757e9f137f80650f0cd6209e69425a40a73a4f161 files/digest-xfce4-mixer-4.2.2-r1 69
 MD5 1ffa2b67c1d2b7d1dc8b451ad217b2ad files/digest-xfce4-mixer-4.2.3 69
-RMD160 f717df8cfdca18dd9c03e42eb9cd0ce87475e2d4 files/digest-xfce4-mixer-4.2.3 69
-SHA256 4dcccc1dd2baf7ec856a4eb2a9d481556941a93dba9a2c04db919019ea2b6c8e files/digest-xfce4-mixer-4.2.3 69
 MD5 4e50402ba932b26e8b057ad88252047d files/digest-xfce4-mixer-4.3.90.1 265
-RMD160 174eaa050799f128dcf9bee50df27147872c8d85 files/digest-xfce4-mixer-4.3.90.1 265
-SHA256 3ed4cc3c678d9bb28633703a4a179521944951fcb224430d2fbe8853df16065e files/digest-xfce4-mixer-4.3.90.1 265
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
-SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 b418a028a7b4696efb082b3fd684a87e xfce4-mixer-4.2.1.ebuild 488
-RMD160 b7be1b664a259071e4a143c431f77b9c742e5750 xfce4-mixer-4.2.1.ebuild 488
-SHA256 67708ef576100f550dc7ed1f6f0ede578e29d67f09a55787fb6ffdd1a8fd1130 xfce4-mixer-4.2.1.ebuild 488
 MD5 bf8bf888946c2ddd184b5e3d99abc03f xfce4-mixer-4.2.2-r1.ebuild 633
-RMD160 1b4d384ea824ace91fcd9d7f95411b096f1c4e29 xfce4-mixer-4.2.2-r1.ebuild 633
-SHA256 c8167080f2d67f48f3f2d40d37d3116d2c8c8a2d749b79bdea055ecfc36a8921 xfce4-mixer-4.2.2-r1.ebuild 633
 MD5 d316a2da2b0c79bf77527cc4a6f03556 xfce4-mixer-4.2.2.ebuild 475
-RMD160 881d8debf2ab44fbef0df9e2635ff6043ce363fc xfce4-mixer-4.2.2.ebuild 475
-SHA256 3ad668ffd64a4b1c9c65ae04d46e49482c2b68e2df7094d4e988c3da8272686f xfce4-mixer-4.2.2.ebuild 475
-MD5 ee7821176cf079b9d9cd4dfcc7c85b2e xfce4-mixer-4.2.3.ebuild 628
-RMD160 4ac5820cce6fbc2953f9314b7086db24eb6a38fd xfce4-mixer-4.2.3.ebuild 628
-SHA256 1af96c7c5d19a950bcde01a883206dbb1286cae3d735f885c89e42b9ac911647 xfce4-mixer-4.2.3.ebuild 628
+MD5 6de288d8aac74bc878e42a130191e3dc xfce4-mixer-4.2.3.ebuild 626
 MD5 5f788359da976e5906917f4454d911b2 xfce4-mixer-4.3.90.1.ebuild 795
-RMD160 8a8706c3338a5c81c5bddb945c6465fbfb27a183 xfce4-mixer-4.3.90.1.ebuild 795
-SHA256 a8110451a4f7fae5f44c6e6039c5c29f165b93a4a97a33abd387ffe0b2e54c95 xfce4-mixer-4.3.90.1.ebuild 795
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFER6Lq0K3RJaeXx6cRAmIzAKCgMfPUoWh2FUBIj5kTUPXN+tTOkgCfUC+3
-7AtyJ6VgpU7DYcDG+AEbK9g=
-=i63P
------END PGP SIGNATURE-----
