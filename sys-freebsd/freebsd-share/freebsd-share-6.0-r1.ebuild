@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-6.0.ebuild,v 1.2 2006/04/14 15:47:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-6.0-r1.ebuild,v 1.1 2006/04/22 13:36:31 flameeyes Exp $
 
 inherit bsdmk freebsd
 
@@ -34,7 +34,7 @@ pkg_setup() {
 	mymakeopts="${mymakeopts} NO_SENDMAIL= "
 }
 
-REMOVE_SUBDIRS="mk termcap"
+REMOVE_SUBDIRS="mk termcap zoneinfo"
 
 PATCHES="${FILESDIR}/${PN}-5.3-doc-locations.patch
 	${FILESDIR}/${PN}-5.4-gentoo-skel.patch
