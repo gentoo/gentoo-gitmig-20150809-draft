@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker-trayiconlogger/kxdocker-trayiconlogger-1.0.0-r1.ebuild,v 1.1 2006/04/22 03:42:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker-trayiconlogger/kxdocker-trayiconlogger-1.0.0-r1.ebuild,v 1.2 2006/04/22 12:45:37 dragonheart Exp $
 
 inherit kde
 
@@ -13,6 +13,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=kde-misc/kxdocker-1.0.0a"
+DEPEND=">=kde-misc/kxdocker-1.1.4a"
 
 need-kde 3.2
