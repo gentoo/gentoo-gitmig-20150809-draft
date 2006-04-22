@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.2 2006/03/29 12:31:33 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.3 2006/04/22 14:41:19 hattya Exp $
 
 inherit elisp-common flag-o-matic kde-functions multilib subversion
 
@@ -88,7 +88,7 @@ src_install() {
 
 	rm doc/Makefile*
 
-	dodoc AUTHORS COPYING ChangeLog* INSTALL* NEWS README*
+	dodoc AUTHORS ChangeLog* NEWS README*
 	dodoc doc/*
 
 	local u
@@ -97,7 +97,7 @@ src_install() {
 		if use ${u}; then
 			cd ${u}
 			docinto ${u}
-			dodoc COPYING INSTALL README*
+			dodoc README*
 			cd -
 		fi
 	done

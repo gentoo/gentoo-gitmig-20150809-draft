@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-7100b-r1.ebuild,v 1.6 2006/03/28 22:14:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-7100b-r1.ebuild,v 1.7 2006/04/22 14:38:03 hattya Exp $
 
 inherit elisp-common eutils
 
@@ -45,7 +45,7 @@ src_install() {
 
 	rm doc/Makefile*
 
-	dodoc AUTHORS COPYING DIARY INSTALL NEWS README ChangeLog
+	dodoc AUTHORS DIARY NEWS README ChangeLog
 	dodoc doc/*
 
 }
