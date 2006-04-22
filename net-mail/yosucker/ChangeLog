@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/yosucker
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.38 2006/02/13 15:00:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.39 2006/04/22 19:36:26 ferdy Exp $
+
+*yosucker-75 (22 Apr 2006)
+
+  22 Apr 2006; Fernando J. Pereda <ferdy@gentoo.org> +yosucker-75.ebuild:
+  Version bump as per bug #130847
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org> yosucker-69.ebuild,
   yosucker-71.ebuild, yosucker-73.ebuild:
