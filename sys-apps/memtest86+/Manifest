@@ -1,21 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2b224b9eb80ef2610994b0403ba266f6 ChangeLog 5138
-MD5 7de34f897fafe96fb35d20b96ccfdd09 memtest86+-1.51.ebuild 2045
-MD5 aab46bfc1008c591ff6353e7338f63b4 memtest86+-1.55.ebuild 1993
-MD5 6e4a562860cd8556ea460ac4682d01e3 metadata.xml 259
-MD5 610ce7f512475074c91d3585f2da6a74 memtest86+-1.60.ebuild 1781
-MD5 73762eb0c8577fb2371feeeee57325e4 memtest86+-1.65.ebuild 1780
+MD5 dee73b94a1ead13866088eb23be5a583 ChangeLog 5250
+RMD160 87dc5e8de0ce12de35c2e8afac6bb03cb15a3ae5 ChangeLog 5250
+SHA256 f85af6019b79e940c34b049f49613b29420d6e63a9d4ba31e228f22c5872851e ChangeLog 5250
 MD5 114b43ff7481ea736edde3e009304dad files/digest-memtest86+-1.51 67
+RMD160 15ac35c35abde2b40dc89544768e5f31768f481c files/digest-memtest86+-1.51 67
+SHA256 4b1e103c5e226cbf2f4188d42a41a6d4b4c23147f7c54bd8b2d1a1f2215a6c90 files/digest-memtest86+-1.51 67
 MD5 b77e0941bf142a172b378ff9dc5170aa files/digest-memtest86+-1.55 67
-MD5 c9888397f49a7e1d3df3a2f5acd5cfad files/memtest86+-1.50-hardened.patch 802
+RMD160 fd4b09df24ac19b3beed5582f24e1736131e658b files/digest-memtest86+-1.55 67
+SHA256 6ac1b3a54f2ca22ce2fddeb4ad8643215fe969bef3f2694b7f1d396bdf369d18 files/digest-memtest86+-1.55 67
 MD5 4a457f7856f268bf4efef17ca548d351 files/digest-memtest86+-1.60 67
+RMD160 4e7c890843a19c380690188eb3e0ed334603f319 files/digest-memtest86+-1.60 67
+SHA256 c65a97e02db740f172b59ea08d3a48b5610f8e1cc05e25d51eb2d4e216288279 files/digest-memtest86+-1.60 67
 MD5 f15e70a0d97138728c77add0513422cc files/digest-memtest86+-1.65 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDSWiuwUpWvClEHQoRAuDqAJ4mbJswow+s0NRErhhJqYQayZ8bRgCfXar9
-cgAGLxrD8/akX58eZICjf+s=
-=esTU
------END PGP SIGNATURE-----
+RMD160 e699dd48a6230e26e331fdb7d608444a37415448 files/digest-memtest86+-1.65 67
+SHA256 90274e761b608c6a501bc833f9447355275c44b294c5bf621fce474c83559b0c files/digest-memtest86+-1.65 67
+MD5 c9888397f49a7e1d3df3a2f5acd5cfad files/memtest86+-1.50-hardened.patch 802
+RMD160 9bdf9ce73cc7ef48501d9330449dcee7d45baee9 files/memtest86+-1.50-hardened.patch 802
+SHA256 00a40459c5c0f7d85e8fb1e9d5d9508f343de4042a51257c911e9736baa70045 files/memtest86+-1.50-hardened.patch 802
+MD5 7de34f897fafe96fb35d20b96ccfdd09 memtest86+-1.51.ebuild 2045
+RMD160 7a545022f34524d9956a662a7dbf96db1c9f4edc memtest86+-1.51.ebuild 2045
+SHA256 a2521c80c6d726ec696a4f5c139ac471e926d35eb7824b9085d8ee8f622bcb17 memtest86+-1.51.ebuild 2045
+MD5 aab46bfc1008c591ff6353e7338f63b4 memtest86+-1.55.ebuild 1993
+RMD160 8f53e4296726c84bad8433186a740c85cb008a07 memtest86+-1.55.ebuild 1993
+SHA256 33e785ec773685f333291a280fda422f4886af3eff476c2a2c808f054db0fa2a memtest86+-1.55.ebuild 1993
+MD5 610ce7f512475074c91d3585f2da6a74 memtest86+-1.60.ebuild 1781
+RMD160 9e7d1af6fb0052f2ddb1b64158000b3ae1bf702d memtest86+-1.60.ebuild 1781
+SHA256 c9534cb9672b3697bab875daf5bba3c02e87b45a0765ccd5d840a873020e4538 memtest86+-1.60.ebuild 1781
+MD5 b5993ece5d797580fd7cb0d1087dc0a4 memtest86+-1.65.ebuild 1782
+RMD160 109c977b9810879e33e593a9c12607d56b2788a5 memtest86+-1.65.ebuild 1782
+SHA256 5172f4df1bd492e0d3b3e73cf781a025d6bd7738759c43c304bb37acc7c8941e memtest86+-1.65.ebuild 1782
+MD5 6e4a562860cd8556ea460ac4682d01e3 metadata.xml 259
+RMD160 be7d072f3714a6a642c308963bae944249555ad3 metadata.xml 259
+SHA256 80deea66f2205dd3b6e83b31be319f33eef281cd0864f881a58f22eb0916165c metadata.xml 259

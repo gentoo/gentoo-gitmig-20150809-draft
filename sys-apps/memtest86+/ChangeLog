@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/memtest86+
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.31 2005/10/09 17:59:31 metalgod Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.32 2006/04/22 22:39:36 nelchael Exp $
+
+  22 Apr 2006; Krzysiek Pawlik <nelchael@gentoo.org> memtest86+-1.65.ebuild:
+  Stable on x86, see bug #130446.
 
   09 Oct 2005; Luis Medinas <metalgod@gentoo.org> memtest86+-1.60.ebuild:
   Marked Stable on amd64.
