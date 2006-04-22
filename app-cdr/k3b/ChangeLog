@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.146 2006/04/17 10:08:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.147 2006/04/22 04:40:33 tsunam Exp $
+
+  22 Apr 2006; Joshua Jackson <tsunam@gentoo.org> k3b-0.12.14.ebuild:
+  stable on x86; bug #129475
 
   17 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org> k3b-0.12.14.ebuild:
   ppc stable, bug #129475
