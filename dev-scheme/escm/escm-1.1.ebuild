@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/escm/escm-1.1.ebuild,v 1.2 2005/12/28 09:17:56 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/escm/escm-1.1.ebuild,v 1.3 2006/04/22 15:12:39 hattya Exp $
 
 IUSE=""
 
@@ -32,6 +32,6 @@ src_install() {
 
 	dobin escm
 	doman escm.1
-	dodoc COPYING ChangeLog escm.html
+	dodoc ChangeLog escm.html
 
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-kakasi/gauche-kakasi-0.1.ebuild,v 1.2 2004/11/23 11:41:08 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-kakasi/gauche-kakasi-0.1.ebuild,v 1.3 2006/04/22 15:22:12 hattya Exp $
 
 IUSE=""
 
@@ -29,6 +29,6 @@ src_install() {
 
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS COPYING ChangeLog README*
+	dodoc AUTHORS ChangeLog README*
 
 }

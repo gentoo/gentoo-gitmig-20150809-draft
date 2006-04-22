@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/gauche-cdb-0.3.1.ebuild,v 1.4 2004/10/20 14:57:00 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/gauche-cdb-0.3.1.ebuild,v 1.5 2006/04/22 15:17:17 hattya Exp $
 
 inherit eutils
 
@@ -12,7 +12,6 @@ DESCRIPTION="CDB binding for Gauche"
 HOMEPAGE="http://sourceforge.jp/projects/gauche/"
 SRC_URI="mirror://sourceforge.jp/gauche/8407/${MY_P}.tar.gz"
 
-RESTRICT="nomirror"
 LICENSE="BSD"
 KEYWORDS="x86 ia64"
 SLOT="0"
