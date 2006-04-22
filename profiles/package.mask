@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5259 2006/04/22 14:58:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5260 2006/04/22 15:00:06 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -479,7 +479,7 @@ sci-electronics/tclspice
 
 # Michael Sterrett <mr_bones_@gentoo.org> (03 Apr 2006)
 # masked pending unresolved security issues #128690
-~games-fps/doomsday-1.8.6
+games-fps/doomsday
 
 # Jonathan Smith <smithj@gentoo.org> (03 Apr 2006)
 # Depends on app-misc/colortail which is currently unmaintained and also masked
