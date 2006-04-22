@@ -1,43 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0a76d1568df2aceaa8da191224502960 ChangeLog 6975
-RMD160 1ba06ea483cd52bf4bdd196b863a6f241cd58aaa ChangeLog 6975
-SHA256 a58b3f8179dbb5c135370020775482adc573c687a7c9034b67f027eb279ad71f ChangeLog 6975
+MD5 7cf177562bb87a1bb4a47ab341861b91 ChangeLog 7061
 MD5 17d63062c07dc2d9b26b9e0fbcc4c5db files/digest-xffm-4.2.1 63
-RMD160 a28f82e68641f8333bcdbe389a9eb2f4507850b8 files/digest-xffm-4.2.1 63
-SHA256 6322ea21a5540451fdbe1fc00fd55db4a2c7a8295eb1602d49893e562aeca54a files/digest-xffm-4.2.1 63
 MD5 0b27bca27a4a9346415ea2f3cfa8ec5b files/digest-xffm-4.2.2 63
-RMD160 4b29fa0d5067952fee02aafdaf45574270265fd2 files/digest-xffm-4.2.2 63
-SHA256 8552e9648ce2c9f09b0b48a2f23a2ea478351bdc10bbcbb382ed9aa875f6ae7e files/digest-xffm-4.2.2 63
 MD5 0b27bca27a4a9346415ea2f3cfa8ec5b files/digest-xffm-4.2.2-r1 63
-RMD160 4b29fa0d5067952fee02aafdaf45574270265fd2 files/digest-xffm-4.2.2-r1 63
-SHA256 8552e9648ce2c9f09b0b48a2f23a2ea478351bdc10bbcbb382ed9aa875f6ae7e files/digest-xffm-4.2.2-r1 63
 MD5 1004eecb6f5fc37bc033b4f87e6ea45d files/digest-xffm-4.2.3 63
-RMD160 704ba198d267a8edd7dcc5d5d98d9c37e9f4dc38 files/digest-xffm-4.2.3 63
-SHA256 3638a2c79a571ff1f34a4cabe2937801cdd0127d065fdb9fb58b4717187b418e files/digest-xffm-4.2.3 63
 MD5 db40ffdfcb4c71dd7883c97dbea254d4 files/xffm-4.2.1-gcc4.patch 855
-RMD160 61eef11b9367d93db2416ffbc47956475b8e9c30 files/xffm-4.2.1-gcc4.patch 855
-SHA256 1c52ebe64a906962ad054f9f323e19015fba85e4507fac8868e6c0ef871da877 files/xffm-4.2.1-gcc4.patch 855
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
-SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 8c0e95fbe0e57dd74da3f7119ee40019 xffm-4.2.1.ebuild 529
-RMD160 dfa89fc5e2c6ddfdd2f084fa27494602d2768c51 xffm-4.2.1.ebuild 529
-SHA256 91cf18f68535c757fc67b4cb734297936bedae9c81f8f68df211227b5b1dcbae xffm-4.2.1.ebuild 529
 MD5 f3963081b0ddd901205355c2d0b3efea xffm-4.2.2-r1.ebuild 615
-RMD160 30c6f30e229c35fd9cd3f81e422b780e9265f4af xffm-4.2.2-r1.ebuild 615
-SHA256 0cb08228b0c73173ade192c97ec4f0162cf483bda3e9e0e412d770d10dff065f xffm-4.2.2-r1.ebuild 615
 MD5 46b214d13ba23141abd861a5f020bbf2 xffm-4.2.2.ebuild 525
-RMD160 43692b3252fdeee6971d616acfccb5e1ebabb92a xffm-4.2.2.ebuild 525
-SHA256 412f50998d6286977641c9906e8b4888be44321c4972f3fefc3ade07aaabe847 xffm-4.2.2.ebuild 525
-MD5 bb544c14bc2e11493c7761949b7e0338 xffm-4.2.3.ebuild 610
-RMD160 9c2a282deea24fc78dcbcb7c9e939401bb8d2dcf xffm-4.2.3.ebuild 610
-SHA256 7f01ec048163262520b988baefc6bc11618b3625838d83ef5899bf5d0d7e637e xffm-4.2.3.ebuild 610
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFER5xS0K3RJaeXx6cRAkh8AJsGRD985RvEzTvzuA3+l2b7kUz70QCfcCSY
-4x7nb2M2h9tFxWxc5URvABY=
-=XjW8
------END PGP SIGNATURE-----
+MD5 d38783d9ce95c2d643621d0cf15483d7 xffm-4.2.3.ebuild 608

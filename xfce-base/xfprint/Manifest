@@ -1,46 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0a3d4d3045c58dbdd57999559345661c ChangeLog 7446
-RMD160 665fc1795720c4c4f01ed0a317eb5290af6e9a4e ChangeLog 7446
-SHA256 93794d1404b07eeb4642c4e57e32e3c9d6bb54e59681d1b6cd128219d50a4241 ChangeLog 7446
+MD5 86005732770e3d955a448bb208e47ce3 ChangeLog 7535
 MD5 e14e67d33b928cfcc3be483f8e2547c8 files/digest-xfprint-4.2.1 65
-RMD160 f9065c677c103fe4bc43f8f1305c97f2c188bb81 files/digest-xfprint-4.2.1 65
-SHA256 8a24ebaf6d5542a84447af0812c972329c557ccac1238ad380923a4ecf8895b0 files/digest-xfprint-4.2.1 65
 MD5 1f1fb819d071d1344ba00d62d36dcf1d files/digest-xfprint-4.2.2 65
-RMD160 4dc9723c5cdc57452a984c33d02329b6cb968c2e files/digest-xfprint-4.2.2 65
-SHA256 e9c028b411ac2836cab4582f866430b8a5ef85e1d62564507acd8fb667b9f07d files/digest-xfprint-4.2.2 65
 MD5 1f1fb819d071d1344ba00d62d36dcf1d files/digest-xfprint-4.2.2-r1 65
-RMD160 4dc9723c5cdc57452a984c33d02329b6cb968c2e files/digest-xfprint-4.2.2-r1 65
-SHA256 e9c028b411ac2836cab4582f866430b8a5ef85e1d62564507acd8fb667b9f07d files/digest-xfprint-4.2.2-r1 65
 MD5 37171ad7dfc6c165ef294c55642595fa files/digest-xfprint-4.2.3 66
-RMD160 32801019b0bb4d6841f5d6117848ad34f067f8cc files/digest-xfprint-4.2.3 66
-SHA256 1232ff1606e7dc90e711dcc708c1246532049d9da997cf2b95e09d659e986430 files/digest-xfprint-4.2.3 66
 MD5 0cc95f5d68d5c8c343215f74e10e2d45 files/digest-xfprint-4.3.90.1 253
-RMD160 e9e185e3b4dec5dd9ea13c73e14d1e5d8c28d1a9 files/digest-xfprint-4.3.90.1 253
-SHA256 2f9ae51faf73f6fcdee97c8a8df9241bfc90cb344abcb989bc9adb3a14cba07a files/digest-xfprint-4.3.90.1 253
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
-SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 6af0235a577815460d6bdaea94110ad2 xfprint-4.2.1.ebuild 446
-RMD160 cb228bbcb873b726e1a660eea262e3f5dd29060f xfprint-4.2.1.ebuild 446
-SHA256 9ecd96bdb6f3dd18c69dbcb7fcea09206a6f30de6ca44825a8741e20de5ead42 xfprint-4.2.1.ebuild 446
 MD5 c8052bd66e412ca0e47f282b1f54219f xfprint-4.2.2-r1.ebuild 534
-RMD160 af57ad483d5ea6df0b0a3023c2ba2cbe419f851a xfprint-4.2.2-r1.ebuild 534
-SHA256 a91bd8f919167dd47148dc0237c0b2cb7d752b354667919fd76e28e1b00e8fe2 xfprint-4.2.2-r1.ebuild 534
 MD5 d70503e91eab97c90d511af02285e579 xfprint-4.2.2.ebuild 433
-RMD160 b3f6a5b835ad021a2327059a03f6fbb175b54cd3 xfprint-4.2.2.ebuild 433
-SHA256 dcad9e6738033d8de032b1add2f405eb93e2932f53a7b7f73e6ee8f7e7444be8 xfprint-4.2.2.ebuild 433
-MD5 f19b3d133af7b20858240aed9f27e42d xfprint-4.2.3.ebuild 529
-RMD160 a1c9c75ef7148bdf6251c6a7fb172256920a26d7 xfprint-4.2.3.ebuild 529
-SHA256 e9c9845f5dd6be17490cc7ae9d836ab358c8cd3a53fab3b5db00e3a29d4c32be xfprint-4.2.3.ebuild 529
+MD5 8d5a90b9be20b26149a222b49e9d30ae xfprint-4.2.3.ebuild 527
 MD5 3f818b079e34df7e2ee906dfed2b5d6f xfprint-4.3.90.1.ebuild 894
-RMD160 62dd2ea4b410532aca39da75b44efee0244a6583 xfprint-4.3.90.1.ebuild 894
-SHA256 ca6a47daf77fd4b3004748698ea8dcd3048c6b09f0dca0982f19a57161753090 xfprint-4.3.90.1.ebuild 894
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFER56b0K3RJaeXx6cRAls/AJ4jLZ5eyTt8f4AjwW+nSpftzE6DdwCgy2RE
-cJYBHSFPf865X6vnM1wMtpI=
-=pNOS
------END PGP SIGNATURE-----

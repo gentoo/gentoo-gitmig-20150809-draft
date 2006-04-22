@@ -1,46 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8c26c0eb94524b0dd5f525aa31d686e2 ChangeLog 8076
-RMD160 924fd9e335159b4f63779730f071466d49ba3ce3 ChangeLog 8076
-SHA256 40c93be6e1941e5c5c0685cc161316f63ec1ddb85b6dc6e19d9cb39c592098d9 ChangeLog 8076
+MD5 78b01a9b4f40d01d042699e966016086 ChangeLog 8176
 MD5 103c43e0a9b46b65ec2f821e01c208ea files/digest-xfce-mcs-plugins-4.2.1 74
-RMD160 15839c863bb17d6f251bf76a12112207832e8629 files/digest-xfce-mcs-plugins-4.2.1 74
-SHA256 000d8eb661642db2a20bca0300690a68bbb87ffa4bf60844185ae1abd6ce9b4f files/digest-xfce-mcs-plugins-4.2.1 74
 MD5 aa32d9ca701ecd219eb4e66f1d6bde0a files/digest-xfce-mcs-plugins-4.2.2 74
-RMD160 8ef73a7654571b842d251cd19a1309725026f86a files/digest-xfce-mcs-plugins-4.2.2 74
-SHA256 66fa31fd1702d1a4566907dcae7a5bf6a716785b51586c4f98fcadfbb75ae8ff files/digest-xfce-mcs-plugins-4.2.2 74
 MD5 aa32d9ca701ecd219eb4e66f1d6bde0a files/digest-xfce-mcs-plugins-4.2.2-r1 74
-RMD160 8ef73a7654571b842d251cd19a1309725026f86a files/digest-xfce-mcs-plugins-4.2.2-r1 74
-SHA256 66fa31fd1702d1a4566907dcae7a5bf6a716785b51586c4f98fcadfbb75ae8ff files/digest-xfce-mcs-plugins-4.2.2-r1 74
 MD5 fc286b2b8ee89f149fe21a0a4dfb1903 files/digest-xfce-mcs-plugins-4.2.3 75
-RMD160 a25b540fbdceea72af7dfb75111937b2316452c9 files/digest-xfce-mcs-plugins-4.2.3 75
-SHA256 2e8fcc6ef00ebc1a82a34a7d43583c5dc5c4409529e1c4b649494973cd435c6a files/digest-xfce-mcs-plugins-4.2.3 75
 MD5 bdb25a8f976553bfa15efe79ed194442 files/digest-xfce-mcs-plugins-4.3.90.1 280
-RMD160 133fdc319f27cad5f952ff0b66801c09cfe33a83 files/digest-xfce-mcs-plugins-4.3.90.1 280
-SHA256 a86ad8bf564b7031a2cbb89ebfb3f33833993112c957a3c42367c1c45af6fbb8 files/digest-xfce-mcs-plugins-4.3.90.1 280
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
-SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 7a2c62be7503504520f6a47342fcb6d8 xfce-mcs-plugins-4.2.1.ebuild 479
-RMD160 c5a33984fe677ed14dd4095f11f9dff92d2b7b4f xfce-mcs-plugins-4.2.1.ebuild 479
-SHA256 8df5b1e5e671876fb25ab1f5f772bec7d5b6417c1185969e1adfad82865d67b0 xfce-mcs-plugins-4.2.1.ebuild 479
 MD5 adc5aaac80724dd76844da408166c463 xfce-mcs-plugins-4.2.2-r1.ebuild 771
-RMD160 920242211070a1f3b6d5031a4618665e48a27719 xfce-mcs-plugins-4.2.2-r1.ebuild 771
-SHA256 9ed99018bf5fb755060bb294d1abc9f946d974a3697e6ec9c77f95e99fc10224 xfce-mcs-plugins-4.2.2-r1.ebuild 771
 MD5 31785b5bc50f581c889745deceb9299a xfce-mcs-plugins-4.2.2.ebuild 469
-RMD160 0b2e029d21f06cf6d66d6bd628cab3498368eca0 xfce-mcs-plugins-4.2.2.ebuild 469
-SHA256 4cdc2135d524636c08c323f46d74123e04d11c31de2a5e17fba42f2196eea808 xfce-mcs-plugins-4.2.2.ebuild 469
-MD5 0596605b31b844c98ea8f482ffbbebf3 xfce-mcs-plugins-4.2.3.ebuild 766
-RMD160 8860bfcb486c440c08a8b2b8bbe5d8c6e131f1b2 xfce-mcs-plugins-4.2.3.ebuild 766
-SHA256 655e48832c057c4daaf4cdf8549952212bf3131ed9f1863204232bcd550abe2a xfce-mcs-plugins-4.2.3.ebuild 766
+MD5 4504eefa716e47a9f7427ef155f7bbf8 xfce-mcs-plugins-4.2.3.ebuild 764
 MD5 83ef8a3f56b57744495b6d772b216c23 xfce-mcs-plugins-4.3.90.1.ebuild 1060
-RMD160 02904f0d5d4a5c4749efdac152795f4788e8533a xfce-mcs-plugins-4.3.90.1.ebuild 1060
-SHA256 6e50472f39b81323b8fb29e97f7092882864e8171084e9a38e3969b98cdea99c xfce-mcs-plugins-4.3.90.1.ebuild 1060
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFER50H0K3RJaeXx6cRAqDrAJ9/n6n5utgTaOtH3cKtGEp4UAFt/wCdHM8A
-F/l2Fu0oBTIKPFpcRh0/KBs=
-=dCAp
------END PGP SIGNATURE-----
