@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/php-gtk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/php-gtk/ChangeLog,v 1.5 2006/01/24 20:35:50 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/php-gtk/ChangeLog,v 1.6 2006/04/22 13:15:32 voxus Exp $
+
+  22 Apr 2006; Konstantin Arkhipov <voxus@gentoo.org> php-gtk-1.0.2.ebuild:
+  Marked ~amd64.
 
   24 Jan 2006; Luca Longinotti <chtekk@gentoo.org>
   files/undef-gtk_shpaned_new.patch, php-gtk-1.0.2.ebuild:
