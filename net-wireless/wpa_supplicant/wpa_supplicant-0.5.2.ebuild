@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.2.ebuild,v 1.3 2006/04/14 14:07:58 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.2.ebuild,v 1.4 2006/04/22 16:33:34 brix Exp $
 
 inherit eutils toolchain-funcs
 
@@ -21,7 +21,8 @@ RDEPEND="gsm? ( sys-apps/pcsc-lite )
 		readline? ( sys-libs/ncurses
 					sys-libs/readline )
 		ssl? ( dev-libs/openssl )
-		madwifi? ( || ( net-wireless/madwifi-ng net-wireless/madwifi-old ) )"
+		kernel_linux? ( madwifi? ( || ( net-wireless/madwifi-ng net-wireless/madwifi-old ) ) )
+		!kernel_linux? ( net-libs/libpcap )"
 DEPEND="sys-apps/sed
 		${RDEPEND}"
 
@@ -29,6 +30,11 @@ src_unpack() {
 	local CONFIG=${S}/.config
 
 	unpack ${A}
+
+	# net/bpf.h needed for net-libs/libpcap on Gentoo FreeBSD
+	sed -i \
+		-e "s:\(#include <pcap\.h>\):#include <net/bpf.h>\n\1:" \
+		${S}/l2_packet_freebsd.c
 
 	# toolchain setup
 	echo "CC = $(tc-getCC)" > ${CONFIG}
@@ -68,23 +74,31 @@ src_unpack() {
 		echo "CONFIG_SMARTCARD=y"    >> ${CONFIG}
 	fi
 
-	# Linux specific drivers
-	echo "CONFIG_WIRELESS_EXTENSION=y" >> ${CONFIG}
-	echo "CONFIG_DRIVER_ATMEL=y"       >> ${CONFIG}
-	echo "CONFIG_DRIVER_HOSTAP=y"      >> ${CONFIG}
-	echo "CONFIG_DRIVER_IPW=y"         >> ${CONFIG}
-	echo "CONFIG_DRIVER_NDISWRAPPER=y" >> ${CONFIG}
-	echo "CONFIG_DRIVER_PRISM54=y"     >> ${CONFIG}
-	echo "CONFIG_DRIVER_WEXT=y"        >> ${CONFIG}
-	echo "CONFIG_DRIVER_WIRED=y"       >> ${CONFIG}
+	if use kernel_linux; then
+		# Linux specific drivers
+		echo "CONFIG_WIRELESS_EXTENSION=y" >> ${CONFIG}
+		echo "CONFIG_DRIVER_ATMEL=y"       >> ${CONFIG}
+		echo "CONFIG_DRIVER_HOSTAP=y"      >> ${CONFIG}
+		echo "CONFIG_DRIVER_IPW=y"         >> ${CONFIG}
+		echo "CONFIG_DRIVER_NDISWRAPPER=y" >> ${CONFIG}
+		echo "CONFIG_DRIVER_PRISM54=y"     >> ${CONFIG}
+		echo "CONFIG_DRIVER_WEXT=y"        >> ${CONFIG}
+		echo "CONFIG_DRIVER_WIRED=y"       >> ${CONFIG}
 
-	if use madwifi; then
-		# Add include path for madwifi-driver headers
-		echo "CFLAGS += -I${ROOT}/usr/include/madwifi" >> ${CONFIG}
-		echo "CONFIG_DRIVER_MADWIFI=y"                 >> ${CONFIG}
+		if use madwifi; then
+			# Add include path for madwifi-driver headers
+			echo "CFLAGS += -I${ROOT}/usr/include/madwifi" >> ${CONFIG}
+			echo "CONFIG_DRIVER_MADWIFI=y"                 >> ${CONFIG}
+		fi
 	fi
 
-	# people seem to take the example file too literally, bug #102361
+	if use kernel_FreeBSD; then
+		# FreeBSD specific driver
+		echo "CONFIG_DRIVER_BSD=y" >> ${CONFIG}
+	fi
+
+	# people seem to take the example configuration file too literally
+	# bug #102361
 	sed -i \
 		-e "s:^\(opensc_engine_path\):#\1:" \
 		-e "s:^\(pkcs11_engine_path\):#\1:" \

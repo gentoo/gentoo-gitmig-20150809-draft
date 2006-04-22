@@ -1,4 +1,4 @@
-MD5 0657aec96bcc79d15c40b2c2fd32e698 ChangeLog 13877
+MD5 cbdbd54d62975e119ed16ff601da383a ChangeLog 14053
 MD5 399c0ed3e8d999a49b9435a83705f96c files/digest-wpa_supplicant-0.4.7 72
 MD5 3c1bdab1affb98719ab98620e2863c8d files/digest-wpa_supplicant-0.4.8 72
 MD5 a9017f6f882a41e700a0a517ef60e964 files/digest-wpa_supplicant-0.5.2 72
@@ -8,4 +8,4 @@ MD5 7557dcc784bddabf268e1c49eee4fb59 files/wpa_supplicant-0.5.2-wpa_cli.sh 1229
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 e160e685fea1c7c2717acebbe4fe6dff wpa_supplicant-0.4.7.ebuild 3564
 MD5 3ecc467d6e993983e8fc11a3a021b0e1 wpa_supplicant-0.4.8.ebuild 3898
-MD5 5655216e36f10baca198b03f253ea260 wpa_supplicant-0.5.2.ebuild 4309
+MD5 6a5f32065e686a4bd5acad27f39e2723 wpa_supplicant-0.5.2.ebuild 4687
