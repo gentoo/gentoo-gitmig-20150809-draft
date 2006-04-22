@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gauche-gtk
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/ChangeLog,v 1.6 2005/06/12 14:28:34 swegener Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/ChangeLog,v 1.7 2006/04/22 15:15:01 hattya Exp $
+
+  22 Apr 2006; Akinori Hattori <hattya@gentoo.org> gauche-gtk-0.4.1.ebuild:
+  stable on x86.
 
   12 Jun 2005; Sven Wegener <swegener@gentoo.org> gauche-gtk-0.3.1.ebuild,
   gauche-gtk-0.3.2.ebuild, gauche-gtk-0.4.ebuild, gauche-gtk-0.4.1.ebuild:

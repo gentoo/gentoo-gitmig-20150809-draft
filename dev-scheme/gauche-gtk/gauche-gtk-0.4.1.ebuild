@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/gauche-gtk-0.4.1.ebuild,v 1.4 2005/06/12 14:28:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/gauche-gtk-0.4.1.ebuild,v 1.5 2006/04/22 15:15:01 hattya Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/gauche/${MY_P}.tgz"
 
 RESTRICT="nomirror"
 LICENSE="BSD"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~ppc x86"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
@@ -58,7 +58,7 @@ src_install() {
 
 	make DESTDIR=${D} install || die
 
-	dodoc ChangeLog README COPYING
+	dodoc ChangeLog README
 
 
 	docinto examples
