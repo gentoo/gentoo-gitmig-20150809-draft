@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdepim-kioslaves
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.43 2006/04/06 01:36:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.44 2006/04/22 10:55:50 carlo Exp $
+
+*kdepim-kioslaves-3.5.2-r1 (22 Apr 2006)
+
+  22 Apr 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/kdepim-kioslaves-3.5.2-fixes.diff,
+  +kdepim-kioslaves-3.5.2-r1.ebuild:
+  Mbox and imap fixes.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kdepim-kioslaves-3.5.0.ebuild, -kdepim-kioslaves-3.5.1.ebuild:
