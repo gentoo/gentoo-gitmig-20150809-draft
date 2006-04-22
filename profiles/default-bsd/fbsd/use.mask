@@ -1,13 +1,9 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.5 2006/04/20 05:09:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.6 2006/04/22 21:16:24 flameeyes Exp $
 
 # TCL/TK still to test
 tcltk
-
-# MySQL requires changes as it doesn't build/start on FreeBSD at least
-# Remove after it's tested working.
-mysql
 
 # Someone who knows kerberos is needed to make sure that this works
 kerberos
