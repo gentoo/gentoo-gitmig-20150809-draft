@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/graveman
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.28 2006/04/13 03:25:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.29 2006/04/22 14:57:07 metalgod Exp $
+
+  22 Apr 2006; Luis Medinas <metalgod@gentoo.org>
+  graveman-0.3.12_p4-r1.ebuild:
+  Stable on amd64. Bug #129318.
 
   13 Apr 2006; Jason Wever <weeve@gentoo.org> graveman-0.3.12_p4-r1.ebuild:
   Stable on SPARC wrt bug #129318.
