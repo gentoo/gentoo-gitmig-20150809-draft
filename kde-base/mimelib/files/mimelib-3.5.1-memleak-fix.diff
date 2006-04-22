@@ -1,0 +1,22 @@
+--- kdepim/mimelib/attach.cpp	2005/07/26 18:54:59	438982
++++ kdepim/mimelib/attach.cpp	2006/04/16 14:28:03	530387
+@@ -217,7 +217,7 @@
+ 
+     FILE* fp = fopen(aFilename, "rb");
+     if (fp == 0) {
+-        delete buf;
++        delete[] buf;
+         str = "";
+         return -1;
+     }
+--- kdepim/mimelib/datetime.cpp	2006/01/06 12:12:33	494852
++++ kdepim/mimelib/datetime.cpp	2006/04/16 14:28:03	530387
+@@ -304,7 +304,7 @@
+         mZone   = 0;
+     }
+     if (mustDelete) {
+-        delete str;
++        delete[] str;
+     }
+ }
+ 
