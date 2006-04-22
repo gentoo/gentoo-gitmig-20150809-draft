@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/cvm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/ChangeLog,v 1.13 2006/04/22 09:44:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/ChangeLog,v 1.14 2006/04/22 10:59:58 nixnut Exp $
+
+  22 Apr 2006; <nixnut@gentoo.org> cvm-0.76.ebuild:
+  Stable on ppc. bug #123462
 
   22 Apr 2006; Robin H. Johnson <robbat2@gentoo.org> cvm-0.76.ebuild:
   Add another item to DEPEND for the testcases. cvm-0.76.ebuild
