@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.208 2006/04/22 10:16:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.209 2006/04/22 14:33:51 flameeyes Exp $
+
+  22 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-driver-1.0.11.ebuild:
+  Don't let me commit before the cola. Patch in the right place, thanks to
+  Igor Rafienko for noticing this.
 
   22 Apr 2006; Markus Rothe <corsair@gentoo.org> alsa-driver-1.0.11.ebuild:
   Stable on ppc64; bug #130535
