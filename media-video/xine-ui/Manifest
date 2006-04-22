@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b01cd12ce50d18c429f3a4c64fe34856 ChangeLog 18113
-RMD160 78a077cf37dce75f754cb1e3535ae82c1e4823b4 ChangeLog 18113
-SHA256 5d1f980287e00bb0c37d3a87c8db57bf1155222ec38ff19fd679b7f04bf9950f ChangeLog 18113
+MD5 0e0ba2d53f04207686932c333006acf6 ChangeLog 18218
 MD5 39002a0b13bd6e79fb6b863e93a3bcc6 files/digest-xine-ui-0.99.4-r3 136
-RMD160 10783ad2a4f9ac3cbff02aae2be832a221a18a70 files/digest-xine-ui-0.99.4-r3 136
-SHA256 5b0983a5e56fd04d2d169f6bc13494724ca8ea20336f9f53d655b8eacc1df5fc files/digest-xine-ui-0.99.4-r3 136
 MD5 86c471e9ac9978ef5bf32e72c816ac37 files/digest-xine-ui-0.99.4-r4 500
-RMD160 7a2e05ec8351c6aa91f7a1d775f191cff7229837 files/digest-xine-ui-0.99.4-r4 500
-SHA256 6838e5dc1f8cc0318eff952be90ff13631fa2a68328729a90c0b0cc298f663f4 files/digest-xine-ui-0.99.4-r4 500
 MD5 fbda5f881e798ef4e9eb2d5c789260d9 files/digest-xine-ui-0.99.4-r5 503
-RMD160 534b5022086983a4ee587525eca995cc377d0ccc files/digest-xine-ui-0.99.4-r5 503
-SHA256 13650b11acc54acf5be00c0152af287174983dc71149b8e21db77c1b4238d521 files/digest-xine-ui-0.99.4-r5 503
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 metadata.xml 158
-SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata.xml 158
 MD5 9300836210001c52446cce022be5d2f0 xine-ui-0.99.4-r3.ebuild 2172
-RMD160 81f294226dd428d7802287d349ac44ef9643e5c2 xine-ui-0.99.4-r3.ebuild 2172
-SHA256 2aa33caab524bfb0a2764fa9ee801127b987f5e9115213b942363f232dcb1d17 xine-ui-0.99.4-r3.ebuild 2172
 MD5 98bd98f15cd4e8a9fdd1b0bac6810f84 xine-ui-0.99.4-r4.ebuild 2140
-RMD160 ac2c3efd930fa658045437114c8523e0a86c36b0 xine-ui-0.99.4-r4.ebuild 2140
-SHA256 c5c79e9d0845e3201ab957591b242e455eb4c59a3b4cee696e843cdd2bd9dfb9 xine-ui-0.99.4-r4.ebuild 2140
-MD5 44563919dd44afd369d254780cc86241 xine-ui-0.99.4-r5.ebuild 2141
-RMD160 b286728d0ad70937b9ba3cc83f5adf6729fd9d9a xine-ui-0.99.4-r5.ebuild 2141
-SHA256 1312e53e1d377cfed5d8f45f95af5f7a94698c7e34b68df1b739f5bdb7de7f0f xine-ui-0.99.4-r5.ebuild 2141
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFESgFmAiZjviIA2XgRAq6pAKDt9ZkidFgnM/bavmPT5ik/M56oVwCeO5L/
-rB19pgt8Zv46Ker86ik93FQ=
-=Xxf3
------END PGP SIGNATURE-----
+MD5 f30cee8d5a92ad54048cebe0bedc8e6c xine-ui-0.99.4-r5.ebuild 2138
