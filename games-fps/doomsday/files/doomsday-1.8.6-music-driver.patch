@@ -1,0 +1,22 @@
+# Fixing music driver init
+
+--- Src/s_mus.c
++++ Src/s_mus.c
+@@ -123,7 +123,7 @@ boolean Mus_Init(void)
+ #endif
+ #ifdef UNIX
+ 	// The available interfaces have already been loaded.
+-	if(musd_loaded.Init())
++	if(musd_loaded.Init && musd_loaded.Init())
+ 	{
+ 		imus = (musd_loaded_imus.gen.Init ? &musd_loaded_imus : 0);
+ 		iext = (musd_loaded_iext.gen.Init ? &musd_loaded_iext : 0);
+@@ -178,7 +178,7 @@ void Mus_Shutdown(void)
+ 	musd_win.Shutdown();
+ #endif
+ #ifdef UNIX
+-	musd_loaded.Shutdown();
++	if (musd_loaded.Shutdown) musd_loaded.Shutdown();
+ #endif
+ 
+ 	// No more interfaces.
