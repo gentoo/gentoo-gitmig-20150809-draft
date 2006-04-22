@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 951a13a508687e4dea1b624c259e3701 ChangeLog 896
-RMD160 ef73eb464fc64a6f7d128287e4b406a75136b798 ChangeLog 896
-SHA256 9bbd5731756ceb6020d3976e45dfef95afe2fd9df8de1dbaf854199771a62136 ChangeLog 896
+MD5 c3151d27835e18958d0385f5b6ba6ce6 ChangeLog 1011
+RMD160 b04de10513e3374f70c1c94eb9804cb44f2d302c ChangeLog 1011
+SHA256 27c8a386af54a6bdb688988e961760cc51bcf22a3f8662b22eaf8a9f49454280 ChangeLog 1011
 MD5 47152e230c2e28e38b2b4f96c95e0ed2 files/digest-tango-icon-theme-extras-0.1.0 81
 RMD160 dcb33f7e1523b1d4a106176d41ba328803420bf5 files/digest-tango-icon-theme-extras-0.1.0 81
 SHA256 ea4d6b01bef36c1391ca448e8598eeecf7730788d564470be8ac5718d095941c files/digest-tango-icon-theme-extras-0.1.0 81
 MD5 870a91577a60ccb6ea581e99f879e9b8 metadata.xml 248
 RMD160 507fd60616d5d14e274ac0628255acdddc90e4d4 metadata.xml 248
 SHA256 0d544700457efe5f7c24489f30572dd20c81a6d8879bf833f7d050408a79f36a metadata.xml 248
-MD5 da03e639a7f5085dd7475b12cc3d6918 tango-icon-theme-extras-0.1.0.ebuild 898
-RMD160 f44cdb7ca87527c29b616a529f4179933cbd924a tango-icon-theme-extras-0.1.0.ebuild 898
-SHA256 25375d9b67ccf50010b7cc5218d08591c73b5cfab6fc3e774f8429ec366d8c90 tango-icon-theme-extras-0.1.0.ebuild 898
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENgcaSENan+PfizARAidQAJ9PjMUt/pD+wjl6GSRodL99Uy/3BACcD29p
-iGKQpddIUZ49srNk8GfhHv0=
-=ic1d
------END PGP SIGNATURE-----
+MD5 90ae2b562be7820745ae3db970b81fa4 tango-icon-theme-extras-0.1.0.ebuild 906
+RMD160 beaa5d86e20555d70bc4f73a7d44d647f3137873 tango-icon-theme-extras-0.1.0.ebuild 906
+SHA256 0bdf4c529f290de29dbe51d8f4c3389643b0a1e0960df221bc5a3a569a79bd11 tango-icon-theme-extras-0.1.0.ebuild 906
