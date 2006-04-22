@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.54-r1.ebuild,v 1.3 2006/04/18 14:31:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.54-r1.ebuild,v 1.4 2006/04/22 18:19:26 vapier Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${PN}-${PV}.tar.bz2  mirror://gentoo/${PN}-patches-${PV}${PATCHVER}.tar.bz2"
 LICENSE="GPL-2"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 m68k ~mips ~ppc ~ppc-macos ~ppc64 s390 sh ~sparc ~x86"
 
 SLOT="0"
 IUSE="build doc selinux"
