@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-titlecase/quodlibet-titlecase-2980.ebuild,v 1.3 2006/04/22 15:24:33 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-titlecase/quodlibet-titlecase-2980.ebuild,v 1.4 2006/04/22 15:45:24 tcort Exp $
 
 inherit python
 
@@ -15,11 +15,11 @@ IUSE=""
 
 DEPEND=">=media-sound/quodlibet-0.19.1"
 
-PLUGIN_DEST="${D}/usr/share/quodlibet/plugins/editing"
+PLUGIN_DEST="/usr/share/quodlibet/plugins/editing"
 
 src_install() {
 	insinto ${PLUGIN_DEST}
-	doins ${WORKDIR}/${P}.py
+	doins ${S}.py
 }
 
 pkg_postinst() {
