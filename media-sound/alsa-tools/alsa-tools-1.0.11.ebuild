@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.11.ebuild,v 1.1 2006/04/19 23:26:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.11.ebuild,v 1.2 2006/04/22 08:29:42 corsair Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://alsaproject/tools/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0.9"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~mips ~ppc ppc64 ~sparc ~x86"
 IUSE="fltk gtk"
 
 DEPEND=">=media-libs/alsa-lib-1.0.0
