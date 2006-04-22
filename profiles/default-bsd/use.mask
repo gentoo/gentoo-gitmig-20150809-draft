@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.7 2006/04/22 16:31:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.8 2006/04/22 22:28:42 flameeyes Exp $
 
 # Linux-dependant flags
 selinux
@@ -36,6 +36,29 @@ hardened
 
 # termcap-compat doesn't work on BSD
 termcap-compat
+
+# useflags for php commercial software
+adabas
+birdstep
+db2
+dbmaker
+empress
+empress-bcs
+esoob
+frontbase
+hyperwave-api
+informix
+interbase
+mnogosearch
+msql
+oci8
+oracle7
+ovrimos
+pfpro
+sapdb
+solid
+sybase
+sybase-ct
 
 # Java requires that new-style virtuals are prepared for kaffe
 java
