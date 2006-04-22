@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.2-r1.ebuild,v 1.4 2006/04/22 09:16:45 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.2-r1.ebuild,v 1.5 2006/04/22 09:29:51 satya Exp $
 
 
 inherit eutils
@@ -27,8 +27,8 @@ DEPEND="${DEPEND}
 LICENSE="GPL-2"
 SLOT="0"
 # Waiting for the test of dev-perl/Unicode-MapUTF8
-#KEYWORDS="-* ~alpha ~amd64 ~arm ~mips ~s390"
-KEYWORDS="~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+#KEYWORDS="-* ~amd64 ~arm ~mips ~s390"
+KEYWORDS="~alpha ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
