@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/quantlib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.21 2006/02/19 19:32:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.22 2006/04/22 00:15:58 vanquirius Exp $
+
+*quantlib-0.3.12 (22 Apr 2006)
+
+  22 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> +quantlib-0.3.12.ebuild:
+  0.3.12 version bump.
 
   19 Feb 2006; Joshua Kinard <kumba@gentoo.org> quantlib-0.3.0.ebuild:
   Removing mips keyword as we have no way to test this package and unstable
