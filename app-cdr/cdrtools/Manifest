@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 24ff862a50d2ddce097d52c60f201c0c ChangeLog 20574
-RMD160 f8f05ccc572f610b9038e8c382bafb18ef4ccab2 ChangeLog 20574
-SHA256 d283d4cbbb479e83b37e1839dfc11b72ea843e3eb1f85bc8eeaad3b1b19bab14 ChangeLog 20574
+MD5 944e4951a48f60337b6119d2bf2bf985 ChangeLog 20683
+RMD160 2e15525d0f7fe97c7a15be9ccb6728a747348e26 ChangeLog 20683
+SHA256 069b12af1bbb48ed3ac86ec6638291efe4489ae1dfea72fe1b8f7aa65247c79c ChangeLog 20683
 MD5 5a2a9ad0ab6a40d5ee27662bf265bc41 cdrtools-2.01-r1.ebuild 2830
 RMD160 e40b7f64ecbc7b18b2371004a81c3bef979260ed cdrtools-2.01-r1.ebuild 2830
 SHA256 e4216cc3aafd2189bfd9e80987368c9c9ca0b7d0874036e5320ed283b97780cd cdrtools-2.01-r1.ebuild 2830
@@ -13,9 +13,9 @@ SHA256 ed93e40def27c710ecefbaa47b233e3c867ce9cad77c776839b2f760b28444dd cdrtools
 MD5 1ce4f552cf0369d91baebde6ab823eb0 cdrtools-2.01.01_alpha01-r2.ebuild 3881
 RMD160 06392ee3090bb536fa8c73bd67f20a9517716c8d cdrtools-2.01.01_alpha01-r2.ebuild 3881
 SHA256 184596af31571302fed27b68ebfe23aa523053a2b01a9396e2992721e24b104d cdrtools-2.01.01_alpha01-r2.ebuild 3881
-MD5 04281eab6c94840226eb410dd2304676 cdrtools-2.01.01_alpha07.ebuild 3428
-RMD160 1c998d17a2ad40faa0a7b3198f80f470f3f4fce4 cdrtools-2.01.01_alpha07.ebuild 3428
-SHA256 e8291b559e0b16aa9d3b4b02ea571b88f6b71436886fd21cb013777151b11eb1 cdrtools-2.01.01_alpha07.ebuild 3428
+MD5 eb6f697527d2012eb01fffebc9d1db00 cdrtools-2.01.01_alpha07.ebuild 3429
+RMD160 1d661b84513ea493ddb3ea0e936d6553d3cdb4ca cdrtools-2.01.01_alpha07.ebuild 3429
+SHA256 b94c674a4af3604de57dfe7bfe2181f013b830433ac111cdcedb4db50f9ca316 cdrtools-2.01.01_alpha07.ebuild 3429
 MD5 3b1ffea11e1653b7b16c2c89597d1c5a files/cdrtools-2.01-scsi-remote.patch 938
 RMD160 146ba7ddd5a0d987ea554bcf7e50aea5bf0690ff files/cdrtools-2.01-scsi-remote.patch 938
 SHA256 93719cbcbf594be14e0aa993b49157fc6be2885e94f4a92947ea73bd58ed2a62 files/cdrtools-2.01-scsi-remote.patch 938
@@ -52,7 +52,7 @@ SHA256 21400abf2dad3e5b7b0d2f7f9586c33cba6336b42a97e1f2b3e7e8b9db0daae5 metadata
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEQT0F2+ySkm8kpY0RAu9JAKCE27o3DqQoGJF+gqKUHt22m8oqNgCgpx5O
-/dwu5bBZgZ9VyZgG/TzF/Qg=
-=izZ2
+iD8DBQFESYsdwUpWvClEHQoRAnCOAJ9A9vQhFr7aYMeZ6xOyNsiPbAp15gCeOWx4
+9mcv4YZ7AvTKDmAKVVM/NSY=
+=UThl
 -----END PGP SIGNATURE-----

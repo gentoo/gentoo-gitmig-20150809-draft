@@ -1,9 +1,6 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.136 2006/04/22 01:46:22 metalgod Exp $
-
-  22 Apr 2006; Luis Medinas <metalgod@gentoo.org> ChangeLog:
-  Stable on amd64.
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.137 2006/04/22 01:47:19 metalgod Exp $
 
   22 Apr 2006; <metalgod@gentoo.org> cdrtools-2.01.01_alpha07.ebuild:
   Stable on amd64.
@@ -80,7 +77,7 @@
 
   06 Jun 2005; Lars Weiler <pylon@gentoo.org> cdrtools-2.01-r3.ebuild,
   cdrtools-2.01.01_alpha01-r2.ebuild:
-  Renamed the ‘crypt’ USE-flag into ‘on-the-fly-crypt’ so that livecds
+  Renamed the âcryptâ USE-flag into âon-the-fly-cryptâ so that livecds
   with catalyst could be built, even when crypt is enabled. Otherwise it would
   fail with an unconfigured kernel error. Now the remaining architectures,
   which can't build the dependent cryptsetup can mask that single USE-flag and
@@ -176,7 +173,7 @@
   18 Sep 2004; Joshua Kinard <kumba@gentoo.org> cdrtools-2.01.ebuild:
   Marked stable on mips.
 
-  17 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> cdrtools-2.01.ebuild:
+  17 Sep 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org> cdrtools-2.01.ebuild:
   Stable on alpha.
 
   14 Sep 2004; Guy Martin <gmsoft@gentoo.org> cdrtools-2.01.ebuild:
@@ -227,7 +224,7 @@
   13 Jul 2004; Lars Weiler <pylon@gentoo.org> +cdrtools-2.01_alpha33.ebuild:
   Version bump.
 
-  09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  09 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   cdrtools-2.01_alpha28-r1.ebuild:
   Stable on alpha.
 
