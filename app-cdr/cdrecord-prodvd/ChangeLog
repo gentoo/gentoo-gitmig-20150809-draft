@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrecord-prodvd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.24 2006/04/22 03:27:11 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.25 2006/04/22 14:55:50 metalgod Exp $
+
+  22 Apr 2006; Luis Medinas <metalgod@gentoo.org>
+  cdrecord-prodvd-2.01.01_p03.ebuild:
+  Stable on amd64. Bug #127548.
 
   22 Apr 2006; Joshua Jackson <tsunam@gentoo.org>
   cdrecord-prodvd-2.01.01_p03.ebuild:
