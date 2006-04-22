@@ -73,6 +73,48 @@
 +		fi
  
  
+--- pl-5.6.8.orig/packages/ssl/configure.in	2006-02-04 04:38:50.000000000 +1300
++++ pl-5.6.8/packages/ssl/configure.in	2006-02-13 23:55:12.000000000 +1300
+@@ -19,13 +19,16 @@
+ AC_SUBST(TARGETS)
+ AC_SUBST(PLTARGETS)
+ AC_SUBST(RUNTEX)
++AC_SUBST(ENABLE_CHECKS)
+ 
+ AC_ARG_ENABLE(mt, [  --enable-mt		  Enable Multi-threading],
+ 	      [case "$enableval" in
+ 		   yes) AC_DEFINE([_REENTRANT], 1,
+ 				  [Define to support threads])
++			ENABLE_CHECKS="yes"
++			;;
++		   *)	ENABLE_CHECKS="no"
+ 			;;
+-		   *)  ;;
+ 	       esac])
+ 
+ if test -z "$PLINCL"; then
+--- pl-5.6.8.orig/packages/ssl/Makefile.in	2005-05-11 20:45:37.000000000 +1200
++++ pl-5.6.8/packages/ssl/Makefile.in	2006-01-03 16:11:28.000000000 +1300
+@@ -42,6 +42,8 @@
+ LD=@LD@
+ LDFLAGS=@LDSOFLAGS@
+ 
++ENABLE_CHECKS=@ENABLE_CHECKS@
++
+ INSTALL=@INSTALL@
+ INSTALL_PROGRAM=@INSTALL_PROGRAM@
+ INSTALL_DATA=@INSTALL_DATA@
+@@ -128,7 +130,9 @@
+ ################################################################
+ 
+ check::
+-		$(PL) -q -f ssl_test.pl -F none -g test,halt -t 'halt(1)'
++		@if test $(ENABLE_CHECKS) == "yes" ; then \
++		    $(PL) -q -f ssl_test.pl -F none -g test,halt -t 'halt(1)' ; \
++		fi
+ 
+ ################################################################
+ # Clean
 --- pl-5.6.4.orig/packages/xpce/src/Makefile.in	2006-02-13 05:44:13.000000000 +1300
 +++ pl-5.6.4/packages/xpce/src/Makefile.in	2006-02-13 23:59:59.000000000 +1300
 @@ -55,6 +55,7 @@
