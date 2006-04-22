@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/rtl8180-0.22_pre20050528.ebuild,v 1.1 2006/02/16 20:42:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/rtl8180-0.22_pre20050528.ebuild,v 1.2 2006/04/22 21:28:29 steev Exp $
 
 inherit linux-mod eutils
 
@@ -22,6 +22,12 @@ BUILD_TARGETS="all"
 pkg_setup() {
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KSRC=${KV_DIR}"
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i 's:MODULE_PARM(\([^,]*\),"i");:module_param(\1, int, 0);:' r8180_core.c
 }
 
 src_install() {

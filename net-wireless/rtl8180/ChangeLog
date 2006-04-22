@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/rtl8180
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/ChangeLog,v 1.8 2006/02/16 20:42:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/ChangeLog,v 1.9 2006/04/22 21:28:29 steev Exp $
+
+  22 Apr 2006; Steev Klimaszewski <steev@gentoo.org>
+  rtl8180-0.22_pre20050528.ebuild:
+  Add a sed that should allow compilation and installation with 2.6.16+
 
 *rtl8180-0.22_pre20050528 (16 Feb 2006)
 
