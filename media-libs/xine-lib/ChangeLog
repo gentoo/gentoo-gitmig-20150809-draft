@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.327 2006/04/22 09:31:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.328 2006/04/22 16:55:11 tcort Exp $
+
+  22 Apr 2006; Thomas Cort <tcort@gentoo.org>
+  xine-lib-1.1.2_pre20060328-r1.ebuild:
+  Stable on amd64 wrt security Bug #128838.
 
   22 Apr 2006; Markus Rothe <corsair@gentoo.org>
   xine-lib-1.1.2_pre20060328-r1.ebuild:
