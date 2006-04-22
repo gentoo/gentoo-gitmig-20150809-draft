@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.20 2006/04/20 12:15:35 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.21 2006/04/22 22:14:35 chtekk Exp $
 #
 # ########################################################################
 #
@@ -71,7 +71,7 @@ DEPEND="${DEPEND}
 	iodbc? ( dev-db/libiodbc >=dev-db/unixODBC-1.8.13 )
 	kerberos? ( virtual/krb5 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
-	libedit? ( dev-libs/libedit )
+	libedit? ( || ( sys-freebsd/freebsd-lib dev-libs/libedit ) )
 	mcve? ( >=dev-libs/openssl-0.9.7 )
 	mhash? ( app-crypt/mhash )
 	ming? ( media-libs/ming )
