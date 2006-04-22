@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-darwin/virtuals,v 1.13 2005/10/06 03:25:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-darwin/virtuals,v 1.14 2006/04/22 13:19:38 chtekk Exp $
 
 # virtual/os-headers should actually be sys-kernel/xnu
 # but we have to wait until its in the tree
@@ -12,7 +12,6 @@ virtual/commonlisp	dev-lisp/sbcl
 virtual/cron		sys-process/vixie-cron
 virtual/dhcpcd		net-misc/dhcpcd
 virtual/editor		app-editors/nano
-virtual/httpd-php	dev-php/mod_php
 virtual/inetd		sys-apps/xinetd
 virtual/krb5		app-crypt/mit-krb5
 virtual/libc		sys-libs/libsystem
@@ -21,7 +20,6 @@ virtual/lpr			net-print/cups
 virtual/mda			mail-filter/procmail
 virtual/mta			mail-mta/postfix
 virtual/os-headers	sys-libs/libsystem
-virtual/php			dev-php/mod_php
 virtual/python		dev-lang/python
 virtual/ruby		dev-lang/ruby
 virtual/ssh			net-misc/openssh

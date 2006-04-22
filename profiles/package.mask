@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5256 2006/04/21 23:09:30 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5257 2006/04/22 13:19:38 chtekk Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,131 @@
 ##
 ##   End example
 ##
+
+# Luca Longinotti <chtekk@gentoo.org> (22 Apr 2006)
+# Mask the old-style PHP packages as announced in
+# http://marc.theaimsgroup.com/?l=gentoo-dev&m=114523997621139&w=2
+# Please migrate to dev-lang/php ASAP, since the old-style PHP
+# packages contain several security issues, HOWTO available at
+# http://www.gentoo.org/proj/en/php/php-upgrading.xml
+dev-php/mod_php
+dev-php/php
+dev-php/php-cgi
+dev-php/PECL-apc
+dev-php/PECL-crack
+dev-php/PECL-Fileinfo
+dev-php/PECL-imagick
+dev-php/PECL-mailparse
+dev-php/PECL-memcache
+dev-php/PECL-pdflib
+dev-php/PECL-ps
+dev-php/PECL-sqlite
+dev-php/PECL-zip
+<=dev-php/adodb-4.65
+dev-php/eaccelerator
+dev-php/ioncube_loaders
+dev-php/jpgraph
+dev-php/memcached-client-php
+dev-php/phpdbg
+dev-php/php-gtk
+dev-php/phpxmlrpc
+dev-php/savant
+<=dev-php/simpletest-1.0.0
+<=dev-php/smarty-2.6.10
+<=dev-php/smarty-docs-2.6.0
+dev-php/sqlite-php
+dev-php/xdebug
+<=dev-php/PEAR-PEAR-1.3.5
+dev-php/PEAR-Archive_Tar
+dev-php/PEAR-Console_Getopt
+dev-php/PEAR-XML_RPC
+=dev-php/PEAR-Auth-1.2.3
+=dev-php/PEAR-Auth_SASL-1.0.1
+=dev-php/PEAR-Benchmark-1.2.2
+=dev-php/PEAR-Cache-1.5.4
+=dev-php/PEAR-Cache_Lite-1.5.2
+=dev-php/PEAR-Console_Table-1.0.2
+=dev-php/PEAR-Crypt_RC4-1.0.2
+=dev-php/PEAR-Date-1.4.3
+=dev-php/PEAR-DB-1.6.8
+=dev-php/PEAR-DB-1.7.6
+=dev-php/PEAR-DB_DataObject-1.7.15
+=dev-php/PEAR-DB_Table-0.21.2
+=dev-php/PEAR-File-1.0.3
+=dev-php/PEAR-File_Find-0.2.0
+=dev-php/PEAR-HTML_Common-1.2.1
+=dev-php/PEAR-HTML_Javascript-1.1.0
+=dev-php/PEAR-HTML_QuickForm-3.2.5
+=dev-php/PEAR-HTML_Select_Common-1.1-r1
+=dev-php/PEAR-HTML_Table-1.5
+=dev-php/PEAR-HTML_Table_Matrix-1.0.7
+=dev-php/PEAR-HTML_Template_Flexy-0.6.3
+=dev-php/PEAR-HTML_Template_Flexy-1.2.1
+=dev-php/PEAR-HTML_Template_IT-1.1
+=dev-php/PEAR-HTML_Template_Sigma-1.0.2
+=dev-php/PEAR-HTML_Template_Sigma-1.1.2
+=dev-php/PEAR-HTML_TreeMenu-1.2.0
+=dev-php/PEAR-HTTP-1.3.4
+=dev-php/PEAR-HTTP_Request-1.2.4
+=dev-php/PEAR-HTTP_WebDAV_Server-0.99.1
+=dev-php/PEAR-I18N-0.8.6
+=dev-php/PEAR-I18N-0.8.6-r1
+=dev-php/PEAR-Image_IPTC-1.0.2
+=dev-php/PEAR-Log-1.8.7
+=dev-php/PEAR-Mail-1.1.4
+=dev-php/PEAR-Mail-1.1.6
+=dev-php/PEAR-Mail_Mime-1.2.1-r1
+=dev-php/PEAR-Mail_Mime-1.3.0
+=dev-php/PEAR-Mail_Mime-1.3.1
+=dev-php/PEAR-Math_Stats-0.9.0_beta3
+=dev-php/PEAR-MDB-1.3.0
+=dev-php/PEAR-Net_CheckIP-1.1
+=dev-php/PEAR-Net_DIME-0.3
+=dev-php/PEAR-Net_DNS-0.03
+=dev-php/PEAR-Net_DNSBL-1.0.0
+=dev-php/PEAR-Net_IMAP-1.0.3
+=dev-php/PEAR-Net_LMTP-1.0.1
+=dev-php/PEAR-Net_POP3-1.3.6
+=dev-php/PEAR-Net_Server-0.12.0
+=dev-php/PEAR-Net_Sieve-1.1.1
+=dev-php/PEAR-Net_SmartIRC-0.5.5_p1
+=dev-php/PEAR-Net_SMTP-1.2.6
+=dev-php/PEAR-Net_Socket-1.0.5
+=dev-php/PEAR-Net_Socket-1.0.6
+=dev-php/PEAR-Net_URL-1.0.14
+=dev-php/PEAR-Net_UserAgent_Detect-2.1.0
+=dev-php/PEAR-Numbers_Words-0.13.1
+=dev-php/PEAR-OLE-0.5
+=dev-php/PEAR-Pager-2.3.3
+=dev-php/PEAR-PEAR_Info-1.5.2
+=dev-php/PEAR-PhpDocumentor-1.2.3
+=dev-php/PEAR-PhpDocumentor-1.3.0_rc3
+=dev-php/PEAR-PHPUnit-1.3.0
+=dev-php/PEAR-Services_Weather-1.3.1
+=dev-php/PEAR-Services_Weather-1.3.2
+=dev-php/PEAR-SOAP-0.8.1
+=dev-php/PEAR-Spreadsheet_Excel_Writer-0.7
+=dev-php/PEAR-Spreadsheet_Excel_Writer-0.8
+=dev-php/PEAR-Structures_DataGrid-0.6.2
+=dev-php/PEAR-System_Command-1.0.1
+=dev-php/PEAR-System_Command-1.0.2
+=dev-php/PEAR-Text_Diff-0.1.1
+=dev-php/PEAR-Text_Password-1.0
+=dev-php/PEAR-Text_Wiki-0.20.1
+=dev-php/PEAR-Text_Wiki-1.0.0
+=dev-php/PEAR-Tree-0.2.4
+=dev-php/PEAR-Validate-0.5.0
+=dev-php/PEAR-VersionControl_SVN-0.3.0_alpha1
+=dev-php/PEAR-XML_Beautifier-1.1
+=dev-php/PEAR-XML_Parser-1.2.4
+=dev-php/PEAR-XML_RSS-0.9.2
+=dev-php/PEAR-XML_Serializer-0.15.0
+=dev-php/PEAR-XML_Tree-1.1-r1
+=dev-php/PEAR-XML_Tree-2.0.0_rc2
+=dev-php/PEAR-XML_Util-1.1.1
+=dev-php4/PEAR-XML_CSSML-1.1-r2
+=dev-php4/PEAR-XML_XPath-1.2-r1
+=dev-php4/PEAR-XML_XPath-1.2.1
 
 # Marcelo Goes <vanquirius@gentoo.org> (21 Apr 2006)
 # utf8 patch remains to be ported
