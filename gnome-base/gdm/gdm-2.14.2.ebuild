@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.14.2.ebuild,v 1.1 2006/04/19 07:29:15 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.14.2.ebuild,v 1.2 2006/04/22 14:47:11 foser Exp $
 
 inherit eutils pam gnome2
 
@@ -53,14 +53,15 @@ DEPEND="${RDEPEND}
 		virtual/x11 )
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.28
+	>=app-text/gnome-doc-utils-0.3.2
 	>=app-text/scrollkeeper-0.1.4"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
-USE_DESTDIR="1"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 
 pkg_setup() {
+
 	G2CONF="--sysconfdir=/etc/X11         \
 		--localstatedir=/var              \
 		--with-xdmcp                      \
@@ -80,9 +81,11 @@ pkg_setup() {
 
 	enewgroup gdm
 	enewuser gdm -1 -1 /var/lib/gdm gdm
+
 }
 
 src_unpack() {
+
 	unpack ${A}
 	cd "${S}"
 
@@ -93,9 +96,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.13.0.7-gdm-dmx-intllibs.patch
 
 	gnome2_omf_fix docs/*/Makefile.in docs/Makefile.in
+
 }
 
 src_install() {
+
 	gnome2_src_install
 
 	local gentoodir="${WORKDIR}/${GDM_EXTRA}"
@@ -138,6 +143,7 @@ src_install() {
 
 	# Move Gentoo theme in
 	mv ${WORKDIR}/gentoo-*  ${D}/usr/share/gdm/themes
+
 }
 
 pkg_postinst() {
@@ -161,8 +167,10 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
+
 	gnome2_pkg_postrm
 
 	einfo "To remove GDM from startup please execute"
 	einfo "'rc-update del xdm default'"
+
 }
