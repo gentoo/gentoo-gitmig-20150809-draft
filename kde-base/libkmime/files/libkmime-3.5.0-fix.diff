@@ -1,0 +1,10 @@
+--- kdepim/libkmime/kmime_content.cpp	2005/07/26 18:54:59	438982
++++ kdepim/libkmime/kmime_content.cpp	2006/04/15 12:39:26	530112
+@@ -395,6 +395,7 @@
+       case Headers::CEbinary :
+         ret = temp;
+         removeTrailingNewline=false;
++      break;
+       default :
+         ret = temp;
+         removeTrailingNewline=true;
