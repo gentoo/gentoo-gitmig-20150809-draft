@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/kxdocker-i18n
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker-i18n/ChangeLog,v 1.1 2006/04/22 03:17:04 dragonheart Exp $
+
+*kxdocker-i18n-1.0.2-r1 (22 Apr 2006)
+
+  22 Apr 2006; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +kxdocker-i18n-1.0.2-r1.ebuild:
+  initial ebuild by Alessio Cassibba (X-Drum) bug #124157
+
