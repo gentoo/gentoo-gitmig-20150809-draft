@@ -1,6 +1,10 @@
 # ChangeLog for net-www/gentoo-webroot-default
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/ChangeLog,v 1.17 2005/10/07 18:00:11 gustavoz Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/ChangeLog,v 1.18 2006/04/22 21:33:56 flameeyes Exp $
+
+  22 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  gentoo-webroot-default-0.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   07 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gentoo-webroot-default-0.2.ebuild:
