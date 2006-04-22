@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/capisuite
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.26 2006/04/11 23:05:28 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.27 2006/04/22 11:59:55 sbriesen Exp $
+
+  22 Apr 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  capisuite-0.4.5-r3.ebuild:
+  stable on x86.
 
   11 Apr 2006; Stefan Briesenick <sbriesen@gentoo.org>
   -capisuite-0.4.5-r1.ebuild, -capisuite-0.4.5-r2.ebuild:
