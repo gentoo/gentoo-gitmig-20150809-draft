@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-firmware
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.25 2006/04/19 23:34:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.26 2006/04/22 17:00:47 wolf31o2 Exp $
+
+  22 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  alsa-firmware-1.0.11.ebuild:
+  Stable on x86 wrt bug #130535.
 
   19 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -alsa-firmware-1.0.11_rc3.ebuild:
