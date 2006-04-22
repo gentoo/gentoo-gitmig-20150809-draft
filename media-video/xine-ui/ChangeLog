@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.115 2006/04/22 16:57:00 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.116 2006/04/22 19:15:30 dertobi123 Exp $
+
+  22 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  xine-ui-0.99.4-r5.ebuild:
+  ppc stable, bug #130801
 
   22 Apr 2006; Thomas Cort <tcort@gentoo.org> xine-ui-0.99.4-r5.ebuild:
   Stable on amd64 wrt security Bug #130801.
