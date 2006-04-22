@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/re2c-0.9.11.ebuild,v 1.1 2005/12/28 00:55:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/re2c-0.9.11.ebuild,v 1.2 2006/04/22 05:58:12 halcy0n Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ src_unpack() {
 	unpack ${A} || die
 	# Fix permissions
 	chmod -R u+rw ${S}
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 }
 
 src_compile() {
