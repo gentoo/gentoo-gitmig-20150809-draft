@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.6 2006/04/16 12:07:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.7 2006/04/22 16:31:22 flameeyes Exp $
 
 # Linux-dependant flags
 selinux
@@ -26,6 +26,7 @@ nodroproot
 caps
 vidix
 pbbuttonsd
+madwifi
 
 # This usually refers just to linux-dvb
 dvb
