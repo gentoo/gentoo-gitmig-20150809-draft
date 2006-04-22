@@ -1,34 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fcc7711d6aa7043b69b5f3fd665c00ea ChangeLog 8754
-RMD160 ac1042d6abf5d36e72f8657fa7c806f9f5365d8d ChangeLog 8754
-SHA256 01e2d215b24b6660e1990113fc00ad9f17789abde458ee5c97a6d0316e26d857 ChangeLog 8754
+MD5 9568c021e67ad493f747a41de57fd92c ChangeLog 8856
 MD5 8f643c1d27c4b4e424c0316c8586e857 files/digest-portage-utils-0.1.13 262
-RMD160 886e31ad2827963a7808af64975bfc8201274863 files/digest-portage-utils-0.1.13 262
-SHA256 cbbc2379358fd9db14b936ac9c71c072716124ce3b29901ce6becf17664c0c5f files/digest-portage-utils-0.1.13 262
 MD5 a27d9e75509e2784c6a172ee6124d11d files/digest-portage-utils-0.1.14 262
-RMD160 003da05710d4b6c90c0a02f974f0c96338c0fea2 files/digest-portage-utils-0.1.14 262
-SHA256 fd3fad15443c41caf463f7d6c60aa71df0ad5c8dd787e0d8f10166f5a6217dff files/digest-portage-utils-0.1.14 262
-MD5 fee72d9da8fcaea251bb0469fbc203d9 files/digest-portage-utils-0.1.15 262
-RMD160 53aa6161fa493122d971936932e126025fdfc94e files/digest-portage-utils-0.1.15 262
-SHA256 0c610cf8b05da0e22ddbaf47227470b53be4fb2d2c3d3e110e4fd98e6d944a67 files/digest-portage-utils-0.1.15 262
+MD5 870576beb8308a642ea961685959f5f8 files/digest-portage-utils-0.1.15 72
 MD5 5a808b54f37942c1de1ff75edc43f69d metadata.xml 281
-RMD160 15e60807f6da5cfa6d15c44e7a1a1dd75b67400d metadata.xml 281
-SHA256 5d1926670f5323ff9aefe20d10a36ac00f23a49bf13985c9a77baea4f3b4abbd metadata.xml 281
 MD5 8f9deea2c9dcc2ba0af2a7e1396ff3d0 portage-utils-0.1.13.ebuild 657
-RMD160 f2e7a8f6b540e23b45c0e237877f5405e21ed2a6 portage-utils-0.1.13.ebuild 657
-SHA256 06cdf60b662209ffca2977798abe767934e8b6e604ba85ed7b165877ac83a575 portage-utils-0.1.13.ebuild 657
 MD5 756003635f7f0908e8eb3917ba64e823 portage-utils-0.1.14.ebuild 669
-RMD160 d0bc10ce8eeff6e1b4aa6eddb3f0aca3f9a6d566 portage-utils-0.1.14.ebuild 669
-SHA256 1b3098ba80fffce71356e142298397d7129264c9d0f9571378e716f1a5f67e9c portage-utils-0.1.14.ebuild 669
-MD5 17b8bac3dede072cb9f51e0b27886b2c portage-utils-0.1.15.ebuild 679
-RMD160 8bb776f148ca7a70915ff80456193b34f8024140 portage-utils-0.1.15.ebuild 679
-SHA256 0d842548b81ad4341950daef02122ac68e5d60156943d7d854a90e4753a3bbb9 portage-utils-0.1.15.ebuild 679
+MD5 39e39adebfd8e3f00cc3251deb2e2d68 portage-utils-0.1.15.ebuild 673
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEQnVcugEuf3OQ0akRAp0OAJ4nYPUxgwjlXiNX0SNTZiJ8OMKjNgCfaTii
-lAeRlMmGU79SUjE7nkno91U=
-=j4j3
+iQCVAwUBREogmZ4WFLgrx1GWAQLttQP+LbY3IRJ53X9Wa2THIhTq7U6h4TQ1Fitu
+82rV48B8dpXWXIwlZF3fhfeUG0pulD35V4GJjwzUF0f6gSTWT4bxmfK77YLbFdUT
+by7qxADlLT6AnWHGGPtKHd8tusHkHcWxtXQlLq2WUbQDlYWuudVIugi5SEfg6090
+K1+/MHnFtl8=
+=JRwt
 -----END PGP SIGNATURE-----
