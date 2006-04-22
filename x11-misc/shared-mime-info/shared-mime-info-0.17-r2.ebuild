@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.17-r1.ebuild,v 1.1 2006/04/01 11:13:30 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.17-r2.ebuild,v 1.1 2006/04/22 16:05:20 foser Exp $
 
 inherit eutils fdo-mime
 
@@ -29,6 +29,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-fix_pc.patch
 	# fix ps file detection (#126880)
 	epatch ${FILESDIR}/${P}-ps_plain_text.patch
+	epatch ${FILESDIR}/${P}-m3u_plain_text.patch
 
 }
 

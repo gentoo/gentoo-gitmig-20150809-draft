@@ -1,0 +1,10 @@
+--- shared-mime-info-0.17/freedesktop.org.xml.in~	2006-03-13 14:12:01.000000000 +0100
++++ shared-mime-info-0.17/freedesktop.org.xml.in	2006-04-02 18:58:25.000000000 +0200
+@@ -1893,6 +1893,7 @@
+     <_comment>MP3 audio</_comment>
+   </mime-type>
+   <mime-type type="audio/x-mpegurl">
++    <sub-class-of type="text/plain"/>
+     <_comment>MP3 audio (streamed)</_comment>
+     <alias type="audio/mpegurl" />
+     <glob pattern="*.m3u"/>
