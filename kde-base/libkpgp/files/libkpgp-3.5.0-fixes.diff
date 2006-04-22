@@ -1,0 +1,47 @@
+--- kdepim/libkpgp/kpgpbase2.cpp	2005/07/26 18:54:59	438982
++++ kdepim/libkpgp/kpgpbase2.cpp	2006/04/15 12:39:26	530112
+@@ -863,9 +863,9 @@
+           validity = KPGP_VALIDITY_FULL;
+       else if( !strncmp( str.data() + index+21, "marginal", 8 ) )
+         validity = KPGP_VALIDITY_MARGINAL;
+-      else if( !strncmp( str.data() + index+21, "never", 8 ) )
++      else if( !strncmp( str.data() + index+21, "never", 5 ) )
+         validity = KPGP_VALIDITY_NEVER;
+-      else if( !strncmp( str.data() + index+21, "undefined", 8 ) )
++      else if( !strncmp( str.data() + index+21, "undefined", 9 ) )
+         validity = KPGP_VALIDITY_UNDEFINED;
+ 
+       // determine the user ID
+--- kdepim/libkpgp/kpgpbase6.cpp	2005/07/26 18:54:59	438982
++++ kdepim/libkpgp/kpgpbase6.cpp	2006/04/15 12:39:26	530112
+@@ -634,8 +634,8 @@
+         }
+       }
+       // store the global key capabilities
+-      canSign |= sign;
+-      canEncr |= encr;
++      canSign = canSign || sign;
++      canEncr = canEncr || encr;
+     }
+     else if( !strncmp( output.data() + offset, "Unknown type", 12 ) )
+     { // line contains key data of unknown type (ignored)
+--- kdepim/libkpgp/kpgpui.cpp	2005/07/26 18:54:59	438982
++++ kdepim/libkpgp/kpgpui.cpp	2006/04/15 12:39:26	530112
+@@ -985,7 +985,7 @@
+     kdDebug(5100) << "Selected keys: " << newKeyIdList.toStringList().join(", ") << endl;
+     mKeyIds = newKeyIdList;
+     if( !keysToBeChecked.isEmpty() ) {
+-      keysAllowed &= checkKeys( keysToBeChecked );
++      keysAllowed = keysAllowed && checkKeys( keysToBeChecked );
+     }
+     enableButtonOK( keysAllowed );
+ 
+@@ -1016,7 +1016,7 @@
+     pProgressDlg->setLabel( i18n("Checking key 0x%1...")
+                             .arg( getKeyId( *it ) ) );
+     kapp->processEvents();
+-    keysAllowed &= ( -1 != keyAdmissibility( *it, AllowExpensiveTrustCheck ) );
++    keysAllowed = keysAllowed && ( -1 != keyAdmissibility( *it, AllowExpensiveTrustCheck ) );
+     pProgressDlg->progressBar()->advance( 1 );
+     kapp->processEvents();
+   }
