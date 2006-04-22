@@ -1,6 +1,12 @@
 # ChangeLog for app-text/gpdf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.129 2006/02/21 15:31:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.130 2006/04/22 22:13:15 carlo Exp $
+
+  22 Apr 2006; Carsten Lohrke <carlo@gentoo.org> gpdf-0.132-r1.ebuild,
+  gpdf-0.132-r2.ebuild, gpdf-2.8.2.ebuild, gpdf-2.8.3.ebuild,
+  gpdf-2.10.0.ebuild, gpdf-2.10.0-r1.ebuild, gpdf-2.10.0-r2.ebuild,
+  gpdf-2.10.0-r3.ebuild, gpdf-2.10.0-r4.ebuild:
+  Removed PROVIDE as of bug #130746.
 
   21 Feb 2006; Aron Griffis <agriffis@gentoo.org> gpdf-2.10.0-r4.ebuild:
   Mark 2.10.0-r4 stable on ia64. #121511

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.5.1.ebuild,v 1.2 2006/03/10 18:06:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.5.1.ebuild,v 1.3 2006/04/22 22:10:56 carlo Exp $
 
 inherit eutils gnome2
 
@@ -41,8 +41,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.28"
 
-PROVIDE="virtual/pdfviewer
-	virtual/psviewer"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 USE_DESTDIR="1"

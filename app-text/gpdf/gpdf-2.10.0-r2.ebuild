@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-2.10.0-r2.ebuild,v 1.8 2005/12/14 11:32:59 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-2.10.0-r2.ebuild,v 1.9 2006/04/22 22:13:15 carlo Exp $
 
 inherit gnome2 eutils
 
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29
 	>=dev-util/pkgconfig-0.12.0"
 
-PROVIDE="virtual/pdfviewer"
+
 
 DOCS="AUTHORS CHANGES ChangeLog NEWS README*"
 
