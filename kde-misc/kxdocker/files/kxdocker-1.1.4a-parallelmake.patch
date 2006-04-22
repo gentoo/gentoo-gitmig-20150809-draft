@@ -1,0 +1,11 @@
+--- src/Makefile.am	2006-04-11 14:58:58.000000000 +0200
++++ /var/tmp/portage/kxdocker-1.1.3a/work/kxdocker-1.1.3a/src/Makefile.am	2006-04-07 19:40:31.000000000 +0200
+@@ -64,6 +64,6 @@
+ libKXCommand_la_LIBADD = libkxdocker.la
+ libKXCommand_la_SOURCES = xeplugin_command.cpp
+ libKXDockerComposite_la_LDFLAGS = -avoid-version -module $(all_libraries)
+-libKXDockerComposite_la_LIBADD = $(top_builddir)/src/libkxdocker.la \
+-	$(LIB_KDEUI) $(LIB_KIO)
++libKXDockerComposite_la_LIBADD = libkxdocker.la $(LIB_KIO) \
++	$(LIB_KDEUI)
+ libKXDockerComposite_la_SOURCES = xgdockercomposite.cpp xgpillowcomposite.cpp

@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 eb75ae1d8f0994fbdab9318531beda77 ChangeLog 903
 RMD160 74f3c840ed74fa0c0a8aacd34ce1e93b0314d7a5 ChangeLog 903
 SHA256 82848689b36ae19ecf3072ef833b46f2a459d977981455104676c3206c6eb2ec ChangeLog 903
@@ -13,6 +10,9 @@ SHA256 5394f5c8e8c939c4951badd622c796b7d85ea1dd0fc5a1aa0b7b42fd1d71fc3a files/di
 MD5 4e0efb756931567e1062b5f0acef97ee files/digest-kxdocker-resources-1.0.0 280
 RMD160 e740cdfc87205a950b34b88669849185f2a48fe3 files/digest-kxdocker-resources-1.0.0 280
 SHA256 dd4f34eb4653858a54a0f6966d56a7db05f587dc813641baa33228ee83ff39b0 files/digest-kxdocker-resources-1.0.0 280
+MD5 6dbf338e8446eee43e814d2b582e5d45 files/digest-kxdocker-resources-1.1.0 280
+RMD160 3bca9bb0c949ab76e4ebc7f57046a6407f78e8d2 files/digest-kxdocker-resources-1.1.0 280
+SHA256 335545f4b0c61a07e9266cfe219966b7e01a21b030efc19dfb6330fded83a65d files/digest-kxdocker-resources-1.1.0 280
 MD5 dad10e6fb852b9e4a4044310381e304c kxdocker-resources-0.13.ebuild 567
 RMD160 eb90f4281ae6be98042b700d6c2bd3f615b0b573 kxdocker-resources-0.13.ebuild 567
 SHA256 c599225a653723fe497f7ad52739e95e7912f435acd5d65fe63e048f5a9a9e2d kxdocker-resources-0.13.ebuild 567
@@ -22,13 +22,9 @@ SHA256 00df03d001d81c021feae581856e4c6e99041e42214762920237a4562eedf578 kxdocker
 MD5 64d17f0d50034ce418e7e530cebe37b5 kxdocker-resources-1.0.0.ebuild 647
 RMD160 f1be769ee995efb000f51705d5b0db8010cfbdd7 kxdocker-resources-1.0.0.ebuild 647
 SHA256 5fbb2bf285d081c0bcba59a05c9164bc5e716e96ee4d16a86d1c0c8c825ccc4c kxdocker-resources-1.0.0.ebuild 647
+MD5 ab2bdcb358a247159e867c5a6cbe88d8 kxdocker-resources-1.1.0.ebuild 492
+RMD160 2abb62661e7abf69f8dadfe866c40d5e8cc68bb9 kxdocker-resources-1.1.0.ebuild 492
+SHA256 80edb70a0517619f4a4eda931e269763c9982208360f017a9b2f6c9da1d9740f kxdocker-resources-1.1.0.ebuild 492
 MD5 af0f2c1aa4185c52dd4f4ea588f22286 metadata.xml 349
 RMD160 d2ff75e9ad34ca5bd7bf1af21510d2c4e20ca084 metadata.xml 349
 SHA256 56e8b49cdda4e9edda2aa32fd91aae96b0c89d3b4774867a5cea4c5c58c62545 metadata.xml 349
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEAUovmdTrptrqvGERAtqiAKCaG39ioY3SDRnrXbt7aH8TU9K9AgCfb3Dw
-BNMo6jB2kVtX7rE5MYLvDAc=
-=9keO
------END PGP SIGNATURE-----

@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 63b782d3370b6750411f128f26aba675 ChangeLog 1058
 RMD160 a59997b584646736d3728e363684770bd9e5bdba ChangeLog 1058
 SHA256 0b841d66b4c2cdbe361ba2afb90c03e180b460507b1a3ad5f63f517c81526154 ChangeLog 1058
@@ -10,22 +7,24 @@ SHA256 679fc1de97721c9ba4df04ff5dab6f1668178d625cfbe25e593a1beea2ebe505 files/di
 MD5 0221f82c463ed3d7ef291a3336544a36 files/digest-kxdocker-1.0.0a 250
 RMD160 433a49622a8d5d546e2dc41359efd02299b96e88 files/digest-kxdocker-1.0.0a 250
 SHA256 c4c59546b1493e6f1a07952cf06ae2445c9b7a94e750bb5f0f7352a06e8287e1 files/digest-kxdocker-1.0.0a 250
+MD5 672c4e39e4cc8345cd7862280f47896e files/digest-kxdocker-1.1.4a 250
+RMD160 0f5cbc253216f6c486f2258657f687eff9bfa705 files/digest-kxdocker-1.1.4a 250
+SHA256 fc5cd3b3be564c3526b21bf84c44ef00e54a7ba3a31404c41c4bc9ecc032745e files/digest-kxdocker-1.1.4a 250
 MD5 9d1d723246a9c68ade1a9069043b9c85 files/kxdocker-1.0.0a-parallelmake.patch 1862
 RMD160 ed5b9e166d3a5422df7edd4533949163dfb2adb3 files/kxdocker-1.0.0a-parallelmake.patch 1862
 SHA256 551b1f79bd02531d3cdb2f513050a1913939f3e9a7849757cce0ffc9114a7e86 files/kxdocker-1.0.0a-parallelmake.patch 1862
+MD5 3e7990856d699b29788d46dfc1a294ad files/kxdocker-1.1.4a-parallelmake.patch 601
+RMD160 8d94ba699fd6d404799780a3a3108d327b651f9e files/kxdocker-1.1.4a-parallelmake.patch 601
+SHA256 4d654337ea28b80d3ef7eac7ce29ff9445fe0f2cd41f246fefea00f4b79e68b3 files/kxdocker-1.1.4a-parallelmake.patch 601
 MD5 7f02c6ca06b5b201f7df728e560e4772 kxdocker-0.39.ebuild 912
 RMD160 12df9116be40070539a7dbed6149ff5725637a0b kxdocker-0.39.ebuild 912
 SHA256 0966a5a06c06e5c4e9516947cb244a86680c0dbbe991b5b828638d6f8fd42a79 kxdocker-0.39.ebuild 912
 MD5 6d75368b4fb2c8947d891b422bb132e2 kxdocker-1.0.0a.ebuild 2068
 RMD160 62b78f664058fdf4ad10996f1a5d0491ec5c66a2 kxdocker-1.0.0a.ebuild 2068
 SHA256 e996176ac2ce2095994a281bab5169c2d039d8b5f707cdcdfad105fa0ae1e981 kxdocker-1.0.0a.ebuild 2068
+MD5 54dad5be64477de80acd88ccbe8a2797 kxdocker-1.1.4a.ebuild 2282
+RMD160 c45546e1e9efc43ce8cdf57bec5f5545e6c6436d kxdocker-1.1.4a.ebuild 2282
+SHA256 8f2b2224475a1d3dc4d6fdf4b7e671857517f71af4a3c5d8522f0961f62df55b kxdocker-1.1.4a.ebuild 2282
 MD5 af0f2c1aa4185c52dd4f4ea588f22286 metadata.xml 349
 RMD160 d2ff75e9ad34ca5bd7bf1af21510d2c4e20ca084 metadata.xml 349
 SHA256 56e8b49cdda4e9edda2aa32fd91aae96b0c89d3b4774867a5cea4c5c58c62545 metadata.xml 349
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEA2FBI1lqEGTUzyQRAu/eAJ4lwizLYzO9gMUOSuTxu0eGCDnG0ACfYSFa
-sB3KkivMXw8cQpkNaxReKoo=
-=C4DX
------END PGP SIGNATURE-----
