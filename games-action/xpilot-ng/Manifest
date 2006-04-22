@@ -1,4 +1,31 @@
-MD5 f81cc6402f93bd06fb9a12059991f22c ChangeLog 738
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7c00d6246658000744594d9891a9a898 ChangeLog 894
+RMD160 7df3e0221866fe183b5aaf6a0666fae504783473 ChangeLog 894
+SHA256 7f72f614b6b780b519bc5dbdefbe6236302d8bbf301fce3676f6983d446aa27c ChangeLog 894
 MD5 1152a5b20d966d37c1662c9053d79083 files/digest-xpilot-ng-4.6.6 68
+RMD160 8ac6a8d3053d37641256963d5492e3e5832c56b4 files/digest-xpilot-ng-4.6.6 68
+SHA256 365840816d4fe374982c0a4298536ffde2c6a2941c5f48f06d99aacd6a72a0f4 files/digest-xpilot-ng-4.6.6 68
+MD5 e1d852eecafabc1d252136eefea26217 files/digest-xpilot-ng-4.7.2 250
+RMD160 654e1ce8f2026280b2e67027d9540dff7b39806b files/digest-xpilot-ng-4.7.2 250
+SHA256 54431c15a255f7c3675fed3cf022516b6ad4c71a42d8d006e1cdfe7041d5cb25 files/digest-xpilot-ng-4.7.2 250
+MD5 6a59beecfb391ade05576a309d463e89 files/xpilot-ng.png 3898
+RMD160 a68fe7ffb0b2d4225b95233be950d65dc527c3ad files/xpilot-ng.png 3898
+SHA256 6c9ba1bb1d0bf20428df32453cc66b2fa93b28bebcb75237ccb3052e8e8c8dde files/xpilot-ng.png 3898
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
 MD5 74d0f996e5c1da2c66f3d27ebf950eb3 xpilot-ng-4.6.6.ebuild 1152
+RMD160 86f1f2fd5750f69a53d0e22d58b8a2f461c835c1 xpilot-ng-4.6.6.ebuild 1152
+SHA256 9d9877e9c1fefe047350ca928dd24022b92ffb3b514efcb40e9d88d3fe6eea6c xpilot-ng-4.6.6.ebuild 1152
+MD5 54c6fe661e5ec6bc1177fabdfe4d53ec xpilot-ng-4.7.2.ebuild 1663
+RMD160 df5045daa7a9d446a71961eff84617855d88fc41 xpilot-ng-4.7.2.ebuild 1663
+SHA256 9a6fc4ec16b56696822c18b632888722c0ca4995155f300791bda4cbc5e24c46 xpilot-ng-4.7.2.ebuild 1663
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFESjs+2CTtIKiFlQIRAgnSAKC5Tgp+pXLGcRIIA1SimomOc4iDmACfWALW
+rf5mZaaUdByTL0qUdGNkH58=
+=xiL7
+-----END PGP SIGNATURE-----
