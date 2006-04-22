@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.6 2006/04/01 19:36:29 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.7 2006/04/22 21:01:29 vanquirius Exp $
+
+*ccid-1.0.1 (22 Apr 2006)
+
+  22 Apr 2006; Marcelo Goes <vanquirius@gentoo.org>
+  -files/ccid-0.9.3.1-ifdhandler.diff, -ccid-0.9.3.1.ebuild,
+  +ccid-1.0.1.ebuild:
+  1.0.1 version bump, thanks to Alon Bar-Lev <alon.barlev at gmail dot com>.
 
 *ccid-1.0.0 (01 Apr 2006)
 
