@@ -2,7 +2,7 @@ MD5 e95ad5e5ee7433ac23c080f1dd1f5306 ChangeLog 2530
 MD5 d999689caf9a0ff57a73e392f126ab05 files/digest-hyperestraier-1.1.1 71
 MD5 72583d60bbc3869b98b1c98d0bf1853a files/digest-hyperestraier-1.1.5 71
 MD5 7d9eb7ce3ba255344dc71835fdadb18e files/digest-hyperestraier-1.2.2 71
-MD5 685be883b76606df270ebbcd1a989408 hyperestraier-1.1.1.ebuild 1569
-MD5 89891543a314a8f66623a3d8f8276391 hyperestraier-1.1.5.ebuild 1638
+MD5 2a6a4db81bd2d4c83b7a781bc01adf4e hyperestraier-1.1.1.ebuild 1561
+MD5 6d2064655881c2d15715521ff37623a3 hyperestraier-1.1.5.ebuild 1630
 MD5 9a2a4fbfc7cbd045e90c662a072186e9 hyperestraier-1.2.2.ebuild 1710
 MD5 382a25f7a6abf0020285f37f74158690 metadata.xml 226
