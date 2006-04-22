@@ -1,37 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 95eac4c110056313ec0c6596efcd2d2d ChangeLog 35574
-RMD160 6c26ed20d5219b04259b0f105d3d455cb546e7ba ChangeLog 35574
-SHA256 adaeb98bc1e6bcd9eac1f4a0d3227acf272154a372f7a9907c7bf33490f78efd ChangeLog 35574
+MD5 9733659a29c83569be86506ba0bfd945 ChangeLog 35680
 MD5 9916e84eeec916e6f6ec0f3aeffccb6a alsa-driver-1.0.10-r2.ebuild 4791
-RMD160 4940a1d64edb487b93b0d29f48d937fa2563c3cc alsa-driver-1.0.10-r2.ebuild 4791
-SHA256 ed09529fa8e9c98adc6dc3671ca6e61e79fb40095fd62fb0e06177ed20bf0ca7 alsa-driver-1.0.10-r2.ebuild 4791
-MD5 6b46f86189d90f1cd43e91e3947815f8 alsa-driver-1.0.11.ebuild 4758
-RMD160 7b77d92e20495a50565d091521ce481cd5890bff alsa-driver-1.0.11.ebuild 4758
-SHA256 b0ab8079d078839a01c124376b39a770d83361f045b31db0b012e32d5ac60421 alsa-driver-1.0.11.ebuild 4758
+MD5 c2340a6792adb518315beee6463daca6 alsa-driver-1.0.11.ebuild 4755
 MD5 075d7776dfb62176431e206a9cd5fc84 files/alsa-driver-1.0.10-gfp-flags.patch 955
-RMD160 ed4d383d6608110c5c3a7ebef2a0fc636ea77d82 files/alsa-driver-1.0.10-gfp-flags.patch 955
-SHA256 f7976e121aad036e11550212b26f2d4568cc688687e950bcdc14ef5932f3eb66 files/alsa-driver-1.0.10-gfp-flags.patch 955
 MD5 11884fe8b770282d2470c5620622e379 files/alsa-driver-1.0.10-oops.patch 1388
-RMD160 c3be6f450c24a0c27a51a2656d49036a06c35220 files/alsa-driver-1.0.10-oops.patch 1388
-SHA256 6532594628a77d37eaac2ef6dacd179846f5955915d9696a5ded843b7d017a13 files/alsa-driver-1.0.10-oops.patch 1388
 MD5 ed352c464a295465543d8933c162f101 files/alsa-driver-1.0.10_rc1-include.patch 346
-RMD160 ec6016414723673e089a4c8cda7e7efe54904280 files/alsa-driver-1.0.10_rc1-include.patch 346
-SHA256 ad4f3c447e3b0f2b0ebdd5dfa9723875660b58210ddab7fc6fbb669d4628135d files/alsa-driver-1.0.10_rc1-include.patch 346
 MD5 5474546fa4977a1fa63fbab0a155fd15 files/digest-alsa-driver-1.0.10-r2 72
-RMD160 4bd20e9c6e23de3d2647cb707b5f446ce11323c4 files/digest-alsa-driver-1.0.10-r2 72
-SHA256 cef008f05a44e097d4881973af7b5147fd9ab893efe4bbc8ee16c35d8edac386 files/digest-alsa-driver-1.0.10-r2 72
 MD5 22644311058526795f233aaa7a6fc155 files/digest-alsa-driver-1.0.11 262
-RMD160 daeedeaa4b2d5bfa3dd386358fc231486bc0f895 files/digest-alsa-driver-1.0.11 262
-SHA256 685909b916bf91fe04291a0f9dcb11865ed4efb588efb3b876ec3e367fede2ad files/digest-alsa-driver-1.0.11 262
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
-SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFERshXAiZjviIA2XgRAutRAKDatv1qYN73jzrR0DXOEcgffmO5fACfRPEs
-bPIqf9p0LiGFfNTS20339es=
-=e6fn
------END PGP SIGNATURE-----
