@@ -1,21 +1,20 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.11 2005/03/11 12:47:00 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.12 2006/04/22 05:52:02 vapier Exp $
 
 inherit linux-info
 
-DESCRIPTION="ipvsadm is a utility to administer the IP virtual server services offered by the Linux kernel with IP virtual server support."
-HOMEPAGE="http://linuxvirtualserver.org"
-LICENSE="GPL-2"
-DEPEND="virtual/libc
-	virtual/linux-sources
-	>=sys-libs/ncurses-5.2"
-
+DESCRIPTION="utility to administer the IP virtual server services offered by the Linux kernel"
+HOMEPAGE="http://linuxvirtualserver.org/"
 SRC_URI="http://www.linuxvirtualserver.org/software/kernel-2.5/${P}.tar.gz"
 
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~amd64 ~s390 x86"
 IUSE=""
+
+DEPEND="virtual/linux-sources
+	>=sys-libs/ncurses-5.2"
 
 pkg_setup() {
 	if kernel_is 2 4; then
@@ -35,8 +34,7 @@ src_install() {
 
 	doman ipvsadm.8 ipvsadm-save.8 ipvsadm-restore.8 || die
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/ipvsadm-init ipvsadm
+	newinitd "${FILESDIR}"/ipvsadm-init ipvsadm
 	keepdir /var/lib/ipvsadm
 
 	diropts -m 755 -o root -g root
@@ -49,7 +47,9 @@ src_install() {
 
 	insinto /usr/include/ipvs
 	newins libipvs/libipvs.h ipvs.h || die
+}
 
+pkg_postinst() {
 	einfo "You will need a kernel that has ipvs patches to use LVS."
-	einfo "This version is specicifically for 2.6 kernels."
+	einfo "This version is specifically for 2.6 kernels."
 }
