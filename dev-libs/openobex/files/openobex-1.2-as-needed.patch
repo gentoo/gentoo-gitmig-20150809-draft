@@ -1,0 +1,12 @@
+diff -uNr openobex-1.2.orig/ircp/Makefile.am openobex-1.2/ircp/Makefile.am
+--- openobex-1.2.orig/ircp/Makefile.am	2006-01-03 18:36:15.000000000 +0000
++++ openobex-1.2/ircp/Makefile.am	2006-04-21 22:43:13.000000000 +0000
+@@ -11,7 +11,7 @@
+ 
+ bin_PROGRAMS = ircp 
+ 
+-LDADD = $(top_builddir)/lib/libopenobex.la libircp.a
++LDADD = libircp.a $(top_builddir)/lib/libopenobex.la
+ 
+ INCLUDES = -I$(top_builddir)/include
+ endif
