@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.76.ebuild,v 1.3 2006/02/20 08:53:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.76.ebuild,v 1.4 2006/04/22 05:17:31 robbat2 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -15,7 +15,7 @@ IUSE="mysql postgres"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
-		>=dev-libs/bglibs-1.027
+		>=dev-libs/bglibs-1.041
 		mysql? ( dev-db/mysql )
 		postgres? ( dev-db/postgresql )"
 
@@ -33,7 +33,7 @@ src_compile() {
 	echo "${D}/usr/lib" > conf-lib
 	echo "${D}/usr/bin" > conf-bin
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
-	echo "$(tc-getCC) -lcrypt" > conf-ld
+	echo "$(tc-getCC) ${LDFLAGS} -lcrypt" > conf-ld
 	emake || die
 
 	if use mysql; then
