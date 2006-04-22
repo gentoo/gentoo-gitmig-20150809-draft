@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/php-docs
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.19 2005/09/24 07:12:45 corsair Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.20 2006/04/22 22:41:20 flameeyes Exp $
+
+  22 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  php-docs-20050822.ebuild:
+  Add ~x86-fbsd keyword.
 
   24 Sep 2005; Markus Rothe <corsair@gentoo.org> php-docs-20050822.ebuild:
   Stable on ppc64
