@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre18.ebuild,v 1.1 2006/04/22 18:17:13 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre18.ebuild,v 1.2 2006/04/22 18:22:31 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -76,17 +76,18 @@ create_dev_nodes() {
 		# a generic option at this time, and the default 'generic' ends
 		# up erroring out, because MAKEDEV internally doesn't know what
 		# to use
-		arm)	suffix=-arm ;;
-		alpha)	suffix=-alpha ;;
-		amd64)	suffix=-i386 ;;
-		hppa)	suffix=-hppa ;;
-		ia64)	suffix=-ia64 ;;
-		m68k)	suffix=-m68k ;;
-		mips)	suffix=-mips ;;
-		ppc*)	suffix=-powerpc ;;
-		s390)	suffix=-s390 ;;
-		sparc*)	suffix=-sparc ;;
-		x86)	suffix=-i386 ;;
+		arm*)    suffix=-arm ;;
+		alpha)   suffix=-alpha ;;
+		amd64)   suffix=-i386 ;;
+		hppa)    suffix=-hppa ;;
+		ia64)    suffix=-ia64 ;;
+		m68k)    suffix=-m68k ;;
+		mips*)   suffix=-mips ;;
+		ppc*)    suffix=-powerpc ;;
+		s390*)   suffix=-s390 ;;
+		sh*)     suffix=-sh ;;
+		sparc*)  suffix=-sparc ;;
+		x86)     suffix=-i386 ;;
 	esac
 
 	einfo "Using generic${suffix} to make $(tc-arch) device nodes..."
@@ -427,6 +428,7 @@ pkg_postinst() {
 	einfo "filesystems, for example /dev or /proc.  That's okay!"
 	source "${ROOT}"/usr/share/baselayout/mkdirs.sh
 	source "${ROOT}"/usr/share/baselayout/mklinks.sh
+	echo
 
 	# This could be done in src_install, which would have the benefit of
 	# (1) devices.tar.bz2 would show up in CONTENTS
@@ -461,7 +463,7 @@ pkg_postinst() {
 		if [[ ! -e "${ROOT}/dev/.devfsd" && ! -e "${ROOT}/dev/.udev" ]]; then
 			einfo "Populating /dev with device nodes..."
 			cd ${ROOT}/dev || die
-			/bin/tar xjpf "${ROOT}/lib/udev-state/devices.tar.bz2" || die
+			tar xjpf "${ROOT}/lib/udev-state/devices.tar.bz2" || die
 		fi
 	fi
 
