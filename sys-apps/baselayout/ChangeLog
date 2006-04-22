@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.318 2006/04/19 00:50:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.319 2006/04/22 18:17:13 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-1.12.0_pre18 (22 Apr 2006)
+
+  22 Apr 2006; Roy Marples <uberlord@gentoo.org>
+  +baselayout-1.12.0_pre18.ebuild:
+  Hopefully the last 1.12 pre before we go stable.
+  udhcpc users will need udhcp-0.9.9_pre20041216-r3 
 
 *baselayout-1.12.0_pre17-r3 (18 Apr 2006)
 
