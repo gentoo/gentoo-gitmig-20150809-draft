@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d5b39ff6ee4ec8aaf16fac0ecd0388bb ChangeLog 3840
-RMD160 b8755a636df8f2d422c45c6dbceab7f5fe83dc52 ChangeLog 3840
-SHA256 f4d6851077084b11e85b932f1de5a8355212f5e391e2def748c420e7b95a3c2b ChangeLog 3840
+MD5 c6dd192ea1c95fec14b1b22896d27fe9 ChangeLog 3958
+RMD160 12689ca97f62a7e5dfd10aa2e0596d7a386f60cc ChangeLog 3958
+SHA256 f3ac08d5675c75d418c5e89b5516eb85dd3830e0b678b7f2f08df856f358b446 ChangeLog 3958
 MD5 e77ab16ed47e8bf397d1cb7e04aa191b alsa-firmware-1.0.10.ebuild 676
 RMD160 c1fb753c62bd6564fcc60b9e90bdec2c0efd8e69 alsa-firmware-1.0.10.ebuild 676
 SHA256 05c3126cfc3a20b62730dd3ed4c435c663924fb59d9c9d5148d3938ac40bba53 alsa-firmware-1.0.10.ebuild 676
-MD5 4a63729ded38e505547e4fe6b1670ed4 alsa-firmware-1.0.11.ebuild 725
-RMD160 211f8dd47d6ccab33c0688f2662237654c772dc9 alsa-firmware-1.0.11.ebuild 725
-SHA256 342ec9fac3d153120217e830822aab35a7f52adc7ecee4e974a6ff543af3214e alsa-firmware-1.0.11.ebuild 725
+MD5 89e9b7e26cae1a245998c930e7954876 alsa-firmware-1.0.11.ebuild 723
+RMD160 e20bccee6fa99f27c53b6ba4109c1a2f644f84da alsa-firmware-1.0.11.ebuild 723
+SHA256 a6fafbe0153a793f10379e2a3630eac89e03905b7b281833a5cf6d65e3d6b9a3 alsa-firmware-1.0.11.ebuild 723
 MD5 3420599c69435348716238fa365b5215 alsa-firmware-1.0.8-r1.ebuild 649
 RMD160 228b4c3982b71ca119a4d0d94c1e53ffc1e78bd4 alsa-firmware-1.0.8-r1.ebuild 649
 SHA256 676a699a9fc9723645c8aa1510ba214877cdc7b5a7554b3e727620b99f70717f alsa-firmware-1.0.8-r1.ebuild 649
@@ -25,10 +22,3 @@ SHA256 0c077a7463be8d5c67f23c7f7477825ed4480ec17bd5dcbc9af2de89315ae0ac files/di
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFERshOAiZjviIA2XgRAgF+AKDvJQJE5qhNq1z49ABp9svPw8UxBQCgyyN1
-re+MN/wHsCV+thJ8z/sjeEQ=
-=khDM
------END PGP SIGNATURE-----

@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4c1a1ea97580fd3e2f3394f259e801c3 ChangeLog 36053
-RMD160 102061f38ba15f58f1e06fbd899ea5738facd1b9 ChangeLog 36053
-SHA256 7e5455c67577765990ab91dc864723e8b1773699adf5bb08becf308cfca2e9f8 ChangeLog 36053
+MD5 b6205f9b5c2aac0c5063ca23cf8febd2 ChangeLog 36169
+RMD160 9b7920eee2b538ef83bbcd3e7e3237a85171bb0d ChangeLog 36169
+SHA256 84b20228f94ccaa4a06b1503fcbade9bb9ca03173e06616b470da5b8971e5dc4 ChangeLog 36169
 MD5 9916e84eeec916e6f6ec0f3aeffccb6a alsa-driver-1.0.10-r2.ebuild 4791
 RMD160 4940a1d64edb487b93b0d29f48d937fa2563c3cc alsa-driver-1.0.10-r2.ebuild 4791
 SHA256 ed09529fa8e9c98adc6dc3671ca6e61e79fb40095fd62fb0e06177ed20bf0ca7 alsa-driver-1.0.10-r2.ebuild 4791
-MD5 54cd14d821c866be58f966514b1de1a3 alsa-driver-1.0.11.ebuild 4799
-RMD160 617f3fc30f07908360e9a02146cded11b489ce5b alsa-driver-1.0.11.ebuild 4799
-SHA256 2e65fd677ba4fad5f031adc6e37e856f3cedb01731d5a06c73aa3b8153ced087 alsa-driver-1.0.11.ebuild 4799
+MD5 6e090ef73d51130d3b96540a7043bdc6 alsa-driver-1.0.11.ebuild 4797
+RMD160 cf9f0af8be01e1dce317f5220a44344836137dd9 alsa-driver-1.0.11.ebuild 4797
+SHA256 a0eeb27fe54960d865a0cc95d29b7f327f4d5701ebca767db8ff3ffb5324c90a alsa-driver-1.0.11.ebuild 4797
 MD5 075d7776dfb62176431e206a9cd5fc84 files/alsa-driver-1.0.10-gfp-flags.patch 955
 RMD160 ed4d383d6608110c5c3a7ebef2a0fc636ea77d82 files/alsa-driver-1.0.10-gfp-flags.patch 955
 SHA256 f7976e121aad036e11550212b26f2d4568cc688687e950bcdc14ef5932f3eb66 files/alsa-driver-1.0.10-gfp-flags.patch 955
@@ -31,10 +28,3 @@ SHA256 685909b916bf91fe04291a0f9dcb11865ed4efb588efb3b876ec3e367fede2ad files/di
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFESj4eAiZjviIA2XgRAnhfAJ4/uS3C/ZBHUr3P0FbmbOvqM7UbuwCfeXMD
-V5uVZyP5zEGSxTX+4w5NXw4=
-=P+4V
------END PGP SIGNATURE-----
