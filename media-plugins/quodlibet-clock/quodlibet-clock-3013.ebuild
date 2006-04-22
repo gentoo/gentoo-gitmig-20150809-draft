@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-clock/quodlibet-clock-3013.ebuild,v 1.2 2006/04/22 15:22:08 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-clock/quodlibet-clock-3013.ebuild,v 1.3 2006/04/22 15:39:40 tcort Exp $
 
 inherit python
 
@@ -15,11 +15,11 @@ IUSE=""
 
 DEPEND=">=media-sound/quodlibet-0.19.1"
 
-PLUGIN_DEST="${D}/usr/share/quodlibet/plugins"
+PLUGIN_DEST="/usr/share/quodlibet/plugins"
 
 src_install() {
 	insinto ${PLUGIN_DEST}
-	doins ${WORKDIR}/${P}.py
+	doins ${S}.py
 }
 
 pkg_postinst() {
