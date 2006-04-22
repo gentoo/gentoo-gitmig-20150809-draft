@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8003bc0c9612af744b9c1d547f05a60b ChangeLog 447
+RMD160 7a9ff0aaa39cd61f1d43c3e1370d94ce2875326b ChangeLog 447
+SHA256 8e09b089d10af8e30147273835074928436f37eed275808ae6c41f43aa2bbb8f ChangeLog 447
+MD5 c218476639dbbaac7e5889c99b17b24b files/digest-kxdocker-configurator-1.0.2 286
+RMD160 2581dbae82e46f73799b4a658ba62485af9b916f files/digest-kxdocker-configurator-1.0.2 286
+SHA256 1cb10080bc2c658e00899d238835bc70e72d9d93eabcf0482f0ec5c2ec972e0d files/digest-kxdocker-configurator-1.0.2 286
+MD5 18eef5355fa80ce91956d874ee9d5be2 kxdocker-configurator-1.0.2.ebuild 610
+RMD160 0d32d707e7188a982171d2a31621c10630f91b89 kxdocker-configurator-1.0.2.ebuild 610
+SHA256 3453ac9595ce273a27a721e260cfa3ee627eeb94e5f1882423874b2cf3d6fc4e kxdocker-configurator-1.0.2.ebuild 610
+MD5 af0f2c1aa4185c52dd4f4ea588f22286 metadata.xml 349
+RMD160 d2ff75e9ad34ca5bd7bf1af21510d2c4e20ca084 metadata.xml 349
+SHA256 56e8b49cdda4e9edda2aa32fd91aae96b0c89d3b4774867a5cea4c5c58c62545 metadata.xml 349
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFESagxmdTrptrqvGERAio/AKCIrY7Rm9EhJDEQD7T+GZNyMIOrgACeJdV+
+CMcn2cd8PnX7vFCxiFA7rLM=
+=gWrL
+-----END PGP SIGNATURE-----

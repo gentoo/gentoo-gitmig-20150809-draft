@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/kxdocker-configurator
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker-configurator/ChangeLog,v 1.1 2006/04/22 03:50:22 dragonheart Exp $
+
+*kxdocker-configurator-1.0.2 (22 Apr 2006)
+
+  22 Apr 2006; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +kxdocker-configurator-1.0.2.ebuild:
+  ebuild thanks to Alessio Cassibba (X-Drum) bug #124157
+
