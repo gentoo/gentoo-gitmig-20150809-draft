@@ -1,0 +1,273 @@
+--- kdepim/kmail/attachmentlistview.cpp	2005/07/26 18:54:59	438982
++++ kdepim/kmail/attachmentlistview.cpp	2006/04/15 06:51:13	530022
+@@ -92,7 +92,7 @@
+     QBuffer serNumBuffer( serNums );
+     serNumBuffer.open( IO_ReadOnly );
+     QDataStream serNumStream( &serNumBuffer );
+-    unsigned long serNum;
++    Q_UINT32 serNum;
+     KMFolder *folder = 0;
+     int idx;
+     QPtrList<KMMsgBase> messageList;
+--- kdepim/kmail/configuredialog.cpp	2006/01/21 12:34:03	500799
++++ kdepim/kmail/configuredialog.cpp	2006/04/01 23:19:36	525407
+@@ -3348,15 +3348,12 @@
+            mAttachWordsListEditor, SLOT(setEnabled(bool)) );
+ }
+ 
+-void ComposerPage::AttachmentsTab::doLoadOther() {
+-  KConfigGroup composer( KMKernel::config(), "Composer" );
+-
++void ComposerPage::AttachmentsTab::doLoadFromGlobalSettings() {
+   mOutlookCompatibleCheck->setChecked(
+-    composer.readBoolEntry( "outlook-compatible-attachments", false ) );
++    GlobalSettings::self()->outlookCompatibleAttachments() );
+   mMissingAttachmentDetectionCheck->setChecked(
+-    composer.readBoolEntry( "showForgottenAttachmentWarning", true ) );
+-  QStringList attachWordsList =
+-    composer.readListEntry( "attachment-keywords" );
++    GlobalSettings::self()->showForgottenAttachmentWarning() );
++  QStringList attachWordsList = GlobalSettings::self()->attachmentKeywords();
+   if ( attachWordsList.isEmpty() ) {
+     // default value
+     attachWordsList << QString::fromLatin1("attachment")
+@@ -3371,13 +3368,12 @@
+ }
+ 
+ void ComposerPage::AttachmentsTab::save() {
+-  KConfigGroup composer( KMKernel::config(), "Composer" );
+-  composer.writeEntry( "outlook-compatible-attachments",
+-                       mOutlookCompatibleCheck->isChecked() );
+-  composer.writeEntry( "showForgottenAttachmentWarning",
+-                       mMissingAttachmentDetectionCheck->isChecked() );
+-  composer.writeEntry( "attachment-keywords",
+-                       mAttachWordsListEditor->stringList() );
++  GlobalSettings::self()->setOutlookCompatibleAttachments(
++    mOutlookCompatibleCheck->isChecked() );
++  GlobalSettings::self()->setShowForgottenAttachmentWarning(
++    mMissingAttachmentDetectionCheck->isChecked() );
++  GlobalSettings::self()->setAttachmentKeywords(
++    mAttachWordsListEditor->stringList() );
+ }
+ 
+ void ComposerPageAttachmentsTab::slotOutlookCompatibleClicked()
+--- kdepim/kmail/kmedit.cpp	2006/02/20 11:40:20	511574
++++ kdepim/kmail/kmedit.cpp	2006/04/15 06:51:13	530022
+@@ -144,7 +144,7 @@
+         QBuffer serNumBuffer(serNums);
+         serNumBuffer.open(IO_ReadOnly);
+         QDataStream serNumStream(&serNumBuffer);
+-        unsigned long serNum;
++        Q_UINT32 serNum;
+         KMFolder *folder = 0;
+         int idx;
+         QPtrList<KMMsgBase> messageList;
+--- kdepim/kmail/kmkernel.cpp	2006/04/09 09:53:18	527760
++++ kdepim/kmail/kmkernel.cpp	2006/04/09 09:53:52	527761
+@@ -1463,6 +1463,9 @@
+ 
+ void KMKernel::readConfig()
+ {
++  //Needed here, since this function is also called when the configuration
++  //changes, and the static variables should be updated then - IOF
++  KMMessage::readConfig();
+ }
+ 
+ void KMKernel::cleanupImapFolders()
+--- kdepim/kmail/kmmsgbase.cpp	2006/01/11 14:34:42	496941
++++ kdepim/kmail/kmmsgbase.cpp	2006/04/15 13:05:11	530119
+@@ -870,7 +870,7 @@
+ 
+   char *l;
+   for ( l = latin.data(); *l; ++l ) {
+-    if ( ( *l & 0xE0 == 0 ) || ( *l & 0x80 ) )
++    if ( ( ( *l & 0xE0 ) == 0 ) || ( *l & 0x80 ) )
+       // *l is control character or 8-bit char
+       break;
+   }
+--- kdepim/kmail/kmmsgdict.cpp	2005/07/26 18:54:59	438982
++++ kdepim/kmail/kmmsgdict.cpp	2006/04/15 13:05:11	530119
+@@ -205,7 +205,16 @@
+   }
+ 
+   KMFolderIndex* folder = static_cast<KMFolderIndex*>( msg->storage() );
+-  if (folder && index == -1)
++  if ( !folder ) {
++    kdDebug(5006) << "KMMsgDict::insert: Cannot insert the message, "
++      << "null pointer to storage. Requested serial: " << msgSerNum
++      << endl;
++    kdDebug(5006) << "  Message info: Subject: " << msg->subject() << ", To: "
++      << msg->toStrip() << ", Date: " << msg->dateStr() << endl; 
++    return 0;
++  }
++
++  if (index == -1)
+     index = folder->find(msg);
+ 
+   // Should not happen, indicates id file corruption
+@@ -241,7 +250,16 @@
+ 		       const KMMsgBase *msg, int index)
+ {
+   KMFolderIndex* folder = static_cast<KMFolderIndex*>( msg->storage() );
+-  if ( folder && index == -1 )
++  if ( !folder ) {
++    kdDebug(5006) << "KMMsgDict::replace: Cannot replace the message serial "
++      << "number, null pointer to storage. Requested serial: " << msgSerNum
++      << endl;
++    kdDebug(5006) << "  Message info: Subject: " << msg->subject() << ", To: "
++      << msg->toStrip() << ", Date: " << msg->dateStr() << endl; 
++    return;
++  }
++
++  if ( index == -1 )
+     index = folder->find( msg );
+ 
+   remove( msgSerNum );
+--- kdepim/kmail/kmsender.cpp	2006/03/20 17:51:08	520754
++++ kdepim/kmail/kmsender.cpp	2006/04/15 13:05:11	530119
+@@ -373,8 +373,10 @@
+       KMessageBox::information(0, i18n("Critical error: "
+                    "Unable to process sent mail (out of space?)"
+                    "Moving failing message to \"sent-mail\" folder."));
+-      sentFolder->moveMsg(mCurrentMsg);
+-      sentFolder->close();
++      if ( sentFolder ) {
++        sentFolder->moveMsg(mCurrentMsg);
++        sentFolder->close();
++      }
+       cleanup();
+       return;
+     case 1:
+--- kdepim/kmail/objecttreeparser.cpp	2005/12/16 16:18:58	488973
++++ kdepim/kmail/objecttreeparser.cpp	2006/04/02 13:18:14	525563
+@@ -92,6 +92,7 @@
+ #include <qbuffer.h>
+ #include <qpixmap.h>
+ #include <qpainter.h>
++#include <qregexp.h>
+ 
+ // other headers
+ #include <memory>
+@@ -765,30 +766,21 @@
+   //static
+   bool ObjectTreeParser::containsExternalReferences( const QCString & str )
+   {
+-    int httpPos = str.find( "\"http:", 0, true );
+-    int httpsPos = str.find( "\"https:", 0, true );
++    QRegExp httpRegExp("(\\\"|\\\'|url\\s*\\(\\s*)http[s]?:");
++    int httpPos = str.find( httpRegExp, 0 );
+ 
+-    while ( httpPos >= 0 || httpsPos >= 0 ) {
+-      // pos = index of next occurrence of "http: or "https: whichever comes first
+-      int pos = ( httpPos < httpsPos )
+-                ? ( ( httpPos >= 0 ) ? httpPos : httpsPos )
+-                : ( ( httpsPos >= 0 ) ? httpsPos : httpPos );
++    while ( httpPos >= 0 ) {
+       // look backwards for "href"
+-      if ( pos > 5 ) {
+-        int hrefPos = str.findRev( "href", pos - 5, true );
++      if ( httpPos > 5 ) {
++        int hrefPos = str.findRev( "href", httpPos - 5, true );
+         // if no 'href' is found or the distance between 'href' and '"http[s]:'
+         // is larger than 7 (7 is the distance in 'href = "http[s]:') then
+         // we assume that we have found an external reference
+-        if ( ( hrefPos == -1 ) || ( pos - hrefPos > 7 ) )
++        if ( ( hrefPos == -1 ) || ( httpPos - hrefPos > 7 ) )
+           return true;
+       }
+       // find next occurrence of "http: or "https:
+-      if ( pos == httpPos ) {
+-        httpPos = str.find( "\"http:", httpPos + 6, true );
+-      }
+-      else {
+-        httpsPos = str.find( "\"https:", httpsPos + 7, true );
+-      }
++      httpPos = str.find( httpRegExp, httpPos + 6 );
+     }
+     return false;
+   }
+--- kdepim/kmail/renamejob.cpp	2005/12/10 04:41:02	487311
++++ kdepim/kmail/renamejob.cpp	2006/04/15 13:05:11	530119
+@@ -59,11 +59,13 @@
+    mNewName( newName ), mNewFolder( 0 )
+ {
+   mStorageTempOpened = 0;
+-  mOldName = storage->name();
+-  if ( storage->folderType() == KMFolderTypeImap ) {
+-    mOldImapPath = static_cast<KMFolderImap*>(storage)->imapPath();
+-  } else if ( storage->folderType() == KMFolderTypeCachedImap ) {
+-    mOldImapPath = static_cast<KMFolderCachedImap*>(storage)->imapPath();
++  if ( storage ) {
++    mOldName = storage->name();
++    if ( storage->folderType() == KMFolderTypeImap ) {
++      mOldImapPath = static_cast<KMFolderImap*>(storage)->imapPath();
++    } else if ( storage->folderType() == KMFolderTypeCachedImap ) {
++      mOldImapPath = static_cast<KMFolderCachedImap*>(storage)->imapPath();
++    }
+   }
+ }
+ 
+--- kdepim/kmail/configuredialog_p.h	2005/08/19 15:04:44	450950
++++ kdepim/kmail/configuredialog_p.h	2006/04/01 23:19:36	525407
+@@ -715,8 +715,7 @@
+   void slotOutlookCompatibleClicked();
+ 
+ private:
+-  //virtual void doLoadFromGlobalSettings();
+-  virtual void doLoadOther();
++  virtual void doLoadFromGlobalSettings();
+   //FIXME virtual void doResetToDefaultsOther();
+ 
+ private:
+--- kdepim/kmail/replyphrases.kcfg	2006/04/09 09:53:18	527760
++++ kdepim/kmail/replyphrases.kcfg	2006/04/09 09:53:52	527761
+@@ -20,17 +20,14 @@
+     <entry name="PhraseForward" type="String" key="phrase-forward">
+       <label></label>
+       <whatsthis></whatsthis>
+-      <default>Forwarded Message</default>
+     </entry>
+     <entry name="PhraseReplySender" type="String" key="phrase-reply">
+       <label></label>
+       <whatsthis></whatsthis>
+-      <default>On %D, you wrote:</default>
+     </entry>
+     <entry name="PhraseReplyAll" type="String" key="phrase-reply-all">
+       <label></label>
+       <whatsthis></whatsthis>
+-      <default>On %D, %F wrote:</default>
+     </entry>
+ 
+   </group>
+--- kdepim/kmail/kmfolder.cpp	2005/12/06 21:29:44	486141
++++ kdepim/kmail/kmfolder.cpp	2006/04/18 20:41:15	531267
+@@ -84,12 +84,6 @@
+     }
+   }
+ 
+-   // trigger from here, since it needs a fully constructed FolderStorage
+-  if ( mExportsSernums )
+-    mStorage->registerWithMessageDict();
+-  if ( !mHasIndex )
+-    mStorage->setAutoCreateIndex( false );
+-
+   if ( aParent ) {
+     connect( mStorage, SIGNAL( msgAdded( KMFolder*, Q_UINT32 ) ),
+              aParent->manager(), SIGNAL( msgAdded( KMFolder*, Q_UINT32 ) ) );
+@@ -133,8 +127,16 @@
+                 this, SLOT( slotContentsTypeChanged( KMail::FolderContentsType ) ) );
+ 
+   //FIXME: Centralize all the readConfig calls somehow - Zack
++  // Meanwhile, readConfig must be done before registerWithMessageDict, since
++  // that one can call writeConfig in some circumstances - David
+   mStorage->readConfig();
+ 
++   // trigger from here, since it needs a fully constructed FolderStorage
++  if ( mExportsSernums )
++    mStorage->registerWithMessageDict();
++  if ( !mHasIndex )
++    mStorage->setAutoCreateIndex( false );
++
+   if ( mId == 0 && aParent )
+     mId = aParent->manager()->createId();
+ }

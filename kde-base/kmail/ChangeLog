@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.54 2006/04/06 02:05:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.55 2006/04/22 11:19:15 carlo Exp $
+
+*kmail-3.5.2-r1 (22 Apr 2006)
+
+  22 Apr 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/kmail-3.5.2-imap-fixes.diff, +files/kmail-3.5.2-misc-fixes.diff,
+  +files/kmail-3.5-ham_spam_icons.diff, +kmail-3.5.2-r1.ebuild:
+  Imap, config, attachment handling and other fixes.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/kmail-qt-3.3.5.patch, -files/kdepim-3.5.0-kmail-branch.patch,

@@ -1,0 +1,291 @@
+--- kdepim/kmail/kmheaders.cpp	2006/03/02 12:26:51	515022
++++ kdepim/kmail/kmheaders.cpp	2006/04/22 08:13:05	532593
+@@ -1841,7 +1841,7 @@
+   bool foundUnreadMessage = false;
+ 
+   if (!mFolder) return -1;
+-  if (!(mFolder->count()) > 0) return -1;
++  if (mFolder->count() <= 0) return -1;
+ 
+   if ((aStartAt >= 0) && (aStartAt < (int)mItems.size()))
+     item = mItems[aStartAt];
+@@ -2041,7 +2041,7 @@
+ 
+   int idx = item->msgId();
+   KMMessage *msg = mFolder->getMsg(idx);
+-  if (!msg->transferInProgress())
++  if (msg && !msg->transferInProgress())
+   {
+     emit activated(mFolder->getMsg(idx));
+   }
+@@ -3280,7 +3280,8 @@
+         unlink(QFile::encodeName(sortFile));
+         kdWarning(5006) << "Error: Failure modifying " << sortFile << " (No space left on device?)" << endl;
+         kdWarning(5006) << __FILE__ << ":" << __LINE__ << endl;
+-        //kmkernel->emergencyExit( i18n("Failure modifying %1\n(No space left on device?)").arg( sortFile ));
++
++        return true;
+     }
+     if(sortStream)
+         fclose(sortStream);
+--- kdepim/kmail/imapaccountbase.cpp	2006/02/23 14:32:38	512746
++++ kdepim/kmail/imapaccountbase.cpp	2006/04/15 13:05:11	530119
+@@ -1098,10 +1098,10 @@
+       {
+         DwBodyPart* newparent = dwpart;
+         const DwMessage* newmsg = dwmsg;
+-        if ( part->originalContentTypeStr() == "MESSAGE/RFC822" &&
++        if ( part->originalContentTypeStr() == "MESSAGE/RFC822" && dwpart &&
+              dwpart->Body().Message() )
+         {
+-          // set the encapsulated message as new parent message
++          // set the encapsulated message as the new message
+           newparent = 0;
+           newmsg = dwpart->Body().Message();
+         }
+@@ -1281,7 +1281,8 @@
+     if ( delim.isEmpty() ) {
+       delim = "/";
+     }
+-    if ( !newName.endsWith( delim ) && !folderName.startsWith( delim ) ) {
++    if ( !newName.isEmpty() && 
++         !newName.endsWith( delim ) && !folderName.startsWith( delim ) ) {
+       newName = newName + delim;
+     }
+     newName = newName + folderName;
+--- kdepim/kmail/imapjob.cpp	2005/08/12 17:17:32	446148
++++ kdepim/kmail/imapjob.cpp	2006/04/15 09:06:10	530060
+@@ -97,11 +97,12 @@
+   // imap folder, use its account for keeping track of the job. Otherwise,
+   // this is a get job and the src folder is an imap one. Use its account
+   // then.
+-  KMAcctImap *account;
++  KMAcctImap *account = 0;
+   if (folder) {
+     account = folder->account();
+   } else {
+-    account = static_cast<KMFolderImap*>(msg_parent->storage())->account();
++    if ( msg_parent && msg_parent->storage() )
++      account = static_cast<KMFolderImap*>(msg_parent->storage())->account();
+   }
+   if ( !account ||
+        account->makeConnection() == ImapAccountBase::Error ) {
+@@ -223,21 +224,23 @@
+   if ( mDestFolder )
+   {
+     KMAcctImap *account = static_cast<KMFolderImap*>(mDestFolder->storage())->account();
+-    if ( account &&  mJob ) {
+-      ImapAccountBase::JobIterator it = account->findJob( mJob );
+-      if ( it != account->jobsEnd() ) {
+-        if( (*it).progressItem ) {
+-          (*it).progressItem->setComplete();
+-          (*it).progressItem = 0;
+-        }
+-        if ( !(*it).msgList.isEmpty() ) {
+-          for ( QPtrListIterator<KMMessage> mit( (*it).msgList ); mit.current(); ++mit )
+-            mit.current()->setTransferInProgress( false );
++    if ( account ) {
++      if ( mJob ) {
++        ImapAccountBase::JobIterator it = account->findJob( mJob );
++        if ( it != account->jobsEnd() ) {
++          if( (*it).progressItem ) {
++            (*it).progressItem->setComplete();
++            (*it).progressItem = 0;
++          }
++          if ( !(*it).msgList.isEmpty() ) {
++            for ( QPtrListIterator<KMMessage> mit( (*it).msgList ); mit.current(); ++mit )
++              mit.current()->setTransferInProgress( false );
++          }
+         }
++        account->removeJob( mJob );
+       }
+-      account->removeJob( mJob );
++      account->mJobList.remove( this );
+     }
+-    account->mJobList.remove( this );
+     mDestFolder->close();
+   }
+ 
+@@ -245,21 +248,23 @@
+     if (!mDestFolder || mDestFolder != mSrcFolder) {
+       if (! (mSrcFolder->folderType() == KMFolderTypeImap) ) return;
+       KMAcctImap *account = static_cast<KMFolderImap*>(mSrcFolder->storage())->account();
+-      if ( account && mJob ) {
+-        ImapAccountBase::JobIterator it = account->findJob( mJob );
+-        if ( it != account->jobsEnd() ) {
+-          if( (*it).progressItem ) {
+-            (*it).progressItem->setComplete();
+-            (*it).progressItem = 0;
+-          }
+-          if ( !(*it).msgList.isEmpty() ) {
+-            for ( QPtrListIterator<KMMessage> mit( (*it).msgList ); mit.current(); ++mit )
+-              mit.current()->setTransferInProgress( false );
++      if ( account ) {
++        if ( mJob ) {
++          ImapAccountBase::JobIterator it = account->findJob( mJob );
++          if ( it != account->jobsEnd() ) {
++            if( (*it).progressItem ) {
++              (*it).progressItem->setComplete();
++              (*it).progressItem = 0;
++            }
++            if ( !(*it).msgList.isEmpty() ) {
++              for ( QPtrListIterator<KMMessage> mit( (*it).msgList ); mit.current(); ++mit )
++                mit.current()->setTransferInProgress( false );
++            }
+           }
++          account->removeJob( mJob ); // remove the associated kio job
+         }
+-        account->removeJob( mJob ); // remove the associated kio job
++        account->mJobList.remove( this ); // remove the folderjob
+       }
+-      account->mJobList.remove( this ); // remove the folderjob
+     }
+     mSrcFolder->close();
+   }
+--- kdepim/kmail/kmfoldercachedimap.cpp	2006/02/11 22:39:04	508499
++++ kdepim/kmail/kmfoldercachedimap.cpp	2006/04/15 10:05:41	530074
+@@ -539,8 +539,11 @@
+   mRecurse = recurse;
+   assert( account() );
+ 
+-  mAccount->mailCheckProgressItem()->reset();
+-  mAccount->mailCheckProgressItem()->setTotalItems( 100 );
++  ProgressItem *progressItem = mAccount->mailCheckProgressItem();
++  if ( progressItem ) {
++    progressItem->reset();
++    progressItem->setTotalItems( 100 );
++  }
+   mProgress = 0;
+ 
+ #if 0
+@@ -1746,11 +1749,14 @@
+         f = static_cast<KMFolderCachedImap*>(newFolder->storage());
+       }
+     }
+-    f->setAccount( mAccount );
+-    f->setImapPath( "/INBOX/" );
+-    f->folder()->setLabel( i18n("inbox") );
++    if ( f ) {
++      f->setAccount( mAccount );
++      f->setImapPath( "/INBOX/" );
++      f->folder()->setLabel( i18n("inbox") );
++    }
+     if (!node) {
+-      f->close();
++      if ( f )
++        f->close();
+       kmkernel->dimapFolderMgr()->contentsChanged();
+     }
+     // so we have an INBOX
+--- kdepim/kmail/kmfolderimap.cpp	2006/03/15 14:19:26	518857
++++ kdepim/kmail/kmfolderimap.cpp	2006/04/15 13:05:11	530119
+@@ -110,6 +110,11 @@
+   if (mOpenCount <= 0 ) return;
+   if (mOpenCount > 0) mOpenCount--;
+   if (mOpenCount > 0 && !aForced) return;
++  if (isSelected() && !aForced) {
++      kdWarning(5006) << "Trying to close the selected folder " << label() << 
++          " - ignoring!" << endl;
++      return;
++  }
+   // FIXME is this still needed?
+   if (mAccount)
+     mAccount->ignoreJobsForFolder( folder() );
+@@ -873,8 +878,10 @@
+     }
+     kmkernel->imapFolderMgr()->contentsChanged();
+   }
+-  f->initializeFrom( this, "/INBOX/", "message/directory" );
+-  f->setChildrenState( QString::null );
++  if ( f ) {
++    f->initializeFrom( this, "/INBOX/", "message/directory" );
++    f->setChildrenState( QString::null );
++  }
+   // so we have an INBOX
+   mAccount->setHasInbox( true );
+ }
+@@ -1086,17 +1093,20 @@
+     int a = cstr.find("X-uidValidity: ");
+     int b = cstr.find("\r\n", a);
+     QString uidv;
+-    if ( (b - a - 15) >= 0 ) uidv = cstr.mid(a + 15, b - a - 15);
++    if ( (b - a - 15) >= 0 ) 
++        uidv = cstr.mid(a + 15, b - a - 15);
+     a = cstr.find("X-Access: ");
+     b = cstr.find("\r\n", a);
+     QString access;
+-    if ( (b - a - 10) >= 0 ) access = cstr.mid(a + 10, b - a - 10);
++    if ( (b - a - 10) >= 0 ) 
++        access = cstr.mid(a + 10, b - a - 10);
+     mReadOnly = access == "Read only";
+     a = cstr.find("X-Count: ");
+     b = cstr.find("\r\n", a);
+     int exists = -1;
+-    bool ok;
+-    if ( (b - a - 9) >= 0 ) exists = cstr.mid(a + 9, b - a - 9).toInt(&ok);
++    bool ok = false;
++    if ( (b - a - 9) >= 0 ) 
++        exists = cstr.mid(a + 9, b - a - 9).toInt(&ok);
+     if ( !ok ) exists = -1;
+     QString startUid;
+     if (uidValidity() != uidv)
+--- kdepim/kmail/kmfoldertree.cpp	2006/02/13 20:29:00	509156
++++ kdepim/kmail/kmfoldertree.cpp	2006/04/15 10:05:41	530074
+@@ -139,7 +139,7 @@
+   KIconLoader * il = KGlobal::instance()->iconLoader();
+   QPixmap pm = il->loadIcon( icon, KIcon::Small, size,
+                              KIcon::DefaultState, 0, true );
+-  if ( pm.isNull() ) {
++  if ( mFolder && pm.isNull() ) {
+       pm = il->loadIcon( mFolder->normalIconPath(), KIcon::Small, size,
+                          KIcon::DefaultState, 0, true );
+   }
+@@ -157,7 +157,7 @@
+     pm = normalIcon( size );
+ 
+   KIconLoader * il = KGlobal::instance()->iconLoader();
+-  if ( mFolder->useCustomIcons() ) {
++  if ( mFolder && mFolder->useCustomIcons() ) {
+     pm = il->loadIcon( mFolder->unreadIconPath(), KIcon::Small, size,
+                        KIcon::DefaultState, 0, true );
+     if ( pm.isNull() )
+@@ -1020,10 +1020,10 @@
+       mMainWidget->action("compact")->plug(folderMenu);
+ 
+       folderMenu->insertSeparator();
+-      if ( !fti->folder()->isSystemFolder() )
++      if ( !fti->folder()->isSystemFolder() ) {
+         mMainWidget->action("delete_folder")->plug(folderMenu);
+-
+-      folderMenu->insertSeparator();
++        folderMenu->insertSeparator();
++      }
+       mMainWidget->action("empty")->plug(folderMenu);
+       folderMenu->insertSeparator();
+     }
+@@ -1477,7 +1477,8 @@
+ 
+   QString fldName, oldFldName;
+ 
+-  oldFldName = fti->name(0);
++  if ( fti )
++    oldFldName = fti->name(0);
+ 
+   if (!text.isEmpty())
+           fldName = text;
+@@ -1546,10 +1547,12 @@
+ 
+   // get the unread count
+   int count = 0;
+-  if (folder->noContent()) // always empty
++  if (folder && folder->noContent()) // always empty
+     count = -1;
+-  else
+-    count = fti->folder()->countUnread();
++  else {
++    if ( fti->folder() ) 
++      count = fti->folder()->countUnread();
++  }
+ 
+   // set it
+   bool repaint = false;
