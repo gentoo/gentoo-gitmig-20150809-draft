@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.317 2006/04/12 04:15:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.318 2006/04/22 21:20:34 flameeyes Exp $
+
+  22 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> mysql-5.0.19-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
   12 Apr 2006; Jeremy Huddleston <eradicator@gentoo.org>
   mysql-4.0.25-r2.ebuild, mysql-4.0.26.ebuild, mysql-4.1.14-r1.ebuild,

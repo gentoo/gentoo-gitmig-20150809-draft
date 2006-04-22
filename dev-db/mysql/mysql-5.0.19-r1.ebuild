@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.19-r1.ebuild,v 1.3 2006/04/12 04:12:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.19-r1.ebuild,v 1.4 2006/04/22 21:20:35 flameeyes Exp $
 
 MYSQL_VERSION_ID=""
 MY_EXTRAS_VER=""
 
 inherit mysql
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
 src_test() {
 	cd ${S}
