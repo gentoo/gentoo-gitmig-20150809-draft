@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.55 2006/04/22 11:19:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.56 2006/04/22 12:06:45 corsair Exp $
+
+  22 Apr 2006; Markus Rothe <corsair@gentoo.org> kmail-3.5.2-r1.ebuild:
+  app-crypt/pinentry was keyworded for ppc64 to it can be installed with
+  USE="crypt" now
 
 *kmail-3.5.2-r1 (22 Apr 2006)
 
