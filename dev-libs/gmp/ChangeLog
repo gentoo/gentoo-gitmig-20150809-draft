@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.71 2006/04/10 03:44:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.72 2006/04/23 06:43:55 corsair Exp $
+
+  23 Apr 2006; Markus Rothe <corsair@gentoo.org> gmp-4.2.ebuild:
+  gmp-4.1.4-ppc64-asm-dots.patch does not apply on top of 4.2, but is also no
+  longer needed: removed from ebuild
 
 *gmp-4.2 (10 Apr 2006)
 
