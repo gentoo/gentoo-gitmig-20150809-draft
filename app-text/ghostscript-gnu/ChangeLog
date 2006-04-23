@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gnu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.18 2006/04/09 16:32:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.19 2006/04/23 23:35:59 weeve Exp $
+
+  23 Apr 2006; Jason Wever <weeve@gentoo.org>
+  ghostscript-gnu-8.16-r2.ebuild:
+  Added ~sparc keyword wrt bug #129275.
 
   09 Apr 2006; Markus Rothe <corsair@gentoo.org>
   ghostscript-gnu-8.16-r2.ebuild:
