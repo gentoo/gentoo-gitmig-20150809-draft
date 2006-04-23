@@ -1,18 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eb6b4e414e93d1c43b247adaf5cd9141 ChangeLog 1834
+MD5 c8e6d15f4c73105796ce14c0914b4463 ChangeLog 1958
+RMD160 549910288230dd9679c85266465c4243669170ca ChangeLog 1958
+SHA256 166ec1b430ea2b3eff14a0675d8ec9c66d8c1c5fd0d18d72bec23c325f741bb8 ChangeLog 1958
 MD5 cbec0db31276274f6101a9ab9cc625b3 files/digest-nepenthes-0.1.5 68
+RMD160 54b09b9f4ae70f27a53d8586a97b70247766288f files/digest-nepenthes-0.1.5 68
+SHA256 916fd8d7e4c9766e279532f3cb17dfd7734d516b29d5d86dcd95a8d23578a20f files/digest-nepenthes-0.1.5 68
 MD5 a3518804809a33a52a1511ddcfafda88 files/digest-nepenthes-0.1.6 68
+RMD160 e96b34d9ad6133d9d8efd7b17c8460ca8c338df2 files/digest-nepenthes-0.1.6 68
+SHA256 c2d69e62b45b8c60225597ab04af8c64d655815148fc69e301cb6b8316cc133d files/digest-nepenthes-0.1.6 68
+MD5 196692f763e0863e752c781cc108f6ce files/digest-nepenthes-0.1.7 250
+RMD160 4ef046f112154cb1c38921829168d9861379c3c2 files/digest-nepenthes-0.1.7 250
+SHA256 9a201f7023855e67ad809f3273214a91c1d69e1907c73cc6e53f89624b2f49b9 files/digest-nepenthes-0.1.7 250
 MD5 9f779f5117afae2b26f1e4fbff55ff4b files/nepenthes.confd 123
+RMD160 cf0d9d018fddd90a432bcb4be845fb48cd5fd087 files/nepenthes.confd 123
+SHA256 cbad703767de5e5832789dd15c32ee79fc63b188c195f86e481edac1d9fb5ddb files/nepenthes.confd 123
 MD5 1c20696c1b6d548688b9a9db60ad74c8 files/nepenthes.initd 538
+RMD160 337ecc7d8c9dafab1d6c99af1eeb30a2ef2b0133 files/nepenthes.initd 538
+SHA256 8f0c79f9b261f59aa203d5cae3d73856ab1173fcc7f58c98b01fe9c2c864f744 files/nepenthes.initd 538
 MD5 121e52302b508d741d68a51265135609 metadata.xml 387
+RMD160 838140d846c70051e0548a0f5a19fc590f12352c metadata.xml 387
+SHA256 b3101281ad9a0f6eb49604776442e8ecdef1cd2ec6aa192b19b1935a4f701eed metadata.xml 387
 MD5 2981cd0aba9503f8e53e7a02025a3784 nepenthes-0.1.5.ebuild 2178
+RMD160 5c31e49180497c0d6c7adf2447b3506d748cbfd0 nepenthes-0.1.5.ebuild 2178
+SHA256 c721ae029c36df28d236acb5ad1ce7dcd7154ba26df2ebfbef0d7599c3d4725b nepenthes-0.1.5.ebuild 2178
 MD5 51c5ad6327d9c42913f7f8cdacf07a78 nepenthes-0.1.6.ebuild 2183
+RMD160 8038c47ac461856566a60577ee4d5b932e365d1c nepenthes-0.1.6.ebuild 2183
+SHA256 390b735216eaf80d1ff7d89e8bb4adba4f5ac2ae2549b4556e39f36b689cc9a7 nepenthes-0.1.6.ebuild 2183
+MD5 4f8dd8325d30c7394939a51344363f75 nepenthes-0.1.7.ebuild 1958
+RMD160 5c4c9d90a978685363fb9ca9c6a93857add496a1 nepenthes-0.1.7.ebuild 1958
+SHA256 190c98746eb8b78f35fa597cef6b340599b148b94db2a44cec4028c9c28a7676 nepenthes-0.1.7.ebuild 1958
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFEIz0D/NoSW7FuNV8RAo0fAJ4xO1JH/muO/Ld3Zw9WXLSIK5Hn6gCgnyQq
-v0BwlLuV1UXEbWZArtCFXhg=
-=XwdI
+iD8DBQFES+SzGSBEIeh4AEYRAhnCAJ9H8XHhTVS+C14c314q85qi1Fc9QQCZAacQ
++aWBKoBG6EtWbgqSWPzVu9s=
+=Kw76
 -----END PGP SIGNATURE-----
