@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/interceptty
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/interceptty/ChangeLog,v 1.1 2006/03/25 22:17:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/interceptty/ChangeLog,v 1.2 2006/04/23 19:24:08 malc Exp $
+
+  23 Apr 2006; <malc@gentoo.org> interceptty-0.6.ebuild:
+  ~amd64 bug #131003
 
 *interceptty-0.6 (25 Mar 2006)
 
