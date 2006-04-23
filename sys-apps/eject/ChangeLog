@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/eject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.52 2006/02/19 21:53:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.53 2006/04/23 22:46:09 uberlord Exp $
+
+*eject-2.1.4-r1 (23 Apr 2006)
+
+  23 Apr 2006; Roy Marples <uberlord@gentoo.org>
+  +files/eject-2.1.4-scsi-rdwr.patch, +eject-2.1.4-r1.ebuild:
+  Patch to open device read/write when it's scsi, #116731.
+  Now iPod owners can eject their iPods when not root!
 
   19 Feb 2006; Joshua Kinard <kumba@gentoo.org> eject-2.1.0-r1.ebuild:
   Marked stable on mips.
