@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.272 2006/04/19 00:53:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.273 2006/04/23 21:33:32 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1180,7 +1180,7 @@ gcc_do_configure() {
 		case ${CTARGET} in
 			*-dietlibc) needed_libc=dietlibc;;
 			*-freebsd*) needed_libc=freebsd-lib;;
-			*-gnu)      needed_libc=glibc;;
+			*-gnu*)     needed_libc=glibc;;
 			*-klibc)    needed_libc=klibc;;
 			*-uclibc)   needed_libc=uclibc;;
 			avr)        confgcc="${confgcc} --enable-shared --disable-threads";;
