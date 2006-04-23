@@ -1,8 +1,42 @@
-MD5 ea6ee4f8e1966fc112be2deea4f84488 ChangeLog 836
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Time-Local-1.10 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Time-Local-1.11 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Time-Local-1.12 0
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+EBUILD perl-Time-Local-1.10.ebuild 483 RMD160 05a46dca835ea5095aa756153645ff3a8cc8be5b SHA1 aef1ee2981d4ea04e1f3da9559bd6a671ab151dd SHA256 22111d884963e97bb6cdba258bfe25f2f6fac3b7729ada58b97f01e79cb69ee7 size 483
 MD5 abaae11191d99cf0892373af554d48ba perl-Time-Local-1.10.ebuild 483
+RMD160 05a46dca835ea5095aa756153645ff3a8cc8be5b perl-Time-Local-1.10.ebuild 483
+SHA256 22111d884963e97bb6cdba258bfe25f2f6fac3b7729ada58b97f01e79cb69ee7 perl-Time-Local-1.10.ebuild 483
+EBUILD perl-Time-Local-1.11.ebuild 511 RMD160 a1c09efc41935dc3f1c9f9717aec0db220504c32 SHA1 2046e32805ae1b86b63f7154d1308df6d8f567fc SHA256 45cf7234cbd3f1c9caeb45fcb8e80037b6a880a0f026ac133e39e2450080081c size 511
 MD5 752cf117ebd8d9007f02e8790a76cba0 perl-Time-Local-1.11.ebuild 511
-MD5 6933454d2d1bd94a5d671eee1fdd6174 perl-Time-Local-1.12.ebuild 498
+RMD160 a1c09efc41935dc3f1c9f9717aec0db220504c32 perl-Time-Local-1.11.ebuild 511
+SHA256 45cf7234cbd3f1c9caeb45fcb8e80037b6a880a0f026ac133e39e2450080081c perl-Time-Local-1.11.ebuild 511
+EBUILD perl-Time-Local-1.12.ebuild 508 RMD160 143deae4b58d4bcda21374606825599c17d7bc12 SHA1 ffe11fba6c39120aaf0f5d236cd7e93038eacce5 SHA256 0847c0c6d125076b5ca863148c506caef0467d6f660998d9cef51fc5dde8469b size 508
+MD5 74cb4f738d91fcdc601a022c5a46c780 perl-Time-Local-1.12.ebuild 508
+RMD160 143deae4b58d4bcda21374606825599c17d7bc12 perl-Time-Local-1.12.ebuild 508
+SHA256 0847c0c6d125076b5ca863148c506caef0467d6f660998d9cef51fc5dde8469b perl-Time-Local-1.12.ebuild 508
+MISC ChangeLog 950 RMD160 85d43da2aa405f13b8f812a39d9c01fcd8262a9b SHA1 8c576ec9c74b2791575ec3ecf9b2f55b4472f71c SHA256 a6e1902bab5cc5af1d4a685b2fb6f08e92db0dd59fac03618a1dd5374f6107dd size 950
+MD5 43aaf8a58f10bc4e6c077e1c197a80c5 ChangeLog 950
+RMD160 85d43da2aa405f13b8f812a39d9c01fcd8262a9b ChangeLog 950
+SHA256 a6e1902bab5cc5af1d4a685b2fb6f08e92db0dd59fac03618a1dd5374f6107dd ChangeLog 950
+MISC metadata.xml 305 RMD160 647980838c590f54441a053916ea629e53e551c0 SHA1 99ef1deeae9a934fb6e46cf5fc4a5fcb8379a74a SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca size 305
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-perl-Time-Local-1.10 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-perl-Time-Local-1.10 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-perl-Time-Local-1.10 1
+size 1 files/digest-perl-Time-Local-1.10 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-perl-Time-Local-1.11 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-perl-Time-Local-1.11 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-perl-Time-Local-1.11 1
+size 1 files/digest-perl-Time-Local-1.11 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-perl-Time-Local-1.12 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-perl-Time-Local-1.12 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-perl-Time-Local-1.12 1
+size 1 files/digest-perl-Time-Local-1.12 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFES/KnAiZjviIA2XgRAkq5AJ9j6M5bhMU1lIHJn45vYPgUCg295ACghgUd
+rec8UiwoHvEMuqCp3p21Z1w=
+=PZ+q
+-----END PGP SIGNATURE-----
