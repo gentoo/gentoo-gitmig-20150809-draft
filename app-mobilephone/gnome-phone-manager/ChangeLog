@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/gnome-phone-manager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.7 2006/02/25 15:03:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.8 2006/04/23 17:18:52 mrness Exp $
+
+*gnome-phone-manager-0.6-r1 (23 Apr 2006)
+
+  23 Apr 2006; Alin Nastac <mrness@gentoo.org>
+  +files/gnome-phone-manager-0.6-aclocal_openobex.patch,
+  +gnome-phone-manager-0.6-r1.ebuild:
+  Fix configure error when build against >=dev-libs/openobex-1.1 (#122262).
 
   25 Feb 2006; Alin Nastac <mrness@gentoo.org>
   -files/gnome-phone-manager-0.4-gcc3.patch,
