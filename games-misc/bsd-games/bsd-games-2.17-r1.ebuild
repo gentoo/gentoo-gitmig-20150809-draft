@@ -1,13 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r1.ebuild,v 1.5 2006/04/03 21:18:37 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r1.ebuild,v 1.6 2006/04/23 08:12:11 mr_bones_ Exp $
 
 inherit eutils games
 
+DEB_PATCH_VER=7
 DESCRIPTION="collection of games from NetBSD"
 HOMEPAGE="http://www.advogato.org/proj/bsd-games/"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/games/${P}.tar.gz
-	mirror://debian/pool/main/b/bsdgames/bsdgames_${PV}-2.diff.gz"
+	mirror://debian/pool/main/b/bsdgames/bsdgames_${PV}-${DEB_PATCH_VER}.diff.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -32,10 +33,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch \
-		"${DISTDIR}"/bsdgames_${PV}-2.diff.gz \
+		"${DISTDIR}"/bsdgames_${PV}-${DEB_PATCH_VER}.diff.gz \
 		"${FILESDIR}"/${P}-64bit.patch \
-		"${FILESDIR}"/${P}-gcc4.patch \
-		"${FILESDIR}"/${P}-tetris.patch
+		"${FILESDIR}"/${P}-gcc4.patch
 
 	sed -i \
 		-e "s:/usr/games:${GAMES_BINDIR}:" \
