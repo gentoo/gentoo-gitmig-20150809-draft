@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5266 2006/04/23 19:09:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5267 2006/04/23 21:00:15 tove Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -545,10 +545,6 @@ media-gfx/sodipodi
 # Duncan Coutts <dcoutts@gentoo.org> (26 Mar 2006)
 # New revisions, mainly for ia64. Needs testing.
 =dev-lang/ghc-6.4.1-r3
-
-# Torsten Veller <tove@gentoo.org> (25 Mar 2006)
-# Masked for testing: bug #21058
-=net-misc/chrony-1.21
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (23 Mar 2006)
 # Masked, waiting for GNOME 2.14
