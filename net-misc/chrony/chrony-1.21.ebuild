@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.21.ebuild,v 1.1 2006/03/25 09:50:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.21.ebuild,v 1.2 2006/04/23 20:55:57 tove Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://chrony.sunsite.dk/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~mips ~ppc ~sparc ~x86"
+KEYWORDS="~hppa ~mips ~ppc ~sparc ~x86"
 IUSE="readline"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1-r4 )"
