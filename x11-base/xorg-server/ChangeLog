@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.105 2006/04/21 09:12:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.106 2006/04/23 22:32:14 spyderous Exp $
+
+  23 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/xorg-server-1.0.2-Xprt-build.patch,
+  +files/1.0.2-Xprint-xprintdir.patch,
+  +files/xorg-server-1.0.2-xprint-init.patch,
+  +files/1.0.99.901-Xprint-xprintdir.patch, xorg-server-1.0.2-r3.ebuild,
+  xorg-server-1.0.99.901-r1.ebuild:
+  (#128448) Fix xprint (Ed Catmur). Still needs a dep added on xplsprinters
+  when xprint is in USE, but arches haven't keyworded it yet.
 
 *xorg-server-1.0.99.901-r1 (21 Apr 2006)
 

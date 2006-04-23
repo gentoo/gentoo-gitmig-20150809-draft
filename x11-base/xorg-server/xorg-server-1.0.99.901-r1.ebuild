@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.99.901-r1.ebuild,v 1.1 2006/04/21 09:12:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.99.901-r1.ebuild,v 1.2 2006/04/23 22:32:14 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -16,6 +16,8 @@ MESA_P="${MESA_PN}-${MESA_PV}"
 MESA_SRC_P="${MESA_PN}Lib-${MESA_PV}"
 
 PATCHES="${FILESDIR}/${PN}-1.0.2-Sbus.patch
+	${FILESDIR}/${PN}-1.0.2-xprint-init.patch
+	${FILESDIR}/${PV}-Xprint-xprintdir.patch
 	${FILESDIR}/1.0.2-try-to-fix-xorgcfg.patch
 	${FILESDIR}/1.0.2-fix-xorgconfig-rgbpath-and-mouse.patch
 	${FILESDIR}/${PV}-fix-kdrive-build.patch
@@ -258,9 +260,10 @@ switch_opengl_implem() {
 xprint_src_install() {
 	# RH-style init script, we provide a wrapper
 	exeinto /usr/$(get_libdir)/misc
-	# Actually a shell script, someone messed up
-	newexe ${S}/Xprint/etc/init.d/xprint.cpp xprint
-	sed -e 's/XCOMM/#/' -i ${D}/usr/$(get_libdir)/misc/xprint
+	doexe ${S}/Xprint/etc/init.d/xprint
+	# Patch init script for fonts location
+	sed -e 's:/lib/X11/fonts/:/share/fonts/:g' \
+		-i ${D}/usr/$(get_libdir)/misc/xprint
 	# Install the wrapper
 	newinitd ${FILESDIR}/xprint.init xprint
 	# Install profile scripts

@@ -1,0 +1,12 @@
+diff -urN xorg-server-1.0.2.orig/Xprint/Makefile.am xorg-server-1.0.2/Xprint/Makefile.am
+--- xorg-server-1.0.2.orig/Xprint/Makefile.am	2006-04-23 14:26:07.000000000 -0700
++++ xorg-server-1.0.2/Xprint/Makefile.am	2006-04-23 14:26:23.000000000 -0700
+@@ -4,7 +4,7 @@
+ 
+ Xprt_CFLAGS = @SERVER_DEFINES@ @DIX_CFLAGS@ @XPRINT_CFLAGS@ \
+ 	-DXPRINT -DPRINT_ONLY_SERVER -D_XP_PRINT_SERVER_  \
+-	-DXPRINTDIR=\"$(prefix)/lib/X11/xserver\"    \
++	-DXPRINTDIR=\"$(libdir)/X11/xserver\"    \
+ 	-DXPRASTERDDX -DXPPCLDDX -DXPMONOPCLDDX -DXPPSDDX
+ 
+ Xprt_LDFLAGS = -L$(top_srcdir)

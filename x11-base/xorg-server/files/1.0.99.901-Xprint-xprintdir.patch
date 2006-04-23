@@ -1,0 +1,11 @@
+--- xserver/xorg/Xprint/Makefile.am	2006/04/21 13:38:39	1.1
++++ xserver/xorg/Xprint/Makefile.am	2006/04/21 13:38:52
+@@ -4,7 +4,7 @@ bin_PROGRAMS = Xprt
+ 
+ Xprt_CFLAGS = @SERVER_DEFINES@ @DIX_CFLAGS@ @XPRINT_CFLAGS@ \
+ 	-DXPRINT -DPRINT_ONLY_SERVER -D_XP_PRINT_SERVER_  \
+-	-DXPRINTDIR=\"$(prefix)/X11/xserver\"    \
++	-DXPRINTDIR=\"$(libdir)/X11/xserver\"    \
+ 	-DXPRASTERDDX -DXPPCLDDX -DXPMONOPCLDDX -DXPPSDDX
+ 
+ Xprt_LDFLAGS = -L$(top_srcdir)
