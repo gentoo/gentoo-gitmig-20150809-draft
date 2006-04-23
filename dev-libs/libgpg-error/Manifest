@@ -1,31 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 80ce6807f9589de37390bcb0a956a01c ChangeLog 5190
-RMD160 b6d7cce213926da94db508213f5b9f2d3a5ba3b9 ChangeLog 5190
-SHA256 2f95abeeaa71f757130c89de20920fd4f6c010680353c64602d8a78e5407f009 ChangeLog 5190
-MD5 302b903544cdc360228540b136ca4826 files/digest-libgpg-error-1.0-r1 68
-RMD160 9be01a4f09aebfc25b7878efa6e3429d823e7d61 files/digest-libgpg-error-1.0-r1 68
-SHA256 bd5a59466b60a947d988a35c35ba77c75ce743519f3a749b5ac466585e8cb433 files/digest-libgpg-error-1.0-r1 68
-MD5 4d5f6ae916a18ac9e6c7d571f4f979e3 files/digest-libgpg-error-1.1 68
-RMD160 1a3bb6eb38e9938f2d3ddfb3c7953338974812ec files/digest-libgpg-error-1.1 68
-SHA256 ac64db6f7a0a3bb114da88515b2b2bae2b77cbb0999cae094a86130066908eed files/digest-libgpg-error-1.1 68
+AUX libgpg-error-1.0-locale.h.patch 367 RMD160 52f7b090fdd2622c976027c9e7984cd3e3522fc7 SHA1 298eb1b32c9de18b45f0fc9e2fe9746b34239f90 SHA256 eafe089d615fa8322bd9468ef7e006c35fec33801b94d52bb3d19b0ed1d2d07a size 367
 MD5 351613fb76980248b69def1933899216 files/libgpg-error-1.0-locale.h.patch 367
 RMD160 52f7b090fdd2622c976027c9e7984cd3e3522fc7 files/libgpg-error-1.0-locale.h.patch 367
 SHA256 eafe089d615fa8322bd9468ef7e006c35fec33801b94d52bb3d19b0ed1d2d07a files/libgpg-error-1.0-locale.h.patch 367
+DIST libgpg-error-1.0.tar.gz 323724 size 323724
+DIST libgpg-error-1.1.tar.gz 311871 RMD160 a5da35d88f7100dfedfedbfab429e1c441375643 SHA256 93046fba69bcec39242b9bef225ca2a80b00126f03f7b128f6265089b81db03f size 311871
+EBUILD libgpg-error-1.0-r1.ebuild 1056 RMD160 7a03e5a97cadc1905a77a7a222dcee25c6e73c24 SHA1 b6f584b00eedcc307ad0178efb8c2f3c03a8a566 SHA256 b233af125a1fac4f6649612e4aa8289b1d104c561309fd1c63ad52c3741df2cb size 1056
 MD5 bb1f5e16412d92ef71998492ac6b02dd libgpg-error-1.0-r1.ebuild 1056
 RMD160 7a03e5a97cadc1905a77a7a222dcee25c6e73c24 libgpg-error-1.0-r1.ebuild 1056
 SHA256 b233af125a1fac4f6649612e4aa8289b1d104c561309fd1c63ad52c3741df2cb libgpg-error-1.0-r1.ebuild 1056
-MD5 db1bf31119d050e750291d86df46fc87 libgpg-error-1.1.ebuild 825
-RMD160 f37d8800e6cf014f0a656a8d3d45c927f871ed60 libgpg-error-1.1.ebuild 825
-SHA256 9eeebe47ef35aa7d6cc615d03e3bd23c7c1ca4204b7cb9bca2bbf9f87b6a3819 libgpg-error-1.1.ebuild 825
+EBUILD libgpg-error-1.1.ebuild 838 RMD160 5e53bf767f910d5d3cdf5c6fde98326873ae3498 SHA1 f661d6ef7c14a58365c3ca5d048f7047980bcc24 SHA256 0b3f06c43411361070de77e089964fec6af0cd367cb99ef43aa2e7786e23a282 size 838
+MD5 15315660c89c35d191328d4294949312 libgpg-error-1.1.ebuild 838
+RMD160 5e53bf767f910d5d3cdf5c6fde98326873ae3498 libgpg-error-1.1.ebuild 838
+SHA256 0b3f06c43411361070de77e089964fec6af0cd367cb99ef43aa2e7786e23a282 libgpg-error-1.1.ebuild 838
+MISC ChangeLog 5297 RMD160 fceede6fda3cd0d9c71151499daac04e6bb2ee07 SHA1 93ded03902d2b118e9e14ffe4de06e13ed9c0502 SHA256 d9464942a705e64697be1dbc35de7d99de29b91116768721744818d854fc44b1 size 5297
+MD5 abcc51f125242d8a02aa9ab78c28896f ChangeLog 5297
+RMD160 fceede6fda3cd0d9c71151499daac04e6bb2ee07 ChangeLog 5297
+SHA256 d9464942a705e64697be1dbc35de7d99de29b91116768721744818d854fc44b1 ChangeLog 5297
+MISC metadata.xml 250 RMD160 6dcb0cedacaf21e461c4d2636bf573be7d71327e SHA1 790b87b4fb52da89abcd34c02bf1eb607e986fc3 SHA256 d8e12e3cf9acd8a2dd8fefb591273fece4b80f7a93a569274b6d94e84934308b size 250
 MD5 cbb90c3fb885f86a1c6bea0f4493f9ab metadata.xml 250
 RMD160 6dcb0cedacaf21e461c4d2636bf573be7d71327e metadata.xml 250
 SHA256 d8e12e3cf9acd8a2dd8fefb591273fece4b80f7a93a569274b6d94e84934308b metadata.xml 250
+MD5 302b903544cdc360228540b136ca4826 files/digest-libgpg-error-1.0-r1 68
+RMD160 9be01a4f09aebfc25b7878efa6e3429d823e7d61 files/digest-libgpg-error-1.0-r1 68
+SHA256 bd5a59466b60a947d988a35c35ba77c75ce743519f3a749b5ac466585e8cb433 files/digest-libgpg-error-1.0-r1 68
+size 68 files/digest-libgpg-error-1.0-r1 68
+MD5 eadb28e0d0ee2a1b79631b7611130522 files/digest-libgpg-error-1.1 250
+RMD160 1b1e788243771025e950a896da495a046be3e0fc files/digest-libgpg-error-1.1 250
+SHA256 591e86b27f503571e175ec5831090b156d8ea8aa849c4150732be6ae67e83e89 files/digest-libgpg-error-1.1 250
+size 250 files/digest-libgpg-error-1.1 250
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEPGu+2+ySkm8kpY0RAmD9AKCsAB7xegeCGetknplYnEh0I6z1WwCdHZ2U
-lrODvBLbAVCogSkVLGqH5j8=
-=tOSQ
+iD8DBQFES3v6AiZjviIA2XgRAjF/AKC8HY6YcFarIKw8LVACCiPxoFpCsQCg10Bw
+yP2mfatoY4U7TXtARjR+wSI=
+=k1xh
 -----END PGP SIGNATURE-----

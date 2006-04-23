@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgpg-error
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.38 2005/10/12 12:54:15 swegener Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.39 2006/04/23 13:10:10 flameeyes Exp $
+
+  23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libgpg-error-1.1.ebuild:
+  Add ~x86-fbsd keyword.
 
   12 Oct 2005; Sven Wegener <swegener@gentoo.org>
   libgpg-error-1.0-r1.ebuild, libgpg-error-1.1.ebuild:
