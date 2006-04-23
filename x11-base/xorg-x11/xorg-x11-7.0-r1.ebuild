@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.21 2006/04/17 10:58:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.22 2006/04/23 02:31:12 geoman Exp $
 
 inherit eutils
 
@@ -372,18 +372,7 @@ RDEPEND="${RDEPEND}
 					x11-drivers/xf86-video-vga
 					x11-drivers/xf86-video-via
 					x11-drivers/xf86-video-voodoo )
-				mips? ( x11-drivers/xf86-video-chips
-					x11-drivers/xf86-video-cirrus
-					x11-drivers/xf86-video-glint
-					x11-drivers/xf86-video-newport
-					x11-drivers/xf86-video-nv
-					x11-drivers/xf86-video-s3
-					x11-drivers/xf86-video-s3virge
-					x11-drivers/xf86-video-savage
-					x11-drivers/xf86-video-sis
-					x11-drivers/xf86-video-tdfx
-					x11-drivers/xf86-video-trident
-					x11-drivers/xf86-video-voodoo )
+				mips? ( x11-drivers/xf86-video-newport )
 				ppc? ( x11-drivers/xf86-video-chips
 					x11-drivers/xf86-video-glint
 					x11-drivers/xf86-video-imstt

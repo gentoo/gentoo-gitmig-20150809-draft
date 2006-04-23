@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.533 2006/04/17 10:58:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.534 2006/04/23 02:31:12 geoman Exp $
+
+  23 Apr 2006; Stephen P. Becker <geoman@gentoo.org> xorg-x11-7.0-r1.ebuild:
+  remove untested video driver RDEPENDs for mips
 
   17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> xorg-x11-7.0-r1.ebuild:
   Mark ~x86-fbsd and put under conditional the drivers that requires Linux
