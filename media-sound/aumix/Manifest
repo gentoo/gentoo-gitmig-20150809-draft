@@ -1,49 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1198d17962669ef70970482cd3393985 ChangeLog 7052
-RMD160 a15dd96bc73059f46971625f55c825cc67c020bd ChangeLog 7052
-SHA256 e11a51f02307062a4b054a41b41e56999e1839abaf53668047ea0cd601520c97 ChangeLog 7052
+MD5 c5987e64101152d63e195fe0220308e8 ChangeLog 7153
 MD5 dd65ba7b4bf9a035e84264da285cbb4b aumix-2.8-r2.ebuild 1844
-RMD160 463f63b1489eeb73e81ec4b4a5cb3d8d16814592 aumix-2.8-r2.ebuild 1844
-SHA256 088cc63b96e72a1de05c102e0cd9fc175abea7ba3d89231039b434d566983b0b aumix-2.8-r2.ebuild 1844
-MD5 bf91219c49836f10e6465e2a0bfe8810 aumix-2.8-r4.ebuild 1731
-RMD160 0749f7fb8e6e81f9d59be5297f68d32afaa0d734 aumix-2.8-r4.ebuild 1731
-SHA256 50cc493645aa4875d5d08f73bfa8ab85c92a117d7c0c924c59bcc8110f1bfe62 aumix-2.8-r4.ebuild 1731
+MD5 fc5871f45f09f67393a0060e154be4f8 aumix-2.8-r4.ebuild 1729
 MD5 00da88dc336799f1385f518dd005dd5a files/aumix-2.8-close-dialogs.patch 613
-RMD160 e06045a6aac2925d4578562d2133ea6a25a8c336 files/aumix-2.8-close-dialogs.patch 613
-SHA256 d9dbe541d875b5918c8b86adcb5d217c2988cf26f6ff6680bbc6523be294dab3 files/aumix-2.8-close-dialogs.patch 613
 MD5 3611c0372870a0ad67630231fe576e32 files/aumix-2.8-mute.patch 470
-RMD160 b1db29828cc06c02a94c0a8c88206f478b30d909 files/aumix-2.8-mute.patch 470
-SHA256 7b19f89a6b5ecb97181c1154c6ee21079ecc2ccfe25a5b3fb8fd670709a61a14 files/aumix-2.8-mute.patch 470
 MD5 a685fd4f0649bfb0c7fd4860eda0caa7 files/aumix-2.8-nls.patch 829
-RMD160 bbc28e1285acdbadf0f3c58e18ab94f7160e6299 files/aumix-2.8-nls.patch 829
-SHA256 b0e2a27c422c6c106863521a7bd43741e74cfa86e490096da8209138c0a03b45 files/aumix-2.8-nls.patch 829
 MD5 6c8d691beb495257d8309e58c127acd2 files/aumix-2.8-nohome.patch 529
-RMD160 93ac976f5dd420ac63806e14fd3abc44d726f244 files/aumix-2.8-nohome.patch 529
-SHA256 fc0f6ee2a545f7340dc5a78fce6553132d274c607ec4473019f3c8ff62e598c7 files/aumix-2.8-nohome.patch 529
 MD5 221509621be1606c1a61dfc8fcd4991e files/aumix-2.8-save_load.patch 1331
-RMD160 5568874206654f06bce4a29a3039deee5760b45d files/aumix-2.8-save_load.patch 1331
-SHA256 01adab9a3da9b1955b805bb2a47cc1cff8865625f6a726331f9911055d578e07 files/aumix-2.8-save_load.patch 1331
 MD5 f39abfbf49ff4a33e109eeb14a4325c2 files/aumix.desktop 124
-RMD160 67231039ee0b0cb250414195339b45b225347436 files/aumix.desktop 124
-SHA256 29f48ad86e787da60d4c98bd38e5c2aff92ca690d5692857d3a806c683e11b0c files/aumix.desktop 124
 MD5 1ddf032a74e8441c64775370c1b446bd files/aumix.rc6 1155
-RMD160 58a43795dcb697c72b7804996bacd37103b87105 files/aumix.rc6 1155
-SHA256 34af5baf45d13260ad0b6e5822104562ef77eb16c277fa76844e0ff5129e9bfd files/aumix.rc6 1155
 MD5 857a1fe260905ab09b7befd877affafd files/digest-aumix-2.8-r2 62
-RMD160 8e4a34a27aa3dd649d055f444112ad2528f7b72d files/digest-aumix-2.8-r2 62
-SHA256 48b29efcbd665335e584c0577b25fc95f7a2e40a5584d20daac5993d80e52708 files/digest-aumix-2.8-r2 62
 MD5 c7d5617a6cfc0d254fd3ed7d60e7bf6c files/digest-aumix-2.8-r4 232
-RMD160 b598d5dc93a8d24e2f632cbcecd22669db20d04e files/digest-aumix-2.8-r4 232
-SHA256 f394b03f33cb374e2fcf3fbfc9c4216d290eeef8352b96c123f03810486d32cd files/digest-aumix-2.8-r4 232
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
-SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEE8+T2+ySkm8kpY0RAnokAJ42gD6rJeki56Di4te+/q03Kb9MJACgnXUR
-LWjhog9d07sZf6vaqEUpics=
-=OdVe
------END PGP SIGNATURE-----
