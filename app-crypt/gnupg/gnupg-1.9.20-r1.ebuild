@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.20-r1.ebuild,v 1.2 2006/03/26 01:05:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.20-r1.ebuild,v 1.3 2006/04/23 13:25:57 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -95,22 +95,6 @@ pkg_postinst() {
 		einfo "This is needed in order to have a secure place to store your"
 		einfo "passphrases, etc. at runtime but may make some sysadmins nervous."
 	fi
-	echo
-	ewarn "** WARNING ** WARNING ** WARNING ** WARNING ** WARNING ** WARNING **"
-	ewarn "	THIS IS _ALPHA_ CODE, IT MAY NOT WORK CORRECTLY OR AT ALL. THERE"
-	ewarn "	MAY BE UNDISCOVERED SECURITY OR DATA-LOSS ISSUES, DO NOT USE"
-	ewarn "	IN A PRODUCTION ENVIRONMENT."
-	ewarn
-	ewarn "	This ebuild is provided for those who wish to experiment with this"
-	ewarn "	new branch of gnupg and beta-testers, not for general purpose use"
-	ewarn "	by non-developers"
-	ewarn
-	ewarn "	Please see #37109"
-	ewarn "** WARNING ** WARNING ** WARNING ** WARNING ** WARNING ** WARNING **"
-
-	einfo
-	einfo "gpg-agent is now provided in app-crypt/gpg-agent"
-
 	einfo
 	einfo "See http://www.gentoo.org/doc/en/gnupg-user.xml for documentation on gnupg"
 	einfo
