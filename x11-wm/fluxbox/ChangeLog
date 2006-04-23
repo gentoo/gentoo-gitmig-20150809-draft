@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.185 2006/03/24 16:47:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.186 2006/04/23 22:21:46 antarus Exp $
+
+  23 Apr 2006; Alec Warner <antarus@gentoo.org> metadata.xml,
+  -fluxbox-0.9.13-r1.ebuild:
+  Add tercel and myself as maintainer, clean old ebuilds.
 
   24 Mar 2006; Aron Griffis <agriffis@gentoo.org> fluxbox-0.9.14-r1.ebuild:
   Mark 0.9.14-r1 stable on ia64. #120081

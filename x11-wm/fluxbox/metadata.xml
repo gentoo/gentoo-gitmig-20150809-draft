@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<maintainer>
+		<email>antarus@gentoo.org</email>
+		<name>Alec Warner</name>
+	</maintainer>
+	<maintainer>
+		<email>tercel@gentoo.org</email>
+		<name>Colin Kingsley</name>
+	</maintainer>
 	<herd>commonbox</herd>
 	<longdescription><![CDATA[
 		Fluxbox is yet another windowmanager for X. Originally based upon the
