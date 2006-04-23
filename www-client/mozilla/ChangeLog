@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.88 2006/03/20 02:04:13 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.89 2006/04/23 21:11:41 anarchy Exp $
+
+*mozilla-1.7.13 (23 Apr 2006)
+
+  23 Apr 2006; Jory A. Pratt <anarchy@gentoo.org> +mozilla-1.7.13.ebuild:
+  revision bump with security fixes
 
 *mozilla-1.7.12-r3 (20 Mar 2006)
 
