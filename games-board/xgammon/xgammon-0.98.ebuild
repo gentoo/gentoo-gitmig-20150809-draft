@@ -1,17 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/xgammon-0.98.ebuild,v 1.8 2006/01/29 21:28:01 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/xgammon-0.98.ebuild,v 1.9 2006/04/23 06:51:49 mr_bones_ Exp $
 
 inherit eutils
 
-S="${WORKDIR}/${P}a"
 DESCRIPTION="very nice backgammon game for X"
 HOMEPAGE="http://fawn.unibw-hamburg.de/steuer/xgammon/xgammon.html"
 SRC_URI="http://fawn.unibw-hamburg.de/steuer/xgammon/Downloads/${P}a.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~amd64"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND="|| ( x11-libs/libXaw virtual/x11 )"
@@ -20,13 +19,16 @@ DEPEND="${RDEPEND}
 			x11-misc/imake )
 		virtual/x11 )"
 
+S=${WORKDIR}/${P}a
+
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-broken.patch"
-	epatch "${FILESDIR}/${P}-config.patch"
-	epatch "${FILESDIR}/gcc33.patch"
+	epatch \
+		"${FILESDIR}/${P}-broken.patch" \
+		"${FILESDIR}/${P}-config.patch" \
+		"${FILESDIR}/gcc33.patch"
 }
 
 src_compile() {
