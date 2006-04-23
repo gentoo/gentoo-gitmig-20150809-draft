@@ -1,31 +1,41 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 15fbdcc5bd821a1e0eb5987131256053 ChangeLog 10154
-RMD160 587698eb20ed73cf75ced06d3e9cc7509da60fd9 ChangeLog 10154
-SHA256 756d2b9a0b7571d5b79a3f4b35aea9448d16b424e7b0aff62dc66908a227f47d ChangeLog 10154
-MD5 0dbf86fe4303814e2dfa36f8c4b8e67c files/digest-gimp-print-4.2.7 69
-RMD160 adf4b327550673748bde3c7e8aeef653cd643a6d files/digest-gimp-print-4.2.7 69
-SHA256 d6a46732da2bf1d156f512b976d26cfeeed6f5eb21bbd4c7f5c54c297d158e36 files/digest-gimp-print-4.2.7 69
-MD5 14b1b2662e833e311f812bebe348889f files/digest-gimp-print-5.0.0_rc2 542
-RMD160 48bd7f06e371f68f071ae0f7081d2ad24f1327b3 files/digest-gimp-print-5.0.0_rc2 542
-SHA256 828e960f907ad51196932e689e7515a1eb2e06ff771615af4571819a3f9dd979 files/digest-gimp-print-5.0.0_rc2 542
+AUX gutenprint-5.0.0-rc2-asneeded.patch 1923 RMD160 d047cb3e6839cb57c28a603bd1c6227dda4a7da9 SHA1 5219311d1aa3da83d257d2923cf8123fb0b807c0 SHA256 39afdbcd0abba35db991331d6c208d23f6c130a0f4c7dc32b4b76b8de8cc68ca size 1923
 MD5 a4008ff715378b9dc53d13898ef7c236 files/gutenprint-5.0.0-rc2-asneeded.patch 1923
 RMD160 d047cb3e6839cb57c28a603bd1c6227dda4a7da9 files/gutenprint-5.0.0-rc2-asneeded.patch 1923
 SHA256 39afdbcd0abba35db991331d6c208d23f6c130a0f4c7dc32b4b76b8de8cc68ca files/gutenprint-5.0.0-rc2-asneeded.patch 1923
+DIST gimp-print-4.2.7.tar.gz 5178122 size 5178122
+DIST gutenprint-5.0.0-rc2-m4-2.patch.bz2 4496 RMD160 d93e15d05acd11654581535758bae990d7b6355e SHA256 304735441ccb41f926fced1ca06596004a346a0938458aec5f639d94158f003a size 4496
+DIST gutenprint-5.0.0-rc2.tar.bz2 4075898 RMD160 7045f7fd16822692992ddfd50c08bc3e4ccd4815 SHA256 6affc101116a20574e6dc148b72959a5601e96ae603ed287342677a7115fdf7b size 4075898
+EBUILD gimp-print-4.2.7.ebuild 2298 RMD160 7c17cde78f37ad782767834d3a171e44ad12d1d5 SHA1 d823c72db21f9311053bbbe9ef00b6febd09539e SHA256 5f901c18be2068a377fece27813eb90f9b5783e763c83281f4a2ed9dd110382d size 2298
 MD5 5742009b196e73622e3496d99180485b gimp-print-4.2.7.ebuild 2298
 RMD160 7c17cde78f37ad782767834d3a171e44ad12d1d5 gimp-print-4.2.7.ebuild 2298
 SHA256 5f901c18be2068a377fece27813eb90f9b5783e763c83281f4a2ed9dd110382d gimp-print-4.2.7.ebuild 2298
-MD5 90e52bcecbc1351b21acbbc2b29ebc25 gimp-print-5.0.0_rc2.ebuild 2787
-RMD160 14eee8a1470b8120a789771cb985f8d54f7c1495 gimp-print-5.0.0_rc2.ebuild 2787
-SHA256 c50a5f4ddc246bd8485c80c5996607dfe10af9f62047672310cf2f7bb2662f94 gimp-print-5.0.0_rc2.ebuild 2787
+EBUILD gimp-print-5.0.0_rc2.ebuild 2642 RMD160 e09bccfbcfeffc7d55e672c144ada68fe83861e2 SHA1 aed09b8b9ac3f13390df5f40d7d8408c383be824 SHA256 10139a4af11fd6362c89c56e31f6b9e43af81c5c5b2106bb176919fc6d62c782 size 2642
+MD5 8c9135e0e76f962f4b216e99b046f59c gimp-print-5.0.0_rc2.ebuild 2642
+RMD160 e09bccfbcfeffc7d55e672c144ada68fe83861e2 gimp-print-5.0.0_rc2.ebuild 2642
+SHA256 10139a4af11fd6362c89c56e31f6b9e43af81c5c5b2106bb176919fc6d62c782 gimp-print-5.0.0_rc2.ebuild 2642
+MISC ChangeLog 10401 RMD160 1adda333c18bc27fda08e49d37166db289bbe6df SHA1 a1472c1fb691c875eda554437cbffc82f301189f SHA256 b60f614bba20ac0cb31954a93d69f2862ba8f221bc59fd0ab2f75253ce658354 size 10401
+MD5 8e0b7c20e541b852408fc8c7b6db9d4b ChangeLog 10401
+RMD160 1adda333c18bc27fda08e49d37166db289bbe6df ChangeLog 10401
+SHA256 b60f614bba20ac0cb31954a93d69f2862ba8f221bc59fd0ab2f75253ce658354 ChangeLog 10401
+MISC metadata.xml 161 RMD160 1e5b1e42553c8869b93c4a5448e9a2a2ed9fe525 SHA1 209c6a46e4cdd891980115e42ba419e3799f8088 SHA256 7c85e6739a71f5bb23e8de36c88677d772946e61f7285892f7554e37bd2bca76 size 161
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 RMD160 1e5b1e42553c8869b93c4a5448e9a2a2ed9fe525 metadata.xml 161
 SHA256 7c85e6739a71f5bb23e8de36c88677d772946e61f7285892f7554e37bd2bca76 metadata.xml 161
+MD5 0dbf86fe4303814e2dfa36f8c4b8e67c files/digest-gimp-print-4.2.7 69
+RMD160 adf4b327550673748bde3c7e8aeef653cd643a6d files/digest-gimp-print-4.2.7 69
+SHA256 d6a46732da2bf1d156f512b976d26cfeeed6f5eb21bbd4c7f5c54c297d158e36 files/digest-gimp-print-4.2.7 69
+size 69 files/digest-gimp-print-4.2.7 69
+MD5 c61fe9d77b7ec031b2accb2b0bdc915a files/digest-gimp-print-5.0.0_rc2 548
+RMD160 b0695946b50f333f465b415e2e455b58aff4088c files/digest-gimp-print-5.0.0_rc2 548
+SHA256 3cac8d8b884bca0d04a951b4ca82efe242fe5e4fbd5c9ade21a56fd771b820a7 files/digest-gimp-print-5.0.0_rc2 548
+size 548 files/digest-gimp-print-5.0.0_rc2 548
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEMCR+AiZjviIA2XgRAvlbAKCx+lc/rj0lmDeFbvRZjOVrBHIhfQCgnhrX
-h2Gb+kl/o/SYvbi/pbbl5aM=
-=3/Zs
+iD8DBQFES0bsAiZjviIA2XgRAlfCAJ4uK6YSzR/+Rgjf1UhgD2a2FVRjmACdGE9x
+02QJFQyxXYmdH969pTvasbo=
+=8V9Q
 -----END PGP SIGNATURE-----

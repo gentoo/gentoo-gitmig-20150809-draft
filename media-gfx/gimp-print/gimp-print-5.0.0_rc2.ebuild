@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_rc2.ebuild,v 1.5 2006/04/02 19:22:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_rc2.ebuild,v 1.6 2006/04/23 09:23:36 flameeyes Exp $
 
 inherit flag-o-matic libtool eutils autotools
 
@@ -12,7 +12,7 @@ DESCRIPTION="Gimp Print Drivers"
 HOMEPAGE="http://gimp-print.sourceforge.net"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ppc64"
 SRC_URI="mirror://sourceforge/gimp-print/${MY_P}.tar.bz2
-	mirror://gentoo/${MY_P}-m4.patch.bz2"
+	mirror://gentoo/${MY_P}-m4-2.patch.bz2"
 
 RDEPEND="cups? ( >=net-print/cups-1.1.14 )
 	media-gfx/imagemagick
@@ -21,7 +21,8 @@ RDEPEND="cups? ( >=net-print/cups-1.1.14 )
 	gtk? ( x11-libs/gtk+ )
 	dev-lang/perl
 	foomaticdb? ( net-print/foomatic-db-engine )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	gtk? ( dev-util/pkgconfig )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -43,15 +44,12 @@ src_unpack() {
 	cd ${S}
 
 	epatch "${FILESDIR}/${MY_P}-asneeded.patch"
-	epatch "${WORKDIR}/${MY_P}-m4.patch"
+	epatch "${WORKDIR}/${MY_P}-m4-2.patch"
 
 	# Remove the broken libtool.m4
 	rm ${S}/m4extra/libtool.m4
 
-	# The patch should be actually fixed, but this way we avoid having to
-	# regenerate, repropagate and redigest it, the glib.m4 file is in the wrong
-	# directory.
-	AT_M4DIR="m4 m4extra ${MY_P}/m4extra" eautoreconf
+	AT_M4DIR="m4 m4extra" eautoreconf
 }
 
 src_compile() {

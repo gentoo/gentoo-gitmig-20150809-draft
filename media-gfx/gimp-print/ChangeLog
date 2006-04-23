@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.69 2006/04/02 19:22:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.70 2006/04/23 09:23:36 flameeyes Exp $
+
+  23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  gimp-print-5.0.0_rc2.ebuild:
+  Update patch to install pkg.m4 file (for pkg-config), see bug #129627.
+  Thanks to Antoine Pouch for reporting. Also depend on pkgconfig when asking
+  for gtk.
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   gimp-print-5.0.0_rc2.ebuild:
