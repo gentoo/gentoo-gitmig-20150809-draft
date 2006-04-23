@@ -1,0 +1,11 @@
+# ChangeLog for games-util/wxchtdecoder
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/wxchtdecoder/ChangeLog,v 1.1 2006/04/23 07:56:49 mr_bones_ Exp $
+
+*wxchtdecoder-1.5 (23 Apr 2006)
+
+  23 Apr 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +wxchtdecoder-1.5.ebuild:
+  initial commit - ebuild Contributed by John Ratliff
+  <webmaster@technoplaza.net> (bug #68470)
+
