@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/opencdk
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.45 2006/02/23 01:42:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.46 2006/04/23 13:23:11 flameeyes Exp $
+
+  23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> opencdk-0.5.7.ebuild:
+  Run elibtoolize and add ~x86-fbsd keyword.
 
   23 Feb 2006; Aron Griffis <agriffis@gentoo.org> opencdk-0.5.7.ebuild:
   Mark 0.5.7 stable on ia64
