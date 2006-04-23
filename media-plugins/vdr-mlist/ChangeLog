@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-mlist
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mlist/ChangeLog,v 1.1 2006/04/23 20:22:02 zzam Exp $
+
+*vdr-mlist-0.0.2 (23 Apr 2006)
+
+  23 Apr 2006; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +vdr-mlist-0.0.2.ebuild:
+  Initial import of ebuild written by me.
+
