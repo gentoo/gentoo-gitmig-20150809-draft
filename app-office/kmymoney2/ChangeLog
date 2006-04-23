@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kmymoney2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.44 2006/04/23 12:28:51 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.45 2006/04/23 18:02:16 dertobi123 Exp $
+
+  23 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  kmymoney2-0.8.3.ebuild:
+  ppc stable, bug #130960
 
   23 Apr 2006; Carsten Lohrke <carlo@gentoo.org> kmymoney2-0.8.3.ebuild:
   Add cppunit as dependency to this ebuild as well, so we can mark it stable.
