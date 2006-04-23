@@ -1,2 +1,6 @@
 MD5 77ddc2bb846edded4921fa4adbf8320f BestCrypt-1.5-10.tar.gz 169899
+RMD160 6086e7a930b2f6b1d3e532473eb41212d5512300 BestCrypt-1.5-10.tar.gz 169899
+SHA256 29dfc468b3ff0facc4c0a9d40afe682d3637b521b85046e3608eb7f8ff043a0e BestCrypt-1.5-10.tar.gz 169899
 MD5 aa6e1f0e9ee797b409267bdba1f6534e bcrypt-rc6-serpent.diff.gz 5718
+RMD160 f388894ea0f3d1055dffaf118083baefa5822000 bcrypt-rc6-serpent.diff.gz 5718
+SHA256 1407b27e6a8390f62b66985d25f91ca1b68ff89ca5d9c211f0e83868214bdde8 bcrypt-rc6-serpent.diff.gz 5718

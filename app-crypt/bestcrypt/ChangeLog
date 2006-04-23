@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/bestcrypt
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.39 2005/11/12 10:02:43 dragonheart Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.40 2006/04/23 07:24:16 dragonheart Exp $
+
+*bestcrypt-1.6_p5 (23 Apr 2006)
+
+  23 Apr 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/bestcrypt-1.6_p5-makefile_fix.patch, +bestcrypt-1.6_p5.ebuild:
+  version bump as per bug #130785 thanks Mike Auty
 
 *bestcrypt-1.6_p2-r1 (12 Nov 2005)
 

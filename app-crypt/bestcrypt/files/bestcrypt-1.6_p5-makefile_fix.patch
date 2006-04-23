@@ -1,0 +1,71 @@
+diff -ruN bcrypt.orig/kgsha/Makefile bcrypt/kgsha/Makefile
+--- bcrypt.orig/kgsha/Makefile	2006-03-07 16:52:28.000000000 +1100
++++ bcrypt/kgsha/Makefile	2006-04-23 17:23:31.000000000 +1000
+@@ -20,6 +20,7 @@
+ 
+ CPP=g++
+ CPPFLAGS = -fPIC -Wall -Werror -fno-strength-reduce -I../include -g
++CPPFLAGS += $(EXTRA_CXXFLAGS)
+ 
+ TARGET = libkgsha.so
+ HEADERS = kg_defs.h kgsha.h kblock.h sha1.h random.h
+@@ -32,7 +33,7 @@
+ 	$(CPP) $(CPPFLAGS) -c -o $@ $<
+ 
+ $(TARGET):	$(OBJ)
+-		$(LD) $(OBJ)  -o $(TARGET)
++		$(LD) $(OBJ) --soname $(TARGET) --as-needed  -o $(TARGET) -lc
+ 		cp -f $(TARGET) ../lib
+ #		cp -f $(HEADERS) ../include
+ clean:
+diff -ruN bcrypt.orig/kgsha256/Makefile bcrypt/kgsha256/Makefile
+--- bcrypt.orig/kgsha256/Makefile	2006-03-07 16:52:28.000000000 +1100
++++ bcrypt/kgsha256/Makefile	2006-04-23 17:23:18.000000000 +1000
+@@ -20,6 +20,7 @@
+ 
+ CPP=g++
+ CPPFLAGS = -fPIC -Wall -Werror -fno-strength-reduce -I../include -g
++CPPFLAGS += $(EXTRA_CXXFLAGS)
+ 
+ TARGET = libkgsha256.so
+ HEADERS = kg_defs.h kblock.h
+@@ -32,7 +33,7 @@
+ 	$(CPP) $(CPPFLAGS) -c -o $@ $<
+ 
+ $(TARGET):	$(OBJ)
+-		$(LD) $(OBJ)  -o $(TARGET)
++		$(LD) $(OBJ) --soname $(TARGET) --as-needed  -o $(TARGET) -lc
+ 		cp -f $(TARGET) ../lib
+ 		cp -f $(HEADERS) ../include
+ clean:
+diff -ruN bcrypt.orig/mod/Makefile bcrypt/mod/Makefile
+--- bcrypt.orig/mod/Makefile	2006-04-12 15:32:39.000000000 +1000
++++ bcrypt/mod/Makefile	2006-04-23 17:22:42.000000000 +1000
+@@ -110,15 +110,7 @@
+ 
+ CFLAGS += -I$(CUR_DIR)/../include/ -I$(KERNEL_DIR)/include/
+ 
+-ifeq ($(ARCH), alpha)
+-CFLAGS += -O2 -pipe -fno-strict-aliasing -fno-common -mno-fp-regs -ffixed-8 -mcpu=ev5
+-else
+-ifeq ($(ARCH), x86_64)
+-CFLAGS += -O2 -fno-strength-reduce -fno-strict-aliasing -mcmodel=kernel
+-else
+-CFLAGS += -O6 -fno-strength-reduce -fno-strict-aliasing 
+-endif
+-endif
++CFLAGS += $(EXTRA_CFLAGS)
+ 
+ LDFLAGS = -d -r
+ 
+diff -ruN bcrypt.orig/src/Makefile bcrypt/src/Makefile
+--- bcrypt.orig/src/Makefile	2005-05-14 16:53:06.000000000 +1000
++++ bcrypt/src/Makefile	2006-04-23 17:22:42.000000000 +1000
+@@ -24,6 +24,7 @@
+ CFLAGS += -L../lib -I../include/ 
+ CFLAGS += -Wall -fno-strict-aliasing -g # -O2
+ #CFLAGS += -g -static -O6
++CFLAGS += $(EXTRA_CFLAGS)
+ LDFLAGS = -ldl -lstdc++
+ 
+ TARGET = bctool
