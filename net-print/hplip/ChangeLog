@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.29 2006/04/23 00:43:36 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.30 2006/04/23 17:09:28 vanquirius Exp $
+
+  23 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> hplip-0.9.7-r3.ebuild,
+  hplip-0.9.8-r2.ebuild, hplip-0.9.9.ebuild, hplip-0.9.10-r1.ebuild:
+  Make net-print/cups a hard dependency for bug 130871, reported by Martin
+  <martinsw at linux-net dot dnsalias dot net>.
 
 *hplip-0.9.10-r1 (23 Apr 2006)
 

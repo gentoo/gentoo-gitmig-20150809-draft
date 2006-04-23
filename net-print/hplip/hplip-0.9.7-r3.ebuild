@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.7-r3.ebuild,v 1.6 2006/02/17 21:29:47 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.7-r3.ebuild,v 1.7 2006/04/23 17:09:28 vanquirius Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ RDEPEND="virtual/ghostscript
 	qt? ( >=dev-python/PyQt-3.11 =x11-libs/qt-3* )
 	usb? ( >=dev-libs/libusb-0.1.10a sys-apps/hotplug )
 	foomaticdb? ( net-print/foomatic )
-	cups? ( net-print/cups )
+	net-print/cups
 	>=net-print/foomatic-filters-3.0.2
 	${DEPEND}"
 
