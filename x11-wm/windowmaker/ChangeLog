@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.70 2006/04/22 20:10:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.71 2006/04/23 03:22:36 tcort Exp $
+
+  23 Apr 2006; Thomas Cort <tcort@gentoo.org> windowmaker-0.92.0-r3.ebuild:
+  Stable on alpha wrt Bug #130839.
 
   22 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   windowmaker-0.92.0-r3.ebuild:
