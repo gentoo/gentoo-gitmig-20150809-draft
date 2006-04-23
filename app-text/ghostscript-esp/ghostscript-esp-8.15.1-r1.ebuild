@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1-r1.ebuild,v 1.2 2006/04/05 07:08:23 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1-r1.ebuild,v 1.3 2006/04/23 09:45:33 flameeyes Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -75,9 +75,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-ps2epsi-esp.diff
 	sed -i "s/Id:.*//" pstoraster/pstoraster.convs
 
-	eautoreconf
+	AT_NOELIBTOOLIZE="yes" eautoreconf
 	cd ijs
-	eautoreconf
+	AT_NOELIBTOOLIZE="yes" eautoreconf
+
+	elibtoolize
 }
 
 src_compile() {
