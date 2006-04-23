@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.48 2006/04/21 23:40:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.49 2006/04/23 23:11:21 spyderous Exp $
+
+  23 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; files/xdm.confd:
+  (#131032) Also note that for dynamic VT, you need to remove the VT arg from
+  /etc/X11/xdm/Xservers.
 
   21 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; files/xdm.start:
   (#130764) Fix bad grammar in comments (Erik Musick).
