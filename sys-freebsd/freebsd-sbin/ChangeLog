@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.7 2006/04/20 07:15:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.8 2006/04/23 12:55:19 flameeyes Exp $
+
+  23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/adjkerntz-crontab:
+  Specify adjkerntz complete path.
 
   20 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-sbin-6.0-r1.ebuild:
