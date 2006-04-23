@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.10.2.ebuild,v 1.2 2006/04/13 20:12:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.10.2.ebuild,v 1.3 2006/04/23 07:30:29 flameeyes Exp $
 
 inherit gnome.org libtool eutils flag-o-matic debug
 
@@ -64,11 +64,8 @@ src_install() {
 
 	make DESTDIR="${D}" install || die "Installation failed"
 
-	# Do not install charset.alias for ppc-macos since it already exists.
-	if use ppc-macos ; then
-		einfo "Not installing charset.alias on macos"
-		rm ${D}/usr/lib/charset.alias || die "Cannot remove charset.alias from the image"
-	fi
+	# Do not install charset.alias even if generated, leave it tol libiconv
+	rm -f ${D}/usr/lib/charset.alias
 
 	# Consider invalid UTF-8 filenames as locale-specific.
 	# TODO :: Eventually get rid of G_BROKEN_FILENAMES

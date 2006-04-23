@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.197 2006/04/21 20:17:11 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.198 2006/04/23 07:30:29 flameeyes Exp $
+
+  23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> glib-2.8.6.ebuild,
+  glib-2.10.2.ebuild:
+  Don't remove charset.alias conditionally. Wherever you are, if that is
+  generated it has to be removed.
 
   21 Apr 2006; Thomas Cort <tcort@gentoo.org> glib-2.8.6.ebuild:
   Stable on alpha wrt Bug #126321.
