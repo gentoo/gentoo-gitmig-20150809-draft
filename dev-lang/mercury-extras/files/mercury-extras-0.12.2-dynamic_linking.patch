@@ -1,0 +1,11 @@
+--- mercury-extras-0.12.2.orig/dynamic_linking/Mmakefile	2005-01-25 20:49:05.000000000 +1300
++++ mercury-extras-0.12.2/dynamic_linking/Mmakefile	2006-04-23 23:11:49.000000000 +1200
+@@ -11,7 +11,7 @@
+ MLFLAGS = --shared
+ 
+ # Link in the `-ldl' library (this may not be needed on some systems)
+-MLLIBS = -ldl
++MLLIBS = -L/usr/lib -ldl
+ 
+ # enable C-level debugging
+ CFLAGS = -g
