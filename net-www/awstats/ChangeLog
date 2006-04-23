@@ -1,6 +1,9 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.27 2006/02/13 15:03:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.28 2006/04/23 21:33:23 flameeyes Exp $
+
+  23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> awstats-6.5.ebuild:
+  Add ~x86-fbsd keyword.
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   awstats-6.3-r2.ebuild, awstats-6.4.ebuild, awstats-6.5.ebuild:
