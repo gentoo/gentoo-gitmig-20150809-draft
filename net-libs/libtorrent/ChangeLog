@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.51 2006/04/20 04:02:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.52 2006/04/23 09:28:42 flameeyes Exp $
+
+  23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libtorrent-0.9.0.ebuild:
+  Add ~x86-fbsd keyword.
 
   20 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -libtorrent-0.7.6.ebuild, -libtorrent-0.8.4.ebuild,
