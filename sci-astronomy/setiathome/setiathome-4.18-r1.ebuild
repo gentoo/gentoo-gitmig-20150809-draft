@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-4.18-r1.ebuild,v 1.3 2006/01/14 22:42:39 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-4.18-r1.ebuild,v 1.4 2006/04/23 03:16:11 tcort Exp $
 
 MY_PN="seti_boinc-client-cvs"
 MY_PV="2005-08-20"
@@ -15,7 +15,7 @@ SRC_URI="http://boinc.ssl.berkeley.edu/source/nightly/${BOINC_PN}-${BOINC_PV}.ta
 IUSE="server"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 DEPEND="~sci-misc/boinc-4.72.20050813
 	>=media-libs/jpeg-6b"

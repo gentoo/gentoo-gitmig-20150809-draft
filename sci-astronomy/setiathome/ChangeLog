@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/setiathome
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/ChangeLog,v 1.14 2006/01/14 22:42:39 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/ChangeLog,v 1.15 2006/04/23 03:16:11 tcort Exp $
+
+  23 Apr 2006; Thomas Cort <tcort@gentoo.org> setiathome-4.18-r1.ebuild:
+  Added ~alpha keyword wrt Bug #103250.
 
   14 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org>
   setiathome-4.18-r1.ebuild:
