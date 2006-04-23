@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.69 2006/04/18 20:49:04 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.70 2006/04/23 15:21:46 allanonjl Exp $
 
 # GNOME 2 ECLASS
 inherit libtool gnome.org debug fdo-mime eutils
@@ -45,6 +45,9 @@ gnome2_src_configure() {
 
 	# Run libtoolize
 	elibtoolize ${ELTCONF}
+
+	# Do not remove the addwrite. bug #128289
+	addwrite "${ROOT}/root/.gnome2"
 
 	# GST_REGISTRY is to work around gst-inspect trying to read/write /root
 	GST_REGISTRY="${S}/registry.xml" econf "$@" ${G2CONF} || die "configure failed"
