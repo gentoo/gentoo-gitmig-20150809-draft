@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dd69d64e61b3dc4b87bd72ed446d2a30 ChangeLog 1357
-MD5 f65f9850f5a99719d8fdeb40cbadbd75 XML-Handler-YAWriter-0.23-r1.ebuild 628
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 d78f7f5a32bbd17e2a034ac78f181a95 ChangeLog 1459
+MD5 010dfbdb5a4ef03e74d5eb7eef797c43 XML-Handler-YAWriter-0.23-r1.ebuild 633
 MD5 6c8caad3c771fedda4ea398e6d5a0b08 files/digest-XML-Handler-YAWriter-0.23-r1 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcll2tG5z4I8BtQoRAu9oAJwJnembzI7fm4QauKLEvhHWLqu9OACfVDPA
-+ZzH1GpapYBJaaReDONqvqg=
-=WE/X
------END PGP SIGNATURE-----
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
