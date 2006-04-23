@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.2.ebuild,v 1.1 2006/04/22 14:18:21 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.2.ebuild,v 1.2 2006/04/23 10:32:43 tupone Exp $
 
 inherit python games
 
@@ -22,6 +22,7 @@ RDEPEND="|| (
 	>=dev-libs/expat-1.1
 	>=sys-libs/zlib-1.1.3
 	openal? ( media-libs/openal )
+	dev-python/wxpython
 	sdl? (
 		virtual/opengl
 		>=media-libs/libsdl-1.2.0
