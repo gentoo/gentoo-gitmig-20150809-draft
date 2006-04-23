@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.8 2006/04/20 07:18:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.9 2006/04/23 12:47:21 flameeyes Exp $
+
+  23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/locate-updatedb-cron:
+  Fix typo in updatedb cron file.
 
   20 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-ubin-6.0-r1.ebuild:

@@ -2,5 +2,5 @@
 
 if [ -x /usr/libexec/locate.updatedb ]
 then
-	nice /usr/libexec/locate.updatdb
+	nice /usr/libexec/locate.updatedb
 fi
