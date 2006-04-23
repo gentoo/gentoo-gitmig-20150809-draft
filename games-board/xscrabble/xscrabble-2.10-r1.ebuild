@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/xscrabble-2.10-r1.ebuild,v 1.3 2006/01/29 21:28:01 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/xscrabble-2.10-r1.ebuild,v 1.4 2006/04/23 07:05:30 mr_bones_ Exp $
 
-inherit eutils games multilib
+inherit eutils multilib games
 
 DESCRIPTION="An X11 clone of the well-known Scrabble"
 HOMEPAGE="http://freshmeat.net/projects/xscrabble/?topic_id=80"
@@ -36,13 +36,14 @@ src_compile() {
 }
 
 src_install() {
+	local f
 	export DESTDIR="${D}" LIBDIR="$(get_libdir)"
 	./build install || die "install failed"
 	if use linguas_fr ; then
 		./build lang fr || die "fr failed"
 	fi
 	./build lang en || die "en failed"
-	for f in "${D}"/usr/${LIBDIR}/X11/app-defaults/* ; do
+	for f in "${D}"/usr/"${LIBDIR}"/X11/app-defaults/* ; do
 		[[ -L ${f} ]] && continue
 		sed -i \
 			-e "s:/usr/games/lib/scrabble/:${GAMES_DATADIR}/${PN}/:" \
