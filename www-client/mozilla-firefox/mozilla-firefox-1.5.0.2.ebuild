@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.2.ebuild,v 1.3 2006/04/19 02:33:49 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.2.ebuild,v 1.4 2006/04/23 18:51:35 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
@@ -130,7 +130,7 @@ src_compile() {
 	mozconfig_final
 
 	# hardened GCC uses -fstack-protector-all by default, which breaks us
-	has_hardened && append-flags -fno-stack-protector-all
+	gcc-specs-ssp && append-flags -fno-stack-protector-all
 	# remove -fstack-protector because now it borks firefox
 	CFLAGS=${CFLAGS/-fstack-protector-all/}
 	CFLAGS=${CFLAGS/-fstack-protector/}
