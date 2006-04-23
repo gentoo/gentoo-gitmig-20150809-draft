@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.93 2006/03/10 00:49:15 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.94 2006/04/23 14:00:33 flameeyes Exp $
+
+  23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> gnutls-1.2.10.ebuild,
+  gnutls-1.2.10-r1.ebuild:
+  Run elibtoolize and add ~x86-fbsd keyword.
 
   10 Mar 2006; Marcelo Goes <vanquirius@gentoo.org> gnutls-1.2.3.ebuild,
   gnutls-1.2.4.ebuild:

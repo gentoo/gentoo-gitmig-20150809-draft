@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.10-r1.ebuild,v 1.2 2006/02/18 19:20:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.10-r1.ebuild,v 1.3 2006/04/23 14:00:33 flameeyes Exp $
 
-inherit eutils gnuconfig
+inherit eutils gnuconfig libtool
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -31,6 +31,13 @@ DEPEND="${RDEPEND}
 # gnutls has its own version of these. should maybe avoid using.
 #	libtasn1
 #	opencdk
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	elibtoolize
+}
 
 src_compile() {
 	local myconf=""
