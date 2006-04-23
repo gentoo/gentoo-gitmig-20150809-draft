@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.9 2006/04/20 04:31:36 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.10 2006/04/23 14:37:12 tcort Exp $
+
+*mutagen-1.2 (23 Apr 2006)
+
+  23 Apr 2006; Thomas Cort <tcort@gentoo.org> +mutagen-1.2.ebuild:
+  Version Bump. Ebuild by Kai Huuhko <kai.huuhko@gmail.com> and Thomas Cort
+  <tcort@gentoo.org>.
 
   19 Apr 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   mutagen-1.1.ebuild:
