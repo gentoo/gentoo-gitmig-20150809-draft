@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha07.ebuild,v 1.6 2006/04/22 01:45:32 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha07.ebuild,v 1.7 2006/04/23 03:05:47 tcort Exp $
 
 inherit eutils gnuconfig toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2"
 
 LICENSE="GPL-2 freedist"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ~ia64 ppc ~ppc-macos s390 sh sparc x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ppc ~ppc-macos s390 sh sparc x86"
 IUSE="unicode"
 
 DEPEND="virtual/libc

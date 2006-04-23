@@ -1,58 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 944e4951a48f60337b6119d2bf2bf985 ChangeLog 20683
-RMD160 2e15525d0f7fe97c7a15be9ccb6728a747348e26 ChangeLog 20683
-SHA256 069b12af1bbb48ed3ac86ec6638291efe4489ae1dfea72fe1b8f7aa65247c79c ChangeLog 20683
+MD5 a0cc2bda863aebe60f7c5bb13f2b3bb5 ChangeLog 20802
 MD5 5a2a9ad0ab6a40d5ee27662bf265bc41 cdrtools-2.01-r1.ebuild 2830
-RMD160 e40b7f64ecbc7b18b2371004a81c3bef979260ed cdrtools-2.01-r1.ebuild 2830
-SHA256 e4216cc3aafd2189bfd9e80987368c9c9ca0b7d0874036e5320ed283b97780cd cdrtools-2.01-r1.ebuild 2830
 MD5 95614cdf93109df9859f145c7872efbb cdrtools-2.01-r3.ebuild 3635
-RMD160 0317e15079f8e920aac666e5168ae909df08bfc2 cdrtools-2.01-r3.ebuild 3635
-SHA256 ed93e40def27c710ecefbaa47b233e3c867ce9cad77c776839b2f760b28444dd cdrtools-2.01-r3.ebuild 3635
 MD5 1ce4f552cf0369d91baebde6ab823eb0 cdrtools-2.01.01_alpha01-r2.ebuild 3881
-RMD160 06392ee3090bb536fa8c73bd67f20a9517716c8d cdrtools-2.01.01_alpha01-r2.ebuild 3881
-SHA256 184596af31571302fed27b68ebfe23aa523053a2b01a9396e2992721e24b104d cdrtools-2.01.01_alpha01-r2.ebuild 3881
-MD5 eb6f697527d2012eb01fffebc9d1db00 cdrtools-2.01.01_alpha07.ebuild 3429
-RMD160 1d661b84513ea493ddb3ea0e936d6553d3cdb4ca cdrtools-2.01.01_alpha07.ebuild 3429
-SHA256 b94c674a4af3604de57dfe7bfe2181f013b830433ac111cdcedb4db50f9ca316 cdrtools-2.01.01_alpha07.ebuild 3429
+MD5 0b9605fbdd64f2ad977a06bb7cba048e cdrtools-2.01.01_alpha07.ebuild 3433
 MD5 3b1ffea11e1653b7b16c2c89597d1c5a files/cdrtools-2.01-scsi-remote.patch 938
-RMD160 146ba7ddd5a0d987ea554bcf7e50aea5bf0690ff files/cdrtools-2.01-scsi-remote.patch 938
-SHA256 93719cbcbf594be14e0aa993b49157fc6be2885e94f4a92947ea73bd58ed2a62 files/cdrtools-2.01-scsi-remote.patch 938
 MD5 0a9c4d3c7d28293dd147c78f57dd2a1f files/cdrtools-2.01.01a01-scanbus.patch 776
-RMD160 911c74412e4ccf3fb82140dd43d7e2c8e4c542f4 files/cdrtools-2.01.01a01-scanbus.patch 776
-SHA256 7ec459a5779472df931cec14ec1ef9e297fb78e00ab93f83967dbadce73008ed files/cdrtools-2.01.01a01-scanbus.patch 776
 MD5 5c79e3ba5125fdb0695604c77a00b707 files/cdrtools-2.01.01a03-rezero.patch 558
-RMD160 bf391741e32c9158555e373790ab142c9f2961a9 files/cdrtools-2.01.01a03-rezero.patch 558
-SHA256 35d906ab7cbadd47db34f4f384f8c3aebe16792a43efe2c0788db2edde157958 files/cdrtools-2.01.01a03-rezero.patch 558
 MD5 118ed27cd1f6e1cc5e48adc622bb8528 files/cdrtools-2.01.01a03-warnings.patch 853
-RMD160 5ecadc359bfe6d914f2782b7ea8e7b0bb60e5c14 files/cdrtools-2.01.01a03-warnings.patch 853
-SHA256 0d2ca432a854792c82ee89fe6a097c6b3c1621e38fcb6d16c7f88658e62a130d files/cdrtools-2.01.01a03-warnings.patch 853
 MD5 9c89bdd0371267dc24f8640160b9ea9e files/cdrtools-2.01a27-writemode.patch 477
-RMD160 ef5f5022987b705dc2f38a0ea9e88b3d2eeb1b6b files/cdrtools-2.01a27-writemode.patch 477
-SHA256 03f8148e03f774b210ac92e9532510f290ca2e9c59b309a15ebe4cc90fc0c5fb files/cdrtools-2.01a27-writemode.patch 477
 MD5 c848b3b9b6921469483a22caa0fd40c3 files/digest-cdrtools-2.01-r1 67
-RMD160 71deff0628cf9d98cfb53234b77e94289e66c4b7 files/digest-cdrtools-2.01-r1 67
-SHA256 d9883585c53ad46dc178ba0712cb9f9284702cdf16a6094ddb4f83b46a86a89d files/digest-cdrtools-2.01-r1 67
 MD5 8165b59a7b14939c58a88ca1f272cad4 files/digest-cdrtools-2.01-r3 147
-RMD160 aaa829740855d592bd4799b732d859c0b259706e files/digest-cdrtools-2.01-r3 147
-SHA256 ca0d505c29fb72735649a526f8efcadbfdbac03c93900b7974d98b1e9f8be158 files/digest-cdrtools-2.01-r3 147
 MD5 325a542a0ef938f1b20b9d687d2cf68f files/digest-cdrtools-2.01.01_alpha01-r2 551
-RMD160 37c6b1cbf18da2dffb1e432393bb8c4af8ace5d7 files/digest-cdrtools-2.01.01_alpha01-r2 551
-SHA256 a596844cf1d1416970cec0901bdb13e41c52e3fbe8da2f3a5c8235b1b7feed32 files/digest-cdrtools-2.01.01_alpha01-r2 551
 MD5 090f4a5367e86219d1b69fdbcef4e42a files/digest-cdrtools-2.01.01_alpha07 265
-RMD160 380b83497581f00eb470106153212c5c2022b77d files/digest-cdrtools-2.01.01_alpha07 265
-SHA256 04615914cb6a31e5706c963877c4c52197ddc9bd3acb67a8046cc1c341718a66 files/digest-cdrtools-2.01.01_alpha07 265
 MD5 1a596f5cae257e97c559716336b30e5b files/mkisofs-iconv-10.patch 16986
-RMD160 3a8ae83e0c5e4e04e0b55c4cd1089ea603a4b169 files/mkisofs-iconv-10.patch 16986
-SHA256 608868e8d5e7d0d4fd7469a7a1f7271e63590fb645fdbdf3d6251678aad41745 files/mkisofs-iconv-10.patch 16986
 MD5 015ab4293805faaa417d5ac5304750c4 metadata.xml 254
-RMD160 f274a70fa23d8064efddcce296e0aed3344bd86b metadata.xml 254
-SHA256 21400abf2dad3e5b7b0d2f7f9586c33cba6336b42a97e1f2b3e7e8b9db0daae5 metadata.xml 254
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFESYsdwUpWvClEHQoRAnCOAJ9A9vQhFr7aYMeZ6xOyNsiPbAp15gCeOWx4
-9mcv4YZ7AvTKDmAKVVM/NSY=
-=UThl
------END PGP SIGNATURE-----
