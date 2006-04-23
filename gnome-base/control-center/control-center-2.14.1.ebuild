@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.14.1.ebuild,v 1.1 2006/04/12 17:31:09 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.14.1.ebuild,v 1.2 2006/04/23 20:09:02 compnerd Exp $
 
 inherit eutils gnome2 autotools
 
@@ -76,10 +76,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	# See http://gcc.gnu.org/cgi-bin/gnatsweb.pl problem #9700 for
-	# what this is about.
-	use alpha && epatch ${FILESDIR}/control-center-2.2.0.1-alpha_hack.patch
 
 	# Temporary workaround for a problematic behaviour with acme.
 	epatch ${FILESDIR}/${PN}-2.6.0-remove-pmu.patch
