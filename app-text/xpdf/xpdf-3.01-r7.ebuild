@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r7.ebuild,v 1.18 2006/04/21 17:15:29 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r7.ebuild,v 1.19 2006/04/23 08:52:13 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -32,6 +32,8 @@ src_unpack() {
 
 src_install() {
 	dobin xpdf
-	doman xpdf.1
+	doman xpdf.1 ${FILESDIR}/xpdfrc.5
+	insinto /etc
+	newins ${FILESDIR}/sample-xpdfrc xpdfrc
 	dodoc README ANNOUNCE CHANGES
 }
