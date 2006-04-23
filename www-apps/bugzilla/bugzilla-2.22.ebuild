@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.22.ebuild,v 1.1 2006/04/23 18:05:44 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.22.ebuild,v 1.2 2006/04/23 18:16:33 rl03 Exp $
 
 inherit webapp
 
@@ -33,14 +33,14 @@ RDEPEND="
 	dev-perl/MIME-tools
 	virtual/perl-Storable
 
-	!ppc64? ( extras? (
+	extras? (
 	>=dev-perl/Chart-2.3
 	>=dev-perl/GD-1.20
 	dev-perl/GDGraph
 	dev-perl/GDTextUtil
 	dev-perl/perl-ldap
 	>=dev-perl/PatchReader-0.9.4
-	dev-perl/XML-Twig ) )
+	dev-perl/XML-Twig )
 "
 
 src_unpack() {
