@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jwhois
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.24 2006/02/07 01:38:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.25 2006/04/23 17:54:35 kumba Exp $
+
+  29 Apr 2006; Joshua Kinard <kumba@gentoo.org> jwhois-3.2.3.ebuild:
+  Marked stable on mips.
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> jwhois-3.2.3.ebuild:
   Mark 3.2.3 stable on alpha

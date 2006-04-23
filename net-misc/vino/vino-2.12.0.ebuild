@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.12.0.ebuild,v 1.11 2006/03/10 00:57:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.12.0.ebuild,v 1.12 2006/04/23 18:00:53 kumba Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="crypt gnutls jpeg zlib"
 
 RDEPEND=">=x11-libs/gtk+-2
