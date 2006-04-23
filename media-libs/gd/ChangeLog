@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.30 2006/04/23 00:21:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.31 2006/04/23 20:48:09 flameeyes Exp $
+
+  23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/gd-2.0.33-iconv.patch, gd-2.0.33.ebuild:
+  Add patch to link against libiconv when needed.
 
   23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> gd-2.0.33.ebuild:
   Add ~x86-fbsd keyword.
