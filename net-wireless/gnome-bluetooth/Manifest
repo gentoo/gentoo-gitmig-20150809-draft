@@ -23,13 +23,13 @@ MD5 8be3b2e5c4ab65eb0947646d0cf4f88a gnome-bluetooth-0.5.1-r2.ebuild 1382
 MD5 ca451d450412e5dad4d0ca6c058b6891 gnome-bluetooth-0.5.1.ebuild 1289
 MD5 79a7f6c060b36fef60a48e584567c7f6 gnome-bluetooth-0.6.0-r1.ebuild 1433
 MD5 05d959e26d478b4c14acf590e58bdbfa gnome-bluetooth-0.6.0.ebuild 1404
-MD5 9c148aaabf9945b0ed9653017e3f0500 gnome-bluetooth-0.7.0-r1.ebuild 1471
+MD5 92b082de97c2b7c4862afdcfb002810f gnome-bluetooth-0.7.0-r1.ebuild 1474
 MD5 7b69b6ce2c9525ab14dee0e15bd971ff gnome-bluetooth-0.7.0.ebuild 1511
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFESfvHjG8pv1lIUX4RAne0AKDJXWYms/lbE65+Y1zMY9hg+YQyuwCfQ2+P
-xgp1DF83LfwCE/GHV4GP8QI=
-=ruw4
+iD8DBQFES7YvjG8pv1lIUX4RAvO0AKDByoHUE5Iu1o5obZvBvAetvNvHdACfZMUe
+Q0NoDSLtODMAKP1N/YugmG8=
+=I1p8
 -----END PGP SIGNATURE-----
