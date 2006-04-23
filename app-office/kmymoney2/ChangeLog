@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kmymoney2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.43 2006/04/13 18:30:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.44 2006/04/23 12:28:51 carlo Exp $
+
+  23 Apr 2006; Carsten Lohrke <carlo@gentoo.org> kmymoney2-0.8.3.ebuild:
+  Add cppunit as dependency to this ebuild as well, so we can mark it stable.
 
   13 Apr 2006; Carsten Lohrke <carlo@gentoo.org> kmymoney2-0.8.3-r1.ebuild:
   Depend on cppunit, instead trying to workaround broken m4 scripts.
