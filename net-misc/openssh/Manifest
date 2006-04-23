@@ -1,41 +1,189 @@
-MD5 406fb3c56ba5184e88feffa2b4351951 ChangeLog 27581
-MD5 239a562c31f4486b3665948b60831839 files/digest-openssh-3.9_p1-r3 835
-MD5 0cb39cf20cd11613e7bf09a0ca6ce9ad files/digest-openssh-4.0_p1-r2 360
-MD5 3d538f75b8b386529f10a907192ad1bc files/digest-openssh-4.1_p1-r1 360
-MD5 594aa58909853e6c3f0be598f8928ae5 files/digest-openssh-4.2_p1-r1 360
-MD5 874bd78ef963ed79b0e2e951de1bea79 files/digest-openssh-4.3_p1 281
-MD5 286d3d9cc6e16cffbb45bf6d6860f7d3 files/digest-openssh-4.3_p2-r1 359
+AUX openssh-3.9_p1-chroot.patch 3026 RMD160 23b2a1c819580b0f2fcb927c13c63e4f16387333 SHA1 78f85bc81c0034e03d06dd3c7ab91b9210fc18fb SHA256 014158a32c707b2a79ac606aeefb6bc09f24c3f07ce5df353ddad96095518597 size 3026
 MD5 c4edd6a7aa1418ce5bf74aeb46627dbf files/openssh-3.9_p1-chroot.patch 3026
+RMD160 23b2a1c819580b0f2fcb927c13c63e4f16387333 files/openssh-3.9_p1-chroot.patch 3026
+SHA256 014158a32c707b2a79ac606aeefb6bc09f24c3f07ce5df353ddad96095518597 files/openssh-3.9_p1-chroot.patch 3026
+AUX openssh-3.9_p1-configure-openct.patch 995 RMD160 311073097835d8fdd4b2127df6c6d9a8e063272c SHA1 4746bea2c7b6e03db28a34907e378bb5b4d54845 SHA256 663a0d7978861bed2ba41cbbd9c5344e5d898623cd5adcb699d1c5fca06b6b34 size 995
 MD5 7937a17eb31fc6139ef42fa04521de27 files/openssh-3.9_p1-configure-openct.patch 995
+RMD160 311073097835d8fdd4b2127df6c6d9a8e063272c files/openssh-3.9_p1-configure-openct.patch 995
+SHA256 663a0d7978861bed2ba41cbbd9c5344e5d898623cd5adcb699d1c5fca06b6b34 files/openssh-3.9_p1-configure-openct.patch 995
+AUX openssh-3.9_p1-fix_suid-x509.patch 579 RMD160 735b48130cbad119c8fe45cb1eaeff4242c190c8 SHA1 44a9f9a326571aeaa2e1098bb28408a88758764c SHA256 eb04cd466b69f0320476c181759ec5172772022b295b080d072fb15694417b00 size 579
 MD5 5c73d0ef570e6326839011abc8045626 files/openssh-3.9_p1-fix_suid-x509.patch 579
+RMD160 735b48130cbad119c8fe45cb1eaeff4242c190c8 files/openssh-3.9_p1-fix_suid-x509.patch 579
+SHA256 eb04cd466b69f0320476c181759ec5172772022b295b080d072fb15694417b00 files/openssh-3.9_p1-fix_suid-x509.patch 579
+AUX openssh-3.9_p1-fix_suid.patch 492 RMD160 d87a1d376f99b129f745f077cdf8824ba0e3e4b0 SHA1 f0951f0d72bec77141f99cde8952a11a8149e086 SHA256 6366f9fb4702833f148b931f9d8ed91bb0685b8ee5d2742bfe3e89db45ecb42c size 492
 MD5 86dbc28431f831a22b51c2ae8637a611 files/openssh-3.9_p1-fix_suid.patch 492
+RMD160 d87a1d376f99b129f745f077cdf8824ba0e3e4b0 files/openssh-3.9_p1-fix_suid.patch 492
+SHA256 6366f9fb4702833f148b931f9d8ed91bb0685b8ee5d2742bfe3e89db45ecb42c files/openssh-3.9_p1-fix_suid.patch 492
+AUX openssh-3.9_p1-infoleak.patch 2496 RMD160 a62ef20bc9c54d55ae9e27b42d6c8081fb2b2a1b SHA1 95f78b44f220a2e830d81a0531766aa1f23eae59 SHA256 0618ee562152cb097d58c97a9474ab43a658bcf285a9708f9bd1727767c1a5bf size 2496
 MD5 ba87dbfc3be0ab9d70fe24278d9deb02 files/openssh-3.9_p1-infoleak.patch 2496
+RMD160 a62ef20bc9c54d55ae9e27b42d6c8081fb2b2a1b files/openssh-3.9_p1-infoleak.patch 2496
+SHA256 0618ee562152cb097d58c97a9474ab43a658bcf285a9708f9bd1727767c1a5bf files/openssh-3.9_p1-infoleak.patch 2496
+AUX openssh-3.9_p1-kerberos-detection.patch 593 RMD160 fccc8d29b397ec3347a13fcd6ab223bf652c820a SHA1 9738f3914ced7cd4a90f0373c22f9ef141d1de61 SHA256 b44d4d6d65f91a6d0f3ff8bf644dbce7bb54b47c8adb99eb542fc8bf63bfbeb9 size 593
 MD5 c326cd447fb5f86124295ef943d3bf35 files/openssh-3.9_p1-kerberos-detection.patch 593
+RMD160 fccc8d29b397ec3347a13fcd6ab223bf652c820a files/openssh-3.9_p1-kerberos-detection.patch 593
+SHA256 b44d4d6d65f91a6d0f3ff8bf644dbce7bb54b47c8adb99eb542fc8bf63bfbeb9 files/openssh-3.9_p1-kerberos-detection.patch 593
+AUX openssh-3.9_p1-opensc.patch 3164 RMD160 e3a17a0823e1c0767d72d8131a8d719a7ed7c444 SHA1 0854d83059e651a07e27284209ffc761d43d9075 SHA256 b2619bf9c7589e69e126750a8ab6e6f19ef2f51842d53cda199245464e7afe10 size 3164
 MD5 e072ca9db3ff5a7616b04f055c976d35 files/openssh-3.9_p1-opensc.patch 3164
+RMD160 e3a17a0823e1c0767d72d8131a8d719a7ed7c444 files/openssh-3.9_p1-opensc.patch 3164
+SHA256 b2619bf9c7589e69e126750a8ab6e6f19ef2f51842d53cda199245464e7afe10 files/openssh-3.9_p1-opensc.patch 3164
+AUX openssh-3.9_p1-pamfix.patch 2421 RMD160 716f31a1ac18eaf0c899550450a03389ec225929 SHA1 051af7c7349f037d7e32bcac61d7803b1452500d SHA256 f04926c0a31f899ce80e7c61038a582a4c4d114147091653a8ba16212a21fc6d size 2421
 MD5 6ff556bce509be91ea2b0317bbbe6c8d files/openssh-3.9_p1-pamfix.patch 2421
+RMD160 716f31a1ac18eaf0c899550450a03389ec225929 files/openssh-3.9_p1-pamfix.patch 2421
+SHA256 f04926c0a31f899ce80e7c61038a582a4c4d114147091653a8ba16212a21fc6d files/openssh-3.9_p1-pamfix.patch 2421
+AUX openssh-3.9_p1-selinux.diff 2844 RMD160 7d40faf638877f48cbeb9804a14b0090d6ae7891 SHA1 0ea8232e846605b4af5bec3aabffabc9ed4e25fe SHA256 41db21c0d3804bbcefb731efe92a15f52a4a3bdf30e640255bb5f4a1a5a20525 size 2844
 MD5 87a36ab7287f844cf5cf5998be90d08e files/openssh-3.9_p1-selinux.diff 2844
+RMD160 7d40faf638877f48cbeb9804a14b0090d6ae7891 files/openssh-3.9_p1-selinux.diff 2844
+SHA256 41db21c0d3804bbcefb731efe92a15f52a4a3bdf30e640255bb5f4a1a5a20525 files/openssh-3.9_p1-selinux.diff 2844
+AUX openssh-3.9_p1-sftplogging-1.2-gentoo.patch.bz2 5775 RMD160 cc96abe954d9e76e39cfcee87c13ce57e221cc98 SHA1 2c203337d20ea2a7d754b58f0690cf879b17e9a4 SHA256 2a80ec6d5b0e27d5997976efa98d84a93859429027404a2eb32b898b2a9d6ad7 size 5775
 MD5 1cb38b00876090a79d11989acb60522c files/openssh-3.9_p1-sftplogging-1.2-gentoo.patch.bz2 5775
+RMD160 cc96abe954d9e76e39cfcee87c13ce57e221cc98 files/openssh-3.9_p1-sftplogging-1.2-gentoo.patch.bz2 5775
+SHA256 2a80ec6d5b0e27d5997976efa98d84a93859429027404a2eb32b898b2a9d6ad7 files/openssh-3.9_p1-sftplogging-1.2-gentoo.patch.bz2 5775
+AUX openssh-3.9_p1-skey.patch 254 RMD160 8e98d26d75bba3c6e35fb6e2e9503918bfd25103 SHA1 6098ffb26957d3df98d2647322525bd436506e3b SHA256 422e5c8c42b123120e428f8673e72c91fbe01914c8b005020d2144e79c4ada96 size 254
 MD5 a31d6c7233744b4333a2ea12d85a29c7 files/openssh-3.9_p1-skey.patch 254
+RMD160 8e98d26d75bba3c6e35fb6e2e9503918bfd25103 files/openssh-3.9_p1-skey.patch 254
+SHA256 422e5c8c42b123120e428f8673e72c91fbe01914c8b005020d2144e79c4ada96 files/openssh-3.9_p1-skey.patch 254
+AUX openssh-3.9_p1-terminal_restore.patch 404 RMD160 476d865f3fb9eb6a89f48745ef96526209cb9d4e SHA1 6f84fca8e2fef524c954b8d15516a34d8bb31c53 SHA256 6912c298215057eb301ad1b31b2e3d2c83d23aa131fa54ec55a2f078fe7589a7 size 404
 MD5 6e6d18f8f0988cfd5233f475d5c36f0d files/openssh-3.9_p1-terminal_restore.patch 404
+RMD160 476d865f3fb9eb6a89f48745ef96526209cb9d4e files/openssh-3.9_p1-terminal_restore.patch 404
+SHA256 6912c298215057eb301ad1b31b2e3d2c83d23aa131fa54ec55a2f078fe7589a7 files/openssh-3.9_p1-terminal_restore.patch 404
+AUX openssh-4.0_p1-sftplogging-1.2-gentoo.patch.bz2 5770 RMD160 4b317fa8c10f58ea506b9c0159d5216a71a8eaf1 SHA1 998f37424cd9274f03be3fa08b5cc176e548180a SHA256 07f684954f8d53c547e125861a4a2ccbbffd8fdeb0bc18d310a3274b06cb99a4 size 5770
 MD5 d235f6e0c273e8a968b6759b12a8fd11 files/openssh-4.0_p1-sftplogging-1.2-gentoo.patch.bz2 5770
+RMD160 4b317fa8c10f58ea506b9c0159d5216a71a8eaf1 files/openssh-4.0_p1-sftplogging-1.2-gentoo.patch.bz2 5770
+SHA256 07f684954f8d53c547e125861a4a2ccbbffd8fdeb0bc18d310a3274b06cb99a4 files/openssh-4.0_p1-sftplogging-1.2-gentoo.patch.bz2 5770
+AUX openssh-4.0_p1-smartcard-ldap-happy.patch 545 RMD160 2287950de3385bdffaf6af8eec8b355358891ef1 SHA1 8f24acbab71b677b81d5108a85eaf88a208b3b86 SHA256 c6a6f82dd9d5fe34310e2a2bd82558809d28b29cad6e8f0b4a1c3f232ded67be size 545
 MD5 4bee5c8ce11f30487154c3742e004f7d files/openssh-4.0_p1-smartcard-ldap-happy.patch 545
+RMD160 2287950de3385bdffaf6af8eec8b355358891ef1 files/openssh-4.0_p1-smartcard-ldap-happy.patch 545
+SHA256 c6a6f82dd9d5fe34310e2a2bd82558809d28b29cad6e8f0b4a1c3f232ded67be files/openssh-4.0_p1-smartcard-ldap-happy.patch 545
+AUX openssh-4.2_p1-CVE-2006-0225.patch 8962 RMD160 a5c56985d97b32e4624693b27a884c32f0f9de77 SHA1 4f86b84077a57a36bdeb1b55271d6c8202023a89 SHA256 f11e9d62cb6b33ad38258f4d82446f101b5f4a9ce21b56a4d71377b7850a8734 size 8962
 MD5 4044a10674964d7c34cad8a45cd2264d files/openssh-4.2_p1-CVE-2006-0225.patch 8962
+RMD160 a5c56985d97b32e4624693b27a884c32f0f9de77 files/openssh-4.2_p1-CVE-2006-0225.patch 8962
+SHA256 f11e9d62cb6b33ad38258f4d82446f101b5f4a9ce21b56a4d71377b7850a8734 files/openssh-4.2_p1-CVE-2006-0225.patch 8962
+AUX openssh-4.2_p1-cross-compile.patch 1028 RMD160 cee147bcb5792d0cc16c6c9c9096b73e4dbcb07d SHA1 7a73c522fbc4476455a65021237db877261fd8f7 SHA256 dc3e7c74189ffa921cb64767e9876e4a7477c15103a4454cd7ddb68edad7943d size 1028
 MD5 8155bbbeb16c552ccb793f05904074b5 files/openssh-4.2_p1-cross-compile.patch 1028
+RMD160 cee147bcb5792d0cc16c6c9c9096b73e4dbcb07d files/openssh-4.2_p1-cross-compile.patch 1028
+SHA256 dc3e7c74189ffa921cb64767e9876e4a7477c15103a4454cd7ddb68edad7943d files/openssh-4.2_p1-cross-compile.patch 1028
+AUX openssh-4.2_p1-kerberos-detection.patch 359 RMD160 70efd444ce542f931121ccd7d776e3c14aa3ffc8 SHA1 08d7977f271f0a2b7997e7cd74e35c32d7aba115 SHA256 12e8d230bf4743ed2f11f84151235a3f4756dae08dfcdc2ca7be43f616c4381e size 359
 MD5 21a3d3ba5d33cb010404c562ef1078b1 files/openssh-4.2_p1-kerberos-detection.patch 359
+RMD160 70efd444ce542f931121ccd7d776e3c14aa3ffc8 files/openssh-4.2_p1-kerberos-detection.patch 359
+SHA256 12e8d230bf4743ed2f11f84151235a3f4756dae08dfcdc2ca7be43f616c4381e files/openssh-4.2_p1-kerberos-detection.patch 359
+AUX openssh-4.2_p1-selinux.patch 2355 RMD160 355bc9b563ef812184abf0ab586a4e5f47ce4b64 SHA1 f79711e38a108b21599429e187e5fa348303a381 SHA256 6cda5262746d8433a71a5f858baf9ae42662d429d03959d0c7e5d187c676f417 size 2355
 MD5 551a19fc1be4d7792633865816bc9426 files/openssh-4.2_p1-selinux.patch 2355
+RMD160 355bc9b563ef812184abf0ab586a4e5f47ce4b64 files/openssh-4.2_p1-selinux.patch 2355
+SHA256 6cda5262746d8433a71a5f858baf9ae42662d429d03959d0c7e5d187c676f417 files/openssh-4.2_p1-selinux.patch 2355
+AUX openssh-4.2_p1-sftplogging-1.4-gentoo.patch.bz2 5718 RMD160 da03df4ed3fb19c244efbc06474cd4e0dc20b20f SHA1 d9dddf908549ceeb33042d5202755665a2e10c12 SHA256 0be50a8ee5e7d2faf4961cc7eae96b22557e1b8e6b39f9da7d74b6c2c13fbc3b size 5718
 MD5 9cf3a0fb4e8709dde06bd4a3c61eeaff files/openssh-4.2_p1-sftplogging-1.4-gentoo.patch.bz2 5718
+RMD160 da03df4ed3fb19c244efbc06474cd4e0dc20b20f files/openssh-4.2_p1-sftplogging-1.4-gentoo.patch.bz2 5718
+SHA256 0be50a8ee5e7d2faf4961cc7eae96b22557e1b8e6b39f9da7d74b6c2c13fbc3b files/openssh-4.2_p1-sftplogging-1.4-gentoo.patch.bz2 5718
+AUX openssh-4.3_p1-krb5-typos.patch 301 RMD160 3b1a82e230c870269f9aa25cd73e9c5be03db3f6 SHA1 dfdca93a5ffd99cdee0f8ed42ece38c06546b674 SHA256 98310c487625b5dbd86f4a2c1acd00c223911b6a7e505455bc4196063fa38b9c size 301
 MD5 50f8706c29e6d5c509c64cfba22a78b1 files/openssh-4.3_p1-krb5-typos.patch 301
+RMD160 3b1a82e230c870269f9aa25cd73e9c5be03db3f6 files/openssh-4.3_p1-krb5-typos.patch 301
+SHA256 98310c487625b5dbd86f4a2c1acd00c223911b6a7e505455bc4196063fa38b9c files/openssh-4.3_p1-krb5-typos.patch 301
+AUX openssh-4.3_p2-selinux.patch 10737 RMD160 c13bcff14f1d4a1be489506f6145181c7d19dcc4 SHA1 913d73429699ffea1083cd96065d0e5b241ca2b5 SHA256 f93d2a040471aba4a7c762f106d9648e915f73878809c72fb36dabf5dd96ba8f size 10737
 MD5 fcf22ed16aeea1c099349391208c061c files/openssh-4.3_p2-selinux.patch 10737
+RMD160 c13bcff14f1d4a1be489506f6145181c7d19dcc4 files/openssh-4.3_p2-selinux.patch 10737
+SHA256 f93d2a040471aba4a7c762f106d9648e915f73878809c72fb36dabf5dd96ba8f files/openssh-4.3_p2-selinux.patch 10737
+AUX openssh-4.3_p2-selinux.patch.glue 1057 RMD160 3bd4e77ceffafaa88505641393210f5366575c7e SHA1 01edd98fecfc76e341ce1cf439b9d15dcbdad296 SHA256 174524b2c5168bd4c3724753c359152c22148587ddbd59198262755fcc1d1c71 size 1057
 MD5 b1a753373208c815d11a7dabd7f7b45d files/openssh-4.3_p2-selinux.patch.glue 1057
+RMD160 3bd4e77ceffafaa88505641393210f5366575c7e files/openssh-4.3_p2-selinux.patch.glue 1057
+SHA256 174524b2c5168bd4c3724753c359152c22148587ddbd59198262755fcc1d1c71 files/openssh-4.3_p2-selinux.patch.glue 1057
+AUX openssh-securid-1.3.1-updates.patch 445 RMD160 b1db3dfa75f7e03d0dff41e85e285f8b749f27f0 SHA1 757a8b0c1586fdcbff0762b39a52f1b315d4b110 SHA256 11c95cc508d20c8eb1e8faa0d2b5e68346cbb93db8fb560cfa8b4d2c0d1104b3 size 445
 MD5 eca7ba0b23754a710b42a79c1fb5e248 files/openssh-securid-1.3.1-updates.patch 445
+RMD160 b1db3dfa75f7e03d0dff41e85e285f8b749f27f0 files/openssh-securid-1.3.1-updates.patch 445
+SHA256 11c95cc508d20c8eb1e8faa0d2b5e68346cbb93db8fb560cfa8b4d2c0d1104b3 files/openssh-securid-1.3.1-updates.patch 445
+AUX sshd.confd 223 RMD160 8705077fa2f09d42db286008cda2a65becc1a307 SHA1 cea73f12016cf457339b91208a315ae11ede3684 SHA256 b855256383de617696445f39f39cb96a579a3311d93acbf9d37437dc0bf14efb size 223
 MD5 f63b0b7359fba745965a6d302a33762c files/sshd.confd 223
+RMD160 8705077fa2f09d42db286008cda2a65becc1a307 files/sshd.confd 223
+SHA256 b855256383de617696445f39f39cb96a579a3311d93acbf9d37437dc0bf14efb files/sshd.confd 223
+AUX sshd.pam 294 RMD160 1d4499a7de54188e51e87a240ec7a1b3b1af583d SHA1 4cd17fb40793fa9ca77ac93698129f2c8cafd7b8 SHA256 f01cc51c624b21a815fb6c0be35edc590e2e6f8a5ffbdcabc220a9630517972f size 294
 MD5 b86ae0c43a704c4ee2abd2ce5c955f8f files/sshd.pam 294
+RMD160 1d4499a7de54188e51e87a240ec7a1b3b1af583d files/sshd.pam 294
+SHA256 f01cc51c624b21a815fb6c0be35edc590e2e6f8a5ffbdcabc220a9630517972f files/sshd.pam 294
+AUX sshd.pam_include 205 RMD160 6b20ea83c69ef613d75daf43515aaec88d4cd815 SHA1 122472d859c24f7c776bb10fbfcb0221146ed056 SHA256 8d59135e96f4eff6b80c143b82cced7beb0bbca19ff91b479f1ba92916243d5e size 205
 MD5 2b66f75047edfac5d5e6cdbffa35383e files/sshd.pam_include 205
+RMD160 6b20ea83c69ef613d75daf43515aaec88d4cd815 files/sshd.pam_include 205
+SHA256 8d59135e96f4eff6b80c143b82cced7beb0bbca19ff91b479f1ba92916243d5e files/sshd.pam_include 205
+AUX sshd.rc6 1797 RMD160 896e47a5df3a7b7d6602e8a2853b8deddc00f77b SHA1 01fed78582fd158816228ad3e30436de0f66f0cd SHA256 988140af34ec5f4943e50f07e3c7933ae2aa2dc5e692c097cf769420d436d6fe size 1797
 MD5 040058236238ec4a94d3abb8a4e532e9 files/sshd.rc6 1797
-MD5 02a1e50ab3fa841edec86694bd71c8d1 metadata.xml 1251
+RMD160 896e47a5df3a7b7d6602e8a2853b8deddc00f77b files/sshd.rc6 1797
+SHA256 988140af34ec5f4943e50f07e3c7933ae2aa2dc5e692c097cf769420d436d6fe files/sshd.rc6 1797
+DIST openssh-3.9p1+x509-5.3.diff.gz 126331 RMD160 7b33dc161664f7bc155a19a09c603b1938924b75 SHA256 4d1a8cc0a40d45a3e8f5ffa3fa70ad8d5b4141adf0e04c1643acf30ff80899df size 126331
+DIST openssh-3.9p1-hpn11.diff 13237 RMD160 02e9a3c12e289ef7dea5b7d81ec5b2e06580b7d0 SHA256 ce83e3c38fe79c85f371e8e1a47d45085dd08b7e4604f7291264e36d9ebb35fe size 13237
+DIST openssh-3.9p1.tar.gz 854027 RMD160 e4abf280a18e3ae046d0dee19dab919bba8e5568 SHA256 e119eb9b09c13ddd945a0105f19b05983e62de0bac167264f055f93115048090 size 854027
+DIST openssh-4.0p1+SecurID_v1.3.1.patch 610662 size 610662
+DIST openssh-4.0p1+x509-5.2.diff.gz 123547 size 123547
+DIST openssh-4.0p1-hpn11.diff 14225 size 14225
+DIST openssh-4.0p1.tar.gz 889880 size 889880
+DIST openssh-4.1p1+SecurID_v1.3.1.patch 612445 size 612445
+DIST openssh-4.1p1+x509-5.2.diff.gz 123415 size 123415
+DIST openssh-4.1p1-hpn11.diff 14223 size 14223
+DIST openssh-4.1p1.tar.gz 894234 size 894234
+DIST openssh-4.2p1+SecurID_v1.3.2.patch 616248 size 616248
+DIST openssh-4.2p1+x509-5.3.diff.gz 128507 size 128507
+DIST openssh-4.2p1-hpn11.diff 14765 size 14765
+DIST openssh-4.2p1.tar.gz 914165 size 914165
+DIST openssh-4.3p1+x509-5.3.diff.gz 131152 size 131152
+DIST openssh-4.3p1-hpn11.diff 11024 size 11024
+DIST openssh-4.3p1.tar.gz 940777 RMD160 c1d69873ecc453b40d825a2f1b3a0909da815f5e SHA256 7a4e356742190901e458b7526f91dfa24c66babbcd24d55cf7eac282266f5254 size 940777
+DIST openssh-4.3p2+SecurID_v1.3.2.patch 47650 size 47650
+DIST openssh-4.3p2+x509-5.3.diff.gz 131147 size 131147
+DIST openssh-4.3p2.tar.gz 941455 RMD160 ccd5967e3296347e6dd2be43c3d6caacde2b6833 SHA256 4ba757d6c933e7d075b6424124d92d197eb5d91e4a58794596b67f5f0ca21d4f size 941455
+DIST openssh-lpk-3.9p1-0.3.6.patch 60920 size 60920
+DIST openssh-lpk-4.0p1-0.3.6.patch 60557 size 60557
+DIST openssh-lpk-4.1p1-0.3.6.patch 60312 size 60312
+DIST openssh-lpk-4.3p1-0.3.7.patch 60451 size 60451
+EBUILD openssh-3.9_p1-r3.ebuild 4984 RMD160 fc6e960460f5ed80f38de0ad62844786906a40dc SHA1 bb12ded4a10fb951c5c37da969225b672ccc5f38 SHA256 243071563d56d49415ecdd850291e0ba005db6dd6c3a90f3b33b727de3990686 size 4984
 MD5 4bf2ed1ba4e71ff7a799b27f958b8214 openssh-3.9_p1-r3.ebuild 4984
+RMD160 fc6e960460f5ed80f38de0ad62844786906a40dc openssh-3.9_p1-r3.ebuild 4984
+SHA256 243071563d56d49415ecdd850291e0ba005db6dd6c3a90f3b33b727de3990686 openssh-3.9_p1-r3.ebuild 4984
+EBUILD openssh-4.0_p1-r2.ebuild 5420 RMD160 016f5a9ba4af8afdec47f42c3a90f71ffe5da765 SHA1 b5a94526b24c72d7146b927219c80b9102c8f7b7 SHA256 c9257e969c7bdffa69134c198fd5c7d77118daba6bc687c73f0bed463ab24d8e size 5420
 MD5 f348bd329ca422946f501cc5ed1cbfb8 openssh-4.0_p1-r2.ebuild 5420
+RMD160 016f5a9ba4af8afdec47f42c3a90f71ffe5da765 openssh-4.0_p1-r2.ebuild 5420
+SHA256 c9257e969c7bdffa69134c198fd5c7d77118daba6bc687c73f0bed463ab24d8e openssh-4.0_p1-r2.ebuild 5420
+EBUILD openssh-4.1_p1-r1.ebuild 5381 RMD160 fe412d4d8fc9640b59446a80291fce64e5dd5d95 SHA1 1a774fcdee77583a497a7ff3060a8256e9d1a0c0 SHA256 b2d45cf55c08e2030ef74b28f8439d3e4e5aae749e1a12e862a4c86e90f46315 size 5381
 MD5 2c888cf3a4cf4a20bf8b399f0e41dd0b openssh-4.1_p1-r1.ebuild 5381
+RMD160 fe412d4d8fc9640b59446a80291fce64e5dd5d95 openssh-4.1_p1-r1.ebuild 5381
+SHA256 b2d45cf55c08e2030ef74b28f8439d3e4e5aae749e1a12e862a4c86e90f46315 openssh-4.1_p1-r1.ebuild 5381
+EBUILD openssh-4.2_p1-r1.ebuild 5416 RMD160 bf795a39a239ed3bb00deed091a4ab1fbe383c81 SHA1 1cf20096eb97ca58468639051b55adf3d2d319c8 SHA256 36869f415923667f3f0d68c708ed0a8b6f65ee8e1a8520630bc8e018c31883c2 size 5416
 MD5 a9d7923f3909976222c24efd31c147f5 openssh-4.2_p1-r1.ebuild 5416
+RMD160 bf795a39a239ed3bb00deed091a4ab1fbe383c81 openssh-4.2_p1-r1.ebuild 5416
+SHA256 36869f415923667f3f0d68c708ed0a8b6f65ee8e1a8520630bc8e018c31883c2 openssh-4.2_p1-r1.ebuild 5416
+EBUILD openssh-4.3_p1.ebuild 5226 RMD160 f2f54fc190fff18600c591c24bc115dad2fcdc4c SHA1 29a8850db9ceb37cc2f424b3aa6ba5f29111aa6b SHA256 ecf8a0f82ee86474f4adfd184956be96220e48b3fcea6c869d1805ff95bae11e size 5226
 MD5 504919dbb3dc5015f6e2ddb648ca6c2b openssh-4.3_p1.ebuild 5226
-MD5 dda2ddf5e40ce536d6170d34e7e1b3f2 openssh-4.3_p2-r1.ebuild 5503
+RMD160 f2f54fc190fff18600c591c24bc115dad2fcdc4c openssh-4.3_p1.ebuild 5226
+SHA256 ecf8a0f82ee86474f4adfd184956be96220e48b3fcea6c869d1805ff95bae11e openssh-4.3_p1.ebuild 5226
+EBUILD openssh-4.3_p2-r1.ebuild 5502 RMD160 5043b83ae5a54d88e77da3139f0c196b55658a69 SHA1 01c0e9f640e4110a7e0850c03bbd20befd7aaaa7 SHA256 5e45e78c0a2f2c6500cc64dfe2bed5581d0804366063d35f7885556c4bb43cda size 5502
+MD5 819f15fb5f8f7214e66aea2a6e3c84a9 openssh-4.3_p2-r1.ebuild 5502
+RMD160 5043b83ae5a54d88e77da3139f0c196b55658a69 openssh-4.3_p2-r1.ebuild 5502
+SHA256 5e45e78c0a2f2c6500cc64dfe2bed5581d0804366063d35f7885556c4bb43cda openssh-4.3_p2-r1.ebuild 5502
+MISC ChangeLog 27681 RMD160 5e2b0b1e6b3da2ca7e81cd442920d5db77f399bf SHA1 b538498fecbfcf7885edf2590c6975ed7bf56b66 SHA256 d71c301ac15fa2f9552864983ddbc8b5eefdfff31b6d7049c969ea2b0fb6be87 size 27681
+MD5 164c84e9f74142ea20fd392b0f294cab ChangeLog 27681
+RMD160 5e2b0b1e6b3da2ca7e81cd442920d5db77f399bf ChangeLog 27681
+SHA256 d71c301ac15fa2f9552864983ddbc8b5eefdfff31b6d7049c969ea2b0fb6be87 ChangeLog 27681
+MISC metadata.xml 1251 RMD160 6cc73434a9ddba10013961600493ede02841b514 SHA1 83a4855be3de75289d068e827ca7e8d41b2683f9 SHA256 bc756cbd9737146f4aef4b1cf329f9c6fb2dc580fe4230b866c1101d9637c63b size 1251
+MD5 02a1e50ab3fa841edec86694bd71c8d1 metadata.xml 1251
+RMD160 6cc73434a9ddba10013961600493ede02841b514 metadata.xml 1251
+SHA256 bc756cbd9737146f4aef4b1cf329f9c6fb2dc580fe4230b866c1101d9637c63b metadata.xml 1251
+MD5 239a562c31f4486b3665948b60831839 files/digest-openssh-3.9_p1-r3 835
+RMD160 4caa67826d1847f62d6899f70be04ccb1234a260 files/digest-openssh-3.9_p1-r3 835
+SHA256 cff18a611c7cacebde002a7b0fea2f2e7e267566bcf456d4ed24da6693003848 files/digest-openssh-3.9_p1-r3 835
+size 835 files/digest-openssh-3.9_p1-r3 835
+MD5 0cb39cf20cd11613e7bf09a0ca6ce9ad files/digest-openssh-4.0_p1-r2 360
+RMD160 0d373ee40886b19e6e84741edcae738f72007c88 files/digest-openssh-4.0_p1-r2 360
+SHA256 1420fc2faae8e762407323d01496e4d6bd516904949c5b440437d36d3076a8b1 files/digest-openssh-4.0_p1-r2 360
+size 360 files/digest-openssh-4.0_p1-r2 360
+MD5 3d538f75b8b386529f10a907192ad1bc files/digest-openssh-4.1_p1-r1 360
+RMD160 fa8157b6e679723e64dc79387863ed6e39b55ba6 files/digest-openssh-4.1_p1-r1 360
+SHA256 bca8197243f56eb4b38578772ccdc7b9bdbcb03456f72b03c05f00bb074edda2 files/digest-openssh-4.1_p1-r1 360
+size 360 files/digest-openssh-4.1_p1-r1 360
+MD5 594aa58909853e6c3f0be598f8928ae5 files/digest-openssh-4.2_p1-r1 360
+RMD160 e3ff0fde2596b692959dcefb62650d60aa8266e6 files/digest-openssh-4.2_p1-r1 360
+SHA256 627d1524ba20e4714611168bb567b29afd621e7b1fe7c8b4f2f29ad73adef6dc files/digest-openssh-4.2_p1-r1 360
+size 360 files/digest-openssh-4.2_p1-r1 360
+MD5 deb86eca3c05f237264f0f36d6c02d13 files/digest-openssh-4.3_p1 457
+RMD160 e8308eb8ba3df5026bb25d83e2c48c2a20bd51f9 files/digest-openssh-4.3_p1 457
+SHA256 6fd2ab24c717be47b550a22bf49f92a5a52f3a2450bb15b7ed975c7586e4859d files/digest-openssh-4.3_p1 457
+size 457 files/digest-openssh-4.3_p1 457
+MD5 5d56892f6ebf47cdff443f1ee86e2b40 files/digest-openssh-4.3_p2-r1 535
+RMD160 860adbb73062e029b2488e0728a07510581deebd files/digest-openssh-4.3_p2-r1 535
+SHA256 84d687de4bd56fcc250c2c3708c87c03dfe8bb0c7269d7e2923170bc3b01c5ba files/digest-openssh-4.3_p2-r1 535
+size 535 files/digest-openssh-4.3_p2-r1 535
