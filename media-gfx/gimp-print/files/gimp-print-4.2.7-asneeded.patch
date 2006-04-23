@@ -1,0 +1,38 @@
+Index: gimp-print-4.2.7/src/cups/Makefile.am
+===================================================================
+--- gimp-print-4.2.7.orig/src/cups/Makefile.am
++++ gimp-print-4.2.7/src/cups/Makefile.am
+@@ -77,12 +77,12 @@ epson_SOURCES = epson.c
+ epson_LDADD = $(LIBPRINTUT) $(CUPS_LIBS)
+ 
+ genppd_SOURCES = genppd.c
+-genppd_LDADD = $(LIBPRINTUT) $(CUPS_LIBS) $(LIBGIMPPRINT_LIBS)
++genppd_LDADD = $(LIBGIMPPRINT_LIBS) $(LIBPRINTUT) $(CUPS_LIBS)
+ genppd_LDFLAGS= $(STATIC_LDOPTS)
+ genppd_DEPENDENCIES = $(LIBGIMPPRINT_LIBS)
+ 
+ rastertoprinter_SOURCES = rastertoprinter.c
+-rastertoprinter_LDADD = $(LIBPRINTUT) $(CUPS_LIBS) $(LIBGIMPPRINT_LIBS)
++rastertoprinter_LDADD = $(LIBGIMPPRINT_LIBS) $(LIBPRINTUT) $(CUPS_LIBS)
+ rastertoprinter_LDFLAGS= $(STATIC_LDOPTS)
+ rastertoprinter_DEPENDENCIES = $(LIBGIMPPRINT_LIBS)
+ 
+Index: gimp-print-4.2.7/src/cups/Makefile.in
+===================================================================
+--- gimp-print-4.2.7.orig/src/cups/Makefile.in
++++ gimp-print-4.2.7/src/cups/Makefile.in
+@@ -225,12 +225,12 @@ epson_SOURCES = epson.c
+ epson_LDADD = $(LIBPRINTUT) $(CUPS_LIBS)
+ 
+ genppd_SOURCES = genppd.c
+-genppd_LDADD = $(LIBPRINTUT) $(CUPS_LIBS) $(LIBGIMPPRINT_LIBS)
++genppd_LDADD = $(LIBGIMPPRINT_LIBS) $(LIBPRINTUT) $(CUPS_LIBS)
+ genppd_LDFLAGS = $(STATIC_LDOPTS)
+ genppd_DEPENDENCIES = $(LIBGIMPPRINT_LIBS)
+ 
+ rastertoprinter_SOURCES = rastertoprinter.c
+-rastertoprinter_LDADD = $(LIBPRINTUT) $(CUPS_LIBS) $(LIBGIMPPRINT_LIBS)
++rastertoprinter_LDADD = $(LIBGIMPPRINT_LIBS) $(LIBPRINTUT) $(CUPS_LIBS)
+ rastertoprinter_LDFLAGS = $(STATIC_LDOPTS)
+ rastertoprinter_DEPENDENCIES = $(LIBGIMPPRINT_LIBS)
+ 
