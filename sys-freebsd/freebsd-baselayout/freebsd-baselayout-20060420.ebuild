@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/freebsd-baselayout-20060420.ebuild,v 1.1 2006/04/20 08:13:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/freebsd-baselayout-20060420.ebuild,v 1.2 2006/04/23 07:19:38 flameeyes Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools
 
@@ -543,6 +543,10 @@ pkg_postinst() {
 			cp "${ROOT}/usr/share/baselayout/${x}" "${ROOT}/etc/${x}"
 		fi
 	done
+
+	if [[ ${CHOST} == ${CBUILD} && ${CHOST} == *-freebsd* ]]; then
+		pwdb_mkdb -d ${ROOT}/etc ${ROOT}/etc/master.passwd
+	fi
 
 	# Under what circumstances would mtab be a symlink?  It would be
 	# nice if there were an explanatory comment here
