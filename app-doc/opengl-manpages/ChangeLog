@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/opengl-manpages
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/opengl-manpages/ChangeLog,v 1.5 2006/04/22 12:32:48 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/opengl-manpages/ChangeLog,v 1.6 2006/04/23 10:38:55 gmsoft Exp $
+
+  23 Apr 2006; Guy Martin <gmsoft@gentoo.org>
+  opengl-manpages-20001215.ebuild:
+  Added ~hppa to changelog.
 
   22 Apr 2006; Stephen P. Becker <geoman@gentoo.org>
   opengl-manpages-20001215.ebuild:
