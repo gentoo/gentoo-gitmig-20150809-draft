@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.61 2006/03/09 19:56:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.62 2006/04/23 16:43:28 kumba Exp $
+
+  28 Apr 2006; Joshua Kinard <kumba@gentoo.org> tar-1.15.1-r1.ebuild:
+  Marked stable on mips.
 
   09 Mar 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   tar-1.15.1-r1.ebuild:

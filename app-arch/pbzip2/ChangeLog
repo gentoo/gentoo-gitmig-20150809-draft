@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.20 2006/03/27 23:48:11 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.21 2006/04/23 16:48:01 kumba Exp $
+
+  28 Apr 2006; Joshua Kinard <kumba@gentoo.org> pbzip2-0.9.5.ebuild:
+  Marked stable on mips.
 
   27 Mar 2006; Markus Ullmann <jokey@gentoo.org> pbzip2-0.9.5.ebuild:
   Stable on arm
