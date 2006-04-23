@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.14.0.ebuild,v 1.7 2006/04/07 19:53:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.14.0.ebuild,v 1.8 2006/04/23 16:40:24 allanonjl Exp $
 
 inherit distutils gnome2 python virtualx
 
@@ -30,7 +30,7 @@ RDEPEND="virtual/python
 	media-video/totem
 	!<dev-python/gnome-python-extras-2.13"
 
-RDEPEND="${RDEPEND}
+DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.7"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL MAINTAINERS NEWS README"
