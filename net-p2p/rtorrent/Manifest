@@ -1,28 +1,36 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dc3c6a205f3de05d73ff1c05c765af2e ChangeLog 6217
-RMD160 1952ad5362a56dacfb852ad126803b6dea3f8fec ChangeLog 6217
-SHA256 e919571282756cf7e6235610f67b9bd9318bb26a07ca16130f34b3d9b50e1293 ChangeLog 6217
-MD5 fb1882ab6d24a3f8d5e55dabf48f7df7 files/digest-rtorrent-0.4.3 66
-RMD160 9885f8e9e1d18356b7ea8c8950cf93725f6a35b2 files/digest-rtorrent-0.4.3 66
-SHA256 309f207dcb43828eaf6622af656211034dec192df1469748752df97632c61c37 files/digest-rtorrent-0.4.3 66
-MD5 c07b614eec18fca7a6886f27d4ad11e5 files/digest-rtorrent-0.5.0 244
-RMD160 891d6eae5e117ef74fa47f38ee00924650fc205d files/digest-rtorrent-0.5.0 244
-SHA256 2b71ca56eae2623a3fa3164d2db7d80efbb2954141e4d9d4f7e3b69db049e937 files/digest-rtorrent-0.5.0 244
-MD5 dc4336d6e768b550ef6da8f6c965d234 metadata.xml 374
-RMD160 3b4c8bbb3bc57b9be1c3f4b4cf16c3a0bd63a081 metadata.xml 374
-SHA256 acc036fafdbccd35e5f4099dacaa7f5d50bbce9b18402bd41ecf6447aeb2432e metadata.xml 374
+DIST rtorrent-0.4.3.tar.gz 233264 size 233264
+DIST rtorrent-0.5.0.tar.gz 401012 RMD160 4fd18470ccad49d48a676a0ebae8a621fa832531 SHA256 4621bac6301d03e067ae19074b7eecdaa25e37a3cbce1afb9eab5155685d6cc4 size 401012
+EBUILD rtorrent-0.4.3.ebuild 1141 RMD160 79c13f211e77660eb9714fe951e74bf44882a0f2 SHA1 1c48a625d88be79c49dbfae01adbc42a54c3c3b7 SHA256 c6f20319951295bdd2931f840756524bc2c5077ca928514d4b60f3fba801f402 size 1141
 MD5 e88dce9cd0bfee2fa55a528f836fa145 rtorrent-0.4.3.ebuild 1141
 RMD160 79c13f211e77660eb9714fe951e74bf44882a0f2 rtorrent-0.4.3.ebuild 1141
 SHA256 c6f20319951295bdd2931f840756524bc2c5077ca928514d4b60f3fba801f402 rtorrent-0.4.3.ebuild 1141
-MD5 676f0ffce34dea8480df626cecee4364 rtorrent-0.5.0.ebuild 1148
-RMD160 3abb368b6fcb3fb7c8757ddd164412b9a7c3123b rtorrent-0.5.0.ebuild 1148
-SHA256 e05ad24e1f19630cb3cab7bd6744bf0045c35e126d5a720699a0e99ae2d51eaf rtorrent-0.5.0.ebuild 1148
+EBUILD rtorrent-0.5.0.ebuild 1158 RMD160 87ee94b36ba251c98bdb618c126a5d9e6e53f32b SHA1 e396774f3bb7776edea572ddd9879d2eb7b9ad27 SHA256 1aa58e7895afea5f1528d73baecf67d90313c81efaddcebd12a49033dd855f2c size 1158
+MD5 55fef82df654c3bec74885bbf6f50239 rtorrent-0.5.0.ebuild 1158
+RMD160 87ee94b36ba251c98bdb618c126a5d9e6e53f32b rtorrent-0.5.0.ebuild 1158
+SHA256 1aa58e7895afea5f1528d73baecf67d90313c81efaddcebd12a49033dd855f2c rtorrent-0.5.0.ebuild 1158
+MISC ChangeLog 6319 RMD160 b77110dd12c300a6159f30040a4ecf2803339838 SHA1 04394df74005795987b602ce13fcf02511265825 SHA256 1b5b85e3f39689785cdd1a6a7dbe1f0174002d93b21ab6925ace2f6bda4d04bd size 6319
+MD5 3b126d4dd82e21d476881e352b750670 ChangeLog 6319
+RMD160 b77110dd12c300a6159f30040a4ecf2803339838 ChangeLog 6319
+SHA256 1b5b85e3f39689785cdd1a6a7dbe1f0174002d93b21ab6925ace2f6bda4d04bd ChangeLog 6319
+MISC metadata.xml 374 RMD160 3b4c8bbb3bc57b9be1c3f4b4cf16c3a0bd63a081 SHA1 6786d4fcefec4266965354cf474cf7c63367ae7e SHA256 acc036fafdbccd35e5f4099dacaa7f5d50bbce9b18402bd41ecf6447aeb2432e size 374
+MD5 dc4336d6e768b550ef6da8f6c965d234 metadata.xml 374
+RMD160 3b4c8bbb3bc57b9be1c3f4b4cf16c3a0bd63a081 metadata.xml 374
+SHA256 acc036fafdbccd35e5f4099dacaa7f5d50bbce9b18402bd41ecf6447aeb2432e metadata.xml 374
+MD5 fb1882ab6d24a3f8d5e55dabf48f7df7 files/digest-rtorrent-0.4.3 66
+RMD160 9885f8e9e1d18356b7ea8c8950cf93725f6a35b2 files/digest-rtorrent-0.4.3 66
+SHA256 309f207dcb43828eaf6622af656211034dec192df1469748752df97632c61c37 files/digest-rtorrent-0.4.3 66
+size 66 files/digest-rtorrent-0.4.3 66
+MD5 c07b614eec18fca7a6886f27d4ad11e5 files/digest-rtorrent-0.5.0 244
+RMD160 891d6eae5e117ef74fa47f38ee00924650fc205d files/digest-rtorrent-0.5.0 244
+SHA256 2b71ca56eae2623a3fa3164d2db7d80efbb2954141e4d9d4f7e3b69db049e937 files/digest-rtorrent-0.5.0 244
+size 244 files/digest-rtorrent-0.5.0 244
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFERwa2AiZjviIA2XgRAuJoAKDOfaxdfg9u+5ixtB3KeHr3sB5a5ACg5CiD
-fFBzwfvZDjeZBGDL07uUcZE=
-=ilBt
+iD8DBQFES0g7AiZjviIA2XgRAhHuAJ9QG5QQClDWLuFObfFqsk2fqoap8QCfQYxY
+gZsOZJARgAoAUHdES7/cKow=
+=W/hr
 -----END PGP SIGNATURE-----
