@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ngstar-2.1.8-r1.ebuild,v 1.1 2006/04/19 20:30:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ngstar-2.1.8-r1.ebuild,v 1.2 2006/04/23 02:37:22 tupone Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="NGStar is a clone of a HP48 game called dstar"
 HOMEPAGE="http://cycojesus.free.fr/faire/coder/jouer/ng-star/"
