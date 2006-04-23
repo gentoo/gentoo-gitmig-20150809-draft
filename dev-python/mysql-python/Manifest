@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1a30448caa8433dac4678357c783df03 ChangeLog 4026
+MD5 5a9382a43fb32d51824d9c32df2dcd30 ChangeLog 4141
 MD5 5615c89423881b929da50b6ead828cda files/1.2.0-newdecimal.patch 1021
 MD5 88531e3c04872ef98f13969b2ef06c4f files/digest-mysql-python-1.2.0 70
 MD5 88531e3c04872ef98f13969b2ef06c4f files/digest-mysql-python-1.2.0-r1 70
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 282b28fbe757399bb1dd654bafd00fe7 mysql-python-1.2.0-r1.ebuild 802
+MD5 4f0fadb8548a811acc44705d3893a07a mysql-python-1.2.0-r1.ebuild 807
 MD5 c0e4fad09c18c2eb14c442286ff0454e mysql-python-1.2.0.ebuild 701
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD58fx9ZFPrqoILX8RAjY/AJwLF3wYz4AM5QXk4ETFvnZK5gESoQCgmgwN
-v2Gw99OvPkKD4NS6MWxmZyI=
-=lT1X
------END PGP SIGNATURE-----
