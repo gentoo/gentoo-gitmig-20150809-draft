@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.69 2006/03/24 03:56:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.70 2006/04/23 09:25:44 flameeyes Exp $
+
+  23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> curl-7.15.3.ebuild:
+  Add ~x86-fbsd keyword.
 
   24 Mar 2006; Aron Griffis <agriffis@gentoo.org> curl-7.15.1-r1.ebuild:
   Mark 7.15.1-r1 stable on ia64. #125766

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.3.ebuild,v 1.1 2006/03/20 15:18:23 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.3.ebuild,v 1.2 2006/04/23 09:25:44 flameeyes Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -10,7 +10,7 @@ SRC_URI="http://curl.haxx.se/download/${P}.tar.bz2"
 
 LICENSE="MIT X11"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="ssl ipv6 ldap ares gnutls idn kerberos krb4 test"
 
 RDEPEND="gnutls? ( net-libs/gnutls )
