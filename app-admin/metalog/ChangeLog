@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.46 2006/04/19 03:10:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.47 2006/04/23 04:58:36 tcort Exp $
+
+  23 Apr 2006; Thomas Cort <tcort@gentoo.org> metalog-0.8_rc1-r2.ebuild:
+  Stable on alpha wrt Bug #130221.
 
   19 Apr 2006; Jason Wever <weeve@gentoo.org> metalog-0.8_rc1-r2.ebuild:
   Stable on SPARC wrt bug #130221.
