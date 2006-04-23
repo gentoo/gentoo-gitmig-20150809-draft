@@ -1,40 +1,57 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 374e3bf140c8c3240f4a496d272b98d2 ChangeLog 4282
-RMD160 d2f896109ab45fc023bd10a2a16c450ff885f8f1 ChangeLog 4282
-SHA256 6fb28946ab473b41240041f70cb7938c5c686c7750c2724e4a400a5090bc9d4b ChangeLog 4282
-MD5 99aa15246b1fb1211e3ced5c2249cdfd cervisia-3.4.1.ebuild 425
-RMD160 cc7517a75759ae1879fabf0e221c97037c8bc76f cervisia-3.4.1.ebuild 425
-SHA256 02ff7030c12ee6d254f0db46f497ffe11fb9dd14559686e2af2c49e3fbf52713 cervisia-3.4.1.ebuild 425
-MD5 caf88b1c5cce5ccbe24abd0852bc97ce cervisia-3.4.2.ebuild 433
-RMD160 ebb1f6fab6172080d78ff904e2ea58b36820cf78 cervisia-3.4.2.ebuild 433
-SHA256 0f5d8721fb787805bf23a85c3fda2310aec7fa2e5b3b265c7727cada7eb53ce1 cervisia-3.4.2.ebuild 433
-MD5 2372979e6f2e99d697d59c0175cda337 cervisia-3.4.3.ebuild 430
-RMD160 53902dbaecf4daedb5fd0a627374336dc84c86d2 cervisia-3.4.3.ebuild 430
-SHA256 91157fdeb6dbd032854e9071ee09974027b75141a8c7fdeaf14f4617adaee592 cervisia-3.4.3.ebuild 430
-MD5 d51a86ceb596010975b548f725d8caf3 cervisia-3.5.2.ebuild 425
-RMD160 2607a89ec1fbfb328fe0632b69f54bb2044cef21 cervisia-3.5.2.ebuild 425
-SHA256 1a3bfb6f57c50efaa35d03e913af269e786707304bec031735bf04df0e1a7bf2 cervisia-3.5.2.ebuild 425
-MD5 9b4e9e38740207531ab771519519d01e files/digest-cervisia-3.4.1 206
-RMD160 537c88444c961cfc4b7af18ca00a8be224f64cee files/digest-cervisia-3.4.1 206
-SHA256 39c922f0ac54c84622428b955b44427f3e093a3f6d089f601670375413cda7fc files/digest-cervisia-3.4.1 206
-MD5 0a38813829924b012d8b632f47abb45d files/digest-cervisia-3.4.2 280
-RMD160 595358b87b29a71b3a8461a6bcde784833edd1ad files/digest-cervisia-3.4.2 280
-SHA256 568edb58c6487c2343f90088a3a1f22bec8de3a242a5d269f77cd4f4d20e7f4d files/digest-cervisia-3.4.2 280
-MD5 c697e8b36b03bdccd95cf2d3980a0634 files/digest-cervisia-3.4.3 66
-RMD160 f98c638a74524f4ba73ec5e5b6937e006f0eac58 files/digest-cervisia-3.4.3 66
-SHA256 afdef23e83c0fedba0db5fbd5dc71a68a84f831545b9e4aa504279d91b2e4780 files/digest-cervisia-3.4.3 66
-MD5 735367f045761a378c59b0aedd04892c files/digest-cervisia-3.5.2 244
-RMD160 6b0561e97b2c584c31c601eabe995ca3348f8a85 files/digest-cervisia-3.5.2 244
-SHA256 85ed46a0b0c32506130eea2adbd51b3c866bbe3002ac4dcf21bbdb652ef26707 files/digest-cervisia-3.5.2 244
+DIST kdesdk-3.4.0-3.4.1.tar.xdelta 255144 size 255144
+DIST kdesdk-3.4.0.tar.bz2 4571452 size 4571452
+DIST kdesdk-3.4.1-3.4.2.tar.xdelta 191608 size 191608
+DIST kdesdk-3.4.1.tar.bz2 4589829 size 4589829
+DIST kdesdk-3.4.2.tar.bz2 4596440 size 4596440
+DIST kdesdk-3.4.3.tar.bz2 4584263 size 4584263
+DIST kdesdk-3.5.2.tar.bz2 4877103 RMD160 ac15ff6e6b10b19ce2197b9fd7848453acdfc1a5 SHA256 a6d4d8177fceb225de328a0f71852baa9a591754fb403678b6c3f1c1283a50fd size 4877103
+EBUILD cervisia-3.4.1.ebuild 466 RMD160 7259bc0865ba8358dfc2fc4c69d2372177774fc6 SHA1 6284dbad784074f0e8477b0ed4993e2c3160e043 SHA256 2641fe4bd160a550b4b418d367354ec1929a8be9c5711efdbdda730136527581 size 466
+MD5 b5906acf3b4cebf761073cca5d56a08f cervisia-3.4.1.ebuild 466
+RMD160 7259bc0865ba8358dfc2fc4c69d2372177774fc6 cervisia-3.4.1.ebuild 466
+SHA256 2641fe4bd160a550b4b418d367354ec1929a8be9c5711efdbdda730136527581 cervisia-3.4.1.ebuild 466
+EBUILD cervisia-3.4.2.ebuild 471 RMD160 e38ddcc9b4bb20dc6020421f63357f86b1272e85 SHA1 85457c8c8322a9823fd577f784b60f097f6bfc72 SHA256 4a949f18412c501548d9c56111d3f8c20f3bc3bde9abe1a4f2604c5a0bb4bb26 size 471
+MD5 ebfb49266911d1d51ddd54cb4e438abe cervisia-3.4.2.ebuild 471
+RMD160 e38ddcc9b4bb20dc6020421f63357f86b1272e85 cervisia-3.4.2.ebuild 471
+SHA256 4a949f18412c501548d9c56111d3f8c20f3bc3bde9abe1a4f2604c5a0bb4bb26 cervisia-3.4.2.ebuild 471
+EBUILD cervisia-3.4.3.ebuild 466 RMD160 325d3a0bebbaed8c7a1f9fff6b39b11f4c8d8d24 SHA1 4a9e85743ca40726bab195e865cade093e2848de SHA256 09c6ffc880bad853aa3995562dda2f1618274fb386d80b6a1248314a4ca2f389 size 466
+MD5 40e82ddd5adb3882ce676422fc6a1cbd cervisia-3.4.3.ebuild 466
+RMD160 325d3a0bebbaed8c7a1f9fff6b39b11f4c8d8d24 cervisia-3.4.3.ebuild 466
+SHA256 09c6ffc880bad853aa3995562dda2f1618274fb386d80b6a1248314a4ca2f389 cervisia-3.4.3.ebuild 466
+EBUILD cervisia-3.5.2.ebuild 463 RMD160 dcd5764e8a5a4d1a7637c8c6f0fd9d1a30bab9ec SHA1 c7b6437a13ea853d5bf94c9f5fe4f8b12a4d4f02 SHA256 500cce82a2deffaaa0311807a17b8aaf9fa55f1e0b691093740de5f4caa890a2 size 463
+MD5 f0915c02ff3d700c6841af29eb37fd9d cervisia-3.5.2.ebuild 463
+RMD160 dcd5764e8a5a4d1a7637c8c6f0fd9d1a30bab9ec cervisia-3.5.2.ebuild 463
+SHA256 500cce82a2deffaaa0311807a17b8aaf9fa55f1e0b691093740de5f4caa890a2 cervisia-3.5.2.ebuild 463
+MISC ChangeLog 4518 RMD160 3390bd5eccba6d5f78359d15fb37c400f898e852 SHA1 a1b44007378b146d30d827d67a29be971e965531 SHA256 5a08b846963b2df20473932ac633a91c3230be882b0e3147d89a1eda21bde810 size 4518
+MD5 fb5239a2ad520a38ed7f30ca9208ceb8 ChangeLog 4518
+RMD160 3390bd5eccba6d5f78359d15fb37c400f898e852 ChangeLog 4518
+SHA256 5a08b846963b2df20473932ac633a91c3230be882b0e3147d89a1eda21bde810 ChangeLog 4518
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a size 156
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 9b4e9e38740207531ab771519519d01e files/digest-cervisia-3.4.1 206
+RMD160 537c88444c961cfc4b7af18ca00a8be224f64cee files/digest-cervisia-3.4.1 206
+SHA256 39c922f0ac54c84622428b955b44427f3e093a3f6d089f601670375413cda7fc files/digest-cervisia-3.4.1 206
+size 206 files/digest-cervisia-3.4.1 206
+MD5 0a38813829924b012d8b632f47abb45d files/digest-cervisia-3.4.2 280
+RMD160 595358b87b29a71b3a8461a6bcde784833edd1ad files/digest-cervisia-3.4.2 280
+SHA256 568edb58c6487c2343f90088a3a1f22bec8de3a242a5d269f77cd4f4d20e7f4d files/digest-cervisia-3.4.2 280
+size 280 files/digest-cervisia-3.4.2 280
+MD5 c697e8b36b03bdccd95cf2d3980a0634 files/digest-cervisia-3.4.3 66
+RMD160 f98c638a74524f4ba73ec5e5b6937e006f0eac58 files/digest-cervisia-3.4.3 66
+SHA256 afdef23e83c0fedba0db5fbd5dc71a68a84f831545b9e4aa504279d91b2e4780 files/digest-cervisia-3.4.3 66
+size 66 files/digest-cervisia-3.4.3 66
+MD5 735367f045761a378c59b0aedd04892c files/digest-cervisia-3.5.2 244
+RMD160 6b0561e97b2c584c31c601eabe995ca3348f8a85 files/digest-cervisia-3.5.2 244
+SHA256 85ed46a0b0c32506130eea2adbd51b3c866bbe3002ac4dcf21bbdb652ef26707 files/digest-cervisia-3.5.2 244
+size 244 files/digest-cervisia-3.5.2 244
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFENGVPAiZjviIA2XgRAtgqAKDc9QV0o1GnU5PmhyIVqLslWVQXKwCdEHxI
-VYG7xt5XFE0iD+ZiKvnPglk=
-=wvH3
+iD8DBQFES1TWAiZjviIA2XgRAgYgAJ4mZiaCjd+I2InycMhJz2EFsK7JowCfS4cI
+QWQfpdM2L5BP4Ez9F5Fq0W0=
+=6a5d
 -----END PGP SIGNATURE-----

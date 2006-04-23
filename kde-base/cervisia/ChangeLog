@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.32 2006/04/06 00:49:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.33 2006/04/23 10:23:04 flameeyes Exp $
+
+  23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> cervisia-3.4.1.ebuild,
+  cervisia-3.4.2.ebuild, cervisia-3.4.3.ebuild, cervisia-3.5.2.ebuild:
+  Add HOMEPAGE to http://cervisia.kde.org. Thanks to timbrain@post.cz in bug
+  #130946.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -cervisia-3.5.0.ebuild,
   -cervisia-3.5.1.ebuild:
