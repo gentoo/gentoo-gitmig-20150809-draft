@@ -1,12 +1,12 @@
-Now create a database for Xoops to use (consult your MySQL manual if you don't
-know how.
-You will need to
+0. Now create a database for Xoops to use (consult your MySQL manual if you
+   don't know how).
 
+1. You will need to
  chmod 666 ${MY_INSTALLDIR}/mainfile.php
 
-Then browse to http://${VHOST_HOSTNAME}/${VHOST_APPDIR}
+2. Browse to http://${VHOST_HOSTNAME}/${VHOST_APPDIR}
 
-When you are done with the installer:
+3. When you are done with the installer:
 
  rm -rf ${MY_INSTALLDIR}/install
  chmod 444 ${MY_INSTALLDIR}/mainfile.php
