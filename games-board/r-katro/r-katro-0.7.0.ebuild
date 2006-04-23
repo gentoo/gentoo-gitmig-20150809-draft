@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/r-katro-0.7.0.ebuild,v 1.6 2005/07/07 04:36:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/r-katro-0.7.0.ebuild,v 1.7 2006/04/23 06:38:10 mr_bones_ Exp $
 
 inherit games
 
@@ -10,20 +10,20 @@ SRC_URI="http://f.rodrigo.free.fr/r-tech/cmp/addon-module/link/link.php?games/r-
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~ppc x86"
 IUSE="nls"
 
 DEPEND="=x11-libs/qt-3*
 	virtual/glut"
 
 src_compile() {
-	egamesconf `use_enable nls` || die
+	egamesconf $(use_enable nls) || die
 	mkdir src/moc src/helpviewer/moc
 	emake CXXFLAGS="${CXXFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS NEWS README TODO
 	prepgamesdirs
 }
