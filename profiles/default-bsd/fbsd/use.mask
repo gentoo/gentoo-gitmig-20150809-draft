@@ -1,12 +1,13 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.7 2006/04/23 00:22:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.8 2006/04/23 09:25:15 flameeyes Exp $
 
 # TCL/TK still to test
 tcltk
 
 # Someone who knows kerberos is needed to make sure that this works
 kerberos
+krb4
 
 # Firebird fails make for some semaphore/shm stuff
 firebird
