@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.29 2006/04/21 14:57:51 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.30 2006/04/23 00:48:24 tcort Exp $
+
+  23 Apr 2006; Thomas Cort <tcort@gentoo.org> bmpx-0.12.9-r2.ebuild:
+  Added ~alpha keyword.
 
 *bmpx-0.14.3 (21 Apr 2006)
 
