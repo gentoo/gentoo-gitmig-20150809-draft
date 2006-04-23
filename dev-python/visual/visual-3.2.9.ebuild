@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.9.ebuild,v 1.3 2006/04/20 20:22:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.9.ebuild,v 1.4 2006/04/23 03:23:11 tercel Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.vpython.org/"
 
 IUSE="doc examples numeric numarray"
 SLOT="0"
-KEYWORDS="~ia64 ~ppc ~x86"
+KEYWORDS="~ia64 ~ppc x86"
 LICENSE="visual"
 
 DEPEND=">=dev-lang/python-2.3
