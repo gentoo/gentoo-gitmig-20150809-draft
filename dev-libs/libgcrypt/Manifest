@@ -1,16 +1,80 @@
-MD5 8cb45872f04da32aae9fab30fe222e0a ChangeLog 10846
-MD5 9bf9811b5db655640e7f280bb9bab24c files/digest-libgcrypt-1.1.12 68
-MD5 9f546283fe69d56096f3707d52a4668a files/digest-libgcrypt-1.1.94 68
-MD5 16b1f5ae3cd2e7678379e1c6be616455 files/digest-libgcrypt-1.2.0 67
-MD5 e5b8ad811f58dac4f48b8bad3aea7298 files/digest-libgcrypt-1.2.1 140
-MD5 e5b8ad811f58dac4f48b8bad3aea7298 files/digest-libgcrypt-1.2.1-r1 140
-MD5 c1f32f04f74d72bb53ca2952c5bca11c files/digest-libgcrypt-1.2.2 140
-MD5 c1f32f04f74d72bb53ca2952c5bca11c files/digest-libgcrypt-1.2.2-r1 140
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST libgcrypt-1.1.12.tar.gz 741606 size 741606
+DIST libgcrypt-1.1.94.tar.gz 847472 size 847472
+DIST libgcrypt-1.2.0.tar.gz 949159 size 949159
+DIST libgcrypt-1.2.1-patches.tar.gz 2631 RMD160 314b601285d48bd57b89dca1e20779256c7ed3e4 SHA256 f1900ed55883dc8619fd4e5eabe16cb463873884683bbeb9c9a6d9dc53a18ed6 size 2631
+DIST libgcrypt-1.2.1.tar.gz 960872 size 960872
+DIST libgcrypt-1.2.2.tar.gz 959875 RMD160 381bc5f9be84f353d82b665e69d4d202f4552aae SHA256 d4423a582510a1e3f47af9995337b590b9c480248821116b5397bc0652aeb52e size 959875
+EBUILD libgcrypt-1.1.12.ebuild 1123 RMD160 158389dbe0d4ba6cacee0a380e35ebd8d3974420 SHA1 8dd76fdc09f4d64f53fade99e9974233719bb361 SHA256 287c7f31433e188227d679dbcf9981d43565644fd4e277bf1bdd5c0f05281147 size 1123
 MD5 e04ce4b3ccafdf1cdc3e2069a75ac11c libgcrypt-1.1.12.ebuild 1123
+RMD160 158389dbe0d4ba6cacee0a380e35ebd8d3974420 libgcrypt-1.1.12.ebuild 1123
+SHA256 287c7f31433e188227d679dbcf9981d43565644fd4e277bf1bdd5c0f05281147 libgcrypt-1.1.12.ebuild 1123
+EBUILD libgcrypt-1.1.94.ebuild 992 RMD160 517756389d8f727272ccbd484f431aecf6766f05 SHA1 e3429fc75e193beb556cb1842be86e69351a9641 SHA256 69cd00e4a732d73a1054cdf094e00e3ddd709001a59a9ac403b82f37c9f95522 size 992
 MD5 aac9d14d38568a9aab54928cc3e05a5c libgcrypt-1.1.94.ebuild 992
+RMD160 517756389d8f727272ccbd484f431aecf6766f05 libgcrypt-1.1.94.ebuild 992
+SHA256 69cd00e4a732d73a1054cdf094e00e3ddd709001a59a9ac403b82f37c9f95522 libgcrypt-1.1.94.ebuild 992
+EBUILD libgcrypt-1.2.0.ebuild 1050 RMD160 ce132a781bf291b9a933ea85de98b392a7966648 SHA1 8839b3775d94a21672d80742df8351e1f4439679 SHA256 2a1706c3d2c82cb72b93880be3cecee5b08a3505f578570f67d4b0462d0ce1e3 size 1050
 MD5 dd3b6ee3caf7dc34c0ffa5758993c72a libgcrypt-1.2.0.ebuild 1050
+RMD160 ce132a781bf291b9a933ea85de98b392a7966648 libgcrypt-1.2.0.ebuild 1050
+SHA256 2a1706c3d2c82cb72b93880be3cecee5b08a3505f578570f67d4b0462d0ce1e3 libgcrypt-1.2.0.ebuild 1050
+EBUILD libgcrypt-1.2.1-r1.ebuild 1261 RMD160 4b6ac19da34c8edafc9b140d8e59c2ed2134f6de SHA1 9dddae15e6631be1e75f4e2ad3370952ce3e373b SHA256 79ee4b73c669d2059d01b0ab5da58adcd4a4913a0126cb5152b2ac81c8863dfe size 1261
 MD5 61dd183bb681564d500b192058aae121 libgcrypt-1.2.1-r1.ebuild 1261
+RMD160 4b6ac19da34c8edafc9b140d8e59c2ed2134f6de libgcrypt-1.2.1-r1.ebuild 1261
+SHA256 79ee4b73c669d2059d01b0ab5da58adcd4a4913a0126cb5152b2ac81c8863dfe libgcrypt-1.2.1-r1.ebuild 1261
+EBUILD libgcrypt-1.2.1.ebuild 1324 RMD160 3433f338086db615381d8755f821bbc85f82e5ef SHA1 21e82f90183554187161fc01db365e254bab75dd SHA256 bd03cd69441703c5346881ba905b7b29de1628886fe082b9e6f4d36026997d94 size 1324
 MD5 c272e041d964940b95297d19725ceeac libgcrypt-1.2.1.ebuild 1324
-MD5 3caedb7c4e71c6c6449d2c675d5d27d3 libgcrypt-1.2.2-r1.ebuild 1322
+RMD160 3433f338086db615381d8755f821bbc85f82e5ef libgcrypt-1.2.1.ebuild 1324
+SHA256 bd03cd69441703c5346881ba905b7b29de1628886fe082b9e6f4d36026997d94 libgcrypt-1.2.1.ebuild 1324
+EBUILD libgcrypt-1.2.2-r1.ebuild 1358 RMD160 c4392199bc1fc61a71be25be3bb6f44026f524e1 SHA1 68a6ef7ed54ffec91cb373362b7fce1c1e4b4840 SHA256 eece03aed593a2c7814f09c6d88ab4c5a3d19451d7a27b27a3f2acb5168b6614 size 1358
+MD5 8e26a018945d8c7a0b4835a9523decd9 libgcrypt-1.2.2-r1.ebuild 1358
+RMD160 c4392199bc1fc61a71be25be3bb6f44026f524e1 libgcrypt-1.2.2-r1.ebuild 1358
+SHA256 eece03aed593a2c7814f09c6d88ab4c5a3d19451d7a27b27a3f2acb5168b6614 libgcrypt-1.2.2-r1.ebuild 1358
+EBUILD libgcrypt-1.2.2.ebuild 1303 RMD160 a8e457cae1e433b59bd3ff33a0bbb21937ed7c39 SHA1 d39cf20f98fd504e27f5dc1d8c92e03585b4a3a6 SHA256 79befac999c59e140b66c90f1a5a62d99f76abcb3b0e5dd370cee63dfbc5bc27 size 1303
 MD5 c9b90400e212909eb58e8d0960dfab9a libgcrypt-1.2.2.ebuild 1303
+RMD160 a8e457cae1e433b59bd3ff33a0bbb21937ed7c39 libgcrypt-1.2.2.ebuild 1303
+SHA256 79befac999c59e140b66c90f1a5a62d99f76abcb3b0e5dd370cee63dfbc5bc27 libgcrypt-1.2.2.ebuild 1303
+MISC ChangeLog 10973 RMD160 9c4376361b110d74f503d50c73c813b98f5468c5 SHA1 8f360515f1a9ca2963b2f4894bd3c5853fede4ab SHA256 a171df7adafd477a72b78947c2e004afa2563a23eaf2139c0b56884c91be9e6e size 10973
+MD5 0490e60be5570d144f2f04814b36a94f ChangeLog 10973
+RMD160 9c4376361b110d74f503d50c73c813b98f5468c5 ChangeLog 10973
+SHA256 a171df7adafd477a72b78947c2e004afa2563a23eaf2139c0b56884c91be9e6e ChangeLog 10973
+MISC metadata.xml 276 RMD160 99eb13264f3656e33d5cbc95ed9319ba50a1e58c SHA1 1f70a3ead5de1eb0d62a59c084b3a06147256e2f SHA256 abd952a77edadf769a821e7210a01f38850cada9a7677a1561f6aa0ce954f480 size 276
 MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
+RMD160 99eb13264f3656e33d5cbc95ed9319ba50a1e58c metadata.xml 276
+SHA256 abd952a77edadf769a821e7210a01f38850cada9a7677a1561f6aa0ce954f480 metadata.xml 276
+MD5 9bf9811b5db655640e7f280bb9bab24c files/digest-libgcrypt-1.1.12 68
+RMD160 51da08b52848a9938027aed92b0391aacbf905d3 files/digest-libgcrypt-1.1.12 68
+SHA256 f28acb097181dce377c3c6e24392ba44d0ea7c8348406022f265f01cfae49803 files/digest-libgcrypt-1.1.12 68
+size 68 files/digest-libgcrypt-1.1.12 68
+MD5 9f546283fe69d56096f3707d52a4668a files/digest-libgcrypt-1.1.94 68
+RMD160 e1170d27a47acb82625f8dac46a0a85dae32b6b9 files/digest-libgcrypt-1.1.94 68
+SHA256 12bca3aeb3823d37db00e3e1695b1328d9f7ab39bfda27b5147a50f38245eac4 files/digest-libgcrypt-1.1.94 68
+size 68 files/digest-libgcrypt-1.1.94 68
+MD5 16b1f5ae3cd2e7678379e1c6be616455 files/digest-libgcrypt-1.2.0 67
+RMD160 a94fdbe535ccaf418ddc10794463b5477ae2682c files/digest-libgcrypt-1.2.0 67
+SHA256 eaeb7a949ce25987224706285e911b0a67b36f9f7cf565d8e91b0ca53caeabd2 files/digest-libgcrypt-1.2.0 67
+size 67 files/digest-libgcrypt-1.2.0 67
+MD5 240c492885a4f1ace93d3ffb2db92e5f files/digest-libgcrypt-1.2.1 332
+RMD160 bd5821b6ab9542196bddd28a1a3a7e4a8dacde47 files/digest-libgcrypt-1.2.1 332
+SHA256 10993ecb90f2256a05384b1027c34f918d7a933da38fa831b368f71cd61ce260 files/digest-libgcrypt-1.2.1 332
+size 332 files/digest-libgcrypt-1.2.1 332
+MD5 240c492885a4f1ace93d3ffb2db92e5f files/digest-libgcrypt-1.2.1-r1 332
+RMD160 bd5821b6ab9542196bddd28a1a3a7e4a8dacde47 files/digest-libgcrypt-1.2.1-r1 332
+SHA256 10993ecb90f2256a05384b1027c34f918d7a933da38fa831b368f71cd61ce260 files/digest-libgcrypt-1.2.1-r1 332
+size 332 files/digest-libgcrypt-1.2.1-r1 332
+MD5 5c6f9c0fa97644d0a44525616636aaf8 files/digest-libgcrypt-1.2.2 512
+RMD160 6db51e0717fc46a0d6b5cf35c5d9e923c0a436b9 files/digest-libgcrypt-1.2.2 512
+SHA256 3139150bcef5be645ae1f55366a51d9d3bb92fbad21b018f747ddc71c7eef9ed files/digest-libgcrypt-1.2.2 512
+size 512 files/digest-libgcrypt-1.2.2 512
+MD5 5c6f9c0fa97644d0a44525616636aaf8 files/digest-libgcrypt-1.2.2-r1 512
+RMD160 6db51e0717fc46a0d6b5cf35c5d9e923c0a436b9 files/digest-libgcrypt-1.2.2-r1 512
+SHA256 3139150bcef5be645ae1f55366a51d9d3bb92fbad21b018f747ddc71c7eef9ed files/digest-libgcrypt-1.2.2-r1 512
+size 512 files/digest-libgcrypt-1.2.2-r1 512
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFES34dAiZjviIA2XgRAqHFAJ9IR1J11OTLp1lt/WUMsEBVnXHCcgCgq+b4
+7Bdga+0kQur2MJOsumQPHwQ=
+=O4t8
+-----END PGP SIGNATURE-----

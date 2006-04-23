@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.73 2006/02/21 21:21:02 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.74 2006/04/23 13:19:16 flameeyes Exp $
+
+  23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libgcrypt-1.2.2-r1.ebuild:
+  Run elibtoolize and add ~x86-fbsd keyword.
 
   21 Feb 2006; Marcelo Goes <vanquirius@gentoo.org>
   -files/libgcrypt-1.2.1-GNU-stack-fix.patch,
