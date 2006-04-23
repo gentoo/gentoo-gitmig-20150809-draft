@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups-pdf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.21 2006/01/14 23:16:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.22 2006/04/23 09:33:46 genstef Exp $
+
+*cups-pdf-2.2.0 (23 Apr 2006)
+
+  23 Apr 2006; Stefan Schweizer <genstef@gentoo.org> -files/README.gentoo,
+  -cups-pdf-1.7.3.ebuild, -cups-pdf-2.0.3.ebuild, +cups-pdf-2.2.0.ebuild:
+  Version bump thanks to Alexandru Toma <flash3001@yahoo.com> and Matteo
+  Spreafico <matteo@fsfe.org> in bug 129563
 
 *cups-pdf-2.0.3 (14 Jan 2006)
 
