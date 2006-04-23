@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.0.16.ebuild,v 1.2 2006/01/04 03:45:36 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.0.16.ebuild,v 1.3 2006/04/23 15:31:36 exg Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,6 +22,11 @@ RDEPEND="!static? (
 			>=dev-libs/openssl-0.9.6
 			dev-libs/libevent
 		)"
+
+pkg_setup() {
+	enewgroup tor
+	enewuser tor -1 -1 /var/lib/tor tor
+}
 
 src_unpack() {
 	unpack ${A}
@@ -45,8 +50,6 @@ src_install() {
 		doc/{CLIENTS,FAQ,HACKING,TODO} \
 		doc/{control-spec.txt,rend-spec.txt,tor-doc.css,tor-doc.html,tor-spec.txt}
 
-	enewgroup tor
-	enewuser tor -1 -1 /var/lib/tor tor
 	dodir /var/lib/tor
 	dodir /var/log/tor
 	fperms 750 /var/lib/tor /var/log/tor

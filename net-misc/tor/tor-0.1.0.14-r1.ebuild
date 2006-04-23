@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.0.14-r1.ebuild,v 1.1 2005/09/11 23:14:16 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.0.14-r1.ebuild,v 1.2 2006/04/23 15:31:36 exg Exp $
 
 inherit eutils
 
@@ -17,6 +17,11 @@ DEPEND="dev-libs/openssl
 	dev-libs/libevent"
 RDEPEND="net-proxy/tsocks"
 
+pkg_setup() {
+	enewgroup tor
+	enewuser tor -1 -1 /var/lib/tor tor
+}
+
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/torrc.sample-0.1.0.14.patch
@@ -30,8 +35,6 @@ src_install() {
 		doc/{CLIENTS,FAQ,HACKING,TODO} \
 		doc/{control-spec.txt,rend-spec.txt,tor-doc.css,tor-doc.html,tor-spec.txt}
 
-	enewgroup tor
-	enewuser tor -1 -1 /var/lib/tor tor
 	dodir /var/lib/tor
 	dodir /var/log/tor
 	fperms 750 /var/lib/tor /var/log/tor
