@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.12 2006/04/03 16:34:14 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.13 2006/04/23 04:45:34 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -10,23 +10,21 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE="X"
 
-RDEPEND="virtual/libc
-	sys-libs/ncurses
+RDEPEND="sys-libs/ncurses
 	X? ( || ( x11-libs/libXaw virtual/x11 ) )"
 DEPEND="${RDEPEND}
 	>=sys-devel/bison-1.34
-	>=sys-devel/flex-2.5
-	>=sys-apps/sed-4"
+	>=sys-devel/flex-2.5"
 
 src_unpack() {
 	local f
 
 	unpack ${A}
-	cd ${S}
-	for f in `grep -Rl -- -ltermcap *` ; do
+	cd "${S}"
+	for f in $(grep -Rl -- -ltermcap *) ; do
 		einfo "Fixing ${f}"
 		sed -i \
 			-e 's:-ltermcap:-lcurses:' ${f} \
