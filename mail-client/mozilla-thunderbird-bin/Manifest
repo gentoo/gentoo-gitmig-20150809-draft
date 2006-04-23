@@ -31,9 +31,9 @@ SHA256 c65d03747f8f581d741b238461ae03cd1375d25175feaf8258aedf4ad6829866 mozilla-
 MD5 cfb9a7f5661e2ec9f0eb28f5f0c5f8c4 mozilla-thunderbird-bin-1.0.7.ebuild 2031
 RMD160 1dcbb1948dc04ab539f3c8ad8ad7bd9fe57499d8 mozilla-thunderbird-bin-1.0.7.ebuild 2031
 SHA256 1d92251fa6d7068327f86f17e15cc8465511ce3051b6191e9ca2fde90f4a800d mozilla-thunderbird-bin-1.0.7.ebuild 2031
-MD5 25c76720a978f9877d059917435f0b8f mozilla-thunderbird-bin-1.0.8.ebuild 2033
-RMD160 ef681558dbf9a193379ba0929ffa278ef2bba8ee mozilla-thunderbird-bin-1.0.8.ebuild 2033
-SHA256 78ad94da18c9f4c9b3b61de199d3454be5a6222b277d08738d49bfbf64f7782f mozilla-thunderbird-bin-1.0.8.ebuild 2033
+MD5 5c9e50f4a2ce28e25b754a136aebc966 mozilla-thunderbird-bin-1.0.8.ebuild 2035
+RMD160 cc39f0ac571f0082b533734c6c5160a6cb6a9808 mozilla-thunderbird-bin-1.0.8.ebuild 2035
+SHA256 b13013feac2167e9934e37914181a6073a809520461e17cab8f2a39cf69b469c mozilla-thunderbird-bin-1.0.8.ebuild 2035
 MD5 7aab17a6843acd0d45084cd4c61050c4 mozilla-thunderbird-bin-1.5.0.2.ebuild 2108
 RMD160 2479b7ced831d7c5fa34546a2df314ce4cad0236 mozilla-thunderbird-bin-1.5.0.2.ebuild 2108
 SHA256 e72ad8d5a95e564ff55f2666588c8fcafe3885679d804bc5e47941e9d6ae4bae mozilla-thunderbird-bin-1.5.0.2.ebuild 2108
