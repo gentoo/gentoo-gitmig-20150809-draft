@@ -1,0 +1,20 @@
+--- ltmain.sh
++++ ltmain.sh
+@@ -3532,7 +3532,7 @@
+ 	  hardcode_libdirs=
+ 	  dep_rpath=
+ 	  rpath="$finalize_rpath"
+-	  test "$mode" != relink && test "$fast_install" = no && rpath="$compile_rpath$rpath"
++	  test "$mode" != relink && rpath="$compile_rpath$rpath"
+ 	  for libdir in $rpath; do
+ 	    if test -n "$hardcode_libdir_flag_spec"; then
+ 	      if test -n "$hardcode_libdir_separator"; then
+@@ -5241,7 +5241,7 @@
+ 
+ # Directory that this library needs to be installed in:
+ libdir='$install_libdir'"
+-	  if test "$installed" = no && test "$need_relink" = yes && test "$fast_install" = no; then
++	  if test "$installed" = no && test "$need_relink" = yes; then
+ 	    $echo >> $output "\
+ relink_command=\"$relink_command\""
+ 	  fi

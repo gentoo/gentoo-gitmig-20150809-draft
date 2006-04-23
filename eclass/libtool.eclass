@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.68 2006/04/08 00:46:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.69 2006/04/23 16:27:19 flameeyes Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -127,7 +127,7 @@ elibtoolize() {
 	local do_uclibc="yes"
 	local deptoremove=
 	local my_dirlist=
-	local elt_patches="portage relink max_cmd_len sed test tmp"
+	local elt_patches="portage relink max_cmd_len sed test tmp kde-fastinstall"
 	local start_dir=${PWD}
 
 	my_dirlist=$(ELT_find_ltmain_sh)
@@ -334,6 +334,11 @@ elibtoolize() {
 					"darwin-"*)
 						useq ppc-macos && \
 							ewarn "  Darwin patch set '${y}' failed to apply!"
+						;;
+					"kde-fastinstall")
+						if [[ -n $(grep 'test "$mode" != relink && test "$fast_install" = no' ${x}/ltmain.sh) ]]; then
+							ewarn "Patch ${y} failed to apply. If you experience build failures, please report this."
+						fi
 						;;
 				esac
 			fi
