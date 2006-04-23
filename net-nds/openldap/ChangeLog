@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.168 2006/04/23 11:07:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.169 2006/04/23 17:59:02 dertobi123 Exp $
+
+  23 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org> ChangeLog:
+  Added to ~ppc, bug #130975
 
   23 Apr 2006; Markus Ullmann <jokey@gentoo.org> -openldap-2.3.18.ebuild,
   -openldap-2.3.19.ebuild, -openldap-2.3.20.ebuild:
