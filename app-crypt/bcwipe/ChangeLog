@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/bcwipe
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.16 2006/04/19 03:55:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.17 2006/04/23 06:05:15 dragonheart Exp $
+
+*bcwipe-1.6_p1 (23 Apr 2006)
+
+  23 Apr 2006; Daniel Black <dragonheart@gentoo.org> -bcwipe-1.3_p1.ebuild,
+  -bcwipe-1.5_p2.ebuild, bcwipe-1.5_p3.ebuild, +bcwipe-1.6_p1.ebuild:
+  version bump. fix typo in 1.5_p3. remove old versions
 
   19 Apr 2006; Jason Wever <weeve@gentoo.org> bcwipe-1.5_p3.ebuild:
   Stable on SPARC.

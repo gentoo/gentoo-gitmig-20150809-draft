@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/bcwipe-1.5_p3.ebuild,v 1.6 2006/04/23 06:05:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/bcwipe-1.6_p1.ebuild,v 1.1 2006/04/23 06:05:15 dragonheart Exp $
 
 inherit toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.jetico.com/linux/BCWipe-${PV/_p/-}.tar.gz
 LICENSE="bestcrypt"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="virtual/libc"
 RDEPEND=""
@@ -31,7 +31,7 @@ src_test() {
 
 
 src_install() {
-	dobin bcwipe || die
+	dobin bcwipe
 	doman bcwipe.1
 	cd ../bcwipe-help
 	dodir /usr/share/doc/${PF}
