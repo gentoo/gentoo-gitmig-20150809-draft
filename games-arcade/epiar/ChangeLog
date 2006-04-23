@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/epiar
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/ChangeLog,v 1.8 2006/01/29 00:00:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/ChangeLog,v 1.9 2006/04/23 20:36:44 tupone Exp $
+
+  23 Apr 2006; <Tupone@gentoo.org> +files/epiar-0.5-gcc41.patch,
+  epiar-0.5.ebuild:
+  Fix for gcc-4.1
 
   28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org> epiar-0.5.ebuild:
   Add modular X dependencies.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/epiar-0.5.ebuild,v 1.9 2006/01/29 00:00:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/epiar-0.5.ebuild,v 1.10 2006/04/23 20:36:44 tupone Exp $
 
 inherit flag-o-matic eutils games
 
@@ -29,7 +29,8 @@ src_unpack() {
 		-e "/^CFLAGS/s:-pg -g:${CFLAGS}:" \
 		Makefile.linux \
 		|| die "sed failed"
-	epatch "${FILESDIR}"/${PV}-gentoo-paths.patch
+	epatch "${FILESDIR}"/${PV}-gentoo-paths.patch \
+		"${FILESDIR}/${P}"-gcc41.patch
 	sed -i \
 		-e "s:GENTOO_DATAPATH:${GAMES_DATADIR}/${PN}/:" \
 		src/system/path.c \
