@@ -1,0 +1,19 @@
+--- src/CFileData.h.old	2006-04-23 12:51:10.000000000 +0200
++++ src/CFileData.h	2006-04-23 12:52:18.000000000 +0200
+@@ -30,5 +30,5 @@
+ 	FileData();
+ 	
+ 	void swapEndians();
+-	void FileData::set(char *filename, Uint32 fSize, Uint32 cSize, Uint32 location);
++	void set(char *filename, Uint32 fSize, Uint32 cSize, Uint32 location);
+ };
+--- src/CKeyboard.h.old	2006-04-23 12:51:20.000000000 +0200
++++ src/CKeyboard.h	2006-04-23 12:52:37.000000000 +0200
+@@ -8,6 +8,6 @@
+ 	
+ 		Keyboard();
+ 		void setDefaultKeys();
+-		static char *Keyboard::translateKey(int value);
++		static char *translateKey(int value);
+ 
+ };

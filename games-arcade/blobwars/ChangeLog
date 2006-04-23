@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/blobwars
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.24 2005/10/30 02:11:15 weeve Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.25 2006/04/23 11:22:28 tupone Exp $
+
+  23 Apr 2006; <Tupone@gentoo.org> +files/blobwars-1.04-gcc41.patch,
+  blobwars-1.04.ebuild:
+  Fix for gcc-4.1, bug #126223 by Davd Pyke, patch from TGL
 
   30 Oct 2005; Jason Wever <weeve@gentoo.org> blobwars-1.04.ebuild:
   Added ~sparc keyword.

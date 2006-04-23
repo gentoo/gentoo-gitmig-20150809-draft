@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.04.ebuild,v 1.6 2005/10/30 02:11:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.04.ebuild,v 1.7 2006/04/23 11:22:28 tupone Exp $
 
 inherit eutils games
 
@@ -22,7 +22,8 @@ DEPEND=">=media-libs/libsdl-1.2.5
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-be_pak.diff
+	epatch "${FILESDIR}"/${PV}-be_pak.diff \
+		"${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_compile() {
