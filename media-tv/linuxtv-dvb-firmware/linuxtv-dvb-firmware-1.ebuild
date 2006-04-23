@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-1.ebuild,v 1.6 2006/03/26 16:23:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-1.ebuild,v 1.7 2006/04/23 19:49:16 zzam Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
@@ -62,7 +62,6 @@ FW_NAMES=(
 	"ttusb-dec"
 	"ttusb-dec"
 	"ttusb-dec"
-	"nxt2002"
 	"nxt200x"
 )
 
@@ -74,7 +73,6 @@ FW_GET_PARAMETER=(
 	"dec2000t"
 	"dec2540t"
 	"dec3000s"
-	"nxt2002"
 	"nxt2004"
 )
 
@@ -86,7 +84,6 @@ FW_FILES=(
 	"dvb-ttusb-dec-2000t.fw"
 	"dvb-ttusb-dec-2540t.fw"
 	"dvb-ttusb-dec-3000s.fw"
-	"dvb-fe-nxt2002.fw"
 	"dvb-fe-nxt2004.fw"
 )
 
@@ -98,7 +95,6 @@ FW_URLS=(
 	"http://hauppauge.lightpath.net/de/dec217g.exe"
 	"http://hauppauge.lightpath.net/de/dec217g.exe"
 	"http://hauppauge.lightpath.net/de/dec217g.exe"
-	"http://www.bbti.us/download/windows/Broadband4PC_4_2_11.zip"
 	"http://www.aver.com/support/Drivers/AVerTVHD_MCE_A180_Drv_v1.2.2.16.zip"
 )
 
@@ -128,6 +124,7 @@ for ((CARD=0; CARD < ${#FW_NAMES[*]}; CARD++)) do
 	fi
 	SRC_URI="${SRC_URI} dvb_cards_${FW_NAMES[CARD]}? ( ${URL} )"
 
+	IUSE="${IUSE} dvb_cards_${FW_NAMES[CARD]}"
 	NEGATIVE_USE_FLAGS="${NEGATIVE_USE_FLAGS} !dvb_cards_${FW_NAMES[CARD]}? ( "
 	NUMBER_OF_USE_FLAGS=$((NUMBER_OF_USE_FLAGS+1))
 	ALL_URLS="${ALL_URLS} ${URL}"
