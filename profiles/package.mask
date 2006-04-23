@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5265 2006/04/23 17:19:23 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5266 2006/04/23 19:09:48 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -27,7 +27,7 @@
 # For more information, please see bug 130980
 net-analyzer/acid
 
-# Stefan Schweizer <genstef@gentoo.org> (08 Jul 2005)
+# Stefan Schweizer <genstef@gentoo.org> (23 Apr 2005)
 # Please use app-crypt/gnupg-1.9.* now
 app-crypt/gpg-agent
 
