@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.8 2006/04/23 09:25:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.9 2006/04/23 23:18:25 flameeyes Exp $
 
 # TCL/TK still to test
 tcltk
@@ -14,6 +14,9 @@ firebird
 
 # Apache defaults to Apache 1.x, mask it for the time
 apache
+
+# Unlikely that we'll ever get xmms working
+xmms
 
 # PIE and SSP doesn't work on FreeBSD, so just mask the two flags, as the eclass drops them entirely
 nopie
