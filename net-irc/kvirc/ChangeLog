@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.32 2006/02/09 02:17:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.33 2006/04/23 20:43:44 jokey Exp $
+
+*kvirc-9999 (23 Apr 2006)
+
+  23 Apr 2006; Markus Ullmann <jokey@gentoo.org> +kvirc-9999.ebuild:
+  Adding cvs ebuild
 
   09 Feb 2006; Mark Loeser <halcy0n@gentoo.org> kvirc-3.2.0.ebuild:
   Add some extra quoting
