@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813-r3.ebuild,v 1.1 2005/11/28 22:07:45 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813-r3.ebuild,v 1.2 2006/04/23 03:14:58 tcort Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://boinc.ssl.berkeley.edu/source/nightly/${MY_PN}-${MY_PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="server X"
 
 RDEPEND="sys-libs/zlib

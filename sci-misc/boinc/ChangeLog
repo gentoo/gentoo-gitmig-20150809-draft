@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.20 2006/04/14 19:14:47 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.21 2006/04/23 03:14:58 tcort Exp $
+
+  23 Apr 2006; Thomas Cort <tcort@gentoo.org> boinc-4.72.20050813-r3.ebuild:
+  Added ~alpha keyword wrt Bug #103250.
 
   14 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org>
   +files/boinc-5.2.14-gcc-4.1.patch, boinc-5.2.14.ebuild:
