@@ -12,7 +12,7 @@
 -	# note: on a DEC Alpha using OSF1 remove the -ldl.
 +	ifeq ($(MODBC_DRIVER),MODBC_UNIX)
 +		# for unixODBC
-+		MLLIBS=-lodbc -lpthread -lltdl -ldl
++		MLLIBS=-L/usr/lib -lodbc -lpthread -lltdl -ldl
 +	else
 +		# for iODBC
 +		ODBC_LIBS=`iodbc-config --libs`

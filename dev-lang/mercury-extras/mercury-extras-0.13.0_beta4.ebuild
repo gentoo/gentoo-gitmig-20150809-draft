@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.13.0_beta4.ebuild,v 1.1 2006/04/22 21:51:37 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.13.0_beta4.ebuild,v 1.2 2006/04/23 03:44:04 keri Exp $
 
 inherit eutils versionator
 
@@ -33,6 +33,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-concurrency.patch
+	epatch "${FILESDIR}"/${P/beta4/beta}-dynamic_linking.patch
 	epatch "${FILESDIR}"/${P/beta4/beta}-lex.patch
 	epatch "${FILESDIR}"/${P/beta4/beta}-mercury_glut.patch
 	epatch "${FILESDIR}"/${P/beta4/beta}-mercury_tcltk.patch
