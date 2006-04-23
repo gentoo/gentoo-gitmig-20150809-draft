@@ -1,0 +1,12 @@
+diff -ur gnupg-1.4.3.orig/g10/passphrase.c gnupg-1.4.3/g10/passphrase.c
+--- gnupg-1.4.3.orig/g10/passphrase.c	2006-01-26 16:31:03.000000000 +0100
++++ gnupg-1.4.3/g10/passphrase.c	2006-04-09 14:18:20.000000000 +0200
+@@ -1036,7 +1036,7 @@
+ 	    if( create && !pass ) {
+ 		randomize_buffer(s2k->salt, 8, 1);
+ 		if( s2k->mode == 3 )
+-		    s2k->count = 96; /* 65536 iterations */
++		    s2k->count = 208; /* 8388608 iterations */
+ 	    }
+ 
+ 	    if( s2k->mode == 3 ) {

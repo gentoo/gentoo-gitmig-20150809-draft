@@ -1,6 +1,17 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.179 2006/04/02 14:13:40 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.180 2006/04/23 05:31:51 dragonheart Exp $
+
+*gnupg-1.4.3 (23 Apr 2006)
+
+  23 Apr 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/gnupg-1.4.3-badruman.patch, +files/gnupg-1.4.3-jari.patch,
+  +files/gnupg-1.4.3-keyserver.patch, +files/gnupg-1.4.3-selftest.patch,
+  +files/gnupg-1.4-emptytrustpackets.patch, gnupg-1.4.2.1.ebuild,
+  gnupg-1.4.2.2.ebuild, +gnupg-1.4.3.ebuild:
+  added patch to protect against empty trust packets thanks Tavis Ormandy bug
+  #129218. Version bump to 1.4.3 as per bug #128991 thanks Michael Roth and
+  Rajiv Aaron Manglani
 
   02 Apr 2006; Marcelo Goes <vanquirius@gentoo.org>
   +files/gnupg-1.4.2.2-test.patch, gnupg-1.4.2.2.ebuild:

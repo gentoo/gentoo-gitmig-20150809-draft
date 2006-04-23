@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2.2.ebuild,v 1.13 2006/04/02 14:13:41 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2.2.ebuild,v 1.14 2006/04/23 05:31:51 dragonheart Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -81,6 +81,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.4.2-keyserver.patch
 
 	epatch "${FILESDIR}"/${PN}-1.4.2-mpicoder.patch
+
+	#  fix segfault of empty segfault packages - bug 129218
+	epatch "${FILESDIR}"/${PN}-1.4-emptytrustpackets.patch
 
 	# Fix PIC definitions
 	sed -i -e 's:PIC:__PIC__:' mpi/i386/mpih-{add,sub}1.S intl/relocatable.c

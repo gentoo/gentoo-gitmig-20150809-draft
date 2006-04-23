@@ -1,0 +1,14 @@
+diff -ur gnupg-1.4.3.orig/g10/keyserver.c gnupg-1.4.3/g10/keyserver.c
+--- gnupg-1.4.3.orig/g10/keyserver.c	2006-03-21 13:29:47.000000000 +0100
++++ gnupg-1.4.3/g10/keyserver.c	2006-04-09 14:50:02.000000000 +0200
+@@ -934,7 +934,9 @@
+ static const char *
+ keyserver_typemap(const char *type)
+ {
+-  if(strcmp(type,"ldaps")==0)
++  if(strcmp(type,"ldap")==0)
++    return "ldap";
++  else if(strcmp(type,"ldaps")==0)
+     return "ldap";
+   else
+     return type;

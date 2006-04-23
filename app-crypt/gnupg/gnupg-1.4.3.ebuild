@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2.1.ebuild,v 1.13 2006/04/23 05:31:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.3.ebuild,v 1.1 2006/04/23 05:31:51 dragonheart Exp $
 
 inherit eutils flag-o-matic linux-info
 
 ECCVER=0.1.6
-ECCVER_GNUPG=1.4.0
+ECCVER_GNUPG=1.4.3
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnupg/gnupg/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 mips ppc ppc-macos ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="bzip2 caps curl ecc idea ldap nls readline selinux smartcard static usb zlib X"
 
 COMMON_DEPEND="
@@ -24,7 +24,6 @@ COMMON_DEPEND="
 	bzip2? ( app-arch/bzip2 )
 	zlib? ( sys-libs/zlib )
 	curl? ( net-misc/curl )
-	virtual/libc
 	virtual/mta
 	readline? ( sys-libs/readline )
 	smartcard? ( dev-libs/libusb )
@@ -52,7 +51,7 @@ src_unpack() {
 	unpack ${A}
 
 	# Jari's patch to boost iterated key setup by factor of 128
-	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-1.4.2-jari.patch
+	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-1.4.3-jari.patch
 
 	if use idea; then
 		ewarn "Please read http://www.gnupg.org/why-not-idea.html"
@@ -61,29 +60,20 @@ src_unpack() {
 	fi
 
 	if use ecc; then
-		# this trickery is because the only reject in the 1.4.0 patch is the
-		# version number!
-		local eccpatch="${WORKDIR}"/${PN}-${ECCVER_GNUPG}-ecc${ECCVER}.diff
-		if [ "${ECCVER_GNUPG}" != "${PV}" ]; then
-			einfo "Tweaking PV in ECC patch"
-			sed -i "s/ VERSION='${ECCVER_GNUPG}/ VERSION='${PV}/g" $eccpatch
-		fi
-		EPATCH_OPTS="-p1 -d ${S}" epatch $eccpatch
+		EPATCH_OPTS="-p1 -d ${S}" epatch ${PN}-${ECCVER_GNUPG}-ecc${ECCVER}.diff
 	fi
 
 	# maketest fix
-	epatch "${FILESDIR}"/${PN}-1.4.2.1-selftest.patch
+	epatch "${FILESDIR}"/${PN}-1.4.3-selftest.patch
 
 	# install RU man page in right location
-	epatch "${FILESDIR}"/${PN}-1.4.2.1-badruman.patch
+	epatch "${FILESDIR}"/${PN}-1.4.3-badruman.patch
 
 	cd "${S}"
 	# keyserver fix
-	epatch "${FILESDIR}"/${PN}-1.4.2-keyserver.patch
+	epatch "${FILESDIR}"/${PN}-1.4.3-keyserver.patch
 
-	epatch "${FILESDIR}"/${PN}-1.4.2-mpicoder.patch
-
-#  fix segfault of empty segfault packages - bug 129218
+	#  fix segfault of empty segfault packages - bug 129218
 	epatch "${FILESDIR}"/${PN}-1.4-emptytrustpackets.patch
 
 	# Fix PIC definitions
@@ -102,14 +92,7 @@ src_compile() {
 	# 'USE=static' support was requested in #29299
 	use static &&append-ldflags -static
 
-	# Still needed?
-	# Bug #6387, --enable-m-guard causes bus error on sparcs
-	use sparc || myconf="${myconf} --enable-m-guard"
-
 	append-ldflags $(bindnow-flags)
-
-	# configure doesn't trean --disable-asm correctly
-	use x86 && myconf="${myconf} --enable-asm"
 
 	# fix compile problem on ppc64
 	use ppc64 && myconf="${myconf} --disable-asm"
@@ -132,7 +115,6 @@ src_compile() {
 		$(use_enable X photo-viewers) \
 		--enable-static-rnd=linux \
 		--libexecdir=/usr/libexec \
-		--enable-sha512 \
 		--enable-noexecstack \
 		${myconf} || die
 	# this is because it will run some tests directly
@@ -142,7 +124,7 @@ src_compile() {
 
 src_install() {
 	gnupg_fixcheckperms
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
