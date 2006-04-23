@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha7.ebuild,v 1.7 2006/02/11 22:01:23 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha7.ebuild,v 1.8 2006/04/23 22:08:00 morfic Exp $
 
 inherit eutils toolchain-funcs
 
@@ -51,12 +51,13 @@ src_unpack() {
 	fi
 
 	unpack ${A} && cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	epatch ${FILESDIR}/${P}-gentoo.security.patch
-	epatch ${FILESDIR}/${P}-imake-tmpdir.patch
-	epatch ${FILESDIR}/x86.patch
-	epatch "${FILESDIR}/${P}"-darwin.patch
-	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
+	epatch "${FILESDIR}/${P}-gentoo.diff"
+	epatch "${FILESDIR}/${P}-gentoo.security.patch"
+	epatch "${FILESDIR}/${P}-imake-tmpdir.patch"
+	epatch "${FILESDIR}/x86.patch"
+	epatch "${FILESDIR}/${P}-darwin.patch"
+	epatch "${FILESDIR}/vncserver-1.3.patch"
+	use amd64 && epatch "${FILESDIR}/${P}-amd64.patch"
 }
 
 src_compile() {

@@ -1,0 +1,31 @@
+--- vncserver	2006-04-01 19:31:45.000000000 +0200
++++ vncserver	2006-04-01 19:36:09.000000000 +0200
+@@ -36,14 +36,26 @@
+ $geometry = "1024x768";
+ $depth = 24;
+ $desktopName = "X";
+-$vncClasses = "/usr/local/vnc/classes";
++$vncClasses = "/usr/share/tightvnc/classes";
+ $vncUserDir = "$ENV{HOME}/.vnc";
+-$fontPath = "unix/:7100";
++$fontPath = "unix/:-1";
+ $authType = "-rfbauth $vncUserDir/passwd";
+ 
+ # Here is another example of setting the font path:
+ # $fontPath = "/usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
+ 
++# This Gentoo extension here grabs the font path configuration from x.org
++# See also http://bugs.gentoo.org/127001
++if (-r "/etc/X11/xorg.conf") {
++  open XCONF, "/etc/X11/xorg.conf" or die "error opening xorg.conf";
++  @fontPath=();
++  while (<XCONF>) {
++    push @fontPath, /^\s+FontPath\s+"([^"]+)"/;
++  }
++  $fontPath = join (",", grep { ! /TTF/ } @fontPath);
++  close XCONF;
++}
++
+ # X colors database path is optional, uncomment and edit to use:
+ # $colorPath = "/usr/lib/X11/rgb";
+ 

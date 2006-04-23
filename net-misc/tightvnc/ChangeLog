@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.65 2006/02/14 00:34:18 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.66 2006/04/23 22:08:00 morfic Exp $
+
+*tightvnc-1.2.9-r2 (23 Apr 2006)
+
+  23 Apr 2006; Daniel Goller <morfic@gentoo.org> +files/vncserver-1.2.patch,
+  +files/vncserver-1.3.patch, metadata.xml, +tightvnc-1.2.9-r2.ebuild,
+  tightvnc-1.3_alpha7.ebuild:
+  Adjust vncserver script to work with mod X, thanks to Maxxer
+  <lorenzo.milesi@gmail.com> and Martin von Gagern, adjust 1.2.9-r1 to have it use mod X deps
+
+  30 Mar 2006; Daniel Goller <morfic@gentoo.org> metadata.xml:
+  Remove Aliz since he no longer maintains this
 
   14 Feb 2006; Daniel Goller <morfic@gentoo.org>
   -files/tightvnc-1.2.8-gentoo.diff,
