@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.74 2006/04/23 13:19:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.75 2006/04/23 13:26:00 flameeyes Exp $
+
+  23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libgcrypt-1.2.2-r1.ebuild:
+  Don't run econf two times, it's useless.
 
   23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   libgcrypt-1.2.2-r1.ebuild:

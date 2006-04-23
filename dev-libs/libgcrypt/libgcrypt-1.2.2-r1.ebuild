@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.2-r1.ebuild,v 1.12 2006/04/23 13:19:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.2-r1.ebuild,v 1.13 2006/04/23 13:26:00 flameeyes Exp $
 
 inherit eutils libtool
 
@@ -34,9 +34,12 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use ppc64) --disable-asm  || die
+	local myconf
+
+	use ppc64 && myconf="${myconf} --disable-asm"
+
 	econf $(use_enable nls) --disable-dependency-tracking --with-pic \
-		--enable-noexecstack || die
+		--enable-noexecstack ${myconf} || die
 	emake || die
 }
 
