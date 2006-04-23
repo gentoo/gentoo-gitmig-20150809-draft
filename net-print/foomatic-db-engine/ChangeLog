@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foomatic-db-engine
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.26 2005/11/28 13:19:23 mcummings Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.27 2006/04/23 09:45:42 genstef Exp $
+
+  23 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/flex-configure-LANG.patch, foomatic-db-engine-3.0.2.ebuild:
+  Fix et_EE locale locale compiling thanks to J <j-spam@starline.ee> in bug
+  128242
 
   28 Nov 2005; <mcumming@gentoo.org> foomatic-db-engine-3.0.2.ebuild:
   Switched from perl-module to perl-app eclass

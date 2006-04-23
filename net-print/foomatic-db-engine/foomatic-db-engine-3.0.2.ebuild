@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.2.ebuild,v 1.12 2005/11/28 13:19:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.2.ebuild,v 1.13 2006/04/23 09:45:42 genstef Exp $
 
 inherit perl-app eutils
 
@@ -20,6 +20,7 @@ DEPEND="dev-libs/libxml2
 
 src_compile() {
 	epatch ${FILESDIR}/perl-module-3.0.1.diff
+	epatch ${FILESDIR}/flex-configure-LANG.patch
 	econf || die
 	make || die
 }
