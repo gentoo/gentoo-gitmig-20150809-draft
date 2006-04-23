@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.99.901-r1.ebuild,v 1.2 2006/04/23 22:32:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.99.901-r1.ebuild,v 1.3 2006/04/23 22:57:01 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -129,6 +129,12 @@ pkg_setup() {
 		conf_opts="${conf_opts} --disable-xsdl"
 	fi
 
+	# Only Xorg and Xgl support this, and we won't build Xgl
+	# until it merges to trunk
+	if use xorg; then
+		conf_opts="${conf_opts} --with-mesa-source=${WORKDIR}/${MESA_P}"
+	fi
+
 	CONFIGURE_OPTIONS="
 		$(use_enable ipv6)
 		$(use_enable dmx)
@@ -137,7 +143,6 @@ pkg_setup() {
 		$(use_enable !minimal xnest)
 		$(use_enable dri)
 		$(use_enable xorg)
-		$(use_with xorg mesa-source=${WORKDIR}/${MESA_P})
 		$(use_enable xprint)
 		$(use_enable nptl glx-tls)
 		--sysconfdir=/etc/X11

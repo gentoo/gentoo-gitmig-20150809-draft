@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.107 2006/04/23 22:34:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.108 2006/04/23 22:57:01 spyderous Exp $
+
+  23 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-1.0.99.901-r1.ebuild:
+  Fix the USE=-xorg build, can't do use_with() on mesa-source because it won't
+  accept the --without option.
 
   23 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
   files/digest-xorg-server-1.0.99.901-r1:
