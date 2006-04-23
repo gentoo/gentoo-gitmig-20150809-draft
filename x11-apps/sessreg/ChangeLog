@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/sessreg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.13 2006/04/22 12:28:53 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.14 2006/04/23 10:44:36 gmsoft Exp $
+
+  23 Apr 2006; Guy Martin <gmsoft@gentoo.org> sessreg-1.0.0.ebuild:
+  Added ~hppa to changelog.
 
   22 Apr 2006; Thomas Cort <tcort@gentoo.org> sessreg-1.0.0.ebuild:
   Added ~alpha keyword wrt Bug #130673.
