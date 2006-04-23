@@ -1,6 +1,11 @@
 # ChangeLog for virtual/x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/x11/ChangeLog,v 1.5 2006/04/03 21:00:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/x11/ChangeLog,v 1.6 2006/04/23 07:40:33 spyderous Exp $
+
+*x11-7.0-r2 (23 Apr 2006)
+
+  23 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; +x11-7.0-r2.ebuild:
+  (#130037) We also need to pull in app-text/rman.
 
 *x11-7.0-r1 (03 Apr 2006)
 
