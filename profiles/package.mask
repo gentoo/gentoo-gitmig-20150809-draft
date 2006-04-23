@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5263 2006/04/22 18:34:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5264 2006/04/23 13:16:02 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Stefan Schweizer <genstef@gentoo.org> (08 Jul 2005)
+# Please use app-crypt/gnupg-1.9.* now
+app-crypt/gpg-agent
 
 # Luca Longinotti <chtekk@gentoo.org> (22 Apr 2006)
 # Mask the old-style PHP packages as announced in
@@ -1683,12 +1687,6 @@ games-fps/aaut
 >=dev-java/sun-jdk-1.4.99
 =dev-java/jrockit-jdk-bin-1.5*
 >=dev-java/ibm-jdk-bin-1.5
-
-# <taviso@gentoo.org> (06 Jan 2004)
-# alpha branch of gnupg.
->=app-crypt/gnupg-1.9.0
->=app-crypt/gpgme-1.1.2
-# <dragonheart@gentoo.org> (27 Aug 2004)
 
 # <robbat2@gentoo.org> (29 Nov 2003)
 # Need external testing
