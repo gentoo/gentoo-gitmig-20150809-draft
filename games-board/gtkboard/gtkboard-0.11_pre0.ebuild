@@ -1,23 +1,24 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/gtkboard-0.11_pre0.ebuild,v 1.8 2004/11/11 00:50:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/gtkboard-0.11_pre0.ebuild,v 1.9 2006/04/23 04:47:48 mr_bones_ Exp $
 
 inherit games
 
 MY_P=${P/_}
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="Board games system"
 HOMEPAGE="http://gtkboard.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gtkboard/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2
 	>=media-libs/libsdl-1.2
 	media-libs/sdl-mixer"
+
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	egamesconf \
