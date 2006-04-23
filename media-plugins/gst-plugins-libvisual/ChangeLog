@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-libvisual
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libvisual/ChangeLog,v 1.24 2006/04/17 19:50:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libvisual/ChangeLog,v 1.25 2006/04/23 22:52:35 compnerd Exp $
+
+  23 Apr 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  gst-plugins-libvisual-0.10.4.ebuild:
+  stable on x86 (bug #128737)
 
   17 Apr 2006; Markus Rothe <corsair@gentoo.org>
   gst-plugins-libvisual-0.10.4.ebuild:
