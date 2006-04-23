@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.120 2006/04/22 20:21:12 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.121 2006/04/23 08:21:39 zmedico Exp $
+
+*portage-2.1_pre9-r4 (23 Apr 2006)
+
+  23 Apr 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre9-r4.ebuild,
+  +files/2.1/pre9/1070_r3184_bug_130750_distfiles_size.patch,
+  +files/2.1/pre9/1080_r3185_bug_116796_download_size.patch,
+  +files/2.1/pre9/1090_r3189_bug_130824_pkgdir_sandbox.patch,
+  +files/2.1/pre9/1100_r3193_manifest_size.patch,
+  +files/2.1/pre9/1110_r3194_bug_130928.patch:
+  2.1_pre9-r4 bug fix revbump for #116796, #130750, #130824, and #116796.
 
 *portage-2.1_pre9-r3 (22 Apr 2006)
 

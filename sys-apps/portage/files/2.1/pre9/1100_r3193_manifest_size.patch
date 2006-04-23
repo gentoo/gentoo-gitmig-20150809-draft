@@ -1,0 +1,15 @@
+Modified: pym/portage_manifest.py
+===================================================================
+--- pym/portage_manifest.py	2006-04-22 20:12:47 UTC (rev 3191)
++++ pym/portage_manifest.py	2006-04-23 06:34:43 UTC (rev 3193)
+@@ -321,8 +321,9 @@
+ 					myhashkeys = myhashes.keys()
+ 					myhashkeys.sort()
+ 					for h in myhashkeys:
+-						yield Manifest1Entry(type="AUX", name=digest_path,
+-							hashes={"size":myhashes["size"], h:myhashes[h]})
++						if h in portage_const.MANIFEST1_HASH_FUNCTIONS:
++							yield Manifest1Entry(type="AUX", name=digest_path,
++								hashes={"size":myhashes["size"], h:myhashes[h]})
+ 				except FileNotFound:
+ 					pass

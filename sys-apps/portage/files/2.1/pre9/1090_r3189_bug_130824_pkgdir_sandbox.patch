@@ -1,0 +1,15 @@
+Modified: bin/misc-functions.sh
+===================================================================
+--- bin/misc-functions.sh	2006-04-22 01:10:28 UTC (rev 3188)
++++ bin/misc-functions.sh	2006-04-22 19:46:07 UTC (rev 3189)
+@@ -349,7 +349,9 @@
+ 	install_mask "${PORTAGE_BUILDDIR}/image" ${PKG_INSTALL_MASK}
+ 	local pkg_dest="${PKGDIR}/All/${PF}.tbz2"
+ 	local pkg_tmp="${PKGDIR}/All/${PF}.tbz2.$$"
+-	addwrite "${PKGDIR}"
++	# Sandbox is disabled in case the user wants to use a symlink
++	# for $PKGDIR and/or $PKGDIR/All.
++	export SANDBOX_ON="0"
+ 	tar cpvf - ./ | bzip2 -f > "${pkg_tmp}" || die "Failed to create tarball"
+ 	cd ..
+ 	python -c "import xpak; t=xpak.tbz2('${pkg_tmp}'); t.recompose('${PORTAGE_BUILDDIR}/build-info')"
