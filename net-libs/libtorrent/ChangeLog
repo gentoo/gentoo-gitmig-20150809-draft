@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.52 2006/04/23 09:28:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.53 2006/04/23 20:38:09 flameeyes Exp $
+
+*libtorrent-0.9.0-r1 (23 Apr 2006)
+
+  23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libtorrent-0.9.0-crash.patch, +libtorrent-0.9.0-r1.ebuild:
+  Add patch from upstream for avoiding random crashes, thanks to Josu López
+  Fernández for reporting in bug #131007.
 
   23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   libtorrent-0.9.0.ebuild:

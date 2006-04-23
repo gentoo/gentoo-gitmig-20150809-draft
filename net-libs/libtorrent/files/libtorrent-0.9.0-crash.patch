@@ -1,0 +1,32 @@
+Index: libtorrent-0.9.0/src/protocol/peer_connection_seed.cc
+===================================================================
+--- libtorrent-0.9.0/src/protocol/peer_connection_seed.cc	(revision 666)
++++ libtorrent-0.9.0/src/protocol/peer_connection_seed.cc	(working copy)
+@@ -159,6 +159,11 @@
+     return true;
+ 
+   case ProtocolBase::BITFIELD:
++    // Bad peer, sending their bitfield after other messages have been
++    // sent.
++    if (m_peerChunks.using_counter() || !m_peerChunks.bitfield()->is_all_unset())
++      throw close_connection();
++
+     if (read_bitfield_from_buffer(length - 1)) {
+       finish_bitfield();
+       return true;
+Index: libtorrent-0.9.0/src/protocol/peer_connection_leech.cc
+===================================================================
+--- libtorrent-0.9.0/src/protocol/peer_connection_leech.cc	(revision 666)
++++ libtorrent-0.9.0/src/protocol/peer_connection_leech.cc	(working copy)
+@@ -200,6 +200,11 @@
+     return true;
+ 
+   case ProtocolBase::BITFIELD:
++    // Bad peer, sending their bitfield after other messages have been
++    // sent.
++    if (m_peerChunks.using_counter() || !m_peerChunks.bitfield()->is_all_unset())
++      throw close_connection();
++
+     if (read_bitfield_from_buffer(length - 1)) {
+       finish_bitfield();
+       return true;
