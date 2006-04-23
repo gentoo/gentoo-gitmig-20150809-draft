@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.40 2006/04/08 19:29:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.41 2006/04/23 17:10:21 ian Exp $
+
+*DBD-Pg-1.48 (23 Apr 2006)
+
+  23 Apr 2006; Christian Hartmann <ian@gentoo.org> +DBD-Pg-1.48.ebuild:
+  Version bump for new version of www-apps/bugzilla
 
   08 Apr 2006; <mcummings@gentoo.org> DBD-Pg-1.43.ebuild:
   Keywording ~mips, tested on raq2, closes bug 126683
