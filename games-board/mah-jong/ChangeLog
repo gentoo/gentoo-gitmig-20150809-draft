@@ -1,6 +1,11 @@
 # ChangeLog for games-board/mah-jong
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/ChangeLog,v 1.7 2006/01/29 21:28:01 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/ChangeLog,v 1.8 2006/04/23 06:30:51 mr_bones_ Exp $
+
+*mah-jong-1.7 (23 Apr 2006)
+
+  23 Apr 2006; Michael Sterrett <mr_bones_@gentoo.org> +mah-jong-1.7.ebuild:
+  version bump
 
   29 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   mah-jong-1.6.3.ebuild:
