@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.43 2006/04/04 09:26:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.44 2006/04/24 21:29:30 liquidx Exp $
+
+*libusb-0.1.12 (24 Apr 2006)
+
+  24 Apr 2006; Alastair Tse <liquidx@gentoo.org> +files/0.1.12-fbsd.patch,
+  +libusb-0.1.12.ebuild:
+  added freebsd patches (#128937) and possible solution to doc generation bug
+  (#66172)
 
   04 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> libusb-0.1.11.ebuild:
   Add ~x86-fbsd keyword.
