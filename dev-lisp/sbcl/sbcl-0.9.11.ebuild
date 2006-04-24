@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.11.ebuild,v 1.1 2006/04/04 15:35:43 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.11.ebuild,v 1.2 2006/04/24 18:32:42 mkennedy Exp $
 
 inherit common-lisp-common-2 eutils
 
@@ -9,6 +9,7 @@ BV_PPC=0.8.15
 BV_SPARC=0.8.15
 BV_MIPS=0.7.10
 BV_AMD64=0.9.9
+BV_PPC_MACOS=0.9.11a
 
 DESCRIPTION="Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp."
 HOMEPAGE="http://sbcl.sourceforge.net/"
@@ -17,18 +18,19 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 	ppc? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC}-powerpc-linux-binary.tar.bz2 )
 	sparc? ( mirror://sourceforge/sbcl/${PN}-${BV_SPARC}-sparc-linux-binary.tar.bz2 )
 	mips? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-mips-linux-binary.tar.gz )
-	amd64? ( mirror://sourceforge/sbcl/${PN}-${BV_AMD64}-x86-64-linux-binary.tar.bz2 )"
+	amd64? ( mirror://sourceforge/sbcl/${PN}-${BV_AMD64}-x86-64-linux-binary.tar.bz2 )
+	ppc-macos? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC_MACOS}-powerpc-darwin-binary.tar.bz2 )"
 
 LICENSE="MIT"
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~amd64"
+KEYWORDS="~amd64 ~mips ~ppc ~ppc-macos ~sparc ~x86"
 
-IUSE="hardened ldb nosource threads nptl unicode"
+IUSE="hardened ldb nosource threads nptl unicode doc"
 
 DEPEND=">=dev-lisp/common-lisp-controller-5.13
 	>=dev-lisp/cl-asdf-1.84
-	sys-apps/texinfo"
+	!doc? ( sys-apps/texinfo )"
 
 PROVIDE="virtual/commonlisp"
 
@@ -55,7 +57,7 @@ refer to Bug #119016 for more information.
 EOF
 		die
 	fi
-	if use ppc && use ldb; then
+	if ( use ppc-macos || use ppc ) && use ldb; then
 		sbcl_einfo <<'EOF'
 Building SBCL on PPC with LDB support is not a supported configuration
 in Gentoo. Please refer to Bug #121830 for more information.
@@ -71,7 +73,16 @@ src_unpack() {
 	cp ${FILESDIR}/${PV}/* ${MY_WORK}
 	sed -i "s,/usr/lib,/usr/$(get_libdir),g" ${MY_WORK}/*
 
-	for a in ${A}; do [[ $a == *binary* ]] && break; done
+	# `use ppc` returns true for both ppc linux and ppc-macos systems
+	# specify
+	if use ppc-macos ; then
+		a="${PN}-${BV_PPC_MACOS}-powerpc-darwin-binary.tar.bz2"
+	elif use ppc; then
+		a="${PN}-${BV_PPC}-powerpc-linux-binary.tar.bz2"
+	else
+		for a in ${A}; do [[ $a == *binary* ]] && break; done
+	fi
+
 	unpack $a
 	mv ${PN}* sbcl-binary || die
 
@@ -88,9 +99,6 @@ src_unpack() {
 	use ldb \
 		&& echo '(enable :sb-ldb)' \
 		>>${S}/customize-target-features.lisp
-#	use x86 \
-#		&& echo '(enable :sb-futex)' \
-#		>>${S}/customize-target-features.lisp
 	echo '(disable :sb-test)' >>${S}/customize-target-features.lisp
 	! use unicode \
 		&& echo '(disable :sb-unicode)' \
@@ -113,8 +121,10 @@ src_compile() {
 			--disable-debugger
 			--core ${bindir}/output/sbcl.core' \
 				|| die
-	cd ${S}/doc/manual
-	LANG=C make info html || die
+	if use doc; then
+			cd ${S}/doc/manual
+			LANG=C make info html || die
+	fi
 }
 
 src_install() {
@@ -139,9 +149,11 @@ src_install() {
 
 	dodoc BUGS COPYING CREDITS INSTALL NEWS OPTIMIZATIONS PRINCIPLES README STYLE SUPPORT TLA TODO
 	dodoc ${MY_WORK}/README.Gentoo
-	dohtml doc/html/*
 
-	doinfo ${S}/doc/manual/*.info
+	if use doc; then
+		dohtml doc/html/*
+		doinfo ${S}/doc/manual/*.info
+	fi
 
 	keepdir /usr/$(get_libdir)/common-lisp/sbcl
 
