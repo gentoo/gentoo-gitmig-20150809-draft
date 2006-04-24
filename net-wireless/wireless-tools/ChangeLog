@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.101 2006/04/22 14:33:39 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.102 2006/04/24 07:37:28 brix Exp $
+
+  24 Apr 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +wireless-tools-27-r1.ebuild:
+  Resurrected version 27-r1 for kde-base/kdenetwork-3.3.2-r2. Thanks to
+  Halcy0n for the heads up.
 
   22 Apr 2006; Henrik Brix Andersen <brix@gentoo.org>
   -wireless-tools-27-r1.ebuild, -wireless-tools-28_pre11.ebuild,
