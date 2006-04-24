@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/exiftool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.1 2006/04/10 23:32:33 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.2 2006/04/24 21:04:03 nattfodd Exp $
+
+*exiftool-6.13-r1 (24 Apr 2006)
+
+  24 Apr 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  +exiftool-6.13-r1.ebuild:
+  Don't install perllocal.pod which was creating conflicts with other
+  packages. Thanks to perl-module eclass for the nice fixlocalpod function.
+  Closes bug #130755.
 
 *exiftool-6.13 (10 Apr 2006)
 

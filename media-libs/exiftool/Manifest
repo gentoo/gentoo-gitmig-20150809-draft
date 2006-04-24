@@ -1,22 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 60fc7ada7ad457bf40ba28f2e5e26dc1 ChangeLog 449
-RMD160 babac8f44a134c0f2e1a78ce579f6c48b07aae75 ChangeLog 449
-SHA256 b85644b5a75ab8c223935df6cb54a392d5125b0c087a2c534da2faf1ceb113a4 ChangeLog 449
+MD5 70a292c8e574ed2cfa8707875cc92294 ChangeLog 733
+RMD160 ae44bdb558c28ddf3deb6f0118af2345a1cee45b ChangeLog 733
+SHA256 437a33a846e52de5aaf051dfee625accb85213966eaf49327db820aa327f0ddf ChangeLog 733
+MD5 aaee454a59274a6425ecdb3a487091d4 exiftool-6.13-r1.ebuild 802
+RMD160 14638583b49d2d6b12fa426432975e6802ddee92 exiftool-6.13-r1.ebuild 802
+SHA256 169f247def6bc7f6d84f63cc567947d7c3d35ecaf71988b7cf485eab6f286182 exiftool-6.13-r1.ebuild 802
 MD5 e78eb27f12dd00736616742120daa957 exiftool-6.13.ebuild 726
 RMD160 88e730a6d3917f1dd384256e55bd46d463ed15f3 exiftool-6.13.ebuild 726
 SHA256 1ae38a1e61dba39fd5476003ab08bb12f2772a697831a7318b4da4abcba51684 exiftool-6.13.ebuild 726
 MD5 b0782a4b488f6b04997584e3093fe0fb files/digest-exiftool-6.13 259
 RMD160 21fba75a517460577d0235eb3df9d13b6167a8c9 files/digest-exiftool-6.13 259
 SHA256 d1e2c76fd48cc0194eb7aa60c11e44a8e50eba54b0fb672e7a62d273df9b7280 files/digest-exiftool-6.13 259
+MD5 b0782a4b488f6b04997584e3093fe0fb files/digest-exiftool-6.13-r1 259
+RMD160 21fba75a517460577d0235eb3df9d13b6167a8c9 files/digest-exiftool-6.13-r1 259
+SHA256 d1e2c76fd48cc0194eb7aa60c11e44a8e50eba54b0fb672e7a62d273df9b7280 files/digest-exiftool-6.13-r1 259
 MD5 b608f7338c97002080d81ee34cc7a93a metadata.xml 275
 RMD160 0ca0f4d66f81aece78acd614e6aed3fbe43b9da9 metadata.xml 275
 SHA256 3a52e0f9e3ddec42b93552bf0e77cf6b59ed9669b21a07fd0376f4b9970e070f metadata.xml 275
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEOustwx9vvAARv2sRAqk5AJwOwyvjYgo+OFlR/7NaJq9EH/lIXACfaSXC
-buWTlLnG2qV/JaXhuodmy3Y=
-=DoUI
+iD8DBQFETVnIwx9vvAARv2sRArGKAKCg+zkvpnJmKEE9X88IYO16s/K5VwCfdcnU
+4ORwfroOf2RswE+CJXAh500=
+=uW2u
 -----END PGP SIGNATURE-----
