@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.99.901-r1.ebuild,v 1.3 2006/04/23 22:57:01 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.99.901-r1.ebuild,v 1.4 2006/04/24 20:07:53 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -15,8 +15,7 @@ MESA_PV="6.5"
 MESA_P="${MESA_PN}-${MESA_PV}"
 MESA_SRC_P="${MESA_PN}Lib-${MESA_PV}"
 
-PATCHES="${FILESDIR}/${PN}-1.0.2-Sbus.patch
-	${FILESDIR}/${PN}-1.0.2-xprint-init.patch
+PATCHES="${FILESDIR}/${PN}-1.0.2-xprint-init.patch
 	${FILESDIR}/${PV}-Xprint-xprintdir.patch
 	${FILESDIR}/1.0.2-try-to-fix-xorgcfg.patch
 	${FILESDIR}/1.0.2-fix-xorgconfig-rgbpath-and-mouse.patch
