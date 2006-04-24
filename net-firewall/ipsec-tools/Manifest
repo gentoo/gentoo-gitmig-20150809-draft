@@ -1,6 +1,78 @@
-MD5 9f4a7e0fda053e5b905f4f0b4b77fcf2 ChangeLog 6706
-RMD160 ef580b6974f9aee68fc54edcc34509c54f401e88 ChangeLog 6706
-SHA256 a0df764310e3d44a0fba2a8df9f86e204f0ec63b91b678a24eb4546922c59b74 ChangeLog 6706
+AUX ipsec-tools-0.4-dos-fix.diff 928 RMD160 c6acd2a1d372b2ae8c823da84178d79052f98853 SHA1 803e7c403c8736939f4331087c6eace0e6c41d13 SHA256 9baf25fecaecaee509bafb0981e0c5262440fed6c6a0200c972d8b7894001456 size 928
+MD5 4aec5a5d3271ba50190518f901f83f7f files/ipsec-tools-0.4-dos-fix.diff 928
+RMD160 c6acd2a1d372b2ae8c823da84178d79052f98853 files/ipsec-tools-0.4-dos-fix.diff 928
+SHA256 9baf25fecaecaee509bafb0981e0c5262440fed6c6a0200c972d8b7894001456 files/ipsec-tools-0.4-dos-fix.diff 928
+AUX ipsec-tools-0.4-gcc34.diff 1008 RMD160 897d3d3976c3d4b585fa0d685be8c827a479b8b3 SHA1 3cd3bc02b18ad7d09e6cd319b76724ddd0a9024b SHA256 0032eb62bc934c3e90c89082188c46cafe0cacdfb0d366d4eb8feb84cac121d0 size 1008
+MD5 0e62b8655b5b72cb0b312b710b28e471 files/ipsec-tools-0.4-gcc34.diff 1008
+RMD160 897d3d3976c3d4b585fa0d685be8c827a479b8b3 files/ipsec-tools-0.4-gcc34.diff 1008
+SHA256 0032eb62bc934c3e90c89082188c46cafe0cacdfb0d366d4eb8feb84cac121d0 files/ipsec-tools-0.4-gcc34.diff 1008
+AUX ipsec-tools-0.5-ipv6.diff 307 RMD160 7df89324a3c4ad64cb3f673f1803391c6563df8f SHA1 063e6082fc3fe4da22f00bc7970a06a7aa6f354d SHA256 32e59c75d518afffcdfceb3a4f03c801fa587baa7576f2652a06694a3b76cd7d size 307
+MD5 bb97988702b7573a0ffdaa46d1494e77 files/ipsec-tools-0.5-ipv6.diff 307
+RMD160 7df89324a3c4ad64cb3f673f1803391c6563df8f files/ipsec-tools-0.5-ipv6.diff 307
+SHA256 32e59c75d518afffcdfceb3a4f03c801fa587baa7576f2652a06694a3b76cd7d files/ipsec-tools-0.5-ipv6.diff 307
+AUX ipsec-tools-0.5-isakmp-underrun.diff 714 RMD160 03f0cdfa50ae4f4457c6d932d202c82853d824d3 SHA1 357030cef1b3d3c78d110994ddd41d3582c53ea7 SHA256 94d6815fcb4f8509e643c6d51e9630cfa8e6fc54effee4593b92436ffecd6969 size 714
+MD5 b847486c75c3d9d4a1bef744e05ae006 files/ipsec-tools-0.5-isakmp-underrun.diff 714
+RMD160 03f0cdfa50ae4f4457c6d932d202c82853d824d3 files/ipsec-tools-0.5-isakmp-underrun.diff 714
+SHA256 94d6815fcb4f8509e643c6d51e9630cfa8e6fc54effee4593b92436ffecd6969 files/ipsec-tools-0.5-isakmp-underrun.diff 714
+AUX ipsec-tools-0.6.2-dos-fix.diff 936 RMD160 41d6499bd099b8b7d77246a263d0ae19acbf3b92 SHA1 21b2d81b6bed115d2bec0d4e43bf15d3a9486537 SHA256 ee6b2fe4b1bd3e071d8f25c3a9ff9f3d62663acb9fb863590d8bced3c83dedd2 size 936
+MD5 2f42994decfddca5c1bbeff79b507219 files/ipsec-tools-0.6.2-dos-fix.diff 936
+RMD160 41d6499bd099b8b7d77246a263d0ae19acbf3b92 files/ipsec-tools-0.6.2-dos-fix.diff 936
+SHA256 ee6b2fe4b1bd3e071d8f25c3a9ff9f3d62663acb9fb863590d8bced3c83dedd2 files/ipsec-tools-0.6.2-dos-fix.diff 936
+AUX ipsec.conf.sample 260 RMD160 79d94e9d6d15108f7e2cfa1f7310282cd3c2799e SHA1 88ab278597b3362e2600ffe208a612f87c6f7e3b SHA256 ae83f3d0f1a1a64bba4bb44c418e679fa666dffcb45c2ce3919b1535fb9a4c02 size 260
+MD5 84cffb83a2579976f872a29d42767714 files/ipsec.conf.sample 260
+RMD160 79d94e9d6d15108f7e2cfa1f7310282cd3c2799e files/ipsec.conf.sample 260
+SHA256 ae83f3d0f1a1a64bba4bb44c418e679fa666dffcb45c2ce3919b1535fb9a4c02 files/ipsec.conf.sample 260
+AUX racoon.conf.d 621 RMD160 773a21f70bd4786eb6758f052bb54cc40273c259 SHA1 1291dbe1639cbb72a161e3af727c9c65c6ae0132 SHA256 bc7cf9c0fe8bd5f99c9353aa3c19e3314b3da21a7a2138fc6e901375be21b109 size 621
+MD5 788e3de82c1c6532dab0dc0c19c1bf40 files/racoon.conf.d 621
+RMD160 773a21f70bd4786eb6758f052bb54cc40273c259 files/racoon.conf.d 621
+SHA256 bc7cf9c0fe8bd5f99c9353aa3c19e3314b3da21a7a2138fc6e901375be21b109 files/racoon.conf.d 621
+AUX racoon.init.d 1274 RMD160 3d0884885953623e522ab9e8e72c902b0b01d515 SHA1 f9233b6a754eeeade15a962a6198c9a6f9995b98 SHA256 8dfb4fd0b40bfe0ebda3ec94cbd294b89719c329e3e73b787ea1bb7962f5353d size 1274
+MD5 fa8e82259951e612a6d684983daefc3d files/racoon.init.d 1274
+RMD160 3d0884885953623e522ab9e8e72c902b0b01d515 files/racoon.init.d 1274
+SHA256 8dfb4fd0b40bfe0ebda3ec94cbd294b89719c329e3e73b787ea1bb7962f5353d files/racoon.init.d 1274
+DIST ipsec-tools-0.2.5.tar.gz 713448 size 713448
+DIST ipsec-tools-0.3.1.tar.gz 863760 size 863760
+DIST ipsec-tools-0.3.3.tar.gz 864122 size 864122
+DIST ipsec-tools-0.4.tar.gz 915420 RMD160 3bdb7f6013ec98db29d0c1bd307f7a49335f4edd SHA256 bc25b398f8a0e0b3456c968961ccf972f66c02422c4d3e549e14d331f977e155 size 915420
+DIST ipsec-tools-0.6.2.tar.bz2 663760 size 663760
+DIST ipsec-tools-0.6.3.tar.bz2 664796 RMD160 b9569a7af2069d3b7fe9d7153dac96ffab59c64c SHA256 b5755278226d7ca7fecddc50ecd78ec98b0551d11977c8739466709fea3584da size 664796
+DIST ipsec-tools-0.6.5.tar.bz2 665244 RMD160 ae26866d1b703eaf3c2d9dca50113e94163d57ac SHA256 12dee73accd5be0c2389133b397507f0725fa503b81e65a5eb52e871f4c21369 size 665244
+EBUILD ipsec-tools-0.2.5.ebuild 1549 RMD160 79e5c094ba970b66749f009215b983af4bbfe904 SHA1 ef35bd120f3ab2a3bebb1007582ae3566e1f0182 SHA256 c2798fb498b2d2739f8c34c5f7a51250c93b9143a91ed22bb12bdb244ab8725a size 1549
+MD5 a428291d8a22a606eda6e16845741e9a ipsec-tools-0.2.5.ebuild 1549
+RMD160 79e5c094ba970b66749f009215b983af4bbfe904 ipsec-tools-0.2.5.ebuild 1549
+SHA256 c2798fb498b2d2739f8c34c5f7a51250c93b9143a91ed22bb12bdb244ab8725a ipsec-tools-0.2.5.ebuild 1549
+EBUILD ipsec-tools-0.3.1.ebuild 1601 RMD160 08d8bc6d73bc5575b31f04cecfd9f6d27b0b9582 SHA1 35b256144465f7704c3a65c25ace907fe63d7494 SHA256 646adf62691117fd8ca5f231664065e2e81792395eb8d61828ea5209c4df408f size 1601
+MD5 8ab0f354384bf0af0ac5f036bf870678 ipsec-tools-0.3.1.ebuild 1601
+RMD160 08d8bc6d73bc5575b31f04cecfd9f6d27b0b9582 ipsec-tools-0.3.1.ebuild 1601
+SHA256 646adf62691117fd8ca5f231664065e2e81792395eb8d61828ea5209c4df408f ipsec-tools-0.3.1.ebuild 1601
+EBUILD ipsec-tools-0.3.3.ebuild 1599 RMD160 016e9df6b5a59b86d68c6f4eb73a7f7c9fcbfb68 SHA1 052aac69809e0872644beb5cf1c843ff51afcbc6 SHA256 bcf522aa395a9e6c4c3a57928d81c93f8ff2d5b227315d83a445483641fa632e size 1599
+MD5 20913a445c3eac38edca0ae43e36b1de ipsec-tools-0.3.3.ebuild 1599
+RMD160 016e9df6b5a59b86d68c6f4eb73a7f7c9fcbfb68 ipsec-tools-0.3.3.ebuild 1599
+SHA256 bcf522aa395a9e6c4c3a57928d81c93f8ff2d5b227315d83a445483641fa632e ipsec-tools-0.3.3.ebuild 1599
+EBUILD ipsec-tools-0.4-r2.ebuild 1781 RMD160 c9c48bcc3d361a050e971ab61ee698b991afbd7f SHA1 c65e6abcb4ba00da4210dbe9d06c08e0cae5b407 SHA256 3fc26f305e01cdff76fc2f383c06563f0d29a4a5705d563dbfe3661e1d32c8d0 size 1781
+MD5 c204d804b16dfb1da5e5159e02bd8a0e ipsec-tools-0.4-r2.ebuild 1781
+RMD160 c9c48bcc3d361a050e971ab61ee698b991afbd7f ipsec-tools-0.4-r2.ebuild 1781
+SHA256 3fc26f305e01cdff76fc2f383c06563f0d29a4a5705d563dbfe3661e1d32c8d0 ipsec-tools-0.4-r2.ebuild 1781
+EBUILD ipsec-tools-0.6.2-r1.ebuild 1657 RMD160 a2134da4a59ab4cefd68bcd3341c3aa44c2fd405 SHA1 2bbb0261493e7f1cbde16511f5999d75c7b30766 SHA256 9c3b3d14c09bad192ee0135d5f24502e9dac4ac2d8f5ed16717561374422173e size 1657
+MD5 cf8c3022a900ac010667641693cacb26 ipsec-tools-0.6.2-r1.ebuild 1657
+RMD160 a2134da4a59ab4cefd68bcd3341c3aa44c2fd405 ipsec-tools-0.6.2-r1.ebuild 1657
+SHA256 9c3b3d14c09bad192ee0135d5f24502e9dac4ac2d8f5ed16717561374422173e ipsec-tools-0.6.2-r1.ebuild 1657
+EBUILD ipsec-tools-0.6.3.ebuild 1618 RMD160 126d5b55386ada561c6dbadb81badcd6b8127303 SHA1 391cc999ef1dcebafa729e0943c86e493d1eedb4 SHA256 bcad7428a68cb74bd40635fa995f5e8eb0e9d08fc904327bc81db216e677bfcb size 1618
+MD5 25884787bf47e6021151e88504dc29e7 ipsec-tools-0.6.3.ebuild 1618
+RMD160 126d5b55386ada561c6dbadb81badcd6b8127303 ipsec-tools-0.6.3.ebuild 1618
+SHA256 bcad7428a68cb74bd40635fa995f5e8eb0e9d08fc904327bc81db216e677bfcb ipsec-tools-0.6.3.ebuild 1618
+EBUILD ipsec-tools-0.6.5.ebuild 1704 RMD160 73ce544d02ef0321b1ad359bca7eed39fd270498 SHA1 16e86f6230d78ea99fa885a3423c5e980bd5ae74 SHA256 f2c3fab75e63ba357acd5a4a86c28ca15c18ac9b254f962fd5c10550036bd7c1 size 1704
+MD5 c4edf12379bddc1c0c6632844b0debe0 ipsec-tools-0.6.5.ebuild 1704
+RMD160 73ce544d02ef0321b1ad359bca7eed39fd270498 ipsec-tools-0.6.5.ebuild 1704
+SHA256 f2c3fab75e63ba357acd5a4a86c28ca15c18ac9b254f962fd5c10550036bd7c1 ipsec-tools-0.6.5.ebuild 1704
+MISC ChangeLog 6864 RMD160 8110999ffea8620613cf920d9a21fffc95b07094 SHA1 f9de4dfceb8a00e3a27b7fc2f11bb1257d5859d8 SHA256 b44513e9acc940744ee86f6545577010f21a06bd2b8e969b89164bec79ec0d10 size 6864
+MD5 5026b36395810622e27e29b92eedafb0 ChangeLog 6864
+RMD160 8110999ffea8620613cf920d9a21fffc95b07094 ChangeLog 6864
+SHA256 b44513e9acc940744ee86f6545577010f21a06bd2b8e969b89164bec79ec0d10 ChangeLog 6864
+MISC metadata.xml 222 RMD160 9f3213af34601070e08450ad10ffc39afb151da6 SHA1 4e079c4e1cd70a11ca71dbbd4553b3ba945b99bd SHA256 c0852563f052e3350d22d4787a91197d757444b5943088ce19bd18c4b000d547 size 222
+MD5 32ef126c26f7354eee96eb430068db74 metadata.xml 222
+RMD160 9f3213af34601070e08450ad10ffc39afb151da6 metadata.xml 222
+SHA256 c0852563f052e3350d22d4787a91197d757444b5943088ce19bd18c4b000d547 metadata.xml 222
 MD5 6ed9fbfd1bce8915be1e87a159802c46 files/digest-ipsec-tools-0.2.5 69
 RMD160 2c99cbfcf0c09eab4b9811c216fd586825e01e9e files/digest-ipsec-tools-0.2.5 69
 SHA256 cb69217205472f3b23eb102eb396e66a917161e81473ca91531d761ec498e0af files/digest-ipsec-tools-0.2.5 69
@@ -10,63 +82,15 @@ SHA256 be44fe2ef26e35c838c084715209f33c4a40c625f3b98571fddd8e4412d14b54 files/di
 MD5 c35a69d989ddc45b7a7e30909479d91e files/digest-ipsec-tools-0.3.3 69
 RMD160 980ac8fdabcb3526248d9df38c1c5b06aeb83ce5 files/digest-ipsec-tools-0.3.3 69
 SHA256 a3b33bbf483022fbce035e4713234e03faebb5ff647374c3e5d4e93a5d2cd221 files/digest-ipsec-tools-0.3.3 69
-MD5 2060a9a972f7975e1fdc755eec1d7791 files/digest-ipsec-tools-0.4-r2 67
-RMD160 0d46f221d94bf4d27b3882d204f7cad7be77822e files/digest-ipsec-tools-0.4-r2 67
-SHA256 edbc0b24da3a5c8bd45353732c8e43c95a5ef0c3d14d8fd9ff3c248de35468fb files/digest-ipsec-tools-0.4-r2 67
+MD5 297ddcad939b8472e82f2ef74a18d844 files/digest-ipsec-tools-0.4-r2 247
+RMD160 e28f3ea674d4b1eee07e4055bdc0181979008f99 files/digest-ipsec-tools-0.4-r2 247
+SHA256 a3ac6c5d20109abd2dac41a054eb61b20fdbe26b605465c348ca0dc452186e0d files/digest-ipsec-tools-0.4-r2 247
 MD5 832e8761ccd34bfba26e6034336521d7 files/digest-ipsec-tools-0.6.2-r1 70
 RMD160 91e585158493c5302e3ac7bf44f5779e621a2678 files/digest-ipsec-tools-0.6.2-r1 70
 SHA256 d155fe44f73851789d8cb5a22ccca904bd433cbadd6e2c239443695bff70c3d0 files/digest-ipsec-tools-0.6.2-r1 70
-MD5 fd1e086ca2de0f90e9784196bd70260a files/digest-ipsec-tools-0.6.3 70
-RMD160 da3cc9b682594d4688995ef9d386198fc57d84d6 files/digest-ipsec-tools-0.6.3 70
-SHA256 40a99e78180781562c3870e879856dabd13d15e0620b5c3d02f6f6e7c7703165 files/digest-ipsec-tools-0.6.3 70
+MD5 e5ab9d224b030180d4e1a122e1d55e60 files/digest-ipsec-tools-0.6.3 256
+RMD160 41273919463e83d117d266a261772b271d687829 files/digest-ipsec-tools-0.6.3 256
+SHA256 47ed424972d379865d352df4308a5d28b5f7d3cc51600ac6f09e39ba6fb66f56 files/digest-ipsec-tools-0.6.3 256
 MD5 47cba38582330b791a3f906bab91e346 files/digest-ipsec-tools-0.6.5 256
 RMD160 60f973f491a120eb5e32f26204e7dea49913c1ab files/digest-ipsec-tools-0.6.5 256
 SHA256 485b1d7cac77af7b282efca0ce0dceafb8b27a515c7ffab5ca9100b8e98d55bb files/digest-ipsec-tools-0.6.5 256
-MD5 4aec5a5d3271ba50190518f901f83f7f files/ipsec-tools-0.4-dos-fix.diff 928
-RMD160 c6acd2a1d372b2ae8c823da84178d79052f98853 files/ipsec-tools-0.4-dos-fix.diff 928
-SHA256 9baf25fecaecaee509bafb0981e0c5262440fed6c6a0200c972d8b7894001456 files/ipsec-tools-0.4-dos-fix.diff 928
-MD5 0e62b8655b5b72cb0b312b710b28e471 files/ipsec-tools-0.4-gcc34.diff 1008
-RMD160 897d3d3976c3d4b585fa0d685be8c827a479b8b3 files/ipsec-tools-0.4-gcc34.diff 1008
-SHA256 0032eb62bc934c3e90c89082188c46cafe0cacdfb0d366d4eb8feb84cac121d0 files/ipsec-tools-0.4-gcc34.diff 1008
-MD5 bb97988702b7573a0ffdaa46d1494e77 files/ipsec-tools-0.5-ipv6.diff 307
-RMD160 7df89324a3c4ad64cb3f673f1803391c6563df8f files/ipsec-tools-0.5-ipv6.diff 307
-SHA256 32e59c75d518afffcdfceb3a4f03c801fa587baa7576f2652a06694a3b76cd7d files/ipsec-tools-0.5-ipv6.diff 307
-MD5 b847486c75c3d9d4a1bef744e05ae006 files/ipsec-tools-0.5-isakmp-underrun.diff 714
-RMD160 03f0cdfa50ae4f4457c6d932d202c82853d824d3 files/ipsec-tools-0.5-isakmp-underrun.diff 714
-SHA256 94d6815fcb4f8509e643c6d51e9630cfa8e6fc54effee4593b92436ffecd6969 files/ipsec-tools-0.5-isakmp-underrun.diff 714
-MD5 2f42994decfddca5c1bbeff79b507219 files/ipsec-tools-0.6.2-dos-fix.diff 936
-RMD160 41d6499bd099b8b7d77246a263d0ae19acbf3b92 files/ipsec-tools-0.6.2-dos-fix.diff 936
-SHA256 ee6b2fe4b1bd3e071d8f25c3a9ff9f3d62663acb9fb863590d8bced3c83dedd2 files/ipsec-tools-0.6.2-dos-fix.diff 936
-MD5 84cffb83a2579976f872a29d42767714 files/ipsec.conf.sample 260
-RMD160 79d94e9d6d15108f7e2cfa1f7310282cd3c2799e files/ipsec.conf.sample 260
-SHA256 ae83f3d0f1a1a64bba4bb44c418e679fa666dffcb45c2ce3919b1535fb9a4c02 files/ipsec.conf.sample 260
-MD5 788e3de82c1c6532dab0dc0c19c1bf40 files/racoon.conf.d 621
-RMD160 773a21f70bd4786eb6758f052bb54cc40273c259 files/racoon.conf.d 621
-SHA256 bc7cf9c0fe8bd5f99c9353aa3c19e3314b3da21a7a2138fc6e901375be21b109 files/racoon.conf.d 621
-MD5 fa8e82259951e612a6d684983daefc3d files/racoon.init.d 1274
-RMD160 3d0884885953623e522ab9e8e72c902b0b01d515 files/racoon.init.d 1274
-SHA256 8dfb4fd0b40bfe0ebda3ec94cbd294b89719c329e3e73b787ea1bb7962f5353d files/racoon.init.d 1274
-MD5 a428291d8a22a606eda6e16845741e9a ipsec-tools-0.2.5.ebuild 1549
-RMD160 79e5c094ba970b66749f009215b983af4bbfe904 ipsec-tools-0.2.5.ebuild 1549
-SHA256 c2798fb498b2d2739f8c34c5f7a51250c93b9143a91ed22bb12bdb244ab8725a ipsec-tools-0.2.5.ebuild 1549
-MD5 8ab0f354384bf0af0ac5f036bf870678 ipsec-tools-0.3.1.ebuild 1601
-RMD160 08d8bc6d73bc5575b31f04cecfd9f6d27b0b9582 ipsec-tools-0.3.1.ebuild 1601
-SHA256 646adf62691117fd8ca5f231664065e2e81792395eb8d61828ea5209c4df408f ipsec-tools-0.3.1.ebuild 1601
-MD5 20913a445c3eac38edca0ae43e36b1de ipsec-tools-0.3.3.ebuild 1599
-RMD160 016e9df6b5a59b86d68c6f4eb73a7f7c9fcbfb68 ipsec-tools-0.3.3.ebuild 1599
-SHA256 bcf522aa395a9e6c4c3a57928d81c93f8ff2d5b227315d83a445483641fa632e ipsec-tools-0.3.3.ebuild 1599
-MD5 c204d804b16dfb1da5e5159e02bd8a0e ipsec-tools-0.4-r2.ebuild 1781
-RMD160 c9c48bcc3d361a050e971ab61ee698b991afbd7f ipsec-tools-0.4-r2.ebuild 1781
-SHA256 3fc26f305e01cdff76fc2f383c06563f0d29a4a5705d563dbfe3661e1d32c8d0 ipsec-tools-0.4-r2.ebuild 1781
-MD5 cf8c3022a900ac010667641693cacb26 ipsec-tools-0.6.2-r1.ebuild 1657
-RMD160 a2134da4a59ab4cefd68bcd3341c3aa44c2fd405 ipsec-tools-0.6.2-r1.ebuild 1657
-SHA256 9c3b3d14c09bad192ee0135d5f24502e9dac4ac2d8f5ed16717561374422173e ipsec-tools-0.6.2-r1.ebuild 1657
-MD5 25884787bf47e6021151e88504dc29e7 ipsec-tools-0.6.3.ebuild 1618
-RMD160 126d5b55386ada561c6dbadb81badcd6b8127303 ipsec-tools-0.6.3.ebuild 1618
-SHA256 bcad7428a68cb74bd40635fa995f5e8eb0e9d08fc904327bc81db216e677bfcb ipsec-tools-0.6.3.ebuild 1618
-MD5 9c061c1c63012892c949daff7214194c ipsec-tools-0.6.5.ebuild 1699
-RMD160 e29eb8443b883f1c75020187c0d2a819210c7453 ipsec-tools-0.6.5.ebuild 1699
-SHA256 b107bfcfecad64f1bf4017e01624d67650f5d4a86901ecbe9e3e1c2f18fd6b1d ipsec-tools-0.6.5.ebuild 1699
-MD5 32ef126c26f7354eee96eb430068db74 metadata.xml 222
-RMD160 9f3213af34601070e08450ad10ffc39afb151da6 metadata.xml 222
-SHA256 c0852563f052e3350d22d4787a91197d757444b5943088ce19bd18c4b000d547 metadata.xml 222

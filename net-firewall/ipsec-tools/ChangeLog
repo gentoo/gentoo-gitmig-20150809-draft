@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.39 2006/04/20 03:47:35 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.40 2006/04/24 23:17:25 weeve Exp $
+
+  24 Apr 2006; Jason Wever <weeve@gentoo.org> ipsec-tools-0.6.5.ebuild:
+  Added ~sparc keyword again as we now have profiles with 2.6 kernel headers,
+  hooray
 
 *ipsec-tools-0.6.5 (20 Apr 2006)
 
