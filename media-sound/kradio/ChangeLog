@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kradio
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.12 2005/11/21 10:17:44 phosphan Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.13 2006/04/24 14:55:14 phosphan Exp $
+
+  24 Apr 2006; Patrick Kursawe <phosphan@gentoo.org>
+  +files/1.0b_beta3-includehints.patch, kradio-1.0b_beta3.ebuild:
+  Added a patch for bug #129168 (Qt bug)
 
   21 Nov 2005; Patrick Kursawe <phosphan@gentoo.org>
   -kradio-1.0_beta1.ebuild, -kradio-1.0_beta3.ebuild,

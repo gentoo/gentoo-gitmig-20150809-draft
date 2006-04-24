@@ -1,0 +1,29 @@
+Resolution to bug #129168:
+Fix compile time error because of missing radiostationlistview.h
+due to bug in Qt Designer 3.3.5 descibed here:
+http://www.trolltech.com/developer/tasktracker.html?id=85440&method=entry
+2006-04-24 Martin von Gagern <Martin.vGagern@gmx.net>
+
+diff -ru kradio-1.0beta3b.orig/kradio3/plugins/radio/radio-configuration-ui.ui kradio-1.0beta3b/kradio3/plugins/radio/radio-configuration-ui.ui
+--- kradio-1.0beta3b.orig/kradio3/plugins/radio/radio-configuration-ui.ui
++++ kradio-1.0beta3b/kradio3/plugins/radio/radio-configuration-ui.ui
+@@ -766,7 +766,6 @@
+ <pixmapfunction>SmallIconSet</pixmapfunction>
+ <layoutdefaults spacing="6" margin="0"/>
+ <includehints>
+-    <includehint>src/libkradio-gui/radiostationlistview.h</includehint>
+     <includehint>kurlrequester.h</includehint>
+     <includehint>klineedit.h</includehint>
+     <includehint>kpushbutton.h</includehint>
+diff -ru kradio-1.0beta3b.orig/kradio3/src/libkradio-gui/stationselector-ui.ui kradio-1.0beta3b/kradio3/src/libkradio-gui/stationselector-ui.ui
+--- kradio-1.0beta3b.orig/kradio3/src/libkradio-gui/stationselector-ui.ui
++++ kradio-1.0beta3b/kradio3/src/libkradio-gui/stationselector-ui.ui
+@@ -167,8 +167,6 @@
+ <pixmapfunction>SmallIconSet</pixmapfunction>
+ <layoutdefaults spacing="6" margin="11"/>
+ <includehints>
+-    <includehint>radiostationlistview.h</includehint>
+-    <includehint>radiostationlistview.h</includehint>
+     <includehint>kpushbutton.h</includehint>
+     <includehint>kpushbutton.h</includehint>
+ </includehints>

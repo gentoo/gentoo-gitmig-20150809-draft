@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-1.0b_beta3.ebuild,v 1.2 2005/11/21 10:17:44 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-1.0b_beta3.ebuild,v 1.3 2006/04/24 14:55:14 phosphan Exp $
 
-inherit kde
+inherit eutils kde
 
 MY_PV="1.0beta3b"
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -26,6 +26,12 @@ DEPEND="lirc? ( app-misc/lirc )
 RDEPEND="${DEPEND}"
 
 need-kde 3.2
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-includehints.patch
+}
 
 src_compile() {
 	if ! use vorbis; then
