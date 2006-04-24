@@ -1,7 +1,10 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST gettext-1.01.tar.gz 3924 size 3924
 DIST gettext-1.03.tar.gz 4064 size 4064
 DIST gettext-1.04.tar.gz 7550 size 7550
-DIST gettext-1.05.tar.gz 7693 size 7693
+DIST gettext-1.05.tar.gz 7693 RMD160 767adfce05b8fe77ddd7d3814951822746cf6e4b SHA256 27367f3dc1be79c9ed178732756e37e4cfce45f9e2a27ebf26e1f40d80124694 size 7693
 EBUILD Locale-gettext-1.01-r1.ebuild 636 RMD160 f1cf4fe72866004dfe850e0199a7b791c41097cb SHA1 ef38ecd00dcd1bf77ad3e76a7612eb51a228805e SHA256 62de809b752ba98956c79e512b9815a3d2c2ee34a25e4eb50525dc7891791103 size 636
 MD5 183a32f67a705c5c66ccf3b354d2bc19 Locale-gettext-1.01-r1.ebuild 636
 RMD160 f1cf4fe72866004dfe850e0199a7b791c41097cb Locale-gettext-1.01-r1.ebuild 636
@@ -14,14 +17,14 @@ EBUILD Locale-gettext-1.04.ebuild 732 RMD160 a230b4200605f4fc37a091f0a98de99d032
 MD5 04b51f26ea72d73923489a2ef8582e2e Locale-gettext-1.04.ebuild 732
 RMD160 a230b4200605f4fc37a091f0a98de99d0320c0b8 Locale-gettext-1.04.ebuild 732
 SHA256 b6ebaa63415163d1bcc13dbea8ecca3a4437516c3ff8c577f4f3cc49e754cf14 Locale-gettext-1.04.ebuild 732
-EBUILD Locale-gettext-1.05.ebuild 722 RMD160 6a70118a05389c45b2e5167b52acba09f3246617 SHA1 0203dafc67167d5b2eddaf861ffaf8b384333026 SHA256 0b8dcb659aa937515004b885d4ca3182f0294af2bd1ce50ddf880bd7228cf4ab size 722
-MD5 5d61f879bc43a9c49797fc217c15d12d Locale-gettext-1.05.ebuild 722
-RMD160 6a70118a05389c45b2e5167b52acba09f3246617 Locale-gettext-1.05.ebuild 722
-SHA256 0b8dcb659aa937515004b885d4ca3182f0294af2bd1ce50ddf880bd7228cf4ab Locale-gettext-1.05.ebuild 722
-MISC ChangeLog 3435 RMD160 da73e96d97c0946e483cf7423aa60c208b48517f SHA1 32d41fd197dfb4094002b356140dbc46de586b7d SHA256 942e645019172583b5a32248914a6df79d2c86cf413ef6fd8ee586db26d6f91b size 3435
-MD5 3217020b3fd513c3932a98d866adabf8 ChangeLog 3435
-RMD160 da73e96d97c0946e483cf7423aa60c208b48517f ChangeLog 3435
-SHA256 942e645019172583b5a32248914a6df79d2c86cf413ef6fd8ee586db26d6f91b ChangeLog 3435
+EBUILD Locale-gettext-1.05.ebuild 736 RMD160 1b53418cf2ad7bc1b20279c1fd7f68772efc3bcb SHA1 debf643a4a2a09a6dca242faee809f628d4ce1f8 SHA256 f7e1c2be5b3b860987efad8b5466763f8fa4c6c42618d765fff13a231cf0f8fe size 736
+MD5 19c71039d0b46f65879975a1d3488d63 Locale-gettext-1.05.ebuild 736
+RMD160 1b53418cf2ad7bc1b20279c1fd7f68772efc3bcb Locale-gettext-1.05.ebuild 736
+SHA256 f7e1c2be5b3b860987efad8b5466763f8fa4c6c42618d765fff13a231cf0f8fe Locale-gettext-1.05.ebuild 736
+MISC ChangeLog 3548 RMD160 301794cf215adb913d39a21de0adb68c80cedde7 SHA1 65a75c3e59626a35636ffb84133139e17a77d018 SHA256 1bbf8b7183fe3fb5ecea0bd52058e085e58be926227ec3d9e9cb093b3286bb8e size 3548
+MD5 ba31db9b084c8d23cab5f2bc8ba09e6c ChangeLog 3548
+RMD160 301794cf215adb913d39a21de0adb68c80cedde7 ChangeLog 3548
+SHA256 1bbf8b7183fe3fb5ecea0bd52058e085e58be926227ec3d9e9cb093b3286bb8e ChangeLog 3548
 MISC metadata.xml 305 RMD160 647980838c590f54441a053916ea629e53e551c0 SHA1 99ef1deeae9a934fb6e46cf5fc4a5fcb8379a74a SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca size 305
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
@@ -29,16 +32,19 @@ SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata
 MD5 7a77bd0cf42c547f577acc5aea88ad40 files/digest-Locale-gettext-1.01-r1 62
 RMD160 26f81fb6706a06a8e7445d730f061bdb439b410e files/digest-Locale-gettext-1.01-r1 62
 SHA256 41c51e5c91d54b60cc88448c3ca31dc7d51790ad6a4644c0296aacfb625a4392 files/digest-Locale-gettext-1.01-r1 62
-size 62 files/digest-Locale-gettext-1.01-r1 62
 MD5 0b27b3100ea21c897a27c277ab38fc07 files/digest-Locale-gettext-1.03 62
 RMD160 b0a7c89615d4da3ec4220f1e7636579e1f48cfda files/digest-Locale-gettext-1.03 62
 SHA256 5886a3160c78919274830c21546a48b16a1e38163a8509a6400291de5ddacca3 files/digest-Locale-gettext-1.03 62
-size 62 files/digest-Locale-gettext-1.03 62
 MD5 49e0c8cbda0ccebda98f60b2cc1c568d files/digest-Locale-gettext-1.04 62
 RMD160 97030b4fb43bce4751660f85f2f84a066489e764 files/digest-Locale-gettext-1.04 62
 SHA256 14ecc73b1774ce139618348a375880019280e5fa9170f189be534c83335d7cc4 files/digest-Locale-gettext-1.04 62
-size 62 files/digest-Locale-gettext-1.04 62
-MD5 6e5316f7bedb83e1d2ed7ef49cd3e5f3 files/digest-Locale-gettext-1.05 62
-RMD160 fe5cc4a4c552a6e46a6430a7f8a5a0cee5d39502 files/digest-Locale-gettext-1.05 62
-SHA256 c92eaaa23d907c029f410811e41d8ddcc694aef27dcf450b0cc803388f2ea835 files/digest-Locale-gettext-1.05 62
-size 62 files/digest-Locale-gettext-1.05 62
+MD5 fc7b210d23585b82345b3cb7c6466b44 files/digest-Locale-gettext-1.05 232
+RMD160 b532dfcd9acf53958c6a9139b96c7a75e358c749 files/digest-Locale-gettext-1.05 232
+SHA256 6eb2d74d888f9ad7db5fc1e19e60945ff5469ad4ec936c42cb0e5f234b98ddd1 files/digest-Locale-gettext-1.05 232
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFETPDJAiZjviIA2XgRAjfjAKDQg0H7C3skSHlI3uPrPyoU0LaQYACgpnH0
+8dNaLXdyGbd1gvgN3yCPju4=
+=TsaF
+-----END PGP SIGNATURE-----
