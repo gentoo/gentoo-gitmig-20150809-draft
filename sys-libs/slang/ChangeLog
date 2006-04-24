@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.49 2006/03/30 16:04:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.50 2006/04/24 01:56:57 kumba Exp $
+
+  29 Apr 2006; Joshua Kinard <kumba@gentoo.org> slang-1.4.9-r2.ebuild:
+  Marked stable on mips.
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/slang-1.4.9-fbsdlink.patch, slang-1.4.9-r2.ebuild:
