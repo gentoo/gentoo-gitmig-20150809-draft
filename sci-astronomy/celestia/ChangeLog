@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.16 2006/04/05 04:25:29 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.17 2006/04/24 05:48:37 morfic Exp $
+
+  24 Apr 2006; Daniel Goller <morfic@gentoo.org> celestia-1.4.1.ebuild:
+  Forcing /usr/share/celestia allowed merging of all 3 guis here, each twice,
+  each after emerge -C celestia
 
   05 Apr 2006; Daniel Goller <morfic@gentoo.org> +files/makefile.am.patch,
   -celestia-1.4.0.ebuild, celestia-1.4.1.ebuild:
