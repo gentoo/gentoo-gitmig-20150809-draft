@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.90 2006/04/24 01:17:18 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.91 2006/04/24 21:55:40 gustavoz Exp $
+
+  24 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> mozilla-1.7.13.ebuild:
+  Stable on sparc wrt security #130887
 
   24 Apr 2006; Thomas Cort <tcort@gentoo.org> mozilla-1.7.13.ebuild:
   Stable on alpha and amd64 wrt security Bug #130887.

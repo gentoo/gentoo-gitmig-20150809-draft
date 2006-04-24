@@ -1,4 +1,7 @@
-MD5 e47c66a29b55b8f9d90f4dfb7aceb807 ChangeLog 53609
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bd061d645bb65cc20339273d924244f3 ChangeLog 53729
 MD5 1bbe55892586ddbce300e5abb134a681 files/010_glibc-2.4.patch 2628
 MD5 068edb8c46e34027f9c3febc19656c70 files/1.3/mozilla-1.3-fix-RAW-target.patch 328
 MD5 b99dabe3c40cfafe2e63bdef95815596 files/10mozilla 105
@@ -41,4 +44,11 @@ MD5 999feebd8d74bccf4fe0b8efaaf474b1 mozilla-1.7.11-r3.ebuild 12327
 MD5 d93266fa522c8503a5c3c8563b799968 mozilla-1.7.11.ebuild 12172
 MD5 091cdbde677ba08bcf0b1a286668a228 mozilla-1.7.12-r2.ebuild 12155
 MD5 16f369066f08ad71a1bb9d35dfbb83e8 mozilla-1.7.12-r3.ebuild 12221
-MD5 db182b68178e2ff1c9d2014a45a0a7e8 mozilla-1.7.13.ebuild 12154
+MD5 0ac844c53331cea81609a534b307a83d mozilla-1.7.13.ebuild 12156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFETUlzKRy60XGEcJIRAh+6AKCpNEjWuUfdYbTi06pcnBl8yz0hrACdH3Q+
+H9nk/YqFVp1d86XQxSv9nBI=
+=VneB
+-----END PGP SIGNATURE-----
