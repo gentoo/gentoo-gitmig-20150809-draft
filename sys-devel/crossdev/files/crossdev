@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.60 2006/04/12 22:08:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.61 2006/04/24 04:39:16 vapier Exp $
 
 cd /
 
@@ -192,7 +192,7 @@ parse_target() {
 		*-dietlibc) LPKG="dietlibc";;
 		*-klibc)    LPKG="klibc";;
 		*-uclibc)   LPKG="uclibc";;
-		*-gnu)      LPKG="glibc";;
+		*-gnu*)     LPKG="glibc";;
 
 		# Now for the BSDs ...
 		*-freebsd*)
