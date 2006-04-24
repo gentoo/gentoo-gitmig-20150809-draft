@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5270 2006/04/24 12:38:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5271 2006/04/24 18:14:18 lcars Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -215,10 +215,6 @@ sys-apps/lmctl
 >=xfce-extra/xfwm4-themes-4.3.90.1
 >=xfce-base/xfce4-4.3.90.1
 
-# Andrea Barisani <lcars@gentoo.org> (19 Apr 2006)
-# masked for initial import
-sys-kernel/systrace-sources
-
 # Brent Baude <ranger@gentoo.org> (18 Apr 2006)
 # Masked pending removal. This package had been deprecated
 # in favor of sys-apps/ibm-powerpc-utils and an optional
@@ -324,10 +320,6 @@ net-misc/asterisk-app_authenticate_ldap
 =www-apache/mod_fcgid-1.07
 =www-apache/mod_tcl-1.0
 
-
-# Andrea Barisani <lcars@gentoo.org> (18 Apr 2006)
-# masked for initial import
-sys-apps/systrace
 
 # Markus Dittrich <markusle@gentoo.org> (17 Apr 2006)
 # masked for further additional testing
