@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.1 2006/04/24 10:10:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.2 2006/04/24 12:43:05 corsair Exp $
+
+  24 Apr 2006; Markus Rothe <corsair@gentoo.org> alsa-plugins-1.0.11.ebuild:
+  Added ~ppc64; bug #131082
 
 *alsa-plugins-1.0.11 (24 Apr 2006)
 
