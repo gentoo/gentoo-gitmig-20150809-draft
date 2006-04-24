@@ -1,0 +1,11 @@
+# ChangeLog for games-arcade/funnyboat
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/ChangeLog,v 1.1 2006/04/24 22:44:55 mr_bones_ Exp $
+
+*funnyboat-1.1 (24 Apr 2006)
+
+  24 Apr 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +funnyboat-1.1.ebuild:
+  initial commit - ebuild submitted by Cristiano Chiucchiolo and Alexandru Toma
+  via bug #130333
+
