@@ -1,4 +1,7 @@
-MD5 51f95eeb2c43bd665a00c0bcc8255614 ChangeLog 15750
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 339b6244ea6269de8e453544369bf4b4 ChangeLog 15867
 MD5 88069f3f6c274e4285bbbba7f5cb5a4f files/FfmpegToolkit.class.patch 576
 MD5 f98e440afe625e13a8b90e5ad7f6e773 files/digest-gallery-1.5.2_p2 256
 MD5 64e42de124b515e109b27f84a90d7036 files/digest-gallery-1.5.3 244
@@ -8,8 +11,15 @@ MD5 821fcd1428835904c260757c4b1434dc files/digest-gallery-2.1.1a 262
 MD5 d86a2cffa618ecf7fe9a2b001be69523 files/postinstall-en.txt 430
 MD5 3ebb657970521358631f192e7af99f46 files/postinstall-en2.txt 912
 MD5 9c470b37b023b788b0d1c9ef1898517c gallery-1.5.2_p2.ebuild 996
-MD5 4a9a92c87e1e31f936201157f87c5c70 gallery-1.5.3.ebuild 1024
+MD5 be003c1ece52c9ff0bc4d8dea023a14c gallery-1.5.3.ebuild 1024
 MD5 78e0817689de49d654eb8c2863a4d4fe gallery-2.0.2-r1.ebuild 1117
 MD5 c0891d7032de2d2241c16879cc942c30 gallery-2.0.4.ebuild 1117
 MD5 467b3fe2b01694581b46ad9961d27943 gallery-2.1.1a.ebuild 1514
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFETNifKRy60XGEcJIRArDuAKCFminV7z1pQdpb5czHirjD7zlZlQCfS6zD
+B/up6/xhHzOjhc5osc4QfuE=
+=F0yE
+-----END PGP SIGNATURE-----
