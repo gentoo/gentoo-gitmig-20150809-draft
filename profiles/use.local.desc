@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1869 2006/04/24 06:49:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1870 2006/04/24 10:14:57 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -711,6 +711,7 @@ media-libs/xine-lib:modplug - Build with modplug support
 media-libs/xine-lib:nvidia - Support the nvidia XvMC libs
 media-libs/xine-lib:vidix - Support for vidix video output
 media-libs/xine-lib:xvmc - Support for XVideo Motion Compensation (accelerated mpeg playback)
+media-plugins/alsa-plugins:libsamplerate - Build with libsamplerate support
 media-plugins/bmp-wma:wma123 - Installs optional commandline wma player
 media-plugins/eq-xmms:sse-filters - Enable SSE-based equalizer's implementation
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
