@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/kmobiletools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.8 2006/04/24 12:42:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.9 2006/04/24 15:52:19 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kmobiletools-0.5_pre20060424.ebuild:
+  Bump KDE requirement to 3.3. Thanks to Marco Gulino.
 
 *kmobiletools-0.5_pre20060424 (24 Apr 2006)
 
