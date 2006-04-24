@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.21-r9.ebuild,v 1.1 2006/04/07 23:59:37 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.21-r9.ebuild,v 1.2 2006/04/24 07:29:05 uberlord Exp $
 
 inherit eutils
 
@@ -17,7 +17,6 @@ KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-libs/popt-1.5"
-RDEPEND="${DEPEND}"
 
 PROVIDE="virtual/dhcpc"
 
