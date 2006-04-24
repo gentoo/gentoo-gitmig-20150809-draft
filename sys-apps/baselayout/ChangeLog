@@ -1,17 +1,20 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.321 2006/04/24 13:08:38 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.322 2006/04/24 13:34:49 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
 
 *baselayout-1.12.0_pre18-r1 (24 Apr 2006)
+*baselayout-1.11.15-r1 (24 Apr 2006)
 
   24 Apr 2006; Roy Marples <uberlord@gentoo.org>
   -files/baselayout-1.12.0_pre17-1980-1987.patch,
   -files/baselayout-1.12.0_pre17-1980.patch,
   +files/baselayout-1.12.0_pre18-halt-sort.patch,
-  -baselayout-1.12.0_pre17-r3.ebuild, +baselayout-1.12.0_pre18-r1.ebuild:
+  +files/baselayout-1.11.15-halt-sort.patch,
+  -baselayout-1.12.0_pre17-r3.ebuild, +baselayout-1.12.0_pre18-r1.ebuild,
+  +baselayout-1.11.15-r1.ebuild:
   Don't sort on key 2 as awk only prints key 2, #131001.
 
 *baselayout-1.11.15 (22 Apr 2006)
