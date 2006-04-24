@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.2 2006/03/24 20:55:27 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.3 2006/04/24 08:13:26 keri Exp $
+
+*yap-5.1.1 (24 Apr 2006)
+
+  24 Apr 2006; Keri Harris <keri@gentoo.org> +files/yap-5.1.1-analyst.patch,
+  +files/yap-5.1.1-configure.patch, +files/yap-5.1.1-myddas.patch,
+  +files/yap-5.1.1-tabling.patch, +files/yap-5.1.1-tkyap.patch,
+  +yap-5.1.1.ebuild:
+  Version bump.
 
   24 Mar 2006; Keri Harris <keri@gentoo.org> yap-5.0.1.ebuild:
   Install info pages.

@@ -1,0 +1,12 @@
+--- Yap-5.1.1.orig/H/Yapproto.h	2006-03-21 07:51:44.000000000 +1200
++++ Yap-5.1.1/H/Yapproto.h	2006-04-23 16:07:20.000000000 +1200
+@@ -327,7 +327,9 @@
+ MYDDAS_GLOBAL          STD_PROTO(myddas_util_initialize_myddas,(void));
+ 
+ /* myddas_util.c */
++#ifdef MYDDAS_MYSQL
+ void                   STD_PROTO(myddas_util_table_write,(MYSQL_RES *));
++#endif
+ /* Returns the connection type (mysql -> 1  or odbc -> 2) */
+ Short                  STD_PROTO(myddas_util_connection_type,(void *));
+ /* Adds a connection identifier to the MYDDAS connections list*/

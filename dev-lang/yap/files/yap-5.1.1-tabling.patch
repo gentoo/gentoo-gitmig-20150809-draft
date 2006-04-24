@@ -1,0 +1,74 @@
+--- Yap-5.1.1.orig/OPTYap/opt.init.c	2005-11-16 14:55:03.000000000 +1300
++++ Yap-5.1.1/OPTYap/opt.init.c	2006-04-20 20:46:57.000000000 +1200
+@@ -192,9 +192,11 @@
+ 
+ 
+ void init_local(void) {
++#if defined(YAPOR) || defined(THREADS)
++  LOCAL = REMOTE + worker_id;
++#endif
+ #ifdef YAPOR
+   /* local data related to or-parallelism */
+-  LOCAL = REMOTE + worker_id;
+   LOCAL_top_cp = B_BASE;
+   LOCAL_top_or_fr = GLOBAL_root_or_fr;
+   LOCAL_load = 0;
+--- Yap-5.1.1.orig/OPTYap/opt.structs.h	2005-11-04 14:17:17.000000000 +1300
++++ Yap-5.1.1/OPTYap/opt.structs.h	2006-04-20 20:37:44.000000000 +1200
+@@ -41,7 +41,7 @@
+ ** ---------------------- */
+ 
+ struct pages {
+-#ifdef YAPOR
++#if defined(YAPOR) || defined(THREADS)
+   lockvar lock;
+ #endif /* YAPOR */
+   volatile long pages_allocated;
+@@ -276,9 +276,11 @@
+ ** --------------------------- */
+ 
+ struct local_data{
++#if defined(YAPOR) || defined(THREADS)
++  lockvar lock;
++#endif
+ #ifdef YAPOR
+   /* local data related to or-parallelism */
+-  lockvar lock;
+   volatile int load;
+   choiceptr top_choice_point;
+   struct or_frame *top_or_frame;
+--- Yap-5.1.1.orig/OPTYap/tab.structs.h	2005-08-05 03:45:56.000000000 +1200
++++ Yap-5.1.1/OPTYap/tab.structs.h	2006-04-20 20:19:32.000000000 +1200
+@@ -50,7 +50,7 @@
+ ** ---------------------------- */
+ 
+ typedef struct table_entry {
+-#ifdef YAPOR
++#if defined(YAPOR) || defined(THREADS)
+   lockvar lock;
+ #endif /* YAPOR */
+   struct pred_entry *pred_entry;
+@@ -149,8 +149,10 @@
+ ** ------------------------------ */
+ 
+ typedef struct subgoal_frame {
+-#ifdef YAPOR
++#if defined(YAPOR) || defined(THREADS)
+   lockvar lock;
++#endif
++#ifdef YAPOR
+   int generator_worker;
+   struct or_frame *top_or_frame_on_generator_branch;
+ #endif /* YAPOR */
+@@ -225,8 +227,10 @@
+ ** --------------------------------- */
+ 
+ typedef struct dependency_frame {
+-#ifdef YAPOR
++#if defined(YAPOR) || defined(THREADS)
+   lockvar lock;
++#endif
++#ifdef YAPOR
+   int leader_dependency_is_on_stack;
+   struct or_frame *top_or_frame;
+ #ifdef TIMESTAMP_CHECK
