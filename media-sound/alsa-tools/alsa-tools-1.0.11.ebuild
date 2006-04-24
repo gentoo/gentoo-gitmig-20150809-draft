@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.11.ebuild,v 1.3 2006/04/22 17:02:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.11.ebuild,v 1.4 2006/04/24 13:53:59 flameeyes Exp $
 
-inherit gnuconfig eutils flag-o-matic
+inherit gnuconfig eutils flag-o-matic autotools
 
 MY_P="${P/_rc/rc}"
 
@@ -56,8 +56,18 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-asneeded.patch"
+
+	for dir in echomixer envy24control rmedigicontrol; do
+		pushd ${dir} &> /dev/null
+		eautomake
+		popd &> /dev/null
+	done
+
 	gnuconfig_update
+	elibtoolize
 }
 
 src_compile() {
