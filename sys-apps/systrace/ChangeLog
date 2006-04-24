@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systrace
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/ChangeLog,v 1.9 2006/04/18 09:11:00 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/ChangeLog,v 1.10 2006/04/24 18:13:24 lcars Exp $
+
+  24 Apr 2006; Andrea Barisani <lcars@gentoo.org> Manifest:
+  Removing from package.mask, updating digest since 1.6d is released now.
 
   18 Apr 2006; Andrea Barisani <lcars@gentoo.org>
   Resurrecting systrace.
