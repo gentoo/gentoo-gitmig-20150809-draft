@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.56.ebuild,v 1.3 2006/03/20 19:18:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.56.ebuild,v 1.4 2006/04/24 02:39:32 metalgod Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://open.nit.ca/download/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc sparc x86"
 IUSE=""
 
 DEPEND=">=net-libs/wvstreams-4.2.2"

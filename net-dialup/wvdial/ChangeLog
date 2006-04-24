@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/wvdial
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.37 2006/03/20 19:18:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.38 2006/04/24 02:39:32 metalgod Exp $
+
+  24 Apr 2006; Luis Medinas <metalgod@gentoo.org> wvdial-1.56.ebuild:
+  Stable on amd64.
 
   20 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> wvdial-1.56.ebuild:
   Stable on sparc
