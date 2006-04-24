@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ssc/ssc-0.8.ebuild,v 1.8 2006/02/28 22:50:28 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ssc/ssc-0.8.ebuild,v 1.9 2006/04/24 15:39:21 tupone Exp $
 
 inherit eutils games
 
@@ -27,6 +27,9 @@ src_unpack() {
 		-e "s:/usr/local/share/:${GAMES_DATADIR}/:" \
 		src/{asteroid.cc,audio.cc,config.cc,menu.cc} \
 		|| die "sed failed"
+	sed -i \
+		-e "/CXXFLAGS/s:-Werror::" \
+		configure
 	epatch "${FILESDIR}/${P}-gcc34.patch"
 }
 
