@@ -1,12 +1,28 @@
-MD5 96033d6611ec8be9ea291d2933106d9f ChangeLog 2201
-RMD160 56f22e33562b9ce4d7daef6fac0ec4be239890e4 ChangeLog 2201
-SHA256 e7a06ab5413f64b9c6eb9cb2fec96d3ae897c52da8b6760720b6e7d6227f9ed6 ChangeLog 2201
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ced8989ac6326041a2417a3369c9fa70 ChangeLog 2321
+RMD160 327d5ebad6d2109d03a34764355ea83a252134ce ChangeLog 2321
+SHA256 fadb4e1ddcdca88b5ca30527833d301fcb915cf2d97b6f202ee7a354fd121ebd ChangeLog 2321
+MD5 e6f9167b0ae05f062354e824d7fa906a files/digest-penguin-command-1.6.10 271
+RMD160 1501b42d080c520331245beb41b4d0110724773b files/digest-penguin-command-1.6.10 271
+SHA256 1a575cfd40f87966972da70ffbaf8c63b213c05cd1541a43331af3a6eb3eb04e files/digest-penguin-command-1.6.10 271
 MD5 6b0f0c67ae6778539181fb73f07258b0 files/digest-penguin-command-1.6.9 74
 RMD160 d23ad86a151b661a0df719d5aeab7f228ad9b699 files/digest-penguin-command-1.6.9 74
 SHA256 628301fec13c26b58e2ee7f32873f4815068930d49d78ac9cdf4bfeaa117ca86 files/digest-penguin-command-1.6.9 74
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 65bcc47dd6c4a7531380e56cc80e467d penguin-command-1.6.10.ebuild 1002
+RMD160 c7d40b4ee34d4d5f7b480646594cedde156fdbc4 penguin-command-1.6.10.ebuild 1002
+SHA256 4497620c0e73da117590f41b5ce81837621f70ae110630e7ebad208abfcbc1d1 penguin-command-1.6.10.ebuild 1002
 MD5 96c1c016f96049d16d3fb913b74f80f2 penguin-command-1.6.9.ebuild 1000
 RMD160 33f86299585ae2e1a2dd350d5427e1c8a8bc23b7 penguin-command-1.6.9.ebuild 1000
 SHA256 bb788165c18409209f9b339a75b12142f420d9fb02539187d6a3c38ed774a2cd penguin-command-1.6.9.ebuild 1000
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFETNq52CTtIKiFlQIRAnoNAKC/5xXw8dIB6KIxqTBwVU5mLCjHJgCgvZa+
+lqmUpEMS/m7arQHs2/cVG30=
+=LxJJ
+-----END PGP SIGNATURE-----
