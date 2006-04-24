@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.35 2006/03/29 11:25:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.36 2006/04/24 02:39:18 kumba Exp $
+
+  29 Apr 2006; Joshua Kinard <kumba@gentoo.org> smpeg-0.4.4-r7.ebuild:
+  Marked stable on mips.
 
   29 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/smpeg-0.4.4-mmx.patch, smpeg-0.4.4-r8.ebuild:
