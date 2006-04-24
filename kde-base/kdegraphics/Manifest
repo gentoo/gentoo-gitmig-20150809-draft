@@ -1,12 +1,100 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b1c4d1f2beb47fccbcf34d8638fbff58 ChangeLog 36135
-RMD160 af80ad9e034399c724b85dfc22cbe7af6eef7c63 ChangeLog 36135
-SHA256 00bc76f5ec9faab2c3c582a63ba5477ae2ac510cbcf83eb19250005c2e5c1f69 ChangeLog 36135
+AUX CAN-2005-0064.patch 793 RMD160 29c644187334820eedcf6aca8ca2a2ecd0990e3d SHA1 46676d892453f92d171b4d87c195f04a34fa0dd6 SHA256 1156b8cb6601b2024f46bb9f3034c8fc258ac15cac94e50c223bb8feea47ad19 size 793
 MD5 284f518172a2843428d308d2d48bbbee files/CAN-2005-0064.patch 793
 RMD160 29c644187334820eedcf6aca8ca2a2ecd0990e3d files/CAN-2005-0064.patch 793
 SHA256 1156b8cb6601b2024f46bb9f3034c8fc258ac15cac94e50c223bb8feea47ad19 files/CAN-2005-0064.patch 793
+AUX kdegraphics-3.4-configure.patch 847 RMD160 f1dbb93f6cf03fd88cf413312cb88a87b507e702 SHA1 5864e9e24bd42d207d7dadf4458ffb83de4bb8d1 SHA256 5550143d34437160aa5adee3b5d6e47338121eda248c07fbbee2438a85b0d100 size 847
+MD5 72b0e0cd29559b5ac4a20829a3da892c files/kdegraphics-3.4-configure.patch 847
+RMD160 f1dbb93f6cf03fd88cf413312cb88a87b507e702 files/kdegraphics-3.4-configure.patch 847
+SHA256 5550143d34437160aa5adee3b5d6e47338121eda248c07fbbee2438a85b0d100 files/kdegraphics-3.4-configure.patch 847
+AUX kdegraphics-3.4-gcc4.patch 1226 RMD160 9f6f1fb1ffaaada77860e52cf393389e12e6ccfb SHA1 287b46bbbf401d492ca3d86141c5dead16ce2e68 SHA256 ceae1bdc4c140042d352bfebfb32759051cb4feb7abe97f99410c0aa89228d1f size 1226
+MD5 c52515e268cbff75a6f7b7d1ee1fad47 files/kdegraphics-3.4-gcc4.patch 1226
+RMD160 9f6f1fb1ffaaada77860e52cf393389e12e6ccfb files/kdegraphics-3.4-gcc4.patch 1226
+SHA256 ceae1bdc4c140042d352bfebfb32759051cb4feb7abe97f99410c0aa89228d1f files/kdegraphics-3.4-gcc4.patch 1226
+AUX kdegraphics-3.4.1-gocr.patch 454 RMD160 8733b5147837989e5e23a06cab1a7ce7d6624e4b SHA1 78fd97285067fbd9a157fb6c9f07222ad4b5d1d2 SHA256 bd91732d64dddd09e0ca8af24b5f2aad39436be239ece27ec6d2aab029e4fd75 size 454
+MD5 0abb98c262645006a4b116c0635edb49 files/kdegraphics-3.4.1-gocr.patch 454
+RMD160 8733b5147837989e5e23a06cab1a7ce7d6624e4b files/kdegraphics-3.4.1-gocr.patch 454
+SHA256 bd91732d64dddd09e0ca8af24b5f2aad39436be239ece27ec6d2aab029e4fd75 files/kdegraphics-3.4.1-gocr.patch 454
+AUX kdegraphics-3.4.2-kpdf-contentcrash.patch 749 RMD160 0a28706eebe96636d063ecfc2960dfe01666ec43 SHA1 3334e263ee71eafb5120f49b13078efca8946c7b SHA256 97c82623aca3131364e2d66b02b95a7ca2c5b6eacd17c4d15ea5a9890049b536 size 749
+MD5 653bd55a1e87c51731d0b0512051774e files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
+RMD160 0a28706eebe96636d063ecfc2960dfe01666ec43 files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
+SHA256 97c82623aca3131364e2d66b02b95a7ca2c5b6eacd17c4d15ea5a9890049b536 files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
+AUX kdegraphics-3.4.2-kpdf-fix.patch 1024 RMD160 b0183d302c385978bd725751601add55be6f234f SHA1 2432536bc621ccbd92aaa2dff2c02865031d575c SHA256 71d22256cfee7db6884087b67f34fa56319c321591980855955bad08b4d4e641 size 1024
+MD5 4caddebea4d845abb2de6dbbfe1b979a files/kdegraphics-3.4.2-kpdf-fix.patch 1024
+RMD160 b0183d302c385978bd725751601add55be6f234f files/kdegraphics-3.4.2-kpdf-fix.patch 1024
+SHA256 71d22256cfee7db6884087b67f34fa56319c321591980855955bad08b4d4e641 files/kdegraphics-3.4.2-kpdf-fix.patch 1024
+AUX post-3.3.1-kdegraphics-4.diff 1797 RMD160 4dd1cdb13a7453e58b8f0583be003f4bffcf0e64 SHA1 05c18b2710d92125f39fb6f0c5d16d3dcee926e7 SHA256 84853530577e48f7443041520e7b6492e0623eced168d2d9280ab3bb18a2b538 size 1797
+MD5 4a4bcdcb2456ab92b7846b6646da1bcb files/post-3.3.1-kdegraphics-4.diff 1797
+RMD160 4dd1cdb13a7453e58b8f0583be003f4bffcf0e64 files/post-3.3.1-kdegraphics-4.diff 1797
+SHA256 84853530577e48f7443041520e7b6492e0623eced168d2d9280ab3bb18a2b538 files/post-3.3.1-kdegraphics-4.diff 1797
+AUX post-3.3.2-kdegraphics.diff 1385 RMD160 4d9aeeb52201b18ad05c012e8523a37464ec3e02 SHA1 21e60ed9cf97feb9f299755d6b5535e1c360c2fa SHA256 6ed6a79694dac338db2a05049ceb6526cd7ea37d1c5fe6711d803c5ddc936048 size 1385
+MD5 bf6b28780e0f5ea8f99e0777187e73cb files/post-3.3.2-kdegraphics.diff 1385
+RMD160 4d9aeeb52201b18ad05c012e8523a37464ec3e02 files/post-3.3.2-kdegraphics.diff 1385
+SHA256 6ed6a79694dac338db2a05049ceb6526cd7ea37d1c5fe6711d803c5ddc936048 files/post-3.3.2-kdegraphics.diff 1385
+AUX post-3.4.1-kdegraphics-4.diff 1827 RMD160 5bc2b23779549afda028fa820b3dd67938ba88a0 SHA1 9324f31b38c1b7cb89e68e221f981fd6da6dc904 SHA256 d239c548d97cd1aa33d5987470bbb76aca996d284cce1cee8e7fb2d74597bd00 size 1827
+MD5 ec3b95efe9139f4259d6de213fe4b87b files/post-3.4.1-kdegraphics-4.diff 1827
+RMD160 5bc2b23779549afda028fa820b3dd67938ba88a0 files/post-3.4.1-kdegraphics-4.diff 1827
+SHA256 d239c548d97cd1aa33d5987470bbb76aca996d284cce1cee8e7fb2d74597bd00 files/post-3.4.1-kdegraphics-4.diff 1827
+AUX post-3.4.3-kdegraphics-CAN-2005-3193.diff 9685 RMD160 77e176e272746f9fb99506b3a3dc32e7b17401e3 SHA1 1e323c4cc1210fb380746b897dc1bc3452043c5a SHA256 62da36cf89ea7a9a03a32dc6d96b27e1ee66d24798eb302902ffe6f80e8adfc0 size 9685
+MD5 e8dde74416769d4589dcca25072aea3e files/post-3.4.3-kdegraphics-CAN-2005-3193.diff 9685
+RMD160 77e176e272746f9fb99506b3a3dc32e7b17401e3 files/post-3.4.3-kdegraphics-CAN-2005-3193.diff 9685
+SHA256 62da36cf89ea7a9a03a32dc6d96b27e1ee66d24798eb302902ffe6f80e8adfc0 files/post-3.4.3-kdegraphics-CAN-2005-3193.diff 9685
+AUX post-3.4.3-kdegraphics-CVE-2006-0301.diff 1775 RMD160 8245dc7b6ae38c8f320ced7b12c978bf266ffce5 SHA1 91667f793df9ecee48db6218914fa9fe462235a9 SHA256 6c72956c3c2a8d6ee3c1722184428309ec277172ecd422b25169aaa58b109915 size 1775
+MD5 ebbce0a49537b694932b3c0efcf18261 files/post-3.4.3-kdegraphics-CVE-2006-0301.diff 1775
+RMD160 8245dc7b6ae38c8f320ced7b12c978bf266ffce5 files/post-3.4.3-kdegraphics-CVE-2006-0301.diff 1775
+SHA256 6c72956c3c2a8d6ee3c1722184428309ec277172ecd422b25169aaa58b109915 files/post-3.4.3-kdegraphics-CVE-2006-0301.diff 1775
+DIST kdegraphics-3.3.2.tar.bz2 6234394 size 6234394
+DIST kdegraphics-3.4.1.tar.bz2 6581563 size 6581563
+DIST kdegraphics-3.4.2.tar.bz2 6579227 size 6579227
+DIST kdegraphics-3.4.3.tar.bz2 6554272 size 6554272
+DIST kdegraphics-3.5.2.tar.bz2 7288264 RMD160 cf2fce91b76af7d570b20f336ba551c5c3bd767f SHA256 b33e26d99188f0aee2dc0ff95923a1c1bca7f2a2510a1f761b155b8d2781e64f size 7288264
+DIST kpdf-3.5.2-poppler.patch.bz2 6261 RMD160 6e854f78f4b3ed7976b98740348996094e95afb5 SHA256 8aff3f945e0c5eba883c59b80d7c09cc362610c3be032184f5f9105cc34e1589 size 6261
+EBUILD kdegraphics-3.3.2-r3.ebuild 1615 RMD160 9183b71c80ecff21bb2829ca8cfc68583fd24ce3 SHA1 b1ac6ea371bb30dc35e0cf25f65dcec7ac6a2043 SHA256 3d1ffb672b0bdb49fac6e26636cee4b1de946264283a0be5dc1d2d9f7ce4d60b size 1615
+MD5 2e5068285399de959f7257f5309dfbb9 kdegraphics-3.3.2-r3.ebuild 1615
+RMD160 9183b71c80ecff21bb2829ca8cfc68583fd24ce3 kdegraphics-3.3.2-r3.ebuild 1615
+SHA256 3d1ffb672b0bdb49fac6e26636cee4b1de946264283a0be5dc1d2d9f7ce4d60b kdegraphics-3.3.2-r3.ebuild 1615
+EBUILD kdegraphics-3.4.1-r1.ebuild 1458 RMD160 a8ff5a3d7c221633bb6be5153b851f6947221b2f SHA1 bba610b7e61004bf7aa8afa7b25195325d95acfd SHA256 2bf2062eca42d2d7755e971dba9f2b94daf78c2705d974f37e14ef670dc7bcdf size 1458
+MD5 e10d1bfa905953b777c14febc1aecf2d kdegraphics-3.4.1-r1.ebuild 1458
+RMD160 a8ff5a3d7c221633bb6be5153b851f6947221b2f kdegraphics-3.4.1-r1.ebuild 1458
+SHA256 2bf2062eca42d2d7755e971dba9f2b94daf78c2705d974f37e14ef670dc7bcdf kdegraphics-3.4.1-r1.ebuild 1458
+EBUILD kdegraphics-3.4.1-r3.ebuild 1530 RMD160 beeb652c30f527786826aab25e5a6988d959c781 SHA1 26d5032d3d6fd32b2ca2e9ce3ab22321c92b9508 SHA256 a80ee1a6d96df92aca7e858597f415f02323fe9502b9156ee1bf1e2957f38633 size 1530
+MD5 a932c975d882d4bc9257346848aa9181 kdegraphics-3.4.1-r3.ebuild 1530
+RMD160 beeb652c30f527786826aab25e5a6988d959c781 kdegraphics-3.4.1-r3.ebuild 1530
+SHA256 a80ee1a6d96df92aca7e858597f415f02323fe9502b9156ee1bf1e2957f38633 kdegraphics-3.4.1-r3.ebuild 1530
+EBUILD kdegraphics-3.4.2-r2.ebuild 2092 RMD160 be50739ed1bfab62fb15c39a284e5d83d3b32862 SHA1 78bce6df8509b4ebeac9e3c19d0f76b50242f5e6 SHA256 c19037ee8506831ccdd60b09cd5ae8f0725563be577421ab01b8ad727449ce0d size 2092
+MD5 cbeb577dd43fab62566ee9d5471ed32a kdegraphics-3.4.2-r2.ebuild 2092
+RMD160 be50739ed1bfab62fb15c39a284e5d83d3b32862 kdegraphics-3.4.2-r2.ebuild 2092
+SHA256 c19037ee8506831ccdd60b09cd5ae8f0725563be577421ab01b8ad727449ce0d kdegraphics-3.4.2-r2.ebuild 2092
+EBUILD kdegraphics-3.4.3-r2.ebuild 1800 RMD160 e967c81854b25e8c6322ed2c278edf89fc3b269b SHA1 c3f2ef9e1fd3fdc8cbfb41b15252adf66f33121f SHA256 e4f26f2fdfa25ef5ed1348c65b7b814d6d2159476e7e744210798c734dcd0893 size 1800
+MD5 4e48e8ca8d76e54dd471ede73e9591a1 kdegraphics-3.4.3-r2.ebuild 1800
+RMD160 e967c81854b25e8c6322ed2c278edf89fc3b269b kdegraphics-3.4.3-r2.ebuild 1800
+SHA256 e4f26f2fdfa25ef5ed1348c65b7b814d6d2159476e7e744210798c734dcd0893 kdegraphics-3.4.3-r2.ebuild 1800
+EBUILD kdegraphics-3.4.3-r3.ebuild 2147 RMD160 0a247e19c2377c1d73119f0a844e8934fa2429c6 SHA1 65a28bded5f3ef38913e7dbae61f364fc956d251 SHA256 acc69c83789707ba2fd4f13478eefde8275c295c4e75d4373fde092b183f4a05 size 2147
+MD5 5997de79a64921c9af801c673daf6aef kdegraphics-3.4.3-r3.ebuild 2147
+RMD160 0a247e19c2377c1d73119f0a844e8934fa2429c6 kdegraphics-3.4.3-r3.ebuild 2147
+SHA256 acc69c83789707ba2fd4f13478eefde8275c295c4e75d4373fde092b183f4a05 kdegraphics-3.4.3-r3.ebuild 2147
+EBUILD kdegraphics-3.4.3-r4.ebuild 2211 RMD160 385e4810cdc746867e80729696383c5410b40b46 SHA1 8cf8d62dc7f61ad5b96695df04fa43d90410e2e1 SHA256 b27d6a8179e807ff377a6a4ac2a5532ddd00e89e89e06b98ce8af8bf1462168a size 2211
+MD5 f7b6e61a2021c264686f236708f580b3 kdegraphics-3.4.3-r4.ebuild 2211
+RMD160 385e4810cdc746867e80729696383c5410b40b46 kdegraphics-3.4.3-r4.ebuild 2211
+SHA256 b27d6a8179e807ff377a6a4ac2a5532ddd00e89e89e06b98ce8af8bf1462168a kdegraphics-3.4.3-r4.ebuild 2211
+EBUILD kdegraphics-3.4.3.ebuild 1742 RMD160 6ab817f4ede5be350fb5b87a42f580eed069cb06 SHA1 5dfec4ace27e34a4d90b261a4078c0903da81fb0 SHA256 4ebece5e85e30a8762eed5508b21caf6b2783787d828b0240a0bde93788da0b5 size 1742
+MD5 3e5137f010090ac274f37a80ad00beba kdegraphics-3.4.3.ebuild 1742
+RMD160 6ab817f4ede5be350fb5b87a42f580eed069cb06 kdegraphics-3.4.3.ebuild 1742
+SHA256 4ebece5e85e30a8762eed5508b21caf6b2783787d828b0240a0bde93788da0b5 kdegraphics-3.4.3.ebuild 1742
+EBUILD kdegraphics-3.5.2.ebuild 2282 RMD160 bb73a287cf71d96cecfb5913f2eff0c7651155c8 SHA1 11fdef24ce16a2aebaccbc8edb7538142e9be355 SHA256 2597d4c8f5d0763eebbeb1cc62c16818cffefe9dd528f40fc35ed7dc11881005 size 2282
+MD5 cdc56a5a6c43b8be3a0ab510b4b9bf63 kdegraphics-3.5.2.ebuild 2282
+RMD160 bb73a287cf71d96cecfb5913f2eff0c7651155c8 kdegraphics-3.5.2.ebuild 2282
+SHA256 2597d4c8f5d0763eebbeb1cc62c16818cffefe9dd528f40fc35ed7dc11881005 kdegraphics-3.5.2.ebuild 2282
+MISC ChangeLog 36299 RMD160 65ddc9c59a448f097ffe9e9c095d7c5b4889d2db SHA1 5623554aa10e78bd4833ffe8fbb53d85b554e3ff SHA256 23f2eba9bd61de32710bea57404124e2de40ae7ec05e5946fc5f44e9bc1d06a3 size 36299
+MD5 5e47cd6ff2baa3f19ba490bb8a2e3bec ChangeLog 36299
+RMD160 65ddc9c59a448f097ffe9e9c095d7c5b4889d2db ChangeLog 36299
+SHA256 23f2eba9bd61de32710bea57404124e2de40ae7ec05e5946fc5f44e9bc1d06a3 ChangeLog 36299
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a size 156
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 MD5 9eb12845ce85cc31e216d463877cb519 files/digest-kdegraphics-3.3.2-r3 71
 RMD160 01bd5c7a9326cf0910a6f6ed8c0ac03ed6810331 files/digest-kdegraphics-3.3.2-r3 71
 SHA256 bf2991d0b034274386c049c7399f7ea0ba22ba6cd8f061efb11d110edc412e07 files/digest-kdegraphics-3.3.2-r3 71
@@ -34,70 +122,10 @@ SHA256 855a1a4a8a0ad7e737acc281482598e137f230dfb23b434b6d773a00a165a2ad files/di
 MD5 4cd21cf1dda4d6e4a1d233b8f74d8240 files/digest-kdegraphics-3.5.2 518
 RMD160 d169f1b95af3ba919f5d5c20d6cd668ca77c8186 files/digest-kdegraphics-3.5.2 518
 SHA256 ced659c452eeeeb3057e56d16de64c5896102f6d87c8d18d30bfdcee0316e734 files/digest-kdegraphics-3.5.2 518
-MD5 72b0e0cd29559b5ac4a20829a3da892c files/kdegraphics-3.4-configure.patch 847
-RMD160 f1dbb93f6cf03fd88cf413312cb88a87b507e702 files/kdegraphics-3.4-configure.patch 847
-SHA256 5550143d34437160aa5adee3b5d6e47338121eda248c07fbbee2438a85b0d100 files/kdegraphics-3.4-configure.patch 847
-MD5 c52515e268cbff75a6f7b7d1ee1fad47 files/kdegraphics-3.4-gcc4.patch 1226
-RMD160 9f6f1fb1ffaaada77860e52cf393389e12e6ccfb files/kdegraphics-3.4-gcc4.patch 1226
-SHA256 ceae1bdc4c140042d352bfebfb32759051cb4feb7abe97f99410c0aa89228d1f files/kdegraphics-3.4-gcc4.patch 1226
-MD5 0abb98c262645006a4b116c0635edb49 files/kdegraphics-3.4.1-gocr.patch 454
-RMD160 8733b5147837989e5e23a06cab1a7ce7d6624e4b files/kdegraphics-3.4.1-gocr.patch 454
-SHA256 bd91732d64dddd09e0ca8af24b5f2aad39436be239ece27ec6d2aab029e4fd75 files/kdegraphics-3.4.1-gocr.patch 454
-MD5 653bd55a1e87c51731d0b0512051774e files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
-RMD160 0a28706eebe96636d063ecfc2960dfe01666ec43 files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
-SHA256 97c82623aca3131364e2d66b02b95a7ca2c5b6eacd17c4d15ea5a9890049b536 files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
-MD5 4caddebea4d845abb2de6dbbfe1b979a files/kdegraphics-3.4.2-kpdf-fix.patch 1024
-RMD160 b0183d302c385978bd725751601add55be6f234f files/kdegraphics-3.4.2-kpdf-fix.patch 1024
-SHA256 71d22256cfee7db6884087b67f34fa56319c321591980855955bad08b4d4e641 files/kdegraphics-3.4.2-kpdf-fix.patch 1024
-MD5 4a4bcdcb2456ab92b7846b6646da1bcb files/post-3.3.1-kdegraphics-4.diff 1797
-RMD160 4dd1cdb13a7453e58b8f0583be003f4bffcf0e64 files/post-3.3.1-kdegraphics-4.diff 1797
-SHA256 84853530577e48f7443041520e7b6492e0623eced168d2d9280ab3bb18a2b538 files/post-3.3.1-kdegraphics-4.diff 1797
-MD5 bf6b28780e0f5ea8f99e0777187e73cb files/post-3.3.2-kdegraphics.diff 1385
-RMD160 4d9aeeb52201b18ad05c012e8523a37464ec3e02 files/post-3.3.2-kdegraphics.diff 1385
-SHA256 6ed6a79694dac338db2a05049ceb6526cd7ea37d1c5fe6711d803c5ddc936048 files/post-3.3.2-kdegraphics.diff 1385
-MD5 ec3b95efe9139f4259d6de213fe4b87b files/post-3.4.1-kdegraphics-4.diff 1827
-RMD160 5bc2b23779549afda028fa820b3dd67938ba88a0 files/post-3.4.1-kdegraphics-4.diff 1827
-SHA256 d239c548d97cd1aa33d5987470bbb76aca996d284cce1cee8e7fb2d74597bd00 files/post-3.4.1-kdegraphics-4.diff 1827
-MD5 e8dde74416769d4589dcca25072aea3e files/post-3.4.3-kdegraphics-CAN-2005-3193.diff 9685
-RMD160 77e176e272746f9fb99506b3a3dc32e7b17401e3 files/post-3.4.3-kdegraphics-CAN-2005-3193.diff 9685
-SHA256 62da36cf89ea7a9a03a32dc6d96b27e1ee66d24798eb302902ffe6f80e8adfc0 files/post-3.4.3-kdegraphics-CAN-2005-3193.diff 9685
-MD5 ebbce0a49537b694932b3c0efcf18261 files/post-3.4.3-kdegraphics-CVE-2006-0301.diff 1775
-RMD160 8245dc7b6ae38c8f320ced7b12c978bf266ffce5 files/post-3.4.3-kdegraphics-CVE-2006-0301.diff 1775
-SHA256 6c72956c3c2a8d6ee3c1722184428309ec277172ecd422b25169aaa58b109915 files/post-3.4.3-kdegraphics-CVE-2006-0301.diff 1775
-MD5 2e5068285399de959f7257f5309dfbb9 kdegraphics-3.3.2-r3.ebuild 1615
-RMD160 9183b71c80ecff21bb2829ca8cfc68583fd24ce3 kdegraphics-3.3.2-r3.ebuild 1615
-SHA256 3d1ffb672b0bdb49fac6e26636cee4b1de946264283a0be5dc1d2d9f7ce4d60b kdegraphics-3.3.2-r3.ebuild 1615
-MD5 e10d1bfa905953b777c14febc1aecf2d kdegraphics-3.4.1-r1.ebuild 1458
-RMD160 a8ff5a3d7c221633bb6be5153b851f6947221b2f kdegraphics-3.4.1-r1.ebuild 1458
-SHA256 2bf2062eca42d2d7755e971dba9f2b94daf78c2705d974f37e14ef670dc7bcdf kdegraphics-3.4.1-r1.ebuild 1458
-MD5 a932c975d882d4bc9257346848aa9181 kdegraphics-3.4.1-r3.ebuild 1530
-RMD160 beeb652c30f527786826aab25e5a6988d959c781 kdegraphics-3.4.1-r3.ebuild 1530
-SHA256 a80ee1a6d96df92aca7e858597f415f02323fe9502b9156ee1bf1e2957f38633 kdegraphics-3.4.1-r3.ebuild 1530
-MD5 cbeb577dd43fab62566ee9d5471ed32a kdegraphics-3.4.2-r2.ebuild 2092
-RMD160 be50739ed1bfab62fb15c39a284e5d83d3b32862 kdegraphics-3.4.2-r2.ebuild 2092
-SHA256 c19037ee8506831ccdd60b09cd5ae8f0725563be577421ab01b8ad727449ce0d kdegraphics-3.4.2-r2.ebuild 2092
-MD5 4e48e8ca8d76e54dd471ede73e9591a1 kdegraphics-3.4.3-r2.ebuild 1800
-RMD160 e967c81854b25e8c6322ed2c278edf89fc3b269b kdegraphics-3.4.3-r2.ebuild 1800
-SHA256 e4f26f2fdfa25ef5ed1348c65b7b814d6d2159476e7e744210798c734dcd0893 kdegraphics-3.4.3-r2.ebuild 1800
-MD5 5997de79a64921c9af801c673daf6aef kdegraphics-3.4.3-r3.ebuild 2147
-RMD160 0a247e19c2377c1d73119f0a844e8934fa2429c6 kdegraphics-3.4.3-r3.ebuild 2147
-SHA256 acc69c83789707ba2fd4f13478eefde8275c295c4e75d4373fde092b183f4a05 kdegraphics-3.4.3-r3.ebuild 2147
-MD5 f7b6e61a2021c264686f236708f580b3 kdegraphics-3.4.3-r4.ebuild 2211
-RMD160 385e4810cdc746867e80729696383c5410b40b46 kdegraphics-3.4.3-r4.ebuild 2211
-SHA256 b27d6a8179e807ff377a6a4ac2a5532ddd00e89e89e06b98ce8af8bf1462168a kdegraphics-3.4.3-r4.ebuild 2211
-MD5 3e5137f010090ac274f37a80ad00beba kdegraphics-3.4.3.ebuild 1742
-RMD160 6ab817f4ede5be350fb5b87a42f580eed069cb06 kdegraphics-3.4.3.ebuild 1742
-SHA256 4ebece5e85e30a8762eed5508b21caf6b2783787d828b0240a0bde93788da0b5 kdegraphics-3.4.3.ebuild 1742
-MD5 80bdbf23d4a008f7d0936b5068f12a49 kdegraphics-3.5.2.ebuild 2203
-RMD160 048e4057b00195f8c5b955063b0245cbba0056f1 kdegraphics-3.5.2.ebuild 2203
-SHA256 b211f939dfc8e4fb0f4b33d5e0f307e47bdf452a309d058b5c20c54344737cec kdegraphics-3.5.2.ebuild 2203
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFENEsNAiZjviIA2XgRArYvAJ0d2DDebqkBC3uhK3Z4oRCLxmNs6QCfX4id
-X+JEZUf5qsAhsYarkqCJLkI=
-=gGrD
+iD8DBQFETSOzAiZjviIA2XgRAgs/AKCfCzuQzEuV7oKKQYm0tfWBbZ3lHwCdGwvz
+9oFMK7CwaanGl6UnGGaVxUA=
+=UIBt
 -----END PGP SIGNATURE-----

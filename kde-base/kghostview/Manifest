@@ -1,9 +1,41 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4725d8c769983960c48f2d095ecc338a ChangeLog 5647
-RMD160 ca12e7f08b370a0b15b5f8e9b825926fe3f4382f ChangeLog 5647
-SHA256 884c857e3772cc220a88e5b4ca9758cca5b93c4e90d17e829e4ca5947efa08d8 ChangeLog 5647
+AUX kdegraphics-3.4-gcc4.patch 1226 RMD160 9f6f1fb1ffaaada77860e52cf393389e12e6ccfb SHA1 287b46bbbf401d492ca3d86141c5dead16ce2e68 SHA256 ceae1bdc4c140042d352bfebfb32759051cb4feb7abe97f99410c0aa89228d1f size 1226
+MD5 c52515e268cbff75a6f7b7d1ee1fad47 files/kdegraphics-3.4-gcc4.patch 1226
+RMD160 9f6f1fb1ffaaada77860e52cf393389e12e6ccfb files/kdegraphics-3.4-gcc4.patch 1226
+SHA256 ceae1bdc4c140042d352bfebfb32759051cb4feb7abe97f99410c0aa89228d1f files/kdegraphics-3.4-gcc4.patch 1226
+DIST kdegraphics-3.4.0-3.4.1.tar.xdelta 292428 size 292428
+DIST kdegraphics-3.4.0.tar.bz2 6667685 size 6667685
+DIST kdegraphics-3.4.1-3.4.2.tar.xdelta 271381 size 271381
+DIST kdegraphics-3.4.1.tar.bz2 6581563 size 6581563
+DIST kdegraphics-3.4.2.tar.bz2 6579227 size 6579227
+DIST kdegraphics-3.4.3.tar.bz2 6554272 size 6554272
+DIST kdegraphics-3.5.2.tar.bz2 7288264 RMD160 cf2fce91b76af7d570b20f336ba551c5c3bd767f SHA256 b33e26d99188f0aee2dc0ff95923a1c1bca7f2a2510a1f761b155b8d2781e64f size 7288264
+EBUILD kghostview-3.4.1.ebuild 520 RMD160 ca1d957e0098b46bea2784625051abfa6770ef18 SHA1 29c142084f3eb5280b520edaea6bb7ac85599bc2 SHA256 26d4e93dfa0263c0eae41d971b9a9bdea83212c517836ebe032fd9f4303885d7 size 520
+MD5 7bf336ee8e49a2aea158cb57735bdb9e kghostview-3.4.1.ebuild 520
+RMD160 ca1d957e0098b46bea2784625051abfa6770ef18 kghostview-3.4.1.ebuild 520
+SHA256 26d4e93dfa0263c0eae41d971b9a9bdea83212c517836ebe032fd9f4303885d7 kghostview-3.4.1.ebuild 520
+EBUILD kghostview-3.4.2.ebuild 649 RMD160 926dab14e4c47c1cb22ac557ab2ffb65dc97ba9e SHA1 40d709f39a6ffc80c6b9aa419f83292a42cc8716 SHA256 8a8cd931087671d0186e69499bb51c91e18c773a2bd86c622a7a76beecb86c6a size 649
+MD5 6ec0dc30cd76eb94471e5d617b0b14a5 kghostview-3.4.2.ebuild 649
+RMD160 926dab14e4c47c1cb22ac557ab2ffb65dc97ba9e kghostview-3.4.2.ebuild 649
+SHA256 8a8cd931087671d0186e69499bb51c91e18c773a2bd86c622a7a76beecb86c6a kghostview-3.4.2.ebuild 649
+EBUILD kghostview-3.4.3.ebuild 536 RMD160 fc908cd8478a28b0ee0cfce029210901c63554ca SHA1 11e001fc8a9b748593b143eb63af122177750108 SHA256 750464a4938e00727bf8671127626a6634cdb33c6ad2296a148f59b1bed80b1e size 536
+MD5 16555d57c8222d62c0dc8c75bcac853d kghostview-3.4.3.ebuild 536
+RMD160 fc908cd8478a28b0ee0cfce029210901c63554ca kghostview-3.4.3.ebuild 536
+SHA256 750464a4938e00727bf8671127626a6634cdb33c6ad2296a148f59b1bed80b1e kghostview-3.4.3.ebuild 536
+EBUILD kghostview-3.5.2.ebuild 1017 RMD160 81a51519eab039d61ef3bc028d040e3fc47df31d SHA1 1865078ee3b6df43104fc37eaa1c5f92fdd73646 SHA256 269bb9e2a77ca170349316266b7941192dd2de0afa8b621cb789032f5b6f6ee9 size 1017
+MD5 63a0e2eff8063c168cc7adbcc5b2f924 kghostview-3.5.2.ebuild 1017
+RMD160 81a51519eab039d61ef3bc028d040e3fc47df31d kghostview-3.5.2.ebuild 1017
+SHA256 269bb9e2a77ca170349316266b7941192dd2de0afa8b621cb789032f5b6f6ee9 kghostview-3.5.2.ebuild 1017
+MISC ChangeLog 5810 RMD160 d69d1fc3ee8dbf10e210362c2dc0cff5c2f43338 SHA1 1f0b72e564df4e05de0862410e9cd762dee1e6be SHA256 449485da4732ad0ca0e78cb8e9832e59ca975f28ed57bd39bdd39fd2e911ea91 size 5810
+MD5 3b0b3a6f49f9891123ec9b335b6666bb ChangeLog 5810
+RMD160 d69d1fc3ee8dbf10e210362c2dc0cff5c2f43338 ChangeLog 5810
+SHA256 449485da4732ad0ca0e78cb8e9832e59ca975f28ed57bd39bdd39fd2e911ea91 ChangeLog 5810
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a size 156
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kghostview-3.4.1 221
 RMD160 ce80baa4c1806e9aacce02a4860a401e0ed7408f files/digest-kghostview-3.4.1 221
 SHA256 a5c43c1dc911a886d673620d40b300bcc9d5847fd0c55deaa7fa4fbc3b435c71 files/digest-kghostview-3.4.1 221
@@ -16,28 +48,10 @@ SHA256 855a1a4a8a0ad7e737acc281482598e137f230dfb23b434b6d773a00a165a2ad files/di
 MD5 64d3a195496428cb92d68de29ebf0fa0 files/digest-kghostview-3.5.2 259
 RMD160 2a4a7d812c7c571f5c5a8e4d4b8c8eb4fe7f52ae files/digest-kghostview-3.5.2 259
 SHA256 087152d6d869b8938c16752f1b5571e63dc1db0fa19f2e8913c00e77cebe3970 files/digest-kghostview-3.5.2 259
-MD5 c52515e268cbff75a6f7b7d1ee1fad47 files/kdegraphics-3.4-gcc4.patch 1226
-RMD160 9f6f1fb1ffaaada77860e52cf393389e12e6ccfb files/kdegraphics-3.4-gcc4.patch 1226
-SHA256 ceae1bdc4c140042d352bfebfb32759051cb4feb7abe97f99410c0aa89228d1f files/kdegraphics-3.4-gcc4.patch 1226
-MD5 7bf336ee8e49a2aea158cb57735bdb9e kghostview-3.4.1.ebuild 520
-RMD160 ca1d957e0098b46bea2784625051abfa6770ef18 kghostview-3.4.1.ebuild 520
-SHA256 26d4e93dfa0263c0eae41d971b9a9bdea83212c517836ebe032fd9f4303885d7 kghostview-3.4.1.ebuild 520
-MD5 6ec0dc30cd76eb94471e5d617b0b14a5 kghostview-3.4.2.ebuild 649
-RMD160 926dab14e4c47c1cb22ac557ab2ffb65dc97ba9e kghostview-3.4.2.ebuild 649
-SHA256 8a8cd931087671d0186e69499bb51c91e18c773a2bd86c622a7a76beecb86c6a kghostview-3.4.2.ebuild 649
-MD5 16555d57c8222d62c0dc8c75bcac853d kghostview-3.4.3.ebuild 536
-RMD160 fc908cd8478a28b0ee0cfce029210901c63554ca kghostview-3.4.3.ebuild 536
-SHA256 750464a4938e00727bf8671127626a6634cdb33c6ad2296a148f59b1bed80b1e kghostview-3.4.3.ebuild 536
-MD5 6e07ea1d0bfbcc0d79e4db5b9aca3a4b kghostview-3.5.2.ebuild 937
-RMD160 8cdb01afd028694d6f21092a6e7c5cdd86df9cce kghostview-3.5.2.ebuild 937
-SHA256 ba6331907e26dc4b3f5cd10db647fec84b0c8657d1d15f88415d826dd407c59f kghostview-3.5.2.ebuild 937
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEOTsIAiZjviIA2XgRArJHAJsGbLErRAPCUWXuE80bEO3hG3A7GACgnEAQ
-IPs6v0Qb48uiZQXs1Q4gQPQ=
-=3LYg
+iD8DBQFETSP0AiZjviIA2XgRAq12AJ9NYakuZbQvUE3ccJBdulmAfgfKEwCg7Dl2
+LTV9r3MvmjiIR/Tkff20JZg=
+=mvc2
 -----END PGP SIGNATURE-----
