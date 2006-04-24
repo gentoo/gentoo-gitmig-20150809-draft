@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.246 2006/04/05 22:57:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.247 2006/04/24 19:14:44 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdegraphics-3.5.2.ebuild:
+  Fix check for ghostscript built with X. Thanks to Andrei Ivanov in bug #131122.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/kpdf-3.5.0-cropbox-fix.patch,
