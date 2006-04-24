@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PlRPC
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.28 2006/02/26 04:27:06 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.29 2006/04/24 15:42:16 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> PlRPC-0.2018.ebuild:
+  Add ~x86-fbsd keyword.
 
   26 Feb 2006; Joshua Kinard <kumba@gentoo.org> PlRPC-0.2018.ebuild:
   Marked stable on mips.

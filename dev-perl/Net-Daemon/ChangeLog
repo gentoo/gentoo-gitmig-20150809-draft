@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Daemon
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.29 2005/09/30 21:49:33 matsuu Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.30 2006/04/24 15:39:38 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> Net-Daemon-0.38.ebuild:
+  Add ~x86-fbsd keyword.
 
   30 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> Net-Daemon-0.38.ebuild:
   Stable on sh.

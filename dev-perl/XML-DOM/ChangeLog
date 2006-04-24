@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-DOM
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/ChangeLog,v 1.34 2006/02/06 20:38:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/ChangeLog,v 1.35 2006/04/24 15:45:36 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> XML-DOM-1.44.ebuild:
+  Add ~x86-fbsd keyword.
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> XML-DOM-1.44.ebuild:
   stable on amd64

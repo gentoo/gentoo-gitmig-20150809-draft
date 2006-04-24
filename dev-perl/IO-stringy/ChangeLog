@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-stringy
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-stringy/ChangeLog,v 1.27 2006/02/06 20:25:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-stringy/ChangeLog,v 1.28 2006/04/24 15:36:58 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  IO-stringy-2.110.ebuild:
+  Add ~x86-fbsd keyword.
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> IO-stringy-2.110.ebuild:
   stable on amd64

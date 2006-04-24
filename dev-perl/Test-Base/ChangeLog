@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Base
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.12 2006/04/20 20:15:32 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.13 2006/04/24 15:58:27 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> Test-Base-0.50.ebuild:
+  Add ~x86-fbsd keyword.
 
   20 Apr 2006; Thomas Cort <tcort@gentoo.org> Test-Base-0.50.ebuild:
   Added ~amd64 keyword wrt Bug #119199.

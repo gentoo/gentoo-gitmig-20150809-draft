@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Iconv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Iconv/ChangeLog,v 1.22 2006/04/08 19:20:24 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Iconv/ChangeLog,v 1.23 2006/04/24 15:48:51 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> Text-Iconv-1.4.ebuild:
+  Add ~x86-fbsd keyword.
 
   08 Apr 2006; <mcummings@gentoo.org> Text-Iconv-1.4.ebuild:
   Keywording ~mips, tested on raq2

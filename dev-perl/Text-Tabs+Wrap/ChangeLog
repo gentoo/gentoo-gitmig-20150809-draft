@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-Tabs+Wrap
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Tabs+Wrap/ChangeLog,v 1.10 2005/09/17 00:45:44 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Tabs+Wrap/ChangeLog,v 1.11 2006/04/24 15:49:30 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  Text-Tabs+Wrap-2001.0929.ebuild:
+  Add ~x86-fbsd keyword.
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   Text-Tabs+Wrap-2001.0929.ebuild:

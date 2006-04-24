@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-SAX-Writer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Writer/ChangeLog,v 1.17 2006/04/21 21:12:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Writer/ChangeLog,v 1.18 2006/04/24 15:52:42 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  XML-SAX-Writer-0.44-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
   21 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   XML-SAX-Writer-0.44-r1.ebuild:

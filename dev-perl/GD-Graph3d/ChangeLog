@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD-Graph3d
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Graph3d/ChangeLog,v 1.13 2006/04/04 19:32:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Graph3d/ChangeLog,v 1.14 2006/04/24 15:36:19 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> GD-Graph3d-0.63.ebuild:
+  Add ~x86-fbsd keyword.
 
   04 Apr 2006; Aron Griffis <agriffis@gentoo.org> GD-Graph3d-0.63.ebuild:
   Mark 0.63 stable on ia64

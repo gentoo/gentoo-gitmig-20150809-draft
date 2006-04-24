@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/TimeDate-1.16.ebuild,v 1.12 2005/07/10 20:10:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/TimeDate-1.16.ebuild,v 1.13 2006/04/24 15:50:08 flameeyes Exp $
 
 inherit perl-module
 
@@ -10,5 +10,5 @@ SRC_URI="mirror://cpan/authors/id/G/GB/GBARR/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ppc sparc alpha ia64 ppc64"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""

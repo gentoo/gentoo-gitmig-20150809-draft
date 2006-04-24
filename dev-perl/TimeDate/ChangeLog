@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/TimeDate
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.21 2005/04/27 16:15:14 mcummings Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.22 2006/04/24 15:50:08 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> TimeDate-1.16.ebuild:
+  Add ~x86-fbsd keyword.
 
   27 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -TimeDate-1.11-r1.ebuild, -TimeDate-1.11-r2.ebuild, TimeDate-1.16.ebuild:

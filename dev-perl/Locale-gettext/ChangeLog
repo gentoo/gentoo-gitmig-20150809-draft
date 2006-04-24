@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Locale-gettext
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/ChangeLog,v 1.28 2006/04/24 05:07:32 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/ChangeLog,v 1.29 2006/04/24 15:37:38 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  Locale-gettext-1.05.ebuild:
+  Add ~x86-fbsd keyword.
 
   24 Apr 2006; Joshua Kinard <kumba@gentoo.org> Locale-gettext-1.05.ebuild:
   Marked stable on mips.
