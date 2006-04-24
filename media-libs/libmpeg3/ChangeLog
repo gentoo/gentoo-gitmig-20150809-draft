@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.40 2006/04/20 03:35:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.41 2006/04/24 23:58:17 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libmpeg3-1.5.2-gnustack.patch, libmpeg3-1.5.2-r3.ebuild:
+  Add a patch to remove executable stacks, thanks to Martin von Gagern in bug
+  #131155.
 
 *libmpeg3-1.5.2-r3 (20 Apr 2006)
 
