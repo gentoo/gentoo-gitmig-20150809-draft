@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.193 2006/04/17 16:25:39 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.194 2006/04/24 01:36:56 kumba Exp $
+
+  29 Apr 2006; Joshua Kinard <kumba@gentoo.org> udev-087.ebuild:
+  Marked stable on mips.
 
 *udev-090 (17 Apr 2006)
 

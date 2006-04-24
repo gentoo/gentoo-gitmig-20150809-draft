@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.47 2006/04/23 01:50:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.48 2006/04/24 01:37:39 kumba Exp $
+
+  29 Apr 2006; Joshua Kinard <kumba@gentoo.org> xfsprogs-2.7.11.ebuild:
+  Marked stable on mips.
 
   23 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   xfsprogs-2.7.11.ebuild:
