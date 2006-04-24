@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/package.mask,v 1.20 2006/02/08 14:24:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/package.mask,v 1.21 2006/04/24 23:16:07 weeve Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # We mask core 2.6 stuff to avoid bootstrap issues
@@ -74,3 +74,7 @@ sys-apps/pmount
 # Jason Wever <weeve@gentoo.org>
 # Masking versions of libffi that don't apply to this profile
 >=dev-libs/libffi-3.4.1
+
+# Jason Wever <weeve@gentoo.org>
+# Masking versions of net-firewall/ipsec-tools that need 2.6 kernel headers
+>=net-firewall/ipsec-tools-0.5
