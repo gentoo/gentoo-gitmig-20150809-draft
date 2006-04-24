@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-jpeg/cl-jpeg-1.033-r1.ebuild,v 1.8 2005/05/24 18:48:33 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-jpeg/cl-jpeg-1.033-r1.ebuild,v 1.9 2006/04/24 21:40:59 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -21,8 +21,10 @@ src_unpack() {
 	unpack ${A}
 	# patch: defconstant - compilation fix for SBCL
 	# patch: exports - export symbols at load time as well
-	epatch ${FILESDIR}/${PV}-defconstant-gentoo.patch || die
-	epatch ${FILESDIR}/${PV}-exports-gentoo.patch || die
+	# patch: quantize-optimization-clisp - dont bother on CLISP
+	epatch ${FILESDIR}/${PV}-defconstant-gentoo.patch
+	epatch ${FILESDIR}/${PV}-exports-gentoo.patch
+	epatch ${FILESDIR}/${PV}-quantize-optimization-clisp-gentoo.patch
 }
 
 src_install() {

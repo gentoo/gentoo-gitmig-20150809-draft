@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-jpeg
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-jpeg/ChangeLog,v 1.10 2005/05/24 18:48:33 mkennedy Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-jpeg/ChangeLog,v 1.11 2006/04/24 21:40:59 mkennedy Exp $
+
+  24 Apr 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/1.033-quantize-optimization-clisp-gentoo.patch,
+  cl-jpeg-1.033-r1.ebuild:
+  Don't try the compile-time *quantization-optimization* test when CLISP is
+  being used; Resolves Bug #104857.
 
   24 May 2005; <mkennedy@gentoo.org> cl-jpeg-1.033-r1.ebuild:
   Keywording ~sparc
