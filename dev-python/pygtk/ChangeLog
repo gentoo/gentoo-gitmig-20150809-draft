@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.110 2006/04/24 10:10:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.111 2006/04/24 21:54:10 liquidx Exp $
+
+*pygtk-2.8.6 (24 Apr 2006)
+
+  24 Apr 2006; Alastair Tse <liquidx@gentoo.org> +pygtk-2.8.6.ebuild:
+  version bump
 
   24 Apr 2006; Alastair Tse <liquidx@gentoo.org> -pygtk-1.99.13-r1.ebuild,
   -pygtk-2.0.0.ebuild, -pygtk-2.0.0-r1.ebuild, -pygtk-2.2.0.ebuild,
