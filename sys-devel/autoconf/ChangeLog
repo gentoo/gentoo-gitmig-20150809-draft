@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.74 2006/03/30 13:48:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.75 2006/04/24 02:14:03 kumba Exp $
+
+  29 Apr 2006; Joshua Kinard <kumba@gentoo.org> ChangeLog:
+  Marked stable on mips.
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> autoconf-2.13.ebuild,
   autoconf-2.59-r7.ebuild:

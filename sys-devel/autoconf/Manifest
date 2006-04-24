@@ -1,43 +1,46 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 018ee7b719b330f7583b6f506b88a78a ChangeLog 11181
-RMD160 b5a8c828c70799902fef8308d601eaaf824aef64 ChangeLog 11181
-SHA256 c39380ef8b7f27be8ff7fb9efbd51954003261972f93e552e7b6643c5c5590b0 ChangeLog 11181
-MD5 f623f768f63ae6e89c7e79705e2ec9e1 autoconf-2.13.ebuild 1563
-RMD160 8b34c900a378855716c2aa69fd7b2f988a330b8d autoconf-2.13.ebuild 1563
-SHA256 da9f7ce98fbad81fc350cf905d2d608ce93fe3ada71a1782d03f8493b6aeab2e autoconf-2.13.ebuild 1563
-MD5 2f177a535539f25d52f270603bca85fa autoconf-2.59-r6.ebuild 1237
-RMD160 888ecfad239d0d080576b91afd89eb4f361d0d7c autoconf-2.59-r6.ebuild 1237
-SHA256 51314c3ec91822538aeca63b60d8b66c29af109b441c1390bf9222e985cebfd6 autoconf-2.59-r6.ebuild 1237
-MD5 04344657c201dfb0ccaa446992d8723b autoconf-2.59-r7.ebuild 1259
-RMD160 f945b0b518bd4901d4098fd80dd11aea6f9a20cf autoconf-2.59-r7.ebuild 1259
-SHA256 156a0029457763308f8aa0ff6898d798048f4c0891c7ee4054437bc16cb778e5 autoconf-2.59-r7.ebuild 1259
+AUX autoconf-2.13-destdir.patch 677 RMD160 ff71fb18c1676455e267dfd8f3059e8c9384fe19 SHA1 5ef1905e271e078cecea3424560207585868e9cd SHA256 67c3eaf2f8aaf3acbcff387bc3fc6d46688b56a6b51043344e301bfaf16186a0 size 677
 MD5 dee8e039dbcfd6a6543e28688615ee17 files/autoconf-2.13-destdir.patch 677
 RMD160 ff71fb18c1676455e267dfd8f3059e8c9384fe19 files/autoconf-2.13-destdir.patch 677
 SHA256 67c3eaf2f8aaf3acbcff387bc3fc6d46688b56a6b51043344e301bfaf16186a0 files/autoconf-2.13-destdir.patch 677
+AUX autoconf-2.13-gentoo.patch 898 RMD160 c39068cd8477188cde4818049c32b4142689ca0d SHA1 17bdf4d77c8a0c738f20378f0b281fd6ecf57ddd SHA256 5d6a4b9d8d789684b44addf565200a90ee92140d58bebf087373ae82c4d89ea8 size 898
 MD5 edfa347b2a6e2c0de846cabda899b429 files/autoconf-2.13-gentoo.patch 898
 RMD160 c39068cd8477188cde4818049c32b4142689ca0d files/autoconf-2.13-gentoo.patch 898
 SHA256 5d6a4b9d8d789684b44addf565200a90ee92140d58bebf087373ae82c4d89ea8 files/autoconf-2.13-gentoo.patch 898
+AUX autoconf-2.59-more-quotes.patch 1223 RMD160 f704db2caacdb3c7eedbe39ec1745503b336391c SHA1 ae3d0e3be5ffb4fc84a30a60e6c78c1fcc45a68b SHA256 0bd6d00b2f77e89684ed7305c3821090950fcc6407ab045fd3ace91ac0b19abd size 1223
 MD5 616563340fe214518ae208b42550d851 files/autoconf-2.59-more-quotes.patch 1223
 RMD160 f704db2caacdb3c7eedbe39ec1745503b336391c files/autoconf-2.59-more-quotes.patch 1223
 SHA256 0bd6d00b2f77e89684ed7305c3821090950fcc6407ab045fd3ace91ac0b19abd files/autoconf-2.59-more-quotes.patch 1223
-MD5 02c192b9ea3e4945d007a8cfde221c73 files/digest-autoconf-2.13 65
-RMD160 832840b58fb801e51ef0f590614a61eb565e5330 files/digest-autoconf-2.13 65
-SHA256 867ffd3f8499014b6bd437350f14c4d3fe42cb0b8c8daa3c00c2d6d2e87893b6 files/digest-autoconf-2.13 65
-MD5 ed1c29020cbdfc79d6a1ece183afd936 files/digest-autoconf-2.59-r6 66
-RMD160 468925a5fd7ec734b45e394f5b51c1d2c5a0c577 files/digest-autoconf-2.59-r6 66
-SHA256 610a706c7ac9eba8caadccba589863ff920a33dab17af4075675a5ea6ff14537 files/digest-autoconf-2.59-r6 66
-MD5 ed1c29020cbdfc79d6a1ece183afd936 files/digest-autoconf-2.59-r7 66
-RMD160 468925a5fd7ec734b45e394f5b51c1d2c5a0c577 files/digest-autoconf-2.59-r7 66
-SHA256 610a706c7ac9eba8caadccba589863ff920a33dab17af4075675a5ea6ff14537 files/digest-autoconf-2.59-r7 66
+DIST autoconf-2.13.tar.gz 443844 size 443844
+DIST autoconf-2.59.tar.bz2 925073 size 925073
+EBUILD autoconf-2.13.ebuild 1563 RMD160 8b34c900a378855716c2aa69fd7b2f988a330b8d SHA1 e8913490488372910b039f8b8d00fa27ba20f595 SHA256 da9f7ce98fbad81fc350cf905d2d608ce93fe3ada71a1782d03f8493b6aeab2e size 1563
+MD5 f623f768f63ae6e89c7e79705e2ec9e1 autoconf-2.13.ebuild 1563
+RMD160 8b34c900a378855716c2aa69fd7b2f988a330b8d autoconf-2.13.ebuild 1563
+SHA256 da9f7ce98fbad81fc350cf905d2d608ce93fe3ada71a1782d03f8493b6aeab2e autoconf-2.13.ebuild 1563
+EBUILD autoconf-2.59-r6.ebuild 1237 RMD160 888ecfad239d0d080576b91afd89eb4f361d0d7c SHA1 cfad8c59ffabd53b0445d964ebf3baabfbac7b1c SHA256 51314c3ec91822538aeca63b60d8b66c29af109b441c1390bf9222e985cebfd6 size 1237
+MD5 2f177a535539f25d52f270603bca85fa autoconf-2.59-r6.ebuild 1237
+RMD160 888ecfad239d0d080576b91afd89eb4f361d0d7c autoconf-2.59-r6.ebuild 1237
+SHA256 51314c3ec91822538aeca63b60d8b66c29af109b441c1390bf9222e985cebfd6 autoconf-2.59-r6.ebuild 1237
+EBUILD autoconf-2.59-r7.ebuild 1259 RMD160 f945b0b518bd4901d4098fd80dd11aea6f9a20cf SHA1 a2e1e8b6f4f8b0a7b6cdf83b7d57c95b15a8be6a SHA256 156a0029457763308f8aa0ff6898d798048f4c0891c7ee4054437bc16cb778e5 size 1259
+MD5 04344657c201dfb0ccaa446992d8723b autoconf-2.59-r7.ebuild 1259
+RMD160 f945b0b518bd4901d4098fd80dd11aea6f9a20cf autoconf-2.59-r7.ebuild 1259
+SHA256 156a0029457763308f8aa0ff6898d798048f4c0891c7ee4054437bc16cb778e5 autoconf-2.59-r7.ebuild 1259
+MISC ChangeLog 11262 RMD160 f35f4e2442663d8634f3deba4c5dbc9799a27c9a SHA1 5f51c08c61a957572eecf86d4806b7f72bc00c41 SHA256 bbd547281054e090796d8cb41a8ef80de9177a50fa905997ea1e18ad76970257 size 11262
+MD5 2cd656e6892ab86b299db541801b7415 ChangeLog 11262
+RMD160 f35f4e2442663d8634f3deba4c5dbc9799a27c9a ChangeLog 11262
+SHA256 bbd547281054e090796d8cb41a8ef80de9177a50fa905997ea1e18ad76970257 ChangeLog 11262
+MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 size 164
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEK+HKAiZjviIA2XgRAvEMAKDSaVWzQOOSkBUru6STfdQs2xKAYACaAlLN
-so7yKHIp2IoqPzq6Z2sOkeg=
-=BOL3
------END PGP SIGNATURE-----
+MD5 02c192b9ea3e4945d007a8cfde221c73 files/digest-autoconf-2.13 65
+RMD160 832840b58fb801e51ef0f590614a61eb565e5330 files/digest-autoconf-2.13 65
+SHA256 867ffd3f8499014b6bd437350f14c4d3fe42cb0b8c8daa3c00c2d6d2e87893b6 files/digest-autoconf-2.13 65
+size 65 files/digest-autoconf-2.13 65
+MD5 ed1c29020cbdfc79d6a1ece183afd936 files/digest-autoconf-2.59-r6 66
+RMD160 468925a5fd7ec734b45e394f5b51c1d2c5a0c577 files/digest-autoconf-2.59-r6 66
+SHA256 610a706c7ac9eba8caadccba589863ff920a33dab17af4075675a5ea6ff14537 files/digest-autoconf-2.59-r6 66
+size 66 files/digest-autoconf-2.59-r6 66
+MD5 ed1c29020cbdfc79d6a1ece183afd936 files/digest-autoconf-2.59-r7 66
+RMD160 468925a5fd7ec734b45e394f5b51c1d2c5a0c577 files/digest-autoconf-2.59-r7 66
+SHA256 610a706c7ac9eba8caadccba589863ff920a33dab17af4075675a5ea6ff14537 files/digest-autoconf-2.59-r7 66
+size 66 files/digest-autoconf-2.59-r7 66
