@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Test-Simple
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.4 2006/02/26 06:30:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.5 2006/04/24 15:09:24 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  perl-Test-Simple-0.62.ebuild:
+  Add ~x86-fbsd keyword.
 
   26 Feb 2006; Joshua Kinard <kumba@gentoo.org>
   perl-Test-Simple-0.62.ebuild:

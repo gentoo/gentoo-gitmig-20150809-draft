@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Test-Harness
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.5 2006/03/26 16:49:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.6 2006/04/24 15:13:22 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  perl-Test-Harness-2.56.ebuild:
+  Add ~x86-fbsd keyword.
 
 *perl-Test-Harness-2.48 (26 Mar 2006)
 
