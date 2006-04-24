@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.62 2006/04/21 18:14:57 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.63 2006/04/24 13:58:23 gustavoz Exp $
+
+  24 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  lvm2-2.02.04-r1.ebuild:
+  Stable on hppa & sparc wrt #130529
 
 *lvm2-2.02.04-r1 (21 Apr 2006)
 
