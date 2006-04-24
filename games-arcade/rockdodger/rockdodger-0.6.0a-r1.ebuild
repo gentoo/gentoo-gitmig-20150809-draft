@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/rockdodger-0.6.0a-r1.ebuild,v 1.2 2004/12/11 05:50:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/rockdodger-0.6.0a-r1.ebuild,v 1.3 2006/04/24 14:25:55 tupone Exp $
 
 inherit eutils games
 
@@ -39,7 +39,8 @@ src_unpack() {
 	sed -i \
 		-e "s:512:1024:" sound.c \
 			|| die "sed sound.c failed"
-	epatch "${FILESDIR}/${PV}-sec.patch"
+	epatch "${FILESDIR}/${PV}-sec.patch" \
+		"${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_install() {

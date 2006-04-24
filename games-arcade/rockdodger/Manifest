@@ -1,5 +1,28 @@
-MD5 c0a9689327ab2673f7b7e204830893c9 ChangeLog 896
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 abe6c66224fad050e39b0d9589de7aeb rockdodger-0.6.0a-r1.ebuild 1558
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fb9ebf3ad58e8e14d84af5af435a22df ChangeLog 1016
+RMD160 ef1f27c19987986f075c8dff342ddf3d44d31f4d ChangeLog 1016
+SHA256 b6cc33b4e72c4bfa168230892f38c8039440ab9574639b7a11b7c6c1a5276ea5 ChangeLog 1016
 MD5 1606327f50449423e375330cdd1b8be9 files/0.6.0a-sec.patch 660
-MD5 050672dcfe88d3c6f8d27c3e7ce26025 files/digest-rockdodger-0.6.0a-r1 69
+RMD160 8c17aab2634abea7ca04a9a2527d7a29275aa495 files/0.6.0a-sec.patch 660
+SHA256 ce9997508baa40e7ad3809446e39592a8e43c77787e6c5afc52a18522688ac71 files/0.6.0a-sec.patch 660
+MD5 f33fc3a2a3d6883f3a5e6acc3d595eb2 files/digest-rockdodger-0.6.0a-r1 253
+RMD160 5ed1b8f27e1b087c17238ff857aeee608d5c7db4 files/digest-rockdodger-0.6.0a-r1 253
+SHA256 7eeca5ea554b6cdf8e5178e1699ec6d2cb8952e163d8c9f41c4735ca5090f477 files/digest-rockdodger-0.6.0a-r1 253
+MD5 c8b17a6ffaa12f1a116170437b4629c0 files/rockdodger-0.6.0a-gcc41.patch 516
+RMD160 c1b84ff7b2c933d329c9350129b58ddcd81a06ca files/rockdodger-0.6.0a-gcc41.patch 516
+SHA256 4a4d0bd2611fcdd771fa2bd8c79426a28ddf2bfed5eb20eed2311ec8be9929ce files/rockdodger-0.6.0a-gcc41.patch 516
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 737909fe315b12a1b5fae358397f579c rockdodger-0.6.0a-r1.ebuild 1590
+RMD160 713b4897ab531caf16b92dd376ef25ce630da564 rockdodger-0.6.0a-r1.ebuild 1590
+SHA256 c125f4048b7ad85960ba8b644916a2178e4ece6646d6d7506a5d4694812fbdb7 rockdodger-0.6.0a-r1.ebuild 1590
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFETOAD2CTtIKiFlQIRAmCrAJ9EFjBhKXbenpdNMDtbZaaqdmEISACcC0I/
+Hhab3Y05DYlzZXKh43ufFLo=
+=WUuD
+-----END PGP SIGNATURE-----
