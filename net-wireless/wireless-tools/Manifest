@@ -1,12 +1,58 @@
-MD5 e88df183be972712381f0a26ec8f2f6e ChangeLog 17142
-MD5 7c44525122efc01a49db2723c5f0d5c6 files/digest-wireless-tools-27-r1 69
-MD5 80e241eb0f84148fc653b3ec8c3fb9c4 files/digest-wireless-tools-28 69
-MD5 7e76f132026f6d2011564531281acb61 files/digest-wireless-tools-28_pre10 75
-MD5 54e0886041c5c00780979d33ae92f4d7 files/digest-wireless-tools-28_pre14 75
-MD5 c32195926ff7a322988f4a97752efaff files/digest-wireless-tools-29_pre9 74
-MD5 090667c70477a1c3090045d2d962d4d5 metadata.xml 581
-MD5 0c429496f93887b6e423a7101244736a wireless-tools-27-r1.ebuild 1364
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST wireless_tools.27.tar.gz 187790 size 187790
+DIST wireless_tools.28.pre10.tar.gz 236414 size 236414
+DIST wireless_tools.28.pre14.tar.gz 240275 size 240275
+DIST wireless_tools.28.tar.gz 254077 size 254077
+DIST wireless_tools.29.pre9.tar.gz 273357 size 273357
+EBUILD wireless-tools-27-r1.ebuild 1358 RMD160 948c58b4d304c05eb7c6e8201e1b82c0232f4172 SHA1 1d32831a73b8b328c983015b4262dda9cd7b20da SHA256 3632d2d73c0dbe5dd648149124a07d8010830769f9a74e6baf1883dc49d35dc9 size 1358
+MD5 6fcf8b4181268309da913e08e95d4fd8 wireless-tools-27-r1.ebuild 1358
+RMD160 948c58b4d304c05eb7c6e8201e1b82c0232f4172 wireless-tools-27-r1.ebuild 1358
+SHA256 3632d2d73c0dbe5dd648149124a07d8010830769f9a74e6baf1883dc49d35dc9 wireless-tools-27-r1.ebuild 1358
+EBUILD wireless-tools-28.ebuild 2021 RMD160 9800a1585d98fa6aa6a1d23671fc6d34565a2f09 SHA1 2900c4f23c9c2eba52bdebc5e401279096f586b6 SHA256 e2567c171e4f18b8d3c71715fad9aa29c4cdf095f178d42209431e2c9dd76400 size 2021
 MD5 ed3b49d96e5f3829b5934e2ec02ce3eb wireless-tools-28.ebuild 2021
+RMD160 9800a1585d98fa6aa6a1d23671fc6d34565a2f09 wireless-tools-28.ebuild 2021
+SHA256 e2567c171e4f18b8d3c71715fad9aa29c4cdf095f178d42209431e2c9dd76400 wireless-tools-28.ebuild 2021
+EBUILD wireless-tools-28_pre10.ebuild 2407 RMD160 e35acceb20abe3bb231bd2668a333c805febcfff SHA1 587639e24f889c9b5a2c55ad977004af27972dbe SHA256 2af6b218c5384394c64068663b38e97c35fbb88b9a446e6752acf27491d15d52 size 2407
 MD5 a3c119477257171bd5a50ef09715f186 wireless-tools-28_pre10.ebuild 2407
+RMD160 e35acceb20abe3bb231bd2668a333c805febcfff wireless-tools-28_pre10.ebuild 2407
+SHA256 2af6b218c5384394c64068663b38e97c35fbb88b9a446e6752acf27491d15d52 wireless-tools-28_pre10.ebuild 2407
+EBUILD wireless-tools-28_pre14.ebuild 2027 RMD160 46292a8d277be2a77b9f29604b8f84b260fb4cf5 SHA1 ae663414862b4700536fc1734eb139fb14941e81 SHA256 794bedf9ccc268dc7b9a02f3651134871f7bede4e90d6d9ea88f7435466a992e size 2027
 MD5 a51e5bc0e38da1263719f8a1b9da9823 wireless-tools-28_pre14.ebuild 2027
+RMD160 46292a8d277be2a77b9f29604b8f84b260fb4cf5 wireless-tools-28_pre14.ebuild 2027
+SHA256 794bedf9ccc268dc7b9a02f3651134871f7bede4e90d6d9ea88f7435466a992e wireless-tools-28_pre14.ebuild 2027
+EBUILD wireless-tools-29_pre9.ebuild 2030 RMD160 6dc46620418705e111919b05dc8b5d1edacdaf3b SHA1 f2faf6cafb72398513dc29e7dec1e95a543626aa SHA256 1c993e479aac9f01769fdeb7723ae3aa3329a5ae93210db4601d662411598ff4 size 2030
 MD5 37f06a18eaed5cb05055d2ac87a8ca89 wireless-tools-29_pre9.ebuild 2030
+RMD160 6dc46620418705e111919b05dc8b5d1edacdaf3b wireless-tools-29_pre9.ebuild 2030
+SHA256 1c993e479aac9f01769fdeb7723ae3aa3329a5ae93210db4601d662411598ff4 wireless-tools-29_pre9.ebuild 2030
+MISC ChangeLog 17142 RMD160 8d27621203a6c5c0b22c3f464c5fb518e820116f SHA1 31510f126c8496c6a53a256727b579b1d1bb1be7 SHA256 6a54ac0ce5c1bede1d6f7b7fa5799869552c1c98145e226cbeda1366fe008bc7 size 17142
+MD5 e88df183be972712381f0a26ec8f2f6e ChangeLog 17142
+RMD160 8d27621203a6c5c0b22c3f464c5fb518e820116f ChangeLog 17142
+SHA256 6a54ac0ce5c1bede1d6f7b7fa5799869552c1c98145e226cbeda1366fe008bc7 ChangeLog 17142
+MISC metadata.xml 581 RMD160 094be996d56449c9ee8ad4eb9782e6e2bbebeddf SHA1 ea567ab1f157a513f2b11d809296eafb17597f2d SHA256 30b19836daebeaaa50f81e75cbe33e797cbb625f2a376e3dfc1d40f9e3fefc3f size 581
+MD5 090667c70477a1c3090045d2d962d4d5 metadata.xml 581
+RMD160 094be996d56449c9ee8ad4eb9782e6e2bbebeddf metadata.xml 581
+SHA256 30b19836daebeaaa50f81e75cbe33e797cbb625f2a376e3dfc1d40f9e3fefc3f metadata.xml 581
+MD5 7c44525122efc01a49db2723c5f0d5c6 files/digest-wireless-tools-27-r1 69
+RMD160 c90881d4eb47a7a16da95019c4ee1f34b14d0af1 files/digest-wireless-tools-27-r1 69
+SHA256 aaee6e01c92dcb341dcdc3ca05c6ccab94a0e283bb27641310e38df5cfc5af1b files/digest-wireless-tools-27-r1 69
+MD5 80e241eb0f84148fc653b3ec8c3fb9c4 files/digest-wireless-tools-28 69
+RMD160 0c09738a7e6d80e5f97c990a626b64acecaeda23 files/digest-wireless-tools-28 69
+SHA256 7953eee049474dc73b4320e60622b5429bb4f8cb85760a8fb70eba4b0374c533 files/digest-wireless-tools-28 69
+MD5 7e76f132026f6d2011564531281acb61 files/digest-wireless-tools-28_pre10 75
+RMD160 0332890a7488215eaf1cd61d94608aefd1dd33e7 files/digest-wireless-tools-28_pre10 75
+SHA256 af1910f360ea8dfe308b51326e7da905057ae98157312faed727a6a458d4f2fa files/digest-wireless-tools-28_pre10 75
+MD5 54e0886041c5c00780979d33ae92f4d7 files/digest-wireless-tools-28_pre14 75
+RMD160 849245dba24e58cb1c336c9e15038f1021d459cd files/digest-wireless-tools-28_pre14 75
+SHA256 ac61275b5cbaef500b7ed54f783b43c2b58d340822da455ba00e05507888a6d3 files/digest-wireless-tools-28_pre14 75
+MD5 c32195926ff7a322988f4a97752efaff files/digest-wireless-tools-29_pre9 74
+RMD160 97532303c73b0bf10faea912ce26b1f51883f6ef files/digest-wireless-tools-29_pre9 74
+SHA256 22773b7a0f9c88c569ac02958c1c9ac02b42675e051b7140e837400e2f1d4800 files/digest-wireless-tools-29_pre9 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFETPWHI1lqEGTUzyQRAt+QAJ9FzK0yXnVhoQVzIRc+yBni685/DQCgl0NT
++YWt/ONKI+FvYvX+Cgymsxg=
+=cxGO
+-----END PGP SIGNATURE-----
