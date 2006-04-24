@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7bc3f09a803dc60e21bc33461c965333 ChangeLog 446
+MD5 981b94f4a8e2bd88c1e53a39bea586a4 files/digest-vdr2jpeg-0.0.7 62
+MD5 449190278e2f7bcc82eef7a874a9987a files/digest-vdr2jpeg-0.0.8b 63
+MD5 12a2d83e37f4c53b944ebe9d81da75d1 metadata.xml 419
+MD5 7622038e563cf231e3704ea40362bcf3 vdr2jpeg-0.0.7.ebuild 800
+MD5 bd94c976f5218bad7ab8a8dcd2e78def vdr2jpeg-0.0.8b.ebuild 665
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFETJRkdn07HTTCgIoRAmIYAKCWggWgOgXQTbHg8HNA9FnK5/5dwACfV+UU
+DbqnBi04mSviU1XuBOjhibg=
+=Wboh
+-----END PGP SIGNATURE-----

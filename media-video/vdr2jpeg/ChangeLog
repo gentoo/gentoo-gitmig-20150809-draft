@@ -1,0 +1,11 @@
+# ChangeLog for media-video/vdr2jpeg
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/ChangeLog,v 1.1 2006/04/24 09:03:17 hd_brummy Exp $
+
+*vdr2jpeg-0.0.8b (24 Apr 2006)
+*vdr2jpeg-0.0.7 (24 Apr 2006)
+
+  24 Apr 2006; Joerg Bornkessel <hd_brummy@gentoo.org> +metadata.xml,
+  +vdr2jpeg-0.0.7.ebuild, +vdr2jpeg-0.0.8b.ebuild:
+  initial ebuild; imported from Gentoo.de CVS
+
