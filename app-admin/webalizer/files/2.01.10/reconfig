@@ -1,7 +1,0 @@
-#!/bin/bash
-if [ $1 = "install" ]; then
-	# somewhat braindead - not sure which Apache we're using, so try both
-	[[ -a /etc/apache/modules.d/55_webalizer.conf ]] && file1="/etc/apache/modules.d/55_webalizer.conf"
-	[[ -a /etc/apache2/modules.d/55_webalizer.conf ]] && file2="/etc/apache2/modules.d/55_webalizer.conf"
-	sed -e "s|DIR|${MY_INSTALLDIR}|g" -i ${file1} ${file2} /etc/webalizer.conf
-fi
