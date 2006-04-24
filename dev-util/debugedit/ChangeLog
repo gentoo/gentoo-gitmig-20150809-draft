@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/debugedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.3 2006/04/22 08:13:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.4 2006/04/24 07:07:01 spyderous Exp $
+
+  24 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  debugedit-4.4.3.ebuild:
+  Keyword ~ppc.
 
   22 Apr 2006; Markus Rothe <corsair@gentoo.org> debugedit-4.4.3.ebuild:
   Added ~ppc64
