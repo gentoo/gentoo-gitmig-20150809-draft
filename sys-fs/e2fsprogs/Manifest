@@ -1,52 +1,57 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ad50bc3b83ff80b4c4e5fd6dec86779c ChangeLog 14416
-RMD160 55c821abcf4f1a8f05b7c3c1debaf46db3f79f56 ChangeLog 14416
-SHA256 46289f9f888977b434496145febb0c4a7cdf11eeaacef94b12240065e7a7f962 ChangeLog 14416
-MD5 79335193d9e46cd0b92fc3a31d1911d5 e2fsprogs-1.38-r1.ebuild 4473
-RMD160 23c39f6b92a6320d6a8d09739687c62f2b04b0d9 e2fsprogs-1.38-r1.ebuild 4473
-SHA256 e44e908ea4905df2e9a5065fab1ee6807107231fe061c78625586c5fe0453ead e2fsprogs-1.38-r1.ebuild 4473
-MD5 6fbfc726ec96aa19955c90f44e25d3f9 e2fsprogs-1.38.ebuild 3733
-RMD160 0c3f178dab7d5f01294f977b153a1f99d8ef3a8e e2fsprogs-1.38.ebuild 3733
-SHA256 c56b40621fce536c2891fbb1d8932e5a379a80454a38d0b7c4d0bb3a94c48446 e2fsprogs-1.38.ebuild 3733
-MD5 0911aedd4968aa4053139791a961e2a2 files/digest-e2fsprogs-1.38 67
-RMD160 fea673f4fa6081ae0e28b5c4111aed139af12390 files/digest-e2fsprogs-1.38 67
-SHA256 bf28fd56f8851a85654d0da5a23afeabe055c714f963ae7245e8516e61b1de6e files/digest-e2fsprogs-1.38 67
-MD5 0911aedd4968aa4053139791a961e2a2 files/digest-e2fsprogs-1.38-r1 67
-RMD160 fea673f4fa6081ae0e28b5c4111aed139af12390 files/digest-e2fsprogs-1.38-r1 67
-SHA256 bf28fd56f8851a85654d0da5a23afeabe055c714f963ae7245e8516e61b1de6e files/digest-e2fsprogs-1.38-r1 67
+AUX e2fsprogs-1.32-mk_cmds-cosmetic.patch 316 RMD160 42dae53c318fb52b39c8e1d357974111bf8712bf SHA1 2515d77050072bcd1ae7defa90f32fb101ac01c5 SHA256 182da8741b852fdaf2d17a485da0451ec0c665adb83327b29b3372e2e43f712a size 316
 MD5 1a896f2697b055d4b8b4139c3482ac9e files/e2fsprogs-1.32-mk_cmds-cosmetic.patch 316
 RMD160 42dae53c318fb52b39c8e1d357974111bf8712bf files/e2fsprogs-1.32-mk_cmds-cosmetic.patch 316
 SHA256 182da8741b852fdaf2d17a485da0451ec0c665adb83327b29b3372e2e43f712a files/e2fsprogs-1.32-mk_cmds-cosmetic.patch 316
+AUX e2fsprogs-1.36-makefile.patch 3546 RMD160 e3192ce562e534f75fd22679b7d222611f7d031d SHA1 55605d34186ef626816f1754faf607eea960a154 SHA256 6c6880203317d881cec66a8862baf998b0a8f8e0d62ea45e2efc1ba867ccca6c size 3546
 MD5 c5e6ed46f8a6b9f75273863110887b22 files/e2fsprogs-1.36-makefile.patch 3546
 RMD160 e3192ce562e534f75fd22679b7d222611f7d031d files/e2fsprogs-1.36-makefile.patch 3546
 SHA256 6c6880203317d881cec66a8862baf998b0a8f8e0d62ea45e2efc1ba867ccca6c files/e2fsprogs-1.36-makefile.patch 3546
+AUX e2fsprogs-1.38-blkid-ext23.patch 714 RMD160 3f3a0f85feb1b8a2d1b8a2c86b98d7628b14f50d SHA1 066dfa93f329ddf4e2b8fcc064dda7cfe10a6eab SHA256 39e46cecab03e91a8af0ada31474354604e475d48615f95189aefce4a5e0455e size 714
 MD5 ebeacdb9470e8d7ad33a259a71164672 files/e2fsprogs-1.38-blkid-ext23.patch 714
 RMD160 3f3a0f85feb1b8a2d1b8a2c86b98d7628b14f50d files/e2fsprogs-1.38-blkid-ext23.patch 714
 SHA256 39e46cecab03e91a8af0ada31474354604e475d48615f95189aefce4a5e0455e files/e2fsprogs-1.38-blkid-ext23.patch 714
+AUX e2fsprogs-1.38-blkid-swsuspend.patch 1772 RMD160 fa309cb7d99f27f4f3d863a0a2dd2c49ad198045 SHA1 5e9525b6264131a650d31fff3942c0a71dae2676 SHA256 423509aa13c0a63438cff5e120dfe2cbcea25211e8a0776a65ff06c7f4fbd673 size 1772
 MD5 478cd49f138b6b047fb1c465c9d05c80 files/e2fsprogs-1.38-blkid-swsuspend.patch 1772
 RMD160 fa309cb7d99f27f4f3d863a0a2dd2c49ad198045 files/e2fsprogs-1.38-blkid-swsuspend.patch 1772
 SHA256 423509aa13c0a63438cff5e120dfe2cbcea25211e8a0776a65ff06c7f4fbd673 files/e2fsprogs-1.38-blkid-swsuspend.patch 1772
+AUX e2fsprogs-1.38-disconnected-inodes.patch 2881 RMD160 67d0fba3c12e88d7f9dadff84d263593e857cc0e SHA1 0687149739afdee3cad3a34d81157762d4756f9f SHA256 50f810077d6422848df327535ceeae14d6d91299aca36604fda2b7fbb8d34c17 size 2881
 MD5 e85d057f99af6c980acf9a8697da9dd7 files/e2fsprogs-1.38-disconnected-inodes.patch 2881
 RMD160 67d0fba3c12e88d7f9dadff84d263593e857cc0e files/e2fsprogs-1.38-disconnected-inodes.patch 2881
 SHA256 50f810077d6422848df327535ceeae14d6d91299aca36604fda2b7fbb8d34c17 files/e2fsprogs-1.38-disconnected-inodes.patch 2881
+AUX e2fsprogs-1.38-libintl.patch 470 RMD160 9104175f1eb21209fe754c9cad0f088ec5161d3d SHA1 946561b77786a064d82c3c7dbe926a7c5cbd9b2f SHA256 ca55f1be5d5dd3d46fcb9d316e63f28ac2cd13c79459644dadf4b6d8b35a3a91 size 470
 MD5 bafe5afeafcb558958527f12baf5c815 files/e2fsprogs-1.38-libintl.patch 470
 RMD160 9104175f1eb21209fe754c9cad0f088ec5161d3d files/e2fsprogs-1.38-libintl.patch 470
 SHA256 ca55f1be5d5dd3d46fcb9d316e63f28ac2cd13c79459644dadf4b6d8b35a3a91 files/e2fsprogs-1.38-libintl.patch 470
+AUX e2fsprogs-1.38-tests-locale.patch 656 RMD160 16c625c16144ed16942fa19988524b7b5727c583 SHA1 debd15eba41a392cf0336e694bebf0c2409b18e3 SHA256 7d12df7c4f00f1c1c81dcbd74cc0f8c1cffaa3b5089fbaa40222a7a9f2fbe598 size 656
 MD5 f199f07604566fda4f2a4dabac83a535 files/e2fsprogs-1.38-tests-locale.patch 656
 RMD160 16c625c16144ed16942fa19988524b7b5727c583 files/e2fsprogs-1.38-tests-locale.patch 656
 SHA256 7d12df7c4f00f1c1c81dcbd74cc0f8c1cffaa3b5089fbaa40222a7a9f2fbe598 files/e2fsprogs-1.38-tests-locale.patch 656
+AUX e2fsprogs-1.38-vfat-labels.patch 6667 RMD160 f652ce374cfd1a019905f1e2f2582b50db66fa2f SHA1 625bc48e59cf021da407d2382a959ea0d4cb826f SHA256 2d8f1cc10a390a66b490e5e168c38e1d3bbdd79234b38ad926b34c34196ba6cf size 6667
 MD5 71ae8634de714335ebbc93dc0bbbd643 files/e2fsprogs-1.38-vfat-labels.patch 6667
 RMD160 f652ce374cfd1a019905f1e2f2582b50db66fa2f files/e2fsprogs-1.38-vfat-labels.patch 6667
 SHA256 2d8f1cc10a390a66b490e5e168c38e1d3bbdd79234b38ad926b34c34196ba6cf files/e2fsprogs-1.38-vfat-labels.patch 6667
+DIST e2fsprogs-1.38.tar.gz 3621193 RMD160 492071c29e9a0adc1bed0762e795efb6b29a692c SHA256 c4e482687d0cff240d02a70fcf423cc14296b6a7869cd8dd42d5404d098e0bb7 size 3621193
+EBUILD e2fsprogs-1.38-r1.ebuild 4471 RMD160 41bb370af6a8e35e58554823c7753e9b8687cbcc SHA1 d43b950c659f43f80df8bcfd5b9fd5785cca92e2 SHA256 b6a671b1eeae20b241111d7c684f0bab6b9912bb9a63bfe735b65f5b99646f92 size 4471
+MD5 62b78b485b34b1e601e6dceb06bad8b5 e2fsprogs-1.38-r1.ebuild 4471
+RMD160 41bb370af6a8e35e58554823c7753e9b8687cbcc e2fsprogs-1.38-r1.ebuild 4471
+SHA256 b6a671b1eeae20b241111d7c684f0bab6b9912bb9a63bfe735b65f5b99646f92 e2fsprogs-1.38-r1.ebuild 4471
+EBUILD e2fsprogs-1.38.ebuild 3733 RMD160 0c3f178dab7d5f01294f977b153a1f99d8ef3a8e SHA1 e45c85831dbb9aa0610455faf9f80763a3ebe268 SHA256 c56b40621fce536c2891fbb1d8932e5a379a80454a38d0b7c4d0bb3a94c48446 size 3733
+MD5 6fbfc726ec96aa19955c90f44e25d3f9 e2fsprogs-1.38.ebuild 3733
+RMD160 0c3f178dab7d5f01294f977b153a1f99d8ef3a8e e2fsprogs-1.38.ebuild 3733
+SHA256 c56b40621fce536c2891fbb1d8932e5a379a80454a38d0b7c4d0bb3a94c48446 e2fsprogs-1.38.ebuild 3733
+MISC ChangeLog 14515 RMD160 2d64150060e9b3134507ddb15a47d9bc9e1aa984 SHA1 5f2a312f4e31ba662eb181024f19d702be1c367d SHA256 406b5d807b8ee46947916f1cb83a072c89164f960bb934ad5540864811dee04a size 14515
+MD5 dc95f3947ef4a805a7b81b56b190b280 ChangeLog 14515
+RMD160 2d64150060e9b3134507ddb15a47d9bc9e1aa984 ChangeLog 14515
+SHA256 406b5d807b8ee46947916f1cb83a072c89164f960bb934ad5540864811dee04a ChangeLog 14515
+MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 size 164
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEPUplugEuf3OQ0akRAjsXAJ0Z35Nulyul+TCgEZkEKfBKKPcL+gCeIeT+
-ZedKnW0MiPZlHl2hldB2EiU=
-=kuB1
------END PGP SIGNATURE-----
+MD5 cf2928368b4cb4e71afb0a17b60a0061 files/digest-e2fsprogs-1.38 247
+RMD160 75dc4dc256f36244cdf5c7c4e87ef67716bfbf66 files/digest-e2fsprogs-1.38 247
+SHA256 ed3e61270f2e7cca0d060cdb9c100ece3d8f737ea25114ab96ba50f0402713bb files/digest-e2fsprogs-1.38 247
+size 247 files/digest-e2fsprogs-1.38 247
+MD5 cf2928368b4cb4e71afb0a17b60a0061 files/digest-e2fsprogs-1.38-r1 247
+RMD160 75dc4dc256f36244cdf5c7c4e87ef67716bfbf66 files/digest-e2fsprogs-1.38-r1 247
+SHA256 ed3e61270f2e7cca0d060cdb9c100ece3d8f737ea25114ab96ba50f0402713bb files/digest-e2fsprogs-1.38-r1 247
+size 247 files/digest-e2fsprogs-1.38-r1 247
