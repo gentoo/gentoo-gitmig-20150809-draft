@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/egoboo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/ChangeLog,v 1.13 2006/04/24 20:07:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/ChangeLog,v 1.14 2006/04/24 23:46:41 deltacow Exp $
+
+  24 Apr 2006; Scott Stoddard <deltacow@gentoo.org> files/2.22-amd64.patch:
+  Fixed DOS formatting noticed by vapier.
 
   24 Apr 2006; Michael Sterrett <mr_bones_@gentoo.org>
   files/2.22-amd64.patch, egoboo-2.22.ebuild:
