@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ExtUtils-F77-1.15.ebuild,v 1.6 2006/04/01 22:21:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ExtUtils-F77-1.15.ebuild,v 1.7 2006/04/24 03:26:15 kumba Exp $
 
 inherit perl-module
 
@@ -10,5 +10,5 @@ SRC_URI="mirror://cpan/authors/id/K/KG/KGB/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~mips ppc s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k mips ppc s390 sh sparc x86"
 IUSE=""
