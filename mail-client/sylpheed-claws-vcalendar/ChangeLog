@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/sylpheed-claws-vcalendar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-vcalendar/ChangeLog,v 1.11 2006/04/17 18:41:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-vcalendar/ChangeLog,v 1.12 2006/04/24 21:27:54 genone Exp $
+
+*sylpheed-claws-vcalendar-1.71 (24 Apr 2006)
+
+  24 Apr 2006; Marius Mauch <genone@gentoo.org>
+  +files/vcalendar-1.71-invalid-free.patch,
+  +sylpheed-claws-vcalendar-1.71.ebuild:
+  version bump (bug #129798)
 
   17 Apr 2006; Markus Rothe <corsair@gentoo.org>
   sylpheed-claws-vcalendar-1.29.ebuild:
@@ -8,6 +15,11 @@
 
   23 Mar 2006; <ticho@gentoo.org> sylpheed-claws-vcalendar-1.29.ebuild:
   Stable on x86.
+
+*sylpheed-claws-vcalendar-1.29-r1 (24 Apr 2006)
+
+  24 Apr 2006;  <>  sylpheed-claws-vcalendar-1.29-r1.ebuild files/digest-sylpheed-claws-vcalendar-1.29-r1
+  # INSERT ENTRY HERE
 
 *sylpheed-claws-vcalendar-1.29 (10 Feb 2006)
 

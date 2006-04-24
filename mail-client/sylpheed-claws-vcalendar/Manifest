@@ -1,4 +1,38 @@
-MD5 6c4a74886c3f9d03406f23c317c7531b ChangeLog 1991
-MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-vcalendar-1.29 310
-MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX vcalendar-1.71-invalid-free.patch 1693 RMD160 4ed0aa7259d84e4653b505d1a84151b19b7e3ba2 SHA1 236e6ba45a0f5003947ca25843673709991a2d20 SHA256 63a4700ea19d0dce5defb2bea96333b2f426b4e1efd3b3a4d52cd8b223535fdf size 1693
+MD5 ee96c507e8504882aa505353d57f15df files/vcalendar-1.71-invalid-free.patch 1693
+RMD160 4ed0aa7259d84e4653b505d1a84151b19b7e3ba2 files/vcalendar-1.71-invalid-free.patch 1693
+SHA256 63a4700ea19d0dce5defb2bea96333b2f426b4e1efd3b3a4d52cd8b223535fdf files/vcalendar-1.71-invalid-free.patch 1693
+DIST sylpheed-claws-extra-plugins-2.0.0.tar.bz2 2935762 RMD160 09ba59e1da4eacf0a50c2271cbadd0b44212285f SHA256 88b01ccdece05adf3b1046c3ddcbd20ca3455d20e97f59bf1ea8d3fcbe1baf29 size 2935762
+DIST sylpheed-claws-extra-plugins-2.1.0.tar.bz2 3769926 RMD160 ca36b8b7972dd3e9f8ad843945fa377662819ac7 SHA256 3972f32bb37cd20da4489b18d886db9e1970231e39cf590570b2fa6f43013a71 size 3769926
+EBUILD sylpheed-claws-vcalendar-1.29.ebuild 954 RMD160 5aefdccebeb6161458ea4ad8acad79f471a766be SHA1 3f719898928b25d60921bced10bd74e6ee960615 SHA256 2cfc5850e5a5ef155c9232338eec1e9901f231fa9ddcf7654f775a30f29f49c4 size 954
 MD5 b5ca210b768e91706278c23545ab0b75 sylpheed-claws-vcalendar-1.29.ebuild 954
+RMD160 5aefdccebeb6161458ea4ad8acad79f471a766be sylpheed-claws-vcalendar-1.29.ebuild 954
+SHA256 2cfc5850e5a5ef155c9232338eec1e9901f231fa9ddcf7654f775a30f29f49c4 sylpheed-claws-vcalendar-1.29.ebuild 954
+EBUILD sylpheed-claws-vcalendar-1.71.ebuild 1050 RMD160 0c0723464c30bacdcb52faf2d72f7cc6b6020026 SHA1 a3ccfc54841fe81fee00f029876cfe1c2364e379 SHA256 c9c7cbc1fcfdf7a9b5db35842484a8b7cd5ab5d1b68679ce46426b5a7ae151c9 size 1050
+MD5 a52e7b46ce075c864b97fb02602efa34 sylpheed-claws-vcalendar-1.71.ebuild 1050
+RMD160 0c0723464c30bacdcb52faf2d72f7cc6b6020026 sylpheed-claws-vcalendar-1.71.ebuild 1050
+SHA256 c9c7cbc1fcfdf7a9b5db35842484a8b7cd5ab5d1b68679ce46426b5a7ae151c9 sylpheed-claws-vcalendar-1.71.ebuild 1050
+MISC ChangeLog 2377 RMD160 726deaf7d3478a9e609763f0c85fbb6d9d0f7e90 SHA1 7e62fe155508b610669b27da0f0faa49efd965e1 SHA256 8e272d253b4cd9f43728d57bd3bab5b3b674876a4c442702c96a86c4c0e8b4e5 size 2377
+MD5 405d8165be34a8eb03843de77c41e371 ChangeLog 2377
+RMD160 726deaf7d3478a9e609763f0c85fbb6d9d0f7e90 ChangeLog 2377
+SHA256 8e272d253b4cd9f43728d57bd3bab5b3b674876a4c442702c96a86c4c0e8b4e5 ChangeLog 2377
+MISC metadata.xml 392 RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 SHA1 8fb3309b9af5ec084343baccfcdb7a391785bcc3 SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 size 392
+MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
+RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
+SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
+MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-vcalendar-1.29 310
+RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-vcalendar-1.29 310
+SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-vcalendar-1.29 310
+MD5 fa04e7a7dbee249f59e65a2ebba15d0f files/digest-sylpheed-claws-vcalendar-1.71 310
+RMD160 e2553b3aa387cab2aa9eb1999b189f0d56ba0db4 files/digest-sylpheed-claws-vcalendar-1.71 310
+SHA256 6ee49111a07e33722bf03636866deb76857ab654485b0c22c20d2e3a1e7c04df files/digest-sylpheed-claws-vcalendar-1.71 310
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFETUMi6J2i8a8J4okRAvPcAKDTzQLEHrQnxQXbmtuXQbp3ILBGYgCgg1Vg
+MxwW/mzvmHnLDe39M+YglTE=
+=kBRe
+-----END PGP SIGNATURE-----
