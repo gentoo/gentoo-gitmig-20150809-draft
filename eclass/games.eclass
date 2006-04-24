@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.111 2006/04/19 19:38:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.112 2006/04/24 07:18:16 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -8,8 +8,7 @@
 # you better have a *good* reason why you're *not* using games.eclass
 # in a games ebuild
 
-inherit eutils gnuconfig
-
+inherit eutils
 
 EXPORT_FUNCTIONS pkg_preinst pkg_postinst src_compile pkg_setup
 
@@ -32,54 +31,25 @@ export GAMES_USER_DED=${GAMES_USER_DED:-games}
 export GAMES_GROUP=${GAMES_GROUP:-games}
 
 egamesconf() {
-	local myconf
-	if [[ -x ./configure ]] ; then
-		gnuconfig_update
-		[[ -n ${CTARGET} ]] && myconf="${myconf} --target=${CTARGET}"
-		echo \
-		./configure \
-			--prefix="${GAMES_PREFIX}" \
-			--build=${CBUILD:-${CHOST}} \
-			--host=${CHOST} \
-			--mandir=/usr/share/man \
-			--infodir=/usr/share/info \
-			--datadir="${GAMES_DATADIR}" \
-			--sysconfdir="${GAMES_SYSCONFDIR}" \
-			--localstatedir="${GAMES_STATEDIR}" \
-			${myconf} \
-			"$@" \
-			${EXTRA_ECONF}
-		./configure \
-			--prefix="${GAMES_PREFIX}" \
-			--build=${CBUILD:-${CHOST}} \
-			--host=${CHOST} \
-			--mandir=/usr/share/man \
-			--infodir=/usr/share/info \
-			--datadir="${GAMES_DATADIR}" \
-			--sysconfdir="${GAMES_SYSCONFDIR}" \
-			--localstatedir="${GAMES_STATEDIR}" \
-			${myconf} \
-			"$@" \
-			${EXTRA_ECONF} \
-			|| die "egamesconf failed"
-	else
-		die "no configure script found"
-	fi
+	econf \
+		--prefix="${GAMES_PREFIX}" \
+		--libdir="${GAMES_LIBDIR}" \
+		--datadir="${GAMES_DATADIR}" \
+		--sysconfdir="${GAMES_SYSCONFDIR}" \
+		--localstatedir="${GAMES_STATEDIR}" \
+		"$@" \
+		|| die "egamesconf failed"
 }
 
 egamesinstall() {
-	if [ -f ./[mM]akefile -o -f ./GNUmakefile ] ; then
-		make \
-			prefix="${D}${GAMES_PREFIX}" \
-			mandir="${D}/usr/share/man" \
-			infodir="${D}/usr/share/info" \
-			datadir="${D}${GAMES_DATADIR}" \
-			sysconfdir="${D}${GAMES_SYSCONFDIR}" \
-			localstatedir="${D}${GAMES_STATEDIR}" \
-			"$@" install || die "einstall failed"
-	else
-		die "no Makefile found"
-	fi
+	make \
+		prefix="${D}${GAMES_PREFIX}" \
+		mandir="${D}/usr/share/man" \
+		infodir="${D}/usr/share/info" \
+		datadir="${D}${GAMES_DATADIR}" \
+		sysconfdir="${D}${GAMES_SYSCONFDIR}" \
+		localstatedir="${D}${GAMES_STATEDIR}" \
+		"$@" install || die "egamesinstall failed"
 }
 
 gameswrapper() {
