@@ -1,7 +1,31 @@
-MD5 041ac76e4b7c7fb0d87191220bfaeb88 ChangeLog 952
-MD5 3906a28a3dc1436e1b6b5dbdb2edd130 files/digest-gsf-sharp-0.6 65
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3d62e9467ab98841ddb127cff28c7d88 ChangeLog 1199
+RMD160 098bc9b941201d6ca095d6ffca26e15800ad381f ChangeLog 1199
+SHA256 38a38a8d84e8b285c4512d080041c62f9f3a2edc89dd311423f096be82aef6e7 ChangeLog 1199
 MD5 40bf819ef0659755fdb5fe700063ef2d files/digest-gsf-sharp-0.7 65
+RMD160 b166889d710c92f065e22ccf05eb5091855282d4 files/digest-gsf-sharp-0.7 65
+SHA256 4491ec520b80ae6373327b6683e20d27191925d93c34e24496262fe9358e9dae files/digest-gsf-sharp-0.7 65
+MD5 a7554cd752a124a85d18742a43448b6b files/digest-gsf-sharp-0.8 241
+RMD160 8ea55ca2900ea747a9cd33fde8e0ff8818b86aee files/digest-gsf-sharp-0.8 241
+SHA256 a2cad903bf189c3e4e07c55dbca3d3a1af158f878b43f48cd618988bcbb9acf4 files/digest-gsf-sharp-0.8 241
 MD5 e031f398fd247ee39bef0fe2d64f2736 files/gsf-sharp-0.7-no-libgsf-gnome-dep.patch 483
-MD5 a31abad42ce8d31be34de8a199a52cd2 gsf-sharp-0.6.ebuild 596
+RMD160 38bfdf14e1d5d3dc307026bde565032799693320 files/gsf-sharp-0.7-no-libgsf-gnome-dep.patch 483
+SHA256 3718a4f1906cb982ff24ab0eafe7f53f6df40a01e9a868821a3b22be30d343fd files/gsf-sharp-0.7-no-libgsf-gnome-dep.patch 483
 MD5 ed1ac9aa1612dcd8b577f5bd56f549ca gsf-sharp-0.7.ebuild 811
+RMD160 75da934118e186a0e2d22fc54f4f80a980d52d8d gsf-sharp-0.7.ebuild 811
+SHA256 ed2964049347c3327df506a68866fbe1f119eb97bd2eceb37ae8a48eff0037e8 gsf-sharp-0.7.ebuild 811
+MD5 ac1d8688d9d5881e5f23a1fc381a7cf1 gsf-sharp-0.8.ebuild 613
+RMD160 e2ff543ddc17aff02522594a61e038558050bae2 gsf-sharp-0.8.ebuild 613
+SHA256 9846c0d6773fa522175f3524928f1acdc232a99f653fa7bb9343a0f6ce49bf5e gsf-sharp-0.8.ebuild 613
 MD5 41c8c61dcf74c45eb359a4a41958abb3 metadata.xml 308
+RMD160 6070e5bc9d8a4e0983004f0e24da1de81f52d2c4 metadata.xml 308
+SHA256 d4e9c60cc0ce735082c4f3cb0837a68a34a51d6bfc38dc2b2bd2ce044e7c7259 metadata.xml 308
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFETOSPTOXg++0VvJQRAq2zAJ0SUlKtk3SopgAgt8DxHWf//0jahgCbBCmS
++HebXfsLqVDpwiZq5vsoFEU=
+=OeCz
+-----END PGP SIGNATURE-----
