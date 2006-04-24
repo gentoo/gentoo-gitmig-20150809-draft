@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.55 2006/04/21 23:36:48 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.56 2006/04/24 15:46:58 rl03 Exp $
+
+  24 Apr 2006; Renat Lumpau <rl03@gentoo.org>
+  -files/2.01.10/apache.webalizer, -files/2.01.10/reconfig,
+  +files/apache.webalizer, -files/output.c.patch,
+  -webalizer-2.01.10-r4.ebuild, -webalizer-2.01.10-r5.ebuild,
+  webalizer-2.01.10-r12.ebuild, webalizer-2.01.10-r13.ebuild:
+  Removed old versions; housekeeping
 
   21 Apr 2006; Thomas Cort <tcort@gentoo.org> webalizer-2.01.10-r12.ebuild:
   Stable on alpha wrt Bug #106621.

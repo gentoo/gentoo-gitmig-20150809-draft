@@ -1,0 +1,11 @@
+#
+# This is the config snippet for Webalizer
+#
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/files/apache.webalizer,v 1.5 2006/04/24 15:46:58 rl03 Exp $
+
+<Directory "/var/www/localhost/htdocs/webalizer">
+  Options None
+  AllowOverride None
+  Order allow,deny
+  Allow from all
+</Directory>
