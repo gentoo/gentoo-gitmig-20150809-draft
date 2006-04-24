@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.63 2006/04/24 13:58:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.64 2006/04/24 18:03:58 rocket Exp $
+
+*lvm2-2.02.05 (24 Apr 2006)
+
+  24 Apr 2006; Eric Edgar <rocket@gentoo.org> +lvm2-2.02.05.ebuild:
+  version Bump to 2.02.05 per bug #131114.
 
   24 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   lvm2-2.02.04-r1.ebuild:
