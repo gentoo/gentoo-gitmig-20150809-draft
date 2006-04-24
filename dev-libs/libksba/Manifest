@@ -1,55 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3ffbf559f1acbb4ad5ee6f48e235b9c9 ChangeLog 3998
-RMD160 a39587c20dfabb05e71c40185c88a58e29d2af17 ChangeLog 3998
-SHA256 0df9d06cc623e1d1257107791f275c46c35309e904ae706880770cab3e8726c4 ChangeLog 3998
+MD5 cd628047ec8194dbbeed6dd6c9e49950 ChangeLog 4101
 MD5 da2b4329ca86c4a9f002c48856ef4123 files/digest-libksba-0.4.7 65
-RMD160 7698d9fd92993de3c1d00f4ee2c6dca2e4c48893 files/digest-libksba-0.4.7 65
-SHA256 a4c41160bee281387ec750b7985aada32f901b76caf343f87902e3d6d8a5d53f files/digest-libksba-0.4.7 65
 MD5 e6e539b2679ae5c66dd51839cf59d8ec files/digest-libksba-0.9.11 66
-RMD160 3a4b924d0a8a4e78fd79b06f9ccad42382bb60a3 files/digest-libksba-0.9.11 66
-SHA256 4d0dddb104dafba7cc72b5e728725211a0b19a1af5580d94ad1da2d2fe1649cf files/digest-libksba-0.9.11 66
 MD5 22be074cfc15845eead90489d55fea41 files/digest-libksba-0.9.12 67
-RMD160 c504ad7f011ac82349fd566c87b55c610e220574 files/digest-libksba-0.9.12 67
-SHA256 7239ae908f877b8e2fe27c72a60a7f109ed0071bf09b3b3e88ad99a75f0a2e64 files/digest-libksba-0.9.12 67
-MD5 125a70bee1b3f6edfe55ec9a6a503cfd files/digest-libksba-0.9.13 247
-RMD160 01e27b28fe479360292899317a31a79b32bc12f4 files/digest-libksba-0.9.13 247
-SHA256 90aa05ee8197eb25e9c587f4e4eb2f17eb96142635840556bbc124e7add1d273 files/digest-libksba-0.9.13 247
+MD5 8e7e447f16cd1ffac5a0f90b38ecb64e files/digest-libksba-0.9.13 67
 MD5 24c004110e2ec7dd95837318f73feedc files/digest-libksba-0.9.6 65
-RMD160 0e957d6b6b5b3b80e16bc229c37de7aa39cb7809 files/digest-libksba-0.9.6 65
-SHA256 1299f079adab3c379e0db7e19ae2de2e5e1f882300f6fccec70a04d0960c6261 files/digest-libksba-0.9.6 65
 MD5 af87b3024250f157c1cc5523304dd9c5 files/digest-libksba-0.9.8 65
-RMD160 74c61d74145a4f459d379c9e2aa6fd89b875b5e9 files/digest-libksba-0.9.8 65
-SHA256 ceed8e646fcf396a5db3dc038fc834f135973a76f8660d42e2bd54179e5e878f files/digest-libksba-0.9.8 65
 MD5 94b86fd10cc9a5c194284d58355f97fa files/libksba-0.9.8-m4.patch 261
-RMD160 2ed9a26e0109939deb596199996fe33eb0c9e282 files/libksba-0.9.8-m4.patch 261
-SHA256 f75366cbe920be258b7083cca443cbcd7c26dfa69286da3a48b4da050eb11cc0 files/libksba-0.9.8-m4.patch 261
 MD5 22cac7b18ff235140a01c4b6e2f223d1 libksba-0.4.7.ebuild 614
-RMD160 d31b6771fbb567e23dbe0385ae45f41c1bc58a1d libksba-0.4.7.ebuild 614
-SHA256 2d1dde4cf0fc3dd1ce1031f5b4ce55735724b9993aba0c1d7142c0dfd71470aa libksba-0.4.7.ebuild 614
 MD5 427e5969179918460656dea0aa79854d libksba-0.9.11.ebuild 774
-RMD160 f135015141f5319e86c74faa59a05e63cd1e754e libksba-0.9.11.ebuild 774
-SHA256 931fd6150b80fc1055880b4624f883e2019a48921882d7ddadca4debab1f3ad7 libksba-0.9.11.ebuild 774
 MD5 ae07347dcfc28e91e7414f3c968a7729 libksba-0.9.12.ebuild 781
-RMD160 b4ce5ad3ae8098c53b0c3e70a4bae0dfad91b246 libksba-0.9.12.ebuild 781
-SHA256 23c3997bfc41c0de3f39bd3f25c2e70e91f6619717f4a53d5d238341c95ea21b libksba-0.9.12.ebuild 781
-MD5 7ed8fe89a86e25a4452bb6bccb9c6176 libksba-0.9.13.ebuild 730
-RMD160 e081598b96c48ce2b05ab8e39c608981501a106e libksba-0.9.13.ebuild 730
-SHA256 748648a9994a29b444ef615d4f1cbabe36cfaf01a357de6edefff8b5068857da libksba-0.9.13.ebuild 730
+MD5 8ca5e6631b5ba6df6f0f57c3839a5506 libksba-0.9.13.ebuild 726
 MD5 f891f895cfa155d39451df7b84cefc32 libksba-0.9.6.ebuild 694
-RMD160 01de6800c74e87843bb0d6e22aa12f09c431b174 libksba-0.9.6.ebuild 694
-SHA256 731fe05e9fd6ec4487a68cf7f6a017623b60aa782274985471971aa36406ff8f libksba-0.9.6.ebuild 694
 MD5 fe6498e8ae40c37430b6b07c4ba1547e libksba-0.9.8.ebuild 845
-RMD160 1fcc4cd7e039d65d72f9bb4dbe2059a191d8896a libksba-0.9.8.ebuild 845
-SHA256 3713706864a67be9666c700e24f4754cfdfd4109641b347d4f7ed6363a34f5f1 libksba-0.9.8.ebuild 845
 MD5 09a95314388ecbaa03fbe0dce408227e metadata.xml 286
-RMD160 c2b5969811571490e2608996feac695e4ffecc42 metadata.xml 286
-SHA256 b6b7dbc1fbeeab10f65ba2033a683592da35c19c25f40edf0d2d2a92cca9d87a metadata.xml 286
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEH3t+JrHF4yAQTrARAu8oAKDJNC7v+QuBOobkMcPKXsguOfI0ggCgzIGL
-mdzPP9yYhql9VuqJ3cOwMRI=
-=CpSo
------END PGP SIGNATURE-----
