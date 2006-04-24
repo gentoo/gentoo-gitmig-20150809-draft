@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.289 2006/03/31 22:41:00 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.290 2006/04/24 20:20:33 genone Exp $
 
 # Keep them sorted
 
@@ -301,6 +301,7 @@ sqlite3 - Adds support for sqlite3 - embedded sql database
 sse - fast floating point optimization for PentiumIII+ class chips
 sse2 - faster floating point optimization for SSE2 capable chips
 ssl - Adds support for Secure Socket Layer connections
+startup-notification - Enable startup-notification support
 static - !!do not set this during bootstrap!! Causes binaries to be statically linked instead of dynamically
 svg - Adds support for SVG (Scalable Vector Graphics http://www.w3.org/TR/SVG ).  This option is mainly intended for users that tend to browse multimedia sites frequently.
 svga - Adds support for SVGAlib (graphics library)

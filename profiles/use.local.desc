@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1870 2006/04/24 10:14:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1871 2006/04/24 20:20:33 genone Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1018,7 +1018,6 @@ net-im/ekiga:avahi - Support for the avahi mdns daemon
 net-im/gaim:ao - Use libao for sound playback
 net-im/gaim:bonjour - Enable bonjour support
 net-im/gaim:silc - Enable SILC protocol support
-net-im/gaim:startup-notification - Enable startup-notification support.
 net-im/gaim:xscreensaver - Enable X idle time support instead of gaim idle time.
 net-im/gajim:srv -  SRV capabilities
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
@@ -1597,28 +1596,19 @@ x11-wm/fvwm:stroke - Mouse Gesture support
 x11-wm/icewm:silverxp - Apply ybuttons.cc.patch necessary for SilverXP theme
 x11-wm/ion3:iontruetype - Enable *unsupported* and *experimental* TrueType support
 x11-wm/matchbox-desktop:dnotify - Use the linux kernel directory notification feature.
-x11-wm/matchbox-desktop:startup-notification - Enable startup-notification support.
 x11-wm/matchbox-panel:dnotify - Use the linux kernel directory notification feature.
 x11-wm/matchbox-panel:lowres - Optimize for low resolution screens.
-x11-wm/matchbox-panel:startup-notification - Enable startup-notification support.
-x11-wm/matchbox-window-manager:startup-notification - Enable startup-notification support.
 x11-wm/matchbox-window-manager:xcomposite - Enable support for Xorg Composite extension
 x11-wm/openbox:pango - Enable pango support
-x11-wm/openbox:startup-notification - Enable application startup notification
 x11-wm/sawfish:pango - Enable pango support
 x11-wm/stumpwm-cvs:sbcl - Use SBCL for the runtime
 x11-wm/stumpwm-cvs:clisp - Use CLISP for the runtime
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
-xfce-base/libxfcegui4:startup-notification - Enable application startup notification
-xfce-base/thunar:startup-notification - Enable application startup notification
 xfce-base/thunar:thumbnail - enable thumbnail support in the file browser.
 xfce-base/thunar:xslt - Build HTML based docs from xml.
-xfce-base/xfce4-panel:startup-notification - Enable application startup notification
 xfce-base/xfdesktop:exo - Build with libexo support (required for thunar-vfs integration).
 xfce-base/xfdesktop:panel-plugin - Enable the xfdesktop menu plugin for xfce4-panel.
 xfce-base/xfdesktop:thunar-vfs - Enable thunar-vfs support for desktop icons.
 xfce-base/xfprint:lpr - Build LPr/LPd support
-xfce-base/xfwm4:startup-notification - Enable application startup notification
 xfce-base/xfwm4:xcomposite - Support for Xorg composite extension.
-xfce-extra/terminal:startup-notification - Enable application startup notification
 xfce-extra/terminal:xslt - Build HTML based docs from xml.
