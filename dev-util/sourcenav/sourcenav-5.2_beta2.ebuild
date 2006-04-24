@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.2_beta2.ebuild,v 1.4 2005/11/26 06:04:50 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.2_beta2.ebuild,v 1.5 2006/04/24 02:43:21 nerdboy Exp $
 
 inherit eutils
 
-IUSE=""
+IUSE="debug"
 
 MY_P="5.2b2"
 S=${WORKDIR}/sourcenav-${MY_P}
@@ -19,21 +19,37 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 
-RDEPEND="virtual/x11"
-DEPEND=">=sys-libs/glibc-2.2.4
-	${RDEPEND}"
+RDEPEND="|| (
+	    ( x11-libs/libXmu
+	    x11-libs/libXext
+	    x11-libs/libXp
+	    x11-libs/libX11
+	    x11-libs/libXt
+	    x11-libs/libSM
+	    x11-libs/libICE
+	    x11-libs/libXpm
+	    x11-libs/libXaw )
+	virtual/x11
+	)"
+DEPEND="${RDEPEND}
+	|| (
+	    ( x11-proto/xproto x11-proto/xextproto )
+	        virtual/x11
+	)"
 
 src_unpack() {
 	unpack ${A}
 #	mkdir ${SB} || die "mkdir build failed"
 	cd ${S}
 	epatch ${FILESDIR}/sourcenav_destdir.patch || die "epatch failed"
+	sed -i -e "s/relid'/relid/" tcl/unix/configure
+	sed -i -e "s/relid'/relid/" tk/unix/configure
 }
 
 src_compile() {
 	cd ${S}
 #	../sourcenav-${MY_P}/configure \
-	./configure \
+	./configure ${MY_CONF} \
 		--host=${CHOST} \
 		--prefix=${SN} \
 		--bindir=${SN}/bin \
@@ -41,7 +57,8 @@ src_compile() {
 		--exec-prefix=${SN} \
 		--mandir=${SN}/share/man \
 		--infodir=${SN}/share/info \
-		--datadir=${SN}/share || die "configure failed"
+		--datadir=${SN}/share \
+		$(use_enable debug symbols) || die "configure failed"
 
 	make || die "make failed"
 }
