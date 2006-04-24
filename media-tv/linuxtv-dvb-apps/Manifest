@@ -1,37 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a8f719101c5f230d10c81528f3a2f4fc ChangeLog 2361
-RMD160 d34cc78b7b6cc8a34be81286beba7bacb1b333fe ChangeLog 2361
-SHA256 36a72dec7c28068005575250dc314957ef2f88fcca36e62d82dc486e795c83bf ChangeLog 2361
+MD5 e32db8a897577b476bbac40002f3158c ChangeLog 2692
 MD5 e59829ae0e470e61df8042ac7cae37ae files/digest-linuxtv-dvb-apps-1.1.0 74
-RMD160 b7086a7493434d8238684efa0661337d58302dcc files/digest-linuxtv-dvb-apps-1.1.0 74
-SHA256 434b76060d0f156b7d24d9507ec9e22469f161faa2b27a6461b0c7dafab99871 files/digest-linuxtv-dvb-apps-1.1.0 74
 MD5 f0abd17dd61428298069f80983583b6f files/digest-linuxtv-dvb-apps-1.1.0_p20050702 79
-RMD160 620b091b7806b07026f7e375f066bfd9d1895cc2 files/digest-linuxtv-dvb-apps-1.1.0_p20050702 79
-SHA256 285c914fe74dba070c72df4921bce6d8ae921ff22157a8b8ba03d796ffe45af9 files/digest-linuxtv-dvb-apps-1.1.0_p20050702 79
+MD5 79ff540a8bc7b4075c497328135228e3 files/digest-linuxtv-dvb-apps-1.1.0_p20060423 70
 MD5 6104b3f8ec6d578f2afa21d626a428c8 files/linuxtv-dvb-apps-1.1.0_p20050702-gentoo-datafiles.patch 649
-RMD160 ce10d83db2db0d2369105bf5b9e09c84ac586bc0 files/linuxtv-dvb-apps-1.1.0_p20050702-gentoo-datafiles.patch 649
-SHA256 4a2fb54991f334b1045a40c011ccb39b0696489204a6c49bcf8528240904927c files/linuxtv-dvb-apps-1.1.0_p20050702-gentoo-datafiles.patch 649
 MD5 086f7b665b6d4a51bc0c82a3a67c4c4c files/linuxtv-dvb-apps-1.1.0_p20050702-gentoo-install-ca_zap.patch 471
-RMD160 8d44a310118bcd78f988004c44963276efc65d55 files/linuxtv-dvb-apps-1.1.0_p20050702-gentoo-install-ca_zap.patch 471
-SHA256 aad86d055568e04e47743755343f505b32f6282ea237304c3ea5d251bec7fc60 files/linuxtv-dvb-apps-1.1.0_p20050702-gentoo-install-ca_zap.patch 471
 MD5 a6d5954df07a40b6caaa2175bf51a3db files/linuxtv-dvb-apps-1.1.0_p20050702-gentoo-makefile-corrections.patch 10434
-RMD160 766f3c8fdf92cc7dba434bf3fadf72703751c33a files/linuxtv-dvb-apps-1.1.0_p20050702-gentoo-makefile-corrections.patch 10434
-SHA256 910a4d363afbeef32b402d5418f4319cca343f66701f7f215ebf343fb59330c3 files/linuxtv-dvb-apps-1.1.0_p20050702-gentoo-makefile-corrections.patch 10434
+MD5 2c34f88b84c92e2320ce1373d19e4431 files/linuxtv-dvb-apps-1.1.0_p20060423-makefile.patch 488
 MD5 1c27736f4ff65cfe105c80f9306823b2 linuxtv-dvb-apps-1.1.0.ebuild 2105
-RMD160 7ef437bc71a94e6393802416d4e0f97c6c0f0569 linuxtv-dvb-apps-1.1.0.ebuild 2105
-SHA256 4cfcf444334f3933285fdb69cb47c1ea7f9656c619f86a2638b16f6ab738bf88 linuxtv-dvb-apps-1.1.0.ebuild 2105
 MD5 fe90bd3b536f39352b9bdd34940676d9 linuxtv-dvb-apps-1.1.0_p20050702.ebuild 1801
-RMD160 95db90a72c89339e2179b2104befa190dc65b49c linuxtv-dvb-apps-1.1.0_p20050702.ebuild 1801
-SHA256 e7236def6ff1955a878a18688418fa1d598b6a7ea5b4e5a6b00b387baf831ee7 linuxtv-dvb-apps-1.1.0_p20050702.ebuild 1801
+MD5 e7a901b224a3ec75d8ea5a3d14eb5776 linuxtv-dvb-apps-1.1.0_p20060423.ebuild 1758
 MD5 dff9ded73ffb6549a59f5e6144af1cfd metadata.xml 217
-RMD160 2daa552f0b03b2d6ab99fec1eee8ab6648890b75 metadata.xml 217
-SHA256 11770dd9c2b190c9d2ba13d3ce36a56e6dddcc8d8a9d11eb20d930cac5d7990f metadata.xml 217
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEOqLwZfSl1Kp5KmoRAptCAJ0V9uFtOJ0WVQ9xkgocMkBXl9PYSgCeNDOM
-+A1lC9Vao5EuTCvT65xz3eg=
-=A3Q2
------END PGP SIGNATURE-----
