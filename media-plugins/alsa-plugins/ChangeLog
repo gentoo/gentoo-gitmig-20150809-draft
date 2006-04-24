@@ -1,0 +1,13 @@
+# ChangeLog for media-plugins/alsa-plugins
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.1 2006/04/24 10:10:31 flameeyes Exp $
+
+*alsa-plugins-1.0.11 (24 Apr 2006)
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/alsa-plugins-1.0.11-automagic.patch, +metadata.xml,
+  +alsa-plugins-1.0.11.ebuild:
+  New package alsa-plugins, built from upstream's alsa-plugins tarball.
+  Features jack, resampling, a52 and other plugins. Supersedes
+  media-plugins/alsa-jack.
+
