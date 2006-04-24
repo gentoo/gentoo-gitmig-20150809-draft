@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.6.ebuild,v 1.8 2006/04/09 08:45:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.6.ebuild,v 1.9 2006/04/24 07:34:26 uberlord Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -66,7 +66,7 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
 	# install documentation
-	dodoc AUTHORS ChangeLog INSTALL PORTS README
+	dodoc AUTHORS ChangeLog PORTS README
 
 	# Empty dir
 	dodir /etc/openvpn
