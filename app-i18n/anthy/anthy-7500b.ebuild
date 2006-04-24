@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-7500b.ebuild,v 1.1 2006/04/22 14:35:23 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-7500b.ebuild,v 1.2 2006/04/24 11:04:24 flameeyes Exp $
 
-inherit elisp-common eutils
+inherit elisp-common eutils autotools libtool
 
 IUSE="emacs ucs4"
 
@@ -16,6 +16,16 @@ SLOT="0"
 
 DEPEND="emacs? ( virtual/emacs )
 	!app-i18n/anthy-ss"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-asneeded.patch"
+	eautomake
+
+	elibtoolize
+}
 
 src_compile() {
 

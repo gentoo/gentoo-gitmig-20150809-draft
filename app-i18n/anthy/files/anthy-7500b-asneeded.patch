@@ -1,0 +1,9 @@
+Index: anthy-7500b/src-splitter/Makefile.am
+===================================================================
+--- anthy-7500b.orig/src-splitter/Makefile.am
++++ anthy-7500b/src-splitter/Makefile.am
+@@ -8,3 +8,4 @@ noinst_LTLIBRARIES = libsplit.la
+ libsplit_la_SOURCES = wordlist.c metaword.c depgraph.c\
+  splitter.c evalborder.c compose.c\
+  wordborder.h hmm.c segclass.c transition.h
++libsplit_la_LIBADD = ../src-worddic/libanthydic.la

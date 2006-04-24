@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.72 2006/04/22 14:35:22 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.73 2006/04/24 11:04:24 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/anthy-7500b-asneeded.patch, anthy-7500b.ebuild:
+  Add patch to build with --as-needed.
 
 *anthy-7500b (22 Apr 2006)
 
