@@ -1,6 +1,16 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.112 2006/02/07 22:11:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.113 2006/04/24 08:57:45 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/mjpegtools-1.6.2-configure.patch, -files/mjpegtools-1.6.2-dv.patch,
+  -files/mjpegtools-1.6.2-fPIC.patch,
+  -files/mjpegtools-1.6.2-gcc34-altivec.patch,
+  -files/mjpegtools-1.6.2-gcc34.patch,
+  -files/mjpegtools-1.6.2-libquicktime094.patch,
+  -files/mjpegtools-1.6.2-nogtk.patch, -files/altivec-fix-1.6.2.patch,
+  -files/no-x11-lib-2.patch, -mjpegtools-1.6.2-r4.ebuild:
+  Drop old mjpegtools version.
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org>
   mjpegtools-1.8.0-r1.ebuild:
