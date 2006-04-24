@@ -1,0 +1,13 @@
+default-linux/sparc/sparc32/2006.0/2.4
+
+# emerge -n '>=sys-apps/portage-2.0.51'
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/sparc/sparc32/2006.0/2.4 make.profile
+
+# **** !!!! It is VERY IMPORTANT to follow the GCC Upgrade Guide: !!!! ****
+# **** !!!!     Otherwise you may end up with a broken system     !!!! ****
+# **** !!!!     http://www.gentoo.org/doc/en/gcc-upgrading.xml    !!!! ****
+
+# Java is being phased out because of security bugs. You'll have to unmerge
+# any ebuilds that need java or re-emerge ones that USE it.
