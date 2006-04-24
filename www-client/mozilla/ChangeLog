@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.89 2006/04/23 21:11:41 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.90 2006/04/24 01:17:18 tcort Exp $
+
+  24 Apr 2006; Thomas Cort <tcort@gentoo.org> mozilla-1.7.13.ebuild:
+  Stable on alpha and amd64 wrt security Bug #130887.
 
 *mozilla-1.7.13 (23 Apr 2006)
 
