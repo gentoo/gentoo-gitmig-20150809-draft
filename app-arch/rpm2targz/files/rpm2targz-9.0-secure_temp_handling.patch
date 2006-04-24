@@ -1,6 +1,6 @@
---- rpm2targz
-+++ rpm2targz
-@@ -23,20 +24,24 @@
+--- rpm2targz	2006-04-24 14:36:40.000000000 +0200
++++ rpm2targz	2006-04-24 14:37:08.000000000 +0200
+@@ -23,20 +23,24 @@
  
  # debug switch to allow to bypass use of rpm2cpio provided by the rpm package
  USERPM2CPIO=true
@@ -35,7 +35,7 @@
    echo
    echo "Usage:      $0 <file.rpm>"
    if [ "`basename $0`" = "rpm2tgz" ]; then
-@@ -50,12 +55,11 @@
+@@ -50,8 +54,7 @@
    if [ ! "$1" = "$*" ]; then
      echo "Processing file: $i"
    fi
@@ -45,12 +45,7 @@
  
    # Determine if this is a source or binary RPM.
    # If we have getrpmtype, use that.  Otherwise, try "file".
--  if which getrpmtype 1> /dev/null 2> /dev/null; then
-+  if type -p getrpmtype 1> /dev/null 2> /dev/null; then
-     if getrpmtype -n $i | grep source 1> /dev/null 2> /dev/null ; then
-       isSource=1
-     else
-@@ -69,12 +73,12 @@
+@@ -69,12 +72,12 @@
      fi
    fi
  
@@ -65,7 +60,7 @@
        continue
      fi
    else # less reliable than rpm2cpio...
-@@ -90,7 +94,7 @@
+@@ -90,7 +93,7 @@
  	decomp="bzip2"
      else
          echo  " $i - no magic compression identifier found - skipping file"
@@ -74,7 +69,7 @@
          continue
      fi
      echo -n "  trying to decompress with ${decomp}..."
-@@ -100,11 +104,11 @@
+@@ -100,11 +103,11 @@
      else
        echo "  FAILED"
        echo  " $i  failed to decompress - skipping file"
@@ -88,7 +83,7 @@
    #if [ "$isSource" = "1" ]; then
    #   DEST=$DEST/$(basename $(basename $i .rpm) .src)
    #fi
-@@ -113,11 +117,12 @@
+@@ -113,11 +116,12 @@
      cpio --extract --preserve-modification-time --make-directories < $ofn 1> /dev/null 2> /dev/null
      rm -f $ofn
      find . -type d -perm 700 -exec chmod 755 {} \; )

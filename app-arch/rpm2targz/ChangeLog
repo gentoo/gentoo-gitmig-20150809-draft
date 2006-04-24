@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.40 2006/03/31 00:01:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.41 2006/04/24 21:47:18 liquidx Exp $
+
+*rpm2targz-9.0-r5 (24 Apr 2006)
+
+  24 Apr 2006; Alastair Tse <liquidx@gentoo.org>
+  +files/rpm2targz-9.0-portability.patch,
+  files/rpm2targz-9.0-secure_temp_handling.patch, +rpm2targz-9.0-r5.ebuild:
+  version bump with darwin fixes (thanks to exg@gentoo.org)
 
   31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   rpm2targz-9.0-r4.ebuild:
