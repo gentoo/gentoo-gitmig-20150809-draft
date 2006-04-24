@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/alsa-jack-1.0.11_rc4.ebuild,v 1.1 2006/03/24 13:55:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/alsa-jack-1.0.11_rc4.ebuild,v 1.2 2006/04/24 10:01:29 flameeyes Exp $
 
 inherit libtool
 
@@ -16,7 +16,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=media-libs/alsa-lib-${PV}
-	media-sound/jack-audio-connection-kit"
+	media-sound/jack-audio-connection-kit
+	!media-plugins/alsa-plugins"
 
 S=${WORKDIR}/alsa-plugins-${MY_PV}
 
