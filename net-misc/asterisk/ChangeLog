@@ -1,6 +1,20 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.110 2006/04/17 00:43:54 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.111 2006/04/24 17:25:02 stkn Exp $
+
+*asterisk-1.0.10-r2 (24 Apr 2006)
+*asterisk-1.0.9-r4 (24 Apr 2006)
+*asterisk-1.0.8-r3 (24 Apr 2006)
+*asterisk-1.0.7-r4 (24 Apr 2006)
+
+  24 Apr 2006; Stefan Knoblich <stkn@gentoo.org>
+  +files/1.0.0/asterisk-1.0-CVE-2006-1827.patch, +asterisk-1.0.7-r4.ebuild,
+  +asterisk-1.0.8-r3.ebuild, +asterisk-1.0.9-r4.ebuild,
+  +asterisk-1.0.10-r2.ebuild, -asterisk-1.2.0.ebuild,
+  -asterisk-1.2.1.ebuild, -asterisk-1.2.4.ebuild:
+  Security revision bump; asterisk-1.0.x: add fix for CVS-2006-1827: Integer
+  sigendness error in format-jpeg.c (bug #131096); dropping affected
+  asterisk-1.2.x ebuilds.
 
   17 Apr 2006; Stefan Knoblich <stkn@gentoo.org>
   files/1.2.0/asterisk-updater:
