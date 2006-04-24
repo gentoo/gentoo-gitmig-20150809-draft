@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gecko-sdk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.28 2006/04/24 03:03:39 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.29 2006/04/24 09:27:33 tcort Exp $
+
+  24 Apr 2006; Thomas Cort <tcort@gentoo.org> gecko-sdk-1.7.13.ebuild:
+  Stable on alpha wrt security Bug #130887.
 
   24 Apr 2006; Thomas Cort <tcort@gentoo.org> gecko-sdk-1.7.13.ebuild:
   Stable on amd64 wrt security Bug #130887.

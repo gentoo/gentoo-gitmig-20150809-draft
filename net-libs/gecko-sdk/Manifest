@@ -1,4 +1,4 @@
-MD5 198ec08453b6c5c772f9377dda8de98d ChangeLog 4695
+MD5 9b623e3f211ab3be213d522586a0b49d ChangeLog 4811
 MD5 1bbe55892586ddbce300e5abb134a681 files/010_glibc-2.4.patch 2628
 MD5 c927b56f320d1bacf28c49a7ee3c37ba files/digest-gecko-sdk-1.7.12 376
 MD5 19bfbff741d54e3b35b048ab445096ed files/digest-gecko-sdk-1.7.12-r1 232
@@ -17,6 +17,6 @@ MD5 278524216669b594ea5b6468a180ed73 files/mozilla-stackgrowth.patch 931
 MD5 957bc911c21996313fe6f649558823f9 gecko-sdk-1.7.12-r1.ebuild 8011
 MD5 3eef55ccb55cccf3ae43696992e3166d gecko-sdk-1.7.12-r2.ebuild 8078
 MD5 8b22525bd9a836743abec05930d9543f gecko-sdk-1.7.12.ebuild 6945
-MD5 4e935ca2e36d8a24e6c4b38d3f8a4cee gecko-sdk-1.7.13.ebuild 8011
+MD5 a76ec3f79e54bd2e9bc5232a73488c5e gecko-sdk-1.7.13.ebuild 8010
 MD5 68e8f6854f38d88b6b6f0cd7ded9b721 gecko-sdk-1.7.8.ebuild 6838
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
