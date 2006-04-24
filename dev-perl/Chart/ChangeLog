@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Chart
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart/ChangeLog,v 1.18 2005/10/02 12:23:16 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart/ChangeLog,v 1.19 2006/04/24 15:17:19 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> Chart-2.3.ebuild:
+  Add ~x86-fbsd keyword.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> Chart-2.3.ebuild:
   Mark 2.3 stable on ia64

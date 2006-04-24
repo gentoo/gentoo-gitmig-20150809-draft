@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Zlib
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Zlib/ChangeLog,v 1.16 2006/02/25 23:54:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Zlib/ChangeLog,v 1.17 2006/04/24 15:12:16 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> IO-Zlib-1.04.ebuild:
+  Add ~x86-fbsd keyword.
 
   25 Feb 2006; Joshua Kinard <kumba@gentoo.org> IO-Zlib-1.04.ebuild:
   Marked stable on mips.
