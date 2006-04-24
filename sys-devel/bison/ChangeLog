@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.50 2006/03/30 14:15:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.51 2006/04/24 01:06:15 kumba Exp $
+
+  29 Apr 2006; Joshua Kinard <kumba@gentoo.org> bison-2.1.ebuild:
+  Marked stable on mips.
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> bison-2.1.ebuild:
   Add ~x86-fbsd keyword.
