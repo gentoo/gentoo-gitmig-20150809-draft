@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/rasmol
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.8 2006/03/14 10:38:29 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.9 2006/04/24 07:23:35 spyderous Exp $
+
+  24 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  rasmol-2.7.2.1.1-r1.ebuild:
+  Keyword ~ppc.
 
   14 Mar 2006; George Shapovalov <george@gentoo.org>
   rasmol-2.7.2.1.1-r1.ebuild:
