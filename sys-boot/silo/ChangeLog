@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/silo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.27 2006/04/21 14:00:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.28 2006/04/24 20:41:39 gustavoz Exp $
+
+  24 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> silo-1.4.11-r1.ebuild:
+  Stable on sparc
 
 *silo-1.4.11-r1 (21 Apr 2006)
 
