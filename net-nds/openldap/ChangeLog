@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.170 2006/04/23 19:22:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.171 2006/04/24 14:14:06 chutzpah Exp $
+
+  24 Apr 2006; Patrick McLean <chutzpah@gentoo.org> openldap-2.3.21.ebuild:
+  Added ~amd64 (bug #130975).
 
   23 Apr 2006; Markus Rothe <corsair@gentoo.org> openldap-2.3.21.ebuild:
   Added ~ppc64; bug #130975
