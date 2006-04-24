@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.102 2006/04/24 13:53:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.103 2006/04/24 23:33:58 weeve Exp $
+
+  24 Apr 2006; Jason Wever <weeve@gentoo.org> alsa-tools-1.0.11.ebuild:
+  Stable on SPARC wrt bug #130535.
 
   24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/alsa-tools-1.0.11-asneeded.patch, alsa-tools-1.0.11.ebuild:
