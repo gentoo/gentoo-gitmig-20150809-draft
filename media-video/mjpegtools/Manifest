@@ -1,61 +1,80 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7c26f83f6add5f000f13178f04cf6cc1 ChangeLog 19307
-RMD160 3837f36f02a4aea509fc5dfd20b4a4ec3eee4086 ChangeLog 19307
-SHA256 11a858f4ba4c93cb251b47b9397b265bff6b2fd6a73c323a84efa8460d336c4f ChangeLog 19307
+AUX altivec-fix-1.6.2.patch 1011 RMD160 575a42610ba933f6d8cede2983bf206f08081f09 SHA1 e94b62f7c04ee3c1d63e99d78f5beeba5346b0c0 SHA256 b82e3666c6b73a9f14f1b280ec85e1ad66a57a786395dc16f66b8d58c979d4dc size 1011
 MD5 3150d43b1c44c02265b8481e271093c8 files/altivec-fix-1.6.2.patch 1011
 RMD160 575a42610ba933f6d8cede2983bf206f08081f09 files/altivec-fix-1.6.2.patch 1011
 SHA256 b82e3666c6b73a9f14f1b280ec85e1ad66a57a786395dc16f66b8d58c979d4dc files/altivec-fix-1.6.2.patch 1011
-MD5 0d8b5844ab88ae9b60a7785572273347 files/digest-mjpegtools-1.6.2-r4 213
-RMD160 6a75573e34d8955402ad6132e14bb84e3f6a8069 files/digest-mjpegtools-1.6.2-r4 213
-SHA256 9a28ff4f3302485b5b3e31ef8fb2617d6c1a69d796d623fff055e76ef542a10d files/digest-mjpegtools-1.6.2-r4 213
-MD5 e0c5507384a9c0a03df00cde6fe67164 files/digest-mjpegtools-1.8.0-r1 69
-RMD160 9752df580da717cf2c1fa8f6793268ba22cf0541 files/digest-mjpegtools-1.8.0-r1 69
-SHA256 02fbb8b96feb81ee06a45cdad2c63eaf126da8faa4de2a8cab38af430c59f8f3 files/digest-mjpegtools-1.8.0-r1 69
+AUX mjpegtools-1.6.2-configure.patch 2592 RMD160 08061eaba5922dff4ce6ee0f96954fbdde6e4142 SHA1 4e5aeddae9de8fcdc295560cf084716f1e7d177d SHA256 2c110a7deeefb20d9fc0c5d65e4b32d775b6a9e5c71ba0e43b720cb3ca1a38c5 size 2592
 MD5 1b2c526400f0a0f1e0c150c6ff42e8c6 files/mjpegtools-1.6.2-configure.patch 2592
 RMD160 08061eaba5922dff4ce6ee0f96954fbdde6e4142 files/mjpegtools-1.6.2-configure.patch 2592
 SHA256 2c110a7deeefb20d9fc0c5d65e4b32d775b6a9e5c71ba0e43b720cb3ca1a38c5 files/mjpegtools-1.6.2-configure.patch 2592
+AUX mjpegtools-1.6.2-dv.patch 634 RMD160 8b354ac309878a4786d53db8a49143c3aab72beb SHA1 c39216a3f7f934b6f2dc45fa4ed61b3c5ba2f1dd SHA256 bf78c1e6e2a658b106794ac72e9dcd048d8eb72032b9e16ff412483043238d85 size 634
 MD5 39b5dadaf6e522165490f099d98b954c files/mjpegtools-1.6.2-dv.patch 634
 RMD160 8b354ac309878a4786d53db8a49143c3aab72beb files/mjpegtools-1.6.2-dv.patch 634
 SHA256 bf78c1e6e2a658b106794ac72e9dcd048d8eb72032b9e16ff412483043238d85 files/mjpegtools-1.6.2-dv.patch 634
+AUX mjpegtools-1.6.2-fPIC.patch 9945 RMD160 b6762daab6481b153cfb6aa8bcf76b72705e8b5d SHA1 e0021f156cbbf03e8c186f9ae77a352eee00906d SHA256 fc38a5587dc1e2a9bd53a06751282f254d5e4d629999ea4646bf43215fe46437 size 9945
 MD5 a4cae44ea5989aed95d7b8d84aaf0af4 files/mjpegtools-1.6.2-fPIC.patch 9945
 RMD160 b6762daab6481b153cfb6aa8bcf76b72705e8b5d files/mjpegtools-1.6.2-fPIC.patch 9945
 SHA256 fc38a5587dc1e2a9bd53a06751282f254d5e4d629999ea4646bf43215fe46437 files/mjpegtools-1.6.2-fPIC.patch 9945
+AUX mjpegtools-1.6.2-gcc34-altivec.patch 3693 RMD160 432c9aad0a17116fea79a26d1a5dce367a5c1da1 SHA1 835c15fcda34cf5631ca1fb2570f6ae8cadbf0a0 SHA256 08dced76f188cda73d7ade4ef59f6b8dc9094e44af5b0b56a48e91a82f00e41f size 3693
 MD5 f16b681aebfa408a1ff5b6030c50fad8 files/mjpegtools-1.6.2-gcc34-altivec.patch 3693
 RMD160 432c9aad0a17116fea79a26d1a5dce367a5c1da1 files/mjpegtools-1.6.2-gcc34-altivec.patch 3693
 SHA256 08dced76f188cda73d7ade4ef59f6b8dc9094e44af5b0b56a48e91a82f00e41f files/mjpegtools-1.6.2-gcc34-altivec.patch 3693
+AUX mjpegtools-1.6.2-gcc34.patch 1601 RMD160 c62889a359c6e7622275e5151e1aa248186fba91 SHA1 1789e406d6f051d2d7397f95c8d4c0f192cbdef2 SHA256 ef8f0fe8e6bc02391c138a005dd6804b5f2a2abd883a8bbfd867ba1357aee527 size 1601
 MD5 d67f97f3bd586946968fca9b8d31be85 files/mjpegtools-1.6.2-gcc34.patch 1601
 RMD160 c62889a359c6e7622275e5151e1aa248186fba91 files/mjpegtools-1.6.2-gcc34.patch 1601
 SHA256 ef8f0fe8e6bc02391c138a005dd6804b5f2a2abd883a8bbfd867ba1357aee527 files/mjpegtools-1.6.2-gcc34.patch 1601
+AUX mjpegtools-1.6.2-libquicktime094.patch 12934 RMD160 b13e4c0732fad8634eaee4c0948a2b03388691e5 SHA1 159dd8156d7055079e8560745fb0686f9bef4f06 SHA256 4da8dd9945dc391b2a2149a931b1260853db5c5d21f52819be61e4f45f3aa512 size 12934
 MD5 ff67ff91c5a8ae610b882510d8d9f43c files/mjpegtools-1.6.2-libquicktime094.patch 12934
 RMD160 b13e4c0732fad8634eaee4c0948a2b03388691e5 files/mjpegtools-1.6.2-libquicktime094.patch 12934
 SHA256 4da8dd9945dc391b2a2149a931b1260853db5c5d21f52819be61e4f45f3aa512 files/mjpegtools-1.6.2-libquicktime094.patch 12934
+AUX mjpegtools-1.6.2-nogtk.patch 556 RMD160 9c17dee165f6cc11ffafa0be10ac884922d47469 SHA1 a7a71a795f660831a91a5cd427fe2b0b5aba33f0 SHA256 15e58bee9cff6730ffa41ea4196d5bfa1de5ccb10b36dabb02954ef7876ed849 size 556
 MD5 abdfec9a9d07b842509b709ba17d69ab files/mjpegtools-1.6.2-nogtk.patch 556
 RMD160 9c17dee165f6cc11ffafa0be10ac884922d47469 files/mjpegtools-1.6.2-nogtk.patch 556
 SHA256 15e58bee9cff6730ffa41ea4196d5bfa1de5ccb10b36dabb02954ef7876ed849 files/mjpegtools-1.6.2-nogtk.patch 556
+AUX mjpegtools-1.8.0-gcc41.patch 420 RMD160 e48e6d716f21e450cc26e7039c703005ed9a0bd9 SHA1 b1bd9604fa0eb6c8b54ee9d0836b0c61b233ffff SHA256 5e748deceb1af3179025ab42d274cc2941fe85bb0b7b512b49263a9ff6754446 size 420
 MD5 803eccd889c60a442ee23ba65951fadc files/mjpegtools-1.8.0-gcc41.patch 420
 RMD160 e48e6d716f21e450cc26e7039c703005ed9a0bd9 files/mjpegtools-1.8.0-gcc41.patch 420
 SHA256 5e748deceb1af3179025ab42d274cc2941fe85bb0b7b512b49263a9ff6754446 files/mjpegtools-1.8.0-gcc41.patch 420
+AUX mjpegtools-1.8.0-parallelmake.patch 2163 RMD160 1bf0d3c30601b2b6d421c8dad3167a42304cce39 SHA1 72c4caeb7d18f9bb82176bad8e10347da6ea3f1e SHA256 d2456d4a75c7c2b205fc9c71431aaae427dd5667c71dd3bee2fa4869cb438b03 size 2163
 MD5 78e3f74445e8ab3c4e3f171cfb21a17f files/mjpegtools-1.8.0-parallelmake.patch 2163
 RMD160 1bf0d3c30601b2b6d421c8dad3167a42304cce39 files/mjpegtools-1.8.0-parallelmake.patch 2163
 SHA256 d2456d4a75c7c2b205fc9c71431aaae427dd5667c71dd3bee2fa4869cb438b03 files/mjpegtools-1.8.0-parallelmake.patch 2163
+AUX no-x11-lib-2.patch 469 RMD160 167a532e48521d20c83a0171d36be68c046fa9fc SHA1 db42046aa78431b3c33f1e1c668ba8590eaca78a SHA256 1a6658a4e78f8a5a0df25717e4370a1d8b7f0a6305e2fa19f080ffa24060c268 size 469
 MD5 cbcc90f9de3aaf0ac12aa6bd1c4db025 files/no-x11-lib-2.patch 469
 RMD160 167a532e48521d20c83a0171d36be68c046fa9fc files/no-x11-lib-2.patch 469
 SHA256 1a6658a4e78f8a5a0df25717e4370a1d8b7f0a6305e2fa19f080ffa24060c268 files/no-x11-lib-2.patch 469
-MD5 fe49014257499366bdc6903a9aa33fe5 metadata.xml 311
-RMD160 5d2d2fac1a97018f75e5ff1e8e7c90fb02511cb9 metadata.xml 311
-SHA256 82201360db287eaebbba80aafcad5384e656d9a652f076a75eb2298b42093955 metadata.xml 311
+DIST mjpegtools-1.6.2-mmx-fPIC.patch.bz2 3065 RMD160 b18bc3105964de0c3377fdd22fded4822ca6c8ed SHA256 2d1cf95c5f75e02f181aabe1e59f1b211d66f0daf981d5f816fd25fa6c975310 size 3065
+DIST mjpegtools-1.6.2.tar.gz 1256280 RMD160 48d4e6fa037f18973bae7d22ac14412182361c23 SHA256 525afc26f07aacf06638ffe8612b2d5d84dab64e09df4d3691bc4909ef4850ae size 1256280
+DIST mjpegtools-1.8.0.tar.gz 1475998 RMD160 4d97a6a721f29223975605e2a5e645b4d7d129b5 SHA256 d841575c72cd0e587c1bab703d0906e3d23bf428424000557739cf5d6097209a size 1475998
+DIST mjpegtools-m4-1.tar.bz2 4547 RMD160 b81b89bb6364023606a1d3ca9519e143fe053ab4 SHA256 10de1e206ee9c84aae111e95f655ad9394be749bfed01d337f7ff9a983aab522 size 4547
+EBUILD mjpegtools-1.6.2-r4.ebuild 3198 RMD160 fa7388f51894c2ee8074ecea31ca3b87406ef0af SHA1 d7131c6870e4f1024f5e16b0471e34ef1ec63a37 SHA256 109a519ee3ff3dc7e71e89247f95564c177903591c266052520246f7f19324d6 size 3198
 MD5 36540d6497ac92e2bacc1512b1aeafaf mjpegtools-1.6.2-r4.ebuild 3198
 RMD160 fa7388f51894c2ee8074ecea31ca3b87406ef0af mjpegtools-1.6.2-r4.ebuild 3198
 SHA256 109a519ee3ff3dc7e71e89247f95564c177903591c266052520246f7f19324d6 mjpegtools-1.6.2-r4.ebuild 3198
+EBUILD mjpegtools-1.8.0-r1.ebuild 2776 RMD160 146b0d23814292fce996ef7f1c154f9fe19a7e1a SHA1 01aa09f6ca4f86d3ade54db31b0a3817cffa7749 SHA256 0561d936dbe8522ecbae61908d39e55d873ff6abc125b75cbd4baf7e58f999fc size 2776
 MD5 854c6bd6919cb717efd807adb00abf9c mjpegtools-1.8.0-r1.ebuild 2776
 RMD160 146b0d23814292fce996ef7f1c154f9fe19a7e1a mjpegtools-1.8.0-r1.ebuild 2776
 SHA256 0561d936dbe8522ecbae61908d39e55d873ff6abc125b75cbd4baf7e58f999fc mjpegtools-1.8.0-r1.ebuild 2776
+MISC ChangeLog 19307 RMD160 3837f36f02a4aea509fc5dfd20b4a4ec3eee4086 SHA1 e6fc9bb8dbb3fe8d30a67a10841d5f3b3544d05b SHA256 11a858f4ba4c93cb251b47b9397b265bff6b2fd6a73c323a84efa8460d336c4f size 19307
+MD5 7c26f83f6add5f000f13178f04cf6cc1 ChangeLog 19307
+RMD160 3837f36f02a4aea509fc5dfd20b4a4ec3eee4086 ChangeLog 19307
+SHA256 11a858f4ba4c93cb251b47b9397b265bff6b2fd6a73c323a84efa8460d336c4f ChangeLog 19307
+MISC metadata.xml 311 RMD160 5d2d2fac1a97018f75e5ff1e8e7c90fb02511cb9 SHA1 228093feb5989936d0480ac2bc543df959b06dfa SHA256 82201360db287eaebbba80aafcad5384e656d9a652f076a75eb2298b42093955 size 311
+MD5 fe49014257499366bdc6903a9aa33fe5 metadata.xml 311
+RMD160 5d2d2fac1a97018f75e5ff1e8e7c90fb02511cb9 metadata.xml 311
+SHA256 82201360db287eaebbba80aafcad5384e656d9a652f076a75eb2298b42093955 metadata.xml 311
+MD5 fe05e4864f343a5e19e093e5ba3bb53f files/digest-mjpegtools-1.6.2-r4 777
+RMD160 0c535cf49b75b55e95a81a7be876fbf37933a064 files/digest-mjpegtools-1.6.2-r4 777
+SHA256 31391ccc93bdb728c27fd3de8a03ecc27f1bc7d4e1f894a909f2fe0d92efff66 files/digest-mjpegtools-1.6.2-r4 777
+MD5 2188754e2cd2108901028f4e9c83d696 files/digest-mjpegtools-1.8.0-r1 253
+RMD160 5743c9441f2552b35045c0b5d3b9797079f8d30d files/digest-mjpegtools-1.8.0-r1 253
+SHA256 21770c4dd885e9231db381f9693c0650f32cd48f0a5c4438e62338c3b75d3c97 files/digest-mjpegtools-1.8.0-r1 253
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFD73V82+ySkm8kpY0RAuZjAJ9zkTm5ycq1Dl+VUJQ2ToTB/Iei6QCgj80w
-Rdc8kP7P67gRhsFD/0pzAws=
-=EJaV
+iD8DBQFETJJ+AiZjviIA2XgRAqVsAJ9LXl1B4r28skQ2SOVSRGO2LrqiYACg4hfn
+9w6ZAiinKndb5rfh6QQgjPk=
+=MaoT
 -----END PGP SIGNATURE-----
