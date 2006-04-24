@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4e00bdf1c1282364e50859023f1f0dc0 ChangeLog 3340
 RMD160 1e9d80be4dfe72972a843f39f0d3a187411b761b ChangeLog 3340
 SHA256 4e0fb655d909a539ce628b2057fa875890593c0fccb8d96c6b102aa647e32c67 ChangeLog 3340
@@ -13,6 +10,9 @@ SHA256 719d6279d0ca02c0fadc724e8596e7f03a1219e915eae8e5805820cdbf6889e6 Class-In
 MD5 aa1f7f3fe325874fe2e6db3f3fc5967e Class-Inspector-1.13.ebuild 566
 RMD160 7f78a76b15c9acaa741ce1098962a6035aab0bf1 Class-Inspector-1.13.ebuild 566
 SHA256 a6a5e678b9bfa5b956ef5ed07c3ac0e1d9a27316df8079c586fb5b0e72fce155 Class-Inspector-1.13.ebuild 566
+MD5 e10e06ff143a442f2d0e6720e2e458b0 Class-Inspector-1.14.ebuild 456
+RMD160 843c45a26acbe99f77a2242b7f826b3f39cfca7d Class-Inspector-1.14.ebuild 456
+SHA256 86e8aa937c92f720772eef43040b6a15efa4dc863e70080d477f0c9624c9d346 Class-Inspector-1.14.ebuild 456
 MD5 97cd0626d4cf5abbebfd0cfaf64f97ac files/digest-Class-Inspector-1.06 71
 RMD160 a027352994d6f140fbdf368a3809d1430bb16ae2 files/digest-Class-Inspector-1.06 71
 SHA256 305fbd29c40492ad5bfc035a96b38e164d11cc7ea6541059be56f8d47496a542 files/digest-Class-Inspector-1.06 71
@@ -22,13 +22,9 @@ SHA256 a10e1e5998ff2747d7c0004d868f6059b0ef5dc6dd848a6daf7a03996a129605 files/di
 MD5 161c8a845231075f5fcde872ac9bde4d files/digest-Class-Inspector-1.13 71
 RMD160 4e7b402b87147f1c2999d84c77081d126ccecbfa files/digest-Class-Inspector-1.13 71
 SHA256 d77615a3202b982d943a6d5de7706b2c4902ab62381ce2d1c84a69459207f919 files/digest-Class-Inspector-1.13 71
+MD5 e8a3607fa765a0d68abf6c6966e5e805 files/digest-Class-Inspector-1.14 259
+RMD160 820dcc822c47df9c00a393bdf431db9b8e4a0aac files/digest-Class-Inspector-1.14 259
+SHA256 7994ec56c2c9932d44d9fea818a638e072d713b412148a18dee1c0bf7410f722 files/digest-Class-Inspector-1.14 259
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8GXmtG5z4I8BtQoRAv5YAJ949PqX8XP7DN82t7DF1xbFNzHVzQCfQ9CX
-6im4P6DXfR8azAyAcBq+Jyc=
-=sm6Y
------END PGP SIGNATURE-----
