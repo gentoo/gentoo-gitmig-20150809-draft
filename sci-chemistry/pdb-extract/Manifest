@@ -1,5 +1,21 @@
-MD5 447751fba28255e799ae83af747c9047 ChangeLog 467
-MD5 f0539a87f3decb3c2a841511143cabb9 files/digest-pdb-extract-1.700 80
+AUX respect-cflags-and-fix-install.patch 8415 RMD160 b1418278385f197db26a49be4bf1ad2bbed4b4c0 SHA1 93bd785a4683542716309d917335de7a9c3573d4 SHA256 ab44177b9a9e34573331aafeb112efa86154a0c1ee706930aa05c32c0eb1e58b size 8415
 MD5 e315289ad58f3b5fb006bbf4d2b482a2 files/respect-cflags-and-fix-install.patch 8415
-MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248
+RMD160 b1418278385f197db26a49be4bf1ad2bbed4b4c0 files/respect-cflags-and-fix-install.patch 8415
+SHA256 ab44177b9a9e34573331aafeb112efa86154a0c1ee706930aa05c32c0eb1e58b files/respect-cflags-and-fix-install.patch 8415
+DIST pdb-extract-v1.700-prod-src.tar.gz 9081548 size 9081548
+EBUILD pdb-extract-1.700.ebuild 1359 RMD160 64512d1d08386b09ff574dd69deb975e02fdc7e3 SHA1 fe025f2abd5eb120af698f81d3b26e2c3312b95d SHA256 93ffa013a18688b9eada2fc9ad427ef5ea1b1179fa458cb7b125c09d993bb09d size 1359
 MD5 19ac2a90f0f05f63457fee2492dba21f pdb-extract-1.700.ebuild 1359
+RMD160 64512d1d08386b09ff574dd69deb975e02fdc7e3 pdb-extract-1.700.ebuild 1359
+SHA256 93ffa013a18688b9eada2fc9ad427ef5ea1b1179fa458cb7b125c09d993bb09d pdb-extract-1.700.ebuild 1359
+MISC ChangeLog 550 RMD160 e67e054f830afd6ba309f33770b0ab74d92c94a8 SHA1 5f3f8735f39607025703365bb3d4f2ca27784245 SHA256 387da17f9202efad39e9b3be2e1cfc5776d4fae16d0bfb80583f3b41416056be size 550
+MD5 18ceb7c06e04e3a67695018682c216d9 ChangeLog 550
+RMD160 e67e054f830afd6ba309f33770b0ab74d92c94a8 ChangeLog 550
+SHA256 387da17f9202efad39e9b3be2e1cfc5776d4fae16d0bfb80583f3b41416056be ChangeLog 550
+MISC metadata.xml 248 RMD160 6488d9f1ef3e05e6ac5a29ddcc818e5ead0a5230 SHA1 75a648fddef9922cdfe21fb0298a1c746190fd82 SHA256 de0ad7dc383b462c407cae015684d27c090455eac87c6f0f9ff581ef6e0b5b27 size 248
+MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248
+RMD160 6488d9f1ef3e05e6ac5a29ddcc818e5ead0a5230 metadata.xml 248
+SHA256 de0ad7dc383b462c407cae015684d27c090455eac87c6f0f9ff581ef6e0b5b27 metadata.xml 248
+MD5 f0539a87f3decb3c2a841511143cabb9 files/digest-pdb-extract-1.700 80
+RMD160 5a626f8ae7db3f700e79a93dd83332d522139839 files/digest-pdb-extract-1.700 80
+SHA256 ccc4881baeec3ec06aabd29ea939573869eb09e65246e0a8b12fa33e04cce8ac files/digest-pdb-extract-1.700 80
+size 80 files/digest-pdb-extract-1.700 80
