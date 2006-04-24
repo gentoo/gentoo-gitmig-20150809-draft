@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.165 2006/04/24 10:18:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.166 2006/04/24 10:39:18 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> alsa-lib-1.0.10.ebuild,
+  alsa-lib-1.0.11.ebuild:
+  Drop PDEPEND on alsa-jack with jack useflag enabled, as alsa-lib upstream
+  doesn't provide jack support anymore since 1.0.10 at least.
 
   24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/alsa-lib-1.0.8-gcc4.patch, -alsa-lib-1.0.8.ebuild,
