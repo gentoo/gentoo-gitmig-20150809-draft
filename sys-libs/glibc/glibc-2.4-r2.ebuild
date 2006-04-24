@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.14 2006/04/22 18:58:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.15 2006/04/24 07:18:42 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -861,7 +861,7 @@ glibc_do_configure() {
 		if want_tls ; then
 			myconf="${myconf} --with-tls"
 
-			if want__thread && use linuxthreads-tls ; then
+			if want__thread ; then
 				myconf="${myconf} --with-__thread"
 			else
 				myconf="${myconf} --without-__thread"

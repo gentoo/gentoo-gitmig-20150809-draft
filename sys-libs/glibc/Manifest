@@ -548,10 +548,10 @@ EBUILD glibc-2.4-r1.ebuild 42520 RMD160 6d415e820c41377d4ba87f2f863b2fa8c5ae832f
 MD5 8ac989868b7b6924964020838212c914 glibc-2.4-r1.ebuild 42520
 RMD160 6d415e820c41377d4ba87f2f863b2fa8c5ae832f glibc-2.4-r1.ebuild 42520
 SHA256 068f139a387f74eb44b364e1057ce7dca634938d00d2493f48473d7a350feebc glibc-2.4-r1.ebuild 42520
-EBUILD glibc-2.4-r2.ebuild 37895 RMD160 f4a21c7e56416852e3762905ab371fb4fb57b6b2 SHA1 9e633a824a797aa90f742fb8e6cdbbb92252fd5e SHA256 187c7195fa7860359b79c97a818fa4391c9ebd4abb46f657ea1f78f45aeb5ce3 size 37895
-MD5 d2369b222cf72c3372e8b84555558b29 glibc-2.4-r2.ebuild 37895
-RMD160 f4a21c7e56416852e3762905ab371fb4fb57b6b2 glibc-2.4-r2.ebuild 37895
-SHA256 187c7195fa7860359b79c97a818fa4391c9ebd4abb46f657ea1f78f45aeb5ce3 glibc-2.4-r2.ebuild 37895
+EBUILD glibc-2.4-r2.ebuild 37871 RMD160 a8f247fd51da3b2ae83cb660fe16f18ef5e1fc82 SHA1 74fef1b90b223c3e43ec91d6358430ec6325fc67 SHA256 f1837169fff8062c14d6084e73ff1c506fefa321dc96d443cd50ca578b856792 size 37871
+MD5 807018f85acd46ab95a6ab7551a2af86 glibc-2.4-r2.ebuild 37871
+RMD160 a8f247fd51da3b2ae83cb660fe16f18ef5e1fc82 glibc-2.4-r2.ebuild 37871
+SHA256 f1837169fff8062c14d6084e73ff1c506fefa321dc96d443cd50ca578b856792 glibc-2.4-r2.ebuild 37871
 MISC ChangeLog 91644 RMD160 f2b6032dae413c922a5c66ddcbd78e9472b3a33d SHA1 260472314c99a7f161d2c6a2d995df9777083be0 SHA256 6183ba3c3c9e14b875ed0352983ff615588911b9f9c57de44bddbadd40369a43 size 91644
 MD5 81980b9fdc84b5a369639d9145d83e93 ChangeLog 91644
 RMD160 f2b6032dae413c922a5c66ddcbd78e9472b3a33d ChangeLog 91644
@@ -563,79 +563,61 @@ SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata
 MD5 15ec183bf2ca5eda7ca2ea4c23b126e0 files/digest-glibc-2.2.5-r10 1054
 RMD160 c2ae03360cf0c72ce4ab2c7716cddecddf1a63d6 files/digest-glibc-2.2.5-r10 1054
 SHA256 1e8391b23feca4c5578cc71839bee70677d5eec1eb4e14703d1e3465b50a4160 files/digest-glibc-2.2.5-r10 1054
-size 1054 files/digest-glibc-2.2.5-r10 1054
 MD5 16063d2dd7420db6c4bb8e334166a985 files/digest-glibc-2.3.2-r12 1382
 RMD160 aeb3f907218091a8534ae4ca169ca45469803090 files/digest-glibc-2.3.2-r12 1382
 SHA256 cfcb8c8264665c3ae713027f83b6cdda4c7b9d9f0311db7ade87f44797f870d3 files/digest-glibc-2.3.2-r12 1382
-size 1382 files/digest-glibc-2.3.2-r12 1382
 MD5 449eba15566275d74bd781d8f0a08ca4 files/digest-glibc-2.3.3.20040420-r2 1120
 RMD160 f7b36ad56f1585f7612dcce9516b0d40a9c7ea03 files/digest-glibc-2.3.3.20040420-r2 1120
 SHA256 2e08e513bbf32e245e217e119bc68791c38db968c50f420a5adf10cd530613f7 files/digest-glibc-2.3.3.20040420-r2 1120
-size 1120 files/digest-glibc-2.3.3.20040420-r2 1120
 MD5 7194267c126b7957cb653c57e45de75f files/digest-glibc-2.3.4.20040619-r2 1105
 RMD160 c4d90f204ff0b50d39ab9997268ca0e880dd2e72 files/digest-glibc-2.3.4.20040619-r2 1105
 SHA256 dd0d63a0425c9c9b4a355919c6248fbe74d321dfd642445fc09abc12cc8a2a89 files/digest-glibc-2.3.4.20040619-r2 1105
-size 1105 files/digest-glibc-2.3.4.20040619-r2 1105
 MD5 3ca50aacdcca34143f2a0c3c6eb4d1f1 files/digest-glibc-2.3.4.20040808-r1 1376
 RMD160 2b5bd285c8e2c52cd16ba938e1d45d7f6253f2db files/digest-glibc-2.3.4.20040808-r1 1376
 SHA256 2ffdaaa1a5f387624ac3be154fcc5e46958ca639a83cbe2c5198557da7784e45 files/digest-glibc-2.3.4.20040808-r1 1376
-size 1376 files/digest-glibc-2.3.4.20040808-r1 1376
 MD5 f8541256e4ad58a1940b84ecd1b15755 files/digest-glibc-2.3.4.20041102-r1 1379
 RMD160 582cb821648a7917e97d17d324ca99d95541ea0b files/digest-glibc-2.3.4.20041102-r1 1379
 SHA256 8d1be8d4fe94b1bb25f75ceb4fe4ab6563712ab2801dc8f920176f30a7283b08 files/digest-glibc-2.3.4.20041102-r1 1379
-size 1379 files/digest-glibc-2.3.4.20041102-r1 1379
 MD5 9ee531a62655148000464572e168ba85 files/digest-glibc-2.3.4.20041102-r2 1391
 RMD160 44d48f269e95149ce306a86297d20e732bc6d7ea files/digest-glibc-2.3.4.20041102-r2 1391
 SHA256 03b369cd9de46452cbc74f690cce61136c34f79d2e8c677b11b201f9dffa3282 files/digest-glibc-2.3.4.20041102-r2 1391
-size 1391 files/digest-glibc-2.3.4.20041102-r2 1391
 MD5 39c880349de6e0508665e6eccae0eb17 files/digest-glibc-2.3.4.20050125-r1 1885
 RMD160 900beeef8b73913fb706329848dba78755976909 files/digest-glibc-2.3.4.20050125-r1 1885
 SHA256 b83805d1f271204046e74ae55a81d11d8a037b4a29ccd85b4ccc9c9a67d1548d files/digest-glibc-2.3.4.20050125-r1 1885
-size 1885 files/digest-glibc-2.3.4.20050125-r1 1885
 MD5 624d53a4e1d8ee6052d9146b1baecb33 files/digest-glibc-2.3.5 1876
 RMD160 85dd7b01b31a0b64e72aeef7036e937cc81ddcce files/digest-glibc-2.3.5 1876
 SHA256 83ee5322eb81af93424b395fa00519410393e87153fae68d8f72daf070ac1951 files/digest-glibc-2.3.5 1876
-size 1876 files/digest-glibc-2.3.5 1876
 MD5 dbbfcd761d39206864294c9d3515c592 files/digest-glibc-2.3.5-r1 1870
 RMD160 97a3efa476ab13225ae185729e315549bab1cf21 files/digest-glibc-2.3.5-r1 1870
 SHA256 7c1853069551f27fc8cfbf8c9965c01aabfb23cd6048412a413c2ae58469fcb7 files/digest-glibc-2.3.5-r1 1870
-size 1870 files/digest-glibc-2.3.5-r1 1870
 MD5 dbbfcd761d39206864294c9d3515c592 files/digest-glibc-2.3.5-r2 1870
 RMD160 97a3efa476ab13225ae185729e315549bab1cf21 files/digest-glibc-2.3.5-r2 1870
 SHA256 7c1853069551f27fc8cfbf8c9965c01aabfb23cd6048412a413c2ae58469fcb7 files/digest-glibc-2.3.5-r2 1870
-size 1870 files/digest-glibc-2.3.5-r2 1870
 MD5 5ba9db951648c3fb60e92da639147153 files/digest-glibc-2.3.5-r3 1870
 RMD160 6039fe9e29fce7eff6eed73b262f2afc2a7642a4 files/digest-glibc-2.3.5-r3 1870
 SHA256 77ccc09d56cf5a8b4a7c2d847eb28074668e0319777e632be7a1c29e33a7db5c files/digest-glibc-2.3.5-r3 1870
-size 1870 files/digest-glibc-2.3.5-r3 1870
 MD5 654fa369b24008cdc59f6697f973b524 files/digest-glibc-2.3.6 1677
 RMD160 a02a70a029a9ae0217bbc34b8cde90b354175cdf files/digest-glibc-2.3.6 1677
 SHA256 f376dabcc15bff26ed7d52f1f665383c9b1c879ba567362784ecdf1f7adc411c files/digest-glibc-2.3.6 1677
-size 1677 files/digest-glibc-2.3.6 1677
 MD5 94bcc07398ebc3b686e0bf2d2fade5a9 files/digest-glibc-2.3.6-r1 1873
 RMD160 02269de01d0549a4d26c197d9bdc22d43cfd215e files/digest-glibc-2.3.6-r1 1873
 SHA256 65aa12d27efd68800228f53d7bd2a28a209a567329f81c43f65ea4e6d8f9bd10 files/digest-glibc-2.3.6-r1 1873
-size 1873 files/digest-glibc-2.3.6-r1 1873
 MD5 e967be06a33d670df445a60c01f33805 files/digest-glibc-2.3.6-r2 1873
 RMD160 19f083a816b4d78d20b23d32188f5f381e4ce531 files/digest-glibc-2.3.6-r2 1873
 SHA256 b21bc3b189e78f3951e3d56c81cb3f12f1ad68d53df65890fe7d647a91184c17 files/digest-glibc-2.3.6-r2 1873
-size 1873 files/digest-glibc-2.3.6-r2 1873
 MD5 a9b2d44d0396a4996c59e30664cd3643 files/digest-glibc-2.3.6-r3 1876
 RMD160 cc9d6cfcd8541c7dc518560eb50dfd8c61f98ab8 files/digest-glibc-2.3.6-r3 1876
 SHA256 8ec9b852e961654f255e4ae73c2fcc51482fb1b0519834688dba4614f8353216 files/digest-glibc-2.3.6-r3 1876
-size 1876 files/digest-glibc-2.3.6-r3 1876
 MD5 7f238701dc80be184d3b46a3babaee2b files/digest-glibc-2.4-r1 1292
 RMD160 2973b76f09f44d280289e9dec583f88ee4c636b2 files/digest-glibc-2.4-r1 1292
 SHA256 2cee383fdb2b7f9d72d4a87fcc9ae92e952f2c5bdf5cf940054bc52cf27df25e files/digest-glibc-2.4-r1 1292
-size 1292 files/digest-glibc-2.4-r1 1292
 MD5 4bf5e86e4ed5af436a1fb631a218ca06 files/digest-glibc-2.4-r2 1569
 RMD160 38e7ca80f77006587ca7f7fa0d496eae21413d84 files/digest-glibc-2.4-r2 1569
 SHA256 8ab5579705a9af675ac34e8ed5b5346f8d7953f2857f5bd8f2b574b7fb4406af files/digest-glibc-2.4-r2 1569
-size 1569 files/digest-glibc-2.4-r2 1569
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFESnzN2+ySkm8kpY0RArDzAKCWX1yA2U8jbFKvfDZYWy2sMgiJ+gCfYn/n
-l/PfdB0KNhWMITcidtZwnps=
-=o/JD
+iD8DBQFETHvq2+ySkm8kpY0RAu4rAJ9RqVS88yLJGxuZUnHIfrua3CrZSwCgrhI6
+ZBU5zAiM29TBPmpz+8k7zjw=
+=yC3a
 -----END PGP SIGNATURE-----
