@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.95 2006/04/02 23:34:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.96 2006/04/24 10:38:48 nelchael Exp $
+
+  24 Apr 2006; Krzysiek Pawlik <nelchael@gentoo.org> nano-1.3.10-r1.ebuild:
+  Stable on x86, see bug 131054.
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> nano-1.3.9.ebuild,
   nano-1.3.11.ebuild:
