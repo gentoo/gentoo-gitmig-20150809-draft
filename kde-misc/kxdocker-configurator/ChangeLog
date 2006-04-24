@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kxdocker-configurator
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker-configurator/ChangeLog,v 1.1 2006/04/22 03:50:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker-configurator/ChangeLog,v 1.2 2006/04/24 11:15:04 dragonheart Exp $
+
+  24 Apr 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/kxdocker-configurator-1.0.2-collisions.patch,
+  kxdocker-configurator-1.0.2.ebuild:
+  remove file collision of xConfigurator.png provided by kxdocker-resources.
+  bug #130872 thanks to Alessio Cassibba
 
 *kxdocker-configurator-1.0.2 (22 Apr 2006)
 

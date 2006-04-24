@@ -1,22 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8003bc0c9612af744b9c1d547f05a60b ChangeLog 447
-RMD160 7a9ff0aaa39cd61f1d43c3e1370d94ce2875326b ChangeLog 447
-SHA256 8e09b089d10af8e30147273835074928436f37eed275808ae6c41f43aa2bbb8f ChangeLog 447
-MD5 c218476639dbbaac7e5889c99b17b24b files/digest-kxdocker-configurator-1.0.2 286
-RMD160 2581dbae82e46f73799b4a658ba62485af9b916f files/digest-kxdocker-configurator-1.0.2 286
-SHA256 1cb10080bc2c658e00899d238835bc70e72d9d93eabcf0482f0ec5c2ec972e0d files/digest-kxdocker-configurator-1.0.2 286
-MD5 18eef5355fa80ce91956d874ee9d5be2 kxdocker-configurator-1.0.2.ebuild 610
-RMD160 0d32d707e7188a982171d2a31621c10630f91b89 kxdocker-configurator-1.0.2.ebuild 610
-SHA256 3453ac9595ce273a27a721e260cfa3ee627eeb94e5f1882423874b2cf3d6fc4e kxdocker-configurator-1.0.2.ebuild 610
+AUX kxdocker-configurator-1.0.2-collisions.patch 1065 RMD160 5ef2978e709af2c890c061da99caf355666ec425 SHA1 69a960d23936eeff4ceb98a5a9e64307261b7c01 SHA256 b2716564969cdd49e30bd8b0187d1f0f418e835c2eab5af9b76829cc3627cdf1 size 1065
+MD5 592beb37ea28a9ba611c41322ca88b18 files/kxdocker-configurator-1.0.2-collisions.patch 1065
+RMD160 5ef2978e709af2c890c061da99caf355666ec425 files/kxdocker-configurator-1.0.2-collisions.patch 1065
+SHA256 b2716564969cdd49e30bd8b0187d1f0f418e835c2eab5af9b76829cc3627cdf1 files/kxdocker-configurator-1.0.2-collisions.patch 1065
+DIST kxdocker-configurator-1.0.2.tar.bz2 777048 RMD160 66c25e4c6d58f5780f7b2fdc0cfb3c3163f795eb SHA256 ca14b622350cadcfe97094d4668d8cf0ccb52f8138fb92b842ddb57942a1d413 size 777048
+EBUILD kxdocker-configurator-1.0.2.ebuild 695 RMD160 48b727544865a96ebb9d62f3123304b1a2a17ca7 SHA1 ba13a09178c7adc1b95ce933507a6e5c7a9b7bb5 SHA256 e27b6deadae8325b2d14fcbcc1271cebc706d38aa2ac1f041dd5cdb4276aaf71 size 695
+MD5 4993cac23507fcb6d2f2f1721c0fd62d kxdocker-configurator-1.0.2.ebuild 695
+RMD160 48b727544865a96ebb9d62f3123304b1a2a17ca7 kxdocker-configurator-1.0.2.ebuild 695
+SHA256 e27b6deadae8325b2d14fcbcc1271cebc706d38aa2ac1f041dd5cdb4276aaf71 kxdocker-configurator-1.0.2.ebuild 695
+MISC ChangeLog 712 RMD160 a8d82767344f4606d02bd7cb9474ed448433ebdb SHA1 98af4e27c8cd55247eb7d19b7faeccb76ed349bb SHA256 1e81e2e9c239f4dc77444a59685306f88abef85bea435da08b597fbeac9f8742 size 712
+MD5 61ed768c5e6ac67910cad9e4fee6f70c ChangeLog 712
+RMD160 a8d82767344f4606d02bd7cb9474ed448433ebdb ChangeLog 712
+SHA256 1e81e2e9c239f4dc77444a59685306f88abef85bea435da08b597fbeac9f8742 ChangeLog 712
+MISC metadata.xml 349 RMD160 d2ff75e9ad34ca5bd7bf1af21510d2c4e20ca084 SHA1 68ed7d4ed3ff016fb8c6236e9a8902b0ea3f97ca SHA256 56e8b49cdda4e9edda2aa32fd91aae96b0c89d3b4774867a5cea4c5c58c62545 size 349
 MD5 af0f2c1aa4185c52dd4f4ea588f22286 metadata.xml 349
 RMD160 d2ff75e9ad34ca5bd7bf1af21510d2c4e20ca084 metadata.xml 349
 SHA256 56e8b49cdda4e9edda2aa32fd91aae96b0c89d3b4774867a5cea4c5c58c62545 metadata.xml 349
+MD5 c218476639dbbaac7e5889c99b17b24b files/digest-kxdocker-configurator-1.0.2 286
+RMD160 2581dbae82e46f73799b4a658ba62485af9b916f files/digest-kxdocker-configurator-1.0.2 286
+SHA256 1cb10080bc2c658e00899d238835bc70e72d9d93eabcf0482f0ec5c2ec972e0d files/digest-kxdocker-configurator-1.0.2 286
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.3-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFESagxmdTrptrqvGERAio/AKCIrY7Rm9EhJDEQD7T+GZNyMIOrgACeJdV+
-CMcn2cd8PnX7vFCxiFA7rLM=
-=gWrL
+iD8DBQFETLYymdTrptrqvGERAuLmAJ9zMjD4KpX9C7AOMcOj/hYjMO7RkgCfZ+WS
+gfI1Buet3w8xOOEih3qqpG0=
+=/YZC
 -----END PGP SIGNATURE-----
