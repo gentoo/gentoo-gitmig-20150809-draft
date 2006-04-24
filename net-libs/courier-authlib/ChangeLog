@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.55 2006/04/02 20:54:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.56 2006/04/24 17:24:35 kumba Exp $
+
+  24 Apr 2006; Joshua Kinard <kumba@gentoo.org> courier-authlib-0.58.ebuild:
+  Marked stable on mips.
 
   02 Apr 2006; Jason Wever <weeve@gentoo.org> courier-authlib-0.58.ebuild:
   Stable on SPARC.

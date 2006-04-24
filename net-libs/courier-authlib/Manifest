@@ -1,75 +1,108 @@
-MD5 d70c560ebc9c659c669169384c2fa3aa ChangeLog 8484
-RMD160 fced493b997de7634d707a414153eb9b2dc16132 ChangeLog 8484
-SHA256 e94858ab6f741c24003d3c2a755138a632e57ce5ae8c3b5e61ec31206e763ea2 ChangeLog 8484
-MD5 ead53e30977f8d368de26fae5a67ad32 courier-authlib-0.53.ebuild 5903
-RMD160 abeb3cca5e3e5f70cd2bdef988d28838a856572e courier-authlib-0.53.ebuild 5903
-SHA256 9fbde3af3aeb200a47fc0f2d82e12e2c42ab1e350de4560137f71b6ee531b06b courier-authlib-0.53.ebuild 5903
-MD5 616ebeb89647092c49a7c841274a5c6a courier-authlib-0.54.20050224.ebuild 6027
-RMD160 637cd01dc784b6797a2f08ed11fe48d807f20f2c courier-authlib-0.54.20050224.ebuild 6027
-SHA256 86bf7ab946c9159bb184c1bfcbe5946e64d446c81b05a1d1be4a4a94157b87e7 courier-authlib-0.54.20050224.ebuild 6027
-MD5 f8e2293e9807a0b229675d9a92f9cffa courier-authlib-0.55.20050320.ebuild 6099
-RMD160 ddfa6be74bcca90b86b2c9f92bf8f71a7a04845d courier-authlib-0.55.20050320.ebuild 6099
-SHA256 b3e3e661791869321ab40bcb6e24890f78ebcc7ecf68b3eb0feeacf9a219fd86 courier-authlib-0.55.20050320.ebuild 6099
-MD5 d59c188617d2aed926a0d49c1fb91f96 courier-authlib-0.55.ebuild 6057
-RMD160 805c51ba8bba7f619002a395ff5f12c3bfb0dcec courier-authlib-0.55.ebuild 6057
-SHA256 8cbabcb483c30760d584839bec8a8d31fad60a974a6448caa817ae23a31f30be courier-authlib-0.55.ebuild 6057
-MD5 57ce08c86fc4d6f703643907b7b11d2d courier-authlib-0.56.ebuild 6093
-RMD160 d85504b9fe2ebb98456d84ff2711f888388d7051 courier-authlib-0.56.ebuild 6093
-SHA256 6085159fa9b8e69d661b1e17db06a45dcf90dab9cb2917ab49547d44df2ecfd2 courier-authlib-0.56.ebuild 6093
-MD5 8bbd72f9613e3a82351e915aabbac7c8 courier-authlib-0.57-r1.ebuild 5970
-RMD160 bf2167d8d98ad4b5894b676a915693c8d2d280ca courier-authlib-0.57-r1.ebuild 5970
-SHA256 d686ce3dc11e5af2dd8832569f5bd668bbf357fdfafe7d9e3c9b42a054e3f7a2 courier-authlib-0.57-r1.ebuild 5970
-MD5 d0d8527656af2f96f526b5163a484e93 courier-authlib-0.57-r2.ebuild 6011
-RMD160 42997e3b3347c865caacecff37802d17b305d1ca courier-authlib-0.57-r2.ebuild 6011
-SHA256 27865d1871995f6e91b7eacd078b1c800756dd9bd44c1ee329d3f85cfe51dde9 courier-authlib-0.57-r2.ebuild 6011
-MD5 2f26f5dd7b2847b4d13a0e7dd5917062 courier-authlib-0.57.20051116.ebuild 6142
-RMD160 909e1b714a32250c10a246ae81ec064ce1d8fa8f courier-authlib-0.57.20051116.ebuild 6142
-SHA256 ab78c497d8e8fd8a63b7ce20c790f45bd0d65f71c51df39480cfe713677baedd courier-authlib-0.57.20051116.ebuild 6142
-MD5 c02fd230688d2f9a2d0f4e8b45a3898e courier-authlib-0.57.ebuild 6089
-RMD160 043680f0beed3b01cde882cd6abb5e8e6e2ec246 courier-authlib-0.57.ebuild 6089
-SHA256 d21ec0422b5a9f678280aaa580555b67d76f3073cbb778a958579922da7f0fca courier-authlib-0.57.ebuild 6089
-MD5 de49ba712dcad3612cbf1c35fe0e42c3 courier-authlib-0.58.ebuild 6083
-RMD160 647838a482e06ca6676aa24424d0f08b705fae5c courier-authlib-0.58.ebuild 6083
-SHA256 28a64ace97fe8080fdfd63479ad1be8e075a0db63bdd49eb48aad16a176fb7ef courier-authlib-0.58.ebuild 6083
+AUX CVE-2005-3532.patch 456 RMD160 e6edba3d1cd2c4873b892ce8f98be25cf6038f6c SHA1 06277f602f55a905d40b2337e4003afdfb3bce34 SHA256 ddad90488499f5607e30fd68f209553b6f35ab6aa4958c672f8ed73f85fe03ae size 456
 MD5 452ec8a16d520bb91316b7dc1390b325 files/CVE-2005-3532.patch 456
 RMD160 e6edba3d1cd2c4873b892ce8f98be25cf6038f6c files/CVE-2005-3532.patch 456
 SHA256 ddad90488499f5607e30fd68f209553b6f35ab6aa4958c672f8ed73f85fe03ae files/CVE-2005-3532.patch 456
+AUX configure-db4.patch 2544 RMD160 9bd66d446df13826301b32334471ae07edf0fe31 SHA1 63c60ce736ef0bdc30ce410fcaa3df1a6ee52866 SHA256 273f882b6b22b0667a266741368d0d5a1ef8ee3483f046e064289e6cb08b4766 size 2544
 MD5 6930587c358320ecb1043761d7ff97f1 files/configure-db4.patch 2544
 RMD160 9bd66d446df13826301b32334471ae07edf0fe31 files/configure-db4.patch 2544
 SHA256 273f882b6b22b0667a266741368d0d5a1ef8ee3483f046e064289e6cb08b4766 files/configure-db4.patch 2544
+AUX courier-authlib-initd 1095 RMD160 d9a38796a0004168aadd387a6875c373c9d3ab0c SHA1 b1f3dc1c6c7abae726ef8c0e295bf17f43ab67fe SHA256 49784ee582ff54612ea13345f09da4ad9199c39745c5faf4799d69cef61c3d8b size 1095
 MD5 ac879be5878ebe9b1eb18655b3538bf8 files/courier-authlib-initd 1095
 RMD160 d9a38796a0004168aadd387a6875c373c9d3ab0c files/courier-authlib-initd 1095
 SHA256 49784ee582ff54612ea13345f09da4ad9199c39745c5faf4799d69cef61c3d8b files/courier-authlib-initd 1095
-MD5 73d603079009e02b50f27fcaaf0ee3c0 files/digest-courier-authlib-0.53 74
-RMD160 dcb5051ab777acf6ca479b59fe7f06c27f787597 files/digest-courier-authlib-0.53 74
-SHA256 2193ef2752e97da56fc1af27c9ecbcca98709f6b3a9cb2f9141d5fce868d4e07 files/digest-courier-authlib-0.53 74
-MD5 7742690b928fbdc37bd9011257f78abd files/digest-courier-authlib-0.54.20050224 83
-RMD160 7b7e958ab531330c9cfe31a5efe5542949a5b371 files/digest-courier-authlib-0.54.20050224 83
-SHA256 9a372099591ad0c62ed06c4fd301dec3d4c9c46d325701dccf8d3e6b14cdd4a4 files/digest-courier-authlib-0.54.20050224 83
-MD5 ed30e0c7061ff7899634145ce73d7b92 files/digest-courier-authlib-0.55 74
-RMD160 2cb0160c20d88f7c7bbacfd81ad1d9d3b312af7e files/digest-courier-authlib-0.55 74
-SHA256 b943b756feda729a6236bb83c20be309473085593fdeef0f575adc99b37605ae files/digest-courier-authlib-0.55 74
-MD5 752436d0238327674728feeee973d102 files/digest-courier-authlib-0.55.20050320 83
-RMD160 4e7b0e349392ece1b4aa4ff06e25cad9c95277e9 files/digest-courier-authlib-0.55.20050320 83
-SHA256 f65f89a306a02d572308a9a76aa7fe6b7f56b05cd1682828e2e92aabad2814a7 files/digest-courier-authlib-0.55.20050320 83
-MD5 6fa78b5922594232cd149eb6d6e02b5a files/digest-courier-authlib-0.56 74
-RMD160 8b674aa21332a5e7cde3decc4fc445bda241fc3d files/digest-courier-authlib-0.56 74
-SHA256 a9f4ff55b3e2b92748904c67adc04860665d2457e10faf1b89d9bc50da33dbc0 files/digest-courier-authlib-0.56 74
-MD5 535d72419715dfcd4a6c00fd8708c63e files/digest-courier-authlib-0.57 74
-RMD160 a8c85584dc74544e2b15377523543f70e624e444 files/digest-courier-authlib-0.57 74
-SHA256 83e9a7e9c9f4225de05ee38f4b192c3b12ed2851f9df85987355482f89de7420 files/digest-courier-authlib-0.57 74
-MD5 535d72419715dfcd4a6c00fd8708c63e files/digest-courier-authlib-0.57-r1 74
-RMD160 a8c85584dc74544e2b15377523543f70e624e444 files/digest-courier-authlib-0.57-r1 74
-SHA256 83e9a7e9c9f4225de05ee38f4b192c3b12ed2851f9df85987355482f89de7420 files/digest-courier-authlib-0.57-r1 74
-MD5 535d72419715dfcd4a6c00fd8708c63e files/digest-courier-authlib-0.57-r2 74
-RMD160 a8c85584dc74544e2b15377523543f70e624e444 files/digest-courier-authlib-0.57-r2 74
-SHA256 83e9a7e9c9f4225de05ee38f4b192c3b12ed2851f9df85987355482f89de7420 files/digest-courier-authlib-0.57-r2 74
-MD5 80be0b258e21f2d833bde29d4c478edb files/digest-courier-authlib-0.57.20051116 83
-RMD160 2e255cf2192846a6e2762a4b72b07f0006637914 files/digest-courier-authlib-0.57.20051116 83
-SHA256 6b9f6c20b0662ff33656217fc1a37aa1e440baa210334bc275166a0c5d3cdb55 files/digest-courier-authlib-0.57.20051116 83
-MD5 4cc2f8a9b13e49b3df351d0fc139b5d1 files/digest-courier-authlib-0.58 268
-RMD160 13974bb3b0b57b205e5da3c9a2f43086590afe30 files/digest-courier-authlib-0.58 268
-SHA256 24d46d530a68dccb1d51628593632dfcf6ed86bd6fe6547660656f6511e818ed files/digest-courier-authlib-0.58 268
+DIST courier-authlib-0.53.tar.bz2 1966836 size 1966836
+DIST courier-authlib-0.54.20050224.tar.bz2 1971852 size 1971852
+DIST courier-authlib-0.55.20050320.tar.bz2 1981258 size 1981258
+DIST courier-authlib-0.55.tar.bz2 1972024 size 1972024
+DIST courier-authlib-0.56.tar.bz2 1981533 size 1981533
+DIST courier-authlib-0.57.20051116.tar.bz2 2007269 size 2007269
+DIST courier-authlib-0.57.tar.bz2 2006138 size 2006138
+DIST courier-authlib-0.58.tar.bz2 2006735 RMD160 6474612496cd287f294c7f52239ea853c44e4aa1 SHA256 d877cc6c65e90471ec9410c5ce7af467ba5beb3922b9cfbf2bf6aa24f6bdc7ad size 2006735
+EBUILD courier-authlib-0.53.ebuild 5903 RMD160 abeb3cca5e3e5f70cd2bdef988d28838a856572e SHA1 d60a657a77de17dcc5615fa3670e678abec20f2c SHA256 9fbde3af3aeb200a47fc0f2d82e12e2c42ab1e350de4560137f71b6ee531b06b size 5903
+MD5 ead53e30977f8d368de26fae5a67ad32 courier-authlib-0.53.ebuild 5903
+RMD160 abeb3cca5e3e5f70cd2bdef988d28838a856572e courier-authlib-0.53.ebuild 5903
+SHA256 9fbde3af3aeb200a47fc0f2d82e12e2c42ab1e350de4560137f71b6ee531b06b courier-authlib-0.53.ebuild 5903
+EBUILD courier-authlib-0.54.20050224.ebuild 6027 RMD160 637cd01dc784b6797a2f08ed11fe48d807f20f2c SHA1 9c508fc9b66c3b9f4ef863b269add568af30cbbc SHA256 86bf7ab946c9159bb184c1bfcbe5946e64d446c81b05a1d1be4a4a94157b87e7 size 6027
+MD5 616ebeb89647092c49a7c841274a5c6a courier-authlib-0.54.20050224.ebuild 6027
+RMD160 637cd01dc784b6797a2f08ed11fe48d807f20f2c courier-authlib-0.54.20050224.ebuild 6027
+SHA256 86bf7ab946c9159bb184c1bfcbe5946e64d446c81b05a1d1be4a4a94157b87e7 courier-authlib-0.54.20050224.ebuild 6027
+EBUILD courier-authlib-0.55.20050320.ebuild 6099 RMD160 ddfa6be74bcca90b86b2c9f92bf8f71a7a04845d SHA1 89fdb6552fc457a2bb9c80db2eec61918edde40e SHA256 b3e3e661791869321ab40bcb6e24890f78ebcc7ecf68b3eb0feeacf9a219fd86 size 6099
+MD5 f8e2293e9807a0b229675d9a92f9cffa courier-authlib-0.55.20050320.ebuild 6099
+RMD160 ddfa6be74bcca90b86b2c9f92bf8f71a7a04845d courier-authlib-0.55.20050320.ebuild 6099
+SHA256 b3e3e661791869321ab40bcb6e24890f78ebcc7ecf68b3eb0feeacf9a219fd86 courier-authlib-0.55.20050320.ebuild 6099
+EBUILD courier-authlib-0.55.ebuild 6057 RMD160 805c51ba8bba7f619002a395ff5f12c3bfb0dcec SHA1 f71e2d31dd9a9a5a4c4ece6b5c57564726d3c390 SHA256 8cbabcb483c30760d584839bec8a8d31fad60a974a6448caa817ae23a31f30be size 6057
+MD5 d59c188617d2aed926a0d49c1fb91f96 courier-authlib-0.55.ebuild 6057
+RMD160 805c51ba8bba7f619002a395ff5f12c3bfb0dcec courier-authlib-0.55.ebuild 6057
+SHA256 8cbabcb483c30760d584839bec8a8d31fad60a974a6448caa817ae23a31f30be courier-authlib-0.55.ebuild 6057
+EBUILD courier-authlib-0.56.ebuild 6093 RMD160 d85504b9fe2ebb98456d84ff2711f888388d7051 SHA1 205828dfe2a0bd485d824ca5be1edd2004346e29 SHA256 6085159fa9b8e69d661b1e17db06a45dcf90dab9cb2917ab49547d44df2ecfd2 size 6093
+MD5 57ce08c86fc4d6f703643907b7b11d2d courier-authlib-0.56.ebuild 6093
+RMD160 d85504b9fe2ebb98456d84ff2711f888388d7051 courier-authlib-0.56.ebuild 6093
+SHA256 6085159fa9b8e69d661b1e17db06a45dcf90dab9cb2917ab49547d44df2ecfd2 courier-authlib-0.56.ebuild 6093
+EBUILD courier-authlib-0.57-r1.ebuild 5970 RMD160 bf2167d8d98ad4b5894b676a915693c8d2d280ca SHA1 c6fa9eaae90714865ebdb148f6eceb7b488748e4 SHA256 d686ce3dc11e5af2dd8832569f5bd668bbf357fdfafe7d9e3c9b42a054e3f7a2 size 5970
+MD5 8bbd72f9613e3a82351e915aabbac7c8 courier-authlib-0.57-r1.ebuild 5970
+RMD160 bf2167d8d98ad4b5894b676a915693c8d2d280ca courier-authlib-0.57-r1.ebuild 5970
+SHA256 d686ce3dc11e5af2dd8832569f5bd668bbf357fdfafe7d9e3c9b42a054e3f7a2 courier-authlib-0.57-r1.ebuild 5970
+EBUILD courier-authlib-0.57-r2.ebuild 6011 RMD160 42997e3b3347c865caacecff37802d17b305d1ca SHA1 53b31ba3e3603c1297ab0c546b04b5bd5179ea87 SHA256 27865d1871995f6e91b7eacd078b1c800756dd9bd44c1ee329d3f85cfe51dde9 size 6011
+MD5 d0d8527656af2f96f526b5163a484e93 courier-authlib-0.57-r2.ebuild 6011
+RMD160 42997e3b3347c865caacecff37802d17b305d1ca courier-authlib-0.57-r2.ebuild 6011
+SHA256 27865d1871995f6e91b7eacd078b1c800756dd9bd44c1ee329d3f85cfe51dde9 courier-authlib-0.57-r2.ebuild 6011
+EBUILD courier-authlib-0.57.20051116.ebuild 6142 RMD160 909e1b714a32250c10a246ae81ec064ce1d8fa8f SHA1 386921d4b76f329b56545123242cc0eb355f928e SHA256 ab78c497d8e8fd8a63b7ce20c790f45bd0d65f71c51df39480cfe713677baedd size 6142
+MD5 2f26f5dd7b2847b4d13a0e7dd5917062 courier-authlib-0.57.20051116.ebuild 6142
+RMD160 909e1b714a32250c10a246ae81ec064ce1d8fa8f courier-authlib-0.57.20051116.ebuild 6142
+SHA256 ab78c497d8e8fd8a63b7ce20c790f45bd0d65f71c51df39480cfe713677baedd courier-authlib-0.57.20051116.ebuild 6142
+EBUILD courier-authlib-0.57.ebuild 6089 RMD160 043680f0beed3b01cde882cd6abb5e8e6e2ec246 SHA1 2041658ce6bb1e09fce929c5a6a3aa97cd1edebc SHA256 d21ec0422b5a9f678280aaa580555b67d76f3073cbb778a958579922da7f0fca size 6089
+MD5 c02fd230688d2f9a2d0f4e8b45a3898e courier-authlib-0.57.ebuild 6089
+RMD160 043680f0beed3b01cde882cd6abb5e8e6e2ec246 courier-authlib-0.57.ebuild 6089
+SHA256 d21ec0422b5a9f678280aaa580555b67d76f3073cbb778a958579922da7f0fca courier-authlib-0.57.ebuild 6089
+EBUILD courier-authlib-0.58.ebuild 6082 RMD160 4d7210dfdb4045d5124e99668eb97bed2c81f295 SHA1 bdf8c3d7bc7cd758e427dc0f9f1d0bf66e025d78 SHA256 cd2ab3387950b811dbc3328b837ec217a3b4e08c7241bb3b099bf59deaaf2944 size 6082
+MD5 40cf46e4fbcf39e002a800d5f8a9d7a6 courier-authlib-0.58.ebuild 6082
+RMD160 4d7210dfdb4045d5124e99668eb97bed2c81f295 courier-authlib-0.58.ebuild 6082
+SHA256 cd2ab3387950b811dbc3328b837ec217a3b4e08c7241bb3b099bf59deaaf2944 courier-authlib-0.58.ebuild 6082
+MISC ChangeLog 8587 RMD160 46aa892227a4947ed49b2fc3468938163ee5576a SHA1 e0404d0e81520784548da131158919bc18e292f8 SHA256 9d4cf4ef630be78e7077b049b37dccfcb9bb9926a22e7e6ec1b6b896b502565f size 8587
+MD5 89ece86893d6a00576854ddcb06d4c00 ChangeLog 8587
+RMD160 46aa892227a4947ed49b2fc3468938163ee5576a ChangeLog 8587
+SHA256 9d4cf4ef630be78e7077b049b37dccfcb9bb9926a22e7e6ec1b6b896b502565f ChangeLog 8587
+MISC metadata.xml 334 RMD160 c2611e8172645344cf23a68190ec2a1827ea3453 SHA1 e392e129da4160de37e9cd44a398dd65530cdeaa SHA256 a07855c80c027d1672bcf681b92ebd5ac563087307ef15bccadcce026af07b6a size 334
 MD5 1639b87658242c2406f7f7f8deda7388 metadata.xml 334
 RMD160 c2611e8172645344cf23a68190ec2a1827ea3453 metadata.xml 334
 SHA256 a07855c80c027d1672bcf681b92ebd5ac563087307ef15bccadcce026af07b6a metadata.xml 334
+MD5 73d603079009e02b50f27fcaaf0ee3c0 files/digest-courier-authlib-0.53 74
+RMD160 dcb5051ab777acf6ca479b59fe7f06c27f787597 files/digest-courier-authlib-0.53 74
+SHA256 2193ef2752e97da56fc1af27c9ecbcca98709f6b3a9cb2f9141d5fce868d4e07 files/digest-courier-authlib-0.53 74
+size 74 files/digest-courier-authlib-0.53 74
+MD5 7742690b928fbdc37bd9011257f78abd files/digest-courier-authlib-0.54.20050224 83
+RMD160 7b7e958ab531330c9cfe31a5efe5542949a5b371 files/digest-courier-authlib-0.54.20050224 83
+SHA256 9a372099591ad0c62ed06c4fd301dec3d4c9c46d325701dccf8d3e6b14cdd4a4 files/digest-courier-authlib-0.54.20050224 83
+size 83 files/digest-courier-authlib-0.54.20050224 83
+MD5 ed30e0c7061ff7899634145ce73d7b92 files/digest-courier-authlib-0.55 74
+RMD160 2cb0160c20d88f7c7bbacfd81ad1d9d3b312af7e files/digest-courier-authlib-0.55 74
+SHA256 b943b756feda729a6236bb83c20be309473085593fdeef0f575adc99b37605ae files/digest-courier-authlib-0.55 74
+size 74 files/digest-courier-authlib-0.55 74
+MD5 752436d0238327674728feeee973d102 files/digest-courier-authlib-0.55.20050320 83
+RMD160 4e7b0e349392ece1b4aa4ff06e25cad9c95277e9 files/digest-courier-authlib-0.55.20050320 83
+SHA256 f65f89a306a02d572308a9a76aa7fe6b7f56b05cd1682828e2e92aabad2814a7 files/digest-courier-authlib-0.55.20050320 83
+size 83 files/digest-courier-authlib-0.55.20050320 83
+MD5 6fa78b5922594232cd149eb6d6e02b5a files/digest-courier-authlib-0.56 74
+RMD160 8b674aa21332a5e7cde3decc4fc445bda241fc3d files/digest-courier-authlib-0.56 74
+SHA256 a9f4ff55b3e2b92748904c67adc04860665d2457e10faf1b89d9bc50da33dbc0 files/digest-courier-authlib-0.56 74
+size 74 files/digest-courier-authlib-0.56 74
+MD5 535d72419715dfcd4a6c00fd8708c63e files/digest-courier-authlib-0.57 74
+RMD160 a8c85584dc74544e2b15377523543f70e624e444 files/digest-courier-authlib-0.57 74
+SHA256 83e9a7e9c9f4225de05ee38f4b192c3b12ed2851f9df85987355482f89de7420 files/digest-courier-authlib-0.57 74
+size 74 files/digest-courier-authlib-0.57 74
+MD5 535d72419715dfcd4a6c00fd8708c63e files/digest-courier-authlib-0.57-r1 74
+RMD160 a8c85584dc74544e2b15377523543f70e624e444 files/digest-courier-authlib-0.57-r1 74
+SHA256 83e9a7e9c9f4225de05ee38f4b192c3b12ed2851f9df85987355482f89de7420 files/digest-courier-authlib-0.57-r1 74
+size 74 files/digest-courier-authlib-0.57-r1 74
+MD5 535d72419715dfcd4a6c00fd8708c63e files/digest-courier-authlib-0.57-r2 74
+RMD160 a8c85584dc74544e2b15377523543f70e624e444 files/digest-courier-authlib-0.57-r2 74
+SHA256 83e9a7e9c9f4225de05ee38f4b192c3b12ed2851f9df85987355482f89de7420 files/digest-courier-authlib-0.57-r2 74
+size 74 files/digest-courier-authlib-0.57-r2 74
+MD5 80be0b258e21f2d833bde29d4c478edb files/digest-courier-authlib-0.57.20051116 83
+RMD160 2e255cf2192846a6e2762a4b72b07f0006637914 files/digest-courier-authlib-0.57.20051116 83
+SHA256 6b9f6c20b0662ff33656217fc1a37aa1e440baa210334bc275166a0c5d3cdb55 files/digest-courier-authlib-0.57.20051116 83
+size 83 files/digest-courier-authlib-0.57.20051116 83
+MD5 4cc2f8a9b13e49b3df351d0fc139b5d1 files/digest-courier-authlib-0.58 268
+RMD160 13974bb3b0b57b205e5da3c9a2f43086590afe30 files/digest-courier-authlib-0.58 268
+SHA256 24d46d530a68dccb1d51628593632dfcf6ed86bd6fe6547660656f6511e818ed files/digest-courier-authlib-0.58 268
+size 268 files/digest-courier-authlib-0.58 268
