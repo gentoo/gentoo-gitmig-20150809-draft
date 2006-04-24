@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5268 2006/04/24 06:35:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5269 2006/04/24 12:08:49 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (24 Apr 2006)
+# Pre-release snapshots
+=net-appmobilephone/kmobiletools-0.5*
 
 # Marcelo Goes <vanquirius@gentoo.org> (23 Apr 2006)
 # Masked for removal
