@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.61 2006/04/24 04:39:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.62 2006/04/24 22:01:37 vapier Exp $
 
 cd /
 
@@ -357,7 +357,7 @@ done
 
 #####################
 ### sanity checks ###
-if ! binutils-config -v &> /dev/null ; then
+if ! binutils-config --version &> /dev/null ; then
 	eerror "Sorry, but your host system needs to have binutils-config"
 	eerror "in order to keep from screwing things up."
 	eerror "That means you must be running unstable versions of"
