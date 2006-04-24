@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.2_beta2.ebuild,v 1.5 2006/04/24 02:43:21 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.2_beta2.ebuild,v 1.6 2006/04/24 02:58:28 nerdboy Exp $
 
 inherit eutils
 
@@ -60,7 +60,7 @@ src_compile() {
 		--datadir=${SN}/share \
 		$(use_enable debug symbols) || die "configure failed"
 
-	make || die "make failed"
+	make all || die "make failed"
 }
 
 src_install() {
