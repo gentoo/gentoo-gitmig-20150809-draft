@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.5.1.ebuild,v 1.3 2006/02/26 06:17:59 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.5.1.ebuild,v 1.4 2006/04/24 19:02:24 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.gna.org/wormux/${PN}-src-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE="nls debug"
 
 RDEPEND=">=dev-games/clanlib-0.7
