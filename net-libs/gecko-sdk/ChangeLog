@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gecko-sdk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.26 2006/03/19 15:02:34 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.27 2006/04/24 02:03:01 anarchy Exp $
+
+*gecko-sdk-1.7.13 (24 Apr 2006)
+
+  24 Apr 2006; Jory A. Pratt <anarchy@gentoo.org> +gecko-sdk-1.7.13.ebuild:
+  revision bump, security fixes included
 
 *gecko-sdk-1.7.12-r2 (19 Mar 2006)
 
