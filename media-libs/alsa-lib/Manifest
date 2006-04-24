@@ -1,48 +1,54 @@
-MD5 dd3036303915c375afc26f2e258b009a ChangeLog 24410
-RMD160 63c09a9778d0bacb1fe11832ae5ae15f4639ed3f ChangeLog 24410
-SHA256 7fb34980c769dbdb387a41ce96cf7e66025fcc261473ea8867569333214aba4c ChangeLog 24410
-MD5 72e9e766cf21a14daf546900eb73a694 alsa-lib-1.0.10.ebuild 2001
-RMD160 75998c605347288fb77fc033bf634a7f6045596f alsa-lib-1.0.10.ebuild 2001
-SHA256 1f01adbf2bb1502b8161a07400b09c5bc218b20e622fecfdbb09baec24c61e91 alsa-lib-1.0.10.ebuild 2001
-MD5 9d76892df76ef2a8fb1bde0b0bde5eed alsa-lib-1.0.11.ebuild 1848
-RMD160 830d0fde46ade5ea07e17b7b45344f521928f322 alsa-lib-1.0.11.ebuild 1848
-SHA256 781142ee7b77b4fa5eec425971199cbcac0989239d3843d9f40bfd163b3595c1 alsa-lib-1.0.11.ebuild 1848
-MD5 51ae1bb8d288687265e0dc774e2b377c alsa-lib-1.0.8.ebuild 1581
-RMD160 6366acce88b36b17f208cc16d02b0fec6faf1fbd alsa-lib-1.0.8.ebuild 1581
-SHA256 8efdab4d68cae0bbc3d408af3cb185ed76093e0f9bd4a7c6dd037fab6c21dbfa alsa-lib-1.0.8.ebuild 1581
-MD5 a8445caff5c6c234b3b9886b51b6f74e alsa-lib-1.0.9.ebuild 1802
-RMD160 ec7387299f8b7a0d3da1dd3e377f64d5c8d98c8d alsa-lib-1.0.9.ebuild 1802
-SHA256 54a5c2b0dfb00a937d0cc54738b97ca7e672197d8907b5ecbb7eead1cb7bded7 alsa-lib-1.0.9.ebuild 1802
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX alsa-lib-1.0.10-no-wordexp-header.patch 475 RMD160 39e1bced67776a3c4c3848dcb9b150e6514ada5c SHA1 244d28e49bf0c186109ecbfd867b0758a4d246a6 SHA256 b5eb01e6d37fb0464130a2a26992cddab470128313c853021a631a54b8e8989b size 475
 MD5 b3183a3f57d1adb37760b2432b09a125 files/alsa-lib-1.0.10-no-wordexp-header.patch 475
 RMD160 39e1bced67776a3c4c3848dcb9b150e6514ada5c files/alsa-lib-1.0.10-no-wordexp-header.patch 475
 SHA256 b5eb01e6d37fb0464130a2a26992cddab470128313c853021a631a54b8e8989b files/alsa-lib-1.0.10-no-wordexp-header.patch 475
+AUX alsa-lib-1.0.10-test-ppc.patch 2292 RMD160 6a706ed675f5e63e3d97f9b1a979109353edf2a0 SHA1 13fdf64036f637c1371a4371dc4d2277315ae7c8 SHA256 e74138e6e10d4076a6ffad341971aae0d2486a548b776a0bfbfbd3d8be2c7229 size 2292
 MD5 065d31c9310f7b67c0c7bc45db25c41c files/alsa-lib-1.0.10-test-ppc.patch 2292
 RMD160 6a706ed675f5e63e3d97f9b1a979109353edf2a0 files/alsa-lib-1.0.10-test-ppc.patch 2292
 SHA256 e74138e6e10d4076a6ffad341971aae0d2486a548b776a0bfbfbd3d8be2c7229 files/alsa-lib-1.0.10-test-ppc.patch 2292
+AUX alsa-lib-1.0.10_rc3-hardened.patch 454 RMD160 d54236456b960ade362dccb484c91fff3856f825 SHA1 62be7f19c9bb19d9895ede8b0d390a03ba9a141f SHA256 7de3d237e3c20d45a3b9582989a600e4a297cbe652d03d2cd50c5c6b6ffb1742 size 454
 MD5 9830a2c761b8398d52f1ad7b9bf98a6b files/alsa-lib-1.0.10_rc3-hardened.patch 454
 RMD160 d54236456b960ade362dccb484c91fff3856f825 files/alsa-lib-1.0.10_rc3-hardened.patch 454
 SHA256 7de3d237e3c20d45a3b9582989a600e4a297cbe652d03d2cd50c5c6b6ffb1742 files/alsa-lib-1.0.10_rc3-hardened.patch 454
+AUX alsa-lib-1.0.10_rc3-test.patch 2122 RMD160 329c4182f919c46ecbcdc65f8418d79bd0a2a978 SHA1 f5439b62795dcd2b1b291f2d7ef38cdd72b12ed9 SHA256 c981e066b2f9117e227b70fb00af2eae7d7b26aebfe12a6ca7dbab7bf7b7e933 size 2122
 MD5 67f0da0c0ffbbe55bcac7636ef64c592 files/alsa-lib-1.0.10_rc3-test.patch 2122
 RMD160 329c4182f919c46ecbcdc65f8418d79bd0a2a978 files/alsa-lib-1.0.10_rc3-test.patch 2122
 SHA256 c981e066b2f9117e227b70fb00af2eae7d7b26aebfe12a6ca7dbab7bf7b7e933 files/alsa-lib-1.0.10_rc3-test.patch 2122
-MD5 d832d735aa8fa9959ff66276eb648cef files/alsa-lib-1.0.8-gcc4.patch 1656
-RMD160 b7a09a8258295b30045c3ede966f5459f1d2d9be files/alsa-lib-1.0.8-gcc4.patch 1656
-SHA256 009a4a98f2df2cba2c88649916a158020aa95d9fabae30e10f28903f98eae433 files/alsa-lib-1.0.8-gcc4.patch 1656
+AUX alsa-lib-mixer.patch 264 RMD160 ad74e266ad595d8c9a9fb172066edc357f46146c SHA1 b8380c1572f64a303adf6e1966020b87cdc3f09e SHA256 d54e6449d57476d2313bce99e5d50459bface5d1b030d41159c4fbdc45e0f517 size 264
 MD5 afc44aabeb36448990c19eaa9b3dfce0 files/alsa-lib-mixer.patch 264
 RMD160 ad74e266ad595d8c9a9fb172066edc357f46146c files/alsa-lib-mixer.patch 264
 SHA256 d54e6449d57476d2313bce99e5d50459bface5d1b030d41159c4fbdc45e0f517 files/alsa-lib-mixer.patch 264
+DIST alsa-lib-1.0.10.tar.bz2 706777 size 706777
+DIST alsa-lib-1.0.11.tar.bz2 705555 RMD160 d83b4de451b2fcbcc9112921de74ea31c3d6fe07 SHA256 6b25f3d22cdb2476233f6dd74880fd88fb65124d4c282704bb9f0bf3fbd4c8d2 size 705555
+EBUILD alsa-lib-1.0.10.ebuild 2001 RMD160 75998c605347288fb77fc033bf634a7f6045596f SHA1 31be5c414309b0b3fd1fc75eb70958a2f2ecee12 SHA256 1f01adbf2bb1502b8161a07400b09c5bc218b20e622fecfdbb09baec24c61e91 size 2001
+MD5 72e9e766cf21a14daf546900eb73a694 alsa-lib-1.0.10.ebuild 2001
+RMD160 75998c605347288fb77fc033bf634a7f6045596f alsa-lib-1.0.10.ebuild 2001
+SHA256 1f01adbf2bb1502b8161a07400b09c5bc218b20e622fecfdbb09baec24c61e91 alsa-lib-1.0.10.ebuild 2001
+EBUILD alsa-lib-1.0.11.ebuild 1848 RMD160 830d0fde46ade5ea07e17b7b45344f521928f322 SHA1 ab3260314e903ea619c2de010be8a4c821f98787 SHA256 781142ee7b77b4fa5eec425971199cbcac0989239d3843d9f40bfd163b3595c1 size 1848
+MD5 9d76892df76ef2a8fb1bde0b0bde5eed alsa-lib-1.0.11.ebuild 1848
+RMD160 830d0fde46ade5ea07e17b7b45344f521928f322 alsa-lib-1.0.11.ebuild 1848
+SHA256 781142ee7b77b4fa5eec425971199cbcac0989239d3843d9f40bfd163b3595c1 alsa-lib-1.0.11.ebuild 1848
+MISC ChangeLog 24684 RMD160 a8949c60f124b7fdf116389d73eb54da89105f0b SHA1 4dda38986d91cf6fa9cf5219c3e97832b8f83511 SHA256 fce884d6871bd5432f552892eb932ecae3ab7e77d601b62f0a02c9d9f831a498 size 24684
+MD5 910c1b6ff361de7f432802f2d70f146a ChangeLog 24684
+RMD160 a8949c60f124b7fdf116389d73eb54da89105f0b ChangeLog 24684
+SHA256 fce884d6871bd5432f552892eb932ecae3ab7e77d601b62f0a02c9d9f831a498 ChangeLog 24684
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b size 158
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 MD5 22257ca92b0882a755f50554b5d38a5b files/digest-alsa-lib-1.0.10 68
 RMD160 089518df3a3c8336b162d7f46125dc6bc2658ac9 files/digest-alsa-lib-1.0.10 68
 SHA256 20c7a983eb6ea5afb661a257fdd7c925a8d8d96e000771093adb7b3d1b8ccb2f files/digest-alsa-lib-1.0.10 68
 MD5 2704fe804a3a0728945cfe60764aefff files/digest-alsa-lib-1.0.11 250
 RMD160 1f4fe6e43567ce6771690cf244bbd552e640b2f8 files/digest-alsa-lib-1.0.11 250
 SHA256 222bb89f061ea8b7d5bd5bf7dfddae688360f04efafe8e8d45d195d4c6888728 files/digest-alsa-lib-1.0.11 250
-MD5 46a389b403bc763310e942cc9fc6d7b1 files/digest-alsa-lib-1.0.8 67
-RMD160 bd8c992a6ae2a84ab36fbd450988231be43dad64 files/digest-alsa-lib-1.0.8 67
-SHA256 ff1c6d7153e3b27574f089ef7b701034eef8b7af71c53ac07b565d215535ada0 files/digest-alsa-lib-1.0.8 67
-MD5 5cbe7a7471c2f69dde2e86924eaf101e files/digest-alsa-lib-1.0.9 67
-RMD160 4dec366cc4e70199004dd15f3090dd2ea2b9e653 files/digest-alsa-lib-1.0.9 67
-SHA256 b5c9bb2aaee1b02b46b2b0b4ce33a289f6a9a5c790c7cb78b5838d0a881cff09 files/digest-alsa-lib-1.0.9 67
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
-SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFETKYJAiZjviIA2XgRAlpCAJoDbkgbziraBWAUZwkQ+kIHJqDF5ACcD5Zx
+f8uaRpyuPyOnWDfY24SBYqY=
+=reKp
+-----END PGP SIGNATURE-----
