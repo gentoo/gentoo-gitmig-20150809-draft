@@ -1,9 +1,14 @@
 # ChangeLog for media-plugins/alsa-jack
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/ChangeLog,v 1.54 2006/04/24 10:31:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/ChangeLog,v 1.55 2006/04/24 10:34:34 flameeyes Exp $
 
   24 Apr 2006; Markus Rothe <corsair@gentoo.org> alsa-jack-1.0.11.ebuild:
   Stable on ppc64; bug #130535
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -alsa-jack-1.0.8.ebuild, -alsa-jack-1.0.9.ebuild,
+  -alsa-jack-1.0.11_rc4.ebuild, -alsa-jack-1.0.11_rc5.ebuild:
+  Drop old versions.
 
 *alsa-jack-1.0.11 (24 Apr 2006)
 
