@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.66 2006/04/23 16:25:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.67 2006/04/24 21:03:46 gustavoz Exp $
+
+  24 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  pax-utils-0.1.11-r1.ebuild:
+  Stable on sparc
 
   23 Apr 2006; Michael Hanselmann <hansmi@gentoo.org>
   pax-utils-0.1.11-r1.ebuild:
