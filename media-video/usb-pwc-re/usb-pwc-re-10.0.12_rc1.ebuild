@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.10.ebuild,v 1.1 2006/01/05 08:52:38 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.12_rc1.ebuild,v 1.1 2006/04/24 06:25:24 phosphan Exp $
 
 
 inherit linux-info toolchain-funcs eutils
