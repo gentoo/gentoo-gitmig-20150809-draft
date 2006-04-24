@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.106 2006/04/23 15:25:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.107 2006/04/24 19:53:03 gustavoz Exp $
+
+  24 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  mozilla-thunderbird-1.0.8.ebuild:
+  Stable on sparc wrt security #130888
 
   23 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   mozilla-thunderbird-1.5.0.2.ebuild:
