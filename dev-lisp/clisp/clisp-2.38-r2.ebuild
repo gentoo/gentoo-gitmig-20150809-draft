@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.38-r2.ebuild,v 1.1 2006/04/04 02:39:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.38-r2.ebuild,v 1.2 2006/04/24 20:41:58 mkennedy Exp $
 
 inherit flag-o-matic common-lisp-common-2 eutils toolchain-funcs
 
@@ -37,6 +37,11 @@ pkg_setup() {
 			einfo "CLISP will be built with MIT-CLX support."
 		fi
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${PV}/fastcgi-Makefile-gentoo.patch
 }
 
 src_compile() {
