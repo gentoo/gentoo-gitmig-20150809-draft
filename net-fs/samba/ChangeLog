@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.232 2006/04/13 20:10:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.233 2006/04/24 17:37:24 kumba Exp $
+
+  24 Apr 2006; Joshua Kinard <kumba@gentoo.org> samba-3.0.22.ebuild:
+  Marked stable on mips.
 
   13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> samba-3.0.22.ebuild:
   Add dependency over virtual/libiconv as needed.
