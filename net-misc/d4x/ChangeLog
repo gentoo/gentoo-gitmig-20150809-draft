@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/d4x
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.38 2006/01/15 15:24:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.39 2006/04/24 00:42:44 metalgod Exp $
+
+  24 Apr 2006; Luis Medinas <metalgod@gentoo.org> d4x-2.5.6.ebuild:
+  Stable on amd64. Bug #130803.
 
   15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   -files/d4x-2.5.0-fix-compile-gtk26.patch,
