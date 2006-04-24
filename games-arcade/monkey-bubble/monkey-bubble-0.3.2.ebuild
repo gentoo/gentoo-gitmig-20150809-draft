@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.3.2.ebuild,v 1.10 2005/12/04 14:47:35 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.3.2.ebuild,v 1.11 2006/04/24 12:33:10 tupone Exp $
 
-inherit gnome2 eutils
+inherit eutils gnome2
 
 DESCRIPTION="A Puzzle Bobble clone"
 HOMEPAGE="http://home.gna.org/monkeybubble/"
@@ -24,7 +24,18 @@ DEPEND=">=x11-libs/gtk+-2.0
 	app-text/scrollkeeper
 	=media-libs/gst-plugins-0.8*"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}.amd64.patch"
-	gnome2_src_compile
+	sed -i \
+		-e "s:-Werror::" \
+		src/util/Makefile.in \
+		src/input/Makefile.in \
+		src/monkey/Makefile.in \
+		src/view/Makefile.in \
+		src/audio/Makefile.in \
+		src/net/Makefile.in \
+		src/net/Makefile.in \
+		src/ui/Makefile.in
 }
