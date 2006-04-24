@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5267 2006/04/23 21:00:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5268 2006/04/24 06:35:43 spyderous Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -557,10 +557,6 @@ games-roguelike/falconseye
 # Tavis Ormandy <taviso@gentoo.org> (21 Mar 2006)
 # masked pending unresolved security issues #127167
 games-roguelike/slashem
-
-# Donnie Berkholz <spyderous@gentoo.org> (23 Mar 2006)
-# Development kdrive code, no guarantees on whether it works
->=x11-base/kdrive-6
 
 # Tavis Ormandy <taviso@gentoo.org> (21 Mar 2006)
 # masked pending unresolved security issues #122407
@@ -1492,10 +1488,6 @@ app-portage/abeni
 # Mamoru KOMACHI <usata@gentoo.org>
 # No fix available for bug #87906
 www-client/netscape
-
-# Donnie Berkholz <spyderous@gentoo.org> 
-# CVS HEAD snapshots
-=x11-base/xorg-x11-6.8.99*
 
 # Konstantin Arkhipov <voxus@gentoo.org> (15 Apr 2005)
 # Masked until arrival of userland tools. At least.
