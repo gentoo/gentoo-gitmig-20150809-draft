@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.2.ebuild,v 1.1 2006/03/26 01:16:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.2.ebuild,v 1.2 2006/04/24 11:36:37 genstef Exp $
 
 DESCRIPTION="GnuPG Made Easy is a library for making GnuPG easier to use"
 HOMEPAGE="http://www.gnupg.org/(en)/related_software/gpgme/index.html"
@@ -20,19 +20,13 @@ RDEPEND="${DEPEND}
 	dev-libs/libgcrypt"
 
 src_compile() {
-	if [ -x /usr/bin/gpg2 ]; then
-		GPGBIN=/usr/bin/gpg2
-	else
-		GPGBIN=/usr/bin/gpg
-	fi
-
 	if use selinux; then
 		sed -i -e "s:tests = tests:tests = :" Makefile.in || die "sed failed"
 	fi
 
 	econf \
 		--includedir=/usr/include/gpgme \
-		--with-gpg=$GPGBIN \
+		--with-gpg=/usr/bin/gpg \
 		--with-pth=yes \
 		$(use_with smime gpgsm /usr/bin/gpgsm) \
 		|| die "econf failed"
