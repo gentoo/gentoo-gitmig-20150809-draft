@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-headers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.73 2006/04/22 17:01:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.74 2006/04/24 10:20:43 flameeyes Exp $
+
+  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -alsa-headers-1.0.8.ebuild, alsa-headers-1.0.10.ebuild,
+  alsa-headers-1.0.11.ebuild:
+  Drop old version and don't take alsa-driver's FILESDIR path.
 
   22 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   alsa-headers-1.0.11.ebuild:
