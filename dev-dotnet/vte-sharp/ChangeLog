@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/vte-sharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.38 2006/03/20 00:25:39 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.39 2006/04/24 01:31:43 metalgod Exp $
+
+  24 Apr 2006; Luis Medinas <metalgod@gentoo.org> vte-sharp-1.0.10.ebuild:
+  Stable on amd64.
 
   20 Mar 2006; Luis Medinas <metalgod@gentoo.org> vte-sharp-1.0.10.ebuild:
   Added ~amd64 keyword.
