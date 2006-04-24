@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.7 2006/04/24 15:55:32 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.8 2006/04/24 15:57:33 rl03 Exp $
 
 inherit webapp eutils
 
@@ -34,8 +34,8 @@ DEPEND="
 		>=dev-perl/Apache-DBI-0.92
 		apache2? (
 			!fastcgi? ( >=www-apache/libapreq2-2.06
-						>=dev-perl/HTML-Mason-1.31 ) )
-			fastcgi? ( dev-perl/FCGI )
+						>=dev-perl/HTML-Mason-1.31 )
+			fastcgi? ( dev-perl/FCGI ) )
 		!apache2? (
 			fastcgi? ( dev-perl/FCGI )
 			!fastcgi? ( =www-apache/libapreq-1* ) ) )
