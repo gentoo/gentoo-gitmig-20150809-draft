@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1868 2006/04/23 18:01:31 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1869 2006/04/24 06:49:19 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -85,17 +85,6 @@ app-emulation/bochs:vnc - Enable vnc support
 app-emulation/emul-linux-ppc-glibc:nptlonly - Disables installing the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 app-emulation/emul-linux-x86-glibc:nptlonly - Disables installing the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 app-emulation/emul-linux-x86-qtlibs:immqt-bc - Enable binary compatible version of immodule for Qt
-app-emulation/emul-linux-x86-xlibs:video_cards_i810 - VIDEO_CARDS setting to install driver for i810 video cards
-app-emulation/emul-linux-x86-xlibs:video_cards_mach64 - VIDEO_CARDS setting to install driver for mach64 video cards
-app-emulation/emul-linux-x86-xlibs:video_cards_mga - VIDEO_CARDS setting to install driver for mga video cards
-app-emulation/emul-linux-x86-xlibs:video_cards_r128 - VIDEO_CARDS setting to install driver for r128 video cards
-app-emulation/emul-linux-x86-xlibs:video_cards_radeon - VIDEO_CARDS setting to install driver for radeon video cards
-app-emulation/emul-linux-x86-xlibs:video_cards_s3virge - VIDEO_CARDS setting to install driver for s3virge video cards
-app-emulation/emul-linux-x86-xlibs:video_cards_savage - VIDEO_CARDS setting to install driver for savage video cards
-app-emulation/emul-linux-x86-xlibs:video_cards_sis - VIDEO_CARDS setting to install driver for sis video cards
-app-emulation/emul-linux-x86-xlibs:video_cards_tdfx - VIDEO_CARDS setting to install driver for tdfx video cards
-app-emulation/emul-linux-x86-xlibs:video_cards_trident - VIDEO_CARDS setting to install driver for trident video cards
-app-emulation/emul-linux-x86-xlibs:video_cards_via - VIDEO_CARDS setting to install driver for via video cards
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library
 app-emulation/gxemul:cacheemu - Enables support for cache emulation
 app-emulation/gxemul:delays - Enables instruction latency/delay emulation
@@ -700,19 +689,6 @@ media-libs/libsdl:noflagstrip - Allow users to use any CFLAGS they like complete
 media-libs/libsdl:nojoystick - Allow users to disable joystick support completely (at their own risk)
 media-libs/libsdl:novideo - Allow users to disable video support completely (at their own risk)
 media-libs/libvorbis:aotuv - Allow users to enable aoTuV encoder enhancements
-media-libs/mesa:video_cards_i810 - VIDEO_CARDS setting to build driver for i810 video cards
-media-libs/mesa:video_cards_mach64 - VIDEO_CARDS setting to build driver for mach64 video cards
-media-libs/mesa:video_cards_mga - VIDEO_CARDS setting to build driver for mga video cards
-media-libs/mesa:video_cards_none - VIDEO_CARDS setting to build no drivers (useful when using binary drivers)
-media-libs/mesa:video_cards_r128 - VIDEO_CARDS setting to build driver for r128 video cards
-media-libs/mesa:video_cards_radeon - VIDEO_CARDS setting to build driver for radeon video cards
-media-libs/mesa:video_cards_s3virge - VIDEO_CARDS setting to build driver for s3virge video cards
-media-libs/mesa:video_cards_savage - VIDEO_CARDS setting to build driver for savage video cards
-media-libs/mesa:video_cards_sis - VIDEO_CARDS setting to build driver for sis video cards
-media-libs/mesa:video_cards_sunffb - VIDEO_CARDS setting to build driver for sunffb video cards
-media-libs/mesa:video_cards_tdfx - VIDEO_CARDS setting to build driver for tdfx video cards
-media-libs/mesa:video_cards_trident - VIDEO_CARDS setting to build driver for trident video cards
-media-libs/mesa:video_cards_via - VIDEO_CARDS setting to build driver for via video cards
 media-libs/openexr:fltk - Builds the openexr viewer application.
 media-libs/panda3d:fmod - Enables support for using mod files for audio support
 media-libs/panda3d:nspr - Enables support for the Netscape Portable Runtime, used in network interface functionality (ie. multiplayer online game networking).
@@ -733,9 +709,6 @@ media-libs/xine-lib:dxr3 - Support for DXR3 mpeg accelleration cards
 media-libs/xine-lib:i8x0 - Support the i8x0 XvMC libs
 media-libs/xine-lib:modplug - Build with modplug support
 media-libs/xine-lib:nvidia - Support the nvidia XvMC libs
-media-libs/xine-lib:video_cards_i810 - VIDEO_CARDS setting to build driver for video_cards_i810 cards
-media-libs/xine-lib:video_cards_nvidia - VIDEO_CARDS setting to build driver for nvidia video cards
-media-libs/xine-lib:video_cards_via - VIDEO_CARDS setting to build driver for video_cards_via" cards
 media-libs/xine-lib:vidix - Support for vidix video output
 media-libs/xine-lib:xvmc - Support for XVideo Motion Compensation (accelerated mpeg playback)
 media-plugins/bmp-wma:wma123 - Installs optional commandline wma player
@@ -822,9 +795,6 @@ media-tv/mythtv:frontendonly - Only builds the Frontend component rather then th
 media-tv/mythtv:lcd - Enable LCD display support using lcdproc
 media-tv/mythtv:nvidia - Enable XvMC support for nvidia (depreciated in new ebuild)
 media-tv/mythtv:unichrome - Enable XvMC support for unichrome chips (depreciated in new ebuild)
-media-tv/mythtv:video_cards_i810 - VIDEO_CARDS setting to build driver for video_cards_i810 cards
-media-tv/mythtv:video_cards_nvidia - VIDEO_CARDS setting to build driver for nvidia video cards
-media-tv/mythtv:video_cards_via - VIDEO_CARDS setting to build driver for video_cards_via" cards
 media-tv/mythtv:xvmc - Support for XVideo Motion Compensation (accelerated mpeg playback)
 media-tv/tvbrowser:themes - Install extra theme packs
 media-tv/xawtv:xext - Enable use of XFree extentions (DGA,VidMode,DPMS)
@@ -1569,116 +1539,17 @@ x11-base/kdrive:font-server - Enables font server support
 x11-base/kdrive:speedo - Enables Speedo font support
 x11-base/kdrive:type1 - Enables Type1 font support
 x11-base/x11-drm:gatos - Installs DRM built to work alongside GATOS features
-x11-base/x11-drm:video_cards_i810 - VIDEO_CARDS setting to build driver for i810 cards
-x11-base/x11-drm:video_cards_mach64 - VIDEO_CARDS setting to build driver for mach64 cards
-x11-base/x11-drm:video_cards_mga - VIDEO_CARDS setting to build driver for mga cards
-x11-base/x11-drm:video_cards_nv - VIDEO_CARDS setting to build driver for nv cards
-x11-base/x11-drm:video_cards_r128 - VIDEO_CARDS setting to build driver for r128 cards
-x11-base/x11-drm:video_cards_radeon - VIDEO_CARDS setting to build driver for radeon cards
-x11-base/x11-drm:video_cards_sis - VIDEO_CARDS setting to build driver for sis cards
-x11-base/x11-drm:video_cards_savage - VIDEO_CARDS setting to build driver for savage cards
-x11-base/x11-drm:video_cards_sunffb - VIDEO_CARDS setting to build driver for ffb cards
-x11-base/x11-drm:video_cards_tdfx - VIDEO_CARDS setting to build driver for 3dfx cards
-x11-base/x11-drm:video_cards_via - VIDEO_CARDS setting to build driver for via" cards
 x11-base/xorg-server:dmx - Build the Distributed Multiheaded X server
 x11-base/xorg-server:kdrive - Build the kdrive X servers
-x11-base/xorg-server:video_cards_chips - VIDEO_CARDS setting to build driver for chips video cards
-x11-base/xorg-server:video_cards_epson - VIDEO_CARDS setting to build driver for epson video cards
-x11-base/xorg-server:video_cards_glint - VIDEO_CARDS setting to build driver for glint video cards
-x11-base/xorg-server:video_cards_i810 - VIDEO_CARDS setting to build driver for i810 video cards
-x11-base/xorg-server:video_cards_mach64 - VIDEO_CARDS setting to build driver for mach64 video cards
-x11-base/xorg-server:video_cards_mga - VIDEO_CARDS setting to build driver for mga video cards
-x11-base/xorg-server:video_cards_neomagic - VIDEO_CARDS setting to build driver for neomagic video cards
-x11-base/xorg-server:video_cards_nv - VIDEO_CARDS setting to build driver for nv video cards
-x11-base/xorg-server:video_cards_r128 - VIDEO_CARDS setting to build driver for r128 video cards
-x11-base/xorg-server:video_cards_radeon - VIDEO_CARDS setting to build driver for radeon video cards
-x11-base/xorg-server:video_cards_siliconmotion - VIDEO_CARDS setting to build driver for siliconmotion video cards
-x11-base/xorg-server:video_cards_via - VIDEO_CARDS setting to build driver for via video cards
 x11-base/xorg-server:xorg - Build the Xorg X server
 x11-base/xorg-x11:bitmap-fonts - Builds the crappy 100 DPI and 75 DPI fonts
 x11-base/xorg-x11:dlloader - Enable dynamic module loader instead of ELF loader
 x11-base/xorg-x11:dmx - Build Distributed Multiheaded X
 x11-base/xorg-x11:font-server - Build XFS, the X Font Server
-x11-base/xorg-x11:input_devices_acecad - INPUT_DEVICES setting to build driver for acecad input devices
-x11-base/xorg-x11:input_devices_aiptek - INPUT_DEVICES setting to build driver for aiptek input devices
-x11-base/xorg-x11:input_devices_calcomp - INPUT_DEVICES setting to build driver for calcomp input devices
-x11-base/xorg-x11:input_devices_citron - INPUT_DEVICES setting to build driver for citron input devices
-x11-base/xorg-x11:input_devices_digitaledge - INPUT_DEVICES setting to build driver for digitaledge input devices
-x11-base/xorg-x11:input_devices_dmc - INPUT_DEVICES setting to build driver for dmc input devices
-x11-base/xorg-x11:input_devices_dynapro - INPUT_DEVICES setting to build driver for dynapro input devices
-x11-base/xorg-x11:input_devices_elo2300 - INPUT_DEVICES setting to build driver for elo2300 input devices
-x11-base/xorg-x11:input_devices_elographics - INPUT_DEVICES setting to build driver for elographics input devices
-x11-base/xorg-x11:input_devices_evdev - INPUT_DEVICES setting to build driver for evdev input devices
-x11-base/xorg-x11:input_devices_fpit - INPUT_DEVICES setting to build driver for fpit input devices
-x11-base/xorg-x11:input_devices_hyperpen - INPUT_DEVICES setting to build driver for hyperpen input devices
-x11-base/xorg-x11:input_devices_jamstudio - INPUT_DEVICES setting to build driver for jamstudio input devices
-x11-base/xorg-x11:input_devices_joystick - INPUT_DEVICES setting to build driver for joystick input devices
-x11-base/xorg-x11:input_devices_keyboard - INPUT_DEVICES setting to build driver for keyboard input devices
-x11-base/xorg-x11:input_devices_magellan - INPUT_DEVICES setting to build driver for magellan input devices
-x11-base/xorg-x11:input_devices_magictouch - INPUT_DEVICES setting to build driver for magictouch input devices
-x11-base/xorg-x11:input_devices_microtouch - INPUT_DEVICES setting to build driver for microtouch input devices
-x11-base/xorg-x11:input_devices_mouse - INPUT_DEVICES setting to build driver for mouse input devices
-x11-base/xorg-x11:input_devices_mutouch - INPUT_DEVICES setting to build driver for mutouch input devices
-x11-base/xorg-x11:input_devices_palmax - INPUT_DEVICES setting to build driver for palmax input devices
-x11-base/xorg-x11:input_devices_penmount - INPUT_DEVICES setting to build driver for penmount input devices
-x11-base/xorg-x11:input_devices_spaceorb - INPUT_DEVICES setting to build driver for spaceorb input devices
-x11-base/xorg-x11:input_devices_summa - INPUT_DEVICES setting to build driver for summa input devices
-x11-base/xorg-x11:input_devices_synaptics - INPUT_DEVICES setting to build driver for synaptics input devices
-x11-base/xorg-x11:input_devices_tek4957 - INPUT_DEVICES setting to build driver for tek4957 input devices
-x11-base/xorg-x11:input_devices_ur98 - INPUT_DEVICES setting to build driver for ur98 input devices
-x11-base/xorg-x11:input_devices_vmmouse - INPUT_DEVICES setting to build driver for vmmouse input devices
-x11-base/xorg-x11:input_devices_void - INPUT_DEVICES setting to build driver for void input devices
-x11-base/xorg-x11:input_devices_wacom - INPUT_DEVICES setting to build driver for wacom input devices
 x11-base/xorg-x11:insecure-drivers - Builds insecure DRI stuff for via, mach64 and savage
 x11-base/xorg-x11:sdk - Builds the software development kit
 x11-base/xorg-x11:truetype-fonts - Build TrueType fonts
 x11-base/xorg-x11:type1-fonts - Build Type1 fonts
-x11-base/xorg-x11:video_cards_apm - VIDEO_CARDS setting to build driver for apm video cards
-x11-base/xorg-x11:video_cards_ark - VIDEO_CARDS setting to build driver for ark video cards
-x11-base/xorg-x11:video_cards_chips - VIDEO_CARDS setting to build driver for chips video cards
-x11-base/xorg-x11:video_cards_cirrus - VIDEO_CARDS setting to build driver for cirrus video cards
-x11-base/xorg-x11:video_cards_cyrix - VIDEO_CARDS setting to build driver for cyrix video cards
-x11-base/xorg-x11:video_cards_dummy - VIDEO_CARDS setting to build driver for dummy video cards
-x11-base/xorg-x11:video_cards_fbdev - VIDEO_CARDS setting to build driver for fbdev video cards
-x11-base/xorg-x11:video_cards_fglrx - VIDEO_CARDS setting to build driver for fglrx video cards
-x11-base/xorg-x11:video_cards_glint - VIDEO_CARDS setting to build driver for glint video cards
-x11-base/xorg-x11:video_cards_i128 - VIDEO_CARDS setting to build driver for i128 video cards
-x11-base/xorg-x11:video_cards_i740 - VIDEO_CARDS setting to build driver for i740 video cards
-x11-base/xorg-x11:video_cards_i810 - VIDEO_CARDS setting to build driver for i810 video cards
-x11-base/xorg-x11:video_cards_imstt - VIDEO_CARDS setting to build driver for imstt video cards
-x11-base/xorg-x11:video_cards_mach64 - VIDEO_CARDS setting to build driver for mach64 video cards
-x11-base/xorg-x11:video_cards_mga - VIDEO_CARDS setting to build driver for mga video cards
-x11-base/xorg-x11:video_cards_neomagic - VIDEO_CARDS setting to build driver for neomagic video cards
-x11-base/xorg-x11:video_cards_newport - VIDEO_CARDS setting to build driver for newport video cards
-x11-base/xorg-x11:video_cards_nsc - VIDEO_CARDS setting to build driver for nsc video cards
-x11-base/xorg-x11:video_cards_nv - VIDEO_CARDS setting to build driver for nv video cards
-x11-base/xorg-x11:video_cards_nvidia - VIDEO_CARDS setting to build driver for nvidia video cards
-x11-base/xorg-x11:video_cards_r128 - VIDEO_CARDS setting to build driver for r128 video cards
-x11-base/xorg-x11:video_cards_radeon - VIDEO_CARDS setting to build driver for radeon video cards
-x11-base/xorg-x11:video_cards_rendition - VIDEO_CARDS setting to build driver for rendition video cards
-x11-base/xorg-x11:video_cards_s3 - VIDEO_CARDS setting to build driver for s3 video cards
-x11-base/xorg-x11:video_cards_s3virge - VIDEO_CARDS setting to build driver for s3virge video cards
-x11-base/xorg-x11:video_cards_savage - VIDEO_CARDS setting to build driver for savage video cards
-x11-base/xorg-x11:video_cards_siliconmotion - VIDEO_CARDS setting to build driver for siliconmotion video cards
-x11-base/xorg-x11:video_cards_sis - VIDEO_CARDS setting to build driver for sis video cards
-x11-base/xorg-x11:video_cards_sisusb - VIDEO_CARDS setting to build driver for sisusb video cards
-x11-base/xorg-x11:video_cards_sunbw2 - VIDEO_CARDS setting to build driver for sunbw2 video cards
-x11-base/xorg-x11:video_cards_suncg14 - VIDEO_CARDS setting to build driver for suncg14 video cards
-x11-base/xorg-x11:video_cards_suncg3 - VIDEO_CARDS setting to build driver for suncg3 video cards
-x11-base/xorg-x11:video_cards_suncg6 - VIDEO_CARDS setting to build driver for suncg6 video cards
-x11-base/xorg-x11:video_cards_sunffb - VIDEO_CARDS setting to build driver for sunffb video cards
-x11-base/xorg-x11:video_cards_sunleo - VIDEO_CARDS setting to build driver for sunleo video cards
-x11-base/xorg-x11:video_cards_suntcx - VIDEO_CARDS setting to build driver for suntcx video cards
-x11-base/xorg-x11:video_cards_tdfx - VIDEO_CARDS setting to build driver for tdfx video cards
-x11-base/xorg-x11:video_cards_tga - VIDEO_CARDS setting to build driver for tga video cards
-x11-base/xorg-x11:video_cards_trident - VIDEO_CARDS setting to build driver for trident video cards
-x11-base/xorg-x11:video_cards_tseng - VIDEO_CARDS setting to build driver for tseng video cards
-x11-base/xorg-x11:video_cards_v4l - VIDEO_CARDS setting to build driver for v4l video cards
-x11-base/xorg-x11:video_cards_vesa - VIDEO_CARDS setting to build driver for vesa video cards
-x11-base/xorg-x11:video_cards_vga - VIDEO_CARDS setting to build driver for vga video cards
-x11-base/xorg-x11:video_cards_via - VIDEO_CARDS setting to build driver for via video cards
-x11-base/xorg-x11:video_cards_vmware - VIDEO_CARDS setting to build driver for vmware video cards
-x11-base/xorg-x11:video_cards_voodoo - VIDEO_CARDS setting to build driver for voodoo video cards
 x11-drivers/ati-drivers:dlloader - Experimental relink to support dlloader
 x11-drivers/synaptics:dlloader - Installs dynamically linked synaptics Xorg driver
 x11-libs/cairo:glitz - Build with glitz support
