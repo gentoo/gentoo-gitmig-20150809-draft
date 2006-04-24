@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/kamikaze
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kamikaze/ChangeLog,v 1.10 2006/04/13 04:01:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kamikaze/ChangeLog,v 1.11 2006/04/24 11:31:34 tupone Exp $
+
+  24 Apr 2006; <Tupone@gentoo.org> +files/kamikaze-0.2.2-gcc41.patch,
+  kamikaze-0.2.2.ebuild:
+  Fix for gcc-4.1
 
 *kamikaze-0.2.2 (13 Apr 2006)
 
