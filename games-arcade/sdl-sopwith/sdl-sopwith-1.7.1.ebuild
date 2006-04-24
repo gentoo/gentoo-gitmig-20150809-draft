@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/sdl-sopwith-1.7.1.ebuild,v 1.10 2004/06/24 22:11:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/sdl-sopwith-1.7.1.ebuild,v 1.11 2006/04/24 15:13:58 tupone Exp $
 
-inherit games
+inherit eutils games
 
 MY_P="${P/-/_}"
 S="${WORKDIR}/${MY_P}"
@@ -23,6 +23,12 @@ RDEPEND=">=media-libs/freetype-2
 	>=dev-libs/glib-2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"

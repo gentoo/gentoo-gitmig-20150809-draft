@@ -1,0 +1,20 @@
+--- src/swmain.h.old	2006-04-24 17:00:39.000000000 +0200
++++ src/swmain.h	2006-04-24 17:00:52.000000000 +0200
+@@ -46,7 +46,6 @@
+ extern int     targrnge;
+ extern BOOL    hires;
+ extern BOOL    disppos;
+-extern BOOL    titleflg;
+ extern int     dispdbg;
+ extern BOOL    soundflg;
+ extern BOOL    repflag;
+--- src/swtitle.h.old	2006-04-24 17:04:49.000000000 +0200
++++ src/swtitle.h	2006-04-24 17:05:09.000000000 +0200
+@@ -30,6 +30,7 @@
+ extern int getgame();
+ extern void swtitln();
+ extern void swtitlf();
++extern BOOL titleflg;
+ 
+ #endif
+ 

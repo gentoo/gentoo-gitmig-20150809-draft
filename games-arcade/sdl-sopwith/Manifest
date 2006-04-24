@@ -1,4 +1,25 @@
-MD5 95c49976d30c6790d4a25b20910caa04 sdl-sopwith-1.7.1.ebuild 857
-MD5 f11d32ef05cee4d0c5e1c2b05eeb7f94 ChangeLog 1039
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a39b76b773ea8aed15cfb9cafa8e434f ChangeLog 1157
+RMD160 1ffca41e0a4037300d57a435f1eb112360b0ec64 ChangeLog 1157
+SHA256 5fb5821eacacfec0abc11fadb4d16acd8e94334c5bee3678e895e3eea5c0daff ChangeLog 1157
+MD5 f5bdaefa619804e9749fda3d37a172fd files/digest-sdl-sopwith-1.7.1 253
+RMD160 f92e5182c08fed69101d0a78d82a987119426790 files/digest-sdl-sopwith-1.7.1 253
+SHA256 a19a1321ec4776bd88955ac5779fd07fde417dd642f28c7e2865862991742ced files/digest-sdl-sopwith-1.7.1 253
+MD5 cff130f6aaf79a894c298cf67f178512 files/sdl-sopwith-1.7.1-gcc41.patch 540
+RMD160 75adf4e8c3caa5edd1a88c43eac3d3652229cdf0 files/sdl-sopwith-1.7.1-gcc41.patch 540
+SHA256 9450e734f9388650617e7b5c740019d0a7d7244e7d9d83b218c0894305d10791 files/sdl-sopwith-1.7.1-gcc41.patch 540
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 e35cc5cd710dd0d0c12d63304ca5b0a1 files/digest-sdl-sopwith-1.7.1 69
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 7aee0c0576fd9efffef9fac0204261f4 sdl-sopwith-1.7.1.ebuild 943
+RMD160 e5bad6d0a304dce87b222a76d73a36471bf66aa0 sdl-sopwith-1.7.1.ebuild 943
+SHA256 4923275ecac72d5ab98e9f83497641f49042ad308b6cdf35a82627433a5b410f sdl-sopwith-1.7.1.ebuild 943
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFETOtH2CTtIKiFlQIRAq8XAJsHsEi7nu2w9w4QVcHsL4Pkvvty5ACgjnU5
+ntL+a+rp2gwJNk9GyINMIng=
+=k2XS
+-----END PGP SIGNATURE-----
