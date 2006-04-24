@@ -1,0 +1,11 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/xft/ChangeLog,v 1.1 2006/04/24 19:15:02 spyderous Exp $
+
+*xft-7.0 (24 Apr 2006)
+*xft-6.8 (24 Apr 2006)
+
+  24 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  +xft-6.8.ebuild, +xft-7.0.ebuild:
+  Add new-style virtual for xft, again so xorg-x11-7 ebuilds don't provide it.
+
