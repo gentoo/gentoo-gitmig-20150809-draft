@@ -1,35 +1,24 @@
-DIST sensors-applet-1.5.2.tar.gz 153718 size 153718
-DIST sensors-applet-1.5.tar.gz 154209 size 154209
-DIST sensors-applet-1.6.tar.gz 212215 RMD160 a9836b907bece45fdb7026ee75f27f7b8c2c8663 SHA256 e71873ba73f3cf2cf7e09ff84eadf59f0b990aaac7a9f1176a96f2da6bb3be6a size 212215
-EBUILD sensors-applet-1.5.2.ebuild 734 RMD160 e371b5a8cf3dfc22b0026176631c8b8990bef380 SHA1 37be2eea6bbaf85f83fbaf3900cc3923651b291c SHA256 c7b39faa029ad5837385e292c23ec092fe6033bdef5ca7cac399a6b97b2d58fd size 734
-MD5 fd80d897b36bfe44f472a0e18d60cd3c sensors-applet-1.5.2.ebuild 734
-RMD160 e371b5a8cf3dfc22b0026176631c8b8990bef380 sensors-applet-1.5.2.ebuild 734
-SHA256 c7b39faa029ad5837385e292c23ec092fe6033bdef5ca7cac399a6b97b2d58fd sensors-applet-1.5.2.ebuild 734
-EBUILD sensors-applet-1.5.ebuild 735 RMD160 7611f63b398ef341a91387e926773a99fb3c6d28 SHA1 724dd9bb8aed7c498d035fd626ba108f5ec1a871 SHA256 8f995afa1760c2846d211f1388494b07e28b60dbecc864943a274041c6795c08 size 735
-MD5 b39e2551c39bb1c680d6a54b6496eea2 sensors-applet-1.5.ebuild 735
-RMD160 7611f63b398ef341a91387e926773a99fb3c6d28 sensors-applet-1.5.ebuild 735
-SHA256 8f995afa1760c2846d211f1388494b07e28b60dbecc864943a274041c6795c08 sensors-applet-1.5.ebuild 735
-EBUILD sensors-applet-1.6.ebuild 843 RMD160 c59e908c970ac513b2df0a37989696724c5854e5 SHA1 cf503947e39daec5e9099cb79435352cd41daa88 SHA256 0b8af49a18b455f6b9780333a64fea3cf7acad272af72c5e7a8ded54ec209051 size 843
-MD5 5a151422245f785c4510e1231938397d sensors-applet-1.6.ebuild 843
-RMD160 c59e908c970ac513b2df0a37989696724c5854e5 sensors-applet-1.6.ebuild 843
-SHA256 0b8af49a18b455f6b9780333a64fea3cf7acad272af72c5e7a8ded54ec209051 sensors-applet-1.6.ebuild 843
-MISC ChangeLog 1341 RMD160 de3f41cf52347763f00d303cdb722eeb0e88ee18 SHA1 88d168f4b47033477e22eaf8977c1c89e24cf82f SHA256 a62c4da7a10a41a7b1ac092445a312717a4bed68f1083540d0299b9af81bfe8c size 1341
-MD5 5f98053258acfc7e54457e5fd0509b2b ChangeLog 1341
-RMD160 de3f41cf52347763f00d303cdb722eeb0e88ee18 ChangeLog 1341
-SHA256 a62c4da7a10a41a7b1ac092445a312717a4bed68f1083540d0299b9af81bfe8c ChangeLog 1341
-MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 size 158
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 7f3e35879f3ad6b9f22bde937f468ceb ChangeLog 1456
+RMD160 bc306db1f2ff1e4fddbcd795371b611daa5f2647 ChangeLog 1456
+SHA256 300a41ea7309f747e656bdbcea70baf860195f5ae3cb33f93db236bb10cccddd ChangeLog 1456
 MD5 29ee9ab06a6645b9bfed724b2ea39346 files/digest-sensors-applet-1.5 70
 RMD160 68095daf8e56c8c6e924ccf969df854964bbb8da files/digest-sensors-applet-1.5 70
 SHA256 fb5a88a86f194f0147c22ad1c164144a751fe07f032929dd5e9e91c744d0cd15 files/digest-sensors-applet-1.5 70
-size 70 files/digest-sensors-applet-1.5 70
 MD5 15bba24933d913789d7e7a920cf21e05 files/digest-sensors-applet-1.5.2 72
 RMD160 630ed9cc0170aecdcfab3610a1e606ffc0547e8c files/digest-sensors-applet-1.5.2 72
 SHA256 e9b1be31b023691c10f87de965def6982d0bd75119dfa254e46bc9499da253b9 files/digest-sensors-applet-1.5.2 72
-size 72 files/digest-sensors-applet-1.5.2 72
 MD5 7eab4c0dbf4c3bf3c1b5b00f9ee02459 files/digest-sensors-applet-1.6 256
 RMD160 7119bce150601d2e1bf1927820a316c63b69758e files/digest-sensors-applet-1.6 256
 SHA256 96f4b0c596f60667c34e9dbba2da6979b74feec5b7d200f4040387bada3443f0 files/digest-sensors-applet-1.6 256
-size 256 files/digest-sensors-applet-1.6 256
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 fd80d897b36bfe44f472a0e18d60cd3c sensors-applet-1.5.2.ebuild 734
+RMD160 e371b5a8cf3dfc22b0026176631c8b8990bef380 sensors-applet-1.5.2.ebuild 734
+SHA256 c7b39faa029ad5837385e292c23ec092fe6033bdef5ca7cac399a6b97b2d58fd sensors-applet-1.5.2.ebuild 734
+MD5 b39e2551c39bb1c680d6a54b6496eea2 sensors-applet-1.5.ebuild 735
+RMD160 7611f63b398ef341a91387e926773a99fb3c6d28 sensors-applet-1.5.ebuild 735
+SHA256 8f995afa1760c2846d211f1388494b07e28b60dbecc864943a274041c6795c08 sensors-applet-1.5.ebuild 735
+MD5 b111e74888bffd60fad87ae50b42e182 sensors-applet-1.6.ebuild 840
+RMD160 6d3da171224769e64eb688d33625cdef86a15535 sensors-applet-1.6.ebuild 840
+SHA256 682b98c7e9dbf237e9adacf6b2b0bcf243756e485358b130aac103586fbaefd6 sensors-applet-1.6.ebuild 840
