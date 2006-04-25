@@ -1,12 +1,15 @@
-MD5 7bab10927cb8fa6b4d2a8d517e2296fd ChangeLog 22946
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 656d3cf8a2f3555871ccdfe7c1ffc290 ChangeLog 23099
 MD5 5331ab3504762b397113ab2996b7ba61 asterisk-1.0.10-r1.ebuild 14665
-MD5 7f0d81ce552fabb7ef00abbc13b38e29 asterisk-1.0.10-r2.ebuild 14787
+MD5 bb0a1e5098f140166d38b18999f996f7 asterisk-1.0.10-r2.ebuild 14790
 MD5 5a641e52c52eded4766e31c8520fe83b asterisk-1.0.7-r2.ebuild 13672
 MD5 f47f423dec3c8c0aaca9c4f117a8c5fc asterisk-1.0.7-r3.ebuild 13676
 MD5 d9f95903ad4e6d09a13349e5e0df61c4 asterisk-1.0.7-r4.ebuild 13800
 MD5 dab2abf3ef2e4b6f44e833df1ecb0f77 asterisk-1.0.8-r1.ebuild 13808
 MD5 3ffe465ae17b176a5324ed45ce59e70a asterisk-1.0.8-r2.ebuild 13815
-MD5 5953e9ae2ec79aa41752aee9d2d75d59 asterisk-1.0.8-r3.ebuild 13938
+MD5 d36c4df8667966f4e2aaaddc63d1bd51 asterisk-1.0.8-r3.ebuild 13941
 MD5 d334b99433aa96e3eaf99bc98bc073e8 asterisk-1.0.9-r3.ebuild 13841
 MD5 9a4b789a2035ac22e1af8d08f602e386 asterisk-1.0.9-r4.ebuild 13965
 MD5 09d2b6905923ef8beadadb6fc592d62c asterisk-1.2.7_p1.ebuild 13073
@@ -52,3 +55,10 @@ MD5 e9e9701fad77824bcfdff1f02b9634e3 files/digest-asterisk-1.0.9-r3 768
 MD5 e9e9701fad77824bcfdff1f02b9634e3 files/digest-asterisk-1.0.9-r4 768
 MD5 03e2e55422979c602afee0c184679bba files/digest-asterisk-1.2.7_p1 1421
 MD5 488aea6fbdb7537394cc049b0ff9e5d5 metadata.xml 384
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFETm10KRy60XGEcJIRAsADAKCj/7cLx3rxePk3TLK05e9JscBM4QCeLpog
+t5yMnWGfOEL+2WWaCUW1pQ0=
+=Uu+8
+-----END PGP SIGNATURE-----
