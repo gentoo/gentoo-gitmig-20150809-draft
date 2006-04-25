@@ -19,6 +19,9 @@ SHA256 92c0d55cd7860f4f486a8ac1400c671e33be6f750389de8c2bce6437d1985285 files/di
 MD5 67e8ee888589666d8b1d35b6780a0be4 files/digest-mercury-0.13.0_beta4 352
 RMD160 dc7500c5adeff0b78b6248fa9900541e0dcc85e0 files/digest-mercury-0.13.0_beta4 352
 SHA256 5e438b627c917ac497b391d21629c0864f9b0d5d6ec3367d551d46a93f7e870b files/digest-mercury-0.13.0_beta4 352
+MD5 f287579de5858d2437c8e77d01f9b97d files/digest-mercury-0.13.0_beta5 352
+RMD160 3ab7af61d2751a7f0cfc5ace2f0b13f51b8668b4 files/digest-mercury-0.13.0_beta5 352
+SHA256 a0f739176c085ae51c64c051339b2de6615716ecad50c00f12bfb3b591d42915 files/digest-mercury-0.13.0_beta5 352
 MD5 f9d8db42316ea25a27a1bbc6806f60d7 files/mercury-0.12.2-CFLAGS.patch 1267
 RMD160 70cbaa9b85c8ac23cd17c41c3d834c69af5bff1a files/mercury-0.12.2-CFLAGS.patch 1267
 SHA256 b27660a29a71b56071daa5e7fc6c62c697c53c55bf8b9068c1bc42002cdb00f1 files/mercury-0.12.2-CFLAGS.patch 1267
@@ -55,6 +58,9 @@ SHA256 2f9aab77acf87e55f1a62880c9919dad0cf4278e7bbcf345d1a68cb8df8bb534 mercury-
 MD5 f7c7916a3e95c4b4fc049ddf32316528 mercury-0.13.0_beta4.ebuild 1548
 RMD160 d5a637f5af6c9a36625fd419c5d7c43fa76d8440 mercury-0.13.0_beta4.ebuild 1548
 SHA256 8873cbf916d7bbbe2b6a34e5ad1b79338c44705cb7baf7feb4c5b65a3e2065b9 mercury-0.13.0_beta4.ebuild 1548
+MD5 ab7d987148f4b4cea41e6d571e9b06a1 mercury-0.13.0_beta5.ebuild 1500
+RMD160 e60bf416c6ed23826d2725ccbc223956a81a3c82 mercury-0.13.0_beta5.ebuild 1500
+SHA256 0b91d1377fc7254ff34cf836c84491b0289bb7546b336dff3084aacd6d95198e mercury-0.13.0_beta5.ebuild 1500
 MD5 6fca20d17d6d55a28537204aa9bb626f metadata.xml 247
 RMD160 1b3df3c501d9a3b2e2651668be405677e8416397 metadata.xml 247
 SHA256 be2c02607bd8d5bf707b178d925fa94c6c705014aa488156323589ca4eaac380 metadata.xml 247

@@ -19,6 +19,9 @@ SHA256 d4850211a8d81e5bc78d7df7dc103f102a7e15caf820ab477553291115df02ff files/di
 MD5 7f1704e7cafebc8566bada52836bbf0b files/digest-mercury-extras-0.13.0_beta4 340
 RMD160 10874625e6f87743215bc1e4e4d460a807b4e24a files/digest-mercury-extras-0.13.0_beta4 340
 SHA256 21248ae520b8bd0e646e80b5715af17dc0d81d85866b8d74fb8988f12cf48a11 files/digest-mercury-extras-0.13.0_beta4 340
+MD5 ff0539b77cd64a3be2d6d2505d419d4a files/digest-mercury-extras-0.13.0_beta5 340
+RMD160 1a1a0a897e73e2f02daf73ee4a4ad24af3a3d460 files/digest-mercury-extras-0.13.0_beta5 340
+SHA256 c76794f4296d168c3548eae5348f5a7b1a988dfefb98bbd7d37ae312ab42847b files/digest-mercury-extras-0.13.0_beta5 340
 MD5 46b54062fd1dea38e3b6f8724fe51f02 files/mercury-extras-0.12.2-concurrency.patch 316
 RMD160 a9bcbafeaf0ee76782adbe289442bdff1012fa38 files/mercury-extras-0.12.2-concurrency.patch 316
 SHA256 40fd7961b6677cacc80d2460c9f4b11effdabbe00c3b026f0f65ea46c70d7189 files/mercury-extras-0.12.2-concurrency.patch 316
@@ -136,6 +139,9 @@ SHA256 092bb94c0071a272b69f9b02e03f8064eeb2c2e9a1f0a4a0bc59b738c90712cc mercury-
 MD5 20ff5a677cd9b740cb118a28d6c793b8 mercury-extras-0.13.0_beta4.ebuild 3229
 RMD160 81a28df8ea1caad2afe572c2015d4e84c279bf91 mercury-extras-0.13.0_beta4.ebuild 3229
 SHA256 b6e836f6174fa0a7ec219370cb2f654189c8efde7d65542f3417cc319942e791 mercury-extras-0.13.0_beta4.ebuild 3229
+MD5 b086fedce2c97c65b3edc786d5696ef7 mercury-extras-0.13.0_beta5.ebuild 3222
+RMD160 39a9de4c08498c09f1bd4c36b04e91685cce5e2b mercury-extras-0.13.0_beta5.ebuild 3222
+SHA256 dc53f0962ea2584cd04bd6c3a44adc0f38d974a22cc80043e13f6fbcf9f66f88 mercury-extras-0.13.0_beta5.ebuild 3222
 MD5 6fca20d17d6d55a28537204aa9bb626f metadata.xml 247
 RMD160 1b3df3c501d9a3b2e2651668be405677e8416397 metadata.xml 247
 SHA256 be2c02607bd8d5bf707b178d925fa94c6c705014aa488156323589ca4eaac380 metadata.xml 247
