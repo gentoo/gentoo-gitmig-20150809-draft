@@ -1,0 +1,9 @@
+# ChangeLog for virtual/pmake
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/pmake/ChangeLog,v 1.1 2006/04/25 16:32:56 flameeyes Exp $
+
+*pmake-0 (25 Apr 2006)
+
+  25 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> +pmake-0.ebuild:
+  Add virtual/pmake for BSD-like make commands.
+
