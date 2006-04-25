@@ -1,32 +1,19 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2006 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/files/mdadm.rc,v 1.1 2005/03/02 04:32:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/files/mdadm.rc,v 1.2 2006/04/25 05:41:51 vapier Exp $
 
 depend() {
 	use logger dns net
 }
 
-checkconfig() {
-	if [ ! -f /etc/mdadm.conf ] ; then
-		eerror "File /etc/mdadm.conf does not exist"
-		return 1
-	fi
-	if ! grep -qs '^\(MAILADDR\|PROGRAM\) .' /etc/mdadm.conf ; then
-		eerror "No monitoring action defined in /etc/mdadm.conf"
-		return 1
-	fi
-}
-
 start() {
-	checkconfig || return 1
-
-	local ret
 	ebegin "Starting mdadm monitor"
-	/sbin/mdadm --monitor --scan &
-	ret=$?
-	echo $! > /var/run/mdadm.pid
-	eend ${ret}
+	mdadm --monitor --scan \
+		--daemonise \
+		--pid-file /var/run/mdadm.pid \
+		${MDADM_OPTS}
+	eend $?
 }
 
 stop() {

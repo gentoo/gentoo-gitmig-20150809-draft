@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.26 2006/04/10 23:04:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.27 2006/04/25 05:41:51 vapier Exp $
+
+*mdadm-2.4.1-r1 (25 Apr 2006)
+
+  25 Apr 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/mdadm-2.4.1-syslog-updates.patch, +files/mdadm.confd,
+  files/mdadm.rc, +mdadm-2.4.1-r1.ebuild:
+  Properly daemonize at startup #131120 by Adam Carheden and set the default
+  behavior to syslog.
 
 *mdadm-2.4.1 (10 Apr 2006)
 
