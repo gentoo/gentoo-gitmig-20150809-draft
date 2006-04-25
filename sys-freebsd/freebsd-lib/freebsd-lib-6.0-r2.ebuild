@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.0-r2.ebuild,v 1.1 2006/04/20 07:40:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.0-r2.ebuild,v 1.2 2006/04/25 18:49:52 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -31,8 +31,10 @@ DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-mk-defs-${RV}*
 	=sys-freebsd/freebsd-sources-${RV}*"
 
-PROVIDE="virtual/libc
-	virtual/os-headers"
+if [[ ${CATEGORY/cross-} == {CATEGORY} ]]; then
+	PROVIDE="virtual/libc
+		virtual/os-headers"
+fi
 
 S="${WORKDIR}/lib"
 
@@ -113,16 +115,28 @@ src_compile() {
 
 	use _E_CROSS_HEADERS_ONLY && return 0
 
-	cd "${S}"
-
 	if [[ ${CTARGET} != ${CHOST} ]]; then
-		cd "${S}/libc"
 		export YACC='yacc -by'
 		CHOST=${CTARGET} tc-export CC LD CXX
 
+		local csudir
+		if [[ -d "${S}/csu/$(tc-arch-kernel ${CTARGET})-elf" ]]; then
+			csudir="${S}/csu/$(tc-arch-kernel ${CTARGET})-elf"
+		else
+			csudir="${S}/csu/$(tc-arch-kernel ${CTARGET})"
+		fi
+		cd "${csudir}"
+		$(freebsd_get_bmake) ${mymakeopts} || die "make csu failed"
+
 		append-flags "-isystem /usr/${CTARGET}/include"
+		append-flags "-B ${csudir}"
+		append-ldflags "-B ${csudir}"
+		cd "${S}/libc"
+		$(freebsd_get_bmake) ${mymakeopts} || die "make libc failed"
+	else
+		cd "${S}"
+		freebsd_src_compile
 	fi
-	freebsd_src_compile
 }
 
 src_install() {
@@ -147,10 +161,24 @@ src_install() {
 
 	use _E_CROSS_HEADERS_ONLY && return 0
 
-	cd "${S}"
+	if [[ ${CTARGET} != ${CHOST} ]]; then
+		local csudir
+		if [[ -d "${S}/csu/$(tc-arch-kernel ${CTARGET})-elf" ]]; then
+			csudir="${S}/csu/$(tc-arch-kernel ${CTARGET})-elf"
+		else
+			csudir="${S}/csu/$(tc-arch-kernel ${CTARGET})"
+		fi
+		cd "${csudir}"
+		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install \
+			FILESDIR="/usr/${CTARGET}/lib" || die "Install csu failed"
 
-	[[ ${CTARGET} != ${CHOST} ]] && cd "${S}/libc"
-	mkinstall || die "Install failed"
+		cd "${S}/libc"
+		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
+			SHLIBDIR="/usr/${CTARGET}/lib" LIBDIR="/usr/${CTARGET}/lib" || die "Install failed"
+	else
+		cd "${S}"
+		mkinstall || die "Install failed"
+	fi
 
 	# Don't install the rest of the configuration files if crosscompiling
 	[[ ${CTARGET} != ${CHOST} ]] && return 0
