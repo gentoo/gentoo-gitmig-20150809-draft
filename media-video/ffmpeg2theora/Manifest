@@ -1,18 +1,50 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9b90c750238cdba48db9afc4d741358a ChangeLog 1505
+DIST ffmpeg2theora-0.12.tar.bz2 196371 size 196371
+DIST ffmpeg2theora-0.13.tar.bz2 198783 size 198783
+DIST ffmpeg2theora-0.15.tar.bz2 199646 size 199646
+DIST ffmpeg2theora-0.16.tar.bz2 209409 RMD160 9f5c1327d6500453eb6967e0d429bb83f7d73af6 SHA256 7a0aabc42e8321b86c99246187a18b2e4c3cd4388aed6670fa86a7705678d6b4 size 209409
+EBUILD ffmpeg2theora-0.12.ebuild 744 RMD160 d6262274d4153204488852f2071a5a6ff2fd07cd SHA1 e8b4a994d559226dbffa54bf99b256408c21562d SHA256 9c4472c40343f272de4be25969bbd4d8a74f91553f900887bdef28c593ff6e33 size 744
 MD5 e7d81912ff4607d269aa631cb0d6de62 ffmpeg2theora-0.12.ebuild 744
+RMD160 d6262274d4153204488852f2071a5a6ff2fd07cd ffmpeg2theora-0.12.ebuild 744
+SHA256 9c4472c40343f272de4be25969bbd4d8a74f91553f900887bdef28c593ff6e33 ffmpeg2theora-0.12.ebuild 744
+EBUILD ffmpeg2theora-0.13.ebuild 756 RMD160 36b64851ffb621b88dfe4f078e4933f2c395b66a SHA1 e3fed10a3dd35eb5cfd640abb995d42f74a6cd49 SHA256 5a781e7c2d05c97129d82fa643ee6ea9a0b5c58b413f1112d77f10937d8c4d2b size 756
 MD5 8d3db4e56b0208360c424d80e915fe53 ffmpeg2theora-0.13.ebuild 756
+RMD160 36b64851ffb621b88dfe4f078e4933f2c395b66a ffmpeg2theora-0.13.ebuild 756
+SHA256 5a781e7c2d05c97129d82fa643ee6ea9a0b5c58b413f1112d77f10937d8c4d2b ffmpeg2theora-0.13.ebuild 756
+EBUILD ffmpeg2theora-0.15.ebuild 935 RMD160 4682c8e14af37f2039d179df2bf169bc18a275f1 SHA1 ce4be533af1980974fbe1ef7988b5f5024e140b1 SHA256 a9f0ddf8b309c73bc268adcdf9a031acd1d9421e78db07fccc47cded940d3f56 size 935
 MD5 0c640bc8eef7c671f7b99528f1660415 ffmpeg2theora-0.15.ebuild 935
-MD5 0d6f7ece558f9b1b206da912327edabd files/digest-ffmpeg2theora-0.12 71
-MD5 a7f89b818311037ceabf640863dc07c2 files/digest-ffmpeg2theora-0.13 71
-MD5 2b03309b2b92e1372d1c1e82dcee9904 files/digest-ffmpeg2theora-0.15 71
+RMD160 4682c8e14af37f2039d179df2bf169bc18a275f1 ffmpeg2theora-0.15.ebuild 935
+SHA256 a9f0ddf8b309c73bc268adcdf9a031acd1d9421e78db07fccc47cded940d3f56 ffmpeg2theora-0.15.ebuild 935
+EBUILD ffmpeg2theora-0.16.ebuild 935 RMD160 f5961f3194d6f9d1e694258b0bcdc2dee7a1e6cc SHA1 aa62b5ccdca4f42715ded8b85ea6e9d7d5d29f15 SHA256 ff1183dafa8ce1eb6d748c5e5f48fc501bf86cbf01abdfb4225a6649a7ad63aa size 935
+MD5 d39ac2fc4b53a0cd5cc2fbc0afa08f18 ffmpeg2theora-0.16.ebuild 935
+RMD160 f5961f3194d6f9d1e694258b0bcdc2dee7a1e6cc ffmpeg2theora-0.16.ebuild 935
+SHA256 ff1183dafa8ce1eb6d748c5e5f48fc501bf86cbf01abdfb4225a6649a7ad63aa ffmpeg2theora-0.16.ebuild 935
+MISC ChangeLog 1682 RMD160 d55e0c4825c564560176310f55571164a0a98d3f SHA1 f53b24fb01b3af6e978adf6154e405c79078a072 SHA256 6ef3d5dba14df012421461af97cbb82c1e06d0ee2aa5cbab0cae3c0a50176b6b size 1682
+MD5 3c3f655a85bbf6e5eac84d370a029756 ChangeLog 1682
+RMD160 d55e0c4825c564560176310f55571164a0a98d3f ChangeLog 1682
+SHA256 6ef3d5dba14df012421461af97cbb82c1e06d0ee2aa5cbab0cae3c0a50176b6b ChangeLog 1682
+MISC metadata.xml 158 RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 SHA1 9ac37da489ebe6e58e32fe8e037b1ef2d99c6638 SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 size 158
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+RMD160 d91ff64b3e5f86657b8b6ba02c41a26247a2fac7 metadata.xml 158
+SHA256 f9dd4fb4a7f368e776ea0d7d394dad8f3a674e67f6103d6fb58a8a98971eeee4 metadata.xml 158
+MD5 0d6f7ece558f9b1b206da912327edabd files/digest-ffmpeg2theora-0.12 71
+RMD160 8278a40fbac6c5cc647a1c5fa33c5c9c33dca737 files/digest-ffmpeg2theora-0.12 71
+SHA256 e101ad5157324c14b4ff8180168439b83e39841caef35d5b803bb460429cfdd2 files/digest-ffmpeg2theora-0.12 71
+MD5 a7f89b818311037ceabf640863dc07c2 files/digest-ffmpeg2theora-0.13 71
+RMD160 7eab86f82e49cfa5921890faa6dd82704f1b615f files/digest-ffmpeg2theora-0.13 71
+SHA256 419ddf38e0f72635839edcfb6cf26abfcd1a6feda2a0892c30f846c97d8096f8 files/digest-ffmpeg2theora-0.13 71
+MD5 2b03309b2b92e1372d1c1e82dcee9904 files/digest-ffmpeg2theora-0.15 71
+RMD160 d2f6aea72f1ed3d2674c8eb9bdfc5141cd14ce99 files/digest-ffmpeg2theora-0.15 71
+SHA256 0f022b8b83ec1166e5f9d1f686173a05c42a545b884d2a5f1609dac6e2f7c477 files/digest-ffmpeg2theora-0.15 71
+MD5 6d587c6e71e807a301a408e12396a776 files/digest-ffmpeg2theora-0.16 259
+RMD160 6f7d7442ea8c0d3322f80fd17be2cf20fae280fb files/digest-ffmpeg2theora-0.16 259
+SHA256 e74190f419e8813cc9618066f4c0781212933dbca63808715bc619a19c5ea315 files/digest-ffmpeg2theora-0.16 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFDwP+uAiZjviIA2XgRAlgSAKDD7l9gC5AaRTD9Rgp8jRd2OunWDwCgp2mb
-QLx6zRKbr9KvrvC4mL1fIuc=
-=gRcR
+iD8DBQFETXnRAiZjviIA2XgRArHIAKDFMb2FClY5oWQRYjKE1j3NiDN7VACdEmIK
+tiR1/Qcf7F29VUmIAbeqcIM=
+=fj3W
 -----END PGP SIGNATURE-----
