@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.6-r3.ebuild,v 1.3 2005/08/03 18:45:09 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.6-r3.ebuild,v 1.4 2006/04/25 22:22:09 voxus Exp $
 
 inherit toolchain-funcs
 
@@ -21,7 +21,7 @@ KEYWORDS="-* x86"
 IUSE=""
 
 pkg_setup() {
-	if [ -z "`readlink /usr/src/linux|grep openmosix`" ]; then
+	if ! [ -d /usr/src/linux/hpc ]; then
 		eerror
 		eerror "Your linux kernel sources do not appear to be openmosix,"
 		eerror "please check your /usr/src/linux symlink."
