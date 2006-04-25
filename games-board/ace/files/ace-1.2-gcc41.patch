@@ -1,0 +1,73 @@
+--- games/golf.c.old	2006-04-25 22:22:15.000000000 +0200
++++ games/golf.c	2006-04-25 22:25:51.000000000 +0200
+@@ -31,7 +31,7 @@
+ 
+ Stack *deck, *discard, *stacks[7];
+ 
+-static int table_width, table_height;
++static int _table_width, _table_height;
+ 
+ int supress_arrows = 0;
+ 
+@@ -42,10 +42,10 @@
+ {
+   int alt_width = 3*M+2*W+51*R;
+   init_ace(argc, argv);
+-  table_width = 8*M+7*W;
+-  if (table_width < alt_width) table_width = alt_width;
+-  table_height = 3*M+5*CARD_FAN_DOWN+2*H;
+-  init_table(table_width, table_height);
++  _table_width = 8*M+7*W;
++  if (_table_width < alt_width) _table_width = alt_width;
++  _table_height = 3*M+5*CARD_FAN_DOWN+2*H;
++  init_table(_table_width, _table_height);
+   table_loop();
+ }
+ 
+@@ -118,7 +118,7 @@
+     sprintf(s, "%2d", c);
+   else
+     strcpy(s, "  ");
+-  text(s, M*2, table_height-M-H-2);
++  text(s, M*2, _table_height-M-H-2);
+ }
+ 
+ void
+@@ -152,9 +152,9 @@
+ {
+   int s, v;
+ 
+-  arrow_offset = (table_width - 7 * W) / 8;
++  arrow_offset = (_table_width - 7 * W) / 8;
+   arrow_delta = arrow_offset + W;
+-  arrow_offset = (table_width - 7*W - 6*arrow_offset)/2;
++  arrow_offset = (_table_width - 7*W - 6*arrow_offset)/2;
+ 
+   stack_load_standard_deck();
+   splash = get_picture("golf");
+@@ -171,8 +171,8 @@
+     stack_set_offset(stacks[s], STACK_OFFSET_DOWN);
+   }
+ 
+-  deck = stack_create(M, table_height-M-H);
+-  discard = stack_create(M*2+W, table_height-M-H);
++  deck = stack_create(M, _table_height-M-H);
++  discard = stack_create(M*2+W, _table_height-M-H);
+   stack_set_offset(discard, STACK_OFFSET_TBRIGHT);
+ 
+   for (s=0; s<4; s++)
+@@ -228,10 +228,10 @@
+   Picture *cp = get_centered_pic();
+ 
+   if ((cp == youlose || cp == youwin)
+-      && (x > table_width/2-cp->w/2
+-	  && x < table_width/2+cp->w/2
+-	  && y > table_height/2-cp->h/2
+-	  && y < table_height/2+cp->h/2))
++      && (x > _table_width/2-cp->w/2
++	  && x < _table_width/2+cp->w/2
++	  && y > _table_height/2-cp->h/2
++	  && y < _table_height/2+cp->h/2))
+   {
+     set_centered_pic(0);
+     start_again();

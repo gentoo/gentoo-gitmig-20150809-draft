@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.2-r1.ebuild,v 1.15 2005/12/14 04:10:01 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.2-r1.ebuild,v 1.16 2006/04/25 21:18:45 tupone Exp $
 
 inherit eutils games
 
@@ -20,7 +20,8 @@ DEPEND="|| ( x11-libs/libXpm virtual/x11 )
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/ace-1.2-check_for_end_of_game.patch
+	epatch "${FILESDIR}/${P}"-check_for_end_of_game.patch \
+		"${FILESDIR}/${P}"-gcc41.patch
 
 	# Fix timestamps so we dont run autotools #76473
 	touch -r aclocal.m4 configure.in
