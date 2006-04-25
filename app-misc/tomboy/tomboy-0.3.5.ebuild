@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.3.5.ebuild,v 1.3 2006/02/20 02:57:58 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.3.5.ebuild,v 1.4 2006/04/25 19:40:19 compnerd Exp $
 
 inherit gnome2 mono eutils
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-lang/mono-1.0
 		 =dev-dotnet/gconf-sharp-1.0*
 		 >=dev-dotnet/gconf-sharp-1.0.4
 		 eds? ( dev-libs/gmime )
-		 !ppc? ( galago? ( dev-dotnet/galago-sharp ) )
+		 galago? ( dev-dotnet/galago-sharp )
 		 >=gnome-base/gconf-2
 		 >=x11-libs/gtk+-2.6.0
 		 >=dev-libs/atk-1.2.4

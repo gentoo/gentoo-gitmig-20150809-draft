@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.18 2006/02/20 02:53:51 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.19 2006/04/25 19:40:19 compnerd Exp $
+
+  25 Apr 2006; Saleem Abdulrasool <compnerd@gentoo.org> tomboy-0.3.5.ebuild:
+  dropping the ppc mask on galago as it is now keyworded
 
   20 Feb 2006; Saleem Abdulrasool <compnerd@gentoo.org> tomboy-0.3.5.ebuild:
   Fixing block on galago and G2CONF (bug #123339)
