@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.14.0.ebuild,v 1.2 2006/04/05 14:41:58 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.14.0.ebuild,v 1.3 2006/04/25 22:18:13 compnerd Exp $
 
 inherit eutils gnome2
 
@@ -29,7 +29,6 @@ DEPEND="${RDEPEND}
 
 # gnome-base/gnome-core overwrite /usr/bin/gnome-session
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
-USE_DESTDIR="1"
 
 pkg_setup() {
 	# TODO: convert libnotify to a configure option
@@ -70,6 +69,8 @@ src_install() {
 	doexe ${FILESDIR}/Gnome
 
 	# Our own splash for world domination
-	insinto /usr/share/pixmaps/splash/
-	doins ${DISTDIR}/gentoo-splash.png
+	if use branding ; then
+		insinto /usr/share/pixmaps/splash/
+		doins ${DISTDIR}/gentoo-splash.png
+	fi
 }
