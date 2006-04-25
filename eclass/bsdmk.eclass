@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bsdmk.eclass,v 1.4 2006/04/22 21:14:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bsdmk.eclass,v 1.5 2006/04/25 16:35:47 flameeyes Exp $
 #
 # Otavio R. Piske "AngusYoung" <angusyoung@gentoo.org>
 # Diego Pettenò <flameeyes@gentoo.org>
@@ -12,11 +12,7 @@ EXPORT_FUNCTIONS src_compile src_install
 
 RDEPEND=""
 # this should actually be BDEPEND, but this works.
-DEPEND="|| (
-		sys-devel/pmake
-		sys-freebsd/freebsd-ubin
-		sys-openbsd/openbsd-ubin
-	)"
+DEPEND="virtual/pmake"
 
 ESED="/usr/bin/sed"
 
