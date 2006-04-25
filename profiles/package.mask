@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5273 2006/04/25 14:10:43 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5274 2006/04/25 23:26:22 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -579,10 +579,6 @@ games-roguelike/noegnud-nethack
 # Donnie Berkholz <spyderous@gentoo.org> 
 # Keeping masked so ~arch/arch users move from 6.8.2 to 7.0
 =x11-base/xorg-x11-6.9*
-
-# Doug Goldstein <cardoe@gentoo.org> (18 Mar 2006)
-# Masked for testing
->=sys-apps/hal-0.5.7
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (15 Mar 2006)
 # Masked for testing
