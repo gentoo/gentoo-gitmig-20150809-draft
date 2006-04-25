@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geography-Countries/Geography-Countries-1.4.ebuild,v 1.9 2006/04/21 21:36:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geography-Countries/Geography-Countries-1.4.ebuild,v 1.10 2006/04/25 16:55:12 flameeyes Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~abigail/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~amd64 hppa ~ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 hppa ~ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 SRC_TEST="do"
