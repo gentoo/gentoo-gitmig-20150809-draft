@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tinc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.6 2006/01/03 10:52:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.7 2006/04/25 14:03:29 dragonheart Exp $
+
+*tinc-1.0.4 (25 Apr 2006)
+
+  25 Apr 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/tinc-1.0.4-lzo2.patch, metadata.xml, -tinc-1.0.2.ebuild,
+  +tinc-1.0.4.ebuild:
+  version bump bug #112375. added me to maintainer too. removed old version
 
   03 Jan 2006; Daniel Black <dragonheart@gentoo.org> tinc-1.0.2.ebuild,
   tinc-1.0.3.ebuild:

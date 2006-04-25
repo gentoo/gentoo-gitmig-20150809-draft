@@ -6,5 +6,9 @@
   <email>warpzero@gentoo.org</email>
   <name>Joshua Charles Campbell</name>
 </maintainer>
+<maintainer>
+  <email>dragonheart@gentoo.org</email>
+  <name>Daniel Black</name>
+</maintainer>
 <longdescription>tinc is an easy to configure VPN implementation.</longdescription>
 </pkgmetadata>
