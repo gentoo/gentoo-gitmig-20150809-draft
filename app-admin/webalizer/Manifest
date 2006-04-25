@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX apache.webalizer 304 RMD160 b0a5f3f548e268dcf554794a19853e9505ba8eba SHA1 cd1f84610ccf08a2f719de9727840d1afa565322 SHA256 2affefc16b07c61c5a7c6383643cf8b9fb139fad49d29ffa1403b08f09b71411 size 304
-MD5 522b9bb50f7faed9ff3756705cf80d6b files/apache.webalizer 304
-RMD160 b0a5f3f548e268dcf554794a19853e9505ba8eba files/apache.webalizer 304
-SHA256 2affefc16b07c61c5a7c6383643cf8b9fb139fad49d29ffa1403b08f09b71411 files/apache.webalizer 304
+AUX apache.webalizer 298 RMD160 46e6b80f0ab978b07af624cc099db56cf72806bc SHA1 5242a3d716b8f4eb48cbbc72d55186ba10759c99 SHA256 c94d63121e8a1860f4fa8a8499c3678351eaee721bbe24ea50cf2552b176f568 size 298
+MD5 b8782062aca52fcaa8229b1cbcca5d60 files/apache.webalizer 298
+RMD160 46e6b80f0ab978b07af624cc099db56cf72806bc files/apache.webalizer 298
+SHA256 c94d63121e8a1860f4fa8a8499c3678351eaee721bbe24ea50cf2552b176f568 files/apache.webalizer 298
 AUX webalizer-db4.2.patch 552 RMD160 bf9703f3713b53a97fd04ee372d55d17c17e70c0 SHA1 5255795f599f792c0373e4cc933d42189a6e57bd SHA256 51c12d7469d455842a2f9b223e8c27e1ea99a97e0a0ddb490844a80df44cf309 size 552
 MD5 ff6044f61cca31af6541dc7ee28affd9 files/webalizer-db4.2.patch 552
 RMD160 bf9703f3713b53a97fd04ee372d55d17c17e70c0 files/webalizer-db4.2.patch 552
@@ -45,9 +45,9 @@ MD5 4b57ddf404077972cb8500151be066bd files/digest-webalizer-2.01.10-r13 1319
 RMD160 7ca1db406fcdee6d97f2c2301b726beaf854fe9a files/digest-webalizer-2.01.10-r13 1319
 SHA256 8d25ea7f8a46b22fc68875e96be12c2b738f7f758245aa63d1ab032af972cc19 files/digest-webalizer-2.01.10-r13 1319
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFETPMDEzitwsaoONoRAlS5AJ48twE+he0Ut7oVN1oEJvDYi7cO8gCgpd4l
-jaVj9RAxIU9YqzPQVwRDiYY=
-=8JBn
+iD8DBQFETl2aI1lqEGTUzyQRAu67AKC1BokD4HiiXxum5RVpfo90HxZaQwCgnYXA
+Ef5QEk5N2NCBBtq+49+8AXk=
+=sTTZ
 -----END PGP SIGNATURE-----
