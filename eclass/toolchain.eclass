@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.273 2006/04/23 21:33:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.274 2006/04/25 00:24:47 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -875,8 +875,9 @@ gcc-compiler_pkg_postinst() {
 }
 
 gcc-compiler_pkg_prerm() {
-	# TODO: flesh this out when I care
-	return 0
+	# Don't let these files be uninstalled #87647
+	touch -c "${ROOT}"/sbin/fix_libtool_files.sh \
+		"${ROOT}"/lib/rcscripts/awk/fixlafiles.awk
 }
 
 gcc-compiler_pkg_postrm() {
