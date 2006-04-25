@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r1.ebuild,v 1.2 2006/04/14 09:27:31 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r1.ebuild,v 1.3 2006/04/25 03:11:36 weeve Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://zipper.paco.net/~igor/oops/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc x86"
+KEYWORDS="sparc x86"
 IUSE="mysql postgres"
 
 RDEPEND="dev-libs/libpcre
