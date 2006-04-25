@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.41 2006/04/24 21:47:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.42 2006/04/25 16:44:07 grobian Exp $
+
+  25 Apr 2006; Fabian Groffen <grobian@gentoo.org> rpm2targz-9.0-r5.ebuild:
+  Marked ~ppc-macos
 
 *rpm2targz-9.0-r5 (24 Apr 2006)
 
