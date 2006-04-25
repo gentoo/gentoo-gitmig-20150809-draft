@@ -1,511 +1,108 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX 3.2.1/gcc31-loop-load-final-value.patch 3324 RMD160 8bb0e9133923821daf2e9d10a27a0a1930e00bbd SHA1 c73dc6e19a76a1dcbb11a15ff5ff04b11a9f0343 SHA256 70aa8433fb19c95f334b6cbc155cae22a3b61a6892ed9e18f95860509d0091a8 size 3324
+MD5 59496331a68df1ac5f03c6f97f4a4637 ChangeLog 106067
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
-RMD160 8bb0e9133923821daf2e9d10a27a0a1930e00bbd files/3.2.1/gcc31-loop-load-final-value.patch 3324
-SHA256 70aa8433fb19c95f334b6cbc155cae22a3b61a6892ed9e18f95860509d0091a8 files/3.2.1/gcc31-loop-load-final-value.patch 3324
-AUX 3.2.1/gcc32-arm-disable-mathf.patch 2229 RMD160 40c451d6912473ba39adb72e91d6f507c1045a38 SHA1 6a74ff0312caf8a0ead67dd7aef8d32897cc5d6b SHA256 808368680a4635cdf46844e63342a8ca387769b2323ef99f90530d3bbc622587 size 2229
 MD5 5e8f2122ef7f9ce187b0a0d50ac9d24a files/3.2.1/gcc32-arm-disable-mathf.patch 2229
-RMD160 40c451d6912473ba39adb72e91d6f507c1045a38 files/3.2.1/gcc32-arm-disable-mathf.patch 2229
-SHA256 808368680a4635cdf46844e63342a8ca387769b2323ef99f90530d3bbc622587 files/3.2.1/gcc32-arm-disable-mathf.patch 2229
-AUX 3.2.1/gcc32-arm-reload1-fix.patch 932 RMD160 c681e89ab44626068c0fcda6c929fe4888584c6f SHA1 72589641cb8e7b411a81d08fd5acd768c5a72f5d SHA256 d1158fa35b98cf72565e9b12cfd3f92a1eb14f0abfc5bf86d5990792cf1fefc3 size 932
 MD5 044a164462d9392aa67cde6f9fd5c1bc files/3.2.1/gcc32-arm-reload1-fix.patch 932
-RMD160 c681e89ab44626068c0fcda6c929fe4888584c6f files/3.2.1/gcc32-arm-reload1-fix.patch 932
-SHA256 d1158fa35b98cf72565e9b12cfd3f92a1eb14f0abfc5bf86d5990792cf1fefc3 files/3.2.1/gcc32-arm-reload1-fix.patch 932
-AUX 3.2.1/gcc32-athlon-alignment.patch 509 RMD160 63c5f4104b8d25bdca08d34c3679cac289f5f090 SHA1 8d1d31ed2e716296539f1a1742b36d2c3d81a874 SHA256 1e6f86716e6daa2840e66d49ca90a528cf5c1cba733d2ceecba5fd0805a5e1c3 size 509
 MD5 38131a537835873acb08c415d27a013e files/3.2.1/gcc32-athlon-alignment.patch 509
-RMD160 63c5f4104b8d25bdca08d34c3679cac289f5f090 files/3.2.1/gcc32-athlon-alignment.patch 509
-SHA256 1e6f86716e6daa2840e66d49ca90a528cf5c1cba733d2ceecba5fd0805a5e1c3 files/3.2.1/gcc32-athlon-alignment.patch 509
-AUX 3.2.1/gcc32-sparc32-hack.patch 2192 RMD160 4b33288c872aa8744722063b706b7034f61eb29f SHA1 36e2561f031421d161869df5d1daa47539419d74 SHA256 b89cfccb9f4ebb0929ff404428a1ec820fb580baa4c53eae2640f8fbf9b26b78 size 2192
 MD5 7978d1aaf6bae19163e83c110dec1b38 files/3.2.1/gcc32-sparc32-hack.patch 2192
-RMD160 4b33288c872aa8744722063b706b7034f61eb29f files/3.2.1/gcc32-sparc32-hack.patch 2192
-SHA256 b89cfccb9f4ebb0929ff404428a1ec820fb580baa4c53eae2640f8fbf9b26b78 files/3.2.1/gcc32-sparc32-hack.patch 2192
-AUX 3.2.1/gcc32-strip-dotdot.patch 2071 RMD160 939a53d8a40999927ff3d3b85e12cb8a328cf005 SHA1 6a393715788a11fd2e7897da574e1df38b88de1d SHA256 66605306254840e7584feb97e2ecb1a1158c4a66fc274e523ede40349ef1390e size 2071
 MD5 51719a174883702ef1851fac4cc79398 files/3.2.1/gcc32-strip-dotdot.patch 2071
-RMD160 939a53d8a40999927ff3d3b85e12cb8a328cf005 files/3.2.1/gcc32-strip-dotdot.patch 2071
-SHA256 66605306254840e7584feb97e2ecb1a1158c4a66fc274e523ede40349ef1390e files/3.2.1/gcc32-strip-dotdot.patch 2071
-AUX 3.2.2/gcc-3.2.2-cross-compile.patch 479 RMD160 beedd93602fda5ac431901eb23cd4a829e83aa2c SHA1 9c7193d3f783c3eda809e8cf74c21b6f2377b865 SHA256 162d461ae205f470f89afa562f95d777f3d272689dbe4e9e91166ebbea34c383 size 479
 MD5 ed5b074a1d34f4b30a0b1d3928be57e3 files/3.2.2/gcc-3.2.2-cross-compile.patch 479
-RMD160 beedd93602fda5ac431901eb23cd4a829e83aa2c files/3.2.2/gcc-3.2.2-cross-compile.patch 479
-SHA256 162d461ae205f470f89afa562f95d777f3d272689dbe4e9e91166ebbea34c383 files/3.2.2/gcc-3.2.2-cross-compile.patch 479
-AUX 3.2.2/gcc-3.2.2-no-COPYING-cross-compile.patch 1001 RMD160 eb076534fc5e2487d94a96858abe9e9397c18020 SHA1 e685f74f038a941772d296fb540d70282d84503f SHA256 abdb66e19439fabb2b2249f374c1a0071f791859e8592e78cfcc894c323d7458 size 1001
 MD5 9a67d782b2a574f77714b29675cbda62 files/3.2.2/gcc-3.2.2-no-COPYING-cross-compile.patch 1001
-RMD160 eb076534fc5e2487d94a96858abe9e9397c18020 files/3.2.2/gcc-3.2.2-no-COPYING-cross-compile.patch 1001
-SHA256 abdb66e19439fabb2b2249f374c1a0071f791859e8592e78cfcc894c323d7458 files/3.2.2/gcc-3.2.2-no-COPYING-cross-compile.patch 1001
-AUX 3.2.2/gcc32-pr7768.patch 1789 RMD160 fbfd679a5548d2cbd621b4bcec2e6e89329d071b SHA1 ee426071cbe9f5065b118dee730e4cbdb9954aa0 SHA256 1f66eae379ef25a618d460ccee1fe3d876fe8e708af6b9bf3aad73803135a559 size 1789
 MD5 17f15202b98a8dd84d0f4b67eff2d868 files/3.2.2/gcc32-pr7768.patch 1789
-RMD160 fbfd679a5548d2cbd621b4bcec2e6e89329d071b files/3.2.2/gcc32-pr7768.patch 1789
-SHA256 1f66eae379ef25a618d460ccee1fe3d876fe8e708af6b9bf3aad73803135a559 files/3.2.2/gcc32-pr7768.patch 1789
-AUX 3.2.2/gcc32-pr8213.patch 2036 RMD160 d55cdd9534f77cfe760fa0ff350e72e6766ec58c SHA1 4b6e181e4f3da796ae6b34768a6f89ea0aad2eb8 SHA256 44215ac0f877d01241a789675b3bee3c8206d6fabffd6134f05c9edfaf8ff338 size 2036
 MD5 9f5b59d7567b90894d8d32cf99f910cc files/3.2.2/gcc32-pr8213.patch 2036
-RMD160 d55cdd9534f77cfe760fa0ff350e72e6766ec58c files/3.2.2/gcc32-pr8213.patch 2036
-SHA256 44215ac0f877d01241a789675b3bee3c8206d6fabffd6134f05c9edfaf8ff338 files/3.2.2/gcc32-pr8213.patch 2036
-AUX 3.2.2/gcc322-ggc_page-speedup.patch 872 RMD160 5e0bbda0b528b34939f5e27e0caa97779c59d749 SHA1 570324e7640c5f68cf387ebb008542be1fef1d04 SHA256 a193b395aff6dd272de5a92e83ef65c05ae5b42d382647ff847a2b25388d3006 size 872
 MD5 465eeaf6008c25dc69ff502dc2a9d8e0 files/3.2.2/gcc322-ggc_page-speedup.patch 872
-RMD160 5e0bbda0b528b34939f5e27e0caa97779c59d749 files/3.2.2/gcc322-ggc_page-speedup.patch 872
-SHA256 a193b395aff6dd272de5a92e83ef65c05ae5b42d382647ff847a2b25388d3006 files/3.2.2/gcc322-ggc_page-speedup.patch 872
-AUX 3.2.3/gcc-3.2.3-mergel-fix.patch 2749 RMD160 4d001a659923382134f9616fe6da2caec684fad1 SHA1 153b81de69f9929628ba616ff3360a266c459613 SHA256 7958b2db54d4805ba7656628df6d9c00406eae54b566e1bfb0a882e9070a120c size 2749
 MD5 52ef1426cb70a472182503502b768058 files/3.2.3/gcc-3.2.3-mergel-fix.patch 2749
-RMD160 4d001a659923382134f9616fe6da2caec684fad1 files/3.2.3/gcc-3.2.3-mergel-fix.patch 2749
-SHA256 7958b2db54d4805ba7656628df6d9c00406eae54b566e1bfb0a882e9070a120c files/3.2.3/gcc-3.2.3-mergel-fix.patch 2749
-AUX 3.2.3/gcc-3.2.3-move-propolice-into-glibc.patch 3534 RMD160 29517ec355d7c00137b6dea9f7882f07772be7e9 SHA1 8a1a1732157e71a8807f0d248ad2480337867dbc SHA256 8f904a2d638d40faa0c41200963bf0a86f2161ed26f0cf4307ab0d5d1c07b68d size 3534
 MD5 a3315d69ba1be0bc1518a75027896bf3 files/3.2.3/gcc-3.2.3-move-propolice-into-glibc.patch 3534
-RMD160 29517ec355d7c00137b6dea9f7882f07772be7e9 files/3.2.3/gcc-3.2.3-move-propolice-into-glibc.patch 3534
-SHA256 8f904a2d638d40faa0c41200963bf0a86f2161ed26f0cf4307ab0d5d1c07b68d files/3.2.3/gcc-3.2.3-move-propolice-into-glibc.patch 3534
-AUX 3.2.3/gcc-323-propolice-version.patch 700 RMD160 3b29427a70e6167ff8bec10910c0143f178a6cd5 SHA1 51e6a8fe9b6bb105c454e3108f5a50e6f021eb8e SHA256 fc963759d98c659fc96b33995d527456b20c37db3166d50d15454595d993ba84 size 700
 MD5 1f4f8ca52d2dda4a5dc3a9b8f130841c files/3.2.3/gcc-323-propolice-version.patch 700
-RMD160 3b29427a70e6167ff8bec10910c0143f178a6cd5 files/3.2.3/gcc-323-propolice-version.patch 700
-SHA256 fc963759d98c659fc96b33995d527456b20c37db3166d50d15454595d993ba84 files/3.2.3/gcc-323-propolice-version.patch 700
-AUX 3.2.3/gcc32-c++-classfn-member-template.patch 3219 RMD160 82918f7456c782dd12c84077e5cfc24ef07c606a SHA1 902e3558b92858cea03f23aae4b9740d2c7bdfe2 SHA256 c923b09eb0f16224c964d417280f80be0736cafe0ecb88796d3c4e27aaa24dc3 size 3219
 MD5 c9c45dab64bab25e716859626ad7f94f files/3.2.3/gcc32-c++-classfn-member-template.patch 3219
-RMD160 82918f7456c782dd12c84077e5cfc24ef07c606a files/3.2.3/gcc32-c++-classfn-member-template.patch 3219
-SHA256 c923b09eb0f16224c964d417280f80be0736cafe0ecb88796d3c4e27aaa24dc3 files/3.2.3/gcc32-c++-classfn-member-template.patch 3219
-AUX 3.2.3/gcc32-mklibgcc-serialize-crtfiles.patch 926 RMD160 d1284118b22478ee9143262bbe037b47c6703ad5 SHA1 a56334b3d56d12d11e8a57f96219b9e51e7f8fa8 SHA256 ad3f723715298a85bc0080ec8661f76e549a02bfd052be349774f4eb15eabdf0 size 926
 MD5 494d917cc15c81c9cead4a8c17d4d00d files/3.2.3/gcc32-mklibgcc-serialize-crtfiles.patch 926
-RMD160 d1284118b22478ee9143262bbe037b47c6703ad5 files/3.2.3/gcc32-mklibgcc-serialize-crtfiles.patch 926
-SHA256 ad3f723715298a85bc0080ec8661f76e549a02bfd052be349774f4eb15eabdf0 files/3.2.3/gcc32-mklibgcc-serialize-crtfiles.patch 926
-AUX 3.2.3/gcc323-gentoo-branding.patch 2058 RMD160 0b0c2505d92c8498cab2a1043eb8ae9c08d43442 SHA1 00282412292d41d18a3b7b763c93aac793881c9b SHA256 65c7c0dbead0a742864501664f2aa05b3df2a3445e8b88f3ff6eb2c7f5249e6d size 2058
 MD5 99db7c1a41babe024f0c6859c30a87ee files/3.2.3/gcc323-gentoo-branding.patch 2058
-RMD160 0b0c2505d92c8498cab2a1043eb8ae9c08d43442 files/3.2.3/gcc323-gentoo-branding.patch 2058
-SHA256 65c7c0dbead0a742864501664f2aa05b3df2a3445e8b88f3ff6eb2c7f5249e6d files/3.2.3/gcc323-gentoo-branding.patch 2058
-AUX 3.2.3/gcc323-hppa-default_assemble_visibility.patch 571 RMD160 e2b382faab856e01b97fcb687e35886ce4ce776a SHA1 7d328ec0e5bdc1220ca23eb755c6b7ceef4a1ed7 SHA256 1b023f0224054ebc482762ab4bbebc8a9f5329c4c34ed3d124ce32a9b01aa17a size 571
 MD5 869b9a1ea49bf8b07c8405d2f1d76270 files/3.2.3/gcc323-hppa-default_assemble_visibility.patch 571
-RMD160 e2b382faab856e01b97fcb687e35886ce4ce776a files/3.2.3/gcc323-hppa-default_assemble_visibility.patch 571
-SHA256 1b023f0224054ebc482762ab4bbebc8a9f5329c4c34ed3d124ce32a9b01aa17a files/3.2.3/gcc323-hppa-default_assemble_visibility.patch 571
-AUX 3.3.1/gcc331-pp-fixup.patch 407 RMD160 031cfc03bf5718bf5a6b2c0a3f6b9c6c14e54820 SHA1 35db2b280bab53d07781931d0c73a8f8ce9cbbc5 SHA256 14d83e428c40c21018ae99093a6c6da9feaa85caac9f0123a841bc5f9dfd6a12 size 407
 MD5 b398b7415b93423ff04952c6e69bdb4d files/3.3.1/gcc331-pp-fixup.patch 407
-RMD160 031cfc03bf5718bf5a6b2c0a3f6b9c6c14e54820 files/3.3.1/gcc331-pp-fixup.patch 407
-SHA256 14d83e428c40c21018ae99093a6c6da9feaa85caac9f0123a841bc5f9dfd6a12 files/3.3.1/gcc331-pp-fixup.patch 407
-AUX 3.3.2/gcc332-altivec-fix.patch 1607 RMD160 c69e0e9aa69f8a9ee7e37a86ec1b911bf428bc75 SHA1 e025d103add3834afdaa16f30e01206a581f9ef8 SHA256 fbb9300c25bd071a77a3293a04a766a52d92171f7d28cadffc022baab5c0b4f8 size 1607
 MD5 9e7ed6184a1cdcb69db29f1de26c2d18 files/3.3.2/gcc332-altivec-fix.patch 1607
-RMD160 c69e0e9aa69f8a9ee7e37a86ec1b911bf428bc75 files/3.3.2/gcc332-altivec-fix.patch 1607
-SHA256 fbb9300c25bd071a77a3293a04a766a52d92171f7d28cadffc022baab5c0b4f8 files/3.3.2/gcc332-altivec-fix.patch 1607
-AUX 3.3.2/gcc332-gentoo-branding.patch 874 RMD160 ed7d886545a9d7959b700931f35b76d205b76a20 SHA1 6d94e50dfd8ac2f6f8cb935a213bc64d456ddb74 SHA256 15acacd144f9eac8d4e111764a66b5a97e626030879432af9978febbe02c3b72 size 874
 MD5 d9ae122db2768f8e504dfef256d4991f files/3.3.2/gcc332-gentoo-branding.patch 874
-RMD160 ed7d886545a9d7959b700931f35b76d205b76a20 files/3.3.2/gcc332-gentoo-branding.patch 874
-SHA256 15acacd144f9eac8d4e111764a66b5a97e626030879432af9978febbe02c3b72 files/3.3.2/gcc332-gentoo-branding.patch 874
-AUX 3.3.3/gcc-3.3.3-norelro.patch 606 RMD160 26de9dcfc0e5c4a6f8b6bc1303151404320e245b SHA1 057c390eaeb2de19ef7b6d79d1eaa96648fc343d SHA256 e76cabd56a155552b9f5d4b2fb079ebe03a7224c9e8e495fe93dbc2d8bfbce48 size 606
 MD5 ee700275f341541af37d56bd15dcf863 files/3.3.3/gcc-3.3.3-norelro.patch 606
-RMD160 26de9dcfc0e5c4a6f8b6bc1303151404320e245b files/3.3.3/gcc-3.3.3-norelro.patch 606
-SHA256 e76cabd56a155552b9f5d4b2fb079ebe03a7224c9e8e495fe93dbc2d8bfbce48 files/3.3.3/gcc-3.3.3-norelro.patch 606
-AUX 3.3.3/gcc-3.3.3-uclibc-add-ssp.patch 461 RMD160 a2a5e0621e1c381736b3ce9d83364eb9dcdbb671 SHA1 099d96de8ec4a22704c15dd871ad83f3dc8c89fd SHA256 cbfa1c59eb930025b553728f6176590de7bfa38cd154bd2fe03c9bc74eb7563b size 461
 MD5 ff6d7b5082c5e39fab8a5d8932c1a8b7 files/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch 461
-RMD160 a2a5e0621e1c381736b3ce9d83364eb9dcdbb671 files/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch 461
-SHA256 cbfa1c59eb930025b553728f6176590de7bfa38cd154bd2fe03c9bc74eb7563b files/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch 461
-AUX 3.3.3/gcc-uclibc-3.3-loop.patch 433 RMD160 803869bde78afbf726d561b78f0908f998587310 SHA1 e16f8fcbdcf7cfec44403941642af888fd92165d SHA256 a4b75f6be786f3373550de3e7eeb3cb12f10e185e1419431838ec3f385bc36a8 size 433
 MD5 308a0e53f03e9cb74b3d12c2633cbee2 files/3.3.3/gcc-uclibc-3.3-loop.patch 433
-RMD160 803869bde78afbf726d561b78f0908f998587310 files/3.3.3/gcc-uclibc-3.3-loop.patch 433
-SHA256 a4b75f6be786f3373550de3e7eeb3cb12f10e185e1419431838ec3f385bc36a8 files/3.3.3/gcc-uclibc-3.3-loop.patch 433
-AUX 3.3.3/gcc333-debian-arm-getoff.patch 3501 RMD160 8ede6aef094a9222b7837fb2dade0a3fe10cc5b5 SHA1 c70e6eb54e50ccffa8df90ec42b75d3e22f97c5c SHA256 791e4d27e86a1308f0df35130a792443a6515cd09f0a3e41bb4d0c3add062a7f size 3501
 MD5 9ba0bd0b103cf9535927ad7c482fe780 files/3.3.3/gcc333-debian-arm-getoff.patch 3501
-RMD160 8ede6aef094a9222b7837fb2dade0a3fe10cc5b5 files/3.3.3/gcc333-debian-arm-getoff.patch 3501
-SHA256 791e4d27e86a1308f0df35130a792443a6515cd09f0a3e41bb4d0c3add062a7f files/3.3.3/gcc333-debian-arm-getoff.patch 3501
-AUX 3.3.3/gcc333-debian-arm-ldm.patch 3383 RMD160 ed1a68f76edf999dc2d1804fa8eb9b576119ed89 SHA1 95e1463dc5c69a363b68e332d2d3b67a8a313cd1 SHA256 6ea9dec618a01c6d5dac855909d6d6d52574bc664889cedf0e1c1b267fa8e4fd size 3383
 MD5 25eda9981106a55c413d1df3d3a87db5 files/3.3.3/gcc333-debian-arm-ldm.patch 3383
-RMD160 ed1a68f76edf999dc2d1804fa8eb9b576119ed89 files/3.3.3/gcc333-debian-arm-ldm.patch 3383
-SHA256 6ea9dec618a01c6d5dac855909d6d6d52574bc664889cedf0e1c1b267fa8e4fd files/3.3.3/gcc333-debian-arm-ldm.patch 3383
-AUX 3.3.3/gcc333_pre20040408-stack-size.patch 653 RMD160 ea4a5c42d54efb57e05084e8ded4b3e5dfe146ea SHA1 ba281b26985de16cc81f0dc49da85cdfff95d124 SHA256 f1440fae7a7020f8554b544a94fea25bc6346320d124a9c7167196e3ab7d54fe size 653
 MD5 3210d5fd70806c44d4426c3dceebd480 files/3.3.3/gcc333_pre20040408-stack-size.patch 653
-RMD160 ea4a5c42d54efb57e05084e8ded4b3e5dfe146ea files/3.3.3/gcc333_pre20040408-stack-size.patch 653
-SHA256 f1440fae7a7020f8554b544a94fea25bc6346320d124a9c7167196e3ab7d54fe files/3.3.3/gcc333_pre20040408-stack-size.patch 653
-AUX 3.3.4/libffi-without-libgcj.patch 890 RMD160 ed68a79a00c981cf90d27e16b7f0b7e020246bc6 SHA1 666838ccbaa283b7e082b3991847f7d4ebc99d1f SHA256 a422ebf05e279bdcb15627363af8101e4d6a54ca037d6da11c13b4768799d974 size 890
 MD5 5fb5b49f3f16cc9e7e27e582c92ffa2f files/3.3.4/libffi-without-libgcj.patch 890
-RMD160 ed68a79a00c981cf90d27e16b7f0b7e020246bc6 files/3.3.4/libffi-without-libgcj.patch 890
-SHA256 a422ebf05e279bdcb15627363af8101e4d6a54ca037d6da11c13b4768799d974 files/3.3.4/libffi-without-libgcj.patch 890
-AUX 3.3.5/gcc-3.3.5-ffecom_gfrt_basictype-prototype.patch 538 RMD160 3c37563882215195981627d7204813f111c72797 SHA1 fb5e044f9e23089f3062e217421968a4c487d0e2 SHA256 288cccd67496a856035fe23ecd49022d2228fe404cf55cb3b0cc6792894a2625 size 538
 MD5 7c29f54dd8d50385ac42fae65459c744 files/3.3.5/gcc-3.3.5-ffecom_gfrt_basictype-prototype.patch 538
-RMD160 3c37563882215195981627d7204813f111c72797 files/3.3.5/gcc-3.3.5-ffecom_gfrt_basictype-prototype.patch 538
-SHA256 288cccd67496a856035fe23ecd49022d2228fe404cf55cb3b0cc6792894a2625 files/3.3.5/gcc-3.3.5-ffecom_gfrt_basictype-prototype.patch 538
-AUX 3.3.5/gcc-3.3.5-no-COPYING-cross-compile.patch 1192 RMD160 3804b8ca5bb9bfbc3c9032dae58eab0b0dbdf70d SHA1 10687b80c7ce90d7c917971c6e3da061f199c9f5 SHA256 1381f94de54284a002b4b05f6841ab33033593d024c39f35ff0628f3bd1f2091 size 1192
 MD5 184cb0a87ee2fa0197dec6f4902ef4c8 files/3.3.5/gcc-3.3.5-no-COPYING-cross-compile.patch 1192
-RMD160 3804b8ca5bb9bfbc3c9032dae58eab0b0dbdf70d files/3.3.5/gcc-3.3.5-no-COPYING-cross-compile.patch 1192
-SHA256 1381f94de54284a002b4b05f6841ab33033593d024c39f35ff0628f3bd1f2091 files/3.3.5/gcc-3.3.5-no-COPYING-cross-compile.patch 1192
-AUX 3.3.6/gcc-3.3.6-cross-compile.patch 2202 RMD160 6fcb5951ed3963fc82292a98b0ce6e25bbc650ba SHA1 1d3cc7fb61a63f5685f6cba9da8a006561f79975 SHA256 00e5152f211a2c0892ba4f5a7ebb078c1d5d1dfc77bd0ba81ab8dfcd2924ffb3 size 2202
 MD5 d0f69e3626da1a439356a270e3bb8a20 files/3.3.6/gcc-3.3.6-cross-compile.patch 2202
-RMD160 6fcb5951ed3963fc82292a98b0ce6e25bbc650ba files/3.3.6/gcc-3.3.6-cross-compile.patch 2202
-SHA256 00e5152f211a2c0892ba4f5a7ebb078c1d5d1dfc77bd0ba81ab8dfcd2924ffb3 files/3.3.6/gcc-3.3.6-cross-compile.patch 2202
-AUX 3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563 RMD160 8d78b1270682050dd6e778e8d37aa0fa1cdd6fca SHA1 9be76babe84c50d2bbe8d0ce4e6ffa9c59264970 SHA256 abf20019827d50b4e4fa6bd27803083930a79a31ba7392ddf4fa3fcb5a2aee42 size 563
 MD5 17b3190d64e34ed7709d022b326d08ae files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563
-RMD160 8d78b1270682050dd6e778e8d37aa0fa1cdd6fca files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563
-SHA256 abf20019827d50b4e4fa6bd27803083930a79a31ba7392ddf4fa3fcb5a2aee42 files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563
-AUX 3.4.0/gcc34-reiser4-fix.patch 587 RMD160 b887faa47a7ab9e685619ea0e69697b060add72f SHA1 1a1323c42d514b737f03c21900d0ea038116a56d SHA256 70e85f62989bfe71b2d07ecc07838b55d8acb930a1fbc2cac72ac006bfc7bb0d size 587
 MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/gcc34-reiser4-fix.patch 587
-RMD160 b887faa47a7ab9e685619ea0e69697b060add72f files/3.4.0/gcc34-reiser4-fix.patch 587
-SHA256 70e85f62989bfe71b2d07ecc07838b55d8acb930a1fbc2cac72ac006bfc7bb0d files/3.4.0/gcc34-reiser4-fix.patch 587
-AUX 3.4.1/gcc-3.4.1-glibc-is-native.patch 760 RMD160 efd0e5bc3b76ee52e429e2b2a3e3712ee7935567 SHA1 7a989e9a8ea913e0260e98fb000edb11a2f857e4 SHA256 fde4623d02d6744386685e366116242132d2bed2a6cdf0f3d67dd454fd8a9f0e size 760
 MD5 cd770c23ece7458db5e6c5067f262ce0 files/3.4.1/gcc-3.4.1-glibc-is-native.patch 760
-RMD160 efd0e5bc3b76ee52e429e2b2a3e3712ee7935567 files/3.4.1/gcc-3.4.1-glibc-is-native.patch 760
-SHA256 fde4623d02d6744386685e366116242132d2bed2a6cdf0f3d67dd454fd8a9f0e files/3.4.1/gcc-3.4.1-glibc-is-native.patch 760
-AUX 3.4.1/gcc-3.4.1-mips-n32only.patch 614 RMD160 a629e12dc99f1bcbea60bc69eee5c3ffb7be8ddc SHA1 509b17d58acc232de7ef64666bccfb083638d3e5 SHA256 f75cbf7aab59b73f23f2a6b327f9c00bfa87f38a67a054c4aa5637dcbb8dad1e size 614
 MD5 7cb2138ac2df6f8674d19974e966a45b files/3.4.1/gcc-3.4.1-mips-n32only.patch 614
-RMD160 a629e12dc99f1bcbea60bc69eee5c3ffb7be8ddc files/3.4.1/gcc-3.4.1-mips-n32only.patch 614
-SHA256 f75cbf7aab59b73f23f2a6b327f9c00bfa87f38a67a054c4aa5637dcbb8dad1e files/3.4.1/gcc-3.4.1-mips-n32only.patch 614
-AUX 3.4.1/gcc-3.4.1-mips-n64only.patch 614 RMD160 dae00afd5ffd41e0a66a0e42e778098b25fc6303 SHA1 31d5c6f6447beb3587b6b99142e77db80a16f948 SHA256 4e94950bdaec5d089af8a60471e75dd1bf117a2eff9867aa95ebc7800dcdb6c7 size 614
 MD5 aa8e15a63d797df37bbd4e489ed0267f files/3.4.1/gcc-3.4.1-mips-n64only.patch 614
-RMD160 dae00afd5ffd41e0a66a0e42e778098b25fc6303 files/3.4.1/gcc-3.4.1-mips-n64only.patch 614
-SHA256 4e94950bdaec5d089af8a60471e75dd1bf117a2eff9867aa95ebc7800dcdb6c7 files/3.4.1/gcc-3.4.1-mips-n64only.patch 614
-AUX 3.4.1/gcc-3.4.1-r2-gentoo-branding.patch 781 RMD160 4740de07e0066e665b42516d946fdb2f7c77ba1c SHA1 57dd8b3f580acac49364ed3f099f4e82d0105d91 SHA256 a04c4722eefd73cdb56b0ad98d453e5ece9b1ae22d5360a2dad94f89b1278900 size 781
 MD5 14fec2000fc63536d4cf22195e88e14f files/3.4.1/gcc-3.4.1-r2-gentoo-branding.patch 781
-RMD160 4740de07e0066e665b42516d946fdb2f7c77ba1c files/3.4.1/gcc-3.4.1-r2-gentoo-branding.patch 781
-SHA256 a04c4722eefd73cdb56b0ad98d453e5ece9b1ae22d5360a2dad94f89b1278900 files/3.4.1/gcc-3.4.1-r2-gentoo-branding.patch 781
-AUX 3.4.2/810-arm-bigendian-uclibc.patch 1139 RMD160 cf94e05c6a21c7d3f15701b0c78bd56989fc90e9 SHA1 033f4ea1b95538c77a54abe06f5314ae2201b3da SHA256 c5ef9a3291b96c9c1f40dc7258fd56fe9639f0c2467db344c54ad7a1e1e1023a size 1139
 MD5 a720c913b78bcfbd7f63319130fadd4a files/3.4.2/810-arm-bigendian-uclibc.patch 1139
-RMD160 cf94e05c6a21c7d3f15701b0c78bd56989fc90e9 files/3.4.2/810-arm-bigendian-uclibc.patch 1139
-SHA256 c5ef9a3291b96c9c1f40dc7258fd56fe9639f0c2467db344c54ad7a1e1e1023a files/3.4.2/810-arm-bigendian-uclibc.patch 1139
-AUX 3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v2.patch 14118 RMD160 4fdcab01f80301f39b7c088750f180d95f03384e SHA1 d5c090642444b300980301526245140717893e8d SHA256 65261236a04002d6db44d4522f1dd0ebc34dc8f17244feed535230900c235fe5 size 14118
 MD5 1134e9dabbd6dfba1d91015851f02a2b files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v2.patch 14118
-RMD160 4fdcab01f80301f39b7c088750f180d95f03384e files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v2.patch 14118
-SHA256 65261236a04002d6db44d4522f1dd0ebc34dc8f17244feed535230900c235fe5 files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v2.patch 14118
-AUX 3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v3-ip32r10k.patch 15822 RMD160 5078eaf3ddfa28123d241c384df13658ca63370d SHA1 cd60782166879efd6a745006b53affd407b3f13e SHA256 733d3a698d6ab7cf6ab2675c12d7ada8fef4d9abc26d91cc7fdac7758f6c6634 size 15822
 MD5 8379573cbf1364bd6970e96a599a8850 files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v3-ip32r10k.patch 15822
-RMD160 5078eaf3ddfa28123d241c384df13658ca63370d files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v3-ip32r10k.patch 15822
-SHA256 733d3a698d6ab7cf6ab2675c12d7ada8fef4d9abc26d91cc7fdac7758f6c6634 files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v3-ip32r10k.patch 15822
-AUX 3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v3.patch 15860 RMD160 33822eb5fb3edb067c8a40eb1801de20eaec9d15 SHA1 998ff3e35495c92159b2ca43ade3fd3704497884 SHA256 466a66dafbca7ec8f2e05be88851f334bdb01ea15d0b43d03931aba7cdf8d48c size 15860
 MD5 acdb18a5f884fefc22c13e3d448a689a files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v3.patch 15860
-RMD160 33822eb5fb3edb067c8a40eb1801de20eaec9d15 files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v3.patch 15860
-SHA256 466a66dafbca7ec8f2e05be88851f334bdb01ea15d0b43d03931aba7cdf8d48c files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v3.patch 15860
-AUX 3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch 12951 RMD160 fa7caaf9b41ed22ed5ccb1649c693248895ec3fb SHA1 cc60d62597865fef56844bc3e92640f2c64a98db SHA256 8cef3779bc962b9a9c20daabea28791514b6f54824659e2f5824c493cdc3f6c7 size 12951
 MD5 d49acaf7a8dc1f939f4d05cee97ac3a5 files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch 12951
-RMD160 fa7caaf9b41ed22ed5ccb1649c693248895ec3fb files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch 12951
-SHA256 8cef3779bc962b9a9c20daabea28791514b6f54824659e2f5824c493cdc3f6c7 files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch 12951
-AUX 3.4.2/gcc-3.4.x-mips-add-march-r10k.patch 14248 RMD160 25f72003b241836ec3e08ae4108a39b0ffd9b170 SHA1 abc47bce08334eafc65d167cfdbaaa0c68663248 SHA256 10d6947954f03145d8ac16f497826cf25583d37f0e1e63b9df1a33d91f59e2c8 size 14248
 MD5 b2922cfe76692e7d2b373a0a255f405e files/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch 14248
-RMD160 25f72003b241836ec3e08ae4108a39b0ffd9b170 files/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch 14248
-SHA256 10d6947954f03145d8ac16f497826cf25583d37f0e1e63b9df1a33d91f59e2c8 files/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch 14248
-AUX 3.4.2/gcc34-fix-sse2_pinsrw.patch 1268 RMD160 edc99ea8a44381d926cfa72024ee9d8ff7272bd1 SHA1 3239b63bf4c8c8d1b2b0f678a6f4c3ea2be3227d SHA256 5b32bf9d3dfb9f3bb5de4acb026e2f61c1c6f171de65c3eec2c69af3159569d8 size 1268
 MD5 f2395cf0f72d870e263d0dcec18fdd67 files/3.4.2/gcc34-fix-sse2_pinsrw.patch 1268
-RMD160 edc99ea8a44381d926cfa72024ee9d8ff7272bd1 files/3.4.2/gcc34-fix-sse2_pinsrw.patch 1268
-SHA256 5b32bf9d3dfb9f3bb5de4acb026e2f61c1c6f171de65c3eec2c69af3159569d8 files/3.4.2/gcc34-fix-sse2_pinsrw.patch 1268
-AUX 3.4.2/gcc34-m32-no-sse2.patch 1058 RMD160 898fdb152406dd6848dfbf88c40dad5d346589f9 SHA1 0961044c01fa5357b990c1ae72c3e8bd49d5eb94 SHA256 4ebeee9e0fa953bed7682b4b83de5949b11256e6acdd8d978b91399b5586c92c size 1058
 MD5 2c1ce849de55d8c81af4e081dbb2f5e4 files/3.4.2/gcc34-m32-no-sse2.patch 1058
-RMD160 898fdb152406dd6848dfbf88c40dad5d346589f9 files/3.4.2/gcc34-m32-no-sse2.patch 1058
-SHA256 4ebeee9e0fa953bed7682b4b83de5949b11256e6acdd8d978b91399b5586c92c files/3.4.2/gcc34-m32-no-sse2.patch 1058
-AUX 3.4.3/gcc-3.4.3-cross-compile.patch 3103 RMD160 d5482f46b170680ba99a61d0d8da9da232e166da SHA1 d05564cbb640f6fb3d96d4eb33d2aebfb49a930d SHA256 c0ec187b4544df70ade6e3baf67bb104ad5f117ddf66477358823d2fb611c599 size 3103
 MD5 e2b16f5452dd71980b158b2c0fda319c files/3.4.3/gcc-3.4.3-cross-compile.patch 3103
-RMD160 d5482f46b170680ba99a61d0d8da9da232e166da files/3.4.3/gcc-3.4.3-cross-compile.patch 3103
-SHA256 c0ec187b4544df70ade6e3baf67bb104ad5f117ddf66477358823d2fb611c599 files/3.4.3/gcc-3.4.3-cross-compile.patch 3103
-AUX 3.4.3/libffi-nogcj-lib-path-fix.patch 1691 RMD160 d3a9c9af4972232cd58986ad1d91fed0291c67ca SHA1 69c5a1aea1e5328c73aad52dd1f302c63b84390f SHA256 030e2c9f31b325ea975792bdfee88272d1065b8794511410dc30bd2caf8b3451 size 1691
 MD5 3f6d070c2a4a899e7d879fdb55eecba4 files/3.4.3/libffi-nogcj-lib-path-fix.patch 1691
-RMD160 d3a9c9af4972232cd58986ad1d91fed0291c67ca files/3.4.3/libffi-nogcj-lib-path-fix.patch 1691
-SHA256 030e2c9f31b325ea975792bdfee88272d1065b8794511410dc30bd2caf8b3451 files/3.4.3/libffi-nogcj-lib-path-fix.patch 1691
-AUX 3.4.3/libffi-without-libgcj.patch 1658 RMD160 b0911c754cf76bff624dd9a572e2a5a30a5a2283 SHA1 1242b5b5c3ca07a399379d8378406715b7e12ebc SHA256 41fd051cc16b61da4abf4f696f13b8b574fce76c65d1a731de3dd0d39f335037 size 1658
 MD5 007c62d92efd70fd44c4d2e6a326036b files/3.4.3/libffi-without-libgcj.patch 1658
-RMD160 b0911c754cf76bff624dd9a572e2a5a30a5a2283 files/3.4.3/libffi-without-libgcj.patch 1658
-SHA256 41fd051cc16b61da4abf4f696f13b8b574fce76c65d1a731de3dd0d39f335037 files/3.4.3/libffi-without-libgcj.patch 1658
-AUX 3.4.3/libssp.patch 2029 RMD160 583053708d359d2aa5f0889bd3da91c4a2a32b0e SHA1 6acc8424d4580d2eba4e08dfd9f86d04261119cd SHA256 bab3ad94911d856fa8abd1d69b89cd4b478d2697acc1b596e83bd05e6b0d1f54 size 2029
 MD5 7434140298091f759eba5e9706264130 files/3.4.3/libssp.patch 2029
-RMD160 583053708d359d2aa5f0889bd3da91c4a2a32b0e files/3.4.3/libssp.patch 2029
-SHA256 bab3ad94911d856fa8abd1d69b89cd4b478d2697acc1b596e83bd05e6b0d1f54 files/3.4.3/libssp.patch 2029
-AUX 3.4.4/gcc-3.4.4-cross-compile.patch 1912 RMD160 40c62da68d62326bc77f0ce37d163314f095576b SHA1 53ab64bbad7b5fdad4479f3b8a3e124cbe7b437f SHA256 f8bc4cb8cc012f40f9a988ed8344e9e75df5cb3714d98a2eb19e5320e32c7724 size 1912
 MD5 520c8e6799b5c4bff0fdcb81e81fbe88 files/3.4.4/gcc-3.4.4-cross-compile.patch 1912
-RMD160 40c62da68d62326bc77f0ce37d163314f095576b files/3.4.4/gcc-3.4.4-cross-compile.patch 1912
-SHA256 f8bc4cb8cc012f40f9a988ed8344e9e75df5cb3714d98a2eb19e5320e32c7724 files/3.4.4/gcc-3.4.4-cross-compile.patch 1912
-AUX 3.4.4/gcc-3.4.4-softfloat.patch 5242 RMD160 7607a94c3bbb599704153bb0041f369abff4a5f4 SHA1 e0fdef7851bce8f1958d49c2af0d62e5a46409e7 SHA256 fd4bf1bf8e78e2c7f041866594351be359341db876d81c0e9ad089db8e84a516 size 5242
 MD5 2c355d808b490994c6566b10f3c0ba27 files/3.4.4/gcc-3.4.4-softfloat.patch 5242
-RMD160 7607a94c3bbb599704153bb0041f369abff4a5f4 files/3.4.4/gcc-3.4.4-softfloat.patch 5242
-SHA256 fd4bf1bf8e78e2c7f041866594351be359341db876d81c0e9ad089db8e84a516 files/3.4.4/gcc-3.4.4-softfloat.patch 5242
-AUX 4.0.2/gcc-4.0.2-cross-compile.patch 505 RMD160 524e0b48e5393f57bbd796804ab3a6f8e83c455c SHA1 65848c1b96abc72785fbcb23d955398f2e1d4333 SHA256 8db7c6fa8a3e080a1034c7e9a23bc9cd0eb2e725fc7704957aeb434b746aeb44 size 505
 MD5 0acb1229f47bbb9e254a9824db17c25b files/4.0.2/gcc-4.0.2-cross-compile.patch 505
-RMD160 524e0b48e5393f57bbd796804ab3a6f8e83c455c files/4.0.2/gcc-4.0.2-cross-compile.patch 505
-SHA256 8db7c6fa8a3e080a1034c7e9a23bc9cd0eb2e725fc7704957aeb434b746aeb44 files/4.0.2/gcc-4.0.2-cross-compile.patch 505
-AUX 4.0.2/gcc-4.0.2-softfloat.patch 2790 RMD160 c5ad6efdacf01b128db4a1226e254af6f2789330 SHA1 d99d6f940a42be9576195eb851261d3a208b705b SHA256 1525a48bd087c0f0d89db128a16ee106252daf7bf34ffb45867d30f6c452de2c size 2790
 MD5 51eab04de222aa60204d6c3a23f0c3d2 files/4.0.2/gcc-4.0.2-softfloat.patch 2790
-RMD160 c5ad6efdacf01b128db4a1226e254af6f2789330 files/4.0.2/gcc-4.0.2-softfloat.patch 2790
-SHA256 1525a48bd087c0f0d89db128a16ee106252daf7bf34ffb45867d30f6c452de2c files/4.0.2/gcc-4.0.2-softfloat.patch 2790
-AUX awk/fixlafiles.awk 7865 RMD160 6283a91bfa309a91f46cbff3c1c4f0d848312ba4 SHA1 0bd923243492496eceb8ec1407ed9f4ac5ad8c1a SHA256 9fccd7f4ee7170a8f05d21777974efc3f23072f501cb7d2a8e9eeea15e541249 size 7865
 MD5 fed3620378df7a876d6709ddf3f7bbec files/awk/fixlafiles.awk 7865
-RMD160 6283a91bfa309a91f46cbff3c1c4f0d848312ba4 files/awk/fixlafiles.awk 7865
-SHA256 9fccd7f4ee7170a8f05d21777974efc3f23072f501cb7d2a8e9eeea15e541249 files/awk/fixlafiles.awk 7865
-AUX awk/fixlafiles.awk-no_gcc_la 8601 RMD160 c8b703615be85f6d7c439f04246792233d47b85d SHA1 4b74d6c6df983a55a83ebbcd4ddd32983c5361a2 SHA256 b692dd2eba47fd5319c28097edda823ed9bd86b7c88085db180f26da3153e2ba size 8601
 MD5 2d4c5f5bc05aa737aa3e8ca4c6379644 files/awk/fixlafiles.awk-no_gcc_la 8601
-RMD160 c8b703615be85f6d7c439f04246792233d47b85d files/awk/fixlafiles.awk-no_gcc_la 8601
-SHA256 b692dd2eba47fd5319c28097edda823ed9bd86b7c88085db180f26da3153e2ba files/awk/fixlafiles.awk-no_gcc_la 8601
-AUX awk/scanforssp.awk 5830 RMD160 43a8c09e4e16d9a78ab4d6263e74a1850f12eb9b SHA1 1d2756f5e75532a7068357404c39081a3c9d9a68 SHA256 236a2a7eea1ba540ca3be82b0fe2cdefd9ac76b061440918ffe52664edbbb98a size 5830
 MD5 c672adb59a1f452475ab0a864b9d1bd1 files/awk/scanforssp.awk 5830
-RMD160 43a8c09e4e16d9a78ab4d6263e74a1850f12eb9b files/awk/scanforssp.awk 5830
-SHA256 236a2a7eea1ba540ca3be82b0fe2cdefd9ac76b061440918ffe52664edbbb98a files/awk/scanforssp.awk 5830
-AUX fix_libtool_files.sh 1712 RMD160 01788fd6927a9f7bba4a01ec133d6f3494644fe9 SHA1 157be8228ac7338991ae4461ccd3cea7a702565a SHA256 6b47fb8fa34920ca9ccb449396b25205ad8fe307c869a50e5c4442971e8d4d15 size 1712
-MD5 1acd56209164ab837c5f91723434464e files/fix_libtool_files.sh 1712
-RMD160 01788fd6927a9f7bba4a01ec133d6f3494644fe9 files/fix_libtool_files.sh 1712
-SHA256 6b47fb8fa34920ca9ccb449396b25205ad8fe307c869a50e5c4442971e8d4d15 files/fix_libtool_files.sh 1712
-AUX gcc-configure-LANG.patch 1686 RMD160 4ff8355af81705058fd411910dfae94887bcd884 SHA1 67ae0deff73689cb39cd6e7451262bdda9c25a39 SHA256 dc9386b88eac48c282d63d0be7e7be81d4a0a08035a8b97138a61133e057bcea size 1686
-MD5 e0ebf10eb8bf4542ae57ba591daa68a4 files/gcc-configure-LANG.patch 1686
-RMD160 4ff8355af81705058fd411910dfae94887bcd884 files/gcc-configure-LANG.patch 1686
-SHA256 dc9386b88eac48c282d63d0be7e7be81d4a0a08035a8b97138a61133e057bcea files/gcc-configure-LANG.patch 1686
-AUX gcc-spec-env.patch 1389 RMD160 55e3920f2db033629d2846e8a8aef69ef98d4508 SHA1 7c18d7afc89f74108c2c357b4a8c000394834076 SHA256 9d157b7dabd7e0921b1a72d551281a7500351748329c6bd442005d61a470a70d size 1389
-MD5 f6eef7e81b209ca3c63c39e319b4a7a5 files/gcc-spec-env.patch 1389
-RMD160 55e3920f2db033629d2846e8a8aef69ef98d4508 files/gcc-spec-env.patch 1389
-SHA256 9d157b7dabd7e0921b1a72d551281a7500351748329c6bd442005d61a470a70d files/gcc-spec-env.patch 1389
-AUX mkinfodir 7324 RMD160 96bbe8860ae8c0a50db42fea01cc1c2216bd36c8 SHA1 3b8316da1a0fa94943e6b71be709827563af7058 SHA256 0565353e767e253207adb8b5c9be9ba215a628447e075a4dc7bb3183ed099d2a size 7324
-MD5 e3193bdffb435b77a21bfb504ff6f591 files/mkinfodir 7324
-RMD160 96bbe8860ae8c0a50db42fea01cc1c2216bd36c8 files/mkinfodir 7324
-SHA256 0565353e767e253207adb8b5c9be9ba215a628447e075a4dc7bb3183ed099d2a files/mkinfodir 7324
-AUX pro-police-docs.patch 3287 RMD160 eef412d92bed145db05bffa3a3e54e2ba74ee50d SHA1 ca58eda97d80f3d51f4e383ad3053fcb13f7a91b SHA256 ec012aed77285545b9d993cba1bc5fdb402c8dc9a17040f48b8b354746ede627 size 3287
-MD5 ea2cf3df0d89a26d5fdc1a531176e395 files/pro-police-docs.patch 3287
-RMD160 eef412d92bed145db05bffa3a3e54e2ba74ee50d files/pro-police-docs.patch 3287
-SHA256 ec012aed77285545b9d993cba1bc5fdb402c8dc9a17040f48b8b354746ede627 files/pro-police-docs.patch 3287
-AUX scan_libgcc_linked_ssp.sh 861 RMD160 c89d7e1f9aa7cea0d39281932dacfc1aec7bab74 SHA1 0e8bec97fe24af3bd5e2a06d66a6d27543dc3fab SHA256 9fe574de3978aad4d62cd10b47879384a4f03a7fb1f17e283daf74aad0e45f3b size 861
-MD5 07b57d62aa1a8cd4d1cd37984ebe2053 files/scan_libgcc_linked_ssp.sh 861
-RMD160 c89d7e1f9aa7cea0d39281932dacfc1aec7bab74 files/scan_libgcc_linked_ssp.sh 861
-SHA256 9fe574de3978aad4d62cd10b47879384a4f03a7fb1f17e283daf74aad0e45f3b files/scan_libgcc_linked_ssp.sh 861
-AUX stubs/gcc-3.3-htb-stub.patch 2195 RMD160 0b067c3fda6631f2b327c566bdd3b030daa2f0a0 SHA1 8a687b84d5003eca986e03acab83cf8342b898e5 SHA256 36fd59370c87ac60c2fa1e98fc4a43dfc17ad8188d730b8c16fb680e83f7e9c2 size 2195
-MD5 0f8035bc5ae6126fd9380ba9dcdcc271 files/stubs/gcc-3.3-htb-stub.patch 2195
-RMD160 0b067c3fda6631f2b327c566bdd3b030daa2f0a0 files/stubs/gcc-3.3-htb-stub.patch 2195
-SHA256 36fd59370c87ac60c2fa1e98fc4a43dfc17ad8188d730b8c16fb680e83f7e9c2 files/stubs/gcc-3.3-htb-stub.patch 2195
-AUX stubs/gcc-3.3-ssp-stub.patch 1735 RMD160 a467bbaeaecc94cb3ef8582a7610c69a94337d2a SHA1 065441d4e986660be0e5586e72a0697098b620a5 SHA256 935863cad4820d7cf35b124efdeafeeab7e67a01da1cef161ef590f18d643beb size 1735
-MD5 cb27bc36a5b9a1175a5f3bdf38647814 files/stubs/gcc-3.3-ssp-stub.patch 1735
-RMD160 a467bbaeaecc94cb3ef8582a7610c69a94337d2a files/stubs/gcc-3.3-ssp-stub.patch 1735
-SHA256 935863cad4820d7cf35b124efdeafeeab7e67a01da1cef161ef590f18d643beb files/stubs/gcc-3.3-ssp-stub.patch 1735
-AUX stubs/gcc-3.4-htb-stub.patch 722 RMD160 0769dbc28e18df8e0533d12b0a85fff727556a19 SHA1 ee55a300820330c23c22842ed48e5bd12919534c SHA256 0768dcafc35be6d35c9aa0106b0c8b87932e6b2ec7a82547b8cc7fc9c8b0e1f4 size 722
-MD5 053b213d6994cef2ad995aa516ed937a files/stubs/gcc-3.4-htb-stub.patch 722
-RMD160 0769dbc28e18df8e0533d12b0a85fff727556a19 files/stubs/gcc-3.4-htb-stub.patch 722
-SHA256 0768dcafc35be6d35c9aa0106b0c8b87932e6b2ec7a82547b8cc7fc9c8b0e1f4 files/stubs/gcc-3.4-htb-stub.patch 722
-AUX stubs/gcc-3.4-ssp-stub.patch 1068 RMD160 a72cfd5921084366d8ed93786254c37b3cd782e1 SHA1 84ff7b2dd5dadf996cc6ab7bf13f6e4e95ae85e6 SHA256 259b08fc6ba1a5fcc6848c1a0742e9b90dd43985c61fab4ea2e9e79ec795d982 size 1068
-MD5 d71c91009df788366867cb67fc875d6d files/stubs/gcc-3.4-ssp-stub.patch 1068
-RMD160 a72cfd5921084366d8ed93786254c37b3cd782e1 files/stubs/gcc-3.4-ssp-stub.patch 1068
-SHA256 259b08fc6ba1a5fcc6848c1a0742e9b90dd43985c61fab4ea2e9e79ec795d982 files/stubs/gcc-3.4-ssp-stub.patch 1068
-AUX stubs/gcc-4.0-htb-stub.patch 722 RMD160 c2f98915d90365d0823721ae6ad80bc6820eef65 SHA1 a1226eb412b98fb02d1bd3a5ab3b8a2a171a55fe SHA256 e9b63d3644c0c10e871d5bd94ceae55bec0726b76e9a7c43c83daf6c840dfb5c size 722
-MD5 37e756238508fe9f9e2b9ba6a7ca67ca files/stubs/gcc-4.0-htb-stub.patch 722
-RMD160 c2f98915d90365d0823721ae6ad80bc6820eef65 files/stubs/gcc-4.0-htb-stub.patch 722
-SHA256 e9b63d3644c0c10e871d5bd94ceae55bec0726b76e9a7c43c83daf6c840dfb5c files/stubs/gcc-4.0-htb-stub.patch 722
-AUX stubs/gcc-4.0-ssp-stub.patch 1068 RMD160 a72cfd5921084366d8ed93786254c37b3cd782e1 SHA1 84ff7b2dd5dadf996cc6ab7bf13f6e4e95ae85e6 SHA256 259b08fc6ba1a5fcc6848c1a0742e9b90dd43985c61fab4ea2e9e79ec795d982 size 1068
-MD5 d71c91009df788366867cb67fc875d6d files/stubs/gcc-4.0-ssp-stub.patch 1068
-RMD160 a72cfd5921084366d8ed93786254c37b3cd782e1 files/stubs/gcc-4.0-ssp-stub.patch 1068
-SHA256 259b08fc6ba1a5fcc6848c1a0742e9b90dd43985c61fab4ea2e9e79ec795d982 files/stubs/gcc-4.0-ssp-stub.patch 1068
-DIST bounds-checking-gcc-3.3.5-1.00-r2.patch.bz2 827126 RMD160 87c3d07db677749cfa5bbb5a64ac5dc19f61eae4 SHA256 a3391b3730f3d1f64751e73be131977e62266216f11f394b87f3e0e23fd9bf6a size 827126
-DIST bounds-checking-gcc-3.3.5-1.00.patch.bz2 828893 RMD160 9c314e6837f6e3fe930d8f2b01cb6a81bf92fde7 SHA256 6277c194a497ade97c08e211866bbafe032cb5434e516afba250c2060651a46d size 828893
-DIST bounds-checking-gcc-3.3.6-1.00-r1.patch.bz2 829063 RMD160 a5b0c3abe9bbec8b539920593bfb8b1b2cd1628d SHA256 56eeeef1549381f341ed0cfc99f19289bc9e9b5601466e6b2b9dba5c43649017 size 829063
-DIST bounds-checking-gcc-3.4.4-1.00.patch.bz2 815608 RMD160 b5e1d4716a5ab881b5d7742bb6650e0492edce93 SHA256 a29adc9260071f5928f2e491803b73117ee176e4b19b56ce421aa3ca461370b2 size 815608
-DIST bounds-checking-gcc-4.0.2-1.00.patch.bz2 822351 RMD160 455246c524f04f116169abfb8760350036d7113d SHA256 efbe7c437a4208bf3f2643d494dc7695f20779c91ecd2eceb37be68308df1f4f size 822351
-DIST bounds-checking-gcc-4.0.3-1.00.patch.bz2 822351 RMD160 455246c524f04f116169abfb8760350036d7113d SHA256 efbe7c437a4208bf3f2643d494dc7695f20779c91ecd2eceb37be68308df1f4f size 822351
-DIST gcc-2.95.3-patches-1.2.tar.bz2 121655 RMD160 e6a8a50538587f5ad3721816271cfc927c3af90e SHA256 8f222a4a506175a41abff1e47d3787b10f587c18de313ccf47868ad739b4ee0f size 121655
-DIST gcc-2.95.3.tar.gz 12911721 RMD160 2c506b7e80cb2b4d9953f4f9753d581cb885f610 SHA256 2a950e220c2f64c4abf781be3bb6d4c472ef8b3685873e77061788df85c6d5da size 12911721
-DIST gcc-3.1.1.tar.bz2 20515451 RMD160 f1acf2739009281ffae61ceb54612d1ee795578f SHA256 95399ef09c38cf9bde4a98909623d6a7f93ca0061857f9938af8b1970459672f size 20515451
-DIST gcc-3.1.1_final-patches-1.0.tbz2 29791 RMD160 4406f8007e658b6b5205680b85badb20eb3b19dc SHA256 8ed2d7ca951ec195bef6ccdeb0325c673e1991890f11f2f24e4d0277537466d6 size 29791
-DIST gcc-3.2.2-patches-1.0.tar.bz2 41284 RMD160 f6b953c283fc8c92ebd3b7bafc50199268c223aa SHA256 e2e9e948614081f645856352b8a76b79bb168ebadc4c62295e8e82fcf3ff4134 size 41284
-DIST gcc-3.2.2.tar.bz2 20311217 RMD160 7036ffb7eb5bbe4e3cf59ee5dacd7071bac475fc SHA256 7035a828b75b425093be26b5748c182696cc0fd948988312c2a2147cae59d4aa size 20311217
-DIST gcc-3.2.3-manpages.tar.bz2 129510 RMD160 1f066a3f0de918766a25b24a580e8e52eb9876df SHA256 219efe9cff7d18f7fe8d11721d18f4eb48645c866738b13f3d7c13eb910befee size 129510
-DIST gcc-3.2.3-tls-update.patch.bz2 396362 RMD160 a24434ec6ff6ff734a5e8b6254f0dce55c5cdcba SHA256 36d26ca6e00a0a09ab2716abd05c07f18239039ae7e28fdec68c3fab4f5dd4af size 396362
-DIST gcc-3.2.3.tar.bz2 20662887 RMD160 64b599c5ee29475785c910ccaf9ccc41ee5244e7 SHA256 9229434cfdfb79d3183149ac09e1093be642d4be377cc491e75c23b856243fda size 20662887
-DIST gcc-3.3.2-branch-update-20040119.patch.bz2 299556 RMD160 74464c4830f796794ebf3abcb1c776f1785d6116 SHA256 bf642051f4e6b49f9a55125042cb2f7e389adbf11e860d7239fd068865bfcf69 size 299556
-DIST gcc-3.3.2-manpages.tar.bz2 137196 RMD160 037dcaed16770f41ad9d59329f4175527223b111 SHA256 d2035c2d3b29ae50d5a685a2e362a8916984242578faf51e861b13fd9e5f2359 size 137196
-DIST gcc-3.3.2-patches-1.0.tar.bz2 23675 RMD160 daac8ae18f63fdebeaa023544a9cfe132b45c46c SHA256 49ea444490326ee8e256ef6b0045cfc0f2d1d92703f3e1d5091c96b0d27a9ed9 size 23675
-DIST gcc-3.3.2.tar.bz2 23585904 RMD160 e0b6d709fb75c4f3640f2b9886168f3166b94df8 SHA256 8ff5367bb94a08bcf5c19527c66b8f3b99d3f1fac61a34ad5baffdee7358c1f1 size 23585904
-DIST gcc-3.3.5-branch-update-20050130.patch.bz2 38618 RMD160 8349193260ebdd005b11b3a95caa59502862be69 SHA256 7a2996971347e7e823523c051681c71a254ad92c67f2e8e0e4e87d639acd30ee size 38618
-DIST gcc-3.3.5-manpages.tar.bz2 214965 RMD160 d0e8644b7cde313fe4c503f492c7137d88509446 SHA256 c7af2225c3bd2bdccbccc94f917251ada2e02943b0cd0a5376c976f0de38120f size 214965
-DIST gcc-3.3.5-patches-1.0.tar.bz2 41378 RMD160 ec9c8b68eccd345bfe85a8e1c144b2844f538c8d SHA256 4216998306ce0dcc7f9a5112e0e4e3eed495c469cc02337bdb886332f87ca9dd size 41378
-DIST gcc-3.3.5-patches-1.4.tar.bz2 41936 RMD160 13f692bed2f3b9fe267f5d3a097af6b7801cbefb SHA256 c19d1b9be9d54e10553c1286564d6e9cc7f46b2780dbef19e46b98493edfa7ea size 41936
-DIST gcc-3.3.5-piepatches-v8.7.7.1.tar.bz2 25970 RMD160 8d3713c143d3fa4084ea3247ec0577d72576d576 SHA256 e3d4671782e81e8507c3a6ccc0774d24d8a857c2d6a247227c37c47613832b7a size 25970
-DIST gcc-3.3.5-uclibc-patches-1.0.tar.bz2 27532 RMD160 21f619f1d7c6aad25a2678fd7c7aafbc4f67b3b9 SHA256 c29ffb0b10cafc3d4e785dda655a026b80b7317f6a93fdd2229cb7ae287a54c2 size 27532
-DIST gcc-3.3.5.tar.bz2 23833856 RMD160 34adf1a6f7ea302e9937c1a06ccf362711e25c58 SHA256 4ae90c6948d2654a254116fabb0cc7e474abf51ea841e6ef5cd8e6c161a9fa74 size 23833856
-DIST gcc-3.3.6-patches-1.3.tar.bz2 36948 RMD160 eee8a62e3c36d82dff0914e18d1c70cb5e5b3f47 SHA256 db7fc2a158e825893b707b7f2b900848a5e3cba62e768e2bfc026b425ece41a6 size 36948
-DIST gcc-3.3.6-patches-1.4.tar.bz2 47967 RMD160 7dfead16f9bd8211dbedc6bf33bb042f9ede00b7 SHA256 0e3ea29d1079bc09df623b49d8abac37e63761fc5c70a9c6fde5859aa3c176d3 size 47967
-DIST gcc-3.3.6-piepatches-v8.7.8.tar.bz2 27532 RMD160 4702eae72925b4be0aa71e338344512daf61f2d7 SHA256 eb2dad189225664c5ad35f467592e7b44f5801a17f61829154283e800646e7d5 size 27532
-DIST gcc-3.3.6-ssp-1.0.tar.bz2 21355 RMD160 26b72f90bb0fe2809013eeb3112e0f31e9e35311 SHA256 6d365ae529c61730e2a4137677d38e014bb51b569a7f870684287e25cff4f666 size 21355
-DIST gcc-3.3.6-uclibc-patches-1.0.tar.bz2 28882 RMD160 bbca9281e73bf6a26e2cfea370e006b99838e4a9 SHA256 c007f38cb0c57291adf0b367f31e14c84dd1d6f48a388896eb63b6cd4328e418 size 28882
-DIST gcc-3.3.6.tar.bz2 23972413 RMD160 b32c7a08c690857f0ac52dda3deb47cf5775d967 SHA256 1c1aa533c67e9da5e55ed4f5736258dc753466bd716bdae3fb88fb66e6ff1d7f size 23972413
-DIST gcc-3.4.0-piepatches-v8.7.6.5.tar.bz2 16392 RMD160 1c8243321ac183e3d3bcb71ea2c983bee528f826 SHA256 1e07c8af8c23232ffb89500277cd6f187d14deb42f979dfa397839b182f48626 size 16392
-DIST gcc-3.4.1-branch-update-20040803.patch.bz2 220869 RMD160 317a97b989f3634a277ad70120255479ef69614e SHA256 528c6c247575f9aad64b647082fa111a3b5fccd1ad24840f858bd61974b0f819 size 220869
-DIST gcc-3.4.1-manpages.tar.bz2 614346 RMD160 df968408b7e3c030f78d8bfe98ccf0f0c910357d SHA256 f3c73574ddb243ca91ecc461f1508e1e3bcf11845dfe037c1f8c05aaa8e95959 size 614346
-DIST gcc-3.4.1-patches-1.1.tar.bz2 33399 RMD160 d074723c4beb8cc64af1b2e3a8d43ff9db22d357 SHA256 f3497ed8c4544d51e3c30fc8382f79cfff8e9a447cd6ffe872e3b91b23dd81bb size 33399
-DIST gcc-3.4.1.tar.bz2 27182385 RMD160 b25352913fde37121e2dfe5521149bdaf08b0f5d SHA256 5f3685533f8dc4b42b926fe70bb371b31e1368223a0ad7398ba27ea3a20e8e7a size 27182385
-DIST gcc-3.4.4-patches-1.7.tar.bz2 47234 RMD160 e4c8f0c966a3f22c9b32271a79b265e2a1d34161 SHA256 3077b77db3b7328c6594946adf8b0f134bdf77ae31fe010dc90094adab1b52c0 size 47234
-DIST gcc-3.4.4-piepatches-v8.7.8.tar.bz2 15514 RMD160 9c750ede1259e8dd32a3def98aaaf268a643c8ae SHA256 1f61e5c17c88d73ddaa0341902d4de8f3967c625dfbef2f7a3ea4eda0bd5e0cf size 15514
-DIST gcc-3.4.4-ssp-1.0.tar.bz2 31612 RMD160 4db0a2dcf09272644c61db6c2385ba06af2f6440 SHA256 b0e926fb36d6cfb428cd2aa912fac5b72442e24601f2724dbae67f772dbd980b size 31612
-DIST gcc-3.4.4-uclibc-patches-1.2.tar.bz2 26333 RMD160 f979d4b96cb37ef6c5c8fc78e92efd1a1057d71a SHA256 b015b1ffe2166c126bae1852ae6a19dea28b68f461e9aac82511fccd0cc37abd size 26333
-DIST gcc-3.4.4.tar.bz2 27565872 RMD160 cb9c4154c9e34d45c80eb80fd7bc30b036e6fec4 SHA256 3444179840638cb8664e8e53604900c4521d29d57785a5091202ee4937d8d0fd size 27565872
-DIST gcc-3.4.5-patches-1.2.tar.bz2 48176 RMD160 be86775306d55b9030373c2e979724659b35d0ad SHA256 013e3cebadc3bb71d7d41cfbbb6488b19c9df98be92d63c8ffa9261146d2773d size 48176
-DIST gcc-3.4.5-patches-1.4.tar.bz2 52228 RMD160 5e1239b75a9db19404c36d99e3507ad0b1fc9d45 SHA256 c513a05d2ff0a2fd3e36d74e86991758c28c139a0d7c4ebdaafaf3f14a61cc10 size 52228
-DIST gcc-3.4.5-piepatches-v8.7.9.tar.bz2 8140 RMD160 66aaa00b8261646cff64e7deabb6315dd9f39109 SHA256 4af3c5671cbba9e015a6843ad646ba979fc91226cdaba8a074fbbc8dacfa07ad size 8140
-DIST gcc-3.4.5-ssp-1.0.tar.bz2 31589 RMD160 24bfe531556455bd58833d589b84d09941af615a SHA256 30036c39dc0b885c273ec4cbe57042ce6f458fa37ce6cbea58dd5ddeee0e2409 size 31589
-DIST gcc-3.4.5-uclibc-patches-1.0.tar.bz2 26048 RMD160 78e7dbaec309c38064a3e0ad0ff7bf8567518228 SHA256 aa2ce81451297550fe0768c495e79991803673cc266dc27ea3de38acdcce365b size 26048
-DIST gcc-3.4.5-uclibc-patches-1.1.tar.bz2 70923 RMD160 89e42889420fbab22e418261d248a89ee2bbbe9b SHA256 5b92fac2afe835a127976fdb6602fb5628cf28e67dd19e8289768a3bb8631ec2 size 70923
-DIST gcc-3.4.5.tar.bz2 28254232 RMD160 611ad033a76ada49d43529fc694142e856a039fa SHA256 be5738a94076052453894dd7d35b1efbb017bba1da0b28495d145f98fe018a09 size 28254232
-DIST gcc-3.4.6-patches-1.0.tar.bz2 53093 RMD160 f340ae3c80e73525b4f893d0d5eed80714ba6816 SHA256 f6b23e32d93bebf837dc845bf989ddd599e272fcba7aae55be3ecafd7e620d0c size 53093
-DIST gcc-3.4.6-patches-1.2.tar.bz2 54757 RMD160 d4e1240b9e45b7661b7f8bf4f57bb2c9cac17686 SHA256 43253a8defa6111bd6f107178cc46f425ec81efe0eb26b730c11c422a4d4de26 size 54757
-DIST gcc-3.4.6.tar.bz2 28193401 RMD160 b15003368cedc7964f6ceaee0c39ddc43a46c442 SHA256 7791a601878b765669022b8b3409fba33cc72f9e39340fec8af6d0e6f72dec39 size 28193401
-DIST gcc-4.0.0-piepatches-v8.7.8.tar.bz2 13334 RMD160 f5a75929b2f4b2e2688814fac797c2abeb7d7977 SHA256 7603da1eee0945a1890da1abf56aafbd5d9f88db5ce84bed1135005142c42ba4 size 13334
-DIST gcc-4.0.0-uclibc-patches-1.0.tar.bz2 23241 RMD160 75b902564129b32fc48542ce1aeb2005099499aa SHA256 fe88dd6ae4fc0d7cca4add1a08d97e010c9eb4dccec46f1b3b7d3c2a8f0f728b size 23241
-DIST gcc-4.0.2-patches-1.6.tar.bz2 57945 RMD160 d999008a56ea7ed5705f62330a3eb44bf492e626 SHA256 73254cc98fd98cc93c5efbe5b47779e3270905ac0fbf1f2d63b9966c679c0724 size 57945
-DIST gcc-4.0.2.tar.bz2 31793160 RMD160 70c7e21820da4d29ce6e8e48329d906ee19333aa SHA256 37b3286c2bfb68da9df983f60721f868e29897f7a426306748fee93b25c5fb61 size 31793160
-DIST gcc-4.0.3-patches-1.3.tar.bz2 38806 RMD160 c2af49f0fcae41c9e5721c59fd1bf0137e2ff8a1 SHA256 dfd122809dac14d15880b33358b17d05e2b434ff01a8036377444f98bd8bcfd9 size 38806
-DIST gcc-4.0.3-piepatches-v8.7.8.tar.bz2 6991 RMD160 c1604cc7356eedeb7b64406d691155806aa8b1da SHA256 4b804566409ceb133f1f8d81e935892d22f07d0aa23daed63c9dd4050a4d8081 size 6991
-DIST gcc-4.0.3-uclibc-patches-1.0.tar.bz2 20192 RMD160 a426e23977dea24edb7fb1bdc7c20ec690638d16 SHA256 e929e3b59bdf1d68d98232d9dfdde73f5728fa5c201f63ef0858130a77865be9 size 20192
-DIST gcc-4.0.3.tar.bz2 32980638 RMD160 c0dd326faa6f226ee0250e059d1eac933a4b0e31 SHA256 e866346111f4b043a784deca5afcd2fe0e9e16e97464fdff858abbfcbe28dafa size 32980638
-DIST gcc-4.1.0-patches-1.3.tar.bz2 18741 RMD160 5836e17e54cb525f34f60739e53679406cb49706 SHA256 94414d8c20eb55b34206c371cfa71a367196397fbb126e9e75973858f199ddce size 18741
-DIST gcc-4.1.0-uclibc-patches-1.1.tar.bz2 20238 RMD160 173d2bf08183a8808ba253da69abeaae0127b88f SHA256 7b35927cb87f73ca98b810c1d70f9de8405c4b024c8932aabd99a0e87ed880b4 size 20238
-DIST gcc-4.1.0.tar.bz2 38639061 RMD160 a0640c52a53b69b0edcf66d9dc9a95d2112e8b41 SHA256 1159457a0e4c054b709547ae21ff624aebab2033e0d9e5bf46c9cf88b1970606 size 38639061
-DIST gcc-4.2-20060422.tar.bz2 38918976 RMD160 abe963cca7c3c4fc1968d027981b218622fe734d SHA256 721a8e78dcd4867a12610798c7c04c1e77d9cbbc3ea3ac11b4effc97e1a78a3f size 38918976
-DIST protector-3.2.2-10.tar.gz 24556 RMD160 905b1ef473435230f7f4519ecf0f8a3d4c66e4e5 SHA256 ad8401650ee0f7162e844cea492aa6151de77e8d0236cacc999aada69d511bab size 24556
-DIST protector-3.3-7.tar.gz 25068 RMD160 6e01b53477aec0c0b7a958827a38fcc8bee61c56 SHA256 cd285bd6f79b794bbb5e0c7f06c6c9317a0c72cb065d5c7d4283c51f06edeade size 25068
-DIST protector-3.3.2-3.tar.gz 28195 RMD160 6e6c98ab3d1ff0d16405df8dfdded0ff1f098eb2 SHA256 e89ce49af8a088ffa790985e57bb5c2dd59328676342ddce93ae3166c2d3b9d9 size 28195
-DIST protector-3.3.5.20050130-1.tar.gz 24324 RMD160 5c221415fda8795a5062cc4ce749d8d2494f9084 SHA256 c5b0e5620ac2e30dc79b156db2165865e987a2ce529cffb6f1a695eb60c462d0 size 24324
-DIST protector-3.4-2.tar.gz 31066 RMD160 bbb7aeabc8308b7ab3e296923019e810f38c3305 SHA256 a9decc15da37c84dc7ce50f44ceb528fd6592a405109f4e3be089b58e6c14a70 size 31066
-EBUILD gcc-2.95.3-r9.ebuild 7557 RMD160 25b82fb59db9537bf2f24d4e926d67456ec4f1d2 SHA1 4c59ed885302fc3f91f7583cc8871eef93839df0 SHA256 de06c18c79522ba23e349a934b2aaf2e8b8f09b2941ef0343e3f71d4805803cf size 7557
-MD5 5ca59966c8fbff64f7c0a9fc852832cf gcc-2.95.3-r9.ebuild 7557
-RMD160 25b82fb59db9537bf2f24d4e926d67456ec4f1d2 gcc-2.95.3-r9.ebuild 7557
-SHA256 de06c18c79522ba23e349a934b2aaf2e8b8f09b2941ef0343e3f71d4805803cf gcc-2.95.3-r9.ebuild 7557
-EBUILD gcc-3.1.1-r2.ebuild 9249 RMD160 86feed8194f84fb86fad715bacff60a505fd1aeb SHA1 426a8990182578c9d57f76169f73d7fe44c46009 SHA256 6ebd74b1a27044c4c121f70ae4dcf898cbc4d1a9d9cfe75de529bf95053771d3 size 9249
-MD5 1acc45379c468d3e54ebf6f50f780b44 gcc-3.1.1-r2.ebuild 9249
-RMD160 86feed8194f84fb86fad715bacff60a505fd1aeb gcc-3.1.1-r2.ebuild 9249
-SHA256 6ebd74b1a27044c4c121f70ae4dcf898cbc4d1a9d9cfe75de529bf95053771d3 gcc-3.1.1-r2.ebuild 9249
-EBUILD gcc-3.2.2.ebuild 767 RMD160 06962eb492072f264189b44f9da5002d63ae1937 SHA1 172376fd0832cbeb37a53ed34598c8874a13a401 SHA256 33f12b02018457474d41d58356ce2442ad0ab1633852fd0d42bb94adcb4d7fd7 size 767
-MD5 c76df140331f7e3f907c329ee85d9477 gcc-3.2.2.ebuild 767
-RMD160 06962eb492072f264189b44f9da5002d63ae1937 gcc-3.2.2.ebuild 767
-SHA256 33f12b02018457474d41d58356ce2442ad0ab1633852fd0d42bb94adcb4d7fd7 gcc-3.2.2.ebuild 767
-EBUILD gcc-3.2.3-r4.ebuild 19758 RMD160 e56d7cb0cca66b1e3726e5071a16abd487a4072f SHA1 ef3f2d3ae643f37454c22f44d53f7a2bffa99ca9 SHA256 4b6738382eb86ac24cfdada650d37f1918c3aa0f6861e8f19dee2fc732749358 size 19758
-MD5 d5102ad25a4710498e92129e5028982f gcc-3.2.3-r4.ebuild 19758
-RMD160 e56d7cb0cca66b1e3726e5071a16abd487a4072f gcc-3.2.3-r4.ebuild 19758
-SHA256 4b6738382eb86ac24cfdada650d37f1918c3aa0f6861e8f19dee2fc732749358 gcc-3.2.3-r4.ebuild 19758
-EBUILD gcc-3.3.2-r7.ebuild 20036 RMD160 e3143d1cf88a9b4ffa24a57ed0b8b03f3ac3acfd SHA1 0edc04329e1967751e28d045f732117685941da9 SHA256 7f7519c5310b3ba95291c3e06e78fa109cded205dce8af5f9369fce085c43ce2 size 20036
-MD5 8e596dd10d7122539cb89d574443122f gcc-3.3.2-r7.ebuild 20036
-RMD160 e3143d1cf88a9b4ffa24a57ed0b8b03f3ac3acfd gcc-3.3.2-r7.ebuild 20036
-SHA256 7f7519c5310b3ba95291c3e06e78fa109cded205dce8af5f9369fce085c43ce2 gcc-3.3.2-r7.ebuild 20036
-EBUILD gcc-3.3.5-r1.ebuild 3753 RMD160 476c88817d14ed4807d4cdded59f3b9e9f82e5c1 SHA1 9b5334e97a7fe4c0f2dbd361b2c0e0ff6fc7ab74 SHA256 3b33807adc295d87bd3ea597ac50dd2bf501d2291f052122d4824abf0ff0b9e3 size 3753
-MD5 5adfcffda6ab369d936a11ea05553568 gcc-3.3.5-r1.ebuild 3753
-RMD160 476c88817d14ed4807d4cdded59f3b9e9f82e5c1 gcc-3.3.5-r1.ebuild 3753
-SHA256 3b33807adc295d87bd3ea597ac50dd2bf501d2291f052122d4824abf0ff0b9e3 gcc-3.3.5-r1.ebuild 3753
-EBUILD gcc-3.3.5.20050130-r1.ebuild 3185 RMD160 12a49c15468e4a7176a75bb8ec4a29c3038bbc3e SHA1 41c99c78d8fa6395fefd6d59c823f556a8b994a6 SHA256 972ac7d0d530a69bd4bb30054fd07c85232610da35993a34fa4a33e8a55aea70 size 3185
-MD5 9d22a32b1af48c917895eb21ca6e56c1 gcc-3.3.5.20050130-r1.ebuild 3185
-RMD160 12a49c15468e4a7176a75bb8ec4a29c3038bbc3e gcc-3.3.5.20050130-r1.ebuild 3185
-SHA256 972ac7d0d530a69bd4bb30054fd07c85232610da35993a34fa4a33e8a55aea70 gcc-3.3.5.20050130-r1.ebuild 3185
-EBUILD gcc-3.3.6-r1.ebuild 3149 RMD160 6dc2c174f91f6ab86e418675de072ec0dd36a6f0 SHA1 bd8d4fadfd41f05583d88b1f1bf1a6880f51885e SHA256 5ca21dfba82ec9d06ce6d9ecc1a706ea6de077b24e3406ef99316f47e6a71e95 size 3149
-MD5 f82c78c1f96f0e5b1ba4b86a130fdd14 gcc-3.3.6-r1.ebuild 3149
-RMD160 6dc2c174f91f6ab86e418675de072ec0dd36a6f0 gcc-3.3.6-r1.ebuild 3149
-SHA256 5ca21dfba82ec9d06ce6d9ecc1a706ea6de077b24e3406ef99316f47e6a71e95 gcc-3.3.6-r1.ebuild 3149
-EBUILD gcc-3.3.6.ebuild 3142 RMD160 ce75c6407b1f125aaacbd24cef1922a6ab1439f6 SHA1 7a5923484635ab5e220d865bbcfe6779b8414ba1 SHA256 91cc434d9cb1b75e167fae6859e46360812dda5e7bdf8bc62ed27a2f30aa13b2 size 3142
-MD5 0d34c315ceb7c0f61a151783a5f78b2f gcc-3.3.6.ebuild 3142
-RMD160 ce75c6407b1f125aaacbd24cef1922a6ab1439f6 gcc-3.3.6.ebuild 3142
-SHA256 91cc434d9cb1b75e167fae6859e46360812dda5e7bdf8bc62ed27a2f30aa13b2 gcc-3.3.6.ebuild 3142
-EBUILD gcc-3.4.1-r3.ebuild 29786 RMD160 5617c0a5a0811b915a12ac6d2bd031b1748f0fd5 SHA1 ba80c5fbfe5dd3e8f279b03af92c5e885ba84e0e SHA256 1cdcc5f931ec23e2fb241289682c8a5bc21fcac96012f721b10a5e3cd1c0d040 size 29786
-MD5 39225040b39ea4676cf9e39d96aa0050 gcc-3.4.1-r3.ebuild 29786
-RMD160 5617c0a5a0811b915a12ac6d2bd031b1748f0fd5 gcc-3.4.1-r3.ebuild 29786
-SHA256 1cdcc5f931ec23e2fb241289682c8a5bc21fcac96012f721b10a5e3cd1c0d040 gcc-3.4.1-r3.ebuild 29786
-EBUILD gcc-3.4.4-r1.ebuild 5112 RMD160 05c6079fecb38ee105c537d800b6cf56d33a3c86 SHA1 4378044d3fa884ed1e482b96b44dd66ee2bb0c36 SHA256 ceccd98b075c4133daeac1ee6bfde990333d4f88fcc5a3ae2cc387a2d89dae0a size 5112
-MD5 a41a737829f45bfe65cfe73c0acc5885 gcc-3.4.4-r1.ebuild 5112
-RMD160 05c6079fecb38ee105c537d800b6cf56d33a3c86 gcc-3.4.4-r1.ebuild 5112
-SHA256 ceccd98b075c4133daeac1ee6bfde990333d4f88fcc5a3ae2cc387a2d89dae0a gcc-3.4.4-r1.ebuild 5112
-EBUILD gcc-3.4.5-r1.ebuild 5265 RMD160 d5d55561bca8c8bfa74727167c44eaee30552b1c SHA1 5ae2f55999df0d1be78863e5271f7d33756870ac SHA256 76294313a14085f0c156a18aa2697d824db1845ebe5d29382f6d42d173b6d689 size 5265
-MD5 5eee3ea2b6873b9fdee3e90bd87a3b83 gcc-3.4.5-r1.ebuild 5265
-RMD160 d5d55561bca8c8bfa74727167c44eaee30552b1c gcc-3.4.5-r1.ebuild 5265
-SHA256 76294313a14085f0c156a18aa2697d824db1845ebe5d29382f6d42d173b6d689 gcc-3.4.5-r1.ebuild 5265
-EBUILD gcc-3.4.5.ebuild 5015 RMD160 e7e5c9910801a156ed7f8537b22f076e9e48b677 SHA1 0eca61a14c7428f8e7aae2b791035b047b4018ad SHA256 7c2bb48fc3a905ff47d184b301561d2a2b57c787bdc4bddd76f46e9f0b9529a0 size 5015
-MD5 6903d912f2f3858ff91b15657bc04d58 gcc-3.4.5.ebuild 5015
-RMD160 e7e5c9910801a156ed7f8537b22f076e9e48b677 gcc-3.4.5.ebuild 5015
-SHA256 7c2bb48fc3a905ff47d184b301561d2a2b57c787bdc4bddd76f46e9f0b9529a0 gcc-3.4.5.ebuild 5015
-EBUILD gcc-3.4.6-r1.ebuild 5116 RMD160 ae7fcaa58dd142d493b3d7eef97261b0687306ad SHA1 0ba019e1fff10807ddacfc1b347bcd2b9c1aa03a SHA256 a3e97ef8667bd10c9ae5c5314a5f4ce6df940472eba1de6628479e7984cb9115 size 5116
-MD5 f2f7abc70ff8aeee2971dbafc1927985 gcc-3.4.6-r1.ebuild 5116
-RMD160 ae7fcaa58dd142d493b3d7eef97261b0687306ad gcc-3.4.6-r1.ebuild 5116
-SHA256 a3e97ef8667bd10c9ae5c5314a5f4ce6df940472eba1de6628479e7984cb9115 gcc-3.4.6-r1.ebuild 5116
-EBUILD gcc-3.4.6.ebuild 5096 RMD160 498f7d241822cc12a55a280a212b98d392c292b6 SHA1 00bb6bf892a1d1ac1e497881ef3309b929712156 SHA256 cf1204ef2833b80c33dc8c65f697ee8a97e26a2ed62dde38a46c6518643c153e size 5096
-MD5 9cd624e5441af6ef55f370171da3d445 gcc-3.4.6.ebuild 5096
-RMD160 498f7d241822cc12a55a280a212b98d392c292b6 gcc-3.4.6.ebuild 5096
-SHA256 cf1204ef2833b80c33dc8c65f697ee8a97e26a2ed62dde38a46c6518643c153e gcc-3.4.6.ebuild 5096
-EBUILD gcc-4.0.2-r3.ebuild 2051 RMD160 e741683e9291886a75c0e859b32db9d4068b2045 SHA1 5fb82a0553375ff06ac14cad14d584487f94c020 SHA256 53e3826f52a9fc8091c7baab933c3f6b69f64d83a92e232c000fbb891245d9be size 2051
-MD5 b58129cf619ae8ef59332b027b5d4ff6 gcc-4.0.2-r3.ebuild 2051
-RMD160 e741683e9291886a75c0e859b32db9d4068b2045 gcc-4.0.2-r3.ebuild 2051
-SHA256 53e3826f52a9fc8091c7baab933c3f6b69f64d83a92e232c000fbb891245d9be gcc-4.0.2-r3.ebuild 2051
-EBUILD gcc-4.0.3.ebuild 1849 RMD160 b72626ee4faf5bac914bf1984572db2a1f69a32b SHA1 9656b354a97c1f13fed97355e6781068ca66d868 SHA256 412f75c10110711ae32ee19a434dc1659d21f8b8312b8c231d596a9fe5b01010 size 1849
-MD5 1853f3ff19563e5b478c628fbb70abb0 gcc-4.0.3.ebuild 1849
-RMD160 b72626ee4faf5bac914bf1984572db2a1f69a32b gcc-4.0.3.ebuild 1849
-SHA256 412f75c10110711ae32ee19a434dc1659d21f8b8312b8c231d596a9fe5b01010 gcc-4.0.3.ebuild 1849
-EBUILD gcc-4.1.0.ebuild 1889 RMD160 cc38450f7115149ea6307a252c6bcc6f6c1afed4 SHA1 a0cee6c5e3d7d9981fdc53565058af2175aa4bae SHA256 d605ee90a65a831dab59cb1b5ef6724faefd27e6abd17be8cc539883d9c6418c size 1889
-MD5 1ee43e6848716d3f8c4d754d92712a55 gcc-4.1.0.ebuild 1889
-RMD160 cc38450f7115149ea6307a252c6bcc6f6c1afed4 gcc-4.1.0.ebuild 1889
-SHA256 d605ee90a65a831dab59cb1b5ef6724faefd27e6abd17be8cc539883d9c6418c gcc-4.1.0.ebuild 1889
-EBUILD gcc-4.2.0_alpha20060422.ebuild 2053 RMD160 8032d6527770af005335ab505cafb5f6387dc69d SHA1 80e5a0a352fa4eb9e7fc5d9185e101eecb9263df SHA256 0b99deea7b16f2f71727257a0c7346b338616c89c30d55f5f4ab66a0146306b3 size 2053
-MD5 a9da359bda63f709a36633f0e5a35ead gcc-4.2.0_alpha20060422.ebuild 2053
-RMD160 8032d6527770af005335ab505cafb5f6387dc69d gcc-4.2.0_alpha20060422.ebuild 2053
-SHA256 0b99deea7b16f2f71727257a0c7346b338616c89c30d55f5f4ab66a0146306b3 gcc-4.2.0_alpha20060422.ebuild 2053
-MISC ChangeLog 105971 RMD160 c51de66f8762eec645aca51cc3e2382357202072 SHA1 0dc378aba501e8e0e6593475bb47cd94c00c643c SHA256 652ea0cf0e9ead28aa00607b242054b7bb05250ed5ee2644fc4d2c5d46d77964 size 105971
-MD5 c942fba5f7a69fa7d910b098867b3fea ChangeLog 105971
-RMD160 c51de66f8762eec645aca51cc3e2382357202072 ChangeLog 105971
-SHA256 652ea0cf0e9ead28aa00607b242054b7bb05250ed5ee2644fc4d2c5d46d77964 ChangeLog 105971
-MISC metadata.xml 162 RMD160 d002486a43522f2116b1d9d59828c484956d66e2 SHA1 d6b4923897f6ae673b4f93646f5b4ba61d5a2c3c SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a size 162
-MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
-SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
 MD5 f44eb95069f15649ffe638c4e0e227c1 files/digest-gcc-2.95.3-r9 509
-RMD160 c405c63177cacfc957b50667c213e4cfe88343f9 files/digest-gcc-2.95.3-r9 509
-SHA256 707580ac93caf133b7642c65a3b0f8fd88204e71bbd476f6c8b968e87a8e328d files/digest-gcc-2.95.3-r9 509
-size 509 files/digest-gcc-2.95.3-r9 509
 MD5 debcca2522066ebb3cfd80a2b38ff9ee files/digest-gcc-3.1.1-r2 512
-RMD160 2a716a9aa66b2de7b782c179eec19b7ab90ef212 files/digest-gcc-3.1.1-r2 512
-SHA256 9cd0431d5ca835a64beadc8114fbd09dafa3ec664830e2563bb505112924ee76 files/digest-gcc-3.1.1-r2 512
-size 512 files/digest-gcc-3.1.1-r2 512
 MD5 26d299e31d5ced6ce3a94e380f4a9209 files/digest-gcc-3.2.2 503
-RMD160 906dc793f249d77ab3a60877ff0bbab8e578b554 files/digest-gcc-3.2.2 503
-SHA256 c15c963fc6834d8ae7cbc231c3678eafbf85597749353cc5c0a697b87abaa688 files/digest-gcc-3.2.2 503
-size 503 files/digest-gcc-3.2.2 503
 MD5 b413e53ff85eab72c07cfd89768fe126 files/digest-gcc-3.2.3-r4 1021
-RMD160 04a0bb5569d768e017b54633110aedaecbbbc4b6 files/digest-gcc-3.2.3-r4 1021
-SHA256 2aa3f73ea3bd77d83d6c3fcb325475f53932751f939e5018cc01ac6f4efafcc9 files/digest-gcc-3.2.3-r4 1021
-size 1021 files/digest-gcc-3.2.3-r4 1021
 MD5 99973cbe9e3b72c6e0bed68b74b7ea30 files/digest-gcc-3.3.2-r7 1313
-RMD160 98c6a1e1b1e13814e82362d031e67485ee687331 files/digest-gcc-3.3.2-r7 1313
-SHA256 65a8db2887c16fd6eefa900abf9036529870fe332ff61538d26ae6f5b5157eea files/digest-gcc-3.3.2-r7 1313
-size 1313 files/digest-gcc-3.3.2-r7 1313
 MD5 2ced1f7a91e1b3e9c674a032044f5221 files/digest-gcc-3.3.5-r1 1602
-RMD160 411dfdb44a2f546b7e78a4f3357405a6061d0ab6 files/digest-gcc-3.3.5-r1 1602
-SHA256 59069beb1858d62d66f3f1136cd1749ec928e0366b18984ccf9976386117ed37 files/digest-gcc-3.3.5-r1 1602
-size 1602 files/digest-gcc-3.3.5-r1 1602
 MD5 1c33311b23682f5b31afb7641a4e2902 files/digest-gcc-3.3.5.20050130-r1 2228
-RMD160 b43c627e28d9acef79c347e6e12734c0a1261010 files/digest-gcc-3.3.5.20050130-r1 2228
-SHA256 906fee0e00341c7859828498cafbf3752637de31ddcb7b7d5e8487c2b71531a2 files/digest-gcc-3.3.5.20050130-r1 2228
-size 2228 files/digest-gcc-3.3.5.20050130-r1 2228
 MD5 ecdb4b2410ecb1175c7a91cad54cdda0 files/digest-gcc-3.3.6 1635
-RMD160 e7484369b00b16c9394e42bde77e99bbd2119c2e files/digest-gcc-3.3.6 1635
-SHA256 29f112195acf2909bedf7988d00918e03f5d87350d56637d4f4862326c6b50ee files/digest-gcc-3.3.6 1635
-size 1635 files/digest-gcc-3.3.6 1635
 MD5 5fb9bef56d9ff5d61d81bbd489ac67b9 files/digest-gcc-3.3.6-r1 1635
-RMD160 6dc5eb3c9f5e2ad1698af9cb9a566862e4067271 files/digest-gcc-3.3.6-r1 1635
-SHA256 404ad7729d5bf632c4a72c7cf6475e489a1ca0061dab6bff47e2c84f68c89a36 files/digest-gcc-3.3.6-r1 1635
-size 1635 files/digest-gcc-3.3.6-r1 1635
 MD5 16c558deed5dcb34d34e65b24ed4c4a7 files/digest-gcc-3.4.1-r3 1602
-RMD160 c20c8527c8f6ead0468e482d1c146d123aa42bf6 files/digest-gcc-3.4.1-r3 1602
-SHA256 afbdfa523b0b0c4ff5018f9f9b2ae06156f02eb95333c6926e4ab84ca834e62f files/digest-gcc-3.4.1-r3 1602
-size 1602 files/digest-gcc-3.4.1-r3 1602
 MD5 6f71ba9f8719559326daefe87e491ec3 files/digest-gcc-3.4.4-r1 1626
-RMD160 9caa577c905c2325e75f2057fa2f40d5abfacc74 files/digest-gcc-3.4.4-r1 1626
-SHA256 eb9dc1bce78bd6906c30d8d2862eea3456edd057c87cd076cc4d337e951802a1 files/digest-gcc-3.4.4-r1 1626
-size 1626 files/digest-gcc-3.4.4-r1 1626
 MD5 06ec32773acdd6cb43ddde60a7c81d8a files/digest-gcc-3.4.5 1623
-RMD160 b5798295d2f3724275e09e470f036d2f6153234d files/digest-gcc-3.4.5 1623
-SHA256 02299bdb1b1a7807c6717b1efc8692b5fd6e4f2f96b44dbe0d782a00f8613586 files/digest-gcc-3.4.5 1623
-size 1623 files/digest-gcc-3.4.5 1623
 MD5 73c94d11f8da2cdcc2ce56f227ac72c9 files/digest-gcc-3.4.5-r1 1623
-RMD160 b5a153cbc9bc263b396bf7625af321fa5677a32c files/digest-gcc-3.4.5-r1 1623
-SHA256 bd25d4b50dc342d11e5f4f260df4151c0d691b2fcb17da20ebd93f5a039e2531 files/digest-gcc-3.4.5-r1 1623
-size 1623 files/digest-gcc-3.4.5-r1 1623
 MD5 e242bcd2b21f89c0e71338e2e7c0a5d0 files/digest-gcc-3.4.6 1623
-RMD160 9cb39ff8871b3192f90e865aa19799351eb27d6a files/digest-gcc-3.4.6 1623
-SHA256 7772b2d8bd9b56746d23614ce24b0e956b5ead8e72f82f5f46f9f54bd1973bb1 files/digest-gcc-3.4.6 1623
-size 1623 files/digest-gcc-3.4.6 1623
 MD5 96431bba97375c719d931304dd595a90 files/digest-gcc-3.4.6-r1 1623
-RMD160 8334b39b452fb81d9403c1b53592eab727b03be7 files/digest-gcc-3.4.6-r1 1623
-SHA256 b76a6a42081d8b640392a3d58a97db8c863e2b9f58c6e95b89b96f7411da6e0c files/digest-gcc-3.4.6-r1 1623
-size 1623 files/digest-gcc-3.4.6-r1 1623
 MD5 ed7eb202165a8e45a94d12517178586b files/digest-gcc-4.0.2-r3 1373
-RMD160 41645e2e8777113bda2b59affcc3bf4914016ece files/digest-gcc-4.0.2-r3 1373
-SHA256 f5f406d4cc94f1da96b28617d82de671736b2b4cde870fe5edcaabbfbd7e04ec files/digest-gcc-4.0.2-r3 1373
-size 1373 files/digest-gcc-4.0.2-r3 1373
 MD5 aa9ad39bfeddc2081944f4423f23dcfe files/digest-gcc-4.0.3 1370
-RMD160 4324c6fb1c83b84b5f6047aaafad939253f1db29 files/digest-gcc-4.0.3 1370
-SHA256 6d920f64c4a6949a047f6da14638df614455738aa08687870973cbb9b6052b77 files/digest-gcc-4.0.3 1370
-size 1370 files/digest-gcc-4.0.3 1370
 MD5 3c9f87bcd0490d89a88f761ebca74b35 files/digest-gcc-4.1.0 789
-RMD160 3c427e93052422f2f91e0ec42043d1c8284e954e files/digest-gcc-4.1.0 789
-SHA256 0b64499f68cfcd2d672e675da4c55660e7103edc2777017278e18623956f6b31 files/digest-gcc-4.1.0 789
-size 789 files/digest-gcc-4.1.0 789
 MD5 fb44e8bfcdc20cfda9d91608af3d2462 files/digest-gcc-4.2.0_alpha20060422 259
-RMD160 181b814735fe3645c709f12e27ad8e5a83e8dd27 files/digest-gcc-4.2.0_alpha20060422 259
-SHA256 b5c287d9abea7cedd5da74da5eaf7b40085cca63787d4051c5f44adf526be28e files/digest-gcc-4.2.0_alpha20060422 259
-size 259 files/digest-gcc-4.2.0_alpha20060422 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFESypM2+ySkm8kpY0RAkiAAKC45vdWm7Mjsy6O97R5jA5iVXhh1ACfUZnI
-9imFGVRzjYanNQ4d/4zm6k8=
-=tn12
------END PGP SIGNATURE-----
+MD5 1acd56209164ab837c5f91723434464e files/fix_libtool_files.sh 1712
+MD5 e0ebf10eb8bf4542ae57ba591daa68a4 files/gcc-configure-LANG.patch 1686
+MD5 f6eef7e81b209ca3c63c39e319b4a7a5 files/gcc-spec-env.patch 1389
+MD5 e3193bdffb435b77a21bfb504ff6f591 files/mkinfodir 7324
+MD5 ea2cf3df0d89a26d5fdc1a531176e395 files/pro-police-docs.patch 3287
+MD5 07b57d62aa1a8cd4d1cd37984ebe2053 files/scan_libgcc_linked_ssp.sh 861
+MD5 0f8035bc5ae6126fd9380ba9dcdcc271 files/stubs/gcc-3.3-htb-stub.patch 2195
+MD5 cb27bc36a5b9a1175a5f3bdf38647814 files/stubs/gcc-3.3-ssp-stub.patch 1735
+MD5 053b213d6994cef2ad995aa516ed937a files/stubs/gcc-3.4-htb-stub.patch 722
+MD5 d71c91009df788366867cb67fc875d6d files/stubs/gcc-3.4-ssp-stub.patch 1068
+MD5 37e756238508fe9f9e2b9ba6a7ca67ca files/stubs/gcc-4.0-htb-stub.patch 722
+MD5 d71c91009df788366867cb67fc875d6d files/stubs/gcc-4.0-ssp-stub.patch 1068
+MD5 5ca59966c8fbff64f7c0a9fc852832cf gcc-2.95.3-r9.ebuild 7557
+MD5 1acc45379c468d3e54ebf6f50f780b44 gcc-3.1.1-r2.ebuild 9249
+MD5 c76df140331f7e3f907c329ee85d9477 gcc-3.2.2.ebuild 767
+MD5 d5102ad25a4710498e92129e5028982f gcc-3.2.3-r4.ebuild 19758
+MD5 8e596dd10d7122539cb89d574443122f gcc-3.3.2-r7.ebuild 20036
+MD5 5adfcffda6ab369d936a11ea05553568 gcc-3.3.5-r1.ebuild 3753
+MD5 9d22a32b1af48c917895eb21ca6e56c1 gcc-3.3.5.20050130-r1.ebuild 3185
+MD5 f82c78c1f96f0e5b1ba4b86a130fdd14 gcc-3.3.6-r1.ebuild 3149
+MD5 0d34c315ceb7c0f61a151783a5f78b2f gcc-3.3.6.ebuild 3142
+MD5 39225040b39ea4676cf9e39d96aa0050 gcc-3.4.1-r3.ebuild 29786
+MD5 a41a737829f45bfe65cfe73c0acc5885 gcc-3.4.4-r1.ebuild 5112
+MD5 5eee3ea2b6873b9fdee3e90bd87a3b83 gcc-3.4.5-r1.ebuild 5265
+MD5 6903d912f2f3858ff91b15657bc04d58 gcc-3.4.5.ebuild 5015
+MD5 ed0aff83f8c5fe83a3472f5a144a0e4b gcc-3.4.6-r1.ebuild 5117
+MD5 9cd624e5441af6ef55f370171da3d445 gcc-3.4.6.ebuild 5096
+MD5 b58129cf619ae8ef59332b027b5d4ff6 gcc-4.0.2-r3.ebuild 2051
+MD5 1853f3ff19563e5b478c628fbb70abb0 gcc-4.0.3.ebuild 1849
+MD5 1ee43e6848716d3f8c4d754d92712a55 gcc-4.1.0.ebuild 1889
+MD5 a9da359bda63f709a36633f0e5a35ead gcc-4.2.0_alpha20060422.ebuild 2053
+MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
