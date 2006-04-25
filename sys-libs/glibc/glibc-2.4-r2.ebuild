@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.15 2006/04/24 07:18:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.16 2006/04/25 02:48:51 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -164,6 +164,10 @@ SRC_URI=$(get_glibc_src_uri)
 S=${WORKDIR}/glibc-${GLIBC_RELEASE_VER}
 
 ### EXPORTED FUNCTIONS ###
+unpack_addon() {
+	unpack glibc-$1-${GLIBC_RELEASE_VER}.tar.bz2
+	mv glibc-$1-${GLIBC_RELEASE_VER} $1 || die
+}
 toolchain-glibc_src_unpack() {
 	# Check NPTL support _before_ we unpack things to save some time
 	want_nptl && check_nptl_support
@@ -171,9 +175,9 @@ toolchain-glibc_src_unpack() {
 	unpack glibc-${GLIBC_RELEASE_VER}.tar.bz2
 
 	cd "${S}"
-	#unpack glibc-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
-	unpack glibc-libidn-${GLIBC_RELEASE_VER}.tar.bz2 && mv glibc-libidn-${GLIBC_RELEASE_VER} libidn
-	unpack glibc-ports-${GLIBC_RELEASE_VER}.tar.bz2 && mv glibc-ports-${GLIBC_RELEASE_VER} ports
+	#unpack_addon linuxthreads
+	unpack_addon libidn
+	unpack_addon ports
 
 	if [[ -n ${FEDORA_TARBALL} ]] ; then
 		# only pull out the stuff we actually want
@@ -338,7 +342,7 @@ toolchain-glibc_src_install() {
 		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
 			install_root="${install_root}" \
 			install || die
-	else
+	else # nptlonly
 		cd "${WORKDIR}"/build-${ABI}-${CTARGET}-nptl
 		einfo "Installing GLIBC ${ABI} with NPTL ..."
 		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
@@ -367,7 +371,8 @@ toolchain-glibc_src_install() {
 				src_lib=$(eval echo */${l})
 			fi
 			cp -a ${src_lib} "${D}"$(alt_libdir)/tls/${l} || die "copying nptl ${l}"
-			dosym ${l} "${D}"$(alt_libdir)/tls/$(scanelf -qSF'%S#F' ${src_lib})
+			fperms a+rx $(alt_libdir)/tls/${l}
+			dosym ${l} $(alt_libdir)/tls/$(scanelf -qSF'%S#F' ${src_lib})
 
 			# then grab the linker script or the symlink ...
 			if [[ -L ${D}$(alt_usrlibdir)/${l} ]] ; then
@@ -376,15 +381,16 @@ toolchain-glibc_src_install() {
 				sed \
 					-e "s:/${l}:/tls/${l}:g" \
 					-e "s:/${l/%.so/_nonshared.a}:/nptl/${l/%.so/_nonshared.a}:g" \
-					"${D}"$(alt_usrlibdir)/${l} > $(alt_usrlibdir)/nptl/${l}
+					"${D}"$(alt_usrlibdir)/${l} > "${D}"$(alt_usrlibdir)/nptl/${l}
 			fi
 
 			# then grab the static lib ...
-			l=${l/%.so/.a}
-			cp -a ${a} "${D}"$(alt_usrlibdir)/nptl/ || die "copying nptl ${l}"
-			l=${l/%.a/_nonshared.a}
-			if [[ -e ${l} ]] ; then
-				cp -a ${a} "${D}"$(alt_usrlibdir)/nptl/ || die "copying nptl ${l}"
+			src_lib=${src_lib/%.so/.a}
+			[[ ! -e ${src_lib} ]] && src_lib=${src_lib/%.a/_pic.a}
+			cp -a ${src_lib} "${D}"$(alt_usrlibdir)/nptl/ || die "copying nptl ${src_lib}"
+			src_lib=${src_lib/%.a/_nonshared.a}
+			if [[ -e ${src_lib} ]] ; then
+				cp -a ${src_lib} "${D}"$(alt_usrlibdir)/nptl/ || die "copying nptl ${src_lib}"
 			fi
 		done
 
@@ -461,8 +467,8 @@ toolchain-glibc_src_install() {
 		einfo "Installing info pages..."
 
 		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
-			install_root="${D}" \
-			info -i
+			install_root="${install_root}" \
+			info -i || die
 	fi
 
 	if [[ ${GLIBC_MANPAGE_VERSION} != "none" ]] ; then
@@ -473,7 +479,7 @@ toolchain-glibc_src_install() {
 		doman *.3thr
 	fi
 
-	# Install nscd config file
+	# Install misc network config files
 	insinto /etc
 	doins "${FILESDIR}"/nscd.conf
 	doins "${FILESDIR}"/nsswitch.conf
@@ -508,7 +514,7 @@ toolchain-glibc_src_install() {
 toolchain-glibc_headers_install() {
 	local GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-headers
 	cd "${GBUILDDIR}"
-	make install_root="${D}" install-headers || die "install-headers failed"
+	make install_root="${D}/usr/${CTARGET}" install-headers || die "install-headers failed"
 	# Copy over headers that are not part of install-headers ... these
 	# are pretty much taken verbatim from crosstool, see it for more details
 	insinto $(alt_headers)/bits
@@ -542,7 +548,7 @@ toolchain-glibc_pkg_postinst() {
 
 	if [[ ! -e ${ROOT}/lib/ld.so.1 ]] && use ppc64 && ! has_multilib_profile ; then
 		## SHOULDN'T THIS BE lib64??
-		ln -s ld64.so.1 ${ROOT}/lib/ld.so.1
+		ln -s ld64.so.1 "${ROOT}"/lib/ld.so.1
 	fi
 
 	if ! is_crosscompile && [[ ${ROOT} == "/" ]] ; then
