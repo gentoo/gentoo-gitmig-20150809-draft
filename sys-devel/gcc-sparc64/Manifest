@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 910feb0e2703e94c1a617c8899cdb7e6 ChangeLog 5678
 MD5 595fc5d3e417d76d1f7e7f0a8439535a files/digest-gcc-sparc64-3.3.5 64
 MD5 79ef0db9c6e9750aa92334dded832283 files/digest-gcc-sparc64-3.3.6 64
@@ -10,3 +13,10 @@ MD5 0eeabe3a8456b75ffa16f0605b19a5a6 gcc-sparc64-3.3.6.ebuild 3020
 MD5 3769214207e22eef2fde09c9462dfe18 gcc-sparc64-3.4.5.ebuild 3360
 MD5 0e865e79c36219567b311e56d6206eec gcc-sparc64-3.4.6.ebuild 3360
 MD5 f826fcca414fc0c05030db1f99e479d8 metadata.xml 360
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFETkScKRy60XGEcJIRAoWEAKCjjJDgadHgym5qTxQeKjtBcD8fQACdGhFc
+1ZwoCxoPfJxMlIOeGwnH7AI=
+=lHK9
+-----END PGP SIGNATURE-----
