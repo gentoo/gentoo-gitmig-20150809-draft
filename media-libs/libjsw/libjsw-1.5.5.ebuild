@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/libjsw-1.5.5.ebuild,v 1.5 2005/06/03 00:49:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/libjsw-1.5.5.ebuild,v 1.6 2006/04/25 00:04:06 vapier Exp $
 
 inherit eutils
 
@@ -18,26 +18,22 @@ DEPEND="gtk? ( =x11-libs/gtk+-1.2* )"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-build.patch
 	epatch "${FILESDIR}"/${P}-gcc33.patch
 	bunzip2 libjsw/man/* jscalibrator/jscalibrator.1.bz2 || die "bunzip failed"
 	cd jscalibrator
 	epatch "${FILESDIR}"/${P}-gcc33.patch
-	epatch "${FILESDIR}"/${P}-liborder.patch
+	epatch "${FILESDIR}"/${P}-headers.patch
 }
 
 src_compile() {
 	cd "${S}"/libjsw
-	emake CFLAGS="${CFLAGS} -fPIC" || die "main build failed"
-	ln -s libjsw.so.${PV} libjsw.so
+	emake || die "main build failed"
+	#ln -s libjsw.so.${PV} libjsw.so
 
 	if use gtk ; then
 		cd "${S}"/jscalibrator
-		ln -s ../include/jsw.h
-		emake \
-			CFLAGS="${CFLAGS}" \
-			INC_DIRS="$(gtk-config --cflags) -I." \
-			LIB_DIRS="-L../libjsw" \
-			|| die "jscalibrator failed"
+		emake || die "jscalibrator failed"
 	fi
 }
 

@@ -30,3 +30,17 @@ http://bugs.gentoo.org/show_bug.cgi?id=85780
  
  /*
   *	Checks if string pfx is a prefix of string s.
+--- libjsw/disk.cpp
++++ libjsw/disk.cpp
+@@ -131,11 +131,7 @@
+ 	    return(0);
+ 
+ 	// Dan S: typecast is due to const.
+-#if defined(__cplusplus) || defined(c_plusplus)
+-	while(ISBLANK(reinterpret_cast<char>(*path)))
+-#else
+ 	while(ISBLANK(*path))
+-#endif
+ 	    path++;
+ 
+ 	return(*path == DIR_DELIMINATOR);

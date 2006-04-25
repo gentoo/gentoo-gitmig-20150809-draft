@@ -1,0 +1,9 @@
+--- jscalibrator/jcwidgets.c
++++ jscalibrator/jcwidgets.c
+@@ -1,5 +1,6 @@
+ #include <jsw.h>
+ #include <gtk/gtk.h>
++#include <string.h>
+ 
+ #include "guiutils.h"
+ #include "jc.h"

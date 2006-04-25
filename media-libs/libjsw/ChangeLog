@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libjsw
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/ChangeLog,v 1.9 2005/06/03 00:49:16 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/ChangeLog,v 1.10 2006/04/25 00:04:06 vapier Exp $
+
+  25 Apr 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/libjsw-1.5.5-build.patch, files/libjsw-1.5.5-gcc33.patch,
+  +files/libjsw-1.5.5-headers.patch, -files/libjsw-1.5.5-liborder.patch,
+  libjsw-1.5.5.ebuild:
+  Move custom settings (CFLAGS/CXXFLAGS/LDFLAGS/etc...) to a build patch,
+  include more headers, and fix building with newer versions of gcc #131045 by
+  Thomas Hartman.
 
   03 Jun 2005; Mike Frysinger <vapier@gentoo.org>
   +files/libjsw-1.5.5-liborder.patch, libjsw-1.5.5.ebuild:
