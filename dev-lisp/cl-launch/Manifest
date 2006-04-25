@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5b4873b6f92563895678e3ffb43dab04 ChangeLog 681
-RMD160 abf8e9866e34c6e7b00849eaf2e2cff2f6b1bca5 ChangeLog 681
-SHA256 c12c15f9f93a3dc3d29335a6c747c6b56145ad7dab209a488a356bb7021dea93 ChangeLog 681
+MD5 e2bc342c539669c0c6636451d430f634 ChangeLog 814
+RMD160 6460e066f1b316c180868aadb7018a8f37896044 ChangeLog 814
+SHA256 13a51e36320f55629f5919b51604567867de0244720726976eebdf42b6ddc864 ChangeLog 814
 MD5 da1716a3a00bdd0c3c571975d1ee7c2a cl-launch-1.69.ebuild 845
 RMD160 962c3c3a4aa4299e24032a26c48873b4cad5f01d cl-launch-1.69.ebuild 845
 SHA256 3af6b940dd516eab68c27286aeea3f576bf1f9966f2302b46711e985518b8dbd cl-launch-1.69.ebuild 845
@@ -13,6 +13,9 @@ SHA256 2dde368395485cf5abcf038e92a4fa99c6bfc7ca3a0c5159c9330fdca227d730 cl-launc
 MD5 c1efeb7e09e66fd102751dfaefe7366b cl-launch-1.72.ebuild 845
 RMD160 890c7f06d4f53dda0a42e04d1b2e83b21745c7c2 cl-launch-1.72.ebuild 845
 SHA256 0a5a7752171a5c0afd53e04eada84b8977f652e288859bf33247b9e396d30f37 cl-launch-1.72.ebuild 845
+MD5 77cc5102ee3af0e30b8918e1637dc2a5 cl-launch-1.74.ebuild 843
+RMD160 cbb9f0610426c7b0119bdb061324761135da3150 cl-launch-1.74.ebuild 843
+SHA256 01b32ef7efe52f9480ba515b9cf0a62d7f23993cdbed33ea4f58055c0682e6ef cl-launch-1.74.ebuild 843
 MD5 3d62afd4f80992c356b279c033de5e86 files/digest-cl-launch-1.69 67
 RMD160 55a3d31f9aab12f4a2120e10c8ba7f96bcf2ec4d files/digest-cl-launch-1.69 67
 SHA256 dc520f412df6aeb75a7f85d7c25e3ee2b6547b7befb498f75960053c613ef0ba files/digest-cl-launch-1.69 67
@@ -22,13 +25,16 @@ SHA256 5aa2f5fcdd1e765bd0200ed7dcf3c59368c78c30025a2aa5e2e1f35cf2acc27b files/di
 MD5 46996eeecfb7e76c9d6ae4b3cf7189ed files/digest-cl-launch-1.72 247
 RMD160 ba916c1057c8b5be9d62cb2d2a8df560fd52dbaf files/digest-cl-launch-1.72 247
 SHA256 37e1af5cf2ba9f4df136c751ccd27672ac0b0a91cff108919417ab526d861cfa files/digest-cl-launch-1.72 247
+MD5 f1784af4e4717353a248726b1905aea9 files/digest-cl-launch-1.74 241
+RMD160 a65981d8fc5fe1b2d639b902b6a9fd91cc10584e files/digest-cl-launch-1.74 241
+SHA256 e428b1f2cfbee1d115458e2e2d27ca4aaf2da368b677f287d8caeb5b465259be files/digest-cl-launch-1.74 241
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 RMD160 5edb79931b874dc3a72128f0742b9d4c4eb3c8c1 metadata.xml 164
 SHA256 f8efc9385015233c71f279f85bd0a327525b7136cf8714cc04449d8bea4ce22f metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEKtjQyiNZaEAZA+ARAjSZAJ4jsyyI5T9U+CpUjt8TWamQap2AVQCfXzTB
-kuSIr7lep9d9QGG5aZOjGvY=
-=j5Gk
+iD8DBQFETnpGyiNZaEAZA+ARAiJnAJ9p+TKOvzaovGrGiHmi0GkZCZ1wwgCfagDj
+F6fZUYMwAySA4IpLtWqQTFk=
+=QcdC
 -----END PGP SIGNATURE-----
