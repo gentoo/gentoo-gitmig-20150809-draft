@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.41 2006/04/24 23:58:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.42 2006/04/25 01:06:39 flameeyes Exp $
+
+  25 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libmpeg3-1.5.2-r3.ebuild:
+  Add patch to fix textrel/non-PIC aware code, thanks to PaX Team and solar.
 
   24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/libmpeg3-1.5.2-gnustack.patch, libmpeg3-1.5.2-r3.ebuild:
