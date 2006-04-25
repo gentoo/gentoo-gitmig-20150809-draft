@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.62 2006/04/24 22:01:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.63 2006/04/25 23:28:34 vapier Exp $
 
 cd /
 
@@ -198,7 +198,7 @@ parse_target() {
 		*-freebsd*)
 			TARCH="${TARCH}-fbsd"
 			LCAT="sys-freebsd" LPKG="freebsd-lib"
-			KCAT="sys-freebsd" KPKG="freebsd-headers"
+			KPKG="[none]"
 			;;
 	esac
 }
