@@ -1,32 +1,66 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ea97d52c05143c0804aab70b6d66b6d6 ChangeLog 4935
+MD5 9e10bb64973b4959ab2c676e373ff6e0 ChangeLog 5050
+RMD160 b78c426d419d804c461e429d11a5d8ed5b8fe626 ChangeLog 5050
+SHA256 e755e9429af47cd3e7fa6eaecdeec2e26c55acb066b9ec90c28542b294f53efd ChangeLog 5050
 MD5 1bbe55892586ddbce300e5abb134a681 files/010_glibc-2.4.patch 2628
+RMD160 77d35dec11624ef1b3ad84d72eb437068cbc9f0f files/010_glibc-2.4.patch 2628
+SHA256 5a64ffadb56c3c2316202e57ce82b6439c3037c6f4a5a1d4783d03173741e5cd files/010_glibc-2.4.patch 2628
 MD5 c927b56f320d1bacf28c49a7ee3c37ba files/digest-gecko-sdk-1.7.12 376
+RMD160 2c28a015e6908ace8c960809afabdc8a31cc49b4 files/digest-gecko-sdk-1.7.12 376
+SHA256 8c7db1b9a36b07b617aed3050165afc8bcc1c856d5b8720961d950a7680f7a54 files/digest-gecko-sdk-1.7.12 376
 MD5 19bfbff741d54e3b35b048ab445096ed files/digest-gecko-sdk-1.7.12-r1 232
+RMD160 cba7bc1163a211ff9418ad7a667521359641b4bd files/digest-gecko-sdk-1.7.12-r1 232
+SHA256 2bc495d7b73234cb2e180bb7bf07af4f57a50dcc7c4367af40be6c9aee3c8197 files/digest-gecko-sdk-1.7.12-r1 232
 MD5 4b010bb51265549b21d5bc1d77c25874 files/digest-gecko-sdk-1.7.12-r2 834
+RMD160 25360bfb65da9da05596fcd0ad11b222fbec3827 files/digest-gecko-sdk-1.7.12-r2 834
+SHA256 162ccb84299c4e0d9cefe821d721b4e0a02c7580af6fdf9d02e5670281e4a499 files/digest-gecko-sdk-1.7.12-r2 834
 MD5 2227c6dae40cd0ec4f7f1ba0ac7caf44 files/digest-gecko-sdk-1.7.13 834
+RMD160 8b693711a061e61d76a991946e34b15aef07d90c files/digest-gecko-sdk-1.7.13 834
+SHA256 1c367cae1c8840a55e3c44b4e9f3a320df6c79f41f7070e092b70df03e5dd740 files/digest-gecko-sdk-1.7.13 834
 MD5 be67106b98a3cc1562eee877200e6ae0 files/digest-gecko-sdk-1.7.8 280
+RMD160 bf8286e8441d0694359c22795348cbc62e190e1e files/digest-gecko-sdk-1.7.8 280
+SHA256 57b69d55c578f785af5f1ecf5d1cfd2ec949eba4c1575fa58325d23e4a556ed5 files/digest-gecko-sdk-1.7.8 280
 MD5 1f71cb3a30531a90fb7d1d3445588ba6 files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch 465
+RMD160 eb8d4e5bf83d3997dec93c1e51e4b4b02bdf064e files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch 465
+SHA256 e13fdd216f1746ff5c0e217c4f2e763f5b1c6393b54723ea35b5534044b30d9b files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch 465
 MD5 f7930e7f2cba691a9b6654b61ba1217e files/mozilla-1.7.12-libart-freetype.patch 2412
+RMD160 dfbe1717346ce27d9834d423d890e28fbc165a5f files/mozilla-1.7.12-libart-freetype.patch 2412
+SHA256 e0145b919750c0a0c418a1d905863f8b0c24bfb0d6947c92eecb512031b3b601 files/mozilla-1.7.12-libart-freetype.patch 2412
 MD5 a3ab6ae2213780c0e20c5b9aa8f018e9 files/mozilla-1.7.6-gcc4.patch 1818
+RMD160 7be7c0f39933dcad5c45909ef6099ad3a170d40e files/mozilla-1.7.6-gcc4.patch 1818
+SHA256 09bf6b2d51c27eccbf3b6c21aafb7f6263b723b3e526419f81a90db7bc203046 files/mozilla-1.7.6-gcc4.patch 1818
 MD5 b7c78ba7ca0c519d0f3d2b80ab4cdd74 files/mozilla-1.7.6-ppc64.patch 3651
+RMD160 312e41a02f755ded2ad9d4cb556899086b10b311 files/mozilla-1.7.6-ppc64.patch 3651
+SHA256 ef4731d5d2cd960591ae1358c3a15f245652485e91c7510bab381908134a18c0 files/mozilla-1.7.6-ppc64.patch 3651
 MD5 eb21396de389b3ef0277d5f95d59c348 files/mozilla-1.7.8-amd64.patch 4020
+RMD160 8233071590d4237288923dba664d7da62853b70c files/mozilla-1.7.8-amd64.patch 4020
+SHA256 d1244c42644ff428228e7dcfc6d9f9f7251bc9ca06172053e6456379fd73c824 files/mozilla-1.7.8-amd64.patch 4020
 MD5 5b22d0e1ea93923e3e66787c286ad86f files/mozilla-1.7.8-objectframefix.diff 673
+RMD160 746b76958538089eff6e05404237068006bda14e files/mozilla-1.7.8-objectframefix.diff 673
+SHA256 e222f935eb2e23c8ca4117dd4af4862579e8110c46534603bdcaff7b36568dfa files/mozilla-1.7.8-objectframefix.diff 673
 MD5 8f8d70da6eb8cf07acbbb85fb0f08636 files/mozilla-hppa.patch 7863
+RMD160 e45ff21ec6bb4a947c20f5ec9a7252375e91bff4 files/mozilla-hppa.patch 7863
+SHA256 5e407a6f34ad2eb9e49f2d15db373df05afcc52676469a4d8066f3536cca771b files/mozilla-hppa.patch 7863
 MD5 baddc2dbe81599d1575a4a4f95314377 files/mozilla-rebuild-databases.pl 2412
+RMD160 80162695b5a8a7bfff570f1e53c50a1728739ad7 files/mozilla-rebuild-databases.pl 2412
+SHA256 a186d81c1f1d9f98a0f5efad7793e75f919cad342f24617bde88154bee0557bd files/mozilla-rebuild-databases.pl 2412
 MD5 278524216669b594ea5b6468a180ed73 files/mozilla-stackgrowth.patch 931
+RMD160 c2b81d96f968e3cae36462bd4b567fe60b1a83e0 files/mozilla-stackgrowth.patch 931
+SHA256 80dcdfd2feda3ec59a715b59e86e54a6110ccac4ad499cfaa032151606682605 files/mozilla-stackgrowth.patch 931
 MD5 957bc911c21996313fe6f649558823f9 gecko-sdk-1.7.12-r1.ebuild 8011
+RMD160 a23d5901cc1da8dbfd63e040d1f7b76334d5f1a8 gecko-sdk-1.7.12-r1.ebuild 8011
+SHA256 12e5c4031a745d8261005f4e536b0e34b6d7e06e3e84726d75dee9e5e0d52b3c gecko-sdk-1.7.12-r1.ebuild 8011
 MD5 3eef55ccb55cccf3ae43696992e3166d gecko-sdk-1.7.12-r2.ebuild 8078
+RMD160 ad3aeca93d4b85db51364881a11bc12aaa2f9091 gecko-sdk-1.7.12-r2.ebuild 8078
+SHA256 b3dafccc3bac2f27125eaa2b4fc984943979add5d7b2ef97dfabce493cc77869 gecko-sdk-1.7.12-r2.ebuild 8078
 MD5 8b22525bd9a836743abec05930d9543f gecko-sdk-1.7.12.ebuild 6945
-MD5 d512c744f579ba1126af2c3398d0e691 gecko-sdk-1.7.13.ebuild 8012
+RMD160 1d7ca89e0be020b543c6a1577b0272500d503254 gecko-sdk-1.7.12.ebuild 6945
+SHA256 51384ed3c455252d3aa17116378981e403740d13426b0a52cadac4165d92004d gecko-sdk-1.7.12.ebuild 6945
+MD5 ecc35cac6773367a66f2165805330c68 gecko-sdk-1.7.13.ebuild 8011
+RMD160 e3e5ddc84936b030ffadd19f80d325f9c0a9ae4b gecko-sdk-1.7.13.ebuild 8011
+SHA256 e266916acde3573219cf0a2776349fe3fa7eae65865f0d7530b76def0ac193f6 gecko-sdk-1.7.13.ebuild 8011
 MD5 68e8f6854f38d88b6b6f0cd7ded9b721 gecko-sdk-1.7.8.ebuild 6838
+RMD160 b5fead0d34bc827981303460c644b5471f087d35 gecko-sdk-1.7.8.ebuild 6838
+SHA256 b90230af512768622e50b3004a602b1a1f6e2b6d158ab7df484526d7f52ee74a gecko-sdk-1.7.8.ebuild 6838
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFETUm+KRy60XGEcJIRAm5uAJ0SHgmWY7/vn4dtST/smRckQrrzLACff2DP
-t6AsVvHkAuGypsUFr4BIu1Q=
-=VEsH
------END PGP SIGNATURE-----
+RMD160 d5a9f0bf8989621c2bde30facb53bcae00aba709 metadata.xml 160
+SHA256 0cc5126362a12cee42ec1197c528a804cf36859329dd2c6d9225726831d14b8b metadata.xml 160
