@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-2.7-r3.ebuild,v 1.3 2005/06/21 00:12:24 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-2.7-r3.ebuild,v 1.4 2006/04/25 13:51:34 markusle Exp $
 
 inherit virtualx eutils
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="x86 amd64 ~ppc"
 IUSE="tcltk gtk ifc"
 
-DEPEND="virtual/x11
-	x11-libs/Xaw3d
+DEPEND="x11-libs/Xaw3d
 	sys-libs/ncurses
 	tcltk? ( dev-lang/tk )
 	x86? ( ifc? ( dev-lang/ifc ) )
