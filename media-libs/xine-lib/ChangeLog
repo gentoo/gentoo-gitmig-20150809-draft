@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.331 2006/04/24 09:20:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.332 2006/04/25 15:12:31 flameeyes Exp $
+
+*xine-lib-1.1.2_pre20060328-r2 (25 Apr 2006)
+
+  25 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +xine-lib-1.1.2_pre20060328-r2.ebuild:
+  Bump revision, to fix OSD horizontal lines (bug #131185) and finally bug
+  #112921.
 
   24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -xine-lib-1.1.1-r5.ebuild:
