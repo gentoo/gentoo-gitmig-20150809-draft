@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/esvn-0.6.11.ebuild,v 1.5 2006/04/25 06:24:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/esvn-0.6.11.ebuild,v 1.6 2006/04/25 06:25:44 mrness Exp $
 
 inherit kde-functions eutils
 
@@ -30,10 +30,6 @@ src_unpack() {
 		sed -i "s:/usr/share/doc/esvn/html-docs:/usr/share/doc/${PF}/html:" src/mainwindow.cpp || \
 			die "at least one sed has failed"
 }
-
-#src_compile() {
-#	emake || die "emake failed"
-#}
 
 src_install() {
 	make -f esvn.mak INSTALL_ROOT="${D}" install
