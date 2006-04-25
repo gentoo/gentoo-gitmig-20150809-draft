@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.0-r1.ebuild,v 1.1 2006/04/17 14:25:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.0-r1.ebuild,v 1.2 2006/04/25 01:29:45 flameeyes Exp $
 
 inherit eutils fixheadtails autotools
 
@@ -8,7 +8,8 @@ MY_P=${PN}core-${PV/_beta/-beta}
 DESCRIPTION="XviD, a high performance/quality MPEG-4 video de-/encoding solution"
 HOMEPAGE="http://www.xvid.org/"
 SRC_URI="http://downloads.xvid.org/downloads/${MY_P}.tar.bz2
-	mirror://gentoo/${PN}-1.1.0-noexec-stack.patch.bz2"
+	mirror://gentoo/${PN}-1.1.0-noexec-stack.patch.bz2
+	mirror://gentoo/${P}-textrel.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
@@ -28,6 +29,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-1.1.0_beta2-altivec.patch"
 	epatch "${WORKDIR}/${PN}-1.1.0-noexec-stack.patch"
 	epatch "${FILESDIR}/${P}-3dnow.patch"
+	epatch "${DISTDIR}/${P}-textrel.patch.bz2"
 
 	cd ${S}
 	eautoreconf
