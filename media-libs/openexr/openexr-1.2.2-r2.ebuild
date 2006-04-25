@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r2.ebuild,v 1.3 2006/04/14 10:39:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r2.ebuild,v 1.4 2006/04/25 01:41:10 flameeyes Exp $
 
 inherit eutils libtool
 
@@ -25,7 +25,9 @@ src_unpack() {
 	sed -i -e "s:OpenEXR-@OPENEXR_VERSION@:\$\(P\):" ${S}/IlmImfExamples/Makefile.in
 	sed -i -e "s:NVSDK_CXXFLAGS=\"\":NVSDK_CXXFLAGS=\"-DUNIX\":" ${S}/acinclude.m4
 
-	epatch ${FILESDIR}/openexr-1.2.2-gcc4.patch
+	epatch "${FILESDIR}/openexr-1.2.2-gcc4.patch"
+	# Replace the temporary directory used for tests
+	sed -i -e 's:"/var/tmp/":'"${T}"':' "${S}/IlmImfTest/tmpDir.h"
 
 	elibtoolize
 }
