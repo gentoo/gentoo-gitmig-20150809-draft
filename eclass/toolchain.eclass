@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.274 2006/04/25 00:24:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.275 2006/04/25 00:26:17 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -894,6 +894,16 @@ gcc-compiler_pkg_postrm() {
 			rm -f "${ROOT}"/usr/bin/${CTARGET}-{gcc,{g,c}++}{,32,64}
 		fi
 		return 0
+	fi
+
+	# If user is *uninstalling* the active version, we need to switch to
+	# a different version for them #130772
+	if [[ ! -e ${ROOT}/etc/env.d/${CTARGET}-${GCC_CONFIG_VER} ]] ; then
+		if has_version 'app-admin/eselect-compiler' ; then
+			do_eselect_compiler
+		else
+			do_gcc_config
+		fi
 	fi
 
 	# ROOT isnt handled by the script
@@ -2044,7 +2054,12 @@ do_gcc_config() {
 		use_specs=""
 	fi
 
-	gcc-config ${CTARGET}-${GCC_CONFIG_VER}${use_specs}
+	current_gcc_config="${CTARGET}-${GCC_CONFIG_VER}${use_specs}"
+	if [[ ! -e ${ROOT}/etc/env.d/gcc/${current_gcc_config} ]] ; then
+		# hrm let's try and pick something better
+		current_gcc_config=$(env -i gcc-config -l | grep ${CTARGET} | awk '{print $NF}' | head -n 1)
+	fi
+	gcc-config ${current_gcc_config}
 }
 
 should_we_eselect_compiler() {
