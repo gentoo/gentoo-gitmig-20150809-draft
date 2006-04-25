@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.13.ebuild,v 1.4 2006/04/25 15:00:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.13.ebuild,v 1.5 2006/04/25 18:33:32 dertobi123 Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -33,7 +33,7 @@ SRC_URI="http://ftp.${PN}.org/pub/${PN}.org/${PN}/releases/${PN}${MY_PV}/source/
 	mirror://gentoo/${P}-patches-${PVER}.tar.bz2
 	http://dev.gentoo.org/~anarchy/dist/${P}-patches-${PVER}.tar.bz2"
 
-KEYWORDS="alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ~ia64 ppc ~ppc64 sparc x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="crypt gnome java ldap mozcalendar mozdevelop moznocompose moznoirc moznomail mozsvg postgres ssl"
