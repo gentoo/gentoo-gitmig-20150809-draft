@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/crypt-dsa-0.13.ebuild,v 1.4 2006/01/31 22:29:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/crypt-dsa-0.13.ebuild,v 1.5 2006/04/25 00:53:27 tcort Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/B/BT/BTROTT/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha hppa ~mips ~ppc ~sparc x86"
+KEYWORDS="alpha ~amd64 hppa ~mips ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="dev-perl/data-buffer
