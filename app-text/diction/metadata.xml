@@ -3,6 +3,12 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-<email>maintainer-needed@gentoo.org</email>
+	<email>jnrowe@ukfsn.org</email>
+	<name>James Rowe</name>
+</maintainer>
+<maintainer>
+	<email>seemant@gentoo.org</email>
+	<name>Seemant Kulleen</name>
+	<description>Proxy maintainer for James</description>
 </maintainer>
 </pkgmetadata>
