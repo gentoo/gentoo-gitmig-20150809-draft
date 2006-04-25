@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-6.0-r1.ebuild,v 1.3 2006/04/19 00:28:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-6.0-r1.ebuild,v 1.4 2006/04/25 18:41:28 flameeyes Exp $
 
 inherit bsdmk freebsd
 
@@ -28,7 +28,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-${RV}-nowerror.patch"
 
 	[[ ${CHOST} != *-*bsd* || ${CHOST} == *-gnu ]] && \
-		sed -i -e 's:${INSTALL} -C:${INSTALL}:g' "${S}/"*
+		epatch "${FILESDIR}/${PN}-${RV}-gnu.patch"
 }
 
 src_compile() {

@@ -1,0 +1,78 @@
+Index: mk/bsd.incs.mk
+===================================================================
+--- mk.orig/bsd.incs.mk
++++ mk/bsd.incs.mk
+@@ -43,7 +43,7 @@ _${group}INS_${header:T}: ${header}
+ 	${INSTALL} -d -o ${${group}OWN_${.ALLSRC:T}} \
+ 	    -g ${${group}GRP_${.ALLSRC:T}} -m ${${group}MODE_${.ALLSRC:T}} \
+ 	    ${DESTDIR}${${group}DIR_${.ALLSRC:T}}/${${group}NAME_${.ALLSRC:T}}
+-	${INSTALL} -C -o ${${group}OWN_${.ALLSRC:T}} \
++	${INSTALL} -o ${${group}OWN_${.ALLSRC:T}} \
+ 	    -g ${${group}GRP_${.ALLSRC:T}} -m ${${group}MODE_${.ALLSRC:T}} \
+ 	    ${.ALLSRC} \
+ 	    ${DESTDIR}${${group}DIR_${.ALLSRC:T}}/${${group}NAME_${.ALLSRC:T}}
+@@ -56,11 +56,11 @@ installincludes: _${group}INS
+ _${group}INS: ${_${group}INCS}
+ .if defined(${group}NAME)
+ 	${INSTALL} -d ${DESTDIR}${${group}DIR}
+-	${INSTALL} -C -o ${${group}OWN} -g ${${group}GRP} -m ${${group}MODE} \
++	${INSTALL} -o ${${group}OWN} -g ${${group}GRP} -m ${${group}MODE} \
+ 	    ${.ALLSRC} ${DESTDIR}${${group}DIR}/${${group}NAME}
+ .else
+ 	${INSTALL} -d ${DESTDIR}${${group}DIR}
+-	${INSTALL} -C -o ${${group}OWN} -g ${${group}GRP} -m ${${group}MODE} \
++	${INSTALL} -o ${${group}OWN} -g ${${group}GRP} -m ${${group}MODE} \
+ 	    ${.ALLSRC} ${DESTDIR}${${group}DIR}
+ .endif
+ .endif
+Index: mk/bsd.lib.mk
+===================================================================
+--- mk.orig/bsd.lib.mk
++++ mk/bsd.lib.mk
+@@ -183,13 +183,6 @@ _EXTRADEPEND:
+ 
+ .if !target(install)
+ 
+-.if defined(PRECIOUSLIB)
+-.if !defined(NO_FSCHG)
+-SHLINSTALLFLAGS+= -fschg
+-.endif
+-SHLINSTALLFLAGS+= -S
+-.endif
+-
+ _INSTALLFLAGS:=	${INSTALLFLAGS}
+ .for ie in ${INSTALLFLAGS_EDIT}
+ _INSTALLFLAGS:=	${_INSTALLFLAGS${ie}}
+@@ -205,12 +198,12 @@ realinstall: _libinstall
+ _libinstall:
+ .if defined(LIB) && !empty(LIB) && !defined(NO_INSTALLLIB)
+ 	${INSTALL} -d ${DESTDIR}${LIBDIR}
+-	${INSTALL} -C -o ${LIBOWN} -g ${LIBGRP} -m ${LIBMODE} \
++	${INSTALL} -o ${LIBOWN} -g ${LIBGRP} -m ${LIBMODE} \
+ 	    ${_INSTALLFLAGS} lib${LIB}.a ${DESTDIR}${LIBDIR}
+ .endif
+ .if !defined(NO_PROFILE) && defined(LIB) && !empty(LIB)
+ 	${INSTALL} -d ${DESTDIR}${LIBDIR}
+-	${INSTALL} -C -o ${LIBOWN} -g ${LIBGRP} -m ${LIBMODE} \
++	${INSTALL} -o ${LIBOWN} -g ${LIBGRP} -m ${LIBMODE} \
+ 	    ${_INSTALLFLAGS} lib${LIB}_p.a ${DESTDIR}${LIBDIR}
+ .endif
+ .if defined(SHLIB_NAME)
+Index: mk/bsd.prog.mk
+===================================================================
+--- mk.orig/bsd.prog.mk
++++ mk/bsd.prog.mk
+@@ -111,13 +111,6 @@ _EXTRADEPEND:
+ 
+ .if !target(install)
+ 
+-.if defined(PRECIOUSPROG)
+-.if !defined(NO_FSCHG)
+-INSTALLFLAGS+= -fschg
+-.endif
+-INSTALLFLAGS+= -S
+-.endif
+-
+ _INSTALLFLAGS:=	${INSTALLFLAGS}
+ .for ie in ${INSTALLFLAGS_EDIT}
+ _INSTALLFLAGS:=	${_INSTALLFLAGS${ie}}
