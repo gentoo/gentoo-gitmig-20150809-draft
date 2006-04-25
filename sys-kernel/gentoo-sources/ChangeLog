@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.269 2006/04/23 01:30:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.270 2006/04/25 17:12:05 dsd Exp $
+
+*gentoo-sources-2.6.16-r4 (25 Apr 2006)
+
+  25 Apr 2006; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.16-r4.ebuild:
+  Update to Linux 2.6.16.11. Fix boot when CONFIG_TIPAR=y (#128852). Add
+  IPW2200 monitor mode config option (#131017).
 
   23 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   gentoo-sources-2.6.16-r3.ebuild:
