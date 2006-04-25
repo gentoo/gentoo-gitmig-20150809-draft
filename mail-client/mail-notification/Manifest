@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4bce2baab4a3b7a4ad14c4f9753583ab ChangeLog 5696
-RMD160 bf3ccbea105cbbcd38ac5ec8397b45594e0899fb ChangeLog 5696
-SHA256 42c9a02442e262fb7b4e22763c2fedcb10f5a9b39ce251c34eced5169643c52f ChangeLog 5696
+MD5 c2969381e8f32596890718347b9155df ChangeLog 5838
+RMD160 8c0c97e8cb0e69c6ee13098d7fc0656e36ac8de8 ChangeLog 5838
+SHA256 92e7dc4f02d9e43bc9d4df88cc1a8797fedfb1d03efacfd9b6b4807a5fca0951 ChangeLog 5838
 MD5 4f3f62c7c6d7b58791bba1c52b9dcc52 files/digest-mail-notification-0.8.1 75
 RMD160 8b78eab849b15135c34ced1d79db5ed62879acfc files/digest-mail-notification-0.8.1 75
 SHA256 dfa76ffa3b4f494e8269af1d99ba4623d711b701002c27b97654ecfed53f7d22 files/digest-mail-notification-0.8.1 75
@@ -37,16 +37,16 @@ SHA256 abc2ab321f9c4837865832fa15b68f0715f22b27129dcb5caf5678c01f28e45b mail-not
 MD5 4ec34f3718248e51520bb199155a10aa mail-notification-1.1.ebuild 1814
 RMD160 f624800bafed0197af056f47bed8486c14e6df24 mail-notification-1.1.ebuild 1814
 SHA256 fed80ef505695252856a8c64d44e79799ca7b3fa714d4c08fd52fc84b90cd072 mail-notification-1.1.ebuild 1814
-MD5 846358e1080add0128ec5106a8b966d1 mail-notification-2.0.ebuild 2665
-RMD160 df673e32bb158ae2f817ff88a829f76329adf3bb mail-notification-2.0.ebuild 2665
-SHA256 ad0fa303a7f7a8c3ccb9b3d13146e4b80bdf5d9bf8ea44210fe737dd75f040d6 mail-notification-2.0.ebuild 2665
+MD5 7da83d1f605e24ca2a82a50f2a7c8c35 mail-notification-2.0.ebuild 2632
+RMD160 c76a4feaf3073d4db83467c685d410aa993d454d mail-notification-2.0.ebuild 2632
+SHA256 817d54807e9161398dc626c253393e916f51a3e77769f3550727bec8eae100bd mail-notification-2.0.ebuild 2632
 MD5 5d240c2111a6535d744ec8bbc7cc692c metadata.xml 249
 RMD160 dce0c80c556a885e8059693e236acc50c67e7163 metadata.xml 249
 SHA256 e7a2ee2e040e05b0780ea52daab475449bd2e93e9aaef741b65a7eb9cf33b4c5 metadata.xml 249
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEOqZmCHk4+ZoBpvsRAj4yAKC37ACaEeTXqgk7sApQZlg+cAK8dACdFCFG
-SOxtlI5SVx8ghjRzdUobCho=
-=RYFw
+iD8DBQFETlS3CHk4+ZoBpvsRAr2qAKCaq72zycDH8HQYwV0+fuSZGtm/vQCdFW8b
+FlIUVc6rVWrOv5wLLFVK+RQ=
+=eF+N
 -----END PGP SIGNATURE-----

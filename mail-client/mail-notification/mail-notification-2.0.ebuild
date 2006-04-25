@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-2.0.ebuild,v 1.7 2006/04/10 17:39:19 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-2.0.ebuild,v 1.8 2006/04/25 16:53:00 slarti Exp $
 
 inherit eutils gnome2 multilib flag-o-matic versionator
 
@@ -36,8 +36,7 @@ DEPEND=">=x11-libs/gtk+-2.6
 pkg_setup() {
 	if use evolution ; then
 		EVO_INSTALLED="$(best_version mail-client/evolution)"
-		EVO_VERSION=${EVO_INSTALLED##*-}
-		EVO_VERSION=$(get_version_component_range 1-2 ${EVO_VERSION})
+		EVO_VERSION=$(get_version_component_range 1-2 ${EVO_INSTALLED})
 	fi
 
 	G2CONF="${G2CONF} $(use_enable ssl)"
