@@ -1,14 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d54b479fc1ee28dfe203bf2fc9b33d4e ChangeLog 1574
-MD5 6d92d497890a4eacbe53634da85f6b15 esvn-0.6.11.ebuild 989
+MD5 f683b82b2db9873b5d6d71790b83734f ChangeLog 1752
+MD5 58f2f29bb571281aaeacbe962c0f2cc3 esvn-0.6.11.ebuild 1021
 MD5 60ddcbe9222651f7b01134bb1d48cca7 files/digest-esvn-0.6.11 66
+MD5 db796caa4b47ed9af47a7c8701b109ac files/esvn-0.6.11-include-cmd_lineedit.patch 298
 MD5 5082a7fd5f87d44ac35fc01a046116c0 metadata.xml 331
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDvobWjG8pv1lIUX4RAhZOAKDO3flYY6hhcv+dhmCmu2iaM0nXugCgkV0h
-xv8jDxku/2mt2DsWvg0PDMs=
-=/Cvn
+iD8DBQFETcCsjG8pv1lIUX4RAo0EAKDFOXB6CfHLppDZg7JB0FiEIV/IEwCg5wS3
+mlu+IwYo17fPYwPDBvqDBBg=
+=X86U
 -----END PGP SIGNATURE-----

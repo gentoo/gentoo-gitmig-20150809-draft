@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/esvn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/ChangeLog,v 1.11 2006/01/06 15:03:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/ChangeLog,v 1.12 2006/04/25 06:24:28 mrness Exp $
+
+  25 Apr 2006; Alin Nastac <mrness@gentoo.org>
+  +files/esvn-0.6.11-include-cmd_lineedit.patch, esvn-0.6.11.ebuild:
+  Fix compilation error when build using qt-3.3.6 (#130386).
 
   06 Jan 2006; Alin Nastac <mrness@gentoo.org> esvn-0.6.11.ebuild:
   Stable on x86.

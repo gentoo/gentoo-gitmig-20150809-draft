@@ -1,0 +1,10 @@
+--- .ui/frm_main.ui.orig	2006-04-24 13:22:25.000000000 +0200
++++ .ui/frm_main.ui	2006-04-24 13:22:47.000000000 +0200
+@@ -3006,7 +3006,4 @@
+ </slots>
+ <pixmapinproject/>
+ <layoutdefaults spacing="1" margin="1"/>
+-<includehints>
+-    <includehint>cmd_lineedit.h</includehint>
+-</includehints>
+ </UI>

@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/esvn-0.6.11.ebuild,v 1.4 2006/01/06 15:03:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/esvn-0.6.11.ebuild,v 1.5 2006/04/25 06:24:28 mrness Exp $
 
-inherit kde-functions
+inherit kde-functions eutils
 
 MY_P="${P}-1"
 DESCRIPTION="GUI frontend to the Subversion revision system"
@@ -22,18 +22,21 @@ need-qt 3
 S="${WORKDIR}/${PN}"
 
 src_unpack() {
-	unpack ${A} || die "failed to unpack sources"
-	sed -i "s:qmake:${QTDIR}/bin/qmake:" ${S}/Makefile && \
-		sed -i "s:/usr/share/doc/esvn/html-docs:/usr/share/doc/${PF}/html:" "${S}/src/mainwindow.cpp" || \
+	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-include-cmd_lineedit.patch"
+	sed -i "s:qmake:${QTDIR}/bin/qmake:" Makefile && \
+		sed -i "s:/usr/share/doc/esvn/html-docs:/usr/share/doc/${PF}/html:" src/mainwindow.cpp || \
 			die "at least one sed has failed"
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
+#src_compile() {
+#	emake || die "emake failed"
+#}
 
 src_install() {
-	make -f esvn.mak INSTALL_ROOT=${D} install
+	make -f esvn.mak INSTALL_ROOT="${D}" install
 	dobin esvn esvn-diff-wrapper
 
 	dodoc AUTHORS ChangeLog README
