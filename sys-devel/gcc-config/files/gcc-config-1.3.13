@@ -1,12 +1,13 @@
 #!/bin/bash
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.13,v 1.6 2006/04/21 23:50:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.13,v 1.7 2006/04/25 00:20:17 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
+argv0=${0##*/}
 source /sbin/functions.sh || {
-	echo "$0: Could not source /sbin/functions.sh!"
+	echo "${argv0}: Could not source /sbin/functions.sh!"
 	exit 1
 }
 umask 022
@@ -116,10 +117,10 @@ get_real_chost() {
 	fi
 
 	if [[ -z ${REAL_CHOST} ]] ; then
-		eerror "$0: Could not get portage CHOST!"
-		eerror "$0: You should verify that CHOST is set in one of these places:"
-		eerror "$0:  - ${ROOT}/etc/make.conf"
-		eerror "$0:  - active environment"
+		eerror "${argv0}: Could not get portage CHOST!"
+		eerror "${argv0}: You should verify that CHOST is set in one of these places:"
+		eerror "${argv0}:  - ${ROOT}/etc/make.conf"
+		eerror "${argv0}:  - active environment"
 		exit 1
 	fi
 }
@@ -136,7 +137,7 @@ switch_profile() {
 	local GCC_BIN_PATH=
 
 	if [[ "$(id -u)" -ne 0 ]] ; then
-		eerror "$0: Must be root."
+		eerror "${argv0}: Must be root."
 		exit 1
 	fi
 
@@ -345,14 +346,17 @@ get_current_profile() {
 	fi
 
 	if [[ ! -f ${conf} ]] ; then
-		eerror "$0: No gcc profile is active!"
+		eerror "${argv0}: No gcc profile is active!"
 		return 1
 	fi
 
 	source "${conf}"
 
 	if [[ -z ${CURRENT} ]] ; then
-		eerror "$0: No gcc profile is active!"
+		eerror "${argv0}: No gcc profile is active!"
+		return 1
+	elif [[ ! -f ${GCC_ENV_D}/${CURRENT} ]] ; then
+		eerror "${argv0}: Active gcc profile is invalid!"
 		return 1
 	fi
 
@@ -369,7 +373,7 @@ list_profiles() {
 	fi
 
 	if [[ ! -f ${GCC_ENV_D}/config ]] ; then
-		eerror "$0: No gcc profile is active; please select one!"
+		eerror "${argv0}: No gcc profile is active; please select one!"
 	fi
 
 	eval $(grep -s ^CURRENT= "${GCC_ENV_D}"/config)
@@ -595,7 +599,7 @@ for x in "$@" ; do
 			exit 0
 			;;
 		-*)
-			eerror "$0: Invalid switch!  Run $0 without parameters for help."
+			eerror "${argv0}: Invalid switch!  Run ${argv0} without parameters for help."
 			exit 1
 			;;
 		*)
@@ -624,14 +628,14 @@ for x in "$@" ; do
 						if [[ -f ${GCC_ENV_D}/${REAL_CHOST}-${x} ]] ; then
 							x=${REAL_CHOST}-${x}
 						else
-							eerror "$0: Could not locate '$x' in '${GCC_ENV_D}/' !"
+							eerror "${argv0}: Could not locate '$x' in '${GCC_ENV_D}/' !"
 							exit 1
 						fi
 					fi
 					CC_COMP=${x}
 				fi
 			else
-				eerror "$0: Too many arguments!  Run $0 without parameters for help."
+				eerror "${argv0}: Too many arguments!  Run ${argv0} without parameters for help."
 				exit 1
 			fi
 			;;
@@ -645,9 +649,9 @@ fi
 cmd_setup
 
 if [[ -z ${CC_COMP} ]] ; then
-	if get_current_profile &>/dev/null ; then
-		CC_COMP="$(get_current_profile)"
-	else
+	CC_COMP=$(get_current_profile)
+	if [[ $? -ne 0 ]] ; then
+		echo "${CC_COMP}"
 		list_profiles
 		exit 1
 	fi
@@ -669,7 +673,7 @@ if [[ ${DOIT} != "get_current_profile" ]] ; then
 	if [[ ! -d ${ROOT}/${GCC_LIB}/${CC_COMP_TARGET}/${CC_COMP_VERSION} ]] || \
 	   [[ ! -f ${GCC_ENV_D}/${CC_COMP} ]]
 	then
-		eerror "$0: Profile does not exist or invalid setting for ${GCC_ENV_D}/${CC_COMP}" 1>&2
+		eerror "${argv0}: Profile does not exist or invalid setting for ${GCC_ENV_D}/${CC_COMP}" 1>&2
 		#exit 1
 	fi
 fi
