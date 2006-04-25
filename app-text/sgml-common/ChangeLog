@@ -1,10 +1,14 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.35 2006/04/05 19:27:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.36 2006/04/25 18:35:22 grobian Exp $
+
+  25 Apr 2006; Fabian Groffen <grobian@gentoo.org>
+  sgml-common-0.6.3-r5.ebuild:
+  Removed ~ppc-macos as it doesn't eautoreconf (bug #131248)
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   files/sgml-common-0.6.3-install-catalog.in, sgml-common-0.6.3-r5.ebuild:
-  Change the installer script to use /bin/bash instead of /bin/sh as it users
+  Change the installer script to use /bin/bash instead of /bin/sh as it uses
   bash-specific syntax, and mark ~x86-fbsd.
 
   26 Mar 2006; Alexandre Buisse <nattfodd@gentoo.org>

@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 11ffbde0cef23ea2e0eae095c899ae76 ChangeLog 5383
-RMD160 3a6822674543a56a125bf8c2df5f69cde6bbec49 ChangeLog 5383
-SHA256 ed3ad195cc8c87c25ca02da6b23888d7567cba52d90610e70564c6dacb2051ba ChangeLog 5383
+MD5 1a0bf6597d9a35cea3e90207c84941e3 ChangeLog 5524
+RMD160 3d75a79afe16f13af4e48daa655d38ec6e6d9364 ChangeLog 5524
+SHA256 f59679c92babd3aa9910b83bed74304205e4b7de555320c992335cec3e6b0a59 ChangeLog 5524
 MD5 ed80d3150b7151b2db464cac2220e87b files/digest-sgml-common-0.6.3-r4 241
 RMD160 31bebdffb57759155f94d90653e17956f8e30654 files/digest-sgml-common-0.6.3-r4 241
 SHA256 32c78d10e852b45bba816c390d7ed87d87754ca91cad13a2946f717a6c22daca files/digest-sgml-common-0.6.3-r4 241
@@ -22,13 +19,6 @@ SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata
 MD5 7991f940485ba5e1687d7e42c121bb29 sgml-common-0.6.3-r4.ebuild 1997
 RMD160 a0b67262bb01dfff67c35e45ee6d341b3ca706db sgml-common-0.6.3-r4.ebuild 1997
 SHA256 08553153140a8cd48399433ec9955fcee77c14a4ef2fb9556251b857c5afbb57 sgml-common-0.6.3-r4.ebuild 1997
-MD5 428de3eabcf9d640bbadd9f09ff3d29b sgml-common-0.6.3-r5.ebuild 2065
-RMD160 77c3f2529880a7d2cd8f2a2b7e4a1289e8ef7a6b sgml-common-0.6.3-r5.ebuild 2065
-SHA256 8361a0b3b81fabba4dc593fb5d325bcb8976448fa3fb7e10e3ffc9a5eb5df812 sgml-common-0.6.3-r5.ebuild 2065
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENBmZAiZjviIA2XgRAnUYAJ0ZvgV+EGNwTFulea20Wnx6pkZQ9QCgi7kR
-yI5spi1wpqqZItt/vimQyh4=
-=/FfC
------END PGP SIGNATURE-----
+MD5 770f1603a1b544f564a822db5d819276 sgml-common-0.6.3-r5.ebuild 2052
+RMD160 05e4ead3fd458f4ce257417e5fa83c39e693f600 sgml-common-0.6.3-r5.ebuild 2052
+SHA256 c878ea570ab9865d88909787626920ab85de9c9bc91af2403cbde9c2d74536e2 sgml-common-0.6.3-r5.ebuild 2052
