@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.233 2006/04/19 03:53:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.234 2006/04/25 15:47:30 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -901,6 +901,7 @@ Name=${name}
 Type=Application
 Comment=${DESCRIPTION}
 Exec=${exec}
+TryExec=${exec}
 Path=${path}
 Icon=${icon}
 Categories=Application;${type};" > "${desktop}"
