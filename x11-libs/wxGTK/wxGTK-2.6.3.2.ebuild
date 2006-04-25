@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.2.ebuild,v 1.2 2006/04/14 06:15:58 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.2.ebuild,v 1.3 2006/04/25 18:19:32 halcy0n Exp $
 
-inherit wxlib gnuconfig versionator
+inherit wxlib gnuconfig versionator flag-o-matic
 
 HTML_PV="$(get_version_component_range 1-3)"
 DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit and
