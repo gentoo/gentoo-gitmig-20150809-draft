@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.0-r2.ebuild,v 1.2 2006/04/25 18:49:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.0-r2.ebuild,v 1.3 2006/04/25 19:55:42 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -119,11 +119,14 @@ src_compile() {
 		export YACC='yacc -by'
 		CHOST=${CTARGET} tc-export CC LD CXX
 
+		local machine
+		machine=$(tc-arch-kernel ${CTARGET})
+
 		local csudir
-		if [[ -d "${S}/csu/$(tc-arch-kernel ${CTARGET})-elf" ]]; then
-			csudir="${S}/csu/$(tc-arch-kernel ${CTARGET})-elf"
+		if [[ -d "${S}/csu/${machine}-elf" ]]; then
+			csudir="${S}/csu/${machine}-elf"
 		else
-			csudir="${S}/csu/$(tc-arch-kernel ${CTARGET})"
+			csudir="${S}/csu/${machine}"
 		fi
 		cd "${csudir}"
 		$(freebsd_get_bmake) ${mymakeopts} || die "make csu failed"
@@ -132,6 +135,10 @@ src_compile() {
 		append-flags "-B ${csudir}"
 		append-ldflags "-B ${csudir}"
 		cd "${S}/libc"
+		$(freebsd_get_bmake) ${mymakeopts} || die "make libc failed"
+
+		append-flags "-isystem ${WORKDIR}/lib/msun/${machine/i386/i387}"
+		cd "${S}/msun"
 		$(freebsd_get_bmake) ${mymakeopts} || die "make libc failed"
 	else
 		cd "${S}"
@@ -174,6 +181,11 @@ src_install() {
 
 		cd "${S}/libc"
 		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
+			SHLIBDIR="/usr/${CTARGET}/lib" LIBDIR="/usr/${CTARGET}/lib" || die "Install failed"
+
+		cd "${S}/msun"
+		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
+			INCLUDEDIR="/usr/${CTARGET}/include" \
 			SHLIBDIR="/usr/${CTARGET}/lib" LIBDIR="/usr/${CTARGET}/lib" || die "Install failed"
 	else
 		cd "${S}"
