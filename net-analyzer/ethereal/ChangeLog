@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.171 2006/04/15 16:36:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.172 2006/04/25 13:06:54 dragonheart Exp $
+
+*ethereal-0.99.0 (25 Apr 2006)
+
+  25 Apr 2006; Daniel Black <dragonheart@gentoo.org>
+  -files/ethereal-0.10.13-fix-irc-loop-DoS-CVE-2005-3313.diff,
+  -files/ethereal-0.10.13-packet-ospf.diff, -ethereal-0.10.13-r2.ebuild,
+  +ethereal-0.99.0.ebuild:
+  version bump - multiple vulnerabilities in protocol dissectors - bug
+  #130505. remove older version
 
   15 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/ethereal-0.10.14-asneeded.patch, ethereal-0.10.14-r1.ebuild:
