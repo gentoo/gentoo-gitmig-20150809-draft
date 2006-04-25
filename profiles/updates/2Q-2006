@@ -4,3 +4,4 @@ move games-simulation/bcsdemo games-simulation/bcs-demo
 move media-libs/alut media-libs/freealut
 move games-strategy/dominions2-demo-bin games-strategy/dominions2-demo
 move dev-libs/pam_pkcs11 sys-auth/pam_pkcs11
+move app-cdr/kio_burn app-cdr/konqburn
