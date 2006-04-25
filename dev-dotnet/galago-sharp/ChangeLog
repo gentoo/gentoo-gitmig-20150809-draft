@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/galago-sharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/ChangeLog,v 1.4 2006/02/13 20:12:37 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/ChangeLog,v 1.5 2006/04/25 14:50:36 dertobi123 Exp $
+
+  25 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  galago-sharp-0.3.2.ebuild:
+  Added to ~ppc, bug #131179
 
   13 Feb 2006; Luis Medinas <metalgod@gentoo.org> galago-sharp-0.3.2.ebuild:
   Added ~amd64 keyword.

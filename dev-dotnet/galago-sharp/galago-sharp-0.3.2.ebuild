@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/galago-sharp-0.3.2.ebuild,v 1.4 2006/02/13 20:12:37 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/galago-sharp-0.3.2.ebuild,v 1.5 2006/04/25 14:50:36 dertobi123 Exp $
 
 inherit eutils mono
 
@@ -10,7 +10,7 @@ SRC_URI="http://galago-project.org/files/releases/source/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-0.9.6
