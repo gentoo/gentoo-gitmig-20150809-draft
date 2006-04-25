@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.0.6-r3.ebuild,v 1.5 2006/03/29 01:55:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.0.6-r3.ebuild,v 1.6 2006/04/25 16:24:55 lu_zero Exp $
 
 # I think you want CONFIG_BRIDGE in your kernel to use this ;)
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ia64 ~ppc x86"
+KEYWORDS="amd64 ia64 ppc x86"
 
 src_unpack() {
 	unpack ${A}
