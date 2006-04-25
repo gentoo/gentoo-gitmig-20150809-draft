@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/angrydd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/angrydd/ChangeLog,v 1.3 2006/04/24 19:44:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/angrydd/ChangeLog,v 1.4 2006/04/25 15:57:57 wolf31o2 Exp $
+
+  25 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> angrydd-1.0.1.ebuild:
+  Added patch to clean up .desktop entry and closing bug #130953.
 
   24 Apr 2006; Joseph Jezak <josejx@gentoo.org> angrydd-1.0.1.ebuild:
   Marked ~ppc.
