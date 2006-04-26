@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.5 2006/04/01 14:42:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.6 2006/04/26 00:00:29 marienz Exp $
+
+  26 Apr 2006; Marien Zwart <marienz@gentoo.org> -axiom-0.3.0.ebuild,
+  axiom-0.4.0.ebuild:
+  Increase minimum required sqlite version, drop old ebuild.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> axiom-0.4.0.ebuild:
   Mark 0.4.0 ~ia64
