@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.16 2006/04/25 02:48:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.17 2006/04/26 05:13:12 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -27,7 +27,7 @@ GLIBC_MANPAGE_VERSION="none"
 GLIBC_INFOPAGE_VERSION="none"
 
 # Gentoo patchset
-PATCH_VER="1.7"
+PATCH_VER="1.8"
 
 # Fedora addons (like c_stubs)
 # sniped from RHEL's glibc-2.4-4.src.rpm
@@ -40,6 +40,11 @@ FEDORA_URI="mirror://gentoo/${FEDORA_TARBALL}"
 PPC_CPU_ADDON_VER="0.01"
 PPC_CPU_ADDON_TARBALL="glibc-powerpc-cpu-addon-v${PPC_CPU_ADDON_VER}.tgz"
 PPC_CPU_ADDON_URI="http://penguinppc.org/dev/glibc/${PPC_CPU_ADDON_TARBALL}"
+
+# LinuxThreads addon
+LT_VER="" #20060501
+LT_TARBALL="glibc-linuxthreads-${LT_VER}.tar.bz2"
+LT_URI="ftp://sources.redhat.com/pub/glibc/snapshots/${LT_TARBALL}"
 
 GENTOO_TOOLCHAIN_BASE_URI="mirror://gentoo"
 GENTOO_TOOLCHAIN_DEV_URI="http://dev.gentoo.org/~azarah/glibc/XXX http://dev.gentoo.org/~vapier/dist/XXX"
@@ -153,6 +158,8 @@ get_glibc_src_uri() {
 			${GENTOO_TOOLCHAIN_BASE_URI}/glibc-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
 			${GENTOO_TOOLCHAIN_DEV_URI//XXX/glibc-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2}"
 	fi
+
+	[[ -n ${LT_SNAP} ]] && GLIBC_SRC_URI="${GLIBC_SRC_URI} ${LT_URI}"
 
 	GLIBC_SRC_URI="${GLIBC_SRC_URI} ${FEDORA_URI}"
 	GLIBC_SRC_URI="${GLIBC_SRC_URI} ${PPC_CPU_ADDON_URI}"
@@ -430,7 +437,6 @@ toolchain-glibc_src_install() {
 	fi
 
 	# Everything past this point just needs to be done once ...
-	# don't waste time building locale files twice ...
 	is_final_abi || return 0
 
 	# Make sure the non-native interp can be found on multilib systems
@@ -462,6 +468,15 @@ toolchain-glibc_src_install() {
 	doman *.[0-8]
 	insinto /etc
 	doins locale.gen || die
+
+	# Make sure all the ABI's can find the locales and so we only
+	# have to generate one set
+	keepdir /usr/$(get_libdir)/locale
+	for l in $(get_all_libdirs) ; do
+		if [[ ! -e ${D}/usr/${l}/locale ]] ; then
+			dosym /usr/$(get_libdir)/locale /usr/${l}/locale
+		fi
+	done
 
 	if ! has noinfo ${FEATURES} && [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
 		einfo "Installing info pages..."
@@ -1087,9 +1102,6 @@ pkg_setup() {
 
 src_unpack() {
 	setup_env
-
-	# Optimized amd64 funcs appear to be unstable, enable at your own risk !
-	GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 6905_all_glibc-2.4-amd64-string.patch"
 
 	toolchain-glibc_src_unpack
 
