@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.61 2006/04/25 18:02:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.62 2006/04/26 09:02:30 flameeyes Exp $
+
+  26 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> xvid-1.1.0-r1.ebuild:
+  Fix patch naming, thanks to Nick Hadaway in bug #131298.
 
   25 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> xvid-1.1.0-r1.ebuild:
   Update patch for xvid from PaX Team.

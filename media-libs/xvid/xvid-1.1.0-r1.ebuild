@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.0-r1.ebuild,v 1.3 2006/04/25 18:02:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.0-r1.ebuild,v 1.4 2006/04/26 09:02:30 flameeyes Exp $
 
 inherit eutils fixheadtails autotools
 
@@ -29,7 +29,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-1.1.0_beta2-altivec.patch"
 	epatch "${WORKDIR}/${PN}-1.1.0-noexec-stack.patch"
 	epatch "${FILESDIR}/${P}-3dnow.patch"
-	epatch "${DISTDIR}/${P}-textrel.patch.bz2"
+	epatch "${DISTDIR}/${P}-textrel-2.patch.bz2"
 
 	cd ${S}
 	eautoreconf
