@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1871 2006/04/24 20:20:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1872 2006/04/26 22:39:30 tupone Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -461,6 +461,7 @@ dev-util/svk:patch - Enable patch creation, import support
 dev-util/svk:svn-mirror - Enable SVN-Mirror support
 games-action/xshipwars:yiff - Add support for the YIFF sound server
 games-arcade/bomns:editor - enables building the level editor
+games-arcade/stepmania:force-oss - force using OSS
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
 games-emulation/mupen64-glN64:asm - Enable use of asm routines to improve performance
