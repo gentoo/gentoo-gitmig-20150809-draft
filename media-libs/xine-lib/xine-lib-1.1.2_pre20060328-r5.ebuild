@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328-r5.ebuild,v 1.1 2006/04/26 16:32:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328-r5.ebuild,v 1.2 2006/04/26 17:42:13 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -18,7 +18,7 @@ else
 	SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 fi
 
-PATCHLEVEL="37"
+PATCHLEVEL="38"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
