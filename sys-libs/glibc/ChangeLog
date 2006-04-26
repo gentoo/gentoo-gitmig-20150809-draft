@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.444 2006/04/25 15:45:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.445 2006/04/26 19:08:16 iluxa Exp $
+
+  26 Apr 2006; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  glibc-2.3.6.ebuild, glibc-2.3.6-r1.ebuild, glibc-2.3.6-r2.ebuild,
+  glibc-2.3.6-r3.ebuild:
+  replace "portageq has_version" with "has_version" to make paludis with
+  root!=/ happy
 
   25 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> glibc-2.3.6-r3.ebuild:
   Stable on sparc

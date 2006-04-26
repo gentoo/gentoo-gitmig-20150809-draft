@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r3.ebuild,v 1.12 2006/04/26 05:41:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r3.ebuild,v 1.13 2006/04/26 19:08:16 iluxa Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -1089,8 +1089,8 @@ else
 fi
 
 pkg_setup() {
-	if portageq has_version / '>=sys-libs/glibc-2.3.5.20050201' && \
-	   portageq	has_version / '<sys-libs/glibc-2.3.6' ; then
+	if has_version '>=sys-libs/glibc-2.3.5.20050201' && \
+	   has_version '<sys-libs/glibc-2.3.6' ; then
 		eerror "Portage have a serious bug in regards to symlinks, and merging"
 		eerror "this with current versions will fail!  See:"
 		echo
