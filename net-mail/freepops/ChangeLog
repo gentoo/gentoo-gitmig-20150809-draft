@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/freepops
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.22 2006/03/03 15:41:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.23 2006/04/26 02:33:15 dragonheart Exp $
+
+*freepops-0.0.98 (26 Apr 2006)
+
+  26 Apr 2006; Daniel Black <dragonheart@gentoo.org>
+  +freepops-0.0.98.ebuild:
+  version bump as per bug #126379. Includes 6 updates from freepops web pages.
+  Thanks to Danny
 
   03 Mar 2006; Daniel Black <dragonheart@gentoo.org>
   files/digest-freepops-0.0.97-r1, Manifest:
