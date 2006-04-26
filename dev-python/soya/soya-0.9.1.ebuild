@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.9.1.ebuild,v 1.3 2005/02/09 23:21:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.9.1.ebuild,v 1.4 2006/04/26 18:23:47 fserb Exp $
 
 inherit distutils
 
@@ -17,8 +17,7 @@ LICENSE="GPL-2"
 # Documented to need PIL (imaging) and pyrex
 # pyrex isn't actually needed for normal building of non-cvs.
 # Versions are based off soya 0.6 ebuild; they're mainly undocumented.
-DEPEND="virtual/x11
-	virtual/opengl
+DEPEND="virtual/opengl
 	>=dev-lang/python-2.2.2
 	>=dev-python/editobj-0.3.1
 	>=media-libs/libsdl-1.2.4
