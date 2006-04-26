@@ -1,6 +1,18 @@
 # ChangeLog for games-arcade/stepmania
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.7 2006/04/13 20:14:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.8 2006/04/26 22:42:05 tupone Exp $
+
+*stepmania-3.9 (26 Apr 2006)
+
+  26 Apr 2006; <Tupone@gentoo.org> +files/stepmania-3.9-alsa.patch,
+  +files/stepmania-3.9-ffmpeg.patch, +files/stepmania-3.9-gcc41.patch,
+  +files/stepmania-3.9-gentoo.patch, +stepmania-3.9.ebuild:
+  Bumped version, bug #109535 by Robert Lundmark
+  Adding ffmpeg and alsa patch thanks to Damien THEBAULT
+  Adding menu icon thanks to Simon Ruggier
+  Adding USE flag force-oss, bug #94554 by Loïc Lacombe
+  Fixing compilation with gcc-4.1, bug #127693 by zyprexa,
+  thanks to Hanno Meyer-Thurow
 
   13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   stepmania-3.9_rc2.ebuild, stepmania-3.9_rc3.ebuild:

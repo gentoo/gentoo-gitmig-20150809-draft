@@ -1,0 +1,15 @@
+--- src/arch/Sound/ALSA9Helpers.cpp.ori	2005-12-29 17:14:29.172002500 +0100
++++ src/arch/Sound/ALSA9Helpers.cpp	2005-12-29 17:49:07.609896750 +0100
+@@ -257,10 +257,9 @@
+ 		CHECKPOINT;
+ 		dsnd_pcm_close(pcm);
+ 		CHECKPOINT;
+-		RageException::ThrowNonfatal( "SetHWParams failed" );
+ 	}
+-
+-	SetSWParams();
++	else
++		SetSWParams();
+ }
+ 
+ Alsa9Buf::~Alsa9Buf()
