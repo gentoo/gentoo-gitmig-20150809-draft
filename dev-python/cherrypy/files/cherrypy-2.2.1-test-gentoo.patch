@@ -1,0 +1,10 @@
+--- cherrypy/test/test.py.org	2006-04-25 18:07:04.000000000 -0700
++++ cherrypy/test/test.py	2006-04-25 18:07:23.000000000 -0700
+@@ -311,7 +311,6 @@
+     CommandLineParser(testList).run()
+     
+     print
+-    raw_input('hit enter')
+ 
+ 
+ if __name__ == '__main__':

@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3c575d7e52a070a7ba702123fdbaec08 ChangeLog 2359
-RMD160 97a8007c26e24c2e232ea027945957fd283cdd3e ChangeLog 2359
-SHA256 b538678ac3bbaa1d8e33877e8080713f5c5ab84d250dab980d0154d1e6fb14e9 ChangeLog 2359
+MD5 52c283fe7d0dc81f49dee5c751f8e5b5 ChangeLog 2527
+RMD160 fc1526dd0f165f83e3f7ffbe2431328f9117b3a2 ChangeLog 2527
+SHA256 8bc236a0fa35ecdfee21186407260a9953b2d16d09137c2e9725455eb7fd0966 ChangeLog 2527
 MD5 0f5c2b2e82673db6c01ba3e74a22858c cherrypy-2.0.0.ebuild 1144
 RMD160 1afe3c2eaaa25389ddbcff87dc490f1c5aa81673 cherrypy-2.0.0.ebuild 1144
 SHA256 0340f97eb67ad6caa9a40ffcbad70472c5a823b3fd677ab560bf1d2b4aa29a66 cherrypy-2.0.0.ebuild 1144
@@ -16,6 +16,9 @@ SHA256 6d4d09db55619eaf45b5b43466e686044ba94a689db9384712ab238747c071a5 cherrypy
 MD5 46edcb9f39effc81b5ebf1fe43d2e63d cherrypy-2.2.0.ebuild 923
 RMD160 4bf609e3ce44675dfd54393f0eb75af4a610057c cherrypy-2.2.0.ebuild 923
 SHA256 5348cb40c6a429f47d5ba399bdc7560cf5889f1e2cee1d2ef45f0cb7e9c0f35c cherrypy-2.2.0.ebuild 923
+MD5 b70d5bf70e8040e1ac575c647e0e8090 cherrypy-2.2.1.ebuild 923
+RMD160 b7a5ffcfbe6f9ea021061ae67bb7e655c430c98c cherrypy-2.2.1.ebuild 923
+SHA256 b5888006178a005d022c443953486c5353e53365fba380281a1c0bac20da3c64 cherrypy-2.2.1.ebuild 923
 MD5 c885c6173e005c060a73ecf836011132 files/cherrypy-2.0.0-setup-gentoo.diff 471
 RMD160 1bde9a6a712a11df1da9ec831f104d88f4ebf171 files/cherrypy-2.0.0-setup-gentoo.diff 471
 SHA256 f8f2a9ac6bf99a779b228544b759e26e31842734eecd0415738ef6779cf26ca3 files/cherrypy-2.0.0-setup-gentoo.diff 471
@@ -31,6 +34,9 @@ SHA256 f5ee1a1295e2dc6f9658adabbceafc513248c156d5d94d1751616d6c325aeaa2 files/ch
 MD5 49096b105f263f3c38d13c72b8cfc4b8 files/cherrypy-2.2.0-test-gentoo.patch 292
 RMD160 69514be4a7cc1d18a8af015db4fa754a915c4a06 files/cherrypy-2.2.0-test-gentoo.patch 292
 SHA256 1cfe8b28ac523c1ae8d03669e69ac701ba45ed9f9685d7112db19554997fe25a files/cherrypy-2.2.0-test-gentoo.patch 292
+MD5 b3fc3562ac3395e91d2ef362002140d5 files/cherrypy-2.2.1-test-gentoo.patch 264
+RMD160 edd3b6cd2b36084bac82d2457220449b5fa3d48e files/cherrypy-2.2.1-test-gentoo.patch 264
+SHA256 5a92d9a85bfe0a01f1143d600042065e93dcfb9bcff98aad8412d6acfed0b6d9 files/cherrypy-2.2.1-test-gentoo.patch 264
 MD5 4991e5ddb5d31fb149fdadc26b75f551 files/digest-cherrypy-2.0.0 65
 RMD160 453d2941693fee6564200c340c57d7200efbb1ad files/digest-cherrypy-2.0.0 65
 SHA256 4e1fd606df517eca492f16461bcd50080ded009e8bc0cd592e3d8e2418cd6809 files/digest-cherrypy-2.0.0 65
@@ -43,13 +49,16 @@ SHA256 401efbea31ffd5bfce9c3a68a2b34a75228c545f9f9963831d99e1691630aa1a files/di
 MD5 2130b907fbf7ec640b35c1e13b0526ae files/digest-cherrypy-2.2.0 244
 RMD160 ff671d7e3c7fe63a721e44d747f6ce518cee6972 files/digest-cherrypy-2.2.0 244
 SHA256 4b2a26660a9476e737b976359213c6fb0b825fea61b9ca87b614ec945e7661bf files/digest-cherrypy-2.2.0 244
+MD5 0d16822fb4c8746436069f025091810b files/digest-cherrypy-2.2.1 244
+RMD160 8c70bb340dc185f091b8d5f6ec057174629a076f files/digest-cherrypy-2.2.1 244
+SHA256 8f63ac22513c6bc4d84d9cbf6b62befefc3e8bcee201d8f1d0a62ee866584699 files/digest-cherrypy-2.2.1 244
 MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
 RMD160 e730f96ab97c5be577a6d6d05f04990374a0dffb metadata.xml 160
 SHA256 6cd954a9de2307c57d32b25fa3599dee2908a4ddc6a98594f593d53577307a3a metadata.xml 160
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFENTM0Try2jroju7wRAvnIAJ0QqDkJQE5xBti5LhgvV/lIvO3YWwCfdu1J
-6P6f3x6acOxqW2+Xx9ROnNA=
-=zhWE
+iD8DBQFETs/6Try2jroju7wRAscOAJ9QUfP5SAU2p5cna9xbW5V5qo0AVQCfUvXs
+OJhndwf261t315eGoufqLuU=
+=Ki4n
 -----END PGP SIGNATURE-----
