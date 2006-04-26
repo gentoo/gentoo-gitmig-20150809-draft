@@ -1,5 +1,15 @@
-MD5 e38e7217964683b0793aa28c737db542 ChangeLog 676
-MD5 904258e5e295feb91dd9ea8502aa6c10 alsa-plugins-1.0.11.ebuild 1316
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 900c8186db37696b03bf571fda175284 ChangeLog 786
+MD5 ac9e88be27cc4dae83ec1c1b74b19de1 alsa-plugins-1.0.11.ebuild 1324
 MD5 11501a02f6428eb443cb507593790efd files/alsa-plugins-1.0.11-automagic.patch 2387
 MD5 ded80bafcfd920d07f2d1aa8d4ecb641 files/digest-alsa-plugins-1.0.11 262
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFET5dTKRy60XGEcJIRAoBwAJ0f4zC6lYpUW1wBa/e6A07KGgP08wCeK7P0
+HHgNdQFjmKgGjGv+OTw3jJs=
+=4WJC
+-----END PGP SIGNATURE-----
