@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e7933fc8f63f49c97f19ed16130b3855 ChangeLog 13740
+MD5 28de5bcbae20ba6cda2fe88d5b8678a0 ChangeLog 13852
 MD5 66a7f4e6682670216c1497606c9c600b files/digest-slmodem-2.9.11_pre20051101 140
 MD5 fd55ef399408a109742263cd5b4a5219 files/digest-slmodem-2.9.9d 66
 MD5 5917f2af62708f83a73fd288c21a5e3d files/slmodem-2.9.11-modem-makefile.patch 676
@@ -17,12 +17,12 @@ MD5 618a9ebd35ccb49bf34e6ea522afcb8b files/slmodem-class-simple-to-class.diff 68
 MD5 9c47e598fd639d46a03493fe7a52595e files/slmodem-remove-URB_ASYNC_UNLINK.patch 436
 MD5 a5c2c40e3a6c4665033c97bb9088f03d files/slusb.hotplug 262
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 e213145d81321752e64ddfdc9dc30530 slmodem-2.9.11_pre20051101.ebuild 4553
+MD5 d6960faceb3ff583377e5203da151e6c slmodem-2.9.11_pre20051101.ebuild 4552
 MD5 da3f5db025a3799ee1bdf5b9eef53601 slmodem-2.9.9d.ebuild 3553
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEShcYjG8pv1lIUX4RAuGuAJ9kyS09YyHwzEyu/yBbIScES3h3jwCg3Aoj
-DejPnHGuyg/JMKD+CKxHAyc=
-=lUzj
+iD8DBQFET5xKjG8pv1lIUX4RAuHJAJ9WxOCoyFpzwZZ9iorX3frwHGh1iwCeK8jJ
+O+4XTapTUwUKlVbUom+d/k4=
+=TS8u
 -----END PGP SIGNATURE-----
