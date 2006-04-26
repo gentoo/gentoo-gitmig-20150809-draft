@@ -1,15 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 698b685e80283c66ad3ba3c973a65fbd ChangeLog 841
+MD5 7bdfeda56f09766cfd1cbfe4767319da ChangeLog 1081
+RMD160 acfd1aa4bdf38245248d952569d0d4b7e400a6ef ChangeLog 1081
+SHA256 e9172425d632a3e455db7c71bb53984f5897e6fba4bdb563a86f125fbdb78841 ChangeLog 1081
+MD5 f26d671b5aa250f1d1beee111c1ee922 files/1.0-open-network-strea-server-gentoo.patch 752
+RMD160 387f719d66ddb2570bf343dc3617efeec74a8a92 files/1.0-open-network-strea-server-gentoo.patch 752
+SHA256 a54d27cc5a72fdee48b60320d3713704424e82061f2d2432b44cd505b1638e7d files/1.0-open-network-strea-server-gentoo.patch 752
 MD5 187a5ade021e7bc1aac19e09158aaac1 files/50httpd-gentoo.el 74
+RMD160 75a7d36cd1f2e9b483011e536b71fdd1909d0d97 files/50httpd-gentoo.el 74
+SHA256 29c0f6b0d249e0cccb204bfaf9952b35b16771887fadedda0ae3e5e7b4d3fcd6 files/50httpd-gentoo.el 74
 MD5 95aa7756d3ef71d4591e4ad6d43d3efa files/digest-httpd-1.0 59
+RMD160 f3e4c66624d374c678f653c198e15ca800652086 files/digest-httpd-1.0 59
+SHA256 beaaf47e5f37e5d7ee0f7d1dd12564b2ab4799dd3719de2a9141f3ec97f32846 files/digest-httpd-1.0 59
+MD5 257590d64be26abd006a110eb331dc3e files/digest-httpd-1.0-r1 223
+RMD160 173e8f672d7b3a742aa12dcc2c8d513a6c3d0fb2 files/digest-httpd-1.0-r1 223
+SHA256 b4c36cfc94e50ad3557e557b915474a9de203d802969691a135ef1c43aa238b4 files/digest-httpd-1.0-r1 223
+MD5 4cc25da393e853be2f0a1b7c0269ed42 httpd-1.0-r1.ebuild 573
+RMD160 aaa08fcf7b9ad8a96bcd38651da94e2677947229 httpd-1.0-r1.ebuild 573
+SHA256 98779ab87e1d1229281e1de1a600268b0ab18d417b59a72ec8ee47695096caea httpd-1.0-r1.ebuild 573
 MD5 f20295511fa17f48aa5d4997a946130d httpd-1.0.ebuild 464
+RMD160 fa742f8153bdb84dc0b37efa0b4e566e93b59f71 httpd-1.0.ebuild 464
+SHA256 83094517e2a09172912b9487cb985125f0dd59776996276f205307bda4f91cf6 httpd-1.0.ebuild 464
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+RMD160 415d172437ca754d24fc5ab186ba8e77934d96e4 metadata.xml 158
+SHA256 1393bdef3a74343fdb40a112c7096a1af16f67e7a43413250de28dfe73810eab metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDXOxGcsIHjyDViGQRAhPsAJ4y/p1dV07IbUBOoCyPJqbvRTXN9QCeL1Di
-g1RLQh/5nQinSZHgY/Kbt8Y=
-=9q7r
+iD8DBQFET7TdyiNZaEAZA+ARAlxoAJ977txuBE8Qip6mPug14ZkzNVf/oACfU+yP
+wVxfEizjUBwmUq7tJkbN5sY=
+=Pfqq
 -----END PGP SIGNATURE-----

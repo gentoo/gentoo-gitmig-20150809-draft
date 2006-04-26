@@ -1,0 +1,25 @@
+diff -ur httpd-1.0.orig/httpd.el httpd-1.0/httpd.el
+--- httpd-1.0.orig/httpd.el	2005-02-01 01:41:38.000000000 -0600
++++ httpd-1.0/httpd.el	2006-04-26 12:55:47.000000000 -0500
+@@ -44,6 +44,21 @@
+ 
+ ;;; Code
+ 
++;; The following top-level form from
++;; http://bugs.gentoo.org/show_bug.cgi?id=125322
++
++(eval-and-compile 
++  (unless (fboundp 'open-network-stream-server)
++    (defun open-network-stream-server (proc buff port sentl filtr)
++      "Compatibility function for httpd.el on newer emacsen"
++      (make-network-process :server t
++			    :name proc
++			    :buffer buff
++			    :host "localhost"
++			    :service port
++			    :sentinel sentl
++			    :filter filtr))))
++
+ (defvar httpd-document-root "/var/www")
+ 
+ (defvar httpd-path-handlers '()
