@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 692be58d06be6a94994e761117e8773a ChangeLog 2694
 RMD160 1a2875f7d46f177bb0d415c2b8ce36b3fd11a9dd ChangeLog 2694
 SHA256 ba01b177a77fa5a286380a4fdf1b56bae8456f05d714895980bf493a1ef33b57 ChangeLog 2694
@@ -13,6 +10,9 @@ SHA256 534f81f8b109f7fe2fb137bd8ea96859fc9b1ec514345b2a5513d010aaeeb803 files/di
 MD5 34682b5ee9e74f49164211770aa71d34 files/digest-gnome2-wnck-0.11 67
 RMD160 2143cd4d7f12d574ca36104ca90e39b405a4c220 files/digest-gnome2-wnck-0.11 67
 SHA256 c50d59a91eb4294cf9d1dac8cb9716caf967ac4b0748e50e9cd14c1923ea1608 files/digest-gnome2-wnck-0.11 67
+MD5 3e0c4977e2a78e36b299ccb8b6a6b5cc files/digest-gnome2-wnck-0.12 247
+RMD160 a098c7d716f83899f0089ee39b3e3a9e6752b9fb files/digest-gnome2-wnck-0.12 247
+SHA256 dc38b0d57d54fa26b7fe7ec42223a2a7133d122c4376240a6d0ac6c16d7ee06e files/digest-gnome2-wnck-0.12 247
 MD5 bbf0dd5120c2b7645abecf57d81dcb48 files/window_close_patch 465
 RMD160 e1bcbfa9e37a3080a4357e8850d4b8f1d39093ea files/window_close_patch 465
 SHA256 c758aa60d2507fcea12447e498947de59cf0c3afd28decbc05675fa4358079af files/window_close_patch 465
@@ -25,13 +25,9 @@ SHA256 85503e72a3dc7ec4b0eaaf63ac2b7709d166e8d1dd3b00e6932b604a96784513 gnome2-w
 MD5 8e66856345339b472afbb4be53b20879 gnome2-wnck-0.11.ebuild 877
 RMD160 29c8716ebaad06ab18b01f3fe9c62a4d65766c38 gnome2-wnck-0.11.ebuild 877
 SHA256 ea0ae83768fd35eec918efaaa1d55258daaa6ea1ff1fe3f3a8e16a997c7c531d gnome2-wnck-0.11.ebuild 877
+MD5 3653bf4531e3f55119d1ce2711e2a5ad gnome2-wnck-0.12.ebuild 778
+RMD160 0c1c1ddf6fb2901ed0191c0f8a09230c96f4aad9 gnome2-wnck-0.12.ebuild 778
+SHA256 9a986b27aefbefdc89e117d0840566bf450c706aaa7b7df99913008381127937 gnome2-wnck-0.12.ebuild 778
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFELG4vJrHF4yAQTrARAh1dAJ0TGFAu2yf0OkQQeegNYg/RcKzY4gCeNOKF
-D3fTBWHxfS7z8GFacltVybw=
-=LBmT
------END PGP SIGNATURE-----
