@@ -1,3 +1,8 @@
+#
+# Documentation is certain to come, but please disregard this eclass for the
+# time being, until it has been through more testing.
+#
+
 unipatch() {
 	# Behavioural environment variables.
 	# UNIPATCH_STRICTORDER
