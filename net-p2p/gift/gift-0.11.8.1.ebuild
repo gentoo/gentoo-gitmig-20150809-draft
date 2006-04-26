@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.8.1.ebuild,v 1.3 2005/09/16 23:32:20 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.8.1.ebuild,v 1.4 2006/04/26 03:47:23 squinky86 Exp $
 
 inherit eutils libtool
 
@@ -11,7 +11,7 @@ IUSE="imagemagick vorbis"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 ~ia64"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc ~x86"
 
 DEPEND=">=sys-libs/zlib-1.1.4
 	sys-apps/file
