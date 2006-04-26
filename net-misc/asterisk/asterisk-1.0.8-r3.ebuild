@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.8-r3.ebuild,v 1.2 2006/04/25 18:40:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.8-r3.ebuild,v 1.3 2006/04/26 19:12:43 halcy0n Exp $
 
 inherit eutils perl-app
 
@@ -18,7 +18,7 @@ S_ADDONS=${WORKDIR}/${PN}-addons-${ADDONS_VERSION}
 IUSE="alsa doc gtk mmx mysql pri zaptel debug postgres vmdbmysql vmdbpostgres bri hardened speex resperl"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~ppc sparc ~x86 "
+KEYWORDS="~amd64 ~hppa ~ppc sparc x86"
 
 DEPEND="dev-libs/newt
 	dev-libs/openssl
