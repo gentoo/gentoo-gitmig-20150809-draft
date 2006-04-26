@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/PDL
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.46 2006/04/24 05:43:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.47 2006/04/26 22:18:50 mcummings Exp $
+
+*PDL-2.4.2-r1 (26 Apr 2006)
+
+  26 Apr 2006; <mcummings@gentoo.org> +files/PDL-2.4.2-makemakerfix.patch,
+  +PDL-2.4.2-r1.ebuild:
+  Patch for perl 5.8.8 support
 
   24 Apr 2006; Joshua Kinard <kumba@gentoo.org> PDL-2.4.2.ebuild:
   Marked stable on mips.
