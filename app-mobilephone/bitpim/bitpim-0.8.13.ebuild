@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.8.13.ebuild,v 1.1 2006/04/26 16:04:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.8.13.ebuild,v 1.2 2006/04/26 18:17:32 mrness Exp $
 
 inherit distutils
 
@@ -41,7 +41,7 @@ maketarball() { #For building the tarball. To be used only by ebuild maintainers
 	rm ${P}/resources/*.chm ${P}/src/package.py
 
 	#Freeze version and set vendor name to Gentoo
-	sed -i -e 's/^__FROZEN__="$Id: bitpim-0.8.13.ebuild,v 1.1 2006/04/26 16:04:41 mrness Exp $Id: '${svnrev}' $"/' \
+	sed -i -e 's/\(^__FROZEN__="[$]Id: \).*\( $"\)/\1'${svnrev}'\2/' \
 		-e 's/^vendor=".*"/vendor="Gentoo"/' \
 		${P}/src/version.py || return 1
 
