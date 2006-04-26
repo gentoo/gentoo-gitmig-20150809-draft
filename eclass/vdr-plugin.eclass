@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.18 2006/04/26 12:57:05 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.19 2006/04/26 13:36:10 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -101,8 +101,8 @@ vdr-plugin_pkg_setup() {
 	append-flags -fPIC
 	use debug && append-flags -g
 
-	VDRVERSION=$(awk -F'"' '/VDRVERSION/ {print $2}' /usr/include/vdr/config.h)
-	APIVERSION=$(awk -F'"' '/APIVERSION/ {print $2}' /usr/include/vdr/config.h)
+	VDRVERSION=$(awk -F'"' '/define VDRVERSION/ {print $2}' /usr/include/vdr/config.h)
+	APIVERSION=$(awk -F'"' '/define APIVERSION/ {print $2}' /usr/include/vdr/config.h)
 	[[ -z ${APIVERSION} ]] && APIVERSION="${VDRVERSION}"
 
 	einfo "Building ${PF} against vdr-${VDRVERSION}"
