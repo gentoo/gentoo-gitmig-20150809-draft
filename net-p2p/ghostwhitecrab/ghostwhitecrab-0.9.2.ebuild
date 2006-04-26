@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ghostwhitecrab-0.9.2.ebuild,v 1.1 2005/02/02 02:42:07 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ghostwhitecrab-0.9.2.ebuild,v 1.2 2006/04/26 04:10:09 squinky86 Exp $
 
 inherit eutils
 
@@ -70,5 +70,5 @@ src_install() {
 pkg_postinst() {
 	einfo "Please set the \"Location\" of your cache in /etc/${PN}/gwc.conf"
 	einfo "and submit your cache to:"
-	einfo "\thttp://dev.gentoo.org/~squinky86/gcache.html"
+	einfo "\thttp://gcachescan.jonatkins.com/"
 }
