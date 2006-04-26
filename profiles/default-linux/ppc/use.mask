@@ -54,3 +54,6 @@ oci8
 
 # cg is only provided by nvidia's binary only cg toolkit
 cg
+
+# dmi depends on PC BIOSes, we don't have those
+dmi
