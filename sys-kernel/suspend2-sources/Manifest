@@ -1,4 +1,4 @@
-MD5 0e22bab27623708bc0952fea4f4bffd3 ChangeLog 13714
+MD5 3a6167b824d566bcffcf03b82f023c09 ChangeLog 13823
 MD5 8438d5030157141e4836cf8ba44ca178 files/digest-suspend2-sources-2.6.15-r8 302
 MD5 245f0ad4d0673fd4e98b822fb13264c2 files/digest-suspend2-sources-2.6.16 301
 MD5 b5bca010f3e90aa88f47d28ef5a9f24c files/digest-suspend2-sources-2.6.16-r1 302
@@ -10,5 +10,5 @@ MD5 76cab61eda6acf9fb765ea77a5b4b22a suspend2-sources-2.6.15-r8.ebuild 1760
 MD5 9207b38ba998315444e4d0de90a224e5 suspend2-sources-2.6.16-r1.ebuild 1761
 MD5 fe9a125faed4abf5adc0881757b88c9e suspend2-sources-2.6.16-r2.ebuild 1768
 MD5 569aefbef6453954e978ab487adb659d suspend2-sources-2.6.16-r3.ebuild 1766
-MD5 52823bd5eae05d0da0d5ba20d265a0f9 suspend2-sources-2.6.16-r4.ebuild 1769
+MD5 d28ece93993ee364bd61cd3e9bfc3604 suspend2-sources-2.6.16-r4.ebuild 1768
 MD5 0b4bbc0927e855b30842a13061746329 suspend2-sources-2.6.16.ebuild 1758
