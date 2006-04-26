@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.99.0.ebuild,v 1.3 2006/04/26 02:16:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.99.0.ebuild,v 1.4 2006/04/26 02:53:14 dragonheart Exp $
 
 inherit libtool flag-o-matic eutils autotools libtool
 
@@ -49,10 +49,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
 	# bug 117716
-	epatch "${FILESDIR}/${PN}-0.10.14-asneeded.patch"
-
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+	cd "${S}"
 	AT_M4DIR="${S}/aclocal-fallback" eautomake
 	elibtoolize
 }
