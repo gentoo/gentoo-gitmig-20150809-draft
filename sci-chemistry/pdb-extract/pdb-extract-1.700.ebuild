@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/pdb-extract-1.700.ebuild,v 1.1 2005/12/20 04:11:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/pdb-extract-1.700.ebuild,v 1.2 2006/04/26 03:53:20 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://sw-tools.pdb.org/apps/PDB_EXTRACT/index.html"
 SRC_URI="http://sw-tools.pdb.org/apps/PDB_EXTRACT/${MY_P}.tar.gz"
 LICENSE="PDB"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}
