@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/cone
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.13 2005/09/02 19:50:48 hansmi Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.14 2006/04/26 20:11:26 ticho Exp $
+
+*cone-0.66 (26 Apr 2006)
+
+  26 Apr 2006; Andrej Kacian <ticho@gentoo.org> +cone-0.66.ebuild:
+  Version bump. Closes bug #104658, reported by Daniel Webert <rockoo at
+  gmail.com>.
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> cone-0.64.ebuild:
   Stable on ppc.
