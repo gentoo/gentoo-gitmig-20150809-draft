@@ -1,6 +1,44 @@
-MD5 4e95d3543825561a869badf9ea59364c ChangeLog 9443
-RMD160 27a90fa6fae16847c328cb7ce3e2dd8b59cf8d1b ChangeLog 9443
-SHA256 529f7997f8d6e35b8817f3184c0c68c280e8bd4f1fa34f62d14c4fa898c3e427 ChangeLog 9443
+AUX icon/mozillathunderbird-bin-icon.png 6499 RMD160 1aeece7719c1c1629b98fc11870641769681a048 SHA1 651d244e96fa0edf13f68f5ef9047432eb6ed3bf SHA256 ff9749e42b82b80425bb52883d63baa53298af7be98870ee6b73f0a6cf0ab22d size 6499
+MD5 04115f0e204444eac76a092a63c89027 files/icon/mozillathunderbird-bin-icon.png 6499
+RMD160 1aeece7719c1c1629b98fc11870641769681a048 files/icon/mozillathunderbird-bin-icon.png 6499
+SHA256 ff9749e42b82b80425bb52883d63baa53298af7be98870ee6b73f0a6cf0ab22d files/icon/mozillathunderbird-bin-icon.png 6499
+AUX icon/mozillathunderbird-bin.desktop 205 RMD160 f6d7c773c1d25054298e2824b566c9703c85477a SHA1 aedc939bb530e800fc20f8d8f16b6c89650ee01c SHA256 3544995b7e94c652bcf315d85357509165f271ce6b7a5891d96becefde57299c size 205
+MD5 a622df770b03edce7d158cfe97e8e315 files/icon/mozillathunderbird-bin.desktop 205
+RMD160 f6d7c773c1d25054298e2824b566c9703c85477a files/icon/mozillathunderbird-bin.desktop 205
+SHA256 3544995b7e94c652bcf315d85357509165f271ce6b7a5891d96becefde57299c files/icon/mozillathunderbird-bin.desktop 205
+DIST thunderbird-1.0.6.tar.gz 10378476 size 10378476
+DIST thunderbird-1.0.7.tar.gz 10382332 size 10382332
+DIST thunderbird-1.0.8.tar.gz 10383678 RMD160 ad5fa7fd1bb832255615beb9233b50c59db03175 SHA256 76f87cab4a2a2659e4316a8eb418900bb1200939248c2312b3b48a626812dfdc size 10383678
+DIST thunderbird-1.5.0.2.tar.gz 10212996 RMD160 fd044509dd8c21ce8c438c9a77ee4132d885b151 SHA256 c80cef8be1a251fcc3da1391e16424f2d0e4626e212c59aed399e9c6ab9b2a08 size 10212996
+DIST thunderbird-1.5.tar.gz 10578953 RMD160 c336c3bf6da98910a3e17222c54584af64c57ec3 SHA256 8ecb6591f30a6db0912691b32a6d34a846db65ece9e2ff7945f219a561b60ae1 size 10578953
+EBUILD mozilla-thunderbird-bin-1.0.6-r3.ebuild 2038 RMD160 86c55e5c597d9cc076ed1a19d53bedb97e52e819 SHA1 2594ba71db18b53a1814efcf664b0dff54865744 SHA256 c65d03747f8f581d741b238461ae03cd1375d25175feaf8258aedf4ad6829866 size 2038
+MD5 65b5c50d24e74c92313bea84617a363f mozilla-thunderbird-bin-1.0.6-r3.ebuild 2038
+RMD160 86c55e5c597d9cc076ed1a19d53bedb97e52e819 mozilla-thunderbird-bin-1.0.6-r3.ebuild 2038
+SHA256 c65d03747f8f581d741b238461ae03cd1375d25175feaf8258aedf4ad6829866 mozilla-thunderbird-bin-1.0.6-r3.ebuild 2038
+EBUILD mozilla-thunderbird-bin-1.0.7.ebuild 2031 RMD160 1dcbb1948dc04ab539f3c8ad8ad7bd9fe57499d8 SHA1 3f3ad0fe219a70d9b8519cc704b067b7eb23eb09 SHA256 1d92251fa6d7068327f86f17e15cc8465511ce3051b6191e9ca2fde90f4a800d size 2031
+MD5 cfb9a7f5661e2ec9f0eb28f5f0c5f8c4 mozilla-thunderbird-bin-1.0.7.ebuild 2031
+RMD160 1dcbb1948dc04ab539f3c8ad8ad7bd9fe57499d8 mozilla-thunderbird-bin-1.0.7.ebuild 2031
+SHA256 1d92251fa6d7068327f86f17e15cc8465511ce3051b6191e9ca2fde90f4a800d mozilla-thunderbird-bin-1.0.7.ebuild 2031
+EBUILD mozilla-thunderbird-bin-1.0.8.ebuild 2034 RMD160 c1859668fdfe9367f5b562ea936655a847d206fb SHA1 eae4334870a304a6c83780455c03b937ca5ea20a SHA256 0e423548a29d90ff9de54186afc3a4c116186b08796879406a639b3296f635f1 size 2034
+MD5 73e746e92aae0a6299292a5b8d837ff9 mozilla-thunderbird-bin-1.0.8.ebuild 2034
+RMD160 c1859668fdfe9367f5b562ea936655a847d206fb mozilla-thunderbird-bin-1.0.8.ebuild 2034
+SHA256 0e423548a29d90ff9de54186afc3a4c116186b08796879406a639b3296f635f1 mozilla-thunderbird-bin-1.0.8.ebuild 2034
+EBUILD mozilla-thunderbird-bin-1.5.0.2.ebuild 2108 RMD160 2479b7ced831d7c5fa34546a2df314ce4cad0236 SHA1 77ea6b2b81c5ebcfd694837e00d2d86b8519d039 SHA256 e72ad8d5a95e564ff55f2666588c8fcafe3885679d804bc5e47941e9d6ae4bae size 2108
+MD5 7aab17a6843acd0d45084cd4c61050c4 mozilla-thunderbird-bin-1.5.0.2.ebuild 2108
+RMD160 2479b7ced831d7c5fa34546a2df314ce4cad0236 mozilla-thunderbird-bin-1.5.0.2.ebuild 2108
+SHA256 e72ad8d5a95e564ff55f2666588c8fcafe3885679d804bc5e47941e9d6ae4bae mozilla-thunderbird-bin-1.5.0.2.ebuild 2108
+EBUILD mozilla-thunderbird-bin-1.5.ebuild 2104 RMD160 7ea44de80144fc602184a9a0f015c43fe3f6eeb2 SHA1 2ec127223d1f1a4eab640253e010e2665bc141f9 SHA256 0d822c41caf5fcaa38ace07419b9f8f94a17e3aeb5b2e737b9e3793968d58fea size 2104
+MD5 d02e4830b63f403c030de5a77886a14f mozilla-thunderbird-bin-1.5.ebuild 2104
+RMD160 7ea44de80144fc602184a9a0f015c43fe3f6eeb2 mozilla-thunderbird-bin-1.5.ebuild 2104
+SHA256 0d822c41caf5fcaa38ace07419b9f8f94a17e3aeb5b2e737b9e3793968d58fea mozilla-thunderbird-bin-1.5.ebuild 2104
+MISC ChangeLog 9565 RMD160 5945cd1b80de357c346d090ca831a1e09d65ba63 SHA1 26ea89db74fffaac169c445c289c536a70741624 SHA256 205e676def703077a582f5840a23806b53af1a0bd2ea884e3342c52bfc7a501c size 9565
+MD5 f2f5c200cf5a47ee2659ce6ebeb80eaf ChangeLog 9565
+RMD160 5945cd1b80de357c346d090ca831a1e09d65ba63 ChangeLog 9565
+SHA256 205e676def703077a582f5840a23806b53af1a0bd2ea884e3342c52bfc7a501c ChangeLog 9565
+MISC metadata.xml 160 RMD160 d5a9f0bf8989621c2bde30facb53bcae00aba709 SHA1 5015c07af2083f20f9552d7fb11afb5ea69af345 SHA256 0cc5126362a12cee42ec1197c528a804cf36859329dd2c6d9225726831d14b8b size 160
+MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
+RMD160 d5a9f0bf8989621c2bde30facb53bcae00aba709 metadata.xml 160
+SHA256 0cc5126362a12cee42ec1197c528a804cf36859329dd2c6d9225726831d14b8b metadata.xml 160
 MD5 aff32f49defdbb72570cd9a4a4a992e6 files/digest-mozilla-thunderbird-bin-1.0.6-r3 71
 RMD160 cece745243990e7db1f4dcb0df92748dabca4084 files/digest-mozilla-thunderbird-bin-1.0.6-r3 71
 SHA256 b3d4fc24055cb5f276eb365652ccd80489cb04c373c1685c544b484bf9527902 files/digest-mozilla-thunderbird-bin-1.0.6-r3 71
@@ -16,27 +54,3 @@ SHA256 ae4131c9f0a57aa5d3be5e4321de12e79be99fecd6990abcca1801e4cb5437cc files/di
 MD5 ef8033494b784a68b63eb0fba6bcb39a files/digest-mozilla-thunderbird-bin-1.5.0.2 265
 RMD160 c38967bc75941dcc726f7daa9e067e8f9095ee82 files/digest-mozilla-thunderbird-bin-1.5.0.2 265
 SHA256 e0534e95dbb7a061d7460f09eb47f111ae731aa407957973f3e3937542b4968d files/digest-mozilla-thunderbird-bin-1.5.0.2 265
-MD5 04115f0e204444eac76a092a63c89027 files/icon/mozillathunderbird-bin-icon.png 6499
-RMD160 1aeece7719c1c1629b98fc11870641769681a048 files/icon/mozillathunderbird-bin-icon.png 6499
-SHA256 ff9749e42b82b80425bb52883d63baa53298af7be98870ee6b73f0a6cf0ab22d files/icon/mozillathunderbird-bin-icon.png 6499
-MD5 a622df770b03edce7d158cfe97e8e315 files/icon/mozillathunderbird-bin.desktop 205
-RMD160 f6d7c773c1d25054298e2824b566c9703c85477a files/icon/mozillathunderbird-bin.desktop 205
-SHA256 3544995b7e94c652bcf315d85357509165f271ce6b7a5891d96becefde57299c files/icon/mozillathunderbird-bin.desktop 205
-MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
-RMD160 d5a9f0bf8989621c2bde30facb53bcae00aba709 metadata.xml 160
-SHA256 0cc5126362a12cee42ec1197c528a804cf36859329dd2c6d9225726831d14b8b metadata.xml 160
-MD5 65b5c50d24e74c92313bea84617a363f mozilla-thunderbird-bin-1.0.6-r3.ebuild 2038
-RMD160 86c55e5c597d9cc076ed1a19d53bedb97e52e819 mozilla-thunderbird-bin-1.0.6-r3.ebuild 2038
-SHA256 c65d03747f8f581d741b238461ae03cd1375d25175feaf8258aedf4ad6829866 mozilla-thunderbird-bin-1.0.6-r3.ebuild 2038
-MD5 cfb9a7f5661e2ec9f0eb28f5f0c5f8c4 mozilla-thunderbird-bin-1.0.7.ebuild 2031
-RMD160 1dcbb1948dc04ab539f3c8ad8ad7bd9fe57499d8 mozilla-thunderbird-bin-1.0.7.ebuild 2031
-SHA256 1d92251fa6d7068327f86f17e15cc8465511ce3051b6191e9ca2fde90f4a800d mozilla-thunderbird-bin-1.0.7.ebuild 2031
-MD5 5c9e50f4a2ce28e25b754a136aebc966 mozilla-thunderbird-bin-1.0.8.ebuild 2035
-RMD160 cc39f0ac571f0082b533734c6c5160a6cb6a9808 mozilla-thunderbird-bin-1.0.8.ebuild 2035
-SHA256 b13013feac2167e9934e37914181a6073a809520461e17cab8f2a39cf69b469c mozilla-thunderbird-bin-1.0.8.ebuild 2035
-MD5 7aab17a6843acd0d45084cd4c61050c4 mozilla-thunderbird-bin-1.5.0.2.ebuild 2108
-RMD160 2479b7ced831d7c5fa34546a2df314ce4cad0236 mozilla-thunderbird-bin-1.5.0.2.ebuild 2108
-SHA256 e72ad8d5a95e564ff55f2666588c8fcafe3885679d804bc5e47941e9d6ae4bae mozilla-thunderbird-bin-1.5.0.2.ebuild 2108
-MD5 d02e4830b63f403c030de5a77886a14f mozilla-thunderbird-bin-1.5.ebuild 2104
-RMD160 7ea44de80144fc602184a9a0f015c43fe3f6eeb2 mozilla-thunderbird-bin-1.5.ebuild 2104
-SHA256 0d822c41caf5fcaa38ace07419b9f8f94a17e3aeb5b2e737b9e3793968d58fea mozilla-thunderbird-bin-1.5.ebuild 2104

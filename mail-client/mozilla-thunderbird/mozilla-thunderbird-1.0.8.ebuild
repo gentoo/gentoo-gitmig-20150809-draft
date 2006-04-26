@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.8.ebuild,v 1.2 2006/04/24 19:53:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.8.ebuild,v 1.3 2006/04/26 13:58:23 antarus Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/sourc
 	mirror://gentoo/mozilla-jslibmath-alpha.patch
 	http://dev.gentoo.org/~agriffis/dist/mozilla-1.7.10-nsplugins-v2.patch"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc sparc x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="mozcalendar ldap"
