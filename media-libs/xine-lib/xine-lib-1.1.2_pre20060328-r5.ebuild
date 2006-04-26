@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328-r5.ebuild,v 1.2 2006/04/26 17:42:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328-r5.ebuild,v 1.3 2006/04/26 22:22:46 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -125,10 +125,8 @@ src_compile() {
 
 	# Specific workarounds for too-few-registers arch...
 	if [[ $(tc-arch) == "x86" ]]; then
-		append-flags -UHAVE_MMX
-		filter-flags -fforce-addr  # breaks ffmpeg module
+		use ffmpeg || filter-flags -fforce-addr  # breaks ffmpeg module
 		filter-flags -momit-leaf-frame-pointer # break on gcc 3.4/4.x
-		append-flags -mno-sse -fomit-frame-pointer
 		is-flag -O? || append-flags -O2
 
 		ewarn ""
