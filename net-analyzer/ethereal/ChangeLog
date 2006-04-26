@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.177 2006/04/26 16:53:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.178 2006/04/26 18:28:48 corsair Exp $
+
+  26 Apr 2006; Markus Rothe <corsair@gentoo.org> ethereal-0.99.0.ebuild:
+  Stable on ppc64; bug #130505
 
   26 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ethereal-0.99.0.ebuild:
