@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2.ebuild,v 1.6 2006/04/11 10:08:54 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2.ebuild,v 1.7 2006/04/26 16:45:29 agriffis Exp $
 
 inherit mount-boot flag-o-matic eutils
 
@@ -17,7 +17,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc debug screen custom-cflags hardened"
 
 DEPEND="sys-devel/gcc
