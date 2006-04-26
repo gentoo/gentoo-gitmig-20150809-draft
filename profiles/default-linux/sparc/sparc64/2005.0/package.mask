@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/package.mask,v 1.21 2006/04/24 23:16:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/package.mask,v 1.22 2006/04/26 15:51:53 gustavoz Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # We mask core 2.6 stuff to avoid bootstrap issues
@@ -32,6 +32,7 @@ media-libs/ladcca
 media-libs/libclalsadrv
 media-libs/libmustux
 media-plugins/alsa-jack
+media-plugins/alsa-plugins
 media-plugins/gst-plugins-alsa
 media-plugins/xmms-alsa
 media-sound/alsa-patch-bay

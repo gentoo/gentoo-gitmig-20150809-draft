@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/package.mask,v 1.9 2006/03/18 00:39:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/package.mask,v 1.10 2006/04/26 15:51:53 gustavoz Exp $
 
 # Masked until bug #60413 is fixed.
 media-libs/xine-lib
@@ -29,6 +29,7 @@ media-libs/ladcca
 media-libs/libclalsadrv
 media-libs/libmustux
 media-plugins/alsa-jack
+media-plugins/alsa-plugins
 media-plugins/gst-plugins-alsa
 media-plugins/xmms-alsa
 media-sound/alsa-patch-bay
