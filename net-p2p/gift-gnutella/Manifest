@@ -1,20 +1,40 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b2791c0a5109d69f51267aa579003381 ChangeLog 3816
-MD5 875f23093b78af2d864a7a7ba464f126 metadata.xml 223
-MD5 5549145ad2cbb33570d806b11c089444 gift-gnutella-0.0.10.ebuild 1255
-MD5 a5a7fc38a369f4cc29e8cc11d8e0eaf9 gift-gnutella-0.0.10.1.ebuild 1257
-MD5 c911dfd9cbbf8138c3cd127968b62413 gift-gnutella-0.0.9.2-r1.ebuild 1457
+AUX cacheupdate.sh 837 RMD160 355d0885edf51e55cf14b0054d7e3e70a7a25e2a SHA1 99185643f67fca02ec2baecf0b5a7f718133dfd8 SHA256 df1f654782a67cf9246bf4289e111da5e768db4269d2068d9a57f7bab45a06dd size 837
 MD5 87a8f04b6651ae553a4b3943d537392d files/cacheupdate.sh 837
-MD5 7dbcf3e3110924a2891054f9fd7f349a files/digest-gift-gnutella-0.0.10 73
-MD5 c464f118c813212dd2f6e7ddbfd0bef4 files/digest-gift-gnutella-0.0.9.2-r1 74
+RMD160 355d0885edf51e55cf14b0054d7e3e70a7a25e2a files/cacheupdate.sh 837
+SHA256 df1f654782a67cf9246bf4289e111da5e768db4269d2068d9a57f7bab45a06dd files/cacheupdate.sh 837
+AUX gift-gnutella-gcc35.patch 457 RMD160 a38a08c39edc1ebb2e1494a9a9aa3323c1036f31 SHA1 de2a2bc03c266cb22b183152fa1137cdf1198ac5 SHA256 29185c811403101bf523a697cca24eda23a3172412a3bd9c225d45f8c37bc27c size 457
 MD5 3a2b71fe09957a425acb0f40be079266 files/gift-gnutella-gcc35.patch 457
+RMD160 a38a08c39edc1ebb2e1494a9a9aa3323c1036f31 files/gift-gnutella-gcc35.patch 457
+SHA256 29185c811403101bf523a697cca24eda23a3172412a3bd9c225d45f8c37bc27c files/gift-gnutella-gcc35.patch 457
+DIST gift-gnutella-0.0.10.1.tar.bz2 394987 size 394987
+DIST gift-gnutella-0.0.10.tar.bz2 395672 size 395672
+DIST gift-gnutella-0.0.9.2.tar.bz2 307323 size 307323
+EBUILD gift-gnutella-0.0.10.1.ebuild 1257 RMD160 708b474262ed75643e938fa1c2816c7f51de8e13 SHA1 5b062fc66e099b4f19f20725691e0ddd0d3807ea SHA256 062ab3b87bbfa057b428ab70571251de959835f551468f8b1513827bb741100d size 1257
+MD5 209129ff338cf2a4380e9576f7d2c02c gift-gnutella-0.0.10.1.ebuild 1257
+RMD160 708b474262ed75643e938fa1c2816c7f51de8e13 gift-gnutella-0.0.10.1.ebuild 1257
+SHA256 062ab3b87bbfa057b428ab70571251de959835f551468f8b1513827bb741100d gift-gnutella-0.0.10.1.ebuild 1257
+EBUILD gift-gnutella-0.0.10.ebuild 1255 RMD160 1108e2c72ed25c4ff4e4056d9b8fccde91a9bcda SHA1 773df3db98dd44daba3bcb6de3c1c1cee5b7085c SHA256 d5a464a5f26771085594c2b0c05567a140fabbac5ad36b478eba53de768bda19 size 1255
+MD5 5549145ad2cbb33570d806b11c089444 gift-gnutella-0.0.10.ebuild 1255
+RMD160 1108e2c72ed25c4ff4e4056d9b8fccde91a9bcda gift-gnutella-0.0.10.ebuild 1255
+SHA256 d5a464a5f26771085594c2b0c05567a140fabbac5ad36b478eba53de768bda19 gift-gnutella-0.0.10.ebuild 1255
+EBUILD gift-gnutella-0.0.9.2-r1.ebuild 1457 RMD160 9eb901c294a295f3541d60af21bdef1fe8753e5a SHA1 aa2179617baa615ce527fc8e51d75e8bc3eac296 SHA256 f1c3560fee1c5695969743ff328c1309c710f81836b4a855b1bd0d3ddb7dbaf6 size 1457
+MD5 c911dfd9cbbf8138c3cd127968b62413 gift-gnutella-0.0.9.2-r1.ebuild 1457
+RMD160 9eb901c294a295f3541d60af21bdef1fe8753e5a gift-gnutella-0.0.9.2-r1.ebuild 1457
+SHA256 f1c3560fee1c5695969743ff328c1309c710f81836b4a855b1bd0d3ddb7dbaf6 gift-gnutella-0.0.9.2-r1.ebuild 1457
+MISC ChangeLog 3931 RMD160 9a46cdb3c002117e1b6cf5b3ff1ba89cf38913e6 SHA1 0ced8801ce41753652a012d240962d86f2ffbbea SHA256 dbe0ec87922c37b1a40d1342f0ed0031d9ad44984615a60b96b17b5b1beffde2 size 3931
+MD5 e96f856b8bf13668b9a7ca1033a5a6a7 ChangeLog 3931
+RMD160 9a46cdb3c002117e1b6cf5b3ff1ba89cf38913e6 ChangeLog 3931
+SHA256 dbe0ec87922c37b1a40d1342f0ed0031d9ad44984615a60b96b17b5b1beffde2 ChangeLog 3931
+MISC metadata.xml 223 RMD160 04492d6d9ec5940eb67563e2498d6a5a79028978 SHA1 b2b414df6826b40f965be3f976f8f1d47d29abbe SHA256 fea830dcdf6851fe6a940828046810f5f6eb8a8472c06b7529d81142185df0e6 size 223
+MD5 875f23093b78af2d864a7a7ba464f126 metadata.xml 223
+RMD160 04492d6d9ec5940eb67563e2498d6a5a79028978 metadata.xml 223
+SHA256 fea830dcdf6851fe6a940828046810f5f6eb8a8472c06b7529d81142185df0e6 metadata.xml 223
+MD5 7dbcf3e3110924a2891054f9fd7f349a files/digest-gift-gnutella-0.0.10 73
+RMD160 f978269453cb8945ed57e6e8d258dcabe3d3c7e6 files/digest-gift-gnutella-0.0.10 73
+SHA256 774178f2de5c06f0891555693851f50b162e00744a75ea206f66d13dbe5fea40 files/digest-gift-gnutella-0.0.10 73
 MD5 341e21bdbe18cc172126e4647394edac files/digest-gift-gnutella-0.0.10.1 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDRqGTwUpWvClEHQoRAuREAJ4+lny1NzFlANVJN9Bypo8f0mAkTACfVIup
-BJ0/dYwtRmkeTtY3xrYJQtc=
-=/mY5
------END PGP SIGNATURE-----
+RMD160 10d425734eec3757a1dbee8a6369094dac9f4cef files/digest-gift-gnutella-0.0.10.1 75
+SHA256 dd39dd3481144d43e0b5c5770d34d29b958c08d2aacc2ead2efec1c985dc1386 files/digest-gift-gnutella-0.0.10.1 75
+MD5 c464f118c813212dd2f6e7ddbfd0bef4 files/digest-gift-gnutella-0.0.9.2-r1 74
+RMD160 c535b4dd90f035a05803d47a28cd1109b7b21660 files/digest-gift-gnutella-0.0.9.2-r1 74
+SHA256 41a876dee6a7bacbcdb7202f90eb07d7985ed10206eed3a293861932a13fd876 files/digest-gift-gnutella-0.0.9.2-r1 74
