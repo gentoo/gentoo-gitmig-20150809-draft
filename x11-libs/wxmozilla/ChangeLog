@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/wxmozilla
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/ChangeLog,v 1.5 2005/06/04 13:43:22 fserb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/ChangeLog,v 1.6 2006/04/26 19:21:21 fserb Exp $
+
+*wxmozilla-0.5.6 (26 Apr 2006)
+
+  26 Apr 2006; Fernando Serboncini <fserb@gentoo.org>
+  +wxmozilla-0.5.6.ebuild:
+  Version bump.
 
 *wxmozilla-0.5.4 (04 Jun 2005)
 
