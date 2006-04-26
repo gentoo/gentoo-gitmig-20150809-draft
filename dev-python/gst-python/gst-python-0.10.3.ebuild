@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.3.ebuild,v 1.3 2006/04/13 13:40:02 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.3.ebuild,v 1.4 2006/04/26 10:34:00 lu_zero Exp $
 
 inherit python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gstreamer.freedesktop.org"
 SRC_URI="http://gstreamer.freedesktop.org/src/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0.10"
-KEYWORDS="~alpha ~amd64 ~ia64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-python/pygtk-2.6.3
