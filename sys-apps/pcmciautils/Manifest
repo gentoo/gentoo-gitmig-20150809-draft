@@ -1,31 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f72724860888d26d60a9954bf2136a61 ChangeLog 3330
-RMD160 5995a7070efb2b4d986da9732641b10ff733f94f ChangeLog 3330
-SHA256 fd799216f6377aac4f2080153896c98f860f15acfa5b9054bb3ce78ef83b6ebd ChangeLog 3330
+MD5 8c7e9b40b23670a8681776db4a44886e ChangeLog 3426
 MD5 e61be18a09805cd66618da8fb7ce7f52 files/digest-pcmciautils-012 67
-RMD160 a28e4f67d5344d8079b6a4ee60dc9d2b29b9f8e0 files/digest-pcmciautils-012 67
-SHA256 d2b06ab5d474956e75ecc7370a58ec2007d1f9ea265af30ca850847ac2894d97 files/digest-pcmciautils-012 67
 MD5 af764e4b3e678630cab86bc55a73a640 files/digest-pcmciautils-013 67
-RMD160 d1e0d46a94e458671500a17e10d07921bbe971f2 files/digest-pcmciautils-013 67
-SHA256 505aaa5819066ab14e83e96fed8ab8ef2d8c66072219ee5949c186f9c7272c95 files/digest-pcmciautils-013 67
 MD5 7bc55616a05befe15cf8e86ed05fc57e files/pcmciautils-012-pccardctl-uclibc.patch 251
-RMD160 242595e56dd8a924baabbbc12cb7f70a93d9bf83 files/pcmciautils-012-pccardctl-uclibc.patch 251
-SHA256 6ec3f1d14980c8b63f49269594582a93d60cf174ae46c563ddd81ec7d1ee8476 files/pcmciautils-012-pccardctl-uclibc.patch 251
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
-RMD160 e6f6333d659d443f0290a257c2b23772ab1cf526 metadata.xml 255
-SHA256 255c7b73ddde5e979b6b53de0f9f5b858e22e602e0495f484b2a33cd2987edf9 metadata.xml 255
 MD5 5335d2301c91c6b5e920bedc87c6974f pcmciautils-012.ebuild 2269
-RMD160 61b3f20b846961622d5b4f961dea045f1d9b414a pcmciautils-012.ebuild 2269
-SHA256 128003dc386a2c9eb7b364a2d28329709318c5e3278e5202d6cbe50faf18003a pcmciautils-012.ebuild 2269
-MD5 38b890d917ad9e2dcd1b514255bbd385 pcmciautils-013.ebuild 2207
-RMD160 77689381c537f9dc41a6ebe22e58f0b281e74c35 pcmciautils-013.ebuild 2207
-SHA256 1165d953375da861792910320df04804e5cc9f67553d29d399916e1593590422 pcmciautils-013.ebuild 2207
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEJyKf/aM9DdBw91cRAu87AJ9+m4CjS25m8p2RXY++GkYbuJH/zgCeOuNe
-cNxB/uHqY8S7Ez1O9loTCaw=
-=8GmI
------END PGP SIGNATURE-----
+MD5 fc05ff1c9484272bac948e669a10a5be pcmciautils-013.ebuild 2206
