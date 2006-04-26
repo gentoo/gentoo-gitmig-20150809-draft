@@ -1,15 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 923cf3f39fc75794e9eb0d12451ddaea ChangeLog 466
+MD5 b2ee8c010a9f096f0c6d679b5da766d0 ChangeLog 627
+RMD160 6c1cb70746b2bc11d92d7f377b7a927dea6e71dc ChangeLog 627
+SHA256 666783a700e03ee00e3fee14ec8fc5e5f100c27751bea9a23cd4e566c83ad41e ChangeLog 627
 MD5 5b08b299d197ddfb86301aaf58e2eada emacs-jabber-0.6.1.ebuild 911
+RMD160 7fbd3a1afbd3a7261467bfde39901fdb391fde93 emacs-jabber-0.6.1.ebuild 911
+SHA256 976c051a0a0a4e97b48e026b479b8dab371bbdb193a18ed001728dc2b91671fa emacs-jabber-0.6.1.ebuild 911
+MD5 81e505d0646ce0cfaaf576ea85d484f4 emacs-jabber-0.7.ebuild 1089
+RMD160 c228c58b962b8b1bb277d5f49c4defa1db458646 emacs-jabber-0.7.ebuild 1089
+SHA256 57f7212089b3c2fd43ef0b533a22d3f6d54031a9a9d4fb5e95aba6745e2cd2db emacs-jabber-0.7.ebuild 1089
 MD5 98c463c9a7e3a9a4aed6d263734fb00a files/70emacs-jabber-gentoo.el 98
+RMD160 ccd48f0ca1daa6ad83cb31b756d715e324b4128e files/70emacs-jabber-gentoo.el 98
+SHA256 8e42dc7245eb721092bc85a4938874dbbc51858964bcfa8221caecb4c7a0c7d2 files/70emacs-jabber-gentoo.el 98
 MD5 20d83983c6972daa5849d384d7444016 files/digest-emacs-jabber-0.6.1 70
+RMD160 283b88bcf135967ba2e466af3551cfadc5ff0aec files/digest-emacs-jabber-0.6.1 70
+SHA256 d8f59dfa86111e0a2cab5c28537ab7c88a81f3715f67ebee6ac3b18146562840 files/digest-emacs-jabber-0.6.1 70
+MD5 f282ac76733671e637d67964371cb2d1 files/digest-emacs-jabber-0.7 250
+RMD160 3c7c9e0c29d008f3d9bf076980a011cc31a7b946 files/digest-emacs-jabber-0.7 250
+SHA256 0706241726576016f5fd40e804bb64497e8a31babadef0e4904e94de3a82f7ff files/digest-emacs-jabber-0.7 250
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+RMD160 415d172437ca754d24fc5ab186ba8e77934d96e4 metadata.xml 158
+SHA256 1393bdef3a74343fdb40a112c7096a1af16f67e7a43413250de28dfe73810eab metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDldw4yiNZaEAZA+ARAg4tAJ98vdOqGLMNbLM6yoreEXOnbCWYoACfaznX
-vEKGErV7XeFDubyz9SznMPs=
-=7I18
+iD8DBQFET5qhyiNZaEAZA+ARAlG3AJ4nW515VZbAc7zsJdLAlTip5vuDKgCePam8
+7w/tJ48bR44NDtGsupASyVg=
+=GhPh
 -----END PGP SIGNATURE-----
