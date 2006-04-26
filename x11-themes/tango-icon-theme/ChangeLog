@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/tango-icon-theme
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.16 2006/04/24 14:18:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.17 2006/04/26 18:22:35 metalgod Exp $
+
+*tango-icon-theme-0.7.2 (26 Apr 2006)
+
+  26 Apr 2006; Luis Medinas <metalgod@gentoo.org>
+  +tango-icon-theme-0.7.2.ebuild:
+  Version Bump.
 
   24 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   tango-icon-theme-0.7.1.ebuild:
