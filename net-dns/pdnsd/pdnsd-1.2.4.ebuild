@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.4.ebuild,v 1.6 2006/03/13 15:41:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.4.ebuild,v 1.7 2006/04/26 17:13:38 mrness Exp $
 
 inherit eutils
 
@@ -55,8 +55,9 @@ src_test() {
 		sed -e "s/\tip=/${IPS}/" -e "s:cache_dir=:cache_dir=${T}/pdnsd:" "${FILESDIR}/pdnsd.conf.test" \
 			> "${T}/pdnsd.conf.test"
 		src/pdnsd -c "${T}/pdnsd.conf.test" -g -s -d -p "${T}/pid" || die "couldn't start daemon"
-		find "${T}" -ls
+		sleep 3
 
+		find "${T}" -ls
 		[ -s "${T}/pid" ] || die "empty or no pid file created"
 		[ -S "${T}/pdnsd/pdnsd.status" ] || die "no socket created"
 		src/pdnsd-ctl/pdnsd-ctl -c "${T}/pdnsd" server all up || die "failed to start the daemon"
