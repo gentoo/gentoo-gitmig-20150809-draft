@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.803-r1.ebuild,v 1.14 2006/04/24 15:33:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.803-r1.ebuild,v 1.15 2006/04/26 15:20:26 mcummings Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
-DEPEND=">=virtual/perl-libnet-1.0703
+DEPEND="virtual/perl-libnet
 	>=dev-perl/HTML-Parser-3.34
 	>=dev-perl/URI-1.10
 	>=virtual/perl-Digest-MD5-2.12
