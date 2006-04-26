@@ -1,36 +1,56 @@
-MD5 76b4ebb6d3307b9997fa6a7e32df84df ChangeLog 2138
-RMD160 92229badc0fe1406ee3d33f6fa652a563fc24d0c ChangeLog 2138
-SHA256 edd1d3ed084498429668c8addef80baffd118a76bf27a21c6ab619640125a3bd ChangeLog 2138
+AUX mercury-0.12.2-CFLAGS.patch 1267 RMD160 70cbaa9b85c8ac23cd17c41c3d834c69af5bff1a SHA1 10dff1d7fd2ab500cb9995352a393824ac1c4925 SHA256 b27660a29a71b56071daa5e7fc6c62c697c53c55bf8b9068c1bc42002cdb00f1 size 1267
+MD5 f9d8db42316ea25a27a1bbc6806f60d7 files/mercury-0.12.2-CFLAGS.patch 1267
+RMD160 70cbaa9b85c8ac23cd17c41c3d834c69af5bff1a files/mercury-0.12.2-CFLAGS.patch 1267
+SHA256 b27660a29a71b56071daa5e7fc6c62c697c53c55bf8b9068c1bc42002cdb00f1 files/mercury-0.12.2-CFLAGS.patch 1267
+AUX mercury-0.12.2-docs.patch 796 RMD160 27543c5201dfcc3112878026c06f193e126288be SHA1 f7c2e543781f9f8b69777e7ef985279a6e9b284d SHA256 78be9f8ef2960ce9ea99b33734d9143a998d87056efa84bafb618cab74fcd514 size 796
+MD5 5e8e5942a015e9832289c90913fa2bca files/mercury-0.12.2-docs.patch 796
+RMD160 27543c5201dfcc3112878026c06f193e126288be files/mercury-0.12.2-docs.patch 796
+SHA256 78be9f8ef2960ce9ea99b33734d9143a998d87056efa84bafb618cab74fcd514 files/mercury-0.12.2-docs.patch 796
+AUX mercury-0.12.2-portage.patch 1606 RMD160 485229c1485e0acade8df39dca0da1ae2ade9a7f SHA1 7f849b136b98dd9687173eda9ca2c0dfeb94d92c SHA256 5b56cdfc254d7e20b0fba5c3bb8187fd9883e7ea2063930de5f6c4fb8da25be1 size 1606
+MD5 8ba4f9e032e6b3d148dcb3dc80cc9938 files/mercury-0.12.2-portage.patch 1606
+RMD160 485229c1485e0acade8df39dca0da1ae2ade9a7f files/mercury-0.12.2-portage.patch 1606
+SHA256 5b56cdfc254d7e20b0fba5c3bb8187fd9883e7ea2063930de5f6c4fb8da25be1 files/mercury-0.12.2-portage.patch 1606
+AUX mercury-0.13.0_beta-CFLAGS.patch 1387 RMD160 50beda679059cfa2f1c4c0868c34d7fcad147336 SHA1 ccde9305e9ee1b1705ffc96de36fbb766dc1f12e SHA256 aa3e882f2590d2962b2421495f92d1ae24030799e829f72caf5a55b17fcdea58 size 1387
+MD5 978c7b688fa22fbf08bbd85f052cc603 files/mercury-0.13.0_beta-CFLAGS.patch 1387
+RMD160 50beda679059cfa2f1c4c0868c34d7fcad147336 files/mercury-0.13.0_beta-CFLAGS.patch 1387
+SHA256 aa3e882f2590d2962b2421495f92d1ae24030799e829f72caf5a55b17fcdea58 files/mercury-0.13.0_beta-CFLAGS.patch 1387
+AUX mercury-0.13.0_beta-docs.patch 828 RMD160 451ce70dc6f2121f6585d3633693c289b584db47 SHA1 29556a9a7aa2d568c37f0a9df33f16c10bfee906 SHA256 0dd010fa6acdef885b2bca5d79c4bb7b2b3aba2b2569e17035de1fbd0d32cbf7 size 828
+MD5 825e199f587b2ceb1521e68ac78ec58a files/mercury-0.13.0_beta-docs.patch 828
+RMD160 451ce70dc6f2121f6585d3633693c289b584db47 files/mercury-0.13.0_beta-docs.patch 828
+SHA256 0dd010fa6acdef885b2bca5d79c4bb7b2b3aba2b2569e17035de1fbd0d32cbf7 files/mercury-0.13.0_beta-docs.patch 828
+AUX mercury-0.13.0_beta-portage.patch 1608 RMD160 30c59012a80aebac452d6ec7d24e7af193e8ab7d SHA1 68eb6d55cfc6f79485cdf1c5b300234eddd176bd SHA256 00fee4b44e779fd4cc79be60b95309a98999ae2fedfe602195fa1855e62d2da9 size 1608
+MD5 7b1cd28fdc808a7c8cdfadb8722013ea files/mercury-0.13.0_beta-portage.patch 1608
+RMD160 30c59012a80aebac452d6ec7d24e7af193e8ab7d files/mercury-0.13.0_beta-portage.patch 1608
+SHA256 00fee4b44e779fd4cc79be60b95309a98999ae2fedfe602195fa1855e62d2da9 files/mercury-0.13.0_beta-portage.patch 1608
+DIST mercury-compiler-0.12.2.tar.gz 15074997 RMD160 227a3e1796d96ad77324d9f1d39efd6be7fce80e SHA256 7fa1df8030cdc3d4dc848d102ba64bf23c12004461c985290622b81753b89572 size 15074997
+DIST mercury-compiler-0.13.0-beta-2006-04-23-unstable.tar.gz 15843508 RMD160 7f6e68c56f34f5380118c9d5c63f1932ded730c2 SHA256 8259ac12c7ac37b0901df4d1bb21534bca07c78e3bf4632e43023a44f03e9d93 size 15843508
+DIST mercury-compiler-0.13.0-beta-2006-04-25-unstable.tar.gz 15844449 RMD160 1c9a9f7e11b3a8a077b8a000d00ef22afc94b591 SHA256 6d459ad2720f21e1d2441792af279c9b8ac5411922afb238022d93ccdeacafe7 size 15844449
+EBUILD mercury-0.12.2.ebuild 1420 RMD160 0f54075c4025dd99f6f60b6dabd5d761a92ba38c SHA1 1f5e45b394d460f661a73373528f3623f464f302 SHA256 295e09a313b2f6129eadf492b3d9d266a3a1ba8cb933e7cac74eb4a386a5a45b size 1420
+MD5 d78f860592f44275fa723f1e945204f1 mercury-0.12.2.ebuild 1420
+RMD160 0f54075c4025dd99f6f60b6dabd5d761a92ba38c mercury-0.12.2.ebuild 1420
+SHA256 295e09a313b2f6129eadf492b3d9d266a3a1ba8cb933e7cac74eb4a386a5a45b mercury-0.12.2.ebuild 1420
+EBUILD mercury-0.13.0_beta5.ebuild 1604 RMD160 85d18bc203967be7bbea444a64c78c40dfd3588a SHA1 787fd353b76abde454c876a1d9a899fc74ed67c4 SHA256 9dcb55383f3850916e3436527c5145d53b7f9348f2da125bc3f1b487bcd257b7 size 1604
+MD5 0e4d32c1388cb334345ac40484502539 mercury-0.13.0_beta5.ebuild 1604
+RMD160 85d18bc203967be7bbea444a64c78c40dfd3588a mercury-0.13.0_beta5.ebuild 1604
+SHA256 9dcb55383f3850916e3436527c5145d53b7f9348f2da125bc3f1b487bcd257b7 mercury-0.13.0_beta5.ebuild 1604
+EBUILD mercury-0.13.0_beta6.ebuild 1604 RMD160 478d4d611bd3aa0f3effb6721dd06162829fef3b SHA1 4b29b6bdcfcd5180f743aeaef36f2630e9cc175d SHA256 0dc3faa017254a28c8c935799d3b162ecfe3943672e9dfce97da37a9ea36ec3f size 1604
+MD5 218636986c427f6d54d06bbb55c75398 mercury-0.13.0_beta6.ebuild 1604
+RMD160 478d4d611bd3aa0f3effb6721dd06162829fef3b mercury-0.13.0_beta6.ebuild 1604
+SHA256 0dc3faa017254a28c8c935799d3b162ecfe3943672e9dfce97da37a9ea36ec3f mercury-0.13.0_beta6.ebuild 1604
+MISC ChangeLog 2279 RMD160 630abdf920dd4f44c3708a0d2b59cbe1b32163cd SHA1 2179f56a5a4a9ed4e6999c727a9200a87ef2a56d SHA256 355669d95cb8d6e5daebf08679e26a3327b26f0fa45d8c1e7f95b17f4d575845 size 2279
+MD5 d9567f63b5f64867fe1a8f78bb59bae5 ChangeLog 2279
+RMD160 630abdf920dd4f44c3708a0d2b59cbe1b32163cd ChangeLog 2279
+SHA256 355669d95cb8d6e5daebf08679e26a3327b26f0fa45d8c1e7f95b17f4d575845 ChangeLog 2279
+MISC metadata.xml 247 RMD160 1b3df3c501d9a3b2e2651668be405677e8416397 SHA1 7b705a8a3368abab6ad31ea2fcb5e5db865d92b1 SHA256 be2c02607bd8d5bf707b178d925fa94c6c705014aa488156323589ca4eaac380 size 247
+MD5 6fca20d17d6d55a28537204aa9bb626f metadata.xml 247
+RMD160 1b3df3c501d9a3b2e2651668be405677e8416397 metadata.xml 247
+SHA256 be2c02607bd8d5bf707b178d925fa94c6c705014aa488156323589ca4eaac380 metadata.xml 247
 MD5 1de216638d19d62bd270bcc2ec55d75d files/digest-mercury-0.12.2 277
 RMD160 56137f9a814f0f6f0d1d4b7200dfda77320ecc48 files/digest-mercury-0.12.2 277
 SHA256 b9767d0d39801d79c2c6fad1bb77b2f7327bc0f5e70c8e9adcc4126352c8ddf9 files/digest-mercury-0.12.2 277
 MD5 f287579de5858d2437c8e77d01f9b97d files/digest-mercury-0.13.0_beta5 352
 RMD160 3ab7af61d2751a7f0cfc5ace2f0b13f51b8668b4 files/digest-mercury-0.13.0_beta5 352
 SHA256 a0f739176c085ae51c64c051339b2de6615716ecad50c00f12bfb3b591d42915 files/digest-mercury-0.13.0_beta5 352
-MD5 f9d8db42316ea25a27a1bbc6806f60d7 files/mercury-0.12.2-CFLAGS.patch 1267
-RMD160 70cbaa9b85c8ac23cd17c41c3d834c69af5bff1a files/mercury-0.12.2-CFLAGS.patch 1267
-SHA256 b27660a29a71b56071daa5e7fc6c62c697c53c55bf8b9068c1bc42002cdb00f1 files/mercury-0.12.2-CFLAGS.patch 1267
-MD5 5e8e5942a015e9832289c90913fa2bca files/mercury-0.12.2-docs.patch 796
-RMD160 27543c5201dfcc3112878026c06f193e126288be files/mercury-0.12.2-docs.patch 796
-SHA256 78be9f8ef2960ce9ea99b33734d9143a998d87056efa84bafb618cab74fcd514 files/mercury-0.12.2-docs.patch 796
-MD5 8ba4f9e032e6b3d148dcb3dc80cc9938 files/mercury-0.12.2-portage.patch 1606
-RMD160 485229c1485e0acade8df39dca0da1ae2ade9a7f files/mercury-0.12.2-portage.patch 1606
-SHA256 5b56cdfc254d7e20b0fba5c3bb8187fd9883e7ea2063930de5f6c4fb8da25be1 files/mercury-0.12.2-portage.patch 1606
-MD5 978c7b688fa22fbf08bbd85f052cc603 files/mercury-0.13.0_beta-CFLAGS.patch 1387
-RMD160 50beda679059cfa2f1c4c0868c34d7fcad147336 files/mercury-0.13.0_beta-CFLAGS.patch 1387
-SHA256 aa3e882f2590d2962b2421495f92d1ae24030799e829f72caf5a55b17fcdea58 files/mercury-0.13.0_beta-CFLAGS.patch 1387
-MD5 825e199f587b2ceb1521e68ac78ec58a files/mercury-0.13.0_beta-docs.patch 828
-RMD160 451ce70dc6f2121f6585d3633693c289b584db47 files/mercury-0.13.0_beta-docs.patch 828
-SHA256 0dd010fa6acdef885b2bca5d79c4bb7b2b3aba2b2569e17035de1fbd0d32cbf7 files/mercury-0.13.0_beta-docs.patch 828
-MD5 7b1cd28fdc808a7c8cdfadb8722013ea files/mercury-0.13.0_beta-portage.patch 1608
-RMD160 30c59012a80aebac452d6ec7d24e7af193e8ab7d files/mercury-0.13.0_beta-portage.patch 1608
-SHA256 00fee4b44e779fd4cc79be60b95309a98999ae2fedfe602195fa1855e62d2da9 files/mercury-0.13.0_beta-portage.patch 1608
-MD5 d78f860592f44275fa723f1e945204f1 mercury-0.12.2.ebuild 1420
-RMD160 0f54075c4025dd99f6f60b6dabd5d761a92ba38c mercury-0.12.2.ebuild 1420
-SHA256 295e09a313b2f6129eadf492b3d9d266a3a1ba8cb933e7cac74eb4a386a5a45b mercury-0.12.2.ebuild 1420
-MD5 0e4d32c1388cb334345ac40484502539 mercury-0.13.0_beta5.ebuild 1604
-RMD160 85d18bc203967be7bbea444a64c78c40dfd3588a mercury-0.13.0_beta5.ebuild 1604
-SHA256 9dcb55383f3850916e3436527c5145d53b7f9348f2da125bc3f1b487bcd257b7 mercury-0.13.0_beta5.ebuild 1604
-MD5 6fca20d17d6d55a28537204aa9bb626f metadata.xml 247
-RMD160 1b3df3c501d9a3b2e2651668be405677e8416397 metadata.xml 247
-SHA256 be2c02607bd8d5bf707b178d925fa94c6c705014aa488156323589ca4eaac380 metadata.xml 247
+MD5 6e6d8f715f27b7b69a56e486698a095b files/digest-mercury-0.13.0_beta6 352
+RMD160 418682956df860adcda6eb53679727f214c26d79 files/digest-mercury-0.13.0_beta6 352
+SHA256 36ec9c2ab9a11cc0fda191642b1f9e95e249af6f9c859a9ec9d5008a1d576590 files/digest-mercury-0.13.0_beta6 352
