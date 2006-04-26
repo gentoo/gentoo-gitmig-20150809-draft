@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nepenthes
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.10 2006/04/23 19:29:11 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.11 2006/04/26 18:44:15 squinky86 Exp $
+
+  26 Apr 2006; Jon Hood <squinky86@gentoo.org> nepenthes-0.1.7.ebuild:
+  Add ~amd64, #131064.
 
 *nepenthes-0.1.7 (23 Apr 2006)
 
