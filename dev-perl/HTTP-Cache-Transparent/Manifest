@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 422bfb575b53ba08a0001eabfaefc537 ChangeLog 1958
 RMD160 3632198c7ce3c1fa27380c5ee52703f5bceea506 ChangeLog 1958
 SHA256 65f5c76d709fef2a66b15c9888040c787a9bd47f24dabcbbca89d4d0f83180c8 ChangeLog 1958
@@ -10,19 +7,18 @@ SHA256 e30a7dd6ba84a14b8a62d4b8fbb910b918f3ba6a0d422bff599dd3700ac1c94d HTTP-Cac
 MD5 912868c79bbb43d29ce33a6ae5203db2 HTTP-Cache-Transparent-0.6.ebuild 613
 RMD160 032b6ded7877b1d7d9f77023d8020591932f46a7 HTTP-Cache-Transparent-0.6.ebuild 613
 SHA256 669ba3a198cf3b4d925853d7d884c106c052222c349917d717366bf3ae48fb55 HTTP-Cache-Transparent-0.6.ebuild 613
+MD5 72ce4d336dd716a2acead8cc0dbacd0b HTTP-Cache-Transparent-0.7.ebuild 487
+RMD160 2a0da5fc0fe47bef1a14e9d0a040757edd564b50 HTTP-Cache-Transparent-0.7.ebuild 487
+SHA256 f8026594153063bc604f8c74b62aa93627c1af95b282069db4d5e31da83b2a9c HTTP-Cache-Transparent-0.7.ebuild 487
 MD5 bc2ff7c77970db58f437698b244d71e8 files/digest-HTTP-Cache-Transparent-0.5 76
 RMD160 e90cc6cfc68f594c03cfd0a19856c08fe446bedb files/digest-HTTP-Cache-Transparent-0.5 76
 SHA256 660a12ce21def9f06543f60ad21d076381ad18aba13224931c441456dee33b77 files/digest-HTTP-Cache-Transparent-0.5 76
 MD5 5378010b6ef7bf2f0afc1a99e3369430 files/digest-HTTP-Cache-Transparent-0.6 76
 RMD160 10cdd7747b8187075c6ee0c6088a06ab09391ada files/digest-HTTP-Cache-Transparent-0.6 76
 SHA256 5673394821dd5ba8a634da59c630349a3773e0110a3c09b409787104d91cc904 files/digest-HTTP-Cache-Transparent-0.6 76
+MD5 c9c39d026b6fa3e40b011618f4544b1a files/digest-HTTP-Cache-Transparent-0.7 274
+RMD160 87fc7ce57368d850f223edd8efac068ff21bc6bf files/digest-HTTP-Cache-Transparent-0.7 274
+SHA256 46f03ea90ed556f87f0a8b2e88d8a4148a59f74f161f545878b111b6832fd652 files/digest-HTTP-Cache-Transparent-0.7 274
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFELGDZJrHF4yAQTrARAtQ+AKDB5KK1XZs9X5k6lq9hkg0dg5L0kwCguYkG
-NdS1MQd/4ZQXtbw5XNHb5VU=
-=YuJh
------END PGP SIGNATURE-----
