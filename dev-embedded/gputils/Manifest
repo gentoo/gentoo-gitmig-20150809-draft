@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3baf2b3e7d6f29909bd573f6e6a85573 ChangeLog 3726
-MD5 97b6af99fafcf39f2d33dbdc4ea4fb8d gputils-0.13.3.ebuild 746
-MD5 8b9a95f37d47524d6d7b7424387cd3e4 gputils-0.12.4.ebuild 736
-MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
-MD5 6eb1ac1ab3cc8b6b2d364d081e3a4620 files/digest-gputils-0.13.3 67
+MD5 41de267af3f68edf9cc937a4ffb8aef7 ChangeLog 3832
 MD5 1511ba91e00581e4559de7f5f07d30f1 files/digest-gputils-0.12.4 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDCDoLmdTrptrqvGERAhqdAJ9Zai+BtalsTVtlbvRqo65IynI4DQCeO2iY
-G9x5UYhywb8J0PEugqS9ozU=
-=DrpD
------END PGP SIGNATURE-----
+MD5 6eb1ac1ab3cc8b6b2d364d081e3a4620 files/digest-gputils-0.13.3 67
+MD5 6eb1ac1ab3cc8b6b2d364d081e3a4620 files/digest-gputils-0.13.3-r1 67
+MD5 8b9a95f37d47524d6d7b7424387cd3e4 gputils-0.12.4.ebuild 736
+MD5 4359349f038ed981b8d0db9c13d37904 gputils-0.13.3-r1.ebuild 682
+MD5 97b6af99fafcf39f2d33dbdc4ea4fb8d gputils-0.13.3.ebuild 746
+MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
