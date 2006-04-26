@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.66 2006/04/25 18:48:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.67 2006/04/26 00:07:43 wolf31o2 Exp $
+
+  26 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> lvm2-2.02.05.ebuild:
+  Marking stable on x86 wrt bug #130529.
 
   25 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> lvm2-2.02.05.ebuild:
   Stable on sparc wrt #130529
