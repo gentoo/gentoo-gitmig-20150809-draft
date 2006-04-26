@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.333 2006/04/26 01:48:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.334 2006/04/26 11:03:49 flameeyes Exp $
+
+*xine-lib-1.1.2_pre20060328-r4 (26 Apr 2006)
+
+  26 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -xine-lib-1.1.2_pre20060328-r3.ebuild,
+  +xine-lib-1.1.2_pre20060328-r4.ebuild:
+  New experimental revision, this time should build with all the options
+  enabled and with minimum symbols.
 
 *xine-lib-1.1.2_pre20060328-r3 (26 Apr 2006)
 
