@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.73 2006/03/30 19:29:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.74 2006/04/26 20:03:24 hansmi Exp $
+
+  26 Apr 2006; Michael Hanselmann <hansmi@gentoo.org>
+  +files/dnstracesort.patch, djbdns-1.05-r17.ebuild:
+  Minor patch to fix the call syntax of "sort", bug 131355.
 
   30 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
   -djbdns-1.05-r15.ebuild:

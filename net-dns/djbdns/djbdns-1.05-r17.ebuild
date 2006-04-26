@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r17.ebuild,v 1.4 2006/03/25 21:27:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r17.ebuild,v 1.5 2006/04/26 20:03:24 hansmi Exp $
 
 IUSE="aliaschain cnamefix doc fwdzone ipv6 \
 	multipleip roundrobin semanticfix static selinux \
@@ -87,8 +87,10 @@ src_unpack() {
 	use multidata && \
 		epatch ${DISTDIR}/djbdns-1.05-multi_tinydns_data.patch
 
-	epatch ${FILESDIR}/headtail.patch
-	epatch ${FILESDIR}/dnsroots.patch
+	epatch \
+		${FILESDIR}/headtail.patch \
+		${FILESDIR}/dnsroots.patch \
+		${FILESDIR}/dnstracesort.patch
 
 	if use ipv6; then
 		einfo "At present dnstrace does NOT support IPv6. It will " \
