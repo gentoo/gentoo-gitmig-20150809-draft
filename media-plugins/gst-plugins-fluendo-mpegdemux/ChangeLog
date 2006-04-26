@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/gst-plugins-fluendo-mpegdemux
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-fluendo-mpegdemux/ChangeLog,v 1.1 2006/04/26 15:16:20 zaheerm Exp $
+
+*gst-plugins-fluendo-mpegdemux-0.10.4 (26 Apr 2006)
+
+  26 Apr 2006; Zaheer Abbas Merali <zaheerm@gentoo.org> +metadata.xml,
+  +gst-plugins-fluendo-mpegdemux-0.10.4.ebuild:
+  Initial ebuild
+
