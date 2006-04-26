@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/gnonlin-0.10.2.ebuild,v 1.1 2006/04/21 17:00:57 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/gnonlin-0.10.3.ebuild,v 1.1 2006/04/26 09:16:08 zaheerm Exp $
 
 SRC_URI="http://gstreamer.freedesktop.org/src/${PN}/${P}.tar.bz2"
 KEYWORDS="~amd64 ~x86"
