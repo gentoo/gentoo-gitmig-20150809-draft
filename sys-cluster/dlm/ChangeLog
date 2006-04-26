@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/dlm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/ChangeLog,v 1.18 2006/03/29 18:47:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/ChangeLog,v 1.19 2006/04/26 00:05:06 wolf31o2 Exp $
+
+  26 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> dlm-1.01.00.ebuild:
+  Marking stable on x86 wrt bug #130529.
 
   29 Mar 2006; Markus Rothe <corsair@gentoo.org> dlm-1.01.00.ebuild:
   Added ~ppc64
