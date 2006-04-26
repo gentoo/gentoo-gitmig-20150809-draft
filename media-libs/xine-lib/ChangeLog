@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.334 2006/04/26 11:03:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.335 2006/04/26 13:01:36 flameeyes Exp $
+
+  26 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.1.2_pre20060328-r4.ebuild:
+  Bump patchset version, with an extra patch to mark constant some data
+  structures to reduce memory usage, and enforce v4l useflag.
 
 *xine-lib-1.1.2_pre20060328-r4 (26 Apr 2006)
 
