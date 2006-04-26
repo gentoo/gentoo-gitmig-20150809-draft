@@ -1,2 +1,6 @@
-MD5 5c7ea9b5d3b3677dfcdcec38b281a756 busybox-1.00.tar.bz2 1118427
 MD5 af5bc43f345f102fc257787d7beacaac busybox-1.00-e2fsprogs.patch.bz2 16713
+RMD160 7c70d03f902f916fff02cf4ce126ba19db65ea56 busybox-1.00-e2fsprogs.patch.bz2 16713
+SHA256 15fa252f80c08e7d9a82d78f5b7d2118c6ffbe233ae732d3289f7ac3830612b6 busybox-1.00-e2fsprogs.patch.bz2 16713
+MD5 5c7ea9b5d3b3677dfcdcec38b281a756 busybox-1.00.tar.bz2 1118427
+RMD160 357a65c86ca9188a381c69e9c8ded8a3c80a2f50 busybox-1.00.tar.bz2 1118427
+SHA256 aefbd1abb592a3234298ab80ba58567fc46fa63348b054de3471ec9a717291a0 busybox-1.00.tar.bz2 1118427
