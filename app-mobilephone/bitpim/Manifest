@@ -1,17 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b196b75e507f336cee2c2a61793bc68d ChangeLog 2362
+MD5 ee478f9477ab1e24abb4ca3c4d738c58 ChangeLog 2526
 MD5 988001e6838973894fa89082d8bc8b01 bitpim-0.8.08.ebuild 887
 MD5 e194319727b4ccc10d97512676768b51 bitpim-0.8.12.ebuild 4248
+MD5 31b5df8beac6d9bf7add83371c545c68 bitpim-0.8.13.ebuild 4413
 MD5 60182eac75105fa28b21d105619c32ce files/bitpim-0.8.12-gentoo.patch 3865
+MD5 20dd7fd8dde56060531f87cc7a6d3971 files/bitpim-0.8.13-gentoo.patch 2482
 MD5 0a0ef0672d7c7ddda19e132a49ca1a71 files/digest-bitpim-0.8.08 71
 MD5 fcfa1e2142b56a6591a3c48b68708f4e files/digest-bitpim-0.8.12 67
+MD5 923f2a8f3c714afebffa1c6365188579 files/digest-bitpim-0.8.13 67
 MD5 b05575cd16c40945a62bcfee6f1fce07 metadata.xml 493
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFESih3jG8pv1lIUX4RAkXMAJ4v1djExrpw+8siK0jBNixXngv0YQCgkiwL
-ir2J3VsY2uJXM3iWHkVjdAI=
-=26Vb
+iD8DBQFET5opjG8pv1lIUX4RAu11AKCZVqD9SAm0p8mbyKb7mIATyiMyywCg4EY7
+ZJ5zOPLtE3setwYzO2fJp+E=
+=MRyC
 -----END PGP SIGNATURE-----
