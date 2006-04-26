@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c0d26be173bbdf7b30963a4c34b9bb3e ChangeLog 1790
 RMD160 19aabd5e0d041f7619a6ac8544fd91cc6b8aba8d ChangeLog 1790
 SHA256 44370e1a568a988ad819be3cdd81be6582e863a41f6aab59baf8a3f6aa6f4c0e ChangeLog 1790
@@ -40,3 +43,10 @@ SHA256 2351b3e68514e030e3d68a80497cb438347c29e97b5bbf6c517f4170fcdecd21 stepmani
 MD5 46f831eb7a7c9fd4f204046c15610ed8 stepmania-3.9_rc3.ebuild 1870
 RMD160 dfb41cd45ebc5bd72fb27a599e2d2ce2ccd5fec6 stepmania-3.9_rc3.ebuild 1870
 SHA256 13d4911dc92ee1367680c35a21159cf7a46c9431e506c4ecc2dfb1ead94b3e37 stepmania-3.9_rc3.ebuild 1870
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFET/gf2CTtIKiFlQIRAnRPAJ43NyW/gWuztlIqZUmU5ZQ6k0qbVwCeIMHL
+/y4oYrXUqWB64PDhQGbqWRU=
+=WbRm
+-----END PGP SIGNATURE-----
