@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.17 2006/03/17 15:13:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.18 2006/04/26 12:57:05 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -102,7 +102,11 @@ vdr-plugin_pkg_setup() {
 	use debug && append-flags -g
 
 	VDRVERSION=$(awk -F'"' '/VDRVERSION/ {print $2}' /usr/include/vdr/config.h)
+	APIVERSION=$(awk -F'"' '/APIVERSION/ {print $2}' /usr/include/vdr/config.h)
+	[[ -z ${APIVERSION} ]] && APIVERSION="${VDRVERSION}"
+
 	einfo "Building ${PF} against vdr-${VDRVERSION}"
+	einfo "APIVERSION: ${APIVERSION}"
 }
 
 vdr-plugin_src_unpack() {
@@ -127,7 +131,10 @@ vdr-plugin_src_unpack() {
 				-e 's:-I$(VDRDIR)/include:-I$(VDRDIR):' \
 				-e 's:-I$(DVBDIR)/include:-I$(DVBDIR):' \
 				-e 's:-I$(VDRDIR) -I$(DVBDIR):-I$(DVBDIR) -I$(VDRDIR):' \
-				-e 's:$(VDRDIR)/\([a-z]*\.h\|Make.config\):$(VDRDIR)/vdr/\1:'
+				-e 's:$(VDRDIR)/\([a-z]*\.h\|Make.config\):$(VDRDIR)/vdr/\1:' \
+				-e 's:^APIVERSION = :APIVERSION ?= :' \
+				-e 's:$(LIBDIR)/$@.$(VDRVERSION):$(LIBDIR)/$@.$(APIVERSION):' \
+				-e '1i\APIVERSION = '"${APIVERSION}"
 			eend $?
 			;;
 		esac
