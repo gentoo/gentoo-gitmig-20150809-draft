@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.39 2006/03/29 17:36:54 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.40 2006/04/26 22:49:53 tcort Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -95,6 +95,7 @@ wifi
 
 # dbus is not currently supported by alpha
 dbus
+dmi
 
 # apache segfaults when using mpm-peruser (bug 105778)
 mpm-peruser
