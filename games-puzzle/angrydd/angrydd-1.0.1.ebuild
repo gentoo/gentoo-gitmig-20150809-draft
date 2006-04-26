@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/angrydd/angrydd-1.0.1.ebuild,v 1.4 2006/04/25 15:57:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/angrydd/angrydd-1.0.1.ebuild,v 1.5 2006/04/26 00:08:26 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -26,9 +26,6 @@ src_install() {
 	dodoc README TODO HACKING
 
 	doicon "${S}/angrydd.png" # for openbox
-	insinto "/usr/share/icons/hicolor/64x64/apps" # for FDO
-	doins "${S}/angrydd.png"
-
 	make_desktop_entry angrydd "Angry, Drunken Dwarves" angrydd
 
 	prepgamesdirs
