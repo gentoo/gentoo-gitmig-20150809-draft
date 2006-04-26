@@ -134,7 +134,8 @@ unipatch() {
 			tbz)	pipecmd="mkdir ${T}/ptmp/;
 							 cd ${T}/ptmp/;
 							 tar -xjf ${checkfile};
-							 find . -type f | sed -e 's:\./::g' \
+							 find . -type f | sed -e \
+							 	's:\./:${checkfile_patchdir}:g' \
 							 	> ${checkfile_meta}_files;
 							 cp -Rf ${T}/ptmp/* ${checkfile_patchdir};
 							 rm -Rf ${T}/ptmp;
@@ -142,7 +143,8 @@ unipatch() {
 			tgz)	pipecmd="mkdir ${T}/ptmp/;
 							 cd ${T}/ptmp/;
 							 tar -xzf ${checkfile};
-							 find . -type f | sed -e 's:\./::g' \
+							 find . -type f | sed -e \
+							 	's:\./:${checkfile_patchdir}:g' \
 							 	> ${checkfile_meta}_files;
 							 cp -Rf ${T}/ptmp/* ${checkfile_patchdir};
 							 rm -Rf ${T}/ptmp;
@@ -150,7 +152,8 @@ unipatch() {
 			tar)	pipecmd="mkdir ${T}/ptmp/;
 							 cd ${T}/ptmp/;
 							 tar -xf ${checkfile};
-							 find . -type f | sed -e 's:\./::g' \
+							 find . -type f | sed -e \
+							 	's:\./:${checkfile_patchdir}:g' \
 							 	> ${checkfile_meta}_files;
 							 cp -Rf ${T}/ptmp/* ${checkfile_patchdir};
 							 rm -Rf ${T}/ptmp;
@@ -158,26 +161,27 @@ unipatch() {
 			zip)	pipecmd="mkdir ${T}/ptmp/;
 							 cd ${T}/ptmp/;
 							 unzip ${checkfile};
-							 find . -type f | sed -e 's:\./::g' \
+							 find . -type f | sed -e \
+							 	's:\./:${checkfile_patchdir}:g' \
 							 	> ${checkfile_meta}_files;
 							 cp -Rf ${T}/ptmp/* ${checkfile_patchdir};
 							 rm -Rf ${T}/ptmp;
 							 cd \${OLDPWD}";;
 			diff)	pipecmd="cp ${checkfile} ${checkfile_patchdir};
-							 echo ${checkfile/*\//} \
+							 echo ${checkfile_patchdir}/${checkfile/*\//} \
 							 	> ${checkfile_meta}_files;";;
 			patch)	pipecmd="cp ${checkfile} ${checkfile_patchdir};
-							 echo ${checkfile/*\//} \
+							 echo ${checkfile_patchdir}/${checkfile/*\//} \
 							 	> ${checkfile_meta}_files;";;
 			gz)		pipecmd="gzip -dc ${checkfile} > ${T}/gunzip;
 						     cp ${T}/gunzip ${checkfile_patchdir}${checkfile_noext/*\//}.diff;
 						     rm ${T}/gunzip;
-							 echo ${checkfile_noext/*\//}.diff \
+							 echo ${checkfile_patchdir}/${checkfile_noext/*\//}.diff \
 							 	> ${checkfile_meta}_files;";;
 			bz2)	pipecmd="bzip2 -dc ${checkfile} > ${T}/bunzip;
 						     cp ${T}/bunzip ${checkfile_patchdir}${checkfile_noext/*\//}.diff;
 						     rm ${T}/bunzip;
-							 echo ${checkfile_noext/*\//}.diff \
+							 echo ${checkfile_patchdir}/${checkfile_noext/*\//}.diff \
 							 	> ${checkfile_meta}_files;";;
 			DROP)	pipecmd="";;
 			DOC)	pipecmd="cp ${checkfile} ${checkfile_patchdir}";;
@@ -242,7 +246,7 @@ unipatch() {
 				# This is something we silently ignore
 				:
 			elif [[ ${to_patch} -eq 1 ]]; then
-				apply_patch ${KPATCH_DIR}/${patch_to_process}
+				apply_patch ${patch_to_process}
 			else
 				einfo "Excluding: ${tempname}"
 			fi
@@ -254,7 +258,7 @@ unipatch() {
 }
 
 apply_patch() {
-	local plvl patch_log
+	local plvl patch_log pmsg
 	plvl=${patch_plevel}
 	patch_log="${T}/${1/*\//}.log"
 
@@ -270,8 +274,11 @@ apply_patch() {
 		echo "patch ${UNIPATCH_POPTS} -p${plvl} --dry-run -f" >> ${patch_log}
 		if (patch ${UNIPATCH_POPTS} -p${plvl} --dry-run -f < ${1}) >> ${patch_log}
 		then
+			[[ ${VERBOSITY} -ge 1 ]] && pmsg="-p${plvl}"
+			[[ ${VERBOSITY} -ge 2 ]] && pmsg="${UNIPATCH_POPTS} ${pmsg}"
+			[[ -n ${pmsg} ]] && pmsg=" (${pmsg})"
 			echo "**** Applying:" >> ${patch_log}
-			ebegin "Applying patch: ${1/*\//} (-p${plvl})"
+			ebegin "Applying patch: ${1/*\//}${pmsg}"
 			patch ${UNIPATCH_POPTS} -p${plvl} -f < ${1} >> ${patch_log}
 			eend $?
 			plvl=6
