@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.13 2006/04/25 01:45:34 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.14 2006/04/26 10:48:18 keri Exp $
+
+*mercury-extras-0.13.0_beta6 (26 Apr 2006)
+
+  26 Apr 2006; Keri Harris <keri@gentoo.org>
+  +files/mercury-extras-0.13.0_beta6-concurrency.patch,
+  +files/mercury-extras-0.13.0_beta6-odbc.patch,
+  +files/mercury-extras-0.13.0_beta6-trailed_update.patch,
+  +mercury-extras-0.13.0_beta6.ebuild:
+  New development snapshot.
 
   25 Apr 2006; Keri Harris <keri@gentoo.org>
   -files/mercury-extras-0.13.0_beta-concurrency.patch,
