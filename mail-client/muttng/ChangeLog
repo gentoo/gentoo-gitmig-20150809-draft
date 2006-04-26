@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/muttng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/ChangeLog,v 1.17 2006/04/22 11:22:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/ChangeLog,v 1.18 2006/04/26 19:59:29 grobian Exp $
+
+  26 Apr 2006; Fabian Groffen <grobian@gentoo.org>
+  files/muttng-20060309-smarttime.patch:
+  Fix of smarttime patch that screwed up the { } time
 
 *muttng-20060415 (22 Apr 2006)
 

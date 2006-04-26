@@ -1,6 +1,6 @@
 Index: hdrline.c
 ===================================================================
---- hdrline.c	(revision 790)
+--- hdrline.c	(revision 802)
 +++ hdrline.c	(working copy)
 @@ -302,11 +302,11 @@
    case '(':
@@ -17,7 +17,7 @@ Index: hdrline.c
  
        p = dest;
  
-@@ -318,6 +318,29 @@
+@@ -318,6 +318,28 @@
        else
          do_locales = 1;
  
@@ -42,16 +42,16 @@ Index: hdrline.c
 +          T += (hdr->zhours * 3600 + hdr->zminutes * 60);
 +        tm = gmtime_r (&T, tm);
 +      }
-+      t = mktime (tm);
 +
        len = destlen - 1;
        while (len > 0 && (((op == 'd' || op == 'D') && *cp) ||
                           (op == '{' && *cp != '}') ||
-@@ -335,6 +358,40 @@
+@@ -335,6 +357,43 @@
              }
              else
                break;            /* not enough space left */
 +          } else if (*cp == 'Q' || *cp == 'q') {
++            t = mktime (tm);
 +            T = time (NULL);
 +            TM = localtime (&T);
 +            
@@ -74,13 +74,15 @@ Index: hdrline.c
 +              sprintf (p, "%s", "%H:%M ");
 +              p += 1;
 +              len -= 1;
-+            } else if (t >= T - 518400) { /* 6 days */
++            }
++            else if (t >= T - 518400) { /* 6 days */
 +              sprintf (p, "%s", "%a-%d");
-+            } else if (((TM->tm_year - tm->tm_year) * 12 + TM->tm_mon) -
-+                       tm->tm_mon < 12)
-+            { /* last 11 months */
++            }
++            else if (((TM->tm_year - tm->tm_year) * 12 + TM->tm_mon) -
++                       tm->tm_mon < 12) { /* last 11 months */
 +              sprintf (p, "%s", "%d-%b");
-+            } else { /* older than a year */
++            }
++            else { /* older than a year */
 +              sprintf (p, "%s", "%b-%y");
 +            }
 +            p += 5;
@@ -88,7 +90,7 @@ Index: hdrline.c
            }
            else {
              if (len >= 2) {
-@@ -354,27 +411,6 @@
+@@ -354,27 +413,6 @@
        }
        *p = 0;
  
@@ -116,7 +118,7 @@ Index: hdrline.c
        strftime (buf2, sizeof (buf2), dest, tm);
  
        if (do_locales)
-@@ -751,3 +787,4 @@
+@@ -751,3 +789,4 @@
    mutt_FormatString (dest, destlen, s, hdr_format_str, (unsigned long) &hfi,
                       flags);
  }
