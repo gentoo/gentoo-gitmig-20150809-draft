@@ -28,6 +28,9 @@ SHA256 283fd87c72e1ae4a5093053b65507eff40dde162e3ddfa089e489c6cf8c7741f Params-V
 MD5 c8642a9ed9c9e8bb3f813b5dad590d65 Params-Validate-0.79.ebuild 634
 RMD160 6e9def24c4bcf3838c296b8130cedaacb74dc688 Params-Validate-0.79.ebuild 634
 SHA256 246be63272b781e46e67ffda40a887e6afd30cccfb37b6c4fa03c120c595df9a Params-Validate-0.79.ebuild 634
+MD5 0edde9c54ac1472ecb0d4873637c4778 Params-Validate-0.81.ebuild 517
+RMD160 227e7d8a46590cc508844d5aafc633e26757890c Params-Validate-0.81.ebuild 517
+SHA256 be0a7d3fdc9f1e4e24a2aebced414814236bf62839afc1b7cdc24461b42699ee Params-Validate-0.81.ebuild 517
 MD5 f5e2b97ae1277484927fb4589123d13e files/digest-Params-Validate-0.24 71
 RMD160 18a976911ced1e5aac4132ad65d13b75d86f3e96 files/digest-Params-Validate-0.24 71
 SHA256 6ecfe17bc52321bae95dc2630c2692e7b7bd33d5cf117fe9638a629ced73febd files/digest-Params-Validate-0.24 71
@@ -55,6 +58,9 @@ SHA256 451ba66e74b4ed00cdbe57ac4aacce81a25ffd83438dbaf38809317091934660 files/di
 MD5 4b694f38218ff41775a3759aa2077cec files/digest-Params-Validate-0.79 71
 RMD160 2f488541f78e426b243aec3fbd0a7ddc7d580ca3 files/digest-Params-Validate-0.79 71
 SHA256 2f65cc68216841e4b4ad6e506349bdc978daccf4c5d64f59de4dfd32cf5c86a7 files/digest-Params-Validate-0.79 71
+MD5 437d14f6e8f98ca777faf46a7ae53f36 files/digest-Params-Validate-0.81 259
+RMD160 b13b8d14a2c7ef1b8921d311bed0f90544d7d500 files/digest-Params-Validate-0.81 259
+SHA256 8fc59565f35fa93351f8a74c019b62825bb1b930803da6c3b8fb69c2d84e8d98 files/digest-Params-Validate-0.81 259
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305

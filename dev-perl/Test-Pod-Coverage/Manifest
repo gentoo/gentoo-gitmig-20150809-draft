@@ -1,14 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 ec832ae52a2188fb3bfd3a11074799d6 ChangeLog 2110
+RMD160 84fefe69cd22926d4bf6e9562ec9e2cd5ad698dd ChangeLog 2110
+SHA256 4fcdb24209ae704d60f80e47bb80758b910af7e999284110c9fe2935c4914520 ChangeLog 2110
 MD5 2c22fce34fbaa63c19b1d4c316d113bd Test-Pod-Coverage-1.06.ebuild 653
+RMD160 692f98f00cacbf3c44dd55ece82af953f206d052 Test-Pod-Coverage-1.06.ebuild 653
+SHA256 ec8320943264434db5fb53d9b79fa1ba5f44b6323783333deb420db1687d2868 Test-Pod-Coverage-1.06.ebuild 653
+MD5 eea30adfc4e27c6d1069be4124a16bd7 Test-Pod-Coverage-1.08.ebuild 537
+RMD160 2e9f15d24acd4f3c51563114c2ddc7a3f64f3906 Test-Pod-Coverage-1.08.ebuild 537
+SHA256 edfed3eba02aebaa813e2683487455dd7314bcba889709b7e6325ace3149a5a9 Test-Pod-Coverage-1.08.ebuild 537
 MD5 36b9d1e64fe11969d2ec3c508ffaf717 files/digest-Test-Pod-Coverage-1.06 72
+RMD160 4f74f2884ac0df67ea07256c84aac722b4963e62 files/digest-Test-Pod-Coverage-1.06 72
+SHA256 a6196aa80e90dcc8eb8e4b7c598ce96bcc3b9c2ace10f4d8123be159297d98e1 files/digest-Test-Pod-Coverage-1.06 72
+MD5 f2bba7867bf95cf707ade3d0831e6151 files/digest-Test-Pod-Coverage-1.08 262
+RMD160 7fbcac5cf15a96de92d19b0cc04c28d34e7c038a files/digest-Test-Pod-Coverage-1.08 262
+SHA256 adf29a9efa97f9f1ecfd2b82ea72be2c876dd0eb8a6b7a6f1dc43ef31518c099 files/digest-Test-Pod-Coverage-1.08 262
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD8JLRtG5z4I8BtQoRAoXZAJ4ijWlA1iU66AIHk+90fqkjrOumwQCfZLk6
-Ypqcu5RSO4au7ruMmN0T+a4=
-=PRLd
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305

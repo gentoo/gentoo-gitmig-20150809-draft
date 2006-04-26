@@ -1,16 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 12858fcffacd694cf310797b9ec54824 ChangeLog 1643
+RMD160 19d7bf9054a8d7bdbcef5af36b2b5935c14cb35c ChangeLog 1643
+SHA256 43e0832363364e10e098c5d9b405f181f6b7069a1a64a7ca5aaf8aa5c84bf0dd ChangeLog 1643
 MD5 0977f4d32c942ff42974f34eb10188c2 Pod-Simple-3.02.ebuild 545
+RMD160 9003fc70bdfda42b6283f39d5b57be32784a9341 Pod-Simple-3.02.ebuild 545
+SHA256 5505ba1a69caa8ae11f75c2ce71b0ba2eb5fd9282adc60034f1422ddc1fcba5f Pod-Simple-3.02.ebuild 545
 MD5 694ad0058d1ac399fe27beab605a35e7 Pod-Simple-3.03.ebuild 554
+RMD160 334ece202b3ecd4734b7747f452aed1ee05ee107 Pod-Simple-3.03.ebuild 554
+SHA256 8bd19cdd3055e22cdb51c7be6032c670f5fc74270411a829b7586982b7530d54 Pod-Simple-3.03.ebuild 554
+MD5 b5693bfb170a657c471bbf77647996a4 Pod-Simple-3.04.ebuild 447
+RMD160 cff34bedd4ce041f903a10b0a41b4fc4c728ccca Pod-Simple-3.04.ebuild 447
+SHA256 b6bb00b7984fdad1dd6418a72352d3844c8ab581d8a414da424c4b1e4a7bf53e Pod-Simple-3.04.ebuild 447
 MD5 8f2e9a80dcc2a78cfc79249ed7b14290 files/digest-Pod-Simple-3.02 67
+RMD160 b9fb0038ec1dce979bc2dfa0e6c55c96e45f5741 files/digest-Pod-Simple-3.02 67
+SHA256 12e1169ea65a7f2329d988c2d31c847166f77ae87ce797b78a848b715a767b84 files/digest-Pod-Simple-3.02 67
 MD5 f2b60b8b9566d1cf0bae34915887d6cc files/digest-Pod-Simple-3.03 67
+RMD160 8e75d4e0557646435e5888948ed223432735f69c files/digest-Pod-Simple-3.03 67
+SHA256 00a75f547ca23bcdcf2e3bab98addc6c5bcde41d4cdbc8b27ea5cc10771914df files/digest-Pod-Simple-3.03 67
+MD5 c98b291e28ac58656f698c4c1f5c2fbd files/digest-Pod-Simple-3.04 247
+RMD160 68f9751622433e9f5ecdc0aaadf83bfe44a81c0e files/digest-Pod-Simple-3.04 247
+SHA256 11675e4f1d740f2a049833732467a029ffb424c8088d62a431102f1dfff1be5e files/digest-Pod-Simple-3.04 247
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDx86htG5z4I8BtQoRAv1hAJsGGozw3vaJbxv7jFTsvZu718G3WQCfRYJr
-ey+lORwWj/wkrxUKgAxQxoo=
-=qSOp
------END PGP SIGNATURE-----
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
