@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.332 2006/04/25 15:12:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.333 2006/04/26 01:48:34 flameeyes Exp $
+
+*xine-lib-1.1.2_pre20060328-r3 (26 Apr 2006)
+
+  26 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +xine-lib-1.1.2_pre20060328-r3.ebuild:
+  Add experimental revision that changes the FAAD fix with an oculate use of
+  -fvisibility=hidden, and also hide all the unneeded symbols on plugins to
+  speed up loading. Use external libdvdnav library (as now it works).
 
 *xine-lib-1.1.2_pre20060328-r2 (25 Apr 2006)
 
