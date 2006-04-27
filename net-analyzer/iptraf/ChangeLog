@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.36 2006/04/15 22:30:11 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.37 2006/04/27 04:40:05 weeve Exp $
+
+  27 Apr 2006; Jason Wever <weeve@gentoo.org> iptraf-3.0.0-r2.ebuild:
+  Re-added ~sparc keyword as it mysteriously went missing.
 
   15 Apr 2006; Markus Ullmann <jokey@gentoo.org>
   +files/iptraf-3.0.0-headerfix.patch,
