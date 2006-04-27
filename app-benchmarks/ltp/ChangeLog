@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/ltp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.9 2006/03/11 11:17:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.10 2006/04/27 09:30:04 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
 *ltp-20060306 (11 Mar 2006)
 
