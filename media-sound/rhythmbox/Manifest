@@ -1,64 +1,80 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3a8e3307b34deddc10978152dcdb849b ChangeLog 8776
-RMD160 fdde09022fb0e6b617c63c69f8b26e56d81c6466 ChangeLog 8776
-SHA256 ecbdc9f86a1d2afde81307408fcce74f79933cac94961a06a221efe333f3d767 ChangeLog 8776
-MD5 44a42f72ca8c0f3136fded12f1aa7172 files/digest-rhythmbox-0.8.8-r1 69
-RMD160 990badbc4f189bd890ce4e4ebbea99917de7a121 files/digest-rhythmbox-0.8.8-r1 69
-SHA256 aaf41e966028c1d21185ea950161be8b8916189a77f7147fbdaeba26b8ebb30f files/digest-rhythmbox-0.8.8-r1 69
-MD5 518953859231ab23eec13b7d8a004fdc files/digest-rhythmbox-0.9.2 69
-RMD160 b353417444bbaeea681bbb93b3d82b4122160a45 files/digest-rhythmbox-0.9.2 69
-SHA256 6cde84dc37c9cc276463036c9c30c7b7dee7b6ed1dbb7a7aab0c9cefe10b7cfc files/digest-rhythmbox-0.9.2 69
-MD5 f1335da386c60b0cf4f0c5c67fa9743c files/digest-rhythmbox-0.9.3.1 71
-RMD160 0809c53b4b0db677c96f425e775a977c00093d96 files/digest-rhythmbox-0.9.3.1 71
-SHA256 8dc25fd528fe6f957533779502e6da111ef4d3f2a4b1f7b42319f17452f8273b files/digest-rhythmbox-0.9.3.1 71
-MD5 f1335da386c60b0cf4f0c5c67fa9743c files/digest-rhythmbox-0.9.3.1_p1 71
-RMD160 0809c53b4b0db677c96f425e775a977c00093d96 files/digest-rhythmbox-0.9.3.1_p1 71
-SHA256 8dc25fd528fe6f957533779502e6da111ef4d3f2a4b1f7b42319f17452f8273b files/digest-rhythmbox-0.9.3.1_p1 71
+AUX rhythmbox-0.8.7-gst_shn_support.patch 665 RMD160 8f8eec7bf19405ea70b7ab5984c5d5a96e834822 SHA1 033ca9aa8109a558162a6ddbbdf4f270da2e239c SHA256 1c4fbabdff94741c88fb92f37c84ae70e05be9054481241efcab49f8c2c19018 size 665
+MD5 7c49ce1b3d4a78dc9adba805fd3b82fb files/rhythmbox-0.8.7-gst_shn_support.patch 665
+RMD160 8f8eec7bf19405ea70b7ab5984c5d5a96e834822 files/rhythmbox-0.8.7-gst_shn_support.patch 665
+SHA256 1c4fbabdff94741c88fb92f37c84ae70e05be9054481241efcab49f8c2c19018 files/rhythmbox-0.8.7-gst_shn_support.patch 665
+AUX rhythmbox-0.8.8-empty-xlib.patch 496 RMD160 63855112d054d8db5446578aa5e995a8725c4fee SHA1 f5b413120f99dee57535634adc58bac32922701f SHA256 33ab12bdddc62f86763930d330daa5c6af1f78737efaf9fac7dd3d36ccf06468 size 496
+MD5 a3ff016aec5eec7277e2598ad013b80a files/rhythmbox-0.8.8-empty-xlib.patch 496
+RMD160 63855112d054d8db5446578aa5e995a8725c4fee files/rhythmbox-0.8.8-empty-xlib.patch 496
+SHA256 33ab12bdddc62f86763930d330daa5c6af1f78737efaf9fac7dd3d36ccf06468 files/rhythmbox-0.8.8-empty-xlib.patch 496
+AUX rhythmbox-0.8.8-ipod.patch 809 RMD160 b8e4aefa12411772259132b7b6ed226caf426e6d SHA1 ca53d7e7cb592807eaf28be5f409bb01fd1df275 SHA256 9c78341ae8039f6e25f6321512b2e45651aad266b40a6a0e44d641385b1ff230 size 809
+MD5 9f5bc9bf255b78cc67342f9fc9423ef6 files/rhythmbox-0.8.8-ipod.patch 809
+RMD160 b8e4aefa12411772259132b7b6ed226caf426e6d files/rhythmbox-0.8.8-ipod.patch 809
+SHA256 9c78341ae8039f6e25f6321512b2e45651aad266b40a6a0e44d641385b1ff230 files/rhythmbox-0.8.8-ipod.patch 809
+AUX rhythmbox-0.9.2-dbus-0.60.patch 342 RMD160 24504e20a982d069b1bc0e61af2ab59ea6c8cd47 SHA1 fb1c0cf9f6b0c08352bd663c305537a49c21a885 SHA256 7d33b3e2ba176d835cd0802a9c33b5500cf892a40ae003f544b671f54f66a64b size 342
+MD5 ff8e0703a12aeaa2724bd8b9299556d2 files/rhythmbox-0.9.2-dbus-0.60.patch 342
+RMD160 24504e20a982d069b1bc0e61af2ab59ea6c8cd47 files/rhythmbox-0.9.2-dbus-0.60.patch 342
+SHA256 7d33b3e2ba176d835cd0802a9c33b5500cf892a40ae003f544b671f54f66a64b files/rhythmbox-0.9.2-dbus-0.60.patch 342
+DIST rhythmbox-0.8.8.tar.bz2 2435338 RMD160 7c436dd556c330ea98d87bad5cb304ab4a236020 SHA256 7faf1c10aaa198a1acacd3eb12979a2ea0730a0aa98d28f3c673a7f78b8dbda1 size 2435338
+DIST rhythmbox-0.9.2.tar.bz2 2470164 RMD160 f734d59c13ff0d48fc6301195efe2588d458ea66 SHA256 08e8ee10c0dc48f293b1e58cb5babaac9bfdf2df4e12aea76824ec3c6f4d0340 size 2470164
+DIST rhythmbox-0.9.3.1.tar.bz2 2579756 RMD160 079a9d441c94e454076746ae37af6b9a5599a326 SHA256 8f25b3beba0954a39a2eabe12216f732f7880d313dd213767d57838a6d581976 size 2579756
+DIST rhythmbox-0.9.4.tar.bz2 2005808 RMD160 0698d38c0584039d2fa977970a5331607fb106e1 SHA256 1318d7bb28a8b60a5342eb12995c6b802d88e3d0db62a90a72af59f21e13947b size 2005808
+EBUILD rhythmbox-0.8.8-r1.ebuild 2625 RMD160 b0e9d8b8c992afc8f94712275b00e34a76429948 SHA1 d1c52894199f07fb43129a1b478f7db8e64d448b SHA256 d214012105fc9f8488aca1fff4615d2af705dc7825cc3600bae9b155e4ef652b size 2625
+MD5 afaf09dad8a37b524662268bea3b9fb7 rhythmbox-0.8.8-r1.ebuild 2625
+RMD160 b0e9d8b8c992afc8f94712275b00e34a76429948 rhythmbox-0.8.8-r1.ebuild 2625
+SHA256 d214012105fc9f8488aca1fff4615d2af705dc7825cc3600bae9b155e4ef652b rhythmbox-0.8.8-r1.ebuild 2625
+EBUILD rhythmbox-0.9.2.ebuild 2492 RMD160 1bd96e0322c9e1ccc81eb3c0babb5eb670cee834 SHA1 b90fb245913b21869fd4cb52d533c4c03b28754b SHA256 2ff89ede57bc3c02e236ade9582e53412864ef91d043bbdb5908b264fe5d0e43 size 2492
+MD5 8e689da700e4bcafd4ab70182d9f3ade rhythmbox-0.9.2.ebuild 2492
+RMD160 1bd96e0322c9e1ccc81eb3c0babb5eb670cee834 rhythmbox-0.9.2.ebuild 2492
+SHA256 2ff89ede57bc3c02e236ade9582e53412864ef91d043bbdb5908b264fe5d0e43 rhythmbox-0.9.2.ebuild 2492
+EBUILD rhythmbox-0.9.3.1.ebuild 2521 RMD160 bb21bf182f85c9d9ca2036d514b41f8971bf0308 SHA1 1e428a967fed6be6767b84dd6e648550562f68dd SHA256 4cfc913b2847ea4d7b1e17f909f74e96273af17674e70ec22bd6d4cb2f962b69 size 2521
+MD5 1941fefcc298b60002976441a2e00da9 rhythmbox-0.9.3.1.ebuild 2521
+RMD160 bb21bf182f85c9d9ca2036d514b41f8971bf0308 rhythmbox-0.9.3.1.ebuild 2521
+SHA256 4cfc913b2847ea4d7b1e17f909f74e96273af17674e70ec22bd6d4cb2f962b69 rhythmbox-0.9.3.1.ebuild 2521
+EBUILD rhythmbox-0.9.3.1_p1.ebuild 3452 RMD160 77544b73ad190d348c2b4db4eb1af66110872745 SHA1 ce2981e273e3527fa8ed9a68f4d39ba3f8297975 SHA256 94c758926aa960853536a35ac316482f8c006a2b1bb0cadb6f82ead784b4ba6f size 3452
+MD5 5e66f44207349857fa04c9756a0ecade rhythmbox-0.9.3.1_p1.ebuild 3452
+RMD160 77544b73ad190d348c2b4db4eb1af66110872745 rhythmbox-0.9.3.1_p1.ebuild 3452
+SHA256 94c758926aa960853536a35ac316482f8c006a2b1bb0cadb6f82ead784b4ba6f rhythmbox-0.9.3.1_p1.ebuild 3452
+EBUILD rhythmbox-0.9.4.ebuild 2641 RMD160 3598591e672b581ac1dbc66d4f03211f2c62b0cd SHA1 149438913116f524d9f03b108f26e92d74302c04 SHA256 028eeef9a29e326d7ebd8f693c887df383c821d50019c3b658294f2fe275b0ed size 2641
+MD5 f53a26152fc6cb677de0bd5387ba64eb rhythmbox-0.9.4.ebuild 2641
+RMD160 3598591e672b581ac1dbc66d4f03211f2c62b0cd rhythmbox-0.9.4.ebuild 2641
+SHA256 028eeef9a29e326d7ebd8f693c887df383c821d50019c3b658294f2fe275b0ed rhythmbox-0.9.4.ebuild 2641
+EBUILD rhythmbox-0.9.4_p1.ebuild 3447 RMD160 11e8d2ea30e0741ec399eb6c64aa1de1f30f8604 SHA1 771818aeee0009d8bcb68ba05c321d3237b5eedd SHA256 ce018dac357dab6667e4bbdb43452802fbc37c83d7b0b59c36ad83a8fb40117d size 3447
+MD5 ed7317d9bccac3b490f3eb83e789d284 rhythmbox-0.9.4_p1.ebuild 3447
+RMD160 11e8d2ea30e0741ec399eb6c64aa1de1f30f8604 rhythmbox-0.9.4_p1.ebuild 3447
+SHA256 ce018dac357dab6667e4bbdb43452802fbc37c83d7b0b59c36ad83a8fb40117d rhythmbox-0.9.4_p1.ebuild 3447
+MISC ChangeLog 9005 RMD160 a692d877e482e36fb168ee28d5774e720ff08a7d SHA1 60b80bc977da013ccd8c502fa355e11e156156f8 SHA256 b680f84470c97dcef6d06c9b4df39ba9d6bf7dbc7853a61ea1d3d6f1e4da8de2 size 9005
+MD5 000554a54893c68968f50182a084e5f9 ChangeLog 9005
+RMD160 a692d877e482e36fb168ee28d5774e720ff08a7d ChangeLog 9005
+SHA256 b680f84470c97dcef6d06c9b4df39ba9d6bf7dbc7853a61ea1d3d6f1e4da8de2 ChangeLog 9005
+MISC metadata.xml 200 RMD160 bca17f66c909b846452eb76b2d2c9a2eec429db0 SHA1 9d3b582b967a1030b95428758f25fe33cb5a25fd SHA256 2e1eafdbf68047687a24f6a4ad8d519ec193805e347bf17d1d00f7771353e39b size 200
+MD5 e854b7f54a4de6256186cbdcaabbc1ec metadata.xml 200
+RMD160 bca17f66c909b846452eb76b2d2c9a2eec429db0 metadata.xml 200
+SHA256 2e1eafdbf68047687a24f6a4ad8d519ec193805e347bf17d1d00f7771353e39b metadata.xml 200
+MD5 fa3285c4a57f8ee08054aeaa32d83add files/digest-rhythmbox-0.8.8-r1 253
+RMD160 34c007a55371498e92739bf22af9e04e7294177c files/digest-rhythmbox-0.8.8-r1 253
+SHA256 9c859a0460166668cc8e88ed6e13cf8b3fefb5ad431677a703619fd10e0adfb2 files/digest-rhythmbox-0.8.8-r1 253
+MD5 c57990a523d066ab30daa4cd1535a6ee files/digest-rhythmbox-0.9.2 253
+RMD160 b9d34f4a38475053f5dd7e987472e01c235dd5db files/digest-rhythmbox-0.9.2 253
+SHA256 bb249941f84bd640bfac13ed05773a457abb4ba004d4c3c7875d9899d6fdc9fd files/digest-rhythmbox-0.9.2 253
+MD5 66d0ff690154e01433a3e6630bc4f6ca files/digest-rhythmbox-0.9.3.1 259
+RMD160 95dd616f2a681cd5c2e89cab171574ddb07a85e9 files/digest-rhythmbox-0.9.3.1 259
+SHA256 16f71230e4e4339fa267c75e7cc2b9be7ae7af0e6f208f9afce9b45380d13869 files/digest-rhythmbox-0.9.3.1 259
+MD5 66d0ff690154e01433a3e6630bc4f6ca files/digest-rhythmbox-0.9.3.1_p1 259
+RMD160 95dd616f2a681cd5c2e89cab171574ddb07a85e9 files/digest-rhythmbox-0.9.3.1_p1 259
+SHA256 16f71230e4e4339fa267c75e7cc2b9be7ae7af0e6f208f9afce9b45380d13869 files/digest-rhythmbox-0.9.3.1_p1 259
 MD5 954c4f44bcf7a699ba6bc40c654b0ff2 files/digest-rhythmbox-0.9.4 253
 RMD160 1b3df0f615af3547ca0ae641550d98c1109ecacc files/digest-rhythmbox-0.9.4 253
 SHA256 d346f8d31393b3b5aa412e65e08d3e89a0ff64483141b2c40dea74cf5224a5fb files/digest-rhythmbox-0.9.4 253
 MD5 954c4f44bcf7a699ba6bc40c654b0ff2 files/digest-rhythmbox-0.9.4_p1 253
 RMD160 1b3df0f615af3547ca0ae641550d98c1109ecacc files/digest-rhythmbox-0.9.4_p1 253
 SHA256 d346f8d31393b3b5aa412e65e08d3e89a0ff64483141b2c40dea74cf5224a5fb files/digest-rhythmbox-0.9.4_p1 253
-MD5 7c49ce1b3d4a78dc9adba805fd3b82fb files/rhythmbox-0.8.7-gst_shn_support.patch 665
-RMD160 8f8eec7bf19405ea70b7ab5984c5d5a96e834822 files/rhythmbox-0.8.7-gst_shn_support.patch 665
-SHA256 1c4fbabdff94741c88fb92f37c84ae70e05be9054481241efcab49f8c2c19018 files/rhythmbox-0.8.7-gst_shn_support.patch 665
-MD5 a3ff016aec5eec7277e2598ad013b80a files/rhythmbox-0.8.8-empty-xlib.patch 496
-RMD160 63855112d054d8db5446578aa5e995a8725c4fee files/rhythmbox-0.8.8-empty-xlib.patch 496
-SHA256 33ab12bdddc62f86763930d330daa5c6af1f78737efaf9fac7dd3d36ccf06468 files/rhythmbox-0.8.8-empty-xlib.patch 496
-MD5 9f5bc9bf255b78cc67342f9fc9423ef6 files/rhythmbox-0.8.8-ipod.patch 809
-RMD160 b8e4aefa12411772259132b7b6ed226caf426e6d files/rhythmbox-0.8.8-ipod.patch 809
-SHA256 9c78341ae8039f6e25f6321512b2e45651aad266b40a6a0e44d641385b1ff230 files/rhythmbox-0.8.8-ipod.patch 809
-MD5 ff8e0703a12aeaa2724bd8b9299556d2 files/rhythmbox-0.9.2-dbus-0.60.patch 342
-RMD160 24504e20a982d069b1bc0e61af2ab59ea6c8cd47 files/rhythmbox-0.9.2-dbus-0.60.patch 342
-SHA256 7d33b3e2ba176d835cd0802a9c33b5500cf892a40ae003f544b671f54f66a64b files/rhythmbox-0.9.2-dbus-0.60.patch 342
-MD5 e854b7f54a4de6256186cbdcaabbc1ec metadata.xml 200
-RMD160 bca17f66c909b846452eb76b2d2c9a2eec429db0 metadata.xml 200
-SHA256 2e1eafdbf68047687a24f6a4ad8d519ec193805e347bf17d1d00f7771353e39b metadata.xml 200
-MD5 afaf09dad8a37b524662268bea3b9fb7 rhythmbox-0.8.8-r1.ebuild 2625
-RMD160 b0e9d8b8c992afc8f94712275b00e34a76429948 rhythmbox-0.8.8-r1.ebuild 2625
-SHA256 d214012105fc9f8488aca1fff4615d2af705dc7825cc3600bae9b155e4ef652b rhythmbox-0.8.8-r1.ebuild 2625
-MD5 8e689da700e4bcafd4ab70182d9f3ade rhythmbox-0.9.2.ebuild 2492
-RMD160 1bd96e0322c9e1ccc81eb3c0babb5eb670cee834 rhythmbox-0.9.2.ebuild 2492
-SHA256 2ff89ede57bc3c02e236ade9582e53412864ef91d043bbdb5908b264fe5d0e43 rhythmbox-0.9.2.ebuild 2492
-MD5 1941fefcc298b60002976441a2e00da9 rhythmbox-0.9.3.1.ebuild 2521
-RMD160 bb21bf182f85c9d9ca2036d514b41f8971bf0308 rhythmbox-0.9.3.1.ebuild 2521
-SHA256 4cfc913b2847ea4d7b1e17f909f74e96273af17674e70ec22bd6d4cb2f962b69 rhythmbox-0.9.3.1.ebuild 2521
-MD5 5e66f44207349857fa04c9756a0ecade rhythmbox-0.9.3.1_p1.ebuild 3452
-RMD160 77544b73ad190d348c2b4db4eb1af66110872745 rhythmbox-0.9.3.1_p1.ebuild 3452
-SHA256 94c758926aa960853536a35ac316482f8c006a2b1bb0cadb6f82ead784b4ba6f rhythmbox-0.9.3.1_p1.ebuild 3452
-MD5 f53a26152fc6cb677de0bd5387ba64eb rhythmbox-0.9.4.ebuild 2641
-RMD160 3598591e672b581ac1dbc66d4f03211f2c62b0cd rhythmbox-0.9.4.ebuild 2641
-SHA256 028eeef9a29e326d7ebd8f693c887df383c821d50019c3b658294f2fe275b0ed rhythmbox-0.9.4.ebuild 2641
-MD5 ed7317d9bccac3b490f3eb83e789d284 rhythmbox-0.9.4_p1.ebuild 3447
-RMD160 11e8d2ea30e0741ec399eb6c64aa1de1f30f8604 rhythmbox-0.9.4_p1.ebuild 3447
-SHA256 66c3539166e19db5e3018a373aa51d28c8086425c3b7e616555f8879be82d65d rhythmbox-0.9.4_p1.ebuild 3447
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFERC6FwUpWvClEHQoRApqDAKCFr558exmO0KECJ0kranpz/+AJOACfXiFa
-nH++zDCVP/mB1oPZ0jTXG+w=
-=SCKw
+iD8DBQFEUVUIW78445TWHXcRArmrAJ0RGOebh/0ANZKgoobMzol1UIg/cACdEg7F
+jdZaaFp1rk/xNMEZbSxn4CU=
+=FZdN
 -----END PGP SIGNATURE-----

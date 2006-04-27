@@ -1,30 +1,50 @@
-MD5 b6205f9b5c2aac0c5063ca23cf8febd2 ChangeLog 36169
-RMD160 9b7920eee2b538ef83bbcd3e7e3237a85171bb0d ChangeLog 36169
-SHA256 84b20228f94ccaa4a06b1503fcbade9bb9ca03173e06616b470da5b8971e5dc4 ChangeLog 36169
-MD5 9916e84eeec916e6f6ec0f3aeffccb6a alsa-driver-1.0.10-r2.ebuild 4791
-RMD160 4940a1d64edb487b93b0d29f48d937fa2563c3cc alsa-driver-1.0.10-r2.ebuild 4791
-SHA256 ed09529fa8e9c98adc6dc3671ca6e61e79fb40095fd62fb0e06177ed20bf0ca7 alsa-driver-1.0.10-r2.ebuild 4791
-MD5 6e090ef73d51130d3b96540a7043bdc6 alsa-driver-1.0.11.ebuild 4797
-RMD160 cf9f0af8be01e1dce317f5220a44344836137dd9 alsa-driver-1.0.11.ebuild 4797
-SHA256 a0eeb27fe54960d865a0cc95d29b7f327f4d5701ebca767db8ff3ffb5324c90a alsa-driver-1.0.11.ebuild 4797
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX alsa-driver-1.0.10-gfp-flags.patch 955 RMD160 ed4d383d6608110c5c3a7ebef2a0fc636ea77d82 SHA1 5bfdc27dbb955b9d2761f6a6ca05c826777c5d24 SHA256 f7976e121aad036e11550212b26f2d4568cc688687e950bcdc14ef5932f3eb66 size 955
 MD5 075d7776dfb62176431e206a9cd5fc84 files/alsa-driver-1.0.10-gfp-flags.patch 955
 RMD160 ed4d383d6608110c5c3a7ebef2a0fc636ea77d82 files/alsa-driver-1.0.10-gfp-flags.patch 955
 SHA256 f7976e121aad036e11550212b26f2d4568cc688687e950bcdc14ef5932f3eb66 files/alsa-driver-1.0.10-gfp-flags.patch 955
+AUX alsa-driver-1.0.10-oops.patch 1388 RMD160 c3be6f450c24a0c27a51a2656d49036a06c35220 SHA1 c6556010bb936ead90fba058e5ac250118e0ab68 SHA256 6532594628a77d37eaac2ef6dacd179846f5955915d9696a5ded843b7d017a13 size 1388
 MD5 11884fe8b770282d2470c5620622e379 files/alsa-driver-1.0.10-oops.patch 1388
 RMD160 c3be6f450c24a0c27a51a2656d49036a06c35220 files/alsa-driver-1.0.10-oops.patch 1388
 SHA256 6532594628a77d37eaac2ef6dacd179846f5955915d9696a5ded843b7d017a13 files/alsa-driver-1.0.10-oops.patch 1388
+AUX alsa-driver-1.0.10_rc1-include.patch 346 RMD160 ec6016414723673e089a4c8cda7e7efe54904280 SHA1 7cb825c81df6ba73bf8d2a1ad15f0ba898fd7fa7 SHA256 ad4f3c447e3b0f2b0ebdd5dfa9723875660b58210ddab7fc6fbb669d4628135d size 346
 MD5 ed352c464a295465543d8933c162f101 files/alsa-driver-1.0.10_rc1-include.patch 346
 RMD160 ec6016414723673e089a4c8cda7e7efe54904280 files/alsa-driver-1.0.10_rc1-include.patch 346
 SHA256 ad4f3c447e3b0f2b0ebdd5dfa9723875660b58210ddab7fc6fbb669d4628135d files/alsa-driver-1.0.10_rc1-include.patch 346
+AUX alsa-driver-1.0.11-powermac.patch 336 RMD160 14545220136b9e96fe4b0483d22c01cf1146571e SHA1 fbcd22b9b1d0c417c59924e8c02044450c57086c SHA256 52a31e573b3d92d7dc3048ec872349ffeff17960647a3a0468c3f917186fa7ad size 336
 MD5 9c883e0a6c145380aa4a26788880b1e5 files/alsa-driver-1.0.11-powermac.patch 336
 RMD160 14545220136b9e96fe4b0483d22c01cf1146571e files/alsa-driver-1.0.11-powermac.patch 336
 SHA256 52a31e573b3d92d7dc3048ec872349ffeff17960647a3a0468c3f917186fa7ad files/alsa-driver-1.0.11-powermac.patch 336
-MD5 5474546fa4977a1fa63fbab0a155fd15 files/digest-alsa-driver-1.0.10-r2 72
-RMD160 4bd20e9c6e23de3d2647cb707b5f446ce11323c4 files/digest-alsa-driver-1.0.10-r2 72
-SHA256 cef008f05a44e097d4881973af7b5147fd9ab893efe4bbc8ee16c35d8edac386 files/digest-alsa-driver-1.0.10-r2 72
-MD5 22644311058526795f233aaa7a6fc155 files/digest-alsa-driver-1.0.11 262
-RMD160 daeedeaa4b2d5bfa3dd386358fc231486bc0f895 files/digest-alsa-driver-1.0.11 262
-SHA256 685909b916bf91fe04291a0f9dcb11865ed4efb588efb3b876ec3e367fede2ad files/digest-alsa-driver-1.0.11 262
+DIST alsa-driver-1.0.10.tar.bz2 2194644 RMD160 24cf013e40095d0e143969ce864fb34aff1edefe SHA256 60fd070075791fff13d3c3682da370b47778a564bc25c1b72f02f1d60ffa98f0 size 2194644
+DIST alsa-driver-1.0.11.tar.bz2 2343130 RMD160 8f6d0d1f61bcf8d62fa5ca1df13accf0cec54650 SHA256 c717b8a237e38e17a2c71f3fcde6a89907accd175f8bac4f09c054444e14069f size 2343130
+EBUILD alsa-driver-1.0.10-r2.ebuild 4791 RMD160 4940a1d64edb487b93b0d29f48d937fa2563c3cc SHA1 805fc601f63c756feda2286f94244d9e63a9bec7 SHA256 bdaa51fefcad30e94b4a663fb64db3aa9eaa089c9162dec3b8236407bd49c2fc size 4791
+MD5 9916e84eeec916e6f6ec0f3aeffccb6a alsa-driver-1.0.10-r2.ebuild 4791
+RMD160 4940a1d64edb487b93b0d29f48d937fa2563c3cc alsa-driver-1.0.10-r2.ebuild 4791
+SHA256 bdaa51fefcad30e94b4a663fb64db3aa9eaa089c9162dec3b8236407bd49c2fc alsa-driver-1.0.10-r2.ebuild 4791
+EBUILD alsa-driver-1.0.11.ebuild 4797 RMD160 cf9f0af8be01e1dce317f5220a44344836137dd9 SHA1 179d88598169c0211aff7df0eef9b3a338046115 SHA256 a0eeb27fe54960d865a0cc95d29b7f327f4d5701ebca767db8ff3ffb5324c90a size 4797
+MD5 6e090ef73d51130d3b96540a7043bdc6 alsa-driver-1.0.11.ebuild 4797
+RMD160 cf9f0af8be01e1dce317f5220a44344836137dd9 alsa-driver-1.0.11.ebuild 4797
+SHA256 a0eeb27fe54960d865a0cc95d29b7f327f4d5701ebca767db8ff3ffb5324c90a alsa-driver-1.0.11.ebuild 4797
+MISC ChangeLog 36300 RMD160 7d12017e0e31d278a74f18e406dca874850b6de5 SHA1 fc210d38cee7641d148643ebd72d7fd73f41bf7b SHA256 0b69ebd03cf3a5e741235d3d1fb1e78ee1597b68d52c9497780cdb04af4cbdb2 size 36300
+MD5 876dbc27e413d1607cc3687b7499374f ChangeLog 36300
+RMD160 7d12017e0e31d278a74f18e406dca874850b6de5 ChangeLog 36300
+SHA256 0b69ebd03cf3a5e741235d3d1fb1e78ee1597b68d52c9497780cdb04af4cbdb2 ChangeLog 36300
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b size 158
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 d92d5663dd6f93e9e54b6cba30ee0a7b files/digest-alsa-driver-1.0.10-r2 262
+RMD160 8d149dd66b34d17be4162d9316331b4902c54e5f files/digest-alsa-driver-1.0.10-r2 262
+SHA256 1ae6a70927822418fdc319e0f5454b0799cc1c8d49deee5a4660b34d91458f9c files/digest-alsa-driver-1.0.10-r2 262
+MD5 22644311058526795f233aaa7a6fc155 files/digest-alsa-driver-1.0.11 262
+RMD160 daeedeaa4b2d5bfa3dd386358fc231486bc0f895 files/digest-alsa-driver-1.0.11 262
+SHA256 685909b916bf91fe04291a0f9dcb11865ed4efb588efb3b876ec3e367fede2ad files/digest-alsa-driver-1.0.11 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUVLlW78445TWHXcRAhsJAJ9AMw/vCBMORyyUWWwd25mUSym0HwCePjDn
+Uiqe3lW7p89k5jIFdG9dG/c=
+=FIOJ
+-----END PGP SIGNATURE-----
