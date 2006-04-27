@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-closer-mop
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-closer-mop/ChangeLog,v 1.1 2006/02/03 17:57:51 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-closer-mop/ChangeLog,v 1.2 2006/04/27 17:16:41 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
 *cl-closer-mop-0.31 (03 Feb 2006)
 
