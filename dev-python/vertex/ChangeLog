@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/vertex
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.4 2006/04/25 18:12:22 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.5 2006/04/27 19:18:52 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-vertex-0.1,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   25 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/vertex-0.1-tests-2.2-compat.patch:

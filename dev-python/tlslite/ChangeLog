@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/tlslite
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.2 2006/04/01 19:09:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.3 2006/04/27 19:17:21 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-tlslite-0.3.8,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> tlslite-0.3.8.ebuild:
   Mark 0.3.8 ~ia64

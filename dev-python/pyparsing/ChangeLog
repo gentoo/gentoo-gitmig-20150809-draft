@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyparsing
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.17 2006/02/06 14:47:44 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.18 2006/04/27 19:13:53 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-pyparsing-1.2.2, files/digest-pyparsing-1.3,
+  files/digest-pyparsing-1.3.1, files/digest-pyparsing-1.3.3, Manifest:
+  Fixing SHA256 digest, pass four
 
 *pyparsing-1.4.1 (06 Feb 2006)
 

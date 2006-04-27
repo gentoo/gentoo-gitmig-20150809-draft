@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/elementtree
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.16 2006/02/02 19:06:55 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.17 2006/04/27 19:09:24 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-elementtree-1.2, Manifest:
+  Fixing SHA256 digest, pass four
 
   02 Feb 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fix rmd160 digests.

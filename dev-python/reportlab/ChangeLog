@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.29 2006/02/07 20:40:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.30 2006/04/27 19:16:47 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-reportlab-1.14, files/digest-reportlab-1.17-r1,
+  files/digest-reportlab-1.18, files/digest-reportlab-1.19, Manifest:
+  Fixing SHA256 digest, pass four
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> reportlab-1.20.ebuild:
   stable on amd64

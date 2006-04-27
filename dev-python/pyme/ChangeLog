@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyme
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.13 2006/04/01 18:45:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.14 2006/04/27 19:12:32 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-pyme-0.5.1,
+  files/digest-pyme-0.6.0, files/digest-pyme-0.7.0, Manifest:
+  Fixing SHA256 digest, pass four
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pyme-0.7.0.ebuild:
   Mark 0.7.0 ~ia64
