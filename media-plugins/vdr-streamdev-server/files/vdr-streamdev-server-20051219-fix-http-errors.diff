@@ -1,0 +1,20 @@
+diff -ru --exclude=CVS streamdev-20051219/server/connectionHTTP.c streamdev-20060427/server/connectionHTTP.c
+--- streamdev-20051219/server/connectionHTTP.c	2005-05-09 22:22:29.000000000 +0200
++++ streamdev-20060427/server/connectionHTTP.c	2006-04-27 16:34:45.000000000 +0200
+@@ -83,12 +83,14 @@
+ 			}
+ 			DELETENULL(m_LiveStreamer);
+ 			DeferClose();
+-			return Respond("HTTP/1.0 409 Channel not available");
++			return Respond("HTTP/1.0 409 Channel not available")
++				&& Respond("");
+ 		}
+ 	}
+ 
+ 	DeferClose();
+-	return Respond("HTTP/1.0 400 Bad Request");
++	return Respond("HTTP/1.0 400 Bad Request")
++		&& Respond("");
+ }
+ 
+ void cConnectionHTTP::Flushed(void) 

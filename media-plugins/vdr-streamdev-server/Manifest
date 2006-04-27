@@ -1,22 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c2d6c5026c4c45e186e3151e64ca6cdc ChangeLog 992
-RMD160 bd85dd9e7d6054e063f72234e389da9bc92759b7 ChangeLog 992
-SHA256 935147af09a4cfb947de0c272f25423d43fbfe59fb3c8aeef9242143cbba6575 ChangeLog 992
-MD5 45e31f563c64a121085f584c959082b9 files/digest-vdr-streamdev-server-0.3.3_pre20051219 271
-RMD160 acc1f12fb83dd99f5bed2d635b09c1f3bfb72e08 files/digest-vdr-streamdev-server-0.3.3_pre20051219 271
-SHA256 781b69c2fd02d192a72eb9c7b26af73e046a43282e2c8f2cc7ebb7daa7701623 files/digest-vdr-streamdev-server-0.3.3_pre20051219 271
-MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
-RMD160 cc3cadd479ce9fb1e22948ac9f01f5725da33fa6 metadata.xml 259
-SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe metadata.xml 259
+AUX vdr-streamdev-server-20051219-fix-http-errors.diff 667 RMD160 50b836f0bbbb49487179cfdeb74f5c13b03265f6 SHA1 67d7b1f280e88d02d1204723b7de0272e1706a46 SHA256 a0390f8c99d5363e3835e5f17e9820e3bcb11358d5d4780bf1ed58870e396f9a size 667
+MD5 81967abf65308ae3901ee4e1a401ac90 files/vdr-streamdev-server-20051219-fix-http-errors.diff 667
+RMD160 50b836f0bbbb49487179cfdeb74f5c13b03265f6 files/vdr-streamdev-server-20051219-fix-http-errors.diff 667
+SHA256 a0390f8c99d5363e3835e5f17e9820e3bcb11358d5d4780bf1ed58870e396f9a files/vdr-streamdev-server-20051219-fix-http-errors.diff 667
+DIST vdr-streamdev-20051219.tar.bz2 118761 RMD160 e9a251892fe8be59cc3bebfe1cf57690b8c33ec4 SHA256 efe78266e77c5b1c89a3692d6d328c7de85849aefcb50912b17409afbe9dbd96 size 118761
+EBUILD vdr-streamdev-server-0.3.3_pre20051219-r1.ebuild 1135 RMD160 fd1f97c548f77a163d6777b6fbbfde7f8e1af383 SHA1 0be5d1985c6df0b4bcf0fd77d29a82c41e7b39b3 SHA256 44f5313c8bc8d3fe846c236ff9aa24f08e64eb5fcefda07e650298c03bc485a7 size 1135
+MD5 a4717146c565b386000e602a6d4f12f9 vdr-streamdev-server-0.3.3_pre20051219-r1.ebuild 1135
+RMD160 fd1f97c548f77a163d6777b6fbbfde7f8e1af383 vdr-streamdev-server-0.3.3_pre20051219-r1.ebuild 1135
+SHA256 44f5313c8bc8d3fe846c236ff9aa24f08e64eb5fcefda07e650298c03bc485a7 vdr-streamdev-server-0.3.3_pre20051219-r1.ebuild 1135
+EBUILD vdr-streamdev-server-0.3.3_pre20051219.ebuild 1057 RMD160 d10a7b3ba5c23d564dd42c50e227e33ecda06297 SHA1 57be7dea4ddc855784d976022dde01eaec7c3475 SHA256 9adcaf597ebbc6a305ba76ec467d85d6b29689dab92e82e5766e552a537a76d4 size 1057
 MD5 033cd53e9d56279c18ecbf0081aab3d7 vdr-streamdev-server-0.3.3_pre20051219.ebuild 1057
 RMD160 d10a7b3ba5c23d564dd42c50e227e33ecda06297 vdr-streamdev-server-0.3.3_pre20051219.ebuild 1057
 SHA256 9adcaf597ebbc6a305ba76ec467d85d6b29689dab92e82e5766e552a537a76d4 vdr-streamdev-server-0.3.3_pre20051219.ebuild 1057
+MISC ChangeLog 1252 RMD160 b43c8a5d9a308d8e177e9048959df4ca18be6292 SHA1 3a2d83edcd8b2fc9817e3650d19846fb045ba7e5 SHA256 1a86e6b54e6931b55afffdb45165e4ae7902f19f5c8c524ea848a560acc37734 size 1252
+MD5 510ada0494cdbb61190cf23cdc5de135 ChangeLog 1252
+RMD160 b43c8a5d9a308d8e177e9048959df4ca18be6292 ChangeLog 1252
+SHA256 1a86e6b54e6931b55afffdb45165e4ae7902f19f5c8c524ea848a560acc37734 ChangeLog 1252
+MISC metadata.xml 259 RMD160 cc3cadd479ce9fb1e22948ac9f01f5725da33fa6 SHA1 71c8f0604523f99ac8b7849a01d861d721a191fd SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe size 259
+MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
+RMD160 cc3cadd479ce9fb1e22948ac9f01f5725da33fa6 metadata.xml 259
+SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe metadata.xml 259
+MD5 45e31f563c64a121085f584c959082b9 files/digest-vdr-streamdev-server-0.3.3_pre20051219 271
+RMD160 acc1f12fb83dd99f5bed2d635b09c1f3bfb72e08 files/digest-vdr-streamdev-server-0.3.3_pre20051219 271
+SHA256 781b69c2fd02d192a72eb9c7b26af73e046a43282e2c8f2cc7ebb7daa7701623 files/digest-vdr-streamdev-server-0.3.3_pre20051219 271
+MD5 45e31f563c64a121085f584c959082b9 files/digest-vdr-streamdev-server-0.3.3_pre20051219-r1 271
+RMD160 acc1f12fb83dd99f5bed2d635b09c1f3bfb72e08 files/digest-vdr-streamdev-server-0.3.3_pre20051219-r1 271
+SHA256 781b69c2fd02d192a72eb9c7b26af73e046a43282e2c8f2cc7ebb7daa7701623 files/digest-vdr-streamdev-server-0.3.3_pre20051219-r1 271
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEHtOlZfSl1Kp5KmoRAhorAJ4n197Dtvhgb8LoiKWnyGUiT6/45gCg3PyE
-BWuTP8QLCelwrwxgL9kyqhk=
-=79ee
+iD8DBQFEUNlWZfSl1Kp5KmoRAr+6AJ0b0hU9rIMJoU+gQL5QKawY81pNLACfcOYd
+uVvdqnl1gVrwxtwEuv01Kuk=
+=2WJM
 -----END PGP SIGNATURE-----
