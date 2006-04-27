@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/skunkweb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.10 2006/03/14 09:21:01 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.11 2006/04/27 23:41:11 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-skunkweb-3.4.0,
+  files/digest-skunkweb-3.4.0-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
 *skunkweb-3.4.1 (14 Mar 2006)
 
