@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.26 2006/04/13 11:52:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.27 2006/04/27 19:23:13 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-rmagick-1.3.2,
+  files/digest-rmagick-1.7.3, files/digest-rmagick-1.9.2,
+  files/digest-rmagick-1.9.3, files/digest-rmagick-1.9.3-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
 *rmagick-1.10.1 (13 Apr 2006)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gnome
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome/ChangeLog,v 1.19 2006/02/04 15:06:47 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome/ChangeLog,v 1.20 2006/04/27 19:24:54 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-ruby-gnome-0.30, Manifest:
+  Fixing SHA256 digest, pass four
 
   04 Feb 2006; <solar@gentoo.org> :
   - redigest needed due to bad RMD160. bug #121124

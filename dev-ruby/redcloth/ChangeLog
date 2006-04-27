@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.10 2006/04/17 23:47:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.11 2006/04/27 19:22:12 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-redcloth-3.0.3, files/digest-redcloth-3.0.4, Manifest:
+  Fixing SHA256 digest, pass four
 
   17 Apr 2006; Caleb Tennis <caleb@gentoo.org> redcloth-3.0.4.ebuild:
   x86 stable
