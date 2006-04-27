@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/gda-sharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/ChangeLog,v 1.28 2006/03/20 00:22:16 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/ChangeLog,v 1.29 2006/04/27 15:11:24 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-gda-sharp-1.0.8, files/digest-gda-sharp-1.0.8-r1,
+  files/digest-gda-sharp-1.0.10, Manifest:
+  Fixing SHA256 digest, pass four
 
   20 Mar 2006; Luis Medinas <metalgod@gentoo.org> gda-sharp-1.0.10.ebuild:
   Stable on amd64.
