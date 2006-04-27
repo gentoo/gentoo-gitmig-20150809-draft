@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/synce-librapi2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.19 2006/03/30 22:05:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.20 2006/04/27 13:42:15 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-synce-librapi2-0.7, files/digest-synce-librapi2-0.8.1,
+  files/digest-synce-librapi2-0.8.9, files/digest-synce-librapi2-0.9.0,
+  files/digest-synce-librapi2-0.9.1, Manifest:
+  Fixing SHA256 digest, pass four
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   synce-librapi2-0.9.1.ebuild:
