@@ -1,22 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ff6487e98efeac79940ec0e224636a8b ChangeLog 518
-RMD160 3fcf9650921f50c2facae71b56d0182dbf4c45a7 ChangeLog 518
-SHA256 f91620cba989eea180991f35f501292bb4edbcc17c3477db7e1e0a2b3a68917f ChangeLog 518
-MD5 4c57fb70374915b9692f7ccb49ffc373 files/digest-matchbox-applet-startup-monitor-0.1 292
-RMD160 3c934d9a24fc86db1aa6d60fa8764cb33f54b5f8 files/digest-matchbox-applet-startup-monitor-0.1 292
-SHA256 04e190d06a7d379234a42e9e83ba9cf8a071fc8e5174975cd410cdb67f341b62 files/digest-matchbox-applet-startup-monitor-0.1 292
+DIST mb-applet-startup-monitor-0.1.tar.bz2 206232 RMD160 61228819983835162f7dc998dc0f8b79c7a628e6 SHA256 d0f1ba8275f688e7619c8a570e2a99f889e54efff8cb79d348827e2cb753d864 size 206232
+EBUILD matchbox-applet-startup-monitor-0.1.ebuild 958 RMD160 f29412fa6c06395dcc8467062fb77c5cef28af4c SHA1 f3146cc1c6aeff7ae69e0f730cc36e0fd1753e33 SHA256 11b2545422719a80cea4cf89a6663c8cee1816161e0bd26eaf45b20166b13dc6 size 958
 MD5 5c511d91a94328c08ca9068df3f5da5b matchbox-applet-startup-monitor-0.1.ebuild 958
 RMD160 f29412fa6c06395dcc8467062fb77c5cef28af4c matchbox-applet-startup-monitor-0.1.ebuild 958
 SHA256 11b2545422719a80cea4cf89a6663c8cee1816161e0bd26eaf45b20166b13dc6 matchbox-applet-startup-monitor-0.1.ebuild 958
+MISC ChangeLog 619 RMD160 4d56e91eabea3ce6100c844714acb93400f03183 SHA1 12f43b47b64ad74153a1c77c8b3db298f8a3567d SHA256 b1c841a59501b0f66d37f6fb39d76ca4bf83463a3e5fe9ca597154cde270a04b size 619
+MD5 0983b2a713094a6b4b8bdf83d1d83293 ChangeLog 619
+RMD160 4d56e91eabea3ce6100c844714acb93400f03183 ChangeLog 619
+SHA256 b1c841a59501b0f66d37f6fb39d76ca4bf83463a3e5fe9ca597154cde270a04b ChangeLog 619
+MISC metadata.xml 247 RMD160 49e7f36b66be574d7f3341589ebff702e1c8c8a9 SHA1 af1f5473be400926e7bf9a98a354866150c8b7a7 SHA256 09c798d19a28d8e2ee2b8494e011929f5fc1617190315d82bd03c32e911def55 size 247
 MD5 a80bc50cf196a9e5a2764d6f6081b56a metadata.xml 247
 RMD160 49e7f36b66be574d7f3341589ebff702e1c8c8a9 metadata.xml 247
-SHA256 5270fc293d10727efe22af7c71da351586b63251d10bbadd916060e405d88ce9 metadata.xml 247
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEFLw8yZl4piiTjjYRAnVJAJ9vOgcrxYWWJOHNJWJhsm/ojStlIgCfY5tr
-VoKmVSfjNLU0c6FF5xQxnPY=
-=2LZ7
------END PGP SIGNATURE-----
+SHA256 09c798d19a28d8e2ee2b8494e011929f5fc1617190315d82bd03c32e911def55 metadata.xml 247
+MD5 4c57fb70374915b9692f7ccb49ffc373 files/digest-matchbox-applet-startup-monitor-0.1 292
+RMD160 3c934d9a24fc86db1aa6d60fa8764cb33f54b5f8 files/digest-matchbox-applet-startup-monitor-0.1 292
+SHA256 04e190d06a7d379234a42e9e83ba9cf8a071fc8e5174975cd410cdb67f341b62 files/digest-matchbox-applet-startup-monitor-0.1 292
