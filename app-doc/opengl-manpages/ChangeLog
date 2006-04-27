@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/opengl-manpages
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/opengl-manpages/ChangeLog,v 1.7 2006/04/27 11:50:59 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/opengl-manpages/ChangeLog,v 1.8 2006/04/27 12:26:56 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-opengl-manpages-20001215, Manifest:
+  Fixing SHA256 digest for real, pass three...
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-opengl-manpages-20001215, Manifest:
