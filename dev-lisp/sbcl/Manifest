@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5cdccda5eb35c406b1b4b699e4fdd1e9 ChangeLog 26919
-RMD160 0af28131095b942ea25c83c7f173aaa82177dffe ChangeLog 26919
-SHA256 6a4755d0002c28b5607f780eb591189b60dec62a79d37068bfd9399fea80b5e1 ChangeLog 26919
+MD5 0308e47063317e97a417804fd7b79287 ChangeLog 27310
+RMD160 7572c1b9cfa352dfbeba12410b568085224a26f8 ChangeLog 27310
+SHA256 2c808e28dfa9edbf2168c04e6344455a722302133e2578c8cf62a200f1af0591 ChangeLog 27310
 MD5 3cb740743587d3fe5dd697e9c955828d files/0.9.11/README.Gentoo 1162
 RMD160 b33a9bf09b27423498fdf37ea4a4387cfe951169 files/0.9.11/README.Gentoo 1162
 SHA256 fba87acce6b7402c34dcd97b1c314df500cc174967b13b593472f70180cda7ce files/0.9.11/README.Gentoo 1162
@@ -25,6 +25,27 @@ SHA256 bce669be8d39ec33fbea6039a89aa8171a82657680fb7d560932695a45b392aa files/0.
 MD5 3245613a0cbe1b40af2e691932f54763 files/0.9.11/sbclrc 616
 RMD160 5cd90aaa28d541d9b54ae92a4f62f002f9dc40ba files/0.9.11/sbclrc 616
 SHA256 1722b2e8d91dfa0f77bd362d7fd3520b3800bb028b863e46bcc3ea2a0d97fec6 files/0.9.11/sbclrc 616
+MD5 b32d6e95961c626f3ce57e383ddb614f files/0.9.12/README.Gentoo 1162
+RMD160 9ca1191b87100bbd20b736c8a49e6b2b0e84d53b files/0.9.12/README.Gentoo 1162
+SHA256 a4e1ea5db8eef2a9e898a61f023782fb29f193ab52a82ee7797bd2772859e272 files/0.9.12/README.Gentoo 1162
+MD5 683427165f7d0717333bbb9762972b8d files/0.9.12/customize-target-features.lisp-prefix 95
+RMD160 36fba8a68c6cd393ff72fb84574e47b041c3fd2f files/0.9.12/customize-target-features.lisp-prefix 95
+SHA256 67744aa5d20f25c4da6e26b5f2dd41ef16c07d4dd0ea54a04e5070ec16c951cf files/0.9.12/customize-target-features.lisp-prefix 95
+MD5 7b753c4f6f63f1fc8630f3c9100a8ca9 files/0.9.12/customize-target-features.lisp-suffix 8
+RMD160 51f2c8c70a2b560cd70d0422c17d7bc272623c9d files/0.9.12/customize-target-features.lisp-suffix 8
+SHA256 e104cf46db5be2e1fb7f4e088da761aa5d7f7dbf452d2f5db60c2fd88f8fa63a files/0.9.12/customize-target-features.lisp-suffix 8
+MD5 6b5b1a3c5093b46deada98012a7f22d3 files/0.9.12/disable-tests-gentoo.patch 2749
+RMD160 a1b29134731a7ba9bdbb4d22dfff90340a14aafb files/0.9.12/disable-tests-gentoo.patch 2749
+SHA256 c5552ea977c91fe75e300de34758349e144ae12b9e4c039472982850a6de38f1 files/0.9.12/disable-tests-gentoo.patch 2749
+MD5 6f7742518348dd7f212e5e0a48c75a51 files/0.9.12/install-clc.lisp 1044
+RMD160 7322e668aa5397d8d7ffe8f6dc0cddf7b6ec84fc files/0.9.12/install-clc.lisp 1044
+SHA256 d5b6b4f56d98663e86cf2e0d3a31d134813953b5e3b6f4eed7720bf3701e9d50 files/0.9.12/install-clc.lisp 1044
+MD5 bc3e4cb98f764edc22afaa1a31a1dbce files/0.9.12/sbcl.sh 1724
+RMD160 9a4e58d62b6c9b471d33bc533e9cd2954d3bea2d files/0.9.12/sbcl.sh 1724
+SHA256 bce669be8d39ec33fbea6039a89aa8171a82657680fb7d560932695a45b392aa files/0.9.12/sbcl.sh 1724
+MD5 3245613a0cbe1b40af2e691932f54763 files/0.9.12/sbclrc 616
+RMD160 5cd90aaa28d541d9b54ae92a4f62f002f9dc40ba files/0.9.12/sbclrc 616
+SHA256 1722b2e8d91dfa0f77bd362d7fd3520b3800bb028b863e46bcc3ea2a0d97fec6 files/0.9.12/sbclrc 616
 MD5 45c4c194bdc01c92730e2f8ea5bbb2e5 files/0.9.3/README.Gentoo 1060
 RMD160 c52a5485d9ff25ebb28c4891ebf89ee38ba56cf7 files/0.9.3/README.Gentoo 1060
 SHA256 c264b8ef53d3fde65b29ab95743ddbe5210e038bf78378e01dac843d72d166f9 files/0.9.3/README.Gentoo 1060
@@ -130,6 +151,9 @@ SHA256 45933ea112a45ec2d1fc6b46320e9dbd265b2e4a9fb1305287f4225a5f5f2334 files/0.
 MD5 c9ae86347077a688f032c777312891a1 files/digest-sbcl-0.9.11 2053
 RMD160 f278f6e64a0d289c25eadeae3dacaaf5c6d81f3d files/digest-sbcl-0.9.11 2053
 SHA256 b9bfbd2932aea105f85848d8b28c8277a3440b188526fec06801c08c2d86b142 files/digest-sbcl-0.9.11 2053
+MD5 78b4589cab72616ab787c0ae1a787d4c files/digest-sbcl-0.9.12 2053
+RMD160 ca8afa4a26549c6c5e481e090e4c6b8751e5e9d5 files/digest-sbcl-0.9.12 2053
+SHA256 7dfd57b0acb93acfa0eeb20ea8d29e0c3c74069b6276176a42f4fca45edf84e1 files/digest-sbcl-0.9.12 2053
 MD5 7e5f4692a0e0debe2743ed6a086d29bb files/digest-sbcl-0.9.3 557
 RMD160 f3659ebd2d83ea874b7626354414a339171c0d70 files/digest-sbcl-0.9.3 557
 SHA256 8df9489c24d5d203ad2db9237054ecd4b428c44a8944b971d923b8e9c0a6d4f0 files/digest-sbcl-0.9.3 557
@@ -151,6 +175,9 @@ SHA256 4cb74fa43cdc4e8291063beae14ca74fb605508225913474763ad3fb7e6985d7 metadata
 MD5 99b08c834c0efb4bcd78197807517ad0 sbcl-0.9.11.ebuild 5196
 RMD160 8bde7dd34831d406e84ec6f26fa564d23940fbca sbcl-0.9.11.ebuild 5196
 SHA256 961d648b75b5403e685b8f4a90ed3dccc98d54a7a2fc791177e9ee0b7c5194d3 sbcl-0.9.11.ebuild 5196
+MD5 7a768285f8e557f796d689dab6327a51 sbcl-0.9.12.ebuild 5659
+RMD160 5924aa8ef32d123f77d00349c37b7a6daaeccdd7 sbcl-0.9.12.ebuild 5659
+SHA256 af55a9617cb00b88c539b0165bb4d88a2aeaacba05cc6f4db7e28f4d2df4e5f0 sbcl-0.9.12.ebuild 5659
 MD5 e6a8dc74061cced7fd5fab222e795d5f sbcl-0.9.3.ebuild 5046
 RMD160 9b7534c50101d3ad08a55c0c1590d98ffe1165a6 sbcl-0.9.3.ebuild 5046
 SHA256 f9ddbf72faaeb6d376ba7b93825a8140b716d12a22654628d8af32370c5d38b9 sbcl-0.9.3.ebuild 5046
@@ -169,7 +196,7 @@ SHA256 3d243e9360a19b50c894780b34f359b652b618e1b3eda14c1804bf6bdc69b6a9 sbcl-0.9
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFETRoVyiNZaEAZA+ARAk9gAJ9R8nEsFhrWWUyJ5CC6gEgFQpQTlwCggYMj
-qdOvaHyjQWifNRX1gbuUplI=
-=+IMa
+iD8DBQFEUSVjyiNZaEAZA+ARAlOnAJ9TJOZ1rh0909DY3hN5ux5NzLNUmwCdF4j+
+cSn9ObwUj/rAgEc1AP5KYss=
+=YHIk
 -----END PGP SIGNATURE-----
