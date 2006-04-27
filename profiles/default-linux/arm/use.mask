@@ -1,5 +1,9 @@
 hardened
 
+# Saleem Abdulrasool <compnerd@gentoo.org>
+# With vapier's permission masking this.
+dmi
+
 # Paul de Vrieze <pauldv@gentoo.org>
 # There is no java in this profile (if there is it must be available). Without
 # this repoman will fail on apps like sys-libs/db
