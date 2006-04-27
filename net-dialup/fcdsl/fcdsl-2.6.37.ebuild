@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.37.ebuild,v 1.2 2006/03/12 11:31:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.37.ebuild,v 1.3 2006/04/27 17:40:57 mrness Exp $
 
 inherit linux-mod eutils rpm
 
@@ -14,7 +14,7 @@ SRC_URI="x86? ( ${SRC_HEAD}/i586/km_${P/2.6./2.6-}.i586.rpm
 		${SRC_HEAD}/x86_64/avm_${P/2.6./2.6-}.x86_64.rpm )"
 
 LICENSE="LGPL-2"
-KEYWORDS="~x86 ~amd64 -*"
+KEYWORDS="-* ~amd64 x86"
 IUSE="unicode"
 SLOT="0"
 
