@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.236 2006/04/27 17:06:36 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.237 2006/04/27 21:48:15 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-samba-3.0.14a-r2, files/digest-samba-3.0.14a-r3,
+  files/digest-samba-3.0.20b, files/digest-samba-3.0.21a,
+  files/digest-samba-3.0.21b-r1, files/digest-samba-3.0.21c-r1,
+  files/digest-samba-3.0.22, files/digest-samba-3.0.22-r1,
+  files/digest-samba-3.0.22-r2, Manifest:
+  Fixing SHA256 digest, pass four
 
 *samba-3.0.22-r2 (27 Apr 2006)
 
