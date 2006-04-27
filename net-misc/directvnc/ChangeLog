@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/directvnc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.16 2006/02/17 11:01:24 s4t4n Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.17 2006/04/27 22:05:35 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   17 Feb 2006; Michele Noberasco <s4t4n@gentoo.org> directvnc-0.7.5.ebuild:
   Removed unneded virtual/x11 dependancy.

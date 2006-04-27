@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.22 2006/04/13 13:18:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.23 2006/04/27 22:07:58 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-mDNSResponder-98, Manifest:
+  Fixing SHA256 digest, pass four
 
   13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   mDNSResponder-107.5.ebuild:

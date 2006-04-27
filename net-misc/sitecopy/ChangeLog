@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/sitecopy
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.36 2006/03/21 00:22:36 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.37 2006/04/27 22:10:38 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-sitecopy-0.15.1, files/digest-sitecopy-0.16.0, Manifest:
+  Fixing SHA256 digest, pass four
 
   21 Mar 2006; Emanuele Giaquinta <exg@gentoo.org> sitecopy-0.16.3.ebuild:
   Removed support for gssapi since it's broken. Replaced xml2 useflag with xml

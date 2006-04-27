@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netcomics-cvs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netcomics-cvs/ChangeLog,v 1.4 2006/02/13 00:45:32 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netcomics-cvs/ChangeLog,v 1.5 2006/04/27 22:08:52 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-netcomics-cvs-0.14.1, Manifest:
+  Fixing SHA256 digest, pass four
 
   13 Feb 2006; Mark Loeser <halcy0n@gentoo.org> netcomics-cvs-0.14.1.ebuild:
   Back to ~x86.  CVS ebuilds shouldn't be stable

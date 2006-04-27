@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/gwget
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.8 2006/03/05 06:39:03 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.9 2006/04/27 22:06:16 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-gwget-0.6,
+  files/digest-gwget-0.14, files/digest-gwget-0.94, files/digest-gwget-0.96,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
 *gwget-0.97 (05 Mar 2006)
 

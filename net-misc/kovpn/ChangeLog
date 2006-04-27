@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/kovpn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kovpn/ChangeLog,v 1.2 2006/04/26 16:23:48 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kovpn/ChangeLog,v 1.3 2006/04/27 22:06:51 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
 *kovpn-0.3_pre2 (26 Apr 2006)
 

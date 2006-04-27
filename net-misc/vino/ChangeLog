@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.50 2006/04/23 18:00:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.51 2006/04/27 22:12:02 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-vino-2.8.1,
+  files/digest-vino-2.10.0, files/digest-vino-2.10.0-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
   29 Apr 2006; Joshua Kinard <kumba@gentoo.org> vino-2.12.0.ebuild:
   Marked stable on mips.

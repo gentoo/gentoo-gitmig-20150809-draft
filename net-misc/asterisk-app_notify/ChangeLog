@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk-app_notify
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_notify/ChangeLog,v 1.2 2006/04/15 23:49:22 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_notify/ChangeLog,v 1.3 2006/04/27 22:04:34 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-asterisk-app_notify-0.9,
+  files/digest-asterisk-app_notify-1.0_rc2, Manifest:
+  Fixing SHA256 digest, pass four
 
 *asterisk-app_notify-1.0_rc2 (15 Apr 2006)
 

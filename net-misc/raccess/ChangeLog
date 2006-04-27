@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/raccess
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/ChangeLog,v 1.11 2006/02/20 22:13:12 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/ChangeLog,v 1.12 2006/04/27 22:10:07 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-raccess-0.6,
+  files/digest-raccess-0.7, Manifest:
+  Fixing SHA256 digest, pass four
 
   20 Feb 2006; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
   raccess-0.7.ebuild:

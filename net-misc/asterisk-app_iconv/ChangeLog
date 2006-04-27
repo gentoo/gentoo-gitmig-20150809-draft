@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/asterisk-app_iconv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_iconv/ChangeLog,v 1.9 2006/04/15 23:14:56 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_iconv/ChangeLog,v 1.10 2006/04/27 22:04:12 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-asterisk-app_iconv-0.9,
+  files/digest-asterisk-app_iconv-0.9.1,
+  files/digest-asterisk-app_iconv-0.9.2, Manifest:
+  Fixing SHA256 digest, pass four
 
 *asterisk-app_iconv-0.9.2 (15 Apr 2006)
 
