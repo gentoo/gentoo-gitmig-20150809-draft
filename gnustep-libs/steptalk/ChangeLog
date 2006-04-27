@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/steptalk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/ChangeLog,v 1.7 2006/03/25 22:32:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/ChangeLog,v 1.8 2006/04/27 20:26:37 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-steptalk-0.8.3_pre20050312, Manifest:
+  Fixing SHA256 digest, pass four
 
 *steptalk-0.10.0 (25 Mar 2006)
 *steptalk-0.9.1 (25 Mar 2006)

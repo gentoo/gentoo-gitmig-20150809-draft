@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-libs/smbkit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/smbkit/ChangeLog,v 1.8 2006/03/26 12:03:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/smbkit/ChangeLog,v 1.9 2006/04/27 20:26:00 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-smbkit-0.0.1.20050521, files/digest-smbkit-0.0.1.20060324,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
 *smbkit-0.0.1.20060324 (26 Mar 2006)
 
