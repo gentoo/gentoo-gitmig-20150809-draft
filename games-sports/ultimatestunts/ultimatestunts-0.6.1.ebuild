@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.6.1.ebuild,v 1.2 2006/03/25 01:03:37 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.6.1.ebuild,v 1.3 2006/04/27 17:40:30 wolf31o2 Exp $
 
 inherit eutils versionator games
 
@@ -47,6 +47,7 @@ src_unpack() {
 		data/Makefile.in \
 		|| die "sed failed"
 	epatch "${FILESDIR}/${P}"-64bits.patch
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_install() {
