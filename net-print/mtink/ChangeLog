@@ -1,6 +1,10 @@
 # ChangeLog for net-print/mtink
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.23 2006/02/07 22:02:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.24 2006/04/27 22:16:27 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-mtink-1.0.9,
+  files/digest-mtink-1.0.11, Manifest:
+  Fixing SHA256 digest, pass four
 
   07 Feb 2006; Stefan Schweizer <genstef@gentoo.org> -mtink-1.0.5.ebuild,
   mtink-1.0.9.ebuild, mtink-1.0.11.ebuild:
