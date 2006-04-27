@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netcat
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.33 2005/09/15 21:59:59 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.34 2006/04/27 21:32:24 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-netcat-110-r6,
+  files/digest-netcat-110-r7, files/digest-netcat-110-r8, Manifest:
+  Fixing SHA256 digest, pass four
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> netcat-110-r8.ebuild:
   Mark 110-r8 stable on alpha

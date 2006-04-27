@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/egressor
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/egressor/ChangeLog,v 1.9 2006/02/15 22:06:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/egressor/ChangeLog,v 1.10 2006/04/27 21:31:00 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-egressor-1.0,
+  files/digest-egressor-1.0-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
   15 Feb 2006; Markus Ullmann <jokey@gentoo.org> egressor-1.0.ebuild,
   egressor-1.0-r1.ebuild:

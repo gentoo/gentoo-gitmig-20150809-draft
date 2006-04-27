@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.69 2006/04/13 02:40:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.70 2006/04/27 21:29:59 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-cacti-0.8.6g,
+  files/digest-cacti-0.8.6g_p20051023, files/digest-cacti-0.8.6h,
+  files/digest-cacti-0.8.6h_p20060108,
+  files/digest-cacti-0.8.6h_p20060108-r1,
+  files/digest-cacti-0.8.6h_p20060108-r2, Manifest:
+  Fixing SHA256 digest, pass four
 
   13 Apr 2006; Jason Wever <weeve@gentoo.org>
   cacti-0.8.6h_p20060108-r2.ebuild:
