@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/c-jdbc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/ChangeLog,v 1.7 2006/03/11 17:56:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/ChangeLog,v 1.8 2006/04/27 14:51:57 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-c-jdbc-1.0.4-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
   11 Mar 2006; Petteri Räty <betelgeuse@gentoo.org> c-jdbc-1.0.4-r1.ebuild:
   Moved enewgroup and enewuser calls from src_install to pkg_setup for bug

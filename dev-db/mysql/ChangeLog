@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.318 2006/04/22 21:20:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.319 2006/04/27 14:59:48 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   22 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> mysql-5.0.19-r1.ebuild:
   Add ~x86-fbsd keyword.

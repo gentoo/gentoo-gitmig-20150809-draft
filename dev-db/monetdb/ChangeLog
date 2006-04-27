@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/monetdb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/ChangeLog,v 1.5 2006/02/24 21:33:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/ChangeLog,v 1.6 2006/04/27 14:54:57 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-monetdb-4.8.2,
+  files/digest-monetdb-4.8.2-r1, files/digest-monetdb-4.10.0, Manifest:
+  Fixing SHA256 digest, pass four
 
 *monetdb-4.10.2 (24 Feb 2006)
 

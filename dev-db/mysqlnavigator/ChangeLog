@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysqlnavigator
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.21 2006/04/18 12:16:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.22 2006/04/27 15:00:28 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-mysqlnavigator-1.4.2, Manifest:
+  Fixing SHA256 digest, pass four
 
   18 Apr 2006; Jason Wever <weeve@gentoo.org> mysqlnavigator-1.4.2.ebuild:
   Stable on SPARC.
