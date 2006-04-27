@@ -1,6 +1,9 @@
 # ChangeLog for games-board/schafkopf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/schafkopf/ChangeLog,v 1.2 2006/02/22 08:54:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/schafkopf/ChangeLog,v 1.3 2006/04/27 19:45:15 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
 *schafkopf-0.7 (22 Feb 2006)
 
