@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/hilite
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hilite/ChangeLog,v 1.13 2006/04/07 21:25:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hilite/ChangeLog,v 1.14 2006/04/27 13:14:44 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-hilite-1.5,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
   Remove ciaranm from metadata.xml.

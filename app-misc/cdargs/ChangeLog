@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/cdargs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/ChangeLog,v 1.10 2006/04/19 02:22:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/ChangeLog,v 1.11 2006/04/27 13:13:14 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-cdargs-1.31,
+  files/digest-cdargs-1.35, Manifest:
+  Fixing SHA256 digest, pass four
 
   19 Apr 2006; Jason Wever <weeve@gentoo.org> cdargs-1.35.ebuild:
   Added ~sparc keyword wrt bug #129707.

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.29 2006/04/02 09:03:06 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.30 2006/04/27 13:15:17 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-linux-logo-4.12, Manifest:
+  Fixing SHA256 digest, pass four
 
   02 Apr 2006; Michał Januszewski <spock@gentoo.org>
   linux-logo-4.12.ebuild:

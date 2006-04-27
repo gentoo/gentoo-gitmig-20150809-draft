@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.83 2006/04/16 22:10:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.84 2006/04/27 13:16:08 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-lirc-0.7.2,
+  files/digest-lirc-0.8.0, Manifest:
+  Fixing SHA256 digest, pass four
 
   16 Apr 2006; Michael Hanselmann <hansmi@gentoo.org> lirc-0.8.0.ebuild:
   Stable on ppc.

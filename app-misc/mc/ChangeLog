@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.99 2006/04/24 23:33:36 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.100 2006/04/27 13:17:17 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-mc-4.6.0-r12,
+  files/digest-mc-4.6.0-r13, files/digest-mc-4.6.0-r14,
+  files/digest-mc-4.6.1, Manifest:
+  Fixing SHA256 digest, pass four
 
   24 Apr 2006; Scott Stoddard <deltacow@gentoo.org> mc-4.6.1.ebuild:
   Stable on amd64 (bug #130299)

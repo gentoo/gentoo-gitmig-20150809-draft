@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.38 2006/04/13 21:16:46 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.39 2006/04/27 13:19:41 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-workrave-1.8.1-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
   13 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/workrave-1.8.2-gcc41.patch, workrave-1.8.2.ebuild:
