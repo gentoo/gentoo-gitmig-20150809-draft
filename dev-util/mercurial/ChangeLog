@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.21 2006/04/11 19:50:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.22 2006/04/27 19:36:32 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-mercurial-0.6b_p20050807, files/digest-mercurial-0.7,
+  files/digest-mercurial-0.8, Manifest:
+  Fixing SHA256 digest, pass four
 
 *mercurial-0.8.1 (11 Apr 2006)
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/glademm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/ChangeLog,v 1.25 2006/03/24 12:23:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/ChangeLog,v 1.26 2006/04/27 19:35:06 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-glademm-0.6.4,
+  files/digest-glademm-2.0.0, files/digest-glademm-2.0.0.1,
+  files/digest-glademm-2.6.0, Manifest:
+  Fixing SHA256 digest, pass four
 
   24 Mar 2006; Aron Griffis <agriffis@gentoo.org> glademm-2.6.0.ebuild:
   Mark 2.6.0 ~ia64

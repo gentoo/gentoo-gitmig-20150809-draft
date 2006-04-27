@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/devel-chroots
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/ChangeLog,v 1.18 2006/03/05 22:02:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/ChangeLog,v 1.19 2006/04/27 19:31:21 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-devel-chroots-1.0.0, files/digest-devel-chroots-1.0.1,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   05 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
   devel-chroots-1.0.1.ebuild:

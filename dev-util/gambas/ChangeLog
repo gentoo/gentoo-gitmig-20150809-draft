@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gambas
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.38 2006/01/25 17:50:45 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.39 2006/04/27 19:34:22 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-gambas-1.0.6,
+  files/digest-gambas-1.0.10, Manifest:
+  Fixing SHA256 digest, pass four
 
 *gambas-1.0.14 (25 Jan 2006)
 

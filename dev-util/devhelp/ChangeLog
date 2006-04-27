@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.37 2006/03/05 18:36:57 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.38 2006/04/27 19:32:04 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-devhelp-0.9.3,
+  files/digest-devhelp-0.10, Manifest:
+  Fixing SHA256 digest, pass four
 
 *devhelp-0.11 (05 Mar 2006)
 
