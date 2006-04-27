@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/axiom
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.9 2006/03/18 21:34:05 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.10 2006/04/27 22:29:56 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   18 Mar 2006; <plasmaroo@gentoo.org> axiom-3.9-r1.ebuild, -axiom-3.9.ebuild,
   -axiom-9999.ebuild:
