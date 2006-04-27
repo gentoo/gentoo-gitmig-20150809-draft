@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/pan
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.9 2006/04/09 17:20:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.10 2006/04/27 22:14:39 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
 *pan-0.92 (09 Apr 2006)
 
