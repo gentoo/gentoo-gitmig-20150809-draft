@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/vzquota
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/ChangeLog,v 1.13 2006/04/24 14:56:05 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/ChangeLog,v 1.14 2006/04/27 23:09:37 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
 *vzquota-3.0.0.7 (24 Apr 2006)
 
