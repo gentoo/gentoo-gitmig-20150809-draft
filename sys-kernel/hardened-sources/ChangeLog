@@ -1,12 +1,20 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.94 2006/04/27 09:03:52 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.95 2006/04/27 14:52:28 johnm Exp $
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-hardened-sources-2.4.32-r2,
   files/digest-hardened-sources-2.4.32-r3,
   files/digest-hardened-sources-2.6.14-r8, Manifest:
   Fixing duff SHA256 digests: Bug # 131293
+
+*hardened-sources-2.6.16-r5 (27 Apr 2006)
+
+  27 Apr 2006; John Mylchreest <johnm@gentoo.org>
+  -hardened-sources-2.6.14-r6.ebuild, hardened-sources-2.6.14-r8.ebuild,
+  -hardened-sources-2.6.16-r4.ebuild, +hardened-sources-2.6.16-r5.ebuild:
+  stablise 2.6.14-r8 on x86 & amd64, bump 2.6.16 to fix CVE-2006-1863 &
+  cleanup of old uneccessary sources
 
   20 Apr 2006; John Mylchreest <johnm@gentoo.org> ChangeLog:
   fix digest
