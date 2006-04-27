@@ -1,6 +1,9 @@
 # ChangeLog for games-util/showeq
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/ChangeLog,v 1.17 2006/04/02 09:04:29 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/ChangeLog,v 1.18 2006/04/27 20:11:01 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   02 Apr 2006; <Tupone@gentoo.org> +files/showeq-5.0.0.18-gcc4.patch,
   +files/showeq-5.2.4.0-gcc4.patch, +files/showeq-5.3.0.0-gcc4.patch,

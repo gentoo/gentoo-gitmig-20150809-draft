@@ -1,6 +1,10 @@
 # ChangeLog for games-util/aabrowse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/aabrowse/ChangeLog,v 1.6 2006/01/28 07:24:55 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/aabrowse/ChangeLog,v 1.7 2006/04/27 20:10:24 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-aabrowse-0.0.6, files/digest-aabrowse-0.0.8, Manifest:
+  Fixing SHA256 digest, pass four
 
   28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   aabrowse-0.0.6.ebuild, aabrowse-0.0.8.ebuild:
