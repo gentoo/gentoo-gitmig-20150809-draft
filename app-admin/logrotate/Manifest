@@ -1,49 +1,52 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b5195a92f8444ce1698504ac98a883fa ChangeLog 8037
-RMD160 75e45d3c496bde57004d480102917c853d9b6f88 ChangeLog 8037
-SHA256 b2543a9413d04016da60da36bc544dfcba52d4dc2478bdcea76c19eb97a2a242 ChangeLog 8037
-MD5 384ba798429c512ac83f6e780ce5a514 files/digest-logrotate-3.7.1-r2 247
-RMD160 c60aff2b1effe1e357cabdd9ba92fd67acc3aa7f files/digest-logrotate-3.7.1-r2 247
-SHA256 b5631aaec0ac8403294a96d16661f89e94266fb976c95c0cf3a912d4f99e1a0e files/digest-logrotate-3.7.1-r2 247
+AUX logrotate-3.7.1-dateext-maxage.patch 14282 RMD160 b133eb1334a60113489e8eef93eda4d75e3d14cb SHA1 7483cbd7f734aac34e58333df353624d2e2d7b20 SHA256 391762c83304139a074f5e2b14283a254a99e53e09ee26832dd8447aa8f63573 size 14282
 MD5 8259bf9cd3b5bc37dd4cdda62cc9c2de files/logrotate-3.7.1-dateext-maxage.patch 14282
 RMD160 b133eb1334a60113489e8eef93eda4d75e3d14cb files/logrotate-3.7.1-dateext-maxage.patch 14282
 SHA256 391762c83304139a074f5e2b14283a254a99e53e09ee26832dd8447aa8f63573 files/logrotate-3.7.1-dateext-maxage.patch 14282
+AUX logrotate-3.7.1-datehack.patch 516 RMD160 6b68d211ef6fa4bc5b87eb8a12ecce3e0d005d75 SHA1 8f8057e72eda4869a0418fdccaa03fe4e367ce89 SHA256 5deebe34063e614d5e13b7631ddd5cb0dc5ab3f749ce3e912c3fe30059488246 size 516
 MD5 8d4271dd12289c4da96b3e4f1fbd0868 files/logrotate-3.7.1-datehack.patch 516
 RMD160 6b68d211ef6fa4bc5b87eb8a12ecce3e0d005d75 files/logrotate-3.7.1-datehack.patch 516
 SHA256 5deebe34063e614d5e13b7631ddd5cb0dc5ab3f749ce3e912c3fe30059488246 files/logrotate-3.7.1-datehack.patch 516
+AUX logrotate-3.7.1-ignore-hidden.patch 517 RMD160 ef4e65b9a7c1e3167695531b2e4e1bdf2d424ca6 SHA1 b5d71b244b0ae55f94309f943f8dae7b072f0c87 SHA256 cc41d44494626327228994933701003d7d5f73ed3141d88ec14c739eeee5bcb6 size 517
 MD5 d268cc741e71398dc2a14bcdc0bcfeb2 files/logrotate-3.7.1-ignore-hidden.patch 517
 RMD160 ef4e65b9a7c1e3167695531b2e4e1bdf2d424ca6 files/logrotate-3.7.1-ignore-hidden.patch 517
 SHA256 cc41d44494626327228994933701003d7d5f73ed3141d88ec14c739eeee5bcb6 files/logrotate-3.7.1-ignore-hidden.patch 517
+AUX logrotate-3.7.1-manpage-fixes.patch 15684 RMD160 0800474991efcd54360a0996900c9823c5f2443a SHA1 90378a351253ada51da622141ee5aa30c86fe818 SHA256 ce2efb8c042e27352393eced77d8db6ea94dda67aa0618808fe8e8340e396641 size 15684
 MD5 6ebaa619f7cd1621eb7203fb8f651cee files/logrotate-3.7.1-manpage-fixes.patch 15684
 RMD160 0800474991efcd54360a0996900c9823c5f2443a files/logrotate-3.7.1-manpage-fixes.patch 15684
 SHA256 ce2efb8c042e27352393eced77d8db6ea94dda67aa0618808fe8e8340e396641 files/logrotate-3.7.1-manpage-fixes.patch 15684
+AUX logrotate-3.7.1-no-tmpdir.patch 1266 RMD160 1311c0561551890958feab495ad2109c0bea1662 SHA1 ccb6b4af3e63c19131a15373ebffe8af812fb463 SHA256 045acabd92812483629e9263c997e4e9b41ade71b422af3699dc9cce390b4f23 size 1266
 MD5 721a9af5171ca27c48c51ba338db3036 files/logrotate-3.7.1-no-tmpdir.patch 1266
 RMD160 1311c0561551890958feab495ad2109c0bea1662 files/logrotate-3.7.1-no-tmpdir.patch 1266
 SHA256 045acabd92812483629e9263c997e4e9b41ade71b422af3699dc9cce390b4f23 files/logrotate-3.7.1-no-tmpdir.patch 1266
+AUX logrotate-3.7.1-taboo-to-debug.patch 517 RMD160 624d7f18438d6728b29acf6628fd0c5d60766fe8 SHA1 3c6505a82197bf23a2fe13feeb9cda340d051b61 SHA256 6b67762f70eef9d20f1727aa3d88ddf77fbdc4bac7cb135adb3c30886f990046 size 517
 MD5 b6b2dec981e0b573366f5d0e74783b5b files/logrotate-3.7.1-taboo-to-debug.patch 517
 RMD160 624d7f18438d6728b29acf6628fd0c5d60766fe8 files/logrotate-3.7.1-taboo-to-debug.patch 517
 SHA256 6b67762f70eef9d20f1727aa3d88ddf77fbdc4bac7cb135adb3c30886f990046 files/logrotate-3.7.1-taboo-to-debug.patch 517
+AUX logrotate-3.7.1-weekly.patch 1165 RMD160 8799169f501316796c68e98fef0b34af963231c1 SHA1 e8a269ee0099adb50307a06f79ee188c238d348f SHA256 fc0cf229212ac458555829e12bdc9886a75e1ea0fbefd89454686cef3a1a80ac size 1165
 MD5 99475aa9bd9e42d158c0584f3c4544fd files/logrotate-3.7.1-weekly.patch 1165
 RMD160 8799169f501316796c68e98fef0b34af963231c1 files/logrotate-3.7.1-weekly.patch 1165
 SHA256 fc0cf229212ac458555829e12bdc9886a75e1ea0fbefd89454686cef3a1a80ac files/logrotate-3.7.1-weekly.patch 1165
+AUX logrotate.conf 731 RMD160 2198a4ae1ccaaa00b173516d22baef59906d7614 SHA1 3fe255599843547d918c726fe949299b6d2a7859 SHA256 80e495a8eb442a19d12e20ef1b1b5c99f5b5c6c2063979550fd1bd2ec6c9064a size 731
 MD5 5692e613153f372df5b7510b39ba9c5c files/logrotate.conf 731
 RMD160 2198a4ae1ccaaa00b173516d22baef59906d7614 files/logrotate.conf 731
 SHA256 80e495a8eb442a19d12e20ef1b1b5c99f5b5c6c2063979550fd1bd2ec6c9064a files/logrotate.conf 731
+AUX logrotate.cron 52 RMD160 fc2606fcd6d6bbdcf189ff3aa3a112e481182a9e SHA1 0a681301e9f22178691cae25799351c220712a7f SHA256 5eeae7dfbd54f74108d49cda8285211898d29ab7d547dee267803299e7339560 size 52
 MD5 cf1ca2cfa810abaefc504a76ca38b52a files/logrotate.cron 52
 RMD160 fc2606fcd6d6bbdcf189ff3aa3a112e481182a9e files/logrotate.cron 52
 SHA256 5eeae7dfbd54f74108d49cda8285211898d29ab7d547dee267803299e7339560 files/logrotate.cron 52
+DIST logrotate-3.7.1.tar.bz2 31953 RMD160 cee80082113a6ddae8c694aa4b9a035f6aff61b1 SHA256 d828ced574eea4900ae7a1179730503cd2984c685fa97967a2d9c743b0d4071f size 31953
+EBUILD logrotate-3.7.1-r2.ebuild 1806 RMD160 03a15a947e8cd127b2dc86a3a6a167834c12061b SHA1 0586ce98ab872798e567995017a4cae035414aa2 SHA256 c69cc96c4213c21b6b1d57a65afb8d2b22ac14831a317827f1a566183d41efb0 size 1806
 MD5 ff09285e6ebd3539cc653d5fec332d4f logrotate-3.7.1-r2.ebuild 1806
 RMD160 03a15a947e8cd127b2dc86a3a6a167834c12061b logrotate-3.7.1-r2.ebuild 1806
 SHA256 c69cc96c4213c21b6b1d57a65afb8d2b22ac14831a317827f1a566183d41efb0 logrotate-3.7.1-r2.ebuild 1806
+MISC ChangeLog 8142 RMD160 1e213640d67585343a4b15d591a3fb1de0fd6bfa SHA1 fc447c92651606a15f61c5c002e8dca800866a63 SHA256 2b40f84618cc25d9633eb372afd1f07a1a50fa0f2743b9d0fccebc73b4d491b7 size 8142
+MD5 0155305917238d31338c3f17104db55a ChangeLog 8142
+RMD160 1e213640d67585343a4b15d591a3fb1de0fd6bfa ChangeLog 8142
+SHA256 2b40f84618cc25d9633eb372afd1f07a1a50fa0f2743b9d0fccebc73b4d491b7 ChangeLog 8142
+MISC metadata.xml 216 RMD160 9bd928268bad8d343ce07f1c2f875b7c296db426 SHA1 df32457660dc43f2fd8b867c0b01ff7aed8e8f98 SHA256 4285dde164ce71c8922ac0cb88e9ea655f517c2d5c25437090466df3988658c0 size 216
 MD5 c7533062993ae53a9a32d0a58416cd84 metadata.xml 216
 RMD160 9bd928268bad8d343ce07f1c2f875b7c296db426 metadata.xml 216
 SHA256 4285dde164ce71c8922ac0cb88e9ea655f517c2d5c25437090466df3988658c0 metadata.xml 216
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD7Lv+omPajV0RnrERAtpAAJ0VYi2mHp/Nm0wT4kuvwn042AWcKwCeIlyq
-ZCUxhGXgMHkT9FXJDCRjYRU=
-=MO5l
------END PGP SIGNATURE-----
+MD5 384ba798429c512ac83f6e780ce5a514 files/digest-logrotate-3.7.1-r2 247
+RMD160 c60aff2b1effe1e357cabdd9ba92fd67acc3aa7f files/digest-logrotate-3.7.1-r2 247
+SHA256 1b99fe7a1b3e2d4142a84aec42f565b5c4039c3bae57babbaa85419bb92474e8 files/digest-logrotate-3.7.1-r2 247
