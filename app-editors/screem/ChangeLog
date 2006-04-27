@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/screem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/ChangeLog,v 1.4 2006/03/25 13:24:43 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/ChangeLog,v 1.5 2006/04/27 10:27:14 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
   25 Mar 2006; John N. Laliberte <allanonjl@gentoo.org>
   -screem-0.6.2.ebuild, -screem-0.8.1.ebuild, -screem-0.14.1.ebuild,
