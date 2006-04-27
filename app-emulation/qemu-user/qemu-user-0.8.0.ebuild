@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.8.0.ebuild,v 1.7 2006/04/23 14:42:24 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.8.0.ebuild,v 1.8 2006/04/27 23:56:09 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,7 +22,7 @@ RDEPEND=""
 S="${WORKDIR}/${P/-user/}"
 
 set_target_list() {
-	TARGET_LIST="arm-user armeb-user i386-user ppc-user sparc-user"
+	TARGET_LIST="arm-user armeb-user i386-user ppc-user sparc-user mips-user"
 	export TARGET_LIST
 }
 
