@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 98efb382def699acda4384fcc3655eaf ChangeLog 19351
-RMD160 18e1cad040e750ef865fcb5dd98760688303a307 ChangeLog 19351
-SHA256 15824e08fbf2d756b3ea4a923a915c7ae4f49fa30be25b5daddf6d9f6b61a931 ChangeLog 19351
+MD5 6a00a9b3b7d4621e394d0e7defd2d435 ChangeLog 19480
+RMD160 6ccbe6ea16869dabba29c5787247dbc9992ded83 ChangeLog 19480
+SHA256 e7b1f3e470fb302189870b58a312c1fc217cf729039c38337f4c2593f470195b ChangeLog 19480
 MD5 24669453e8f69faf4212dfa43e90e3dd files/1.4.10/01_all_r990_mod_cgi_dont_reset_physical_path.diff 517
 RMD160 b0e9a693102fb2ea4e6cf750cd4559f9c25a7834 files/1.4.10/01_all_r990_mod_cgi_dont_reset_physical_path.diff 517
 SHA256 9f3d49f04b3b8423b06f0ddf35cce855c2187d3f0a84f22479aa5df871901144 files/1.4.10/01_all_r990_mod_cgi_dont_reset_physical_path.diff 517
@@ -58,21 +55,21 @@ SHA256 322656b4cfd22ca9f1f8ab160e0b932f1646622422fd49c6fc82ab416223eecf files/co
 MD5 b4c80dba9c626d5f89d3c3797ac6670c files/conf/mod_fastcgi.conf 661
 RMD160 83b4126a4b0537fcd04db607a53e4742ceae039b files/conf/mod_fastcgi.conf 661
 SHA256 61daa2ffac9e948d9d5130cc43f560a18c8dfb052cb7e3d4c6bd1decb6c9fd06 files/conf/mod_fastcgi.conf 661
-MD5 77ba3937d1e8762f8d8b6b2ea9ee1aaa files/digest-lighttpd-1.3.13-r3 67
-RMD160 326221d3cb81ea0d7214db0ce968142abea2f78f files/digest-lighttpd-1.3.13-r3 67
-SHA256 455ca66be0f20c44a6966f6724ca82a7198e791c4e5631f333d397ded79a0dce files/digest-lighttpd-1.3.13-r3 67
-MD5 c54a6d92e91493bbb27e8f346f6ac342 files/digest-lighttpd-1.3.16 67
-RMD160 225bb2c6bbc9f6064dc695384d3d964b7bc73d8c files/digest-lighttpd-1.3.16 67
-SHA256 0ea2d4682dbdb6965b5b66b1ef395eb36569ef1260f5077af08ae07096d8cb04 files/digest-lighttpd-1.3.16 67
-MD5 cd139d14d98253eb909f04df5c9a0ab6 files/digest-lighttpd-1.4.10-r1 247
-RMD160 f5f7956f14ff203a55fefe3c46b96902f35e1e0d files/digest-lighttpd-1.4.10-r1 247
-SHA256 9018fab4a8bdf87db18949575c021b3501247a550b84c93095d6e9d5ecbf2f8d files/digest-lighttpd-1.4.10-r1 247
-MD5 422bbab47d465847a64bdb2c2ebcc02d files/digest-lighttpd-1.4.7 66
-RMD160 b8174cc2d8579513075a36fa4124a55e66e186bc files/digest-lighttpd-1.4.7 66
-SHA256 e8cb8cfff25a4c72a24a0077958a2e96da192f0f1f359a09009c9c3b436860b1 files/digest-lighttpd-1.4.7 66
-MD5 b56de1ec97859b70fc860de8468e3984 files/digest-lighttpd-1.4.8 66
-RMD160 9287301206003247c2925e8b52fe576592a1bb0a files/digest-lighttpd-1.4.8 66
-SHA256 6b700175f7ca1b1bea1c1af312b2a7c1ddb8d7731ba3df54ee3118b86aa970f4 files/digest-lighttpd-1.4.8 66
+MD5 16c832beb1879cbc2cc6814d1a2786a1 files/digest-lighttpd-1.3.13-r3 247
+RMD160 265939f5e40f16a2e7d54416ea77b423dce564e7 files/digest-lighttpd-1.3.13-r3 247
+SHA256 c4600f6bfc225279523380ee1ee240161a51f8e7ea2d00f2f9df3f06918f902b files/digest-lighttpd-1.3.13-r3 247
+MD5 669eed61cca360d002ddb0c7efe0afe5 files/digest-lighttpd-1.3.16 247
+RMD160 0dc0c93bf17aeb37c6bf4b65a89bbd7ebca92779 files/digest-lighttpd-1.3.16 247
+SHA256 05b2e71115907704f12a708d993134f4bd9dff1da997f25bf66fdf92a651a793 files/digest-lighttpd-1.3.16 247
+MD5 03f615e79bba7ff75a6ba9a3e486fec4 files/digest-lighttpd-1.4.10-r1 247
+RMD160 29eb75dc48a62eaaebe7eaa6552e779f19386b1f files/digest-lighttpd-1.4.10-r1 247
+SHA256 0363ec995df0e4b7ffbfa4c4625cb9753311c6f9f7f831925600b0b33dd6df18 files/digest-lighttpd-1.4.10-r1 247
+MD5 485267c1ac751168ebdd83d45237cfa7 files/digest-lighttpd-1.4.7 244
+RMD160 d4724987691a1932e72fcde598bc07572f2d3062 files/digest-lighttpd-1.4.7 244
+SHA256 3be8309f81c257309efc4e6b2fce741cad8b6e4a4871b8a314d5d9bdbe661c57 files/digest-lighttpd-1.4.7 244
+MD5 07e5b40d581e4881f7e8fbb6277b4ad3 files/digest-lighttpd-1.4.8 244
+RMD160 a3bb226209fad4615bd999bcc4b443b36c3a6bf7 files/digest-lighttpd-1.4.8 244
+SHA256 c47016ee385d1a94c3bcad00b949430691d4506bd013361f39c686774580b536 files/digest-lighttpd-1.4.8 244
 MD5 7fdb430fc7240e6e6a9078e4e57f6322 files/lighttpd-1.3.10.initd 666
 RMD160 b665f80ae5b58bd0c8d42793d28bc40443923605 files/lighttpd-1.3.10.initd 666
 SHA256 f4a3170795681ec8101d8048df1e5d23b690b6ca1a1e702722fa1f6c58c59731 files/lighttpd-1.3.10.initd 666
@@ -109,9 +106,9 @@ SHA256 bfa452a849165f921a2febf0b06879db18c4c921f156b1452d06bb821063f768 files/sp
 MD5 e605a4ead0ce7b1e0788c0b0b1161871 files/spawn-fcgi.initd 1383
 RMD160 4f604c9c54aca1bc58b171121e8ce823561e6694 files/spawn-fcgi.initd 1383
 SHA256 ad2582f8b05523a13c147d57b948e58ba31758cd8af0a45cbf39964ac094a2f6 files/spawn-fcgi.initd 1383
-MD5 49ded22216ffc6092d1a1e04a6e420c1 lighttpd-1.3.13-r3.ebuild 2607
-RMD160 a6e0d913e94cf2ee41c22826a92d0b38c87c319e lighttpd-1.3.13-r3.ebuild 2607
-SHA256 d2d37a8b2a2f7441fdb4975154cd4d0c37e561db26811709160ea155e564cbe7 lighttpd-1.3.13-r3.ebuild 2607
+MD5 f18029dea31126d04d7287f80610b2ca lighttpd-1.3.13-r3.ebuild 2649
+RMD160 e730704a620f2aedfb9ad9afedfed2584553a11e lighttpd-1.3.13-r3.ebuild 2649
+SHA256 2e06d17378daad7baac91efd04e8fa2f2b581fb39a532c92eeb75d2b11ea5c26 lighttpd-1.3.13-r3.ebuild 2649
 MD5 0df89754aec138ad20821ef93c45833b lighttpd-1.3.16.ebuild 2589
 RMD160 3ff48e9342813af77cc82ff0c6b4dad51dc6ab2e lighttpd-1.3.16.ebuild 2589
 SHA256 1e35432b058eb98b7344d34bcef5272a85ba761afb7d9d10fdf57ec56a03a9b4 lighttpd-1.3.16.ebuild 2589
@@ -127,10 +124,3 @@ SHA256 959cce5be5a7c371e76b7193d63f9431f384336fa381a7021b90d40c56dfac41 lighttpd
 MD5 6a9d4814404d8d51327e5b8306ee3d7e metadata.xml 726
 RMD160 a4e58899dbe2a328fe699a564a67666809b385fc metadata.xml 726
 SHA256 c99edd41b36c5354a29c2fa2e37fccd83568d306d1531f0ce7bbaebf703f2a56 metadata.xml 726
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEQEGQAiZjviIA2XgRAp+6AJ9UUCr+bi3klwaP3uWxrHJQy52TCwCeMATw
-2y2gcYJ7MZkVaKMsSXUrC6w=
-=4uO2
------END PGP SIGNATURE-----
