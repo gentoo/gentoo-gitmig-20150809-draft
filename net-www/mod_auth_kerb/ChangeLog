@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_auth_kerb
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/ChangeLog,v 1.10 2006/04/18 16:31:11 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/ChangeLog,v 1.11 2006/04/27 22:21:05 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-mod_auth_kerb-4.11, files/digest-mod_auth_kerb-4.11-r1,
+  files/digest-mod_auth_kerb-5.0_rc6, Manifest:
+  Fixing SHA256 digest, pass four
 
 *mod_auth_kerb-5.0_rc7 (18 Apr 2006)
 

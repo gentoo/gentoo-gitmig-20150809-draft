@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozplugger
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozplugger/ChangeLog,v 1.16 2006/03/03 18:57:44 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozplugger/ChangeLog,v 1.17 2006/04/27 22:22:10 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-mozplugger-1.5.2, files/digest-mozplugger-1.6.2,
+  files/digest-mozplugger-1.7.1, Manifest:
+  Fixing SHA256 digest, pass four
 
 *mozplugger-1.7.3 (03 Mar 2006)
 

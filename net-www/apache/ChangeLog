@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.473 2006/04/22 21:36:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.474 2006/04/27 22:20:37 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   22 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   apache-2.0.55-r2.ebuild:
