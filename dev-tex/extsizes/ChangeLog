@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/extsizes
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/extsizes/ChangeLog,v 1.7 2006/03/16 14:04:01 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/extsizes/ChangeLog,v 1.8 2006/04/27 19:28:54 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-extsizes-1.0,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   16 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org> extsizes-1.0.ebuild:
   Fixed explicit depend on tetex-1.
