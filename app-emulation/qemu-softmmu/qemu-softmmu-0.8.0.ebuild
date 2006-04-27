@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.0.ebuild,v 1.5 2006/04/16 22:58:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.0.ebuild,v 1.6 2006/04/27 22:21:46 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -25,7 +25,7 @@ RDEPEND="sdl? ( media-libs/libsdl )"
 S="${WORKDIR}/${P/-softmmu/}"
 
 set_target_list() {
-	TARGET_LIST="i386-softmmu ppc-softmmu sparc-softmmu x86_64-softmmu"
+	TARGET_LIST="i386-softmmu ppc-softmmu sparc-softmmu x86_64-softmmu arm-softmmu mips-softmmu"
 	export TARGET_LIST
 }
 
@@ -38,7 +38,6 @@ pkg_setup() {
 #RUNTIME_PATH="/emul/gnemul/"
 src_unpack() {
 	unpack ${A}
-
 	if use kqemu; then
 		mv ${WORKDIR}/kqemu ${S}
 		cd ${S}/kqemu
