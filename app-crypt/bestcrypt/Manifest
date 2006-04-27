@@ -64,38 +64,33 @@ EBUILD bestcrypt-1.6_p5.ebuild 3220 RMD160 eb602fc3fb76d9c686458a5768f7a6ac615a9
 MD5 5e50d361cedadffd37d4e28e9f05e41d bestcrypt-1.6_p5.ebuild 3220
 RMD160 eb602fc3fb76d9c686458a5768f7a6ac615a949e bestcrypt-1.6_p5.ebuild 3220
 SHA256 731891c4180ab699f0a26048f99e72a0d103b93bfe14ac37f2ccf09a3bdfcd10 bestcrypt-1.6_p5.ebuild 3220
-MISC ChangeLog 8266 RMD160 25455680b6bc2afe8fb1654f186036314e4d3c7c SHA1 e572c4a3f93f2404a0ba941c7faa3847ec8430ec SHA256 533a99ac2ebd7f2b5ff8b4bb519f7ca30641c030587bbd6bd8ba22174a0c9c43 size 8266
-MD5 fa74b0bbcacd854b18c51c724075645c ChangeLog 8266
-RMD160 25455680b6bc2afe8fb1654f186036314e4d3c7c ChangeLog 8266
-SHA256 533a99ac2ebd7f2b5ff8b4bb519f7ca30641c030587bbd6bd8ba22174a0c9c43 ChangeLog 8266
+MISC ChangeLog 8356 RMD160 832bbfc23e63ad6d677d2ed87eeb69b1971825c4 SHA1 250e68e28508a36383ce32c58f306b1a8f874413 SHA256 672e92bdefc9987ca9418ca354bc2c357109714cfddaa957d8fd854de2615fda size 8356
+MD5 0f15feaedb3b9a503faefc8d9d2321de ChangeLog 8356
+RMD160 832bbfc23e63ad6d677d2ed87eeb69b1971825c4 ChangeLog 8356
+SHA256 672e92bdefc9987ca9418ca354bc2c357109714cfddaa957d8fd854de2615fda ChangeLog 8356
 MISC metadata.xml 224 RMD160 74db96ad8aa1d285d83ae93a9f4a767335f55c15 SHA1 d86a171d981b45e7ed0c0b3b5059d2a63c811001 SHA256 9e9ce661a9fdb45a535ad875a247b700a70745359b27533ec29a6a46fa708e86 size 224
 MD5 566cf4f89e44670d0aba4a745913d748 metadata.xml 224
 RMD160 74db96ad8aa1d285d83ae93a9f4a767335f55c15 metadata.xml 224
 SHA256 9e9ce661a9fdb45a535ad875a247b700a70745359b27533ec29a6a46fa708e86 metadata.xml 224
 MD5 af5d0ce0f3b4d98761d7474e3d046a24 files/digest-bestcrypt-1.5_p10 503
 RMD160 b47d065814af879a94fb75705e84290a2fccab1a files/digest-bestcrypt-1.5_p10 503
-SHA256 18143bad8890e91b4790f1a301360107d9e63aba09fd65e008f1fb807d0ec2f8 files/digest-bestcrypt-1.5_p10 503
-size 503 files/digest-bestcrypt-1.5_p10 503
+SHA256 aeb9aa9d4df266872805bbeab16be750b799989c70e95c4df4ab502ab826e8da files/digest-bestcrypt-1.5_p10 503
 MD5 9377aa99135743be9a5a769ade11cb7d files/digest-bestcrypt-1.5_p11 762
 RMD160 e6579c06f97d3dd4b8ad6708383504f1b003e29e files/digest-bestcrypt-1.5_p11 762
 SHA256 662db30fa6c6d008dfdbc4f96b64b70cba6f20b39e79750923e6b70f3aed983e files/digest-bestcrypt-1.5_p11 762
-size 762 files/digest-bestcrypt-1.5_p11 762
 MD5 6eed659e694f1417bbe2070cd2c85bfa files/digest-bestcrypt-1.6_p1-r2 759
 RMD160 a3793a9fa187585be935b2496355222c70bfd92d files/digest-bestcrypt-1.6_p1-r2 759
-SHA256 56f5206876196fcbbc355cda44b396d401c9677012c94cc0abf06f7f97b946e9 files/digest-bestcrypt-1.6_p1-r2 759
-size 759 files/digest-bestcrypt-1.6_p1-r2 759
+SHA256 f7b52d9f1d4ef11fedc4b5f0f3c97e8489cd67fd6362a9454efa4c3bc6411900 files/digest-bestcrypt-1.6_p1-r2 759
 MD5 b83893c233733f48700570a61640fb54 files/digest-bestcrypt-1.6_p2-r1 759
 RMD160 635216dfbdeae346ce0a3b977ba84b47c8063a3f files/digest-bestcrypt-1.6_p2-r1 759
-SHA256 b2d73855d0c6bdf0ee6987336cca9ea54a9939b2a4f6557077de11e00789b65e files/digest-bestcrypt-1.6_p2-r1 759
-size 759 files/digest-bestcrypt-1.6_p2-r1 759
+SHA256 7d37ebe32ecb09137c4cf03ff1873bbeb7388bf89570057ed539c8e7d5ed153c files/digest-bestcrypt-1.6_p2-r1 759
 MD5 dd170d28f62e65e70cd3cf160e0d9861 files/digest-bestcrypt-1.6_p5 759
 RMD160 acebddcb31cb47ea345067db1e487d10f5068496 files/digest-bestcrypt-1.6_p5 759
-SHA256 796a645cc84b4328b6e356443cd295d09ef57f91e75b9d16bbbb81049a5da3db files/digest-bestcrypt-1.6_p5 759
-size 759 files/digest-bestcrypt-1.6_p5 759
+SHA256 a3d6af6139630204aa7a115bdb7e889a0d75751948b27461b66f610b6db7d60d files/digest-bestcrypt-1.6_p5 759
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFESy0wmdTrptrqvGERAg+fAJ0X96ux5SNfGcd2NL5YOKDMeSlztwCfQw/P
-6OJ6iEAXoLiVPmssEJddCFA=
-=LlXd
+iD8DBQFEUMIPW78445TWHXcRAqUwAJ4nMw17MmaiW/YpmKeZv4v9SMraSQCeP8b3
+SJ3IBkZVI8y4U1jtvW/PiWU=
+=g5MR
 -----END PGP SIGNATURE-----

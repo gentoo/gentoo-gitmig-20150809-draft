@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.40 2006/04/23 07:24:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.41 2006/04/27 13:07:21 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
 *bestcrypt-1.6_p5 (23 Apr 2006)
 
