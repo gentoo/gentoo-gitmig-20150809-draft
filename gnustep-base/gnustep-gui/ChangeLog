@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.38 2006/03/25 08:57:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.39 2006/04/27 20:25:26 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-gnustep-gui-0.9.5, files/digest-gnustep-gui-0.10.3, Manifest:
+  Fixing SHA256 digest, pass four
 
 *gnustep-gui-0.10.3 (25 Mar 2006)
 
