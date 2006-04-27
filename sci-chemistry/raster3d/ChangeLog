@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/raster3d
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.6 2006/04/12 14:02:22 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.7 2006/04/27 22:27:14 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-raster3d-2.6e,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   12 Apr 2006; Markus Dittrich <markusle@gentoo.org>
   +files/raster3d-gcc-4.1-gentoo.patch, raster3d-2.7c.ebuild:
