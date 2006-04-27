@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.11 2006/03/27 06:39:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.12 2006/04/27 23:08:57 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-libmpd-0.01,
+  files/digest-libmpd-0.12.0, Manifest:
+  Fixing SHA256 digest, pass four
 
   27 Mar 2006; <ticho@gentoo.org> libmpd-0.01.ebuild, libmpd-0.12.0.ebuild:
   HOMEPAGE update.

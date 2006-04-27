@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/qhull
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.17 2006/03/07 12:49:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.18 2006/04/27 23:13:41 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-qhull-3.1-r1,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
   qhull-3.1-r1.ebuild:

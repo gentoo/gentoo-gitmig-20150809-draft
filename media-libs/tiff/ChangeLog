@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.68 2006/04/01 00:25:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.69 2006/04/27 23:14:27 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-tiff-3.7.1-r1,
+  files/digest-tiff-3.7.2, files/digest-tiff-3.7.3, files/digest-tiff-3.7.4,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> tiff-3.7.4.ebuild:
   Run elibtoolize and add ~x86-fbsd keyword.

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.53 2006/04/02 02:54:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.54 2006/04/27 23:07:51 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-libexif-0.5.12-r3, Manifest:
+  Fixing SHA256 digest, pass four
 
 *libexif-0.6.13-r1 (02 Apr 2006)
 

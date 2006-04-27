@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.18 2006/04/10 21:08:01 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.19 2006/04/27 23:06:37 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-libdc1394-2.0.0_pre4, Manifest:
+  Fixing SHA256 digest, pass four
 
   10 Apr 2006; Stefaan De Roeck <stefaan@gentoo.org>
   libdc1394-2.0.0_pre6-r1.ebuild:
