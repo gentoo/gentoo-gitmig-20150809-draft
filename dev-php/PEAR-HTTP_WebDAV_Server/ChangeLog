@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-HTTP_WebDAV_Server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_WebDAV_Server/ChangeLog,v 1.22 2006/03/30 19:17:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_WebDAV_Server/ChangeLog,v 1.23 2006/04/27 19:02:30 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-PEAR-HTTP_WebDAV_Server-0.99.1,
+  files/digest-PEAR-HTTP_WebDAV_Server-0.99.1-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
   30 Mar 2006; Joseph Jezak <josejx@gentoo.org>
   PEAR-HTTP_WebDAV_Server-0.99.1-r1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Pager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.17 2006/03/30 19:37:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.18 2006/04/27 19:04:16 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-PEAR-Pager-2.3.3, files/digest-PEAR-Pager-2.3.4, Manifest:
+  Fixing SHA256 digest, pass four
 
   30 Mar 2006; Joseph Jezak <josejx@gentoo.org> PEAR-Pager-2.3.4.ebuild:
   Marked ppc stable for bug #119722.

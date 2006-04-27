@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Text_Wiki
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.35 2006/03/18 14:25:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.36 2006/04/27 19:05:33 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-PEAR-Text_Wiki-0.20.1, files/digest-PEAR-Text_Wiki-1.0.0,
+  files/digest-PEAR-Text_Wiki-1.0.3, Manifest:
+  Fixing SHA256 digest, pass four
 
   18 Mar 2006; Jeroen Roovers <jer@gentoo.org> PEAR-Text_Wiki-1.0.3.ebuild:
   Stable on hppa (bug #119722).

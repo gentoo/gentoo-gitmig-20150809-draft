@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-DB_DataObject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/ChangeLog,v 1.19 2006/03/30 18:56:33 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/ChangeLog,v 1.20 2006/04/27 19:01:27 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-PEAR-DB_DataObject-1.7.15,
+  files/digest-PEAR-DB_DataObject-1.8.0, Manifest:
+  Fixing SHA256 digest, pass four
 
   30 Mar 2006; Joseph Jezak <josejx@gentoo.org>
   PEAR-DB_DataObject-1.8.0.ebuild:

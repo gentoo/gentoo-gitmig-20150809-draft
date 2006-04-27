@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-File_SMBPasswd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_SMBPasswd/ChangeLog,v 1.1 2006/02/25 07:30:14 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_SMBPasswd/ChangeLog,v 1.2 2006/04/27 19:01:57 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
 *PEAR-File_SMBPasswd-1.0.2 (25 Feb 2006)
 
