@@ -1,51 +1,76 @@
-MD5 bc42248eeedf44154c04782c398ef274 ChangeLog 1681
-RMD160 2b2dd614ba06439b78d167ac0da15580b28f0935 ChangeLog 1681
-SHA256 2830e40630c1c9b3dc26d12c83df93b78cc57a456a8ac526083752c6b87d73da ChangeLog 1681
-MD5 fd8b335569ccb39bfd29eddcb1d7c9e1 ddccontrol-0.1.3.ebuild 1025
-RMD160 57ceee480c2eac72b0553c278f201e5064292940 ddccontrol-0.1.3.ebuild 1025
-SHA256 7643181ddbc9611ceee1a1fe80f0e9d3012c168b480a6a0e6f678357a065aa39 ddccontrol-0.1.3.ebuild 1025
-MD5 a13ed8f1cd3da2cf2f4824f23c271a76 ddccontrol-0.2.ebuild 1030
-RMD160 cf24864a933787378518cf6eb5e26973845976dc ddccontrol-0.2.ebuild 1030
-SHA256 319e750d754940e47f48d9955cd9d7a4fb1ef3ed522c81c6810bfe3c690c2e2c ddccontrol-0.2.ebuild 1030
-MD5 9de31d28c5459b4bc213bf8cdde74704 ddccontrol-0.3-r1.ebuild 1509
-RMD160 4caf91b54247ed3b3a368d90813c5ef0420a8ffa ddccontrol-0.3-r1.ebuild 1509
-SHA256 d8208d6bcb1d537723c35362b247427980d8f0f5d996638a006171a26cc80148 ddccontrol-0.3-r1.ebuild 1509
-MD5 afc5e1b9021525554f95b6e5450437eb ddccontrol-0.3-r2.ebuild 1611
-RMD160 a3bf2bd0844fa7f8e80114eb155839491be338cf ddccontrol-0.3-r2.ebuild 1611
-SHA256 cfe1cd7290f115d4ad7dd26fbdbb12cf643618d7392e5d436d74480a6a397f74 ddccontrol-0.3-r2.ebuild 1611
-MD5 97b37ce99868213a4026212249562d54 ddccontrol-0.3.ebuild 1355
-RMD160 980b950098910f7f07ab489630f03781e1c9c7ee ddccontrol-0.3.ebuild 1355
-SHA256 5af1bbe5be7b18df22ab31573cdbfc96668a8d7ffe954c81f2590ab1f92b6177 ddccontrol-0.3.ebuild 1355
-MD5 6aabfcf733aa4b2194db6a2f21aa52c0 ddccontrol-0.4.1.ebuild 1481
-RMD160 0164786657a0ddc777f29874b664f84c774f471e ddccontrol-0.4.1.ebuild 1481
-SHA256 e88e22bb15113d5cc019244745c397f46595dbd73e2b1538f94883b78c522239 ddccontrol-0.4.1.ebuild 1481
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX ddccontrol-0.3-fix-libpanelapplet-dep.patch 690 RMD160 8496f2b7732c6b2db57e1f5965ee582b38836140 SHA1 c11fcc977df450b10e63170b7d1b91835d5133ec SHA256 474770c3fb33a4ba29df7789de76fc1d8db0233abc098d50ca8373a9a7faf9cf size 690
 MD5 7fc76f4f063f312ec4773e12826b16c6 files/ddccontrol-0.3-fix-libpanelapplet-dep.patch 690
 RMD160 8496f2b7732c6b2db57e1f5965ee582b38836140 files/ddccontrol-0.3-fix-libpanelapplet-dep.patch 690
 SHA256 474770c3fb33a4ba29df7789de76fc1d8db0233abc098d50ca8373a9a7faf9cf files/ddccontrol-0.3-fix-libpanelapplet-dep.patch 690
+AUX ddccontrol-0.3-u64-conflicting-types.patch 488 RMD160 dc582418e51b53692c408958c713a1b5ea7b2cd8 SHA1 23af3340a66515c64849ba60c061611c7f70ee94 SHA256 f460d99e18ebdaa053a7e962fe4bd121450649c10bba550653228bfad60eb3e4 size 488
 MD5 1ab2b7f6bb857f6a612b7186b741b5cc files/ddccontrol-0.3-u64-conflicting-types.patch 488
 RMD160 dc582418e51b53692c408958c713a1b5ea7b2cd8 files/ddccontrol-0.3-u64-conflicting-types.patch 488
 SHA256 f460d99e18ebdaa053a7e962fe4bd121450649c10bba550653228bfad60eb3e4 files/ddccontrol-0.3-u64-conflicting-types.patch 488
+AUX ddccontrol-asneeded.patch 582 RMD160 ef37e0676935d4342057eb1e1baf9eb5072a1d8e SHA1 3b476bd315985d82d7c1bc413cbe44a045a09ae8 SHA256 35e3abd8e73f9febb480ccb42a0c0fd1c404ee91a6d04713da3541901cc360bd size 582
 MD5 ee5da560c7038f4bbad7b50af3e4b831 files/ddccontrol-asneeded.patch 582
 RMD160 ef37e0676935d4342057eb1e1baf9eb5072a1d8e files/ddccontrol-asneeded.patch 582
 SHA256 35e3abd8e73f9febb480ccb42a0c0fd1c404ee91a6d04713da3541901cc360bd files/ddccontrol-asneeded.patch 582
-MD5 f4d016d213e8b89a8d3ca2ea85293894 files/digest-ddccontrol-0.1.3 68
-RMD160 5cb341b70174a3e2ee0fc7afa76c4a6b5be70120 files/digest-ddccontrol-0.1.3 68
-SHA256 1a9e72d76e4157091354467c956abc49ab42dd6956ebad48d0d7d1ca930c53fa files/digest-ddccontrol-0.1.3 68
-MD5 3954568974839fa232a4aeff45027648 files/digest-ddccontrol-0.2 66
-RMD160 4f8b3f015fe3a6a97b0528cf661a07eab7f218bc files/digest-ddccontrol-0.2 66
-SHA256 1a659d3d4aa633b2ba00d8664ef5909e36e9a410bbfd09b05d5d3953fcb27bda files/digest-ddccontrol-0.2 66
-MD5 1164c9ba35800faca33029e70dbf1b43 files/digest-ddccontrol-0.3 67
-RMD160 b9d70c7592cf5c10b98cb1276e2887dd6bb4c0f4 files/digest-ddccontrol-0.3 67
-SHA256 f4d814a20cc9f7da43ae8c6bbf65a7a66e12a95be1fbca0d597eb4943c7f5d4e files/digest-ddccontrol-0.3 67
-MD5 9243570f0420bc2e1d8763ddb77eb991 files/digest-ddccontrol-0.3-r1 247
-RMD160 59f09bf2288c145c72279dee81510ad63d790ebe files/digest-ddccontrol-0.3-r1 247
-SHA256 edef947ecc00c12e028225419fc00715b4f3072957292d24fc1210bd751c10d3 files/digest-ddccontrol-0.3-r1 247
-MD5 9243570f0420bc2e1d8763ddb77eb991 files/digest-ddccontrol-0.3-r2 247
-RMD160 59f09bf2288c145c72279dee81510ad63d790ebe files/digest-ddccontrol-0.3-r2 247
-SHA256 edef947ecc00c12e028225419fc00715b4f3072957292d24fc1210bd751c10d3 files/digest-ddccontrol-0.3-r2 247
-MD5 0c94ff2ad89f0a5c283e1fadc916f66b files/digest-ddccontrol-0.4.1 253
-RMD160 16caf124fd1c6ee8f13665da949eb75be3fd4188 files/digest-ddccontrol-0.4.1 253
-SHA256 52ea0fac20b1f0751523ee2df4742d8a1cfb443e3baf9c69e78993963740d90a files/digest-ddccontrol-0.4.1 253
+DIST ddccontrol-0.1.3.tar.gz 251097 RMD160 6426553fba5681d31efcad9bc68c2e92c621c341 SHA256 fb0a77be11c34dc44554315d90e56372e7c87f1fb78feb05f9228d205c4cfe9b size 251097
+DIST ddccontrol-0.2.tar.gz 275071 RMD160 22f17d24beeb920787598df6a3f7e249a693c10a SHA256 affdbde179aa762c02eae66da14dac44e2ee93420ba9aa85cef1ba3c859cee5e size 275071
+DIST ddccontrol-0.3.tar.bz2 409079 RMD160 5eccb60c3f82bc5c84b3f75e2886138f12fbf46d SHA256 5d1149394a115160dbcf2bb51805e304fa9b0dda8874186149f029824300f1cf size 409079
+DIST ddccontrol-0.4.1.tar.bz2 414075 RMD160 87c98d9fd1b1b307011579b9db45be9ced017947 SHA256 682b9e24f475d4731dd833632930f5fdad68a9170d163cd2f71d4ca27d643d94 size 414075
+EBUILD ddccontrol-0.1.3.ebuild 1025 RMD160 57ceee480c2eac72b0553c278f201e5064292940 SHA1 20855cddc4ac33c42022fa18a19383c79abbe542 SHA256 7643181ddbc9611ceee1a1fe80f0e9d3012c168b480a6a0e6f678357a065aa39 size 1025
+MD5 fd8b335569ccb39bfd29eddcb1d7c9e1 ddccontrol-0.1.3.ebuild 1025
+RMD160 57ceee480c2eac72b0553c278f201e5064292940 ddccontrol-0.1.3.ebuild 1025
+SHA256 7643181ddbc9611ceee1a1fe80f0e9d3012c168b480a6a0e6f678357a065aa39 ddccontrol-0.1.3.ebuild 1025
+EBUILD ddccontrol-0.2.ebuild 1030 RMD160 cf24864a933787378518cf6eb5e26973845976dc SHA1 dca4fd765d614e4ebe8c9d8aa46c4cada81cb2c3 SHA256 319e750d754940e47f48d9955cd9d7a4fb1ef3ed522c81c6810bfe3c690c2e2c size 1030
+MD5 a13ed8f1cd3da2cf2f4824f23c271a76 ddccontrol-0.2.ebuild 1030
+RMD160 cf24864a933787378518cf6eb5e26973845976dc ddccontrol-0.2.ebuild 1030
+SHA256 319e750d754940e47f48d9955cd9d7a4fb1ef3ed522c81c6810bfe3c690c2e2c ddccontrol-0.2.ebuild 1030
+EBUILD ddccontrol-0.3-r1.ebuild 1509 RMD160 4caf91b54247ed3b3a368d90813c5ef0420a8ffa SHA1 973123b8a4a8fcb6bc7b08fe4268fd9e532ada83 SHA256 d8208d6bcb1d537723c35362b247427980d8f0f5d996638a006171a26cc80148 size 1509
+MD5 9de31d28c5459b4bc213bf8cdde74704 ddccontrol-0.3-r1.ebuild 1509
+RMD160 4caf91b54247ed3b3a368d90813c5ef0420a8ffa ddccontrol-0.3-r1.ebuild 1509
+SHA256 d8208d6bcb1d537723c35362b247427980d8f0f5d996638a006171a26cc80148 ddccontrol-0.3-r1.ebuild 1509
+EBUILD ddccontrol-0.3-r2.ebuild 1611 RMD160 a3bf2bd0844fa7f8e80114eb155839491be338cf SHA1 d1a42f75626a927e19b0f5dd86cace8130c4b3c7 SHA256 cfe1cd7290f115d4ad7dd26fbdbb12cf643618d7392e5d436d74480a6a397f74 size 1611
+MD5 afc5e1b9021525554f95b6e5450437eb ddccontrol-0.3-r2.ebuild 1611
+RMD160 a3bf2bd0844fa7f8e80114eb155839491be338cf ddccontrol-0.3-r2.ebuild 1611
+SHA256 cfe1cd7290f115d4ad7dd26fbdbb12cf643618d7392e5d436d74480a6a397f74 ddccontrol-0.3-r2.ebuild 1611
+EBUILD ddccontrol-0.3.ebuild 1355 RMD160 980b950098910f7f07ab489630f03781e1c9c7ee SHA1 967fe3de0388a92ba2537bb8565f0650de63e406 SHA256 5af1bbe5be7b18df22ab31573cdbfc96668a8d7ffe954c81f2590ab1f92b6177 size 1355
+MD5 97b37ce99868213a4026212249562d54 ddccontrol-0.3.ebuild 1355
+RMD160 980b950098910f7f07ab489630f03781e1c9c7ee ddccontrol-0.3.ebuild 1355
+SHA256 5af1bbe5be7b18df22ab31573cdbfc96668a8d7ffe954c81f2590ab1f92b6177 ddccontrol-0.3.ebuild 1355
+EBUILD ddccontrol-0.4.1.ebuild 1481 RMD160 0164786657a0ddc777f29874b664f84c774f471e SHA1 c4be501fbed25abebce815396b3672559c4d1003 SHA256 e88e22bb15113d5cc019244745c397f46595dbd73e2b1538f94883b78c522239 size 1481
+MD5 6aabfcf733aa4b2194db6a2f21aa52c0 ddccontrol-0.4.1.ebuild 1481
+RMD160 0164786657a0ddc777f29874b664f84c774f471e ddccontrol-0.4.1.ebuild 1481
+SHA256 e88e22bb15113d5cc019244745c397f46595dbd73e2b1538f94883b78c522239 ddccontrol-0.4.1.ebuild 1481
+MISC ChangeLog 1935 RMD160 32f52b48122c7b2870c7ed6da4cc02d5806c6dd5 SHA1 99b4e58e9fb45a0151f4636d24db9a9d22cb60f4 SHA256 aaa5295954ee0a75636b9db16c064b356461bdae19c925aa1ca5b17c302f329a size 1935
+MD5 2f4b19f6ef8638c9cec63e2f62572531 ChangeLog 1935
+RMD160 32f52b48122c7b2870c7ed6da4cc02d5806c6dd5 ChangeLog 1935
+SHA256 aaa5295954ee0a75636b9db16c064b356461bdae19c925aa1ca5b17c302f329a ChangeLog 1935
+MISC metadata.xml 223 RMD160 ffa99612cf27469c417944deed0e0c9155e64331 SHA1 607c637402dd253406aa6ee684471a702c5d1a99 SHA256 d6bb9ba68629616062b4433ab3b8fb01dfcafae5bb47804d9e06cdd6c66daa44 size 223
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 RMD160 ffa99612cf27469c417944deed0e0c9155e64331 metadata.xml 223
 SHA256 d6bb9ba68629616062b4433ab3b8fb01dfcafae5bb47804d9e06cdd6c66daa44 metadata.xml 223
+MD5 556b455dee0f79a05274741cb924241f files/digest-ddccontrol-0.1.3 250
+RMD160 9839f861cd099f21c9bb7a3ddec140cfce612f77 files/digest-ddccontrol-0.1.3 250
+SHA256 5a80eb57ed7db9782fe78ed4408b811a004c1d03affc317eb363db539b4fdd77 files/digest-ddccontrol-0.1.3 250
+MD5 ecc3f65b735b9aa87f2a015d597bdd1b files/digest-ddccontrol-0.2 244
+RMD160 2b3429899f8f913a6eb8198975330a9bed854740 files/digest-ddccontrol-0.2 244
+SHA256 1d14a27bdf6b40a01a2267a043089988ee77931556ee8467d662f77008dd4cdd files/digest-ddccontrol-0.2 244
+MD5 6a8600030d15f1412a9e73cddbd519e2 files/digest-ddccontrol-0.3 247
+RMD160 ce867ef230723b529bf29ee390e824b0fd3c3d79 files/digest-ddccontrol-0.3 247
+SHA256 c7c396a25d1eddb6671a35fe1c6ecd90a7129b0a0cfa7cd9b0bb03153c3f81b8 files/digest-ddccontrol-0.3 247
+MD5 6a8600030d15f1412a9e73cddbd519e2 files/digest-ddccontrol-0.3-r1 247
+RMD160 ce867ef230723b529bf29ee390e824b0fd3c3d79 files/digest-ddccontrol-0.3-r1 247
+SHA256 c7c396a25d1eddb6671a35fe1c6ecd90a7129b0a0cfa7cd9b0bb03153c3f81b8 files/digest-ddccontrol-0.3-r1 247
+MD5 6a8600030d15f1412a9e73cddbd519e2 files/digest-ddccontrol-0.3-r2 247
+RMD160 ce867ef230723b529bf29ee390e824b0fd3c3d79 files/digest-ddccontrol-0.3-r2 247
+SHA256 c7c396a25d1eddb6671a35fe1c6ecd90a7129b0a0cfa7cd9b0bb03153c3f81b8 files/digest-ddccontrol-0.3-r2 247
+MD5 0c94ff2ad89f0a5c283e1fadc916f66b files/digest-ddccontrol-0.4.1 253
+RMD160 16caf124fd1c6ee8f13665da949eb75be3fd4188 files/digest-ddccontrol-0.4.1 253
+SHA256 52ea0fac20b1f0751523ee2df4742d8a1cfb443e3baf9c69e78993963740d90a files/digest-ddccontrol-0.4.1 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUMOgW78445TWHXcRAvIMAKCEKHiXTpEI085yjAdz2+u609ZEuQCfWzJp
+X+eO0nCvEg3bQyh8g58Sg0k=
+=1KPK
+-----END PGP SIGNATURE-----
