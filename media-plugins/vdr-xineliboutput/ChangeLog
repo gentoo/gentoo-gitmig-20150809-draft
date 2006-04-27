@@ -1,0 +1,13 @@
+# ChangeLog for media-plugins/vdr-xineliboutput
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.1 2006/04/27 12:56:09 hd_brummy Exp $
+
+*vdr-xineliboutput-0.99 (27 Apr 2006)
+
+  27 Apr 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/xineliboutput-0.99-makefile-gentoo.diff,
+  +files/xineliboutput-0.99rc-amd64.patch, +metadata.xml,
+  +vdr-xineliboutput-0.99.ebuild:
+  initial ebuild; thanks to cyberface, mvdbeek on
+  http://www.vdr-portal.de/board/thread.php?postid=457992
+

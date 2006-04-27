@@ -1,0 +1,17 @@
+fix an ACCESS_VIOLATION Error on compile
+hd_brummy@gentoo.org ( 26 Apr 2006 )
+
+diff -Naur xineliboutput-0.99rc.orig/Makefile xineliboutput-0.99rc/Makefile
+--- xineliboutput-0.99rc.orig/Makefile	2006-04-26 12:35:31.285513162 +0000
++++ xineliboutput-0.99rc/Makefile	2006-04-26 12:36:27.582975659 +0000
+@@ -330,8 +330,8 @@
+ ifeq ($(XINELIBOUTPUT_XINEPLUGIN), 1)
+ $(XINEINPUTVDR_SO): xine_input_vdr.o
+ 	$(CC) -g -shared xine_input_vdr.o $(LIBS_XINE) -o $@
+-	@-rm -rf $(XINEPLUGINDIR)/$@
+-	@cp $@ $(XINEPLUGINDIR)/
++#	@-rm -rf $(XINEPLUGINDIR)/$@
++#	@cp $@ $(XINEPLUGINDIR)/
+ endif
+ 
+ ifeq ($(ENABLE_TEST_POSTPLUGINS), 1)

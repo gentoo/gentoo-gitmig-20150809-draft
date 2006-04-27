@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5ffb75b7afc2ad8b6be976ebb0639c27 ChangeLog 583
+MD5 45a8b9bbac0ceb7665568f0f41884ffd files/digest-vdr-xineliboutput-0.99 73
+MD5 aeb0f61690efb76b6e486675a8cee08e files/xineliboutput-0.99-makefile-gentoo.diff 617
+MD5 3a5f0ef497426cd72d01f4aaeb9e1c7e files/xineliboutput-0.99rc-amd64.patch 904
+MD5 fd52223add8035539d3ba20d36b3701c metadata.xml 455
+MD5 bb6e6d76f28c99cd503ee536557a0438 vdr-xineliboutput-0.99.ebuild 1108
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFEUL95dn07HTTCgIoRAjO8AJ9FK/v83hw7umCZdmbP6zsQKgdVggCfTJiW
+1HkqdeiiZ/eludg8O+3z9Mw=
+=JUzb
+-----END PGP SIGNATURE-----
