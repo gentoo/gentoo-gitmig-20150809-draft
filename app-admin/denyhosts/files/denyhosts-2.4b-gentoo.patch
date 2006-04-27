@@ -1,0 +1,52 @@
+--- DenyHosts-2.4/denyhosts.cfg-dist	2006-04-09 13:37:46.000000000 +0000
++++ DenyHosts-2.4-new/denyhosts.cfg-dist	2006-04-19 16:25:57.000000000 +0000
+@@ -9,20 +9,22 @@
+ # argument
+ #
+ # Redhat or Fedora Core:
+-SECURE_LOG = /var/log/secure
++#SECURE_LOG = /var/log/secure
+ #
+ # Mandrake, FreeBSD or OpenBSD: 
+ #SECURE_LOG = /var/log/auth.log
+ #
+-# SuSE:
+-#SECURE_LOG = /var/log/messages
++# Gentoo/SuSE:
++SECURE_LOG = /var/log/messages
+ #
++# Metalog:
++SECURE_LOG = /var/log/sshd/current
+ # Mac OS X (v10.4 or greater - 
+ #   also refer to:   http://www.denyhosts.net/faq.html#macos
+ #SECURE_LOG = /private/var/log/asl.log
+ #
+ # Mac OS X (v10.3 or earlier):
+-SECURE_LOG=/private/var/log/system.log
++#SECURE_LOG=/private/var/log/system.log
+ #
+ ########################################################################
+ 
+@@ -150,7 +152,7 @@
+ # Note: it is recommended that you use an absolute pathname
+ # for this value (eg. /home/foo/denyhosts/data)
+ #
+-WORK_DIR = /usr/share/denyhosts/data
++WORK_DIR = /var/lib/denyhosts
+ #
+ #######################################################################
+ 
+@@ -192,10 +194,10 @@
+ # running at a time.
+ #
+ # Redhat/Fedora:
+-LOCK_FILE = /var/lock/subsys/denyhosts
++#LOCK_FILE = /var/lock/subsys/denyhosts
+ #
+-# Debian
+-#LOCK_FILE = /var/run/denyhosts.pid
++# Gentoo/Debian
++LOCK_FILE = /var/run/denyhosts.pid
+ #
+ # Misc
+ #LOCK_FILE = /tmp/denyhosts.lock
