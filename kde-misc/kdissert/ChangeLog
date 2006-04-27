@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kdissert
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/ChangeLog,v 1.26 2006/04/10 00:25:14 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/ChangeLog,v 1.27 2006/04/27 22:18:25 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-kdissert-1.0.5-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
   10 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org> -kdissert-1.0.5.ebuild,
   kdissert-1.0.5-r1.ebuild:

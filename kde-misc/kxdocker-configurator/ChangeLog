@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kxdocker-configurator
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker-configurator/ChangeLog,v 1.2 2006/04/24 11:15:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker-configurator/ChangeLog,v 1.3 2006/04/27 22:19:38 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   24 Apr 2006; Daniel Black <dragonheart@gentoo.org>
   +files/kxdocker-configurator-1.0.2-collisions.patch,
