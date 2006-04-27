@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-ExtUtils-MakeMaker
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-MakeMaker/ChangeLog,v 1.3 2006/02/16 19:37:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-MakeMaker/ChangeLog,v 1.4 2006/04/27 23:27:22 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-perl-ExtUtils-MakeMaker-6.20,
+  files/digest-perl-ExtUtils-MakeMaker-6.21,
+  files/digest-perl-ExtUtils-MakeMaker-6.30,
+  files/digest-perl-ExtUtils-MakeMaker-6.30.01, Manifest:
+  Fixing SHA256 digest, pass four
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   perl-ExtUtils-MakeMaker-6.30.ebuild:

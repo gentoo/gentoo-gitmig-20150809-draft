@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Test
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test/ChangeLog,v 1.3 2006/02/16 19:48:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test/ChangeLog,v 1.4 2006/04/27 23:27:44 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-perl-Test-1.24,
+  files/digest-perl-Test-1.25, Manifest:
+  Fixing SHA256 digest, pass four
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   perl-Test-1.25.ebuild:
