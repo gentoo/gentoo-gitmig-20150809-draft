@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ghostscript-gnu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.19 2006/04/23 23:35:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.20 2006/04/27 22:59:37 flameeyes Exp $
+
+*ghostscript-gnu-8.16-r3 (27 Apr 2006)
+
+  27 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/ghostscript-fontconfig.patch, +ghostscript-gnu-8.16-r3.ebuild:
+  Add patch for using fontconfig for fonts loading, based on the one in bug
+  #104512.
 
   23 Apr 2006; Jason Wever <weeve@gentoo.org>
   ghostscript-gnu-8.16-r2.ebuild:
