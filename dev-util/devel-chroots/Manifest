@@ -1,18 +1,34 @@
-MD5 c5947dd69fdd2f064fbfb9822ba0b81a ChangeLog 1734
-RMD160 572599af0ed44095300b35edd7fa9cd3deb66f0f ChangeLog 1734
-SHA256 2e60656ee2ccbba23911cd2208e2b793ab5adfbff78193ba85fec2c445103ecc ChangeLog 1734
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST devel-chroots-1.0.0.tar.gz 7507 RMD160 30d65c6360083f36bfde418f7a0708ce40b01de4 SHA256 6a9e1f2d52d26df5cf45a1a464256e1867e7de3da2f345e593fc22a03ad3e0d4 size 7507
+DIST devel-chroots-1.0.1.tar.gz 7272 RMD160 7cadddd482cd669ccb79f4d4483e69db350471d9 SHA256 8cf06733d31ec4066274df1972dad55ee8686a59edb6a0ca5ae56b81b397ffa5 size 7272
+EBUILD devel-chroots-1.0.0.ebuild 759 RMD160 32172e68757c19f156abe02025e3c24eaa2ddf9d SHA1 b189328c79e88167a8ae371432cc07e56d39b27b SHA256 f221f00dd518215d7c479ddcf05882a29a29c51e19bb1230864b3ad8779d8f89 size 759
 MD5 c713f0d8de03d5bc13eee52fac9cf971 devel-chroots-1.0.0.ebuild 759
 RMD160 32172e68757c19f156abe02025e3c24eaa2ddf9d devel-chroots-1.0.0.ebuild 759
-SHA256 f41f284720fdcb4e2d23b79bb53b608c50009f584cb660417902e8d13f996387 devel-chroots-1.0.0.ebuild 759
+SHA256 f221f00dd518215d7c479ddcf05882a29a29c51e19bb1230864b3ad8779d8f89 devel-chroots-1.0.0.ebuild 759
+EBUILD devel-chroots-1.0.1.ebuild 1035 RMD160 1025cfe857ff77431574ab355e7deca7a1fb7b09 SHA1 1e8e3c3b9bbcda8f71caef4cd20bb07890d38b63 SHA256 cbf2f9f839fded5e95552ae1d331c6ad97b9948004c96995948dd14c58bdb714 size 1035
 MD5 c4e9cee139773fbd83f378b320daa61a devel-chroots-1.0.1.ebuild 1035
 RMD160 1025cfe857ff77431574ab355e7deca7a1fb7b09 devel-chroots-1.0.1.ebuild 1035
 SHA256 cbf2f9f839fded5e95552ae1d331c6ad97b9948004c96995948dd14c58bdb714 devel-chroots-1.0.1.ebuild 1035
-MD5 d6dafe7e0848d37e899e8f17fb8b23e6 files/digest-devel-chroots-1.0.0 69
-RMD160 f86109efa924e265e9b240221fdbc2e56c17cb65 files/digest-devel-chroots-1.0.0 69
-SHA256 404a4d0cc61a3b592cdac952bfdf309dc7eddc0dca3c69ec577ae5058fdf98e7 files/digest-devel-chroots-1.0.0 69
-MD5 8d02613924d503918ba9d1169de52d5d files/digest-devel-chroots-1.0.1 69
-RMD160 46adbd926aaa7f02a1693ef3bf78499650f19e9c files/digest-devel-chroots-1.0.1 69
-SHA256 a3e3fca67b328c162a5e7807aad600f5a8da74a6b5e03e636516bca662091115 files/digest-devel-chroots-1.0.1 69
+MISC ChangeLog 1901 RMD160 eddd1f87e9c297ba1a7ce60f8b923eb71cb667e3 SHA1 25672f4b66751a062fa5f05f723a69ac1ea908aa SHA256 4e123ed7e20fafa2ec8e1fae9aaaac279ea6d8f952eb58676c34f30566584ac0 size 1901
+MD5 14d4f82fda39b718eae6dd1004aac0e5 ChangeLog 1901
+RMD160 eddd1f87e9c297ba1a7ce60f8b923eb71cb667e3 ChangeLog 1901
+SHA256 4e123ed7e20fafa2ec8e1fae9aaaac279ea6d8f952eb58676c34f30566584ac0 ChangeLog 1901
+MISC metadata.xml 374 RMD160 b4960a7518eb81e149de92efaaeb2e5292e8ac1c SHA1 02a2552a6162434ee5f197bdc69186fa211d3270 SHA256 2e5ecf38bf788e57151b03e07a9b42b480d274c314ef2f4bfae5fd35179570f7 size 374
 MD5 d2893480acff6c820a766a229c2eaa36 metadata.xml 374
 RMD160 b4960a7518eb81e149de92efaaeb2e5292e8ac1c metadata.xml 374
 SHA256 2e5ecf38bf788e57151b03e07a9b42b480d274c314ef2f4bfae5fd35179570f7 metadata.xml 374
+MD5 cd4fbb614c83e43e20ca58be401653d1 files/digest-devel-chroots-1.0.0 253
+RMD160 86599aaa346c61f804dfa72f5921c318c987ba6b files/digest-devel-chroots-1.0.0 253
+SHA256 8c2a5cad953aaec261eb008e073de84b51898f2ed0b22391692f7710c0b931fd files/digest-devel-chroots-1.0.0 253
+MD5 71034aa2d81f910db7d8a27dfbe8bfef files/digest-devel-chroots-1.0.1 253
+RMD160 e3e0c49819167542fc825c3cf2d695350b16230a files/digest-devel-chroots-1.0.1 253
+SHA256 fe2663c6569995f4137986e805fe73fcd674481d50abb3ec26f05401e41d49ab files/digest-devel-chroots-1.0.1 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEURwPW78445TWHXcRAkYlAJ97htWjQnSFF9NPh28W85WJ/R20+gCfbgpZ
+gIDcGoJMnQfjnlV/03MJ7as=
+=2sAp
+-----END PGP SIGNATURE-----
