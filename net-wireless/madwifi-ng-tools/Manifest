@@ -1,4 +1,4 @@
-MD5 9644d13fd588d7cc6bc911838d9b4702 ChangeLog 4997
+MD5 454fa6df53c31406ece54fb00f6fa0f4 ChangeLog 5161
 MD5 6225a58b69ebeb67ff97ab4026b21e58 files/digest-madwifi-ng-tools-0.1401.20060117 78
 MD5 04ecb172d5d25d2995578d1772e2c239 files/digest-madwifi-ng-tools-0.1420.20060201 78
 MD5 94fa700e7f5c8ec3598c00b31c724525 files/digest-madwifi-ng-tools-0.1440.20060206 78
@@ -6,6 +6,7 @@ MD5 7e62e96505ecb836f9f74c54d448af59 files/digest-madwifi-ng-tools-0.1443.200602
 MD5 a505c0375ea7fdfc85976a0fc0866c6c files/digest-madwifi-ng-tools-0.1473.20060312 78
 MD5 cb9bb227fc8875077d219e7bcae57ba5 files/digest-madwifi-ng-tools-0.1485.20060325 78
 MD5 f97361e3508b06548cb54b3992459d7b files/digest-madwifi-ng-tools-0.1502.20060414 78
+MD5 1e8c2150ad4b3de67d9d61313a9f8a5f files/digest-madwifi-ng-tools-0.1531.20060427 78
 MD5 3b977ab622651738d159d4559e670e25 files/madwifi-ng-tools-0.1401.20060117-udev.rules 355
 MD5 3b977ab622651738d159d4559e670e25 files/madwifi-ng-tools-0.1420.20060201-udev.rules 355
 MD5 3b977ab622651738d159d4559e670e25 files/madwifi-ng-tools-0.1440.20060206-udev.rules 355
@@ -16,4 +17,5 @@ MD5 07298bd90947c71b378010e5f3821924 madwifi-ng-tools-0.1443.20060207.ebuild 158
 MD5 234c498f8d3502cf4e0e30ed1d45c4a2 madwifi-ng-tools-0.1473.20060312.ebuild 1584
 MD5 61d227d7e1c4c33a5d31c97e13b2f963 madwifi-ng-tools-0.1485.20060325.ebuild 1584
 MD5 296a0813d6392c2578ec7068d5826912 madwifi-ng-tools-0.1502.20060414.ebuild 1603
+MD5 9fe7e88ea3d986ca10be3a94b706a9d2 madwifi-ng-tools-0.1531.20060427.ebuild 1474
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
