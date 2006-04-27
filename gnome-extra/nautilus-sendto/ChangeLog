@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/nautilus-sendto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/ChangeLog,v 1.1 2006/03/23 18:49:09 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/ChangeLog,v 1.2 2006/04/27 20:21:31 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
 *nautilus-sendto-0.5 (23 Mar 2006)
 
