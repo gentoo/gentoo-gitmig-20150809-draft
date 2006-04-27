@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.42 2006/04/25 16:44:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.43 2006/04/27 11:41:19 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-rpm2targz-9.0-r2, files/digest-rpm2targz-9.0-r3,
+  files/digest-rpm2targz-9.0-r4, files/digest-rpm2targz-9.0-r5, Manifest:
+  Fixing SHA256 digest, pass two.
 
   25 Apr 2006; Fabian Groffen <grobian@gentoo.org> rpm2targz-9.0-r5.ebuild:
   Marked ~ppc-macos

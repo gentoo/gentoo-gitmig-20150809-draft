@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.22 2006/04/25 15:43:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.23 2006/04/27 11:40:35 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-pbzip2-0.9.5,
+  files/digest-pbzip2-0.9.6, Manifest:
+  Fixing SHA256 digest, pass two.
 
   25 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> -pbzip2-0.8.ebuild:
   Cleaning up older ebuilds.
