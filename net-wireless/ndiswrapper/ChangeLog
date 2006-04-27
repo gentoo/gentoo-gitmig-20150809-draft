@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.46 2006/04/19 19:31:36 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.47 2006/04/27 22:18:30 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-ndiswrapper-1.2-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
   19 Apr 2006; Daniel Drake <dsd@gentoo.org>
   +files/ndiswrapper-1.2-kernel-2.6.16.patch, ndiswrapper-1.2-r1.ebuild:
