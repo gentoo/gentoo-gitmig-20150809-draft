@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.94 2006/04/26 14:18:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.95 2006/04/27 23:35:37 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-mozilla-1.7.10-r1, files/digest-mozilla-1.7.10-r2,
+  files/digest-mozilla-1.7.10-r3, files/digest-mozilla-1.7.11,
+  files/digest-mozilla-1.7.11-r1, files/digest-mozilla-1.7.11-r2,
+  files/digest-mozilla-1.7.11-r3, Manifest:
+  Fixing SHA256 digest, pass four
 
   26 Apr 2006; Guy Martin <gmsoft@gentoo.org> mozilla-1.7.13.ebuild:
   Stable on hppa.

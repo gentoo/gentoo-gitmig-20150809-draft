@@ -1,6 +1,10 @@
 # ChangeLog for www-client/htmlview
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/htmlview/ChangeLog,v 1.4 2006/04/08 19:06:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/htmlview/ChangeLog,v 1.5 2006/04/27 23:31:57 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-htmlview-3.0.0,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   08 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   htmlview-3.0.0-r1.ebuild:
