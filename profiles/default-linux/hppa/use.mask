@@ -1,3 +1,7 @@
+# 2006/04/26 - Saleem Abdulrasool <compnerd@gentoo.org>
+# sys-apps/dmidecode: masking with vapier's blessings
+dmi
+
 # 2006/03/13 - Jeroen Roovers <jer@gentoo.org>
 # media-libs/openal: Masking until a version is available for hppa
 openal
