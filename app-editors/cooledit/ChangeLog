@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/cooledit
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/ChangeLog,v 1.17 2006/04/27 11:52:29 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/ChangeLog,v 1.18 2006/04/27 12:28:08 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-cooledit-3.17.7, files/digest-cooledit-3.17.12,
+  files/digest-cooledit-3.17.17, Manifest:
+  Fixing SHA256 digest for real, pass three...
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-cooledit-3.17.7, files/digest-cooledit-3.17.12,

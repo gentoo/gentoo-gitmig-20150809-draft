@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/joe
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.44 2006/04/27 11:54:32 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.45 2006/04/27 12:29:49 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-joe-3.0-r2,
+  files/digest-joe-3.1-r1, files/digest-joe-3.2, Manifest:
+  Fixing SHA256 digest for real, pass three...
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-joe-3.0-r2,
   files/digest-joe-3.1-r1, files/digest-joe-3.2, Manifest:

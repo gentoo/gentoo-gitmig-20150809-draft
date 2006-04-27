@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.139 2006/04/27 11:53:55 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.140 2006/04/27 12:29:13 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-gedit-0.9.6-r1, files/digest-gedit-2.10.3,
+  files/digest-gedit-2.10.3-r1, files/digest-gedit-2.10.5,
+  files/digest-gedit-2.12.1, files/digest-gedit-2.14.0,
+  files/digest-gedit-2.14.2, Manifest:
+  Fixing SHA256 digest for real, pass three...
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-gedit-0.9.6-r1, files/digest-gedit-2.10.3,
