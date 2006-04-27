@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/lastfmplayer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.2 2006/04/02 23:11:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.3 2006/04/27 15:03:11 genstef Exp $
+
+*lastfmplayer-1.2_pre2099 (27 Apr 2006)
+
+  27 Apr 2006; Stefan Schweizer <genstef@gentoo.org> +files/lastfm.protocol,
+  -lastfmplayer-1.1.4_p2099.ebuild, +lastfmplayer-1.2_pre2099.ebuild:
+  Version bump thanks to Nicholas Doyle <niskel+bugs@gmail.com> in bug 131400,
+  kde services file thanks to Heiko Baums <heiko@baums-on-web.de> in bug
+  129335
 
   02 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
   lastfmplayer-1.1.4_p2099.ebuild:
