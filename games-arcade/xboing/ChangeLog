@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/xboing
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/ChangeLog,v 1.9 2006/03/14 19:22:42 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/ChangeLog,v 1.10 2006/04/27 19:06:31 tupone Exp $
+
+  27 Apr 2006; <Tupone@gentoo.org> -files/01_all_insaneSpeed.patch,
+  -xboing-2.4-r2.ebuild:
+  Reverting. Applied patch was broken. Better use -speed 1 to slow game
 
 *xboing-2.4-r2 (14 Mar 2006)
 
