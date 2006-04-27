@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/eyesapplet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/eyesapplet/ChangeLog,v 1.32 2006/04/06 00:52:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/eyesapplet/ChangeLog,v 1.33 2006/04/27 20:37:39 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-eyesapplet-3.4.1, Manifest:
+  Fixing SHA256 digest, pass four
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -eyesapplet-3.5.0.ebuild, -eyesapplet-3.5.1.ebuild:

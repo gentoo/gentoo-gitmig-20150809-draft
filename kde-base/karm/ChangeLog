@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/karm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.41 2006/04/06 00:59:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.42 2006/04/27 20:46:22 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-karm-3.4.1,
+  files/digest-karm-3.4.2, files/digest-karm-3.4.3, Manifest:
+  Fixing SHA256 digest, pass four
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -karm-3.5.0.ebuild,
   -karm-3.5.1.ebuild:

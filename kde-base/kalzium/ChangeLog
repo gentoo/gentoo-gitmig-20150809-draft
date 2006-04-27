@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.42 2006/04/06 00:56:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.43 2006/04/27 20:43:33 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-kalzium-3.4.1,
+  files/digest-kalzium-3.4.2, files/digest-kalzium-3.4.3, Manifest:
+  Fixing SHA256 digest, pass four
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kalzium-3.5.0.ebuild,
   -kalzium-3.5.1.ebuild:

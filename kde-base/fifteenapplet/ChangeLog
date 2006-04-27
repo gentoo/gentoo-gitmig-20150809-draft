@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/fifteenapplet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/fifteenapplet/ChangeLog,v 1.38 2006/04/06 00:52:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/fifteenapplet/ChangeLog,v 1.39 2006/04/27 20:38:19 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-fifteenapplet-3.4.1, files/digest-fifteenapplet-3.4.3,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -fifteenapplet-3.5.0.ebuild, -fifteenapplet-3.5.1.ebuild:

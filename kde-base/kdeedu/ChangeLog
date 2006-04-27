@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.175 2006/04/05 22:56:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.176 2006/04/27 20:53:53 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-kdeedu-3.3.2,
+  files/digest-kdeedu-3.3.2-r1, files/digest-kdeedu-3.3.2-r2,
+  files/digest-kdeedu-3.4.1, files/digest-kdeedu-3.4.1-r1,
+  files/digest-kdeedu-3.4.1-r10, files/digest-kdeedu-3.4.1-r11,
+  files/digest-kdeedu-3.4.2, files/digest-kdeedu-3.4.2-r1,
+  files/digest-kdeedu-3.4.2-r2, files/digest-kdeedu-3.4.3,
+  files/digest-kdeedu-3.4.3-r10, Manifest:
+  Fixing SHA256 digest, pass four
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kdeedu-3.5.0.ebuild,
   -kdeedu-3.5.1.ebuild:

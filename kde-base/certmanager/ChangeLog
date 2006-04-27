@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/certmanager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.42 2006/04/06 00:49:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.43 2006/04/27 20:33:00 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-certmanager-3.4.1, files/digest-certmanager-3.4.2,
+  files/digest-certmanager-3.4.3, Manifest:
+  Fixing SHA256 digest, pass four
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -certmanager-3.5.0.ebuild, -certmanager-3.5.1.ebuild:
