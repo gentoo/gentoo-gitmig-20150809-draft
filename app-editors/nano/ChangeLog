@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.103 2006/04/24 17:53:26 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.104 2006/04/27 11:55:17 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-nano-1.2.5,
+  files/digest-nano-1.3.9, files/digest-nano-1.3.10-r1,
+  files/digest-nano-1.3.11, Manifest:
+  Fixing SHA256 digest, pass two.
 
   24 Apr 2006; Joshua Kinard <kumba@gentoo.org> nano-1.3.10-r1.ebuild:
   Marked stable on mips.
