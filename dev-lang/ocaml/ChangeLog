@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.78 2006/03/18 15:56:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.79 2006/04/27 19:26:41 mattam Exp $
+
+*ocaml-3.09.2 (27 Apr 2006)
+
+  27 Apr 2006; Matthieu Sozeau <mattam@gentoo.org> +ocaml-3.09.2.ebuild:
+  Bug fix release 3.09.2.
 
   18 Mar 2006; Markus Rothe <corsair@gentoo.org> ocaml-3.08.3.ebuild,
   ocaml-3.08.4.ebuild, ocaml-3.09.1.ebuild:
