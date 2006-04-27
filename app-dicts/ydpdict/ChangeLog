@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/ydpdict
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ChangeLog,v 1.5 2006/03/06 18:08:27 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ChangeLog,v 1.6 2006/04/27 09:43:32 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-ydpdict-0.63,
+  files/digest-ydpdict-0.64, Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
 *ydpdict-0.66 (06 Mar 2006)
 
