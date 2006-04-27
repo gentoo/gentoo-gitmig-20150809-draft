@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/xevil-2.02_p2.ebuild,v 1.11 2006/01/29 00:00:28 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/xevil-2.02_p2.ebuild,v 1.12 2006/04/27 21:50:15 tupone Exp $
 
 inherit eutils games
 
@@ -25,7 +25,8 @@ S=${WORKDIR}
 src_unpack() {
 	unpack ${A}
 	edos2unix readme.txt x11/*.{cpp,h} cmn/*.{cpp,h} makefile config.mk
-	epatch ${WORKDIR}/xevil_${MY_PV}-${DEB_PATCH}.diff
+	epatch ${WORKDIR}/xevil_${MY_PV}-${DEB_PATCH}.diff \
+		"${FILESDIR}/${P}"-gcc41.patch
 	sed -i \
 		-e 's:-static::' \
 		-e "s:CFLAGS=\":CFLAGS=\"${CFLAGS} :g" \
