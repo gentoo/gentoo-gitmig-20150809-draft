@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.39 2006/04/26 23:39:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.40 2006/04/27 01:18:17 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-pycrypto-2.0-r1, files/digest-pycrypto-2.0.1,
+  files/digest-pycrypto-2.0.1-r1, files/digest-pycrypto-2.0.1-r2,
+  files/digest-pycrypto-2.0.1-r3, files/digest-pycrypto-2.0.1-r4,
+  files/digest-pycrypto-2.0.1-r5, Manifest:
+  Kill SHA256 hashes from Manifest and digest files to make sure people can
+  upgrade.
 
 *pycrypto-2.0.1-r5 (26 Apr 2006)
 
