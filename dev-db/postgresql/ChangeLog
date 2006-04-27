@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.267 2006/04/17 17:48:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.268 2006/04/27 15:09:51 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-postgresql-7.3.6-r2, files/digest-postgresql-7.3.9-r1,
+  files/digest-postgresql-7.3.11, files/digest-postgresql-7.3.13,
+  files/digest-postgresql-7.3.14, files/digest-postgresql-7.4.7-r1,
+  files/digest-postgresql-7.4.7-r2, files/digest-postgresql-7.4.8,
+  files/digest-postgresql-7.4.9, files/digest-postgresql-7.4.11,
+  files/digest-postgresql-7.4.12, files/digest-postgresql-8.0.3,
+  files/digest-postgresql-8.0.4, files/digest-postgresql-8.0.6,
+  files/digest-postgresql-8.0.7, files/digest-postgresql-8.1.2,
+  files/digest-postgresql-8.1.3, Manifest:
+  Fixing SHA256 digest, pass four
 
   17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   postgresql-8.1.3-r1.ebuild:

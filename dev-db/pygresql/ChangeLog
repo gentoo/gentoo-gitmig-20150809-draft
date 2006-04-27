@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pygresql
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.35 2006/04/27 04:17:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.36 2006/04/27 15:10:40 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-pygresql-3.5,
+  files/digest-pygresql-3.6.1, files/digest-pygresql-3.6.2,
+  files/digest-pygresql-3.6.2-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
   27 Apr 2006; Jason Wever <weeve@gentoo.org> pygresql-3.8.ebuild:
   Re-added ~sparc keyword as it went missing for no reason we're aware of.
