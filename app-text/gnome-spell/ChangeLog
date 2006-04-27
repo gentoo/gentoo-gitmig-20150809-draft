@@ -1,6 +1,12 @@
 # ChangeLog for app-text/gnome-spell
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.68 2006/04/03 16:41:39 foser Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.69 2006/04/27 14:33:32 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-gnome-spell-1.0.5-r2, files/digest-gnome-spell-1.0.6,
+  files/digest-gnome-spell-1.0.7, files/digest-gnome-spell-1.0.7-r1,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
 *gnome-spell-1.0.7-r1 (03 Apr 2006)
 

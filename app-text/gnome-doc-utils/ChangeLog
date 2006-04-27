@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gnome-doc-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.51 2006/03/13 22:06:59 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.52 2006/04/27 14:32:48 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-gnome-doc-utils-0.1.3, files/digest-gnome-doc-utils-0.2.0,
+  files/digest-gnome-doc-utils-0.2.1, Manifest:
+  Fixing SHA256 digest, pass four
 
 *gnome-doc-utils-0.6.0 (13 Mar 2006)
 

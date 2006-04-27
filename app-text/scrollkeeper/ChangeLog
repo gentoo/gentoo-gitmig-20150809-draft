@@ -1,6 +1,10 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.66 2006/02/07 05:43:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.67 2006/04/27 14:37:47 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-scrollkeeper-0.3.14-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org>
   scrollkeeper-0.3.14-r2.ebuild:
