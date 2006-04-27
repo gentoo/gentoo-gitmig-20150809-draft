@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.8.ebuild,v 1.2 2006/03/22 02:08:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.8.ebuild,v 1.3 2006/04/27 04:17:18 weeve Exp $
 
 inherit eutils distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.pygresql.org/"
 LICENSE="as-is"
 DEPEND="dev-db/libpq
 	dev-lang/python"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE="doc"
 SLOT="0"
 
