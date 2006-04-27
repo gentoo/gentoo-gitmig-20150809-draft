@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kxsldbg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxsldbg/ChangeLog,v 1.49 2006/04/06 03:10:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxsldbg/ChangeLog,v 1.50 2006/04/27 22:10:51 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-kxsldbg-3.4.1,
+  files/digest-kxsldbg-3.4.1-r1, files/digest-kxsldbg-3.4.3,
+  files/digest-kxsldbg-3.4.3-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
   06 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kxsldbg-3.5.0.ebuild,
   -kxsldbg-3.5.1.ebuild:

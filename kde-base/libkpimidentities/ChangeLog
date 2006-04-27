@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkpimidentities
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpimidentities/ChangeLog,v 1.41 2006/04/06 03:15:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpimidentities/ChangeLog,v 1.42 2006/04/27 22:16:18 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-libkpimidentities-3.4.1,
+  files/digest-libkpimidentities-3.4.3, Manifest:
+  Fixing SHA256 digest, pass four
 
   06 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -libkpimidentities-3.5.0.ebuild, -libkpimidentities-3.5.1.ebuild:

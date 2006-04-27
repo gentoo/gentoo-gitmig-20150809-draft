@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.42 2006/04/06 03:13:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.43 2006/04/27 22:14:22 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-libkdepim-3.4.1, files/digest-libkdepim-3.4.2,
+  files/digest-libkdepim-3.4.3, Manifest:
+  Fixing SHA256 digest, pass four
 
   06 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -libkdepim-3.5.0.ebuild, -libkdepim-3.5.1.ebuild:

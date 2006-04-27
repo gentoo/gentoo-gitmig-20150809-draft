@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.45 2006/04/06 01:56:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.46 2006/04/27 21:30:47 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-kig-3.4.1,
+  files/digest-kig-3.4.1-r10, files/digest-kig-3.4.2,
+  files/digest-kig-3.4.3, files/digest-kig-3.4.3-r10, Manifest:
+  Fixing SHA256 digest, pass four
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kig-3.5.0.ebuild,
   -kig-3.5.1.ebuild:

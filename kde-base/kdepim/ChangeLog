@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.197 2006/04/05 23:01:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.198 2006/04/27 21:19:10 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-kdepim-3.3.2,
+  files/digest-kdepim-3.3.2-r1, files/digest-kdepim-3.4.1,
+  files/digest-kdepim-3.4.1-r1, files/digest-kdepim-3.4.1-r2,
+  files/digest-kdepim-3.4.2, files/digest-kdepim-3.4.2-r1,
+  files/digest-kdepim-3.4.3, Manifest:
+  Fixing SHA256 digest, pass four
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/kdepim-3.5.0-kmail-branch.patch, -kdepim-3.5.0.ebuild,

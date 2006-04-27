@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.41 2006/04/06 02:52:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.42 2006/04/27 21:57:20 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-kstars-3.4.1,
+  files/digest-kstars-3.4.2, files/digest-kstars-3.4.3, Manifest:
+  Fixing SHA256 digest, pass four
 
   06 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kstars-3.5.0.ebuild,
   -kstars-3.5.1.ebuild:

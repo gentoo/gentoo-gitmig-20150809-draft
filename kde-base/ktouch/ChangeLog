@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktouch
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.41 2006/04/06 02:58:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.42 2006/04/27 22:01:16 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-ktouch-3.4.1,
+  files/digest-ktouch-3.4.2, files/digest-ktouch-3.4.3, Manifest:
+  Fixing SHA256 digest, pass four
 
   06 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -ktouch-3.5.0.ebuild,
   -ktouch-3.5.1.ebuild:

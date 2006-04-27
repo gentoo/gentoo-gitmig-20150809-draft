@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdnssd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.39 2006/04/07 11:54:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.40 2006/04/27 21:26:09 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-kdnssd-3.4.1,
+  files/digest-kdnssd-3.4.2, Manifest:
+  Fixing SHA256 digest, pass four
 
   07 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> kdnssd-3.5.2.ebuild:
   Add ~x86-fbsd keyword.
