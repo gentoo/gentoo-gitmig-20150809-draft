@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r3.ebuild,v 1.3 2006/04/06 17:15:03 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r3.ebuild,v 1.4 2006/04/27 21:41:38 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -32,7 +32,6 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc X opengl openal"
-#java use flag disabled because of bug #106992
 
 S="${WORKDIR}/${MY_P}"
 
@@ -52,10 +51,9 @@ DEPEND="${RDEPEND}
 	<virtual/ghc-6.5
 	!>=virtual/ghc-6.6
 	doc? (  ~app-text/docbook-xml-dtd-4.2
-		app-text/docbook-xsl-stylesheets
-		>=dev-libs/libxslt-1.1.2
-		>=dev-haskell/haddock-0.6-r2 )"
-# removed: java? ( >=dev-java/fop-0.20.5 )
+			app-text/docbook-xsl-stylesheets
+			>=dev-libs/libxslt-1.1.2
+			>=dev-haskell/haddock-0.6-r2 )"
 
 PDEPEND=">=dev-haskell/cabal-1.1.3"
 
@@ -152,18 +150,13 @@ src_compile() {
 	echo "SRC_CC_OPTS+=${CFLAGS} -Wa,--noexecstack" >> mk/build.mk
 
 	# determine what to do with documentation
-	local mydoc
 	if use doc; then
-		mydoc="html"
-#		if use java; then
-#			mydoc="${mydoc} ps"
-#		fi
+		echo XMLDocWays="html" >> mk/build.mk
 	else
-		mydoc=""
+		echo XMLDocWays="" >> mk/build.mk
 		# needed to prevent haddock from being called
 		echo NO_HADDOCK_DOCS=YES >> mk/build.mk
 	fi
-	echo XMLDocWays="${mydoc}" >> mk/build.mk
 
 	# circumvent a very strange bug that seems related with ghc producing too much
 	# output while being filtered through tee (e.g. due to portage logging)
@@ -207,8 +200,6 @@ src_compile() {
 		$(use_enable X hgl) \
 		|| die "econf failed"
 
-	# the build does not seem to work all that
-	# well with parallel make
 	emake all datadir="/usr/share/doc/${PF}" || die "make failed"
 	# the explicit datadir is required to make the haddock entries
 	# in the package.conf file point to the right place ...

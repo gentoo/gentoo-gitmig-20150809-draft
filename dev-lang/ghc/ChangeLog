@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.95 2006/04/27 15:26:43 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.96 2006/04/27 21:41:38 dcoutts Exp $
+
+  27 Apr 2006; Duncan Coutts <dcoutts@gentoo.org> ghc-6.4.1-r3.ebuild:
+  We dont need the java/fop stuff since were only building html docs
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-ghc-6.2.2,
   files/digest-ghc-6.4.1-r2, Manifest:
