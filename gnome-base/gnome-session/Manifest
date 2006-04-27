@@ -1,54 +1,82 @@
-MD5 9e39756c487be7fba3f6273d4e0f3ccd ChangeLog 17704
-RMD160 8921b13b5eda4ce57b9cdc0cd1d41a7011f7ce43 ChangeLog 17704
-SHA256 9a87bf23d119bdd872fed55db1857500acca3be4b0e1f3ba92b5637647349d98 ChangeLog 17704
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX Gnome 2464 RMD160 07fe125890d825fdf95fe532aeec07c2718cf64e SHA1 9d64837491953dd8c38142e50e0cd36d015db583 SHA256 a1214ba383eb6dbd32b34eb89c7e00df08f9284b7a2b8a82f291cb29e865ba02 size 2464
 MD5 b10dbd1b6388f5fdf9feee0e56525ea5 files/Gnome 2464
 RMD160 07fe125890d825fdf95fe532aeec07c2718cf64e files/Gnome 2464
 SHA256 a1214ba383eb6dbd32b34eb89c7e00df08f9284b7a2b8a82f291cb29e865ba02 files/Gnome 2464
-MD5 39beb568f51916dc9351460344445640 files/digest-gnome-session-2.10.0 134
-RMD160 571eeb8fc032aac872e4beab1b0bcb575e5744ca files/digest-gnome-session-2.10.0 134
-SHA256 61508adc793a43f5b23d69ea91474dcadaf5e34ea14c5b58db949cd40a46467e files/digest-gnome-session-2.10.0 134
-MD5 39beb568f51916dc9351460344445640 files/digest-gnome-session-2.10.0-r3 134
-RMD160 571eeb8fc032aac872e4beab1b0bcb575e5744ca files/digest-gnome-session-2.10.0-r3 134
-SHA256 61508adc793a43f5b23d69ea91474dcadaf5e34ea14c5b58db949cd40a46467e files/digest-gnome-session-2.10.0-r3 134
-MD5 7e346fe4be949355b491daf958c06d56 files/digest-gnome-session-2.12.0 302
-RMD160 31592cf43af274f85d7727e6bb7826e647634737 files/digest-gnome-session-2.12.0 302
-SHA256 c0c05adee8d922e152499a2839f7a501daa38279a81cd770a2c5c5531f22aa53 files/digest-gnome-session-2.12.0 302
-MD5 08af2a2d98501d0db1af578e91958d48 files/digest-gnome-session-2.14.0 494
-RMD160 63d173cf06c80e06730186be10427006521bb67d files/digest-gnome-session-2.14.0 494
-SHA256 d6d3736541d99e4be7386cd4de8eac17cab9888f0f38cfda07c6f20bb7309145 files/digest-gnome-session-2.14.0 494
+AUX gnome-session-2.10.0-esd_switch.patch 1910 RMD160 870e8e80ac52522ced619f18f262f81f5ee3ba8a SHA1 27f3161b614e1c0c2fa3bde36d69a417ac034db8 SHA256 25e41851fe5a80a7b61d0cc736492d7000a06cceddfc6b000f30e0d52027fe97 size 1910
 MD5 ef9c116121d03af45e5f6f00050da2d6 files/gnome-session-2.10.0-esd_switch.patch 1910
 RMD160 870e8e80ac52522ced619f18f262f81f5ee3ba8a files/gnome-session-2.10.0-esd_switch.patch 1910
 SHA256 25e41851fe5a80a7b61d0cc736492d7000a06cceddfc6b000f30e0d52027fe97 files/gnome-session-2.10.0-esd_switch.patch 1910
+AUX gnome-session-2.10.0-no_smproxy.patch 2103 RMD160 d8c861ad408bf8ef53d4d8ac31eccd9b6edd25d9 SHA1 cb25eb0bb71c02809db56476a655b8accb870868 SHA256 ed4a9e3f3742f08b8355f33233b6a17ba9f7d41dc366d0ff276ad047cb66b7d5 size 2103
 MD5 b3685e6ab1ec8736038735270ae11fb5 files/gnome-session-2.10.0-no_smproxy.patch 2103
 RMD160 d8c861ad408bf8ef53d4d8ac31eccd9b6edd25d9 files/gnome-session-2.10.0-no_smproxy.patch 2103
-SHA256 5d92d48cb40e4bf11a5eced31d59e102cc0e2b116c5c053ea263a3ec44ac4c25 files/gnome-session-2.10.0-no_smproxy.patch 2103
+SHA256 ed4a9e3f3742f08b8355f33233b6a17ba9f7d41dc366d0ff276ad047cb66b7d5 files/gnome-session-2.10.0-no_smproxy.patch 2103
+AUX gnome-session-2.10.0-schema_defaults.patch 648 RMD160 001a568191b6b95d3376f0f63af9cf8d67cd6604 SHA1 53fa0a1b868ef05415691d877efbf29a8fad2789 SHA256 96c458d9cbfa62a40f1ba2c1f795b761bb0289694866b03b04a31108268535d8 size 648
 MD5 1472ffe4555c4aab66d8359a4031544d files/gnome-session-2.10.0-schema_defaults.patch 648
 RMD160 001a568191b6b95d3376f0f63af9cf8d67cd6604 files/gnome-session-2.10.0-schema_defaults.patch 648
 SHA256 96c458d9cbfa62a40f1ba2c1f795b761bb0289694866b03b04a31108268535d8 files/gnome-session-2.10.0-schema_defaults.patch 648
+AUX gnome-session-2.12.0-optional-tcp-wrappers.patch 5759 RMD160 4848ed4e7016f359ee7d6c0d98d6071ed96e407a SHA1 0c714987e311160763c57fa228247979b2ee9dab SHA256 14f6dd6df875476902801e1de121a84d8c89cbb8ea109511c7f3e8c671e390c3 size 5759
 MD5 d5ebc973517e1101a55b9e51f60dfae0 files/gnome-session-2.12.0-optional-tcp-wrappers.patch 5759
 RMD160 4848ed4e7016f359ee7d6c0d98d6071ed96e407a files/gnome-session-2.12.0-optional-tcp-wrappers.patch 5759
 SHA256 14f6dd6df875476902801e1de121a84d8c89cbb8ea109511c7f3e8c671e390c3 files/gnome-session-2.12.0-optional-tcp-wrappers.patch 5759
+AUX gnome-session-2.14.0-no_libnotify.patch 782 RMD160 81f1222e31740cf20332d731702e53391ab3c104 SHA1 bd26ba2d24027bdf295ad807bbee4dc5d8ea3753 SHA256 837bd0ba7214d62c0ed5c6adf456c4dadf108b05688efb29b5dcf9699f39797d size 782
 MD5 9d2dced7d4f7bad481996be5eb94eb10 files/gnome-session-2.14.0-no_libnotify.patch 782
 RMD160 81f1222e31740cf20332d731702e53391ab3c104 files/gnome-session-2.14.0-no_libnotify.patch 782
 SHA256 837bd0ba7214d62c0ed5c6adf456c4dadf108b05688efb29b5dcf9699f39797d files/gnome-session-2.14.0-no_libnotify.patch 782
+AUX gnome-session-2.6-schema_defaults.patch 1484 RMD160 25a96a56a0ee2ea3c17c64cb8f91c92ec789edfb SHA1 141d3d22f5da7faafae3190693ab3e22b83a48b1 SHA256 59997fe69ae6ef6933bc593936e02bec461ef5abf04b54d5248464c02fec1b9d size 1484
 MD5 9c41a7c69837eba927f8d546d3c13b8d files/gnome-session-2.6-schema_defaults.patch 1484
 RMD160 25a96a56a0ee2ea3c17c64cb8f91c92ec789edfb files/gnome-session-2.6-schema_defaults.patch 1484
 SHA256 59997fe69ae6ef6933bc593936e02bec461ef5abf04b54d5248464c02fec1b9d files/gnome-session-2.6-schema_defaults.patch 1484
+AUX gnome-session-2.8.1-hide_splash.patch 1469 RMD160 b5a99ee67756cc42a2d45feeb5d7c04e0caa870a SHA1 2e4e7041a9f45839e8bc6282581a0c9d57fffcde SHA256 af5aa5cc34af2952f3b3c82a1e9ebaf189ec894d3345f9286e1d7c99a74b3e63 size 1469
 MD5 b6e2c49cdafa0d5d8fe9ab4e28f5fc3d files/gnome-session-2.8.1-hide_splash.patch 1469
 RMD160 b5a99ee67756cc42a2d45feeb5d7c04e0caa870a files/gnome-session-2.8.1-hide_splash.patch 1469
 SHA256 af5aa5cc34af2952f3b3c82a1e9ebaf189ec894d3345f9286e1d7c99a74b3e63 files/gnome-session-2.8.1-hide_splash.patch 1469
+DIST gentoo-splash.png 78064 RMD160 e75052892920e1c919aae1f6e53853c27b2e063f SHA256 24fa48bc26db0d446e0098b3e94fd3cdec4610faca0b3282da0bec79bedbc179 size 78064
+DIST gnome-session-2.10.0.tar.bz2 796754 RMD160 263969c6ad6e0baa4c7cb451605223c62f7c75b1 SHA256 6331492ed748a88cf474ba5644e2a3a42f2bd5d4ce933b57da350c08badbe977 size 796754
+DIST gnome-session-2.12.0.tar.bz2 864397 RMD160 7ed5dc1bffef0d27df6f86f5d5408a1083904854 SHA256 713d1b56339dd19707edf056e08c2a0659a1430b56b4c12f759cc25f3664bb9b size 864397
+DIST gnome-session-2.14.0.tar.bz2 652379 RMD160 6082b9bd9ba84be849bcd365635e8f0733d4d6e3 SHA256 08f5605dd33a56833b0b9db52ae120d8e950e676550e70bdf839ccc26b345187 size 652379
+EBUILD gnome-session-2.10.0-r3.ebuild 2124 RMD160 48d19c71b4213693428c16a22b1a30560e2d653e SHA1 74284cb23bb5b89549178dab342ded15385aeea2 SHA256 fa3c482a4f4443c4f40d43fff5213261f6e3724413b722045c51bfe3765857af size 2124
 MD5 56aa74472b71a3a0189ff2ea99acd943 gnome-session-2.10.0-r3.ebuild 2124
 RMD160 48d19c71b4213693428c16a22b1a30560e2d653e gnome-session-2.10.0-r3.ebuild 2124
 SHA256 fa3c482a4f4443c4f40d43fff5213261f6e3724413b722045c51bfe3765857af gnome-session-2.10.0-r3.ebuild 2124
+EBUILD gnome-session-2.10.0.ebuild 1586 RMD160 982763e2dadae92b6b4ad8062acca5aa44e881a8 SHA1 45ec99fa80627fea511c841ddf5d1cfcf64134e4 SHA256 8248f0b4e7abeb93883378ccde059281bd9967c5430e01b83e878dd000bacd7f size 1586
 MD5 4499ec98ae9a50f5de83b8ce43411a80 gnome-session-2.10.0.ebuild 1586
 RMD160 982763e2dadae92b6b4ad8062acca5aa44e881a8 gnome-session-2.10.0.ebuild 1586
 SHA256 8248f0b4e7abeb93883378ccde059281bd9967c5430e01b83e878dd000bacd7f gnome-session-2.10.0.ebuild 1586
+EBUILD gnome-session-2.12.0.ebuild 1967 RMD160 98103228a6a9cb90cace252c724c204a96e62929 SHA1 f52a5e751fa0a09538ebe642bfd1a4e54803799b SHA256 5923e4c4fa00db4b2069baf8a67ea4853eaca66c27426c4a46c896bb06228014 size 1967
 MD5 0a98b57bc02653aed9053602f513fab3 gnome-session-2.12.0.ebuild 1967
 RMD160 98103228a6a9cb90cace252c724c204a96e62929 gnome-session-2.12.0.ebuild 1967
 SHA256 5923e4c4fa00db4b2069baf8a67ea4853eaca66c27426c4a46c896bb06228014 gnome-session-2.12.0.ebuild 1967
+EBUILD gnome-session-2.14.0.ebuild 2194 RMD160 b247d575b7d9cd1ccb13b5771f4dc3a1c023fc38 SHA1 13892ea12c417fb71f44992f669718830bf0219c SHA256 f3da9f26322cc37705bd7c39eba09678cf700011f12077c5b7d2081d47ffbbce size 2194
 MD5 e07770a27a7932c2c01582831c2e9b1d gnome-session-2.14.0.ebuild 2194
 RMD160 b247d575b7d9cd1ccb13b5771f4dc3a1c023fc38 gnome-session-2.14.0.ebuild 2194
 SHA256 f3da9f26322cc37705bd7c39eba09678cf700011f12077c5b7d2081d47ffbbce gnome-session-2.14.0.ebuild 2194
+MISC ChangeLog 17909 RMD160 ae4f989722871f9d121694d8e756b1885031db6c SHA1 5fc81526cc7f881983cc309d7ebfa4ae9091c947 SHA256 8d3a95a19adb993a75bd3c1a9b37de3f08dee8f6722880ece9ba0a7cf4aef5b1 size 17909
+MD5 7a092e222fcb6493af4aa86db2ec7c70 ChangeLog 17909
+RMD160 ae4f989722871f9d121694d8e756b1885031db6c ChangeLog 17909
+SHA256 8d3a95a19adb993a75bd3c1a9b37de3f08dee8f6722880ece9ba0a7cf4aef5b1 ChangeLog 17909
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 size 158
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 99ba3cd608c160c7d075ab6245a78aac files/digest-gnome-session-2.10.0 494
+RMD160 904bd4123f0f0328ff92764ee1eda6e50a9315b9 files/digest-gnome-session-2.10.0 494
+SHA256 51e8bba053ce328936233cef26cd8872e2210e8eaad62f9d25fdc8448f43bda9 files/digest-gnome-session-2.10.0 494
+MD5 99ba3cd608c160c7d075ab6245a78aac files/digest-gnome-session-2.10.0-r3 494
+RMD160 904bd4123f0f0328ff92764ee1eda6e50a9315b9 files/digest-gnome-session-2.10.0-r3 494
+SHA256 51e8bba053ce328936233cef26cd8872e2210e8eaad62f9d25fdc8448f43bda9 files/digest-gnome-session-2.10.0-r3 494
+MD5 8bb9ebc1f5e860de7919199cb3328ef1 files/digest-gnome-session-2.12.0 494
+RMD160 2c7399d29bc674237938c3522c9c44c538aa8085 files/digest-gnome-session-2.12.0 494
+SHA256 898dcef80e9216eac8633aba87b97b94c37ce99f87868d00949f8322cccad994 files/digest-gnome-session-2.12.0 494
+MD5 08af2a2d98501d0db1af578e91958d48 files/digest-gnome-session-2.14.0 494
+RMD160 63d173cf06c80e06730186be10427006521bb67d files/digest-gnome-session-2.14.0 494
+SHA256 d6d3736541d99e4be7386cd4de8eac17cab9888f0f38cfda07c6f20bb7309145 files/digest-gnome-session-2.14.0 494
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUSYsW78445TWHXcRAhzkAJ4ma0QvQ40H8Q7luoZuolMPVerEOACaA3zu
+9PpL5gb/A88OYw8InAslW9w=
+=7q/c
+-----END PGP SIGNATURE-----
