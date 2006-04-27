@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.2-r1.ebuild,v 1.5 2006/04/14 12:54:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.2-r1.ebuild,v 1.6 2006/04/27 00:13:46 vapier Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -161,7 +161,7 @@ src_compile() {
 	src_configure
 
 	if tc-is-cross-compiler ; then
-		OPT="-O1" LDFLAGS="" \
+		OPT="-O1" CFLAGS="" LDFLAGS="" \
 		./configure --with-cxx=no || die "cross-configure failed"
 		emake python Parser/pgen || die "cross-make failed"
 		mv python hostpython
