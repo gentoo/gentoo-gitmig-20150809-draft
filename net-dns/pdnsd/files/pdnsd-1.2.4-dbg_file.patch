@@ -1,0 +1,51 @@
+diff -Nru pdnsd-1.2.4.orig/src/main.c pdnsd-1.2.4/src/main.c
+--- pdnsd-1.2.4.orig/src/main.c	2005-11-12 22:03:42.000000000 +0200
++++ pdnsd-1.2.4/src/main.c	2006-04-27 09:38:38.000000000 +0300
+@@ -63,7 +63,7 @@
+ pthread_t main_thrid,servstat_thrid,statsock_thrid,tcps_thrid,udps_thrid;
+ uid_t init_uid;
+ #if DEBUG>0
+-FILE *dbg_file;
++FILE *dbg_file=NULL;
+ #endif
+ volatile int tcp_socket=-1;
+ volatile int udp_socket=-1;
+@@ -451,6 +451,19 @@
+ 		}
+ 	}
+ 
++#if DEBUG>0
++	if (global.daemon) {
++		if (debug_p) {
++		  char dbgdir[strlen(global.cache_dir)+sizeof("/pdnsd.debug")];
++		  stpcpy(stpcpy(dbgdir,global.cache_dir),"/pdnsd.debug");
++		  if (!(dbg_file=fopen(dbgdir,"w")))
++		    debug_p=0;
++		}
++	} else {
++		dbg_file=stdout;
++	}
++#endif
++
+ 	if (global.daemon && global.pidfile) {
+ 		if (unlink(global.pidfile)!=0 && errno!=ENOENT) {
+ 			log_error("Error: could not unlink pid file %s: %s",global.pidfile, strerror(errno));
+@@ -550,18 +563,6 @@
+ 		dup2(fd,1);
+ 		dup2(fd,2);
+ 		close(fd);
+-#if DEBUG>0
+-		if (debug_p) {
+-		  char dbgdir[strlen(global.cache_dir)+sizeof("/pdnsd.debug")];
+-		  stpcpy(stpcpy(dbgdir,global.cache_dir),"/pdnsd.debug");
+-		  if (!(dbg_file=fopen(dbgdir,"w")))
+-		    debug_p=0;
+-		}
+-#endif
+-	} else {
+-#if DEBUG>0
+-		dbg_file=stdout;
+-#endif
+ 	}
+ 	log_info(0,"pdnsd-%s starting.\n",VERSION);
+ 	DEBUG_MSG("Debug messages activated\n");
