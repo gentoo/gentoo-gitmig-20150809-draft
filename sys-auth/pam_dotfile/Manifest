@@ -1,6 +1,34 @@
-MD5 b327d55a751b8d192740f077e3553bd2 ChangeLog 1727
-MD5 30fbae2d4d9759fde9c1ff733dac16b2 files/digest-pam_dotfile-0.7 67
-MD5 2b5aec0eeb00f8fddd73816f0a7699c6 files/digest-pam_dotfile-0.7-r1 139
-MD5 393d06cf4b76671f8e6ce72ac71bdad8 metadata.xml 218
-MD5 502ce46ad65073cf8a3da6bb60406725 pam_dotfile-0.7-r1.ebuild 1319
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST pam_dotfile-0.7.tar.gz 229009 size 229009
+DIST pam_dotfile-patches-1.tar.bz2 2172 size 2172
+EBUILD pam_dotfile-0.7-r1.ebuild 1316 RMD160 cc1aeaa1d0362689910de78ca2c05d12e5681124 SHA1 4a7c1537f8139be042698857c59c689c1801d189 SHA256 db773e7d3986bdcee73fad8118f2623e3f8bab7998d6f1a383653d2553638953 size 1316
+MD5 eb491faf2d1ec135e13a410628608e48 pam_dotfile-0.7-r1.ebuild 1316
+RMD160 cc1aeaa1d0362689910de78ca2c05d12e5681124 pam_dotfile-0.7-r1.ebuild 1316
+SHA256 db773e7d3986bdcee73fad8118f2623e3f8bab7998d6f1a383653d2553638953 pam_dotfile-0.7-r1.ebuild 1316
+EBUILD pam_dotfile-0.7.ebuild 983 RMD160 3fac3a8dcc77a6673e2e0fbfdc820d073a961b0b SHA1 c41eb24d08740f260ef85a267c3f0117dbb5cfe8 SHA256 be7feedc390679b7f3bad676a04bc5f3809c69c0ffb740c9f770e5dc36149c69 size 983
 MD5 b4f328bd416dba2a842c1e3c0a308cd2 pam_dotfile-0.7.ebuild 983
+RMD160 3fac3a8dcc77a6673e2e0fbfdc820d073a961b0b pam_dotfile-0.7.ebuild 983
+SHA256 be7feedc390679b7f3bad676a04bc5f3809c69c0ffb740c9f770e5dc36149c69 pam_dotfile-0.7.ebuild 983
+MISC ChangeLog 1829 RMD160 f04c64ead0aa58d20fad37edfd8b74e5b05384d3 SHA1 af493dccd02aa43ea7c20f0db8ea66c52022950d SHA256 7db683be93b6c0c6107625444d168952e35009440553f4cf84c244d60db823aa size 1829
+MD5 0dbda1c385fe9a44732bec7176ea135a ChangeLog 1829
+RMD160 f04c64ead0aa58d20fad37edfd8b74e5b05384d3 ChangeLog 1829
+SHA256 7db683be93b6c0c6107625444d168952e35009440553f4cf84c244d60db823aa ChangeLog 1829
+MISC metadata.xml 218 RMD160 1955c7446d4ceb77506ba7b58ee35913c576a72c SHA1 02dacc356a39905402083cb54ae4f6dd0ac59fad SHA256 e0bb49cab71cc84d8bdad26876197164073722b378d27a5bf55bbfd2afdbd19c size 218
+MD5 393d06cf4b76671f8e6ce72ac71bdad8 metadata.xml 218
+RMD160 1955c7446d4ceb77506ba7b58ee35913c576a72c metadata.xml 218
+SHA256 e0bb49cab71cc84d8bdad26876197164073722b378d27a5bf55bbfd2afdbd19c metadata.xml 218
+MD5 30fbae2d4d9759fde9c1ff733dac16b2 files/digest-pam_dotfile-0.7 67
+RMD160 f6d11c793383da49d81edc03213b1a3a2578be82 files/digest-pam_dotfile-0.7 67
+SHA256 01c876b1824b78dd96b03cb27bf20761c6564209798c3af75254f332762a127e files/digest-pam_dotfile-0.7 67
+MD5 2b5aec0eeb00f8fddd73816f0a7699c6 files/digest-pam_dotfile-0.7-r1 139
+RMD160 9d351b54ad7dbd4343800f0a3c44ca013c7e3b27 files/digest-pam_dotfile-0.7-r1 139
+SHA256 d9087904d0c81f1856ccc639ae70cad2b83082398fb9ed803416ea4e9661ed18 files/digest-pam_dotfile-0.7-r1 139
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUA/+CRZPokWLroQRAmLvAJ9WZjoiBO9y0au0gunbqu5hpjoQNQCgvs7+
+LbOmwtHrnetRaIQ+g914B8g=
+=ZgrO
+-----END PGP SIGNATURE-----
