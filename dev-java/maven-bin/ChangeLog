@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/maven-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.16 2006/04/15 00:19:34 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.17 2006/04/27 15:24:16 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-maven-bin-1.0_rc3, files/digest-maven-bin-1.0.2,
+  files/digest-maven-bin-2.0.2, Manifest:
+  Fixing SHA256 digest, pass four
 
   15 Apr 2006; Mark Loeser <halcy0n@gentoo.org> maven-bin-2.0.2.ebuild:
   Stable on x86; bug #129082

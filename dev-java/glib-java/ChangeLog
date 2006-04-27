@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/glib-java
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glib-java/ChangeLog,v 1.7 2006/03/28 04:00:39 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glib-java/ChangeLog,v 1.8 2006/04/27 15:19:31 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-glib-java-0.2.1, Manifest:
+  Fixing SHA256 digest, pass four
 
 *glib-java-0.2.3-r1 (28 Mar 2006)
 

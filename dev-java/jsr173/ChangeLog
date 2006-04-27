@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jsr173
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.6 2006/03/11 20:00:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.7 2006/04/27 15:23:18 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-jsr173-1.0,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   11 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> jsr173-1.0.ebuild:
   Stable on ppc.

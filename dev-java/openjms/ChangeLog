@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/openjms
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/ChangeLog,v 1.7 2006/02/05 11:07:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/ChangeLog,v 1.8 2006/04/27 15:25:07 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-openjms-0.7.6.1-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
   05 Feb 2006; Simon Stelling <blubb@gentoo.org>
   +files/0.7.6.1/buildfile.patch, -files/0.7.6.1/buildfile.patch.bz2,

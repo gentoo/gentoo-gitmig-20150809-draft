@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.53 2006/04/09 13:20:12 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.54 2006/04/27 15:21:19 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-gnu-classpath-0.18, files/digest-gnu-classpath-0.19,
+  files/digest-gnu-classpath-0.20, Manifest:
+  Fixing SHA256 digest, pass four
 
   09 Apr 2006; Joshua Nichols <nichoj@gentoo.org> gnu-classpath-0.14.ebuild,
   gnu-classpath-0.18.ebuild, gnu-classpath-0.19.ebuild,

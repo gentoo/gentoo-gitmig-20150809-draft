@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xmldb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.10 2006/03/11 20:00:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.11 2006/04/27 15:25:38 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-xmldb-20011111, Manifest:
+  Fixing SHA256 digest, pass four
 
   11 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> xmldb-20011111.ebuild:
   Stable on ppc.
