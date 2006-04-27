@@ -1,24 +1,42 @@
-MD5 2fc79e421aba1bce48dec974b4470c1b ChangeLog 1575
-RMD160 269a7be176706537211eda4013778d207088f56c ChangeLog 1575
-SHA256 e2fad81936017aac32e29f8c3dadfe11b061910b6565d0b6f79b69ac73985dd7 ChangeLog 1575
-MD5 29ee9ab06a6645b9bfed724b2ea39346 files/digest-sensors-applet-1.5 70
-RMD160 68095daf8e56c8c6e924ccf969df854964bbb8da files/digest-sensors-applet-1.5 70
-SHA256 fb5a88a86f194f0147c22ad1c164144a751fe07f032929dd5e9e91c744d0cd15 files/digest-sensors-applet-1.5 70
-MD5 15bba24933d913789d7e7a920cf21e05 files/digest-sensors-applet-1.5.2 72
-RMD160 630ed9cc0170aecdcfab3610a1e606ffc0547e8c files/digest-sensors-applet-1.5.2 72
-SHA256 e9b1be31b023691c10f87de965def6982d0bd75119dfa254e46bc9499da253b9 files/digest-sensors-applet-1.5.2 72
-MD5 7eab4c0dbf4c3bf3c1b5b00f9ee02459 files/digest-sensors-applet-1.6 256
-RMD160 7119bce150601d2e1bf1927820a316c63b69758e files/digest-sensors-applet-1.6 256
-SHA256 96f4b0c596f60667c34e9dbba2da6979b74feec5b7d200f4040387bada3443f0 files/digest-sensors-applet-1.6 256
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST sensors-applet-1.5.2.tar.gz 153718 RMD160 97f5b55a220dabdee4dcbad97caf5eeeb6b30764 SHA256 18fa21f87d9c9d0998377e02e19c896760076133d2a1dde4fb505bdcd08d81db size 153718
+DIST sensors-applet-1.5.tar.gz 154209 RMD160 6ba20d658e3a3696ada2572dbf8e556e6af8499a SHA256 df672f493313abc7b6c9cea45ec34e9120e6f2ca18e0a249398058143ad0c9ca size 154209
+DIST sensors-applet-1.6.tar.gz 212215 RMD160 a9836b907bece45fdb7026ee75f27f7b8c2c8663 SHA256 3d076c4c4d9e321a06c36ba6a55ff5f41625abd3a0b6304ea5692c22ac824f28 size 212215
+EBUILD sensors-applet-1.5.2.ebuild 734 RMD160 e371b5a8cf3dfc22b0026176631c8b8990bef380 SHA1 37be2eea6bbaf85f83fbaf3900cc3923651b291c SHA256 c7b39faa029ad5837385e292c23ec092fe6033bdef5ca7cac399a6b97b2d58fd size 734
 MD5 fd80d897b36bfe44f472a0e18d60cd3c sensors-applet-1.5.2.ebuild 734
 RMD160 e371b5a8cf3dfc22b0026176631c8b8990bef380 sensors-applet-1.5.2.ebuild 734
 SHA256 c7b39faa029ad5837385e292c23ec092fe6033bdef5ca7cac399a6b97b2d58fd sensors-applet-1.5.2.ebuild 734
+EBUILD sensors-applet-1.5.ebuild 735 RMD160 7611f63b398ef341a91387e926773a99fb3c6d28 SHA1 724dd9bb8aed7c498d035fd626ba108f5ec1a871 SHA256 8f995afa1760c2846d211f1388494b07e28b60dbecc864943a274041c6795c08 size 735
 MD5 b39e2551c39bb1c680d6a54b6496eea2 sensors-applet-1.5.ebuild 735
 RMD160 7611f63b398ef341a91387e926773a99fb3c6d28 sensors-applet-1.5.ebuild 735
 SHA256 8f995afa1760c2846d211f1388494b07e28b60dbecc864943a274041c6795c08 sensors-applet-1.5.ebuild 735
+EBUILD sensors-applet-1.6.ebuild 839 RMD160 54f3bb21bd4a9e408dc6257ba3e6ed7463445435 SHA1 b6f2927fccbcaf5b9fa0a7f15bfb28cd5e3dfb87 SHA256 280168fb066d32a271ed15521812bb9ac9554496b15c361924c38089e34b7a5e size 839
 MD5 be15730e1150f5e07fa7788432ee3cdc sensors-applet-1.6.ebuild 839
 RMD160 54f3bb21bd4a9e408dc6257ba3e6ed7463445435 sensors-applet-1.6.ebuild 839
 SHA256 280168fb066d32a271ed15521812bb9ac9554496b15c361924c38089e34b7a5e sensors-applet-1.6.ebuild 839
+MISC ChangeLog 1773 RMD160 fc69842dcc14d2fcdf3a48f00bfeb7ee99280b17 SHA1 2b4c6761dce773ef90973e7f95d12e15775fd7e3 SHA256 3ea645814d3a302c97c72daddf6ff1f03a25c335b7f10a972c147d9134b7b0da size 1773
+MD5 97356b568c9661bf33299c1544c3b1a1 ChangeLog 1773
+RMD160 fc69842dcc14d2fcdf3a48f00bfeb7ee99280b17 ChangeLog 1773
+SHA256 3ea645814d3a302c97c72daddf6ff1f03a25c335b7f10a972c147d9134b7b0da ChangeLog 1773
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 size 158
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 933318e8c88c8046cccecdbed040519f files/digest-sensors-applet-1.5 256
+RMD160 329968659d716635ba4815f85c88c590811bdd92 files/digest-sensors-applet-1.5 256
+SHA256 aa3063f0ee3933fa68e7c4897cfe079dab7531476635516bbff81b6411c1f384 files/digest-sensors-applet-1.5 256
+MD5 bbf00b6827197fd8a823e6f311d0becf files/digest-sensors-applet-1.5.2 262
+RMD160 6e9f893bb92032eb6bdc724535eaaa652835d869 files/digest-sensors-applet-1.5.2 262
+SHA256 60631f38a008365d9e5f13aac28243f989dcacbe75d1af23924eacafb3a21108 files/digest-sensors-applet-1.5.2 262
+MD5 bcd7637ab4df52cd6790d90d49ba7817 files/digest-sensors-applet-1.6 256
+RMD160 cec5709dc79b65c22d18b81c40dca108866accb6 files/digest-sensors-applet-1.6 256
+SHA256 f5f54b95cd5887c6133d4354e450efb12f53f6d9d2342f3bfbb07850809ce8c5 files/digest-sensors-applet-1.6 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUSf3W78445TWHXcRAqkzAJ91s8RWtfjTniRUKlvQIY3J56fGUACePVLY
+QZj3JfhMuhUpmkbwcVdlK/4=
+=q9LV
+-----END PGP SIGNATURE-----
