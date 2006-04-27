@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/glob2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.28 2006/03/13 08:35:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.29 2006/04/27 20:08:34 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-glob2-0.8.15,
+  files/digest-glob2-0.8.16, files/digest-glob2-0.8.17,
+  files/digest-glob2-0.8.18, Manifest:
+  Fixing SHA256 digest, pass four
 
 *glob2-0.8.19 (13 Mar 2006)
 
