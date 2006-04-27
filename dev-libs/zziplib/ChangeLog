@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/zziplib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.24 2006/02/20 16:41:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.25 2006/04/27 17:13:00 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-zziplib-0.13.36, files/digest-zziplib-0.13.38,
+  files/digest-zziplib-0.13.45, Manifest:
+  Fixing SHA256 digest, pass four
 
   20 Feb 2006; Markus Rothe <corsair@gentoo.org> zziplib-0.13.45.ebuild:
   Stable on ppc64

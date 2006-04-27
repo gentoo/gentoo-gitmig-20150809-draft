@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libtomcrypt
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.26 2005/11/02 20:37:20 genstef Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.27 2006/04/27 17:01:12 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-libtomcrypt-1.03, files/digest-libtomcrypt-1.06, Manifest:
+  Fixing SHA256 digest, pass four
 
   02 Nov 2005; Stefan Schweizer <genstef@gentoo.org>
   libtomcrypt-1.03.ebuild, libtomcrypt-1.06.ebuild:

@@ -1,2 +1,6 @@
-MD5 dde02db234dea892bee298390890502e cyrus-sasl-2.1.21.tar.gz 1584931
 MD5 9a8de902bf642a4f66007d07c16335ce cyrus-sasl-2.1.21-ntlm_impl-spnego.patch.gz 7465
+RMD160 acf1d479c4559acdda66ab66da999ffc2f68d029 cyrus-sasl-2.1.21-ntlm_impl-spnego.patch.gz 7465
+SHA256 b02b97bbc3968248c4f04d3d67a9aac4baa4aa4f8388eefec548475784a2d968 cyrus-sasl-2.1.21-ntlm_impl-spnego.patch.gz 7465
+MD5 dde02db234dea892bee298390890502e cyrus-sasl-2.1.21.tar.gz 1584931
+RMD160 93e0e1868453c5781602b5cce23e746b8823a26b cyrus-sasl-2.1.21.tar.gz 1584931
+SHA256 fa37bcc8b855597aa1e6b72915b38985991b4abd4e7bc116c3e88fd4e86fb0fb cyrus-sasl-2.1.21.tar.gz 1584931

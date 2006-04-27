@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.144 2006/04/15 17:29:37 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.145 2006/04/27 16:22:14 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-cyrus-sasl-2.1.18-r2, files/digest-cyrus-sasl-2.1.19-r1,
+  files/digest-cyrus-sasl-2.1.20, files/digest-cyrus-sasl-2.1.20-r1,
+  files/digest-cyrus-sasl-2.1.20-r2, files/digest-cyrus-sasl-2.1.21,
+  files/digest-cyrus-sasl-2.1.21-r1, files/digest-cyrus-sasl-2.1.21-r2,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   15 Apr 2006; Simon Stelling <blubb@gentoo.org>
   cyrus-sasl-2.1.21-r2.ebuild:

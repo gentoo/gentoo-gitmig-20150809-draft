@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/exml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/exml/ChangeLog,v 1.1 2006/02/11 05:16:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/exml/ChangeLog,v 1.2 2006/04/27 16:25:54 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-exml-9999,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
 *exml-* (11 Feb 2006)
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/bglibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.39 2006/04/22 10:58:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.40 2006/04/27 16:09:46 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-bglibs-1.001,
+  files/digest-bglibs-1.009, files/digest-bglibs-1.009-r1,
+  files/digest-bglibs-1.011, files/digest-bglibs-1.017,
+  files/digest-bglibs-1.019, files/digest-bglibs-1.019-r1,
+  files/digest-bglibs-1.031, Manifest:
+  Fixing SHA256 digest, pass four
 
   22 Apr 2006; <nixnut@gentoo.org> bglibs-1.041.ebuild:
   Stable on ppc. bug #123462
