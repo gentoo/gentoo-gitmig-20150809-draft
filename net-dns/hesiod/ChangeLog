@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/hesiod
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.18 2006/01/28 13:31:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.19 2006/04/27 21:42:51 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-hesiod-3.0.2,
+  files/digest-hesiod-3.0.2-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
   28 Jan 2006; Simon Stelling <blubb@gentoo.org>
   +files/hesiod-3.0.2-redhat.patch, -files/hesiod-3.0.2-redhat.patch.gz,

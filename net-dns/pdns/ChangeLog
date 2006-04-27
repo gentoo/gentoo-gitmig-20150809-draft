@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/pdns
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.28 2006/04/06 20:26:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.29 2006/04/27 21:43:24 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-pdns-2.9.18,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   06 Apr 2006; Sven Wegener <swegener@gentoo.org> pdns-2.9.20.ebuild:
   Change the configure logic, we can pass the lib and include paths without
