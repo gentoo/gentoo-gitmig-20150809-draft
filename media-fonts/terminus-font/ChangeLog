@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/terminus-font
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.38 2006/03/31 17:03:21 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.39 2006/04/27 22:48:43 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-terminus-font-4.07, files/digest-terminus-font-4.11,
+  files/digest-terminus-font-4.12, files/digest-terminus-font-4.14,
+  files/digest-terminus-font-4.14-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
 *terminus-font-4.20 (31 Mar 2006)
 

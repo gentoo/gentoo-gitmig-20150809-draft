@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/arkpandora
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arkpandora/ChangeLog,v 1.8 2006/04/02 17:53:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arkpandora/ChangeLog,v 1.9 2006/04/27 22:45:22 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-arkpandora-2.04, Manifest:
+  Fixing SHA256 digest, pass four
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> arkpandora-2.04.ebuild:
   Add ~x86-fbsd keyword.
