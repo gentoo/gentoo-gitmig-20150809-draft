@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/qmail-ldap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.11 2006/02/17 16:34:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.12 2006/04/27 22:28:57 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-qmail-ldap-1.03-r1, files/digest-qmail-ldap-1.03-r2,
+  files/digest-qmail-ldap-1.03-r3, files/digest-qmail-ldap-1.03-r4,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   17 Feb 2006; Simon Stelling <blubb@gentoo.org> +files/errno.patch,
   -files/errno.patch.bz2, +files/homedir.patch, -files/homedir.patch.bz2,
