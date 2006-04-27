@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/emool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emool/ChangeLog,v 1.3 2006/04/07 16:52:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emool/ChangeLog,v 1.4 2006/04/27 21:43:59 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-emool-0.10,
+  Manifest:
+  Fix broken digest.
 
   07 Apr 2006; Simon Stelling <blubb@gentoo.org> metadata.xml:
   add to the amd64 herd
