@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/valknut
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.24 2006/02/26 05:37:06 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.25 2006/04/27 22:16:00 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-valknut-0.2.20,
+  files/digest-valknut-0.2.21, files/digest-valknut-0.3.0,
+  files/digest-valknut-0.3.3, files/digest-valknut-0.3.5, Manifest:
+  Fixing SHA256 digest, pass four
 
   26 Feb 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/valknut-0.3.7-gcc41.patch, valknut-0.3.7.ebuild:
