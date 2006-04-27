@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/vixie-cron
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.26 2006/04/19 22:16:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.27 2006/04/27 23:26:56 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-vixie-cron-3.0.1-r4, files/digest-vixie-cron-3.0.1-r5,
+  files/digest-vixie-cron-4.1-r7, files/digest-vixie-cron-4.1-r8, Manifest:
+  Fixing SHA256 digest, pass four
 
   19 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   vixie-cron-4.1-r8.ebuild:

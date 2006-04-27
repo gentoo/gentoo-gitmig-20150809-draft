@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/schedtool
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/schedtool/ChangeLog,v 1.3 2006/02/09 20:41:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/schedtool/ChangeLog,v 1.4 2006/04/27 23:26:28 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-schedtool-1.2.3, files/digest-schedtool-1.2.4, Manifest:
+  Fixing SHA256 digest, pass four
 
 *schedtool-1.2.6 (09 Feb 2006)
 
