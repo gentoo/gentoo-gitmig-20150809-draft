@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.1 2006/03/13 21:35:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.2 2006/04/27 14:46:29 wolf31o2 Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # New toys enabled by 2.6 headers
@@ -9,3 +9,25 @@ gnome-extra/hal-device-manager
 sys-apps/hal
 sys-apps/ivman
 sys-apps/pmount
+
+# Chris Gianelloni <wolf31o2@gentoo.org>
+# Packages that require 2.6 sources/headers
+dev-util/rootstrap
+dev-util/systemtap
+x11-misc/linuxwacom
+net-firewall/ipsec-tools
+media-libs/libipoddevice
+sys-apps/keyutils
+sys-apps/raidutils
+media-plugins/gst-plugins-v4l2
+net-misc/mrouted
+net-misc/lksctp-tools
+media-video/kaffeine
+>=media-video/transcode-1.0.2-r2
+media-video/thoggen
+sys-cluster/cman-kernel
+sys-cluster/dlm-kernel
+sys-cluster/gfs-kernel
+sys-cluster/gnbd-kernel
+media-sound/banshee
+
