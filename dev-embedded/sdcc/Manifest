@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 66a6edf136410cbb8cced22ca2d0e94b sdcc-2.5.0.ebuild 1061
-MD5 7d36efc2d3cf66fe798832feb7034d92 metadata.xml 254
-MD5 a77be59c5a278ffa7ee68ccfdf8bb0d8 ChangeLog 4221
-MD5 e85f3ce84504295db28455e101342da4 sdcc-2.4.0.ebuild 1032
+MD5 c90ae31f451800df221d312699d0c2e9 ChangeLog 4446
 MD5 bfc177a29ceb52dfa8883108634d1e7e files/digest-sdcc-2.4.0 63
 MD5 d24d389e60331ef6cdb454ee3d8b440c files/digest-sdcc-2.5.0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGUXxmdTrptrqvGERAse9AKCEhRJ8/nJvmMqWvG5r5VtFELB8QQCcDkGo
-5k5FJKEwd3tKcTZXwVnfU8M=
-=PXiW
------END PGP SIGNATURE-----
+MD5 04cb4af4996e9e93be648e62c309e058 files/digest-sdcc-2.5.0_p20060423 140
+MD5 7d36efc2d3cf66fe798832feb7034d92 metadata.xml 254
+MD5 e85f3ce84504295db28455e101342da4 sdcc-2.4.0.ebuild 1032
+MD5 66a6edf136410cbb8cced22ca2d0e94b sdcc-2.5.0.ebuild 1061
+MD5 b2031f6015514d257e90b27ae0f766f8 sdcc-2.5.0_p20060423.ebuild 1317

@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/sdcc
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.25 2005/09/03 06:42:37 dragonheart Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.26 2006/04/27 17:17:03 calchan Exp $
+
+*sdcc-2.5.0_p20060423 (27 Apr 2006)
+
+  27 Apr 2006; Denis Dupeyron <calchan@gentoo.org>
+  +sdcc-2.5.0_p20060423.ebuild:
+  Closing bug #85467. New snapshot (Microchip PIC support), cleanups, use of
+  boehm-gc, documentation fix.
 
   03 Sep 2005; Daniel Black <dragonheart@gentoo.org> sdcc-2.5.0.ebuild:
   qa fixes
