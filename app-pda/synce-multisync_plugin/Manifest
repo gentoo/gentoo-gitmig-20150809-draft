@@ -1,40 +1,49 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4ea8e952f5e44e9c5313381a299eed22 ChangeLog 1547
-RMD160 e2fb9cd932b1852c49db50ab40083fe1d6371fb9 ChangeLog 1547
-SHA256 bdf06e58cdfe8a757c0bf0b6569a58348a3eefe6219c756d0dc24855c1a9f704 ChangeLog 1547
-MD5 a5f2f9c533a14ab27aa9565e8860f7e8 files/digest-synce-multisync_plugin-0.8.2 80
-RMD160 c47011ac4c8afba342f6021c5edff89863f19fb0 files/digest-synce-multisync_plugin-0.8.2 80
-SHA256 ef1fc34834f79d33bd4d90ba03db76d894cc297e92ad3b789d38a9b1fd4313f8 files/digest-synce-multisync_plugin-0.8.2 80
-MD5 a5f2f9c533a14ab27aa9565e8860f7e8 files/digest-synce-multisync_plugin-0.8.2-r1 80
-RMD160 c47011ac4c8afba342f6021c5edff89863f19fb0 files/digest-synce-multisync_plugin-0.8.2-r1 80
-SHA256 ef1fc34834f79d33bd4d90ba03db76d894cc297e92ad3b789d38a9b1fd4313f8 files/digest-synce-multisync_plugin-0.8.2-r1 80
-MD5 4f76cbeeeb2e949f12850b089ca64fd6 files/digest-synce-multisync_plugin-0.8.9 80
-RMD160 d78ee23bcc013c52cf9d7e03233a556bba663f3d files/digest-synce-multisync_plugin-0.8.9 80
-SHA256 3c05e58a065a2c0466013b32a1b2f1f9d25503ab2ec0366e6bf67f351ed1099b files/digest-synce-multisync_plugin-0.8.9 80
-MD5 cbdecc21120d4542a03f3b48175027c1 files/digest-synce-multisync_plugin-0.9.0 80
-RMD160 f3c79cc2b90c3b215005542e732bbde8f2488e51 files/digest-synce-multisync_plugin-0.9.0 80
-SHA256 3cfeaabe7ac0912223052762a39905c6fdd0bdff8386eb3341a50399ca7e1993 files/digest-synce-multisync_plugin-0.9.0 80
-MD5 cec8009dfd39aa61b9eb04c3a632e6b3 metadata.xml 247
-RMD160 937a2db70b339878008f3b75ab273e465013509e metadata.xml 247
-SHA256 2f340c41916aa86adc042a2b010a45e00fa6592461c77ac0434d5f4bf46ce07b metadata.xml 247
+DIST synce-multisync_plugin-0.8.2.tar.gz 269589 RMD160 74214f99e16c26041dca1351e7c17b531482d651 SHA256 10b0bd1ff1ccf2933f7104c8bfccda214573f6b0b7c8288f7ec044ae21cb24d4 size 269589
+DIST synce-multisync_plugin-0.8.9.tar.gz 202534 RMD160 969a75e56e1bb4efa13224e613f399dc1b47a8f8 SHA256 ab61b060a49a91a146c557764e9c9a51ecc0b27e8702f8404d64cd332cda7778 size 202534
+DIST synce-multisync_plugin-0.9.0.tar.gz 327269 RMD160 431f7e07e694c15499fe5fb2c52905707e15a4a5 SHA256 70f1a0e4bbeaf71f7403af95aac56eeb7aae0791e2303521e2d0e682c815a94d size 327269
+EBUILD synce-multisync_plugin-0.8.2-r1.ebuild 820 RMD160 56f6dd2752a4e4fc15b32650ee590a9bab58836c SHA1 3f76a8cf87187c6474ca9eb0daa53f5d86028cea SHA256 7841a238851df900600dea6a386a51041309d6f4f0bfa2b9ca5da73f3be37758 size 820
 MD5 27f042c2c03390aa2634058b90000d6e synce-multisync_plugin-0.8.2-r1.ebuild 820
 RMD160 56f6dd2752a4e4fc15b32650ee590a9bab58836c synce-multisync_plugin-0.8.2-r1.ebuild 820
 SHA256 7841a238851df900600dea6a386a51041309d6f4f0bfa2b9ca5da73f3be37758 synce-multisync_plugin-0.8.2-r1.ebuild 820
+EBUILD synce-multisync_plugin-0.8.2.ebuild 790 RMD160 789f5edde63b2607a37954bbb41a83e1dcdcc9f4 SHA1 5978abbbab0a24d6b7decaf06c314d4975d4d967 SHA256 4c0627ff5beaf78b8f55cf16cef498e00c691c7671bea5eb68335c6f29e909cf size 790
 MD5 8aca09490e55b8faa6277c74cfd0f314 synce-multisync_plugin-0.8.2.ebuild 790
 RMD160 789f5edde63b2607a37954bbb41a83e1dcdcc9f4 synce-multisync_plugin-0.8.2.ebuild 790
 SHA256 4c0627ff5beaf78b8f55cf16cef498e00c691c7671bea5eb68335c6f29e909cf synce-multisync_plugin-0.8.2.ebuild 790
+EBUILD synce-multisync_plugin-0.8.9.ebuild 852 RMD160 e03f46bc0fd3f7676bf0db348b5791e68627d30d SHA1 218aa2a31d5d2c12a72774b56d47b8636f08caf4 SHA256 0d1a60af6fbf1415771c3785d2e3ae94dbc90f360a83729f2e53c93d09ee15d4 size 852
 MD5 86feb749accc7e60f2383bac3243a2c8 synce-multisync_plugin-0.8.9.ebuild 852
 RMD160 e03f46bc0fd3f7676bf0db348b5791e68627d30d synce-multisync_plugin-0.8.9.ebuild 852
 SHA256 0d1a60af6fbf1415771c3785d2e3ae94dbc90f360a83729f2e53c93d09ee15d4 synce-multisync_plugin-0.8.9.ebuild 852
+EBUILD synce-multisync_plugin-0.9.0.ebuild 819 RMD160 bbfa2150ef9e422da81759ff232b5ef158a921f9 SHA1 8ffdb1b1f0c975db4d7c0ea4f76d4d271c7f71ba SHA256 aa3d679f8b6b9dbf558aa1548860b29d548ef18b088801f92f19b24898d9a330 size 819
 MD5 9bc013721a1d4b7943ae7f32fce6902a synce-multisync_plugin-0.9.0.ebuild 819
 RMD160 bbfa2150ef9e422da81759ff232b5ef158a921f9 synce-multisync_plugin-0.9.0.ebuild 819
 SHA256 aa3d679f8b6b9dbf558aa1548860b29d548ef18b088801f92f19b24898d9a330 synce-multisync_plugin-0.9.0.ebuild 819
+MISC ChangeLog 1822 RMD160 b913e4af5f353d5f3c2b9d52f78c72c585a0ebd4 SHA1 48c193efdab9772b24707c760e90a9815dba860f SHA256 3cd851c8d83ff8306d2dee9ad3186f2954aeb34b42bd53f000df5e33bf217d43 size 1822
+MD5 7cb6d7894dea3cf2aa189d29d28ddd9c ChangeLog 1822
+RMD160 b913e4af5f353d5f3c2b9d52f78c72c585a0ebd4 ChangeLog 1822
+SHA256 3cd851c8d83ff8306d2dee9ad3186f2954aeb34b42bd53f000df5e33bf217d43 ChangeLog 1822
+MISC metadata.xml 247 RMD160 937a2db70b339878008f3b75ab273e465013509e SHA1 7b9f06cb69410093cf444ba5ef34a1b170ee84e8 SHA256 61a2596ff25cc53bdf8e96ab23ef91a02530299d779ca26e083618cc8beeff06 size 247
+MD5 cec8009dfd39aa61b9eb04c3a632e6b3 metadata.xml 247
+RMD160 937a2db70b339878008f3b75ab273e465013509e metadata.xml 247
+SHA256 61a2596ff25cc53bdf8e96ab23ef91a02530299d779ca26e083618cc8beeff06 metadata.xml 247
+MD5 8eed589a67c99cd6bf5d152b998b5891 files/digest-synce-multisync_plugin-0.8.2 286
+RMD160 fbd96758164ef2bcc47a23b5a958bb43a011eddb files/digest-synce-multisync_plugin-0.8.2 286
+SHA256 10ee45223a8a80ff2ee4d2330bdbcd648c1c4ce3c0381fbd7a8188bd395e17c1 files/digest-synce-multisync_plugin-0.8.2 286
+MD5 8eed589a67c99cd6bf5d152b998b5891 files/digest-synce-multisync_plugin-0.8.2-r1 286
+RMD160 fbd96758164ef2bcc47a23b5a958bb43a011eddb files/digest-synce-multisync_plugin-0.8.2-r1 286
+SHA256 10ee45223a8a80ff2ee4d2330bdbcd648c1c4ce3c0381fbd7a8188bd395e17c1 files/digest-synce-multisync_plugin-0.8.2-r1 286
+MD5 59a9ea3c9361e3d8653c16be5a62a422 files/digest-synce-multisync_plugin-0.8.9 286
+RMD160 8ede22ca16532f1d7376e4dc69e94bb480f03d3e files/digest-synce-multisync_plugin-0.8.9 286
+SHA256 09f5911e28ad9864f2be43a12025add388f4020af0539105b609f31a86141b55 files/digest-synce-multisync_plugin-0.8.9 286
+MD5 3aaee4894952849244bab4848b12e93e files/digest-synce-multisync_plugin-0.9.0 286
+RMD160 5c3bea4c7c04ca4ad04b30b411041812eae40472 files/digest-synce-multisync_plugin-0.9.0 286
+SHA256 469dc0fb4b82cce5c435f564264ddc3e66c1d85e532b1ff6fee5959344fa29e9 files/digest-synce-multisync_plugin-0.9.0 286
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEGbpoub4+zaPCR/oRAg3BAKCI5AlSCp3IWUvtJeMGCbWO6kNn8ACfRGwg
-6+wH0kRofux4zVFbU/xWZRk=
-=BqRO
+iD8DBQFEUMpmW78445TWHXcRAlqQAJ9HQxfA5lF/MmlIxMfem+LtwXoSVwCfTvaO
+BHRfHjv1T3Y7oXtFqLeaBXU=
+=l4Wa
 -----END PGP SIGNATURE-----

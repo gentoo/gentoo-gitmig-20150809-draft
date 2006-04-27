@@ -1,36 +1,58 @@
-MD5 714eb6eef7ac99316a23ac994980eab2 ChangeLog 2167
-RMD160 54eacbfa2ef19528e5e41b27610b79d2577c5eb4 ChangeLog 2167
-SHA256 b681c042d2510ec914a1777574e69ec00701f77f7d1d4ebfd524e1618fd421b1 ChangeLog 2167
-MD5 b8f8dd3fb65bc8010c1888e973947998 files/digest-synce-librapi2-0.7 70
-RMD160 ee160198f3137e1b5c5f857d4aeeb571cb9d47e4 files/digest-synce-librapi2-0.7 70
-SHA256 a27a1799bf15baaa7429d5d817916b09b95ef27d30cf02641ead9dcfa2d7de7e files/digest-synce-librapi2-0.7 70
-MD5 80909d9cc67db76633d236fa62ac7c00 files/digest-synce-librapi2-0.8.1 72
-RMD160 c00d15cf90925382dd2510ffb8f2f908b278bcec files/digest-synce-librapi2-0.8.1 72
-SHA256 d6399678284ac2219e8b3da49ebb627bd72c8c06042072e2ed94d51f6178b36f files/digest-synce-librapi2-0.8.1 72
-MD5 7763746ee0503aaef267d97285ef8544 files/digest-synce-librapi2-0.8.9 72
-RMD160 8a1fb9b45225efaeb43b61c95c4f69429e44a9de files/digest-synce-librapi2-0.8.9 72
-SHA256 94e92a1730bddc43154e4a4a6aeffcdaa1f71c25b6e65b114c8c5917ad65f3ee files/digest-synce-librapi2-0.8.9 72
-MD5 1cf4989a7fa70f83e3296dcb6d8cda6c files/digest-synce-librapi2-0.9.0 72
-RMD160 dcd07e845cf6c9f396d62046fd8be5a75d786e3b files/digest-synce-librapi2-0.9.0 72
-SHA256 1591038ca6ce6d3d28779ca5044e9093ca0e6c36bebbf85bf33e90db6adc208c files/digest-synce-librapi2-0.9.0 72
-MD5 549d6c39b72b6cbfe113230c04c09502 files/digest-synce-librapi2-0.9.1 72
-RMD160 8564d6c6905683b69e6408a4bc58250d03b481dc files/digest-synce-librapi2-0.9.1 72
-SHA256 17158edcb278327e152f86c901df49ad872fce54790dcab4258babfb2c45e88c files/digest-synce-librapi2-0.9.1 72
-MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
-RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe metadata.xml 156
-SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST synce-librapi2-0.7.tar.gz 269400 RMD160 7ecb1f4ca73d900301f2d60fd611e739eadaf676 SHA256 d0e84b1361ff7ca9a4dfa24f7b3a48fa62be1068090685a9c659ba2da47cc45e size 269400
+DIST synce-librapi2-0.8.1.tar.gz 358399 RMD160 7bb4294191ebe0ead83d5bab1c2b3b2f3bd981a1 SHA256 eb374f9614fbac369c9ca2f6ef1aed8275de8579b1783b88c3e1cfdd2af24859 size 358399
+DIST synce-librapi2-0.8.9.tar.gz 282486 RMD160 0ddba4fb41a3b835b64f90e662a5a0d8f1314435 SHA256 6371a990e9e0cb8ba5c29b490de0bf0d1bc528d4da9c30f13adaf4ddf617a69a size 282486
+DIST synce-librapi2-0.9.0.tar.gz 383260 RMD160 fc30d54e4ac6df2f057f8d536d47235ba91543a9 SHA256 1e74432b90eaf78cadf56e7f028ac005df37624be390e5f708cb9df0eddb855f size 383260
+DIST synce-librapi2-0.9.1.tar.gz 386579 RMD160 a3cec3dd032fd5ded241267ed4599407c3b1e2ba SHA256 cb2b8448f42ec536b552d0221a4449cf9608793976ffa0d9770b33f669ad9f66 size 386579
+EBUILD synce-librapi2-0.7.ebuild 678 RMD160 1c8a23abfdaac4aa65c1220d30fed35508e43e6b SHA1 f27ce933733a2146e30177ca59f903b2bbb0c44d SHA256 928903227e5a534de2f5f01befcbdacd68ed50973213c2e7d21f2bd441f71ea0 size 678
 MD5 f6c8c8e192dde682caa0a4d41fbb6954 synce-librapi2-0.7.ebuild 678
 RMD160 1c8a23abfdaac4aa65c1220d30fed35508e43e6b synce-librapi2-0.7.ebuild 678
 SHA256 928903227e5a534de2f5f01befcbdacd68ed50973213c2e7d21f2bd441f71ea0 synce-librapi2-0.7.ebuild 678
+EBUILD synce-librapi2-0.8.1.ebuild 710 RMD160 54002395798f7a8475a7fe85c2f376cdca3df413 SHA1 0e5c735d57eeed627958e16089f3b188cca0a9b2 SHA256 9fc85c533f17820dc832ffd48995f4f22c9bfa25c163c571b17468fd8695f5c5 size 710
 MD5 1012f691390eb71772c5b26cf54a44a5 synce-librapi2-0.8.1.ebuild 710
 RMD160 54002395798f7a8475a7fe85c2f376cdca3df413 synce-librapi2-0.8.1.ebuild 710
 SHA256 9fc85c533f17820dc832ffd48995f4f22c9bfa25c163c571b17468fd8695f5c5 synce-librapi2-0.8.1.ebuild 710
+EBUILD synce-librapi2-0.8.9.ebuild 710 RMD160 abe20aa6681d63c68b49e16a1a3e1414da2fc47a SHA1 302dc5ff6d53a3eadc78ffb2c9be568b06dbeeee SHA256 f9e699c341a60e94ba82ef0f3621aaa36a4562499fa937a79e2c831068f45e16 size 710
 MD5 3d07d780c6445014e6a684d15c23c4fa synce-librapi2-0.8.9.ebuild 710
 RMD160 abe20aa6681d63c68b49e16a1a3e1414da2fc47a synce-librapi2-0.8.9.ebuild 710
 SHA256 f9e699c341a60e94ba82ef0f3621aaa36a4562499fa937a79e2c831068f45e16 synce-librapi2-0.8.9.ebuild 710
+EBUILD synce-librapi2-0.9.0.ebuild 694 RMD160 9dd8d1f6741e114105ddbfed54d64da3caebb757 SHA1 73c8b94f9d8187b7a74d6e74f4f780e4cb0b9573 SHA256 b0dd8ff1bbf4d8b67795d62f17e57791852765b1d469454393a2f9cd0374686a size 694
 MD5 1587cf252b7a1eb6f84ec8cf1eb2ab5c synce-librapi2-0.9.0.ebuild 694
 RMD160 9dd8d1f6741e114105ddbfed54d64da3caebb757 synce-librapi2-0.9.0.ebuild 694
 SHA256 b0dd8ff1bbf4d8b67795d62f17e57791852765b1d469454393a2f9cd0374686a synce-librapi2-0.9.0.ebuild 694
+EBUILD synce-librapi2-0.9.1.ebuild 643 RMD160 62e6acd28a3eee5ec0723e4908da172d4a5ca935 SHA1 50241f7fcfb3c98f82e293cb167e36e69890343a SHA256 2ebd4738578590ad15299f163cedb434fc8e2e4ba2931420514e257959dde89b size 643
 MD5 41d8ad88d31a0b761cbb5e34aed7d7eb synce-librapi2-0.9.1.ebuild 643
 RMD160 62e6acd28a3eee5ec0723e4908da172d4a5ca935 synce-librapi2-0.9.1.ebuild 643
 SHA256 2ebd4738578590ad15299f163cedb434fc8e2e4ba2931420514e257959dde89b synce-librapi2-0.9.1.ebuild 643
+MISC ChangeLog 2439 RMD160 9c7c049f2e43d451de00fc955994c897fd2846e4 SHA1 3bd61398b2953e7519d1a9db571b2fadd8b580af SHA256 768907d70213bc0b420acefa9b44c26301d2f39733d92ac4b91d837013e8442a size 2439
+MD5 cff400094d90bb549cc243f7b79dfa25 ChangeLog 2439
+RMD160 9c7c049f2e43d451de00fc955994c897fd2846e4 ChangeLog 2439
+SHA256 768907d70213bc0b420acefa9b44c26301d2f39733d92ac4b91d837013e8442a ChangeLog 2439
+MISC metadata.xml 156 RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe SHA1 5b9cb277159d763c133920e483df8d3d587cf7e2 SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb size 156
+MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
+RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe metadata.xml 156
+SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata.xml 156
+MD5 e5e77566c110d89a485e9235919341d3 files/digest-synce-librapi2-0.7 256
+RMD160 4c56ac2f61b0e348166fb5e6fc479268e613cdcc files/digest-synce-librapi2-0.7 256
+SHA256 b4b1316a3d86e9e2c975511e4a13c82d8a40db74f46c4e5beacaa38852d72571 files/digest-synce-librapi2-0.7 256
+MD5 a9b1d688ebc2f6b7dfee4ad79c544300 files/digest-synce-librapi2-0.8.1 262
+RMD160 da12ad1079a456cd0b84f87dac3775702ae44242 files/digest-synce-librapi2-0.8.1 262
+SHA256 91cef6d911ad5cc327e626722409cc36ca9165cb015a2c20806014568b440a2c files/digest-synce-librapi2-0.8.1 262
+MD5 86936d5805b0eda2c91b2e56731e5df6 files/digest-synce-librapi2-0.8.9 262
+RMD160 a21f2e3f164a4b4f6aab85af6e7caa8b57912bb9 files/digest-synce-librapi2-0.8.9 262
+SHA256 dfbe2a44e35f8b10d4c935c1b50339e73d621fad8c5d41021907140a330446e7 files/digest-synce-librapi2-0.8.9 262
+MD5 faf53cea8d76491b87a8c1b7d1633769 files/digest-synce-librapi2-0.9.0 262
+RMD160 b3d24c92423c8905876091042aa5239d2516ada8 files/digest-synce-librapi2-0.9.0 262
+SHA256 46ea0fcdcbc29935710a56a604c03a1e6162dd99aa0c12ee1d9c8a601c4f45c4 files/digest-synce-librapi2-0.9.0 262
+MD5 3c683b2d83dbf3a06306ad5968af4943 files/digest-synce-librapi2-0.9.1 262
+RMD160 db335d5263d0f93a9a7f05f1604871987190427a files/digest-synce-librapi2-0.9.1 262
+SHA256 e016c17116b5998438571d94c54ba56a2449f9d4ab73e5286e8e22ac01fbb2ae files/digest-synce-librapi2-0.9.1 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUMo+W78445TWHXcRAl53AJ9IsrtPMCt02eU+m6n3g50Lr/H5ZQCfSCxG
+EndKhJptkZMzSqLYS0pmzMU=
+=L3JU
+-----END PGP SIGNATURE-----
