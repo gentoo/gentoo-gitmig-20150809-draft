@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.14.ebuild,v 1.1 2005/11/20 03:16:42 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.15.ebuild,v 1.1 2006/04/27 13:56:18 ramereth Exp $
 
 inherit ssl-cert eutils flag-o-matic
 
@@ -25,10 +25,16 @@ src_unpack() {
 }
 
 src_compile() {
-	econf \
-		`use_enable ipv6`\
-		`use_with tcpd tcp-wrappers` \
-		|| die "econf died"
+	local myconf=""
+	# Don't shoot me for doing this! The stunnel configure script is broke and
+	# doesn't honor --disable-foo
+	if use ipv6 ; then
+		myconf="${myconf} --enable-ipv6"
+	fi
+	if ! use tcpd ; then
+		myconf="${myconf} --disable-libwrap"
+	fi
+	econf ${myconf} || die "econf died"
 	emake || die "emake died"
 }
 
