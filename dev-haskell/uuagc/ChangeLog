@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/uuagc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.5 2006/03/01 20:06:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.6 2006/04/27 15:17:49 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   01 Mar 2006; Markus Rothe <corsair@gentoo.org> uuagc-0.9.1.ebuild:
   Added ~ppc64; bug #124469

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hsql-sqlite
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-sqlite/ChangeLog,v 1.5 2006/03/09 17:46:53 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-sqlite/ChangeLog,v 1.6 2006/04/27 15:16:40 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   09 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> hsql-sqlite-1.7.ebuild:
   Add ~sparc to KEYWORDS. See bug #124902
