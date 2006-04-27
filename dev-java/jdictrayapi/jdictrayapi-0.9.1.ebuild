@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/jdictrayapi-0.9.1.ebuild,v 1.1 2005/08/02 19:46:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/jdictrayapi-0.9.1.ebuild,v 1.2 2006/04/27 13:12:37 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -29,6 +29,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/0.8.7-gentoo.patch
+	find -type d -name CVS -exec rm -r {} \;
 }
 
 src_compile() {
