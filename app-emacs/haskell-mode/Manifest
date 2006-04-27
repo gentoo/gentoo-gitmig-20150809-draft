@@ -1,43 +1,44 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bec3b4b96c00af1b389f6d83b43dabdf ChangeLog 1951
-RMD160 56a91e6c1802db41edb2d7afa65b713a1c1b9947 ChangeLog 1951
-SHA256 ccc30cef67bfea43464397aa6a86d39f5eac5b68e5b2818a45c5db6a5bee9171 ChangeLog 1951
+AUX 50haskell-mode-gentoo.el 474 RMD160 fb66c78ee9f41b25749b866168d9f7a960c2339c SHA1 ae3714c26db6c860a2d498fba7eef810380f124a SHA256 fc1a87542afde605bff0b52217d1ca031b3adb1cf938824090587495674c6288 size 474
 MD5 91d511588d15fb8c96e0b69626998588 files/50haskell-mode-gentoo.el 474
 RMD160 fb66c78ee9f41b25749b866168d9f7a960c2339c files/50haskell-mode-gentoo.el 474
 SHA256 fc1a87542afde605bff0b52217d1ca031b3adb1cf938824090587495674c6288 files/50haskell-mode-gentoo.el 474
-MD5 a310c35d01a33d349ce788cb408b70c3 files/digest-haskell-mode-1.44-r1 68
-RMD160 2a3c14bfbd65f0863a8c1c1eab476b33875cd15e files/digest-haskell-mode-1.44-r1 68
-SHA256 2cccecd748c8c6efff1fda1c67721c5938e86702d3cbf7764b60b3d9dacf8467 files/digest-haskell-mode-1.44-r1 68
-MD5 3edceb0669468d22b8452e51be961441 files/digest-haskell-mode-1.45 68
-RMD160 b1fafabeed1ca06e43c1efe45fcb84c873846d46 files/digest-haskell-mode-1.45 68
-SHA256 dc4c5028513128941db7c0a00306a3732d620e60ec75903e082ede3e12b74d73 files/digest-haskell-mode-1.45 68
-MD5 044015ce9c79f8d7b8a61af0aff9413e files/digest-haskell-mode-2.0 67
-RMD160 1f7a7320aa9af5d23b6eb01fa2ed04432d2036ee files/digest-haskell-mode-2.0 67
-SHA256 a3a64ad6fa4124b6786e2d45c2d40f8e53f17e4af9d516f935c47b9b1c2b013a files/digest-haskell-mode-2.0 67
-MD5 b9b7e7dbbfddfb15bdfa03854debf2a4 files/digest-haskell-mode-2.1 247
-RMD160 828143535c9da716a890d2e297c69fe9c2a0346c files/digest-haskell-mode-2.1 247
-SHA256 0f75ad9aa82c0037671f5e76e06865737bf89bc0eaf4a4c00c8fa1a5a4d8627b files/digest-haskell-mode-2.1 247
+DIST haskell-mode-1.44.tar.gz 58601 RMD160 e6ba24edd96bbc219f53bbfaefd17bd342a2ced6 SHA256 7950445082f7b5cc2e25477367e6dde1746a4799edfa54a45591029730a34712 size 58601
+DIST haskell-mode-1.45.tar.gz 60525 RMD160 454e92a3ca9f70b33e26e4ef11dce0bd204a228a SHA256 c56660ae97ac104d4d64593a97618873f19bc2d8faad5052b08ec007ab8213db size 60525
+DIST haskell-mode-2.0.tar.gz 66814 RMD160 935b805e837ac9cc3a85bfad1f70168ab506f76d SHA256 c9d1236fe8d9704537fc1a24921f6bf09150c6d53192ef831645865359c6a078 size 66814
+DIST haskell-mode-2.1.tar.gz 73855 RMD160 d5c30db6c37fcea35a544930f2cac6e8c6dd5c5e SHA256 51c7529b217aafdf3cef843e0fc25b3735bebb259effd9c8bc6e8f72a4b65046 size 73855
+EBUILD haskell-mode-1.44-r1.ebuild 698 RMD160 99149db9e0e5b55a6c0c9e54c86010597985b202 SHA1 571ea4c43eabc293494721a79f186d602585e55d SHA256 5641af3f66f827d4561bccb4ddbbbeb4aef38b4e622df2fcae5bede63f0b7874 size 698
 MD5 7a5121a398fafc4a703a009bd0600ee5 haskell-mode-1.44-r1.ebuild 698
 RMD160 99149db9e0e5b55a6c0c9e54c86010597985b202 haskell-mode-1.44-r1.ebuild 698
 SHA256 5641af3f66f827d4561bccb4ddbbbeb4aef38b4e622df2fcae5bede63f0b7874 haskell-mode-1.44-r1.ebuild 698
+EBUILD haskell-mode-1.45.ebuild 716 RMD160 39312d09ffdee2691bc2b0220f40e34a7e04d8c8 SHA1 83c935083b812caafe2b2fdb91ed025ccfa3fea4 SHA256 0164e3849168ef8fcfca0415493b3dbb399d3a7fa4efa54f447c1f531cd874d8 size 716
 MD5 493956070152e69311adba81c897c305 haskell-mode-1.45.ebuild 716
 RMD160 39312d09ffdee2691bc2b0220f40e34a7e04d8c8 haskell-mode-1.45.ebuild 716
 SHA256 0164e3849168ef8fcfca0415493b3dbb399d3a7fa4efa54f447c1f531cd874d8 haskell-mode-1.45.ebuild 716
+EBUILD haskell-mode-2.0.ebuild 1073 RMD160 ba7fd6efee38b4d03977b32a2a8009c374455e8c SHA1 ad86ae760df24024deaf5404513752b2b4edb8f9 SHA256 dc2353a9c8c2933c0c12ad55ed6cb9e0d06cc305f9f8babe4fb1afc61260a7dc size 1073
 MD5 ce59fa1474407136123ba41cfb35c81d haskell-mode-2.0.ebuild 1073
 RMD160 ba7fd6efee38b4d03977b32a2a8009c374455e8c haskell-mode-2.0.ebuild 1073
 SHA256 dc2353a9c8c2933c0c12ad55ed6cb9e0d06cc305f9f8babe4fb1afc61260a7dc haskell-mode-2.0.ebuild 1073
+EBUILD haskell-mode-2.1.ebuild 1073 RMD160 975eae65b13e4853511e14333bdc750e12e4f390 SHA1 d7b32ca17722d2bfa1cc6f5fadd65070ecbf4ef9 SHA256 75cb7b79e4c17ddf673f5bb3ee1ccc669fc9a0c4eb9a0a8713ceb6dda195a7ea size 1073
 MD5 b6fe5134bd9c718d3abc869386e22b45 haskell-mode-2.1.ebuild 1073
 RMD160 975eae65b13e4853511e14333bdc750e12e4f390 haskell-mode-2.1.ebuild 1073
 SHA256 75cb7b79e4c17ddf673f5bb3ee1ccc669fc9a0c4eb9a0a8713ceb6dda195a7ea haskell-mode-2.1.ebuild 1073
+MISC ChangeLog 2154 RMD160 cdd881b383db55c6c9a7e38643986fbc4250fe76 SHA1 9f58cef0b9844e62feab66e5adc8685eb79114fb SHA256 0f215ae8a1ff03db46fd42bac48ebd46bd46c8a2b347437a4b755566dc762fce size 2154
+MD5 045ed40e68e06378d613beff5fd62cd5 ChangeLog 2154
+RMD160 cdd881b383db55c6c9a7e38643986fbc4250fe76 ChangeLog 2154
+SHA256 0f215ae8a1ff03db46fd42bac48ebd46bd46c8a2b347437a4b755566dc762fce ChangeLog 2154
+MISC metadata.xml 158 RMD160 415d172437ca754d24fc5ab186ba8e77934d96e4 SHA1 61f6eff9729cd87a725c2a70c81aca4270a17fc4 SHA256 1393bdef3a74343fdb40a112c7096a1af16f67e7a43413250de28dfe73810eab size 158
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 RMD160 415d172437ca754d24fc5ab186ba8e77934d96e4 metadata.xml 158
 SHA256 1393bdef3a74343fdb40a112c7096a1af16f67e7a43413250de28dfe73810eab metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFEC9XNyiNZaEAZA+ARAsuXAJ9m23iLW+A+QNwGQaXIYxw+goh8vACfZHEE
-mHwRIhVF+1RECJeP7bAnBB8=
-=PXlH
------END PGP SIGNATURE-----
+MD5 0b0aa70bf373b60c19edabce7f718015 files/digest-haskell-mode-1.44-r1 250
+RMD160 7fbaac72d497e4142985b3478b257e466c66b5f7 files/digest-haskell-mode-1.44-r1 250
+SHA256 15a38a8cb1390b1976bd41ad0778bb7faf84ba5a447ee05084ef55e70865afc2 files/digest-haskell-mode-1.44-r1 250
+MD5 1ce40d3df6c6b026d1e45f71f53276d7 files/digest-haskell-mode-1.45 250
+RMD160 b4e6abc12649ef0588c2986fe1c975103821a581 files/digest-haskell-mode-1.45 250
+SHA256 f126ddd83e4e2da77eec3dc43467c3882801155e940380c5d60fe56381b7c753 files/digest-haskell-mode-1.45 250
+MD5 5bfe2d7c23f20121e5e5333323ac5dcb files/digest-haskell-mode-2.0 247
+RMD160 996d7475055f5ff695f92b0aa68fbf458243a322 files/digest-haskell-mode-2.0 247
+SHA256 805896a31be3f852e528d67d9961b3420d41dc2a40cbadb6db4823daaf7bec2f files/digest-haskell-mode-2.0 247
+MD5 b9b7e7dbbfddfb15bdfa03854debf2a4 files/digest-haskell-mode-2.1 247
+RMD160 828143535c9da716a890d2e297c69fe9c2a0346c files/digest-haskell-mode-2.1 247
+SHA256 68ce3a62b30668688bfd26ed7bfcb56ce87c53d58e4ee48c891f43d2b93da6b5 files/digest-haskell-mode-2.1 247
