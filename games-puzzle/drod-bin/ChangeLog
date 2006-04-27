@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/drod-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/ChangeLog,v 1.7 2006/03/31 21:34:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/ChangeLog,v 1.8 2006/04/27 20:01:48 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-drod-bin-1.6.6, Manifest:
+  Fixing SHA256 digest, pass four
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> drod-bin-1.6.6.ebuild:
   Changed nostrip to strip.

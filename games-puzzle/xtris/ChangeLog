@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/xtris
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xtris/ChangeLog,v 1.5 2006/02/14 04:17:57 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xtris/ChangeLog,v 1.6 2006/04/27 20:03:23 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-xtris-1.15,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   14 Feb 2006; Joshua Baergen <joshuabaergen@gentoo.org> xtris-1.15.ebuild:
   Fix dependencies for modular X (bug #122623, fix by GerbilSoft).
