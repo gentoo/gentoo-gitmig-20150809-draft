@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.43 2006/04/01 01:57:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.44 2006/04/27 13:43:52 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-genlop-0.30.2,
+  files/digest-genlop-0.30.3, files/digest-genlop-0.30.5, Manifest:
+  Fixing SHA256 digest, pass four
 
   01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> genlop-0.30.5.ebuild:
   Add ~x86-fbsd keyword.

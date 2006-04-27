@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/porthole
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.23 2006/02/27 20:41:43 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.24 2006/04/27 13:44:30 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-porthole-0.4.1, Manifest:
+  Fixing SHA256 digest, pass four
 
   27 Feb 2006; Paul Varner <fuzzyray@gentoo.org> porthole-0.5.0.ebuild:
   Updated RDEPEND and DEPEND to remove gettext from RDEPEND. Bug #123114
