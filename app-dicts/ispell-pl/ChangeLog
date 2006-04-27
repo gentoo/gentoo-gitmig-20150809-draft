@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/ispell-pl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pl/ChangeLog,v 1.8 2006/04/27 11:46:17 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pl/ChangeLog,v 1.9 2006/04/27 12:24:13 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-ispell-pl-20021127, Manifest:
+  Fixing SHA256 digest for real, pass three...
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-ispell-pl-20021127, Manifest:
