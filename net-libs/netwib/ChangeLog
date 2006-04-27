@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/netwib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.24 2006/02/23 10:04:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.25 2006/04/27 21:59:18 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-netwib-5.28.0,
+  files/digest-netwib-5.31.0, files/digest-netwib-5.32.0, Manifest:
+  Fixing SHA256 digest, pass four
 
 *netwib-5.33.0 (23 Feb 2006)
 

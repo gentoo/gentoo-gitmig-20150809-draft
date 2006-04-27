@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.88 2006/03/18 00:10:19 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.89 2006/04/27 21:57:55 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-libsoup-1.99.28, files/digest-libsoup-1.99.28-r1,
+  files/digest-libsoup-2.2.3, files/digest-libsoup-2.2.3-r1,
+  files/digest-libsoup-2.2.6.1, files/digest-libsoup-2.2.7, Manifest:
+  Fixing SHA256 digest, pass four
 
 *libsoup-2.2.91 (18 Mar 2006)
 

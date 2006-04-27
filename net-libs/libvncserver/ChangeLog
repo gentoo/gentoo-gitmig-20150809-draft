@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.10 2006/03/08 02:00:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.11 2006/04/27 21:58:25 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-libvncserver-0.7, files/digest-libvncserver-0.7.1, Manifest:
+  Fixing SHA256 digest, pass four
 
 *libvncserver-0.8 (08 Mar 2006)
 

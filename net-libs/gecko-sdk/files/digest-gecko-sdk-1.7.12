@@ -2,8 +2,14 @@ MD5 b4355a5746dde47cf0a7981df1dff998 moz_libart_lgpl-2.3.10p1.tar.bz2 103063
 RMD160 c1ab4b41fe40e3f63dbf95476a1cc125d5537be7 moz_libart_lgpl-2.3.10p1.tar.bz2 103063
 SHA256 8cc868780a0763a5afaa36f92d7c5f9efe248b4e05440f645e4e91ddfdd6d1b5 moz_libart_lgpl-2.3.10p1.tar.bz2 103063
 MD5 a120cd14ade242622387f76875ca9c39 mozilla-1.7.10-nsplugins-v2.patch 1968
+RMD160 42f20651c93d904829fd80d4bf6bf8f07456124d mozilla-1.7.10-nsplugins-v2.patch 1968
+SHA256 bd5ce9f3b58496ce66852f7decec1e9531966568c9530bf4d7c1cc6d97ea0a06 mozilla-1.7.10-nsplugins-v2.patch 1968
 MD5 855fcb4f3e40bbcc608113ceb11e2ceb mozilla-1.7.12-gtk2xft.patch.bz2 40416
+RMD160 de8c6e773d81a21634c7807e15ad2f40a59e3de4 mozilla-1.7.12-gtk2xft.patch.bz2 40416
+SHA256 426af586135ff0fad9181cd6eb570bad251f0525c4ae86b6d1a8f250c8f653ae mozilla-1.7.12-gtk2xft.patch.bz2 40416
 MD5 f1ad6adbbc0510eb76d352c94c801fac mozilla-1.7.12-source.tar.bz2 30446836
 RMD160 8881779a39f360a814177ed948fab5a8330193aa mozilla-1.7.12-source.tar.bz2 30446836
 SHA256 9fcbcdd0d72775659817cd0d826c2f59356e07545e4cc8d14086cd96cec7c200 mozilla-1.7.12-source.tar.bz2 30446836
 MD5 7960994910bda4c14a52bc119f9ceefc mozilla-jslibmath-alpha.patch 625
+RMD160 25215a45e8c97259666252dcfb3ad90c547d632f mozilla-jslibmath-alpha.patch 625
+SHA256 5b2b47453bdcaba6970d3773a2d9882688c3e26e2f6d5a96192977c8b3cd5569 mozilla-jslibmath-alpha.patch 625

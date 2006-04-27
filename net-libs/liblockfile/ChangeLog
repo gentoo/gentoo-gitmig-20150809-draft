@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/liblockfile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.30 2006/04/06 00:54:50 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.31 2006/04/27 21:56:51 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-liblockfile-1.06, Manifest:
+  Fixing SHA256 digest, pass four
 
   06 Apr 2006; Tuấn Văn <langthang@gentoo.org>
   +files/liblockfile-1.06-respectflags.patch, liblockfile-1.06-r1.ebuild:

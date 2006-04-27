@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libesmtp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.29 2006/03/18 12:09:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.30 2006/04/27 21:56:27 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-libesmtp-1.0.3,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   18 Mar 2006; Fabian Groffen <grobian@gentoo.org> libesmtp-1.0.4.ebuild:
   Marked ~ppc-macos
