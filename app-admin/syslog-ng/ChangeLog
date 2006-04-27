@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.128 2006/04/27 11:39:08 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.129 2006/04/27 12:17:23 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-syslog-ng-1.6.8, files/digest-syslog-ng-1.6.8-r1,
+  files/digest-syslog-ng-1.6.9, files/digest-syslog-ng-1.6.10, Manifest:
+  Fixing SHA256 digest for real, pass three...
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-syslog-ng-1.6.8, files/digest-syslog-ng-1.6.8-r1,
