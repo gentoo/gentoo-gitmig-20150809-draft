@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX telnet-bsd-1.0-overflow.patch 2362 RMD160 00e4aab074199b425a5e5d067d92c405fe3bb5fb SHA1 0fce72ca341c84620231a89d9942b4cd75ca34a3 SHA256 503d4695033acf754233108914eecda42dc6404ccbfe3e3b0528693915728d0a size 2362
 MD5 982c76cd605dc0ce46a43be968ac62ac files/telnet-bsd-1.0-overflow.patch 2362
 RMD160 00e4aab074199b425a5e5d067d92c405fe3bb5fb files/telnet-bsd-1.0-overflow.patch 2362
@@ -31,26 +28,16 @@ EBUILD telnet-bsd-1.2.ebuild 752 RMD160 422404ff69ee6ff31ac181c65b64eb457980a90b
 MD5 ff7e5662e92ca6feddd895beaac357d5 telnet-bsd-1.2.ebuild 752
 RMD160 422404ff69ee6ff31ac181c65b64eb457980a90b telnet-bsd-1.2.ebuild 752
 SHA256 d962e9fba531daccf8e9de45d6069931a19ac8097c709923d8b18c50717858fe telnet-bsd-1.2.ebuild 752
-MISC ChangeLog 3389 RMD160 bef2cdb22961997b2fd506cd5cc4e717828faa78 SHA1 eaef1de05daca494cedeba7b0936581fd4fe3c5b SHA256 6f3085ce4811a4d430fe29974ab23ffa2ccea5912118e1c956af4e9f40b4940a size 3389
-MD5 21d488cf64918113b1832951e499ed75 ChangeLog 3389
-RMD160 bef2cdb22961997b2fd506cd5cc4e717828faa78 ChangeLog 3389
-SHA256 6f3085ce4811a4d430fe29974ab23ffa2ccea5912118e1c956af4e9f40b4940a ChangeLog 3389
+MISC ChangeLog 3480 RMD160 b6f64a3f5d7f2432b8baab97a31eeadb2819720e SHA1 f1adbbb81413e864c815df86562e8f2a331db3ca SHA256 0bf6fdb614202e0bccd1b547f03af83692a3d96afb9976289b56ed82b90009eb size 3480
+MD5 343a85036e76e447d1500ac9e8b93f71 ChangeLog 3480
+RMD160 b6f64a3f5d7f2432b8baab97a31eeadb2819720e ChangeLog 3480
+SHA256 0bf6fdb614202e0bccd1b547f03af83692a3d96afb9976289b56ed82b90009eb ChangeLog 3480
 MD5 4f1570403a8986b7343b0b87c6b41ef9 files/digest-telnet-bsd-1.0-r1 247
 RMD160 988b271073bc32735f5ca43b23293541c4490bce files/digest-telnet-bsd-1.0-r1 247
-SHA256 7a2a7f63c4aa7d7d9e0b9694fecdc0ef0619beee5730d344ef5341cf5797251a files/digest-telnet-bsd-1.0-r1 247
-size 247 files/digest-telnet-bsd-1.0-r1 247
+SHA256 a2c44e2763fd2ad11319823bb40548262b2246b74da5e2bce663a25b3af4c45f files/digest-telnet-bsd-1.0-r1 247
 MD5 6651749586a41d06b99accc30392ebad files/digest-telnet-bsd-1.2 247
 RMD160 93ed529bfaf0d6eb0096d46df17779fe0887b30f files/digest-telnet-bsd-1.2 247
-SHA256 90602dc6c9b0ef9bb3d82d1cfed5cb20e4595330d03a954bb6e32c087568ebc9 files/digest-telnet-bsd-1.2 247
-size 247 files/digest-telnet-bsd-1.2 247
+SHA256 b700a0c2c487b5132a4db1e40aa9cc55ea645d894baf3388b612cd8c1a529505 files/digest-telnet-bsd-1.2 247
 MD5 6651749586a41d06b99accc30392ebad files/digest-telnet-bsd-1.2-r1 247
 RMD160 93ed529bfaf0d6eb0096d46df17779fe0887b30f files/digest-telnet-bsd-1.2-r1 247
-SHA256 90602dc6c9b0ef9bb3d82d1cfed5cb20e4595330d03a954bb6e32c087568ebc9 files/digest-telnet-bsd-1.2-r1 247
-size 247 files/digest-telnet-bsd-1.2-r1 247
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFESDHD2+ySkm8kpY0RAjZXAJ43q1mTtt77gQLaXPDQoCHHO7/ekACfapH1
-GiPTslyrxmD+HUEZjbl4CBk=
-=4CTE
------END PGP SIGNATURE-----
+SHA256 b700a0c2c487b5132a4db1e40aa9cc55ea645d894baf3388b612cd8c1a529505 files/digest-telnet-bsd-1.2-r1 247

@@ -1,12 +1,48 @@
-MD5 4f989c305b398350c14890df76187630 ChangeLog 1596
-MD5 2be12dfba2b65df75256562367aca721 asterisk-app_iconv-0.9.1.ebuild 882
-MD5 16a58c060b908c19a077a67467caad68 asterisk-app_iconv-0.9.2.ebuild 953
-MD5 0cdbc2adb26fc370f92ebe374a9c4994 asterisk-app_iconv-0.9.ebuild 877
+AUX app_iconv-0.8-astcfg.diff 717 RMD160 6f0a82dc6f9f13793b2d03009a3dd4459b7bf3b7 SHA1 469295f4039c12b74691dbbb136e677fced12e27 SHA256 daf6e5f3cd8226b66fb67b3672a0ecdbcd0ba68ff3e4acb9a625a40ab1c2b880 size 717
 MD5 1d9290f7bf08909942aec614e4b8d2a8 files/app_iconv-0.8-astcfg.diff 717
+RMD160 6f0a82dc6f9f13793b2d03009a3dd4459b7bf3b7 files/app_iconv-0.8-astcfg.diff 717
+SHA256 daf6e5f3cd8226b66fb67b3672a0ecdbcd0ba68ff3e4acb9a625a40ab1c2b880 files/app_iconv-0.8-astcfg.diff 717
+AUX app_iconv-0.9.1-astcfg.diff 877 RMD160 9d54872bbd506bc7f93eca1dffe9b0b789da641b SHA1 af65011f043501c51d6186085eb19f634a8335b3 SHA256 690aed1b1a572dbc31df3ebe1e5fad95e35562eea43e5e90a5e8e688ceab3b7e size 877
 MD5 3ddff38ac2c0b6083278ceef48ee2d29 files/app_iconv-0.9.1-astcfg.diff 877
+RMD160 9d54872bbd506bc7f93eca1dffe9b0b789da641b files/app_iconv-0.9.1-astcfg.diff 877
+SHA256 690aed1b1a572dbc31df3ebe1e5fad95e35562eea43e5e90a5e8e688ceab3b7e files/app_iconv-0.9.1-astcfg.diff 877
+AUX app_iconv-0.9.2-ast12.diff 781 RMD160 78eaa2b3e5dfb7e603882852b43abdbc59a7d066 SHA1 246510bf420a26268b359725c3ef8e9baf0c0f3e SHA256 03a040a24f9f700e643ae8dd4d7e9ce49b1a69d9839424722b5734d668bdeab6 size 781
 MD5 a61988209d0c23b0e2e7b017726eacf9 files/app_iconv-0.9.2-ast12.diff 781
+RMD160 78eaa2b3e5dfb7e603882852b43abdbc59a7d066 files/app_iconv-0.9.2-ast12.diff 781
+SHA256 03a040a24f9f700e643ae8dd4d7e9ce49b1a69d9839424722b5734d668bdeab6 files/app_iconv-0.9.2-ast12.diff 781
+AUX app_iconv-0.9.2-gentoo.diff 741 RMD160 fe5028ff36ef45e6063eddb9dec26bc1c64e4164 SHA1 6005e4957ccde53ff5ccf1a36d2494df8bd28505 SHA256 2ab7153b67a95268ea39441751e37d490b0cba8bc09cea2c88b1321207f656b9 size 741
 MD5 54602ac1ab5dbd192632b5d3b23a0ff0 files/app_iconv-0.9.2-gentoo.diff 741
-MD5 875e728c24166472794e5a14e410c0ab files/digest-asterisk-app_iconv-0.9 60
-MD5 672a2a6e59ee633b14106e0c70c03086 files/digest-asterisk-app_iconv-0.9.1 62
-MD5 10732c0b6d5ba7174af289258ca570c4 files/digest-asterisk-app_iconv-0.9.2 232
+RMD160 fe5028ff36ef45e6063eddb9dec26bc1c64e4164 files/app_iconv-0.9.2-gentoo.diff 741
+SHA256 2ab7153b67a95268ea39441751e37d490b0cba8bc09cea2c88b1321207f656b9 files/app_iconv-0.9.2-gentoo.diff 741
+DIST app_iconv-0.9.1.tgz 2870 RMD160 7c5dada17ea97322dc1b7c3fa9e78ec3b231ac96 SHA256 05e5412a049500abf74707797abd470246a8660863c8eaa915fa98134fe18186 size 2870
+DIST app_iconv-0.9.2.tgz 3042 RMD160 784e0cf637a095cf4dba904e150e7fffcde30c75 SHA256 6c600960b2b6b6396497b364f1374227ca0c31fbf686317258fa0dccb35d1183 size 3042
+DIST app_iconv-0.9.tgz 3376 RMD160 be7ef1a1fee6bd33e731d09d69a563ccc12da61a SHA256 ab6a616e015e0df9395ed5bf55b2ae294996ccf172dc0fe9d9f2e40dc43ca25b size 3376
+EBUILD asterisk-app_iconv-0.9.1.ebuild 882 RMD160 d77ff8b006460e15a3901f22ae023d207962705e SHA1 3553209c8ad6514a16da96eeb4200edc9a252e49 SHA256 6fe1ad9e8473b5d6692f9348aa4ff177036db9365dbb7b9923c1ab823fdc6903 size 882
+MD5 2be12dfba2b65df75256562367aca721 asterisk-app_iconv-0.9.1.ebuild 882
+RMD160 d77ff8b006460e15a3901f22ae023d207962705e asterisk-app_iconv-0.9.1.ebuild 882
+SHA256 6fe1ad9e8473b5d6692f9348aa4ff177036db9365dbb7b9923c1ab823fdc6903 asterisk-app_iconv-0.9.1.ebuild 882
+EBUILD asterisk-app_iconv-0.9.2.ebuild 953 RMD160 e0405a83d82eb39c9a3537b3cfd8b255f5079456 SHA1 a9b21fd98af620dfb22f99a6d24253a9bb96a7c4 SHA256 4ffcf424fcf6414bcc3deeebf7e33665e5e3e5d516c50ada2a10d7ebbc1a3c0b size 953
+MD5 16a58c060b908c19a077a67467caad68 asterisk-app_iconv-0.9.2.ebuild 953
+RMD160 e0405a83d82eb39c9a3537b3cfd8b255f5079456 asterisk-app_iconv-0.9.2.ebuild 953
+SHA256 4ffcf424fcf6414bcc3deeebf7e33665e5e3e5d516c50ada2a10d7ebbc1a3c0b asterisk-app_iconv-0.9.2.ebuild 953
+EBUILD asterisk-app_iconv-0.9.ebuild 877 RMD160 303620a6af9db16657436ce966adb2fcf722396b SHA1 1cfab12ed8ef2a512718abde6e8158782eceac87 SHA256 73d39de68b68cd3944a4fc64559c4dba9f28693c0ad6a41eae4786fa83e216d4 size 877
+MD5 0cdbc2adb26fc370f92ebe374a9c4994 asterisk-app_iconv-0.9.ebuild 877
+RMD160 303620a6af9db16657436ce966adb2fcf722396b asterisk-app_iconv-0.9.ebuild 877
+SHA256 73d39de68b68cd3944a4fc64559c4dba9f28693c0ad6a41eae4786fa83e216d4 asterisk-app_iconv-0.9.ebuild 877
+MISC ChangeLog 1814 RMD160 dd52e388129376a70f955038fc19cc626a6e8559 SHA1 726e738cb269f4203c5c6195aafbd862d4f258f0 SHA256 1cad55c254e839fd407cc1b19b3103c045d30e1b0ba4b8ae80c155af9152d739 size 1814
+MD5 06769b8a052268bad4dff6d40e521d6c ChangeLog 1814
+RMD160 dd52e388129376a70f955038fc19cc626a6e8559 ChangeLog 1814
+SHA256 1cad55c254e839fd407cc1b19b3103c045d30e1b0ba4b8ae80c155af9152d739 ChangeLog 1814
+MISC metadata.xml 217 RMD160 275af641d8134ee438c8e2c9f89eb3b0a286a386 SHA1 7b349815d56d7d7e2d46968341228c5267c666eb SHA256 c3eb09d27b1a9cf05b690524903c7faf096829ef1d19c0264769c277ac28d0a1 size 217
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
+RMD160 275af641d8134ee438c8e2c9f89eb3b0a286a386 metadata.xml 217
+SHA256 c3eb09d27b1a9cf05b690524903c7faf096829ef1d19c0264769c277ac28d0a1 metadata.xml 217
+MD5 0fa3270a16c851304c3a4893a8bfb4d9 files/digest-asterisk-app_iconv-0.9 226
+RMD160 39f58fe68f6dda921d7f1cff7be559aee9780ba9 files/digest-asterisk-app_iconv-0.9 226
+SHA256 a4252035ab9f5ff298bafd4017ad5933fe0a4234d7b6ab254eca01487215addf files/digest-asterisk-app_iconv-0.9 226
+MD5 3a5a9ebf999ef378f654b57d0344d663 files/digest-asterisk-app_iconv-0.9.1 232
+RMD160 e4b83d5674bb8fd6cf46c15bbd8e1d500e1b6874 files/digest-asterisk-app_iconv-0.9.1 232
+SHA256 8badff2c5526b319ed02b938213a2c5857c2ed31cf607300887b8b2c16c0d9e5 files/digest-asterisk-app_iconv-0.9.1 232
+MD5 4409b4c79f7c6fe237ee4c28980ac7b8 files/digest-asterisk-app_iconv-0.9.2 232
+RMD160 d2111be490e1b05d0ccf584bfdb6d2a344e70e01 files/digest-asterisk-app_iconv-0.9.2 232
+SHA256 287442cea574b2a93b0c895a114bae24a7d774ee5c3edac6f0694fc48f8db041 files/digest-asterisk-app_iconv-0.9.2 232

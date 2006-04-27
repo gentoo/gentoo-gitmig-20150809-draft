@@ -1,40 +1,40 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a3df36275545cbeb9f837c4fa7531f8c ChangeLog 1410
-RMD160 bec1d2c9439232db5b24c7fbea934839195faaaa ChangeLog 1410
-SHA256 641f440a35d91c56d66b5433c174807c66c676541618f21d9acd3b188d9d2298 ChangeLog 1410
-MD5 4cebebd00e1b468ed723ce38470e87e8 files/digest-proxychains-2.1-r2 67
-RMD160 216bcef624d3ebb7d40ca39abbeb4f7f3ad06624 files/digest-proxychains-2.1-r2 67
-SHA256 4b4cfef2d59b91c7bd80c8c29985495bed327916928533057bbc22d72a8a1ac2 files/digest-proxychains-2.1-r2 67
-MD5 d02c1c2d474459ef7a3f93ee2ef213f6 files/digest-proxychains-3.0 247
-RMD160 2f03c20c33407e687fd6a9301687c66c82e85125 files/digest-proxychains-3.0 247
-SHA256 c30ee9633c2740c29d049ac5d0058beecfb81769fb46f6bd05c3f554f1ea147f files/digest-proxychains-3.0 247
-MD5 5e68dda944bfe3fb27a5e73978a48b97 files/digest-proxychains-3.1 247
-RMD160 ea760fe84f31e76c75c115d992a8f06f0c8962f0 files/digest-proxychains-3.1 247
-SHA256 6cd95c3d120f3bb60eb8e30e4ae109748ea4dbd8fab35114d18b6d09f19b3c4c files/digest-proxychains-3.1 247
+AUX proxychains-2.1-autotools.patch 2198 RMD160 ded3a3e79afe06556290c7b356835771591c9b47 SHA1 3ccacb0c24bd5f2bfac755cb7576bfa36562b1dc SHA256 f04b89f2a15c83eb86e1ea2c893dc9ddc4ec59f9a26d6f4cae4af82438a4ce9e size 2198
 MD5 1c061d1b2cf15c31098b00f930145f11 files/proxychains-2.1-autotools.patch 2198
 RMD160 ded3a3e79afe06556290c7b356835771591c9b47 files/proxychains-2.1-autotools.patch 2198
 SHA256 f04b89f2a15c83eb86e1ea2c893dc9ddc4ec59f9a26d6f4cae4af82438a4ce9e files/proxychains-2.1-autotools.patch 2198
+AUX proxychains-2.1-libc-connect.patch 294 RMD160 814d467c699e122b0b50982001582b8e66c4e49d SHA1 8d496c0db83aa2e815b4a3f7607a15677fc8b2cb SHA256 4efd61c2052a00ba9c779ee83854537b40f90dc3eea2c1292188705b387a3293 size 294
 MD5 31f74f67a6811847c3b733a8ee3595c3 files/proxychains-2.1-libc-connect.patch 294
 RMD160 814d467c699e122b0b50982001582b8e66c4e49d files/proxychains-2.1-libc-connect.patch 294
 SHA256 4efd61c2052a00ba9c779ee83854537b40f90dc3eea2c1292188705b387a3293 files/proxychains-2.1-libc-connect.patch 294
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
-SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
+DIST proxychains-2.1.tar.gz 181095 RMD160 2758c716847749c00429019e514b82b4cf6cf558 SHA256 ca7d6483a2ef8459e0b3c61cc1b0da176628518c16c4c9b9aea8c044554245db size 181095
+DIST proxychains-3.0.tar.gz 327001 RMD160 0e7bfe66afc5463610e704a9b8bb50535ffae696 SHA256 e4f00532cc0a2a0a8aa5c8df6c18a330e67b4b467007477dfb13944f2da3f558 size 327001
+DIST proxychains-3.1.tar.gz 327057 RMD160 3795ec1f0b33271a16d1a9769f94d85fe9f7f179 SHA256 9a27657fe9f6e17de9e402ba5c60f9954e7e79fb270c1ef242770f3c01d8515a size 327057
+EBUILD proxychains-2.1-r2.ebuild 1271 RMD160 efa6cf93e7571524ad5ce4255a60dce8a0b99c91 SHA1 922f69de1394735f79e23721fc7cec88df87b648 SHA256 202efd644fef9b46e8041104ab213c28cb3d2667caefd47b065897d25e122d65 size 1271
 MD5 7ebce22a77ec6ee78d053fc5532410e9 proxychains-2.1-r2.ebuild 1271
 RMD160 efa6cf93e7571524ad5ce4255a60dce8a0b99c91 proxychains-2.1-r2.ebuild 1271
-SHA256 b4c8e65cb3d7446c12fb60be2b812242f2ac9cda60fad82519ea89e9c90bb862 proxychains-2.1-r2.ebuild 1271
+SHA256 202efd644fef9b46e8041104ab213c28cb3d2667caefd47b065897d25e122d65 proxychains-2.1-r2.ebuild 1271
+EBUILD proxychains-3.0.ebuild 900 RMD160 fc30daf2f7783772058368033807f237b7ea5da8 SHA1 207c80d8aec5fedb57a2e85ae35209c6fad950b6 SHA256 ae246f49b2f44fc8515b74cefd5bb6d7eace56bc82b8f9e7984bfaa9dcf1094a size 900
 MD5 b840fba9a8f53a9a2eb42baeb4949c69 proxychains-3.0.ebuild 900
 RMD160 fc30daf2f7783772058368033807f237b7ea5da8 proxychains-3.0.ebuild 900
 SHA256 ae246f49b2f44fc8515b74cefd5bb6d7eace56bc82b8f9e7984bfaa9dcf1094a proxychains-3.0.ebuild 900
+EBUILD proxychains-3.1.ebuild 900 RMD160 9c86525ce6a81245b2c3d4c119cf906464d27676 SHA1 4366be243c117226cf16aceae365046e499c2aa8 SHA256 1d043cc6633b9907011441d889e5d01a8fcf0e382c1fe56436b7f771bc9e0733 size 900
 MD5 49db99390d79f97ff788e61894818511 proxychains-3.1.ebuild 900
 RMD160 9c86525ce6a81245b2c3d4c119cf906464d27676 proxychains-3.1.ebuild 900
 SHA256 1d043cc6633b9907011441d889e5d01a8fcf0e382c1fe56436b7f771bc9e0733 proxychains-3.1.ebuild 900
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEGLXT2+ySkm8kpY0RAqy8AJ9x8OieIOHaiJJxTgxtBNw9/ZPxPgCfe0PS
-BaVE0I9F3rFuSGkd4ihkatk=
-=dqug
------END PGP SIGNATURE-----
+MISC ChangeLog 1540 RMD160 4b13a6243236db1b19d70c96e9b5c4594a2157d6 SHA1 43154a5a5d95c44b3e4b08ea00faa62d0cea08e7 SHA256 e7f9ac78ed9a3b97f6f3d2d09f15cf73edbbe7d52cf7e23a91717a80d6ddb500 size 1540
+MD5 de0a2f6a934345d540f6d2c05ea96b11 ChangeLog 1540
+RMD160 4b13a6243236db1b19d70c96e9b5c4594a2157d6 ChangeLog 1540
+SHA256 e7f9ac78ed9a3b97f6f3d2d09f15cf73edbbe7d52cf7e23a91717a80d6ddb500 ChangeLog 1540
+MISC metadata.xml 160 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 SHA1 d6147d00f16e8cfeef893d0764b0675a93d62849 SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e size 160
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
+MD5 11cfcc5163ae10b3127d1927aea4f283 files/digest-proxychains-2.1-r2 247
+RMD160 18b45c834ecf1692cfdc3a59390d8d177c6287d1 files/digest-proxychains-2.1-r2 247
+SHA256 cfbcf1c6dc706cfdbe3bf06204da19864a81b2c35e85e9e5efef9eaca57838c8 files/digest-proxychains-2.1-r2 247
+MD5 d02c1c2d474459ef7a3f93ee2ef213f6 files/digest-proxychains-3.0 247
+RMD160 2f03c20c33407e687fd6a9301687c66c82e85125 files/digest-proxychains-3.0 247
+SHA256 91ce3a259c36695551c4be4eb16a83d7db7ec738206e659469561066cdc2ad9a files/digest-proxychains-3.0 247
+MD5 5e68dda944bfe3fb27a5e73978a48b97 files/digest-proxychains-3.1 247
+RMD160 ea760fe84f31e76c75c115d992a8f06f0c8962f0 files/digest-proxychains-3.1 247
+SHA256 a81780baf4aa91f01e1ccaf6b80e6899d365baa52fc5a06e7e6cb4f6c07cd590 files/digest-proxychains-3.1 247
