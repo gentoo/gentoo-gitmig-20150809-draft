@@ -1,40 +1,53 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b15b0c240e272e78c75e9304107482d6 ChangeLog 5938
-RMD160 eadf796b3cf9f1e51660ea4a89b3469d43448207 ChangeLog 5938
-SHA256 84bf94ce9f4e0ee0c19adb86cb4b0c27a10661bf123f67b3e61b834552e9e3b2 ChangeLog 5938
-MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kontact-specialdates-3.4.1 208
-RMD160 a6185d391139f96c8706b8459f811267aa8254f4 files/digest-kontact-specialdates-3.4.1 208
-SHA256 13d734567761359795df4277f8e107a116627d38aca0531bfb91f1a0f4bf6e2f files/digest-kontact-specialdates-3.4.1 208
-MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kontact-specialdates-3.4.2 282
-RMD160 6c21b8a8578c49208c6a35e538dce0577c45e1b9 files/digest-kontact-specialdates-3.4.2 282
-SHA256 68f1cbf0899c203a29e8a535da6e3df2f97811b7e967b76cabc15200470b270b files/digest-kontact-specialdates-3.4.2 282
-MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kontact-specialdates-3.4.3 67
-RMD160 2b704341b9b6cd49f646304700670dd2324e4ee3 files/digest-kontact-specialdates-3.4.3 67
-SHA256 53a597b89fa83f7e953fd6c3565b00cbbceb08c07211f1ba11d1e24883cd82fe files/digest-kontact-specialdates-3.4.3 67
-MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kontact-specialdates-3.5.2 247
-RMD160 6593013cc2b82f2b51819d483733f409262d7d91 files/digest-kontact-specialdates-3.5.2 247
-SHA256 316a6c56abca376dcc823a955f36bb4a04daf20009db56ff7cd3f6f38f150c5e files/digest-kontact-specialdates-3.5.2 247
+DIST kdepim-3.4.0-3.4.1.tar.xdelta 689503 RMD160 a60f8dd9b2cd481d781d096c978f04f03a352d3b SHA256 3ab1b52a7924ea5b47219e572c7c3a3be7d4f746bb93c6b9cab50004eb90f5c5 size 689503
+DIST kdepim-3.4.0.tar.bz2 11441545 RMD160 abc3794c45f12e29b3dc8ce3c4b570e980beb8c3 SHA256 7769e1989404c16d679c0be32cde7634ceb5692131de6ab1d44def47eca871ad size 11441545
+DIST kdepim-3.4.1-3.4.2.tar.xdelta 534400 RMD160 eb7e99cebc7f43eac706ee5deb53ea078cfb2fd1 SHA256 09a84121a686141fdedfb34d5bc40bae2918e020cd9f414925316773bcb521ad size 534400
+DIST kdepim-3.4.1.tar.bz2 11345538 RMD160 f3dd526ca3094f42eb825ece30d0b84c047a6050 SHA256 a8e86e9d9d6ae0c997546294f3bb28c988e21834e23aeddd1db26fc57d3e3b5b size 11345538
+DIST kdepim-3.4.2.tar.bz2 11368492 RMD160 c149409d447c5108348d24bdb973979e4c31e80d SHA256 69cfaf807ea3df22543a74a4d87ae2330ea859b4b51431ef86d3f983824df948 size 11368492
+DIST kdepim-3.4.3.tar.bz2 11327132 RMD160 a1c15ae5759b9865297a28e0ee00f66b04fc2a96 SHA256 c44f3987e66a81b5cba6a9aded7f8deef6e7ea93ae9fb000a12c9865f609e5c6 size 11327132
+DIST kdepim-3.5.2.tar.bz2 12887336 RMD160 8e6571d14bbf6b3370c4fdb108a1a79625e87365 SHA256 9c038a80912894b3ec132b2c7219ec5549ca80dcdeec88555928d2e038966539 size 12887336
+EBUILD kontact-specialdates-3.4.1.ebuild 1132 RMD160 61bc0d8d3b3fafc5459f9379cb304e2d76c4ead6 SHA1 d675fe004efac9f5f640dbb1bf2d94281ed0657f SHA256 de165252669a1a81c8a289a61dbcc69c5ac0e98a10475fb288eb8f259ec7ec00 size 1132
 MD5 ff077b11ff2c156103c5c3d4320fb66c kontact-specialdates-3.4.1.ebuild 1132
 RMD160 61bc0d8d3b3fafc5459f9379cb304e2d76c4ead6 kontact-specialdates-3.4.1.ebuild 1132
 SHA256 de165252669a1a81c8a289a61dbcc69c5ac0e98a10475fb288eb8f259ec7ec00 kontact-specialdates-3.4.1.ebuild 1132
+EBUILD kontact-specialdates-3.4.2.ebuild 1145 RMD160 8dd5e9d2caa6fb68a34e5e4046a01d7e3b4167a5 SHA1 5f94b2b887aa32bc1e6adae92f0ec9813dbd8b13 SHA256 d84608fc0f80d3df83a774cd43dd0548f55e58fa7e93d990d955bd7938de08ed size 1145
 MD5 3e548f8c524d789a670f319d5ccc5251 kontact-specialdates-3.4.2.ebuild 1145
 RMD160 8dd5e9d2caa6fb68a34e5e4046a01d7e3b4167a5 kontact-specialdates-3.4.2.ebuild 1145
 SHA256 d84608fc0f80d3df83a774cd43dd0548f55e58fa7e93d990d955bd7938de08ed kontact-specialdates-3.4.2.ebuild 1145
+EBUILD kontact-specialdates-3.4.3.ebuild 1146 RMD160 acb13efea72402c6922fc10594ea4c719460f34d SHA1 5aa1d792369253eed7fd704c3d7c7fbb56995e80 SHA256 02011ae7b95c269dd6092e0347502a47af3f4fa438170bdd1d84f232a2254cb3 size 1146
 MD5 aaa7c31a10028d13d4519432f16ef6fe kontact-specialdates-3.4.3.ebuild 1146
 RMD160 acb13efea72402c6922fc10594ea4c719460f34d kontact-specialdates-3.4.3.ebuild 1146
 SHA256 02011ae7b95c269dd6092e0347502a47af3f4fa438170bdd1d84f232a2254cb3 kontact-specialdates-3.4.3.ebuild 1146
+EBUILD kontact-specialdates-3.5.2.ebuild 1155 RMD160 9fe75d21e166cd995b06dd9b2bd7f5c9b79719ff SHA1 8cec302964a5ce8b9fe5b35bbb857e4ba29177a9 SHA256 e3a55cef793c930eb82599acbc282aa7492c1da592d0b4ad4375c74cbdbbaaaf size 1155
 MD5 c8d93517b168fd05870e22d1923fe7f2 kontact-specialdates-3.5.2.ebuild 1155
 RMD160 9fe75d21e166cd995b06dd9b2bd7f5c9b79719ff kontact-specialdates-3.5.2.ebuild 1155
 SHA256 e3a55cef793c930eb82599acbc282aa7492c1da592d0b4ad4375c74cbdbbaaaf kontact-specialdates-3.5.2.ebuild 1155
+MISC ChangeLog 6159 RMD160 e5ddb39057aeb1094036d15aa8a57e84a77b1944 SHA1 ca1bd1bf3efa6cd74db269eea361bf17b08f1600 SHA256 f2b13cce07fed97c336aa30a1bc39e77e49ae514d0b8df0e4d3fe709a7697d76 size 6159
+MD5 66c3675485de78641d76717b81979399 ChangeLog 6159
+RMD160 e5ddb39057aeb1094036d15aa8a57e84a77b1944 ChangeLog 6159
+SHA256 f2b13cce07fed97c336aa30a1bc39e77e49ae514d0b8df0e4d3fe709a7697d76 ChangeLog 6159
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a size 156
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 91f2200bdc01873b716cb3f9feadcf95 files/digest-kontact-specialdates-3.4.1 762
+RMD160 9ae3652b41011c19fba1e6066280de6392cdee04 files/digest-kontact-specialdates-3.4.1 762
+SHA256 26263ad8661ed9287c7a3fe3eabc8c2ec9f40c8ef72c525a4ff100b852b3fff0 files/digest-kontact-specialdates-3.4.1 762
+MD5 02dd51f1d3985f64e8d6dbe249c2d3cf files/digest-kontact-specialdates-3.4.2 1030
+RMD160 58b14a0877f000302499e13cc795d0b8f9cb4830 files/digest-kontact-specialdates-3.4.2 1030
+SHA256 9a0ebc7b7a8cb892afff0ad664ab68e88e7adf2767afe184ca23e8d19d51bf46 files/digest-kontact-specialdates-3.4.2 1030
+MD5 078792b016dc323d645d7a2b33ed6913 files/digest-kontact-specialdates-3.4.3 247
+RMD160 bc5edc9614ec6bc755f7eebf14f94a4cce174e18 files/digest-kontact-specialdates-3.4.3 247
+SHA256 541b17828da40a695b28451a60321cd1bc8879fbd8deb2405ed060940085ac5a files/digest-kontact-specialdates-3.4.3 247
+MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kontact-specialdates-3.5.2 247
+RMD160 6593013cc2b82f2b51819d483733f409262d7d91 files/digest-kontact-specialdates-3.5.2 247
+SHA256 93b85550a7cebd0f79e5aed63e5719488cfdcc0ee049038fd423aefa50f64e59 files/digest-kontact-specialdates-3.5.2 247
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFENHziAiZjviIA2XgRAnkGAJ9A974Pi+GPTOVWRzhEBkWjixIwrgCg0ic5
-8o/7aVy17dYAFTvMcL9o7Rk=
-=8u4P
+iD8DBQFEUTyBW78445TWHXcRAjxgAJkB2k4WxdJl0kDoIBquu3pmjScrmwCfdZC1
+RMiED3EZTlEYn3SZU/QxF7Q=
+=DtFB
 -----END PGP SIGNATURE-----

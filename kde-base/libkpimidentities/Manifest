@@ -1,34 +1,44 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6282dd279bbd9e517943cf53353aa24d ChangeLog 5633
-RMD160 bced34b774c407f13ec19424794312429483efac ChangeLog 5633
-SHA256 fe9a687eaec7c67bfd51949559e923f388e54cd0719d058a0a56b922483e2170 ChangeLog 5633
-MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkpimidentities-3.4.1 208
-RMD160 a6185d391139f96c8706b8459f811267aa8254f4 files/digest-libkpimidentities-3.4.1 208
-SHA256 13d734567761359795df4277f8e107a116627d38aca0531bfb91f1a0f4bf6e2f files/digest-libkpimidentities-3.4.1 208
-MD5 1abd06c61033b13feaa26798ccacf032 files/digest-libkpimidentities-3.4.3 67
-RMD160 2b704341b9b6cd49f646304700670dd2324e4ee3 files/digest-libkpimidentities-3.4.3 67
-SHA256 53a597b89fa83f7e953fd6c3565b00cbbceb08c07211f1ba11d1e24883cd82fe files/digest-libkpimidentities-3.4.3 67
-MD5 4b77483fe398773d23a75714c3dd6223 files/digest-libkpimidentities-3.5.2 247
-RMD160 6593013cc2b82f2b51819d483733f409262d7d91 files/digest-libkpimidentities-3.5.2 247
-SHA256 316a6c56abca376dcc823a955f36bb4a04daf20009db56ff7cd3f6f38f150c5e files/digest-libkpimidentities-3.5.2 247
+DIST kdepim-3.4.0-3.4.1.tar.xdelta 689503 RMD160 a60f8dd9b2cd481d781d096c978f04f03a352d3b SHA256 3ab1b52a7924ea5b47219e572c7c3a3be7d4f746bb93c6b9cab50004eb90f5c5 size 689503
+DIST kdepim-3.4.0.tar.bz2 11441545 RMD160 abc3794c45f12e29b3dc8ce3c4b570e980beb8c3 SHA256 7769e1989404c16d679c0be32cde7634ceb5692131de6ab1d44def47eca871ad size 11441545
+DIST kdepim-3.4.1.tar.bz2 11345538 RMD160 f3dd526ca3094f42eb825ece30d0b84c047a6050 SHA256 a8e86e9d9d6ae0c997546294f3bb28c988e21834e23aeddd1db26fc57d3e3b5b size 11345538
+DIST kdepim-3.4.3.tar.bz2 11327132 RMD160 a1c15ae5759b9865297a28e0ee00f66b04fc2a96 SHA256 c44f3987e66a81b5cba6a9aded7f8deef6e7ea93ae9fb000a12c9865f609e5c6 size 11327132
+DIST kdepim-3.5.2.tar.bz2 12887336 RMD160 8e6571d14bbf6b3370c4fdb108a1a79625e87365 SHA256 9c038a80912894b3ec132b2c7219ec5549ca80dcdeec88555928d2e038966539 size 12887336
+EBUILD libkpimidentities-3.4.1.ebuild 720 RMD160 d8d4b81897bd4c9cf868a26a31a5a9ed5b0be6bd SHA1 a07f0576cc814eb3d51291c43d38159ade02d694 SHA256 67b6ba0c4d9622e1d3ec0140f3269ccfa11eb47c8a08d150f68cc8eb169efa70 size 720
 MD5 1c3ab0d2b7a13abc55cfa16d232efff9 libkpimidentities-3.4.1.ebuild 720
 RMD160 d8d4b81897bd4c9cf868a26a31a5a9ed5b0be6bd libkpimidentities-3.4.1.ebuild 720
 SHA256 67b6ba0c4d9622e1d3ec0140f3269ccfa11eb47c8a08d150f68cc8eb169efa70 libkpimidentities-3.4.1.ebuild 720
+EBUILD libkpimidentities-3.4.3.ebuild 733 RMD160 04dc80a50797ecabc74d5e3ba6e707754d585634 SHA1 a2aacd70873a38c35308f3b8acbeb1be30be0693 SHA256 b6d32893475fcfe30c32182287c149b0ac1a766494ad4ff1b7c81dc3ea65b608 size 733
 MD5 fcf13ade0e8d60e558f40bbe2ef65dd2 libkpimidentities-3.4.3.ebuild 733
 RMD160 04dc80a50797ecabc74d5e3ba6e707754d585634 libkpimidentities-3.4.3.ebuild 733
 SHA256 b6d32893475fcfe30c32182287c149b0ac1a766494ad4ff1b7c81dc3ea65b608 libkpimidentities-3.4.3.ebuild 733
+EBUILD libkpimidentities-3.5.2.ebuild 679 RMD160 950bdc53a742a09680e7c7f1b8e8869708465bd8 SHA1 37ebc4b1eaf4d335fb824e8de26bb52645a0edf2 SHA256 dc6b74a4ddad707b3a0539112129ec42861ab5f34753d457e1ccccbdcc12e5aa size 679
 MD5 1a111a9c780aa385bdb7392ea13f55d5 libkpimidentities-3.5.2.ebuild 679
 RMD160 950bdc53a742a09680e7c7f1b8e8869708465bd8 libkpimidentities-3.5.2.ebuild 679
 SHA256 dc6b74a4ddad707b3a0539112129ec42861ab5f34753d457e1ccccbdcc12e5aa libkpimidentities-3.5.2.ebuild 679
+MISC ChangeLog 5805 RMD160 3a98090a3af9b8980b1eae2f7c5cf68e1c3a644a SHA1 90c5c035d03aa0a1e289a15385d5b845690ca402 SHA256 2574c11d40024ea290490b333cb3ae7e27d3fe03e4ebca041fbbe623ded20322 size 5805
+MD5 d55558aa153db83feadf30a0cbf9d873 ChangeLog 5805
+RMD160 3a98090a3af9b8980b1eae2f7c5cf68e1c3a644a ChangeLog 5805
+SHA256 2574c11d40024ea290490b333cb3ae7e27d3fe03e4ebca041fbbe623ded20322 ChangeLog 5805
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a size 156
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 91f2200bdc01873b716cb3f9feadcf95 files/digest-libkpimidentities-3.4.1 762
+RMD160 9ae3652b41011c19fba1e6066280de6392cdee04 files/digest-libkpimidentities-3.4.1 762
+SHA256 26263ad8661ed9287c7a3fe3eabc8c2ec9f40c8ef72c525a4ff100b852b3fff0 files/digest-libkpimidentities-3.4.1 762
+MD5 078792b016dc323d645d7a2b33ed6913 files/digest-libkpimidentities-3.4.3 247
+RMD160 bc5edc9614ec6bc755f7eebf14f94a4cce174e18 files/digest-libkpimidentities-3.4.3 247
+SHA256 541b17828da40a695b28451a60321cd1bc8879fbd8deb2405ed060940085ac5a files/digest-libkpimidentities-3.4.3 247
+MD5 4b77483fe398773d23a75714c3dd6223 files/digest-libkpimidentities-3.5.2 247
+RMD160 6593013cc2b82f2b51819d483733f409262d7d91 files/digest-libkpimidentities-3.5.2 247
+SHA256 93b85550a7cebd0f79e5aed63e5719488cfdcc0ee049038fd423aefa50f64e59 files/digest-libkpimidentities-3.5.2 247
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFENId2AiZjviIA2XgRAup/AJ4lXYIpfyKGQg3pW+mQ5g0oSLOdkgCghFaA
-4e3IXORHL58FF93l9Ja7DfA=
-=Twry
+iD8DBQFEUUK6W78445TWHXcRAh7QAJ4jhERSMLjJ9LfB9JCP6xvU2GckVwCcDQPV
+0EJWay05dznaR07MvZlbCh4=
+=hXL+
 -----END PGP SIGNATURE-----
