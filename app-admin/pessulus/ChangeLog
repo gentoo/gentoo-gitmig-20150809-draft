@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/pessulus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.1 2006/04/23 17:26:41 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.2 2006/04/27 11:38:12 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-pessulus-0.9.1, Manifest:
+  Fixing SHA256 digest, pass two.
 
 *pessulus-0.9.1 (23 Apr 2006)
 
