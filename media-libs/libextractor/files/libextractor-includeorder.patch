@@ -1,0 +1,51 @@
+diff -Naur libextractor-0.5.12/src/plugins/exiv2/exiv2extractor.cc libextractor-0.5.12.working/src/plugins/exiv2/exiv2extractor.cc
+--- libextractor-0.5.12/src/plugins/exiv2/exiv2extractor.cc	2006-03-10 18:12:32.000000000 -0600
++++ libextractor-0.5.12.working/src/plugins/exiv2/exiv2extractor.cc	2006-04-27 01:11:51.000000000 -0500
+@@ -23,19 +23,18 @@
+   @date    30-Jun-05, ahu: created
+ */
+ 
+-#include "platform.h"
+-#include "extractor.h"
+-
+-#include "exif.hpp"
+-#include "image.hpp"
+-#include "futils.hpp"
+-
+ #include <iostream>
+ #include <iomanip>
+ #include <cassert>
+ #include <cstring>
+ #include <math.h>
+ 
++#include "platform.h"
++#include "extractor.h"
++
++#include "exif.hpp"
++#include "image.hpp"
++#include "futils.hpp"
+ 
+ #define WORKAROUND_905 1
+ #if WORKAROUND_905
+diff -Naur libextractor-0.5.12/src/plugins/wordleaker/wordextractor.cc libextractor-0.5.12.working/src/plugins/wordleaker/wordextractor.cc
+--- libextractor-0.5.12/src/plugins/wordleaker/wordextractor.cc	2006-04-05 02:50:51.000000000 -0500
++++ libextractor-0.5.12.working/src/plugins/wordleaker/wordextractor.cc	2006-04-27 01:13:01.000000000 -0500
+@@ -22,15 +22,14 @@
+      the README file in this directory.
+  */
+ 
+-#include "platform.h"
+-#include "extractor.h"
+-#include "../convert.h"
+ #include <math.h>
+ #include <time.h>
+ 
+ #include "wordleaker.h"
+ #include "pole.h"
+-
++#include "platform.h"
++#include "extractor.h"
++#include "../convert.h"
+ 
+ extern "C" {
+ 

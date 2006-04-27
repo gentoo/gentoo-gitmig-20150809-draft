@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.12.ebuild,v 1.1 2006/04/25 05:10:17 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.12.ebuild,v 1.2 2006/04/27 06:28:45 squinky86 Exp $
 
 inherit libtool eutils
 
@@ -20,6 +20,12 @@ DEPEND="virtual/libc
 	gtk? ( >=x11-libs/gtk+-2.6.10 )
 	zlib? ( sys-libs/zlib )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-includeorder.patch
+}
 
 src_compile() {
 	elibtoolize
