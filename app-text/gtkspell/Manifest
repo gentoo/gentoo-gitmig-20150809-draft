@@ -1,36 +1,57 @@
-MD5 07673352b29b64709ab7be201bcfbb1b ChangeLog 5006
-RMD160 4797c076a32f6f5c9ebcdd87729bba508ac64b11 ChangeLog 5006
-SHA256 3f2ec52ca11ee6b86f18ba5f437a450a8ac82c6df2d2148d76ffd3718225686e ChangeLog 5006
-MD5 f9abff1da530fea89cf3043f082cc2d3 files/digest-gtkspell-2.0.11 67
-RMD160 bcc915634024da34e78d6d1b527795d9594c8607 files/digest-gtkspell-2.0.11 67
-SHA256 e2397d3c56a59f6228c53dfbb5e078c897631c861f9ddb12b8129f38c9a8f559 files/digest-gtkspell-2.0.11 67
-MD5 45980e49cfff969d1e77692cd314dde2 files/digest-gtkspell-2.0.11-r1 247
-RMD160 0fc169fdb8ce61fe22d0bdcdb8a34f5448a49206 files/digest-gtkspell-2.0.11-r1 247
-SHA256 07fdd14f6bf04567c1b057207bcbb6d4a0a38746d2e835a5724d567b2847ce73 files/digest-gtkspell-2.0.11-r1 247
-MD5 ae68a374d757954ed1b57e829bb90ea3 files/digest-gtkspell-2.0.4-r1 66
-RMD160 f19910b4bcad7ace56218f5b431516d6e28a94fc files/digest-gtkspell-2.0.4-r1 66
-SHA256 9044669972eef068a34b1a51cbcd7a718a4f8ac2e6b95feffd4da868c3755000 files/digest-gtkspell-2.0.4-r1 66
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX gtkspell-2.0.10-enchant.patch 8894 RMD160 29b116631863706083357c0b965d9906b6475ccf SHA1 2b884010eb89e580f6ababe1b67e13fe7aa31c1f SHA256 6d1f282b69d10b60e7e8df48497f6e19f0c2186fc7383fd6685f0a6ea539b185 size 8894
 MD5 b91273fd65f12fdab689ed2beb37c352 files/gtkspell-2.0.10-enchant.patch 8894
 RMD160 29b116631863706083357c0b965d9906b6475ccf files/gtkspell-2.0.10-enchant.patch 8894
 SHA256 6d1f282b69d10b60e7e8df48497f6e19f0c2186fc7383fd6685f0a6ea539b185 files/gtkspell-2.0.10-enchant.patch 8894
+AUX gtkspell-2.0.11-enchant.patch 8904 RMD160 5109a1b1fda7d8af38a0d1fbac7ebeb3a51a5697 SHA1 7e18c24b75f0dfdae334cf5b0cc7a697893360de SHA256 9df42ce7c21e548d083e7970a98944225ac54d5db4fef091ecca0e7d1108ae4f size 8904
 MD5 56272bca2bff7fda0bfe8be7ff9808b5 files/gtkspell-2.0.11-enchant.patch 8904
 RMD160 5109a1b1fda7d8af38a0d1fbac7ebeb3a51a5697 files/gtkspell-2.0.11-enchant.patch 8904
 SHA256 9df42ce7c21e548d083e7970a98944225ac54d5db4fef091ecca0e7d1108ae4f files/gtkspell-2.0.11-enchant.patch 8904
+AUX gtkspell-2.0.4-docbookx.patch 582 RMD160 8e4ffb7ea0ae52bc894d6f104f7810d37677612c SHA1 99b50e87c691c752ccb720d4de5dbcbbc8ceadd5 SHA256 da00bf5eed3ed12d022f155c8fd5fe71f0eeee1491f9aef79c35f71114049c42 size 582
 MD5 7b72f96acd5c9a16b6a6284de819f4aa files/gtkspell-2.0.4-docbookx.patch 582
 RMD160 8e4ffb7ea0ae52bc894d6f104f7810d37677612c files/gtkspell-2.0.4-docbookx.patch 582
 SHA256 da00bf5eed3ed12d022f155c8fd5fe71f0eeee1491f9aef79c35f71114049c42 files/gtkspell-2.0.4-docbookx.patch 582
+AUX gtkspell-2.0.4-enchant.patch 11806 RMD160 f6716ab044fb9ecda7e57193a3d658a82ddd10f7 SHA1 9e56e098a24ed8eb0e79d0ba8d920ad094bfe7a0 SHA256 5ebcef66a303147e81e30e65cc396e25f91cb29c410bd670859ff847661e3f6d size 11806
 MD5 2c687dc22e69904275ba8afee73f55a9 files/gtkspell-2.0.4-enchant.patch 11806
 RMD160 f6716ab044fb9ecda7e57193a3d658a82ddd10f7 files/gtkspell-2.0.4-enchant.patch 11806
 SHA256 5ebcef66a303147e81e30e65cc396e25f91cb29c410bd670859ff847661e3f6d files/gtkspell-2.0.4-enchant.patch 11806
+DIST gtkspell-2.0.11.tar.gz 347172 RMD160 c5ca1804807f445e246de2b384448a7c7c76855f SHA256 521d6be1e1236706cd491305b10f01d989bf47787ca97242c56c0d2b038e6a12 size 347172
+DIST gtkspell-2.0.4.tar.gz 197288 RMD160 61b1e62b843b2604045ed9e8a05e8e92070d6f87 SHA256 e3bed8d2a1c5cbb572680cb23fd5f858c7b302e947dca353318959f6a1153e13 size 197288
+EBUILD gtkspell-2.0.11-r1.ebuild 1006 RMD160 c05f71504e5cf56c8240b413b44bc806ee4450de SHA1 91d8afc85baf0fcf64d7670c4d5eb5fc7318e745 SHA256 339d33a890bd6cd47af5c9a516949ff6e45dd2ca1a3807f99e17862c2005284b size 1006
 MD5 5ab28dfe426f4fd20842ee4a7197ff85 gtkspell-2.0.11-r1.ebuild 1006
 RMD160 c05f71504e5cf56c8240b413b44bc806ee4450de gtkspell-2.0.11-r1.ebuild 1006
 SHA256 339d33a890bd6cd47af5c9a516949ff6e45dd2ca1a3807f99e17862c2005284b gtkspell-2.0.11-r1.ebuild 1006
+EBUILD gtkspell-2.0.11.ebuild 1006 RMD160 b8f6c29d817e403796632ec2b7acabb6de09883e SHA1 b44413f9bfa36e2b78d3c4be3754a31ae1809c3f SHA256 15b817ce63df26832c67dd19cdd77524c58d7ebc85e5607ae562cc4ebc32f131 size 1006
 MD5 67a0f89aa2216f0022b20b7cbf976e45 gtkspell-2.0.11.ebuild 1006
 RMD160 b8f6c29d817e403796632ec2b7acabb6de09883e gtkspell-2.0.11.ebuild 1006
 SHA256 15b817ce63df26832c67dd19cdd77524c58d7ebc85e5607ae562cc4ebc32f131 gtkspell-2.0.11.ebuild 1006
+EBUILD gtkspell-2.0.4-r1.ebuild 1169 RMD160 232c6fcc296a7fcaac1c3923f596c3d176d20a7d SHA1 a3c6e009ac69ad32ef8203cf1e97c338c7adfaa9 SHA256 4752435dfe92a92575d8bb2c5ed63fb76c88351cf526bc218bda163d4d859e2d size 1169
 MD5 837c8b2c0504f33feacb22c9eebacabe gtkspell-2.0.4-r1.ebuild 1169
 RMD160 232c6fcc296a7fcaac1c3923f596c3d176d20a7d gtkspell-2.0.4-r1.ebuild 1169
 SHA256 4752435dfe92a92575d8bb2c5ed63fb76c88351cf526bc218bda163d4d859e2d gtkspell-2.0.4-r1.ebuild 1169
+MISC ChangeLog 5166 RMD160 b663b0e2e8fe54e991af7d33a25e9333ccd23019 SHA1 e1e5ff49f3fa9a207a30b5a213dbb6cad80ec5ee SHA256 f54d79d92cb686f2fbdad197c2a86d7556da436b4baeb25b38ad98fb4b9b07aa size 5166
+MD5 86cd6a071aee7595f3636cfcf0c7111a ChangeLog 5166
+RMD160 b663b0e2e8fe54e991af7d33a25e9333ccd23019 ChangeLog 5166
+SHA256 f54d79d92cb686f2fbdad197c2a86d7556da436b4baeb25b38ad98fb4b9b07aa ChangeLog 5166
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 size 158
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 45980e49cfff969d1e77692cd314dde2 files/digest-gtkspell-2.0.11 247
+RMD160 0fc169fdb8ce61fe22d0bdcdb8a34f5448a49206 files/digest-gtkspell-2.0.11 247
+SHA256 d06d845c0253ce2c3e1db75cec2be4a8b15619b3591c772add15488d8803f684 files/digest-gtkspell-2.0.11 247
+MD5 45980e49cfff969d1e77692cd314dde2 files/digest-gtkspell-2.0.11-r1 247
+RMD160 0fc169fdb8ce61fe22d0bdcdb8a34f5448a49206 files/digest-gtkspell-2.0.11-r1 247
+SHA256 d06d845c0253ce2c3e1db75cec2be4a8b15619b3591c772add15488d8803f684 files/digest-gtkspell-2.0.11-r1 247
+MD5 53fdc733323c78ef534ae2a7ae7a262c files/digest-gtkspell-2.0.4-r1 244
+RMD160 61ec00cc67195db8496365b5feba80c727ab368f files/digest-gtkspell-2.0.4-r1 244
+SHA256 804dd0d6d0e5cbac7dc0b3c6195e74eeac36a889a09b0bc4f93791de16ff411c files/digest-gtkspell-2.0.4-r1 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUNZnW78445TWHXcRAjhWAKCQZUTQ7rCwaV0j3OnQTiiXrJR4zgCeO4Ca
+/3OoxK0fJQqsrEwrFwd45Qw=
+=LzOK
+-----END PGP SIGNATURE-----

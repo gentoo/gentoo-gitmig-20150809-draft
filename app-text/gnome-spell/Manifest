@@ -1,57 +1,85 @@
-MD5 f3b959d2be43ec237bbd396b6b76cbbf ChangeLog 9148
-RMD160 5ee73425c74e8e8531c71edc7fe0ebb4e8d7e91e ChangeLog 9148
-SHA256 c4ca614432b7a1a05b4383083dc84d08755c0078595222656afdfb9a6849ffa2 ChangeLog 9148
-MD5 959c92eeb724ca5380e81f09805df109 files/digest-gnome-spell-1.0.5-r2 70
-RMD160 84d82af6a601e21d590fbf96434e801bc197aa5e files/digest-gnome-spell-1.0.5-r2 70
-SHA256 17a61f94e0dcee29292edfd8acefa295339ff9fa35b1bbc0f2133e63a8f68d95 files/digest-gnome-spell-1.0.5-r2 70
-MD5 60b79a4908f65bef8d5bc1765fb61c4a files/digest-gnome-spell-1.0.6 70
-RMD160 73df5c2bb38fa8eb679f66f9e2de3c3f9d1a51de files/digest-gnome-spell-1.0.6 70
-SHA256 15909fa710c31bcae845eba8f91d0eaa2342c567f0fe6ed8de59dc3dc70d0964 files/digest-gnome-spell-1.0.6 70
-MD5 658219434579dc54d92842515701df84 files/digest-gnome-spell-1.0.7 256
-RMD160 c998e61f0c5856d5ab11ce0038d17f1e043f1b08 files/digest-gnome-spell-1.0.7 256
-SHA256 499583c90d872bdc4596b77e7db2475d4b92e922e57374b77c5a40e8f1d29ee0 files/digest-gnome-spell-1.0.7 256
-MD5 658219434579dc54d92842515701df84 files/digest-gnome-spell-1.0.7-r1 256
-RMD160 c998e61f0c5856d5ab11ce0038d17f1e043f1b08 files/digest-gnome-spell-1.0.7-r1 256
-SHA256 499583c90d872bdc4596b77e7db2475d4b92e922e57374b77c5a40e8f1d29ee0 files/digest-gnome-spell-1.0.7-r1 256
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX gnome-spell-1.0.5-enchant.patch 18757 RMD160 9bf735a278857ca5771f66bc22dd4587ee30696e SHA1 cf8f4c7abc356665ec4a3cc4d310e195ae704f2b SHA256 cbedfbbc279da893c872f38566ad79e404582cb9e0326b9f0e0121ebdd3c82b2 size 18757
 MD5 a2f04eb1ad051e0c06e703901869afca files/gnome-spell-1.0.5-enchant.patch 18757
 RMD160 9bf735a278857ca5771f66bc22dd4587ee30696e files/gnome-spell-1.0.5-enchant.patch 18757
 SHA256 cbedfbbc279da893c872f38566ad79e404582cb9e0326b9f0e0121ebdd3c82b2 files/gnome-spell-1.0.5-enchant.patch 18757
+AUX gnome-spell-1.0.5-gtk24.patch 13886 RMD160 5a7a5fb217f950c5b109438e4716a8fd8c553ddd SHA1 f01afa89a8821b240de4ae62597b68d9927e210c SHA256 b8a7ce22008d06983fa44af0182e19f2fd8f9bda27aa98d5754d22ce70e51aad size 13886
 MD5 b0296719b38481284f42227002eeb1a4 files/gnome-spell-1.0.5-gtk24.patch 13886
 RMD160 5a7a5fb217f950c5b109438e4716a8fd8c553ddd files/gnome-spell-1.0.5-gtk24.patch 13886
 SHA256 b8a7ce22008d06983fa44af0182e19f2fd8f9bda27aa98d5754d22ce70e51aad files/gnome-spell-1.0.5-gtk24.patch 13886
+AUX gnome-spell-1.0.6-combo.patch 12895 RMD160 cd2728616f4949828370bd6105e858cc2fb111ce SHA1 8743467aaaa746250c297d0b2aa6c300c4afa2ca SHA256 e1cff89cf6d5da26ba26454ff16c12cf3fd6e0b02dac574f9adf796b1288291d size 12895
 MD5 312bf5d650d4960f7f2077f477892dc7 files/gnome-spell-1.0.6-combo.patch 12895
 RMD160 cd2728616f4949828370bd6105e858cc2fb111ce files/gnome-spell-1.0.6-combo.patch 12895
 SHA256 e1cff89cf6d5da26ba26454ff16c12cf3fd6e0b02dac574f9adf796b1288291d files/gnome-spell-1.0.6-combo.patch 12895
+AUX gnome-spell-1.0.6-enchant.patch 16509 RMD160 fb0494f84a7b5c1993d757c589af4644e933a755 SHA1 e9e2a6cb6ef715236d8e50ad767ce6b3e5f55fae SHA256 eb4af82346c06b71671fc1d463d4d69805b8fbb6430f6881316dfd5d56034012 size 16509
 MD5 62828aa3cfc3de6aaa8604520ee943d8 files/gnome-spell-1.0.6-enchant.patch 16509
 RMD160 fb0494f84a7b5c1993d757c589af4644e933a755 files/gnome-spell-1.0.6-enchant.patch 16509
 SHA256 eb4af82346c06b71671fc1d463d4d69805b8fbb6430f6881316dfd5d56034012 files/gnome-spell-1.0.6-enchant.patch 16509
+AUX gnome-spell-1.0.7-combo.patch 13005 RMD160 c8689b398964b265459bda677e8b42b56bc58a59 SHA1 409da1d200370cded8555d62f7e0e0c53b96bad5 SHA256 0d64ebd6b1316142636116d0e19bd9a94377458cfe328f42c51889cc86696840 size 13005
 MD5 0662bf311f48fc9e69e9a7361fc65192 files/gnome-spell-1.0.7-combo.patch 13005
 RMD160 c8689b398964b265459bda677e8b42b56bc58a59 files/gnome-spell-1.0.7-combo.patch 13005
 SHA256 0d64ebd6b1316142636116d0e19bd9a94377458cfe328f42c51889cc86696840 files/gnome-spell-1.0.7-combo.patch 13005
+AUX gnome-spell-1.0.7-debug.patch 384 RMD160 43eb9911b2bde894cdaa49f096f45c858eeb5ab5 SHA1 13a66aabe0d75d8e75e99adc51cba3a7a9ddff77 SHA256 a01b2762468f4759d8a4e0cb50bec860abb23292819b1ea22e7611d5c721b253 size 384
 MD5 94a75fa3ccc33e552eb79a810db5dade files/gnome-spell-1.0.7-debug.patch 384
 RMD160 43eb9911b2bde894cdaa49f096f45c858eeb5ab5 files/gnome-spell-1.0.7-debug.patch 384
 SHA256 a01b2762468f4759d8a4e0cb50bec860abb23292819b1ea22e7611d5c721b253 files/gnome-spell-1.0.7-debug.patch 384
+AUX gnome-spell-1.0.7-enchant-r2.patch 17262 RMD160 8fe136299ffae9ce70354a23cce66a1cff5681e4 SHA1 a861cdd49f2ca585d16b8e564bae2f6acd94cf61 SHA256 821e75ea72f3e35f6912bdd1aa24be86d9bcf4835c75e28a084927b89c55e1ba size 17262
 MD5 cdb26ce8ba03a6202b83bb94b20ff8ed files/gnome-spell-1.0.7-enchant-r2.patch 17262
 RMD160 8fe136299ffae9ce70354a23cce66a1cff5681e4 files/gnome-spell-1.0.7-enchant-r2.patch 17262
 SHA256 821e75ea72f3e35f6912bdd1aa24be86d9bcf4835c75e28a084927b89c55e1ba files/gnome-spell-1.0.7-enchant-r2.patch 17262
+AUX gnome-spell-1.0.7-enchant.patch 15540 RMD160 12f418609437b1ecafa4030f5c2df43ba3982e3e SHA1 d7c914e64ae4a3ea543a93f8bafa7123ab7690f9 SHA256 c81be929c6fab0a866fad62477cc794e3bbb8b19fd2c18e61eb84782195004df size 15540
 MD5 6b974cdc8c91d76c10c019d2dc342f52 files/gnome-spell-1.0.7-enchant.patch 15540
 RMD160 12f418609437b1ecafa4030f5c2df43ba3982e3e files/gnome-spell-1.0.7-enchant.patch 15540
 SHA256 c81be929c6fab0a866fad62477cc794e3bbb8b19fd2c18e61eb84782195004df files/gnome-spell-1.0.7-enchant.patch 15540
+AUX gnome-spell-1.0.7-remove_gnome_h.patch 847 RMD160 040ba771de2054d811df2a3838d7711229b65801 SHA1 260d3e99a2367403eca9947ffe544ea8edcafa33 SHA256 6ee6a71d4c1b1e1ed75b7c2b5206196d99b35c8398cada11edba378b266a337b size 847
 MD5 4d723da276123286754f9769985ea0b0 files/gnome-spell-1.0.7-remove_gnome_h.patch 847
 RMD160 040ba771de2054d811df2a3838d7711229b65801 files/gnome-spell-1.0.7-remove_gnome_h.patch 847
 SHA256 6ee6a71d4c1b1e1ed75b7c2b5206196d99b35c8398cada11edba378b266a337b files/gnome-spell-1.0.7-remove_gnome_h.patch 847
+DIST gnome-spell-1.0.5.tar.bz2 216628 RMD160 2a506e52fc105b18efa3ff543ee2d2b6b83c90a5 SHA256 a6b14c075ee43dacc559eb49655138c23e2d98351968f1c737a23f01aa9813a3 size 216628
+DIST gnome-spell-1.0.6.tar.bz2 315357 RMD160 de4f23a42f98dfce6cf69c3fc1dc288739fe9591 SHA256 715286bb6323e30c4ec432cd56f1302630f077d6b3c9ec82702eb1127f83e189 size 315357
+DIST gnome-spell-1.0.7.tar.bz2 331063 RMD160 e5c0593be77bfffa609eaa3f52653bc09a130667 SHA256 6f3117635267acd29bb934bd6e588c58a8f5643fcaf41310d6633c2d7909f5f6 size 331063
+EBUILD gnome-spell-1.0.5-r2.ebuild 1021 RMD160 fa79f39538b65cbee99f096aaef7a8f88f613f68 SHA1 7ae858d051c2f5ef577a63c908ddaec0c55f5f7d SHA256 32d4f24d11ec5e5bc9b31118eb204145ffa33aec5658d154c7453dcc76bd8941 size 1021
 MD5 c4c9a0a1cb931a6c1ca3bf7fc93a2e51 gnome-spell-1.0.5-r2.ebuild 1021
 RMD160 fa79f39538b65cbee99f096aaef7a8f88f613f68 gnome-spell-1.0.5-r2.ebuild 1021
 SHA256 32d4f24d11ec5e5bc9b31118eb204145ffa33aec5658d154c7453dcc76bd8941 gnome-spell-1.0.5-r2.ebuild 1021
+EBUILD gnome-spell-1.0.6.ebuild 1263 RMD160 a2450ab0de4c914b56fce45032cc096fbd18950e SHA1 3022aae3efe8bb7ddb437dac6c8ab04a0bb1abf7 SHA256 46feb77cc000ce49951f06e7c79cb4f1d6f34917ac1d9b8a441c6ffe55436e99 size 1263
 MD5 e75b67bc2e646d264c8fcbda88d053bb gnome-spell-1.0.6.ebuild 1263
 RMD160 a2450ab0de4c914b56fce45032cc096fbd18950e gnome-spell-1.0.6.ebuild 1263
 SHA256 46feb77cc000ce49951f06e7c79cb4f1d6f34917ac1d9b8a441c6ffe55436e99 gnome-spell-1.0.6.ebuild 1263
+EBUILD gnome-spell-1.0.7-r1.ebuild 1575 RMD160 70da73e8b1f3fc6bfb601fc0fecaca354afbf45a SHA1 618c4f22f61db169278bc641f3f5cd263941a5a2 SHA256 ab5ec3ab554cce90c94a97202704e9b5afa577f4a18888f6b41c62c0d2727c6e size 1575
 MD5 3dca4d307f5205245349431f6c9bdbed gnome-spell-1.0.7-r1.ebuild 1575
 RMD160 70da73e8b1f3fc6bfb601fc0fecaca354afbf45a gnome-spell-1.0.7-r1.ebuild 1575
 SHA256 ab5ec3ab554cce90c94a97202704e9b5afa577f4a18888f6b41c62c0d2727c6e gnome-spell-1.0.7-r1.ebuild 1575
+EBUILD gnome-spell-1.0.7.ebuild 1625 RMD160 e12e5d8bce1e21e75fbede29f3d892e6cb13c86a SHA1 58639ef4573b6738f0023793baedbe69f4e8c015 SHA256 dfe69fc19813817a5fda46fba463ff0341a8821266bc7eb5d2e4f4ba4f1521ed size 1625
 MD5 6f726a8f311efd868c05a9c0a894d194 gnome-spell-1.0.7.ebuild 1625
 RMD160 e12e5d8bce1e21e75fbede29f3d892e6cb13c86a gnome-spell-1.0.7.ebuild 1625
 SHA256 dfe69fc19813817a5fda46fba463ff0341a8821266bc7eb5d2e4f4ba4f1521ed gnome-spell-1.0.7.ebuild 1625
+MISC ChangeLog 9384 RMD160 a288e700e7060e495c26b06a0f39e4e02ffeebda SHA1 086bc9a883931d1442bae1f52b7a080930592ad2 SHA256 23d8a40a1870459135c8065590dd62b31cdaf38975d83f484c6fcc8d9c3ae86e size 9384
+MD5 ef061254edc8d3455a83add24b342916 ChangeLog 9384
+RMD160 a288e700e7060e495c26b06a0f39e4e02ffeebda ChangeLog 9384
+SHA256 23d8a40a1870459135c8065590dd62b31cdaf38975d83f484c6fcc8d9c3ae86e ChangeLog 9384
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 size 158
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 e37c6ac000f882cc81e9cd814b66e3d9 files/digest-gnome-spell-1.0.5-r2 256
+RMD160 cdc4a4ea93d98f7afa34997140bff6a320b5a13a files/digest-gnome-spell-1.0.5-r2 256
+SHA256 9a7638d10c34a3c5e98074621185bb1722ed976406e4199c3f218dbeb053e11a files/digest-gnome-spell-1.0.5-r2 256
+MD5 cd31ce6d861f5af624c643efb45e1a14 files/digest-gnome-spell-1.0.6 256
+RMD160 3dd1e2cce6d1118ae193c33967ae7ac2176a25bf files/digest-gnome-spell-1.0.6 256
+SHA256 060357080a5bd32da9d227ce62b34a69ae6b2f912600207604290cafed62a7bc files/digest-gnome-spell-1.0.6 256
+MD5 17b2884c2df83cba8b64d0b521699cb7 files/digest-gnome-spell-1.0.7 256
+RMD160 b5e95cd595895d2c3ea210d959140cd158ac05fa files/digest-gnome-spell-1.0.7 256
+SHA256 87b75139cd669fc786b823197a9dccbd770e77506d25e6097d6f424b15b9f24d files/digest-gnome-spell-1.0.7 256
+MD5 17b2884c2df83cba8b64d0b521699cb7 files/digest-gnome-spell-1.0.7-r1 256
+RMD160 b5e95cd595895d2c3ea210d959140cd158ac05fa files/digest-gnome-spell-1.0.7-r1 256
+SHA256 87b75139cd669fc786b823197a9dccbd770e77506d25e6097d6f424b15b9f24d files/digest-gnome-spell-1.0.7-r1 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUNZDW78445TWHXcRAipGAJ9gbemXON9Y6TXg5Nwnk3HgChJUvACfYZlY
+Iw3yRfugu6ZG4yc9HQwMO1A=
+=S5Ht
+-----END PGP SIGNATURE-----
