@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.376 2006/04/22 22:41:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.377 2006/04/27 23:46:04 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-mplayer-1.0_pre7-r1, files/digest-mplayer-1.0.20060102,
+  files/digest-mplayer-1.0.20060217, files/digest-mplayer-1.0.20060302,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   22 Apr 2006; Luca Barbato <lu_zero@gentoo.org>
   mplayer-1.0.20060415.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mmsv2
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.16 2006/03/20 19:35:57 arj Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.17 2006/04/27 23:43:09 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-mmsv2-0.93,
+  files/digest-mmsv2-1.0.5, Manifest:
+  Fixing SHA256 digest, pass four
 
 *mmsv2-1.0.6.1 (20 Mar 2006)
 

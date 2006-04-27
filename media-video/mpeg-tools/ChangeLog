@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpeg-tools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.15 2006/02/11 16:12:55 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.16 2006/04/27 23:43:45 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-mpeg-tools-1.5b-r2, Manifest:
+  Fixing SHA256 digest, pass four
 
   11 Feb 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   mpeg-tools-1.5b-r2.ebuild:
