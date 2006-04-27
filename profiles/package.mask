@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5275 2006/04/26 09:00:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5276 2006/04/27 21:47:16 dcoutts Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -551,8 +551,9 @@ net-misc/trickle
 media-gfx/sodipodi
 
 # Duncan Coutts <dcoutts@gentoo.org> (26 Mar 2006)
-# New revisions, mainly for ia64. Needs testing.
+# New versions/revisions. Needs testing.
 =dev-lang/ghc-6.4.1-r3
+=dev-lang/ghc-6.4.2
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (23 Mar 2006)
 # Masked, waiting for GNOME 2.14
