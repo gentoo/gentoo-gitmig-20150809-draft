@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vim-spell-pl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-pl/ChangeLog,v 1.2 2006/04/05 19:48:07 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-pl/ChangeLog,v 1.3 2006/04/27 14:48:28 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   05 Apr 2006; Patrick McLean <chutzpah@gentoo.org>
   vim-spell-pl-20060218.ebuild:

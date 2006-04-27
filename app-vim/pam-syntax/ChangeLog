@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/pam-syntax
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/pam-syntax/ChangeLog,v 1.8 2006/04/07 21:56:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/pam-syntax/ChangeLog,v 1.9 2006/04/27 14:47:24 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-pam-syntax-20030818, Manifest:
+  Fixing SHA256 digest, pass four
 
   07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
   Remove ciaranm from metadata.xml.
