@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.137 2006/04/23 18:24:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.138 2006/04/27 22:41:02 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-shadow-4.0.7-r4, files/digest-shadow-4.0.11.1-r1,
+  files/digest-shadow-4.0.11.1-r2, files/digest-shadow-4.0.12,
+  files/digest-shadow-4.0.13, Manifest:
+  Fixing SHA256 digest, pass four
 
   29 Apr 2006; Joshua Kinard <kumba@gentoo.org> shadow-4.0.14-r1.ebuild:
   Marked stable on mips.

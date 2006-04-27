@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gli
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/ChangeLog,v 1.3 2006/03/13 16:27:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/ChangeLog,v 1.4 2006/04/27 22:35:23 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-gli-0.3,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
 *gli-0.3.1 (13 Mar 2006)
 *gli-0.3 (13 Mar 2006)

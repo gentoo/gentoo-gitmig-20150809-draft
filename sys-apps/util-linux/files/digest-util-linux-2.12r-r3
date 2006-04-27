@@ -1,4 +1,6 @@
 MD5 3e54b8e66142fe58282e58075f73e58c loop-AES-v3.1c.tar.bz2 168755
+RMD160 0194f7a8830ec28905b1a65bcf4c5eafd2985c63 loop-AES-v3.1c.tar.bz2 168755
+SHA256 23dc775e0909ee1886b571735003563f74fd3c1db2da2f2b823e13e225999060 loop-AES-v3.1c.tar.bz2 168755
 MD5 dee120b17425e1edf0a0c64f0e249c20 util-linux-2.12i-cryptoapi-losetup.patch.bz2 4800
 RMD160 82e54aedd691aa93b67de9dfb9049a3f012a29f7 util-linux-2.12i-cryptoapi-losetup.patch.bz2 4800
 SHA256 565a0cc6c3c148a66969276ae9d34dc34f19fbd45df2740343793ee067b3700f util-linux-2.12i-cryptoapi-losetup.patch.bz2 4800

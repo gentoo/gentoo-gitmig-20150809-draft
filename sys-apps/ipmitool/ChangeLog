@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ipmitool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ChangeLog,v 1.5 2006/03/05 18:18:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ChangeLog,v 1.6 2006/04/27 22:35:50 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-ipmitool-1.6.0,
+  files/digest-ipmitool-1.8.2, Manifest:
+  Fixing SHA256 digest, pass four
 
 *ipmitool-1.8.6 (05 Mar 2006)
 

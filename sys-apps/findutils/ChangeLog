@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.70 2006/04/18 19:03:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.71 2006/04/27 22:34:59 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-findutils-4.1.20-r1, files/digest-findutils-4.1.20-r2,
+  files/digest-findutils-4.2.24, files/digest-findutils-4.2.25,
+  files/digest-findutils-4.2.27, files/digest-findutils-4.3.0, Manifest:
+  Fixing SHA256 digest, pass four
 
   18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/findutils-4.3.0-nbsd.patch, +files/gnulib-openat-mode_t.patch,

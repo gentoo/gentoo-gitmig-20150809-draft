@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/eject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.53 2006/04/23 22:46:09 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.54 2006/04/27 22:34:17 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-eject-2.0.13-r1, files/digest-eject-2.0.13-r2, Manifest:
+  Fixing SHA256 digest, pass four
 
 *eject-2.1.4-r1 (23 Apr 2006)
 

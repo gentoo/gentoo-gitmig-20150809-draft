@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.159 2006/04/24 02:33:59 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.160 2006/04/27 22:42:38 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-util-linux-2.12q-r3, files/digest-util-linux-2.12r-r3,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   29 Apr 2006; Joshua Kinard <kumba@gentoo.org> util-linux-2.12r-r4.ebuild:
   Marked stable on mips.

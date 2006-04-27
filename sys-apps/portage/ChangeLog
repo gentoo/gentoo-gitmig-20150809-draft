@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.124 2006/04/26 21:03:20 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.125 2006/04/27 22:39:09 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-portage-2.0.51.22-r3, files/digest-portage-2.0.53,
+  files/digest-portage-2.0.54, files/digest-portage-2.0.54-r1,
+  files/digest-portage-2.1_pre7-r5, files/digest-portage-2.1_pre9-r4,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   26 Apr 2006; Mark Loeser <halcy0n@gentoo.org> portage-2.0.54-r1.ebuild:
   Stable on x86; bug #130527
