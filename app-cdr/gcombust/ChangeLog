@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/gcombust
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.26 2006/04/02 22:06:51 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.27 2006/04/27 09:30:44 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-gcombust-0.1.55, Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
   02 Apr 2006; Luis Medinas <metalgod@gentoo.org> gcombust-0.1.55-r1.ebuild:
   Fixed nls dependencies. Thanks to Diego <flameeyes@gentoo.org> closes bug
