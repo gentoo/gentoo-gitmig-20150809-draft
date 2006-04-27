@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.9 2006/02/02 13:30:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.10 2006/04/27 09:41:05 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-trousers-0.2.1,
+  files/digest-trousers-0.2.3, Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
 *trousers-0.2.5 (02 Feb 2006)
 
