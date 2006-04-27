@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/mydns
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.18 2006/04/26 10:48:55 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.19 2006/04/27 03:07:37 weeve Exp $
+
+  27 Apr 2006; Jason Wever <weeve@gentoo.org> mydns-1.1.0.ebuild:
+  Stable on SPARC.
 
   26 Apr 2006; MATSUU Takuto <matsuu@gentoo.org> -files/mydns.rc6-0.11.0,
   -mydns-0.11.0.ebuild, -mydns-1.0.0.ebuild:
