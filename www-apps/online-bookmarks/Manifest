@@ -1,31 +1,28 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 44970f3bf6a50a612fb1ac6b23245cbd ChangeLog 2125
-RMD160 ea4811b0a2c871f11eec9260381c5b176cf03ece ChangeLog 2125
-SHA256 5fd316a5ec4ef19ee22b25bf81f4d3d7f03e2693e707b915567c93bfeb35d213 ChangeLog 2125
+AUX postinstall-en.txt 118 RMD160 15ed42cd6b41e7ace380e47d1f4f5757fa7c1cd9 SHA1 b931e13f372eb230a3dd7fea969fda1297a2a414 SHA256 f9c6a23c8f9e228836468680dc16536409a70d238009c9c3e7e8304a565de004 size 118
+MD5 69fbdad701ef527a0c39ab00e0e178ae files/postinstall-en.txt 118
+RMD160 15ed42cd6b41e7ace380e47d1f4f5757fa7c1cd9 files/postinstall-en.txt 118
+SHA256 f9c6a23c8f9e228836468680dc16536409a70d238009c9c3e7e8304a565de004 files/postinstall-en.txt 118
+DIST online-bookmarks-0.4.0.tar.gz 38616 RMD160 e69c2aafbfe1f2b68a5e38b77a7aae487e02594b SHA256 c69371b536d54fbc1518cfccbff72d4efd57606254a7a085b7101241f09ff689 size 38616
+DIST online-bookmarks-0.6.6.tar.gz 52605 RMD160 8b82ec14d4c5f792968608181279fb05f1b24484 SHA256 ee56c9de2d7f966b424921ce26352fe3115cc3a2e39444dd136f11dd0d669914 size 52605
+EBUILD online-bookmarks-0.4.0.ebuild 1463 RMD160 009e1578b34c23be5022a991d01d62d571fd8c65 SHA1 cfc39c24fceb1ff946edff0e9b74c7e6e263f835 SHA256 0b28bb8f2dff6795dbb7ed06d6a14a84253b3416fa1fa58b6abea58e78a3694e size 1463
+MD5 b81a11ffafa1d5c4c69a4d1dcd3cb901 online-bookmarks-0.4.0.ebuild 1463
+RMD160 009e1578b34c23be5022a991d01d62d571fd8c65 online-bookmarks-0.4.0.ebuild 1463
+SHA256 0b28bb8f2dff6795dbb7ed06d6a14a84253b3416fa1fa58b6abea58e78a3694e online-bookmarks-0.4.0.ebuild 1463
+EBUILD online-bookmarks-0.6.6.ebuild 1026 RMD160 0379c36db7d38480b5fb7f8bd344ace5ec4a8077 SHA1 601210e697df16d52b2375a9ff49454ed795b4de SHA256 bf65727b6de1840ca835ce4de3c43fbf87901db3e394117566ad0218304c0a18 size 1026
+MD5 4e3afb1976252432f07a78cab07aadde online-bookmarks-0.6.6.ebuild 1026
+RMD160 0379c36db7d38480b5fb7f8bd344ace5ec4a8077 online-bookmarks-0.6.6.ebuild 1026
+SHA256 bf65727b6de1840ca835ce4de3c43fbf87901db3e394117566ad0218304c0a18 online-bookmarks-0.6.6.ebuild 1026
+MISC ChangeLog 2221 RMD160 94c876fc250350bd3fa52bd1918dfc51c9ff9421 SHA1 1328a4bc0a83ea52161a4916e437786635d28fe6 SHA256 da92a53175c3808a4a0da3f5d8dccba578a3a48b7334bbd1cf4c77ebcfebffd3 size 2221
+MD5 46d95f43ca1ea9d414adc193cb473181 ChangeLog 2221
+RMD160 94c876fc250350bd3fa52bd1918dfc51c9ff9421 ChangeLog 2221
+SHA256 da92a53175c3808a4a0da3f5d8dccba578a3a48b7334bbd1cf4c77ebcfebffd3 ChangeLog 2221
+MISC metadata.xml 161 RMD160 d47e924599b33a35a50f4c9f5564d325c271f83b SHA1 5b91a6d8d06d3dca2d774425befba30caca51507 SHA256 9cd891fcf0af580e98b62d2f4ded9e53671599f5a7aafd5dce692b996d2a83f4 size 161
+MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
+RMD160 d47e924599b33a35a50f4c9f5564d325c271f83b metadata.xml 161
+SHA256 9cd891fcf0af580e98b62d2f4ded9e53671599f5a7aafd5dce692b996d2a83f4 metadata.xml 161
 MD5 a2d9f2a2443bce27f86169e028840007 files/digest-online-bookmarks-0.4.0 265
 RMD160 11efa03b9d724060ee6ca2a3bfb693e681ac41ba files/digest-online-bookmarks-0.4.0 265
 SHA256 6b5e3832710d269379d6a2d68d4d8247e2b645f2efbc3a60768ed330197f6e04 files/digest-online-bookmarks-0.4.0 265
 MD5 055d70ef0bf3e3db9a3bc8a87894a6e2 files/digest-online-bookmarks-0.6.6 265
 RMD160 96df6350e411cdcc7d705af8aa0891bf622b3e48 files/digest-online-bookmarks-0.6.6 265
 SHA256 3ce8d691f3003ea04b4031b8dbabfb3e21b0a745ecb0ec614425166097e877a8 files/digest-online-bookmarks-0.6.6 265
-MD5 69fbdad701ef527a0c39ab00e0e178ae files/postinstall-en.txt 118
-RMD160 15ed42cd6b41e7ace380e47d1f4f5757fa7c1cd9 files/postinstall-en.txt 118
-SHA256 f9c6a23c8f9e228836468680dc16536409a70d238009c9c3e7e8304a565de004 files/postinstall-en.txt 118
-MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-RMD160 d47e924599b33a35a50f4c9f5564d325c271f83b metadata.xml 161
-SHA256 9cd891fcf0af580e98b62d2f4ded9e53671599f5a7aafd5dce692b996d2a83f4 metadata.xml 161
-MD5 b81a11ffafa1d5c4c69a4d1dcd3cb901 online-bookmarks-0.4.0.ebuild 1463
-RMD160 009e1578b34c23be5022a991d01d62d571fd8c65 online-bookmarks-0.4.0.ebuild 1463
-SHA256 5bcf547fb6246ff415933ee00fa100c13d0819a480d8cd068bc9025db80a990f online-bookmarks-0.4.0.ebuild 1463
-MD5 4e3afb1976252432f07a78cab07aadde online-bookmarks-0.6.6.ebuild 1026
-RMD160 0379c36db7d38480b5fb7f8bd344ace5ec4a8077 online-bookmarks-0.6.6.ebuild 1026
-SHA256 bf65727b6de1840ca835ce4de3c43fbf87901db3e394117566ad0218304c0a18 online-bookmarks-0.6.6.ebuild 1026
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFEJsPFEzitwsaoONoRAjPYAJ0eZBqEUYw/cG9cI4CmrX9iN2877gCYj96J
-sKNHNp793apt7GeCgtVqEg==
-=dJq9
------END PGP SIGNATURE-----
