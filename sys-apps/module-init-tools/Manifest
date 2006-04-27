@@ -1,54 +1,73 @@
-MD5 f797cdc3fb8171aa5473767d2475b0ca ChangeLog 18958
-RMD160 7c69789bd3a7e90312099dd45a48818de1fbfb54 ChangeLog 18958
-SHA256 5191117b723bd188a4dd2dfbd3534b85571d235d2a17dead529a0d45fe5cf8bb ChangeLog 18958
-MD5 469d7fc1f915c60585afc8d895b1668a files/digest-module-init-tools-3.0-r2 142
-RMD160 0d26f3361053137115d905842be1abb049ac3ffe files/digest-module-init-tools-3.0-r2 142
-SHA256 43f84a15bd3067664b6427646045e5e7e9d7479fc7b2dcfc2507c3ebb953b66c files/digest-module-init-tools-3.0-r2 142
-MD5 813f2779e10e8f29d9e1d58dda93a5e3 files/digest-module-init-tools-3.1-r1 142
-RMD160 de039a9903b0b22fd694ac7ad4f3d9320cdd18ce files/digest-module-init-tools-3.1-r1 142
-SHA256 db4f98a458fd8d23c2841e3ab25aa705fe02c42c59fac038debe1420c71de701 files/digest-module-init-tools-3.1-r1 142
-MD5 5dbb0c3c30e8dd445395ad3d7e9c35fa files/digest-module-init-tools-3.2.1 144
-RMD160 1cf1f72a6cc6688aab4d68315e488c4d1dbc73e8 files/digest-module-init-tools-3.2.1 144
-SHA256 3b73235cbeb5c414d596c64ccbdbbe12fae090676047aabfea13d5039ad7ba9c files/digest-module-init-tools-3.2.1 144
-MD5 0943f2e29b15a610fe01b111c3d948e7 files/digest-module-init-tools-3.2.2 144
-RMD160 560c3a45b70e6045c30f46e5478176acfd8d49d3 files/digest-module-init-tools-3.2.2 144
-SHA256 7a385e11f5c27165bea98eae9968f126e8b3ad1efd15950dbedaf33792e517c7 files/digest-module-init-tools-3.2.2 144
+AUX generate-modprobe-assume-kernel.patch 3767 RMD160 cc8338f0fb85197c24932122366eb666bb8333a4 SHA1 50563651c2c4b571745e5b64841fe01eac65c7ba SHA256 7d2ca5b91284b9aa9cc73d220c75bb3cdf2dc8c84faefa3741cd4d2261354102 size 3767
 MD5 d179298a960a2576683689fe19818c8b files/generate-modprobe-assume-kernel.patch 3767
 RMD160 cc8338f0fb85197c24932122366eb666bb8333a4 files/generate-modprobe-assume-kernel.patch 3767
-SHA256 a3b2765acb7622e6aad545d964e5c7b053929143d1d2e734a2c87c2bc7081b38 files/generate-modprobe-assume-kernel.patch 3767
+SHA256 7d2ca5b91284b9aa9cc73d220c75bb3cdf2dc8c84faefa3741cd4d2261354102 files/generate-modprobe-assume-kernel.patch 3767
+AUX module-init-tools-0.9.15-legacy-modext-support.patch 481 RMD160 5b60301ad2ee668e0ebc8dd6b8abfb203a0da304 SHA1 fee7c814bdfcbe7c08824e0682e770d57fa65e54 SHA256 7ab88185fd42146b6e4e8ac5f837e9959fb26ef2f6060cf1a0cd682b54338d41 size 481
 MD5 07aa415fd57ac42cd0c11527edc9782d files/module-init-tools-0.9.15-legacy-modext-support.patch 481
 RMD160 5b60301ad2ee668e0ebc8dd6b8abfb203a0da304 files/module-init-tools-0.9.15-legacy-modext-support.patch 481
 SHA256 7ab88185fd42146b6e4e8ac5f837e9959fb26ef2f6060cf1a0cd682b54338d41 files/module-init-tools-0.9.15-legacy-modext-support.patch 481
+AUX module-init-tools-3.1_generate-modprobe-assume-kernel.patch 3766 RMD160 94791043b7cd134118f8ed98b8d38ff0af28d848 SHA1 2d2272fe6b2119a61ab3eb7c7d575c0cc4c79f07 SHA256 a5e082761756645885e7fa43096224304879dbe4cc1abeaa165a6e68ceb2aa46 size 3766
 MD5 0562a7a338175d0b6100ef7958b0ef5e files/module-init-tools-3.1_generate-modprobe-assume-kernel.patch 3766
 RMD160 94791043b7cd134118f8ed98b8d38ff0af28d848 files/module-init-tools-3.1_generate-modprobe-assume-kernel.patch 3766
 SHA256 a5e082761756645885e7fa43096224304879dbe4cc1abeaa165a6e68ceb2aa46 files/module-init-tools-3.1_generate-modprobe-assume-kernel.patch 3766
+AUX module-init-tools-3.2_pre7-abort-on-modprobe-failure.patch 1425 RMD160 b98df28f310605678af3769f6a3e462c220dee2a SHA1 e989b70e0423115db84187084eafab43f8b04023 SHA256 acfaaad8e1f75124968e69feafe6e0b25d145b074ef07473675e5a0d99545166 size 1425
 MD5 29011f0616cd17a10a27839141238a98 files/module-init-tools-3.2_pre7-abort-on-modprobe-failure.patch 1425
 RMD160 b98df28f310605678af3769f6a3e462c220dee2a files/module-init-tools-3.2_pre7-abort-on-modprobe-failure.patch 1425
 SHA256 acfaaad8e1f75124968e69feafe6e0b25d145b074ef07473675e5a0d99545166 files/module-init-tools-3.2_pre7-abort-on-modprobe-failure.patch 1425
+AUX modutils-2.4.27-alias.patch 2246 RMD160 bcf4fffbecae76e5b14b05c9003ba4f0cf2675ff SHA1 7d69355210aaccbd2dc6dd8a9b1b736f74dfdd36 SHA256 453e3ab982088e2e85164e63b4944af58cd01c2b2d45d75fdcda6649a339878f size 2246
 MD5 5428d53f18b5fac287741b23634d84dc files/modutils-2.4.27-alias.patch 2246
 RMD160 bcf4fffbecae76e5b14b05c9003ba4f0cf2675ff files/modutils-2.4.27-alias.patch 2246
 SHA256 453e3ab982088e2e85164e63b4944af58cd01c2b2d45d75fdcda6649a339878f files/modutils-2.4.27-alias.patch 2246
+AUX modutils-2.4.27-flex.patch 805 RMD160 aa0806e61e5287a5ce821bce66cbfa028e50576b SHA1 87d2dee1db44ff854e3d4c371efd78cc3f613578 SHA256 dbe0c3207751157e7b104d66bdfeea280343ceabe856dc5d51849c206fdccad9 size 805
 MD5 27a62130de1c51fc678efc0e9ad67ddd files/modutils-2.4.27-flex.patch 805
 RMD160 aa0806e61e5287a5ce821bce66cbfa028e50576b files/modutils-2.4.27-flex.patch 805
 SHA256 dbe0c3207751157e7b104d66bdfeea280343ceabe856dc5d51849c206fdccad9 files/modutils-2.4.27-flex.patch 805
+AUX modutils-2.4.27-gcc.patch 7438 RMD160 a3d1fa1e6dd865e531684882daab881b90d0e142 SHA1 657796971d5b0e6ec6ebcbfa1f66a1f09e5ec6aa SHA256 8ecda7ac4010c54e7fbdd8b2109b5c19ea2266f67d430ab6413188c63cdca2a6 size 7438
 MD5 71f215bc89dfcca141f4f91b8dac54a9 files/modutils-2.4.27-gcc.patch 7438
 RMD160 a3d1fa1e6dd865e531684882daab881b90d0e142 files/modutils-2.4.27-gcc.patch 7438
 SHA256 8ecda7ac4010c54e7fbdd8b2109b5c19ea2266f67d430ab6413188c63cdca2a6 files/modutils-2.4.27-gcc.patch 7438
+AUX modutils-2.4.27-no-nested-function.patch 1422 RMD160 6c34f6ff25019884495c21af525e88a63e449b3c SHA1 17eeaddba0fc3e476138a05d570eb79ab77b67ed SHA256 3e9961a7c9411e8c01eb48d9053d7901ec7a90ee0e070e85bd766385f36d563d size 1422
 MD5 4f6eb067ab56884adab12c53346dc793 files/modutils-2.4.27-no-nested-function.patch 1422
 RMD160 6c34f6ff25019884495c21af525e88a63e449b3c files/modutils-2.4.27-no-nested-function.patch 1422
 SHA256 3e9961a7c9411e8c01eb48d9053d7901ec7a90ee0e070e85bd766385f36d563d files/modutils-2.4.27-no-nested-function.patch 1422
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
-SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+DIST module-init-tools-3.0.tar.bz2 120768 RMD160 7c156647a84dc4004f6b37a9371ac5cd8c5c27df SHA256 a33e30d8ca03854794b4867f59bb8c4a0b4b4e8f30cfeb0b1a3dede6630f565b size 120768
+DIST module-init-tools-3.1.tar.bz2 123114 RMD160 0d5f5f7ebd5242930b6d2589fad633d5b9e56692 SHA256 6c72e96d814825fa3656bf1014dbb7313dd3c89044079fc50f2bc95b79a1af6b size 123114
+DIST module-init-tools-3.2.1.tar.bz2 167981 RMD160 da9b6ef81c6910cccc301769bdffd572dc2ccf4e SHA256 f7c66e151d3d89df02c41f82cae5c384cad76ad3956519a872d98d5676bddd47 size 167981
+DIST module-init-tools-3.2.2.tar.bz2 169182 RMD160 42abfe10709315180898106e3c7c1ce916e01166 SHA256 c080f7e42e60456eab33051026da388b5d21a360e9d2bee26ce9991427a758aa size 169182
+DIST modutils-2.4.27.tar.bz2 234963 RMD160 3179d364106859cf6dbd1fad82d8356337634735 SHA256 ab4c9191645f9ffb455ae7c014d8c45339c13a1d0f6914817cfbf30a0bc56bf0 size 234963
+EBUILD module-init-tools-3.0-r2.ebuild 5628 RMD160 269dfaf8a5ce91ef3fa841bc865762ed49a50bfe SHA1 a678c8bb6c820f45f8102b0e896ac5ded837c1a3 SHA256 79dd9e08809f82bdb1b61fc95cf603a62bc8ed1b4b0e1f68b8fc68c887d7d46a size 5628
 MD5 3e2546d3dcec80540a104faf7767b449 module-init-tools-3.0-r2.ebuild 5628
 RMD160 269dfaf8a5ce91ef3fa841bc865762ed49a50bfe module-init-tools-3.0-r2.ebuild 5628
 SHA256 79dd9e08809f82bdb1b61fc95cf603a62bc8ed1b4b0e1f68b8fc68c887d7d46a module-init-tools-3.0-r2.ebuild 5628
+EBUILD module-init-tools-3.1-r1.ebuild 5550 RMD160 0e4994609de3193a1a3481b72ceb32735b50dc5d SHA1 1045bcbac13c7eeb3af3a3412915b58f8c1f972f SHA256 25dabf4903c1dddf8c31cf99798e0569d8018a97c83ce544cc982608b86da44b size 5550
 MD5 47229c8c9b55ff325e42a6d1fa6cb4aa module-init-tools-3.1-r1.ebuild 5550
 RMD160 0e4994609de3193a1a3481b72ceb32735b50dc5d module-init-tools-3.1-r1.ebuild 5550
 SHA256 25dabf4903c1dddf8c31cf99798e0569d8018a97c83ce544cc982608b86da44b module-init-tools-3.1-r1.ebuild 5550
+EBUILD module-init-tools-3.2.1.ebuild 5859 RMD160 73800223657e4561b0e7f0caf4ef9275835da99f SHA1 0f53bb175ad4513308372e30a880ec45c8dfd788 SHA256 e1731fabd92e919d5c7e6e44e418da0fddca195aa505e2ed4dd13aac923abc54 size 5859
 MD5 b0fbdf2a890920ad30858c1820dfbc5a module-init-tools-3.2.1.ebuild 5859
 RMD160 73800223657e4561b0e7f0caf4ef9275835da99f module-init-tools-3.2.1.ebuild 5859
 SHA256 e1731fabd92e919d5c7e6e44e418da0fddca195aa505e2ed4dd13aac923abc54 module-init-tools-3.2.1.ebuild 5859
+EBUILD module-init-tools-3.2.2.ebuild 5874 RMD160 fc6dbac0b1dfec66ea6ed08019c5460b9546d184 SHA1 878a834dc1dbddceb4cf07288f93849deb131d08 SHA256 ee4307c886eafaf6b281baf164445ce96c8e7626fd0a4f376fb9692a21cb25f1 size 5874
 MD5 cf9cd5eaa065e208551fdd004fc04b40 module-init-tools-3.2.2.ebuild 5874
 RMD160 fc6dbac0b1dfec66ea6ed08019c5460b9546d184 module-init-tools-3.2.2.ebuild 5874
 SHA256 ee4307c886eafaf6b281baf164445ce96c8e7626fd0a4f376fb9692a21cb25f1 module-init-tools-3.2.2.ebuild 5874
+MISC ChangeLog 19214 RMD160 c2dea01c819b603908f06e1f1af1bc773c174332 SHA1 a5931e924f1b0f57a8cf9fdc8fbf28a3b21d9c14 SHA256 eff283869110ff0a771c67cb3dc536fe5178f0755949ffc5f108341e6bc9abd0 size 19214
+MD5 e725a5e9af2dede0053d6347d5c2cdc9 ChangeLog 19214
+RMD160 c2dea01c819b603908f06e1f1af1bc773c174332 ChangeLog 19214
+SHA256 eff283869110ff0a771c67cb3dc536fe5178f0755949ffc5f108341e6bc9abd0 ChangeLog 19214
+MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 size 164
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 10d4fa3c966a91f34c97260299b90561 files/digest-module-init-tools-3.0-r2 518
+RMD160 c432deefe2934ad58af091135971b966a557c8fc files/digest-module-init-tools-3.0-r2 518
+SHA256 44de449934fb09d3ba0b05963c803f56d9586d5a2807c9aefc816e3786c2358e files/digest-module-init-tools-3.0-r2 518
+MD5 5ee62162be3d4400e38280d9028fde1d files/digest-module-init-tools-3.1-r1 518
+RMD160 ba2e8be935148813d6b2b8641c39e2b2cef9782d files/digest-module-init-tools-3.1-r1 518
+SHA256 1ef03616288f73283e49bd9fa38ac8eae43c6f13da178b5315fc78500f5379f8 files/digest-module-init-tools-3.1-r1 518
+MD5 76f0f81f1e04616856a5715419c01bb7 files/digest-module-init-tools-3.2.1 524
+RMD160 edeacc4c8157de71a2bc963e4e87c49d01256449 files/digest-module-init-tools-3.2.1 524
+SHA256 bd503fe0b396184c25ea789632518f480ca3137a354ad2d4fee7f4fb20851c72 files/digest-module-init-tools-3.2.1 524
+MD5 de56fee3dadb3285694b097dfa7848a0 files/digest-module-init-tools-3.2.2 524
+RMD160 dfc478dc854fdd48bb3526ef421d560becb4a37e files/digest-module-init-tools-3.2.2 524
+SHA256 a0137b244c6cab76e8a2cb31e651484992231b823af1d8d4fc2e1a5db10fe5f6 files/digest-module-init-tools-3.2.2 524

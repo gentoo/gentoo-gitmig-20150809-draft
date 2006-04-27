@@ -78,10 +78,10 @@ AUX util-linux-2.12q-debian-10cfdisk.patch 1888 RMD160 82f4364ef3d078ab61514f348
 MD5 bc90959c4718e7dc5d53dcddac1172f5 files/util-linux-2.12q-debian-10cfdisk.patch 1888
 RMD160 82f4364ef3d078ab61514f348401faa3ca1b9cb2 files/util-linux-2.12q-debian-10cfdisk.patch 1888
 SHA256 872882d56336bbf43be36f9bf0a9fb0c924ee27f095e255b40cfccb087cdc0c1 files/util-linux-2.12q-debian-10cfdisk.patch 1888
-AUX util-linux-2.12q-dont-umask.patch 439 RMD160 c7d2c859d6a27245e1db4aeb1f283a56db20beac SHA1 5845a0624db9ae646686bd36ea0c0225b5488d5c SHA256 17a49f805567f97195739101f54ada01a225159424b892797c9f5c808420ee51 size 439
+AUX util-linux-2.12q-dont-umask.patch 439 RMD160 c7d2c859d6a27245e1db4aeb1f283a56db20beac SHA1 5845a0624db9ae646686bd36ea0c0225b5488d5c SHA256 27996d8bf978ef0c64afbab016e8a8f1071098d29d870092096e1c6503ea8cec size 439
 MD5 b360252f16d707f668b605d7a2abb791 files/util-linux-2.12q-dont-umask.patch 439
 RMD160 c7d2c859d6a27245e1db4aeb1f283a56db20beac files/util-linux-2.12q-dont-umask.patch 439
-SHA256 17a49f805567f97195739101f54ada01a225159424b892797c9f5c808420ee51 files/util-linux-2.12q-dont-umask.patch 439
+SHA256 27996d8bf978ef0c64afbab016e8a8f1071098d29d870092096e1c6503ea8cec files/util-linux-2.12q-dont-umask.patch 439
 AUX util-linux-2.12q-i18n-update.patch 344 RMD160 1e44b6f2f316a4d347531a03c70810c247482cbf SHA1 5a1629cc2cf155a0129afbf51f6b4da9b54e4996 SHA256 f67208e85d26a583c7adfa3ff6adf719e5f169a71fcc0cf4b0355162bcdde847 size 344
 MD5 570b9b148cbb60ec16de30940990ab53 files/util-linux-2.12q-i18n-update.patch 344
 RMD160 1e44b6f2f316a4d347531a03c70810c247482cbf files/util-linux-2.12q-i18n-update.patch 344
@@ -138,13 +138,13 @@ AUX util-linux-no-kill.patch 642 RMD160 cb9bef851804fbcd9a0910cb39123f65f72bbdc5
 MD5 65f42fbf981464410f7d5d84a429e920 files/util-linux-no-kill.patch 642
 RMD160 cb9bef851804fbcd9a0910cb39123f65f72bbdc5 files/util-linux-no-kill.patch 642
 SHA256 c72803b0918589dbd409e22368853330bc84d875c91936fc5e899686c1642aaf files/util-linux-no-kill.patch 642
-DIST loop-AES-v3.0d.tar.bz2 165472 size 165472
+DIST loop-AES-v3.0d.tar.bz2 165472 RMD160 26ef19797ded618b8a622a23a11920a32de2c531 SHA256 b988740d1a8e9c40576ea06ecbc7c36bae65170fe17b0e3a4c09be97e3332656 size 165472
 DIST loop-AES-v3.1b.tar.bz2 167804 RMD160 80ff15de8a16a134c80e39a5ce4ff3e3b6669aa3 SHA256 da8b7ee479a00b5d4efa80e893be0666ad5dded8cd5fcf5bf9a2435d5a520d66 size 167804
-DIST loop-AES-v3.1c.tar.bz2 168755 size 168755
+DIST loop-AES-v3.1c.tar.bz2 168755 RMD160 0194f7a8830ec28905b1a65bcf4c5eafd2985c63 SHA256 23dc775e0909ee1886b571735003563f74fd3c1db2da2f2b823e13e225999060 size 168755
 DIST loop-AES-v3.1d.tar.bz2 169228 RMD160 36707f6ed2f57dabd7278c9d6386a25c2c012d59 SHA256 05826b3238d5d9f134426cb8575496508205ef607e0a9075b50510c8e0e8a23c size 169228
 DIST util-linux-2.12i-cryptoapi-losetup.patch.bz2 4800 RMD160 82e54aedd691aa93b67de9dfb9049a3f012a29f7 SHA256 565a0cc6c3c148a66969276ae9d34dc34f19fbd45df2740343793ee067b3700f size 4800
 DIST util-linux-2.12i.tar.gz 1975468 RMD160 f055a94ad247dc59293f7b933c12bdda135159fc SHA256 28e2fc70d7507e158d8861c958461aef1c4bbf4157a8ebbc237943944e5a8c4a size 1975468
-DIST util-linux-2.12q.tar.gz 1992810 size 1992810
+DIST util-linux-2.12q.tar.gz 1992810 RMD160 8e4294de9d01847e73919d6de785f2c711eea2f0 SHA256 0b7bfe183508955d28b60456981f5a729513ae37589ae6efd7110e285f3c43b9 size 1992810
 DIST util-linux-2.12r.tar.bz2 1370907 RMD160 51950aafd5cbcb574e69fbd6b28d15a106147e64 SHA256 b8e499b338ce9fbd1fb315194b26540ec823c0afc46c9e145ac7a3e38ad57e6b size 1370907
 DIST util-linux-2.13-pre6.tar.bz2 2393796 RMD160 9d2427be4e4f6ece16a960e9e326eb8bca661279 SHA256 9d9e3be68b618f70dacc1bc7fe2497c4821118c9db0a573176fd8ff66c28c43d size 2393796
 EBUILD util-linux-2.12i-r1.ebuild 3960 RMD160 162b387789d6fde4097d996921917c57ea05505d SHA1 1c3768d8a4a8b2062f9cfb4e4ec412f98b6222a4 SHA256 d1380b5531f59b53d2dc75c3b443b66155ff4c2ca7e51f05c8a968a532c15927 size 3960
@@ -171,10 +171,10 @@ EBUILD util-linux-2.13_pre6.ebuild 3966 RMD160 ead4e1ed41fbe0923a36be034e2a107fd
 MD5 7eeb5b93b8b212d235c1b6ff19f55de5 util-linux-2.13_pre6.ebuild 3966
 RMD160 ead4e1ed41fbe0923a36be034e2a107fd695d633 util-linux-2.13_pre6.ebuild 3966
 SHA256 9edc9cb1c2a4b38fe3427fe61026db8f1eeb8f9986462c01e94e700650bfe511 util-linux-2.13_pre6.ebuild 3966
-MISC ChangeLog 25578 RMD160 2d4eca9eab90c37cb0d459daa2f1c72b1d789763 SHA1 73e3f19e122d65db96a660443c94d2e59a1e4b6c SHA256 1349d2da552d409112fe12b5bbacf3aa306301fb230b92d5bb99ea7841bd444e size 25578
-MD5 2355afce845a12ed1653101f7a0c3e01 ChangeLog 25578
-RMD160 2d4eca9eab90c37cb0d459daa2f1c72b1d789763 ChangeLog 25578
-SHA256 1349d2da552d409112fe12b5bbacf3aa306301fb230b92d5bb99ea7841bd444e ChangeLog 25578
+MISC ChangeLog 25745 RMD160 f0816bb9b60424799bcdb13da28b727766a02e25 SHA1 7bfe3e5cbe68cd60cc1516f1ce0cb00cf6ed0b47 SHA256 864ed0e691b8479dc45a28d241f2c643367b9755e24b730ca6a2e2cf00443104 size 25745
+MD5 6ee1993bcc9d065a99dcacb27bef1ef0 ChangeLog 25745
+RMD160 f0816bb9b60424799bcdb13da28b727766a02e25 ChangeLog 25745
+SHA256 864ed0e691b8479dc45a28d241f2c643367b9755e24b730ca6a2e2cf00443104 ChangeLog 25745
 MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 size 164
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
@@ -182,24 +182,18 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 MD5 6c61f474d27c233bc1aff8e2db660353 files/digest-util-linux-2.12i-r1 560
 RMD160 7423b98e7025229743434f7390ed51c2ad51ef8c files/digest-util-linux-2.12i-r1 560
 SHA256 46336e0e24120cfb9a18411b03c5ff179089faa949f6df5f1876cb3d7a418f87 files/digest-util-linux-2.12i-r1 560
-size 560 files/digest-util-linux-2.12i-r1 560
-MD5 997dd7aa0ad0b1afaf719db4acd6a966 files/digest-util-linux-2.12q-r3 696
-RMD160 4aba9a146600fdc688ea477c8436845b2a65c695 files/digest-util-linux-2.12q-r3 696
-SHA256 53522cc4f57d8df5ad43b48d8758b4999cca6c2fa857064610d5262a81f78125 files/digest-util-linux-2.12q-r3 696
-size 696 files/digest-util-linux-2.12q-r3 696
+MD5 b223cdabcdfccc3e79c5b542c02df035 files/digest-util-linux-2.12q-r3 1060
+RMD160 0c30ae76ea7fbf23844a05c914da1d4ff70ea23d files/digest-util-linux-2.12q-r3 1060
+SHA256 2ef5acaa6e82991c712d67e4b815961f66d7b228909f6abf431831dd11e7c7ad files/digest-util-linux-2.12q-r3 1060
 MD5 14fe56767bf0ce736e32d003833edaf6 files/digest-util-linux-2.12r-r2 1063
 RMD160 0871fc1f6bc1dc7d14b97f5676f44cb49b4ae14e files/digest-util-linux-2.12r-r2 1063
 SHA256 30a3f3f349f18d8f02bfcff7dc0b766e64405747127afbc20f8ef5fc6be97ef5 files/digest-util-linux-2.12r-r2 1063
-size 1063 files/digest-util-linux-2.12r-r2 1063
-MD5 f8cdbacbdc15b0b7cc76093c8c476272 files/digest-util-linux-2.12r-r3 883
-RMD160 cf094666185cfbd4ce7c70e79bf08e81f11a1134 files/digest-util-linux-2.12r-r3 883
-SHA256 bafd913e92c890a4d8e7da9f544d05f86a9f5c7c439d12689da117c0d5866436 files/digest-util-linux-2.12r-r3 883
-size 883 files/digest-util-linux-2.12r-r3 883
+MD5 8ca3a0e779eee4b8ee6c180d4efe1b7f files/digest-util-linux-2.12r-r3 1063
+RMD160 e7f0d0b030b65d90100f798153478ccc67ae0c6f files/digest-util-linux-2.12r-r3 1063
+SHA256 be571ccf651e78b4690dae58266c7868cd374362bfbad139d42f61e6727a9d65 files/digest-util-linux-2.12r-r3 1063
 MD5 6421fe13202c10b9686a8cb3b30df52e files/digest-util-linux-2.12r-r4 1063
 RMD160 2c750eac9e3132bebea49c80403d9e9b5aed664a files/digest-util-linux-2.12r-r4 1063
 SHA256 2651b1de75726f533fa1f6436a0d7e38698913c3f10d9a892f42729d13a5a8c0 files/digest-util-linux-2.12r-r4 1063
-size 1063 files/digest-util-linux-2.12r-r4 1063
 MD5 49ab9dbf0ff51cc809404cb3f63b9d75 files/digest-util-linux-2.13_pre6 515
 RMD160 d4dc2de8524685a4e501ec5ca93c227f99f52a27 files/digest-util-linux-2.13_pre6 515
 SHA256 e919819081d9c75a368fc0dedfefa8ac7cd14c3d411d302fc4de1ccf49fedbf9 files/digest-util-linux-2.13_pre6 515
-size 515 files/digest-util-linux-2.13_pre6 515
