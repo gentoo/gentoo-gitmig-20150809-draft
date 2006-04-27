@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.46 2006/02/04 17:33:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.47 2006/04/27 23:21:00 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-gpm-1.20.1-r4,
+  files/digest-gpm-1.20.1-r5, Manifest:
+  Fixing SHA256 digest, pass four
 
   04 Feb 2006; Mike Frysinger <vapier@gentoo.org>
   +files/gpm-configure-LANG.patch, gpm-1.20.1-r4.ebuild,
