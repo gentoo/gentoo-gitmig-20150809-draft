@@ -1,17 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0bb2b825bb3f0c55a865e73df6b2ed6f openmosixwebview-0.2.13.ebuild 1201
-MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
-MD5 cdf36160ca72083b724576ad6539aa31 ChangeLog 880
-MD5 91c71574fa875d439dddb72c78c9d813 openmosixwebview-0.2.13-r1.ebuild 1201
-MD5 421481f267afdab92a093a25c83ee07a files/digest-openmosixwebview-0.2.13 74
+MD5 b56597c866376e9d621b1aa5ed38809b ChangeLog 1016
+RMD160 af7195badb289c624aa5eb4adb5c3114ec8521da ChangeLog 1016
+SHA256 5ab34fb8f542a37ecb8184da60f0ab23bafc87baed5c12c0685a588c1b921b61 ChangeLog 1016
 MD5 edd227003ba45c2141ebf7677b07b75c files/apache.conf 184
-MD5 421481f267afdab92a093a25c83ee07a files/digest-openmosixwebview-0.2.13-r1 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDFxXXKtJO8LeSoosRAmG9AJ90cOHEfUcshKeULrH39Q5TXm5zTACeJDkw
-pfsi4+awLEKhQiyBvNgMTTM=
-=OUoE
------END PGP SIGNATURE-----
+RMD160 0da59ce13d702b14467c66e1e0b3382cd5fbaa16 files/apache.conf 184
+SHA256 a6a6828c5e432b113837d9e9810ead20d5df9fdade7f5b14727fd156ecfdf0ad files/apache.conf 184
+MD5 2533497126786c8d9d368bb272b1104b files/digest-openmosixwebview-0.2.13 268
+RMD160 7e8963ab2bdf03f21a83acaf62e229e5dfde5a35 files/digest-openmosixwebview-0.2.13 268
+SHA256 d3b2151c8052a2fcd9d77dff7c4263cdddf58dc8fd33e4e124b7f55b6f133f8b files/digest-openmosixwebview-0.2.13 268
+MD5 2533497126786c8d9d368bb272b1104b files/digest-openmosixwebview-0.2.13-r1 268
+RMD160 7e8963ab2bdf03f21a83acaf62e229e5dfde5a35 files/digest-openmosixwebview-0.2.13-r1 268
+SHA256 d3b2151c8052a2fcd9d77dff7c4263cdddf58dc8fd33e4e124b7f55b6f133f8b files/digest-openmosixwebview-0.2.13-r1 268
+MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
+RMD160 6cfe7222819f902eed7dfdb6fa48a19b7c37172e metadata.xml 312
+SHA256 7cd6722fa6245eccb8afde378bb57d0ac955b778512b3bef8789f2c463884e52 metadata.xml 312
+MD5 91c71574fa875d439dddb72c78c9d813 openmosixwebview-0.2.13-r1.ebuild 1201
+RMD160 bf70b864be901742ccc7529cb43c7ab14a42db8e openmosixwebview-0.2.13-r1.ebuild 1201
+SHA256 9aa2b2c5414729e2c69e37ac8b4a7930f9e29b92c7c06c5aac2a8e3b97793709 openmosixwebview-0.2.13-r1.ebuild 1201
+MD5 6609f6ddf4a7a179b2516e4ce2fd1f82 openmosixwebview-0.2.13.ebuild 1197
+RMD160 c69d07b9d75ff3baa9c9aeeecc0d6c1520d21e77 openmosixwebview-0.2.13.ebuild 1197
+SHA256 351ac15aeb5effc3f1ef1427199af1fe388dde673cb82cecdf3cf52bf672f1c5 openmosixwebview-0.2.13.ebuild 1197
