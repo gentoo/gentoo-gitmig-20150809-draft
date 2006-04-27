@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.137 2006/04/14 14:48:38 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.138 2006/04/27 23:10:23 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-genkernel-3.3.10, Manifest:
+  Fixing SHA256 digest, pass four
 
 *genkernel-3.3.11d (14 Apr 2006)
 

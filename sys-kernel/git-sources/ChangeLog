@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.18 2006/03/26 09:55:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.19 2006/04/27 23:12:03 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
 *git-sources-2.6.16-r11 (26 Mar 2006)
 
