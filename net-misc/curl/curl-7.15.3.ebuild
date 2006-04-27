@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.3.ebuild,v 1.2 2006/04/23 09:25:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.3.ebuild,v 1.3 2006/04/27 22:29:03 liquidx Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -18,7 +18,7 @@ RDEPEND="gnutls? ( net-libs/gnutls )
 	ldap? ( net-nds/openldap )
 	idn? ( net-dns/libidn )
 	ares? ( net-dns/c-ares )
-	kerberos? ( app-crypt/mit-krb5 )
+	kerberos? ( virtual/krb5 )
 	krb4? ( app-crypt/kth-krb )"
 
 DEPEND="${RDEPEND}
@@ -64,6 +64,10 @@ src_compile() {
 		myconf="${myconf} --without-gnutls --with-ssl=/usr"
 	else
 		myconf="${myconf} --without-gnutls --without-ssl"
+	fi
+
+	if use kerberos; then
+	   myconf="${myconfg} --with-gssapi=/usr"
 	fi
 
 	econf ${myconf} || die 'configure failed'

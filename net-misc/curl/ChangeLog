@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.71 2006/04/23 17:49:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.72 2006/04/27 22:29:03 liquidx Exp $
+
+  27 Apr 2006; Alastair Tse <liquidx@gentoo.org> curl-7.15.1.ebuild,
+  curl-7.15.1-r1.ebuild, curl-7.15.3.ebuild:
+  fix kerberos dep (#109806)
 
   28 Apr 2006; Joshua Kinard <kumba@gentoo.org> curl-7.15.1-r1.ebuild:
   Marked stable on mips.
