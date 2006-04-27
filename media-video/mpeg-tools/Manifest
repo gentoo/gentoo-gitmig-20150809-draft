@@ -1,30 +1,50 @@
-MD5 3427c0683c5525305de120417bf025ec ChangeLog 2615
-RMD160 b8ea53218a55aca08dfe8600ad621a8d42021cc3 ChangeLog 2615
-SHA256 175acb76f5b1e7ba1a908948faa835f213e6a9f7c7aa9fe344a699930b6051b5 ChangeLog 2615
-MD5 bf748902484902bcc7eb4e616a8d04dd files/digest-mpeg-tools-1.5b-r2 73
-RMD160 82eeef5105b93081d2dc2dbd938fc2cbab1f69a7 files/digest-mpeg-tools-1.5b-r2 73
-SHA256 803c0820faa4dce8805f80a206ce6f069109950a458de97adb7ec484a6a6533b files/digest-mpeg-tools-1.5b-r2 73
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX mpeg-tools-1.5b-64bit_fixes.patch 6986 RMD160 7bfb2fdaf89846043d95074a5226c77f0f9ef98b SHA1 18bb11dac577a0a8cb4352ea12a0f2571de37065 SHA256 76e8add6d8241898abf20c27ff93655df05ee90866632a0eb852ff6665078d4e size 6986
 MD5 411d4b0fde7b753d3ff9008eb9eaefcc files/mpeg-tools-1.5b-64bit_fixes.patch 6986
 RMD160 7bfb2fdaf89846043d95074a5226c77f0f9ef98b files/mpeg-tools-1.5b-64bit_fixes.patch 6986
 SHA256 76e8add6d8241898abf20c27ff93655df05ee90866632a0eb852ff6665078d4e files/mpeg-tools-1.5b-64bit_fixes.patch 6986
+AUX mpeg-tools-1.5b-build.patch 1414 RMD160 987151e4c0c30097c7bc993552dd7459686fba5b SHA1 e5eff3be21eca4da940a5d964e1704b0948fbea9 SHA256 0cbcc0e0de74f02b069059588334ba0766bf74769fdd63d37c1702d2e47eb1e5 size 1414
 MD5 44b911d91abb56f60d64cc8b07074b11 files/mpeg-tools-1.5b-build.patch 1414
 RMD160 987151e4c0c30097c7bc993552dd7459686fba5b files/mpeg-tools-1.5b-build.patch 1414
 SHA256 0cbcc0e0de74f02b069059588334ba0766bf74769fdd63d37c1702d2e47eb1e5 files/mpeg-tools-1.5b-build.patch 1414
+AUX mpeg-tools-1.5b-system-jpeg.patch 893 RMD160 e32d6e6f0d355085f1781eef5b0569940fbd274e SHA1 25067d834bdc72e4709d9b01bb93ad2a88f48e2d SHA256 f0e9f99bf42c12b91cebb0e17c1a8567629d522b269e11c2adc6fffaed43afa8 size 893
 MD5 0971aef5099bdb3d5c9a962c308a1d43 files/mpeg-tools-1.5b-system-jpeg.patch 893
 RMD160 e32d6e6f0d355085f1781eef5b0569940fbd274e files/mpeg-tools-1.5b-system-jpeg.patch 893
 SHA256 f0e9f99bf42c12b91cebb0e17c1a8567629d522b269e11c2adc6fffaed43afa8 files/mpeg-tools-1.5b-system-jpeg.patch 893
+AUX mpeg-tools-1.5b-tempfile-convert.patch 4097 RMD160 3e37f83093c2d09051b4fc131cc0b8b91e7351cf SHA1 efd786d90f3faf655f127b10540a2ad702e5991b SHA256 a8f67272493e7bd6536e020b75bcf2174a7ae1f453dc0bd3b09f134ed3f1a649 size 4097
 MD5 20a27f243e783c15b17079c112876d10 files/mpeg-tools-1.5b-tempfile-convert.patch 4097
 RMD160 3e37f83093c2d09051b4fc131cc0b8b91e7351cf files/mpeg-tools-1.5b-tempfile-convert.patch 4097
 SHA256 a8f67272493e7bd6536e020b75bcf2174a7ae1f453dc0bd3b09f134ed3f1a649 files/mpeg-tools-1.5b-tempfile-convert.patch 4097
+AUX mpeg-tools-1.5b-tempfile-mpeg-encode.patch 2538 RMD160 3bc3e29da8cdd4d05de50cf073c6b6ea0e7417c6 SHA1 5ac9374572f8ad1405148357c7444404ab80c86d SHA256 2325ccdc43bce07d38522250c488f21db8010c7e5f27b244b107d05882e4a17b size 2538
 MD5 ac3d41c507a2fc1b1cfcf8ca91e1e983 files/mpeg-tools-1.5b-tempfile-mpeg-encode.patch 2538
 RMD160 3bc3e29da8cdd4d05de50cf073c6b6ea0e7417c6 files/mpeg-tools-1.5b-tempfile-mpeg-encode.patch 2538
 SHA256 2325ccdc43bce07d38522250c488f21db8010c7e5f27b244b107d05882e4a17b files/mpeg-tools-1.5b-tempfile-mpeg-encode.patch 2538
+AUX mpeg-tools-1.5b-tempfile-tests.patch 5256 RMD160 e292bfec28bb13bf35ec40e4f86702ff086dbc72 SHA1 dc3c2458a077bac43bd6fc6cf7d1d07f3c892163 SHA256 ba156158d92dc6f3803b40ad3b0e8e248b0e74c5b59415a91f55c1e775a6e5a4 size 5256
 MD5 f7cc407da44caa2318d26dab75f3459a files/mpeg-tools-1.5b-tempfile-tests.patch 5256
 RMD160 e292bfec28bb13bf35ec40e4f86702ff086dbc72 files/mpeg-tools-1.5b-tempfile-tests.patch 5256
 SHA256 ba156158d92dc6f3803b40ad3b0e8e248b0e74c5b59415a91f55c1e775a6e5a4 files/mpeg-tools-1.5b-tempfile-tests.patch 5256
-MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-RMD160 6e3fccd1ae62f02a0cb28d319aa185af0020822d metadata.xml 225
-SHA256 1a7f3e805478b42bc379b2a36944579d34d7e66ba5bf418a651e1cd58ad0a7f5 metadata.xml 225
+DIST mpeg_encode-1.5b-src.tar.gz 2028724 RMD160 24c0a1090076630c292936639c5fb275778f6470 SHA256 dd8db42f88393bb0ff0d738defa271729a8aa9b8de24ed13bc6bd27014f2daf5 size 2028724
+EBUILD mpeg-tools-1.5b-r2.ebuild 1674 RMD160 34ebf7633b871beb407b540bc5d9788a754ef4a3 SHA1 9f8cb1d7e335ce7f628eb6a6f4c2b86c926fd695 SHA256 73ded43d3421f2aa13092998fe3f9c98b16928c454c4db7dca1502befe0e575a size 1674
 MD5 76a59a3ed5cbeceb62d532fedccb4c71 mpeg-tools-1.5b-r2.ebuild 1674
 RMD160 34ebf7633b871beb407b540bc5d9788a754ef4a3 mpeg-tools-1.5b-r2.ebuild 1674
 SHA256 73ded43d3421f2aa13092998fe3f9c98b16928c454c4db7dca1502befe0e575a mpeg-tools-1.5b-r2.ebuild 1674
+MISC ChangeLog 2738 RMD160 e4f68ac19377597f12d5cb60d963fc2f4a54ca0f SHA1 8b090d695fcbb8bbc07ddc5c82a512aed9c25e6e SHA256 2ec22b0079ad77fd75e0997431f8c9ce1585ca650623e925315f781feaceb95f size 2738
+MD5 8b7d1793239b36bee493013c0e451545 ChangeLog 2738
+RMD160 e4f68ac19377597f12d5cb60d963fc2f4a54ca0f ChangeLog 2738
+SHA256 2ec22b0079ad77fd75e0997431f8c9ce1585ca650623e925315f781feaceb95f ChangeLog 2738
+MISC metadata.xml 225 RMD160 6e3fccd1ae62f02a0cb28d319aa185af0020822d SHA1 1b8ccc849053361ac907dc9b652796defd1ce906 SHA256 1a7f3e805478b42bc379b2a36944579d34d7e66ba5bf418a651e1cd58ad0a7f5 size 225
+MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+RMD160 6e3fccd1ae62f02a0cb28d319aa185af0020822d metadata.xml 225
+SHA256 1a7f3e805478b42bc379b2a36944579d34d7e66ba5bf418a651e1cd58ad0a7f5 metadata.xml 225
+MD5 415c527c0df15ca234e470360265229d files/digest-mpeg-tools-1.5b-r2 265
+RMD160 0ce9071136a55929c5b33f44edafc89e199afdab files/digest-mpeg-tools-1.5b-r2 265
+SHA256 26635d832cf4cb191cf2e400cb479cb360c8fd34db1437c1cf429bab811646af files/digest-mpeg-tools-1.5b-r2 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUVczW78445TWHXcRAk0hAJ4yxN2IIVE9WMjBDHsyGZMsy+IkpgCfdqzj
+y+/c/qb/Zfzc/2HqRWYrCbM=
+=xbuU
+-----END PGP SIGNATURE-----
