@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/le
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/le/ChangeLog,v 1.8 2006/02/06 01:04:04 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/le/ChangeLog,v 1.9 2006/04/27 09:29:49 truedfx Exp $
+
+  27 Apr 2006; Harald van Dĳk <truedfx@gentoo.org> le-1.12.5.ebuild:
+  Provide virtual/editor, and remove linux-headers workaround now that it's no
+  longer necessary
 
 *le-1.12.5 (06 Feb 2006)
 

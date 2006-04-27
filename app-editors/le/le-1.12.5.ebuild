@@ -1,8 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/le/le-1.12.5.ebuild,v 1.1 2006/02/06 01:04:04 truedfx Exp $
-
-inherit flag-o-matic
+# $Header: /var/cvsroot/gentoo-x86/app-editors/le/le-1.12.5.ebuild,v 1.2 2006/04/27 09:29:49 truedfx Exp $
 
 DESCRIPTION="Terminal text editor"
 HOMEPAGE="http://www.gnu.org/directory/text/editors/le-editor.html"
@@ -16,14 +14,7 @@ IUSE=""
 DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r5"
 
-src_compile() {
-	# Work around linux-headers C++ incompatibility
-	# This should be removed once linux-headers is fixed
-	append-flags $(test-flags -fpermissive)
-
-	econf || die "configure failed"
-	emake || die "make failed"
-}
+PROVIDE="virtual/editor"
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
