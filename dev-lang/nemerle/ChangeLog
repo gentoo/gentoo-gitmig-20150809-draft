@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/nemerle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nemerle/ChangeLog,v 1.8 2006/04/16 06:56:27 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nemerle/ChangeLog,v 1.9 2006/04/27 15:45:48 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-nemerle-0.2.1-r1, files/digest-nemerle-0.2.1-r2,
+  files/digest-nemerle-0.3.1, Manifest:
+  Fixing SHA256 digest, pass four
 
   16 Apr 2006; Peter Johanson <latexer@gentoo.org> nemerle-0.9.2.ebuild:
   Force --libdir to work around autotools bug in nemerle. See bug #126508.
