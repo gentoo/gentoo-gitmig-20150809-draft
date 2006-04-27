@@ -1,172 +1,223 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6583bb423972bffd5866a786e65baf54 ChangeLog 24362
-RMD160 a1edb22b8b1d91a05c1f9d52eea6d0b58688b073 ChangeLog 24362
-SHA256 55dd03900dfa495a58385aa3a6c29358335812e8a6467dacb00b7dee84a825c5 ChangeLog 24362
-MD5 a14bf6d5cc101c31d97280ad9c48785e cyrus-sasl-2.1.18-r2.ebuild 5431
-RMD160 9ccb9da8a5c3922c0a69007f25fda9a368bc9b12 cyrus-sasl-2.1.18-r2.ebuild 5431
-SHA256 2d194e895e9f7e18a3eef750406f26e66903f76d127394a1298451dc7663cefc cyrus-sasl-2.1.18-r2.ebuild 5431
-MD5 54f2bd76be47e4beec9b53b237d0e44f cyrus-sasl-2.1.19-r1.ebuild 7161
-RMD160 1697bbd2bc9e38a5c695a3676426f6324ac457ef cyrus-sasl-2.1.19-r1.ebuild 7161
-SHA256 ee6ef3cf356190167e12743d6bc8ac0c9d342ab735f604a9fc1752b767970e5a cyrus-sasl-2.1.19-r1.ebuild 7161
-MD5 62922ef59be6add5b73bc4f12b9041ea cyrus-sasl-2.1.20-r1.ebuild 8558
-RMD160 33df3a21145abe1387b18f7c219b7440cdc0a252 cyrus-sasl-2.1.20-r1.ebuild 8558
-SHA256 71d2558deb2e7ed8d1955cf59c8553caeff66d623aacadb63643955a25c2dad1 cyrus-sasl-2.1.20-r1.ebuild 8558
-MD5 267cd40a5fb6cc0d346ff563ff1d9aca cyrus-sasl-2.1.20-r2.ebuild 9524
-RMD160 92afc0d9ecf4df2c40e5f82de3621e4f77569e04 cyrus-sasl-2.1.20-r2.ebuild 9524
-SHA256 fefea75176799dd9bf89300ab35fb0dcc254c3a02349cbceb1886e7c2bed18f6 cyrus-sasl-2.1.20-r2.ebuild 9524
-MD5 d9fda6c54c37d9a72b5ec222a0f942cb cyrus-sasl-2.1.20-r3.ebuild 9191
-RMD160 d01537481f1a5d6b4e901b2a8497cacc100b62ed cyrus-sasl-2.1.20-r3.ebuild 9191
-SHA256 ea5305e796b98fe18f0ff777e6a6be41bc73e051a6999b335bf4ff969d46ffe5 cyrus-sasl-2.1.20-r3.ebuild 9191
-MD5 97de45d37a62d1c1e7e52740007637b7 cyrus-sasl-2.1.20.ebuild 7352
-RMD160 f413208cc4849a826a4d6a62868918c2a83c13b7 cyrus-sasl-2.1.20.ebuild 7352
-SHA256 3c9b3b3d83c0d590b8841fe66dcef8e5b7ae2cbab119a1b8c1445f754b721973 cyrus-sasl-2.1.20.ebuild 7352
-MD5 3d105c5c251003e1df07df4c5f426d14 cyrus-sasl-2.1.21-r1.ebuild 9579
-RMD160 6de126cb56d8816864640fea0f54009b9897b357 cyrus-sasl-2.1.21-r1.ebuild 9579
-SHA256 d5c2ec54a169d8f15789b323c2a0d75865495a7cab8c51ea5f7848617f61ea29 cyrus-sasl-2.1.21-r1.ebuild 9579
-MD5 b06ccf8a3b8cb647e91f14babcd0a61d cyrus-sasl-2.1.21-r2.ebuild 9281
-RMD160 68d8ae4ac6a3358a4a74a50b811e07547e9fceae cyrus-sasl-2.1.21-r2.ebuild 9281
-SHA256 cc5caec0f547c03b8b5143a43c1d4288f4ee60b1c45d1a71dce2872700c94252 cyrus-sasl-2.1.21-r2.ebuild 9281
-MD5 80e82039d1535646788bd0866629b1df cyrus-sasl-2.1.21.ebuild 9199
-RMD160 15dfa13c9c9ad89431959033341b57310d83bc3d cyrus-sasl-2.1.21.ebuild 9199
-SHA256 fba7a4b5a1c1d149324ddb0d80a4efdd975f3a4c7b7ab654d75b5d8a4a1a0160 cyrus-sasl-2.1.21.ebuild 9199
+AUX 2.1.14-db4.patch 2032 RMD160 a52b214b1938961df7a8932b0d73ccd68013208f SHA1 19b1f6cb07e63fe0a7fed6eec2519eca91123e38 SHA256 3b4fe7ca6080c3c07ffc72b63baee0a56c998a6838415f4602b76820cec701bf size 2032
 MD5 b398dd3696347604a52a40bf1a77291b files/2.1.14-db4.patch 2032
 RMD160 a52b214b1938961df7a8932b0d73ccd68013208f files/2.1.14-db4.patch 2032
 SHA256 3b4fe7ca6080c3c07ffc72b63baee0a56c998a6838415f4602b76820cec701bf files/2.1.14-db4.patch 2032
+AUX 2.1.14-kerberos.patch 1148 RMD160 07e64be6d2b1c6606a779fab7911653bc4d8ae2f SHA1 6247e122d38c403736fbde87b468eafac535fdc4 SHA256 50d5ee542861ace4f7c60a783457077d694f9bc2978f7e96ffd47d27d1ea0fb3 size 1148
 MD5 a445d25ebbdf18b372340d4643736941 files/2.1.14-kerberos.patch 1148
 RMD160 07e64be6d2b1c6606a779fab7911653bc4d8ae2f files/2.1.14-kerberos.patch 1148
 SHA256 50d5ee542861ace4f7c60a783457077d694f9bc2978f7e96ffd47d27d1ea0fb3 files/2.1.14-kerberos.patch 1148
+AUX 2.1.14-mysql.patch 730 RMD160 41ec4de02aec0361766a213f49d575a4ec45a6bc SHA1 5d05e073b9db02646e2ef4adea4a4dcfc67235eb SHA256 04cedfea47e7f28c1530015a5cf97bd2347c132d86442d0ecdf6b108afef084a size 730
 MD5 72c9252fd0ccb3fc369c60ec233f4218 files/2.1.14-mysql.patch 730
 RMD160 41ec4de02aec0361766a213f49d575a4ec45a6bc files/2.1.14-mysql.patch 730
 SHA256 04cedfea47e7f28c1530015a5cf97bd2347c132d86442d0ecdf6b108afef084a files/2.1.14-mysql.patch 730
+AUX cyrus-sasl-1.5.21-des.patch 242 RMD160 396cc6d9f65aa311b3e2dda9e9aedce06885c7b6 SHA1 4255ce407be46c460f1300a1538529ea1c362512 SHA256 7f4cd1d01a378d09079ad17f66caa56e545e0908a7b909a472b9d89091550667 size 242
 MD5 4c6ffed2ba584f75a0c948250f7a11b7 files/cyrus-sasl-1.5.21-des.patch 242
 RMD160 396cc6d9f65aa311b3e2dda9e9aedce06885c7b6 files/cyrus-sasl-1.5.21-des.patch 242
 SHA256 7f4cd1d01a378d09079ad17f66caa56e545e0908a7b909a472b9d89091550667 files/cyrus-sasl-1.5.21-des.patch 242
+AUX cyrus-sasl-1.5.24-rpath.patch 448 RMD160 7f5ec8ece8fe2de6c134ac2c2bc200e10b3d708a SHA1 09f2250900d42c8e5d33b3c2187cf5f9865893a5 SHA256 2e7547c40daf8a2d52a9c21f134f800d68c05e68c4ad54885d4d4b7c3924b03b size 448
 MD5 5d8f83e453b4f7dff5eeee74335de870 files/cyrus-sasl-1.5.24-rpath.patch 448
 RMD160 7f5ec8ece8fe2de6c134ac2c2bc200e10b3d708a files/cyrus-sasl-1.5.24-rpath.patch 448
 SHA256 2e7547c40daf8a2d52a9c21f134f800d68c05e68c4ad54885d4d4b7c3924b03b files/cyrus-sasl-1.5.24-rpath.patch 448
+AUX cyrus-sasl-1.5.27-scram.patch 480 RMD160 2f837ce422f82f1bebd40b9ca1afa197a14e0328 SHA1 1224881414a7b0bdab7b9058feddc022d57972aa SHA256 0266f74aa48e14ba2929fa1763416f57638ff60538ef16d468faf39a0964cf2e size 480
 MD5 5f96ab675ae2ff1da8e0ee4503340df5 files/cyrus-sasl-1.5.27-scram.patch 480
 RMD160 2f837ce422f82f1bebd40b9ca1afa197a14e0328 files/cyrus-sasl-1.5.27-scram.patch 480
 SHA256 0266f74aa48e14ba2929fa1763416f57638ff60538ef16d468faf39a0964cf2e files/cyrus-sasl-1.5.27-scram.patch 480
+AUX cyrus-sasl-2.1.17-configdir.patch 8095 RMD160 bc06b58ddd9d238ff37b7fd7d48dcc2a8b255724 SHA1 ef34d95af22ac7758de4ee2aad3e80eee9fb1aca SHA256 0712faa263a86ab3d894209501758a30c0584ba260ecb937443624c407d7cf46 size 8095
 MD5 397ec1b24d4efe6efafa4782ba0f3493 files/cyrus-sasl-2.1.17-configdir.patch 8095
 RMD160 bc06b58ddd9d238ff37b7fd7d48dcc2a8b255724 files/cyrus-sasl-2.1.17-configdir.patch 8095
 SHA256 0712faa263a86ab3d894209501758a30c0584ba260ecb937443624c407d7cf46 files/cyrus-sasl-2.1.17-configdir.patch 8095
+AUX cyrus-sasl-2.1.17-db4.patch 1451 RMD160 0b94366422a7f573d908a6452be25ca575a606f5 SHA1 e35b10af09bf64de504f332a457962f00f7a1249 SHA256 189236e4c226802f856638fcb965cc448b6bcec60de1295d253ee019d34b8302 size 1451
 MD5 cb4a5c5160219818e04196847ba9f7a1 files/cyrus-sasl-2.1.17-db4.patch 1451
 RMD160 0b94366422a7f573d908a6452be25ca575a606f5 files/cyrus-sasl-2.1.17-db4.patch 1451
 SHA256 189236e4c226802f856638fcb965cc448b6bcec60de1295d253ee019d34b8302 files/cyrus-sasl-2.1.17-db4.patch 1451
+AUX cyrus-sasl-2.1.17-pgsql-include.patch 617 RMD160 b6a01c3447b49c8cc33ae0c7ca63294cad8e672c SHA1 a7a22f113044d8bda07e8345781913c317941f53 SHA256 394b196e7d5d7abb3d340de69ddea718bf80936de1eb667580ebae40b9cca228 size 617
 MD5 b9ab0670db5b9b5a74de379c18e5370d files/cyrus-sasl-2.1.17-pgsql-include.patch 617
 RMD160 b6a01c3447b49c8cc33ae0c7ca63294cad8e672c files/cyrus-sasl-2.1.17-pgsql-include.patch 617
 SHA256 394b196e7d5d7abb3d340de69ddea718bf80936de1eb667580ebae40b9cca228 files/cyrus-sasl-2.1.17-pgsql-include.patch 617
+AUX cyrus-sasl-2.1.18-cvs-1.172.patch 5056 RMD160 c708f0f09df3cbbcdf844055c63e8c32c827f14b SHA1 a975c99d9de6bc86c9b0eeb499e7044fefd9af19 SHA256 28aab46b848597bf53376d7a5f259ae2fa3dc691c40ae76a91f419d2df5756c4 size 5056
 MD5 e8b9357dba2bde4dac0b1cf38d5942eb files/cyrus-sasl-2.1.18-cvs-1.172.patch 5056
 RMD160 c708f0f09df3cbbcdf844055c63e8c32c827f14b files/cyrus-sasl-2.1.18-cvs-1.172.patch 5056
 SHA256 28aab46b848597bf53376d7a5f259ae2fa3dc691c40ae76a91f419d2df5756c4 files/cyrus-sasl-2.1.18-cvs-1.172.patch 5056
+AUX cyrus-sasl-2.1.18-db4.patch 1604 RMD160 4d413eb09057a9c5baad458bc72048188a0bebd0 SHA1 2b7dd1eb99a903b48200d09ca53054f9c8216731 SHA256 3bcc9ef2a3d17a1198eeb88645124421696b987b5706bd574b4ccd2ae2a1748b size 1604
 MD5 13c15e58d2fa734adeb718e4e3dea757 files/cyrus-sasl-2.1.18-db4.patch 1604
 RMD160 4d413eb09057a9c5baad458bc72048188a0bebd0 files/cyrus-sasl-2.1.18-db4.patch 1604
 SHA256 3bcc9ef2a3d17a1198eeb88645124421696b987b5706bd574b4ccd2ae2a1748b files/cyrus-sasl-2.1.18-db4.patch 1604
+AUX cyrus-sasl-2.1.18-pam_mysql.patch 1388 RMD160 c7a0012c315d11dc9d296b51bdfe10ed36a8c033 SHA1 bc0a6913c2eae22a3ea1cb2fae57b0a25087a925 SHA256 68361934131d130e7b9b296e409d2fbb1b5f7bd96e4af7e49c8f8c578fbc3cb9 size 1388
 MD5 d6cb936d23646d9e5312d63d08f6f563 files/cyrus-sasl-2.1.18-pam_mysql.patch 1388
 RMD160 c7a0012c315d11dc9d296b51bdfe10ed36a8c033 files/cyrus-sasl-2.1.18-pam_mysql.patch 1388
 SHA256 68361934131d130e7b9b296e409d2fbb1b5f7bd96e4af7e49c8f8c578fbc3cb9 files/cyrus-sasl-2.1.18-pam_mysql.patch 1388
+AUX cyrus-sasl-2.1.18-sasl-path-fix.patch 529 RMD160 2daffb9ee9cec0cd99107c4c3c973a22526b1cf6 SHA1 915ab0bb2e7be0fece48fa425304e1315876ac33 SHA256 15c85234ed900c0514b88a26435dcdcb92c80e9dc2ba9b35e7516fc505ecdfea size 529
 MD5 4a80034f8ee3149c898aab4492d9cff8 files/cyrus-sasl-2.1.18-sasl-path-fix.patch 529
 RMD160 2daffb9ee9cec0cd99107c4c3c973a22526b1cf6 files/cyrus-sasl-2.1.18-sasl-path-fix.patch 529
 SHA256 15c85234ed900c0514b88a26435dcdcb92c80e9dc2ba9b35e7516fc505ecdfea files/cyrus-sasl-2.1.18-sasl-path-fix.patch 529
+AUX cyrus-sasl-2.1.19-checkpw.c.patch 4858 RMD160 04f03808803b7a6f73bec5325c867b6e96e50f73 SHA1 60949a168c99b445298b3af786dae6e1b0f129d9 SHA256 57bc424e617ca4bac9e27f0f20da1bab6806a39801945c180b94ae29160981a8 size 4858
 MD5 e27ddff076342e7a3041c4759817d04b files/cyrus-sasl-2.1.19-checkpw.c.patch 4858
 RMD160 04f03808803b7a6f73bec5325c867b6e96e50f73 files/cyrus-sasl-2.1.19-checkpw.c.patch 4858
 SHA256 57bc424e617ca4bac9e27f0f20da1bab6806a39801945c180b94ae29160981a8 files/cyrus-sasl-2.1.19-checkpw.c.patch 4858
+AUX cyrus-sasl-2.1.19-configdir.patch 8231 RMD160 7f920f00964a185bd22d2669330ce1e906708dc9 SHA1 39127f0c133a88d10012b4f6889b62102fb6eb41 SHA256 00656e62e10984c629adb58d3ac8f139158d5f0faf4b20a60f90fdc53089c11e size 8231
 MD5 4144a6962acfd7983cc292259375149d files/cyrus-sasl-2.1.19-configdir.patch 8231
 RMD160 7f920f00964a185bd22d2669330ce1e906708dc9 files/cyrus-sasl-2.1.19-configdir.patch 8231
 SHA256 00656e62e10984c629adb58d3ac8f139158d5f0faf4b20a60f90fdc53089c11e files/cyrus-sasl-2.1.19-configdir.patch 8231
+AUX cyrus-sasl-2.1.19-sasl-path-fix.patch 529 RMD160 2daffb9ee9cec0cd99107c4c3c973a22526b1cf6 SHA1 915ab0bb2e7be0fece48fa425304e1315876ac33 SHA256 15c85234ed900c0514b88a26435dcdcb92c80e9dc2ba9b35e7516fc505ecdfea size 529
 MD5 4a80034f8ee3149c898aab4492d9cff8 files/cyrus-sasl-2.1.19-sasl-path-fix.patch 529
 RMD160 2daffb9ee9cec0cd99107c4c3c973a22526b1cf6 files/cyrus-sasl-2.1.19-sasl-path-fix.patch 529
 SHA256 15c85234ed900c0514b88a26435dcdcb92c80e9dc2ba9b35e7516fc505ecdfea files/cyrus-sasl-2.1.19-sasl-path-fix.patch 529
+AUX cyrus-sasl-2.1.20-configdir.patch 8231 RMD160 7f920f00964a185bd22d2669330ce1e906708dc9 SHA1 39127f0c133a88d10012b4f6889b62102fb6eb41 SHA256 00656e62e10984c629adb58d3ac8f139158d5f0faf4b20a60f90fdc53089c11e size 8231
 MD5 4144a6962acfd7983cc292259375149d files/cyrus-sasl-2.1.20-configdir.patch 8231
 RMD160 7f920f00964a185bd22d2669330ce1e906708dc9 files/cyrus-sasl-2.1.20-configdir.patch 8231
 SHA256 00656e62e10984c629adb58d3ac8f139158d5f0faf4b20a60f90fdc53089c11e files/cyrus-sasl-2.1.20-configdir.patch 8231
+AUX cyrus-sasl-2.1.20-gcc4.patch 462 RMD160 2e82f2636e8cbb8c3930ccadecea2a81d6aeea76 SHA1 e469d042df066c37e2ab8eb44d4e889f8f4f0b5a SHA256 b4ee552e696af01f0d2e5a9c6d250c7b841a071881a1731da9b8c6b0d0e90043 size 462
 MD5 f8ad054201be2531b337375299c4c39b files/cyrus-sasl-2.1.20-gcc4.patch 462
 RMD160 2e82f2636e8cbb8c3930ccadecea2a81d6aeea76 files/cyrus-sasl-2.1.20-gcc4.patch 462
 SHA256 b4ee552e696af01f0d2e5a9c6d250c7b841a071881a1731da9b8c6b0d0e90043 files/cyrus-sasl-2.1.20-gcc4.patch 462
+AUX cyrus-sasl-2.1.21-configure.patch 559 RMD160 d671aa365a190fd79ea4d3b28e2bc32d98c22290 SHA1 9cc1b20d10a028c9c5c4a0c39858baf3a5a28470 SHA256 318c94fd97fe6528b14d2ab82261eeea31f2c85b1d4c435b3f1c6e17921ce00f size 559
 MD5 2ae00e9ffd84efc610f478b88ce7e099 files/cyrus-sasl-2.1.21-configure.patch 559
 RMD160 d671aa365a190fd79ea4d3b28e2bc32d98c22290 files/cyrus-sasl-2.1.21-configure.patch 559
 SHA256 318c94fd97fe6528b14d2ab82261eeea31f2c85b1d4c435b3f1c6e17921ce00f files/cyrus-sasl-2.1.21-configure.patch 559
+AUX cyrus-sasl-configdir.patch 8510 RMD160 1668364b8784824c3bb3a7b92bf51e1766516970 SHA1 4c873fe9d47e7594dc0a6d984cd4cab4af4a5e78 SHA256 80354d581b4faa0072d6e3af64e162ecbf8b5aa74dcdb0b04f2b5eb133c6da2c size 8510
 MD5 75aaabf38cf470bae9a928a334c3cb59 files/cyrus-sasl-configdir.patch 8510
 RMD160 1668364b8784824c3bb3a7b92bf51e1766516970 files/cyrus-sasl-configdir.patch 8510
 SHA256 80354d581b4faa0072d6e3af64e162ecbf8b5aa74dcdb0b04f2b5eb133c6da2c files/cyrus-sasl-configdir.patch 8510
+AUX cyrus-sasl-gcc32.patch 426 RMD160 6c1f575caa172a1050c1397d2c3bec65743608cf SHA1 6ead56b220be45d889534ac32b5e01c63dfcfbc0 SHA256 4d5e78879c1da4bb9a8101639247ed6a8052551ce2c5546d178562f8fa75a4ed size 426
 MD5 228579b200f0a570f9c02d222f400672 files/cyrus-sasl-gcc32.patch 426
 RMD160 6c1f575caa172a1050c1397d2c3bec65743608cf files/cyrus-sasl-gcc32.patch 426
 SHA256 4d5e78879c1da4bb9a8101639247ed6a8052551ce2c5546d178562f8fa75a4ed files/cyrus-sasl-gcc32.patch 426
+AUX cyrus-sasl-heimdal-deps.patch 624 RMD160 0724e015e3a7854b6e0e3b42590799e1d8bedab4 SHA1 a67da0bad54c60f441f984d8ffb79bdb3b725d24 SHA256 1ea439511eb4682f1b53bc888c212dd815842aeadc5a07cde70fe57d1cc52226 size 624
 MD5 692a355142b7cfb937cd8a3a655c0310 files/cyrus-sasl-heimdal-deps.patch 624
 RMD160 0724e015e3a7854b6e0e3b42590799e1d8bedab4 files/cyrus-sasl-heimdal-deps.patch 624
 SHA256 1ea439511eb4682f1b53bc888c212dd815842aeadc5a07cde70fe57d1cc52226 files/cyrus-sasl-heimdal-deps.patch 624
+AUX cyrus-sasl-saslauthd.patch 4938 RMD160 0782782b5899e446c543f546a633bbc3224b4d28 SHA1 61bba31c81d61f55c2b7daacfabf4d5bdbcdf88b SHA256 ee973dfaff300893a51f40af86ad6ff11e678b25354356705481d8b13d4d61cd size 4938
 MD5 9a317f7aa562936a829574f63aefce15 files/cyrus-sasl-saslauthd.patch 4938
 RMD160 0782782b5899e446c543f546a633bbc3224b4d28 files/cyrus-sasl-saslauthd.patch 4938
 SHA256 ee973dfaff300893a51f40af86ad6ff11e678b25354356705481d8b13d4d61cd files/cyrus-sasl-saslauthd.patch 4938
-MD5 fcf540108971d5aaa0bbfba381971ca7 files/digest-cyrus-sasl-2.1.18-r2 70
-RMD160 8336e0bfcae39b807d89f78f154a0d54879389e5 files/digest-cyrus-sasl-2.1.18-r2 70
-SHA256 ac5b37c86db559c28bffe55286e1015e68c6beb0fefb1ac983054a676a770952 files/digest-cyrus-sasl-2.1.18-r2 70
-MD5 d6d8b3c7c3a2aacf656f970a043d3158 files/digest-cyrus-sasl-2.1.19-r1 70
-RMD160 d61a099dbbe1f1cb85593d2f26d1e548efca5c46 files/digest-cyrus-sasl-2.1.19-r1 70
-SHA256 3c42a54b5c4f12004e07b3e22dd2b640b36c3df992c29837d4f8cbfeaf49347f files/digest-cyrus-sasl-2.1.19-r1 70
-MD5 c355c365d74408c00cdaa25beea6d4f7 files/digest-cyrus-sasl-2.1.20 70
-RMD160 b3d118a03ed2259481638a254d649a3cb5ac06f4 files/digest-cyrus-sasl-2.1.20 70
-SHA256 1b98ab44fa12a950a82605947231605306020efb8524a111a57894c7912abfce files/digest-cyrus-sasl-2.1.20 70
-MD5 c355c365d74408c00cdaa25beea6d4f7 files/digest-cyrus-sasl-2.1.20-r1 70
-RMD160 b3d118a03ed2259481638a254d649a3cb5ac06f4 files/digest-cyrus-sasl-2.1.20-r1 70
-SHA256 1b98ab44fa12a950a82605947231605306020efb8524a111a57894c7912abfce files/digest-cyrus-sasl-2.1.20-r1 70
-MD5 459aa1c6826a31cb3c0efe7a1c5ebbc4 files/digest-cyrus-sasl-2.1.20-r2 149
-RMD160 d6d9f1382fbcdba4993725faf1242936536f9e49 files/digest-cyrus-sasl-2.1.20-r2 149
-SHA256 eb9dd834aba65c34f6f3f314c4080fa77b86da92d94705498a6a171d3303f44b files/digest-cyrus-sasl-2.1.20-r2 149
-MD5 df4f823438d862f915941d5717ff7481 files/digest-cyrus-sasl-2.1.20-r3 539
-RMD160 11ebad9c1ed929d9b59f81bf0462e60d74855dd7 files/digest-cyrus-sasl-2.1.20-r3 539
-SHA256 75e72e3ea841284a8aef35d8e36ab30240918ab9d2912efb3e1360647b05c6fb files/digest-cyrus-sasl-2.1.20-r3 539
-MD5 6e3a4b0f3a097e9aadfe5ac4efe8a7bf files/digest-cyrus-sasl-2.1.21 156
-RMD160 92ea6300cc77908b68b170a1d50793832ba48fdf files/digest-cyrus-sasl-2.1.21 156
-SHA256 4c789f2c48689ebef723cdde26389a97de8da5145ea9342abbb4ecaaf19da71c files/digest-cyrus-sasl-2.1.21 156
-MD5 6e3a4b0f3a097e9aadfe5ac4efe8a7bf files/digest-cyrus-sasl-2.1.21-r1 156
-RMD160 92ea6300cc77908b68b170a1d50793832ba48fdf files/digest-cyrus-sasl-2.1.21-r1 156
-SHA256 4c789f2c48689ebef723cdde26389a97de8da5145ea9342abbb4ecaaf19da71c files/digest-cyrus-sasl-2.1.21-r1 156
-MD5 6e3a4b0f3a097e9aadfe5ac4efe8a7bf files/digest-cyrus-sasl-2.1.21-r2 156
-RMD160 92ea6300cc77908b68b170a1d50793832ba48fdf files/digest-cyrus-sasl-2.1.21-r2 156
-SHA256 4c789f2c48689ebef723cdde26389a97de8da5145ea9342abbb4ecaaf19da71c files/digest-cyrus-sasl-2.1.21-r2 156
+AUX java.README.gentoo 934 RMD160 53369bc85186e7be3e86a98d19a0a19ca4535c2b SHA1 8ddb577ffe968d4ff3cda27402ce21988c55519a SHA256 aeb733ab6371c1fe50e413e8469dcd11f0750b5afff489408c45f118857fc3fe size 934
 MD5 bc046561db59ed3f4d0cc417b099c2f9 files/java.README.gentoo 934
 RMD160 53369bc85186e7be3e86a98d19a0a19ca4535c2b files/java.README.gentoo 934
 SHA256 aeb733ab6371c1fe50e413e8469dcd11f0750b5afff489408c45f118857fc3fe files/java.README.gentoo 934
+AUX pwcheck.rc6 540 RMD160 d675a5e80564dde8978d117c50bc49f209d81718 SHA1 00227312e2ae12e5ce59345cb4fe87709012a089 SHA256 e534c0a2f1a88db2024b3e67b77446eeddafaf4346794b72a833720c826090ca size 540
 MD5 ba1fb0a42418f5a5bcf2577fb27a136e files/pwcheck.rc6 540
 RMD160 d675a5e80564dde8978d117c50bc49f209d81718 files/pwcheck.rc6 540
 SHA256 e534c0a2f1a88db2024b3e67b77446eeddafaf4346794b72a833720c826090ca files/pwcheck.rc6 540
+AUX saslauthd-2.1.19.conf 906 RMD160 371bb42529545735ca180d79c85cb0400d80734d SHA1 8818a50dc09d33a3df43ed4a8f596a9ff1ab8b6e SHA256 fb0101d9f672b995d285923bb4e4af741cd142ccdbfbe9ee8754d22089e88e58 size 906
 MD5 52645b3330ddad9ce06f2a0eebb8d345 files/saslauthd-2.1.19.conf 906
 RMD160 371bb42529545735ca180d79c85cb0400d80734d files/saslauthd-2.1.19.conf 906
 SHA256 fb0101d9f672b995d285923bb4e4af741cd142ccdbfbe9ee8754d22089e88e58 files/saslauthd-2.1.19.conf 906
+AUX saslauthd-2.1.20.conf 906 RMD160 ad399656ec66ebc71e0e1d7af557c88e963e7f0c SHA1 d653f2e46d6934a30a1f84e2eb0a1bdce9f1f652 SHA256 db204d9e7620799ed676290ac8d9e0db59b0c8fe0ec1a1317ca6b52b12bca0de size 906
 MD5 41c1024f02bc0725406a23eeff93edd5 files/saslauthd-2.1.20.conf 906
 RMD160 ad399656ec66ebc71e0e1d7af557c88e963e7f0c files/saslauthd-2.1.20.conf 906
 SHA256 db204d9e7620799ed676290ac8d9e0db59b0c8fe0ec1a1317ca6b52b12bca0de files/saslauthd-2.1.20.conf 906
+AUX saslauthd-2.1.21.conf 906 RMD160 51ca03cf8df80a282edb0720b52e644f95c3d76d SHA1 2b9babfd9d47787bfdb3b1cd5ddb919dd6366d2b SHA256 5164b4b0179f45f6ee3148d02ddd882f52ed2c56671671e5ae9b9c7088c79330 size 906
 MD5 4717e635830a067d9abb83da6b2700cb files/saslauthd-2.1.21.conf 906
 RMD160 51ca03cf8df80a282edb0720b52e644f95c3d76d files/saslauthd-2.1.21.conf 906
 SHA256 5164b4b0179f45f6ee3148d02ddd882f52ed2c56671671e5ae9b9c7088c79330 files/saslauthd-2.1.21.conf 906
+AUX saslauthd.conf 890 RMD160 aa95dc9059975ccfec690985f802963c24bc76bd SHA1 7a11a1e5deacfe82a3458666e8c64645745a881e SHA256 baa57052ad0a840d77654b63ca4b9038f631e3d13be22a713216280776b2243f size 890
 MD5 a46ddb41677b9b08046d193d9db8a4bb files/saslauthd.conf 890
 RMD160 aa95dc9059975ccfec690985f802963c24bc76bd files/saslauthd.conf 890
 SHA256 baa57052ad0a840d77654b63ca4b9038f631e3d13be22a713216280776b2243f files/saslauthd.conf 890
+AUX saslauthd.pam 223 RMD160 d9f66a8e27e716d96ee7426c307d273c481f7e00 SHA1 aa4a4ce854b8465a5d3833d1be60b0abe0403699 SHA256 ad398d7b8fa147fdcaecbb266c32f99a7e55c5efffedb16ca854484f809ec0ae size 223
 MD5 7b24e99c21a5924543fe82cd82a1d741 files/saslauthd.pam 223
 RMD160 d9f66a8e27e716d96ee7426c307d273c481f7e00 files/saslauthd.pam 223
 SHA256 ad398d7b8fa147fdcaecbb266c32f99a7e55c5efffedb16ca854484f809ec0ae files/saslauthd.pam 223
+AUX saslauthd.pam-include 160 RMD160 643057c1c0e6fc859114b152dab1bf0e89c13c70 SHA1 4202ff7752fd39614211dfc099faace5509c632f SHA256 97166de49d227cf5ff305168ea75ca584feda9ab87d1eb1437638861986e70ba size 160
 MD5 a1b5b72d1285487654685fc497aa81b5 files/saslauthd.pam-include 160
 RMD160 643057c1c0e6fc859114b152dab1bf0e89c13c70 files/saslauthd.pam-include 160
 SHA256 97166de49d227cf5ff305168ea75ca584feda9ab87d1eb1437638861986e70ba files/saslauthd.pam-include 160
+AUX saslauthd.rc6 541 RMD160 baa50b0762038f3b5524bcaf5c9f01f5e8e4e863 SHA1 b69d1e69ef9bc8bdc10cb652dca43209f6591e7b SHA256 82efbf7be8daa64be873a62e1b72ceaf0d08f79d55808e9112395afba0edcae4 size 541
 MD5 bfda634830e1525c8a1a5750f8d54fca files/saslauthd.rc6 541
 RMD160 baa50b0762038f3b5524bcaf5c9f01f5e8e4e863 files/saslauthd.rc6 541
 SHA256 82efbf7be8daa64be873a62e1b72ceaf0d08f79d55808e9112395afba0edcae4 files/saslauthd.rc6 541
+AUX saslauthd2.conf 752 RMD160 9b603371c49ec99b7f3e7e308dc8ea271ad30200 SHA1 abd0bf840ce69d239acba2c723f4891fbf3a62e9 SHA256 6fec0775fa39a03ea18982b803e3abd42fac18d5581d530bb285b3c554f66b24 size 752
 MD5 fc0d11e115e65597419803dad9727aa8 files/saslauthd2.conf 752
 RMD160 9b603371c49ec99b7f3e7e308dc8ea271ad30200 files/saslauthd2.conf 752
 SHA256 6fec0775fa39a03ea18982b803e3abd42fac18d5581d530bb285b3c554f66b24 files/saslauthd2.conf 752
+AUX saslauthd2.rc6 527 RMD160 d7862bf389349b6cf9248f8dc7ed69fb0a7f5ca8 SHA1 eeea12a2bbf0fda12e118d16d1f7aa0437b414ed SHA256 55e59c02dcfeab84b777b9a4f1d1bb79645aab43538e1ba593c61dcb82a9e1f7 size 527
 MD5 5d79108b7b67bd3af315e3142023fef5 files/saslauthd2.rc6 527
 RMD160 d7862bf389349b6cf9248f8dc7ed69fb0a7f5ca8 files/saslauthd2.rc6 527
 SHA256 55e59c02dcfeab84b777b9a4f1d1bb79645aab43538e1ba593c61dcb82a9e1f7 files/saslauthd2.rc6 527
+DIST cyrus-sasl-2.1.18.tar.gz 1522578 RMD160 772a1413ca68a8b91fa93d51630984acc7209136 SHA256 384279adfd582ad6f905197c46a5157f855462718530148fdbab3328cf621eb7 size 1522578
+DIST cyrus-sasl-2.1.19.tar.gz 1537350 RMD160 c74ca8685e9bdf12fe1f64137de931d79a4384ab SHA256 0ee2d5d04972a15c3154730f328467a5cf5c7e69766a73bab06664263666bfeb size 1537350
+DIST cyrus-sasl-2.1.20.tar.gz 1775163 RMD160 45f8d9e91e5ba4840f57d2f0526b8f41f90bbb8c SHA256 f0b97118e3e014a185c17777672a93300ca561cf5f2beeac2d4aa6abec09534d size 1775163
+DIST cyrus-sasl-2.1.21-ntlm_impl-spnego.patch.gz 7465 RMD160 acf1d479c4559acdda66ab66da999ffc2f68d029 SHA256 b02b97bbc3968248c4f04d3d67a9aac4baa4aa4f8388eefec548475784a2d968 size 7465
+DIST cyrus-sasl-2.1.21.tar.gz 1584931 RMD160 93e0e1868453c5781602b5cce23e746b8823a26b SHA256 fa37bcc8b855597aa1e6b72915b38985991b4abd4e7bc116c3e88fd4e86fb0fb size 1584931
+DIST cyrus-sasl-ntlm_impl-spnego.patch.gz 7430 RMD160 e5de01ff94f62e4bf83c44416e90112a212b26bc SHA256 b6ecd6dc5c1c4a6341d9f663db2c0d79932b0b0844d4409ca8daa902c659108d size 7430
+EBUILD cyrus-sasl-2.1.18-r2.ebuild 5431 RMD160 9ccb9da8a5c3922c0a69007f25fda9a368bc9b12 SHA1 22edf8fc2a5abdcbdb89e3b94c0e5b24f3e2e7fd SHA256 9fd30b4aa6a35865db4931ca01393e87d4b72ec9ae5930b2bf7bcb9a410a1060 size 5431
+MD5 a14bf6d5cc101c31d97280ad9c48785e cyrus-sasl-2.1.18-r2.ebuild 5431
+RMD160 9ccb9da8a5c3922c0a69007f25fda9a368bc9b12 cyrus-sasl-2.1.18-r2.ebuild 5431
+SHA256 9fd30b4aa6a35865db4931ca01393e87d4b72ec9ae5930b2bf7bcb9a410a1060 cyrus-sasl-2.1.18-r2.ebuild 5431
+EBUILD cyrus-sasl-2.1.19-r1.ebuild 7161 RMD160 1697bbd2bc9e38a5c695a3676426f6324ac457ef SHA1 780cc66a9b1a72bba49e9143670ddf0132feca4e SHA256 ee6ef3cf356190167e12743d6bc8ac0c9d342ab735f604a9fc1752b767970e5a size 7161
+MD5 54f2bd76be47e4beec9b53b237d0e44f cyrus-sasl-2.1.19-r1.ebuild 7161
+RMD160 1697bbd2bc9e38a5c695a3676426f6324ac457ef cyrus-sasl-2.1.19-r1.ebuild 7161
+SHA256 ee6ef3cf356190167e12743d6bc8ac0c9d342ab735f604a9fc1752b767970e5a cyrus-sasl-2.1.19-r1.ebuild 7161
+EBUILD cyrus-sasl-2.1.20-r1.ebuild 8558 RMD160 33df3a21145abe1387b18f7c219b7440cdc0a252 SHA1 01fd41596a135378d599e554d53c0887bfc1ad4d SHA256 71d2558deb2e7ed8d1955cf59c8553caeff66d623aacadb63643955a25c2dad1 size 8558
+MD5 62922ef59be6add5b73bc4f12b9041ea cyrus-sasl-2.1.20-r1.ebuild 8558
+RMD160 33df3a21145abe1387b18f7c219b7440cdc0a252 cyrus-sasl-2.1.20-r1.ebuild 8558
+SHA256 71d2558deb2e7ed8d1955cf59c8553caeff66d623aacadb63643955a25c2dad1 cyrus-sasl-2.1.20-r1.ebuild 8558
+EBUILD cyrus-sasl-2.1.20-r2.ebuild 9524 RMD160 92afc0d9ecf4df2c40e5f82de3621e4f77569e04 SHA1 6148b81bfc553ccde68174f87e92e9d2767d067d SHA256 fefea75176799dd9bf89300ab35fb0dcc254c3a02349cbceb1886e7c2bed18f6 size 9524
+MD5 267cd40a5fb6cc0d346ff563ff1d9aca cyrus-sasl-2.1.20-r2.ebuild 9524
+RMD160 92afc0d9ecf4df2c40e5f82de3621e4f77569e04 cyrus-sasl-2.1.20-r2.ebuild 9524
+SHA256 fefea75176799dd9bf89300ab35fb0dcc254c3a02349cbceb1886e7c2bed18f6 cyrus-sasl-2.1.20-r2.ebuild 9524
+EBUILD cyrus-sasl-2.1.20-r3.ebuild 9191 RMD160 d01537481f1a5d6b4e901b2a8497cacc100b62ed SHA1 ab20a9fe18639fe9c66651343cf954f4c0b460c3 SHA256 ea5305e796b98fe18f0ff777e6a6be41bc73e051a6999b335bf4ff969d46ffe5 size 9191
+MD5 d9fda6c54c37d9a72b5ec222a0f942cb cyrus-sasl-2.1.20-r3.ebuild 9191
+RMD160 d01537481f1a5d6b4e901b2a8497cacc100b62ed cyrus-sasl-2.1.20-r3.ebuild 9191
+SHA256 ea5305e796b98fe18f0ff777e6a6be41bc73e051a6999b335bf4ff969d46ffe5 cyrus-sasl-2.1.20-r3.ebuild 9191
+EBUILD cyrus-sasl-2.1.20.ebuild 7352 RMD160 f413208cc4849a826a4d6a62868918c2a83c13b7 SHA1 1ee100ed13d5985bc58309988e582d5c254b8eee SHA256 3c9b3b3d83c0d590b8841fe66dcef8e5b7ae2cbab119a1b8c1445f754b721973 size 7352
+MD5 97de45d37a62d1c1e7e52740007637b7 cyrus-sasl-2.1.20.ebuild 7352
+RMD160 f413208cc4849a826a4d6a62868918c2a83c13b7 cyrus-sasl-2.1.20.ebuild 7352
+SHA256 3c9b3b3d83c0d590b8841fe66dcef8e5b7ae2cbab119a1b8c1445f754b721973 cyrus-sasl-2.1.20.ebuild 7352
+EBUILD cyrus-sasl-2.1.21-r1.ebuild 9579 RMD160 6de126cb56d8816864640fea0f54009b9897b357 SHA1 ed7334fbff8401cef2d145cdef91d352a8a13d3b SHA256 d5c2ec54a169d8f15789b323c2a0d75865495a7cab8c51ea5f7848617f61ea29 size 9579
+MD5 3d105c5c251003e1df07df4c5f426d14 cyrus-sasl-2.1.21-r1.ebuild 9579
+RMD160 6de126cb56d8816864640fea0f54009b9897b357 cyrus-sasl-2.1.21-r1.ebuild 9579
+SHA256 d5c2ec54a169d8f15789b323c2a0d75865495a7cab8c51ea5f7848617f61ea29 cyrus-sasl-2.1.21-r1.ebuild 9579
+EBUILD cyrus-sasl-2.1.21-r2.ebuild 9281 RMD160 68d8ae4ac6a3358a4a74a50b811e07547e9fceae SHA1 8718af5779a0f9733df424fb4b795af1b85290cd SHA256 cc5caec0f547c03b8b5143a43c1d4288f4ee60b1c45d1a71dce2872700c94252 size 9281
+MD5 b06ccf8a3b8cb647e91f14babcd0a61d cyrus-sasl-2.1.21-r2.ebuild 9281
+RMD160 68d8ae4ac6a3358a4a74a50b811e07547e9fceae cyrus-sasl-2.1.21-r2.ebuild 9281
+SHA256 cc5caec0f547c03b8b5143a43c1d4288f4ee60b1c45d1a71dce2872700c94252 cyrus-sasl-2.1.21-r2.ebuild 9281
+EBUILD cyrus-sasl-2.1.21.ebuild 9199 RMD160 15dfa13c9c9ad89431959033341b57310d83bc3d SHA1 2ec0a41117b73dc1cb2d36ca8754e90b347ec04a SHA256 fba7a4b5a1c1d149324ddb0d80a4efdd975f3a4c7b7ab654d75b5d8a4a1a0160 size 9199
+MD5 80e82039d1535646788bd0866629b1df cyrus-sasl-2.1.21.ebuild 9199
+RMD160 15dfa13c9c9ad89431959033341b57310d83bc3d cyrus-sasl-2.1.21.ebuild 9199
+SHA256 fba7a4b5a1c1d149324ddb0d80a4efdd975f3a4c7b7ab654d75b5d8a4a1a0160 cyrus-sasl-2.1.21.ebuild 9199
+MISC ChangeLog 24742 RMD160 10649e129084434c3fe70fb3865c7e1e149f46df SHA1 35814679737fd598da04ba226027c5c995f85ee0 SHA256 ad01cd6f1ae961ab3b7c52ffe7201ceb749e6d2eaea62053549d85c1074e2a5f size 24742
+MD5 cbce1d3108230fd32d7814acfb97d29f ChangeLog 24742
+RMD160 10649e129084434c3fe70fb3865c7e1e149f46df ChangeLog 24742
+SHA256 ad01cd6f1ae961ab3b7c52ffe7201ceb749e6d2eaea62053549d85c1074e2a5f ChangeLog 24742
+MISC metadata.xml 161 RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 SHA1 a1fecd2f7b169d621b88c6ccab9d758209fc8f19 SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 size 161
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
 SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
+MD5 6c3678bbc612c4ac4bd11bf1447a3596 files/digest-cyrus-sasl-2.1.18-r2 256
+RMD160 2959d6819ffedfdab31bf8a448ea568a103534e3 files/digest-cyrus-sasl-2.1.18-r2 256
+SHA256 a0055e4db8cb34c685ef69dacb0de7e64361904d80518d4baf731c2808dfc984 files/digest-cyrus-sasl-2.1.18-r2 256
+MD5 6b410c9ef58fffbb76b06a45dfb5b4cc files/digest-cyrus-sasl-2.1.19-r1 256
+RMD160 05e37694798d0a8ac19c0ed21b72594883c812b0 files/digest-cyrus-sasl-2.1.19-r1 256
+SHA256 6b99adbdb30465c19e6f8865b1a27bcc96cd9337ff2576d5056a9d0293633e76 files/digest-cyrus-sasl-2.1.19-r1 256
+MD5 395f130dc8a34f1b77ab6c371980825e files/digest-cyrus-sasl-2.1.20 256
+RMD160 8851e2882852ed4389d1f1e6d2bfe01c973c84fc files/digest-cyrus-sasl-2.1.20 256
+SHA256 5e117803c82ca33b50a8c87db9a761e762662fe0c75ac28ed93855fc88901f72 files/digest-cyrus-sasl-2.1.20 256
+MD5 395f130dc8a34f1b77ab6c371980825e files/digest-cyrus-sasl-2.1.20-r1 256
+RMD160 8851e2882852ed4389d1f1e6d2bfe01c973c84fc files/digest-cyrus-sasl-2.1.20-r1 256
+SHA256 5e117803c82ca33b50a8c87db9a761e762662fe0c75ac28ed93855fc88901f72 files/digest-cyrus-sasl-2.1.20-r1 256
+MD5 df4f823438d862f915941d5717ff7481 files/digest-cyrus-sasl-2.1.20-r2 539
+RMD160 11ebad9c1ed929d9b59f81bf0462e60d74855dd7 files/digest-cyrus-sasl-2.1.20-r2 539
+SHA256 75e72e3ea841284a8aef35d8e36ab30240918ab9d2912efb3e1360647b05c6fb files/digest-cyrus-sasl-2.1.20-r2 539
+MD5 df4f823438d862f915941d5717ff7481 files/digest-cyrus-sasl-2.1.20-r3 539
+RMD160 11ebad9c1ed929d9b59f81bf0462e60d74855dd7 files/digest-cyrus-sasl-2.1.20-r3 539
+SHA256 75e72e3ea841284a8aef35d8e36ab30240918ab9d2912efb3e1360647b05c6fb files/digest-cyrus-sasl-2.1.20-r3 539
+MD5 f834cac9cb71cbdb5f80b22f6f79d1d3 files/digest-cyrus-sasl-2.1.21 560
+RMD160 dfa902833d1cefe847969ccef5b54be841b96bc5 files/digest-cyrus-sasl-2.1.21 560
+SHA256 b32d41e1a514f5363d5747eedf3f52e1a01e44ec21faf8f885fa752ffb2193a4 files/digest-cyrus-sasl-2.1.21 560
+MD5 f834cac9cb71cbdb5f80b22f6f79d1d3 files/digest-cyrus-sasl-2.1.21-r1 560
+RMD160 dfa902833d1cefe847969ccef5b54be841b96bc5 files/digest-cyrus-sasl-2.1.21-r1 560
+SHA256 b32d41e1a514f5363d5747eedf3f52e1a01e44ec21faf8f885fa752ffb2193a4 files/digest-cyrus-sasl-2.1.21-r1 560
+MD5 f834cac9cb71cbdb5f80b22f6f79d1d3 files/digest-cyrus-sasl-2.1.21-r2 560
+RMD160 dfa902833d1cefe847969ccef5b54be841b96bc5 files/digest-cyrus-sasl-2.1.21-r2 560
+SHA256 b32d41e1a514f5363d5747eedf3f52e1a01e44ec21faf8f885fa752ffb2193a4 files/digest-cyrus-sasl-2.1.21-r2 560
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEQT3r2+ySkm8kpY0RAu9aAJ94BV+VXvaTaKGBZtRFiyZZo4FDZgCfY15L
-eJMg/2Y6uN4GFSI30pFrgEg=
-=rMcE
+iD8DBQFEUPB6W78445TWHXcRAqGzAJ9/yy2PPykNlPYfSR8Tfm/ESLEYSgCfaGRu
+LmPricH9fwOdIRZvw5D9tFw=
+=9rKw
 -----END PGP SIGNATURE-----
