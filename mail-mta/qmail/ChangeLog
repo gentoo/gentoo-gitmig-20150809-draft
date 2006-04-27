@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.75 2006/03/20 21:39:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.76 2006/04/27 21:50:07 hansmi Exp $
+
+  27 Apr 2006; Michael Hanselmann <hansmi@gentoo.org> qmail-1.03-r15.ebuild,
+  qmail-1.03-r16.ebuild:
+  Fix configuration instruction as pointed out in bug 131160.
 
   20 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> qmail-1.03-r16.ebuild:
   Don't install tcp-environ.5, see bug 127005.

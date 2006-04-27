@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.39 2006/02/12 00:00:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.40 2006/04/27 21:50:07 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -450,7 +450,7 @@ pkg_postinst() {
 	env-update
 
 	einfo "To setup qmail to run out-of-the-box on your system, run:"
-	einfo "emerge --config =${PF}"
+	einfo "emerge --config =${CATEGORY}/${PF}"
 	echo
 	einfo "To start qmail at boot you have to add svscan to your startup"
 	einfo "and create the following links:"
