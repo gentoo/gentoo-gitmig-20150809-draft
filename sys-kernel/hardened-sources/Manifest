@@ -1,10 +1,12 @@
-DIST genpatches-2.6.14-11.base.tar.bz2 97962 RMD160 5e659750354a15ddc9b6be19fe11bbc4e1ac981d SHA256 e1bc4501eea6d98d25bf5bb6a640fb5eca6359856bb35a84ee6dcca798a1df57 size 97962
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST genpatches-2.6.14-13.base.tar.bz2 101369 RMD160 2f20226bd7a6a2dda4eefa6cb80593bfaebddb8f SHA256 a15eb48666c21b9522b2639a3ee3e150c161ec69e70ae535ebd2e7cb9fa5a6aa size 101369
 DIST genpatches-2.6.14-14.base.tar.bz2 253557 RMD160 6ab75db1397ceaa7c332b7cc757937eb15a11b9c SHA256 8ac6a9d0b613de439afa63741f0e7d135963ca70c89863cda33acc7dde3b720e size 253557
-DIST genpatches-2.6.16-5.base.tar.bz2 48590 RMD160 4f8081e3a4abe784dd0c9fdb0848975628f03ddc SHA256 511fe0481a76b7be8c6b13d89bf4d87dabe04b637ebb42e09af231d9aac89560 size 48590
+DIST genpatches-2.6.16-6.base.tar.bz2 54974 RMD160 df94430a8f6336bfdcaecaa2ca301215494ba55d SHA256 6c0433b72e6ee7dc3fb36e5052b77b295802c71a75c2e46e6d486f6ac4681b5a size 54974
 DIST hardened-patches-2.4-32.2.tar.bz2 747599 RMD160 a9d0970cc4a7094521cff33d5fa65500f4134f5a SHA256 357fb300348c6ec701bedd683e1d25cd4772af73c09695d5c68dde35b2dc39e2 size 747599
 DIST hardened-patches-2.4-32.3.tar.bz2 764191 RMD160 d954366e00df97d7bc7c6950e676da9113331922 SHA256 5857bdfbed967de627b2a2d0513a2013cd26edce51128af7fc231ab3d37ee84e size 764191
-DIST hardened-patches-2.6.14-5.extras.tar.bz2 168053 RMD160 6a4e3b27a009c6cdea8994be85572638618d3344 SHA256 cdcb5955367d90b50ce4062fcd29a713f39d4acd881733f6e5129c59efe204e9 size 168053
+DIST hardened-patches-2.6.14-5.extras.tar.bz2 160671 RMD160 c26e2bec37b01eed6a449eff599d5b5728a879a5 SHA256 70b43232ac0d278af3064ae9dc5bb230f447bbe34110d4096b7b8c34bd1e7398 size 160671
 DIST hardened-patches-2.6.14-6.extras.tar.bz2 160772 RMD160 16860d59406aa9adb8622c567df874429a999366 SHA256 00b80b878cdddf2681202fda4d8dc8178d3938cdfb08e2f2b28ba9a0daa7f888 size 160772
 DIST hardened-patches-2.6.16-5.extras.tar.bz2 161024 RMD160 8177f5b2dee37ea9b340af37a2bc20d5dc249969 SHA256 0d0c88add68e77465fca50d9a044172bec8ef446198343a49d7a12e32639a9ee size 161024
 DIST linux-2.4.32.tar.bz2 31132159 RMD160 63ab1a0b18e690170f60de9da7392416311dc609 SHA256 7dace89c3f0850c3d5c32c38c20b600259c314e8cbec29fe3ee59c2fbbee1759 size 31132159
@@ -18,26 +20,22 @@ EBUILD hardened-sources-2.4.32-r3.ebuild 939 RMD160 f77716855ea418a809c54e41697d
 MD5 7c33cff623963f99a582a1d5bcb5ba23 hardened-sources-2.4.32-r3.ebuild 939
 RMD160 f77716855ea418a809c54e41697dc234dc74c5b4 hardened-sources-2.4.32-r3.ebuild 939
 SHA256 1432ea548059b91a026c5d7c60add41e902fea8fe54ca07e794ce2e43a20b4ea hardened-sources-2.4.32-r3.ebuild 939
-EBUILD hardened-sources-2.6.14-r6.ebuild 792 RMD160 8076d9305bcc81ad57bced08cfb7e2fcdd9cf35f SHA1 2e2c51d0ce4db4ca897c73d6204327c7de9ce43d SHA256 a68d7d049f580a7d8f9a743ffff0c5685f9ee5f789a79c9d888c351295f7baf1 size 792
-MD5 922a8d2c1a206bc120ab67e42a7bec32 hardened-sources-2.6.14-r6.ebuild 792
-RMD160 8076d9305bcc81ad57bced08cfb7e2fcdd9cf35f hardened-sources-2.6.14-r6.ebuild 792
-SHA256 a68d7d049f580a7d8f9a743ffff0c5685f9ee5f789a79c9d888c351295f7baf1 hardened-sources-2.6.14-r6.ebuild 792
 EBUILD hardened-sources-2.6.14-r7.ebuild 791 RMD160 e3d0930b9ee88ab19d391721634d4e133b7abc67 SHA1 65488b53281316b541c4dd2f575cdfe8a8b9ebaf SHA256 bb4e1e175f83414c0016fe275eed4263bceb124ced3b9ae0a685e418180efe21 size 791
 MD5 dcc5d8548b4add567903ed915b2e0a26 hardened-sources-2.6.14-r7.ebuild 791
 RMD160 e3d0930b9ee88ab19d391721634d4e133b7abc67 hardened-sources-2.6.14-r7.ebuild 791
 SHA256 bb4e1e175f83414c0016fe275eed4263bceb124ced3b9ae0a685e418180efe21 hardened-sources-2.6.14-r7.ebuild 791
-EBUILD hardened-sources-2.6.14-r8.ebuild 701 RMD160 5a4cbb596e07634d551af796e2f1adcc14d3bedf SHA1 fd7490eb6a13371dcae3b4bceed8009caf61d549 SHA256 ffdb8456da5d3b9bb0f452b5d7ee112afa4001d30404c90ae1c6e088824b76d7 size 701
-MD5 1cdc6df26b31f13da034a6ddcf5ea283 hardened-sources-2.6.14-r8.ebuild 701
-RMD160 5a4cbb596e07634d551af796e2f1adcc14d3bedf hardened-sources-2.6.14-r8.ebuild 701
-SHA256 ffdb8456da5d3b9bb0f452b5d7ee112afa4001d30404c90ae1c6e088824b76d7 hardened-sources-2.6.14-r8.ebuild 701
-EBUILD hardened-sources-2.6.16-r4.ebuild 700 RMD160 cf5e9d1fdd9e089ff20f72593dd4e4c1f0be4e60 SHA1 e7a79e628905824463ddf71fe7fa0d5e423cd122 SHA256 8869e126281d7805efe1f4b7954bc25f7d4199b10afb92521ebae7f17ce3bf48 size 700
-MD5 cff495138b107a34774706db9bc50d02 hardened-sources-2.6.16-r4.ebuild 700
-RMD160 cf5e9d1fdd9e089ff20f72593dd4e4c1f0be4e60 hardened-sources-2.6.16-r4.ebuild 700
-SHA256 8869e126281d7805efe1f4b7954bc25f7d4199b10afb92521ebae7f17ce3bf48 hardened-sources-2.6.16-r4.ebuild 700
-MISC ChangeLog 22340 RMD160 3e50ba6613a9c491ed83293303336acdf0c63145 SHA1 56f8386b5759c850829490aec9b8f58d07933a9a SHA256 cc91c5a20f238bd89261ed627cad52e30b5cfc6467160d3eeb5dfc076a162665 size 22340
-MD5 54f413758087c60f8d21c2d7ff56b72e ChangeLog 22340
-RMD160 3e50ba6613a9c491ed83293303336acdf0c63145 ChangeLog 22340
-SHA256 cc91c5a20f238bd89261ed627cad52e30b5cfc6467160d3eeb5dfc076a162665 ChangeLog 22340
+EBUILD hardened-sources-2.6.14-r8.ebuild 699 RMD160 f051e8cf8505367fc9066038d359de25a0d33a9f SHA1 f39b87bbc908a11be8c56dafbb2e5fce6135e81b SHA256 7f88328be8984ed2c5f2603b4faacbeda464a92a434b64183d64bb93cc1fd471 size 699
+MD5 f8de5a8cb55e1346393e8373b8a6d0e1 hardened-sources-2.6.14-r8.ebuild 699
+RMD160 f051e8cf8505367fc9066038d359de25a0d33a9f hardened-sources-2.6.14-r8.ebuild 699
+SHA256 7f88328be8984ed2c5f2603b4faacbeda464a92a434b64183d64bb93cc1fd471 hardened-sources-2.6.14-r8.ebuild 699
+EBUILD hardened-sources-2.6.16-r5.ebuild 700 RMD160 bc7923bbf8781110878a6bd44deb415447285229 SHA1 709960260c691c3a072b44666668d4654584b256 SHA256 985de69126d0d5c94845cee72827e0df822a769a922f899937edfdd14be9ef36 size 700
+MD5 b9dd78bb1b255fa966c64161a49c591e hardened-sources-2.6.16-r5.ebuild 700
+RMD160 bc7923bbf8781110878a6bd44deb415447285229 hardened-sources-2.6.16-r5.ebuild 700
+SHA256 985de69126d0d5c94845cee72827e0df822a769a922f899937edfdd14be9ef36 hardened-sources-2.6.16-r5.ebuild 700
+MISC ChangeLog 22688 RMD160 30ec0580c86e87b580b9144c423a548a88917895 SHA1 9cba2e8e30e6541042149b60fa3cae119600e288 SHA256 2681a96faeac8215749ffd09c3c46d23426cad827c9019c2c50769f167f4e3fe size 22688
+MD5 593007dddfab92be71a1aa1fa7d2f75a ChangeLog 22688
+RMD160 30ec0580c86e87b580b9144c423a548a88917895 ChangeLog 22688
+SHA256 2681a96faeac8215749ffd09c3c46d23426cad827c9019c2c50769f167f4e3fe ChangeLog 22688
 MISC metadata.xml 844 RMD160 a5acd7050c6d9b792fd658c81eb65d3fe2e42c06 SHA1 da5b67e503e3f008989c7cb3e9a5a82ba92d975a SHA256 dd1a85c0a10944dc2ad29ad2fccd6a938653f15cd240df19ea8efda51a1b19fc size 844
 MD5 e579a4949e6ca38c8142638e46c0fc3e metadata.xml 844
 RMD160 a5acd7050c6d9b792fd658c81eb65d3fe2e42c06 metadata.xml 844
@@ -48,15 +46,19 @@ SHA256 c023de65b65050e5e6ea11aa1479ae3fc53ffabc3a8b9164a79f137dd2c39e8f files/di
 MD5 65978af3c90114888c22a1b1cf1ee3ee files/digest-hardened-sources-2.4.32-r3 527
 RMD160 01ff91e8c35e99ca1f1f838e68f682152d9d0b3a files/digest-hardened-sources-2.4.32-r3 527
 SHA256 e7d01f42f6a112dd7f4939cd92709bdc29089dd7d98d11157cec13b7ed8a01bb files/digest-hardened-sources-2.4.32-r3 527
-MD5 2eb8823e7c451e8467d827ac6beba7ab files/digest-hardened-sources-2.6.14-r6 825
-RMD160 cea84be60cb6afe534d41c2144fb68cdd711c1a5 files/digest-hardened-sources-2.6.14-r6 825
-SHA256 2144214410355488695883d08ad1d1d31de0b69a495e274179c72cce8803e1bd files/digest-hardened-sources-2.6.14-r6 825
 MD5 0405c1f9b86239d43e015f871d27611c files/digest-hardened-sources-2.6.14-r7 828
 RMD160 760bc779f3e70401fbf29498d60c49ce2b77c687 files/digest-hardened-sources-2.6.14-r7 828
 SHA256 50f1c23e916e31fd34f9d6e2c017a6dc213f9a81dd9fb6d83d9d79e8f4fa1df8 files/digest-hardened-sources-2.6.14-r7 828
-MD5 3693d8eda0f09bb8550bc5e3d57b6233 files/digest-hardened-sources-2.6.14-r8 828
-RMD160 851e8e4f69b201506ea7bb5f77f790760846efb5 files/digest-hardened-sources-2.6.14-r8 828
-SHA256 e1ba16001378fd3e49968f485c04aa98b14351a6968b60f66dc782c52267de82 files/digest-hardened-sources-2.6.14-r8 828
-MD5 8b2a7ba7e3f7bcecacf38375de5cf07e files/digest-hardened-sources-2.6.16-r4 822
-RMD160 97b7b77aa1c4a81f829b4468361e2872213daab5 files/digest-hardened-sources-2.6.16-r4 822
-SHA256 4f7475b3b274dc3a0deeee0cd08f79352f0ac0f159ff11942733191a33a40334 files/digest-hardened-sources-2.6.16-r4 822
+MD5 e71772606788245deb08eaa0eff994f5 files/digest-hardened-sources-2.6.14-r8 828
+RMD160 f8a1ab2c1c1d57140ef5ab0f9cb390099480d94c files/digest-hardened-sources-2.6.14-r8 828
+SHA256 e840309c4c4f4253fc9bf9282821812fbff06ac558b8af6cabdaadb5595d28e8 files/digest-hardened-sources-2.6.14-r8 828
+MD5 f273bc9338b9745587d0211565801a5f files/digest-hardened-sources-2.6.16-r5 822
+RMD160 e455fb589196d1122dbd13ec1521fa6f8ecd44e3 files/digest-hardened-sources-2.6.16-r5 822
+SHA256 dcd65e02ffd5fea4801d41103beec762ac940eb6ef4dc6b2a363daa5ac855aa8 files/digest-hardened-sources-2.6.16-r5 822
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUOiNNzVYcyGvtWURAowBAKDGBiEKcjaGDW7opAAAfWnUHz8tjgCfQ91J
+XusHsD/Z0R6BUv9mqAErAPs=
+=P/mP
+-----END PGP SIGNATURE-----
