@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/open-xchange
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/ChangeLog,v 1.13 2006/04/01 03:24:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/ChangeLog,v 1.14 2006/04/27 23:31:11 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-open-xchange-0.8.0.6, files/digest-open-xchange-0.8.1.5,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   01 Apr 2006; Jeremy Huddleston <eradicator@gentoo.org>
   open-xchange-0.8.0.6.ebuild, open-xchange-0.8.1.5.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/online-bookmarks
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/online-bookmarks/ChangeLog,v 1.7 2006/03/26 16:39:22 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/online-bookmarks/ChangeLog,v 1.8 2006/04/27 23:30:47 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
 *online-bookmarks-0.6.6 (26 Mar 2006)
 
