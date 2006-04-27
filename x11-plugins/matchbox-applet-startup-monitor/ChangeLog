@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/matchbox-applet-startup-monitor
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-startup-monitor/ChangeLog,v 1.1 2006/03/13 00:26:46 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-startup-monitor/ChangeLog,v 1.2 2006/04/27 08:57:00 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
 *matchbox-applet-startup-monitor-0.1 (13 Mar 2006)
 

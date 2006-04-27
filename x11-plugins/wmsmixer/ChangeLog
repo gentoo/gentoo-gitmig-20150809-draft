@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmsmixer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/ChangeLog,v 1.19 2006/01/31 20:40:38 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/ChangeLog,v 1.20 2006/04/27 08:57:24 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-wmsmixer-0.5.1,
+  Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
   31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> -files/gcc3.diff,
   -wmsmixer-0.5.ebuild, wmsmixer-0.5.1.ebuild:

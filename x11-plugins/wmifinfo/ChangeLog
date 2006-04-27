@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmifinfo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/ChangeLog,v 1.15 2006/01/31 19:27:54 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/ChangeLog,v 1.16 2006/04/27 08:56:18 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-wmifinfo-0.09,
+  Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
   31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> -wmifinfo-0.08.ebuild,
   wmifinfo-0.09.ebuild:

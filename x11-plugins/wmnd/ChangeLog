@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmnd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.38 2006/02/08 18:58:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.39 2006/04/27 08:55:10 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-wmnd-0.4.11,
+  files/digest-wmnd-0.4.11-r1, Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
   08 Feb 2006; Simon Stelling <blubb@gentoo.org> wmnd-0.4.11-r1.ebuild:
   stable on amd64

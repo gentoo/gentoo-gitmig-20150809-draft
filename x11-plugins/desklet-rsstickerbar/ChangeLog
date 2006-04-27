@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-rsstickerbar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-rsstickerbar/ChangeLog,v 1.2 2006/03/24 23:09:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-rsstickerbar/ChangeLog,v 1.3 2006/04/27 08:57:52 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-desklet-rsstickerbar-0.12, Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
   24 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   desklet-rsstickerbar-0.12.ebuild:
