@@ -1,0 +1,36 @@
+#!/sbin/runscript
+
+opts="${opts} reload"
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting nsca"
+	start-stop-daemon --start --quiet --name nsca \
+	--startas /usr/nagios/bin/nsca \
+		-c nagios:nagios \
+		-- -c /etc/nagios/nsca.cfg \
+		--daemon
+	eend $? "Failed to Start nsca"
+}
+
+stop() {
+	ebegin "Stopping nsca"
+	start-stop-daemon --stop --quiet -n nsca
+	eend $? "Failed to Stop nsca"
+}
+
+reload() {
+        ebegin "Reloading nsca"
+        kill -HUP `pgrep nsca`
+        eend $? "Failed to reload nsca"
+}
+
+restart() {
+	ebegin "Restarting nsca"
+	svc_stop
+	svc_start
+	eend $? "Failed to Restart nsca"
+}
