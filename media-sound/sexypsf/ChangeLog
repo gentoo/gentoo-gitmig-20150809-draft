@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sexypsf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/ChangeLog,v 1.15 2006/02/18 23:42:52 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/ChangeLog,v 1.16 2006/04/27 23:35:00 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-sexypsf-0.4.5,
+  files/digest-sexypsf-0.4.6, files/digest-sexypsf-0.4.7, Manifest:
+  Fixing SHA256 digest, pass four
 
   19 Feb 2006; Harald van Dĳk <truedfx@gentoo.org>
   files/sexypsf-0.4.7-misc.patch, sexypsf-0.4.7.ebuild:

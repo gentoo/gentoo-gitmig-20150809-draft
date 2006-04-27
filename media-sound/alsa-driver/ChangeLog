@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.210 2006/04/22 16:59:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.211 2006/04/27 23:25:19 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-alsa-driver-1.0.10-r2, Manifest:
+  Fixing SHA256 digest, pass four
 
   22 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   alsa-driver-1.0.11.ebuild:

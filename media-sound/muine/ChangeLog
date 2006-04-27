@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/muine
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.30 2006/03/20 00:35:50 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.31 2006/04/27 23:32:10 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-muine-0.8.3,
+  files/digest-muine-0.8.3-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
   20 Mar 2006; Luis Medinas <metalgod@gentoo.org> muine-0.8.4.ebuild:
   Added ~amd64 keyword. Closes bug #83756.
