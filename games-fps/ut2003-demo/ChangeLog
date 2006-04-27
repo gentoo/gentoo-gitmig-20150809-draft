@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2003-demo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ChangeLog,v 1.21 2006/04/14 12:00:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ChangeLog,v 1.22 2006/04/27 19:59:38 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-ut2003-demo-2206-r3, Manifest:
+  Fixing SHA256 digest, pass four
 
   14 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2003-demo-2206-r3.ebuild:

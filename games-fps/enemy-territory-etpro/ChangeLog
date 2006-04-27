@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/enemy-territory-etpro
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-etpro/ChangeLog,v 1.6 2006/03/27 16:56:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-etpro/ChangeLog,v 1.7 2006/04/27 19:51:17 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-enemy-territory-etpro-3.0.1,
+  files/digest-enemy-territory-etpro-3.1.0,
+  files/digest-enemy-territory-etpro-3.2.0,
+  files/digest-enemy-territory-etpro-3.2.1,
+  files/digest-enemy-territory-etpro-3.2.4, Manifest:
+  Fixing SHA256 digest, pass four
 
 *enemy-territory-etpro-3.2.5 (27 Mar 2006)
 

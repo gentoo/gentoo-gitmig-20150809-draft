@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.50 2006/04/14 12:06:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.51 2006/04/27 20:00:28 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-ut2004-3369-r2, Manifest:
+  Fixing SHA256 digest, pass four
 
   14 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3369-r2.ebuild,
   ut2004-3369-r4.ebuild:
