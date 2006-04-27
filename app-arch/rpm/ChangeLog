@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.52 2006/03/03 20:01:52 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.53 2006/04/27 09:25:15 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-rpm-4.0.4-r5,
+  files/digest-rpm-4.2, files/digest-rpm-4.2.1, Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
 *rpm-4.2-r2 (03 Mar 2006)
 
