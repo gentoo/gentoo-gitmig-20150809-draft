@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-cinebars
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cinebars/ChangeLog,v 1.1 2006/04/27 14:27:03 zzam Exp $
+
+*vdr-cinebars-0.0.3a (27 Apr 2006)
+
+  27 Apr 2006; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +vdr-cinebars-0.0.3a.ebuild:
+  Initial import of ebuild written by me.
+
