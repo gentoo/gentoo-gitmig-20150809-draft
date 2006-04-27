@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.73 2006/04/24 11:04:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.74 2006/04/27 12:54:28 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-anthy-6700b,
+  files/digest-anthy-7100b-r1, Manifest:
+  Fixing SHA256 digest for real, pass three...
 
   24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/anthy-7500b-asneeded.patch, anthy-7500b.ebuild:
