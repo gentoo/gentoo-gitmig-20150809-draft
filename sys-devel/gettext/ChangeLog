@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.101 2006/04/13 20:07:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.102 2006/04/27 23:03:56 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-gettext-0.12.1-r2, files/digest-gettext-0.14.1-r1,
+  files/digest-gettext-0.14.2, files/digest-gettext-0.14.4, Manifest:
+  Fixing SHA256 digest, pass four
 
   13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> gettext-0.14.5.ebuild:
   Change dependency to virtual/libiconv.
