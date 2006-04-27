@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7-r1.ebuild,v 1.1 2006/04/27 02:05:55 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7-r1.ebuild,v 1.2 2006/04/27 05:48:26 steev Exp $
 
 inherit eutils linux-info debug
 
@@ -61,8 +61,8 @@ function notify_uevent_2_6_16() {
 pkg_setup() {
 	linux-info_pkg_setup
 
-	kernel_is ge 2 6 13 \
-		|| die "You need a 2.6.13 or newer kernel to run this package"
+	kernel_is ge 2 6 15 \
+		|| die "You need a 2.6.15 or newer kernel to run this package"
 
 	if kernel_is lt 2 6 16 ; then
 		linux_chkconfig_present KOBJECT_UEVENT \
