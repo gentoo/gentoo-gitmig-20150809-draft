@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/gnat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.46 2006/04/11 15:19:06 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.47 2006/04/27 15:33:39 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-gnat-3.14p,
+  files/digest-gnat-3.15p, files/digest-gnat-3.15p-r3,
+  files/digest-gnat-3.15p-r4, files/digest-gnat-3.15p-r5,
+  files/digest-gnat-3.41, files/digest-gnat-3.43, files/digest-gnat-3.44-r1,
+  files/digest-gnat-3.44-r2, files/digest-gnat-3.45, Manifest:
+  Fixing SHA256 digest, pass four
 
   11 Apr 2006; George Shapovalov <george@gentoo.org> gnat-3.41.ebuild,
   gnat-3.43.ebuild, gnat-3.44-r2.ebuild, gnat-3.45.ebuild:
