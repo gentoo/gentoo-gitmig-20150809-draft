@@ -1,0 +1,2 @@
+# Masking this since it requires nptl
+>=sys-libs/glibc-2.4
