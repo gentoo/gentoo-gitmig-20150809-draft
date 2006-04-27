@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/nagios-nrpe
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.26 2006/02/07 20:45:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.27 2006/04/27 01:11:39 ramereth Exp $
+
+*nagios-nrpe-2.5.1 (27 Apr 2006)
+
+  27 Apr 2006; Lance Albertson <ramereth@gentoo.org> +files/nrpe-2.5.1,
+  nagios-nrpe-2.3.ebuild, +nagios-nrpe-2.5.1.ebuild:
+  * Version bump
+  * Added reload to init script (2.5.1 added this feature)
+  * Stable on x86 (2.3)
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> nagios-nrpe-2.0-r1.ebuild:
   stable on amd64
