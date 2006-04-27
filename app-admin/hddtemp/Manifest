@@ -1,49 +1,48 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6c92e6c28ce9c3942a522df281cd275b ChangeLog 5985
-RMD160 b57108945e38b09bf62328e5652345245c47bb53 ChangeLog 5985
-SHA256 7abe83c1445b792460e2081a801344807c71c1d826163b65b08320c6fc0efcc8 ChangeLog 5985
-MD5 d2b4b7b99f1a5c3a26d093cea53e85a0 files/digest-hddtemp-0.3_beta13 71
-RMD160 82e9c831d65db525ec751844fe44610aee9920f1 files/digest-hddtemp-0.3_beta13 71
-SHA256 2f65a97de9d98bf6fe008b8cb11f3ffea2325c8d21a69a9425a66ed00bc8364d files/digest-hddtemp-0.3_beta13 71
-MD5 4784b9ba9acebc638325e817d252b9b1 files/digest-hddtemp-0.3_beta14 71
-RMD160 f212d96855c6872dacb9d13c212c8abc7a5d1f12 files/digest-hddtemp-0.3_beta14 71
-SHA256 05ea8d6f1cc33ff8621d35a68599f7610b746de096b788cfaaeaad659fc1a369 files/digest-hddtemp-0.3_beta14 71
-MD5 cf42b415acf1497fc0e0c7f9875a754f files/digest-hddtemp-0.3_beta14-r1 259
-RMD160 96616df4ca3ede71b58f9274ca9575023f602ae7 files/digest-hddtemp-0.3_beta14-r1 259
-SHA256 19c2949d994d20fb862af5857246e0ec440d4d219caf528f3d8e6bf4baebbe9c files/digest-hddtemp-0.3_beta14-r1 259
+AUX hddtemp-0.3_beta13-setsid.patch 370 RMD160 675fbd60d3a0b6dfdac14c94b852a6e587cb381e SHA1 ed4909b58930d9bd095cb0e2f451c72f0475d978 size 370
 MD5 91e4b7762278d6c80f97ce6039442e8d files/hddtemp-0.3_beta13-setsid.patch 370
 RMD160 675fbd60d3a0b6dfdac14c94b852a6e587cb381e files/hddtemp-0.3_beta13-setsid.patch 370
-SHA256 5bf094e13c797eac602cdb2199b17a750ae74d3094fc01762455f5f59614ee1a files/hddtemp-0.3_beta13-setsid.patch 370
+AUX hddtemp-0.3_beta14-sizeofdsk.patch 439 RMD160 94ec2352ab0cb64b6867573c9494c9f6ea61d9e3 SHA1 c2e3b1b91d8092e34e9c774e65f5e5eedc1fecac size 439
 MD5 da59873519c395bab8ec7f78ef4d2c4f files/hddtemp-0.3_beta14-sizeofdsk.patch 439
 RMD160 94ec2352ab0cb64b6867573c9494c9f6ea61d9e3 files/hddtemp-0.3_beta14-sizeofdsk.patch 439
-SHA256 df079a121aa5eda41e1b6d80a3bef6c196efb49b1176151836ce7c42ea43ff0c files/hddtemp-0.3_beta14-sizeofdsk.patch 439
+AUX hddtemp-conf.d 342 RMD160 6b7df8af12d4b43b977db976e24a8394fedf0989 SHA1 31e3346d4f34d3f6458a0de7041c013dfd1388fd size 342
 MD5 92bf0d7e78de1bafcedee9c9042df8b2 files/hddtemp-conf.d 342
 RMD160 6b7df8af12d4b43b977db976e24a8394fedf0989 files/hddtemp-conf.d 342
-SHA256 30821a64b9c4890839763f379a3ff3458008ca198295206ca24c909d5751b7f3 files/hddtemp-conf.d 342
+AUX hddtemp-init 538 RMD160 e8c68042e2612c7dadd621d71d4b929fc63aed3b SHA1 00ab0f8abd0b8094dcbbcf17543a2360b70f3b43 size 538
 MD5 52e2d71a98fe1eabc27e90f889796a6a files/hddtemp-init 538
 RMD160 e8c68042e2612c7dadd621d71d4b929fc63aed3b files/hddtemp-init 538
-SHA256 4584b703bc7961ce328f38e60f3fd4a0c3ab9af0fae78051ba5b2f1fd3e7eba5 files/hddtemp-init 538
+AUX hddtemp.db 11325 RMD160 2b715df9e5b5d22a3b9bb7eacb5c7091ad7643de SHA1 5ae24ca459ab04957a084d20ae7a2b713d95a703 size 11325
 MD5 f816512c3feee3cc9a92a9a8d27e9cff files/hddtemp.db 11325
 RMD160 2b715df9e5b5d22a3b9bb7eacb5c7091ad7643de files/hddtemp.db 11325
-SHA256 19b1563b2f5680eb85e2ca1b815e2c112f55bb079a80372e7ef1d5a289ddbd76 files/hddtemp.db 11325
+DIST hddtemp-0.3-beta13.tar.bz2 234021 RMD160 5302d82f4bc15acdf2f4fd22e3157438f45a7594 size 234021
+DIST hddtemp-0.3-beta14.tar.bz2 233279 RMD160 799338a77fb71c4aa2c4cb0ed8b0613dc0022f52 size 233279
+EBUILD hddtemp-0.3_beta13.ebuild 1276 RMD160 55968d7a3d39dbd7dcd02defb182f192a3d629d3 SHA1 6d35a2e67ebe41f471283f33f19b1c44a307b202 size 1276
 MD5 18f827ae137a300c155ee91af047824d hddtemp-0.3_beta13.ebuild 1276
 RMD160 55968d7a3d39dbd7dcd02defb182f192a3d629d3 hddtemp-0.3_beta13.ebuild 1276
-SHA256 9ff2ce6073a2239a2f615c24243750d187c83e901ad9292b72e5650d0f306472 hddtemp-0.3_beta13.ebuild 1276
+EBUILD hddtemp-0.3_beta14-r1.ebuild 1377 RMD160 345e711da2504b4f3aeded49435e7c11ca941870 SHA1 aaac24de97b70b917e4255c9552227175826a543 size 1377
 MD5 d006a8b7b90a9cb8cde08e8ca4955124 hddtemp-0.3_beta14-r1.ebuild 1377
 RMD160 345e711da2504b4f3aeded49435e7c11ca941870 hddtemp-0.3_beta14-r1.ebuild 1377
-SHA256 6b064da72daa786c727ba706c533d3020396bb0d4caf92c8e45a57fa00409a4d hddtemp-0.3_beta14-r1.ebuild 1377
+EBUILD hddtemp-0.3_beta14.ebuild 1213 RMD160 702736dc74bb1988bf0c92880c954471bfe1633b SHA1 a886759204d20ba864286d1e3701181097b66df5 size 1213
 MD5 9b53ba9cc450e52ffb3892d0ffbe0c79 hddtemp-0.3_beta14.ebuild 1213
 RMD160 702736dc74bb1988bf0c92880c954471bfe1633b hddtemp-0.3_beta14.ebuild 1213
-SHA256 312a1d64ad61d7a26aa0d39a3c7380d344b16b2f04995809cfa1548990a67b09 hddtemp-0.3_beta14.ebuild 1213
+MISC ChangeLog 6187 RMD160 b7028d91d6bb97e9304cb56c86635208fefb29fe SHA1 b303519c22f0154e75ba565ba342548919777ec2 size 6187
+MD5 2e66fb93a6361a176fd5707ec0300d9c ChangeLog 6187
+RMD160 b7028d91d6bb97e9304cb56c86635208fefb29fe ChangeLog 6187
+MISC metadata.xml 279 RMD160 87ca24a7656673e3f1e64494e65b003a2fe4c81b SHA1 e6353c4e2567ae1d0016f002947f36cab09ff472 size 279
 MD5 f4ab9ac53bbb2f84627638ddc89811c9 metadata.xml 279
 RMD160 87ca24a7656673e3f1e64494e65b003a2fe4c81b metadata.xml 279
-SHA256 81f24329046548a2654d8083a3d2e9e6bf6c017ad86b1bb9f5e6bf7ab41baa7a metadata.xml 279
+MD5 d708b6eb2bc24520b4cb75cac8e82047 files/digest-hddtemp-0.3_beta13 153
+RMD160 0f7568e4fd9c77b2c7e02d94c0f1e85ec1802a19 files/digest-hddtemp-0.3_beta13 153
+MD5 12fc282ac1680207add87b83d8291119 files/digest-hddtemp-0.3_beta14 153
+RMD160 95e20c0efa4420a70360b7eb424fa6e5e6a765ac files/digest-hddtemp-0.3_beta14 153
+MD5 12fc282ac1680207add87b83d8291119 files/digest-hddtemp-0.3_beta14-r1 153
+RMD160 95e20c0efa4420a70360b7eb424fa6e5e6a765ac files/digest-hddtemp-0.3_beta14-r1 153
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEOR21chej4aZK9/cRAujAAJ0bD5Ja/HUQuXeeuTM1ZlB/d0gf+gCfUlD1
-KitgUKHb7hJi6bK29fHyTbI=
-=MuKj
+iD8DBQFEUKzYW78445TWHXcRAkhnAJ98bDnm/BXhvx7Es0m4rttomZHKmQCfdJGB
+/kIsfFjyC5P14UxB6t2WG1I=
+=7uvj
 -----END PGP SIGNATURE-----
