@@ -6,7 +6,7 @@ DIST genpatches-2.6.14-14.base.tar.bz2 253557 RMD160 6ab75db1397ceaa7c332b7cc757
 DIST genpatches-2.6.16-6.base.tar.bz2 54974 RMD160 df94430a8f6336bfdcaecaa2ca301215494ba55d SHA256 6c0433b72e6ee7dc3fb36e5052b77b295802c71a75c2e46e6d486f6ac4681b5a size 54974
 DIST hardened-patches-2.4-32.2.tar.bz2 747599 RMD160 a9d0970cc4a7094521cff33d5fa65500f4134f5a SHA256 357fb300348c6ec701bedd683e1d25cd4772af73c09695d5c68dde35b2dc39e2 size 747599
 DIST hardened-patches-2.4-32.3.tar.bz2 764191 RMD160 d954366e00df97d7bc7c6950e676da9113331922 SHA256 5857bdfbed967de627b2a2d0513a2013cd26edce51128af7fc231ab3d37ee84e size 764191
-DIST hardened-patches-2.6.14-5.extras.tar.bz2 160671 RMD160 c26e2bec37b01eed6a449eff599d5b5728a879a5 SHA256 70b43232ac0d278af3064ae9dc5bb230f447bbe34110d4096b7b8c34bd1e7398 size 160671
+DIST hardened-patches-2.6.14-5.extras.tar.bz2 168053 RMD160 6a4e3b27a009c6cdea8994be85572638618d3344 SHA256 cdcb5955367d90b50ce4062fcd29a713f39d4acd881733f6e5129c59efe204e9 size 168053
 DIST hardened-patches-2.6.14-6.extras.tar.bz2 160772 RMD160 16860d59406aa9adb8622c567df874429a999366 SHA256 00b80b878cdddf2681202fda4d8dc8178d3938cdfb08e2f2b28ba9a0daa7f888 size 160772
 DIST hardened-patches-2.6.16-5.extras.tar.bz2 161024 RMD160 8177f5b2dee37ea9b340af37a2bc20d5dc249969 SHA256 0d0c88add68e77465fca50d9a044172bec8ef446198343a49d7a12e32639a9ee size 161024
 DIST linux-2.4.32.tar.bz2 31132159 RMD160 63ab1a0b18e690170f60de9da7392416311dc609 SHA256 7dace89c3f0850c3d5c32c38c20b600259c314e8cbec29fe3ee59c2fbbee1759 size 31132159
@@ -49,16 +49,16 @@ SHA256 e7d01f42f6a112dd7f4939cd92709bdc29089dd7d98d11157cec13b7ed8a01bb files/di
 MD5 0405c1f9b86239d43e015f871d27611c files/digest-hardened-sources-2.6.14-r7 828
 RMD160 760bc779f3e70401fbf29498d60c49ce2b77c687 files/digest-hardened-sources-2.6.14-r7 828
 SHA256 50f1c23e916e31fd34f9d6e2c017a6dc213f9a81dd9fb6d83d9d79e8f4fa1df8 files/digest-hardened-sources-2.6.14-r7 828
-MD5 e71772606788245deb08eaa0eff994f5 files/digest-hardened-sources-2.6.14-r8 828
-RMD160 f8a1ab2c1c1d57140ef5ab0f9cb390099480d94c files/digest-hardened-sources-2.6.14-r8 828
-SHA256 e840309c4c4f4253fc9bf9282821812fbff06ac558b8af6cabdaadb5595d28e8 files/digest-hardened-sources-2.6.14-r8 828
+MD5 3693d8eda0f09bb8550bc5e3d57b6233 files/digest-hardened-sources-2.6.14-r8 828
+RMD160 851e8e4f69b201506ea7bb5f77f790760846efb5 files/digest-hardened-sources-2.6.14-r8 828
+SHA256 e1ba16001378fd3e49968f485c04aa98b14351a6968b60f66dc782c52267de82 files/digest-hardened-sources-2.6.14-r8 828
 MD5 f273bc9338b9745587d0211565801a5f files/digest-hardened-sources-2.6.16-r5 822
 RMD160 e455fb589196d1122dbd13ec1521fa6f8ecd44e3 files/digest-hardened-sources-2.6.16-r5 822
 SHA256 dcd65e02ffd5fea4801d41103beec762ac940eb6ef4dc6b2a363daa5ac855aa8 files/digest-hardened-sources-2.6.16-r5 822
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEUOiNNzVYcyGvtWURAowBAKDGBiEKcjaGDW7opAAAfWnUHz8tjgCfQ91J
-XusHsD/Z0R6BUv9mqAErAPs=
-=P/mP
+iD8DBQFEUTNTNzVYcyGvtWURAhdZAKDWtWIaTTTg3XTfTWBvO3lcY+zh0wCfeFMz
+aKdlUfldAg7r3k16Mdo3l1E=
+=aI9L
 -----END PGP SIGNATURE-----
