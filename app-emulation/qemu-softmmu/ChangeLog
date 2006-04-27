@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu-softmmu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.16 2006/04/27 11:57:58 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.17 2006/04/27 12:32:56 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-qemu-softmmu-0.7.0-r1, files/digest-qemu-softmmu-0.7.1,
+  files/digest-qemu-softmmu-0.7.1-r1, files/digest-qemu-softmmu-0.7.2,
+  files/digest-qemu-softmmu-0.8.0, files/digest-qemu-softmmu-0.8.0.20060329,
+  Manifest:
+  Fixing SHA256 digest for real, pass three...
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-qemu-softmmu-0.7.0-r1, files/digest-qemu-softmmu-0.7.1,
