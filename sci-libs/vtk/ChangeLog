@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.16 2006/04/21 02:18:26 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.17 2006/04/27 22:29:18 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   21 Apr 2006; Markus Dittrich <markusle@gentoo.org> vtk-5.0.0.ebuild:
   Depend on cmake-2.2.x to be able to properly compile against QT4.

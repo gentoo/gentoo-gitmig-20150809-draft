@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.31 2006/04/11 04:58:06 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.32 2006/04/27 22:27:57 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-fftw-2.1.5-r1,
+  files/digest-fftw-3.0.1-r1, files/digest-fftw-3.0.1-r2, Manifest:
+  Fixing SHA256 digest, pass four
 
   11 Apr 2006; Markus Dittrich <markusle@gentoo.org>
   +files/fftw-altivec-headers.patch, fftw-3.1.1.ebuild:
