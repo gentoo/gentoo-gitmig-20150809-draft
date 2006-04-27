@@ -1,6 +1,15 @@
 # ChangeLog for sys-auth/pam_smb
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/ChangeLog,v 1.1 2005/07/02 14:17:41 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/ChangeLog,v 1.2 2006/04/27 11:33:46 satya Exp $
+
+*pam_smb-2.0.0_rc6-r1 (27 Apr 2006)
+*pam_smb-2.0.0_rc5-r1 (27 Apr 2006)
+*pam_smb-1.9.9-r2 (27 Apr 2006)
+
+  27 Apr 2006; Christian Andreetta <satya@gentoo.org>
+  +files/10-pam_smb-bash-3.1.patch, +pam_smb-1.9.9-r2.ebuild,
+  +pam_smb-2.0.0_rc5-r1.ebuild, +pam_smb-2.0.0_rc6-r1.ebuild:
+  bash>=3.1 compatibility (thanks to Beech Horn: bug #126539)
 
   02 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> +files/pamsmbd-init,
   +metadata.xml, +pam_smb-1.9.9-r1.ebuild, +pam_smb-2.0.0_rc5.ebuild,
