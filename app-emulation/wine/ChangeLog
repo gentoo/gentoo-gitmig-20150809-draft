@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.139 2006/04/14 23:43:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.140 2006/04/27 12:52:35 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-wine-0.9,
+  files/digest-wine-0.9.1, files/digest-wine-0.9.2, files/digest-wine-0.9.3,
+  files/digest-wine-0.9.4, files/digest-wine-0.9.5-r1,
+  files/digest-wine-0.9.6, files/digest-wine-9999,
+  files/digest-wine-20041019-r3, files/digest-wine-20050111-r2,
+  files/digest-wine-20050211, files/digest-wine-20050310-r1,
+  files/digest-wine-20050419, files/digest-wine-20050524,
+  files/digest-wine-20050628, files/digest-wine-20050725-r1,
+  files/digest-wine-20050830, files/digest-wine-20050930, Manifest:
+  Fixing SHA256 digest for real, pass three...
 
 *wine-0.9.12 (14 Apr 2006)
 
