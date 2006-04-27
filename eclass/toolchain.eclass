@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.275 2006/04/25 00:26:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.276 2006/04/27 00:12:04 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -979,6 +979,10 @@ gcc_src_unpack() {
 
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
+	# enable protoize / unprotoize
+	sed -i -e '/^COMPILERS =/s:$: protoize$(exeext) unprotoize$(exeext):' \
+		"${S}"/gcc/Makefile.in
+
 	fix_files=""
 	for x in contrib/test_summary libstdc++-v3/scripts/check_survey.in ; do
 		[[ -e ${x} ]] && fix_files="${fix_files} ${x}"
@@ -1334,18 +1338,6 @@ gcc_do_make() {
 		BOOT_CFLAGS="${BOOT_CFLAGS}" \
 		${GCC_MAKE_TARGET} \
 		|| die "emake failed with ${GCC_MAKE_TARGET}"
-
-	if [[ ${CTARGET} != *-freebsd* ]]; then
-		einfo "Running make LDFLAGS=\"${LDFLAGS}\" STAGE1_CFLAGS=\"${STAGE1_CFLAGS}\" LIBPATH=\"${LIBPATH}\" BOOT_CFLAGS=\"${BOOT_CFLAGS}\" proto"
-		# Build protoize
-		emake -C gcc \
-			LDFLAGS="${LDFLAGS}" \
-			STAGE1_CFLAGS="${STAGE1_CFLAGS}" \
-			LIBPATH="${LIBPATH}" \
-			BOOT_CFLAGS="${BOOT_CFLAGS}" \
-			proto \
-			|| die "emake failed with proto"
-	fi
 
 	if ! use build && ! is_crosscompile && ! use nocxx && use doc ; then
 		if type -p doxygen > /dev/null ; then
