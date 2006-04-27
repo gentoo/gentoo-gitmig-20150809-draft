@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-timeline
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-timeline/ChangeLog,v 1.4 2006/04/17 13:27:55 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-timeline/ChangeLog,v 1.5 2006/04/27 23:23:34 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   17 Apr 2006; Matthias Schwarzott <zzam@gentoo.org>
   vdr-timeline-0.9.0-r2.ebuild:
