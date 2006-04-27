@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.1 2006/04/25 14:32:04 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.2 2006/04/27 15:38:59 markusle Exp $
 
-inherit eutils fortran toolchain-funcs multilib
+inherit eutils fortran toolchain-funcs multilib autotools
 
 DESCRIPTION="Scientific software package for numerical computations (Matlab lookalike)"
 LICENSE="scilab"
@@ -39,6 +39,8 @@ pkg_setup() {
 		eerror 'scilab must be built with either USE="gtk" or USE="tcltk"'
 		die
 	fi
+
+	need_fortran gfortran g77
 }
 
 src_unpack() {
@@ -46,6 +48,12 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-makefile.patch
+
+	# fix gfortran problems on ppc
+	if [[ "${ARCH}" == "ppc" ]];then
+		epatch "${FILESDIR}"/${PN}-ppc-gcc4.patch
+		eautoconf || die "autoconf failed"
+	fi
 
 	sed -e '/^ATLAS_LAPACKBLAS\>/s,=.*,= $(ATLASDIR)/liblapack.so $(ATLASDIR)/libblas.so $(ATLASDIR)/libcblas.so,' \
 		-e 's,$(SCIDIR)/libs/lapack.a,,' \
@@ -63,6 +71,10 @@ src_unpack() {
 src_compile() {
 	local myopts
 	myopts="${myopts} --with-atlas-library=/usr/$(get_libdir)"
+
+	if [[ ${FORTRANC} == gfortran ]]; then
+		myopts="${myopts} --with-gfortran"
+	fi
 
 	econf $(use_with tcltk tk) \
 		$(use_with Xaw3d xaw3d) \

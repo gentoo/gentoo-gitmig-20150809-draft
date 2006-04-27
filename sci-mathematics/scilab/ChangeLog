@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/scilab
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.20 2006/04/25 16:52:44 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.21 2006/04/27 15:38:59 markusle Exp $
+
+  27 Apr 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/scilab-ppc-gcc4.patch, scilab-4.0.ebuild:
+  Added patch to fix gcc-4.x configure/compile problems on ppc. 
+  Thanks much to Francois Bissey <f.r.bissey@massey.ac.nz> for his 
+  help in debugging this (see bug #117490).
 
 *scilab-4.0 (25 Apr 2006)
 
