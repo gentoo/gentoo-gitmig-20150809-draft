@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/wvdial
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.38 2006/04/24 02:39:32 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.39 2006/04/27 21:40:40 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-wvdial-1.54.0-r1, files/digest-wvdial-1.56, Manifest:
+  Fixing SHA256 digest, pass four
 
   24 Apr 2006; Luis Medinas <metalgod@gentoo.org> wvdial-1.56.ebuild:
   Stable on amd64.
