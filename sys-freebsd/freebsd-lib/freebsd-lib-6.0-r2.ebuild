@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.0-r2.ebuild,v 1.3 2006/04/25 19:55:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.0-r2.ebuild,v 1.4 2006/04/27 16:22:13 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -101,7 +101,7 @@ src_unpack() {
 	if [[ ${CTARGET} == ${CHOST} ]]; then
 		ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
 	else
-		sed -i -e 's:/usr/include:/usr/'${CTARGET}'/include:g' \
+		sed -i -e 's:/usr/include:/usr/'${CTARGET}'/usr/include:g' \
 			"${S}/libc/"{yp,rpc}"/Makefile.inc"
 	fi
 
@@ -131,7 +131,7 @@ src_compile() {
 		cd "${csudir}"
 		$(freebsd_get_bmake) ${mymakeopts} || die "make csu failed"
 
-		append-flags "-isystem /usr/${CTARGET}/include"
+		append-flags "-isystem /usr/${CTARGET}/usr/include"
 		append-flags "-B ${csudir}"
 		append-ldflags "-B ${csudir}"
 		cd "${S}/libc"
@@ -151,7 +151,7 @@ src_install() {
 
 	[[ ${CTARGET} == ${CHOST} ]] \
 		&& INCLUDEDIR="/usr/include" \
-		|| INCLUDEDIR="/usr/${CTARGET}/include"
+		|| INCLUDEDIR="/usr/${CTARGET}/usr/include"
 
 	einfo "Installing for ${CTARGET} in ${CHOST}.."
 
@@ -162,7 +162,7 @@ src_install() {
 
 	# Install math.h when crosscompiling, at this point
 	if [[ ${CHOST} != ${CTARGET} ]]; then
-		insinto "/usr/${CTARGET}/include"
+		insinto "/usr/${CTARGET}/usr/include"
 		doins "${S}/msun/src/math.h"
 	fi
 
@@ -177,16 +177,18 @@ src_install() {
 		fi
 		cd "${csudir}"
 		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install \
-			FILESDIR="/usr/${CTARGET}/lib" || die "Install csu failed"
+			FILESDIR="/usr/${CTARGET}/usr/lib" || die "Install csu failed"
 
 		cd "${S}/libc"
 		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
-			SHLIBDIR="/usr/${CTARGET}/lib" LIBDIR="/usr/${CTARGET}/lib" || die "Install failed"
+			SHLIBDIR="/usr/${CTARGET}/lib" LIBDIR="/usr/${CTARGET}/usr/lib" || die "Install failed"
 
 		cd "${S}/msun"
 		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
-			INCLUDEDIR="/usr/${CTARGET}/include" \
-			SHLIBDIR="/usr/${CTARGET}/lib" LIBDIR="/usr/${CTARGET}/lib" || die "Install failed"
+			INCLUDEDIR="/usr/${CTARGET}/usr/include" \
+			SHLIBDIR="/usr/${CTARGET}/lib" LIBDIR="/usr/${CTARGET}/usr/lib" || die "Install failed"
+
+		dosym "usr/include" "/usr/${CTARGET}/sys-include"
 	else
 		cd "${S}"
 		mkinstall || die "Install failed"
