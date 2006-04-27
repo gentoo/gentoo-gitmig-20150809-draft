@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c2c135121eed29eb56aaa20b0ef4ae4b ChangeLog 1751
-RMD160 bc8b8865d288018543423861d9cb731caea06e59 ChangeLog 1751
-SHA256 6c88219d31a4891ec7c9e27bb2c3f2f1108763f97cbee4f1e99c2f96683a008e ChangeLog 1751
+AUX 1.1-allow_manpages_only.patch 957 RMD160 57be7a6f8c6e2680d3beba76279501c88b12db40 SHA1 1ea1e9d0873d952f26ea96e799d524f22cb14ff3 size 957
 MD5 37dab4b290e3447948e91778dd8dc0ea files/1.1-allow_manpages_only.patch 957
 RMD160 57be7a6f8c6e2680d3beba76279501c88b12db40 files/1.1-allow_manpages_only.patch 957
-SHA256 7f6f59c15acd9b6bdc17e208a2e2d936fb4b661bba55829f0978bb0a00299a2f files/1.1-allow_manpages_only.patch 957
-MD5 f0403ff07dfc8c35fe90dc89b40c5b9b files/digest-xorg-docs-1.1 247
-RMD160 612da28f8e2e793cb7bb45dd17c93d7c51fd5c16 files/digest-xorg-docs-1.1 247
-SHA256 9ecc7c331d7676da67ee78fcd0ef02afd5990cff6cef99e36e8b30f47672c50f files/digest-xorg-docs-1.1 247
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
-SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
+DIST xorg-docs-1.1.tar.bz2 8332433 RMD160 dc8f4aa9dbae738534a68ffe5ab826616c7cc44a size 8332433
+EBUILD xorg-docs-1.1.ebuild 573 RMD160 e1d59676ac8f712bf285bc17fa48d74005838015 SHA1 75463fe6d15a89400fb30638b4f9c5dbc951b2c4 size 573
 MD5 ea36faefbec046bae732bd88690fbb2b xorg-docs-1.1.ebuild 573
 RMD160 e1d59676ac8f712bf285bc17fa48d74005838015 xorg-docs-1.1.ebuild 573
-SHA256 988a30eacfefee44c5256ce620e026508945ee213d73ef8b90aa3ec59d397263 xorg-docs-1.1.ebuild 573
+MISC ChangeLog 1873 RMD160 233ce5858c6eb638abff0fac937c73dde46e3b25 SHA1 c148f41f683b5a4ff424942bdf3a06c94e26d6c5 size 1873
+MD5 63d7f703fa80c49776d42630d6212d2b ChangeLog 1873
+RMD160 233ce5858c6eb638abff0fac937c73dde46e3b25 ChangeLog 1873
+MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 size 156
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
+MD5 02bc0d5910d39a1895fadaf32c790bd9 files/digest-xorg-docs-1.1 145
+RMD160 880882adb8d522b1a3c60dad3bcdbef7fb4fd890 files/digest-xorg-docs-1.1 145
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEPlIlAiZjviIA2XgRAvBwAJ0X8oGO/c5ot2EvRH09wTf8BI+0HACg20JP
-peZ9YY0J728Dv2Y5nyUTIjA=
-=Wawp
+iD8DBQFEULBaW78445TWHXcRAlVpAJ0VlKD5fMXeIm/Qr4CH1gHy2hnm9wCaA86w
+EmMkxGFe3ZXocIPAxdjt0Kk=
+=JvKx
 -----END PGP SIGNATURE-----
