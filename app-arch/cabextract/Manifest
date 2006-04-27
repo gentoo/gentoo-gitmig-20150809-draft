@@ -1,46 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c4f8dc0f7fe72c7602502de7ac9dc479 ChangeLog 4399
-RMD160 a0b4a48d8bcd85cea2de4d9b075389d474d355bc ChangeLog 4399
-SHA256 1a208afd3874544d431910860d71e094bb5a265a7be015c4c4ff45498a6aa125 ChangeLog 4399
-MD5 9162e4c32c2c33fbd26696da1f83d559 cabextract-0.5.ebuild 581
-RMD160 603495659042fafe1426bf275ee394ca49048b6d cabextract-0.5.ebuild 581
-SHA256 4cc1567dd66c8c9f89f196835f002e1e894f96aa1f729c7e3f0f356a55ed0b96 cabextract-0.5.ebuild 581
-MD5 b197eacfa2bb10ff8a9ba1b188e7620f cabextract-0.6.ebuild 612
-RMD160 b791a85c7ef15c25d21c50e14aaf551a33641040 cabextract-0.6.ebuild 612
-SHA256 605d5afe24f7a98e5d984d06c5033873df91f00bd338e7a2c5d831f24a6e7289 cabextract-0.6.ebuild 612
-MD5 3e8db1c702369c3bc4aaae2a25073da6 cabextract-1.0.ebuild 631
-RMD160 827283ce3a4579058f333a0b49472903574d509d cabextract-1.0.ebuild 631
-SHA256 15efc199efcc436c80e2b4afa5ed7bbe4c3290844f8ea6c668118dca5b3421bc cabextract-1.0.ebuild 631
-MD5 c35e9f9cbac3b33050a98e7e64d299de cabextract-1.1.ebuild 772
-RMD160 f92e1582c82a4095f7e4b6732e426a3d139dd5c5 cabextract-1.1.ebuild 772
-SHA256 9b9a70f0217d37cba197ec4ff006f3cced37fb02f7b1a39549feaea2bab674be cabextract-1.1.ebuild 772
+AUX cabextract-1.1-mempcpy.patch 488 RMD160 03b773b05e67a38fd614f8c65febb63bc474a8cf SHA1 e9449a329103f079a9f087b1b7fe00523a39922a size 488
 MD5 2a7ad16381faaa76215b79690d44a3ef files/cabextract-1.1-mempcpy.patch 488
 RMD160 03b773b05e67a38fd614f8c65febb63bc474a8cf files/cabextract-1.1-mempcpy.patch 488
-SHA256 ee2bee766e0dedc5fd1a1358232473624df641a297db5b8e45815417c3153ebc files/cabextract-1.1-mempcpy.patch 488
+AUX cabextract-configure.patch 3347 RMD160 9403b974afd64ecee1341de8887ea7d99376bb47 SHA1 458de9878577c340e38b24c99800e000d6328629 size 3347
 MD5 4fceab6e40a8e4d30a780e2280818bf1 files/cabextract-configure.patch 3347
 RMD160 9403b974afd64ecee1341de8887ea7d99376bb47 files/cabextract-configure.patch 3347
-SHA256 7fe76c6d90fabc5d89ec2457040c5face35d2388fdc235042f064ab85cd6b930 files/cabextract-configure.patch 3347
-MD5 020a5204ebe2ce972472096f8f40748e files/digest-cabextract-0.5 65
-RMD160 ff13679c0001da206f723e70c6c1d553026d0e0a files/digest-cabextract-0.5 65
-SHA256 b54641c6844c5859ce390e1522024e3f61fb81713c12c5e510de4e1b4745a615 files/digest-cabextract-0.5 65
-MD5 431bb1a17fb1d3e563e496974053738e files/digest-cabextract-0.6 65
-RMD160 edce6d319f69c18d00f5964544ead9b39bc75996 files/digest-cabextract-0.6 65
-SHA256 0d737c5cee5fff9d20d545932fe83a8e6ec6bbbd94632e906082c02729eccef1 files/digest-cabextract-0.6 65
-MD5 e946dad6f9bd58cc6df05b8c58d279bb files/digest-cabextract-1.0 66
-RMD160 ea0a1daabe79f274ce5ea46fe54defd3244f851e files/digest-cabextract-1.0 66
-SHA256 d05089fc44ed1837f5d1938d08cc9d101333891e705748ed6dd5b82362af256b files/digest-cabextract-1.0 66
-MD5 a71d568bc3da500b98a9996bed7d216a files/digest-cabextract-1.1 66
-RMD160 70981712fbe22b975cb70bc3b6916a60b5f40079 files/digest-cabextract-1.1 66
-SHA256 cc1fed357c62d8cf17b0b288415591a7e0bd6b4ea37d1dd48b133fd5a32811f2 files/digest-cabextract-1.1 66
+DIST cabextract-0.5.tar.gz 76097 RMD160 a7da85774d484544fff8959b4630f56b3ed12409 size 76097
+DIST cabextract-0.6.tar.gz 92469 RMD160 bdb7c67baac41b558860a5581af68d582db1eca6 size 92469
+DIST cabextract-1.0.tar.gz 189625 RMD160 a849726391d09e942e3734d5af5955925a6fc97a size 189625
+DIST cabextract-1.1.tar.gz 187495 RMD160 f895a466d03c59cd4e99c217f8e9f409bf1b0bfc size 187495
+EBUILD cabextract-0.5.ebuild 581 RMD160 603495659042fafe1426bf275ee394ca49048b6d SHA1 646fb9fa2b58df9d5ae976af6859655991b1eadb size 581
+MD5 9162e4c32c2c33fbd26696da1f83d559 cabextract-0.5.ebuild 581
+RMD160 603495659042fafe1426bf275ee394ca49048b6d cabextract-0.5.ebuild 581
+EBUILD cabextract-0.6.ebuild 612 RMD160 b791a85c7ef15c25d21c50e14aaf551a33641040 SHA1 cab904c9fed558c22986e598c0aa45d157091dc7 size 612
+MD5 b197eacfa2bb10ff8a9ba1b188e7620f cabextract-0.6.ebuild 612
+RMD160 b791a85c7ef15c25d21c50e14aaf551a33641040 cabextract-0.6.ebuild 612
+EBUILD cabextract-1.0.ebuild 631 RMD160 827283ce3a4579058f333a0b49472903574d509d SHA1 3f3d64a348645d6b1eb47a428519937afd93e9f4 size 631
+MD5 3e8db1c702369c3bc4aaae2a25073da6 cabextract-1.0.ebuild 631
+RMD160 827283ce3a4579058f333a0b49472903574d509d cabextract-1.0.ebuild 631
+EBUILD cabextract-1.1.ebuild 772 RMD160 f92e1582c82a4095f7e4b6732e426a3d139dd5c5 SHA1 33327c01dc3537d2bcc55b2612a1d15b11018e19 size 772
+MD5 c35e9f9cbac3b33050a98e7e64d299de cabextract-1.1.ebuild 772
+RMD160 f92e1582c82a4095f7e4b6732e426a3d139dd5c5 cabextract-1.1.ebuild 772
+MISC ChangeLog 4611 RMD160 0fa103ffe16f6f1ba7e8c02480886f914c9f5e95 SHA1 e62ccbf700cd6127739672c8dfc7e706a5d8160c size 4611
+MD5 97a66403a7ca6acc295e40d7a623747f ChangeLog 4611
+RMD160 0fa103ffe16f6f1ba7e8c02480886f914c9f5e95 ChangeLog 4611
+MISC metadata.xml 158 RMD160 e563fdca0707ee5927deab77f2e5ef79816384ca SHA1 8e4ca6d183e52cdbea8cfba08b7a7910e648fc84 size 158
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 RMD160 e563fdca0707ee5927deab77f2e5ef79816384ca metadata.xml 158
-SHA256 9a8722fb0b5a1992b3942e85f23df4e08f10cabc2d783ca887479abe115b3ea8 metadata.xml 158
+MD5 1928674b6103d2fb286689ebae334a6f files/digest-cabextract-0.5 141
+RMD160 8afd6cf5189376667ddb80c66788b2e01872adc2 files/digest-cabextract-0.5 141
+MD5 f62aa0d17216b100251ce8ed5b0961be files/digest-cabextract-0.6 141
+RMD160 4d0a03618a9cc9daac4e0a43adf492659e15e512 files/digest-cabextract-0.6 141
+MD5 66ae8134e0bf276d36e803a317fd551e files/digest-cabextract-1.0 143
+RMD160 bd1a8be472340424d43fc439cbe0b58c9227e817 files/digest-cabextract-1.0 143
+MD5 80b45c06a2f48f298edc05f0c0f8361d files/digest-cabextract-1.1 143
+RMD160 ee514bd6e7cb73b1cefc0eb0f2109695c7255eda files/digest-cabextract-1.1 143
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFERUd1AiZjviIA2XgRArq8AKDtGnRu0DJC3n21sHd1lUHB0woeWwCfa51a
-0QsViOmOHO4CSgd0wAlPPAE=
-=uiKk
+iD8DBQFEUK2PW78445TWHXcRAhi1AJ9rNMb5fXXuAxr+vJ0Xc3hl327vdwCfdmdD
+q9Y7muBiK3BE5c6l7MGv2ak=
+=0WIN
 -----END PGP SIGNATURE-----
