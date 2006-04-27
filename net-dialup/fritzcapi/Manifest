@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f843255cf48ef9ec859baa5a5333cf34 ChangeLog 4073
+MD5 86c3d49bbe0bef0dc707f3ed7a55076f ChangeLog 4173
 MD5 5485d246d87e5397761c0395b02c20e9 files/digest-fritzcapi-2.6.32 443
 MD5 385a495faa071b68234deddba9facb7e files/digest-fritzcapi-2.6.35 597
 MD5 4cab6f38300d72504a096d115b88440a files/digest-fritzcapi-2.6.42 150
@@ -10,12 +10,12 @@ MD5 9944aebce0f4b12843c5312ac4ba90b5 files/fritzcapi-fix-for-2.6.10.patch 473
 MD5 bdf7edcbbf6c4c9fe836310037d003a0 fritzcapi-2.6.32.ebuild 5791
 MD5 11e4f3489033bacd0498e6c62bc3c422 fritzcapi-2.6.35.ebuild 6228
 MD5 274199dd7a68a8b5d0918dc6fc6de3c6 fritzcapi-2.6.42.ebuild 4889
-MD5 26735b6d4a678993b946fdd53e5c9b0e fritzcapi-2.6.43.ebuild 4831
+MD5 83f75ce6acb1328407b28bb1c954cc37 fritzcapi-2.6.43.ebuild 4830
 MD5 0498b76c69caf75c82ab7115df4cd4f8 metadata.xml 319
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEFA3hjG8pv1lIUX4RAvH/AJ9vljlpsPmURb01AZrxPAmxXDV+SQCgtrH5
-99CYoGjqQlXyimsIb/8sKKw=
-=8C79
+iD8DBQFEUP2bjG8pv1lIUX4RAnQnAKDb6NnlaPNXXe+nD02Tjg/1DVQBNACeLfjc
+8qa4r0v0Lr1f+t9xEohTJ/8=
+=JZqj
 -----END PGP SIGNATURE-----

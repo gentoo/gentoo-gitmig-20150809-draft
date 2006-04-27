@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/fritzcapi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.21 2006/03/12 12:02:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.22 2006/04/27 17:18:04 mrness Exp $
+
+  27 Apr 2006; Alin Nastac <mrness@gentoo.org> fritzcapi-2.6.43.ebuild:
+  Stable on x86 (#131352).
 
   12 Mar 2006; Alin Nastac <mrness@gentoo.org> fritzcapi-2.6.43.ebuild:
   Beautify src_unpack function. Quote strings containing $WORKDIR, $S or $KV_DIR.
