@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.196 2006/03/27 08:06:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.197 2006/04/27 21:53:05 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-xchat-2.4.3,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
 *xchat-2.6.2 (27 Mar 2006)
 
