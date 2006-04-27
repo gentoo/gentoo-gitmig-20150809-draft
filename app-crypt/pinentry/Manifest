@@ -1,9 +1,35 @@
-MD5 63c5028410d7fe8608e27a9b120236cd ChangeLog 5809
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX 0.7.2-libcap.patch 910 RMD160 21292ff64730826431d78d1f96a1909cb2c8997c SHA1 bc523a03e593f3bfa84437bdc603d683a21097f5 size 910
 MD5 136f0f72a38f70865f50397f0a5a3412 files/0.7.2-libcap.patch 910
-MD5 7d8048c5acbc16a530110855e138fb4b files/digest-pinentry-0.7.2 244
-MD5 7d8048c5acbc16a530110855e138fb4b files/digest-pinentry-0.7.2-r2 244
-MD5 7d8048c5acbc16a530110855e138fb4b files/digest-pinentry-0.7.2-r3 244
-MD5 f5775272cd7e22ae38566107c416c1e4 metadata.xml 275
+RMD160 21292ff64730826431d78d1f96a1909cb2c8997c files/0.7.2-libcap.patch 910
+DIST pinentry-0.7.2.tar.gz 398775 RMD160 db667256801545ef065d9d47cafe5e67137fa6ce size 398775
+EBUILD pinentry-0.7.2-r2.ebuild 1869 RMD160 d50d7287679a99a5a050066a055e94766daa78ec SHA1 32864dacdf71b3bf482c9282de2438945c2c37df size 1869
 MD5 bd4879c422d925ecce8ef6dc7d3d9c11 pinentry-0.7.2-r2.ebuild 1869
+RMD160 d50d7287679a99a5a050066a055e94766daa78ec pinentry-0.7.2-r2.ebuild 1869
+EBUILD pinentry-0.7.2-r3.ebuild 2147 RMD160 299e0498866dad4c3fd2c9af94cef0f2914409d9 SHA1 dd28e45b62fe049827179df8cf21f9dfa56d27c8 size 2147
 MD5 83913e47c7424b26ed48daa6b1ffb10f pinentry-0.7.2-r3.ebuild 2147
+RMD160 299e0498866dad4c3fd2c9af94cef0f2914409d9 pinentry-0.7.2-r3.ebuild 2147
+EBUILD pinentry-0.7.2.ebuild 2023 RMD160 edf3dfb26806d79d38059fb6295f5b4e0bebd7d9 SHA1 03e5d1c638fe096bc45799445f3b96fb71a344dc size 2023
 MD5 0807a36278225cc9824f5466b1a0e0e6 pinentry-0.7.2.ebuild 2023
+RMD160 edf3dfb26806d79d38059fb6295f5b4e0bebd7d9 pinentry-0.7.2.ebuild 2023
+MISC ChangeLog 6000 RMD160 81773db28fda2918557c1afec3d2c2a1971d4b01 SHA1 bba8643fa1b1676fe4bc3528269d396cbcc2b95d size 6000
+MD5 fcc9c58a4ce332eebe2b015a5fe4e4c1 ChangeLog 6000
+RMD160 81773db28fda2918557c1afec3d2c2a1971d4b01 ChangeLog 6000
+MISC metadata.xml 275 RMD160 7aca4724ede81b0eaad9b4536f00a6a805727cef SHA1 b1a92ff0d6bfacd26122ac4dbd4725ef2b023f81 size 275
+MD5 f5775272cd7e22ae38566107c416c1e4 metadata.xml 275
+RMD160 7aca4724ede81b0eaad9b4536f00a6a805727cef metadata.xml 275
+MD5 29ecd7897abc6c6c5621d5fdcfd5ea24 files/digest-pinentry-0.7.2 143
+RMD160 2a0d0663ad7c31b932fbfc1290fbaa3c7aa23fa3 files/digest-pinentry-0.7.2 143
+MD5 29ecd7897abc6c6c5621d5fdcfd5ea24 files/digest-pinentry-0.7.2-r2 143
+RMD160 2a0d0663ad7c31b932fbfc1290fbaa3c7aa23fa3 files/digest-pinentry-0.7.2-r2 143
+MD5 29ecd7897abc6c6c5621d5fdcfd5ea24 files/digest-pinentry-0.7.2-r3 143
+RMD160 2a0d0663ad7c31b932fbfc1290fbaa3c7aa23fa3 files/digest-pinentry-0.7.2-r3 143
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUK7fW78445TWHXcRAhqAAJ9hhkea9lA67vdStMJ3rJQrm9nXaACgnUkT
+0AiL4g+Zn8qRvajMolMImtg=
+=35My
+-----END PGP SIGNATURE-----
