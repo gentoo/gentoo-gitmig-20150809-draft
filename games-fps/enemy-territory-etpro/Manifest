@@ -1,42 +1,66 @@
-MD5 0c58dec500796ffcc9e02f53a80d8536 ChangeLog 1420
-RMD160 732029beccabe057f6f32299cdeaa2efdab9943a ChangeLog 1420
-SHA256 4cb4a6ef56fa413813ddd0362a235f9738617723ff4fe37054d881d354572806 ChangeLog 1420
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST etpro-3_0_1.zip 2646318 RMD160 69f57fb77d595889bbea8a35df35780503fc52da SHA256 e43e750db314220408593cb6ae9e9dad8ba38a74dd5b27abd2d7330c616db263 size 2646318
+DIST etpro-3_1_0.zip 2403141 RMD160 38a00d21a8c352a65b77576b0dd3acc2eed45b27 SHA256 08ad87a7aa062cd6743246f51e7ac0a9b2272cab31c8fdc1f86cfa8f5e05c9d8 size 2403141
+DIST etpro-3_2_0.zip 3524198 RMD160 4e3c62cba3df67b59799e841d6f6f9133c6533a8 SHA256 1ee7944a4d9f8ebbdd3e76905aca521e1b30bfa11c27665fdc8c7df1dc2de787 size 3524198
+DIST etpro-3_2_1.zip 3527925 RMD160 f8780ba217f49d6332e64270cabaf0f8f923dca3 SHA256 2aea9a65f252abd6cbf0bf88e046a1990e2458d2ddb8d866aca93c6c92a2319f size 3527925
+DIST etpro-3_2_4.zip 3691135 RMD160 78dce1ee4b37403270b50482915e76583740c1a7 SHA256 61acad0979c8a9fdf647967122cc0c213e71d3607af8e85177ac672e3eae4194 size 3691135
+DIST etpro-3_2_5.zip 3693471 RMD160 adaa115112ec3c9524b4636fe7eb5da865d9c510 SHA256 5bd3eeb0aa130d56592b675079db50eba4952e225f0350ddff2be4dbd1a9331a size 3693471
+EBUILD enemy-territory-etpro-3.0.1.ebuild 439 RMD160 fe213ef6e467a19d6d01e4b8867ea5e71263321e SHA1 f1aa6cf6bd9e2c26de6e70c476c554ed9187fb0c SHA256 a363427562d6e4a334424f1150e439ea5ffc9c859bf1432a20e8bdbfa169a097 size 439
 MD5 b8059c7c9792a1fcd789b1656ec9fdc5 enemy-territory-etpro-3.0.1.ebuild 439
 RMD160 fe213ef6e467a19d6d01e4b8867ea5e71263321e enemy-territory-etpro-3.0.1.ebuild 439
-SHA256 075ecbd44d513a280665fe4131eb71a2b0ea8b3fca326ecb6982c47a30100c94 enemy-territory-etpro-3.0.1.ebuild 439
+SHA256 a363427562d6e4a334424f1150e439ea5ffc9c859bf1432a20e8bdbfa169a097 enemy-territory-etpro-3.0.1.ebuild 439
+EBUILD enemy-territory-etpro-3.1.0.ebuild 419 RMD160 69cbfc8a9b97740a4c33f760742bc14d0e771836 SHA1 48d17a384398bea8114d47545ac2738ed9637727 SHA256 76849e2beff924ff1a2fef81d686e67b5bacd26d66c947ed1a6b3b5028ad8583 size 419
 MD5 10b7314613364ca40ad0a56a2fad38f8 enemy-territory-etpro-3.1.0.ebuild 419
 RMD160 69cbfc8a9b97740a4c33f760742bc14d0e771836 enemy-territory-etpro-3.1.0.ebuild 419
 SHA256 76849e2beff924ff1a2fef81d686e67b5bacd26d66c947ed1a6b3b5028ad8583 enemy-territory-etpro-3.1.0.ebuild 419
+EBUILD enemy-territory-etpro-3.2.0.ebuild 416 RMD160 2261cc54785c794547fa340abb4bd486cfa2f37c SHA1 3cfdb28e4ee34754e5763cf336323ddd8793cc6f SHA256 2556e027339caacdc0f550b3fae1e42efd2ef0226bb56e9243b4539b136dcb9f size 416
 MD5 e84b5c3769a0048a5d73e16a68a6335f enemy-territory-etpro-3.2.0.ebuild 416
 RMD160 2261cc54785c794547fa340abb4bd486cfa2f37c enemy-territory-etpro-3.2.0.ebuild 416
 SHA256 2556e027339caacdc0f550b3fae1e42efd2ef0226bb56e9243b4539b136dcb9f enemy-territory-etpro-3.2.0.ebuild 416
+EBUILD enemy-territory-etpro-3.2.1.ebuild 421 RMD160 0a0c60b2cb7eeeeb67218f5bdd2678a7dc0554ec SHA1 c8ef9079ad7ec386d09bce8eeb08ab41e1871e03 SHA256 c2fd78cf6e74540cf6ee84a898a2c7771075c867323020ee9d49f43b822c8d44 size 421
 MD5 9d7721e498b9e1b6f73bc7bb7c8b7ea6 enemy-territory-etpro-3.2.1.ebuild 421
 RMD160 0a0c60b2cb7eeeeb67218f5bdd2678a7dc0554ec enemy-territory-etpro-3.2.1.ebuild 421
 SHA256 c2fd78cf6e74540cf6ee84a898a2c7771075c867323020ee9d49f43b822c8d44 enemy-territory-etpro-3.2.1.ebuild 421
+EBUILD enemy-territory-etpro-3.2.4.ebuild 416 RMD160 a82eeeceaf32e2c52fed6ec1e4c662a9cefe085e SHA1 c082d609cbd91469182030659ff9527257d37896 SHA256 52f9b182006448d231ae43bafd8d7a28a5fd25d5265812ef963c53dc7b7a0733 size 416
 MD5 d0a0baa8fc2c87c1786b7b739cb66266 enemy-territory-etpro-3.2.4.ebuild 416
 RMD160 a82eeeceaf32e2c52fed6ec1e4c662a9cefe085e enemy-territory-etpro-3.2.4.ebuild 416
 SHA256 52f9b182006448d231ae43bafd8d7a28a5fd25d5265812ef963c53dc7b7a0733 enemy-territory-etpro-3.2.4.ebuild 416
+EBUILD enemy-territory-etpro-3.2.5.ebuild 421 RMD160 639c3fa169fdc236efaa0fa0b630b56ae211a40a SHA1 9c8207e98c6cd597e07bad235985500be4b30c05 SHA256 da0e3f913ead0d76c175b711f02b8676d778d928dbb3e28965cf3175a15924a4 size 421
 MD5 6990fcbb6ab0074d029281e556e65310 enemy-territory-etpro-3.2.5.ebuild 421
 RMD160 639c3fa169fdc236efaa0fa0b630b56ae211a40a enemy-territory-etpro-3.2.5.ebuild 421
 SHA256 da0e3f913ead0d76c175b711f02b8676d778d928dbb3e28965cf3175a15924a4 enemy-territory-etpro-3.2.5.ebuild 421
-MD5 80f2399f03652ca3d56e8a9287661464 files/digest-enemy-territory-etpro-3.0.1 61
-RMD160 cd656ac72bdf0d345f4f0cfa2ac734b21091df2a files/digest-enemy-territory-etpro-3.0.1 61
-SHA256 6344ac8338fe423483b788ddc3d384589c6b9ebd2285bcfa5963ed625fb2b2cd files/digest-enemy-territory-etpro-3.0.1 61
-MD5 2f7c4015b0923084a69f905a8b8cfadb files/digest-enemy-territory-etpro-3.1.0 61
-RMD160 6e36f376a9ca3353a37303acb341d37d05adb8f0 files/digest-enemy-territory-etpro-3.1.0 61
-SHA256 491efef53aea5afa7b19df9e136c34c240fb0fae4025be138b6a2cba1e5b2767 files/digest-enemy-territory-etpro-3.1.0 61
-MD5 9c2f7ccbbe9d89e5ca5f4dd24f55cee8 files/digest-enemy-territory-etpro-3.2.0 61
-RMD160 9dffc50e8a6376fc505b9e75bfde46c43023e4f4 files/digest-enemy-territory-etpro-3.2.0 61
-SHA256 f19239cbed966ebc632e64dfc2b666216e3272cc9aa313c4ba66c87d336ee632 files/digest-enemy-territory-etpro-3.2.0 61
-MD5 534034453758d1f1d7ec8a2f45e754d0 files/digest-enemy-territory-etpro-3.2.1 61
-RMD160 b02946a7de7a3604e15e158a102af82b230925de files/digest-enemy-territory-etpro-3.2.1 61
-SHA256 fe7798be639a8d5c7d64a30b8b83b741db921ed21459fa68f776f8ee301b9739 files/digest-enemy-territory-etpro-3.2.1 61
-MD5 a947199eb2452426bad9e3794d0d78e1 files/digest-enemy-territory-etpro-3.2.4 61
-RMD160 c4bf9a521cf79a40b2a443edc6df59f25f917d0e files/digest-enemy-territory-etpro-3.2.4 61
-SHA256 a4dad34b29c0ff9b41cedc0d6730d1e3c8646a5857d37e00a8c14c4f880f7c00 files/digest-enemy-territory-etpro-3.2.4 61
-MD5 76b289785490553c7bf7cf78a8324d7a files/digest-enemy-territory-etpro-3.2.5 229
-RMD160 8a033b6dcd1311ec3a8656bfcca8462c3e3ea185 files/digest-enemy-territory-etpro-3.2.5 229
-SHA256 95cc7ceda973842ce738f697ddad5defc0515b478ad5696492e3e62c64cd4c2c files/digest-enemy-territory-etpro-3.2.5 229
+MISC ChangeLog 1733 RMD160 e7889ce2f3e8b3306a0aa26db29a9878c80b3db8 SHA1 507f8d8fac1737ac0157aab3b4d6c1e9b9227a80 SHA256 d316523c7b5703dd4dbb50f5262c955df4cb9dc98f1a194012098dd7f5b99562 size 1733
+MD5 789a8f0f1485eaf5fa0b7470655eed20 ChangeLog 1733
+RMD160 e7889ce2f3e8b3306a0aa26db29a9878c80b3db8 ChangeLog 1733
+SHA256 d316523c7b5703dd4dbb50f5262c955df4cb9dc98f1a194012098dd7f5b99562 ChangeLog 1733
+MISC metadata.xml 254 RMD160 877a1dc36df2be58926bc51041093feafdefe429 SHA1 45f0334cd127c4a1b4ece41f7098ab70046e378a SHA256 2916aab684ec3908fffb515065eeb2c481cde563380b682646add582bed5f535 size 254
 MD5 11a7e1491b1ac042ac7216b26b4ad1fb metadata.xml 254
 RMD160 877a1dc36df2be58926bc51041093feafdefe429 metadata.xml 254
 SHA256 2916aab684ec3908fffb515065eeb2c481cde563380b682646add582bed5f535 metadata.xml 254
+MD5 77ee5e781e55fbc8c2a7710848d033c3 files/digest-enemy-territory-etpro-3.0.1 229
+RMD160 7e43530e1df5df671beadbb361e493ef6e6ea76f files/digest-enemy-territory-etpro-3.0.1 229
+SHA256 febb2a09b10180acb75440e03f0e6881df6f3476d317d239254f96679aabb42d files/digest-enemy-territory-etpro-3.0.1 229
+MD5 c86055066313cc692d840b517a260808 files/digest-enemy-territory-etpro-3.1.0 229
+RMD160 1f6d3afe8a26f17b98c4d78961b71d620871344b files/digest-enemy-territory-etpro-3.1.0 229
+SHA256 68904547b99d50d9c6844bdaa087af2b01aeb0b9e6be2445333f57bdc92bede4 files/digest-enemy-territory-etpro-3.1.0 229
+MD5 98657a8f268e3ba8298586f4428e086b files/digest-enemy-territory-etpro-3.2.0 229
+RMD160 1d4bbcdd7e2b4835a24b7260769ea48a34d5526a files/digest-enemy-territory-etpro-3.2.0 229
+SHA256 992ee1d8d0a61512c0577e0a1691810dcb4d8c79cb154232d61fbe0aef9c4e05 files/digest-enemy-territory-etpro-3.2.0 229
+MD5 20d359b60621ba95adf0fa006ced376a files/digest-enemy-territory-etpro-3.2.1 229
+RMD160 adf1b4991cb1ff55b4cb22fb7e7cbb7a297c7eed files/digest-enemy-territory-etpro-3.2.1 229
+SHA256 3d0c73a20444dabe8a34aca670a666f7cb3131e565fe8e3d4df2555c5dce9cf9 files/digest-enemy-territory-etpro-3.2.1 229
+MD5 a8c6555ea40a5aa55d6b2cfc6514d180 files/digest-enemy-territory-etpro-3.2.4 229
+RMD160 4b683c0f6b3aedefd2071dd37d643cabbc7b6c4e files/digest-enemy-territory-etpro-3.2.4 229
+SHA256 4db9da618757215942e6f945b9c73e87d30d7203c21697bbe8d7d59fb4d55116 files/digest-enemy-territory-etpro-3.2.4 229
+MD5 76b289785490553c7bf7cf78a8324d7a files/digest-enemy-territory-etpro-3.2.5 229
+RMD160 8a033b6dcd1311ec3a8656bfcca8462c3e3ea185 files/digest-enemy-territory-etpro-3.2.5 229
+SHA256 95cc7ceda973842ce738f697ddad5defc0515b478ad5696492e3e62c64cd4c2c files/digest-enemy-territory-etpro-3.2.5 229
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUSC8W78445TWHXcRAptNAJ9wf3NFOXgiwlh/0e5Thtv+tFWDXwCePOAc
+L64oBR0/aqRdmTTN6WFcsdA=
+=NwuE
+-----END PGP SIGNATURE-----
