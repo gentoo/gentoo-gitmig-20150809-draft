@@ -1,40 +1,40 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e7be6480d3949ffb584cf17c6c3d0960 ChangeLog 3160
-RMD160 706c1f1d4917b52c927119db484a67429f612663 ChangeLog 3160
-SHA256 9f49ef2523d5f4b677a83c614b74642c4cf31f21c7059a33310e23bfa2208d9f ChangeLog 3160
-MD5 d1e4a29aa0ec5b6f4f82e119bba6f45c files/digest-gaim-meanwhile-1.2.3 72
-RMD160 b2eeaca9df4cfee1b7005265a4db1628cbc5de46 files/digest-gaim-meanwhile-1.2.3 72
-SHA256 eda7884b841f2b5a906e98d1b30601efedbf35f9545c08913ed8922b8e2ed087 files/digest-gaim-meanwhile-1.2.3 72
-MD5 f44984ac2e4ce4c2a71535f62ea2cf28 files/digest-gaim-meanwhile-1.2.4 72
-RMD160 ef72666fb4ac757cb0007c9266f909895a19f5b8 files/digest-gaim-meanwhile-1.2.4 72
-SHA256 814d81885efc7e2c2761b922f64fb927d44ee9913f4a0e1ce3606b0e96df8c89 files/digest-gaim-meanwhile-1.2.4 72
-MD5 e68483f7c5f1ab6d83fd5b968f665cab files/digest-gaim-meanwhile-1.2.5 72
-RMD160 f6a13e8e2592ce0b11aa9ccd6811dbcd6f8c6895 files/digest-gaim-meanwhile-1.2.5 72
-SHA256 dc0646bf07b875adf43fd290e5c20f1a6527f86f1e190ce6ca581d73eded6b91 files/digest-gaim-meanwhile-1.2.5 72
-MD5 d132352aae8171bf7650b054bebc4527 files/digest-gaim-meanwhile-1.2.8 262
-RMD160 8a4175f4c3846746716660ec023ed1ca8b28575b files/digest-gaim-meanwhile-1.2.8 262
-SHA256 9de380fe09413fabdfd0082c13f979d5d040ca162846f871fd930b39c138e1e3 files/digest-gaim-meanwhile-1.2.8 262
+DIST gaim-meanwhile-1.2.3.tar.gz 345138 RMD160 ddc1135cde85c0cec920707288f2800016695ac1 SHA256 f59d8cdd50ce9195615c9f3274f596f090e6cf130b8963cf4d4e99d29ba630df size 345138
+DIST gaim-meanwhile-1.2.4.tar.gz 345312 RMD160 f89efaa44723e999ff255c0bb4761aea83ce8db7 SHA256 6a156ce9748a3e92fab10cec2c1290cf608696e827cdb7617a883bd9e4cd82aa size 345312
+DIST gaim-meanwhile-1.2.5.tar.gz 366288 RMD160 48933bba2c2c17a6c10aa770960410819ad1d3ea SHA256 add1762bba4130b3f2c7875d9038e2180d0665f02269f40ebd78f6890da7d88e size 366288
+DIST gaim-meanwhile-1.2.8.tar.gz 366903 RMD160 eb8019171a15ca15c15f444c835e3f4a339e1aaa SHA256 8c3fe63b3962a8c6741503b3403b518f5f0ac0d116c4a5f0f11d10806774b2c9 size 366903
+EBUILD gaim-meanwhile-1.2.3.ebuild 650 RMD160 7392b52a00e625d3eab8fdb479a426dfa74aeb7e SHA1 d8be96612ee7af6d60f641decd6eb4c666304938 SHA256 df7a2fad4e01f98b818d1e499e99a112a62f13f964bf315de4552e0e54d86032 size 650
 MD5 9ecc19cd7e2069dddf882277f33175e5 gaim-meanwhile-1.2.3.ebuild 650
 RMD160 7392b52a00e625d3eab8fdb479a426dfa74aeb7e gaim-meanwhile-1.2.3.ebuild 650
 SHA256 df7a2fad4e01f98b818d1e499e99a112a62f13f964bf315de4552e0e54d86032 gaim-meanwhile-1.2.3.ebuild 650
+EBUILD gaim-meanwhile-1.2.4.ebuild 644 RMD160 529301135f1cc9f2eaafcfd3238e756a54bf176b SHA1 c816410b5f593efc0700f7ec99cac0f784288b65 SHA256 914623850cf33ae777244b1269ef0cd5669ba314c030b3578a825bd2768c3bff size 644
 MD5 e3192c471aa6609913eb9c276aa14302 gaim-meanwhile-1.2.4.ebuild 644
 RMD160 529301135f1cc9f2eaafcfd3238e756a54bf176b gaim-meanwhile-1.2.4.ebuild 644
 SHA256 914623850cf33ae777244b1269ef0cd5669ba314c030b3578a825bd2768c3bff gaim-meanwhile-1.2.4.ebuild 644
+EBUILD gaim-meanwhile-1.2.5.ebuild 644 RMD160 ccf8701eea3c216d6fea8710c5fae7a42a1c93c9 SHA1 ff69c9a5d483e3c52299c6c29df2c07cfab5a7c4 SHA256 29231ce6f6096bf473e9e564857dd3369a24f56ef30d017e45112397e562ca81 size 644
 MD5 62a50c250b28b0ac09ec04c83ae4ee6e gaim-meanwhile-1.2.5.ebuild 644
 RMD160 ccf8701eea3c216d6fea8710c5fae7a42a1c93c9 gaim-meanwhile-1.2.5.ebuild 644
 SHA256 29231ce6f6096bf473e9e564857dd3369a24f56ef30d017e45112397e562ca81 gaim-meanwhile-1.2.5.ebuild 644
+EBUILD gaim-meanwhile-1.2.8.ebuild 642 RMD160 75a38ef673af81be43a6ae8f75f434193ba18a8e SHA1 ae82739d19a10d6a289a0718dc03f2ac20143b5c SHA256 944aefbff597fab49cb54e826cc9bb49d366d791ab485cb1f0f7631b35b8b0dc size 642
 MD5 bdd5bedca9e1172f165f58f8e17faa81 gaim-meanwhile-1.2.8.ebuild 642
 RMD160 75a38ef673af81be43a6ae8f75f434193ba18a8e gaim-meanwhile-1.2.8.ebuild 642
 SHA256 944aefbff597fab49cb54e826cc9bb49d366d791ab485cb1f0f7631b35b8b0dc gaim-meanwhile-1.2.8.ebuild 642
+MISC ChangeLog 3403 RMD160 f83d2e919113f58280af84a5ab1dd4f035f27776 SHA1 060e48e56e28c544a6ba7a1a574a49cfbfade233 SHA256 9d4f0a5789f65c793fc7315771943e7b1449b29fc8b263e030107176561df8c6 size 3403
+MD5 6ccaa8d17b2934a384051e59435c486e ChangeLog 3403
+RMD160 f83d2e919113f58280af84a5ab1dd4f035f27776 ChangeLog 3403
+SHA256 9d4f0a5789f65c793fc7315771943e7b1449b29fc8b263e030107176561df8c6 ChangeLog 3403
+MISC metadata.xml 159 RMD160 3e0df024f9705f0cd1798f45cd4b0698e183ee87 SHA1 08e27d5a696205dc5c9992d4f3b647cd609ec139 SHA256 bb3130d2515d5b2e4ff19aff2199bb00ac7c350bf78b34bbec55268bf1013908 size 159
 MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
 RMD160 3e0df024f9705f0cd1798f45cd4b0698e183ee87 metadata.xml 159
 SHA256 bb3130d2515d5b2e4ff19aff2199bb00ac7c350bf78b34bbec55268bf1013908 metadata.xml 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD8y043mryvu3JUUURAkjhAJ9ELRRyr8vieo47ZRnFoprvcS15rQCfbDHZ
-49n4uanEEOPnZVPvyyjWzfo=
-=KUbt
------END PGP SIGNATURE-----
+MD5 abf20661d5ad9e9db3cba28372d08c55 files/digest-gaim-meanwhile-1.2.3 262
+RMD160 843ed8ff1f5cd9b497a9f70aead4d9ce55f8f158 files/digest-gaim-meanwhile-1.2.3 262
+SHA256 db9763d8f13d4afe8ec55947443a2699240779f3c72fa41683bc2f4d0a776d25 files/digest-gaim-meanwhile-1.2.3 262
+MD5 d874589ab8a6c56fa7f8df7feeb6e4cc files/digest-gaim-meanwhile-1.2.4 262
+RMD160 64f5c3ceb57cdbfc4256c4f10d4805213408db50 files/digest-gaim-meanwhile-1.2.4 262
+SHA256 93085f349c92731f22e807d8a3ab210b7cb0c22b5b30b9ca5f702dfbb6e188d2 files/digest-gaim-meanwhile-1.2.4 262
+MD5 9aa4a389237f7bfdf60a57c8027a2dae files/digest-gaim-meanwhile-1.2.5 262
+RMD160 d1f7f8c567ec664d415b9740c841097aa3f6c00b files/digest-gaim-meanwhile-1.2.5 262
+SHA256 39e5ca75d3d5b5e20b2aabde15589f4f3929dbaa1c683a7181763aaa4e7de070 files/digest-gaim-meanwhile-1.2.5 262
+MD5 a326f00d4f3719e3f752373f9dcd4f19 files/digest-gaim-meanwhile-1.2.8 262
+RMD160 79adc51803df29ce555babb287994fd6873a8f6c files/digest-gaim-meanwhile-1.2.8 262
+SHA256 5e158f8814b0c440360893e72c09331f9df5a35111b94fd256d70db20811200b files/digest-gaim-meanwhile-1.2.8 262
