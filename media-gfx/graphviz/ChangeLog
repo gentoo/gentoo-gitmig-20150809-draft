@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.75 2006/04/04 19:24:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.76 2006/04/27 22:56:04 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-graphviz-1.10,
+  files/digest-graphviz-1.12, files/digest-graphviz-1.12-r1,
+  files/digest-graphviz-1.16, files/digest-graphviz-1.16-r1,
+  files/digest-graphviz-2.2, files/digest-graphviz-2.2.1,
+  files/digest-graphviz-2.2.1-r1, files/digest-graphviz-2.4,
+  files/digest-graphviz-2.6, files/digest-graphviz-2.6-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
   04 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> graphviz-2.6-r1.ebuild:
   Add ~x86-fbsd keyword.

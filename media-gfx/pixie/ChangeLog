@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pixie
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.21 2006/04/12 08:01:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.22 2006/04/27 23:01:39 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-pixie-1.5.1,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
 *pixie-1.6.2 (12 Apr 2006)
 

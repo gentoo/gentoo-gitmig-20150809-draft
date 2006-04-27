@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xloadimage
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.35 2006/02/09 20:44:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.36 2006/04/27 23:03:01 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-xloadimage-4.1-r4, Manifest:
+  Fixing SHA256 digest, pass four
 
   15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   -xloadimage-4.1-r1.ebuild, -xloadimage-4.1-r2.ebuild,
