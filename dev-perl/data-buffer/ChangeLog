@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/data-buffer
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/data-buffer/ChangeLog,v 1.15 2006/02/08 23:54:14 tove Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/data-buffer/ChangeLog,v 1.16 2006/04/27 17:54:17 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-data-buffer-0.04, Manifest:
+  Fixing SHA256 digest, pass four
 
   25 Nov 2005; Tom Gall <tgall@gentoo.org> data-buffer-0.04.ebuild:
   stable on ppc64

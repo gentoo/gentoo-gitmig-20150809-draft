@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Pod-Simple
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/ChangeLog,v 1.15 2006/04/26 22:00:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/ChangeLog,v 1.16 2006/04/27 18:54:26 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-Pod-Simple-3.02, files/digest-Pod-Simple-3.03,
+  files/digest-Pod-Simple-3.04, Manifest:
+  Fixing SHA256 digest, pass four
 
 *Pod-Simple-3.04 (26 Apr 2006)
 

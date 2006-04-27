@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/GDGraph
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.14 2006/04/26 20:04:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.15 2006/04/27 18:28:08 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-GDGraph-1.43.07, Manifest:
+  Fixing SHA256 digest, pass four
 
 *GDGraph-1.43.07 (26 Apr 2006)
 

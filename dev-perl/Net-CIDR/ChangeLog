@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-CIDR
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR/ChangeLog,v 1.14 2006/02/06 20:30:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR/ChangeLog,v 1.15 2006/04/27 18:51:54 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-Net-CIDR-0.10,
+  files/digest-Net-CIDR-0.11, Manifest:
+  Fixing SHA256 digest, pass four
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> Net-CIDR-0.11.ebuild:
   stable on amd64

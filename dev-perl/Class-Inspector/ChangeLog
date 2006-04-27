@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Class-Inspector
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.28 2006/04/24 01:41:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.29 2006/04/27 17:46:45 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-Class-Inspector-1.06, files/digest-Class-Inspector-1.08,
+  files/digest-Class-Inspector-1.13, files/digest-Class-Inspector-1.14,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
 *Class-Inspector-1.14 (24 Apr 2006)
 

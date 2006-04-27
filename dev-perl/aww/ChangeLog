@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/aww
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/ChangeLog,v 1.12 2006/03/30 23:45:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/ChangeLog,v 1.13 2006/04/27 17:39:11 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-aww-0.33,
+  files/digest-aww-0.34, Manifest:
+  Fixing SHA256 digest, pass four
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> aww-0.34.ebuild:
   Mark 0.34 ~ia64

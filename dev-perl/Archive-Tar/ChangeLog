@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Archive-Tar
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/ChangeLog,v 1.56 2006/04/24 03:09:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/ChangeLog,v 1.57 2006/04/27 17:28:02 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-Archive-Tar-1.23-r1, files/digest-Archive-Tar-1.26,
+  files/digest-Archive-Tar-1.28, Manifest:
+  Fixing SHA256 digest, pass four
 
   29 Apr 2006; Joshua Kinard <kumba@gentoo.org> Archive-Tar-1.28.ebuild:
   Marked stable on mips.

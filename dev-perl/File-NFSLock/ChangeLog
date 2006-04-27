@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-NFSLock
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NFSLock/ChangeLog,v 1.1 2006/04/17 06:08:15 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NFSLock/ChangeLog,v 1.2 2006/04/27 18:16:59 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
 *File-NFSLock-1.20 (17 Apr 2006)
 

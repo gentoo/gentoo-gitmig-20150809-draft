@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gnome2-wnck
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.20 2006/04/26 20:18:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.21 2006/04/27 18:35:49 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-gnome2-wnck-0.04-r1, files/digest-gnome2-wnck-0.10,
+  files/digest-gnome2-wnck-0.11, Manifest:
+  Fixing SHA256 digest, pass four
 
 *gnome2-wnck-0.12 (26 Apr 2006)
 

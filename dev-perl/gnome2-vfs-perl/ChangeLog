@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gnome2-vfs-perl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.21 2006/04/26 01:06:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.22 2006/04/27 18:32:00 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-gnome2-vfs-perl-1.00, files/digest-gnome2-vfs-perl-1.021,
+  files/digest-gnome2-vfs-perl-1.041, Manifest:
+  Fixing SHA256 digest, pass four
 
 *gnome2-vfs-perl-1.060 (26 Apr 2006)
 

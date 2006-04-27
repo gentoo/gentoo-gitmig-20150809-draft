@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-SHA
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA/ChangeLog,v 1.6 2006/04/25 19:04:28 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA/ChangeLog,v 1.7 2006/04/27 18:05:44 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
 *Digest-SHA-5.34 (25 Apr 2006)
 

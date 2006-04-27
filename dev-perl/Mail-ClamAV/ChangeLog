@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-ClamAV
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/ChangeLog,v 1.7 2006/03/30 23:00:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/ChangeLog,v 1.8 2006/04/27 18:49:55 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-Mail-ClamAV-0.13, files/digest-Mail-ClamAV-0.17, Manifest:
+  Fixing SHA256 digest, pass four
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Mail-ClamAV-0.17.ebuild:
   Mark 0.17 ~ia64

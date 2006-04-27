@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/HTML-Parser
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/ChangeLog,v 1.67 2006/04/26 20:28:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/ChangeLog,v 1.68 2006/04/27 18:43:34 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-HTML-Parser-3.36-r1, files/digest-HTML-Parser-3.45,
+  files/digest-HTML-Parser-3.46, Manifest:
+  Fixing SHA256 digest, pass four
 
 *HTML-Parser-3.51 (26 Apr 2006)
 

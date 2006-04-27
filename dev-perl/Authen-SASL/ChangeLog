@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Authen-SASL
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.25 2006/04/24 03:13:35 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.26 2006/04/27 17:35:25 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-Authen-SASL-2.04, files/digest-Authen-SASL-2.09, Manifest:
+  Fixing SHA256 digest, pass four
 
   29 Apr 2006; Joshua Kinard <kumba@gentoo.org> Authen-SASL-2.09.ebuild:
   Marked stable on mips.
