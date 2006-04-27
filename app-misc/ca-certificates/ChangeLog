@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.3 2006/03/30 14:36:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.4 2006/04/27 10:57:42 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-ca-certificates-20050518,
+  files/digest-ca-certificates-20050804, Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   ca-certificates-20050804.ebuild:
