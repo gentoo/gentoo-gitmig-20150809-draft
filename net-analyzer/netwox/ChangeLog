@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netwox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/ChangeLog,v 1.21 2006/02/23 10:15:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/ChangeLog,v 1.22 2006/04/27 21:38:47 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-netwox-5.28.0,
+  files/digest-netwox-5.31.0, files/digest-netwox-5.32.0, Manifest:
+  Fixing SHA256 digest, pass four
 
 *netwox-5.33.0 (23 Feb 2006)
 

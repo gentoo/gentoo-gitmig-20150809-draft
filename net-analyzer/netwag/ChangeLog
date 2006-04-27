@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/netwag
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/ChangeLog,v 1.11 2006/02/23 10:20:07 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/ChangeLog,v 1.12 2006/04/27 21:37:39 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-netwag-5.28.0,
+  files/digest-netwag-5.31.0, files/digest-netwag-5.32.0,
+  files/digest-netwag-5.33.0, Manifest:
+  Fixing SHA256 digest, pass four
 
 *netwag-5.33.0 (23 Feb 2006)
 

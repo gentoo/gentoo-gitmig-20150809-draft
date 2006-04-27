@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/pktstat
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.10 2006/02/15 23:46:42 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.11 2006/04/27 21:39:10 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-pktstat-1.7.5,
+  files/digest-pktstat-1.8.1, Manifest:
+  Fixing SHA256 digest, pass four
 
   15 Feb 2006; Markus Ullmann <jokey@gentoo.org> pktstat-1.7.5.ebuild,
   pktstat-1.8.1.ebuild:
