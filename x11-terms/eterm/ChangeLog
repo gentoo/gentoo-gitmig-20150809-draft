@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/eterm
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.34 2005/05/14 18:08:28 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.35 2006/04/27 23:57:30 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-eterm-0.9.2-r6, files/digest-eterm-0.9.3-r4,
+  files/digest-eterm-9999, Manifest:
+  Fixing SHA256 digest, pass four
 
   14 May 2005; Mike Frysinger <vapier@gentoo.org>
   +files/eterm-0.9.3-gcc4.patch, eterm-0.9.3-r4.ebuild:
