@@ -26,17 +26,17 @@ RMD160 532e75c33676f402571b5033faf42b7d0dbb9d28 metadata.xml 231
 SHA256 018942ba3f2ac5b93ec2576f55ff8d85b7808b35b751bfabb1879957f4f6c442 metadata.xml 231
 MD5 f6a76a52b08a095c04291eeb3547e337 files/digest-vzquota-3.0.0.2-r1 247
 RMD160 0d88328c31b1c74aaf0182168f126840b56c3627 files/digest-vzquota-3.0.0.2-r1 247
-SHA256 0547ca9b61e26b0f1fdadc25bcba641d7c2985e53cbd0f9ee4b16b1e99d67b9a files/digest-vzquota-3.0.0.2-r1 247
+SHA256 b5aaaf7ad22b3bbf6cad84476079cbcf61492291d7f0c6c93132f78a7b258ed6 files/digest-vzquota-3.0.0.2-r1 247
 MD5 616b68a57fff62c9f94fbddd4e660cf7 files/digest-vzquota-3.0.0.6 247
 RMD160 11dc34f3d5b4fc737311b874f4eddfb45f21b7c9 files/digest-vzquota-3.0.0.6 247
-SHA256 05aca655dd2bbf629951138f64f9667fc90813a6dcf6a668efccde9d9079dabc files/digest-vzquota-3.0.0.6 247
+SHA256 f5311fd1197d3338d461988081b08063fb3d09ee361ac95120d1fc1041a6f2dc files/digest-vzquota-3.0.0.6 247
 MD5 167a61ae804b421a38d8920edfeb7f76 files/digest-vzquota-3.0.0.7 247
 RMD160 824418392050492d88fad550e724d52667cf846f files/digest-vzquota-3.0.0.7 247
-SHA256 8100eeecacdfa4365c888f689e1d413adc874e65f2997eb14dbebed1ada7eee5 files/digest-vzquota-3.0.0.7 247
+SHA256 cc6d22c47731d8fbfdead74c8bc18d1c22bca13fb92b68aa53a30bb8dfe176c7 files/digest-vzquota-3.0.0.7 247
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFETOcSflZ8QqxhrsMRAg2CAJ4uJonRem2YBybGxl4WJkCeMUIfhQCgnynj
-eF8ZU27Y3+Da626ru5ei1TY=
-=By2V
+iD8DBQFEUSQ0flZ8QqxhrsMRAte1AJ0dJE6FRJhTZXLHX+yhZz0eyBr/3ACfX1x+
+qhuGhEGQwCbtU+Ib1J3lDJ8=
+=qxFV
 -----END PGP SIGNATURE-----
