@@ -1,6 +1,10 @@
 # ChangeLog for games-action/powermanga
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.9 2006/04/13 19:49:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.10 2006/04/27 19:38:36 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-powermanga-0.79, files/digest-powermanga-0.80, Manifest:
+  Fixing SHA256 digest, pass four
 
   13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   -powermanga-0.78.ebuild, powermanga-0.79.ebuild, powermanga-0.80.ebuild:
