@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/pecl-tidy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-tidy/ChangeLog,v 1.5 2006/04/10 21:25:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-tidy/ChangeLog,v 1.6 2006/04/27 18:59:03 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-pecl-tidy-1.1,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
   10 Apr 2006; Simon Stelling <blubb@gentoo.org> pecl-tidy-1.1.ebuild:
   added ~amd64 keyword
