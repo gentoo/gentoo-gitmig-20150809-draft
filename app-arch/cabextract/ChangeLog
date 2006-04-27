@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.32 2006/04/27 11:39:52 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.33 2006/04/27 12:18:06 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-cabextract-0.5, files/digest-cabextract-0.6,
+  files/digest-cabextract-1.0, files/digest-cabextract-1.1, Manifest:
+  Fixing SHA256 digest for real, pass three...
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-cabextract-0.5, files/digest-cabextract-0.6,
