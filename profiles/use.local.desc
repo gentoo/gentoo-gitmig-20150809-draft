@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1872 2006/04/26 22:39:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1873 2006/04/27 12:25:03 satya Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -985,6 +985,7 @@ net-fs/samba:async - Enables asynchronous input/output
 net-fs/samba:automount - Enables automount support
 net-fs/samba:ldapsam - Enables samba 2.2 ldap support (default passwd backend: ldapsam_compat)
 net-fs/samba:libclamav - Enables clamav libraries, without needing to use the daemon
+net-fs/samba:msdfs - Enables support for msDFS (Distributed File System)
 net-fs/samba:oav - Enables support for anti-virus from the openantivirus.org project
 net-fs/samba:quotas - Enables support for user quotas
 net-fs/samba:swat - Enables support for swat configuration gui
