@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/simgear
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.21 2006/04/08 01:36:40 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.22 2006/04/27 15:15:30 marienz Exp $
+
+  27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-simgear-0.3.6,
+  files/digest-simgear-0.3.8, Manifest:
+  Fixing SHA256 digest, pass four
 
 *simgear-0.3.10 (08 Apr 2006)
 
