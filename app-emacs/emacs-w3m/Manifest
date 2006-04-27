@@ -1,52 +1,51 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3ea5898fe91a5a89713c09ceb8c0f6fc ChangeLog 5490
-RMD160 427aaefd92ddcb191ca3af75b37daf2140b8694a ChangeLog 5490
-SHA256 4628d09295ba55891d06af25d1d5cf453989442e9eaed1a6b5d1bfa7858551c3 ChangeLog 5490
-MD5 7deaac185fc43a11f5a61d9c77ce74bc emacs-w3m-1.3.6.ebuild 1532
-RMD160 8b679701104a6b0cea33838d1fa23397f7827462 emacs-w3m-1.3.6.ebuild 1532
-SHA256 03184a1cf2e0eb3c1ed2d5e0d218134abc47123ed8138b80cb69562571ec1d48 emacs-w3m-1.3.6.ebuild 1532
-MD5 aeadb3c65c5fa0cbf5489ca07e155fd1 emacs-w3m-1.4.3-r2.ebuild 1706
-RMD160 110e4341d2ebd8aff54aee391f1840eafb93018c emacs-w3m-1.4.3-r2.ebuild 1706
-SHA256 081c6b18e163b30fe6efa30a3a79f8675b711a3153d5f2080495545ebb861ee6 emacs-w3m-1.4.3-r2.ebuild 1706
-MD5 be681fa523c844480ea9f2ec7d40479c emacs-w3m-1.4.3.ebuild 1564
-RMD160 3dd589a4aae82b5f12ace9db6bbc2cae204f5d4a emacs-w3m-1.4.3.ebuild 1564
-SHA256 30e1eb9cbeefedc0c88651d78c8abdfb4acf9395efd1942b0972f8a78de92583 emacs-w3m-1.4.3.ebuild 1564
-MD5 a059cc30185dfcb2649ae8529295a038 emacs-w3m-1.4.4-r1.ebuild 1435
-RMD160 19c2ed451b6ab71fb77ea65691b72b86684a52f4 emacs-w3m-1.4.4-r1.ebuild 1435
-SHA256 27f00b422b3178e726cfeabfb15ceb6cadb1d783657bf07f5501c3b6d2898581 emacs-w3m-1.4.4-r1.ebuild 1435
-MD5 3fbb27f7e279c659e4ce9086bcd2cf5c emacs-w3m-1.4.4.ebuild 1552
-RMD160 3c9e871b688a9f1f4ab48d76127964073fa6ed0e emacs-w3m-1.4.4.ebuild 1552
-SHA256 aa7ee184369b772c1ebc5d320e2d817a2916b635882971fd2fde77debd6b8366 emacs-w3m-1.4.4.ebuild 1552
+AUX 70emacs-w3m-gentoo.el 605 RMD160 1fcae926280f1edd35c1f5134ecd194e15a8d825 SHA1 ee6bbb11a4b0de0cf974677eda884f4e00810953 size 605
 MD5 652abce1ecea5cf20323bd9f27ec8a6b files/70emacs-w3m-gentoo.el 605
 RMD160 1fcae926280f1edd35c1f5134ecd194e15a8d825 files/70emacs-w3m-gentoo.el 605
-SHA256 211c4e257142482667b071c5c7c56936e758911ec6532635eedc3b6226904ef3 files/70emacs-w3m-gentoo.el 605
-MD5 51951f89d5a4c0bed84788a881adc286 files/digest-emacs-w3m-1.3.6 67
-RMD160 c0bf36847a3d5b06509522cae51ebc328bd4c7f2 files/digest-emacs-w3m-1.3.6 67
-SHA256 53f8b78cecaaf220e6111d2f500b78efce9b26055c6d5b30afc9d40aebf27bac files/digest-emacs-w3m-1.3.6 67
-MD5 1a86c5bfcbb063dad0683ef554222234 files/digest-emacs-w3m-1.4.3 67
-RMD160 07da1745999fb735a179fd2318b489b1a8fbfaf9 files/digest-emacs-w3m-1.4.3 67
-SHA256 aa4fe4cfb75989d0c249961cd77854ff2d666aa9a0d593ec7ecf3511ee9c77dc files/digest-emacs-w3m-1.4.3 67
-MD5 844c0dc28b4157331c3dab94c9adecd7 files/digest-emacs-w3m-1.4.3-r2 123
-RMD160 615a1775e39d74f1c3d1d7a2b9a2d066f9b91ae8 files/digest-emacs-w3m-1.4.3-r2 123
-SHA256 22ed5492e8d6ae49370878e4472e78adf8e29a7664fa8c8234dd40101e89e717 files/digest-emacs-w3m-1.4.3-r2 123
-MD5 399b14135c7df63ea110530a7b2c1cc3 files/digest-emacs-w3m-1.4.4 67
-RMD160 47ba772ef8d97d1570141c9578de29f06b0a7437 files/digest-emacs-w3m-1.4.4 67
-SHA256 adbba6a2b1ce99b2a98c1f667eeb22006b13c321c4c6e9b1dff081ed9078b172 files/digest-emacs-w3m-1.4.4 67
-MD5 e83acc72e359bcde575e4e5135ebcf89 files/digest-emacs-w3m-1.4.4-r1 247
-RMD160 5b5a7b50ba790fd51a2ff8399012ebfb72f4405f files/digest-emacs-w3m-1.4.4-r1 247
-SHA256 37b8272dba71025b4bc410d552572e003d380928a21ea16431019c7ce9734dc0 files/digest-emacs-w3m-1.4.4-r1 247
+AUX emacs-w3m-1.4.3-e23.diff 1048 RMD160 1674b705d4e26befa686f804f27bd5012a1c08ab SHA1 210a009b78684fc7a25e4403ad310f9d9f42d400 size 1048
 MD5 a6227ba936faf41fe9c67abc735b06c7 files/emacs-w3m-1.4.3-e23.diff 1048
 RMD160 1674b705d4e26befa686f804f27bd5012a1c08ab files/emacs-w3m-1.4.3-e23.diff 1048
-SHA256 341eecc26c07090e95dbba13866eb44f9054211b91b49311f0083f15c8527349 files/emacs-w3m-1.4.3-e23.diff 1048
+DIST emacs-w3m-1.3.6.tar.gz 569994 RMD160 5012ac42b7223d20afd5550ad4b167717907a056 size 569994
+DIST emacs-w3m-1.4.3.tar.gz 725109 RMD160 7359676cf25a221c671e0c6f518ac0c779f8a9e5 size 725109
+DIST emacs-w3m-1.4.4.tar.gz 796123 RMD160 d57a1296bcfcb422c379c9e8f35311ff2ac7d702 size 796123
+DIST w3m-e23.el.gz 7689 RMD160 2fa9e515782481680c597d67646ab346d971608e size 7689
+EBUILD emacs-w3m-1.3.6.ebuild 1532 RMD160 8b679701104a6b0cea33838d1fa23397f7827462 SHA1 4b0fd6e4c709d343db53f6962b6a02c7ec71db92 size 1532
+MD5 7deaac185fc43a11f5a61d9c77ce74bc emacs-w3m-1.3.6.ebuild 1532
+RMD160 8b679701104a6b0cea33838d1fa23397f7827462 emacs-w3m-1.3.6.ebuild 1532
+EBUILD emacs-w3m-1.4.3-r2.ebuild 1706 RMD160 110e4341d2ebd8aff54aee391f1840eafb93018c SHA1 a4c8f9e0de8c542e7e703a86edce74d2618c3d95 size 1706
+MD5 aeadb3c65c5fa0cbf5489ca07e155fd1 emacs-w3m-1.4.3-r2.ebuild 1706
+RMD160 110e4341d2ebd8aff54aee391f1840eafb93018c emacs-w3m-1.4.3-r2.ebuild 1706
+EBUILD emacs-w3m-1.4.3.ebuild 1564 RMD160 3dd589a4aae82b5f12ace9db6bbc2cae204f5d4a SHA1 adaac97ce204032c841a4671ff227f3ebb6070a0 size 1564
+MD5 be681fa523c844480ea9f2ec7d40479c emacs-w3m-1.4.3.ebuild 1564
+RMD160 3dd589a4aae82b5f12ace9db6bbc2cae204f5d4a emacs-w3m-1.4.3.ebuild 1564
+EBUILD emacs-w3m-1.4.4-r1.ebuild 1435 RMD160 19c2ed451b6ab71fb77ea65691b72b86684a52f4 SHA1 14b9a001226225644ae742ab8055e6fe4a0c9f2c size 1435
+MD5 a059cc30185dfcb2649ae8529295a038 emacs-w3m-1.4.4-r1.ebuild 1435
+RMD160 19c2ed451b6ab71fb77ea65691b72b86684a52f4 emacs-w3m-1.4.4-r1.ebuild 1435
+EBUILD emacs-w3m-1.4.4.ebuild 1552 RMD160 3c9e871b688a9f1f4ab48d76127964073fa6ed0e SHA1 cd87dd03c7ff4ba290e12b0abd46802f6ed41401 size 1552
+MD5 3fbb27f7e279c659e4ce9086bcd2cf5c emacs-w3m-1.4.4.ebuild 1552
+RMD160 3c9e871b688a9f1f4ab48d76127964073fa6ed0e emacs-w3m-1.4.4.ebuild 1552
+MISC ChangeLog 5745 RMD160 2221015b5129c8aa1159849c5d09a92ebb7ff55c SHA1 2aa74316a47ec1473a8db7cd50db114fd4881d74 size 5745
+MD5 3fc1fc0b4d4d4e6d618616d1bbea2851 ChangeLog 5745
+RMD160 2221015b5129c8aa1159849c5d09a92ebb7ff55c ChangeLog 5745
+MISC metadata.xml 158 RMD160 415d172437ca754d24fc5ab186ba8e77934d96e4 SHA1 61f6eff9729cd87a725c2a70c81aca4270a17fc4 size 158
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 RMD160 415d172437ca754d24fc5ab186ba8e77934d96e4 metadata.xml 158
-SHA256 1393bdef3a74343fdb40a112c7096a1af16f67e7a43413250de28dfe73810eab metadata.xml 158
+MD5 9730cd3f0a58f655e7d526fd26ccc103 files/digest-emacs-w3m-1.3.6 145
+RMD160 04dbff6436d2e2c39d23507eff829a18a473092c files/digest-emacs-w3m-1.3.6 145
+MD5 35c53f2ac6098539eacf5c5377567c3d files/digest-emacs-w3m-1.4.3 145
+RMD160 c4bd1b77f49544a13f7118627273dc038bff4ab5 files/digest-emacs-w3m-1.4.3 145
+MD5 8c1e2deeb1d8719c782e7fbf1da50b1b files/digest-emacs-w3m-1.4.3-r2 268
+RMD160 12b155e14924cf668c6da57ad758ef6c30dfd816 files/digest-emacs-w3m-1.4.3-r2 268
+MD5 6feae728cd9c081d9f3e605ce493047f files/digest-emacs-w3m-1.4.4 145
+RMD160 8fa8af2cbb40ab8f205d153d85e3b2a044f1cea6 files/digest-emacs-w3m-1.4.4 145
+MD5 6feae728cd9c081d9f3e605ce493047f files/digest-emacs-w3m-1.4.4-r1 145
+RMD160 8fa8af2cbb40ab8f205d153d85e3b2a044f1cea6 files/digest-emacs-w3m-1.4.4-r1 145
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFET6r7yiNZaEAZA+ARAovqAJ4nY9yyM/dDOdNpL8T5E/auXUe7rACgg332
-uzsT0gWbFXJ8SN3e2jiHAwE=
-=8lvp
+iD8DBQFEULFaW78445TWHXcRArm1AKCB0g1KxBzt6NDxcARPawWaz/S2PACeJiD5
+Cs8wOFhDGvqhUWpKfT7uoPE=
+=c2+t
 -----END PGP SIGNATURE-----
