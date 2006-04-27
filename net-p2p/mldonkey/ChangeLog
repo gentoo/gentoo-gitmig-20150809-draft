@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.119 2006/03/15 00:44:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.120 2006/04/27 19:24:26 mattam Exp $
+
+  27 Apr 2006; Matthieu Sozeau <mattam@gentoo.org>
+  +files/mldonkey-2.7.3-configure.patch, mldonkey-2.7.3.ebuild:
+  Patch for ocaml-3.09.2, may need to be backported.
 
   15 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> mldonkey-2.7.3.ebuild:
   Seems to work nice enough, deserves ~hppa

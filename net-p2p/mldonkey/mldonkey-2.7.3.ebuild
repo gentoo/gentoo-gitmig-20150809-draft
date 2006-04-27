@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.7.3.ebuild,v 1.3 2006/03/15 00:44:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.7.3.ebuild,v 1.4 2006/04/27 19:24:27 mattam Exp $
 
 inherit eutils
 
@@ -63,6 +63,8 @@ pkg_setup() {
 src_compile() {
 	export WANT_AUTOCONF=2.5
 	cd ${S}/config
+	epatch ${FILESDIR}/${P}-configure.patch
+
 	autoconf
 
 	# the dirs are not (yet) used, but it doesn't hurt to specify them anyway
