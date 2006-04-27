@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/filewatcher
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/ChangeLog,v 1.4 2006/02/20 20:13:54 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/ChangeLog,v 1.5 2006/04/27 09:10:45 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-filewatcher-2.4.0, files/digest-filewatcher-2.4.3, Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
 *filewatcher-2.4.3 (20 Feb 2006)
 

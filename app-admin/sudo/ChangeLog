@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.91 2006/04/03 00:19:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.92 2006/04/27 09:17:10 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-sudo-1.6.8_p9,
+  files/digest-sudo-1.6.8_p9-r2, files/digest-sudo-1.6.8_p11,
+  files/digest-sudo-1.6.8_p12, Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
   03 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> sudo-1.6.8_p12.ebuild:
   Add ~x86-fbsd keyword.

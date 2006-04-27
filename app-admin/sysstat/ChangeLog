@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.43 2006/02/25 01:31:44 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.44 2006/04/27 09:19:44 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-sysstat-5.0.2,
+  files/digest-sysstat-5.0.5-r2, files/digest-sysstat-6.0.1, Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
   25 Feb 2006; Aaron Walker <ka0ttic@gentoo.org> sysstat-5.0.2.ebuild,
   sysstat-5.0.5-r2.ebuild, sysstat-6.0.1.ebuild:
