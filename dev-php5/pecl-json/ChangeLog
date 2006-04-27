@@ -1,0 +1,10 @@
+# ChangeLog for dev-php5/pecl-json
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-json/ChangeLog,v 1.1 2006/04/27 20:36:12 chtekk Exp $
+
+*pecl-json-1.2.1 (27 Apr 2006)
+
+  27 Apr 2006; Luca Longinotti <chtekk@gentoo.org> +metadata.xml,
+  +pecl-json-1.2.1.ebuild:
+  Move from overlay and update.
+
