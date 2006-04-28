@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-client/ggz-kde-client-0.0.9.ebuild,v 1.2 2006/03/24 16:29:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-client/ggz-kde-client-0.0.9.ebuild,v 1.3 2006/04/28 22:46:23 tupone Exp $
 
 inherit kde
 
@@ -15,5 +15,7 @@ KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="~dev-games/ggz-client-libs-${PV}"
+
+PATCHES="${FILESDIR}/${P}-gcc41.patch"
 
 need-kde 3

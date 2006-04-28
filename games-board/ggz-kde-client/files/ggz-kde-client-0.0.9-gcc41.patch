@@ -1,0 +1,85 @@
+--- ggz-kde/src/abstract/Makefile.in.old	2006-04-28 23:38:18.000000000 +0200
++++ ggz-kde/src/abstract/Makefile.in	2006-04-28 23:38:51.000000000 +0200
+@@ -262,7 +262,7 @@
+ 
+ AM_CXXFLAGS = @COMPILEOPTIONS@ $(GGZCORE_INCLUDES)
+ 
+-INCLUDES = $(ggzcorepp_includes) -I $(top_srcdir)/ggz-kde/src -I $(kde_includes)
++INCLUDES = $(ggzcorepp_includes) -I $(top_srcdir)/ggz-kde/src -I $(qt_includes) -I $(kde_includes)
+ subdir = ggz-kde/src/abstract
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+--- shadowbridge/shadownet.cpp.old	2006-04-28 23:53:33.000000000 +0200
++++ shadowbridge/shadownet.cpp	2006-04-28 23:55:20.000000000 +0200
+@@ -132,43 +132,43 @@
+ void ShadowNet::slotRead(int sock)
+ {
+ 	QDataStream *s;
+-	char transmit = '\0';
++	Q_INT8 transmit = Q_INT8('\0');
+ 
+ 	//cout << "game -> ggzcore: " << sock << endl;
+ 
+ 	s = list.at(m_activated);
+ 	if((!s) || (!net)) return;
+ 
+-	*s >> (Q_INT8)transmit;
+-	*net << (Q_INT8)transmit;
++	*s >> transmit;
++	*net << transmit;
+ 
+ 	if(!m_incoming.isEmpty())
+ 	{
+ 		emit signalIncoming(m_incoming);
+ 		m_incoming = "";
+ 	}
+-	m_outgoing.append(convert(transmit));
++	m_outgoing.append(convert(char(transmit)));
+ }
+ 
+ void ShadowNet::slotWrite(int sock)
+ {
+ 	QDataStream *s;
+-	char transmit = '\0';
++	Q_INT8 transmit = Q_INT8('\0');
+ 
+ 	//cout << "ggzcore -> game " << sock << endl;
+ 
+ 	s = list.at(m_activated);
+ 	if((!s) || (!net)) return;
+ 
+-	*net >> (Q_INT8)transmit;
+-	*s << (Q_INT8)transmit;
++	*net >> transmit;
++	*s << transmit;
+ 
+ 	if(!m_outgoing.isEmpty())
+ 	{
+ 		emit signalOutgoing(m_outgoing);
+ 		m_outgoing = "";
+ 	}
+-	m_incoming.append(convert(transmit));
++	m_incoming.append(convert(char(transmit)));
+ }
+ 
+ void ShadowNet::slotActivated(int index)
+--- kcm_ggz/kcm_ggz.cpp.old	2006-04-29 00:16:59.000000000 +0200
++++ kcm_ggz/kcm_ggz.cpp	2006-04-29 00:22:39.000000000 +0200
+@@ -15,7 +15,7 @@
+ 
+ #include "config.h"
+ 
+-typedef KCMGGZPane* (*panefunc)(QWidget *parent = NULL, const char *name = NULL);
++typedef KCMGGZPane* (*panefunc)(QWidget *parent, const char *name);
+ 
+ KCMGGZ::KCMGGZ(KInstance *instance, QWidget *parent, const char *name)
+ : KCModule(instance, parent, name)
+@@ -50,7 +50,7 @@
+ 				if(func)
+ 				{
+ 					init = (panefunc)func;
+-					pane = (*init)(ctl);
++					pane = (*init)(ctl, NULL);
+ 					if(pane)
+ 					{
+ 						panelist.append(pane);
