@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/madman
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/ChangeLog,v 1.14 2006/04/18 18:16:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/ChangeLog,v 1.15 2006/04/28 00:56:16 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-madman-0.91.1,
+  files/digest-madman-0.93, Manifest:
+  Fixing SHA256 digest, pass four
 
   18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/madman-0.93-uic.patch, madman-0.93.ebuild:

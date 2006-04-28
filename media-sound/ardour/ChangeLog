@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.53 2006/04/03 17:30:54 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.54 2006/04/28 00:55:32 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   03 Apr 2006; Mark Loeser <halcy0n@gentoo.org> ardour-0.9_beta30.ebuild,
   ardour-0.99.2.ebuild:
