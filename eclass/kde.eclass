@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.149 2006/04/01 16:54:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.150 2006/04/28 21:53:10 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -265,6 +265,10 @@ kde_src_install() {
 	shift
 	done
 
+	if [[ -n ${KDEBASE} ]] ; then
+		# work around bug #97196
+		mv ${D}/usr/share/doc/* "${D}/$(kde-config --expandvars --install html)/../"
+	fi
 }
 
 # slot rebuild function, thanks to Carsten Lohrke in bug 98425.
