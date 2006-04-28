@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/kblogger
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/ChangeLog,v 1.1 2006/04/28 00:07:55 flameeyes Exp $
+
+*kblogger-0.6_beta1 (28 Apr 2006)
+
+  28 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +kblogger-0.6_beta1.ebuild:
+  Initial import of KDE quick blogging applet. Thanks to Ed Wiget and
+  Christian Weilbach in bug #120010.
+
