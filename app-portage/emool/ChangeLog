@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/emool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emool/ChangeLog,v 1.4 2006/04/27 21:43:59 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emool/ChangeLog,v 1.5 2006/04/28 00:29:24 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-emool-0.10,
   Manifest:
