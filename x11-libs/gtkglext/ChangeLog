@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkglext
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.48 2006/03/24 15:24:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.49 2006/04/28 00:00:22 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-gtkglext-1.0.6-r3, Manifest:
+  Fixing SHA256 digest, pass four
 
 *gtkglext-1.2.0 (24 Mar 2006)
 

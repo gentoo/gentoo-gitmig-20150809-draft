@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.10 2006/02/23 17:30:08 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.11 2006/04/27 23:59:56 antarus Exp $
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-goffice-0.1.0,
+  files/digest-goffice-0.1.2, Manifest:
+  Fixing SHA256 digest, pass four
 
   21 Feb 2006; Aron Griffis <agriffis@gentoo.org> goffice-0.1.2.ebuild:
   Mark 0.1.2 ~ia64. #110767

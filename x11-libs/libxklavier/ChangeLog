@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.61 2006/03/14 12:48:00 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.62 2006/04/28 00:07:33 antarus Exp $
+
+  28 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-libxklavier-2.0, Manifest:
+  Fixing SHA256 digest, pass four
 
   14 Mar 2006; Marinus Schraal <foser@gentoo.org> libxklavier-2.2.ebuild :
   Depend on xkbdata or xkeyboard-config (#11318)

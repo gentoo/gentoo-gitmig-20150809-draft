@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/scw
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/ChangeLog,v 1.1 2006/04/10 12:32:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/ChangeLog,v 1.2 2006/04/28 00:14:21 antarus Exp $
+
+  28 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
 *scw-0.4.3 (10 Apr 2006)
 

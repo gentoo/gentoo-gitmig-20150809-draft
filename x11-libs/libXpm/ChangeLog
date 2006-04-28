@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXpm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/ChangeLog,v 1.18 2006/03/31 19:47:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/ChangeLog,v 1.19 2006/04/28 00:08:18 antarus Exp $
+
+  28 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> libXpm-3.5.4.2.ebuild:
   Add ~x86-fbsd keyword.

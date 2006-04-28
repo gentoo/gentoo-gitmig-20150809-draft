@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXxf86dga
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/ChangeLog,v 1.18 2006/04/13 13:30:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/ChangeLog,v 1.19 2006/04/28 00:10:16 antarus Exp $
+
+  28 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-libXxf86dga-1.0.0-r1, Manifest:
+  Fixing SHA256 digest, pass four
 
   13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   libXxf86dga-1.0.0-r1.ebuild:
