@@ -1,12 +1,26 @@
-MD5 64070cf252c326070e4bffd244f7010a ChangeLog 1736
-RMD160 37dad6a617741ac45eac75341f3b3bfa3d29a862 ChangeLog 1736
-SHA256 6892669d97940b36b39cfd5a4f79949c42854169fdd23517451cb9e9954636ed ChangeLog 1736
-MD5 55a3207cefc54f6b6b784b27c9d6bbad files/digest-xproxymanagementprotocol-1.0.2 292
-RMD160 a253f7cceffc838b003945b7a097a865e2a4d83d files/digest-xproxymanagementprotocol-1.0.2 292
-SHA256 52261361ddd3d517178f40470787fd46ea2b34414e331075b953cd4a2cd1ae76 files/digest-xproxymanagementprotocol-1.0.2 292
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
-SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST xproxymanagementprotocol-1.0.2.tar.bz2 37007 RMD160 c55bb82eb6d035a85a50aac2f377e27d4e6b6adb SHA256 c45176d002c85c142ac52774680f5325d330c5ecc32d4d6a056d85ee039a0cbc size 37007
+EBUILD xproxymanagementprotocol-1.0.2.ebuild 492 RMD160 f5c3a75d631fd084d439580e6a195177c9cda919 SHA1 efe98564bbdfeefc0a6e9c1eca09c3270ea87944 SHA256 dbbdabb713fedde60b373f54cea545aed8e33f51eaedb267c8883d7b2fdef5e1 size 492
 MD5 65e240b709a7aa059bc9bc6baef47db2 xproxymanagementprotocol-1.0.2.ebuild 492
 RMD160 f5c3a75d631fd084d439580e6a195177c9cda919 xproxymanagementprotocol-1.0.2.ebuild 492
 SHA256 dbbdabb713fedde60b373f54cea545aed8e33f51eaedb267c8883d7b2fdef5e1 xproxymanagementprotocol-1.0.2.ebuild 492
+MISC ChangeLog 1828 RMD160 019284927392ec45b3623d0c2aeab2cfda1b8033 SHA1 311f38055b8ed91ff0907b6dd2d8e8f36bb06833 SHA256 5ec7c409d0957cf551a3c9db7633fab6480f919a6aee1dbc6735a6a43ea9d8ad size 1828
+MD5 d332b5925db83f63f3c8ab3641dcb962 ChangeLog 1828
+RMD160 019284927392ec45b3623d0c2aeab2cfda1b8033 ChangeLog 1828
+SHA256 5ec7c409d0957cf551a3c9db7633fab6480f919a6aee1dbc6735a6a43ea9d8ad ChangeLog 1828
+MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 size 156
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
+SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
+MD5 55a3207cefc54f6b6b784b27c9d6bbad files/digest-xproxymanagementprotocol-1.0.2 292
+RMD160 a253f7cceffc838b003945b7a097a865e2a4d83d files/digest-xproxymanagementprotocol-1.0.2 292
+SHA256 52261361ddd3d517178f40470787fd46ea2b34414e331075b953cd4a2cd1ae76 files/digest-xproxymanagementprotocol-1.0.2 292
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUWDdW78445TWHXcRAhaAAJ0QvKW0prod91hbtxer/wMJw15vtQCglj02
+LmazTECg0gql9aa2G8diju8=
+=yJy9
+-----END PGP SIGNATURE-----
