@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/http-fetcher
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/http-fetcher/ChangeLog,v 1.17 2006/02/06 19:44:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/http-fetcher/ChangeLog,v 1.18 2006/04/28 00:35:51 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-http-fetcher-1.0.2, files/digest-http-fetcher-1.0.3,
+  files/digest-http-fetcher-1.1.0, Manifest:
+  Fixing SHA256 digest, pass four
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> http-fetcher-1.1.0.ebuild:
   stable on amd64
