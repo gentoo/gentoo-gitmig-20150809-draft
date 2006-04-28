@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.44 2006/04/05 12:11:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.45 2006/04/28 03:40:13 weeve Exp $
+
+  28 Apr 2006; Jason Wever <weeve@gentoo.org> lilypond-2.8.0-r1.ebuild:
+  Re-added ~sparc keyword as it went missing.
 
   05 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
   lilypond-2.8.0-r1.ebuild:
