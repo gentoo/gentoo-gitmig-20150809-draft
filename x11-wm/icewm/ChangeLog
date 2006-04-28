@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.110 2006/04/27 01:41:54 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.111 2006/04/28 00:02:08 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-icewm-1.2.23,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
 *icewm-1.2.26 (27 Apr 2006)
 

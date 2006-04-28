@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.35 2006/04/06 03:14:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.36 2006/04/28 00:05:33 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-ratpoison-1.3.0, files/digest-ratpoison-1.4.0_beta2,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
 *ratpoison-1.4.0 (06 Apr 2006)
 
