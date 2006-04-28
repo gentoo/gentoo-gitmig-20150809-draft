@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.29 2006/04/28 18:27:05 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.30 2006/04/28 18:30:18 phreak Exp $
+
+  28 Apr 2006; Christian Heim <phreak@gentoo.org>
+  -openvz-sources-022.072-r2.ebuild, -openvz-sources-026.007.ebuild:
+  Removing outdated ebuilds
 
 *openvz-sources-022.077 (28 Apr 2006)
 
