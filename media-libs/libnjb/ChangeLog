@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libnjb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.27 2006/01/29 21:17:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.28 2006/04/28 00:53:06 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-libnjb-1.2,
+  files/digest-libnjb-2.1.2, files/digest-libnjb-2.2,
+  files/digest-libnjb-2.2.3, files/digest-libnjb-2.2.4, Manifest:
+  Fixing SHA256 digest, pass four
 
 *libnjb-2.2.5 (29 Jan 2006)
 
