@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 156d4f944286e4a377f5a4ec749341cd ChangeLog 1582
-MD5 0d135361848d9f3898fb8795e11bbc53 ipadic-2.6.1.ebuild 731
-MD5 f18b0ccfbdd075a4899dbd53f7891a7a ipadic-2.6.3.ebuild 731
-MD5 a3caf0e7953030c648df6aa60794470a ipadic-2.7.0.ebuild 769
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 4afb27bed8feaa85ed28a3a53f0c26de files/digest-ipadic-2.6.1 65
 MD5 ff582187123f3456875348cda153c069 files/digest-ipadic-2.6.3 65
 MD5 d8ff2368aa8063da05ece0af45ed5700 files/digest-ipadic-2.7.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCe4PQKRy60XGEcJIRAvdrAJ0VImvLiAoLN8O7T+30VGNuV6n8owCeM5D2
-Yda+Co0Aa55ihWOam4vEEt0=
-=1hgK
------END PGP SIGNATURE-----
+MD5 6bc8f81fe63f4f944309db5a3c16130d ipadic-2.6.1.ebuild 719
+MD5 e9c1537b3965bd06193d3a22613de6bc ipadic-2.6.3.ebuild 718
+MD5 1b3309c7c028f53bf804f9e19b629c16 ipadic-2.7.0.ebuild 758
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156

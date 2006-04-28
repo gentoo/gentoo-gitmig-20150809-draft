@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.7.0.ebuild,v 1.8 2005/05/06 14:48:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.7.0.ebuild,v 1.9 2006/04/28 13:54:45 hattya Exp $
 
 IUSE=""
 
@@ -25,5 +25,5 @@ src_install () {
 
 	insinto /etc
 	doins chasenrc
-	dodoc AUTHORS ChangeLog INSTALL* NEWS README || die
+	dodoc AUTHORS ChangeLog NEWS README || die
 }
