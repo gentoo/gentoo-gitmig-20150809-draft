@@ -1,6 +1,11 @@
 # ChangeLog for app-text/namazu
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.14 2005/12/04 19:48:35 tgall Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.15 2006/04/28 13:44:49 hattya Exp $
+
+*namazu-2.0.16 (28 Apr 2006)
+
+  28 Apr 2006; Akinori Hattori <hattya@gentoo.org> +namazu-2.0.16.ebuild:
+  new upstream release.
 
   04 Dec 2005; Tom Gall <tgall@gentoo.org> namazu-2.0.14.ebuild:
   stable on ppc64
