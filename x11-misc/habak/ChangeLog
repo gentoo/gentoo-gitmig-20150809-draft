@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/habak
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.19 2006/02/20 19:04:36 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.20 2006/04/28 00:17:04 antarus Exp $
+
+  28 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-habak-0.2.4.1,
+  files/digest-habak-0.2.5, Manifest:
+  Fixing SHA256 digest, pass four
 
   20 Feb 2006; Lukasz Strzygowski <lucass@gentoo.org> -habak-0.2.1.ebuild,
   -habak-0.2.3.ebuild, -habak-0.2.4.ebuild, habak-0.2.4.1.ebuild,

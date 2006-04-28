@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/treeline
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.24 2006/03/22 22:17:38 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.25 2006/04/28 00:19:49 antarus Exp $
+
+  28 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-treeline-0.12.0, files/digest-treeline-0.13.1, Manifest:
+  Fixing SHA256 digest, pass four
 
   22 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
   treeline-0.13.1.ebuild:

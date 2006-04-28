@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/remind
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.15 2006/02/07 21:49:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.16 2006/04/28 00:18:50 antarus Exp $
+
+  28 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-remind-03.00.22, files/digest-remind-03.00.23-r2,
+  files/digest-remind-03.00.24, Manifest:
+  Fixing SHA256 digest, pass four
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> remind-03.00.23-r2.ebuild:
   stable on amd64
