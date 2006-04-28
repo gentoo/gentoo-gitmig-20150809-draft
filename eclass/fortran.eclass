@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.13 2006/01/17 03:29:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.14 2006/04/28 01:20:27 spyderous Exp $
 #
 # Author: Danny van Dyk <kugelfang@gentoo.org>
 #
@@ -85,10 +85,10 @@ need_fortran() {
 		for PROFILE in $@; do
 			case ${PROFILE} in
 				gfortran)
-					eerror "[${i}] USE=\"fortran\" emerge sys-devel/gcc-4.*"
+					eerror "[${i}] USE=\"fortran\" emerge =sys-devel/gcc-4*"
 					;;
 				g77)
-					eerror "[${i}] USE=\"fortran\" emerge sys-devel/gcc-3.*"
+					eerror "[${i}] USE=\"fortran\" emerge =sys-devel/gcc-3*"
 					;;
 				f2c)
 					eerror "[${i}] emerge dev-lang/f2c"
