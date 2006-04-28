@@ -1,13 +1,62 @@
-MD5 79c58ed62b313d04efe7494f75954597 ChangeLog 2654
-MD5 c73dc01ac8a7c1d8e03eb1dfad1f64b8 files/digest-kinterbasdb-3.0.2 72
-MD5 309a78d0dd430cf2f63f9066227428ae files/digest-kinterbasdb-3.1 71
-MD5 f46da879814d964b500193d1615b4a3a files/digest-kinterbasdb-3.1.1 73
-MD5 2e8919cff19451711a360beffc123e1a files/digest-kinterbasdb-3.1.2 73
-MD5 07d2c9401068f260d73f27ff75071703 files/digest-kinterbasdb-3.1.3 73
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX kinterbasdb-3.0.2-py23.patch 2518 RMD160 9bd7128a2b8fc72ce127ca3228234f4b5152edb8 SHA1 69f0ffb9433436c329cff3169f52f285bda41d4b SHA256 0ee4c63f6d0343101cdc55c6a5c8d80f7808be213c16718231494cdf5f2953aa size 2518
 MD5 1efb7ccd6e6d24df8da73638b1f9d443 files/kinterbasdb-3.0.2-py23.patch 2518
+RMD160 9bd7128a2b8fc72ce127ca3228234f4b5152edb8 files/kinterbasdb-3.0.2-py23.patch 2518
+SHA256 0ee4c63f6d0343101cdc55c6a5c8d80f7808be213c16718231494cdf5f2953aa files/kinterbasdb-3.0.2-py23.patch 2518
+DIST kinterbasdb-3.0.2-src.tar.gz 86287 size 86287
+DIST kinterbasdb-3.1.1.src.tar.gz 216963 size 216963
+DIST kinterbasdb-3.1.2.src.tar.gz 219208 size 219208
+DIST kinterbasdb-3.1.3.src.tar.gz 220347 size 220347
+DIST kinterbasdb-3.1.src.tar.gz 215252 size 215252
+EBUILD kinterbasdb-3.0.2.ebuild 933 RMD160 fdc588e3d39cf2d3257d1081e2c6a1af821a4110 SHA1 9e2e255ef5fe9cabca0e1374375c2c57a49ad785 SHA256 42715e60f048484914907a68d8b8dad336daedf87889f78286b46fe4e61ee500 size 933
 MD5 8d69c72143e7e48c7d5c1387bbf05d18 kinterbasdb-3.0.2.ebuild 933
+RMD160 fdc588e3d39cf2d3257d1081e2c6a1af821a4110 kinterbasdb-3.0.2.ebuild 933
+SHA256 42715e60f048484914907a68d8b8dad336daedf87889f78286b46fe4e61ee500 kinterbasdb-3.0.2.ebuild 933
+EBUILD kinterbasdb-3.1.1.ebuild 784 RMD160 08705e30ee1855665cb4c5e26ada98326dff3474 SHA1 beeb7b22242828413f7586ad0683b0e66bd56cb9 SHA256 0e99b4ef6c1ba3857bdb9a57da0d468f1082417cf914d5bb88b4044d880ee3c8 size 784
 MD5 06437059915d57fd32f5f35c989c7321 kinterbasdb-3.1.1.ebuild 784
+RMD160 08705e30ee1855665cb4c5e26ada98326dff3474 kinterbasdb-3.1.1.ebuild 784
+SHA256 0e99b4ef6c1ba3857bdb9a57da0d468f1082417cf914d5bb88b4044d880ee3c8 kinterbasdb-3.1.1.ebuild 784
+EBUILD kinterbasdb-3.1.2.ebuild 786 RMD160 f00d9c5763cb5ee47b1dab44f9993481b751a9f2 SHA1 897efa9dc084e7f001138386ea2554e0d1aa1122 SHA256 f46b4a942cc3bdf85277eac1c4ca040a533b970eaa39d4d3316faa79e45bf504 size 786
 MD5 5ea882b369cdf19729b9816da52d5eaf kinterbasdb-3.1.2.ebuild 786
-MD5 4fc598c3a1615fe0885fa7fb3015392f kinterbasdb-3.1.3.ebuild 738
+RMD160 f00d9c5763cb5ee47b1dab44f9993481b751a9f2 kinterbasdb-3.1.2.ebuild 786
+SHA256 f46b4a942cc3bdf85277eac1c4ca040a533b970eaa39d4d3316faa79e45bf504 kinterbasdb-3.1.2.ebuild 786
+EBUILD kinterbasdb-3.1.3.ebuild 739 RMD160 ada6691b188b93b7e6bedeabc537409bafe9a343 SHA1 4cef6fe9b158b1935d854e37be59effb180fcdfa SHA256 625472fd55ddbf9b4afd7eb23741724605b08a5edb95b2b1600e50aea9b44527 size 739
+MD5 9efd96950d70a499a75b24b6bb8db297 kinterbasdb-3.1.3.ebuild 739
+RMD160 ada6691b188b93b7e6bedeabc537409bafe9a343 kinterbasdb-3.1.3.ebuild 739
+SHA256 625472fd55ddbf9b4afd7eb23741724605b08a5edb95b2b1600e50aea9b44527 kinterbasdb-3.1.3.ebuild 739
+EBUILD kinterbasdb-3.1.ebuild 782 RMD160 8075e0523820f97392032b870d721585279fd87b SHA1 1c8d9ae3e91df315dbf6b86d3dd8671aa58aabb2 SHA256 fbc570d6ac607738b6d087e6dc0dba92f537c6f6d8e420eb99126cd1b5935935 size 782
 MD5 8b138113e7cbfe22d8d1bc96d6f75fbf kinterbasdb-3.1.ebuild 782
+RMD160 8075e0523820f97392032b870d721585279fd87b kinterbasdb-3.1.ebuild 782
+SHA256 fbc570d6ac607738b6d087e6dc0dba92f537c6f6d8e420eb99126cd1b5935935 kinterbasdb-3.1.ebuild 782
+MISC ChangeLog 2760 RMD160 a7ba84c960d85ec8930a2a7456d23b9179960b09 SHA1 6d142974f4d528f280e3f6ddebf72911a5906754 SHA256 b9f2be1f74e74c8f05a339bfdfe11b519b1556f1482b4a59058e95bf309292b7 size 2760
+MD5 1028d914a45a141e2e25a4d23bd2d4c0 ChangeLog 2760
+RMD160 a7ba84c960d85ec8930a2a7456d23b9179960b09 ChangeLog 2760
+SHA256 b9f2be1f74e74c8f05a339bfdfe11b519b1556f1482b4a59058e95bf309292b7 ChangeLog 2760
+MISC metadata.xml 159 RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f SHA1 c8e604d56dae898258b5254d78cfeac0b981e288 SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 size 159
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
+SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
+MD5 c73dc01ac8a7c1d8e03eb1dfad1f64b8 files/digest-kinterbasdb-3.0.2 72
+RMD160 15f44ded424b9d924535baec22fc85dc92b9e66b files/digest-kinterbasdb-3.0.2 72
+SHA256 7d681205562db68da3bd4b9803538a7f6f40184132d16fc98dac26244e6c232f files/digest-kinterbasdb-3.0.2 72
+MD5 309a78d0dd430cf2f63f9066227428ae files/digest-kinterbasdb-3.1 71
+RMD160 191968dd81673db030f04a5fa308ec0582d31b87 files/digest-kinterbasdb-3.1 71
+SHA256 8357f37c2f028b707f88bed3dace53844638e9b383cbc002a798ec7a45ae94f0 files/digest-kinterbasdb-3.1 71
+MD5 f46da879814d964b500193d1615b4a3a files/digest-kinterbasdb-3.1.1 73
+RMD160 54b9a715e0dbccd21e67467bf09d3c449396b259 files/digest-kinterbasdb-3.1.1 73
+SHA256 d94e7003511d0ba4734a5820fb4bb529b27bd1e8d8f03e940b7b48f405a6f1ff files/digest-kinterbasdb-3.1.1 73
+MD5 2e8919cff19451711a360beffc123e1a files/digest-kinterbasdb-3.1.2 73
+RMD160 ffc5bdca4118c27152bd6334d34b1c874eb3e26b files/digest-kinterbasdb-3.1.2 73
+SHA256 cc60b60af9eb58f9d69da4e46697d630af84cbc0782231c1e8d7723a25d84ec8 files/digest-kinterbasdb-3.1.2 73
+MD5 07d2c9401068f260d73f27ff75071703 files/digest-kinterbasdb-3.1.3 73
+RMD160 c3006f1c112063640637c8f26ff6b6d5aa6c9bdc files/digest-kinterbasdb-3.1.3 73
+SHA256 a1ba63d4ce156d675bd18a9d7b4e37c9f6dcb35109021402d99f0b66bc3f3fa2 files/digest-kinterbasdb-3.1.3 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUqR1CRZPokWLroQRAmugAKCcuAOsPoaNuax7KbB6xXZ9yhjuEACfStm9
+bxHNP2RL84G03qeeXZbfq00=
+=6mW6
+-----END PGP SIGNATURE-----
