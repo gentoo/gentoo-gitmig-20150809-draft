@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/printproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/printproto/ChangeLog,v 1.17 2006/04/28 00:22:21 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/printproto/ChangeLog,v 1.18 2006/04/28 14:48:49 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-printproto-1.0.3, Manifest:
+  Revert to working digest.
 
   28 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-printproto-1.0.3, Manifest:
