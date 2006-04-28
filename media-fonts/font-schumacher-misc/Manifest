@@ -1,12 +1,26 @@
-MD5 6a8283e5f164d2078db384edc4b22e79 ChangeLog 2201
-RMD160 7b2076c9021dd40ba418bae5ef7fb64ecdb8e16f ChangeLog 2201
-SHA256 1821c48414a6377d1dfddba11bf2a2a2f5a7af5032ab728b7ba7dc5f70113db2 ChangeLog 2201
-MD5 5de832add877b5a3cea516b4fe0a75ad files/digest-font-schumacher-misc-1.0.0 280
-RMD160 51d3d2f59edd0ef54954fda690753a54f23604b3 files/digest-font-schumacher-misc-1.0.0 280
-SHA256 bbda5f2de0ad1625e243c18d94d8dea0ed1d7a79a992730d6012422c26c5a8cf files/digest-font-schumacher-misc-1.0.0 280
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST font-schumacher-misc-1.0.0.tar.bz2 78084 RMD160 0493fef4f4d23c696a931473be974f3b684a6fde SHA256 454e6cf885a4475569ce24ad3d4a82cb331d74e1a25f0747694a71098b56ef7a size 78084
+EBUILD font-schumacher-misc-1.0.0.ebuild 603 RMD160 ed96ad313fda2298cb402cacef1b52be4ea10a4b SHA1 0327a082146cea63d993abea1e597eff8310d105 SHA256 be61af22f4c592058c498c20b6458e5c142f823145c1f9e31bb1f13c9ee90e32 size 603
 MD5 2e59c59ed42aa85b26ade2f3787cd49d font-schumacher-misc-1.0.0.ebuild 603
 RMD160 ed96ad313fda2298cb402cacef1b52be4ea10a4b font-schumacher-misc-1.0.0.ebuild 603
 SHA256 be61af22f4c592058c498c20b6458e5c142f823145c1f9e31bb1f13c9ee90e32 font-schumacher-misc-1.0.0.ebuild 603
+MISC ChangeLog 2293 RMD160 6b740df1518ce05baacdb5aeec59e5a16ee61c26 SHA1 a153437c4903ef539697c65a2644a9b628099467 SHA256 a9528c4c6ef7165a08c2408d708a58facfe9103e9a93e248e59d3c815e00e0d9 size 2293
+MD5 665ea203dac4e2c7ef52f64928f56a8d ChangeLog 2293
+RMD160 6b740df1518ce05baacdb5aeec59e5a16ee61c26 ChangeLog 2293
+SHA256 a9528c4c6ef7165a08c2408d708a58facfe9103e9a93e248e59d3c815e00e0d9 ChangeLog 2293
+MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 size 156
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
+MD5 5de832add877b5a3cea516b4fe0a75ad files/digest-font-schumacher-misc-1.0.0 280
+RMD160 51d3d2f59edd0ef54954fda690753a54f23604b3 files/digest-font-schumacher-misc-1.0.0 280
+SHA256 bbda5f2de0ad1625e243c18d94d8dea0ed1d7a79a992730d6012422c26c5a8cf files/digest-font-schumacher-misc-1.0.0 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUWbzW78445TWHXcRAsUGAJ9mnnc3ZtVWwfhDoN/cc+RJCpmuSACdEocP
+7rXO2E4yIB+LjN+hL62gBI4=
+=jp6e
+-----END PGP SIGNATURE-----
