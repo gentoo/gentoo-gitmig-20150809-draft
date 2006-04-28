@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX binutils-config-1.8 10094 RMD160 d2111f5478105492da3b63e137eeb9634a496d59 SHA1 ed7335434350c6232c9e49e2575b6f19db525a00 SHA256 885fc784fc8fe89500d406bae6c58d01a80da0ab8a6145b5772202d47d88f9c4 size 10094
-MD5 bbf448dc88724eb661c4fb0c28e6ee5c files/binutils-config-1.8 10094
-RMD160 d2111f5478105492da3b63e137eeb9634a496d59 files/binutils-config-1.8 10094
-SHA256 885fc784fc8fe89500d406bae6c58d01a80da0ab8a6145b5772202d47d88f9c4 files/binutils-config-1.8 10094
+AUX binutils-config-1.8 10150 RMD160 96c3ae8494447d283fc9a8071646f0ad3f9f3be5 SHA1 d822753d0dc12b940cb052bc17e190c7f146c5d7 SHA256 78f2ac60279c2f8bc8f873aa45702d5344fb0a529af662d1a480d717ab1bdf73 size 10150
+MD5 081d99f3d414a76346ce1a93dee450ff files/binutils-config-1.8 10150
+RMD160 96c3ae8494447d283fc9a8071646f0ad3f9f3be5 files/binutils-config-1.8 10150
+SHA256 78f2ac60279c2f8bc8f873aa45702d5344fb0a529af662d1a480d717ab1bdf73 files/binutils-config-1.8 10150
 AUX binutils-config.8 2989 RMD160 afb26717c9466456bbbdf6a3d6b93aeb63ff9416 SHA1 ea27aae69a152491c9e96f756b6265f68aac6849 SHA256 ffc462de3eaa865f77f00e36275a0a9b0b51782d9d4d5fcfad18583a13adf6e5 size 2989
 MD5 953efbc2a688428dfb75ecfa3c2d3d43 files/binutils-config.8 2989
 RMD160 afb26717c9466456bbbdf6a3d6b93aeb63ff9416 files/binutils-config.8 2989
@@ -24,11 +24,10 @@ SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-binutils-config-1.8-r7 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-binutils-config-1.8-r7 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-binutils-config-1.8-r7 1
-size 1 files/digest-binutils-config-1.8-r7 1
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFESXBD2+ySkm8kpY0RAuGRAKCSytuJV4fqdPR+CfAZJP26eGietQCfbtdh
-dk6tdGWzdRO64JTIXny9RDw=
-=4ja8
+iD8DBQFEUZOA2+ySkm8kpY0RAqVbAJ946a4OMTnDH1C9GC4tU/ql2spMwQCeNYre
+ty26knIG5wgOt95x0b688aw=
+=5qh0
 -----END PGP SIGNATURE-----
