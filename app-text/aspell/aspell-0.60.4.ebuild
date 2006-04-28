@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.4.ebuild,v 1.6 2006/04/07 17:15:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.4.ebuild,v 1.7 2006/04/28 01:58:33 lu_zero Exp $
 
 inherit libtool eutils flag-o-matic autotools
 
@@ -36,6 +36,7 @@ src_compile() {
 	filter-flags -fno-rtti
 	filter-flags -fvisibility=hidden #77109
 	filter-flags -maltivec -mabi=altivec
+	use ppc && append-flags -mno-altivec
 
 	econf \
 		$(use_enable nls) \
