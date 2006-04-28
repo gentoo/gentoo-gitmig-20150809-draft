@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.28 2006/03/20 15:01:59 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.29 2006/04/28 14:20:03 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -159,34 +159,29 @@ function subversion_svn_fetch() {
 	if [ ! -d "${ESVN_CO_DIR}/.svn" ]; then
 		# first check out
 		einfo "subversion check out start -->"
-		einfo "   checkout from: ${ESVN_REPO_URI}"
+		einfo "     repository: ${ESVN_REPO_URI}"
 
 		mkdir -p "${ESVN_PROJECT}"      || die "${ESVN}: can't mkdir ${ESVN_PROJECT}."
 		chmod -f o+rw "${ESVN_PROJECT}" || die "${ESVN}: can't chmod ${ESVN_PROJECT}."
 		cd "${ESVN_PROJECT}"
 		${ESVN_FETCH_CMD} ${ESVN_OPTIONS} "${ESVN_REPO_URI}" || die "${ESVN}: can't fetch from ${ESVN_REPO_URI}."
 
-		einfo "   checkouted in: ${ESVN_STORE_DIR}/${ESVN_CO_DIR}"
-
 	else
 		# update working copy
 		einfo "subversion update start -->"
-		einfo "   update from: ${ESVN_REPO_URI}"
+		einfo "     repository: ${ESVN_REPO_URI}"
 
 		cd "${ESVN_CO_DIR}"
 		${ESVN_UPDATE_CMD} ${ESVN_OPTIONS} || die "${ESVN}: can't update from ${ESVN_REPO_URI}."
 
-		einfo "    updated in: ${ESVN_STORE_DIR}/${ESVN_CO_DIR}"
-
 	fi
 
+	einfo "   working copy: ${ESVN_STORE_DIR}/${ESVN_CO_DIR}"
+
 	# export to the ${WORKDIR}
-	# for the time being, we use `cp -R` instead of `svn export` due to
-	# a bug in svn export handling.  see http://bugs.gentoo.org/119236
-	#svn export "${ESVN_STORE_DIR}/${ESVN_CO_DIR}" "${S}" || die "${ESVN}: can't exportto ${S}."
-	cp -pPR "${ESVN_STORE_DIR}/${ESVN_CO_DIR}" "${S}" || die "${ESVN}: can't copy to ${S}."
-	find "${S}" -name .svn -print0 | xargs -0 rm -rf {} \;
-	einfo "   exported to: ${S}"
+	# "svn export" has a bug.  see http://bugs.gentoo.org/119236
+	#svn export "${ESVN_STORE_DIR}/${ESVN_CO_DIR}" "${S}" || die "${ESVN}: can't export to ${S}."
+	rsync -aC "${ESVN_STORE_DIR}/${ESVN_CO_DIR}/" "${S}" || die "${ESVN}: can't export to ${S}."
 	echo
 
 }
