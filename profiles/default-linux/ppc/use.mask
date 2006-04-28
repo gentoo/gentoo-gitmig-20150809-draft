@@ -57,3 +57,6 @@ cg
 
 # dmi depends on PC BIOSes, we don't have those
 dmi
+
+# Masking mbrola for bug #84322, if a new version is released, remove this
+mbrola
