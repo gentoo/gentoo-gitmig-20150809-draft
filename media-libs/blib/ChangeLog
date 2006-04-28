@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/blib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/blib/ChangeLog,v 1.3 2006/04/24 00:49:16 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/blib/ChangeLog,v 1.4 2006/04/28 04:00:22 tsunam Exp $
+
+  28 Apr 2006; Joshua Jackson <tsunam@gentoo.org> blib-1.1.7-r1.ebuild:
+  Stable on x86; bug #130897
 
   24 Apr 2006; Luis Medinas <metalgod@gentoo.org> blib-1.1.7-r1.ebuild:
   Stable on amd64. Bug #130897.
