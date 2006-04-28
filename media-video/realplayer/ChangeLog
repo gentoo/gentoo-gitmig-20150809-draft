@@ -1,6 +1,10 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.48 2006/03/23 21:53:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.49 2006/04/28 01:03:36 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-realplayer-10.0.6, Manifest:
+  Fixing SHA256 digest, pass four
 
 *realplayer-10.0.7 (23 Mar 2006)
 
