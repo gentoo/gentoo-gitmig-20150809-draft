@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.80 2006/04/24 02:27:51 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.81 2006/04/28 16:41:22 josejx Exp $
+
+  28 Apr 2006; Joseph Jezak <josejx@gentoo.org> elfutils-0.118.ebuild:
+  Marked ppc stable for bug #130121.
 
   29 Apr 2006; Joshua Kinard <kumba@gentoo.org> elfutils-0.118.ebuild:
   Marked stable on mips.
