@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.120 2006/03/06 20:29:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.121 2006/04/28 23:21:29 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-openmotif-2.1.30-r9, files/digest-openmotif-2.1.30-r13,
+  Manifest:
+  Fix SHA256 digest.
 
   06 Mar 2006; Simon Stelling <blubb@gentoo.org> openmotif-2.1.30-r9.ebuild,
   openmotif-2.1.30-r13.ebuild, openmotif-2.2.3-r3.ebuild,
