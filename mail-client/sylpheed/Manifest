@@ -1,8 +1,6 @@
-MD5 9c67ce681a0ba74756ced55b106b412b ChangeLog 31662
+MD5 5aea6e8b714849271348311812f011c0 ChangeLog 31813
 MD5 4d08519a369aeb7229167e0d1d7e75a8 files/digest-sylpheed-2.0.4 68
 MD5 6b71dbeb45c82f1bb30f96347c10921f files/digest-sylpheed-2.2.0 68
-MD5 2d69ae356e44c47051006a2d343cd72c files/digest-sylpheed-2.2.2 68
-MD5 3513c49003007da25a9e00056ac7f26e files/digest-sylpheed-2.2.3 68
 MD5 6adbaa69975bd746c2499e5cf5220c93 files/digest-sylpheed-2.2.4 68
 MD5 01498a2c484618f1d4c663eac986c55e files/sylpheed-2.1-shared-mime-info.diff 1637
 MD5 0f4074345f62ede519f0b65730e4b762 files/sylpheed-2.2-replace-aspell-with-enchant.diff 3197
@@ -11,6 +9,4 @@ MD5 f4242298cfab21456442bfe52505d2b8 files/sylpheed-procmime.diff 1119
 MD5 126ca8f672f0296d2f1e6830e6729a91 metadata.xml 231
 MD5 38118ad46ff05a99e88f44780bf8ff9c sylpheed-2.0.4.ebuild 1445
 MD5 31d893361b0a7d3083d24648192c1e3e sylpheed-2.2.0.ebuild 1469
-MD5 cce1cb0f25349e8422041e2669d97bcd sylpheed-2.2.2.ebuild 1473
-MD5 20443d8cd3fc5e915921ebd1f8433ec6 sylpheed-2.2.3.ebuild 1473
-MD5 202fe318ef40fedf7e904f2c7c89c952 sylpheed-2.2.4.ebuild 1473
+MD5 70f20abde4e5ee27312021f9bc1eab8d sylpheed-2.2.4.ebuild 1471
