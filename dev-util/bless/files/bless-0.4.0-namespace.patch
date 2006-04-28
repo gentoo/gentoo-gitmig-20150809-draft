@@ -1,0 +1,26 @@
+--- src/ByteBuffer/SaveAsOperation.cs	Sun Sep 11 12:22:16 2005
++++ src/ByteBuffer/SaveAsOperation.cs	Sat Feb 18 15:31:08 2006
+@@ -63,8 +63,8 @@
+ 	{
+ #if ENABLE_UNIX_SPECIFIC
+ 		// get info about the device the file will be saved on
+-		Mono.Unix.Statvfs stat=new Mono.Unix.Statvfs();
+-		Mono.Unix.Syscall.statvfs(Path.GetDirectoryName(fn), out stat);
++		Mono.Unix.Native.Statvfs stat=new Mono.Unix.Native.Statvfs();
++		Mono.Unix.Native.Syscall.statvfs(Path.GetDirectoryName(fn), out stat);
+ 			
+ 		long freeSpace=(long)(stat.f_bavail*stat.f_bsize);
+ 			
+--- src/ByteBuffer/SaveOperation.cs	Wed May 11 16:10:19 2005
++++ src/ByteBuffer/SaveOperation.cs	Sat Feb 18 15:41:21 2006
+@@ -53,8 +53,8 @@
+ 		// get info about the device the file will be saved on
+ 		FileInfo fi=new FileInfo(bb.Filename);
+ 			
+-		Mono.Unix.Statvfs stat=new Mono.Unix.Statvfs();
+-		Mono.Unix.Syscall.statvfs(bb.Filename, out stat);
++		Mono.Unix.Native.Statvfs stat=new Mono.Unix.Native.Statvfs();
++		Mono.Unix.Native.Syscall.statvfs(bb.Filename, out stat);
+ 			
+ 		long freeSpace=(long)(stat.f_bavail*stat.f_bsize) + fi.Length;
+ 			

@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/bless
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.2 2006/03/20 00:42:02 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.3 2006/04/28 20:46:17 compnerd Exp $
+
+  28 Apr 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/bless-0.4.0-namespace.patch, +files/bless-0.4.0-strictness.patch,
+  bless-0.4.0.ebuild:
+  Adding patches from FreeBSD for building with >=mono-1.1.10; bumped mono to
+  the same. Resolves bug #130826.
 
   20 Mar 2006; Luis Medinas <metalgod@gentoo.org> bless-0.4.0.ebuild:
   Added ~amd64 keyword. Closes bug #122938.
