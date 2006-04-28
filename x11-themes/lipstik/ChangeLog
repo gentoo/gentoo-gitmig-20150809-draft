@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/lipstik
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/lipstik/ChangeLog,v 1.16 2006/04/06 03:23:46 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/lipstik/ChangeLog,v 1.17 2006/04/28 00:25:33 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-lipstik-1.3,
+  files/digest-lipstik-1.3-r1, files/digest-lipstik-2.1, Manifest:
+  Fixing SHA256 digest, pass four
 
   06 Apr 2006; Joshua Jackson <tsunam@gentoo.org> lipstik-2.2.ebuild:
   Stable on x86; bug #121413
