@@ -1,8 +1,45 @@
-MD5 7a86d1a5fcd137424e91c41ca752c587 ChangeLog 3281
-MD5 5cbb33544d36f65f595aa8b229e9b515 files/digest-soundtracker-0.6.7 70
-MD5 5cbb33544d36f65f595aa8b229e9b515 files/digest-soundtracker-0.6.7-r1 70
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX soundtracker-0.6.7-alsa1.patch 951 RMD160 267a1e993051db9cacd8e5a6138efcbd3e11496b SHA1 4b1f99eb33da0cb6a2d8bb8afd3de4897bb6532d SHA256 70ec8ec71a3c170ebefb9cd7a2b08324891efd801af21b080093187114970ed3 size 951
 MD5 369a16c17d2850a6ed6d6fee6c9f72fc files/soundtracker-0.6.7-alsa1.patch 951
+RMD160 267a1e993051db9cacd8e5a6138efcbd3e11496b files/soundtracker-0.6.7-alsa1.patch 951
+SHA256 70ec8ec71a3c170ebefb9cd7a2b08324891efd801af21b080093187114970ed3 files/soundtracker-0.6.7-alsa1.patch 951
+AUX soundtracker-0.6.7-execstack.patch 852 RMD160 df57e68a2dac9d442484b26e1cbf85cb59f1e756 SHA1 be2878faac868ca1c2b7122c106c3e42cf7d451c SHA256 f6f293a8e025d4e9b46a06e0597674196d55b5253d2efe84ecc61ffa97a9d975 size 852
+MD5 559d79241aec93125114c2c7e6ffda7c files/soundtracker-0.6.7-execstack.patch 852
+RMD160 df57e68a2dac9d442484b26e1cbf85cb59f1e756 files/soundtracker-0.6.7-execstack.patch 852
+SHA256 f6f293a8e025d4e9b46a06e0597674196d55b5253d2efe84ecc61ffa97a9d975 files/soundtracker-0.6.7-execstack.patch 852
+AUX soundtracker-0.6.7-invalid-free.patch 539 RMD160 f20276563beeae14b6fc9012158a2b8b5306e5e7 SHA1 0e38958fd0253229f3287547589cc7d8720f13d5 SHA256 29f2b72ab256d448706b379542cf0e211f65a0ba1b21ed933c50fb7e8c9f0186 size 539
 MD5 f7a9d1e0f686f846d8009aa3d06cde89 files/soundtracker-0.6.7-invalid-free.patch 539
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 10c1a515f7e1a8e5fd1841eea5ecf1b9 soundtracker-0.6.7-r1.ebuild 1758
+RMD160 f20276563beeae14b6fc9012158a2b8b5306e5e7 files/soundtracker-0.6.7-invalid-free.patch 539
+SHA256 29f2b72ab256d448706b379542cf0e211f65a0ba1b21ed933c50fb7e8c9f0186 files/soundtracker-0.6.7-invalid-free.patch 539
+DIST soundtracker-0.6.7.tar.gz 875235 RMD160 6b73d5884f13f39f1f886a88eefc0545e058b806 SHA256 698ce17bdbb0712ca21d8bd9fca084505d435c5bc23d584eefc29d470931d999 size 875235
+EBUILD soundtracker-0.6.7-r1.ebuild 1821 RMD160 12ebed66e9452780573d1a690ae154ca320a08a2 SHA1 8aba591ff2f5430e67e76a9c6dafda3798f29ccc SHA256 f766cb632ca05ffe58deb98202543544958742ab2123c6885e4c69197c14a58e size 1821
+MD5 714be9120949ddb3c311add94ab0eaca soundtracker-0.6.7-r1.ebuild 1821
+RMD160 12ebed66e9452780573d1a690ae154ca320a08a2 soundtracker-0.6.7-r1.ebuild 1821
+SHA256 f766cb632ca05ffe58deb98202543544958742ab2123c6885e4c69197c14a58e soundtracker-0.6.7-r1.ebuild 1821
+EBUILD soundtracker-0.6.7.ebuild 1706 RMD160 d6d7074b9da48e8435ff57f1cfef9897910529cd SHA1 786e8537a47ae7384ac7b2684fdf9b50372ecf4e SHA256 177dd063f5fa238c88035887fa85e9da9bf27f3bed2a68ac04f2c2616f20c57d size 1706
 MD5 414dab02bbcd9dabb51866538731101f soundtracker-0.6.7.ebuild 1706
+RMD160 d6d7074b9da48e8435ff57f1cfef9897910529cd soundtracker-0.6.7.ebuild 1706
+SHA256 177dd063f5fa238c88035887fa85e9da9bf27f3bed2a68ac04f2c2616f20c57d soundtracker-0.6.7.ebuild 1706
+MISC ChangeLog 3496 RMD160 15f2b833b6b36674641db60278d61bc4aa14549d SHA1 fef1473dd8dd1008995506c075cded63a3ed66f4 SHA256 bb072a422d8b52d29d8b3d4d7316da1c753ac49db3a05d4e4439bcd5a96270a3 size 3496
+MD5 9de466a21fef7333f23351d433571801 ChangeLog 3496
+RMD160 15f2b833b6b36674641db60278d61bc4aa14549d ChangeLog 3496
+SHA256 bb072a422d8b52d29d8b3d4d7316da1c753ac49db3a05d4e4439bcd5a96270a3 ChangeLog 3496
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b size 158
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 e258aecdc7bda1edb244c4aa698b862b files/digest-soundtracker-0.6.7 256
+RMD160 98e2765d5a6f9a32592dde6776b62b8cc7120bc9 files/digest-soundtracker-0.6.7 256
+SHA256 7b30958e3060f23f852a98462c05e0b5951b3a4b9f256b4d3fe02df33a595d86 files/digest-soundtracker-0.6.7 256
+MD5 e258aecdc7bda1edb244c4aa698b862b files/digest-soundtracker-0.6.7-r1 256
+RMD160 98e2765d5a6f9a32592dde6776b62b8cc7120bc9 files/digest-soundtracker-0.6.7-r1 256
+SHA256 7b30958e3060f23f852a98462c05e0b5951b3a4b9f256b4d3fe02df33a595d86 files/digest-soundtracker-0.6.7-r1 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUgW+AiZjviIA2XgRAjSLAKCfYR4hF02/WW1BGxkuFgChdbDl/QCgr0iH
+bF4+q4wL1nQGLfvHnZsGlTE=
+=JtJK
+-----END PGP SIGNATURE-----

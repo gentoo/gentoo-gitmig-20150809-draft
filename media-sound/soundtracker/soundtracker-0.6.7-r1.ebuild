@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7-r1.ebuild,v 1.2 2006/04/02 18:07:01 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7-r1.ebuild,v 1.3 2006/04/28 12:08:14 flameeyes Exp $
 
 IUSE="nls esd gnome oss alsa jack"
 
@@ -35,8 +35,11 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-alsa1.patch
-	epatch ${FILESDIR}/${P}-invalid-free.patch
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-alsa1.patch"
+	epatch "${FILESDIR}/${P}-invalid-free.patch"
+	epatch "${FILESDIR}/${P}-execstack.patch"
 }
 
 src_compile() {
