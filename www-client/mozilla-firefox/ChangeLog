@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.144 2006/04/27 23:39:56 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.145 2006/04/28 23:59:44 anarchy Exp $
+
+  28 Apr 2006; Jory A. Pratt <anarchy@gentoo.org>
+  mozilla-firefox-1.5.0.2.ebuild:
+  patch for --as-needed added to patchset
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-mozilla-firefox-1.0.7-r4,
