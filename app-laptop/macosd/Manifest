@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ce1c4a0a5d122fc9c21bc5b5ab7d5b11 ChangeLog 1086
+MD5 4ab1b7e77c8dc3242b4e3c52336c3f9d ChangeLog 1252
 MD5 e11c404b0ef630f5a364a0d4db4603d0 files/0.1.9-evas-pbbuttonsd.patch 3310
 MD5 4962805ae4fcd76e12880c53afda10ef files/0.1.9-evas.patch 1745
 MD5 1dcb5edab66af7f0a128b77c7d2b09b8 files/digest-macosd-0.1.9 65
 MD5 1dcb5edab66af7f0a128b77c7d2b09b8 files/digest-macosd-0.1.9-r1 65
+MD5 ad8195cfa0af68506d61d7a410c1e043 files/digest-macosd-0.3.0 65
 MD5 b388391314b9f853c13fb814d6251abf macosd-0.1.9-r1.ebuild 1381
 MD5 3acd133b5a1dc947584d001570dea373 macosd-0.1.9.ebuild 1341
+MD5 04076824ec8436e7159a43a426c8474e macosd-0.3.0.ebuild 1306
 MD5 20b1bed5008cb245ef24781eb798f1d0 metadata.xml 983
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDzHbWcsIHjyDViGQRAksHAKCBv6toYUoLm+l0omzyVirZ+sFnVgCglq1r
-7P0gmHIt4Vk9QOu0n4dGSo4=
-=WOtA
------END PGP SIGNATURE-----

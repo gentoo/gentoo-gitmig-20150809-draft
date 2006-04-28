@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/macosd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/macosd/ChangeLog,v 1.7 2006/01/17 04:47:08 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/macosd/ChangeLog,v 1.8 2006/04/28 20:38:42 corsair Exp $
+
+*macosd-0.3.0 (28 Apr 2006)
+
+  28 Apr 2006; Markus Rothe <corsair@gentoo.org> +macosd-0.3.0.ebuild:
+  version bump, also fixes modular X dependencies (bug #131596)
 
 *macosd-0.1.9-r1 (17 Jan 2006)
 
