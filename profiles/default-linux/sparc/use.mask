@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.66 2006/04/28 01:11:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.67 2006/04/28 02:17:50 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -70,6 +70,7 @@ bri
 florz
 resperl
 zaptel
+ukcid
 
 # Mono doesn't work on sparc
 # eradicator@gentoo.org
