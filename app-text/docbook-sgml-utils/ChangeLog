@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-sgml-utils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.47 2006/04/05 07:40:13 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.48 2006/04/28 10:03:34 ehmsen Exp $
+
+  28 Apr 2006; Martin Ehmsen <ehmsen@gentoo.org>
+  docbook-sgml-utils-0.6.14.ebuild:
+  Added dep on one of several www-clients, bug #125362.
 
   05 Apr 2006; Martin Ehmsen <ehmsen@gentoo.org>
   docbook-sgml-utils-0.6.14.ebuild:
