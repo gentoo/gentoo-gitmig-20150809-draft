@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xf86bigfontproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86bigfontproto/ChangeLog,v 1.16 2006/03/31 19:30:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86bigfontproto/ChangeLog,v 1.17 2006/04/28 00:21:45 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   xf86bigfontproto-1.1.2.ebuild:
