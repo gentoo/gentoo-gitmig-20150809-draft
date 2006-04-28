@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.14 2006/04/21 20:36:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.15 2006/04/28 12:42:00 flameeyes Exp $
 
 # Author Diego Pettenò <flameeyes@gentoo.org>
 # Maintained by wxwidgets herd
@@ -66,14 +66,6 @@ configure_build() {
 # as building the unicode version required redoing it.
 # It takes all the params and passes them to the script
 subconfigure() {
-	local ldver=$( $(tc-getLD) --version | head -n 1 | \
-				sed -e 's:.*version \([0-9.]\+\) .*:\1:')
-	local ldmaj=$(echo $ldver | cut -f1 -d.)
-	local ldmin=$(echo $ldver | cut -f2 -d.)
-	local ldmicro=$(echo $ldver | cut -f3 -d.)
-	
-	[[ $ldmaj -lt 1 || ( $ldmaj == 2 && $ldmin < 16 && $ldmicro < 92 ) ]] && filter-ldflags -Wl,--as-needed --as-needed
-
 	ECONF_SOURCE="${S}" \
 		econf \
 			--disable-precomp-headers \

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.16 2006/04/21 20:36:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.17 2006/04/28 12:42:00 flameeyes Exp $
 #
 # Author Rob Cakebread <pythonhead@gentoo.org>
 
@@ -48,17 +48,6 @@ need-wxwidgets() {
 					echo "!!! Adjust your USE flags or re-emerge wxGTK with the version you want."
 			exit 1;;
 		esac
-	fi
-
-	local ldver=$( $(tc-getLD) --version | head -n 1 | \
-				sed -e 's:.*version \([0-9.]\+\) .*:\1:')
-	local ldmaj=$(echo $ldver | cut -f1 -d.)
-	local ldmin=$(echo $ldver | cut -f2 -d.)
-	local ldmicro=$(echo $ldver | cut -f3 -d.)
-	
-	if [[ $ldmaj -lt 1 || ( $ldmaj == 2 && $ldmin < 16 && $ldmicro < 92 ) ]]; then
-		filter-ldflags -Wl,--as-needed --as-needed
-		filter-flags -Wl,--as-needed --as-needed
 	fi
 }
 
