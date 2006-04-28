@@ -1,24 +1,30 @@
-MD5 ff78597174d3e5c8313ee9e5c8c716c6 ChangeLog 1395
-RMD160 950b1e8d730d9a963ff22adbdd22fee8c75fcb58 ChangeLog 1395
-SHA256 d765b865aba795c1ce4e0fa1be90b204154d4b8fc0d1212bb5682f470bcc9d2a ChangeLog 1395
-MD5 20da8270a5b3998b5ad7f4389ceaa2cc evolution-sharp-0.10.2-r1.ebuild 980
-RMD160 995d6f02837b4e2459fa2e2049b0259453e6ba20 evolution-sharp-0.10.2-r1.ebuild 980
-SHA256 af5ff7b04994db1e64763098d7200aa1d6b21fe4a18fab5f4e201e4f655cddb0 evolution-sharp-0.10.2-r1.ebuild 980
-MD5 551fee8b8e48626110289e63eb714c67 evolution-sharp-0.10.2-r2.ebuild 1048
-RMD160 4a1e349b1940311e4f5fd10c354a8f8cde29abe8 evolution-sharp-0.10.2-r2.ebuild 1048
-SHA256 00a9d8f5066fce0836e3e64af02962505c93cd92376b2e0534e1f832f9b09696 evolution-sharp-0.10.2-r2.ebuild 1048
-MD5 c290aaec6de69da9bef4ef8b73d6da64 files/digest-evolution-sharp-0.10.2-r1 271
-RMD160 d3cc15e676309f077c603dc11a9003e3b0d8c1c6 files/digest-evolution-sharp-0.10.2-r1 271
-SHA256 ed2200da9c1998588564d78d0e95b090b0b02deb3de83358b7a62277db0f3c66 files/digest-evolution-sharp-0.10.2-r1 271
-MD5 c290aaec6de69da9bef4ef8b73d6da64 files/digest-evolution-sharp-0.10.2-r2 271
-RMD160 d3cc15e676309f077c603dc11a9003e3b0d8c1c6 files/digest-evolution-sharp-0.10.2-r2 271
-SHA256 ed2200da9c1998588564d78d0e95b090b0b02deb3de83358b7a62277db0f3c66 files/digest-evolution-sharp-0.10.2-r2 271
-MD5 bf7306781fe9ae7c2a562f6c0773cba7 files/evolution-sharp-0.10.2-check-evo-2.6.patch 826
-RMD160 28581a46c76d3c709bb0377573700cf4ff450bb2 files/evolution-sharp-0.10.2-check-evo-2.6.patch 826
-SHA256 e52cc451df46870cef7f22120ed718835dada863ab1a84feda462794eb896faa files/evolution-sharp-0.10.2-check-evo-2.6.patch 826
-MD5 1f1221967325e4cc7dd03afa77696c46 files/evolution-sharp-0.10.2-use-glibsharpglue-2.patch 893
-RMD160 6d7a03937368cc9c46ca7482061d96f272f87a8c files/evolution-sharp-0.10.2-use-glibsharpglue-2.patch 893
-SHA256 b4fdb230525fa2633747f40262aad21f1a8c7de9afbf6a42c68b0fb4f493d933 files/evolution-sharp-0.10.2-use-glibsharpglue-2.patch 893
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX evolution-sharp-0.11.0-evo-shell-libdir.patch 615 RMD160 ec9dd4ba13973a03453cc6b02923024dbde86eee SHA1 3862f499b4e9cdfb7fb0e5fe8bc25bda86bb2455 SHA256 50ea49cafe9bac31418dd5de57014430341cfa730742294e223eff8f719480ed size 615
+MD5 067e25d006bf09332352bf3d3480b2ad files/evolution-sharp-0.11.0-evo-shell-libdir.patch 615
+RMD160 ec9dd4ba13973a03453cc6b02923024dbde86eee files/evolution-sharp-0.11.0-evo-shell-libdir.patch 615
+SHA256 50ea49cafe9bac31418dd5de57014430341cfa730742294e223eff8f719480ed files/evolution-sharp-0.11.0-evo-shell-libdir.patch 615
+DIST evolution-sharp-0.11.0.tar.bz2 305271 RMD160 46ec83030fd82080f97f663cbb5bdc32a59e278c SHA256 e44c62bc2e2adc5318d1fb8bc6b49a819792b1ae54978b4583bfec88da3a4b5b size 305271
+EBUILD evolution-sharp-0.11.0.ebuild 981 RMD160 5a68538f75c2f51eb39940f48e5aef72587cb884 SHA1 a37fc02df0e137b1d8c59b78faa4b642b97b33a4 SHA256 f59ff22cf15dc3b87acb0e3918af53c855575ab052df799b6fbaf42bfc14660a size 981
+MD5 2814c26d74209c6395b49358b3a2e850 evolution-sharp-0.11.0.ebuild 981
+RMD160 5a68538f75c2f51eb39940f48e5aef72587cb884 evolution-sharp-0.11.0.ebuild 981
+SHA256 f59ff22cf15dc3b87acb0e3918af53c855575ab052df799b6fbaf42bfc14660a evolution-sharp-0.11.0.ebuild 981
+MISC ChangeLog 1854 RMD160 95a619a512d7aa1be6d822a606741e225330403f SHA1 b1a5efe07928da49a5076a82492ea75f2ba4b30d SHA256 e0b1ad68454ca9f83b289c7f38d41f56404000a4c236f329738d4c57ce572f25 size 1854
+MD5 99e5c1ccc02ade646ea3fc6df1c91778 ChangeLog 1854
+RMD160 95a619a512d7aa1be6d822a606741e225330403f ChangeLog 1854
+SHA256 e0b1ad68454ca9f83b289c7f38d41f56404000a4c236f329738d4c57ce572f25 ChangeLog 1854
+MISC metadata.xml 308 RMD160 6070e5bc9d8a4e0983004f0e24da1de81f52d2c4 SHA1 2841e3bdf56a55d0a5c7562b37eef06f13c411e3 SHA256 d4e9c60cc0ce735082c4f3cb0837a68a34a51d6bfc38dc2b2bd2ce044e7c7259 size 308
 MD5 41c8c61dcf74c45eb359a4a41958abb3 metadata.xml 308
 RMD160 6070e5bc9d8a4e0983004f0e24da1de81f52d2c4 metadata.xml 308
 SHA256 d4e9c60cc0ce735082c4f3cb0837a68a34a51d6bfc38dc2b2bd2ce044e7c7259 metadata.xml 308
+MD5 93daf4bb3c9dc2eb335101c114c3150e files/digest-evolution-sharp-0.11.0 271
+RMD160 cd713f791a653166f1c31e5ec30f64ed3f62ccbd files/digest-evolution-sharp-0.11.0 271
+SHA256 a4e274735c6b7a789eaa5828c9850f8c4145b87a92225f015a08381c08a2e000 files/digest-evolution-sharp-0.11.0 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUpKKTOXg++0VvJQRAsgzAKDQ9i9XP/NDJzfhBxecxceIfY/SswCfR0us
+rk8/7u3I34PJAue3efnOypI=
+=Fi1Z
+-----END PGP SIGNATURE-----
