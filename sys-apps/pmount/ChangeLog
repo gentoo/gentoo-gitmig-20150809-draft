@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pmount
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.22 2006/02/03 19:27:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.23 2006/04/28 03:35:16 steev Exp $
+
+*pmount-0.9.9 (28 Apr 2006)
+
+  28 Apr 2006; Steev Klimaszewski <steev@gentoo.org> +pmount-0.9.9.ebuild:
+  New upstream release of pmount.  Fixes some bugs with hal 0.5.7
 
   03 Feb 2006; Aron Griffis <agriffis@gentoo.org> pmount-0.9.6.ebuild:
   Mark 0.9.6 stable on ia64
