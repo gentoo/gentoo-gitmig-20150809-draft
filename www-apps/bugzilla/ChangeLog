@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.62 2006/04/23 18:16:33 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.63 2006/04/28 11:57:32 rl03 Exp $
+
+  28 Apr 2006; Renat Lumpau <rl03@gentoo.org> bugzilla-2.22.ebuild:
+  Added optional dep on dev-util/patchutils
 
   23 Apr 2006; Renat Lumpau <rl03@gentoo.org> bugzilla-2.22.ebuild:
   Extras are good to go on ppc64
