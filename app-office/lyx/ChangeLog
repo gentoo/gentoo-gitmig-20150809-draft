@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.77 2006/04/27 04:06:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.78 2006/04/28 22:44:17 weeve Exp $
+
+  28 Apr 2006; Jason Wever <weeve@gentoo.org> lyx-1.4.0-r2.ebuild:
+  Added ~sparc keyword wrt bug #131548.
 
   27 Apr 2006; Jason Wever <weeve@gentoo.org> lyx-1.4.1.ebuild:
   Re-added ~sparc keyword.
