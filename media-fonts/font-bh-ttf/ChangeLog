@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-bh-ttf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.18 2006/03/24 03:52:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.19 2006/04/28 00:44:54 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
   24 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
   font-bh-ttf-1.0.0.ebuild:
