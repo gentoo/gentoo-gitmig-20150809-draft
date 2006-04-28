@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/inputproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.17 2006/04/28 00:17:41 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.18 2006/04/28 00:22:00 antarus Exp $
+
+  28 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-inputproto-1.3.2, Manifest:
+  Fixing SHA256 digest, pass four
 
   28 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
