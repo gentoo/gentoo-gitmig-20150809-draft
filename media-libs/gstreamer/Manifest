@@ -1,12 +1,61 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX gstreamer-0.8.3-jade_fix.patch 1713 RMD160 e52cf7b4fb0e7d0a4043365dd1abaab5a121897f SHA1 e5bedff5c5a432391836f397a8a8524b959527f6 SHA256 852eb5828e8c5e270e8b32323e37dcf266308b5b5e5aa1f26d08bbb1be4fc51d size 1713
+MD5 465e9b8e2f33205128b7a69eca2e2c02 files/gstreamer-0.8.3-jade_fix.patch 1713
+RMD160 e52cf7b4fb0e7d0a4043365dd1abaab5a121897f files/gstreamer-0.8.3-jade_fix.patch 1713
+SHA256 852eb5828e8c5e270e8b32323e37dcf266308b5b5e5aa1f26d08bbb1be4fc51d files/gstreamer-0.8.3-jade_fix.patch 1713
+AUX gstreamer-0.8.9-64_dataprotocol.patch 557 RMD160 983a358588dadbe3ddf518e96fa4195a7d6c49bd SHA1 ff3581854ca5a6535f8bce5d5537dd950b94074b SHA256 f8bf832d1f994b96abd9cba022e1eb47105da1db89c62a86befb6586d53c5719 size 557
+MD5 eb396dce225d8cbcae77d8c7a60cae55 files/gstreamer-0.8.9-64_dataprotocol.patch 557
+RMD160 983a358588dadbe3ddf518e96fa4195a7d6c49bd files/gstreamer-0.8.9-64_dataprotocol.patch 557
+SHA256 f8bf832d1f994b96abd9cba022e1eb47105da1db89c62a86befb6586d53c5719 files/gstreamer-0.8.9-64_dataprotocol.patch 557
+AUX gstreamer-0.8.9-fixpluginload.patch 3982 RMD160 e44a0952ca25b6ed03aa6758392b683b70fe2614 SHA1 a86065ac430ea421064a5a9fa056e9eb52511a82 SHA256 98623456924a8bfd14e18085d20e5349dab992a4081547ff4a5449c95fe18acc size 3982
+MD5 5adc10998a8ad71887996272e5775022 files/gstreamer-0.8.9-fixpluginload.patch 3982
+RMD160 e44a0952ca25b6ed03aa6758392b683b70fe2614 files/gstreamer-0.8.9-fixpluginload.patch 3982
+SHA256 98623456924a8bfd14e18085d20e5349dab992a4081547ff4a5449c95fe18acc files/gstreamer-0.8.9-fixpluginload.patch 3982
+AUX gstreamer-0.8.9-gstqueue_lock.patch 3975 RMD160 bf41231c36b5cc7d49d1403f1bec8501a85770a6 SHA1 f9eff19e6542a533c3acb0d05666f4576a607207 SHA256 423e985be67788a333e834a3e41863953e8d52f8c0b72154cc2df69657dc3007 size 3975
+MD5 fd63f7bf7d7eacc104d81267e447fcab files/gstreamer-0.8.9-gstqueue_lock.patch 3975
+RMD160 bf41231c36b5cc7d49d1403f1bec8501a85770a6 files/gstreamer-0.8.9-gstqueue_lock.patch 3975
+SHA256 423e985be67788a333e834a3e41863953e8d52f8c0b72154cc2df69657dc3007 files/gstreamer-0.8.9-gstqueue_lock.patch 3975
+DIST gstreamer-0.10.4.tar.bz2 1518532 RMD160 3935ddd308cf1932b05057c6ded85383a9960e44 SHA256 7b8add7db1e0b0e3671f374469ef32b151fa96bc9eb2aa265eefd79548752ffc size 1518532
+DIST gstreamer-0.10.5.tar.bz2 1620535 RMD160 86580316e711556058b03a8dede29e2615466239 SHA256 1c055d04fc31ac5730a766743ece1402f93f967c8f815cd5c97112dfab8f4aa1 size 1620535
+DIST gstreamer-0.8.10.tar.bz2 1467038 size 1467038
+DIST gstreamer-0.8.11.tar.bz2 1459651 size 1459651
+DIST gstreamer-0.8.12.tar.bz2 1534775 size 1534775
+EBUILD gstreamer-0.10.4.ebuild 1951 RMD160 8e554eea5e7e31c24e8a3213bfcd556eb7656d30 SHA1 816266f9cf32236e4e76e30fee16958e15c65543 SHA256 5ac66442c4ccfa900e432f573f2c0374fdb415f1449fb83ce0b3c29c7be9392e size 1951
+MD5 5fc17384d1b188daf867f9515f92db6f gstreamer-0.10.4.ebuild 1951
+RMD160 8e554eea5e7e31c24e8a3213bfcd556eb7656d30 gstreamer-0.10.4.ebuild 1951
+SHA256 5ac66442c4ccfa900e432f573f2c0374fdb415f1449fb83ce0b3c29c7be9392e gstreamer-0.10.4.ebuild 1951
+EBUILD gstreamer-0.10.5.ebuild 1954 RMD160 9e72b23632338fcbba3458888095bc8014e6dd48 SHA1 d4af046d400ea1b62d22149f618a6f6c54d4fc98 SHA256 ba738f8bec749c2cac09dbd0b7fe9de8ea5eaff4763ace665251a12095f06342 size 1954
+MD5 cea35e8e95a6852320d630ad3db07637 gstreamer-0.10.5.ebuild 1954
+RMD160 9e72b23632338fcbba3458888095bc8014e6dd48 gstreamer-0.10.5.ebuild 1954
+SHA256 ba738f8bec749c2cac09dbd0b7fe9de8ea5eaff4763ace665251a12095f06342 gstreamer-0.10.5.ebuild 1954
+EBUILD gstreamer-0.8.10.ebuild 2810 RMD160 8bf3d6052e2f43fcfae411ce1ad34c0b33050855 SHA1 23ac6df3b1f74d798aeae589e7ecb272f6cb4db4 SHA256 b7da5822edf38a674f98b814c924e05aa90b05e304beb86bd3ecd2041b523f83 size 2810
+MD5 301bbbe66729c54178c3244326b42651 gstreamer-0.8.10.ebuild 2810
+RMD160 8bf3d6052e2f43fcfae411ce1ad34c0b33050855 gstreamer-0.8.10.ebuild 2810
+SHA256 b7da5822edf38a674f98b814c924e05aa90b05e304beb86bd3ecd2041b523f83 gstreamer-0.8.10.ebuild 2810
+EBUILD gstreamer-0.8.11.ebuild 2836 RMD160 29159ecc682f7ffcf029c7932a998d5cc210b7aa SHA1 edfaedbda0412652ea095a2054ce2ba7e4a7f060 SHA256 f867262fad747bb329bc95f511a2da265927a33c0f3337bc69b75ba01f0588bb size 2836
+MD5 2e3d7406652a9eac93f40d1e69b5f511 gstreamer-0.8.11.ebuild 2836
+RMD160 29159ecc682f7ffcf029c7932a998d5cc210b7aa gstreamer-0.8.11.ebuild 2836
+SHA256 f867262fad747bb329bc95f511a2da265927a33c0f3337bc69b75ba01f0588bb gstreamer-0.8.11.ebuild 2836
+EBUILD gstreamer-0.8.12.ebuild 2842 RMD160 0143c4cc48d02d44fbbcb7c4836b4384300df9f7 SHA1 48db02315fabc89857b3a5cada50e8bfd71b89e5 SHA256 3516fb4f5cd956f142d3118f1c92a0a589266948143aa94f7e39c400ea853009 size 2842
+MD5 96b2d885faf135d2ae797253f2b2066c gstreamer-0.8.12.ebuild 2842
+RMD160 0143c4cc48d02d44fbbcb7c4836b4384300df9f7 gstreamer-0.8.12.ebuild 2842
+SHA256 3516fb4f5cd956f142d3118f1c92a0a589266948143aa94f7e39c400ea853009 gstreamer-0.8.12.ebuild 2842
+MISC ChangeLog 18702 RMD160 704864378fb3b9feb9d8f238f4df61b567986639 SHA1 300459c1d1dcc5f29d609e064cd9e577bca4173a SHA256 8c7c50e6f952f0efb2848fb93d8240e7466435913cf4e21b3e07de8783fd1487 size 18702
 MD5 dc100cd64a57cae7be8f3b523a813055 ChangeLog 18702
 RMD160 704864378fb3b9feb9d8f238f4df61b567986639 ChangeLog 18702
 SHA256 8c7c50e6f952f0efb2848fb93d8240e7466435913cf4e21b3e07de8783fd1487 ChangeLog 18702
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 size 158
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 MD5 cfd2a1dab17c2a9a7fbd8340ac632cfd files/digest-gstreamer-0.10.4 256
 RMD160 633e16e04c9eab3474a298963b2e6594c386bb5e files/digest-gstreamer-0.10.4 256
 SHA256 380c042bcbf186c2906079a970c5832d966e897a8ab66bbd83ac5744489c382c files/digest-gstreamer-0.10.4 256
-MD5 657ac23cef6eee73c9ab0fdb0cc955a0 files/digest-gstreamer-0.10.5 256
-RMD160 713777b0bc2b94120086068df93f37adbfe9c1cd files/digest-gstreamer-0.10.5 256
-SHA256 a3009046148cc8396301d4a9c8f0ffaefa8281798fce3c9ba3e880b238a88691 files/digest-gstreamer-0.10.5 256
+MD5 cde9af24b777f6fe298cd3e3f9af5871 files/digest-gstreamer-0.10.5 256
+RMD160 2271cd51524f6ab14452a789a69b567e95360e6b files/digest-gstreamer-0.10.5 256
+SHA256 14c248040569ae79df74b198c318fcb10f81390de118b7afb17c655469b2adaf files/digest-gstreamer-0.10.5 256
 MD5 22f436d2188144ecb6918fc8960cb70e files/digest-gstreamer-0.8.10 70
 RMD160 95cceb15627c57a84f8bbfa948e134736adca9ff files/digest-gstreamer-0.8.10 70
 SHA256 f20822d5a64961062ce73e15d7e1f555ffec4e5825088d3fe5dfe35a5eb5c9cd files/digest-gstreamer-0.8.10 70
@@ -16,33 +65,10 @@ SHA256 b577f107c27d586a2384e5f34930232ed3af3664eff3b69ca15c39e7cda41203 files/di
 MD5 b837990788674370fa8f3d244d438a3f files/digest-gstreamer-0.8.12 70
 RMD160 b1027bedfde9ad77af1f4021ff558802ae360f92 files/digest-gstreamer-0.8.12 70
 SHA256 ac9495b84c874284fd1975f622d87ce39cf4a4cde6457de6e3ece3dd23a4ccae files/digest-gstreamer-0.8.12 70
-MD5 465e9b8e2f33205128b7a69eca2e2c02 files/gstreamer-0.8.3-jade_fix.patch 1713
-RMD160 e52cf7b4fb0e7d0a4043365dd1abaab5a121897f files/gstreamer-0.8.3-jade_fix.patch 1713
-SHA256 852eb5828e8c5e270e8b32323e37dcf266308b5b5e5aa1f26d08bbb1be4fc51d files/gstreamer-0.8.3-jade_fix.patch 1713
-MD5 eb396dce225d8cbcae77d8c7a60cae55 files/gstreamer-0.8.9-64_dataprotocol.patch 557
-RMD160 983a358588dadbe3ddf518e96fa4195a7d6c49bd files/gstreamer-0.8.9-64_dataprotocol.patch 557
-SHA256 f8bf832d1f994b96abd9cba022e1eb47105da1db89c62a86befb6586d53c5719 files/gstreamer-0.8.9-64_dataprotocol.patch 557
-MD5 5adc10998a8ad71887996272e5775022 files/gstreamer-0.8.9-fixpluginload.patch 3982
-RMD160 e44a0952ca25b6ed03aa6758392b683b70fe2614 files/gstreamer-0.8.9-fixpluginload.patch 3982
-SHA256 98623456924a8bfd14e18085d20e5349dab992a4081547ff4a5449c95fe18acc files/gstreamer-0.8.9-fixpluginload.patch 3982
-MD5 fd63f7bf7d7eacc104d81267e447fcab files/gstreamer-0.8.9-gstqueue_lock.patch 3975
-RMD160 bf41231c36b5cc7d49d1403f1bec8501a85770a6 files/gstreamer-0.8.9-gstqueue_lock.patch 3975
-SHA256 423e985be67788a333e834a3e41863953e8d52f8c0b72154cc2df69657dc3007 files/gstreamer-0.8.9-gstqueue_lock.patch 3975
-MD5 5fc17384d1b188daf867f9515f92db6f gstreamer-0.10.4.ebuild 1951
-RMD160 8e554eea5e7e31c24e8a3213bfcd556eb7656d30 gstreamer-0.10.4.ebuild 1951
-SHA256 5ac66442c4ccfa900e432f573f2c0374fdb415f1449fb83ce0b3c29c7be9392e gstreamer-0.10.4.ebuild 1951
-MD5 cea35e8e95a6852320d630ad3db07637 gstreamer-0.10.5.ebuild 1954
-RMD160 9e72b23632338fcbba3458888095bc8014e6dd48 gstreamer-0.10.5.ebuild 1954
-SHA256 ba738f8bec749c2cac09dbd0b7fe9de8ea5eaff4763ace665251a12095f06342 gstreamer-0.10.5.ebuild 1954
-MD5 301bbbe66729c54178c3244326b42651 gstreamer-0.8.10.ebuild 2810
-RMD160 8bf3d6052e2f43fcfae411ce1ad34c0b33050855 gstreamer-0.8.10.ebuild 2810
-SHA256 b7da5822edf38a674f98b814c924e05aa90b05e304beb86bd3ecd2041b523f83 gstreamer-0.8.10.ebuild 2810
-MD5 2e3d7406652a9eac93f40d1e69b5f511 gstreamer-0.8.11.ebuild 2836
-RMD160 29159ecc682f7ffcf029c7932a998d5cc210b7aa gstreamer-0.8.11.ebuild 2836
-SHA256 f867262fad747bb329bc95f511a2da265927a33c0f3337bc69b75ba01f0588bb gstreamer-0.8.11.ebuild 2836
-MD5 96b2d885faf135d2ae797253f2b2066c gstreamer-0.8.12.ebuild 2842
-RMD160 0143c4cc48d02d44fbbcb7c4836b4384300df9f7 gstreamer-0.8.12.ebuild 2842
-SHA256 3516fb4f5cd956f142d3118f1c92a0a589266948143aa94f7e39c400ea853009 gstreamer-0.8.12.ebuild 2842
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEUjzBW78445TWHXcRAkxRAJ4vD0zxwJxfbQUhLO0G+rRh2Ss3EgCfTnA0
+cBU2v/vZc3YRonPVuay7xRk=
+=newO
+-----END PGP SIGNATURE-----
