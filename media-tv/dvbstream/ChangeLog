@@ -1,0 +1,11 @@
+# ChangeLog for media-tv/dvbstream
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstream/ChangeLog,v 1.1 2006/04/28 13:34:48 zzam Exp $
+
+*dvbstream-0.5 (28 Apr 2006)
+
+  28 Apr 2006; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +dvbstream-0.5.ebuild:
+  Initial import of ebuild. See bug #48742. Based on ebuild from Ben De luca
+  <bedel@allmail.net>.
+
