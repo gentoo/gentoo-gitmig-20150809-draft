@@ -1,43 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 855e2b512f877620fe164fb22c37adb9 ChangeLog 5291
-RMD160 236f72b7779f6618e8ce676e832f14683cbbcce6 ChangeLog 5291
-SHA256 553bed88094181464e438442801083dd3e3d935934357b5fe7a40f5331bd7ea7 ChangeLog 5291
+MD5 48ed2fb5f315f404d77a2a1700ea79af ChangeLog 5389
 MD5 8716488f71c42fb9ee3fbd1b310fc91e files/configure-fix-kdeutils-snmp.patch 1445
-RMD160 73f7835c85edb8c1f26aea2e1b2e0d228689772f files/configure-fix-kdeutils-snmp.patch 1445
-SHA256 4ebcaf25f7edcf05dfd46ac28dba352f57f05c385f43f34f233e073b8fa222b0 files/configure-fix-kdeutils-snmp.patch 1445
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-ksim-3.4.1 212
-RMD160 082e4ebaa6fdaa57b2afd3b86f625546fd132255 files/digest-ksim-3.4.1 212
-SHA256 1d91d34c31e6b41919fab52855c22eac84a1d67cf046f583b321ad6cbc2a460e files/digest-ksim-3.4.1 212
 MD5 062bb93297f13fe72d1e78a55a449788 files/digest-ksim-3.4.2 288
-RMD160 1b8b5d859e3c8b86d4e406bfd91653a227fc6132 files/digest-ksim-3.4.2 288
-SHA256 f9e39259f6a4f6a7e0401c00cfa25de45f575c4b702e03595c7c9a0c9999659d files/digest-ksim-3.4.2 288
 MD5 7693585dde083d1c2cc205db10692163 files/digest-ksim-3.4.3 68
-RMD160 18e67adb3e5348923b5ccfda95ccecd92a7ac993 files/digest-ksim-3.4.3 68
-SHA256 88674a343b751715a238ebdca6ecca37fbb8471c0b519d20d7ade79ae9ea6ed7 files/digest-ksim-3.4.3 68
-MD5 215488123a318281ac9687845ce3f247 files/digest-ksim-3.5.2 250
-RMD160 20ae70b7b70bbb1c67a9f18e73a62d86e3002e51 files/digest-ksim-3.5.2 250
-SHA256 f1a2913c3ce615ce4c875426f15752336f065f7ff67391e6243d280db059ec8b files/digest-ksim-3.5.2 250
+MD5 69fac418ce88ed4924ebe26c5e6592dc files/digest-ksim-3.5.2 68
 MD5 5b77b9bf0a913ec870c7b924b788f4c8 ksim-3.4.1.ebuild 430
-RMD160 fa2d44451bcb4cc328dfc0cb31d6fa64a41d793e ksim-3.4.1.ebuild 430
-SHA256 69befd59339a9d82b5b9c6af6defa004079757e747b7454faf75c4570476b46a ksim-3.4.1.ebuild 430
 MD5 e1b7bc8b8f596aa3b2da3dc9e2045627 ksim-3.4.2.ebuild 530
-RMD160 87eadeef30bad8ca27c5048207f3f561574c5355 ksim-3.4.2.ebuild 530
-SHA256 a2f4af768ce7dc604efe1c96feb621d61d21a1cbdff3b6e2bde19dea55ab2d58 ksim-3.4.2.ebuild 530
 MD5 3dfaa3905f8e52f10ab554bde1423a82 ksim-3.4.3.ebuild 531
-RMD160 e683f8de69f4b786972808adb799199b986b0cf8 ksim-3.4.3.ebuild 531
-SHA256 69b2fc1843ed86c657e8244768705c542f02f74ba8927ceb3a8c58cb197e0b29 ksim-3.4.3.ebuild 531
-MD5 6386c145b3dfeb5ddbb2fca645a3f0e1 ksim-3.5.2.ebuild 495
-RMD160 bc84eff654896de12e6a86b98b3c6d74c4b6e3f7 ksim-3.5.2.ebuild 495
-SHA256 fd180cf84c980aea6b76ae857c604c871b0ec1d92a25486faed943d330083edd ksim-3.5.2.ebuild 495
+MD5 f87513cb8ddc7adaa034c8eb10fb640e ksim-3.5.2.ebuild 588
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEQDmlAiZjviIA2XgRAlatAJ0a+PyilF5ySheA36EOSK4a+fPEqgCdEoAh
-vN3SbgCILxM9UzNlerAW3cw=
-=DUKa
------END PGP SIGNATURE-----
