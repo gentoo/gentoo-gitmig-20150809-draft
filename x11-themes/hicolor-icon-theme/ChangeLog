@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/hicolor-icon-theme
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.30 2006/03/11 20:36:58 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.31 2006/04/28 00:00:14 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-hicolor-icon-theme-0.5, files/digest-hicolor-icon-theme-0.8,
+  Manifest:
+  Fixing SHA256 digest, pass four
 
 *hicolor-icon-theme-0.9-r1 (11 Mar 2006)
 
