@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.3 2006/04/22 14:41:19 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.4 2006/04/28 14:04:07 hattya Exp $
 
 inherit elisp-common flag-o-matic kde-functions multilib subversion
 
@@ -19,7 +19,7 @@ KEYWORDS="~x86"
 SLOT="0"
 
 DEPEND="${RDEPEND}
-	dev-perl/XML-Parser
+	>=dev-util/intltool-0.31
 	X? ( || ( ( x11-proto/xextproto x11-proto/xproto )
 	   	 	  virtual/x11 ) )
 	nls? ( sys-devel/gettext )"
