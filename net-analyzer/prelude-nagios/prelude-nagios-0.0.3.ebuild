@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nagios/prelude-nagios-0.0.3.ebuild,v 1.4 2004/07/08 23:11:12 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nagios/prelude-nagios-0.0.3.ebuild,v 1.5 2006/04/28 20:32:23 exg Exp $
 
 inherit eutils
 
@@ -11,8 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
-DEPEND="
-	|| ( dev-libs/libprelude dev-libs/libprelude-cvs )"
+DEPEND="=dev-libs/libprelude-0.8.10-r1"
 RDEPEND="${DEPEND}
 	net-analyzer/nagios-core"
 

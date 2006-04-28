@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/prelude-nagios
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nagios/ChangeLog,v 1.8 2004/07/08 23:11:12 eldad Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nagios/ChangeLog,v 1.9 2006/04/28 20:32:23 exg Exp $
+
+  28 Apr 2006; Emanuele Giaquinta <exg@gentoo.org>
+  prelude-nagios-0.0.3.ebuild:
+  Depend on libprelude-0.8.10, because it does not compile with newer
+  versions; thanks to Angelo Leto in bug #125052.
 
   09 Jul 2004; Eldad Zack <eldad@gentoo.org> prelude-nagios-0.0.2.ebuild,
   prelude-nagios-0.0.3.ebuild:

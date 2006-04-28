@@ -1,17 +1,38 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 95be7ae4e4f346f523056ab9b8b6e973 prelude-nagios-0.0.2.ebuild 1292
-MD5 096547a34b90248f57a0f6d8375abebb ChangeLog 1159
-MD5 67513bad83a9eb8513e1e26507e72934 metadata.xml 233
-MD5 7d4d3e867a4aede8c1a70f2c0c6fea01 prelude-nagios-0.0.3.ebuild 847
-MD5 38deb4c75b8cafde875b533ab5ae7b78 files/digest-prelude-nagios-0.0.2 72
-MD5 a7b75c6dbfa1a45c9fab30ff31791aef files/digest-prelude-nagios-0.0.3 72
+AUX prelude-nagios-0.0.2-001.patch 1988 RMD160 4ff3d900d2ad3ac709fc17d5d64a392b5bc9b079 SHA1 a6e0d87f4a8208f492b3407cbf58383848765ea8 SHA256 df07d8108c45c4ce66d7d9e63150213b9fdd6a1a1acb069ec37dad4e2d449828 size 1988
 MD5 fdc08ad12de3e7b0a010a302b70c9271 files/prelude-nagios-0.0.2-001.patch 1988
+RMD160 4ff3d900d2ad3ac709fc17d5d64a392b5bc9b079 files/prelude-nagios-0.0.2-001.patch 1988
+SHA256 df07d8108c45c4ce66d7d9e63150213b9fdd6a1a1acb069ec37dad4e2d449828 files/prelude-nagios-0.0.2-001.patch 1988
+DIST prelude-nagios-0.0.2.tar.gz 808960 size 808960
+DIST prelude-nagios-0.0.3.tar.gz 182598 size 182598
+EBUILD prelude-nagios-0.0.2.ebuild 1292 RMD160 967db599acaec482389192641d472a64d7647438 SHA1 147b9a5f5ccaef201da798735e12cad06b7918c9 SHA256 91338c64d69e67eba136f20ad6b981fc707d90359d1eb2408ac36e343fffbab4 size 1292
+MD5 95be7ae4e4f346f523056ab9b8b6e973 prelude-nagios-0.0.2.ebuild 1292
+RMD160 967db599acaec482389192641d472a64d7647438 prelude-nagios-0.0.2.ebuild 1292
+SHA256 91338c64d69e67eba136f20ad6b981fc707d90359d1eb2408ac36e343fffbab4 prelude-nagios-0.0.2.ebuild 1292
+EBUILD prelude-nagios-0.0.3.ebuild 823 RMD160 eaecbeb6e0dac6ed54e03a7c741008fac1b363ae SHA1 7a7754ff405a8814dc818d041b8e7f7c15185234 SHA256 eaa45188692f763f6959cdcd6c654db0a128e0f9d90b19b0d8e4bef2ab77ba1d size 823
+MD5 d8fff0c412f5f365ab1e3233babc70ee prelude-nagios-0.0.3.ebuild 823
+RMD160 eaecbeb6e0dac6ed54e03a7c741008fac1b363ae prelude-nagios-0.0.3.ebuild 823
+SHA256 eaa45188692f763f6959cdcd6c654db0a128e0f9d90b19b0d8e4bef2ab77ba1d prelude-nagios-0.0.3.ebuild 823
+MISC ChangeLog 1360 RMD160 437e81127f0334cef407ab89659052360290e3e2 SHA1 87227b9cc4a957996763909aea70197105a14e88 SHA256 09b909ff638bf555eefee28ddb9ffbbfbdd6c38f50be2ca0942a2a79a5c22717 size 1360
+MD5 6ab733c372f368cdf8b85856933710bb ChangeLog 1360
+RMD160 437e81127f0334cef407ab89659052360290e3e2 ChangeLog 1360
+SHA256 09b909ff638bf555eefee28ddb9ffbbfbdd6c38f50be2ca0942a2a79a5c22717 ChangeLog 1360
+MISC metadata.xml 233 RMD160 fe7a3f2f3cbba9318236acf925911e0b84197c13 SHA1 fc4f22abe4688a13521eb95a92d252fc7b1be70b SHA256 68aae738451b2b645106b41b27f1444b8be627b4faf4bcfa3d8f50c9110e4c9a size 233
+MD5 67513bad83a9eb8513e1e26507e72934 metadata.xml 233
+RMD160 fe7a3f2f3cbba9318236acf925911e0b84197c13 metadata.xml 233
+SHA256 68aae738451b2b645106b41b27f1444b8be627b4faf4bcfa3d8f50c9110e4c9a metadata.xml 233
+MD5 38deb4c75b8cafde875b533ab5ae7b78 files/digest-prelude-nagios-0.0.2 72
+RMD160 bdb8107c287055da3ea82552cfb9f1ea770bbb2b files/digest-prelude-nagios-0.0.2 72
+SHA256 eb8b099f3a7bedef9e6ca2d94540fac38e524f59382525058835a09b55376296 files/digest-prelude-nagios-0.0.2 72
+MD5 a7b75c6dbfa1a45c9fab30ff31791aef files/digest-prelude-nagios-0.0.3 72
+RMD160 db81bb8099b2afff966e1dd763b51ea1ce2b0eea files/digest-prelude-nagios-0.0.3 72
+SHA256 d8de3c7513c1b5961346fcc8b28805ad6163241d17148e35beaaa333ffea021c files/digest-prelude-nagios-0.0.3 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFBKhHNT+MN7JbqCpMRAis0AJ4sYjwRsXv9qwG1DwJ/4467Z+ChFgCfRL00
-9KZvk2S30oZzyjlbQM9Iu9I=
-=62Ob
+iD8DBQFEUnu82iXjgNjfe5sRAnIHAJ9VlWk019wncKuAqwIpESRd8EXvkACfXjEf
+UuLZhjWOx/qLyAuFtJgFcCA=
+=CzVv
 -----END PGP SIGNATURE-----
