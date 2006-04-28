@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXres
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXres/ChangeLog,v 1.20 2006/04/28 00:09:05 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXres/ChangeLog,v 1.21 2006/04/28 15:07:05 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-libXres-1.0.0-r1, Manifest:
+  Revert to working digest.
 
   28 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-libXres-1.0.0-r1, Manifest:
