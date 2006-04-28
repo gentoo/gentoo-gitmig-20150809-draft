@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/orage
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.1 2006/04/20 05:50:08 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.2 2006/04/28 00:07:40 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fixing SHA256 digest, pass four
 
 *orage-4.3.90.1 (20 Apr 2006)
 
