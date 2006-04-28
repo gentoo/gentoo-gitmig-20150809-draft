@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.92 2006/04/06 01:25:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.93 2006/04/28 03:17:36 antarus Exp $
+
+  28 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-kde-i18n-3.3.2,
+  files/digest-kde-i18n-3.4.1, files/digest-kde-i18n-3.4.2,
+  files/digest-kde-i18n-3.4.3, files/digest-kde-i18n-3.5.2, Manifest:
+  Fixing SHA256 digest, pass five
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -kde-i18n-3.5.0.ebuild,
   -kde-i18n-3.5.1.ebuild:
