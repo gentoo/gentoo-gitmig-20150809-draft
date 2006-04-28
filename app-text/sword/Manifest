@@ -1,17 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b97f3736682a510e7c3180738974bdbb ChangeLog 3106
+MD5 651f860693c472eb91a18b2d79fee231 ChangeLog 3293
+RMD160 f2213f57731ac0bfcf0a94a29f1cbf2fd829067b ChangeLog 3293
+SHA256 dd1dc9e055599fbc24aabc8698a21e6d8e51864f567f9394cc19d499d6e5f518 ChangeLog 3293
 MD5 c64d2ee3bc85ebba7188cfbd40098c60 files/digest-sword-1.5.8 64
-MD5 e8f2f6525057f6ef172bccb514469ff3 files/digest-sword-1.5.8_pre1 70
+RMD160 83da740c59ad60e50170bef5131e909ba2daafc2 files/digest-sword-1.5.8 64
+SHA256 e1b51926e1287a3c71b01a2eb2503d4d6a3d6dc0c4472a2d3e108264dad7a591 files/digest-sword-1.5.8 64
 MD5 eebb7c4602450ff87a76e5a693e72da7 files/sword.conf 37
-MD5 c621aa0f1f6ba6fbe77bd87fdbe80aba metadata.xml 404
+RMD160 faba7da387461ae680fdc514eb382ff0c2bf3b9c files/sword.conf 37
+SHA256 5656c02ccb594d922f0fb6cc1b8babec3b6047385ade02d003182917c5b3e933 files/sword.conf 37
+MD5 e973f0aa907e0b28cc80ad2e7ca768d0 metadata.xml 493
+RMD160 fd54afe64e4852429e0f014c535f257c1246ee74 metadata.xml 493
+SHA256 7c57175ea71d9559dec99400f18af74c1ffd1498fc3e7c676b42da98436f6c1c metadata.xml 493
 MD5 0f13c2cac79c15b34e0e9e3520917c6f sword-1.5.8.ebuild 1223
-MD5 e0a22401c6ecae64f31849c6637df96d sword-1.5.8_pre1.ebuild 1620
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDf+aMcsIHjyDViGQRArr4AJ9mjhIXi82nTc9e9/JuXzhvwpMxbQCffPj2
-1ruaH0JKqy5dvokC6QmRnCM=
-=T7ZQ
------END PGP SIGNATURE-----
+RMD160 4ff2878061b65f8b25dbe12b7087468f65d95dbf sword-1.5.8.ebuild 1223
+SHA256 d7eb71a52505bfb16f6a53530de230303b891ab2fa858146d951c6fc45e3c020 sword-1.5.8.ebuild 1223
