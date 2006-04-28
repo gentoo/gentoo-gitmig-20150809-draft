@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0.ebuild,v 1.16 2006/04/23 07:18:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.0.ebuild,v 1.17 2006/04/28 04:54:09 vapier Exp $
 
 PATCH_VER="1.3"
 UCLIBC_VER="1.1"
@@ -49,7 +49,7 @@ DEPEND="${RDEPEND}
 	test? ( sys-devel/autogen )
 	>=sys-apps/texinfo-4.2-r4
 	>=sys-devel/bison-1.875
-	>=${CATEGORY}/binutils-2.16.1"
+	>=${CATEGORY}/binutils-2.15.94"
 
 PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )
 	x86? ( !nocxx? ( !elibc_uclibc? ( !build? ( =virtual/libstdc++-3.3 ) ) ) )"
