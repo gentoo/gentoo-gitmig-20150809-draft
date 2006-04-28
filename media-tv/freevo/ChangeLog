@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/freevo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.31 2006/04/08 00:14:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.32 2006/04/28 00:57:42 marienz Exp $
+
+  28 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-freevo-1.5.1,
+  files/digest-freevo-1.5.2, files/digest-freevo-1.5.3, Manifest:
+  Fixing SHA256 digest, pass four
 
   08 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> freevo-1.5.4.ebuild:
   Fix dep for 1.5.4 (twisted-2).
