@@ -1,0 +1,16 @@
+Index: configure.in
+===================================================================
+RCS file: /cvs/gnome/evolution-sharp/configure.in,v
+retrieving revision 1.30
+diff -u -B -p -r1.30 configure.in
+--- configure.in	26 Apr 2006 22:53:42 -0000	1.30
++++ configure.in	26 Apr 2006 23:18:11 -0000
+@@ -131,7 +131,7 @@ PKG_CHECK_MODULES(EVO_SHELL, "evolution-
+ AC_SUBST(EVO_SHELL_CFLAGS)
+ AC_SUBST(EVO_SHELL_LIBS)
+ 
+-EVO_SHELL_LIBDIR=`$PKG_CONFIG --variable=privlibdir evolution-shell-2.6`
++EVO_SHELL_LIBDIR=`$PKG_CONFIG --variable=privlibdir evolution-shell-$eshellver`
+ AC_SUBST(EVO_SHELL_LIBDIR)
+ 
+ API_VERSION=2.0.0.0
