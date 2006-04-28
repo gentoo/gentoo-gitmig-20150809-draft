@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.70 2006/04/22 10:52:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.71 2006/04/28 13:29:13 hattya Exp $
+
+*qdbm-1.8.49 (28 Apr 2006)
+
+  28 Apr 2006; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.49.ebuild:
+  new upstream release.
 
   22 Apr 2006; Markus Rothe <corsair@gentoo.org> qdbm-1.8.46.ebuild:
   Stable on ppc64
