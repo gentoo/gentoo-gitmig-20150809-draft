@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7-r1.ebuild,v 1.2 2006/04/27 05:48:26 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7-r1.ebuild,v 1.3 2006/04/29 03:09:40 steev Exp $
 
 inherit eutils linux-info debug
 
@@ -151,6 +151,11 @@ src_install() {
 	# Script to unmount devices if they are yanked out (from upstream)
 	exeinto /etc/dev.d/default
 	doexe "${FILESDIR}"/hal-unmount.dev
+
+	# We now create and keep /media here as both gnome-mount and pmount
+	# use these directories, to avoid collision.
+	dodir /media
+	keepdir /media
 }
 
 pkg_postinst() {

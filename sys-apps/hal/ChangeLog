@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.84 2006/04/27 05:48:26 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.85 2006/04/29 03:09:40 steev Exp $
+
+  29 Apr 2006; Steev Klimaszewski <steev@gentoo.org> hal-0.5.7-r1.ebuild:
+  We now keepdir /media in hal as both gnome-mount and pmount can use it - Bug
+  130795
 
   27 Apr 2006; Steev Klimaszewski <steev@gentoo.org> hal-0.5.7.ebuild,
   hal-0.5.7-r1.ebuild:
