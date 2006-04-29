@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jnlp-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnlp-bin/ChangeLog,v 1.7 2006/02/17 20:09:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnlp-bin/ChangeLog,v 1.8 2006/04/29 00:53:43 marienz Exp $
+
+  29 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fix SHA256 digests.
 
   17 Feb 2006; Michael Hanselmann <hansmi@gentoo.org> jnlp-bin-1.2.ebuild:
   Stable on ppc.
