@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tagtool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.14 2006/02/06 14:48:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.15 2006/04/29 09:49:04 blubb Exp $
+
+  29 Apr 2006; Simon Stelling <blubb@gentoo.org> tagtool-0.12.2.ebuild:
+  stable on amd64
 
   06 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org> tagtool-0.12.2.ebuild:
   Keyworded ~sparc
