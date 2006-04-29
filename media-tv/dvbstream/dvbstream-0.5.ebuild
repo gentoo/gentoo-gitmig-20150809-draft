@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstream/dvbstream-0.5.ebuild,v 1.1 2006/04/28 13:34:48 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstream/dvbstream-0.5.ebuild,v 1.2 2006/04/29 10:12:00 zzam Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ src_unpack() {
 }
 
 src_install() {
-	dobin dvbtune dumprtp rtpfeed ts_filter dvbstream-send.pl
+	dobin dvbstream dumprtp rtpfeed ts_filter dvbstream-send.pl
 
 	dodoc README*
 
