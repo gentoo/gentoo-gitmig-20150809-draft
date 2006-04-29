@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/noip-updater
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.16 2005/04/01 14:29:21 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.17 2006/04/29 02:58:25 weeve Exp $
+
+  29 Apr 2006; Jason Wever <weeve@gentoo.org> noip-updater-2.1.1-r1.ebuild:
+  Stable on SPARC.
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org>
   noip-updater-2.1.1-r1.ebuild:

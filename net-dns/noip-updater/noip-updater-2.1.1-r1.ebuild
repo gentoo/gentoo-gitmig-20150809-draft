@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/noip-updater-2.1.1-r1.ebuild,v 1.4 2005/04/01 14:29:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/noip-updater-2.1.1-r1.ebuild,v 1.5 2006/04/29 02:58:25 weeve Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ PATCHES="${FILESDIR}/${MY_P}.patch"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc alpha ~hppa ~mips ~amd64 ia64 ~ppc64"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ~ppc ~ppc64 sparc x86"
 
 RDEPEND="virtual/libc"
 
