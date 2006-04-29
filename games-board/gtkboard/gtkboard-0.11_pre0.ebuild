@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/gtkboard-0.11_pre0.ebuild,v 1.10 2006/04/29 20:37:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/gtkboard-0.11_pre0.ebuild,v 1.11 2006/04/29 21:31:07 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 MY_P=${P/_}
 DESCRIPTION="Board games system"
