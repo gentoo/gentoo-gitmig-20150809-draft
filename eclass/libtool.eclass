@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.70 2006/04/28 16:23:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.71 2006/04/29 12:18:30 flameeyes Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -127,7 +127,7 @@ elibtoolize() {
 	local do_uclibc="yes"
 	local deptoremove=
 	local my_dirlist=
-	local elt_patches="portage relink max_cmd_len sed test tmp"#  kde-fastinstall
+	local elt_patches="portage relink max_cmd_len sed test tmp" # kde-fastinstall
 	local start_dir=${PWD}
 
 	my_dirlist=$(ELT_find_ltmain_sh)
