@@ -1,0 +1,330 @@
+--- kdots/kdots.cpp.old	2006-04-29 02:10:41.000000000 +0200
++++ kdots/kdots.cpp	2006-04-29 02:14:43.000000000 +0200
+@@ -160,39 +160,39 @@
+ 
+ 	switch(op)
+ 	{
+-		case proto->msgseat:
++		case KDotsProto::msgseat:
+ 			proto->getSeat();
+ 			if(proto->num == 1) emit signalColor(QColor(0, 0, 250));
+ 			else if(proto->num == 0) emit signalColor(QColor(0, 0, 50));
+ 			else emit signalColor(QColor(255, 255, 255));
+ 			break;
+-		case proto->msgplayers:
++		case KDotsProto::msgplayers:
+ 			proto->getPlayers();
+ 			if(proto->state != proto->statechoose) proto->state = proto->statewait;
+ 			break;
+-		case proto->msgoptions:
++		case KDotsProto::msgoptions:
+ 			proto->getOptions();
+ 			dots->resizeBoard(proto->width - 1, proto->height - 1);
+ 			dots->refreshBoard();
+ 			break;
+-		case proto->reqmove:
++		case KDotsProto::reqmove:
+ 			emit signalStatus(i18n("Your turn."));
+ 			proto->state = proto->statemove;
+ 			proto->turn = proto->num;
+ 			break;
+-		case proto->msgmoveh:
++		case KDotsProto::msgmoveh:
+ 			proto->getOppMove(proto->sndmoveh);
+ 			dots->setBorderValue(proto->movex, proto->movey, QDots::right, proto->turn, Dots::move);
+ 			dots->repaint();
+ 			if(proto->num < 0) proto->turn = !proto->turn;
+ 			break;
+-		case proto->msgmovev:
++		case KDotsProto::msgmovev:
+ 			proto->getOppMove(proto->sndmovev);
+ 			dots->setBorderValue(proto->movex, proto->movey, QDots::down, proto->turn, Dots::move);
+ 			dots->repaint();
+ 			if(proto->num < 0) proto->turn = !proto->turn;
+ 			break;
+-		case proto->rspmove:
++		case KDotsProto::rspmove:
+ 			if(proto->getMove() != -1)
+ 			{
+ 				dots->setBorderValue(proto->m_lastx, proto->m_lasty, proto->m_lastdir, proto->turn, Dots::move);
+@@ -204,7 +204,7 @@
+ 				emit signalStatus(i18n("Invalid move, please try again!"));
+ 			}
+ 			break;
+-		case proto->msggameover:
++		case KDotsProto::msggameover:
+ 			savepath = QDir::home().path() + "/.ggz";
+ 			dir.mkdir(savepath);
+ 			savepath += "/games";
+@@ -229,10 +229,10 @@
+ 				exit(-1);
+ 			}
+ 			break;
+-		case proto->sndsync:
++		case KDotsProto::sndsync:
+ 			gamesync();
+ 			break;
+-		case proto->reqoptions:
++		case KDotsProto::reqoptions:
+ 			slotOptions();
+ 			break;
+ 		default:
+--- ktictactux/ktictactux.cpp.old	2006-04-29 02:26:43.000000000 +0200
++++ ktictactux/ktictactux.cpp	2006-04-29 02:34:11.000000000 +0200
+@@ -82,15 +82,15 @@
+ 	QWhiteFrame *tmp;
+ 	int id;
+ 
+-	if(proto->state != proto->statemove) return;
++	if(proto->state != (int)proto->statemove) return;
+ 	if(m_turn != proto->num) return;
+ 
+ 	//id = widget->winId() - m_firstid;
+ 	tmp = reinterpret_cast<QWhiteFrame*>(widget);
+ 	id = tmp->id();
+ 
+-	if(proto->board[id % 3][id / 3] == proto->player) return;
+-	if(proto->board[id % 3][id / 3] == proto->opponent) return;
++	if(proto->board[id % 3][id / 3] == (int)proto->player) return;
++	if(proto->board[id % 3][id / 3] == (int)proto->opponent) return;
+ 
+ 	if(m_opponent == PLAYER_AI)
+ 	{
+@@ -110,7 +110,7 @@
+ // Prepare your turn
+ void KTicTacTux::yourTurn()
+ {
+-	if((m_opponent == PLAYER_AI) || (proto->state == proto->statemove)) emit signalStatus(i18n("Your turn"));
++	if((m_opponent == PLAYER_AI) || (proto->state == (int)proto->statemove)) emit signalStatus(i18n("Your turn"));
+ 	proto->state = proto->statemove;
+ }
+ 
+@@ -166,7 +166,7 @@
+ 	// Check for draw (no empty fields left)
+ 	for(int j = 0; j < 3; j++)
+ 		for(int i = 0; i < 3; i++)
+-			if(proto->board[i][j] == proto->none)
++			if(proto->board[i][j] == (int)proto->none)
+ 			{
+ 				m_x = i;
+ 				m_y = j;
+@@ -283,14 +283,14 @@
+ 			{
+ 				if((proto->board[i][j] == c)
+ 				&& (proto->board[2 - i][2 - j] != c)
+-				&& (proto->board[2 - i][2 - j] != proto->none))
++				&& (proto->board[2 - i][2 - j] != (int)proto->none))
+ 				{
+-					if(proto->board[i][2 - j] == proto->none)
++					if(proto->board[i][2 - j] == (int)proto->none)
+ 					{
+ 						m_x = i;
+ 						m_y = 2 - j;
+ 					}
+-					if(proto->board[2 - i][j] == proto->none)
++					if(proto->board[2 - i][j] == (int)proto->none)
+ 					{
+ 						m_x = 2 - i;
+ 						m_y = j;
+@@ -319,17 +319,17 @@
+ 	{
+ 		x = xo + xp * i;
+ 		y = yo + yp * i;
+-		if((proto->board[trip(x)][trip(y)] != proto->none)
++		if((proto->board[trip(x)][trip(y)] != (int)proto->none)
+ 		&& (proto->board[trip(x + xp)][trip(y + yp)] == proto->board[trip(x)][trip(y)]))
+ 		{
+ 			if(proto->board[trip(x + xp * 2)][trip(y + yp * 2)] != proto->board[trip(x)][trip(y)])
+ 			{
+-				if((proto->board[trip(x + xp * 2)][trip(y + yp * 2)] == proto->none) && (!m_seewinner))
++				if((proto->board[trip(x + xp * 2)][trip(y + yp * 2)] == (int)proto->none) && (!m_seewinner))
+ 				{
+ 					m_x = trip(x + xp * 2);
+ 					m_y = trip(y + yp * 2);
+ 					// take unlimited chance
+-					if(proto->board[trip(x)][trip(y)] == proto->opponent) m_seewinner = 1;
++					if(proto->board[trip(x)][trip(y)] == (int)proto->opponent) m_seewinner = 1;
+ 				}
+ 			}
+ 			else m_winner = proto->board[trip(x + xp * 2)][trip(y + yp * 2)];
+@@ -389,33 +389,33 @@
+ 
+ 	switch(op)
+ 	{
+-		case proto->msgseat:
++		case KTicTacTuxProto::msgseat:
+ 			proto->getSeat();
+ 			break;
+-		case proto->msgplayers:
++		case KTicTacTuxProto::msgplayers:
+ 			proto->getPlayers();
+ 			proto->state = proto->statewait;
+ 			if((proto->num >= 0) && (proto->names[!proto->num][0]))
+ 				emit signalScore(i18n("Network game with %1").arg(proto->names[!proto->num]));
+ 			break;
+-		case proto->reqmove:
++		case KTicTacTuxProto::reqmove:
+ 			proto->state = proto->statemove;
+ 			m_turn = proto->num;
+ 			emit signalStatus(i18n("Your move"));
+ 			break;
+-		case proto->rspmove:
++		case KTicTacTuxProto::rspmove:
+ 			switch(proto->getMoveStatus())
+ 			{
+-				case proto->errstate:
++				case KTicTacTuxProto::errstate:
+ 					emit signalStatus(i18n("*server*"));
+ 					break;
+-				case proto->errturn:
++				case KTicTacTuxProto::errturn:
+ 					emit signalStatus(i18n("*turn*"));
+ 					break;
+-				case proto->errbound:
++				case KTicTacTuxProto::errbound:
+ 					emit signalStatus(i18n("*bounds*"));
+ 					break;
+-				case proto->errfull:
++				case KTicTacTuxProto::errfull:
+ 					emit signalStatus(i18n("*occupied*"));
+ 					break;
+ 				default:
+@@ -423,18 +423,18 @@
+ 			}
+ 			getNextTurn();
+ 			break;
+-		case proto->msgmove:
++		case KTicTacTuxProto::msgmove:
+ 			proto->getOpponentMove();
+ 			if(proto->num < 0) emit signalStatus(i18n("Watching the game"));
+ 			break;
+-		case proto->sndsync:
++		case KTicTacTuxProto::sndsync:
+ 			proto->getSync();
+ 			break;
+ //		case proto->sndstats:
+ //			proto->getStatistics();
+ //			emit signalNetworkScore(proto->stats[0], proto->stats[1]);
+ //			break;
+-		case proto->msggameover:
++		case KTicTacTuxProto::msggameover:
+ 			proto->getGameOver();
+ 			proto->state = proto->statedone;
+ 			gameOver();
+@@ -450,10 +450,10 @@
+ 	{
+ 		switch(proto->board[i % 3][i / 3])
+ 		{
+-			case proto->player:
++			case KTicTacTuxProto::player:
+ 				frame[i % 3][i / 3]->setPaletteBackgroundPixmap(QPixmap(m_t1));
+ 				break;
+-			case proto->opponent:
++			case KTicTacTuxProto::opponent:
+ 				frame[i % 3][i / 3]->setPaletteBackgroundPixmap(QPixmap(m_t2));
+ 				break;
+ 			default:
+--- koenig/game.cc.old	2006-04-29 02:41:38.000000000 +0200
++++ koenig/game.cc	2006-04-29 02:41:48.000000000 +0200
+@@ -95,10 +95,10 @@
+ 		case CHESS_MSG_PLAYERS:
+ 			kdDebug(12101) << "Got an MSG_PLAYERS" << endl;
+ 
+-			if (GGZ_SEAT_OPEN != (chessInfo.assign[0] = ggz->getChar()))
++			if ((int)GGZ_SEAT_OPEN != (chessInfo.assign[0] = ggz->getChar()))
+ 				chessInfo.name[0] = ggz->getString();
+ 
+-			if (GGZ_SEAT_OPEN != (chessInfo.assign[1] = ggz->getChar()))
++			if ((int)GGZ_SEAT_OPEN != (chessInfo.assign[1] = ggz->getChar()))
+ 				chessInfo.name[1] = ggz->getString();
+ 
+ 			kdDebug(12101) << "Got players " << chessInfo.name[0]
+--- kcc/kcc.cpp.old	2006-04-29 02:50:16.000000000 +0200
++++ kcc/kcc.cpp	2006-04-29 02:53:19.000000000 +0200
+@@ -152,7 +152,7 @@
+ 	// Check for draw (no empty fields left)
+ 	for(int j = 0; j < 3; j++)
+ 		for(int i = 0; i < 3; i++)
+-			if(proto->board[i][j] == KCCProto::none)
++			if(proto->board[i][j] == (int)KCCProto::none)
+ 			{
+ 				m_x = i;
+ 				m_y = j;
+@@ -298,30 +298,30 @@
+ 
+ 	switch(op)
+ 	{
+-		case proto->cc_msg_seat:
++		case KCCProto::cc_msg_seat:
+ 			proto->getSeat();
+ 			kdDebug() << "*proto* got my seat: " << proto->num << endl;
+ 			break;
+-		case proto->cc_msg_players:
++		case KCCProto::cc_msg_players:
+ 			proto->getPlayers();
+ 			proto->state = KCCProto::statewait;
+ 			emit signalScore(i18n("Network game"));
+ 			kdDebug() << "*proto* got players " << endl;
+ 			break;
+-		case proto->cc_req_move:
++		case KCCProto::cc_req_move:
+ 			proto->state = KCCProto::statemove;
+ 			m_turn = proto->num;
+ 			emit signalStatus(i18n("Your move"));
+ 			kdDebug() << "*proto* move requested" << endl;
+ 			break;
+-		case proto->cc_rsp_move:
++		case KCCProto::cc_rsp_move:
+ 			proto->getMoveStatus();
+ 			switch(proto->status)
+ 			{
+-				case proto->errnone:
++				case KCCProto::errnone:
+ 					status = i18n("Move accepted");
+ 					break;
+-				case proto->errstate:
++				case KCCProto::errstate:
+ 					status = i18n("Table not yet full");
+ 					break;
+ 				default:
+@@ -332,7 +332,7 @@
+ 			//getNextTurn();
+ 			kdDebug() << "*proto* rsp_move " << status << ": " << (int)proto->status << endl;
+ 
+-			if(proto->status == KCCProto::errnone)
++			if(proto->status == (int)KCCProto::errnone)
+ 			{
+ 				findTarget(QPoint(m_fx, m_fy), QPoint(m_tx, m_ty), false);
+ 				tmp = proto->board[m_fx][m_fy];
+@@ -342,7 +342,7 @@
+ 			}
+ 			m_fx = -1;
+ 			break;
+-		case proto->cc_msg_move:
++		case KCCProto::cc_msg_move:
+ 			kdDebug() << "*proto* msg_move" << endl;
+ 			proto->getOpponentMove();
+ 			//if(proto->num < 0) emit signalStatus(i18n("Watching the game"));
+@@ -352,11 +352,11 @@
+ 			proto->board[proto->m_ox1][proto->m_oy1] = 1;
+ 			proto->board[proto->m_ox2][proto->m_oy2] = tmp;
+ 			break;
+-		case proto->cc_msg_sync:
++		case KCCProto::cc_msg_sync:
+ 			proto->getSync();
+ 			kdDebug() << "*proto* sync" << endl;
+ 			break;
+-		case proto->cc_msg_gameover:
++		case KCCProto::cc_msg_gameover:
+ 			proto->getGameOver();
+ 			kdDebug() << "*proto* gameover" << endl;
+ 			proto->state = KCCProto::statedone;
+@@ -376,7 +376,7 @@
+ 	//setMask(QBitmap(QString("%1/kcc/mask.png").arg(GGZDATADIR)));
+ 	p.begin(&b);
+ 
+-	if(proto->state != KCCProto::statenone)
++	if(proto->state != (int)KCCProto::statenone)
+ 		for(int j = 0; j < 17; j++)
+ 			for(int i = 0; i < 15; i++)
+ 			{
