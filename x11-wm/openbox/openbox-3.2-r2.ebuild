@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.2-r2.ebuild,v 1.8 2005/09/17 10:25:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.2-r2.ebuild,v 1.9 2006/04/29 01:53:25 anarchy Exp $
 
 inherit eutils
 
@@ -14,12 +14,24 @@ SLOT="3"
 KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE="nls startup-notification"
 
-RDEPEND="virtual/xft
-	virtual/x11
+RDEPEND="|| ( ( x11-libs/libXrandr
+		x11-libs/libXt
+		xinerama? ( x11-libs/libXinerama )
+		)
+		virtual/x11
+	)
+	virtual/xft
 	>=dev-libs/glib-2
 	>=media-libs/fontconfig-2
 	>=dev-libs/libxml2-2.0"
+
 DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xextproto
+		x11-proto/xf86vidmodeproto
+		)
+		virtual/x11
+	 )
 	startup-notification? ( x11-libs/startup-notification )
 	dev-util/pkgconfig"
 
