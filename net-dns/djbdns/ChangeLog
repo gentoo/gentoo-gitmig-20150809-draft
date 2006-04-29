@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.77 2006/04/27 21:41:10 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.78 2006/04/29 22:50:27 hansmi Exp $
+
+  29 Apr 2006; Michael Hanselmann <hansmi@gentoo.org>
+  djbdns-1.05-r17.ebuild:
+  Stable on mips.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
