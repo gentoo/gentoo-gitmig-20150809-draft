@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.2-r1.ebuild,v 1.7 2006/03/10 00:33:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.2-r1.ebuild,v 1.8 2006/04/29 19:24:23 tcort Exp $
 
 inherit eutils gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="ssl nls ipv6 kerberos krb4 hesiod"
 
 RDEPEND="hesiod? ( net-dns/hesiod )
