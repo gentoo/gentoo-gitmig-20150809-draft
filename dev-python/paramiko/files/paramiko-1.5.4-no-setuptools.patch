@@ -1,0 +1,21 @@
+=== modified file 'a/setup.py'
+--- a/setup.py	
++++ b/setup.py	
+@@ -32,14 +32,8 @@
+ #import ez_setup
+ #ez_setup.use_setuptools()
+ 
+-try:
+-    from setuptools import setup
+-    kw = {
+-        'install_requires': 'pycrypto >= 1.9',
+-    }
+-except ImportError:
+-    from distutils.core import setup
+-    kw = {}
++from distutils.core import setup
++kw = {}
+ 
+ setup(name = "paramiko",
+       version = "1.5.4",
+

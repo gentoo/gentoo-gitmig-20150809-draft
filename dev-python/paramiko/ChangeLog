@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.11 2006/04/13 08:23:01 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.12 2006/04/29 16:59:11 marienz Exp $
+
+*paramiko-1.5.4-r1 (29 Apr 2006)
+
+  29 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  +files/paramiko-1.5.4-no-setuptools.patch, +paramiko-1.5.4-r1.ebuild:
+  Revision bump disabling the conditional setuptools use, should fix bug #131678.
 
 *paramiko-1.5.4 (13 Apr 2006)
 
