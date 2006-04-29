@@ -1,0 +1,43 @@
+--- mercury-extras-0.13.0-beta-2006-04-09.orig/odbc/Mmakefile	2006-04-04 13:49:14.000000000 +1200
++++ mercury-extras-0.13.0-beta-2006-04-09/odbc/Mmakefile	2006-04-11 22:52:58.000000000 +1200
+@@ -40,18 +40,23 @@
+ 
+ 	# The following are for Debian.
+ 
+-	# for unixODBC
+-	MLLIBS=-lodbc -lpthread -lltdl -ldl
+-
+-	# for iODBC
+-	# MLLIBS=-liodbc l-pthread -ldl
+-	# note: on a DEC Alpha using OSF1 remove the -ldl.
++	ifeq ($(MODBC_DRIVER),MODBC_UNIX)
++		# for unixODBC
++		MLLIBS=-L/usr/lib -lodbc -lpthread -lltdl -ldl
++	else
++		# for iODBC
++		ODBC_LIBS=`iodbc-config --libs`
++		ODBC_INCLS=`iodbc-config --cflags`
++		MLLIBS=$(ODBC_LIBS) -lpthread -ldl
++	endif
+ endif
+ 
+-MAIN_TARGET=odbc_test
++MAIN_TARGET=libodbc
+ 
+ .PHONY: depend
+-depend: odbc_test.depend
++depend: odbc.depend
++
++install: libodbc.install
+ 
+ .PHONY: check
+ check:
+@@ -62,7 +67,7 @@
+ # `--no-ansi' is needed because the ODBC header files include C++-style
+ # "//" comments.  `--no-ansi' allows recognition of C++-style "//" comments,
+ # presuming you have gcc version 2.7.1 or greater.
+-MGNUCFLAGS=--no-ansi -D$(MODBC_DRIVER) -D$(MODBC_DB) -I$(ODBC_INCL_DIR)
++MGNUCFLAGS=-D$(MODBC_DRIVER) -D$(MODBC_DB) $(ODBC_INCLS)
+ 
+ #-----------------------------------------------------------------------------#
+ #-----------------------------------------------------------------------------#
