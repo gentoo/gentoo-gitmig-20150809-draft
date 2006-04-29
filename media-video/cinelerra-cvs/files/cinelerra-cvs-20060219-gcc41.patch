@@ -1,0 +1,13 @@
+diff -ur cinelerra-cvs-20060219-orig/mpeg2enc/quantize_x86.c cinelerra-cvs-20060219/mpeg2enc/quantize_x86.c
+--- cinelerra-cvs-20060219-orig/mpeg2enc/quantize_x86.c	2006-04-19 23:28:21.000000000 -0400
++++ cinelerra-cvs-20060219/mpeg2enc/quantize_x86.c	2006-04-19 23:36:50.000000000 -0400
+@@ -234,7 +234,7 @@
+ 			  "movd %%eax, %%mm6\n"
+ 			  : :"g" (1) : "eax" );
+ 	/* Set up SSE rounding mode */
+-	__asm__ ( "ldmxcsr %0\n" : : "X" (trunc_mxcsr) );
++	__asm__ ( "ldmxcsr %0\n" : : "m" (trunc_mxcsr) );
+ 
+ 	/* Load satlim into mm1 */
+ 	movd_m2r( satlim, mm1 );
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20060219.ebuild,v 1.1 2006/03/05 17:33:31 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20060219.ebuild,v 1.2 2006/04/29 03:55:21 halcy0n Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -55,6 +55,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 }
 
 src_compile() {

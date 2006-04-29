@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cinelerra-cvs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.17 2006/03/05 17:33:30 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.18 2006/04/29 03:55:21 halcy0n Exp $
+
+  29 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/cinelerra-cvs-20060219-gcc41.patch, cinelerra-cvs-20060219.ebuild:
+  Add patch to fix compilation with gcc-4.1; bug #119575
 
 *cinelerra-cvs-20060219 (19 Feb 2006)
 
