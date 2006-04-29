@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.2 2006/04/27 14:46:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.3 2006/04/29 03:07:58 wolf31o2 Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # New toys enabled by 2.6 headers
@@ -31,3 +31,8 @@ sys-cluster/gfs-kernel
 sys-cluster/gnbd-kernel
 media-sound/banshee
 
+# Masked since rootstrap is masked
+dev-util/pbuilder
+
+# Masked since linuxwacom is masked
+>=x11-base/xorg-x11-7.0-r1
