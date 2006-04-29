@@ -1,15 +1,91 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f40dc6be53a063be8e3b6e28b4eaf766 ChangeLog 10104
-RMD160 31240a8811d86ac0bfac844bcab56a80848291e6 ChangeLog 10104
-SHA256 f341a3541d184d62f0b3f464487b67a0df7b543c29c0e7b4cc5583e079a8567f ChangeLog 10104
+AUX 50_mailman.conf 429 RMD160 54104453464b725adc18e5fb66bee265089013f6 SHA1 7b002917ae358587fc121f8c06c54c76dd0d9934 SHA256 8a93c5f9b2012122c6e85445620d5eb388e1bc38cb2102158bb62681cb61d3ec size 429
 MD5 165ec3889c73f334f7b524c654977066 files/50_mailman.conf 429
 RMD160 54104453464b725adc18e5fb66bee265089013f6 files/50_mailman.conf 429
 SHA256 8a93c5f9b2012122c6e85445620d5eb388e1bc38cb2102158bb62681cb61d3ec files/50_mailman.conf 429
+AUX README.gentoo 4963 RMD160 13ffe8aeb91ed2a2ff8e7a2b060c7697e19e280e SHA1 664bfd5cb3850d2b8f7acaebced29292b7383e0a SHA256 1c16bc84fa18b94884277f57f9ab535a80bee4c4e72783a78d0b109c1532c6c3 size 4963
 MD5 ea0c850a55a563d90a520ab52809112f files/README.gentoo 4963
 RMD160 13ffe8aeb91ed2a2ff8e7a2b060c7697e19e280e files/README.gentoo 4963
 SHA256 1c16bc84fa18b94884277f57f9ab535a80bee4c4e72783a78d0b109c1532c6c3 files/README.gentoo 4963
+AUX mailman-2.1.5-directory-check.patch 641 RMD160 06e080d7cf7dcfc1c026be7ce0f1df0152048c64 SHA1 63f040cc90d3123dbc260ac2e00d37ecea718afc SHA256 45b1840bddb002d904f303cf25c466ea99eae714a4b8c8dcab1054f28d939678 size 641
+MD5 1c839f4abbbe57c6ffc915fc8dc3018c files/mailman-2.1.5-directory-check.patch 641
+RMD160 06e080d7cf7dcfc1c026be7ce0f1df0152048c64 files/mailman-2.1.5-directory-check.patch 641
+SHA256 45b1840bddb002d904f303cf25c466ea99eae714a4b8c8dcab1054f28d939678 files/mailman-2.1.5-directory-check.patch 641
+AUX mailman-2.1.5-driver.cvs.patch 2539 RMD160 8ed9a1f8132d4b578d9bf162ef07fc82cc3117fc SHA1 b8be7f8edb81fd9cbdcfe0567011507df1e1a199 SHA256 5b2c21821f896d4834ae8ee188a1d8412f4f1c32ebdb65caf7d8070813a24f30 size 2539
+MD5 740c1eb479ebc2df0109668027f60762 files/mailman-2.1.5-driver.cvs.patch 2539
+RMD160 8ed9a1f8132d4b578d9bf162ef07fc82cc3117fc files/mailman-2.1.5-driver.cvs.patch 2539
+SHA256 5b2c21821f896d4834ae8ee188a1d8412f4f1c32ebdb65caf7d8070813a24f30 files/mailman-2.1.5-driver.cvs.patch 2539
+AUX mailman-2.1.5-true_path.patch 447 RMD160 afb650d1ad844ec2f376c065e3128db91c20ff87 SHA1 05bc16e6eb25ab441a06c64d8566cd45f68a727f SHA256 221cada753938fe020e7ed483c372288d06eba1c37eb07731ed3e39877836949 size 447
+MD5 ede21221890a680ccadd3a6f142f3802 files/mailman-2.1.5-true_path.patch 447
+RMD160 afb650d1ad844ec2f376c065e3128db91c20ff87 files/mailman-2.1.5-true_path.patch 447
+SHA256 221cada753938fe020e7ed483c372288d06eba1c37eb07731ed3e39877836949 files/mailman-2.1.5-true_path.patch 447
+AUX mailman-2.1.6-directory-check.patch 1287 RMD160 3bf6d1216a79a32d68340cb0df5db9b5f44a3931 SHA1 ad2b689ce7911b509f999cd849d0402c36ded97c SHA256 2d31eda834429a55edad1fea3c379ecb3e8f05c03fac82f172989caeab85314d size 1287
+MD5 130b235f32a50d11f76a88b979fb4245 files/mailman-2.1.6-directory-check.patch 1287
+RMD160 3bf6d1216a79a32d68340cb0df5db9b5f44a3931 files/mailman-2.1.6-directory-check.patch 1287
+SHA256 2d31eda834429a55edad1fea3c379ecb3e8f05c03fac82f172989caeab85314d files/mailman-2.1.6-directory-check.patch 1287
+AUX mailman-2.1.6_beta1-directory-check.patch 1494 RMD160 2d986ed48d8794cc7a444ce41bb9e31a8fba394f SHA1 c4833920a9cb944347b44443384d8d04583cabf0 SHA256 6c1a2bb5500c84f49280a575b4c52af25e419d3ed53cc8d6c9d565aed39aa9f6 size 1494
+MD5 208aa179cb4feeb3597841fe30529d15 files/mailman-2.1.6_beta1-directory-check.patch 1494
+RMD160 2d986ed48d8794cc7a444ce41bb9e31a8fba394f files/mailman-2.1.6_beta1-directory-check.patch 1494
+SHA256 6c1a2bb5500c84f49280a575b4c52af25e419d3ed53cc8d6c9d565aed39aa9f6 files/mailman-2.1.6_beta1-directory-check.patch 1494
+AUX mailman-2.1.6_rc4-directory-check.patch 1287 RMD160 3bf6d1216a79a32d68340cb0df5db9b5f44a3931 SHA1 ad2b689ce7911b509f999cd849d0402c36ded97c SHA256 2d31eda834429a55edad1fea3c379ecb3e8f05c03fac82f172989caeab85314d size 1287
+MD5 130b235f32a50d11f76a88b979fb4245 files/mailman-2.1.6_rc4-directory-check.patch 1287
+RMD160 3bf6d1216a79a32d68340cb0df5db9b5f44a3931 files/mailman-2.1.6_rc4-directory-check.patch 1287
+SHA256 2d31eda834429a55edad1fea3c379ecb3e8f05c03fac82f172989caeab85314d files/mailman-2.1.6_rc4-directory-check.patch 1287
+AUX mailman-2.1.7-directory-check.patch 1287 RMD160 3bf6d1216a79a32d68340cb0df5db9b5f44a3931 SHA1 ad2b689ce7911b509f999cd849d0402c36ded97c SHA256 2d31eda834429a55edad1fea3c379ecb3e8f05c03fac82f172989caeab85314d size 1287
+MD5 130b235f32a50d11f76a88b979fb4245 files/mailman-2.1.7-directory-check.patch 1287
+RMD160 3bf6d1216a79a32d68340cb0df5db9b5f44a3931 files/mailman-2.1.7-directory-check.patch 1287
+SHA256 2d31eda834429a55edad1fea3c379ecb3e8f05c03fac82f172989caeab85314d files/mailman-2.1.7-directory-check.patch 1287
+AUX mailman-2.1.8_rc1-directory-check.patch 1287 RMD160 3bf6d1216a79a32d68340cb0df5db9b5f44a3931 SHA1 ad2b689ce7911b509f999cd849d0402c36ded97c SHA256 2d31eda834429a55edad1fea3c379ecb3e8f05c03fac82f172989caeab85314d size 1287
+MD5 130b235f32a50d11f76a88b979fb4245 files/mailman-2.1.8_rc1-directory-check.patch 1287
+RMD160 3bf6d1216a79a32d68340cb0df5db9b5f44a3931 files/mailman-2.1.8_rc1-directory-check.patch 1287
+SHA256 2d31eda834429a55edad1fea3c379ecb3e8f05c03fac82f172989caeab85314d files/mailman-2.1.8_rc1-directory-check.patch 1287
+AUX mailman.conf 385 RMD160 bec3c71140385fa88078ffb38be14bfd8ec068c6 SHA1 64e15fce12231bac8e9a5dd831d9c4f134df77a1 SHA256 fdd86c4a72318ade5dfe0f075ce62470979f93d8a4c862993dc32e7bdb422eab size 385
+MD5 3089c1f0f8d91abdd612997b085959eb files/mailman.conf 385
+RMD160 bec3c71140385fa88078ffb38be14bfd8ec068c6 files/mailman.conf 385
+SHA256 fdd86c4a72318ade5dfe0f075ce62470979f93d8a4c862993dc32e7bdb422eab files/mailman.conf 385
+AUX mailman.rc 597 RMD160 be0a574298a1d8d547a4ca76f864dd5fee9b897d SHA1 f464f5ba7310934d300a9af7c614fdf7498f7d2b SHA256 ef4f5482cf68ba44a0fbb83acde29295bd8dcb6512d259d14387dfc29beeb625 size 597
+MD5 ce6d06f51e3da34e92048369e9fe14d2 files/mailman.rc 597
+RMD160 be0a574298a1d8d547a4ca76f864dd5fee9b897d files/mailman.rc 597
+SHA256 ef4f5482cf68ba44a0fbb83acde29295bd8dcb6512d259d14387dfc29beeb625 files/mailman.rc 597
+DIST mailman-2.1.5.tgz 5745912 size 5745912
+DIST mailman-2.1.6.tgz 6482726 size 6482726
+DIST mailman-2.1.6rc4.tgz 6473242 size 6473242
+DIST mailman-2.1.7.tgz 6736536 size 6736536
+DIST mailman-2.1.8rc1.tgz 6856298 RMD160 853e31435a6c9d5a35776d534a9ffe4991c0fd94 SHA256 e22c48466e67110d3bd519a32ce685c929c505118c70ba8e8ce2ee3eeab8bfb8 size 6856298
+EBUILD mailman-2.1.5-r4.ebuild 4511 RMD160 f5eefe10671c71f9584616c058150f5cabd8c29d SHA1 5bbd7cb086adbedd116efa730b7fd3e7d3f045f7 SHA256 b9ab1cfa96ba25bfebee03d5838a30ce3adde9ed08d546295714937d912a3b60 size 4511
+MD5 4b900bf200ef5581266a4b9c66cef87b mailman-2.1.5-r4.ebuild 4511
+RMD160 f5eefe10671c71f9584616c058150f5cabd8c29d mailman-2.1.5-r4.ebuild 4511
+SHA256 b9ab1cfa96ba25bfebee03d5838a30ce3adde9ed08d546295714937d912a3b60 mailman-2.1.5-r4.ebuild 4511
+EBUILD mailman-2.1.5-r5.ebuild 4018 RMD160 14256f0e1156cf4ca6d18b76651041b935025835 SHA1 1f9d080d5cbec0c899c22bb96fb2f0c007779a8f SHA256 c82d0ebba671f8bd81dfc19b509db717024f5b6bec8f855ece03255e79cb4adb size 4018
+MD5 8c528315bd7d3fd689d76c7b88027f8d mailman-2.1.5-r5.ebuild 4018
+RMD160 14256f0e1156cf4ca6d18b76651041b935025835 mailman-2.1.5-r5.ebuild 4018
+SHA256 c82d0ebba671f8bd81dfc19b509db717024f5b6bec8f855ece03255e79cb4adb mailman-2.1.5-r5.ebuild 4018
+EBUILD mailman-2.1.6.ebuild 4346 RMD160 d5760e691b3b4a179d226de031dc74276c606efc SHA1 974a507cfcdf53cbc2f4ff1ac5bea4c3d78e59d2 SHA256 ce981d54c701af929a6601a47ea9914ca53b443a1fcad0874a6d9edc3e5ecbbd size 4346
+MD5 417c3f75decb0d31c5f9f1baccf8b11a mailman-2.1.6.ebuild 4346
+RMD160 d5760e691b3b4a179d226de031dc74276c606efc mailman-2.1.6.ebuild 4346
+SHA256 ce981d54c701af929a6601a47ea9914ca53b443a1fcad0874a6d9edc3e5ecbbd mailman-2.1.6.ebuild 4346
+EBUILD mailman-2.1.6_rc4.ebuild 4353 RMD160 bf3fed1af0d261e4fe79a266c2d51ca9e567b92d SHA1 901c5fc91d128a7e77b6fdf413bffb2575fe34c1 SHA256 a4f7a3d0533fba10e7350998acf05f244e24598b83446a14c929f8ee50c53be9 size 4353
+MD5 0eba7b183f41b3ecaa8eaa2e6941cd53 mailman-2.1.6_rc4.ebuild 4353
+RMD160 bf3fed1af0d261e4fe79a266c2d51ca9e567b92d mailman-2.1.6_rc4.ebuild 4353
+SHA256 a4f7a3d0533fba10e7350998acf05f244e24598b83446a14c929f8ee50c53be9 mailman-2.1.6_rc4.ebuild 4353
+EBUILD mailman-2.1.7.ebuild 4344 RMD160 a5b5b247219a04740477233082aa41364a5f49fe SHA1 ee92c1eae5b99ba7032662151d7ff600d94394a9 SHA256 1df89f5b228ce6c302a023632a2cd20f05ee76c8389b6fd4df28657e883936ab size 4344
+MD5 e83c78d42876b9dcb68aaa7cbd0b5a7d mailman-2.1.7.ebuild 4344
+RMD160 a5b5b247219a04740477233082aa41364a5f49fe mailman-2.1.7.ebuild 4344
+SHA256 1df89f5b228ce6c302a023632a2cd20f05ee76c8389b6fd4df28657e883936ab mailman-2.1.7.ebuild 4344
+EBUILD mailman-2.1.8_rc1.ebuild 4177 RMD160 50c41cf32e354de71596178bb0af9aa1d0bff14b SHA1 eb36f951154c1dc09d171ce9bfbd59b59eec0a67 SHA256 e2e5fa05d1459ca86e9cd4cf577a87fda70bad3439cab3523d9ea7a602e3c37d size 4177
+MD5 511c52a2b89b9967e622db86aa8efba4 mailman-2.1.8_rc1.ebuild 4177
+RMD160 50c41cf32e354de71596178bb0af9aa1d0bff14b mailman-2.1.8_rc1.ebuild 4177
+SHA256 e2e5fa05d1459ca86e9cd4cf577a87fda70bad3439cab3523d9ea7a602e3c37d mailman-2.1.8_rc1.ebuild 4177
+MISC ChangeLog 10227 RMD160 2646bc2439dca452417c4c74aec889ca41e33993 SHA1 f13e7e7e45f18310cb5d7c1d47137297b8ebf70a SHA256 37a2eb86d3645e1cc4bbf8c4c64223adaf3aed70579793bf5aee36fe0324da07 size 10227
+MD5 20e054c13d5a5079ebc4e634d7aef4b2 ChangeLog 10227
+RMD160 2646bc2439dca452417c4c74aec889ca41e33993 ChangeLog 10227
+SHA256 37a2eb86d3645e1cc4bbf8c4c64223adaf3aed70579793bf5aee36fe0324da07 ChangeLog 10227
+MISC metadata.xml 161 RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 SHA1 a1fecd2f7b169d621b88c6ccab9d758209fc8f19 SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 size 161
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
+SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
 MD5 136d82be0bd84eff6961446171dbe288 files/digest-mailman-2.1.5-r4 63
 RMD160 689928adacbd8a9b9bf64c38e1341d4ac704b0c6 files/digest-mailman-2.1.5-r4 63
 SHA256 1f6a203e04ebb008eebf2316a333eb2e19f22490dc5556f47b3aa4dafcfb7a4d files/digest-mailman-2.1.5-r4 63
@@ -25,64 +101,13 @@ SHA256 5232dae11fef58fa821b46d7b3e08eb9bde19443f6267d270787f9d14dc21d62 files/di
 MD5 b8cbeb10e0b59889315d0e112785ebbf files/digest-mailman-2.1.7 63
 RMD160 bca96b989fcfc492ffc2278e9c0c531eff83c9d0 files/digest-mailman-2.1.7 63
 SHA256 c7af7490150aa978d5cea36f894918602e2904d5b0231b9d64034a8eee9d5a55 files/digest-mailman-2.1.7 63
-MD5 b17eefee4b51f107be5eb6e2f5e89fa3 files/digest-mailman-2.1.8_rc1 66
-RMD160 5c1261a5d7c91d688aa44a5e1f30895efa9765c3 files/digest-mailman-2.1.8_rc1 66
-SHA256 b3b762e9b7b6edd4a5e2727ca2e7abc0f02652ebbffa6ee0d50d68f4757394f3 files/digest-mailman-2.1.8_rc1 66
-MD5 1c839f4abbbe57c6ffc915fc8dc3018c files/mailman-2.1.5-directory-check.patch 641
-RMD160 06e080d7cf7dcfc1c026be7ce0f1df0152048c64 files/mailman-2.1.5-directory-check.patch 641
-SHA256 45b1840bddb002d904f303cf25c466ea99eae714a4b8c8dcab1054f28d939678 files/mailman-2.1.5-directory-check.patch 641
-MD5 740c1eb479ebc2df0109668027f60762 files/mailman-2.1.5-driver.cvs.patch 2539
-RMD160 8ed9a1f8132d4b578d9bf162ef07fc82cc3117fc files/mailman-2.1.5-driver.cvs.patch 2539
-SHA256 5b2c21821f896d4834ae8ee188a1d8412f4f1c32ebdb65caf7d8070813a24f30 files/mailman-2.1.5-driver.cvs.patch 2539
-MD5 ede21221890a680ccadd3a6f142f3802 files/mailman-2.1.5-true_path.patch 447
-RMD160 afb650d1ad844ec2f376c065e3128db91c20ff87 files/mailman-2.1.5-true_path.patch 447
-SHA256 221cada753938fe020e7ed483c372288d06eba1c37eb07731ed3e39877836949 files/mailman-2.1.5-true_path.patch 447
-MD5 130b235f32a50d11f76a88b979fb4245 files/mailman-2.1.6-directory-check.patch 1287
-RMD160 3bf6d1216a79a32d68340cb0df5db9b5f44a3931 files/mailman-2.1.6-directory-check.patch 1287
-SHA256 2d31eda834429a55edad1fea3c379ecb3e8f05c03fac82f172989caeab85314d files/mailman-2.1.6-directory-check.patch 1287
-MD5 208aa179cb4feeb3597841fe30529d15 files/mailman-2.1.6_beta1-directory-check.patch 1494
-RMD160 2d986ed48d8794cc7a444ce41bb9e31a8fba394f files/mailman-2.1.6_beta1-directory-check.patch 1494
-SHA256 6c1a2bb5500c84f49280a575b4c52af25e419d3ed53cc8d6c9d565aed39aa9f6 files/mailman-2.1.6_beta1-directory-check.patch 1494
-MD5 130b235f32a50d11f76a88b979fb4245 files/mailman-2.1.6_rc4-directory-check.patch 1287
-RMD160 3bf6d1216a79a32d68340cb0df5db9b5f44a3931 files/mailman-2.1.6_rc4-directory-check.patch 1287
-SHA256 2d31eda834429a55edad1fea3c379ecb3e8f05c03fac82f172989caeab85314d files/mailman-2.1.6_rc4-directory-check.patch 1287
-MD5 130b235f32a50d11f76a88b979fb4245 files/mailman-2.1.7-directory-check.patch 1287
-RMD160 3bf6d1216a79a32d68340cb0df5db9b5f44a3931 files/mailman-2.1.7-directory-check.patch 1287
-SHA256 2d31eda834429a55edad1fea3c379ecb3e8f05c03fac82f172989caeab85314d files/mailman-2.1.7-directory-check.patch 1287
-MD5 130b235f32a50d11f76a88b979fb4245 files/mailman-2.1.8_rc1-directory-check.patch 1287
-RMD160 3bf6d1216a79a32d68340cb0df5db9b5f44a3931 files/mailman-2.1.8_rc1-directory-check.patch 1287
-SHA256 2d31eda834429a55edad1fea3c379ecb3e8f05c03fac82f172989caeab85314d files/mailman-2.1.8_rc1-directory-check.patch 1287
-MD5 3089c1f0f8d91abdd612997b085959eb files/mailman.conf 385
-RMD160 bec3c71140385fa88078ffb38be14bfd8ec068c6 files/mailman.conf 385
-SHA256 fdd86c4a72318ade5dfe0f075ce62470979f93d8a4c862993dc32e7bdb422eab files/mailman.conf 385
-MD5 ce6d06f51e3da34e92048369e9fe14d2 files/mailman.rc 597
-RMD160 be0a574298a1d8d547a4ca76f864dd5fee9b897d files/mailman.rc 597
-SHA256 ef4f5482cf68ba44a0fbb83acde29295bd8dcb6512d259d14387dfc29beeb625 files/mailman.rc 597
-MD5 4b900bf200ef5581266a4b9c66cef87b mailman-2.1.5-r4.ebuild 4511
-RMD160 f5eefe10671c71f9584616c058150f5cabd8c29d mailman-2.1.5-r4.ebuild 4511
-SHA256 b9ab1cfa96ba25bfebee03d5838a30ce3adde9ed08d546295714937d912a3b60 mailman-2.1.5-r4.ebuild 4511
-MD5 8c528315bd7d3fd689d76c7b88027f8d mailman-2.1.5-r5.ebuild 4018
-RMD160 14256f0e1156cf4ca6d18b76651041b935025835 mailman-2.1.5-r5.ebuild 4018
-SHA256 c82d0ebba671f8bd81dfc19b509db717024f5b6bec8f855ece03255e79cb4adb mailman-2.1.5-r5.ebuild 4018
-MD5 417c3f75decb0d31c5f9f1baccf8b11a mailman-2.1.6.ebuild 4346
-RMD160 d5760e691b3b4a179d226de031dc74276c606efc mailman-2.1.6.ebuild 4346
-SHA256 ce981d54c701af929a6601a47ea9914ca53b443a1fcad0874a6d9edc3e5ecbbd mailman-2.1.6.ebuild 4346
-MD5 0eba7b183f41b3ecaa8eaa2e6941cd53 mailman-2.1.6_rc4.ebuild 4353
-RMD160 bf3fed1af0d261e4fe79a266c2d51ca9e567b92d mailman-2.1.6_rc4.ebuild 4353
-SHA256 a4f7a3d0533fba10e7350998acf05f244e24598b83446a14c929f8ee50c53be9 mailman-2.1.6_rc4.ebuild 4353
-MD5 e83c78d42876b9dcb68aaa7cbd0b5a7d mailman-2.1.7.ebuild 4344
-RMD160 a5b5b247219a04740477233082aa41364a5f49fe mailman-2.1.7.ebuild 4344
-SHA256 1df89f5b228ce6c302a023632a2cd20f05ee76c8389b6fd4df28657e883936ab mailman-2.1.7.ebuild 4344
-MD5 f2bd8fed04e6daa511b85243ba13e6d8 mailman-2.1.8_rc1.ebuild 4177
-RMD160 e602acb106fb4bb4c998bc2d20c1179b4bfa306a mailman-2.1.8_rc1.ebuild 4177
-SHA256 05792183b26fe12201d2139c6904a8755e2bfbef7161c7f855c211c2ebfa090d mailman-2.1.8_rc1.ebuild 4177
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
-SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
+MD5 728fd53b688010789867f46a7c33cfac files/digest-mailman-2.1.8_rc1 244
+RMD160 3f7f0eca6ecac5ac5dfb630df854c5bce1ff3352 files/digest-mailman-2.1.8_rc1 244
+SHA256 622899b7584ff1d39e274d61a37cb0e9aa6d685324d8bbf6a42cc01d4fad5af7 files/digest-mailman-2.1.8_rc1 244
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEQxJaCRZPokWLroQRAhrsAKDY3aeUynq1QL8czyhGSuFGOBy5BQCdHgBW
-lLGSLg6nv44m2JXk0tV5qR4=
-=LZ62
+iD8DBQFEU5IxwUpWvClEHQoRAmhrAJwJcoZ9IJogPhUocP0eHEyLHdxwIACfSkti
+C+xLFrAPupePXMcVjSCq2n0=
+=2tj1
 -----END PGP SIGNATURE-----
