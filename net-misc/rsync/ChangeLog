@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.94 2006/04/29 17:09:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.95 2006/04/29 19:55:28 killerfox Exp $
+
+  29 Apr 2006; Rene Nussbaumer <killerfox@gentoo.org> rsync-2.6.8.ebuild:
+  Stable on hppa.
 
   29 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> rsync-2.6.8.ebuild:
   Stable on sparc
