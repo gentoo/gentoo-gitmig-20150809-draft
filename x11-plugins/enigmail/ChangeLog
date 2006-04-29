@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.13 2006/04/29 02:53:17 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.14 2006/04/29 11:34:43 anarchy Exp $
+
+  29 Apr 2006; Jory A. Pratt <anarchy@gentoo.org> enigmail-0.94.0-r2.ebuild:
+  stable wrt bug #130888
 
   29 Apr 2006; Jory A. Pratt <anarchy@gentoo.org> enigmail-0.94.0-r2.ebuild:
   patchset revision for --as-needed
