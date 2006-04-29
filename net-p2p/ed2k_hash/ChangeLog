@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ed2k_hash
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.12 2006/03/06 14:31:32 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.13 2006/04/29 00:36:40 marienz Exp $
+
+  29 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-ed2k_hash-0.4.0, Manifest:
+  Fix SHA256 digests.
 
   06 Mar 2006; Marcin Kryczek <mkay@gentoo.org> ed2k_hash-0.4.0-r1.ebuild:
   Documentation now installs in right place
