@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/gtkboard-0.11_pre0.ebuild,v 1.9 2006/04/23 04:47:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/gtkboard-0.11_pre0.ebuild,v 1.10 2006/04/29 20:37:22 genstef Exp $
 
 inherit games
 
@@ -19,6 +19,12 @@ DEPEND=">=x11-libs/gtk+-2
 	media-libs/sdl-mixer"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc41.patch"
+}
 
 src_compile() {
 	egamesconf \

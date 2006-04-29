@@ -1,6 +1,11 @@
 # ChangeLog for games-board/gtkboard
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/ChangeLog,v 1.7 2004/11/11 00:50:52 josejx Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/ChangeLog,v 1.8 2006/04/29 20:37:22 genstef Exp $
+
+  29 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/gtkboard-0.11_pre0-gcc41.patch, gtkboard-0.11_pre0.ebuild:
+  gcc4 fix thanks to Markus Gothe <nietzsche@lysator.liu.se>, nyhm
+  <tristanheaven@gmail.com> and Jose daLuz <jdaluz@gmail.com> in bug 122147
 
   11 Nov 2004; Joseph Jezak <josejx@gentoo.org> gtkboard-0.11_pre0.ebuild:
   Marked ppc stable.
