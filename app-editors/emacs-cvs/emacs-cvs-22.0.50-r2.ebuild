@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50-r2.ebuild,v 1.2 2006/03/30 00:29:08 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50-r2.ebuild,v 1.3 2006/04/29 05:07:25 mkennedy Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -74,6 +74,8 @@ src_unpack() {
 }
 
 src_compile() {
+	export SANDBOX_ON=0			# for the unbelievers, see Bug #131505
+
 	# no flag is allowed
 	ALLOWED_FLAGS=" "
 	strip-flags
