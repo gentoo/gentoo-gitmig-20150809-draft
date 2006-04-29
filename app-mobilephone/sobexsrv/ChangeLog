@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/sobexsrv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.3 2006/04/16 04:14:04 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.4 2006/04/29 01:00:35 joker Exp $
+
+  29 Apr 2006; Christian Birchinger <joker@gentoo.org>
+  sobexsrv-1.0.0_pre4.ebuild:
+  Added net-wireless/bluez-utils as runtime depend because it depends on the
+  bluetooth init script from bluez-utils
 
   16 Apr 2006; Christian Birchinger <joker@gentoo.org>
   sobexsrv-1.0.0_pre4.ebuild:
