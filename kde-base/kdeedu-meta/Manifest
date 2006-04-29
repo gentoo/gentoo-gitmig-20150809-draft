@@ -1,40 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8d4e970aa0eccc0e03e83f37b2ea5410 ChangeLog 6059
-RMD160 78d6cbcdc68879c3371f9f0cbbf948bf74e4e8d8 ChangeLog 6059
-SHA256 6b39b4441b2c0b6f83bb0784960e58b2d019a5f8109740a6f0a99e34eb97cdec ChangeLog 6059
+MD5 7f0797c53da6627c63841f275cec3619 ChangeLog 6197
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.4.1 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeedu-meta-3.4.1 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeedu-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.4.2 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeedu-meta-3.4.2 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeedu-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.4.3 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeedu-meta-3.4.3 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeedu-meta-3.4.3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.5.2 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeedu-meta-3.5.2 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeedu-meta-3.5.2 0
-MD5 831319842fc689cc23905179fa383de8 kdeedu-meta-3.4.1.ebuild 1301
-RMD160 a36d41920a8b60f9fd05d955fce77d5ebe3f808c kdeedu-meta-3.4.1.ebuild 1301
-SHA256 7719f3cfee03edc8e3837a4df2ca35cbea60fd1441f315b12ccb6c2c23a311dc kdeedu-meta-3.4.1.ebuild 1301
-MD5 346fa4b05c432e9c340240fa656a4629 kdeedu-meta-3.4.2.ebuild 1313
-RMD160 424b077c42790cc28ef5768f8ba1e7f3e5af2c7d kdeedu-meta-3.4.2.ebuild 1313
-SHA256 11687efa9f8ee751f9aa5fbd354f269c7fd3f3d1c956401cac29d9a365814988 kdeedu-meta-3.4.2.ebuild 1313
+MD5 ffcbac4950384ff18e370e31f9b12ed0 kdeedu-meta-3.4.1.ebuild 1254
+MD5 0564ff3afd36e73da94c03858f9434c0 kdeedu-meta-3.4.2.ebuild 1266
 MD5 e5fed529c4dcce9bd8843b2e5f510633 kdeedu-meta-3.4.3.ebuild 1362
-RMD160 a316052a0a0bf806c05d30ee737df780462504ae kdeedu-meta-3.4.3.ebuild 1362
-SHA256 c13deca4079f9b1fc294af3f7853eaf43ffe6a9d34839d6317862a7c04fd51db kdeedu-meta-3.4.3.ebuild 1362
 MD5 56a93e1e69073ba4c67936012585a3fc kdeedu-meta-3.5.2.ebuild 1364
-RMD160 4a53a3bc0bbc3c08ba3ccc29be2071fc81ac5899 kdeedu-meta-3.5.2.ebuild 1364
-SHA256 4e1c5da297a9911ff9c3bb5ee5965f404f1260f2aafd2bdb30c17a1aa1fc267f kdeedu-meta-3.5.2.ebuild 1364
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENEfLAiZjviIA2XgRAqdVAJ9ts6VL+/Q8I9WhsKY8JFb4bzvMoACg6h57
-EJIoj1WsJvRNGaILEyKv1as=
-=5ZpY
------END PGP SIGNATURE-----

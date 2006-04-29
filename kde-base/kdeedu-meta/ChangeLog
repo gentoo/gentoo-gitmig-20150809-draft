@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.45 2006/04/05 22:44:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.46 2006/04/29 17:48:23 carlo Exp $
+
+  29 Apr 2006; Carsten Lohrke <carlo@gentoo.org> kdeedu-meta-3.4.1.ebuild,
+  kdeedu-meta-3.4.2.ebuild:
+  Remove kmathtool from dependencies.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kdeedu-meta-3.5.0.ebuild, -kdeedu-meta-3.5.1.ebuild:
