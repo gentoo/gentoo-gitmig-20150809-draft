@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXcursor
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcursor/ChangeLog,v 1.27 2006/04/29 15:28:01 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcursor/ChangeLog,v 1.28 2006/04/29 15:29:20 joshuabaergen Exp $
+
+  29 Apr 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  libXcursor-1.1.6.ebuild:
+  We don't have to restrict mirroring on this version.
 
 *libXcursor-1.1.6 (29 Apr 2006)
 
