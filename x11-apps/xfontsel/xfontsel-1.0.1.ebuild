@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfontsel/xfontsel-1.0.1.ebuild,v 1.2 2006/02/14 21:17:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfontsel/xfontsel-1.0.1.ebuild,v 1.3 2006/04/29 01:00:16 lu_zero Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="X.Org xfontsel application"
-KEYWORDS="~amd64 ~arm ~mips ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="xprint"
 RDEPEND="x11-libs/libXaw"
 DEPEND="${RDEPEND}"
