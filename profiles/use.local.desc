@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1873 2006/04/27 12:25:03 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1874 2006/04/29 19:17:09 chainsaw Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -735,6 +735,7 @@ media-sound/audacious:libvisual - Support visualization plugins through media-li
 media-sound/audacious:modplug - Build with modplug support
 media-sound/audacious:musepack - Build with musepack support
 media-sound/audacious:sid - Build with SID (Commodore 64 Audio) support
+media-sound/audacious:timidity - Build with Timidity++ (MIDI sequencer) support
 media-sound/audacious:wma - Build with WMA (Windows Media Audio) support
 media-sound/audacity:ladspa - Enables the ability to support ladspa plugins
 media-sound/audacity:libsamplerate - Build with libsamplerate support
