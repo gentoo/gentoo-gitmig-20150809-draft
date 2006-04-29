@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/opengl-manpages/opengl-manpages-20001215.ebuild,v 1.6 2006/04/23 10:38:55 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/opengl-manpages/opengl-manpages-20001215.ebuild,v 1.7 2006/04/29 00:00:38 weeve Exp $
 
 DESCRIPTION="Man pages for OpenGL"
 HOMEPAGE="http://www.opengl.org/documentation/specs/"
@@ -12,7 +12,7 @@ S="${WORKDIR}/release/xc/doc/man/GL"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=""
