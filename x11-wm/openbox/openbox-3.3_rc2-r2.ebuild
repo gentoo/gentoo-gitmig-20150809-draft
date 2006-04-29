@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.3_rc2-r2.ebuild,v 1.1 2005/12/18 19:02:05 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.3_rc2-r2.ebuild,v 1.2 2006/04/29 22:30:34 anarchy Exp $
 
 inherit eutils
 
@@ -41,6 +41,7 @@ S=${WORKDIR}/${P/_/-}
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-64bit-property.patch
+	epatch ${FILESDIR}/${P}-asneeded.patch
 }
 
 src_compile() {
