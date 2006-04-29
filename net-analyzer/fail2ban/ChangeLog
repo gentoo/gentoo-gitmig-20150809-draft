@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.9 2006/04/11 22:25:46 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.10 2006/04/29 17:59:40 vanquirius Exp $
+
+  29 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> fail2ban-0.6.0.ebuild,
+  fail2ban-0.6.1-r1.ebuild:
+  Updated HOMEPAGE: point to project homepage instead of summary page. Fixes
+  bug 131683, thanks to Steve Dibb <sdibb at myway dot com>.
 
 *fail2ban-0.6.1-r1 (11 Apr 2006)
 
