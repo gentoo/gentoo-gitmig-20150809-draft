@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qmpdclient
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.2 2006/04/07 21:53:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.3 2006/04/29 13:51:48 dertobi123 Exp $
+
+  29 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  qmpdclient-1.0.3.ebuild:
+  Added to ~ppc, bug #122048
 
   07 Apr 2006; Andrej Kacian <ticho@gentoo.org> qmpdclient-1.0.3.ebuild:
   Removed debug USE flag for now, see comment #8 in bug #122048. Added ~amd64
