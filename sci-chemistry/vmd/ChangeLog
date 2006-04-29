@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.4 2006/04/18 02:04:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.5 2006/04/29 00:39:08 marienz Exp $
+
+  29 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fix SHA256 digests.
 
 *vmd-1.8.4 (18 Apr 2006)
 
