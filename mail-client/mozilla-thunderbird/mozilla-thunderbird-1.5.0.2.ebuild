@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.2.ebuild,v 1.2 2006/04/23 15:25:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.2.ebuild,v 1.3 2006/04/29 02:52:18 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools
 
-PVER="1.1"
+PVER="1.2"
 
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
@@ -86,7 +86,7 @@ src_compile() {
 	mozconfig_final
 
 	# hardened GCC uses -fstack-protector-all by default, which breaks us
-	has_hardened && append-flags -fno-stack-protector-all
+	gcc-specs-ssp && append-flags -fno-stack-protector-all
 	replace-flags -fstack-protector-all -fstack-protector
 
 	####################################
