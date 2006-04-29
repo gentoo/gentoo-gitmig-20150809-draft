@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.36 2006/02/17 21:33:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.37 2006/04/29 14:26:10 weeve Exp $
+
+  29 Apr 2006; Jason Wever <weeve@gentoo.org> liferea-0.9.6.ebuild:
+  Stable on SPARC.
 
   17 Feb 2006; Markus Rothe <corsair@gentoo.org> liferea-0.9.6.ebuild,
   liferea-1.0-r1.ebuild, liferea-1.0.3.ebuild, liferea-1.0.4.ebuild:
