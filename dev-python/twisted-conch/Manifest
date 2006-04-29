@@ -1,28 +1,42 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a775ded0402b4139a32d704f0d267bdf ChangeLog 1408
-RMD160 228f5c8b6c3f46d2b4c77dca3d3525c473ec6927 ChangeLog 1408
-SHA256 671bbe20e4d90bd2afdce5ddf068e586d4d323bf68258cce3855b94b578ef23b ChangeLog 1408
-MD5 4e7bf4c8e53132875fc7bc7182c590e9 files/digest-twisted-conch-0.5.0-r1 71
-RMD160 2d7e9e9fb02bdc7575f803783787bae837ea54ab files/digest-twisted-conch-0.5.0-r1 71
-SHA256 a2414529e41c355f0882b954e522c25e816881916f88c2e7145f12161bba2162 files/digest-twisted-conch-0.5.0-r1 71
-MD5 e404dd5b127510d0facc3ddf3664da81 files/digest-twisted-conch-0.6.0 71
-RMD160 243a3948b6a97606106779c2e379f99f50b9d72b files/digest-twisted-conch-0.6.0 71
-SHA256 6614f306fef5e8ac17f5e34ac2e7cd1a59778ee5775ab2dde435599c456d99ad files/digest-twisted-conch-0.6.0 71
+AUX twisted-conch-0.5.0-root-skip.patch 1142 RMD160 f2c72e0ac6f0ba3528c3724c2ac0f9e77a81b689 SHA1 03d2381388edde729835a3a95054885d81430cc8 SHA256 3f3488c9e72ec8319d2e24c67d2ccdc62578639b85783df9540ba35a43c4854e size 1142
+MD5 01a72ffee827119c0440b70c3b7d3cdf files/twisted-conch-0.5.0-root-skip.patch 1142
+RMD160 f2c72e0ac6f0ba3528c3724c2ac0f9e77a81b689 files/twisted-conch-0.5.0-root-skip.patch 1142
+SHA256 3f3488c9e72ec8319d2e24c67d2ccdc62578639b85783df9540ba35a43c4854e files/twisted-conch-0.5.0-root-skip.patch 1142
+AUX twisted-conch-0.6.0-root-skip.patch 821 RMD160 cd01fe8d450bc07c20b12b466f9d984327ecc678 SHA1 5c19319285ed772f745a09ea9d3a70fd711dc487 SHA256 3c2cf9ba335c334d18d050bb60d3325ff5f086dcd0cca930da3cca391a7b7d7e size 821
+MD5 1697de9cf9c54efc190cf4f7f71fbe89 files/twisted-conch-0.6.0-root-skip.patch 821
+RMD160 cd01fe8d450bc07c20b12b466f9d984327ecc678 files/twisted-conch-0.6.0-root-skip.patch 821
+SHA256 3c2cf9ba335c334d18d050bb60d3325ff5f086dcd0cca930da3cca391a7b7d7e files/twisted-conch-0.6.0-root-skip.patch 821
+DIST TwistedConch-0.5.0.tar.bz2 118875 RMD160 cd64533a0a4580b959e442bc03f5527c8afd3541 SHA256 c088e98763188cab7e7d2538b876482fdbc335f03041a4e5f701d6c8ecce756d size 118875
+DIST TwistedConch-0.6.0.tar.bz2 126034 RMD160 ed37f1d3a9d6736b452cc0f1aa422894253a00e1 SHA256 eaf8adda95062fe94aa1ac28e024a1ec072b99d7dff6c1cdee65b719994d0a28 size 126034
+EBUILD twisted-conch-0.5.0-r1.ebuild 513 RMD160 c449a428d5a0fcbfb4cec86f412bea46df44657b SHA1 86c38f31d9aab779d36e12749a20cc8ee38a3dec SHA256 575709cdf1c372b6eefe80347df5954a282880c46b2bc628ae76f016c79081f3 size 513
+MD5 ffe59aaadb28daa7af7bcedbd7db3b5a twisted-conch-0.5.0-r1.ebuild 513
+RMD160 c449a428d5a0fcbfb4cec86f412bea46df44657b twisted-conch-0.5.0-r1.ebuild 513
+SHA256 575709cdf1c372b6eefe80347df5954a282880c46b2bc628ae76f016c79081f3 twisted-conch-0.5.0-r1.ebuild 513
+EBUILD twisted-conch-0.6.0.ebuild 519 RMD160 50f14bff244e5a3068c884e5851e10a4502cf978 SHA1 bf719f9a137c6a78d9db798ebd527726a365a05b SHA256 b2f8be51a799e8413b5bb3473bddc53ddf0deb9bcfd245c5cf7530a693354e37 size 519
+MD5 5e1fa8e3d543dd71e7be84439e6c9341 twisted-conch-0.6.0.ebuild 519
+RMD160 50f14bff244e5a3068c884e5851e10a4502cf978 twisted-conch-0.6.0.ebuild 519
+SHA256 b2f8be51a799e8413b5bb3473bddc53ddf0deb9bcfd245c5cf7530a693354e37 twisted-conch-0.6.0.ebuild 519
+MISC ChangeLog 1647 RMD160 7a1d10b8ed4d86352029c00683b6819f8ab7ff16 SHA1 7e7d8ca657b4ffe2fbbfe109ec5bc8ac0a81140d SHA256 878663080922c7fe01d17d3493da62e2fab5a02655f4e825d9db7e4bed1cc406 size 1647
+MD5 b1c4fc7af46629677057718b15c5169f ChangeLog 1647
+RMD160 7a1d10b8ed4d86352029c00683b6819f8ab7ff16 ChangeLog 1647
+SHA256 878663080922c7fe01d17d3493da62e2fab5a02655f4e825d9db7e4bed1cc406 ChangeLog 1647
+MISC metadata.xml 218 RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b SHA1 0dc0efeb1f1c4a4e691f1f10d4dd28814582c74e SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 size 218
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
 RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b metadata.xml 218
 SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata.xml 218
-MD5 13fd13acabc0b2f8fffbe506841921e0 twisted-conch-0.5.0-r1.ebuild 418
-RMD160 937e778b45e860329b0638a1ca4e950e6c5fbfb5 twisted-conch-0.5.0-r1.ebuild 418
-SHA256 07d45c54494fb4c146cbb51ee82311dd4eb52e0628a26f6f57ce52c4dc901bd7 twisted-conch-0.5.0-r1.ebuild 418
-MD5 120df689c39d9ce0c52f227252594541 twisted-conch-0.6.0.ebuild 433
-RMD160 93dca315cfe759f44a711829befd675bd4a516fa twisted-conch-0.6.0.ebuild 433
-SHA256 33263c5eb1db7c4c46caf8418d2e73d82384a97cef52c17ccd248f28e6ead4b0 twisted-conch-0.6.0.ebuild 433
+MD5 bb2649bba1e932c7b275e33d349b8aae files/digest-twisted-conch-0.5.0-r1 259
+RMD160 0ae0112fdbf615a13f7dc262364520cb1d160955 files/digest-twisted-conch-0.5.0-r1 259
+SHA256 cb471508456896951c63e700b34f995cba2eeef3c9eb849323433dc5a0df53b0 files/digest-twisted-conch-0.5.0-r1 259
+MD5 22c32a03aa967b273ac41c449f7888c7 files/digest-twisted-conch-0.6.0 259
+RMD160 9b3269d61c224aa848d2748cf7ce4de70cb99d65 files/digest-twisted-conch-0.6.0 259
+SHA256 5446c0d9fb69a014e5e1f5583b0ea135876077328f3218c29fc0f69920487e82 files/digest-twisted-conch-0.6.0 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEN1KxoFw4q70f3SsRAqF1AJ90eZ8ZeHc8S5Ib+4Nx6CfQP/+ojACeKSmT
-DbYVbu7lbBfaEW5ZXO485N0=
-=TCL/
+iD8DBQFEU7gfW78445TWHXcRAkAlAJ0Y1+4fbZGx56Pp6E5Nxr6oOBRoKACeN7xy
+0gilRJIBS02doIz8VggpwNs=
+=Ebxy
 -----END PGP SIGNATURE-----

@@ -1,0 +1,28 @@
+=== modified file 'a/twisted/conch/test/test_cftp.py'
+--- a/twisted/conch/test/test_cftp.py	
++++ b/twisted/conch/test/test_cftp.py	
+@@ -404,6 +404,8 @@
+             return result[0]
+ 
+     def testBatchFile(self):
++        if not os.geteuid():
++            raise unittest.SkipTest('test fails as root.')
+         cmds = """pwd
+ exit
+ """
+
+=== modified file 'a/twisted/conch/test/test_conch.py'
+--- a/twisted/conch/test/test_conch.py	
++++ b/twisted/conch/test/test_conch.py	
+@@ -343,6 +343,10 @@
+             util.spinWhile(lambda: not p.done)
+ 
+ class UnixClientTestCase(CmdLineClientTestBase, unittest.TestCase):
++
++    if not os.geteuid():
++        def testExec(self):
++            raise unittest.SkipTest('Fails as root.')
+ 
+     def execute(self, args, p, preargs = ''):
+         if runtime.platformType == 'win32':
+
