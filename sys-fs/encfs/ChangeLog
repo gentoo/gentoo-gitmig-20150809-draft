@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/encfs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.20 2006/04/02 22:48:44 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.21 2006/04/29 18:05:25 vanquirius Exp $
+
+  29 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> encfs-1.2.5.1.ebuild:
+  Mark 1.2.5.1 x86 stable. Fixes bug 131627, reported by Daniel Webert <rockoo
+  at gmail dot com>.
 
 *encfs-1.3.1.1 (02 Apr 2006)
 
