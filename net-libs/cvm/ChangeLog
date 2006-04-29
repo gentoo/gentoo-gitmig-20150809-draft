@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/cvm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/ChangeLog,v 1.14 2006/04/22 10:59:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/ChangeLog,v 1.15 2006/04/29 00:40:28 halcy0n Exp $
+
+  29 Apr 2006; Mark Loeser <halcy0n@gentoo.org> cvm-0.76.ebuild:
+  Stable on x86; bug #123462
 
   22 Apr 2006; <nixnut@gentoo.org> cvm-0.76.ebuild:
   Stable on ppc. bug #123462
