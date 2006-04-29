@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-libart2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart2/ChangeLog,v 1.28 2006/03/30 16:06:47 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart2/ChangeLog,v 1.29 2006/04/29 09:40:51 blubb Exp $
+
+  29 Apr 2006; Simon Stelling <blubb@gentoo.org> ruby-libart2-0.14.1.ebuild:
+  stable on amd64
 
   30 Mar 2006; Ferris McCormick <fmccor@gentoo.org>
   ruby-libart2-0.14.1.ebuild:
