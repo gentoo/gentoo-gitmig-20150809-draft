@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.32 2006/04/17 23:01:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.33 2006/04/29 00:24:11 marienz Exp $
+
+  29 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-ati-drivers-8.18.8, files/digest-ati-drivers-8.18.8-r1,
+  files/digest-ati-drivers-8.18.8-r2, files/digest-ati-drivers-8.19.10,
+  files/digest-ati-drivers-8.20.8, files/digest-ati-drivers-8.21.7,
+  files/digest-ati-drivers-8.23.7, Manifest:
+  Fix SHA256 digests.
 
 *ati-drivers-8.24.8 (17 Apr 2006)
 
