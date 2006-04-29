@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-1.3.72.ebuild,v 1.6 2006/03/22 07:20:08 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-1.3.72.ebuild,v 1.7 2006/04/29 20:52:21 plasmaroo Exp $
 
 inherit eutils
 
@@ -28,7 +28,9 @@ src_unpack() {
 src_compile() {
 	econf || die
 	sed -i -e "s/mandir = /mandir = \${prefix}/" ${S}/Makefile
-	emake || die
+
+	# Parallelizing above -j2 can be unstable (bug #131402)
+	emake -j2 || die
 }
 
 src_install() {
