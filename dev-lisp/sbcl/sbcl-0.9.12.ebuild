@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.12.ebuild,v 1.1 2006/04/27 20:10:56 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.12.ebuild,v 1.2 2006/04/29 05:55:34 mkennedy Exp $
 
 inherit common-lisp-common-2 eutils
 
@@ -166,7 +166,7 @@ src_install() {
 
 	if use doc; then
 		dohtml doc/html/*
-		doinfo ${S}/doc/manual/*.info
+		doinfo ${S}/doc/manual/*.info*
 	fi
 
 	keepdir /usr/$(get_libdir)/common-lisp/sbcl
