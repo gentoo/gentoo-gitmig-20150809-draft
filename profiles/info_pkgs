@@ -9,3 +9,5 @@ sys-devel/binutils
 sys-devel/libtool
 dev-lang/python
 sys-apps/sandbox
+dev-util/confcache
+dev-util/ccache
