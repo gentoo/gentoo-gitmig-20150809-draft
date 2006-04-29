@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libXfixes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.22 2006/04/28 15:11:00 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.23 2006/04/29 04:26:34 joshuabaergen Exp $
+
+*libXfixes-4.0 (29 Apr 2006)
+
+  29 Apr 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +libXfixes-4.0.ebuild:
+  Version bump.  Plug a leak on the error path and add a couple new
+  cursor-related calls.
 
   28 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-libXfixes-3.0.1.2, Manifest:
