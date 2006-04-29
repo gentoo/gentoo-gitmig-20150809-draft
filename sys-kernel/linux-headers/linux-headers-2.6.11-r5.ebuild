@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.11-r5.ebuild,v 1.1 2006/04/19 22:33:45 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.11-r5.ebuild,v 1.2 2006/04/29 21:08:35 plasmaroo Exp $
 
 ETYPE="headers"
 H_SUPPORTEDARCH="alpha amd64 arm bfin cris hppa ia64 m68k nios2 ppc ppc64 s390 sh sparc x86"
 inherit eutils kernel-2
 detect_version
 
-PATCHES_V='11'
+PATCHES_V='12'
 
 SRC_URI="${KERNEL_URI} mirror://gentoo/linux-2.6.11-m68k-headers.patch.bz2
 	mirror://gentoo/linux-2.6.12.1-blackfin.patch.bz2
