@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.9.ebuild,v 1.1 2006/04/28 03:35:16 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.9.ebuild,v 1.2 2006/04/29 03:03:43 steev Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,8 +30,9 @@ src_unpack() {
 }
 
 src_install () {
-	#this is where we mount stuff
-	keepdir /media
+	# this is where we mount stuff
+	# moved to hal as of 0.5.7-r1
+	#keepdir /media
 
 	# Must be run SETUID
 	exeinto /usr/bin

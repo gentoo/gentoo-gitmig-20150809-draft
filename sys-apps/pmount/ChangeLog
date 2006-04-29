@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pmount
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.23 2006/04/28 03:35:16 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.24 2006/04/29 03:03:43 steev Exp $
+
+  29 Apr 2006; Steev Klimaszewski <steev@gentoo.org> pmount-0.9.9.ebuild:
+  hal now does the keepdir on /media so that we don't get collisions from pmount
+  and gnome-mount (which can co-exist). Bug 130795.
 
 *pmount-0.9.9 (28 Apr 2006)
 
