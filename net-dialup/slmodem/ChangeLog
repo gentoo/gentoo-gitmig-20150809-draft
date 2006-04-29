@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.60 2006/04/26 16:13:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.61 2006/04/29 17:42:36 genstef Exp $
+
+  29 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  -files/slmodem-2.9.9b-gcc4.patch, -files/slmodem-amd64-Makefile.diff,
+  -files/slmodem-2.9.init, -files/slmodem-2.9.modules,
+  -files/slmodem-class-simple-to-class.diff,
+  -files/slmodem-remove-URB_ASYNC_UNLINK.patch, -slmodem-2.9.9d.ebuild:
+  remove old
 
   26 Apr 2006; Alin Nastac <mrness@gentoo.org>
   slmodem-2.9.11_pre20051101.ebuild:
@@ -222,7 +229,7 @@
   files/slmodem-2.9.9-makefile-fixup.patch:
   Patch missing parenthesis. Thanks spyderous@gentoo.org
 
-  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> slmodem-2.9.9-r2.ebuild:
+  13 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org> slmodem-2.9.9-r2.ebuild:
   Fix broken quoting reported by genstef in #gentoo-bugs.
 
 *slmodem-2.9.9-r2 (13 Aug 2004)
