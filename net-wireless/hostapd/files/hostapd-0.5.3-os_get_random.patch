@@ -1,0 +1,36 @@
+diff -ur hostapd-0.5.3/hlr_auc_gw.c hostapd-0.5.3-os_get_random/hlr_auc_gw.c
+--- hostapd-0.5.3/hlr_auc_gw.c	2006-03-11 19:15:15.000000000 +0100
++++ hostapd-0.5.3-os_get_random/hlr_auc_gw.c	2006-04-29 15:33:13.000000000 +0200
+@@ -204,7 +204,7 @@
+ 	size_t res_len;
+ 
+ #ifdef AKA_USE_MILENAGE
+-	os_get_random(rand, EAP_AKA_RAND_LEN);
++	hostapd_get_rand(rand, EAP_AKA_RAND_LEN);
+ 	res_len = EAP_AKA_RES_MAX_LEN;
+ 	inc_byte_array(test_sqn, 6);
+ 	printf("AKA: Milenage with SQN=%02x%02x%02x%02x%02x%02x\n",
+diff -ur hostapd-0.5.3/Makefile hostapd-0.5.3-os_get_random/Makefile
+--- hostapd-0.5.3/Makefile	2006-04-28 06:10:57.000000000 +0200
++++ hostapd-0.5.3-os_get_random/Makefile	2006-04-29 15:37:04.000000000 +0200
+@@ -343,7 +343,7 @@
+ 	$(CC) -o hostapd_cli hostapd_cli.o $(DIR_WPA_SUPPLICANT)/wpa_ctrl.o
+ 
+ NOBJS = nt_password_hash.o $(DIR_WPA_SUPPLICANT)/ms_funcs.o sha1.o rc4.o md5.o
+-NOBJS += $(DIR_WPA_SUPPLICANT)/crypto.o
++NOBJS += $(DIR_WPA_SUPPLICANT)/crypto.o os_$(CONFIG_OS).o
+ ifdef TLS_FUNCS
+ LIBS_n += -lcrypto
+ endif
+diff -ur hostapd-0.5.3/ms_funcs.c hostapd-0.5.3-os_get_random/ms_funcs.c
+--- hostapd-0.5.3/ms_funcs.c	2006-04-28 06:10:57.000000000 +0200
++++ hostapd-0.5.3-os_get_random/ms_funcs.c	2006-04-29 15:32:37.000000000 +0200
+@@ -368,7 +368,7 @@
+ 
+ 	memset(pw_block, 0, PWBLOCK_LEN);
+ 	offset = (256 - password_len) * 2;
+-	os_get_random(pw_block, offset);
++	hostapd_get_rand(pw_block, offset);
+ 	for (i = 0; i < password_len; i++)
+ 		pw_block[offset + i * 2] = password[i];
+ 	/*

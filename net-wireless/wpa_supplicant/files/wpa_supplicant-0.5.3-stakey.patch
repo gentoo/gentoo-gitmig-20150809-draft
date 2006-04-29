@@ -1,0 +1,21 @@
+diff -urp wpa_supplicant-0.5.3/wpa.c wpa_supplicant-0.5.3-stakey/wpa.c
+--- wpa_supplicant-0.5.3/wpa.c	2006-04-25 05:18:58.000000000 +0200
++++ wpa_supplicant-0.5.3-stakey/wpa.c	2006-04-29 16:06:21.000000000 +0200
+@@ -1849,6 +1849,8 @@ static int wpa_supplicant_process_stakey
+ 
+ 
+ static int wpa_supplicant_process_1_of_2_rsn(struct wpa_sm *sm,
++					     const unsigned char *src_addr,
++					     const struct wpa_eapol_key *key,
+ 					     const u8 *keydata,
+ 					     size_t keydatalen,
+ 					     u16 key_info,
+@@ -2036,7 +2038,7 @@ static void wpa_supplicant_process_1_of_
+ 	keydatalen = WPA_GET_BE16(key->key_data_length);
+ 
+ 	if (sm->proto == WPA_PROTO_RSN) {
+-		ret = wpa_supplicant_process_1_of_2_rsn(sm,
++		ret = wpa_supplicant_process_1_of_2_rsn(sm, src_addr, key,
+ 							(const u8 *) (key + 1),
+ 							keydatalen, key_info,
+ 							&gd);
