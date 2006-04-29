@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.8 2006/04/24 15:57:33 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.9 2006/04/29 20:15:51 rl03 Exp $
 
 inherit webapp eutils
 
@@ -166,8 +166,24 @@ src_unpack() {
 src_compile() {
 
 	local web="apache"
-	if useq lighttpd; then
-		web="lighttpd"
+	useq lighttpd && web="lighttpd"
+
+	local dbtype=""
+	local dba=""
+
+	if useq mysql; then
+		dbtype="--with-db-type=mysql"
+		dba="--with-db-dba=root"
+	fi
+	if useq postgres;then
+		dbtype="--with-db-type=Pg"
+		dba="--with-db-dba=postgres"
+	fi
+	if useq postgres && useq mysql; then
+		ewarn "Both mysql and postgres USE flags enabled, default is mysql."
+		ewarn "You can set the default value in RT_SiteConfig before DB init."
+		dbtype="--with-db-type=mysql"
+		dba="--with-db-dba=root"
 	fi
 
 	./configure --enable-layout=Gentoo \
@@ -176,7 +192,8 @@ src_compile() {
 		--with-libs-group=rt \
 		--with-rt-group=rt \
 		--with-web-user=${web} \
-		--with-web-group=${web}
+		--with-web-group=${web} \
+		${dbtype} ${dba}
 
 	# check for missing deps and ask to report if something is broken
 	local myconf="--verbose $(use_with mysql) \
