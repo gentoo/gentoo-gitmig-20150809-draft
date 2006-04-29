@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.128 2006/04/29 17:23:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.129 2006/04/29 17:26:47 marienz Exp $
+
+  29 Apr 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-portage-2.0.51.22-r3, files/digest-portage-2.0.53,
+  files/digest-portage-2.0.54, files/digest-portage-2.0.54-r1,
+  files/digest-portage-2.1_pre7-r5, files/digest-portage-2.1_pre9-r5,
+  Manifest:
+  Remove SHA256 digests for a smoother upgrade.
 
   29 Apr 2006; Joseph Jezak <josejx@gentoo.org> portage-2.0.54-r1.ebuild:
   Marked ppc stable for bug #130527.
