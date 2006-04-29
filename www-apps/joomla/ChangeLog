@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/joomla
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.9 2006/02/26 18:53:21 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.10 2006/04/29 22:03:01 rl03 Exp $
+
+  29 Apr 2006; Renat Lumpau <rl03@gentoo.org> joomla-1.0.8.ebuild:
+  Removed pkg_config per bug #129558.
 
 *joomla-1.0.8 (26 Feb 2006)
 
