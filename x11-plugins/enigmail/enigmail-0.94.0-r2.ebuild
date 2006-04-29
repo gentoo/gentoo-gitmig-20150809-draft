@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.0-r2.ebuild,v 1.2 2006/04/23 15:23:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.0-r2.ebuild,v 1.3 2006/04/29 02:53:17 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozcoreconf makeedit multilib autotools
 
 EMVER=${PV}
 TBVER="1.5.0.2"
-TBPVER="1.1"
+TBPVER="1.2"
 
 DESCRIPTION="Gnupg encryption plugin for thunderbird."
 HOMEPAGE="http://www.enigmail.mozdev.org"
