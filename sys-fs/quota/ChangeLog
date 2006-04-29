@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/quota
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.11 2005/08/17 00:28:26 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.12 2006/04/29 01:09:54 marienz Exp $
+
+  29 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-quota-3.06,
+  files/digest-quota-3.06-r1, files/digest-quota-3.06-r2,
+  files/digest-quota-3.09, files/digest-quota-3.10, files/digest-quota-3.12,
+  files/digest-quota-3.12-r1, files/digest-quota-3.13, Manifest:
+  Fix SHA256 digests.
 
 *quota-3.13 (17 Aug 2005)
 
