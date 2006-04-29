@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.15 2006/03/22 04:42:34 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.16 2006/04/29 16:40:31 joshuabaergen Exp $
+
+*xedit-1.0.2 (29 Apr 2006)
+
+  29 Apr 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xedit-1.0.2.ebuild:
+  Version bump.  Includes a Cygwin build fix.
 
   22 Mar 2006; Joseph Jezak <josejx@gentoo.org> xedit-1.0.1.ebuild:
   Marked ~ppc.
