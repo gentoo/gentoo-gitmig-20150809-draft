@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.276 2006/04/27 00:12:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.277 2006/04/29 06:16:15 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1545,10 +1545,6 @@ gcc-compiler_src_install() {
 	# Move the libraries to the proper location
 	gcc_movelibs
 
-	# Now do the fun stripping stuff
-	env RESTRICT="" CHOST=${CHOST} prepstrip "${D}${BINPATH}" "${D}${LIBEXECPATH}"
-	env RESTRICT="" CHOST=${CTARGET} prepstrip "${D}${LIBPATH}"
-
 	# Basic sanity check
 	is_crosscompile || [[ -r ${D}${BINPATH}/gcc ]] || die "gcc not found in ${D}"
 
@@ -1644,6 +1640,10 @@ gcc-compiler_src_install() {
 			rm -Rf "${D}"${LIBPATH}/include/libffi
 		fi
 	fi
+
+	# Now do the fun stripping stuff
+	env RESTRICT="" CHOST=${CHOST} prepstrip "${D}${BINPATH}" "${D}${LIBEXECPATH}"
+	env RESTRICT="" CHOST=${CTARGET} prepstrip "${D}${LIBPATH}"
 
 	cd "${S}"
 	if use build || is_crosscompile; then
