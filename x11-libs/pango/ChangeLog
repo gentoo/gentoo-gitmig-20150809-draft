@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.134 2006/04/21 20:22:37 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.135 2006/04/30 21:10:03 allanonjl Exp $
+
+*pango-1.12.2 (30 Apr 2006)
+
+  30 Apr 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -pango-1.12.0.ebuild, +pango-1.12.2.ebuild:
+  new version, fixes some rendering issues with eclipse. thanks to nichoj for
+  reporting the issue.
 
   21 Apr 2006; Thomas Cort <tcort@gentoo.org> pango-1.10.3.ebuild:
   Stable on alpha wrt Bug #126321.
