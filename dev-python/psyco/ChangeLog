@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/psyco
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/ChangeLog,v 1.16 2006/02/16 22:52:05 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/ChangeLog,v 1.17 2006/04/30 18:56:48 lucass Exp $
+
+*psyco-1.5.1 (30 Apr 2006)
+
+  30 Apr 2006; Lukasz Strzygowski <lucass@gentoo.org> +psyco-1.5.1.ebuild:
+  Version bump, bug #131563.
 
   16 Feb 2006; Marien Zwart <marienz@gentoo.org> psyco-1.3.ebuild:
   Remove block of package that is no longer in the tree and is only in one
