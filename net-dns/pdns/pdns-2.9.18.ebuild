@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.18.ebuild,v 1.7 2005/07/30 00:02:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.18.ebuild,v 1.8 2006/04/30 00:14:14 swegener Exp $
 
 inherit eutils
 
@@ -19,7 +19,8 @@ DEPEND="mysql? ( >=dev-db/mysql-3.23.54a )
 	recursor? ( >=dev-libs/boost-1.31 )
 	tdb? ( dev-libs/tdb )"
 
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	recursor? ( !net-dns/pdns-recursor )"
 
 DEPEND="${DEPEND}
 	doc? ( app-doc/doxygen )"
