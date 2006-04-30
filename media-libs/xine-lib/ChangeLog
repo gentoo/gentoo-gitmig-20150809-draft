@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.338 2006/04/26 22:22:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.339 2006/04/30 03:37:23 flameeyes Exp $
+
+  30 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.1.2_pre20060328-r5.ebuild:
+  Drop warning about omitted frame pointer as it's already fixed.
 
   26 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   xine-lib-1.1.2_pre20060328-r5.ebuild:

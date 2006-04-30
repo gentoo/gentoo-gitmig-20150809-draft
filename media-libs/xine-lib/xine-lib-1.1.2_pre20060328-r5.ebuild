@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328-r5.ebuild,v 1.3 2006/04/26 22:22:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328-r5.ebuild,v 1.4 2006/04/30 03:37:23 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -18,7 +18,7 @@ else
 	SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 fi
 
-PATCHLEVEL="38"
+PATCHLEVEL="39"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -128,12 +128,6 @@ src_compile() {
 		use ffmpeg || filter-flags -fforce-addr  # breaks ffmpeg module
 		filter-flags -momit-leaf-frame-pointer # break on gcc 3.4/4.x
 		is-flag -O? || append-flags -O2
-
-		ewarn ""
-		ewarn "Debug information will be almost useless as the frame pointer is omitted."
-		ewarn "This makes debugging harder, so crashes that has no fixed behavior are"
-		ewarn "difficult to fix. Please have that in mind."
-		ewarn ""
 	fi
 
 	# debug useflag used to emulate debug make targets. See bug #112980 and the
