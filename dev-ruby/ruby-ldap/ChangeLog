@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-ldap
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.17 2006/04/17 23:21:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.18 2006/04/30 16:20:27 dertobi123 Exp $
+
+  30 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  ruby-ldap-0.9.4.ebuild:
+  ppc stable
 
   17 Apr 2006; Caleb Tennis <caleb@gentoo.org> ruby-ldap-0.9.4.ebuild:
   x86 stable
