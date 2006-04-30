@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/files/precursor,v 1.1 2006/04/30 00:14:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/files/precursor,v 1.2 2006/04/30 20:56:14 swegener Exp $
 
 depend() {
 	need net
@@ -15,6 +15,6 @@ start() {
 
 stop() {
 	ebegin "Stopping PowerDNS Recursor"
-	/usr/sbin/rec_control quit &>/dev/null
+	start-stop-daemon --stop --quiet --pidfile=/var/run/pdns_recursor.pid
 	eend $?
 }
