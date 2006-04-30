@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/trimines
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/trimines/ChangeLog,v 1.1 2006/04/30 22:00:39 mr_bones_ Exp $
+
+*trimines-1.2.1 (30 Apr 2006)
+
+  30 Apr 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +trimines-1.2.1.ebuild:
+  initial commit - ebuild submitted by Cristiano Chiucchiolo via bug #131605
+
