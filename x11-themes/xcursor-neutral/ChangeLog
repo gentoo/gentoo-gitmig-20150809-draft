@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/xcursor-neutral
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/ChangeLog,v 1.1 2006/04/30 17:16:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/ChangeLog,v 1.2 2006/04/30 18:59:17 flameeyes Exp $
+
+  30 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xcursor-neutral-1.13a.ebuild:
+  Add ~amd64 and ~x86-fbsd keywords. Change license to Artistic-2 as asked by
+  genstef.
 
 *xcursor-neutral-1.13a (30 Apr 2006)
 
