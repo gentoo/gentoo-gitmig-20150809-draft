@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/magma-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/ChangeLog,v 1.10 2006/04/30 13:16:43 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/ChangeLog,v 1.11 2006/04/30 13:21:41 xmerlin Exp $
+
+  30 Apr 2006; Christian Zoffoli <xmerlin@gentoo.org>
+  magma-plugins-1.01.00.ebuild:
+  Stable x86.
 
 *magma-plugins-1.02.00 (30 Apr 2006)
 
