@@ -1,5 +1,5 @@
---- espgs-8.15.1/configure.ac
-+++ espgs-8.15.1/configure.ac
+--- espgs-8.15.1/src/configure.ac
++++ espgs-8.15.1/src/configure.ac
 @@ -742,8 +742,16 @@
  		DYNAMIC_LIBS="-rdynamic -ldl"
  		X_DEVS=""

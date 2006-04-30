@@ -1,0 +1,11 @@
+--- espgs-8.15.1_p9999/src/unix-dll.mak.orig	2006-04-29 23:36:28.000000000 +0200
++++ espgs-8.15.1_p9999/src/unix-dll.mak	2006-04-29 23:33:57.000000000 +0200
+@@ -87,7 +87,7 @@
+ 
+ # Normal shared object
+ so: SODIRS
+-	$(MAKE) $(SODEFS) CFLAGS='$(CFLAGS_STANDARD) $(CFLAGS_SO) $(ACDEFS) $(GCFLAGS) $(XCFLAGS)' prefix=$(prefix) $(GSSOC) $(GSSOX)
++	$(MAKE) $(SODEFS) CFLAGS='$(CFLAGS_STANDARD) $(CFLAGS_SO) $(ACDEFS) $(GCFLAGS) $(XCFLAGS) $(ACDEFS)' prefix=$(prefix) $(GSSOC) $(GSSOX)
+ 
+ # Debug shared object
+ # Note that this is in the same directory as the normal shared

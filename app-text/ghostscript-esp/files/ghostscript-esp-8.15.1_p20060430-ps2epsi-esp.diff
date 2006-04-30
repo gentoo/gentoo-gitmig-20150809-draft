@@ -1,0 +1,14 @@
+--- lib/ps2epsi.orig	2006-04-30 08:11:51.000000000 +0200
++++ lib/ps2epsi	2006-04-30 08:13:11.000000000 +0200
+@@ -6,11 +6,6 @@
+ fi
+ 
+ tmpfile=`mktemp ${TMPDIR-/tmp}/ps2epsi.XXXXXX`
+-rm -f $tmpfile
+-if test -e $tmpfile; then
+-	echo "$0: Our temporary file $tmpfile already exists." 1>&2
+-	exit 1
+-fi
+ trap "rm -rf $tmpfile" 0 1 2 3 7 13 15
+ 
+ export outfile

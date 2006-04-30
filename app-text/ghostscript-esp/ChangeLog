@@ -1,6 +1,19 @@
 # ChangeLog for app-text/ghostscript-esp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.23 2006/04/23 09:45:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.24 2006/04/30 09:39:47 genstef Exp $
+
+*ghostscript-esp-8.15.1_p20060430 (30 Apr 2006)
+
+  30 Apr 2006; Stefan Schweizer <genstef@gentoo.org>
+  files/ghostscript-esp-8.15.1-bsd.patch,
+  files/ghostscript-esp-8.15.1-fPIC.patch,
+  +files/ghostscript-esp-8.15.1_p20060430-build.patch,
+  +files/ghostscript-esp-8.15.1_p20060430-destdir.diff,
+  +files/ghostscript-esp-8.15.1_p20060430-ps2epsi-esp.diff,
+  +files/ghostscript-esp-fontconfig.patch,
+  +ghostscript-esp-8.15.1_p20060430.ebuild:
+  Cvs drop which includes the krgb fix, include fontconfig patch, bug 104512,
+  fix kpdf print preview, bug 126705, also include the ubuntu patch
 
   23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   ghostscript-esp-8.15.1-r1.ebuild:
