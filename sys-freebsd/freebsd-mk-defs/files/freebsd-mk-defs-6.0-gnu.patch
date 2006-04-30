@@ -29,6 +29,33 @@ Index: mk/bsd.lib.mk
 ===================================================================
 --- mk.orig/bsd.lib.mk
 +++ mk/bsd.lib.mk
+@@ -105,7 +105,7 @@ _LIBS=		lib${LIB}.a
+ lib${LIB}.a: ${OBJS} ${STATICOBJS}
+ 	@${ECHO} building static ${LIB} library
+ 	@rm -f ${.TARGET}
+-	@${AR} cq ${.TARGET} `lorder ${OBJS} ${STATICOBJS} | tsort -q` ${ARADD}
++	@${AR} cq ${.TARGET} ${OBJS} ${STATICOBJS} ${ARADD}
+ 	${RANLIB} ${.TARGET}
+ .endif
+ 
+@@ -118,7 +118,7 @@ POBJS+=		${OBJS:.o=.po} ${STATICOBJS:.o=
+ lib${LIB}_p.a: ${POBJS}
+ 	@${ECHO} building profiled ${LIB} library
+ 	@rm -f ${.TARGET}
+-	@${AR} cq ${.TARGET} `lorder ${POBJS} | tsort -q` ${ARADD}
++	@${AR} cq ${.TARGET} ${POBJS} ${ARADD}
+ 	${RANLIB} ${.TARGET}
+ .endif
+ 
+@@ -138,7 +138,7 @@ ${SHLIB_NAME}: ${SOBJS}
+ .endif
+ 	@${CC} ${LDFLAGS} -shared -Wl,-x \
+ 	    -o ${.TARGET} -Wl,-soname,${SONAME} \
+-	    `lorder ${SOBJS} | tsort -q` ${LDADD}
++	    ${SOBJS} ${LDADD}
+ .endif
+ 
+ .if defined(INSTALL_PIC_ARCHIVE) && defined(LIB) && !empty(LIB)
 @@ -183,13 +183,6 @@ _EXTRADEPEND:
  
  .if !target(install)

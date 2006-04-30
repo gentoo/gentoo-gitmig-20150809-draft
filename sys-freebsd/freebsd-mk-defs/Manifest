@@ -5,10 +5,10 @@ AUX freebsd-mk-defs-6.0-gentoo.patch 8015 RMD160 9fe1ed2b7515a61a2365dd35c9da75c
 MD5 11bb5712e904671490b5260166dfd721 files/freebsd-mk-defs-6.0-gentoo.patch 8015
 RMD160 9fe1ed2b7515a61a2365dd35c9da75c53fa0cbd4 files/freebsd-mk-defs-6.0-gentoo.patch 8015
 SHA256 2e43c5f758eeae5702a253bed7ccf2d12749446e6862e34b09f4379381aa5b39 files/freebsd-mk-defs-6.0-gentoo.patch 8015
-AUX freebsd-mk-defs-6.0-gnu.patch 2689 RMD160 a66f781f755e49adf94b8fcfc17a8974b9e75f1e SHA1 5ada16a5f2b39bfd14c11dfb3b9b742fbfeda644 SHA256 aec200734f706249960ca0f4f52b34bffeab6e1cd4854456f630ed4cd7f1e769 size 2689
-MD5 8bb7ea2a45c7d25b61d59b91953db7ad files/freebsd-mk-defs-6.0-gnu.patch 2689
-RMD160 a66f781f755e49adf94b8fcfc17a8974b9e75f1e files/freebsd-mk-defs-6.0-gnu.patch 2689
-SHA256 aec200734f706249960ca0f4f52b34bffeab6e1cd4854456f630ed4cd7f1e769 files/freebsd-mk-defs-6.0-gnu.patch 2689
+AUX freebsd-mk-defs-6.0-gnu.patch 3549 RMD160 19feb534bebe258fe218dbb6497a04590e7b657c SHA1 aaf2cbdb69c002b4634983b6b63b8cd5d34312aa SHA256 18ad8b4222dfed85415cefcca3477c6d70d281be58988773cacc2c44bcecc35f size 3549
+MD5 d4b474d81829aeee4b2b818f6be30a14 files/freebsd-mk-defs-6.0-gnu.patch 3549
+RMD160 19feb534bebe258fe218dbb6497a04590e7b657c files/freebsd-mk-defs-6.0-gnu.patch 3549
+SHA256 18ad8b4222dfed85415cefcca3477c6d70d281be58988773cacc2c44bcecc35f files/freebsd-mk-defs-6.0-gnu.patch 3549
 AUX freebsd-mk-defs-6.0-nowerror.patch 659 RMD160 fd514be7e9b998f57d84efc226e16ef146c35b6f SHA1 84469b86647a9f6d0eff0ffa4e835d338921dd1c SHA256 967eedd2540e3e384f44f330d514bf4c950628ef7b9cb0cbc43ba787cf3dd1b7 size 659
 MD5 f2bd3fffc2716aee32086f2b87276cf6 files/freebsd-mk-defs-6.0-nowerror.patch 659
 RMD160 fd514be7e9b998f57d84efc226e16ef146c35b6f files/freebsd-mk-defs-6.0-nowerror.patch 659
@@ -26,10 +26,10 @@ EBUILD freebsd-mk-defs-6.0-r1.ebuild 1027 RMD160 ed8fb9d0464311d926db088171f96aa
 MD5 5a6b0e718edb5a8bb74b04e79e2c8632 freebsd-mk-defs-6.0-r1.ebuild 1027
 RMD160 ed8fb9d0464311d926db088171f96aaac40439ca freebsd-mk-defs-6.0-r1.ebuild 1027
 SHA256 a016bc2959281cdf95cc9ac59457c5d2b153422f295cc5c3fad1a3f193db6fb4 freebsd-mk-defs-6.0-r1.ebuild 1027
-MISC ChangeLog 3209 RMD160 062581aab0724effb93cefa0420b098414399469 SHA1 8a237227b96cbd307b4ca681bb4844543e981986 SHA256 a4f54695ea63c13e2140e3f530308c943e13633c57ec72b5a6e43359ca663daf size 3209
-MD5 48a041e562d695bd8ceac120e5333717 ChangeLog 3209
-RMD160 062581aab0724effb93cefa0420b098414399469 ChangeLog 3209
-SHA256 a4f54695ea63c13e2140e3f530308c943e13633c57ec72b5a6e43359ca663daf ChangeLog 3209
+MISC ChangeLog 3334 RMD160 207899cd0c4764373be21302b24809101fdffe2c SHA1 8c8511a694b48c1de860efd2f6816b34343b14d9 SHA256 7c4559c59fd860efe29436700434c1bf99ca97ebadc9593cc7efd96d427ad43b size 3334
+MD5 ccc5b82a167ad13258da8f8ec87c719b ChangeLog 3334
+RMD160 207899cd0c4764373be21302b24809101fdffe2c ChangeLog 3334
+SHA256 7c4559c59fd860efe29436700434c1bf99ca97ebadc9593cc7efd96d427ad43b ChangeLog 3334
 MISC metadata.xml 156 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 SHA1 d9d9d4f2b5afc58339ea3e562fca490156935f1f SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 size 156
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
@@ -40,7 +40,7 @@ SHA256 5cb4a1ab23ba7aeafa13416f967472520b4db1da1a8ad7fc9433df48ac754ed1 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFETm1gAiZjviIA2XgRArNBAKCraSC6uZIKxKLGHyH8u7syyiccKwCgsjfL
-cFB/ASwQg1XeOG+XTI7R8dg=
-=KNB+
+iD8DBQFEVC/vAiZjviIA2XgRAveKAJ4pmFFD8N4vCdbqeX/DF54YwN7RMACffdvb
+yjb5+QbFETqFO43VEG2Nnow=
+=3aDd
 -----END PGP SIGNATURE-----
