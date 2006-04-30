@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5278 2006/04/29 11:31:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5279 2006/04/30 11:09:44 dsd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Daniel Drake <dsd@gentoo.org> (30 Apr 2006)
+# Masking due to possible rm -rf / in locale-gen, bug #131780
+# DO NOT USE THIS VERSION UNTIL FURTHER NOTICE!
+=sys-libs/glibc-2.4-r2
 
 # John Mylchreest <johnm@gentoo.org> (28 Apr 2006)
 # Annoyances with digests et al, will unmask in due course
