@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snortsam
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.15 2006/04/17 00:48:45 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.16 2006/04/30 10:16:51 blubb Exp $
+
+  30 Apr 2006; Simon Stelling <blubb@gentoo.org> snortsam-2.30.ebuild:
+  stable on amd64
 
 *snortsam-2.50 (17 Apr 2006)
 

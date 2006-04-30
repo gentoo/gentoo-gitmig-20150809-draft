@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/snortsam-2.30.ebuild,v 1.3 2005/04/08 18:00:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/snortsam-2.30.ebuild,v 1.4 2006/04/30 10:16:51 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.snortsam.net/files/snortsam-v2_multi-threaded/${PN}-src-${PV
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~amd64 ppc"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
 S=${WORKDIR}/${PN}
