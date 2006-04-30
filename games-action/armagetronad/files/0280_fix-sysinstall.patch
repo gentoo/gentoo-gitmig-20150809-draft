@@ -1,0 +1,47 @@
+--- sysinstall.in	2006-03-16 07:35:26.000000000 +0000
++++ sysinstall.in.fixed	2006-03-18 02:31:02.000000000 +0000
+@@ -103,26 +103,26 @@
+     DESTDIR=`echo $SOURCE | sed -e "s,${prefix},,"`
+     BINDIR=${SOURCE}/bin
+ else
+-    SCRIPTDIR=${DESTDIR}`echo @armascriptdir@ | sed -e "s,@prefix@,${PREFIX},"`
++    SCRIPTDIR=`echo @armascriptdir@ | sed -e "s,@prefix@,${PREFIX},"`
+     #@datasuffix@@scriptsuffix@
+-    BINDIR=${DESTDIR}`echo @bindir@ | sed -e "s,@prefix@,${PREFIX},"`
++    BINDIR=`echo @bindir@ | sed -e "s,@prefix@,${PREFIX},"`
+ fi
+ 
+ # determine data locations
+-EXECUTABLE=${BINDIR}/@progname@@executable_suffix@
+-CONFIGDIR=${SOURCE}`echo @configdir@ | sed -e "s,@prefix@,,"`
+-VARDIR=${SOURCE}`echo @vardir@ | sed -e "s,@prefix@,,"`
++EXECUTABLE=${DESTDIR}${BINDIR}/@progname@@executable_suffix@
++CONFIGDIR=`echo @configdir@ | sed -e "s,@prefix@,${PREFIX},"`
++VARDIR=`echo @vardir@ | sed -e "s,@prefix@,${PREFIX},"`
+ 
+ # determine location of scripts
+ 
+-test -d $SCRIPTDIR || { echo "Script directory not found."; exit -1; }
++test -d $DESTDIR$SCRIPTDIR || { echo "Script directory not found."; exit -1; }
+ 
+ # transscribe true location into scripts
+ if test $MODE = install; then
+     echo "Transscribing scripts..."
+-    for script in $SCRIPTDIR/*; do
+-        if test $script != $SCRIPTDIR/sysinstall; then
+-            sed -e "s,@configdir_reloc\@,$CONFIGDIR,g" -e "s,@prefix_reloc\@,$SOURCE,g" \
++    for script in $DESTDIR$SCRIPTDIR/*; do
++        if test $script != $DESTDIR$SCRIPTDIR/sysinstall; then
++            sed -e "s,@configdir_reloc\@,$CONFIGDIR,g" -e "s,@prefix_reloc\@,$PREFIX,g" \
+                 -e "s,@scriptdir_reloc\@,$SCRIPTDIR,g" -e "s,@localstatedir_reloc\@,$VARDIR,g"\
+                 < $script > $script.trans || exit -1
+             mv $script.trans $script
+@@ -150,7 +150,7 @@
+ fi
+ 
+ # link executable files
+-pushd ${BINDIR} > /dev/null || exit -1
++pushd ${DESTDIR}${BINDIR} > /dev/null || exit -1
+ install_link @progname@-@version@ @progname@
+ install_link @prognamebase@-master-@version@ @prognamebase@-master
+ popd > /dev/null 
