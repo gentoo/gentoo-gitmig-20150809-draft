@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdw
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.11 2005/12/26 15:44:43 lu_zero Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.12 2006/04/30 22:25:36 bazik Exp $
+
+  30 Apr 2006; <bazik@gentoo.org> cdw-0.2.3.ebuild:
+  Added ~sparc keyword.
 
   26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> cdw-0.2.3.ebuild:
   oggvorbis Cleanup
