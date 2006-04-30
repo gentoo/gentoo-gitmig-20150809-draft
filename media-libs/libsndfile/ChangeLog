@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.51 2006/04/30 14:24:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.52 2006/04/30 18:46:49 flameeyes Exp $
+
+  30 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libsndfile-1.0.11.ebuild, libsndfile-1.0.16.ebuild:
+  Add missing elibtoolize, drop autotools eclass and its deps.
 
 *libsndfile-1.0.16 (30 Apr 2006)
 
