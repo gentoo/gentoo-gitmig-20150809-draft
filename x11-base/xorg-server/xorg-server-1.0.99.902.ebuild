@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.99.902.ebuild,v 1.1 2006/04/29 16:38:38 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.99.902.ebuild,v 1.2 2006/04/30 19:01:09 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -146,8 +146,8 @@ pkg_setup() {
 		--with-default-font-path=/usr/share/fonts/misc,/usr/share/fonts/75dpi,/usr/share/fonts/100dpi,/usr/share/fonts/TTF,/usr/share/fonts/Type1
 		${conf_opts}"
 
+	local diemsg="You must build xorg-server and mesa with the same nptl USE setting."
 	if built_with_use media-libs/mesa nptl; then
-		local diemsg="You must build xorg-server and mesa with the same nptl USE setting."
 		use nptl || die "${diemsg}"
 	else
 		use nptl && die "${diemsg}"
