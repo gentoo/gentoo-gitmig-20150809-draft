@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.378 2006/04/29 15:35:30 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.379 2006/04/30 14:58:52 lu_zero Exp $
+
+  30 Apr 2006; Luca Barbato <lu_zero@gentoo.org>
+  mplayer-1.0.20060415.ebuild:
+  Blue skin updated
 
   29 Apr 2006; Luis Medinas <metalgod@gentoo.org>
   mplayer-1.0.20060415.ebuild:
