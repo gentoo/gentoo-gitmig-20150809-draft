@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.27 2006/03/21 20:37:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.28 2006/04/30 17:35:16 stuart Exp $
+
+*nxclient-1.5.0-r4 (30 Apr 2006)
+
+  30 Apr 2006; Stuart Herbert <stuart@gentoo.org> +nxclient-1.5.0-r4.ebuild:
+  Huge thanks to Jon Scruggs for these changes:
+  
+  * Added nxesd dependency.
+  * Added more amd64 depends. (Thanks to Jon Severinsson)
+  * Cleaned up the x86 depends
+  * Fixed comments regarding nxesd
+  * Added xft use flag to allow the installation of the xft version of the
+  client.
 
   21 Mar 2006; Aron Griffis <agriffis@gentoo.org> nxclient-1.4.0-r5.ebuild,
   -nxclient-1.5.0.ebuild, -nxclient-1.5.0-r1.ebuild,
