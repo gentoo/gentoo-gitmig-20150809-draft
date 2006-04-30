@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/adesklets
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.24 2006/04/28 09:13:41 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.25 2006/04/30 16:49:27 bazik Exp $
+
+  30 Apr 2006; Sven Blumenstein <bazik@gentoo.org> adesklets-0.6.1.ebuild:
+  Added ~sparc keyword.
 
 *adesklets-0.6.1 (28 Apr 2006)
 
