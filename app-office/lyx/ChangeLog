@@ -1,6 +1,14 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.78 2006/04/28 22:44:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.79 2006/04/30 12:29:06 ehmsen Exp $
+
+*lyx-1.4.1-r1 (30 Apr 2006)
+
+  30 Apr 2006; Martin Ehmsen <ehmsen@gentoo.org>
+  -files/lyx-1.4.0-dvips-R0.patch, -files/lyx-1.4.0-gentoo.patch,
+  -lyx-1.4.0-r2.ebuild, -lyx-1.4.1.ebuild, +lyx-1.4.1-r1.ebuild:
+  Added CJK support to lyx-1.4.1
+  Fixed bad digest for lyx-1.3.6
 
   28 Apr 2006; Jason Wever <weeve@gentoo.org> lyx-1.4.0-r2.ebuild:
   Added ~sparc keyword wrt bug #131548.
