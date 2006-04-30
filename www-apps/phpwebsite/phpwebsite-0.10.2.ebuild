@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.10.2.ebuild,v 1.3 2006/04/29 16:26:22 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.10.2.ebuild,v 1.4 2006/04/30 04:31:53 halcy0n Exp $
 
 inherit webapp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-full.tar.gz
 http://phpwebsite.appstate.edu/downloads/security/phpws_patch_20060419.2.tgz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="alpha ppc ~sparc ~x86"
+KEYWORDS="alpha ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="virtual/httpd-php
