@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.5 2006/04/30 05:14:36 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.6 2006/04/30 19:09:05 allanonjl Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # New toys enabled by 2.6 headers
@@ -9,6 +9,7 @@ gnome-extra/hal-device-manager
 sys-apps/hal
 sys-apps/ivman
 sys-apps/pmount
+gnome-base/gnome-mount
 
 # Chris Gianelloni <wolf31o2@gentoo.org>
 # Packages that require 2.6 sources/headers
