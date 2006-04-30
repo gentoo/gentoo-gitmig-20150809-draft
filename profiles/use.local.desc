@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1878 2006/04/30 17:57:55 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1879 2006/04/30 18:22:02 stuart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1137,6 +1137,7 @@ net-misc/nxclient:xft - Use the xft-enabled version of nxclient
 net-misc/nxserver-business:prebuilt - Use the libraries shipped by nomachine, instead of building them locally
 net-misc/nxserver-enterprise:prebuilt - Use the libraries shipped by nomachine, instead of building them locally
 net-misc/nxserver-freenx:commercial - Add support for the commerial nxclient
+net-misc/nxserver-freenx:nxclient - Add support for the commerial nxclient
 net-misc/nxserver-personal:prebuilt - Use the libraries shipped by nomachine, instead of building them locally
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:chroot - Enable chrooting support
