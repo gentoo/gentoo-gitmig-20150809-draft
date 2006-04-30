@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/ccs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ChangeLog,v 1.23 2006/04/26 00:03:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ChangeLog,v 1.24 2006/04/30 10:26:47 xmerlin Exp $
+
+*ccs-1.02.00 (30 Apr 2006)
+
+  30 Apr 2006; Christian Zoffoli <xmerlin@gentoo.org> +ccs-1.02.00.ebuild:
+  Version bump.
 
   26 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> ccs-1.01.00.ebuild:
   Marking stable on x86 wrt bug #130529.
