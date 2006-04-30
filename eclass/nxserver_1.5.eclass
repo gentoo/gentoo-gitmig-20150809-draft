@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver_1.5.eclass,v 1.1 2006/04/30 16:35:26 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver_1.5.eclass,v 1.2 2006/04/30 17:51:02 stuart Exp $
 #
 # eclass for handling the different nxserver binaries available
 # from nomachine's website
@@ -61,7 +61,7 @@ EXPORT_FUNCTIONS pkg_setup src_install pkg_postinst pkg_nofetch
 nxserver_1.5_pkg_nofetch() {
 	eerror "Please download the $MY_EDITION edition of NXServer from:"
 	eerror
-	eerror "    $SRC_URI"
+	eerror "    $MY_DOWNLOAD"
 	eerror
 	eerror "and save it onto this machine as:"
 	eerror
