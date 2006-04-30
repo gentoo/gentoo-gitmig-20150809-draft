@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0b7f07a088bc6b684581ae3762953782 ChangeLog 927
-MD5 9a712e29cde0d0db158f53c125493c5f gnbd-headers-1.00.00.ebuild 703
-MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 925aa1c067d11a0b969a3768b480b78b gnbd-headers-1.01.00.ebuild 703
+MD5 7ca6eaf82383151676141c71bfd5f389 ChangeLog 1196
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-gnbd-headers-1.00.00 68
 MD5 9d2b25c988a934245d5ef85edcf067d8 files/digest-gnbd-headers-1.01.00 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDe+O9gMUyd/cdjWsRAtDdAJ4vzCS9DfcIAVXUq05RoGz64Nw22ACeJD8t
-3OVJb9yeM9vDVNZJ+T2RH8U=
-=MQ4m
------END PGP SIGNATURE-----
+MD5 9b7b430d3bc3f98b77ffdfd13778bd1c files/digest-gnbd-headers-1.02.00 68
+MD5 9a712e29cde0d0db158f53c125493c5f gnbd-headers-1.00.00.ebuild 703
+MD5 ad757e5a5b4f2655770664b5916d3e03 gnbd-headers-1.01.00.ebuild 702
+MD5 2e6550cec2ceeb396f0e672d0360d89a gnbd-headers-1.02.00.ebuild 703
+MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
