@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xml2/xml2-0.3-r1.ebuild,v 1.1 2006/04/09 18:42:22 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2/xml2-0.3-r1.ebuild,v 1.2 2006/04/30 05:58:42 grobian Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~ppc-macos ~x86"
 
 IUSE=""
 
