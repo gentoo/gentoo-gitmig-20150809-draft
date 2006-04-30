@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/icecast
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.54 2006/03/23 06:05:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.55 2006/04/30 23:12:34 weeve Exp $
+
+  30 Apr 2006; Jason Wever <weeve@gentoo.org> icecast-2.3.1-r1.ebuild:
+  Readded ~sparc keyword again as it went missing.
 
 *icecast-2.3.1-r1 (23 Mar 2006)
 
