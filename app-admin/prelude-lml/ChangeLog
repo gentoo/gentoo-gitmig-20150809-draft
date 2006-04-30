@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/prelude-lml
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.26 2006/04/08 17:02:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.27 2006/04/30 10:15:18 blubb Exp $
+
+  30 Apr 2006; Simon Stelling <blubb@gentoo.org> prelude-lml-0.9.1.ebuild:
+  stable on amd64
 
   08 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   prelude-lml-0.9.1.ebuild:
