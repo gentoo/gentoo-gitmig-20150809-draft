@@ -60,3 +60,6 @@ dmi
 
 # Masking mbrola for bug #84322, if a new version is released, remove this
 mbrola
+
+# Appears to be x86 only, feel free to remove if you disagree
+nvtv
