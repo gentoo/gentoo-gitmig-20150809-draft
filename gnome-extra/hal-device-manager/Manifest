@@ -1,28 +1,29 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9c1c902ea9a89f8ebef4c4f4cca0db4b ChangeLog 1504
-RMD160 507b854412aff5b5d889bc83439e1f9e130aca1f ChangeLog 1504
-SHA256 0617bfbd42f22bfbfc5cec0ff8a8dacde70411271477e4037cbde0880042f87f ChangeLog 1504
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-hal-device-manager-0.4.5 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-hal-device-manager-0.4.5 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-hal-device-manager-0.4.5 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-hal-device-manager-0.5 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-hal-device-manager-0.5 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-hal-device-manager-0.5 0
+EBUILD hal-device-manager-0.4.5.ebuild 827 RMD160 c335fb1b6da142edaaf7347f188a1cda4483ab2c SHA1 118e0e4aebbf3f173be105abfc04bbf3194720cc SHA256 72fa49a426284d3eb41c0f39ad5dc749b1a940c848bebffd07265b04d4bea8a6 size 827
 MD5 eb9fc0f14948ace4d2a7ca05b08bedd9 hal-device-manager-0.4.5.ebuild 827
 RMD160 c335fb1b6da142edaaf7347f188a1cda4483ab2c hal-device-manager-0.4.5.ebuild 827
 SHA256 72fa49a426284d3eb41c0f39ad5dc749b1a940c848bebffd07265b04d4bea8a6 hal-device-manager-0.4.5.ebuild 827
+EBUILD hal-device-manager-0.5-r1.ebuild 1075 RMD160 895fedb1d62e56cac40ad25b12e76474ba5df204 SHA1 9ef0366bde4df6dc5dbd990dbfe937f9e50b5917 SHA256 c908e305b29d6af209933898cbd86d170302bc97d46cd2d8a560f6eeba32912b size 1075
+MD5 fa88f017b766847a64b9773d7c842827 hal-device-manager-0.5-r1.ebuild 1075
+RMD160 895fedb1d62e56cac40ad25b12e76474ba5df204 hal-device-manager-0.5-r1.ebuild 1075
+SHA256 c908e305b29d6af209933898cbd86d170302bc97d46cd2d8a560f6eeba32912b hal-device-manager-0.5-r1.ebuild 1075
+EBUILD hal-device-manager-0.5.ebuild 832 RMD160 84587e02e3cbe57aaad3db3904c043e73954eeb3 SHA1 f884103970f9ac090d7c90a3a0bf449ecbdcfed2 SHA256 83870b8d8719fe55b1354381591d98980d1d0d9911cb489cf0f5ae3ab80a5f26 size 832
 MD5 246871c9a0187b84622e0a7de1ab19e3 hal-device-manager-0.5.ebuild 832
 RMD160 84587e02e3cbe57aaad3db3904c043e73954eeb3 hal-device-manager-0.5.ebuild 832
 SHA256 83870b8d8719fe55b1354381591d98980d1d0d9911cb489cf0f5ae3ab80a5f26 hal-device-manager-0.5.ebuild 832
+MISC ChangeLog 1705 RMD160 634d0e849ab08f71cfc1f0cb43da9844ff555c69 SHA1 e8a0d0bddb8ef17e37e6235fa9bad3ec6e7c01cb SHA256 85e14e1a6f9184ab945259e97a93e9f8375b5c27350d8091f4858135eb7ca891 size 1705
+MD5 32fd27ef197282faddd899402003c16d ChangeLog 1705
+RMD160 634d0e849ab08f71cfc1f0cb43da9844ff555c69 ChangeLog 1705
+SHA256 85e14e1a6f9184ab945259e97a93e9f8375b5c27350d8091f4858135eb7ca891 ChangeLog 1705
+MISC metadata.xml 242 RMD160 c2d3bf20c64c5f877970970b032596f03342d08c SHA1 af61680ac8a8a7f277be656cdaf4bc7db918bfdd SHA256 f2bb940d80a2cec5b41a0d87ac150a52e217c2e6821de48c46978f7e3ccb797a size 242
 MD5 12ddc8b02a20377ad04d34bdab42cbc0 metadata.xml 242
 RMD160 c2d3bf20c64c5f877970970b032596f03342d08c metadata.xml 242
 SHA256 f2bb940d80a2cec5b41a0d87ac150a52e217c2e6821de48c46978f7e3ccb797a metadata.xml 242
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD49dsJrHF4yAQTrARAiZIAJ9z8IL+Gzx43hKkl5kQWMXovKmWEACeMDi4
-7mgOeLoPG3UOsbAhdzrhgrI=
-=8diY
------END PGP SIGNATURE-----
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-hal-device-manager-0.4.5 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-hal-device-manager-0.4.5 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-hal-device-manager-0.4.5 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-hal-device-manager-0.5 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-hal-device-manager-0.5 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-hal-device-manager-0.5 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-hal-device-manager-0.5-r1 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-hal-device-manager-0.5-r1 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-hal-device-manager-0.5-r1 1
