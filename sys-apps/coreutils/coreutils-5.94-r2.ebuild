@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.94-r2.ebuild,v 1.1 2006/04/11 00:59:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.94-r2.ebuild,v 1.2 2006/04/30 10:14:06 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
-PATCH_VER=1.3
+PATCH_VER=1.4
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="acl build nls selinux static"
+IUSE="acl nls selinux static"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( sys-apps/acl sys-apps/attr )
@@ -117,6 +117,7 @@ src_test() {
 src_install() {
 	make install DESTDIR="${D}" || die
 	rm -f "${D}"/usr/lib/charset.alias
+	dodoc AUTHORS ChangeLog* NEWS README* THANKS TODO
 
 	# remove files provided by other packages
 	rm "${D}"/bin/{kill,uptime} # procps
@@ -143,12 +144,5 @@ src_install() {
 		for x in * ; do
 			dosym /bin/${x} /usr/bin/${x}
 		done
-	fi
-
-	if ! use build ; then
-		cd "${S}"
-		dodoc AUTHORS ChangeLog* NEWS README* THANKS TODO
-	else
-		rm -r "${D}"/usr/share
 	fi
 }
