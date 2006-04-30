@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.94-r1.ebuild,v 1.10 2006/04/23 18:20:12 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.94-r1.ebuild,v 1.11 2006/04/30 10:13:16 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -59,6 +59,8 @@ src_unpack() {
 		EPATCH_MULTI_MSG="Applying ACL patches ..." \
 		EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"/acl
 	fi
+
+	epatch "${FILESDIR}"/130_all_coreutils-gnulibs-regex-symbol-hiding.patch #131674
 
 	EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"/generic
 	chmod a+rx tests/sort/sort-mb-tests
