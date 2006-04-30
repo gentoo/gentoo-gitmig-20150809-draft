@@ -1,6 +1,25 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.16 2006/03/05 15:30:42 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.17 2006/04/30 19:38:46 stuart Exp $
+
+*nxserver-freenx-0.5.0.20060311-r1 (30 Apr 2006)
+*nxserver-freenx-0.4.4-r1 (30 Apr 2006)
+
+  30 Apr 2006; Stuart Herbert <stuart@gentoo.org>
+  +files/nxserver-freenx-xorg7.patch, +files/freenx-0.4.4-adduser-fix.patch,
+  +files/nxserver-freenx-0.4.4-xorg7.patch,
+  +nxserver-freenx-0.4.4-r1.ebuild,
+  +nxserver-freenx-0.5.0.20060311-r1.ebuild:
+  Huge thanks to Jon Scruggs for the following changes:
+  
+  * Added the xorg 7 keyboard fix.
+  * Fixed the dependencies
+  * The ebuilds now work with nx-x11-bin
+  * Added the xorg 7 fix patch for 0.4.4 instead of sed'ing the patch.
+  * FreeNX 0.4.x ebuilds: I added a feature so that the ebuilds will enable the
+  1.5.0 backend if it's detected.
+  * Changed the detection of various componets and turn them on in nxloadconfig.
+  * Fixed the description in all the ebuilds. #128866
 
   05 Mar 2006; Stuart Herbert <stuart@gentoo.org> +files/50nxserver,
   nxserver-freenx-0.5.0.ebuild:

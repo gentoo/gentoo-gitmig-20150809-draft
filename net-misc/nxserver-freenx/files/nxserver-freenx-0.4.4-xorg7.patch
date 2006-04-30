@@ -1,0 +1,18 @@
+--- freenx-server/nxnode	2005-08-07 12:53:57.000000000 +0300
++++ freenx-server/nxnode	2006-02-02 00:00:25.000000000 +0200
+@@ -22,6 +22,15 @@
+ 
+ echo "NX> 1000 NXNODE - Version $NX_VERSION $NX_LICENSE"
+ 
++### Patch for Xorg-x11 >=7.0 by Oskari Rauta begins here ###
++
++if test `X -version 2>&1 | grep "X Window System Version" | awk '{ print $5 }' | awk -F. '{ print $1 }'` -ge 7
++	then
++		export XKEYSYMDB=/usr/share/X11/XKeysymDB
++	fi
++
++### Patch for Xorg-x11 >= 7.0 by Oskari Rauta ends here..
++
+ if [ "$1" != "--check" -a "$1" != "--setkey" ]
+ then 
+ 	read CMDLINE
