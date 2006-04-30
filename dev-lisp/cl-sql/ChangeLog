@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-sql
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/ChangeLog,v 1.26 2006/04/30 05:48:53 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/ChangeLog,v 1.27 2006/04/30 05:54:00 mkennedy Exp $
+
+  30 Apr 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/3.5.6-gentoo.patch:
+  Include patch.
 
 *cl-sql-3.5.6 (30 Apr 2006)
 
