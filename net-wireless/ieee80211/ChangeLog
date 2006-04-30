@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/ieee80211
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ChangeLog,v 1.35 2006/04/22 14:39:39 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ChangeLog,v 1.36 2006/04/30 17:36:49 brix Exp $
+
+  30 Apr 2006; Henrik Brix Andersen <brix@gentoo.org>
+  -files/ieee80211-1.1.8-nocast.patch, -files/ieee80211-1.1.12-qos.patch,
+  -files/ieee80211-1.1.12-tkip-qos-new.patch, -ieee80211-1.1.6.ebuild,
+  -ieee80211-1.1.7.ebuild, -ieee80211-1.1.8.ebuild, -ieee80211-1.1.9.ebuild,
+  -ieee80211-1.1.11.ebuild, -ieee80211-1.1.12.ebuild,
+  -ieee80211-1.1.12-r1.ebuild, -ieee80211-1.1.13.ebuild:
+  Pruned old ebuilds.
 
   22 Apr 2006; Henrik Brix Andersen <brix@gentoo.org>
   ieee80211-1.1.13-r1.ebuild:
