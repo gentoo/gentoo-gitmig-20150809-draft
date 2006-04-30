@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/xcursor-neutral
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/ChangeLog,v 1.1 2006/04/30 17:16:23 genstef Exp $
+
+*xcursor-neutral-1.13a (30 Apr 2006)
+
+  30 Apr 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +xcursor-neutral-1.13a.ebuild:
+  New ebuild thanks to borisdigital <bugzilla.gentoo@terrorcamp.de> in bug 130046
+
