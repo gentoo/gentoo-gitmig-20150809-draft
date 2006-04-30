@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.43 2006/04/24 21:02:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.44 2006/04/30 01:38:13 solar Exp $
+
+*portage-utils-0.1.16 (29 Apr 2006)
+
+  29 Apr 2006; <solar@gentoo.org> -portage-utils-0.1.13.ebuild,
+  -portage-utils-0.1.14.ebuild, +portage-utils-0.1.16.ebuild:
+  - Bugfix in qsize with files larger than 4GB. Added new -u/--update flag to
+  qcheck for vdb entries. added -U/--umap flags to qlist to display use to iuse
+  mappings of vdb entries. misc qglsa/qmerge/qxpak code cleanups
 
   24 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   portage-utils-0.1.15.ebuild:
