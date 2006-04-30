@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.272 2006/04/28 21:33:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.273 2006/04/30 15:56:58 plasmaroo Exp $
+
+  30 Apr 2006; <plasmaroo@gentoo.org> files/gentoo-sources-2.4.81106.patch:
+  Fix #131607.
 
   28 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   gentoo-sources-2.6.16-r4.ebuild:
