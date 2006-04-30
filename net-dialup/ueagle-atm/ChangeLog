@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/ueagle-atm
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ueagle-atm/ChangeLog,v 1.1 2006/04/30 13:05:47 mrness Exp $
+
+*ueagle-atm-1.1 (30 Apr 2006)
+
+  30 Apr 2006; Alin Nastac <mrness@gentoo.org> +files/README, +metadata.xml,
+  +ueagle-atm-1.1.ebuild:
+  Initial version, created for fixing bug #131693.
+
