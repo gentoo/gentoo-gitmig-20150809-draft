@@ -1,0 +1,14 @@
+diff -purN nxviewer.orig/nxviewer/Imakefile nxviewer/nxviewer/Imakefile
+--- nxviewer.orig/nxviewer/Imakefile	2005-06-14 10:33:50.000000000 -0500
++++ nxviewer/nxviewer/Imakefile	2006-03-21 09:35:05.000000000 -0600
+@@ -26,8 +26,8 @@ XCOMM seems to cause problems on Digital
+ DEFINES = -DMITSHM
+ #endif
+ 
+-NX_INC = -I../../nxcomp -I../../nxcompext -I../../nx-X11/exports/include
+-NX_LIB = -L../../nxcomp -lXcomp -L../../nxcompext -lXcompext
++NX_INC = -I/usr/NX/include -I../../nxcompext -I../../nx-X11/exports/include
++NX_LIB = -L/usr/NX/lib -lXcomp -L../../nxcompext -lXcompext
+ 
+ #ifdef SunArchitecture
+ NX_INC += -I/usr/sfw/include -I/usr/include

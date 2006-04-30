@@ -1,6 +1,47 @@
 # ChangeLog for net-misc/nx-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.12 2006/03/05 13:21:33 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.13 2006/04/30 17:16:01 stuart Exp $
+
+*nx-x11-1.5.0-r8 (30 Apr 2006)
+
+  30 Apr 2006; Stuart Herbert <stuart@gentoo.org>
+  -files/1.5.0/nxcomp-gcc4.patch,
+  +files/1.5.0/nxcompext-1.5.0-nxcomp-fix.patch,
+  +files/1.5.0/nxdesktop-1.5.0-nxcomp-fix.patch,
+  +files/1.5.0/nxviewer-1.5.0-nxcomp-fix.patch,
+  +files/1.5.0/nx-x11-1.5.0-plastik-render-fix.patch, -files/1.5.0/50nx-x11,
+  +files/1.5.0/nx-x11-1.5.0-nxcomp-fix.patch,
+  +files/1.5.0/nx-x11-1.5.0-xorg7-font-fix.patch, -nx-x11-1.5.0-r5.ebuild,
+  +nx-x11-1.5.0-r8.ebuild:
+  Huge thanks to Jon Scruggs for all of the following changes:
+  
+  * Changed the download load address
+  * removed nxesd from the list of files to download, unpack, and install.
+  (Moved
+  to it's own ebuild) (Thanks to Jon Severinsson for suggesting that)
+  * Cleaned up the dependency list
+  * Added two use flags: rdesktop and vnc to control building of those
+  components
+  only if the user needs them.
+  * Added in the plastik render fix patch to fix the redraw issue when resuming
+  and using the plastix window decoration (Thanks to Eike Hein)
+  * Added in the nxcomp pic patch to ad the -fPIC compile flag
+  * nxcomp and nxesd are no longer installed by this ebuild. Be careful when
+  updating to make sure nxcomp and nxesd components are not uninstalled. To be
+  on the safe side emerge nxcomp nxesd again. :)
+  * Cleaned up the install code.
+  * Added xorg 7 font directory fix. #123449
+  * Removed "dodir /var/lib/nxserver"
+  * Added a depend option to not include nx-x11-bin
+  * I was able to remove nxcomp completely from the ebuild and remove it from
+  being compiled by nx-x11. This means that nxcomp is no longer compiled twice.
+  This saves timne and is much better, imho.
+  * Added option to block all previous versions so that the new install won't
+  delete the needed nxcomp files. :) This is really important.
+
+  05 Mar 2006; Stuart Herbert <stuart@gentoo.org> nx-x11-1.5.0-r5.ebuild:
+  Re-use already compiled libXcomp from nxcomp-1.5 package; thanks to Jon
+  Severinsson <jon@severinsson.net> for the patch
 
 *nx-x11-1.5.0-r5 (05 Mar 2006)
 

@@ -1,0 +1,92 @@
+diff -purN nx-X11.orig/lib/X11/Imakefile nx-X11/lib/X11/Imakefile
+--- nx-X11.orig/lib/X11/Imakefile	2006-03-21 08:29:13.000000000 -0600
++++ nx-X11/lib/X11/Imakefile	2006-03-21 08:37:27.000000000 -0600
+@@ -20,9 +20,9 @@ XCOMM $Xorg: Imakefile,v 1.3 2000/08/17 
+ #if NXLibraries
+ 
+ #ifdef SunArchitecture
+-NX_INCLUDES = -I../../../nxcomp -I../../../nxcompext -I/usr/sfw/include
++NX_INCLUDES = -I/usr/NX/include -I../../../nxcompext -I/usr/sfw/include
+ #else
+-NX_INCLUDES = -I../../../nxcomp -I../../../nxcompext
++NX_INCLUDES = -I/usr/NX/include -I../../../nxcompext
+ #endif
+ 
+ NX_DEFINES = -DNX_CLEAN_ALLOC     \
+@@ -58,9 +58,9 @@ NX_DEFINES = -DNX_CLEAN_ALLOC     \
+ #            -DNX_CLEAN_FLUSH     \
+ #            -DNX_CLEAN_SEND      \
+ 
+-NX_XCOMPLIBTARGET = ../../../nxcomp/libXcomp.so
++NX_XCOMPLIBTARGET = /usr/NX/lib/libXcomp.so
+ 
+-NX_REQUIREDLIBS =  -L../../../nxcomp -lXcomp
++NX_REQUIREDLIBS =  -L/usr/NX/lib -lXcomp
+ 
+ #endif
+ 
+@@ -1132,18 +1132,6 @@ includes:: ks_tables.h
+ 
+ #if NXLibraries
+ 
+-#ifdef SunArchitecture
+-$(NX_XCOMPLIBTARGET):
+-	cd ../../../nxcomp && \
+-	./configure && \
+-	gmake
+-#else
+-$(NX_XCOMPLIBTARGET):
+-	cd ../../../nxcomp && \
+-	./configure && \
+-	make
+-#endif
+-
+ depend:: $(NX_XCOMPLIBTARGET) ks_tables.h
+ 
+ #else
+diff -purN nx-X11.orig/programs/Xserver/Imakefile nx-X11/programs/Xserver/Imakefile
+--- nx-X11.orig/programs/Xserver/Imakefile	2006-03-21 08:28:41.000000000 -0600
++++ nx-X11/programs/Xserver/Imakefile	2006-03-21 08:44:33.000000000 -0600
+@@ -1369,9 +1369,9 @@ $(NXAGENTOBJS) $(NXAGENTLIBS) $(NXAGENTS
+  */
+ 
+ #if defined(SunArchitecture)
+-NXAGENTNXLIBS = -L ../../../nxcomp -L ../../../nxcompext -lXcomp -lXcompext -lrt -L/usr/sfw/lib -lXrender
++NXAGENTNXLIBS = -L /usr/NX/lib -L ../../../nxcompext -lXcomp -lXcompext -lrt -L/usr/sfw/lib -lXrender
+ #else
+-NXAGENTNXLIBS = -Wl,-rpath-link,../../../nxcomp -Wl,-rpath-link,../../../nxcompext,-lXrender
++NXAGENTNXLIBS = -Wl,-rpath-link,/usr/NX/lib -Wl,-rpath-link,../../../nxcompext,-lXrender
+ #endif
+ 
+ #endif
+diff -purN nx-X11.orig/programs/Xserver/hw/nxagent/Imakefile nx-X11/programs/Xserver/hw/nxagent/Imakefile
+--- nx-X11.orig/programs/Xserver/hw/nxagent/Imakefile	2006-03-21 08:28:09.000000000 -0600
++++ nx-X11/programs/Xserver/hw/nxagent/Imakefile	2006-03-21 08:40:49.000000000 -0600
+@@ -110,13 +110,13 @@ OBJS =  NXrandr.o \
+ VFBINCLUDES = -I../../fb -I../../mfb -I../../render
+ NXFONTINCLUDES = -I../../../../lib/font/include
+ 
+-INCLUDES = -I. -I../../../../../nxcomp -I../../../../../nxcompext \
++INCLUDES = -I. -I/usr/NX/include -I../../../../../nxcompext \
+ 	   -I$(XBUILDINCDIR) -I$(FONTINCSRC) \
+ 	   -I../../mi -I../../include -I../../os \
+            -I$(EXTINCSRC) -I$(XINCLUDESRC) \
+ 	   $(VFBINCLUDES) $(NXFONTINCLUDES)
+ #ifdef SunArchitecture
+-INCLUDES = -I../../../../../nxcomp -I../../../../../nxcompext \
++INCLUDES = -I/usr/NX/include -I../../../../../nxcompext \
+ 	   -I. -I$(XBUILDINCDIR) -I$(FONTINCSRC) \
+ 	   -I/usr/sfw/include \
+ 	   -I../../mi -I../../include -I../../os \
+diff -purN nx-X11.orig/programs/Xserver/os/Imakefile nx-X11/programs/Xserver/os/Imakefile
+--- nx-X11.orig/programs/Xserver/os/Imakefile	2006-03-21 08:28:46.000000000 -0600
++++ nx-X11/programs/Xserver/os/Imakefile	2006-03-21 08:45:49.000000000 -0600
+@@ -25,7 +25,7 @@ XCOMM $Xorg: Imakefile,v 1.3 2000/08/17 
+ 
+ #if NXLibraries
+ 
+-NX_INCLUDES = -I../../../../nxcomp
++NX_INCLUDES = -I/usr/NX/include
+ 
+ NX_DEFINES = -DNX_TRANS_SOCKET        \
+              -DNX_TRANS_PROCESS       \

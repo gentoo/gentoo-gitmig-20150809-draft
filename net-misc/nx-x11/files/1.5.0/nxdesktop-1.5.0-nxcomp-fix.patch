@@ -1,0 +1,26 @@
+diff -purN nxdesktop.orig/Makefile nxdesktop/Makefile
+--- nxdesktop.orig/Makefile	2005-03-07 12:00:18.000000000 -0600
++++ nxdesktop/Makefile	2006-03-21 09:44:46.000000000 -0600
+@@ -30,8 +30,8 @@ bindir      = $(exec_prefix)/bin
+ mandir      = $(prefix)/man
+ datadir     = $(prefix)/share
+ 
+-INCLUDES = -I../nxcomp -I../nxcompext
+-LDLIBS   = -lXpm -L../nxcompext -lXcompext -L../nxcomp -lXcomp -lX11 -lXext
++INCLUDES = -I/usr/NX/include -I../nxcompext
++LDLIBS   = -lXpm -L../nxcompext -lXcompext -L/usr/NX/lib -lXcomp -lX11 -lXext
+ VERSION     = 1.5.0-2
+ KEYMAP_PATH = $(datadir)/keymaps-windows/
+ 
+diff -purN nxdesktop.orig/configure nxdesktop/configure
+--- nxdesktop.orig/configure	2005-09-09 16:28:02.000000000 -0500
++++ nxdesktop/configure	2006-03-21 09:43:56.000000000 -0600
+@@ -391,7 +391,7 @@ rpath=`echo $rpath |sed 's/^://'`
+ 
+ case `uname -s` in
+   SunOS)
+-    echo "INCLUDES	=  -I../nxcomp -I../nxcompext -I/usr/local/include -I/usr/sfw/include">> Makeconf
++    echo "INCLUDES	=  -I/usr/NX/include -I../nxcompext -I/usr/local/include -I/usr/sfw/include">> Makeconf
+     ldflags="$ldflags -L/usr/sfw/lib -lsocket -lnsl -R$rpath"
+     cflags="$cflags -DHAVE_DIRENT_H=1 -DHAVE_DECL_DIRFD=0 -DDIR_FD_MEMBER_NAME=dd_fd"
+     ;;
