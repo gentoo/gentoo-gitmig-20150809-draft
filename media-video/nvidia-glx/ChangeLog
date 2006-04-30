@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.118 2006/04/27 23:53:26 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.119 2006/04/30 07:09:10 flameeyes Exp $
+
+  30 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  nvidia-glx-1.0.8756.ebuild:
+  Add FreeBSD drivers and ~x86-fbsd keyword.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-nvidia-glx-1.0.6111-r3, files/digest-nvidia-glx-1.0.6629-r7,

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.8756.ebuild,v 1.1 2006/04/08 03:46:10 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.8756.ebuild,v 1.2 2006/04/30 07:09:11 flameeyes Exp $
 
 inherit eutils multilib versionator
 
@@ -9,17 +9,17 @@ AMD64_PKG_V="pkg2"
 NV_V="${PV/1.0./1.0-}"
 X86_NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
 AMD64_NV_PACKAGE="NVIDIA-Linux-x86_64-${NV_V}"
-#X86_FBSD_NV_PACKAGE="NVIDIA-FreeBSD-x86-${NV_V}"
+X86_FBSD_NV_PACKAGE="NVIDIA-FreeBSD-x86-${NV_V}"
 
 DESCRIPTION="NVIDIA X11 driver and GLX libraries"
 HOMEPAGE="http://www.nvidia.com/"
 SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PACKAGE}-${X86_PKG_V}.run )
-	 amd64? ( http://download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${AMD64_NV_PACKAGE}-${AMD64_PKG_V}.run )"
-#	 x86-fbsd? ( http://download.nvidia.com/freebsd/${NV_V}/${X86_FBSD_NV_PACKAGE}.tar.gz )"
+	 amd64? ( http://download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${AMD64_NV_PACKAGE}-${AMD64_PKG_V}.run )
+	 x86-fbsd? ( http://download.nvidia.com/freebsd/${NV_V}/${X86_FBSD_NV_PACKAGE}.tar.gz )"
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 ~x86 ~x86-fbsd"
 IUSE="dlloader"
 RESTRICT="nostrip multilib-pkg-force"
 
@@ -27,10 +27,8 @@ RDEPEND="|| ( >=x11-base/xorg-server-0.99.1-r7 virtual/x11 )
 	 || ( media-libs/mesa virtual/x11 )
 	 app-admin/eselect-opengl
 	 kernel_linux? ( ~media-video/nvidia-kernel-${PV} )
-	 !app-emulation/emul-linux-x86-nvidia"
-# This should be added to have full dependencies for Gentoo FreeBSD
-# but can't be added until the profiles are in main portage (for repoman)
-# kernel_FreeBSD? ( ~media-video/nvidia-freebsd-${PV} )
+	 !app-emulation/emul-linux-x86-nvidia
+	kernel_FreeBSD? ( ~media-video/nvidia-freebsd-${PV} )"
 
 PROVIDE="virtual/opengl"
 export _POSIX2_VERSION="199209"
@@ -41,9 +39,9 @@ if use x86; then
 elif use amd64; then
 	PKG_V="-${AMD64_PKG_V}"
 	NV_PACKAGE="${AMD64_NV_PACKAGE}"
-#elif use x86-fbsd; then
-#	PKG_V=""
-#	NV_PACKAGE="${X86_FBSD_NV_PACKAGE}"
+elif use x86-fbsd; then
+	PKG_V=""
+	NV_PACKAGE="${X86_FBSD_NV_PACKAGE}"
 fi
 
 S="${WORKDIR}/${NV_PACKAGE}${PKG_V}"
@@ -70,6 +68,7 @@ src_unpack() {
 
 	# Patchs go below here, add breif description
 	cd ${S}
+	use x86-fbsd && cd "${S}/doc"
 	# Use the correct defines to make gtkglext build work
 	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-defines.patch
 	# Use some more sensible gl headers and make way for new glext.h
