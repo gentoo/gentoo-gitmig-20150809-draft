@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-hypertail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-hypertail/ChangeLog,v 1.7 2006/01/17 13:12:24 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-hypertail/ChangeLog,v 1.8 2006/04/30 04:09:22 tcort Exp $
+
+  30 Apr 2006; <tcort@gentoo.org> desklet-hypertail-2.01-r1.ebuild:
+  Added ~alpha keyword wrt Bug #103966.
 
   17 Jan 2006; Joe Sapp <nixphoeni@gentoo.org>
   desklet-hypertail-2.01-r1.ebuild:

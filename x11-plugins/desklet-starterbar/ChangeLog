@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-starterbar
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/ChangeLog,v 1.22 2006/03/25 00:00:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/ChangeLog,v 1.23 2006/04/30 04:02:42 tcort Exp $
+
+  30 Apr 2006; <tcort@gentoo.org> desklet-starterbar-0.31.3-r1.ebuild:
+  Added ~alpha keyword wrt Bug #103966.
 
   25 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   desklet-starterbar-0.31.3-r1.ebuild:

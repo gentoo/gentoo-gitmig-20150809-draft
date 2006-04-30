@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-regexp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-regexp/ChangeLog,v 1.5 2006/03/24 21:18:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-regexp/ChangeLog,v 1.6 2006/04/30 04:08:34 tcort Exp $
+
+  30 Apr 2006; <tcort@gentoo.org> desklet-regexp-1.0.ebuild:
+  Added ~alpha keyword wrt Bug #103966.
 
   24 Mar 2006; Aron Griffis <agriffis@gentoo.org> desklet-regexp-1.0.ebuild:
   Mark 1.0 ~ia64
