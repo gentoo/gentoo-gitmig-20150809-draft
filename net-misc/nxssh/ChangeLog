@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/nxssh
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxssh/ChangeLog,v 1.15 2005/10/20 21:54:54 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxssh/ChangeLog,v 1.16 2006/04/30 18:33:28 stuart Exp $
+
+*nxssh-1.5.0-r2 (30 Apr 2006)
+
+  30 Apr 2006; Stuart Herbert <stuart@gentoo.org> +nxssh-1.5.0-r2.ebuild:
+  Huge thanks to Jon Scruggs for these changes:
+  
+  * Updated build number
+  * Cleaned up the dependencies
+  * Added configure fix to point ot the correct include directory.
 
   20 Oct 2005; Aron Griffis <agriffis@gentoo.org> nxssh-1.5.0.ebuild:
   Need to get nxcomp's NX.h from /usr/NX/include

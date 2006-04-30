@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aa91fe98b4f8b3ac60151a0c95dc887e ChangeLog 1811
+MD5 ac46bd1070ce5d537a9ef22b9ecaec4a ChangeLog 2090
 MD5 1621d9205e3725cfc24ccf19006e9699 files/digest-nxssh-1.3.2 65
 MD5 c55a5bd8cb8ece91220fc12237304f61 files/digest-nxssh-1.4.0-r1 66
 MD5 e7a08594cb696a58c52235c237075986 files/digest-nxssh-1.5.0 66
+MD5 2f676e03e8a82529d30c13e5e4e2fb33 files/digest-nxssh-1.5.0-r2 66
 MD5 0d90a3579c4f3a0310c775b71e87fb2a metadata.xml 370
 MD5 26d3d3c58c8b586790a97578d1a14367 nxssh-1.3.2.ebuild 1414
 MD5 739cb79eee52b9f08d4ce9e7782bdb73 nxssh-1.4.0-r1.ebuild 1425
+MD5 c558329af42cf0bf49e0fe57c87425e8 nxssh-1.5.0-r2.ebuild 1451
 MD5 ab525ac2ba03e913b44286c1bf658454 nxssh-1.5.0.ebuild 1216
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDXCn+JrHF4yAQTrARArsPAJ9qhxPBXsVUa3SfjCm8b5cBGjwLygCgwUAY
-jluq07oXurjUxqViKKSaL9U=
-=vPjU
------END PGP SIGNATURE-----
