@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libical
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.19 2006/03/10 12:48:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.20 2006/04/30 18:28:47 killerfox Exp $
+
+  30 Apr 2006; Rene Nussbaumer <killerfox@gentoo.org> libical-0.26.6.ebuild:
+  Added to ~hppa. See bug #124230.
 
   10 Mar 2006; Aron Griffis <agriffis@gentoo.org> libical-0.26.6.ebuild:
   Mark 0.26.6 ~ia64

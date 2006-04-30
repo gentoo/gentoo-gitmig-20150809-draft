@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.26.6.ebuild,v 1.3 2006/03/10 12:48:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.26.6.ebuild,v 1.4 2006/04/30 18:28:47 killerfox Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="MPL-1.1 LGPL-2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 S=${WORKDIR}/libical-0.26
 
