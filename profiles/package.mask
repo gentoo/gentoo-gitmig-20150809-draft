@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5281 2006/04/30 16:47:09 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5282 2006/04/30 17:41:08 brix Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Henrik Brix Andersen <brix@gentoo.org (30 Apr 2006)
+# Masked pending removal - please use the in-kernel version of the
+# ibm-acpi module instead.
+app-laptop/ibm-acpi
 
 # Stuart Herbert <stuart@gentoo.org> (30 Apr 2006)
 # Masked for testing; will unmask soon
