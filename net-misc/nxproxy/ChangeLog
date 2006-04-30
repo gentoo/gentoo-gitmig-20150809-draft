@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/nxproxy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/ChangeLog,v 1.16 2006/03/05 14:46:02 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/ChangeLog,v 1.17 2006/04/30 17:48:14 stuart Exp $
+
+*nxproxy-1.5.0-r2 (30 Apr 2006)
+
+  30 Apr 2006; Stuart Herbert <stuart@gentoo.org> +nxproxy-1.5.0-r2.ebuild:
+  Huge thanks to Jon Scruggs for these changes:
+  
+  * Cleaned up the dependency list.
+  * Changed the sed line to work a little better
 
   05 Mar 2006; Stuart Herbert <stuart@gentoo.org> nxproxy-1.5.0.ebuild:
   Added missing library DEPs

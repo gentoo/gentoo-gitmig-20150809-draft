@@ -1,0 +1,17 @@
+# ChangeLog for net-misc/nxesd
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxesd/ChangeLog,v 1.1 2006/04/30 17:46:18 stuart Exp $
+
+*nxesd-1.5.0 (30 Apr 2006)
+
+  30 Apr 2006; Stuart Herbert <stuart@gentoo.org>
+  +files/nxesd-1.5.0-remove-doc-building.patch, +metadata.xml,
+  +nxesd-1.5.0.ebuild:
+  Huge thanks to Jon Scruggs for these changes:
+  
+  * Initial release of this ebuild
+  * Separated it out from nx-x11 ebuild
+  * Install the nxesddsp script.
+  * Added patch to take out the compilation of the docs to fix a bug a user
+  reported.
+

@@ -1,6 +1,23 @@
 # ChangeLog for net-misc/nxcomp
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/ChangeLog,v 1.23 2006/03/21 18:42:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/ChangeLog,v 1.24 2006/04/30 17:42:53 stuart Exp $
+
+*nxcomp-1.5.0-r2 (30 Apr 2006)
+
+  30 Apr 2006; Stuart Herbert <stuart@gentoo.org> +nxcomp-1.5.0-r2.ebuild:
+  Huge thanks to Jon Scruggs for the following changes:
+  
+  * Added xorg 7 dependencies, but allow fallback to xorg 6.x #119139, #123490,
+  #123491
+  * Cleaned up the dependencies
+  * Cleaned up the source compiling code
+  * Cleaned up the source install code
+  * Added the environmental variables to this ebuild.
+  * Removed install of NX.h to /usr/X11R6/include
+  * Fixed a typo in the depend line.
+  * Added in config protect stuff to the nxpaths file. :) I forgot that earlier.
+  * :$* I added work arounds for revdep-rebuild #126461
+  * Took out LDPATH
 
   21 Mar 2006; Aron Griffis <agriffis@gentoo.org> nxcomp-1.3.2-r1.ebuild,
   -nxcomp-1.5.0.ebuild, nxcomp-1.5.0-r1.ebuild:

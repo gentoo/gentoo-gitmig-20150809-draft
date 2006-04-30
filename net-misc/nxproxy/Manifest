@@ -3,7 +3,9 @@ MD5 d7c92d02795ad3ecf951731efaac6b03 files/1.2.2-Makefile.in.patch 421
 MD5 34472d4d8979c06122ccb8e42633b27d files/digest-nxproxy-1.3.2 66
 MD5 249d00d3d6c27a44d67fe9b947fe2053 files/digest-nxproxy-1.4.0-r2 66
 MD5 0e0983b01ab6210a6dc9a8cc2574909b files/digest-nxproxy-1.5.0 66
+MD5 0e0983b01ab6210a6dc9a8cc2574909b files/digest-nxproxy-1.5.0-r2 66
 MD5 a50ecb98a1a261895a4d34af6cda6b3c metadata.xml 369
 MD5 467f8ee3d8dc9b6b742774307b6d8533 nxproxy-1.3.2.ebuild 966
 MD5 f7eb892459e61aa7428dc24286f69a26 nxproxy-1.4.0-r2.ebuild 927
+MD5 7716c70c56c6d0bfe757b0c22dd0ff8e nxproxy-1.5.0-r2.ebuild 933
 MD5 628596aadceda1d0819171c055fba4af nxproxy-1.5.0.ebuild 1079

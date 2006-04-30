@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>stuart@gentoo.org</email>
+  <name>Stuart Herbert</name>
+  <description>Maintainer</description> 
+</maintainer>
+<longdescription>X11 protocol compression library</longdescription>
+</pkgmetadata>

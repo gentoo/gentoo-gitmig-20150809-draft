@@ -1,0 +1,74 @@
+diff -purN nxesd.orig/Makefile.in nxesd/Makefile.in
+--- nxesd.orig/Makefile.in	2005-07-04 08:11:28.000000000 -0500
++++ nxesd/Makefile.in	2006-04-07 17:32:00.000000000 -0500
+@@ -326,7 +326,7 @@ target_alias = @target_alias@
+ target_cpu = @target_cpu@
+ target_os = @target_os@
+ target_vendor = @target_vendor@
+-SUBDIRS = docs
++SUBDIRS = 
+ ACLOCAL_FLAGS = -I m4
+ SPEC_FILE = esound.spec
+ INCLUDES = $(AUDIOFILE_CFLAGS) -DSYSCONFDIR=\"$(sysconfdir)\" \
+@@ -1075,7 +1075,7 @@ distclean-tags:
+ distdir: $(DISTFILES)
+ 	$(am__remove_distdir)
+ 	mkdir $(distdir)
+-	$(mkdir_p) $(distdir)/. $(distdir)/docs $(distdir)/m4
++	$(mkdir_p) $(distdir)/. $(distdir)/m4
+ 	@srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`; \
+ 	topsrcdirstrip=`echo "$(top_srcdir)" | sed 's|.|.|g'`; \
+ 	list='$(DISTFILES)'; for file in $$list; do \
+diff -purN nxesd.orig/configure nxesd/configure
+--- nxesd.orig/configure	2005-06-17 11:46:44.000000000 -0500
++++ nxesd/configure	2006-04-07 16:41:07.000000000 -0500
+@@ -25491,7 +25491,7 @@ echo "${ECHO_T}$flag_ok" >&6
+ 
+ 
+ 
+-                                                                                                                                                                                    ac_config_files="$ac_config_files Makefile esd-config esound.spec esound.pc esddsp nxesddsp docs/Makefile docs/esd.1 docs/esdcat.1 docs/esd-config.1 docs/esdctl.1 docs/esddsp.1 docs/esdfilt.1 docs/esdloop.1 docs/esdmon.1 docs/esdplay.1 docs/esdrec.1 docs/esdsample.1"
++                                                                                                                                                                                    ac_config_files="$ac_config_files Makefile esd-config esound.spec esound.pc esddsp nxesddsp"
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+ # tests run on this system so they can be shared between configure
+@@ -26096,18 +26096,6 @@ do
+   "esound.pc" ) CONFIG_FILES="$CONFIG_FILES esound.pc" ;;
+   "esddsp" ) CONFIG_FILES="$CONFIG_FILES esddsp" ;;
+   "nxesddsp" ) CONFIG_FILES="$CONFIG_FILES nxesddsp" ;;
+-  "docs/Makefile" ) CONFIG_FILES="$CONFIG_FILES docs/Makefile" ;;
+-  "docs/esd.1" ) CONFIG_FILES="$CONFIG_FILES docs/esd.1" ;;
+-  "docs/esdcat.1" ) CONFIG_FILES="$CONFIG_FILES docs/esdcat.1" ;;
+-  "docs/esd-config.1" ) CONFIG_FILES="$CONFIG_FILES docs/esd-config.1" ;;
+-  "docs/esdctl.1" ) CONFIG_FILES="$CONFIG_FILES docs/esdctl.1" ;;
+-  "docs/esddsp.1" ) CONFIG_FILES="$CONFIG_FILES docs/esddsp.1" ;;
+-  "docs/esdfilt.1" ) CONFIG_FILES="$CONFIG_FILES docs/esdfilt.1" ;;
+-  "docs/esdloop.1" ) CONFIG_FILES="$CONFIG_FILES docs/esdloop.1" ;;
+-  "docs/esdmon.1" ) CONFIG_FILES="$CONFIG_FILES docs/esdmon.1" ;;
+-  "docs/esdplay.1" ) CONFIG_FILES="$CONFIG_FILES docs/esdplay.1" ;;
+-  "docs/esdrec.1" ) CONFIG_FILES="$CONFIG_FILES docs/esdrec.1" ;;
+-  "docs/esdsample.1" ) CONFIG_FILES="$CONFIG_FILES docs/esdsample.1" ;;
+   "depfiles" ) CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
+   "config.h" ) CONFIG_HEADERS="$CONFIG_HEADERS config.h" ;;
+   *) { { echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5
+diff -purN nxesd.orig/configure.ac nxesd/configure.ac
+--- nxesd.orig/configure.ac	2005-06-17 11:43:33.000000000 -0500
++++ nxesd/configure.ac	2006-04-07 16:42:39.000000000 -0500
+@@ -467,18 +467,6 @@ esound.spec
+ esound.pc
+ esddsp
+ nxesddsp
+-docs/Makefile
+-docs/esd.1
+-docs/esdcat.1
+-docs/esd-config.1
+-docs/esdctl.1
+-docs/esddsp.1
+-docs/esdfilt.1
+-docs/esdloop.1
+-docs/esdmon.1
+-docs/esdplay.1
+-docs/esdrec.1
+-docs/esdsample.1
+ ])
+ dnl , [case "$CONFIG_FILES" in *esd-config*) chmod +x esd-config;; esac])
+ 

@@ -1,0 +1,5 @@
+MD5 7a130dca0e5cb257fffe5a08db0e7741 ChangeLog 527
+MD5 77f84fe252be2a973060bd1c6886549f files/digest-nxesd-1.5.0 65
+MD5 386e4a5e541ceef1a1c9795c99403065 files/nxesd-1.5.0-remove-doc-building.patch 3644
+MD5 8e92b9291198042d907534cb08b013f8 metadata.xml 361
+MD5 01d844d4b4d534ebf00283d71deef061 nxesd-1.5.0.ebuild 963

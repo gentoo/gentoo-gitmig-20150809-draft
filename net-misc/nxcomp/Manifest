@@ -1,37 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7fcfa74ae9dab86dc35883fd2b4ea440 ChangeLog 3326
-RMD160 fe59d8ca9600a9d14f79b66f19baa14fcf804845 ChangeLog 3326
-SHA256 19f911fe83c2767c2c7dc2d29e97a6bdd2600cb0dcca774ef1b8bdd127ee8be8 ChangeLog 3326
 MD5 bbbdf1a4b71647d0606017837bb7fc69 files/digest-nxcomp-1.3.2-r1 66
-RMD160 52c0f358b95616c70efbe7e51fa3fe579b4a4a5f files/digest-nxcomp-1.3.2-r1 66
-SHA256 feb78edc830d83fc364988de224fc07ffb3003739180904b67b31fd3e3a74cd8 files/digest-nxcomp-1.3.2-r1 66
 MD5 4330847785aa17c2a18344d369949363 files/digest-nxcomp-1.5.0-r1 67
-RMD160 63f24738df0a0a57a34c7f5fc7af58df2af3866d files/digest-nxcomp-1.5.0-r1 67
-SHA256 6cf15e40ea1cc296f9219e0f65c746ce05159e2c0d18f9ff1984e097edd52d9a files/digest-nxcomp-1.5.0-r1 67
+MD5 4330847785aa17c2a18344d369949363 files/digest-nxcomp-1.5.0-r2 67
 MD5 b3913b98fb03efcd7677b50a7d8d0b71 files/nxcomp-1.5.0-pic.patch 513
-RMD160 7b49b04e70f2a40c2ac18add1984ccbe3031832b files/nxcomp-1.5.0-pic.patch 513
-SHA256 30cdc5c2401a0e24fb47fe0b82990cf455117fecde6f4711b212ddfcf16d0a70 files/nxcomp-1.5.0-pic.patch 513
 MD5 cf67a8d2074fa0a92afa2be056b537e2 files/nxcomp-1.5.0-r1-gcc4.patch 315
-RMD160 04008ba3a33e2495dd449d77e780f9770f66d2bd files/nxcomp-1.5.0-r1-gcc4.patch 315
-SHA256 45056ebfa8215290b777365e66b1e58398e8ab5a2c875a9610f78dd2db6b1d8e files/nxcomp-1.5.0-r1-gcc4.patch 315
 MD5 3bd5746a479e0ebddad94ba11fe3899b files/nxcomp-1.5.0-r1-pic.patch 522
-RMD160 2016856cb86605ca7ccb6b2c17a1c096c8e80cea files/nxcomp-1.5.0-r1-pic.patch 522
-SHA256 d4fb814d5ee3bd13c39e535b731caab0acb9e552cea471c602c8ff9c8e6d535e files/nxcomp-1.5.0-r1-pic.patch 522
 MD5 8e92b9291198042d907534cb08b013f8 metadata.xml 361
-RMD160 59ac31e04f0b4838ea5c75751508798ebe0992f9 metadata.xml 361
-SHA256 be1056fffe2fa8b680d43a83a32ce30fb46a31251120fc6dfa421e62f3f0e7e7 metadata.xml 361
 MD5 54e00c325a6825f913117f9697e63e53 nxcomp-1.3.2-r1.ebuild 987
-RMD160 ac53495dd5815a1cf7f7c38319e8c1a856c7b835 nxcomp-1.3.2-r1.ebuild 987
-SHA256 260d7c6aca14710d1236ff301cff371f7308066bf82505500f8728e737b3c709 nxcomp-1.3.2-r1.ebuild 987
 MD5 60d2cfe3662be83a813a922b0fe4a286 nxcomp-1.5.0-r1.ebuild 1211
-RMD160 858f4e715bc2c9ea20e5dca03b430540e5454af4 nxcomp-1.5.0-r1.ebuild 1211
-SHA256 d230d5cfa59a59755fa60b23a70ae927e8321000fda790b8f20c9e53e66d64d8 nxcomp-1.5.0-r1.ebuild 1211
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEIEmjJrHF4yAQTrARAns0AKC5G2l07mAwx3pRuuz/NUy+bVtSagCghJMY
-pcuFH3G/nint7eQRIQTVf+Q=
-=k8sU
------END PGP SIGNATURE-----
+MD5 69408f12a6f48171c93ef2ccd3b577c7 nxcomp-1.5.0-r2.ebuild 1610
