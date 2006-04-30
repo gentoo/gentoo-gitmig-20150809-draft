@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r1.ebuild,v 1.2 2006/04/30 18:47:51 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r1.ebuild,v 1.3 2006/04/30 19:24:25 suka Exp $
 
-inherit eutils fdo-mime flag-o-matic kde-functions mono toolchain-funcs
+inherit check-reqs eutils fdo-mime flag-o-matic kde-functions mono toolchain-funcs
 
 IUSE="binfilter cairo eds gnome gtk java kde ldap mono mozilla xml"
 
@@ -108,10 +108,16 @@ pkg_setup() {
 	ewarn " instead. "
 	ewarn
 
+	# Check if we have enough RAM and free diskspace to build this beast
+	CHECKREQS_MEMORY="256"
+	CHECKREQS_DISK_BUILD="5120"
+	check_reqs
+
 	strip-linguas af ar az be bg bs ca cs cy da de el en en_CA en_GB en_US en_ZA es et eu fi fr ga gl gu he hi hr hu is it ja ka km ko lt lv mk ms nb ne nl nn no nr nso pa pl pt pt_BR ru rw sk sl sq sr st sv sw th tr ts uk vi wa xh zh_CN zh_TW zu
 
 	if [ -z "${LINGUAS}" ]; then
 		export LINGUAS_OOO="en-US"
+		ewarn
 		ewarn " To get a localized build, set the according LINGUAS variable(s). "
 		ewarn
 	else
