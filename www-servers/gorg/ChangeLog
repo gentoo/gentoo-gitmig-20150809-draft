@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/gorg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.5 2006/03/28 07:16:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.6 2006/04/30 02:27:30 ramereth Exp $
+
+*gorg-0.6 (30 Apr 2006)
+
+  30 Apr 2006; Lance Albertson <ramereth@gentoo.org> +gorg-0.6.ebuild:
+  * Version bump
 
   28 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> gorg-0.5.ebuild:
   Fix keepdir.
