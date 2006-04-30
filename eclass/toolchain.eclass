@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.277 2006/04/29 06:16:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.278 2006/04/30 04:20:29 flameeyes Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -355,13 +355,13 @@ XGCC() { get_make_var GCC_FOR_TARGET ; }
 # 2) PIE by default
 # 3) SSP by default
 hardened_gcc_works() {
-	# $gcc_cv_ld_pie is unreliable as it simply take the output of
-	# `ld --help | grep -- -pie`, that reports the option in all cases, also if
-	# the loader doesn't actually load the resulting executables.
-	# To avoid breakage, blacklist FreeBSD here at least
-	[[ ${CTARGET} == *-freebsd* ]] && return 1
-
 	if [[ $1 == "pie" ]] ; then
+		# $gcc_cv_ld_pie is unreliable as it simply take the output of
+		# `ld --help | grep -- -pie`, that reports the option in all cases, also if
+		# the loader doesn't actually load the resulting executables.
+		# To avoid breakage, blacklist FreeBSD here at least
+		[[ ${CTARGET} == *-freebsd* ]] && return 1
+
 		want_pie || return 1
 		hardened_gcc_is_stable pie && return 0
 		if has ~$(tc-arch) ${ACCEPT_KEYWORDS} ; then
