@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/package.mask,v 1.12 2006/03/05 04:07:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/package.mask,v 1.13 2006/04/30 21:37:13 weeve Exp $
 
 # Jason Wever <weeve@gentoo.org>
 # gradm requires 64 bit support, which doesn't exist in this profile
@@ -182,3 +182,7 @@ dev-php5/php-java-bridge
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # To avoid odd toolchain mixups
 <dev-libs/libffi-3.4.3
+
+# Jason Wever <weeve@gentoo.org>
+# Gnome 2.14 maskings for 2.4 profiles
+gnome-base/gnome-mount

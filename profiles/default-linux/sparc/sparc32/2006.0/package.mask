@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/package.mask,v 1.11 2006/03/18 00:39:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/package.mask,v 1.12 2006/04/30 21:37:13 weeve Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # Totally untested on sparc32
@@ -186,3 +186,7 @@ dev-php5/php-java-bridge
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # To avoid odd toolchain mixups
 <dev-libs/libffi-3.4.3
+
+# Jason Wever <weeve@gentoo.org>
+# Gnome 2.14 maskings for 2.4 profiles 
+gnome-base/gnome-mount
