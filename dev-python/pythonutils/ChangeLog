@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pythonutils
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonutils/ChangeLog,v 1.3 2005/10/18 19:03:20 g2boojum Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonutils/ChangeLog,v 1.4 2006/04/30 19:19:26 lucass Exp $
+
+  30 Apr 2006; Lukasz Strzygowski <lucass@gentoo.org>
+  files/digest-pythonutils-0.2.0, files/digest-pythonutils-0.2.2,
+  files/digest-pythonutils-0.2.3, Manifest:
+  Digest fix, bug #131480.
 
 *pythonutils-0.2.3 (18 Oct 2005)
 
