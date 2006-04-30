@@ -9,10 +9,10 @@ AUX nano-1.3.10-disp.patch 659 RMD160 4d9678202f0b7ccb565c814aeece13bc6953df48 S
 MD5 4fd1c712601540686888c2f8e4927ab3 files/nano-1.3.10-disp.patch 659
 RMD160 4d9678202f0b7ccb565c814aeece13bc6953df48 files/nano-1.3.10-disp.patch 659
 SHA256 e6ab908907cf9ecfeefda2df7b5d6fdb5f7eb577927574b5cbbdc4a00da616de files/nano-1.3.10-disp.patch 659
-AUX nanorc-gentoo 1864 RMD160 8f7ba87cb16e55e72f6942cae29db0ed5ebe7abd SHA1 2971c8e6bf5f069f57e8ccc138d9e582b3f14c54 SHA256 7363b99a85d14f3500c8606afa157ea64fe11c6f5143f3ec64aac58f511b5c2a size 1864
-MD5 e96987d3e608193dd5a2c0c0122571b5 files/nanorc-gentoo 1864
-RMD160 8f7ba87cb16e55e72f6942cae29db0ed5ebe7abd files/nanorc-gentoo 1864
-SHA256 7363b99a85d14f3500c8606afa157ea64fe11c6f5143f3ec64aac58f511b5c2a files/nanorc-gentoo 1864
+AUX nanorc-gentoo 1898 RMD160 df026420d78b71d4bd04bf15eaabbc862b2d2c89 SHA1 da4a8151ac4bd87ef01cf46abe1fa9f9183a41b7 SHA256 e4f58765d1cb6a0548a6a7c6c55873fbccdfa27cef63339f82b1ea999f4faff0 size 1898
+MD5 9e3cff28391bfad1799dfa30d80ed9ca files/nanorc-gentoo 1898
+RMD160 df026420d78b71d4bd04bf15eaabbc862b2d2c89 files/nanorc-gentoo 1898
+SHA256 e4f58765d1cb6a0548a6a7c6c55873fbccdfa27cef63339f82b1ea999f4faff0 files/nanorc-gentoo 1898
 AUX nanorc-sh 646 RMD160 68d7c9abab70dc3860c95c92245e995038aef7a4 SHA1 2e946d24eb135bbd9b35360a00b05889813cb146 SHA256 60247daed92449277ab3eb9b9e8ee37147372574dba85892fc02a6c82f0aa5e0 size 646
 MD5 9ecacdb9e41a6ddb3200113238ca4b2b files/nanorc-sh 646
 RMD160 68d7c9abab70dc3860c95c92245e995038aef7a4 files/nanorc-sh 646
@@ -60,7 +60,7 @@ SHA256 3a3eed03d075b165722c59b4f47ffb1e9ec1d9c44a433cb6fce458cbaea5b14f files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEULlsW78445TWHXcRApegAJ46E/DVNOtdu5L5queJFowVJD2jqwCdHfjT
-x41ofQMvjJnUvPTZw81yQk0=
-=YLGr
+iD8DBQFEVGjt2+ySkm8kpY0RAnA1AJ9C28jeLUcMQC5CCEP1OnG2FlncnACgxKX3
+6cQMchFYAvnFeEIxzadT7hc=
+=Pm7X
 -----END PGP SIGNATURE-----
