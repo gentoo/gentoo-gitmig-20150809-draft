@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/clvm
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.9 2005/11/17 02:18:46 xmerlin Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.10 2006/04/30 13:32:53 xmerlin Exp $
+
+*clvm-2.02.05 (30 Apr 2006)
+*clvm-2.01.15 (30 Apr 2006)
+
+  30 Apr 2006; Christian Zoffoli <xmerlin@gentoo.org> -clvm-2.01.09.ebuild,
+  +clvm-2.01.15.ebuild, +clvm-2.02.05.ebuild:
+  Version bumps.
 
   17 Nov 2005; Christian Zoffoli <xmerlin@gentoo.org> clvm-2.01.09.ebuild:
   Fixed dependency. Closed bug #110814.
