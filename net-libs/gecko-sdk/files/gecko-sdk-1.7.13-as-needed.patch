@@ -1,0 +1,11 @@
+--- embedding/browser/gtk/tests/Makefile.in.orig	2006-04-29 22:56:46.000000000 -0500
++++ embedding/browser/gtk/tests/Makefile.in	2006-04-29 22:57:17.000000000 -0500
+@@ -58,6 +58,8 @@
+ endif
+ endif
+ 
++OS_LDFLAGS += -Wl,-rpath-link,'$(DEPTH)/dist/bin'
++
+ ifdef MOZ_ENABLE_GTK
+ LIBS		+= \
+ 		-lgtkembedmoz \

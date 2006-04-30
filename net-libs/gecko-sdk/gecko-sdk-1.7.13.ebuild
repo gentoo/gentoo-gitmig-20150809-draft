@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.13.ebuild,v 1.7 2006/04/26 16:56:41 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.13.ebuild,v 1.8 2006/04/30 17:35:16 anarchy Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -72,6 +72,9 @@ src_unpack() {
 
 	# Without 03[67]* patches, we need to link to pangoxft
 	epatch ${FILESDIR}/mozilla-1.7.12-gtk2xft-link-pangoxft.patch
+
+	# --as-needed support
+	epatch ${FILESDIR}/${P}-as-needed.patch
 
 	# Fix scripts that call for /usr/local/bin/perl #51916
 	ebegin "Patching smime to call perl from /usr/bin"
