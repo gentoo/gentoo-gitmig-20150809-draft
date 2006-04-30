@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r3.ebuild,v 1.13 2006/04/26 19:08:16 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r3.ebuild,v 1.14 2006/04/30 17:37:51 kumba Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -25,7 +25,7 @@
 #  CHOST != CTARGET - install into /usr/CTARGET/
 
 #KEYWORDS="~amd64 ~arm -hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-KEYWORDS="-* ~alpha ~amd64 arm ~ia64 ~mips ~ppc ~ppc64 ~s390 sparc x86"
+KEYWORDS="-* ~alpha ~amd64 arm ~ia64 mips ~ppc ~ppc64 ~s390 sparc x86"
 
 BRANCH_UPDATE=""
 
