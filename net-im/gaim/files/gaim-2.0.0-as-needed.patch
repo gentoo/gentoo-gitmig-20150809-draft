@@ -1,0 +1,33 @@
+--- src/Makefile.in	2006-04-13 22:05:21.000000000 -0500
++++ src/Makefile.in	2006-04-13 22:24:28.000000000 -0500
+@@ -142,7 +142,7 @@
+ 	$(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+ LINK = $(LIBTOOL) --tag=CC --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+-	$(AM_LDFLAGS) $(LDFLAGS) -o $@
++	$(AM_LDFLAGS) $(LDFLAGS)
+ SOURCES = $(libgaim_client_la_SOURCES) $(gaim_SOURCES) \
+ 	$(gaim_client_example_SOURCES)
+ DIST_SOURCES = $(am__libgaim_client_la_SOURCES_DIST) \
+@@ -858,7 +858,7 @@
+ 	  rm -f "$${dir}/so_locations"; \
+ 	done
+ libgaim-client.la: $(libgaim_client_la_OBJECTS) $(libgaim_client_la_DEPENDENCIES) 
+-	$(LINK) $(am_libgaim_client_la_rpath) $(libgaim_client_la_LDFLAGS) $(libgaim_client_la_OBJECTS) $(libgaim_client_la_LIBADD) $(LIBS)
++	$(LINK) $(am_libgaim_client_la_rpath) $(libgaim_client_la_LDFLAGS) $(libgaim_client_la_OBJECTS) $(libgaim_client_la_LIBADD) $(LIBS) $(DBUS_LIBS) -o $@
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+ 	test -z "$(bindir)" || $(mkdir_p) "$(DESTDIR)$(bindir)"
+@@ -889,10 +889,10 @@
+ 	done
+ gaim$(EXEEXT): $(gaim_OBJECTS) $(gaim_DEPENDENCIES) 
+ 	@rm -f gaim$(EXEEXT)
+-	$(LINK) $(gaim_LDFLAGS) $(gaim_OBJECTS) $(gaim_LDADD) $(LIBS)
++	$(LINK) $(gaim_LDFLAGS) $(gaim_OBJECTS) $(gaim_LDADD) $(LIBS) -o $@
+ gaim-client-example$(EXEEXT): $(gaim_client_example_OBJECTS) $(gaim_client_example_DEPENDENCIES) 
+ 	@rm -f gaim-client-example$(EXEEXT)
+-	$(LINK) $(gaim_client_example_LDFLAGS) $(gaim_client_example_OBJECTS) $(gaim_client_example_LDADD) $(LIBS)
++	$(LINK) $(gaim_client_example_LDFLAGS) $(gaim_client_example_OBJECTS) $(gaim_client_example_LDADD) $(LIBS) $(DBUS_LIBS)  -o $@
+ install-binSCRIPTS: $(bin_SCRIPTS)
+ 	@$(NORMAL_INSTALL)
+ 	test -z "$(bindir)" || $(mkdir_p) "$(DESTDIR)$(bindir)"
