@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/dlm-headers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-headers/ChangeLog,v 1.9 2006/04/26 00:05:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-headers/ChangeLog,v 1.10 2006/04/30 10:57:56 xmerlin Exp $
+
+  30 Apr 2006; Christian Zoffoli <xmerlin@gentoo.org>
+  dlm-headers-1.01.00.ebuild:
+  Marked stable on x86
 
   26 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   dlm-headers-1.01.00.ebuild:

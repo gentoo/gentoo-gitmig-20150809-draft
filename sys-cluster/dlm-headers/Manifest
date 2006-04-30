@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c3eb2e6fa26c250d72786dae618364fe ChangeLog 1422
+MD5 48183e7c7e1f711ae5bcf992bc976947 ChangeLog 1530
 MD5 620f890ccd1758f04aaa1e4619289605 dlm-headers-1.00.00.ebuild 741
-MD5 0ed41a247b8a034314fd2d0225bdd1b0 dlm-headers-1.01.00.ebuild 753
+MD5 1b1a96cfa73564f7e441c12d2a4b08ae dlm-headers-1.01.00.ebuild 752
 MD5 2a709b362ccb9ee5ac00c372936f8af0 dlm-headers-1.02.00.ebuild 753
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-dlm-headers-1.00.00 68
 MD5 9d2b25c988a934245d5ef85edcf067d8 files/digest-dlm-headers-1.01.00 68
@@ -12,7 +12,7 @@ MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEVKWtgMUyd/cdjWsRAvvtAKCFX257lEwkGwRu/Nu/FkGIAYWUNgCdEwwA
-RZz091jC/CMo8ULMj5i7EiU=
-=/M6d
+iD8DBQFEVKdUgMUyd/cdjWsRAqKsAKCBOc00ccfoYT0M1q/o/Zr7SHm6TQCeK3Vx
+tMm7jXxM9Z74Mb7/T45fqDA=
+=SpfI
 -----END PGP SIGNATURE-----
