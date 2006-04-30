@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.14.4.ebuild,v 1.1 2005/12/20 19:54:08 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.14.4.ebuild,v 1.2 2006/04/30 17:48:21 kumba Exp $
 
 # Eclass bits
 ETYPE="headers"
@@ -40,7 +40,7 @@ SRC_URI="${KERNEL_URI}
 	mirror://gentoo/mips-headers-patches-${HEAPATCHVER}.tar.bz2"
 
 HOMEPAGE="http://www.linux-mips.org/ http://www.kernel.org/ http://www.gentoo.org/"
-KEYWORDS="-* ~mips"
+KEYWORDS="-* mips"
 IUSE="ip27 ip28 ip30 cobalt"
 
 UNIPATCH_LIST="
