@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/eagle-usb-2.3.3.ebuild,v 1.2 2006/03/26 17:32:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/eagle-usb-2.3.3.ebuild,v 1.3 2006/04/30 13:14:08 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="net-dialup/ppp"
+RDEPEND="net-dialup/ppp
+	!net-dialup/ueagle-atm"
 
 MODULE_NAMES="${PN}(net:${S}/driver)"
 CONFIG_CHECK="!IPV6 USB"
@@ -24,7 +25,9 @@ pkg_setup() {
 	if kernel_is ge 2 6 16; then
 		eerror "This driver should be used only with kernel versions less than 2.6.16."
 		eerror "Please install and use the driver included in your kernel instead."
-		eerror "The kernel option that enables the driver is CONFIG_USB_UEAGLEATM."
+		echo
+		einfo "The kernel option that enables the driver is CONFIG_USB_UEAGLEATM."
+		einfo "You should also install firmware files available through net-dialup/ueagle-atm."
 		die "unsupported kernel version"
 	fi
 	linux-mod_pkg_setup

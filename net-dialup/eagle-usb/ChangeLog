@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/eagle-usb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/ChangeLog,v 1.8 2006/03/26 17:32:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/ChangeLog,v 1.9 2006/04/30 13:14:08 mrness Exp $
+
+  30 Apr 2006; Alin Nastac <mrness@gentoo.org>
+  -files/eagle-usb-2.3.2-kernel-2.6.14.patch, -eagle-usb-2.3.2.ebuild,
+  eagle-usb-2.3.3.ebuild:
+  Advise users with kernel >= 2.6.16 to use the driver available in their
+  kernel and instruct them to install net-dialup/ueagle-atm instead.
 
   26 Mar 2006; Alin Nastac <mrness@gentoo.org> eagle-usb-2.3.2.ebuild,
   eagle-usb-2.3.3.ebuild:
