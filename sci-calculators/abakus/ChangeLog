@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/abakus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/ChangeLog,v 1.4 2006/01/19 00:48:33 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/ChangeLog,v 1.5 2006/04/30 17:10:37 centic Exp $
+
+  30 Apr 2006; Dominik Stadler <centic@gentoo.org> abakus-0.90.ebuild:
+  Enable use of gmp/mpfr-library and gmp-use-flag
 
   19 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> abakus-0.90.ebuild:
   Stable on amd64.

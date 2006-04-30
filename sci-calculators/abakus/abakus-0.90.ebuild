@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/abakus-0.90.ebuild,v 1.3 2006/01/19 00:48:33 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/abakus-0.90.ebuild,v 1.4 2006/04/30 17:10:37 centic Exp $
 
 inherit kde
 
@@ -15,8 +15,8 @@ KEYWORDS="amd64 ~x86"
 # leave gmp out for now, does not work for me
 IUSE="debug" # gmp
 
-DEPEND=">=dev-util/scons-0.96.1"
-#        gmp? ( >=dev-libs/gmp-4.1 )"
+DEPEND=">=dev-util/scons-0.96.1
+		gmp? ( dev-libs/mpfr )"
 #RDEPEND=""
 
 need-kde 3.3
