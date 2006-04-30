@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.0-r1.ebuild,v 1.1 2006/04/20 23:43:20 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.0-r1.ebuild,v 1.2 2006/04/30 14:29:35 allanonjl Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -37,7 +37,7 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 	>=gnome-base/libgnome-2
 	>=net-libs/libsoup-2.2
 	>=x11-libs/pango-1.8.1
-	>=sys-apps/hal-0.5.4
+	hal? ( >=sys-apps/hal-0.5.4 )
 	pda? (
 		>=app-pda/gnome-pilot-2
 		>=app-pda/gnome-pilot-conduits-2 )
