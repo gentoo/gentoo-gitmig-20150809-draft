@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xpad
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.48 2006/04/30 15:22:02 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.49 2006/04/30 19:25:07 tsunam Exp $
+
+  30 Apr 2006; Joshua Jackson <tsunam@gentoo.org> xpad-2.11.ebuild:
+  Stable x86; bug #131792
 
   30 Apr 2006; Ferris McCormick <fmccor@gentoo.org> xpad-2.11.ebuild:
   Add sparc keyword --- Bug #131792.  Builds and "runs" fine.
