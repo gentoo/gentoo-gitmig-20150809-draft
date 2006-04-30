@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-6.0.ebuild,v 1.4 2006/04/30 23:09:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-6.1_rc1.ebuild,v 1.1 2006/04/30 23:09:55 flameeyes Exp $
 
 inherit bsdmk freebsd pam
 
