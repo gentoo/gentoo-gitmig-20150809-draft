@@ -1,0 +1,23 @@
+diff -Nru testoob-1.0.old/setup.py testoob-1.0/setup.py
+--- testoob-1.0.old/setup.py	2006-04-28 00:29:12.000000000 +0200
++++ testoob-1.0/setup.py	2006-04-30 20:10:36.000000000 +0200
+@@ -1,6 +1,7 @@
+ kwargs = {
+     'packages' : ['testoob', 'testoob.compatibility', 'testoob.reporting', 'testoob.running'],
+     'package_dir' : {'': 'src'},
++    'package_data': {'testoob.reporting': ['html_report.xsl']},
+     'scripts'  : ['src/testoob/testoob'],
+ 
+     # meta-data
+diff -Nru testoob-1.0.old/src/testoob/reporting/html_standalone.py testoob-1.0/src/testoob/reporting/html_standalone.py
+--- testoob-1.0.old/src/testoob/reporting/html_standalone.py	2006-04-28 00:28:49.000000000 +0200
++++ testoob-1.0/src/testoob/reporting/html_standalone.py	2006-04-30 19:46:53.000000000 +0200
+@@ -87,7 +87,7 @@
+     _SkipTemplate='<tr><td>%s</td><td>%s</td><td><font color="blue">skipped</font></td><td>%s</td></tr>'
+     def addSkip(self, test_info, err_info):
+         BaseReporter.addSkip(self, test_info, err_info)
+-        self._sio.write(HTMLReporter._SkipTemplate%(str(test_info), self._test_time(test_info), str(err_info.exception_value()))
++        self._sio.write(HTMLReporter._SkipTemplate%(str(test_info), self._test_time(test_info), str(err_info.exception_value())))
+ 
+     _FailTemplate="""
+     <tr><td>%s</td><td>%s</td><td><font color="red">%s</font></td>
