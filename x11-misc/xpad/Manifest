@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7c9a56b2a7456e1c19447c11f90100f2 ChangeLog 6236
+MD5 8a15794f4841f8085dcc5a027de41db9 ChangeLog 6342
 MD5 d0f0a44ba012c5a3d6863afb093890d7 files/digest-xpad-1.13 62
 MD5 aafa84e3025045f0c2c9a99661e82697 files/digest-xpad-2.10 62
 MD5 ced2857c672a4c625a4ed935da7d2a22 files/digest-xpad-2.11 62
 MD5 bec94149899ec6cc9d70d755445b50cd metadata.xml 263
 MD5 682a9191a39ddf9c2c61f4ba72ed1fe6 xpad-1.13.ebuild 722
 MD5 7cfea1a07b1748d340502f2ec9f9c735 xpad-2.10.ebuild 645
-MD5 dc6e524d710aaf1600e2b2f8a736f1d7 xpad-2.11.ebuild 649
+MD5 182cdc10dcabb2dd7cc5f0af7ed2eeef xpad-2.11.ebuild 648
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD4n7cViELBEf1JB0RAlNFAJ4+aBcCkVV85VoOkaLTrT41MvuF2ACfRFLR
-Y9oGTfDuNxtl880NgyHKB/8=
-=1VWd
+iD8DBQFEVLMoViELBEf1JB0RAhSkAJ0R59HwIHjtcI6ackUerEQ8GPnHdgCeNvWy
+L80bNr2VzOLziuUNUHv/8kU=
+=MNwz
 -----END PGP SIGNATURE-----

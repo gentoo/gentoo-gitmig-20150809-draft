@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xpad
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.46 2006/02/02 21:50:43 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.47 2006/04/30 12:52:32 ferdy Exp $
+
+  30 Apr 2006; Fernando J. Pereda <ferdy@gentoo.org> xpad-2.11.ebuild:
+  Stable on alpha wrt bug #131792
 
 *xpad-2.11 (02 Feb 2006)
 
