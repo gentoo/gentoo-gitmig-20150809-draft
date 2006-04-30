@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/galib-2.4.6.ebuild,v 1.2 2005/09/21 15:30:17 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/galib-2.4.6.ebuild,v 1.3 2006/04/30 14:59:22 markusle Exp $
 
 inherit eutils
 
@@ -17,6 +17,12 @@ IUSE=""
 DEPEND=""
 
 S="${WORKDIR}/galib${MYPV}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-makefile.patch
+}
 
 src_compile() {
 	make CXXFLAGS="${CXXFLAGS}" || die "make failed"
