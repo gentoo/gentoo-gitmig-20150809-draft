@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5280 2006/04/30 13:13:50 dercorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5281 2006/04/30 16:47:09 stuart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,21 @@
 ##
 ##   End example
 ##
+
+# Stuart Herbert <stuart@gentoo.org> (30 Apr 2006)
+# Masked for testing; will unmask soon
+=net-misc/nx-x11-1.5.0-r8
+=net-misc/nx-x11-bin-1.5.0
+=net-misc/nxclient-1.5.0-r4
+=net-misc/nxcomp-1.5.0-r2
+=net-misc/nxesd-1.5.0
+=net-misc/nxproxy-1.5.0-r2
+=net-misc/nxserver-business-1.5.0
+=net-misc/nxserver-enterprise-1.5.0
+=net-misc/nxserver-freenx-0.4.4-r1
+=net-misc/nxserver-freenx-0.5.0.20060311
+=net-misc/nxserver-personal-1.5.0
+=net-misc/nxssh-1.5.0-r2
 
 # Stefan Cornelius <dercorny@gentoo.org> (30 Apr 2006)
 # Masking due to security issue described in bug 129874
