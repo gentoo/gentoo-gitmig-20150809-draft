@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.8.1.ebuild,v 1.1 2006/04/30 19:51:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.8.1.ebuild,v 1.2 2006/04/30 19:55:30 genstef Exp $
 
 inherit flag-o-matic eutils games
 
@@ -15,16 +15,14 @@ SRC_URI="mirror://sourceforge/armagetronad/${P}.src.tar.bz2
 	)
 	moviepack? (
 		http://armagetron.sourceforge.net/addons/moviepack.zip
-	)
-"
+	)"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug dedicated krawall opengl moviepack moviesounds"
 
-GLDEPS="
-		|| (
+GLDEPS="|| (
 			virtual/x11
 			x11-libs/libX11
 		)
@@ -33,19 +31,16 @@ GLDEPS="
 		media-libs/libsdl
 		media-libs/sdl-image
 		media-libs/jpeg
-		media-libs/libpng
-	"
+		media-libs/libpng"
 RDEPEND="
 		>=dev-libs/libxml2-2.6.12
 		sys-libs/zlib
 		opengl? ( ${GLDEPS} )
-		!dedicated? ( ${GLDEPS} )
-	"
+		!dedicated? ( ${GLDEPS} )"
 DEPEND="${RDEPEND}
 	moviepack? ( app-arch/unzip )
 	moviesounds? ( app-arch/unzip )
-	linguas_es? ( !linguas_en? ( app-arch/unzip ) )
-	"
+	linguas_es? ( !linguas_en? ( app-arch/unzip ) )"
 
 pkg_setup() {
 	if use debug; then
