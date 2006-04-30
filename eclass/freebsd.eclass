@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.5 2006/04/19 01:07:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.6 2006/04/30 21:35:44 flameeyes Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -86,7 +86,7 @@ freebsd_src_compile() {
 		esac
 
 	# Many things breaks when using ricer flags here
-	[[ ${CTARGET} != ${CHOST} ]] || strip-flags
+	[[ -z ${NOFLAGSTRIP} ]] && strip-flags
 
 	# Make sure to use FreeBSD definitions while crosscompiling
 	[[ -z ${BMAKE} ]] && BMAKE="$(freebsd_get_bmake)"
