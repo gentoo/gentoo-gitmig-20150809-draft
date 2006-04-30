@@ -1,0 +1,13 @@
+--- src/sliboengine/search.c	2006-04-30 01:47:33.000000000 +0200
++++ src/sliboengine/search.c.new	2006-04-30 01:56:28.000000000 +0200
+@@ -282,7 +282,9 @@
+         inCheckSig(b);
+         b->color = -b->color;
+     Move *lastMove = movegen((constBoard *)b, firstMove);
+-    (ply <= 0) ? stats.qPos : stats.pos += lastMove - firstMove;
++    if (ply > 0) {
++      stats.pos += lastMove - firstMove;
++    }
+ 
+     Move bestMove;
+ #ifdef PREHASH
