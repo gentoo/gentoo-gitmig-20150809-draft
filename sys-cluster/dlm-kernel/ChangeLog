@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/dlm-kernel
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/ChangeLog,v 1.12 2005/10/08 14:57:34 xmerlin Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/ChangeLog,v 1.13 2006/04/30 10:46:57 xmerlin Exp $
+
+*dlm-kernel-1.02.00 (30 Apr 2006)
+
+  30 Apr 2006; Christian Zoffoli <xmerlin@gentoo.org>
+  +dlm-kernel-1.02.00.ebuild:
+  Version bump.
 
 *dlm-kernel-1.01.00 (08 Oct 2005)
 
