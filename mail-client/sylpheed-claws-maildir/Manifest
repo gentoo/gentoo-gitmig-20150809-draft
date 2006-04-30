@@ -1,6 +1,24 @@
-MD5 f6471a6c802ddd09d4091b0e736e073b ChangeLog 3580
-MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-maildir-0.19 310
-MD5 5ca5fb343f8db75bb3935347183d5e5d files/digest-sylpheed-claws-maildir-0.7 64
-MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-MD5 7f54a648f66ec7bdd859c3f866081c5e sylpheed-claws-maildir-0.19.ebuild 906
+DIST maildir-0.7.tar.bz2 217732 size 217732
+DIST sylpheed-claws-extra-plugins-2.0.0.tar.bz2 2935762 RMD160 09ba59e1da4eacf0a50c2271cbadd0b44212285f SHA256 88b01ccdece05adf3b1046c3ddcbd20ca3455d20e97f59bf1ea8d3fcbe1baf29 size 2935762
+EBUILD sylpheed-claws-maildir-0.19.ebuild 913 RMD160 552ce1286813b18c8d1ea6d0d591e6f0f6164d67 SHA1 2861ec58fdeb60f7bbdb881c6eb05081d68b9e51 SHA256 391141d3f65703191d5dfc09671f73beaae6909a9ececee51e7783bcc016c2f7 size 913
+MD5 89be926b5e18208ec7e6c85473eeef57 sylpheed-claws-maildir-0.19.ebuild 913
+RMD160 552ce1286813b18c8d1ea6d0d591e6f0f6164d67 sylpheed-claws-maildir-0.19.ebuild 913
+SHA256 391141d3f65703191d5dfc09671f73beaae6909a9ececee51e7783bcc016c2f7 sylpheed-claws-maildir-0.19.ebuild 913
+EBUILD sylpheed-claws-maildir-0.7.ebuild 748 RMD160 e6e2f56d23a57c4880bd5caf41cb316ab3e4d1dd SHA1 54b48ea45f2e5178c4b7fd540967d5e5ff8ef558 SHA256 e0a7e507aafe355127836229f90a7affebb5e6e0eab924df8d63091936e10b55 size 748
 MD5 576b6f595b1304a0ad6b262464bf3bbf sylpheed-claws-maildir-0.7.ebuild 748
+RMD160 e6e2f56d23a57c4880bd5caf41cb316ab3e4d1dd sylpheed-claws-maildir-0.7.ebuild 748
+SHA256 e0a7e507aafe355127836229f90a7affebb5e6e0eab924df8d63091936e10b55 sylpheed-claws-maildir-0.7.ebuild 748
+MISC ChangeLog 3691 RMD160 26985ab8f9e0498d09091f83d841f9ae1b69fc53 SHA1 b0a01dea16bd52f8557f713d54d527830719b1c2 SHA256 c6b9002eb943337d2165b6cb3e9b84889e27dd5522880d6a9d14b4cf9d0d1422 size 3691
+MD5 0bf13e3330a073d29de25ed16fbde606 ChangeLog 3691
+RMD160 26985ab8f9e0498d09091f83d841f9ae1b69fc53 ChangeLog 3691
+SHA256 c6b9002eb943337d2165b6cb3e9b84889e27dd5522880d6a9d14b4cf9d0d1422 ChangeLog 3691
+MISC metadata.xml 392 RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 SHA1 8fb3309b9af5ec084343baccfcdb7a391785bcc3 SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 size 392
+MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
+RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
+SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
+MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-maildir-0.19 310
+RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-maildir-0.19 310
+SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-maildir-0.19 310
+MD5 5ca5fb343f8db75bb3935347183d5e5d files/digest-sylpheed-claws-maildir-0.7 64
+RMD160 630180d6049da63073937c02f26da11b625deade files/digest-sylpheed-claws-maildir-0.7 64
+SHA256 981fb0f358188fac2d4340a283d92244ca2b1f60cad03800878d9904494c11a4 files/digest-sylpheed-claws-maildir-0.7 64
