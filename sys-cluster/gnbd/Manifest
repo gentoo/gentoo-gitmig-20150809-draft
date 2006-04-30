@@ -1,4 +1,4 @@
-MD5 05fc94d4d952a3db6edc0943bf189081 ChangeLog 2196
+MD5 56c10c7987816205bad7cf511f8115cb ChangeLog 2196
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-gnbd-1.00.00-r1 68
 MD5 9d2b25c988a934245d5ef85edcf067d8 files/digest-gnbd-1.01.00 68
 MD5 9b7b430d3bc3f98b77ffdfd13778bd1c files/digest-gnbd-1.02.00 68
@@ -9,6 +9,6 @@ MD5 b62daccfc63de43c6e67333ff4eea04e files/gnbd-srv.rc 1967
 MD5 a96ced2be5dbc837a2d23bd3fbecaa12 files/gnbd.devfs 332
 MD5 79b84f9fc4b7bdee59dd1211663aef8d files/gnbdtab 177
 MD5 9f9319489f2cf7cfbb8910c4f0a8b7d1 gnbd-1.00.00-r1.ebuild 1018
-MD5 c979a0ea69ff5a4fbe1ebd49de6c13ad gnbd-1.01.00.ebuild 1014
-MD5 db0bcf734e98a3b9a47961af08ba3765 gnbd-1.02.00.ebuild 1015
+MD5 d264401a47e0fcde412bbc9a8c5348d8 gnbd-1.01.00.ebuild 1014
+MD5 fa81d6964324ab3842ffe534bc71cfa7 gnbd-1.02.00.ebuild 1015
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
