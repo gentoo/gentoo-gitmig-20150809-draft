@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 701ac57cb3ecdafef34b173ce8d756b6 ChangeLog 2264
-MD5 a2b4a4f78f46ed47bade00c91f67e6f1 gfs-1.00.00-r1.ebuild 1005
-MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 ec0299226951cb9073ca4b8e637e61ea gfs-1.01.00.ebuild 993
+MD5 504920b991889fc901475a27e82e0a05 ChangeLog 2495
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-gfs-1.00.00-r1 68
-MD5 9ef03ae8f41068bd322723b0db416f58 files/gfs.rc 4401
 MD5 9d2b25c988a934245d5ef85edcf067d8 files/digest-gfs-1.01.00 68
+MD5 9b7b430d3bc3f98b77ffdfd13778bd1c files/digest-gfs-1.02.00 68
+MD5 9ef03ae8f41068bd322723b0db416f58 files/gfs.rc 4401
+MD5 a2b4a4f78f46ed47bade00c91f67e6f1 gfs-1.00.00-r1.ebuild 1005
+MD5 407b05045570e3ad1426e402c3c842c6 gfs-1.01.00.ebuild 992
+MD5 590ea3d11666b6ccab7b0392d1ba95fa gfs-1.02.00.ebuild 993
+MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDR/CCgMUyd/cdjWsRAsntAJ4/omWba2TgdS0bUyVUvHBHSMjqFgCfTJhV
-iWJeOZGfUBKTAQM1lnIftjg=
-=PqIx
+iD8DBQFEVMlOgMUyd/cdjWsRAtrjAJ41LFV7TATGkCTyUkPnmw8sTeSzPQCgh9fx
+T3Bcfy5U+bnTeNLXrjqV8rw=
+=tX4g
 -----END PGP SIGNATURE-----
