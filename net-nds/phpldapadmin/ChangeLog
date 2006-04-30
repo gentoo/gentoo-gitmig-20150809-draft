@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/phpldapadmin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.34 2006/03/15 16:41:04 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.35 2006/04/30 19:55:07 compnerd Exp $
+
+  30 Apr 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  phpldapadmin-0.9.8.2.ebuild:
+  stable on x86 (bug #130833)
 
   15 Mar 2006; Renat Lumpau <rl03@gentoo.org> phpldapadmin-1.0.0.ebuild:
   Require php-5 wrt bug #125762.
