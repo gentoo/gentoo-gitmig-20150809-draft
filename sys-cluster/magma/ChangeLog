@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/magma
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma/ChangeLog,v 1.14 2006/04/27 22:44:54 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma/ChangeLog,v 1.15 2006/04/30 10:21:21 xmerlin Exp $
+
+*magma-1.02.00 (30 Apr 2006)
+
+  30 Apr 2006; Christian Zoffoli <xmerlin@gentoo.org> +magma-1.02.00.ebuild:
+  Version bump.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-magma-1.00.00,
   Manifest:
