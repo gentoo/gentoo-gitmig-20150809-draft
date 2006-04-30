@@ -1,4 +1,4 @@
-MD5 7fcfa74ae9dab86dc35883fd2b4ea440 ChangeLog 3326
+MD5 dd0a7ac095986c2cdc64d3ff6768fc3b ChangeLog 3991
 MD5 bbbdf1a4b71647d0606017837bb7fc69 files/digest-nxcomp-1.3.2-r1 66
 MD5 4330847785aa17c2a18344d369949363 files/digest-nxcomp-1.5.0-r1 67
 MD5 4330847785aa17c2a18344d369949363 files/digest-nxcomp-1.5.0-r2 67
@@ -8,4 +8,4 @@ MD5 3bd5746a479e0ebddad94ba11fe3899b files/nxcomp-1.5.0-r1-pic.patch 522
 MD5 8e92b9291198042d907534cb08b013f8 metadata.xml 361
 MD5 54e00c325a6825f913117f9697e63e53 nxcomp-1.3.2-r1.ebuild 987
 MD5 60d2cfe3662be83a813a922b0fe4a286 nxcomp-1.5.0-r1.ebuild 1211
-MD5 69408f12a6f48171c93ef2ccd3b577c7 nxcomp-1.5.0-r2.ebuild 1610
+MD5 5ab47b40ec04ef603b8dae77ddb86db6 nxcomp-1.5.0-r2.ebuild 1707
