@@ -1,6 +1,9 @@
 # ChangeLog for app-text/winefish
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/ChangeLog,v 1.1 2006/04/29 14:36:18 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/ChangeLog,v 1.2 2006/04/30 17:11:45 weeve Exp $
+
+  30 Apr 2006; Jason Wever <weeve@gentoo.org> winefish-1.3.3.ebuild:
+  Added ~sparc keywords.
 
 *winefish-1.3.3 (29 Apr 2006)
 
