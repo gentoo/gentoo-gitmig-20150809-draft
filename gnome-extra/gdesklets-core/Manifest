@@ -1,9 +1,69 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d6e8ee1cfd27f71dde207ff13fad6afe ChangeLog 10304
-RMD160 d76f99dd0983df5df139e70a2365cc11ad7d5635 ChangeLog 10304
-SHA256 7c173fd96f6388f213821ed5fa17b23fd8200cacf4f0a9e042a9afcddf55ad98 ChangeLog 10304
+AUX dst-fix-0.34.3.patch 1269 RMD160 6ed1eae0ebdb33135894021d37eec15c6ed19f2a SHA1 e663e5c4e9be6f3ebfdebff5c0380bffef302829 SHA256 54c0077a3e8a5e00b5a639b53d04e7d1ba5bdf10230a8fb6739659b74ea1ace1 size 1269
+MD5 8e873c3bd94ee7756f3caf1c0f5b9398 files/dst-fix-0.34.3.patch 1269
+RMD160 6ed1eae0ebdb33135894021d37eec15c6ed19f2a files/dst-fix-0.34.3.patch 1269
+SHA256 54c0077a3e8a5e00b5a639b53d04e7d1ba5bdf10230a8fb6739659b74ea1ace1 files/dst-fix-0.34.3.patch 1269
+AUX gdesklets-control-getid 1146 RMD160 e2a770486e996067c1484f24d73692ce4c34582b SHA1 59ee72ae2eab9f91d2e53bcf6d2113b148844b8f SHA256 a3d793c625b5205fd07fdc61d665a6720a2714b403139f5de6cd18fee1c20899 size 1146
+MD5 71bc511d49da32bc50a59ba5f51d7e24 files/gdesklets-control-getid 1146
+RMD160 e2a770486e996067c1484f24d73692ce4c34582b files/gdesklets-control-getid 1146
+SHA256 a3d793c625b5205fd07fdc61d665a6720a2714b403139f5de6cd18fee1c20899 files/gdesklets-control-getid 1146
+AUX gdesklets-displays.desktop 230 RMD160 379976fed75e7d22b97604476d949ad044c7a542 SHA1 dc3231bea820f7ba710eece67d03baa8bd1d4d5b SHA256 ede33a1ff77c38f4afb4e748de235e23722745f476e5065a4724cfb8afaf1e5a size 230
+MD5 01751d3aa9192793a33c02d2126192c1 files/gdesklets-displays.desktop 230
+RMD160 379976fed75e7d22b97604476d949ad044c7a542 files/gdesklets-displays.desktop 230
+SHA256 ede33a1ff77c38f4afb4e748de235e23722745f476e5065a4724cfb8afaf1e5a files/gdesklets-displays.desktop 230
+AUX gdesklets-migration-tool 7343 RMD160 d8d3f992e8786534a184de00bbcd5d1eebf93d4e SHA1 f0e0bd96663a35e1f98b2ec3b377a2b4246cbd33 SHA256 6dd834d92f1a70280e8b3d7b7a005564e0daa5e2769758f47e151044d62cfa48 size 7343
+MD5 3407f6fa18c84e9c85b7f9321a158ad3 files/gdesklets-migration-tool 7343
+RMD160 d8d3f992e8786534a184de00bbcd5d1eebf93d4e files/gdesklets-migration-tool 7343
+SHA256 6dd834d92f1a70280e8b3d7b7a005564e0daa5e2769758f47e151044d62cfa48 files/gdesklets-migration-tool 7343
+DIST develbook.tar.bz2 445919 size 445919
+DIST gDesklets-0.33.1.tar.bz2 690678 size 690678
+DIST gDesklets-0.34.3.tar.bz2 679069 size 679069
+DIST gDesklets-0.35.1.tar.bz2 733865 size 733865
+DIST gDesklets-0.35.2.tar.bz2 745088 RMD160 23aeca219fbdb1c54b9ed5ba412c7fc93d428e53 SHA256 b70f959244751b8cf5694abcdc4baeae56d2bf53cd7bac1cef51a254dfe0e2dc size 745088
+DIST gDesklets-0.35.3.tar.bz2 718642 RMD160 b40a3d9251d8d67c8cee5369603499f8a8bc4f9d SHA256 7a8df729df1f29b7c37d29739e3188547334781435bf1f9f4fea16d0a29b0c55 size 718642
+DIST gDesklets-0.35.tar.bz2 741056 size 741056
+DIST gDesklets-0.35rc1.tar.bz2 727148 size 727148
+DIST gdesklets-develbook-0.35.2.tar.bz2 547039 size 547039
+DIST gdesklets-develbook-0.35.3.tar.bz2 547031 size 547031
+EBUILD gdesklets-core-0.33.1.ebuild 2426 RMD160 1864367dc2e2ed11ca34ddb42ea1d39346e50513 SHA1 13701550c91df0c41b199e646f9077e7f1a911b8 SHA256 5939acda48b3e8360382df9f6d5e521678ed2427e2796e7d2397aa65c8e74947 size 2426
+MD5 de113ac26b6f1d0691a8d1e5d90df4a8 gdesklets-core-0.33.1.ebuild 2426
+RMD160 1864367dc2e2ed11ca34ddb42ea1d39346e50513 gdesklets-core-0.33.1.ebuild 2426
+SHA256 5939acda48b3e8360382df9f6d5e521678ed2427e2796e7d2397aa65c8e74947 gdesklets-core-0.33.1.ebuild 2426
+EBUILD gdesklets-core-0.34.3-r1.ebuild 2387 RMD160 5ee103834e8ba9977b8f36743d0e5b4fc462ea17 SHA1 2271ac7b0caa318488c7a0cd12fb275f8d37fafa SHA256 bbea9e45688538e97a941ac867a5b03558d28ed0fca69d19237cec3011bae470 size 2387
+MD5 8bc51c0d116bf543c7f5b91c50e77fd5 gdesklets-core-0.34.3-r1.ebuild 2387
+RMD160 5ee103834e8ba9977b8f36743d0e5b4fc462ea17 gdesklets-core-0.34.3-r1.ebuild 2387
+SHA256 bbea9e45688538e97a941ac867a5b03558d28ed0fca69d19237cec3011bae470 gdesklets-core-0.34.3-r1.ebuild 2387
+EBUILD gdesklets-core-0.35-r1.ebuild 2273 RMD160 8da6695e0ef3d859d3547320bf8e93880acb6245 SHA1 12e09fa6f585bc60d132f7c1dac23f056050e72a SHA256 d9ead67d699b811a00f203580d2407b652471e440f63cc021e90df9d20415ba1 size 2273
+MD5 ce26b81fda37597674119e6d50294f74 gdesklets-core-0.35-r1.ebuild 2273
+RMD160 8da6695e0ef3d859d3547320bf8e93880acb6245 gdesklets-core-0.35-r1.ebuild 2273
+SHA256 d9ead67d699b811a00f203580d2407b652471e440f63cc021e90df9d20415ba1 gdesklets-core-0.35-r1.ebuild 2273
+EBUILD gdesklets-core-0.35.1-r1.ebuild 2275 RMD160 1156a85a2a63c7f7912f26d5f584b4aa85e1e96c SHA1 c5e95d61c33cb09cf8e3571cd8049c1339fff4f1 SHA256 00fda9a173636b293c05d99c8925ae3dcd6d740ad23368b6842c33db562b44f4 size 2275
+MD5 759a9f87f0c18bd724f0c4cc6f13aa12 gdesklets-core-0.35.1-r1.ebuild 2275
+RMD160 1156a85a2a63c7f7912f26d5f584b4aa85e1e96c gdesklets-core-0.35.1-r1.ebuild 2275
+SHA256 00fda9a173636b293c05d99c8925ae3dcd6d740ad23368b6842c33db562b44f4 gdesklets-core-0.35.1-r1.ebuild 2275
+EBUILD gdesklets-core-0.35.2-r1.ebuild 2514 RMD160 90734b8788a791172dda277c8da3c7532a1f29d7 SHA1 f9f9c524766a2c0afaf58d9ce5c99a3bfa659b8e SHA256 8c62480b6a8d6e6a170a7d49d0d61583903acabfe19b716a697e3c50398eb615 size 2514
+MD5 954f08423833fd244eedc966f77775c1 gdesklets-core-0.35.2-r1.ebuild 2514
+RMD160 90734b8788a791172dda277c8da3c7532a1f29d7 gdesklets-core-0.35.2-r1.ebuild 2514
+SHA256 8c62480b6a8d6e6a170a7d49d0d61583903acabfe19b716a697e3c50398eb615 gdesklets-core-0.35.2-r1.ebuild 2514
+EBUILD gdesklets-core-0.35.3.ebuild 2568 RMD160 2378535adff09a7085fa3da474cab278bbdcfbf4 SHA1 cb02c9c24b469d43b89c6356e91e72d18521507e SHA256 afd5b5c958041f29b9892c72d1b9e10d79a4825a857658738f92d701bffc6e3c size 2568
+MD5 048ca7bd2a912f23d29101917c588eb7 gdesklets-core-0.35.3.ebuild 2568
+RMD160 2378535adff09a7085fa3da474cab278bbdcfbf4 gdesklets-core-0.35.3.ebuild 2568
+SHA256 afd5b5c958041f29b9892c72d1b9e10d79a4825a857658738f92d701bffc6e3c gdesklets-core-0.35.3.ebuild 2568
+EBUILD gdesklets-core-0.35.ebuild 2067 RMD160 512e9c81869abd7ef540015a4ebdd90a18ef8153 SHA1 82155f4e7628c0241e4025dab2812abc6068791f SHA256 24fc0555a4cfa6dac6561bcd460e0d9f7568ac122b7144e80c63786339563338 size 2067
+MD5 0ed07665a552a388295ad2438f2fd925 gdesklets-core-0.35.ebuild 2067
+RMD160 512e9c81869abd7ef540015a4ebdd90a18ef8153 gdesklets-core-0.35.ebuild 2067
+SHA256 24fc0555a4cfa6dac6561bcd460e0d9f7568ac122b7144e80c63786339563338 gdesklets-core-0.35.ebuild 2067
+EBUILD gdesklets-core-0.35_rc1-r1.ebuild 2144 RMD160 e7bdfe9437716a9f7edf1b84e7b478ca04c0c546 SHA1 344120765af355cca66fdcc859e07e9eb52fde30 SHA256 6358029356fe50b3c3fe37cda19f4f187fb263c807ca566837ca40748721d1d0 size 2144
+MD5 a281adab3a8905e5d93c69b9ec155847 gdesklets-core-0.35_rc1-r1.ebuild 2144
+RMD160 e7bdfe9437716a9f7edf1b84e7b478ca04c0c546 gdesklets-core-0.35_rc1-r1.ebuild 2144
+SHA256 6358029356fe50b3c3fe37cda19f4f187fb263c807ca566837ca40748721d1d0 gdesklets-core-0.35_rc1-r1.ebuild 2144
+MISC ChangeLog 10556 RMD160 68b28a6ac084d8617b8bd950f1e6e346be4ed708 SHA1 a3ce50a8a6d29bf0046ba177d8b4d71cc3e71bf6 SHA256 178540f97266d77161c6e67fecf5109a63eb6fbcc20a9eb4f28b7cd6d6cc8f1d size 10556
+MD5 0f90ee81f1e788d3bbe2aa181b90c0cd ChangeLog 10556
+RMD160 68b28a6ac084d8617b8bd950f1e6e346be4ed708 ChangeLog 10556
+SHA256 178540f97266d77161c6e67fecf5109a63eb6fbcc20a9eb4f28b7cd6d6cc8f1d ChangeLog 10556
+MISC metadata.xml 281 RMD160 c2bd0b9406d9647ead7e3bdfc11bfe887e355330 SHA1 7d9bd51c4b4df79ab0ad715395c86c42cbd72bb5 SHA256 9d4bf715ca56bbd8b396f14fdcf85cc266f4c3e64889f0737f8b70022541d458 size 281
+MD5 29674f36cd2d889e4e21fec9a2cee59b metadata.xml 281
+RMD160 c2bd0b9406d9647ead7e3bdfc11bfe887e355330 metadata.xml 281
+SHA256 9d4bf715ca56bbd8b396f14fdcf85cc266f4c3e64889f0737f8b70022541d458 metadata.xml 281
 MD5 312fdc938b56dedf0fab04efe6266cb1 files/digest-gdesklets-core-0.33.1 131
 RMD160 d84d20041487da7ba36c210774649045926e0fc8 files/digest-gdesklets-core-0.33.1 131
 SHA256 1a7f92a40eee3654ec6364c76dce6537ce313998ba71f850f3933419d0942d2b files/digest-gdesklets-core-0.33.1 131
@@ -22,55 +82,9 @@ SHA256 a7f7d1f82fb61fdedb1eefccb77b40dc45d87e7b41c8e18ed1fbff6cc04637bb files/di
 MD5 266786d7cf6161f1cf29122f3b67efae files/digest-gdesklets-core-0.35.2-r1 332
 RMD160 961621cbae1e635ed98dbb23b5815bc48cac348f files/digest-gdesklets-core-0.35.2-r1 332
 SHA256 6f676376e93988d1ae53ea412b040164017b3c3e611038502ceb614d38ef09b8 files/digest-gdesklets-core-0.35.2-r1 332
-MD5 e93aa032ef9abf931dadf974a6c1776f files/digest-gdesklets-core-0.35.3 148
-RMD160 58e336d5f49178c4be346a37113b3afb4265517e files/digest-gdesklets-core-0.35.3 148
-SHA256 24ab78d16e06060b5ad3a9b5e94793a7c6885215ba3e20dbd9c5f42a75375f91 files/digest-gdesklets-core-0.35.3 148
+MD5 db30cf49033b717c09749dee3b2abf07 files/digest-gdesklets-core-0.35.3 332
+RMD160 ed7eb80c166eeb1612562c06ea3491834c2071fa files/digest-gdesklets-core-0.35.3 332
+SHA256 b2be1b07a39450058379fb6015e9afd368e082c22ba947e543e898c539913c15 files/digest-gdesklets-core-0.35.3 332
 MD5 ac3a171744ef9b36bed102088be244a9 files/digest-gdesklets-core-0.35_rc1-r1 132
 RMD160 69ad93c3f4c742730463fe088a2343b4fcbc4e12 files/digest-gdesklets-core-0.35_rc1-r1 132
 SHA256 0021a603fde9964ba321d9a5e76aa7643a17da1c500bb5663ee4fb84874f15be files/digest-gdesklets-core-0.35_rc1-r1 132
-MD5 8e873c3bd94ee7756f3caf1c0f5b9398 files/dst-fix-0.34.3.patch 1269
-RMD160 6ed1eae0ebdb33135894021d37eec15c6ed19f2a files/dst-fix-0.34.3.patch 1269
-SHA256 54c0077a3e8a5e00b5a639b53d04e7d1ba5bdf10230a8fb6739659b74ea1ace1 files/dst-fix-0.34.3.patch 1269
-MD5 71bc511d49da32bc50a59ba5f51d7e24 files/gdesklets-control-getid 1146
-RMD160 e2a770486e996067c1484f24d73692ce4c34582b files/gdesklets-control-getid 1146
-SHA256 a3d793c625b5205fd07fdc61d665a6720a2714b403139f5de6cd18fee1c20899 files/gdesklets-control-getid 1146
-MD5 01751d3aa9192793a33c02d2126192c1 files/gdesklets-displays.desktop 230
-RMD160 379976fed75e7d22b97604476d949ad044c7a542 files/gdesklets-displays.desktop 230
-SHA256 ede33a1ff77c38f4afb4e748de235e23722745f476e5065a4724cfb8afaf1e5a files/gdesklets-displays.desktop 230
-MD5 3407f6fa18c84e9c85b7f9321a158ad3 files/gdesklets-migration-tool 7343
-RMD160 d8d3f992e8786534a184de00bbcd5d1eebf93d4e files/gdesklets-migration-tool 7343
-SHA256 6dd834d92f1a70280e8b3d7b7a005564e0daa5e2769758f47e151044d62cfa48 files/gdesklets-migration-tool 7343
-MD5 de113ac26b6f1d0691a8d1e5d90df4a8 gdesklets-core-0.33.1.ebuild 2426
-RMD160 1864367dc2e2ed11ca34ddb42ea1d39346e50513 gdesklets-core-0.33.1.ebuild 2426
-SHA256 5939acda48b3e8360382df9f6d5e521678ed2427e2796e7d2397aa65c8e74947 gdesklets-core-0.33.1.ebuild 2426
-MD5 6da2bfb9278943ed16c468a86085bdc0 gdesklets-core-0.34.3-r1.ebuild 2379
-RMD160 1c922e524b781096fb23d1f2148ab1589f268106 gdesklets-core-0.34.3-r1.ebuild 2379
-SHA256 cfb29e841c2ae15bd4345bfd37fa8e38b59cc51d85fb045118a988b824afdba7 gdesklets-core-0.34.3-r1.ebuild 2379
-MD5 ce26b81fda37597674119e6d50294f74 gdesklets-core-0.35-r1.ebuild 2273
-RMD160 8da6695e0ef3d859d3547320bf8e93880acb6245 gdesklets-core-0.35-r1.ebuild 2273
-SHA256 d9ead67d699b811a00f203580d2407b652471e440f63cc021e90df9d20415ba1 gdesklets-core-0.35-r1.ebuild 2273
-MD5 759a9f87f0c18bd724f0c4cc6f13aa12 gdesklets-core-0.35.1-r1.ebuild 2275
-RMD160 1156a85a2a63c7f7912f26d5f584b4aa85e1e96c gdesklets-core-0.35.1-r1.ebuild 2275
-SHA256 00fda9a173636b293c05d99c8925ae3dcd6d740ad23368b6842c33db562b44f4 gdesklets-core-0.35.1-r1.ebuild 2275
-MD5 66e0db6548f6797f885339962d460e76 gdesklets-core-0.35.2-r1.ebuild 2504
-RMD160 238a669d7f39b0769932f51417dbd6e1335da86b gdesklets-core-0.35.2-r1.ebuild 2504
-SHA256 20c46db47fb24cab9aaeee3ebcdd760f673743bb82242e968d60d3c8cccbf96a gdesklets-core-0.35.2-r1.ebuild 2504
-MD5 dfd30219f5f56a0fc3300bd64b2b6a52 gdesklets-core-0.35.3.ebuild 2559
-RMD160 cc93e1304dfe3ec7c521de11b44b929f54037433 gdesklets-core-0.35.3.ebuild 2559
-SHA256 a50d0613d19b576efd54988f84c5cef09d1297ec8907bcf43a620b4b28082016 gdesklets-core-0.35.3.ebuild 2559
-MD5 0ed07665a552a388295ad2438f2fd925 gdesklets-core-0.35.ebuild 2067
-RMD160 512e9c81869abd7ef540015a4ebdd90a18ef8153 gdesklets-core-0.35.ebuild 2067
-SHA256 24fc0555a4cfa6dac6561bcd460e0d9f7568ac122b7144e80c63786339563338 gdesklets-core-0.35.ebuild 2067
-MD5 a281adab3a8905e5d93c69b9ec155847 gdesklets-core-0.35_rc1-r1.ebuild 2144
-RMD160 e7bdfe9437716a9f7edf1b84e7b478ca04c0c546 gdesklets-core-0.35_rc1-r1.ebuild 2144
-SHA256 6358029356fe50b3c3fe37cda19f4f187fb263c807ca566837ca40748721d1d0 gdesklets-core-0.35_rc1-r1.ebuild 2144
-MD5 29674f36cd2d889e4e21fec9a2cee59b metadata.xml 281
-RMD160 c2bd0b9406d9647ead7e3bdfc11bfe887e355330 metadata.xml 281
-SHA256 9d4bf715ca56bbd8b396f14fdcf85cc266f4c3e64889f0737f8b70022541d458 metadata.xml 281
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD4paIJrHF4yAQTrARAs02AJ9iFRg1CnoUEVEx4MsKd+fYX3mqLwCfUam/
-KAS67HmkUS1FsuDfmMQqTac=
-=ElVo
------END PGP SIGNATURE-----

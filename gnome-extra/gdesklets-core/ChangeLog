@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.59 2006/02/02 23:32:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.60 2006/04/30 21:08:53 nixphoeni Exp $
+
+  30 Apr 2006; Joe Sapp <nixphoeni@gentoo.org>
+  gdesklets-core-0.34.3-r1.ebuild, gdesklets-core-0.35.2-r1.ebuild,
+  gdesklets-core-0.35.3.ebuild:
+  Change download of develbook to be conditional on doc USE flag. Thanks tcort
+  (see bug 103966#c16).
 
   02 Feb 2006; Aron Griffis <agriffis@gentoo.org>
   gdesklets-core-0.35.2-r1.ebuild:
