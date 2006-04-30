@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/man-pages-es
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/ChangeLog,v 1.5 2006/01/09 08:03:16 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/ChangeLog,v 1.6 2006/04/30 12:57:54 ferdy Exp $
+
+  30 Apr 2006; Fernando J. Pereda <ferdy@gentoo.org>
+  -man-pages-es-1.55.ebuild, man-pages-es-1.55-r1.ebuild:
+  Use einfo instead of echo. Fixes bug #129718. Stable everywhere. Remove old
+  version.
 
   09 Jan 2006; Fernando J. Pereda <ferdy@gentoo.org>
   man-pages-es-1.55-r1.ebuild:
