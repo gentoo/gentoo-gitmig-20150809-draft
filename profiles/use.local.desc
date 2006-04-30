@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1874 2006/04/29 19:17:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1875 2006/04/30 17:10:12 stuart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1129,6 +1129,8 @@ net-misc/ntp:logrotate - Install support files for logrotate
 net-misc/ntp:nodroproot - Disable support for running ntpd as a non-root user
 net-misc/ntp:openntpd - Allow ntp to be installed alongside openntpd
 net-misc/ntp:parse-clocks - Add support for PARSE clocks
+net-misc/nx-x11:rdesktop - Add support for connecting to Windows Terminal Server
+net-misc/nx-x11:vnc - Add support for connecting to VNC servers
 net-misc/nxserver-freenx:commercial - Add support for the commerial nxclient
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:chroot - Enable chrooting support
