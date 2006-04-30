@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws-maildir
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-maildir/ChangeLog,v 1.24 2006/04/17 18:36:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-maildir/ChangeLog,v 1.25 2006/04/30 16:32:16 dertobi123 Exp $
+
+  30 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  sylpheed-claws-maildir-0.19.ebuild:
+  ppc stable
 
   17 Apr 2006; Markus Rothe <corsair@gentoo.org>
   sylpheed-claws-maildir-0.19.ebuild:
