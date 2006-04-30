@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/xcursor-neutral-1.13a.ebuild,v 1.1 2006/04/30 17:16:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/xcursor-neutral-1.13a.ebuild,v 1.2 2006/04/30 17:21:16 genstef Exp $
 
-DESCRIPTION="another great X.Org cursor theme called \"neutral\""
+DESCRIPTION="The standard X.Org mouse cursor with shadows and animations"
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=28310"
 SRC_URI="http://www.kde-look.org/content/files/28310-neutral-1.13a.tar.gz"
 
