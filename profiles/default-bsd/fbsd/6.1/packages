@@ -1,0 +1,24 @@
+# Copyright 2004-2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.1/packages,v 1.1 2006/04/30 20:13:52 flameeyes Exp $
+
+# General guideline for package versioning: 
+#  * FreeBSD packages are =package-6.1*
+#  * For stuff in contrib/, take the version that FreeBSD contains, and add a ~.
+#  * For packages not provided by FreeBSD, be lenient. Look at what x86 do, etc.
+
+###
+# FreeBSD System
+###
+*=sys-freebsd/freebsd-mk-defs-6.1*
+*=sys-freebsd/freebsd-lib-6.1*
+*=sys-freebsd/freebsd-libexec-6.1*
+*=sys-freebsd/freebsd-bin-6.1*
+*=sys-freebsd/freebsd-sbin-6.1*
+*=sys-freebsd/freebsd-ubin-6.1*
+*=sys-freebsd/freebsd-usbin-6.1*
+*sys-freebsd/freebsd-baselayout
+*=sys-freebsd/freebsd-share-6.1*
+*=sys-freebsd/freebsd-contrib-6.1*
+*=sys-freebsd/boot0-6.1*
+

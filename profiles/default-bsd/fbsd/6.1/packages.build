@@ -1,0 +1,11 @@
+# Copyright 2004-2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.1/packages.build,v 1.1 2006/04/30 20:13:52 flameeyes Exp $
+
+# Packages needed to build a stage out of this profile
+# This is not used by catalyst as it does not work with FreeBSD, yet.
+# Just add them ot the complete system.
+
+net-misc/dhcp
+net-misc/openssh
+

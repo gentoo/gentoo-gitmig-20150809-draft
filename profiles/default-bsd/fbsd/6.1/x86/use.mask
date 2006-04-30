@@ -1,0 +1,19 @@
+# Copyright 2004-2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.1/x86/use.mask,v 1.1 2006/04/30 20:13:52 flameeyes Exp $
+
+-3dnow
+-3dnowext
+-mmx
+-sse
+-sse2
+-win32codecs
+
+# nvidia drivers works on x86
+-xvmc
+-nvidia
+
+# Unmask vmware drivers
+-video_cards_vmware
+-video_cards_nvidia
+-input_devices_vmmouse

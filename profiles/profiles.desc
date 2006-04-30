@@ -77,3 +77,5 @@ x86		default-linux/x86/dev/2006.1/desktop		dev
 
 # Gentoo/FreeBSD Profiles
 x86-fbsd	default-bsd/fbsd/6.0/x86			dev
+x86-fbsd	default-bsd/fbsd/6.1/x86			dev
+

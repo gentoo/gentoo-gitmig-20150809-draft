@@ -1,0 +1,11 @@
+# Copyright 2004-2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.1/x86/make.defaults,v 1.1 2006/04/30 20:13:52 flameeyes Exp $
+# System-wide defaults for the G/FBSD 6.1 Portage system
+
+ARCH="x86-fbsd"
+CHOST="i586-gentoo-freebsd6.1"
+CFLAGS="-march=i586 -O2 -pipe"
+CXXFLAGS="${CFLAGS}"
+
+ACCEPT_KEYWORDS="x86-fbsd ~x86-fbsd"
