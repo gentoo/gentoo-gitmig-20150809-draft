@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.10 2006/04/27 16:22:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.11 2006/04/30 03:27:40 flameeyes Exp $
+
+  30 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-lib-6.0-ssp.patch, freebsd-lib-6.0-r2.ebuild:
+  Commit the first try patch for ssp, thanks to solar.
 
   27 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-lib-6.0-r2.ebuild:

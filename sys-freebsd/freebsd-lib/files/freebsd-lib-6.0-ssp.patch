@@ -1,0 +1,51 @@
+Index: fbsd-6/lib/libc/sys/Makefile.inc
+===================================================================
+--- fbsd-6.orig/lib/libc/sys/Makefile.inc
++++ fbsd-6/lib/libc/sys/Makefile.inc
+@@ -18,7 +18,7 @@
+ .endif
+ 
+ # Sources common to both syscall interfaces:
+-SRCS+=	ftruncate.c lseek.c mmap.c pread.c pwrite.c truncate.c __error.c
++SRCS+=	ftruncate.c lseek.c mmap.c pread.c pwrite.c truncate.c __error.c ssp.c
+ 
+ # Add machine dependent asm sources:
+ SRCS+=${MDASM}
+Index: fbsd-6/lib/libc/sys/ssp.c
+===================================================================
+--- /dev/null
++++ fbsd-6/lib/libc/sys/ssp.c
+@@ -0,0 +1,13 @@
++#include <stdlib.h>
++#include <sys/param.h>
++#include <sys/sysctl.h>
++
++unsigned long __guard = 0UL;
++void __guard_setup(void) __attribute__ ((constructor));
++void __stack_smash_handler(char func[], int damaged __attribute__ ((unused)));
++void __guard_setup(void) { if (__guard != 0UL) return; __guard = 0xFF0A0D00UL; }
++
++void __stack_smash_handler(char func[], int damaged) { 
++	_exit(127);
++}
++
+Index: fbsd-6/lib/csu/i386-elf/crt1.c
+===================================================================
+--- fbsd-6.orig/lib/csu/i386-elf/crt1.c
++++ fbsd-6/lib/csu/i386-elf/crt1.c
+@@ -44,6 +44,7 @@ extern void _fini(void);
+ extern void _init(void);
+ extern int main(int, char **, char **);
+ extern void _start(char *, ...);
++extern void __guard_setup(void);
+ 
+ #ifdef GCRT
+ extern void _mcleanup(void);
+@@ -106,6 +107,7 @@ _start(char *ap, ...)
+ 	monstartup(&eprol, &etext);
+ #endif
+ 	_init();
++	__guard_setup();
+ 	exit( main(argc, argv, env) );
+ }
+ 

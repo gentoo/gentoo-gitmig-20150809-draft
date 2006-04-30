@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.0-r2.ebuild,v 1.4 2006/04/27 16:22:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.0-r2.ebuild,v 1.5 2006/04/30 03:27:40 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -67,6 +67,8 @@ pkg_setup() {
 		mymakeopts="${mymakeopts} MACHINE=$(tc-arch-kernel ${CTARGET})"
 		mymakeopts="${mymakeopts} MACHINE_ARCH=$(tc-arch-kernel ${CTARGET})"
 	fi
+
+	einfo "Using mymakeopts: ${mymakeopts}"
 }
 
 PATCHES="${FILESDIR}/${PN}-bsdxml.patch
@@ -107,6 +109,9 @@ src_unpack() {
 
 	[[ -n $(install --version 2> /dev/null | grep GNU) ]] && \
 		sed -i -e 's:${INSTALL} -C:${INSTALL}:' "${WORKDIR}/include/Makefile"
+
+	sed -i -e 's:-o/dev/stdout:-t:' ${S}/libc/net/Makefile.inc
+	use ssp && epatch "${FILESDIR}/${PN}-${RV}-ssp.patch"
 }
 
 src_compile() {
@@ -141,6 +146,7 @@ src_compile() {
 		cd "${S}/msun"
 		$(freebsd_get_bmake) ${mymakeopts} || die "make libc failed"
 	else
+		append-flags -fno-stack-protector # Don't use ssp until properly fixed
 		cd "${S}"
 		freebsd_src_compile
 	fi
