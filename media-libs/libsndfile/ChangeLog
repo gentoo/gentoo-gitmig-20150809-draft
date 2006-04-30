@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.50 2006/03/25 21:27:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.51 2006/04/30 14:24:02 chainsaw Exp $
+
+*libsndfile-1.0.16 (30 Apr 2006)
+
+  30 Apr 2006; Tony Vroon <chainsaw@gentoo.org> +libsndfile-1.0.16.ebuild:
+  Version bump. Patch from Flameeyes has been merged upstream.
 
 *libsndfile-1.0.15-r2 (25 Mar 2006)
 
