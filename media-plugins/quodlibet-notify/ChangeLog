@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/quodlibet-notify
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-notify/ChangeLog,v 1.1 2006/04/30 05:39:16 tcort Exp $
+
+*quodlibet-notify-3083 (30 Apr 2006)
+
+  30 Apr 2006; <tcort@gentoo.org> +metadata.xml,
+  +quodlibet-notify-3083.ebuild:
+  Initial Commit. Ebuild by Kai Huuhko <kai.huuhko@gmail.com> and Thomas Cort
+  <tcort@gentoo.org>.
+
