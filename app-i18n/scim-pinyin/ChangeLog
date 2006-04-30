@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-pinyin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/ChangeLog,v 1.11 2006/02/10 19:22:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/ChangeLog,v 1.12 2006/04/30 11:49:25 blubb Exp $
+
+  30 Apr 2006; Simon Stelling <blubb@gentoo.org> scim-pinyin-0.5.91.ebuild:
+  stable on amd64
 
   10 Feb 2006; Alastair Tse <liquidx@gentoo.org> -scim-pinyin-0.5.0.ebuild,
   -scim-pinyin-0.5.90.ebuild, scim-pinyin-0.5.91.ebuild:
