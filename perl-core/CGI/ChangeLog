@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/CGI
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.18 2006/04/30 12:40:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.19 2006/04/30 13:50:24 ian Exp $
+
+  30 Apr 2006; Christian Hartmann <ian@gentoo.org> -CGI-3.05.ebuild,
+  -CGI-3.07.ebuild, -CGI-3.09.ebuild:
+  House cleaning
 
 *CGI-3.20 (30 Apr 2006)
 
