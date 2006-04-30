@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.95 2006/03/09 18:01:38 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.96 2006/04/30 10:17:00 blubb Exp $
+
+  30 Apr 2006; Simon Stelling <blubb@gentoo.org> snort-2.4.3-r1.ebuild:
+  stable on amd64
 
 *snort-2.4.4 (09 Mar 2006)
 
