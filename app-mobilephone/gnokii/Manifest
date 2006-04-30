@@ -14,8 +14,8 @@ MD5 face706c6d0985abc88c5ad34f39d3ee files/gnokii-0.6.8-smsd-glib2.patch 779
 MD5 2f2f572bc05f2ee40468130dcdd7e946 files/gnokii-bindir.patch 461
 MD5 135df3cf24c3041ccb20a5896482ed59 files/gnokii.desktop 260
 MD5 a3a87873287c89dc910115ddea5cbd1d gnokii-0.6.10.ebuild 2264
-MD5 dbe9c243865a612c2950a878f9e56aed gnokii-0.6.11-r1.ebuild 2493
-MD5 04661e8e2889e339842f02776fcdbf43 gnokii-0.6.12.ebuild 2420
+MD5 4847060cc938ae7e5889325f22c948e1 gnokii-0.6.11-r1.ebuild 2482
+MD5 386824f40fb97ae2b49d2bbfabaea2d2 gnokii-0.6.12.ebuild 2409
 MD5 cba9a4289ee030177175548bb071572d gnokii-0.6.7-r1.ebuild 2323
 MD5 438e4d861c9041a0b860bf4791a20693 gnokii-0.6.7-r2.ebuild 2329
 MD5 d8f6cfbab08d0644b83b55a2bea01c6e gnokii-0.6.8.ebuild 2328
@@ -23,7 +23,7 @@ MD5 01ec5e34cbf064fdf9a0862d481b01d9 metadata.xml 467
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEOVfUjG8pv1lIUX4RAt3ZAJ9ybdaI2j1eelHC97oR6xPVi01TXgCePhX5
-FivhVqPcdYjae8Q/bLTd9qg=
-=Eq9f
+iD8DBQFEVSVEjG8pv1lIUX4RApFRAKDw8cJoluchLRX4qOWP6J4CqKyliQCfSsxf
+F/Ut/Kijag42jpABOhS1zD4=
+=leA8
 -----END PGP SIGNATURE-----
