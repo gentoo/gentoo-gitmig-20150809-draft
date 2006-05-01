@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.17 2006/04/13 22:09:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.18 2006/05/01 17:36:09 wolf31o2 Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -93,6 +93,7 @@ games-fps/quake3-nsco
 games-fps/quake3-osp
 games-fps/quake3-ra3
 games-fps/quake3-ruinhunters
+games-fps/quake3-teamarena
 games-fps/quake3-threewave
 games-fps/quake3-tremulous
 games-fps/quake3-truecombat
