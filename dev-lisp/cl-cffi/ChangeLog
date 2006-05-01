@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-cffi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cffi/ChangeLog,v 1.3 2006/03/14 07:34:06 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cffi/ChangeLog,v 1.4 2006/05/01 19:40:47 mkennedy Exp $
+
+  01 May 2006; Matthew Kennedy <mkennedy@gentoo.org> Manifest:
+  Fix digests.
 
 *cl-cffi-0.9.0 (14 Mar 2006)
 
