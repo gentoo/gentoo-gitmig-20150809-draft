@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.7.4.ebuild,v 1.3 2006/05/01 03:16:51 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.7.4.ebuild,v 1.4 2006/05/01 03:29:28 nerdboy Exp $
 
 inherit eutils libtool
 
 DESCRIPTION="Library for manipulation of TIFF (Tag Image File Format) images"
 HOMEPAGE="http://www.libtiff.org/"
-SRC_URI="ftp://ftp.remotesensing.org/pub/libtiff/${P}.tar.gz"
+SRC_URI="ftp://ftp.remotesensing.org/pub/libtiff/old/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
