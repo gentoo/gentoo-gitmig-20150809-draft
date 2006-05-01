@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f74312f6f31a6cd8e5d7eea91d0fa68f ChangeLog 2019
+MD5 80722add41176c59585e8c0a99760688 ChangeLog 2104
 MD5 2113c1cafc4d908581e1e3d38e2f0a8d files/digest-pyserial-1.18 61
 MD5 b7667a4a031f4c96a953e61a5dc48d53 files/digest-pyserial-2.0 60
 MD5 e9357a610f14dd701ef8f69bb7e0dedf files/digest-pyserial-2.1 60
@@ -10,11 +7,4 @@ MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 f097db4a56037fd6a334ff3b1cb3fa8c pyserial-1.18.ebuild 463
 MD5 c0a88477a4e619eab21ab856b216b12d pyserial-2.0.ebuild 501
 MD5 96a7ed399cb828757628f2135f4c9a8f pyserial-2.1.ebuild 510
-MD5 8e4f0d17d88717437b78245ceafb0e37 pyserial-2.2.ebuild 510
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEMZPqKRy60XGEcJIRAkw/AJ9HzmJnnP6dldrTToOWiPYuaIKlXwCgppjo
-8it+rOELurGta01NUPEBXaI=
-=3jDQ
------END PGP SIGNATURE-----
+MD5 d23c4181e57cc17f55d4dfb133f620f4 pyserial-2.2.ebuild 516

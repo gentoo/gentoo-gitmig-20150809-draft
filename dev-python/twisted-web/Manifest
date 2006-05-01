@@ -1,53 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX twisted-web-0.5.0-root-skip.patch 475 RMD160 5a93f37912c00bb9f8b139b54c68901b36d4093e SHA1 f06d91d40e3e85429b2a29beebb5424620431374 SHA256 619682d0267629476a7d783f7827ef1ceb56fd11a97fdbe7623ba72b33c98ecd size 475
-MD5 8b5bd800eb0001964ddef202a539be91 files/twisted-web-0.5.0-root-skip.patch 475
-RMD160 5a93f37912c00bb9f8b139b54c68901b36d4093e files/twisted-web-0.5.0-root-skip.patch 475
-SHA256 619682d0267629476a7d783f7827ef1ceb56fd11a97fdbe7623ba72b33c98ecd files/twisted-web-0.5.0-root-skip.patch 475
-AUX twisted-web-0.5.0-tests-2.2-compat-14780.patch 4570 RMD160 0ab1b0fec9ff0503369bdea0b9d6da2d123f0c00 SHA1 a47637f47f48fa945c92a1d42b6ca691e399878c SHA256 5edcb90c4f949606b55d9115b4893a30cdcaec5f3f9d8e73967ec59fb8bf4ba8 size 4570
-MD5 f0421e85956e3dbe3872a9c931ff7889 files/twisted-web-0.5.0-tests-2.2-compat-14780.patch 4570
-RMD160 0ab1b0fec9ff0503369bdea0b9d6da2d123f0c00 files/twisted-web-0.5.0-tests-2.2-compat-14780.patch 4570
-SHA256 5edcb90c4f949606b55d9115b4893a30cdcaec5f3f9d8e73967ec59fb8bf4ba8 files/twisted-web-0.5.0-tests-2.2-compat-14780.patch 4570
-AUX twisted-web-0.5.0-tests-2.2-compat-14782.patch 1477 RMD160 7008bcbb88b813964277bbe9a7099db3aefcae24 SHA1 8174a65c4154432c9e4b719326209b601a57f42d SHA256 e7122d9c6ddc56de0b03d8c847cfbe79b000016bf3a2e5469cad73e4509f541d size 1477
-MD5 c3f4d2d4625c8db9ee3b000d5ae14317 files/twisted-web-0.5.0-tests-2.2-compat-14782.patch 1477
-RMD160 7008bcbb88b813964277bbe9a7099db3aefcae24 files/twisted-web-0.5.0-tests-2.2-compat-14782.patch 1477
-SHA256 e7122d9c6ddc56de0b03d8c847cfbe79b000016bf3a2e5469cad73e4509f541d files/twisted-web-0.5.0-tests-2.2-compat-14782.patch 1477
-AUX twisted-web-0.5.0-tests-2.2-compat-14786.patch 1988 RMD160 e00c52a01abb6d5a3dbbd389f3c654d62444409b SHA1 321d4d53deb54f9fb720665a3a14d21eb67198fc SHA256 a9b09482ea46c9def2d4364db5c2991e0d7046b67855c42cc23da1fc09566ac4 size 1988
-MD5 cc4998326286c7923d65d8033d9fadbe files/twisted-web-0.5.0-tests-2.2-compat-14786.patch 1988
-RMD160 e00c52a01abb6d5a3dbbd389f3c654d62444409b files/twisted-web-0.5.0-tests-2.2-compat-14786.patch 1988
-SHA256 a9b09482ea46c9def2d4364db5c2991e0d7046b67855c42cc23da1fc09566ac4 files/twisted-web-0.5.0-tests-2.2-compat-14786.patch 1988
-AUX twisted-web-0.5.0-tests-2.2-compat.patch 4006 RMD160 23b068ebde8fc096117b6beff15ddf2b559eb320 SHA1 aa9d1a1a8698d191ca9acde578a348fcbe95bd26 SHA256 b0bd817232f37eba306a86fe0463cf509e94b8a37c7a032ebbfd0b59b8f7a24d size 4006
-MD5 0d086fde8bb2de73d9d4c6b50d936f19 files/twisted-web-0.5.0-tests-2.2-compat.patch 4006
-RMD160 23b068ebde8fc096117b6beff15ddf2b559eb320 files/twisted-web-0.5.0-tests-2.2-compat.patch 4006
-SHA256 b0bd817232f37eba306a86fe0463cf509e94b8a37c7a032ebbfd0b59b8f7a24d files/twisted-web-0.5.0-tests-2.2-compat.patch 4006
-DIST TwistedWeb-0.5.0.tar.bz2 263139 RMD160 61829c8ae492c7cf3f43f45c70a5653584e50378 SHA256 7d33de4924c0f7819b3ba9980461ca2bf7b8f5619f21f90755c29255570b599e size 263139
-EBUILD twisted-web-0.5.0-r1.ebuild 551 RMD160 0e64d534153ce989ea0a34fd747192517a0ab420 SHA1 276710d6c8ff879673845b6ab9c3e41ecb8031d0 SHA256 59dace199377049d95d876d004c478e930f322e87ff8eb45792a3f20a642a96d size 551
-MD5 5cb8f6c4571be4378a728ba4a5fb826d twisted-web-0.5.0-r1.ebuild 551
-RMD160 0e64d534153ce989ea0a34fd747192517a0ab420 twisted-web-0.5.0-r1.ebuild 551
-SHA256 59dace199377049d95d876d004c478e930f322e87ff8eb45792a3f20a642a96d twisted-web-0.5.0-r1.ebuild 551
-EBUILD twisted-web-0.5.0-r2.ebuild 722 RMD160 5893c9d77b29674218bfb52ecf9111da040fac11 SHA1 d8ff3a5443af0014d43a8e18587a93f950a30fe2 SHA256 7fb533b4d65e49aee8d6c1751a9f84a33bfe7d09601ccdb30c75e08e7620e4b1 size 722
-MD5 71a860aed21435f11a4b28894d40e304 twisted-web-0.5.0-r2.ebuild 722
-RMD160 5893c9d77b29674218bfb52ecf9111da040fac11 twisted-web-0.5.0-r2.ebuild 722
-SHA256 7fb533b4d65e49aee8d6c1751a9f84a33bfe7d09601ccdb30c75e08e7620e4b1 twisted-web-0.5.0-r2.ebuild 722
-MISC ChangeLog 1958 RMD160 f6c66f309898bb2939cb8f589759208c32ea9377 SHA1 69ad0b3dc4db3c5348f2926bdb631590076f3e0d SHA256 8f2ed391691e2cfe3e2df939cf5c047bacaa372059b85a65aecefae4c767a3b3 size 1958
-MD5 d7102fa5ef007c6f94630aa454759ab4 ChangeLog 1958
-RMD160 f6c66f309898bb2939cb8f589759208c32ea9377 ChangeLog 1958
-SHA256 8f2ed391691e2cfe3e2df939cf5c047bacaa372059b85a65aecefae4c767a3b3 ChangeLog 1958
-MISC metadata.xml 218 RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b SHA1 0dc0efeb1f1c4a4e691f1f10d4dd28814582c74e SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 size 218
-MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
-RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b metadata.xml 218
-SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata.xml 218
+MD5 0b02e25a9fd56ea8ef5ae34770c74ed3 ChangeLog 2054
 MD5 57f23e26014f9e6ff7598d3835af2f22 files/digest-twisted-web-0.5.0-r1 253
-RMD160 d2ee02a02a49de6adf9a55491a398c2dd7b769bb files/digest-twisted-web-0.5.0-r1 253
-SHA256 8092e2fabf7c7a484d5a071341a19a3c523e4e534399bac66f6ab8731cd0b22a files/digest-twisted-web-0.5.0-r1 253
 MD5 57f23e26014f9e6ff7598d3835af2f22 files/digest-twisted-web-0.5.0-r2 253
-RMD160 d2ee02a02a49de6adf9a55491a398c2dd7b769bb files/digest-twisted-web-0.5.0-r2 253
-SHA256 8092e2fabf7c7a484d5a071341a19a3c523e4e534399bac66f6ab8731cd0b22a files/digest-twisted-web-0.5.0-r2 253
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEU6hUW78445TWHXcRAvKQAJwKnmGcbIqWZgLrDG2Eec3kcOiSNQCePJUU
-v7C8xp38dZlx/1+Kr7Wufhs=
-=zst6
------END PGP SIGNATURE-----
+MD5 8b5bd800eb0001964ddef202a539be91 files/twisted-web-0.5.0-root-skip.patch 475
+MD5 f0421e85956e3dbe3872a9c931ff7889 files/twisted-web-0.5.0-tests-2.2-compat-14780.patch 4570
+MD5 c3f4d2d4625c8db9ee3b000d5ae14317 files/twisted-web-0.5.0-tests-2.2-compat-14782.patch 1477
+MD5 cc4998326286c7923d65d8033d9fadbe files/twisted-web-0.5.0-tests-2.2-compat-14786.patch 1988
+MD5 0d086fde8bb2de73d9d4c6b50d936f19 files/twisted-web-0.5.0-tests-2.2-compat.patch 4006
+MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
+MD5 5cb8f6c4571be4378a728ba4a5fb826d twisted-web-0.5.0-r1.ebuild 551
+MD5 0d5aa8886ecd8fabb64881444e60eba7 twisted-web-0.5.0-r2.ebuild 729

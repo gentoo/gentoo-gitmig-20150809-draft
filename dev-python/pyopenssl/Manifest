@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1de73b55cb538ec776ee60d831c8d750 ChangeLog 2390
+MD5 5eabfc8447c9a4f4aabcf4a9407da5c9 ChangeLog 2476
 MD5 3c24379240e464df5a860ce0413832eb files/digest-pyopenssl-0.5.1 67
 MD5 f499a98f975a425b5df71055e2c4aadb files/digest-pyopenssl-0.6 65
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 b3bb4c11a04e687c897a1dc7476d8ab2 pyopenssl-0.5.1.ebuild 1099
-MD5 224f6c9e27e40804b88eda2c5b41d396 pyopenssl-0.6.ebuild 1151
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD9d0xKRy60XGEcJIRAoLhAJ4nZnS9YTzP5uAo/g60BqMPqDTH/wCgtOw+
-vwt3znyqajOdU+jYN7U2IoA=
-=0gOj
------END PGP SIGNATURE-----
+MD5 ff488bdb6583adaf6b275fee85df64ee pyopenssl-0.6.ebuild 1157
