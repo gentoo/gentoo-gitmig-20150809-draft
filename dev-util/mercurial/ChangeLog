@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.22 2006/04/27 19:36:32 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.23 2006/05/01 00:32:17 weeve Exp $
+
+  01 May 2006; Jason Wever <weeve@gentoo.org> mercurial-0.8.1.ebuild:
+  Added ~sparc keyword.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-mercurial-0.6b_p20050807, files/digest-mercurial-0.7,
