@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b7b505bcff8f349327242c4224980a18 ChangeLog 2739
+MD5 3a333cd989e317b6454d72de1898ec19 ChangeLog 2827
 MD5 4aa5aa144d111a402b797db185c541ea ccs-1.00.00-r1.ebuild 802
-MD5 a19a20f06ea77839ae83f96af186fd6f ccs-1.01.00.ebuild 812
+MD5 c66203a05f4b3823fa25b1def671259a ccs-1.01.00.ebuild 810
 MD5 24f1d325d8a19134fabf980cd9c36cd9 ccs-1.02.00.ebuild 812
 MD5 8a51744fb1f2de377f819ec48a69729f files/ccsd.conf 254
 MD5 d1e8cec0a97091432dc92d7721f79442 files/ccsd.rc 522
@@ -11,10 +8,3 @@ MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-ccs-1.00.00-r1 68
 MD5 9d2b25c988a934245d5ef85edcf067d8 files/digest-ccs-1.01.00 68
 MD5 9b7b430d3bc3f98b77ffdfd13778bd1c files/digest-ccs-1.02.00 68
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEVKAGgMUyd/cdjWsRAjf9AJ0ZdfaPTimqNkBh7x2wlhDg0dBcHACfSiy3
-RuWgWVuLP5XyP1oDo9q1UR8=
-=T4Z4
------END PGP SIGNATURE-----
