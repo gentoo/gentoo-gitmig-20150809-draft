@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/myspell-ia
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ia/ChangeLog,v 1.1 2006/05/01 16:03:45 kevquinn Exp $
+
+*myspell-ia-20060316 (01 May 2006)
+
+  01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
+  +myspell-ia-20060316.ebuild:
+  New ebuild for Interlingua myspell dictionary
+
