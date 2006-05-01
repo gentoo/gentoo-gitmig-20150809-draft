@@ -1,0 +1,14 @@
+Index: am-utils-6.1.4/configure.in
+===================================================================
+--- am-utils-6.1.4.orig/configure.in
++++ am-utils-6.1.4/configure.in
+@@ -652,6 +652,9 @@ dnl libgdbm for dbm_pagfno, so check for
+     AC_CHECK_LIB(ndbm, dbm_pagfno, ac_cv_header_new_dbm="ndbm.h"; ac_cv_lib_new_dbm="ndbm",
+       AC_CHECK_LIB(gdbm, dbm_pagfno, ac_cv_header_new_dbm="ndbm.h"; ac_cv_lib_new_dbm="ndbm -lgdbm")))
+ fi
++if test "$ac_cv_lib_new_dbm" = "" -a "$ac_cv_header_ndbm_h" = "yes"; then
++  AC_CHECK_LIB(c, dbm_open, ac_cv_header_new_dbm="ndbm.h"; ac_cv_lib_new_dbm="c")
++fi
+ if test "$ac_cv_lib_new_dbm" = "" -a "$ac_cv_header_db1_ndbm_h" = "yes"; then
+   AC_CHECK_LIB(db1, dbm_open, ac_cv_header_new_dbm="db1/ndbm.h"; ac_cv_lib_new_dbm="db1")
+ fi
