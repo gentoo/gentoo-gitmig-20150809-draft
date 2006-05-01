@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/pftop
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pftop/ChangeLog,v 1.1 2006/04/14 17:08:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pftop/ChangeLog,v 1.2 2006/05/01 01:28:23 flameeyes Exp $
+
+  01 May 2006; Diego Pettenò <flameeyes@gentoo.org> pftop-0.5.ebuild:
+  Add support for FreeBSD 6.1.
 
 *pftop-0.5 (14 Apr 2006)
 
