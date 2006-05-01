@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/xvnkb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/ChangeLog,v 1.10 2006/01/03 09:33:00 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/ChangeLog,v 1.11 2006/05/01 09:43:16 pclouds Exp $
+
+*xvnkb-0.2.9a (01 May 2006)
+
+  01 May 2006; <pclouds@gentoo.org> +xvnkb-0.2.9a.ebuild:
+  Version bump
 
   03 Jan 2006; <pclouds@gentoo.org> xvnkb-0.2.9.ebuild:
   Modular X support
