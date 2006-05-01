@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.69 2006/04/27 23:14:27 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.70 2006/05/01 03:16:51 nerdboy Exp $
+
+*tiff-3.8.2 (01 May 2006)
+
+  01 May 2006; Steve Arnold <nerdboy@gentoo.org> +tiff-3.8.2.ebuild
+  tiff-3.7.4.ebuild:
+  Updated to latest stable upstream release (closes bug 131602) and
+  marked 3.7.4 stable (only my own arch's). Trying to stablize on the
+  current upstream stable release (3.8.2)
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-tiff-3.7.1-r1,
   files/digest-tiff-3.7.2, files/digest-tiff-3.7.3, files/digest-tiff-3.7.4,
