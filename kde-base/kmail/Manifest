@@ -1,4 +1,4 @@
-MD5 bfb456b3429d296c7502586d6cc2e44c ChangeLog 7696
+MD5 ba84de9e04b0bc2483ea3db358078fc2 ChangeLog 7828
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmail-3.4.1 208
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmail-3.4.1-r1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kmail-3.4.2 282
@@ -6,6 +6,7 @@ MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kmail-3.4.2-r1 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kmail-3.4.3 67
 MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kmail-3.5.2 247
 MD5 342529061ff068b5002fa430c5c6b20c files/digest-kmail-3.5.2-r1 67
+MD5 342529061ff068b5002fa430c5c6b20c files/digest-kmail-3.5.2-r2 67
 MD5 0dc20eebce2c8cb4475f065683ae24ff files/kdepim-3.4.2-partnode.patch 756
 MD5 465fb4ad98b38e7c5328429eaabb1000 files/kmail-3.4.1-shift+click-crash.diff 516
 MD5 eba73836fe71e337b9f5626f7cd85952 files/kmail-3.5-ham_spam_icons.diff 2557
@@ -17,5 +18,6 @@ MD5 393bf626aee24f4dd500ca341e1d314c kmail-3.4.2-r1.ebuild 1856
 MD5 0517daa346612e50e60119680a33a3da kmail-3.4.2.ebuild 1629
 MD5 d2de8d9c7a4a872edd470b81a9ae45b7 kmail-3.4.3.ebuild 1733
 MD5 b99a451fecc945edb57e424c27ac7d05 kmail-3.5.2-r1.ebuild 1926
+MD5 ca206446e7396c0397d7a92b26117434 kmail-3.5.2-r2.ebuild 2045
 MD5 5b7f453dddb33b4a363f7d52587de763 kmail-3.5.2.ebuild 1748
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

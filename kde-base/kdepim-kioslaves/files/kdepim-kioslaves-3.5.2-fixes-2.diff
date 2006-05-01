@@ -1,0 +1,98 @@
+--- kdepim/kioslaves/mbox/readmbox.cc	2005/12/27 12:43:58	491743
++++ kdepim/kioslaves/mbox/readmbox.cc	2006/04/14 17:45:24	529892
+@@ -142,8 +142,10 @@
+ 
+ void ReadMBox::rewind()
+ {
+-	if( m_stream )
+-		m_stream->device()->reset();
++	if( !m_stream )
++		return; //Rewinding not possible
++	
++	m_stream->device()->reset();
+ 	m_atend = m_stream->atEnd();
+ }
+ 
+@@ -178,6 +180,7 @@
+ 	if( !m_file->open( IO_ReadOnly ) )
+ 	{
+ 		delete m_file;
++		m_file = 0;
+ 		return false;
+ 	}
+ 	m_stream = new QTextStream( m_file );
+--- kdepim/kioslaves/imap4/imap4.cc	2005/09/14 19:43:34	460690
++++ kdepim/kioslaves/imap4/imap4.cc	2006/04/24 19:41:11	533427
+@@ -1988,6 +1988,17 @@
+     if (cmd->result () == "OK")
+     {
+       QValueListIterator < imapList > it = listResponses.begin();
++      if ( it == listResponses.end() )
++      {
++          // empty answer - this is a buggy imap server
++          // as a fallback we fire a normal listing and take the first answer
++          completeQueue.removeRef (cmd);
++          cmd = doCommand( imapCommand::clientList("", "%") );
++          if (cmd->result () == "OK")
++          {
++              it = listResponses.begin();
++          }
++      }
+       if ( it != listResponses.end() )
+       {
+         namespaceToDelimiter[QString::null] = (*it).hierarchyDelimiter();
+@@ -2232,6 +2243,10 @@
+           path += item.hierarchyDelimiter();
+         }
+         path += mailboxName;
++        if (path.upper() == "/INBOX/") {
++            // make sure the client can rely on INBOX
++            path = path.upper();
++        }
+       }
+       aURL.setPath(path);
+       atom.m_str = aURL.url(0, 106); // utf-8
+--- kdepim/kioslaves/imap4/imapparser.cc	2006/03/14 18:28:14	518628
++++ kdepim/kioslaves/imap4/imapparser.cc	2006/04/28 08:08:27	534960
+@@ -729,7 +729,7 @@
+   lastStatus = imapInfo ();
+ 
+   parseLiteralC(inWords);       // swallow the box
+-  if (inWords[0] != '(')
++  if (inWords.isEmpty() || inWords[0] != '(')
+     return;
+ 
+   inWords.pos++;
+@@ -1745,10 +1745,15 @@
+   {
+     QString temp = (*it);
+ 
+-    // if we have a '/' separator we'll just nuke it
+     int pt = temp.find ('/');
+-    if (pt > 0)
+-      temp.truncate(pt);
++    if (pt > 0) 
++    {
++      if (temp.findRev ('"', pt) == -1 || temp.find('"', pt) == -1)
++      {
++        // if we have non-quoted '/' separator we'll just nuke it
++        temp.truncate(pt);
++      }
++    }
+     if (temp.find ("section=", 0, false) == 0)
+       _section = temp.right (temp.length () - 8);
+     else if (temp.find ("type=", 0, false) == 0)
+--- kdepim/kioslaves/imap4/rfcdecoder.cc	2005/07/26 18:54:59	438982
++++ kdepim/kioslaves/imap4/rfcdecoder.cc	2006/04/26 23:20:45	534373
+@@ -589,8 +589,10 @@
+       break;
+     l++;
+   }
+-  if (!*l)
++  if (!*l) {
++    free(latin);
+     return _str.ascii ();
++  }
+   QCString result;
+   l = latin;
+   while (*l)
