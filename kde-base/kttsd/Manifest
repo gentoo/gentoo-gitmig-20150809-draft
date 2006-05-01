@@ -1,43 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 826d9c6393869dbd6a10d2f6cd675451 ChangeLog 5115
-RMD160 ee7d457c13ddfc74a5d782c5ff9b457032bc41b6 ChangeLog 5115
-SHA256 9dda975bdf6d9d8c7635fa6a4fbed80060fa5a20992485a9814c98f340d6a014 ChangeLog 5115
+MD5 b9f7ae8041b8d835627c0c59dbc4b126 ChangeLog 5205
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-kttsd-3.4.1 236
-RMD160 55c528a8989cc71274e976bfb2cb110a864b006b files/digest-kttsd-3.4.1 236
-SHA256 ae36e54b6378261f2648e08bcc2cf81789b0e847b79f6a28836950383cf3c549 files/digest-kttsd-3.4.1 236
 MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kttsd-3.4.2 320
-RMD160 44aecc17d5dd981ac8cd21efd16d6633c6551bed files/digest-kttsd-3.4.2 320
-SHA256 65c542fdb9b3ea89c13c39ebcd12de8518dddb9015bba3d5f448e936ae3439a5 files/digest-kttsd-3.4.2 320
 MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kttsd-3.4.3 76
-RMD160 32a1cb8edf191e440a47fd7db89a38888fd45e42 files/digest-kttsd-3.4.3 76
-SHA256 9d11d9846d5c715731ba94721350c984a05a412cf522c2fe4ac8e64a079029c9 files/digest-kttsd-3.4.3 76
 MD5 2c7fe1ef1dceba63787773e4e12798cf files/digest-kttsd-3.5.2 274
-RMD160 8ed7a40695310d0bba199b2502351f34b5cf8f4b files/digest-kttsd-3.5.2 274
-SHA256 052cacf7cb87717c4f1ecd0188f8dc1d8e56117ae51b92fa3750b2e1775e6c24 files/digest-kttsd-3.5.2 274
 MD5 a4a2fe961dac0445daa5ceffc2e2c841 files/kdeaccessibility-3.4.0-noarts.patch 3826
-RMD160 9aa4835000149d0b9c2f67ab3834184f14b2f02e files/kdeaccessibility-3.4.0-noarts.patch 3826
-SHA256 8221d0dfd9f13cb2a50b99daf86e432236ef36c23c81713d32393cf7a660c5da files/kdeaccessibility-3.4.0-noarts.patch 3826
 MD5 5c1f7f6fc78bde2ee93b714684f7219b kttsd-3.4.1.ebuild 1185
-RMD160 f183012da0a5e06cb1c918299acca309f663c766 kttsd-3.4.1.ebuild 1185
-SHA256 1c096b5b7e05eaccc9f8da401ab7af202bf32115179aa4da8a9bd3273699af57 kttsd-3.4.1.ebuild 1185
 MD5 47cfbc1f4e31792d4be4a2a265b9575a kttsd-3.4.2.ebuild 1204
-RMD160 4f43a2bdf3b778458b9e385d26c38a1b462686d1 kttsd-3.4.2.ebuild 1204
-SHA256 f4a99b52011cf04b7ab37679a02da6ba5a77745c42fc8fdf9da81e7fae8a6a58 kttsd-3.4.2.ebuild 1204
 MD5 6301b8ef5a93c12e6d42b23fc4554a85 kttsd-3.4.3.ebuild 1203
-RMD160 0a034ef78126f3f1d0640f129ed05e95ba48a360 kttsd-3.4.3.ebuild 1203
-SHA256 78a76c27327b5d84a60d1a39f7d91f13e99790e608358996b582e10ca73ee3c2 kttsd-3.4.3.ebuild 1203
-MD5 64f33d01aeefc96dfa87886320b60c6a kttsd-3.5.2.ebuild 928
-RMD160 fd3b8cab609fef377ac4cf5e245e8baac3e1568a kttsd-3.5.2.ebuild 928
-SHA256 13383758ab8e9219bed48a1b4779460209e5a82bff06b99af9de72d42c51363b kttsd-3.5.2.ebuild 928
+MD5 f1f5f3c83f9ddee42e520924730c24aa kttsd-3.5.2.ebuild 1228
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENIOnAiZjviIA2XgRAgxkAKCAuxq4Oz9XObL0QAaAtjUzfong7QCgvIdO
-ZJL0iyZjsu6gedhF5xg9VBw=
-=vfKp
------END PGP SIGNATURE-----
