@@ -1,0 +1,77 @@
+Index: fbsd-6.1/etc/devd.conf
+===================================================================
+--- fbsd-6.1.orig/etc/devd.conf
++++ fbsd-6.1/etc/devd.conf
+@@ -51,7 +51,7 @@ notify 0 {
+ 	match "system"		"IFNET";
+ 	match "type"		"LINK_UP";
+ 	media-type		"ethernet";
+-	action "/etc/rc.d/dhclient start $subsystem";
++	action "/etc/init.d/net.$subsystem start"
+ };
+ 
+ #
+@@ -80,38 +80,39 @@ notify 0 {
+ # hard wired to 1.2.3.4.
+ attach 100 {
+ 	device-name "ed50";
+-	action "ifconfig $device-name inet 1.2.3.4 netmask 0xffff0000";
++	action "/etc/init.d/net.ed50 start"
+ };
+ detach 100 {
+ 	device-name "ed50";
++	action "/etc/init.d/net.ed50 stop"
+ };
+ 
+ # When a USB Bluetooth dongle appears activate it
+-attach 100 {
+-	device-name "ubt[0-9]+";
+-	action "/etc/rc.d/bluetooth start $device-name";
+-};
+-detach 100 {
+-	device-name "ubt[0-9]+";
+-	action "/etc/rc.d/bluetooth stop $device-name";
+-};
++#attach 100 {
++#	device-name "ubt[0-9]+";
++#	action "/etc/rc.d/bluetooth start $device-name";
++#};
++#detach 100 {
++#	device-name "ubt[0-9]+";
++#	action "/etc/rc.d/bluetooth stop $device-name";
++#};
+ 
+ # When a USB keyboard arrives, attach it as the console keyboard.
+ attach 100 {
+ 	device-name "ukbd0";
+-	action "/etc/rc.d/syscons setkeyboard /dev/ukbd0";
++	action "kbdcontrol -k /dev/ukbd0 < /dev/console";
+ };
+ detach 100 {
+ 	device-name "ukbd0";
+-	action "/etc/rc.d/syscons setkeyboard /dev/kbd0";
++	action "kbdcontrol -k /dev/kbd0 < /dev/console"
+ };
+ 
+ # The entry below starts moused when a mouse is plugged in. Moused
+ # stops automatically (actually it bombs :) when the device disappears.
+-attach 100 {
+-	device-name "ums[0-9]+";
+-	action "/etc/rc.d/moused start $device-name";
+-};
++#attach 100 {
++#	device-name "ums[0-9]+";
++#	action "/etc/rc.d/moused start $device-name";
++#};
+ 
+ #
+ # Rescan scsi device-names on attach, but not detach.  However, it is
+@@ -133,7 +134,7 @@ nomatch 0 {
+ notify 10 {
+ 	match "system"		"ACPI";
+ 	match "subsystem"	"ACAD";
+-	action "/etc/rc.d/power_profile $notify";
++	action "/etc/init.d/powerd restart"
+ };
+ 
+ # Notify all users before beginning emergency shutdown when we get
