@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/magma
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma/ChangeLog,v 1.15 2006/04/30 10:21:21 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma/ChangeLog,v 1.16 2006/05/01 11:54:01 corsair Exp $
+
+  01 May 2006; Markus Rothe <corsair@gentoo.org> magma-1.01.00.ebuild:
+  Stable on ppc64
 
 *magma-1.02.00 (30 Apr 2006)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpich
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/ChangeLog,v 1.24 2006/04/24 20:54:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/ChangeLog,v 1.25 2006/05/01 11:51:12 corsair Exp $
+
+  01 May 2006; Markus Rothe <corsair@gentoo.org> mpich-1.2.7_p1.ebuild:
+  Stable on ppc64
 
   24 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
   mpich-1.2.7_p1.ebuild:
