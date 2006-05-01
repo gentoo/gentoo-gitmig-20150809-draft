@@ -1,6 +1,18 @@
 # ChangeLog for sys-freebsd/freebsd-pf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.5 2006/04/20 07:04:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.6 2006/05/01 01:37:19 flameeyes Exp $
+
+  01 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-pf-6.0-r1.ebuild, +freebsd-pf-6.1_rc1.ebuild:
+  Update to 6.1_rc1, install pf.conf as documentation instead than in /etc to
+  avoid confusion with an already in-place configuration file.
+
+*freebsd-pf-6.1_rc1 (01 May 2006)
+
+  01 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +freebsd-pf-6.1_rc1.ebuild:
+  Update to 6.1_rc1, install pf.conf as documentation instead than in /etc to
+  avoid confusion with an already in-place configuration file.
 
   20 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-pf-6.0-r1.ebuild:

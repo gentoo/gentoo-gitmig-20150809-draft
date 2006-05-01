@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.0-r1.ebuild,v 1.3 2006/05/01 01:37:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.1_rc1.ebuild,v 1.1 2006/05/01 01:37:19 flameeyes Exp $
 
 inherit bsdmk freebsd
 
@@ -26,7 +26,7 @@ S="${WORKDIR}"
 
 SUBDIRS="libexec/ftp-proxy usr.sbin/authpf sbin/pfctl sbin/pflogd"
 
-PATCHES="${FILESDIR}/${PN}-${RV}-pcap.patch"
+PATCHES="${FILESDIR}/${PN}-6.0-pcap.patch"
 
 src_unpack() {
 	freebsd_src_unpack
@@ -51,7 +51,8 @@ src_install() {
 
 	cd ${WORKDIR}/etc
 	insinto /etc
-	doins pf.conf pf.os
+	doins pf.os
+	newdoc pf.conf pf.conf.example
 
 	newinitd "${FILESDIR}/pf.initd" pf
 	newconfd "${FILESDIR}/pf.confd" pf
