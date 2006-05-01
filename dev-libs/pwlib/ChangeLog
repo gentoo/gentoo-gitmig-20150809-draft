@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.94 2006/03/20 23:27:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.95 2006/05/01 17:48:11 halcy0n Exp $
+
+  01 May 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/pwlib-1.8.7-gcc41.patch, pwlib-1.8.7.ebuild:
+  Add patch to fix compilation with gcc-4.1
 
 *pwlib-1.10.0 (20 Mar 2006)
 

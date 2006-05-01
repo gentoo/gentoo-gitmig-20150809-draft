@@ -1,0 +1,38 @@
+diff -ur pwlib-1.8.7-orig/include/ptclib/vxml.h pwlib-1.8.7/include/ptclib/vxml.h
+--- pwlib-1.8.7-orig/include/ptclib/vxml.h	2006-05-01 13:16:53.000000000 -0400
++++ pwlib-1.8.7/include/ptclib/vxml.h	2006-05-01 13:20:30.000000000 -0400
+@@ -366,7 +366,7 @@
+ 
+     virtual PString GetVar(const PString & str) const;
+     virtual void SetVar(const PString & ostr, const PString & val);
+-    virtual PString PVXMLSession::EvaluateExpr(const PString & oexpr);
++    virtual PString EvaluateExpr(const PString & oexpr);
+ 
+     virtual BOOL RetreiveResource(const PURL & url, PString & contentType, PFilePath & fn, BOOL useCache = TRUE);
+ 
+diff -ur pwlib-1.8.7-orig/include/ptlib/pstring.h pwlib-1.8.7/include/ptlib/pstring.h
+--- pwlib-1.8.7-orig/include/ptlib/pstring.h	2006-05-01 13:16:53.000000000 -0400
++++ pwlib-1.8.7/include/ptlib/pstring.h	2006-05-01 13:17:25.000000000 -0400
+@@ -3182,5 +3182,10 @@
+     int lastError;
+ };
+ 
++PString psprintf(
++      const char * cfmt,   /// C string for output format.
++      ...                  /// Extra parameters for #sprintf()# call.
++    );
++
+ 
+ // End Of File ///////////////////////////////////////////////////////////////
+diff -ur pwlib-1.8.7-orig/src/ptlib/unix/svcproc.cxx pwlib-1.8.7/src/ptlib/unix/svcproc.cxx
+--- pwlib-1.8.7-orig/src/ptlib/unix/svcproc.cxx	2006-05-01 13:16:53.000000000 -0400
++++ pwlib-1.8.7/src/ptlib/unix/svcproc.cxx	2006-05-01 13:26:51.000000000 -0400
+@@ -279,6 +279,8 @@
+ #include <sys/resource.h>
+ #endif
+ 
++extern void PXSignalHandler(int sig);
++
+ #define new PNEW
+ 
+ 
