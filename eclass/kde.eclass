@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.150 2006/04/28 21:53:10 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.151 2006/05/01 15:38:03 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -217,7 +217,8 @@ kde_src_compile() {
 				if [[ "${ARCH}" = "hppa" ]]
 				then
 					einfo Fixating Makefiles
-					find ${S} -name Makefile | while read a; do sed -e s/-O2/-ffunction-sections/ -i "${a}" ; done
+					find ${S} -name Makefile -print0 | xargs -0 sed -i -e \
+						's:-O2:-ffunction-sections:g'
 				fi
 				;;
 			make)
