@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/static-dev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/static-dev/ChangeLog,v 1.2 2006/04/15 08:02:21 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/static-dev/ChangeLog,v 1.3 2006/05/01 14:11:12 josejx Exp $
+
+  01 May 2006; Joseph Jezak <josejx@gentoo.org> static-dev-0.1.ebuild:
+  Marked ppc stable for bug #107875.
 
   15 Apr 2006; John Mylchreest <johnm@gentoo.org> static-dev-0.1.ebuild:
   Exit if trying to install over udev or devfs
