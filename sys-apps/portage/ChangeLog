@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.130 2006/05/01 08:48:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.131 2006/05/01 10:16:35 zmedico Exp $
+
+*portage-2.1_pre10-r2 (01 May 2006)
+
+  01 May 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre10-r2.ebuild,
+  +files/2.1/pre10/1020_r3293_bug_131820_noauto.patch:
+  Revbump to fix a regression from the patch for bug #131820.
 
 *portage-2.1_pre10-r1 (01 May 2006)
 
