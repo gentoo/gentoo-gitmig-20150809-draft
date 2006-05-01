@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/flatzebra
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/ChangeLog,v 1.7 2005/04/21 20:58:53 blubb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/ChangeLog,v 1.8 2006/05/01 00:46:31 mr_bones_ Exp $
+
+  01 May 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/flatzebra-0.1.1-link-more-libs.patch, flatzebra-0.1.1.ebuild:
+  fix from TGL via bug #131839 for more accurate specification of library deps.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> flatzebra-0.1.1.ebuild:
   stable on amd64

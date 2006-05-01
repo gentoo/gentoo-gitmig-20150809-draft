@@ -1,0 +1,10 @@
+--- configure.ac.orig	2006-04-30 16:36:06.000000000 +0200
++++ configure.ac	2006-04-30 16:36:18.000000000 +0200
+@@ -71,6 +71,7 @@
+ # We also need the SDL_image and SDL_mixer libraries:
+ AM_TRY_LINK_SDL_IMAGE
+ TRY_LINK_SDL_MIXER
++SDL_LIBS="$SDL_LIBS -lSDL_image -lSDL_mixer"
+ 
+ # Back to C++ mode after SDL tests.
+ AC_LANG_CPLUSPLUS
