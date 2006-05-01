@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32b-r7.ebuild,v 1.2 2006/03/31 21:06:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32b-r7.ebuild,v 1.3 2006/05/01 16:01:31 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -33,8 +33,8 @@ RDEPEND="sys-libs/glibc
 	dedicated? ( app-misc/screen )
 	amd64? ( app-emulation/emul-linux-x86-baselibs )
 	opengl? ( ${UIDEPEND} )
-	games-fps/quake3-data
-	teamarena? ( games-fps/quake3-teamarena )
+	cdinstall? ( games-fps/quake3-data )
+	cdinstall? ( teamarena? ( games-fps/quake3-teamarena ) )
 	!dedicated? ( !opengl? ( ${UIDEPEND} ) )"
 
 S=${WORKDIR}
