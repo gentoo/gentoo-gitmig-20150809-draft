@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9bceee650208f6e51bc8c9450965f8ef ChangeLog 1044
+MD5 7b7867444631ffed8664877834709f34 ChangeLog 1125
 MD5 5e2008caf489cd4c1f51df93a29132cd files/digest-liblo-0.22 62
 MD5 ce71978ed8bc38161c0099d2be27c206 files/digest-liblo-0.23 62
 MD5 2162aa221abfd4fc2fe9379863abee42 liblo-0.22.ebuild 948
-MD5 d35aea8c03eb8a469828a1b1d62b7428 liblo-0.23.ebuild 950
+MD5 acd94b40cb208cc35cc97a19131d01eb liblo-0.23.ebuild 954
 MD5 5bcd44d5f8f335699c5d29726d9afa3f metadata.xml 359
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEK3HqFdQwWVoAgN4RAk5BAJwKEOQ2Dc+WI8rwDA7qT2r1QajppwCff45q
-+XbqeouuVV9T7ZQc0DsHYSM=
-=ZX/I
------END PGP SIGNATURE-----
