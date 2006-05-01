@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.10.ebuild,v 1.1 2005/09/30 23:50:19 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.2.0.ebuild,v 1.1 2006/05/01 13:45:30 carlo Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/python-ldap/${P}.tar.gz
 HOMEPAGE="http://python-ldap.sourceforge.net/"
 
 DEPEND="virtual/python
-	>=net-nds/openldap-2.0.11
+	>=net-nds/openldap-2.2
 	sasl? ( dev-libs/cyrus-sasl )"
 
 SLOT="0"
