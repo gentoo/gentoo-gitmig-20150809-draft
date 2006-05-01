@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5283 2006/04/30 19:37:15 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5284 2006/05/01 00:25:15 halcy0n Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,7 +21,12 @@
 ##   End example
 ##
 
-# Henrik Brix Andersen <brix@gentoo.org (30 Apr 2006)
+# Mark Loeser <halcy0n@gentoo.org> (30 Apr 2006)
+# Masked pending removal - merged into xffm a while ago, so this is unmaintained
+# bug #127166
+net-misc/xfsamba
+
+# Henrik Brix Andersen <brix@gentoo.org> (30 Apr 2006)
 # Masked pending removal - please use the in-kernel version of the
 # ibm-acpi module instead.
 app-laptop/ibm-acpi
