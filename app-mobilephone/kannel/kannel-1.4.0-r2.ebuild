@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.0-r1.ebuild,v 1.1 2006/03/25 09:29:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.0-r2.ebuild,v 1.1 2006/05/01 12:18:59 mrness Exp $
 inherit eutils
 
 DESCRIPTION="Powerful SMS and WAP gateway"

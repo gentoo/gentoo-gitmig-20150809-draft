@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/kannel
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/ChangeLog,v 1.5 2006/03/25 09:29:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/ChangeLog,v 1.6 2006/05/01 12:18:59 mrness Exp $
+
+*kannel-1.4.0-r2 (01 May 2006)
+
+  01 May 2006; Alin Nastac <mrness@gentoo.org>
+  files/kannel-1.4.0-custom-wap-ports.patch, -kannel-1.4.0-r1.ebuild,
+  +kannel-1.4.0-r2.ebuild:
+  Fix custom-wap-ports patch; the old version generates panic messages when
+  user don't have a "wapbox" group in its configuration file (#126331 comment #6).
 
 *kannel-1.4.0-r1 (25 Mar 2006)
 
