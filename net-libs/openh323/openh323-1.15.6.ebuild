@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.15.6.ebuild,v 1.1 2005/09/12 20:06:58 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.15.6.ebuild,v 1.2 2006/05/01 18:06:17 halcy0n Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -28,7 +28,8 @@ src_unpack() {
 
 	cd ${S}
 	# Makefile is currently broken with NOTRACE=1, fix that
-	epatch ${FILESDIR}/${PN}-1.15.2-notrace.diff
+	epatch "${FILESDIR}"/${PN}-1.15.2-notrace.diff
+	epatch "${FILESDIR}"/${P}-gcc4.diff
 }
 
 src_compile() {

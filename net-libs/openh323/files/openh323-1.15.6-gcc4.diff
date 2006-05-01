@@ -1,0 +1,33 @@
+--- openh323-1.15.6/include/ixjlid.h	2004-08-22 06:21:06.000000000 +0200
++++ openh323-1.15.6-gcc4/include/ixjlid.h	2006-04-11 20:48:51.000000000 +0200
+@@ -836,7 +836,7 @@
+     };
+ 
+     static void SignalHandler(int sig);
+-    ExceptionInfo * OpalIxJDevice::GetException();
++    ExceptionInfo * GetException();
+     int GetOSHandle() { return os_handle; }
+ 
+   protected:
+--- openh323-1.15.6/src/vic/p64.cxx	2003-03-14 08:25:55.000000000 +0100
++++ openh323-1.15.6-gcc4/src/vic/p64.cxx	2006-04-11 20:49:41.000000000 +0200
+@@ -1125,7 +1125,7 @@
+ 	 * If input buffer not aligned, prime bit-buffer
+ 	 * with 8 bits; otherwise, prime it with a 16.
+ 	 */
+-	if ((int)bp & 1) {
++	if ((long)bp & 1) {
+ 		bs_ = (u_short*)(bp + 1);
+ 		bb_ = *bp;
+ 		nbb_ = 8 - sbit;
+--- openh323-1.15.6/plugins/audio/Speex/speexcodec.cxx	2006-04-11 21:32:34.000000000 +0200
++++ openh323-1.15.6-gcc4/plugins/audio/Speex/speexcodec.cxx	2006-04-11 20:48:51.000000000 +0200
+@@ -112,7 +112,7 @@
+ 
+ static void * create_encoder(const struct PluginCodec_Definition * codec)
+ {
+-  int mode = (int)(codec->userData);
++  int mode = (long)(codec->userData);
+ 
+   struct PluginSpeexContext * context = new PluginSpeexContext;
+   context->bits = new SpeexBits;
