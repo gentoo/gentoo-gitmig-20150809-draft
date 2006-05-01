@@ -1,34 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ab94035bc445737800161d1eadf8f146 ChangeLog 1187
-RMD160 d5b3f6724ccdad4103860cf0396df9911771fade ChangeLog 1187
-SHA256 f7a1291b19c72dfb7cb1afbe599f17df1a64c0c32662ad504ea7ec88ce3ea34f ChangeLog 1187
+MD5 b626820233ab07883b28ed66e54e641b ChangeLog 1334
 MD5 5643b69002aaa0bd00051022b1b087aa files/digest-ice-3.0.0-r1 62
-RMD160 a12649cf8dd3ad62075ff90312cac6c8331b26b1 files/digest-ice-3.0.0-r1 62
-SHA256 3b282fe7b7c7eacbe7e08f6c34f4f967e780cbb058274b89377ce93217669aa2 files/digest-ice-3.0.0-r1 62
 MD5 76a7d7075d2cc7073fbf13ff1d80f334 files/digest-ice-3.0.1 62
-RMD160 7b9317cacb0c539621dd25bcfe8b4aeb60b55f19 files/digest-ice-3.0.1 62
-SHA256 0941402cf1886bb1955f0f2671c856a428f5a2186fbbd1aa6ab62d4f00b95cef files/digest-ice-3.0.1 62
 MD5 a0be36f640bd61300ef8d1a538ed0145 files/ice-3.0.0-makefile.patch 1666
-RMD160 a6dcb913cd285eba5277db6e5b35e66074d3d0b9 files/ice-3.0.0-makefile.patch 1666
-SHA256 18282bdda0b3dee659bc478b34f11dc23642b4b811a7b826789a599b71b8357f files/ice-3.0.0-makefile.patch 1666
 MD5 175aea2fc46c6c8180771013e363b11e files/ice-3.0.1-makefile.patch 1436
-RMD160 6957ee3d88b7208b8d23da2c2d00e6643c9ab233 files/ice-3.0.1-makefile.patch 1436
-SHA256 bc1a2251ddefd09ac4b4d5f543a613b76ae1ece79d046811a3da122310d8017a files/ice-3.0.1-makefile.patch 1436
 MD5 05ce092931d02151fa284cd39238bcb5 ice-3.0.0-r1.ebuild 1476
-RMD160 2e0258d3a5c724ddf90971cd683e9053ed8193f4 ice-3.0.0-r1.ebuild 1476
-SHA256 b12756c1f4c67ee2602d9b4c3781a82148d64d46a7d5ebf3e7c710a7caa0e84c ice-3.0.0-r1.ebuild 1476
-MD5 d7fd10ab37c7b2641d2db55c0408cab8 ice-3.0.1.ebuild 1473
-RMD160 c1b8a76f193170eef7daab18914522b4714bf5d8 ice-3.0.1.ebuild 1473
-SHA256 cf2fc4d9a0bc82807376f805198d1a48023860a0c0e841160752b7f3bc4110f8 ice-3.0.1.ebuild 1473
+MD5 1ea2a9cdba6ae5afaab08c211388c0dd ice-3.0.1.ebuild 1474
 MD5 3ec88d1ac2be997dc111b3eaa1da573e metadata.xml 367
-RMD160 b6a6be891c7d6a93019b478754aaa304cbd03165 metadata.xml 367
-SHA256 3de23948faba6aa2f0ba1a51921ecf0258c7c3b8992998668c18957e9698893e metadata.xml 367
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEA2KYI1lqEGTUzyQRAk3oAKCcDen/G9FuIeoLplnsSLrC9scslQCglBjQ
-ymN62FqqyY/Szt7PiUnesAE=
-=2IPl
+iD8DBQFEVVZRFdQwWVoAgN4RAuzjAJsHgPOTHJ7ezyAdTCbqhdpki/qiowCg+3UI
+/ykL0UGaFCabUCIJh5IZ18U=
+=54cE
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/ice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ChangeLog,v 1.5 2006/02/16 19:06:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ChangeLog,v 1.6 2006/05/01 00:28:18 chriswhite Exp $
+
+  01 May 2006; Chris White <chriswhite@gentoo.org> ice-3.0.1.ebuild:
+  Slotted depend for bug #131554.  Thanks to Tiziano Muller for reporting.
 
   25 Jan 2006; Caleb Tennis <caleb@gentoo.org>
   +files/ice-3.0.1-makefile.patch, +ice-3.0.1.ebuild:
