@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/crystal
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.21 2006/03/25 23:58:06 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.22 2006/05/01 15:59:56 voxus Exp $
+
+*crystal-1.0.0 (01 May 2006)
+
+  01 May 2006; Konstantin Arkhipov <voxus@gentoo.org> +crystal-1.0.0.ebuild:
+  Version bump, closing bug #130338.
 
 *crystal-0.9.9 (26 Mar 2006)
 
