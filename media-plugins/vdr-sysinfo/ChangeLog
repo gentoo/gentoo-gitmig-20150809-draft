@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-sysinfo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sysinfo/ChangeLog,v 1.2 2006/03/31 17:48:53 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sysinfo/ChangeLog,v 1.3 2006/05/01 12:32:07 hd_brummy Exp $
+
+*vdr-sysinfo-0.1.0a (01 May 2006)
+
+  01 May 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-sysinfo-0.1.0a.ebuild:
+  version bump
 
   31 Mar 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-sysinfo-0.0.4a.ebuild:
