@@ -1,15 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1e5f8d348c760ccffc92cccb10a18744 ChangeLog 2027
-MD5 8562d753d236eb755256a67623db0e81 files/digest-php-java-bridge-2.0.8 74
+AUX zend_backtrace_api_change.diff 572 RMD160 850363839e8f172ee820e66d066473b7beea8a29 SHA1 1ddb37b646261174b26f331d9807bfe3c245f8e0 SHA256 3e3ec10232ab23c001067a95b41eeb9ae6bfd57ac89c69473b8cea7e9cb6fa12 size 572
 MD5 577f0cc2a32d6c1b81c06997c4f55aff files/zend_backtrace_api_change.diff 572
-MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
+RMD160 850363839e8f172ee820e66d066473b7beea8a29 files/zend_backtrace_api_change.diff 572
+SHA256 3e3ec10232ab23c001067a95b41eeb9ae6bfd57ac89c69473b8cea7e9cb6fa12 files/zend_backtrace_api_change.diff 572
+DIST php-java-bridge_2.0.8.tar.bz2 250144 size 250144
+EBUILD php-java-bridge-2.0.8.ebuild 1478 RMD160 8397eceda8b02840e5c73d44a510c201aae9ec18 SHA1 b7ce7297ceb21265454dfd0bac22eefe21158c41 SHA256 f8693d1fc760ca432607b110f1a47ea391d667cbf0f5d03a447186edd8acafd9 size 1478
 MD5 1aaca739ff707d6844ca06edd0ba5cd1 php-java-bridge-2.0.8.ebuild 1478
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD05+qH6mNYUtVdIARAqauAJ4rk7TUKnt0PRUns/PTBaKSK03jJACfdUQZ
-Tgypk8AaB+Jo3N523hm/8cg=
-=zY/6
------END PGP SIGNATURE-----
+RMD160 8397eceda8b02840e5c73d44a510c201aae9ec18 php-java-bridge-2.0.8.ebuild 1478
+SHA256 f8693d1fc760ca432607b110f1a47ea391d667cbf0f5d03a447186edd8acafd9 php-java-bridge-2.0.8.ebuild 1478
+MISC ChangeLog 2027 RMD160 0d3f16a5b9c6df77628ef98ea11462f70c0a8fa3 SHA1 783b6f9a98f59a013edb71cf536a68953a759bf9 SHA256 1162020911ebf8c0a837e87ff9647577afa595dd8fdfddbeecef698e41b82868 size 2027
+MD5 1e5f8d348c760ccffc92cccb10a18744 ChangeLog 2027
+RMD160 0d3f16a5b9c6df77628ef98ea11462f70c0a8fa3 ChangeLog 2027
+SHA256 1162020911ebf8c0a837e87ff9647577afa595dd8fdfddbeecef698e41b82868 ChangeLog 2027
+MISC metadata.xml 157 RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a SHA1 ddaa23cc35eb917bf8962b652442bebb1ce0f440 SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1 size 157
+MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
+RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a metadata.xml 157
+SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1 metadata.xml 157
+MD5 8562d753d236eb755256a67623db0e81 files/digest-php-java-bridge-2.0.8 74
+RMD160 b2f09dc78b6cc10cd7c5812e92ffe50915242ecb files/digest-php-java-bridge-2.0.8 74
+SHA256 367be46f9fd8ac82ac379f5c6db013350bd137c2ebc815b6a3302b04a53d08d9 files/digest-php-java-bridge-2.0.8 74

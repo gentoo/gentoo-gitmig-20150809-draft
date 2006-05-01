@@ -1,22 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 511ba3d43da9ba839d997a02101e8b7f ChangeLog 422
-RMD160 55eb5630feb9344227d7f26c0ea89df45dd9c82e ChangeLog 422
-SHA256 f4f749cd60377a1cf1e8ee5daaa0f3c10f3a4ec3ffbce5ba0b4cd5c3639a0620 ChangeLog 422
+DIST EventLogDatabaseTiein-1.0.tgz 2847 RMD160 656d9fe1d9d8547b0885b5ee0b04ab02d317c1af SHA256 dab01a5261aba19d2d82495e3334a27aae0a17c6adaef0f68e89e6b819286ab3 size 2847
+EBUILD ezc-EventLogDatabaseTiein-1.0.ebuild 471 RMD160 f557be9b700efa63950a6f9e8ccb75ac76f4518d SHA1 654e2a28c0f3987db6c90304cf2b1a65cf48cc66 SHA256 9aa0b43e871b097e9fa725c226141720bfee0f2a7d2158eb1870744ac3f29268 size 471
 MD5 84f6f5a385642b583e3dfeee8dd1cfe9 ezc-EventLogDatabaseTiein-1.0.ebuild 471
 RMD160 f557be9b700efa63950a6f9e8ccb75ac76f4518d ezc-EventLogDatabaseTiein-1.0.ebuild 471
 SHA256 9aa0b43e871b097e9fa725c226141720bfee0f2a7d2158eb1870744ac3f29268 ezc-EventLogDatabaseTiein-1.0.ebuild 471
-MD5 700a4a19d9d8d32c10a651a3ac47a9db files/digest-ezc-EventLogDatabaseTiein-1.0 262
-RMD160 ce577720c9c246985006d6fe6b74fd6d95caf819 files/digest-ezc-EventLogDatabaseTiein-1.0 262
-SHA256 68eb1db6d3f93c3c5e00a235da2e6cf9a8d4a3a65c6f9acc22a0018e46eecbdf files/digest-ezc-EventLogDatabaseTiein-1.0 262
+MISC ChangeLog 422 RMD160 55eb5630feb9344227d7f26c0ea89df45dd9c82e SHA1 ec3972fe1935474986e8134802c6099c1cb7259c SHA256 f4f749cd60377a1cf1e8ee5daaa0f3c10f3a4ec3ffbce5ba0b4cd5c3639a0620 size 422
+MD5 511ba3d43da9ba839d997a02101e8b7f ChangeLog 422
+RMD160 55eb5630feb9344227d7f26c0ea89df45dd9c82e ChangeLog 422
+SHA256 f4f749cd60377a1cf1e8ee5daaa0f3c10f3a4ec3ffbce5ba0b4cd5c3639a0620 ChangeLog 422
+MISC metadata.xml 156 RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 SHA1 1f452f476317b4634c684eabfd8840d06d35b414 SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba size 156
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
 SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD3jA0aGfFFLhbXWkRAtC5AJ9+pmkEwYDlL6ZbiaJF2/v7n/spmwCeOAhI
-eSpYQRctDu7V1vS0aLUKaQc=
-=qBGN
------END PGP SIGNATURE-----
+MD5 700a4a19d9d8d32c10a651a3ac47a9db files/digest-ezc-EventLogDatabaseTiein-1.0 262
+RMD160 ce577720c9c246985006d6fe6b74fd6d95caf819 files/digest-ezc-EventLogDatabaseTiein-1.0 262
+SHA256 68eb1db6d3f93c3c5e00a235da2e6cf9a8d4a3a65c6f9acc22a0018e46eecbdf files/digest-ezc-EventLogDatabaseTiein-1.0 262
