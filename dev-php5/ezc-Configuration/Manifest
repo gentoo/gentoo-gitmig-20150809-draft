@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST Configuration-1.0.1.tgz 30025 RMD160 009113249e86c2fdefe97d90abb40a922e3eb01e SHA256 2c158bad9e80702eb6ae3411f9e113504dab53be6e63b40403175b82813e051c size 30025
 EBUILD ezc-Configuration-1.0.1.ebuild 385 RMD160 279562d28ff14ae52090dc2ead6720fcd6b836e4 SHA1 484b9b1f9661c95c7ba1e4f228e308db9f0d51ba SHA256 f3ef1416d0519edf10944876b61b2ed91b65f335c1a098cf9846ee624db5d9b2 size 385
 MD5 8de0cde7fe1acafe226182eb8f30a97d ezc-Configuration-1.0.1.ebuild 385
@@ -14,3 +17,10 @@ SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata
 MD5 bbd7506301c32fc013e61c52f4767025 files/digest-ezc-Configuration-1.0.1 247
 RMD160 bab157907dc7ef48061c54e1e75e5787c760bfb5 files/digest-ezc-Configuration-1.0.1 247
 SHA256 d7685324396434f60d3bfa2b36519ec0e1acddce2075c0bbfae7bcbb635b1a0f files/digest-ezc-Configuration-1.0.1 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEViv+aGfFFLhbXWkRAjhTAJ0ah9da62huKH/xfVYIo2ABtcd6wwCdHmjj
+wBlMi947GCRtJJ8ndn/jX2M=
+=VQNz
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 EBUILD ezc-eZcomponents-1.0.1.ebuild 988 RMD160 e905fb247fda10e85889960e79bc4a671af3829f SHA1 1e7bcf3dfbc5c6a1c98b8ea3d18c920902497f6f SHA256 8e6fefad57a74a6ea40c45493f77e9075045ae804ab41f77d61c0061f3af975f size 988
 MD5 350410aae6d29881ada09ddd2f3f59cb ezc-eZcomponents-1.0.1.ebuild 988
 RMD160 e905fb247fda10e85889960e79bc4a671af3829f ezc-eZcomponents-1.0.1.ebuild 988
@@ -13,3 +16,10 @@ SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-ezc-eZcomponents-1.0.1 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-ezc-eZcomponents-1.0.1 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-ezc-eZcomponents-1.0.1 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEViv+aGfFFLhbXWkRAi8tAJ9chovKSt4I3rAiZTN+KAvkmj5XWgCeILlq
+bDGqtWTqoCMxPjYrrpyVrBg=
+=jcdn
+-----END PGP SIGNATURE-----

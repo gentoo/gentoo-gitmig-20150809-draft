@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 EBUILD propel-1.1.1.ebuild 449 RMD160 ac1016d2f3a6d93689020f335aebcad2dbbbd516 SHA1 59fdfe3121460b74778ebfdf02968baf95aba0c1 SHA256 03f3800b522fd1498c995818375589b0c8a2a0e3c7f9873f38972455cc5d2780 size 449
 MD5 e9fcb00c9917497f2f24ab5089dbbcfd propel-1.1.1.ebuild 449
 RMD160 ac1016d2f3a6d93689020f335aebcad2dbbbd516 propel-1.1.1.ebuild 449
@@ -13,3 +16,10 @@ SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-propel-1.1.1 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-propel-1.1.1 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-propel-1.1.1 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEViv+aGfFFLhbXWkRAo+lAJ93s57QA2lW5BE1FdmEc3uzijpJrwCfcE6j
+3Nzn/8wExwZ5eUacC/HoSo8=
+=oBur
+-----END PGP SIGNATURE-----
