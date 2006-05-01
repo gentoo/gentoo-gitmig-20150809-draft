@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.14.ebuild,v 1.3 2006/05/01 01:01:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.14.ebuild,v 1.4 2006/05/01 16:05:43 tester Exp $
 
 inherit autotools eutils
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}/${P}-as-needed.patch"
+	epatch "${FILESDIR}/${P}-multiline-sed.patch"
 	AT_M4DIR="${S}/macros" eautoreconf
 }
 
