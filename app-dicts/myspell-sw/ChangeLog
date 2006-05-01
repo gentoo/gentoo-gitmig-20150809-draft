@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/myspell-sw
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-sw/ChangeLog,v 1.1 2006/05/01 16:17:51 kevquinn Exp $
+
+*myspell-sw-20060316 (01 May 2006)
+
+  01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
+  +myspell-sw-20060316.ebuild:
+  New ebuild for Kiswahili myspell dictionary
+
