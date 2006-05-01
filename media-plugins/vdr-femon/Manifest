@@ -1,23 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 13e2f53d95924de2525ec19f1c4bcb10 ChangeLog 1207
+MD5 50cd884070954218cd047ebd4519667c ChangeLog 1337
 MD5 a56a5dbae3107fd3c80e79b285f37b0e files/digest-vdr-femon-0.9.1 63
 MD5 f4720cc38be3acde8a7f21ec71ec3420 files/digest-vdr-femon-0.9.4 63
 MD5 81358cc350f1be8daa219ce7d345e2f3 files/digest-vdr-femon-0.9.5 63
 MD5 3ae489c4755bbf6e2ab1aaee24c2d331 files/digest-vdr-femon-0.9.6 235
 MD5 037f1f79c51ed93392be9e75ec818751 files/digest-vdr-femon-0.9.8 63
+MD5 9df3fa7137e12e17c00f6db4979eb16c files/digest-vdr-femon-1.0.0 63
 MD5 55ae4af79ffa416ab4b061128bf4aae3 metadata.xml 457
 MD5 fe6b5364d530fbb5fc7282d6fdc32640 vdr-femon-0.9.1.ebuild 544
 MD5 33fc8d487fce789387ae031b76833d82 vdr-femon-0.9.4.ebuild 544
 MD5 9bd701f17393bc952c0493b8ade100e3 vdr-femon-0.9.5.ebuild 543
 MD5 27f3af1c244710a32d1050ac8e13d63a vdr-femon-0.9.6.ebuild 544
 MD5 4a5866f9d8d89112e3fe67b63a0a2706 vdr-femon-0.9.8.ebuild 549
+MD5 af17a8b4215db3d0d271c2187f3f9848 vdr-femon-1.0.0.ebuild 547
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 Comment: no further Information
 
-iD8DBQFEE3kvdn07HTTCgIoRAulYAJ9H/3kjyzQwYBHjJUnFPVoa6V5zxwCgpH0G
-oPwlbO9Fwycgm6wZ6Ra7F8U=
-=faQU
+iD8DBQFEVgoidn07HTTCgIoRAnNiAKCEeP9zIdkgV5OV7zEL56XkQfSNBwCeJ3kl
+epq59ohHyY72m0kT5k4MJQg=
+=qraS
 -----END PGP SIGNATURE-----
