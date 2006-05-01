@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.7-r2.ebuild,v 1.11 2006/01/04 01:02:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.7-r2.ebuild,v 1.12 2006/05/01 10:11:37 steev Exp $
 
 inherit eutils python linux-info versionator flag-o-matic
 
@@ -103,7 +103,7 @@ src_install() {
 	# keep the policy setup intact
 	keepdir /usr/share/hal/fdi/{95userpolicy,50user,40oem,30osvendor,10generic}
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 
 }
 
