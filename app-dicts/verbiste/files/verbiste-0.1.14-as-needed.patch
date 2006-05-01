@@ -1,0 +1,11 @@
+--- src/verbiste/Makefile.am.orig	2006-04-30 22:49:25.000000000 +0200
++++ src/verbiste/Makefile.am	2006-04-30 22:49:37.000000000 +0200
+@@ -19,7 +19,7 @@
+ 	-DLIBDATADIR=\"$(libdatadir)\" \
+ 	$(LIBXML2_CFLAGS)
+ 
+-libverbiste_0_1_la_LIBS = \
++libverbiste_0_1_la_LIBADD = \
+ 	$(LIBXML2_LIBS)
+ 
+ pkgincludedir = $(includedir)/$(PACKAGE)-$(API)/$(PACKAGE)

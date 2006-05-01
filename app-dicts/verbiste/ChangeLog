@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/verbiste
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.15 2006/02/25 18:22:20 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.16 2006/05/01 01:01:29 tester Exp $
+
+  01 May 2006; Olivier Crête <tester@gentoo.org>
+  +files/verbiste-0.1.14-as-needed.patch, verbiste-0.1.14.ebuild:
+  Added patch to fix --as-needed compilation, bug #131850
 
   25 Feb 2006; Olivier Crête <tester@gentoo.org> verbiste-0.1.14.ebuild:
   Stable on amd64
