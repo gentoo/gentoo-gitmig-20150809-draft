@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/File-DesktopEntry
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DesktopEntry/ChangeLog,v 1.1 2006/05/01 20:32:00 mcummings Exp $
+
+*File-DesktopEntry-0.02 (01 May 2006)
+
+  01 May 2006; <mcumming@gentoo.org> +metadata.xml,
+  +File-DesktopEntry-0.02.ebuild:
+  Bug 131128, ebuild submitted by Filip Dudek in support of zim in bug 112957
+
