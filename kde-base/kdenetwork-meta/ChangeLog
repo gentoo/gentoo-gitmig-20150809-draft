@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdenetwork-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.42 2006/04/07 12:00:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.43 2006/05/01 15:52:36 flameeyes Exp $
+
+  01 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdenetwork-meta-3.5.2.ebuild:
+  Add a || dependency between kde-base/kopete and net-im/kopete. Thanks to
+  Hanno Boeck in bug #124557.
 
   07 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   kdenetwork-meta-3.5.2.ebuild:

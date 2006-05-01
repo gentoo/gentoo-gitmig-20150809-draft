@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/kdenetwork-meta-3.5.2.ebuild,v 1.3 2006/04/07 12:00:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/kdenetwork-meta-3.5.2.ebuild,v 1.4 2006/05/01 15:52:36 flameeyes Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -17,7 +17,7 @@ RDEPEND="$(deprange $PV $MAXKDEVER kde-base/dcoprss)
 	$(deprange $PV $MAXKDEVER kde-base/kdict)
 	$(deprange $PV $MAXKDEVER kde-base/kget)
 	$(deprange $PV $MAXKDEVER kde-base/knewsticker)
-	$(deprange $PV $MAXKDEVER kde-base/kopete)
+	|| ( $(deprange $PV $MAXKDEVER kde-base/kopete) net-im/kopete )
 	$(deprange $PV $MAXKDEVER kde-base/kpf)
 	$(deprange $PV $MAXKDEVER kde-base/kppp)
 	$(deprange $PV $MAXKDEVER kde-base/krdc)
