@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ketchup
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ChangeLog,v 1.10 2006/04/03 13:58:03 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ChangeLog,v 1.11 2006/05/01 21:03:07 morfic Exp $
+
+*ketchup-0.9.8 (01 May 2006)
+
+  01 May 2006; Daniel Goller <morfic@gentoo.org> +ketchup-0.9.8.ebuild:
+  Bump to 0.9.8
 
   03 Apr 2006; Daniel Drake <dsd@gentoo.org> -ketchup-0.9.6.ebuild,
   ketchup-0.9.6-r1.ebuild:
