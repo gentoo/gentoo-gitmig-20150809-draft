@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.1_rc1.ebuild,v 1.1 2006/04/30 20:17:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.1_rc1.ebuild,v 1.2 2006/05/01 03:10:10 flameeyes Exp $
 
 inherit bsdmk freebsd
 
@@ -39,6 +39,10 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-6.0-werror.patch"
 
 	epatch "${FILESDIR}/SA-06-14-fpu.patch"
+
+	# Disable SSP for the kernel
+	grep -Zlr -- -ffreestanding "${S}" | xargs -0 sed -i -e \
+		's:-ffreestanding:-ffreestanding -fno-stack-protector -fno-stack-protector-all:g'
 }
 
 src_compile() {

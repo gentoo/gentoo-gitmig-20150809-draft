@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.8 2006/04/30 20:17:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.9 2006/05/01 03:10:10 flameeyes Exp $
+
+  01 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-sources-6.0-r4.ebuild, freebsd-sources-6.1_rc1.ebuild:
+  Disable SSP for kernel, of course.
 
 *freebsd-sources-6.1_rc1 (30 Apr 2006)
 
