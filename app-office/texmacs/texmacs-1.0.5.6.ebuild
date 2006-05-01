@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.5.6.ebuild,v 1.3 2006/01/25 11:52:23 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.5.6.ebuild,v 1.4 2006/05/01 11:07:23 ehmsen Exp $
 
 # although flag-o-matic functions in portage, we should inherit it
 inherit flag-o-matic
@@ -23,7 +23,6 @@ RDEPEND="virtual/tetex
 	>=dev-util/guile-1.4
 	>=sys-apps/sed-4
 	media-libs/freetype
-	sys-devel/libtool
 	|| ( ( x11-libs/libX11
 		   x11-libs/libICE )
 		virtual/x11

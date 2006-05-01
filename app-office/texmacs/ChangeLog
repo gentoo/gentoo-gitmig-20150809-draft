@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.42 2006/04/20 18:55:12 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.43 2006/05/01 11:07:23 ehmsen Exp $
+
+  01 May 2006; Martin Ehmsen <ehmsen@gentoo.org> texmacs-1.0.4-r1.ebuild,
+  texmacs-1.0.5.6.ebuild, texmacs-1.0.6-r1.ebuild:
+  Removed libtool from RDEPEND, found by QA script.
 
 *texmacs-1.0.6-r1 (20 Apr 2006)
 
