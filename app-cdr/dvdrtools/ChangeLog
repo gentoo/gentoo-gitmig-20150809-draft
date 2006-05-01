@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/dvdrtools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/ChangeLog,v 1.27 2006/04/22 15:43:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/ChangeLog,v 1.28 2006/05/01 00:03:28 josejx Exp $
+
+  01 May 2006; Joseph Jezak <josejx@gentoo.org> dvdrtools-0.2.1.ebuild:
+  Marked ppc stable for bug #123499.
 
   22 Apr 2006; Markus Rothe <corsair@gentoo.org> dvdrtools-0.2.1.ebuild:
   Stable on ppc64; bug #123499
