@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.57 2006/05/01 14:03:39 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.58 2006/05/01 16:46:38 flameeyes Exp $
+
+  01 May 2006; Diego Pettenò <flameeyes@gentoo.org> kmail-3.5.2-r2.ebuild:
+  Build indexlib as convenience library and don't install it.
 
 *kmail-3.5.2-r2 (01 May 2006)
 

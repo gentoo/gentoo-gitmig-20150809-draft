@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.2-r2.ebuild,v 1.1 2006/05/01 14:03:39 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.2-r2.ebuild,v 1.2 2006/05/01 16:46:38 flameeyes Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -58,6 +58,12 @@ PATCHES="${FILESDIR}/kmail-3.5.2-imap-fixes.diff
 	${FILESDIR}/kmail-3.5.2-misc-fixes.diff
 	${FILESDIR}/kmail-3.5-ham_spam_icons.diff" # This patch did not make it into svn, yet.
 
+src_unpack() {
+	kde-meta_src_unpack
+
+	sed -i -e 's:lib_LTLIBRARIES:noinst_LTLIBRARIES:' \
+		"${S}/indexlib/Makefile.am"
+}
 
 src_compile() {
 	myconf="--enable-indexlib"
