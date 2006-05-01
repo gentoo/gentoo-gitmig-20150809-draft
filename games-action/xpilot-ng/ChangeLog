@@ -1,6 +1,13 @@
 # ChangeLog for games-action/xpilot-ng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/ChangeLog,v 1.6 2006/04/23 10:32:43 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/ChangeLog,v 1.7 2006/05/01 19:12:10 tupone Exp $
+
+*xpilot-ng-4.7.2-r1 (01 May 2006)
+
+  01 May 2006; <Tupone@gentoo.org> +files/xpilot-ng-4.7.2-xpngcc.patch,
+  -xpilot-ng-4.7.2.ebuild, +xpilot-ng-4.7.2-r1.ebuild:
+  Fixing error on starting server, bug #131905 by Alastair Mailer
+  Adding patch to select wxpython version, bug #108235 by Ben Urban
 
   23 Apr 2006; <Tupone@gentoo.org> xpilot-ng-4.7.2.ebuild:
   Missing dependency on wxpython
