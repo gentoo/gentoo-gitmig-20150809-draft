@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-libexec
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.5 2006/04/30 23:09:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.6 2006/05/01 15:28:18 flameeyes Exp $
+
+*freebsd-libexec-6.1_rc1-r1 (01 May 2006)
+
+  01 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +freebsd-libexec-6.1_rc1-r1.ebuild:
+  Drop ftpd and lukemftpd, there are other daemons available. If someone
+  really needed lukeftpd-like server, tnftpd can be added to portage.
 
 *freebsd-libexec-6.1_rc1 (30 Apr 2006)
 
