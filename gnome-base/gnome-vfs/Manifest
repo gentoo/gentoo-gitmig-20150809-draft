@@ -1,21 +1,101 @@
-MD5 a81d540bf0ca81b4b838eb273ef2fad9 ChangeLog 24182
-RMD160 c658505fc84366c5dc5731b6ad3b9fa33dbd2e34 ChangeLog 24182
-SHA256 d74d57b535c17fb76ebbc8cde317d9d529aff36bac745cedbdfc25c91e04d2ce ChangeLog 24182
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX 1.0/gnome-vfs-1.0.5-codeset.patch 1762 RMD160 b65d4b43bed4432d093744ee35ef0bfe44774a71 SHA1 5306fffc2f9d6a2b9e58bc240c808d3c7435468c SHA256 8ca4b5e145aa6ae9e497f2bce54a1a168b2836c5ffde08145961c5e3f523af86 size 1762
 MD5 4072a11c3c98c493cbc0bb851176fb44 files/1.0/gnome-vfs-1.0.5-codeset.patch 1762
 RMD160 b65d4b43bed4432d093744ee35ef0bfe44774a71 files/1.0/gnome-vfs-1.0.5-codeset.patch 1762
 SHA256 8ca4b5e145aa6ae9e497f2bce54a1a168b2836c5ffde08145961c5e3f523af86 files/1.0/gnome-vfs-1.0.5-codeset.patch 1762
+AUX 1.0/gnome-vfs-1.0.5-fix-segfault.patch 430 RMD160 6e8a19a493641ab6dd0aa18a7e4c34a936436383 SHA1 85f857d989f829b9bd502cdf3ceac12cea45937a SHA256 21c72246a778e0e5e45f79decc4a20fa6d93a9155e6224ea8a40e22b354e6bcd size 430
 MD5 071edd844b13f596a2f7d986b4512521 files/1.0/gnome-vfs-1.0.5-fix-segfault.patch 430
 RMD160 6e8a19a493641ab6dd0aa18a7e4c34a936436383 files/1.0/gnome-vfs-1.0.5-fix-segfault.patch 430
 SHA256 21c72246a778e0e5e45f79decc4a20fa6d93a9155e6224ea8a40e22b354e6bcd files/1.0/gnome-vfs-1.0.5-fix-segfault.patch 430
+AUX 1.0/gnome-vfs-1.0.5-gcc3.4.patch 837 RMD160 350e6e50f4fd4b9536942aaa08e44c958a107be3 SHA1 1f6c5e9fbf5a803813441a24ef2d8064d37e90cb SHA256 a135f34aea357749aa164d07e08f4571d0e4076026f8a678110333515d4dfacd size 837
 MD5 2ae3110a6e6fb30cfa593e4210535dc2 files/1.0/gnome-vfs-1.0.5-gcc3.4.patch 837
 RMD160 350e6e50f4fd4b9536942aaa08e44c958a107be3 files/1.0/gnome-vfs-1.0.5-gcc3.4.patch 837
 SHA256 a135f34aea357749aa164d07e08f4571d0e4076026f8a678110333515d4dfacd files/1.0/gnome-vfs-1.0.5-gcc3.4.patch 837
+AUX 1.0/gnome-vfs-1.0.5-gtkdoc_fixes.patch 4892 RMD160 0f1b16377e229d71d051a8e03673c5472fa439a4 SHA1 31b796316177936e09be0cb14bea8cf13a9c4dc4 SHA256 0ed5126436dc2c05b8910187c98080c8eef1a15228e763070e9bb6a694b6da94 size 4892
 MD5 7320d4ac9d4f99766075061daa53ea63 files/1.0/gnome-vfs-1.0.5-gtkdoc_fixes.patch 4892
 RMD160 0f1b16377e229d71d051a8e03673c5472fa439a4 files/1.0/gnome-vfs-1.0.5-gtkdoc_fixes.patch 4892
 SHA256 0ed5126436dc2c05b8910187c98080c8eef1a15228e763070e9bb6a694b6da94 files/1.0/gnome-vfs-1.0.5-gtkdoc_fixes.patch 4892
+AUX 1.0/gnome-vfs-1.0.5-proxy.patch 2863 RMD160 36b46e861bad0e67b9cf05cc84718060b31b38c3 SHA1 d461e90499d730a45ff50f3416b5f42623510386 SHA256 0696d0b009be07e1f342b1718df749bb7dc01877029f004fbb01df3f53e26f62 size 2863
 MD5 25d42b1a4cf935fbedd3465bc4a8dd7c files/1.0/gnome-vfs-1.0.5-proxy.patch 2863
 RMD160 36b46e861bad0e67b9cf05cc84718060b31b38c3 files/1.0/gnome-vfs-1.0.5-proxy.patch 2863
 SHA256 0696d0b009be07e1f342b1718df749bb7dc01877029f004fbb01df3f53e26f62 files/1.0/gnome-vfs-1.0.5-proxy.patch 2863
+AUX gnome-vfs-2-CAN-2005-0706.patch 490 RMD160 b0609022ed5ce0b782342ab7f1771ded69b44fbf SHA1 02c00c90e00aaa2d6cc0dbcb095a9f343e6fc3a8 SHA256 aa360ff6aff9ad766b97f96659f3440a7c5fddad80166170b7cf2e43f3bf0964 size 490
+MD5 ba8ad5c040af8bd498c9ec71ac1df40e files/gnome-vfs-2-CAN-2005-0706.patch 490
+RMD160 b0609022ed5ce0b782342ab7f1771ded69b44fbf files/gnome-vfs-2-CAN-2005-0706.patch 490
+SHA256 aa360ff6aff9ad766b97f96659f3440a7c5fddad80166170b7cf2e43f3bf0964 files/gnome-vfs-2-CAN-2005-0706.patch 490
+AUX gnome-vfs-2.10.1-date_time_stamp.patch 2297 RMD160 209b4f2a34e405064afe3c5ee493fc97daa97e72 SHA1 cde3c45784fb97156c8a57d550a32f892c7d7b2d SHA256 5e605882a72ac220ab3f2d2066a4c0860f4bde49725c40dd2ef59b1dd27483f6 size 2297
+MD5 c4482dd33a470e671d27a00eb8fbe044 files/gnome-vfs-2.10.1-date_time_stamp.patch 2297
+RMD160 209b4f2a34e405064afe3c5ee493fc97daa97e72 files/gnome-vfs-2.10.1-date_time_stamp.patch 2297
+SHA256 5e605882a72ac220ab3f2d2066a4c0860f4bde49725c40dd2ef59b1dd27483f6 files/gnome-vfs-2.10.1-date_time_stamp.patch 2297
+AUX gnome-vfs-2.10.1-fbsd.patch 1505 RMD160 db440f5ea084fa27d39fd7b7a5bc14082b75f3dc SHA1 cf4fea48a0d5e50c2ab6271fa04a386c8a9e3c36 SHA256 e684217ecfdf74ac75d124885a7281bbd9e112703544012f58a604afa40b6bde size 1505
+MD5 c599d081cb908d1fe6851ab69d80a7fa files/gnome-vfs-2.10.1-fbsd.patch 1505
+RMD160 db440f5ea084fa27d39fd7b7a5bc14082b75f3dc files/gnome-vfs-2.10.1-fbsd.patch 1505
+SHA256 e684217ecfdf74ac75d124885a7281bbd9e112703544012f58a604afa40b6bde files/gnome-vfs-2.10.1-fbsd.patch 1505
+AUX gnome-vfs-2.10.1-samba-close_fn.patch 1895 RMD160 9fca7c8e9c74ffb47b788a4cf9c81e492a091559 SHA1 9c497b8626e8e706499a32b31dc28df1af658379 SHA256 5f4974113f8c311559ed6d070a8e2c7188d3dd383aa84c71159d19ca7c9b94ac size 1895
+MD5 75d0133c9ee4ef3355b25dad13c6cd9a files/gnome-vfs-2.10.1-samba-close_fn.patch 1895
+RMD160 9fca7c8e9c74ffb47b788a4cf9c81e492a091559 files/gnome-vfs-2.10.1-samba-close_fn.patch 1895
+SHA256 5f4974113f8c311559ed6d070a8e2c7188d3dd383aa84c71159d19ca7c9b94ac files/gnome-vfs-2.10.1-samba-close_fn.patch 1895
+AUX gnome-vfs-2.11.92-fbsd.patch 1036 RMD160 d18f0ed611b42668b3592830c038b425d97ba278 SHA1 5cd5fddbc24cf02c28e59348aa835fc4649ec5e4 SHA256 d349d8b44324f1667215e3ec03ce34828dc81ad07a1ba4f655a70e084c54da13 size 1036
+MD5 6aa77e036ebb110dad9bc8244c3a7081 files/gnome-vfs-2.11.92-fbsd.patch 1036
+RMD160 d18f0ed611b42668b3592830c038b425d97ba278 files/gnome-vfs-2.11.92-fbsd.patch 1036
+SHA256 d349d8b44324f1667215e3ec03ce34828dc81ad07a1ba4f655a70e084c54da13 files/gnome-vfs-2.11.92-fbsd.patch 1036
+AUX gnome-vfs-2.12.0-afs.patch 663 RMD160 a8ac6fbb9792b02090d3783ce10481bbc6b3b830 SHA1 fc7eb54b19a3bf43f1edc253c6517ea9bb60cb6c SHA256 a0bef85feae74a1ecc46f148a476d295e65c92b7a379546fb68186a7733e2e00 size 663
+MD5 59ad154c6254211757fde7973afffc14 files/gnome-vfs-2.12.0-afs.patch 663
+RMD160 a8ac6fbb9792b02090d3783ce10481bbc6b3b830 files/gnome-vfs-2.12.0-afs.patch 663
+SHA256 a0bef85feae74a1ecc46f148a476d295e65c92b7a379546fb68186a7733e2e00 files/gnome-vfs-2.12.0-afs.patch 663
+AUX gnome-vfs-2.8.3-reiser4_support.patch 710 RMD160 62c33efed3b6dc44e283174b03fa577dcae98022 SHA1 87258bfba606d76719d6e946ceaa8a7b13e51733 SHA256 e13e61cb02eeeed5bb654fb203cb47c6da9dca4fa7f317e3bdcaf22d4d379bf5 size 710
+MD5 09f0fab6d414a859d0f979bef3e10dfb files/gnome-vfs-2.8.3-reiser4_support.patch 710
+RMD160 62c33efed3b6dc44e283174b03fa577dcae98022 files/gnome-vfs-2.8.3-reiser4_support.patch 710
+SHA256 e13e61cb02eeeed5bb654fb203cb47c6da9dca4fa7f317e3bdcaf22d4d379bf5 files/gnome-vfs-2.8.3-reiser4_support.patch 710
+DIST gnome-vfs-1.0.5.tar.gz 1048954 size 1048954
+DIST gnome-vfs-2.10.0.tar.bz2 1901027 size 1901027
+DIST gnome-vfs-2.10.1.tar.bz2 1905314 size 1905314
+DIST gnome-vfs-2.12.1.1.tar.bz2 1726588 size 1726588
+DIST gnome-vfs-2.12.2.tar.bz2 1558218 RMD160 831d83c791631e7273fdebec1047da6055757104 SHA256 46f80ead7c52a8c5a3fa7beac2d42385c6bc9552fa28aa5068e1a251d708e177 size 1558218
+DIST gnome-vfs-2.14.0.tar.bz2 1807647 RMD160 8f5eb53c1458a514af12edcc902f74d0121b50e9 SHA256 2baae2577ed2a6a4878c935f020e7ed3c1d042d75658b54450f3a8eaa607d41e size 1807647
+DIST gnome-vfs-2.14.1.tar.bz2 1813793 RMD160 bdd11adbc4063021aeec3b14dae66db6eeec0035 SHA256 cdcef326c3bacd89bf40551932f6b8e2c04bee4ebf3afc1633032af04a7631bf size 1813793
+EBUILD gnome-vfs-1.0.5-r4.ebuild 2122 RMD160 f070fc5fa175742a15bab06aa07b8dc88571c615 SHA1 af9c48ef79b2bf474132c7a5548e44cbfc135cf0 SHA256 8f3edc366bc02cb3fca2e65a24ed7f29fafd45572946a1fb20d17c1588a8884b size 2122
+MD5 ed7cf04e9deeacff0d7c7848a5985556 gnome-vfs-1.0.5-r4.ebuild 2122
+RMD160 f070fc5fa175742a15bab06aa07b8dc88571c615 gnome-vfs-1.0.5-r4.ebuild 2122
+SHA256 8f3edc366bc02cb3fca2e65a24ed7f29fafd45572946a1fb20d17c1588a8884b gnome-vfs-1.0.5-r4.ebuild 2122
+EBUILD gnome-vfs-2.10.0-r2.ebuild 2010 RMD160 fd11b0f27b0efd65ef939f6e74410fd59b6f259d SHA1 d84eeaeb6caf5e837d4d58e6d89797689fac2791 SHA256 9111a3e7d968d4f51ebf5ed1831443553702d15e240bc873fd36fcc08fa48135 size 2010
+MD5 0e9c1c449c2abe63a64021dca1f01c1b gnome-vfs-2.10.0-r2.ebuild 2010
+RMD160 fd11b0f27b0efd65ef939f6e74410fd59b6f259d gnome-vfs-2.10.0-r2.ebuild 2010
+SHA256 9111a3e7d968d4f51ebf5ed1831443553702d15e240bc873fd36fcc08fa48135 gnome-vfs-2.10.0-r2.ebuild 2010
+EBUILD gnome-vfs-2.10.1-r1.ebuild 2013 RMD160 09dc871a9f85ec47e14a7d8b449cae340ae8ce2b SHA1 aba1f2998bf80993a7b58a6e2798a225e611649c SHA256 71fb8e0e04f2d56e1fe3594730ac4802735d3def4984ad28409141fba67d19f0 size 2013
+MD5 cfa26c4d1fd63991f0fd2a0aff0c7f72 gnome-vfs-2.10.1-r1.ebuild 2013
+RMD160 09dc871a9f85ec47e14a7d8b449cae340ae8ce2b gnome-vfs-2.10.1-r1.ebuild 2013
+SHA256 71fb8e0e04f2d56e1fe3594730ac4802735d3def4984ad28409141fba67d19f0 gnome-vfs-2.10.1-r1.ebuild 2013
+EBUILD gnome-vfs-2.10.1-r2.ebuild 2207 RMD160 209645b163d6fc6480e23850ae7fa5ba40dbf65a SHA1 cdfd7c3c2ccb07d4031ec856eaf0e86be5ae944d SHA256 fd338511d629656199e526dd98e0148862c8af1a41233d8eb65b6e92b103c48d size 2207
+MD5 96d33118d80e373a88330035c848eacc gnome-vfs-2.10.1-r2.ebuild 2207
+RMD160 209645b163d6fc6480e23850ae7fa5ba40dbf65a gnome-vfs-2.10.1-r2.ebuild 2207
+SHA256 fd338511d629656199e526dd98e0148862c8af1a41233d8eb65b6e92b103c48d gnome-vfs-2.10.1-r2.ebuild 2207
+EBUILD gnome-vfs-2.12.1.1-r1.ebuild 2161 RMD160 f6d195e3ceeeaeafac91b848b536ae68eb26883f SHA1 8e87e02375cf0d84bf9049097dc5150b6fea3cac SHA256 80da8db22c5c9da32f5f03926e924a19b9902799d56f35d75a61666dafec6449 size 2161
+MD5 72157111f2d012cdcfff224a8cac70ce gnome-vfs-2.12.1.1-r1.ebuild 2161
+RMD160 f6d195e3ceeeaeafac91b848b536ae68eb26883f gnome-vfs-2.12.1.1-r1.ebuild 2161
+SHA256 80da8db22c5c9da32f5f03926e924a19b9902799d56f35d75a61666dafec6449 gnome-vfs-2.12.1.1-r1.ebuild 2161
+EBUILD gnome-vfs-2.12.2.ebuild 2158 RMD160 bdc148af7ba169dba4f809a90f9319b939a0268c SHA1 2c88d2c09229d13d4d92489ca831891271692f0e SHA256 e955094c703694465ac948c511ca4aff12f1ba4f1f054d33d87870f835576204 size 2158
+MD5 f524aba4b9dd6fce7fb65af89c9aed7c gnome-vfs-2.12.2.ebuild 2158
+RMD160 bdc148af7ba169dba4f809a90f9319b939a0268c gnome-vfs-2.12.2.ebuild 2158
+SHA256 e955094c703694465ac948c511ca4aff12f1ba4f1f054d33d87870f835576204 gnome-vfs-2.12.2.ebuild 2158
+EBUILD gnome-vfs-2.14.0.ebuild 1877 RMD160 397f7d0dc5427417b33fb688c76fe728051ba10f SHA1 78255cfdab951255e530e958749e5c974b0c2bd1 SHA256 e0aa6d1d437dfd3b3eedb9f39a4502a46ed07f6061e132b968e897c81a9b4118 size 1877
+MD5 2855d25b59ecba7ea200992f10733a56 gnome-vfs-2.14.0.ebuild 1877
+RMD160 397f7d0dc5427417b33fb688c76fe728051ba10f gnome-vfs-2.14.0.ebuild 1877
+SHA256 e0aa6d1d437dfd3b3eedb9f39a4502a46ed07f6061e132b968e897c81a9b4118 gnome-vfs-2.14.0.ebuild 1877
+EBUILD gnome-vfs-2.14.1.ebuild 1872 RMD160 29a3a4444300532958798bd3c5875284209da7fe SHA1 6155831475d0b5f8542afc096e32daf3382f6844 SHA256 74ffb82e89bdedd02e9d447c3d82a499350719eea78243b4bbecc242ded3ca67 size 1872
+MD5 9d37878761ce59136941e6e727224154 gnome-vfs-2.14.1.ebuild 1872
+RMD160 29a3a4444300532958798bd3c5875284209da7fe gnome-vfs-2.14.1.ebuild 1872
+SHA256 74ffb82e89bdedd02e9d447c3d82a499350719eea78243b4bbecc242ded3ca67 gnome-vfs-2.14.1.ebuild 1872
+MISC ChangeLog 24306 RMD160 e91aae21c6c9922cf4d551fbe1b84be397f137d9 SHA1 a8307998ee130a704a7123ba1c067f73be9ae1a0 SHA256 5c7b172f64f75ef10421dc2a0d99877fbe516d5535035b72e45b6daada553c21 size 24306
+MD5 82355750727d7b08e79b31b639c9eed7 ChangeLog 24306
+RMD160 e91aae21c6c9922cf4d551fbe1b84be397f137d9 ChangeLog 24306
+SHA256 5c7b172f64f75ef10421dc2a0d99877fbe516d5535035b72e45b6daada553c21 ChangeLog 24306
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 size 158
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 MD5 a88e201c8f2ec5444db0bea2e8c302b4 files/digest-gnome-vfs-1.0.5-r4 68
 RMD160 ce783520fc8eb0e373bdb6c59976d5840a13152a files/digest-gnome-vfs-1.0.5-r4 68
 SHA256 4361f7d137b7a0a9388ee427ee5000b97e9bc3b22ad3aa0487187015d4a3aaa2 files/digest-gnome-vfs-1.0.5-r4 68
@@ -37,48 +117,13 @@ SHA256 5b7654811e3e2d61f996efec3f936ffd068908dd3939bc42c1e287bee5f58190 files/di
 MD5 f46737bb72c85275fac71c27e4a6900c files/digest-gnome-vfs-2.14.0 256
 RMD160 7f2214963fbd0a38f9831cc07569e55efa36286f files/digest-gnome-vfs-2.14.0 256
 SHA256 85949810a24f4e0557c6b3d713c2721e0277e88e0d7cd98c0e040e806a9d9718 files/digest-gnome-vfs-2.14.0 256
-MD5 ba8ad5c040af8bd498c9ec71ac1df40e files/gnome-vfs-2-CAN-2005-0706.patch 490
-RMD160 b0609022ed5ce0b782342ab7f1771ded69b44fbf files/gnome-vfs-2-CAN-2005-0706.patch 490
-SHA256 aa360ff6aff9ad766b97f96659f3440a7c5fddad80166170b7cf2e43f3bf0964 files/gnome-vfs-2-CAN-2005-0706.patch 490
-MD5 c4482dd33a470e671d27a00eb8fbe044 files/gnome-vfs-2.10.1-date_time_stamp.patch 2297
-RMD160 209b4f2a34e405064afe3c5ee493fc97daa97e72 files/gnome-vfs-2.10.1-date_time_stamp.patch 2297
-SHA256 5e605882a72ac220ab3f2d2066a4c0860f4bde49725c40dd2ef59b1dd27483f6 files/gnome-vfs-2.10.1-date_time_stamp.patch 2297
-MD5 c599d081cb908d1fe6851ab69d80a7fa files/gnome-vfs-2.10.1-fbsd.patch 1505
-RMD160 db440f5ea084fa27d39fd7b7a5bc14082b75f3dc files/gnome-vfs-2.10.1-fbsd.patch 1505
-SHA256 e684217ecfdf74ac75d124885a7281bbd9e112703544012f58a604afa40b6bde files/gnome-vfs-2.10.1-fbsd.patch 1505
-MD5 75d0133c9ee4ef3355b25dad13c6cd9a files/gnome-vfs-2.10.1-samba-close_fn.patch 1895
-RMD160 9fca7c8e9c74ffb47b788a4cf9c81e492a091559 files/gnome-vfs-2.10.1-samba-close_fn.patch 1895
-SHA256 5f4974113f8c311559ed6d070a8e2c7188d3dd383aa84c71159d19ca7c9b94ac files/gnome-vfs-2.10.1-samba-close_fn.patch 1895
-MD5 6aa77e036ebb110dad9bc8244c3a7081 files/gnome-vfs-2.11.92-fbsd.patch 1036
-RMD160 d18f0ed611b42668b3592830c038b425d97ba278 files/gnome-vfs-2.11.92-fbsd.patch 1036
-SHA256 d349d8b44324f1667215e3ec03ce34828dc81ad07a1ba4f655a70e084c54da13 files/gnome-vfs-2.11.92-fbsd.patch 1036
-MD5 59ad154c6254211757fde7973afffc14 files/gnome-vfs-2.12.0-afs.patch 663
-RMD160 a8ac6fbb9792b02090d3783ce10481bbc6b3b830 files/gnome-vfs-2.12.0-afs.patch 663
-SHA256 a0bef85feae74a1ecc46f148a476d295e65c92b7a379546fb68186a7733e2e00 files/gnome-vfs-2.12.0-afs.patch 663
-MD5 09f0fab6d414a859d0f979bef3e10dfb files/gnome-vfs-2.8.3-reiser4_support.patch 710
-RMD160 62c33efed3b6dc44e283174b03fa577dcae98022 files/gnome-vfs-2.8.3-reiser4_support.patch 710
-SHA256 e13e61cb02eeeed5bb654fb203cb47c6da9dca4fa7f317e3bdcaf22d4d379bf5 files/gnome-vfs-2.8.3-reiser4_support.patch 710
-MD5 ed7cf04e9deeacff0d7c7848a5985556 gnome-vfs-1.0.5-r4.ebuild 2122
-RMD160 f070fc5fa175742a15bab06aa07b8dc88571c615 gnome-vfs-1.0.5-r4.ebuild 2122
-SHA256 8f3edc366bc02cb3fca2e65a24ed7f29fafd45572946a1fb20d17c1588a8884b gnome-vfs-1.0.5-r4.ebuild 2122
-MD5 0e9c1c449c2abe63a64021dca1f01c1b gnome-vfs-2.10.0-r2.ebuild 2010
-RMD160 fd11b0f27b0efd65ef939f6e74410fd59b6f259d gnome-vfs-2.10.0-r2.ebuild 2010
-SHA256 9111a3e7d968d4f51ebf5ed1831443553702d15e240bc873fd36fcc08fa48135 gnome-vfs-2.10.0-r2.ebuild 2010
-MD5 cfa26c4d1fd63991f0fd2a0aff0c7f72 gnome-vfs-2.10.1-r1.ebuild 2013
-RMD160 09dc871a9f85ec47e14a7d8b449cae340ae8ce2b gnome-vfs-2.10.1-r1.ebuild 2013
-SHA256 71fb8e0e04f2d56e1fe3594730ac4802735d3def4984ad28409141fba67d19f0 gnome-vfs-2.10.1-r1.ebuild 2013
-MD5 96d33118d80e373a88330035c848eacc gnome-vfs-2.10.1-r2.ebuild 2207
-RMD160 209645b163d6fc6480e23850ae7fa5ba40dbf65a gnome-vfs-2.10.1-r2.ebuild 2207
-SHA256 fd338511d629656199e526dd98e0148862c8af1a41233d8eb65b6e92b103c48d gnome-vfs-2.10.1-r2.ebuild 2207
-MD5 72157111f2d012cdcfff224a8cac70ce gnome-vfs-2.12.1.1-r1.ebuild 2161
-RMD160 f6d195e3ceeeaeafac91b848b536ae68eb26883f gnome-vfs-2.12.1.1-r1.ebuild 2161
-SHA256 80da8db22c5c9da32f5f03926e924a19b9902799d56f35d75a61666dafec6449 gnome-vfs-2.12.1.1-r1.ebuild 2161
-MD5 f524aba4b9dd6fce7fb65af89c9aed7c gnome-vfs-2.12.2.ebuild 2158
-RMD160 bdc148af7ba169dba4f809a90f9319b939a0268c gnome-vfs-2.12.2.ebuild 2158
-SHA256 e955094c703694465ac948c511ca4aff12f1ba4f1f054d33d87870f835576204 gnome-vfs-2.12.2.ebuild 2158
-MD5 2855d25b59ecba7ea200992f10733a56 gnome-vfs-2.14.0.ebuild 1877
-RMD160 397f7d0dc5427417b33fb688c76fe728051ba10f gnome-vfs-2.14.0.ebuild 1877
-SHA256 e0aa6d1d437dfd3b3eedb9f39a4502a46ed07f6061e132b968e897c81a9b4118 gnome-vfs-2.14.0.ebuild 1877
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 e2553c9d6c22298d1d14564b13b7b75a files/digest-gnome-vfs-2.14.1 256
+RMD160 1488caa82f571b415e08f23fd3726aff4415b86f files/digest-gnome-vfs-2.14.1 256
+SHA256 cc2df814e41184f882f6b4f57477b2f82fe243641dc45ec27f129d371a4fa3c8 files/digest-gnome-vfs-2.14.1 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEVlK6omPajV0RnrERAuw6AJ9/KtmonGeOu0v6LjOHZ6e7wGpe8gCfUYRU
+h+0/A75NVWRuds29ImuKqGo=
+=SG2v
+-----END PGP SIGNATURE-----
