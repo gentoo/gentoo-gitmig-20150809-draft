@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Time-Piece
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Piece/ChangeLog,v 1.6 2006/03/30 23:32:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Piece/ChangeLog,v 1.7 2006/05/01 22:06:09 mcummings Exp $
+
+*Time-Piece-1.09 (01 May 2006)
+
+  01 May 2006; <mcumming@gentoo.org> +Time-Piece-1.09.ebuild:
+  Version bump
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Time-Piece-1.08.ebuild:
   Mark 1.08 ~ia64

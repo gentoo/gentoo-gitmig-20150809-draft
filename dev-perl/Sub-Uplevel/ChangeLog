@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Sub-Uplevel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.16 2006/04/27 18:56:42 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.17 2006/05/01 22:00:58 mcummings Exp $
+
+*Sub-Uplevel-0.10 (01 May 2006)
+
+  01 May 2006; <mcumming@gentoo.org> +Sub-Uplevel-0.10.ebuild:
+  Version bump
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-Sub-Uplevel-0.09, files/digest-Sub-Uplevel-0.09-r1, Manifest:
