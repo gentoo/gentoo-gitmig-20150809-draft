@@ -1,37 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 75e36c407e0bf6475a46e88cc6bf90a5 ChangeLog 651
-RMD160 927ecde4f3679cc364f45db5da8d64604fe0a3ad ChangeLog 651
-SHA256 939e92c1df571ea801be044a2fe5be83366a727e0b9d6f2cf51077a3a05f9334 ChangeLog 651
-MD5 07939a427f3339d00ce7dc45dc68baf3 cl-cgi-utils-0.7.ebuild 1124
-RMD160 47254d9835eda40ddea3071d7630a7129ccfa399 cl-cgi-utils-0.7.ebuild 1124
-SHA256 80b917791f0de4eade7c3f12dc832ca8a74be7abb300b519d80e6eefdadff86f cl-cgi-utils-0.7.ebuild 1124
-MD5 969916dfe6fea824f0ebafc36bbef0aa cl-cgi-utils-0.9.ebuild 1057
-RMD160 3423788cf327dbb8456e4e74162bc9d872f49af1 cl-cgi-utils-0.9.ebuild 1057
-SHA256 4dc15070934f46ed7a6bacff29f7e7c39af299f9322dca99a98e35c771a1a16e cl-cgi-utils-0.9.ebuild 1057
+AUX 0.7-defconstant-gentoo.patch 1887 RMD160 597da6ab77dee6cb13352d7c41a05c7cfdbe281d SHA1 074a9866b5d84927f6d91fe6d7e673f80733fad0 SHA256 3826c1dcf13896646eee21014b32760ddf086235576b420680a2202bbbd8ea89 size 1887
 MD5 1d3228539162c60b27db0937990e1ff3 files/0.7-defconstant-gentoo.patch 1887
 RMD160 597da6ab77dee6cb13352d7c41a05c7cfdbe281d files/0.7-defconstant-gentoo.patch 1887
 SHA256 3826c1dcf13896646eee21014b32760ddf086235576b420680a2202bbbd8ea89 files/0.7-defconstant-gentoo.patch 1887
+AUX 0.7-dont-print-during-make-gentoo.patch 740 RMD160 4fff1296943e88aea8830c0edf6e6972505eaf46 SHA1 8c40e46992482c386904ce29e6976744e3695ba1 SHA256 302ed1f119777de33897ac9daaa8d78e81bf6dc8f51203a72029db8f9614cb0f size 740
 MD5 1d23887d5cc8c1a809febd79ef258fba files/0.7-dont-print-during-make-gentoo.patch 740
 RMD160 4fff1296943e88aea8830c0edf6e6972505eaf46 files/0.7-dont-print-during-make-gentoo.patch 740
 SHA256 302ed1f119777de33897ac9daaa8d78e81bf6dc8f51203a72029db8f9614cb0f files/0.7-dont-print-during-make-gentoo.patch 740
+AUX 0.9-defconstant-gentoo.patch 1887 RMD160 aef1b8e64950f976e7ca167f7d60fef8a43c2fef SHA1 03b05b8419ac87c53d7c7336130383aa26cdeb98 SHA256 8f3e320a782742e3277eabb71a1eac29e25f11e06ed8dfe621d914bf171914de size 1887
 MD5 dd370a66cd328814b009aefb7694e539 files/0.9-defconstant-gentoo.patch 1887
 RMD160 aef1b8e64950f976e7ca167f7d60fef8a43c2fef files/0.9-defconstant-gentoo.patch 1887
 SHA256 8f3e320a782742e3277eabb71a1eac29e25f11e06ed8dfe621d914bf171914de files/0.9-defconstant-gentoo.patch 1887
+DIST lisp-cgi-utils-0.7.tar.gz 29495 size 29495
+DIST lisp-cgi-utils-0.9.tar.gz 32342 RMD160 16f910928b369cdee03a15ba2c76bc1d707a8e78 SHA256 24d88d80891fb27010ed741fca62f26d65dff7ea3132b740a11ad8980b9eeb3d size 32342
+EBUILD cl-cgi-utils-0.7.ebuild 1124 RMD160 47254d9835eda40ddea3071d7630a7129ccfa399 SHA1 db71f5ae4f326b510075ef55ffa94043e2374c60 SHA256 80b917791f0de4eade7c3f12dc832ca8a74be7abb300b519d80e6eefdadff86f size 1124
+MD5 07939a427f3339d00ce7dc45dc68baf3 cl-cgi-utils-0.7.ebuild 1124
+RMD160 47254d9835eda40ddea3071d7630a7129ccfa399 cl-cgi-utils-0.7.ebuild 1124
+SHA256 80b917791f0de4eade7c3f12dc832ca8a74be7abb300b519d80e6eefdadff86f cl-cgi-utils-0.7.ebuild 1124
+EBUILD cl-cgi-utils-0.9.ebuild 1057 RMD160 3423788cf327dbb8456e4e74162bc9d872f49af1 SHA1 74b1f86a49c4f24c82720aa34a71b32dc9d1454c SHA256 4dc15070934f46ed7a6bacff29f7e7c39af299f9322dca99a98e35c771a1a16e size 1057
+MD5 969916dfe6fea824f0ebafc36bbef0aa cl-cgi-utils-0.9.ebuild 1057
+RMD160 3423788cf327dbb8456e4e74162bc9d872f49af1 cl-cgi-utils-0.9.ebuild 1057
+SHA256 4dc15070934f46ed7a6bacff29f7e7c39af299f9322dca99a98e35c771a1a16e cl-cgi-utils-0.9.ebuild 1057
+MISC ChangeLog 730 RMD160 bca771c17d5bf96ae8ea9a23eedaa50349094224 SHA1 ae8d5119df2919777b783c4cbb6ff4b89674c946 SHA256 af78662d606b440c33ba92c0b162706e8929029df875c2a99e405f3792064e6c size 730
+MD5 dd2a609824f1d0ffd4f01612cbe864ef ChangeLog 730
+RMD160 bca771c17d5bf96ae8ea9a23eedaa50349094224 ChangeLog 730
+SHA256 af78662d606b440c33ba92c0b162706e8929029df875c2a99e405f3792064e6c ChangeLog 730
+MISC metadata.xml 164 RMD160 5edb79931b874dc3a72128f0742b9d4c4eb3c8c1 SHA1 2f781e1fca36d790a027079805d56cf397e6a6f8 SHA256 f8efc9385015233c71f279f85bd0a327525b7136cf8714cc04449d8bea4ce22f size 164
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+RMD160 5edb79931b874dc3a72128f0742b9d4c4eb3c8c1 metadata.xml 164
+SHA256 f8efc9385015233c71f279f85bd0a327525b7136cf8714cc04449d8bea4ce22f metadata.xml 164
 MD5 a4d798bb23b4643157b4cf2f0a09713f files/digest-cl-cgi-utils-0.7 69
 RMD160 514b0550611c10873f5e69b9320198a0e59a42eb files/digest-cl-cgi-utils-0.7 69
 SHA256 9ba3a7b15bedf17f64caa13450112c7ca8a81af4de8d941b99f835d257462fcb files/digest-cl-cgi-utils-0.7 69
 MD5 17f3c4038aca9f4796549a2aa914ed5a files/digest-cl-cgi-utils-0.9 253
 RMD160 fc6d01a503fbff4e47ef46c9f325d7be4072f441 files/digest-cl-cgi-utils-0.9 253
 SHA256 e935689240a31e094371e3c2ca9dcf55338de4898213c862543325f2e87fc84a files/digest-cl-cgi-utils-0.9 253
-MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
-RMD160 5edb79931b874dc3a72128f0742b9d4c4eb3c8c1 metadata.xml 164
-SHA256 f8efc9385015233c71f279f85bd0a327525b7136cf8714cc04449d8bea4ce22f metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFD6MYTyiNZaEAZA+ARAl73AJ4wyEwecGxd3ui7VRvrzvZLGlszeACfR9hQ
-7kJKrGI4wFwRTL++lKkbZEU=
-=I+EP
+iD8DBQFEVmNqyiNZaEAZA+ARAk8LAJ0clvdfRUM7HAci/EGijROH43KeBACffS5Q
+vQsKS/Dx4TykNOluLaABSDE=
+=Br1q
 -----END PGP SIGNATURE-----
