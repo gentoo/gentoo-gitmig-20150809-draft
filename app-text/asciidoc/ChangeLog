@@ -1,6 +1,9 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.27 2006/04/30 19:35:49 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.28 2006/05/01 00:33:42 weeve Exp $
+
+  01 May 2006; Jason Wever <weeve@gentoo.org> asciidoc-7.0.4.ebuild:
+  Stable on SPARC wrt bug #131825.
 
   30 Apr 2006; Rene Nussbaumer <killerfox@gentoo.org> asciidoc-7.0.4.ebuild:
   Stable on hppa, ppc.
