@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyorbit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.25 2006/04/27 19:13:07 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.26 2006/05/01 09:49:53 corsair Exp $
+
+  01 May 2006; Markus Rothe <corsair@gentoo.org> pyorbit-2.14.0.ebuild:
+  Added ~ppc64
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-pyorbit-2.0.1,
   Manifest:
