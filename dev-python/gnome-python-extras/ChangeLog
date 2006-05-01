@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.26 2006/03/21 01:58:31 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.27 2006/05/01 09:57:30 corsair Exp $
+
+  01 May 2006; Markus Rothe <corsair@gentoo.org>
+  gnome-python-extras-2.14.0.ebuild:
+  Added ~ppc64
 
   21 Mar 2006; Saleem Abdulrasool <compnerd@gentoo.org>
   gnome-python-extras-2.14.0.ebuild:
