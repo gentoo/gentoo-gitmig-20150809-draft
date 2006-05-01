@@ -23,6 +23,7 @@ chasen
 fdftk
 mono
 rar
+nvtv
 
 # should be ok
 jikes
