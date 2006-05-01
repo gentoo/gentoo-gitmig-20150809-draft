@@ -1,0 +1,286 @@
+=== modified file 'bin/ebuild.sh'
+--- bin/ebuild.sh	
++++ bin/ebuild.sh	
+@@ -3,7 +3,11 @@
+ # Distributed under the terms of the GNU General Public License v2
+ # $Id: 1000_r3291_bug_73350_configroot.patch,v 1.1 2006/05/01 08:48:30 zmedico Exp $
+ 
+-export SANDBOX_PREDICT="${SANDBOX_PREDICT}:/proc/self/maps:/dev/console:/usr/lib/portage/pym:/dev/random"
++PORTAGE_BIN_PATH="${PORTAGE_BIN_PATH:-/usr/lib/portage/bin}"
++PORTAGE_PYM_PATH="${PORTAGE_PYM_PATH:-/usr/lib/portage/pym}"
++declare -rx PORTAGE_BIN_PATH PORTAGE_PYM_PATH
++
++export SANDBOX_PREDICT="${SANDBOX_PREDICT}:/proc/self/maps:/dev/console:${PORTAGE_PYM_PATH}:/dev/random"
+ export SANDBOX_WRITE="${SANDBOX_WRITE}:/dev/shm:/dev/stdout:/dev/stderr:${PORTAGE_TMPDIR}"
+ export SANDBOX_READ="${SANDBOX_READ}:/dev/shm:/dev/stdin:${PORTAGE_TMPDIR}"
+ 
+@@ -55,10 +59,10 @@
+ [ ! -z "$OCC" ] && export CC="$OCC"
+ [ ! -z "$OCXX" ] && export CXX="$OCXX"
+ 
+-export PATH="/usr/local/sbin:/sbin:/usr/sbin:/usr/lib/portage/bin:/usr/local/bin:/bin:/usr/bin:${ROOTPATH}"
++export PATH="/usr/local/sbin:/sbin:/usr/sbin:${PORTAGE_BIN_PATH}:/usr/local/bin:/bin:/usr/bin:${ROOTPATH}"
+ [ ! -z "$PREROOTPATH" ] && export PATH="${PREROOTPATH%%:}:$PATH"
+ 
+-source /usr/lib/portage/bin/isolated-functions.sh  &>/dev/null
++source "${PORTAGE_BIN_PATH}/isolated-functions.sh"  &>/dev/null
+ 
+ case "${NOCOLOR:-false}" in
+ 	yes|true)
+@@ -158,7 +162,7 @@
+ 	fi
+ 	# return shell-true/shell-false if exists.
+ 	# Takes single depend-type atoms.
+-	if /usr/lib/portage/bin/portageq 'has_version' "${ROOT}" "$1"; then
++	if "${PORTAGE_BIN_PATH}/portageq" 'has_version' "${ROOT}" "$1"; then
+ 		return 0
+ 	else
+ 		return 1
+@@ -169,7 +173,7 @@
+ 	if [ "${EBUILD_PHASE}" == "depend" ]; then
+ 		die "portageq calls are not allowed in the global scope"
+ 	fi
+-	/usr/lib/portage/bin/portageq "$@"
++	"${PORTAGE_BIN_PATH}/portageq" "$@"
+ }
+ 
+ 
+@@ -184,7 +188,7 @@
+ 	fi
+ 	# returns the best/most-current match.
+ 	# Takes single depend-type atoms.
+-	/usr/lib/portage/bin/portageq 'best_version' "${ROOT}" "$1"
++	"${PORTAGE_BIN_PATH}/portageq" 'best_version' "${ROOT}" "$1"
+ }
+ 
+ use_with() {
+
+=== modified file 'bin/misc-functions.sh'
+--- bin/misc-functions.sh	
++++ bin/misc-functions.sh	
+@@ -14,7 +14,8 @@
+ # XXX hack: clear the args so ebuild.sh doesn't see them
+ MISC_FUNCTIONS_ARGS="$@"
+ shift $#
+-source /usr/lib/portage/bin/ebuild.sh
++
++source "${PORTAGE_BIN_PATH:-/usr/lib/portage/bin}/ebuild.sh"
+ 
+ install_qa_check() {
+ 
+
+=== modified file 'pym/portage.py'
+--- pym/portage.py	
++++ pym/portage.py	
+@@ -895,7 +895,8 @@
+ 		raise TypeError, "Invalid type for config object: %s" % test.__class__
+ 
+ class config:
+-	def __init__(self, clone=None, mycpv=None, config_profile_path=None, config_incrementals=None):
++	def __init__(self, clone=None, mycpv=None, config_profile_path=None,
++		config_incrementals=None, config_root="/", target_root="/"):
+ 
+ 		self.already_in_regenerate = 0
+ 
+@@ -960,13 +961,32 @@
+ 			self.uvlist     = copy.deepcopy(clone.uvlist)
+ 			self.dirVirtuals = copy.deepcopy(clone.dirVirtuals)
+ 			self.treeVirtuals = copy.deepcopy(clone.treeVirtuals)
++			config_root = self.backupenv["PORTAGE_CONFIGROOT"]
++			target_root = self.backupenv["ROOT"]
+ 		else:
++
++			# backupenv is for calculated incremental variables.
++			self.backupenv = os.environ.copy()
++
++			config_root = config_root.rstrip(os.path.sep) + os.path.sep
++			target_root = target_root.rstrip(os.path.sep) + os.path.sep
++
++			for k, v in (("PORTAGE_CONFIGROOT", config_root),
++				("ROOT", target_root)):
++				if not os.path.isdir(v):
++					writemsg("!!! Error: %s='%s' is not a directory. Please correct this.\n" % (k, v))
++					raise portage_exception.DirectoryNotFound(v)
++
++			self.backupenv["PORTAGE_CONFIGROOT"] = config_root
++			self.backupenv["ROOT"] = target_root
++
+ 			self.depcachedir = DEPCACHE_PATH
+ 
+ 			if not config_profile_path:
+-				writemsg("config_profile_path not specified to class config\n")
+-				if os.path.isdir(PROFILE_PATH):
+-					self.profile_path = PROFILE_PATH
++				config_profile_path = \
++					os.path.join(config_root, PROFILE_PATH.lstrip(os.path.sep))
++				if os.path.isdir(config_profile_path):
++					self.profile_path = config_profile_path
+ 				else:
+ 					self.profile_path = None
+ 			else:
+@@ -980,7 +1000,8 @@
+ 
+ 			self.module_priority    = ["user","default"]
+ 			self.modules            = {}
+-			self.modules["user"]    = getconfig(MODULES_FILE_PATH)
++			self.modules["user"] = getconfig(
++				os.path.join(config_root, MODULES_FILE_PATH.lstrip(os.path.sep)))
+ 			if self.modules["user"] is None:
+ 				self.modules["user"] = {}
+ 			self.modules["default"] = {
+@@ -990,7 +1011,7 @@
+ 
+ 			self.usemask=[]
+ 			self.configlist=[]
+-			self.backupenv={}
++
+ 			# back up our incremental variables:
+ 			self.configdict={}
+ 			# configlist will contain: [ globals, defaults, conf, pkg, auto, backupenv (incrementals), origenv ]
+@@ -1012,10 +1033,12 @@
+ 			if os.environ.has_key("PORTAGE_CALLER") and os.environ["PORTAGE_CALLER"] == "repoman":
+ 				pass
+ 			else:
+-				# XXX: This should depend on ROOT?
+-				if os.path.exists("/"+CUSTOM_PROFILE_PATH):
+-					self.user_profile_dir = os.path.normpath("/"+"///"+CUSTOM_PROFILE_PATH)
+-					self.profiles.append(self.user_profile_dir[:])
++				custom_prof = os.path.join(
++					config_root, CUSTOM_PROFILE_PATH.lstrip(os.path.sep))
++				if os.path.exists(custom_prof):
++					self.user_profile_dir = custom_prof
++					self.profiles.append(custom_prof)
++				del custom_prof
+ 
+ 			self.packages_list = [grabfile_package(os.path.join(x, "packages")) for x in self.profiles]
+ 			self.packages      = stack_lists(self.packages_list, incremental=1)
+@@ -1040,7 +1063,8 @@
+ 			del use_defs_lists
+ 
+ 			try:
+-				mygcfg_dlists = [getconfig(os.path.join(x, "make.globals")) for x in self.profiles+["/etc"]]
++				mygcfg_dlists = [getconfig(os.path.join(x, "make.globals")) \
++					for x in self.profiles + [os.path.join(config_root, "etc")]]
+ 				self.mygcfg   = stack_dicts(mygcfg_dlists, incrementals=portage_const.INCREMENTALS, ignore_none=1)
+ 
+ 				if self.mygcfg is None:
+@@ -1075,8 +1099,9 @@
+ 			self.configdict["defaults"]=self.configlist[-1]
+ 
+ 			try:
+-				# XXX: Should depend on root?
+-				self.mygcfg=getconfig("/"+MAKE_CONF_FILE,allow_sourcing=True)
++				self.mygcfg = getconfig(
++					os.path.join(config_root, MAKE_CONF_FILE.lstrip(os.path.sep)),
++					allow_sourcing=True)
+ 				if self.mygcfg is None:
+ 					self.mygcfg = {}
+ 			except SystemExit, e:
+@@ -1097,8 +1122,6 @@
+ 			self.configlist.append({})
+ 			self.configdict["auto"]=self.configlist[-1]
+ 
+-			#backup-env (for recording our calculated incremental variables:)
+-			self.backupenv = os.environ.copy()
+ 			self.configlist.append(self.backupenv) # XXX Why though?
+ 			self.configdict["backupenv"]=self.configlist[-1]
+ 
+@@ -1117,13 +1140,17 @@
+ 				self.pkeywordsdict = {}
+ 				self.punmaskdict = {}
+ 			else:
+-				locations = [self["PORTDIR"] + "/profiles", USER_CONFIG_PATH]
++				abs_user_config = os.path.join(config_root,
++					USER_CONFIG_PATH.lstrip(os.path.sep))
++				locations = [os.path.join(self["PORTDIR"], "profiles"),
++					abs_user_config]
+ 				for ov in self["PORTDIR_OVERLAY"].split():
+ 					ov = os.path.normpath(ov)
+ 					if os.path.isdir(ov+"/profiles"):
+ 						locations.append(ov+"/profiles")
+ 
+-				pusedict=grabdict_package(USER_CONFIG_PATH+"/package.use", recursive=1)
++				pusedict = grabdict_package(
++					os.path.join(abs_user_config, "package.use"), recursive=1)
+ 				self.pusedict = {}
+ 				for key in pusedict.keys():
+ 					cp = dep_getkey(key)
+@@ -1132,7 +1159,9 @@
+ 					self.pusedict[cp][key] = pusedict[key]
+ 
+ 				#package.keywords
+-				pkgdict=grabdict_package(USER_CONFIG_PATH+"/package.keywords", recursive=1)
++				pkgdict = grabdict_package(
++					os.path.join(abs_user_config, "package.keywords"),
++					recursive=1)
+ 				self.pkeywordsdict = {}
+ 				for key in pkgdict.keys():
+ 					# default to ~arch if no specific keyword is given
+@@ -1152,7 +1181,9 @@
+ 					self.pkeywordsdict[cp][key] = pkgdict[key]
+ 
+ 				#package.unmask
+-				pkgunmasklines = grabfile_package(USER_CONFIG_PATH+"/package.unmask",recursive=1)
++				pkgunmasklines = grabfile_package(
++					os.path.join(abs_user_config, "package.unmask"),
++					recursive=1)
+ 				self.punmaskdict = {}
+ 				for x in pkgunmasklines:
+ 					mycatpkg=dep_getkey(x)
+@@ -1284,15 +1315,8 @@
+ 		if mycpv:
+ 			self.setcpv(mycpv)
+ 
+-		myroot = self.get("ROOT", "/")
+-		myroot = myroot.rstrip(os.path.sep) + os.path.sep
+-		if not os.path.exists(myroot):
+-			writemsg("!!! Error: ROOT '%s' does not exist.  Please correct this.\n" % myroot)
+-			raise portage_exception.DirectoryNotFound(myroot)
+-		elif not os.path.isdir(myroot):
+-			writemsg("!!! Error: ROOT '%s' is not a directory. Please correct this.\n" % myroot[:-1])
+-			raise portage_exception.DirectoryNotFound(myroot)
+-		self.backupenv["ROOT"] = myroot
++		self.backupenv["PORTAGE_BIN_PATH"] = PORTAGE_BIN_PATH
++		self.backupenv["PORTAGE_PYM_PATH"] = PORTAGE_PYM_PATH
+ 
+ 		self._init_dirs()
+ 
+@@ -1327,13 +1351,17 @@
+ 				if group not in archlist and group[0] != '-':
+ 					writemsg("!!! INVALID ACCEPT_KEYWORDS: %s\n" % str(group))
+ 
+-		if not os.path.islink(PROFILE_PATH) and \
++		abs_profile_path = os.path.join(self["PORTAGE_CONFIGROOT"],
++			PROFILE_PATH.lstrip(os.path.sep))
++		if not os.path.islink(abs_profile_path) and \
+ 			os.path.exists(os.path.join(self["PORTDIR"], "profiles")):
+-			writemsg("\a\n\n!!! %s is not a symlink and will probably prevent most merges.\n" % PROFILE_PATH)
++			writemsg("\a\n\n!!! %s is not a symlink and will probably prevent most merges.\n" % abs_profile_path)
+ 			writemsg("!!! It should point into a profile within %s/profiles/\n" % self["PORTDIR"])
+ 			writemsg("!!! (You can safely ignore this message when syncing. It's harmless.)\n\n\n")
+ 
+-		if os.path.exists(USER_VIRTUALS_FILE):
++		abs_user_virtuals = os.path.join(self["PORTAGE_CONFIGROOT"],
++			USER_VIRTUALS_FILE.lstrip(os.path.sep))
++		if os.path.exists(abs_user_virtuals):
+ 			writemsg("\n!!! /etc/portage/virtuals is deprecated in favor of\n")
+ 			writemsg("!!! /etc/portage/profile/virtuals. Please move it to\n")
+ 			writemsg("!!! this new location.\n\n")
+@@ -6860,9 +6888,14 @@
+ 	archlist, features, groups, pkglines, thirdpartymirrors, usedefaults, \
+ 	profiledir, flushmtimedb
+ 
++	kwargs = {}
++	for k, envvar in (("config_root", "PORTAGE_CONFIGROOT"), ("target_root", "ROOT")):
++		kwargs[k] = os.environ.get(envvar, "/")
++
+ 	try:
+-		settings = config(config_profile_path=PROFILE_PATH,
+-			config_incrementals=portage_const.INCREMENTALS)
++		settings = config(
++			config_incrementals=portage_const.INCREMENTALS, **kwargs)
++		del kwargs
+ 	except portage_exception.DirectoryNotFound, e:
+ 		writemsg("!!! Directory Not Found: %s\n" % str(e))
+ 		sys.exit(1)
+
