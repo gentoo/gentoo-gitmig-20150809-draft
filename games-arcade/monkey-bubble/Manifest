@@ -1,25 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cd26f003f111d3f2b64c77056324b18e ChangeLog 2829
-RMD160 85659c622ff817ff98c60c3a24fc36b395fa0c21 ChangeLog 2829
-SHA256 58ac0d323e21c47b28ec2bb87411c011538b92ad226d19096ad03e85f81541f2 ChangeLog 2829
-MD5 b7e59f010aaa8ed88889a514e4eae178 files/digest-monkey-bubble-0.3.2 262
-RMD160 114991025f9c16f9dcce1640a21ba6ecf971bd8c files/digest-monkey-bubble-0.3.2 262
-SHA256 3e6ccbd3e125388fa4bb79126292bd6396cc26ac72bbcf16516f04c9643e053b files/digest-monkey-bubble-0.3.2 262
+AUX monkey-bubble-0.3.2-asneeded.patch 855 RMD160 e06b29d5ff4dbc3c0ca57501b7a926027f3e7024 SHA1 5f6b6f4e6b11d65c674ffb4a51c97519a38acf6b SHA256 95fcdd524913e4f4d4fb66d828c03fa531a0c788a823edb4036f8993503c6c19 size 855
+MD5 cdcdf5d501e696f0fd5b72cfdb8a3cd9 files/monkey-bubble-0.3.2-asneeded.patch 855
+RMD160 e06b29d5ff4dbc3c0ca57501b7a926027f3e7024 files/monkey-bubble-0.3.2-asneeded.patch 855
+SHA256 95fcdd524913e4f4d4fb66d828c03fa531a0c788a823edb4036f8993503c6c19 files/monkey-bubble-0.3.2-asneeded.patch 855
+AUX monkey-bubble-0.3.2.amd64.patch 857 RMD160 557181bca961013032d80c57d1d3f2116380a55b SHA1 b3e7364db19f78e3f478a9afb899be43ffa91766 SHA256 2a6c3cd61594b0da302ffa7b8ef8cc85de00fe6f07d98322fc3bd0dd8531cce5 size 857
 MD5 ead48e66a28739459d2322ff9388d343 files/monkey-bubble-0.3.2.amd64.patch 857
 RMD160 557181bca961013032d80c57d1d3f2116380a55b files/monkey-bubble-0.3.2.amd64.patch 857
 SHA256 2a6c3cd61594b0da302ffa7b8ef8cc85de00fe6f07d98322fc3bd0dd8531cce5 files/monkey-bubble-0.3.2.amd64.patch 857
+DIST monkey-bubble-0.3.2.tar.gz 5453029 RMD160 e31bf8e3201425a48d9daf9ee5e5c9a20ad31af4 SHA256 68a4d3f26404993431014a23bf181150e9a11c394e003277d8e5db49c85af018 size 5453029
+EBUILD monkey-bubble-0.3.2.ebuild 1139 RMD160 0bde13c5ce399dbb06a6ed88526cb42a2105fd67 SHA1 9657e6d23f499299b60315a6163057f6a2ccb468 SHA256 dccbc4f238212881c85dda3558c028696be4d54bb53d4bfe039405a217e204ec size 1139
+MD5 c9a834ac3cf350984fbc4145a3fb644c monkey-bubble-0.3.2.ebuild 1139
+RMD160 0bde13c5ce399dbb06a6ed88526cb42a2105fd67 monkey-bubble-0.3.2.ebuild 1139
+SHA256 dccbc4f238212881c85dda3558c028696be4d54bb53d4bfe039405a217e204ec monkey-bubble-0.3.2.ebuild 1139
+MISC ChangeLog 3022 RMD160 d4a93399340fc1c1fee2fdb217f452de1619ca4f SHA1 f3219ea1fc48b08b4e21e4b069b0aa5de187783f SHA256 23931160d9431805daaa36acc7577a40bb6aafd6bb8157199bbfbd6672973f83 size 3022
+MD5 55b9b85517787d4e8f5cd878b7497b28 ChangeLog 3022
+RMD160 d4a93399340fc1c1fee2fdb217f452de1619ca4f ChangeLog 3022
+SHA256 23931160d9431805daaa36acc7577a40bb6aafd6bb8157199bbfbd6672973f83 ChangeLog 3022
+MISC metadata.xml 251 RMD160 f77a8fea97ab2a02ef2d9bf1cc7b390c5c19e6cb SHA1 8134d1f2611a2e4387a89e84580a2cb5c25f5649 SHA256 34f41062e84f1e12c08550faffc97632a2432df3579520cec76dbe8b08fb9cfe size 251
 MD5 3f11aaf297b2fe67404a96cda13e9bfe metadata.xml 251
 RMD160 f77a8fea97ab2a02ef2d9bf1cc7b390c5c19e6cb metadata.xml 251
 SHA256 34f41062e84f1e12c08550faffc97632a2432df3579520cec76dbe8b08fb9cfe metadata.xml 251
-MD5 a0cec6bc6a859f5af6c359d4e685927c monkey-bubble-0.3.2.ebuild 1047
-RMD160 02ef5d8c3acdf80c452faa248e345d1da80bdfa5 monkey-bubble-0.3.2.ebuild 1047
-SHA256 ab1719ab7524c9e2dac303caa41df39b1fe6d60508c0b68e97a982ad5d8ada86 monkey-bubble-0.3.2.ebuild 1047
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFETMWi2CTtIKiFlQIRAmr0AJ9uKZywFl17dNh0kLEvIgM/xvj2PACgllEz
-QOnlGy8YsXoKEkLqeTU9vfo=
-=hUmR
------END PGP SIGNATURE-----
+MD5 b7e59f010aaa8ed88889a514e4eae178 files/digest-monkey-bubble-0.3.2 262
+RMD160 114991025f9c16f9dcce1640a21ba6ecf971bd8c files/digest-monkey-bubble-0.3.2 262
+SHA256 3e6ccbd3e125388fa4bb79126292bd6396cc26ac72bbcf16516f04c9643e053b files/digest-monkey-bubble-0.3.2 262

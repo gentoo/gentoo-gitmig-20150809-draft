@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/monkey-bubble
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.20 2006/04/24 12:33:10 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.21 2006/05/01 07:02:31 mr_bones_ Exp $
+
+  01 May 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/monkey-bubble-0.3.2-asneeded.patch, monkey-bubble-0.3.2.ebuild:
+  patch for -Wl,--as-needed submitted by TGL via bug #131840
 
   24 Apr 2006; <Tupone@gentoo.org> monkey-bubble-0.3.2.ebuild:
   Fix for gcc-4.1 removing the -Werror flag

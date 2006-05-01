@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.3.2.ebuild,v 1.11 2006/04/24 12:33:10 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.3.2.ebuild,v 1.12 2006/05/01 07:02:31 mr_bones_ Exp $
 
-inherit eutils gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="A Puzzle Bobble clone"
 HOMEPAGE="http://home.gna.org/monkeybubble/"
@@ -10,7 +10,7 @@ SRC_URI="http://home.gna.org/monkeybubble/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~amd64"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.0
@@ -27,7 +27,10 @@ DEPEND=">=x11-libs/gtk+-2.0
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}.amd64.patch"
+	epatch \
+		"${FILESDIR}/${P}.amd64.patch" \
+		"${FILESDIR}/${P}-asneeded.patch"
+	eautoreconf
 	sed -i \
 		-e "s:-Werror::" \
 		src/util/Makefile.in \
@@ -37,5 +40,6 @@ src_unpack() {
 		src/audio/Makefile.in \
 		src/net/Makefile.in \
 		src/net/Makefile.in \
-		src/ui/Makefile.in
+		src/ui/Makefile.in \
+		|| die "sed failed"
 }
