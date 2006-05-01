@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.46 2006/04/06 00:53:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.47 2006/05/01 13:53:51 carlo Exp $
+
+*juk-3.5.2-r1 (01 May 2006)
+
+  01 May 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/juk-3.5.2-do_not_use_gstreamer-0.10.diff,
+  +files/juk-3.5.2-filerename.diff, +juk-3.5.2-r1.ebuild:
+  Revised dependencies. Make the file renamer dialog work with non-english
+  locale. Assure building against GStreamer 0.8.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -juk-3.5.0.ebuild,
   -juk-3.5.1.ebuild:
