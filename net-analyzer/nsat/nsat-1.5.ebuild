@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5.ebuild,v 1.14 2006/04/19 00:31:08 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5.ebuild,v 1.15 2006/05/01 22:52:26 weeve Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/nsat/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~sparc x86"
+KEYWORDS="~ppc sparc x86"
 IUSE="X"
 
 RDEPEND="X? ( || ( x11-libs/libX11 virtual/x11 )
