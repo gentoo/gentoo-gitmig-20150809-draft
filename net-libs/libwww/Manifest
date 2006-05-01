@@ -1,64 +1,81 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5c23411f2033741db5b5e36d54454962 ChangeLog 7790
-RMD160 63bf0f4d8fffe97b9a98db4450758b76a46e738b ChangeLog 7790
-SHA256 ce966fa6cbbdc7cde89ffe3584213a3ffb17c7d08f965cac7e08fa8d8e139409 ChangeLog 7790
-MD5 078b6239f293e1cc65f3f977b3136317 files/digest-libwww-5.4.0-r3 151
-RMD160 50badc1ad798fd352a1c67885800d7d7d70a60ab files/digest-libwww-5.4.0-r3 151
-SHA256 ae5527ceca7a24dce1f2a2c1e632ac7a2626576a30ba165cba0948ab030d39b6 files/digest-libwww-5.4.0-r3 151
-MD5 4c3f7314020d5a1a6a01463a71b4944c files/digest-libwww-5.4.0-r4 151
-RMD160 5c6c9b3addb8288e4e6a03685919069d1402596f files/digest-libwww-5.4.0-r4 151
-SHA256 06d2c3b351985690a741793ff4da3f7c4d9f799219ad35263a65a55d86c0e974 files/digest-libwww-5.4.0-r4 151
-MD5 c07f06c90922520867329bd3a262e0d2 files/digest-libwww-5.4.0-r5 545
-RMD160 4bc82afdba6774f1d3252af59666f05d01bf39ca files/digest-libwww-5.4.0-r5 545
-SHA256 d8df772d5553ab12bfb4b755dfcb80574536cd9091c326625493d10040934c78 files/digest-libwww-5.4.0-r5 545
-MD5 adb28c73b642bd088f1b48e2cad9bb59 files/libwww-5.4.0-asneeded.patch 2428
-RMD160 086f0e365a1b76588e28a075cc924cdb2f3efed6 files/libwww-5.4.0-asneeded.patch 2428
-SHA256 2174562847643ae8636ab385da1deb63d4a7a709961f92a45f3f21230ebe84de files/libwww-5.4.0-asneeded.patch 2428
+AUX libwww-5.4.0-asneeded.patch 3069 RMD160 2ad4e69a0fe92ee3aa963ab3f0545352c71efc20 SHA1 43654eeb3229ab112d6cb93bcab8394fb57d3c8f SHA256 392f715f76294b8cf5875ddaa8d224cb5133b5ead2f4063f0ac5234db71dd8d1 size 3069
+MD5 1a49925f104c658018fc8aa186e019c6 files/libwww-5.4.0-asneeded.patch 3069
+RMD160 2ad4e69a0fe92ee3aa963ab3f0545352c71efc20 files/libwww-5.4.0-asneeded.patch 3069
+SHA256 392f715f76294b8cf5875ddaa8d224cb5133b5ead2f4063f0ac5234db71dd8d1 files/libwww-5.4.0-asneeded.patch 3069
+AUX libwww-5.4.0-autoconf-gentoo.diff 1089 RMD160 aadddad4802da1f5b9f212073df90d171f422e52 SHA1 f04b3753a0c351a2634a1039011f8ef7e904b821 SHA256 630617c79601f664b5752f5331a2abb3eaae70ac3365ba84498475067f6dbcfa size 1089
 MD5 1866b237427a244b9923469b52f54473 files/libwww-5.4.0-autoconf-gentoo.diff 1089
 RMD160 aadddad4802da1f5b9f212073df90d171f422e52 files/libwww-5.4.0-autoconf-gentoo.diff 1089
 SHA256 630617c79601f664b5752f5331a2abb3eaae70ac3365ba84498475067f6dbcfa files/libwww-5.4.0-autoconf-gentoo.diff 1089
+AUX libwww-5.4.0-automake-gentoo.diff 346 RMD160 16b6e244bd0d325d00c0ea6f4185552824cc6b60 SHA1 2bf0471eef168db4f5f9a54ab31007767751ba92 SHA256 e9d7489f5ee2226cdd602939f82a559cefdd9a9cb4b3c98c316bae05c989c8d9 size 346
 MD5 ee0dd3b8a76bf8b9e6d051663119eb40 files/libwww-5.4.0-automake-gentoo.diff 346
 RMD160 16b6e244bd0d325d00c0ea6f4185552824cc6b60 files/libwww-5.4.0-automake-gentoo.diff 346
 SHA256 e9d7489f5ee2226cdd602939f82a559cefdd9a9cb4b3c98c316bae05c989c8d9 files/libwww-5.4.0-automake-gentoo.diff 346
+AUX libwww-5.4.0-automake-macos.patch 436 RMD160 67b41c599f66813ab25047fdc07ef32e4afbfccf SHA1 aa6218e4c630c3167be2c0cd04241a7ffc8c4bb5 SHA256 c2df9e41390f12c8b454cc5cce2cec851ddfebb39a78125a0090da520fefcb10 size 436
 MD5 231e5cc6d075b3464a46858f8d2b65e3 files/libwww-5.4.0-automake-macos.patch 436
 RMD160 67b41c599f66813ab25047fdc07ef32e4afbfccf files/libwww-5.4.0-automake-macos.patch 436
 SHA256 c2df9e41390f12c8b454cc5cce2cec851ddfebb39a78125a0090da520fefcb10 files/libwww-5.4.0-automake-macos.patch 436
+AUX libwww-5.4.0-disable-ndebug-gentoo.diff 370 RMD160 8918de13a34d418cd55cb98930640265c48f6571 SHA1 2d4c29c5d2a06975aff2cd3d1b4ce9f6fed0f8d5 SHA256 39bdcca0efc334c9a86a10090fcb2dbfaf9ca427bfd12ac2486b0533287c45f9 size 370
 MD5 0851f5aef9f0960efcdcabfdfa960341 files/libwww-5.4.0-disable-ndebug-gentoo.diff 370
 RMD160 8918de13a34d418cd55cb98930640265c48f6571 files/libwww-5.4.0-disable-ndebug-gentoo.diff 370
 SHA256 39bdcca0efc334c9a86a10090fcb2dbfaf9ca427bfd12ac2486b0533287c45f9 files/libwww-5.4.0-disable-ndebug-gentoo.diff 370
+AUX libwww-5.4.0-htbound.patch 13279 RMD160 77fe8970180e7bcf79b994f78cb986b2f172d2db SHA1 b9c1460f8a34cef355d836b3d6dcb77bcd1fd351 SHA256 22d94546f706e263b28370b00207d6ad09739c98a6463d4341b94991ac981ad7 size 13279
 MD5 6853cd848815d9446ef820e3a74878ca files/libwww-5.4.0-htbound.patch 13279
 RMD160 77fe8970180e7bcf79b994f78cb986b2f172d2db files/libwww-5.4.0-htbound.patch 13279
 SHA256 22d94546f706e263b28370b00207d6ad09739c98a6463d4341b94991ac981ad7 files/libwww-5.4.0-htbound.patch 13279
+AUX libwww-5.4.0-mysql-4.1.patch 1674 RMD160 39ca32835af65fa781d3c3465f33fc9743d38c34 SHA1 a54dccfc28a4bf15f1a78aa5a29cdb6314909bb9 SHA256 b99508bf1cccb00ad55538a019d70ff165998701282e00faab2ec1b9df43ed01 size 1674
 MD5 b0a8e638d02da0d0284e8555866f1f38 files/libwww-5.4.0-mysql-4.1.patch 1674
 RMD160 39ca32835af65fa781d3c3465f33fc9743d38c34 files/libwww-5.4.0-mysql-4.1.patch 1674
 SHA256 b99508bf1cccb00ad55538a019d70ff165998701282e00faab2ec1b9df43ed01 files/libwww-5.4.0-mysql-4.1.patch 1674
+AUX libwww-5.4.0-noexport.patch 402 RMD160 0074a161a985b08fa797dd91decea320a23f1dfd SHA1 30242525c24e97088f3fa122060a1369bebb1877 SHA256 f2fa63b1d94ebdec9b77dd6758222e2e6fb232b467b0c5f3f5efaa8ec2265c55 size 402
 MD5 db10aa1f9442be23cfec06ad586d1afa files/libwww-5.4.0-noexport.patch 402
 RMD160 0074a161a985b08fa797dd91decea320a23f1dfd files/libwww-5.4.0-noexport.patch 402
 SHA256 f2fa63b1d94ebdec9b77dd6758222e2e6fb232b467b0c5f3f5efaa8ec2265c55 files/libwww-5.4.0-noexport.patch 402
+AUX libwww-5.4.0-respectflags.patch 1673 RMD160 751551e3d0c104e4b6a6f81fa815100d28200e37 SHA1 d98268d2236bb1c6e57d4e0e60f3d9bf441fd17f SHA256 23e24af3d68ad8c33114440e25c6d0678aa4fec71988280c27a90d166b6f825f size 1673
 MD5 b297da007c2b37dbc72492c6a1b566a6 files/libwww-5.4.0-respectflags.patch 1673
 RMD160 751551e3d0c104e4b6a6f81fa815100d28200e37 files/libwww-5.4.0-respectflags.patch 1673
 SHA256 23e24af3d68ad8c33114440e25c6d0678aa4fec71988280c27a90d166b6f825f files/libwww-5.4.0-respectflags.patch 1673
+AUX libwww-config-liborder.patch 776 RMD160 c6b2f017f1c2ecb036aca3e6d497a1e2fc2e2d6f SHA1 93c6ff7912aec6ea085cda65447b0aae0156c125 SHA256 01aa28bd0516ccfff053c07e02a0c323e0403a86be1845d6d5671e776a95d6d2 size 776
 MD5 e99f48d15e0834666b84203b48805872 files/libwww-config-liborder.patch 776
 RMD160 c6b2f017f1c2ecb036aca3e6d497a1e2fc2e2d6f files/libwww-config-liborder.patch 776
 SHA256 01aa28bd0516ccfff053c07e02a0c323e0403a86be1845d6d5671e776a95d6d2 files/libwww-config-liborder.patch 776
+DIST libwww-5.4.0-debian-autoconf-2.5.patch.bz2 8338 RMD160 c15263ce045333f03a6f655ff3aaaf0dd14eac35 SHA256 a2e64a286c691075df952763de38bb5f5ad3611d089d3b8b9c8d7c2d2b7d1bbb size 8338
+DIST w3c-libwww-5.4.0.tgz 1129121 RMD160 12e55ecb2435f9048d627e56f8ae60d4c246648b SHA256 64841cd99a41c84679cfbc777ebfbb78bdc2a499f7f6866ccf5cead391c867ef size 1129121
+EBUILD libwww-5.4.0-r3.ebuild 1943 RMD160 faebfbe9f76a08fc24b4c1718c999725466f8866 SHA1 1b47f52b07de9ec7c20ebabee1e6b153870c71ae SHA256 e28a8afbe7a913a27f39ddddae525fcbc6627feb731cad67dc3bc45434e2cd67 size 1943
 MD5 4c70dae7ce4964982b3ebe728633f9f0 libwww-5.4.0-r3.ebuild 1943
 RMD160 faebfbe9f76a08fc24b4c1718c999725466f8866 libwww-5.4.0-r3.ebuild 1943
 SHA256 e28a8afbe7a913a27f39ddddae525fcbc6627feb731cad67dc3bc45434e2cd67 libwww-5.4.0-r3.ebuild 1943
+EBUILD libwww-5.4.0-r4.ebuild 2149 RMD160 d2f4d623d7c64da059ab3e45d6488c4bdc276969 SHA1 f46cdefda6b75e5004c32fc19ee28ae959ba36c9 SHA256 412fa7439036e01f8a6ea6f2117ba1ba8f076d198fa3f39a48e588bf1cd49a15 size 2149
 MD5 141485bbc1bfd7acd01d7383755352eb libwww-5.4.0-r4.ebuild 2149
 RMD160 d2f4d623d7c64da059ab3e45d6488c4bdc276969 libwww-5.4.0-r4.ebuild 2149
 SHA256 412fa7439036e01f8a6ea6f2117ba1ba8f076d198fa3f39a48e588bf1cd49a15 libwww-5.4.0-r4.ebuild 2149
+EBUILD libwww-5.4.0-r5.ebuild 2291 RMD160 f77e1203061107ab309e1f8dd4d9e721118a291c SHA1 602dc9017f73008c584208975f647192d5494ce3 SHA256 89b92573ccd606a3a632a40f82d2dcb7bf1227d3834be9198a389f03407fbbd2 size 2291
 MD5 2bdbc2153ebfc44ccc1cf42a5fd07eae libwww-5.4.0-r5.ebuild 2291
 RMD160 f77e1203061107ab309e1f8dd4d9e721118a291c libwww-5.4.0-r5.ebuild 2291
 SHA256 89b92573ccd606a3a632a40f82d2dcb7bf1227d3834be9198a389f03407fbbd2 libwww-5.4.0-r5.ebuild 2291
+MISC ChangeLog 7962 RMD160 983b62d5e392e1521dbaeff57f376e5d487cd662 SHA1 4b512272d7fb97e46aa5a24587e67d6580709004 SHA256 1850318626d2d8ffc352691e20c4564765003d32e2f3b3af4cc080e6b3b39dac size 7962
+MD5 0b6f2f94fc1055ed7468fee1003bf634 ChangeLog 7962
+RMD160 983b62d5e392e1521dbaeff57f376e5d487cd662 ChangeLog 7962
+SHA256 1850318626d2d8ffc352691e20c4564765003d32e2f3b3af4cc080e6b3b39dac ChangeLog 7962
+MISC metadata.xml 164 RMD160 698422e821458386b8da17baa6014296f8284e0b SHA1 a805613d38e6e3bff93cba3858d6a92cc79fe2f7 SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f size 164
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
 SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
+MD5 c07f06c90922520867329bd3a262e0d2 files/digest-libwww-5.4.0-r3 545
+RMD160 4bc82afdba6774f1d3252af59666f05d01bf39ca files/digest-libwww-5.4.0-r3 545
+SHA256 d8df772d5553ab12bfb4b755dfcb80574536cd9091c326625493d10040934c78 files/digest-libwww-5.4.0-r3 545
+MD5 c07f06c90922520867329bd3a262e0d2 files/digest-libwww-5.4.0-r4 545
+RMD160 4bc82afdba6774f1d3252af59666f05d01bf39ca files/digest-libwww-5.4.0-r4 545
+SHA256 d8df772d5553ab12bfb4b755dfcb80574536cd9091c326625493d10040934c78 files/digest-libwww-5.4.0-r4 545
+MD5 c07f06c90922520867329bd3a262e0d2 files/digest-libwww-5.4.0-r5 545
+RMD160 4bc82afdba6774f1d3252af59666f05d01bf39ca files/digest-libwww-5.4.0-r5 545
+SHA256 d8df772d5553ab12bfb4b755dfcb80574536cd9091c326625493d10040934c78 files/digest-libwww-5.4.0-r5 545
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEQAEDAiZjviIA2XgRAn81AKC9l5CmGnOfDeibUNgVRNHh+HKuFwCfdEHa
-Up+eK0RRml/CuUVM2zI5Z60=
-=ptti
+iD8DBQFEVds/zxUa4FWw6mwRAsPsAKCXTlV08IPfmfHKtZr2DFmScfHlMACeL5MP
+NhE3cPkdMvVoAdvQIybqFNQ=
+=RlPh
 -----END PGP SIGNATURE-----
