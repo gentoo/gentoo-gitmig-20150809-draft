@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ueagle-atm/ueagle-atm-1.1.ebuild,v 1.1 2006/04/30 13:05:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ueagle-atm/ueagle-atm-1.1-r1.ebuild,v 1.1 2006/05/01 08:29:37 mrness Exp $
 
 inherit eutils linux-info
 
@@ -43,7 +43,6 @@ src_compile() {
 src_install() {
 	# Copy to the firmware directory
 	insinto /lib/firmware/ueagle-atm
-	insopts -m 600
 	doins build/* || die "doins firmware failed"
 
 	# Documentation necessary to complete the setup
