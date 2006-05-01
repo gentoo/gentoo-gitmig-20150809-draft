@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-asdf
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.24 2005/12/17 21:52:49 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.25 2006/05/01 19:51:00 mkennedy Exp $
+
+*cl-asdf-1.89 (01 May 2006)
+
+  01 May 2006; Matthew Kennedy <mkennedy@gentoo.org> +cl-asdf-1.89.ebuild:
+  New upstream version synchronizes with the revision Debian is using.
 
   17 Dec 2005; Markus Rothe <corsair@gentoo.org> cl-asdf-1.86-r1.ebuild:
   Added ~ppc64
