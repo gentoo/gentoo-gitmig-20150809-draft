@@ -1,114 +1,169 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-RMD160 b39dc7804cd2e7846ba32e5bf8b5ad83c0cf84fa ChangeLog 18378
-MD5 084bd89d8ce0a5c80872f57a5aa21fd1 ChangeLog 18378
-RMD160 014194a1786a0983a8ba91c3924b798f353c330d files/05portage.envd 34
+AUX 05portage.envd 34 RMD160 014194a1786a0983a8ba91c3924b798f353c330d SHA1 2af2c9a7ce535c36749dfe81b6555426225620e2 size 34
 MD5 d5d5b818347fd87b290ecb0b17516b34 files/05portage.envd 34
-RMD160 aecbf663449b7b6c5fc8f4f343c30c1de7515fb3 files/2.0.51.22-fixes.patch 10579
+RMD160 014194a1786a0983a8ba91c3924b798f353c330d files/05portage.envd 34
+AUX 2.0.51.22-fixes.patch 10579 RMD160 aecbf663449b7b6c5fc8f4f343c30c1de7515fb3 SHA1 6305707411c213cd78f028952f7aabcb8b56e0ce size 10579
 MD5 bb9cb80f927bcc2b9e0f512d8a200e18 files/2.0.51.22-fixes.patch 10579
-RMD160 abe36e81af35e4a0580ca269d8d274885510763a files/2.1/pre10/1000_r3291_bug_73350_configroot.patch 10736
+RMD160 aecbf663449b7b6c5fc8f4f343c30c1de7515fb3 files/2.0.51.22-fixes.patch 10579
+AUX 2.1/pre10/1000_r3291_bug_73350_configroot.patch 10736 RMD160 abe36e81af35e4a0580ca269d8d274885510763a SHA1 f4e937c8bdc4b065af78b16a0be6bb8d05c2a648 size 10736
 MD5 8c623d6ee5dc6030cd338cf0d1372166 files/2.1/pre10/1000_r3291_bug_73350_configroot.patch 10736
-RMD160 5957328f21b0c104ff63e88e066fc764af0d6c89 files/2.1/pre10/1010_r3292_bug_131820_noauto.patch 1160
+RMD160 abe36e81af35e4a0580ca269d8d274885510763a files/2.1/pre10/1000_r3291_bug_73350_configroot.patch 10736
+AUX 2.1/pre10/1010_r3292_bug_131820_noauto.patch 1160 RMD160 5957328f21b0c104ff63e88e066fc764af0d6c89 SHA1 92d5202b0be14fcda4e619a22cf0f6155be90031 size 1160
 MD5 f1e6b75c0f6604a95f6add5a3f196663 files/2.1/pre10/1010_r3292_bug_131820_noauto.patch 1160
-RMD160 f7651885f6d7bcabaf4e55205f7d3a6e8745d4eb files/2.1/pre9/1000_r3171_readDigests.patch 832
+RMD160 5957328f21b0c104ff63e88e066fc764af0d6c89 files/2.1/pre10/1010_r3292_bug_131820_noauto.patch 1160
+AUX 2.1/pre10/1020_r3293_bug_131820_noauto.patch 1141 RMD160 46a97b8142bf95fb569cb8c1d803b8fb914fbcb4 SHA1 d6cf02fd7bf6539023beb5798c30dbf94dbaa2d9 size 1141
+MD5 5019f5d3ed29b8a2c5214efc38090cc9 files/2.1/pre10/1020_r3293_bug_131820_noauto.patch 1141
+RMD160 46a97b8142bf95fb569cb8c1d803b8fb914fbcb4 files/2.1/pre10/1020_r3293_bug_131820_noauto.patch 1141
+AUX 2.1/pre9/1000_r3171_readDigests.patch 832 RMD160 f7651885f6d7bcabaf4e55205f7d3a6e8745d4eb SHA1 ee3734080508cd029309a2ee06a18c25193af806 size 832
 MD5 8ac999b2be9fc08e60876a33a9b18bbd files/2.1/pre9/1000_r3171_readDigests.patch 832
-RMD160 ff9ef2acb7fadc51885c2ef285bc6a15bd027281 files/2.1/pre9/1010_r3173_bug_57445_gpgsign.patch 5793
+RMD160 f7651885f6d7bcabaf4e55205f7d3a6e8745d4eb files/2.1/pre9/1000_r3171_readDigests.patch 832
+AUX 2.1/pre9/1010_r3173_bug_57445_gpgsign.patch 5793 RMD160 ff9ef2acb7fadc51885c2ef285bc6a15bd027281 SHA1 c9e997240c43f64061bd95b5d1620fb0480b9e40 size 5793
 MD5 6b80599b307b318e321dfebff7437a34 files/2.1/pre9/1010_r3173_bug_57445_gpgsign.patch 5793
-RMD160 de7724b67daea92f5309154c41bc71b87dcd8aec files/2.1/pre9/1020_r3176_bug_130406_bz.patch 424
+RMD160 ff9ef2acb7fadc51885c2ef285bc6a15bd027281 files/2.1/pre9/1010_r3173_bug_57445_gpgsign.patch 5793
+AUX 2.1/pre9/1020_r3176_bug_130406_bz.patch 424 RMD160 de7724b67daea92f5309154c41bc71b87dcd8aec SHA1 9aa0a3e4edbeeeac19a49b9ce8e4a736373dbf47 size 424
 MD5 23c02f4c3ece6b6f25da63dbee0aae7c files/2.1/pre9/1020_r3176_bug_130406_bz.patch 424
-RMD160 9e435bf9521ebec8d4ecf7770263d637a86a3f07 files/2.1/pre9/1030_r3177_bug_130541_auto_manifest.patch 535
+RMD160 de7724b67daea92f5309154c41bc71b87dcd8aec files/2.1/pre9/1020_r3176_bug_130406_bz.patch 424
+AUX 2.1/pre9/1030_r3177_bug_130541_auto_manifest.patch 535 RMD160 9e435bf9521ebec8d4ecf7770263d637a86a3f07 SHA1 ccd24c8023e3a6a1461e8744b1bda959206fd337 size 535
 MD5 8a20b6811f47a4d6ebe282c59d87b456 files/2.1/pre9/1030_r3177_bug_130541_auto_manifest.patch 535
-RMD160 393b864fd6d1683606eb1790c50dec350a8e2397 files/2.1/pre9/1040_r3178_bug_127585_other_phase.patch 1217
+RMD160 9e435bf9521ebec8d4ecf7770263d637a86a3f07 files/2.1/pre9/1030_r3177_bug_130541_auto_manifest.patch 535
+AUX 2.1/pre9/1040_r3178_bug_127585_other_phase.patch 1217 RMD160 393b864fd6d1683606eb1790c50dec350a8e2397 SHA1 f261a31b16ebc8756e06ec69db776a2f9900877f size 1217
 MD5 aea2f9c7f3265cce3924828b0ac27082 files/2.1/pre9/1040_r3178_bug_127585_other_phase.patch 1217
-RMD160 41ae6920e612fb71d438d44be0053076a2ca3772 files/2.1/pre9/1050_r3179_commitmsgfile.patch 1101
+RMD160 393b864fd6d1683606eb1790c50dec350a8e2397 files/2.1/pre9/1040_r3178_bug_127585_other_phase.patch 1217
+AUX 2.1/pre9/1050_r3179_commitmsgfile.patch 1101 RMD160 41ae6920e612fb71d438d44be0053076a2ca3772 SHA1 ec01f2110c30e1221a8b28b3ab47ca24f023eaff size 1101
 MD5 243b1fd809545db5b89abb5abb09585c files/2.1/pre9/1050_r3179_commitmsgfile.patch 1101
-RMD160 69a5af3afa5a8ce93c8f3f4ae42294a9b8c0243b files/2.1/pre9/1060_r3181_gpg_dir.patch 824
+RMD160 41ae6920e612fb71d438d44be0053076a2ca3772 files/2.1/pre9/1050_r3179_commitmsgfile.patch 1101
+AUX 2.1/pre9/1060_r3181_gpg_dir.patch 824 RMD160 69a5af3afa5a8ce93c8f3f4ae42294a9b8c0243b SHA1 c8c95d86f95d7d0061140e3b712e53be3165c6a5 size 824
 MD5 3d755f70b99441ad0c0baf1ca10f7e30 files/2.1/pre9/1060_r3181_gpg_dir.patch 824
-RMD160 2d3f41b2e548c173d95dc61bdf8e953f29e78b6a files/2.1/pre9/1070_r3184_bug_130750_distfiles_size.patch 2356
+RMD160 69a5af3afa5a8ce93c8f3f4ae42294a9b8c0243b files/2.1/pre9/1060_r3181_gpg_dir.patch 824
+AUX 2.1/pre9/1070_r3184_bug_130750_distfiles_size.patch 2356 RMD160 2d3f41b2e548c173d95dc61bdf8e953f29e78b6a SHA1 ce1bfeeea5ac11565da1a55f6db4ff164e7a3342 size 2356
 MD5 ac2b21f4c0bbdc5672678db4e0f1e219 files/2.1/pre9/1070_r3184_bug_130750_distfiles_size.patch 2356
-RMD160 5d7c602f762033566c33aff8fc920e28ec5b5c94 files/2.1/pre9/1080_r3185_bug_116796_download_size.patch 1432
+RMD160 2d3f41b2e548c173d95dc61bdf8e953f29e78b6a files/2.1/pre9/1070_r3184_bug_130750_distfiles_size.patch 2356
+AUX 2.1/pre9/1080_r3185_bug_116796_download_size.patch 1432 RMD160 5d7c602f762033566c33aff8fc920e28ec5b5c94 SHA1 753fe8e5a1214883c5aae7f8e9ab35be71fea78b size 1432
 MD5 c432e79787b23554ae4b347b62b65665 files/2.1/pre9/1080_r3185_bug_116796_download_size.patch 1432
-RMD160 9ab5354c4b9d7b0e3105dacc3a1787541e8e1352 files/2.1/pre9/1090_r3189_bug_130824_pkgdir_sandbox.patch 726
+RMD160 5d7c602f762033566c33aff8fc920e28ec5b5c94 files/2.1/pre9/1080_r3185_bug_116796_download_size.patch 1432
+AUX 2.1/pre9/1090_r3189_bug_130824_pkgdir_sandbox.patch 726 RMD160 9ab5354c4b9d7b0e3105dacc3a1787541e8e1352 SHA1 639f6d5dc1733a2a44099a7dc35ee4d85cd10bac size 726
 MD5 2083b8fd93bdaf7e874eb292b1276b13 files/2.1/pre9/1090_r3189_bug_130824_pkgdir_sandbox.patch 726
-RMD160 1e710dc28c2e45cb8d04f7d7931c91bf43f094c3 files/2.1/pre9/1100_r3193_manifest_size.patch 658
+RMD160 9ab5354c4b9d7b0e3105dacc3a1787541e8e1352 files/2.1/pre9/1090_r3189_bug_130824_pkgdir_sandbox.patch 726
+AUX 2.1/pre9/1100_r3193_manifest_size.patch 658 RMD160 1e710dc28c2e45cb8d04f7d7931c91bf43f094c3 SHA1 a03acaee772cbe0ac8db58f6da28858ce793876d size 658
 MD5 af1d6ffdd01be0e1841ed506e6980051 files/2.1/pre9/1100_r3193_manifest_size.patch 658
-RMD160 690804a2cac2da0a047dcc879b1c275c2e796a1a files/2.1/pre9/1110_r3194_bug_130928.patch 1070
+RMD160 1e710dc28c2e45cb8d04f7d7931c91bf43f094c3 files/2.1/pre9/1100_r3193_manifest_size.patch 658
+AUX 2.1/pre9/1110_r3194_bug_130928.patch 1070 RMD160 690804a2cac2da0a047dcc879b1c275c2e796a1a SHA1 631bf3630623bccc3f81c7b85d61cac4b15b340d size 1070
 MD5 3f1a52882791195ef0bf033dcbe5a2a7 files/2.1/pre9/1110_r3194_bug_130928.patch 1070
-RMD160 39e882bb941f5ac3560b9a5cfa795e957199c51e files/2.1_pre7/1000_r2994_workdir_mode.patch 1096
+RMD160 690804a2cac2da0a047dcc879b1c275c2e796a1a files/2.1/pre9/1110_r3194_bug_130928.patch 1070
+AUX 2.1_pre7/1000_r2994_workdir_mode.patch 1096 RMD160 39e882bb941f5ac3560b9a5cfa795e957199c51e SHA1 3c0526603612fc6caa26cbe1edcf600d7db9dece size 1096
 MD5 5347de9da65c2d77b2ae2faf149364a6 files/2.1_pre7/1000_r2994_workdir_mode.patch 1096
-RMD160 1e1cf9086c235ea9b89a661d6f1e0bdd8dbad72a files/2.1_pre7/1010_r3004_lazy_virtuals.patch 7519
+RMD160 39e882bb941f5ac3560b9a5cfa795e957199c51e files/2.1_pre7/1000_r2994_workdir_mode.patch 1096
+AUX 2.1_pre7/1010_r3004_lazy_virtuals.patch 7519 RMD160 1e1cf9086c235ea9b89a661d6f1e0bdd8dbad72a SHA1 bc9c073af7445ff452cdab2e33c4450c1ebac295 size 7519
 MD5 c2b78a47a57679befb0b05a2983ff321 files/2.1_pre7/1010_r3004_lazy_virtuals.patch 7519
-RMD160 a85c3c523a2f40b5f4220a1d7372dec2da86f496 files/2.1_pre7/1020_r3006_bug_127573_cachedir.patch 385
+RMD160 1e1cf9086c235ea9b89a661d6f1e0bdd8dbad72a files/2.1_pre7/1010_r3004_lazy_virtuals.patch 7519
+AUX 2.1_pre7/1020_r3006_bug_127573_cachedir.patch 385 RMD160 a85c3c523a2f40b5f4220a1d7372dec2da86f496 SHA1 ea5c2ade0046778d174ce83e897d3707e8e8be4e size 385
 MD5 8d4e3a72650d231b182368b0a06d2c36 files/2.1_pre7/1020_r3006_bug_127573_cachedir.patch 385
-RMD160 9de354cb09921aeb5a89f0ee3671bf42dc608605 files/2.1_pre7/1030_r3009_bug_127563_ccache_stat.patch 5126
+RMD160 a85c3c523a2f40b5f4220a1d7372dec2da86f496 files/2.1_pre7/1020_r3006_bug_127573_cachedir.patch 385
+AUX 2.1_pre7/1030_r3009_bug_127563_ccache_stat.patch 5126 RMD160 9de354cb09921aeb5a89f0ee3671bf42dc608605 SHA1 5f7363e369b3de84640402d8c71503628a880768 size 5126
 MD5 e954c9807bb789151bb72dbc82806fff files/2.1_pre7/1030_r3009_bug_127563_ccache_stat.patch 5126
-RMD160 d992189579ee7ce98ee555a1cbbc9b3c2db144e0 files/2.1_pre7/1040_r3015_user_fetch.patch 1078
+RMD160 9de354cb09921aeb5a89f0ee3671bf42dc608605 files/2.1_pre7/1030_r3009_bug_127563_ccache_stat.patch 5126
+AUX 2.1_pre7/1040_r3015_user_fetch.patch 1078 RMD160 d992189579ee7ce98ee555a1cbbc9b3c2db144e0 SHA1 892cd1a85f3161a675ce91022c4d411bf08b179e size 1078
 MD5 5411976690e9b0e6504bae7ce912e1c1 files/2.1_pre7/1040_r3015_user_fetch.patch 1078
-RMD160 01adefa804a8ae31c3a9c2e533accf187b0cdf3f files/2.1_pre7/1050_forum_3210399_empty_digest.patch 374
+RMD160 d992189579ee7ce98ee555a1cbbc9b3c2db144e0 files/2.1_pre7/1040_r3015_user_fetch.patch 1078
+AUX 2.1_pre7/1050_forum_3210399_empty_digest.patch 374 RMD160 01adefa804a8ae31c3a9c2e533accf187b0cdf3f SHA1 83da33b58fcb6d6022c714fb1c9226d4def522b6 size 374
 MD5 78f817f6f2dd7068087d4886ef520e60 files/2.1_pre7/1050_forum_3210399_empty_digest.patch 374
-RMD160 61ae23a0b1f1a1f4cd8fd8cb2401f16ef8559930 files/2.1_pre7/1060_r3034_bug_127897_realpath.patch 965
+RMD160 01adefa804a8ae31c3a9c2e533accf187b0cdf3f files/2.1_pre7/1050_forum_3210399_empty_digest.patch 374
+AUX 2.1_pre7/1060_r3034_bug_127897_realpath.patch 965 RMD160 61ae23a0b1f1a1f4cd8fd8cb2401f16ef8559930 SHA1 7c876e02e744004908d9490041376e2546f9d19d size 965
 MD5 994e124a061c4ec989cb22a9e0f08a7e files/2.1_pre7/1060_r3034_bug_127897_realpath.patch 965
-RMD160 4f488fb66c84ef61761645fbfdec51c6d87dce3c files/2.1_pre7/1070_r3036_bug_127930_unpack_timestamp.patch 409
+RMD160 61ae23a0b1f1a1f4cd8fd8cb2401f16ef8559930 files/2.1_pre7/1060_r3034_bug_127897_realpath.patch 965
+AUX 2.1_pre7/1070_r3036_bug_127930_unpack_timestamp.patch 409 RMD160 4f488fb66c84ef61761645fbfdec51c6d87dce3c SHA1 aa5f1ccbcd34feeef9292357858b2c65645c6fa5 size 409
 MD5 5f68cba86d8f99186b15e923499c3d49 files/2.1_pre7/1070_r3036_bug_127930_unpack_timestamp.patch 409
-RMD160 cd138486af48f05b38a7298dcdf264abfffba4ce files/2.1_pre7/1080_ensure_dirs.patch 6363
+RMD160 4f488fb66c84ef61761645fbfdec51c6d87dce3c files/2.1_pre7/1070_r3036_bug_127930_unpack_timestamp.patch 409
+AUX 2.1_pre7/1080_ensure_dirs.patch 6363 RMD160 cd138486af48f05b38a7298dcdf264abfffba4ce SHA1 014baa474cac176ffaa808b41bc41ccaaac481f5 size 6363
 MD5 e5c64d09695d972ae1ae9fe88a8cc625 files/2.1_pre7/1080_ensure_dirs.patch 6363
-RMD160 511103b68cd4479ada8542cfd5897b85d3254f42 files/2.1_pre7/1090_r3055_bug_128284_get_open_fds.patch 794
+RMD160 cd138486af48f05b38a7298dcdf264abfffba4ce files/2.1_pre7/1080_ensure_dirs.patch 6363
+AUX 2.1_pre7/1090_r3055_bug_128284_get_open_fds.patch 794 RMD160 511103b68cd4479ada8542cfd5897b85d3254f42 SHA1 1df123d0dd03e160d3f9a6647a09e55429b1a82d size 794
 MD5 242854cffd82d6fbc3d1fb4fb40a757d files/2.1_pre7/1090_r3055_bug_128284_get_open_fds.patch 794
-RMD160 2db6a407371c931b3bb9f3e216d3f4f3810a06d7 files/2.1_pre7/1100_r3063_bug_128506_distdir_error.patch 4123
+RMD160 511103b68cd4479ada8542cfd5897b85d3254f42 files/2.1_pre7/1090_r3055_bug_128284_get_open_fds.patch 794
+AUX 2.1_pre7/1100_r3063_bug_128506_distdir_error.patch 4123 RMD160 2db6a407371c931b3bb9f3e216d3f4f3810a06d7 SHA1 8062ee0812fdf43fbdbaa9d3067fb0e5862374db size 4123
 MD5 120a029d48d352782e62d6e6522e8243 files/2.1_pre7/1100_r3063_bug_128506_distdir_error.patch 4123
-RMD160 bd77f09bdefaf7ee62b61be7bb54c5906d2e8743 files/2.1_pre7/1110_r3096_emerge_args_validation.patch 716
+RMD160 2db6a407371c931b3bb9f3e216d3f4f3810a06d7 files/2.1_pre7/1100_r3063_bug_128506_distdir_error.patch 4123
+AUX 2.1_pre7/1110_r3096_emerge_args_validation.patch 716 RMD160 bd77f09bdefaf7ee62b61be7bb54c5906d2e8743 SHA1 3f9db2f3c314ddbe20a515f9c9c8d5c6090d0c29 size 716
 MD5 c40cd40ae42b30f1f0154dfd495a1d1f files/2.1_pre7/1110_r3096_emerge_args_validation.patch 716
-RMD160 9f2d19c7a8c5610a3560b1a75f9c48b7c5dd4db7 files/2.1_pre7/1120_r3094_bug_129193.patch 965
+RMD160 bd77f09bdefaf7ee62b61be7bb54c5906d2e8743 files/2.1_pre7/1110_r3096_emerge_args_validation.patch 716
+AUX 2.1_pre7/1120_r3094_bug_129193.patch 965 RMD160 9f2d19c7a8c5610a3560b1a75f9c48b7c5dd4db7 SHA1 00dbb50e89e4f2be69d60bb2f2922136a21796bf size 965
 MD5 faf87b699766ea40753169397c660313 files/2.1_pre7/1120_r3094_bug_129193.patch 965
-RMD160 a546380bbf2431f20dd144e35ca4e20cf73f6418 files/2.1_pre7/1130_r3087_bug_129098.patch 375
+RMD160 9f2d19c7a8c5610a3560b1a75f9c48b7c5dd4db7 files/2.1_pre7/1120_r3094_bug_129193.patch 965
+AUX 2.1_pre7/1130_r3087_bug_129098.patch 375 RMD160 a546380bbf2431f20dd144e35ca4e20cf73f6418 SHA1 2d78abf83dcebf8ed8c2e21bcb1c1c10c81c6f43 size 375
 MD5 0181ace45de180697a0fd8196af21b86 files/2.1_pre7/1130_r3087_bug_129098.patch 375
-RMD160 d0daf475d69fe279d0393ccc09d46d6da7c34abf files/2.1_pre7/1140_r3077_noclean.patch 880
+RMD160 a546380bbf2431f20dd144e35ca4e20cf73f6418 files/2.1_pre7/1130_r3087_bug_129098.patch 375
+AUX 2.1_pre7/1140_r3077_noclean.patch 880 RMD160 d0daf475d69fe279d0393ccc09d46d6da7c34abf SHA1 23b83484e1c6e47a16a26f4628735640a1aff8a5 size 880
 MD5 2c1e907dce4d6034fcf166fd5d024e09 files/2.1_pre7/1140_r3077_noclean.patch 880
-RMD160 3a42b3236117c79c5b47da7707780cb0d14f54bf files/2.1_pre7/1150_r3082_bug_117713.patch 489
+RMD160 d0daf475d69fe279d0393ccc09d46d6da7c34abf files/2.1_pre7/1140_r3077_noclean.patch 880
+AUX 2.1_pre7/1150_r3082_bug_117713.patch 489 RMD160 3a42b3236117c79c5b47da7707780cb0d14f54bf SHA1 8fe94c75f3bd20ad838944e6b74539ac10b14033 size 489
 MD5 84f8ea5fb233fddf4dff78746e708096 files/2.1_pre7/1150_r3082_bug_117713.patch 489
-RMD160 745749df3e40b4fcfb1aff3922a9da4f32653b00 files/2.1_pre7/1160_r3083_bug_126801.patch 527
+RMD160 3a42b3236117c79c5b47da7707780cb0d14f54bf files/2.1_pre7/1150_r3082_bug_117713.patch 489
+AUX 2.1_pre7/1160_r3083_bug_126801.patch 527 RMD160 745749df3e40b4fcfb1aff3922a9da4f32653b00 SHA1 1bec4362cc9ab14ad0ee2f13bf5d3646974f5a49 size 527
 MD5 dfae7fcea89199d2ab8b76525db73a34 files/2.1_pre7/1160_r3083_bug_126801.patch 527
-RMD160 6fb60a634638158bac6dfd06ed1305f56eca3a3e files/2.1_pre7/1170_r3084_bug_128362.patch 560
+RMD160 745749df3e40b4fcfb1aff3922a9da4f32653b00 files/2.1_pre7/1160_r3083_bug_126801.patch 527
+AUX 2.1_pre7/1170_r3084_bug_128362.patch 560 RMD160 6fb60a634638158bac6dfd06ed1305f56eca3a3e SHA1 60a57d665698e628ceed8b65aa50bfd54bf1baa0 size 560
 MD5 3de90958e6ca54932e7b821759630ea8 files/2.1_pre7/1170_r3084_bug_128362.patch 560
-RMD160 b8d015f266501fd1f57c91899c6815de9f9d5685 files/README.RESCUE 137
+RMD160 6fb60a634638158bac6dfd06ed1305f56eca3a3e files/2.1_pre7/1170_r3084_bug_128362.patch 560
+AUX README.RESCUE 137 RMD160 b8d015f266501fd1f57c91899c6815de9f9d5685 SHA1 cfc8fcf81921e265f40b47644916331e0b8f18b9 size 137
 MD5 c906e2e6782e197725b70f84cfe112a4 files/README.RESCUE 137
-RMD160 49e1e3e1f2a2002ff24296f50498930449d4e4b7 files/digest-portage-2.0.51.22-r3 151
-MD5 1afde18626699ccfbc46fdd394c8edeb files/digest-portage-2.0.51.22-r3 151
-RMD160 067425f136dbd09f8e1836c84ed08b7c9a97310e files/digest-portage-2.0.53 145
-MD5 06a5032e82ea02f71b5d2927b6b791f0 files/digest-portage-2.0.53 145
-RMD160 603688a05b8057b777d33ebefb17e1c9fcc4b938 files/digest-portage-2.0.54 145
-MD5 65372f5d0f6b19c94cdae92150cdab01 files/digest-portage-2.0.54 145
-RMD160 990b4d62ad267177500fbaf3b8170c9de54b304f files/digest-portage-2.0.54-r1 306
-MD5 5b857931bd168ec3192114e2ab6c5a72 files/digest-portage-2.0.54-r1 306
-RMD160 e0ea7e4b4dd248a3511aad5abbe3f58fdd740d0e files/digest-portage-2.1_pre10-r1 151
-MD5 e58dcba277a524c51f55d4edc3f339de files/digest-portage-2.1_pre10-r1 151
-RMD160 c927ddb9bfa13c4472abf0123fde195e7d393d86 files/digest-portage-2.1_pre7-r5 149
-MD5 d00b518df8792d6ec867bd936b53894b files/digest-portage-2.1_pre7-r5 149
-RMD160 fabe751bf6110c0cfbd0559b41dc38b44c7e68ac files/digest-portage-2.1_pre9-r5 149
-MD5 082c53e9ecdde29d87558c85841c90a6 files/digest-portage-2.1_pre9-r5 149
-RMD160 4a746aa3a8322240634dbb250d59738d7a4a73d2 files/sed 380
+RMD160 b8d015f266501fd1f57c91899c6815de9f9d5685 files/README.RESCUE 137
+AUX sed 380 RMD160 4a746aa3a8322240634dbb250d59738d7a4a73d2 SHA1 b9a7e3ca9a156823034e1851726f909ed294ddd0 size 380
 MD5 8b1bcd7131b1991baced2a5732fcff60 files/sed 380
-RMD160 addc800a374a637032ce56d1a1928542d5c9ef74 metadata.xml 276
-MD5 dc02eeaf8060043bfa8d483a42696963 metadata.xml 276
-RMD160 3bdf43216d1d70e8547bac9637a394dbcd9a7bd2 portage-2.0.51.22-r3.ebuild 5796
+RMD160 4a746aa3a8322240634dbb250d59738d7a4a73d2 files/sed 380
+DIST portage-2.0.51.22.tar.bz2 257823 RMD160 068a6fbc3e41f7357d1ee4d65894e7903c467cfe size 257823
+DIST portage-2.0.53.tar.bz2 234679 RMD160 c4e8716bdc37bc2611e49b261ac82627aa3e63b9 size 234679
+DIST portage-2.0.54.tar.bz2 234784 RMD160 26c724df242a7d0c44d7fd06067bfcdbc4e3556b size 234784
+DIST portage-2.1_pre10.tar.bz2 265067 RMD160 5fa51f0ecc7ccf5072a9765c81cf3e0a593b1de2 size 265067
+DIST portage-2.1_pre7.tar.bz2 256493 RMD160 543c4090ee7ade75d8005962b55ebbcf57dfd0b5 size 256493
+DIST portage-2.1_pre9.tar.bz2 260738 RMD160 6a31123ff904395c5d22f631241293e808b5f94f size 260738
+DIST portage-patches-2.0.54-1.tar.bz2 4398 RMD160 8b7520b99aec0cb53a117b46345a720f5c7a68c0 size 4398
+EBUILD portage-2.0.51.22-r3.ebuild 5796 RMD160 3bdf43216d1d70e8547bac9637a394dbcd9a7bd2 SHA1 b88b2898eb5ba5b4471a10f8fa82df9b8dc747f0 size 5796
 MD5 4df85686b65f5591383e16bf3d6845ba portage-2.0.51.22-r3.ebuild 5796
-RMD160 fc5dbfd75d72e465614d187dc72ee03d208ed179 portage-2.0.53.ebuild 3694
+RMD160 3bdf43216d1d70e8547bac9637a394dbcd9a7bd2 portage-2.0.51.22-r3.ebuild 5796
+EBUILD portage-2.0.53.ebuild 3694 RMD160 fc5dbfd75d72e465614d187dc72ee03d208ed179 SHA1 ac61309138f1ca8e2054c45b3dd0f1a1fdca93f0 size 3694
 MD5 32e170fcab414ec74bf14dc5a44d581f portage-2.0.53.ebuild 3694
-RMD160 c654aaedcd2c20c78b8ced9ba5407af631819e96 portage-2.0.54-r1.ebuild 3998
+RMD160 fc5dbfd75d72e465614d187dc72ee03d208ed179 portage-2.0.53.ebuild 3694
+EBUILD portage-2.0.54-r1.ebuild 3998 RMD160 c654aaedcd2c20c78b8ced9ba5407af631819e96 SHA1 33ff554a9c1b4021bc982a45c82ea5c5ff6adeef size 3998
 MD5 4f62f37006f604eb560eaa27666edd6e portage-2.0.54-r1.ebuild 3998
-RMD160 4e64e86813b5bbdfbce76d76a56b5afd2305b2f8 portage-2.0.54.ebuild 3891
+RMD160 c654aaedcd2c20c78b8ced9ba5407af631819e96 portage-2.0.54-r1.ebuild 3998
+EBUILD portage-2.0.54.ebuild 3891 RMD160 4e64e86813b5bbdfbce76d76a56b5afd2305b2f8 SHA1 e499b0e717d7de8947bca591ecbcf3b71b744853 size 3891
 MD5 f9c41fcd6a2155552f0cacbe7a62101c portage-2.0.54.ebuild 3891
-RMD160 9fe7a86939b9732e96208da09665d62ec4101003 portage-2.1_pre10-r1.ebuild 5808
-MD5 d45f5c7e54f9f62952f444ef80b35540 portage-2.1_pre10-r1.ebuild 5808
-RMD160 2b36bc22a0b19f920e856d3113131ca374d57a85 portage-2.1_pre7-r5.ebuild 5990
+RMD160 4e64e86813b5bbdfbce76d76a56b5afd2305b2f8 portage-2.0.54.ebuild 3891
+EBUILD portage-2.1_pre10-r2.ebuild 5845 RMD160 0d1119da8d06fbaf96d13e3ae00165b2f00b4803 SHA1 01031a02f4f5a39a01716d6d380fd388c53c8c9d size 5845
+MD5 8771bc2aee69944ffbd079cf77828e68 portage-2.1_pre10-r2.ebuild 5845
+RMD160 0d1119da8d06fbaf96d13e3ae00165b2f00b4803 portage-2.1_pre10-r2.ebuild 5845
+EBUILD portage-2.1_pre7-r5.ebuild 5990 RMD160 2b36bc22a0b19f920e856d3113131ca374d57a85 SHA1 5d3ccabb8bd714b4d05f46e64016507655a6ef71 size 5990
 MD5 6ef8ace6b92df29e8a3f528127f48c06 portage-2.1_pre7-r5.ebuild 5990
-RMD160 71271c686b9178700380fcc5cfdb6a1057f8c338 portage-2.1_pre9-r5.ebuild 6180
+RMD160 2b36bc22a0b19f920e856d3113131ca374d57a85 portage-2.1_pre7-r5.ebuild 5990
+EBUILD portage-2.1_pre9-r5.ebuild 6180 RMD160 71271c686b9178700380fcc5cfdb6a1057f8c338 SHA1 f47b1da18e95a44a17ab37cde4f2d98945bb3f1f size 6180
 MD5 7d6fdf4428877b6d56eca645c9f53698 portage-2.1_pre9-r5.ebuild 6180
+RMD160 71271c686b9178700380fcc5cfdb6a1057f8c338 portage-2.1_pre9-r5.ebuild 6180
+MISC ChangeLog 18610 RMD160 6fc47e30db912e0956c0294e8c04f586f65851af SHA1 97a3118fc785e048c60fc76ec138339e544a619b size 18610
+MD5 8d6d38879f459d2c27b86a2c29563968 ChangeLog 18610
+RMD160 6fc47e30db912e0956c0294e8c04f586f65851af ChangeLog 18610
+MISC metadata.xml 276 RMD160 addc800a374a637032ce56d1a1928542d5c9ef74 SHA1 73bd9b0dacf481b876934c38010be20a91eaf591 size 276
+MD5 dc02eeaf8060043bfa8d483a42696963 metadata.xml 276
+RMD160 addc800a374a637032ce56d1a1928542d5c9ef74 metadata.xml 276
+MD5 1afde18626699ccfbc46fdd394c8edeb files/digest-portage-2.0.51.22-r3 151
+RMD160 49e1e3e1f2a2002ff24296f50498930449d4e4b7 files/digest-portage-2.0.51.22-r3 151
+MD5 06a5032e82ea02f71b5d2927b6b791f0 files/digest-portage-2.0.53 145
+RMD160 067425f136dbd09f8e1836c84ed08b7c9a97310e files/digest-portage-2.0.53 145
+MD5 65372f5d0f6b19c94cdae92150cdab01 files/digest-portage-2.0.54 145
+RMD160 603688a05b8057b777d33ebefb17e1c9fcc4b938 files/digest-portage-2.0.54 145
+MD5 5b857931bd168ec3192114e2ab6c5a72 files/digest-portage-2.0.54-r1 306
+RMD160 990b4d62ad267177500fbaf3b8170c9de54b304f files/digest-portage-2.0.54-r1 306
+MD5 e58dcba277a524c51f55d4edc3f339de files/digest-portage-2.1_pre10-r2 151
+RMD160 e0ea7e4b4dd248a3511aad5abbe3f58fdd740d0e files/digest-portage-2.1_pre10-r2 151
+MD5 d00b518df8792d6ec867bd936b53894b files/digest-portage-2.1_pre7-r5 149
+RMD160 c927ddb9bfa13c4472abf0123fde195e7d393d86 files/digest-portage-2.1_pre7-r5 149
+MD5 082c53e9ecdde29d87558c85841c90a6 files/digest-portage-2.1_pre9-r5 149
+RMD160 fabe751bf6110c0cfbd0559b41dc38b44c7e68ac files/digest-portage-2.1_pre9-r5 149
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEVc5C/ejvha5XGaMRAh/qAJ9nXxzECxx4peCQh1QdobRAInMSDACfWY+0
-NiJsq8CGbsiqqz0UvX6Vbks=
-=AKuW
+iD8DBQFEVd/7/ejvha5XGaMRAsecAJ4iqIyKd2nDl7nzLXw6V//qUwJIYwCg66mN
++7PS+aevi+Jj6vevBsR5UG4=
+=1BRo
 -----END PGP SIGNATURE-----
