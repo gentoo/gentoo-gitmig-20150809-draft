@@ -1,31 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 284bd4205ab2041db896e4a4d0d73dce ChangeLog 2096
-RMD160 8c3d22b6a985f2bd57300e7f65e708a7b360cc72 ChangeLog 2096
-SHA256 e88cf385a00300c2d7a0a85df52b872c14c341269f94cad2eebc73985f97abb6 ChangeLog 2096
+MD5 68a574c3a6d2b6f80e312811aa082032 ChangeLog 2188
 MD5 f272ae0b346de2f2e7081d1e314329e2 files/digest-zopeinterface-3.0.0 68
-RMD160 53c3ebeecf19fbecfc73f2ecff0ccf2985998223 files/digest-zopeinterface-3.0.0 68
-SHA256 cfa80a59df99be5d16a23948e2624efedb410c9977327b98a2657854a33caf49 files/digest-zopeinterface-3.0.0 68
 MD5 385e14da958bbc648c2e3c39f1b34d8e files/digest-zopeinterface-3.0.1 250
-RMD160 5e80a24e7bf1f75e8d899559908675df6c25e2ae files/digest-zopeinterface-3.0.1 250
-SHA256 1c060505086174771edf9590d373c18191a0e69e1fc696f1d32aef7d94d0a39e files/digest-zopeinterface-3.0.1 250
 MD5 bf5b2fab1194b14762c644e97169a595 files/zopeinterface-3.0.1-gcc4.patch 752
-RMD160 860b22689596dbca2862f6ce4815878a78bcd8b6 files/zopeinterface-3.0.1-gcc4.patch 752
-SHA256 f55bb6499317e1107ce3d9bd510c519ba4233bbea4e02be5f926dc6f180339e9 files/zopeinterface-3.0.1-gcc4.patch 752
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-RMD160 5e136d45f811478292bd2ee1798a9b0229ffe468 metadata.xml 161
-SHA256 e69ac7205cbc2e42a297e20d8f08922003390a345bbf50ccf00d1158a1c97cc5 metadata.xml 161
 MD5 ddbc3525d554fa4ac9d83a79802bbffb zopeinterface-3.0.0.ebuild 708
-RMD160 ad167c0c4f17d9abb7c48ff3fedcfd6657b57bc8 zopeinterface-3.0.0.ebuild 708
-SHA256 649977dd79ebddf6795951317c384db0d5ff75617cfdfc9ba50190210b83cf5c zopeinterface-3.0.0.ebuild 708
-MD5 087e734bdeee68296dc401e6377968f4 zopeinterface-3.0.1.ebuild 819
-RMD160 2cbbf46e7e4bb8d5b4fa091beb91e6f81346a10d zopeinterface-3.0.1.ebuild 819
-SHA256 d630c7e149525f0617754d5ffc8e410286037cad9a64247a7d7997ec6f259719 zopeinterface-3.0.1.ebuild 819
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFEENHNJrHF4yAQTrARAsN+AKCX6uB7tzyTXJNhmgDcatsT1L6Y+wCfSr6f
-10w6S9c4cvoadSfkhmi/5Jw=
-=IzZN
------END PGP SIGNATURE-----
+MD5 efb544ed8a790f9c1a9b8932169f4897 zopeinterface-3.0.1.ebuild 825
