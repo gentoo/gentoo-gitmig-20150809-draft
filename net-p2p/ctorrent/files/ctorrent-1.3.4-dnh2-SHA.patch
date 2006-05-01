@@ -1,0 +1,55 @@
+--- configure.ac.orig	2006-05-01 15:07:04.000000000 +0200
++++ configure.ac	2006-05-01 15:13:28.000000000 +0200
+@@ -10,16 +10,19 @@
+ AC_PROG_CC
+ 
+ # Checks for libraries.
+-AC_CHECK_LIB([ssl],[SHA1_Init],,
+-	[AC_CHECK_LIB([crypt],[SHA1_Init],,
++AC_CHECK_HEADERS([openssl/sha.h],
+ 	[AC_CHECK_LIB([crypto],[SHA1_Init],,
+-	[AC_CHECK_LIB([md],[SHA1_Init],,
+-	[AC_DEFINE([USE_STANDALONE_SHA1],,[Define to 1 to use the Steve Reid's public-domain SHA-1 code.])])])])])
++		AC_CHECK_LIB([ssl],[SHA1_Init]))],
++	[AC_CHECK_HEADERS([sha.h],
++		[AC_CHECK_LIB([crypt],[SHA1_Init],,
++			[AC_CHECK_LIB([crypto],[SHA1_Init],,
++				[AC_CHECK_LIB([md],[SHA1_Init])])])],
++	[AC_DEFINE([USE_STANDALONE_SHA1],,[Define to 1 to use the Steve Reid's public-domain SHA-1 code.])])])
+ 
+ # Checks for header files.
+ AC_HEADER_DIRENT
+ AC_HEADER_STDC
+-AC_CHECK_HEADERS([arpa/inet.h fcntl.h limits.h memory.h netdb.h netinet/in.h stdlib.h string.h sys/param.h sys/socket.h sys/time.h unistd.h ssl/sha.h])
++AC_CHECK_HEADERS([arpa/inet.h fcntl.h limits.h memory.h netdb.h netinet/in.h stdlib.h string.h sys/param.h sys/socket.h sys/time.h unistd.h])
+ 
+ # Checks for typedefs, structures, and compiler characteristics.
+ AC_C_CONST
+--- btcontent.cpp.orig	2006-05-01 15:14:18.000000000 +0200
++++ btcontent.cpp	2006-05-01 15:15:19.000000000 +0200
+@@ -9,9 +9,9 @@
+ #else
+ #include <unistd.h>
+ #include <sys/param.h>
+-#if defined(HAVE_LIBCRYPT) || defined(HAVE_LIBMD) || defined(HAVE_LIBCRYPTO)
++#if defined(HAVE_SHA_H)
+ #include <sha.h>
+-#elif defined(HAVE_LIBSSL)
++#elif defined(HAVE_OPENSSL_SHA_H)
+ #include <openssl/sha.h>
+ #endif
+ #endif
+--- btfiles.cpp.orig	2006-05-01 15:15:47.000000000 +0200
++++ btfiles.cpp	2006-05-01 15:16:18.000000000 +0200
+@@ -8,9 +8,9 @@
+ #include <unistd.h>
+ #include <dirent.h>
+ #include <sys/param.h>
+-#if defined(HAVE_LIBCRYPT) || defined(HAVE_LIBMD) || defined(HAVE_LIBCRYPTO)
++#if defined(HAVE_SHA_H)
+ #include <sha.h>
+-#elif defined(HAVE_LIBSSL)
++#elif defined(HAVE_OPENSSL_SHA_H)
+ #include <openssl/sha.h>
+ #endif
+ #endif
