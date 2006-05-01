@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.1_rc1.ebuild,v 1.1 2006/05/01 00:51:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.1_rc1.ebuild,v 1.2 2006/05/01 12:27:31 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -65,7 +65,7 @@ pkg_setup() {
 }
 
 PATCHES="${FILESDIR}/${PN}-6.0-fixmakefiles.patch
-	${FILESDIR}/${PN}-nowrap.patch"
+	${FILESDIR}/${PN}-6.1-nowrap.patch"
 
 REMOVE_SUBDIRS="
 	named named-checkzone named-checkconf rndc rndc-confgen
@@ -74,7 +74,8 @@ REMOVE_SUBDIRS="
 	sendmail praliases editmap mailstats makemap
 	sysinstall cron mailwrapper ntp bsnmpd mount_smbfs
 	tcpdump ndp traceroute pkg_install inetd
-	wpa/wpa_supplicant wpa/hostapd zic"
+	wpa/wpa_supplicant wpa/hostapd wpa/hostapd_cli wpa/wpa_cli
+	zic amd"
 
 src_unpack() {
 	freebsd_src_unpack
@@ -83,11 +84,12 @@ src_unpack() {
 }
 
 src_install() {
-	# By creating these two directories we avoid having to do a
-	# more complex hack inside lpr/SMM.doc and nologin makefiles.
+	# By creating these directories we avoid having to do a
+	# more complex hack
 	dodir /usr/share/doc
 	dodir /sbin
 	dodir /usr/libexec
+	dodir /usr/bin
 
 	# FILESDIR is used by some makefiles which will install files
 	# in the wrong place, just put it in the doc directory.

@@ -1,6 +1,15 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.8 2006/05/01 00:51:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.9 2006/05/01 12:27:31 flameeyes Exp $
+
+  01 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/freebsd-usbin-6.0-fixmakefiles.patch,
+  +files/freebsd-usbin-6.1-nowrap.patch, freebsd-usbin-6.0-r2.ebuild,
+  freebsd-usbin-6.1_rc1.ebuild:
+  Shorten the fixmakefiles patch so that it applies to both 6.0 and 6.1.
+  Update nowrap patch from Robert Sebastian Gerus. Create /usr/bin directory.
+  Remove from 6.1_rc1 hostapd_cli and wpa_cli, remove amd (am-utils package
+  will provide that), block am-utils from 6.0.
 
 *freebsd-usbin-6.1_rc1 (01 May 2006)
 

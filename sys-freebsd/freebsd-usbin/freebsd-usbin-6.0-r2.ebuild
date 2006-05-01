@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.0-r2.ebuild,v 1.1 2006/04/22 13:35:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.0-r2.ebuild,v 1.2 2006/05/01 12:27:31 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -23,7 +23,8 @@ RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 	=sys-freebsd/freebsd-libexec-${RV}*
 	ssl? ( dev-libs/openssl )
 	tcpd? ( sys-apps/tcp-wrappers )
-	net-libs/libpcap"
+	net-libs/libpcap
+	!net-fs/am-utils"
 DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-mk-defs-${RV}*
 	=sys-freebsd/freebsd-sources-${RV}*
