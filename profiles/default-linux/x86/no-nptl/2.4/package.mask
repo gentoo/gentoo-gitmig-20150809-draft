@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.6 2006/04/30 19:09:05 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.7 2006/05/01 12:40:43 wolf31o2 Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # New toys enabled by 2.6 headers
@@ -37,7 +37,7 @@ dev-util/pbuilder
 
 # Masked since linuxwacom is masked
 >=x11-base/xorg-x11-7.0-r1
->=virtua/x11-7.0
+>=virtual/x11-7.0
 
 # Masked since kaffeine is masked
 net-www/kaffeine-mozilla-plugin
