@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.95 2006/04/27 23:35:37 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.96 2006/05/01 01:46:37 anarchy Exp $
+
+  01 May 2006; Jory A. Pratt <anarchy@gentoo.org>
+  +files/mozilla-1.7.13-as-needed.patch, mozilla-1.7.13.ebuild:
+  as-needed support introduced
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-mozilla-1.7.10-r1, files/digest-mozilla-1.7.10-r2,
