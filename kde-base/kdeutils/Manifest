@@ -1,58 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b5276f2176430b8d16ac094f930b370e ChangeLog 18465
-RMD160 f81bdf96b64c2750b1541b8409ccf3b9ebfe449b ChangeLog 18465
-SHA256 304b987ae27374f2882a9d4c991a0a37616e1ce421cafffb08b58db288802211 ChangeLog 18465
+MD5 1dadda494c3563b5094dde0dbe470cbf ChangeLog 18559
 MD5 95a30bd883c334e2f6c5f417ac53c9c9 files/digest-kdeutils-3.3.2 68
-RMD160 16cfcf86c65f59226d561412f94532e5e93a3846 files/digest-kdeutils-3.3.2 68
-SHA256 ac5e5fea94dd408b7fb2e4cb36624c5229e7e4aa94325337a75e47b8bb4ec090 files/digest-kdeutils-3.3.2 68
 MD5 4534ccb147438685553826778c267aac files/digest-kdeutils-3.4.1 68
-RMD160 1f61245c6c453547f200e04e0a111a5e6567647a files/digest-kdeutils-3.4.1 68
-SHA256 d0362a4037cf0ad176421997426d1c6d8b050d386202dc40e1a362a5ed3236dc files/digest-kdeutils-3.4.1 68
 MD5 5ec470abb58c9e1fe99f0410cb14dffd files/digest-kdeutils-3.4.2 68
-RMD160 b14caa4e48d5d900bd707c09b69252c805bbaea1 files/digest-kdeutils-3.4.2 68
-SHA256 15e45713279034b72ae930188984f69b5fc0051194388e9920161e780499cd61 files/digest-kdeutils-3.4.2 68
 MD5 7693585dde083d1c2cc205db10692163 files/digest-kdeutils-3.4.3 68
-RMD160 18e67adb3e5348923b5ccfda95ccecd92a7ac993 files/digest-kdeutils-3.4.3 68
-SHA256 88674a343b751715a238ebdca6ecca37fbb8471c0b519d20d7ade79ae9ea6ed7 files/digest-kdeutils-3.4.3 68
 MD5 7693585dde083d1c2cc205db10692163 files/digest-kdeutils-3.4.3-r1 68
-RMD160 18e67adb3e5348923b5ccfda95ccecd92a7ac993 files/digest-kdeutils-3.4.3-r1 68
-SHA256 88674a343b751715a238ebdca6ecca37fbb8471c0b519d20d7ade79ae9ea6ed7 files/digest-kdeutils-3.4.3-r1 68
 MD5 215488123a318281ac9687845ce3f247 files/digest-kdeutils-3.5.2 250
-RMD160 20ae70b7b70bbb1c67a9f18e73a62d86e3002e51 files/digest-kdeutils-3.5.2 250
-SHA256 f1a2913c3ce615ce4c875426f15752336f065f7ff67391e6243d280db059ec8b files/digest-kdeutils-3.5.2 250
 MD5 e733c7ad1c42938d7b945ea0f6f563ab files/kdeutils-3.4-configure.patch 2539
-RMD160 87107929026fe0abe4325cddd2cc95f3d9919ba1 files/kdeutils-3.4-configure.patch 2539
-SHA256 492eb27d20372e0f4f4cc230708b71bfb2aeaa92e0bbbc2ccc8618b4fdc33b15 files/kdeutils-3.4-configure.patch 2539
 MD5 0ebe4d00a1fd5845db2172027d12f531 files/kdeutils-3.4.3-klaptopdaemon.patch 1895
-RMD160 eeaeb21b03240775fb0127b6b0f871a51c6c834c files/kdeutils-3.4.3-klaptopdaemon.patch 1895
-SHA256 f7534bc07a62556f446f0cc2d607f8907ea2b872b499ae5ea36306694642f9a3 files/kdeutils-3.4.3-klaptopdaemon.patch 1895
 MD5 41ded646b6eaf390c425e03bb9d21df1 kdeutils-3.3.2.ebuild 395
-RMD160 8ca85289005ecf8d1fea559045a3a7dfc7526106 kdeutils-3.3.2.ebuild 395
-SHA256 bdd84706df8137858b5cebe49d1f854b5d7ed986a526b3af431c28e16c14cdad kdeutils-3.3.2.ebuild 395
 MD5 9981cd5b2ebaac3d28a6158e5f4b05c0 kdeutils-3.4.1.ebuild 556
-RMD160 dfc8e33a818c197a79b6470e0669b1c3d1e0793d kdeutils-3.4.1.ebuild 556
-SHA256 354371428c3462b6623b428359a9a4cf1fb037ad84d200d03dfb319948e33293 kdeutils-3.4.1.ebuild 556
 MD5 326614fcd8c1c2f949a93435d1ae2965 kdeutils-3.4.2.ebuild 869
-RMD160 c7461889302a28eca029a50c046b6bdc1df9ed75 kdeutils-3.4.2.ebuild 869
-SHA256 61dc458dc5c646c3e0671586f73e8487c8cddaf80a8a71c972f018520e30a1b6 kdeutils-3.4.2.ebuild 869
 MD5 248e0a0ccda652e5ffa0f04ff077a69c kdeutils-3.4.3-r1.ebuild 986
-RMD160 16c084f12b6dec0b4603def1b30fcfcf75c5a93e kdeutils-3.4.3-r1.ebuild 986
-SHA256 1942ba965011b0fb73e3a33930b990be2654b9d759752b6b4b5cbb415327314e kdeutils-3.4.3-r1.ebuild 986
 MD5 7e2dc2cebe0b2d3f7a7d0f6dc648dc8e kdeutils-3.4.3.ebuild 881
-RMD160 1bd6588b5065b003c56eecdb6aa7d6d585c38670 kdeutils-3.4.3.ebuild 881
-SHA256 3ff2ba747a68221dc14a34f9df8a7e447d618bc18e2e51aa6894b93c84c4cf89 kdeutils-3.4.3.ebuild 881
-MD5 4c454c33243ffaf7a29965e69bbff0df kdeutils-3.5.2.ebuild 1122
-RMD160 ea54d3aa83870b38958e77438841efffe9951535 kdeutils-3.5.2.ebuild 1122
-SHA256 ad1b303c921da80234706465d8a4461ef273a8de07b1db1dc6b3e487e86a5007 kdeutils-3.5.2.ebuild 1122
+MD5 28efe2d183318ace80dda8d117bf34d9 kdeutils-3.5.2.ebuild 1126
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENExHAiZjviIA2XgRAn71AKCBKVQSkkSftIk7xIhZEbSuvr3PnwCdEDIv
-yDD+sI4YzrXB8WpAaMjFeqQ=
-=BpvI
------END PGP SIGNATURE-----

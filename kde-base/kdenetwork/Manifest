@@ -1,76 +1,22 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 506908ddb3e388e24290e385acb8ca6b ChangeLog 25713
-RMD160 f4cfb704fdeabad7ac839ea078b123e8ca231276 ChangeLog 25713
-SHA256 9ab45e09ca460b54f2aa789f21a92277bb976c89303d26531bd2c1acf066c681 ChangeLog 25713
+MD5 7a801dba2d5f382816d3596458c56fa6 ChangeLog 25809
 MD5 c6db44a9df98a9927235b28065adb065 files/digest-kdenetwork-3.3.2-r2 149
-RMD160 4b80037ca2c6007f616ed23141ff56fe1a852dd6 files/digest-kdenetwork-3.3.2-r2 149
-SHA256 d7447e6c9992a6c87a49158e8038856a3ec3f21883ca98ba41f111cfbbc1779c files/digest-kdenetwork-3.3.2-r2 149
 MD5 7e1dab8dea5082d73c25c6ae6b4251b1 files/digest-kdenetwork-3.4.1-r1 149
-RMD160 f1fdde2d47df26240d1b3116bd060933a50d2bd8 files/digest-kdenetwork-3.4.1-r1 149
-SHA256 6b1f23bcb5db63cd085ce464383c9220253122242d3ecd0db3a0fc39c69aa3d5 files/digest-kdenetwork-3.4.1-r1 149
 MD5 a4f0ff59ade2b98019bd0968a4615141 files/digest-kdenetwork-3.4.2 70
-RMD160 4967c567b628fb1581654104f5eeca4d1c4f794d files/digest-kdenetwork-3.4.2 70
-SHA256 b18272eaad89167ad47ab3f9898b40552dc8de365773106a375a0ea1a6aa4eaa files/digest-kdenetwork-3.4.2 70
 MD5 c259b2aa6bede478d4afff87117e9685 files/digest-kdenetwork-3.4.3 70
-RMD160 97f3713f820ecfc60438b413d4bd0f2c3eb2de15 files/digest-kdenetwork-3.4.3 70
-SHA256 213d8e05a8d4b79f787279540d568fd5535467aaf68062b9cc2b8915ac8893ac files/digest-kdenetwork-3.4.3 70
 MD5 490109d9cea36a78cfcb0fbd933c7661 files/digest-kdenetwork-3.5.2 256
-RMD160 2e2c4d19f1af34887fbebf30e14bd3a0cffc7cdd files/digest-kdenetwork-3.5.2 256
-SHA256 62e96a8a0d7a0612c90f34910550fd8cc4fa7dba4d787baafbf765e03edc995b files/digest-kdenetwork-3.5.2 256
 MD5 2db2170b384350ce6c05cd23c0bb21c7 files/disable-meanwhile.diff 351
-RMD160 e97ecb2f463f98a14857352647800d6402629146 files/disable-meanwhile.diff 351
-SHA256 4331c4edfe1e81ad1372dee39940e2fb12bf35b12dc298ebe5b8fb435ad35434 files/disable-meanwhile.diff 351
 MD5 e07566eb35cec7afdfa2e38edf7cdcd1 files/kdenetwork-3.3.2-kwifimanager-configlocation.patch 720
-RMD160 60c858ce2baab04f30e35a1008caccbc3967a8a4 files/kdenetwork-3.3.2-kwifimanager-configlocation.patch 720
-SHA256 de29cca2d9c5b789f5cc458bce7e5c0f2d4dc451f89354c6f7018ef5625c8c51 files/kdenetwork-3.3.2-kwifimanager-configlocation.patch 720
 MD5 e9d8998d39d625a80749a027a9a8e303 files/kdenetwork-3.4-configure.patch 5768
-RMD160 6634c9e166ba682a6d8f40818d794b7436844061 files/kdenetwork-3.4-configure.patch 5768
-SHA256 8c84928fc81aaf8b274bf89c4d425bc9212922f9018fc15f0c1a8840818f2532 files/kdenetwork-3.4-configure.patch 5768
 MD5 89d2cd31a99e9845da106b83137c3722 files/kppp-3.5.0-bindnow.patch 514
-RMD160 8cb2d6f96a8ba6385951044d2a48a312cdf6acc5 files/kppp-3.5.0-bindnow.patch 514
-SHA256 e0aa9847ee3157059d61641d944f4d61a050000c8471b31909f8cc0daf5730b9 files/kppp-3.5.0-bindnow.patch 514
 MD5 732cc856c1e48585781d79173f5d271b files/lisa 538
-RMD160 75e111f551821d5928629c48d05524132122032a files/lisa 538
-SHA256 6df8a68ce48f87be12973f05ed7c63c0f68f7df97511a4424c28302cf3d26a56 files/lisa 538
 MD5 c37a088365b0b16c49df76f3e5848e33 files/lisa-3.5.0-bindnow.patch 483
-RMD160 5d03c3fb0d1dd9f16e6a2665b8713e0ea66cd431 files/lisa-3.5.0-bindnow.patch 483
-SHA256 ec2890dc6efe87c19a2ecff95f7ac15f6da4dad65fc03b194b834506a6efa2de files/lisa-3.5.0-bindnow.patch 483
 MD5 d97100af0cb95f733660b7a61492d71f files/lisa.conf 452
-RMD160 810ec2446ed1c366df69b5ecbfb77b3fc55f05fe files/lisa.conf 452
-SHA256 e2192aa98a6f8306e0b628a32b85a67ccd2e61c5c0f6f49af7d709eac65db9e1 files/lisa.conf 452
 MD5 28c3ba792f8a0ce436216062cefa7908 files/reslisa 549
-RMD160 74d8eeaf4aa1165a98de69f2cdec48c270183708 files/reslisa 549
-SHA256 59ff67eb6d87cbef4d6c6e4f8a7984329d4689d50178870b88e207f86edb3bbe files/reslisa 549
 MD5 3939e85ee43aba114cc3ece4194145b6 files/reslisa.conf 340
-RMD160 ead5e1eeaf3fe3497b180951cbb5561c7ec59328 files/reslisa.conf 340
-SHA256 2ed9e179353f721bdac902ce7493119c04e59823e395cde31af31dbfa9a161c7 files/reslisa.conf 340
 MD5 426360bf289efe11a499f1fa89bb2f4b files/wireless-extensions-api.diff 528
-RMD160 6250caeb6307a58ab669762305ed0b9880242418 files/wireless-extensions-api.diff 528
-SHA256 59e4b80e515cc34b9267e3e38f38fa26dd98cf19f6e2dbffa0eab31df5671537 files/wireless-extensions-api.diff 528
 MD5 d44b981fb4a9806ede924d2a5d7ab585 kdenetwork-3.3.2-r2.ebuild 1641
-RMD160 5f526cbf0e6c117e1b28eeb05576ff906b56da5b kdenetwork-3.3.2-r2.ebuild 1641
-SHA256 5cc0a0fd41ae99e57fa19c060272fae5ec98ace04a4694a4d39e82ae8e8f85dd kdenetwork-3.3.2-r2.ebuild 1641
 MD5 703982710ee8234b723875536043674f kdenetwork-3.4.1-r1.ebuild 1714
-RMD160 29b3efc677182fd6851771b2f1151b5d61638c7a kdenetwork-3.4.1-r1.ebuild 1714
-SHA256 b48f97083cafdcdcf46fce2e78b722c308176eea326aa7909d89ddb033ad8d33 kdenetwork-3.4.1-r1.ebuild 1714
 MD5 f01a7eb66338a4264475bdd11347ac4b kdenetwork-3.4.2.ebuild 1794
-RMD160 e5a8271b70da3509111615b4e53b169d3a879ab1 kdenetwork-3.4.2.ebuild 1794
-SHA256 a2c9d90d84911ce6fd2cc557ce4a51e25dbd094d293ba185db27e224ade3f91f kdenetwork-3.4.2.ebuild 1794
 MD5 9c35b65a5ce0b855fadff2e29a2bec7a kdenetwork-3.4.3.ebuild 1765
-RMD160 7965b6669c5cd2b55552e70f3984274777034b8d kdenetwork-3.4.3.ebuild 1765
-SHA256 752179d515e1b958b013b8b89c6b9976b27d35813ab82321ceb05e637d55cd0a kdenetwork-3.4.3.ebuild 1765
-MD5 d77b40e60015c4950dd16a92e2924fce kdenetwork-3.5.2.ebuild 2041
-RMD160 bfbd29d118066b40e6c7d8d94884489cb859ee5a kdenetwork-3.5.2.ebuild 2041
-SHA256 018c03d72efba17d181b16885acc1f36fff90a257afb090d995754743a80e00e kdenetwork-3.5.2.ebuild 2041
+MD5 f2b9bc6b5760ca0c23ec5989a26eec42 kdenetwork-3.5.2.ebuild 2045
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENEuTAiZjviIA2XgRAkdyAJ4wK07rMFouw6o73yMua9RcAV//UwCePAPy
-ur0SjSZhXaBl15Zb6ojxmwk=
-=C4b/
------END PGP SIGNATURE-----
