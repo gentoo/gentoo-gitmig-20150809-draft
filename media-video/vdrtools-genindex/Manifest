@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e5de3a25d1b663e0e15d3b29be6509c7 ChangeLog 439
+MD5 4ae72cfff24df99a0467e5c50e0ea817 files/digest-vdrtools-genindex-0.1.2 65
+MD5 5ba3511702ad011448e17cad7a30c9eb metadata.xml 292
+MD5 e609adea09222e0434a39fe60bbff1e4 vdrtools-genindex-0.1.2.ebuild 625
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFEViludn07HTTCgIoRAsmOAKC000u+kArgRXPiyiTZMsYCAgixHgCfQY7j
+3/i7dIfgongIhUcKZDzaN88=
+=g3u7
+-----END PGP SIGNATURE-----
