@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/isync
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/ChangeLog,v 1.5 2005/09/05 19:48:41 ticho Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/ChangeLog,v 1.6 2006/05/01 21:57:19 ticho Exp $
+
+*isync-1.0.2 (01 May 2006)
+
+  01 May 2006; Andrej Kacian <ticho@gentoo.org> +isync-1.0.2.ebuild:
+  Version bump. Closes bug #131763, reported by Milan Holzäpfel <public at
+  mjh.name>.
 
   05 Sep 2005; Andrej Kacian <ticho@gentoo.org> isync-1.0.1.ebuild:
   Stable on x86.
