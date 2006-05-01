@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.5.0-r2.ebuild,v 1.1 2006/04/30 17:42:53 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.5.0-r2.ebuild,v 1.2 2006/05/01 22:05:45 stuart Exp $
 
 inherit eutils
 
@@ -57,7 +57,7 @@ src_compile() {
 
 src_install() {
 	into /usr/NX
-	dolib libXcomp.so*
+	dolib.so libXcomp.so*
 	if [[ $(get_libdir) != lib ]]; then
 		# necessary for nxclient to work, it seems
 		ln -s "$(get_libdir)" ${D}/usr/NX/lib
