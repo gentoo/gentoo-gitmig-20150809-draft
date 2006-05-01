@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.2 2006/04/27 15:38:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.3 2006/05/01 22:22:54 markusle Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools
 
@@ -82,7 +82,7 @@ src_compile() {
 		$(use_with ocaml) \
 		$(use_with java ) \
 		${myopts} || die "econf failed"
-	env HOME="${S}" emake all || die "emake failed"
+	env HOME="${S}" emake -j1 all || die "emake failed"
 }
 
 src_install() {
