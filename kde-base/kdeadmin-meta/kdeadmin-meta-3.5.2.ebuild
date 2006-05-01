@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/kdeadmin-meta-3.5.2.ebuild,v 1.2 2006/03/27 21:55:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/kdeadmin-meta-3.5.2.ebuild,v 1.3 2006/05/01 14:46:10 carlo Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -12,13 +12,14 @@ SLOT="3.5"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-RDEPEND="
-$(deprange 3.5.1 $MAXKDEVER kde-base/kcron)
-$(deprange 3.5.1 $MAXKDEVER kde-base/kdat)
-$(deprange 3.5.1 $MAXKDEVER kde-base/kdeadmin-kfile-plugins)
-$(deprange $PV $MAXKDEVER kde-base/kuser)
-x86? ( $(deprange 3.5.1 $MAXKDEVER kde-base/lilo-config) )
-$(deprange 3.5.0 $MAXKDEVER kde-base/secpolicy)"
+RDEPEND="$(deprange 3.5.1 $MAXKDEVER kde-base/kcron)
+	$(deprange 3.5.1 $MAXKDEVER kde-base/kdeadmin-kfile-plugins)
+	$(deprange $PV $MAXKDEVER kde-base/kuser)
+	x86? ( $(deprange 3.5.1 $MAXKDEVER kde-base/lilo-config) )
+	amd64? ( $(deprange 3.5.1 $MAXKDEVER kde-base/lilo-config) )
+	$(deprange 3.5.0 $MAXKDEVER kde-base/secpolicy)"
 
-# NOTE: kpackage, ksysv are useless on a normal gentoo system and so aren't included
-# in the above list. However, packages do nominally exist for them.
+# NOTE: KPackage, KSysv are useless on a normal gentoo system and so aren't included
+# in the above list. KDat is broken and unmaintained. However, packages do nominally 
+# exist for them.
+

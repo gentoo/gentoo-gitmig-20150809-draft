@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeadmin-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.42 2006/04/05 22:41:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.43 2006/05/01 14:46:10 carlo Exp $
+
+  01 May 2006; Carsten Lohrke <carlo@gentoo.org> kdeadmin-meta-3.5.2.ebuild:
+  Remove KDat, since it is rather broken and unmaintained. Install lilo-config
+  on amd64.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kdeadmin-meta-3.5.0.ebuild, -kdeadmin-meta-3.5.1.ebuild:

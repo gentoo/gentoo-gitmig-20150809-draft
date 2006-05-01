@@ -1,40 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6434dad9a262e6ae0b2d9ffd3a0653bd ChangeLog 5740
-RMD160 44ceab2d9bfa94d8d780707d4b656247d0560932 ChangeLog 5740
-SHA256 c97af34ac9ea0878197b9de08f088e403e08f1632ced48fdd6d6e8f25851171f ChangeLog 5740
+MD5 b7cf0233a31398a3718413c5f71c1f18 ChangeLog 5905
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.4.1 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeadmin-meta-3.4.1 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeadmin-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.4.2 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeadmin-meta-3.4.2 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeadmin-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.4.3 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeadmin-meta-3.4.3 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeadmin-meta-3.4.3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5.2 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeadmin-meta-3.5.2 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeadmin-meta-3.5.2 0
 MD5 4532e72b8eda62bcbe43262c9721a833 kdeadmin-meta-3.4.1.ebuild 901
-RMD160 f15f88fa13e0652f2b4121d62d2c7da3bd08ebe4 kdeadmin-meta-3.4.1.ebuild 901
-SHA256 6da4e5e7e7e8b707a039f3625e2d47139710bd94de94772a1493519c0b3d86b4 kdeadmin-meta-3.4.1.ebuild 901
 MD5 9d364fed497b9fa2907c0618205fe8eb kdeadmin-meta-3.4.2.ebuild 922
-RMD160 4586c945f3e1a3f40d15d62bfd8c5029a2ad0125 kdeadmin-meta-3.4.2.ebuild 922
-SHA256 3be7f825240e6271c321f69275e4cfee96832a02df43f41cecf7f49517de0184 kdeadmin-meta-3.4.2.ebuild 922
 MD5 d240d0098a3b859b9f03ea7872d4b106 kdeadmin-meta-3.4.3.ebuild 923
-RMD160 1c19b682697c6a981f69cecd7a418cf6d74a4536 kdeadmin-meta-3.4.3.ebuild 923
-SHA256 7e3aa56a9523ebb77835b39df0eaa45a8e9898df4f55ea48b1a754645ee8c2a8 kdeadmin-meta-3.4.3.ebuild 923
-MD5 e653ade21975ea56db333ae9da931aab kdeadmin-meta-3.5.2.ebuild 932
-RMD160 0732bc7db755ead3c9c06d8e7a1fd7c542478aff kdeadmin-meta-3.5.2.ebuild 932
-SHA256 c53b5493044cda9ad5b0a38e4995ab44b7cbe269c85362253d838c887ae3b22b kdeadmin-meta-3.5.2.ebuild 932
+MD5 9154fc8410e985404e172468a0f38da7 kdeadmin-meta-3.5.2.ebuild 988
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENEdLAiZjviIA2XgRAtEtAKDflRYFHRWMuFPi5DsyFobBzelVeACffZXM
-3mk5gytP2vmQpczAXYaetF4=
-=0DXN
------END PGP SIGNATURE-----
