@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.0-r1.ebuild,v 1.2 2006/01/23 20:52:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.0-r1.ebuild,v 1.3 2006/05/01 11:58:19 corsair Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.gnu.org/gnu/classpathx/activation-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="doc source"
 
 DEPEND=">=virtual/jdk-1.4
