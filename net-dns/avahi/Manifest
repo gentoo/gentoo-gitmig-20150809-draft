@@ -1,25 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9f54f24c7ec24ad519f16237857393ee ChangeLog 5354
-RMD160 05feb4adca9e1781dbc80b2f4b18ad7adb4a65b1 ChangeLog 5354
-SHA256 5e3973f837acb371f8535e794ffe0b3cba58cfc8ffb1d61758c82a1b55e79f25 ChangeLog 5354
-MD5 6e77bc9faf55444a041cdb6a5bb77ead avahi-0.6.9.ebuild 2921
-RMD160 a08152bebe2674309316c1ccda52039b736101ad avahi-0.6.9.ebuild 2921
-SHA256 5bf1f3c680020f80c0a882baef8c8cb7c26f12bf35dafd8526fa5771764e66e6 avahi-0.6.9.ebuild 2921
+MD5 5ef6299fa9bfe935e0128077e54ac2e9 ChangeLog 5438
+MD5 8c178bf541598be55b258ec274b71921 avahi-0.6.9.ebuild 2927
 MD5 317c28eba6516a18140aa8e2cb26d618 files/avahi-0.6.1-no-ipv6.patch 362
-RMD160 7c90e7b3fadbd880d18db23dbe54ab6824be53d1 files/avahi-0.6.1-no-ipv6.patch 362
-SHA256 e00bd75a9770acf68c0f92cb8594b62acb0d60577e7dbeb1b7680e250b4d39b4 files/avahi-0.6.1-no-ipv6.patch 362
 MD5 2290f3ed38ccc8b5f1b88b3da0020a3d files/digest-avahi-0.6.9 235
-RMD160 6620fe5917030d7de8d3a86b9f8fa36bb3bf0941 files/digest-avahi-0.6.9 235
-SHA256 fc5b5847c423142c20ab4c76cbab55db1c1acc0456b6b8794ead358f96575766 files/digest-avahi-0.6.9 235
 MD5 b8a99a5b7fa586fe9cabbacc87d88bfe metadata.xml 223
-RMD160 93a79d3a583130d803a2a8da0052f43d102ecfc2 metadata.xml 223
-SHA256 87de3da2e3f5d81839d9e3658af1703267195984bdee92aa032f1d429acc096d metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFERUW3I1lqEGTUzyQRAsAnAKC+m0NEW9lq1s6MJWzuP2TFpjo9lACfSBVq
-uXcFUGFfQJQvw1n20WhDpy0=
-=JWtz
------END PGP SIGNATURE-----
