@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.129 2006/04/29 17:26:47 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.130 2006/05/01 08:48:11 zmedico Exp $
+
+*portage-2.1_pre10-r1 (01 May 2006)
+
+  01 May 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre10-r1.ebuild,
+  +files/2.1/pre10/1000_r3291_bug_73350_configroot.patch,
+  +files/2.1/pre10/1010_r3292_bug_131820_noauto.patch:
+  Bug fix revbump for #73350 and #131820.
 
   29 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-portage-2.0.51.22-r3, files/digest-portage-2.0.53,
