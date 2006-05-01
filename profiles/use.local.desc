@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1880 2006/04/30 19:49:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1881 2006/05/01 13:56:52 carlo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -528,6 +528,7 @@ gnustep-base/gnustep-make:layout-from-conf-file - Layout GNUstep according to /e
 gnustep-base/gnustep-make:layout-osx-like - Layout GNUstep FHS like OSX's (violates Linux FHS, but arguably more NeXT-like); User, Local, Network, and System are set to (in order): "~", "/", "/Network", "/System"
 gnustep-base/gnustep-make:non-flattened - do not flatten launch and library paths for GNUstep packages allowing executable within a .app to be launched based on processor type
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard.
+kde-base/juk:akode - Support for the aKode audio-decoding frame-work.
 kde-base/juk:musicbrainz - Support for MusicBrainz audio lookups (musicbrainz.org).
 kde-base/kaddressbook:gnokii - Address synchronization with mobile phones via Gnokii.
 kde-base/kbugbuster:kcal - Support for kcal (calendar) format.
@@ -563,6 +564,7 @@ kde-base/kopete:sametime - Support for the Sametime protocol for instant messagi
 kde-base/kpdf:nodrm - Disable DRM support in KPDF.
 kde-base/krdc:rdesktop - Support for the remote desktop protocol.
 kde-base/ksysguard:zeroconf - Support for DNS Service Discovery (DNS-SD).
+kde-base/kttsd:akode - Support for the aKode audio-decoding frame-work.
 kde-base/kwin:xcomposite - Support for Xorg composite extension.
 kde-misc/kxdocker:net - Enable network support
 kde-misc/tellico:cddb - Access cddb servers to retrieve and submit information about compact discs.
@@ -726,7 +728,7 @@ media-radio/xastir:festival - Enable festival support
 media-radio/xastir:shape - Enable shapelib support
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
 media-sound/alsa-tools:fltk - Enable FLTK support
-media-sound/amarok:akode - Enable support for akode backend
+media-sound/amarok:akode - Support for the aKode audio-decoding frame-work.
 media-sound/amarok:exscalibar - Enable moodbar/exscalibar support
 media-sound/amarok:ifp - Enable support for iRiver devices access through libifp
 media-sound/amarok:ipod - Enable support for iPod devices access through libgpod
