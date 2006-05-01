@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-share
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.6 2006/05/01 02:21:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.7 2006/05/01 21:14:30 flameeyes Exp $
+
+  01 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-share-6.1_rc1.ebuild:
+  Export ESED to BSD sed as per bug #131299.
 
 *freebsd-share-6.1_rc1 (01 May 2006)
 

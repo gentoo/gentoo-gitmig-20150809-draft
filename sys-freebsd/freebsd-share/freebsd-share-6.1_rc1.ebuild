@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-6.1_rc1.ebuild,v 1.1 2006/05/01 02:21:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-6.1_rc1.ebuild,v 1.2 2006/05/01 21:14:30 flameeyes Exp $
 
 inherit bsdmk freebsd
 
@@ -53,6 +53,8 @@ src_unpack() {
 }
 
 src_compile() {
+	export ESED="/usr/bin/sed"
+
 	# This is a groff problem and not a -shared problem.
 	export GROFF_TMAC_PATH="/usr/share/tmac/:/usr/share/groff/1.19.1/tmac/"
 	mkmake || die "emake failed"
