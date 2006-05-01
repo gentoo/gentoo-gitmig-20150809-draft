@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/webcpp/webcpp-0.8.2.ebuild,v 1.4 2005/10/07 14:47:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/webcpp/webcpp-0.8.2.ebuild,v 1.5 2006/05/01 01:58:52 weeve Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/webcpp/${P}-src.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc alpha ~mips ~hppa"
+KEYWORDS="alpha ~hppa ~mips ppc sparc x86"
 
 RDEPEND="sys-devel/gcc
 	virtual/libc"
