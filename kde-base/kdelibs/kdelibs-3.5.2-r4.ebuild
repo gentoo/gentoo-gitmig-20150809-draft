@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r4.ebuild,v 1.1 2006/04/21 18:39:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r4.ebuild,v 1.2 2006/05/01 15:21:33 carlo Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="acl alsa arts cups doc jpeg2k kerberos openexr spell ssl tiff zeroconf"
+IUSE="acl alsa arts cups doc jpeg2k kerberos legacyssl openexr spell ssl tiff zeroconf"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
@@ -55,6 +55,24 @@ PATCHES="${FILESDIR}/${PN}-3.5.0-bindnow.patch
 	${FILESDIR}/kdelibs-3.5.2-kio-fixes.diff
 	${FILESDIR}/kdelibs-3.5.2-kate-fixes-2.diff
 	${FILESDIR}/kdelibs-3.5.2-misc-fixes-2.diff"
+
+pkg_setup() {
+	if use legacyssl ; then
+		echo ""
+		eerror "Warning:"
+		ewarn "You have the legacyssl use flag enabled, which fixes issues with some broken"
+		ewarn "sites, but breaks others instead. It is strongly discouraged to use it."
+		ewarn "For more information, see bug #128922."
+		echo ""
+	fi
+}
+
+src_unpack() {
+	kde_src_unpack
+	if use legacyssl ; then
+		epatch ${FILESDIR}/kdelibs-3.5.2-kssl-3des.patch || die "Patch did not apply."
+	fi
+}
 
 src_compile() {
 	rm -f ${S}/configure

@@ -1,0 +1,15 @@
+--- kdelibs-3.5.2/kio/kssl/ksslsettings.cc.old	2006-04-05 23:20:42.000000000 +0930
++++ kdelibs-3.5.2/kio/kssl/ksslsettings.cc	2006-04-05 23:21:27.000000000 +0930
+@@ -179,11 +179,10 @@
+   }
+ 
+   // Remove any ADH ciphers as per RFC2246
+-  // Also remove NULL ciphers and 168bit ciphers
+   for (unsigned int i = 0; i < cipherSort.count(); i++) {
+     CipherNode *j = 0L;
+     while ((j = cipherSort.at(i)) != 0L) {
+-      if (j->name.contains("ADH-") || j->name.contains("NULL-") || j->name.contains("DES-CBC3-SHA") || j->name.contains("FZA")) {
++      if (j->name.contains("ADH-")) {
+         cipherSort.remove(j);
+       } else {
+         break;
