@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jamvm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.16 2006/04/02 14:50:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.17 2006/05/01 12:16:37 corsair Exp $
+
+  01 May 2006; Markus Rothe <corsair@gentoo.org> jamvm-1.4.2.ebuild:
+  Added ~ppc64
 
   02 Apr 2006; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Added java as the herd.

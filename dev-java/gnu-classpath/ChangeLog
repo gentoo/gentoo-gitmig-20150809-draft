@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.54 2006/04/27 15:21:19 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.55 2006/05/01 12:15:21 corsair Exp $
+
+  01 May 2006; Markus Rothe <corsair@gentoo.org> gnu-classpath-0.90.ebuild:
+  Added ~ppc64
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-gnu-classpath-0.18, files/digest-gnu-classpath-0.19,
