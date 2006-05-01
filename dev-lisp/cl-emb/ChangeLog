@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-emb
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-emb/ChangeLog,v 1.8 2005/10/06 18:31:35 mkennedy Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-emb/ChangeLog,v 1.9 2006/05/01 20:10:38 mkennedy Exp $
+
+*cl-emb-0.4.3 (01 May 2006)
+
+  01 May 2006; Matthew Kennedy <mkennedy@gentoo.org> +cl-emb-0.4.3.ebuild:
+  New upstream version.
 
 *cl-emb-0.4.2 (06 Oct 2005)
 
