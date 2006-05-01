@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX 0280_fix-sysinstall.patch 2072 RMD160 d3e67fcd3a88a1fa16f1e27e23cf239edde2a84a SHA1 e8c9483b6f93bd1bfba124ced9853a47b263015c SHA256 077ef38aca1f74c1c84bde11654180673a2596ffd2d15d939e8ad1dd0f08d8ba size 2072
 MD5 8e0ee678028d0d9ef52677d738c76856 files/0280_fix-sysinstall.patch 2072
 RMD160 d3e67fcd3a88a1fa16f1e27e23cf239edde2a84a files/0280_fix-sysinstall.patch 2072
@@ -22,10 +19,10 @@ EBUILD armagetronad-0.2.7.1.ebuild 2041 RMD160 755c03bf0793bd5fca41f9dee589e9b83
 MD5 7cf5f4a1d194616d98e9a1e272f901fc armagetronad-0.2.7.1.ebuild 2041
 RMD160 755c03bf0793bd5fca41f9dee589e9b835eef8fe armagetronad-0.2.7.1.ebuild 2041
 SHA256 3f9ab00924ed7c9b567b5532003535bf8c94004fda12e82b2fa24ce53c80bc32 armagetronad-0.2.7.1.ebuild 2041
-EBUILD armagetronad-0.2.8.1.ebuild 5919 RMD160 6186850becf9b1e510efcf81ac37d41e5b79b2f1 SHA1 acf27c0f4ae9341ad5268e54c532a220d891612c SHA256 c11574fcfe958046bdcc6f0235d46a1765daa1376578eb13111f9590628c00c2 size 5919
-MD5 0a8bf5a8e216dc70503a477a4ec4a1f5 armagetronad-0.2.8.1.ebuild 5919
-RMD160 6186850becf9b1e510efcf81ac37d41e5b79b2f1 armagetronad-0.2.8.1.ebuild 5919
-SHA256 c11574fcfe958046bdcc6f0235d46a1765daa1376578eb13111f9590628c00c2 armagetronad-0.2.8.1.ebuild 5919
+EBUILD armagetronad-0.2.8.1.ebuild 5921 RMD160 9b8bf7c466f30107e46d13acefa20f5cf0f21b8d SHA1 eeeaacedaf18873115d753cd45b0adaebd018fef SHA256 783245eabd6e0e6c68afa96fbaad0afa1e5228137880cec34e2bd5c5ea3395fb size 5921
+MD5 ac22ddb0021e1a5e1221a8e774a83da9 armagetronad-0.2.8.1.ebuild 5921
+RMD160 9b8bf7c466f30107e46d13acefa20f5cf0f21b8d armagetronad-0.2.8.1.ebuild 5921
+SHA256 783245eabd6e0e6c68afa96fbaad0afa1e5228137880cec34e2bd5c5ea3395fb armagetronad-0.2.8.1.ebuild 5921
 MISC ChangeLog 1299 RMD160 9619e66ef17ca95f6adfdd351777ae8b0669dab7 SHA1 b8b5963d8a73db8afdaf6eb1eb2b07a8e37b97a4 SHA256 eb2ded61e8c6fb4c82cb58b164d7f711a0904c201846f557f6d66c39d00e0991 size 1299
 MD5 b85890372597a396cabe99d2df1f41ef ChangeLog 1299
 RMD160 9619e66ef17ca95f6adfdd351777ae8b0669dab7 ChangeLog 1299
@@ -40,10 +37,3 @@ SHA256 eb2d6d187d6fa52f198821a28d56e1d5ccd81529b6e6beecd063266580c2417a files/di
 MD5 2fa12a5deb55a19ac0a123d40bb98560 files/digest-armagetronad-0.2.8.1 628
 RMD160 a38f6c97e3a8ad28a8a98a3ec06b1e2b1aea8445 files/digest-armagetronad-0.2.8.1 628
 SHA256 bde4258f0704bd5438afa17522d959c4ecfb11ea73f22ae387d1aaf70fdb9e44 files/digest-armagetronad-0.2.8.1 628
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEVRY9NJowsmZ/PzARApe+AKCP76wa7Mx/9Mce0K1hkeRi3PdQuwCeKF72
-IX+BzuTTrofS7ifZ/Y/Dq4w=
-=8kD2
------END PGP SIGNATURE-----

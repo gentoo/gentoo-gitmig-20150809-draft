@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.8.1.ebuild,v 1.2 2006/04/30 19:55:30 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.8.1.ebuild,v 1.3 2006/05/01 02:51:37 mr_bones_ Exp $
 
 inherit flag-o-matic eutils games
 
@@ -23,8 +23,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug dedicated krawall opengl moviepack moviesounds"
 
 GLDEPS="|| (
-			virtual/x11
 			x11-libs/libX11
+			virtual/x11
 		)
 		virtual/glu
 		virtual/opengl
