@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-pg
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pg/ChangeLog,v 1.8 2005/05/24 18:48:34 mkennedy Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pg/ChangeLog,v 1.9 2006/05/01 20:43:46 mkennedy Exp $
+
+*cl-pg-20060207 (01 May 2006)
+
+  01 May 2006; Matthew Kennedy <mkennedy@gentoo.org> +cl-pg-20060207.ebuild:
+  New upstream and synchronize with Debian version.
 
   24 May 2005; <mkennedy@gentoo.org> cl-pg-20050202.ebuild:
   Keywording ~sparc
