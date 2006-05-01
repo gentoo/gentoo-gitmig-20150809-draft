@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/XML-XSH
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH/ChangeLog,v 1.6 2005/01/01 13:36:59 eradicator Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH/ChangeLog,v 1.7 2006/05/01 19:26:00 mcummings Exp $
+
+  01 May 2006; <mcumming@gentoo.org> XML-XSH-1.6.ebuild, XML-XSH-1.8.2.ebuild:
+  Adding block against xml-xsh2 - bug 131497
 
   27 Feb 2004; Michael Cummings <mcummings@gentoo.org> XML-XSH-1.8.2.ebuild:
   Masked for 147 days without bugs
