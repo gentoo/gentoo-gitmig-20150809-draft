@@ -1,0 +1,71 @@
+Index: sbin/rc-services.sh
+===================================================================
+--- sbin/rc-services.sh	(revision 1993)
++++ sbin/rc-services.sh	(working copy)
+@@ -725,38 +725,28 @@
+ #   Get and sort the dependencies of given service[s].
+ #
+ trace_dependencies() {
+-	local -a services=( "$@" ) net_deps
+-	local i j net_services x
++	local -a services=( "$@" ) net_deps=()
++	local i= j= net_services= x=
+ 
+ 	if [[ $1 == -* ]]; then
+ 		deptype="${1/-/}"
+-		if net_service "${myservice}" ; then
+-			services=( "net" "${myservice}" )
++		if net_service "${SVCNAME}" ; then
++			services=( "net" "${SVCNAME}" )
+ 		else
+-			services=( "${myservice}" )
++			services=( "${SVCNAME}" )
+ 		fi
+ 	fi
+ 
+-	net_services="$( cd "${svcdir}"/started; ls net.* 2>/dev/null )"
+-	# If no net services are running or we only have net.lo up, then
+-	# assume we are in boot runlevel or starting a new runlevel
+-	if [[ -z ${net_services} || ${net_services} == "net.lo" ]]; then
+-		get_net_services() {
+-			local runlevel="$1"
+-
+-			if [[ -d "/etc/runlevels/${runlevel}" ]] ; then
+-				cd "/etc/runlevels/${runlevel}"
+-				ls net.* 2>/dev/null
+-			fi
+-		}
+-
+-		local mylevel="${BOOTLEVEL}"
+-		local x="$( get_net_services "${mylevel}" )"
+-
+-		[[ -f "${svcdir}/softlevel" ]] && mylevel="$( < "${svcdir}/softlevel" )"
+-		[[ ${BOOTLEVEL} != "${mylevel}" ]] && \
+-			local x="${x} $( get_net_services "${mylevel}" )"
+-		[[ -n ${x} ]] && net_services="${x}"
++	if is_runlevel_stop ; then
++		for x in $(dolisting "${svcdir}/started/net.*") \
++			$(dolisting "${svcdir}/inactive/net.*") ; do
++			net_services="${net_services} ${x##*/}"
++		done
++	elif is_runlevel_start || ! is_net_up ; then
++		for x in $(dolisting "/etc/runlevels/${BOOTLEVEL}/net.*") \
++			$(dolisting "/etc/runlevels/${SOFTLEVEL}/net.*") ; do
++			net_services="${net_services} ${x##*/}"
++		done
+ 	fi
+ 
+ 	# Cache the generic "net" depends
+@@ -808,10 +798,10 @@
+ 	if [[ -n ${deptype} ]] ; then
+ 		# If deptype is set, we do not want the name of this service
+ 		x=" ${services[@]} "
+-		services=( ${x// ${myservice} / } )
++		services=( ${x// ${SVCNAME} / } )
+ 
+ 		# If its a net service, do not include "net"
+-		if net_service "${myservice}" ; then
++		if net_service "${SVCNAME}" ; then
+ 			x=" ${services[@]} "
+ 			sorted=( ${services// net / } )
+ 		fi
