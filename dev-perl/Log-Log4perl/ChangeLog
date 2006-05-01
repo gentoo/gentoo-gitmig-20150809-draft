@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Log-Log4perl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/ChangeLog,v 1.8 2006/03/30 22:59:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/ChangeLog,v 1.9 2006/05/01 16:02:51 mcummings Exp $
+
+*Log-Log4perl-1.04 (01 May 2006)
+
+  01 May 2006; <mcumming@gentoo.org> +Log-Log4perl-1.04.ebuild:
+  Version bump
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Log-Log4perl-1.02.ebuild:
   Mark 1.02 ~ia64

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/MailTools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.40 2006/04/24 15:38:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.41 2006/05/01 16:14:43 mcummings Exp $
+
+*MailTools-1.74 (01 May 2006)
+
+  01 May 2006; <mcumming@gentoo.org> +MailTools-1.74.ebuild:
+  Version bump
 
   24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> MailTools-1.67.ebuild:
   Add ~x86-fbsd keyword.
