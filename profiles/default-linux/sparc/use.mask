@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.67 2006/04/28 02:17:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.68 2006/05/01 23:17:05 weeve Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -165,3 +165,7 @@ video_cards_nv
 # Jason Wever <weeve@gentoo.org> - 10 April 2006
 # Mask ifp use flag for amarok until someone can confirm it works
 ifp
+
+# Jason Wever <weeve@gentoo.org> - 01 May 2006
+# Mask nforce2 use flag as NVIDIA doesn't make mobos for SPARC CPUs (yet :-P)
+nforce2
