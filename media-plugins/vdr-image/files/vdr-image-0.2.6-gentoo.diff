@@ -1,0 +1,47 @@
+diff -Naur image-0.2.5.orig/control-image.c image-0.2.5/control-image.c
+--- image-0.2.5.orig/control-image.c	2006-03-06 13:53:36.131134750 +0100
++++ image-0.2.5/control-image.c	2006-03-06 13:57:06.248266250 +0100
+@@ -617,7 +617,7 @@
+       return osContinue;
+       
+     // Load additional Commands
+-    pCmd->Load(AddDirectory(cPlugin::ConfigDirectory(g_szConfigDirectory), "imagecmds.conf"));
++    pCmd->Load(AddDirectory(cPlugin::ConfigDirectory(g_szConfigDirectory), "image/imagecmds.conf"));
+   
+     if(pCmd->Count() <= 0)  {
+       delete pCmd;
+diff -Naur image-0.2.5.orig/examples/imagecmds.conf image-0.2.5/examples/imagecmds.conf
+--- image-0.2.5.orig/examples/imagecmds.conf	2006-03-06 13:53:36.131134750 +0100
++++ image-0.2.5/examples/imagecmds.conf	2006-03-06 14:10:06.753044750 +0100
+@@ -20,3 +20,5 @@
+ Rotate JPEG picture lossless by 90 degrees to the right  : jpegtran -rotate 90 %s > $CONVERT_TEMPDIR/tmp.jpg && mv $CONVERT_TEMPDIR/tmp.jpg %s
+ Rotate JPEG picture lossless by 90 degrees to the left   : jpegtran -rotate 270 %s > $CONVERT_TEMPDIR/tmp.jpg && mv $CONVERT_TEMPDIR/tmp.jpg %s
+ Delete picture                                          ?: rm -f %s
++Change burn template                                     : echo ln -fs '%s' '/usr/share/vdr/burn/menu-bg.png' | /bin/bash
++Change burn template (button)                            : echo ln -fs '%s' '/usr/share/vdr/burn/menu-button.png' | /bin/bash
+diff -Naur image-0.2.5.orig/examples/imagecmds.conf.DE image-0.2.5/examples/imagecmds.conf.DE
+--- image-0.2.5.orig/examples/imagecmds.conf.DE	2006-03-06 13:53:36.131134750 +0100
++++ image-0.2.5/examples/imagecmds.conf.DE	2006-03-06 14:09:52.112129750 +0100
+@@ -11,6 +11,8 @@
+ Informationen über das Bild                              : identify -verbose
+ Größe des Bildes                                         : du -chs %s
+ Exif Informationen des JPEG-Bildes ausgeben              : jpegtopnm -dumpexif %s >/dev/null 2> $CONVERT_TEMPDIR/exif.tmp && cat $CONVERT_TEMPDIR/exif.tmp && rm -f $CONVERT_TEMPDIR/exif.tmp
+-Rotatiere JPEG Bildes verlustlos um 90° nach Rechts      : jpegtran -rotate 90 %s > $CONVERT_TEMPDIR/tmp.jpg && mv $CONVERT_TEMPDIR/tmp.jpg %s
+-Rotatiere JPEG Bildes verlustlos um 90° nach Links       : jpegtran -rotate 270 %s > $CONVERT_TEMPDIR/tmp.jpg && mv $CONVERT_TEMPDIR/tmp.jpg %s
++Rotiere JPEG Bildes verlustlos um 90° nach Rechts		 : jpegtran -rotate 90 %s > $CONVERT_TEMPDIR/tmp.jpg && mv $CONVERT_TEMPDIR/tmp.jpg %s
++Rotiere JPEG Bildes verlustlos um 90° nach Links       	 : jpegtran -rotate 270 %s > $CONVERT_TEMPDIR/tmp.jpg && mv $CONVERT_TEMPDIR/tmp.jpg %s
+ Lösche Bild                                             ?: rm -f %s
++Hintergrund vdr-burn ändern                              : echo ln -fs '%s' '/usr/share/vdr/burn/menu-bg.png' | /bin/bash
++Button vdr-burn ändern                             		 : echo ln -fs '%s' '/usr/share/vdr/burn/menu-button.png' | /bin/bash
+diff -Naur image-0.2.5.orig/image.c image-0.2.5/image.c
+--- image-0.2.5.orig/image.c	2006-03-06 13:53:36.143135500 +0100
++++ image-0.2.5/image.c	2006-03-06 13:57:59.203575750 +0100
+@@ -107,7 +107,7 @@
+     return false;
+   }
+ 
+-  ImageSources.Load(AddDirectory(ConfigDirectory(g_szConfigDirectory),  "imagesources.conf"));
++  ImageSources.Load(AddDirectory(ConfigDirectory(g_szConfigDirectory),  "image/imagesources.conf"));
+   if(ImageSources.Count()<1) {
+     esyslog("imageplugin: you must have defined at least one source in imagesources.conf");
+     return false;
