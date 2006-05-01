@@ -1,17 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b9fb3725fd2dc16a6ef7f05ac1934e24 ChangeLog 1504
-MD5 d31f4a81475082683b695fbb167186ea files/digest-pop-before-smtp-1.34 71
-MD5 2a85e4c8292815e39ceeb31b55d76752 files/digest-pop-before-smtp-1.36 71
+AUX pop-before-smtp.init 722 RMD160 3517a70344e0183f50ac3237cb5133202b3344f0 SHA1 5d9b1bb8c5cbbc8d113898dbd9ffec980a77c5bc SHA256 46206b1d4c91aec38798afc86765b48060eefe8f85d0bb687832aa90d05983c5 size 722
 MD5 452b859ad99898ed238063288f64e852 files/pop-before-smtp.init 722
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+RMD160 3517a70344e0183f50ac3237cb5133202b3344f0 files/pop-before-smtp.init 722
+SHA256 46206b1d4c91aec38798afc86765b48060eefe8f85d0bb687832aa90d05983c5 files/pop-before-smtp.init 722
+DIST pop-before-smtp-1.34.tar.gz 30809 size 30809
+DIST pop-before-smtp-1.36.tar.gz 34563 size 34563
+DIST pop-before-smtp-1.41.tar.gz 39944 RMD160 46c69f073433a3f957b5d34481b6e5a00b58ae79 SHA256 e9f7fc2b1771c6e962f8ad840cdbd37b8423bd39eaed7f8f84511e2630d56f83 size 39944
+EBUILD pop-before-smtp-1.34.ebuild 1276 RMD160 a5362d23b0681a625834ffe9b3e7d88aea546def SHA1 808897b511a4e1882755263ec503fd613a8e34c9 SHA256 8405779aebb46a0f6e39f7d0802a20ceca45d651e0f298170737a6c0f9381dfb size 1276
 MD5 046b942eb31e397f2d4b42f93281ba8c pop-before-smtp-1.34.ebuild 1276
+RMD160 a5362d23b0681a625834ffe9b3e7d88aea546def pop-before-smtp-1.34.ebuild 1276
+SHA256 8405779aebb46a0f6e39f7d0802a20ceca45d651e0f298170737a6c0f9381dfb pop-before-smtp-1.34.ebuild 1276
+EBUILD pop-before-smtp-1.36.ebuild 1276 RMD160 bb626382d30afe1dc74588f9337e989cd9828047 SHA1 12f4fcde66b8e796012007f968cccf63b4265c97 SHA256 82cfe3e6f519c8b42a1c498d9eef50c048e3d4c66f51f3dfd16a4a95bcaa049c size 1276
 MD5 9b2a29689e0d81bcca535ad29acd77d9 pop-before-smtp-1.36.ebuild 1276
+RMD160 bb626382d30afe1dc74588f9337e989cd9828047 pop-before-smtp-1.36.ebuild 1276
+SHA256 82cfe3e6f519c8b42a1c498d9eef50c048e3d4c66f51f3dfd16a4a95bcaa049c pop-before-smtp-1.36.ebuild 1276
+EBUILD pop-before-smtp-1.41.ebuild 1273 RMD160 2603b790560a9734ab677fcd85b7ee4b0281a27f SHA1 d26e8eb39edee60710ab2c9ef7fed0d534cbb6f1 SHA256 559e25cb3c6e9cf6a84d6f03fe9818049c2828884d211e40c75a761d7eb2c636 size 1273
+MD5 158956c5dc4582598cf733c7efca3e3c pop-before-smtp-1.41.ebuild 1273
+RMD160 2603b790560a9734ab677fcd85b7ee4b0281a27f pop-before-smtp-1.41.ebuild 1273
+SHA256 559e25cb3c6e9cf6a84d6f03fe9818049c2828884d211e40c75a761d7eb2c636 pop-before-smtp-1.41.ebuild 1273
+MISC ChangeLog 1720 RMD160 4c5bf753a021338fba7b248dd2421fd7306c4b1c SHA1 74b6e3b60b3879942d047a543eb2eb40bb5b7848 SHA256 dbd76d895cfa63d9c1f123cfa3cddaf88cdf12a3dec21b12dc75c4b6bf8fe580 size 1720
+MD5 9e42ecdbdf2fd5ab3617cfd4f9190e0c ChangeLog 1720
+RMD160 4c5bf753a021338fba7b248dd2421fd7306c4b1c ChangeLog 1720
+SHA256 dbd76d895cfa63d9c1f123cfa3cddaf88cdf12a3dec21b12dc75c4b6bf8fe580 ChangeLog 1720
+MISC metadata.xml 161 RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 SHA1 a1fecd2f7b169d621b88c6ccab9d758209fc8f19 SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 size 161
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
+SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
+MD5 d31f4a81475082683b695fbb167186ea files/digest-pop-before-smtp-1.34 71
+RMD160 36b33d326f08e2b228480cae1897e0412cc02038 files/digest-pop-before-smtp-1.34 71
+SHA256 dd106900faa4753afce2d34a358ebaf5037490b1d6c74e02e4291e43a9c1570b files/digest-pop-before-smtp-1.34 71
+MD5 2a85e4c8292815e39ceeb31b55d76752 files/digest-pop-before-smtp-1.36 71
+RMD160 99be1eb9ddf2d77f38db3891aab215c41c579934 files/digest-pop-before-smtp-1.36 71
+SHA256 c2fe2133d7d8a7672416121ec714afb16494a45dda9a3a26d75bc9f74485587b files/digest-pop-before-smtp-1.36 71
+MD5 779c7ea6df8569d8d242bd9b21f9adfd files/digest-pop-before-smtp-1.41 259
+RMD160 9d53f197aab5e5cb97f18edcc32523d5730167b4 files/digest-pop-before-smtp-1.41 259
+SHA256 9e28d39ea10e40f0dde597a50379a7e62a17c5b0442737000ff461eb137350e4 files/digest-pop-before-smtp-1.41 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFD8J5qtG5z4I8BtQoRAv3+AJ4/WiiR4ctc0nzXFBNHdca2lhowcQCfe2Yq
-eZc4XqE4Eb3CUN2oi62TOWw=
-=8mYq
+iD8DBQFEVojAQlM6RnzZP+IRAhjmAJ4t38ySD8iQ4sSSs4l2rBbb+GBdBQCgpqFU
+5Twi1JQxBGPkxOYhbtTy+hk=
+=YDbx
 -----END PGP SIGNATURE-----
