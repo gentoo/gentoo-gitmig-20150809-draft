@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyserial
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.18 2006/04/03 21:29:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.19 2006/05/01 10:08:25 corsair Exp $
+
+  01 May 2006; Markus Rothe <corsair@gentoo.org> pyserial-2.2.ebuild:
+  Added ~ppc64
 
   03 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> pyserial-2.0.ebuild:
   Stable on sparc

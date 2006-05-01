@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.13 2006/02/17 14:26:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.14 2006/05/01 10:09:35 corsair Exp $
+
+  01 May 2006; Markus Rothe <corsair@gentoo.org> pyopenssl-0.6.ebuild:
+  Added ~ppc64
 
   17 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org> pyopenssl-0.6.ebuild:
   Stable on sparc
