@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.31 2006/04/27 17:09:13 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.32 2006/05/01 12:25:48 corsair Exp $
+
+  01 May 2006; Markus Rothe <corsair@gentoo.org> STLport-4.6.2-r2.ebuild:
+  let's apply STLport-vector.patch on ppc64, too.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-STLport-4.5.3-r3, files/digest-STLport-4.6.2-r2, Manifest:
