@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH2/XML-XSH2-2.0.2.ebuild,v 1.1 2006/04/19 00:13:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH2/XML-XSH2-2.0.2.ebuild,v 1.2 2006/05/01 19:26:50 mcummings Exp $
 
 inherit perl-module
 
@@ -18,4 +18,5 @@ DEPEND=">=dev-perl/XML-LibXML-1.56
 	>=dev-perl/XML-LibXSLT-1.53
 	dev-perl/Term-ReadLine-Perl
 	>=dev-perl/XML-XUpdate-LibXML-0.4.0
-	>=dev-perl/XML-LibXML-XPathContext-0.04"
+	>=dev-perl/XML-LibXML-XPathContext-0.04
+	!app-editors/XML-XSH"
