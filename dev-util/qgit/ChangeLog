@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qgit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.6 2006/04/29 13:15:11 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.7 2006/05/02 01:39:30 deltacow Exp $
+
+  01 May 2006; Scott Stoddard <deltacow@gentoo.org> qgit-1.2.ebuild:
+  Added ~amd64 (bug #131714)
 
 *qgit-1.2 (29 Apr 2006)
 
