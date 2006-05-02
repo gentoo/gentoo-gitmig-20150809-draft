@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.13 2006/04/19 21:26:57 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.14 2006/05/02 22:32:54 swegener Exp $
 
 # ATTN!
 # set HOMEPAGE and LICENSE in appropriate ebuild, as we have
@@ -421,9 +421,9 @@ gnatbuild_src_compile() {
 #			export BINUTILS_ROOT="${GNATBOOT}"
 #		fi
 
-#		einfo "CC=${CC},  
+#		einfo "CC=${CC},
 #			ADA_INCLUDE_PATH=${ADA_INCLUDE_PATH},
-#			LDFLAGS=${LDFLAGS},  
+#			LDFLAGS=${LDFLAGS},
 #			PATH=${PATH}"
 
 		while [ "$1" ]; do
@@ -548,7 +548,7 @@ gnatbuild_src_install() {
 		done
 
 
-		# The install itself. Straight make DESTDIR=${D} install causes access 
+		# The install itself. Straight make DESTDIR=${D} install causes access
 		# violation (unlink of gprmake). A siple workaround for now.
 		cd "${GNATBUILD}"
 		make DESTDIR=${D} bindir="${D}${BINPATH}"  install || die

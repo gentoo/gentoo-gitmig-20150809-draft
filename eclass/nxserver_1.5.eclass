@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver_1.5.eclass,v 1.2 2006/04/30 17:51:02 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver_1.5.eclass,v 1.3 2006/05/02 22:32:54 swegener Exp $
 #
 # eclass for handling the different nxserver binaries available
 # from nomachine's website
@@ -88,7 +88,7 @@ nxserver_1.5_src_install() {
 				rm -f usr/NX/bin/$x
 			fi
 		done
-	
+
 		# remove libraries installed by other packages
 		for x in usr/NX/lib/*.so.* ; do
 			if [ -f $x ]; then

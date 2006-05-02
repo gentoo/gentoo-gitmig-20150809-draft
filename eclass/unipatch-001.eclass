@@ -12,7 +12,7 @@ unipatch() {
 	# UNIPATCH_SILENT_DROP
 
 	local myLC_ALL
-	local checkfile checkfile_noext checkfile_ext checkfile_patchlvl 
+	local checkfile checkfile_noext checkfile_ext checkfile_patchlvl
 	local checkfile_meta checkfile_patchdir checkfile_suffix
 	local strictcount i n pipecmd
 	local file_list patch_to_process patch_plevel
@@ -20,27 +20,27 @@ unipatch() {
 	# set to a standard locale to ensure sorts are ordered properly.
 	myLC_ALL="${LC_ALL}"
 	LC_ALL="C"
-	
+
 	# Setup UNIPATCH_POPTS if not set already
 	UNIPATCH_POPTS=${UNIPATCH_POPTS:--g0 -s}
 
 	# Set UNIPATCH_SILENT_DROP if not already set
 	# Please bare in mind these *cannot* start with an asterisk
 	UNIPATCH_SILENT_DROP='000*'
-	
+
 	# We need a temporary directory in which we can stor our patches.
 	KPATCH_DIR="${KPATCH_DIR:-${WORKDIR}/patches/}"
 	mkdir -p ${KPATCH_DIR}
-	
+
 	# We're gonna need it when doing patches with a predefined patchlevel
 	shopt -s extglob
-	
+
 	# lets obtain our patch list
 	# any .diff/.patch/compressed file is added, and if neccessary decompressed.
 	# any tarred file is unpacked and added
 	# anything else is added to the drop pattern
 	UNIPATCH_LIST="${@:-${UNIPATCH_LIST}}"
-	
+
 	n=0
 	strictcount=0
 	for checkfile in ${UNIPATCH_LIST}
@@ -50,7 +50,7 @@ unipatch() {
 		unset checkfile_ext
 		unset checkfile_patchdir
 		checkfile_patchlvl=0
-	
+
 		# did we pass suffix? or a patchlvl?
 		for((i=0; i<=${#checkfile}; i++)); do
 			case ${checkfile:${i}:1} in
@@ -58,11 +58,11 @@ unipatch() {
 			 	:)	checkfile_patchlvl="${checkfile:${i}}";;
 			esac
 		done
-		
+
 		# now lets sane up the checkfile var
 		[[ -n ${checkfile_suffix} ]] && checkfile=${checkfile//*@}
 		[[ -n ${checkfile_patchlvl} ]] && checkfile=${checkfile//:*}
-		
+
 		# is this file even valid?
 		if [[ ! -f ${checkfile} ]]; then
 			ewarn "Unable to read file:"
@@ -70,17 +70,17 @@ unipatch() {
 			ewarn "Please check this file exists, and its permissions."
 			die "unable to locate ${checkfile}"
 		fi
-		
+
 		#if we use strict dir, then lets prepend an order
 		if [[ -n ${UNIPATCH_STRICTORDER} ]]; then
 			checkfile_patchdir=${KPATCH_DIR}/${strictcount}/
 			mkdir -p ${checkfile_patchdir}
 			strictcount=$((${strictcount} + 1))
 		fi
-		
+
 		# Find the directory we are placing this in.
 		checkfile_patchdir="${checkfile_patchdir:-${KPATCH_DIR}}"
-		
+
 		# so now lets get finding patches.
 		# This is a list of patterns to match, and the resulting extention.
 		# you MUST specify the LEAST specific first, if the pattern would match
@@ -100,7 +100,7 @@ unipatch() {
 					*.zip*:zip
 					*.diff*:diff
 					*.patch*:patch'
-		
+
 		# lets see if we qualify for one of the above
 		for i in $testvalues; do
 			value=${i/*:/}
@@ -113,15 +113,15 @@ unipatch() {
 				checkfile_noext="${checkfile/${test:1}/}"
 			fi
 		done
-		
+
 		# if we specify a suffix, we want to over-ride the above now.
 		[[ -n ${checkfile_suffix} ]] && \
 			checkfile_ext="${checkfile_suffix}" \
 			checkfile_noext="${checkfile/${checkfile_suffix}/}"
-				
+
 		# set metafile
 		checkfile_meta="${checkfile_patchdir}/.meta_${checkfile_noext/*\//}"
-		
+
 		# Debug environment
 		edebug 3 "Debug environment variables"
 		edebug 3 "---------------------------"
@@ -132,7 +132,7 @@ unipatch() {
 		edebug 3 "checkfile_patchlvl=${checkfile_patchlvl}"
 		edebug 3 "checkfile_meta=${checkfile_meta}"
 		edebug 3 "checkfile_suffix=${checkfile_suffix}"
-		
+
 		# and setup the appropriate pipecmd for it.
 		# the outcome of this should leave the file we want in the patch dir
 		case ${checkfile_ext} in
@@ -191,15 +191,15 @@ unipatch() {
 			DROP)	pipecmd="";;
 			DOC)	pipecmd="cp ${checkfile} ${checkfile_patchdir}";;
 		esac
-		
+
 		# Debug environment
 		edebug 3 "pipecmd=${pipecmd}"
-		
+
 		if [[ -z ${pipecmd} ]]; then
 			# if we dont know about it, lets drop it and move to the next
 			einfo "Unknown Filetype, Ignoring: ${checkfile/*\//}"
 		else
-			# if we do know about it, prepare it for patching, and 
+			# if we do know about it, prepare it for patching, and
 			# populate metadata
 			ebegin "Preparing ${checkfile/*\//}"
 			eval ${pipecmd}
@@ -208,11 +208,11 @@ unipatch() {
 			echo "PATCHLVL=${checkfile_patchlvl}" >> ${checkfile_meta}
 		fi
 	done
-	
+
 	# OK so now we got this far, we have everything neatly unpacked.
 	# we should probably build up our patch-list.
 	edebug 2 "Locating .meta_*_files and building patch list"
-	
+
 	for i in $(find ${KPATCH_DIR} -iname ".meta_*_files")
 	do
 		file_list=$(sort -n ${i})
@@ -220,13 +220,13 @@ unipatch() {
 		edebug 3 "processing: ${i}"
 		edebug 3 "file_list=${file_list}"
 		edebug 3 "patch_plevel=${patch_plevel}"
-			
+
 		# OK, so now we have trhe list of files to process in this metafile
 		# we should process the patch.
 		for patch_to_process in ${file_list}; do
 			edebug 2 "Processing: ${patch_to_process}"
-				
-			# if we pass UNIPATCH_EXCLUDE then we scan through that. 
+
+			# if we pass UNIPATCH_EXCLUDE then we scan through that.
 			# if we find a match, we dont bother applying it.
 			# This is done here to catch files within tarballs.
 			local tempname to_patch=1
@@ -306,7 +306,7 @@ edebug() {
 	verbos=${1}
 	shift
 	msg=${@}
-	
+
 	VERBOSITY=${VERBOSITY:-0}
 	[ ${VERBOSITY} -ge ${verbos} ] && echo "(DD): ${msg}"
 }
