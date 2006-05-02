@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.279 2006/05/02 18:59:01 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.280 2006/05/02 19:41:34 wolf31o2 Exp $
+
+  02 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  gentoo-sources-2.6.16-r6.ebuild:
+  Stable on x86 for the sky2 driver.
 
 *gentoo-sources-2.6.16-r6 (02 May 2006)
 
