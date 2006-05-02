@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5293 2006/05/02 14:56:16 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5294 2006/05/02 21:05:52 jokey Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -932,10 +932,6 @@ sci-misc/zetagrid
 # Tom Payne <twp@gentoo.org> (15 Jan 2006)
 # sys-fs/convertfs is broken. Masked pending likely removal. Bug # 107635.
 sys-fs/convertfs
-
-# Benjamin Smee <strerror@gentoo.org> (14 Jan 2006)
-# Masking openldap 2.3.x for testing
->net-nds/openldap-2.3
 
 # Diego Pettenò <flameeyes@gentoo.org> (13 Jan 2006)
 # Vulnerable to security issue. See bug #115760
