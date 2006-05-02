@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.4.8.ebuild,v 1.1 2006/04/01 20:26:03 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.4.8.ebuild,v 1.2 2006/05/02 22:24:24 swegener Exp $
 
 inherit distutils fortran
 
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 FORTRAN="g77"
 
 pkg_setup() {
-	if built_with_use lapack-atlas ifc; then
+	if built_with_use sci-libs/lapack-atlas ifc; then
 		ewarn  "scipy needs consistency among fortran compiler!"
 		eerror "lapack-atlas was compiled with the ifc"
 		eerror "whereas blas-atlas and scipy will use the GNU compiler"
