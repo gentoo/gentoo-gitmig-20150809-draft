@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 77c90bf9ad019bfa8b9471fd054d446b ChangeLog 505
+MD5 64d420315431756f56803dbab28b5804 files/digest-vdr-reelchannelscan-0.2.0 73
+MD5 4bd2f6d639706e548820ed3bd4e9d2c8 metadata.xml 414
+MD5 f75ef4bc459bb2b1cf3366d6b40f86f1 vdr-reelchannelscan-0.2.0.ebuild 1148
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFEV8Oadn07HTTCgIoRAn+RAJ9RchC1djNv5wZheRhcNVlEeAsVGwCfT0eq
+NKYVphfIJYeES8tzRcpFpoc=
+=EvfC
+-----END PGP SIGNATURE-----
