@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2-r1.ebuild,v 1.1 2006/03/26 00:07:20 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2-r1.ebuild,v 1.2 2006/05/02 22:29:39 swegener Exp $
 
 inherit eutils libtool
 
@@ -123,7 +123,7 @@ src_compile() {
 		jobs=""
 	fi
 
-	emake ${MAKEOPTS} ${jobs} || die "failed to compile bind"
+	emake ${jobs} || die "failed to compile bind"
 
 	use idn && {
 		cd ${S}/contrib/idn/idnkit-1.0-src
