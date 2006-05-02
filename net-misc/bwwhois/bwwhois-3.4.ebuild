@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-3.4.ebuild,v 1.10 2005/11/28 13:14:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-3.4.ebuild,v 1.11 2006/05/02 02:54:00 weeve Exp $
 
 inherit perl-app
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://whois.bw.org/"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha ~amd64"
+KEYWORDS="alpha ~amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"

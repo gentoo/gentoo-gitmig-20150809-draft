@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bwwhois
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.12 2005/11/28 13:14:01 mcummings Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.13 2006/05/02 02:54:00 weeve Exp $
+
+  02 May 2006; Jason Wever <weeve@gentoo.org> bwwhois-3.4.ebuild:
+  Stable on SPARC.
 
   28 Nov 2005; <mcumming@gentoo.org> bwwhois-3.2.ebuild, bwwhois-3.4.ebuild:
   Switched from perl-module to perl-app eclass
