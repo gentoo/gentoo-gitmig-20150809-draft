@@ -1,6 +1,9 @@
 # ChangeLog for net-news/snownews
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.4 2005/07/17 15:05:47 citizen428 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.5 2006/05/02 01:46:40 weeve Exp $
+
+  02 May 2006; Jason Wever <weeve@gentoo.org> snownews-1.5.6.1.ebuild:
+  Stable on SPARC.
 
 *snownews-1.5.7 (17 Jul 2005)
 
