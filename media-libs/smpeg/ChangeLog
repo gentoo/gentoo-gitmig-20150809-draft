@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.36 2006/04/24 02:39:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.37 2006/05/02 22:10:42 flameeyes Exp $
+
+  02 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/smpeg-0.4.4-malloc.patch, smpeg-0.4.4-r8.ebuild:
+  Add quick patch to fix build on FreeBSD. Bug #132024 from Robert Sebastian
+  Gerus.
 
   29 Apr 2006; Joshua Kinard <kumba@gentoo.org> smpeg-0.4.4-r7.ebuild:
   Marked stable on mips.

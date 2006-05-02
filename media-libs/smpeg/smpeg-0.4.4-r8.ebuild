@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r8.ebuild,v 1.2 2006/03/29 11:25:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r8.ebuild,v 1.3 2006/05/02 22:10:42 flameeyes Exp $
 
 inherit eutils toolchain-funcs autotools
 
@@ -37,6 +37,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-flags.patch
 	epatch "${FILESDIR}"/${P}-automake.patch
 	epatch "${FILESDIR}"/${P}-mmx.patch
+	epatch "${FILESDIR}"/${P}-malloc.patch
 
 	cd "${WORKDIR}"
 	epatch "${DISTDIR}"/${P}-gtkm4.patch.bz2
