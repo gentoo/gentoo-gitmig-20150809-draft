@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r3.ebuild,v 1.4 2006/04/27 21:41:38 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r3.ebuild,v 1.5 2006/05/02 15:33:45 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -139,6 +139,9 @@ src_unpack() {
 
 	# Patch to fix parallel make
 	sed -i 's/mkDerivedConstants.c : $(H_CONFIG)/mkDerivedConstants.c :	$(H_CONFIG) $(H_PLATFORM)/' "${S}/ghc/includes/Makefile"
+
+	# Patch to fix make-3.81 hanging (backport of the fix in ghc-6.4.2)
+	sed -i -e 's/.SECONDARY://' "${S}/mk/suffix.mk"
 }
 
 src_compile() {

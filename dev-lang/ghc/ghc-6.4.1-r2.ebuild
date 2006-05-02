@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r2.ebuild,v 1.12 2006/03/28 17:28:48 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r2.ebuild,v 1.13 2006/05/02 15:33:45 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -91,6 +91,9 @@ src_unpack() {
 	echo "SCRIPT_SUBST_VARS += GHC_CFLAGS" >> "${S}/ghc/driver/ghc/Makefile"
 	echo "GHC_CFLAGS = ${GHC_CFLAGS}"      >> "${S}/ghc/driver/ghc/Makefile"
 	sed -i -e 's|$TOPDIROPT|$TOPDIROPT $GHC_CFLAGS|' "${S}/ghc/driver/ghc/ghc.sh"
+
+	# Patch to fix make-3.81 hanging (backport of the fix in ghc-6.4.2)
+	sed -i -e 's/.SECONDARY://' "${S}/mk/suffix.mk"
 }
 
 src_compile() {

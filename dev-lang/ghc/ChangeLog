@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.97 2006/04/27 21:49:08 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.98 2006/05/02 15:33:45 dcoutts Exp $
+
+  02 May 2006; Duncan Coutts <dcoutts@gentoo.org> ghc-6.4.1-r2.ebuild,
+  ghc-6.4.1-r3.ebuild:
+  Patch to fix make-3.81 hanging (backport of the fix in ghc-6.4.2)
 
   27 Apr 2006; Duncan Coutts <dcoutts@gentoo.org>
   -files/ghc-6.4-powerpc.patch, +ghc-6.4.2.ebuild:
