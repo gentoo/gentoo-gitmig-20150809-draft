@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.19 2006/04/26 13:36:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.20 2006/05/02 15:00:15 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -119,9 +119,16 @@ vdr-plugin_src_unpack() {
 			base_src_unpack
 			;;
 		patchmakefile)
-			cd ${S}
+			if ! cd ${S}; then
+				ewarn "There seems to be no plugin-directory with the name ${S##*/}"
+				ewarn "Perhaps you find one among these:"
+				cd "${WORKDIR}"
+				einfo "$(/bin/ls -1 ${WORKDIR})"
+				die "Could not change to plugin-source-directory!"
+			fi
 
 			ebegin "Patching Makefile"
+			[[ -e Makefile ]] || die "Makefile of plugin can not be found!"
 			sed -i.orig Makefile \
 				-e "s:^VDRDIR.*$:VDRDIR = ${VDR_INCLUDE_DIR}:" \
 				-e "s:^DVBDIR.*$:DVBDIR = ${DVB_INCLUDE_DIR}:" \
