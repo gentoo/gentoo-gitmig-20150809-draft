@@ -1,4 +1,4 @@
-MD5 316252a86996fb05598e124789eabaa5 ChangeLog 4266
+MD5 833634e995dfe1f41a17f526e6c34ef6 ChangeLog 4375
 MD5 76c98072408ae5c4e5a96245e5a20466 files/digest-gnome-pilot-conduits-0.9 77
 MD5 dfa62058be26fe2b26b39fef4de1658b files/digest-gnome-pilot-conduits-2.0.10-r1 80
 MD5 dfa62058be26fe2b26b39fef4de1658b files/digest-gnome-pilot-conduits-2.0.10-r2 80
@@ -10,5 +10,5 @@ MD5 1329da71c6ef6753cfcdd93d84c71bb5 gnome-pilot-conduits-0.9.ebuild 1035
 MD5 eabfd9516ebbe45cc044ac8a305c89b9 gnome-pilot-conduits-2.0.10-r1.ebuild 797
 MD5 c8bea384243d55008e3fbb4ee71eb949 gnome-pilot-conduits-2.0.10-r2.ebuild 978
 MD5 fee7cf100ee14dce38297d8c33a61a65 gnome-pilot-conduits-2.0.12.ebuild 641
-MD5 dfeacbe47343cc6cb6fa6b6767c11ebd gnome-pilot-conduits-2.0.13.ebuild 640
+MD5 a6952f62de0ba1390dcd6c248ae863c7 gnome-pilot-conduits-2.0.13.ebuild 640
 MD5 1e1031eae2f36a13b2cd73550a31d03d metadata.xml 175
