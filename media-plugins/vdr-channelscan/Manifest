@@ -1,17 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2de0b5c046992849c163e5b2bf05eb05 ChangeLog 965
+MD5 745e9cd0698b71b3a7860f67700d33a0 ChangeLog 1091
 MD5 3fe5030b53bc5ae190dc3783545f4047 files/digest-vdr-channelscan-0.2.0 253
-MD5 8b0b9ea94288b9336a629a971cc5dd35 files/digest-vdr-channelscan-0.3.0 73
 MD5 4bd2f6d639706e548820ed3bd4e9d2c8 metadata.xml 414
 MD5 45c2be4b1eaff19327edbbfeffb8c501 vdr-channelscan-0.2.0.ebuild 998
-MD5 e17674e219a23cc5ab80f17b1d532830 vdr-channelscan-0.3.0.ebuild 1239
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-Comment: no further Information
-
-iD8DBQFEVmD6dn07HTTCgIoRAoXsAKCQjJ0Tlt61hNlblAfc8gJK7MJ0sgCeL7AR
-ObxcAQzQj0jTtajdgGS9Lkw=
-=coVV
------END PGP SIGNATURE-----
