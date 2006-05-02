@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 598f6bad4c6a9493f9913d088dbbb390 ChangeLog 1081
-MD5 eb8e6a65c73748cc8b0b5e0a7b011720 iddev-1.00.00.ebuild 601
-MD5 b055bf1bd3e6aa9a370adc85460ef4f9 iddev-1.01.00.ebuild 601
+MD5 9bdbeb1ce21750d6e37b02aeaad774f2 ChangeLog 1320
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-iddev-1.00.00 68
 MD5 9d2b25c988a934245d5ef85edcf067d8 files/digest-iddev-1.01.00 68
+MD5 9b7b430d3bc3f98b77ffdfd13778bd1c files/digest-iddev-1.02.00 68
+MD5 eb8e6a65c73748cc8b0b5e0a7b011720 iddev-1.00.00.ebuild 601
+MD5 c2d700fb9aae5d101128d1f8a78cdeeb iddev-1.01.00.ebuild 600
+MD5 5fd61261a0402484841993abb9010d13 iddev-1.02.00.ebuild 601
+MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDR+d4gMUyd/cdjWsRAnn5AJ4rvWvKGNp3igsKnwk0/AOlIqt9xQCeNrKH
-kkLbI0srsXPUX+QMD73pUaU=
-=Baci
+iD8DBQFEV9wMgMUyd/cdjWsRAroJAJ9Ezhy2Xqg3Z18PBx1WTQfNlsF81wCglCtd
+Qjl4ine2+XsO2n2sEC0pZPQ=
+=it3S
 -----END PGP SIGNATURE-----
