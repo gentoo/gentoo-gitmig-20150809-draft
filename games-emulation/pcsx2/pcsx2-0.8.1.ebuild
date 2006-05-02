@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.8.1.ebuild,v 1.6 2006/02/11 19:55:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.8.1.ebuild,v 1.7 2006/05/02 21:53:46 tupone Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -31,7 +31,8 @@ S=${WORKDIR}/${P}src
 src_unpack() {
 	7z x "${DISTDIR}/${P}src.7z" || die "unpack failed"
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-amd64.patch
+	epatch "${FILESDIR}"/${P}-amd64.patch \
+		"${FILESDIR}/${P}"-gcc41.patch
 	sed -i \
 		-e '/^CC/d' \
 		-e "/^CPU/s:=.*:=$(tc-arch-kernel):" \
