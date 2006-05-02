@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/rawdog-2.6.ebuild,v 1.4 2006/03/10 00:59:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/rawdog-2.6.ebuild,v 1.5 2006/05/02 00:35:40 weeve Exp $
 
 inherit distutils
 
 DESCRIPTION="Rawdog - RSS Aggregator Without Delusions Of Grandeur"
 SRC_URI="http://offog.org/files/${P}.tar.gz"
 HOMEPAGE="http://offog.org/code/rawdog.html"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc ~s390 ~sparc x86"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc ~s390 sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
