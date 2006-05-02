@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jdictrayapi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/ChangeLog,v 1.6 2006/04/27 13:12:37 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/ChangeLog,v 1.7 2006/05/02 13:54:20 axxo Exp $
+
+*jdictrayapi-0.9.1-r1 (02 May 2006)
+
+  02 May 2006; Thomas Matthijs <axxo@gentoo.org>
+  +jdictrayapi-0.9.1-r1.ebuild:
+  Fix needed files not being included in jar. Directly to stable since current
+  stable doesnt work
 
   27 Apr 2006; Thomas Matthijs <axxo@gentoo.org> jdictrayapi-0.9.1.ebuild:
   dont install CVS files along with the examples
