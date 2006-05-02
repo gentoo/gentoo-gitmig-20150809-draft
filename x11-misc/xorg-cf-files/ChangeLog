@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xorg-cf-files
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.17 2006/04/20 03:18:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.18 2006/05/02 22:14:38 exg Exp $
+
+*xorg-cf-files-1.0.1-r3 (02 May 2006)
+
+  02 May 2006; Emanuele Giaquinta <exg@gentoo.org>
+  -xorg-cf-files-1.0.1-r2.ebuild, +xorg-cf-files-1.0.1-r3.ebuild:
+  Fix src_install to append to, not overwrite host.def to set ManDirectoryRoot.
 
 *xorg-cf-files-1.0.1-r2 (20 Apr 2006)
 
