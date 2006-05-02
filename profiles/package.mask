@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5292 2006/05/02 13:53:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5293 2006/05/02 14:56:16 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -481,11 +481,6 @@ net-misc/asterisk-app_authenticate_ldap
 # does not compile with gcc-3.4 (bug #127131).  It will be removed
 # in 30 days
 dev-libs/korelib
-
-# Christian Heim <phreak@gentoo.org> (08 Apr 2006)
-# masking baselayout-vserver-1.12.0_pre17 for testing
->=sys-apps/baselayout-vserver-1.12.0_pre17
->=sys-apps/baselayout-vserver-1.11.14-r5
 
 # Tim Yamin <plasmaroo@gentoo.org> (08 Apr 2006)
 # Upstream seems dead and needs GCC 4.1 reworking; bug #125192.
