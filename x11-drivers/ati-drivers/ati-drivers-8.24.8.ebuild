@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.24.8.ebuild,v 1.2 2006/05/02 00:03:23 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.24.8.ebuild,v 1.3 2006/05/02 00:44:33 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -223,7 +223,7 @@ src_install() {
 	fi
 		cat >>${T}/09ati <<EOF
 
-LIBGL_DRIVERS_PATH="$ATI_LIBGL_PATH"
+LIBGL_DRIVERS_PATH="\$LIBGL_DRIVERS_PATH $ATI_LIBGL_PATH"
 EOF
 
 	doenvd ${T}/09ati
