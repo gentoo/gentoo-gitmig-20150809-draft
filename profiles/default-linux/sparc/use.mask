@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.68 2006/05/01 23:17:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.69 2006/05/02 15:14:53 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -169,3 +169,7 @@ ifp
 # Jason Wever <weeve@gentoo.org> - 01 May 2006
 # Mask nforce2 use flag as NVIDIA doesn't make mobos for SPARC CPUs (yet :-P)
 nforce2
+
+# Gustavo Zacarias <gustavoz@gentoo.org> - 02 May 2006
+# AIO is b0rked for now....
+aio
