@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ExtUtils-CBuilder
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-CBuilder/ChangeLog,v 1.30 2006/04/25 01:18:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-CBuilder/ChangeLog,v 1.31 2006/05/02 05:05:42 flameeyes Exp $
+
+  02 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  ExtUtils-CBuilder-0.18.ebuild:
+  Add ~x86-fbsd keyword.
 
 *ExtUtils-CBuilder-0.18 (25 Apr 2006)
 
