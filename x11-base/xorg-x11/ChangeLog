@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.537 2006/05/02 17:29:19 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.538 2006/05/02 21:02:17 spyderous Exp $
+
+  02 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  files/digest-xorg-x11-6.8.2-r7, files/digest-xorg-x11-6.9.0-r1, Manifest:
+  (#132053) Fix missing MD5 for xfsft-encodings-0.1.tar.bz2.
 
 *xorg-x11-6.9.0-r1 (02 May 2006)
 *xorg-x11-6.8.2-r7 (02 May 2006)
