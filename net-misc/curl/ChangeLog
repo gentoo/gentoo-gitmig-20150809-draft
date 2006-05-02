@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.72 2006/04/27 22:29:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.73 2006/05/02 18:29:38 flameeyes Exp $
+
+  02 May 2006; Diego Pettenò <flameeyes@gentoo.org> curl-7.15.3.ebuild:
+  Add elibtoolize call.
 
   27 Apr 2006; Alastair Tse <liquidx@gentoo.org> curl-7.15.1.ebuild,
   curl-7.15.1-r1.ebuild, curl-7.15.3.ebuild:

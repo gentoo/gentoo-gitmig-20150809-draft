@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.3.ebuild,v 1.3 2006/04/27 22:29:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.3.ebuild,v 1.4 2006/05/02 18:29:38 flameeyes Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
+
+inherit libtool
 
 DESCRIPTION="A Client that groks URLs"
 HOMEPAGE="http://curl.haxx.se/"
@@ -27,6 +29,13 @@ DEPEND="${RDEPEND}
 		dev-lang/perl
 	)"
 # used - but can do without in self test: net-misc/stunnel
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	elibtoolize
+}
 
 src_compile() {
 
