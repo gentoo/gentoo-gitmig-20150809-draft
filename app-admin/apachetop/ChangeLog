@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/apachetop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.35 2006/04/21 17:55:24 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.36 2006/05/02 00:14:31 halcy0n Exp $
+
+  02 May 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/apachetop-0.12.6-gcc41.patch, apachetop-0.12.6.ebuild:
+  Add patch to fix compilation with gcc-4.1 by tristanheaven AT gmail DOT com;
+  bug #130819
 
 *apachetop-0.12.6 (21 Apr 2006)
 

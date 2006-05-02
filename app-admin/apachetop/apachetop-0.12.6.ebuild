@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.12.6.ebuild,v 1.1 2006/04/21 17:55:24 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.12.6.ebuild,v 1.2 2006/05/02 00:14:30 halcy0n Exp $
 
 inherit eutils
 
@@ -19,6 +19,13 @@ DEPEND="sys-apps/sed
 	fam? ( virtual/fam )
 	pcre? ( dev-libs/libpcre )
 	adns? ( net-libs/adns )"
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+}
 
 src_compile() {
 	useq apache2 && logfile="/var/log/apache2/access_log"
