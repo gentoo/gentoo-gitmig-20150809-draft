@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: gnat.eselect-0.7,v 1.1 2006/05/02 10:18:57 george Exp $
+# $Id: gnat.eselect-0.7,v 1.2 2006/05/02 15:22:19 george Exp $
 
 DESCRIPTION="Manage the talled gnat compilers"
 MAINTAINER="ada@gentoo.org"
-SVN_DATE='$Date: 2006/05/02 10:18:57 $'
+SVN_DATE='$Date: 2006/05/02 15:22:19 $'
 VERSION=$(svn_date_to_version "${SVN_DATE}" )
 
 SPECSDIR="/usr/share/gnat/eselect"
@@ -176,7 +176,7 @@ do_show() {
 	active=$(get_current_gnat)
 	if [ ! -z ${active} ] ; then # not sure why [ -n ] does not do the same
 		write_kv_list_entry "$active" ""
-		libs=( $(find_libs4profile) )
+		libs=( $(find_libs4profile ${active}) )
 		write_list_start "Active libs:"
 		write_numbered_list "${libs[@]}"
 	else
