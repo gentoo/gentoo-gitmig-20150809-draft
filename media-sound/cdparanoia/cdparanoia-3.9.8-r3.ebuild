@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r3.ebuild,v 1.7 2006/04/18 18:07:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r3.ebuild,v 1.8 2006/05/02 19:18:30 corsair Exp $
 
 inherit eutils flag-o-matic gnuconfig linux-info
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.xiph.org/paranoia/download/${MY_P}.src.tgz
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~sparc ~x86"
 
 src_unpack() {
 	unpack ${A}
