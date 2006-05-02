@@ -1,6 +1,47 @@
-MD5 cc01ea334a4c36407e51f667738d2649 ChangeLog 13534
-RMD160 f84fa927d8161feb0368133912d3e98a3bc34d9a ChangeLog 13534
-SHA256 50a8808e9db7012ef0a8e36cfa674ac8a12f4da7b00002c21a3e731ad63c9963 ChangeLog 13534
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX gnome-terminal-2-default_shell.patch 490 RMD160 22b0e40dc8a6cae17d391e2e21dc0dda60201d23 SHA1 cb9a4b23285cc70eb36a17919463bd3796d7974f SHA256 89248a85b8c921274d336467ba355032d6621fb09efd1a6ab86c64ee90d69c5b size 490
+MD5 1c5aaf13eb2a8bd0b2b03c529d5c8740 files/gnome-terminal-2-default_shell.patch 490
+RMD160 22b0e40dc8a6cae17d391e2e21dc0dda60201d23 files/gnome-terminal-2-default_shell.patch 490
+SHA256 89248a85b8c921274d336467ba355032d6621fb09efd1a6ab86c64ee90d69c5b files/gnome-terminal-2-default_shell.patch 490
+AUX gnome-terminal-2-dnd_url_add_space.patch 1000 RMD160 e83cf094681389b3a82b5f9c5cd40431ccaef810 SHA1 468cd7aae84d809b714b8bc15e2e903deb437621 SHA256 d807989dc7aec88f1d01e9449a5d44232e5d01fb64bea91fb2a181bf3080116c size 1000
+MD5 206e36d5520f43272f029d6411af6332 files/gnome-terminal-2-dnd_url_add_space.patch 1000
+RMD160 e83cf094681389b3a82b5f9c5cd40431ccaef810 files/gnome-terminal-2-dnd_url_add_space.patch 1000
+SHA256 d807989dc7aec88f1d01e9449a5d44232e5d01fb64bea91fb2a181bf3080116c files/gnome-terminal-2-dnd_url_add_space.patch 1000
+DIST gnome-terminal-2.10.0.tar.bz2 2334171 size 2334171
+DIST gnome-terminal-2.12.0.tar.bz2 1684178 RMD160 97343108571febee95991e76b0e60d4cf2ea60c8 SHA256 e515509f2d07ab1360723b70345ac18b44c5525abc31cce48f135b43fbb444cc size 1684178
+DIST gnome-terminal-2.14.0.tar.bz2 1732708 RMD160 41074d730584036df15786251c0bb2107d0b46c9 SHA256 238c28f937fd1a1b8f9c6ca9a7aed242287cc199ffa98c3c4342caeea0239286 size 1732708
+DIST gnome-terminal-2.14.1.tar.bz2 1783063 RMD160 4754269a493fcd5daca40a02b3a4b6901b9e0d3c SHA256 c1e7674bb75343db89ad6769bc2d7ecfb115d9eda02035d374d8c4d952091647 size 1783063
+DIST gnome-terminal-2.8.2.tar.bz2 2171397 size 2171397
+EBUILD gnome-terminal-2.10.0.ebuild 1161 RMD160 99ce5aac2ed8e80cf082c56e177332f2ef914c20 SHA1 5b7c38525afde0cc7a27e1825bcb37709838345b SHA256 cda235366ed0864865b8851cf3a305f2d8dd7af8622b9ef2e9e34f8f0018f24b size 1161
+MD5 f44e7916277f346bd86a5b21cd8f1851 gnome-terminal-2.10.0.ebuild 1161
+RMD160 99ce5aac2ed8e80cf082c56e177332f2ef914c20 gnome-terminal-2.10.0.ebuild 1161
+SHA256 cda235366ed0864865b8851cf3a305f2d8dd7af8622b9ef2e9e34f8f0018f24b gnome-terminal-2.10.0.ebuild 1161
+EBUILD gnome-terminal-2.12.0.ebuild 1215 RMD160 19d07f7d0217ab6b04424376a7a3814493787424 SHA1 0ca22ff7de452375751358ac7fcaf5565382e261 SHA256 e256043c33b799bb41a4bc5877fe0d12d2d9c3ce7875a3d50cda341ddf6b1d0e size 1215
+MD5 e44c17b0dfc422e07e2b616112faa043 gnome-terminal-2.12.0.ebuild 1215
+RMD160 19d07f7d0217ab6b04424376a7a3814493787424 gnome-terminal-2.12.0.ebuild 1215
+SHA256 e256043c33b799bb41a4bc5877fe0d12d2d9c3ce7875a3d50cda341ddf6b1d0e gnome-terminal-2.12.0.ebuild 1215
+EBUILD gnome-terminal-2.14.0.ebuild 1386 RMD160 9e049986c32c50cd189717ab30e506e4e1052ae3 SHA1 f646f9c98ccaf89f233b46adab3f2a20465f9d38 SHA256 be9f0cedf8b83bc2e916e463aa2bfcf49a5bb46ca4d477441118a0394d30f2a7 size 1386
+MD5 2f66d061d67450f811e97f77ac0f1464 gnome-terminal-2.14.0.ebuild 1386
+RMD160 9e049986c32c50cd189717ab30e506e4e1052ae3 gnome-terminal-2.14.0.ebuild 1386
+SHA256 be9f0cedf8b83bc2e916e463aa2bfcf49a5bb46ca4d477441118a0394d30f2a7 gnome-terminal-2.14.0.ebuild 1386
+EBUILD gnome-terminal-2.14.1.ebuild 1381 RMD160 6b02d3ebd617454de8ae3fb13be08f2286fdee3a SHA1 4ecb7d30d4ee51162d2bc32e7387e5e5a858985a SHA256 aa1e1c490eeed350c5da33fe971070a09583e9d1b74984dcff25ca8ce046e724 size 1381
+MD5 faabe33aba2c30ed15fc74643eb3f3c2 gnome-terminal-2.14.1.ebuild 1381
+RMD160 6b02d3ebd617454de8ae3fb13be08f2286fdee3a gnome-terminal-2.14.1.ebuild 1381
+SHA256 aa1e1c490eeed350c5da33fe971070a09583e9d1b74984dcff25ca8ce046e724 gnome-terminal-2.14.1.ebuild 1381
+EBUILD gnome-terminal-2.8.2.ebuild 1149 RMD160 b37ab54a8887246e138140909fa5dcd06368beaa SHA1 42b12f3634edb4f72c961a7f7cf5c029d8edcfe7 SHA256 1fbd72cd7866402ca66ec5a4419e82dedf9170d292ba40d61c88adde58429a03 size 1149
+MD5 39319897f878b9eb6bed21179d9ab2a5 gnome-terminal-2.8.2.ebuild 1149
+RMD160 b37ab54a8887246e138140909fa5dcd06368beaa gnome-terminal-2.8.2.ebuild 1149
+SHA256 1fbd72cd7866402ca66ec5a4419e82dedf9170d292ba40d61c88adde58429a03 gnome-terminal-2.8.2.ebuild 1149
+MISC ChangeLog 13670 RMD160 2e4692a7359a8a5cd945166ad37289e070e229bc SHA1 fda4b394e6c04c1e9a501aac7fb7fa7bcdd4a313 SHA256 2ddadb000e96e1be76fd28b3efeb3f63ebda34eb05767ecef750bcb79ff1c133 size 13670
+MD5 fa1d0da3d5b19ebd927b7fadb708947f ChangeLog 13670
+RMD160 2e4692a7359a8a5cd945166ad37289e070e229bc ChangeLog 13670
+SHA256 2ddadb000e96e1be76fd28b3efeb3f63ebda34eb05767ecef750bcb79ff1c133 ChangeLog 13670
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 size 158
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 MD5 c6d9c33f98e008a1bb1ca3caa6028f8d files/digest-gnome-terminal-2.10.0 75
 RMD160 b38e9a8ef78de4c02a1523ff24e802f143030625 files/digest-gnome-terminal-2.10.0 75
 SHA256 1183e744dcf8788220b89c5f255e934317256c5552153875f15864ba3b079726 files/digest-gnome-terminal-2.10.0 75
@@ -10,27 +51,16 @@ SHA256 a28d024491611da72e115bf1b65c0053e4824ca1687615176c7c7134ce2b6069 files/di
 MD5 bbb4c2c708c0218fdd962f3149ba98fa files/digest-gnome-terminal-2.14.0 271
 RMD160 e58b4e2a98cb490d37e33b69d6d25d6e3309e7b4 files/digest-gnome-terminal-2.14.0 271
 SHA256 ca48e28b18161e78f01689c1e1c59f8f812b5072698d044d924dbd23a6f3dea7 files/digest-gnome-terminal-2.14.0 271
+MD5 4ec7d7e9d02a6399c3cdd389e21f0d33 files/digest-gnome-terminal-2.14.1 271
+RMD160 cdec291fa6ae99b4bcf936911c05d5194a4d70f6 files/digest-gnome-terminal-2.14.1 271
+SHA256 587249b8f6fdfe2960e53fbec50af5c6d5a97f6ac7a27e28cd05b0566bc03ed4 files/digest-gnome-terminal-2.14.1 271
 MD5 566ca1ffc1b71593c39529fb9af82cb1 files/digest-gnome-terminal-2.8.2 74
 RMD160 97b6ee0e7035254390f9937b696f0f881f56b5c5 files/digest-gnome-terminal-2.8.2 74
 SHA256 9ca0663d7e60021c9197f79675830027ce95c6466ce33980353498124e58f038 files/digest-gnome-terminal-2.8.2 74
-MD5 1c5aaf13eb2a8bd0b2b03c529d5c8740 files/gnome-terminal-2-default_shell.patch 490
-RMD160 22b0e40dc8a6cae17d391e2e21dc0dda60201d23 files/gnome-terminal-2-default_shell.patch 490
-SHA256 89248a85b8c921274d336467ba355032d6621fb09efd1a6ab86c64ee90d69c5b files/gnome-terminal-2-default_shell.patch 490
-MD5 206e36d5520f43272f029d6411af6332 files/gnome-terminal-2-dnd_url_add_space.patch 1000
-RMD160 e83cf094681389b3a82b5f9c5cd40431ccaef810 files/gnome-terminal-2-dnd_url_add_space.patch 1000
-SHA256 d807989dc7aec88f1d01e9449a5d44232e5d01fb64bea91fb2a181bf3080116c files/gnome-terminal-2-dnd_url_add_space.patch 1000
-MD5 f44e7916277f346bd86a5b21cd8f1851 gnome-terminal-2.10.0.ebuild 1161
-RMD160 99ce5aac2ed8e80cf082c56e177332f2ef914c20 gnome-terminal-2.10.0.ebuild 1161
-SHA256 cda235366ed0864865b8851cf3a305f2d8dd7af8622b9ef2e9e34f8f0018f24b gnome-terminal-2.10.0.ebuild 1161
-MD5 e44c17b0dfc422e07e2b616112faa043 gnome-terminal-2.12.0.ebuild 1215
-RMD160 19d07f7d0217ab6b04424376a7a3814493787424 gnome-terminal-2.12.0.ebuild 1215
-SHA256 e256043c33b799bb41a4bc5877fe0d12d2d9c3ce7875a3d50cda341ddf6b1d0e gnome-terminal-2.12.0.ebuild 1215
-MD5 2f66d061d67450f811e97f77ac0f1464 gnome-terminal-2.14.0.ebuild 1386
-RMD160 9e049986c32c50cd189717ab30e506e4e1052ae3 gnome-terminal-2.14.0.ebuild 1386
-SHA256 be9f0cedf8b83bc2e916e463aa2bfcf49a5bb46ca4d477441118a0394d30f2a7 gnome-terminal-2.14.0.ebuild 1386
-MD5 39319897f878b9eb6bed21179d9ab2a5 gnome-terminal-2.8.2.ebuild 1149
-RMD160 b37ab54a8887246e138140909fa5dcd06368beaa gnome-terminal-2.8.2.ebuild 1149
-SHA256 1fbd72cd7866402ca66ec5a4419e82dedf9170d292ba40d61c88adde58429a03 gnome-terminal-2.8.2.ebuild 1149
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEVs7oomPajV0RnrERAgWJAKCAApBN4ZsGyNZ7PmHtvslOWf8DHwCgge/a
+yLeWhgTBZsCRKUYlZgTE8+E=
+=fIMK
+-----END PGP SIGNATURE-----
