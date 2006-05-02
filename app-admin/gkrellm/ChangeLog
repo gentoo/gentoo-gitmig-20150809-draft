@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/gkrellm
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.120 2005/08/12 13:49:52 ka0ttic Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.121 2006/05/02 12:41:31 mholzer Exp $
+
+*gkrellm-2.2.9 (17 Apr 2006)
+
+  17 Apr 2006; Martin Holzer <mholzer@gentoo.org>
+  +files/gkrellm-2.2.9-gnutls.patch, +gkrellm-2.2.9.ebuild:
+  Version bumped. Thx to <tristanheaven@gmail.com> for submitting in #129257
 
   12 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> gkrellm-2.2.5.ebuild:
   Stable on mips.
