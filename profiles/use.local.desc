@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1882 2006/05/01 15:15:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1883 2006/05/02 22:40:03 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -431,8 +431,8 @@ dev-util/cogito:mozsha1 - Make use of a bundled routine commit with Mozilla that
 dev-util/cogito:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arc
 dev-util/cvs:server - Enable server support
 dev-util/devhelp:firefox - Build against firefox rather than mozilla
-dev-util/eclipse-sdk:firefox - Build against firefox rather than mozilla
 dev-util/eclipse-sdk:atk - Enable atk (accessibility) support
+dev-util/eclipse-sdk:firefox - Build against firefox rather than mozilla
 dev-util/eclipse-sdk:nogecko-sdk - Don't use Gecko-SDK for embedded browser support.
 dev-util/eclipse-sdk:nodoc - Don't include documentation
 dev-util/eclipse-sdk:nosrc - Don't include source code
@@ -444,8 +444,8 @@ dev-util/git:webdav - Adds support for push'ing to HTTP repositories via DAV
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/global:vim - vim funny stuff for global
 dev-util/kdevelop:ada - Support for the Ada programming language.
-dev-util/kdevelop:cvs - Support for CVS via kde-base/cervisia.
 dev-util/kdevelop:clearcase - Support for the ClearCase version control system.
+dev-util/kdevelop:cvs - Support for CVS via kde-base/cervisia.
 dev-util/kdevelop:haskell - Support for the Haskell programming language.
 dev-util/kdevelop:pascal - Support for the Pascal programming language.
 dev-util/kdevelop:perforce - Support for the Perforce version control system.
@@ -572,8 +572,8 @@ kde-misc/tellico:cddb - Access cddb servers to retrieve and submit information a
 mail-client/balsa:gtkspell - Use gtkspell for dictionary support
 mail-client/evolution:bogofilter - Use bogofilter instead of spamassassin
 mail-client/evolution:firefox - Use Firefox's NSS/NSPR libraries if SSL is enabled
-mail-client/evolution:widescreen - Enable widescreen support
 mail-client/evolution:nntp - Enable evolution nntp (news) functionality
+mail-client/evolution:widescreen - Enable widescreen support
 mail-client/mail-notification:evolution - Provide an Evolution plugin
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mail-notification:gmailtimestamps - Enable support for Gmail timestamps
@@ -1225,9 +1225,9 @@ net-wireless/linux-wlan-ng-modules:pci - Enable the Prism2.5 native PCI (_pci) d
 net-wireless/linux-wlan-ng-modules:plx - Enable the Prism2 PLX9052 based PCI (_plx) adapter driver
 net-wireless/madwifi-ng:amrr - Use Adaptive Multi Rate Retry bit rate control algorithm
 net-wireless/madwifi-ng:onoe - Use Atsushi Onoe's bit rate control algorithm
+net-wireless/madwifi-ng-tools:udev - Enable udev rules file installation
 net-wireless/madwifi-old:amrr - Use Adaptive Multi Rate Retry bit rate control algorithm
 net-wireless/madwifi-old:onoe - Use Atsushi Onoe's bit rate control algorithm
-net-wireless/madwifi-ng-tools:udev - Enable udev rules file installation
 net-wireless/wepattack:john - Build with johntheripper support
 net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
 net-wireless/wpa_supplicant:gsm - Add support for EAP-SIM authentication algorithm
@@ -1284,7 +1284,6 @@ sci-libs/plplot:octave - Support for Octave bindings.
 sci-libs/vtk:patented - Builds patented classes.
 sci-libs/vtk:qt3 - Adds support for the Qt3 GUI/Application Toolkit.
 sci-libs/vtk:qt4 - Adds support for the Qt4 GUI/Application Toolkit.
-sci-mathematics/nusmv:minisat - Enable support for MiniSat.
 sci-mathematics/coq:ide - Build the Coq IDE, a clone of proof general using lablgtk2.
 sci-mathematics/coq:norealanalysis - Do not build real analysis modules (faster compilation).
 sci-mathematics/coq:translator - Install the translator script from coq-7.4 to coq-8.0, and its documentation if doc is set too.
@@ -1295,6 +1294,7 @@ sci-mathematics/maxima:cmucl - adds cmucl (lisp) support to maxima
 sci-mathematics/maxima:gcl   - adds gcl (lisp) support to maxima
 sci-mathematics/maxima:sbcl   - adds sbcl (lisp) support to maxima
 sci-mathematics/mupad:mupad-noscilab - Disable scilab that comes with MuPAD package. Use system-wide instead.
+sci-mathematics/nusmv:minisat - Enable support for MiniSat.
 sci-mathematics/octave-forge:qhull - Adds media-libs/qhull (geometric extensions) support
 sci-mathematics/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to sci-mathematics/octave (may be merged with hdf when opendx is completed)
 sci-mathematics/scilab:atlas - Add support for the atlas library
@@ -1391,11 +1391,11 @@ sys-freebsd/freebsd-bin:rcp - Enable rcp support (TODO improve description)
 sys-freebsd/freebsd-lib:atm - Enable Asynchronous Transfer Mode protocol support
 sys-freebsd/freebsd-lib:gpib - Enable gpib support (TODO improve description)
 sys-freebsd/freebsd-rescue:atm - Enable Asynchronous Transfer Mode protocol support
-sys-freebsd/freebsd-share:isdn - Enable ISDN support
 sys-freebsd/freebsd-sbin:atm - Enable Asynchronous Transfer Mode protocol support
 sys-freebsd/freebsd-sbin:ipfilter - Enable ipfilter firewall support
-sys-freebsd/freebsd-sbin:vinum - Enable vinum support (TODO improve description)
 sys-freebsd/freebsd-sbin:suid - Enable setuid root programs
+sys-freebsd/freebsd-sbin:vinum - Enable vinum support (TODO improve description)
+sys-freebsd/freebsd-share:isdn - Enable ISDN support
 sys-freebsd/freebsd-ubin:atm - Enable Asynchronous Transfer Mode protocol support
 sys-freebsd/freebsd-usbin:atm - Enable Asynchronous Transfer Mode protocol support
 sys-freebsd/freebsd-usbin:ipfilter - Enable ipfilter firewall support
@@ -1619,8 +1619,8 @@ x11-wm/matchbox-panel:lowres - Optimize for low resolution screens.
 x11-wm/matchbox-window-manager:xcomposite - Enable support for Xorg Composite extension
 x11-wm/openbox:pango - Enable pango support
 x11-wm/sawfish:pango - Enable pango support
-x11-wm/stumpwm-cvs:sbcl - Use SBCL for the runtime
 x11-wm/stumpwm-cvs:clisp - Use CLISP for the runtime
+x11-wm/stumpwm-cvs:sbcl - Use SBCL for the runtime
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
 xfce-base/thunar:thumbnail - enable thumbnail support in the file browser.
 xfce-base/thunar:xslt - Build HTML based docs from xml.
