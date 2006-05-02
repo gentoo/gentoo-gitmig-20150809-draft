@@ -1,0 +1,45 @@
+Index: etc/conf.d/rc
+===================================================================
+--- etc/conf.d/rc	(revision 2021)
++++ etc/conf.d/rc	(working copy)
+@@ -12,14 +12,13 @@
+ 
+ # Dynamic /dev managers can trigger coldplug events which cause services to
+ # start before we are ready for them. If this happens, we can defer these
+-# services to start in the boot runlevel. If you don't want this then set
+-# RC_COLDPLUG to no.
+-# For more fine grained control you can list full service names to allow
+-# them to coldplug and prefix them with ! so they don't coldplug.
+-# Example - RC_COLDPLUG="net.wlan !net.*"
++# services to start in the boot runlevel. RC_COLDPLUG is a list of services we
++# allow to be coldplugged in this way. Globbing is allowed as is prefixing
++# with ! which means don't coldplug.
++# Example - RC_COLDPLUG="net.wlan !net.* *"
+ # This allows net.wlan and any service not matching net.* to coldplug.
+ 
+-RC_COLDPLUG="yes"
++RC_COLDPLUG="*"
+ 
+ # RC_NET_STRICT_CHECKING allows some flexibility with the 'net' service.
+ # The following values are allowed:
+Index: sbin/runscript.sh
+===================================================================
+--- sbin/runscript.sh	(revision 2021)
++++ sbin/runscript.sh	(working copy)
+@@ -34,13 +34,14 @@
+ # until after rc sysinit has completed so we punt them to the boot runlevel
+ if [[ -e /dev/.rcsysinit ]] ; then
+ 	eerror "ERROR:  cannot run ${SVCNAME} until sysinit completes"
+-	[[ ${RC_COLDPLUG} == "no" ]] && exit 1
+-	if [[ ${RC_COLDPLUG} != "yes" ]] ; then
++	[[ "${RC_COLDPLUG}  " == "!* "* ]] && exit 1
++	if [[ "${RC_COLDPLUG}  " != "* "* ]] ; then
+ 		for x in ${RC_COLDPLUG} ; do
+ 			# We don't quote ${x} so we can do globbing
+ 			[[ ${SVCNAME} == ${x} ]] && break
+ 			[[ "!${SVCNAME}" == ${x} ]] && exit 1
+ 		done
++		[[ ${SVCNAME} == ${x} ]] || exit 1
+ 	fi
+ 	eerror "${SVCNAME} will be started in the ${BOOTLEVEL} runlevel"
+ 	if [[ ! -L /dev/.rcboot/"${SVCNAME}" ]] ; then
