@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.4.ebuild,v 1.4 2006/03/18 19:56:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.4.ebuild,v 1.5 2006/05/02 06:59:09 kevquinn Exp $
 
 inherit eutils multilib
 
@@ -45,7 +45,7 @@ src_test() {
 	# One of the tests doesn't like LC_ALL being set to encodings
 	# capable of expressing beta-S, so we simply clear it.
 	# bug #125375
-	LC_ALL= make check
+	LC_ALL="C" make check
 }
 
 src_install() {

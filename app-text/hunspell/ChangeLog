@@ -1,6 +1,10 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.5 2006/03/18 19:56:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.6 2006/05/02 06:59:09 kevquinn Exp $
+
+  02 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> hunspell-1.1.4.ebuild:
+  Set LC_ALL rather than clear it, to override any other locale variables (bug
+  #124229 comment #30)
 
   18 Mar 2006; <nixnut@gentoo.org> hunspell-1.1.4.ebuild:
   Added ~ppc. Bug #126360
