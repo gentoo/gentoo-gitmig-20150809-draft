@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.6.1.ebuild,v 1.3 2006/04/27 17:40:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.6.1.ebuild,v 1.4 2006/05/02 02:58:51 mr_bones_ Exp $
 
 inherit eutils versionator games
 
@@ -46,8 +46,16 @@ src_unpack() {
 		-e '302,306s#${usdatadir}#$(DESTDIR)${usdatadir}#' \
 		data/Makefile.in \
 		|| die "sed failed"
-	epatch "${FILESDIR}/${P}"-64bits.patch
-	epatch "${FILESDIR}/${P}"-gcc41.patch
+
+	#fix up install paths (bug #130513)
+	sed -i \
+		-e "s:\${prefix}/share/ultimatestunts/:${GAMES_DATADIR}/ultimatestunts/:" \
+		configure \
+		|| die "sed failed"
+
+	epatch \
+		"${FILESDIR}/${P}"-64bits.patch \
+		"${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_install() {
@@ -57,3 +65,10 @@ src_install() {
 	prepgamesdirs
 }
 
+pkg_postinst() {
+	games_pkg_postinst
+	echo
+	einfo "Please update or remove ~/.ultimatestunts/ultimatestunts.conf"
+	einfo "if you have it to update the path for the data files."
+	echo
+}
