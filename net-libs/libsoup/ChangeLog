@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.89 2006/04/27 21:57:55 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.90 2006/05/02 18:45:18 dang Exp $
+
+*libsoup-2.2.92 (02 May 2006)
+
+  02 May 2006; Daniel Gryniewicz <dang@gentoo.org> +libsoup-2.2.92.ebuild:
+  Bump for 2.14.1
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-libsoup-1.99.28, files/digest-libsoup-1.99.28-r1,
