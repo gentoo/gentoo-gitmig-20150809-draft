@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/tin
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.6 2005/05/16 17:01:24 swegener Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.7 2006/05/02 23:27:08 swegener Exp $
+
+  02 May 2006; Sven Wegener <swegener@gentoo.org> -tin-1.7.7-r1.ebuild,
+  tin-1.7.8.ebuild:
+  Disable X support, it needs more work.
 
 *tin-1.7.8 (16 May 2005)
 

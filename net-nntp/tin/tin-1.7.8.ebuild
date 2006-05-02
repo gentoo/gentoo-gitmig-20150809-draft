@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.7.8.ebuild,v 1.1 2005/05/16 17:01:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.7.8.ebuild,v 1.2 2006/05/02 23:27:08 swegener Exp $
 
 inherit eutils versionator
 
@@ -11,10 +11,9 @@ SRC_URI="ftp://ftp.tin.org/pub/news/clients/tin/v$(get_version_component_range 1
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~arm ~amd64 ~ia64 ~ppc-macos"
-IUSE="crypt debug ipv6 ncurses nls X"
+IUSE="crypt debug ipv6 ncurses nls"
 
 DEPEND="ncurses? ( sys-libs/ncurses )
-	X? ( virtual/x11 )
 	nls? ( sys-devel/gettext )
 	crypt? ( app-crypt/gnupg )"
 
@@ -41,7 +40,6 @@ src_compile() {
 		$(use_with ncurses) \
 		$(use_enable ipv6) \
 		$(use_enable debug) \
-		$(use_with X x) \
 		$(use_enable crypt pgp-gpg) \
 		$(use_enable nls) \
 		${myconf} || die "econf failed"
