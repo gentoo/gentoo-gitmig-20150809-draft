@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.2_pre2099.ebuild,v 1.1 2006/04/27 15:03:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.2_pre2099.ebuild,v 1.2 2006/05/02 22:26:45 swegener Exp $
 
 inherit eutils subversion
 
@@ -19,7 +19,7 @@ DEPEND="=x11-libs/qt-4*"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	if ! built_with_use qt gif ; then
+	if ! built_with_use x11-libs/qt gif ; then
 		eerror "It appears that qt was compiled with the \"gif\" USE flag disabled."
 		eerror
 		eerror "In order to use the Last.fm player, you need to enable this USE flag"
