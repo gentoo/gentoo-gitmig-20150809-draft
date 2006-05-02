@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-mk-defs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.9 2006/04/30 20:18:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.10 2006/05/02 06:42:34 flameeyes Exp $
+
+  02 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-mk-defs-6.0-r1.ebuild, freebsd-mk-defs-6.1_rc1.ebuild:
+  Add ~amd64 keyword for crosscompile environment.
 
 *freebsd-mk-defs-6.1_rc1 (30 Apr 2006)
 

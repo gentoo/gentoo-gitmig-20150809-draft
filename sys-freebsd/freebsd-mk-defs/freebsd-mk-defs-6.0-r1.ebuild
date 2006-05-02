@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-6.0-r1.ebuild,v 1.4 2006/04/25 18:41:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-6.0-r1.ebuild,v 1.5 2006/05/02 06:42:34 flameeyes Exp $
 
 inherit bsdmk freebsd
 
 DESCRIPTION="Makefiles definitions used for building and installing libraries and system files"
 SLOT="0"
-KEYWORDS="~x86-fbsd"
+KEYWORDS="~amd64 ~x86-fbsd"
 
 IUSE=""
 
