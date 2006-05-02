@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/siphon
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.11 2006/02/15 23:53:09 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.12 2006/05/02 22:13:48 weeve Exp $
+
+  02 May 2006; Jason Wever <weeve@gentoo.org> siphon-666.ebuild:
+  Stable on SPARC.
 
   15 Feb 2006; Markus Ullmann <jokey@gentoo.org> siphon-666.ebuild:
   Removing virtual/libpcap wrt bug #117898
