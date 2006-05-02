@@ -1,6 +1,16 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.536 2006/04/28 18:51:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.537 2006/05/02 17:29:19 joshuabaergen Exp $
+
+*xorg-x11-6.9.0-r1 (02 May 2006)
+*xorg-x11-6.8.2-r7 (02 May 2006)
+
+  02 May 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/CVE-2006-1526-xrender-mitri.patch, -xorg-x11-6.8.2-r4.ebuild,
+  -xorg-x11-6.8.2-r6.ebuild, +xorg-x11-6.8.2-r7.ebuild,
+  -xorg-x11-6.9.0.ebuild, +xorg-x11-6.9.0-r1.ebuild:
+  Security bump and remove all affected versions. Please see Bug #130979 for
+  details.
 
   28 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.2-r4.ebuild, xorg-x11-6.8.2-r6.ebuild, xorg-x11-6.9.0.ebuild:
