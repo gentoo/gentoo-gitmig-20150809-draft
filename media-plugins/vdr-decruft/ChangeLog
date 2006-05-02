@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-decruft
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-decruft/ChangeLog,v 1.1 2006/02/05 15:53:02 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-decruft/ChangeLog,v 1.2 2006/05/02 15:16:24 zzam Exp $
+
+  02 May 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-decruft-0.0.4.ebuild:
+  Added a more understandable error message for unpatched vdr.
 
 *vdr-decruft-0.0.4 (05 Feb 2006)
 

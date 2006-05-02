@@ -1,6 +1,6 @@
 # Copyright 2003-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-decruft/vdr-decruft-0.0.4.ebuild,v 1.1 2006/02/05 15:53:02 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-decruft/vdr-decruft-0.0.4.ebuild,v 1.2 2006/05/02 15:16:24 zzam Exp $
 
 IUSE=""
 inherit vdr-plugin eutils
@@ -16,7 +16,10 @@ DEPEND=">=media-video/vdr-1.3.21-r2"
 
 pkg_setup() {
 	vdr-plugin_pkg_setup
-	grep -q SetGroupSep ${VDR_INCLUDE_DIR}/vdr/channels.h || die "Unpatched vdr detected!"
+	if ! grep -q SetGroupSep ${VDR_INCLUDE_DIR}/vdr/channels.h; then
+		ewarn "Your vdr has not been patched with the SetGroupSep-Patch."
+		die "Unpatched vdr detected!"
+	fi
 }
 
 src_install() {
