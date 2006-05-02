@@ -1,6 +1,9 @@
 # ChangeLog for net-news/rol
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rol/ChangeLog,v 1.4 2006/01/30 11:52:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rol/ChangeLog,v 1.5 2006/05/02 01:35:48 weeve Exp $
+
+  02 May 2006; Jason Wever <weeve@gentoo.org> rol-0.2.2.ebuild:
+  Stable on SPARC.
 
   30 Jan 2006; Peter Volkov <pva@gentoo.org> rol-0.2.2.ebuild,
   rol-0.3.0.ebuild, rol-0.3.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rol/rol-0.2.2.ebuild,v 1.3 2006/01/30 11:52:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rol/rol-0.2.2.ebuild,v 1.4 2006/05/02 01:35:48 weeve Exp $
 
 DESCRIPTION="A RSS/RDF Newsreader"
 HOMEPAGE="http://unknown-days.com/rol/"
@@ -8,7 +8,7 @@ SRC_URI="http://unknown-days.com/rol/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ~hppa ppc ~sparc x86"
+KEYWORDS="alpha ~amd64 ~hppa ppc sparc x86"
 IUSE=""
 
 
