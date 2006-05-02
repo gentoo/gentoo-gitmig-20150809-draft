@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.94-r2.ebuild,v 1.2 2006/04/30 10:14:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.94-r2.ebuild,v 1.3 2006/05/02 14:56:58 kingtaco Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,8 @@ HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 	mirror://gentoo/${P}.tar.bz2
 	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2
-	http://dev.gentoo.org/~vapier/dist/${P}-patches-${PATCH_VER}.tar.bz2"
+	http://dev.gentoo.org/~vapier/dist/${P}-patches-${PATCH_VER}.tar.bz2
+	http://dev.gentoo.org/~kingtaco/mirror/${P}-patches-${PATCH_VER}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

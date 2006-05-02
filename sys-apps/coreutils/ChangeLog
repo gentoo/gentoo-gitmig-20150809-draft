@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.166 2006/04/23 18:20:12 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.167 2006/05/02 14:56:58 kingtaco Exp $
+
+  02 May 2006; Mike Doty <kingtaco@gentoo.org> coreutils-5.94-r2.ebuild:
+  mirroring coreutils-5.94-patches-1.4.tar.bz2 at
+  http://dev.gentoo.org/~kingtaco/mirror/ bug 131808
 
   29 Apr 2006; Joshua Kinard <kumba@gentoo.org> coreutils-5.94-r1.ebuild:
   Marked stable on mips.
