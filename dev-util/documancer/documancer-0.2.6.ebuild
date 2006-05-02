@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/documancer-0.2.6.ebuild,v 1.2 2006/04/29 14:58:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/documancer-0.2.6.ebuild,v 1.3 2006/05/02 00:22:52 halcy0n Exp $
 
 inherit eutils
 
@@ -13,10 +13,13 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
+# If pylucene makes it into the tree, we can add it as a dep
+# || ( dev-python/pylucene virtual/jre )
+
 RDEPEND=">=x11-libs/wxmozilla-0.5.6
 	>=virtual/python-2.3
 	>=dev-python/wxpython-2.6.3
-	|| ( dev-python/pylucene virtual/jre )
+	virtual/jre
 	dev-lang/perl"
 
 pkg_setup () {
