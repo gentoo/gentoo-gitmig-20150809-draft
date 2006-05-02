@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/sdcc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.26 2006/04/27 17:17:03 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.27 2006/05/02 23:31:44 dragonheart Exp $
+
+  02 May 2006; Daniel Black <dragonheart@gentoo.org>
+  sdcc-2.5.0_p20060423.ebuild:
+  disabled USE=doc as the tarball was not mirrored
 
 *sdcc-2.5.0_p20060423 (27 Apr 2006)
 
