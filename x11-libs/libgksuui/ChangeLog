@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libgksuui
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksuui/ChangeLog,v 1.7 2006/04/23 02:31:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksuui/ChangeLog,v 1.8 2006/05/02 02:14:01 weeve Exp $
+
+  02 May 2006; Jason Wever <weeve@gentoo.org> libgksuui-1.0.7.ebuild:
+  Added ~sparc keyword.
 
 *libgksuui-1.0.7 (23 Apr 2006)
 
