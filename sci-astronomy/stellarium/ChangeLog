@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.14 2006/05/01 23:44:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.15 2006/05/02 12:10:58 mr_bones_ Exp $
+
+  02 May 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/stellarium-0.8.0-gcc41.patch, stellarium-0.8.0.ebuild:
+  add gcc41 patch from nyhm (bug #132005)
 
 *stellarium-0.8.0 (01 May 2006)
 
