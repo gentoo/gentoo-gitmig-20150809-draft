@@ -26,19 +26,19 @@ MD5 252ec73a62c30ee7a502aab5f4ed4c3b files/freebsd-pam-modules-6.0-gentoo.patch 
 RMD160 f907769f6f0ded416fac03a1fb6b5531ff682070 files/freebsd-pam-modules-6.0-gentoo.patch 701
 SHA256 8346d95aa5b4f283fedf4387ebb85a61f5f10fac38dc45bdea8c2c345fdc633d files/freebsd-pam-modules-6.0-gentoo.patch 701
 DIST freebsd-lib-6.0.tar.bz2 2613087 RMD160 30bf04438a00408284f135c2670106141cae4873 SHA256 dab1140d52597f37d768d2210a49cb29db5404a7df35306462e3642074426a53 size 2613087
-DIST freebsd-lib-6.1_rc1.tar.bz2 2613706 RMD160 fe9ffa058f907e05747d106636a92aeb0cd2a864 SHA256 de39f9db53c8ab30a292d7ab4530cb0de3fa08ef682937bf2187962579d875c4 size 2613706
+DIST freebsd-lib-6.1_rc2.tar.bz2 2613579 RMD160 ed3f9dc5afe9896ee685934978f888c816562574 SHA256 0a12857f45472fc8c825b088d05c77ce1c8725b0c4615f1a670924911b4a5108 size 2613579
 EBUILD freebsd-pam-modules-6.0.ebuild 1314 RMD160 3ff22b76d89ddc271518b5e8237387944adab479 SHA1 464a3ca4167a0ad7f96ee5b6028ab0d8ae139b49 SHA256 1ef6c0be49991f23577f282dcf252a60034cd07cd2dda53febe3630068d8458c size 1314
 MD5 0c5072a8ce386c4c91203999f8af4097 freebsd-pam-modules-6.0.ebuild 1314
 RMD160 3ff22b76d89ddc271518b5e8237387944adab479 freebsd-pam-modules-6.0.ebuild 1314
 SHA256 1ef6c0be49991f23577f282dcf252a60034cd07cd2dda53febe3630068d8458c freebsd-pam-modules-6.0.ebuild 1314
-EBUILD freebsd-pam-modules-6.1_rc1.ebuild 1287 RMD160 eb47db6fde5f4cd29205b11a7e1af2d44544d79a SHA1 b52a9da9c3e4432e157f6a2610ca53d091f261d1 SHA256 729337d0698cab0b8e4d7611714d24651d378efcd67398370419e99e016bff27 size 1287
-MD5 eeb9a65e816311f1101d340c0b8086be freebsd-pam-modules-6.1_rc1.ebuild 1287
-RMD160 eb47db6fde5f4cd29205b11a7e1af2d44544d79a freebsd-pam-modules-6.1_rc1.ebuild 1287
-SHA256 729337d0698cab0b8e4d7611714d24651d378efcd67398370419e99e016bff27 freebsd-pam-modules-6.1_rc1.ebuild 1287
-MISC ChangeLog 2637 RMD160 928087023cacaa545ddf9ecdb694af2998cc3dee SHA1 bf8b1e532768ecbb9bec0f88a09873b6975df395 SHA256 1a1399fcad4ee5e25beb33532582d117bbc1ae6d84ae20084134984a0b4e28dc size 2637
-MD5 f5efc675a0e197d98544532ebd80c679 ChangeLog 2637
-RMD160 928087023cacaa545ddf9ecdb694af2998cc3dee ChangeLog 2637
-SHA256 1a1399fcad4ee5e25beb33532582d117bbc1ae6d84ae20084134984a0b4e28dc ChangeLog 2637
+EBUILD freebsd-pam-modules-6.1_rc2.ebuild 1287 RMD160 1b89c7adf140485a75ef867c6be5e4ca1ba6e92f SHA1 d09486011b0a89003ffa155e0bfdffb21a1b94ab SHA256 8481a7ec3ab176e0e3c416bf4d23a02c36debf2ee690e1d99d7bbd1453209e6a size 1287
+MD5 631de3d975f39f4eb9ba2b076d4cc223 freebsd-pam-modules-6.1_rc2.ebuild 1287
+RMD160 1b89c7adf140485a75ef867c6be5e4ca1ba6e92f freebsd-pam-modules-6.1_rc2.ebuild 1287
+SHA256 8481a7ec3ab176e0e3c416bf4d23a02c36debf2ee690e1d99d7bbd1453209e6a freebsd-pam-modules-6.1_rc2.ebuild 1287
+MISC ChangeLog 2832 RMD160 e0fdf93047128cb5a09d01bd2a843ed09d2b57bd SHA1 66b52a66ec3a94d82b70945cd34463ca1005af57 SHA256 414c01ee3edfb7c1b311de29e7e9e5759bbd398aef3887bd4a432184ecb4cbd8 size 2832
+MD5 157afae44451e7da90209619e67a0a17 ChangeLog 2832
+RMD160 e0fdf93047128cb5a09d01bd2a843ed09d2b57bd ChangeLog 2832
+SHA256 414c01ee3edfb7c1b311de29e7e9e5759bbd398aef3887bd4a432184ecb4cbd8 ChangeLog 2832
 MISC metadata.xml 156 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 SHA1 d9d9d4f2b5afc58339ea3e562fca490156935f1f SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 size 156
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
@@ -46,13 +46,13 @@ SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata
 MD5 3f8b30a7524ee60de45cfe483e4a98ef files/digest-freebsd-pam-modules-6.0 253
 RMD160 ddc8cde12a8205b150fa1584831471d8e6edc26f files/digest-freebsd-pam-modules-6.0 253
 SHA256 19259c95eb76120fb8b21ac7f9dc26d985edc4eae7828df6c41fe6d0d6bff59d files/digest-freebsd-pam-modules-6.0 253
-MD5 c00ad8af1c982368233de0a882abd3c7 files/digest-freebsd-pam-modules-6.1_rc1 265
-RMD160 aa321cba9315ee9988b83d5caa73dd699852d592 files/digest-freebsd-pam-modules-6.1_rc1 265
-SHA256 fb31c26e2c8424e2622cec87df8a5bec9e6998b7bf0697dcc96670a6f77bc16c files/digest-freebsd-pam-modules-6.1_rc1 265
+MD5 149608fee7d4956de1e2a38f9cad3d30 files/digest-freebsd-pam-modules-6.1_rc2 265
+RMD160 82fb841537780fec91cbae8e2d5597e701e60a0c files/digest-freebsd-pam-modules-6.1_rc2 265
+SHA256 94da21e6c258eaa31249ea7bdf9248799d981cc684e2cea1e92c64913d3345d4 files/digest-freebsd-pam-modules-6.1_rc2 265
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEVWNAAiZjviIA2XgRArUeAKDqcyzqGOoLlEgqbBze1oVP1C8jVQCfQqoI
-Z2x6/zqvNcXIrDj7d4FO/xw=
-=KcFI
+iD8DBQFEV9WfAiZjviIA2XgRAhyBAKCv/qkDsWJm/7gepKoLZ7v9jXmeaQCeMLuZ
+/Y1G6qO+dS4x9fObKRm8ei8=
+=IDKl
 -----END PGP SIGNATURE-----
