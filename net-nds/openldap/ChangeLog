@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.175 2006/05/01 20:23:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.176 2006/05/02 21:16:27 jokey Exp $
+
+  02 May 2006; Markus Ullmann <jokey@gentoo.org> openldap-2.3.21.ebuild:
+  Reordering einfos to have better information for users
 
   01 May 2006; Markus Ullmann <jokey@gentoo.org> openldap-2.3.21.ebuild:
   Small fix in lib preservation for 2.3.21

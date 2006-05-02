@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.21.ebuild,v 1.7 2006/05/01 20:23:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.21.ebuild,v 1.8 2006/05/02 21:16:27 jokey Exp $
 
 inherit autotools eutils flag-o-matic multilib toolchain-funcs
 
@@ -332,6 +332,28 @@ src_install() {
 }
 
 pkg_postinst() {
+	# keep old libs if any
+	# from 2.1
+	for each in ${ROOT}usr/$(get_libdir)/liblber.so.2.0.1* ; do
+		preserve_old_lib_notify ${each}
+	done
+	for each in ${ROOT}usr/$(get_libdir)/libldap.so.2.0.1* ; do
+		preserve_old_lib_notify ${each}
+	done
+	for each in ${ROOT}usr/$(get_libdir)/libldap_r.so.2.0.1* ; do
+		preserve_old_lib_notify ${each}
+	done
+	# from 2.2
+	for each in ${ROOT}usr/$(get_libdir)/liblber-2.2* ; do
+		preserve_old_lib_notify ${each}
+	done
+	for each in ${ROOT}usr/$(get_libdir)/libldap-2.2* ; do
+		preserve_old_lib_notify ${each}
+	done
+	for each in ${ROOT}usr/$(get_libdir)/libldap_r-2.2* ; do
+		preserve_old_lib_notify ${each}
+	done
+
 	if use ssl; then
 		# make a self-signed ssl cert (if there isn't one there already)
 		if [ ! -e /etc/openldap/ssl/ldap.pem ]
@@ -378,25 +400,7 @@ pkg_postinst() {
 	einfo "/usr/share/doc/${P}/DB_CONFIG.fast.example.gz"
 	einfo
 
-	# keep old libs if any
-	# from 2.1
-	for each in ${ROOT}usr/$(get_libdir)/liblber.so.2.0.1* ; do
-		preserve_old_lib_notify ${each}
-	done
-	for each in ${ROOT}usr/$(get_libdir)/libldap.so.2.0.1* ; do
-		preserve_old_lib_notify ${each}
-	done
-	for each in ${ROOT}usr/$(get_libdir)/libldap_r.so.2.0.1* ; do
-		preserve_old_lib_notify ${each}
-	done
-	# from 2.2
-	for each in ${ROOT}usr/$(get_libdir)/liblber-2.2* ; do
-		preserve_old_lib_notify ${each}
-	done
-	for each in ${ROOT}usr/$(get_libdir)/libldap-2.2* ; do
-		preserve_old_lib_notify ${each}
-	done
-	for each in ${ROOT}usr/$(get_libdir)/libldap_r-2.2* ; do
-		preserve_old_lib_notify ${each}
-	done
+	echo
+	einfo "*** Remember to run revdep-rebuild to update your packages ***"
+	einfo
 }
