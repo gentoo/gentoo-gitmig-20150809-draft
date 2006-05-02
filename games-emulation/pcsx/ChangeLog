@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/pcsx
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/ChangeLog,v 1.7 2005/09/26 17:45:44 wolf31o2 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/ChangeLog,v 1.8 2006/05/02 20:09:09 tupone Exp $
+
+  02 May 2006; <Tupone@gentoo.org> +files/pcsx-1.5-gcc41.patch,
+  pcsx-1.5-r1.ebuild:
+  Fix for gcc-4.1
 
   26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> pcsx-1.5-r1.ebuild:
   Making games last on inherit line.

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.7 2005/09/26 17:45:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.8 2006/05/02 20:09:08 tupone Exp $
 
 inherit eutils games
 
@@ -34,7 +34,8 @@ src_unpack() {
 
 	edos2unix `find -regex '.*\.[ch]'`
 
-	epatch ${FILESDIR}/${PV}-gentoo.patch
+	epatch ${FILESDIR}/${PV}-gentoo.patch \
+		"${FILESDIR}/${P}"-gcc41.patch
 	sed -i \
 		-e "s:Plugin/:${GAMES_LIBDIR}/psemu/plugins/:" \
 		-e "s:Bios/:${GAMES_LIBDIR}/psemu/bios/:" \
