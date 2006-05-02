@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.155 2006/05/02 11:44:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.156 2006/05/02 14:00:45 flameeyes Exp $
+
+  02 May 2006; Diego Pettenò <flameeyes@gentoo.org> -vlc-0.8.4.ebuild:
+  Drop old version.
 
 *vlc-0.8.5_beta4 (02 May 2006)
 
