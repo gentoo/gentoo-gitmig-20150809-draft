@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/quodlibet-browsefolders
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-browsefolders/ChangeLog,v 1.1 2006/05/02 01:46:07 tcort Exp $
+
+*quodlibet-browsefolders-3118 (01 May 2006)
+
+  01 May 2006; <tcort@gentoo.org> +metadata.xml,
+  +quodlibet-browsefolders-3118.ebuild:
+  Initial Commit. Ebuild by Kai Huuhko <kai.huuhko@gmail.com> and Thomas Cort
+  <tcort@gentoo.org>.
+
