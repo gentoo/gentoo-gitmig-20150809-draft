@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: gnat.eselect-0.7,v 1.2 2006/05/02 15:22:19 george Exp $
+# $Id: gnat.eselect-0.7,v 1.3 2006/05/02 15:47:50 george Exp $
 
 DESCRIPTION="Manage the talled gnat compilers"
 MAINTAINER="ada@gentoo.org"
-SVN_DATE='$Date: 2006/05/02 15:22:19 $'
+SVN_DATE='$Date: 2006/05/02 15:47:50 $'
 VERSION=$(svn_date_to_version "${SVN_DATE}" )
 
 SPECSDIR="/usr/share/gnat/eselect"
@@ -205,6 +205,15 @@ do_list() {
 				compilers[${i}]="${compilers[${i}]} $(highlight '*' )"
 		done
 		write_numbered_list "${compilers[@]}"
+
+		# now the libs
+		libs=( $(find_all_libs) )
+		write_list_start "Installed libs:"
+		for (( i = 0 ; i < ${#libs[@]} ; i = i + 1 )) ; do
+			[ -f ${SPECSDIR}/${libs[$i]}/${active} ] && \
+				libs[${i}]="${libs[${i}]} $(highlight '*' )"
+		done
+		write_numbered_list "${libs[@]}"
 	else
 		write_kv_list_entry "(none found)" ""
 	fi

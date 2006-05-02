@@ -1,9 +1,9 @@
 # ChangeLog for app-admin/eselect-gnat
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.4 2006/05/02 15:22:19 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.5 2006/05/02 15:47:50 george Exp $
 
   02 May 2006; George Shapovalov <george@gentoo.org> files/gnat.eselect-0.7:
-  small fix to the do_show method (so that it actually shows libs)
+  small fix to the do_show and do_list methods (so that they actually show libs)
 
 *eselect-gnat-0.7 (02 May 2006)
 
