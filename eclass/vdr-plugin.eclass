@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.20 2006/05/02 15:00:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.21 2006/05/02 15:04:03 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -316,6 +316,17 @@ vdr-plugin_pkg_config() {
 		-e ${LINE}'s/" /"/g'
 
 	vdr-plugin_pkg_config_final
+}
+
+fix_vdr_libsi_include()
+{
+	einfo "Fixing include of libsi-headers"
+	local f
+	for f; do
+		sed -i "${f}" \
+			-e '/#include/s:"\(.*libsi.*\)":<\1>:' \
+			-e '/#include/s:<.*\(libsi/.*\)>:<vdr/\1>:'
+	done
 }
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst pkg_postrm pkg_config
