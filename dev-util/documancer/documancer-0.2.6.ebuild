@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/documancer-0.2.6.ebuild,v 1.3 2006/05/02 00:22:52 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/documancer-0.2.6.ebuild,v 1.4 2006/05/02 22:25:46 swegener Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/wxmozilla-0.5.6
 pkg_setup () {
 	# Note: can't use "python_mod_exists wxPython.mozilla" here because
 	#       it doesn't work (some strange import stuff in wxPython)
-	if ! built_with_use wxmozilla python; then
+	if ! built_with_use x11-libs/wxmozilla python; then
 		eerror "you need wxmozilla compiled with Python module:"
 		eerror "echo \"x11-libs/wxmozilla python\" >> /etc/portage/package.use"
 		eerror "and then emerge wxmozilla"
