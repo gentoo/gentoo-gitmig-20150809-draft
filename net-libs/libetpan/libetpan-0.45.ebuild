@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-0.45.ebuild,v 1.2 2006/04/17 18:28:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-0.45.ebuild,v 1.3 2006/05/02 09:34:22 ticho Exp $
 
 DESCRIPTION="A portable, efficient middleware for different kinds of mail access."
 HOMEPAGE="http://libetpan.sourceforge.net"
@@ -26,7 +26,9 @@ src_compile() {
 		`use_with ssl openssl` \
 		`use_with sasl` \
 		|| die "econf failed"
-	emake || die "emake failed"
+
+	# build system is broken, we need -j1 (bug #126848) - Ticho, 2006-05-02
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
