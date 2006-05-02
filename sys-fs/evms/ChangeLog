@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.45 2006/03/29 02:28:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.46 2006/05/02 08:14:30 eradicator Exp $
+
+*evms-2.5.5-r1 (02 May 2006)
+
+  02 May 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/2.5.5/md_super_fix.patch, +files/2.5.5/raid5_degrade_fix.patch,
+  +evms-2.5.5-r1.ebuild:
+  Added maintenance patches to handle degraded raid5 arrays.  Closes bug #131193.
 
   29 Mar 2006; Aron Griffis <agriffis@gentoo.org> evms-2.5.5.ebuild:
   Mark 2.5.5 stable on ia64
