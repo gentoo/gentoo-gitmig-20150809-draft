@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/charm/charm-1.4.0.ebuild,v 1.1 2005/03/23 16:37:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/charm/charm-1.4.0.ebuild,v 1.2 2006/05/02 00:24:20 weeve Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ljcharm/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="sparc x86"
 IUSE=""
 
 src_install() {
