@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hugo/hugo-2.12.ebuild,v 1.2 2006/02/10 19:58:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hugo/hugo-2.12.ebuild,v 1.3 2006/05/02 18:35:17 tupone Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="PC-Engine (Turbografx16) emulator for linux"
 HOMEPAGE="http://www.zeograd.com/"
@@ -16,6 +16,12 @@ IUSE=""
 RDEPEND="x11-libs/gtk+
 		media-libs/libsdl
 		media-libs/libvorbis"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
+}
 
 src_install() {
 	dogamesbin hugo || die "dogamesbin failed"

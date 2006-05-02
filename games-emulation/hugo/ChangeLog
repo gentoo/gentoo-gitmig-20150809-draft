@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/hugo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hugo/ChangeLog,v 1.5 2006/02/10 19:58:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hugo/ChangeLog,v 1.6 2006/05/02 18:35:17 tupone Exp $
+
+  02 May 2006; <Tupone@gentoo.org> +files/hugo-2.12-gcc41.patch,
+  hugo-2.12.ebuild:
+  Fixing gcc-4.1 compilation
 
   10 Feb 2006; Chris Gianelloni <wolf31o2@gentoo.org> -hugo-2.09.ebuild,
   hugo-2.12.ebuild:
