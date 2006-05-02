@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20-r1.ebuild,v 1.1 2006/04/20 05:27:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20-r1.ebuild,v 1.2 2006/05/02 08:01:55 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -20,13 +20,12 @@ DEPEND="media-libs/libsdl
 	opengl? ( virtual/opengl )"
 
 pkg_setup() {
-	games_pkg_setup
-
 	if ! built_with_use media-libs/sdl-image jpeg png ; then
 		eerror "You need jpeg and png useflags enabled on media-libs/sdl-image."
 		eerror "Please emerge media-libs/sdl-image with USE=\"jpeg png\""
 		die "Missing jpeg or png useflags."
 	fi
+	games_pkg_setup
 }
 
 src_unpack() {
