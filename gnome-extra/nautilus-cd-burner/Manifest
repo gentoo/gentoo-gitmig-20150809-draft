@@ -1,17 +1,86 @@
-MD5 479af3f6ee706cb1e121350ddd2c3350 ChangeLog 16044
-MD5 86395a29bcac00ddc56fd80e232bebb5 files/digest-nautilus-cd-burner-2.10.0 78
-MD5 fbad76c0bddc48265b9de05e9bbb6a7d files/digest-nautilus-cd-burner-2.10.1 78
-MD5 7f24e749f8188590151fc85deff46c20 files/digest-nautilus-cd-burner-2.10.2 78
-MD5 84ed09baf3995b59cf6c6b358cd1a722 files/digest-nautilus-cd-burner-2.12.1 78
-MD5 7c08f3fd1bc80a809034c4b0654fc7e2 files/digest-nautilus-cd-burner-2.12.2 78
-MD5 8fc8a3a14c00625cc81e9f2ad9dd4b9e files/digest-nautilus-cd-burner-2.12.3 78
-MD5 f1f55d865fed6da8c403e10c0911bb44 files/digest-nautilus-cd-burner-2.14.0.2 286
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX nautilus-cd-burner-2.10.2-hal_check.patch 537 RMD160 8557ee136aa3dbdb80424ea628d0167065c8aa7b SHA1 f7926a79bf45ea0ee240ebc0e9045d8b7ae5b6d8 SHA256 d16fd0e0ced3daab9a0d7c08bdaf3d673014881f78751e12a10827a24ac4d82c size 537
 MD5 6b15b225387e600f4093d7a00cf1bb5c files/nautilus-cd-burner-2.10.2-hal_check.patch 537
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 8557ee136aa3dbdb80424ea628d0167065c8aa7b files/nautilus-cd-burner-2.10.2-hal_check.patch 537
+SHA256 d16fd0e0ced3daab9a0d7c08bdaf3d673014881f78751e12a10827a24ac4d82c files/nautilus-cd-burner-2.10.2-hal_check.patch 537
+DIST nautilus-cd-burner-2.10.0.tar.bz2 623320 size 623320
+DIST nautilus-cd-burner-2.10.1.tar.bz2 515526 size 515526
+DIST nautilus-cd-burner-2.10.2.tar.bz2 544237 size 544237
+DIST nautilus-cd-burner-2.12.1.tar.bz2 614118 size 614118
+DIST nautilus-cd-burner-2.12.2.tar.bz2 609215 size 609215
+DIST nautilus-cd-burner-2.12.3.tar.bz2 615109 size 615109
+DIST nautilus-cd-burner-2.14.0.2.tar.bz2 670771 RMD160 aefc61370c14402f0cbdd66dc8c469134221502a SHA256 12a39e8ec7d8649bfd14cc9080936354939d71ac234e338872cdeb1cdb987c6a size 670771
+DIST nautilus-cd-burner-2.14.1.tar.bz2 672957 RMD160 5bae865ee721dffecdcd26b51b0903975136c42a SHA256 573dbf7df7aa6214c596dd667567fd59105aa3b4f18b34a8c4f84f067d89af47 size 672957
+EBUILD nautilus-cd-burner-2.10.0.ebuild 1131 RMD160 1cc16dc2977a5e16c9b4f7a428a489f1c3523639 SHA1 c2f8ac972dbc3016c14219c3faabcdddfd165f7e SHA256 8a56e6d0e46850f0da61c201d7ecbfd3e1462110e43917795fa9921edb44eb53 size 1131
 MD5 dc41732d18dc583a4b6b12a5bc978236 nautilus-cd-burner-2.10.0.ebuild 1131
+RMD160 1cc16dc2977a5e16c9b4f7a428a489f1c3523639 nautilus-cd-burner-2.10.0.ebuild 1131
+SHA256 8a56e6d0e46850f0da61c201d7ecbfd3e1462110e43917795fa9921edb44eb53 nautilus-cd-burner-2.10.0.ebuild 1131
+EBUILD nautilus-cd-burner-2.10.1.ebuild 1134 RMD160 1a6522e23107f471f39704f60838c036081781a7 SHA1 1aa148e1bd7474ceffbf4c366e98ee92a258c1dd SHA256 ce732cb659a2a6d0044113188707d2fb1f843b854e3e992ee0217512fa70c8b0 size 1134
 MD5 25136fc3623b2d9c07c56124cc371b2e nautilus-cd-burner-2.10.1.ebuild 1134
+RMD160 1a6522e23107f471f39704f60838c036081781a7 nautilus-cd-burner-2.10.1.ebuild 1134
+SHA256 ce732cb659a2a6d0044113188707d2fb1f843b854e3e992ee0217512fa70c8b0 nautilus-cd-burner-2.10.1.ebuild 1134
+EBUILD nautilus-cd-burner-2.10.2.ebuild 1385 RMD160 4a46a9dadde6a49e6a360c8869c00045aaef6658 SHA1 3ef5ef8ac038b9721893587c5497867e1f122338 SHA256 bdd9388fe07a2f56762c794a251bdd68bb9393794341d4555e3abe7965cdb46b size 1385
 MD5 f7063ad751f942c274e089c3a852d6e0 nautilus-cd-burner-2.10.2.ebuild 1385
+RMD160 4a46a9dadde6a49e6a360c8869c00045aaef6658 nautilus-cd-burner-2.10.2.ebuild 1385
+SHA256 bdd9388fe07a2f56762c794a251bdd68bb9393794341d4555e3abe7965cdb46b nautilus-cd-burner-2.10.2.ebuild 1385
+EBUILD nautilus-cd-burner-2.12.1.ebuild 1194 RMD160 a9178a16ca4f7be77ff6da65eada0fcb33e641ab SHA1 1cf6adeb851d7d59b5910c1611346e806daf99bd SHA256 6133198940ee96f4c9b9289894d935fd083aa2b05cddf281bbecc0b19e176745 size 1194
 MD5 79a94a9b823b2e08004b4517162de204 nautilus-cd-burner-2.12.1.ebuild 1194
+RMD160 a9178a16ca4f7be77ff6da65eada0fcb33e641ab nautilus-cd-burner-2.12.1.ebuild 1194
+SHA256 6133198940ee96f4c9b9289894d935fd083aa2b05cddf281bbecc0b19e176745 nautilus-cd-burner-2.12.1.ebuild 1194
+EBUILD nautilus-cd-burner-2.12.2.ebuild 1188 RMD160 39628ad9ed7142fdedd38cdf8e85ceb5156a7196 SHA1 7c6ad4db48e5024f79d1bbfd614637c34ec257fd SHA256 e1bd8c9fbb073e6dffcbcf241e966ec3a1faa26f56188f5653a7b9d67821adef size 1188
 MD5 921c16c2a9101f100c3e85b4c7817673 nautilus-cd-burner-2.12.2.ebuild 1188
+RMD160 39628ad9ed7142fdedd38cdf8e85ceb5156a7196 nautilus-cd-burner-2.12.2.ebuild 1188
+SHA256 e1bd8c9fbb073e6dffcbcf241e966ec3a1faa26f56188f5653a7b9d67821adef nautilus-cd-burner-2.12.2.ebuild 1188
+EBUILD nautilus-cd-burner-2.12.3.ebuild 1187 RMD160 9ce848d11a7c0ba6056d0a83241690e884365c3a SHA1 2fdecfaaecbbb3941c25ddd090497e5bf22f7107 SHA256 fbfcf51c1a0dcb70b9f37b2369141b7d78b20f87d60ffcd5e106a6ee2a5d9c9c size 1187
 MD5 44a1a8d90bb0cc7420890d1a8cebfd75 nautilus-cd-burner-2.12.3.ebuild 1187
+RMD160 9ce848d11a7c0ba6056d0a83241690e884365c3a nautilus-cd-burner-2.12.3.ebuild 1187
+SHA256 fbfcf51c1a0dcb70b9f37b2369141b7d78b20f87d60ffcd5e106a6ee2a5d9c9c nautilus-cd-burner-2.12.3.ebuild 1187
+EBUILD nautilus-cd-burner-2.14.0.2.ebuild 982 RMD160 05c912ea0cd06304e589999b589494313c94ab18 SHA1 6ce5124d46627b63a7f320d196157b4e3a789cc3 SHA256 2e3e96269eb9dc706c9446b07c822fa0de74e6efcfdcc9fff95ff593102a68ab size 982
 MD5 81b18fd8ce618ff390b23abb79ba0d0e nautilus-cd-burner-2.14.0.2.ebuild 982
+RMD160 05c912ea0cd06304e589999b589494313c94ab18 nautilus-cd-burner-2.14.0.2.ebuild 982
+SHA256 2e3e96269eb9dc706c9446b07c822fa0de74e6efcfdcc9fff95ff593102a68ab nautilus-cd-burner-2.14.0.2.ebuild 982
+EBUILD nautilus-cd-burner-2.14.1.ebuild 980 RMD160 80161e8489d3fd8fec6c0cf87fbbfdcad2d3ed00 SHA1 e119f7f14fa4b725a9218614c4b625879798fa73 SHA256 1f68067b4f61c10d470755fe32a3d396397a55f86059221ced684d3d7ba07780 size 980
+MD5 10ba862808e84d1561de770bf228985f nautilus-cd-burner-2.14.1.ebuild 980
+RMD160 80161e8489d3fd8fec6c0cf87fbbfdcad2d3ed00 nautilus-cd-burner-2.14.1.ebuild 980
+SHA256 1f68067b4f61c10d470755fe32a3d396397a55f86059221ced684d3d7ba07780 nautilus-cd-burner-2.14.1.ebuild 980
+MISC ChangeLog 16192 RMD160 3547c73d86a68f7275ea94a39a67562f6289c602 SHA1 79163c2640fa6dbeb1c3e21f791d53d99da20b6a SHA256 f028c03bff3998771fae8e5793dd58ff57f081236e14a549ef63a135689d5511 size 16192
+MD5 9d34380b59ff46da7410378ae3aab9a5 ChangeLog 16192
+RMD160 3547c73d86a68f7275ea94a39a67562f6289c602 ChangeLog 16192
+SHA256 f028c03bff3998771fae8e5793dd58ff57f081236e14a549ef63a135689d5511 ChangeLog 16192
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 size 158
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 86395a29bcac00ddc56fd80e232bebb5 files/digest-nautilus-cd-burner-2.10.0 78
+RMD160 3404849ef00b529db832d0a5cc7fb2c6fb0b930e files/digest-nautilus-cd-burner-2.10.0 78
+SHA256 567e13dc4161d5af0a7b09f52b3b622b6356a256c9876453b0f9fac5bb408ce5 files/digest-nautilus-cd-burner-2.10.0 78
+MD5 fbad76c0bddc48265b9de05e9bbb6a7d files/digest-nautilus-cd-burner-2.10.1 78
+RMD160 3850e71d9f9f40076af34b00ade2dbeee828fde2 files/digest-nautilus-cd-burner-2.10.1 78
+SHA256 631d0dcb4712eae6ff90f12c438dd5cff87f21ab48f0f7a87a5f09fae41dea05 files/digest-nautilus-cd-burner-2.10.1 78
+MD5 7f24e749f8188590151fc85deff46c20 files/digest-nautilus-cd-burner-2.10.2 78
+RMD160 fcd92acf2ccfcd81179cd0211fb408236ac00d05 files/digest-nautilus-cd-burner-2.10.2 78
+SHA256 79996dbd8bed3cdc9fd8d94ecfca3040b111e4123c6f5e367405bba744a14a5b files/digest-nautilus-cd-burner-2.10.2 78
+MD5 84ed09baf3995b59cf6c6b358cd1a722 files/digest-nautilus-cd-burner-2.12.1 78
+RMD160 99ad92920d0ead58a5a3d51092c687f8c07d1093 files/digest-nautilus-cd-burner-2.12.1 78
+SHA256 c2ed4cea6ab7b661279113a1cd1fcc47576f8b140da894f10ac1ef1e24443523 files/digest-nautilus-cd-burner-2.12.1 78
+MD5 7c08f3fd1bc80a809034c4b0654fc7e2 files/digest-nautilus-cd-burner-2.12.2 78
+RMD160 7fc7d355985db1a15725cc22c194caedb19dcaae files/digest-nautilus-cd-burner-2.12.2 78
+SHA256 6a0deeb7e3ced0450dd1159f6f98e7662da28b20e7ae2c5fd996a3d175be91cd files/digest-nautilus-cd-burner-2.12.2 78
+MD5 8fc8a3a14c00625cc81e9f2ad9dd4b9e files/digest-nautilus-cd-burner-2.12.3 78
+RMD160 a3fde44d4a56e7a0889ff4134b18a85db44491cb files/digest-nautilus-cd-burner-2.12.3 78
+SHA256 1711b4ca3d3b7772e8f318d698ffd41e22c57e45702be7cff4cd50089c012c16 files/digest-nautilus-cd-burner-2.12.3 78
+MD5 f1f55d865fed6da8c403e10c0911bb44 files/digest-nautilus-cd-burner-2.14.0.2 286
+RMD160 3e89988020a35fbf410de2128685ca7744ff1b1c files/digest-nautilus-cd-burner-2.14.0.2 286
+SHA256 9bec6865d63f2bf75fa517ec81d6509cdc4a132e1e6ac3461e6b0ff7be62ef4b files/digest-nautilus-cd-burner-2.14.0.2 286
+MD5 5b74dabb2ffc19872774cf81a8cfe7cd files/digest-nautilus-cd-burner-2.14.1 280
+RMD160 5642e49484f26a6181abb4b04e5704c26acea274 files/digest-nautilus-cd-burner-2.14.1 280
+SHA256 63f34c62e73f2cb2247d510a8e9c54a43559a170653f7509258af7885b957165 files/digest-nautilus-cd-burner-2.14.1 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEV9ApomPajV0RnrERAv8NAJ9ZvP9kaDKJwapbRJEXuXM5zifEqgCcCJUh
+GDgOLo8SugCsbTsCqFTD+hw=
+=ZUTT
+-----END PGP SIGNATURE-----
