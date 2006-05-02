@@ -1,6 +1,17 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.136 2006/04/08 03:45:24 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.137 2006/05/02 14:14:55 augustus Exp $
+
+  02 May 2006; Kristopher Kersey <augustus@gentoo.org>
+  -files/1.0.6629/nv-disable-preempt-on-smp_processor_id.patch,
+  -files/1.0.7167/NVIDIA_kernel-1.0-7167-disable-preempt-on-smp_processor_id
+  .patch, nvidia-kernel-1.0.6629-r5.ebuild,
+  nvidia-kernel-1.0.7167-r1.ebuild, nvidia-kernel-1.0.7174-r2.ebuild,
+  nvidia-kernel-1.0.7667.ebuild, nvidia-kernel-1.0.7676-r1.ebuild,
+  nvidia-kernel-1.0.8174-r1.ebuild, nvidia-kernel-1.0.8178-r3.ebuild,
+  nvidia-kernel-1.0.8756.ebuild:
+  Removed disable-preempt from all ebuilds and the patches themselves from CVS.
+  Bug #125368.  Also made some general cleanups of the ebuilds.
 
 *nvidia-kernel-1.0.8756 (08 Apr 2006)
 

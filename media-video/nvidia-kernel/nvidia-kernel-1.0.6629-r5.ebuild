@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629-r5.ebuild,v 1.1 2006/01/10 19:59:18 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629-r5.ebuild,v 1.2 2006/05/02 14:14:55 augustus Exp $
 
 inherit eutils linux-mod
 
@@ -102,8 +102,6 @@ src_unpack() {
 		einfo "Applying 2.6 kernel patches"
 		# Fix the /usr/src/linux/include/asm not existing on koutput issue #58294
 		epatch ${FILESDIR}/${PV}/conftest_koutput_includes.patch
-		# Fix calling of smp_processor_id() when preempt is enabled
-		epatch ${FILESDIR}/${PV}/nv-disable-preempt-on-smp_processor_id.patch
 		# Fix a limitation on available video memory bug #71684
 		epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1161283.patch
 		# New multi-agp support with newer -mm kernels

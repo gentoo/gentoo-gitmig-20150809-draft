@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.8174-r1.ebuild,v 1.1 2005/12/07 21:32:17 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.8174-r1.ebuild,v 1.2 2006/05/02 14:14:55 augustus Exp $
 
 inherit eutils linux-mod
 
@@ -83,11 +83,9 @@ src_unpack() {
 	epatch ${NV_PATCH_PREFIX}-1423627.diff
 
 	# Now any patches specific to the 2.6 kernel should go here
-	if kernel_is 2 6 ; then
-		einfo "Applying 2.6 kernel patches"
-		# Fix calling of smp_processor_id() when preempt is enabled
-		epatch ${NV_PATCH_PREFIX//8174/7167}-disable-preempt-on-smp_processor_id.patch
-	fi
+	#if kernel_is 2 6 ; then
+	#	einfo "Applying 2.6 kernel patches"
+	#fi
 
 	# Quiet down warnings the user do not need to see
 	sed -i \
