@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/jdictrayapi-0.9.1.ebuild,v 1.2 2006/04/27 13:12:37 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/jdictrayapi-0.9.1.ebuild,v 1.3 2006/05/02 13:14:39 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -29,7 +29,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/0.8.7-gentoo.patch
-	find -type d -name CVS -exec rm -r {} \;
+	find -type d -name CVS -exec rm -r {} \; >/dev/null 2>&1
 }
 
 src_compile() {
@@ -47,7 +47,7 @@ src_install() {
 	java-pkg_doso libtray.so
 
 	use doc && java-pkg_dohtml -r docs/*
-	use source && java-pkg_dosrc ${S}/src/unix/*
+	use source && java-pkg_dosrc ${S}/src/share/classes/* ${S}/src/unix/classes/*
 	if use examples; then
 		dodir /usr/share/doc/${PF}/examples
 		cp -r ${S}/demo/* ${D}/usr/share/doc/${PF}/examples
