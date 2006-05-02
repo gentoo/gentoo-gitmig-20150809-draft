@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/itcl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.29 2006/03/10 22:46:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.30 2006/05/02 00:11:05 gustavoz Exp $
+
+  02 May 2006; Gustavo Zacarias <gustavoz@gentoo.org> itcl-3.3-r1.ebuild:
+  Stable on sparc
 
   10 Mar 2006; Aron Griffis <agriffis@gentoo.org> itcl-3.3-r1.ebuild:
   Mark 3.3-r1 stable on ia64
