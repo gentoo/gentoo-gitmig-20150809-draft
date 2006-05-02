@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a1d1b5b80d2deef188abdfe153eb4ec6 ChangeLog 2362
 MD5 13b2afe3966a265074406c54219534de files/digest-sshfs-fuse-1.2 65
 MD5 72c53449101a834648c8a3c0a99bce0e files/digest-sshfs-fuse-1.3 65
@@ -6,3 +9,10 @@ MD5 6e89ba8198764bfd079a0cfa18dca593 metadata.xml 264
 MD5 0e25fdc012dfe5cc64d9c9cafdae3990 sshfs-fuse-1.2.ebuild 589
 MD5 bc50904ef0e55ce46ac210bc48728b43 sshfs-fuse-1.3.ebuild 602
 MD5 a37d0b4a58556a04ee3951392c3c8885 sshfs-fuse-1.6.ebuild 600
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEV5hPKRy60XGEcJIRAqrOAJ9CKIO9p3s9j2Fs34SRDfHGW4o7PACgrCcY
+1WFgy+2moqL9LE11K7D1b6g=
+=PBSS
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 243bd6d7d01b8b0d166394c2e80ee7a7 ChangeLog 7052
 MD5 875ccb2f04c962dedc90c43d94d90866 files/digest-fuse-2.4.1-r1 232
 MD5 b3a2e724ad0f3ed8280457e2738860f1 files/digest-fuse-2.4.2 232
@@ -12,3 +15,10 @@ MD5 646e658bda057dcc2d187c30b1022c8c fuse-2.4.2.ebuild 1494
 MD5 d05ca596a814289ffef3c77c4329fbdc fuse-2.5.2.ebuild 1458
 MD5 400c17dc0b992ded9ee2c25e344a366c fuse-2.6.0_pre2.ebuild 1460
 MD5 6e89ba8198764bfd079a0cfa18dca593 metadata.xml 264
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEV5fqKRy60XGEcJIRAmmfAJ42MUqGHSXq3C+/5QCWiR4/eb70pgCgm80A
+Pf4IVaBmN1zNkHFdpoxjZsE=
+=mbDn
+-----END PGP SIGNATURE-----
