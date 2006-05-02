@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/jdictrayapi-0.9.1-r1.ebuild,v 1.1 2006/05/02 13:54:20 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/jdictrayapi-0.9.1-r1.ebuild,v 1.2 2006/05/02 14:00:51 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -40,16 +40,13 @@ src_compile() {
 }
 
 src_install() {
-	cd ${WORKDIR}/${MY_P}-${PV}-src/
-
 	cd ${S}/dist/linux
 	java-pkg_dojar jdic.jar
 	java-pkg_doso libtray.so
-
-	use doc && java-pkg_dohtml -r docs/*
+	use doc && java-pkg_dohtml -r ${S}/../docs/*
 	use source && java-pkg_dosrc ${S}/src/share/classes/* ${S}/src/unix/classes/*
 	if use examples; then
 		dodir /usr/share/doc/${PF}/examples
-		cp -r ${S}/demo/* ${D}/usr/share/doc/${PF}/examples
+		cp -r ${S}/demo/Tray/* ${D}/usr/share/doc/${PF}/examples/
 	fi
 }
