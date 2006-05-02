@@ -1,18 +1,32 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cf6ed40a4bfd8be07d5bcea32bfbaabb ChangeLog 2043
-MD5 c45b544e8fd90d6a8baad8d12bc7efa6 files/digest-ncurses-ruby-0.8 68
-MD5 341e86137815b8ae6e0a9353c2f0bb64 files/digest-ncurses-ruby-0.9.1 70
-MD5 178d6c92030e7502de891ee44b15ebbd files/digest-ncurses-ruby-0.9.2 70
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+DIST ncurses-ruby-0.8.tar.bz2 33651 size 33651
+DIST ncurses-ruby-0.9.1.tar.bz2 44726 RMD160 072ed4855759257396be1bda7fe6db4526221f35 SHA256 55a37ffcd1095bc2491b4cebb69affc529c1335a0e482bd4671d343746323700 size 44726
+DIST ncurses-ruby-0.9.2.tar.bz2 46140 size 46140
+EBUILD ncurses-ruby-0.8.ebuild 576 RMD160 eef6959bd2be4a79202faf3c46e65934a4db695d SHA1 a88ff64f5fdb67a8b966807cf03af10e458be8a4 SHA256 4cbf652599a99b5d137199cba29ad9e05020da8cffb01a6bb71452f6bcd3f69f size 576
 MD5 7524750b2c9cc14fe9769e421094d956 ncurses-ruby-0.8.ebuild 576
-MD5 837cfc45ea00d45394366b505bc6dd83 ncurses-ruby-0.9.1.ebuild 571
+RMD160 eef6959bd2be4a79202faf3c46e65934a4db695d ncurses-ruby-0.8.ebuild 576
+SHA256 4cbf652599a99b5d137199cba29ad9e05020da8cffb01a6bb71452f6bcd3f69f ncurses-ruby-0.8.ebuild 576
+EBUILD ncurses-ruby-0.9.1.ebuild 569 RMD160 46be0f53ccb163295a9c94639754ffdeac6952c3 SHA1 cced8a17e25c250a633a3c326afd6bb352dea078 SHA256 87d8f71fd8399d90faeb86ad9c3b9da0bf9ce9749e01403ad94636d368f560f0 size 569
+MD5 8188c8846b10e4f39524c55d652e845a ncurses-ruby-0.9.1.ebuild 569
+RMD160 46be0f53ccb163295a9c94639754ffdeac6952c3 ncurses-ruby-0.9.1.ebuild 569
+SHA256 87d8f71fd8399d90faeb86ad9c3b9da0bf9ce9749e01403ad94636d368f560f0 ncurses-ruby-0.9.1.ebuild 569
+EBUILD ncurses-ruby-0.9.2.ebuild 576 RMD160 611540690111e6c3c4e0ee29683aeff88dfd1e12 SHA1 54624566e129968882c4b957d0afbc207e144a54 SHA256 21bdb28ed97472f0a3b1e7a5f2dadc4081c91593d31dd34d4949225276e30ef8 size 576
 MD5 4ff443b42e8ce9b315bf65cd8ecd8c64 ncurses-ruby-0.9.2.ebuild 576
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDf1f8csIHjyDViGQRAm3LAKDmz0vy2NeswCHQU+I2jUr3QOQ5yQCglH9Z
-167CeRY5/P9ZTmDmIr4fFms=
-=6S9Y
------END PGP SIGNATURE-----
+RMD160 611540690111e6c3c4e0ee29683aeff88dfd1e12 ncurses-ruby-0.9.2.ebuild 576
+SHA256 21bdb28ed97472f0a3b1e7a5f2dadc4081c91593d31dd34d4949225276e30ef8 ncurses-ruby-0.9.2.ebuild 576
+MISC ChangeLog 2135 RMD160 64ca59dabe483cb7fd4d35c5ff4eae0e5e371e3e SHA1 5d8646f57102859dc26086f971d46f129afdabd0 SHA256 98df641f8ebef1440fff739ab8b6107f5a3e3a52a6d41d65b851e12ff19b5f80 size 2135
+MD5 3874962e65d62d6402165bc88b922b7e ChangeLog 2135
+RMD160 64ca59dabe483cb7fd4d35c5ff4eae0e5e371e3e ChangeLog 2135
+SHA256 98df641f8ebef1440fff739ab8b6107f5a3e3a52a6d41d65b851e12ff19b5f80 ChangeLog 2135
+MISC metadata.xml 157 RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 SHA1 8ce15dcc608eeb5616aeec610dc695cbe6f93e02 SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c size 157
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
+SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
+MD5 c45b544e8fd90d6a8baad8d12bc7efa6 files/digest-ncurses-ruby-0.8 68
+RMD160 329f1456715667a6dd1fd6d8f23f33ec4de95736 files/digest-ncurses-ruby-0.8 68
+SHA256 01d36cba51169ae4f6ebfbdfc3dc185a150424ddf68b8155aeb6ca2efb9c2036 files/digest-ncurses-ruby-0.8 68
+MD5 759cd73c330879481a01d850e04316e1 files/digest-ncurses-ruby-0.9.1 256
+RMD160 78524d072eabbc05a3f46d41b8861d2cead6a6bf files/digest-ncurses-ruby-0.9.1 256
+SHA256 06745dab082f26e5294fd550e49ef581fb39880a36cf201dc4eaf03ac2c049cd files/digest-ncurses-ruby-0.9.1 256
+MD5 178d6c92030e7502de891ee44b15ebbd files/digest-ncurses-ruby-0.9.2 70
+RMD160 5b6af9a6daa940ddb73751a71594dc5cba7e8be4 files/digest-ncurses-ruby-0.9.2 70
+SHA256 875044fb978c681208451524f930b4a8faafa71b850b9259df164b0742f0c88a files/digest-ncurses-ruby-0.9.2 70
