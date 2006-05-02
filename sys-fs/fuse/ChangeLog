@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.47 2006/04/30 19:52:28 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.48 2006/05/02 17:33:14 gustavoz Exp $
+
+  02 May 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  fuse-2.6.0_pre2.ebuild:
+  Stable on sparc wrt #131196
 
   30 Apr 2006; Joshua Jackson <tsunam@gentoo.org> fuse-2.6.0_pre2.ebuild:
   stable on x86; bug #131196
