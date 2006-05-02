@@ -1,5 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.19.ebuild,v 1.2 2006/05/02 03:27:44 halcy0n Exp $
 
 inherit gnome2 mono autotools
 
@@ -27,7 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	eautoreconf || die 
+	eautoreconf || die
 }
 
 src_compile () {
