@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-libexec
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.6 2006/05/01 15:28:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.7 2006/05/02 21:54:58 flameeyes Exp $
+
+*freebsd-libexec-6.1_rc2 (02 May 2006)
+
+  02 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -freebsd-libexec-6.1_rc1.ebuild, -freebsd-libexec-6.1_rc1-r1.ebuild,
+  +freebsd-libexec-6.1_rc2.ebuild:
+  Update to 6.1_rc2.
 
 *freebsd-libexec-6.1_rc1-r1 (01 May 2006)
 
