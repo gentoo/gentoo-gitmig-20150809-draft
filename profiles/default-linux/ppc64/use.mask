@@ -22,6 +22,7 @@ mzscheme
 chasen
 fdftk
 mono
+beagle
 rar
 nvtv
 
