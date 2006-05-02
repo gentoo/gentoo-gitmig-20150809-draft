@@ -1,6 +1,13 @@
 # ChangeLog for dev-ada/booch_components
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/ChangeLog,v 1.5 2006/03/19 19:07:10 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/ChangeLog,v 1.6 2006/05/02 10:44:54 george Exp $
+
+*booch_components-20051222 (02 May 2006)
+
+  02 May 2006; George Shapovalov <george@gentoo.org>
+  +booch_components-20051222.ebuild:
+  new version in, redone to work with new gnat compilers (and gnat.eclass).
+  Masked for initial testing
 
   19 Mar 2006; Mark Loeser <halcy0n@gentoo.org>
   booch_components-20030815.ebuild:
