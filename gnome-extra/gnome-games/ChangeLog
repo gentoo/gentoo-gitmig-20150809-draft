@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.150 2006/04/21 20:48:18 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.151 2006/05/02 01:58:26 dang Exp $
+
+*gnome-games-2.14.1 (02 May 2006)
+
+  02 May 2006; Daniel Gryniewicz <dang@gentoo.org>
+  +gnome-games-2.14.1.ebuild:
+  Bump for 2.14.1
 
   21 Apr 2006; Thomas Cort <tcort@gentoo.org> gnome-games-2.12.3.ebuild:
   Stable on alpha wrt Bug #126321.
