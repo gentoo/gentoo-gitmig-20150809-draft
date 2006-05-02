@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/package.mask,v 1.2 2006/03/31 22:47:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/package.mask,v 1.3 2006/05/02 22:01:31 flameeyes Exp $
 
 # As soon as the ~x86-fbsd keyword is spread enough, drop the extra masking
 # used to limit usage of unsupported packages.
@@ -28,5 +28,9 @@ dev-util/strace
 # to mpg321 that works out of the box.
 media-sound/mpg123
 
+# Don't use them, use the one in base system
+dev-util/yacc
+dev-util/byacc
+
 # Don't go with newer versions
->=sys-apps/baselayout-1.12.0_pre16
+sys-apps/baselayout
