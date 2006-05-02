@@ -1,3 +1,28 @@
+Index: sbin/runscript.sh
+===================================================================
+--- sbin/runscript.sh	(revision 2021)
++++ sbin/runscript.sh	(working copy)
+@@ -27,13 +27,15 @@
+ # until after rc sysinit has completed so we punt them to the boot runlevel
+ if [[ -e /dev/.rcsysinit ]] ; then
+ 	eerror "ERROR:  cannot run ${SVCNAME} until sysinit completes"
+-	[[ ${RC_COLDPLUG} == "no" ]] && exit 1
+-	if [[ ${RC_COLDPLUG} != "yes" ]] ; then
++	[[ "${RC_COLDPLUG}  " == "!* "* ]] && exit 1
++	if [[ "${RC_COLDPLUG}  " != "* "* ]] ; then
++		cd /etc/init.d
++		shopt -s nullglob extglob
+ 		for x in ${RC_COLDPLUG} ; do
+-			# We don't quote ${x} so we can do globbing
+-			[[ ${SVCNAME} == ${x} ]] && break
+-			[[ "!${SVCNAME}" == ${x} ]] && exit 1
++			[[ ${SVCNAME} == "${x}" ]] && break
++			[[ "!${SVCNAME}" == "${x}" ]] && exit 1
+ 		done
++		[[ ${SVCNAME} == "${x}" ]] || exit 1
+ 	fi
+ 	eerror "${SVCNAME} will be started in the ${BOOTLEVEL} runlevel"
+ 	if [[ ! -L /dev/.rcboot/"${SVCNAME}" ]] ; then
 Index: ChangeLog
 ===================================================================
 --- ChangeLog	(revision 2021)
@@ -37,24 +62,3 @@ Index: etc/conf.d/rc
  
  # RC_NET_STRICT_CHECKING allows some flexibility with the 'net' service.
  # The following values are allowed:
-Index: sbin/runscript.sh
-===================================================================
---- sbin/runscript.sh	(revision 2021)
-+++ sbin/runscript.sh	(working copy)
-@@ -27,13 +27,14 @@
- # until after rc sysinit has completed so we punt them to the boot runlevel
- if [[ -e /dev/.rcsysinit ]] ; then
- 	eerror "ERROR:  cannot run ${SVCNAME} until sysinit completes"
--	[[ ${RC_COLDPLUG} == "no" ]] && exit 1
--	if [[ ${RC_COLDPLUG} != "yes" ]] ; then
-+	[[ "${RC_COLDPLUG}  " == "!* "* ]] && exit 1
-+	if [[ "${RC_COLDPLUG}  " != "* "* ]] ; then
- 		for x in ${RC_COLDPLUG} ; do
- 			# We don't quote ${x} so we can do globbing
- 			[[ ${SVCNAME} == ${x} ]] && break
- 			[[ "!${SVCNAME}" == ${x} ]] && exit 1
- 		done
-+		[[ ${SVCNAME} == ${x} ]] || exit 1
- 	fi
- 	eerror "${SVCNAME} will be started in the ${BOOTLEVEL} runlevel"
- 	if [[ ! -L /dev/.rcboot/"${SVCNAME}" ]] ; then

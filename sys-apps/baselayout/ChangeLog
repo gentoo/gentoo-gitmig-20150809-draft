@@ -1,9 +1,14 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.324 2006/05/02 13:10:33 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.325 2006/05/02 18:49:17 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  02 May 2006; Roy Marples <uberlord@gentoo.org>
+  files/baselayout-1.11.15-coldplug.patch,
+  files/baselayout-1.12.0_pre19-coldplug.patch:
+  Redone patches so they actually work.
 
 *baselayout-1.12.0_pre19-r1 (02 May 2006)
 *baselayout-1.11.15-r2 (02 May 2006)
