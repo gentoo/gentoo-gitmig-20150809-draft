@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.2.1.ebuild,v 1.1 2006/05/01 15:51:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.2.1.ebuild,v 1.2 2006/05/02 14:40:08 wolf31o2 Exp $
 
 inherit eutils games
 
-DESCRIPTION="Sequel to Quake 2, an Id 3D first-person shooter"
+DESCRIPTION="Sequel to Quake 2, an id Software 3D first-person shooter"
 HOMEPAGE="http://www.quake4game.com/"
 SRC_URI="mirror://idsoftware/quake4/linux/quake4-linux-${PV}.x86.run"
 
@@ -53,15 +53,15 @@ src_install() {
 	insinto "${dir}"
 	exeinto "${dir}"
 
-	doins *.txt README q4icon.bmp us/version.info README-1.2.htm
-	doins -r pb
+	doins *.txt README q4icon.bmp us/version.info README-1.2.htm || die "docs"
+	doins -r pb || die "pb"
 	doexe openurl.sh || die "openurl.sh"
 	doexe bin/Linux/x86/quake4.x86 bin/Linux/x86/q4ded.x86 \
 		bin/Linux/x86/libgcc_s.so.1 bin/Linux/x86/libstdc++.so.* \
+		bin/Linux/x86/libSDL-1.2.id.so.0 bin/Linux/x86/quakesmp4.x86 \
 		|| die "doexe x86 exes/libs"
-	newexe bin/Linux/x86/libSDL-1.2.id.so.0 libSDL-1.2.so.0 || die "libSDL"
 
-	insinto ${dir}/q4base
+	insinto "${dir}"/q4base
 	doins q4base/* us/q4base/* || die "doins q4base"
 	if use dedicated
 	then
