@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3.ebuild,v 1.4 2006/04/02 15:15:47 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3.ebuild,v 1.5 2006/05/02 05:07:34 mr_bones_ Exp $
 
-inherit gnuconfig flag-o-matic games
+inherit gnuconfig flag-o-matic eutils games
 
 WPV="0.14"
 DESCRIPTION="GNU BackGammon"
@@ -15,11 +15,10 @@ SRC_URI="ftp://alpha.gnu.org/gnu/gnubg/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-amd64 ~ppc ~sparc x86"
-IUSE="arts esd gdbm gtk guile nas nls opengl png python readline X"
+IUSE="arts esd gdbm gtk guile nas nls opengl python readline X"
 
 # FIXME does this need to DEPEND on netpbm?
-DEPEND="virtual/libc
-	dev-libs/glib
+DEPEND="dev-libs/glib
 	>=media-libs/freetype-2
 	media-libs/libpng
 	dev-libs/libxml2
@@ -30,6 +29,7 @@ DEPEND="virtual/libc
 	gtk? (
 		=x11-libs/gtk+-2*
 		=dev-libs/glib-2*
+		media-libs/libart_lgpl
 		opengl? ( x11-libs/gtkglext
 			media-libs/ftgl )
 	)
@@ -44,7 +44,9 @@ src_unpack() {
 	cd "${S}"
 	mv ../${PN}.weights-${WPV} "${S}/${PN}.weights"
 	mv ../*bd .
-	epatch "${FILESDIR}/${P}"-gcc4.patch
+	epatch \
+		"${FILESDIR}/${P}"-gcc4.patch \
+		"${FILESDIR}/${P}"-as-needed.patch
 	gnuconfig_update
 }
 
@@ -79,7 +81,7 @@ src_compile() {
 
 	filter-flags -ffast-math #bug #67929
 
-	egamesconf \
+	LIBART_CONFIG="/usr/bin/libart2-config" egamesconf \
 		$(use_enable arts artsc) \
 		$(use_enable esd) \
 		$(use_with gdbm) \
@@ -98,5 +100,7 @@ src_install() {
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins ${PN}.weights *bd || die "doins failed"
 	dodoc AUTHORS README NEWS
+	newicon xpm/gnubg-big.xpm gnubg.xpm
+	make_desktop_entry "gnubg -w" "GNU Backgammon" gnubg.xpm
 	prepgamesdirs
 }

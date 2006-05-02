@@ -1,6 +1,11 @@
 # ChangeLog for games-board/gnubg
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.21 2006/04/02 15:15:47 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.22 2006/05/02 05:07:34 mr_bones_ Exp $
+
+  02 May 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/gnubg-0.14.3-as-needed.patch, gnubg-0.14.3.ebuild:
+  fix up IUSE and deps; desktop entry; patch for --as-needed - submitted by
+  Denis Dupeyron via bug #130522
 
   02 Apr 2006; <Tupone@gentoo.org> +files/gnubg-0.14.3-gcc4.patch,
   gnubg-0.14.3.ebuild:
