@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.3.5.ebuild,v 1.4 2006/04/25 19:40:19 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.3.5.ebuild,v 1.5 2006/05/02 02:40:28 compnerd Exp $
 
 inherit gnome2 mono eutils
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-lang/mono-1.0
 		 =dev-dotnet/gconf-sharp-1.0*
 		 >=dev-dotnet/gconf-sharp-1.0.4
 		 eds? ( dev-libs/gmime )
-		 galago? ( dev-dotnet/galago-sharp )
+		 galago? ( =dev-dotnet/galago-sharp-0.3* )
 		 >=gnome-base/gconf-2
 		 >=x11-libs/gtk+-2.6.0
 		 >=dev-libs/atk-1.2.4
@@ -37,7 +37,6 @@ DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
 DOCS="AUTHORS Changelog INSTALL NEWS README"
-USE_DESTDIR="1"
 
 pkg_setup() {
 	if ! built_with_use 'sys-apps/dbus' mono ; then
@@ -50,9 +49,5 @@ pkg_setup() {
 		die "gmime without mono support detected"
 	fi
 
-	if [[ ${ARCH} ==  'ppc' ]] ; then
-		G2CONF="${G2CONF} --disable-galago $(use_enable eds evolution)"
-	else
-		G2CONF="${G2CONF} $(use_enable galago) $(use_enable eds evolution)"
-	fi
+	G2CONF="${G2CONF} $(use_enable galago) $(use_enable eds evolution)"
 }
