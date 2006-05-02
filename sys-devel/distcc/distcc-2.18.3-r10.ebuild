@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r10.ebuild,v 1.1 2006/04/17 11:25:31 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r10.ebuild,v 1.2 2006/05/02 22:43:23 flameeyes Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -15,12 +15,12 @@ SRC_URI="http://distcc.samba.org/ftp/distcc/distcc-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="gnome gtk selinux ipv6"
 
 DEPEND=">=sys-apps/portage-2.0.49-r6
 	>=sys-devel/gcc-config-1.3.1
-	sys-apps/shadow
+	userland_GNU? ( sys-apps/shadow )
 	gnome? ( dev-util/pkgconfig )
 	gtk? ( dev-util/pkgconfig )"
 RDEPEND="
@@ -55,7 +55,7 @@ src_compile() {
 	local myconf="--with-included-popt "
 	#Here we use the built in parse-options package. saves a dependancy
 
-	#not taking any chances here, guessing which takes precedence in the 
+	#not taking any chances here, guessing which takes precedence in the
 	#configure script, so we'll just make the distinction here:
 	#gnome takes precedence over gtk if both are specified (gnome pulls
 	#in gtk anyways...)
@@ -119,7 +119,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	#are we doing bootstrap with has no useradd?
-	if [ -x /usr/sbin/useradd ]; then
+	if [[ ${CHOST} != *-*-gnu && ${CHOST} != *-linux* ]] || [ -x /usr/sbin/useradd ]; then
 	  enewuser distcc 240
 	else
 	  ewarn "You do not have useradd (bootstrap) from shadow so I didn't"

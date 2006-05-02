@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.155 2006/04/27 22:45:32 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.156 2006/05/02 22:43:22 flameeyes Exp $
+
+  02 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  distcc-2.18.3-r10.ebuild:
+  Fix up dependencies and checks for non-GNU userlands (where shadow is not
+  used) and mark ~x86-fbsd.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-distcc-2.16-r2,
   files/digest-distcc-2.16-r3, files/digest-distcc-2.18.3-r6,
