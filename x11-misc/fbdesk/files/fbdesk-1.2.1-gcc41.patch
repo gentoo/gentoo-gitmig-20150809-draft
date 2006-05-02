@@ -1,0 +1,29 @@
+--- src/FbDesk.cc.org	2006-04-22 14:29:20.000000000 +0200
++++ src/FbDesk.cc	2006-04-22 14:37:45.000000000 +0200
+@@ -43,6 +43,8 @@
+ using namespace std;
+ using namespace FbTk;
+ 
++namespace FbTk {
++
+ template <>
+ void Resource<int>::setFromString(const char *str) {
+     sscanf(str, "%d", &*(*this));
+@@ -65,8 +67,6 @@
+     return (*this)->c_str();
+ }
+ 
+-
+-
+ template <>
+ std::string Resource<FbDesk::Icon::TextPlacement>::getString() {
+     switch (*(*this)) {
+@@ -97,6 +97,8 @@
+         *(*this) = FbDesk::Icon::TEXTPLACE_BOTTOM;
+ }
+ 
++}
++
+ namespace FbDesk {
+ 
+ FbDesk::FbDesk(const char *config_filename):

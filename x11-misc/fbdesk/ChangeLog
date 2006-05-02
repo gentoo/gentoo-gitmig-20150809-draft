@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/fbdesk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.16 2006/01/30 19:21:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.17 2006/05/02 00:49:39 halcy0n Exp $
+
+  02 May 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/fbdesk-1.2.1-gcc41.patch, fbdesk-1.2.1.ebuild:
+  Add patch to fix compilation with gcc-4.1 by Robert Führicht
+  <the_master_of_disaster AT gmx DOT at>; bug #130825
 
   30 Jan 2006; Robin H. Johnson <robbat2@gentoo.org> fbdesk-1.2.1.ebuild:
   Modular-X fixing.
