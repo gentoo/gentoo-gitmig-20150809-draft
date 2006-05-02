@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.24.8.ebuild,v 1.1 2006/04/17 23:01:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.24.8.ebuild,v 1.2 2006/05/02 00:03:23 anarchy Exp $
 
 IUSE="opengl"
 
@@ -126,9 +126,10 @@ src_unpack() {
 
 	cd ${WORKDIR}/common/lib/modules/fglrx/build_mod
 
-	# remove intermodule calls for 2.6.16
-	if kernel_is 2 6 16; then
+	if kernel_is ge 2 6 16; then
 		epatch ${FILESDIR}/${PN}-8.22.5-intermodule.patch
+		epatch ${FILESDIR}/${PN}-8.23.7-noiommu.patch
+		epatch ${FILESDIR}/${PN}-8.23.7-gcc41.patch
 	fi
 }
 

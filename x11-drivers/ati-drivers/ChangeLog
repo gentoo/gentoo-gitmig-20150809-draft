@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.33 2006/04/29 00:24:11 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.34 2006/05/02 00:03:23 anarchy Exp $
+
+  02 May 2006; Jory A. Pratt <anarchy@gentoo.org>
+  +files/ati-drivers-8.23.7-gcc41.patch, ati-drivers-8.23.7.ebuild,
+  ati-drivers-8.24.8.ebuild:
+  mem_map fix, 2.6.17 support add
 
   29 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-ati-drivers-8.18.8, files/digest-ati-drivers-8.18.8-r1,
