@@ -1,6 +1,9 @@
 # ChangeLog for net-news/raggle
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.6 2005/12/27 14:47:30 caleb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.7 2006/05/02 00:11:20 weeve Exp $
+
+  02 May 2006; Jason Wever <weeve@gentoo.org> raggle-0.4.0.ebuild:
+  Stable on SPARC.
 
 *raggle-0.4.4 (27 Dec 2005)
 
