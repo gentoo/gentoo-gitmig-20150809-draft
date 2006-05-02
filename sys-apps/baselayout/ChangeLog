@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.322 2006/04/24 13:34:49 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.323 2006/05/02 11:13:58 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-1.12.0_pre19 (02 May 2006)
+
+  02 May 2006; Roy Marples <uberlord@gentoo.org>
+  +baselayout-1.12.0_pre19.ebuild:
+  pre19 is mainly for testing the new modules-update
 
 *baselayout-1.12.0_pre18-r1 (24 Apr 2006)
 *baselayout-1.11.15-r1 (24 Apr 2006)
