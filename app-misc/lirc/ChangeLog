@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.84 2006/04/27 13:16:08 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.85 2006/05/03 13:25:52 zzam Exp $
+
+  03 May 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Set maintainer to myself
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-lirc-0.7.2,
   files/digest-lirc-0.8.0, Manifest:
