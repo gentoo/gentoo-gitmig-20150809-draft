@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.56 2006/05/02 17:30:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.57 2006/05/03 05:48:35 corsair Exp $
+
+  03 May 2006; Markus Rothe <corsair@gentoo.org> sandbox-1.2.17.ebuild:
+  Stable on ppc64; bug #132025
 
   02 May 2006; Gustavo Zacarias <gustavoz@gentoo.org> sandbox-1.2.17.ebuild:
   Stable on sparc wrt #132025
