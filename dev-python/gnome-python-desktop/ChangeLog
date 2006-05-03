@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-desktop
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.7 2006/05/01 09:54:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.8 2006/05/03 13:58:53 dertobi123 Exp $
+
+  03 May 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  gnome-python-desktop-2.14.0.ebuild:
+  Added to ~hppa, bug #131739
 
   01 May 2006; Markus Rothe <corsair@gentoo.org>
   gnome-python-desktop-2.14.0.ebuild:
