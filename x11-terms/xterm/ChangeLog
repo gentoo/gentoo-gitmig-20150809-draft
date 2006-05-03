@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.133 2006/04/12 21:53:00 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.134 2006/05/03 14:22:36 exg Exp $
+
+*xterm-212-r1 (03 May 2006)
+
+  03 May 2006; Emanuele Giaquinta <exg@gentoo.org> +xterm-212-r1.ebuild:
+  Add dep on luit for modular. Move dep on groff in DEPEND. Check for libX11
+  rather than for xorg-x11 to detect modular, to fix the case when no prior
+  installation of xorg-x11-7 exists.
 
 *xterm-212 (12 Apr 2006)
 
