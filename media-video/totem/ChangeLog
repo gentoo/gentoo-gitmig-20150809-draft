@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.106 2006/03/27 21:27:53 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.107 2006/05/03 20:04:04 gustavoz Exp $
+
+  03 May 2006; Gustavo Zacarias <gustavoz@gentoo.org> totem-1.4.0.ebuild:
+  Exclude mpeg2dec & ffmpeg since they're broken for sparc, big time #131747
 
   27 Mar 2006; Joe McCann <joem@gentoo.org> totem-1.4.0.ebuild:
   Add another addpredict location, closed bug 126667
