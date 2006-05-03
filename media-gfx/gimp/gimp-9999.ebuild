@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.1 2006/01/21 00:41:03 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.2 2006/05/03 21:14:45 brix Exp $
 
 inherit alternatives cvs eutils fdo-mime flag-o-matic
 
@@ -44,7 +44,7 @@ RDEPEND=">=dev-libs/glib-2.8.2
 		lcms? ( media-libs/lcms )
 		mng? ( media-libs/libmng )
 		pdf? ( >=app-text/poppler-bindings-0.3.1 )
-		png? ( >=media-libs/libpng-1.2.1 )
+		png? ( >=media-libs/libpng-1.2.2 )
 		python?	( >=dev-lang/python-2.2.1
 				>=dev-python/pygtk-2 )
 		tiff? ( >=media-libs/tiff-3.5.7 )
