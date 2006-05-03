@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrtf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrtf/ChangeLog,v 1.2 2006/04/01 18:51:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrtf/ChangeLog,v 1.3 2006/05/03 00:01:18 deltacow Exp $
+
+  02 May 2006; Scott Stoddard <deltacow@gentoo.org> pyrtf-0.45.ebuild:
+  Added ~amd64 (bug #132033)
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pyrtf-0.45.ebuild:
   Mark 0.45 ~ia64
