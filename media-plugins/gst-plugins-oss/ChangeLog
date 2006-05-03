@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-oss
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/ChangeLog,v 1.86 2006/04/27 23:18:01 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/ChangeLog,v 1.87 2006/05/03 20:19:53 gustavoz Exp $
+
+  03 May 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gst-plugins-oss-0.10.2.ebuild:
+  Stable on sparc wrt #128737
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-gst-plugins-oss-0.8.8, files/digest-gst-plugins-oss-0.8.9,
