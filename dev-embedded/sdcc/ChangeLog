@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/sdcc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.27 2006/05/02 23:31:44 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.28 2006/05/03 06:37:23 calchan Exp $
+
+*sdcc-2.5.0_p20060502 (03 May 2006)
+
+  03 May 2006; Denis Dupeyron <calchan@gentoo.org>
+  +sdcc-2.5.0_p20060502.ebuild:
+  Revision bump due to the doc tarball of previous revision being lost.
+  Additional fixes : doc installation, linking with --as-needed.
 
   02 May 2006; Daniel Black <dragonheart@gentoo.org>
   sdcc-2.5.0_p20060423.ebuild:
