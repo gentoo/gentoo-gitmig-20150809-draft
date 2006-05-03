@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.5.2.ebuild,v 1.3 2006/05/03 16:29:42 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.5.2-r1.ebuild,v 1.1 2006/05/03 16:29:42 dang Exp $
 
 inherit eutils gnome2
 
@@ -32,7 +32,7 @@ RDEPEND="
 	nautilus? ( >=gnome-base/nautilus-2.10 )
 	>=x11-libs/gtk+-2.8
 	gnome-base/gnome-keyring
-	djvu? ( =app-text/djvu-3.5.16 )
+	djvu? ( >=app-text/djvu-3.5.17 )
 	virtual/ghostscript"
 
 DEPEND="${RDEPEND}
@@ -69,6 +69,9 @@ src_unpack(){
 
 	# Fix .desktop file so menu item shows up
 	epatch ${FILESDIR}/${PN}-0.4.0-display-menu.patch
+
+	# Fix to work with djvu-3.5.17
+	epatch ${FILESDIR}/${P}-djvu-miniexp.patch
 
 	export WANT_AUTOMAKE=1.7
 	automake || die "automake failed"

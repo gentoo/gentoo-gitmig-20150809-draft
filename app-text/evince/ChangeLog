@@ -1,6 +1,14 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.37 2006/05/02 13:52:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.38 2006/05/03 16:29:42 dang Exp $
+
+*evince-0.5.2-r1 (03 May 2006)
+
+  03 May 2006; Daniel Gryniewicz <dang@gentoo.org>
+  +files/evince-0.5.2-djvu-miniexp.patch, evince-0.5.2.ebuild,
+  +evince-0.5.2-r1.ebuild:
+  Fix for bug #132129. Add -r1, with a patch to work with .17, and make it dep
+  on >= .17. Make -r0 dep on .16
 
   02 May 2006; Markus Rothe <corsair@gentoo.org> evince-0.5.2.ebuild:
   Added ~ppc64
