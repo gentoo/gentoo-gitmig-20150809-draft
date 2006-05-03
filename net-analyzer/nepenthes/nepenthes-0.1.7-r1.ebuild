@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.1.7-r1.ebuild,v 1.1 2006/05/03 10:51:27 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.1.7-r1.ebuild,v 1.2 2006/05/03 11:06:34 kaiowas Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="selinux"
 
 DEPEND="net-misc/curl
@@ -27,17 +27,11 @@ pkg_setup() {
 }
 
 src_compile() {
-	local myconf="--sysconfdir=/etc --localstatedir=/var/lib/nepenthes --enable-capabilities"
-#	use mysql && myconf="$myconf --with-mysql \
-#		--with-mysql-lib=/usr/$(get_libdir)/mysql --with-mysql-include=/usr/include/mysql" \
-#		|| myconf="$myconf --without-mysql"
-#	use postgres && myconf="$myconf --with-postgre \
-#		--with-postgre-lib=/usr/$(get_libdir) --with-postgre-include=/usr/include" \
-#		|| myconf="$myconf --without-postgre"
 
 	# patch from sourceforge tracker #1479288
 	epatch ${FILESDIR}/mydoom_bagle_endless_loop.patch || die
 
+	local myconf="--sysconfdir=/etc --localstatedir=/var/lib/nepenthes --enable-capabilities"
 	econf ${myconf} || die
 	sed -i 's|var/cache|/var/lib/cache|' ${S}/modules/shellcode-signatures/shellcode-signatures.cpp
 	emake || die "make failed"
