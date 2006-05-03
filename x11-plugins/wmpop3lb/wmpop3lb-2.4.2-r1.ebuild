@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/wmpop3lb-2.4.2-r1.ebuild,v 1.3 2006/03/20 12:28:34 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/wmpop3lb-2.4.2-r1.ebuild,v 1.4 2006/05/03 00:47:44 weeve Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://lbj.free.fr/wmpop3/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~amd64 ~sparc x86"
 
 RDEPEND="|| ( (
 		x11-libs/libX11

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpop3lb
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/ChangeLog,v 1.9 2006/03/20 12:28:34 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/ChangeLog,v 1.10 2006/05/03 00:47:44 weeve Exp $
+
+  03 May 2006; Jason Wever <weeve@gentoo.org> wmpop3lb-2.4.2-r1.ebuild:
+  Added ~sparc keyword.
 
   20 Mar 2006; Michele Noberasco <s4t4n@gentoo.org> wmpop3lb-2.4.2-r1.ebuild:
   Stable for x86.
