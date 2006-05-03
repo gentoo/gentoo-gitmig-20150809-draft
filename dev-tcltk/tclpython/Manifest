@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 34cf6594598494ab8dbc0df6cf901900 ChangeLog 667
+MD5 7226d59665d30af93f7034576cdec1b9 ChangeLog 848
 MD5 5c569f146cf737cefa30e7f583b306a2 files/digest-tclpython-3.1 63
+MD5 cf3550c80338c09bdcdb94bac67cf2fa files/digest-tclpython-4.1 65
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 7479f4178e443008771258f91b52f42d tclpython-3.1.ebuild 872
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDqb+aW78445TWHXcRAjs5AKCM3zODOH1EAcN5aSlv3CIBci3zKACglb8d
-D1PoS/RMLfmj0fP/x8sRaWA=
-=IEJa
------END PGP SIGNATURE-----
+MD5 32ac78125e4eafd3e2753d9ba729a937 tclpython-3.1.ebuild 867
+MD5 7319617463181a954170b272ce0f171b tclpython-4.1.ebuild 945
