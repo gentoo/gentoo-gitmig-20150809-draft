@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/imapsync
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.6 2006/02/13 14:57:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.7 2006/05/03 17:58:24 langthang Exp $
+
+*imapsync-1.171 (03 May 2006)
+
+  03 May 2006; Tuấn Văn <langthang@gentoo.org>
+  +files/imapsync-1.171-gentoo.patch, +imapsync-1.171.ebuild:
+  version bump. bug #108755.
+  add dev-perl/Net-SSLeay to RDEPEND. bug #117692 reported by Trenton D. Adams 
+  <trenton.d.adams@gmail.com>.
+  remove ssl USE flag. ssl support is included upstream.
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   imapsync-1.121.ebuild:
