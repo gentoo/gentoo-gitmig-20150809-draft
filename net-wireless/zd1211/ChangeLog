@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/zd1211
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211/ChangeLog,v 1.5 2006/01/13 14:18:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211/ChangeLog,v 1.6 2006/05/03 22:00:22 genstef Exp $
+
+*zd1211-74 (03 May 2006)
+
+  03 May 2006; Stefan Schweizer <genstef@gentoo.org>
+  -files/zd1211-gentoo-20051028.diff, +zd1211-74.ebuild,
+  -zd1211-20050315.ebuild, -zd1211-20050822.ebuild,
+  -zd1211-20050822-r1.ebuild, -zd1211-20060109.ebuild:
+  Version bump thanks to Francesco Monica <fmonica@ce.unipr.it> and Aron
+  Griffis <agriffis@gentoo.org> in bug 131334
 
 *zd1211-20060109 (13 Jan 2006)
 
