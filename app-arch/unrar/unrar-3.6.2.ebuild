@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.6.2.ebuild,v 1.1 2006/04/20 23:42:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.6.2.ebuild,v 1.2 2006/05/03 23:34:37 vapier Exp $
+
+inherit toolchain-funcs
 
 MY_PN=${PN}src
 DESCRIPTION="Uncompress rar files"
@@ -17,7 +19,11 @@ DEPEND="!app-arch/unrar-gpl"
 S=${WORKDIR}/unrar
 
 src_compile() {
-	emake -f makefile.unix CXXFLAGS="$CXXFLAGS" STRIP="true" || die "emake failed"
+	emake \
+		-f makefile.unix \
+		CXXFLAGS="${CXXFLAGS}" \
+		CXX="$(tc-getCXX)" \
+		STRIP="true" || die "emake failed"
 }
 
 src_install() {
