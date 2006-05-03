@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/Xaw3d
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.22 2005/12/30 10:22:02 cardoe Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.23 2006/05/03 20:18:59 flameeyes Exp $
+
+  03 May 2006; Diego Pettenò <flameeyes@gentoo.org> Xaw3d-1.5-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
   30 Dec 2005; Doug Goldstein <cardoe@gentoo.org> Xaw3d-1.5-r1.ebuild:
   Fixing modular X depends as per requested. Bug #117166
