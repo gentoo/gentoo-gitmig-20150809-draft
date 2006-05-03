@@ -1,6 +1,9 @@
 # ChangeLog for media-video/asfrecorder
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/ChangeLog,v 1.10 2005/10/29 11:16:00 grobian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/ChangeLog,v 1.11 2006/05/03 20:44:52 flameeyes Exp $
+
+  03 May 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata to list media-video@gentoo.org as maintainer.
 
   29 Oct 2005; Fabian Groffen <grobian@gentoo.org> asfrecorder-1.1.ebuild:
   Marked ~ppc-macos (bug #107932)

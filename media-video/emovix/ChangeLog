@@ -1,6 +1,9 @@
 # ChangeLog for media-video/emovix
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/ChangeLog,v 1.9 2005/09/10 15:41:29 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/ChangeLog,v 1.10 2006/05/03 20:49:49 flameeyes Exp $
+
+  03 May 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata to list media-video@gentoo.org as maintainer.
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   emovix-0.9.0_pre1.ebuild:

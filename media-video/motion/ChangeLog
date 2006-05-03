@@ -1,6 +1,9 @@
 # ChangeLog for media-video/motion
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.4 2005/05/19 21:53:24 luckyduck Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.5 2006/05/03 20:55:48 flameeyes Exp $
+
+  03 May 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata to list media-video@gentoo.org as maintainer.
 
   19 May 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
   motion-3.1.19.ebuild:

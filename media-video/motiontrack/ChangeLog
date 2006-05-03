@@ -1,6 +1,9 @@
 # ChangeLog for media-video/motiontrack
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motiontrack/ChangeLog,v 1.8 2006/03/07 16:40:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motiontrack/ChangeLog,v 1.9 2006/05/03 20:56:21 flameeyes Exp $
+
+  03 May 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata to list media-video@gentoo.org as maintainer.
 
   07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   motiontrack-0.1.0.ebuild, motiontrack-0.1.2.ebuild,
