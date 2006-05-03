@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nepenthes
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.11 2006/04/26 18:44:15 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.12 2006/05/03 10:51:27 kaiowas Exp $
+
+*nepenthes-0.1.7-r1 (03 May 2006)
+
+  03 May 2006; petre rodan <kaiowas@gentoo.org>
+  +files/mydoom_bagle_endless_loop.patch, +nepenthes-0.1.7-r1.ebuild:
+  added patch from sourceforge tracker #1479288
 
   26 Apr 2006; Jon Hood <squinky86@gentoo.org> nepenthes-0.1.7.ebuild:
   Add ~amd64, #131064.

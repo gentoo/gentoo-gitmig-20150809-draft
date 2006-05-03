@@ -1,0 +1,58 @@
+Index: modules/vuln-mydoom/MydoomDialogue.cpp
+===================================================================
+--- modules/vuln-mydoom/MydoomDialogue.cpp	(Revision 515)
++++ modules/vuln-mydoom/MydoomDialogue.cpp	(Arbeitskopie)
+@@ -120,7 +120,7 @@
+ 				m_Download = new Download(msg->getRemoteHost(),"mydoom://foo/bar",msg->getRemoteHost(),"some triggerline");
+ 				m_Download->getDownloadBuffer()->addData((char *)m_Buffer->getData(),m_Buffer->getSize());
+ 				m_Buffer->clear();
+-				return CL_ASSIGN;
++				return CL_ASSIGN_AND_DONE;
+ 			}
+ 		}
+ 		if (m_Buffer->getSize() > 128 )
+@@ -130,6 +130,7 @@
+ 	case MYDOOM_FILETRANSFERR:
+ 		{
+ 			m_Download->getDownloadBuffer()->addData((char *)msg->getMsg(),msg->getSize());
++			return CL_ASSIGN_AND_DONE;
+ 		}
+ 		break;
+ 
+@@ -196,7 +197,6 @@
+ 	if (m_Download != NULL)
+ 	{
+     	g_Nepenthes->getSubmitMgr()->addSubmission(m_Download);
+-		return CL_ASSIGN_AND_DONE;
+ 	}
+ 	return CL_DROP;
+ }
+Index: modules/vuln-bagle/BagleDialogue.cpp
+===================================================================
+--- modules/vuln-bagle/BagleDialogue.cpp	(Revision 515)
++++ modules/vuln-bagle/BagleDialogue.cpp	(Arbeitskopie)
+@@ -158,6 +158,7 @@
+ 				m_State = BAGLE_BINARY;
+ 				m_Download = new Download(m_Socket->getRemoteHost(),"bagle://",m_Socket->getRemoteHost(),"bagle://foo/bar");
+ 				m_Download->getDownloadBuffer()->addData(msg->getMsg()+4,msg->getSize()-4);
++				return CL_ASSIGN_AND_DONE;
+ 			}
+ 		}
+ 		break;
+@@ -165,6 +166,7 @@
+ 	case BAGLE_BINARY:
+ 		// FIXME m_MaxFileSize
+ 		m_Download->getDownloadBuffer()->addData(msg->getMsg(),msg->getSize());
++		return CL_ASSIGN_AND_DONE;
+ 		break;
+ 
+ 	}
+@@ -232,8 +234,6 @@
+ 		if ( m_Download->getDownloadBuffer()->getSize() == m_FileSize )
+ 		{
+ 			g_Nepenthes->getSubmitMgr()->addSubmission(m_Download);
+-			// destructor will delete it
+-			return CL_ASSIGN_AND_DONE;
+ 		}
+ 	}
+ 	return CL_DROP;
