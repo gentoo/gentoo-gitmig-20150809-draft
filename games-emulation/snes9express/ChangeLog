@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/snes9express
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/ChangeLog,v 1.6 2005/09/26 17:56:10 wolf31o2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/ChangeLog,v 1.7 2006/05/03 21:59:04 tupone Exp $
+
+  03 May 2006; <Tupone@gentoo.org> +files/snes9express-1.42-gcc41.patch,
+  snes9express-1.42.ebuild:
+  Fix for gcc-4.1
 
   26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   snes9express-1.42.ebuild:

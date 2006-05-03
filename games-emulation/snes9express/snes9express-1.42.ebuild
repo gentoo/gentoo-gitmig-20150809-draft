@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/snes9express-1.42.ebuild,v 1.8 2005/09/26 17:56:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/snes9express-1.42.ebuild,v 1.9 2006/05/03 21:59:04 tupone Exp $
 
 inherit eutils games
 
@@ -20,7 +20,8 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-fix.patch
+	epatch "${FILESDIR}"/${P}-fix.patch \
+		"${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_install() {
