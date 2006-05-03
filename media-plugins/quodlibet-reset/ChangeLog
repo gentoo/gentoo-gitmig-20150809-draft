@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/quodlibet-reset
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-reset/ChangeLog,v 1.1 2006/05/03 04:29:42 tcort Exp $
+
+*quodlibet-reset-3065 (03 May 2006)
+
+  03 May 2006; <tcort@gentoo.org> +metadata.xml,
+  +quodlibet-reset-3065.ebuild:
+  Initial Commit. Ebuild by Kai Huuhko <kai.huuhko@gmail.com> and Thomas Cort
+  <tcort@gentoo.org>.
+
