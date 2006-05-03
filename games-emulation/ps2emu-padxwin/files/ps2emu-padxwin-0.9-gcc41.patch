@@ -1,0 +1,11 @@
+--- Src/PAD.h.old	2006-05-03 19:59:16.000000000 +0200
++++ Src/PAD.h	2006-05-03 20:01:01.000000000 +0200
+@@ -87,8 +87,6 @@
+ extern u32 pads;
+ 
+ int POV(u32 direction, u32 angle);
+-s32  _PADopen(void *pDsp);
+-void _PADclose();
+ void _KeyPressNE(u32 key);
+ void _KeyPress(u32 key);
+ void _KeyReleaseNE(u32 key);
