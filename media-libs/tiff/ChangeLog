@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.71 2006/05/01 03:29:28 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.72 2006/05/03 17:27:10 marienz Exp $
+
+  03 May 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Re-recommit Manifest for sha256 has issues.
 
   01 May 2006; Steve Arnold <nerdboy@gentoo.org> tiff-3.7.1-r1.ebuild,
   tiff-3.7.2.ebuild, tiff-3.7.3.ebuild, tiff-3.7.4.ebuild:
