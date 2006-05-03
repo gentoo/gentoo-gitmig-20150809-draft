@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/gli-0.3.1.ebuild,v 1.1 2006/03/13 16:27:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/gli-0.3.1.ebuild,v 1.2 2006/05/03 14:45:55 wolf31o2 Exp $
 
-inherit eutils
+inherit python eutils
 
 DESCRIPTION="Gentoo Linux Installer"
 HOMEPAGE="http://www.gentoo.org/proj/en/releng/installer/"
@@ -46,4 +46,14 @@ src_install() {
 	doicon ${FILESDIR}/gli.png ${FILESDIR}/gli-dialog.png
 	domenu ${FILESDIR}/installer-gtk.desktop \
 		${FILESDIR}/installer-dialog.desktop
+}
+
+pkg_postinst() {
+	python_mod_optimize
+	einfo "The Gentoo Linux Installer is currently only usable for two situations."
+	einfo "The first is for building an install profile."
+	einfo "The second is for installing using official Gentoo release media."
+	echo
+	ewarn "If you are trying to use the installer for anything else, please"
+	ewarn "file patches with any bugs."
 }
