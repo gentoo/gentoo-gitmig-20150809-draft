@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.61 2006/03/16 20:03:52 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.62 2006/05/03 00:59:53 flameeyes Exp $
+
+  03 May 2006; Diego Pettenò <flameeyes@gentoo.org> gtk-doc-1.4-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
 *gtk-doc-1.5 (16 Mar 2006)
 
