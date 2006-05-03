@@ -1,24 +1,6 @@
-DIST memcache-2.0.0.tgz 16896 size 16896
-DIST memcache-2.0.1.tgz 17133 RMD160 c0d6bbd65954c1d797e1b93f3154161daa8677cb SHA256 0663c0f2d9ee4f5d01ffa1aa9b2f469a7aba5353a72831774d359fac68cf786d size 17133
-EBUILD pecl-memcache-2.0.0.ebuild 778 RMD160 026eccf170df43bd97c38a009d5f9e9366d8ff5e SHA1 6ba37b2031d56f910f1684628d84b49361067e8b SHA256 9cf6f908da613abdcb8e6e63108abb902b91fbd4f5bc4b8abcc9fa0865cc9c36 size 778
-MD5 bee357817fdac15a7023b313c3887e48 pecl-memcache-2.0.0.ebuild 778
-RMD160 026eccf170df43bd97c38a009d5f9e9366d8ff5e pecl-memcache-2.0.0.ebuild 778
-SHA256 9cf6f908da613abdcb8e6e63108abb902b91fbd4f5bc4b8abcc9fa0865cc9c36 pecl-memcache-2.0.0.ebuild 778
-EBUILD pecl-memcache-2.0.1.ebuild 787 RMD160 424e904a4fa94f5cc58153f4b2abe73c338222e1 SHA1 d76e00b6e3794b9eb0be9e30b6647f9bfb505a1c SHA256 a2317e4760448ba4fa01ddf599a247c46deda710efa23e7b9ec95a072f992ec1 size 787
-MD5 61bbd7fc1f7cd7641218e98ed7698056 pecl-memcache-2.0.1.ebuild 787
-RMD160 424e904a4fa94f5cc58153f4b2abe73c338222e1 pecl-memcache-2.0.1.ebuild 787
-SHA256 a2317e4760448ba4fa01ddf599a247c46deda710efa23e7b9ec95a072f992ec1 pecl-memcache-2.0.1.ebuild 787
-MISC ChangeLog 1555 RMD160 962d84fc9ffea5c6900d7bad42ba1fad30c746ed SHA1 08320b06a4e1bcfbd46d3f56e86e036dd2f4a853 SHA256 5539291894de5b87573cfe20fe85deb467cdf54bf1fadc498ac589d57a45f5b0 size 1555
-MD5 8f3b8133af77883e0b1d82f707fe8683 ChangeLog 1555
-RMD160 962d84fc9ffea5c6900d7bad42ba1fad30c746ed ChangeLog 1555
-SHA256 5539291894de5b87573cfe20fe85deb467cdf54bf1fadc498ac589d57a45f5b0 ChangeLog 1555
-MISC metadata.xml 157 RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a SHA1 ddaa23cc35eb917bf8962b652442bebb1ce0f440 SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1 size 157
-MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a metadata.xml 157
-SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1 metadata.xml 157
+MD5 0eff6ccadaa81cfaaa8dc911b347d207 ChangeLog 1665
 MD5 2b340edcc01d9e1afddcf52d7cc5cb32 files/digest-pecl-memcache-2.0.0 62
-RMD160 191cb82f824f9a756d655ac0e292e86c8dc4cd95 files/digest-pecl-memcache-2.0.0 62
-SHA256 080666fe781d5fd9d667c2ce59b9a1573324a102a80fcccc5c67e5e8f9ca9d3d files/digest-pecl-memcache-2.0.0 62
 MD5 55f79d4ec9ec93e49180fd0ad95fe049 files/digest-pecl-memcache-2.0.1 232
-RMD160 5774dafc7e9ea79cb8cfb4d47bb038e371fe2fc2 files/digest-pecl-memcache-2.0.1 232
-SHA256 2adbae86b81e48beb022876730296fa08a9b87878001372fa53f54da4b8fc590 files/digest-pecl-memcache-2.0.1 232
+MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
+MD5 bee357817fdac15a7023b313c3887e48 pecl-memcache-2.0.0.ebuild 778
+MD5 3e8c30c2b4c4c54de0d1f810b4c2614a pecl-memcache-2.0.1.ebuild 785
