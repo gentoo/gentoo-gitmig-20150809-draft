@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r14.ebuild,v 1.1 2006/04/09 09:53:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r14.ebuild,v 1.2 2006/05/03 11:29:44 tove Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -130,7 +130,8 @@ src_unpack() {
 		einfo "Copying ppp-dhcp plugin files..."
 		tar -xzf "${DISTDIR}/ppp-dhcpc.tgz" -C pppd/plugins/ \
 			&& sed -i -e 's/SUBDIRS := rp-pppoe/SUBDIRS := rp-pppoe dhcp/' pppd/plugins/Makefile.linux \
-			&& sed -i -e "s/-O2/${CFLAGS} -fPIC/" pppd/plugins/dhcp/Makefile.linux \
+			&& sed -i -e "s/-O2/${CFLAGS} -fPIC/" \
+					-e "s/gcc/\$(CC)/" pppd/plugins/dhcp/Makefile.linux \
 			|| die "ppp-dhcp plugin addition failed"
 		epatch "${WORKDIR}/patch/dhcp-sys_error_to_strerror.patch"
 	}
