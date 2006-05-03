@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/mtxdrivers-pro/mtxdrivers-pro-1.1.0_beta-r3.ebuild,v 1.1 2005/12/07 00:12:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/mtxdrivers-pro/mtxdrivers-pro-1.1.0_beta-r3.ebuild,v 1.2 2006/05/03 09:01:40 eradicator Exp $
 
 inherit matrox
 
@@ -15,7 +15,7 @@ MY_P="${MY_PN}-rh9.0-v${MY_PV}"
 DESCRIPTION="Drivers for the Matrox Parhelia and Millenium P650/P750 cards with OpenGL support."
 SRC_URI="${MY_P}.run"
 
-KEYWORDS="~x86"
+KEYWORDS="-* x86"
 IUSE=""
 
 RDEPEND="app-admin/eselect-opengl

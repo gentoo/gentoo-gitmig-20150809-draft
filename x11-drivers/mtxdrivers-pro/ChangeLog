@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/mtxdrivers-pro
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/mtxdrivers-pro/ChangeLog,v 1.1 2005/12/07 00:12:50 spyderous Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/mtxdrivers-pro/ChangeLog,v 1.2 2006/05/03 09:01:41 eradicator Exp $
+
+  03 May 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  -mtxdrivers-pro-1.1.0_beta-r2.ebuild, mtxdrivers-pro-1.1.0_beta-r3.ebuild:
+  Push version using eselect-opengl into stable.
 
   07 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +files/mtxdrivers-pro-1.1.0_beta-r2-kernel-2.6-will1-20041013.patch,
