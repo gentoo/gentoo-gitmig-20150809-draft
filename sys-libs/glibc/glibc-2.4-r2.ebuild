@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.18 2006/05/01 03:10:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.19 2006/05/03 04:10:51 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -42,7 +42,7 @@ PPC_CPU_ADDON_TARBALL="glibc-powerpc-cpu-addon-v${PPC_CPU_ADDON_VER}.tgz"
 PPC_CPU_ADDON_URI="http://penguinppc.org/dev/glibc/${PPC_CPU_ADDON_TARBALL}"
 
 # LinuxThreads addon
-LT_VER="" #20060501
+LT_VER="20060501"
 LT_TARBALL="glibc-linuxthreads-${LT_VER}.tar.bz2"
 LT_URI="ftp://sources.redhat.com/pub/glibc/snapshots/${LT_TARBALL}"
 
@@ -159,7 +159,7 @@ get_glibc_src_uri() {
 			${GENTOO_TOOLCHAIN_DEV_URI//XXX/glibc-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2}"
 	fi
 
-	[[ -n ${LT_SNAP} ]] && GLIBC_SRC_URI="${GLIBC_SRC_URI} ${LT_URI}"
+	[[ -n ${LT_VER} ]] && GLIBC_SRC_URI="${GLIBC_SRC_URI} ${LT_URI}"
 
 	GLIBC_SRC_URI="${GLIBC_SRC_URI} ${FEDORA_URI}"
 	GLIBC_SRC_URI="${GLIBC_SRC_URI} ${PPC_CPU_ADDON_URI}"
@@ -172,8 +172,9 @@ S=${WORKDIR}/glibc-${GLIBC_RELEASE_VER}
 
 ### EXPORTED FUNCTIONS ###
 unpack_addon() {
-	unpack glibc-$1-${GLIBC_RELEASE_VER}.tar.bz2
-	mv glibc-$1-${GLIBC_RELEASE_VER} $1 || die
+	local addon=$1 ver=${2:-${GLIBC_RELEASE_VER}}
+	unpack glibc-${addon}-${ver}.tar.bz2
+	mv glibc-${addon}-${ver} ${addon} || die
 }
 toolchain-glibc_src_unpack() {
 	# Check NPTL support _before_ we unpack things to save some time
@@ -182,7 +183,10 @@ toolchain-glibc_src_unpack() {
 	unpack glibc-${GLIBC_RELEASE_VER}.tar.bz2
 
 	cd "${S}"
-	#unpack_addon linuxthreads
+	if [[ -n ${LT_VER} ]] ; then
+		unpack ${LT_TARBALL}
+		mv glibc-linuxthreads-${LT_VER}/* . || die
+	fi
 	unpack_addon libidn
 	unpack_addon ports
 
@@ -891,6 +895,7 @@ glibc_do_configure() {
 			myconf="${myconf} --without-tls --without-__thread"
 		fi
 
+		myconf="${myconf} --disable-sanity-checks"
 		myconf="${myconf} --enable-add-ons=ports,linuxthreads${ADDONS}"
 		myconf="${myconf} --enable-kernel=${LT_KERNEL_VERSION}"
 	elif [ "$1" == "nptl" ] ; then
