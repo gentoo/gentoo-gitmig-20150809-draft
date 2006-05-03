@@ -1,31 +1,38 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eee28d9e30bd6a39202e3b46fe34bdc9 ChangeLog 1645
-RMD160 fc2f1f47010a7ade736f0f1740097144678b7afa ChangeLog 1645
-SHA256 f45435bcaeb1d1614f7df9da2b8937fd0b89c5d3eafa81b19d2d1b14396b5e0e ChangeLog 1645
+AUX twisted-mail-0.2.0-tests-2.2-compat.patch 3320 RMD160 86b7051cc14eb38bcbf7084f3fcd68e6b7172f96 SHA1 a4d58a8952886808ca7ecbc3e9f378629252ebe9 SHA256 32ba2b7488d8bd0f9cdd7a9688757c21064c9e869e7aec789529cd914ad8d59f size 3320
+MD5 d0a02dc24a2ee5370f9f9d67324ab5e0 files/twisted-mail-0.2.0-tests-2.2-compat.patch 3320
+RMD160 86b7051cc14eb38bcbf7084f3fcd68e6b7172f96 files/twisted-mail-0.2.0-tests-2.2-compat.patch 3320
+SHA256 32ba2b7488d8bd0f9cdd7a9688757c21064c9e869e7aec789529cd914ad8d59f files/twisted-mail-0.2.0-tests-2.2-compat.patch 3320
+DIST TwistedMail-0.1.0.tar.bz2 97342 size 97342
+DIST TwistedMail-0.2.0.tar.bz2 109849 RMD160 18492849e2f3b9c0bea16a0109de73a7f7013843 SHA256 83ade9baed3ad73db2fe05aabc08a937b0767570b25a2711d50471dfb65aaf8c size 109849
+EBUILD twisted-mail-0.1.0-r1.ebuild 413 RMD160 ec26add7db1355e7085e5221ef6766e83412f378 SHA1 8881e930f68adb51fb7a8ae65d373ba34d8e1bd2 SHA256 322918f55a67d510e53aca6d6a31aed2a2ac8f29597f3dedbc15e05ddf0111b2 size 413
+MD5 e2bfb4acb3b96c043287ad7ca2a4ceb8 twisted-mail-0.1.0-r1.ebuild 413
+RMD160 ec26add7db1355e7085e5221ef6766e83412f378 twisted-mail-0.1.0-r1.ebuild 413
+SHA256 322918f55a67d510e53aca6d6a31aed2a2ac8f29597f3dedbc15e05ddf0111b2 twisted-mail-0.1.0-r1.ebuild 413
+EBUILD twisted-mail-0.2.0.ebuild 533 RMD160 e4717983396ff5bbe25de4e7dbed9c6dbd422363 SHA1 8e700b38195a3a4912bb9e46b44797e58bf46124 SHA256 46f8f52be9eda17b8e198402e4c1765e9dea44d161afabca58f9ffef4512cc77 size 533
+MD5 b91f95b49bd7d9484b39b09e2e3babbd twisted-mail-0.2.0.ebuild 533
+RMD160 e4717983396ff5bbe25de4e7dbed9c6dbd422363 twisted-mail-0.2.0.ebuild 533
+SHA256 46f8f52be9eda17b8e198402e4c1765e9dea44d161afabca58f9ffef4512cc77 twisted-mail-0.2.0.ebuild 533
+MISC ChangeLog 1756 RMD160 8268a598c09210089592ac223631fa9bfa1add24 SHA1 fea0303d966a33e18c7e01708100443d3c87560d SHA256 ca9a9b81c58927bf067bf3b98f9e2b8b04448a34c969f376dc932ba4e53c3147 size 1756
+MD5 25101f34dc130a3f9a2ae9bd085fcc5c ChangeLog 1756
+RMD160 8268a598c09210089592ac223631fa9bfa1add24 ChangeLog 1756
+SHA256 ca9a9b81c58927bf067bf3b98f9e2b8b04448a34c969f376dc932ba4e53c3147 ChangeLog 1756
+MISC metadata.xml 218 RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b SHA1 0dc0efeb1f1c4a4e691f1f10d4dd28814582c74e SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 size 218
+MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
+RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b metadata.xml 218
+SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata.xml 218
 MD5 c04aee3a8274e3e757ba9635e16ce0c3 files/digest-twisted-mail-0.1.0-r1 69
 RMD160 6971d39b953c82f2c65ab61f3e4b3d8e03257213 files/digest-twisted-mail-0.1.0-r1 69
 SHA256 cad16117a2a1173d124ad35db4a4373cfd5aed51179666863a255851f879566e files/digest-twisted-mail-0.1.0-r1 69
 MD5 f567d8c9949db20725b3bdc85f0d1d66 files/digest-twisted-mail-0.2.0 256
 RMD160 e12ebceb8a0b7be09376519418d6b5b4b2652c2a files/digest-twisted-mail-0.2.0 256
 SHA256 48d3647e3c3a9627c0c66be46410f5b4aa0656d45b58df5603b63ffe5bbe838b files/digest-twisted-mail-0.2.0 256
-MD5 d0a02dc24a2ee5370f9f9d67324ab5e0 files/twisted-mail-0.2.0-tests-2.2-compat.patch 3320
-RMD160 86b7051cc14eb38bcbf7084f3fcd68e6b7172f96 files/twisted-mail-0.2.0-tests-2.2-compat.patch 3320
-SHA256 32ba2b7488d8bd0f9cdd7a9688757c21064c9e869e7aec789529cd914ad8d59f files/twisted-mail-0.2.0-tests-2.2-compat.patch 3320
-MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
-RMD160 0daf1f824cd7035b959dfc437279171ce5f1075b metadata.xml 218
-SHA256 1ac3509e75b2cc8bf394a0c7e068039cc0152de1feae40a64b401365c9db67b2 metadata.xml 218
-MD5 d1bbd0c81fb1948c7d5a5354c399edcc twisted-mail-0.1.0-r1.ebuild 413
-RMD160 91c9ddd2f2f3b3ebda1936157f2473d714f64466 twisted-mail-0.1.0-r1.ebuild 413
-SHA256 6340a0fada14a641254359977f0edc0961116528b7a18432bebe20aa22861ef8 twisted-mail-0.1.0-r1.ebuild 413
-MD5 b91f95b49bd7d9484b39b09e2e3babbd twisted-mail-0.2.0.ebuild 533
-RMD160 e4717983396ff5bbe25de4e7dbed9c6dbd422363 twisted-mail-0.2.0.ebuild 533
-SHA256 46f8f52be9eda17b8e198402e4c1765e9dea44d161afabca58f9ffef4512cc77 twisted-mail-0.2.0.ebuild 533
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEP2baoFw4q70f3SsRAvKQAJ92Auily1bTIWphj7JTXDRJG82z/ACdEQ41
-Fqfkqmt7PeAF6f6kVN2HKcM=
-=cTNz
+iD8DBQFEWTa4CRZPokWLroQRAq90AKDd2+leH4oa37rAN9a1xPPnYC7EcACggHKK
+e9A7G4esKQ6U6JGcprHu1lw=
+=8M5s
 -----END PGP SIGNATURE-----
