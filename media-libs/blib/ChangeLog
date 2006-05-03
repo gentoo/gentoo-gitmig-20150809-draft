@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/blib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/blib/ChangeLog,v 1.4 2006/04/28 04:00:22 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/blib/ChangeLog,v 1.5 2006/05/03 20:39:07 flameeyes Exp $
+
+  03 May 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata to list media-video@gentoo.org as maintainer.
 
   28 Apr 2006; Joshua Jackson <tsunam@gentoo.org> blib-1.1.7-r1.ebuild:
   Stable on x86; bug #130897
