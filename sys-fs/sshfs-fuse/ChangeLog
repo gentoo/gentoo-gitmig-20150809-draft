@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/sshfs-fuse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.16 2006/05/02 17:34:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.17 2006/05/03 18:32:05 dang Exp $
+
+  03 May 2006; Daniel Gryniewicz <dang@gentoo.org> sshfs-fuse-1.6.ebuild:
+  Marked stable on amd64 per bug# 131196
 
   02 May 2006; Gustavo Zacarias <gustavoz@gentoo.org> sshfs-fuse-1.6.ebuild:
   Stable on sparc wrt #131196
