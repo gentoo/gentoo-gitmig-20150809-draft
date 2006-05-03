@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpager
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpager/ChangeLog,v 1.7 2006/03/23 01:55:18 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpager/ChangeLog,v 1.8 2006/05/03 00:55:30 weeve Exp $
+
+  03 May 2006; Jason Wever <weeve@gentoo.org> wmpager-1.2-r1.ebuild:
+  Added ~sparc keyword.
 
   23 Mar 2006; Daniel Goller <morfic@gentoo.org> wmpager-1.2-r1.ebuild:
   Mod Xified, courtesy magnade@gmail.com
