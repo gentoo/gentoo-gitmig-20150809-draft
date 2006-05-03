@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20040923-r2.ebuild,v 1.1 2006/04/20 00:01:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20040923-r2.ebuild,v 1.2 2006/05/03 13:31:31 agriffis Exp $
 
 inherit eutils
 
@@ -61,7 +61,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "WARNING: The hotplug init script is now gone (dead and burried.)"
+	ewarn "WARNING: The hotplug init script is now gone (dead and buried)."
 	ewarn "WARNING: If you want to load modules for hardware that was already"
 	ewarn "WARNING: discovered at boot time, like the old hotplug init script"
 	ewarn "WARNING: did, then emerge the coldplug package, and add coldplug to"
@@ -72,5 +72,5 @@ pkg_postinst() {
 	ewarn "WARNING: expect it to be in that location."
 	echo
 	ewarn "If you still have the file /etc/hotplug/isapnp.rc on your system,"
-	ewarn "please delete it by hand, the file /etc/hotplug/pnp.rc superseeds it."
+	ewarn "please delete it by hand, the file /etc/hotplug/pnp.rc supercedes it."
 }
