@@ -1,82 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST gst-plugins-0.8.10.tar.bz2 2397528 RMD160 fb59c37aef76b9cc065530fc4a7e7fe43168e619 SHA256 c5c8359f6ff8bc594cdadbb38863a8180c52de1edce74ad2fd698b9d4c6fef7c size 2397528
-DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90 size 2439654
-DIST gst-plugins-0.8.12.tar.bz2 2506926 RMD160 cc0bbf3d790cb5791ce982fe6493bf2d8496a507 SHA256 8728da4f71bc87e10fb064d28154220d66a3d8332482fd2c8a7ed47c5f0a03ba size 2506926
-DIST gst-plugins-0.8.8.tar.bz2 2214274 RMD160 e141c576b668109d41f32541a96da5c79016e55c SHA256 5ac9540297fe94f07bb24e2a26290ecf04385adee4419af631ac694295ee9717 size 2214274
-DIST gst-plugins-0.8.9.tar.bz2 2356958 RMD160 294b1873c8d54ac225bf94a2e5ba872f089fd605 SHA256 713e971762fe8b8ee3f2b097693a6b7bc6b85ef2167223b7e21cbeaa8c66035c size 2356958
-DIST gst-plugins-good-0.10.0.tar.bz2 898690 RMD160 ee3edce848ccd0cd4f96d9234149b93487fd6790 SHA256 d0e609388c2335acf25aa41840218728d1eb142b1eb151dc43d186d8e18e1607 size 898690
-DIST gst-plugins-good-0.10.1.tar.bz2 928881 RMD160 117858f7c9d7e223d80f180ed53b8f0d6cf9c0d4 SHA256 122805870575b23b92a988ba7cc1460c1db092b0560273b8bfedd3883953d8a4 size 928881
-DIST gst-plugins-good-0.10.2.tar.bz2 963026 RMD160 63103286d064dc47a464c365604579c9a9ecfdab SHA256 dd92993d08930cca071893b5d3f5cb40a4498f3ddaf12da98c0bbe8c27605e81 size 963026
-EBUILD gst-plugins-oss-0.10.0.ebuild 340 RMD160 9599df57055cecfe7a8ee3fe048e468bdee81648 SHA1 40c33936b789598944bb751c4a7d301f28098fad SHA256 e0a0a0758fc7ff303d6170d0b75521a310185a039df7fc1898f87aee98534235 size 340
-MD5 f54e8e81f350c7e973025e22e9438605 gst-plugins-oss-0.10.0.ebuild 340
-RMD160 9599df57055cecfe7a8ee3fe048e468bdee81648 gst-plugins-oss-0.10.0.ebuild 340
-SHA256 e0a0a0758fc7ff303d6170d0b75521a310185a039df7fc1898f87aee98534235 gst-plugins-oss-0.10.0.ebuild 340
-EBUILD gst-plugins-oss-0.10.1.ebuild 340 RMD160 3e61705dc2d6a66e5038a94f2977930604b75130 SHA1 00376449c84659be538ed07b5aacc4479f1ea1dd SHA256 222dac74c0bfc7cf8e69fca73dcc3320db3597ea6f8759a4604945fd5d622815 size 340
-MD5 4c99bcfff429736ac4ad671e06e6c767 gst-plugins-oss-0.10.1.ebuild 340
-RMD160 3e61705dc2d6a66e5038a94f2977930604b75130 gst-plugins-oss-0.10.1.ebuild 340
-SHA256 222dac74c0bfc7cf8e69fca73dcc3320db3597ea6f8759a4604945fd5d622815 gst-plugins-oss-0.10.1.ebuild 340
-EBUILD gst-plugins-oss-0.10.2.ebuild 371 RMD160 6edafbb62db5b8d80b3e47e7cd133f4feab74ba0 SHA1 0cb39e34f1f8c80b56def595f74ec5ffbda7c277 SHA256 1e2e0c0be63ed91771861754b885979b848fb58bef84d1d9006c2ea8a359ca8f size 371
-MD5 0a28b992f7a3115f7f9f79a26c280c57 gst-plugins-oss-0.10.2.ebuild 371
-RMD160 6edafbb62db5b8d80b3e47e7cd133f4feab74ba0 gst-plugins-oss-0.10.2.ebuild 371
-SHA256 1e2e0c0be63ed91771861754b885979b848fb58bef84d1d9006c2ea8a359ca8f gst-plugins-oss-0.10.2.ebuild 371
-EBUILD gst-plugins-oss-0.8.10.ebuild 375 RMD160 1e46800684353952594448e18c02c054cfe4fae6 SHA1 7c7b1d3c889b5c279507ed83a95ded16506c60b7 SHA256 ef602f9aedcbfa852f068d7bd487e4b6c4c739f0a9ad39fb5b0693a71422c310 size 375
-MD5 556fab9eb50cbad73b88fa034776d7b0 gst-plugins-oss-0.8.10.ebuild 375
-RMD160 1e46800684353952594448e18c02c054cfe4fae6 gst-plugins-oss-0.8.10.ebuild 375
-SHA256 ef602f9aedcbfa852f068d7bd487e4b6c4c739f0a9ad39fb5b0693a71422c310 gst-plugins-oss-0.8.10.ebuild 375
-EBUILD gst-plugins-oss-0.8.11.ebuild 377 RMD160 22ae74099fa6ef10ea43e0ab2e97a71d77fd9795 SHA1 ebfba00b7500768ab1b2457df94a2c1b981a887a SHA256 eb910a411f4f26f47a003cef45f8727e1891f14eddc14d64f7999c273bb84eac size 377
-MD5 66ae3bc6ee6dbe111109e1212e675823 gst-plugins-oss-0.8.11.ebuild 377
-RMD160 22ae74099fa6ef10ea43e0ab2e97a71d77fd9795 gst-plugins-oss-0.8.11.ebuild 377
-SHA256 eb910a411f4f26f47a003cef45f8727e1891f14eddc14d64f7999c273bb84eac gst-plugins-oss-0.8.11.ebuild 377
-EBUILD gst-plugins-oss-0.8.12.ebuild 384 RMD160 3d6115030a81d9963679e39526b49cae55523642 SHA1 d674aca3cb0ac16c73b4baed169869d23c372012 SHA256 51502f20b364293869c07958d15b71a5622b5353caea2e1999f3356238ccf74d size 384
-MD5 7d84a29fe09a1935d68f758fa5c1c3f3 gst-plugins-oss-0.8.12.ebuild 384
-RMD160 3d6115030a81d9963679e39526b49cae55523642 gst-plugins-oss-0.8.12.ebuild 384
-SHA256 51502f20b364293869c07958d15b71a5622b5353caea2e1999f3356238ccf74d gst-plugins-oss-0.8.12.ebuild 384
-EBUILD gst-plugins-oss-0.8.8.ebuild 374 RMD160 c8e7371af1daa49bace6eae06dac16f8d3ee380b SHA1 295562622866f1ccc844e1bcca09079364913bc9 SHA256 2b9afdece48727437d31a6e8c91e0f8b204758881853acaf73b01d2ac904dcec size 374
-MD5 3391c13e84ddd0fb9d68a397a1497fe3 gst-plugins-oss-0.8.8.ebuild 374
-RMD160 c8e7371af1daa49bace6eae06dac16f8d3ee380b gst-plugins-oss-0.8.8.ebuild 374
-SHA256 2b9afdece48727437d31a6e8c91e0f8b204758881853acaf73b01d2ac904dcec gst-plugins-oss-0.8.8.ebuild 374
-EBUILD gst-plugins-oss-0.8.9.ebuild 383 RMD160 9698a9867f8a8b08f3839c5bb96639defe748d73 SHA1 3ac070ed1f77e593f7cf39c6d8fde978ca0f0b92 SHA256 3b485e49600322ed83af9b577fac3bfb1ea2ecc9ce0320d76626237aaa8583bb size 383
-MD5 570116caf35d340d8a81ce2b2e965a8e gst-plugins-oss-0.8.9.ebuild 383
-RMD160 9698a9867f8a8b08f3839c5bb96639defe748d73 gst-plugins-oss-0.8.9.ebuild 383
-SHA256 3b485e49600322ed83af9b577fac3bfb1ea2ecc9ce0320d76626237aaa8583bb gst-plugins-oss-0.8.9.ebuild 383
-MISC ChangeLog 9826 RMD160 c8a8f771b1459c7349f845a64b6b1b4ed88a5ba1 SHA1 f2df37fd716259deabc09e8955ce076a564b82e4 SHA256 a93deeb4d62d2fb14c89bf73d81f36018b0793ea20dcac4264f2ff4b7ca27820 size 9826
-MD5 99058546ca87d25c1f1e108eb3567aa2 ChangeLog 9826
-RMD160 c8a8f771b1459c7349f845a64b6b1b4ed88a5ba1 ChangeLog 9826
-SHA256 a93deeb4d62d2fb14c89bf73d81f36018b0793ea20dcac4264f2ff4b7ca27820 ChangeLog 9826
-MISC metadata.xml 181 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d SHA1 faf40c45bd66b0072b95556cf7ab097d3be19511 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 size 181
-MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
-SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
+MD5 1a902aa75ac2609dbaed680fb4360f55 ChangeLog 9945
 MD5 673f17e611b38b84ed070beaa0dd4919 files/digest-gst-plugins-oss-0.10.0 274
-RMD160 9e4c88e0f36d2ef2feda4188281a6f4b289d15e8 files/digest-gst-plugins-oss-0.10.0 274
-SHA256 10b0371f9d5541429ec817bd8d4c6855c135b428f2bda0a09148785bbbf1afef files/digest-gst-plugins-oss-0.10.0 274
 MD5 73847e815ca1bb26a8d9db33e236132b files/digest-gst-plugins-oss-0.10.1 274
-RMD160 421befbf6fca2d845fc955b06973f28992b95ea1 files/digest-gst-plugins-oss-0.10.1 274
-SHA256 19c15160696e6767c4fdc87a805d6aed45f6083a4831a4bd1dc18e94213a48fe files/digest-gst-plugins-oss-0.10.1 274
 MD5 fe9a62d6f739f7cfd223099d201d8834 files/digest-gst-plugins-oss-0.10.2 274
-RMD160 22c35dad51ee8ae394e206b6a6a92eb0342f54ee files/digest-gst-plugins-oss-0.10.2 274
-SHA256 9b259ce24ad9f7b760050d3916bb8f2e376b3118bbc5b6b55c61eda4a7c54fac files/digest-gst-plugins-oss-0.10.2 274
 MD5 eaba7cd988c45174c3c20aebd8c4a8bd files/digest-gst-plugins-oss-0.8.10 262
-RMD160 ee0674f71e5e46e925c101e8e5d76fb49260df19 files/digest-gst-plugins-oss-0.8.10 262
-SHA256 a93903467a58b51b55338d1dba64d4cea56cb0ab65884a9fd58798f44d4e9680 files/digest-gst-plugins-oss-0.8.10 262
 MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-oss-0.8.11 262
-RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-oss-0.8.11 262
-SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-oss-0.8.11 262
 MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-oss-0.8.12 262
-RMD160 2131a3433f3081297079de64ac7f2335c1f82036 files/digest-gst-plugins-oss-0.8.12 262
-SHA256 bac5ba90fbb314a2f7ea2a53506021944ec1b8707b20d47545a23a6fd5f4cefd files/digest-gst-plugins-oss-0.8.12 262
 MD5 d42b5b8a0a5175c24b9f8c7d4e0377ca files/digest-gst-plugins-oss-0.8.8 259
-RMD160 1cd0dce90b9f48f20a5148c14fdc5db42aa79496 files/digest-gst-plugins-oss-0.8.8 259
-SHA256 c01a4735d25772dd72951e305eb31200b883b20ad3993cf453e8d9e73c6207de files/digest-gst-plugins-oss-0.8.8 259
 MD5 b040ebb3cb8e5116893f8166bd8c8bcb files/digest-gst-plugins-oss-0.8.9 259
-RMD160 0498e9b7c85e28f0a0f740355b037b27ecdd4969 files/digest-gst-plugins-oss-0.8.9 259
-SHA256 e542b7466fb2485c94556f3570067f75055906e3a02650a77037290a1c774141 files/digest-gst-plugins-oss-0.8.9 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEUVExW78445TWHXcRAvrhAJ439who5VneNqYrZt58UJ7j4cmfzwCbBdiM
-zZ0Zx81QM0dr8ynktBFeAO0=
-=wqk7
------END PGP SIGNATURE-----
+MD5 f54e8e81f350c7e973025e22e9438605 gst-plugins-oss-0.10.0.ebuild 340
+MD5 4c99bcfff429736ac4ad671e06e6c767 gst-plugins-oss-0.10.1.ebuild 340
+MD5 9a5805b8caf115abd3a3c6411af6ab52 gst-plugins-oss-0.10.2.ebuild 370
+MD5 556fab9eb50cbad73b88fa034776d7b0 gst-plugins-oss-0.8.10.ebuild 375
+MD5 66ae3bc6ee6dbe111109e1212e675823 gst-plugins-oss-0.8.11.ebuild 377
+MD5 7d84a29fe09a1935d68f758fa5c1c3f3 gst-plugins-oss-0.8.12.ebuild 384
+MD5 3391c13e84ddd0fb9d68a397a1497fe3 gst-plugins-oss-0.8.8.ebuild 374
+MD5 570116caf35d340d8a81ce2b2e965a8e gst-plugins-oss-0.8.9.ebuild 383
+MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
