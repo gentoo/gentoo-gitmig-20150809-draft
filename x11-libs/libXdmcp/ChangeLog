@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXdmcp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdmcp/ChangeLog,v 1.22 2006/04/29 15:32:09 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdmcp/ChangeLog,v 1.23 2006/05/03 18:12:55 marienz Exp $
+
+  03 May 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Re-recommit manifest for sha256 issues.
 
 *libXdmcp-1.0.1 (29 Apr 2006)
 
