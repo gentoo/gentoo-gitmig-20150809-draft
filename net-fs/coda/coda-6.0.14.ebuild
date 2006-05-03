@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.12.ebuild,v 1.4 2006/05/03 18:21:26 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.14.ebuild,v 1.1 2006/05/03 18:21:26 griffon26 Exp $
 
-inherit eutils
+inherit autotools eutils
 
-IUSE="kerberos"
+IUSE="kerberos krb4 ssl"
 
 DESCRIPTION="Coda is an advanced networked filesystem developed at Carnegie Mellon Univ."
 HOMEPAGE="http://www.coda.cs.cmu.edu/"
@@ -16,14 +16,7 @@ KEYWORDS="~x86 ~ppc"
 
 # partly based on the deps suggested by Mandrake's RPM, and/or on my current versions
 # Also, definely needs coda.h from linux-headers.
-DEPEND=">=sys-libs/lwp-2.1
-	>=net-libs/rpc2-1.28
-	>=sys-libs/rvm-1.11
-	>=sys-libs/db-3
-	>=sys-libs/ncurses-4
-	>=sys-libs/readline-3
-	>=dev-lang/perl-5.8
-	kerberos? ( virtual/krb5 )
+DEPEND="${RDEPEND}
 	sys-apps/gawk
 	sys-devel/bison
 	sys-apps/grep
@@ -36,12 +29,24 @@ RDEPEND=">=sys-libs/lwp-2.1
 	>=sys-libs/ncurses-4
 	>=sys-libs/readline-3
 	>=dev-lang/perl-5.8
-	kerberos? ( virtual/krb5 )"
+	krb4? ( app-crypt/kth-krb )
+	kerberos? ( virtual/krb5 )
+	ssl? ( dev-libs/openssl )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-with-includes-fix.patch"
+	eautoreconf
+}
 
 src_compile() {
 	local myflags=""
 
-	use kerberos && myflags="${myflags} --with-crypto"
+	use krb4 && myflags="${myflags} --with-krb4
+	                                --with-krb4-includes=/usr/athena/include"
+	use kerberos && myflags="${myflags} --with-krb5"
+	use ssl && myflags="${myflags} --with-openssl"
 
 	econf ${myflags} || die "configure failed"
 	emake -j1 || die "emake failed"

@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/coda
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.22 2005/10/23 09:49:37 griffon26 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.23 2006/05/03 18:21:26 griffon26 Exp $
+
+*coda-6.0.14 (03 May 2006)
+
+  03 May 2006; Maurice van der Pot <griffon26@gentoo.org>
+  +files/coda-6.0.14-with-includes-fix.patch, +files/6.0.14/venus,
+  +coda-6.0.14.ebuild:
+  Added version 6.0.14 of coda and included a fix for bug #130870 reported by 
+  Steven Brudenell <sbrudene@andrew.cmu.edu>.
 
   23 Oct 2005; Maurice van der Pot <griffon26@gentoo.org>
   coda-6.0.10.ebuild, coda-6.0.11.ebuild, coda-6.0.12.ebuild:
