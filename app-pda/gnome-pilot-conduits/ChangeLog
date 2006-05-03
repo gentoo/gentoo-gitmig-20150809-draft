@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnome-pilot-conduits
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/ChangeLog,v 1.15 2006/05/02 18:32:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/ChangeLog,v 1.16 2006/05/03 15:41:16 gustavoz Exp $
+
+  03 May 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-pilot-conduits-2.0.13.ebuild:
+  Stable on sparc
 
   02 May 2006; Alastair Tse <liquidx@gentoo.org>
   gnome-pilot-conduits-2.0.13.ebuild:

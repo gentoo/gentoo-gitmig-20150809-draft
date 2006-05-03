@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.23 2006/05/02 18:33:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.24 2006/05/03 15:39:28 gustavoz Exp $
+
+  03 May 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-pilot-2.0.13.ebuild:
+  Stable on sparc
 
   02 May 2006; Alastair Tse <liquidx@gentoo.org> gnome-pilot-2.0.13.ebuild:
   stable bump for x86
