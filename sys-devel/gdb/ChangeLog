@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.89 2006/04/27 23:03:05 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.90 2006/05/03 14:32:39 flameeyes Exp $
+
+  03 May 2006; Diego Pettenò <flameeyes@gentoo.org> gdb-6.4-r4.ebuild:
+  Add ~x86-fbsd keyword.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-gdb-6.1,
   files/digest-gdb-6.2.1, files/digest-gdb-6.3-r4, files/digest-gdb-6.3-r5,
