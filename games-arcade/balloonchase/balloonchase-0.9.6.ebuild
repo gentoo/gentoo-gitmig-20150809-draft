@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/balloonchase/balloonchase-0.9.6.ebuild,v 1.7 2005/05/31 21:01:32 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/balloonchase/balloonchase-0.9.6.ebuild,v 1.8 2006/05/03 02:53:47 weeve Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://koti.mbnet.fi/makegho/c/bchase/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl"
