@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5ade9708e5acb8e7f13e4b6f73c73d9f ChangeLog 5197
+MD5 22e04add425592b65962a4d81e47d547 ChangeLog 5311
 MD5 db7d595d5d3f1a47417d753e763467df cdparanoia-3.9.8-r1.ebuild 1303
 MD5 a58184eb94cb4488ede5c28ddca40219 cdparanoia-3.9.8-r2.ebuild 1534
-MD5 c40c4f7e1d5d39a727630b0d1a76888d cdparanoia-3.9.8-r3.ebuild 1983
+MD5 97459ff627f33e1ec1e057971900e87c cdparanoia-3.9.8-r3.ebuild 1982
 MD5 8dfcb53296c1e66ba13fb02d81eef39b files/3.9.8-gcc34.patch 772
 MD5 0c381b5b41380f5a4a92f3e018fe16fe files/cdparanoia-3.9.8-identify_crash.patch 536
 MD5 532963b39bb2da5b1961bcf17fb11e68 files/cdparanoia-3.9.8-include-cdda_interface_h.patch 452
@@ -20,7 +20,7 @@ MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEWM+dKRy60XGEcJIRAuFLAJ9viQdIYRNJFxPW2YPox+BgYZzjNQCfeymg
-VJvKruZmvCnDDUjHckqVXm8=
-=wcd1
+iD8DBQFEWPktKRy60XGEcJIRAtToAJ92vkwNyayltYNoWWaXgjtrMLT3rwCgiZCV
+R21IgMHEyxxrVuIVnCX4DTI=
+=ebX9
 -----END PGP SIGNATURE-----
