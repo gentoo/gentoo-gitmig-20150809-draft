@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.13-r1.ebuild,v 1.3 2006/03/27 15:32:07 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.13-r1.ebuild,v 1.4 2006/05/03 23:08:47 dcoutts Exp $
 
 CABAL_FEATURES="lib bin haddock"
 inherit base haskell-cabal
@@ -36,7 +36,7 @@ src_unpack() {
 		echo                                >> "${S}/HaXml.cabal"
 		echo "executable:     ${binary}"    >> "${S}/HaXml.cabal"
 		echo "main-is:        ${binary}.hs" >> "${S}/HaXml.cabal"
-		echo "hs-source-dirs: src/tools"    >> "${S}/HaXml.cabal"
+		echo "hs-source-dirs: src/tools src">> "${S}/HaXml.cabal"
 		echo "extensions:     CPP"          >> "${S}/HaXml.cabal"
 	done
 }
