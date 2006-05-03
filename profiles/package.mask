@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5294 2006/05/02 21:05:52 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5295 2006/05/03 02:54:12 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -367,11 +367,6 @@ net-misc/asterisk-app_authenticate_ldap
 =www-apache/mod_fcgid-1.06-r1
 =www-apache/mod_fcgid-1.07
 =www-apache/mod_tcl-1.0
-
-
-# Markus Dittrich <markusle@gentoo.org> (17 Apr 2006)
-# masked for further additional testing
-=sci-chemistry/vmd-1.8.4
 
 # Joshua Baergen <joshuabaergen@gentoo.org> (14 Apr 2006)
 # Mask for X7.1 RC
