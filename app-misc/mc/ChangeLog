@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.100 2006/04/27 13:17:17 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.101 2006/05/03 14:47:46 exg Exp $
+
+*mc-4.6.1-r1 (03 May 2006)
+
+  03 May 2006; Emanuele Giaquinta <exg@gentoo.org>
+  +files/mc-4.6.1-nonblock.patch, +mc-4.6.1-r1.ebuild:
+  Add patch, thanks to hansmi, to fix bug #127411.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-mc-4.6.0-r12,
   files/digest-mc-4.6.0-r13, files/digest-mc-4.6.0-r14,
