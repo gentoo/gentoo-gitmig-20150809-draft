@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/dir2ogg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/ChangeLog,v 1.8 2006/04/27 23:29:31 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/ChangeLog,v 1.9 2006/05/03 17:47:51 blubb Exp $
+
+  03 May 2006; Simon Stelling <blubb@gentoo.org> dir2ogg-0.8.ebuild:
+  add dependency on faad; thanks to Sam Cuong Truong
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-dir2ogg-0.8,
   files/digest-dir2ogg-0.9.1, Manifest:
