@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.1 2006/04/27 21:49:08 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.2 2006/05/03 23:05:28 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -31,7 +31,7 @@ SRC_URI="http://www.haskell.org/ghc/dist/${EXTRA_SRC_URI}/${MY_P}-src.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="test doc X opengl openal"
 
 S="${WORKDIR}/${MY_P}"
@@ -56,8 +56,7 @@ DEPEND="${RDEPEND}
 			>=dev-libs/libxslt-1.1.2
 			>=dev-haskell/haddock-0.6-r2 )"
 
-# TODO: this needs upgrading to 1.1.4
-PDEPEND=">=dev-haskell/cabal-1.1.3"
+PDEPEND=">=dev-haskell/cabal-1.1.4"
 
 # Portage's resolution of virtuals fails on virtual/ghc in some Portage releases,
 # the following function causes the build to fail with an informative error message
@@ -105,11 +104,12 @@ ghc_setup_cflags() {
 			# -O2 and above break on too many systems
 			-O*) ;;
 
-			# Arch and ABI flags are probably ok
+			# Arch and ABI flags are what we're really after
 			-m*) append-ghc-cflags compile assemble ${flag};;
 
-			# Debugging flags are also probably ok
-			-g*) append-ghc-cflags compile assemble ${flag};;
+			# Debugging flags don't help either. You can't debug Haskell code
+			# at the C source level and the mangler discards the debug info.
+			-g*) ;;
 
 			# Ignore all other flags, including all -f* flags
 		esac
@@ -190,6 +190,7 @@ src_compile() {
 		$(use_enable opengl opengl) \
 		$(use_enable opengl glut) \
 		$(use_enable openal openal) \
+		--disable-alut \
 		$(use_enable X x11) \
 		$(use_enable X hgl) \
 		|| die "econf failed"
