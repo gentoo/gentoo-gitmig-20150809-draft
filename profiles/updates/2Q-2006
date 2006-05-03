@@ -5,3 +5,5 @@ move media-libs/alut media-libs/freealut
 move games-strategy/dominions2-demo-bin games-strategy/dominions2-demo
 move dev-libs/pam_pkcs11 sys-auth/pam_pkcs11
 move app-cdr/kio_burn app-cdr/konqburn
+slotmove =media-libs/libdc1394-1* 0 1
+slotmove =media-libs/libdc1394-2* 0 2
