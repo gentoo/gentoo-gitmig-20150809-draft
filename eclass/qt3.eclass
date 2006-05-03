@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt3.eclass,v 1.16 2006/03/17 21:51:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt3.eclass,v 1.17 2006/05/03 12:28:50 caleb Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
@@ -23,6 +23,8 @@ QT3VERSIONS="3.3.6 3.3.5-r1 3.3.5 3.3.4-r9 3.3.4-r8 3.3.4-r7 3.3.4-r6 3.3.4-r5 3
 if [[ -z "${QTDIR}" ]]; then
 	QTDIR="/usr/qt/3"
 fi
+
+PATH="${QTDIR}/bin:${PATH}"
 
 addwrite "${QTDIR}/etc/settings"
 addpredict "${QTDIR}/etc/settings"
