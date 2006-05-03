@@ -1,12 +1,14 @@
 # ChangeLog for mail-filter/gld
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.32 2006/05/03 17:19:47 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.33 2006/05/03 17:22:55 slarti Exp $
 
 *gld-1.7 (03 May 2006)
 
   03 May 2006; Tom Martin <slarti@gentoo.org> +files/tables.sql,
   +gld-1.7.ebuild:
-  Version bump to 1.7; resolve bug #130802 while we're here.
+  Version bump to 1.7; resolve bug #130802 while we're here. Thanks to
+  Alexander Skwar <askwar@digitalprojects.com> for the updated
+  tables.sql.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-gld-1.5.2,
   files/digest-gld-1.6, Manifest:
