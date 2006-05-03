@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.171 2006/04/24 11:59:20 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.172 2006/05/03 11:10:11 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -340,9 +340,6 @@ env_setup_xmakeopts() {
 # Unpack functions
 #==============================================================
 unpack_2_4() {
-	env_setup_xmakeopts
-
-	cd "${S}"
 	# this file is required for other things to build properly,
 	# so we autogenerate it
 	make -s mrproper ${xmakeopts} || die "make mrproper failed"
@@ -352,19 +349,11 @@ unpack_2_4() {
 }
 
 unpack_2_6() {
-	env_setup_xmakeopts
-
-	cd "${S}"
-
-	# since KBUILD_OUTPUT should only be used on the active kernel
-	# sources, we should unset it here.
-	[[ -n "${KBUILD_OUTPUT}" ]] && unset KBUILD_OUTPUT
-
 	# this file is required for other things to build properly, so we
-	# autogenerate it ... touch .config to keep version.h build from
+	# autogenerate it ... generate a .config to keep version.h build from
 	# spitting out an annoying warning
 	make -s mrproper ${xmakeopts} 2>/dev/null || die "make mrproper failed"
-	touch .config
+	make -s defconfig &>/dev/null 2>&1 || die "make defconfig failed"
 	make -s include/linux/version.h ${xmakeopts} || die "make include/linux/version.h failed"
 	rm -f .config
 }
@@ -1021,8 +1010,22 @@ kernel-2_src_unpack() {
 	unpack_fix_docbook
 	unpack_fix_install_path
 
-	kernel_is 2 4 && unpack_2_4
-	kernel_is 2 6 && unpack_2_6
+	# Setup xmakeopts and cd into sourcetree.
+	env_setup_xmakeopts
+	cd "${S}"
+
+	# since KBUILD_OUTPUT should only be used on the active kernel
+	# sources, we should unset it here.
+	[[ -n "${KBUILD_OUTPUT}" ]] && unset KBUILD_OUTPUT
+
+	# We dont need a version.h for anything other than headers
+	# at least, I should hope we dont. If this causes problems
+	# take out the if/fi block and inform me please.
+	# unpack_2_6 should now be 2.6.17 safe anyways
+	if [[ ${ETYPE} == headers ]]; then
+		kernel_is 2 4 && unpack_2_4
+		kernel_is 2 6 && unpack_2_6
+	fi
 }
 
 kernel-2_src_compile() {
