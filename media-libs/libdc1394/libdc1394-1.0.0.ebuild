@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-1.0.0.ebuild,v 1.6 2006/01/29 08:10:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-1.0.0.ebuild,v 1.7 2006/05/03 14:34:23 seemant Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sourceforge.net/projects/libdc1394/"
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
-SLOT="0"
+SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="X"
 
