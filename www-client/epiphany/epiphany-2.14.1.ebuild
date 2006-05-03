@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.14.1.ebuild,v 1.2 2006/05/02 14:19:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.14.1.ebuild,v 1.3 2006/05/03 21:42:03 dang Exp $
 
-inherit eutils gnome2 multilib
+inherit eutils gnome2 multilib autotools
 
 DESCRIPTION="GNOME webbrowser based on the mozilla rendering engine"
 HOMEPAGE="http://www.gnome.org/projects/epiphany/"
@@ -70,6 +70,10 @@ src_unpack() {
 	cd "${S}"
 
 	epatch ${FILESDIR}/${PN}-1.9.2-broken-firefox.patch
+	epatch ${FILESDIR}/${P}-as-needed.patch
+
+	AT_M4DIR="${S}/m4" WANT_AUTOCONF="2.59" \
+	eautoreconf || die "Failed to reconfigure"
 }
 
 src_compile() {
