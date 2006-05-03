@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.51 2006/04/17 14:30:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.52 2006/05/03 20:38:32 flameeyes Exp $
+
+  03 May 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata to list media-video@gentoo.org as maintainer.
 
   17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> libcdio-0.77.ebuild:
   Disable tests as it's broken in this release.
