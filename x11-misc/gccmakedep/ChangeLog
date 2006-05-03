@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gccmakedep
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gccmakedep/ChangeLog,v 1.11 2006/04/03 20:59:19 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gccmakedep/ChangeLog,v 1.12 2006/05/03 20:18:55 flameeyes Exp $
+
+  03 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  gccmakedep-1.0.1-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
   03 Apr 2006; Stephen P. Becker <geoman@gentoo.org>
   gccmakedep-1.0.1-r1.ebuild:
