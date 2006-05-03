@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.197 2006/04/27 21:53:05 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.198 2006/05/03 06:01:11 corsair Exp $
+
+  03 May 2006; Markus Rothe <corsair@gentoo.org> xchat-2.6.2.ebuild:
+  Stable on ppc64; bug #116345
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-xchat-2.4.3,
   Manifest:
