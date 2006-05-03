@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.86 2006/03/14 22:22:27 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.87 2006/05/03 18:07:46 dang Exp $
+
+*zenity-2.14.1 (03 May 2006)
+
+  03 May 2006; Daniel Gryniewicz <dang@gentoo.org> +zenity-2.14.1.ebuild:
+  Bump for 2.14.1
 
 *zenity-2.14.0 (14 Mar 2006)
 
