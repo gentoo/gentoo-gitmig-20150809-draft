@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.42 2006/04/01 17:43:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.43 2006/05/03 21:17:05 flameeyes Exp $
+
+  03 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kcheckpass-3.5.0.ebuild:
+  Don't depend on shadow, it's a system package and non-linux systems doesn't
+  use it.
 
   01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   kcheckpass-3.5.0.ebuild:
