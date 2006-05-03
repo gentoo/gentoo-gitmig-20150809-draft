@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.148 2006/05/02 23:00:39 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.149 2006/05/03 02:27:28 anarchy Exp $
+
+  03 May 2006; Jory A. Pratt <anarchy@gentoo.org>
+  mozilla-firefox-1.5.0.3.ebuild:
+  1.5.0.3 stable on amd64
 
 *mozilla-firefox-1.5.0.3 (02 May 2006)
 
