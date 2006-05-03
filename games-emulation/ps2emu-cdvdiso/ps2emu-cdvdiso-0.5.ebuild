@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-cdvdiso/ps2emu-cdvdiso-0.5.ebuild,v 1.2 2005/08/07 07:35:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-cdvdiso/ps2emu-cdvdiso-0.5.ebuild,v 1.3 2006/05/03 05:51:30 tupone Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="PSEmu2 CD/DVD iso plugin"
 HOMEPAGE="http://www.pcsx2.net/"
@@ -23,6 +23,7 @@ src_unpack() {
 	unrar x -idq "${DISTDIR}"/${A} || die
 	cd "${S}"
 	sed -i 's:-O2 -fomit-frame-pointer:$(OPTFLAGS):' src/Linux/Makefile || die
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_compile() {

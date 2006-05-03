@@ -1,0 +1,8 @@
+--- src/CDVDiso.h.old	2006-05-03 07:42:09.000000000 +0200
++++ src/CDVDiso.h	2006-05-03 07:43:04.000000000 +0200
+@@ -76,5 +76,4 @@
+ 
+ void UpdateZmode();
+ void CfgOpenFile();
+-void SysMessage(char *fmt, ...);
+ 
