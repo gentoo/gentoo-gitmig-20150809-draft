@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d042f54fe3ef5cdfd868407476edbaed ChangeLog 9305
 MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-alsa-0.10.4 277
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-alsa-0.8.10 72
@@ -12,3 +15,10 @@ MD5 f2ae717ca65cf4d4ed3299a77e4adcff gst-plugins-alsa-0.8.12.ebuild 391
 MD5 a7a3dabd62f144b71becaca404cf3a74 gst-plugins-alsa-0.8.8.ebuild 376
 MD5 93094ed635568f46ed7c00a820bbc053 gst-plugins-alsa-0.8.9.ebuild 382
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEWRA5KRy60XGEcJIRAi8eAKCRdx/7KLDx6fz2K6QLgOhnBEtDzgCeM/2b
+MK2blO0BRWkxN4aTMVlfMPM=
+=sUyu
+-----END PGP SIGNATURE-----

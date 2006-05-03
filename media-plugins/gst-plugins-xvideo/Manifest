@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fa16591edb7e21f404acc903155d7963 ChangeLog 8114
 MD5 da02faecf74602acd81e807174e8e89d files/digest-gst-plugins-xvideo-0.10.0 77
 MD5 0558db8f3c6a0a66bc61b6a02f9aeb8d files/digest-gst-plugins-xvideo-0.10.1 77
@@ -22,3 +25,10 @@ MD5 0b9c7e07de6957c9efa257b212ae5e2f gst-plugins-xvideo-0.8.12.ebuild 492
 MD5 e3bee56d058d3e5b9fd33370e9e6f059 gst-plugins-xvideo-0.8.8.ebuild 485
 MD5 4233796abca427c85b1559095c7f0cf2 gst-plugins-xvideo-0.8.9.ebuild 492
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEWREeKRy60XGEcJIRAtQZAJ9Ej6VgNU+5UYo8iCud8vdOwr6MgACfShiA
+DX1NsStOPUjFfjtQdNp02kA=
+=fYYS
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c798c0366daad7076b1e0adf9b0706fe ChangeLog 4593
 MD5 6e8180a336e024640a5ea66274f872d2 files/digest-gst-plugins-faad-0.10.0 271
 MD5 5ad6491663eb8de7602211b2c169f1df files/digest-gst-plugins-faad-0.10.1 271
@@ -10,3 +13,10 @@ MD5 b1daac8f62d89491670427aa7cde397c gst-plugins-faad-0.8.10.ebuild 335
 MD5 c7cfc140a324efcf709030dae901a278 gst-plugins-faad-0.8.11.ebuild 337
 MD5 2ba4e3fe0dd6c07e028482f507ea7960 gst-plugins-faad-0.8.12.ebuild 340
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEWRRkKRy60XGEcJIRAmNhAJ4o3A3WWo7/QdeAhk/6SOuy2u44mACgk5dS
+61pP5Ot9ncqFBD1CElm+A1A=
+=LLmC
+-----END PGP SIGNATURE-----
