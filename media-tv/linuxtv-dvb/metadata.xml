@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer><email>lordvan@gentoo.org</email></maintainer>
+<herd>media-tv</herd>
+<maintainer>
+<email>zzam@gentoo.org</email>
+<name>Matthias Schwarzott</name>
+</maintainer>
 </pkgmetadata>
+

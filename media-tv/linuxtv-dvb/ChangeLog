@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/linuxtv-dvb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/ChangeLog,v 1.26 2006/04/01 16:17:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/ChangeLog,v 1.27 2006/05/03 13:23:20 zzam Exp $
+
+  03 May 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Set maintainer to myself
 
   01 Apr 2006; Matthias Schwarzott <zzam@gentoo.org>
   -linuxtv-dvb-1.1.1-r1.ebuild, -linuxtv-dvb-1.1.1-r2.ebuild,
