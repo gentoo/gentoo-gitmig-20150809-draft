@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-memcache
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/ChangeLog,v 1.11 2006/03/28 15:41:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/ChangeLog,v 1.12 2006/05/03 13:09:58 gustavoz Exp $
+
+  03 May 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  pecl-memcache-2.0.1.ebuild:
+  Stable on hppa & sparc
 
   28 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   pecl-memcache-2.0.1.ebuild:
