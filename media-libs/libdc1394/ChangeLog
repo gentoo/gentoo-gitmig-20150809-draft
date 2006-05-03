@@ -1,6 +1,23 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.19 2006/04/27 23:06:37 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.20 2006/05/03 14:05:49 seemant Exp $
+
+*libdc1394-2.0.0_pre6-r2 (03 May 2006)
+*libdc1394-1.2.1 (03 May 2006)
+*libdc1394-1.0.0-r1 (03 May 2006)
+
+  03 May 2006; Seemant Kulleen <seemant@gentoo.org>
+  +libdc1394-1.0.0-r1.ebuild, +libdc1394-1.2.1.ebuild,
+  +libdc1394-2.0.0_pre6-r2.ebuild:
+  Now that pre6 has changed API and install locations of its headers and
+  library names, we can safely SLOT version 1 and version 2 separately for
+  simultaneous install. Note that pre5 and earlier in the 2.0.0 branch will
+  NOT be put back into the tree at all, because they clash with version 1.
+  Also, pre6 is supposed to be closer to the final 2.0.0 release in terms of
+  API etc, so I am more confident with this change than I was earlier.
+  Additionally, added the fix for CLK_TCK and glibc-2.4, that really I should
+  have done months ago. My apologies for that. Bugs #117201 and #124995 are
+  now closed with this.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-libdc1394-2.0.0_pre4, Manifest:
