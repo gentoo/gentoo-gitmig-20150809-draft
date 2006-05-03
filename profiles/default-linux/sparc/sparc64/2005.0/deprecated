@@ -3,7 +3,7 @@ default-linux/sparc/sparc64/2006.0/2.4
 # emerge -n '>=sys-apps/portage-2.0.51'
 # cd /etc/
 # rm make.profile
-# ln -s ../usr/portage/profiles/default-linux/sparc/sparc64/2006.0/2.4 make.profile/2.4
+# ln -s ../usr/portage/profiles/default-linux/sparc/sparc64/2006.0/2.4 make.profile
 
 # **** !!!! It is VERY IMPORTANT to follow the GCC Upgrade Guide: !!!! ****
 # **** !!!!     Otherwise you may end up with a broken system     !!!! ****
