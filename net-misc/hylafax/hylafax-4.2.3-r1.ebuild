@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.3-r1.ebuild,v 1.4 2006/01/29 18:10:45 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.3-r1.ebuild,v 1.5 2006/05/04 07:11:57 nerdboy Exp $
 
 inherit eutils multilib pam flag-o-matic toolchain-funcs
 
@@ -36,6 +36,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-faxrcvd-eval-vulnerability.patch
 	epatch ${FILESDIR}/${P}-notify-eval-vulnerability.patch
+	epatch ${FILESDIR}/${P}-tiff_version.patch
 }
 
 src_compile() {
