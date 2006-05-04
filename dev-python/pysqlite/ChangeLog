@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.51 2006/04/07 15:21:56 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.52 2006/05/04 17:38:50 marienz Exp $
+
+*pysqlite-2.2.2 (04 May 2006)
+
+  04 May 2006; Marien Zwart <marienz@gentoo.org> +pysqlite-2.2.2.ebuild:
+  Version bump, closes bug #132258. Thanks to arj for reporting.
 
 *pysqlite-2.2.0 (07 Apr 2006)
 
