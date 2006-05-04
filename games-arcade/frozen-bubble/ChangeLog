@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/frozen-bubble
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.18 2006/04/27 19:42:48 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.19 2006/05/04 17:21:38 mr_bones_ Exp $
+
+  04 May 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  frozen-bubble-1.0.0-r6.ebuild:
+  no need to install .xvpics directory (bug #132227)
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-frozen-bubble-1.0.0-r5, Manifest:

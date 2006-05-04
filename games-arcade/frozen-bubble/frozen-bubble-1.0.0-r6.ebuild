@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r6.ebuild,v 1.1 2006/03/18 00:39:09 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r6.ebuild,v 1.2 2006/05/04 17:21:38 mr_bones_ Exp $
 
 inherit eutils perl-module games
 
@@ -27,20 +27,22 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	find . -type d -name .xvpics -print0 | xargs -0 rm -rf #bug #132227
 	# main package
-	epatch "${FILESDIR}"/${P}-makefile.patch
-	epatch "${FILESDIR}"/${PV}-no-chainreaction.patch
-	epatch "${FILESDIR}"/${P}-{editor-,}sdl-perl-2.patch
+	epatch \
+		"${FILESDIR}"/${P}-makefile.patch \
+		"${FILESDIR}"/${PV}-no-chainreaction.patch \
+		"${FILESDIR}"/${P}-{editor-,}sdl-perl-2.patch
 	sed -i \
 		-e 's:INSTALLDIRS=.*:PREFIX=${D}/usr:' \
 		c_stuff/Makefile \
-		|| die 'sed c_stuff/Makefile failed'
+		|| die 'sed failed'
 
 	# server addon
 	cd "${WORKDIR}"/${NET_SERVER_P}
 	sed -i \
 		-e '/^dnl AM_CONFIG_HEADER/s:dnl ::' configure.in \
-		|| die "sed configure.in failed"
+		|| die "sed failed"
 	libtoolize -c -f || die "libtoolize failed"
 	env \
 		WANT_AUTOMAKE=1.4 \
