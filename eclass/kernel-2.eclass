@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.173 2006/05/03 20:50:09 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.174 2006/05/04 15:37:35 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -298,6 +298,10 @@ elif [[ ${ETYPE} == headers ]]; then
 	DESCRIPTION="Linux system headers"
 	IUSE=""
 
+	# Since we should NOT honour KBUILD_OUTPUT in headers
+	# lets unset it here.
+	unset KBUILD_OUTPUT
+
 	if [[ ${CTARGET} = ${CHOST} ]]; then
 		DEPEND="!virtual/os-headers"
 		PROVIDE="virtual/os-headers"
@@ -401,10 +405,6 @@ unpack_fix_docbook() {
 #==============================================================
 compile_headers() {
 	env_setup_xmakeopts
-
-	# Since KBUILD_OUTPUT shouldnt be used when compiling headers, lets unset it
-	# if it exists.
-	[[ -n ${KBUILD_OUTPUT} ]] && unset KBUILD_OUTPUT
 
 	# if we couldnt obtain HOSTCFLAGS from the Makefile,
 	# then set it to something sane
@@ -1013,10 +1013,6 @@ kernel-2_src_unpack() {
 	# Setup xmakeopts and cd into sourcetree.
 	env_setup_xmakeopts
 	cd "${S}"
-
-	# since KBUILD_OUTPUT should only be used on the active kernel
-	# sources, we should unset it here.
-	[[ -n "${KBUILD_OUTPUT}" ]] && unset KBUILD_OUTPUT
 
 	# We dont need a version.h for anything other than headers
 	# at least, I should hope we dont. If this causes problems
