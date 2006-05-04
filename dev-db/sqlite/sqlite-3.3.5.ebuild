@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.5.ebuild,v 1.2 2006/04/13 16:46:24 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.5.ebuild,v 1.3 2006/05/04 00:20:39 arj Exp $
 
-inherit eutils
+inherit eutils alternatives
 
 DESCRIPTION="SQLite: An SQL Database Engine in a C Library"
 HOMEPAGE="http://www.sqlite.org/"
@@ -16,6 +16,9 @@ IUSE="nothreadsafe doc tcltk debug"
 DEPEND="virtual/libc
 	doc? ( dev-lang/tcl )
 	tcltk? ( dev-lang/tcl )"
+
+SOURCE="/usr/bin/lemon"
+ALTERNATIVES="${SOURCE}-3 ${SOURCE}-0"
 
 src_unpack() {
 	# test
@@ -82,10 +85,7 @@ src_test() {
 src_install () {
 	make DESTDIR="${D}" TCLLIBDIR="/usr/$(get_libdir)" install || die
 
-	if ! [ -e ${DESTDIR}/usr/bin/lemon ]
-	then
-	dobin lemon
-	fi
+	newbin lemon lemon-${SLOT}
 
 	dodoc README VERSION
 	doman sqlite3.1
