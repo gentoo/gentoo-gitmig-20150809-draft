@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/krename
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.32 2006/04/26 22:26:10 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.33 2006/05/04 17:04:24 carlo Exp $
+
+*krename-3.0.11-r1 (04 May 2006)
+
+  04 May 2006; Carsten Lohrke <carlo@gentoo.org> +krename-3.0.11-r1.ebuild:
+  Install service menu files in correct location.
 
   26 Apr 2006; Mark Loeser <halcy0n@gentoo.org> krename-3.0.11.ebuild:
   Stable on x86; bug #129474
