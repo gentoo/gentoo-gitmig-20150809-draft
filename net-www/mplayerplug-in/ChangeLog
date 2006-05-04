@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.63 2006/04/12 20:30:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.64 2006/05/04 09:43:47 josejx Exp $
+
+  04 May 2006; Joseph Jezak <josejx@gentoo.org> mplayerplug-in-3.21.ebuild,
+  mplayerplug-in-3.25.ebuild:
+  Added seamonkey as an option to compile against for bug #132217.
 
 *mplayerplug-in-3.25 (12 Apr 2006)
 
