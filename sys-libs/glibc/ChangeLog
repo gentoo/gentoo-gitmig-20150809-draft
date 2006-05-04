@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.449 2006/05/04 02:39:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.450 2006/05/04 03:53:47 vapier Exp $
+
+*glibc-2.3.6-r4 (04 May 2006)
+
+  04 May 2006; Mike Frysinger <vapier@gentoo.org> +glibc-2.3.6-r4.ebuild:
+  Backport all the crazy changes from glibc-2.4 and include a ton of bugfixes.
 
   04 May 2006; Joseph Jezak <josejx@gentoo.org> glibc-2.3.6-r3.ebuild:
   Marked ppc stable for bug #132076.
