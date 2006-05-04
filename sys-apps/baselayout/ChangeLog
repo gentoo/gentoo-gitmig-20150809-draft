@@ -1,9 +1,19 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.325 2006/05/02 18:49:17 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.326 2006/05/04 09:18:46 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-1.12.0_pre19-r2 (04 May 2006)
+*baselayout-1.11.15-r3 (04 May 2006)
+
+  04 May 2006; Roy Marples <uberlord@gentoo.org>
+  files/baselayout-1.11.15-coldplug.patch,
+  files/baselayout-1.12.0_pre19-coldplug.patch,
+  +baselayout-1.11.15-r3.ebuild, +baselayout-1.12.0_pre19-r2.ebuild:
+  Final RC_COLDPLUG changes. Back to a simple yes|no and the optional service
+  list moved to RC_PLUG_SERVICES.
 
   02 May 2006; Roy Marples <uberlord@gentoo.org>
   files/baselayout-1.11.15-coldplug.patch,
