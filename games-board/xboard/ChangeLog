@@ -1,6 +1,13 @@
 # ChangeLog for games-board/xboard
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.6 2006/01/23 21:10:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.7 2006/05/04 04:51:53 mr_bones_ Exp $
+
+  04 May 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/xboard-4.2.7-cmail.patch,
+  +files/xboard-4.2.7-default-program.patch,
+  +files/xboard-4.2.7-destdir.patch, xboard-4.2.7.ebuild:
+  fix cboard component (bug #117464) with patch from nyhm; use make install;
+  add modular X deps
 
   23 Jan 2006; Markus Rothe <corsair@gentoo.org> xboard-4.2.7.ebuild:
   Added ~ppc64; bug #120092
