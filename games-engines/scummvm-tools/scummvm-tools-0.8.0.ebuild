@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-0.8.0.ebuild,v 1.1 2005/10/31 01:31:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-0.8.0.ebuild,v 1.2 2006/05/04 06:45:39 josejx Exp $
 
 inherit games
 
@@ -20,7 +20,10 @@ S=${WORKDIR}/tools-${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i -e '/CFLAGS/s: -g -O : :' Makefile
+	sed -i -e '/CFLAGS/s: -g -O : :' Makefile || die "sed failed"
+	if use ppc; then
+		sed -i -e '/DSCUMM_BIG/s:# CFLAGS:CFLAGS:' Makefile || die "sed failed"
+	fi
 }
 
 src_install() {
