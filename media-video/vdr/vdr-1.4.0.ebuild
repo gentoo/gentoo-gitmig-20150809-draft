@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.0.ebuild,v 1.1 2006/05/03 21:42:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.0.ebuild,v 1.2 2006/05/04 05:44:31 zzam Exp $
 
 inherit eutils flag-o-matic
 
@@ -239,5 +239,24 @@ pkg_postinst() {
 		echo
 		eerror "It is very important to emerge media-plugins/vdr-setup now"
 		eerror "and to have it activated in /etc/conf.de/vdr PLUGINS=\"\""
+	fi
+
+	local keysfound=0
+	local key
+	local warn_keys="JumpFwd JumpRew JumpFwdSlow JumpRewSlow"
+	local remote_file=${ROOT}/etc/vdr/remote.conf
+
+	if [[ -e ${remote_file} ]]; then
+		for key in ${warn_jeys}; do
+			if grep -q -i "\.${key} " "${remote_file}"; then
+				keysfound=1
+				break
+			fi
+		done
+		if [[ ${keysfound} == 1 ]]; then
+			ewarn "Your /etc/vdr/remote.conf contains keys which are no longer usable"
+			ewarn "Please remove these keys or vdr will not start:"
+			ewarn "#  ${warn_keys}"
+		fi
 	fi
 }
