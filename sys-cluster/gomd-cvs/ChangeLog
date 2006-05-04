@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/gomd-cvs
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gomd-cvs/ChangeLog,v 1.8 2004/06/24 22:38:00 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gomd-cvs/ChangeLog,v 1.9 2006/05/04 18:16:44 tantive Exp $
+
+  04 May 2006; Michael Imhof <tantive@gentoo.org> gomd-cvs-0.2_beta1.ebuild:
+  Fixed #117768.
 
 *gomd-cvs-0.2_beta1 (13 Feb 2004)
 
