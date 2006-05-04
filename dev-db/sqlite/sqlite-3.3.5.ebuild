@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.5.ebuild,v 1.3 2006/05/04 00:20:39 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.5.ebuild,v 1.4 2006/05/04 13:00:38 seemant Exp $
 
 inherit eutils alternatives
 
@@ -23,12 +23,14 @@ ALTERNATIVES="${SOURCE}-3 ${SOURCE}-0"
 src_unpack() {
 	# test
 	if has test ${FEATURES}; then
-	   if ! has userpriv ${FEATURES}; then
-	      die "The userpriv feature must be enabled to run tests"
-	fi
-	   if ! use tcltk; then
-	      die "The tcltk useflag must be enabled to run tests"
-	   fi
+		if ! has userpriv ${FEATURES}; then
+			ewarn "The userpriv feature must be enabled to run tests."
+			ewarn "The testsuite will not be run.
+		fi
+		if ! use tcltk; then
+			ewarn "The tcltk useflag must be enabled to run tests."
+			ewarn "The testsuite will not be run.
+		fi
 	fi
 
 	unpack ${A}
@@ -76,9 +78,9 @@ src_compile() {
 src_test() {
 	cd ${S}
 	if use debug; then
-	   emake fulltest || die "some test failed"
+		emake fulltest || die "some test failed"
 	else
-	   emake test || die "some test failed"
+		emake test || die "some test failed"
 	fi
 }
 
