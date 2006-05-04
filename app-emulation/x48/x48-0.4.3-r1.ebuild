@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3-r1.ebuild,v 1.2 2006/01/26 22:28:02 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3-r1.ebuild,v 1.3 2006/05/04 13:30:04 taviso Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://x48.berlios.de/"
 SRC_URI="http://download.berlios.de/x48/${P}.tar.gz
 	http://www.hpcalc.org/hp48/pc/emulators/sxrom-j.zip
 	http://www.hpcalc.org/hp48/pc/emulators/gxrom-r.zip"
-LICENSE="GPL-2 free-noncomm"
+LICENSE="|| ( ( GPL-2 free-noncomm ) GPL-2 )"
 
 SLOT="0"
 KEYWORDS="~x86"
@@ -17,9 +17,11 @@ IUSE=""
 
 RDEPEND="|| ( ( x11-proto/xextproto app-text/rman ) virtual/x11 )"
 DEPEND="${RDEPEND}
-	|| ( ( x11-libs/libXext x11-libs/libX11 x11-misc/imake app-text/rman )
-	     virtual/x11
-		)
+	|| ( ( 	x11-libs/libXext
+			x11-libs/libX11
+			x11-misc/imake
+			app-text/rman )
+	     virtual/x11 )
 	sys-libs/readline
 	sys-libs/ncurses
 	app-arch/unzip
