@@ -1,7 +1,11 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.107 2006/05/04 00:20:38 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.108 2006/05/04 00:30:05 arj Exp $
 
+  04 May 2006; Anders Rune Jensen <arj@gentoo.org>
+  +sqlite-3.3.5-r1.ebuild, +sqlite-2.8.16-r4.ebuild:
+  Last change required a bump. So here it is.
+	
   04 May 2006; Anders Rune Jensen <arj@gentoo.org> sqlite-3.3.5.ebuild, 
   sqlite-2.8.16-r3.ebuild:
   Use alternatives to install lemon binary. Thanks tove in #118429 for the
