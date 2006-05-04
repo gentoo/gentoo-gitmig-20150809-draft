@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/dansguardian-dgav
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian-dgav/ChangeLog,v 1.8 2006/04/01 20:51:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian-dgav/ChangeLog,v 1.9 2006/05/04 04:36:50 squinky86 Exp $
+
+  04 May 2006; Jon Hood <squinky86@gentoo.org>
+  dansguardian-dgav-6.4.4.ebuild:
+  Add ~amd64, #132176
 
 *dansguardian-dgav-6.4.4 (01 Apr 2006)
 

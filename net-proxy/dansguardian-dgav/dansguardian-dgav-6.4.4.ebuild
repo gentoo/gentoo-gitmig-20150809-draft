@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian-dgav/dansguardian-dgav-6.4.4.ebuild,v 1.1 2006/04/01 20:51:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian-dgav/dansguardian-dgav-6.4.4.ebuild,v 1.2 2006/05/04 04:36:50 squinky86 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://mirror.dansguardian.org/downloads/2/Stable/${DG_PN}-${DG_PV}.sou
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="!net-proxy/dansguardian
