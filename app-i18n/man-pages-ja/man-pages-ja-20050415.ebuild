@@ -1,27 +1,26 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20050415.ebuild,v 1.2 2005/09/24 18:08:50 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20050415.ebuild,v 1.3 2006/05/04 12:07:59 hattya Exp $
 
-MY_P="man-pages-ja-${PV}"
+IUSE=""
+
 GENTOO_MAN_P="portage-${P/man-/man}"
 
 DESCRIPTION="A collection of manual pages translated into Japanese"
 HOMEPAGE="http://www.linux.or.jp/JM/ http://www.gentoo.gr.jp/jpmain/translation.xml"
-SRC_URI="http://www.linux.or.jp/JM/${MY_P}.tar.gz
+SRC_URI="http://www.linux.or.jp/JM/${P}.tar.gz
 	http://dev.gentoo.org/~hattya/distfiles/${GENTOO_MAN_P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE=""
+SLOT="0"
 
 DEPEND="!>=sys-apps/groff-1.19
 	=sys-apps/groff-1.18*
 	sys-apps/man"
 
-S=${WORKDIR}/${MY_P}
-
 pkg_setup() {
+
 	if ! groff -v -Tnippon >/dev/null 2>&1 ; then
 		ewarn
 		ewarn "You need to compile groff with multilingual support."
@@ -29,37 +28,39 @@ pkg_setup() {
 		ewarn
 		die "groff m17n support disabled."
 	fi
+
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	# Get rid of file collisions with man and shadow
-	rm -r manual/{man{,-db},shadow}
-	rm manual/*/man{1/{chfn,chsh,groups,newgrp,passwd,su}.1,8/{vigr,vipw}.8}
-}
+src_compile() {
 
-src_compile() { :; }
+	return
+
+}
 
 src_install() {
+
 	local x y z
 
 	for x in $(grep '^[^#].*' script/pkgs.list | cut -f1 | sort); do
 		for y in $(ls -d manual/$x/man* 2>/dev/null); do
 			jmandir=$(echo $y | cut -d/ -f3)
 
+			einfo "$(printf "install %-20s  /usr/share/man/ja/$jmandir" $x:)"
+
 			insinto /usr/share/man/ja/$jmandir
-			doins $y/* || die "doins $y"
+			doins $y/*
 		done
 	done
 
-	cd "${WORKDIR}/${GENTOO_MAN_P}"
+	cd ${WORKDIR}/${GENTOO_MAN_P}
 
 	for x in *; do
 		if [ -d "$x" ]; then
 			for z in $(for y in $x/*.[1-9]; do echo ${y##*.}; done | sort | uniq); do
+				einfo "$(printf "install %-20s  /usr/share/man/ja/man$z" $x:)"
+
 				insinto /usr/share/man/ja/man$z
-				doins $x/*.$z || die "doins $x"
+				doins $x/*.$z
 			done
 		fi
 	done
@@ -72,6 +73,7 @@ src_install() {
 }
 
 pkg_postinst() {
+
 	einfo
 	einfo "You need to set appropriate LANG and PAGER variables to use"
 	einfo "Japanese manpages."
@@ -85,4 +87,5 @@ pkg_postinst() {
 	einfo "\tPAGER=\"lv -c\""
 	einfo "\texport LANG PAGER"
 	einfo
+
 }
