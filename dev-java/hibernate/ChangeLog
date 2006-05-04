@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/hibernate
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.21 2005/10/15 11:38:44 axxo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.22 2006/05/04 17:28:49 nichoj Exp $
+
+  04 May 2006; Joshua Nichols <jnichols@gentoo.org>
+  hibernate-3.0_rc1.ebuild:
+  Changed dependency on ant-core to ant, because antlr is needed. bug #132268
 
   15 Oct 2005; Thomas Matthijs <axxo@gentoo.org> hibernate-2.1.8.ebuild,
   hibernate-3.0_rc1.ebuild:

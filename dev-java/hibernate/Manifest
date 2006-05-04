@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c095131cadc15351faea6d1e4b402a39 ChangeLog 2981
+MD5 8eb4d351ad18247b5c4a9ed51d666b76 ChangeLog 3142
+RMD160 448b7635656539392fe7b83c24d9c51f3a047cf0 ChangeLog 3142
+SHA256 4451b76a3bed274808cb0dbe570dfb3666aeaec51421eb652bdbda39f2948f35 ChangeLog 3142
 MD5 b442a0c8138baf4b3737d0a382cfe360 files/digest-hibernate-2.1.8 69
+RMD160 bfe3a8065a721f4e72eb90709873430c3979b2ec files/digest-hibernate-2.1.8 69
+SHA256 30adcc617fd9d73f472683d50b42decb194a5c451733f1db994f30cb945e70e1 files/digest-hibernate-2.1.8 69
 MD5 e5aa0a8633b0ef9e280d35213fd5254f files/digest-hibernate-3.0_rc1 70
+RMD160 5617879b00ec5f66dfce111b6ecbdd2026c83d6b files/digest-hibernate-3.0_rc1 70
+SHA256 befe3aab460b7819524f51d055687ebe0bdde47c7bee55a3b8d9a97919ce28b5 files/digest-hibernate-3.0_rc1 70
 MD5 3b4b85e4f98e74c162e6782e0286d78d hibernate-2.1.8.ebuild 3631
-MD5 f51a9001024cf1ea8019b5a4f2628fb5 hibernate-3.0_rc1.ebuild 3669
+RMD160 99ec77485327f0accd09a87cadb02095582c1870 hibernate-2.1.8.ebuild 3631
+SHA256 7131d8105623d5d7c346c804ac07bea8dae53185ceaf6a0d861010d4342440bb hibernate-2.1.8.ebuild 3631
+MD5 894d0d8af99b6e9fa02d31a04b43e9f0 hibernate-3.0_rc1.ebuild 3633
+RMD160 5150951576c359dba4db40ac616f4c1afbcae4cc hibernate-3.0_rc1.ebuild 3633
+SHA256 9d9c8a104ad736cf6f0b4e9cbe998c92da7687fbe017589ba7fd9001cd4216c7 hibernate-3.0_rc1.ebuild 3633
 MD5 1ab6a3421af34bc615fb359e44611a98 metadata.xml 207
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDntDtQiJ/wx066S4RAp0hAKCaNWCmnJPlHmigMD+YVVrhrjDuYQCfQMUm
-EzSkDjPq185ZKtRdBEPc9ro=
-=Odlp
------END PGP SIGNATURE-----
+RMD160 16ece93a916be9e600877f86b478848f3230d59b metadata.xml 207
+SHA256 bf33427c469540404ae1c857f8a6aaa345db253aa16670373ab8c21f53a641b3 metadata.xml 207

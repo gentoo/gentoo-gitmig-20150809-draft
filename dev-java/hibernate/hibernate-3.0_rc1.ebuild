@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0_rc1.ebuild,v 1.9 2005/10/15 11:38:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0_rc1.ebuild,v 1.10 2006/05/04 17:28:49 nichoj Exp $
 
 inherit java-pkg
 
@@ -45,10 +45,8 @@ RDEPEND="
 		"
 DEPEND=">=virtual/jdk-1.4
 		${RDEPEND}
-		>=dev-java/ant-core-1.5
+		>=dev-java/ant-1.5
 		junit? (
-			dev-java/ant
-			dev-java/junit
 			dev-db/hsqldb
 		)"
 IUSE="c3p0 dbcp doc jboss jcs jikes junit oscache swarmcache"
