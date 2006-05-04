@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.194 2006/04/27 15:47:54 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.195 2006/05/04 14:35:10 kloeri Exp $
+
+*python-2.4.3-r1 (04 May 2006)
+*python-2.4.2-r2 (04 May 2006)
+
+  04 May 2006; Bryan Østergaard <kloeri@gentoo.org>
+  +files/python-2.4.2-gentoo_obsd-r1.patch,
+  +files/python-2.4.3-gentoo_obsd-r1.patch, +python-2.4.2-r2.ebuild,
+  +python-2.4.3-r1.ebuild:
+  Fix obsd patch (thanks reb) fixing bugs 117261 and 130140.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-python-2.1.3-r1, files/digest-python-2.2.3-r6, Manifest:
