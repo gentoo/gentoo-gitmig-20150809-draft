@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gnome-nettool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.25 2006/05/02 02:09:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.26 2006/05/04 14:37:28 corsair Exp $
+
+  04 May 2006; Markus Rothe <corsair@gentoo.org>
+  gnome-nettool-2.14.1.ebuild:
+  Added ~ppc64
 
 *gnome-nettool-2.14.1 (02 May 2006)
 
