@@ -6,7 +6,8 @@
  exec_prefix = @exec_prefix@
 -LIB_DIR = @libdir@
 +LIB_DIR = $(DESTDIR)@libdir@
- INC_DIR = @includedir@/OffiX
+-INC_DIR = @includedir@/OffiX
++INC_DIR = $(DESTDIR)@includedir@/OffiX
  
  COMPILE = $(CC) $(INCLUDES) $(CFLAGS) -c
 @@ -42,19 +42,22 @@
