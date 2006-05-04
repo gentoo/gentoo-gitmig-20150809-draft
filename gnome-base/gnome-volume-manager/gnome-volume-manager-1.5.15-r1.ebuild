@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.5.15-r1.ebuild,v 1.1 2006/05/04 06:09:50 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.5.15-r1.ebuild,v 1.2 2006/05/04 06:13:04 compnerd Exp $
 
-inherit gnome2
+inherit gnome2 eutils autotools
 
 DESCRIPTION="Daemon that enforces volume-related policies"
 HOMEPAGE="http://www.gnome.org/"
@@ -46,6 +46,8 @@ src_unpack() {
 	# Hard disable the libnotify support as it was not tested sufficiently.
 	# Drop this patch with the 2.16 cycle
 	epatch ${FILESDIR}/${PN}-1.5.15-no-libnotify.patch
+
+	eautoreconf
 
 	# Sine we override the src_unpack, we must call this
 	gnome2_omf_fix

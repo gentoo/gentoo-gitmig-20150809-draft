@@ -29,10 +29,10 @@ EBUILD gnome-volume-manager-1.5.1.ebuild 1527 RMD160 cf10e689717b4bea02719929201
 MD5 a9385b6ba060065fb7d55f25902e3bbf gnome-volume-manager-1.5.1.ebuild 1527
 RMD160 cf10e689717b4bea027199292015ceeafd58dc7a gnome-volume-manager-1.5.1.ebuild 1527
 SHA256 9c0e63ebf2b54dab8aca01023a38345fbce2a0586cdb837c3254df3ad08fe79c gnome-volume-manager-1.5.1.ebuild 1527
-EBUILD gnome-volume-manager-1.5.15-r1.ebuild 1726 RMD160 c11ead9a9b49e281ad226e24e488c1630ff92844 SHA1 9044ce0db377195f3e95ecb7f24184e564fe1500 SHA256 3a87665099491fae290d0554cbeeb79d2d08176db03012e83589f23ac3d2502b size 1726
-MD5 79d3fa9ed20a33d3c56394a7e1943cf4 gnome-volume-manager-1.5.15-r1.ebuild 1726
-RMD160 c11ead9a9b49e281ad226e24e488c1630ff92844 gnome-volume-manager-1.5.15-r1.ebuild 1726
-SHA256 3a87665099491fae290d0554cbeeb79d2d08176db03012e83589f23ac3d2502b gnome-volume-manager-1.5.15-r1.ebuild 1726
+EBUILD gnome-volume-manager-1.5.15-r1.ebuild 1757 RMD160 04b0289c6672251ade0202c959678754d6e2197c SHA1 c7acf2ed07aebb58ed0e0d6ccba9449b6759b5dc SHA256 324f5559f0438a007d51b16ef1f46b8276c9b9788edc11ff0ef850b52e45d519 size 1757
+MD5 72e583ae237836398644f5c2eaf48979 gnome-volume-manager-1.5.15-r1.ebuild 1757
+RMD160 04b0289c6672251ade0202c959678754d6e2197c gnome-volume-manager-1.5.15-r1.ebuild 1757
+SHA256 324f5559f0438a007d51b16ef1f46b8276c9b9788edc11ff0ef850b52e45d519 gnome-volume-manager-1.5.15-r1.ebuild 1757
 EBUILD gnome-volume-manager-1.5.15.ebuild 1443 RMD160 b6a13f920b08598c4539b4e437c01559d7f01451 SHA1 84b9ba42a5c57080b157528dcf13e5faddacd10d SHA256 05a7f4342e53c15554e573c60dd25aec68b477e55b66911caef941eb0bb9a5de size 1443
 MD5 ba78c671563d83bdc9cbc8bcf7d4cf6e gnome-volume-manager-1.5.15.ebuild 1443
 RMD160 b6a13f920b08598c4539b4e437c01559d7f01451 gnome-volume-manager-1.5.15.ebuild 1443
