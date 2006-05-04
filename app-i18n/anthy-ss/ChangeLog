@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/anthy-ss
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/ChangeLog,v 1.80 2006/04/28 13:23:51 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/ChangeLog,v 1.81 2006/05/04 14:14:22 hattya Exp $
+
+  04 May 2006; Akinori Hattori <hattya@gentoo.org> anthy-ss-7625.ebuild:
+  added ~ia64 keyword.
 
 *anthy-ss-7625 (28 Apr 2006)
 
