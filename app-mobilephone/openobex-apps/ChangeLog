@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/openobex-apps
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/openobex-apps/ChangeLog,v 1.5 2006/02/25 15:23:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/openobex-apps/ChangeLog,v 1.6 2006/05/04 17:39:58 mrness Exp $
+
+  04 May 2006; Alin Nastac <mrness@gentoo.org> openobex-apps-1.0.0.ebuild:
+  Correct dev-libs/openobex dependency (#132234).
 
   25 Feb 2006; Alin Nastac <mrness@gentoo.org> openobex-apps-1.0.0.ebuild:
   Stable on x86.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/openobex-apps/openobex-apps-1.0.0.ebuild,v 1.5 2006/02/25 15:23:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/openobex-apps/openobex-apps-1.0.0.ebuild,v 1.6 2006/05/04 17:39:58 mrness Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="bluetooth"
 
-DEPEND="dev-libs/openobex
+DEPEND="<=dev-libs/openobex-1.0.1
 	bluetooth? ( net-wireless/bluez-libs )"
 RDEPEND="${DEPEND}
 	bluetooth? ( net-wireless/bluez-utils )"
