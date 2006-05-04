@@ -1,10 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.9.13_pre3.ebuild,v 1.4 2006/03/31 17:45:16 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.0.1_pre3.ebuild,v 1.1 2006/05/04 09:02:59 hd_brummy Exp $
 
 inherit vdr-plugin
 
-MY_P=${P/_pre3}-MKIV-pre3
+MY_PV=${PV/0.0.1_pre3}0.9.13-MKIV-pre3
+MY_P=${PN}-${MY_PV}
 
 S=${WORKDIR}/mp3ng-0.9.13-MKIV-pre3
 
