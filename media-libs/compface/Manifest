@@ -4,7 +4,6 @@ MD5 44a484191ef5bb9693b152dfd0c6f964 compface-1.5.1.ebuild 867
 MD5 42473162fcf3f56d464e43426950714a compface-1.5.2.ebuild 734
 MD5 92cd926808b9b818d1a0228938edd8e4 files/compface-1.4-destdir.diff 1759
 MD5 99136b248ff383abec90471de2c701ac files/compface-1.4-errno.diff 908
-MD5 bc74c4ff7219b259c15153a1ce23ef76 files/compface-1.5-destdir.diff 1680
 MD5 bfbda4c57251fde19873b043d920fef7 files/compface-1.5.1-destdir.diff 1648
 MD5 54146587d73a019766650482fd262795 files/compface-1.5.2-destdir.diff 549
 MD5 9b8d9c4812b5caa0557fe8bc88a688d8 files/digest-compface-1.4 63
