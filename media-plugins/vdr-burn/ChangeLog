@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.4 2006/04/01 23:00:50 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.5 2006/05/04 08:22:33 hd_brummy Exp $
+
+  04 May 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/vdr-burn-0.0.9_vdr-1.3.47-compile.diff, vdr-burn-0.0.9-r2.ebuild:
+  add patch to fix compile Problems on >=media-video/vdr-1.3.47
 
   01 Apr 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-burn-0.0.9-r2.ebuild:
