@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.538 2006/05/02 21:02:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.539 2006/05/04 16:45:09 spyderous Exp $
+
+  04 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2-r7.ebuild, xorg-x11-6.9.0-r1.ebuild:
+  (#132260) Block on virtual/xft slipped back in with the security bump. Get
+  rid of it.
 
   02 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
   files/digest-xorg-x11-6.8.2-r7, files/digest-xorg-x11-6.9.0-r1, Manifest:

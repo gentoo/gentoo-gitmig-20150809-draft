@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.9.0-r1.ebuild,v 1.1 2006/05/02 17:29:19 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.9.0-r1.ebuild,v 1.2 2006/05/04 16:45:14 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -82,9 +82,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	userland_GNU? ( sys-apps/util-linux )
 	dev-lang/perl
 	media-libs/libpng
-	!<=app-emulation/emul-linux-x86-xlibs-1.2-r3
-	!virtual/xft"
-# x11-libs/xft -- blocked because of interference with xorg's
+	!<=app-emulation/emul-linux-x86-xlibs-1.2-r3"
 # FBSDTODO: need to check that X is not pulled in before freebsd-ubin for 'col' presence
 
 RDEPEND="
@@ -97,8 +95,7 @@ RDEPEND="
 		!nocxx? ( >=x11-apps/ttmkfdir-3.0.9-r2 )
 		media-libs/libpng
 		>=sys-libs/ncurses-5.1
-		!<=app-emulation/emul-linux-x86-xlibs-1.2-r3
-		!virtual/xft"
+		!<=app-emulation/emul-linux-x86-xlibs-1.2-r3"
 
 PDEPEND="x86? (
 			input_devices_synaptics? ( x11-drivers/synaptics )
