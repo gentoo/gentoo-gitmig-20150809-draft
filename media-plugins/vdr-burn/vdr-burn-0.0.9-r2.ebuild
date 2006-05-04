@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.5 2006/05/04 08:22:33 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.6 2006/05/04 08:27:57 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -49,7 +49,7 @@ src_install() {
 	newins ${S}/burn/menu-bg.png menu-bg-default.png
 	dosym menu-bg-default.png /usr/share/vdr/burn/menu-bg.png
 	dosym menu-button-default.png /usr/share/vdr/burn/menu-button.png
-	chown -R vdr:vdr ${D}/usr/share/vdr/vdr/burn
+	chown -R vdr:vdr ${D}/usr/share/vdr/burn
 
 	insinto /etc/vdr/reccmds
 	doins ${FILESDIR}/reccmds.burn.conf
