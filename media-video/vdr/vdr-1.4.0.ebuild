@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.0.ebuild,v 1.2 2006/05/04 05:44:31 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.0.ebuild,v 1.3 2006/05/04 14:43:22 zzam Exp $
 
 inherit eutils flag-o-matic
 
 IUSE="debug vanilla aio bigpatch jumpplay dvbplayer lnbsharing sourcecaps"
 IUSE="${IUSE} child-protection yaepg setup-plugin submenu subtitles rotor rds-timeout"
 
-PATCHSET_V=1
+PATCHSET_V=2
 PATCHSET_NAME=gentoo-${PN}-patchset-${PV}-${PATCHSET_V}
 
 DESCRIPTION="Video Disk Recorder - turns a pc into a powerful set top box for DVB"
