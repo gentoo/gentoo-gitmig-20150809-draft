@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r3.ebuild,v 1.17 2006/05/04 14:43:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r3.ebuild,v 1.18 2006/05/05 15:01:23 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -25,7 +25,7 @@
 #  CHOST != CTARGET - install into /usr/CTARGET/
 
 #KEYWORDS="~amd64 ~arm -hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-KEYWORDS="-* ~alpha ~amd64 arm ~ia64 mips ppc ~ppc64 ~s390 sparc x86"
+KEYWORDS="-* ~alpha amd64 arm ~ia64 mips ppc ~ppc64 ~s390 sparc x86"
 
 BRANCH_UPDATE=""
 
@@ -223,6 +223,9 @@ toolchain-glibc_src_unpack() {
 		cd "${S}"
 		unpack glibc-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
 	fi
+
+	# Broken for hardened users #124682
+	use hardened && GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 6905_amd64_2.3.3-amd64-string.patch"
 
 	if [[ -n ${PATCH_VER} ]] ; then
 		cd "${S}"
