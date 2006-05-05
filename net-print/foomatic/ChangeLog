@@ -1,6 +1,9 @@
 # ChangeLog for net-print/foomatic
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/ChangeLog,v 1.38 2005/06/06 22:31:59 lanius Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/ChangeLog,v 1.39 2006/05/05 10:05:39 genstef Exp $
+
+  05 May 2006; Stefan Schweizer <genstef@gentoo.org> foomatic-3.0.2.ebuild:
+  Fix DEPEND thanks to Miguel <mlastral@ugr.es> in bug 132322
 
   06 Jun 2005; Heinrich Wendel <lanius@gentoo.org> -foomatic-3.0.0.ebuild,
   -foomatic-3.0.0.20031018.ebuild, -foomatic-3.0.1.ebuild:
