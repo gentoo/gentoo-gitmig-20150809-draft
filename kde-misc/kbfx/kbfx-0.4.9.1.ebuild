@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/kbfx-0.4.9.1.ebuild,v 1.1 2006/05/05 16:37:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/kbfx-0.4.9.1.ebuild,v 1.2 2006/05/05 22:41:44 genstef Exp $
 
 inherit kde
 
@@ -19,4 +19,9 @@ src_unpack() {
 	cd ${S}
 	sed -i "s:\$(LIB_KIO):-L${KDEDIR}/lib -lkio:" kbfxconfigapp/Makefile.am
 	make -f Makefile.cvs
+}
+
+src_install() {
+	kde_src_install
+	rm -rf ${D}/crystalsvg
 }
