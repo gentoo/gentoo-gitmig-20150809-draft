@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.10-r2.ebuild,v 1.1 2006/05/04 07:27:08 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.10-r2.ebuild,v 1.2 2006/05/05 11:04:18 flameeyes Exp $
 
 inherit eutils autotools depend.php
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lighttpd.net/download/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="bzip2 doc fam fastcgi gdbm ipv6 ldap lua minimal memcache mysql pcre php rrdtool ssl test webdav xattr"
 
 RDEPEND=">=sys-libs/zlib-1.1
@@ -89,6 +89,9 @@ pkg_setup() {
 	fi
 
 	use php && require_php_with_use cgi
+
+	enewgroup lighttpd
+	enewuser lighttpd -1 -1 /var/www/localhost/htdocs lighttpd
 }
 
 src_unpack() {
@@ -166,10 +169,8 @@ src_install() {
 	newins ${FILESDIR}/lighttpd.logrotate lighttpd || die
 
 	keepdir /var/l{ib,og}/lighttpd /var/www/localhost/htdocs
-        enewgroup lighttpd
-        enewuser lighttpd -1 -1 /var/www/localhost/htdocs lighttpd
-        fowners lighttpd:lighttpd /var/l{ib,og}/lighttpd
-        fperms 0750 /var/l{ib,og}/lighttpd
+	fowners lighttpd:lighttpd /var/l{ib,og}/lighttpd
+	fperms 0750 /var/l{ib,og}/lighttpd
 
 	use minimal && remove_non_essential
 }
