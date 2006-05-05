@@ -1,16 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-1.4.ebuild,v 1.2 2006/05/05 17:02:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-1.4.ebuild,v 1.3 2006/05/05 19:39:04 ramereth Exp $
 
 DESCRIPTION="The Nagios metapackage - merge this to pull install all of the nagios packages"
 HOMEPAGE="http://www.nagios.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
-RDEPEND=">=net-analyzer/nagios-core-1.3
+RDEPEND=">=net-analyzer/nagios-core-1.4
 	>=net-analyzer/nagios-plugins-1.3.1
 	>=net-analyzer/nagios-nrpe-1.8
 	>=net-analyzer/nagios-nsca-2.3
