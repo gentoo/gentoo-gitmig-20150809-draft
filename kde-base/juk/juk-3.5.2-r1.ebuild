@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.2-r1.ebuild,v 1.1 2006/05/01 13:53:51 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.2-r1.ebuild,v 1.2 2006/05/05 14:34:14 carlo Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -39,7 +39,6 @@ pkg_setup() {
 src_compile() {
 	local myconf="$(use_with gstreamer) $(use_with musicbrainz)"
 
-	export include_akode_mpeg_FALSE='#'
 	if ! use arts && ! use gstreamer ; then
 		myconf="${myconf} --with-akokde"
 	else
