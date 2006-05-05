@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.6 2006/05/04 08:27:57 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.7 2006/05/05 09:06:01 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -33,8 +33,8 @@ PATCHES="${FILESDIR}/${P}-gentoo.diff"
 src_unpack(){
 	vdr-plugin_src_unpack
 
-	if has_version ">=media-video/vdr-1.3.47"; then
-	  epatch ${FILESDIR}/${P}_vdr-1.3.47-compile.diff
+	if grep -q "virtual cString Active" ${ROOT}/usr/include/vdr/plugin.h; then
+		epatch ${FILESDIR}/${P}_vdr-1.3.47-compile.diff
 	fi
 }
 
