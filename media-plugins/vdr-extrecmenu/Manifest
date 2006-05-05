@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e4be50d7113eb994369d344505ac0579 ChangeLog 661
 MD5 4162bf21223c543ff4ee1d1bae960849 files/digest-vdr-extrecmenu-0.10 67
 MD5 5e024d9cc9857346280213301b5902d8 files/digest-vdr-extrecmenu-0.8a 67
@@ -6,3 +9,11 @@ MD5 8f356833f814b89248839dc9479ebb1a metadata.xml 444
 MD5 5fddbdbfd4eefa8ae3e39ba87ce2e939 vdr-extrecmenu-0.10.ebuild 559
 MD5 6f24f4bfb550ff446c3f050f57342632 vdr-extrecmenu-0.8a.ebuild 559
 MD5 6298767ab8ad4b56f25cfce540b1898a vdr-extrecmenu-0.9.ebuild 558
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFEW9Rwdn07HTTCgIoRAirKAJ9tUQJahuYsXG/R7/AYSHkbpKOb8gCgq7xX
+kXnNQ+TsKXpQ2P92SBDgIUg=
+=fss5
+-----END PGP SIGNATURE-----
