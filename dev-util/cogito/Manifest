@@ -1,8 +1,21 @@
-MD5 d2e8f270d5e335b7614dc21ee6cea1cc ChangeLog 5201
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 487295e5198ebfac1aaf9b9c78437b95 ChangeLog 5369
 MD5 d13cf5e2e705b821a491c6b87b8350f9 cogito-0.16.2.ebuild 1376
 MD5 1d39d2eefa4b7ca29704a3440306754a cogito-0.16.4.ebuild 1380
+MD5 3f8ab219cc043660b4c5935bbca04ecb cogito-0.17.2.ebuild 1412
 MD5 8ef6037403f61a16fb9f4d630fc55438 cogito-0.17.ebuild 1382
+MD5 4031a3ab922981d0a804a4f1f7c19d41 files/cogito-test-fix-0.17.2.patch 805
 MD5 c82decb331106478b2376c484e35456d files/digest-cogito-0.16.2 65
 MD5 1f23887eed821c21d22e41b3581299ac files/digest-cogito-0.16.4 65
 MD5 94cd21dd91172d27497c7e7dfabfac50 files/digest-cogito-0.17 63
+MD5 636476a44311285df64df1522b92aa95 files/digest-cogito-0.17.2 134
 MD5 263b796501be2aea2d5fb2ebc7609cb5 metadata.xml 313
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEWvdqViELBEf1JB0RAudFAJ0YbnvcBUm6AolWHpfr5010dE4J8QCeOcRN
+u8yzd0+461d+SVLOLDo/WBw=
+=8zYo
+-----END PGP SIGNATURE-----
