@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.1.1.ebuild,v 1.2 2006/04/24 21:05:10 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.1.1.ebuild,v 1.3 2006/05/05 10:57:15 genone Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification"
 
@@ -72,7 +72,6 @@ src_compile() {
 	myconf="${myconf} `use_enable spamassassin spamassassin-plugin`"
 
 	econf \
-		--enable-startup-notification \
 		--enable-trayicon-plugin \
 		${myconf} || die "./configure failed"
 
