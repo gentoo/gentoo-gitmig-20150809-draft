@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.5.ebuild,v 1.2 2006/05/05 17:49:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.5.ebuild,v 1.3 2006/05/05 17:52:37 caleb Exp $
 
 DESCRIPTION="Ruby bindings for QT4"
 HOMEPAGE="http://rubyforge.org/projects/korundum"
@@ -12,7 +12,10 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=">=virtual/ruby-1.8
+	!kde-base/qtruby
 	=x11-libs/qt-4*"
+
+# This is not currently able to install alongside the Qt3 version of QtRuby
 
 SLOT="0"
 
