@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.23 2006/01/03 17:34:28 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.24 2006/05/05 05:18:01 st_lim Exp $
+
+*drupal-4.7.0 (05 May 2006)
+*drupal-4.6.6 (05 May 2006)
+*drupal-4.5.8 (05 May 2006)
+
+  05 May 2006; Lim Swee Tat <st_lim@gentoo.org> +drupal-4.5.8.ebuild,
+  +drupal-4.6.6.ebuild, +drupal-4.7.0.ebuild:
+  Updated and added 4.6.6, 4.7.0 and 4.5.8
 
   03 Jan 2006; Lim Swee Tat <st_lim@gentoo.org> drupal-4.6.5.ebuild:
   OOps with Bug #117439
