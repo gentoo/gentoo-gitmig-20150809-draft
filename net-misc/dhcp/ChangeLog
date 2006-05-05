@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.91 2006/04/21 15:17:07 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.92 2006/05/05 23:45:36 uberlord Exp $
+
+*dhcp-3.0.4 (05 May 2006)
+
+  05 May 2006; Roy Marples <uberlord@gentoo.org>
+  +files/dhcp-3.0.4-dhclient-stdin-conf.patch, +dhcp-3.0.4.ebuild:
+  New upstream release.
 
 *dhcp-3.0.4_rc1 (21 Apr 2006)
 *dhcp-3.0.3-r7 (21 Apr 2006)
