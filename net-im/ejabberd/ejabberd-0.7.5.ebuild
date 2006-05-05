@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-0.7.5.ebuild,v 1.4 2005/08/23 21:54:59 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-0.7.5.ebuild,v 1.5 2006/05/05 10:42:53 flameeyes Exp $
 
 inherit eutils
 
@@ -20,6 +20,11 @@ PROVIDE="virtual/jabber-server"
 
 S=${WORKDIR}/${P}/src
 
+pkg_setup() {
+	enewgroup jabber
+	enewuser ejabberd -1 -1 /var/run/ejabberd jabber
+}
+
 src_compile() {
 	local myconf
 
@@ -36,9 +41,6 @@ src_compile() {
 }
 
 src_install() {
-	enewgroup jabber
-	enewuser ejabberd -1 -1 /var/run/ejabberd jabber
-
 	make DESTDIR=${D} install || die "install failed"
 
 	# This configuration file contains configurations for all modules,

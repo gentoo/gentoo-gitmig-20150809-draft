@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.10.ebuild,v 1.1 2006/02/01 15:50:31 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.10.ebuild,v 1.2 2006/05/05 10:41:19 flameeyes Exp $
 
 inherit eutils
 
@@ -26,6 +26,10 @@ RDEPEND="${DEPEND}
 	dev-lang/perl" # for the /usr/bin/jabberd wrapper script
 
 pkg_setup() {
+	## add user and group
+	enewgroup jabber
+	enewuser jabber -1 -1 /var/jabberd jabber
+
 	if ! use postgres && ! use mysql && ! use berkdb;  then
 		eerror
 		eerror "For this version of jabberd you must have"
@@ -59,10 +63,6 @@ src_install() {
 #	DON'T USE EINSTALL HERE! it breaks the Makefile's sysconfdir!
 #	einstall || die "make install failed"
 	make DESTDIR=${D} install || die "make install failed"
-
-	## add user and group
-	enewgroup jabber
-	enewuser jabber -1 -1 /var/jabberd jabber
 
 	## set binary permissions
 	fowners :jabber /usr/bin/{jabberd,router,resolver,sm,c2s,s2s}

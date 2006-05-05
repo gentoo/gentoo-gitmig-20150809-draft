@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r4.ebuild,v 1.9 2005/12/31 13:42:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r4.ebuild,v 1.10 2006/05/05 10:41:19 flameeyes Exp $
 
 inherit eutils
 
@@ -28,6 +28,8 @@ PDEPEND="msn? ( net-im/msn-transport )
 		 icq? ( net-im/jit )"
 
 pkg_setup() {
+	enewgroup jabber
+	enewuser jabber -1 -1 /var/spool/jabber jabber
 
 	if use ipv6 ; then
 		ewarn "You are about to build with ipv6 support, if your system is not using ipv6"
@@ -101,18 +103,6 @@ src_install() {
 	doins multiple.xml
 	exeinto /etc/jabber
 	doexe ${FILESDIR}/self-cert.sh
-
-	local test_group=`grep ^jabber: /etc/group | cut -d: -f1`
-	if [ -z $test_group ]
-	then
-		enewgroup jabber
-	fi
-
-	local test_user=`grep ^jabber: /etc/passwd | cut -d: -f1`
-	if [ -z $test_user ]
-	then
-		enewuser jabber -1 -1 /var/spool/jabber jabber
-	fi
 
 	dodoc README UPGRADE ${FILESDIR}/README.Gentoo
 
