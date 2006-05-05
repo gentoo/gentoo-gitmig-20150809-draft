@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.1.1.ebuild,v 1.3 2006/05/05 10:57:15 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.1.1.ebuild,v 1.4 2006/05/05 11:05:47 genone Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification"
 
@@ -30,7 +30,7 @@ COMMONDEPEND=">=x11-libs/gtk+-2.4
 	spell? ( virtual/aspell-dict )
 	clamav? ( app-antivirus/clamav )
 	kde? ( kde-base/kdelibs )
-	imap? ( >=net-libs/libetpan-0.41 )
+	imap? ( >=net-libs/libetpan-0.45 )
 	gnome? ( >=gnome-base/libgnomeprintui-2.2 )
 	startup-notification? ( x11-libs/startup-notification )
 	!mail-client/sylpheed-claws-pgpinline"	# included in the main package now
