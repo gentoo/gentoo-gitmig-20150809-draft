@@ -8,5 +8,9 @@
     <description>A user ebuild that I felt obliged to include. Please take over if you want 
 it</description>
 </maintainer>
+<maintainer>
+  <email>marienz@gentoo.org</email>
+  <name>Marien Zwart</name>
+ </maintainer>
 <longdescription></longdescription>
 </pkgmetadata>
