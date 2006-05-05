@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.305 2006/05/05 12:33:11 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.306 2006/05/05 13:07:49 caleb Exp $
+
+*qt-3.3.6-r1 (05 May 2006)
+
+  05 May 2006; Caleb Tennis <caleb@gentoo.org>
+  +files/0044-qscrollview-windowactivate-fix.diff,
+  +files/0047-fix-kmenu-widget.diff,
+  +files/0048-qclipboard_hack_80072.patch, +qt-3.3.6-r1.ebuild:
+  Fix some patches that were dropped when moving to 3.3.6. This should make a
+  lot of people happy
 
   05 May 2006; Caleb Tennis <caleb@gentoo.org> qt-3.3.6.ebuild:
   Add nis support, from bug #131303
