@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.0-r3.ebuild,v 1.2 2006/05/01 17:42:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.0-r3.ebuild,v 1.3 2006/05/05 11:06:32 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozcoreconf makeedit multilib autotools
@@ -90,7 +90,7 @@ src_compile() {
 
 	# hardened GCC uses -fstack-protector-all by default, and this breaks
 	# thunderbird
-	has_hardened && append-flags -fno-stack-protector-all
+	gcc-specs-ssp && append-flags -fno-stack-protector-all
 	replace-flags -fstack-protector-all -fstack-protector
 
 	####################################
