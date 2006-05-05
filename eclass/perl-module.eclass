@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.89 2006/05/02 02:14:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.90 2006/05/05 13:58:54 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -92,6 +92,8 @@ perl-module_src_prep() {
 	perlinfo
 
 	export PERL_MM_USE_DEFAULT=1
+	# Disable ExtUtils::AutoInstall from prompting
+	export PERL_EXTUTILS_AUTOINSTALL="--skipdeps"
 
 
 	SRC_PREP="yes"

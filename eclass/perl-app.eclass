@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-app.eclass,v 1.4 2006/04/03 16:50:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-app.eclass,v 1.5 2006/05/05 13:58:54 mcummings Exp $
 
 #
 # Author: Michael Cummings <mcummings@gentoo.org>
@@ -19,6 +19,8 @@ perl-app_src_prep() {
 	perlinfo
 
 	export PERL_MM_USE_DEFAULT=1
+	# Disable ExtUtils::AutoInstall from prompting
+	export PERL_EXTUTILS_AUTOINSTALL="--skipdeps"
 
 
 	SRC_PREP="yes"
