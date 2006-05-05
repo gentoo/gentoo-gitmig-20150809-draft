@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.1 2006/05/04 03:53:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.2 2006/05/05 20:05:56 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -430,8 +430,6 @@ toolchain-glibc_src_install() {
 		esac
 	fi
 
-	cd "${GBUILDDIR}"
-
 	# Files for Debian-style locale updating
 	dodir /usr/share/i18n
 	sed \
@@ -458,7 +456,9 @@ toolchain-glibc_src_install() {
 	if ! has noinfo ${FEATURES} && [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
 		einfo "Installing info pages..."
 
-		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
+		make \
+			-C "${GBUILDDIR}" \
+			PARALLELMFLAGS="${MAKEOPTS} -j1" \
 			install_root="${install_root}" \
 			info -i || die
 	fi
