@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.19-r1.ebuild,v 1.5 2006/05/05 19:51:39 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.21.ebuild,v 1.1 2006/05/05 19:51:40 chtekk Exp $
 
 # Leave this empty
 MYSQL_VERSION_ID=""

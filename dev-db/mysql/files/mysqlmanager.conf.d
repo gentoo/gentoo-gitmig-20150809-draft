@@ -1,13 +1,13 @@
-#  here is where to define which server start.
-#> Additional parameters to be passed to mysqlmanager at startup may be added here,
-#> these one will override the ones in "my.cnf".
+#  Here is where we define which server(s) to start.
+#  Additional parameters to be passed to mysqlmanager at startup may be added here,
+#  which will override the ones in "my.cnf".
 #
 #  To avoid starting a server just comment it's definition
-#> here or it will rant (no default start)
-#  Last but not least, spaces are NOT allowed inside the parameters
+#  here or it will rant (no default start).
+#  Last but not least, spaces are NOT allowed inside the parameters!
 #
-#  Below are described some suggested parameters to use
-#  The parameters not recognized will be passed through to the mysqlmanager
+#  Below are described some suggested parameters to use.
+#  The parameters not recognized will be passed through to the mysqlmanager directly.
 #
 #  Parameter      : description
 
@@ -17,12 +17,12 @@
 #                 : may contain a [manager] section
 # ----------------+-----------------------------------------------------------
 #
-# easy default
+# Basic default
 #
 #mysqlmanager_slot_0=()
 #
-# start MySQL 7.5.x reniced, chrooted and overriding some start parameters
-#mysqlmanager_slot_705=(
+# Start MySQL 5.0.X overriding the my.cnf path
+#mysqlmanager_slot_500=(
 #	"mycnf=/home/test/my.cnf"
 #)
 #

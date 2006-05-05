@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysqlmanager.rc6,v 1.1 2006/03/16 20:39:44 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysqlmanager.rc6,v 1.2 2006/05/05 19:51:40 chtekk Exp $
 
-# external binaryes used: which, sed, tac
+# external binaries used: which, sed, tac
 
 depend() {
 	use dns net localmount netmount nfsmount
@@ -16,8 +16,8 @@ function in_list() {
 	local list=${2:-","}
 
 	[[ "${list}" == "${list/,${elem},/}" ]] \
-		&& return 1 \
-		|| return 0
+	&& return 1 \
+	|| return 0
 }
 
 do_escape() {
@@ -43,11 +43,11 @@ get_slot_config() {
 
 	MY_CNF="/etc/mysql${MY_SUFFIX}/my.cnf"
 	# summa of unmanaged parameters
-	#>some parameters may be present multiple times
+	# some parameters may be present multiple times
 	unmanagedparams=""
 
 	# grab the parameters from conf.d/mysql definition
-	for my_default in ${conf_d_parameters[*]}; do
+	for my_default in ${conf_d_parameters[*]} ; do
 		case "${my_default}" in
 			mycnf=*) MY_CNF="${my_default#mycnf=}" ;;
 			basedir=*) basedir="${my_default#basedir=}" ;;
@@ -64,26 +64,26 @@ get_slot_config() {
 		esac
 	done
 
-	if [[ ! -r "${MY_CNF}" ]]; then
+	if [[ ! -r "${MY_CNF}" ]] ; then
 		ewarn "Cannot access ${MY_CNF} !"
 		MY_CNF=""
 		my_defaults=""
 	else
 		local my_print_defaults="$(which my_print_defaults${MY_SUFFIX} 2>/dev/null)"
-		if [[ ! -x "${my_print_defaults}" ]]; then
+		if [[ ! -x "${my_print_defaults}" ]] ; then
 			eerror "my_print_defaults NOT found or not executable"
 			my_defaults=""
 		else
 			my_defaults=$( ${my_print_defaults} \
-				--loose-verbose \
-				--config-file="${MY_CNF}" \
-				manager )
+			--loose-verbose \
+			--config-file="${MY_CNF}" \
+			manager )
 		fi
 	fi
 
 	# grab needed parameters from my.cnf, don't override the ones from
-	# conf.d mysql
-	for my_default in ${my_defaults}; do
+	# conf.d/mysql
+	for my_default in ${my_defaults} ; do
 		case "${my_default}" in
 			--pid-file=*)
 				[[ -z "${pidfile}" ]] && pidfile="${my_default#--pid-file=}" ;;
@@ -92,7 +92,7 @@ get_slot_config() {
 		esac
 	done
 
-	# still empty, I'm in doubt if assign a default or break, will see
+	# some parameters
 	basedir="${basedir:-"/usr"}"
 	pidfile="${pidfile:-"/var/run/mysqld/mysqlmanager${MY_SUFFIX}.pid"}"
 	socket="${socket:-"/var/run/mysqld/mysqlmanager${MY_SUFFIX}.sock"}"
@@ -151,7 +151,7 @@ start() {
 		retstatus=0
 		get_slot_config "${srv_slot}" "${srv_num}" || retstatus=1
 
-		# timeout (seconds) before declare failed the startup
+		# timeout (seconds) before declaring the startup failed
 
 		# pre_run checks
 		if [[ "$retstatus" -eq 0 ]] ; then
@@ -205,7 +205,7 @@ stop () {
 
 	# shutdown in reverse order
 	ebegin
-	for shutdown_elem in $shutdown_list; do
+	for shutdown_elem in ${shutdown_list} ; do
 		runwhat=${shutdown_elem%%=*}
 		pidfile=${shutdown_elem#*=}
 		timeout=${STOPTIMEOUT:-"10"}

@@ -1,6 +1,23 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.319 2006/04/27 14:59:48 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.320 2006/05/05 19:51:39 chtekk Exp $
+
+*mysql-5.0.21 (05 May 2006)
+*mysql-4.1.19 (05 May 2006)
+*mysql-4.0.26-r1 (05 May 2006)
+
+  05 May 2006; Luca Longinotti <chtekk@gentoo.org> +files/my.cnf-4.0,
+  -files/my.cnf-4.0.14-r1, -files/mysql-4.0.15.rc6, -files/my.cnf-4.0.24-r1,
+  -files/mysql-4.0.24-r1.rc6, -files/mysql-4.0.24-r2.rc6, files/my.cnf-4.1,
+  -files/my.cnf-4.1-r1, files/logrotate.mysql, -files/logrotate-slot.mysql,
+  +files/mysql.conf.d, -files/mysql.conf.d-r1, +files/mysql.rc6,
+  -files/mysql.rc6-r3, files/mysqlmanager.conf.d, files/mysqlmanager.rc6,
+  metadata.xml, mysql-4.0.25-r2.ebuild, -mysql-4.0.26.ebuild,
+  +mysql-4.0.26-r1.ebuild, mysql-4.1.14.ebuild, mysql-4.1.14-r1.ebuild,
+  mysql-4.1.18-r61.ebuild, +mysql-4.1.19.ebuild, mysql-5.0.19-r1.ebuild,
+  +mysql-5.0.21.ebuild, mysql-5.1.7_beta.ebuild:
+  Sync with overlay, update to 4.1.19 and 5.0.21 to fix some security issues,
+  see bug #132146.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four

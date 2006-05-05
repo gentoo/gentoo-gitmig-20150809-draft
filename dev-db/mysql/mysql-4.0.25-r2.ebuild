@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.25-r2.ebuild,v 1.27 2006/04/12 04:12:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.25-r2.ebuild,v 1.28 2006/05/05 19:51:39 chtekk Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -317,12 +317,12 @@ src_install() {
 	# config stuff
 	insinto /etc/mysql
 	doins scripts/mysqlaccess.conf
-	newins ${FILESDIR}/my.cnf-4.0.24-r1 my.cnf
+	newins "${FILESDIR}/my.cnf-4.0" my.cnf
 
 	# minimal builds don't have the server
 	if ! useq minimal; then
 		exeinto /etc/init.d
-		newexe "${FILESDIR}/mysql-4.0.24-r2.rc6" mysql
+		newexe "${FILESDIR}/mysql.rc6" mysql
 		insinto /etc/logrotate.d
 		newins "${FILESDIR}/logrotate.mysql" mysql
 

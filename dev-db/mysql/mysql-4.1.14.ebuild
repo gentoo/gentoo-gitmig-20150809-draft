@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.36 2006/04/13 12:55:40 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.37 2006/05/05 19:51:39 chtekk Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -440,7 +440,7 @@ src_install() {
 	# minimal builds don't have the server
 	if ! useq minimal; then
 		exeinto /etc/init.d
-		newexe "${FILESDIR}/mysql-4.0.24-r2.rc6" mysql
+		newexe "${FILESDIR}/mysql.rc6" mysql
 		insinto /etc/logrotate.d
 		newins "${FILESDIR}/logrotate.mysql" mysql
 
