@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.68 2006/05/03 21:42:03 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.69 2006/05/05 13:22:01 allanonjl Exp $
+
+  05 May 2006; John N. Laliberte <allanonjl@gentoo.org>
+  epiphany-2.14.1.ebuild:
+  fix macros, bug #132339
 
   03 May 2006; <dang@gentoo.org> +files/epiphany-2.14.1-as-needed.patch,
   epiphany-2.14.1.ebuild:

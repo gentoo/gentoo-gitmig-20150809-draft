@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.14.1.ebuild,v 1.3 2006/05/03 21:42:03 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.14.1.ebuild,v 1.4 2006/05/05 13:22:01 allanonjl Exp $
 
 inherit eutils gnome2 multilib autotools
 
@@ -49,7 +49,6 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS README TODO"
-USE_DESTDIR="1"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
@@ -72,7 +71,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-1.9.2-broken-firefox.patch
 	epatch ${FILESDIR}/${P}-as-needed.patch
 
-	AT_M4DIR="${S}/m4" WANT_AUTOCONF="2.59" \
+	cp aclocal.m4 old_macros.m4
+	AT_M4DIR=". ${S}/m4" WANT_AUTOCONF="2.59" \
 	eautoreconf || die "Failed to reconfigure"
 }
 
