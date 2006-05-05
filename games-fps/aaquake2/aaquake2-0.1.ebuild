@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/aaquake2-0.1.ebuild,v 1.8 2006/03/15 22:35:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/aaquake2-0.1.ebuild,v 1.9 2006/05/05 20:09:32 tupone Exp $
 
 inherit eutils games
 
@@ -22,8 +22,10 @@ S=${WORKDIR}/quake2-3.21/linux
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}"/${PV}-gentoo.patch
-	cd quake2-3.21/linux
+	cd "${WORKDIR}/quake2-3.21"
+	epatch "${FILESDIR}"/${PV}-gentoo.patch \
+		"${FILESDIR}/${P}"-gcc41.patch
+	cd linux
 	sed -i \
 		-e "s:GENTOO_DIR:${GAMES_LIBDIR}/${PN}:" sys_linux.c
 	sed -i \
