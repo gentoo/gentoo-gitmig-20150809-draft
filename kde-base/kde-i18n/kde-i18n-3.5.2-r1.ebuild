@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.2-r1.ebuild,v 1.1 2006/05/05 18:35:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.2-r1.ebuild,v 1.2 2006/05/05 21:32:36 carlo Exp $
 
 inherit kde
 
@@ -45,6 +45,7 @@ src_unpack() {
 	# Work around KDE bug 126311.
 	for dir in `ls ${WORKDIR}`; do
 		lang=`echo ${dir} | cut -f3 -d-`
+		[[ -e ${WORKDIR}/${dir}/docs/common/Makefile.in ]] || continue
 		sed -e "s:\$(KDE_LANG)/${lang}/:\$(KDE_LANG)/:g" \
 			-i ${WORKDIR}/${dir}/docs/common/Makefile.in || die "Failed to fix ${lang}."
 	done

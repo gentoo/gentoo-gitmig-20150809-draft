@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.94 2006/05/05 18:35:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.95 2006/05/05 21:32:36 carlo Exp $
+
+  05 May 2006; Carsten Lohrke <carlo@gentoo.org> kde-i18n-3.5.2-r1.ebuild:
+  Fix bug #132379.
 
 *kde-i18n-3.5.2-r1 (05 May 2006)
 
