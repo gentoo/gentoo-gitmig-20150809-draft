@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre3-r1.ebuild,v 1.4 2005/04/21 18:47:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre3-r1.ebuild,v 1.5 2006/05/05 13:38:10 flameeyes Exp $
 
 inherit rpm eutils
 
@@ -62,7 +62,7 @@ src_install() {
 	dodir /etc
 
 	insinto /etc
-	doins ${FILESDIR}/xcinrc
+	newins "${FILESDIR}/gentoo-xcinrc" xcinrc
 	dodoc doc/*
 
 	for docdir in doc/En doc/En/internal doc/history doc/internal doc/modules; do
