@@ -1,11 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/vdr-streamdev-server-0.3.3_pre20060502.ebuild,v 1.1 2006/05/02 15:56:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/vdr-streamdev-server-0.3.3_pre20060502.ebuild,v 1.2 2006/05/05 07:28:21 zzam Exp $
 
 inherit vdr-plugin eutils
 
 VDRPLUGIN_BASE=${VDRPLUGIN//-*/}
-MY_P=${VDRPLUGIN_BASE}-${PV/*_pre/}
+MY_PV=${PV/*_pre/}
+MY_P=${VDRPLUGIN_BASE}-${MY_PV}
 
 DESCRIPTION="Video Disk Recorder Client/Server streaming plugin"
 HOMEPAGE="http://www.magoa.net/linux/"
@@ -25,6 +26,10 @@ VDRPLUGIN_MAKE_TARGET="libvdr-${VDRPLUGIN}.so"
 src_unpack() {
 	vdr-plugin_src_unpack
 	cd ${S}
+
+	if grep -q "virtual bool Active" ${ROOT}/usr/include/vdr/plugin.h; then
+		epatch ${FILESDIR}/${PN}-${MY_PV}-old-vdr-headers.diff
+	fi
 
 	# make subdir libdvbmpeg respect CXXFLAGS
 	sed -i Makefile \
