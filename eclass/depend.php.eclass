@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.13 2006/04/20 12:15:35 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.14 2006/05/05 21:42:16 chtekk Exp $
 #
 # ========================================================================
 #
@@ -195,11 +195,11 @@ require_php_with_use() {
 	local missing_use=""
 	local x
 
-	einfo "Checking for required PHP feature(s):"
+	einfo "Checking for required PHP feature(s) ..."
 
 	for x in $@ ; do
 		if ! built_with_use =${PHP_PKG} ${x} && ! phpconfutils_built_with_use =${PHP_PKG} ${x} ; then
-			einfo "  Discovered missing USE flag ${x}"
+			einfo "  Discovered missing USE flag: ${x}"
 			missing_use="${missing_use} ${x}"
 		fi
 	done
@@ -231,7 +231,7 @@ require_php_with_any_use() {
 	local missing_use=""
 	local x
 
-	einfo "Checking for required PHP feature(s):"
+	einfo "Checking for required PHP feature(s) ..."
 
 	for x in $@ ; do
 		if built_with_use =${PHP_PKG} ${x} || phpconfutils_built_with_use =${PHP_PKG} ${x} ; then
