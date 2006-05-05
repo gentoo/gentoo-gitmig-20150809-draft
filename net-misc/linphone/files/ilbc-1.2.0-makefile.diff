@@ -1,0 +1,13 @@
+--- linphone-plugin-ilbc-1.2.0/Makefile.orig	2006-01-15 21:37:09.000000000 +0100
++++ linphone-plugin-ilbc-1.2.0/Makefile	2006-01-15 21:37:34.000000000 +0100
+@@ -19,8 +19,8 @@
+ MKINSTALLDIRS=$(LINPHONE_SOURCE)/mkinstalldirs
+ 
+ GLIB_CFLAGS=`pkg-config --cflags glib-2.0`
+-CFLAGS=-g -O2 -pthread -I$(LINPHONE_SOURCE) -I$(LINPHONE_SOURCE)/mediastreamer \
+-				-DHAVE_CONFIG_H $(GLIB_CFLAGS) -I$(ILBC_INST_PREFIX)/include/ilbc
++CFLAGS+= -fPIC -pthread -I$(LINPHONE_SOURCE) -I$(LINPHONE_SOURCE)/mediastreamer \
++	-DHAVE_CONFIG_H $(GLIB_CFLAGS) -I$(ILBC_INST_PREFIX)/include/ilbc
+ LDFLAGS=-shared -pthread -L$(ILBC_INST_PREFIX)/lib -lilbc
+ 
+ .c.o	:
