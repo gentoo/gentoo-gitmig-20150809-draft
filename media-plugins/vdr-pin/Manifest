@@ -1,20 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 660db0990361325a5b40aef6cda62ab2 ChangeLog 656
+MD5 3460a3132a90ebe9cea89cca933ae404 ChangeLog 910
 MD5 ac541bfffd3695c22503c806cab58c7c files/digest-vdr-pin-0.0.12 62
-MD5 940de818038f4b501b0776b21daef5bb files/digest-vdr-pin-0.0.15 62
-MD5 b2acc00d201622906164dd0443851f6a files/rc-addon.sh 256
+MD5 d8c6cd159e61af032a0bdddc3d68d9ee files/digest-vdr-pin-0.0.16 62
+MD5 c366f680b68b961a296cbf59d8bba7b4 files/rc-addon-0.0.12.sh 263
 MD5 561745121351b5a0a6473e65dddecc16 files/reccmds.pin.conf 246
+MD5 1e1484c7cf0c28047e85c7b63d9a7ba9 files/reccmds.pin.conf-0.0.16 333
 MD5 9fb53e523ccd0b1dea478e6c66e58447 files/vdr-pin.sh 213
 MD5 940276680236cf2e3c7c89af35f97adb metadata.xml 510
 MD5 3fab57a784dc2777723a4b8440144ca5 vdr-pin-0.0.12.ebuild 930
-MD5 0c0f179a4b24be3dd7f6473b97bc6e06 vdr-pin-0.0.15.ebuild 947
+MD5 e22124831bc70442c7b024faf9e52f15 vdr-pin-0.0.16.ebuild 972
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 Comment: no further Information
 
-iD8DBQFEVfn8dn07HTTCgIoRAikCAJ93RonOUkk9f6+EMbryo8r1QlEa4QCgtIK5
-+5UDT+Bg2lLec+tw6X36nYA=
-=Mdhs
+iD8DBQFEW9Pcdn07HTTCgIoRAmftAKCtC6DJZEZ/Rc3EsgnmcnVvlTxqBACfam6b
+mfAEJ3lHo+K1RfFFXxAAhuA=
+=w8QW
 -----END PGP SIGNATURE-----
