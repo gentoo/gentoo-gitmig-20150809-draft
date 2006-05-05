@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/alephone
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.8 2006/03/30 01:31:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.9 2006/05/05 20:52:03 tupone Exp $
+
+  05 May 2006; <Tupone@gentoo.org> +files/alephone-20051119-gcc41.patch,
+  alephone-20051119.ebuild:
+  Fix for gcc-4.1, bug #131689 by Charlie Shepherd
+  Patch by Mark Loeser
 
   30 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   -files/20040417-gcc34.patch, -alephone-20040417.ebuild:

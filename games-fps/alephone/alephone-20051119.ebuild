@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20051119.ebuild,v 1.2 2006/03/20 22:07:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20051119.ebuild,v 1.3 2006/05/05 20:52:03 tupone Exp $
 
 inherit eutils games
 
@@ -25,8 +25,10 @@ S=${WORKDIR}/AlephOne-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cp ${FILESDIR}/alephone.png ${S}
-	cat > ${S}/alephone.sh << EOF
+	cd "${S}"
+	cp ${FILESDIR}/alephone.png ./
+	epatch "${FILESDIR}/${P}"-gcc41.patch
+	cat > alephone.sh << EOF
 #!/bin/sh
 
 DATADIRS="
