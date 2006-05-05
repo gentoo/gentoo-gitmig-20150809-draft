@@ -1,6 +1,16 @@
-MD5 54e68c5a782acba44a5dae01211d1e99 ChangeLog 875
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5da2427781b6ed8ea789da6c7cc03e1d ChangeLog 983
 MD5 10f7de6c69c1ff0b5c2578deb1750bf0 files/digest-x48-0.4.3 229
 MD5 3c519694015acedd403cfff9ab4b10b9 files/digest-x48-0.4.3-r1 657
 MD5 8fc22f08ecb2e292e60ce7553c58d0c2 metadata.xml 222
-MD5 73c03fbb3b9213c21d2561ea9c26d7ff x48-0.4.3-r1.ebuild 1927
+MD5 6b748521dbedaa3f3f6f331bbcf86915 x48-0.4.3-r1.ebuild 1935
 MD5 538e23555b4068beb057cba3abbeeaae x48-0.4.3.ebuild 1283
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEW5V5KRy60XGEcJIRAiRuAJ9mMIpiE2zKKPcIAcC9dZsMN6CSUwCgmxQB
+TdSvzqUfnqAmkpvuXJtUkI0=
+=zNBn
+-----END PGP SIGNATURE-----
