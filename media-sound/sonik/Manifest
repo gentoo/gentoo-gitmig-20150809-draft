@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3d83371e6d08e2c914b96a4e21f5d02e ChangeLog 391
+MD5 c71ce5d8c2f2faeb09f2993c6d11d726 files/digest-sonik-1.0_beta2 68
+MD5 60299dd26385caa83f5b1b51b507a9d8 metadata.xml 243
+MD5 eb6afedb99257d2bf7ef64f1e6a5acda sonik-1.0_beta2.ebuild 1022
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEWypYT+MN7JbqCpMRAmUKAJ4/Xu/D7iFhIlkd2yUYguXFxFgkCwCfd6u5
+0nh2FuT0UowGEPKAKa7EKQc=
+=UN6Q
+-----END PGP SIGNATURE-----
