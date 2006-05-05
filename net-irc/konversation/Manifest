@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a89ae8f3359bdccc368654b94e81ed75 ChangeLog 4694
-RMD160 eebd3a88ef9627ab5508dd198582cf36081fac90 ChangeLog 4694
-SHA256 fd85a4d49dcfc8e9e2c5b0a1da118be730c09b1c5ef5bdb48092555da739626b ChangeLog 4694
+MD5 5b92a56cd9d964be7500a74ce0ba87c1 ChangeLog 4791
 MD5 f2c8957a5d97179e302ff2660560d146 files/digest-konversation-0.18 71
-RMD160 608b8bfbb10dcebc3da778e9975ec90eada83923 files/digest-konversation-0.18 71
-SHA256 d0272ca67efb539a1b7b7fb11c1388284364254e02f48b1d1906971ca9598fff files/digest-konversation-0.18 71
 MD5 d3cf120576dee1fbb54b603340d7e6ff files/digest-konversation-0.19-r1 259
-RMD160 ad03df7a15f878be142ac4aad96663b89114a210 files/digest-konversation-0.19-r1 259
-SHA256 f156f2d0fd6d44291dc494963f6f311d57346680fe6d79030f8ab60a024e7fa8 files/digest-konversation-0.19-r1 259
 MD5 0689d3b53a7f073faa64a3037f7a063d files/konversation-0.19-gcc41.patch 494
-RMD160 6319955a53ccc6ca3b56547ee17ff81642760209 files/konversation-0.19-gcc41.patch 494
-SHA256 beed35bc161377ca5f3033ec8d7bec923c947f68e95f4db4cea8bfc5b56aa3cd files/konversation-0.19-gcc41.patch 494
 MD5 9b386c5b691931c6d639276f35951471 files/konversation-0.19-slash-q-tab.patch 506
-RMD160 f6f759e3124439a1afa434a50c506e0a3583d359 files/konversation-0.19-slash-q-tab.patch 506
-SHA256 244eebc95c55207ca2355a468d98271ce49e5ec8efeeb71e791098c3c06df408 files/konversation-0.19-slash-q-tab.patch 506
 MD5 bbaafb1a59ed3b1f8589ad6aeb77b780 konversation-0.18.ebuild 549
-RMD160 cead17157d45222594337262445e6c74bdb46a54 konversation-0.18.ebuild 549
-SHA256 fd6029f436005be3116c290349540928aea33654fb0a4b9afffbecde551a6f02 konversation-0.18.ebuild 549
-MD5 4cd09583ee142f11c390ed9f35fcebe2 konversation-0.19-r1.ebuild 709
-RMD160 c9d406e440ef6d4324d732d134290e1fcfbbe27c konversation-0.19-r1.ebuild 709
-SHA256 81120560867e5000c9da825528d4754c3136665b2cda133f6641fc9501bf3b49 konversation-0.19-r1.ebuild 709
+MD5 843dd26f92d4d2d7a4083eae02c635a7 konversation-0.19-r1.ebuild 706
 MD5 71e1e6f08f072eec25aeb364865de8ef metadata.xml 177
-RMD160 8850c5b17b8777a62f670a0ade3bab8144c2b2dc metadata.xml 177
-SHA256 0d969af6afa28170dac4b321dd8489b27d322f49f40c39aa3f614953f85292ce metadata.xml 177
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENlR0AiZjviIA2XgRAmBvAKDoCuhlgxHnszIMADI6lGvtwnzytgCgs3FG
-Af1smZAPG3J1Ju7UZu9OKKw=
-=QDUr
------END PGP SIGNATURE-----
