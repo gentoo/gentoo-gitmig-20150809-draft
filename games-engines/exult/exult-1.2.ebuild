@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.5 2005/10/07 03:49:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.6 2006/05/05 06:21:55 tupone Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="an Ultima 7 game engine that runs on modern operating systems"
 HOMEPAGE="http://exult.sourceforge.net/"
@@ -35,6 +35,7 @@ src_unpack() {
 	cd music/
 	unpack U7MusicOGG_{1,2}of2.zip
 	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 	sed -i \
 		-e "s/u7siinstrics.data/u7siintrinsics.data/" \
 		usecode/ucxt/data/Makefile.in \
