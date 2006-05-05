@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r7.ebuild,v 1.6 2006/03/24 20:26:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r7.ebuild,v 1.7 2006/05/05 21:14:17 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -124,6 +124,10 @@ src_install-libs() {
 	local NO_TLS_ROOT="${NV_ROOT}/no-tls"
 	local TLS_ROOT="${NV_ROOT}/tls"
 	local X11_LIB_DIR="/usr/${inslibdir}/xorg"
+
+	if ! has_version x11-base/xorg-server ; then
+		X11_LIB_DIR="/usr/${inslibdir}"
+	fi
 
 	# The GLX libraries
 	exeinto ${NV_ROOT}/lib

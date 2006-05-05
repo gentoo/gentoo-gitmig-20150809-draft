@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.8178-r1.ebuild,v 1.3 2006/04/17 10:28:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.8178-r1.ebuild,v 1.4 2006/05/05 21:14:17 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -154,6 +154,10 @@ src_install-libs() {
 	local NO_TLS_ROOT="${NV_ROOT}/no-tls"
 	local TLS_ROOT="${NV_ROOT}/tls"
 	local X11_LIB_DIR="/usr/${inslibdir}/xorg"
+
+	if ! has_version x11-base/xorg-server ; then
+		X11_LIB_DIR="/usr/${inslibdir}"
+	fi
 
 	if use x86-fbsd; then
 		# on FreeBSD everything is on obj/
