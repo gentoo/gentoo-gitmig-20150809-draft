@@ -1,0 +1,30 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX xapian-bindings-0.9.5-skip-csharp-test.patch 318 RMD160 c1bb5d0d2b16897a12190983cb69fa16478b3d51 SHA1 07d3e59f8c120142c8a8c5d7b841a22f583114d3 SHA256 bbf82b19b612bc241cbb1f8c577c2409438fe0721ffc00b426fbcdeb3550c331 size 318
+MD5 11877267281c014cfc22a87f2bd637bf files/xapian-bindings-0.9.5-skip-csharp-test.patch 318
+RMD160 c1bb5d0d2b16897a12190983cb69fa16478b3d51 files/xapian-bindings-0.9.5-skip-csharp-test.patch 318
+SHA256 bbf82b19b612bc241cbb1f8c577c2409438fe0721ffc00b426fbcdeb3550c331 files/xapian-bindings-0.9.5-skip-csharp-test.patch 318
+DIST xapian-bindings-0.9.5.tar.gz 754243 RMD160 89e0c008b014e9f0c24d9c642ddae56f7ff55f2f SHA256 f943a00e8674bb0a362eb443379084e549281f33ba473a7b0d871f0b57e39caa size 754243
+EBUILD xapian-bindings-0.9.5.ebuild 1212 RMD160 83b599ee750214df93d965dd3eb47da2280d4a2d SHA1 399a0a7bc7ba83bef63d4befd32ba36f9e0a9d6d SHA256 060c99eb0fd66307be64cad0831a5d9218cdf88c000b04e34d41e5e2b99901e2 size 1212
+MD5 f255306b7dbb323b2af9954eb1614015 xapian-bindings-0.9.5.ebuild 1212
+RMD160 83b599ee750214df93d965dd3eb47da2280d4a2d xapian-bindings-0.9.5.ebuild 1212
+SHA256 060c99eb0fd66307be64cad0831a5d9218cdf88c000b04e34d41e5e2b99901e2 xapian-bindings-0.9.5.ebuild 1212
+MISC ChangeLog 428 RMD160 1cff95ff42611aaef68fffccd896fc38c77fc721 SHA1 394ea115ce555fdd05390f014925c3feea42ae5f SHA256 61e38a61bc76ea46e8de9b3a0805aab9400c87f297a4aeb6b4482bb8ab9600ca size 428
+MD5 84ebbc869bd1e8235335f68e4479b053 ChangeLog 428
+RMD160 1cff95ff42611aaef68fffccd896fc38c77fc721 ChangeLog 428
+SHA256 61e38a61bc76ea46e8de9b3a0805aab9400c87f297a4aeb6b4482bb8ab9600ca ChangeLog 428
+MISC metadata.xml 348 RMD160 e40b78aae59abc91c7665c525b0cbcc732b5dba8 SHA1 d7804461beb66cc1943ef0f1630ed27fcc3d7ef5 SHA256 1e3c30c6fe78e88adad51f2d0d39fb8fb3939dfa44e4cd482a7601abe561e2a5 size 348
+MD5 83b891da88c9cfdeca4c8d5e8bb5d6d1 metadata.xml 348
+RMD160 e40b78aae59abc91c7665c525b0cbcc732b5dba8 metadata.xml 348
+SHA256 1e3c30c6fe78e88adad51f2d0d39fb8fb3939dfa44e4cd482a7601abe561e2a5 metadata.xml 348
+MD5 87d815e4367d99ea308638c45807d116 files/digest-xapian-bindings-0.9.5 265
+RMD160 aedcac80d99eb525504cf8b6489205d8244656ad files/digest-xapian-bindings-0.9.5 265
+SHA256 6a22717024e77b30cf2390f9a8adf23b082f24d56034f6e2e56f68a0f128e1b1 files/digest-xapian-bindings-0.9.5 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEW3ewW78445TWHXcRAsaqAJ0VqKNUkA0UCz3WAYxcelYr1Pk+MwCggjhq
+1YMrJQZMXpQfM4v0cFzFbEM=
+=G4FJ
+-----END PGP SIGNATURE-----

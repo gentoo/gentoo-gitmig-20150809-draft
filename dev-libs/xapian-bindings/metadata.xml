@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>python</herd>
+<maintainer>
+  <email>marienz@gentoo.org</email>
+  <description>
+    Only using this as a dependency of some python stuff I
+    need, feel free to take over.
+  </description>
+</maintainer>
+</pkgmetadata>

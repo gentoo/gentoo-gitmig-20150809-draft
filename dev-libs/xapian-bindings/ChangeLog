@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/xapian-bindings
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.1 2006/05/05 16:04:57 marienz Exp $
+
+*xapian-bindings-0.9.5 (05 May 2006)
+
+  05 May 2006; Marien Zwart <marienz@gentoo.org>
+  +files/xapian-bindings-0.9.5-skip-csharp-test.patch, +metadata.xml,
+  +xapian-bindings-0.9.5.ebuild:
+  New package.
+
