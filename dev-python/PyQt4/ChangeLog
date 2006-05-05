@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/PyQt4
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.1 2006/05/05 17:07:56 caleb Exp $
+
+*PyQt4-4.0_beta1 (05 May 2006)
+
+  05 May 2006; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
+  +PyQt4-4.0_beta1.ebuild:
+  initial import, from bug #121554
+
