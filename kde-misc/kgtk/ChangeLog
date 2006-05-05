@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/kgtk
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.1 2006/05/05 16:38:38 genstef Exp $
+
+*kgtk-0.5 (05 May 2006)
+
+  05 May 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +kgtk-0.5.ebuild:
+  New ebuild thanks to Christoph Mockenhaupt <gentoo@mockies.de> and Tobias
+  Roeser <le.petit.fou@web.de> in bug 131380
+
