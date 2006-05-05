@@ -1,0 +1,19 @@
+Modified: pym/cache/util.py
+===================================================================
+--- pym/cache/util.py	2006-05-03 17:07:02 UTC (rev 3312)
++++ pym/cache/util.py	2006-05-03 19:02:34 UTC (rev 3313)
+@@ -41,7 +41,13 @@
+ 			pass
+ 
+ 		if write_it:
+-			if entry.get("INHERITED",""):
++			try:
++				inherited = entry.get("INHERITED", None)
++			except cache_errors.CacheError, ce:
++				noise.exception(x, ce)
++				del ce
++				continue
++			if inherited:
+ 				if src_cache.complete_eclass_entries:
+ 					if not "_eclasses_" in entry:
+ 						noise.corruption(x,"missing _eclasses_ field")

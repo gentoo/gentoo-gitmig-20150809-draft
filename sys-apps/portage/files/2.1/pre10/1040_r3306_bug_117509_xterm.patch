@@ -1,0 +1,12 @@
+Modified: pym/output.py
+===================================================================
+--- pym/output.py	2006-05-02 09:31:04 UTC (rev 3305)
++++ pym/output.py	2006-05-02 13:08:53 UTC (rev 3306)
+@@ -173,7 +173,7 @@
+ 		legal_terms = ["xterm","Eterm","aterm","rxvt","screen","kterm","rxvt-unicode","gnome"]
+ 		for term in legal_terms:
+ 			if myt.startswith(term):
+-				sys.stderr.write("\x1b]2;"+str(mystr)+"\x07")
++				sys.stderr.write("\x1b]0;"+str(mystr)+"\x07")
+ 				sys.stderr.flush()
+ 				break

@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.132 2006/05/03 23:20:37 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.133 2006/05/05 22:27:26 zmedico Exp $
+
+*portage-2.1_pre10-r3 (05 May 2006)
+
+  05 May 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre10-r3.ebuild,
+  +files/2.1/pre10/1030_r3304_fetch_digests.patch,
+  +files/2.1/pre10/1040_r3306_bug_117509_xterm.patch,
+  +files/2.1/pre10/1050_r3313_bug_126692_cache_corruption.patch,
+  +files/2.1/pre10/1060_r3317_bug_132182_assume_digests.patch,
+  +files/2.1/pre10/1070_r3320_bug_132338_config_clone.patch,
+  +files/2.1/pre10/1080_r3321_bug_132373_search_digest.patch:
+  2.1_pre10-r3 bug fix revbump for #117509, #126692, #132182, #132338, and
+  #132373.
 
 *portage-2.0.54-r2 (03 May 2006)
 
