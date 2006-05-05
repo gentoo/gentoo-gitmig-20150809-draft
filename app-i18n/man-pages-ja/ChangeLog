@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-ja
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.4 2006/05/04 13:15:34 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.5 2006/05/05 13:03:06 gustavoz Exp $
+
+  05 May 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  man-pages-ja-20050415.ebuild:
+  Stable on sparc
 
   04 May 2006; Akinori Hattori <hattya@gentoo.org>
   man-pages-ja-20050415.ebuild:
