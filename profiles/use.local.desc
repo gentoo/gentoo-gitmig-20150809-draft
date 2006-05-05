@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1883 2006/05/02 22:40:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1884 2006/05/05 10:34:02 eldad Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -793,6 +793,7 @@ media-sound/rhythmbox:musicbrainz - support for muzicbrains
 media-sound/rhythmbox:tagwriting - support for tag wriring in certian audio files
 media-sound/snd:gsl - Use the GNU scientific library for calculations
 media-sound/snd:ladspa - Enables the ability to support ladspa plugins
+media-sound/sonik:ladspa - Enables the ability to support ladspa plugin
 media-sound/timidity++:ao - Use libao for sound playback
 media-sound/zinf:corba - Enables corba interface support
 media-tv/freevo:matrox - Enable output support on Matrox cards
