@@ -10,10 +10,10 @@ AUX kdepim-kioslaves-3.5.2-fixes-2.diff 2836 RMD160 ff7ddc20225b1b9ccbd91506dc6a
 MD5 8402c9a25324281f38c83ea3ebc20c24 files/kdepim-kioslaves-3.5.2-fixes-2.diff 2836
 RMD160 ff7ddc20225b1b9ccbd91506dc6ab457099b3e67 files/kdepim-kioslaves-3.5.2-fixes-2.diff 2836
 SHA256 d9a6632a47ee4e5d10b6f0b2a37d6f315a68e860bcc41b695b4d209e1a0217bf files/kdepim-kioslaves-3.5.2-fixes-2.diff 2836
-AUX kdepim-kioslaves-3.5.2-fixes.diff 1655 RMD160 6fd8a2ddd856362b687c4e37e8225ab518f40c73 SHA1 c28feb3eb620569f70b97431a72c6ad314bc02ab SHA256 3c798af135632c5ceb74f67d69f92877dffaf66de9f201b77698cc2a5ec4d798 size 1655
+AUX kdepim-kioslaves-3.5.2-fixes.diff 1655 RMD160 6fd8a2ddd856362b687c4e37e8225ab518f40c73 SHA1 c28feb3eb620569f70b97431a72c6ad314bc02ab SHA256 dbf01e6c006c824aa1c0ca8e5b0fa7f1fd9f56f5cbfc2741c8f35d747f182ebe size 1655
 MD5 9a96c94ff9bc1bbd832aecdf10ba3d9c files/kdepim-kioslaves-3.5.2-fixes.diff 1655
 RMD160 6fd8a2ddd856362b687c4e37e8225ab518f40c73 files/kdepim-kioslaves-3.5.2-fixes.diff 1655
-SHA256 3c798af135632c5ceb74f67d69f92877dffaf66de9f201b77698cc2a5ec4d798 files/kdepim-kioslaves-3.5.2-fixes.diff 1655
+SHA256 dbf01e6c006c824aa1c0ca8e5b0fa7f1fd9f56f5cbfc2741c8f35d747f182ebe files/kdepim-kioslaves-3.5.2-fixes.diff 1655
 DIST kdepim-3.4.0-3.4.1.tar.xdelta 689503 size 689503
 DIST kdepim-3.4.0.tar.bz2 11441545 RMD160 abc3794c45f12e29b3dc8ce3c4b570e980beb8c3 SHA256 7769e1989404c16d679c0be32cde7634ceb5692131de6ab1d44def47eca871ad size 11441545
 DIST kdepim-3.4.1-3.4.2.tar.xdelta 534400 size 534400
@@ -68,13 +68,13 @@ RMD160 2b704341b9b6cd49f646304700670dd2324e4ee3 files/digest-kdepim-kioslaves-3.
 SHA256 53a597b89fa83f7e953fd6c3565b00cbbceb08c07211f1ba11d1e24883cd82fe files/digest-kdepim-kioslaves-3.4.3 67
 MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kdepim-kioslaves-3.5.2 247
 RMD160 6593013cc2b82f2b51819d483733f409262d7d91 files/digest-kdepim-kioslaves-3.5.2 247
-SHA256 316a6c56abca376dcc823a955f36bb4a04daf20009db56ff7cd3f6f38f150c5e files/digest-kdepim-kioslaves-3.5.2 247
+SHA256 93b85550a7cebd0f79e5aed63e5719488cfdcc0ee049038fd423aefa50f64e59 files/digest-kdepim-kioslaves-3.5.2 247
 MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kdepim-kioslaves-3.5.2-r1 247
 RMD160 6593013cc2b82f2b51819d483733f409262d7d91 files/digest-kdepim-kioslaves-3.5.2-r1 247
-SHA256 316a6c56abca376dcc823a955f36bb4a04daf20009db56ff7cd3f6f38f150c5e files/digest-kdepim-kioslaves-3.5.2-r1 247
+SHA256 93b85550a7cebd0f79e5aed63e5719488cfdcc0ee049038fd423aefa50f64e59 files/digest-kdepim-kioslaves-3.5.2-r1 247
 MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kdepim-kioslaves-3.5.2-r2 247
 RMD160 6593013cc2b82f2b51819d483733f409262d7d91 files/digest-kdepim-kioslaves-3.5.2-r2 247
-SHA256 316a6c56abca376dcc823a955f36bb4a04daf20009db56ff7cd3f6f38f150c5e files/digest-kdepim-kioslaves-3.5.2-r2 247
+SHA256 93b85550a7cebd0f79e5aed63e5719488cfdcc0ee049038fd423aefa50f64e59 files/digest-kdepim-kioslaves-3.5.2-r2 247
 MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kdepim-kioslaves-3.5.2-r3 247
 RMD160 6593013cc2b82f2b51819d483733f409262d7d91 files/digest-kdepim-kioslaves-3.5.2-r3 247
-SHA256 316a6c56abca376dcc823a955f36bb4a04daf20009db56ff7cd3f6f38f150c5e files/digest-kdepim-kioslaves-3.5.2-r3 247
+SHA256 93b85550a7cebd0f79e5aed63e5719488cfdcc0ee049038fd423aefa50f64e59 files/digest-kdepim-kioslaves-3.5.2-r3 247
