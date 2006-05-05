@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.12 2006/01/18 14:15:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.13 2006/05/05 23:46:46 flameeyes Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Network Audio System"
 HOMEPAGE="http://radscan.com/nas.html"
@@ -10,7 +10,7 @@ SRC_URI="http://radscan.com/nas/${P}.src.tar.gz"
 
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="|| (
@@ -36,35 +36,29 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-header.patch
 	epatch "${FILESDIR}"/${P}-gcc4.patch
-	sed -i \
-		-e "/^[ 	]*CDEBUGFLAGS/s:=.*:=${CFLAGS}:" \
-		-e "/^[ 	]*CXXDEBUGFLAGS/s:=.*:=${CXXFLAGS}:" \
-		$(find -name Makefile) || die
 }
 
 src_compile() {
 	xmkmf || die
 	touch doc/man/lib/tmp.{_man,man}
-	emake World || die
+	emake \
+		MAKE="${MAKE:-gmake}" CDEBUGFLAGS="${CFLAGS}" CXXDEBUFLAGS="${CXXFLAGS}" \
+		CC="$(tc-getCC)" CXX="$(tc-getCXX)" AS="$(tc-getAS)" LD="$(tc-getLD)" \
+		RANLIB="$(tc-getRANLIB)" World || die
 }
 
 src_install () {
 	make DESTDIR=${D} install || die
 	make DESTDIR=${D} install.man || die
 
-	for i in ${D}/usr/X11R6/man/man?/*.?x
-	do
-		gzip -9 $i
-	done
-
 	dodoc BUGS BUILDNOTES FAQ HISTORY README RELEASE TODO
-	mv ${D}/usr/X11R6/lib/X11/doc/html ${D}/usr/share/doc/${P}/
-	rmdir ${D}/usr/X11R6/lib/X11/doc
+	mv ${D}/usr/lib/X11/doc/html ${D}/usr/share/doc/${P}/
+	rmdir ${D}/usr/lib/X11/doc
 
 	# rename example nasd.conf.eg to nasd.conf and change it so that NAS
 	# doesn't change mixer's settings (inspired by Debian package):
-	mv ${D}/etc/nas/nasd.conf.eg ${D}/etc/nas/nasd.conf
-	dosed 's,\(MixerInit.*\)"\(.*\)",\1"no",' /etc/nas/nasd.conf
+	mv ${D}/etc/nas/nasd.conf{.eg,}
+	sed -i -e 's,\(MixerInit.*\)"\(.*\)",\1"no",' ${D}/etc/nas/nasd.conf
 
 	newconfd "${FILESDIR}"/nas.conf.d nas
 	newinitd "${FILESDIR}"/nas.init.d nas

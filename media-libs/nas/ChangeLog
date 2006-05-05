@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/nas
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.45 2006/01/18 14:15:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.46 2006/05/05 23:46:46 flameeyes Exp $
+
+  05 May 2006; Diego Pettenò <flameeyes@gentoo.org> nas-1.7-r1.ebuild:
+  Review ebuild, set variables at make time rather than editing makefiles
+  (that is also done in non-portable and more expensive way), use the right
+  CC/CXX compilers and fix paths with /usr/X11R6.
 
   18 Jan 2006; Guy Martin <gmsoft@gentoo.org> nas-1.7-r1.ebuild:
   Stable on hppa.
