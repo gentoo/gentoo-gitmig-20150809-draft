@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/gambas
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.39 2006/04/27 19:34:22 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.40 2006/05/05 12:21:41 genone Exp $
+
+*gambas-1.0.16 (05 May 2006)
+
+  05 May 2006; Marius Mauch <genone@gentoo.org> -gambas-1.0.6.ebuild,
+  -gambas-1.0.10.ebuild, -gambas-1.0.13.ebuild, gambas-1.0.14.ebuild,
+  +gambas-1.0.16.ebuild:
+  Bump 1.0.14 to stable, add 1.0.16 as ~x86, remove outdated versions.
+  Fix sqlite dependency so sqlite-3.x doesn't satisfy it anymore.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-gambas-1.0.6,
   files/digest-gambas-1.0.10, Manifest:

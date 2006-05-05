@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0.14.ebuild,v 1.2 2006/05/05 12:21:41 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0.16.ebuild,v 1.1 2006/05/05 12:21:41 genone Exp $
 
 inherit eutils qt3
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gambas/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="x86 -amd64"
+KEYWORDS="~x86 -amd64"
 IUSE="postgres mysql sdl doc curl sqlite xml xsl zlib kde bzip2"
 
 RDEPEND="$(qt_min_version 3.2)
