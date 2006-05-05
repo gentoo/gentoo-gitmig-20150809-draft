@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6-r1.ebuild,v 1.1 2006/05/01 13:42:02 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6-r1.ebuild,v 1.2 2006/05/05 17:16:53 squinky86 Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/${PN}-${MY_PV}
 DESCRIPTION="HTTP/HTML indexing and searching system"
 SRC_URI="http://www.htdig.org/files/${PN}-${MY_PV}.tar.gz"
 HOMEPAGE="http://www.htdig.org"
-KEYWORDS="~x86 ~sparc ~ppc ~mips ~amd64"
+KEYWORDS="amd64 ~mips ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 
 DEPEND=">=sys-libs/zlib-1.1.3
