@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5297 2006/05/03 22:20:30 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5298 2006/05/05 05:10:24 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Stefan Schweizer <genstef@gentoo.org> (05 May 2006)
+# pre-release, does not yet print for me
+=net-print/cups-1.2*
 
 # Matthias Schwarzott <zzam@gentoo.org> (03 May 2006)
 # Masked for testing
