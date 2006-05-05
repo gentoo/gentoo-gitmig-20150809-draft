@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1886 2006/05/05 19:49:15 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1887 2006/05/05 21:23:28 genstef Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1131,6 +1131,7 @@ net-misc/gwget:epiphany - Build epiphany extensions
 net-misc/hylafax:faxonly - Don't depend on mgetty-fax
 net-misc/hylafax:mgetty - Adds support for mgetty and vgetty
 net-misc/icecast:yp - Build support for yp public directory listings
+net-misc/linphone:ilbc - Build ILBC codec plugin
 net-misc/linux-identd:xinetd - Use xinetd instead of the initscript
 net-misc/ltsp:floppyd - Enable local floppy access on LTSP terminals via mtools
 net-misc/ntp:logrotate - Install support files for logrotate
