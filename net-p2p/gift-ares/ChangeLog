@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gift-ares
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-ares/ChangeLog,v 1.3 2006/04/19 01:00:15 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-ares/ChangeLog,v 1.4 2006/05/05 14:28:12 squinky86 Exp $
+
+  05 May 2006; Jon Hood <squinky86@gentoo.org> gift-ares-0.3.0.ebuild:
+  Install into /usr/lib64 for amd64 systems.
 
 *gift-ares-0.3.0 (19 Apr 2006)
 

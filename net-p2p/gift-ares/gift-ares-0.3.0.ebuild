@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-ares/gift-ares-0.3.0.ebuild,v 1.1 2006/04/19 01:00:15 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-ares/gift-ares-0.3.0.ebuild,v 1.2 2006/05/05 14:28:12 squinky86 Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "Ares plugin failed to install"
+	einstall plugindir=${D}/usr/$(get_libdir)/giFT || die "Ares plugin failed to install"
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
 
