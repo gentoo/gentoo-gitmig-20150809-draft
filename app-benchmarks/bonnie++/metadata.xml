@@ -6,6 +6,10 @@
  <email>morfic@gentoo.org</email>
  <name>Daniel Goller</name>
 </maintainer>
+<maintainer>
+ <email>johnm@gentoo.org</email>
+ <name>John Mylchreest</name>
+</maintainer>
 <longdescription>
 Bonnie++ is based on the Bonnie hard drive benchmark by Tim Bray. This program is used by ReiserFS developers, but can be useful for anyone who wants to know how fast their hard drive or file system is. 
 </longdescription>
