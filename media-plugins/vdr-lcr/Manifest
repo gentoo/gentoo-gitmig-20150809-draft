@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c885e7efd9e48226ae83a0ef7533f36b ChangeLog 1063
+MD5 9316f49b5c8dda86c64980d006d35a21 ChangeLog 1189
 MD5 c50e3417f0ccbf6858f77cbbe8c6abf3 files/digest-vdr-lcr-0.0.5 65
 MD5 99c7250aff6f50964bb63c35979b4065 files/digest-vdr-lcr-0.0.6 65
+MD5 8e60df4b71e147e7c1d50d8b015885ab files/digest-vdr-lcr-0.0.8 65
 MD5 39901b6ecb5930c3cf71fefaf9d10228 metadata.xml 478
 MD5 68919c57858090cc01db4720d4e88a20 vdr-lcr-0.0.5.ebuild 963
 MD5 57cd5370d67d42d2ee3d2f7b40833d3c vdr-lcr-0.0.6.ebuild 968
+MD5 eaf04a7c7fbfdf50b75b9c3cbaa559ca vdr-lcr-0.0.8.ebuild 945
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 Comment: no further Information
 
-iD8DBQFEFXUSdn07HTTCgIoRAs8BAJ0YvAEChvaIB/k4WNAvC4ItWiFhqgCeKAg2
-/X1SYmqJyBoddE1I2bPah2A=
-=rEaG
+iD8DBQFEW9rzdn07HTTCgIoRAtVOAJ4qIPhi4+56Z0MKBB1NuVVDbGhYogCfZebJ
+knWuazn6LAgcNeg9CTL6ua0=
+=uC7Y
 -----END PGP SIGNATURE-----

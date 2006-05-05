@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-lcr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-lcr/ChangeLog,v 1.6 2006/03/13 13:34:58 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-lcr/ChangeLog,v 1.7 2006/05/05 23:08:20 hd_brummy Exp $
+
+*vdr-lcr-0.0.8 (05 May 2006)
+
+  05 May 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-lcr-0.0.8.ebuild:
+  version bump
 
 *vdr-lcr-0.0.6 (13 Mar 2006)
 
