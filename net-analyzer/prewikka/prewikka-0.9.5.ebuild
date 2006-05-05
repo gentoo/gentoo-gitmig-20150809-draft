@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.2.ebuild,v 1.1 2005/12/11 19:45:26 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.5.ebuild,v 1.1 2006/05/05 23:08:34 vanquirius Exp $
 
-inherit versionator distutils
+inherit distutils
 
 DESCRIPTION="Prelude-IDS Frontend"
 HOMEPAGE="http://www.prelude-ids.org/"
@@ -30,10 +30,17 @@ pkg_setup() {
 
 src_install() {
 	distutils_src_install
+	dodir /etc/prewikka
+	insinto /etc/prewikka
+	doins ${FILESDIR}/prewikka.conf-sample
 	rm "${D}"/\-dist
 }
 
 pkg_postinst() {
+	einfo
 	einfo "For additional installation instructions go to"
 	einfo "https://trac.prelude-ids.org/wiki/InstallingPrewikka"
+	einfo
+	einfo "The default config from the website is installed as"
+	einfo "/etc/prewikka/prewikka.conf-sample"
 }
