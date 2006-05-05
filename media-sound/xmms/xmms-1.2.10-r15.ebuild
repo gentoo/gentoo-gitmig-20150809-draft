@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r15.ebuild,v 1.13 2006/04/06 15:14:15 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r15.ebuild,v 1.14 2006/05/05 11:28:43 genone Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
@@ -35,7 +35,8 @@ DEPEND="${DEPEND}
 	sys-devel/libtool
 	nls? ( dev-util/intltool
 	       dev-lang/perl
-	       sys-devel/gettext )"
+	       sys-devel/gettext )
+	!nls? ( !<sys-devel/gettext-0.14.1 )"
 
 # USE flags pull in xmms plugins
 PDEPEND="lirc? ( media-plugins/xmms-lirc )
@@ -54,12 +55,6 @@ PDEPEND="lirc? ( media-plugins/xmms-lirc )
 	 oss? ( media-plugins/xmms-oss )"
 
 src_unpack() {
-	if ! has_version '>=sys-devel/gettext-0.14.1'; then
-		eerror "Sorry, you seem to have USE=-nls with an old version of gettext"
-		eerror "on your system.  Unfortunately, that will cause xmms to fail emerging."
-		eerror "Please either remove gettext or upgrade to version 0.14.1."
-	fi
-
 	unpack ${A}
 	cd ${S}
 
