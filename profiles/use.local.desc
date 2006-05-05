@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1884 2006/05/05 10:34:02 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1885 2006/05/05 14:40:56 carlo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -550,6 +550,7 @@ kde-base/kdegraphics:povray - Install KPovModeler, which needs POV-Ray.
 kde-base/kdelibs:legacyssl - Support for some deprecated ciphers. Don't use this flag unless you really need it.
 kde-base/kdelibs:openexr - Support for the OpenEXR graphics file format (www.openexr.com).
 kde-base/kdelibs:zeroconf - Support for DNS Service Discovery (DNS-SD).
+kde-base/kdemultimedia:akode - Support for the aKode audio-decoding frame-work.
 kde-base/kdemultimedia:musicbrainz - Support for MusicBrainz audio lookups (musicbrainz.org).
 kde-base/kdenetwork:rdesktop - support for the remote desktop protocol.
 kde-base/kdenetwork:sametime - Support for the Sametime protocol for instant messaging.
