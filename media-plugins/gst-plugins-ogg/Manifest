@@ -1,26 +1,64 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ed85722d75fbbc02324c6a7b7d7a4dae ChangeLog 8719
-MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-ogg-0.10.4 277
-MD5 450e13cee4577b1b569d1ceefe9eabd4 files/digest-gst-plugins-ogg-0.10.6 277
-MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-ogg-0.8.10 72
-MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-ogg-0.8.11 72
-MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-ogg-0.8.12 262
-MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-ogg-0.8.8 71
-MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-ogg-0.8.9 71
-MD5 b7c39d9baaf3b72b96200f64abeb08d4 gst-plugins-ogg-0.10.4.ebuild 444
+DIST gst-plugins-0.8.10.tar.bz2 2397528 size 2397528
+DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90 size 2439654
+DIST gst-plugins-0.8.12.tar.bz2 2506926 RMD160 cc0bbf3d790cb5791ce982fe6493bf2d8496a507 SHA256 8728da4f71bc87e10fb064d28154220d66a3d8332482fd2c8a7ed47c5f0a03ba size 2506926
+DIST gst-plugins-0.8.8.tar.bz2 2214274 size 2214274
+DIST gst-plugins-0.8.9.tar.bz2 2356958 size 2356958
+DIST gst-plugins-base-0.10.4.tar.bz2 1097817 RMD160 da837968b10a130dbeaa1953a3ad9f27586ba683 SHA256 6c556051191364eacf05dcf01a9f3101240a6b6155e331e4cbcbfca55a91ca42 size 1097817
+DIST gst-plugins-base-0.10.6.tar.bz2 1195072 RMD160 69659a40113b38b7eb1569c1da49ee5c37a5fd24 SHA256 0ef1b8cbe6d7e898d0636342479de46a780f720033c1b4f7217c903aac6d80ad size 1195072
+EBUILD gst-plugins-ogg-0.10.4.ebuild 445 RMD160 2728eb12866e1e2f7ee41cca82801f96c725183f SHA1 af781de078b35d4e6f28fe1674e0dfc168f111c6 SHA256 feae620f636e26553f41bbc318b582e939e84403069c552e2af95be516abafbe size 445
+MD5 c94c296f305aa2d01c6f0d774f0e692e gst-plugins-ogg-0.10.4.ebuild 445
+RMD160 2728eb12866e1e2f7ee41cca82801f96c725183f gst-plugins-ogg-0.10.4.ebuild 445
+SHA256 feae620f636e26553f41bbc318b582e939e84403069c552e2af95be516abafbe gst-plugins-ogg-0.10.4.ebuild 445
+EBUILD gst-plugins-ogg-0.10.6.ebuild 446 RMD160 1c0b862aa34120778bae0758cd20d3961c2929da SHA1 672467104617af4ed36af48521d03e22c6ff6f1c SHA256 61ff288167e2f5c80c5f90c3ec3b690b0b9d07d43382b6539c6296578d89c6bd size 446
 MD5 9834fefd3fbeccd0ea780ef558eeafe2 gst-plugins-ogg-0.10.6.ebuild 446
+RMD160 1c0b862aa34120778bae0758cd20d3961c2929da gst-plugins-ogg-0.10.6.ebuild 446
+SHA256 61ff288167e2f5c80c5f90c3ec3b690b0b9d07d43382b6539c6296578d89c6bd gst-plugins-ogg-0.10.6.ebuild 446
+EBUILD gst-plugins-ogg-0.8.10.ebuild 415 RMD160 c00a5075669f5c937a4ebb58d1ca6c97e8657bb9 SHA1 6c0696d6369be1fdc09f44b2db206c6425d707f5 SHA256 ff35be5a7d7895c29c66b0fd80583a062856025308fb990b84640ec9b298f399 size 415
 MD5 b1eef783b22ab39b549d2c32d9337e76 gst-plugins-ogg-0.8.10.ebuild 415
+RMD160 c00a5075669f5c937a4ebb58d1ca6c97e8657bb9 gst-plugins-ogg-0.8.10.ebuild 415
+SHA256 ff35be5a7d7895c29c66b0fd80583a062856025308fb990b84640ec9b298f399 gst-plugins-ogg-0.8.10.ebuild 415
+EBUILD gst-plugins-ogg-0.8.11.ebuild 417 RMD160 312f1a6d078ae149d7373dce3f5c5d87362d13dc SHA1 d870eaea5556c81e4519b6b700203c6c9f433875 SHA256 06dbd9942bd506f799e64b2caf866fe2a72f452555a78376e3bc9c39bf2934b6 size 417
 MD5 110890804b61d3cccf73f4b6048d32b0 gst-plugins-ogg-0.8.11.ebuild 417
+RMD160 312f1a6d078ae149d7373dce3f5c5d87362d13dc gst-plugins-ogg-0.8.11.ebuild 417
+SHA256 06dbd9942bd506f799e64b2caf866fe2a72f452555a78376e3bc9c39bf2934b6 gst-plugins-ogg-0.8.11.ebuild 417
+EBUILD gst-plugins-ogg-0.8.12.ebuild 424 RMD160 8a59e8f31b03a92c8dadf5ae17bfe4e4f3755ee7 SHA1 d8ff9f643d8b94416c0355cadfc7f254fdf386ea SHA256 6a32a6f79b61f620a636ed30104d6ac4e463a61f320ae503aad03989f265eeab size 424
 MD5 756424ae8ed90aafeed71eb4750ad6c5 gst-plugins-ogg-0.8.12.ebuild 424
+RMD160 8a59e8f31b03a92c8dadf5ae17bfe4e4f3755ee7 gst-plugins-ogg-0.8.12.ebuild 424
+SHA256 6a32a6f79b61f620a636ed30104d6ac4e463a61f320ae503aad03989f265eeab gst-plugins-ogg-0.8.12.ebuild 424
+EBUILD gst-plugins-ogg-0.8.8.ebuild 413 RMD160 9035a754817edf2aebeee12d50ff7fb2bb5bdcf0 SHA1 5e9fa3d9b37c6a100c05c53fbec16d507dfac2b2 SHA256 17ec91e0d6af8ce693b752a2719ca1d5e2641eb5ec502aa6c3c0e38a5e5f3b74 size 413
 MD5 c64b45647c6760fadc098389ca325dea gst-plugins-ogg-0.8.8.ebuild 413
+RMD160 9035a754817edf2aebeee12d50ff7fb2bb5bdcf0 gst-plugins-ogg-0.8.8.ebuild 413
+SHA256 17ec91e0d6af8ce693b752a2719ca1d5e2641eb5ec502aa6c3c0e38a5e5f3b74 gst-plugins-ogg-0.8.8.ebuild 413
+EBUILD gst-plugins-ogg-0.8.9.ebuild 423 RMD160 4502d6b59564cb457886348831f01f18f0f0a198 SHA1 b0b12cec2d012b1e8d9179abd3e809c1ef6b1364 SHA256 7455dcb3ad0592fce3ec4eed13560f7173e1b277f451d80edd55b4aa1204108d size 423
 MD5 92fe7711b44092b73cc2b2bf44f47d3b gst-plugins-ogg-0.8.9.ebuild 423
+RMD160 4502d6b59564cb457886348831f01f18f0f0a198 gst-plugins-ogg-0.8.9.ebuild 423
+SHA256 7455dcb3ad0592fce3ec4eed13560f7173e1b277f451d80edd55b4aa1204108d gst-plugins-ogg-0.8.9.ebuild 423
+MISC ChangeLog 8837 RMD160 85b6012b3e422a6edec7d524177f26b5b83ab0a3 SHA1 bb99fd0548376486b226c067b1f81d698b942bbf SHA256 689cb17daf8dc885ee4a41c2bcf47eb3cc2f4818ac18fca6b8355bcc83888991 size 8837
+MD5 33520e004212d8aafc222647e9be6b7f ChangeLog 8837
+RMD160 85b6012b3e422a6edec7d524177f26b5b83ab0a3 ChangeLog 8837
+SHA256 689cb17daf8dc885ee4a41c2bcf47eb3cc2f4818ac18fca6b8355bcc83888991 ChangeLog 8837
+MISC metadata.xml 181 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d SHA1 faf40c45bd66b0072b95556cf7ab097d3be19511 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 size 181
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEWRJKKRy60XGEcJIRAhCyAJ4hckhJuEjV7FjGP0DxKYNnzGdkagCgmDZU
-H5zRRFrXOE7ScMnrFLaV7Gs=
-=1pnY
------END PGP SIGNATURE-----
+RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
+SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
+MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-ogg-0.10.4 277
+RMD160 bee1889727ca635912779fbcac2958f0ceba48b0 files/digest-gst-plugins-ogg-0.10.4 277
+SHA256 f47f4fd7829d14012ef690db4a45f568549f7a5015a00bd9ba03a41f3584e654 files/digest-gst-plugins-ogg-0.10.4 277
+MD5 450e13cee4577b1b569d1ceefe9eabd4 files/digest-gst-plugins-ogg-0.10.6 277
+RMD160 5e1310345ad577c68dbd84b9b0795c6f5b8f42f7 files/digest-gst-plugins-ogg-0.10.6 277
+SHA256 dcc21aa385043adb673e23444665055b7558a862a57013376f5608bd20e857bc files/digest-gst-plugins-ogg-0.10.6 277
+MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-ogg-0.8.10 72
+RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-ogg-0.8.10 72
+SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-ogg-0.8.10 72
+MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-ogg-0.8.11 262
+RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-ogg-0.8.11 262
+SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-ogg-0.8.11 262
+MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-ogg-0.8.12 262
+RMD160 2131a3433f3081297079de64ac7f2335c1f82036 files/digest-gst-plugins-ogg-0.8.12 262
+SHA256 bac5ba90fbb314a2f7ea2a53506021944ec1b8707b20d47545a23a6fd5f4cefd files/digest-gst-plugins-ogg-0.8.12 262
+MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-ogg-0.8.8 71
+RMD160 74fb762aa4b4c37e0cf13ceb60aec1e2c80a83dd files/digest-gst-plugins-ogg-0.8.8 71
+SHA256 8c042a1f86509a2d902bbc3d63874d8347af12c132215e8c67582fa8835e6089 files/digest-gst-plugins-ogg-0.8.8 71
+MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-ogg-0.8.9 71
+RMD160 59910917ac9fe162d7686f1702fb5bdd98a25154 files/digest-gst-plugins-ogg-0.8.9 71
+SHA256 06e49fc70cfec9d2553ced28a9c9246324fdd21c25f6bea9142de83f1f5a8153 files/digest-gst-plugins-ogg-0.8.9 71

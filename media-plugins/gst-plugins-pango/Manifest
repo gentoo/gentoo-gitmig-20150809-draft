@@ -1,29 +1,75 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 16abddabb0279d3c9c6fc0a8fe90bbb5 ChangeLog 6657
-MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-pango-0.10.4 277
-MD5 450e13cee4577b1b569d1ceefe9eabd4 files/digest-gst-plugins-pango-0.10.6 277
-MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-pango-0.8.10 72
-MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-pango-0.8.11 72
-MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-pango-0.8.12 262
-MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-pango-0.8.8 71
-MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-pango-0.8.8-r1 71
-MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-pango-0.8.9 71
+AUX gst-plugins-pango-0.8.8-sub_position.patch 1648 RMD160 1065fdfd7ede5de1a3b7a5252a9d10539187706c SHA1 fabac17683b7998deac629f7cb8704cc4253bd0b SHA256 d50414a724d1331bc0df80ea209e65ab043ca59450f7b0677f0d9aeb4740ba6a size 1648
 MD5 ed95a2d8b0c203bc1b8b72118101a97b files/gst-plugins-pango-0.8.8-sub_position.patch 1648
-MD5 0d1b133eadfd90d88f587bb324a4e9a3 gst-plugins-pango-0.10.4.ebuild 406
+RMD160 1065fdfd7ede5de1a3b7a5252a9d10539187706c files/gst-plugins-pango-0.8.8-sub_position.patch 1648
+SHA256 d50414a724d1331bc0df80ea209e65ab043ca59450f7b0677f0d9aeb4740ba6a files/gst-plugins-pango-0.8.8-sub_position.patch 1648
+DIST gst-plugins-0.8.10.tar.bz2 2397528 size 2397528
+DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90 size 2439654
+DIST gst-plugins-0.8.12.tar.bz2 2506926 RMD160 cc0bbf3d790cb5791ce982fe6493bf2d8496a507 SHA256 8728da4f71bc87e10fb064d28154220d66a3d8332482fd2c8a7ed47c5f0a03ba size 2506926
+DIST gst-plugins-0.8.8.tar.bz2 2214274 size 2214274
+DIST gst-plugins-0.8.9.tar.bz2 2356958 size 2356958
+DIST gst-plugins-base-0.10.4.tar.bz2 1097817 RMD160 da837968b10a130dbeaa1953a3ad9f27586ba683 SHA256 6c556051191364eacf05dcf01a9f3101240a6b6155e331e4cbcbfca55a91ca42 size 1097817
+DIST gst-plugins-base-0.10.6.tar.bz2 1195072 RMD160 69659a40113b38b7eb1569c1da49ee5c37a5fd24 SHA256 0ef1b8cbe6d7e898d0636342479de46a780f720033c1b4f7217c903aac6d80ad size 1195072
+EBUILD gst-plugins-pango-0.10.4.ebuild 408 RMD160 0c4ff72580dfa78fe4f0b6953ce4a3f731b73450 SHA1 b7036b8e8fcab60293fa296e35424083d5bd10d7 SHA256 90a63d9cdf86781dd9c0187d9094f8470600d39d1ae5b0ad8694fff0b4475336 size 408
+MD5 0c86de221f2748ecb41f49f9ff3f534b gst-plugins-pango-0.10.4.ebuild 408
+RMD160 0c4ff72580dfa78fe4f0b6953ce4a3f731b73450 gst-plugins-pango-0.10.4.ebuild 408
+SHA256 90a63d9cdf86781dd9c0187d9094f8470600d39d1ae5b0ad8694fff0b4475336 gst-plugins-pango-0.10.4.ebuild 408
+EBUILD gst-plugins-pango-0.10.6.ebuild 409 RMD160 7883e8a1ab1fb4847b826077325d02dff863fefd SHA1 05525ac27f4e65b3b150892bf8141c03c833b182 SHA256 a66712fd9cc667d4cf12cc54acee0c42f34324b41d8ffd0005c5efc36f85694e size 409
 MD5 b80f6c85601b6922975d52ca2c88b901 gst-plugins-pango-0.10.6.ebuild 409
+RMD160 7883e8a1ab1fb4847b826077325d02dff863fefd gst-plugins-pango-0.10.6.ebuild 409
+SHA256 a66712fd9cc667d4cf12cc54acee0c42f34324b41d8ffd0005c5efc36f85694e gst-plugins-pango-0.10.6.ebuild 409
+EBUILD gst-plugins-pango-0.8.10.ebuild 356 RMD160 8b9b7ff26c26957d0044c0397ff269077eff7ba7 SHA1 96ecd2be3fccba9cfe51997a0e190ff51dedc3f2 SHA256 ff41d43673097dbcba2de7409e34ca077ba39bbe21536ab28ee9c47ae7a937b8 size 356
 MD5 ca7332713a6a8e9863e4e74ba47d4bf0 gst-plugins-pango-0.8.10.ebuild 356
+RMD160 8b9b7ff26c26957d0044c0397ff269077eff7ba7 gst-plugins-pango-0.8.10.ebuild 356
+SHA256 ff41d43673097dbcba2de7409e34ca077ba39bbe21536ab28ee9c47ae7a937b8 gst-plugins-pango-0.8.10.ebuild 356
+EBUILD gst-plugins-pango-0.8.11.ebuild 356 RMD160 90696124930c8effc2b80fb68aafbd5920d98cb6 SHA1 40b0e712fa4d4eba490dbec0b266e16f141fc6dd SHA256 48f2caab428c0d8ef77bd0ef2aedde6f3ff4167137404429e1d35527e9f1e9c0 size 356
 MD5 0b8767a53079c3794fabc3448143544b gst-plugins-pango-0.8.11.ebuild 356
+RMD160 90696124930c8effc2b80fb68aafbd5920d98cb6 gst-plugins-pango-0.8.11.ebuild 356
+SHA256 48f2caab428c0d8ef77bd0ef2aedde6f3ff4167137404429e1d35527e9f1e9c0 gst-plugins-pango-0.8.11.ebuild 356
+EBUILD gst-plugins-pango-0.8.12.ebuild 363 RMD160 605f2fae38cc46df598cec2a2fc5e35692a42861 SHA1 0e0dea1ca2ffacb6fb9f70a5eacc358411840215 SHA256 e491e5dadd85f60a9e570033a1c5aa56635a773bc0477874dd844863eb9015e6 size 363
 MD5 03855b89e8c65fc7423930e9ef7d13c7 gst-plugins-pango-0.8.12.ebuild 363
+RMD160 605f2fae38cc46df598cec2a2fc5e35692a42861 gst-plugins-pango-0.8.12.ebuild 363
+SHA256 e491e5dadd85f60a9e570033a1c5aa56635a773bc0477874dd844863eb9015e6 gst-plugins-pango-0.8.12.ebuild 363
+EBUILD gst-plugins-pango-0.8.8-r1.ebuild 495 RMD160 493eb412db98c23a6d983466661c05bc9d968fc2 SHA1 fa3853a8a53bfaed992074314b81903aa7abbb0a SHA256 d29266e521aa7837764ccec1c0fd92c3b500562e0f2408e04bec7168f5949c8e size 495
 MD5 5b58b711dd4a2a3e76aa212d0f83fe20 gst-plugins-pango-0.8.8-r1.ebuild 495
+RMD160 493eb412db98c23a6d983466661c05bc9d968fc2 gst-plugins-pango-0.8.8-r1.ebuild 495
+SHA256 d29266e521aa7837764ccec1c0fd92c3b500562e0f2408e04bec7168f5949c8e gst-plugins-pango-0.8.8-r1.ebuild 495
+EBUILD gst-plugins-pango-0.8.8.ebuild 336 RMD160 a79de9cef4fdc32abd37252888bbf9681eedda56 SHA1 34d4da1f3787cf3f5f1d743779451a579af43bac SHA256 07cb47f1514868e414cde706b8cfdc2ea50535e013028a473b6b67640388ecdc size 336
 MD5 6f59ae92dbb0b81b182584e892ba7501 gst-plugins-pango-0.8.8.ebuild 336
+RMD160 a79de9cef4fdc32abd37252888bbf9681eedda56 gst-plugins-pango-0.8.8.ebuild 336
+SHA256 07cb47f1514868e414cde706b8cfdc2ea50535e013028a473b6b67640388ecdc gst-plugins-pango-0.8.8.ebuild 336
+EBUILD gst-plugins-pango-0.8.9.ebuild 361 RMD160 46c626d913e5d1b28069c865e84a2adf928da8b1 SHA1 3170f45600af7f53837a1c7fe0fdcbd3b5427f6d SHA256 25847f63db04cd1b84d7a28bce9dbc85cc2d20f9618e9d0f69b8784c4ac27b33 size 361
 MD5 501ae3ac26a06994fe11d3c2b86b1370 gst-plugins-pango-0.8.9.ebuild 361
+RMD160 46c626d913e5d1b28069c865e84a2adf928da8b1 gst-plugins-pango-0.8.9.ebuild 361
+SHA256 25847f63db04cd1b84d7a28bce9dbc85cc2d20f9618e9d0f69b8784c4ac27b33 gst-plugins-pango-0.8.9.ebuild 361
+MISC ChangeLog 6777 RMD160 160021fed7c3d3c42ad188fbd2c8f4951bbf22c1 SHA1 e0caa91766f1db77e72e8178ae3e365c94e3be8d SHA256 62ea89ada4de024cc90e7c4f2e1e794344da4017f7da69edfaedbe831dccb39a size 6777
+MD5 4c3ee7bddc858a9c8c27894629f1ba03 ChangeLog 6777
+RMD160 160021fed7c3d3c42ad188fbd2c8f4951bbf22c1 ChangeLog 6777
+SHA256 62ea89ada4de024cc90e7c4f2e1e794344da4017f7da69edfaedbe831dccb39a ChangeLog 6777
+MISC metadata.xml 162 RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 SHA1 f46f8ccd62374b17183b5aca523c4dcf60d718f9 SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1 size 162
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEWRIOKRy60XGEcJIRAhgQAKCZ5MWUd+Z7bGTOQY6bbjzj0JWbLACfUR/Q
-6VKLcBZgj/3JhaM/KnQbA5k=
-=6+2q
------END PGP SIGNATURE-----
+RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 metadata.xml 162
+SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1 metadata.xml 162
+MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-pango-0.10.4 277
+RMD160 bee1889727ca635912779fbcac2958f0ceba48b0 files/digest-gst-plugins-pango-0.10.4 277
+SHA256 f47f4fd7829d14012ef690db4a45f568549f7a5015a00bd9ba03a41f3584e654 files/digest-gst-plugins-pango-0.10.4 277
+MD5 450e13cee4577b1b569d1ceefe9eabd4 files/digest-gst-plugins-pango-0.10.6 277
+RMD160 5e1310345ad577c68dbd84b9b0795c6f5b8f42f7 files/digest-gst-plugins-pango-0.10.6 277
+SHA256 dcc21aa385043adb673e23444665055b7558a862a57013376f5608bd20e857bc files/digest-gst-plugins-pango-0.10.6 277
+MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-pango-0.8.10 72
+RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-pango-0.8.10 72
+SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-pango-0.8.10 72
+MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-pango-0.8.11 262
+RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-pango-0.8.11 262
+SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-pango-0.8.11 262
+MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-pango-0.8.12 262
+RMD160 2131a3433f3081297079de64ac7f2335c1f82036 files/digest-gst-plugins-pango-0.8.12 262
+SHA256 bac5ba90fbb314a2f7ea2a53506021944ec1b8707b20d47545a23a6fd5f4cefd files/digest-gst-plugins-pango-0.8.12 262
+MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-pango-0.8.8 71
+RMD160 74fb762aa4b4c37e0cf13ceb60aec1e2c80a83dd files/digest-gst-plugins-pango-0.8.8 71
+SHA256 8c042a1f86509a2d902bbc3d63874d8347af12c132215e8c67582fa8835e6089 files/digest-gst-plugins-pango-0.8.8 71
+MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-pango-0.8.8-r1 71
+RMD160 74fb762aa4b4c37e0cf13ceb60aec1e2c80a83dd files/digest-gst-plugins-pango-0.8.8-r1 71
+SHA256 8c042a1f86509a2d902bbc3d63874d8347af12c132215e8c67582fa8835e6089 files/digest-gst-plugins-pango-0.8.8-r1 71
+MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-pango-0.8.9 71
+RMD160 59910917ac9fe162d7686f1702fb5bdd98a25154 files/digest-gst-plugins-pango-0.8.9 71
+SHA256 06e49fc70cfec9d2553ced28a9c9246324fdd21c25f6bea9142de83f1f5a8153 files/digest-gst-plugins-pango-0.8.9 71
