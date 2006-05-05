@@ -1,0 +1,22 @@
+Index: ftpclass.cc
+===================================================================
+RCS file: /home/lav/cvsroot/lftp/src/ftpclass.cc,v
+retrieving revision 1.380
+diff -u -p -r1.380 ftpclass.cc
+--- ftpclass.cc	24 Apr 2006 10:24:18 -0000	1.380
++++ ftpclass.cc	3 May 2006 07:48:47 -0000
+@@ -1326,12 +1326,14 @@ int   Ftp::Do()
+ 	 goto usual_return;
+ 
+    pre_CONNECTED_STATE:
++#if USE_SSL
+       if(ftps && (!proxy || conn->proxy_is_http))
+       {
+ 	 conn->MakeSSLBuffers(hostname);
+ 	 const char *initial_prot=ResMgr::Query("ftps:initial-prot",hostname);
+ 	 conn->prot=initial_prot[0];
+       }
++#endif
+       if(use_telnet_iac)
+ 	 conn->InitTelnetLayer();
+ 
