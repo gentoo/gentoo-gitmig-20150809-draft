@@ -64,7 +64,7 @@
 #
 # Site specific parameters - modify as needed
 # ------------------------------------------------------------------------------
-$pdftops_path = "/usr/local/bin/pdftops";	# path to the xpdf utility
+$pdftops_path = "/usr/bin/pdftops";	# path to the xpdf utility
 # ------------------------------------------------------------------------------
 
 use File::Copy;
