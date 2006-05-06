@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailwrapper
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.29 2005/09/17 12:14:27 kloeri Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.30 2006/05/06 14:03:57 flameeyes Exp $
+
+  06 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  mailwrapper-0.2.1-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
   29 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> mailwrapper-0.2.1.ebuild:
   Stable on sh.
