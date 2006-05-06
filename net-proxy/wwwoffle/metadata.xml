@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>net-proxy</herd>
 <maintainer>
-  <email>dragonheart@gentoo.org</email>
-  <name>Daniel Black</name>
+  <email>mrness@gentoo.org</email>
+  <name>Alin Nastac</name>
 </maintainer>
 <longdescription>The wwwoffled program is a simple proxy server with special features for use 
 with dial-up internet links. This means that it is possible to browse web pages and read them 

@@ -1,19 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 009f32d02c222ac0b300a7758dd77987 ChangeLog 7283
+MD5 ab4f5f4a4a44358410b90d0feb16a73b ChangeLog 7511
 MD5 a627d44111b7ff1d162ac248f5c35376 files/digest-wwwoffle-2.8e 63
 MD5 cebdf87d07b34aa39e54896936f18eab files/digest-wwwoffle-2.9 62
+MD5 81b9c9d0eaf6200078fdb1380202de80 files/wwwoffle-2.9-gcc41.patch 1728
 MD5 848cabe3390aa24c7aea9d08c8d1d937 files/wwwoffle-online.confd 426
 MD5 f710c01ec4b28de6014c40ee7f4f6046 files/wwwoffle-online.initd 696
 MD5 9976f6cc21d8fd01b67cb72fc7cf3198 files/wwwoffle.initd 539
-MD5 2f092f7d958b226c98713d29cff08f9d metadata.xml 502
+MD5 3acc1c195150e4b1528fc86076e4f292 metadata.xml 496
 MD5 b32055c6ea5422b6186b09203a4315e2 wwwoffle-2.8e.ebuild 5140
-MD5 c2610a4d885521cc16f354895cfb556c wwwoffle-2.9.ebuild 5251
+MD5 c6c15a7e293d42264201335a0c907605 wwwoffle-2.9.ebuild 5290
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEP5gTjG8pv1lIUX4RAmIpAKCfQVVhb+hQtBsHT+3arDaTaHNc+wCdGied
-BW0/XOiY8Z+qauqEbKs55Us=
-=DpvK
+iD8DBQFEXFiCjG8pv1lIUX4RAj0VAJ9XHity9pcKWhL1TyM9/SE+Nd2fCACgqmpZ
+0vktbFv1y8MZDY24fpx4UGU=
+=QYOs
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9.ebuild,v 1.2 2006/04/14 12:39:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9.ebuild,v 1.3 2006/05/06 08:04:07 mrness Exp $
 
 inherit eutils
 
@@ -30,6 +30,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
+	epatch "${FILESDIR}/${P}-gcc41.patch"
 	sed -i -e 's#$(TAR) xpf #$(TAR) --no-same-owner -xpf #' \
 		"${S}/cache/Makefile.in"
 }
