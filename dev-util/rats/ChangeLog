@@ -1,9 +1,6 @@
 # ChangeLog for dev-util/rats
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rats/ChangeLog,v 1.9 2006/05/06 12:47:16 blubb Exp $
-
-  06 May 2006; Simon Stelling <blubb@gentoo.org> rats-2.1.ebuild:
-  stable on amd64
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rats/ChangeLog,v 1.10 2006/05/06 12:51:06 blubb Exp $
 
   21 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> rats-2.1.ebuild:
   Add ~amd64 for tigger@gentoo.org.
