@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1.ebuild,v 1.7 2006/05/02 04:45:23 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1.ebuild,v 1.8 2006/05/06 22:20:59 morfic Exp $
 
 inherit eutils flag-o-matic gnome2 kde-functions
 
@@ -103,6 +103,10 @@ src_install() {
 		gnome2_src_install
 	else
 		einstall	|| die "einstall failed"
+		for size in 16 22 32 48 ; do
+				insinto /usr/share/icons/hicolor/${size}x${size}/apps/
+				newins ${S}/src/celestia/kde/data/hi${size}-app-${PN}.png ${PN}.png
+		done
 	fi
 
 	dodoc AUTHORS README TODO NEWS TRANSLATORS ChangeLog \
