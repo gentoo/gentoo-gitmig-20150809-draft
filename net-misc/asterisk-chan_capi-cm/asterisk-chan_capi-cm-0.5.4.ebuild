@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi-cm/asterisk-chan_capi-cm-0.5.4.ebuild,v 1.4 2005/09/19 18:27:31 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi-cm/asterisk-chan_capi-cm-0.5.4.ebuild,v 1.5 2006/05/06 15:11:36 stkn Exp $
 
 IUSE=""
 
@@ -18,6 +18,7 @@ KEYWORDS="~ppc x86"
 
 DEPEND="!net-misc/asterisk-chan_capi
 	>=net-misc/asterisk-1.0.5-r2
+	!>=net-misc/asterisk-1.2.0
 	net-dialup/capi4k-utils"
 
 S=${WORKDIR}/chan_capi-${PV}
