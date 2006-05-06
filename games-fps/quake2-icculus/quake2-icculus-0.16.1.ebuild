@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.12 2006/03/15 22:15:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.13 2006/05/06 10:15:39 tupone Exp $
 
 inherit eutils games
 
@@ -59,6 +59,9 @@ src_unpack() {
 		env PATH=${T}:${PATH} unshar ${shar} || die "unpacking ${shar} failed"
 		rm ${shar}
 	done
+	if use xatrix ; then
+		epatch "${FILESDIR}/${P}"-gcc41.patch
+	fi
 	if use rogue ; then
 		cd "${S}"/src
 		epatch "${FILESDIR}"/0.16-rogue-nan.patch

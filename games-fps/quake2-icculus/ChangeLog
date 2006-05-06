@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-icculus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.18 2006/03/15 22:15:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.19 2006/05/06 10:15:39 tupone Exp $
+
+  06 May 2006; <Tupone@gentoo.org> +files/quake2-icculus-0.16.1-gcc41.patch,
+  quake2-icculus-0.16.1.ebuild:
+  Fixing build with xatrix and gcc-4.1, bug #118299 by Adomas Jackevicius
 
   15 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   quake2-icculus-0.16.1.ebuild:
