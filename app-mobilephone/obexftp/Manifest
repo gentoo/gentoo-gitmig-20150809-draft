@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 29a739e02b3c8582f29fb24a5bac49ab ChangeLog 5129
-MD5 c133b8829ba299b03a0e6ab757ab5f22 files/digest-obexftp-0.10.7-r1 66
+MD5 b95d5decf09736a4e22cfda00c36e2b9 ChangeLog 5555
 MD5 580f449983ce97b01d8306c9056e93b6 files/digest-obexftp-0.18 64
 MD5 877bce89edb701ed9fb5021de3812e98 files/digest-obexftp-0.19 238
-MD5 520b09e250d549cadd0b0a39118225ec files/obexftp-0.10.7-t610-jpg.patch 307
-MD5 9860ed702775ec6730786768ec7c1abb metadata.xml 337
-MD5 0a9048c4cb20de34d8f94857ba8f92b4 obexftp-0.10.7-r1.ebuild 981
+MD5 17cef382b7d9b74a67a45e34fbbcb81e files/digest-obexftp-0.19-r1 64
+MD5 6a6fe66463cf754e0bffe6c432546d25 files/obexftp-0.19-cobex_write.patch 2292
+MD5 1a820f941ddbd683086de6d92efbdf5c metadata.xml 336
 MD5 8da2275ebba1a9f714b77ff81bebc309 obexftp-0.18.ebuild 1167
+MD5 1fe0be310f8b162b9fecf3ee4ae975f4 obexftp-0.19-r1.ebuild 1295
 MD5 68d0780d9354665e56d195ada40c7360 obexftp-0.19.ebuild 1206
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEDJ1LjG8pv1lIUX4RAuvnAJ9YqDZUDKAuqWjLkcS3AVKFIajn2ACg0TkD
-719Ft/SDCG2SPs7m2UTr5iM=
-=d366
+iD8DBQFEXD1LjG8pv1lIUX4RAoH/AKCJ5Kkgv31Foh16kgzG5Yr4JP/qHwCglI94
+Q1ZkGy1W2pvCEKYiwRsDCTI=
+=6RUL
 -----END PGP SIGNATURE-----
