@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.3.5.ebuild,v 1.2 2006/05/06 11:53:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.3.5.ebuild,v 1.3 2006/05/06 11:57:16 genstef Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND="dev-libs/glib
 	dev-perl/XML-Parser
 	net-dns/bind-tools
 	>=net-libs/libosip-2.2.0
-	>=media-libs/speex-1.1.6
+	>=media-libs/speex-1.1.12
 	x86? ( xv? ( dev-lang/nasm ) )
 	gnome? ( >=gnome-base/gnome-panel-2
 		  >=gnome-base/libgnome-2
