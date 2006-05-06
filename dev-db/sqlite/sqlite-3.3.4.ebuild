@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.4.ebuild,v 1.2 2006/05/04 13:00:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.4.ebuild,v 1.3 2006/05/06 20:46:32 seemant Exp $
 
 inherit eutils
 
@@ -72,25 +72,32 @@ src_compile() {
 	emake all || die
 
 	if use doc; then
-	emake doc
+		emake doc
 	fi
 }
 
 src_test() {
-	cd ${S}
-	if use debug; then
-		emake fulltest || die "some test failed"
-	else
-		emake test || die "some test failed"
+	if use tcltk ; then
+		if has userpriv ${FEATURES} ; then
+			cd ${S}
+			if use debug; then
+				emake fulltest || die "some test failed"
+			else
+				emake test || die "some test failed"
+			fi
+		fi
 	fi
 }
 
 src_install () {
-	make DESTDIR="${D}" TCLLIBDIR="/usr/$(get_libdir)" install || die
+	make \
+		DESTDIR="${D}" \
+		TCLLIBDIR="/usr/$(get_libdir)" \
+		install || die
 
 	if ! [ -e ${DESTDIR}/usr/bin/lemon ]
 	then
-	dobin lemon
+		dobin lemon
 	fi
 
 	dodoc README VERSION

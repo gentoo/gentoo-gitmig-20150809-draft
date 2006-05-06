@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.109 2006/05/04 13:00:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.110 2006/05/06 20:46:32 seemant Exp $
+
+  06 May 2006; Seemant Kulleen <seemant@gentoo.org> sqlite-2.8.16-r3.ebuild,
+  sqlite-2.8.16-r4.ebuild, sqlite-3.3.4.ebuild, sqlite-3.3.5.ebuild,
+  sqlite-3.3.5-r1.ebuild:
+  Skip tests gracefully, based on my changes last time. Also, migrate those
+  changes to the two sqlite-2 ebuilds.
 
   04 May 2006; Seemant Kulleen <seemant@gentoo.org> sqlite-3.3.4.ebuild,
   sqlite-3.3.5.ebuild, sqlite-3.3.5-r1.ebuild:
