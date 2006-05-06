@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/afbinit
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.13 2006/04/28 00:15:41 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.14 2006/05/06 17:50:38 fmccor Exp $
+
+*afbinit-1.0.1-r4 (06 May 2006)
+
+  06 May 2006; Ferris McCormick <fmccor@gentoo.org>
+  +files/rc.afb-1.0.1-r4.patch, +afbinit-1.0.1-r4.ebuild:
+  Version bump.  Proposed fix for Bug #132464 --- problems with afbinit and
+  '/cat/ -s'.
 
   28 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-afbinit-1.0.1-r2, Manifest:
