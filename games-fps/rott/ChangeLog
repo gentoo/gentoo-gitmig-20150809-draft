@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/rott
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rott/ChangeLog,v 1.5 2005/09/16 01:19:49 mr_bones_ Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rott/ChangeLog,v 1.6 2006/05/06 23:07:21 tupone Exp $
+
+  06 May 2006; <Tupone@gentoo.org> +files/rott-1.0-gcc41.patch,
+  files/1.0-custom-datapath.patch, rott-1.0.ebuild:
+  Fix for gcc-4.1
 
   16 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> rott-1.0.ebuild:
   needs app-arch/unzip; tidy
