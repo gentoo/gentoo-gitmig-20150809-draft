@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b-r1.ebuild,v 1.1 2006/03/10 20:30:17 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b-r1.ebuild,v 1.2 2006/05/06 00:44:32 flameeyes Exp $
 
-inherit eutils autotools
+inherit eutils autotools libtool
 
 DESCRIPTION="\"M\"peg \"A\"udio \"D\"ecoder library"
 HOMEPAGE="http://mad.sourceforge.net"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mad/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug"
 
 DEPEND=""
@@ -18,11 +18,13 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epunt_cxx #74490
 
 	epatch "${FILESDIR}/libmad-0.15.1b-cflags.patch"
 
 	eautoreconf
+
+	elibtoolize
+	epunt_cxx #74490
 }
 
 src_compile() {
