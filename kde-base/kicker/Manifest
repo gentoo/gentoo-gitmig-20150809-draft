@@ -1,43 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 23ad8b301417034e295de99564a30f3a ChangeLog 5766
-RMD160 d9afb97c92c056bf9da8285b2aee8f732dd6a6ef ChangeLog 5766
-SHA256 7081b89a7e7696af896854bdd7a3e91aea6cea1d594051aa7d124ab85b36ee03 ChangeLog 5766
+MD5 79c9652267255280399df35269761d40 ChangeLog 5860
 MD5 07e3f3f7982d29e2317f32f209e06573 files/applets-configure.in.in.diff 606
-RMD160 aa5d57b3aa20dd451e0619c05bc8a4f033099b29 files/applets-configure.in.in.diff 606
-SHA256 46ed0830310bad77899c73bc2639134af87d9e07d81b64f0d44b22426f4743b2 files/applets-configure.in.in.diff 606
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kicker-3.4.1 212
-RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-kicker-3.4.1 212
-SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-kicker-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kicker-3.4.2 287
-RMD160 db88376c4259165535f83f3529f0834fb2209612 files/digest-kicker-3.4.2 287
-SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/digest-kicker-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kicker-3.4.3 68
-RMD160 fe4b253b0a7c2e30a2aa1d0d796dfcb11e30590a files/digest-kicker-3.4.3 68
-SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/digest-kicker-3.4.3 68
 MD5 612323f8728d639ddab8f055f88070ff files/digest-kicker-3.5.2 250
-RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-kicker-3.5.2 250
-SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-kicker-3.5.2 250
 MD5 3f169df7532dad28d299bdb3c4683484 kicker-3.4.1.ebuild 680
-RMD160 442156786ed96d3ce5a8253e702fd776c1180b45 kicker-3.4.1.ebuild 680
-SHA256 1a18ca38700f5d2cbc10d19ed9d8ce2080781c7078ffc61500d6869c5f459d7a kicker-3.4.1.ebuild 680
 MD5 cc9e587f4748ebb5f8aadab99eba7b8f kicker-3.4.2.ebuild 693
-RMD160 470acc3991a515aa24f3b9fd01a6e01192d4d35a kicker-3.4.2.ebuild 693
-SHA256 1808a13e1c557104536caf3b339de4d96cb8828ab0aaf03cc64ef54cfad6f845 kicker-3.4.2.ebuild 693
 MD5 4aaecbfe1572f7737c9901a9e5352c56 kicker-3.4.3.ebuild 694
-RMD160 1d4b820dc69490040339e1eb24019025e925c809 kicker-3.4.3.ebuild 694
-SHA256 4c438742b8c6d025f068089abcd8490a122d25a92d52944ddbc25937ec4ce2a9 kicker-3.4.3.ebuild 694
-MD5 5e5eada33f82c04318f7a882035fef50 kicker-3.5.2.ebuild 1006
-RMD160 5b36063a9d18d5e732c495cdd8ba9ebf8b65204d kicker-3.5.2.ebuild 1006
-SHA256 71ae26f1dabfca5cf4631c7f06679e914a0cbb24785f814d9e62519a14604aed kicker-3.5.2.ebuild 1006
+MD5 5feb29466d5c2d711c4ab770f6bff930 kicker-3.5.2.ebuild 996
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENHSpAiZjviIA2XgRAi5tAJ0QjedYYbZ8fYnCyqVr50OyjuImjgCeOD7G
-bleBPQAqohCUWKJFPeB/yZQ=
-=ynla
------END PGP SIGNATURE-----
