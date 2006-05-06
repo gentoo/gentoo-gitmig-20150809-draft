@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.31 2006/03/18 22:35:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.32 2006/05/06 00:33:31 flameeyes Exp $
+
+  06 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -libmikmod-3.1.10.ebuild, -libmikmod-3.1.10-r1.ebuild,
+  -libmikmod-3.1.11.ebuild:
+  Drop old versions.
 
 *libmikmod-3.1.11-r2 (18 Mar 2006)
 
