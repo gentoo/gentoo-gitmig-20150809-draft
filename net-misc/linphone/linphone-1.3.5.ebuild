@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.3.5.ebuild,v 1.1 2006/05/05 21:29:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.3.5.ebuild,v 1.2 2006/05/06 11:53:03 genstef Exp $
 
 inherit eutils
 
@@ -42,9 +42,11 @@ src_unpack() {
 	# fix #99083
 	epatch ${FILESDIR}/${PN}-1.0.1-ipv6-include.diff
 
-	cd ${S_ILBC}
-	# add -fPIC and custom cflags to ilbc makefile
-	epatch ${FILESDIR}/ilbc-1.2.0-makefile.diff
+	if use ilbc; then
+		cd ${S_ILBC}
+		# add -fPIC and custom cflags to ilbc makefile
+		epatch ${FILESDIR}/ilbc-1.2.0-makefile.diff
+	fi
 }
 
 src_compile() {
