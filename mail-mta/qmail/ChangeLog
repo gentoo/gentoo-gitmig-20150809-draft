@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.77 2006/04/27 22:28:21 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.78 2006/05/06 20:15:32 hansmi Exp $
+
+  06 May 2006; Michael Hanselmann <hansmi@gentoo.org>
+  files/qmail-genrsacert.sh:
+  Ignore output of renice command.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> ChangeLog:
   Fixing SHA256 digest, pass four

@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.7 2006/05/06 18:09:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.8 2006/05/06 20:15:11 hansmi Exp $
+
+  06 May 2006; Michael Hanselmann <hansmi@gentoo.org>
+  files/qmail-genrsacert.sh:
+  Ignore output of renice command.
 
 *netqmail-1.05-r2 (06 May 2006)
 

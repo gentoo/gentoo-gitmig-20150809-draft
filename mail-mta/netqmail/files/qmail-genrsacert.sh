@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/files/qmail-genrsacert.sh,v 1.1 2006/02/12 18:42:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/files/qmail-genrsacert.sh,v 1.2 2006/05/06 20:15:11 hansmi Exp $
 # Robin H. Johnson <robbat2@gentoo.org> - October 17, 2003
 #
 # This file generates the static temporary RSA keys needed for qmail to encrypt
@@ -19,7 +19,7 @@ gid="qmail"
 umask ${umaskvalue}
 
 # If you want to renice this process, uncomment the following line:
-# renice +15 "$$"
+# renice +15 "$$" >/dev/null
 
 # This is a list with bits of the generated keys. They should
 # be a power of 2 ideally and must be more than 64.
