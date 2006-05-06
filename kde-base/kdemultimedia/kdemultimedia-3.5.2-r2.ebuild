@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.2-r2.ebuild,v 1.1 2006/05/05 14:53:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.2-r2.ebuild,v 1.2 2006/05/06 12:22:11 carlo Exp $
 
-inherit kde-dist
+inherit kde-dist flag-o-matic
 
-DESCRIPTION="KDE multimedia apps: noatun, kscd, juk..."
+DESCRIPTION="KDE multimedia apps: Noatun, KsCD, Juk..."
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa audiofile encode flac gstreamer mp3 musicbrainz theora vorbis xine"
@@ -79,6 +79,9 @@ src_compile() {
 		fi
 		myconf="${myconf} $(use_with akode)"
 	fi
+
+	# fix bug 128884
+	filter-flags -fomit-frame-pointer
 
 	# Not used anymore and scheduled for removal.
 	export DO_NOT_COMPILE="${DO_NOT_COMPILE} mpeglib mpeglib_artsplug"

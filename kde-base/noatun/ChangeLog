@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/noatun
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.44 2006/04/06 03:20:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.45 2006/05/06 12:18:23 carlo Exp $
+
+  06 May 2006; Carsten Lohrke <carlo@gentoo.org> noatun-3.5.2.ebuild:
+  Filter -fomit-frame-pointer to fix bug #128884.
 
   06 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -noatun-3.5.0.ebuild,
   -noatun-3.5.1.ebuild:
