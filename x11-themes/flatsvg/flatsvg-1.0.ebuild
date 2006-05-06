@@ -1,9 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/flatsvg/flatsvg-1.0.ebuild,v 1.5 2006/05/06 13:03:59 blubb Exp $
-
-inherit kde
-need-kde 3.3
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/flatsvg/flatsvg-1.0.ebuild,v 1.6 2006/05/06 13:46:33 flameeyes Exp $
 
 DESCRIPTION="Flat SVG icon set"
 SRC_URI="http://www.atqu23.dsl.pipex.com/danny/flatSVG${PV}.tar.gz"
@@ -17,12 +14,8 @@ IUSE=""
 
 S="${WORKDIR}/FlatSVG"
 
-src_compile() {
-	einfo "Nothing to compile..."
-}
-
 src_install(){
 	cd ${S}
-	dodir ${PREFIX}/share/icons/
-	cp -rf ${S} ${D}/${PREFIX}/share/icons/FlatSVG
+	dodir "/usr/share/icons/"
+	cp -rf "${S}" "${D}/usr/share/icons/FlatSVG"
 }
