@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/quixml
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/quixml/ChangeLog,v 1.3 2005/12/05 17:42:25 hansmi Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/quixml/ChangeLog,v 1.4 2006/05/06 14:02:47 killerfox Exp $
+
+  06 May 2006; Rene Nussbaumer <killerfox@gentoo.org>
+  +quixml-0.2.1-r1.ebuild:
+  Fixed access voilation and dont zip html document. Thanks to James Rowe. See
+  bug
+
+*quixml-0.2.1-r1 (06 May 2006)
 
   05 Dec 2005; Michael Hanselmann <hansmi@gentoo.org> quixml-0.2.1.ebuild:
   Stable on hppa, ppc, sparc, x86.
