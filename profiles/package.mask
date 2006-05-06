@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5306 2006/05/06 19:46:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5307 2006/05/06 20:50:41 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -533,10 +533,6 @@ games-rpg/daimonin-client
 # Upstream has been dead for years and is unmaintained.  Also requires some
 # reworking to compile with gcc-4; bug #122022.  It will be removed in 4 weeks
 app-misc/colortail
-
-# Diego Pettenò <flameeyes@gentoo.org> (2 Apr 2006)
-# Test version
->=media-video/vlc-0.8.5_beta
 
 # Donnie Berkholz <spyderous@gentoo.org> (31 Mar 2006)
 # Development release
