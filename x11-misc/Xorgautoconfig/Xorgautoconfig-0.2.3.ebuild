@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/Xorgautoconfig-0.2.3.ebuild,v 1.3 2006/02/20 18:17:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/Xorgautoconfig-0.2.3.ebuild,v 1.4 2006/05/06 20:54:19 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,14 +16,8 @@ IUSE=""
 DEPEND=""
 RDEPEND="sys-apps/pciutils"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	sed -i -e "/^CC=/s:gcc:$(tc-getCC):" Makefile || die "Can't replace CC"
-}
-
 src_compile() {
-	emake || die "emake failed!"
+	emake CC="$(tc-getCC)" || die "emake failed!"
 }
 
 src_install() {
