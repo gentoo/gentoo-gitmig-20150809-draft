@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.9.5.ebuild,v 1.8 2006/02/26 06:44:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.9.5.ebuild,v 1.9 2006/05/06 07:27:40 mr_bones_ Exp $
 
 inherit eutils games flag-o-matic
 
@@ -20,7 +20,6 @@ DEPEND="media-libs/libpng
 	media-libs/sdl-net
 	media-libs/sdl-ttf
 	sys-libs/zlib"
-RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${PN}-b9half
 
