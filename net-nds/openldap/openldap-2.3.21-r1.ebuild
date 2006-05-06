@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.21-r1.ebuild,v 1.1 2006/05/06 10:57:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.21-r1.ebuild,v 1.2 2006/05/06 13:18:56 jokey Exp $
 
 inherit autotools eutils flag-o-matic multilib toolchain-funcs
 
@@ -92,7 +92,9 @@ openldap_find_versiontags() {
 
 				# are we on the same branch?
 				if [ "${OLD_MAJOR}" != "${PV:0:3}" ] ; then
-					openldap_upgrade_howto
+					if [[ `ls -a ${eachdir} | wc -l` > 4 ]] ; then
+						openldap_upgrade_howto
+					fi
 				fi
 			fi
 		fi
@@ -122,7 +124,14 @@ openldap_find_versiontags() {
 }
 
 pkg_setup() {
-	openldap_find_versiontags
+	if use minimal && built_with_use net-nds/openldap minimal ; then
+	    einfo
+	    einfo "Skipping scan for previous datadirs as requested by minimal useflag"
+	    einfo
+	else
+	    openldap_find_versiontags
+	fi
+
 	if use perl && built_with_use dev-lang/perl minimal ; then
 		die "You must have a complete (USE='-minimal') Perl install to use the perl backend!"
 	fi

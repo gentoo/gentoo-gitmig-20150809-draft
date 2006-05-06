@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.178 2006/05/06 10:57:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.179 2006/05/06 13:18:56 jokey Exp $
+
+  06 May 2006; Markus Ullmann <jokey@gentoo.org> openldap-2.3.21-r1.ebuild:
+  Modified Version-Tag checker and added some skip option wrt bug #132246
 
 *openldap-2.3.21-r1 (06 May 2006)
 
