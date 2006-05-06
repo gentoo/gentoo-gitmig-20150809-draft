@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk-app_conference
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_conference/ChangeLog,v 1.4 2005/09/19 18:36:20 stkn Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_conference/ChangeLog,v 1.5 2006/05/06 15:18:49 stkn Exp $
+
+*asterisk-app_conference-0.0.1_pre20060210 (06 May 2006)
+
+  06 May 2006; Stefan Knoblich <stkn@gentoo.org>
+  +files/app_conference-20060210-astcfg.diff,
+  asterisk-app_conference-0.0.1_pre20050506.ebuild,
+  +asterisk-app_conference-0.0.1_pre20060210.ebuild:
+  Version bump, 20060120 verified to compile with asterisk-1.2.x, block
+  unsupported versions in DEPEND.
 
   19 Sep 2005; Stefan Knoblich <stkn@gentoo.org>
   asterisk-app_conference-0.0.1_pre20050506.ebuild:

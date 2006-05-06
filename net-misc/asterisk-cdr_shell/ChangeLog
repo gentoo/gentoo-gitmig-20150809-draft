@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk-cdr_shell
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-cdr_shell/ChangeLog,v 1.3 2005/08/16 16:45:07 stkn Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-cdr_shell/ChangeLog,v 1.4 2006/05/06 15:16:25 stkn Exp $
+
+*asterisk-cdr_shell-20060120 (06 May 2006)
+
+  06 May 2006; Stefan Knoblich <stkn@gentoo.org>
+  asterisk-cdr_shell-20050626.ebuild, +asterisk-cdr_shell-20060120.ebuild:
+  Version bump, 20060120 verified to compile with asterisk-1.2.x, block
+  unsupported versions in DEPEND.
 
   16 Aug 2005; Stefan Knoblich <stkn@gentoo.org>
   +files/cdr_shell-20050626-ast1.2.diff, asterisk-cdr_shell-20050626.ebuild:
