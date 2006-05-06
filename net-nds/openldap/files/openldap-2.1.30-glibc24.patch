@@ -1,0 +1,12 @@
+--- openldap-2.2.28/libraries/libldap/init.c	2005-01-20 18:01:01.000000000 +0100
++++ openldap-2.2.28-patch/libraries/libldap/init.c	2006-03-14 17:17:13.000000000 +0100
+@@ -553,7 +553,7 @@
+ 		if( user == NULL ) user = getenv("LOGNAME");
+ 
+ 		if( user != NULL ) {
+-			gopts->ldo_def_sasl_authcid = user;
++			gopts->ldo_def_sasl_authcid = LDAP_STRDUP(user);
+ 		}
+     }
+ #endif
+

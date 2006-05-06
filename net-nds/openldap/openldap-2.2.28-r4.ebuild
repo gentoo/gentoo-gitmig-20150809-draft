@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r4.ebuild,v 1.3 2006/04/20 06:59:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r4.ebuild,v 1.4 2006/05/06 13:49:41 jokey Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib libtool
 
@@ -180,6 +180,10 @@ src_unpack() {
 	# make autoconf-archive compatible
 	EPATCH_OPTS="-p0 -d ${OLD_S}" epatch ${FILESDIR}/${PN}-2.1.30-autoconf-archived-fix.patch
 	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.2.28-autoconf-archived-fix.patch
+
+	# make autoconf-archive compatible
+	EPATCH_OPTS="-p1 -d ${OLD_S}" epatch ${FILESDIR}/${PN}-2.1.30-glibc24.patch
+	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-2.1.30-glibc24.patch
 
 	# add cleartext passwords backport bug #112554
 	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.2.28-cleartext-passwords.patch
