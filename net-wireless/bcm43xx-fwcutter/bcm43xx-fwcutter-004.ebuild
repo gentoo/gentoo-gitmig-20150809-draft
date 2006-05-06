@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx-fwcutter/bcm43xx-fwcutter-004.ebuild,v 1.2 2006/04/21 13:07:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx-fwcutter/bcm43xx-fwcutter-004.ebuild,v 1.3 2006/05/06 23:16:13 flameeyes Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Firmware Tool for Broadcom 43xx based wireless network devices"
 HOMEPAGE="http://bcm43xx.berlios.de"
@@ -13,6 +15,10 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND=""
 RDEPEND=">=sys-apps/hotplug-20040923-r1"
+
+src_compile() {
+	emake CC="$(tc-getCC)" || die "emake failed"
+}
 
 src_install() {
 	# Install fwcutter
