@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.9.ebuild,v 1.5 2006/05/06 21:15:53 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.10.ebuild,v 1.1 2006/05/06 21:15:53 metalgod Exp $
 
 inherit eutils gnome2 mono
 
@@ -12,7 +12,7 @@ SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="aac doc daap ipod flac mad njb vorbis"
 
 RDEPEND=">=dev-lang/mono-1.1.13
@@ -36,7 +36,7 @@ RDEPEND=">=dev-lang/mono-1.1.13
 	>=media-plugins/gst-plugins-cdparanoia-0.10.0
 	>=media-libs/musicbrainz-2.1.1
 	real? ( media-video/realplayer )
-	njb? ( >=dev-dotnet/njb-sharp-0.2.2 )
+	njb? ( >=dev-dotnet/njb-sharp-0.3.0 )
 	daap? ( >=net-dns/avahi-0.6.9 )
 	>=dev-libs/glib-2.0
 	>=gnome-base/libgnomeui-2.0
@@ -84,8 +84,16 @@ pkg_setup() {
 		$( use_enable njb)"
 }
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${PN}-0.10.9-statusbar-duration-count.patch
+}
+
 src_compile() {
-	addpredict "/root/.gconf/"
+	addpredict "/root/.gnome2"
+	addpredict "/root/.gconf"
 	addpredict "/root/.gconfd"
 	gnome2_src_configure
 	emake -j1 || "make failed"
@@ -98,6 +106,8 @@ src_install() {
 	fi
 }
 pkg_postinst() {
+	gnome2_pkg_postinst
+	einfo
 	einfo "In case you have an ipod please rebuild this package with USE=ipod"
 	einfo "If you have a audio player supported by libnjb please"
 	einfo "rebuild this package with USE=njb"
