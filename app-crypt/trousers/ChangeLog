@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.10 2006/04/27 09:41:05 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.11 2006/05/06 23:34:41 dragonheart Exp $
+
+*trousers-0.2.6 (06 May 2006)
+
+  06 May 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/trousers-0.2.6-as-needed.patch, +trousers-0.2.6.ebuild:
+  version bump
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-trousers-0.2.1,
   files/digest-trousers-0.2.3, Manifest:
