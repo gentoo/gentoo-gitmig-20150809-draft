@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.6 2006/05/06 05:19:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.7 2006/05/06 05:25:17 vapier Exp $
 
 DESCRIPTION="Portable Rexx interpreter"
 HOMEPAGE="http://regina-rexx.sourceforge.net"
@@ -15,14 +15,19 @@ DEPEND=""
 
 S=${WORKDIR}/Regina-${PV}
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 	autoconf || die "autoconf problem"
+}
+
+src_compile() {
 	econf || die "econf failed"
 	sed -i \
 		-e 's|-$(INSTALL) -m 755 -c ./rxstack.init.d $(STARTUPDIR)/rxstack||' \
 		-e "s|/usr/share/regina|${D}/usr/share/regina|" \
 		Makefile || die
-	emake -j1 || die "make problem"
+	emake CFLAGS="${CFLAGS} -fno-strict-aliasing" -j1 || die "make problem"
 }
 
 src_install() {
