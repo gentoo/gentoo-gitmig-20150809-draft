@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.196 2006/05/01 18:25:56 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.197 2006/05/06 12:33:47 allanonjl Exp $
+
+  06 May 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -gnome-vfs-2.14.0.ebuild, gnome-vfs-2.14.1.ebuild:
+  drop alpha,arm,hppa,ia64,mips, bug filed. prep for 2.14 unmask
 
 *gnome-vfs-2.14.1 (01 May 2006)
 
