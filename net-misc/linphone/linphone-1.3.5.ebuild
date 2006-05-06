@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.3.5.ebuild,v 1.3 2006/05/06 11:57:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.3.5.ebuild,v 1.4 2006/05/06 19:57:22 genstef Exp $
 
 inherit eutils
 
@@ -62,6 +62,7 @@ src_compile() {
 #	use x86 && use truespeech && \
 #		myconf="--enable-truespeech"
 
+	libtoolize --copy --force
 	econf \
 		--enable-glib \
 		--with-speex=/usr \
@@ -71,7 +72,6 @@ src_compile() {
 		`use_enable alsa` \
 		${myconf} || die "Unable to configure"
 
-	grep " \-Werror" * -Rl | xargs sed -i "s: -Werror::"
 	emake || die "Unable to make"
 
 	use ilbc && \
