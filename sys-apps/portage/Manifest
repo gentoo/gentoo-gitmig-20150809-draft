@@ -38,7 +38,6 @@ AUX README.RESCUE 137 RMD160 b8d015f266501fd1f57c91899c6815de9f9d5685 SHA1 cfc8f
 MD5 c906e2e6782e197725b70f84cfe112a4 files/README.RESCUE 137
 RMD160 b8d015f266501fd1f57c91899c6815de9f9d5685 files/README.RESCUE 137
 DIST portage-2.0.51.22.tar.bz2 257823 RMD160 068a6fbc3e41f7357d1ee4d65894e7903c467cfe size 257823
-DIST portage-2.0.53.tar.bz2 234679 RMD160 c4e8716bdc37bc2611e49b261ac82627aa3e63b9 size 234679
 DIST portage-2.0.54.tar.bz2 234784 RMD160 26c724df242a7d0c44d7fd06067bfcdbc4e3556b size 234784
 DIST portage-2.1_pre10.tar.bz2 265067 RMD160 5fa51f0ecc7ccf5072a9765c81cf3e0a593b1de2 size 265067
 DIST portage-patches-2.0.54-1.tar.bz2 4398 RMD160 8b7520b99aec0cb53a117b46345a720f5c7a68c0 size 4398
@@ -46,9 +45,6 @@ DIST portage-patches-2.0.54-2.tar.bz2 6722 RMD160 a9fbb40ec45c62db6b94e79b33ebab
 EBUILD portage-2.0.51.22-r3.ebuild 5796 RMD160 3bdf43216d1d70e8547bac9637a394dbcd9a7bd2 SHA1 b88b2898eb5ba5b4471a10f8fa82df9b8dc747f0 size 5796
 MD5 4df85686b65f5591383e16bf3d6845ba portage-2.0.51.22-r3.ebuild 5796
 RMD160 3bdf43216d1d70e8547bac9637a394dbcd9a7bd2 portage-2.0.51.22-r3.ebuild 5796
-EBUILD portage-2.0.53.ebuild 3694 RMD160 fc5dbfd75d72e465614d187dc72ee03d208ed179 SHA1 ac61309138f1ca8e2054c45b3dd0f1a1fdca93f0 size 3694
-MD5 32e170fcab414ec74bf14dc5a44d581f portage-2.0.53.ebuild 3694
-RMD160 fc5dbfd75d72e465614d187dc72ee03d208ed179 portage-2.0.53.ebuild 3694
 EBUILD portage-2.0.54-r1.ebuild 3998 RMD160 c654aaedcd2c20c78b8ced9ba5407af631819e96 SHA1 33ff554a9c1b4021bc982a45c82ea5c5ff6adeef size 3998
 MD5 4f62f37006f604eb560eaa27666edd6e portage-2.0.54-r1.ebuild 3998
 RMD160 c654aaedcd2c20c78b8ced9ba5407af631819e96 portage-2.0.54-r1.ebuild 3998
@@ -69,8 +65,6 @@ MD5 dc02eeaf8060043bfa8d483a42696963 metadata.xml 276
 RMD160 addc800a374a637032ce56d1a1928542d5c9ef74 metadata.xml 276
 MD5 1afde18626699ccfbc46fdd394c8edeb files/digest-portage-2.0.51.22-r3 151
 RMD160 49e1e3e1f2a2002ff24296f50498930449d4e4b7 files/digest-portage-2.0.51.22-r3 151
-MD5 06a5032e82ea02f71b5d2927b6b791f0 files/digest-portage-2.0.53 145
-RMD160 067425f136dbd09f8e1836c84ed08b7c9a97310e files/digest-portage-2.0.53 145
 MD5 65372f5d0f6b19c94cdae92150cdab01 files/digest-portage-2.0.54 145
 RMD160 603688a05b8057b777d33ebefb17e1c9fcc4b938 files/digest-portage-2.0.54 145
 MD5 5b857931bd168ec3192114e2ab6c5a72 files/digest-portage-2.0.54-r1 306
@@ -82,7 +76,7 @@ RMD160 e0ea7e4b4dd248a3511aad5abbe3f58fdd740d0e files/digest-portage-2.1_pre10-r
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEXPhj/ejvha5XGaMRAoO5AKDrnv4XETpIPPWx7EMznfhHgHAY+QCfYfNc
-FTXDwXUdMrGtumgHtv+I/j4=
-=0opq
+iD8DBQFEXP5w/ejvha5XGaMRAh5tAJ9g/CZjjxd9ze0c2hYqrLJ/OxrjvwCfRgZx
+XlkDMbNwOT/Pp1+KYuzS4VI=
+=irpn
 -----END PGP SIGNATURE-----
