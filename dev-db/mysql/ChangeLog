@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.322 2006/05/06 05:45:31 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.323 2006/05/06 10:19:49 chtekk Exp $
+
+  06 May 2006; Luca Longinotti <chtekk@gentoo.org>
+  files/digest-mysql-4.0.26-r1, files/digest-mysql-4.1.14-r1,
+  files/digest-mysql-4.1.18-r61, files/digest-mysql-4.1.19,
+  files/digest-mysql-5.0.19-r1, files/digest-mysql-5.0.21,
+  files/digest-mysql-5.1.7_beta, Manifest:
+  Fix digests, *PLEASE* make sure to update your eclass/ directory too, as we
+  changed how patches are worked with!
 
   06 May 2006; <tcort@gentoo.org> mysql-4.1.19.ebuild:
   Stable on alpha wrt security Bug #132146.
