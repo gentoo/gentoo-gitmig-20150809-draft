@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.0_pre.ebuild,v 1.1 2006/05/05 05:28:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.0_pre.ebuild,v 1.2 2006/05/06 19:20:41 flameeyes Exp $
 
-inherit eutils flag-o-matic pam autotools subversion
+inherit eutils flag-o-matic pam autotools multilib subversion
 
 MY_P=${P/_/}
 
@@ -16,7 +16,7 @@ ESVN_REPO_URI="http://svn.easysw.com/public/cups/trunk"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="ssl slp pam samba nls gnutls"
+IUSE="ssl slp pam samba nls gnutls dbus"
 
 DEP="pam? ( virtual/pam )
 	ssl? (
@@ -24,6 +24,7 @@ DEP="pam? ( virtual/pam )
 		gnutls? ( net-libs/gnutls )
 		)
 	slp? ( >=net-libs/openslp-1.0.4 )
+	dbus? ( sys-apps/dbus )
 	>=media-libs/libpng-1.2.1
 	>=media-libs/tiff-3.5.5
 	>=media-libs/jpeg-6b"
@@ -44,17 +45,16 @@ pkg_setup() {
 }
 
 src_compile() {
+	# cups does not use autotools "the usual way" and ship a static config.h.in
 	eaclocal
-	_elibtoolize --copy --force
 	eautoconf
-	eautomake
-	elibtoolize
+
 	local myconf
 
 	use ssl && \
 		myconf="${myconf} $(use_enable gnutls) $(use_enable !gnutls openssl)"
 
-	setenv DSOFLAGS ${LDFLAGS}
+	export DSOFLAGS="${LDFLAGS}"
 	econf \
 		--with-cups-user=lp \
 		--with-cups-group=lp \
@@ -64,12 +64,16 @@ src_compile() {
 		$(use_enable ssl) \
 		$(use_enable slp) \
 		$(use_enable nls) \
+		$(use_enable dbus) \
 		--enable-libpaper \
 		--enable-threads \
 		--enable-static \
 		--disable-pdftops \
 		${myconf} \
 		|| die "econf failed"
+
+	sed -i -e 's:SERVERBIN.*:SERVERBIN = $(BUILDROOT)/usr/'$(get_libdir)'/cups:' Makedefs
+	sed -i -e 's:#define CUPS_SERVERBIN.*:#define CUPS_SERVERBIN "/usr/'$(get_libdir)'/cups":' config.h
 
 	emake || die "emake failed"
 }
@@ -97,8 +101,10 @@ src_install() {
 
 	pamd_mimic_system cups auth account
 
+	sed -i -e "s:/usr/lib/cups:/usr/$(get_libdir)/cups:" ${D}/etc/xinetd.d/cups-lpd
+
 	# install pdftops filter
-	exeinto /usr/lib/cups/filter/
+	exeinto /usr/$(get_libdir)/cups/filter/
 	newexe ${FILESDIR}/pdftops.pl pdftops
 
 	fowners lp:lp /var/log/cups /var/run/cups/certs /var/cache/cups \
