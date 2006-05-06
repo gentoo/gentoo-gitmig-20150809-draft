@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.73 2006/04/21 13:45:32 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.74 2006/05/06 12:55:48 allanonjl Exp $
+
+  06 May 2006; John N. Laliberte <allanonjl@gentoo.org>
+  sound-juicer-2.14.0.ebuild:
+  drop alpha,hppa,ia64, bug filed. prep for 2.14 unmask
 
   21 Apr 2006; John N. Laliberte <allanonjl@gentoo.org>
   sound-juicer-2.14.0.ebuild:
