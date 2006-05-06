@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r4.ebuild,v 1.2 2006/05/01 15:21:33 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r4.ebuild,v 1.3 2006/05/06 12:14:26 carlo Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
@@ -16,6 +16,8 @@ IUSE="acl alsa arts cups doc jpeg2k kerberos legacyssl openexr spell ssl tiff ze
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
+
+# Added aspell-en as dependency to work around bug 131512.
 RDEPEND="$(qt_min_version 3.3.3)
 	arts? ( ~kde-base/arts-${PV} )
 	app-arch/bzip2
@@ -35,7 +37,7 @@ RDEPEND="$(qt_min_version 3.3.3)
 	kerberos? ( virtual/krb5 )
 	jpeg2k? ( media-libs/jasper )
 	openexr? ( >=media-libs/openexr-1.2 )
-	spell? ( || ( app-text/aspell
+	spell? ( || (  ( app-text/aspell app-dicts/aspell-en )
 	              app-text/ispell ) )
 	zeroconf? ( net-misc/mDNSResponder )
 	virtual/fam
