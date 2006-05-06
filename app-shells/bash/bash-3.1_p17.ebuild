@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p17.ebuild,v 1.1 2006/04/14 22:51:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p17.ebuild,v 1.2 2006/05/06 00:58:51 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -65,6 +65,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-3.0-trap-fg-signals.patch
 	# Fix -/bin/bash login shell #118257
 	epatch "${FILESDIR}"/bash-3.1-fix-dash-login-shell.patch
+	# Fix /dev/fd test with FEATURES=userpriv #131875
+	epatch "${FILESDIR}"/bash-3.1-dev-fd-test-as-user.patch
 #	# Fix generation of signals list when cross-compiling
 #	epatch "${FILESDIR}"/${PN}-3.0-cross-signals.patch
 	# Log bash commands to syslog #91327
