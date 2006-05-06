@@ -1,6 +1,15 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.33 2006/05/06 12:10:46 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.34 2006/05/06 12:41:23 ferdy Exp $
+
+*ssmtp-2.61-r31 (06 May 2006)
+*ssmtp-2.61-r2 (06 May 2006)
+
+  06 May 2006; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/ssmtp-2.61-bug127592.patch, +ssmtp-2.61-r2.ebuild,
+  +ssmtp-2.61-r31.ebuild:
+  Add patches and fixes from bugs #127592 and #112795. Thanks to jer and
+  flameeyes.
 
 *ssmtp-2.61-r30 (06 May 2006)
 
