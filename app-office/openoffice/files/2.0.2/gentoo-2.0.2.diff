@@ -31,3 +31,21 @@
  # Fix ODK Java bits
  odk-java-wizpanel.diff
  # add possibility to set ARCH_FLAGS when building libnas
+--- patches/src680/vba-sc-handleautoshapemacro-import.diff	2006/02/28 12:30:52	1.4
++++ patches/src680/vba-sc-handleautoshapemacro-import.diff	2006/05/05 15:08:57	1.6
+@@ -207,6 +207,15 @@
+ diff -u -p -r1.11 fusel.cxx
+ --- sc/source/ui/drawfunc/fusel.cxx	8 Sep 2005 20:58:07 -0000	1.11
+ +++ sc/source/ui/drawfunc/fusel.cxx	14 Dec 2005 11:42:42 -0000
++@@ -55,7 +55,7 @@
++ #include <svx/svdpagv.hxx>
++ #include <svx/outlobj.hxx>
++ #include <svx/svdocapt.hxx>
++-
+++#include <sfx2/app.hxx>
++ 
++ #ifndef _COM_SUN_STAR_EMBED_EMBEDSTATES_HPP_
++ #include <com/sun/star/embed/EmbedStates.hpp>
+ @@ -70,6 +70,7 @@
+  #include "drawpage.hxx"
+  #include "globstr.hrc"
