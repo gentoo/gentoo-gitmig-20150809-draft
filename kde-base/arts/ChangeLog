@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.206 2006/04/06 00:45:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.207 2006/05/06 00:39:06 flameeyes Exp $
+
+  06 May 2006; Diego Pettenò <flameeyes@gentoo.org> arts-3.5.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> -arts-3.5.0.ebuild,
   -arts-3.5.0-r1.ebuild, -arts-3.5.1.ebuild:
