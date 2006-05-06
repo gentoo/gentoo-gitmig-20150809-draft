@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36-r1.ebuild,v 1.14 2005/12/31 11:03:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36-r1.ebuild,v 1.15 2006/05/06 00:14:17 flameeyes Exp $
 
 inherit libtool gnome.org eutils
 
@@ -28,6 +28,10 @@ src_unpack() {
 	# please note, this is a conditional, version specific patch!!!
 	# when bumping avoid bugs like #103969
 	use ppc-macos && epatch ${FILESDIR}/${P}-ppc-macos.patch
+
+	epatch "${FILESDIR}/${P}-mode_t.patch"
+
+	elibtoolize
 }
 
 src_compile() {
@@ -35,11 +39,9 @@ src_compile() {
 		$(use_enable static) $(use_enable debug debugging) $(use_enable alsa) \
 		$(use_with tcpd libwrap)"
 
-	elibtoolize
-
 	econf $myconf || die "Configure failed"
 
-	make || die "Make failed"
+	emake || die "Make failed"
 }
 
 src_install() {
@@ -48,14 +50,14 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog MAINTAINERS NEWS README TIPS TODO
 
-	[ -d "docs/html" ] && dohtml -r docs/html/*
+	[[ -d "docs/html" ]] && dohtml -r docs/html/*
 
 	newconfd ${FILESDIR}/esound.conf.d esound
 
 	extradepend=""
 	use tcpd && extradepend=" portmap"
 	use alsa && extradepend="$extradepend alsasound"
-	sed "s/@extradepend@/$extradepend/" <${FILESDIR}/esound.init.d >${T}/esound
+	sed -e "s/@extradepend@/$extradepend/" ${FILESDIR}/esound.init.d >${T}/esound
 	doinitd ${T}/esound
 
 }
