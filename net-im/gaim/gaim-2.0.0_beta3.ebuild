@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3.ebuild,v 1.4 2006/04/30 02:26:54 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3.ebuild,v 1.5 2006/05/06 19:54:35 anarchy Exp $
 
-inherit flag-o-matic eutils toolchain-funcs debug multilib mono
+inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools
 
 MY_PV=${PV/_beta/beta}
 MY_P="${PN}-${MY_PV}"
@@ -112,7 +112,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${PN}-2.0.0-as-needed.patch
+	epatch ${FILESDIR}/${P}-as-needed.patch
+
+	eautomake || die "Failed running eautomake"
 }
 
 src_compile() {
