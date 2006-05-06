@@ -1,37 +1,37 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.5 2005/07/10 21:08:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.6 2006/05/06 05:19:28 vapier Exp $
 
-S="${WORKDIR}/Regina-${PV}"
-HOMEPAGE="http://regina-rexx.sourceforge.net"
 DESCRIPTION="Portable Rexx interpreter"
+HOMEPAGE="http://regina-rexx.sourceforge.net"
 SRC_URI="mirror://sourceforge/regina-rexx/Regina-REXX-${PV}.tar.gz"
 
-SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~sparc ~ppc hppa ~amd64"
+SLOT="0"
+KEYWORDS="~amd64 hppa ~ppc ~s390 ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
 
+S=${WORKDIR}/Regina-${PV}
+
 src_compile() {
 	autoconf || die "autoconf problem"
 	econf || die "econf failed"
-	mv Makefile Makefile~
-	sed <Makefile~ >Makefile \
+	sed -i \
 		-e 's|-$(INSTALL) -m 755 -c ./rxstack.init.d $(STARTUPDIR)/rxstack||' \
-		-e "s|/usr/share/regina|${D}/usr/share/regina|"
+		-e "s|/usr/share/regina|${D}/usr/share/regina|" \
+		Makefile || die
 	emake -j1 || die "make problem"
 }
 
 src_install() {
-	einstall datadir=${D}/usr/share/regina || die
-	rm -rf ${D}/etc/rc.d
+	einstall datadir="${D}"/usr/share/regina || die
+	rm -rf "${D}"/etc/rc.d
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/rxstack
+	newinitd "${FILESDIR}"/rxstack
 
-	dodoc BUGS COPYING-LIB HACKERS.txt README.Unix README_SAFE TODO
+	dodoc BUGS HACKERS.txt README.Unix README_SAFE TODO
 }
 
 pkg_postinst() {
