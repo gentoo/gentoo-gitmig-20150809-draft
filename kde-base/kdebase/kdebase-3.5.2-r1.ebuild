@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.2-r1.ebuild,v 1.1 2006/04/17 18:36:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.2-r1.ebuild,v 1.2 2006/05/06 10:40:03 carlo Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -36,7 +36,7 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	xcomposite? ( || ( (
 			x11-libs/libXcomposite
 			x11-libs/libXdamage
-			) <=x11-base/xorg-x11-6.9 )
+			) <x11-base/xorg-x11-7 )
 		)
 	|| ( (
 			x11-libs/libX11
@@ -67,7 +67,7 @@ DEPEND="${DEPEND}
 	xcomposite? ( || ( (
 			x11-proto/compositeproto
 			x11-proto/damageproto
-			) <=x11-base/xorg-x11-6.9 )
+			) <x11-base/xorg-x11-7 )
 		)
 	|| ( (
 			xscreensaver? ( x11-proto/scrnsaverproto )
