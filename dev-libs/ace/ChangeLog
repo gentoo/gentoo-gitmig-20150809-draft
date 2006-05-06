@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/ace
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.31 2006/02/04 02:37:03 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.32 2006/05/06 14:51:27 tantive Exp $
+
+*ace-5.5 (06 May 2006)
+
+  06 May 2006; Michael Imhof <tantive@gentoo.org> -ace-5.4.3.ebuild,
+  ace-5.4.6.ebuild, +ace-5.5.ebuild:
+  Removed old ebuilds. Marked x86.
+
+  04 May 2006; Michael Imhof <tantive@gentoo.org> +ace-5.5.ebuild:
+  Version bumped. Closes #131584.
 
   04 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> ace-5.4.6.ebuild:
   Make modular X friendly, add missing X to IUSE.
