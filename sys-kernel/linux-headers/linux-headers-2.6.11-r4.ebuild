@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.11-r4.ebuild,v 1.13 2006/04/11 00:26:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.11-r4.ebuild,v 1.14 2006/05/06 16:31:02 flameeyes Exp $
 
 ETYPE="headers"
 H_SUPPORTEDARCH="alpha amd64 arm bfin cris hppa ia64 m68k nios2 ppc ppc64 s390 sh sparc x86"
@@ -54,4 +54,7 @@ src_unpack() {
 	if use ppc && [[ ${PROFILE_ARCH} == "ppc64" ]]; then
 		epatch "${FILESDIR}"/2.6.11-ppc64-32ul-spinlock.patch
 	fi
+
+	# Allow to install in Gentoo/FreeBSD for crosscompile purposes
+	[[ ${CHOST} == *-freebsd* ]] && sed -i -e 's:<malloc.h>:<stdlib.h>:g' ${S}/scripts/genksyms/*
 }

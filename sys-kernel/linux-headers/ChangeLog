@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.174 2006/04/29 21:08:35 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.175 2006/05/06 16:31:02 flameeyes Exp $
+
+  06 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  linux-headers-2.6.11-r4.ebuild:
+  Replace malloc.h with stdlib.h when building on FreeBSD libc.
 
   29 Apr 2006; <plasmaroo@gentoo.org> linux-headers-2.6.11-r5.ebuild:
   Fix #131005.
