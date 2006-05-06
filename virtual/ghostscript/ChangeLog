@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ghostscript
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ghostscript/ChangeLog,v 1.2 2006/04/06 20:02:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ghostscript/ChangeLog,v 1.3 2006/05/06 21:55:57 genstef Exp $
+
+  06 May 2006; Stefan Schweizer <genstef@gentoo.org> ghostscript-0.ebuild:
+  Make gs-esp-8 default for ~arch systems only until all arches stabilized it
 
 *ghostscript-0 (01 Apr 2006)
 
