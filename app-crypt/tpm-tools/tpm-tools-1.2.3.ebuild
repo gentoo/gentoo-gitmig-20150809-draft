@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.1.0.ebuild,v 1.2 2006/05/06 22:28:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.2.3.ebuild,v 1.1 2006/05/06 22:28:05 dragonheart Exp $
 
 inherit autotools
 
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	epatch "${FILESDIR}/${P}-as-needed.patch"
 	cd "${S}"
 
 	# workaround econf "updating config.sub" sandbox violation
@@ -33,8 +34,6 @@ src_unpack() {
 	sed -i '/^gettextize/d' ./bootstrap.sh
 	sed -i '/\<po\>/d' Makefile.am
 	sed -i -e '/AM_GNU_GETTEXT/d' -e '\:po/Makefile.in:d' configure.in
-
-	epatch "${FILESDIR}/${P}-as-needed.patch"
 
 	eautoreconf
 }

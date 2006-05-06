@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/tpm-tools
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/ChangeLog,v 1.2 2005/09/17 13:35:48 dragonheart Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/ChangeLog,v 1.3 2006/05/06 22:28:05 dragonheart Exp $
+
+*tpm-tools-1.2.3 (06 May 2006)
+
+  06 May 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/tpm-tools-1.1.0-as-needed.patch,
+  +files/tpm-tools-1.2.3-as-needed.patch, tpm-tools-1.1.0.ebuild,
+  +tpm-tools-1.2.3.ebuild:
+  as-needed patch per bug #131849 thanks to TGL <degrenier@easyconnect.fr>.
+  Version bump to 1.2.3 also done.
 
 *tpm-tools-1.1.0 (17 Sep 2005)
 
