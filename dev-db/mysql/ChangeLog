@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.320 2006/05/05 19:51:39 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.321 2006/05/06 05:18:23 halcy0n Exp $
+
+  06 May 2006; Mark Loeser <halcy0n@gentoo.org> mysql-4.1.19.ebuild:
+  Stable on x86; bug #132146
 
 *mysql-5.0.21 (05 May 2006)
 *mysql-4.1.19 (05 May 2006)
