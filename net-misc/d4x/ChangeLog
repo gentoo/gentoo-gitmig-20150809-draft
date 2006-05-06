@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/d4x
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.39 2006/04/24 00:42:44 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.40 2006/05/06 17:20:06 nelchael Exp $
+
+*d4x-2.5.7.1 (06 May 2006)
+
+  06 May 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/d4x-2.5.7.1-libintl_fix.patch, +d4x-2.5.7.1.ebuild:
+  Version bump, see bug #130479.
 
   24 Apr 2006; Luis Medinas <metalgod@gentoo.org> d4x-2.5.6.ebuild:
   Stable on amd64. Bug #130803.
