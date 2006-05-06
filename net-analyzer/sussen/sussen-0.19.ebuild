@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.19.ebuild,v 1.2 2006/05/02 03:27:44 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.19.ebuild,v 1.3 2006/05/06 15:56:28 jokey Exp $
 
 inherit gnome2 mono autotools
 
@@ -15,6 +15,7 @@ KEYWORDS="~x86"
 RDEPEND="=dev-lang/mono-1.1*
 	=dev-dotnet/gtk-sharp-2.4*
 	=dev-dotnet/gnome-sharp-2.4*
+	=dev-dotnet/gconf-sharp-2.4*
 	=dev-dotnet/glade-sharp-2.4*
 	gnome-base/gnome-panel"
 
