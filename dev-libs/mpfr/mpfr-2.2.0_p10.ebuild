@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.2.0_p10.ebuild,v 1.2 2006/05/06 04:58:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.2.0_p10.ebuild,v 1.3 2006/05/06 06:51:40 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,7 +37,7 @@ src_unpack() {
 	done
 
 	# Disable buggy code on s390/hppa #126082
-	epatch "${FILESDIR}"/${PV}/debian-disable-buggy-umul_ppmm.patch
+	epatch "${FILESDIR}"/${MY_PV}/debian-disable-buggy-umul_ppmm.patch
 }
 
 src_compile() {

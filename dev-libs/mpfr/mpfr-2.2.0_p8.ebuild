@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.2.0_p8.ebuild,v 1.13 2006/05/06 04:22:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.2.0_p8.ebuild,v 1.14 2006/05/06 06:51:40 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -36,8 +36,8 @@ src_unpack() {
 		fi
 	done
 
-	# Fix hppa 1.1 computation bug
-	[[ ${CHOST} == hppa[^2]* ]]  && sed -e 's/__hpux/__hppa__/' -i "${S}/mul.c"
+	# Disable buggy code on s390/hppa #126082
+	epatch "${FILESDIR}"/${MY_PV}/debian-disable-buggy-umul_ppmm.patch
 }
 
 src_compile() {
