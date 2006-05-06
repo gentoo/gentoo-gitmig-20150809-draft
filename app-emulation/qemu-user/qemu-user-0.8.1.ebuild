@@ -1,20 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.8.0.20060329.ebuild,v 1.4 2006/05/06 08:52:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.8.1.ebuild,v 1.1 2006/05/06 08:52:33 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Multi-platform & multi-targets cpu emulator and dynamic translator"
 HOMEPAGE="http://fabrice.bellard.free.fr/qemu/"
-SRC_URI="http://fabrice.bellard.free.fr/qemu/${P/-user/}.tar.bz2"
+SRC_URI="http://fabrice.bellard.free.fr/qemu/${P/-user/}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc -alpha -sparc ~amd64"
+KEYWORDS="-alpha ~amd64 ~ppc -sparc ~x86"
 IUSE=""  #qvm86 debug nptl qemu-fast nptlonly"
-RESTRICT="nostrip"
+RESTRICT="nostrip test"
 
-DEPEND="app-text/texi2html
+DEPEND="virtual/libc
+	app-text/texi2html
 	!<=app-emulation/qemu-0.7.0"
 RDEPEND=""
 
@@ -39,7 +40,6 @@ src_unpack() {
 	epatch ${FILESDIR}/qemu-ppc-dirty-hack.patch
 	epatch ${FILESDIR}/qemu-0.8.0-gcc4-hacks.patch
 	epatch ${FILESDIR}/qemu-0.8.0-stwbrx.patch
-
 	# Alter target makefiles to accept CFLAGS set via flag-o.
 	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
 		Makefile Makefile.target tests/Makefile
