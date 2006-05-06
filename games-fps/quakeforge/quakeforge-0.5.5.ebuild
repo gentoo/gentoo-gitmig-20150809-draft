@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.10 2006/03/27 20:35:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.11 2006/05/06 22:11:49 tupone Exp $
 
 inherit eutils games
 
@@ -48,8 +48,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-ipv6.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}"-ipv6.patch \
+		"${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_compile() {
