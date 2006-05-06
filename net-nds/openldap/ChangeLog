@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.177 2006/05/03 11:47:01 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.178 2006/05/06 10:57:47 jokey Exp $
+
+*openldap-2.3.21-r1 (06 May 2006)
+
+  06 May 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/openldap-2.3.21-ppolicy.patch, +openldap-2.3.21-r1.ebuild:
+  Adding overlays support wrt bug #132263, thanks to Chris Covington and Dean
+  Baender
 
   03 May 2006; Benjamin Smee <strerror@gentoo.org> openldap-2.3.21.ebuild:
   trivial fix for bug #132100
