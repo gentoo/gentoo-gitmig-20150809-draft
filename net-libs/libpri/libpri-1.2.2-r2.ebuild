@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.2.2-r2.ebuild,v 1.1 2006/05/06 14:37:33 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.2.2-r2.ebuild,v 1.2 2006/05/06 14:41:20 stkn Exp $
 
 inherit eutils
 
@@ -20,8 +20,6 @@ HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="http://ftp.digium.com/pub/libpri/${MY_P}.tar.gz
 	bri? ( http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )"
 #	bri? ( http://www.netdomination.org/pub/asterisk/libpri-${PV}-bristuff-${BRI_VERSION}.diff.gz )"
-
-RESTRICT="nomirror"
 
 S="${WORKDIR}/${MY_P}"
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpri
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.51 2006/05/06 14:37:33 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.52 2006/05/06 14:41:20 stkn Exp $
+
+  06 May 2006; Stefan Knoblich <stkn@gentoo.org> libpri-1.2.2-r2.ebuild:
+  Remove RESTRICT from ebuild.
 
 *libpri-1.2.2-r2 (06 May 2006)
 
