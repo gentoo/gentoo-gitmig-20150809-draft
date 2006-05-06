@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.98 2006/03/17 08:25:10 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.99 2006/05/06 12:46:05 allanonjl Exp $
+
+  06 May 2006; John N. Laliberte <allanonjl@gentoo.org>
+  gnome-icon-theme-2.14.2.ebuild:
+  drop alpha,arm,ia64,mips, bug filed.  prep for 2.14 unmask.
 
 *gnome-icon-theme-2.14.2 (17 Mar 2006)
 
