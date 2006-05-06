@@ -1,19 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e98c4d49a6152d2e69241995be2e0af5 ChangeLog 519
+MD5 3bb807374c71da9e2a2a2af4712a66cf ChangeLog 741
 MD5 e6e465b4bb0965b1aac11a0a4593f159 files/confd 878
 MD5 45304980f0e620c0898fdc2132d2e7a1 files/digest-vdr-ffnetdev-0.0.5 70
 MD5 ab9ffdebbbee935befd1e314001ae333 files/digest-vdr-ffnetdev-0.1.0 70
 MD5 fea860de4df26202a983ae2ecaeadad4 files/rc-addon.sh 545
+MD5 9745931e3717cc19f99414b2039775dc files/vdr-ffnetdev-0.1.0-bigpatch-headers.diff 1174
 MD5 6ed3a923400dbba2390463cc6d5c8313 metadata.xml 465
 MD5 cfb54b90eb28a8d13f77574685881989 vdr-ffnetdev-0.0.5.ebuild 610
-MD5 20d8322f0393f3ede4ece984463acfc0 vdr-ffnetdev-0.1.0.ebuild 627
+MD5 2abb7000dc731dfdc4fbc055bd62bdd9 vdr-ffnetdev-0.1.0.ebuild 798
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 Comment: no further Information
 
-iD8DBQFEL/LSdn07HTTCgIoRAjHzAJ9qIZALD2L2utH9VWW64UeoQQISaACghiJa
-q7UxNuHrlSri+v1XdCv0zSU=
-=0Fiz
+iD8DBQFEXRRVdn07HTTCgIoRAocpAJ4qy3o2QKmZrWprLY7vHiTlQv8bTQCfRKpL
+DIb96m4k33FKQwEUHn2GIsQ=
+=sBr9
 -----END PGP SIGNATURE-----
