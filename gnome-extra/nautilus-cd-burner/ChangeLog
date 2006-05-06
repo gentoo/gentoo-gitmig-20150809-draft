@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/nautilus-cd-burner
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.126 2006/05/02 21:33:25 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.127 2006/05/06 13:34:16 allanonjl Exp $
+
+  06 May 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -nautilus-cd-burner-2.14.0.2.ebuild, nautilus-cd-burner-2.14.1.ebuild:
+  drop alpha,hppa,ia64,mips, bug filed. prep for 2.14 unmask.
 
 *nautilus-cd-burner-2.14.1 (02 May 2006)
 
