@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.5.0.3.ebuild,v 1.2 2006/05/03 03:17:22 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.5.0.3.ebuild,v 1.3 2006/05/06 15:06:22 truedfx Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -59,14 +59,14 @@ linguas() {
 	for LANG in ${LINGUAS}; do
 		if hasq ${LANG} ${LANGS//-/_} en; then
 			hasq ${LANG//_/-} ${linguas} || \
-				linguas="${linguas} ${LANG//_/-}"
+				linguas="${linguas:+"${linguas} "}${LANG//_/-}"
 			continue
 		else
 			local SLANG
 			for SLANG in ${SHORTLANGS}; do
 				if [[ ${LANG} == ${SLANG%%-*} ]]; then
 					hasq ${SLANG} ${linguas} || \
-						linguas="${linguas} ${SLANG}"
+						linguas="${linguas:+"${linguas} "}${SLANG}"
 					continue 2
 				fi
 			done
