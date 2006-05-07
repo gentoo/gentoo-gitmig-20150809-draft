@@ -5,4 +5,5 @@
 	<maintainer>
 		<email>jhuebel@gentoo.org</email>
 	</maintainer>
+	<longdescription>command line program for reading, parsing and setting iTunes-style metadata in MPEG4 files</longdescription>
 </pkgmetadata>
