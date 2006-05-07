@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.13.5.ebuild,v 1.4 2006/05/07 21:39:10 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.13.5.ebuild,v 1.5 2006/05/07 22:49:51 allanonjl Exp $
 
 inherit eutils gnome2 autotools
 
@@ -50,5 +50,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 
 	cp aclocal.m4 old_macros.m4
+	# rename some things so they get regenerated and we don't get a mismatch
+	sed -i -e 's:AM_AUTOMAKE_VERSION:AM_AUTOMAKE_VERSION2:' old_macros.m4
+	sed -i -e 's:AM_INIT_AUTOMAKE:AM_INIT_AUTOMAKE2:' old_macros.m4
+	sed -i -e 's:AM_SET_CURRENT_AUTOMAKE_VERSION:AM_SET_CURRENT_AUTOMAKE_VERSION2:' old_macros.m4
 	AT_M4DIR="." eautoreconf
 }
