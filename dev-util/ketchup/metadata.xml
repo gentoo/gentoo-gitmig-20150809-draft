@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
- <email>morfic@gentoo.org</email>
- <name>Daniel Goller</name>
-</maintainer>
 <longdescription>
 Ketchup allows quick and easy following of/or switching between stable,
 -git,  -rc, -mm, -rt (Ingo Molnar's realtime kernel), 
