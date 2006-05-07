@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/quodlibet-cddb
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-cddb/ChangeLog,v 1.1 2006/05/07 19:41:55 tcort Exp $
+
+*quodlibet-cddb-3198 (07 May 2006)
+
+  07 May 2006; <tcort@gentoo.org> +metadata.xml,
+  +quodlibet-cddb-3198.ebuild:
+  Initial Commit. Ebuild by Kai Huuhko <kai.huuhko@gmail.com> and Thomas Cort
+  <tcort@gentoo.org>.
+
