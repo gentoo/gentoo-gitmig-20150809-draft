@@ -36,3 +36,24 @@ http://www.directfb.org/index.php/viewcvs.cgi/DirectFB/include/directfb.h.diff?r
  
    this->info.wm_available = 1;
    this->info.hw_available = 1;
+
+http://bugs.gentoo.org/132571
+And another change:
+    DIKI_ALTGR is gone. The key right to the space bar is the right alt key.
+    No matter which map is loaded, the identifiers are just named hardware keys,
+    where you really specify the physical entity on your keyboard. In this case
+    it's always DIKI_ALT_R, no matter if it's mapped to DIKS_ALTGR or DIKS_ALT.
+    On standard keyboards it's also always the same hardware key code, no matter
+    if you by a German keyboard with AltGr or a U.$. one with Alt.
+
+--- src/video/directfb/SDL_DirectFB_events.c
++++ src/video/directfb/SDL_DirectFB_events.c
+@@ -155,7 +155,7 @@ void DirectFB_InitOSKeymap (_THIS)
+   keymap[DIKI_SHIFT_L - DIKI_UNKNOWN] = SDLK_LSHIFT;
+   keymap[DIKI_SHIFT_R - DIKI_UNKNOWN] = SDLK_RSHIFT;
+   keymap[DIKI_ALT_L - DIKI_UNKNOWN] = SDLK_LALT;
+-  keymap[DIKI_ALTGR - DIKI_UNKNOWN] = SDLK_RALT;
++  keymap[DIKI_ALT_R - DIKI_UNKNOWN] = SDLK_RALT;
+   keymap[DIKI_TAB - DIKI_UNKNOWN] = SDLK_TAB;
+   keymap[DIKI_ENTER - DIKI_UNKNOWN] = SDLK_RETURN;
+   keymap[DIKI_SPACE - DIKI_UNKNOWN] = SDLK_SPACE;
