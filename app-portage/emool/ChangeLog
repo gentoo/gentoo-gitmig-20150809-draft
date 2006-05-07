@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/emool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emool/ChangeLog,v 1.6 2006/05/01 08:13:23 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emool/ChangeLog,v 1.7 2006/05/07 13:54:24 blubb Exp $
+
+  07 May 2006; Simon Stelling <blubb@gentoo.org> -emool-0.9.ebuild:
+  version cleanup
 
   01 May 2006; Simon Stelling <blubb@gentoo.org> emool-0.10.ebuild:
   stable on amd64
