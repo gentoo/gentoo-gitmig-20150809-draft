@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/rlwrap
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.10 2005/12/20 20:43:56 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.11 2006/05/07 03:08:07 weeve Exp $
+
+  07 May 2006; Jason Wever <weeve@gentoo.org> rlwrap-0.21.ebuild:
+  Stable on SPARC.
 
 *rlwrap-0.24 (20 Dec 2005)
 
