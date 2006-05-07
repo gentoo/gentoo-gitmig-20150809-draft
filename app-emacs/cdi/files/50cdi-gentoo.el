@@ -1,7 +1,5 @@
 
 ;;; cdi site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
-(autoload 'cdi-start "cdi"
-  "Start the CDI interface"
-  t)
+(add-to-list 'load-path "@SITELISP@")
+(autoload 'cdi-start "cdi" "Setup the cdi buffer and perhaps start a daemon." t)
