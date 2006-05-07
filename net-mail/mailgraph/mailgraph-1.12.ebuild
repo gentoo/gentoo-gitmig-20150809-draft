@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.12.ebuild,v 1.3 2006/03/18 19:57:50 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.12.ebuild,v 1.4 2006/05/07 20:36:32 corsair Exp $
 
 inherit eutils webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://people.ee.ethz.ch/~dws/software/mailgraph/"
 SRC_URI="http://people.ee.ethz.ch/~dws/software/${PN}/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~ppc ppc64 x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
