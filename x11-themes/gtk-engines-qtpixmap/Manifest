@@ -1,7 +1,27 @@
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 935c16f07246cd8ea96b57f669c6936f ChangeLog 2595
-MD5 0c9d8214e73e36b4de84dd00e5df3b24 gtk-engines-qtpixmap-0.28-r2.ebuild 1161
-MD5 938c500db695a301691b2122573baa1e gtk-engines-qtpixmap-0.28-r1.ebuild 1317
+AUX gtk-engines-qtpixmap-0.28-gtk_switches.patch 3612 RMD160 3ed554fe563033a490902b651a3a0a8fa96e09d2 SHA1 d645d9972f3055ec6b23404a49f61a24c91c2a51 SHA256 45e917ab0579264c4bd5b160877df3b9d28a3f8a397d2d25d85a44720359bd8d size 3612
 MD5 321ec9a96a2261d0c4243871045afa21 files/gtk-engines-qtpixmap-0.28-gtk_switches.patch 3612
-MD5 a97c99ae5788b9fcb012c99b38f5e803 files/digest-gtk-engines-qtpixmap-0.28-r2 65
-MD5 a97c99ae5788b9fcb012c99b38f5e803 files/digest-gtk-engines-qtpixmap-0.28-r1 65
+RMD160 3ed554fe563033a490902b651a3a0a8fa96e09d2 files/gtk-engines-qtpixmap-0.28-gtk_switches.patch 3612
+SHA256 45e917ab0579264c4bd5b160877df3b9d28a3f8a397d2d25d85a44720359bd8d files/gtk-engines-qtpixmap-0.28-gtk_switches.patch 3612
+DIST QtPixmap-0.28.tar.gz 429698 RMD160 e6f0c9e3de544a9765d57d235834adcf889a61a5 SHA256 514090d808db0c9ff04792663e24ac5ab663ae5b15ea4914cae8b76f4663a407 size 429698
+EBUILD gtk-engines-qtpixmap-0.28-r1.ebuild 1317 RMD160 4397d8b6dbdd1e7905c8bbdf6468c3f11f48fd5a SHA1 fd36aec34d8c356dcdae967ac7d9fe4116913699 SHA256 f7010205488b9090ba33bd1666c76be35cbe1be831ed8311cec6bdaca5b9b53c size 1317
+MD5 938c500db695a301691b2122573baa1e gtk-engines-qtpixmap-0.28-r1.ebuild 1317
+RMD160 4397d8b6dbdd1e7905c8bbdf6468c3f11f48fd5a gtk-engines-qtpixmap-0.28-r1.ebuild 1317
+SHA256 f7010205488b9090ba33bd1666c76be35cbe1be831ed8311cec6bdaca5b9b53c gtk-engines-qtpixmap-0.28-r1.ebuild 1317
+EBUILD gtk-engines-qtpixmap-0.28-r2.ebuild 1156 RMD160 fa209c3cc0e75522d3edaa3d980b632d15aefe3c SHA1 726ee21f28a74fd3354259ba4cf1ea2d77311fae SHA256 21a2f3ad0a57d7073506ebb7796135ac840eedf4011a58ebb490f9f088d20af3 size 1156
+MD5 ce4da9223de2c8ac94fadd25a0a1abb7 gtk-engines-qtpixmap-0.28-r2.ebuild 1156
+RMD160 fa209c3cc0e75522d3edaa3d980b632d15aefe3c gtk-engines-qtpixmap-0.28-r2.ebuild 1156
+SHA256 21a2f3ad0a57d7073506ebb7796135ac840eedf4011a58ebb490f9f088d20af3 gtk-engines-qtpixmap-0.28-r2.ebuild 1156
+MISC ChangeLog 2713 RMD160 8ad1e208a3701d365fc2d6b63cd669446f753093 SHA1 7d3382918c69f56e0374ce81cbc47a82cc88579c SHA256 0e3b3ff7d91d9a9ddbe852cefb784357be75a24e31a1d4c39917e59d572d512c size 2713
+MD5 33cb8a3c4e87e0d54e1cf67765b7bed4 ChangeLog 2713
+RMD160 8ad1e208a3701d365fc2d6b63cd669446f753093 ChangeLog 2713
+SHA256 0e3b3ff7d91d9a9ddbe852cefb784357be75a24e31a1d4c39917e59d572d512c ChangeLog 2713
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 size 158
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 cd6d255e94bf86df02673a650c9f7574 files/digest-gtk-engines-qtpixmap-0.28-r1 241
+RMD160 ba15c46892ffc83df8097cb75eb13617933959cd files/digest-gtk-engines-qtpixmap-0.28-r1 241
+SHA256 5c8e1b939eb6f1f1b62115ec48f22013f07adf273a83d909782aefff34c50c7d files/digest-gtk-engines-qtpixmap-0.28-r1 241
+MD5 cd6d255e94bf86df02673a650c9f7574 files/digest-gtk-engines-qtpixmap-0.28-r2 241
+RMD160 ba15c46892ffc83df8097cb75eb13617933959cd files/digest-gtk-engines-qtpixmap-0.28-r2 241
+SHA256 5c8e1b939eb6f1f1b62115ec48f22013f07adf273a83d909782aefff34c50c7d files/digest-gtk-engines-qtpixmap-0.28-r2 241

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-qtpixmap
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtpixmap/ChangeLog,v 1.4 2005/10/02 19:46:35 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtpixmap/ChangeLog,v 1.5 2006/05/07 16:49:16 weeve Exp $
+
+  07 May 2006; Jason Wever <weeve@gentoo.org>
+  gtk-engines-qtpixmap-0.28-r2.ebuild:
+  Stable on SPARC wrt bug #132520.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   gtk-engines-qtpixmap-0.28-r1.ebuild:
