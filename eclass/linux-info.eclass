@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.42 2006/03/03 22:11:28 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.43 2006/05/07 22:14:25 mrness Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -380,11 +380,12 @@ check_modules_supported() {
 check_extra_config() {
 	local	config negate error local_error i n
 	local	temp_config die reworkmodulenames
+	local	soft_errors_count=0 hard_errors_count=0
 
 	# if we haven't determined the version yet, we need too.
 	get_version;
 
-	einfo "Checking for suitable kernel configuration options:"
+	einfo "Checking for suitable kernel configuration options..."
 	for config in ${CONFIG_CHECK}
 	do
 		# if we specify any fatal, ensure we honor them
@@ -393,6 +394,10 @@ check_extra_config() {
 		negate=0
 		reworkmodulenames=0
 
+		if [[ -z ${config/\~*} ]]; then
+			die=0
+			config=${config:1}
+		fi
 		if [[ -z ${config//\!*} ]]; then
 			negate=1
 			config=${config:1}
@@ -400,10 +405,6 @@ check_extra_config() {
 		if [[ -z ${config/\@*} ]]; then
 			die=2
 			reworkmodulenames=1
-			config=${config:1}
-		fi
-		if [[ -z ${config/\~*} ]]; then
-			die=0
 			config=${config:1}
 		fi
 
@@ -424,39 +425,41 @@ check_extra_config() {
 			linux_chkconfig_present ${config} || error=1
 		fi
 
-		if [[ ${die} == 0 ]]; then
-			ebegin "CONFIG_${config}"
-			eend ${error}
-		else
-			if [[ ${error} > 0 ]]; then
-				local_error="ERROR_${config}"
-				local_error="${!local_error}"
-
-				if [[ -z "${local_error}" ]]; then
-					# using old, deprecated format.
-					local_error="${config}_ERROR"
-					local_error="${!local_error}"
-				fi
-
-				if [[ -z "${local_error}" ]]; then
-					[[ ${error} == 1 ]] \
-						&& local_error="is not set when it should be." \
-						|| local_error="should not be set. But it is."
-					local_error="CONFIG_${config}:\t ${local_error}"
-				fi
-				eerror "  ${local_error}"
+		if [[ ${error} > 0 ]]; then
+			if [[ ${die} == 0 ]]; then
+				soft_errors_count=$[soft_errors_count + 1]
+			else
+				hard_errors_count=$[hard_errors_count + 1]
 			fi
+			local_error="ERROR_${config}"
+			local_error="${!local_error}"
+
+			if [[ -z "${local_error}" ]]; then
+				# using old, deprecated format.
+				local_error="${config}_ERROR"
+				local_error="${!local_error}"
+			fi
+
+			if [[ -z "${local_error}" ]]; then
+				[[ ${error} == 1 ]] \
+					&& local_error="is not set when it should be." \
+					|| local_error="should not be set. But it is."
+				local_error="CONFIG_${config}:\t ${local_error}"
+			fi
+			eerror "  ${local_error}"
 		fi
 	done
 
-	if [[ ${error} > 0 ]]; then
+	if [[ $[soft_errors_count + hard_errors_count] > 0 ]]; then
 		eerror "Please check to make sure these options are set correctly."
 		eerror "Failure to do so may cause unexpected problems."
-		if [[ ${die} == 1 ]]; then
+		if [[ ${hard_errors_count} > 0 ]]; then
 			eerror "Once you have satisfied these options, please try merging"
 			eerror "this package again."
 			die "Incorrect kernel configuration options"
 		fi
+	else
+		eend 0
 	fi
 }
 
