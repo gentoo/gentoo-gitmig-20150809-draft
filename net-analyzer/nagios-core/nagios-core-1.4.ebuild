@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.4.ebuild,v 1.4 2006/05/06 23:58:16 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.4.ebuild,v 1.5 2006/05/07 20:17:11 corsair Exp $
 
 inherit eutils apache-module toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
 IUSE="noweb mysql postgres perl debug apache2"
 
 DEPEND="virtual/mailx
