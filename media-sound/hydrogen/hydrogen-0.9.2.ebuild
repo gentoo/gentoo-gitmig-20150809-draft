@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.2.ebuild,v 1.1 2006/01/07 17:20:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.2.ebuild,v 1.2 2006/05/07 02:54:50 eldad Exp $
 
-inherit eutils kde-functions
+inherit eutils kde-functions autotools
 
 DESCRIPTION="Linux Drum Machine"
 HOMEPAGE="http://hydrogen.sourceforge.net/"
@@ -40,6 +40,8 @@ src_unpack() {
 		-e "s:pm_linux:lib:g" -e "s:pm_common:include:g" \
 		-i configure.in
 	make -f Makefile.cvs
+
+	epatch ${FILESDIR}/hydrogen-0.9.2-configure.in.patch
 }
 
 src_compile() {
@@ -56,6 +58,7 @@ src_compile() {
 			$(use_enable ladspa lrdf-support) \
 			$(use_enable oss oss-support)"
 
+	eautoconf
 	econf ${myconf} || die "Failed configuring hydrogen!"
 	emake || die "Failed making hydrogen!"
 }

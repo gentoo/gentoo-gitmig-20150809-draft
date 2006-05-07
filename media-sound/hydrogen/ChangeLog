@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.35 2006/02/23 17:10:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.36 2006/05/07 02:54:50 eldad Exp $
+
+  07 May 2006; Eldad Zack <eldad@gentoo.org>
+  +files/hydrogen-0.9.0-asneeded.patch,
+  +files/hydrogen-0.9.2-configure.in.patch, metadata.xml,
+  hydrogen-0.9.0.ebuild, hydrogen-0.9.1.ebuild, hydrogen-0.9.2.ebuild,
+  hydrogen-0.9.3.ebuild:
+  Fixed --as-needed issue with 0.9.0 and 0.9.1, fixed configure script for
+  0.9.2 and 0.9.3. Took maintainership. Closes bug #132511.
 
 *hydrogen-0.9.3 (23 Feb 2006)
 

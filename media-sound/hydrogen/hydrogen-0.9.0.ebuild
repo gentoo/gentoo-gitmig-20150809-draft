@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.0.ebuild,v 1.11 2006/01/07 17:20:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.0.ebuild,v 1.12 2006/05/07 02:54:50 eldad Exp $
 
 inherit eutils kde-functions
 
@@ -20,6 +20,13 @@ DEPEND=">=media-libs/libsndfile-1.0.0
 	jack? ( media-sound/jack-audio-connection-kit )
 	ladspa? ( media-libs/liblrdf )"
 need-qt 3
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/hydrogen-0.9.0-asneeded.patch
+}
+
 
 src_compile() {
 	need-autoconf 2.5
