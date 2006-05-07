@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.8.0.ebuild,v 1.1 2006/03/28 07:03:02 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.8.0.ebuild,v 1.2 2006/05/07 07:29:11 morfic Exp $
 
 inherit eutils toolchain-funcs
 
@@ -56,5 +56,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	#make DESTDIR=${D} install || die "make install failed"
+	einstall || die "einstall failed"
 }
