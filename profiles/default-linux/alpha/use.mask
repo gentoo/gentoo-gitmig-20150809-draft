@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.40 2006/04/26 22:49:53 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.41 2006/05/07 13:31:50 tcort Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -19,8 +19,9 @@ pcmcia
 # avifile is broken atm
 avi
 
-# No hardware to test
+# No hardware to test (unmask when tested)
 pda
+upnp
 
 # No apm support on alpha
 apm
@@ -87,7 +88,7 @@ vpopmail
 # Mask pyste until gccxml / elementtree work on alpha
 pyste
 
-# Mask mono for further testing
+# Mask mono until ported to alpha
 mono
 
 # can't test wireless currently
