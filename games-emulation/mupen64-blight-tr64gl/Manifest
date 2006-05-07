@@ -1,16 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 479596fe6eb098e2eb0aaeb8966fc504 ChangeLog 1416
+DIST blight_tr64gl-0.7.4-pre1.so.gz 275106 size 275106
+DIST tr64gl-0.8.7-pre1.so.gz 100522 size 100522
+EBUILD mupen64-blight-tr64gl-0.7.4_pre1.ebuild 717 RMD160 f4bb5c4ec572db444be20a3046fa522be3856e50 SHA1 9a87f5a5225234e135ed4e4095db3703bfb8dde0 SHA256 175f617c2908c24ff3b04f9ffa3878a461784e364e3bded81d3aa0874e43ef56 size 717
 MD5 34fa5d293342dd6736350b7e73228475 mupen64-blight-tr64gl-0.7.4_pre1.ebuild 717
-MD5 a3e62bf537d9a02609601aa9ba76da7e metadata.xml 247
+RMD160 f4bb5c4ec572db444be20a3046fa522be3856e50 mupen64-blight-tr64gl-0.7.4_pre1.ebuild 717
+SHA256 175f617c2908c24ff3b04f9ffa3878a461784e364e3bded81d3aa0874e43ef56 mupen64-blight-tr64gl-0.7.4_pre1.ebuild 717
+EBUILD mupen64-blight-tr64gl-0.8.7_pre1.ebuild 670 RMD160 9340ddf5b1b361b2b2edbb65f4edc5061a3cd059 SHA1 e2156cb722565efcf54bf218648bd7a8b733eaf3 SHA256 0732053f54d9e6c2720d977b086990faa2cf523272c1e3c6edfcc0d8281133f5 size 670
 MD5 73dcd038b6392015cd3b805509d0157f mupen64-blight-tr64gl-0.8.7_pre1.ebuild 670
+RMD160 9340ddf5b1b361b2b2edbb65f4edc5061a3cd059 mupen64-blight-tr64gl-0.8.7_pre1.ebuild 670
+SHA256 0732053f54d9e6c2720d977b086990faa2cf523272c1e3c6edfcc0d8281133f5 mupen64-blight-tr64gl-0.8.7_pre1.ebuild 670
+MISC ChangeLog 1416 RMD160 dad0e2d9bb393af63df7b0b0292a0ebc9d8db626 SHA1 857a39b825ceef28095d4c2beeccc38cc16e592b SHA256 ebb1f95e56a0eee5568f6b41d9f82b963d21407db65666c98bdf83756125e2c7 size 1416
+MD5 479596fe6eb098e2eb0aaeb8966fc504 ChangeLog 1416
+RMD160 dad0e2d9bb393af63df7b0b0292a0ebc9d8db626 ChangeLog 1416
+SHA256 ebb1f95e56a0eee5568f6b41d9f82b963d21407db65666c98bdf83756125e2c7 ChangeLog 1416
+MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 size 158
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
 MD5 408f2a595b0a70418853c2e07aeba30f files/digest-mupen64-blight-tr64gl-0.7.4_pre1 75
+RMD160 5f14d906fc3fc8cff331a1ff881e9674d8d9a70b files/digest-mupen64-blight-tr64gl-0.7.4_pre1 75
+SHA256 79e35777be7c6012882bc9af5885897d48c8c2b33173e0c3679a9c54dfea07b9 files/digest-mupen64-blight-tr64gl-0.7.4_pre1 75
 MD5 718c19d67bd95c537932baff1816a75b files/digest-mupen64-blight-tr64gl-0.8.7_pre1 68
+RMD160 542f7ed00b39886631ee4c92cd94c13b238420ae files/digest-mupen64-blight-tr64gl-0.8.7_pre1 68
+SHA256 af7dbd3bc8eddfbc95cce3049d1bac616f72295833e0c26a1064cfbbd658d7a7 files/digest-mupen64-blight-tr64gl-0.8.7_pre1 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.2.1 (GNU/Linux)
 
-iD8DBQFB/d/dUpKYMelfdYERAmemAJwMF6uNa59HcDzw/c3YwMpUoN6gDgCff3Tg
-7o3S5icNzJymibf/aB/KqbY=
-=O80S
+iD8DBQFEXZ/i/aM9DdBw91cRArl8AJ0XYVfZt2EAs3dR8/A3GYiyOaMpaACdEiNp
+f4OAKf5sSldzx40EurVeiEo=
+=IzzK
 -----END PGP SIGNATURE-----

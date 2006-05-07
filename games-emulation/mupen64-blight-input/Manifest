@@ -1,6 +1,34 @@
-MD5 14063aeba0eabff5aaf4c2501da075a2 mupen64-blight-input-0.0.8-r1.ebuild 1016
-MD5 8f7b76c0a4e869994032e531e49ba62b ChangeLog 2281
-MD5 a3e62bf537d9a02609601aa9ba76da7e metadata.xml 247
-MD5 ba8b60aba3d62bdaf3f7a817cbe2d61d files/mupen64-blight-input-cflags.patch 422
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX mupen64-blight-input-SDL_ttf.patch 353 RMD160 dcfedabfe86f11b9d34413e1de95a20c0472edaa SHA1 570b93421f611777edf7b80fc32f84c6c8e2d6b4 SHA256 5e883272c1666275e80da1a0d23ff844797a3a170bfe39c28409e4ab89a46568 size 353
 MD5 f63e1260b9d35674f21fdcfff3be5c16 files/mupen64-blight-input-SDL_ttf.patch 353
+RMD160 dcfedabfe86f11b9d34413e1de95a20c0472edaa files/mupen64-blight-input-SDL_ttf.patch 353
+SHA256 5e883272c1666275e80da1a0d23ff844797a3a170bfe39c28409e4ab89a46568 files/mupen64-blight-input-SDL_ttf.patch 353
+AUX mupen64-blight-input-cflags.patch 422 RMD160 1a682b2edb7ee53db440d20e129aac353f178bfd SHA1 412ac319244e5edce0cf31fe9383c52e6e7387d3 SHA256 b2def98191db264e78e2be93a1e42bebee4f88a958166ba3bdf6e77893432aca size 422
+MD5 ba8b60aba3d62bdaf3f7a817cbe2d61d files/mupen64-blight-input-cflags.patch 422
+RMD160 1a682b2edb7ee53db440d20e129aac353f178bfd files/mupen64-blight-input-cflags.patch 422
+SHA256 b2def98191db264e78e2be93a1e42bebee4f88a958166ba3bdf6e77893432aca files/mupen64-blight-input-cflags.patch 422
+DIST blight_input-0.0.8-b.tar.gz 733624 size 733624
+EBUILD mupen64-blight-input-0.0.8-r1.ebuild 1016 RMD160 da53865d2fc89725070f405d8c7da0fa1060b57d SHA1 44dcebd30e40ce41007cc373b29c175da4b82d72 SHA256 a41824eb62eddb05aaf72c27221f42e9a9f2bdd7d53cdc2a29768dd73e7e844a size 1016
+MD5 14063aeba0eabff5aaf4c2501da075a2 mupen64-blight-input-0.0.8-r1.ebuild 1016
+RMD160 da53865d2fc89725070f405d8c7da0fa1060b57d mupen64-blight-input-0.0.8-r1.ebuild 1016
+SHA256 a41824eb62eddb05aaf72c27221f42e9a9f2bdd7d53cdc2a29768dd73e7e844a mupen64-blight-input-0.0.8-r1.ebuild 1016
+MISC ChangeLog 2281 RMD160 00f0c88a273ab165a56a8facefedc4cd53f7beff SHA1 a57d1f4605582d517f80efc5b692c7f64d6030e8 SHA256 c016b9a9e62bbf71cba50f75f3dd1a77995109a5d2452c5124d586dc04a38f08 size 2281
+MD5 8f7b76c0a4e869994032e531e49ba62b ChangeLog 2281
+RMD160 00f0c88a273ab165a56a8facefedc4cd53f7beff ChangeLog 2281
+SHA256 c016b9a9e62bbf71cba50f75f3dd1a77995109a5d2452c5124d586dc04a38f08 ChangeLog 2281
+MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 size 158
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
 MD5 82f760f850552f3be75d5dd733687219 files/digest-mupen64-blight-input-0.0.8-r1 72
+RMD160 23bdd161bcb99cb12ac1101f9a700fe0adf38d39 files/digest-mupen64-blight-input-0.0.8-r1 72
+SHA256 ed756bf13297a82a26a5024f1ac69f586e4ea8e6e81f0fe089862e784a966b60 files/digest-mupen64-blight-input-0.0.8-r1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.1 (GNU/Linux)
+
+iD8DBQFEXZ+9/aM9DdBw91cRAuXzAKC22WqqKW92TF3mXHkaIFjdE9Fp2wCgoFKz
+YF3Be5TSIFDd7Jyfozl6zzQ=
+=80K9
+-----END PGP SIGNATURE-----
