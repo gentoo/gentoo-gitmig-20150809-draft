@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.0.7.ebuild,v 1.1 2006/03/18 13:01:22 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.0.7.ebuild,v 1.2 2006/05/07 14:11:52 allanonjl Exp $
 
 inherit virtualx gnome2
 
@@ -51,4 +51,11 @@ MAKEOPTS="${MAKEOPTS} -j1"
 src_test() {
 	addpredict /
 	Xmake check || die
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# fix bug #132562
+	epatch ${FILESDIR}/${P}-spy_accessible.patch
 }

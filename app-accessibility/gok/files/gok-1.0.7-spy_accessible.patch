@@ -1,0 +1,47 @@
+Index: gok/gok-spy.c
+===================================================================
+RCS file: /cvs/gnome/gok/gok/gok-spy.c,v
+retrieving revision 1.170
+diff -u -r1.170 gok-spy.c
+--- gok/gok-spy.c	31 Mar 2006 20:32:58 -0000	1.170
++++ gok/gok-spy.c	3 Apr 2006 13:54:21 -0000
+@@ -264,39 +264,6 @@
+ 	gok_log_leave ();
+ }
+ 
+-extern SPIBoolean cspi_accessible_is_a (Accessible *accessible, const char *interface_name);
+-
+-gboolean gok_spy_accessible_is_okay(Accessible* accessible)
+-{
+-	gboolean returncode = FALSE;
+-	gok_log_enter();
+-	if (accessible != NULL) 
+-	{
+-		/* FIXME: we should have a better way of doing this! */
+-		returncode = cspi_accessible_is_a (accessible, "IDL:Accessibility/Accessible:1.0");
+-		/*
+-		if (Accessible_isApplication(accessible) ||
+-		    Accessible_isComponent(accessible))
+-		{
+-			returncode = TRUE;
+-		}
+-		*/
+-			/*
+-	    	if (gok_spy_accessible_is_desktopChild(accessible) == FALSE)
+-	    	{
+-				accessible = NULL;
+-			}
+-			else
+-			{
+-				returncode = TRUE;
+-			}
+-			*/
+-	}
+-	gok_log("returning: %d",returncode);
+-	gok_log_leave();
+-	return returncode;
+-}
+-
+ static gboolean
+ gok_spy_idle_handler (gpointer data)
+ {
