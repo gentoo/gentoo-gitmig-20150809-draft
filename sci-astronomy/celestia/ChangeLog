@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.20 2006/05/06 22:20:59 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.21 2006/05/07 05:20:13 morfic Exp $
+
+  07 May 2006; Daniel Goller <morfic@gentoo.org> metadata.xml:
+  Removing maintainer
 
   06 May 2006; Daniel Goller <morfic@gentoo.org> celestia-1.4.1.ebuild:
   Install icons for kde, thanks to polynomial-C
