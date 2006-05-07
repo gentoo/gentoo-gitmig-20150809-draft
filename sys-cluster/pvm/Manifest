@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f9598d6fcfef5f0e9b6e10a1281c2ddc ChangeLog 3872
+MD5 efe270aa3cc86a58a9822cfd38c2600f ChangeLog 3960
 MD5 c6d622987f4e06f522dcbc72cff9127d files/digest-pvm-3.4.4-r1 57
 MD5 c6d622987f4e06f522dcbc72cff9127d files/digest-pvm-3.4.4-r2 57
 MD5 c6d622987f4e06f522dcbc72cff9127d files/digest-pvm-3.4.4-r3 57
@@ -20,12 +17,5 @@ MD5 6670265f824ab06a23db5549f167f298 pvm-3.4.4-r1.ebuild 1143
 MD5 092f51f6e7c4e6c713b143f60f83e2d1 pvm-3.4.4-r2.ebuild 1911
 MD5 d7e69b72f7a4deb9510975699f5da83f pvm-3.4.4-r3.ebuild 1990
 MD5 e6c0cdea2c30efd02862a46d7d07cb01 pvm-3.4.5-r1.ebuild 2085
-MD5 2e3cefcb5ece8ff31458006b2ee84e84 pvm-3.4.5-r2.ebuild 2270
+MD5 840a7e1c6a186c2ba0a6e588087c45c6 pvm-3.4.5-r2.ebuild 2268
 MD5 7b2a7d31564d91a25b27577a0bc65210 pvm-3.4.5.ebuild 1894
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD6AbhJrHF4yAQTrARAqsQAJ9guvMaddY+BXL7xaE5VRDgcr8G6ACfWFCA
-dYLTd6/fKHyZ4Xs0BElEPd4=
-=2Rin
------END PGP SIGNATURE-----
