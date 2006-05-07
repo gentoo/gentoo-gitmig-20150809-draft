@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/xplc-0.3.13-r1.ebuild,v 1.5 2006/04/24 02:36:33 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/xplc-0.3.13-r1.ebuild,v 1.6 2006/05/07 10:10:15 mrness Exp $
+
+inherit eutils
 
 DESCRIPTION="cross platform lightweight components library for C++"
 HOMEPAGE="http://xplc.sourceforge.net"
@@ -15,9 +17,11 @@ DEPEND="dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-as-needed.patch"
 
 	#solve conflict with uuidgen utility installed by sys-fs/e2fsprogs (#116699)
-	cd "${S}"
 	sed -i -e "s/uuidgen/xplc-uuidgen/g" -e "s/uuidcdef/xplc-uuidcdef/g" \
 		uuid/{rules.mk,vars.mk} config/rules.mk \
 		uuid/bin/*.1 include/xplc/*.h && \
