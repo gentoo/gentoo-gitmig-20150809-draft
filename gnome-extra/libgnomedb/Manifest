@@ -1,4 +1,4 @@
-MD5 0d7571bf04350a1d5fd7bbca74acfaec ChangeLog 6970
+MD5 c1087071bd5ca4a06e75363fec68b44e ChangeLog 7062
 MD5 5cd64f762a82a44123610969ca055ed7 files/digest-libgnomedb-1.0.1 69
 MD5 e91ab2cfd3b938f9c09d5587f8653cf6 files/digest-libgnomedb-1.0.4 69
 MD5 bac8c9a12a86e87d5ebb5febedb3fb6b files/digest-libgnomedb-1.2.2 69
@@ -7,5 +7,5 @@ MD5 fa2e6e3b60ec75a5aca6665636c10540 files/libgnomedb-1.0.3-gtkdoc_fix.patch 147
 MD5 37d21bd238913942c2c2815c0ae80041 files/libgnomedb-1.0.4-selector.patch 803
 MD5 3ed748096034360d7d5adf6bb8575ab7 libgnomedb-1.0.1.ebuild 1259
 MD5 c26c40435b6eca92889cb925f261b7e8 libgnomedb-1.0.4.ebuild 1543
-MD5 93126c348835add5288287a5c7bd342d libgnomedb-1.2.2.ebuild 1104
+MD5 69f93af91e1cfc87b29680ce975a3e3e libgnomedb-1.2.2.ebuild 1102
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
