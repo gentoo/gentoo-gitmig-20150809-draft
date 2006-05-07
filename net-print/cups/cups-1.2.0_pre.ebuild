@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.0_pre.ebuild,v 1.3 2006/05/07 17:16:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.0_pre.ebuild,v 1.4 2006/05/07 21:25:15 flameeyes Exp $
 
 inherit eutils flag-o-matic pam autotools multilib subversion
 
@@ -72,8 +72,11 @@ src_compile() {
 		${myconf} \
 		|| die "econf failed"
 
-	sed -i -e 's:SERVERBIN.*:SERVERBIN = $(BUILDROOT)/usr/'$(get_libdir)'/cups:' Makedefs
-	sed -i -e 's:#define CUPS_SERVERBIN.*:#define CUPS_SERVERBIN "/usr/'$(get_libdir)'/cups":' config.h
+	# Install in /usr/libexec always, instead of using /usr/lib/cups, as that
+	# makes more sense when facing multilib support.
+	sed -i -e 's:SERVERBIN.*:SERVERBIN = $(BUILDROOT)/usr/libexec/cups:' Makedefs
+	sed -i -e 's:#define CUPS_SERVERBIN.*:#define CUPS_SERVERBIN "/usr/libexec/cups":' config.h
+	sed -i -e 's:cups_serverbin=.*:cups_serverbin=/usr/libexec/cups:' cups-config
 
 	emake || die "emake failed"
 }
@@ -101,10 +104,10 @@ src_install() {
 
 	pamd_mimic_system cups auth account
 
-	sed -i -e "s:server = .*:server = /usr/$(get_libdir)/cups/daemon/cups-lpd:" ${D}/etc/xinetd.d/cups-lpd
+	sed -i -e "s:server = .*:server = /usr/libexec/cups/daemon/cups-lpd:" ${D}/etc/xinetd.d/cups-lpd
 
 	# install pdftops filter
-	exeinto /usr/$(get_libdir)/cups/filter/
+	exeinto /usr/libexec/cups/filter/
 	newexe ${FILESDIR}/pdftops.pl pdftops
 
 	fowners lp:lp /var/log/cups /var/run/cups/certs /var/cache/cups \
