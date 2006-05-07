@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.94.ebuild,v 1.1 2006/05/07 10:37:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.94.ebuild,v 1.2 2006/05/07 10:41:31 swegener Exp $
 
 inherit eutils
 
@@ -15,7 +15,6 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.4.0
 	>=x11-libs/gtk+-2.4.0
-	>=net-libs/gnet-1.1.8
 	>=dev-libs/libpcre-5.0
 	>=dev-libs/gmime-2.1.0
 	>=app-text/gtkspell-2.0.7
