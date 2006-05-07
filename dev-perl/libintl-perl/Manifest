@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cca24f2a91c0671612dcd851c23fe295 ChangeLog 1487
-RMD160 bcb0d116660c3fdd28db00cf9b18e0934d57c302 ChangeLog 1487
-SHA256 26fdaea02ea344db4d6ed5368bdbf57e95eea9d6eb2039b2e441643e1f048049 ChangeLog 1487
+MD5 63e1bfb720768ce077278b25e463084e ChangeLog 1580
 MD5 9844001eb18bcd6f96dd411a6e0edf05 files/digest-libintl-perl-1.10 69
-RMD160 8d72fa6b3a1cf7c64220c7cac0539cbfa8eb818b files/digest-libintl-perl-1.10 69
-SHA256 2f4479b37407440b619e6260aacb40091c0749e24e5c74306a8c5dc374a5a0cf files/digest-libintl-perl-1.10 69
 MD5 44b5a0888ebaacacd3f2c03fa81355e4 files/digest-libintl-perl-1.11 69
-RMD160 c30750b37c1768eaae5138257fc24a1fdf3ca73a files/digest-libintl-perl-1.11 69
-SHA256 cfff64d003cdff9e4a14530364edae930b42b9a73c794f58cc0eb9a4a0154230 files/digest-libintl-perl-1.11 69
 MD5 6d07a0293f30e87b9196dd8fc9634828 libintl-perl-1.10.ebuild 541
-RMD160 3632fbd35aa833a8d152d8460b78450f7910750f libintl-perl-1.10.ebuild 541
-SHA256 14d99ed1074867f1e407073e9c6d35de15096c5597e42eb3e4eb87df0b670e83 libintl-perl-1.10.ebuild 541
-MD5 cb646f83f3bd5750f4e77c1f561b613d libintl-perl-1.11.ebuild 558
-RMD160 a50289932df364a23a58655b6ee426ff4f7b7d02 libintl-perl-1.11.ebuild 558
-SHA256 4bf4a8458a7fd5750189f5933b103f7523c6fd30c346023bbbed69f358d479b7 libintl-perl-1.11.ebuild 558
+MD5 55d71ee31cae27779d30b48b9290a38a libintl-perl-1.11.ebuild 556
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFELG68JrHF4yAQTrARAlbMAKCJ2lvLsWG63wnkZ+HBcwBVhmN2LACfUSxa
-VsaWMn2AIq4lICnxw+v/VPg=
-=3ZCy
------END PGP SIGNATURE-----
