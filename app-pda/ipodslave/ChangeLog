@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/ipodslave
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/ipodslave/ChangeLog,v 1.7 2006/05/07 16:16:32 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ipodslave/ChangeLog,v 1.8 2006/05/07 16:25:29 jhuebel Exp $
+
+  07 May 2006; Jason Huebel <jhuebel@gentoo.org> ipodslave-0.7.3.ebuild:
+  fixed HOMEPAGE
 
 *ipodslave-0.7.3 (07 May 2006)
 
