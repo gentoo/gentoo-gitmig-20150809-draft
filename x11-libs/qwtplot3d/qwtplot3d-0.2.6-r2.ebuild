@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.6-r2.ebuild,v 1.3 2006/04/08 09:19:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.6-r2.ebuild,v 1.4 2006/05/07 07:33:29 corsair Exp $
 
 inherit multilib qt3
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/qwtplot3d/${MY_P}.tgz
 LICENSE="ZLIB"
 SLOT="0"
 IUSE="doc examples"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 
 DEPEND="$(qt_min_version 3.3)
 	>=sys-apps/sed-4
