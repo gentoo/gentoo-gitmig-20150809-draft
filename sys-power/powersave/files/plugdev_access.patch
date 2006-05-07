@@ -1,0 +1,11 @@
+--- config_files/dbus_powersave.conf.orig	2005-11-28 12:53:23.000000000 +0100
++++ config_files/dbus_powersave.conf	2005-11-28 12:53:56.000000000 +0100
+@@ -42,7 +42,7 @@
+   </policy>
+ 
+   <!--    Allow desktop users to connect -->
+-  <policy at_console="true">
++  <policy group="users">
+     <allow send_interface="com.novell.powersave"/>
+     <allow send_interface="com.novell.powersave.manager"/>
+     <allow send_interface="com.novell.powersave.request"/>
