@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kbfx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/ChangeLog,v 1.2 2006/05/05 22:41:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/ChangeLog,v 1.3 2006/05/07 11:17:24 genstef Exp $
+
+  07 May 2006; Stefan Schweizer <genstef@gentoo.org> kbfx-0.4.9.1.ebuild:
+  .tar.bz -> .tar.bz2 thanks to Stig Mogensen <stig.mogensen@gmail.com> in bug
+  132545
 
   05 May 2006; Stefan Schweizer <genstef@gentoo.org> kbfx-0.4.9.1.ebuild:
   Fix installation dir thanks to Pat Double <double@inebraska.com> in bug 132386
