@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_usb
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/ChangeLog,v 1.3 2005/09/16 11:16:21 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/ChangeLog,v 1.4 2006/05/07 05:05:24 chriswhite Exp $
+
+  07 May 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Japanese metadata.xml translation for bug #132273. Thanks to Yoshino-san for
+  the translation.
 
   16 Sep 2005; Aron Griffis <agriffis@gentoo.org> pam_usb-0.3.2.ebuild:
   Mark 0.3.2 stable on alpha
