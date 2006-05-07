@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.0.7.ebuild,v 1.2 2006/05/07 14:11:52 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.0.7.ebuild,v 1.3 2006/05/07 14:15:25 allanonjl Exp $
 
-inherit virtualx gnome2
+inherit virtualx gnome2 eutils
 
 DESCRIPTION="Gnome Onscreen Keyboard"
 HOMEPAGE="http://www.gok.ca/"
