@@ -1,0 +1,13 @@
+Index: powersave-0.13.1/libpower/Makefile.am
+===================================================================
+--- powersave-0.13.1.orig/libpower/Makefile.am
++++ powersave-0.13.1/libpower/Makefile.am
+@@ -27,7 +27,7 @@ libpowersave_la_SOURCES = powerlib.c  \
+ 			  debug.c
+ libpowersave_la_DEPENDENCIES = libpowersave_hal.la
+ libpowersave_la_LDFLAGS = -version-info 10:3:0 $(HAL_CFLAGS)
+-libpowersave_la_LIBADD = libpowersave_hal.la $(HAL_LIBS)
++libpowersave_la_LIBADD = libpowersave_hal.la $(HAL_LIBS) -lm
+ 
+ 
+ libpowersave_dbus_la_SOURCES = powersave_dbus.c \
