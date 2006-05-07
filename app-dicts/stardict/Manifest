@@ -1,4 +1,4 @@
-MD5 cff74bd8393262a1ce53096e147a2199 ChangeLog 4090
+MD5 1e18c882cd6a8d8ef8361cd9bb2b5c86 ChangeLog 4197
 MD5 3316b188ec45fd4d24db494c5990c20b files/digest-stardict-2.2.1 67
 MD5 38728c3a0ad675dd5f23d72cb143741a files/digest-stardict-2.4.1 67
 MD5 390090b978f088147ce59b0308822093 files/digest-stardict-2.4.2 67
@@ -14,4 +14,4 @@ MD5 7e6e906efc68497a767d4f8718624a59 stardict-2.4.1.ebuild 1820
 MD5 f61bc4d9e3497dc99018ada95342ba24 stardict-2.4.2.ebuild 1759
 MD5 d9ea47072247d298ac52d2ccaf574321 stardict-2.4.3.ebuild 1777
 MD5 738f054045c75c5cb12c47fbe90a17fd stardict-2.4.4.ebuild 1692
-MD5 f512b3c6ae31c06bb121139a5ff0afaa stardict-2.4.6-r1.ebuild 1804
+MD5 fe313085c9e49afe72b135192cb2b287 stardict-2.4.6-r1.ebuild 1803

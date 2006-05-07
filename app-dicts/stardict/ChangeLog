@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/stardict
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.27 2006/01/23 21:00:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.28 2006/05/07 19:57:31 corsair Exp $
+
+  07 May 2006; Markus Rothe <corsair@gentoo.org> stardict-2.4.6-r1.ebuild:
+  Stable on ppc64; bug #108571
 
   23 Jan 2006; Markus Rothe <corsair@gentoo.org> stardict-2.4.6-r1.ebuild:
   Added ~ppc64; bug #108571
