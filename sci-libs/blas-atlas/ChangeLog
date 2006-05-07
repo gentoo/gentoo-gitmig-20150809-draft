@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.21 2006/04/01 19:59:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.22 2006/05/07 21:53:49 markusle Exp $
+
+  07 May 2006; Markus Dittrich <markusle@gentoo.org> files/3.7.11-allow-any-gcc-version.patch:
+  Remove compiler check for ppc to allow compilation with gcc-4.
+  Thanks to Matti Bickel <kabel@cat0.de> for pointing this out. 
+  This fixes bug #132363.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> blas-atlas-3.7.11.ebuild:
   Mark 3.7.11 ~ia64
