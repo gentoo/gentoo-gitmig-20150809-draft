@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.0_pre.ebuild,v 1.2 2006/05/06 19:20:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.0_pre.ebuild,v 1.3 2006/05/07 17:16:33 flameeyes Exp $
 
 inherit eutils flag-o-matic pam autotools multilib subversion
 
@@ -101,7 +101,7 @@ src_install() {
 
 	pamd_mimic_system cups auth account
 
-	sed -i -e "s:/usr/lib/cups:/usr/$(get_libdir)/cups:" ${D}/etc/xinetd.d/cups-lpd
+	sed -i -e "s:server = .*:server = /usr/$(get_libdir)/cups/daemon/cups-lpd:" ${D}/etc/xinetd.d/cups-lpd
 
 	# install pdftops filter
 	exeinto /usr/$(get_libdir)/cups/filter/

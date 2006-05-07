@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.163 2006/05/06 19:20:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.164 2006/05/07 17:16:33 flameeyes Exp $
+
+  07 May 2006; Diego Pettenò <flameeyes@gentoo.org> cups-1.2.0_pre.ebuild:
+  Make sure that the cups-lpd xinetd file is safe for FreeBSD, too.
 
   06 May 2006; Diego Pettenò <flameeyes@gentoo.org> cups-1.2.0_pre.ebuild:
   Fix SERVERBIN path and fix multilib-strictness. Add optional dbus useflag.
