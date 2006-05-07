@@ -1,20 +1,44 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 863a8337568c40b80f846af1ce2dea6a ChangeLog 3486
-MD5 123706b91a161701cfa75c4f046b47a6 files/digest-xemacs-packages-sumo-2003.04.14 158
-MD5 000199e7085ae7f2a965a46d92ba8cc6 files/digest-xemacs-packages-sumo-2003.06.29 158
-MD5 ef504c5661092407b7150a3761aa6f4e files/digest-xemacs-packages-sumo-2003.08.31 158
-MD5 e90fe61209e740b8681b857cea2aa49e files/digest-xemacs-packages-sumo-2003.11.13 158
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+DIST xemacs-mule-sumo-2003-04-14.tar.bz2 5010076 size 5010076
+DIST xemacs-mule-sumo-2003-06-29.tar.bz2 5012955 size 5012955
+DIST xemacs-mule-sumo-2003-08-31.tar.bz2 5011903 RMD160 374218260358c188ac7ddbb138dd95f00b67a79f SHA256 3be49c1c5bc4169ddf72e90678eab294290b0a0b821f1dea69b7a593b7c7c028 size 5011903
+DIST xemacs-mule-sumo-2003-11-13.tar.bz2 5031914 RMD160 069749c9762d3563a4c4133e1e9e46537d73750b SHA256 426d3b61d009370647c36e0e01fdbd932e939b9d50711e51d18ea473b3e415fb size 5031914
+DIST xemacs-sumo-2003-04-14.tar.bz2 19440154 size 19440154
+DIST xemacs-sumo-2003-06-29.tar.bz2 20834743 size 20834743
+DIST xemacs-sumo-2003-08-31.tar.bz2 21788244 RMD160 b64537b42f88fd1bf1b647c1c2751a0133b4c091 SHA256 aa4eb8255a15197a52e7ad684f7498bab3e896ac765fe52db27a3a1a5a71fc7b size 21788244
+DIST xemacs-sumo-2003-11-13.tar.bz2 22362889 RMD160 d8ecea321f73fc67957a0fe50c3cb731c7df48f0 SHA256 1828fc5e6f73d9e9e802e2a8b37a1d8792ccdf896dfd7f16f51471858b1dc16a size 22362889
+EBUILD xemacs-packages-sumo-2003.04.14.ebuild 1004 RMD160 2e200b6724093a5757bcbcda2f15b55a6b8974d0 SHA1 d5e0418ad75039d7faa6aeb8635bf14c9471f396 SHA256 979cee26fa56cff053c761effa8d0e350ff38d06876264db1b6b420b514646ca size 1004
 MD5 dc08d14db108901ada27c95b1bcb8767 xemacs-packages-sumo-2003.04.14.ebuild 1004
+RMD160 2e200b6724093a5757bcbcda2f15b55a6b8974d0 xemacs-packages-sumo-2003.04.14.ebuild 1004
+SHA256 979cee26fa56cff053c761effa8d0e350ff38d06876264db1b6b420b514646ca xemacs-packages-sumo-2003.04.14.ebuild 1004
+EBUILD xemacs-packages-sumo-2003.06.29.ebuild 1004 RMD160 1a87b2fa428d9ede519c10fc3fa449cb0bf3cc98 SHA1 2ee6af327f5cbc394f27ffa951112cb25c180801 SHA256 095274c413a4af60ca1b711603082fb89dc872a881a66f856c49f33071755bf9 size 1004
 MD5 4b347a6b2dcfe9f3c1c9d9f3d0b77d38 xemacs-packages-sumo-2003.06.29.ebuild 1004
-MD5 fafdbd52fb2b47bd90eac05f8ed793d1 xemacs-packages-sumo-2003.08.31.ebuild 1003
+RMD160 1a87b2fa428d9ede519c10fc3fa449cb0bf3cc98 xemacs-packages-sumo-2003.06.29.ebuild 1004
+SHA256 095274c413a4af60ca1b711603082fb89dc872a881a66f856c49f33071755bf9 xemacs-packages-sumo-2003.06.29.ebuild 1004
+EBUILD xemacs-packages-sumo-2003.08.31.ebuild 997 RMD160 f0dffa218b6183950486588e203e9c8e8e3e72c1 SHA1 afe2583a9a1c09c9b6e870d47f00de6f66a543b0 SHA256 1ac2b933e0fafd76c9185cb2a2afc2f84a263275430de0088a9c7f38a146d8af size 997
+MD5 0035f1d186916d984039edab5e839857 xemacs-packages-sumo-2003.08.31.ebuild 997
+RMD160 f0dffa218b6183950486588e203e9c8e8e3e72c1 xemacs-packages-sumo-2003.08.31.ebuild 997
+SHA256 1ac2b933e0fafd76c9185cb2a2afc2f84a263275430de0088a9c7f38a146d8af xemacs-packages-sumo-2003.08.31.ebuild 997
+EBUILD xemacs-packages-sumo-2003.11.13.ebuild 1025 RMD160 132a07eb5cf4c98774cd0f0f6c7a1f1108e7fb5d SHA1 2f602367e88a0c15228d038a70b743d45b54a1c3 SHA256 d56e11b2f2cc85f04af8755751cff2feef6eb7d70d9d1f82787fe4ffbad558c7 size 1025
 MD5 857047639ed0bd950e0c1bf53c5e2359 xemacs-packages-sumo-2003.11.13.ebuild 1025
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDSscMomPajV0RnrERApWJAJ9/xkrks3fDWniV2V3siV8dVv/1HQCdGQVD
-04UK/mRuyaFKlgc9gL3hAUQ=
-=yFit
------END PGP SIGNATURE-----
+RMD160 132a07eb5cf4c98774cd0f0f6c7a1f1108e7fb5d xemacs-packages-sumo-2003.11.13.ebuild 1025
+SHA256 d56e11b2f2cc85f04af8755751cff2feef6eb7d70d9d1f82787fe4ffbad558c7 xemacs-packages-sumo-2003.11.13.ebuild 1025
+MISC ChangeLog 3595 RMD160 602437e3e3ae5373fc10cae8f17e6665d222e06b SHA1 dce857d03fd66884b401d7882ecf72d882b371a9 SHA256 cfb2684aca43608930c06a2f0a3ad983a3a95c98511f3c66422445f1f4d8cf6c size 3595
+MD5 95bc5fccbe79defde527db887c87f0ac ChangeLog 3595
+RMD160 602437e3e3ae5373fc10cae8f17e6665d222e06b ChangeLog 3595
+SHA256 cfb2684aca43608930c06a2f0a3ad983a3a95c98511f3c66422445f1f4d8cf6c ChangeLog 3595
+MISC metadata.xml 160 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 SHA1 d6147d00f16e8cfeef893d0764b0675a93d62849 SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e size 160
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
+MD5 123706b91a161701cfa75c4f046b47a6 files/digest-xemacs-packages-sumo-2003.04.14 158
+RMD160 024a9a2aae8700387957f0b811eccf69c7872c17 files/digest-xemacs-packages-sumo-2003.04.14 158
+SHA256 10b17ed90bd8a1c5e49810f2b2767897aff8df7f17b9dfa58e713460e972ee19 files/digest-xemacs-packages-sumo-2003.04.14 158
+MD5 000199e7085ae7f2a965a46d92ba8cc6 files/digest-xemacs-packages-sumo-2003.06.29 158
+RMD160 1b29cd8fddbe260276a6b03cc2bdcbff38ce7a8b files/digest-xemacs-packages-sumo-2003.06.29 158
+SHA256 9a6674982d5b044c97de8f54b244f02d328a1d14cc8ec86bbf5b525ef66c8337 files/digest-xemacs-packages-sumo-2003.06.29 158
+MD5 99edd5c8962608668941bd2a1ead6a64 files/digest-xemacs-packages-sumo-2003.08.31 566
+RMD160 c0bb786e5e6609680c823446240684159eba4dfe files/digest-xemacs-packages-sumo-2003.08.31 566
+SHA256 a39e8974b2c6cfebdf9369351e9f7fa7fd04bc6bb8b3eeda59a1c42a126f2fbb files/digest-xemacs-packages-sumo-2003.08.31 566
+MD5 c20817248dfbe5664063717118efec82 files/digest-xemacs-packages-sumo-2003.11.13 566
+RMD160 bae4d989b0db2ed77874e422ca6acabb29fde8f3 files/digest-xemacs-packages-sumo-2003.11.13 566
+SHA256 4c286343a53c49a2e3740f2bb6c10ded1c797d6b21dc1105fff082e90305c03d files/digest-xemacs-packages-sumo-2003.11.13 566
