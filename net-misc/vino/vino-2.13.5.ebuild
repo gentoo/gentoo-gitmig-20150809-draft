@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.13.5.ebuild,v 1.3 2006/05/07 14:49:01 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.13.5.ebuild,v 1.4 2006/05/07 21:39:10 allanonjl Exp $
 
 inherit eutils gnome2 autotools
 
@@ -48,5 +48,7 @@ src_unpack() {
 
 	# fix as-needed #132558
 	epatch "${FILESDIR}"/${P}-as-needed.patch
-	eautoreconf
+
+	cp aclocal.m4 old_macros.m4
+	AT_M4DIR="." eautoreconf
 }
