@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-1.0.2.ebuild,v 1.1 2006/03/16 20:45:25 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-1.0.2.ebuild,v 1.2 2006/05/07 21:32:51 tupone Exp $
 
 inherit eutils python games
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 	# There are CVS directories in the tgz file
 	rm -rf $(find -name CVS -type d)
 	rm -rf $(find -name .cvsignore)
