@@ -1,18 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6f3722f76ebfb7799b865fe5622f9a93 ChangeLog 5341
+MD5 1fbb2963f881343915b977d48d79bd29 ChangeLog 5494
 MD5 999ed3fb65fa707dce76bca8f7f6727a files/digest-netkit-telnetd-0.17-r6 143
+MD5 14b9e40faf3355d1b40f088d7a02d579 files/digest-netkit-telnetd-0.17-r7 143
 MD5 6d23345a3ccb8e7b572752f14aee4860 files/net.issue.sample 117
 MD5 7dbf060bb9168e5f98621fe7c13a4965 files/netkit-telnetd-0.17-cflags-gnu_source.patch 830
 MD5 d741260d55b46b1e6ae6cf923b4542e5 files/netkit-telnetd-0.17-gentoo.patch 3155
 MD5 0bdd0131a5803a2e4a4ec8b3b9fb5039 files/telnetd.xinetd 205
 MD5 18641d94839066e87b8be43bbb27fd47 metadata.xml 408
-MD5 297e65810bc4a9a9d4cb714b41ec1a41 netkit-telnetd-0.17-r6.ebuild 2220
+MD5 8705f66b826d3550f32a53b6df06dd14 netkit-telnetd-0.17-r6.ebuild 2219
+MD5 7a45bdd8b915673db57972efc88b50ed netkit-telnetd-0.17-r7.ebuild 2342
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDj4OAgIKl8Uu19MoRAmTWAJ9JY03P2L+Pftq7OuYffIVEy/GYCQCfZwAe
-YHg9K+HUAzTgIe0JHETtMK8=
-=id1R
+iQCVAwUBRF30UZ4WFLgrx1GWAQJI0gQAnP+XiADreLCGmelnzhy65OGHqg9tx+Qm
+T8cktRCuv0/o/iq5DPrGMegppNO0xPSsLaT46l0P21uXVMmAk+lzObZNq40yv0GM
+Af1vDF0Ks/oaEoaRgAwDL4pwL6EIO2ODvemmW5QHVnyVbjv4mFY5cj9pFIhP53R1
+UODO/xGuFFU=
+=z467
 -----END PGP SIGNATURE-----

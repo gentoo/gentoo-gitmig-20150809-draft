@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/netkit-telnetd
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.38 2005/04/03 11:24:19 hardave Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.39 2006/05/07 13:21:09 solar Exp $
+
+*netkit-telnetd-0.17-r7 (07 May 2006)
+
+  07 May 2006; <solar@gentoo.org> +netkit-telnetd-0.17-r7.ebuild:
+  - revision bump to debs unstable patchlevel 32
 
   03 Apr 2005; Hardave Riar <hardave@gentoo.org>
   netkit-telnetd-0.17-r6.ebuild:
