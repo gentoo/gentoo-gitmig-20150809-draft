@@ -1,61 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0924f1c225abd5d98481fe098398ce0f ChangeLog 10994
-RMD160 d689929fa64175440a6c09f44a1c532f32340f2a ChangeLog 10994
-SHA256 ddd0736cb5afd8689498c4a5b5e02136583afa717ebf84941f594a13e6b7c767 ChangeLog 10994
+MD5 5efa38a028eaa4f0c11d74e5b6292ba5 ChangeLog 11086
 MD5 f36308ba7cbae244f796a734dda27867 blender-2.36-r1.ebuild 3314
-RMD160 c8ef8f8de4590c04f04c31857606d5e8e0d3ea10 blender-2.36-r1.ebuild 3314
-SHA256 3a274410cb40ceaef68fd7bf4f321b20c1cb4da3ebb27cedce5fcdf77e02cf66 blender-2.36-r1.ebuild 3314
-MD5 c76d8dc03adc519e284aac863059f8eb blender-2.40.ebuild 3475
-RMD160 86697a85b5461647b32b1edb2e1c8ed0f7104cf7 blender-2.40.ebuild 3475
-SHA256 4216d3d7bdb119884cf8165101e68e11ba98e21e71719612a926c9a49d86f6fe blender-2.40.ebuild 3475
+MD5 b5a58d9d575fd848b622a33952550d3a blender-2.40.ebuild 3476
 MD5 20db7db1f5b20cf77ab877dce9d2ffa6 blender-2.41.ebuild 3496
-RMD160 4f625ef74b1ea3efa9c81b881564b43ba766517e blender-2.41.ebuild 3496
-SHA256 ab2428dd971682d2eb2e6dd357f457f47bbbe9fb610e8a6dae68e3d37493aa7f blender-2.41.ebuild 3496
 MD5 705b95605426ad9d562457fdbbff5460 files/blender-2.32.patch 2562
-RMD160 bbd0dbf4395628317fcbed7423a810d5133ffaeb files/blender-2.32.patch 2562
-SHA256 4c93d5ebcfeebd4f00b5f42f3daac4ea530eb6125c7eb1f26c82e278ded588d1 files/blender-2.32.patch 2562
 MD5 ee3557021be75082093de0d643b32260 files/blender-2.36-dirs.patch 1970
-RMD160 2a70062f1fda86cb302bf3580559db29645d047f files/blender-2.36-dirs.patch 1970
-SHA256 b761fa799760638e549851980fc024274d429bfd8acdc9ffb5b398989267848e files/blender-2.36-dirs.patch 1970
 MD5 bcc3b86202d4c6bb85ef9cef08bfcf9e files/blender-2.37-dirs.patch 725
-RMD160 3496386616f3066e1a237921f8ecc695a21b142e files/blender-2.37-dirs.patch 725
-SHA256 18ed351fd88c1bf952c86425dc769143cda6c5cd25e948ec1e1c0a1b911d44f7 files/blender-2.37-dirs.patch 725
 MD5 bcc3b86202d4c6bb85ef9cef08bfcf9e files/blender-2.37a-dirs.patch 725
-RMD160 3496386616f3066e1a237921f8ecc695a21b142e files/blender-2.37a-dirs.patch 725
-SHA256 18ed351fd88c1bf952c86425dc769143cda6c5cd25e948ec1e1c0a1b911d44f7 files/blender-2.37a-dirs.patch 725
 MD5 3cab957d0ff2afbbbd4f47b95aec94c8 files/blender-2.37a-gcc-4.0.patch 5059
-RMD160 fa06f151ea95b073270a9c74682d53c2cca51cb5 files/blender-2.37a-gcc-4.0.patch 5059
-SHA256 85ec94b43982b2e01ab2b2d1d0ae848b37fa6de045228b31595b695b9051e4ba files/blender-2.37a-gcc-4.0.patch 5059
 MD5 3cab957d0ff2afbbbd4f47b95aec94c8 files/blender-2.37a-x86_64.patch 5059
-RMD160 fa06f151ea95b073270a9c74682d53c2cca51cb5 files/blender-2.37a-x86_64.patch 5059
-SHA256 85ec94b43982b2e01ab2b2d1d0ae848b37fa6de045228b31595b695b9051e4ba files/blender-2.37a-x86_64.patch 5059
 MD5 b8e304980dc2bfd9a7157037d6ead44b files/blender.desktop 197
-RMD160 6d5bf65f7cdce71123f193b0912c42e212832af7 files/blender.desktop 197
-SHA256 dff04dfaa1c1105099717a04af9c6ad028c7cd5a2e21d72f6dc7182ca703cff1 files/blender.desktop 197
 MD5 d95ef10fee53b71576c6da6c8163e748 files/blender.png 2119
-RMD160 e06574002001f41198dc9408ef1bba45493fcc27 files/blender.png 2119
-SHA256 bef633319c81323bb82db274004d89082ca05cab6650eb4c4bf43f830ccb5cad files/blender.png 2119
 MD5 b5356307d35d0bfe73149428cafe23ff files/configure-fix.patch 754
-RMD160 49cc26401148311e87c254c5e23b4c4f035142ad files/configure-fix.patch 754
-SHA256 80f7030c8d6670c434643faa2d3a649cf42d047354bdc908ffb240c59d526bd4 files/configure-fix.patch 754
 MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36-r1 65
-RMD160 94175f5320727216088ae1cc9891aa20e0db563e files/digest-blender-2.36-r1 65
-SHA256 b64314a746cfd9123885bc2aa87a1252948782ee493db465904ebad4faf17dd2 files/digest-blender-2.36-r1 65
 MD5 8637d60394b1e58d4f4c0fe4b71865fa files/digest-blender-2.40 65
-RMD160 e0de57a73fe2ac15bf3129a67ee8de4d0ca0b226 files/digest-blender-2.40 65
-SHA256 635cbfc2eb8791811f8e0154f77ca8709fd2d58ee4e27cde0f5404e01dba5f1c files/digest-blender-2.40 65
 MD5 595a9f3015d93ffaf7ad2cef48f3b3d9 files/digest-blender-2.41 65
-RMD160 fc74581d8e5ee7df8427e10e3ca240404dbfc53f files/digest-blender-2.41 65
-SHA256 d3959d258332dfddd7d7ade2d87da3d46f22b65894c848353af29c9a113f8f9d files/digest-blender-2.41 65
 MD5 493f38fb63d60a1ce275fdd2ea43d6e9 metadata.xml 587
-RMD160 925b5c3bcf2d4f21fc82f760aad723541088bca4 metadata.xml 587
-SHA256 4a2974916837cada500d7a764a285fa29a0471b242dff4717d60c4a7113dd45e metadata.xml 587
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD66vTV3J2n04EauwRAvjBAKCxqUsOzIaeVcnCK4Jgca6HLAx6YQCgwI5h
-C1hN6cWH+OD3bN6IwCNI/3U=
-=/CqA
------END PGP SIGNATURE-----
