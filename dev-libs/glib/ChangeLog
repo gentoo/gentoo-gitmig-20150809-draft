@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.199 2006/05/06 21:55:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.200 2006/05/07 02:09:59 flameeyes Exp $
+
+  07 May 2006; Diego Pettenò <flameeyes@gentoo.org> Manifest:
+  Remove .orig file from manifest.
 
   06 May 2006; Diego Pettenò <flameeyes@gentoo.org> glib-2.10.2.ebuild:
   Add ~x86-fbsd keyword.
