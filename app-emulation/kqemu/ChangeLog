@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/kqemu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/ChangeLog,v 1.9 2006/04/27 12:32:12 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/ChangeLog,v 1.10 2006/05/07 20:28:32 lu_zero Exp $
+
+  07 May 2006; Luca Barbato <lu_zero@gentoo.org> ChangeLog:
+  New version
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-kqemu-0.7.2,
   files/digest-kqemu-1.3.0_pre5, Manifest:
