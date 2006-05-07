@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.6 2005/10/14 00:44:11 spyderous Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.7 2006/05/07 19:43:53 corsair Exp $
+
+  07 May 2006; Markus Rothe <corsair@gentoo.org> gromacs-3.2.1-r1.ebuild:
+  Stable on ppc64; bug #89969
 
 *gromacs-3.3 (14 Oct 2005)
 
