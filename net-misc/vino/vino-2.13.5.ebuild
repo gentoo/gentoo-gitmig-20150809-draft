@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.13.5.ebuild,v 1.2 2006/05/06 13:03:23 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.13.5.ebuild,v 1.3 2006/05/07 14:49:01 allanonjl Exp $
 
-inherit eutils gnome2
+inherit eutils gnome2 autotools
 
 DESCRIPTION="An integrated VNC server for GNOME"
 HOMEPAGE="http://www.gnome.org/"
@@ -38,12 +38,15 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
-	cd "${S}"
+	gnome2_src_unpack
 
 	# Fix compilation if --without-libz is passed
-	epatch ${FILESDIR}/${PN}-2.11-zlib_fix.patch
+	epatch "${FILESDIR}"/${PN}-2.11-zlib_fix.patch
 
 	# Fix compilation for Gentoo/FreeBSD
-	epatch ${FILESDIR}/${PN}-2.10.0-fbsd.patch
+	epatch "${FILESDIR}"/${PN}-2.10.0-fbsd.patch
+
+	# fix as-needed #132558
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+	eautoreconf
 }

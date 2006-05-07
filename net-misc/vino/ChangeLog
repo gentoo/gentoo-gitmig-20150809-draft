@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.52 2006/05/06 13:03:23 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.53 2006/05/07 14:49:01 allanonjl Exp $
+
+  07 May 2006; John N. Laliberte <allanonjl@gentoo.org>
+  +files/vino-2.13.5-as-needed.patch, vino-2.13.5.ebuild:
+  as-needed patch from TGL <degrenier@easyconnect.fr>, fixes #132558
 
   06 May 2006; John N. Laliberte <allanonjl@gentoo.org> vino-2.13.5.ebuild:
   drop hppa,ia64,mips, bug filed. prep for 2.14 unmask
