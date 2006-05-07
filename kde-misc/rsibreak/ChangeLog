@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/rsibreak
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.7 2006/05/06 23:54:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.8 2006/05/07 18:29:52 flameeyes Exp $
+
+  07 May 2006; Diego Pettenò <flameeyes@gentoo.org> rsibreak-0.6.0.ebuild:
+  Add LANGS variable to allow disabling translations.
 
 *rsibreak-0.6.0 (06 May 2006)
 
