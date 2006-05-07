@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.13 2006/02/17 22:08:27 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.14 2006/05/07 20:45:39 tupone Exp $
 
 inherit eutils gnuconfig games
 
@@ -18,7 +18,8 @@ DEPEND="=x11-libs/gtk+-2*"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-gcc3.patch
+	epatch "${FILESDIR}"/${PV}-gcc3.patch \
+		"${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_compile() {
