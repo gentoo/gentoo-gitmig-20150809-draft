@@ -1,42 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 539963b12e6fff1768b8448c26f3fa78 ChangeLog 4278
-RMD160 aff5004f564e5995c1d73232efec34dfb3759671 ChangeLog 4278
-SHA256 a8a39edf44ed4442630292615c600e22b013d0dc32237be31965ca8c3fde4953 ChangeLog 4278
-MD5 79a429eed682daba045878fc0d3d4065 dosfstools-2.11-r1.ebuild 1150
-RMD160 a87a07826de5583de9a3eb5582d8b7eb8dc525f3 dosfstools-2.11-r1.ebuild 1150
-SHA256 7b30aa8f347e1c260315e610747d5407c62d51a194725a69f7814f8445b87086 dosfstools-2.11-r1.ebuild 1150
-MD5 1367f56f28c50f329d117c89c6888aca dosfstools-2.11.ebuild 1060
-RMD160 00e7865937676f6d6eedf20b0bbe23561e3fde4b dosfstools-2.11.ebuild 1060
-SHA256 ad2c6a58ca9e5b7a4290810b9461bf3884d8c7e0d43eb262bb107ca331c5df6f dosfstools-2.11.ebuild 1060
+MD5 1a319abb88507cb2b0d537246b69716f ChangeLog 4398
+MD5 5afa21ab6ecbeda4061dfebd3ebac41d dosfstools-2.11-r1.ebuild 1159
+MD5 8f28cd387e1cfc627c85567cd49ff883 dosfstools-2.11.ebuild 1069
 MD5 bc7f130eda06c0ef85f2022829a13a2e files/digest-dosfstools-2.11 70
-RMD160 f4d54bfcfa1f235d987404acc39e89a329a598ac files/digest-dosfstools-2.11 70
-SHA256 0ca540cb1898787f69c3016eb62fa567d9922470d7e6e40130085990110a665c files/digest-dosfstools-2.11 70
 MD5 bc7f130eda06c0ef85f2022829a13a2e files/digest-dosfstools-2.11-r1 70
-RMD160 f4d54bfcfa1f235d987404acc39e89a329a598ac files/digest-dosfstools-2.11-r1 70
-SHA256 0ca540cb1898787f69c3016eb62fa567d9922470d7e6e40130085990110a665c files/digest-dosfstools-2.11-r1 70
 MD5 15e58786d8b78987b6ff2b5b4850bd4b files/dosfstools-2.10-2.6.headers.patch 740
-RMD160 6a6a12403a73dca6d23ccc2ca0b93bf5613ad546 files/dosfstools-2.10-2.6.headers.patch 740
-SHA256 11f08c1f6f56f0cbb017a92825c6de03df94cf736da01683fe7e6f261d385b16 files/dosfstools-2.10-2.6.headers.patch 740
 MD5 1892bf8b14475bb28ecd9c09492ba854 files/dosfstools-2.10-lseek64.patch 5650
-RMD160 14732171e0e66200b3e457ea08be9fada452740e files/dosfstools-2.10-lseek64.patch 5650
-SHA256 7a69a7e66935bb03c2613eae82ed30c984cd7be39d3aebf41b8c696d08678b50 files/dosfstools-2.10-lseek64.patch 5650
 MD5 c60c859ba61e196767e00c2c1071931d files/dosfstools-2.11-fat32size.patch 1428
-RMD160 7434905b76773c0e955285677af4c6ed3ca21f54 files/dosfstools-2.11-fat32size.patch 1428
-SHA256 f2d205fbfbf6a6cb7efb97886e11644b7413a5683b0af154128e496679a1f061 files/dosfstools-2.11-fat32size.patch 1428
 MD5 af6a07ad458852ef02d58a7a3658ca15 files/errno.patch 257
-RMD160 7a278839bea6fd5db6949953241990b1f2c9b496 files/errno.patch 257
-SHA256 52c50cc822a0e14bb257970051c85af7b81953734920939cb1828d98403dc9c5 files/errno.patch 257
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
-SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iQCVAwUBRAsZLJ4WFLgrx1GWAQIKPwQAu/z/NLBSqWuWAxvJwEj7moOe0tofWZ5F
-hWvxvC6hFnu39VPg11jijPSNjGwr49T0NCKbwqiw33ak8NX6usUxitZunmsEV0dT
-qu7s6hIEwPHVFq/d8hH8EfeG1dG0au1b7orvG5wdEc2v8UedUbvmkQwy11CoMeoQ
-HvXmGIlvo8I=
-=Fdcb
------END PGP SIGNATURE-----
