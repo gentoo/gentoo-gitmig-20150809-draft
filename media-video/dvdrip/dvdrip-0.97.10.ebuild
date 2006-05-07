@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.97.10.ebuild,v 1.1 2006/04/29 19:28:39 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.97.10.ebuild,v 1.2 2006/05/07 00:51:21 morfic Exp $
 
 
 inherit perl-module eutils flag-o-matic
@@ -53,6 +53,12 @@ pkg_setup() {
 }
 
 src_unpack() {
+	ewarn   "Upgrading to newer versions in the 0.97.x series can result in not" \
+			"being able tocomplete unfinished rips. Do not upgrade until all " \
+			"rips are complete, press CTRL-C now if you do not wish to upgrade."
+	ebeep
+	epause 10
+
 	unpack ${A}
 	cd ${S}
 	filter-flags "-ftracer"
