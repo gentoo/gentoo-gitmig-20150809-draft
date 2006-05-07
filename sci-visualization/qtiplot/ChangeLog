@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.7 2006/05/05 16:04:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.8 2006/05/07 07:35:41 corsair Exp $
+
+  07 May 2006; Markus Rothe <corsair@gentoo.org> qtiplot-0.8.2.ebuild:
+  Added ~ppc64
 
   05 May 2006; Caleb Tennis <caleb@gentoo.org> qtiplot-0.8.2.ebuild:
   Change qwt dep to 4.2 so that it doesn't try and build against 5
