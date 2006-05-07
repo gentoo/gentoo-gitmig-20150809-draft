@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.152 2006/05/07 18:20:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.153 2006/05/07 18:27:49 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -82,14 +82,21 @@ kde_src_unpack() {
 			einfo
 			einfo "Enabling all languages"
 		else
-			MAKE_PO=$(echo $(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d))
-			einfo "Enabling translations for: ${MAKE_PO}"
-			MAKE_DOC=$(echo $(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d))
-			einfo "Enabling documentation for: ${MAKE_DOC}"
+			if [[ -n ${LANGS} ]]; then
+				MAKE_PO=$(echo $(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d))
+				einfo "Enabling translations for: ${MAKE_PO}"
+				sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_PO}:" "${S}/po/Makefile.am" \
+					|| die "sed for locale failed"
+				rm -f "${S}/configure"
+			fi
 
-			sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_PO}:" ${S}/po/Makefile.am || die "sed for locale failed"
-			sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_DOC} ${PN}:" ${S}/doc/Makefile.am || die "sed for locale failed"
-			rm -f ${S}/configure
+			if [[ -n ${LANGS_DOC} ]]; then
+				MAKE_DOC=$(echo $(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d))
+				einfo "Enabling documentation for: ${MAKE_DOC}"
+				sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_DOC} ${PN}:" \
+					"${S}/doc/Makefile.am" || die "sed for locale failed"
+				rm -f "${S}/configure"
+			fi
 		fi
 	fi
 
