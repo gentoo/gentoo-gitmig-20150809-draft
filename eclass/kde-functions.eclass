@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.134 2006/03/06 13:55:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.135 2006/05/07 18:20:45 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -933,6 +933,14 @@ kde_remove_flag() {
 
 	cd $OLDPWD
 
+}
+
+buildsycoca() {
+	if [[ -x ${KDEDIR}/bin/kbuildsycoca ]] && [[ -z ${ROOT} || ${ROOT} == "/" ]] && has "~${ARCH}" "${ACCEPT_KEYWORDS}"; then
+		ebegin "Running kbuildsycoca to build global database"
+		${KDEDIR}/bin/kbuildsycoca --global --noincremental &> /dev/null
+		eend $?
+	fi
 }
 
 # is this a kde-base ebuid?

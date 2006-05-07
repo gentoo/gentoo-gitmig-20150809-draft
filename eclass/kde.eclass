@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.151 2006/05/01 15:38:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.152 2006/05/07 18:20:45 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -335,4 +335,12 @@ slot_rebuild() {
 	echo
 }
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install
+kde_pkg_postinst() {
+	buildsycoca
+}
+
+kde_pkg_postrm() {
+	buildsycoca
+}
+
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst pkg_postrm
