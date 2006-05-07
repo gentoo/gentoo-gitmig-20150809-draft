@@ -1,0 +1,10 @@
+# ChangeLog for sys-block/btrace
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/ChangeLog,v 1.1 2006/05/07 09:20:17 robbat2 Exp $
+
+*btrace-0.0.20060428050322 (07 May 2006)
+
+  07 May 2006; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +btrace-0.0.20060428050322.ebuild:
+  Initial package by Robin H. Johnson <robbat2@gentoo.org>.
+
