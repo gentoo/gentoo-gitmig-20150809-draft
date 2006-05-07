@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.12.1.ebuild,v 1.1 2005/11/18 10:46:56 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.12.1.ebuild,v 1.2 2006/05/07 20:02:54 corsair Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://glade.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~alpha ~ppc64"
+KEYWORDS="~alpha ~amd64 ~ppc ppc64 ~sparc ~x86"
 IUSE="accessibility gnome"
 # gnomedb
 
