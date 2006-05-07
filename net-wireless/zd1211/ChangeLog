@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/zd1211
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211/ChangeLog,v 1.6 2006/05/03 22:00:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211/ChangeLog,v 1.7 2006/05/07 17:03:25 genstef Exp $
+
+  07 May 2006; Stefan Schweizer <genstef@gentoo.org> zd1211-74.ebuild:
+  Add CONFIG_NET_RADIO check thanks to garfungiloops <stepankov@tut.by> in bug
+  132537
 
 *zd1211-74 (03 May 2006)
 

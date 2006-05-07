@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211/zd1211-74.ebuild,v 1.1 2006/05/03 22:00:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211/zd1211-74.ebuild,v 1.2 2006/05/07 17:03:25 genstef Exp $
 
 inherit linux-mod toolchain-funcs eutils
 
@@ -16,6 +16,9 @@ DEPEND="net-wireless/wireless-tools"
 
 MODULE_NAMES="${PN}(net:${S}/rel_a:${S}) ${PN}b(net:${S}/rel_b:${S})"
 BUILD_TARGETS="all"
+
+CONFIG_CHECK="NET_RADIO"
+ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
 
 pkg_setup() {
 	linux-mod_pkg_setup
