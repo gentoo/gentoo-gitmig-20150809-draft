@@ -1,9 +1,32 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d6edeccf9302c4328d0e84cf3fc0623b ChangeLog 1710
-RMD160 37c118a032186e16436158406e9f3e206fe1f61b ChangeLog 1710
-SHA256 d10b9f498655ace4980ec9dc5308a35e96b31fe7b3b7fa0312fd08849c6bf6f6 ChangeLog 1710
+AUX pam_ssh_agent-0.2-openpam.patch 984 RMD160 2a5452d8f6629a4de702960595a2c753b9b5febc SHA1 4813275ce05f7685a8a0446fd4a239d545608003 SHA256 e9a0d4bb886722ef870d9ffe89faa3af8765d4e736b4fad3f7ea56142f69d630 size 984
+MD5 1d5291ee53a193ca3c632a37f7b3b27f files/pam_ssh_agent-0.2-openpam.patch 984
+RMD160 2a5452d8f6629a4de702960595a2c753b9b5febc files/pam_ssh_agent-0.2-openpam.patch 984
+SHA256 e9a0d4bb886722ef870d9ffe89faa3af8765d4e736b4fad3f7ea56142f69d630 files/pam_ssh_agent-0.2-openpam.patch 984
+DIST pam_ssh_agent-0.1.tar.gz 10551 size 10551
+DIST pam_ssh_agent-0.2.tar.gz 11625 size 11625
+EBUILD pam_ssh_agent-0.1.ebuild 806 RMD160 c76f6717ca58bf3c7f12e7244aecffcd8e91633b SHA1 bacd0a6ed47aa18481d41cc66c9abf7f90424843 SHA256 12f5d21fd21de6a8df0e28a9550a89a104f81561d8274061c5b93b76182a3f55 size 806
+MD5 24fdd5b3ee7531626d835a563f7af490 pam_ssh_agent-0.1.ebuild 806
+RMD160 c76f6717ca58bf3c7f12e7244aecffcd8e91633b pam_ssh_agent-0.1.ebuild 806
+SHA256 12f5d21fd21de6a8df0e28a9550a89a104f81561d8274061c5b93b76182a3f55 pam_ssh_agent-0.1.ebuild 806
+EBUILD pam_ssh_agent-0.2-r1.ebuild 904 RMD160 9348ef7ee1c02d3009a0954746f4105af7668373 SHA1 a4f6e25844d2f4bf522ba3b51dcadb4983d24c3d SHA256 cf2307a80fbcccf477d946719058be6ffac6ccc2d67c58b7f98deaa0fa332207 size 904
+MD5 271bd318cf38fac3049991613a6ee788 pam_ssh_agent-0.2-r1.ebuild 904
+RMD160 9348ef7ee1c02d3009a0954746f4105af7668373 pam_ssh_agent-0.2-r1.ebuild 904
+SHA256 cf2307a80fbcccf477d946719058be6ffac6ccc2d67c58b7f98deaa0fa332207 pam_ssh_agent-0.2-r1.ebuild 904
+EBUILD pam_ssh_agent-0.2.ebuild 941 RMD160 77b1fefe0c96de64d0fb2a38637b53bd9485bbd2 SHA1 7f041513c11de3375ce0690d921c5c63a396d748 SHA256 b6434b48026ab71ad3cf9cda606a567f7ec679982515fd7f21238d8125092205 size 941
+MD5 286a9dd49c3aa717290a8ead91079762 pam_ssh_agent-0.2.ebuild 941
+RMD160 77b1fefe0c96de64d0fb2a38637b53bd9485bbd2 pam_ssh_agent-0.2.ebuild 941
+SHA256 b6434b48026ab71ad3cf9cda606a567f7ec679982515fd7f21238d8125092205 pam_ssh_agent-0.2.ebuild 941
+MISC ChangeLog 1875 RMD160 8ab67f31339b2440fdf2f943e21521af04a702cb SHA1 ac458dec368d557e7b5445fe70fb67681714642e SHA256 630e0e2a88b8ae3ccad35f8eb0673f690cb850a08ccbd6c461b1dc21b9ee4361 size 1875
+MD5 87a8daba29fdc02fca945c014c720ea3 ChangeLog 1875
+RMD160 8ab67f31339b2440fdf2f943e21521af04a702cb ChangeLog 1875
+SHA256 630e0e2a88b8ae3ccad35f8eb0673f690cb850a08ccbd6c461b1dc21b9ee4361 ChangeLog 1875
+MISC metadata.xml 558 RMD160 55b39f64803981e54229b5888dc33be0e8a71d95 SHA1 0d68c890107956b89c52f540bae8417a8b01a1d9 SHA256 6bf1ed074c98f2814f7e181ca292bfd8b63935ef8377a61f95126e7efcb6857d size 558
+MD5 21406495330caaab45c4f5e9fdb471ee metadata.xml 558
+RMD160 55b39f64803981e54229b5888dc33be0e8a71d95 metadata.xml 558
+SHA256 6bf1ed074c98f2814f7e181ca292bfd8b63935ef8377a61f95126e7efcb6857d metadata.xml 558
 MD5 fc8f4b2dfc03ece3f7da24ed6b8258fa files/digest-pam_ssh_agent-0.1 68
 RMD160 d56ec355aaa117f8b4dbc93f7463f8fb3c5b982a files/digest-pam_ssh_agent-0.1 68
 SHA256 22bab7fc10d63b23498297e9534ef6c5f92381b5b33c459986cab35399287fc7 files/digest-pam_ssh_agent-0.1 68
@@ -13,25 +36,10 @@ SHA256 628d64ac332ccadfcfff91ebb4e5b92d126ab4e8fee3a15ceb791497020121af files/di
 MD5 d9ee254275c299e8f21bdcb01001bbc1 files/digest-pam_ssh_agent-0.2-r1 68
 RMD160 88368bdf6de2ae3fd37bbf6c7990aaa1b4b6b556 files/digest-pam_ssh_agent-0.2-r1 68
 SHA256 628d64ac332ccadfcfff91ebb4e5b92d126ab4e8fee3a15ceb791497020121af files/digest-pam_ssh_agent-0.2-r1 68
-MD5 1d5291ee53a193ca3c632a37f7b3b27f files/pam_ssh_agent-0.2-openpam.patch 984
-RMD160 2a5452d8f6629a4de702960595a2c753b9b5febc files/pam_ssh_agent-0.2-openpam.patch 984
-SHA256 e9a0d4bb886722ef870d9ffe89faa3af8765d4e736b4fad3f7ea56142f69d630 files/pam_ssh_agent-0.2-openpam.patch 984
-MD5 2664d2eb9f4c01e7f2ecf0e025cece86 metadata.xml 368
-RMD160 8411131e2fc18a48b7a0d17c6b7a683ff0efdd4b metadata.xml 368
-SHA256 c8f22c83e6c4860b7c9b83912cde37d744248582096566bdd60f0091676b7faa metadata.xml 368
-MD5 24fdd5b3ee7531626d835a563f7af490 pam_ssh_agent-0.1.ebuild 806
-RMD160 c76f6717ca58bf3c7f12e7244aecffcd8e91633b pam_ssh_agent-0.1.ebuild 806
-SHA256 12f5d21fd21de6a8df0e28a9550a89a104f81561d8274061c5b93b76182a3f55 pam_ssh_agent-0.1.ebuild 806
-MD5 271bd318cf38fac3049991613a6ee788 pam_ssh_agent-0.2-r1.ebuild 904
-RMD160 9348ef7ee1c02d3009a0954746f4105af7668373 pam_ssh_agent-0.2-r1.ebuild 904
-SHA256 cf2307a80fbcccf477d946719058be6ffac6ccc2d67c58b7f98deaa0fa332207 pam_ssh_agent-0.2-r1.ebuild 904
-MD5 286a9dd49c3aa717290a8ead91079762 pam_ssh_agent-0.2.ebuild 941
-RMD160 77b1fefe0c96de64d0fb2a38637b53bd9485bbd2 pam_ssh_agent-0.2.ebuild 941
-SHA256 b6434b48026ab71ad3cf9cda606a567f7ec679982515fd7f21238d8125092205 pam_ssh_agent-0.2.ebuild 941
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFESP9yAiZjviIA2XgRAinNAKDCe29p4hxUAgRBrKThwQwRPASZowCeLKdY
-V09nT3Oo8gXq7i1QDyHggBQ=
-=eJYT
+iD8DBQFEXYG7FdQwWVoAgN4RAsGeAKCPu/bWuPQpkZScsHoNFK2kamedWACdGuXG
+UFlsmJX9Lxr0QhsBIUSiWwo=
+=mtks
 -----END PGP SIGNATURE-----

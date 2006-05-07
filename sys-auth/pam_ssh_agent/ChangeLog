@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_ssh_agent
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh_agent/ChangeLog,v 1.4 2006/04/21 15:54:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh_agent/ChangeLog,v 1.5 2006/05/07 05:11:18 chriswhite Exp $
+
+  07 May 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Japanese metadata.xml translation per bug #132331. Thanks to Yoshino-san for
+  the translation.
 
   21 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   pam_ssh_agent-0.2-r1.ebuild:
