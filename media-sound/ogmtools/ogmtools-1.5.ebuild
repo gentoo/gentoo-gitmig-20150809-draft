@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ogmtools-1.5.ebuild,v 1.5 2006/03/15 16:50:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ogmtools-1.5.ebuild,v 1.6 2006/05/07 10:33:10 corsair Exp $
 
 IUSE="dvd"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.bunkus.org/videotools/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 
 RDEPEND="dvd? ( media-libs/libdvdread )
 	media-sound/vorbis-tools"
