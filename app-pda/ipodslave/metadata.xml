@@ -5,4 +5,5 @@
 <maintainer>
 	<email>jhuebel@gentoo.org</email>
 </maintainer>
+<longdescription>KDE ioslave for managing the Apple iPod</longdescription>
 </pkgmetadata>
