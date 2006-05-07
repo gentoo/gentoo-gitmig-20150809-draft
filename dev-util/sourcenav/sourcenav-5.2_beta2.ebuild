@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.2_beta2.ebuild,v 1.6 2006/04/24 02:58:28 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.2_beta2.ebuild,v 1.7 2006/05/07 20:23:08 nerdboy Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 IUSE="debug"
 
@@ -44,11 +44,14 @@ src_unpack() {
 	epatch ${FILESDIR}/sourcenav_destdir.patch || die "epatch failed"
 	sed -i -e "s/relid'/relid/" tcl/unix/configure
 	sed -i -e "s/relid'/relid/" tk/unix/configure
+	# Bug 131412
+	if [ $(gcc-major-version) -ge 4 ]; then
+	    epatch ${FILESDIR}/${P}-gcc4.patch || die "gcc4 patch failed"
+	fi
 }
 
 src_compile() {
 	cd ${S}
-#	../sourcenav-${MY_P}/configure \
 	./configure ${MY_CONF} \
 		--host=${CHOST} \
 		--prefix=${SN} \
