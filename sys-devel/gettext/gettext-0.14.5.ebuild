@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.5.ebuild,v 1.7 2006/04/13 20:07:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.5.ebuild,v 1.8 2006/05/07 05:19:41 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs mono libtool elisp-common
 
@@ -101,8 +101,8 @@ src_install() {
 	fi
 
 	if ! use doc ; then
-		rm -r "${D}"/usr/share/doc/${PF}/html
-		rm -r "${D}"/usr/share/doc/${PF}/{csharpdoc,examples,javadoc2,javadoc1}
+		rm -rf "${D}"/usr/share/doc/${PF}/html
+		rm -rf "${D}"/usr/share/doc/${PF}/{csharpdoc,examples,javadoc2,javadoc1}
 	fi
 	dohtml "${D}"/usr/share/doc/${PF}/*.html
 	rm -f "${D}"/usr/share/doc/${PF}/*.html
