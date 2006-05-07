@@ -1,0 +1,30 @@
+if MAIL_CHECK_ENAB is disabled, then don't export the MAIL envvar
+
+--- libmisc/setupenv.c
++++ libmisc/setupenv.c
+@@ -265,16 +265,18 @@
+ 	 * knows the prefix.
+ 	 */
+ 
+-	if ((cp = getdef_str ("MAIL_DIR")))
+-		addenv_path ("MAIL", cp, info->pw_name);
+-	else if ((cp = getdef_str ("MAIL_FILE")))
+-		addenv_path ("MAIL", info->pw_dir, cp);
+-	else {
++	if (getdef_bool ("MAIL_CHECK_ENAB")) {
++		if ((cp = getdef_str ("MAIL_DIR")))
++			addenv_path ("MAIL", cp, info->pw_name);
++		else if ((cp = getdef_str ("MAIL_FILE")))
++			addenv_path ("MAIL", info->pw_dir, cp);
++		else {
+ #if defined(MAIL_SPOOL_FILE)
+-		addenv_path ("MAIL", info->pw_dir, MAIL_SPOOL_FILE);
++			addenv_path ("MAIL", info->pw_dir, MAIL_SPOOL_FILE);
+ #elif defined(MAIL_SPOOL_DIR)
+-		addenv_path ("MAIL", MAIL_SPOOL_DIR, info->pw_name);
++			addenv_path ("MAIL", MAIL_SPOOL_DIR, info->pw_name);
+ #endif
++		}
+ 	}
+ 
+ 	/*
