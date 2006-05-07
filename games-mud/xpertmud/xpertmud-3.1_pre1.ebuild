@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/xpertmud/xpertmud-3.1_pre1.ebuild,v 1.7 2006/03/30 17:28:22 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/xpertmud/xpertmud-3.1_pre1.ebuild,v 1.8 2006/05/07 10:53:26 tupone Exp $
 
 inherit eutils kde
 
@@ -25,7 +25,8 @@ S=${WORKDIR}/xpertmud-${MY_PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}"-gcc34.patch
+	epatch "${FILESDIR}/${P}"-gcc34.patch \
+		"${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_compile() {
