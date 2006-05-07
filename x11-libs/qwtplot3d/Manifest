@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a391700988f69c03ebc5549689044bcc ChangeLog 1077
-RMD160 094202967b6364b21f2d4e02b70ae28810935a61 ChangeLog 1077
-SHA256 868fd619d678055cbaf67640c31a56f84b885312168119fc94a5ad63f0b4c63a ChangeLog 1077
+MD5 794a7a27dd83f6eafcc7c247cdaf46d7 ChangeLog 1170
 MD5 cf9aaa8e69c2706b69104c537365485c files/digest-qwtplot3d-0.2.6-r1 64
-RMD160 2a4f72a8d983262adf15dc92c38dbbce7f6f6518 files/digest-qwtplot3d-0.2.6-r1 64
-SHA256 c7036da43a885ba69dc23c91faeaaef2467459af55da0d3a1d0165664bd41ab1 files/digest-qwtplot3d-0.2.6-r1 64
 MD5 290c6e0f0680b16ea16f5e27cbb89980 files/digest-qwtplot3d-0.2.6-r2 126
-RMD160 d25ca51c2404842b25cff0f11cd9782121bd5207 files/digest-qwtplot3d-0.2.6-r2 126
-SHA256 822af53c7b586b04a418fbb794abacccbbfdc6e349fa7d7a3791d197178ad1dd files/digest-qwtplot3d-0.2.6-r2 126
 MD5 215d34fcda8923ada4f99f2fbcd3a983 metadata.xml 401
-RMD160 8d2f7fd100b718f7deccf20a0fd5c7858393c0b3 metadata.xml 401
-SHA256 b9ba2aa2e27cc4605fc4fb411015019b67ca9bd120814e3ac840cba6b917d52c metadata.xml 401
 MD5 78ef49702234e7449e57b6295acf4976 qwtplot3d-0.2.6-r1.ebuild 1639
-RMD160 d4a7d13e7dd65caceb414cc76c81c35dd5756a95 qwtplot3d-0.2.6-r1.ebuild 1639
-SHA256 cf0dee13a86ccd8832ebde75e6194f2e770be6b95e44df73628f19aeb0f048d7 qwtplot3d-0.2.6-r1.ebuild 1639
-MD5 ea132dd36b03286de5bb53891932c6c4 qwtplot3d-0.2.6-r2.ebuild 1871
-RMD160 e65458bea1142831cc7e19b252581e8553258941 qwtplot3d-0.2.6-r2.ebuild 1871
-SHA256 ebdfa13a5a404e87b8bcd6fbe9212b1b60bac6f272f4d7f90d98fc9cfabe0a76 qwtplot3d-0.2.6-r2.ebuild 1871
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEN4AToFw4q70f3SsRAqUrAKCm1MBI2yL3Hg4DH4ZpyV8w2zhebACgm996
-6qIs7zYnKHq/BWj1b5ktLH8=
-=6yiy
------END PGP SIGNATURE-----
+MD5 aa7dd7d9014ddae21396dd74acb809dc qwtplot3d-0.2.6-r2.ebuild 1879
