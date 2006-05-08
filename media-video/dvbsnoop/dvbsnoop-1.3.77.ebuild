@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbsnoop/dvbsnoop-1.3.77.ebuild,v 1.6 2005/12/10 12:57:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbsnoop/dvbsnoop-1.3.77.ebuild,v 1.7 2006/05/08 06:39:56 zzam Exp $
 
 DESCRIPTION="DVB/MPEG stream analyzer program"
 SRC_URI="mirror://sourceforge/dvbsnoop/${P}.tar.gz"
@@ -21,5 +21,5 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS ChangeLog COPYING README
+	dodoc AUTHORS ChangeLog README
 }
