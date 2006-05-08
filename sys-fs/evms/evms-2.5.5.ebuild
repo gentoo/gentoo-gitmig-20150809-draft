@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5.ebuild,v 1.3 2006/03/29 02:28:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5.ebuild,v 1.4 2006/05/08 01:58:10 seemant Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -43,6 +43,7 @@ src_compile() {
 		--libdir=/$(get_libdir) \
 		--sbindir=/sbin \
 		--includedir=/usr/include \
+		$(use_enable nls) \
 		${excluded_interfaces} || die "Failed configure"
 	emake || die "Failed emake"
 }

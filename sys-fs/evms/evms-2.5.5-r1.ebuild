@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r1.ebuild,v 1.3 2006/05/06 03:36:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r1.ebuild,v 1.4 2006/05/08 01:58:10 seemant Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 sparc ~x86"
-IUSE="ncurses gtk"
+IUSE="ncurses gtk nls"
 
 #EVMS uses libuuid from e2fsprogs
 DEPEND="virtual/libc
@@ -43,6 +43,7 @@ src_compile() {
 		--libdir=/$(get_libdir) \
 		--sbindir=/sbin \
 		--includedir=/usr/include \
+		$(use_enable nls) \
 		${excluded_interfaces} || die "Failed configure"
 	emake || die "Failed emake"
 }
