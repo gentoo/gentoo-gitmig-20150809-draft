@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.220 2006/03/31 20:58:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.221 2006/05/08 07:27:46 rphillips Exp $
+
+*vim-7.0 (08 May 2006)
+
+  08 May 2006; <rphillips@gentoo.org> -vim-7.0_beta.ebuild, +vim-7.0.ebuild:
+  Version bump to 7.0
 
   31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> vim-7.0_beta.ebuild:
   Add ~x86-fbsd keyword.
