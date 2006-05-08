@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/cdtool-2.1.5-r1.ebuild,v 1.3 2006/04/19 12:24:33 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/cdtool-2.1.5-r1.ebuild,v 1.4 2006/05/08 04:36:36 tcort Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A package of command-line utilities to play and catalog cdroms."
 HOMEPAGE="http://hinterhof.net/cdtool/"
@@ -43,5 +43,5 @@ src_install() {
 
 	doman cdctrl.1 cdown.1 cdtool.1
 
-	dodoc INSTALL README
+	dodoc README
 }
