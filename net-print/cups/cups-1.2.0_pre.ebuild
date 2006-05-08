@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.0_pre.ebuild,v 1.4 2006/05/07 21:25:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.0_pre.ebuild,v 1.5 2006/05/08 17:16:42 flameeyes Exp $
 
 inherit eutils flag-o-matic pam autotools multilib subversion
 
@@ -37,11 +37,18 @@ RDEPEND="${DEP}
 PDEPEND="samba? ( >=net-fs/samba-3.0.8 )"
 PROVIDE="virtual/lpr"
 
+# upstream includes an interactive test which is a nono for gentoo.
+# therefore, since the printing herd has bigger fish to fry, for now,
+# we just leave it out, even if FEATURES=test
+RESTRICT="test"
+
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	enewgroup lp
 	enewuser lp -1 -1 -1 lp
+
+	enewgroup lpadmin
 }
 
 src_compile() {
@@ -58,6 +65,7 @@ src_compile() {
 	econf \
 		--with-cups-user=lp \
 		--with-cups-group=lp \
+		--with-system-groups=lpadmin \
 		--localstatedir=/var \
 		--with-bindnow=$(bindnow-flags) \
 		$(use_enable pam) \
@@ -81,13 +89,6 @@ src_compile() {
 	emake || die "emake failed"
 }
 
-src_test() {
-	# upstream includes an interactive test which is a nono for gentoo.
-	# therefore, since the printing herd has bigger fish to fry, for now,
-	# we just leave it out, even if FEATURES=test
-	true
-}
-
 src_install() {
 	make BUILDROOT=${D} install || die "make install failed"
 
@@ -98,8 +99,7 @@ src_install() {
 	rm -rf ${D}/etc/init.d ${D}/etc/pam.d ${D}/etc/rc* ${D}/usr/share/man/cat*
 
 	# Do not export all our printers
-	sed -i -e "s:^\(SystemGroup\).*:\1 lp:" \
-		-e "s:^BrowseAllow.*:#\0:" \
+	sed -i -e "s:^BrowseAllow.*:#\0:" \
 		${D}/etc/cups/cupsd.conf
 
 	pamd_mimic_system cups auth account
