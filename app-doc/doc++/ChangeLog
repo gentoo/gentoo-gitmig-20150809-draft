@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doc++
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.9 2005/06/07 19:19:24 weeve Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.10 2006/05/08 13:27:21 corsair Exp $
+
+  08 May 2006; Markus Rothe <corsair@gentoo.org> doc++-3.4.10.ebuild:
+  Added ~ppc64
 
   07 Jun 2005; Jason Wever <weeve@gentoo.org> doc++-3.4.10.ebuild:
   Added ~sparc keyword wrt bug #95319.
