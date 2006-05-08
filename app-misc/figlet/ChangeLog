@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/figlet
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.16 2005/04/07 14:13:06 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.17 2006/05/08 13:29:15 corsair Exp $
+
+  08 May 2006; Markus Rothe <corsair@gentoo.org> figlet-221-r1.ebuild:
+  Added ~ppc64
 
   07 Apr 2005; Aron Griffis <agriffis@gentoo.org> figlet-221-r1.ebuild:
   stable on amd64
