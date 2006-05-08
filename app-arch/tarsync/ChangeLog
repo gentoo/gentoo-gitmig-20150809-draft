@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/tarsync
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tarsync/ChangeLog,v 1.6 2006/02/02 13:06:50 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tarsync/ChangeLog,v 1.7 2006/05/08 05:11:25 tcort Exp $
+
+  08 May 2006; Thomas Cort <tcort@gentoo.org> tarsync-0.1.ebuild,
+  tarsync-0.2.ebuild:
+  Added missing IUSE and removed useless RDEPEND=RDEPEND line.
 
 *tarsync-0.2 (02 Feb 2006)
 

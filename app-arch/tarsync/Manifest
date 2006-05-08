@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e8c8f4dd5386ba8718f175bc258fabdd ChangeLog 967
-RMD160 f478c5e87f4c2c61c8963148cb5a5e180a3752e9 ChangeLog 967
-SHA256 3d6d4bc876beda79c296176ff808fa4b7b1d918ad2bc2a3db18df13895c385c8 ChangeLog 967
+MD5 79549f20dfdd2ae9e0fd25d7b63066dd ChangeLog 1116
 MD5 d6de84394cbec4ea28a448cbf0983596 files/digest-tarsync-0.1 63
-RMD160 25372e3965496d81919df2df2af6ff2dc002a37a files/digest-tarsync-0.1 63
-SHA256 3ba374116001f0f8fe34afdef81427047a75e3de0d900a2493794ec9da123883 files/digest-tarsync-0.1 63
 MD5 b148fb19e38cd7701b03a593b5e4acb5 files/digest-tarsync-0.2 235
-RMD160 083309ff506559122116fbb6eeef01183e8241cf files/digest-tarsync-0.2 235
-SHA256 deb201c70a110cb1aae7e5d2c9efe05441edc3f973640b8ba2d5e015c721c005 files/digest-tarsync-0.2 235
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
-SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
-MD5 b665b68879513ab189db1f4e9e8e1635 tarsync-0.1.ebuild 622
-RMD160 e21d86c0cee0914a413a3a2a648dc5fd44e68f3a tarsync-0.1.ebuild 622
-SHA256 fb8264b7576e4c15e08d10acdf3bab655a804ded163c3db413435b505b3655d1 tarsync-0.1.ebuild 622
-MD5 87100b2afafb668f96f47de2714d4101 tarsync-0.2.ebuild 676
-RMD160 33240981d997b6a8ea248f346a9396ceaf184c31 tarsync-0.2.ebuild 676
-SHA256 e2231d78eda645ecc2127c6bc1a836d4c6a94387d5ffd5df31c5470e0bb694be tarsync-0.2.ebuild 676
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEHJEUV3J2n04EauwRAhZsAKCa4TMP2RH4m1aTy8dEUkHJJciB4wCgk9oC
-yTnj/YKJ0j3djLZ1oKSe9/I=
-=Ttms
------END PGP SIGNATURE-----
+MD5 ae9e488e116ec3e32d0ce0b2590eee3c tarsync-0.1.ebuild 629
+MD5 5bc2489d2ca713473282656ebbd2b937 tarsync-0.2.ebuild 663
