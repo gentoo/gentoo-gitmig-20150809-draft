@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r2.ebuild,v 1.20 2005/03/30 14:55:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r2.ebuild,v 1.21 2006/05/08 05:19:55 tcort Exp $
 
 inherit eutils
 
 DESCRIPTION="Revision Control System"
 HOMEPAGE="http://www.gnu.org/software/rcs/"
-SRC_URI="ftp://ftp.gnu.org/gnu/rcs/${P}.tar.gz"
+SRC_URI="mirror://gnu/rcs/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"

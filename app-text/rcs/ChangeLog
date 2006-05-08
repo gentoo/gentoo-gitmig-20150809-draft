@@ -1,6 +1,10 @@
 # ChangeLog for app-text/rcs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/ChangeLog,v 1.23 2006/02/07 05:36:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/ChangeLog,v 1.24 2006/05/08 05:19:55 tcort Exp $
+
+  08 May 2006; Thomas Cort <tcort@gentoo.org> rcs-5.7-r2.ebuild,
+  rcs-5.7-r3.ebuild:
+  Use mirror://gnu/ instead of ftp://ftp.gnu.org/gnu/.
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> rcs-5.7-r3.ebuild:
   Mark 5.7-r3 stable on alpha
