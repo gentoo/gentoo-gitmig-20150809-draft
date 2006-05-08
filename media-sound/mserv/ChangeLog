@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mserv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.15 2006/03/08 12:51:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.16 2006/05/08 04:22:30 tcort Exp $
+
+  08 May 2006; <tcort@gentoo.org> mserv-0.35-r1.ebuild:
+  Removed COPYING from dodoc.
 
   08 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> mserv-0.35-r1.ebuild:
   Fix last version to use vorbis useflag instead of oggvorbis.
