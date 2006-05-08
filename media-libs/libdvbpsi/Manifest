@@ -1,4 +1,4 @@
-MD5 61d15e29ee263665aed649e88fa0414a ChangeLog 2447
+MD5 a6b4e418eedaebcfa20a44676caf671b ChangeLog 2539
 MD5 15628e51c37a167fd1c20bef4519fc10 files/digest-libdvbpsi-0.1.1 67
 MD5 4960c2b98c608dd2f879d0156dcfcf80 files/digest-libdvbpsi-0.1.2 68
 MD5 374632f056ae317e184722566b5083e8 files/digest-libdvbpsi-0.1.3 68
@@ -10,5 +10,5 @@ MD5 0c07f35338081995d923812a939acfde libdvbpsi-0.1.2.ebuild 786
 MD5 6b75b0730ea3eb3f875d664929b2c579 libdvbpsi-0.1.3.ebuild 782
 MD5 d3e02b79fe7164a58679deec09a718c1 libdvbpsi-0.1.4-r1.ebuild 964
 MD5 9b573292e13e6a0dd5a2be8563aabbc6 libdvbpsi-0.1.4.ebuild 860
-MD5 dc50c757d9c5a211bddd2ac0324cac8c libdvbpsi-0.1.5.ebuild 955
+MD5 bfd2e66ec276f2de11170f6cb37c2f3a libdvbpsi-0.1.5.ebuild 965
 MD5 46b3654b1563aad69c575e55e8d67b61 metadata.xml 220
