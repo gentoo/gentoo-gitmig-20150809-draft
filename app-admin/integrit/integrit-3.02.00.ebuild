@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/integrit-3.02.00.ebuild,v 1.14 2005/08/20 14:16:24 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/integrit-3.02.00.ebuild,v 1.15 2006/05/08 05:08:33 tcort Exp $
 
 DESCRIPTION="file integrity verification program"
 HOMEPAGE="http://integrit.sourceforge.net/"
@@ -29,7 +29,7 @@ src_compile() {
 src_install() {
 	dosbin integrit || die
 	dolib libintegrit.a
-	dodoc Changes HACKING INSTALL README todo.txt
+	dodoc Changes HACKING README todo.txt
 
 	cd ${S}/utils
 	dosbin i-viewdb
