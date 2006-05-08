@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.0_pre.ebuild,v 1.5 2006/05/08 17:16:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.0_pre.ebuild,v 1.6 2006/05/08 18:52:07 genstef Exp $
 
 inherit eutils flag-o-matic pam autotools multilib subversion
 
@@ -27,7 +27,8 @@ DEP="pam? ( virtual/pam )
 	dbus? ( sys-apps/dbus )
 	>=media-libs/libpng-1.2.1
 	>=media-libs/tiff-3.5.5
-	>=media-libs/jpeg-6b"
+	>=media-libs/jpeg-6b
+	app-text/libpaper"
 DEPEND="${DEP}
 	nls? ( sys-devel/gettext )"
 RDEPEND="${DEP}
@@ -98,10 +99,6 @@ src_install() {
 	# cleanups
 	rm -rf ${D}/etc/init.d ${D}/etc/pam.d ${D}/etc/rc* ${D}/usr/share/man/cat*
 
-	# Do not export all our printers
-	sed -i -e "s:^BrowseAllow.*:#\0:" \
-		${D}/etc/cups/cupsd.conf
-
 	pamd_mimic_system cups auth account
 
 	sed -i -e "s:server = .*:server = /usr/libexec/cups/daemon/cups-lpd:" ${D}/etc/xinetd.d/cups-lpd
@@ -121,7 +118,11 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	einfo "Export printers in the network: uncomment BrowseAllow @LOCAL in cupsd.conf"
+	einfo "Remote printing: change "
+	echo "Listen localhost:631"
+	einfo "to"
+	echo "Listen *:631"
+	einfo "in /etc/cups/cupsd.conf"
 	einfo
 	einfo "For more information about installing a printer take a look at:"
 	einfo "http://www.gentoo.org/doc/en/printing-howto.xml."
