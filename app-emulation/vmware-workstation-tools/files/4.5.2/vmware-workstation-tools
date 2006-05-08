@@ -1,6 +1,6 @@
 #!/sbin/runscript
 #
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/files/4.5.2/vmware-workstation-tools,v 1.2 2006/05/08 13:27:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/files/4.5.2/vmware-workstation-tools,v 1.3 2006/05/08 13:56:34 wolf31o2 Exp $
 #
 # This script manages the services needed to run VMware software
 
@@ -30,12 +30,12 @@ vmware_tools_load_module() {
    if [ "`isLoaded "$1"`" = 'yes' ]; then
       /sbin/rmmod "$1"
    fi
-   /sbin/insmod -s -f "/lib/modules/`uname -r`/misc/$1.o" >/dev/null 2>&1 || /sbin/insmod -s -f "$1" >/dev/null 2>&1 || exit 1
+   /sbin/insmod -s -f "/lib/modules/`uname -r`/misc/$1.o" >/dev/null 2>&1 || /sbin/insmod -s -f "$1" >/dev/null 2>&1 || eend 1
 }
 
 vmware_tools_unload_module() {
    if [ "`isLoaded "$1"`" = 'yes' ]; then
-      /sbin/rmmod "$1" >/dev/null 2>&1 || exit 1
+      /sbin/rmmod "$1" >/dev/null 2>&1 || eend 1
    fi
 }
 
@@ -61,7 +61,7 @@ checkconfig ()
 
 start ()
 {
-	checkconfig || exit 1
+	checkconfig || eend 1
 
 	ebegin "Loading vmware filesystem"
 	vmware_tools_load_module $VMWARE_VMHGFS_MOD

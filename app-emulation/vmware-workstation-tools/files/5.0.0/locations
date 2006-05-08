@@ -8,8 +8,8 @@ answer BUILDR_vmhgfs yes
 answer HEADER_DIR /lib/modules/2.6.7-gentoo-r9/build/include
 answer VMHGFS_CONFED yes
 answer BINDIR /usr/bin
-answer INITDIR /tmp
-answer INITSCRIPTSDIR /tmp
+answer INITDIR /etc/init.d
+answer INITSCRIPTSDIR /etc/init.d
 answer SBINDIR /usr/sbin
 answer LIBDIR /usr/lib/vmware-tools
 directory /etc/vmware-tools
