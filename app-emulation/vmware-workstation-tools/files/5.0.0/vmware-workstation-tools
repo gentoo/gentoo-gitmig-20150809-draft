@@ -1,9 +1,6 @@
 #!/sbin/runscript
 #
-# Copyright (C) 1998-2002 VMware, Inc.  All Rights Reserved.
-# Updated by stuart@gentoo.org to support Gentoo Linux
-#
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/files/5.0.0/vmware-workstation-tools,v 1.1 2006/05/08 13:00:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/files/5.0.0/vmware-workstation-tools,v 1.2 2006/05/08 13:27:49 wolf31o2 Exp $
 #
 # This script manages the services needed to run VMware software
 
