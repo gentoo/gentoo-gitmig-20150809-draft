@@ -1,12 +1,48 @@
-MD5 8630908eb71f5741bd6d8cd303bd6e5c vmware-linux-tools-4.5.2.ebuild 2026
-MD5 34cd7242b1623b238b17a20062e72cae ChangeLog 741
-MD5 0415383a9f09e469d1a77c2510dda94a metadata.xml 221
-MD5 e2e9ad15f8bca46fb04aa6f4c155c1aa vmware-linux-tools-5.0.0.ebuild 2061
-MD5 076b748d7140400d21d72352b91b1e33 files/digest-vmware-linux-tools-4.5.2 71
-MD5 f13d821596ed2bcb3e100efff3191ef8 files/digest-vmware-linux-tools-5.0.0 77
-MD5 5d5be188e4b28fd552d1eb6250e65f1c files/4.5.2/vmware-linux-tools 2086
+AUX 4.5.2/locations 874 RMD160 5a01cc0605d8147d23c25384d409b792daedba41 SHA1 34758dfa2751b1f04044c89c03b879024e67ca0e SHA256 8ea84a436fd9a135c6ffb52b9c0e53f71ce13009e19e2d01eedcdf19ba1bb40c size 874
 MD5 7f6694e67686fa494cb860db3f6a87b4 files/4.5.2/locations 874
+RMD160 5a01cc0605d8147d23c25384d409b792daedba41 files/4.5.2/locations 874
+SHA256 8ea84a436fd9a135c6ffb52b9c0e53f71ce13009e19e2d01eedcdf19ba1bb40c files/4.5.2/locations 874
+AUX 4.5.2/vmware-linux-tools 2086 RMD160 401511da630888e9113ad14601816dc88ee67f22 SHA1 f1741c53dd2e909f015850e52cbb51e0397c52f5 SHA256 3acc62a9a626fdfb9ba10d18c6f3aef8f27a941215c859289c2701c2e9aad415 size 2086
+MD5 5d5be188e4b28fd552d1eb6250e65f1c files/4.5.2/vmware-linux-tools 2086
+RMD160 401511da630888e9113ad14601816dc88ee67f22 files/4.5.2/vmware-linux-tools 2086
+SHA256 3acc62a9a626fdfb9ba10d18c6f3aef8f27a941215c859289c2701c2e9aad415 files/4.5.2/vmware-linux-tools 2086
+AUX 4.5.2/xorg.conf 2646 RMD160 c3e2e153b3b9520fc8d5fa20e9e8f7a6c3790084 SHA1 a44f4240f19390a6707da4313139160ee6972da0 SHA256 2503352f7fd53f23e51d53017f76167a2da0fdfbb9eb434c85573108c6bc53c8 size 2646
 MD5 bd0505ab92d03f82b898858d45787f58 files/4.5.2/xorg.conf 2646
+RMD160 c3e2e153b3b9520fc8d5fa20e9e8f7a6c3790084 files/4.5.2/xorg.conf 2646
+SHA256 2503352f7fd53f23e51d53017f76167a2da0fdfbb9eb434c85573108c6bc53c8 files/4.5.2/xorg.conf 2646
+AUX 5.0.0/locations 874 RMD160 5a01cc0605d8147d23c25384d409b792daedba41 SHA1 34758dfa2751b1f04044c89c03b879024e67ca0e SHA256 8ea84a436fd9a135c6ffb52b9c0e53f71ce13009e19e2d01eedcdf19ba1bb40c size 874
 MD5 7f6694e67686fa494cb860db3f6a87b4 files/5.0.0/locations 874
+RMD160 5a01cc0605d8147d23c25384d409b792daedba41 files/5.0.0/locations 874
+SHA256 8ea84a436fd9a135c6ffb52b9c0e53f71ce13009e19e2d01eedcdf19ba1bb40c files/5.0.0/locations 874
+AUX 5.0.0/vmware-linux-tools 2088 RMD160 372af76fb9f49b60fc37c8dff68cd9221f1a2d07 SHA1 65858f654da1044b143b3fa41de53cb5119dc043 SHA256 1aead6a3d63187f89dd52b992d48beac7b6a7dbe0e2f69d0069fb417474dbc2d size 2088
 MD5 1f1a95b6601fd95afe53d3f7957a7c9f files/5.0.0/vmware-linux-tools 2088
+RMD160 372af76fb9f49b60fc37c8dff68cd9221f1a2d07 files/5.0.0/vmware-linux-tools 2088
+SHA256 1aead6a3d63187f89dd52b992d48beac7b6a7dbe0e2f69d0069fb417474dbc2d files/5.0.0/vmware-linux-tools 2088
+AUX 5.0.0/xorg.conf 2646 RMD160 c3e2e153b3b9520fc8d5fa20e9e8f7a6c3790084 SHA1 a44f4240f19390a6707da4313139160ee6972da0 SHA256 2503352f7fd53f23e51d53017f76167a2da0fdfbb9eb434c85573108c6bc53c8 size 2646
 MD5 bd0505ab92d03f82b898858d45787f58 files/5.0.0/xorg.conf 2646
+RMD160 c3e2e153b3b9520fc8d5fa20e9e8f7a6c3790084 files/5.0.0/xorg.conf 2646
+SHA256 2503352f7fd53f23e51d53017f76167a2da0fdfbb9eb434c85573108c6bc53c8 files/5.0.0/xorg.conf 2646
+DIST VMwareTools-5.0.0-13124.tar.gz 11370290 size 11370290
+DIST vmware-linux-tools.tar.gz 6630450 size 6630450
+EBUILD vmware-linux-tools-4.5.2.ebuild 2026 RMD160 cae4fd66361492b18194096d20b65dab73fdaf37 SHA1 fc8edbe3da9fb83a6119edf4de509024e5001aa5 SHA256 d70fe4c34756367ebf283c0acff2176d32f98be9e7efc2ebdfa973cbbd869a5c size 2026
+MD5 8630908eb71f5741bd6d8cd303bd6e5c vmware-linux-tools-4.5.2.ebuild 2026
+RMD160 cae4fd66361492b18194096d20b65dab73fdaf37 vmware-linux-tools-4.5.2.ebuild 2026
+SHA256 d70fe4c34756367ebf283c0acff2176d32f98be9e7efc2ebdfa973cbbd869a5c vmware-linux-tools-4.5.2.ebuild 2026
+EBUILD vmware-linux-tools-5.0.0.ebuild 2061 RMD160 74dc78b83e7eff4e11abfa329f5ac6307dcc87c3 SHA1 256f8168ed6e6ff497b41ce2f8bd3351806220c4 SHA256 1982fffe6a1978899eec6deedf35d8334c4d317377caf7f2ff9e1ed52073eaef size 2061
+MD5 e2e9ad15f8bca46fb04aa6f4c155c1aa vmware-linux-tools-5.0.0.ebuild 2061
+RMD160 74dc78b83e7eff4e11abfa329f5ac6307dcc87c3 vmware-linux-tools-5.0.0.ebuild 2061
+SHA256 1982fffe6a1978899eec6deedf35d8334c4d317377caf7f2ff9e1ed52073eaef vmware-linux-tools-5.0.0.ebuild 2061
+MISC ChangeLog 971 RMD160 46796b7c0aff9dd044a81f743b4f84fdd895f0a0 SHA1 23aba81aede5a5f2188e4b51e13c0593b8cdc58e SHA256 b05fb109362f840b98e76d9cdb6bb0ed518e98388c387547b36bf7969bb2ece3 size 971
+MD5 c145bab823da0af823fdee7eeba6bca7 ChangeLog 971
+RMD160 46796b7c0aff9dd044a81f743b4f84fdd895f0a0 ChangeLog 971
+SHA256 b05fb109362f840b98e76d9cdb6bb0ed518e98388c387547b36bf7969bb2ece3 ChangeLog 971
+MISC metadata.xml 159 RMD160 fc7f68a382390e5916b0fb43f37a893fad4f9798 SHA1 f46b02a39bcd0165558de67ff4256cfc812418a3 SHA256 8581ae1c90a48f50fa0542c7fb28cb8984baaf12f50fa18f33e467081effb215 size 159
+MD5 7cc95faad4185e8ed375248bc73a17fc metadata.xml 159
+RMD160 fc7f68a382390e5916b0fb43f37a893fad4f9798 metadata.xml 159
+SHA256 8581ae1c90a48f50fa0542c7fb28cb8984baaf12f50fa18f33e467081effb215 metadata.xml 159
+MD5 076b748d7140400d21d72352b91b1e33 files/digest-vmware-linux-tools-4.5.2 71
+RMD160 f6ed69b1678feb4966ed3ed286236fb5ff2c541f files/digest-vmware-linux-tools-4.5.2 71
+SHA256 ed43126e26db436288e4cf2542931f9a6ac1da3bf8d50a2a51dfbaea408539fd files/digest-vmware-linux-tools-4.5.2 71
+MD5 f13d821596ed2bcb3e100efff3191ef8 files/digest-vmware-linux-tools-5.0.0 77
+RMD160 0ede7694d90f0f5cacd0196b70e4a60faffafcfd files/digest-vmware-linux-tools-5.0.0 77
+SHA256 9b3d73092409906bc9fab5238a73a09ce5f33b66d190b94a1a095a72557169d5 files/digest-vmware-linux-tools-5.0.0 77
