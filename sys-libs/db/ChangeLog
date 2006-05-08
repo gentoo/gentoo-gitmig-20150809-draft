@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.157 2006/04/24 01:56:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.158 2006/05/08 09:13:11 pauldv Exp $
+
+*db-4.4.20_p2 (08 May 2006)
+
+  08 May 2006; <pauldv@gentoo.org> -db-4.4.20.ebuild, +db-4.4.20_p2.ebuild:
+  Use the upstream patches.
 
   29 Apr 2006; Joshua Kinard <kumba@gentoo.org> db-4.2.52_p2-r1.ebuild:
   Marked stable on mips.
