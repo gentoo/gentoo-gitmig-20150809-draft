@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cidr/cidr-2.3.1-r1.ebuild,v 1.8 2005/05/26 10:32:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cidr/cidr-2.3.1-r1.ebuild,v 1.9 2006/05/08 21:05:23 dertobi123 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://home.netcom.com/~naym/cidr/cidr-current.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc ~amd64"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND=""
