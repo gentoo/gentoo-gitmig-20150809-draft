@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.6.ebuild,v 1.5 2006/04/09 00:33:58 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.6.ebuild,v 1.6 2006/05/08 00:17:47 nerdboy Exp $
 
 inherit eutils toolchain-funcs qt3
 
@@ -22,6 +22,8 @@ RDEPEND=">=media-gfx/graphviz-2.6
 DEPEND=">=sys-apps/sed-4
 	${RDEPEND}"
 
+EPATCH_SUFFIX="patch"
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -31,8 +33,6 @@ src_unpack() {
 		-e 's:^\(TMAKE_LFLAGS_RELEASE\s*\)=.*$:\1= $(ELDFLAGS):' \
 		tmake/lib/{{linux,freebsd,netbsd,openbsd,solaris}-g++,macosx-c++}/tmake.conf
 
-	epatch ${FILESDIR}/doxygen-1.4.3-cp1251.patch
-
 	if use unicode; then
 		epatch ${WORKDIR}/${PN}-utf8-ru.patch || die "utf8-ru patch failed"
 	fi
@@ -41,8 +41,9 @@ src_unpack() {
 		epatch ${FILESDIR}/${PN}-gcc4.patch || die "gcc4 patch failed"
 	fi
 
-	# Detect correctly install command on FreeBSD
-	epatch "${FILESDIR}/${P}-freebsd.patch"
+	# Consolidate patches, apply FreeBSD configure patch, codepage patch,
+	# qtools stuff, and patches for bugs 129142, 121770, and 129560.
+	epatch ${FILESDIR}/${PV}
 }
 
 src_compile() {
