@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.12 2006/02/24 06:50:00 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.13 2006/05/08 05:30:35 nerdboy Exp $
+
+  08 May 2006; Steve Arnold <nerdboy@gentoo.org> files/gpsd.conf,
+  files/gpsd.init, gpsd-2.30-r1.ebuild, gpsd-2.31.ebuild:
+  Updated with workaround for bug 132288
 
   24 Feb 2006; Steve Arnold <nerdboy@gentoo.org> gpsd-2.31.ebuild:
   updated dbus depend atom

@@ -1,17 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.30-r1.ebuild,v 1.2 2006/02/20 06:00:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.30-r1.ebuild,v 1.3 2006/05/08 05:30:35 nerdboy Exp $
 
 inherit eutils libtool distutils
 
 DESCRIPTION="GPS daemon and library to support USB/serial GPS devices and various GPS/mapping clients."
 HOMEPAGE="http://gpsd.berlios.de/"
-#SRC_URI="http://download.berlios.de/gpsd/${P}.tar.gz"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="http://download.berlios.de/gpsd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=" ~arm ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~arm ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="X usb dbus"
 
@@ -68,6 +67,7 @@ src_install() {
 
 	if use usb ; then
 	    sed -i -e "s/gpsd.hotplug/gpsd/g" gpsd.hotplug gpsd.usermap
+	    sed -i -e "s:run/gpsd.sock:run/gpsd/gpsd.sock:g" gpsd.hotplug
 	    insinto /etc/hotplug/usb
 	    doins gpsd.usermap
 	    exeinto /etc/hotplug/usb
@@ -86,6 +86,9 @@ src_install() {
 	exeinto /usr/$(get_libdir)/python${PYVER}/site-packages
 	doexe gps.py gpsfake.py
 	dodoc AUTHORS HACKING INSTALL README TODO ${FILESDIR}/40-usb-serial.rules
+	diropts "-m1755"
+	dodir /var/run/gpsd
+	fowners nobody /var/run/gpsd
 }
 
 pkg_postinst() {
@@ -112,7 +115,7 @@ pkg_postinst() {
 	einfo
 	einfo "Finally, the default gpsd setup looks for /dev/ttyUSB0, in the"
 	einfo "case of the USB-serial adapter mentioned above.  Depending on"
-	einfo "your default device scheme (ie, udev, devfs, static), you will"
+	einfo "your default device scheme (ie, udev, devfs, static), you may"
 	einfo "need to create a device alias if the default name is different."
 	einfo "A udev rule file has been provided with an example rule in the"
 	einfo "docs directory.  If the device names are correct, gpsd will"
