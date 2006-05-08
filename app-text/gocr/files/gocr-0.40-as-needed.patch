@@ -1,0 +1,22 @@
+--- gocr-0.40/src/Makefile.in.orig	2006-05-07 16:06:35.000000000 +0200
++++ gocr-0.40/src/Makefile.in	2006-05-07 16:09:10.000000000 +0200
+@@ -42,7 +42,8 @@
+ CPPFLAGS=@CPPFLAGS@
+ # to see the config.h
+ CFLAGS=@CFLAGS@ $(CPPFLAGS) -I../include $(DEFS)
+-LDFLAGS=@LDFLAGS@ @LIBS@ -L.
++LDFLAGS=@LDFLAGS@
++LIBADD=@LIBS@
+ DESTDIR=@prefix@
+ 
+ .c.o:
+@@ -53,7 +54,7 @@
+ all: $(PROGRAM) $(LIBPGMASCLIB)
+ 
+-$(PROGRAM): $(LIBPGMASCLIB) gocr.o
+-	$(CC) -o $@ gocr.o $(LDFLAGS) -l$(PGMASCLIB)
++$(PROGRAM): $(LIBOBJS) gocr.o
++	$(CC) $(LDFLAGS) $(LIBOBJS) gocr.o $(LIBADD) -o $@
+ 	if test -r $(PROGRAM); then cp $@ ../bin; fi
+ 
+ 
