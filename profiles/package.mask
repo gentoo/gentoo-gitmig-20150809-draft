@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5313 2006/05/08 12:12:31 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5314 2006/05/08 13:21:14 chtekk Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -443,9 +443,6 @@ net-misc/asterisk-app_authenticate_ldap
 >=x11-drivers/xf86-video-via-0.2.1
 >=x11-drivers/xf86-video-vmware-10.13.0
 >=x11-drivers/xf86-video-voodoo-1.1.0
-
-# Francesco Riosa <vivo@gentoo.org> (13 Dec 2005)
-=dev-db/mysql-4.1.14
 
 # Mark Loeser <halcy0n@gentoo.org> (11 Apr 2006)
 # GCC 4.2 snapshots; use with extreme care and only report bugs if you have
