@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-wifi
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-wifi/ChangeLog,v 1.10 2005/04/27 20:18:37 herbs Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-wifi/ChangeLog,v 1.11 2006/05/08 21:07:36 brix Exp $
+
+  08 May 2006; Henrik Brix Andersen <brix@gentoo.org>
+  gkrellm-wifi-0.9.12.ebuild:
+  Fixed URLs, thanks to cygeus in bug #132720.
 
   27 Apr 2005; Herbie Hopkins <herbs@gentoo.org> gkrellm-wifi-0.9.12.ebuild:
   multilib fixes
