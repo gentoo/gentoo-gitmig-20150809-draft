@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gai
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/ChangeLog,v 1.11 2005/12/18 04:18:40 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/ChangeLog,v 1.12 2006/05/08 10:26:01 s4t4n Exp $
+
+  08 May 2006; Michele Noberasco <s4t4n@gentoo.org> gai-0.5.6.ebuild:
+  Stable for x86.
 
 *gai-0.5.10 (18 Dec 2005)
 
