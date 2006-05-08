@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.2-r1.ebuild,v 1.3 2006/05/08 22:53:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.2-r1.ebuild,v 1.4 2006/05/08 22:57:25 genstef Exp $
 
 inherit eutils
 
@@ -46,5 +46,7 @@ src_install() {
 	if use cups; then
 		dosym /usr/bin/foomatic-gswrapper $(cups-config --serverbin)/filter/foomatic-gswrapper
 		dosym /usr/bin/foomatic-rip $(cups-config --serverbin)/filter/cupsomatic
+	else
+		rm -r ${D}/$(cups-config --serverbin)/filter
 	fi
 }
