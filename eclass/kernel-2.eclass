@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.176 2006/05/06 17:57:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.177 2006/05/08 14:18:04 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -356,10 +356,21 @@ unpack_2_6() {
 	# this file is required for other things to build properly, so we
 	# autogenerate it ... generate a .config to keep version.h build from
 	# spitting out an annoying warning
-	make -s mrproper ${xmakeopts} 2>/dev/null || die "make mrproper failed"
-	make -s defconfig ${xmakeopts} &>/dev/null 2>&1 || die "make defconfig failed"
-	make -s include/linux/version.h ${xmakeopts} || die "make include/linux/version.h failed"
-	rm -f .config
+	make -s mrproper ${xmakeopts} 2>/dev/null \
+		|| die "make mrproper failed"
+
+	# quick fix for bug #132152 which triggers when it cannot include linux
+	# headers (ie, we have not installed it yet)
+	if ! (make -s defconfig ${xmakeopts} &>/dev/null 2>&1); then
+		touch .config
+		eerror "make defconfig failed."
+		eerror "assuming you dont have any headers installed yet and continuing"
+		epause 5
+	fi
+
+	make -s include/linux/version.h ${xmakeopts} 2>/dev/null \
+		|| die "make include/linux/version.h failed"
+	rm -f .config >/dev/null 
 }
 
 universal_unpack() {
