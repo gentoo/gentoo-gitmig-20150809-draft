@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.6.6.ebuild,v 1.8 2006/03/07 13:40:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.6.6.ebuild,v 1.9 2006/05/08 04:37:49 tcort Exp $
 
 IUSE=""
 
@@ -26,5 +26,5 @@ src_unpack() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }

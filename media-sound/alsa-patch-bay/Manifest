@@ -1,5 +1,5 @@
-MD5 eeeb93015c71ccbfa7703a5031d941b6 ChangeLog 3223
-MD5 edb752f53038584a03b60c6de92a673d alsa-patch-bay-1.0.0-r1.ebuild 1404
+MD5 ed85f2538d85472831b6d601d17c53d3 ChangeLog 3332
+MD5 208b5b25a5e0b350036868f9f60482c8 alsa-patch-bay-1.0.0-r1.ebuild 1385
 MD5 f2f4bc9bdd6d9907a6b759278ad51e11 alsa-patch-bay-1.0.0-r2.ebuild 1295
 MD5 3451271c44f72268abb6051fa9af1145 files/alsa-patch-bay-1.0.0-amd64.patch 2030
 MD5 f3ba80b5a1ce25a42136ca5f4396d691 files/digest-alsa-patch-bay-1.0.0-r1 72
