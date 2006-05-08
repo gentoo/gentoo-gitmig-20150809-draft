@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.1 2005/11/17 13:48:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.2 2006/05/08 11:13:57 caleb Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
@@ -15,7 +15,7 @@ inherit versionator
 
 QTPKG="x11-libs/qt-"
 QT4MAJORVERSIONS="4.1 4.0"
-QT4VERSIONS="4.0.1 4.0.0"
+QT4VERSIONS="4.1.2 4.1.1 4.1.0 4.0.1 4.0.0"
 
 qt_min_version() {
 	echo "|| ("
