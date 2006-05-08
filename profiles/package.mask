@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5310 2006/05/07 22:20:42 dercorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5311 2006/05/08 01:02:50 chutzpah Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -231,12 +231,6 @@ dev-php/PEAR-XML_RPC
 # Roy Marples <uberlord@gentoo.org> (21 Apr 2006)
 # Masked for testing
 =net-misc/dhcp-3.0.4_rc*
-
-# <chutzpah@gentoo.org> (21 Apr 2006)
-# masking versions >= 0.14 until Gnome 2.14 is
-# unmasked (deps on dev-libs/glib-2.10 which is
-# in the 2.14 mask)
->=media-sound/bmpx-0.14
 
 # Tavis Ormandy <taviso@gentoo.org> (21 Apr 2006)
 # unresolved security issues #125491
