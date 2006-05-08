@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.56 2006/03/17 21:00:09 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.57 2006/05/08 03:27:04 dang Exp $
+
+  08 May 2006; <dang@gentoo.org>
+  +files/gnome-system-tools-2.14.0-as-needed.patch,
+  gnome-system-tools-2.14.0.ebuild:
+  Fix for --as-needed.  Bug #129230
 
 *gnome-system-tools-2.14.0 (17 Mar 2006)
 
