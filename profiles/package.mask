@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5312 2006/05/08 03:01:07 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5313 2006/05/08 12:12:31 uberlord Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -223,10 +223,6 @@ dev-php/PEAR-XML_RPC
 # Marcelo Goes <vanquirius@gentoo.org> (21 Apr 2006)
 # utf8 patch remains to be ported
 =www-client/links-2.1_pre21
-
-# Roy Marples <uberlord@gentoo.org> (21 Apr 2006)
-# Masked for testing
-=net-misc/dhcp-3.0.4_rc*
 
 # Tavis Ormandy <taviso@gentoo.org> (21 Apr 2006)
 # unresolved security issues #125491
