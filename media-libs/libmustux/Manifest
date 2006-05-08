@@ -1,31 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 adeac9c5d112d6127c1cec29dea6e44e ChangeLog 4044
-RMD160 dbb3fa1f5bd0704036284b0b95f97f2bdb4828c1 ChangeLog 4044
-SHA256 1113c4665d94dcabb5fa5ac289d992dbdf91b88644332fad3615e2227804de7d ChangeLog 4044
+MD5 75ee2a8d028c40ca475d2569eba534ac ChangeLog 4164
 MD5 3c81d6bb6e17103411e654d928297b31 files/digest-libmustux-0.20.2 68
-RMD160 9d8268dc0cb50e51e7cc91531798e5723f7048fd files/digest-libmustux-0.20.2 68
-SHA256 3c6b9a693ebd3b3e99c17406c82a23dc5d523cb99ed82dbfa234cbbe81541e0a files/digest-libmustux-0.20.2 68
 MD5 3c81d6bb6e17103411e654d928297b31 files/digest-libmustux-0.20.2-r1 68
-RMD160 9d8268dc0cb50e51e7cc91531798e5723f7048fd files/digest-libmustux-0.20.2-r1 68
-SHA256 3c6b9a693ebd3b3e99c17406c82a23dc5d523cb99ed82dbfa234cbbe81541e0a files/digest-libmustux-0.20.2-r1 68
 MD5 ebaa6f20c12c7e54292466cd7ba931b4 files/libmustux-0.20.2-qualifications.patch 543
-RMD160 fdc8d31562b5b6369a9c069c3991affececc0b3a files/libmustux-0.20.2-qualifications.patch 543
-SHA256 d5ecbd7c0d84c1f6ea9a00e3875c85eb557f079da81f5c645769595e164d556b files/libmustux-0.20.2-qualifications.patch 543
-MD5 1a72d2b452a722f8b8efbf3c44fb0f73 libmustux-0.20.2-r1.ebuild 965
-RMD160 540bcdd29d90cefc9e0311ce35c15e6571342047 libmustux-0.20.2-r1.ebuild 965
-SHA256 296f375adf6bcf4e3ef3887680fbbc54c1289946867a70a6b11ae0e8d740099c libmustux-0.20.2-r1.ebuild 965
+MD5 50356db98568b128429a2024be83ac0f libmustux-0.20.2-r1.ebuild 968
 MD5 3959917835ede33c2d6a3478c9707280 libmustux-0.20.2.ebuild 1097
-RMD160 9788c1a241c2d5d20284c4ff88f8ed96c01723c4 libmustux-0.20.2.ebuild 1097
-SHA256 77cf2ab65cf87e218844a18644b3388b1592be6a5674af809e960e892ff983cd libmustux-0.20.2.ebuild 1097
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
-RMD160 600a2278f8a89283311c5bb10b02d54cebef8ca3 metadata.xml 221
-SHA256 3341e7789c5ba08aade2440d5ce6d2937e8432775731033190f11df5f64d085e metadata.xml 221
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFER7L9AiZjviIA2XgRAlqRAKCoPgXpHIYIVOiVshMRI1HRff/NeACguCxP
-ESGS3uoZ3SFc8wUzObgNzI0=
-=0P2s
------END PGP SIGNATURE-----
