@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.4-r1.ebuild,v 1.1 2006/01/31 11:39:30 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.4-r1.ebuild,v 1.2 2006/05/08 08:44:04 uberlord Exp $
 
 inherit eutils
 
@@ -56,7 +56,7 @@ src_install() {
 	doman vsftpd.conf.5 vsftpd.8
 	dosbin vsftpd
 
-	dodoc AUDIT BENCHMARKS BUGS Changelog FAQ INSTALL \
+	dodoc AUDIT BENCHMARKS BUGS Changelog FAQ \
 		LICENSE README README.security REWARD SIZE \
 		SPEED TODO TUNING
 	newdoc vsftpd.conf vsftpd.conf.example
