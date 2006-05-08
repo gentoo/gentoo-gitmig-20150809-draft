@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-0.7.2.ebuild,v 1.5 2006/04/19 21:54:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-0.7.2.ebuild,v 1.6 2006/05/08 20:48:24 genstef Exp $
 
 inherit eutils flag-o-matic linux-mod toolchain-funcs
 
@@ -35,6 +35,7 @@ src_unpack() {
 
 	mv ${WORKDIR}/kqemu ${S}
 	cd ${S}/kqemu
+	sed -i 's:MODULE_PARM(\([^,]*\),"i");:module_param(\1, int, 0);:' kqemu-linux.c
 	sed -i -e 's:#ifndef PAGE_KERNEL_EXEC:#if 1:' ${S}/kqemu/kqemu-linux.c
 	# The class_simple interfaces were removed in 2.6.13-rc1, leaving only
 	# GPL symbols behind, which this module can't use.  Until there's a fix

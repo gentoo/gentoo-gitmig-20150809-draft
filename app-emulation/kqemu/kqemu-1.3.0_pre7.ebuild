@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-1.3.0_pre7.ebuild,v 1.1 2006/05/07 20:28:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-1.3.0_pre7.ebuild,v 1.2 2006/05/08 20:48:24 genstef Exp $
 
 inherit eutils flag-o-matic linux-mod toolchain-funcs
 
@@ -34,6 +34,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	sed -i 's:MODULE_PARM(\([^,]*\),"i");:module_param(\1, int, 0);:' kqemu-linux.c
 }
 
 src_compile() {
