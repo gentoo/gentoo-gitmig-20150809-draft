@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-5.0.0.ebuild,v 1.1 2006/05/08 13:00:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-5.0.0.ebuild,v 1.2 2006/05/08 13:08:44 wolf31o2 Exp $
 
 inherit eutils
 
-DESCRIPTION="Guest-os tools for VMWare workstation"
+DESCRIPTION="Guest-os tools for VMware Workstation"
 HOMEPAGE="http://www.vmware.com/"
 
 # the vmware-tools sources are part of the vmware virtual machine;
