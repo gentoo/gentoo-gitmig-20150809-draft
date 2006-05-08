@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.7 2006/05/05 09:06:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.8 2006/05/08 06:43:00 zzam Exp $
 
-inherit vdr-plugin
+inherit vdr-plugin eutils
 
 MY_PV="0.0.009"
 MY_P="${PN}-${MY_PV}"
