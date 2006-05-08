@@ -5,4 +5,8 @@
 <maintainer>
   <email>media-video@gentoo.org</email>
 </maintainer>
+<maintainer> 	 
+  <email>calchan@gentoo.org</email> 	 
+  <name>Denis Dupeyron</name> 	 
+</maintainer>
 </pkgmetadata>
