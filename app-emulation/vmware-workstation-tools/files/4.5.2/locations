@@ -1,0 +1,22 @@
+file /etc/vmware-tools/locations
+answer DOCDIR /usr/share/doc/vmware-tools
+answer RUN_CONFIGURATOR yes
+answer RESTORE_MODULES_CONF /etc/modules.conf
+answer RESTORE_MODULES_CONF_BAK /etc/modules.conf.BeforeVMwareToolsInstall
+answer RESTORE_BACK_LIST MODULES_CONF
+answer BUILDR_vmhgfs yes
+answer HEADER_DIR /lib/modules/2.6.7-gentoo-r9/build/include
+answer VMHGFS_CONFED yes
+answer BINDIR /usr/bin
+answer INITDIR /tmp
+answer INITSCRIPTSDIR /tmp
+answer SBINDIR /usr/sbin
+answer LIBDIR /usr/lib/vmware-tools
+directory /etc/vmware-tools
+directory /etc/vmware-tools/state
+file /etc/vmware-tools/not_configured 1109770680
+file /etc/vmware-tools/installer.sh 1109770680
+file /etc/vmware-tools/poweron-vm-default 1109770680
+file /etc/vmware-tools/resume-vm-default 1109770680
+file /etc/vmware-tools/suspend-vm-default 1109770680
+file /etc/vmware-tools/poweroff-vm-default 1109770680
