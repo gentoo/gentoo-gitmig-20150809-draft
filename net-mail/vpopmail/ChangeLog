@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.68 2006/02/20 22:12:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.69 2006/05/08 22:12:27 anarchy Exp $
+
+*vpopmail-5.4.16 (08 May 2006)
+
+  08 May 2006; Jory A. Pratt <anarchy@gentoo.org> +vpopmail-5.4.16.ebuild:
+  revision bump, plus security fix wrt bug #132674
 
   20 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
   vpopmail-5.4.6-r1.ebuild, -vpopmail-5.4.9-r2.ebuild,
