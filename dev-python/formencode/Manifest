@@ -1,43 +1,44 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 283bd3766c887e4ca60e23c39138367d ChangeLog 953
-RMD160 405b069a1e5a59a2db3a09b65822eb4662c1f9ed ChangeLog 953
-SHA256 af19c6688b7b7794b987f8b97e3f14c3ea985603b9682efb3033caa96a010a10 ChangeLog 953
+AUX formencode-0.2.2-setup-gentoo.patch 405 RMD160 5d51c4c32bb0ea901e80e5f307b82c2e280f108e SHA1 1ecb60bfe187ea8f94e29bd280f31401af45abce SHA256 0faf894285280f5411504b5ca50c2e19349d7605bbd32e92ca1341ff3ec8f214 size 405
+MD5 b2bc4df3b59ec5949c4f9563ef49e289 files/formencode-0.2.2-setup-gentoo.patch 405
+RMD160 5d51c4c32bb0ea901e80e5f307b82c2e280f108e files/formencode-0.2.2-setup-gentoo.patch 405
+SHA256 0faf894285280f5411504b5ca50c2e19349d7605bbd32e92ca1341ff3ec8f214 files/formencode-0.2.2-setup-gentoo.patch 405
+AUX formencode-0.3-setup-gentoo.patch 405 RMD160 5d51c4c32bb0ea901e80e5f307b82c2e280f108e SHA1 1ecb60bfe187ea8f94e29bd280f31401af45abce SHA256 0faf894285280f5411504b5ca50c2e19349d7605bbd32e92ca1341ff3ec8f214 size 405
+MD5 b2bc4df3b59ec5949c4f9563ef49e289 files/formencode-0.3-setup-gentoo.patch 405
+RMD160 5d51c4c32bb0ea901e80e5f307b82c2e280f108e files/formencode-0.3-setup-gentoo.patch 405
+SHA256 0faf894285280f5411504b5ca50c2e19349d7605bbd32e92ca1341ff3ec8f214 files/formencode-0.3-setup-gentoo.patch 405
+AUX formencode-0.4-setup-gentoo.patch 405 RMD160 5d51c4c32bb0ea901e80e5f307b82c2e280f108e SHA1 1ecb60bfe187ea8f94e29bd280f31401af45abce SHA256 0faf894285280f5411504b5ca50c2e19349d7605bbd32e92ca1341ff3ec8f214 size 405
+MD5 b2bc4df3b59ec5949c4f9563ef49e289 files/formencode-0.4-setup-gentoo.patch 405
+RMD160 5d51c4c32bb0ea901e80e5f307b82c2e280f108e files/formencode-0.4-setup-gentoo.patch 405
+SHA256 0faf894285280f5411504b5ca50c2e19349d7605bbd32e92ca1341ff3ec8f214 files/formencode-0.4-setup-gentoo.patch 405
+DIST FormEncode-0.2.2.tar.gz 84126 size 84126
+DIST FormEncode-0.3.tar.gz 94346 size 94346
+DIST FormEncode-0.4.tar.gz 103978 RMD160 834bc437f2a32498b50ece9a902141fde4744f8e SHA256 2c0de0243ce1853bf62ed9b2da122472b6682a117843af0cce4b4cf9588194ff size 103978
+EBUILD formencode-0.2.2.ebuild 884 RMD160 911bc483d3570687fcab67ec6fe9a981fab789c4 SHA1 a523cd39049fa7699d8185eba374938fea180c3e SHA256 a770213d44e6f770a85b4766ec1756285faaaf303ca1ff625556571635681b7e size 884
+MD5 2faecb81aa076864f85181b2309bbaaa formencode-0.2.2.ebuild 884
+RMD160 911bc483d3570687fcab67ec6fe9a981fab789c4 formencode-0.2.2.ebuild 884
+SHA256 a770213d44e6f770a85b4766ec1756285faaaf303ca1ff625556571635681b7e formencode-0.2.2.ebuild 884
+EBUILD formencode-0.3.ebuild 985 RMD160 b14f8bf72282affedf161d8938d26c4d00d4e898 SHA1 5a13ffc4ec5e9fd3e784867e3619c033a0629396 SHA256 1c8551f49f9dd991793dc2638f6a5192681a6c0a8898acf24262e9c285debb51 size 985
+MD5 5b03fa936737cd27f2e1e985d257fa71 formencode-0.3.ebuild 985
+RMD160 b14f8bf72282affedf161d8938d26c4d00d4e898 formencode-0.3.ebuild 985
+SHA256 1c8551f49f9dd991793dc2638f6a5192681a6c0a8898acf24262e9c285debb51 formencode-0.3.ebuild 985
+EBUILD formencode-0.4.ebuild 993 RMD160 0e56b1982311f9d825834ea6b1b6077540ef39fc SHA1 50504d14c562b1bcbdba68fca79fabfcdafbc210 SHA256 be7236030d8f0f16acf34b9ab73943ee3bb606fa5919e381af5c5d2f2235ce9a size 993
+MD5 cd9dce6aac9726b594abaaab182bee17 formencode-0.4.ebuild 993
+RMD160 0e56b1982311f9d825834ea6b1b6077540ef39fc formencode-0.4.ebuild 993
+SHA256 be7236030d8f0f16acf34b9ab73943ee3bb606fa5919e381af5c5d2f2235ce9a formencode-0.4.ebuild 993
+MISC ChangeLog 1044 RMD160 c9a68af872b0b9d935833874c9cd23923ccdbff0 SHA1 23cffec0c7b0e2148b1c6772abe7c44cd44bb508 SHA256 99022ecf47343a04595d15226b434c27a7d7dd9b5cafec8742ef6a5b7189b179 size 1044
+MD5 53237b9784814e636b692911b7e95a37 ChangeLog 1044
+RMD160 c9a68af872b0b9d935833874c9cd23923ccdbff0 ChangeLog 1044
+SHA256 99022ecf47343a04595d15226b434c27a7d7dd9b5cafec8742ef6a5b7189b179 ChangeLog 1044
+MISC metadata.xml 160 RMD160 e730f96ab97c5be577a6d6d05f04990374a0dffb SHA1 2aa5e6be9c265c0e7bceb78ee9fd20df5f818e36 SHA256 6cd954a9de2307c57d32b25fa3599dee2908a4ddc6a98594f593d53577307a3a size 160
+MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
+RMD160 e730f96ab97c5be577a6d6d05f04990374a0dffb metadata.xml 160
+SHA256 6cd954a9de2307c57d32b25fa3599dee2908a4ddc6a98594f593d53577307a3a metadata.xml 160
 MD5 682d58dd2af7c91480246df7bdcb1fda files/digest-formencode-0.2.2 67
 RMD160 e4a89d8b636b721b576f1564ee97edc33b88140e files/digest-formencode-0.2.2 67
 SHA256 c58db57c6a8f26510e0e41c59b0d6ad1586321dfd15ff1e66a24b0374b87c3a8 files/digest-formencode-0.2.2 67
 MD5 fed5a3e4d9c51dc110d278f52c774083 files/digest-formencode-0.3 65
 RMD160 3250c618d620b4ef3a85531af62afdbef599c7a2 files/digest-formencode-0.3 65
 SHA256 b3460df718ae77dd9551873cf3854f90e1de8e698826c1a292c8e9bd566b067d files/digest-formencode-0.3 65
-MD5 c8bff20880ac0ab4bd4cbb1f4a26e645 files/digest-formencode-0.4 66
-RMD160 1d60049a4f70592bbcd2a49fec1e15c3bf7dba13 files/digest-formencode-0.4 66
-SHA256 2c6e23a3812de29006c18af9c943776d215322151f05d28cb23a100959f42b0b files/digest-formencode-0.4 66
-MD5 b2bc4df3b59ec5949c4f9563ef49e289 files/formencode-0.2.2-setup-gentoo.patch 405
-RMD160 5d51c4c32bb0ea901e80e5f307b82c2e280f108e files/formencode-0.2.2-setup-gentoo.patch 405
-SHA256 0faf894285280f5411504b5ca50c2e19349d7605bbd32e92ca1341ff3ec8f214 files/formencode-0.2.2-setup-gentoo.patch 405
-MD5 b2bc4df3b59ec5949c4f9563ef49e289 files/formencode-0.3-setup-gentoo.patch 405
-RMD160 5d51c4c32bb0ea901e80e5f307b82c2e280f108e files/formencode-0.3-setup-gentoo.patch 405
-SHA256 0faf894285280f5411504b5ca50c2e19349d7605bbd32e92ca1341ff3ec8f214 files/formencode-0.3-setup-gentoo.patch 405
-MD5 b2bc4df3b59ec5949c4f9563ef49e289 files/formencode-0.4-setup-gentoo.patch 405
-RMD160 5d51c4c32bb0ea901e80e5f307b82c2e280f108e files/formencode-0.4-setup-gentoo.patch 405
-SHA256 0faf894285280f5411504b5ca50c2e19349d7605bbd32e92ca1341ff3ec8f214 files/formencode-0.4-setup-gentoo.patch 405
-MD5 2faecb81aa076864f85181b2309bbaaa formencode-0.2.2.ebuild 884
-RMD160 911bc483d3570687fcab67ec6fe9a981fab789c4 formencode-0.2.2.ebuild 884
-SHA256 a770213d44e6f770a85b4766ec1756285faaaf303ca1ff625556571635681b7e formencode-0.2.2.ebuild 884
-MD5 5b03fa936737cd27f2e1e985d257fa71 formencode-0.3.ebuild 985
-RMD160 b14f8bf72282affedf161d8938d26c4d00d4e898 formencode-0.3.ebuild 985
-SHA256 1c8551f49f9dd991793dc2638f6a5192681a6c0a8898acf24262e9c285debb51 formencode-0.3.ebuild 985
-MD5 c5e31082e6e1edd594061d2a0c2b217a formencode-0.4.ebuild 989
-RMD160 c320ce06b7d13c60725aedf04406c8a4911013cb formencode-0.4.ebuild 989
-SHA256 1377bdeb9ab2d3a00001275cafe3df29d79c1a0ff136d098711ed75a9feba8bb formencode-0.4.ebuild 989
-MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
-RMD160 e730f96ab97c5be577a6d6d05f04990374a0dffb metadata.xml 160
-SHA256 6cd954a9de2307c57d32b25fa3599dee2908a4ddc6a98594f593d53577307a3a metadata.xml 160
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFELpRjJrHF4yAQTrARAssiAJ9z9J1q6CBAe2kz50OhEhTs1EBMoACghu5P
-csVbbksaCAVOf5xGGNxdy4s=
-=edRr
------END PGP SIGNATURE-----
+MD5 4eac2f7b99998b98e03638cededcb0a3 files/digest-formencode-0.4 244
+RMD160 92b0ac2085e7b20375baea8187a886b2088f15e2 files/digest-formencode-0.4 244
+SHA256 fade072241a89e1014bbdb557425aa51900bf11c4d70e5ffbf1fe1fba16ab24d files/digest-formencode-0.4 244
