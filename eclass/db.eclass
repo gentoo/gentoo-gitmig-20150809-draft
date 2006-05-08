@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.24 2006/05/02 13:45:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.25 2006/05/08 10:13:34 pauldv Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 
 IUSE="doc"
@@ -104,9 +104,7 @@ db_src_test() {
 			echo 'source ../test/test.tcl' >testrunner.tcl
 			echo 'run_std' >>testrunner.tcl
 			tclsh testrunner.tcl
-			egrep -sv '^FAIL' ALL.OUT
-			ret=$?
-			[ $ret -gt 0 ] && die "Some tests failed, please see ${S}/ALL.OUT"
+			egrep -qs '^FAIL' ALL.OUT && die "Some tests failed, please see ${S}/ALL.OUT"
 		else
 			eerror "You must have USE=tcltk to run the sys-libs/db testsuite."
 		fi
