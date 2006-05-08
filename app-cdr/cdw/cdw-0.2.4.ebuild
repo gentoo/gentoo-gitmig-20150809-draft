@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.1 2006/05/06 07:21:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.2 2006/05/08 02:52:25 mr_bones_ Exp $
 
 inherit eutils
 
@@ -28,6 +28,12 @@ DEPEND="${RDEPEND}
 	gtk? ( dev-util/pkgconfig )"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc4.patch" #bug #132561
+}
 
 src_compile() {
 	local myconf

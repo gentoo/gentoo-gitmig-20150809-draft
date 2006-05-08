@@ -1,0 +1,11 @@
+--- cdw-0.2.4.old/src/cddb.c	2006-05-07 18:00:00.000000000 +0100
++++ cdw-0.2.4/src/cddb.c	2006-05-07 18:00:30.000000000 +0100
+@@ -905,7 +905,7 @@
+ 		    file_list[c].cd_name=(char *)malloc(strlen(row[1])+1);
+ 		    sprintf(file_list[c].cd_name, "%s", row[1]);
+ 		    sprintf(line, "%s", row[2]);
+-		    (char *)linestr=strtok((char *)line, (char *)"/");
++		    linestr=strtok(line, "/");
+ 		    if (dir_level>2)
+ 			for (i=1; i<=(dir_level-2); i++){
+ 			    linestr=strtok(NULL, "/");

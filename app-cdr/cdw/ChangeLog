@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdw
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.13 2006/05/06 07:21:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.14 2006/05/08 02:52:25 mr_bones_ Exp $
+
+  08 May 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/cdw-0.2.4-gcc4.patch, cdw-0.2.4.ebuild:
+  patch for compiling with gcc4 from Charlie Shepherd (bug #132561)
 
 *cdw-0.2.4 (06 May 2006)
 
