@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/net2ftp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/net2ftp/ChangeLog,v 1.8 2006/01/25 11:31:00 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/net2ftp/ChangeLog,v 1.9 2006/05/08 13:29:41 uberlord Exp $
+
+*net2ftp-0.91 (08 May 2006)
+
+  08 May 2006; Roy Marples <uberlord@gentoo.org> +net2ftp-0.91.ebuild:
+  New upstream release.
 
 *net2ftp-0.90 (25 Jan 2006)
 
