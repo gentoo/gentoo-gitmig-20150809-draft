@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/filewatcher
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/ChangeLog,v 1.5 2006/04/27 09:10:45 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/ChangeLog,v 1.6 2006/05/08 05:06:17 tcort Exp $
+
+  08 May 2006; Thomas Cort <tcort@gentoo.org> filewatcher-2.4.0.ebuild,
+  filewatcher-2.4.3.ebuild:
+  Added missing IUSE and added a dodoc line.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-filewatcher-2.4.0, files/digest-filewatcher-2.4.3, Manifest:
