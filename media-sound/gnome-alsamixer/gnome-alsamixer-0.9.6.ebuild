@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.11 2005/04/24 18:55:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.12 2006/05/08 04:20:49 tcort Exp $
 
 inherit eutils fdo-mime
 
@@ -32,7 +32,7 @@ src_install() {
 	insinto /usr/share/applications
 	doins ${FILESDIR}/${PN}.desktop
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL
+	dodoc AUTHORS ChangeLog
 }
 
 pkg_postinst() {

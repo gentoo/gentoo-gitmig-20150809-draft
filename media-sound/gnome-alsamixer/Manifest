@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 349fb02ec51c5f5cbc40683b460f300f ChangeLog 2270
-MD5 cc6d1cd861a12dbccd852adf616cc0cf gnome-alsamixer-0.9.6.ebuild 1033
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 cdac632cde55b06b3c32a4b38f900bb1 ChangeLog 2372
 MD5 8ee992b81ac5ed728c89cea5addf5dff files/digest-gnome-alsamixer-0.9.6 72
+MD5 70fddaa0dbd47bb15360b6bad9d496b7 files/gnome-alsamixer-0.9.6-fixpath.patch 1330
 MD5 82b95a0df43429da5098b4da883f6bd0 files/gnome-alsamixer-0.9.6-gtk24.patch 699
 MD5 62622a38c69e0f766d8f8f1f4948dadc files/gnome-alsamixer.desktop 290
-MD5 70fddaa0dbd47bb15360b6bad9d496b7 files/gnome-alsamixer-0.9.6-fixpath.patch 1330
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCa+v3ArHZZzCEUG0RApduAJsE5m0FzHqdVKjXJQDgugxtqBGuoACfX/vh
-r1y0H+syjllbcim5UY9qdp8=
-=5s9s
------END PGP SIGNATURE-----
+MD5 2db86892c819e883ab9767693ac9f801 gnome-alsamixer-0.9.6.ebuild 1012
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158

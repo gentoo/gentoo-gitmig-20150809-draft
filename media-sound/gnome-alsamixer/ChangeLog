@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnome-alsamixer
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/ChangeLog,v 1.14 2005/04/24 18:55:52 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/ChangeLog,v 1.15 2006/05/08 04:20:49 tcort Exp $
+
+  08 May 2006; <tcort@gentoo.org> gnome-alsamixer-0.9.6.ebuild:
+  Removed COPYING and INSTALL from dodoc.
 
   24 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
   gnome-alsamixer-0.9.6.ebuild:
