@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.8_rc1.ebuild,v 1.6 2006/04/29 16:20:16 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.8_rc1.ebuild,v 1.7 2006/05/08 12:28:49 hanno Exp $
 
 inherit eutils depend.apache
 IUSE="apache2 postfix sendmail qmail courier exim xmail"
@@ -92,28 +92,20 @@ src_install () {
 	dodoc contrib/virtusertable contrib/mailman.mc
 
 	cp build/contrib/*.py contrib/majordomo2mailman.pl contrib/auto \
-		contrib/mm-handler* ${D}/usr/local/mailman/bin
+		contrib/mm-handler* ${ID}/bin
 
 	# Save the old config into the new package as CONFIG_PROTECT
 	# doesn't work for this package.
-	if [ -f ${ROOT}/var/mailman/Mailman/mm_cfg.py ]; then
-		cp ${ROOT}/var/mailman/Mailman/mm_cfg.py \
-			${D}/usr/local/mailman/Mailman/mm_cfg.py
-		einfo "Your old config has been saved as mm_cfg.py"
-		einfo "A new config has been installed as mm_cfg.dist"
-	fi
-	if [ -f ${ROOT}/home/mailman/Mailman/mm_cfg.py ]; then
-		cp ${ROOT}/home/mailman/Mailman/mm_cfg.py \
-			${D}/usr/local/mailman/Mailman/mm_cfg.py
-		einfo "Your old config has been saved as mm_cfg.py"
-		einfo "A new config has been installed as mm_cfg.py.dist"
-	fi
-	if [ -f ${ROOT}/usr/local/mailman/Mailman/mm_cfg.py ]; then
-		cp ${ROOT}/usr/local/mailman/Mailman/mm_cfg.py \
-			${D}/usr/local/mailman/Mailman/mm_cfg.py
-		einfo "Your old config has been saved as mm_cfg.py"
-		einfo "A new config has been installed as mm_cfg.py.dist"
-	fi
+	for i in ${ROOT}/var/mailman ${ROOT}/home/mailman \
+		${ROOT}/usr/local/mailman ${INSTALLDIR}
+	do
+		if [ -f ${i}/Mailman/mm_cfg.py ]; then
+			cp ${i}/Mailman/mm_cfg.py \
+				${ID}/Mailman/mm_cfg.py
+			einfo "Your old config has been saved as mm_cfg.py"
+			einfo "A new config has been installed as mm_cfg.dist"
+		fi
+	done
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/mailman.rc mailman
