@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/rt2x00
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.6 2006/01/18 11:36:15 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.7 2006/05/08 12:58:31 uberlord Exp $
+
+  08 May 2006; Roy Marples <uberlord@gentoo.org> rt2x00-9999.ebuild:
+  Added support for rt61 and rt73 drivers. We now require the kernel to support
+  firmware loading as well. Fixes #132240 thanks to Allen Brooker.
 
   18 Jan 2006; Roy Marples <uberlord@gentoo.org> rt2x00-9999.ebuild:
   Updated for new upstream locations and IEEE 80211 stack.

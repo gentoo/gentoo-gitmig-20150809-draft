@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.3 2006/01/18 11:36:15 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.4 2006/05/08 12:58:31 uberlord Exp $
 
 inherit linux-mod cvs
 
@@ -14,7 +14,6 @@ ECVS_LOCALNAME="${P}"
 
 KEYWORDS="-*"
 IUSE="debug"
-#DEPEND="sys-apps/sed"
 RDEPEND="net-wireless/wireless-tools"
 
 MODULE_NAMES="
@@ -22,10 +21,15 @@ MODULE_NAMES="
 	ieee80211/rate_control(rt2x00/ieee80211:)
 	rt2400pci(rt2x00:)
 	rt2500pci(rt2x00:)
-	rt2500usb(rt2x00:)"
+	rt2500usb(rt2x00:)
+	rt61pci(rt2x00:)
+	rt73usb(rt2x00:)"
 
 CONFIG_CHECK="NET_RADIO"
 ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
+
+CONFIG_CHECK="FW_LOADER"
+ERROR_NET_RADIO="${P} requires support for Firmware module loading (CONFIG_FW_LOADER)."
 
 pkg_setup() {
 	kernel_is lt 2 6 13 && die "${P} requires at least kernel 2.6.13"
