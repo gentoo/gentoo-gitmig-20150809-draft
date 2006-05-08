@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/help2man
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.22 2005/09/16 08:03:12 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.23 2006/05/08 03:57:44 flameeyes Exp $
+
+  08 May 2006; Diego Pettenò <flameeyes@gentoo.org> help2man-1.35.1.ebuild:
+  Make nls support conditional to GLIBC as it requires preloadable_intl.
 
   16 Sep 2005; Aron Griffis <agriffis@gentoo.org> help2man-1.35.1.ebuild:
   Mark 1.35.1 stable on alpha
