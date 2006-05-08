@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/libdvdplay-1.0.1.ebuild,v 1.17 2006/03/06 15:04:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/libdvdplay-1.0.1.ebuild,v 1.18 2006/05/08 13:31:37 corsair Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://developers.videolan.org/libdvdplay/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ia64 ppc ~ppc-macos sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc-macos ~ppc64 sparc x86"
 
 DEPEND=">=media-libs/libdvdread-0.9.3"
 

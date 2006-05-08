@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvbpsi
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.20 2005/12/13 11:58:53 zzam Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.21 2006/05/08 13:30:18 corsair Exp $
+
+  08 May 2006; Markus Rothe <corsair@gentoo.org> libdvbpsi-0.1.5.ebuild:
+  Added ~ppc64
 
 *libdvbpsi-0.1.5 (13 Dec 2005)
 
