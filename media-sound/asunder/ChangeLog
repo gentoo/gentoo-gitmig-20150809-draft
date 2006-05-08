@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/asunder
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/ChangeLog,v 1.3 2006/03/08 20:25:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/ChangeLog,v 1.4 2006/05/08 04:40:45 tcort Exp $
+
+  08 May 2006; <tcort@gentoo.org> asunder-0.1.0.ebuild:
+  Removed COPYING from dodoc. Removed the redundant line that set
+  RDEPEND=DEPEND (this happens automatically when RDEPEND isn't present in the
+  ebuild).
 
   08 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> asunder-0.1.0.ebuild:
   Rename ogg useflag into vorbis useflag. Bug #101877.
