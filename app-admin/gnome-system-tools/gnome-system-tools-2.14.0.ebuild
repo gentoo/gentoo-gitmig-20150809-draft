@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.14.0.ebuild,v 1.2 2006/05/08 03:27:04 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.14.0.ebuild,v 1.3 2006/05/08 20:40:38 dang Exp $
 
 inherit gnome2 eutils autotools
 
@@ -27,7 +27,7 @@ RDEPEND="net-misc/openssh
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	dev-util/pkgconfig
-	>=dev-util/intltool-0.29"
+	>=dev-util/intltool-0.34.2"
 
 DOCS="AUTHORS BUGS ChangeLog HACKING NEWS README TODO"
 
