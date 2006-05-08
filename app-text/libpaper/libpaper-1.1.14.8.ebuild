@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.14.8.ebuild,v 1.2 2006/05/08 19:21:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.14.8.ebuild,v 1.3 2006/05/08 22:05:36 genstef Exp $
 
 inherit versionator libtool eutils
 
@@ -31,4 +31,11 @@ src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
 	dodoc README ChangeLog
+
+	dodir /etc
+	(paperconf 2>/dev/null || echo a4) > ${D}/etc/papersize
+}
+
+pkg_postinst() {
+	einfo "run \"paperconfig -p letter\" to use letter-pagesizes"
 }
