@@ -1,11 +1,10 @@
 # ChangeLog for net-print/foomatic-filters
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.32 2006/05/08 22:40:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.33 2006/05/08 22:53:36 genstef Exp $
 
   08 May 2006; Stefan Schweizer <genstef@gentoo.org>
   foomatic-filters-3.0.2-r1.ebuild:
-  Remove pointless cups useflag - does not even configure w/o cups, Make
-  cups-1.2 aware, no revbump because no installed files were changed
+  Make cups-1.2 aware, no revbump because no installed files were changed
 
 *foomatic-filters-3.0.2-r1 (05 May 2006)
 
