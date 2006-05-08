@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.52 2006/05/07 09:46:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.53 2006/05/08 08:45:26 s4t4n Exp $
+
+  08 May 2006; Michele Noberasco <s4t4n@gentoo.org> DirectFB-0.9.24.ebuild:
+  Stable for x86. See bug #132535.
 
 *DirectFB-0.9.25.1 (07 May 2006)
 
