@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.133 2006/05/05 22:27:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.134 2006/05/08 06:04:46 zmedico Exp $
+
+*portage-2.1_pre10-r4 (08 May 2006)
+
+  08 May 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre10-r4.ebuild,
+  +files/2.1/pre10/1090_r3324_bug_132410_missing_digest.patch,
+  +files/2.1/pre10/1100_r3326_bug_132442_root_clone.patch,
+  +files/2.1/pre10/1110_r3330_bug_130395_homedir.patch:
+  2.1_pre10-r4 bug fix revbump for #130395, #132410, and #132442.
 
 *portage-2.1_pre10-r3 (05 May 2006)
 

@@ -1,0 +1,34 @@
+Modified: bin/ebuild.sh
+===================================================================
+--- bin/ebuild.sh	2006-05-07 20:36:02 UTC (rev 3329)
++++ bin/ebuild.sh	2006-05-08 01:28:20 UTC (rev 3330)
+@@ -719,7 +719,7 @@
+ 		chflags -R nosunlnk,nouunlnk "${PORTAGE_BUILDDIR}" 2>/dev/null
+ 	fi
+ 
+-	rm -rf "${PORTAGE_BUILDDIR}/image"
++	rm -rf "${PORTAGE_BUILDDIR}/image" "${PORTAGE_BUILDDIR}/homedir"
+ 
+ 	if ! hasq keeptemp $FEATURES; then
+ 		rm -rf "${T}"
+
+Modified: pym/portage.py
+===================================================================
+--- pym/portage.py	2006-05-07 20:36:02 UTC (rev 3329)
++++ pym/portage.py	2006-05-08 01:28:20 UTC (rev 3330)
+@@ -2462,7 +2462,6 @@
+ 
+ 
+ 	mysettings["BUILD_PREFIX"] = mysettings["PORTAGE_TMPDIR"]+"/portage"
+-	mysettings["HOME"]         = mysettings["BUILD_PREFIX"]+"/homedir"
+ 	mysettings["PKG_TMPDIR"]   = mysettings["PORTAGE_TMPDIR"]+"/binpkgs"
+ 	
+ 	# Package {pre,post}inst and {pre,post}rm may overlap, so they must have separate
+@@ -2472,6 +2471,7 @@
+ 	else:
+ 		mysettings["PORTAGE_BUILDDIR"] = os.path.join(mysettings["BUILD_PREFIX"], mysettings["PF"])
+ 
++	mysettings["HOME"] = os.path.join(mysettings["PORTAGE_BUILDDIR"], "homedir")
+ 	mysettings["WORKDIR"] = os.path.join(mysettings["PORTAGE_BUILDDIR"], "work")
+ 	mysettings["D"] = os.path.join(mysettings["PORTAGE_BUILDDIR"], "image") + os.sep
+ 	mysettings["T"] = os.path.join(mysettings["PORTAGE_BUILDDIR"], "temp")
