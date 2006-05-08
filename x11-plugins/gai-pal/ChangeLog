@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gai-pal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gai-pal/ChangeLog,v 1.1 2005/05/23 09:28:37 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gai-pal/ChangeLog,v 1.2 2006/05/08 10:27:48 s4t4n Exp $
+
+  08 May 2006; Michele Noberasco <s4t4n@gentoo.org> gai-pal-0.7.ebuild:
+  Stable for x86.
 
 *gai-pal-0.7 (23 May 2005)
 
