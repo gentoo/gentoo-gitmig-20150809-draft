@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.44 2006/04/27 19:21:29 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.45 2006/05/08 17:11:31 seemant Exp $
+
+  08 May 2006; Seemant Kulleen <seemant@gentoo.org> rails-1.1.2.ebuild:
+  keyworded for ~amd64
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-rails-1.0.0,
   files/digest-rails-1.1.0, files/digest-rails-1.1.1, Manifest:
