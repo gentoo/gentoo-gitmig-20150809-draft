@@ -1,19 +1,42 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1f4eed8781822e8b3c25874ec19ae756 ChangeLog 898
-MD5 d77fceef004b077015320ecf4fac0bfd files/digest-vdr-pvrinput-0.1.1 244
-MD5 2b979d17d147920bebc8be1355328328 files/digest-vdr-pvrinput-0.1.1_pre1 259
+AUX vdr-pvrinput-0.1.1-include-order.patch 455 RMD160 e2d539cf5aabba34703478ae555870b650030516 SHA1 91dcbe3590d9a5d776f2136616610363c120789f SHA256 ca64654ccf62c9bca2f0507ab8e1763acff39456da48a30d6eb136cc3bcdfc98 size 455
 MD5 01dc5701b18a5f18085fd6e135334f35 files/vdr-pvrinput-0.1.1-include-order.patch 455
+RMD160 e2d539cf5aabba34703478ae555870b650030516 files/vdr-pvrinput-0.1.1-include-order.patch 455
+SHA256 ca64654ccf62c9bca2f0507ab8e1763acff39456da48a30d6eb136cc3bcdfc98 files/vdr-pvrinput-0.1.1-include-order.patch 455
+AUX vdr-pvrinput-0.1.1_pre1-include-order.patch 455 RMD160 e2d539cf5aabba34703478ae555870b650030516 SHA1 91dcbe3590d9a5d776f2136616610363c120789f SHA256 ca64654ccf62c9bca2f0507ab8e1763acff39456da48a30d6eb136cc3bcdfc98 size 455
 MD5 01dc5701b18a5f18085fd6e135334f35 files/vdr-pvrinput-0.1.1_pre1-include-order.patch 455
-MD5 70450585776173c8dfb75ed9346971f1 metadata.xml 469
+RMD160 e2d539cf5aabba34703478ae555870b650030516 files/vdr-pvrinput-0.1.1_pre1-include-order.patch 455
+SHA256 ca64654ccf62c9bca2f0507ab8e1763acff39456da48a30d6eb136cc3bcdfc98 files/vdr-pvrinput-0.1.1_pre1-include-order.patch 455
+DIST vdr-pvrinput-0.1.1-pre1.tgz 34697 RMD160 8c9d941d0d3b701c5f6e4761cca5554267c543ad SHA256 6fa2583a76b5130b31063a9a14673db3e865282e29ef845b96900b1d6eb8e0f0 size 34697
+DIST vdr-pvrinput-0.1.1.tgz 34663 RMD160 bc8395d6cb5e389be13d60d8415b9099758c6757 SHA256 a6afc0bf726c590cfb8c3b50dc4b87ebc32ef0d6caf62eec8a8f1e65bebab863 size 34663
+EBUILD vdr-pvrinput-0.1.1.ebuild 703 RMD160 9f59962cffabb8bf69150168d9c908e26b3fde5d SHA1 601b4f93af2e0f46d43eaa11b4c7b8366182fa88 SHA256 76cdd4d8957b634bb9edb7ac30a445877b8fb0cc6074ce3c80f35471134705bf size 703
 MD5 9ed548ca74cad3967d5a4a2ba2f87b9f vdr-pvrinput-0.1.1.ebuild 703
-MD5 45a41512fbae20ff8df91b4514ec8cb0 vdr-pvrinput-0.1.1_pre1.ebuild 755
+RMD160 9f59962cffabb8bf69150168d9c908e26b3fde5d vdr-pvrinput-0.1.1.ebuild 703
+SHA256 76cdd4d8957b634bb9edb7ac30a445877b8fb0cc6074ce3c80f35471134705bf vdr-pvrinput-0.1.1.ebuild 703
+EBUILD vdr-pvrinput-0.1.1_pre1.ebuild 755 RMD160 595dc539f50bbab561061a0d8090b9a35381841a SHA1 3a1587b4e4a3e4cb2f19fc12f73489116b00a8cc SHA256 4330eb0303d2d8cd1f5513a0421b8b70cedbc5ab0d645ff6440fde7fc1e7a266 size 755
+MD5 fc8529ea10129f51943822c70087c0d6 vdr-pvrinput-0.1.1_pre1.ebuild 755
+RMD160 595dc539f50bbab561061a0d8090b9a35381841a vdr-pvrinput-0.1.1_pre1.ebuild 755
+SHA256 4330eb0303d2d8cd1f5513a0421b8b70cedbc5ab0d645ff6440fde7fc1e7a266 vdr-pvrinput-0.1.1_pre1.ebuild 755
+MISC ChangeLog 1026 RMD160 db329152c1ac8afdab2d4ebe1d30312b1aee71e2 SHA1 aa6e6f01a9967485da875ccdb63fb98517d5ead9 SHA256 70001521d539c80ee56bda3a3965d60c4fd3a45fe32b0b084abacaf8bb0d5510 size 1026
+MD5 ac089d42a41f128db756c65fd7fcb7db ChangeLog 1026
+RMD160 db329152c1ac8afdab2d4ebe1d30312b1aee71e2 ChangeLog 1026
+SHA256 70001521d539c80ee56bda3a3965d60c4fd3a45fe32b0b084abacaf8bb0d5510 ChangeLog 1026
+MISC metadata.xml 469 RMD160 6311e8e11dea9d34eb759910684398147907909d SHA1 5fd2982aa1c80a551f20b0e50f9a636590503449 SHA256 fa2287daa920e450688ed2ba07dbe849aa3d70e30d2ff80628fee9dcea2a44d6 size 469
+MD5 70450585776173c8dfb75ed9346971f1 metadata.xml 469
+RMD160 6311e8e11dea9d34eb759910684398147907909d metadata.xml 469
+SHA256 fa2287daa920e450688ed2ba07dbe849aa3d70e30d2ff80628fee9dcea2a44d6 metadata.xml 469
+MD5 d77fceef004b077015320ecf4fac0bfd files/digest-vdr-pvrinput-0.1.1 244
+RMD160 fca3b6251b536a763b2258d5cd27152b283c372b files/digest-vdr-pvrinput-0.1.1 244
+SHA256 608facbf32438303a11289a6efca697e5f84d9318f0e29caaf762aa41932dfdb files/digest-vdr-pvrinput-0.1.1 244
+MD5 2b979d17d147920bebc8be1355328328 files/digest-vdr-pvrinput-0.1.1_pre1 259
+RMD160 88d2f95857911c828ea003632f7de01640181a6c files/digest-vdr-pvrinput-0.1.1_pre1 259
+SHA256 757eaf75afefdd498ba13c33e784ba777af73dcda0c009ad10b1d31349c985da files/digest-vdr-pvrinput-0.1.1_pre1 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-Comment: no further Information
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEVgN7dn07HTTCgIoRAnD1AJ9ViBCLH2QDe9iKGKoGlr63lhL5fQCdHpmY
-vIqL7FCI925kLtrheTFl4PE=
-=sMCo
+iD8DBQFEXuqmZfSl1Kp5KmoRAoXBAKC1UK4jYbMCGCFWE7oRfiZgUj0iswCg3FXy
+Izz6a+aCQLU6Vp71/6jB1O4=
+=z+56
 -----END PGP SIGNATURE-----
