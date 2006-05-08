@@ -1,0 +1,11 @@
+--- doxygen-1.4.6.orig/src/doxygen.cpp
++++ doxygen-1.4.6/src/doxygen.cpp
+@@ -1912,7 +1912,7 @@
+         // variable already in the scope
+       {
+         if (! // not a php array
+-            (getLanguageFromFileName(md->getFileDef()->name())==SrcLangExt_PHP) &&
++            (md->getFileDef() && getLanguageFromFileName(md->getFileDef()->name())==SrcLangExt_PHP) &&
+             (md->argsString()!=root->args && root->args.find('[')!=-1)
+            ) 
+           // not a php array variable
