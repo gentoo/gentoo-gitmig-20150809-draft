@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.134 2006/05/08 06:04:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.135 2006/05/08 20:45:02 zmedico Exp $
+
+*portage-2.1_pre10-r5 (08 May 2006)
+
+  08 May 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre10-r5.ebuild,
+  +files/2.1/pre10/1150_r3334_make_profile_realpath.patch:
+  2.1_pre10-r5 bug fix revbump. Most patches are now distributed via the
+  mirrors in order to reduce $FILESDIR bloat (thanks to Halcy0n for noticing).
 
 *portage-2.1_pre10-r4 (08 May 2006)
 
