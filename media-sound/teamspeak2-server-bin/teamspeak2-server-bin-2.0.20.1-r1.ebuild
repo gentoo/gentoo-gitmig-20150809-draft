@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.20.1-r1.ebuild,v 1.2 2005/04/01 19:13:13 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.20.1-r1.ebuild,v 1.3 2006/05/08 04:28:05 tcort Exp $
 
 inherit eutils
 
@@ -52,7 +52,7 @@ src_install() {
 	doins tcpquerydocs/*.txt
 
 	# user manual docs ...
-	dodoc changelog.txt README INSTALL
+	dodoc changelog.txt README
 	dohtml manual.html
 	dohtml -r Manual
 

@@ -1,5 +1,5 @@
-MD5 ec9cfb0c5541b5a5193d6e496a815cd0 ChangeLog 1264
-MD5 f0b2a6f1fe01347225d13a3052325fdf cdtool-2.1.5-r1.ebuild 1176
+MD5 01a82db1c3610c39cd4819727897d6b7 ChangeLog 1421
+MD5 9ed94c00a70b64d73096775578523478 cdtool-2.1.5-r1.ebuild 1181
 MD5 c9634364512cf7e6f5fae3d6dc16d9fc files/cdtool-2.1.5-ldflags.patch 793
 MD5 d29e321ea1fc813d76ee1f28bf711a47 files/digest-cdtool-2.1.5-r1 63
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158

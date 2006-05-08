@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5-r2.ebuild,v 1.8 2006/03/16 15:55:14 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5-r2.ebuild,v 1.9 2006/05/08 04:32:52 tcort Exp $
 
 inherit eutils
 
@@ -69,7 +69,7 @@ src_install() {
 	make install DESTDIR=${D} || die "make install failed"
 
 	rm -rf ${D}/usr/share/doc/mpd/
-	dodoc ChangeLog INSTALL README TODO UPGRADING
+	dodoc ChangeLog README TODO UPGRADING
 	dodoc doc/COMMANDS doc/mpdconf.example
 
 	insinto /etc
