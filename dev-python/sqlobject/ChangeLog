@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sqlobject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.9 2006/04/01 19:06:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.10 2006/05/08 00:43:33 weeve Exp $
+
+  08 May 2006; Jason Wever <weeve@gentoo.org> sqlobject-0.7.0.ebuild:
+  Added ~sparc keyword.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> sqlobject-0.7.0.ebuild:
   Mark 0.7.0 ~ia64
