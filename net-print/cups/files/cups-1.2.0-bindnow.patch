@@ -1,0 +1,47 @@
+diff -Naupr --exclude '*.rej' --exclude '*.orig' cups-1.2.0.orig/config-scripts/cups-setXid.m4 cups-1.2.0/config-scripts/cups-setXid.m4
+--- cups-1.2.0.orig/config-scripts/cups-setXid.m4	1970-01-01 01:00:00.000000000 +0100
++++ cups-1.2.0/config-scripts/cups-setXid.m4	2006-05-08 23:50:22.000000000 +0200
+@@ -0,0 +1,9 @@
++dnl
++dnl   Copyright 1999-2005 Gentoo Foundation
++dnl   Distributed under the terms of the GNU General Public License v2
++dnl
++
++AC_ARG_WITH(bindnow, [  --with-bindnow          Set linker flags for force-binding setuid binaries],
++	BINDNOW_FLAGS="$withval",
++	BINDNOW_FLAGS="")
++AC_SUBST(BINDNOW_FLAGS)
+diff -Naupr --exclude '*.rej' --exclude '*.orig' cups-1.2.0.orig/configure.in cups-1.2.0/configure.in
+--- cups-1.2.0.orig/configure.in	2006-05-08 23:50:10.000000000 +0200
++++ cups-1.2.0/configure.in	2006-05-08 23:50:22.000000000 +0200
+@@ -46,6 +46,7 @@ sinclude(config-scripts/cups-defaults.m4
+ sinclude(config-scripts/cups-pap.m4)
+ sinclude(config-scripts/cups-pdf.m4)
+ sinclude(config-scripts/cups-scripting.m4)
++sinclude(config-scripts/cups-setXid.m4)
+ 
+ LANGFILES=""
+ if test "x$LANGUAGES" != x; then
+diff -Naupr --exclude '*.rej' --exclude '*.orig' cups-1.2.0.orig/Makedefs.in cups-1.2.0/Makedefs.in
+--- cups-1.2.0.orig/Makedefs.in	2006-05-08 23:50:10.000000000 +0200
++++ cups-1.2.0/Makedefs.in	2006-05-08 23:50:44.000000000 +0200
+@@ -131,6 +131,7 @@ IMGLIBS		=	@IMGLIBS@ -lm
+ IMGFILTERS	=	@IMGFILTERS@
+ LDFLAGS		=	-L../cups -L../filter $(RC_CFLAGS) $(ARCHFLAGS) \
+ 			@LDFLAGS@ @PIEFLAGS@ $(OPTIM)
++BINDNOW_FLAGS	=	@BINDNOW_FLAGS@
+ LINKCUPS	=	@LINKCUPS@ $(SSLLIBS)
+ LINKCUPSIMAGE	=	@LINKCUPSIMAGE@
+ LIBS		=	$(LINKCUPS) $(COMMONLIBS)
+diff -Naupr --exclude '*.rej' --exclude '*.orig' cups-1.2.0.orig/systemv/Makefile cups-1.2.0/systemv/Makefile
+--- cups-1.2.0.orig/systemv/Makefile	2006-05-08 23:50:10.000000000 +0200
++++ cups-1.2.0/systemv/Makefile	2006-05-08 23:50:22.000000000 +0200
+@@ -205,7 +205,7 @@ lpoptions:	lpoptions.o ../cups/$(LIBCUPS
+ 
+ lppasswd:	lppasswd.o ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o lppasswd lppasswd.o $(LIBZ) $(LIBS)
++	$(CC) $(LDFLAGS) $(BINDNOW_FLAGS) -o lppasswd lppasswd.o $(LIBZ) $(LIBS)
+ 
+ 
+ #
