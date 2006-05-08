@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r4.ebuild,v 1.3 2006/05/06 12:14:26 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r4.ebuild,v 1.4 2006/05/08 20:34:07 flameeyes Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
 DESCRIPTION="KDE libraries needed by all kde programs"
 HOMEPAGE="http://www.kde.org/"
-SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2"
-#SRC_URI="mirror://kde/stable/3.5/src/${P}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
+	cups? ( mirror://gentoo/kdeprint-${PV}-cups-1.2-patches.tar.bz2 )"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
@@ -73,6 +73,15 @@ src_unpack() {
 	kde_src_unpack
 	if use legacyssl ; then
 		epatch ${FILESDIR}/kdelibs-3.5.2-kssl-3des.patch || die "Patch did not apply."
+	fi
+
+	if use cups && has_version '>=net-print/cups-1.2_pre'; then
+		cd "${S}"
+
+		EPATCH_SUFFIX="diff" \
+		EPATCH_MULTI_MSG="Applying KUbuntu patches for CUPS 1.2 support ..." \
+		EPATCH_FORCE="yes" \
+		epatch ${WORKDIR}/kdeprint-${PV}-cups-1.2-patches/
 	fi
 }
 

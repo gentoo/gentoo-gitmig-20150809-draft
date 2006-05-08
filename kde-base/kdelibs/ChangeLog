@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.321 2006/05/06 12:14:26 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.322 2006/05/08 20:34:07 flameeyes Exp $
+
+  08 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdelibs-3.5.2-r4.ebuild:
+  Add patchset from KUbuntu when using CUPS 1.2.
+
+  08 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdelibs-3.5.2-r4.ebuild:
+  Add patchset from KUbuntu when using CUPS 1.2.
 
   06 May 2006; Carsten Lohrke <carlo@gentoo.org> kdelibs-3.5.2-r4.ebuild:
   Added aspell-en as dependency to work around bug 131512.
