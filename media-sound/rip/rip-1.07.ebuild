@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/rip-1.07.ebuild,v 1.14 2005/05/28 01:17:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/rip-1.07.ebuild,v 1.15 2006/05/08 04:29:36 tcort Exp $
 
 IUSE=""
 
@@ -33,5 +33,5 @@ src_install () {
 	dobin rip || die
 
 	# Install documentation.
-	dodoc COPYING FAQ README
+	dodoc FAQ README
 }
