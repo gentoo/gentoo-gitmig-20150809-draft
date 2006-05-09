@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.15-r1.ebuild,v 1.2 2006/05/08 03:52:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.15-r1.ebuild,v 1.3 2006/05/09 03:00:53 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic autotools pam
 
@@ -54,6 +54,7 @@ src_unpack() {
 	# lock down setuid perms #47208
 	epatch "${FILESDIR}"/${PN}-4.0.11.1-perms.patch
 
+	epatch "${FILESDIR}"/${PN}-4.0.15-uclibc-missing-l64a.patch
 	epatch "${FILESDIR}"/${PN}-4.0.15-no-default-MAIL.patch
 
 	# Needed by the UCLIBC patches

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.139 2006/05/07 19:11:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.140 2006/05/09 03:00:53 vapier Exp $
+
+  09 May 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/shadow-4.0.15-uclibc-missing-l64a.patch, shadow-4.0.15-r1.ebuild:
+  Last uClibc release still needs l64a() #132666 by solar.
 
 *shadow-4.0.15-r1 (07 May 2006)
 
