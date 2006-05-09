@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e8746ec4e27a1a09e978850a8a181a66 ChangeLog 1133
+MD5 c456c631303ba4bda720719c3e44ef43 ChangeLog 1221
 MD5 ad5c558fae56fa370b8e01d0d5656c04 files/digest-xbubble-0.5.8 66
 MD5 85d76fecc99f908fb5ae6d66a43b2332 files/xbubble-0.5.8-xpaths.patch 200
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 151816c1277161c1bdbf048519a0e299 xbubble-0.5.8.ebuild 1162
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDKUdViELBEf1JB0RAhbwAKCGBQZd5llDxe5PMD1FtMvU9ebuPQCfSJeM
-413pn4GTEvimjdHPyptx/Ug=
-=vH4A
------END PGP SIGNATURE-----
+MD5 cf8b83be024bee3a889af54156345524 xbubble-0.5.8.ebuild 1162
