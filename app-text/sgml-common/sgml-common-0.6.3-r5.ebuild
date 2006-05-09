@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r5.ebuild,v 1.4 2006/04/25 18:35:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r5.ebuild,v 1.5 2006/05/09 00:31:46 leonardop Exp $
 
 inherit autotools eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND=""
+DEPEND="=sys-devel/automake-1.4*"
 RDEPEND=""
 
 src_unpack() {
@@ -23,6 +23,7 @@ src_unpack() {
 	cp "${FILESDIR}/${P}-install-catalog.in" "${S}/bin/install-catalog.in"
 	cd ${S}
 	epatch ${FILESDIR}/${P}-configure.in.patch
+	export WANT_AUTOMAKE=1.4
 	eautoreconf
 }
 
