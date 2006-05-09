@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-1.0.0.ebuild,v 1.7 2005/05/01 17:04:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-1.0.0.ebuild,v 1.8 2006/05/09 07:35:49 flameeyes Exp $
 
 inherit toolchain-funcs
 
@@ -15,18 +15,31 @@ IUSE=""
 
 DEPEND=""
 
-S=${WORKDIR}/freenet6-client-1.0
+S="${WORKDIR}/freenet6-client-1.0"
+
+pkg_setup() {
+	case ${CHOST} in
+		*-openbsd*)					OS=openbsd ;;
+		*-freebsd* | *-dragonfly*)	OS=freebsd44 ;;
+		*-netbsd*)					OS=netbsd ;;
+		*-linux*)					OS=linux ;;
+		*)
+			die "Unknown target, please report this error after checking your CHOST."
+			;;
+	esac
+}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	sed -i \
-		-e "s:gcc -g -I\$(INC) -Wall:$(tc-getCC) -I\$(INC) ${CFLAGS}:" \
+	cd "${S}"
+
+	sed -i -e 's:\$(CC) -c:$(CC) $(CFLAGS) -c:' \
+		-e 's:\$(CC) \$(OBJDIR):$(CC) $(LDFLAGS) $(OBJDIR):' \
 		src/Makefile
 }
 
 src_compile() {
-	emake all target=linux || die "Build Failed"
+	emake all CC="$(tc-getCC)" target="${OS}" || die "Build Failed"
 }
 
 src_install() {
@@ -36,7 +49,7 @@ src_install() {
 	insinto /etc/freenet6
 	doins ${FILESDIR}/tspc.conf
 	exeinto /etc/freenet6/template
-	doexe template/{linux,checktunnel}.sh
+	doexe template/{${OS},checktunnel}.sh
 	doexe ${FILESDIR}/gentoo.sh
 
 	dodoc CONTRIB.txt LEGAL README
