@@ -1,6 +1,14 @@
 # ChangeLog for dev-games/simgear
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.22 2006/04/27 15:15:30 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.23 2006/05/09 20:16:07 wolf31o2 Exp $
+
+  09 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> simgear-0.3.6.ebuild,
+  simgear-0.3.8.ebuild, simgear-0.3.9.ebuild, simgear-0.3.10.ebuild:
+  First off, I would like to really, really apologise to anyone who looks at
+  these dependencies. It's ugly. I know it. However, this is actually correct
+  for the craziness in the tree with openal. At any rate, the idea is to fix
+  this now, then remove all of the openal ebuilds except 0.0.8, then revisit
+  this and clean up all of the extra cruft. Anyway, I apologise again. Enjoy.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-simgear-0.3.6,
   files/digest-simgear-0.3.8, Manifest:
