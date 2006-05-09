@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myspell.eclass,v 1.1 2006/05/01 15:24:39 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myspell.eclass,v 1.2 2006/05/09 18:20:47 kevquinn Exp $
 
-EXPORT_FUNCTIONS src_install pkg_postinst pkg_prerm
+EXPORT_FUNCTIONS src_install pkg_preinst pkg_postinst
 
 IUSE=""
 
@@ -132,7 +132,7 @@ myspell_src_install() {
 		doins ${fields[2]}.dat || die "Missing ${fields[2]}.dat"
 		doins ${fields[2]}.idx || die "Missing ${fields[2]}.idx"
 	done
-	doins ${dictlst} || die "Failed to install ${dictlist}"
+	doins ${dictlst} || die "Failed to install ${dictlst}"
 	# Install any txt files (usually README.txt) as documentation
 	for filen in $(ls *.txt 2> /dev/null); do
 		dodoc ${filen}
@@ -160,6 +160,8 @@ myspell_pkg_postinst() {
 				echo "${entry}" >> ${MYSPELL_OOOBASE}/dictionary.lst
 		for suffix in $(get_myspell_suffixes ${fields[0]}); do
 			filen="${fields[3]}${suffix}"
+			[[ -h ${MYSPELL_OOOBASE}/${filen} ]] &&
+				rm -f ${MYSPELL_OOOBASE}/${filen}
 			[[ ! -f ${MYSPELL_OOOBASE}/${filen} ]] &&
 				ln -s ${MYSPELL_DICTBASE}/${filen} \
 					${MYSPELL_OOOBASE}/${filen}
@@ -169,15 +171,18 @@ myspell_pkg_postinst() {
 
 
 # Remove softlinks and entries in dictionary.lst - uses
-# dictionary.<lang>.lst from /usr/share/myspell so has to
-# be prerm not postrm.
-myspell_pkg_prerm() {
+# dictionary.<lang>.lst from /usr/share/myspell
+# Done in preinst (prerm happens after postinst, which overwrites
+# the dictionary.<lang>.lst file)
+myspell_pkg_preinst() {
 	local filen dictlst entry fields removeentry suffix
 	dictlst="dictionary.lst.$(get_myspell_lang)"
 	[[ -d ${MYSPELL_OOOBASE} ]] || return
+	[[ -f ${MYSPELL_DICTBASE}/${dictlst} ]] || return
 	while read entry; do
 		fields=(${entry})
 		[[ ${fields[0]:0:1} == "#" ]] && continue
+		[[ ${fields[3]} == "" ]] && continue
 		# Remove entry from dictionary.lst
 		sed -i -e "/^${fields[0]} ${fields[1]} ${fields[2]} ${fields[3]}$/ { d }" \
 			${MYSPELL_OOOBASE}/dictionary.lst
@@ -188,11 +193,10 @@ myspell_pkg_prerm() {
 		# If no other entries match, remove relevant symlinks
 		for suffix in $(get_myspell_suffixes ${fields[0]}); do
 			filen="${fields[3]}${suffix}"
-			if [[ -h ${MYSPELL_OOOBASE}/${filen} ]]; then
+			ewarn "Removing entry ${MYSPELL_OOOBASE}/${filen}"
+			[[ -h ${MYSPELL_OOOBASE}/${filen} ]] &&
 				rm -f ${MYSPELL_OOOBASE}/${filen}
-			fi
 		done
-
 	done < ${MYSPELL_DICTBASE}/${dictlst}
 }
 
