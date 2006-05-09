@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5319 2006/05/09 15:54:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5320 2006/05/09 15:55:45 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -548,12 +548,6 @@ app-misc/colortail
 # Mark Loeser <halcy0n@gentoo.org> (30 Mar 2006)
 # Has not had a release in almost 3 years, and is unmaintained; see bug #126597
 net-misc/trickle
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (29 Mar 2006)
-# This is masked currently as the patch was pulled from upstream due to an issue
-# with the Windows patch that will cause the Linux patch to be re-released to
-# maintain compatibility across the network code.
-=games-fps/quake4-bin-1.1
 
 # Luca Barbato <lu_zero@gentoo.org> (29 Mar 2006)
 #pending some tests
