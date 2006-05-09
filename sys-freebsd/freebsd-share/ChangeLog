@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-share
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.9 2006/05/09 07:42:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.10 2006/05/09 12:04:33 flameeyes Exp $
+
+  09 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-share-6.1.ebuild:
+  Don't install tabset, that's installed by ncurses already.
 
 *freebsd-share-6.1 (09 May 2006)
 
