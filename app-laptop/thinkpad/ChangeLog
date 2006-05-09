@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/thinkpad
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.14 2006/03/25 11:57:08 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.15 2006/05/09 21:41:01 allanonjl Exp $
+
+  09 May 2006; John N. Laliberte <allanonjl@gentoo.org>
+  thinkpad-5.9-r1.ebuild:
+  mark stable on x86, #131971
 
 *thinkpad-5.9-r1 (25 Mar 2006)
 
