@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4.ebuild,v 1.1 2006/05/05 23:45:36 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.4.ebuild,v 1.2 2006/05/09 16:09:22 uberlord Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -110,7 +110,9 @@ src_compile() {
 	#define _PATH_DHCPD_CONF "/etc/dhcp/dhcpd.conf"
 	#define _PATH_DHCPD_PID "/var/run/dhcp/dhcpd.pid"
 	#define _PATH_DHCPD_DB "/var/lib/dhcp/dhcpd.leases"
+	#define _PATH_DHCLIENT_CONF "/etc/dhcp/dhclient.conf"
 	#define _PATH_DHCLIENT_DB "/var/lib/dhcp/dhclient.leases"
+	#define _PATH_DHCLIENT_PID "/var/run/dhcp/dhclient.pid"
 	#define DHCPD_LOG_FACILITY LOG_LOCAL1
 	END
 
