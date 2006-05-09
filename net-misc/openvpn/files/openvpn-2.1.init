@@ -1,0 +1,104 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+VPNDIR="${VPNDIR:-/etc/openvpn}"
+VPN="${SVCNAME##*.}"
+if [[ -n ${VPN} && ${SVCNAME} != "openvpn" ]]; then
+	VPNPID="/var/run/openvpn.${VPN}.pid"
+else
+	VPNPID="/var/run/openvpn.pid"
+fi
+VPNCONF="${VPNDIR}/${VPN}.conf"
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [[ ! -e /dev/net/tun ]]; then
+		if ! modprobe tun ; then
+			eerror "TUN/TAP support is not available in this kernel"
+			return 1
+		fi
+	fi
+
+	if [[ ! -e "${VPNCONF}" ]]; then
+		eend 1 "${VPNCONF} does not exist"
+		return 1
+	fi
+}
+
+start() {
+	# If we are re-called by the openvpn gentoo-up.sh script
+	# then we don't actually want to start openvpn
+	[[ ${IN_BACKGROUND} == "true" ]] && return 0
+	
+	ebegin "Starting ${SVCNAME}"
+
+	checkconfig || return 1
+
+	local args="" client=false
+	# If the config file does not specify the cd option, we do
+	# But if we specify it, we override the config option which we do not want
+	if ! grep -q "^[ \t]*cd[ \t].*" "${VPNCONF}" ; then
+		args="${args} --cd ${VPNDIR}"
+	fi
+	
+	# We mark the service as inactive and then start it.
+	# When we get an authenticated packet from the peer then we run our script
+	# which configures our DNS if any and marks us as up.
+	if grep -q "^[ \t]*remote[ \t].*" "${VPNCONF}" ; then
+		client=true
+		args="${args} --nobind --up-delay --up-restart"
+		args="${args} --up /etc/openvpn/up.sh"
+		args="${args} --down /etc/openvpn/down.sh"
+
+		# Warn about setting scripts as we override them 
+		if grep -Eq "^[ \t]*(up|down)[ \t].*" "${VPNCONF}" ; then
+			ewarn "WARNING: You have defined your own up/down scripts"
+			ewarn "As you're running as a client, we now force Gentoo specific"
+			ewarn "scripts to be run for up and down events."
+			ewarn "These scripts will call /etc/openvpn/${SVCNAME}-{up,down}.sh"
+			ewarn "where you can put your own code."
+		fi
+
+		# Warn about the inability to change ip/route/dns information when
+		# dropping privs
+		if grep -q "^[ \t]*user[ \t].*" "${VPNCONF}" ; then
+			ewarn "WARNING: You are dropping root privileges!"
+			ewarn "As such openvpn may not be able to change ip, routing"
+			ewarn "or DNS configuration."
+		fi
+	else
+		# So we're a server. Run as openvpn unless otherwise specified
+		grep -q "^[ \t]*user[ \t].*" "${VPNCONF}" || args="${args} --user openvpn"
+		grep -q "^[ \t]*group[ \t].*" "${VPNCONF}" || args="${args} --group openvpn"
+	fi
+
+	# Some generic options to improve reliability
+	args="${args} --persist-tun --persist-key"
+	
+	if ${client} && [[ $(type -t mark_service_inactive) == "function" ]]  ; then
+		mark_service_inactive "${SVCNAME}"
+	fi
+	start-stop-daemon --start --exec /usr/sbin/openvpn --pidfile "${VPNPID}" \
+		-- --config "${VPNCONF}" --writepid "${VPNPID}" --daemon ${args}
+	eend $? "Check your logs to see why startup failed"
+}
+
+stop() {
+	# If we are re-called by the openvpn gentoo-down.sh script
+	# then we don't actually want to stop openvpn
+	if [[ ${IN_BACKGROUND} == "true" ]] ; then
+		[[ $(type -t mark_service_inactive) == "function" ]] \
+			&& mark_service_inactive "${SVCNAME}"
+		return 0
+	fi
+
+	ebegin "Stopping ${SVCNAME}"
+	start-stop-daemon --stop --exec /usr/sbin/openvpn --pidfile "${VPNPID}"
+	eend $?
+}
+
+# vim: ts=4
