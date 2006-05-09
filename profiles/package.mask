@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5317 2006/05/09 14:11:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5318 2006/05/09 15:52:09 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -544,11 +544,6 @@ app-misc/colortail
 # Development release
 =media-libs/mesa-6.5*
 =x11-apps/mesa-progs-6.5*
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (31 Mar 2006)
-# This is masked for removal.  We simply don't support bootsplash anymore, so
-# there's no reason for keeping this around.  This will be removed on April 30.
-media-gfx/bootsplash-themes-livecd
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (30 Mar 2006)
 # This is masked to encourage users to upgrade since this version had its own
