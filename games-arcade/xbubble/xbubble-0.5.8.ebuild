@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.9 2006/03/06 21:09:30 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.10 2006/05/09 15:42:16 tcort Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ibiblio.org/pub/mirrors/gnu/ftp/savannah/files/xbubble/${P}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc x86"
+KEYWORDS="alpha amd64 ppc x86"
 IUSE="nls"
 
 RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
