@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.14 2006/05/02 21:53:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.15 2006/05/09 07:35:58 flameeyes Exp $
+
+*freebsd-lib-6.1 (09 May 2006)
+
+  09 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -freebsd-lib-6.1_rc2.ebuild, +freebsd-lib-6.1.ebuild:
+  Update to 6.1-RELEASE.
 
 *freebsd-lib-6.1_rc2 (02 May 2006)
 
