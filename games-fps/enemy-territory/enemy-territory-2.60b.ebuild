@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.1 2006/05/09 14:21:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.2 2006/05/09 19:07:14 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,8 +11,8 @@ SRC_URI="mirror://3dgamers/wolfensteinet/et-linux-2.60.x86.run
 	ftp://ftp.red.telefonica-wholesale.net/GAMES/ET/linux/et-linux-2.60.x86.run
 	mirror://idsoftware/et/ET-${PV}.zip
 	dedicated? (
-		http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}-all-0.1.tar.bz2
-		mirror://gentoo/${PN}-all-0.1.tar.bz2 )"
+		http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}-all-0.2.tar.bz2
+		mirror://gentoo/${PN}-all-0.2.tar.bz2 )"
 
 LICENSE="RTCW-ETEULA"
 SLOT="0"
@@ -36,7 +36,7 @@ Ddir="${D}/${dir}"
 src_unpack() {
 	unpack_makeself et-linux-2.60.x86.run
 	if use dedicated; then
-		unpack ${PN}-all-0.1.tar.bz2 || die
+		unpack ${PN}-all-0.2.tar.bz2 || die
 	fi
 	unpack ET-${PV}.zip
 }
@@ -60,11 +60,11 @@ src_install() {
 		dosed "s:GAMES_USER_DED:${GAMES_USER_DED}:" /etc/init.d/et-ded
 		dosed "s:GENTOO_DIR:${GAMES_BINDIR}:" /etc/init.d/et-ded
 		newconfd ${S}/et-ded.conf.d et-ded || die "newconfd failed"
+		newenvd ${S}/et-ded.env.d et-ded || die "newenvd failed"
+		# TODO: move this to /var/ perhaps ?
+		dodir "${dir}/etwolf-homedir"
+		dosym "${dir}/etwolf-homedir" "${GAMES_PREFIX}/.etwolf"
 	fi
-
-	# TODO: move this to /var/ perhaps ?
-	dodir "${dir}/etwolf-homedir"
-	dosym "${dir}/etwolf-homedir" "${GAMES_PREFIX}/.etwolf"
 
 	make_desktop_entry et "Enemy Territory" ET.xpm
 
