@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/unionfs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.22 2006/04/27 14:01:35 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.23 2006/05/09 09:30:40 satya Exp $
+
+  09 May 2006; Christian Andreetta <satya@gentoo.org>
+  unionfs-1.1.4-r2.ebuild:
+  modules in .../kernel/fs/unionfs/, binaries in /sbin (bug #129960)
 
 *unionfs-1.1.4-r2 (27 Apr 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/unionfs-1.1.4-r2.ebuild,v 1.1 2006/04/27 14:01:35 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/unionfs-1.1.4-r2.ebuild,v 1.2 2006/05/09 09:30:40 satya Exp $
 
 inherit eutils linux-mod
 
@@ -14,7 +14,7 @@ IUSE="acl debug nfs"
 pkg_setup() {
 	linux-mod_pkg_setup
 
-	MODULE_NAMES="unionfs(fs:)"
+	MODULE_NAMES="unionfs(kernel/fs/${PN}:)"
 	BUILD_TARGETS="all"
 	BUILD_PARAMS="LINUXSRC=${KV_DIR} KERNELVERSION=${KV_MAJOR}.${KV_MINOR}"
 }
@@ -45,11 +45,13 @@ src_unpack() {
 }
 
 src_install() {
-	dosbin unionctl uniondbg unionimap snapmerge
 	doman man/unionfs.4 man/unionctl.8 man/uniondbg.8 man/unionimap.8
 
 	linux-mod_src_install
 
 	dodoc INSTALL NEWS README ChangeLog patch-kernel.sh
+
+	into / # ${D}/sbin: usr could be unionfs mounted: bug #129960
+	dosbin unionctl uniondbg unionimap snapmerge
 }
 
