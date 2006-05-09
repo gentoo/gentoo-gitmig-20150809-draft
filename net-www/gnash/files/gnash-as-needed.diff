@@ -1,0 +1,22 @@
+diff -u gnash-0.7.1/libbase/Makefile.am.orig gnash-0.7.1/libbase/Makefile.am
+--- gnash-0.7.1/libbase/Makefile.am.orig	2006-05-10 01:05:21.000000000 +0200
++++ gnash-0.7.1/libbase/Makefile.am	2006-05-10 01:06:36.000000000 +0200
+@@ -99,6 +99,7 @@
+ 	utf8.cpp		\
+ 	utility.cpp		\
+ 	zlib_adapter.cpp
++libgnashbase_la_LIBADD = $(JPEG_LIBS)
+ 
+ noinst_HEADERS = \
+ 	container.h		\
+diff -u gnash-0.7.1/server/Makefile.am.orig gnash-0.7.1/server/Makefile.am
+--- gnash-0.7.1/server/Makefile.am.orig	2006-05-10 00:51:18.000000000 +0200
++++ gnash-0.7.1/server/Makefile.am	2006-05-10 01:07:43.000000000 +0200
+@@ -150,6 +150,7 @@
+         text.cpp         \
+         array.cpp        \
+         types.cpp $(MP3_HANDLER)
++libgnashserver_la_LIBADD = libgnashasobjs.la $(MAD_LIBS) $(LIBXML_LIBS) $(OPENGL_LIBS)
+ 
+ noinst_HEADERS = $(as_incls) \
+ 	action.h	\
