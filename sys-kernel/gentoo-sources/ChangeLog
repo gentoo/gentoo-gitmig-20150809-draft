@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.281 2006/05/08 12:11:44 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.282 2006/05/09 21:17:02 wolf31o2 Exp $
+
+  09 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  gentoo-sources-2.6.16-r7.ebuild:
+  Marking stable on x86 for bug #127003. Marking stable on amd64 for bug
+  #127003 and bug #130028. This also fixes some issues with the sky2 driver.
 
 *gentoo-sources-2.6.16-r7 (08 May 2006)
 
