@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.104.0.ebuild,v 1.1 2006/02/22 17:21:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.104.0.ebuild,v 1.2 2006/05/09 05:32:03 josejx Exp $
 
-inherit eutils games
+inherit eutils flag-o-matic games
 
 DESCRIPTION="GNU/Linux port of the MAME emulator with GUI menu"
 HOMEPAGE="http://advancemame.sourceforge.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/advancemame/${P}.tar.gz"
 
 LICENSE="GPL-2 XMAME"
 SLOT="0"
-KEYWORDS="~amd64 -ppc x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="alsa expat fbcon oss sdl slang static svga truetype zlib"
 
 RDEPEND="app-arch/unzip
@@ -40,6 +40,11 @@ src_unpack() {
 }
 
 src_compile() {
+	# Fix for bug #78030
+	if use ppc; then
+		append-ldflags "-Wl,--relax"
+	fi
+
 	PATH="${PATH}:${T}"
 	egamesconf \
 		$(use_enable alsa) \
