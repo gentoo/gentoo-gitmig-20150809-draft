@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/rtcw
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.26 2006/03/31 21:18:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.27 2006/05/09 14:25:11 wolf31o2 Exp $
+
+*rtcw-1.41b (09 May 2006)
+
+  09 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> -rtcw-1.41-r2.ebuild,
+  +rtcw-1.41b.ebuild:
+  Version bump with new patch. Marking stable on amd64 and x86. Removing older
+  versions. Closing bug #132377.
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> rtcw-1.41-r2.ebuild:
   Changed nomirror to mirror and nostrip to strip.
