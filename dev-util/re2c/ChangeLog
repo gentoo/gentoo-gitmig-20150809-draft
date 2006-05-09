@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/re2c
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.23 2006/04/22 05:58:12 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.24 2006/05/09 16:32:14 squinky86 Exp $
+
+  09 May 2006; Jon Hood <squinky86@gentoo.org> re2c-0.9.11.ebuild:
+  Add ~amd64, #131390.
 
   22 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/re2c-0.9.11-gcc41.patch, re2c-0.9.11.ebuild:
