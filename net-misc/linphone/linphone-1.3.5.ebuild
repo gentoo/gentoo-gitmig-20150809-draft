@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.3.5.ebuild,v 1.5 2006/05/09 12:31:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.3.5.ebuild,v 1.6 2006/05/09 12:42:58 genstef Exp $
 
-inherit eutils libtool
+inherit eutils autotools
 
 MY_DPV="${PV%.*}.x"
 
@@ -46,8 +46,10 @@ src_unpack() {
 		cd ${S_ILBC}
 		# add -fPIC and custom cflags to ilbc makefile
 		epatch ${FILESDIR}/ilbc-1.2.0-makefile.diff
+		cd ${S}
 	fi
-	elibtoolize
+	#132758
+	eautoreconf
 }
 
 src_compile() {
