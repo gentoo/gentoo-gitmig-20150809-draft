@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.3.5.ebuild,v 1.4 2006/05/06 19:57:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.3.5.ebuild,v 1.5 2006/05/09 12:31:53 genstef Exp $
 
-inherit eutils
+inherit eutils libtool
 
 MY_DPV="${PV%.*}.x"
 
@@ -47,6 +47,7 @@ src_unpack() {
 		# add -fPIC and custom cflags to ilbc makefile
 		epatch ${FILESDIR}/ilbc-1.2.0-makefile.diff
 	fi
+	elibtoolize
 }
 
 src_compile() {
@@ -62,7 +63,6 @@ src_compile() {
 #	use x86 && use truespeech && \
 #		myconf="--enable-truespeech"
 
-	libtoolize --copy --force
 	econf \
 		--enable-glib \
 		--with-speex=/usr \
