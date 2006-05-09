@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.9.0.ebuild,v 1.13 2006/04/09 18:02:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.9.0.ebuild,v 1.14 2006/05/09 09:12:26 flameeyes Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic libtool
 
 DESCRIPTION="Fast and safe graphics and drivers for about any graphics card to the Linux kernel (sometimes)"
 HOMEPAGE="http://www.ggi-project.org/"
@@ -22,15 +22,14 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-linux26-headers.patch
 	epatch ${FILESDIR}/${P}-gcc34.patch
+
+	elibtoolize
 }
 
 src_compile() {
 	local myconf
 
 	use X || myconf="--without-x --disable-x --disable-xwin"
-
-	# Fixes bug 87021
-	filter-flags -fPIC
 
 	econf ${myconf} || die
 	emake || die
@@ -40,13 +39,13 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	cd ${D}/usr/share/man/man3
+	cd "${D}/usr/share/man/man3"
 	for i in *.3gii
 	do
-		mv ${i} ${i%.3gii}.3
+		mv "${i}" "${i/3gii/3}"
 	done
 
-	cd ${S}
+	cd "${S}"
 	dodoc ChangeLog* FAQ NEWS README
 	docinto txt
 	dodoc doc/*.txt
