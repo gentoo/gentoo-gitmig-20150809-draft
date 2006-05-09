@@ -1,8 +1,18 @@
-MD5 b27697aa78a26e692eb13ddfe76dd870 ChangeLog 960
-MD5 9b18aef59e3434127d643002b1b40d6b feedparser-3.3.ebuild 529
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 90609ab30d15b51908725c8bf9b44911 ChangeLog 1072
+MD5 c32710b74043c091d5daf05e3fde992c feedparser-3.3.ebuild 527
 MD5 911dfda87934d40698ba5d35e4d216bd feedparser-4.0.2.ebuild 589
-MD5 ce55d7429d8c696813e6cd93c2006b56 feedparser-4.1.ebuild 593
+MD5 ac1ef2b795bf0a40584bce2eb5f8fe57 feedparser-4.1.ebuild 598
 MD5 b0222ca706868c50f88eb300754aef0a files/digest-feedparser-3.3 63
 MD5 018a36a7d8917e63c612fc37dae540c0 files/digest-feedparser-4.0.2 65
-MD5 99020132d88101ea57fd2a2c2be13972 files/digest-feedparser-4.1 235
+MD5 469847093e10672e6df0898c39c1e26d files/digest-feedparser-4.1 63
 MD5 539454f93a140308dd2f8c03c20bf6ed metadata.xml 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFEWnEn/NoSW7FuNV8RApCTAKDRjB5KUM0yOXeMce+Z+aZckTl7oQCgjstV
+YSk7x2AmfQw6wJwTIhjj42w=
+=1fXp
+-----END PGP SIGNATURE-----
