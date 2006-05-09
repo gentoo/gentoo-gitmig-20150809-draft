@@ -1,48 +1,22 @@
-AUX 99hylafax-4.2 75 RMD160 7556741a394736417cf3b9db352642b75996b54f SHA1 7544e149ac495b06be039869686c673d8ac8c0f1 SHA256 0cdc13f4db03ad4ca97be8d7671d49da947660ec071fc99786f68e440c3b0e84 size 75
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 44b5ab4a0d3eef29bb42004cc070c488 ChangeLog 14016
 MD5 fa83948864d83f34f54ce35f26b38ed6 files/99hylafax-4.2 75
-RMD160 7556741a394736417cf3b9db352642b75996b54f files/99hylafax-4.2 75
-SHA256 0cdc13f4db03ad4ca97be8d7671d49da947660ec071fc99786f68e440c3b0e84 files/99hylafax-4.2 75
-AUX hylafax-4.2 3759 RMD160 d8a10429e912eaace4af98ee306c14b3f59ca7b4 SHA1 b41d462b94851544ce2e52b751ab956003a4e06a SHA256 83f1ba9a169f24721a4115dda3f3924c14804a09be2ff284fa52caeee455d166 size 3759
-MD5 491e78765b433d7c11146120cf7e40f8 files/hylafax-4.2 3759
-RMD160 d8a10429e912eaace4af98ee306c14b3f59ca7b4 files/hylafax-4.2 3759
-SHA256 83f1ba9a169f24721a4115dda3f3924c14804a09be2ff284fa52caeee455d166 files/hylafax-4.2 3759
-AUX hylafax-4.2.3-faxrcvd-eval-vulnerability.patch 831 RMD160 f02665ac65e9655542d97ed581894e827d7bdcfd SHA1 795496bfcf926ce6f75844c368d56fde2ae4f300 SHA256 265fdd927f6bcc8df5d85642a9d0049bba679c1617362c78ceae5e31aec613fe size 831
-MD5 b6a1547c8ea1f4cd6f2598838f74e95e files/hylafax-4.2.3-faxrcvd-eval-vulnerability.patch 831
-RMD160 f02665ac65e9655542d97ed581894e827d7bdcfd files/hylafax-4.2.3-faxrcvd-eval-vulnerability.patch 831
-SHA256 265fdd927f6bcc8df5d85642a9d0049bba679c1617362c78ceae5e31aec613fe files/hylafax-4.2.3-faxrcvd-eval-vulnerability.patch 831
-AUX hylafax-4.2.3-notify-eval-vulnerability.patch 2037 RMD160 baa0b0ffe85d8f37c41075d0dd098ffab0699521 SHA1 543d4e1b31df6bf79b8c51267903027eebbdca2b SHA256 027084bed6aa323dcfe3b0c7cbafc8eb02bb4324bd09c7a42b7aaa51cfcbda80 size 2037
-MD5 f5ab440f7054627896009d94f5a5b735 files/hylafax-4.2.3-notify-eval-vulnerability.patch 2037
-RMD160 baa0b0ffe85d8f37c41075d0dd098ffab0699521 files/hylafax-4.2.3-notify-eval-vulnerability.patch 2037
-SHA256 027084bed6aa323dcfe3b0c7cbafc8eb02bb4324bd09c7a42b7aaa51cfcbda80 files/hylafax-4.2.3-notify-eval-vulnerability.patch 2037
-AUX hylafax-4.2.3-tiff_version.patch 949 RMD160 1bfd3d760def0f522724532ec3b2e8115562ca74 SHA1 e87083eca97a51b02a60e7267e5ea17ae88762b2 SHA256 d267bd842147e4458d91299671755acc3f85b30abbf4d9b323a9bed89ef3478d size 949
-MD5 c852f81b68b836699d3731be8a15ec5b files/hylafax-4.2.3-tiff_version.patch 949
-RMD160 1bfd3d760def0f522724532ec3b2e8115562ca74 files/hylafax-4.2.3-tiff_version.patch 949
-SHA256 d267bd842147e4458d91299671755acc3f85b30abbf4d9b323a9bed89ef3478d files/hylafax-4.2.3-tiff_version.patch 949
-AUX hylafax-4.2.5-tiff_version.patch 906 RMD160 08eec1d890c3aaeffbfa7d211481538fb1f2350b SHA1 b2bb8e52f70d4d465a0b8f79a79fd16b5c190574 SHA256 6c195c06664fae498185a9cb420fe76f8b479b6f09da92422a8559202e03fb38 size 906
-MD5 6fd84d9a809dfbfba4865b0579e9f936 files/hylafax-4.2.5-tiff_version.patch 906
-RMD160 08eec1d890c3aaeffbfa7d211481538fb1f2350b files/hylafax-4.2.5-tiff_version.patch 906
-SHA256 6c195c06664fae498185a9cb420fe76f8b479b6f09da92422a8559202e03fb38 files/hylafax-4.2.5-tiff_version.patch 906
-DIST hylafax-4.2.3.tar.gz 1449095 RMD160 f06d3e1c72c0ba5a082fee4a74830cf72b73d7dd SHA256 47e6643b93353eb42b605ff745fd7e0f97c2834e601e2612566f1f66eaa6d04f size 1449095
-DIST hylafax-4.2.5.tar.gz 1450958 RMD160 aef5e7a8ff32bafa43b5efc431b9fd8c334ddb3a SHA256 0a5f7c52ee377fed60281d97681f50ae23062348e139f7fcc215957df9e69eb7 size 1450958
-EBUILD hylafax-4.2.3-r1.ebuild 4253 RMD160 e95455512ec38801df9b7411f2aa315aaf67bbb0 SHA1 8d04b63b74906f882a76ca1dcdf7cd45e3bf0225 SHA256 aea9535f93291e0bb044d5d04dd3d42cc0a65c28743abff7aef2bc66ffa36dab size 4253
-MD5 a888d4a795d9ba164327e782440d3483 hylafax-4.2.3-r1.ebuild 4253
-RMD160 e95455512ec38801df9b7411f2aa315aaf67bbb0 hylafax-4.2.3-r1.ebuild 4253
-SHA256 aea9535f93291e0bb044d5d04dd3d42cc0a65c28743abff7aef2bc66ffa36dab hylafax-4.2.3-r1.ebuild 4253
-EBUILD hylafax-4.2.5.ebuild 4139 RMD160 26ec67aaeffb8ec58c9ac93c2dc077f100e8fe55 SHA1 0e8b518e1a66f4927f7e8e5a8871fccd24dbba8e SHA256 6b9385c3a980b3aaa670aa10be7d606119750670e3de412e0df876507d398bd0 size 4139
-MD5 c0d85acae4bee71fd60efc5c8249d6cc hylafax-4.2.5.ebuild 4139
-RMD160 26ec67aaeffb8ec58c9ac93c2dc077f100e8fe55 hylafax-4.2.5.ebuild 4139
-SHA256 6b9385c3a980b3aaa670aa10be7d606119750670e3de412e0df876507d398bd0 hylafax-4.2.5.ebuild 4139
-MISC ChangeLog 13913 RMD160 787618093eefd78e4c52c4ba2e6940be668b9c51 SHA1 00c96cbb9f5ddf08a16efa05815dfc01da470217 SHA256 6b906c746df4046abbc92f1dfd2412c6066a9ee2d4c9e756db191a74b70e6ec8 size 13913
-MD5 4ad457d38f688a61a5da356b9d30bb66 ChangeLog 13913
-RMD160 787618093eefd78e4c52c4ba2e6940be668b9c51 ChangeLog 13913
-SHA256 6b906c746df4046abbc92f1dfd2412c6066a9ee2d4c9e756db191a74b70e6ec8 ChangeLog 13913
-MISC metadata.xml 435 RMD160 d82a6b794a35ff513f1d888fb965d046dd5731f9 SHA1 7240957064a2feecf68947087a657f33bcdbe439 SHA256 81ab9c4116079d97b3a964881ee7bba30e1ce25c0e90a80c3e3f1c704b7416e7 size 435
-MD5 d82acf1bcf0f7f9e181d6a2821292f2e metadata.xml 435
-RMD160 d82a6b794a35ff513f1d888fb965d046dd5731f9 metadata.xml 435
-SHA256 81ab9c4116079d97b3a964881ee7bba30e1ce25c0e90a80c3e3f1c704b7416e7 metadata.xml 435
 MD5 bf61a6cec9cc30597effde5845970d73 files/digest-hylafax-4.2.3-r1 244
-RMD160 1dbd042687a1338eb0cbdcc66845b12ecf44a1ee files/digest-hylafax-4.2.3-r1 244
-SHA256 94b8b3ae26b156f5fa46cf127c44dba86819ca3d19ec4cb7b05843b4c9369973 files/digest-hylafax-4.2.3-r1 244
 MD5 6b71597e15fe680589b48a0720105593 files/digest-hylafax-4.2.5 244
-RMD160 995dd08a883913eccadd8d01e058347abd223d48 files/digest-hylafax-4.2.5 244
-SHA256 470d3ce4479ec99b45896f0c74155d6dd1ef59cecc9f278fee4d07bad5db5a9d files/digest-hylafax-4.2.5 244
+MD5 491e78765b433d7c11146120cf7e40f8 files/hylafax-4.2 3759
+MD5 b6a1547c8ea1f4cd6f2598838f74e95e files/hylafax-4.2.3-faxrcvd-eval-vulnerability.patch 831
+MD5 f5ab440f7054627896009d94f5a5b735 files/hylafax-4.2.3-notify-eval-vulnerability.patch 2037
+MD5 c852f81b68b836699d3731be8a15ec5b files/hylafax-4.2.3-tiff_version.patch 949
+MD5 6fd84d9a809dfbfba4865b0579e9f936 files/hylafax-4.2.5-tiff_version.patch 906
+MD5 a888d4a795d9ba164327e782440d3483 hylafax-4.2.3-r1.ebuild 4253
+MD5 135a769e8b507820201e15cf8a63da2e hylafax-4.2.5.ebuild 4138
+MD5 d82acf1bcf0f7f9e181d6a2821292f2e metadata.xml 435
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEYM5YKRy60XGEcJIRAivnAJ9G0YHfW9Quijc//zZSm0Oy9Ya6uwCdEnOd
+/+QW+IMRblzNKRof3JRkN3Y=
+=x9eQ
+-----END PGP SIGNATURE-----
