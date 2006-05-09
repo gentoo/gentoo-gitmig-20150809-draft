@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.14.1.ebuild,v 1.2 2006/05/06 12:53:36 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.14.1.ebuild,v 1.3 2006/05/09 19:15:31 foser Exp $
 
 inherit virtualx gnome2 eutils
 
@@ -65,4 +65,14 @@ src_test() {
 	then
 		Xmake check || die "Test phase failed"
 	fi
+}
+
+src_unpack() {
+
+	unpack ${A}
+
+	# fix relative include path breaking libIDL (#129366)
+	cd ${S}/src
+	epatch ${FILESDIR}/${PN}-2.14-idl_include.patch
+
 }
