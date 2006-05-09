@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r4.ebuild,v 1.1 2006/03/30 01:49:05 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r4.ebuild,v 1.2 2006/05/09 02:47:48 anarchy Exp $
 
 inherit eutils mozconfig flag-o-matic multilib
 
@@ -29,6 +29,7 @@ src_unpack() {
 	epatch ${FILESDIR}/1.0/mozilla-rpath-3.patch || die "failed to apply rpath patch"
 	epatch ${FILESDIR}/1.0/${P}-gcc4-1.patch || die "failed to apply gcc-4 patch"
 	epatch "${FILESDIR}/010_glibc-2.4.patch" || die "failed to apply glibc-2.4 patch"
+	epatch ${FILESDIR}/1.0/mozilla-1.7.13-as-needed.patch || die "failed to apply as-needed patch"
 
 	# I had to manually edit the mozconfig.linux file as it
 	# has some quirks... just copy the darn thing over :) - Chris
