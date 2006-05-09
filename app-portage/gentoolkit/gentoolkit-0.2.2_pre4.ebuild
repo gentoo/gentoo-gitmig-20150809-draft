@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.2_pre4.ebuild,v 1.1 2006/04/03 18:37:26 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.2_pre4.ebuild,v 1.2 2006/05/09 19:23:26 flameeyes Exp $
 
 inherit eutils python
 
@@ -16,7 +16,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s39
 
 DEPEND=">=sys-apps/portage-2.0.51_pre21
 	>=dev-lang/python-2.0
-	>=dev-util/dialog-0.7
 	>=dev-lang/perl-5.6
 	>=sys-apps/grep-2.4
 	userland_GNU? ( sys-apps/debianutils )"
