@@ -1,5 +1,21 @@
-MD5 c59c7216072cf102da35ebaaf1157d2c ChangeLog 1261
-MD5 1c8396cd12c54c1cc4252cce70709577 elfkickers-2.0a.ebuild 1153
-MD5 cab7f0e6a2b67731af8abbadf0ee9ff2 metadata.xml 566
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 05fc6a44f93fa332ecc72272e2e345eb ChangeLog 1521
+MD5 a8ca228ae449af9013681f36123e3bb6 elfkickers-2.0a-r1.ebuild 1285
+MD5 467eb254860da93414e6f73013f3bb2b elfkickers-2.0a.ebuild 1153
 MD5 b77d338ef8265dec78deb87c866b2a43 files/digest-elfkickers-2.0a 67
+MD5 b77d338ef8265dec78deb87c866b2a43 files/digest-elfkickers-2.0a-r1 67
+MD5 ba83e83aabcdb4fb3eccd96ec385edcb files/elfkickers-2.0a-elfls-core.patch 294
 MD5 65a7291d3386a2c43915f548ad4ed187 files/elfkickers-2.0a.diff 3264
+MD5 f78e48343cdcc5b86c6e2a376e303175 files/sstrip-mjn3.c 14383
+MD5 cab7f0e6a2b67731af8abbadf0ee9ff2 metadata.xml 566
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iQCVAwUBRGB/NJ4WFLgrx1GWAQIybAP9F1e28ZK4pLpcjXQ1DmQ7AJpjx4xgo+c2
+tDmaiH+CokZH3FbT925uY2xT/zWWsBS5hSmehtBokKTID2aEfSZHBT/zsPLB/3MV
+bfaQNSHzzNoWmcmu9tb1aUihGDyV9pNdlNMSgKXkeC0Od3pPLddzkI9LhPxMeoCP
+A6xYukUwLho=
+=Flwm
+-----END PGP SIGNATURE-----
