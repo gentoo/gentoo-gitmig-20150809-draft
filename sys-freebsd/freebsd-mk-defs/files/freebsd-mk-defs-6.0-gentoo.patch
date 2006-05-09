@@ -1,7 +1,7 @@
-Index: freebsd-6.0/share/mk/bsd.doc.mk
+Index: fbsd-6.0/share/mk/bsd.doc.mk
 ===================================================================
---- freebsd-6.0.orig/share/mk/bsd.doc.mk
-+++ freebsd-6.0/share/mk/bsd.doc.mk
+--- fbsd-6.0.orig/share/mk/bsd.doc.mk
++++ fbsd-6.0/share/mk/bsd.doc.mk
 @@ -137,10 +137,12 @@ CLEANFILES+=	${DOC}.ascii ${DOC}.ascii${
  realinstall:
  .for _dev in ${PRINTERDEVICE:Mhtml}
@@ -15,10 +15,10 @@ Index: freebsd-6.0/share/mk/bsd.doc.mk
  	${INSTALL} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} \
  	    ${DFILE.${_dev}} ${DESTDIR}${BINDIR}/${VOLUME}
  .endfor
-Index: freebsd-6.0/share/mk/bsd.files.mk
+Index: fbsd-6.0/share/mk/bsd.files.mk
 ===================================================================
---- freebsd-6.0.orig/share/mk/bsd.files.mk
-+++ freebsd-6.0/share/mk/bsd.files.mk
+--- fbsd-6.0.orig/share/mk/bsd.files.mk
++++ fbsd-6.0/share/mk/bsd.files.mk
 @@ -39,6 +39,7 @@ ${group}NAME_${file:T}?=	${file:T}
  .endif
  installfiles: _${group}INS_${file:T}
@@ -40,10 +40,10 @@ Index: freebsd-6.0/share/mk/bsd.files.mk
  	${INSTALL} -o ${${group}OWN} -g ${${group}GRP} \
  	    -m ${${group}MODE} ${.ALLSRC} ${DESTDIR}${${group}DIR}
  .endif
-Index: freebsd-6.0/share/mk/bsd.incs.mk
+Index: fbsd-6.0/share/mk/bsd.incs.mk
 ===================================================================
---- freebsd-6.0.orig/share/mk/bsd.incs.mk
-+++ freebsd-6.0/share/mk/bsd.incs.mk
+--- fbsd-6.0.orig/share/mk/bsd.incs.mk
++++ fbsd-6.0/share/mk/bsd.incs.mk
 @@ -39,6 +39,10 @@ ${group}NAME_${header:T}?=	${header:T}
  .endif
  installincludes: _${group}INS_${header:T}
@@ -67,10 +67,10 @@ Index: freebsd-6.0/share/mk/bsd.incs.mk
  	${INSTALL} -C -o ${${group}OWN} -g ${${group}GRP} -m ${${group}MODE} \
  	    ${.ALLSRC} ${DESTDIR}${${group}DIR}
  .endif
-Index: freebsd-6.0/share/mk/bsd.info.mk
+Index: fbsd-6.0/share/mk/bsd.info.mk
 ===================================================================
---- freebsd-6.0.orig/share/mk/bsd.info.mk
-+++ freebsd-6.0/share/mk/bsd.info.mk
+--- fbsd-6.0.orig/share/mk/bsd.info.mk
++++ fbsd-6.0/share/mk/bsd.info.mk
 @@ -85,6 +85,7 @@ INFO2HTML?=	info2html
  TEX?=		tex
  DVIPS?=		dvips
@@ -87,10 +87,10 @@ Index: freebsd-6.0/share/mk/bsd.info.mk
  	${INSTALLINFO} ${INSTALLINFOFLAGS} \
  	    --defsection=${INFOSECTION} \
  	    --defentry=${INFOENTRY_${x}} \
-Index: freebsd-6.0/share/mk/bsd.lib.mk
+Index: fbsd-6.0/share/mk/bsd.lib.mk
 ===================================================================
---- freebsd-6.0.orig/share/mk/bsd.lib.mk
-+++ freebsd-6.0/share/mk/bsd.lib.mk
+--- fbsd-6.0.orig/share/mk/bsd.lib.mk
++++ fbsd-6.0/share/mk/bsd.lib.mk
 @@ -208,14 +208,17 @@ realinstall: _libinstall
  .ORDER: beforeinstall _libinstall
  _libinstall:
@@ -109,10 +109,10 @@ Index: freebsd-6.0/share/mk/bsd.lib.mk
  	${INSTALL} ${STRIP} -o ${LIBOWN} -g ${LIBGRP} -m ${LIBMODE} \
  	    ${_INSTALLFLAGS} ${_SHLINSTALLFLAGS} \
  	    ${SHLIB_NAME} ${DESTDIR}${SHLIBDIR}
-Index: freebsd-6.0/share/mk/bsd.man.mk
+Index: fbsd-6.0/share/mk/bsd.man.mk
 ===================================================================
---- freebsd-6.0.orig/share/mk/bsd.man.mk
-+++ freebsd-6.0/share/mk/bsd.man.mk
+--- fbsd-6.0.orig/share/mk/bsd.man.mk
++++ fbsd-6.0/share/mk/bsd.man.mk
 @@ -165,9 +165,11 @@ _maninstall: ${MAN}
  .if defined(NO_MANCOMPRESS)
  .if defined(MANFILTER)
@@ -125,7 +125,14 @@ Index: freebsd-6.0/share/mk/bsd.man.mk
  	${MINSTALL} ${page:T:S/$/${CATEXT}${FILTEXTENSION}/g} \
  		${DESTDIR}${CATDIR}${page:E}${MANSUBDIR}/${page}
  .endif
-@@ -186,6 +188,7 @@ _maninstall: ${MAN}
+@@ -181,11 +183,14 @@ _maninstall: ${MAN}
+ 		esac; \
+ 		page=$$1; shift; sect=$$1; shift; \
+ 		d=${DESTDIR}${MANDIR}$${sect}${MANSUBDIR}; \
++		${ECHO} ${INSTALL} -d $${d}; \
++		${INSTALL} -d $${d}; \
+ 		${ECHO} ${MINSTALL} $${page} $${d}; \
+ 		${MINSTALL} $${page} $${d}; \
  	done
  .if defined(MANBUILDCAT) && !empty(MANBUILDCAT)
  .for page in ${MAN}
@@ -133,7 +140,7 @@ Index: freebsd-6.0/share/mk/bsd.man.mk
  	${MINSTALL} ${page:T:S/$/${CATEXT}/} \
  		${DESTDIR}${CATDIR}${page:E}${MANSUBDIR}/${page:T}
  .endfor
-@@ -193,9 +196,11 @@ _maninstall: ${MAN}
+@@ -193,9 +198,11 @@ _maninstall: ${MAN}
  .endif
  .else
  .for page in ${MAN}
@@ -145,10 +152,10 @@ Index: freebsd-6.0/share/mk/bsd.man.mk
  	${MINSTALL} ${page:T:S/$/${CATEXT}${MCOMPRESS_EXT}/g} \
  		${DESTDIR}${CATDIR}${page:E}${MANSUBDIR}/${page:T:S/$/${MCOMPRESS_EXT}/}
  .endif
-Index: freebsd-6.0/share/mk/bsd.prog.mk
+Index: fbsd-6.0/share/mk/bsd.prog.mk
 ===================================================================
---- freebsd-6.0.orig/share/mk/bsd.prog.mk
-+++ freebsd-6.0/share/mk/bsd.prog.mk
+--- fbsd-6.0.orig/share/mk/bsd.prog.mk
++++ fbsd-6.0/share/mk/bsd.prog.mk
 @@ -133,9 +133,11 @@ realinstall: _proginstall
  _proginstall:
  .if defined(PROG)
@@ -169,10 +176,10 @@ Index: freebsd-6.0/share/mk/bsd.prog.mk
  	${INSTALL} -o ${SCRIPTSOWN_${.ALLSRC:T}} \
  	    -g ${SCRIPTSGRP_${.ALLSRC:T}} -m ${SCRIPTSMODE_${.ALLSRC:T}} \
  	    ${.ALLSRC} \
-Index: freebsd-6.0/share/mk/sys.mk
+Index: fbsd-6.0/share/mk/sys.mk
 ===================================================================
---- freebsd-6.0.orig/share/mk/sys.mk
-+++ freebsd-6.0/share/mk/sys.mk
+--- fbsd-6.0.orig/share/mk/sys.mk
++++ fbsd-6.0/share/mk/sys.mk
 @@ -19,7 +19,7 @@ unix		?=	We run FreeBSD, not UNIX.
  .SUFFIXES:	.out .a .ln .o .c .cc .cpp .cxx .C .m .F .f .e .r .y .l .S .asm .s .cl .p .h .sh
  .endif
