@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/noatun
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.45 2006/05/06 12:18:23 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.46 2006/05/09 11:42:00 flameeyes Exp $
+
+  09 May 2006; Diego Pettenò <flameeyes@gentoo.org> noatun-3.5.2.ebuild:
+  Fix src_compile funciton naming, avoid looping. Thanks to Daniel King in bug
+  #132745.
 
   06 May 2006; Carsten Lohrke <carlo@gentoo.org> noatun-3.5.2.ebuild:
   Filter -fomit-frame-pointer to fix bug #128884.
