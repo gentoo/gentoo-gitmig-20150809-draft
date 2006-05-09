@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/setools
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.44 2006/02/03 13:52:01 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.45 2006/05/09 03:57:04 pebenito Exp $
+
+*setools-2.4 (09 May 2006)
+
+  09 May 2006; Chris PeBenito <pebenito@gentoo.org> +setools-2.4.ebuild:
+  New upstream release.
 
 *setools-2.3 (03 Feb 2006)
 
