@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.7 2006/03/12 02:15:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.8 2006/05/09 15:38:57 tcort Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ppc x86"
+KEYWORDS="alpha ~amd64 ppc x86"
 IUSE=""
 
 DEPEND="media-libs/allegro"
