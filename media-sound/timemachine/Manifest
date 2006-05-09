@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 46717314e90b575c7de2ec6153d4e9ad ChangeLog 1445
+MD5 0a2ea55f4e12278d217365ac834fa23c ChangeLog 1602
 MD5 6411861e6d8dc62ff415049f9020aa72 files/digest-timemachine-0.2.4 69
 MD5 3612c32ded070a8dffc0296faa9ffebe files/digest-timemachine-0.3.0 69
+MD5 4a79c71399e84599dbaddbd02c3077d3 files/digest-timemachine-0.3.1 69
 MD5 d36266bdc7ee0e2f641a99ea0c9747dd files/timemachine-0.2.4-ladcca-compile.patch 478
 MD5 2ea3a55dc8476a027082a9ae209a0d0d metadata.xml 361
 MD5 9e022edd9c740c306dd2b9755492e173 timemachine-0.2.4.ebuild 905
 MD5 3ecf28e51e3b503d5511c77401b6243c timemachine-0.3.0.ebuild 830
+MD5 4d8edce00b2825dbae19d930d4eb01c1 timemachine-0.3.1.ebuild 816
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDb0SJj5H05b2HAEkRAvJsAKCJ4p/MZw4M7+YuYfinaT5PGNPecwCgkmgs
-w+5ESv0GYPNnEtET5T9S/5c=
-=oAg9
+iD8DBQFEYR1Ovpz1081QvMkRAleBAJ9MzhX4Y4IT5XfYO95kgUwZyaLrugCfeapF
+umG6xKeCcblvd1CZVqSQ5Rk=
+=g+nF
 -----END PGP SIGNATURE-----
