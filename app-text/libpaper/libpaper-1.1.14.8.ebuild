@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.14.8.ebuild,v 1.3 2006/05/08 22:05:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.14.8.ebuild,v 1.4 2006/05/09 01:05:09 exg Exp $
 
 inherit versionator libtool eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://archive.ubuntu.com/ubuntu/pool/main/libp/libpaper/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}/${MY_P/_/-}

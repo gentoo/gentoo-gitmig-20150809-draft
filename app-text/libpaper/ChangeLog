@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.3 2006/05/08 22:05:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.4 2006/05/09 01:05:09 exg Exp $
+
+  09 May 2006; Emanuele Giaquinta <exg@gentoo.org> libpaper-1.1.14.8.ebuild:
+  Add ~ppc
 
   08 May 2006; Stefan Schweizer <genstef@gentoo.org>
   libpaper-1.1.14.8.ebuild:
