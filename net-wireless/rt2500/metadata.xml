@@ -3,10 +3,11 @@
 <pkgmetadata>
 <herd>mobile</herd>
 <maintainer>
-  <email>radek@gentoo.org</email>
-  <name>Radoslaw Stachowiak</name>
+	<email>uberlord@gentoo.org</email>
+	<name>Roy Marples</name>
 </maintainer>
 <maintainer>
-  <email>genstef@gentoo.org</email>
+  <email>radek@gentoo.org</email>
+  <name>Radoslaw Stachowiak</name>
 </maintainer>
 </pkgmetadata>

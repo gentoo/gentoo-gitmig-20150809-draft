@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/rt2500
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.25 2006/04/13 22:34:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.26 2006/05/09 18:22:24 uberlord Exp $
+
+*rt2500-1.1.0_pre2006050909 (09 May 2006)
+
+  09 May 2006; Roy Marples <uberlord@gentoo.org> metadata.xml,
+  +rt2500-1.1.0_pre2006050909.ebuild:
+  CVS snapshot with SMP support, #131797 thanks to Miroslaw Mieszczak.
+  QT support has been removed from the ebuild as it's non functional - it's
+  better to use baselayout anyway ;)
 
   13 Apr 2006; Stefan Schweizer <genstef@gentoo.org> -files/RT2500STA.dat,
   -files/rt2500-pci_name.patch, -rt2500-1.1.0_beta2-r2.ebuild,
