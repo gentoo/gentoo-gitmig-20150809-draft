@@ -1,0 +1,12 @@
+diff --exclude-from=/home/dang/.diffrc -u -ruN at-spi-1.7.7.orig/atk-bridge/bridge.c at-spi-1.7.7/atk-bridge/bridge.c
+--- at-spi-1.7.7.orig/atk-bridge/bridge.c	2006-02-27 17:21:03.000000000 -0500
++++ at-spi-1.7.7/atk-bridge/bridge.c	2006-05-09 15:06:35.000000000 -0400
+@@ -694,7 +694,7 @@
+   
+   g_free (e.type);
+ 
+-  if (e.any_data._release) CORBA_free (&e.any_data._value);
++  if (e.any_data._release) CORBA_free (e.any_data._value);
+   
+   va_end (args);
+ 
