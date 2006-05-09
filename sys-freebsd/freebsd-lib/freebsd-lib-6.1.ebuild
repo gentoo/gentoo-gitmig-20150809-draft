@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.1 2006/05/09 07:35:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.2 2006/05/09 19:03:41 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -110,6 +110,9 @@ src_unpack() {
 		sed -i -e 's:${INSTALL} -C:${INSTALL}:' "${WORKDIR}/include/Makefile"
 
 	sed -i -e 's:-o/dev/stdout:-t:' ${S}/libc/net/Makefile.inc
+
+	# Avoid collision with OpenSSL manpages
+	sed -i -e 's:^MAN:#MAN:' -e 's:^MLINKS:#MLINKS:' ${S}/libmd/Makefile
 }
 
 src_compile() {
