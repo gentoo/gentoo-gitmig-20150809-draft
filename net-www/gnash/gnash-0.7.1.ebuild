@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1.ebuild,v 1.1 2006/05/09 23:54:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1.ebuild,v 1.2 2006/05/10 00:27:36 genstef Exp $
 
 inherit nsplugins kde-functions autotools
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="dmalloc mp3 nsplugin nptl xml kde"
+IUSE="dmalloc mp3 nsplugin nptl xml kde gtk"
 
 DEPEND="sys-libs/zlib
 	media-libs/jpeg
@@ -32,12 +32,14 @@ DEPEND="sys-libs/zlib
 	sys-libs/ncurses
 	sys-libs/slang
 	kde? ( kde-base/kdelibs )
+	gtk? (
 		dev-libs/glib
 		dev-libs/atk
 		x11-libs/pango
 		x11-libs/cairo
 		>x11-libs/gtk+-2
 		x11-libs/gtkglext
+	)
 	virtual/opengl
 	media-libs/libsdl"
 RDEPEND="${DEPEND}"
@@ -52,6 +54,7 @@ src_compile() {
 		$(use_enable mp3) \
 		$(use_enable nptl pthreads) \
 		$(use_enable xml) \
+		$(use_enable gtk glext) \
 		--with-plugindir=/opt/netscape/plugins \
 		${myconf} \
 		|| die "econf failed"
@@ -59,7 +62,6 @@ src_compile() {
 		# fails when disabled
 		#$(use_enable nsplugin plugin) \
 		#$(use_with nsplugin plugindir /opt/netscape/plugins) \
-		#$(use_enable gtk glext) \
 }
 
 src_install() {
