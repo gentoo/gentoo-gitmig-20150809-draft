@@ -1,9 +1,13 @@
-MD5 63366aeb48265bda158ef5e03605cc92 ChangeLog 16739
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 30e9828e8e3ef173c9d910a3752d5e2f ChangeLog 16873
 MD5 2bff8e6c3d41ceae3d04783899915363 files/digest-gnumeric-1.4.3-r2 69
 MD5 2bff8e6c3d41ceae3d04783899915363 files/digest-gnumeric-1.4.3-r3 69
 MD5 b76afee2920aebc8fd632925765c3c70 files/digest-gnumeric-1.6.0 69
 MD5 7c673051dd023c2fd0bc25dcf86af734 files/digest-gnumeric-1.6.1 69
 MD5 16cb5659e6f64b0d5666e9bbdd03fc0c files/digest-gnumeric-1.6.2 253
+MD5 d8ab5da085dbf26c2dfef11cef85156e files/digest-gnumeric-1.6.3 69
 MD5 403a9f34b1159b636dec6156951e023d files/gnumeric-1.4.3-makejobs.patch 1591
 MD5 3fab812a68d5849434ba8d7ee3ef2887 files/gnumeric-1.4.3-new_gsf_api.patch 3308
 MD5 00512bbcd353d056c02b62335dfd87d1 files/gnumeric-1.4.3-pcre_int_overflow.patch 3916
@@ -12,4 +16,12 @@ MD5 2644f43aa2b70a69568b5fe657d03f03 gnumeric-1.4.3-r3.ebuild 2597
 MD5 42bfed4f9907ad72a9a1134533e5bb01 gnumeric-1.6.0.ebuild 1980
 MD5 8511788b0b3b6653a7c254aaa8241dde gnumeric-1.6.1.ebuild 2003
 MD5 aaf29f762a82150657e49852e3eecee5 gnumeric-1.6.2.ebuild 2004
+MD5 7f66a2559a18f6647b0ecaf85aec8fcb gnumeric-1.6.3.ebuild 2004
 MD5 add4556f7fbed381a299100d2457069f metadata.xml 167
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEYjbHKRy60XGEcJIRAkOQAJ9gyJ0xaSgoLEPtoQytB+aIBr54rwCfYA+Q
+gSTc3uqssR3pUUz8pBDOSz4=
+=BTmy
+-----END PGP SIGNATURE-----
