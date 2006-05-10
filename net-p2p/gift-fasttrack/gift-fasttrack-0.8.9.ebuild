@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.9.ebuild,v 1.5 2006/05/05 21:52:01 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.9.ebuild,v 1.6 2006/05/10 15:43:04 squinky86 Exp $
+
+inherit multilib
 
 IUSE=""
 
@@ -29,7 +31,11 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "FastTrack plugin failed to install"
+	einstall giftconfdir=${D}/etc/giFT \
+		plugindir=${D}/usr/$(get_libdir)/giFT \
+		datadir=${D}/usr/share \
+		giftperldir=${D}/usr/bin \
+		libgiftincdir=${D}/usr/include/libgift || die "Install failed"
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
 
