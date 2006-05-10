@@ -1,6 +1,23 @@
 # ChangeLog for app-emulation/vmware-linux-tools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/ChangeLog,v 1.4 2006/05/08 13:56:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/ChangeLog,v 1.5 2006/05/10 16:11:09 wolf31o2 Exp $
+
+*vmware-workstation-tools-4.5.3 (10 May 2006)
+
+  10 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/4.5.2/locations, -files/4.5.2/vmware-workstation-tools,
+  -files/4.5.2/xorg.conf, -files/5.0.0/locations,
+  -files/5.0.0/vmware-workstation-tools, -files/5.0.0/xorg.conf,
+  +files/90vmware-tools, +files/vmware-workstation-tools,
+  +files/vmware-workstation-tools.rc, +files/xorg.conf,
+  -vmware-workstation-tools-4.5.2.ebuild,
+  +vmware-workstation-tools-4.5.3.ebuild,
+  vmware-workstation-tools-5.0.0.ebuild:
+  Updated the ebuilds some more to make them use cdrom_get_cds and pull from
+  the CD itself. This should help as it doesn't require any download or
+  moving/copying anything to DISTDIR. Again, this still is not 100% tested. It
+  seems to merge fine, but since I am not testing this in a virtual machine
+  (yet), it is still masked.
 
   08 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> files/4.5.2/locations,
   files/5.0.0/locations, files/4.5.2/vmware-workstation-tools,

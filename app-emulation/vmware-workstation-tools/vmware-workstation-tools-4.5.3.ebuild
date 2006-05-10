@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-5.0.0.ebuild,v 1.4 2006/05/10 16:11:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-4.5.3.ebuild,v 1.1 2006/05/10 16:11:09 wolf31o2 Exp $
 
 inherit eutils
 
@@ -21,8 +21,8 @@ RDEPEND="sys-apps/pciutils"
 
 dir=/opt/vmware/tools
 Ddir=${D}/${dir}
-#TARBALL="vmware-linux-tools.tar.gz"
-TARBALL="VMwareTools-5.0.0-13124.tar.gz"
+TARBALL="vmware-linux-tools.tar.gz"
+#VMwareTools-5.0.0-13124.tar.gz
 
 S=${WORKDIR}/vmware-tools-distrib
 
