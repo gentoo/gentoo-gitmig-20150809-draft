@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/resolvconf-gentoo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/resolvconf-gentoo/ChangeLog,v 1.3 2006/05/02 12:48:09 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/resolvconf-gentoo/ChangeLog,v 1.4 2006/05/10 11:45:12 uberlord Exp $
+
+*resolvconf-gentoo-0.4 (10 May 2006)
+
+  10 May 2006; Roy Marples <uberlord@gentoo.org>
+  +resolvconf-gentoo-0.4.ebuild:
+  New version adds the -v option which echos variables to the console
+  for helper scripts to use which in turn results in less code to write
+  in the helper scripts.
 
 *resolvconf-gentoo-0.3 (02 May 2006)
 
