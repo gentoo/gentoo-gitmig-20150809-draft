@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.2-r1.ebuild,v 1.2 2006/05/06 10:40:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.2-r1.ebuild,v 1.3 2006/05/10 13:23:43 caleb Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -77,7 +77,8 @@ DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
 PATCHES="${FILESDIR}/konsole-3.5.1-detach-send2all.patch
-	${WORKDIR}/kdebase-3.5.2-patchset.diff"
+	${WORKDIR}/kdebase-3.5.2-patchset.diff
+	${FILESDIR}/kwin-3.5.2-parallel-make.diff"
 
 src_unpack() {
 	kde_src_unpack
