@@ -2,7 +2,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.32 2006/03/10 19:38:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.33 2006/05/10 07:19:26 mrness Exp $
+
+*quagga-0.98.6 (10 May 2006)
+
+  10 May 2006; Alin Nastac <mrness@gentoo.org> -quagga-0.98.5-r2.ebuild,
+  +quagga-0.98.6.ebuild:
+  Remove old test revision. Version bump wrt security bug #132353.
 
   10 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
   quagga-0.98.5-r3.ebuild:

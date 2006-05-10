@@ -1,17 +1,17 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.5-r2.ebuild,v 1.1 2005/12/13 14:37:07 amir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6.ebuild,v 1.1 2006/05/10 07:19:26 mrness Exp $
 
 inherit eutils multilib
 
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP. Includes OSPFAPI, NET-SNMP and IPV6 support."
 HOMEPAGE="http://quagga.net/"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20051105.tar.gz"
+	mirror://gentoo/${P}-patches-20060510.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~s390 ~sparc ~x86"
 IUSE="ipv6 snmp pam tcpmd5 bgpclassless ospfapi realms fix-connected-rt multipath tcp-zebra"
 
 RDEPEND="sys-apps/iproute2
@@ -29,10 +29,10 @@ src_unpack() {
 
 	cd ${S} || die "source dir not found"
 
-	# TCP MD5 for BGP patch for Linux (RFC 2385) - http://hasso.linux.ee/quagga/ht-20050110-0.98.0-bgp-md5.patch
-	use tcpmd5 && epatch "${WORKDIR}/patch/ht-20050110-0.98.0-bgp-md5.patch"
+	# TCP MD5 for BGP patch for Linux (RFC 2385) - http://hasso.linux.ee/doku.php/english:network:rfc2385
+	use tcpmd5 && epatch "${WORKDIR}/patch/ht-20050321-0.98.2-bgp-md5.patch"
 
-	# Classless prefixes for BGP - http://hasso.linux.ee/quagga/pending-patches/ht-20040304-classless-bgp.patch
+	# Classless prefixes for BGP - http://hasso.linux.ee/doku.php/english:network:quagga
 	use bgpclassless && epatch "${WORKDIR}/patch/ht-20040304-classless-bgp.patch"
 
 	# Connected route fix (Amir Guindehi) - http://voidptr.sboost.org/quagga/amir-connected-route.patch.bz2
@@ -126,7 +126,7 @@ pkg_postinst() {
 	if use tcpmd5; then
 		echo
 		ewarn "TCP MD5 for BGP needs a patched kernel!"
-		einfo "See http://hasso.linux.ee/quagga/bgp-md5.en.php for more info."
+		einfo "See http://hasso.linux.ee/doku.php/english:network:rfc2385 for more info."
 	fi
 
 	if use ipv6; then
