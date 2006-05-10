@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.7.0-r1.ebuild,v 1.2 2006/04/23 17:15:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.7.0-r1.ebuild,v 1.3 2006/05/10 21:26:36 mrness Exp $
 
 inherit distutils gnome2 eutils multilib autotools
 
@@ -44,6 +44,7 @@ src_unpack() {
 	sed -i -e 's:${libdir:/${platlibdir:' acinclude.m4
 	sed -i -e 's:blueradio-48.png:blueradio.png:' python/manager.py
 	epatch "${FILESDIR}/${P}-aclocal_openobex.patch"
+	epatch "${FILESDIR}/${P}-as-needed.patch"
 	eautoreconf
 }
 
