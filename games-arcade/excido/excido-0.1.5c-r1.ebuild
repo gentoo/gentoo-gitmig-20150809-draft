@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c-r1.ebuild,v 1.1 2006/05/10 19:30:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c-r1.ebuild,v 1.2 2006/05/10 19:34:38 wolf31o2 Exp $
 
 inherit games toolchain-funcs
 
@@ -23,7 +23,8 @@ DEPEND="dev-games/physfs
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-alut.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-alut.patch
 }
 
 src_compile() {
