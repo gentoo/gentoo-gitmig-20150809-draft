@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.145 2006/04/02 16:34:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.146 2006/05/10 18:00:18 rphillips Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -49,8 +49,8 @@ else
 fi
 
 if version_is_at_least "6.3.086" ; then
-#	DEPEND="${DEPEND} nls? ( elibc_uclib? ( dev-libs/libiconv ) )"
-#	RDEPEND="${RDEPEND} nls? ( elibc_uclib? ( dev-libs/libiconv ) )"
+	DEPEND="${DEPEND} nls? ( virtual/libintl )"
+	RDEPEND="${RDEPEND} nls? ( virtual/libintl )"
 	:
 elif version_is_at_least "6.3.075" ; then
 	IUSE="${IUSE} termcap-compat"
