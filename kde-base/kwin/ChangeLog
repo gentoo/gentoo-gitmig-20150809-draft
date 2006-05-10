@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.52 2006/05/06 10:45:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.53 2006/05/10 13:18:37 caleb Exp $
+
+  10 May 2006; Caleb Tennis <caleb@gentoo.org>
+  +files/kwin-3.5.2-parallel-make.diff, kwin-3.5.2-r2.ebuild:
+  Add a patch I put in kde upstream that fixes a parallel make error (#122059)
+
+  10 May 2006; Caleb Tennis <caleb@gentoo.org>
+  +files/kwin-3.5.2-parallel-make.diff, kwin-3.5.2-r2.ebuild:
+  Add a patch I put in kde upstream that fixes a parallel make error (#122059)
 
   06 May 2006; Carsten Lohrke <carlo@gentoo.org> kwin-3.5.2-r2.ebuild:
   Correct Xorg dependency.

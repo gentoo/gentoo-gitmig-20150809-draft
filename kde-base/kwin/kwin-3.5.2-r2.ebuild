@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-3.5.2-r2.ebuild,v 1.3 2006/05/06 10:45:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-3.5.2-r2.ebuild,v 1.4 2006/05/10 13:18:37 caleb Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -22,7 +22,8 @@ DEPEND="${RDEPEND}
 			) <x11-base/xorg-x11-7 )
 		)"
 
-PATCHES="${FILESDIR}/kwin-3.5.2-alt_tab_and_focus_chain_fix.diff"
+PATCHES="${FILESDIR}/kwin-3.5.2-alt_tab_and_focus_chain_fix.diff
+	${FILESDIR}/kwin-3.5.2-parallel-make.diff"
 
 src_compile() {
 	myconf="$myconf $(use_with xcomposite composite)"
