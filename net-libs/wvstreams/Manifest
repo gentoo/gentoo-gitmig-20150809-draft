@@ -1,11 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0aaed8ff30592ddc4b698925c782b1da ChangeLog 13691
+MD5 84dea252485dfddd143476fc53bf9d16 ChangeLog 13994
 MD5 8cc8c894e6b85859553c7e3e0e787601 files/digest-wvstreams-4.0.2-r1 250
 MD5 8cc8c894e6b85859553c7e3e0e787601 files/digest-wvstreams-4.0.2-r2 250
 MD5 ce2f63ffae6742f96ede8200eb39c3d1 files/digest-wvstreams-4.2.2 250
 MD5 2182d9c21e12e64892b2ff69088ff5e1 files/digest-wvstreams-4.2.2-r1 68
+MD5 2182d9c21e12e64892b2ff69088ff5e1 files/digest-wvstreams-4.2.2-r2 68
 MD5 16733d2b49133ec4fd75fa7dbca890ea files/wvstreams-4.0.2-MOC-fix.patch 479
 MD5 189d6997246f2943d43b5c18d0a78163 files/wvstreams-4.0.2-external-xplc.patch 1659
 MD5 6448ad9ded98b10b600e0b3386d2c4bf files/wvstreams-4.0.2-gcc41.patch 698
@@ -14,6 +15,7 @@ MD5 b65b1449a0bc6ff06e8c843b37717f05 files/wvstreams-4.0.2-speex-const.patch 951
 MD5 0b5b1b03e323747aa3ce30492fe18cc1 files/wvstreams-4.0.2-tcl_8_4.patch 1022
 MD5 dbec7770662be21658b4ba9740cf2793 files/wvstreams-4.0.2-wireless-user.patch 466
 MD5 d5c8bf76b0489abb5a4462b9d2908ced files/wvstreams-4.2.2-MOC-fix.patch 496
+MD5 67f548c22804fade461c723ab385a84c files/wvstreams-4.2.2-as-needed.patch 1679
 MD5 3ddd94457f929b986d63723ddc9a0107 files/wvstreams-4.2.2-external-xplc.patch 1213
 MD5 cd3499947a721c4f42bfd5f7df77abd3 files/wvstreams-4.2.2-gcc41.patch 2467
 MD5 3728d5a371443c7bf725bd9518bcec6f files/wvstreams-4.2.2-linux-serial.patch 1649
@@ -24,11 +26,12 @@ MD5 227de7f678ad662524292836709de75f metadata.xml 313
 MD5 e594922148c5a6f7087f083cf392e55c wvstreams-4.0.2-r1.ebuild 2558
 MD5 893ee737135acd020f6245da7959dc5a wvstreams-4.0.2-r2.ebuild 2595
 MD5 23c4f5469035465548514ddc368028ea wvstreams-4.2.2-r1.ebuild 2594
+MD5 4e00c406ff61b32b92f27ec9618661f1 wvstreams-4.2.2-r2.ebuild 2503
 MD5 51bf2ef4a85cbaf7c6af47794f84014a wvstreams-4.2.2.ebuild 2543
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEXFY9jG8pv1lIUX4RAlBWAKC14jaX9qYQ2ZP0BXYgUC2l6rhevgCguVvs
-HOdOYm7nTKri7zu2z/olAQ4=
-=oYj5
+iD8DBQFEYjq8jG8pv1lIUX4RAtKcAKDH/W5UaC7fMS41s+f00KOxN2vhPQCg2wvs
++kdWWeQrz8479OlcIlRhnTQ=
+=zMDv
 -----END PGP SIGNATURE-----
