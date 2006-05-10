@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.14.1.ebuild,v 1.1 2006/05/01 20:18:27 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.14.1.ebuild,v 1.2 2006/05/10 03:05:23 leonardop Exp $
 
-inherit eutils gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="User Interface routines for Gnome"
 HOMEPAGE="http://www.gnome.org/"
@@ -40,18 +40,18 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack "${A}"
+	cd "${S}"
 
 	# cleanliness is ... (#68698)
-	epatch ${FILESDIR}/${PN}-2.8.0-ditch_ancient_pics.patch
+	epatch "${FILESDIR}"/${PN}-2.8.0-ditch_ancient_pics.patch
 
 	# Remove unnecessary esound/audofile checks and implement the
 	# --without-jpeg switch
-	epatch ${FILESDIR}/${PN}-2.13.2-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-2.13.2-gentoo.patch
 
 	cp aclocal.m4 old_macros.m4
-	aclocal -I . || die "aclocal failed"
-	autoconf || die "autoconf failed"
-	automake || die "automake failed"
+	export AT_M4DIR="."
+	export WANT_AUTOMAKE=1.7
+	eautoreconf
 }
