@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.380 2006/05/03 20:57:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.381 2006/05/10 12:25:49 lu_zero Exp $
+
+  10 May 2006; Luca Barbato <lu_zero@gentoo.org>
+  mplayer-1.0.20060415.ebuild:
+  Added speex useflag, thanks to Roman Polach <rpolach@atlas.cz> for spotting 
+  it.
 
   03 May 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata to list media-video@gentoo.org as maintainer.

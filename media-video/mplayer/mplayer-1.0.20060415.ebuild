@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060415.ebuild,v 1.13 2006/04/30 14:58:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060415.ebuild,v 1.14 2006/05/10 12:25:49 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,7 @@ IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts bidi bl bindist
 cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dv
 dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca
 lirc live livecd lzo mad matroska matrox mmx mmxext musepack nas nvidia
-unicode vorbis opengl openal oss png real rtc samba sdl sse sse2 svga tga
+unicode vorbis opengl openal oss png real rtc samba sdl speex sse sse2 svga tga
 theora truetype v4l v4l2 win32codecs X x264 xanim xinerama xmms xv xvid xvmc"
 # openal
 BLUV=1.5
@@ -73,6 +73,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	png? ( media-libs/libpng )
 	samba? ( >=net-fs/samba-2.2.8a )
 	sdl? ( media-libs/libsdl )
+	speex? ( media-libs/speex )
 	svga? ( media-libs/svgalib )
 	theora? ( media-libs/libtheora )
 	live? ( >=media-plugins/live-2004.07.20 )
@@ -321,6 +322,7 @@ export LINGUAS="en"
 	myconf="${myconf} $(use_enable aac internal-faad)"
 	myconf="${myconf} $(use_enable vorbis)"
 	myconf="${myconf} $(use_enable theora)"
+	use speex && myconf="${myconf} --disable-speex"
 	myconf="${myconf} $(use_enable xmms)"
 	myconf="${myconf} $(use_enable xvid)"
 	use x86 && myconf="${myconf} $(use_enable real)"
