@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_beta14.ebuild,v 1.2 2006/05/10 06:45:36 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_beta14.ebuild,v 1.3 2006/05/10 20:23:41 uberlord Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -35,8 +35,7 @@ src_compile() {
 	use iproute2 && myconf="${myconf} --enable-iproute2"
 	if use minimal ; then
 		myconf="${myconf} --disable-plugins"
-	else
-		myconf="${myconf} --enable-pkcs11"
+		myconf="${myconf} --disable-pkcs11"
 	fi
 
 	econf ${myconf} \
