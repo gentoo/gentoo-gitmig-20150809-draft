@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.10 2006/05/01 19:03:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.11 2006/05/10 11:38:23 flameeyes Exp $
+
+*freebsd-baselayout-20060420-r2 (10 May 2006)
+
+  10 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -freebsd-baselayout-20060420-r1.ebuild,
+  +freebsd-baselayout-20060420-r2.ebuild:
+  Bump to force generation of pwdb.
 
 *freebsd-baselayout-20060420-r1 (01 May 2006)
 
