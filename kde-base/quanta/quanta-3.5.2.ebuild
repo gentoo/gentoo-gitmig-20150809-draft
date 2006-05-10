@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/quanta-3.5.2.ebuild,v 1.2 2006/03/28 01:19:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/quanta-3.5.2.ebuild,v 1.3 2006/05/10 12:40:13 caleb Exp $
 KMNAME=kdewebdev
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
@@ -25,8 +25,5 @@ KMCOMPILEONLY=lib
 # TODO: check why this wasn't needed back in the monolithic ebuild
 src_compile () {
 	myconf="--with-extra-includes=$(xml2-config --cflags | sed -e 's:^-I::')"
-
-	export LIBXML_LIBS="`xml2-config --libs`"
-	export LIBXSLT_LIBS="`xslt-config --libs`"
 	kde-meta_src_compile
 }
