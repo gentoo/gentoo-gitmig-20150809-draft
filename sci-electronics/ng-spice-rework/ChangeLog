@@ -1,6 +1,17 @@
 # ChangeLog for sci-electronics/ng-spice-rework
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.10 2006/01/01 22:07:23 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.11 2006/05/10 11:28:50 calchan Exp $
+
+*ng-spice-rework-9999 (10 May 2006)
+
+  10 May 2006; Denis Dupeyron <calchan@gentoo.org>
+  +files/ng-spice-rework-com_let.patch,
+  +files/ng-spice-rework-numparam.patch,
+  +files/ng-spice-rework-pipemode.patch,
+  +files/ng-spice-rework-postscript.patch, +ng-spice-rework-9999.ebuild:
+  Added live CVS ebuild. Options numparam and dot-global are enabled.
+  Additional patches for postscript and 'let' command fixes. Patch enabling
+  pipe mode for xcircuit.
 
   01 Jan 2006; <plasmaroo@gentoo.org> ng-spice-rework-17.ebuild:
   Add debug and readline USE flags; bug #106496.
