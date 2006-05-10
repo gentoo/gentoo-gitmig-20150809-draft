@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.182 2006/04/24 15:46:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.183 2006/05/10 22:53:07 dragonheart Exp $
+
+  10 May 2006; Daniel Black <dragonheart@gentoo.org> gnupg-1.9.20-r1.ebuild:
+  smime nolonger a USE option - thanks genstef
 
   24 Apr 2006; Aron Griffis <agriffis@gentoo.org> gnupg-1.9.20-r1.ebuild:
   Mark 1.9.20-r1 stable on ia64
