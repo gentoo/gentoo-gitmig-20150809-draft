@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pynmr/pynmr-0.37f.ebuild,v 1.1 2006/04/06 15:35:42 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pynmr/pynmr-0.37f.ebuild,v 1.2 2006/05/10 19:28:20 ribosome Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ IUSE=""
 SLOT="0"
 KEYWORDS="~x86"
 
-DEPEND="sci-chemistry/pymol"
+DEPEND="<sci-chemistry/pymol-0.99"
 
 
 src_install() {
