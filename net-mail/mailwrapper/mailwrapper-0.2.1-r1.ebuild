@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/mailwrapper-0.2.1-r1.ebuild,v 1.9 2006/05/06 14:03:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/mailwrapper-0.2.1-r1.ebuild,v 1.10 2006/05/10 20:35:59 ferdy Exp $
 
 inherit toolchain-funcs
 
@@ -29,5 +29,6 @@ src_install() {
 	dohard /usr/sbin/sendmail /usr/bin/mailq
 	dohard /usr/sbin/sendmail /usr/bin/rmail
 	dosym /usr/sbin/sendmail /usr/lib/sendmail
+	dosym /usr/sbin/sendmail /usr/bin/sendmail
 	doman mailer.conf.5 mailwrapper.8
 }
