@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.6.0.ebuild,v 1.2 2006/05/07 18:29:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.6.0.ebuild,v 1.3 2006/05/10 10:28:20 flameeyes Exp $
 
 USE_KEG_PACKAGING="yes"
 
@@ -37,4 +37,6 @@ DEPEND="${RDEPEND}
 		) virtual/x11 )"
 
 need-kde 3.3
+
+PATCHES="${FILESDIR}/${P}-parallel.patch"
 

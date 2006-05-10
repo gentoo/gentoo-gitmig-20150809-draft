@@ -1,0 +1,13 @@
+Index: rsibreak-0.6.0/rsibreak/src/Makefile.am
+===================================================================
+--- rsibreak-0.6.0.orig/rsibreak/src/Makefile.am
++++ rsibreak-0.6.0/rsibreak/src/Makefile.am
+@@ -33,7 +33,7 @@ rsibreak_SOURCES = rsidock.cpp setup.cpp
+ 	rsistatwidget.cpp rsistats.cpp rsiglobals.cpp rsistatitem.cpp
+ rsibreak_LDFLAGS = $(KDE_RPATH) $(all_libraries)
+ rsibreak_LDADD = $(LIB_KDEUI) $(LIB_KIO) $(LIBXSS) \
+-				 $(top_builddir)/rsibreak/src/librsibreak.la
++				 librsibreak.la
+ 
+ # this is where the desktop file will go
+ xdg_apps_DATA = rsibreak.desktop
