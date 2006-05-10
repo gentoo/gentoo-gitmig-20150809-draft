@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.88 2006/04/27 12:22:36 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.89 2006/05/10 13:27:02 dragonheart Exp $
+
+*gpgme-1.1.2-r1 (10 May 2006)
+
+  10 May 2006; Daniel Black <dragonheart@gentoo.org> -gpgme-1.1.2.ebuild,
+  +gpgme-1.1.2-r1.ebuild:
+  removed USE flag smime now that gnupg-1.9 is unmasked. No other changes in
+  the -r1 from -r0. Bug #130994 refers thanks to Carsten
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-gpgme-0.3.14-r1, files/digest-gpgme-1.0.2,
