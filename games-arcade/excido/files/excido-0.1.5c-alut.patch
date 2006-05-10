@@ -1,0 +1,11 @@
+--- excido-0.1.5c/Makefile.orig	2006-05-10 15:08:53.000000000 -0400
++++ excido-0.1.5c/Makefile	2006-05-10 15:09:05.000000000 -0400
+@@ -2,7 +2,7 @@
+ CFLAGS=`sdl-config --cflags` #-g -Wall #-O2
+ #CFLAGS=`sdl-config --cflags` -I./physfs#-g -Wall #-O2
+ OBJS    := ${patsubst %.cpp, %.o, ${wildcard src/*.cpp}}
+-LIBS = -s -Bstatic `sdl-config --static-libs` -lSDL_image -lSDL_ttf -L. -lphysfs -lopenal -Bdynamic -lGL -lGLU  
++LIBS = -s -Bstatic `sdl-config --static-libs` -lSDL_image -lSDL_ttf -L. -lphysfs -lopenal -Bdynamic -lGL -lGLU -lalut
+ #LIBS = -s -Bstatic `sdl-config --static-libs` SDL_image/*.o SDL_ttf/*.o -L. physfs/*.o openal/*.o -ljpeg -lpng -ltiff -lfreetype -Bdynamic -lGL -lGLU  
+ PREFIX=/usr/local
+ BINDIR=$(PREFIX)/bin/
