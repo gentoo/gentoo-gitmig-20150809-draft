@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kghostview/kghostview-3.5.2.ebuild,v 1.5 2006/04/24 19:15:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kghostview/kghostview-3.5.2.ebuild,v 1.6 2006/05/10 12:50:24 caleb Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -16,7 +16,7 @@ KMEXTRA="kfile-plugins/ps"
 
 pkg_setup() {
 	for ghostscript in app-text/ghostscript-{gnu,esp,afpl}; do
-		if has_version ${ghostscript} && !built_with_use ${ghostscript} X; then
+		if has_version ${ghostscript} && ! built_with_use ${ghostscript} X; then
 			eerror "This package requires ${ghostscript} compiled with X11 support."
 			eerror "Please reemerge ${ghostscript} with USE=\"X\"."
 			die "Please reemerge ${ghostscript} with USE=\"X\"."
