@@ -49,3 +49,14 @@
  @@ -70,6 +70,7 @@
   #include "drawpage.hxx"
   #include "globstr.hrc"
+--- patches/src680/cws-atkbridge-20060425.diff 
++++ patches/src680/cws-atkbridge-20060425.diff 
+@@ -7868,7 +7868,7 @@
+ +
+ +ATKVERSION:=$(shell $(PKGCONFIG) --modversion atk | $(AWK) -v num=true -f $(SOLARENV)$/bin$/getcompver.awk)
+ +
+-+.IF $(ATKVERSION) >= "000100070000"
+++.IF "$(ATKVERSION)" >= "000100070000"
+ +CFLAGS+=-DHAS_ATKRECTANGLE
+ +.ENDIF
+ +
