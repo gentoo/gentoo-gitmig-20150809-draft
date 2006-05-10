@@ -1,0 +1,29 @@
+diff -rNu ledit-1.11/pa_local.ml ledit-1.11-fix/pa_local.ml
+--- ledit-1.11/pa_local.ml      2001-06-16 10:50:02.000000000 +0200
++++ ledit-1.11-fix/pa_local.ml  2006-04-02 18:11:31.786957250 +0200
+@@ -14,10 +14,10 @@
+ open Pcaml;   
+
+ value expr_of_patt p =
+-  let loc = MLast.loc_of_patt p in
++  let _loc = MLast.loc_of_patt p in
+   match p with
+   [ <:patt< $lid:x$ >> -> <:expr< $lid:x$ >>
+-  | _ -> Stdpp.raise_with_loc loc (Stream.Error "identifier expected") ]
++  | _ -> Stdpp.raise_with_loc _loc (Stream.Error "identifier expected") ]
+ ;
+
+ EXTEND
+diff -rNu ledit-1.11/pr_local.ml ledit-1.11-fix/pr_local.ml
+--- ledit-1.11/pr_local.ml      2001-06-25 11:33:50.000000000 +0200
++++ ledit-1.11-fix/pr_local.ml  2006-04-02 18:12:05.769081000 +0200
+@@ -7,7 +7,7 @@
+ open Pcaml;
+ open Spretty;
+
+-value loc = (0, 0);
++value _loc = (0, 0);
+
+ value expr e dg k = pr_expr.pr_fun "top" e dg k;
+ value patt e dg k = pr_patt.pr_fun "top" e dg k;
+
