@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.18.ebuild,v 1.1 2006/05/03 11:31:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.18.ebuild,v 1.2 2006/05/10 07:00:45 azarah Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -16,8 +16,8 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS=" alpha  amd64  arm  hppa  ia64  m68k  mips  ppc  ppc64  s390  sh  sparc  x86"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="-*"
 IUSE=""
 RESTRICT="multilib-pkg-force"
 
