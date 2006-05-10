@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.5.0-r4.ebuild,v 1.1 2006/04/30 17:35:16 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.5.0-r4.ebuild,v 1.2 2006/05/10 07:36:33 stuart Exp $
 
 inherit rpm
 
@@ -42,11 +42,7 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}
 
 src_unpack() {
-	if use xft ; then
-		debian_src_unpack
-	else
-		rpm_src_unpack
-	fi
+	rpm_src_unpack
 }
 
 src_install() {
