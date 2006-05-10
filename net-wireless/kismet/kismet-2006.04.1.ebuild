@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2006.04.1.ebuild,v 1.1 2006/04/14 11:33:38 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2006.04.1.ebuild,v 1.2 2006/05/10 13:26:12 brix Exp $
 
-inherit linux-info
+inherit toolchain-funcs linux-info
 
 MY_P=${P/\./-}
 MY_P=${MY_P/./-R}
@@ -47,7 +47,9 @@ src_compile() {
 		config="${config} --disable-gpsmap"
 	fi
 
-	econf \
+	# need to set CC and CXX for FEATURES=confcache, bug #129479
+	CC=$(tc-getCC) CXX=$(tc-getCXX) \
+		econf \
 		${config} \
 		--with-linuxheaders=${KV_DIR}/include \
 		|| die "econf failed"
