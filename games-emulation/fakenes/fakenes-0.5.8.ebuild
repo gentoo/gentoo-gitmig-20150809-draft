@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/fakenes-0.5.8.ebuild,v 1.1 2006/05/06 08:37:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/fakenes-0.5.8.ebuild,v 1.2 2006/05/10 21:21:43 wolf31o2 Exp $
 
 inherit eutils flag-o-matic toolchain-funcs games
 
@@ -16,7 +16,14 @@ IUSE="openal opengl zlib"
 DEPEND=">=media-libs/allegro-4.2
 	dev-games/hawknl
 	opengl? ( media-libs/allegrogl )
-	openal? ( media-libs/openal )
+	openal? (
+		|| (
+			(
+				|| (
+					~media-libs/openal-0.0.8
+					~media-libs/openal-20051024 )
+				media-libs/freealut )
+			~media-libs/openal-20050504 ) )
 	zlib? ( sys-libs/zlib )"
 
 src_compile() {
