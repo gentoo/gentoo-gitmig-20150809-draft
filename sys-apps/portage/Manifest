@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a9e0188dc9da8f27882935bdfe9276e3 ChangeLog 20262
+MD5 c636b9984971677598823e881d88a7df ChangeLog 20368
 MD5 d5d5b818347fd87b290ecb0b17516b34 files/05portage.envd 34
 MD5 bb9cb80f927bcc2b9e0f512d8a200e18 files/2.0.51.22-fixes.patch 10579
 MD5 9171630257c115eaf795e55f9532b266 files/2.1/pre10/1150_r3334_make_profile_realpath.patch 414
@@ -14,13 +11,6 @@ MD5 152dd0f2e50dd9109e23cee4aca421b2 files/digest-portage-2.1_pre10-r5 320
 MD5 dc02eeaf8060043bfa8d483a42696963 metadata.xml 276
 MD5 4df85686b65f5591383e16bf3d6845ba portage-2.0.51.22-r3.ebuild 5796
 MD5 4f62f37006f604eb560eaa27666edd6e portage-2.0.54-r1.ebuild 3998
-MD5 a632eb43b4a5fc80211190bfc94d0979 portage-2.0.54-r2.ebuild 4195
+MD5 2fc7a86bea3cb823bc9010d5c7d7cde2 portage-2.0.54-r2.ebuild 4193
 MD5 f9c41fcd6a2155552f0cacbe7a62101c portage-2.0.54.ebuild 3891
 MD5 f4aa9d14a966b38bdf5734dbc2970b7d portage-2.1_pre10-r5.ebuild 6650
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEYM7JKRy60XGEcJIRAmvuAJ9TDyWA9lhGC69e7zS/ZB/I/jvvugCfSkXO
-SkUuEY6eDp4bS38dvwzFvmQ=
-=hFoi
------END PGP SIGNATURE-----
