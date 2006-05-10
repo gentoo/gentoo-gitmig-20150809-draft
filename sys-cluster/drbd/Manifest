@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c3d2d04ab7c710527a23e6284ee10cd2 ChangeLog 7032
+MD5 14d3291a7836fd244c20279eb4096dbd ChangeLog 7172
 MD5 028f168b40983177f6460d8e579e5487 drbd-0.6.12-r1.ebuild 2147
 MD5 c7bfc9090daaedc15842d7e368de655d drbd-0.7.10.ebuild 2153
 MD5 f1646b59b26ce75ee21f4461d63a1328 drbd-0.7.11.ebuild 2158
 MD5 d7ce4502d2e2f13699f429374e7615ab drbd-0.7.14.ebuild 2076
-MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 MD5 bee97436b18fa962a5009cc0b5ab7785 drbd-0.7.15.ebuild 2077
 MD5 cb8d65ee63bc874a12bdbf5b572467f7 drbd-0.7.16.ebuild 2077
 MD5 a8c16fe63891a0f9ed3f38dfb935c8d2 drbd-0.7.17.ebuild 2076
+MD5 d264496dfad4277c30aa47a9d1b8c931 drbd-0.7.18.ebuild 2077
 MD5 f8ceed0b6be2ded4cdb079d38ac0c3d0 files/0.6.12-Makefile.vars.patch 675
 MD5 463c9c89c7d3f156fc5581070abce14d files/0.6.12-conf.d 69
 MD5 4ab78154d6a32d13d416f9915ad4bc28 files/0.6.12-init 701
@@ -19,15 +16,10 @@ MD5 3959588a14b9fba5df432a29d00fa63f files/digest-drbd-0.6.12-r1 63
 MD5 96f405e763a4e7f0735cedc0277c3703 files/digest-drbd-0.7.10 63
 MD5 58cd0979a7f3222afae119b1c4f35939 files/digest-drbd-0.7.11 63
 MD5 3e85c9a71ad19acd37dccb48d7b1da92 files/digest-drbd-0.7.14 63
-MD5 3c8f8e6ea02cda5bee2a5e3bc8731774 files/drbd-0.7-init 1627
-MD5 cc42f194896b14c87944e9a5c5aaebf9 files/drbd-0.7-module-Makefile.patch 948
 MD5 d94cde508a8950d7241a41bc15739a22 files/digest-drbd-0.7.15 63
 MD5 149bd0bb3f9d149593bdb3476dee5d6f files/digest-drbd-0.7.16 63
 MD5 321a2f5814de043fcc03f5f34599c6ed files/digest-drbd-0.7.17 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFEJB6zgMUyd/cdjWsRArzXAJ4nwClAa3lM0uEjQqj5jbBNeVVTOgCfSFdh
-oWuG8C66fJT3shpQGMaoKcg=
-=WT+R
------END PGP SIGNATURE-----
+MD5 8f3348b9657b9e7c63c1e1afd8efbe83 files/digest-drbd-0.7.18 63
+MD5 3c8f8e6ea02cda5bee2a5e3bc8731774 files/drbd-0.7-init 1627
+MD5 cc42f194896b14c87944e9a5c5aaebf9 files/drbd-0.7-module-Makefile.patch 948
+MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
