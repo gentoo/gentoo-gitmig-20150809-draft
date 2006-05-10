@@ -60,7 +60,19 @@
    $LOGGER "New Broadcast Address ($interface): $new_broadcast_address"
 --- client/scripts/linux
 +++ client/scripts/linux
-@@ -106,6 +106,9 @@
+@@ -83,11 +83,6 @@
+   fi
+ fi
+ 
+-release=`uname -r`
+-release=`expr $release : '\(.*\)\..*'`
+-relminor=`echo $release |sed -e 's/[0-9]*\.\([0-9][0-9]*\)\(\..*\)*$/\1/'`
+-relmajor=`echo $release |sed -e 's/\([0-9][0-9]*\)\..*$/\1/'`
+-
+ if [ x$new_broadcast_address != x ]; then
+   new_broadcast_arg="broadcast $new_broadcast_address"
+ fi
+@@ -106,6 +101,9 @@
  if [ x$new_interface_mtu != x ]; then
    mtu_arg="mtu $new_interface_mtu"
  fi
@@ -70,8 +82,35 @@
  
  if [ x$reason = xMEDIUM ]; then
    # Linux doesn't do mediums (ok, ok, media).
-@@ -169,7 +172,7 @@
-       route add -net $new_network_number $new_subnet_arg dev $interface
+@@ -117,15 +115,7 @@
+     # Bring down alias interface. Its routes will disappear too.
+     ifconfig $interface:0- inet 0
+   fi
+-  if [ $relmajor -lt 2 ] || ( [ $relmajor -eq 2 ] && [ $relminor -eq 0 ] )
+-   then
+-    ifconfig $interface inet 0.0.0.0 netmask 0.0.0.0 \
+-		broadcast 255.255.255.255 up
+-    # Add route to make broadcast work. Do not omit netmask.
+-    route add default dev $interface netmask 0.0.0.0
+-  else
+-    ifconfig $interface 0 up
+-  fi
++  ifconfig $interface 0 up
+ 
+   # We need to give the kernel some time to get the interface up.
+   sleep 1
+@@ -164,12 +154,14 @@
+     ifconfig $interface inet $new_ip_address $new_subnet_arg \
+ 					$new_broadcast_arg $mtu_arg
+     # Add a network route to the computed network address.
+-    if [ $relmajor -lt 2 ] || \
+-		( [ $relmajor -eq 2 ] && [ $relminor -eq 0 ] ); then
+-      route add -net $new_network_number $new_subnet_arg dev $interface
++    if [ $IF_METRIC -gt 0 ]; then
++      route del -net $new_network_number $new_subnet_arg \
++        dev $interface
++      route add -net $new_network_number $new_subnet_arg $metric_arg \
++      	dev $interface
      fi
      for router in $new_routers; do
 -      route add default gw $router
@@ -79,8 +118,19 @@
      done
    fi
    if [ x$new_ip_address != x$alias_ip_address ] && [ x$alias_ip_address != x ];
-@@ -218,7 +221,7 @@
-       route add -net $new_network_number
+@@ -213,12 +205,15 @@
+       ifconfig $interface:0 inet $alias_ip_address $alias_subnet_arg
+       route add -host $alias_ip_address dev $interface:0
+     fi
+-    if [ $relmajor -lt 2 ] || \
+-		( [ $relmajor -eq 2 ] && [ $relminor -eq 0 ] ); then
+-      route add -net $new_network_number
++    # Add a network route to the computed network address.
++    if [ $IF_METRIC -gt 0 ]; then
++      route del -net $new_network_number $new_subnet_arg \
++        dev $interface
++      route add -net $new_network_number $new_subnet_arg $metric_arg \
++      	dev $interface
      fi
      for router in $new_routers; do
 -      route add default gw $router
