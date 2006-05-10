@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_beta14.ebuild,v 1.1 2006/05/09 09:21:41 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_beta14.ebuild,v 1.2 2006/05/10 06:45:36 uberlord Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://openvpn.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc-macos ~sparc ~x86"
-IUSE="examples iproute2 minimal pam passwordsave selinux smartcard ssl static threads"
+IUSE="examples iproute2 minimal pam passwordsave selinux ssl static threads"
 
 DEPEND=">=dev-libs/lzo-1.07
 	kernel_linux? (
@@ -19,7 +19,6 @@ DEPEND=">=dev-libs/lzo-1.07
 	)
 	!minimal? ( pam? ( virtual/pam ) )
 	selinux? ( sec-policy/selinux-openvpn )
-	smartcard? ( dev-libs/opensc )
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 src_unpack() {
@@ -34,11 +33,14 @@ src_compile() {
 	# We cannot use use_enable with iproute2 as the Makefile stupidly
 	# enables it with --disable-iproute2
 	use iproute2 && myconf="${myconf} --enable-iproute2"
-	use minimal && myconf="${myconf} --disable-plugins"
+	if use minimal ; then
+		myconf="${myconf} --disable-plugins"
+	else
+		myconf="${myconf} --enable-pkcs11"
+	fi
 
 	econf ${myconf} \
 		$(use_enable passwordsave password-save) \
-		$(use_enable smartcard pkcs11) \
 		$(use_enable ssl) \
 		$(use_enable ssl crypto) \
 		$(use_enable threads pthread) \
