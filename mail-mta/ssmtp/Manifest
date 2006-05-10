@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3e47f7f8e40f6d864a224c03c01a9776 ChangeLog 9412
+MD5 06bc1cd93913cb38a25596d7ca189ed2 ChangeLog 351
 MD5 c833680953ba9941d33fc14dda62532b files/digest-ssmtp-2.60.7-r1 63
 MD5 026bfafb0efdf0d7eb5e0b4164a35f7d files/digest-ssmtp-2.60.9 63
 MD5 15fdd106696fc8ccfb1b170da88df2ce files/digest-ssmtp-2.61 66
@@ -18,12 +18,12 @@ MD5 47980365b817fa32316d65edf07768a1 ssmtp-2.60.7-r1.ebuild 2858
 MD5 b60c6edf527e9a09a60c15d88481b74c ssmtp-2.60.9.ebuild 3121
 MD5 83a9a0aed2c2645233cba478272e8d27 ssmtp-2.61-r2.ebuild 3337
 MD5 3411baf1e9efbc73605135f9f7b4344c ssmtp-2.61-r30.ebuild 1763
-MD5 ecefc88b94e187761a6348414dac494c ssmtp-2.61-r31.ebuild 1917
+MD5 65bd4a26db77d375ce1927445a06c7ef ssmtp-2.61-r31.ebuild 1960
 MD5 151e9660d20f8886ceea81f0b44ec1de ssmtp-2.61.ebuild 3133
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEXJmLViELBEf1JB0RAtuNAJ9CVglkNOM/b9aHd2HLH1EMSOqSpQCfYKlN
-DvNocIeONNBCMp/H7YsK+XQ=
-=y9/g
+iD8DBQFEYlCdViELBEf1JB0RAiDMAJ9PL1qi8MCvSSlndv32jfw+9IQnoQCfbdVl
+x2gIppAPW4dyHjUeVDj9qII=
+=fOIW
 -----END PGP SIGNATURE-----

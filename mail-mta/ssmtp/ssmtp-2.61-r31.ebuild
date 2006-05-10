@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61-r31.ebuild,v 1.1 2006/05/06 12:41:23 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61-r31.ebuild,v 1.2 2006/05/10 20:43:57 ferdy Exp $
 
 inherit eutils toolchain-funcs mailer
 
@@ -67,6 +67,7 @@ src_install() {
 	else
 		dosym /usr/sbin/ssmtp /usr/lib/sendmail
 		dosym /usr/sbin/ssmtp /usr/bin/sendmail
+		dosym /usr/sbin/ssmtp /usr/sbin/sendmail
 		dosym /usr/sbin/ssmtp /usr/bin/mailq
 		dosym /usr/sbin/ssmtp /usr/bin/newaliases
 	fi
