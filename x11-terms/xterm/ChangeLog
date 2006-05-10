@@ -1,6 +1,14 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.134 2006/05/03 14:22:36 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.135 2006/05/10 11:23:44 exg Exp $
+
+*xterm-212-r2 (10 May 2006)
+
+  10 May 2006; Emanuele Giaquinta <exg@gentoo.org>
+  +files/xterm-app-defaults-ref.patch, +xterm-212-r2.ebuild:
+  Add patch to not include DESTDIR in the paths for default resources files
+  specified in the man page, fix bug #132843. Change the directory for the
+  resources files on modular to the one used in the 7.0 release.
 
 *xterm-212-r1 (03 May 2006)
 
