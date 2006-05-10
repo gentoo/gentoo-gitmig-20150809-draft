@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.1.ebuild,v 1.5 2006/04/10 22:33:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.1.ebuild,v 1.6 2006/05/10 21:48:37 kugelfang Exp $
 
 inherit fortran toolchain-funcs
 
@@ -44,6 +44,8 @@ pkg_setup() {
 	fi
 	rm -f test.{c,o}
 	fortran_pkg_setup
+
+	filter-ldflags -Wl,-Bdirect -Bdirect
 }
 
 src_compile() {
