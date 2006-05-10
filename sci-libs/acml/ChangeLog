@@ -1,10 +1,10 @@
 # ChangeLog for sci-libs/acml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.7 2006/05/10 18:37:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.8 2006/05/10 18:40:23 kugelfang Exp $
 
   10 May 2006; Danny van Dyk <kugelfang@gentoo.org> acml-2.5.0.ebuild,
   acml-2.7.0.ebuild, acml-3.0.0.ebuild, acml-3.1.0.ebuild:
-  Fixed bug #128084: Symlinking acml.h to /usr/include/.
+  Fixed bug #128084: Symlinking acml.h to /usr/include/
 
 *acml-3.1.0 (10 May 2006)
 
