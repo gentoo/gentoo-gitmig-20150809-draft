@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>mobile-phone</herd>
-<maintainer>
-  <email>ticho@gentoo.org</email>
-  <name>Andrej Kacian</name>
-</maintainer>
 <longdescription>Free open source implementation of the Object Exchange (OBEX) protocol, 
 used for transferring data to/from mobile devices.</longdescription>
 </pkgmetadata>
