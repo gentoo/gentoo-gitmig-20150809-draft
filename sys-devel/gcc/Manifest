@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 3.2.1/gcc31-loop-load-final-value.patch 3324 RMD160 8bb0e9133923821daf2e9d10a27a0a1930e00bbd SHA1 c73dc6e19a76a1dcbb11a15ff5ff04b11a9f0343 SHA256 70aa8433fb19c95f334b6cbc155cae22a3b61a6892ed9e18f95860509d0091a8 size 3324
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
 RMD160 8bb0e9133923821daf2e9d10a27a0a1930e00bbd files/3.2.1/gcc31-loop-load-final-value.patch 3324
@@ -202,10 +205,10 @@ AUX 3.4.4/gcc-3.4.4-softfloat.patch 5242 RMD160 7607a94c3bbb599704153bb0041f369a
 MD5 2c355d808b490994c6566b10f3c0ba27 files/3.4.4/gcc-3.4.4-softfloat.patch 5242
 RMD160 7607a94c3bbb599704153bb0041f369abff4a5f4 files/3.4.4/gcc-3.4.4-softfloat.patch 5242
 SHA256 fd4bf1bf8e78e2c7f041866594351be359341db876d81c0e9ad089db8e84a516 files/3.4.4/gcc-3.4.4-softfloat.patch 5242
-AUX 4.0.2/gcc-4.0.2-cross-compile.patch 505 RMD160 524e0b48e5393f57bbd796804ab3a6f8e83c455c SHA1 65848c1b96abc72785fbcb23d955398f2e1d4333 SHA256 8db7c6fa8a3e080a1034c7e9a23bc9cd0eb2e725fc7704957aeb434b746aeb44 size 505
-MD5 0acb1229f47bbb9e254a9824db17c25b files/4.0.2/gcc-4.0.2-cross-compile.patch 505
-RMD160 524e0b48e5393f57bbd796804ab3a6f8e83c455c files/4.0.2/gcc-4.0.2-cross-compile.patch 505
-SHA256 8db7c6fa8a3e080a1034c7e9a23bc9cd0eb2e725fc7704957aeb434b746aeb44 files/4.0.2/gcc-4.0.2-cross-compile.patch 505
+AUX 4.0.2/gcc-4.0.2-cross-compile.patch 1134 RMD160 70d7ba1cf19700597b812a08c7dcd72633a25c2a SHA1 d016b84010d2cd049d8974a8fcc1dae02e043d3d SHA256 8ee57285151659793df88e025f1225b401a0c805bfc8d1685e04ef75393a24ab size 1134
+MD5 6b71690a4a020aa0604a1f8fad21151b files/4.0.2/gcc-4.0.2-cross-compile.patch 1134
+RMD160 70d7ba1cf19700597b812a08c7dcd72633a25c2a files/4.0.2/gcc-4.0.2-cross-compile.patch 1134
+SHA256 8ee57285151659793df88e025f1225b401a0c805bfc8d1685e04ef75393a24ab files/4.0.2/gcc-4.0.2-cross-compile.patch 1134
 AUX 4.0.2/gcc-4.0.2-softfloat.patch 2790 RMD160 c5ad6efdacf01b128db4a1226e254af6f2789330 SHA1 d99d6f940a42be9576195eb851261d3a208b705b SHA256 1525a48bd087c0f0d89db128a16ee106252daf7bf34ffb45867d30f6c452de2c size 2790
 MD5 51eab04de222aa60204d6c3a23f0c3d2 files/4.0.2/gcc-4.0.2-softfloat.patch 2790
 RMD160 c5ad6efdacf01b128db4a1226e254af6f2789330 files/4.0.2/gcc-4.0.2-softfloat.patch 2790
@@ -480,3 +483,10 @@ SHA256 0b64499f68cfcd2d672e675da4c55660e7103edc2777017278e18623956f6b31 files/di
 MD5 1b28b078c09eed16bc8c543c362a64e3 files/digest-gcc-4.2.0_alpha20060506 259
 RMD160 2cb37976102306408170a1d67e5671fa294af4f9 files/digest-gcc-4.2.0_alpha20060506 259
 SHA256 8fb7f660176bf2bb4e4da6f43b7c17d4f8f44c7dcec1c81dae2066c58c43024f files/digest-gcc-4.2.0_alpha20060506 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEYVp82+ySkm8kpY0RAtL4AJ9XOtBuwvOPU5D56ZHMl+P7lBnZ3QCffmZt
+S7YVTfQsFGLx+2SplSv0sNU=
+=tUuZ
+-----END PGP SIGNATURE-----

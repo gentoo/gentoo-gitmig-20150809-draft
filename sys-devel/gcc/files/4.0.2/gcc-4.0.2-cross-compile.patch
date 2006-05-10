@@ -16,3 +16,25 @@ http://gcc.gnu.org/ml/gcc/2005-07/msg01195.html
  
  /* Extract any interesting information from the CIE for the translation
     unit F belongs to.  Return a pointer to the byte after the augmentation,
+--- gcc/configure
++++ gcc/configure
+@@ -12857,7 +12857,7 @@ then
+ 	    | powerpc*-*-*,powerpc64*-*-*)
+ 		CROSS="$CROSS -DNATIVE_CROSS" ;;
+ 	esac
+-elif test "x$TARGET_SYSTEM_ROOT" != x; then
++elif test "x$TARGET_SYSTEM_ROOT" != x -o $build != $host; then
+         SYSTEM_HEADER_DIR=$build_system_header_dir
+ fi
+ 
+--- gcc/configure.ac
++++ gcc/configure.ac
+@@ -1717,7 +1717,7 @@ then
+ 	    | powerpc*-*-*,powerpc64*-*-*)
+ 		CROSS="$CROSS -DNATIVE_CROSS" ;;
+ 	esac
+-elif test "x$TARGET_SYSTEM_ROOT" != x; then
++elif test "x$TARGET_SYSTEM_ROOT" != x -o $build != $host; then
+         SYSTEM_HEADER_DIR=$build_system_header_dir 
+ fi
+ 
