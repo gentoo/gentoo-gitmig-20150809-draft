@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-filemagic/ruby-filemagic-0.1.1.ebuild,v 1.1 2005/09/20 09:15:58 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-filemagic/ruby-filemagic-0.1.1.ebuild,v 1.2 2006/05/10 18:23:50 killerfox Exp $
 
 inherit ruby
 
@@ -12,7 +12,7 @@ SRC_URI="http://grub.ath.cx/filemagic/${P}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~hppa ~x86"
 IUSE=""
 
 DEPEND="virtual/ruby
@@ -25,7 +25,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	ruby_einstall || die
 	dodoc filemagic.rd
 }
 
