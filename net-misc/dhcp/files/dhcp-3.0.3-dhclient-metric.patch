@@ -106,7 +106,7 @@
 -    if [ $relmajor -lt 2 ] || \
 -		( [ $relmajor -eq 2 ] && [ $relminor -eq 0 ] ); then
 -      route add -net $new_network_number $new_subnet_arg dev $interface
-+    if [ $IF_METRIC -gt 0 ]; then
++    if [ x$IF_METRIC != x ] && [ x$IF_METRIC != x0 ]; then
 +      route del -net $new_network_number $new_subnet_arg \
 +        dev $interface
 +      route add -net $new_network_number $new_subnet_arg $metric_arg \
@@ -126,7 +126,7 @@
 -		( [ $relmajor -eq 2 ] && [ $relminor -eq 0 ] ); then
 -      route add -net $new_network_number
 +    # Add a network route to the computed network address.
-+    if [ $IF_METRIC -gt 0 ]; then
++    if [ x$IF_METRIC != x ] && [ x$IF_METRIC != x0 ]; then
 +      route del -net $new_network_number $new_subnet_arg \
 +        dev $interface
 +      route add -net $new_network_number $new_subnet_arg $metric_arg \

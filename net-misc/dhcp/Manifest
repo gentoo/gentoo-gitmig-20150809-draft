@@ -18,10 +18,10 @@ AUX dhcp-3.0.3-dhclient-hostname.patch 437 RMD160 5a1bd6bec0edf591eab4557f2e0f23
 MD5 79cefb676f3abc197b30c120c09e46b0 files/dhcp-3.0.3-dhclient-hostname.patch 437
 RMD160 5a1bd6bec0edf591eab4557f2e0f23539c673548 files/dhcp-3.0.3-dhclient-hostname.patch 437
 SHA256 bdb152ff929f561a93983d647efd027a0193d2a12678076b3203d73bff966383 files/dhcp-3.0.3-dhclient-hostname.patch 437
-AUX dhcp-3.0.3-dhclient-metric.patch 7220 RMD160 612ac4298159e8d612a5b4dfa2354d2d58c566e8 SHA1 4af3f6c836049c13e7e4de3c427ada522f3eafb1 SHA256 c73b88454fab56f88377da0e35615061b3ca8210f53c4a239eecba6af768f380 size 7220
-MD5 518e90d168cf4a34f68f9fccfcb53268 files/dhcp-3.0.3-dhclient-metric.patch 7220
-RMD160 612ac4298159e8d612a5b4dfa2354d2d58c566e8 files/dhcp-3.0.3-dhclient-metric.patch 7220
-SHA256 c73b88454fab56f88377da0e35615061b3ca8210f53c4a239eecba6af768f380 files/dhcp-3.0.3-dhclient-metric.patch 7220
+AUX dhcp-3.0.3-dhclient-metric.patch 7270 RMD160 04187868f66e03a62dafd31b4cdcdd2029283ce5 SHA1 1d726d1526ae97adbdf1b259bb55e05145060375 SHA256 7e5ace014ed55d7d4e90a6cdac7dec4842ea9d178bb19bf6cdccf295eba9da7d size 7270
+MD5 f63ddf696f98bd5e300aae865cdbfdb9 files/dhcp-3.0.3-dhclient-metric.patch 7270
+RMD160 04187868f66e03a62dafd31b4cdcdd2029283ce5 files/dhcp-3.0.3-dhclient-metric.patch 7270
+SHA256 7e5ace014ed55d7d4e90a6cdac7dec4842ea9d178bb19bf6cdccf295eba9da7d files/dhcp-3.0.3-dhclient-metric.patch 7270
 AUX dhcp-3.0.3-dhclient-mtu.patch 6413 RMD160 2517c7fe58d7dca95bdbdc80e96b6260cc205e56 SHA1 da342800bafee86726570aa0a5e4e3c8bd5f1371 SHA256 0a4bff3c4c44252125f66a3a4423f677465592b84a8f7f500bad9ba4e3b5cb06 size 6413
 MD5 3bcd2752845eff3da0231a6eccee762a files/dhcp-3.0.3-dhclient-mtu.patch 6413
 RMD160 2517c7fe58d7dca95bdbdc80e96b6260cc205e56 files/dhcp-3.0.3-dhclient-mtu.patch 6413
