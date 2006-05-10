@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5325 2006/05/10 18:55:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5326 2006/05/10 20:34:07 halcy0n Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -486,12 +486,6 @@ dev-python/PyQt4
 # unstable betas
 >=net-nntp/pan-0.92
 
-# Mark Loeser <halcy0n@gentoo.org> (08 Apr 2006)
-# No upstream release in several years, broken upstream URLs, and
-# does not compile with gcc-3.4 (bug #127131).  It will be removed
-# in 30 days
-dev-libs/korelib
-
 # Tim Yamin <plasmaroo@gentoo.org> (08 Apr 2006)
 # Upstream seems dead and needs GCC 4.1 reworking; bug #125192.
 # You should consider ng-spice-rework as a replacement to this
@@ -535,19 +529,10 @@ x11-misc/paralogger
 # masked pending unresolved security issues #122845
 games-rpg/daimonin-client
 
-# Mark Loeser <halcy0n@gentoo.org> (2 Apr 2006)
-# Upstream has been dead for years and is unmaintained.  Also requires some
-# reworking to compile with gcc-4; bug #122022.  It will be removed in 4 weeks
-app-misc/colortail
-
 # Donnie Berkholz <spyderous@gentoo.org> (31 Mar 2006)
 # Development release
 =media-libs/mesa-6.5*
 =x11-apps/mesa-progs-6.5*
-
-# Mark Loeser <halcy0n@gentoo.org> (30 Mar 2006)
-# Has not had a release in almost 3 years, and is unmaintained; see bug #126597
-net-misc/trickle
 
 # Luca Barbato <lu_zero@gentoo.org> (29 Mar 2006)
 #pending some tests
