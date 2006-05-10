@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/pop2imap
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop2imap/ChangeLog,v 1.1 2005/04/03 19:10:11 ferdy Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop2imap/ChangeLog,v 1.2 2006/05/10 20:50:09 ferdy Exp $
+
+  10 May 2006; Fernando J. Pereda <ferdy@gentoo.org> pop2imap-1.12.ebuild:
+  Don't install GPL and INSTALL.
 
 *pop2imap-1.12 (03 Apr 2005)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop2imap/pop2imap-1.12.ebuild,v 1.1 2005/04/03 19:10:11 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop2imap/pop2imap-1.12.ebuild,v 1.2 2006/05/10 20:50:09 ferdy Exp $
 
 DESCRIPTION="Synchronize mailboxes between a pop and an imap servers"
 HOMEPAGE="http://www.linux-france.org/prj/pop2imap/"
@@ -16,5 +16,5 @@ DEPEND="dev-perl/Mail-POP3Client
 
 src_install(){
 	dobin pop2imap
-	dodoc ChangeLog GPL INSTALL README VERSION
+	dodoc ChangeLog README VERSION
 }
