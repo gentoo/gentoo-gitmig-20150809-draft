@@ -10,3 +10,4 @@ slotmove =media-libs/libdc1394-2* 0 2
 move dev-embedded/sdcc-cvs dev-embedded/sdcc-svn
 move app-emulation/vmware-linux-tools app-emulation/vmware-workstation-tools
 move dev-lisp/mit-scheme dev-scheme/mit-scheme
+move dev-lisp/mzscheme dev-scheme/mzscheme
