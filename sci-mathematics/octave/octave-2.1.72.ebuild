@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.72.ebuild,v 1.4 2006/04/24 23:22:32 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.72.ebuild,v 1.5 2006/05/11 08:04:49 robbat2 Exp $
 
 inherit flag-o-matic fortran
 
@@ -48,7 +48,7 @@ src_compile() {
 	# Only add -lz to LDFLAGS if we have zlib in USE !
 	# BUG #52604
 	# Danny van Dyk 2004/08/26
-	use zlib && LDFLAGS="${LDFLAGS} -lz"
+	use zlib && append-ldflags -lz
 
 	# MPI requires the use of gcc/g++ wrappers
 	# mpicc/mpic++
@@ -66,12 +66,13 @@ src_compile() {
 	fi
 
 
+	LDFLAGS="${LDFLAGS}" \
+	CC="${CC}" CXX="${CXX}" \
 	econf \
 		$(use_with hdf5) \
 		$(use_enable readline) \
 		${myconf} \
-		LDFLAGS="${LDFLAGS}" \
-		CC="${CC}" CXX="${CXX}" || die "econf failed"
+		|| die "econf failed"
 
 	emake || die "emake failed"
 }
