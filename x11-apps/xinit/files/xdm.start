@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.start,v 1.4 2006/04/21 23:40:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.start,v 1.5 2006/05/11 23:58:42 spyderous Exp $
 
 # This is here to serve as a note to myself, and future developers.
 #
@@ -47,7 +47,7 @@ depend() {
 	before alsasound net.lo
 
 	# Start before X
-	use acpid xfs
+	use acpid hald xfs
 }
 
 setup_dm() {
