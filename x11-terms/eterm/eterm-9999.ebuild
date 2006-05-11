@@ -1,9 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.5 2006/02/04 00:36:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.6 2006/05/11 03:21:14 vapier Exp $
 
+#ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
+ECVS_SERVER="anoncvs.enlightenment.org:/var/cvs/e"
 ECVS_MODULE="eterm/Eterm"
-ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 inherit eutils cvs
 
 MY_P=Eterm-${PV}
