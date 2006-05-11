@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.1.ebuild,v 1.3 2006/04/11 06:07:07 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.1.ebuild,v 1.4 2006/05/11 09:59:33 robbat2 Exp $
 
 inherit flag-o-matic eutils toolchain-funcs autotools
 
@@ -30,14 +30,17 @@ src_unpack() {
 	cd "${WORKDIR}"
 	mv ${P} ${P}-single
 	cp -pPR ${P}-single ${P}-double
+	cp -pPR ${P}-single ${P}-longdouble
 }
 
 src_compile() {
 	# filter -Os according to docs
 	replace-flags -Os -O2
 
+	local myconfcommon="--enable-shared --enable-threads"
 	local myconfsingle=""
 	local myconfdouble=""
+	local myconflongdouble=""
 
 	if use sse2; then
 		myconfsingle="$myconfsingle --enable-sse"
@@ -45,13 +48,15 @@ src_compile() {
 	elif use sse; then
 		myconfsingle="$myconfsingle --enable-sse"
 	fi
+	# altivec only helps floats, not doubles
+	if use altivec; then
+		myconfsingle="$myconfsingle --enable-altivec"
+	fi
 
 	cd "${S}-single"
 	econf \
-		--enable-shared \
-		--enable-threads \
+		${myconfcommon} \
 		--enable-float \
-		$(use_enable altivec) \
 		${myconfsingle} || \
 			die "./configure in single failed"
 	emake || die
@@ -59,21 +64,31 @@ src_compile() {
 	#the only difference here is no --enable-float
 	cd "${S}-double"
 	econf \
-		--enable-shared \
-		--enable-threads \
-		$(use_enable altivec) \
+		${myconfcommon} \
 		${myconfdouble} || \
 		die "./configure in double failed"
+	emake || die
+	
+	#the only difference here is --enable-long-double
+	cd "${S}-longdouble"
+	econf \
+		${myconfcommon} \
+		--enable-long-double \
+		${myconflongdouble} || \
+		die "./configure in long double failed"
 	emake || die
 }
 
 src_install () {
-	#both builds are installed in the same place
+	#all builds are installed in the same place
 	#libs have distinuguished names; include files, docs etc. identical.
 	cd "${S}-single"
 	make DESTDIR=${D} install || die
 
 	cd "${S}-double"
+	make DESTDIR=${D} install || die
+
+	cd "${S}-longdouble"
 	make DESTDIR=${D} install || die
 
 	# Install documentation.
