@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.8 2005/12/31 14:11:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.9 2006/05/11 17:01:36 xmerlin Exp $
 
 inherit eutils flag-o-matic pam
 
@@ -64,6 +64,7 @@ src_unpack() {
 
 src_compile() {
 	filter-flags -fno-exceptions
+	use ppc && append-flags -fsigned-char
 
 	local myconf
 	use nologin && myconf="${myconf} --disable-login"

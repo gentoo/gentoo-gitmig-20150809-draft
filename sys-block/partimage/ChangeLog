@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/partimage
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.20 2005/12/31 14:11:38 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.21 2006/05/11 17:01:36 xmerlin Exp $
+
+  11 May 2006; Christian Zoffoli <xmerlin@gentoo.org>
+  partimage-0.6.4-r3.ebuild, partimage-0.6.4-r4.ebuild:
+  Fixed a ppc bug in crc creation/check. Thanks to Brent Baude
+  <ranger@gentoo.org>
 
   31 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   partimage-0.6.4-r3.ebuild, partimage-0.6.4-r4.ebuild:
