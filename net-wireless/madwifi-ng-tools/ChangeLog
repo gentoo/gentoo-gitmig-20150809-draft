@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/madwifi-ng-tools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/ChangeLog,v 1.4 2006/04/30 09:36:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/ChangeLog,v 1.5 2006/05/11 20:44:11 brix Exp $
+
+  11 May 2006; Henrik Brix Andersen <brix@gentoo.org>
+  madwifi-ng-tools-0.1531.20060427.ebuild:
+  Stable on x86. Fixes bug #132787.
 
   30 Apr 2006; Simon Stelling <blubb@gentoo.org>
   madwifi-ng-tools-0.1443.20060207.ebuild:
