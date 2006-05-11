@@ -1,0 +1,162 @@
+diff -ru --exclude=CVS softdevice-0.2.3a/configure softdevice-0.2.3.20060511/configure
+--- softdevice-0.2.3a/configure	2006-05-01 08:15:18.000000000 +0200
++++ softdevice-0.2.3.20060511/configure	2006-05-07 22:52:23.000000000 +0200
+@@ -97,6 +97,7 @@
+ dfb_sourcelocation="yes"
+ dfb_dscaps_double="yes"
+ dfb_dief_repeat="yes"
++dfb_blit_interlaced="yes"
+ 
+ cat > ${TMPC} << EOF
+ #include <directfb.h>
+@@ -148,6 +149,17 @@
+ EOF
+ $cc $CFLAGS $dfb_opts -o $TMPE $TMPC > /dev/null 2>&1 || dfb_dief_repeat="no"
+ 
++cat > ${TMPC} << EOF
++#include <stdio.h>
++#include <dfb++.h>
++#include <directfb.h>
++int main(void) {
++    DFBSurfaceBlittingFlags   flags = DSBLIT_INTERLACED;
++  return 0;
++}
++EOF
++$cc $CFLAGS $dfb_opts -o $TMPE $TMPC > /dev/null 2>&1 || dfb_blit_interlaced="no"
++
+   fi
+ fi
+ # end of DirectFB specific tests
+@@ -304,6 +316,12 @@
+   else
+     echo "#define HAVE_DIEF_REPEAT                0" >> $TMPH
+   fi
++
++  if test "${dfb_blit_interlaced}" = "yes" ; then
++    echo "#define HAVE_DSBLIT_INTERLACED          1" >> $TMPH
++  else
++    echo "#define HAVE_DSBLIT_INTERLACED          0" >> $TMPH
++  fi
+ fi
+ 
+ ###############################################################################
+diff -ru --exclude=CVS softdevice-0.2.3a/setup-softdevice.h softdevice-0.2.3.20060511/setup-softdevice.h
+--- softdevice-0.2.3a/setup-softdevice.h	2006-04-29 08:25:58.000000000 +0200
++++ softdevice-0.2.3.20060511/setup-softdevice.h	2006-05-04 23:40:12.000000000 +0200
+@@ -114,7 +114,7 @@
+     char          *getPPValue(void);
+     void          CropModeNext(void);
+ 
+-    virtual bool  CatchRemoteKey(const char *remoteName, uint64_t key);
++    virtual bool  CatchRemoteKey(const char *remoteName, uint64 key);
+ 
+     int   xvAspect;
+     int   xvMaxArea;
+diff -ru --exclude=CVS softdevice-0.2.3a/video-dfb.c softdevice-0.2.3.20060511/video-dfb.c
+--- softdevice-0.2.3a/video-dfb.c	2006-05-01 08:15:19.000000000 +0200
++++ softdevice-0.2.3.20060511/video-dfb.c	2006-05-07 22:52:23.000000000 +0200
+@@ -19,6 +19,7 @@
+ # include "config.h"
+ #else
+ # define HAVE_SetSourceLocation 0
++# define HAVE_DSBLIT_INTERLACED 0
+ # if (DIRECTFB_MAJOR_VERSION == 0) && (DIRECTFB_MINOR_VERSION == 9) && (DIRECTFB_MICRO_VERSION < 23)
+ #   define HAVE_GraphicsDeviceDescription 0
+ #   define HAVE_DIEF_REPEAT               0
+@@ -165,6 +166,9 @@
+   if (caps.blitting_flags & DSBLIT_DST_PREMULTIPLY ) fprintf(stderr,"DstPremultiply ");
+   if (caps.blitting_flags & DSBLIT_DEMULTIPLY ) fprintf(stderr,"Demultiply ");
+   if (caps.blitting_flags & DSBLIT_DEINTERLACE ) fprintf(stderr,"Deinterlace ");
++#if HAVE_DSBLIT_INTERLACED
++  if (caps.blitting_flags & DSBLIT_INTERLACED ) fprintf(stderr,"Interlaced ");
++#endif
+   fprintf(stderr,"\n");
+ }
+ 
+@@ -889,6 +893,12 @@
+             videoSurface->Clear(COLORKEY,0); //clear and
+             videoSurface->Release();
+           }
++#if HAVE_DSBLIT_INTERLACED
++	  if (setupStore->useMGAtv)
++	  {
++	    vidDsc.caps = DFB_ADD_SURFACE_CAPS(vidDsc.caps, DSCAPS_INTERLACED);
++	  }
++#endif	  
+ 
+           videoSurface=dfb->CreateSurface(vidDsc);
+           /* --------------------------------------------------------------------
+@@ -1205,8 +1215,21 @@
+         clearBackground--;
+       }
+ 
++#if HAVE_DSBLIT_INTERLACED
++      if (setupStore->useMGAtv)
++      {
++        scrSurface->SetBlittingFlags(DSBLIT_INTERLACED);
++        scrSurface->StretchBlit(videoSurface, &src, &dst);
++      }
++      else
++      {
++        scrSurface->SetBlittingFlags(DSBLIT_NOFX);
++        scrSurface->StretchBlit(videoSurface, &src, &dst);
++      }
++#else
+       scrSurface->SetBlittingFlags(DSBLIT_NOFX);
+       scrSurface->StretchBlit(videoSurface, &src, &dst);
++#endif      
+       if (OSDpresent)
+       {
+         osdsrc.x = osdsrc.y = 0;
+@@ -1306,14 +1329,23 @@
+ #endif
+     } else if (pixelformat == DSPF_YUY2) {
+ 
+-      yv12_to_yuy2(Py + Ystride  * cutTop * 2 + cutLeft * 2,
+-      //yv12_to_yuy2_il_c(Py + Ystride  * cutTop * 2 + cutLeft * 2,
+-                   Pu + UVstride * cutTop + cutLeft,
+-                   Pv + UVstride * cutTop + cutLeft,
+-                   dst + pitch * cutTop * 2 + cutLeft * 4,
+-                   Width - 2 * (cutLeft + cutRight),
+-                   Height - 2 * (cutTop + cutBottom),
+-                   Ystride, UVstride, pitch);
++      if (interlaceMode) {
++        yv12_to_yuy2_il_c(Py + Ystride  * cutTop * 2 + cutLeft * 2,
++                          Pu + UVstride * cutTop + cutLeft,
++                          Pv + UVstride * cutTop + cutLeft,
++                          dst + pitch * cutTop * 2 + cutLeft * 4,
++                          Width - 2 * (cutLeft + cutRight),
++                          Height - 2 * (cutTop + cutBottom),
++                          Ystride, UVstride, pitch);
++      } else {
++        yv12_to_yuy2(Py + Ystride  * cutTop * 2 + cutLeft * 2,
++                     Pu + UVstride * cutTop + cutLeft,
++                     Pv + UVstride * cutTop + cutLeft,
++                     dst + pitch * cutTop * 2 + cutLeft * 4,
++                     Width - 2 * (cutLeft + cutRight),
++                     Height - 2 * (cutTop + cutBottom),
++                     Ystride, UVstride, pitch);
++      }
+      }
+ 
+     videoSurface->Unlock();
+@@ -1345,8 +1377,19 @@
+ 
+       osdMutex.Unlock();
+ 
++#if HAVE_DSBLIT_INTERLACED
++      if (setupStore->useMGAtv)
++      {
++        scrSurface->SetBlittingFlags(DSBLIT_INTERLACED);
++        scrSurface->StretchBlit(videoSurface, &src, &dst);
++      } else {
++        scrSurface->SetBlittingFlags(DSBLIT_NOFX);
++        scrSurface->StretchBlit(videoSurface, &src, &dst);
++      }
++#else
+       scrSurface->SetBlittingFlags(DSBLIT_NOFX);
+       scrSurface->StretchBlit(videoSurface, &src, &dst);
++#endif      
+ 
+       if (OSDpresent)
+       {
