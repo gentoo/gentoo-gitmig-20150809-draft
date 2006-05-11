@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.88 2006/04/29 05:55:34 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.89 2006/05/11 15:58:19 mkennedy Exp $
+
+  11 May 2006; Matthew Kennedy <mkennedy@gentoo.org> sbcl-0.9.12.ebuild:
+  Strip --as-needed from LDFLAGS; Resolves Bug #132992.
 
   29 Apr 2006; Matthew Kennedy <mkennedy@gentoo.org> sbcl-0.9.12.ebuild:
   Correct incomplete texinfo documentation installation.

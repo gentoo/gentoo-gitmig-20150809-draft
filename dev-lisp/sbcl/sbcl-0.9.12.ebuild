@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.12.ebuild,v 1.2 2006/04/29 05:55:34 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.12.ebuild,v 1.3 2006/05/11 15:58:19 mkennedy Exp $
 
-inherit common-lisp-common-2 eutils
+inherit common-lisp-common-2 eutils flag-o-matic
 
 BV_X86=0.9.8
 BV_PPC=0.8.15
@@ -127,6 +127,8 @@ EOF
 
 src_compile() {
 	local bindir="${WORKDIR}/sbcl-binary"
+
+	filter-ldflags -Wl,--as-needed --as-needed # see Bug #132992
 
 	LANG=C PATH=${bindir}/src/runtime:${PATH} SBCL_HOME=${bindir}/output GNUMAKE=make \
 		./make.sh 'sbcl
