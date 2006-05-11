@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qingy-themes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qingy-themes/ChangeLog,v 1.2 2005/08/24 11:28:33 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qingy-themes/ChangeLog,v 1.3 2006/05/11 06:40:57 s4t4n Exp $
+
+  11 May 2006; Michele Noberasco <s4t4n@gentoo.org> qingy-themes-20050816.ebuild:
+  Added ~amd64 keyword. Fixes bug #130177.
 
   24 Aug 2005; Michele Noberasco <s4t4n@gentoo.org> qingy-themes-20050816.ebuild:
   Change chown line to root:0 instead of root:root, closing #103563.
