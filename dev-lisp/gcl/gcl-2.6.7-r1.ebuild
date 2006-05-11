@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r1.ebuild,v 1.2 2006/04/08 23:37:58 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r1.ebuild,v 1.3 2006/05/11 06:18:52 mkennedy Exp $
 
 inherit elisp-common flag-o-matic autotools
 
@@ -33,6 +33,7 @@ src_unpack() {
 
 src_compile() {
 	eautoconf || die
+	epatch ${FILESDIR}/flex-configure-LANG.patch # see Bug #122583
 
 	export SANDBOX_ON=0
 	local myconfig=""
