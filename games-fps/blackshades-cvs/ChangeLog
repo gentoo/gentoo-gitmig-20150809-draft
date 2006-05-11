@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/blackshades-cvs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/ChangeLog,v 1.10 2006/02/12 22:25:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/ChangeLog,v 1.11 2006/05/11 15:27:53 wolf31o2 Exp $
+
+*blackshades-cvs-20031110-r1 (11 May 2006)
+
+  11 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/blackshades-cvs-freealut.patch,
+  +blackshades-cvs-20031110-r1.ebuild:
+  Added patch to make blackshades-cvs work with the latest openal versions and
+  closing bug #132815.
 
   12 Feb 2006; <Tupone@gentoo.org> blackshades-cvs-20031110.ebuild:
   modular X dependency fix
