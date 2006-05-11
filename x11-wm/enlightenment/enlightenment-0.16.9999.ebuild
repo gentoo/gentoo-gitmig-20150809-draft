@@ -1,8 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.19 2006/04/12 02:08:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.20 2006/05/11 03:19:38 vapier Exp $
 
-ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
+#ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
+ECVS_SERVER="anoncvs.enlightenment.org:/var/cvs/e"
 ECVS_MODULE="e16/e"
 inherit cvs
 
