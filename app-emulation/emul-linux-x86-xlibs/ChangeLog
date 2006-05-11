@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.41 2006/04/16 20:31:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.42 2006/05/11 12:55:06 flameeyes Exp $
+
+  11 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  emul-linux-x86-xlibs-7.0-r1.ebuild:
+  Add parenthesis on SRC_URI conditionals. Fix bug #133009 thanks to Jakub Moc.
 
   16 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
   emul-linux-x86-xlibs-7.0-r1.ebuild:
