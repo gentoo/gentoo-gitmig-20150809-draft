@@ -1,9 +1,6 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.15 2006/05/11 21:05:12 mrness Exp $
-
-  11 May 2006; Alin Nastac <mrness@gentoo.org> gammu-1.05.00.ebuild:
-  Fix bluetooth dependencies (#133014).
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.16 2006/05/11 21:10:15 mrness Exp $
 
 *gammu-1.05.00 (06 Apr 2006)
 
