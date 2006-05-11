@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-spell-en
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-en/ChangeLog,v 1.7 2006/04/07 21:52:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-en/ChangeLog,v 1.8 2006/05/11 12:58:15 fmccor Exp $
+
+  11 May 2006; Ferris McCormick <fmccor@gentoo.org>
+  vim-spell-en-20060123.ebuild:
+  Add ~sparc keyword.  Works as expected.
 
   07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
   Remove ciaranm from metadata.xml.
