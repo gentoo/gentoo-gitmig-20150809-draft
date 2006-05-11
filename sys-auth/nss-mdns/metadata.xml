@@ -9,5 +9,8 @@
 	<longdescription lang="en">
 		Name service switch module for multicast dns.
 	</longdescription>
+	<longdescription lang="ja">
+		マルチキャスト DNS 向けネーム・サービス・スイッチのモジュールです。
+	</longdescription>
 </pkgmetadata>
 
