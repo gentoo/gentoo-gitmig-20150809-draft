@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/gnonlin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/ChangeLog,v 1.4 2006/04/27 23:05:57 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/ChangeLog,v 1.5 2006/05/11 14:26:57 zaheerm Exp $
+
+*gnonlin-0.10.4 (11 May 2006)
+
+  11 May 2006; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  -gnonlin-0.10.3.ebuild, +gnonlin-0.10.4.ebuild:
+  version bump
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
