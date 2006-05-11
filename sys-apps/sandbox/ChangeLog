@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.62 2006/05/10 07:00:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.63 2006/05/11 03:29:52 tsunam Exp $
+
+  11 May 2006; Joshua Jackson <tsunam@gentoo.org> sandbox-1.2.17.ebuild:
+  stable x86; bug #132025
 
   10 May 2006; Martin Schlemmer <azarah@gentoo.org> sandbox-1.2.18.ebuild:
   Mask 1.2.18 for now, as it have a double-free issue.
