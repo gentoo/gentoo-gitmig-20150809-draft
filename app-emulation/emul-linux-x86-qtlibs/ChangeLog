@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.17 2006/03/17 16:07:33 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.18 2006/05/11 12:56:12 flameeyes Exp $
+
+  11 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  emul-linux-x86-qtlibs-3.4.4.ebuild:
+  Add parenthesis on SRC_URI conditionals. Fix bug #133010 thanks to Jakub Moc.
 
 *emul-linux-x86-qtlibs-3.4.4 (17 Mar 2006)
 
