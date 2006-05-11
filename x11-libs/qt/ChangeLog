@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.308 2006/05/05 23:17:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.309 2006/05/11 09:46:11 corsair Exp $
+
+  11 May 2006; Markus Rothe <corsair@gentoo.org> qt-3.3.6-r1.ebuild:
+  Stable on ppc64; bug #132887
 
   05 May 2006; Diego Pettenò <flameeyes@gentoo.org> qt-3.3.6-r1.ebuild:
   Make use the proper gcc/g++ executables so that it can be crosscompiled with
