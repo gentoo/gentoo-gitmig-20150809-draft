@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_smb
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/ChangeLog,v 1.2 2006/04/27 11:33:46 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/ChangeLog,v 1.3 2006/05/11 04:57:37 chriswhite Exp $
+
+  11 May 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Japanese metadata.xml translation for bug #132734.
 
 *pam_smb-2.0.0_rc6-r1 (27 Apr 2006)
 *pam_smb-2.0.0_rc5-r1 (27 Apr 2006)

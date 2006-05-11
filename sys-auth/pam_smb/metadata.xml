@@ -9,4 +9,7 @@
 <longdescription>
 The PAM SMB module, which allows authentication against a SMB (such as the Win_x families) server.
 </longdescription>
+<longdescription lang="ja">
+	PAM の SMB モジュールは SMB サーバ( Win_x ファミリの類)の認証を許します。
+</longdescription>
 </pkgmetadata>
