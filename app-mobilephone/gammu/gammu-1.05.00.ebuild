@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.05.00.ebuild,v 1.1 2006/04/06 11:19:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.05.00.ebuild,v 1.2 2006/05/11 21:05:12 mrness Exp $
 
 inherit eutils
 
@@ -15,7 +15,13 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 
-RDEPEND="bluetooth? ( net-wireless/bluez-libs )
+RDEPEND="bluetooth? (
+			net-wireless/bluez-libs
+			|| (
+				dev-python/pybluez
+				net-wireless/gnome-bluetooth
+			)
+		)
 	mysql? ( dev-db/mysql )"
 DEPEND="${RDEPEND}
 	irda? ( virtual/os-headers )"
