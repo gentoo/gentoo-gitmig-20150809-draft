@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.54 2006/04/17 21:47:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.55 2006/05/11 20:50:19 wolf31o2 Exp $
+
+  11 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  openal-20050504-r1.ebuild, openal-20050504-r2.ebuild:
+  Added blocker on freealut to 20050504 versions of openal since they include
+  an internal alut.
 
 *openal-0.0.8 (17 Apr 2006)
 

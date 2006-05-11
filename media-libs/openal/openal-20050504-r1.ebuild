@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20050504-r1.ebuild,v 1.7 2006/02/26 14:26:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20050504-r1.ebuild,v 1.8 2006/05/11 20:50:19 wolf31o2 Exp $
 
 inherit eutils gnuconfig
 
@@ -18,7 +18,8 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0.2 )
 	esd? ( media-sound/esound )
 	sdl? ( media-libs/libsdl )
 	vorbis? ( media-libs/libvorbis )
-	mpeg? ( media-libs/smpeg )"
+	mpeg? ( media-libs/smpeg )
+	!media-libs/freealut"
 
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
