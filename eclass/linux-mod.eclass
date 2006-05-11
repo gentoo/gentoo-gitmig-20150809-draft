@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.63 2006/04/02 19:14:10 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.64 2006/05/11 08:23:43 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -484,6 +484,8 @@ linux-mod_src_compile() {
 	local modulename libdir srcdir objdir i n myARCH="${ARCH}" myABI="${ABI}"
 	ARCH="$(tc-arch-kernel)"
 	ABI="${KERNEL_ABI}"
+	CC_HOSTCC=$(tc-getBUILD_CC)
+	CC_CC=$(tc-getCC)
 
 	BUILD_TARGETS=${BUILD_TARGETS:-clean module}
 	strip_modulenames;
@@ -508,7 +510,8 @@ linux-mod_src_compile() {
 				die "Unable to run econf ${ECONF_PARAMS}"
 			fi
 
-			emake ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS} \
+			emake HOSTCC=${CC_HOSTCC} CC=${CC_CC}\
+				  ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS} \
 				|| die "Unable to make \
 				   ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS}."
 			touch ${srcdir}/.built
