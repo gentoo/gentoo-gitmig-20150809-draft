@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/wammu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.8 2006/04/06 12:32:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.9 2006/05/11 21:14:51 mrness Exp $
+
+  11 May 2006; Alin Nastac <mrness@gentoo.org> wammu-0.13.ebuild:
+  Fix bluetooth dependencies (#133014).
 
 *wammu-0.13 (06 Apr 2006)
 
