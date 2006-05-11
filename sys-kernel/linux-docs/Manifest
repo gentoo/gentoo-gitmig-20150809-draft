@@ -1,0 +1,6 @@
+MD5 bfef851291d767b92b6f0695572dffc0 ChangeLog 524
+MD5 9846e3cd64adb4374ac39cbb80fa2a5f files/digest-linux-docs-2.4.32 67
+MD5 7c1bb4e8bf5a821f43d924cefa7db8b5 files/digest-linux-docs-2.6.16 67
+MD5 5d3bf95dcb8301e3b8261b0abe98a46c linux-docs-2.4.32.ebuild 1108
+MD5 19812903fcc596121c94d162ea617d02 linux-docs-2.6.16.ebuild 1178
+MD5 93f5bba7043e57c7092196362f2b494f metadata.xml 255
