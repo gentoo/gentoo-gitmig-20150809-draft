@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-0.2.2.ebuild,v 1.3 2005/11/15 22:00:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-0.2.2.ebuild,v 1.4 2006/05/11 15:16:44 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -16,7 +16,13 @@ IUSE="mp3 ogg opengl"
 DEPEND=">=media-libs/libsdl-1.2.8
 	>=media-libs/sdl-net-1.2.5
 	opengl? ( virtual/opengl )
-	>=media-libs/openal-20040817
+	|| (
+		(
+			|| (
+				~media-libs/openal-0.0.8
+				~media-libs/openal-20051024 )
+			media-libs/freealut )
+		~media-libs/openal-20050504 )
 	ogg? ( >=media-libs/libvorbis-1.1.0 media-libs/libogg )
 	mp3? ( >=media-libs/libmad-0.15 )"
 
