@@ -1,6 +1,13 @@
 # ChangeLog for games-rpg/eternal-lands
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.15 2006/04/28 02:59:31 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.16 2006/05/11 22:00:58 wolf31o2 Exp $
+
+*eternal-lands-1.2.0_p1-r2 (11 May 2006)
+
+  11 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +eternal-lands-1.2.0_p1-r2.ebuild:
+  Added a new revision to work with the split openal/freealut. Closing bug
+  #110709.
 
   28 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
   Fixing SHA256 digest, pass five
