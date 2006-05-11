@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.24 2006/05/09 03:05:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r2.ebuild,v 1.25 2006/05/11 04:50:19 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -27,7 +27,7 @@ GLIBC_MANPAGE_VERSION="none"
 GLIBC_INFOPAGE_VERSION="none"
 
 # Gentoo patchset
-PATCH_VER="1.12"
+PATCH_VER="1.13"
 
 # Fedora addons (like c_stubs) ... sniped from RHEL's glibc-2.4-4.src.rpm
 # http://download.fedora.redhat.com/pub/fedora/linux/core/
@@ -42,7 +42,7 @@ PPC_CPU_ADDON_TARBALL="glibc-powerpc-cpu-addon-v${PPC_CPU_ADDON_VER}.tgz"
 PPC_CPU_ADDON_URI="http://penguinppc.org/dev/glibc/${PPC_CPU_ADDON_TARBALL}"
 
 # LinuxThreads addon
-LT_VER="20060501"
+LT_VER="20060508"
 LT_TARBALL="glibc-linuxthreads-${LT_VER}.tar.bz2"
 LT_URI="ftp://sources.redhat.com/pub/glibc/snapshots/${LT_TARBALL}"
 
