@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.2-r1.ebuild,v 1.1 2006/05/10 13:27:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.2-r1.ebuild,v 1.2 2006/05/11 12:08:23 flameeyes Exp $
+
+inherit libtool
 
 DESCRIPTION="GnuPG Made Easy is a library for making GnuPG easier to use"
 HOMEPAGE="http://www.gnupg.org/(en)/related_software/gpgme/index.html"
@@ -17,6 +19,13 @@ DEPEND=">=dev-libs/libgpg-error-0.5
 
 RDEPEND="${DEPEND}
 	dev-libs/libgcrypt"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	elibtoolize
+}
 
 src_compile() {
 	if use selinux; then
