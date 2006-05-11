@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.51.6-r1.ebuild,v 1.1 2005/09/01 13:25:41 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.51.6-r1.ebuild,v 1.2 2006/05/11 15:30:12 xmerlin Exp $
 
 inherit python toolchain-funcs eutils flag-o-matic
 
@@ -63,5 +63,5 @@ src_install () {
 	# not parallel safe
 	emake -j1 prefix="${D}/usr" PYTHONVERS="python${PYVER}" RPM_OPT_FLAGS="ERROR" install || die "make install failed"
 	dodoc CHANGES COPYING peanuts.py popcorn.py tutorial.sgml
-	dosym libnewt.so.${PV} /usr/$(get_libdir)/libnewt.so.0.50
+	dosym libnewt.so.${PV} /usr/$(get_libdir)/libnewt.so.0.51
 }

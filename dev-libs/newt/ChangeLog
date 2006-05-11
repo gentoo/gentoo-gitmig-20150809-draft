@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/newt
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.25 2005/09/01 13:25:41 xmerlin Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.26 2006/05/11 15:30:12 xmerlin Exp $
+
+  11 May 2006; Christian Zoffoli <xmerlin@gentoo.org> newt-0.51.6.ebuild,
+  newt-0.51.6-r1.ebuild:
+  Fixed link. Closed bug #133018.
 
 *newt-0.51.6-r1 (01 Sep 2005)
 

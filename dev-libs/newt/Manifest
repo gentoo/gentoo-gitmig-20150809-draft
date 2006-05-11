@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9dd901e4c2a68f204f1b2dce5cff066b newt-0.50.35-r3.ebuild 898
-MD5 85adf51bae0096b4d4b9f13c146a7d5c newt-0.50.35-r2.ebuild 859
-MD5 05a3d2b2cf5f4c237d48322136b3e7bf newt-0.50.35-r4.ebuild 1568
-MD5 515bbd7db3ac8a1b8c34e59162633064 ChangeLog 3393
-MD5 917caa8876e58604c0e0f84dcb598380 metadata.xml 296
-MD5 e382a623fb8c6687f948b2f607549e60 newt-0.51.6-r1.ebuild 1990
-MD5 7ac2532571f5dd5558f4b9489378513f newt-0.51.6.ebuild 1917
+MD5 0b00cb651723bb5f3412a3bd38822e9f ChangeLog 3527
 MD5 6d5a67f6fae3839c22aa176ffbd96790 files/digest-newt-0.50.35-r2 64
 MD5 6d5a67f6fae3839c22aa176ffbd96790 files/digest-newt-0.50.35-r3 64
 MD5 6d5a67f6fae3839c22aa176ffbd96790 files/digest-newt-0.50.35-r4 64
-MD5 27e2ae6e4d99b4a772f4520a89ce73f9 files/newt-0.51.4-fix-wstrlen-for-non-utf8-strings.patch 266
-MD5 9910bf0c9ea69bf046e7801c2c6958ea files/newt-gpm-fix.diff 177
 MD5 f6412dbeaf1b1f3d11fc8c0fc08c1ee2 files/digest-newt-0.51.6 63
-MD5 e2afea648371131edd033fcc81b4a1d0 files/newt-0.51.6-newttextbox-memoryleak.patch 391
 MD5 f6412dbeaf1b1f3d11fc8c0fc08c1ee2 files/digest-newt-0.51.6-r1 63
+MD5 27e2ae6e4d99b4a772f4520a89ce73f9 files/newt-0.51.4-fix-wstrlen-for-non-utf8-strings.patch 266
+MD5 e2afea648371131edd033fcc81b4a1d0 files/newt-0.51.6-newttextbox-memoryleak.patch 391
+MD5 9910bf0c9ea69bf046e7801c2c6958ea files/newt-gpm-fix.diff 177
+MD5 917caa8876e58604c0e0f84dcb598380 metadata.xml 296
+MD5 85adf51bae0096b4d4b9f13c146a7d5c newt-0.50.35-r2.ebuild 859
+MD5 9dd901e4c2a68f204f1b2dce5cff066b newt-0.50.35-r3.ebuild 898
+MD5 05a3d2b2cf5f4c237d48322136b3e7bf newt-0.50.35-r4.ebuild 1568
+MD5 c2ade65d119d04e30f6cd445aeecdc85 newt-0.51.6-r1.ebuild 1990
+MD5 118eea19024a681f0abddc13e5aae970 newt-0.51.6.ebuild 1919
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFDFwHSgMUyd/cdjWsRAgZSAJ41o8YCzFJsmkLVueE7s1EIunvaUQCdFziB
-YBlIVKSmXwpca7/C5LZ5kxQ=
-=ObFe
+iD8DBQFEY2fWgMUyd/cdjWsRAhwCAJ9+HEjRumAkgJc+N1hEXREMueI8CgCdEiwI
+zu99E0KPn0lkV+3oVW7k7N0=
+=7K9q
 -----END PGP SIGNATURE-----
