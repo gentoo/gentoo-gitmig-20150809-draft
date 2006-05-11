@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.0.ebuild,v 1.1 2006/04/15 00:13:01 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.0.ebuild,v 1.2 2006/05/11 11:27:26 genstef Exp $
 
 inherit eutils
 
@@ -14,8 +14,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc-macos ~amd64 ~ppc ~alpha"
 
-RDEPEND="png? media-libs/libpng
-	jpeg? media-libs/jpeg
+RDEPEND="png? ( media-libs/libpng )
+	jpeg? ( media-libs/jpeg )
 	truetype? ( virtual/xft
 		media-libs/fontconfig
 		media-libs/freetype )
