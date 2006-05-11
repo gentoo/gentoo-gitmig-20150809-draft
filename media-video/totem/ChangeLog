@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.108 2006/05/06 13:01:15 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.109 2006/05/11 23:40:17 allanonjl Exp $
+
+  11 May 2006; John N. Laliberte <allanonjl@gentoo.org>
+  +files/totem-1.4.0-as-needed.patch, totem-1.4.0.ebuild:
+  apply as-needed patch, fixes #128466
 
   06 May 2006; John N. Laliberte <allanonjl@gentoo.org> totem-1.4.0.ebuild:
   drop alpha,hppa,ia64, bug filed. prep for 2.14 unmask
