@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.30 2006/05/11 05:42:17 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.31 2006/05/11 23:13:43 tcort Exp $
+
+*quodlibet-0.20.1-r1 (11 May 2006)
+
+  11 May 2006; Thomas Cort <tcort@gentoo.org> +quodlibet-0.20.1-r1.ebuild:
+  Added gst-plugins-gconf to DEPEND wrt Bug #133043 (Thanks to Frittella
+  Laurento <mrfree@infinito.it>), removed the epatch lines which set the
+  default pipeline (gst-plugins-gconf does this automatically), wrote a better
+  DESCRIPTION, and changed pyvorbis depend to >=pyvorbis-1.4-r1 since the
+  double free issue with 1.4 is solved in 1.4-r1.
 
   05 May 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   quodlibet-0.19.1-r1.ebuild, quodlibet-0.20.1.ebuild, quodlibet-0.20.ebuild:
