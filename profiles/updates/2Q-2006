@@ -12,3 +12,4 @@ move app-emulation/vmware-linux-tools app-emulation/vmware-workstation-tools
 move dev-lisp/mit-scheme dev-scheme/mit-scheme
 move dev-lisp/mzscheme dev-scheme/mzscheme
 move dev-lisp/guile-pg dev-scheme/guile-pg
+move dev-lisp/kawa dev-scheme/kawa
