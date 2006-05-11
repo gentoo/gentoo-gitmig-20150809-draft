@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-plus
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-plus/ChangeLog,v 1.5 2005/09/05 05:57:17 ndimiduk Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-plus/ChangeLog,v 1.6 2006/05/11 21:29:01 mkennedy Exp $
+
+  11 May 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  files/digest-cl-plus-1.0, Manifest:
+  Digest fix.
 
   05 Sep 2005; Nick Dimiduk <ndimiduk@gentoo.org> cl-plus-1.0.ebuild:
   keyword ~ppc-macos

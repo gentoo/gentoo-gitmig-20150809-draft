@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-sdl
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/ChangeLog,v 1.10 2005/07/20 21:36:09 mkennedy Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/ChangeLog,v 1.11 2006/05/11 21:31:18 mkennedy Exp $
+
+  11 May 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  files/digest-cl-sdl-0.2.2-r2, Manifest:
+  Digest fix.
 
 *cl-sdl-0.2.2-r2 (20 Jul 2005)
 

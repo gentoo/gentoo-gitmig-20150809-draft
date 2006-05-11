@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-ptester
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ptester/ChangeLog,v 1.8 2005/05/24 18:48:34 mkennedy Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ptester/ChangeLog,v 1.9 2006/05/11 21:30:05 mkennedy Exp $
+
+  11 May 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  files/digest-cl-ptester-2.1.2, Manifest:
+  Digest fix.
 
   24 May 2005; <mkennedy@gentoo.org> cl-ptester-2.1.2.ebuild:
   Keywording ~sparc
