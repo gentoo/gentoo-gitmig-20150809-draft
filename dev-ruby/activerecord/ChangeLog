@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.29 2006/04/17 18:19:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.30 2006/05/11 13:07:55 fmccor Exp $
+
+  11 May 2006; Ferris McCormick <fmccor@gentoo.org>
+  activerecord-1.14.2.ebuild:
+  Stable on sparc (Bug #133003).
 
   17 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   activerecord-1.14.2.ebuild:
