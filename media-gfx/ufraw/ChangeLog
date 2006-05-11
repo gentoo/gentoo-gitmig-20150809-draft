@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/ufraw
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.4 2006/04/01 13:56:12 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.5 2006/05/11 13:40:35 nattfodd Exp $
+
+*ufraw-0.8 (11 May 2006)
+
+  11 May 2006; Alexandre Buisse <nattfodd@gentoo.org> +ufraw-0.8.ebuild:
+  Bump to 0.8 (bugfixes and a couple of new features, including the long
+  awaited zoom!). Requested in bug #132989.
 
 *ufraw-0.7 (01 Apr 2006)
 
