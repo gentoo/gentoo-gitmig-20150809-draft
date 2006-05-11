@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.44 2006/03/31 20:42:52 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.45 2006/05/11 11:03:09 dragonheart Exp $
+
+*mrtg-2.13.2-r1 (11 May 2006)
+
+  11 May 2006; Daniel Black <dragonheart@gentoo.org> files/mrtg.rc,
+  -mrtg-2.12.2.ebuild, -mrtg-2.13.2.ebuild, +mrtg-2.13.2-r1.ebuild:
+  removed old version. fixed LANG setting thanks to Angelo Letos patch from bug
 
   31 Mar 2006; Markus Ullmann <jokey@gentoo.org> mrtg-2.11.1.ebuild,
   mrtg-2.12.2.ebuild, mrtg-2.13.2.ebuild:
