@@ -1,13 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/files/cpufreqd-2.0.0-init.d,v 1.2 2006/02/14 13:34:50 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/files/cpufreqd-2.0.0-init.d,v 1.3 2006/05/11 20:48:39 brix Exp $
 
 CONFIGFILE=/etc/cpufreqd.conf
 
 depend() {
 	need localmount
-	use logger
+	use logger lm_sensors
 }
 
 checkconfig() {

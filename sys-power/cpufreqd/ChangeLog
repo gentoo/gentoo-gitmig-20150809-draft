@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.29 2006/05/08 23:04:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.30 2006/05/11 20:48:39 brix Exp $
+
+  11 May 2006; Henrik Brix Andersen <brix@gentoo.org>
+  files/cpufreqd-2.0.0-init.d:
+  Make init script start after lm_sensors, thanks to Andrea Ratto in bug #132599.
 
   08 May 2006; Jason Wever <weeve@gentoo.org> cpufreqd-2.0.0.ebuild:
   Added ~sparc keyword.
