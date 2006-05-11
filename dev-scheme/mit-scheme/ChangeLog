@@ -1,0 +1,27 @@
+# ChangeLog for dev-lisp/mit-scheme
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mit-scheme/ChangeLog,v 1.1 2006/05/11 21:47:25 mkennedy Exp $
+
+  11 May 2006; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +mit-scheme-7.7.1.ebuild:
+  Moved from dev-lisp/mit-scheme to dev-scheme/mit-scheme.
+
+  19 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> metadata.xml,
+  mit-scheme-7.7.1.ebuild:
+  Add patch from bug 123085 for modular X compliance. Thanks to UncleOwen
+  <anakin dot skyw at gmx dot de>.
+
+  21 Feb 2005; Simon Stelling <blubb@gentoo.org> mit-scheme-7.7.1.ebuild:
+  added ~amd64
+
+  15 Jan 2004; Hallgrimur H. Gunnarsson <hhg@gentoo.org>
+  mit-scheme-7.7.1.ebuild:
+  xfree libraries required -- added to dependencies
+
+*mit-scheme-7.7.1 (15 Jan 2004)
+
+  15 Jan 2004; Hallgrimur H. Gunnarsson <hhg@gentoo.org>
+  mit-scheme-7.7.1.ebuild:
+  new package -- contributed by Paulo J. Matos <pocm@mega.ist.utl.pt>, see
+  http://forums.gentoo.org/viewtopic.php?t=70748
+
