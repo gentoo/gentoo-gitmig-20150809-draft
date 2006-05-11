@@ -2,7 +2,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.33 2006/05/10 07:19:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.34 2006/05/11 16:42:32 mrness Exp $
+
+*quagga-0.98.6-r1 (11 May 2006)
+
+  11 May 2006; Alin Nastac <mrness@gentoo.org> -quagga-0.98.6.ebuild,
+  +quagga-0.98.6-r1.ebuild:
+  Fix RIP authentication problem - now the default RIP authentication mode is
+  simple text (#132353).
 
 *quagga-0.98.6 (10 May 2006)
 

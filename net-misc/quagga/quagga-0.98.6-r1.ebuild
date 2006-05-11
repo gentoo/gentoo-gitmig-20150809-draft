@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6.ebuild,v 1.1 2006/05/10 07:19:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r1.ebuild,v 1.1 2006/05/11 16:42:32 mrness Exp $
 
 inherit eutils multilib
 
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP. Includes OSPFAPI, NET-SNMP and IPV6 support."
 HOMEPAGE="http://quagga.net/"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20060510.tar.gz"
+	mirror://gentoo/${P}-patches-20060511.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,7 +27,10 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A} || die "failed to unpack sources"
 
-	cd ${S} || die "source dir not found"
+	cd "${S}" || die "source dir not found"
+	#Patch to fix RIP authentication problem in 0.98.6 (#132353)
+	#DO NOT USE IT IN ANY OTHER VERSIONS! 
+	epatch "${WORKDIR}/patch/ripd-show-ifaces.diff"
 
 	# TCP MD5 for BGP patch for Linux (RFC 2385) - http://hasso.linux.ee/doku.php/english:network:rfc2385
 	use tcpmd5 && epatch "${WORKDIR}/patch/ht-20050321-0.98.2-bgp-md5.patch"
@@ -86,26 +89,26 @@ src_compile() {
 
 src_install() {
 	einstall \
-		localstatedir=${D}/var/run/quagga \
-		sysconfdir=${D}/etc/quagga \
-		exampledir=${D}/etc/quagga/samples \
-		libdir=${D}/usr/$(get_libdir)/quagga || die "make install failed"
+		localstatedir="${D}/var/run/quagga" \
+		sysconfdir="${D}/etc/quagga" \
+		exampledir="${D}/etc/quagga/samples" \
+		libdir="${D}/usr/$(get_libdir)/quagga" || die "make install failed"
 
 	keepdir /var/run/quagga || die
 
 	local i MY_SERVICES_LIST="zebra ripd ospfd bgpd"
 	use ipv6 && MY_SERVICES_LIST="${MY_SERVICES_LIST} ripngd ospf6d"
 	for i in ${MY_SERVICES_LIST} ; do
-		newinitd ${FILESDIR}/${i}.init ${i} || die "failed to install ${i} init.d script"
+		newinitd "${FILESDIR}/${i}.init" ${i} || die "failed to install ${i} init.d script"
 	done
-	newconfd ${FILESDIR}/zebra.conf zebra || die "failed to install zebra conf.d script"
+	newconfd "${FILESDIR}/zebra.conf" zebra || die "failed to install zebra conf.d script"
 
 	if use pam; then
 		insinto /etc/pam.d
-		newins ${FILESDIR}/quagga.pam quagga
+		newins "${FILESDIR}/quagga.pam" quagga
 	fi
 
-	newenvd ${FILESDIR}/quagga.env 99quagga
+	newenvd "${FILESDIR}/quagga.env" 99quagga
 }
 
 pkg_preinst() {
@@ -116,8 +119,8 @@ pkg_preinst() {
 pkg_postinst() {
 	# empty dir for pid files for the new priv separation auth
 	#set proper owner/group/perms even if dir already existed
-	install -d -m0770 -o root -g quagga ${ROOT}/etc/quagga
-	install -d -m0755 -o quagga -g quagga ${ROOT}/var/run/quagga
+	install -d -m0770 -o root -g quagga "${ROOT}/etc/quagga"
+	install -d -m0755 -o quagga -g quagga "${ROOT}/var/run/quagga"
 
 	einfo "Sample configuration files can be found in /etc/quagga/samples."
 	einfo "You have to create config files in /etc/quagga before"

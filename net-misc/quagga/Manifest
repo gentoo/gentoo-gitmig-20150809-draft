@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1accad0aa65ff3ad4889d846802d8dfe ChangeLog 11291
+MD5 f3e00b8eb4a5c5ccd12dc8a527a1be18 ChangeLog 11526
 MD5 cc109a746273bc0d6aee9d758e7524ab files/bgpd.init 900
 MD5 8550c2f78b4c3ba7ba66c6bcb0bf4913 files/digest-quagga-0.98.4 147
 MD5 0b154eae203de93e62ad66e0a926b170 files/digest-quagga-0.98.5-r3 147
-MD5 2f9ebf2cdb3f31e503176f9d6682d188 files/digest-quagga-0.98.6 147
+MD5 d99aa510a508923e7f1bf7fc1557a60a files/digest-quagga-0.98.6-r1 147
 MD5 44547b687343ebfed7524cebc5626067 files/ospf6d.init 919
 MD5 89b0cf4e70172bfcd195b2869cae28da files/ospfd.init 910
 MD5 18c1046db57ea850aabd385058522cc4 files/quagga.env 25
@@ -17,11 +17,11 @@ MD5 2c1c5b782f96a74b48ccc496ad7a3865 files/zebra.init 1168
 MD5 f0c8f9afaf3bbefcea71ff3b6fa139c4 metadata.xml 1389
 MD5 e3212aca12f84a5cd7164e7727020318 quagga-0.98.4.ebuild 4438
 MD5 ba9898a1ed3cd80945e86a4f5027ad24 quagga-0.98.5-r3.ebuild 5004
-MD5 062e6ce25b538bac1cd280b81f074031 quagga-0.98.6.ebuild 5004
+MD5 ea41ebb67d33f16a72cd9465ea78a929 quagga-0.98.6-r1.ebuild 5180
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEYZQPjG8pv1lIUX4RAgMBAJ4xEtSESm7D6qGx19AOzmTl0oW8JgCgnYJp
-YSDoyr4yB3MvUm4vJPq7T10=
-=rR4w
+iD8DBQFEY2mJjG8pv1lIUX4RAoFjAKDjxVuCxXcJhNFI4Fu76aF5WRh5kgCbBGmk
+qwrKtLsvUSPz3feMx25NXOI=
+=hfls
 -----END PGP SIGNATURE-----
