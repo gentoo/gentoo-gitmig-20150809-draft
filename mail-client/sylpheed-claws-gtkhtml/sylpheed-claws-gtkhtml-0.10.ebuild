@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-gtkhtml/sylpheed-claws-gtkhtml-0.10.ebuild,v 1.1 2006/05/11 14:29:24 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-gtkhtml/sylpheed-claws-gtkhtml-0.10.ebuild,v 1.2 2006/05/11 14:36:39 genone Exp $
 
 inherit eutils
 
@@ -22,7 +22,6 @@ DEPEND=">=mail-client/sylpheed-claws-${SC_BASE}
 S="${WORKDIR}/${SC_BASE_NAME}/${MY_P}"
 
 src_install() {
-	pwd
 	make DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog NEWS README
 
