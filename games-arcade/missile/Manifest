@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 270c429725acafe45820e97c08932a4f ChangeLog 1069
+MD5 e29ecdb5dcd63b03e57b75d8ac2f5d3b ChangeLog 1158
 MD5 e35eefe94cc7a26de7e4c770d3156d4a files/1.0.1-Makefile-path-fix.patch 2730
 MD5 449b6e72f32105137a91e533ddfa6f59 files/digest-missile-1.0.1 65
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 4832a36b79a9535c89f16adc8907ce86 missile-1.0.1.ebuild 1251
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEC2P1ViELBEf1JB0RArybAJ9JifLiSQ/kHfj2xZOgglAGC1/KlwCfe7+3
-0RzqYfyebqa8jl41ChF6ZGQ=
-=0NP4
------END PGP SIGNATURE-----
+MD5 eced6bbddf714bafc2e24003bfc84f74 missile-1.0.1.ebuild 1250
