@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/aria
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/ChangeLog,v 1.19 2006/04/01 16:19:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/ChangeLog,v 1.20 2006/05/11 01:39:59 halcy0n Exp $
+
+  11 May 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/aria-1.0.0-gcc41.patch, aria-1.0.0.ebuild:
+  Add patch to fix compilation with gcc-4.1 by Robert Marmorstein <rmmarm AT
+  wm DOT edu>; bug #131985
 
   01 Apr 2006; <nixnut@gentoo.org> aria-1.0.0.ebuild:
   Added ~ppc keyword. Bug #128064
