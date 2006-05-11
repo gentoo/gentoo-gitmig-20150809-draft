@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.11-r1.ebuild,v 1.2 2005/07/25 19:09:07 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.11-r1.ebuild,v 1.3 2006/05/11 05:42:17 wormo Exp $
 
 inherit virtualx
 
