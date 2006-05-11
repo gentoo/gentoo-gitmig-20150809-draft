@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.1.1.ebuild,v 1.4 2006/05/05 11:05:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.1.1.ebuild,v 1.5 2006/05/11 12:39:25 genone Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification"
 
@@ -84,9 +84,11 @@ src_install() {
 	# wait for upstream: move manpage
 	mv ${D}/usr/share/man/man1/sylpheed{,-claws}.1
 
-	dodir /usr/share/applications
-	mv ${D}/usr/share/{gnome/apps/Internet,applications}/sylpheed-claws.desktop
-	rm -rf ${D}/usr/share/gnome
+	if [ -d ${D}/usr/share/gnome ]; then
+		dodir /usr/share/applications
+		mv ${D}/usr/share/{gnome/apps/Internet,applications}/sylpheed-claws.desktop
+		rm -rf ${D}/usr/share/gnome
+	fi
 
 	# Makefile install sylpheed-claws.png in /usr/share/icons/hicolor/48x48/apps
 	# => also install it in /usr/share/pixmaps for other desktop envs
