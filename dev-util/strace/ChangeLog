@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.77 2006/05/08 07:40:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.78 2006/05/11 17:54:20 mr_bones_ Exp $
+
+  11 May 2006; Michael Sterrett <mr_bones_@gentoo.org> strace-4.5.12.ebuild:
+  ppc64 needs dev-libs/libaio first
 
   08 May 2006; Markus Rothe <corsair@gentoo.org> strace-4.5.12.ebuild:
   Stable on ppc64
