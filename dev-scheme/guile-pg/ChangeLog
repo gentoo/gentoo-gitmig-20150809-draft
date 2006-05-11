@@ -1,0 +1,19 @@
+# ChangeLog for dev-lisp/guile-pg
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-pg/ChangeLog,v 1.1 2006/05/11 21:59:00 mkennedy Exp $
+
+  11 May 2006; Matthew Kennedy <mkennedy@gentoo.org> +guile-pg-0.15.ebuild:
+  Moved from dev-lisp/guile-pg to dev-scheme/guile-pg.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> guile-pg-0.15.ebuild:
+  virtual/glibc -> virtual/libc
+
+  13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> guile-pg-0.15.ebuild:
+  remove extra SLOT; don't assign default to S; header fix
+
+*guile-pg-0.15 (18 Jun 2003)
+
+  18 Jun 2003; Masatomo Nakano <nakano@gentoo.org> guile-pg-0.15.ebuild:
+  Initial import. Thanks to Jay 'Eraserhead' Felice <jfelice@cronosys.com>.
+  #12091
+
