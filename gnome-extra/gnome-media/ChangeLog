@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.108 2006/05/06 12:48:50 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.109 2006/05/11 02:10:08 allanonjl Exp $
+
+*gnome-media-2.14.0-r1 (11 May 2006)
+
+  11 May 2006; John N. Laliberte <allanonjl@gentoo.org>
+  +files/gnome-media-2.14.0-as-needed.patch, -gnome-media-2.14.0.ebuild,
+  +gnome-media-2.14.0-r1.ebuild:
+  add dep on gst-plugins-gconf, fixes #132864. add as-needed patch, fixes
+  #128904
 
   06 May 2006; John N. Laliberte <allanonjl@gentoo.org>
   gnome-media-2.14.0.ebuild:
