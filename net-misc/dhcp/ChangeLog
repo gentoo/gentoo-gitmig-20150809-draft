@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.94 2006/05/10 12:57:04 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.95 2006/05/11 14:36:11 uberlord Exp $
+
+  11 May 2006; Roy Marples <uberlord@gentoo.org> files/dhcpd.conf:
+  Fixed typo in conf.d/dhcpd, #133019 thanks to Hod.
 
   10 May 2006; Roy Marples <uberlord@gentoo.org>
   files/dhcp-3.0.3-dhclient-metric.patch,
