@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1.ebuild,v 1.2 2006/05/10 00:27:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1.ebuild,v 1.3 2006/05/11 08:14:18 genstef Exp $
 
 inherit nsplugins kde-functions autotools
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="dmalloc mp3 nsplugin nptl xml kde gtk"
+IUSE="dmalloc mp3 nsplugin nptl xml kde gtk video_cards_i810"
 
 DEPEND="sys-libs/zlib
 	media-libs/jpeg
@@ -55,8 +55,8 @@ src_compile() {
 		$(use_enable nptl pthreads) \
 		$(use_enable xml) \
 		$(use_enable gtk glext) \
+		$(use_enable video_cards_i810 i810-lod-bias) \
 		--with-plugindir=/opt/netscape/plugins \
-		${myconf} \
 		|| die "econf failed"
 	emake || die "emake failed"
 		# fails when disabled
@@ -67,7 +67,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 	use nsplugin && inst_plugin /opt/netscape/plugins/libgnashplugin.so \
-		|| rm ${D}//opt/netscape/plugins/libgnashplugin.so
+		|| rm ${D}/opt/netscape/plugins/libgnashplugin.so
 	dodoc AUTHORS ChangeLog NEWS README
 }
 

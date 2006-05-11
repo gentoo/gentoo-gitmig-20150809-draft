@@ -5,7 +5,7 @@ diff -u gnash-0.7.1/libbase/Makefile.am.orig gnash-0.7.1/libbase/Makefile.am
  	utf8.cpp		\
  	utility.cpp		\
  	zlib_adapter.cpp
-+libgnashbase_la_LIBADD = $(JPEG_LIBS)
++libgnashbase_la_LIBADD = $(JPEG_LIBS) $(ZLIB_LIBS)
  
  noinst_HEADERS = \
  	container.h		\
@@ -16,7 +16,20 @@ diff -u gnash-0.7.1/server/Makefile.am.orig gnash-0.7.1/server/Makefile.am
          text.cpp         \
          array.cpp        \
          types.cpp $(MP3_HANDLER)
-+libgnashserver_la_LIBADD = libgnashasobjs.la $(MAD_LIBS) $(LIBXML_LIBS) $(OPENGL_LIBS)
++libgnashserver_la_LIBADD = libgnashasobjs.la $(MP3_LIBS) $(LIBXML_LIBS) $(OPENGL_LIBS) $(ZLIB_LIBS)
  
  noinst_HEADERS = $(as_incls) \
  	action.h	\
+diff -u gnash-0.7.1/plugin/klash/Makefile.am.orig gnash-0.7.1/plugin/klash/Makefile.am
+--- gnash-0.7.1/plugin/klash/Makefile.am.orig	2006-05-11 01:08:17.000000000 +0200
++++ gnash-0.7.1/plugin/klash/Makefile.am	2006-05-11 01:10:37.000000000 +0200
+@@ -116,7 +116,8 @@
+ 	../../server/libgnashserver.la \
+ 	../../server/libgnashasobjs.la \
+ 	../../libgeometry/libgnashgeo.la \
+-	../../libbase/libgnashbase.la
++	../../libbase/libgnashbase.la \
++	$(LIB_QT)
+ 
+ 
+ CLEANFILES = klash_part.moc klash.moc
