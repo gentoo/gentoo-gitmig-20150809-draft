@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.279 2006/05/10 04:29:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.280 2006/05/11 19:31:26 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1669,7 +1669,7 @@ gcc-compiler_src_install() {
 	if ! is_crosscompile ; then
 		insinto /lib/rcscripts/awk
 		if tc_version_is_at_least 4.0 ; then
-			doins "${GCC_FILESDIR}"/awk/fixlafiles.awk-no_gcc_la || die
+			newins "${GCC_FILESDIR}"/awk/fixlafiles.awk-no_gcc_la fixlafiles.awk || die
 			find "${D}/${LIBPATH}" -name libstdc++.la -type f -exec rm "{}" \;
 		else
 			doins "${GCC_FILESDIR}"/awk/fixlafiles.awk || die
