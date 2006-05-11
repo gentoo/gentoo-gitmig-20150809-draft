@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r10.ebuild,v 1.4 2006/03/08 15:46:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r10.ebuild,v 1.5 2006/05/11 12:30:33 flameeyes Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 PATCH_VER=1.5
 S="${WORKDIR}/${PN}"
@@ -23,8 +23,7 @@ RDEPEND="esd? ( media-sound/esound )
 # alsa-1 b0rks and it's not a simple fix
 #	 alsa? ( media-libs/alsa-lib )"
 
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+DEPEND="${RDEPEND}"
 
 PROVIDE="virtual/mpg123"
 
@@ -51,6 +50,8 @@ src_unpack() {
 	fi
 
 	sed -i "s:${PV}-mh4:${PVR}:" version.h
+
+	epatch "${FILESDIR}/${P}-gmake-3.81.patch"
 }
 
 src_compile() {
@@ -123,7 +124,7 @@ src_compile() {
 
 	for style in ${styles};
 	do
-		make clean ${atype}${style} CFLAGS="${CFLAGS}" || die
+		emake -j1 clean ${atype}${style} CFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die
 		mv mpg123 gentoo-bin/mpg123${style}
 		[[ -L "gentoo-bin/mpg123" ]] && rm gentoo-bin/mpg123
 		ln -s mpg123${style} gentoo-bin/mpg123
