@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-9999.ebuild,v 1.5 2006/05/11 03:20:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-9999.ebuild,v 1.6 2006/05/11 03:23:40 vapier Exp $
 
 #ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 ECVS_SERVER="anoncvs.enlightenment.org:/var/cvs/e"
@@ -26,8 +26,7 @@ S=${WORKDIR}/${ECVS_MODULE}
 src_unpack() {
 	cvs_src_unpack
 	cd "${S}"
-	# autogen.sh is broken so do this ourselves
-	./autogen.sh || die "autogen failed"
+	NOCONFIGURE=yes ./autogen.sh || die "autogen failed"
 }
 
 src_compile() {
