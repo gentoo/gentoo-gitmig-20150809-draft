@@ -1,9 +1,4 @@
-DIST resolvconf-gentoo-0.4.tar.bz2 5344 RMD160 6cbd09609a312476ed1c11c8a030ed15f0ad2489 SHA256 983e24dd591fb19df00aa0d18ba9533f1e7c7a5cb85ece23a1a16754c70ff02c size 5344
 DIST resolvconf-gentoo-0.5.tar.bz2 5351 RMD160 63054a6af09c858150ebd1d50923e9a630c92972 SHA256 38dc2d73a616710f320a1918475904a5ad48fe8f180f23ff229a3c9a4448ee03 size 5351
-EBUILD resolvconf-gentoo-0.4.ebuild 2046 RMD160 24ce5d05ce4b592d3bbd11549292155de7ddda2d SHA1 4d4b420ba713b5c3060cdc1f005c9201c195bd00 SHA256 b8c854a25b7b40ad8dcd1ffb7944505d9d3316111cfab8bed783ae0a838103c8 size 2046
-MD5 7c2035d446378e8307139908074ca564 resolvconf-gentoo-0.4.ebuild 2046
-RMD160 24ce5d05ce4b592d3bbd11549292155de7ddda2d resolvconf-gentoo-0.4.ebuild 2046
-SHA256 b8c854a25b7b40ad8dcd1ffb7944505d9d3316111cfab8bed783ae0a838103c8 resolvconf-gentoo-0.4.ebuild 2046
 EBUILD resolvconf-gentoo-0.5.ebuild 2046 RMD160 f873bbe3e3c9c4feb6399b3f29927a2171b6f5b6 SHA1 b33a7fbbd963c848a8d099efab4fc74c69e26ece SHA256 4aa8a3c4b332c229f18fb9e7ec74783de594e75204642b658ae3793ae0a3efaf size 2046
 MD5 3d9f6a715954e5f67f127f2e98b5dc57 resolvconf-gentoo-0.5.ebuild 2046
 RMD160 f873bbe3e3c9c4feb6399b3f29927a2171b6f5b6 resolvconf-gentoo-0.5.ebuild 2046
@@ -16,9 +11,6 @@ MISC metadata.xml 307 RMD160 5321ae1f8b9fe5ee81be83b1777595452c229714 SHA1 77507
 MD5 23df2027bac4a8ecc8fbf018701239b5 metadata.xml 307
 RMD160 5321ae1f8b9fe5ee81be83b1777595452c229714 metadata.xml 307
 SHA256 e579b678a12cbfb3e9f2ff9ba1d9e5c56adb3017a459b35472cbf2d7969a3ab0 metadata.xml 307
-MD5 6dff9f2c70bf79af7c3cfa2df27ba180 files/digest-resolvconf-gentoo-0.4 262
-RMD160 a9eeeb24902e17d5dc55472c7cd75411db94b471 files/digest-resolvconf-gentoo-0.4 262
-SHA256 6ae95f39adee530b155c55ea27236612e560ff714a4c540acb4fbe44edad3f19 files/digest-resolvconf-gentoo-0.4 262
 MD5 06294a524225740429d71cd4a904592c files/digest-resolvconf-gentoo-0.5 262
 RMD160 9b5b05347abb16e47e4eac89be3457e763e19fb6 files/digest-resolvconf-gentoo-0.5 262
 SHA256 1a58a648c1e1111ab0efc3d4472fe3f12e63e75d0761f9bd628d1b75a816bd08 files/digest-resolvconf-gentoo-0.5 262
