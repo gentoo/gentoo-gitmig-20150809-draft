@@ -1,4 +1,16 @@
-MD5 bad4a50e0a7d39285556ff00066de0da ChangeLog 1148
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d4b6035ce71a7ab1fa65c2d2cb87a6aa ChangeLog 1309
 MD5 2cdc23c6aeec1949bbd70ffb1defa4a6 files/digest-nagios-imagepack-1.0 470
+MD5 105c847e7db30a8b8be7e799361a772f files/digest-nagios-imagepack-1.0-r1 537
 MD5 5fca464505216a223336866fea11a426 metadata.xml 244
+MD5 3bb8caf2c08d2927a88112e671f71867 nagios-imagepack-1.0-r1.ebuild 1068
 MD5 1ad6887f0e3624a3b4a0abf1bdd1ba5b nagios-imagepack-1.0.ebuild 1028
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEZPzTT+MN7JbqCpMRAqkxAJ4o7BoBruHFaUzuN0LxGCRETKmk5QCffLUC
+F1aQQ+poI+IGYpiTso/OnRw=
+=/XHN
+-----END PGP SIGNATURE-----
