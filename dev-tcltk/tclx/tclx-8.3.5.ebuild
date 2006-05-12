@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.5.ebuild,v 1.13 2006/02/28 00:37:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.5.ebuild,v 1.14 2006/05/12 04:17:46 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -23,12 +23,14 @@ S=${WORKDIR}/${PN}${PV}
 src_unpack() {
 	unpack ${A}
 
-	# Fix bug in configure script #119619
+	# Fix bug[s] in configure script #119619
 	local d
 	for d in */unix/configure ; do
-		cd "${WORKDIR}"/${d%/*}
-		EPATCH_SINGLE_MSG="Fixing ${d} ..." \
-		epatch "${FILESDIR}"/${P}-configure.patch
+		ebegin "Fixing ${d}"
+		while patch ${EPATCH_OPTS} --dry-run ${d} "${FILESDIR}"/${P}-configure.patch > /dev/null ; do
+			patch ${d} "${FILESDIR}"/${P}-configure.patch > /dev/null
+		done
+		eend $?
 	done
 
 	cd "${S}"
