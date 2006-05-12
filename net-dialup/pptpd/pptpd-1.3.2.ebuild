@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.2.ebuild,v 1.1 2006/05/12 21:25:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.2.ebuild,v 1.2 2006/05/12 21:58:28 mrness Exp $
 
 inherit eutils autotools
 
@@ -27,11 +27,11 @@ src_unpack() {
 	PPPD_VER=${PPPD_VER#*/*-} #reduce it to ${PV}-${PR}
 	PPPD_VER=${PPPD_VER%%[_-]*} # main version without beta/pre/patch/revision
 	sed -i -e "s:\\(#define[ \\t]*VERSION[ \\t]*\\)\".*\":\\1\"${PPPD_VER}\":" "${S}/plugins/patchlevel.h"
+
+	eautomake
 }
 
 src_compile() {
-	eautomake
-
 	local myconf
 	use tcpd && myconf="--with-libwrap"
 	econf --enable-bcrelay \
