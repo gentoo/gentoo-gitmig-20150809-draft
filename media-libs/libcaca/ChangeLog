@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.23 2006/05/11 22:40:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.24 2006/05/12 01:06:17 tcort Exp $
+
+  11 May 2006; Thomas Cort <tcort@gentoo.org> libcaca-0.9-r2.ebuild:
+  Stable on alpha and amd64 wrt Bug #132838.
 
   11 May 2006; Jason Wever <weeve@gentoo.org> libcaca-0.9-r2.ebuild:
   Stable on SPARC wrt bug #132838.
