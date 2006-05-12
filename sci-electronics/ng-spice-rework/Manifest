@@ -1,6 +1,7 @@
-MD5 03af2149615aaa0bac662ab4a280f8ff ChangeLog 2661
+MD5 98c805d216a39493c514a8b8f9bc6cd7 ChangeLog 2837
 MD5 cdcbac36f6d0470a9935636cb8ca3306 files/digest-ng-spice-rework-15 66
 MD5 97a43f9bb7be5b0caae27989f8027eec files/digest-ng-spice-rework-17 71
+MD5 97a43f9bb7be5b0caae27989f8027eec files/digest-ng-spice-rework-17-r1 71
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ng-spice-rework-9999 0
 MD5 c9ab994f230b3c02ffca2d9d02e7d33b files/ng-spice-rework-15.gcc-3.4.patch 804
 MD5 8e6c0b550f83239d57f566eaf99c7e84 files/ng-spice-rework-com_let.patch 504
@@ -9,5 +10,6 @@ MD5 e354e1af1ad9d7d634ad8cdeeb284c92 files/ng-spice-rework-pipemode.patch 1462
 MD5 1fd91e68ec6e9ed3a1639bc3e2c04fd0 files/ng-spice-rework-postscript.patch 2842
 MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
 MD5 64f8beb626a1f8e9accfac187842abc1 ng-spice-rework-15.ebuild 1031
+MD5 ff30ae56b246ca716f9a072f7c661af8 ng-spice-rework-17-r1.ebuild 1538
 MD5 bb642ce158bd8e69cad2ab4cfcbed947 ng-spice-rework-17.ebuild 1180
 MD5 eea781f9424de8b8399224885d017906 ng-spice-rework-9999.ebuild 1797
