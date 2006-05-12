@@ -1,14 +1,14 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnapster/gnapster-1.5.0-r2.ebuild,v 1.13 2004/07/09 01:39:30 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnapster/gnapster-1.5.0-r2.ebuild,v 1.14 2006/05/12 14:50:47 squinky86 Exp $
 
 inherit gnuconfig
 
 IUSE="nls gtk gnome"
 
 DESCRIPTION="A napster client for GTK/GNOME"
-SRC_URI="http://jasta.gotlinux.org/files/${P}.tar.gz"
-HOMEPAGE="http://jasta.gotlinux.org/gnapster.html"
+SRC_URI="mirror://sourceforge/gnapster/${P}.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/gnapster/"
 
 SLOT="0"
 LICENSE="GPL-2"
