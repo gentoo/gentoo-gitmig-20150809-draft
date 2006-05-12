@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.146 2006/05/10 18:00:18 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.147 2006/05/12 22:05:08 mr_bones_ Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -106,9 +106,9 @@ if [[ $(get_major_version ) -ge 7 ]] ; then
 	if [[ "${MY_PN}" != "vim-core" ]] ; then
 		IUSE="${IUSE} mzscheme"
 		DEPEND="${DEPEND}
-			mzscheme? ( dev-lisp/mzscheme )"
+			mzscheme? ( dev-scheme/mzscheme )"
 		RDEPEND="${RDEPEND}
-			mzscheme? ( dev-lisp/mzscheme )"
+			mzscheme? ( dev-scheme/mzscheme )"
 	fi
 	if [[ "${MY_PN}" == "gvim" ]] ; then
 		IUSE="${IUSE} netbeans aqua nextaw"
