@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.310 2006/05/12 12:11:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.311 2006/05/12 12:31:22 lu_zero Exp $
+
+  12 May 2006; Luca Barbato <lu_zero@gentoo.org> qt-3.3.6-r1.ebuild:
+  Marked ppc
 
   12 May 2006; Jason Wever <weeve@gentoo.org> qt-3.3.6-r1.ebuild:
   Stable on SPARC wrt bug #132887.
