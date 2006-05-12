@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3.ebuild,v 1.3 2006/05/09 03:57:49 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3.ebuild,v 1.4 2006/05/12 22:01:10 eldad Exp $
 
 inherit eutils kde-functions autotools
 
@@ -10,19 +10,18 @@ SRC_URI="mirror://sourceforge/hydrogen/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
-IUSE="alsa debug jack ladspa oss"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~ppc64"
+IUSE="alsa debug jack ladspa oss portaudio"
 
 RDEPEND="dev-libs/libxml2
 	media-libs/libsndfile
 	media-libs/audiofile
 	media-libs/flac
-	media-libs/portaudio
+	portaudio? ( media-libs/portaudio )
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
 	ladspa? ( media-libs/liblrdf )"
-DEPEND="app-text/docbook-sgml-utils
-	${RDEPEND}"
+
 need-qt 3
 
 src_unpack() {
@@ -43,6 +42,7 @@ src_unpack() {
 	make -f Makefile.cvs
 
 	epatch ${FILESDIR}/hydrogen-0.9.2-configure.in.patch
+	epatch ${FILESDIR}/hydrogen-0.9.3-gcc-4.1-tinyxml.h.patch
 }
 
 src_compile() {
@@ -53,6 +53,7 @@ src_compile() {
 	# export PORTMIDIPATH="${ROOT}usr"
 
 	local myconf="$(use_enable jack jack-support) \
+			$(use_enable portaudio) \
 			$(use_enable alsa) \
 			$(use_enable debug) \
 			$(use_enable ladspa) \
