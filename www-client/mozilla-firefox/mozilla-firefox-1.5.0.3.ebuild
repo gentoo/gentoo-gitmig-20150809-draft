@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.3.ebuild,v 1.4 2006/05/06 19:06:43 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.3.ebuild,v 1.5 2006/05/12 02:47:25 truedfx Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
@@ -51,7 +51,11 @@ linguas() {
 	linguas=
 	local LANG
 	for LANG in ${LINGUAS}; do
-		if hasq ${LANG} ${LANGS//-/_} en; then
+		if hasq ${LANG} en en_US; then
+			hasq en ${linguas} || \
+				linguas="${linguas:+"${linguas} "}en"
+			continue
+		elif hasq ${LANG} ${LANGS//-/_}; then
 			hasq ${LANG//_/-} ${linguas} || \
 				linguas="${linguas:+"${linguas} "}${LANG//_/-}"
 			continue
