@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.4.ebuild,v 1.8 2005/12/24 16:31:30 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.4.ebuild,v 1.9 2006/05/12 20:36:33 flameeyes Exp $
+
+inherit libtool
 
 DESCRIPTION="A library for reading and editing audio meta data"
 HOMEPAGE="http://developer.kde.org/~wheeler/taglib.html"
@@ -12,6 +14,13 @@ KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="debug"
 
 DEPEND="sys-libs/zlib"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	elibtoolize
+}
 
 src_compile() {
 	econf $(use_enable debug) || die

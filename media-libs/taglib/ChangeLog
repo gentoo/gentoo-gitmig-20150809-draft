@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.44 2005/12/24 16:31:30 killerfox Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.45 2006/05/12 20:36:33 flameeyes Exp $
+
+  12 May 2006; Diego Pettenò <flameeyes@gentoo.org> taglib-1.4.ebuild:
+  Add elibtoolize call.
 
   24 Dec 2005; Rene Nussbaumer <killerfox@gentoo.org> taglib-1.4.ebuild:
   Stable on hppa.
