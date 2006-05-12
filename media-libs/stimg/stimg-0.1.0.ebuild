@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/stimg/stimg-0.1.0.ebuild,v 1.6 2005/04/24 03:33:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stimg/stimg-0.1.0.ebuild,v 1.7 2006/05/12 23:05:18 tcort Exp $
 
 IUSE=""
 
@@ -21,6 +21,5 @@ DEPEND=">=media-libs/libpng-1.0.12-r2
 
 src_install() {
 	einstall
-
-	dodoc AUTHORS COPYING{,.imlib2} INSTALL README.ja
+	dodoc AUTHORS README.ja
 }

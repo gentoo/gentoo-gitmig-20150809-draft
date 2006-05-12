@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/osalp/osalp-0.7.3.ebuild,v 1.8 2005/12/26 12:39:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/osalp/osalp-0.7.3.ebuild,v 1.9 2006/05/12 23:01:52 tcort Exp $
 
 IUSE="encode vorbis"
 
@@ -30,5 +30,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "install failed"
-	dodoc AUTHORS COPYING COPYING.LIB INSTALL README TODO NEWS
+	dodoc AUTHORS README TODO NEWS
 }
