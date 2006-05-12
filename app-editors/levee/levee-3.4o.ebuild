@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/levee-3.4o.ebuild,v 1.17 2005/08/28 16:15:22 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/levee-3.4o.ebuild,v 1.18 2006/05/12 01:30:38 tcort Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.pell.chi.il.us/~orc/Code/${PN}.tar.gz"
 
 SLOT="0"
 LICENSE="levee"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 
 DEPEND="sys-libs/ncurses"
 
