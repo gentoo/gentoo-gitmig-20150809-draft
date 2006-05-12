@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.12.ebuild,v 1.1 2006/04/18 15:38:02 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.12.ebuild,v 1.2 2006/05/12 21:06:21 flameeyes Exp $
 
 inherit eutils autotools libtool
 
@@ -10,15 +10,11 @@ SRC_URI="http://downloads.xiph.org/releases/speex/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="ogg sse vorbis-psy"
 
 RDEPEND="ogg? ( >=media-libs/libogg-1.0 )"
-
-DEPEND="${RDEPEND}
-	sys-devel/autoconf
-	sys-devel/automake
-	sys-devel/libtool"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -28,6 +24,8 @@ src_unpack() {
 	# As this changes the Makefile.am, need to rebuild autotools.
 	sed -i -e 's:\$(top_builddir)/libspeex/libspeex.la:libspeex.la:' \
 		${S}/libspeex/Makefile.am
+
+	epatch "${FILESDIR}/${P}-malloc.patch"
 
 	eautoreconf
 

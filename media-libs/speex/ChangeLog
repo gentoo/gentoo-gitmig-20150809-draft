@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/speex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.48 2006/04/19 13:11:09 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.49 2006/05/12 21:06:21 flameeyes Exp $
+
+  12 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/speex-1.1.12-malloc.patch, speex-1.1.12.ebuild:
+  Add patch to remove malloc.h inclusion, and mark ~x86-fbsd. Thanks to Alex
+  Unleashed in bug #132793.
 
   19 Apr 2006; Patrick McLean <chutzpah@gentoo.org> +speex-1.1.5.ebuild:
   Re-add speex-1.1.5 since media-plugins/xmms-speex depends on it
