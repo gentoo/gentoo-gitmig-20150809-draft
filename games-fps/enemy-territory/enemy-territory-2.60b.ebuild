@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.2 2006/05/09 19:07:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.3 2006/05/12 18:04:54 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,8 +11,8 @@ SRC_URI="mirror://3dgamers/wolfensteinet/et-linux-2.60.x86.run
 	ftp://ftp.red.telefonica-wholesale.net/GAMES/ET/linux/et-linux-2.60.x86.run
 	mirror://idsoftware/et/ET-${PV}.zip
 	dedicated? (
-		http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}-all-0.2.tar.bz2
-		mirror://gentoo/${PN}-all-0.2.tar.bz2 )"
+		http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}-all-0.1.tar.bz2
+		mirror://gentoo/${PN}-all-0.1.tar.bz2 )"
 
 LICENSE="RTCW-ETEULA"
 SLOT="0"
@@ -36,7 +36,7 @@ Ddir="${D}/${dir}"
 src_unpack() {
 	unpack_makeself et-linux-2.60.x86.run
 	if use dedicated; then
-		unpack ${PN}-all-0.2.tar.bz2 || die
+		unpack ${PN}-all-0.1.tar.bz2 || die
 	fi
 	unpack ET-${PV}.zip
 }
@@ -91,6 +91,9 @@ pkg_postinst() {
 		echo
 		einfo "The dedicated server is started under the ${GAMES_USER_DED} user account"
 		echo
+		ewarn "Store your configurations under ${dir}/etwolf-homedir or they"
+		ewarn "will be erased on the next upgrade."
+		einfo "See bug #132795 for more info."
 	fi
 	if use amd64; then
 		einfo "If you are running an amd64 system and using ALSA, you must have"
