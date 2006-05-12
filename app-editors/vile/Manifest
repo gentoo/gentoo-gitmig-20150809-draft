@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 67cc371addb0e5fd3d57cef13cc4b11b ChangeLog 2948
+MD5 b030233d0c21404dcd48a3526e419b9a ChangeLog 3030
 MD5 55768ae3bd94b5c67efdb12a1c969702 files/digest-vile-9.3h 551
 MD5 cb5eef1dde0145c3a3daee63b4388131 files/digest-vile-9.4d 305
 MD5 4d983f476a8c0490e8e62589152eaba4 files/digest-vile-9.5 58
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 71976dd520e6bfaf81d03924250cc075 vile-9.3h.ebuild 1506
-MD5 dced1100490fe8d288abd2882633686c vile-9.4d.ebuild 1266
+MD5 8f74510ce32412073fbb71f15e466ff5 vile-9.4d.ebuild 1263
 MD5 e4690b817b75c1bbbe6ae96b94b79a1f vile-9.5.ebuild 843
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDocxBLLFUmVNQ7rkRAnS9AJ9jx/h5qFEgaUlgkYkV9yPPAxdvFwCgy6rH
-FtPT5dBoOZcRVGuOxeZ5CmE=
-=GOff
------END PGP SIGNATURE-----
