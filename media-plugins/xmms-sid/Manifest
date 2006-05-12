@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a0a03b1d78c97642dd16eece88ba8b53 ChangeLog 3365
+MD5 6cf460f67cf9cce5c9d61991fbcf3085 ChangeLog 3451
 MD5 9f2a9e14baa6d0132bc640fd61208aff files/digest-xmms-sid-0.7.4 67
 MD5 d1e03d2763331e5973e88b05d52cc3eb files/digest-xmms-sid-0.8.0_beta10 72
 MD5 67500eff54a569f111dd5ae1d51d6e20 files/digest-xmms-sid-0.8.0_beta15 72
 MD5 06abf13332370f9f4dc2cc3cc4b77090 files/xmms-sid-0.8.0_beta15-seek-popup-fix.patch 785
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 533d95ea5d9040752a1c5fad47d2380e xmms-sid-0.7.4.ebuild 592
+MD5 2b7b224bd5e52ba638aa42b0bde6ce83 xmms-sid-0.7.4.ebuild 587
 MD5 634000ccaa6ac00e811ac51fa3e06af2 xmms-sid-0.8.0_beta10.ebuild 1050
 MD5 84738733473da8e032c6219f6c786622 xmms-sid-0.8.0_beta15.ebuild 1007
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDinu0wUpWvClEHQoRAqGVAJ0ecZreA7MGvZ9sFpXQ8lf3XGxi8wCfZV22
-lx9GVCFu4HIDQaBJJnjnWKM=
-=6wO9
------END PGP SIGNATURE-----
