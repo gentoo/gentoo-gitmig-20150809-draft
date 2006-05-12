@@ -1,4 +1,4 @@
-MD5 7d197938a7876b2168dd7ccf3c8b661e ChangeLog 2161
+MD5 da836e4d0f4a7592ef0817d66fb576f5 ChangeLog 2266
 MD5 57f23e26014f9e6ff7598d3835af2f22 files/digest-twisted-web-0.5.0-r1 253
 MD5 7e7885ea2a517955e3510dc59addad40 files/digest-twisted-web-0.5.0-r2 69
 MD5 8b5bd800eb0001964ddef202a539be91 files/twisted-web-0.5.0-root-skip.patch 475
@@ -8,4 +8,4 @@ MD5 cc4998326286c7923d65d8033d9fadbe files/twisted-web-0.5.0-tests-2.2-compat-14
 MD5 0d086fde8bb2de73d9d4c6b50d936f19 files/twisted-web-0.5.0-tests-2.2-compat.patch 4006
 MD5 bc29fb845d6836abeba3eeff41da8476 metadata.xml 218
 MD5 174036fdd0c54f30685a1c33638428e3 twisted-web-0.5.0-r1.ebuild 550
-MD5 bfc16eb1afedb12ec88fae8d7b6928d1 twisted-web-0.5.0-r2.ebuild 735
+MD5 e59c7c84c9d6431661148cfa7a0d6e70 twisted-web-0.5.0-r2.ebuild 738
