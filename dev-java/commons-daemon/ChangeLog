@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-daemon
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.14 2005/06/07 18:05:53 luckyduck Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.15 2006/05/12 12:59:38 betelgeuse Exp $
+
+  12 May 2006; Petteri Räty <betelgeuse@gentoo.org>
+  +files/1.0.1-as-needed.patch, commons-daemon-1.0.1.ebuild:
+  Added patch from bug #132563 to fix compilation with -Wl,--as-needed. Thanks
+  to TGL <degrenier@easyconnect.fr>.
 
 *commons-daemon-1.0.1 (07 Jun 2005)
 

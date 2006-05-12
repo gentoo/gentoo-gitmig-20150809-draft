@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.1.ebuild,v 1.2 2005/07/19 18:07:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.1.ebuild,v 1.3 2006/05/12 12:59:38 betelgeuse Exp $
 
 inherit java-pkg eutils
 
@@ -24,6 +24,8 @@ S=${WORKDIR}/daemon-${PV}
 
 src_unpack() {
 	unpack ${A}
+
+	epatch "${FILESDIR}/1.0.1-as-needed.patch"
 
 	cd ${S}/src/native/unix
 	sed -e "s/powerpc/powerpc|powerpc64/g" -i support/apsupport.m4
