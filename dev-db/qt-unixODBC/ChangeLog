@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qt-unixODBC
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.16 2006/05/12 12:10:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.17 2006/05/12 12:36:06 lu_zero Exp $
+
+  12 May 2006; Luca Barbato <lu_zero@gentoo.org> qt-unixODBC-3.3.6.ebuild:
+  Marked ppc
 
   12 May 2006; Jason Wever <weeve@gentoo.org> qt-unixODBC-3.3.6.ebuild:
   Stable on SPARC wrt bug #132887.
