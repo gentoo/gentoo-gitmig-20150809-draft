@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation and Thomas Capricelli <orzel@kde.org>
+# Copyright 1999-2006 Gentoo Foundation and Thomas Capricelli <orzel@kde.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.11.ebuild,v 1.3 2005/11/18 09:20:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.11.ebuild,v 1.4 2006/05/12 15:42:10 wolf31o2 Exp $
 
 inherit kde
 
@@ -15,6 +15,7 @@ IUSE="opengl"
 
 DEPEND="media-libs/lib3ds
 	>=media-libs/openal-20040303
+	<media-libs/openal-20051024
 	kde-base/arts
 	opengl? ( virtual/opengl )"
 need-kde 3

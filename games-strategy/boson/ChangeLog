@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/boson
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.14 2005/11/18 09:20:08 hansmi Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.15 2006/05/12 15:42:10 wolf31o2 Exp $
+
+  12 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> -boson-0.10.ebuild,
+  boson-0.11.ebuild:
+  Locking down to versions of openal that work, and removing older version as
+  it doesn't work with newer python.
 
   18 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> boson-0.11.ebuild:
   Stable on ppc.
