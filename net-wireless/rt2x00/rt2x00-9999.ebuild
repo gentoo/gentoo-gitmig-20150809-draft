@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.4 2006/05/08 12:58:31 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.5 2006/05/12 10:30:13 uberlord Exp $
 
 inherit linux-mod cvs
 
@@ -8,11 +8,11 @@ DESCRIPTION="Driver for the RaLink RT2x00 wireless chipsets"
 HOMEPAGE="http://rt2x00.serialmonkey.com"
 LICENSE="GPL-2"
 
-ECVS_SERVER="cvs.sourceforge.net:/cvsroot/rt2400"
+ECVS_SERVER="rt2400.cvs.sourceforge.net:/cvsroot/rt2400"
 ECVS_MODULE="source/rt2x00"
 ECVS_LOCALNAME="${P}"
 
-KEYWORDS="-*"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE="debug"
 RDEPEND="net-wireless/wireless-tools"
 

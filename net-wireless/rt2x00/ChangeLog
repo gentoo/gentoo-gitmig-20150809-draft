@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/rt2x00
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.7 2006/05/08 12:58:31 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.8 2006/05/12 10:30:13 uberlord Exp $
+
+  12 May 2006; Roy Marples <uberlord@gentoo.org> rt2x00-2.0.0_beta3.ebuild,
+  rt2x00-9999.ebuild:
+  Changed SF cvs to new host, #133081
+  Tweaked depends a little.
 
   08 May 2006; Roy Marples <uberlord@gentoo.org> rt2x00-9999.ebuild:
   Added support for rt61 and rt73 drivers. We now require the kernel to support

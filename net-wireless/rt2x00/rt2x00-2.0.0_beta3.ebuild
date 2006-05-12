@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-2.0.0_beta3.ebuild,v 1.1 2005/12/19 15:54:58 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-2.0.0_beta3.ebuild,v 1.2 2006/05/12 10:30:13 uberlord Exp $
 
 inherit linux-mod eutils
 
@@ -15,14 +15,9 @@ LICENSE="GPL-2"
 
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
-DEPEND="
-	>=net-wireless/ieee80211-${IEEE80211_VERSION}
-	sys-apps/sed
-"
-RDEPEND="
-	>=net-wireless/ieee80211-${IEEE80211_VERSION}
-	net-wireless/wireless-tools
-"
+DEPEND=">=net-wireless/ieee80211-${IEEE80211_VERSION}"
+RDEPEND="${DEPEND}
+	net-wireless/wireless-tools"
 
 MODULE_NAMES="
 	rt2x00core(net/wireless:) rt2400pci(net/wireless:)
