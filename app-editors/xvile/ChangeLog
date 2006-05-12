@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xvile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/ChangeLog,v 1.13 2006/01/24 19:35:21 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/ChangeLog,v 1.14 2006/05/12 01:40:57 tcort Exp $
+
+  11 May 2006; Thomas Cort <tcort@gentoo.org> xvile-9.4d.ebuild:
+  Stable on amd64.
 
 *xvile-9.4d-r1 (24 Jan 2006)
 
