@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.45 2006/05/05 15:01:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.46 2006/05/12 12:18:21 caleb Exp $
+
+  12 May 2006; Caleb Tennis <caleb@gentoo.org>
+  +files/libkdepim-3.5.2-call_qt3_designer.diff,
+  +files/libkdepim-3.5.2-fixes.diff, +libkdepim-3.5.2-r1.ebuild:
+  Some more upstream patches from Carlo
 
   05 May 2006; Carsten Lohrke <carlo@gentoo.org> -libkdepim-3.5.2-r1.ebuild:
   Removing the ebuild again as it creates problems for users. We may add new
