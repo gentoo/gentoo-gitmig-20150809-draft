@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03.ebuild,v 1.14 2006/04/03 18:00:56 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03.ebuild,v 1.15 2006/05/12 00:31:40 tcort Exp $
 
 inherit bash-completion
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.nog.net/~tony/warez/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa mips ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa mips ppc ~ppc-macos ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"

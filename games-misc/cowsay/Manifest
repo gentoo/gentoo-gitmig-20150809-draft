@@ -1,5 +1,5 @@
-MD5 a0a5364ee1bc597ac099acd05918a574 ChangeLog 1704
-MD5 522080cc59553a76932f744e2fca0574 cowsay-3.03.ebuild 1223
+MD5 3aed2aadeb6d62b987f373cb37e2a4e7 ChangeLog 1790
+MD5 19ea06371ef110ad5babf74edf2701cf cowsay-3.03.ebuild 1222
 MD5 2744086053e49bfd0592c2341dbb8e41 files/cowsay.bashcomp 1095
 MD5 2e5e04a0c30b4e7e3dab7781049e7d99 files/digest-cowsay-3.03 62
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158

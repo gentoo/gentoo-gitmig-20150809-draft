@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/cowsay
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/ChangeLog,v 1.14 2006/04/03 18:00:56 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/ChangeLog,v 1.15 2006/05/12 00:31:40 tcort Exp $
+
+  11 May 2006; Thomas Cort <tcort@gentoo.org> cowsay-3.03.ebuild:
+  Stable on alpha.
 
   03 Apr 2006; Thomas Cort <tcort@gentoo.org> cowsay-3.03.ebuild:
   Added ~alpha keyword.
