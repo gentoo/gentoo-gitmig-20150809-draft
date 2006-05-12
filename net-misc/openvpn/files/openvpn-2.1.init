@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 VPNDIR="${VPNDIR:-/etc/openvpn}"
@@ -76,9 +76,6 @@ start() {
 		grep -q "^[ \t]*group[ \t].*" "${VPNCONF}" || args="${args} --group openvpn"
 	fi
 
-	# Some generic options to improve reliability
-	args="${args} --persist-tun --persist-key"
-	
 	if ${client} && [[ $(type -t mark_service_inactive) == "function" ]]  ; then
 		mark_service_inactive "${SVCNAME}"
 	fi
