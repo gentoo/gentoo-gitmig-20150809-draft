@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7829ac1f1adcdfaba68cd32f9f70b9a9 ChangeLog 2336
-RMD160 1eeeacc9d53d90ca764f9b206acbe24a94fad45d ChangeLog 2336
-SHA256 daf1a40735d25dbc9f5990f71ed15b1e115f5fd34f687ef7d57441c717a93291 ChangeLog 2336
+MD5 4eb1374f436113b6024368eacedb419c ChangeLog 2438
 MD5 40f0db85a78b1dd555e222afd3c24570 files/digest-openquicktime-1.0-r1 147
-RMD160 c07e6be9b27df4f3bbc3a48e4dbf76634fde9677 files/digest-openquicktime-1.0-r1 147
-SHA256 4521ee9162954fd4c48062af6bf37180d7a58be11237bf431c3fb98c436d371f files/digest-openquicktime-1.0-r1 147
 MD5 ed8349e980407e49b724e04ee5a9a2ed metadata.xml 231
-RMD160 c13056229989c3d4f448a7c7abcff3f4ee7ce13c metadata.xml 231
-SHA256 4595c2615fd7c9095517949b1a920d4457f92801eb9d46307b18aafe58ec2a8a metadata.xml 231
-MD5 112bce2a919eff185ad7e7d26c222709 openquicktime-1.0-r1.ebuild 1105
-RMD160 825e5f13ff70fab41858a01912e68b695608579b openquicktime-1.0-r1.ebuild 1105
-SHA256 5578fd039a048ddbe87f4073e9bb7c33c6cde61482ac02639654b1b52eb900a7 openquicktime-1.0-r1.ebuild 1105
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDXcXAiZjviIA2XgRAnJ+AKDB42fGL/Hp9TV2WlpMkCD6GDlgpwCfRolX
-rW4HMTE7MRQaJVrUnlLfGFU=
-=8O+7
------END PGP SIGNATURE-----
+MD5 6be810fd69dd106013d6129d44d1d6bd openquicktime-1.0-r1.ebuild 1094
