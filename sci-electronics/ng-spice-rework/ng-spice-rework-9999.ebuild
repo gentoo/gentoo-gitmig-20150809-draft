@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-9999.ebuild,v 1.1 2006/05/10 11:28:50 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-9999.ebuild,v 1.2 2006/05/12 19:09:19 calchan Exp $
 
 inherit eutils cvs
 
-ECVS_SERVER="cvs.sourceforge.net:/cvsroot/ngspice"
+ECVS_SERVER="ngspice.cvs.sourceforge.net:/cvsroot/ngspice"
 ECVS_MODULE="ngspice/ng-spice-rework"
 ECVS_USER="anonymous"
 
