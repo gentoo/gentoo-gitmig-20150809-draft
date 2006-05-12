@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.111 2006/04/24 21:54:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.112 2006/05/12 16:07:35 allanonjl Exp $
+
+  12 May 2006; John N. Laliberte <allanonjl@gentoo.org> -pygtk-2.6.1.ebuild,
+  -pygtk-2.6.2.ebuild:
+  remove 2.6.x series of pygtk
 
 *pygtk-2.8.6 (24 Apr 2006)
 
