@@ -1,5 +1,5 @@
-MD5 33ab2545f8c234dfa2156535b38c50e5 ChangeLog 1160
+MD5 a57ae84e10f32af2b442cab9ffd642dd ChangeLog 1249
 MD5 0e4355f7afa9cfc73b2c06420a9923b5 files/digest-mp3check-0.8.0 66
 MD5 738499728009660d6d5d4f50515c6ff7 files/mp3check-0.8.0-gcc34.diff 2675
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 55ce955935d372d5eb7755fca5635f8e mp3check-0.8.0.ebuild 688
+MD5 1dfdda19037a960ba44d42a601b4dee0 mp3check-0.8.0.ebuild 687

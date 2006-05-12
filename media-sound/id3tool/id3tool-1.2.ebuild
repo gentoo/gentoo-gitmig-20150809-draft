@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3tool/id3tool-1.2.ebuild,v 1.12 2006/05/12 20:12:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3tool/id3tool-1.2.ebuild,v 1.13 2006/05/12 20:45:57 flameeyes Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://nekohako.xware.cx/id3tool/"
 SRC_URI="http://nekohako.xware.cx/id3tool/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="amd64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 DEPEND=""
 
 src_compile() {
