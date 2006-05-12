@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.4.ebuild,v 1.5 2006/05/07 20:17:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.4.ebuild,v 1.6 2006/05/12 20:31:46 eldad Exp $
 
 inherit eutils apache-module toolchain-funcs
 
@@ -45,8 +45,7 @@ pkg_setup() {
 	if use noweb; then
 		enewuser nagios -1 /bin/bash /dev/null nagios
 	else
-		enewuser nagios -1 /bin/bash /dev/null apache
-		usermod -G apache nagios
+		enewuser nagios -1 /bin/bash /dev/null nagios,apache
 	fi
 }
 
