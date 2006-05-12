@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.0.ebuild,v 1.3 2006/02/15 15:43:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.0.ebuild,v 1.4 2006/05/12 19:27:17 flameeyes Exp $
 
 inherit wxwidgets flag-o-matic eutils
 
@@ -11,8 +11,6 @@ WBV="600"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	amr? ( http://www.3gpp.org/ftp/Specs/archive/26_series/26.104/26104-${NBV}.zip
 		http://www.3gpp.org/ftp/Specs/archive/26_series/26.204/26204-${WBV}.zip )"
-ECVS_SERVER="cvs.sourceforge.net:/cvsroot/gpac"
-ECVS_MODULE="gpac"
 
 LICENSE="GPL-2"
 SLOT="0"
