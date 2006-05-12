@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.208 2006/05/10 20:48:22 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.209 2006/05/12 16:38:43 rphillips Exp $
+
+*vim-core-7.0-r2 (12 May 2006)
+
+  12 May 2006; <rphillips@gentoo.org> +vim-core-7.0-r2.ebuild:
+  Changed vim tarball to be -r1.
 
 *vim-core-7.0-r1 (10 May 2006)
 

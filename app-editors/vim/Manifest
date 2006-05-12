@@ -2,9 +2,11 @@ MD5 e90197d51f396a6c0c534eb52fd141e4 ChangeLog 32124
 MD5 513ae8916cbd1d1235ca675d9611e571 files/digest-vim-6.4 738
 MD5 232937c191bc8735ce2fe6f2d269c6f4 files/digest-vim-7.0 134
 MD5 60e0193db6501070c1fd91ebed7dc048 files/digest-vim-7.0-r1 199
+MD5 2929d0e347ff8161bc9be2d1160ac9b3 files/digest-vim-7.0-r2 202
 MD5 87fe7821e180647f3bf48ed099a22b83 files/vim-completion 998
 MD5 48e706214652b216c21280e50511627d files/vimrc 3004
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 8351d8850a582a42a6c7c0ffa5e6e702 vim-6.4.ebuild 1007
 MD5 a26e114dad378cd075e14c0a5882254a vim-7.0-r1.ebuild 845
+MD5 4ab4020d5ec6de4dd0be320bdd5f246c vim-7.0-r2.ebuild 848
 MD5 e02794b516c7fbc83f90e3fab80e0601 vim-7.0.ebuild 762
