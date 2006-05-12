@@ -1,5 +1,5 @@
-MD5 0ecd24f0917131d4e642be80e59eee2e ChangeLog 2063
+MD5 966fd6e33b23409f87d613b4810ce195 ChangeLog 2152
 MD5 0b75f95937f0f8d238142c325a390e15 files/digest-shout-0.8.0-r2 62
 MD5 7f1390e82e15f4e013b0018ab6de6c52 files/variables.diff 1142
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 c3e08de41082fb51355baf9242a3bbe4 shout-0.8.0-r2.ebuild 1010
+MD5 a81701d6633bfd19cfc7c2fe23807ef3 shout-0.8.0-r2.ebuild 1009
