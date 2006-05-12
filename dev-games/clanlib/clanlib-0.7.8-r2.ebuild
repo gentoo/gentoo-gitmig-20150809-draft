@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.8-r2.ebuild,v 1.1 2006/03/26 19:53:36 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.8-r2.ebuild,v 1.2 2006/05/12 03:48:24 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.clanlib.org/download/files/ClanLib-${PV}-1.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0.7"
-KEYWORDS="~amd64 ~x86" #not big endian safe #82779
+KEYWORDS="amd64 x86" #not big endian safe #82779
 IUSE="opengl sdl vorbis doc mikmod ipv6"
 
 # opengl keyword does not drop the GL/GLU requirement.
