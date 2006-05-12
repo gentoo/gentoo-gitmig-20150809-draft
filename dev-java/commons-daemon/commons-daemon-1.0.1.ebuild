@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.1.ebuild,v 1.3 2006/05/12 12:59:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.1.ebuild,v 1.4 2006/05/12 13:03:26 betelgeuse Exp $
 
 inherit java-pkg eutils
 
@@ -25,6 +25,7 @@ S=${WORKDIR}/daemon-${PV}
 src_unpack() {
 	unpack ${A}
 
+	# Submitted upstream to http://bugs.gentoo.org/show_bug.cgi?id=132563
 	epatch "${FILESDIR}/1.0.1-as-needed.patch"
 
 	cd ${S}/src/native/unix
