@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ruby-opengl-0.32g.ebuild,v 1.1 2006/04/29 20:50:13 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ruby-opengl-0.32g.ebuild,v 1.2 2006/05/12 19:58:12 caleb Exp $
 
 inherit ruby
 
@@ -21,7 +21,7 @@ DEPEND="virtual/ruby
 S=${WORKDIR}/opengl-${PV}
 
 src_compile() {
-	ruby -i -pe 'sub "PLATFORM","RUBY_PLATFORM"' extconf.rb
+#	ruby -i -pe 'sub "PLATFORM","RUBY_PLATFORM"' extconf.rb
 	ruby extconf.rb || die
 	emake -j1 -f Makefile.ogl || die
 	emake -j1 -f Makefile.glut || die
