@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nurbs++/nurbs++-3.0.11.ebuild,v 1.9 2004/06/24 23:17:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nurbs++/nurbs++-3.0.11.ebuild,v 1.10 2006/05/12 22:56:55 tcort Exp $
 
 DESCRIPTION="NURBS surfaces manipulation library"
 HOMEPAGE="http://libnurbs.sourceforge.net/"
@@ -35,5 +35,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
