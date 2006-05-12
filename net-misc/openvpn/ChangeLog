@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.86 2006/05/10 08:43:49 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.87 2006/05/12 10:57:48 uberlord Exp $
+
+  12 May 2006; Roy Marples <uberlord@gentoo.org> files/down.sh, files/up.sh:
+  up.sh and down.sh now save and restore resolv.conf if we don't
+  have resolvconf installed, #132932.
 
   10 May 2006; Roy Marples <uberlord@gentoo.org> openvpn-2.1_beta14.ebuild,
   files/up.sh:

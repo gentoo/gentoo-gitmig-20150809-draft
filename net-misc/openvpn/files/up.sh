@@ -19,6 +19,10 @@ if [[ -n ${DNS} ]] ; then
 	if [[ -x /sbin/resolvconf ]] ; then
 		echo -e "${DNS}" | /sbin/resolvconf -a "${dev}"
 	else
+		# Preserve the existing resolv.conf
+		if [[ -e /etc/resolv.conf ]] ; then
+			cp /etc/resolv.conf /etc/resolv.conf-"${dev}".sv
+		fi
 		echo -e "${DNS}" > /etc/resolv.conf
 		chmod 644 /etc/resolv.conf
 	fi

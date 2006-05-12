@@ -8,8 +8,15 @@ if [[ -x /etc/openvpn/"${SVCNAME}"-down.sh ]] ; then
 	( /etc/openvpn/"${SVCNAME}"-down.sh )
 fi
 
-# Setup our resolv.conf
-[[ -x /sbin/resolvconf ]] && /sbin/resolvconf -d "${dev}"
+# Restore resolv.conf to how it was
+if [[ -x /sbin/resolvconf ]] ; then
+	/sbin/resolvconf -d "${dev}"
+elif [[ -e /etc/resolv.conf-"${dev}".sv ]] ; then
+	# Important that we copy instead of move incase resolv.conf is
+	# a symlink and not an actual file
+	cp /etc/resolv.conf-"${dev}".sv /etc/resolv.conf
+	rm -f /etc/resolv.conf-"${dev}".sv
+fi
 
 # Re-enter the init script to start any dependant services
 if /etc/init.d/"${SVCNAME}" --quiet status ; then
