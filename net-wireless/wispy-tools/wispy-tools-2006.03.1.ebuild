@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wispy-tools/wispy-tools-2006.03.1.ebuild,v 1.1 2006/04/11 16:10:38 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wispy-tools/wispy-tools-2006.03.1.ebuild,v 1.2 2006/05/12 21:47:07 brix Exp $
 
 MY_P=${P/\./-}
 MY_P=${MY_P/./-R}
@@ -12,7 +12,7 @@ SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="debug gtk ncurses"
 
 DEPEND="dev-libs/libusb
