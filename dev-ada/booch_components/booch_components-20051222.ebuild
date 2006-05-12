@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20051222.ebuild,v 1.1 2006/05/02 10:44:54 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20051222.ebuild,v 1.2 2006/05/12 13:56:07 george Exp $
 
 IUSE="doc"
 
@@ -33,6 +33,9 @@ lib_install() {
 	# new style booch components install Debug and Release versions, we only
 	# need the lib subdir of either
 	mkdir -p ${DL}/Debug
+	# both $SL and $DL are under ${WORKDIR}, so no dodir, doins... 
+	# (as lib_install is  called from src_compile it is not safe to have $DL
+	# under $D)
 	mv ${SL}/GNAT/*-Release/lib/* ${DL}
 	mv ${SL}/GNAT/*-Debug/lib/* ${DL}/Debug
 }
@@ -40,7 +43,8 @@ lib_install() {
 src_install () {
 	dodir "${AdalibSpecsDir}/${PN}"
 	cd ${S}
-	cp *.ad? ${D}/${AdalibSpecsDir}/${PN}
+	insinto "${AdalibSpecsDir}/${PN}"
+	doins *.ad?
 
 	#set up environment
 	echo "ADA_OBJECTS_PATH=%DL%" > ${LibEnv}
