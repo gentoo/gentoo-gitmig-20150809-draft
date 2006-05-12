@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/freenet
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.43 2005/09/16 23:35:50 ciaranm Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.44 2006/05/12 14:33:22 squinky86 Exp $
+
+  12 May 2006; Jon Hood <squinky86@gentoo.org> freenet-0.5.2.1-r8.ebuild:
+  Fix download mirrors for pkg_config(), bug #125712. Thanks to slick
+  <mail@deruwe.de> for the fixes.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

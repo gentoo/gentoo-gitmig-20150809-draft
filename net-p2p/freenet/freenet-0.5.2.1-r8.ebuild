@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.8 2005/07/13 14:28:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.9 2006/05/12 14:33:22 squinky86 Exp $
 
 inherit eutils
 
@@ -80,14 +80,12 @@ pkg_config() {
 		read -n 1 -t 2 YN
 		cp -f /usr/lib/freenet/freenet.jar /usr/lib/freenet/freenet.jar.old
 		if [ "${YN}" == "U" ] || [ "${YN}" == "u" ]; then
-			wget http://freenetproject.org/snapshots/freenet-unstable-latest.jar -O /usr/lib/freenet/freenet.jar
-			wget http://freenetproject.org/snapshots/unstable.ref.bz2 -O /var/freenet/seednodes.ref.bz2
-			bunzip2 -f /var/freenet/seednodes.ref.bz2
+			wget http://downloads.freenetproject.org/freenet-unstable-latest.jar -O /usr/lib/freenet/freenet.jar
 		else
-			wget http://freenetproject.org/snapshots/freenet-latest.jar -O /usr/lib/freenet/freenet.jar
-			wget http://freenetproject.org/snapshots/seednodes.ref.bz2 -O /var/freenet/seednodes.ref.bz2
-			bunzip2 -f /var/freenet/seednodes.ref.bz2
+			wget http://downloads.freenetproject.org/freenet-stable-latest.jar -O /usr/lib/freenet/freenet.jar
 		fi
+		wget http://downloads.freenetproject.org/seednodes/seednodes.ref.bz2 -O /var/freenet/seednodes.ref.bz2
+		bunzip2 -f /var/freenet/seednodes.ref.bz2
 		touch -d "1/1/1970" /var/freenet/seednodes.ref
 		chown freenet:freenet /var/freenet/seednodes.ref
 	fi
