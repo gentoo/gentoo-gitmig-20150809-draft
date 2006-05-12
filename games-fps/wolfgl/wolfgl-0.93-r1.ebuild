@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/wolfgl/wolfgl-0.93-r1.ebuild,v 1.7 2006/01/29 00:01:17 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/wolfgl/wolfgl-0.93-r1.ebuild,v 1.8 2006/05/12 16:59:18 mr_bones_ Exp $
 
-#ECVS_SERVER="cvs.sourceforge.net:/cvsroot/wolfgl"
+#ECVS_SERVER="wolfgl.cvs.sourceforge.net:/cvsroot/wolfgl"
 #ECVS_MODULE="wolfgl"
 #inherit cvs
 inherit eutils games
