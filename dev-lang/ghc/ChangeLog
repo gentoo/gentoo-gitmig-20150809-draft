@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.100 2006/05/07 15:09:42 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.101 2006/05/12 15:44:52 dcoutts Exp $
+
+  12 May 2006; Duncan Coutts <dcoutts@gentoo.org>
+  +files/ghc-6.4.2-alut.patch, ghc-6.4.2.ebuild:
+  Re-enable alut package and add hack for ia64
 
   05 May 2006; Chris Parrott <cparrott@gentoo.org> ghc-6.4.2.ebuild:
   Temporarily disabled openal USE flag, pending fix to openal bindings.

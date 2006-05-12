@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.3 2006/05/07 15:09:42 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.4 2006/05/12 15:44:52 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -27,25 +27,27 @@ EXTRA_SRC_URI="${MY_PV}"
 [[ -z "${IS_SNAPSHOT}" ]] && EXTRA_SRC_URI="stable/dist"
 
 SRC_URI="http://www.haskell.org/ghc/dist/${EXTRA_SRC_URI}/${MY_P}-src.tar.bz2
-		test? ( http://haskell.org/ghc/dist/ghc-testsuite-${MY_PV}.tar.gz )"
+		test? ( http://haskell.org/ghc/dist/ghc-testsuite-${MY_PV}.tar.gz )
+		mirror://gentoo/${P}-alut.patch.gz"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="test doc X opengl"  # openal temporarily disabled pending fix
+IUSE="test doc X opengl openal"
 
 S="${WORKDIR}/${MY_P}"
 
 PROVIDE="virtual/ghc"
 
-# openal temporarily disabled pending fix
 RDEPEND="
 	>=sys-devel/gcc-2.95.3
 	>=dev-lang/perl-5.6.1
 	>=dev-libs/gmp-4.1
 	>=sys-libs/readline-4.2
 	X? ( || ( x11-libs/libX11 virtual/x11 ) )
-	opengl? ( virtual/opengl virtual/glu virtual/glut )"
+	opengl? ( virtual/opengl
+			  virtual/glu virtual/glut
+			  openal? ( media-libs/openal ) )"
 
 # ghc cannot usually be bootstrapped using later versions ...
 DEPEND="${RDEPEND}
@@ -58,18 +60,24 @@ DEPEND="${RDEPEND}
 
 PDEPEND=">=dev-haskell/cabal-1.1.4"
 
-# Portage's resolution of virtuals fails on virtual/ghc in some Portage releases,
-# the following function causes the build to fail with an informative error message
-# in such a case.
-# pkg_setup() {
-# 	if ! has_version virtual/ghc; then
-# 		eerror "This ebuild needs a version of GHC to bootstrap from."
-# 		eerror "Please emerge dev-lang/ghc-bin to get a binary version."
-# 		eerror "You can either use the binary version directly or emerge"
-# 		eerror "dev-lang/ghc afterwards."
-# 		die "virtual/ghc version required to build"
-# 	fi
-# }
+pkg_setup() {
+	if use openal && ! use opengl; then
+		ewarn "The OpenAL bindings require the OpenGL bindings, however"
+		ewarn "USE=\"-opengl\" so the OpenAL bindings will not be built."
+		ewarn "To build the OpenAL bindings emerge with USE=\"openal opengl\""
+	fi
+
+	# Portage's resolution of virtuals fails on virtual/ghc in some Portage
+	# releases, the following function causes the build to fail with an
+	# informative error message in such a case.
+	#if ! has_version virtual/ghc; then
+	#	eerror "This ebuild needs a version of GHC to bootstrap from."
+	#	eerror "Please emerge dev-lang/ghc-bin to get a binary version."
+	#	eerror "You can either use the binary version directly or emerge"
+	#	eerror "dev-lang/ghc afterwards."
+	#	die "virtual/ghc version required to build"
+	#fi
+}
 
 append-ghc-cflags() {
 	local flag compile assemble link
@@ -129,6 +137,9 @@ src_unpack() {
 	base_src_unpack
 	ghc_setup_cflags
 
+	cd ${S}
+	epatch "${WORKDIR}/${P}-alut.patch"
+
 	# Modify the ghc driver script to use GHC_CFLAGS
 	echo "SCRIPT_SUBST_VARS += GHC_CFLAGS" >> "${S}/ghc/driver/ghc/Makefile"
 	echo "GHC_CFLAGS = ${GHC_CFLAGS}"      >> "${S}/ghc/driver/ghc/Makefile"
@@ -136,6 +147,11 @@ src_unpack() {
 
 	# If we're using the testsuite then move it to into the build tree
 	use test && mv "${WORKDIR}/testsuite" "${S}/"
+
+	# This is a hack for ia64. We can persuade ghc to avoid mangler errors
+	# if we turn down the optimisations in one problematic module.
+	use ia64 && sed -i -e 's/OPTIONS_GHC/OPTIONS_GHC -O0 -optc-O/' \
+		"${S}/libraries/base/GHC/Float.lhs"
 }
 
 src_compile() {
@@ -186,12 +202,15 @@ src_compile() {
 		echo "SplitObjs=NO" >> mk/build.mk
 	fi
 
-	# openal temporarily disabled pending fix
+	# We've patched some configure.ac files to fix the OpenAL/ALUT bindings.
+	# So we need to autoreconf.
+	eautoreconf
+
 	econf \
 		$(use_enable opengl opengl) \
 		$(use_enable opengl glut) \
-		--disable-openal \
-		--disable-alut \
+		$(use_enable openal openal) \
+		$(use_enable openal alut) \
 		$(use_enable X x11) \
 		$(use_enable X hgl) \
 		|| die "econf failed"
