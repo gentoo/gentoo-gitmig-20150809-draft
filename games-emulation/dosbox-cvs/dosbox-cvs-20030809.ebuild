@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.14 2006/02/27 20:56:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.15 2006/05/12 16:58:14 mr_bones_ Exp $
 
 inherit games cvs
 
@@ -20,7 +20,7 @@ DEPEND="media-libs/alsa-lib
 	media-libs/sdl-net
 	debug? ( sys-libs/ncurses )"
 
-ECVS_SERVER="cvs.sourceforge.net:/cvsroot/dosbox"
+ECVS_SERVER="dosbox.cvs.sourceforge.net:/cvsroot/dosbox"
 ECVS_MODULE="dosbox"
 ECVS_TOP_DIR=${DISTDIR}/cvs-src/${PN}
 
