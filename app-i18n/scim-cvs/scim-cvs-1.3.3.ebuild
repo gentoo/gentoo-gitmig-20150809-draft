@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-1.3.3.ebuild,v 1.2 2006/02/10 19:13:17 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-1.3.3.ebuild,v 1.3 2006/05/12 13:37:45 flameeyes Exp $
 
 inherit eutils cvs
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="gnome immqt immqt-bc"
 
 ECVS_AUTH="pserver"
-ECVS_SERVER="cvs.sourceforge.net:/cvsroot/scim"
+ECVS_SERVER="scim.cvs.sourceforge.net:/cvsroot/scim"
 ECVS_USER="anonymous"
 ECVS_PASS=""
 ECVS_MODULE="scim"
