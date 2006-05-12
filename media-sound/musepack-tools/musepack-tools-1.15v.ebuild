@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v.ebuild,v 1.7 2006/04/18 17:46:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v.ebuild,v 1.8 2006/05/12 22:43:21 flameeyes Exp $
 
 IUSE="static 16bit esd"
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic flag-o-matic
 
 S="${WORKDIR}/sv7"
 
@@ -14,13 +14,14 @@ SRC_URI="http://files.musepack.net/source/mpcsv7-src-${PV}.tar.bz2"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 x86 ~x86-fbsd"
 
 RDEPEND="esd? ( media-sound/esound )
 	 media-libs/id3lib"
 
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
+	x86-fbsd? ( dev-lang/nasm )
 	amd64? ( dev-lang/nasm )"
 
 src_unpack() {
@@ -39,7 +40,7 @@ src_unpack() {
 			Makefile
 	fi
 
-	if ! use x86 ; then
+	if [[ $(tc-arch) != "x86" ]] ; then
 		sed -i 's/#define USE_ASM/#undef USE_ASM/' mpp.h
 	fi
 
@@ -49,6 +50,7 @@ src_unpack() {
 	sed -i -e 's/$(LDADD) &> $(LOGFILE)/$(LDADD)/' Makefile
 
 	epatch "${FILESDIR}/${P}-execstack.patch"
+	epatch "${FILESDIR}/${P}-fbsd.patch"
 }
 
 src_compile() {
@@ -58,7 +60,7 @@ src_compile() {
 
 	append-flags -I${S}
 
-	ARCH= emake mppenc mppdec replaygain || die
+	ARCH= emake CC="$(tc-getCC)" mppenc mppdec replaygain || die
 }
 
 src_install() {
