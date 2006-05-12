@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/openvrml-0.11.2.ebuild,v 1.16 2004/08/25 02:29:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/openvrml-0.11.2.ebuild,v 1.17 2006/05/12 23:00:31 tcort Exp $
 
 IUSE="jpeg png"
 
@@ -37,9 +37,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die
-
-	dodoc AUTHORS COPYING* ChangeLog NEWS README THANKS
-
+	dodoc AUTHORS ChangeLog NEWS README THANKS
 }

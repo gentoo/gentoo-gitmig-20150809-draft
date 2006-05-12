@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/openvrml-0.14.3.ebuild,v 1.10 2006/03/07 12:35:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/openvrml-0.14.3.ebuild,v 1.11 2006/05/12 23:00:31 tcort Exp $
 
 IUSE="java javascript jpeg opengl png truetype truetype zlib"
 
@@ -71,9 +71,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die "make install failed"
-
-	dodoc AUTHORS COPYING* ChangeLog INSTALL NEWS README THANKS
-
+	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS
 }

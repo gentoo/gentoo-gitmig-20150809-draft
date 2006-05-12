@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/openquicktime-1.0-r1.ebuild,v 1.12 2005/09/13 20:26:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/openquicktime-1.0-r1.ebuild,v 1.13 2006/05/12 22:58:22 tcort Exp $
 
 inherit flag-o-matic eutils
 replace-flags "-fprefetch-loop-arrays" " "
@@ -42,7 +42,7 @@ src_compile() {
 src_install() {
 	cd ${S}
 	dolib.so libopenquicktime.so
-	dodoc README AUTHORS NEWS COPYING TODO
+	dodoc README AUTHORS NEWS TODO
 	dodir /usr/bin
 	einstall || die
 }

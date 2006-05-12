@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openvrml
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/ChangeLog,v 1.16 2006/03/07 12:35:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/ChangeLog,v 1.17 2006/05/12 23:00:31 tcort Exp $
+
+  12 May 2006; Thomas Cort <tcort@gentoo.org> openvrml-0.11.2.ebuild,
+  openvrml-0.14.3.ebuild:
+  Removed COPYING from dodoc.
 
   07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
   openvrml-0.14.3.ebuild:
