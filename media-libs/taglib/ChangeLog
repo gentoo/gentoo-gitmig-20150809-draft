@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.46 2006/05/12 20:42:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.47 2006/05/13 17:21:08 flameeyes Exp $
+
+*taglib-1.4-r1 (13 May 2006)
+
+  13 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/taglib-1.4-dirtypointer.patch, +taglib-1.4-r1.ebuild:
+  Add a patch to avoid a dirty pointer in TagLib::FLAC::FilePrivate::tag, that
+  might lead to crashes if dereferenced.
 
   12 May 2006; Diego Pettenò <flameeyes@gentoo.org> taglib-1.4.ebuild:
   Add ~x86-fbsd keyword.
