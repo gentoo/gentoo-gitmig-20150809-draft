@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/openbabel
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.2 2004/12/24 20:18:30 swegener Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.3 2006/05/13 22:11:47 spyderous Exp $
+
+*openbabel-2.0.1 (13 May 2006)
+
+  13 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +openbabel-2.0.1.ebuild:
+  Bump. Many of the changes are internal, to help adding new translators etc.
+  Also adds support for Perl and Python scripting, better batch conversion,
+  support for reading gzipped files and support for InChI identifiers.
 
 *openbabel-1.100.2 (24 Dec 2004)
 
