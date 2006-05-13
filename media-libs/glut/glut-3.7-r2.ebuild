@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7-r2.ebuild,v 1.19 2005/09/07 16:17:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7-r2.ebuild,v 1.20 2006/05/13 20:19:08 spyderous Exp $
 
 MESA_VER="4.0.1"
 S=${WORKDIR}/Mesa-${MESA_VER}
@@ -16,8 +16,6 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/glu"
-
-PROVIDE="virtual/glut"
 
 src_compile() {
 

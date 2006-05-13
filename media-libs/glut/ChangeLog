@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/glut
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.21 2006/04/13 13:33:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.22 2006/05/13 20:19:08 spyderous Exp $
+
+  13 May 2006; Donnie Berkholz <spyderous@gentoo.org>; glut-3.7-r2.ebuild,
+  glut-3.7.1.ebuild:
+  Don't block virtual/glut, and don't provide it either, for compat with
+  new-style virtual.
 
   13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> glut-3.7.1.ebuild:
   Add ~x86-fbsd keyword.
