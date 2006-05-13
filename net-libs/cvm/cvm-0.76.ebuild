@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.76.ebuild,v 1.8 2006/04/29 00:40:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.76.ebuild,v 1.9 2006/05/13 23:50:20 weeve Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ SRC_URI="${HOMEPAGE}archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc ~sparc x86"
+KEYWORDS="ppc sparc x86"
 IUSE="mysql postgres"
 
 RDEPEND="virtual/libc
