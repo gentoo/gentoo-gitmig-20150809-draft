@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r1.ebuild,v 1.6 2006/05/12 23:55:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r1.ebuild,v 1.7 2006/05/13 04:31:12 vapier Exp $
 
 MAN_VER=""
 PATCH_VER="1.2"
@@ -24,7 +24,7 @@ PIE_GLIBC_STABLE="x86 sparc amd64 ppc ppc64"
 PIE_UCLIBC_STABLE="x86 mips ppc"
 
 # arch/libc configurations known to be broken with {PIE,SSP}-by-default
-SSP_UNSUPPORTED="hppa"
+SSP_UNSUPPORTED="hppa sh"
 SSP_UCLIBC_UNSUPPORTED="${SSP_UNSUPPORTED}"
 PIE_UCLIBC_UNSUPPORTED="alpha amd64 arm hppa ia64 m68k ppc64 s390 sh sparc"
 PIE_GLIBC_UNSUPPORTED="hppa"
@@ -40,7 +40,7 @@ inherit toolchain eutils
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
-KEYWORDS="-* ~alpha ~amd64 ~arm mips ~ppc ppc64 ~sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="-* ~alpha ~amd64 arm mips ~ppc ppc64 sh sparc ~x86 ~x86-fbsd"
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 # NOTE: we SHOULD be using at least binutils 2.15.90.0.1 everywhere for proper
