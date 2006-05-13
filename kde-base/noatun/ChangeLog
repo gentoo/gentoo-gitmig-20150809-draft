@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/noatun
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.46 2006/05/09 11:42:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.47 2006/05/13 01:23:15 carlo Exp $
+
+  13 May 2006; Carsten Lohrke <carlo@gentoo.org> noatun-3.5.2.ebuild:
+  Call pkg_setup() from kde.eclass.
 
   09 May 2006; Diego Pettenò <flameeyes@gentoo.org> noatun-3.5.2.ebuild:
   Fix src_compile funciton naming, avoid looping. Thanks to Daniel King in bug

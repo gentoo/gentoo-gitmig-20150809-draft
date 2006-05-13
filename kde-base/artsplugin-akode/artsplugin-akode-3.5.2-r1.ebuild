@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-akode/artsplugin-akode-3.5.2-r1.ebuild,v 1.1 2006/04/02 23:55:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-akode/artsplugin-akode-3.5.2-r1.ebuild,v 1.2 2006/05/13 01:25:30 carlo Exp $
 
 KMNAME=kdemultimedia
 KMMODULE=akode_artsplugin
@@ -23,6 +23,7 @@ pkg_setup() {
 		eerror "${PN} needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
 		die
 	fi
+	kde_pkg_setup
 }
 
 src_compile() {

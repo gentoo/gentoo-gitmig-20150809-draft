@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kghostview
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kghostview/ChangeLog,v 1.45 2006/05/10 12:50:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kghostview/ChangeLog,v 1.46 2006/05/13 01:24:02 carlo Exp $
+
+  13 May 2006; Carsten Lohrke <carlo@gentoo.org> kghostview-3.5.2.ebuild:
+  Call pkg_setup() from kde.eclass.
 
   10 May 2006; Caleb Tennis <caleb@gentoo.org> kghostview-3.5.2.ebuild:
   Fix build_with_use typo from bug #132812
