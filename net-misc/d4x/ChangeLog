@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/d4x
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.41 2006/05/13 18:26:07 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.42 2006/05/13 21:56:29 nelchael Exp $
+
+  13 May 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  files/d4x-2.5.7.1-speed.patch:
+  Fixed patch.
 
 *d4x-2.5.7.1-r1 (13 May 2006)
 
