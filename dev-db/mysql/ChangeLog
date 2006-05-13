@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.332 2006/05/13 14:54:39 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.333 2006/05/13 16:36:08 tcort Exp $
+
+  13 May 2006; Thomas Cort <tcort@gentoo.org> mysql-4.0.27.ebuild:
+  Stable on alpha wrt security Bug #132146.
 
   13 May 2006; Thomas Cort <tcort@gentoo.org> mysql-4.0.27.ebuild:
   Stable on amd64 wrt security Bug #132146.
