@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/certmanager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.44 2006/05/12 12:24:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.45 2006/05/13 00:34:08 carlo Exp $
+
+  13 May 2006; Carsten Lohrke <carlo@gentoo.org>
+  certmanager-3.5.2-r1.ebuild:
+  Correct GnuPG dependency.
 
 *certmanager-3.5.2-r1 (12 May 2006)
 
