@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.99.ebuild,v 1.6 2005/09/06 13:03:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.99.ebuild,v 1.7 2006/05/13 23:37:55 dragonheart Exp $
 
-ECVS_SERVER="cvs.sourceforge.net:/cvsroot/crystal"
+ECVS_SERVER="crystal.cvs.sourceforge.net:/cvsroot/crystal"
 ECVS_MODULE="CS"
 ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
 inherit cvs
