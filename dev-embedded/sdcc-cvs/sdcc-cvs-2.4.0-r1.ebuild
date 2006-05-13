@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc-cvs/sdcc-cvs-2.4.0-r1.ebuild,v 1.7 2006/05/06 10:31:47 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc-cvs/sdcc-cvs-2.4.0-r1.ebuild,v 1.8 2006/05/13 04:27:16 dragonheart Exp $
 
 
-ECVS_SERVER="cvs.sourceforge.net:/cvsroot/sdcc"
+ECVS_SERVER="sdcc.cvs.sourceforge.net:/cvsroot/sdcc"
 ECVS_MODULE="sdcc"
 
 inherit cvs
