@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/d4x
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.40 2006/05/06 17:20:06 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.41 2006/05/13 18:26:07 nelchael Exp $
+
+*d4x-2.5.7.1-r1 (13 May 2006)
+
+  13 May 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/d4x-2.5.7.1-speed.patch, -d4x-2.5.7.1.ebuild,
+  +d4x-2.5.7.1-r1.ebuild:
+  Added a patch to fix download speed issue, see bug #130479.
 
 *d4x-2.5.7.1 (06 May 2006)
 
