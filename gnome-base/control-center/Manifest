@@ -26,6 +26,10 @@ AUX control-center-2.13.5-disable-master-pty.patch 2757 RMD160 f6f794a9520913ebd
 MD5 680d269279890131049c6d8ac4aee94f files/control-center-2.13.5-disable-master-pty.patch 2757
 RMD160 f6f794a9520913ebdbf430b8fb2581101b4f9c4e files/control-center-2.13.5-disable-master-pty.patch 2757
 SHA256 3606db5462447f6034047b8697762065681b9dbfe94c52afda7ea5e375b1a38f files/control-center-2.13.5-disable-master-pty.patch 2757
+AUX control-center-2.14.1-path-fix.patch 6726 RMD160 8a4bfc343e8f4b5ca3609fce696cbe01c9bd69f7 SHA1 b8fd33b151e61c6c691e6cc6def70286206c2d44 SHA256 c846f18199d664f3e40fb468439b7fb83638a2b3a22e9294c6401dd71292ae64 size 6726
+MD5 689f563f79fc4a72120cc4fcc2c58cf4 files/control-center-2.14.1-path-fix.patch 6726
+RMD160 8a4bfc343e8f4b5ca3609fce696cbe01c9bd69f7 files/control-center-2.14.1-path-fix.patch 6726
+SHA256 c846f18199d664f3e40fb468439b7fb83638a2b3a22e9294c6401dd71292ae64 files/control-center-2.14.1-path-fix.patch 6726
 AUX control-center-2.2.0.1-alpha_hack.patch 2997 RMD160 0526e8eb5eb906e62269be1b7c34114c00de97ba SHA1 7add370ec5fba49d5bcfeb9ebcf0f8509fe7b723 SHA256 2e70b93f939824151eaf6c1a98ddb5ba7e8d233cd126b6dcd747692075a57e93 size 2997
 MD5 fdc3d7feea8b429588a2d193c9547dbf files/control-center-2.2.0.1-alpha_hack.patch 2997
 RMD160 0526e8eb5eb906e62269be1b7c34114c00de97ba files/control-center-2.2.0.1-alpha_hack.patch 2997
@@ -76,14 +80,18 @@ EBUILD control-center-2.12.3.ebuild 2530 RMD160 1ed05b0606f0d9f679df8e95eddcb930
 MD5 8291091e1094827a14c1f00a3f854099 control-center-2.12.3.ebuild 2530
 RMD160 1ed05b0606f0d9f679df8e95eddcb930588b8865 control-center-2.12.3.ebuild 2530
 SHA256 5cf26461c3565b4253888e8135321cc8f866c3be8ec4be294450b98a0e7a7748 control-center-2.12.3.ebuild 2530
+EBUILD control-center-2.14.1-r1.ebuild 2438 RMD160 cc1162b00f2e45b0cf450562f2cb9b978f86c31a SHA1 038abcd0dcf676bbd95f9d68f1e02a7b2e05877e SHA256 470897bdcd2d7fe2ab486a37dcf6ab81b73db78c399b93e639b533e832cfacbc size 2438
+MD5 ff3306ac474fdc468cb94b6d6bb882ae control-center-2.14.1-r1.ebuild 2438
+RMD160 cc1162b00f2e45b0cf450562f2cb9b978f86c31a control-center-2.14.1-r1.ebuild 2438
+SHA256 470897bdcd2d7fe2ab486a37dcf6ab81b73db78c399b93e639b533e832cfacbc control-center-2.14.1-r1.ebuild 2438
 EBUILD control-center-2.14.1.ebuild 2316 RMD160 88b80e30137b0e2452324e0c2f5a4d9c193136a7 SHA1 95bab327412cc020e1e2697d19fa4e9150c79d9f SHA256 7d21082743c83fd15fdec4c54b0801429a3fdab1caa65a6503161b537c238f22 size 2316
 MD5 be5eb46756789236d252a9a9d065defc control-center-2.14.1.ebuild 2316
 RMD160 88b80e30137b0e2452324e0c2f5a4d9c193136a7 control-center-2.14.1.ebuild 2316
 SHA256 7d21082743c83fd15fdec4c54b0801429a3fdab1caa65a6503161b537c238f22 control-center-2.14.1.ebuild 2316
-MISC ChangeLog 23613 RMD160 1d787a5efd2c79c228b7a853ebcd6fb0bac1e828 SHA1 157e61bf1c6f7d2767a57f0df2aa31c5448ab504 SHA256 9cd7221e75a91abcf74d922036f6df9fffa76ebdadeb9be8afa71acc234d603e size 23613
-MD5 f5bd439ac0f1a66d6f1906b9504db630 ChangeLog 23613
-RMD160 1d787a5efd2c79c228b7a853ebcd6fb0bac1e828 ChangeLog 23613
-SHA256 9cd7221e75a91abcf74d922036f6df9fffa76ebdadeb9be8afa71acc234d603e ChangeLog 23613
+MISC ChangeLog 23871 RMD160 6be7cbc548b8f5c014d7ec9c640741467e3a5d91 SHA1 43fa950154630c915a50cdc5e738e63d178a7a01 SHA256 21ad8084f4d66749300fd5be3646aa66b0ebaf79202548904c15d14b720f192d size 23871
+MD5 70072bd21796b1bdda5be53320d540af ChangeLog 23871
+RMD160 6be7cbc548b8f5c014d7ec9c640741467e3a5d91 ChangeLog 23871
+SHA256 21ad8084f4d66749300fd5be3646aa66b0ebaf79202548904c15d14b720f192d ChangeLog 23871
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 size 158
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -112,3 +120,6 @@ SHA256 823bf965a849b3af8dceda063c13c6e3adf9db3092ed4be7585fdf14caf6e894 files/di
 MD5 9561621d5091eb9ce69505b24211fcde files/digest-control-center-2.14.1 271
 RMD160 9171851639787945ab188126a13c7ddc8886ede7 files/digest-control-center-2.14.1 271
 SHA256 97512fa2ea7db5495ce23aae7f2e325fec8632374fb228929ed4aa0dcc025dee files/digest-control-center-2.14.1 271
+MD5 9561621d5091eb9ce69505b24211fcde files/digest-control-center-2.14.1-r1 271
+RMD160 9171851639787945ab188126a13c7ddc8886ede7 files/digest-control-center-2.14.1-r1 271
+SHA256 97512fa2ea7db5495ce23aae7f2e325fec8632374fb228929ed4aa0dcc025dee files/digest-control-center-2.14.1-r1 271

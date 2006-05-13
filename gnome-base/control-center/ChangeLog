@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.178 2006/05/06 12:36:48 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.179 2006/05/13 13:40:48 allanonjl Exp $
+
+*control-center-2.14.1-r1 (13 May 2006)
+
+  13 May 2006; John N. Laliberte <allanonjl@gentoo.org>
+  +files/control-center-2.14.1-path-fix.patch,
+  +control-center-2.14.1-r1.ebuild:
+  backport patch from cvs to fix hardcoded bzip2 / tar paths.  fixes #133091
 
   06 May 2006; John N. Laliberte <allanonjl@gentoo.org>
   -control-center-2.14.0.ebuild, control-center-2.14.1.ebuild:
