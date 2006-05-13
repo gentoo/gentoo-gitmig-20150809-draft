@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.18 2006/05/13 05:25:25 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.19 2006/05/13 10:30:52 keri Exp $
+
+  13 May 2006; Keri Harris <keri@gentoo.org>
+  mercury-extras-0.13.0_beta20060501.ebuild:
+  Change upstream SRC_URI.
 
   13 May 2006; Keri Harris <keri@gentoo.org>
   -files/mercury-extras-0.13.0_beta-trailed_update.patch,

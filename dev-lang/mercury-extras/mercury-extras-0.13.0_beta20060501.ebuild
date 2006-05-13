@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.13.0_beta20060501.ebuild,v 1.1 2006/05/13 05:11:10 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.13.0_beta20060501.ebuild,v 1.2 2006/05/13 10:30:52 keri Exp $
 
 inherit eutils versionator
 
@@ -13,7 +13,7 @@ MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="Additional libraries and tools that are not part of the Mercury standard library"
 HOMEPAGE="http://www.cs.mu.oz.au/research/mercury/index.html"
-SRC_URI="ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/beta-releases/${MY_PV}/${MY_P}-unstable.tar.gz"
+SRC_URI="ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/beta-releases/0.13.0-beta/${MY_P}-unstable.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
