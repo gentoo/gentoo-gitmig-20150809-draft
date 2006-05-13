@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.14.0-r1.ebuild,v 1.1 2006/05/11 02:10:08 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.14.0-r1.ebuild,v 1.2 2006/05/13 18:25:28 allanonjl Exp $
 
 inherit gnome2 eutils autotools
 
@@ -35,7 +35,7 @@ RDEPEND=">=dev-libs/glib-1.3.7
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=app-text/scrollkeeper-0.3.11
-	>=dev-util/intltool-0.28"
+	>=dev-util/intltool-0.34.2"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 

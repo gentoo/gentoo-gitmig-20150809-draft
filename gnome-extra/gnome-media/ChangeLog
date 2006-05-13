@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.109 2006/05/11 02:10:08 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.110 2006/05/13 18:25:28 allanonjl Exp $
+
+  13 May 2006; John N. Laliberte <allanonjl@gentoo.org>
+  gnome-media-2.14.0-r1.ebuild:
+  bump intltool dep to fix #133166
 
 *gnome-media-2.14.0-r1 (11 May 2006)
 
