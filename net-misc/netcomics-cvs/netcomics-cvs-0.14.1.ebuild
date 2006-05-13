@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netcomics-cvs/netcomics-cvs-0.14.1.ebuild,v 1.6 2006/02/13 00:45:32 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netcomics-cvs/netcomics-cvs-0.14.1.ebuild,v 1.7 2006/05/13 04:44:02 dragonheart Exp $
 
 inherit cvs perl-app
 
-ECVS_SERVER="cvs.sourceforge.net:/cvsroot/netcomics"
+ECVS_SERVER="netcomics.cvs.sourceforge.net:/cvsroot/netcomics"
 ECVS_MODULE="netcomics"
 ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
 S=${WORKDIR}/${ECVS_MODULE}

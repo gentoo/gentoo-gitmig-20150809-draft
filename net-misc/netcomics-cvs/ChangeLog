@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netcomics-cvs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netcomics-cvs/ChangeLog,v 1.5 2006/04/27 22:08:52 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netcomics-cvs/ChangeLog,v 1.6 2006/05/13 04:44:02 dragonheart Exp $
+
+  13 May 2006; Daniel Black <dragonheart@gentoo.org>
+  netcomics-cvs-0.14.1.ebuild:
+  sourceforge cvs location change - bug #133081 refers. Thanks Tyler Mandry
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-netcomics-cvs-0.14.1, Manifest:
