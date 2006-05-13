@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.91 2006/05/12 13:26:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.92 2006/05/13 15:57:26 nixnut Exp $
+
+  13 May 2006; <nixnut@gentoo.org> eix-0.5.5.ebuild:
+  Stable on ppc. bug #132931
 
   12 May 2006; Gustavo Zacarias <gustavoz@gentoo.org> eix-0.5.5.ebuild:
   Stable on sparc wrt #132931
