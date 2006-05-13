@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-0.9.6_p20060301.ebuild,v 1.1 2006/03/03 10:18:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-0.9.6_p20060301.ebuild,v 1.2 2006/05/13 04:46:25 dragonheart Exp $
 
 
 inherit cvs
@@ -16,7 +16,7 @@ inherit cvs
 # modified 3/2006 at suggestion of Stefan Schweizer to alter CVS fetch
 # to be date sensitive for easier version tracking.
 
-ECVS_SERVER="cvs.sourceforge.net:/cvsroot/avf"
+ECVS_SERVER="avf.cvs.sourceforge.net:/cvsroot/avf"
 ECVS_MODULE="${PN}"
 # Branch not needed
 # ECVS_BRANCH="MAIN"

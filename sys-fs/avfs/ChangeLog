@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/avfs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.1 2006/03/03 10:18:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.2 2006/05/13 04:46:25 dragonheart Exp $
+
+  13 May 2006; Daniel Black <dragonheart@gentoo.org>
+  avfs-0.9.6_p20060301.ebuild:
+  sourceforge cvs location change - bug #133081 refers. Thanks Tyler Mandry
 
 *avfs-0.9.6_p20060301 (03 Mar 2006)
 
