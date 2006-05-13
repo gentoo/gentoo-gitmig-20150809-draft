@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.8.4.4.ebuild,v 1.1 2005/02/23 17:49:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.8.4.4.ebuild,v 1.2 2006/05/13 20:46:04 george Exp $
 
-inherit eutils gnat
+inherit eutils
 
 DESCRIPTION="An Interface to BSD sockets from Ada (TCP, UDP and multicast)."
 SRC_URI="http://www.rfc1149.net/download/adasockets/${P}.tar.gz"

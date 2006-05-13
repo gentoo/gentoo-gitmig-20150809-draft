@@ -1,10 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/charles/charles-20030813.ebuild,v 1.6 2006/05/12 14:14:38 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/charles/charles-20030813.ebuild,v 1.7 2006/05/13 20:52:46 george Exp $
 
 IUSE=""
-
-inherit gnat
 
 DESCRIPTION="Charles Container Library for Ada"
 SRC_URI="http://home.earthlink.net/~matthewjheaney/charles/${P}.zip

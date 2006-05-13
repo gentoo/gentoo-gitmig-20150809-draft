@@ -1,8 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/adabroker-1.0_pre4.ebuild,v 1.11 2006/04/21 11:46:06 george Exp $
-
-inherit gnat
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/adabroker-1.0_pre4.ebuild,v 1.12 2006/05/13 20:39:02 george Exp $
 
 S="${WORKDIR}/${PN}-1.0pre4"
 DESCRIPTION="AdaBroker is a CORBA implementation for Ada."

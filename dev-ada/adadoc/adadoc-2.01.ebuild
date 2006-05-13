@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/adadoc-2.01.ebuild,v 1.6 2005/01/01 17:22:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/adadoc-2.01.ebuild,v 1.7 2006/05/13 20:41:36 george Exp $
 
-inherit eutils gnat
+inherit eutils
 
 DESCRIPTION="A tool for Ada95 to create documentation from specification packages."
 

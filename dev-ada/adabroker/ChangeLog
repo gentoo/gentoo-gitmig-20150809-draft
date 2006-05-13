@@ -1,6 +1,10 @@
 # ChangeLog for dev-ada/adabroker
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/ChangeLog,v 1.8 2006/04/21 11:46:05 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/ChangeLog,v 1.9 2006/05/13 20:39:02 george Exp $
+
+  13 May 2006; George Shapovalov <george@gentoo.org>
+  adabroker-1.0_pre4.ebuild:
+  removed inherit gnat until adapted for new eclass
 
   21 Apr 2006; George Shapovalov <george@gentoo.org>
   adabroker-1.0_pre4.ebuild:

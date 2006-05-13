@@ -1,10 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20030815.ebuild,v 1.7 2006/05/12 13:56:07 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20030815.ebuild,v 1.8 2006/05/13 20:50:39 george Exp $
 
 IUSE=""
-
-inherit gnat
 
 Name="bc"
 S="${WORKDIR}/${Name}-${PV}"

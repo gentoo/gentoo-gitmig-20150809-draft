@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.4.0.ebuild,v 1.3 2006/01/18 14:15:40 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.4.0.ebuild,v 1.4 2006/05/13 21:01:51 george Exp $
 
-inherit gnat eutils
+inherit eutils
 
 Name="GtkAda"
 DESCRIPTION="Gtk+ bindings to the Ada language"

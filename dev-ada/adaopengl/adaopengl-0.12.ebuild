@@ -1,8 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adaopengl/adaopengl-0.12.ebuild,v 1.8 2005/04/24 03:30:31 hansmi Exp $
-
-inherit gnat
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adaopengl/adaopengl-0.12.ebuild,v 1.9 2006/05/13 20:43:53 george Exp $
 
 DESCRIPTION="This is an Ada-binding to OpenGL and some of it's related libraries."
 SRC_URI="mirror://sourceforge/adaopengl/${P}.tar.bz2"

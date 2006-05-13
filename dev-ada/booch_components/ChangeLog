@@ -1,6 +1,10 @@
 # ChangeLog for dev-ada/booch_components
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/ChangeLog,v 1.7 2006/05/12 13:56:07 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/ChangeLog,v 1.8 2006/05/13 20:50:39 george Exp $
+
+  13 May 2006; George Shapovalov <george@gentoo.org>
+  booch_components-20030815.ebuild:
+  removed inherit gnat until adapted for new eclass
 
   12 May 2006; George Shapovalov <george@gentoo.org>
   booch_components-20030815.ebuild:

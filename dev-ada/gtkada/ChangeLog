@@ -1,6 +1,10 @@
 # ChangeLog for dev-ada/gtkada
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.14 2006/01/18 14:15:40 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.15 2006/05/13 21:01:51 george Exp $
+
+  13 May 2006; George Shapovalov <george@gentoo.org> gtkada-2.2.0-r1.ebuild,
+  gtkada-2.2.1.ebuild, gtkada-2.2.1-r1.ebuild, gtkada-2.4.0.ebuild:
+  removed inherit gnat until adapted for new eclass
 
   18 Jan 2006; Luis Medinas <metalgod@gentoo.org> gtkada-2.4.0.ebuild:
   Added ~amd64 keyword.
