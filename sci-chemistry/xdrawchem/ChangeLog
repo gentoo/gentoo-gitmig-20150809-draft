@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/xdrawchem
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.19 2005/08/11 07:06:40 phosphan Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.20 2006/05/13 22:07:49 spyderous Exp $
+
+  13 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xdrawchem-1.9.5.ebuild, xdrawchem-1.9.6.ebuild, xdrawchem-1.9.7.ebuild,
+  xdrawchem-1.9.8.ebuild:
+  Update openbabel dep for adding openbabel-2 to the tree.
 
 *xdrawchem-1.9.8 (11 Aug 2005)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/ghemical
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.14 2005/12/06 11:05:17 spyderous Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.15 2006/05/13 22:07:03 spyderous Exp $
+
+  13 May 2006; Donnie Berkholz <spyderous@gentoo.org>; ghemical-1.02.ebuild:
+  Update openbabel dep for adding openbabel-2 to the tree.
 
 *ghemical-1.91 (06 Dec 2005)
 

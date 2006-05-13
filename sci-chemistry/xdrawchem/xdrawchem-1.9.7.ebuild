@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.9.7.ebuild,v 1.1 2005/07/27 16:01:35 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.9.7.ebuild,v 1.2 2006/05/13 22:07:49 spyderous Exp $
 
 inherit qt3
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="$(qt_min_version 3.1)
 	>=sys-devel/gcc-3.2
 	dev-util/pkgconfig
-	>=sci-chemistry/openbabel-1.100.2"
+	=sci-chemistry/openbabel-1.1*"
 
 src_compile() {
 	# make sure we use moc from Qt, not from eg media-sound/moc
