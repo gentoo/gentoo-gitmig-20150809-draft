@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r2.ebuild,v 1.5 2006/03/22 03:40:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r2.ebuild,v 1.6 2006/05/13 04:59:32 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -120,30 +120,51 @@ src_install() {
 	newdoc docs/menu.lst grub.conf.sample
 }
 
-pkg_postinst() {
-	[[ ${ROOT} != "/" ]] && return 0
+setup_boot_dir() {
+	local dir="${1}"
+
+	[[ ! -e "${dir}" ]] && die "${dir} does not exist!"
+
+	[[ ! -e "${dir}/grub" ]] && mkdir "${dir}/grub"
 
 	# change menu.lst to grub.conf
-	if [[ ! -e /boot/grub/grub.conf && -e /boot/grub/menu.lst ]] ; then
-		mv -f /boot/grub/menu.lst /boot/grub/grub.conf
+	if [[ ! -e "${dir}/grub/grub.conf" && -e "${dir}/grub/menu.lst" ]] ; then
+		mv -f "${dir}/grub/menu.lst ${dir}/grub/grub.conf"
 		ewarn
 		ewarn "*** IMPORTANT NOTE: menu.lst has been renamed to grub.conf"
 		ewarn
 	fi
+
+	if [[ ! -e "${dir}"/grub/menu.lst ]]; then
 	einfo "Linking from new grub.conf name to menu.lst"
-	[[ ! -e /boot/grub/menu.lst ]] && ln -snf grub.conf /boot/grub/menu.lst
+		ln -snf grub.conf "${dir}/grub/menu.lst"
+	fi
 
-	[[ -e /boot/grub/stage2 ]] && mv /boot/grub/stage2{,.old}
+	[[ -e "${dir}"/grub/stage2 ]] && mv "${dir}"/grub/stage2{,.old}
 
-	einfo "Copying files from /lib/grub and /usr/lib/grub to /boot"
+	einfo "Copying files from /lib/grub and /usr/lib/grub to "${dir}""
 	for x in /lib*/grub/*/* /usr/lib*/grub/*/* ; do
-		[[ -f ${x} ]] && cp -p ${x} /boot/grub/
+		[[ -f ${x} ]] && cp -p ${x} "${dir}"/grub/
 	done
 
-	if [[ -e /boot/grub/grub.conf ]] ; then
-		egrep -v '^[[:space:]]*(#|$|default|fallback|splashimage|timeout|title)' /boot/grub/grub.conf | \
+	if [[ -e "${dir}"/grub/grub.conf ]] ; then
+		egrep -v '^[[:space:]]*(#|$|default|fallback|splashimage|timeout|title)' "${dir}"/grub/grub.conf | \
 		/sbin/grub --batch \
-			--device-map=/boot/grub/device.map \
+			--device-map="${dir}"/grub/device.map \
 			> /dev/null
 	fi
+}
+
+pkg_postinst() {
+	[[ ${ROOT} != "/" ]] && return 0
+	setup_boot_dir /boot
+	einfo "To install grub files to another device (like a usb stick), just run:"
+	einfo "   emerge --config =${PF}"
+}
+
+pkg_config() {
+	local dir
+	einfo "Enter the directory where you want to setup grub:"
+	read dir
+	setup_boot_dir ${dir}
 }
