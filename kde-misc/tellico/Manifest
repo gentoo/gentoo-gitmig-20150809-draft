@@ -1,4 +1,4 @@
-MD5 a712638c9452593d021cb6feebd5dc4e ChangeLog 4428
+MD5 5762d19516aa79043f3c7695b6631484 ChangeLog 4547
 MD5 31393b53f07a7c3549818f83deaf7347 files/digest-tellico-0.13.8 67
 MD5 5b60965cffd2a5573ce2f307d1be7757 files/digest-tellico-1.0.1 66
 MD5 6045fd6d740eb50cb2308f3bab5d31e3 files/digest-tellico-1.0.2 66
@@ -8,6 +8,7 @@ MD5 bde643ba5f3a75ac1568dfeb08e6afab files/digest-tellico-1.1.2 66
 MD5 5f55b1567cbea11cea3402cd8fb3cbdb files/digest-tellico-1.1.3 66
 MD5 d36de1a42875083c16b5f6ddd7a09064 files/digest-tellico-1.1.4 66
 MD5 7eefb8e6e7b968cc1c287b5f8963bf39 files/digest-tellico-1.1.5 66
+MD5 6c2600541277eea0d9e4cdbbd3a17531 files/digest-tellico-1.1.6 66
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 08d89bdd9cf15f77618a9642179a81cc tellico-0.13.8.ebuild 639
 MD5 bdfaddba74fd3d4b7a0c3612a3cd029c tellico-1.0.1.ebuild 737
@@ -17,4 +18,5 @@ MD5 379672caa93886887d022b1473cd415b tellico-1.1.2.ebuild 1680
 MD5 ddea9a9d3d924cf6138dfc6bbb767886 tellico-1.1.3.ebuild 1680
 MD5 3cc12b7bb6a0bbbe4c6ff6764cd26d78 tellico-1.1.4.ebuild 1680
 MD5 ff2a6683e0a71aa099d35a71e103075d tellico-1.1.5.ebuild 1680
+MD5 c03f4f978ba562d3882f66eb86c0f434 tellico-1.1.6.ebuild 1680
 MD5 19c2d2ea998bc59838ff85013f01e3c4 tellico-1.1.ebuild 1680
