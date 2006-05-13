@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mt-daapd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.26 2006/04/11 20:53:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.27 2006/05/13 20:42:52 halcy0n Exp $
+
+  13 May 2006; Mark Loeser <halcy0n@gentoo.org> mt-daapd-0.2.4.ebuild:
+  Stable on x86; bug #124640
 
   11 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> mt-daapd-0.2.4.ebuild:
   Stable on sparc
