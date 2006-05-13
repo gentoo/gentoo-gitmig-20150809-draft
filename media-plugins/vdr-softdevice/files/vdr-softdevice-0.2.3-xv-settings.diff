@@ -1,0 +1,83 @@
+diff -ru --exclude=CVS --ignore-matching-lines=Id: softdevice-0.2.3.20060511/video-xv.c softdevice-0.2.3.20060511-zzam/video-xv.c
+--- softdevice-0.2.3.20060511/video-xv.c	2006-04-25 00:56:47.000000000 +0200
++++ softdevice-0.2.3.20060511-zzam/video-xv.c	2006-05-13 20:31:19.000000000 +0200
+@@ -126,6 +126,21 @@
+ 
+ /* ---------------------------------------------------------------------------
+  */
++int cXvPortAttributeStore::GetValuePercent(int index)
++{
++      int value = portAttributeCurrentValues[index];
++
++      value = (int) (((double) value - (double) portAttributes[index].min_value) * 100.0
++              / ((double) portAttributes[index].max_value - (double) portAttributes[index].min_value));
++
++      if (value <= 100 &&
++          value >= 0)
++        return value;
++      return 0;
++}
++
++/* ---------------------------------------------------------------------------
++ */
+ void cXvPortAttributeStore::SetValuePercent(char *name, int value)
+ {
+   for (int i = 0; i < portAttributeCount; ++i)
+@@ -149,15 +164,16 @@
+ 
+ /* ---------------------------------------------------------------------------
+  */
+-void cXvPortAttributeStore::SetColorkey(int value)
++int cXvPortAttributeStore::SetColorkey(int value)
+ {
+   for (int i = 0; i < portAttributeCount; ++i)
+   {
+     if (!strcmp("XV_COLORKEY",portAttributes[i].name))
+     {
++      int oldColorkey = portAttributeCurrentValues[i];
+       portAttributeCurrentValues[i] = value;
+       XvSetPortAttribute(dpy,port,portAttributeAtoms[i],portAttributeCurrentValues[i]);
+-      return;
++      return oldColorkey;
+     }
+   }
+ }
+@@ -217,13 +233,25 @@
+         portAttributeCurrentValues[i] = portAttributeSaveValues[i];
+       }
+       if (!strcmp(portAttributes[i].name, "XV_BRIGHTNESS"))
++      {
+         setupStore->vidCaps |= CAP_BRIGHTNESS;
++	setupStore->vidBrightness = currBrightness = GetValuePercent(i);
++      }
+       if (!strcmp(portAttributes[i].name, "XV_CONTRAST"))
++      {
+         setupStore->vidCaps |= CAP_CONTRAST;
++	setupStore->vidContrast = currContrast = GetValuePercent(i);
++      }
+       if (!strcmp(portAttributes[i].name, "XV_HUE"))
++      {
+         setupStore->vidCaps |= CAP_HUE;
++	setupStore->vidHue = currHue = GetValuePercent(i);
++      }
+       if (!strcmp(portAttributes[i].name, "XV_SATURATION"))
++      {
+         setupStore->vidCaps |= CAP_SATURATION;
++	setupStore->vidSaturation = currSaturation = GetValuePercent(i);
++      }
+ 
+       dsyslog("[XvVideoOut]:"
+               "   %-25s %-4sXvGettable %-4sXvSettable "
+diff -ru --exclude=CVS --ignore-matching-lines=Id: softdevice-0.2.3.20060511/video-xv.h softdevice-0.2.3.20060511-zzam/video-xv.h
+--- softdevice-0.2.3.20060511/video-xv.h	2006-04-23 21:38:29.000000000 +0200
++++ softdevice-0.2.3.20060511-zzam/video-xv.h	2006-05-13 20:29:38.000000000 +0200
+@@ -91,7 +91,8 @@
+   void SetXInfo(Display *dpy, XvPortID port, cSetupStore *setupStore);
+   void SetValue(char *name, int value);
+   void SetValuePercent(char *name, int value);
+-  void SetColorkey(int value);
++  int GetValuePercent(int index);
++  int SetColorkey(int value);
+   void Increment(char *name);
+   void Decrement(char *name);
+   void Save();

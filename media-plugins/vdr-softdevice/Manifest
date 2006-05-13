@@ -9,6 +9,10 @@ AUX rc-addon.sh 417 RMD160 e88a9bf5fd710ef3c89b1202c38f52cb26e0691f SHA1 54bfe12
 MD5 3fac805caca1748144085ca7194c7543 files/rc-addon.sh 417
 RMD160 e88a9bf5fd710ef3c89b1202c38f52cb26e0691f files/rc-addon.sh 417
 SHA256 6720c5829e67d6c7c6aaddaa234abc990f7547350785cc18be8ef6a3435253ac files/rc-addon.sh 417
+AUX vdr-softdevice-0.2.3-xv-settings.diff 3160 RMD160 787e9f8b371047ca14269ce70273fe03e17b0787 SHA1 8e887a659f19554434bd99ee87182b7329f69d6c SHA256 b9e4e1983969cd09c7219c4a3c00750c12a116bdb406418beb3e2e7df9e70ab7 size 3160
+MD5 eaf618bbc005045f78b01b542d792878 files/vdr-softdevice-0.2.3-xv-settings.diff 3160
+RMD160 787e9f8b371047ca14269ce70273fe03e17b0787 files/vdr-softdevice-0.2.3-xv-settings.diff 3160
+SHA256 b9e4e1983969cd09c7219c4a3c00750c12a116bdb406418beb3e2e7df9e70ab7 files/vdr-softdevice-0.2.3-xv-settings.diff 3160
 AUX vdr-softdevice-0.2.3a-CVS-20060511.diff 5732 RMD160 25b8bb29a77ec03de06effcdbf0850e1c3303919 SHA1 8bb680969474fc93cf9f544328b7230f8b459a47 SHA256 c69f0de683ed6d5d0d031fbc86c2a1a3f32a031c5a2b6778ea73d79eca8bd5e7 size 5732
 MD5 01851b3338d57baa07fcdeff833327f6 files/vdr-softdevice-0.2.3a-CVS-20060511.diff 5732
 RMD160 25b8bb29a77ec03de06effcdbf0850e1c3303919 files/vdr-softdevice-0.2.3a-CVS-20060511.diff 5732
@@ -18,6 +22,10 @@ MD5 4708f556a9bfa9207c43c6359190e3e1 files/vdr-softdevice-0.2.3a-Makefile.diff 9
 RMD160 f53d9a9d7b6f816f32b9bed2106f47701d199feb files/vdr-softdevice-0.2.3a-Makefile.diff 950
 SHA256 cb0cc884b706d01c74f2c5baef1cdd795ddfc27e4d8ca30bd96df75b6b40455e files/vdr-softdevice-0.2.3a-Makefile.diff 950
 DIST vdr-softdevice-0.2.3a.tgz 133780 RMD160 d97d7a1bbe4a3b325041bbe0e7ef23740f8121b1 SHA256 bbf05254ce6f0559ce6aeed055272ba6fb207ba443a49926b91506e9de69ab92 size 133780
+EBUILD vdr-softdevice-0.2.3.20060511-r1.ebuild 2274 RMD160 81dbe26bb438d4f45c302ae2ca08b75d0ad557c3 SHA1 1a0ca3717ada478403b3039497a0c8628517bd2b SHA256 ed539aa6f58d360aa5b50eba7c2b6c70f17bc740a89a185cb6dab36848e95586 size 2274
+MD5 ae26ee4d36f32525eee5675576c447d2 vdr-softdevice-0.2.3.20060511-r1.ebuild 2274
+RMD160 81dbe26bb438d4f45c302ae2ca08b75d0ad557c3 vdr-softdevice-0.2.3.20060511-r1.ebuild 2274
+SHA256 ed539aa6f58d360aa5b50eba7c2b6c70f17bc740a89a185cb6dab36848e95586 vdr-softdevice-0.2.3.20060511-r1.ebuild 2274
 EBUILD vdr-softdevice-0.2.3.20060511.ebuild 2219 RMD160 dab0cfa472a0252408efd5e993e8da2e0f610778 SHA1 81414ab5af9b749895f3870cba26f20f4e1835f5 SHA256 4dba99bb2e88dcecc6ceb10c156028487b0c2072a37b3acc3b61f3c02275497c size 2219
 MD5 d3c67c8e9e65356185cf00f4cc51d022 vdr-softdevice-0.2.3.20060511.ebuild 2219
 RMD160 dab0cfa472a0252408efd5e993e8da2e0f610778 vdr-softdevice-0.2.3.20060511.ebuild 2219
@@ -37,13 +45,16 @@ SHA256 29feafd8b7177b65f8bd92553ac96779d9a91e3b7b4eeecfb0924eb7b6979587 metadata
 MD5 c7a0fabecfebf2988f2c1552b361c1ae files/digest-vdr-softdevice-0.2.3.20060511 256
 RMD160 498e786a7b8110e307aa41c04ed04d88aade4653 files/digest-vdr-softdevice-0.2.3.20060511 256
 SHA256 5d9d302686e0c254357af9482fb419c4510e73882e820f3bfcf76387d49be011 files/digest-vdr-softdevice-0.2.3.20060511 256
+MD5 c7a0fabecfebf2988f2c1552b361c1ae files/digest-vdr-softdevice-0.2.3.20060511-r1 256
+RMD160 498e786a7b8110e307aa41c04ed04d88aade4653 files/digest-vdr-softdevice-0.2.3.20060511-r1 256
+SHA256 5d9d302686e0c254357af9482fb419c4510e73882e820f3bfcf76387d49be011 files/digest-vdr-softdevice-0.2.3.20060511-r1 256
 MD5 c7a0fabecfebf2988f2c1552b361c1ae files/digest-vdr-softdevice-0.2.3a 256
 RMD160 498e786a7b8110e307aa41c04ed04d88aade4653 files/digest-vdr-softdevice-0.2.3a 256
 SHA256 5d9d302686e0c254357af9482fb419c4510e73882e820f3bfcf76387d49be011 files/digest-vdr-softdevice-0.2.3a 256
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEY4+2ZfSl1Kp5KmoRAvoZAKCuMRaMuEqtwyVnnfvGryiyihtHlgCg7VRu
-KvMNTnxaRjF6mqpDLMfVWiY=
-=EaJo
+iD8DBQFEZibhZfSl1Kp5KmoRAhLnAJwPp2uzqNJHGhRgu3BkKwKaMX5/lgCgyzfF
+IVFOjlg00pwllbvD31w57J8=
+=ChOn
 -----END PGP SIGNATURE-----
