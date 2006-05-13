@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/pikdev
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.23 2005/09/16 21:46:20 ciaranm Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.24 2006/05/13 07:11:46 robbat2 Exp $
+
+  13 May 2006; Robin H. Johnson <robbat2@gentoo.org> pikdev-0.7.1-r1.ebuild:
+  Bug #132368, fix SRC_URI since author no longer hosts tarball.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

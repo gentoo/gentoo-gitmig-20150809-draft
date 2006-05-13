@@ -1,19 +1,20 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.7.1-r1.ebuild,v 1.5 2005/01/25 15:48:51 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.7.1-r1.ebuild,v 1.6 2006/05/13 07:11:46 robbat2 Exp $
 
 inherit kde
 
 DESCRIPTION="Graphical IDE for PIC-based application development"
 HOMEPAGE="http://pikdev.free.fr/"
-SRC_URI="http://pikdev.free.fr/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE=""
-# restrict at Authors request
-RESTRICT="nomirror"
+# we used to restrict at Authors request
+# RESTRICT="nomirror"
+# but he has since stopped hosting it, it's on the gentoo mirrors now
 
 DEPEND="dev-embedded/gputils
 	kde-base/arts"
