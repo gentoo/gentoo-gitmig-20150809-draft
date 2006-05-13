@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc-cvs/erc-cvs-4.1.ebuild,v 1.7 2006/02/27 19:48:27 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc-cvs/erc-cvs-4.1.ebuild,v 1.8 2006/05/13 04:36:02 dragonheart Exp $
 
-ECVS_SERVER="cvs.sourceforge.net:/cvsroot/erc"
+ECVS_SERVER="erc.cvs.sourceforge.net:/cvsroot/erc"
 ECVS_MODULE="erc"
 ECVS_USER="anonymous"
 ECVS_CVS_OPTIONS="-dP"

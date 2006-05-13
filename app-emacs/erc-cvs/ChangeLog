@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/erc-cvs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc-cvs/ChangeLog,v 1.7 2006/02/27 19:48:27 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc-cvs/ChangeLog,v 1.8 2006/05/13 04:36:02 dragonheart Exp $
+
+  13 May 2006; Daniel Black <dragonheart@gentoo.org> erc-cvs-4.1.ebuild:
+  sourceforge cvs location change - bug #133081 refers. Thanks Tyler Mandry
 
   27 Feb 2006; Matthew Kennedy <mkennedy@gentoo.org> erc-cvs-4.1.ebuild:
   Remove SANDBOX_DISABLED=1 since it is not a problem with Emacs Lisp
