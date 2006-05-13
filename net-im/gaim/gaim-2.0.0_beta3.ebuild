@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3.ebuild,v 1.5 2006/05/06 19:54:35 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3.ebuild,v 1.6 2006/05/13 18:02:10 tester Exp $
 
-inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools
+inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-module
 
 MY_PV=${PV/_beta/beta}
 MY_P="${PN}-${MY_PV}"
@@ -165,6 +165,7 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR=${D} || die "Install failed"
+	use perl && fixlocalpod
 	dodoc ABOUT-NLS AUTHORS COPYING HACKING INSTALL NEWS PROGRAMMING_NOTES README ChangeLog VERSION
 }
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.10 2005/08/16 04:56:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.11 2006/05/13 18:02:10 tester Exp $
 
-inherit flag-o-matic eutils toolchain-funcs debug multilib
+inherit flag-o-matic eutils toolchain-funcs debug multilib perl-module
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://gaim.sourceforge.net/"
@@ -132,6 +132,7 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR=${D} || die "Install failed"
+	use perl && fixlocalpod
 	dodoc ABOUT-NLS AUTHORS COPYING HACKING INSTALL NEWS PROGRAMMING_NOTES README ChangeLog VERSION
 }
 
