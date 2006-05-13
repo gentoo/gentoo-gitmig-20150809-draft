@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b2efcd067dc48cc728a89fd6f365a3fb ChangeLog 7517
+MD5 2c71a7835f0380d87370175bb5c4f3b5 ChangeLog 7613
 MD5 e8136f7422791d2806f9b2ce8337938d files/README.Gentoo 823
 MD5 40be3763d55fd69bb37d85c22f4192a4 files/code2color.patch 1110
 MD5 c476d66183fca3ba553552a017a65996 files/digest-less-382-r2 226
@@ -10,12 +7,5 @@ MD5 37255adf21c9a00a799c69f92a2c4333 files/digest-less-394 437
 MD5 e4b7ae3d1ca32841a3b551aaba4d7944 files/lesspipe.sh 5409
 MD5 adb0b1124c355f33197454d2be87bfd3 less-382-r2.ebuild 791
 MD5 45269de27294fe1cfa4b0cbeee2836bc less-385_p4-r2.ebuild 1515
-MD5 11024f83b05c3def33985b20f0dcbf7f less-394.ebuild 1287
+MD5 8f2f6225cee34963e4f1a3b8d1991e9d less-394.ebuild 1283
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEZdm+KRy60XGEcJIRAsFHAJ96d2bi/OdkRsCetPPys4oeyVeNHgCbBnK2
-M5R101/qmULfDHC1aQY/itQ=
-=rm/d
------END PGP SIGNATURE-----
