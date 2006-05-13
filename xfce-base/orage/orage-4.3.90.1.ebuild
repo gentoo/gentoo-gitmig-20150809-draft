@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/orage-4.3.90.1.ebuild,v 1.1 2006/04/20 05:50:08 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/orage-4.3.90.1.ebuild,v 1.2 2006/05/13 23:46:34 bcowan Exp $
 
 inherit xfce44
 
@@ -14,7 +14,7 @@ IUSE="berkdb"
 RDEPEND="|| ( x11-libs/libX11
 	virtual/x11 )
 	>=dev-libs/glib-2.2
-	gnome-extra/evolution-data-server
+	eds? ( gnome-extra/evolution-data-server )
 	berkdb? ( sys-libs/db )
 	>=x11-libs/gtk+-2.2
 	~xfce-base/libxfce4mcs-${PV}
