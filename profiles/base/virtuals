@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.91 2006/04/24 19:18:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.92 2006/05/13 05:13:34 spyderous Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -27,8 +27,6 @@ virtual/fam				app-admin/gamin
 virtual/flim				app-emacs/flim
 virtual/gsasl				net-libs/libgsasl
 virtual/ghc					dev-lang/ghc-bin
-virtual/glu					x11-base/xorg-x11
-virtual/glut				media-libs/glut
 virtual/gnustep-back		gnustep-base/gnustep-back-art
 virtual/gzip				app-arch/gzip
 virtual/httpd-php			dev-lang/php
