@@ -1,6 +1,11 @@
 # ChangeLog for gentoo-x86/virtual
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/glut/ChangeLog,v 1.1 2006/05/13 05:12:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/glut/ChangeLog,v 1.2 2006/05/13 05:40:47 spyderous Exp $
+
+  13 May 2006; Donnie Berkholz <spyderous@gentoo.org>; glut-1.0.ebuild:
+  Switch default provider to freeglut from glut. freeglut isn't stable on mips
+  or sh, or keyworded in x86-fbsd, so they will continue to fall back to glut
+  until they stabilize/keyword freeglut.
 
 *glut-1.0 (13 May 2006)
 
