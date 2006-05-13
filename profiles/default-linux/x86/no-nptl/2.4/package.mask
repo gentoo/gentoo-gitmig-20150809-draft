@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.10 2006/05/07 10:30:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.11 2006/05/13 23:08:47 wolf31o2 Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # New toys enabled by 2.6 headers
@@ -12,6 +12,7 @@ sys-apps/pmount
 gnome-base/gnome-mount
 sys-power/powersave
 sys-power/kpowersave
+sys-fs/udev
 
 # Chris Gianelloni <wolf31o2@gentoo.org>
 # Packages that require 2.6 sources/headers
