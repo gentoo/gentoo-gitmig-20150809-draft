@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.44.ebuild,v 1.7 2006/01/03 19:51:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.44.ebuild,v 1.8 2006/05/13 21:26:23 george Exp $
 
-inherit eutils flag-o-matic gnat
+inherit eutils flag-o-matic
 
 My_PV="3_4_4-20041123"
 S="${WORKDIR}/${PN}-${My_PV}.src"

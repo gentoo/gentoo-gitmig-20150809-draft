@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.15p.ebuild,v 1.15 2005/12/15 14:42:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.15p.ebuild,v 1.16 2006/05/13 21:26:23 george Exp $
 
-inherit gnat eutils
+inherit eutils
 
 S="${WORKDIR}/${P}-src"
 DESCRIPTION="The Ada Semantic Interface Specification queries and services provide a consistent interface to information within the Ada Program Library created at compile time."

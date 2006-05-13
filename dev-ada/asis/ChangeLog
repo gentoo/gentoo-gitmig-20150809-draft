@@ -1,6 +1,10 @@
 # ChangeLog for dev-ada/asis
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/ChangeLog,v 1.18 2006/01/03 19:51:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/ChangeLog,v 1.19 2006/05/13 21:26:23 george Exp $
+
+  13 May 2006; George Shapovalov <george@gentoo.org> asis-3.15p.ebuild,
+  asis-3.44.ebuild:
+  removed inherit gnat until adapted for new eclass
 
   03 Jan 2006; George Shapovalov <george@gentoo.org> asis-3.44.ebuild:
   changed DEPEND to >=gnat-3.44, to avoid donwgrading new version of gnat - we
