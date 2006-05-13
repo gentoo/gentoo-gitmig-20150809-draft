@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.1.ebuild,v 1.11 2006/04/21 16:14:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.1.ebuild,v 1.12 2006/05/13 01:00:44 tcort Exp $
 
 IUSE="xinerama"
 
@@ -35,5 +35,4 @@ src_install()
 {
 	dobin pspresent
 	doman pspresent.1
-	dodoc COPYING
 }
