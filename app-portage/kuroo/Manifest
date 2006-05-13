@@ -1,28 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ec41d61b5fdce595ac1196cfdf1d5a97 ChangeLog 1853
-RMD160 57a1e857354f4bef78494af1b8f89d636ec5d781 ChangeLog 1853
-SHA256 67acf0cdf2cc7e6e3a5b2401c0c1131ffd2ec6d11d9700b12e88edf706cb784d ChangeLog 1853
+MD5 4cf1bfe478f956020a418a792c91195c ChangeLog 1970
 MD5 19175ef3b9061a37258e47d3a0f64053 files/digest-kuroo-0.71.0 65
-RMD160 c6cc716e09f40dafe7afa90736466f8381a23ca5 files/digest-kuroo-0.71.0 65
-SHA256 9785bded7ebd3db4da49c3f5190528344fb2eef1897945fc6fd069355bc8f2ce files/digest-kuroo-0.71.0 65
 MD5 ce841467d581e1a7de9ad744cb4329d5 files/digest-kuroo-0.80.1 241
-RMD160 d8a01000587685a60c79d321795a6935bab739cc files/digest-kuroo-0.80.1 241
-SHA256 83be20056f8ddbe0d3c2ea3e6cd2247e7f1bcba33b79ce3914cdca3ae7c81ae1 files/digest-kuroo-0.80.1 241
+MD5 fef539649f40139fd39381115d484434 files/digest-kuroo-0.80.2 65
 MD5 96e7c581674d4b13aa8343c859029e38 kuroo-0.71.0.ebuild 516
-RMD160 0910d9ae78e0a0c4b31bc9dfaa00e633baf70eeb kuroo-0.71.0.ebuild 516
-SHA256 74fc7db7f28bdd26b28a6b7592a946f8911d9208a8af888ea1b8f54028fda2f5 kuroo-0.71.0.ebuild 516
 MD5 2733e426efe7c4db2da45aab757a7e12 kuroo-0.80.1.ebuild 505
-RMD160 f205ea66cfabdc11cce7fc1e8881dfd173c9b611 kuroo-0.80.1.ebuild 505
-SHA256 360de4ed455817f1cc0dd9aac88ed81c381910991c82b1512dcecfef48058ebd kuroo-0.80.1.ebuild 505
+MD5 375799ee8d94fd66496c1fe68cb4cf2b kuroo-0.80.2.ebuild 517
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEPBTvntT9W3vfTuoRAliuAJwMzZxuznROX/0X94zWFaDedLaiBgCgpZPP
-PgL04CyKw84XHX6QpX1eH9g=
-=WkGr
------END PGP SIGNATURE-----
