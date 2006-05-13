@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.16 2006/04/28 04:00:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.17 2006/05/13 05:11:16 vapier Exp $
 
 # Format of /etc/env.d/binutils/:
 #  config-TARGET:	CURRENT=version for TARGET
@@ -230,6 +230,8 @@ get_current_profile() {
 list_profiles() {
 	local i=1
 
+	set_HOST
+
 	if [[ ${ROOT} != / ]] ; then
 		echo "Using binutils-config info in ${ROOT}"
 	fi
@@ -245,7 +247,11 @@ list_profiles() {
 			x=${x##*/}
 			if [[ -e ${ENV_D}/config-${TARGET} ]] ; then
 				source "${ENV_D}/config-${TARGET}"
-				[[ ${VER} == ${CURRENT} ]] && x="${x} ${GOOD}*${NORMAL}"
+				if [[ ${VER} == ${CURRENT} ]] ; then
+					[[ ${TARGET} == ${HOST} ]] \
+						&& x="${x} ${GOOD}*${NORMAL}" \
+						|| x="${x} ${HILITE}*${NORMAL}"
+				fi
 			fi
 			echo " [${i}] ${x}"
 			((++i))
@@ -306,7 +312,7 @@ while [[ $# -gt 0 ]] ; do
 			exit 0
 			;;
 		-V|--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.16 2006/04/28 04:00:22 vapier Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.17 2006/05/13 05:11:16 vapier Exp $"
 			cvsver=${cvsver##*binutils-config-}
 			bver=${cvsver%%,v *}
 			cvsver=${cvsver#* }
