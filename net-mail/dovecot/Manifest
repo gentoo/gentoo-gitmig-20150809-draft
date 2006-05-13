@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fa45e343dd1a3683e8e344140f40221c ChangeLog 8511
+MD5 785d4d96bfebf4ce4ab9694f0fe6397b ChangeLog 8624
 MD5 016773a9d3c70b74b98b7fcb8a602a1b dovecot-0.99.14-r1.ebuild 5165
 MD5 3095ed47c7635193b8627dd4647c5bc9 dovecot-1.0_beta2.ebuild 3719
 MD5 086025343666ac3f6ad1f43948e2639e dovecot-1.0_beta3.ebuild 4532
 MD5 575a702501b4127c3ada49c98a74e848 dovecot-1.0_beta5.ebuild 4647
 MD5 1ce810f4574e12beb8c52f764d108f7d dovecot-1.0_beta7.ebuild 4647
-MD5 b824a29deeaafe3d9343dcc84b06f88a dovecot-1.0_beta8.ebuild 4645
+MD5 4cc0e650cbd1889e012d831a454face0 dovecot-1.0_beta8.ebuild 4641
 MD5 2a50200054849ca5e0173cb709ef649d files/digest-dovecot-0.99.14-r1 67
 MD5 a97ef7bb1cbec8304adb29ac531f5cea files/digest-dovecot-1.0_beta2 70
 MD5 87b33f708335dfccf0ff9e3a9c03b6ca files/digest-dovecot-1.0_beta3 256
@@ -17,9 +17,9 @@ MD5 630ceba3b8cb8ecda31605cf8682ea3c files/digest-dovecot-1.0_beta8 256
 MD5 155396035a3ecb1f5171b0432072181b files/dovecot.init 619
 MD5 61e0d05b1306513aede2838fa81b05b5 metadata.xml 225
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEZdixKRy60XGEcJIRAne6AJ46NVBVOorsmUevCwdGN7JRL1qsowCfTSTh
-kAupNANwrFyumbwg42e8gqM=
-=I2zB
+iD8DBQFEZhebViELBEf1JB0RAp6CAJsEFAu4pfiYf8tXyy16dtbS3K1TgACbBXPd
++PBmm7bLDVl5WfMSbsHQMa0=
+=dzjv
 -----END PGP SIGNATURE-----
