@@ -1,10 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.541 2006/05/13 15:34:42 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.542 2006/05/13 15:36:10 joshuabaergen Exp $
 
   13 May 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-x11-7.1_rc2.ebuild:
-  -m Move driver dependencies from the meta-ebuild to xorg-server as a
+  Move driver dependencies from the meta-ebuild to xorg-server as a
   PDEPEND. (Michal Suchanek, bug #132696)
 
 *xorg-x11-7.1_rc2 (13 May 2006)
