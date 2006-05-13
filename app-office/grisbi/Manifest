@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 63b23fab832284d5ec748e2996dd94b3 ChangeLog 3862
+MD5 eabf33d5a6ed6afa156d0351db54c9e9 ChangeLog 3952
 MD5 3a58ad7603fa0514804ef4027dd31201 files/digest-grisbi-0.5.7 65
 MD5 cd807ec6fb0a4e1e994494886fcfcf36 files/digest-grisbi-0.5.8 65
 MD5 4b586e8dc048875af95711c52e2f7ab3 files/grisbi-0.5.6-latex-unicode.patch 461
 MD5 34efdef1d5896910c218177e358bb019 files/grisbi.desktop 207
 MD5 774d9960746e5591c3238b298d186ad4 grisbi-0.5.7.ebuild 1681
-MD5 c50e7b7d628c68a797fe71fa1e4b134c grisbi-0.5.8.ebuild 1683
+MD5 249bf0cc55ab45305a29b024ff4ec3c6 grisbi-0.5.8.ebuild 1682
 MD5 a48d108f2e513a7b1672281c91550df5 metadata.xml 356
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFELvlGoGcCqvCmTSIRAlK6AJ9tpIEsc/S4lwmAshpjxcF8cwOq4QCdH5Cw
-pvPyzsnMHJ1l3byQwRI1psI=
-=pUcu
+iD8DBQFEZk7eoGcCqvCmTSIRAi1AAJ9rTEvcnUBG8uBL44zxBJZDR/UM3wCfXSC6
+TiEZPowgBtj1mi4ryLwx31Q=
+=tvCl
 -----END PGP SIGNATURE-----

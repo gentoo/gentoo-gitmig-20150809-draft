@@ -1,6 +1,9 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.21 2006/04/01 22:05:15 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.22 2006/05/13 21:24:56 tester Exp $
+
+  13 May 2006; Olivier Crête <tester@gentoo.org> grisbi-0.5.8.ebuild:
+  Stable on amd64
 
 *grisbi-0.5.8 (01 Apr 2006)
 
