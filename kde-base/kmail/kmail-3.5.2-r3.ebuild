@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.2-r3.ebuild,v 1.1 2006/05/12 12:15:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.2-r3.ebuild,v 1.2 2006/05/13 00:31:40 carlo Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -57,6 +57,15 @@ KMEXTRA="indexlib
 PATCHES="${FILESDIR}/kmail-3.5.2-imap-fixes-2.diff
 	${FILESDIR}/kmail-3.5.2-misc-fixes-2.diff
 	${FILESDIR}/kmail-3.5-ham_spam_icons.diff" # This patch did not make it into svn, yet.
+
+
+pkg_setup() {
+	kde_pkg_setup
+	if use crypt && ! built_with_use app-crypt/pinentry qt ; then
+		eerror "app-crypt/pinentry needs to be built with qt use flag enabled."
+		die
+	fi
+}
 
 src_unpack() {
 	kde-meta_src_unpack
