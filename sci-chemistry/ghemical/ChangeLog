@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/ghemical
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.16 2006/05/13 22:24:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.17 2006/05/13 22:26:53 spyderous Exp $
+
+  13 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  -files/ghemical-1.90-ghemical-server-fix.patch,
+  -files/1.90-gcc3.4-r1.patch,
+  -files/ghemical-1.91-ghemical-server-fix.patch,
+  -files/1.91-gcc3.4-r1.patch, -ghemical-1.90.ebuild, -ghemical-1.91.ebuild:
+  Pull old development versions.
 
 *ghemical-2.01 (13 May 2006)
 
