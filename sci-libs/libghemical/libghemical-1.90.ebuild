@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-1.90.ebuild,v 1.1 2005/12/02 15:45:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-1.90.ebuild,v 1.2 2006/05/13 22:08:20 spyderous Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="mopac7 mpqc openbabel"
 
 DEPEND="dev-libs/libf2c
 	mopac7? ( sci-chemistry/mopac7 )
-	openbabel? ( >=sci-chemistry/openbabel-1.100.2 )
+	openbabel? ( =sci-chemistry/openbabel-1.1* )
 	mpqc? ( sci-chemistry/mpqc )
 	>=dev-util/pkgconfig-0.15"
 
