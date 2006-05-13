@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.2.20.ebuild,v 1.6 2006/05/13 07:26:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.2.20.ebuild,v 1.7 2006/05/13 07:30:31 robbat2 Exp $
 
 IUSE="tcltk X"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
 
 RDEPEND="X? ( || ( x11-libs/libXaw virtual/x11 ) )
-		tcltk? ( dev-lang/tcl )
+		tcltk? ( dev-lang/tcl !>=dev-lang/tcl-8.3* )
 		sys-libs/ncurses
 		sys-libs/readline"
 DEPEND="${RDEPEND}
