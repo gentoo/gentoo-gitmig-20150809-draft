@@ -1,17 +1,28 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ad45ce8644d0cff5f298dd4b7d9e6be2 freeglut-2.2.0.ebuild 764
-MD5 3696b192f698fde84edf66e6f1df717d freeglut-2.4.0.ebuild 876
-MD5 3c716e18e124f4626bc1170328f70b07 metadata.xml 425
-MD5 ef9dd4b8ec1dcf7430f2e6d4caba11ba ChangeLog 2685
-MD5 e2b32978d8afb726aaccca034b50bb50 files/digest-freeglut-2.2.0 66
-MD5 af0b718a698fa8d64f28628ee423674c files/digest-freeglut-2.4.0 66
+AUX freeglut-2.4.0-macos.patch 384 RMD160 f44ed965ac534697fa5dc4bbc17b1f464795edfd SHA1 4863883e3742162f1ace5767a6c9906e4f7d2f30 SHA256 6de982efac5a62b317e4cc73570da45c4ded0f42295b5dfeae090948d37eabf6 size 384
 MD5 b65ddf67b98d56c32985623701fc850a files/freeglut-2.4.0-macos.patch 384
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLARFKf2g/qXtneoRAj12AJ9GwMGfqIq7UsrHnHDDanThfAwEqQCgrq0a
-/aMI6XDuWwpnDKiL1xmUDqo=
-=tov/
------END PGP SIGNATURE-----
+RMD160 f44ed965ac534697fa5dc4bbc17b1f464795edfd files/freeglut-2.4.0-macos.patch 384
+SHA256 6de982efac5a62b317e4cc73570da45c4ded0f42295b5dfeae090948d37eabf6 files/freeglut-2.4.0-macos.patch 384
+DIST freeglut-2.2.0.tar.gz 384055 size 384055
+DIST freeglut-2.4.0.tar.gz 469557 size 469557
+EBUILD freeglut-2.2.0.ebuild 727 RMD160 160b56d695973a6c76c4e1bf5ccc94eb7194de4e SHA1 57e9f26670eba8c4f4b7ceff575e40f42e54ad2d SHA256 f7ec6dec22d722082a927d8b311685608e5df733b368e9eb627d7eba5deab869 size 727
+MD5 63969c85bd2748f676f275811c6d1d51 freeglut-2.2.0.ebuild 727
+RMD160 160b56d695973a6c76c4e1bf5ccc94eb7194de4e freeglut-2.2.0.ebuild 727
+SHA256 f7ec6dec22d722082a927d8b311685608e5df733b368e9eb627d7eba5deab869 freeglut-2.2.0.ebuild 727
+EBUILD freeglut-2.4.0.ebuild 840 RMD160 41ce7c7d5c81d8ba6619710e9fe7aca2a6cbc80e SHA1 258d838ffe8444881763c7e8387022e43946b4b2 SHA256 d997839a8dabaf6e2e758b3b62e716c8e26cc4e3896cbf03375e9ffa3d7fd95f size 840
+MD5 1bbf53b861563eaeaeffe409c09bbaf6 freeglut-2.4.0.ebuild 840
+RMD160 41ce7c7d5c81d8ba6619710e9fe7aca2a6cbc80e freeglut-2.4.0.ebuild 840
+SHA256 d997839a8dabaf6e2e758b3b62e716c8e26cc4e3896cbf03375e9ffa3d7fd95f freeglut-2.4.0.ebuild 840
+MISC ChangeLog 2886 RMD160 edadaafeafea6a3f8c01b0948cd336a68deaa7a1 SHA1 8f8e78c846030a876bc1977be46f9b3bcc153254 SHA256 d618636f6b9088e7902474e6a9892e4b9033cdc444171c61c6a9e4b32e03f09b size 2886
+MD5 d5c2c14837efae59e3b65997f172294e ChangeLog 2886
+RMD160 edadaafeafea6a3f8c01b0948cd336a68deaa7a1 ChangeLog 2886
+SHA256 d618636f6b9088e7902474e6a9892e4b9033cdc444171c61c6a9e4b32e03f09b ChangeLog 2886
+MISC metadata.xml 425 RMD160 dd9c8c1b8a8b5a868c876969bb2645210feb1d5d SHA1 0f759bb1bfa730a503a7fa4dcc0f0824180fa0b2 SHA256 c4f9263d41b15768007178907f7a24bb71eca67f881415d5bf8ccb0f24361948 size 425
+MD5 3c716e18e124f4626bc1170328f70b07 metadata.xml 425
+RMD160 dd9c8c1b8a8b5a868c876969bb2645210feb1d5d metadata.xml 425
+SHA256 c4f9263d41b15768007178907f7a24bb71eca67f881415d5bf8ccb0f24361948 metadata.xml 425
+MD5 e2b32978d8afb726aaccca034b50bb50 files/digest-freeglut-2.2.0 66
+RMD160 94e129d9a88193c6377223b5aa3ba4203e32dae3 files/digest-freeglut-2.2.0 66
+SHA256 8b8e397af1a3e9de366cdaef6214ca9a4850d043c43d3dfe2b191b14f41f62ef files/digest-freeglut-2.2.0 66
+MD5 af0b718a698fa8d64f28628ee423674c files/digest-freeglut-2.4.0 66
+RMD160 fd57600ad4ac92f7833b6313ae03130434007933 files/digest-freeglut-2.4.0 66
+SHA256 cc4bab92aba718bdaa13cbf5c11ea7c5195ed46025b1b54f9d38e96d80b8ab1b files/digest-freeglut-2.4.0 66
