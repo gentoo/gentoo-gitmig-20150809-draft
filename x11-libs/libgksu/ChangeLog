@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libgksu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.7 2006/05/06 12:24:30 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.8 2006/05/13 04:22:10 dragonheart Exp $
+
+  13 May 2006; Daniel Black <dragonheart@gentoo.org> libgksu-1.9.2.ebuild:
+  added doc USE flag as per bug #133153 thanks to Renato Crisostomo. Added
+  missing startup-notification dependency as per bug #132573 thanks to Heiko
+  Baums
 
 *libgksu-1.9.2 (06 May 2006)
 
