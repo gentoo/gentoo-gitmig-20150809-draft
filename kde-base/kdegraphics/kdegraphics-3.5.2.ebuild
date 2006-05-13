@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.2.ebuild,v 1.3 2006/04/24 19:14:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.2.ebuild,v 1.4 2006/05/13 00:41:45 carlo Exp $
 
 inherit kde-dist eutils
 
@@ -43,7 +43,7 @@ PATCHES="${DISTDIR}/kpdf-${PV}-poppler.patch.bz2"
 
 pkg_setup() {
 	for ghostscript in app-text/ghostscript-{gnu,esp,afpl}; do
-		if has_version ${ghostscript} && !built_with_use ${ghostscript} X; then
+		if has_version ${ghostscript} && ! built_with_use ${ghostscript} X; then
 			eerror "This package requires ${ghostscript} compiled with X11 support."
 			eerror "Please reemerge ${ghostscript} with USE=\"X\"."
 			die "Please reemerge ${ghostscript} with USE=\"X\"."
