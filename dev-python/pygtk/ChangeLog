@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.113 2006/05/13 05:26:40 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.114 2006/05/13 18:21:33 allanonjl Exp $
+
+  13 May 2006; John N. Laliberte <allanonjl@gentoo.org>
+  files/digest-pygtk-2.6.1, files/digest-pygtk-2.6.2, Manifest:
+  fix broken digests committed by qa team when pygtk 2.6.x was re-added. by
+  re-adding pygtk 2.6.x, pygtk <-> pycairo still have circular deps. waiting
+  on mips to keyword pygtk 2.8.x to remove again. see bug #108808. fixes
+  #133200
 
   13 May 2006; Mark Loeser <halcy0n@gentoo.org> +pygtk-2.6.1.ebuild,
   +pygtk-2.6.2.ebuild:
