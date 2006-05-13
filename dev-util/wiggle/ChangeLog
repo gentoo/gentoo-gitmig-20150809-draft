@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/wiggle
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.11 2005/12/29 17:47:21 dang Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.12 2006/05/13 08:18:06 robbat2 Exp $
+
+*wiggle-0.6-r3 (13 May 2006)
+
+  13 May 2006; Robin H. Johnson <robbat2@gentoo.org> +wiggle-0.6-r3.ebuild:
+  Bug #132450, various cleanups.
 
   29 Dec 2005; <dang@gentoo.org> wiggle-0.6-r2.ebuild:
   Marked ~amd64 Per bug #116881
