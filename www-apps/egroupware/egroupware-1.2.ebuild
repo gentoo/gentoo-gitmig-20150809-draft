@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.2.ebuild,v 1.1 2006/04/22 15:29:41 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.2.ebuild,v 1.2 2006/05/13 17:01:31 rl03 Exp $
 
 inherit webapp depend.php
 
@@ -28,10 +28,13 @@ pkg_setup () {
 	has_php
 	webapp_pkg_setup
 
-	require_php_with_use imap session
-	use ldap && require_php_with_use ldap
-	use mysql && require_php_with_use mysql
-	use postgres && require_php_with_use postgres
+	local php_flags="imap session"
+
+	use ldap && php_flags="${php_flags} ldap"
+	use mysql && php_flags="${php_flags} mysql"
+	use postgres && php_flags="${php_flags} postgres"
+	require_php_with_use ${php_flags}
+
 	einfo "Consider installing an MTA if you want to use eGW's mail capabilities."
 }
 
