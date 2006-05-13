@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.147 2006/05/12 22:05:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.148 2006/05/13 03:44:47 vapier Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -233,7 +233,7 @@ vim_src_unpack() {
 	unpack ${A}
 
 	if [[ "${PN##*-}" == "cvs" ]] ; then
-		ECVS_SERVER="cvs.sourceforge.net:/cvsroot/vim"
+		ECVS_SERVER="vim.cvs.sourceforge.net:/cvsroot/vim"
 		ECVS_PASS=""
 		if [[ $(get_major_version ) -ge 7 ]] ; then
 			ECVS_MODULE="vim7"
