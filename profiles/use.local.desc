@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1894 2006/05/12 20:16:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1895 2006/05/13 22:26:07 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1269,6 +1269,8 @@ sci-biology/vienna-rna:no-utils - Do not include sequence format conversion and 
 sci-chemistry/caver:pymol - Install the PyMol plugin
 sci-chemistry/eden:double-precision - more precise calculations at the expense of speed
 sci-chemistry/ghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
+sci-chemistry/ghemical:openbabel - Use the OpenBabel package for file conversions
+sci-chemistry/ghemical:toolbar - Build the shortcuts toolbar
 sci-geosciences/gmt:gmtfull - Full resolution bathymetry database
 sci-geosciences/gmt:gmthigh - Adds high resolution bathymetry database
 sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT
@@ -1286,7 +1288,6 @@ sci-libs/hdf5:hlapi - Enables support for high-level library
 sci-libs/itpp:cblas - Adds support for the cblas numerical library
 sci-libs/libghemical:mopac7 - Use the MOPAC7 package for semi-empirical calculations
 sci-libs/libghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
-sci-libs/libghemical:openbabel - Use the OpenBabel package for file conversions
 sci-libs/plplot:itcl - Support for itcl bindings.
 sci-libs/plplot:octave - Support for Octave bindings.
 sci-libs/vtk:patented - Builds patented classes.
