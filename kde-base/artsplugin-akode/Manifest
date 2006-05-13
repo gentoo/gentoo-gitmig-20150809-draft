@@ -1,25 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1c88e178c5bc76bff121f0d5afcf7d01 ChangeLog 2852
-RMD160 1e02dba65bf85d78a565b362152d489c9633f4cd ChangeLog 2852
-SHA256 4685b5ee5d7a7bf8f0773a1a059352750311ad8b0021f1318da513ef44670073 ChangeLog 2852
-MD5 f5852b6c4215ec2b1e97ec3a69895932 artsplugin-akode-3.5.2-r1.ebuild 847
-RMD160 15ae8262e4a9bd7ef4980fd0ee00e8121c16c7c2 artsplugin-akode-3.5.2-r1.ebuild 847
-SHA256 b9c1842296c1d3085ff866f6abf0bdadb12687cbd63a393067a5c2bca928ea43 artsplugin-akode-3.5.2-r1.ebuild 847
+MD5 cfae4bcc9d9a64af08c235633b61bad4 ChangeLog 2970
+MD5 3cf4504a3c1b4c6c8ad20c5450b634c5 artsplugin-akode-3.5.2-r1.ebuild 858
 MD5 d860129d92634080c3f7368ed282e098 files/artsplugin-akode-3.5.2-memleak.patch 797
-RMD160 593b8a40af0b373259d37410f57989cdfb9ec568 files/artsplugin-akode-3.5.2-memleak.patch 797
-SHA256 1a6d341f130430ca7faef4188899e4fe98c4ba808ea9702d352a9b28eb2b3642 files/artsplugin-akode-3.5.2-memleak.patch 797
 MD5 c6f3f23fcb5a1fa806c5073f45b26b59 files/digest-artsplugin-akode-3.5.2-r1 265
-RMD160 5e81c0b91adc803bf7923ec3176b9ff50217ed22 files/digest-artsplugin-akode-3.5.2-r1 265
-SHA256 da5960a94d94974711cce49b9e15a2465e392feb2dd48db846adce8d9e02d864 files/digest-artsplugin-akode-3.5.2-r1 265
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENGReAiZjviIA2XgRAiJZAJ9KZuvSbE+CHo9e8gYBBTytUai4yACfdqbG
-9T0beFNW4Akr+e7BGqvmgIk=
-=du9M
------END PGP SIGNATURE-----

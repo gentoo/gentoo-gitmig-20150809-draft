@@ -1,4 +1,4 @@
-MD5 25587907e2fda19b1bb0d5da421b25e5 ChangeLog 6322
+MD5 caa2435fc2ab3627e92ed1af403a76d4 ChangeLog 6429
 MD5 4fdb0ffd65dc5bbcb439ea875a4f1ba6 files/configure-fix-kdemultimedia-juk.patch 4482
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-juk-3.4.1 227
 MD5 453075362e3201c7f44fea430afec5d5 files/digest-juk-3.4.2 308
@@ -10,6 +10,6 @@ MD5 843346e52d5bd259568adc2cd01e7612 files/juk-3.5.2-filerename.diff 477
 MD5 12b3c5e77687d1ffabc038b18677ac13 juk-3.4.1.ebuild 1085
 MD5 69af012da6b62027584d853f2d619e37 juk-3.4.2.ebuild 1275
 MD5 c53523738995fa9da492ec22fbe15a64 juk-3.4.3.ebuild 1275
-MD5 a918a70388af0fa0dbb64115b9ff3ff7 juk-3.5.2-r1.ebuild 1681
+MD5 5e075087d6ec5fd3994d68fa24ef4caf juk-3.5.2-r1.ebuild 1696
 MD5 8018b2069bee2c8232568da5bb48a164 juk-3.5.2.ebuild 1221
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
