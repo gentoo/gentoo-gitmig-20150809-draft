@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.99.902-r1.ebuild,v 1.1 2006/05/02 17:24:08 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.99.902-r1.ebuild,v 1.2 2006/05/13 05:44:41 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -68,7 +68,7 @@ RDEPEND="x11-libs/libXfont
 	!minimal? ( x11-libs/libdmx
 		x11-libs/libXtst
 		x11-libs/libXres )
-	x11-libs/libxkbui
+	>=x11-libs/libxkbui-1.0.2
 	x11-libs/liblbxutil
 	kdrive? ( sdl? ( media-libs/libsdl ) )"
 	# Xres is dmx-dependent, xkbui is xorgcfg-dependent

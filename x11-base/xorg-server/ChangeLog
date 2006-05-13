@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.113 2006/05/02 17:24:08 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.114 2006/05/13 05:44:41 joshuabaergen Exp $
+
+  13 May 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-server-1.0.2-r4.ebuild, xorg-server-1.0.99.902-r1.ebuild:
+  Force update to libxkbui-1.0.2 per spyderous' suggestion, hopefully fixing
+  _XkbStrCaseCmp-related issues.
 
 *xorg-server-1.0.99.902-r1 (02 May 2006)
 *xorg-server-1.0.2-r4 (02 May 2006)
