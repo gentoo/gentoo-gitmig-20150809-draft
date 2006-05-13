@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.330 2006/05/13 11:46:50 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.331 2006/05/13 13:59:04 wolf31o2 Exp $
+
+  13 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> mysql-4.0.27.ebuild:
+  Stable on x86 wrt bug #132146.
 
 *mysql-4.0.27 (13 May 2006)
 
