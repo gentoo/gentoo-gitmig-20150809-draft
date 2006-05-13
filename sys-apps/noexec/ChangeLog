@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/noexec
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noexec/ChangeLog,v 1.5 2005/04/27 06:22:07 wormo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noexec/ChangeLog,v 1.6 2006/05/13 15:45:06 josejx Exp $
+
+  13 May 2006; Joseph Jezak <josejx@gentoo.org> noexec-1.1.0.ebuild:
+  Marked ppc stable for solar.
 
   26 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   noexec-1.1.0.ebuild:
