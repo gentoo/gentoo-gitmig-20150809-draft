@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.2-r2.ebuild,v 1.2 2006/05/06 12:22:11 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.2-r2.ebuild,v 1.3 2006/05/13 01:31:39 carlo Exp $
 
 inherit kde-dist flag-o-matic
 
@@ -40,6 +40,7 @@ PATCHES="${FILESDIR}/artsplugin-akode-${PV}-memleak.patch
 	${FILESDIR}/juk-3.5.2-do_not_use_gstreamer-0.10.diff"
 
 pkg_setup() {
+	kde_pkg_setup
 	if ! use arts && ! use gstreamer && ! use akode ; then
 		ewarn "No audio backend chosen. Defaulting to media-libs/akode."
 	fi

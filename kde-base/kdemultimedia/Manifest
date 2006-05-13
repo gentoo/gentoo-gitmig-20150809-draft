@@ -1,4 +1,4 @@
-MD5 0c6c01b844937ebb542ffb072c246554 ChangeLog 29142
+MD5 df59966ca8b51067dacbdb9f5e497d27 ChangeLog 29261
 MD5 d860129d92634080c3f7368ed282e098 files/artsplugin-akode-3.5.2-memleak.patch 797
 MD5 30810bdee5baa766c389b0a4d8533a4e files/digest-kdemultimedia-3.3.2 73
 MD5 7768e89277edde1b1e163ae65e5a4e9c files/digest-kdemultimedia-3.4.1 73
@@ -20,6 +20,6 @@ MD5 3c278760391c3f291cc6b3ec5ef7c32b kdemultimedia-3.4.1.ebuild 1773
 MD5 7b2b37aa321b64e715a57b9401ccd891 kdemultimedia-3.4.2.ebuild 2008
 MD5 d47c2bc5565e8dd0cd99eb9dee5d9723 kdemultimedia-3.4.3.ebuild 2016
 MD5 ff9ba3df7335338a5e9a65f187d54102 kdemultimedia-3.5.2-r1.ebuild 2260
-MD5 669fcd3e24aa34e6998eef8889d8f12e kdemultimedia-3.5.2-r2.ebuild 2976
+MD5 0f5cb2d49da589a45f40dd02802ba3fc kdemultimedia-3.5.2-r2.ebuild 2991
 MD5 0c03cae32e413805e0d1e2cf0c9b7818 kdemultimedia-3.5.2.ebuild 2419
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
