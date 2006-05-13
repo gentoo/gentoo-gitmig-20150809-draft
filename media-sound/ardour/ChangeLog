@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.54 2006/04/28 00:55:32 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.55 2006/05/13 14:35:45 eldad Exp $
+
+  13 May 2006; Eldad Zack <eldad@gentoo.org> -files/ardour.aclocal.patch,
+  -files/ardour-gcc34.patch, -ardour-0.9_beta30.ebuild:
+  Purge old version and unneeded aux files.
 
   28 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
