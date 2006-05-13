@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.44 2006/05/13 12:19:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.45 2006/05/13 13:01:00 gustavoz Exp $
+
+  13 May 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  dovecot-1.0_beta8.ebuild:
+  Stable on sparc wrt security #133149
 
   13 May 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   dovecot-1.0_beta8.ebuild:
