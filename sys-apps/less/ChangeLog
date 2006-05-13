@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.55 2006/05/13 08:22:39 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.56 2006/05/13 11:10:35 blubb Exp $
+
+  13 May 2006; Simon Stelling <blubb@gentoo.org> less-394.ebuild:
+  stable on amd64
 
   13 May 2006; Emanuele Giaquinta <exg@gentoo.org> less-394.ebuild:
   Stable on ppc; bug #133163
