@@ -1,34 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3d2d0c72890ca0960988fb904e6322c2 ChangeLog 1190
-RMD160 67342e21a8dbe791119df9e6e90f1775536f3daf ChangeLog 1190
-SHA256 e2e3fff4938dea2b756d2663621c0d108ac2c4b66ec10e653726ada164b846c1 ChangeLog 1190
-MD5 7b989c066e996f89f577698ff23a71ed files/digest-mp3kult-0.7-r1 63
-RMD160 3829c309dad9ed9eef6a14904db154d11a7f87bf files/digest-mp3kult-0.7-r1 63
-SHA256 7cff02fab44fccad217bd351ae922bd5f315ca5930b589907de6a8bbc9e29f7d files/digest-mp3kult-0.7-r1 63
-MD5 7b989c066e996f89f577698ff23a71ed files/digest-mp3kult-0.7-r2 63
-RMD160 3829c309dad9ed9eef6a14904db154d11a7f87bf files/digest-mp3kult-0.7-r2 63
-SHA256 7cff02fab44fccad217bd351ae922bd5f315ca5930b589907de6a8bbc9e29f7d files/digest-mp3kult-0.7-r2 63
-MD5 7b989c066e996f89f577698ff23a71ed files/digest-mp3kult-0.7-r3 63
-RMD160 3829c309dad9ed9eef6a14904db154d11a7f87bf files/digest-mp3kult-0.7-r3 63
-SHA256 7cff02fab44fccad217bd351ae922bd5f315ca5930b589907de6a8bbc9e29f7d files/digest-mp3kult-0.7-r3 63
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
-SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
-MD5 345a61e8b9807860f5d029d4219895df mp3kult-0.7-r1.ebuild 894
-RMD160 c2dedb25a956af640aec3c92fe2274a95992031a mp3kult-0.7-r1.ebuild 894
-SHA256 e6dcbddd33cb642aade16bbe8eaf374666be84c52dae500b5e2af422233d5029 mp3kult-0.7-r1.ebuild 894
-MD5 f65974b613be7f17b879d9a5d85badf7 mp3kult-0.7-r2.ebuild 1388
-RMD160 5bbb3163fdcb85ea2700abdbac1a78d5537752ef mp3kult-0.7-r2.ebuild 1388
-SHA256 c327542a9094af7da0851caddd50ae2482c9bb5ee352caac7b3c36a1b6fcd000 mp3kult-0.7-r2.ebuild 1388
+DIST mp3kult-0.7.tar.gz 709412 size 709412
+EBUILD mp3kult-0.7-r3.ebuild 602 RMD160 e6269b7f6cba6803d2f8894cb4155a02bdb96679 SHA1 001725e54ac77d7b488f55b2cacfdb07472e5364 SHA256 91ea57a63dee711e5b71a2fcac7c3a85ff9b050abca454232bde9de41acc5cbf size 602
 MD5 bcac1e0dfcac84c2f2ae3c5f478d61b0 mp3kult-0.7-r3.ebuild 602
 RMD160 e6269b7f6cba6803d2f8894cb4155a02bdb96679 mp3kult-0.7-r3.ebuild 602
 SHA256 91ea57a63dee711e5b71a2fcac7c3a85ff9b050abca454232bde9de41acc5cbf mp3kult-0.7-r3.ebuild 602
+MISC ChangeLog 1361 RMD160 963ac2b51350a0ecec724a1624068f5e0e6257bd SHA1 d79d7d37a506691bc910bb72ca0b1230198e08f7 SHA256 62436c146ee2d0f68f178b90fe132d0ebad0880cdbe5f6ddcc0d39fd947b1095 size 1361
+MD5 0127e6a8cd74c052ad0f73bf4af75fa9 ChangeLog 1361
+RMD160 963ac2b51350a0ecec724a1624068f5e0e6257bd ChangeLog 1361
+SHA256 62436c146ee2d0f68f178b90fe132d0ebad0880cdbe5f6ddcc0d39fd947b1095 ChangeLog 1361
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b size 158
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 7b989c066e996f89f577698ff23a71ed files/digest-mp3kult-0.7-r3 63
+RMD160 3829c309dad9ed9eef6a14904db154d11a7f87bf files/digest-mp3kult-0.7-r3 63
+SHA256 7cff02fab44fccad217bd351ae922bd5f315ca5930b589907de6a8bbc9e29f7d files/digest-mp3kult-0.7-r3 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEFCfNAiZjviIA2XgRAqd/AJ4v8UAwTxioJGquB/XxGgiEJvrVjwCgvWYK
-Ps85El+qlcFuMZmyqa5+p3Q=
-=+gjQ
+iD8DBQFEZlQtAiZjviIA2XgRAjtSAKCx1Rms/T0n69DCBmrPyfZdQBBSeQCeNkiO
+PX2KzR+IhDRSm/+nLZYidqc=
+=wn9f
 -----END PGP SIGNATURE-----
