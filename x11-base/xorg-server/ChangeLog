@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.115 2006/05/13 09:12:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.116 2006/05/13 15:35:13 joshuabaergen Exp $
+
+  13 May 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-server-1.0.99.903.ebuild:
+  -m Move driver dependencies from the meta-ebuild to xorg-server as a
+  PDEPEND. (Michal Suchanek, bug #132696)
 
 *xorg-server-1.0.99.903 (13 May 2006)
 
