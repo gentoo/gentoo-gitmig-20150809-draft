@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.14 2006/05/05 21:42:16 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.15 2006/05/13 15:39:11 chtekk Exp $
 #
 # ========================================================================
 #
@@ -204,17 +204,25 @@ require_php_with_use() {
 		fi
 	done
 
-	if [[ -z ${missing_use} ]] ; then
-		return
+	if [[ -z "${missing_use}" ]] ; then
+		if [[ -z "${PHPCHECKNODIE}" ]] ; then
+			return
+		else
+			return 0
+		fi
 	fi
 
-	eerror
-	eerror "${PHP_PKG} needs to be re-installed with all of the following"
-	eerror "USE flags enabled:"
-	eerror
-	eerror "  $@"
-	eerror
-	die "Missing PHP USE flags found"
+	if [[ -z "${PHPCHECKNODIE}" ]] ; then
+		eerror
+		eerror "${PHP_PKG} needs to be re-installed with all of the following"
+		eerror "USE flags enabled:"
+		eerror
+		eerror "  $@"
+		eerror
+		die "Missing PHP USE flags found"
+	else
+		return 1
+	fi
 }
 
 # Call this function from pkg_setup if your package requires PHP compiled
@@ -242,17 +250,25 @@ require_php_with_any_use() {
 		fi
 	done
 
-	if [[ -z ${missing_use} ]] ; then
-		return
+	if [[ -z "${missing_use}" ]] ; then
+		if [[ -z "${PHPCHECKNODIE}" ]] ; then
+			return
+		else
+			return 0
+		fi
 	fi
 
-	eerror
-	eerror "${PHP_PKG} needs to be re-installed with any of the following"
-	eerror "USE flags enabled:"
-	eerror
-	eerror "  $@"
-	eerror
-	die "Missing PHP USE flags found"
+	if [[ -z "${PHPCHECKNODIE}" ]] ; then
+		eerror
+		eerror "${PHP_PKG} needs to be re-installed with any of the following"
+		eerror "USE flags enabled:"
+		eerror
+		eerror "  $@"
+		eerror
+		die "Missing PHP USE flags found"
+	else
+		return 1
+	fi
 }
 
 # ========================================================================
