@@ -1,7 +1,7 @@
 DirectFB no longer defines DSPF_RGB15 since it was really just a 
 ghetto shortcut to DSPF_ARGB1555.
 
-http://bugs.gentoo.org/show_bug.cgi?id=77034
+http://bugs.gentoo.org/77034
 http://www.directfb.org/index.php/viewcvs.cgi/DirectFB/include/directfb.h.diff?r1=1.194&r2=1.195
 
 --- ClanLib-0.6.5/Sources/Display/Display/DirectFB/target_directfb.cpp
@@ -42,3 +42,42 @@ http://www.directfb.org/index.php/viewcvs.cgi/DirectFB/include/directfb.h.diff?r
      case DSPF_RGB16:
      case DSPF_RGB24:
      case DSPF_RGB32:
+
+The DIKI_ALTGR enum has been cut in favor of just using DIKI_ALT_R
+
+http://bugs.gentoo.org/132945
+
+--- ClanLib-0.6.5/Sources/Display/Input/DirectFB/keyboard_directfb.cpp
++++ ClanLib-0.6.5/Sources/Display/Input/DirectFB/keyboard_directfb.cpp
+@@ -17,6 +17,9 @@
+ #ifdef USE_DIRECTFB
+ 
+ #include <directfb.h>
++#include <directfb_version.h>
++#define DFB_V(a,b,c) (((a) << 16) + ((b) << 8) + (c))
++#define DFB_VERSION DFB_V(DIRECTFB_MAJOR_VERSION, DIRECTFB_MINOR_VERSION, DIRECTFB_MICRO_VERSION)
+ 
+ #include <stdlib.h>
+ #include <stdio.h>
+@@ -243,7 +244,9 @@
+     case DIKI_SHIFT_R:     return CL_KEY_RSHIFT;
+     case DIKI_ALT_L:       return CL_KEY_ALT;
+     case DIKI_ALT_R:       return CL_KEY_ALT;
++#if DFB_VERSION < DFB_V(0,9,25)
+     case DIKI_ALTGR:       return CL_KEY_ALTGR;
++#endif
+     case DIKI_TAB:         return CL_KEY_TAB;
+     case DIKI_ENTER:       return CL_KEY_ENTER;
+     case DIKI_SPACE:       return CL_KEY_SPACE;
+@@ -337,7 +340,11 @@
+     case CL_KEY_LSHIFT:    return DIKI_SHIFT_L;
+     case CL_KEY_RSHIFT:    return DIKI_SHIFT_R;
+     case CL_KEY_ALT:       return DIKI_ALT_L;
++#if DFB_VERSION < DFB_V(0,9,25)
+     case CL_KEY_ALTGR:     return DIKI_ALTGR;
++#else
++    case CL_KEY_ALTGR:     return DIKI_ALT_R;
++#endif
+     case CL_KEY_TAB:       return DIKI_TAB;
+     case CL_KEY_ENTER:     return DIKI_ENTER;
+     case CL_KEY_SPACE:     return DIKI_SPACE;
