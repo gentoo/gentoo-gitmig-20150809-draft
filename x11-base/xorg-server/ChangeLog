@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.114 2006/05/13 05:44:41 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.115 2006/05/13 09:12:24 spyderous Exp $
+
+*xorg-server-1.0.99.903 (13 May 2006)
+
+  13 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  -xorg-server-1.0.99.902-r1.ebuild, +xorg-server-1.0.99.903.ebuild:
+  Bump to 7.1RC3.
 
   13 May 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.0.2-r4.ebuild, xorg-server-1.0.99.902-r1.ebuild:
