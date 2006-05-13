@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.44-r2.ebuild,v 1.5 2006/04/11 15:19:06 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.44-r2.ebuild,v 1.6 2006/05/13 20:17:48 george Exp $
 
-inherit gnat flag-o-matic
+inherit flag-o-matic
 
 MY_PV="3.4.4"
 
