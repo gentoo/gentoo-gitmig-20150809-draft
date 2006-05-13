@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.2_pre2099.ebuild,v 1.2 2006/05/02 22:26:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.2_pre2099.ebuild,v 1.3 2006/05/13 21:41:03 genstef Exp $
 
 inherit eutils subversion
 
 DESCRIPTION="The Last.fm player allows you to listen to their internet radio which is tailored to your music profile"
-HOMEPAGE="http://lastfmplayer.sourceforge.net"
+HOMEPAGE="http://www.last.fm/help/player"
 SRC_URI=""
 ESVN_REPO_URI="svn://svn.audioscrobbler.net/player/branches/1.2"
 ESVN_OPTIONS="--revision ${PV#*_pre}"
