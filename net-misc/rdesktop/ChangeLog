@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.66 2006/04/14 11:44:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.67 2006/05/13 22:52:25 wolf31o2 Exp $
+
+  13 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
+  Changed to no-herd for bug #94878.
 
   14 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> rdesktop-1.4.1.ebuild:
   Adjusted modular X dependencies.
