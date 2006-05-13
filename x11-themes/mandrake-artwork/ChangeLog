@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/mandrake-artwork
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/ChangeLog,v 1.29 2005/10/04 13:37:37 metalgod Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/ChangeLog,v 1.30 2006/05/13 02:53:42 halcy0n Exp $
+
+  13 May 2006; Mark Loeser <halcy0n@gentoo.org>
+  -mandrake-artwork-0.9.6.ebuild:
+  Remove mandrake-artwork-0.9.6 from the tree since it has been p.masked for
+  ages and other versions are already stable; bug #124737
 
   04 Oct 2005; Luis Medinas <metalgod@gentoo.org>
   mandrake-artwork-1.0.2.ebuild:
