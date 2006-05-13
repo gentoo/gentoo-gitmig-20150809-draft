@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5337 2006/05/13 14:19:36 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5338 2006/05/13 22:17:53 spyderous Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1231,8 +1231,8 @@ media-sound/ipodder
 
 # Donnie Berkholz <spyderous@gentoo.org> (08 Jul 2005)
 # Development versions
->=sci-libs/libghemical-1.90
->=sci-chemistry/ghemical-1.90
+=sci-libs/libghemical-1.9*
+=sci-chemistry/ghemical-1.9*
 
 # Stefan Schweizer <genstef@gentoo.org> (08 Jul 2005)
 # Masked because of "UnixAppOpenFilePerform() Buffer Overflow", #98101
