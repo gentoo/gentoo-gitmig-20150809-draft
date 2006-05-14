@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/xdrawchem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.20 2006/05/13 22:07:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.21 2006/05/14 18:53:30 spyderous Exp $
+
+*xdrawchem-1.9.9 (14 May 2006)
+
+  14 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +xdrawchem-1.9.9.ebuild:
+  (#114260) Bump. Supports openbabel-2.
 
   13 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
   xdrawchem-1.9.5.ebuild, xdrawchem-1.9.6.ebuild, xdrawchem-1.9.7.ebuild,
