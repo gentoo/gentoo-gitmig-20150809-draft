@@ -1,4 +1,4 @@
-MD5 80704c6579dde193495a9a696d842242 ChangeLog 8592
+MD5 7887e3c43aa131e81061b1e1616fbb19 ChangeLog 8699
 MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-xvideo-0.10.4-r1 277
 MD5 5b58a001f51839e2aaaf1108a913a4ac files/digest-gst-plugins-xvideo-0.10.6 77
 MD5 eaba7cd988c45174c3c20aebd8c4a8bd files/digest-gst-plugins-xvideo-0.8.10 262
@@ -7,7 +7,7 @@ MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-xvideo-0.8.12 262
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-xvideo-0.8.8 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-xvideo-0.8.9 71
 MD5 15bc0206194edeb4ef08bab06793ae08 gst-plugins-xvideo-0.10.4-r1.ebuild 715
-MD5 dd455760a8d6649918853414c50e9cc7 gst-plugins-xvideo-0.10.6.ebuild 719
+MD5 ebcf4c11601ba0eb47d49a7d537b8445 gst-plugins-xvideo-0.10.6.ebuild 722
 MD5 5ca57099c507708d80e176ae6ec2bdb6 gst-plugins-xvideo-0.8.10.ebuild 486
 MD5 8404a51420b47a2dbec92b6b6ed1c646 gst-plugins-xvideo-0.8.11.ebuild 486
 MD5 0b9c7e07de6957c9efa257b212ae5e2f gst-plugins-xvideo-0.8.12.ebuild 492
