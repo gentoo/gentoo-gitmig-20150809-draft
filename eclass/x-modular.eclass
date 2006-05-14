@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.56 2006/05/14 19:17:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.57 2006/05/14 21:29:16 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -43,7 +43,7 @@ HOMEPAGE="http://xorg.freedesktop.org/"
 
 # Set up SRC_URI for individual modular releases
 BASE_INDIVIDUAL_URI="http://xorg.freedesktop.org/releases/individual"
-if [[ ${CATEGORY} = x11-apps ]]; then
+if [[ ${CATEGORY} = x11-apps ]] || [[ ${CATEGORY} = x11-wm ]]; then
 	SRC_URI="${SRC_URI}
 		${BASE_INDIVIDUAL_URI}/app/${P}.tar.bz2"
 elif [[ ${CATEGORY} = app-doc ]]; then
