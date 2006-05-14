@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/tailor
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tailor/ChangeLog,v 1.1 2006/05/14 16:55:34 marienz Exp $
+
+*tailor-0.9.22 (14 May 2006)
+
+  14 May 2006; Marien Zwart <marienz@gentoo.org> +metadata.xml,
+  +tailor-0.9.22.ebuild:
+  New ebuild based on the one by Dmitry S. Kulyabov <dharma@mx.pfu.edu.ru> in
+  bug #119409.
+
