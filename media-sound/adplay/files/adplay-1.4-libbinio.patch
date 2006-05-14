@@ -1,0 +1,26 @@
+diff -ur adplay-1.4/src/disk.cc adplay-1.4-r2/src/disk.cc
+--- adplay-1.4/src/disk.cc	2004-05-13 11:50:47.000000000 +0200
++++ adplay-1.4-r2/src/disk.cc	2006-05-14 05:50:22.000000000 +0200
+@@ -21,8 +21,8 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <string.h>
+-#include <binwrap.h>
+-#include <binfile.h>
++#include <libbinio/binwrap.h>
++#include <libbinio/binfile.h>
+ 
+ #include "defines.h"
+ #include "disk.h"
+diff -ur adplay-1.4/src/disk.h adplay-1.4-r2/src/disk.h
+--- adplay-1.4/src/disk.h	2004-05-13 11:50:47.000000000 +0200
++++ adplay-1.4-r2/src/disk.h	2006-05-14 05:49:40.000000000 +0200
+@@ -20,7 +20,7 @@
+ #ifndef H_DISK
+ #define H_DISK
+ 
+-#include <binio.h>
++#include <libbinio/binio.h>
+ 
+ #include "output.h"
+ 
