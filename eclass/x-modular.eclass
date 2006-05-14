@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.55 2006/04/21 07:01:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.56 2006/05/14 19:17:09 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -182,6 +182,9 @@ x-modular_specs_check() {
 			eerror "$msg"
 			die "$msg"
 		fi
+
+		# (#116698) breaks loading
+		filter-ldflags -Wl,-z,now
 	fi
 }
 
