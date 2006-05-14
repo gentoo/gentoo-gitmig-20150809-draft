@@ -1,4 +1,4 @@
-MD5 0a92e2a925a711f5ad47b306894a1edc ChangeLog 11123
+MD5 6e85b13672cfc980937b55632258978e ChangeLog 11230
 MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-vorbis-0.10.4 277
 MD5 5b58a001f51839e2aaaf1108a913a4ac files/digest-gst-plugins-vorbis-0.10.6 77
 MD5 eaba7cd988c45174c3c20aebd8c4a8bd files/digest-gst-plugins-vorbis-0.8.10 262
@@ -7,7 +7,7 @@ MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-vorbis-0.8.12 262
 MD5 d42b5b8a0a5175c24b9f8c7d4e0377ca files/digest-gst-plugins-vorbis-0.8.8 259
 MD5 b040ebb3cb8e5116893f8166bd8c8bcb files/digest-gst-plugins-vorbis-0.8.9 259
 MD5 878d9ee7475a4c8ccd64322e021c0955 gst-plugins-vorbis-0.10.4.ebuild 484
-MD5 69e0d4a1b5c4c79713d1aca1dbb41d5b gst-plugins-vorbis-0.10.6.ebuild 491
+MD5 932fd7e3dc381dd8308e3c8fb3f59d65 gst-plugins-vorbis-0.10.6.ebuild 494
 MD5 7ecb0480ce2538f76c75e3d07ac549ad gst-plugins-vorbis-0.8.10.ebuild 431
 MD5 c7973f083b6a39480b18ec57d3b7d8d9 gst-plugins-vorbis-0.8.11.ebuild 433
 MD5 bc4b701903615b27ea41848c6504d1fc gst-plugins-vorbis-0.8.12.ebuild 440
