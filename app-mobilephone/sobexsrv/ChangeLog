@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/sobexsrv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.6 2006/05/06 13:11:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.7 2006/05/14 21:16:02 halcy0n Exp $
+
+  14 May 2006; Mark Loeser <halcy0n@gentoo.org> sobexsrv-1.0.0_pre4.ebuild:
+  Stable on x86; bug #131734
 
   06 May 2006; Simon Stelling <blubb@gentoo.org> sobexsrv-1.0.0_pre4.ebuild:
   stable on amd64
