@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.54 2006/05/01 09:55:57 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.55 2006/05/14 08:29:53 grobian Exp $
+
+  14 May 2006; Fabian Groffen <grobian@gentoo.org> libwww-5.4.0-r5.ebuild:
+  Removed ppc-macos, it doesn't eautoreconf (bug #117919)
 
   01 May 2006; Martin Ehmsen <ehmsen@gentoo.org>
   files/libwww-5.4.0-asneeded.patch:
