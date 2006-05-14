@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/adplay/adplay-1.4-r2.ebuild,v 1.1 2006/05/14 12:45:28 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/adplay/adplay-1.4-r2.ebuild,v 1.2 2006/05/14 12:49:23 spock Exp $
 
 inherit eutils
 
@@ -28,9 +28,6 @@ src_compile() {
 	use oss || myconf="${myconf} --disable-output-oss"
 	use esd || myconf="${myconf} --disable-output-esound"
 	use sdl || myconf="${myconf} --disable-output-sdl"
-
-	# A simple hack to make adplay work with libbinio 1.4+
-	export CXXFLAGS="${CXXFLAGS} -I/usr/include/libbinio"
 
 	econf ${myconf} || die
 	emake || die "emake failed"
