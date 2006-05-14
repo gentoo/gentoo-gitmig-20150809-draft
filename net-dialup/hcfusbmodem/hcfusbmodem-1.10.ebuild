@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/hcfusbmodem-1.10.ebuild,v 1.1 2006/02/21 23:19:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/hcfusbmodem-1.10.ebuild,v 1.2 2006/05/14 08:21:24 mrness Exp $
 
 inherit linux-info eutils
 
@@ -19,11 +19,11 @@ DEPEND="dev-lang/perl
 S="${WORKDIR}/${P}powerpcfull"
 
 src_compile() {
-	emake all || die
+	emake all || die "make failed"
 }
 
 src_install () {
-	make PREFIX="${D}/usr/" ROOT="${D}" install || die
+	make PREFIX="${D}/usr/" ROOT="${D}" install || die "make install failed"
 }
 
 pkg_postinst() {
