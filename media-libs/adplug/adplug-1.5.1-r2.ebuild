@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/adplug-1.5.1-r2.ebuild,v 1.1 2006/05/14 12:26:00 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/adplug-1.5.1-r2.ebuild,v 1.2 2006/05/14 12:41:55 spock Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -13,8 +15,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND=">=dev-cpp/libbinio-1.4"
-
-inherit eutils
 
 src_unpack() {
 	unpack ${A}
