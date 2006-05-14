@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/miniracer/miniracer-1.04.ebuild,v 1.2 2006/01/13 22:07:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/miniracer/miniracer-1.04.ebuild,v 1.3 2006/05/14 10:43:58 genstef Exp $
 
 inherit games
 
-DESCRIPTION="an OpenGL car racing game, based on ID's famous Quake® engine"
+DESCRIPTION="an OpenGL car racing game, based on ID's famous Quake engine"
 HOMEPAGE="http://miniracer.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
