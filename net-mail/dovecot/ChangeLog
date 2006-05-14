@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.46 2006/05/13 17:29:31 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.47 2006/05/14 16:53:25 dertobi123 Exp $
+
+  14 May 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  dovecot-1.0_beta8.ebuild:
+  ppc stable, bug #133149
 
   13 May 2006; Fernando J. Pereda <ferdy@gentoo.org>
   dovecot-1.0_beta8.ebuild:
