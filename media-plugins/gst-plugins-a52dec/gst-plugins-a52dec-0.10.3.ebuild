@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/gst-plugins-a52dec-0.10.3.ebuild,v 1.4 2006/05/05 08:00:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/gst-plugins-a52dec-0.10.3.ebuild,v 1.5 2006/05/14 16:07:52 dertobi123 Exp $
 
 inherit gst-plugins-ugly
 
-KEYWORDS="~amd64 ~ia64 ~ppc ppc64 sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ppc64 sparc ~x86"
 IUSE=""
 
 RDEPEND=">=media-libs/a52dec-0.7.3
