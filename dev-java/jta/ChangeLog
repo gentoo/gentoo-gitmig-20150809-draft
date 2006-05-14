@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jta
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/ChangeLog,v 1.10 2005/05/18 11:22:29 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/ChangeLog,v 1.11 2006/05/14 20:44:05 betelgeuse Exp $
+
+  14 May 2006; Petteri Räty <betelgeuse@gentoo.org> jta-1.0.1.ebuild:
+  Removed (old and only really needed to build tomcat) from DESCRIPTION as
+  other packages than Tomcat also need jta.
 
   18 May 2005; Markus Rothe <corsair@gentoo.org> jta-1.0.1.ebuild:
   Stable on ppc64

@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/jta-1.0.1.ebuild,v 1.12 2005/07/12 13:27:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/jta-1.0.1.ebuild,v 1.13 2006/05/14 20:44:05 betelgeuse Exp $
 
 inherit java-pkg
 
 At="jta-1_0_1B-classes.zip"
-DESCRIPTION="The Java Transaction API (old and only really needed to build tomcat)"
+DESCRIPTION="The Java Transaction API"
 HOMEPAGE="http://java.sun.com/products/jta/"
 SRC_URI="${At}"
 LICENSE="sun-bcla-jta"
