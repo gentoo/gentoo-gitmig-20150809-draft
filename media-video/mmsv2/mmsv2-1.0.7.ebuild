@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-1.0.7.ebuild,v 1.1 2006/03/20 19:35:57 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-1.0.7.ebuild,v 1.2 2006/05/14 16:39:49 arj Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://mms.sunsite.dk/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug lirc svga sdl dvb xine"
+IUSE="debug lirc svga sdl dvb xine dxr3"
 
 RDEPEND="media-libs/imlib2
 	media-libs/taglib
@@ -22,6 +22,7 @@ RDEPEND="media-libs/imlib2
 	lirc? ( app-misc/lirc )
 	svga? ( media-libs/svgalib )
 	sdl? ( media-libs/libsdl )
+	dxr3? ( media-video/em8300-libraries )
 	xine? ( media-libs/xine-lib
 			media-video/cxfe )
 	!xine? ( media-sound/alsaplayer
@@ -48,16 +49,14 @@ src_compile() {
 	( use sdl ) \
 		&& myconf="${myconf} --enable-sdl"
 
+	( ! use dxr3 ) \
+		&& myconf="${myconf} --disable-dxr3"
+
 	( use dvb ) \
 		&& myconf="${myconf} --enable-dvb"
 
 	( use xine ) \
 		&& myconf="${myconf} --enable-xine-audio"
-
-	if ! [ -e /usr/include/linux/em8300.h ]
-	then
-		myconf="${myconf} --disable-dxr3"
-	fi
 
 	./configure --prefix=/usr \
 		--enable-fancy-audio \
