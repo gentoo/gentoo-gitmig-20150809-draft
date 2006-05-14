@@ -1,15 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/iso-relax-20050331.ebuild,v 1.1 2006/01/18 07:15:40 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/iso-relax-20050331.ebuild,v 1.2 2006/05/14 07:22:34 betelgeuse Exp $
 
 inherit java-pkg base
 
-DESCRIPTION="Interfaces usefull for applications which support RELAX Core"
+DESCRIPTION="Interfaces useful for applications which support RELAX Core"
 HOMEPAGE="http://iso-relax.sourceforge.net"
 SRC_URI="mirror://gentoo/${P}-gentoo.tar.bz2"
-#  cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/iso-relax login 
-# mkdir iso-releax-20050331
-# cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/iso-relax -frelease-20050331 co build.xml lib
+
+# To get the build system:
+# cvs -d:pserver:anonymous@iso-relax.cvs.sourceforge.net:/cvsroot/iso-relax login 
+# mkdir iso-relax-20050331 
+# cd iso-relax-20050331
+# cvs -d:pserver:anonymous@iso-relax.cvs.sourceforge.net:/cvsroot/iso-relax -frelease-20050331 co build.xml lib
 # rm -r $(find -name CVS)
 
 LICENSE="MIT"
