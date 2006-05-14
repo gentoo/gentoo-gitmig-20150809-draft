@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/exolabcore-0.3.7_p20050205.ebuild,v 1.8 2005/12/16 01:19:30 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/exolabcore-0.3.7_p20050205.ebuild,v 1.9 2006/05/14 07:13:45 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -9,7 +9,7 @@ MY_PV="${PV%%_p*}"
 MY_P="${PN}-${MY_DATE}"
 
 DESCRIPTION="Exolab Build Tools"
-HOMEPAGE="http://cvs.sourceforge.net/viewcvs.py/openjms/tools/"
+HOMEPAGE="http://openjms.cvs.sourceforge.net/openjms/exolabcore/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 
 LICENSE="Exolab"
@@ -30,15 +30,15 @@ DEPEND=">=virtual/jdk-1.4
 	jikes? ( dev-java/jikes )
 	source? ( app-arch/zip )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}/src
-	epatch ${FILESDIR}/${P}-buildfile.patch
+	cd "${S}/src"
+	epatch "${FILESDIR}/${P}-buildfile.patch"
 
-	cd ${S}/lib
+	cd "${S}/lib"
 	rm -f *.jar
 	java-pkg_jar-from cdegroot-db-1
 	java-pkg_jar-from commons-cli-1
@@ -49,7 +49,7 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}/src
+	cd "${S}/src"
 
 	local antflags="jar"
 	use doc && antflags="${antflags} javadoc"
