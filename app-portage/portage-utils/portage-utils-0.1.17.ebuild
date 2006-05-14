@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.17.ebuild,v 1.1 2006/05/14 01:43:31 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.17.ebuild,v 1.2 2006/05/14 18:55:05 tcort Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="small and fast portage helper tools written in C"
 HOMEPAGE="http://www.gentoo.org/"
@@ -14,6 +14,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE=""
 
 DEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-enum.patch
+}
 
 src_install() {
 	dobin q || die "dobin failed"
