@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mclient
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mclient/ChangeLog,v 1.6 2006/03/12 17:14:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mclient/ChangeLog,v 1.7 2006/05/14 11:59:41 mrness Exp $
+
+  14 May 2006; Alin Nastac <mrness@gentoo.org> mclient-2.8.ebuild:
+  Home page don't exist anymore. Set SRC_URI to Gentoo mirrors.
 
   12 Mar 2006; Alin Nastac <mrness@gentoo.org> metadata.xml,
   mclient-2.8.ebuild:
