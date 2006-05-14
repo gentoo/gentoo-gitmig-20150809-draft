@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.24.ebuild,v 1.6 2006/05/08 08:45:26 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.24.ebuild,v 1.7 2006/05/14 20:25:43 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 IUSE_VIDEO_CARDS="ati128 cle266 cyber5k i810 i830 mach64 matrox neomagic nsc nvidia radeon r200 savage sis315 tdfx unichrome"
-IUSE_INPUT_DRIVERS="dbox2remote elo-input h3600_ts joystick keyboard dreamboxremote linuxinput lirc mutouch ps2mouse serialmouse sonypijofdial wm97xx"
+IUSE_INPUT_DEVICES="dbox2remote elo-input h3600_ts joystick keyboard dreamboxremote linuxinput lirc mutouch ps2mouse serialmouse sonypijofdial wm97xx"
 
 DESCRIPTION="Thin library on top of the Linux framebuffer devices"
 HOMEPAGE="http://www.directfb.org/"
@@ -32,10 +32,10 @@ pkg_setup() {
 		einfo "DirectFB supports: ${IUSE_VIDEO_CARDS} all none"
 		echo
 	fi
-	if [[ -z ${INPUT_DRIVERS} ]] ; then
+	if [[ -z ${INPUT_DEVICES} ]] ; then
 		ewarn "All input drivers will be built since you did not specify"
-		ewarn "via the INPUT_DRIVERS variable which input drivers to use."
-		einfo "DirectFB supports: ${IUSE_INPUT_DRIVERS} all none"
+		ewarn "via the INPUT_DEVICES variable which input drivers to use."
+		einfo "DirectFB supports: ${IUSE_INPUT_DEVICES} all none"
 		echo
 	fi
 }
@@ -59,8 +59,8 @@ src_compile() {
 	[[ -z ${vidcards} ]] \
 		&& vidcards="all" \
 		|| vidcards=${vidcards:1}
-	for input in ${INPUT_DRIVERS} ; do
-		has ${input} ${IUSE_INPUT_DRIVERS} && inputdrivers="${inputdrivers},${input}"
+	for input in ${INPUT_DEVICES} ; do
+		has ${input} ${IUSE_INPUT_DEVICES} && inputdrivers="${inputdrivers},${input}"
 	done
 	[[ -z ${inputdrivers} ]] \
 		&& inputdrivers="all" \
@@ -116,5 +116,5 @@ pkg_postinst() {
 	ewarn "get your mouse unexpectedly set in absolute"
 	ewarn "mode in all DirectFB applications."
 	ewarn "This can be fixed by removing linuxinput from"
-	ewarn "INPUT_DRIVERS."
+	ewarn "INPUT_DEVICES."
 }
