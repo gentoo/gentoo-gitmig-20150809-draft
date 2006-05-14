@@ -1,0 +1,88 @@
+diff -ru adplug-1.5.1/adplugdb/adplugdb.cpp adplug-1.5.1-r2/adplugdb/adplugdb.cpp
+--- adplug-1.5.1/adplugdb/adplugdb.cpp	2004-08-08 21:20:07.000000000 +0200
++++ adplug-1.5.1-r2/adplugdb/adplugdb.cpp	2006-05-14 15:59:43.000000000 +0200
+@@ -26,7 +26,7 @@
+ #include <stdio.h>
+ #include <stdarg.h>
+ #include <string.h>
+-#include <binfile.h>
++#include <libbinio/binfile.h>
+ #include <string>
+ #include <iostream>
+ 
+diff -ru adplug-1.5.1/src/adplug.cpp adplug-1.5.1-r2/src/adplug.cpp
+--- adplug-1.5.1/src/adplug.cpp	2005-05-12 18:48:10.000000000 +0200
++++ adplug-1.5.1-r2/src/adplug.cpp	2006-05-14 15:59:07.000000000 +0200
+@@ -20,7 +20,7 @@
+  */
+ 
+ #include <string>
+-#include <binfile.h>
++#include <libbinio/binfile.h>
+ 
+ #include "adplug.h"
+ #include "debug.h"
+diff -ru adplug-1.5.1/src/database.cpp adplug-1.5.1-r2/src/database.cpp
+--- adplug-1.5.1/src/database.cpp	2003-03-01 19:51:59.000000000 +0100
++++ adplug-1.5.1-r2/src/database.cpp	2006-05-14 15:59:31.000000000 +0200
+@@ -21,8 +21,8 @@
+  * Copyright (c) 2002, 2003 Simon Peter <dn.tlp@gmx.net>
+  */
+ 
+-#include <binio.h>
+-#include <binfile.h>
++#include <libbinio/binio.h>
++#include <libbinio/binfile.h>
+ #include <string.h>
+ 
+ #include "database.h"
+diff -ru adplug-1.5.1/src/database.h adplug-1.5.1-r2/src/database.h
+--- adplug-1.5.1/src/database.h	2003-03-01 19:51:59.000000000 +0100
++++ adplug-1.5.1-r2/src/database.h	2006-05-14 15:51:38.000000000 +0200
+@@ -26,7 +26,7 @@
+ 
+ #include <iostream>
+ #include <string>
+-#include <binio.h>
++#include <libbinio/binio.h>
+ 
+ class CAdPlugDatabase
+ {
+diff -ru adplug-1.5.1/src/dmo.cpp adplug-1.5.1-r2/src/dmo.cpp
+--- adplug-1.5.1/src/dmo.cpp	2004-09-02 21:48:12.000000000 +0200
++++ adplug-1.5.1-r2/src/dmo.cpp	2006-05-14 16:35:22.000000000 +0200
+@@ -26,7 +26,7 @@
+ */
+ 
+ #include <string.h>
+-#include <binstr.h>
++#include <libbinio/binstr.h>
+ 
+ #include "dmo.h"
+ #include "debug.h"
+diff -ru adplug-1.5.1/src/fprovide.cpp adplug-1.5.1-r2/src/fprovide.cpp
+--- adplug-1.5.1/src/fprovide.cpp	2003-02-17 17:42:50.000000000 +0100
++++ adplug-1.5.1-r2/src/fprovide.cpp	2006-05-14 15:59:20.000000000 +0200
+@@ -20,8 +20,8 @@
+  */
+ 
+ #include <string.h>
+-#include <binio.h>
+-#include <binfile.h>
++#include <libbinio/binio.h>
++#include <libbinio/binfile.h>
+ 
+ #include "fprovide.h"
+ 
+diff -ru adplug-1.5.1/src/fprovide.h adplug-1.5.1-r2/src/fprovide.h
+--- adplug-1.5.1/src/fprovide.h	2003-01-28 14:34:35.000000000 +0100
++++ adplug-1.5.1-r2/src/fprovide.h	2006-05-14 15:51:57.000000000 +0200
+@@ -23,7 +23,7 @@
+ #define H_ADPLUG_FILEPROVIDER
+ 
+ #include <string>
+-#include <binio.h>
++#include <libbinio/binio.h>
+ 
+ class CFileProvider
+ {

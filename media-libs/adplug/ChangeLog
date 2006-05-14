@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/adplug
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/ChangeLog,v 1.9 2006/01/07 17:47:33 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/ChangeLog,v 1.10 2006/05/14 12:26:00 spock Exp $
+
+*adplug-1.5.1-r2 (14 May 2006)
+
+  14 May 2006; Michał Januszewski <spock@gentoo.org>
+  +files/adplug-1.5.1-libbinio.patch, +adplug-1.5.1-r2.ebuild:
+  Added a patch that fixes the adplug header files for libbinio 1.4+ (bug
+  #130762, thanks to Stian Skjelstad).
 
 *adplug-1.5.1-r1 (07 Jan 2006)
 
