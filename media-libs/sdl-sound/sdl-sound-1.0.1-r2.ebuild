@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r2.ebuild,v 1.4 2006/03/18 16:11:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r2.ebuild,v 1.5 2006/05/14 20:38:07 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic autotools
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="A library that handles the decoding of sound file formats"
@@ -26,6 +26,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/gcc331.patch
+	eautoreconf
+}
 
 src_compile() {
 	use mikmod \
