@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105-r1.ebuild,v 1.11 2006/02/09 01:08:20 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105-r1.ebuild,v 1.12 2006/05/14 20:27:38 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -25,23 +25,15 @@ IUSE="doc"
 
 S=${WORKDIR}/adaptx-20041105
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}/lib
-	java-pkg_jar-from xerces-2 xercesImpl.jar
-	java-pkg_jar-from xml-commons xml-apis.jar
-	java-pkg_jar-from rhino-1.5
-	java-pkg_jar-from gnu-jaxp
-	java-pkg_jar-from ant-core ant.jar
-	java-pkg_jar-from log4j
-}
-
 src_compile() {
+	local classpath="$(java-pkg_getjars \
+		xerces-2,xml-commons,rhino-1.5,gnu-jaxp,log4j)"
+
 	cd src/
 	# tried to build sources with jikes but
 	# failed all the time on different
 	# plattforms (amd64, x86)
-	local antflags="jar"
+	local antflags="jar -Dclasspath=${classpath}"
 	use doc && antflags="${antflags} javadoc"
 	ant ${antflags} || die "failed too build"
 }
