@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/glut
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.22 2006/05/13 20:19:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.23 2006/05/14 23:00:19 spyderous Exp $
+
+  14 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  files/digest-glut-3.7-r2, files/digest-glut-3.7.1, Manifest:
+  Add all the fun new non-md5 digests.
 
   13 May 2006; Donnie Berkholz <spyderous@gentoo.org>; glut-3.7-r2.ebuild,
   glut-3.7.1.ebuild:
