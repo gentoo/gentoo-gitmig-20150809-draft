@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.35.ebuild,v 1.2 2006/04/02 05:41:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.35.ebuild,v 1.3 2006/05/14 11:33:17 mrness Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -17,7 +17,7 @@ DEPEND="doc? ( virtual/tetex )
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc x86"
 IUSE="doc"
 
 pkg_setup() {
