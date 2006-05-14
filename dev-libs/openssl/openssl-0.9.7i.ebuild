@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7i.ebuild,v 1.22 2006/04/21 00:29:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7i.ebuild,v 1.23 2006/05/14 15:09:47 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -111,7 +111,9 @@ src_compile() {
 		all || die "make all failed"
 
 	# force until we get all the gentoo.config kinks worked out
-	tc-is-cross-compiler || src_test
+	if ! has test ${FEATURES} && ! tc-is-cross-compiler ; then
+		src_test
+	fi
 }
 
 src_test() {

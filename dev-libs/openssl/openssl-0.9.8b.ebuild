@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8b.ebuild,v 1.1 2006/05/05 14:53:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8b.ebuild,v 1.2 2006/05/14 15:09:47 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -32,6 +32,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.9.8b-parallel-build.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8-make-engines-dir.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8-toolchain.patch
+	epatch "${FILESDIR}"/${PN}-0.9.8b-doc-updates.patch
 
 	# allow openssl to be cross-compiled
 	cp "${FILESDIR}"/gentoo.config-0.9.8 gentoo.config || die "cp cross-compile failed"
@@ -102,12 +103,12 @@ src_compile() {
 	emake all rehash || die "make all failed"
 
 	# force until we get all the gentoo.config kinks worked out
-	src_test
+	if ! has test ${FEATURES} && ! tc-is-cross-compiler ; then
+		src_test
+	fi
 }
 
 src_test() {
-	tc-is-cross-compiler && return 0
-
 	# make sure sandbox doesnt die on *BSD
 	add_predict /dev/crypto
 
@@ -130,12 +131,20 @@ src_install() {
 	cp -RP certs/* "${D}"/etc/ssl/certs/ || die "failed to install certs"
 	rm -r "${D}"/etc/ssl/certs/{demo,expired}
 
-	# These man pages conflict with other packages so rename them
+	# Namespace openssl programs to prevent conflicts with other man pages
 	cd "${D}"/usr/share/man
-	for m in man1/passwd.1 man3/rand.3 man3/err.3 ; do
-		d=${m%%/*} ; m=${m##*/}
-		mv -f ${d}/{,ssl-}${m}
-		ln -snf ssl-${m} ${d}/openssl-${m}
+	local m d s
+	for m in $(find . -type f -printf '%P ' | xargs grep -L '#include') ; do
+		d=${m%/*} ; m=${m##*/}
+		mv ${d}/{,ssl-}${m}
+		ln -s ssl-${m} ${d}/openssl-${m}
+		# locate any symlinks that point to this man page
+		for s in $(find ${d} -lname ${m}) ; do
+			s=${s##*/}
+			rm -f ${d}/${s}
+			ln -s ssl-${m} ${d}/ssl-${s}
+			ln -s ssl-${s} ${d}/openssl-${s}
+		done
 	done
 }
 

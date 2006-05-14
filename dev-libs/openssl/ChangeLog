@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.160 2006/05/05 14:53:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.161 2006/05/14 15:09:47 vapier Exp $
+
+  14 May 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/openssl-0.9.7j-doc-updates.patch,
+  +files/openssl-0.9.8b-doc-updates.patch, openssl-0.9.7i.ebuild,
+  openssl-0.9.7j.ebuild, openssl-0.9.8a.ebuild, openssl-0.9.8b.ebuild:
+  Dont run src_test twice and namespace common manpages to prevent conflicts
+  with other packages #132830 by Diego Pettenò.
 
 *openssl-0.9.8b (05 May 2006)
 

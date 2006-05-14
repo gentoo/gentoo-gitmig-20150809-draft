@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7j.ebuild,v 1.1 2006/05/05 14:51:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7j.ebuild,v 1.2 2006/05/14 15:09:47 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -35,6 +35,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.9.7g-superh.patch
 	epatch "${FILESDIR}"/${PN}-0.9.7i-m68k.patch
 	epatch "${FILESDIR}"/${PN}-0.9.7g-amd64-fbsd.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7j-doc-updates.patch
 
 	# allow openssl to be cross-compiled
 	cp "${FILESDIR}"/gentoo.config-0.9.7g gentoo.config || die "cp cross-compile failed"
@@ -110,7 +111,9 @@ src_compile() {
 		all || die "make all failed"
 
 	# force until we get all the gentoo.config kinks worked out
-	tc-is-cross-compiler || src_test
+	if ! has test ${FEATURES} && ! tc-is-cross-compiler ; then
+		src_test
+	fi
 }
 
 src_test() {
@@ -139,12 +142,20 @@ src_install() {
 	LD_LIBRARY_PATH="${D}"/usr/$(get_libdir)/ \
 	OPENSSL="${D}"/usr/bin/openssl /usr/bin/perl tools/c_rehash "${D}"/etc/ssl/certs
 
-	# These man pages with other packages so rename them
+	# Namespace openssl programs to prevent conflicts with other man pages
 	cd "${D}"/usr/share/man
-	for m in man1/passwd.1 man3/rand.3 man3/err.3 ; do
-		d=${m%%/*} ; m=${m##*/}
+	local m d s
+	for m in $(find . -type f -printf '%P ' | xargs grep -L '#include') ; do
+		d=${m%/*} ; m=${m##*/}
 		mv ${d}/{,ssl-}${m}
 		ln -s ssl-${m} ${d}/openssl-${m}
+		# locate any symlinks that point to this man page
+		for s in $(find ${d} -lname ${m}) ; do
+			s=${s##*/}
+			rm -f ${d}/${s}
+			ln -s ssl-${m} ${d}/ssl-${s}
+			ln -s ssl-${s} ${d}/openssl-${s}
+		done
 	done
 
 	fperms a+x /usr/$(get_libdir)/pkgconfig #34088
