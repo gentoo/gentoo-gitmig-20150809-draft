@@ -1,0 +1,8 @@
+# ChangeLog for net-ftp/twoftpd
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/ChangeLog,v 1.1 2006/05/14 15:49:00 bangert Exp $
+
+  14 May 2006; Thilo Bangert <bangert@gentoo.org> ChangeLog:
+  initial import. twoftpd, a new FTP server that strives to 
+  be secure, simple, and efficient.
+
