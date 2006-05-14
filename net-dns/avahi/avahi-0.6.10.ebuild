@@ -1,6 +1,6 @@
 # Copyright 2000-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.10.ebuild,v 1.2 2006/05/12 19:01:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.10.ebuild,v 1.3 2006/05/14 09:46:36 swegener Exp $
 
 inherit eutils qt3 mono python
 
@@ -10,7 +10,7 @@ SRC_URI="http://avahi.org/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="bookmarks howl-compat mdnsresponder-compat gdbm dbus doc mono gtk python qt"
 
 # We have USE flags depending on each other, which leads to this logic. We
@@ -31,8 +31,14 @@ RDEPEND=">=dev-libs/libdaemon-0.5
 	)
 	dbus? (
 		>=sys-apps/dbus-0.30
-		howl-compat? ( !net-misc/howl )
-		mdnsresponder-compat? ( !net-misc/mDNSResponder )
+	)
+	howl-compat? (
+		!net-misc/howl
+		>=sys-apps/dbus-0.30
+	)
+	mdnsresponder-compat? (
+		!net-misc/mDNSResponder
+		>=sys-apps/dbus-0.30
 	)
 	python? (
 		>=virtual/python-2.4
@@ -85,6 +91,11 @@ src_compile() {
 		myconf="${myconf} --enable-dbus"
 
 		use doc && myconf="${myconf} --enable-monodoc"
+	fi
+
+	if use howl-compat || use mdnsresponder-compat?
+	then
+		myconf="${myconf} --enable-dbus"
 	fi
 
 	if use bookmarks

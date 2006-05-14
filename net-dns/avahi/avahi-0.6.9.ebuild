@@ -1,6 +1,6 @@
 # Copyright 2000-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.9.ebuild,v 1.7 2006/05/04 01:01:52 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.9.ebuild,v 1.8 2006/05/14 09:46:36 swegener Exp $
 
 inherit eutils qt3 mono python
 
@@ -31,8 +31,14 @@ RDEPEND=">=dev-libs/libdaemon-0.5
 	)
 	dbus? (
 		>=sys-apps/dbus-0.30
-		howl-compat? ( !net-misc/howl )
-		mdnsresponder-compat? ( !net-misc/mDNSResponder )
+	)
+	howl-compat? (
+		!net-misc/howl
+		>=sys-apps/dbus-0.30
+	)
+	mdnsresponder-compat? (
+		!net-misc/mDNSResponder
+		>=sys-apps/dbus-0.30
 	)
 	python? (
 		>=virtual/python-2.4
@@ -85,6 +91,11 @@ src_compile() {
 		myconf="${myconf} --enable-dbus"
 
 		use doc && myconf="${myconf} --enable-monodoc"
+	fi
+
+	if use howl-compat || use mdnsresponder-compat?
+	then
+		myconf="${myconf} --enable-dbus"
 	fi
 
 	if use bookmarks
