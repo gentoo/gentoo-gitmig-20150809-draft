@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.3.4.ebuild,v 1.1 2006/01/07 01:56:43 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.3.4.ebuild,v 1.2 2006/05/14 16:12:08 arj Exp $
 
 S="${WORKDIR}/${P}/src/=build"
 DESCRIPTION="Revision control system ideal for widely distributed development"
@@ -32,9 +32,14 @@ src_unpack() {
 }
 
 src_compile() {
-	../configure \
-		--prefix="/usr" \
-		--with-posix-shell="/bin/bash"	|| die "configure failed"
+	OPTIONS="--prefix=/usr --with-posix-shell=/bin/bash "
+
+	if [[ -n $CC ]]
+	then
+	      	../configure ${OPTIONS} --with cc="$CC $CFLAGS" || die "configure failed"
+	else
+		../configure ${OPTIONS} || die "configure failed"
+	fi
 	# parallel make may cause problems with this package
 	make || die "make failed"
 }
