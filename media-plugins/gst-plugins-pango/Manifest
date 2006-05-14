@@ -1,4 +1,4 @@
-MD5 4c3ee7bddc858a9c8c27894629f1ba03 ChangeLog 6777
+MD5 27f4190f68c90e09c8b90928f45423f1 ChangeLog 6883
 MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-pango-0.10.4 277
 MD5 5b58a001f51839e2aaaf1108a913a4ac files/digest-gst-plugins-pango-0.10.6 77
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-pango-0.8.10 72
@@ -9,7 +9,7 @@ MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-pango-0.8.8-r1 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-pango-0.8.9 71
 MD5 ed95a2d8b0c203bc1b8b72118101a97b files/gst-plugins-pango-0.8.8-sub_position.patch 1648
 MD5 0c86de221f2748ecb41f49f9ff3f534b gst-plugins-pango-0.10.4.ebuild 408
-MD5 2d3b6700b99297cde9538157d0a7f265 gst-plugins-pango-0.10.6.ebuild 415
+MD5 2a2e1ede6a630ab3c6b027c39d126b23 gst-plugins-pango-0.10.6.ebuild 418
 MD5 ca7332713a6a8e9863e4e74ba47d4bf0 gst-plugins-pango-0.8.10.ebuild 356
 MD5 0b8767a53079c3794fabc3448143544b gst-plugins-pango-0.8.11.ebuild 356
 MD5 03855b89e8c65fc7423930e9ef7d13c7 gst-plugins-pango-0.8.12.ebuild 363
