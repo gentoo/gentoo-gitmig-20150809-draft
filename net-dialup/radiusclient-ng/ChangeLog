@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/radiusclient-ng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient-ng/ChangeLog,v 1.8 2006/03/16 20:43:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient-ng/ChangeLog,v 1.9 2006/05/14 15:29:15 mrness Exp $
+
+  14 May 2006; Alin Nastac <mrness@gentoo.org> radiusclient-ng-0.5.2.ebuild:
+  Stable on x86.
 
 *radiusclient-ng-0.5.2 (16 Mar 2006)
 
