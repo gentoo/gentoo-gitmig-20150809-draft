@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.5.5.ebuild,v 1.10 2006/05/13 16:24:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.5.5.ebuild,v 1.11 2006/05/14 12:20:05 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/eix/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc ppc-macos ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc ppc-macos ppc64 sparc x86"
 IUSE=""
 
 DEPEND="sys-apps/portage"
