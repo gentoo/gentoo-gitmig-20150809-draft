@@ -4,7 +4,6 @@ Hash: SHA1
 MD5 f5eb895c65ee07f5aef1ef65f7128aff ChangeLog 4418
 MD5 395bd74ffc3553d4ef151865b7601bb1 files/digest-hcfpcimodem-1.08 144
 MD5 a2b09ba68937c610b9c2f5156690c3a4 files/digest-hcfpcimodem-1.10-r2 144
-MD5 790c0fbf3202d068fbb35b11296985c2 files/hcfpcimodem-1.06-simple_class.patch 5124
 MD5 9ec542df181d86f49f4d66377de83a59 files/hcfpcimodem-1.08-upstream-20051215.patch 2777
 MD5 d49ba111af3016191da29fc85232ae77 files/hcfpcimodem-1.10-suspend2.patch 800
 MD5 9180a9a60e4066ac19d6caaba94f527b hcfpcimodem-1.08.ebuild 1859
@@ -13,7 +12,7 @@ MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEZud9jG8pv1lIUX4RAkycAKDZWt97bvqcj0o0Y5H/6XAUe4F2kQCgzR4R
-txiAYL14oItFCjT64WWGHf0=
-=7byu
+iD8DBQFEZufmjG8pv1lIUX4RAiHvAKDTQESmo8fl4xb7nlSSZ04WetXuuACfX2Jj
+gE3hGui87Ztfgoa43Z5/+so=
+=ZjmT
 -----END PGP SIGNATURE-----
