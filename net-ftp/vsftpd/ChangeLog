@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.69 2006/05/14 03:17:57 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.70 2006/05/14 03:20:48 weeve Exp $
+
+  14 May 2006; Jason Wever <weeve@gentoo.org> vsftpd-2.0.4-r1.ebuild:
+  Stable on SPARC wrt bug #132650.
 
   14 May 2006; Luis Medinas <metalgod@gentoo.org> vsftpd-2.0.4-r1.ebuild:
   Stable on amd64. Bug #132650.
