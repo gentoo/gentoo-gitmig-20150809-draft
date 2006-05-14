@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slirp/slirp-1.0.17.ebuild,v 1.1 2006/03/16 21:58:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slirp/slirp-1.0.17.ebuild,v 1.2 2006/05/14 16:50:16 mrness Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://slirp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_BASE_VERSION}.tar.gz
 	mirror://sourceforge/${PN}/${PN}_${PV//./_}_patch.tar.gz"
 
-KEYWORDS="-amd64 -ia64 -ppc64 -sparc ~x86"
+KEYWORDS="-amd64 -ia64 -ppc64 -sparc x86"
 SLOT="0"
 LICENSE="Artistic"
 IUSE=""

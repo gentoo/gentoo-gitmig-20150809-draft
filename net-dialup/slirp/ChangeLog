@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/slirp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slirp/ChangeLog,v 1.5 2006/03/16 21:58:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slirp/ChangeLog,v 1.6 2006/05/14 16:50:16 mrness Exp $
+
+  14 May 2006; Alin Nastac <mrness@gentoo.org> slirp-1.0.17.ebuild:
+  Stable on x86.
 
 *slirp-1.0.17 (16 Mar 2006)
 
