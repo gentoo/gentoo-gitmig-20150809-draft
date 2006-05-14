@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.5.1.ebuild,v 1.1 2006/05/07 16:42:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.5.1.ebuild,v 1.2 2006/05/14 15:13:57 genstef Exp $
 
 inherit kde
 
@@ -17,9 +17,9 @@ DEPEND=">=x11-libs/gtk+-2.6"
 need-kde 3.4
 
 pkg_postinst() {
-	einfo "To see the kde-file-selector in firefox, just do:"
+	einfo "To see the kde-file-selector in a gtk-application, just do:"
 	echo "cd /usr/local/bin"
-	echo "ln -s kgtk-wrapper.sh firefox"
+	echo "ln -s kgtk-wrapper.sh application(eg. firefox)"
 	einfo "Make sure that /usr/local/bin is before /usr/bin in your \$PATH"
 	einfo
 	ewarn "Kded needs to be running, to get this working!"
