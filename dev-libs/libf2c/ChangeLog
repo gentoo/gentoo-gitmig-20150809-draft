@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libf2c
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.19 2005/09/10 11:42:52 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.20 2006/05/14 05:41:27 spyderous Exp $
+
+*libf2c-20051004 (14 May 2006)
+
+  14 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/20051004-add-ofiles-dep.patch, +libf2c-20051004.ebuild:
+  Bump. Changes: Work correctly when writing to a file after reading from it;
+  Add libf2c.so makefile rule; Stop forcing the rounding precision on x86
+  (only affects use of 'f2c -trapuv'). Also, mirror a versioned zip file
+  instead of the unversioned upstream one.
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org> libf2c-20021004-r1.ebuild:
   Mark 20021004-r1 stable on alpha
