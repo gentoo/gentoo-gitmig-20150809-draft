@@ -1,6 +1,15 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.43 2006/01/13 13:22:45 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.44 2006/05/14 04:52:06 squinky86 Exp $
+
+*gnunet-0.7.0d (14 May 2006)
+
+  14 May 2006; Jon Hood <squinky86@gentoo.org> -files/gnunet-0.6.6b,
+  -files/gnunet-0.6.6b-autotools.patch, +files/gnunet-0.7.0d-nulludp.patch,
+  +files/gnunet-2, -gnunet-0.6.6b.ebuild, -gnunet-0.6.6b-r1.ebuild,
+  -gnunet-0.7.0.ebuild, -gnunet-0.7.0-r1.ebuild, -gnunet-0.7.0-r2.ebuild,
+  -gnunet-0.7.0a.ebuild, +gnunet-0.7.0d.ebuild:
+  Version bump, #133240. Remove old vulnerable versions.
 
 *gnunet-0.7.0a (13 Jan 2006)
 
