@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1896 2006/05/14 05:57:53 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1897 2006/05/14 20:27:23 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -328,6 +328,7 @@ dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used f
 dev-lang/swig:pike - Enable Pike scripting support
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/DirectFB:sysfs - Add support for the sysfs filesystem (requires Linux-2.6+)
+dev-libs/DirectFB:v4l2 - Enables video4linux2 support
 dev-libs/apr:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/boehm-gc:c++ - Adds support for C++
 dev-libs/boost:bcp - Install the bcp tool http://www.boost.org/tools/bcp/bcp.html
