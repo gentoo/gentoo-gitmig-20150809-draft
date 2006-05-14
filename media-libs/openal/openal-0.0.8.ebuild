@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8.ebuild,v 1.1 2006/04/17 21:47:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8.ebuild,v 1.2 2006/05/14 14:12:00 wolf31o2 Exp $
 
 inherit eutils
 
@@ -41,7 +41,7 @@ src_compile() {
 		$(use_enable debug debug-maximus) \
 		|| die "econf failed"
 
-	emake all \
+	emake -j1 all \
 		|| die "emake failed"
 }
 
