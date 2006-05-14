@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/pptpconfig-20040722.ebuild,v 1.5 2005/10/04 19:55:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/pptpconfig-20060410.ebuild,v 1.1 2006/05/14 12:28:05 mrness Exp $
+
+inherit depend.php
 
 DESCRIPTION="Configuration and management program for PPTP Client tunnels"
 HOMEPAGE="http://pptpclient.sourceforge.net/"
@@ -11,13 +13,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=""
 RDEPEND="|| ( dev-php4/php-gtk dev-php/php-gtk )
 	net-dialup/pptpclient
 	sys-apps/iproute2"
 
+pkg_setup() {
+	require_php_with_use cli pcntl pcre posix session
+}
+
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog DEVELOPERS NEWS README TODO
-	dosed 's:/usr/lib/php-pcntl/bin/php:/usr/bin/php:g' /usr/bin/pptpconfig.php || die
+	dosed 's:/usr/lib/php-pcntl/bin/php:/usr/bin/php:' /usr/bin/pptpconfig.php
 }

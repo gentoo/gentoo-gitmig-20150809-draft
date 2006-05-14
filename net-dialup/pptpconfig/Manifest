@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4ba131ff9f1ac6456300989cf8348d18 ChangeLog 1807
-MD5 6d09d5d24ab4cc325fb857c2f54be505 files/digest-pptpconfig-20040722 70
+MD5 28a1eaea93ea88f064a2f351ea0dae79 ChangeLog 1993
 MD5 b2a676ca5dac90e0ecc8b58d6c22ab25 files/digest-pptpconfig-20060222 70
+MD5 02f90066fb87486e5d2cb989cba2cfa5 files/digest-pptpconfig-20060410 70
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 208dc406b938224b15e815ab83230d28 pptpconfig-20040722.ebuild 785
 MD5 566a64cd46b1b762473347ee84cb5054 pptpconfig-20060222.ebuild 855
+MD5 4c661d09d396f4a9baede96fe2635980 pptpconfig-20060410.ebuild 855
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEIyjIjG8pv1lIUX4RAqeNAKDwGdp7AmsLW2kKQuKc0pFRhPCA3wCgygKB
-uY/Dljpg1d6wmGynkIRu/XU=
-=BlWX
+iD8DBQFEZyJijG8pv1lIUX4RAnd9AJ9gK4sR98CqeaaWxey1AbIWw3vTSACeLzJ3
+ftWSJtnu+RMsb0wyZmuzlmQ=
+=BypY
 -----END PGP SIGNATURE-----
