@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabtools/exolabtools-1.0_p20050205.ebuild,v 1.10 2005/07/15 18:52:25 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabtools/exolabtools-1.0_p20050205.ebuild,v 1.11 2006/05/14 07:07:23 betelgeuse Exp $
 
 inherit java-pkg
 
 MY_P=${P/-1.0_p/-}
 
 DESCRIPTION="Exolab Build Tools"
-HOMEPAGE="http://cvs.sourceforge.net/viewcvs.py/openjms/tools/"
+HOMEPAGE="http://openjms.cvs.sourceforge.net/openjms/tools/src/main/org/exolab/tools/ant/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 
 LICENSE="Exolab"
@@ -25,10 +25,21 @@ DEPEND=">=virtual/jdk-1.4
 	jikes? ( dev-java/jikes )
 	source? ( app-arch/zip )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack "${A}"
+
+	cd "${S}/src/etc"
+	mv JARS JARS.upstream
+	echo "project.jar.oro=jakarta-oro.jar" > JARS
+
+	cd "${S}/lib"
+	java-pkg_jar-from jakarta-oro-2.0
+}
 
 src_compile() {
-	cd ${S}/src
+	cd "${S}/src"
 	local antflags="jar"
 	use doc && antflags="${antflags} javadoc"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
@@ -39,8 +50,12 @@ src_install() {
 	java-pkg_newjar dist/${PN}-1.0.jar ${PN}.jar
 
 	if use doc; then
-		dodoc src/etc/CHANGELOG src/etc/VERSION src/etc/JARS
+		dodoc src/etc/CHANGELOG src/etc/VERSION
+
+		# TODO when package freeze is over make this install to
+		# html/api
 		java-pkg_dohtml -r build/doc/*
 	fi
+
 	use source && java-pkg_dosrc src/main/*
 }
