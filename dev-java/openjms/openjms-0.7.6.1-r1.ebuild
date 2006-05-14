@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1-r1.ebuild,v 1.3 2006/02/05 11:07:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1-r1.ebuild,v 1.4 2006/05/14 20:55:51 betelgeuse Exp $
 
 inherit java-pkg eutils
 
@@ -62,6 +62,7 @@ src_unpack() {
 	java-pkg_jar-from log4j
 	java-pkg_jar-from servletapi-2.3
 	java-pkg_jar-from xerces-2.3
+	java-pkg_jar-from jakarta-oro-2.0
 }
 
 src_compile() {
