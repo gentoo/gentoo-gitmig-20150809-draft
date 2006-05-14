@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.25.1.ebuild,v 1.1 2006/05/07 09:46:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.25.1.ebuild,v 1.2 2006/05/14 13:46:16 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -55,12 +55,14 @@ src_compile() {
 	local vidcards card input inputdrivers
 	for card in ${VIDEO_CARDS} ; do
 		has ${card} ${IUSE_VIDEO_CARDS} && vidcards="${vidcards},${card}"
+		#use video_cards_${card} && vidcards="${vidcards},${card}"
 	done
 	[[ -z ${vidcards} ]] \
 		&& vidcards="all" \
 		|| vidcards=${vidcards:1}
 	for input in ${INPUT_DRIVERS} ; do
 		has ${input} ${IUSE_INPUT_DRIVERS} && inputdrivers="${inputdrivers},${input}"
+		#use input_drivers_${input} && inputdrivers="${inputdrivers},${input}"
 	done
 	[[ -z ${inputdrivers} ]] \
 		&& inputdrivers="all" \
