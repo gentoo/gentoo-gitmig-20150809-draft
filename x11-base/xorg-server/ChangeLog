@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.117 2006/05/13 15:36:34 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.118 2006/05/14 19:11:49 spyderous Exp $
+
+  14 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-1.0.2-r4.ebuild, xorg-server-1.0.99.903.ebuild:
+  Add RESTRICT=stricter, because FEATURES=stricter dies on installing anything
+  suid with lazy bindings. The X server needs lazy bindings because of how its
+  module loading works. Hopefully at some point, upstream will change this.
+  Suggested by Kevin F. Quinn.
 
   13 May 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.0.99.903.ebuild:

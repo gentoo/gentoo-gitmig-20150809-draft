@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.99.903.ebuild,v 1.2 2006/05/13 15:35:13 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.99.903.ebuild,v 1.3 2006/05/14 19:11:49 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -22,6 +22,8 @@ SRC_URI="${SRC_URI}
 	mirror://sourceforge/mesa3d/${MESA_SRC_P}.tar.bz2
 	http://xorg.freedesktop.org/snapshots/individual/xserver/${P}.tar.bz2"
 DESCRIPTION="X.Org X servers"
+# It's suid and has lazy bindings, so FEATURES="stricter" doesn't work
+RESTRICT="stricter"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE_INPUT_DEVICES="
 	input_devices_acecad
