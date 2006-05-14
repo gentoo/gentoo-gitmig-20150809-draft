@@ -1,7 +1,11 @@
 # ChangeLog for media-video/em8300-libraries
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/ChangeLog,v 1.23 2006/04/27 23:40:01 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/ChangeLog,v 1.24 2006/05/14 16:52:34 arj Exp $
 
+  14 May 2006; Anders Rune Jensen <arj@gentoo.org>
+  em8300-libraries-0.15.3.ebuild, -em8300-libraries-0.15.2.ebuild:
+  Stable on amd64. Remove old version
+	
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-em8300-libraries-0.13.0-r1,
   files/digest-em8300-libraries-0.15.2,

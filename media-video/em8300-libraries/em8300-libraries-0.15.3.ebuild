@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.15.3.ebuild,v 1.1 2006/04/12 20:14:04 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.15.3.ebuild,v 1.2 2006/05/14 16:52:34 arj Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ DEPEND="media-video/em8300-modules
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="gtk"
 
 src_unpack () {
