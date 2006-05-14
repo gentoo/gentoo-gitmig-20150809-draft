@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.9.0.ebuild,v 1.14 2006/05/09 09:12:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.9.0.ebuild,v 1.15 2006/05/14 22:09:48 kugelfang Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ggi-project.org/ftp/ggi/v2.1/${P}.src.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ppc ppc64 s390 sh ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh ~sparc x86"
 IUSE="X"
 
 RDEPEND="X? ( || ( x11-libs/libX11 virtual/x11 ) )
