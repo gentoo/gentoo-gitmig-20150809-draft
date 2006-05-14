@@ -169,10 +169,10 @@ AUX shadow-4.0.15-no-default-MAIL.patch 879 RMD160 c380e0a00ef0be8a99927de8bb6cf
 MD5 3ce54cb32b7564df1386544bf3d1e035 files/shadow-4.0.15-no-default-MAIL.patch 879
 RMD160 c380e0a00ef0be8a99927de8bb6cf70f1dfd33ce files/shadow-4.0.15-no-default-MAIL.patch 879
 SHA256 57aa93bae1cbaffc51250bc415384991992e6ebb6cc5bb1f3c0dc90bb3dd0354 files/shadow-4.0.15-no-default-MAIL.patch 879
-AUX shadow-4.0.15-uclibc-missing-l64a.patch 721 RMD160 758ef96e1b7207c6b1d9f7fe7c14664f91e9d78f SHA1 c8448eecbb1a40d008762b5afc12ed44fc548a84 SHA256 ab5f5d679f03b6fa5747c01f11667ac9a7977408284d537623546dadfc713161 size 721
-MD5 088c76f8f851fadad0f6b50ad65610f5 files/shadow-4.0.15-uclibc-missing-l64a.patch 721
-RMD160 758ef96e1b7207c6b1d9f7fe7c14664f91e9d78f files/shadow-4.0.15-uclibc-missing-l64a.patch 721
-SHA256 ab5f5d679f03b6fa5747c01f11667ac9a7977408284d537623546dadfc713161 files/shadow-4.0.15-uclibc-missing-l64a.patch 721
+AUX shadow-4.0.15-uclibc-missing-l64a.patch 1354 RMD160 6d35c4ddad876edacdd41be056fa8abd567ae802 SHA1 27012d25d41a19dcafab1fb45921bbf7aa12885d SHA256 37ac2cdea64f849e0cf9e92ccefeab05b0466541268fb4844f18a94c377c8514 size 1354
+MD5 f79f1051bedb185f81f24fb9d30dcc35 files/shadow-4.0.15-uclibc-missing-l64a.patch 1354
+RMD160 6d35c4ddad876edacdd41be056fa8abd567ae802 files/shadow-4.0.15-uclibc-missing-l64a.patch 1354
+SHA256 37ac2cdea64f849e0cf9e92ccefeab05b0466541268fb4844f18a94c377c8514 files/shadow-4.0.15-uclibc-missing-l64a.patch 1354
 AUX shadow-4.0.4.1-nonis.patch 1504 RMD160 f8e5fc3fb33c2d57206d813e88abe6a7d6198ed7 SHA1 2f05f7dcd62248c974b58909c8951a7eeb64f7a4 SHA256 3e126ef9e1e9b7d95297e2e1dd450557438f9a7f13a120fae8863e3d80534e08 size 1504
 MD5 020e030c2d09b206e88cf9051ced6244 files/shadow-4.0.4.1-nonis.patch 1504
 RMD160 f8e5fc3fb33c2d57206d813e88abe6a7d6198ed7 files/shadow-4.0.4.1-nonis.patch 1504
@@ -312,7 +312,7 @@ SHA256 6945583c30661308f30bd36bf7e5e64c0b923a06914def8622b702b447daf849 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEYAYx2+ySkm8kpY0RAoIFAKCaXQ22RYELVl48BIay6G0UY4IHSACff77e
-YjfcHlFz0TXgtKiYHNrUFic=
-=D2vv
+iD8DBQFEZ0m62+ySkm8kpY0RAhobAKCL4w4mREAN4kwsTZVaJZj61c/nOwCgwFcN
+vhnDXwkXLCJBVtBlcIIzoDI=
+=2znc
 -----END PGP SIGNATURE-----
