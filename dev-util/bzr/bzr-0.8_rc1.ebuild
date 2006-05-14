@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.8_rc1.ebuild,v 1.1 2006/04/18 21:37:50 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.8_rc1.ebuild,v 1.2 2006/05/14 00:55:16 flameeyes Exp $
 
 inherit distutils bash-completion elisp-common
 
@@ -12,7 +12,7 @@ SRC_URI="http://bazaar-vcs.org/pkg/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="emacs"
 
 DEPEND=">=dev-lang/python-2.4
