@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r2.ebuild,v 1.18 2006/04/26 19:08:16 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r2.ebuild,v 1.19 2006/05/14 22:41:26 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -1056,7 +1056,7 @@ fi
 RESTRICT="nostrip multilib-pkg-force"
 
 # We need a new-enough binutils for as-needed
-DEPEND=">=sys-devel/gcc-3.3.3
+DEPEND=">=sys-devel/gcc-3.4
 	nptl? ( >=sys-kernel/linux-headers-${NPTL_KERNEL_VERSION} )
 	>=sys-devel/binutils-2.15.94
 	>=sys-devel/gcc-config-1.3.12

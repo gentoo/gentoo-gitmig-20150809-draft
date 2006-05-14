@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.3 2006/05/06 06:03:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.4 2006/05/14 22:41:26 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1009,7 +1009,7 @@ fi
 RESTRICT="nostrip multilib-pkg-force"
 
 # We need a new-enough binutils for as-needed
-DEPEND=">=sys-devel/gcc-3.3.3
+DEPEND=">=sys-devel/gcc-3.4
 	nptl? ( >=sys-kernel/linux-headers-${NPTL_KERNEL_VERSION} )
 	>=sys-devel/binutils-2.15.94
 	>=sys-devel/gcc-config-1.3.12
