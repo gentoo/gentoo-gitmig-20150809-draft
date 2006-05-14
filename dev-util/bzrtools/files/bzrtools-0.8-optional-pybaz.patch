@@ -1,0 +1,26 @@
+=== modified file '__init__.py'
+--- __init__.py	
++++ __init__.py	
+@@ -415,7 +415,6 @@
+ 
+ 
+ def test_suite():
+-    import baz_import
+     from bzrlib.tests.TestUtil import TestLoader
+     import tests
+     from doctest import DocTestSuite, ELLIPSIS
+@@ -427,7 +426,12 @@
+     result = TestSuite()
+     result.addTest(DocTestSuite(bzrtools, optionflags=ELLIPSIS))
+     result.addTest(clean_tree.test_suite())
+-    result.addTest(DocTestSuite(baz_import))
++    try:
++        import baz_import
++    except NoPyBaz:
++        pass
++    else:
++        result.addTest(DocTestSuite(baz_import))
+     result.addTest(tests.test_suite())
+     result.addTest(TestLoader().loadTestsFromModule(tests.shelf_tests))
+     result.addTest(tests.blackbox.test_suite())
+
