@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20060222.2.ebuild,v 1.2 2006/03/28 17:58:09 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20060222.2.ebuild,v 1.3 2006/05/14 07:26:15 spyderous Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.msg.ameslab.gov/GAMESS/GAMESS.html"
 SRC_URI="${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="ifc hardened blas"
 
 RESTRICT="fetch"
@@ -107,6 +107,11 @@ src_unpack() {
 			-e "s/-Wno-globals -fno-globals \$MODULE.f//" \
 			-e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS} -quiet'/" \
 		    -e "s/gentoo-g77/${FORTANC}/" \
+			-i comp || die "Failed setting up comp script"
+	elif ! use x86; then
+		sed -e "s/-malign-double //" \
+			-e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS}'/" \
+			-e "s/gentoo-g77/${FORTRANC}/" \
 			-i comp || die "Failed setting up comp script"
 	else
 		sed -e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS}'/" \

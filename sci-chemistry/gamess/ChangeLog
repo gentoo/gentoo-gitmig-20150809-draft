@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.10 2006/03/28 17:58:09 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.11 2006/05/14 07:26:15 spyderous Exp $
+
+  14 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  gamess-20060222.2.ebuild:
+  Keyword ~ppc. Also make sure to strip -malign-double on non-x86 systems.
 
   28 Mar 2006; Markus Dittrich <markusle@gentoo.org>
   +files/gamess-glibc-2.4-gentoo.patch, gamess-20060222.2.ebuild:
