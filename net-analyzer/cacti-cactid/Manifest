@@ -1,8 +1,32 @@
-MD5 02691d59df84c63e4a1fafa3c3b33d9a ChangeLog 3031
+DIST cacti-cactid-0.8.6e.tar.gz 132059 size 132059
+DIST cacti-cactid-0.8.6f-1.tar.gz 136217 size 136217
+DIST cacti-cactid-0.8.6g.tar.gz 148921 size 148921
+EBUILD cacti-cactid-0.8.6e.ebuild 1435 RMD160 4cb2a4946b6b1c9d63d6da2b38c52f7ce51917fa SHA1 f9ceafe6ec2388147dcb36bdf3c65cf737194971 SHA256 b50aeddb7f682ca6e4785fcdb61195966c9a0a69e9696a3a7707237af334c20b size 1435
 MD5 302b1aa298be2fb64bcae605e741efe8 cacti-cactid-0.8.6e.ebuild 1435
-MD5 91b4ff752b9e21ade6abbd406de4e3f5 cacti-cactid-0.8.6f_p1.ebuild 1541
+RMD160 4cb2a4946b6b1c9d63d6da2b38c52f7ce51917fa cacti-cactid-0.8.6e.ebuild 1435
+SHA256 b50aeddb7f682ca6e4785fcdb61195966c9a0a69e9696a3a7707237af334c20b cacti-cactid-0.8.6e.ebuild 1435
+EBUILD cacti-cactid-0.8.6f_p1.ebuild 1544 RMD160 e3403a936eff9266925d4bf7ba231d25a926aabe SHA1 1af9eb211d084f657994cf75599df3a5c0312c1b SHA256 7cdf2b90eae68754aedbeed0757fbea53b6556c0ec84c65460c43de237ec0235 size 1544
+MD5 1251bbf2d52be94554835949084a5a6f cacti-cactid-0.8.6f_p1.ebuild 1544
+RMD160 e3403a936eff9266925d4bf7ba231d25a926aabe cacti-cactid-0.8.6f_p1.ebuild 1544
+SHA256 7cdf2b90eae68754aedbeed0757fbea53b6556c0ec84c65460c43de237ec0235 cacti-cactid-0.8.6f_p1.ebuild 1544
+EBUILD cacti-cactid-0.8.6g.ebuild 1466 RMD160 b41e95b1792ee4b3d34e2fd0948756cba3ef15fc SHA1 18c9d04d3f1f7ad699319fc8bb8ee96f9415c223 SHA256 2c574ce6caa903592eaf2f3313bd79767f62c2c88071729ce1f0d6e8619bec52 size 1466
 MD5 8df8bf83176cabe171afe70478195fc1 cacti-cactid-0.8.6g.ebuild 1466
-MD5 58c86d50c9315285ddaf0c5f24269e2d files/digest-cacti-cactid-0.8.6e 71
-MD5 c0e5c0f4c74e06f2c99e6e086be7dfd7 files/digest-cacti-cactid-0.8.6f_p1 73
-MD5 6e99d3e5ce243eb591fd62dd172237a0 files/digest-cacti-cactid-0.8.6g 71
+RMD160 b41e95b1792ee4b3d34e2fd0948756cba3ef15fc cacti-cactid-0.8.6g.ebuild 1466
+SHA256 2c574ce6caa903592eaf2f3313bd79767f62c2c88071729ce1f0d6e8619bec52 cacti-cactid-0.8.6g.ebuild 1466
+MISC ChangeLog 3161 RMD160 1bc834fb0ed1f0cd49990a8249102286e691da5e SHA1 491094dab2f3073cdefef94d622ad7ddf4e0d2fa SHA256 82f2b2cea8fc922dc0d75d51be386ef1f87831e986218114b80eda2e5c868ff4 size 3161
+MD5 aec21403c4724546cd3c71269f228ff9 ChangeLog 3161
+RMD160 1bc834fb0ed1f0cd49990a8249102286e691da5e ChangeLog 3161
+SHA256 82f2b2cea8fc922dc0d75d51be386ef1f87831e986218114b80eda2e5c868ff4 ChangeLog 3161
+MISC metadata.xml 682 RMD160 6151c59b37c78fc476077aef062f78e1839575d7 SHA1 066f25955d4a474f6971b9963b86b304a92c6fa7 SHA256 920d0ffe4d80f62d59f06dfe513e27a9923a397d206c8b7ce67286efb00c78e1 size 682
 MD5 528bed3e0527d5e490f39fdd9c98daa6 metadata.xml 682
+RMD160 6151c59b37c78fc476077aef062f78e1839575d7 metadata.xml 682
+SHA256 920d0ffe4d80f62d59f06dfe513e27a9923a397d206c8b7ce67286efb00c78e1 metadata.xml 682
+MD5 58c86d50c9315285ddaf0c5f24269e2d files/digest-cacti-cactid-0.8.6e 71
+RMD160 1f7e2eeba6cae41f00ce8df56c4b4880d4ac2854 files/digest-cacti-cactid-0.8.6e 71
+SHA256 c19b93a504e3a4f3c503aa3374a2213a654e2266d43b0aba8cffff1dcb778605 files/digest-cacti-cactid-0.8.6e 71
+MD5 c0e5c0f4c74e06f2c99e6e086be7dfd7 files/digest-cacti-cactid-0.8.6f_p1 73
+RMD160 165c33843f1bbb874d520f14ee9ce2262a3ba84e files/digest-cacti-cactid-0.8.6f_p1 73
+SHA256 d65615db314e391bac67272d46fc4df2c90380d9b65a0715449f00200b9e262c files/digest-cacti-cactid-0.8.6f_p1 73
+MD5 6e99d3e5ce243eb591fd62dd172237a0 files/digest-cacti-cactid-0.8.6g 71
+RMD160 5d5dfefe0c6bf812d9eb13d933755958523ad176 files/digest-cacti-cactid-0.8.6g 71
+SHA256 ad56040581c92ae11b8516ecadfeebecedb468b494d0cdb183f8971f34729fcf files/digest-cacti-cactid-0.8.6g 71
