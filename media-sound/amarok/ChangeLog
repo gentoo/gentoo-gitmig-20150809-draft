@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.132 2006/05/08 19:09:14 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.133 2006/05/14 22:15:30 flameeyes Exp $
+
+*amarok-1.4.0 (14 May 2006)
+
+  14 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -amarok-1.4_beta3-r2.ebuild, +amarok-1.4.0.ebuild:
+  Update to 1.4.0 release (still not officially announced). This version
+  intentionally drops GStreamer support. It might return in 1.4.1, but please
+  don't bug me about that, talk with upstream.
 
   08 May 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   amarok-1.4_beta3-r2.ebuild:
