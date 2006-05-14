@@ -12,11 +12,11 @@ MD5 dbd6e2122fdf47b478bfba023762c105 files/speedtouch.initd 1809
 MD5 aa0803fb7b3133521df4ee07d7ff141a files/speedtouch.rc7 1655
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 c4bdf842c691f9985ecb1c882b90b8d7 speedtouch-1.3.1-r2.ebuild 3269
-MD5 9a64a15259786735ca73902becf74471 speedtouch-1.3.1-r3.ebuild 3231
+MD5 000da66f46a998ced3b57812e8c734e2 speedtouch-1.3.1-r3.ebuild 3285
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEHGyZjG8pv1lIUX4RAq5zAJ0TpoDqZDxowNePSK3+XW+9WgZ9YgCfd8uj
-MMPnl1Kd3lVhNSTmfAKS5fo=
-=/j7z
+iD8DBQFEZ2IPjG8pv1lIUX4RAvgiAKDTZSCJGWAQd0ikQHgl+exwl15DjgCaAtxs
+Ze0K2ZlTGbtI/vXg9LLv4yk=
+=VEWc
 -----END PGP SIGNATURE-----

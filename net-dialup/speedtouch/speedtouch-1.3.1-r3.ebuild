@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r3.ebuild,v 1.5 2006/03/18 20:24:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r3.ebuild,v 1.6 2006/05/14 16:59:46 mrness Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,17 +18,17 @@ IUSE="static debug"
 RDEPEND=">=net-dialup/ppp-2.4.1
 	!net-dialup/speedtouch-usb"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
 
 	# Patch to fix gcc-4.* compile error (bug #99759)
-	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 
 	#Increase minlevel of reports in atm.c
 	#At least one of the reports could affect performance due to call frequency
-	sed -i -e 's/report(0/report(1/' ${S}/src/atm.c
+	sed -i -e 's/report(0/report(1/' "${S}/src/atm.c"
 }
 
 src_compile() {
@@ -45,29 +45,29 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	einstall || die "make install failed"
 
 	# twp 2003-12-25 install *.html correctly
-	find ${D}/usr/share/doc/speedtouch/ -type f -name '*.html' | xargs dohtml
-	find ${D}/usr/share/doc/speedtouch/ -type f -name '*.html' | xargs rm
-	echo $(find ${D}/usr/share/doc/speedtouch/ -type f) | xargs dodoc
-	rm -rf ${D}/usr/share/doc/speedtouch/
+	find "${D}/usr/share/doc/speedtouch/" -type f -name '*.html' | xargs dohtml
+	find "${D}/usr/share/doc/speedtouch/" -type f -name '*.html' | xargs rm
+	echo $(find "${D}/usr/share/doc/speedtouch/" -type f) | xargs dodoc
+	rm -rf "${D}/usr/share/doc/speedtouch/"
 	dodoc AUTHORS ChangeLog TODO VERSION
 
-	rm -rf ${D}/usr/bin
-	rm -rf ${D}/usr/share/man/man1
+	rm -rf "${D}/usr/bin"
+	rm -rf "${D}/usr/share/man/man1"
 
-	newinitd ${FILESDIR}/speedtouch.initd speedtouch
-	newconfd ${FILESDIR}/speedtouch.confd speedtouch
+	newinitd "${FILESDIR}/speedtouch.initd" speedtouch
+	newconfd "${FILESDIR}/speedtouch.confd" speedtouch
 
-	insopts -m 600 ; insinto /etc/ppp/peers ; doins ${FILESDIR}/adsl.sample
+	insopts -m 600 ; insinto /etc/ppp/peers ; doins "${FILESDIR}/adsl.sample"
 
 	dosbin doc-linux/adsl-conf-pppd
 
 	#allows hotplug to modprobe the speedtch module automatically
-	mv ${D}/etc/hotplug/usb/speedtouch.usermap ${D}/etc/hotplug/usb/speedtch.usermap
-	exeinto /etc/hotplug/usb ; newexe ${FILESDIR}/speedtch-hotplug speedtch
-	rm ${D}/etc/hotplug/usb/speedtouch
+	mv "${D}"/etc/hotplug/usb/speedtouch.usermap "${D}"/etc/hotplug/usb/speedtch.usermap
+	exeinto /etc/hotplug/usb ; newexe "${FILESDIR}/speedtch-hotplug" speedtch
+	rm "${D}"/etc/hotplug/usb/speedtouch
 }
 
 pkg_postinst() {
