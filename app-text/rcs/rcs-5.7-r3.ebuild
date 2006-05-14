@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r3.ebuild,v 1.9 2006/05/08 05:19:55 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r3.ebuild,v 1.10 2006/05/14 10:54:29 flameeyes Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/rcs/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="virtual/libc"
