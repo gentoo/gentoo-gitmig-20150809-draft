@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-05272005.5.ebuild,v 1.2 2006/02/08 21:54:55 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-05272005.5.ebuild,v 1.3 2006/05/14 07:30:02 spyderous Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -111,11 +111,11 @@ src_unpack() {
 		sed -e "s/-malign-double -fautomatic /-cm -w \$MODULE.f/" \
 			-e "s/-Wno-globals -fno-globals \$MODULE.f//" \
 			-e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS} -quiet'/" \
-		    -e "s/gentoo-g77/${FORTANC}/" \
+			-e "s/gentoo-g77/${FORTANC}/" \
 			-i comp || die "Failed setting up comp script"
 	else
 		sed -e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS}'/" \
-		   	-e "s/gentoo-g77/${FORTRANC}/" \
+			-e "s/gentoo-g77/${FORTRANC}/" \
 			-i comp || die "Failed setting up comp script"
 	fi
 
@@ -128,7 +128,7 @@ src_unpack() {
 	# fix up GAMESS' linker script;
 	if use ifc; then
 		sed -e "s/gentoo-LDR='g77'/LDR='${FORTRANC}'/" \
-		   	-e "s/gentoo-LDOPTS=' '/LDOPTS='${LDFLAGS}'/" \
+			-e "s/gentoo-LDOPTS=' '/LDOPTS='${LDFLAGS}'/" \
 			-i lked || die "Failed setting up lked script"
 	else
 		sed -e "s/gentoo-LDR='g77'/LDR='${FORTRANC}'/" \
@@ -147,7 +147,7 @@ src_unpack() {
 			-i ddi/compddi || die "Failed fixing underscores in compddi"
 	else
 		sed -e "s/gentoo-F77_OPTS/F77_OPTS/" \
-		    -i ddi/compddi || die "Failed fixing underscores in compddi"
+			-i ddi/compddi || die "Failed fixing underscores in compddi"
 	fi
 }
 
