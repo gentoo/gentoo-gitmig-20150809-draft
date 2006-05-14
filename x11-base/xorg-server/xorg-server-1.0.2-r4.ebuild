@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.2-r4.ebuild,v 1.3 2006/05/14 19:11:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.2-r4.ebuild,v 1.4 2006/05/14 22:52:32 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -129,6 +129,11 @@ pkg_setup() {
 
 	# (#121394) Causes window corruption
 	filter-flags -fweb
+
+	# Nothing else provides new enough glxtokens.h
+	ewarn "Forcing on xorg-x11 for new enough glxtokens.h..."
+	OLD_IMPLEM="$(eselect opengl show)"
+	eselect opengl set --impl-headers ${OPENGL_DIR}
 }
 
 src_install() {
@@ -170,7 +175,8 @@ switch_opengl_implem() {
 		# Use new opengl-update that will not reset user selected
 		# OpenGL interface ...
 		echo
-		eselect opengl set --use-old ${OPENGL_DIR}
+#		eselect opengl set --use-old ${OPENGL_DIR}
+		eselect opengl set ${OLD_IMPLEM}
 }
 
 xprint_src_install() {
