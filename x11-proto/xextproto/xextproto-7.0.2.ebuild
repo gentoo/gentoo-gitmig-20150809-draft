@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xextproto/xextproto-7.0.2.ebuild,v 1.6 2006/03/31 19:28:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xextproto/xextproto-7.0.2.ebuild,v 1.7 2006/05/14 20:26:51 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,6 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="X.Org XExt protocol headers"
+RESTRICT="mirror"
 #HOMEPAGE="http://foo.bar.com/"
 #SRC_URI="ftp://foo.bar.com/${P}.tar.bz2"
 #LICENSE=""
