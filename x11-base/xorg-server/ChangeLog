@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.118 2006/05/14 19:11:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.119 2006/05/14 22:16:51 spyderous Exp $
+
+  14 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-1.0.99.903.ebuild:
+  (#133295) Fix kdrive build when s3 is on, because it also sedded out the s3
+  from the middle of sis300. Also a fix for turning off sis300 at all. Fixes
+  by Kent Fredric.
 
   14 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-server-1.0.2-r4.ebuild, xorg-server-1.0.99.903.ebuild:

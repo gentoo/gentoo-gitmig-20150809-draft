@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.99.903.ebuild,v 1.3 2006/05/14 19:11:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.0.99.903.ebuild,v 1.4 2006/05/14 22:16:51 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -544,10 +544,11 @@ src_unpack() {
 			real_card=${real_card/radeon/ati}
 			real_card=${real_card/nv/nvidia}
 			real_card=${real_card/siliconmotion/smi}
+			real_card=${real_card/%sis/sis300}
 			if ! use ${card}; then
 				ebegin "  ${real_card}"
 				sed -i \
-					-e "s:${real_card}::g" \
+					-e "s:\b${real_card}\b::g" \
 					${S}/hw/kdrive/Makefile.am \
 					|| die "sed of ${real_card} failed"
 				eend
