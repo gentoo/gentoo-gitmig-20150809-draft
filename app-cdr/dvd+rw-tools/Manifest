@@ -1,21 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b0eed1e10f07b4f33dbae4752e852f35 ChangeLog 4683
-RMD160 f4849ab8b05d6af1f52813a4c3ba3266cf806bb3 ChangeLog 4683
-SHA256 111e988b8d52ab6e23652e141f772ded85fd30c4a58c9410b914aa7e1ce292cb ChangeLog 4683
-MD5 ed6e64dd824930a48f96e09642ca964e dvd+rw-tools-5.21.4.10.8.ebuild 956
-RMD160 dc0e43dfd7aca48e0d608b560ead54f0b68bd5ba dvd+rw-tools-5.21.4.10.8.ebuild 956
-SHA256 cdbb17e5c827e2da81bb7dbb89c4f0db8077c75daf9408ce4837f834376f37dc dvd+rw-tools-5.21.4.10.8.ebuild 956
-MD5 1bb5885457140a49f3c4e7134dec93d2 dvd+rw-tools-6.0.ebuild 1076
-RMD160 739f31db4637faa1c2cb36d73807df38d46c8c30 dvd+rw-tools-6.0.ebuild 1076
-SHA256 2c33bed937ef5fcad4b77a2f8bc3ec4acefe7bdcfee30a7cd16cdd9356c63dfb dvd+rw-tools-6.0.ebuild 1076
-MD5 7df354d0ae44874d416a82541cc55bd5 dvd+rw-tools-6.1.ebuild 1076
-RMD160 66270ebf6c7044b6a43f78ef31f80683fee99317 dvd+rw-tools-6.1.ebuild 1076
-SHA256 0437c5bc2f1d96a33ec704114eb16aaaa404de31d68a066378fa5c01387518e0 dvd+rw-tools-6.1.ebuild 1076
+AUX 01_all_samsung-media-fix.patch 701 RMD160 d82e6a4135a67b46e9c0ce61a979e2e5995af4aa SHA1 da17027b0733bb18c3c77784b02a79728af68230 SHA256 a987638e7d83adff588d9445a36d5a59d52bb98f7b50311ff0a0eabe6812b299 size 701
 MD5 fce4ae0aea831d5b1f176e8dcff5059f files/01_all_samsung-media-fix.patch 701
 RMD160 d82e6a4135a67b46e9c0ce61a979e2e5995af4aa files/01_all_samsung-media-fix.patch 701
 SHA256 a987638e7d83adff588d9445a36d5a59d52bb98f7b50311ff0a0eabe6812b299 files/01_all_samsung-media-fix.patch 701
+DIST dvd+rw-tools-5.21.4.10.8.tar.gz 107045 size 107045
+DIST dvd+rw-tools-6.0.tar.gz 118804 size 118804
+DIST dvd+rw-tools-6.1.tar.gz 121425 RMD160 d06eb401fc53bf11df39ba89d508b67f3a0b915f SHA256 43ddf89a5aaafcf4725337c107d0dfa659132541696c8ba1ed74bea19c4e33f1 size 121425
+EBUILD dvd+rw-tools-5.21.4.10.8.ebuild 956 RMD160 dc0e43dfd7aca48e0d608b560ead54f0b68bd5ba SHA1 198fea732345e163d7e5415d07d2100ab048a060 SHA256 cdbb17e5c827e2da81bb7dbb89c4f0db8077c75daf9408ce4837f834376f37dc size 956
+MD5 ed6e64dd824930a48f96e09642ca964e dvd+rw-tools-5.21.4.10.8.ebuild 956
+RMD160 dc0e43dfd7aca48e0d608b560ead54f0b68bd5ba dvd+rw-tools-5.21.4.10.8.ebuild 956
+SHA256 cdbb17e5c827e2da81bb7dbb89c4f0db8077c75daf9408ce4837f834376f37dc dvd+rw-tools-5.21.4.10.8.ebuild 956
+EBUILD dvd+rw-tools-6.0.ebuild 1076 RMD160 739f31db4637faa1c2cb36d73807df38d46c8c30 SHA1 8098809faf0cebe9f5cc40d7adee432e4908ba1c SHA256 2c33bed937ef5fcad4b77a2f8bc3ec4acefe7bdcfee30a7cd16cdd9356c63dfb size 1076
+MD5 1bb5885457140a49f3c4e7134dec93d2 dvd+rw-tools-6.0.ebuild 1076
+RMD160 739f31db4637faa1c2cb36d73807df38d46c8c30 dvd+rw-tools-6.0.ebuild 1076
+SHA256 2c33bed937ef5fcad4b77a2f8bc3ec4acefe7bdcfee30a7cd16cdd9356c63dfb dvd+rw-tools-6.0.ebuild 1076
+EBUILD dvd+rw-tools-6.1-r1.ebuild 1127 RMD160 acec36779cf12084432933bfe4657aefa7da8246 SHA1 8dd1056276f96c739f998c1f1c6c0f4d924900dd SHA256 16dd6fbeac8a775c2177d8a706a6f340105130abcc32899e2c609b7c343ba7b5 size 1127
+MD5 74bfef7ae4e47afdd059c35f13ae3c74 dvd+rw-tools-6.1-r1.ebuild 1127
+RMD160 acec36779cf12084432933bfe4657aefa7da8246 dvd+rw-tools-6.1-r1.ebuild 1127
+SHA256 16dd6fbeac8a775c2177d8a706a6f340105130abcc32899e2c609b7c343ba7b5 dvd+rw-tools-6.1-r1.ebuild 1127
+EBUILD dvd+rw-tools-6.1.ebuild 1076 RMD160 66270ebf6c7044b6a43f78ef31f80683fee99317 SHA1 f52ce36541ea05fa858e2a9a99b70b101f99e37c SHA256 0437c5bc2f1d96a33ec704114eb16aaaa404de31d68a066378fa5c01387518e0 size 1076
+MD5 7df354d0ae44874d416a82541cc55bd5 dvd+rw-tools-6.1.ebuild 1076
+RMD160 66270ebf6c7044b6a43f78ef31f80683fee99317 dvd+rw-tools-6.1.ebuild 1076
+SHA256 0437c5bc2f1d96a33ec704114eb16aaaa404de31d68a066378fa5c01387518e0 dvd+rw-tools-6.1.ebuild 1076
+MISC ChangeLog 4926 RMD160 c6d3e9af8d48c83318872c75349ca9abe55b70b7 SHA1 40d77f0bf2ebbdd545c5345e31eccdd30efd131a SHA256 27478be882354f0c067b478cd77f6503eecf74f31a586ace8f960ad019a970b1 size 4926
+MD5 cd7be302d87d94afb2dbccf617e6ebb6 ChangeLog 4926
+RMD160 c6d3e9af8d48c83318872c75349ca9abe55b70b7 ChangeLog 4926
+SHA256 27478be882354f0c067b478cd77f6503eecf74f31a586ace8f960ad019a970b1 ChangeLog 4926
+MISC metadata.xml 293 RMD160 b97e3360ba18362c52786ba89cd3bc68c2ad78fb SHA1 66f8a2850da3df8f4e9ccda87025711db142dae3 SHA256 38a4d78cd4b1b04f922df758442e6867ba011beb6e9bec7f2fb9993d32c94665 size 293
+MD5 96828f8dea30d6c3c534076e3b3eb83e metadata.xml 293
+RMD160 b97e3360ba18362c52786ba89cd3bc68c2ad78fb metadata.xml 293
+SHA256 38a4d78cd4b1b04f922df758442e6867ba011beb6e9bec7f2fb9993d32c94665 metadata.xml 293
 MD5 753e5e7fcdcc5b990cee000f16b2507f files/digest-dvd+rw-tools-5.21.4.10.8 76
 RMD160 991e1244b7bc0974dc080d5d97689b3d08c00e9b files/digest-dvd+rw-tools-5.21.4.10.8 76
 SHA256 1a796a429153c18d051f93e72b9625ac4fce35d31ff47f56d3586986342d2228 files/digest-dvd+rw-tools-5.21.4.10.8 76
@@ -25,13 +41,13 @@ SHA256 10eb65a8f7f2428a01f63072e85e0bfb0a4339ad6329ad44593292d31c76cae1 files/di
 MD5 44cb1fe04575e80237eed2d303a41a98 files/digest-dvd+rw-tools-6.1 250
 RMD160 95e0e0e369e95f087b777c2380e9f9885b9c5fd8 files/digest-dvd+rw-tools-6.1 250
 SHA256 b4730bc6e5bdd3439275af9ec102e6773043427f748c0f0fff66ba2d933fd794 files/digest-dvd+rw-tools-6.1 250
-MD5 96828f8dea30d6c3c534076e3b3eb83e metadata.xml 293
-RMD160 b97e3360ba18362c52786ba89cd3bc68c2ad78fb metadata.xml 293
-SHA256 38a4d78cd4b1b04f922df758442e6867ba011beb6e9bec7f2fb9993d32c94665 metadata.xml 293
+MD5 44cb1fe04575e80237eed2d303a41a98 files/digest-dvd+rw-tools-6.1-r1 250
+RMD160 95e0e0e369e95f087b777c2380e9f9885b9c5fd8 files/digest-dvd+rw-tools-6.1-r1 250
+SHA256 b4730bc6e5bdd3439275af9ec102e6773043427f748c0f0fff66ba2d933fd794 files/digest-dvd+rw-tools-6.1-r1 250
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFD3VNhwUpWvClEHQoRAimnAJ9f/GBLxE+8+5KksouxqLVjmdGXUwCeP9eX
-T/r9LrsifLDWsYmkDP0UWTk=
-=/SUQ
+iD8DBQFEZp8ZwUpWvClEHQoRAgHnAJkBpi51Su/KWYp6NVjlXHFVgO6zKACfTra3
+qL+Z89/yHpcY9fUuEndIcew=
+=Bird
 -----END PGP SIGNATURE-----
