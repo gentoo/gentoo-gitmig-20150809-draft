@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dxr3player
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/ChangeLog,v 1.10 2005/11/07 10:14:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/ChangeLog,v 1.11 2006/05/14 16:56:19 arj Exp $
+
+  14 May 2006; Anders Rune Jensn <arj@gentoo.org> dxr3player-0.10.ebuild,
+  -dxr3player-0.9.ebuild:
+  Use dxr3 useflag to determine if dxr3 should be compiled in or not
+  instead of relying on an automatic check. Remove old version.
 
   07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> dxr3player-0.9.ebuild,
   dxr3player-0.9.4.ebuild, dxr3player-0.10.ebuild:

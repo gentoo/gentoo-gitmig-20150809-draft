@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/dxr3player-0.10.ebuild,v 1.5 2005/11/07 10:14:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/dxr3player-0.10.ebuild,v 1.6 2006/05/14 16:56:19 arj Exp $
 
 DESCRIPTION="A DVD player for Linux, supports the DXR3 (aka Hollywood+) board."
 HOMEPAGE="http://dxr3player.sourceforge.net/"
@@ -10,10 +10,11 @@ SRC_URI="mirror://sourceforge/dxr3player/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
-IUSE="lirc sdl mmx sse 3dnow"
+IUSE="lirc sdl mmx sse 3dnow dxr3"
 
 DEPEND=">=media-libs/libmad-0.15.1b
 	lirc? ( app-misc/lirc )
+	dxr3? ( media-video/em8300-libraries )
 	sdl? ( media-libs/libsdl media-libs/libmpeg2 )"
 
 src_compile() {
@@ -28,8 +29,7 @@ src_compile() {
 		myconf="${myconf} --with-sdl=/usr"
 	fi
 
-	if [ -e /usr/include/linux/em8300.h ]
-	then
+	if use dxr3; then
 		myconf="${myconf} --with-em8300=/usr"
 	fi
 
