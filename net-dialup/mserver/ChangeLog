@@ -1,9 +1,9 @@
 # ChangeLog for net-dialup/mserver
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mserver/ChangeLog,v 1.10 2006/05/14 11:42:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mserver/ChangeLog,v 1.11 2006/05/14 12:02:38 mrness Exp $
 
   14 May 2006; Alin Nastac <mrness@gentoo.org> -mserver-0.5.5-r1.ebuild:
-  Remove old revision.
+  Remove old revision. Set SRC_URI to Gentoo mirrors (home page don't exist anymore).
 
   12 Mar 2006; Alin Nastac <mrness@gentoo.org> mserver-0.5.5-r2.ebuild:
   Fix RDEPEND. Fix installation of init script. Stable on x86.
