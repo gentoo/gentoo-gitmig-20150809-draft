@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-2.5.0.ebuild,v 1.3 2006/05/10 18:37:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-2.5.0.ebuild,v 1.4 2006/05/15 15:41:59 spyderous Exp $
 
 inherit eutils
 
 DESCRIPTION="AMD Core Math Library (ACML) for x86 and amd64 CPUs"
-HOMEPAGE="http://www.developwithamd.com/appPartnerProg/acml/forms/index.cfm?action=home"
+HOMEPAGE="http://developer.amd.com/acml.aspx"
 
 MY_PV=${PV//\./\-}
 S=${WORKDIR}

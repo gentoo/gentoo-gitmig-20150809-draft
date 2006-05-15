@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/acml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.8 2006/05/10 18:40:23 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.9 2006/05/15 15:41:59 spyderous Exp $
+
+  15 May 2006; Donnie Berkholz <spyderous@gentoo.org>; acml-2.5.0.ebuild:
+  Update homepage to match the others. Some programs cache the first one they
+  find, so they get the oldest homepage.
 
   10 May 2006; Danny van Dyk <kugelfang@gentoo.org> acml-2.5.0.ebuild,
   acml-2.7.0.ebuild, acml-3.0.0.ebuild, acml-3.1.0.ebuild:
