@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.15 2006/04/13 22:18:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.16 2006/05/15 19:59:10 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -48,6 +48,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack_makeself
+	dodir ${dir}
 	tar xzf ${CDROM_ROOT}/paks.tar.gz -C ${Ddir} \
 		|| die "uncompressing data"
 	tar xzf ${CDROM_ROOT}/binaries.tar.gz -C ${Ddir} \
