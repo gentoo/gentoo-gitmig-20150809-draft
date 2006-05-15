@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5345 2006/05/15 10:27:56 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5346 2006/05/15 20:29:03 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -33,6 +33,7 @@ app-crypt/ophcrack
 =games-fps/blackshades-cvs-20031110-r1
 =games-rps/eternal-lands-1.2.0_p1-r2
 =games-sports/torcs-1.2.4-r1
+=games-sports/trigger-0.5.2-r1
 =games-sports/ultimatestunts-0.6.1-r1
 =games-strategy/scorched3d-39.1-r1
 
