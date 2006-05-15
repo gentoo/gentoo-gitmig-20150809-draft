@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/amp
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amp/ChangeLog,v 1.8 2004/09/14 07:21:02 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amp/ChangeLog,v 1.9 2006/05/15 19:05:01 tcort Exp $
+
+  15 May 2006; Thomas Cort <tcort@gentoo.org> metadata.xml,
+  amp-0.7.6.ebuild:
+  Change SRC_URI to mirror://gentoo/ since the old link is dead and upstream
+  is non-existant (no releases since 1997). Added HOMEPAGE because it was
+  missing, used packages.debian.org page since upstream is gone and there is
+  no page on freshmeat or sf.net. Added longdescription to metadata.xml. Put
+  KEYWORDS in alphabetical order.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> amp-0.7.6.ebuild:
   Stable amd64, sparc.

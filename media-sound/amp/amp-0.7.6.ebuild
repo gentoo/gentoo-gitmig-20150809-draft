@@ -1,17 +1,17 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amp/amp-0.7.6.ebuild,v 1.11 2004/09/14 07:21:02 eradicator Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amp/amp-0.7.6.ebuild,v 1.12 2006/05/15 19:05:01 tcort Exp $
 
 inherit eutils
 
 DESCRIPTION="AMP - the Audio Mpeg Player"
-LICENSE="as-is"
+HOMEPAGE="http://packages.debian.org/oldstable/sound/amp"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-SRC_URI="http://distro.ibiblio.org/pub/Linux/distributions/slackware/slackware_source/ap/amp/${P}.tar.gz"
-KEYWORDS="x86 sparc amd64"
+LICENSE="as-is"
 SLOT="0"
+KEYWORDS="amd64 sparc x86"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
