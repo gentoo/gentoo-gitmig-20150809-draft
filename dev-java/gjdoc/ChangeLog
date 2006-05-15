@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gjdoc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.9 2006/02/06 09:30:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.10 2006/05/15 07:36:41 betelgeuse Exp $
+
+  15 May 2006; Petteri Räty <betelgeuse@gentoo.org> gjdoc-0.7.7.ebuild:
+  Changed SRC_URI to use mirror://gnu.
 
   06 Feb 2006; Markus Rothe <corsair@gentoo.org> gjdoc-0.7.7.ebuild:
   Added ~ppc64; bug #119910
