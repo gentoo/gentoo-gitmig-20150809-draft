@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cowbell/cowbell-0.2.7.1.ebuild,v 1.1 2006/05/10 19:28:56 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cowbell/cowbell-0.2.7.1.ebuild,v 1.2 2006/05/15 20:54:39 metalgod Exp $
 
 inherit autotools gnome2 mono
 
@@ -19,7 +19,8 @@ RDEPEND="dev-lang/mono
 	>=media-libs/taglib-1.4"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	dev-util/intltool"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
