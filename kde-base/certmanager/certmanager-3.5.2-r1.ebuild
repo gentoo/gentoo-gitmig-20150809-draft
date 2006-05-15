@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/certmanager-3.5.2-r1.ebuild,v 1.2 2006/05/13 00:34:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/certmanager-3.5.2-r1.ebuild,v 1.3 2006/05/15 12:53:51 flameeyes Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -16,8 +16,8 @@ DEPEND="$(deprange 3.5.0 $MAXKDEVER kde-base/libkpgp)
 	>=app-crypt/gpgme-1.1.2-r1
 	<app-crypt/gnupg-1.9"
 	# We use GnuPG 1.4.x for OpenPGP and 1.9 (via gpgme) for s/mime as upstream advises.
-RDEPEND="${DEPEND}
-	>=app-crypt/dirmngr-0.9.3"
+#RDEPEND="${DEPEND}
+#	>=app-crypt/dirmngr-0.9.3"
 
 KMCOPYLIB="libqgpgme libkdenetwork/qgpgme/"
 KMEXTRACTONLY="libkdenetwork/
