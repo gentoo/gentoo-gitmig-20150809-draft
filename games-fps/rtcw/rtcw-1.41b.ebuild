@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.2 2006/05/13 23:50:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.3 2006/05/15 23:02:06 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -28,7 +28,7 @@ UIDEPEND="virtual/opengl
 			virtual/x11 ) )
 	amd64? (
 		app-emulation/emul-linux-x86-xlibs )"
-	
+
 RDEPEND="sys-libs/glibc
 	dedicated? (
 		app-misc/screen )
