@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/fixlafiles.awk-no_gcc_la,v 1.1 2006/03/02 19:31:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/fixlafiles.awk-no_gcc_la,v 1.2 2006/05/15 00:17:46 vapier Exp $
 
 #
 # Helper functions
@@ -227,7 +227,7 @@ BEGIN {
 				# libtool linker scripts for gcc ...
 				# We do this last, as we only match the new paths
 				if (gsub(GCCLIB "/" NEWVER "/libstdc\\+\\+\\.la",
-				         "foo", la_data) > 0)
+				         "-lstdc++", la_data) > 0)
 					CHANGED = 1
 			}
 			close(la_files)
@@ -303,7 +303,7 @@ BEGIN {
 					# libtool linker scripts.
 					# We do this last, as we only match the new paths
 					tmpstr = gensub(GCCLIB "/" NEWVER "/libstdc\\+\\+\\.la",
-					                "", "g", la_data);
+					                "-lstdc++", "g", la_data);
 					if (la_data != tmpstr) {
 						printn("l")
 						la_data = tmpstr

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 3.2.1/gcc31-loop-load-final-value.patch 3324 RMD160 8bb0e9133923821daf2e9d10a27a0a1930e00bbd SHA1 c73dc6e19a76a1dcbb11a15ff5ff04b11a9f0343 SHA256 70aa8433fb19c95f334b6cbc155cae22a3b61a6892ed9e18f95860509d0091a8 size 3324
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
 RMD160 8bb0e9133923821daf2e9d10a27a0a1930e00bbd files/3.2.1/gcc31-loop-load-final-value.patch 3324
@@ -218,10 +221,10 @@ AUX awk/fixlafiles.awk 7865 RMD160 6283a91bfa309a91f46cbff3c1c4f0d848312ba4 SHA1
 MD5 fed3620378df7a876d6709ddf3f7bbec files/awk/fixlafiles.awk 7865
 RMD160 6283a91bfa309a91f46cbff3c1c4f0d848312ba4 files/awk/fixlafiles.awk 7865
 SHA256 9fccd7f4ee7170a8f05d21777974efc3f23072f501cb7d2a8e9eeea15e541249 files/awk/fixlafiles.awk 7865
-AUX awk/fixlafiles.awk-no_gcc_la 8601 RMD160 c8b703615be85f6d7c439f04246792233d47b85d SHA1 4b74d6c6df983a55a83ebbcd4ddd32983c5361a2 SHA256 b692dd2eba47fd5319c28097edda823ed9bd86b7c88085db180f26da3153e2ba size 8601
-MD5 2d4c5f5bc05aa737aa3e8ca4c6379644 files/awk/fixlafiles.awk-no_gcc_la 8601
-RMD160 c8b703615be85f6d7c439f04246792233d47b85d files/awk/fixlafiles.awk-no_gcc_la 8601
-SHA256 b692dd2eba47fd5319c28097edda823ed9bd86b7c88085db180f26da3153e2ba files/awk/fixlafiles.awk-no_gcc_la 8601
+AUX awk/fixlafiles.awk-no_gcc_la 8614 RMD160 b2eac0355af83ea2fee02222d1179b23d062ddc2 SHA1 b65717ce21049ba04a4628ceeb662f69797ada40 SHA256 98e1e669906bd5928b695fdcfbf8e56618f12ce9311d31ce1b11dff68d35bb6f size 8614
+MD5 44266957a734b05646b0abd91f2aa055 files/awk/fixlafiles.awk-no_gcc_la 8614
+RMD160 b2eac0355af83ea2fee02222d1179b23d062ddc2 files/awk/fixlafiles.awk-no_gcc_la 8614
+SHA256 98e1e669906bd5928b695fdcfbf8e56618f12ce9311d31ce1b11dff68d35bb6f files/awk/fixlafiles.awk-no_gcc_la 8614
 AUX awk/scanforssp.awk 5830 RMD160 43a8c09e4e16d9a78ab4d6263e74a1850f12eb9b SHA1 1d2756f5e75532a7068357404c39081a3c9d9a68 SHA256 236a2a7eea1ba540ca3be82b0fe2cdefd9ac76b061440918ffe52664edbbb98a size 5830
 MD5 c672adb59a1f452475ab0a864b9d1bd1 files/awk/scanforssp.awk 5830
 RMD160 43a8c09e4e16d9a78ab4d6263e74a1850f12eb9b files/awk/scanforssp.awk 5830
@@ -484,3 +487,10 @@ SHA256 8734c141634dd7a472762e3479a7105a2a68dcf9b9b7cc39f5a704e264c1278b files/di
 MD5 6d613bbbcb8445a972adf5c80a08597a files/digest-gcc-4.2.0_alpha20060513 259
 RMD160 d3ee6af9a5b699548bf1f970183eaf8ba2cdaeac files/digest-gcc-4.2.0_alpha20060513 259
 SHA256 2471b91711fd7c35e0dbb223177d186e00ade49ebdeec96e49fe2a8183a7e958 files/digest-gcc-4.2.0_alpha20060513 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEZ8ke2+ySkm8kpY0RApNZAJ9p9hAss29VSN48jMdcBjXOpUf1NwCffMvH
+DJm1sNNJtD0NhEGk3JqJeQE=
+=+UKM
+-----END PGP SIGNATURE-----
