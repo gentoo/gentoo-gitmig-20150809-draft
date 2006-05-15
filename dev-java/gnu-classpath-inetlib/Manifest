@@ -1,6 +1,34 @@
-MD5 a01a45eb14f5cb885374b46af1ff5a71 ChangeLog 1580
-MD5 a2a578355c1f554d3ae84752aaab1c19 files/digest-gnu-classpath-inetlib-1.0-r1 63
-MD5 d8e4542d02c3180ee42b1c87c424c968 files/digest-gnu-classpath-inetlib-1.1-r1 63
-MD5 12db45f9123283dd8cd2f655b21fea20 gnu-classpath-inetlib-1.0-r1.ebuild 1647
-MD5 aee3e60472b57799b1012f3ae8d5f1af gnu-classpath-inetlib-1.1-r1.ebuild 1287
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST inetlib-1.0.tar.gz 151002 size 151002
+DIST inetlib-1.1.tar.gz 177251 RMD160 0cc424a46105798ea71cb8793bc4ba60a16603b7 SHA256 2b30cad60f3136b04f9ae4a906da8ac964654dacd3281097ec3558e67c9a51a0 size 177251
+EBUILD gnu-classpath-inetlib-1.0-r1.ebuild 1641 RMD160 3d5d87e700326a016ea6e2576507aab1514dce0b SHA1 deabe7f22859e24a12d381b46162d55babeb257e SHA256 10fa1e4790fecdcc862c8edb1bc9d7519cfa0e0aeb9f1560fdec48efcf6c5acc size 1641
+MD5 d990d0bcf635c3b92e96de4db53c143d gnu-classpath-inetlib-1.0-r1.ebuild 1641
+RMD160 3d5d87e700326a016ea6e2576507aab1514dce0b gnu-classpath-inetlib-1.0-r1.ebuild 1641
+SHA256 10fa1e4790fecdcc862c8edb1bc9d7519cfa0e0aeb9f1560fdec48efcf6c5acc gnu-classpath-inetlib-1.0-r1.ebuild 1641
+EBUILD gnu-classpath-inetlib-1.1-r1.ebuild 1278 RMD160 df35adeba7403973021ba6607e3133e5c0f1de8c SHA1 348f47f54280bd5099222df5d5e0295c0c636a4a SHA256 02b0f6ddafa23658b53aca97d1586f60ac6c9bf5057795394562b7ab9098e110 size 1278
+MD5 d391dba35f7f6f70683b40b62d0cee05 gnu-classpath-inetlib-1.1-r1.ebuild 1278
+RMD160 df35adeba7403973021ba6607e3133e5c0f1de8c gnu-classpath-inetlib-1.1-r1.ebuild 1278
+SHA256 02b0f6ddafa23658b53aca97d1586f60ac6c9bf5057795394562b7ab9098e110 gnu-classpath-inetlib-1.1-r1.ebuild 1278
+MISC ChangeLog 1753 RMD160 de76db757a633c06f80640db50217bf57647a8b1 SHA1 e8e590578de521bec0cf773496fc2de6927f84ce SHA256 e69cb39cbc728d5bbee5c78e9d9e57be7e1847d52945675532576221e08f2c1c size 1753
+MD5 75de0f2284d06223e0e989cf66037fdd ChangeLog 1753
+RMD160 de76db757a633c06f80640db50217bf57647a8b1 ChangeLog 1753
+SHA256 e69cb39cbc728d5bbee5c78e9d9e57be7e1847d52945675532576221e08f2c1c ChangeLog 1753
+MISC metadata.xml 430 RMD160 d3f7cd9542b083b9cacda3e678a8faf76a85b9a5 SHA1 40dc1cf7659e11765df7cfb0ced41eec6f3bf537 SHA256 bef2fad85b9f4da5e38421c1bfd3a81a6c5a3a12a5077eefae398c0dfe5b718b size 430
 MD5 cae9047aa616f454f13653091a077f60 metadata.xml 430
+RMD160 d3f7cd9542b083b9cacda3e678a8faf76a85b9a5 metadata.xml 430
+SHA256 bef2fad85b9f4da5e38421c1bfd3a81a6c5a3a12a5077eefae398c0dfe5b718b metadata.xml 430
+MD5 a2a578355c1f554d3ae84752aaab1c19 files/digest-gnu-classpath-inetlib-1.0-r1 63
+RMD160 89288171e90531e581bba758c802af75fbe6bab9 files/digest-gnu-classpath-inetlib-1.0-r1 63
+SHA256 5ff022d38edbb8c1fe115e2380d839f907197a0c7db78bfe86902c3d88bcb592 files/digest-gnu-classpath-inetlib-1.0-r1 63
+MD5 eb2b08694c0bdeed41c430ff8d8e792c files/digest-gnu-classpath-inetlib-1.1-r1 235
+RMD160 c925240dbf9a51c3d4d0dc9b14569d1ae1933a4c files/digest-gnu-classpath-inetlib-1.1-r1 235
+SHA256 dc83250a1ebec0229a1504a07fc3536d4759801d9d95e81a261f2697e6ec9d5e files/digest-gnu-classpath-inetlib-1.1-r1 235
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEaDAkcxLzpIGCsLQRApIPAJ9aVL4nBwCEM1Tt8W6SKWNGlZwRsgCgj/bv
+E0ZGTh2zrHStFgGcPVYdce8=
+=adCG
+-----END PGP SIGNATURE-----
