@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1897 2006/05/14 20:27:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1898 2006/05/15 10:24:30 ikelos Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -58,6 +58,7 @@ app-crypt/gnupg:smime - Add smime support
 app-crypt/gpgme:smime - Add smime support
 app-crypt/gringotts:suid - Install the binary suid, acknowledging the usual risks
 app-crypt/johntheripper:ntlm - enables john to crack Windows NT/2000 MD4 (case-sensitive) password hashes
+app-crypt/ophcrack:ophsmall - Makes use of smaller cracking tables
 app-editors/cssed:plugin - Install plugin development files
 app-editors/emacs-cvs:aqua - Build Carbon Emacs
 app-editors/emacs-cvs:xft - Build Emacs with support for the XFT font renderer (ie. the XFT_JHD_BRANCH branch from CVS)
