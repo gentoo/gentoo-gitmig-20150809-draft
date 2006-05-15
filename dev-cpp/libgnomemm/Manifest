@@ -1,4 +1,4 @@
-MD5 a06c42e5e735cee61356f0870e905546 ChangeLog 5606
+MD5 c90f85e164c3ca1a7c8abc99fa1239d4 ChangeLog 5697
 MD5 24c2db8638fe53dba09a9a20ca0844e9 files/digest-libgnomemm-2.0.0-r1 68
 MD5 18cc8e18bd644eca9920325ea0147cd7 files/digest-libgnomemm-2.0.1 69
 MD5 7cd607992587f719817cfeb3b59ea70e files/digest-libgnomemm-2.10.0 70
@@ -7,7 +7,7 @@ MD5 df5dd9f1cf43aa26c38f63e2b54fe525 files/digest-libgnomemm-2.12.2 70
 MD5 a4d6f8f16b66a52e759a36889b37a078 files/digest-libgnomemm-2.6.0 69
 MD5 2d32d65a8f8c930689fc0c23f769946e files/libgnomemm-2.0.0-pkgconfig.patch 1083
 MD5 c4d899e2094ca55aed3d61b4ae4f0029 libgnomemm-2.0.0-r1.ebuild 740
-MD5 37ba655bb9aa3a198b5ab1f8105dd324 libgnomemm-2.0.1.ebuild 766
+MD5 ec0f843019004e2f11efc94a8f5437dd libgnomemm-2.0.1.ebuild 763
 MD5 6eea164bd8d15989120df0793274c736 libgnomemm-2.10.0.ebuild 724
 MD5 38726f388bf61f057649bff77ab91042 libgnomemm-2.12.0.ebuild 720
 MD5 330732710c82cd59be03cc8aa29ac737 libgnomemm-2.12.2.ebuild 736
