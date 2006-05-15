@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2.ebuild,v 1.11 2006/04/25 02:25:08 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2.ebuild,v 1.12 2006/05/15 13:09:05 voxus Exp $
 
 inherit eutils libtool
 
@@ -18,9 +18,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads"
 
-DEPEND="sys-apps/groff
-	sys-devel/autoconf
-	ssl? ( >=dev-libs/openssl-0.9.6g )
+DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=dev-db/mysql-4 )
 	odbc? ( >=dev-db/unixODBC-2.2.6 )
 	ldap? ( net-nds/openldap )"
