@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-19940131-r2.ebuild,v 1.3 2006/01/29 16:22:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-19940131-r2.ebuild,v 1.4 2006/05/15 06:41:19 spyderous Exp $
 
 inherit eutils fortran
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.netlib.org/blas/${Name}.tgz"
 
 SLOT="0"
 IUSE="ifc"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="sci-libs/blas-config
 	>=sys-devel/libtool-1.5

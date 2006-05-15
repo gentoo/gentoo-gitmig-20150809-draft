@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.8 2006/02/18 20:48:37 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.9 2006/05/15 06:41:19 spyderous Exp $
+
+  15 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  blas-reference-19940131-r2.ebuild:
+  Keyword ~ppc.
 
   18 Feb 2006; Danny van Dyk <kugelfang@gentoo.org>
   -blas-reference-19940131-r1.ebuild:
