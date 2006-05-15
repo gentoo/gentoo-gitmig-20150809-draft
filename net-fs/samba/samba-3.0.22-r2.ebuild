@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.22-r2.ebuild,v 1.1 2006/04/27 17:06:36 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.22-r2.ebuild,v 1.2 2006/05/15 09:03:12 satya Exp $
 
 inherit eutils versionator
 
 IUSE_LINGUAS="ja pl"
 IUSE="acl async automount cups doc examples kerberos ldap ldapsam libclamav
-	msdfs mysql oav pam postgres python quotas readline selinux swat syslog
+	mysql oav pam postgres python quotas readline selinux swat syslog
 	winbind xml xml2"
 RESTRICT="test"
 
@@ -121,7 +121,6 @@ src_compile() {
 		$(use_with automount) \
 		$(use_enable cups) \
 		$(use_with kerberos krb5) \
-		$(use_with msdfs) \
 		$(use_with pam) $(use_with pam pam_smbpass) \
 		$(use_with python) \
 		$(use_with quotas) $(use_with quotas sys-quotas) \
@@ -196,10 +195,10 @@ src_install() {
 	dosym samba/libsmbclient.so /usr/$(get_libdir)/libsmbclient.so.0
 	dosym samba/libsmbclient.so /usr/$(get_libdir)/libsmbclient.so
 
-	# make the smb backend symlink for cups printing support..
+	# make the smb backend symlink for cups printing support (bug #133133)
 	if use cups; then
-		dodir /usr/$(get_libdir)/cups/backend
-		dosym ../../../bin/smbspool /usr/$(get_libdir)/cups/backend/smb
+		dodir $(cups-config --serverbin)/backend
+		dosym /usr/bin/smbspool $(cups-config --serverbin)/backend/smb
 	fi
 
 	# VFS plugin modules
