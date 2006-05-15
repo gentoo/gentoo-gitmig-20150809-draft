@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/primateplunge
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/ChangeLog,v 1.1 2006/03/25 09:44:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/ChangeLog,v 1.2 2006/05/15 16:54:36 josejx Exp $
+
+  15 May 2006; Joseph Jezak <josejx@gentoo.org> primateplunge-1.1.ebuild:
+  Added ~ppc.
 
 *primateplunge-1.1 (25 Mar 2006)
 
