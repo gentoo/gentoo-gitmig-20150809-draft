@@ -3,10 +3,10 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>dragonheart@gentoo.org</email>
-    <name>Daniel Black</name>
-    <description>Please take over if you want to maintain this package.
-</description>
+  <email>bangert@gentoo.org</email>
+  <name>Thilo Bangert</name>
 </maintainer>
-<longdescription></longdescription>
+<longdescription>sslserver and sslclient are command-line tools for building SSL
+client-server applications. They conform to the UNIX Client-Server Program
+Interface, UCSPI.</longdescription>
 </pkgmetadata>
