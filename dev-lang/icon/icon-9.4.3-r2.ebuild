@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.4.3-r2.ebuild,v 1.4 2006/05/11 17:28:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.4.3-r2.ebuild,v 1.5 2006/05/15 04:13:41 tcort Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="very high level language"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc-macos sparc x86"
+KEYWORDS="alpha ~amd64 ~ppc-macos sparc x86"
 IUSE="X iplsrc"
 
 S=${WORKDIR}/icon.v${MY_PV}src

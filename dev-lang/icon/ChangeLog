@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/icon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.21 2006/05/11 17:28:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.22 2006/05/15 04:13:41 tcort Exp $
+
+  15 May 2006; Thomas Cort <tcort@gentoo.org> icon-9.4.3-r2.ebuild:
+  Stable on alpha.
 
   11 May 2006; Fabian Groffen <grobian@gentoo.org> icon-9.4.3-r2.ebuild:
   Changed config name to macintosh as upstream seems to have changed it into
