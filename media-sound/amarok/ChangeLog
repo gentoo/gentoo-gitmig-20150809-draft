@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.134 2006/05/15 15:35:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.135 2006/05/15 21:35:03 flameeyes Exp $
+
+*amarok-1.4.0-r1 (15 May 2006)
+
+  15 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/amarok-1.4.0-audiocd.patch, -amarok-1.4.0.ebuild,
+  +amarok-1.4.0-r1.ebuild:
+  Add patch from Markus Kaufhold in KDE bug #127388 to fix audiocd playing
+  with xine engine.
 
   15 May 2006; Diego Pettenò <flameeyes@gentoo.org> amarok-1.4.0.ebuild:
   Force usage of gentoo mirrors.
