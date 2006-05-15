@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/monetdb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/ChangeLog,v 1.7 2006/05/13 15:17:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/ChangeLog,v 1.8 2006/05/15 18:22:28 grobian Exp $
+
+  15 May 2006; Fabian Groffen <grobian@gentoo.org> monetdb-4.10.2.ebuild:
+  Removed static USE-flag as that doesn't work well (thanks David Morgan).
+  Moved user/group creation code into pkg_config such that they are available
+  in src_install when chmod is done (thanks Sander Knopper). Bug #133197
 
   13 May 2006; <nixnut@gentoo.org> monetdb-4.10.2.ebuild:
   Stable on ppc. bug #133197

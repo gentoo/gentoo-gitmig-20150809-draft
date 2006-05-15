@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.10.2.ebuild,v 1.2 2006/05/13 15:17:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.10.2.ebuild,v 1.3 2006/05/15 18:22:28 grobian Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="A main-memory relational database for SQL, XQuery and MIL"
 HOMEPAGE="http://monetdb.cwi.nl/"
-IUSE="java readline debug static"
+IUSE="java readline debug"
 PV_SQL=2.10.2
 PV_XQ=0.10.2
 PV_M=${PV}
@@ -16,6 +16,7 @@ SRC_URI="mirror://sourceforge/monetdb/MonetDB-${PV_M}.tar.gz
 LICENSE="MonetDBPL-1.1 PathfinderPL-1.1"
 SLOT="0"
 KEYWORDS="ppc ~ppc-macos ~x86"
+RESTRICT="test"
 
 DEPEND="virtual/libc
 		>=sys-devel/gcc-3.3
@@ -51,6 +52,9 @@ EOF
 			die "Cannot upgrade automatically."
 		fi
 	fi
+
+	enewgroup monetdb
+	enewuser monetdb -1 /bin/bash "${DATA_DIR}" monetdb
 }
 
 src_unpack() {
@@ -79,7 +83,6 @@ src_compile() {
 
 	myconf="${myconf} $(use_with java)"
 	myconf="${myconf} $(use_with readline)"
-	myconf="${myconf} $(use_enable static)"
 
 	econf ${myconf} || die "econf monetdb failed"
 
@@ -165,18 +168,21 @@ src_install() {
 	newexe "${FILESDIR}/${PN}-stop.sh" "${PN}-stop.sh" || die "stop script"
 
 	insinto "${DATA_DIR}"
-	newins "${FILESDIR}/${PN}-4.8.2-startup.mil" "${PN}-startup.mil" || die "startup MIL script"
+	newins "${FILESDIR}/${PN}-4.8.2-startup.mil" "${PN}-startup.mil" \
+		|| die "startup MIL script"
 
 	if use java;
 	then
 		exeinto /usr/bin
 		newexe "${FILESDIR}/${PN}.JdbcClient-4.10.0" "JdbcClient" \
-		|| die "JdbcClient alias"
+			|| die "JdbcClient alias"
 	fi
 
 	# set right permissions
-	chown -R monetdb:monetdb "${D}/${DATA_DIR}"
-	fowners monetdb:monetdb "/var/log/${PN}"
+	chown -R monetdb:monetdb "${D}/${DATA_DIR}" \
+		|| die "setting ownership on ${DATA_DIR} failed"
+	fowners monetdb:monetdb "/var/log/${PN}" \
+		|| die "setting ownership on /var/log/${PN} failed"
 
 	# remove testing framework and compiled tests
 	rm -f \
@@ -217,11 +223,6 @@ src_test() {
 	# using it when they provide a set of tests that is meant to be used
 	# outside their "labs".  Those tests will also be supposed not to fail...
 	true
-}
-
-pkg_preinst() {
-	enewgroup monetdb
-	enewuser monetdb -1 /bin/bash "${DATA_DIR}" monetdb
 }
 
 pkg_postinst() {
