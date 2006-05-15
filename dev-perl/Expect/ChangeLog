@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Expect
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Expect/ChangeLog,v 1.2 2006/04/04 12:09:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Expect/ChangeLog,v 1.3 2006/05/15 14:50:04 squinky86 Exp $
+
+  15 May 2006; Jon Hood <squinky86@gentoo.org> Expect-1.15.ebuild:
+  Add ~amd64 in preparation for #121759.
 
   04 Apr 2006; Luca Barbato <lu_zero@gentoo.org> Expect-1.15.ebuild:
   Marked ~ppc
