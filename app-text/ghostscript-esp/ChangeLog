@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript-esp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.31 2006/05/14 07:17:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.32 2006/05/15 00:57:09 genstef Exp $
+
+  15 May 2006; Stefan Schweizer <genstef@gentoo.org>
+  -ghostscript-esp-8.15.1.ebuild, -ghostscript-esp-8.15.1-r1.ebuild,
+  ghostscript-esp-8.15.1_p20060430.ebuild:
+  Add gimp-print warning thanks to Rick Morra <rjm40@optonline.net> in bug 133123
 
   14 May 2006; Markus Rothe <corsair@gentoo.org>
   ghostscript-esp-8.15.1_p20060430.ebuild:

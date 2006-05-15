@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1_p20060430.ebuild,v 1.8 2006/05/14 07:17:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1_p20060430.ebuild,v 1.9 2006/05/15 00:57:09 genstef Exp $
 
 inherit eutils autotools flag-o-matic versionator
 
@@ -140,4 +140,9 @@ src_install() {
 	# install ijs
 	cd ${S}/ijs
 	make DESTDIR="${D}" install || die "ijs install failed"
+}
+
+pkg_postinst() {
+	ewarn "If you are upgrading from ghostscript-7 you need to rebuild"
+	ewarn "gimp-print. Please run 'revdep-rebuild' to do this."
 }
