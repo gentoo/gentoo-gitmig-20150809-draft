@@ -55,7 +55,7 @@ plugin_pre_vdr_start() {
 		autodetect_input_devices
 	fi
 	if [[ -n ${REMOTE_PLUGIN_INPUT_DEVICE} && "${REMOTE_PLUGIN_INPUT_DEVICE}" != "no" ]]; then
-		chown vdr:vdr /proc/av7110_ir
+		[[ -e /proc/av7110_ir ]] && chown vdr:vdr /proc/av7110_ir
 		for dev in ${REMOTE_PLUGIN_INPUT_DEVICE}; do
 			[[ -e ${dev} ]] || continue
 			chown vdr:vdr ${dev}
