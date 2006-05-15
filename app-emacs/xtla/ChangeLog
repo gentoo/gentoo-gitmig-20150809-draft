@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/xtla
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xtla/ChangeLog,v 1.8 2005/07/25 18:50:20 mkennedy Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xtla/ChangeLog,v 1.9 2006/05/15 03:26:46 mkennedy Exp $
+
+*xtla-1.2 (15 May 2006)
+
+  15 May 2006; Matthew Kennedy <mkennedy@gentoo.org> +xtla-1.2.ebuild:
+  New upstream version; Resolves Bug #131877.
 
 *xtla-1.1 (25 Jul 2005)
 
