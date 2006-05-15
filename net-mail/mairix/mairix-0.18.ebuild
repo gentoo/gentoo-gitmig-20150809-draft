@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/mairix-0.18.ebuild,v 1.1 2006/05/15 15:42:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/mairix-0.18.ebuild,v 1.2 2006/05/15 16:03:43 tove Exp $
 
 inherit toolchain-funcs
 
@@ -11,10 +11,15 @@ SRC_URI="http://www.rpcurnow.force9.co.uk/mairix/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sh ~sparc ~x86"
-IUSE="zlib bzip2"
 
-RDEPEND="zlib? ( sys-libs/zlib )
-	bzip2? ( app-arch/bzip2 )"
+#IUSE="zlib bzip2"
+IUSE=""
+
+#RDEPEND="zlib? ( sys-libs/zlib )
+#	bzip2? ( app-arch/bzip2 )"
+RDEPEND="sys-libs/zlib
+	app-arch/bzip2"
+
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	sys-devel/bison"
@@ -29,9 +34,9 @@ src_unpack() {
 
 src_compile() {
 	export CC="$(tc-getCC)"
-	econf \
-		$(use_enable zlib gzip-mbox) \
-		$(use_enable bzip2 bzip-mbox) || die "configure failed."
+	econf --enable-gzip-mbox --enable-bzip-mbox|| die "configure failed."
+#		$(use_enable zlib gzip-mbox) \
+#		$(use_enable bzip2 bzip-mbox) || die "configure failed."
 
 	emake  all || die "make failed."
 }
