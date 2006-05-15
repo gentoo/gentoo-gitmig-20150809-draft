@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.0_pre2.ebuild,v 1.6 2006/05/12 16:22:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.0_pre2.ebuild,v 1.7 2006/05/15 11:01:38 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -48,4 +48,14 @@ src_install() {
 	dodoc example/*
 
 	linux-mod_src_install
+}
+
+pkg_postinst() {
+	check_extra_config
+	strip_modulenames
+	if [ -n "${MODULE_NAMES}" ]; then
+		update_depmod;
+		update_modules;
+		update_moduledb;
+	fi
 }
