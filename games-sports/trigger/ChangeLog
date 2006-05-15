@@ -1,6 +1,12 @@
 # ChangeLog for games-sports/trigger
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.9 2006/01/29 08:04:42 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.10 2006/05/15 20:31:21 wolf31o2 Exp $
+
+*trigger-0.5.2-r1 (15 May 2006)
+
+  15 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/trigger-0.5.2-freealut.patch, +trigger-0.5.2-r1.ebuild:
+  Revision bump for the split freealut/openal and closing bug #132839.
 
   29 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   trigger-0.5.1c.ebuild, trigger-0.5.2.ebuild:
