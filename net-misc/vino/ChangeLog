@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.54 2006/05/07 21:39:10 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.55 2006/05/15 15:38:29 dertobi123 Exp $
+
+  15 May 2006; Tobias Scherbaum <dertobi123@gentoo.org> vino-2.13.5.ebuild:
+  Added ~hppa
 
   07 May 2006; John N. Laliberte <allanonjl@gentoo.org> vino-2.13.5.ebuild:
   macro fix, fixes #132618
