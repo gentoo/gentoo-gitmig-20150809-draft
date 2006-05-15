@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5344 2006/05/15 03:19:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5345 2006/05/15 10:27:56 ikelos Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Mike Auty <ikelos@gentoo.org> (15 May 2006)
+# These are masked because the tables haven't been mirrored yet
+app-crypt/ophcrack
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (11 May 2006)
 # These are masked, sicne they only work with the 0.0.8 version of openal with
