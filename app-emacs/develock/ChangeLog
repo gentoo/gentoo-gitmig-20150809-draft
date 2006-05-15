@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/develock
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/develock/ChangeLog,v 1.1 2006/05/15 19:40:24 mkennedy Exp $
+
+*develock-0.27 (15 May 2006)
+
+  15 May 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/50develock-gentoo.el, +metadata.xml, +develock-0.27.ebuild:
+  Initial port. Ebuild contributed by Christian Schlotter <again@gmx.de> of
+  Bug #78884.
+
