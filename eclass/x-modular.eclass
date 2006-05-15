@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.57 2006/05/14 21:29:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.58 2006/05/15 03:23:32 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -70,10 +70,6 @@ elif [[ ${CATEGORY} = x11-base ]]; then
 	SRC_URI="${SRC_URI}
 		${BASE_INDIVIDUAL_URI}/xserver/${P}.tar.bz2"
 fi
-
-# SRC_URI for full releases
-SRC_URI="${SRC_URI}
-	http://xorg.freedesktop.org/releases/X11R7.0/src/everything/${P}.tar.bz2"
 
 SLOT="0"
 
