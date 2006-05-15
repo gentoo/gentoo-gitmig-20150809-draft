@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1898 2006/05/15 10:24:30 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1899 2006/05/15 23:53:25 robbat2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -928,7 +928,7 @@ net-analyzer/nagios-plugins:nagios-game - installs deps for monitoring games-uti
 net-analyzer/nagios-plugins:nagios-ntp - installs deps for ntp monitoring
 net-analyzer/nagios-plugins:nagios-ping - installs deps for fancy ping monitoring
 net-analyzer/nagios-plugins:nagios-ssh - installs deps for monitoring ssh
-net-analyzer/nagios-plugins:ups - installs deps for monitoring Network-UPS (www-apps/nut)
+net-analyzer/nagios-plugins:ups - installs deps for monitoring Network-UPS (sys-power/nut)
 net-analyzer/net-snmp:diskio - Enable the use of diskio mibs
 net-analyzer/net-snmp:elf - Enable the use of elf utils to check uptime on some sytems
 net-analyzer/net-snmp:mfd-rewrites - Use MFD rewrites of mib modules where available
@@ -1472,6 +1472,7 @@ sys-power/cpufreqd:nforce2 - Enable for nforce2 voltage settings plug-in
 sys-power/cpufreqd:nvidia - Enable nvidia overclocking (nvclock) plug-in
 sys-power/cpufreqd:pmu - Enable Power Management Unit plug-in
 sys-power/hibernate-script:logrotate - Use logrotate for rotating logs
+sys-power/nut:cgi - Add CGI script support
 sys-power/powersave:pam_console - Adds support for pam console from PAM
 sys-process/daemontools-scripts:withsamplescripts - Installs sample supervise scripts
 sys-process/procps:n32 - Enable n32 ABI support on mips
@@ -1502,7 +1503,6 @@ www-apps/lxr:cvs - Adds support for indexing CVS
 www-apps/lxr:freetext - Adds support for freetext search using swish-e
 www-apps/mediawiki:math - Adds math rendering support
 www-apps/moinmoin:rss - Add RSS support
-www-apps/nut:cgi - Add CGI script support
 www-apps/open-xchange:webdav - Enable WebDav (Web-based Distributed Authoring and Versioning) support.  
 www-apps/rt:lighttpd - Add lighttpd support
 www-apps/tikiwiki:graphviz - enable graphviz support
