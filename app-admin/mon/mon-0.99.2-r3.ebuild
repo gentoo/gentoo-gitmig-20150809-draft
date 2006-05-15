@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r3.ebuild,v 1.2 2006/04/04 12:21:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r3.ebuild,v 1.3 2006/05/15 14:51:23 squinky86 Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://kernel/software/admin/mon/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="~ppc ~sparc ~x86"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-perl/Mon-0.9

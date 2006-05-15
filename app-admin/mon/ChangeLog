@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/mon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/ChangeLog,v 1.19 2006/04/04 12:21:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/ChangeLog,v 1.20 2006/05/15 14:51:23 squinky86 Exp $
+
+  15 May 2006; Jon Hood <squinky86@gentoo.org> mon-0.99.2-r3.ebuild:
+  Add ~amd64, #121759.
 
   04 Apr 2006; Luca Barbato <lu_zero@gentoo.org> mon-0.99.2-r3.ebuild:
   Marked ~ppc
