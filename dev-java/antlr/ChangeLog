@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.37 2006/05/15 05:09:51 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.38 2006/05/15 12:55:51 betelgeuse Exp $
+
+  15 May 2006; Petteri Räty <betelgeuse@gentoo.org> antlr-2.7.5-r2.ebuild:
+  antlr now inherits java-utils so the error message when a jre is set as the
+  system jdk is a lot more useful. Fixes bug #133355.
 
   15 May 2006; Jon Hood <squinky86@gentoo.org> antlr-2.7.5-r2.ebuild:
   Stable on amd64 wrt #133320.
