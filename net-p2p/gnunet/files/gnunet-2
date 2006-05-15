@@ -14,7 +14,7 @@ start() {
 	ebegin "Starting GNUnet"
 	# -u username, -c path to gnunet.conf file
 	start-stop-daemon --start --quiet --background --exec /usr/bin/gnunetd \
-		-- -u gnunet -c /etc/gnunet.conf
+		-- -u gnunet -c /etc/gnunetd.conf
 	eend $? "Failed to start GNUnet"
 }
 
