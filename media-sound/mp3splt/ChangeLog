@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3splt
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.18 2006/04/27 23:31:29 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.19 2006/05/15 03:19:46 tcort Exp $
+
+  14 May 2006; Thomas Cort <tcort@gentoo.org> -mp3splt-1.9.ebuild:
+  Remove old.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-mp3splt-1.9,
   files/digest-mp3splt-2.0, files/digest-mp3splt-2.1, Manifest:
