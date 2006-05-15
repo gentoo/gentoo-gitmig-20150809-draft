@@ -1,8 +1,24 @@
-MD5 c78b7fda781e10e898dac340fab39dc0 ChangeLog 3941
-MD5 1bf8622275334c6034c3559741193e41 files/digest-java-access-bridge-1.4.2 76
-MD5 c7357cc9f0d10edc0c93b1e3b5467b9b files/digest-java-access-bridge-1.4.5-r1 77
-MD5 df2a6681a7d904541e07126a8eb5f4e6 files/digest-java-access-bridge-1.4.6 77
-MD5 24e5cd8084a0bd3826e7aa57aef9740e java-access-bridge-1.4.2.ebuild 1883
-MD5 ea18ca3698d027f679f3b43c4585743b java-access-bridge-1.4.5-r1.ebuild 1247
+DIST java-access-bridge-1.4.6.tar.bz2 121326 RMD160 f549435a3208a20b04d4f7faf6896ce1cf089c70 SHA256 cbefd3c5ae20694c9a974532c375471c16d121a71af383d357d42d4f2022d075 size 121326
+DIST java-access-bridge-1.5.0.tar.bz2 121575 RMD160 6fc6e88714dd302804260a4d7dca01ef08118b4d SHA256 68dbb566c0c10ac69246f19532ba9c566bea7e57d00afc207418ac377458c114 size 121575
+EBUILD java-access-bridge-1.4.6.ebuild 1260 RMD160 c80c7818db5840b0c324ec6ef38255c092dc2e43 SHA1 1ee290d549a001a2a14042ede77929551574f470 SHA256 b2829903ddb27faccb848125ad65e1d49bd009591041bd1b4d37da1f1ce7ce00 size 1260
 MD5 b258be01a9f2962ebf73c99d3858a919 java-access-bridge-1.4.6.ebuild 1260
+RMD160 c80c7818db5840b0c324ec6ef38255c092dc2e43 java-access-bridge-1.4.6.ebuild 1260
+SHA256 b2829903ddb27faccb848125ad65e1d49bd009591041bd1b4d37da1f1ce7ce00 java-access-bridge-1.4.6.ebuild 1260
+EBUILD java-access-bridge-1.5.0.ebuild 1263 RMD160 3ec59190a493082bbb2796fbf1c9f7dbe26f7c1c SHA1 15aa50e56d5885af4af3ad86cbc29f3583cade1e SHA256 bda0362b6489c03c6e51a7586d64110d42d5b7324ec8d402bbc46bc049b910d8 size 1263
+MD5 c358d8596dec2584c7cfddfc54510d28 java-access-bridge-1.5.0.ebuild 1263
+RMD160 3ec59190a493082bbb2796fbf1c9f7dbe26f7c1c java-access-bridge-1.5.0.ebuild 1263
+SHA256 bda0362b6489c03c6e51a7586d64110d42d5b7324ec8d402bbc46bc049b910d8 java-access-bridge-1.5.0.ebuild 1263
+MISC ChangeLog 4128 RMD160 71ab8a7f1f87cc49d306f12887dc7ef96a2ebdb3 SHA1 79ab23cafeff44044353da0b1ee0fd0ea6f51c61 SHA256 1b90ba052574093f45dd8131e33bfc854cc54fa70ef2c6a2e67e82c0698fd676 size 4128
+MD5 cd9e43ba5761871c145e55b0baeeb716 ChangeLog 4128
+RMD160 71ab8a7f1f87cc49d306f12887dc7ef96a2ebdb3 ChangeLog 4128
+SHA256 1b90ba052574093f45dd8131e33bfc854cc54fa70ef2c6a2e67e82c0698fd676 ChangeLog 4128
+MISC metadata.xml 172 RMD160 6901d426a49e26089e240a7a4f990204e08c15a1 SHA1 2a33de77ba2f0f4fdedeed148abdad125b78f996 SHA256 f14db6f3dc189eb3e4a3478d7c1bead86fe077d0c756b8426b64f7fc0d42d228 size 172
 MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
+RMD160 6901d426a49e26089e240a7a4f990204e08c15a1 metadata.xml 172
+SHA256 f14db6f3dc189eb3e4a3478d7c1bead86fe077d0c756b8426b64f7fc0d42d228 metadata.xml 172
+MD5 aec8afc550c23444304e2bce044d18e4 files/digest-java-access-bridge-1.4.6 277
+RMD160 30a976751828b6178a91446f55866972876a9f3d files/digest-java-access-bridge-1.4.6 277
+SHA256 8cfc77b24dbf0693a22528888a4f8bcdda5a061c2960a7d23dda371cdd7c1d1f files/digest-java-access-bridge-1.4.6 277
+MD5 dfb8c4adb67d40beec44319aedae66a0 files/digest-java-access-bridge-1.5.0 277
+RMD160 7e6d5a1374df3f85aab13fcf9d2d3eb12d935425 files/digest-java-access-bridge-1.5.0 277
+SHA256 b7021b9ea1682415f23060150c724b05e1eecc1de1cfa4a77e49bbba4692067e files/digest-java-access-bridge-1.5.0 277
