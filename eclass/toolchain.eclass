@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.280 2006/05/11 19:31:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.281 2006/05/15 03:12:15 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -909,9 +909,13 @@ gcc-compiler_pkg_postrm() {
 	# ROOT isnt handled by the script
 	[[ ${ROOT} != "/" ]] && return 0
 
-	if [[ ! -e ${LIBPATH}/libstdc++.la ]] ; then
+	if [[ ! -e ${LIBPATH}/libstdc++.so ]] ; then
+		einfo "Running 'fix_libtool_files.sh ${GCC_RELEASE_VER}'"
 		/sbin/fix_libtool_files.sh ${GCC_RELEASE_VER}
-		[[ -z ${BRANCH_UPDATE} ]] || /sbin/fix_libtool_files.sh ${GCC_RELEASE_VER}-${BRANCH_UPDATE}
+		if [[ -n ${BRANCH_UPDATE} ]] ; then
+			einfo "Running 'fix_libtool_files.sh ${GCC_RELEASE_VER}-${BRANCH_UPDATE}'"
+			/sbin/fix_libtool_files.sh ${GCC_RELEASE_VER}-${BRANCH_UPDATE}
+		fi
 	fi
 
 	return 0
