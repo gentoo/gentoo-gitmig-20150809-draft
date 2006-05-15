@@ -1,6 +1,14 @@
 # ChangeLog for dev-tcltk/otcl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/ChangeLog,v 1.20 2006/03/28 16:30:26 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/ChangeLog,v 1.21 2006/05/15 17:10:33 robbat2 Exp $
+
+*otcl-1.11 (15 May 2006)
+
+  15 May 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/otcl-1.11-badfreefix.patch,
+  +files/otcl-1.11-configure-cleanup.patch, +otcl-1.11.ebuild:
+  Bug #119147 and #123209, a version bump, with a large configure cleanup to
+  work under modern Gentoo TCL and Bash3.1.
 
   28 Mar 2006; Emanuele Giaquinta <exg@gentoo.org> otcl-1.9.ebuild:
   Fix configure with bash-3.1.
