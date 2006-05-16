@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0.ebuild,v 1.2 2006/05/06 21:25:22 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0.ebuild,v 1.3 2006/05/16 21:24:39 zzam Exp $
 
-inherit vdr-plugin
+inherit vdr-plugin eutils
 
 DESCRIPTION="Video Disk Recorder ffnetdev PlugIn"
 HOMEPAGE="http://ffnetdev.berlios.de"
@@ -13,6 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
+# this line is necessary as vdr-plugin.eclass changes S
 S=${WORKDIR}/${P}
 
 DEPEND=">=media-video/vdr-1.3.7
