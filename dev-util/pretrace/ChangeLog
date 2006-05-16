@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pretrace
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/ChangeLog,v 1.8 2005/12/15 14:02:43 taviso Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/ChangeLog,v 1.9 2006/05/16 19:31:53 taviso Exp $
+
+  16 May 2006; Tavis Ormandy <taviso@gentoo.org>
+  +files/pretrace-0.4--as-needed.diff, pretrace-0.4.ebuild:
+  add patch to support --as-needed, #83661
 
 *pretrace-0.4 (15 Dec 2005)
 
