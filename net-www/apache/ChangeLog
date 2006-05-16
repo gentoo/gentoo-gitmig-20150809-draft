@@ -1,6 +1,14 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.474 2006/04/27 22:20:37 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.475 2006/05/16 02:51:48 vericgar Exp $
+
+*apache-2.0.58 (16 May 2006)
+
+  16 May 2006; Michael Stewart <vericgar@gentoo.org> +apache-2.0.58.ebuild:
+  Version Bump. Resynced the configuration with upstream. Reworked
+  /var/www/localhost handling and removed dependency on
+  gentoo-webroot-default. Updated mpm-peruser to 0.2.0. This fixes several
+  bugs: 90748, 105778, 107299, 110864, 117106, 124857, 125244, 130078, 132669
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
