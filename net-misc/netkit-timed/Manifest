@@ -1,10 +1,20 @@
-MD5 97e0c17cd90dfb9ec93b97e5aedd9e97 ChangeLog 2158
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 fabb14a3dd32c8f04dddd3358c86cd20 netkit-timed-0.17-r6.ebuild 848
-MD5 bdd939e0f43860fae0b727266617a881 netkit-timed-0.17-r7.ebuild 954
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 185c14a31579551bbd9a5e0891ff3519 ChangeLog 2266
 MD5 14536c906a1b3fa5a8d11640fef91f78 files/0.17-CFLAG-DEF-fix.patch 1551
 MD5 0742d77d356c6be01d3a8a99e377a7a0 files/0.17-timed.patch 878
 MD5 a968cd4ed6e20ba5caca252089d73a88 files/digest-netkit-timed-0.17-r6 68
 MD5 a968cd4ed6e20ba5caca252089d73a88 files/digest-netkit-timed-0.17-r7 68
 MD5 2674064ee1f22cdf5bf08d9aaeb0c23c files/timed.rc5 704
 MD5 af6cc7c3161dec7c5987639b5f4ced10 files/timed.rc6 471
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 b9e9e777fe8b8c843225b8f4953527f1 netkit-timed-0.17-r6.ebuild 850
+MD5 8ef5d5be54e8844bad28b0b6f73cc640 netkit-timed-0.17-r7.ebuild 959
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEamNkK3VlI3Kj19sRAm0JAJwNL5/bvahCtNOPzQup4Yl5n7XEaQCfSBWS
+ez038oEZi60ItCI6Bacg5ko=
+=/BLV
+-----END PGP SIGNATURE-----
