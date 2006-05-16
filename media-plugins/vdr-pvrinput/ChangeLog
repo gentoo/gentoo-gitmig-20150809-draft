@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-pvrinput
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/ChangeLog,v 1.5 2006/05/08 06:51:48 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/ChangeLog,v 1.6 2006/05/16 21:21:11 zzam Exp $
+
+  16 May 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-pvrinput-0.1.1_pre1.ebuild, vdr-pvrinput-0.1.1.ebuild:
+  Added missing IUSE.
 
   08 May 2006; Matthias Schwarzott <zzam@gentoo.org>
   vdr-pvrinput-0.1.1_pre1.ebuild:
