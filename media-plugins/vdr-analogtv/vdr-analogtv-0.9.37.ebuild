@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/vdr-analogtv-0.9.37.ebuild,v 1.3 2006/04/17 17:17:57 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/vdr-analogtv-0.9.37.ebuild,v 1.4 2006/05/16 13:26:07 zzam Exp $
 
 inherit vdr-plugin eutils
 
 #S=${WORKDIR}/${VDRPLUGIN}-${PV}
-DESCRIPTION="Video Disk Recorder ${VDRPLUGIN} Plugin"
-HOMEPAGE="http://akool.bei.t-online.de/"
+DESCRIPTION="VDR plugin: Support analog-tv devices as input"
+HOMEPAGE="http://www.ko0l.de/download/vdr/analogtv/index.html"
 SRC_URI="http://www.akool.homepage.t-online.de/analogtv/download/vdr-${VDRPLUGIN}-${PV}.tar.bz2
 		http://www.akool.homepage.t-online.de/analogtv/download/rte-09sep04.tar.bz2
 		mirror://vdrfiles/${PN}/rte-09sep04-mp1e-gentoo.patch"
