@@ -11,8 +11,11 @@ to the module.
 
 migrate-xscreensaver-config.sh /usr/share/xscreensaver/config/*.xml
 
-The above command should convert all xscreensaver modules.  The resulting
-.desktop files should be placed into /usr/libexec/gnome-screensaver/.
+The above command should convert all xscreensaver modules.
+
+You must copy the desktop files into /usr/share/gnome-screensaver/themes (cp
+*.desktop /usr/share/gnome-screensaver/themes), and the executables into
+/usr/libexec/gnome-screensaver.
 
 Going to the gnome-screensaver-preferences dialog should now show the new
 modules in the list.
