@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.39 2006/05/16 17:36:33 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.40 2006/05/16 20:07:25 corsair Exp $
+
+  16 May 2006; Markus Rothe <corsair@gentoo.org> hydrogen-0.9.3.ebuild:
+  Stable on ppc64; bug #132522
 
   11 May 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   hydrogen-0.9.3.ebuild:

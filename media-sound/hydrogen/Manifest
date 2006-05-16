@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 58e16f5fc4ca04d16d65b0d3f6b2d42b ChangeLog 6547
+MD5 fd418c8d6895ae439a7567d126420035 ChangeLog 6653
 MD5 6b397bce8176411819610e6b92401be2 files/0.9.1-OSS.patch 995
 MD5 1755f7143c139eddaed591c6ea39e695 files/digest-hydrogen-0.9.0 67
 MD5 c2de54ec169afbb90c9eaa6440bafed5 files/digest-hydrogen-0.9.1 67
@@ -13,12 +10,5 @@ MD5 e43555677b71dcf988a5e85a2304c301 files/hydrogen-0.9.3-gcc-4.1-tinyxml.h.patc
 MD5 fea473fcef25faecb98954bbba814d7b hydrogen-0.9.0.ebuild 1112
 MD5 10b1831d7ab2e0688391bc11f2f52101 hydrogen-0.9.1.ebuild 1321
 MD5 d9fc02ee718af6e1dee8be969182a221 hydrogen-0.9.2.ebuild 2451
-MD5 c97ec820f2c7f408502a4b9d2089825a hydrogen-0.9.3.ebuild 2496
+MD5 cbcd72cc2478c2ebfa32f5268a5c5cce hydrogen-0.9.3.ebuild 2497
 MD5 958cdff6e2710ee30529dd9af63497de metadata.xml 257
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFEY1H8/NoSW7FuNV8RAgVhAJ9LxRF8PZCcb45Gd9ibRDV0JgxuQACfZxVt
-ZQ17J85E2tDY4BZSrDX4/8A=
-=cFGU
------END PGP SIGNATURE-----
