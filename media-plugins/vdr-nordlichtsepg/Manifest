@@ -1,9 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 adabe20d8303ed29262ff3a2fc4d7b00 ChangeLog 1453
-RMD160 089b417e47229bd3248b1e8e8ffdd57832e448a4 ChangeLog 1453
-SHA256 b4c8751d6f157208bac6e51b00ce75df66dae0c56b58561cf7dca0588bb80ff4 ChangeLog 1453
+DIST vdr-nordlichtsepg-0.4.tgz 14580 RMD160 b6ca8d4795943af7e2388d43a1c10c0fbbd699be SHA256 9d74a3993562d897e53f68137c6ff2188adee6075997a454454320e69c7bf711 size 14580
+DIST vdr-nordlichtsepg-0.7.tgz 17462 RMD160 434ed34fac7eacdc10a028f21e2b60eee7f43f41 SHA256 f3442cb71e33eaabaf5fa4704f47ef4ef82f0edc097abb1223776d694a84f8c5 size 17462
+DIST vdr-nordlichtsepg-0.8.tgz 17907 RMD160 4fdee569b2f5023d179e0ad09adbeed8d1b5d277 SHA256 e14cf6eafbd973899e0ac2a980b2effb9d7fa1bf43811f3238341038954408be size 17907
+DIST vdr-nordlichtsepg-0.8a.tgz 17958 RMD160 40ae0f65b2d0ddea31bf5e31f1000e16c274f180 SHA256 968816144efc3b40ed01205927480c71aab4333997ea83dc2b36cf907ef1200f size 17958
+EBUILD vdr-nordlichtsepg-0.4.ebuild 513 RMD160 a010998d3c39bb8bbd053ef1d497169b02e474e2 SHA1 d980241c10da0d2b484fab1855b8d509a95b7a76 SHA256 d9a61d8fd567f5ffb1b30c1e4a768942c7ebf0d620cce52ebde7845e3c95591e size 513
+MD5 f0da0310f9334532716bfbcc60164d51 vdr-nordlichtsepg-0.4.ebuild 513
+RMD160 a010998d3c39bb8bbd053ef1d497169b02e474e2 vdr-nordlichtsepg-0.4.ebuild 513
+SHA256 d9a61d8fd567f5ffb1b30c1e4a768942c7ebf0d620cce52ebde7845e3c95591e vdr-nordlichtsepg-0.4.ebuild 513
+EBUILD vdr-nordlichtsepg-0.7.ebuild 521 RMD160 1b316474426044f7fb5b6e98d78082db5f4bce1d SHA1 961f45a98d1ced088a6df85e32b1f25a5185d44f SHA256 2c9312c2cf636b9cde81af7c8835ff9358c005a5564d3b3fb4b27b5d68ee2970 size 521
+MD5 62a1385e7a606988c0d8666b3980faef vdr-nordlichtsepg-0.7.ebuild 521
+RMD160 1b316474426044f7fb5b6e98d78082db5f4bce1d vdr-nordlichtsepg-0.7.ebuild 521
+SHA256 2c9312c2cf636b9cde81af7c8835ff9358c005a5564d3b3fb4b27b5d68ee2970 vdr-nordlichtsepg-0.7.ebuild 521
+EBUILD vdr-nordlichtsepg-0.8.ebuild 521 RMD160 0b1b1d39fe2719eac4b07b82fd9a91aa3f86c11c SHA1 b95c19b143cc5f09e4ac5cb09b09c77726863615 SHA256 577bf81f7b81a8b66bffae622bbc769bcbb3283ee058f633112cc37625a4fa8f size 521
+MD5 2f2c6a0eb88985f325350912df93386a vdr-nordlichtsepg-0.8.ebuild 521
+RMD160 0b1b1d39fe2719eac4b07b82fd9a91aa3f86c11c vdr-nordlichtsepg-0.8.ebuild 521
+SHA256 577bf81f7b81a8b66bffae622bbc769bcbb3283ee058f633112cc37625a4fa8f vdr-nordlichtsepg-0.8.ebuild 521
+EBUILD vdr-nordlichtsepg-0.8a.ebuild 522 RMD160 93703842a79c867dc24cf97a95f25dabf67e2186 SHA1 0b105c6d02463600ee49c9a7802827fec471041c SHA256 d8c547debdb7ac41b670a514b791f877ad036b4aff53a74d6d3c17886e6e2bca size 522
+MD5 4c199f654888ecadacc1c0f9c05a43ad vdr-nordlichtsepg-0.8a.ebuild 522
+RMD160 93703842a79c867dc24cf97a95f25dabf67e2186 vdr-nordlichtsepg-0.8a.ebuild 522
+SHA256 d8c547debdb7ac41b670a514b791f877ad036b4aff53a74d6d3c17886e6e2bca vdr-nordlichtsepg-0.8a.ebuild 522
+MISC ChangeLog 1598 RMD160 7993c702efb56e036bfa896650914bd85326641d SHA1 5cada59a1a5ccc2eb1d9abc8e5a53db5bf4d3173 SHA256 a808d6f54d5572996b9938edbfd68177c1a54abd5206e5e223a7fcd9a378731c size 1598
+MD5 3460d3d08db2fbe472c83ed7a6f67ac9 ChangeLog 1598
+RMD160 7993c702efb56e036bfa896650914bd85326641d ChangeLog 1598
+SHA256 a808d6f54d5572996b9938edbfd68177c1a54abd5206e5e223a7fcd9a378731c ChangeLog 1598
+MISC metadata.xml 259 RMD160 cc3cadd479ce9fb1e22948ac9f01f5725da33fa6 SHA1 71c8f0604523f99ac8b7849a01d861d721a191fd SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe size 259
+MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
+RMD160 cc3cadd479ce9fb1e22948ac9f01f5725da33fa6 metadata.xml 259
+SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe metadata.xml 259
 MD5 54cdcb4f0ef703f3541344aaa76662f7 files/digest-vdr-nordlichtsepg-0.4 253
 RMD160 ad6e99d89474c1b554dffd8ca672ba2d4651588c files/digest-vdr-nordlichtsepg-0.4 253
 SHA256 f97272ce5c31316dbcbd7d68dca98d0b3e56afa404550044338e55a648370eb1 files/digest-vdr-nordlichtsepg-0.4 253
@@ -13,22 +38,13 @@ SHA256 174dce9a51c810bf942c4369453080ac6d9bfc634986dc02dcb4a81060247391 files/di
 MD5 4762580c223cb63acf538083e7e9f8cc files/digest-vdr-nordlichtsepg-0.8 253
 RMD160 44756aecd2af2193c0b31b0bb057ffce8237bf95 files/digest-vdr-nordlichtsepg-0.8 253
 SHA256 5d1e5e3acb8f240ff7d903a764f557e4db082fa123e76ae74656a31d35241018 files/digest-vdr-nordlichtsepg-0.8 253
-MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
-RMD160 cc3cadd479ce9fb1e22948ac9f01f5725da33fa6 metadata.xml 259
-SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe metadata.xml 259
-MD5 f0da0310f9334532716bfbcc60164d51 vdr-nordlichtsepg-0.4.ebuild 513
-RMD160 a010998d3c39bb8bbd053ef1d497169b02e474e2 vdr-nordlichtsepg-0.4.ebuild 513
-SHA256 d9a61d8fd567f5ffb1b30c1e4a768942c7ebf0d620cce52ebde7845e3c95591e vdr-nordlichtsepg-0.4.ebuild 513
-MD5 62a1385e7a606988c0d8666b3980faef vdr-nordlichtsepg-0.7.ebuild 521
-RMD160 1b316474426044f7fb5b6e98d78082db5f4bce1d vdr-nordlichtsepg-0.7.ebuild 521
-SHA256 2c9312c2cf636b9cde81af7c8835ff9358c005a5564d3b3fb4b27b5d68ee2970 vdr-nordlichtsepg-0.7.ebuild 521
-MD5 2f2c6a0eb88985f325350912df93386a vdr-nordlichtsepg-0.8.ebuild 521
-RMD160 0b1b1d39fe2719eac4b07b82fd9a91aa3f86c11c vdr-nordlichtsepg-0.8.ebuild 521
-SHA256 577bf81f7b81a8b66bffae622bbc769bcbb3283ee058f633112cc37625a4fa8f vdr-nordlichtsepg-0.8.ebuild 521
+MD5 9d33737d9268d29efbd53e942945b2a6 files/digest-vdr-nordlichtsepg-0.8a 256
+RMD160 7733f4c528a9df8ac1806274acfb080abc314992 files/digest-vdr-nordlichtsepg-0.8a 256
+SHA256 69b23d10f7bb5146429f3db5917fb3afc7a7c3e925744a6d2e342ebdb007048c files/digest-vdr-nordlichtsepg-0.8a 256
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEG8jLZfSl1Kp5KmoRAvgkAJ90ZEfsv3IFIrH7kwITtKos8XYZrgCfcng2
-2cJJEQOHSW9wFCwsTjlxAqg=
-=TNXk
+iD8DBQFEad8VZfSl1Kp5KmoRAl75AJ9Y2SDYOMikGWpD2uwg0D4xjvg7rwCeIjCJ
+KszilhvP5O5ox7S434Pg1/8=
+=D8ll
 -----END PGP SIGNATURE-----
