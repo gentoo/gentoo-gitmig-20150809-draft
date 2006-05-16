@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-0.11-r1.ebuild,v 1.10 2006/05/15 01:54:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-0.11-r1.ebuild,v 1.11 2006/05/16 19:42:56 corsair Exp $
 
 inherit distutils eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://cheeseshop.python.org/packages/source/S/Sancho/${MY_P}.tar.gz"
 
 LICENSE="CNRI"
 SLOT="0.0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ~ppc-macos ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ~ppc-macos ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.2"
