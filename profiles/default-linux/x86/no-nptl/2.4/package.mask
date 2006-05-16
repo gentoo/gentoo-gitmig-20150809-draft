@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.11 2006/05/13 23:08:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.12 2006/05/16 12:52:59 wolf31o2 Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # New toys enabled by 2.6 headers
@@ -38,10 +38,6 @@ media-sound/banshee
 # Masked since rootstrap is masked
 dev-util/pbuilder
 
-# Masked since linuxwacom is masked
-#>=x11-base/xorg-x11-7.0-r1
-#>=virtual/x11-7.0
-
 # Masked since kaffeine is masked
 net-www/kaffeine-mozilla-plugin
 
@@ -51,3 +47,6 @@ app-cdr/dvdshrink
 # Masked since media-libs/libipoddevice is masked
 dev-dotnet/ipod-sharp
 app-pda/dopi
+
+# Masked since it requires udev
+net-dialup/speedtouch-usb
