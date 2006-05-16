@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.0.5.ebuild,v 1.1 2006/05/16 11:15:28 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.0.5.ebuild,v 1.2 2006/05/16 11:32:59 bangert Exp $
 
 inherit flag-o-matic
 
@@ -49,4 +49,8 @@ pkg_postinst() {
 	einfo "No demo-/sample-configfile is included in the distribution -- read the man-page"
 	einfo "for more info."
 	einfo "A sample (localhost:8888 -> localhost:80) for gentoo is given in \"/etc/pound.cfg\"."
+	echo
+	ewarn "You will have to upgrade you configuration file, if you are"
+	ewarn "upgrading from a version <= 1.9."
+	echo
 }
