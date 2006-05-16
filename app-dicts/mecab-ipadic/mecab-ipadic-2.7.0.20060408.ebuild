@@ -1,0 +1,35 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/mecab-ipadic/mecab-ipadic-2.7.0.20060408.ebuild,v 1.1 2006/05/16 13:48:12 hattya Exp $
+
+IUSE="unicode"
+
+MY_P="${PN}-${PV%.*}-${PV/*.}"
+
+DESCRIPTION="IPA dictionary for MeCab"
+HOMEPAGE="http://mecab.sourceforge.jp/"
+SRC_URI="http://prdownloads.sourceforge.jp/mecab/19691/${MY_P}.tar.gz"
+
+LICENSE="ipadic"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+SLOT="0"
+S="${WORKDIR}/${MY_P}"
+
+DEPEND=">=app-text/mecab-0.90"
+
+src_compile() {
+
+	local myconf
+
+	use unicode && myconf="${myconf} --with-charset=utf8"
+
+	econf ${myconf} || die
+	emake || die
+
+}
+
+src_install() {
+
+	make DESTDIR=${D} install || die
+
+}
