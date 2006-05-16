@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/x48
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.7 2006/05/05 18:11:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.8 2006/05/16 18:17:01 wormo Exp $
+
+  11 May 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  x48-0.4.3-r1.ebuild:
+  marking ~ppc since it's usable though self-test mode has oddities
+  (see Bug #132248 for details)
 
   05 May 2006; Gustavo Zacarias <gustavoz@gentoo.org> x48-0.4.3-r1.ebuild:
   Keyworded ~sparc wrt #132248
