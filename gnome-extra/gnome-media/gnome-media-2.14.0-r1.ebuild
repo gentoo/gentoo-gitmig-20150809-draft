@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.14.0-r1.ebuild,v 1.2 2006/05/13 18:25:28 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.14.0-r1.ebuild,v 1.3 2006/05/16 04:36:14 dertobi123 Exp $
 
 inherit gnome2 eutils autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ronald.bitfreak.net/gnome-media.php"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ipv6 mad ogg static vorbis"
 
 RDEPEND=">=dev-libs/glib-1.3.7
