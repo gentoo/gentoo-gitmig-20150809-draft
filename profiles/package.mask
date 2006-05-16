@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5350 2006/05/16 14:06:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5351 2006/05/16 14:18:48 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -41,14 +41,14 @@ sys-process/bcron
 =games-sports/trigger-0.5.2-r1
 =games-sports/ultimatestunts-0.6.1-r1
 =games-strategy/scorched3d-39.1-r1
-=media-gfx/blender/blender-2.41-r1
+=media-gfx/blender-2.41-r1
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (09 May 2006)
 # Masked for security reasons.  See bug #132377 for more informantion.
 <games-fps/enemy-territory-2.60b
 <games-fps/quake3-bin-1.32c
 <games-fps/rtcw-1.41b
-   
+ 
 # Roy Marples <uberlord@gentoo.org> (09 May 2006)
 # Masked for testing, although it works very well for me.
 >=net-misc/openvpn-2.1_beta
