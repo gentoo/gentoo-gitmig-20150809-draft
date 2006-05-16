@@ -1,70 +1,27 @@
-AUX 2.x-series-nsca.patch 767 RMD160 69c3916842953666037dcf258906c15a9ce0047a SHA1 5f376bd65bf74eeb3cc00efde4fadf7f8962d06c SHA256 04ecb77abfe7618d036a2b598ea30df6704a82285b2210055eda4dd6414c94d3 size 767
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 76053cf993e28eb5b0a10051a7d78277 ChangeLog 15240
 MD5 446906907cccdbf195442373c6f17f77 files/2.x-series-nsca.patch 767
-RMD160 69c3916842953666037dcf258906c15a9ce0047a files/2.x-series-nsca.patch 767
-SHA256 04ecb77abfe7618d036a2b598ea30df6704a82285b2210055eda4dd6414c94d3 files/2.x-series-nsca.patch 767
-AUX 99_nagios.conf 350 RMD160 d9818e29cd119b2cc185c75dcd374b3851eaa739 SHA1 fa4b438c1d06f2d00cd2bff4fefc448a59d1cdec SHA256 2e8448d5e38969f0eee4306611e9592e9cec93506ad055cd27ef8e211cfe9f71 size 350
 MD5 673bda0ac6ab9230d23331e7f3846b7b files/99_nagios.conf 350
-RMD160 d9818e29cd119b2cc185c75dcd374b3851eaa739 files/99_nagios.conf 350
-SHA256 2e8448d5e38969f0eee4306611e9592e9cec93506ad055cd27ef8e211cfe9f71 files/99_nagios.conf 350
-AUX conf.d 409 RMD160 8b08c01284fc590a2291164589da42515d1a0586 SHA1 dd7bf46facd6a3069794ad9623cddd854198520e SHA256 a5122b19248c375b7b7c80bb5568fcaf334de316c611a85795960c2b9f6a6d5a size 409
 MD5 f2947dec6b9a839da79606bcc394036b files/conf.d 409
-RMD160 8b08c01284fc590a2291164589da42515d1a0586 files/conf.d 409
-SHA256 a5122b19248c375b7b7c80bb5568fcaf334de316c611a85795960c2b9f6a6d5a files/conf.d 409
-AUX nagios 1416 RMD160 95d94dc2b30478a912b100b06e2b5d3e7510b785 SHA1 ff49fa5c0478aefe66d2a086b9a9613ac62afa71 SHA256 9fb75d2a8edb621f152ce1a676ffab9554fe3aa64e07490adf525f669167bd49 size 1416
-MD5 f83fb59efe215d8191866a95685b4b39 files/nagios 1416
-RMD160 95d94dc2b30478a912b100b06e2b5d3e7510b785 files/nagios 1416
-SHA256 9fb75d2a8edb621f152ce1a676ffab9554fe3aa64e07490adf525f669167bd49 files/nagios 1416
-AUX nagios-1.x-Makefile-asneeded.diff 5460 RMD160 589bc81bb2fe0148acb0d9e6c76d63b6ca6ae34c SHA1 ced005ab9d100af6cd84508cddc1d6d4450aa509 SHA256 679482075dfdecd58948ed479adf306ed02bff5cf661f605d01193b2a11ef503 size 5460
-MD5 354f5aeb0e831ee8e218962eb85d07e4 files/nagios-1.x-Makefile-asneeded.diff 5460
-RMD160 589bc81bb2fe0148acb0d9e6c76d63b6ca6ae34c files/nagios-1.x-Makefile-asneeded.diff 5460
-SHA256 679482075dfdecd58948ed479adf306ed02bff5cf661f605d01193b2a11ef503 files/nagios-1.x-Makefile-asneeded.diff 5460
-AUX nagios.conf 362 RMD160 ea642c44b8450cfc67a1675f3dc558d36eccabcb SHA1 a06e53b6c634171c09bb36f1ef460053f7e542c3 SHA256 8d57d761efd4057e15430462e1233715c1472155ae181a2d5d364948bbcb1848 size 362
-MD5 dad3fb46e8f73ac54d9239a542bc82e0 files/nagios.conf 362
-RMD160 ea642c44b8450cfc67a1675f3dc558d36eccabcb files/nagios.conf 362
-SHA256 8d57d761efd4057e15430462e1233715c1472155ae181a2d5d364948bbcb1848 files/nagios.conf 362
-AUX submit_check_result_via_nsca.patch 585 RMD160 1dc2b0a10b0c824b3e0026c26d17f931703e7a98 SHA1 3c00221ae86402dcae93b71abb92cd88e14acb03 SHA256 2770e3988ce05a63866e4b32c029f3ef13d64d7da3791747014378391d5d8d3e size 585
-MD5 cee7d66cc61be3558af44ab177d99e1f files/submit_check_result_via_nsca.patch 585
-RMD160 1dc2b0a10b0c824b3e0026c26d17f931703e7a98 files/submit_check_result_via_nsca.patch 585
-SHA256 2770e3988ce05a63866e4b32c029f3ef13d64d7da3791747014378391d5d8d3e files/submit_check_result_via_nsca.patch 585
-DIST nagios-1.4.1.tar.gz 1643386 size 1643386
-DIST nagios-1.4.tar.gz 1626711 size 1626711
-DIST nagios-1.x-Makefile-distclean-gentoo.diff.bz2 1133 size 1133
-DIST nagios-2.0b.cfg-sample.gz 8990 size 8990
-DIST nagios-2.3.1.tar.gz 1734958 size 1734958
-DIST nagios-2.3.tar.gz 1734837 size 1734837
-EBUILD nagios-core-1.4.1.ebuild 7511 RMD160 2f504aded24b18c0925a234d0cade8bffba8dadc SHA1 61819d3c52bbea6cff8cbc3ccdc27df3a5fddfe7 SHA256 69c4a0f2eb9696d5302e0100ea43d1ec5331c5db46d250055d3b83b45ca8920e size 7511
-MD5 c283878f394303c9dff18ef80340f01f nagios-core-1.4.1.ebuild 7511
-RMD160 2f504aded24b18c0925a234d0cade8bffba8dadc nagios-core-1.4.1.ebuild 7511
-SHA256 69c4a0f2eb9696d5302e0100ea43d1ec5331c5db46d250055d3b83b45ca8920e nagios-core-1.4.1.ebuild 7511
-EBUILD nagios-core-1.4.ebuild 7504 RMD160 e458b09d249d6e2f5b0d05f886bd365ad377f33e SHA1 24b8c917dae59381daaec0f07ad9da972470d24d SHA256 4271cf0924c8d5ee9a3bd0853089f475ce5e5de2649cae13ecacdbfe4ba6b495 size 7504
-MD5 71fc67b930bb60a4b18c2fd2e55febbf nagios-core-1.4.ebuild 7504
-RMD160 e458b09d249d6e2f5b0d05f886bd365ad377f33e nagios-core-1.4.ebuild 7504
-SHA256 4271cf0924c8d5ee9a3bd0853089f475ce5e5de2649cae13ecacdbfe4ba6b495 nagios-core-1.4.ebuild 7504
-EBUILD nagios-core-2.3.1.ebuild 5995 RMD160 829b6f0dc55942da679593d299466d716bf2dcd2 SHA1 8db672da9b63399e990258fc00a7422d09da40f0 SHA256 28d24cc625ecdfa09a1decc6b9f93f9f074f674e4f03603a4c6a2ef1ee181151 size 5995
-MD5 0db78682d06f57a5c4af37bad8cea745 nagios-core-2.3.1.ebuild 5995
-RMD160 829b6f0dc55942da679593d299466d716bf2dcd2 nagios-core-2.3.1.ebuild 5995
-SHA256 28d24cc625ecdfa09a1decc6b9f93f9f074f674e4f03603a4c6a2ef1ee181151 nagios-core-2.3.1.ebuild 5995
-EBUILD nagios-core-2.3.ebuild 5990 RMD160 d990505c386b1da518cf620f16796abb7f576bfa SHA1 1d01a6ed294160e3b3c623265d20655c46318f1f SHA256 9de0c629ce14487e2ffac0582fd6d61753addebff6716159f5238d03938f62f5 size 5990
-MD5 bad76591d737b015d248479440d94a51 nagios-core-2.3.ebuild 5990
-RMD160 d990505c386b1da518cf620f16796abb7f576bfa nagios-core-2.3.ebuild 5990
-SHA256 9de0c629ce14487e2ffac0582fd6d61753addebff6716159f5238d03938f62f5 nagios-core-2.3.ebuild 5990
-MISC ChangeLog 15118 RMD160 01e44082b54dded84bdcfa3a258e78b040c2a225 SHA1 cfa1a81ccb94c34d055a1946d5e7658d5130ddb3 SHA256 c20b6eb71e9f011e3eb416fb9e96ab13ecf889a83eabee7ed32dda3a5c4e7e32 size 15118
-MD5 b20eb75506913ffa9ba190fee716f138 ChangeLog 15118
-RMD160 01e44082b54dded84bdcfa3a258e78b040c2a225 ChangeLog 15118
-SHA256 c20b6eb71e9f011e3eb416fb9e96ab13ecf889a83eabee7ed32dda3a5c4e7e32 ChangeLog 15118
-MISC metadata.xml 1049 RMD160 33d4d61b3c0c0c29cd4770349d1b18ee280b8395 SHA1 19972fccad8732b7fd85e1b8c0f1077dc254432f SHA256 c2b2985cb9cd326a5eb6523769cdf7e63bde2a0523dc59df5989282d1fbbd2a0 size 1049
-MD5 bb0bc884a0383e5be0a4bae6cba836dc metadata.xml 1049
-RMD160 33d4d61b3c0c0c29cd4770349d1b18ee280b8395 metadata.xml 1049
-SHA256 c2b2985cb9cd326a5eb6523769cdf7e63bde2a0523dc59df5989282d1fbbd2a0 metadata.xml 1049
 MD5 155842cf933f59e8cd68b61d84280e70 files/digest-nagios-core-1.4 151
-RMD160 4d93bbff96a2afc60e5589004245a08c5a19ba4f files/digest-nagios-core-1.4 151
-SHA256 237bf7f29b3e152cc898d986d48cb911ed78396899299e63c9260091ca1900cd files/digest-nagios-core-1.4 151
 MD5 2e5fdbc8e1063290d5589c1091bde0bb files/digest-nagios-core-1.4.1 153
-RMD160 2a185fb26605c0f416e59dad7bfb41288e546878 files/digest-nagios-core-1.4.1 153
-SHA256 b7086b2946148b8665aef94fb392a359420a45ef4599a088a321ece4aae08899 files/digest-nagios-core-1.4.1 153
 MD5 0112e82ce6b3c7360d47e40bdf76a990 files/digest-nagios-core-2.3 131
-RMD160 9bce7caa17265ecb9d80ddec5ffc09251a17e359 files/digest-nagios-core-2.3 131
-SHA256 84fff9cb07eebba0ac93edb1e6c624a6371f7807fa76e8f25b1b8139359fae5b files/digest-nagios-core-2.3 131
 MD5 801bbf98c4aa4b4d10fc5de369933342 files/digest-nagios-core-2.3.1 133
-RMD160 064da001ae6ee1a3d08d2d1b577bb9bbcb6fc821 files/digest-nagios-core-2.3.1 133
-SHA256 7d0241c5d0da3ab2636bdba2b1ec6bd27b5f121e018f6389cabb966421dd199a files/digest-nagios-core-2.3.1 133
+MD5 f83fb59efe215d8191866a95685b4b39 files/nagios 1416
+MD5 354f5aeb0e831ee8e218962eb85d07e4 files/nagios-1.x-Makefile-asneeded.diff 5460
+MD5 dad3fb46e8f73ac54d9239a542bc82e0 files/nagios.conf 362
+MD5 cee7d66cc61be3558af44ab177d99e1f files/submit_check_result_via_nsca.patch 585
+MD5 bb0bc884a0383e5be0a4bae6cba836dc metadata.xml 1049
+MD5 b7ccdbabd3729b4b7ae8294d78af275b nagios-core-1.4.1.ebuild 7510
+MD5 71fc67b930bb60a4b18c2fd2e55febbf nagios-core-1.4.ebuild 7504
+MD5 0db78682d06f57a5c4af37bad8cea745 nagios-core-2.3.1.ebuild 5995
+MD5 bad76591d737b015d248479440d94a51 nagios-core-2.3.ebuild 5990
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEaithKRy60XGEcJIRAv5eAKCrUu+m5mqNykDFi8AgYKn2qHJsAwCfVzwI
+xoTyOQAkslYDIPb9SflmAtw=
+=DqlO
+-----END PGP SIGNATURE-----
