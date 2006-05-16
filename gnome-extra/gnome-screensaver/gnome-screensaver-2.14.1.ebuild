@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.14.1.ebuild,v 1.1 2006/04/12 22:11:50 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.14.1.ebuild,v 1.2 2006/05/16 08:12:20 compnerd Exp $
 
 inherit eutils gnome2
 
@@ -89,5 +89,5 @@ pkg_postinst() {
 	ewarn "echo \"x11-misc/xscreensaver -gnome\" >> /etc/portage/package.use"
 	echo
 	einfo "Information for converting screensavers is located in "
-	einfo "/usr/share/doc/${PF}/xss-conversion.txt"
+	einfo "/usr/share/doc/${PF}/xss-conversion.txt.gz"
 }
