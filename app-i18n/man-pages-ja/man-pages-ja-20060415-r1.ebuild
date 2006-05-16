@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20060415.ebuild,v 1.1 2006/05/04 11:12:54 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20060415-r1.ebuild,v 1.1 2006/05/16 13:20:01 hattya Exp $
 
 IUSE=""
 
@@ -33,32 +33,45 @@ pkg_setup() {
 
 src_compile() {
 
-	return
+	sed -i \
+		-e "/^man/s:Y:N:" \
+		-e "/^shadow/s:Y:N:" \
+		script/pkgs.list
 
 }
 
 src_install() {
 
-	local x y z
+	local x y z pkg
 
-	for x in $(grep '^[^#].*' script/pkgs.list | cut -f1 | sort); do
-		for y in $(ls -d manual/$x/man* 2>/dev/null); do
-			jmandir=$(echo $y | cut -d/ -f3)
+	for x in $(tac script/pkgs.list | grep -v '^[#].*'); do
+		if [[ -z "$pkg" ]]; then
+			pkg=$x
+			continue
+		fi
 
-			einfo "$(printf "install %-20s  /usr/share/man/ja/$jmandir" $x:)"
+		if [[ "$x" == "N" ]]; then
+			pkg=
+			continue
+		fi
 
-			insinto /usr/share/man/ja/$jmandir
+		einfo "install $pkg"
+
+		for y in $(ls -d manual/$pkg/man* 2>/dev/null); do
+			insinto /usr/share/man/ja/$(echo $y | cut -d/ -f3)
 			doins $y/*
 		done
+
+		pkg=
 	done
 
 	cd ${WORKDIR}/${GENTOO_MAN_P}
 
 	for x in *; do
 		if [ -d "$x" ]; then
-			for z in $(for y in $x/*.[1-9]; do echo ${y##*.}; done | sort | uniq); do
-				einfo "$(printf "install %-20s  /usr/share/man/ja/man$z" $x:)"
+			einfo "install $x"
 
+			for z in $(for y in $x/*.[1-9]; do echo ${y##*.}; done | sort | uniq); do
 				insinto /usr/share/man/ja/man$z
 				doins $x/*.$z
 			done
