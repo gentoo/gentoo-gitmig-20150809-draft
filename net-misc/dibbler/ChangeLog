@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dibbler
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.1 2005/09/20 07:53:59 gmsoft Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.2 2006/05/16 18:46:59 gmsoft Exp $
+
+  16 May 2006; Guy Martin <gmsoft@gentoo.org> +files/dibbler-gcc-4.1.patch,
+  dibbler-0.4.1.ebuild:
+  Added fix for gcc-4.1 (#133322).
 
 *dibbler-0.4.1 (20 Sep 2005)
 
