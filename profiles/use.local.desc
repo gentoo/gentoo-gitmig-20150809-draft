@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1899 2006/05/15 23:53:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1900 2006/05/16 13:36:06 hattya Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -195,6 +195,7 @@ app-text/evince:dvi - Enable the built-in DVI viewer for Evince
 app-text/evince:nautilus - Enable the nautilus plugin
 app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer for Evince
 app-text/htmldoc:fltk - Install the gui version of htmldoc.
+app-text/hyperestraier:mecab - Enable mecab support for Estraier
 app-text/namazu:kakasi - Enable kakasi support for namazu
 app-text/noweb:icon - Enable icon language support for noweb
 app-text/poppler:cairo - Enable the cairo backend for poppler
