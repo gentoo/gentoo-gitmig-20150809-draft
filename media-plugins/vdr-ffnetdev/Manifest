@@ -1,20 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3bb807374c71da9e2a2a2af4712a66cf ChangeLog 741
+AUX confd 878 RMD160 29fb905cfbae93ff1f1f9482f28ac143e2c2795b SHA1 894717b8696d27d9e3a1d85c06045fdcf6ba541f SHA256 3aa1783f7da29598a9ce227ce23762a48b159325c9a6565daafb1735de7d2d1d size 878
 MD5 e6e465b4bb0965b1aac11a0a4593f159 files/confd 878
-MD5 45304980f0e620c0898fdc2132d2e7a1 files/digest-vdr-ffnetdev-0.0.5 70
-MD5 ab9ffdebbbee935befd1e314001ae333 files/digest-vdr-ffnetdev-0.1.0 70
+RMD160 29fb905cfbae93ff1f1f9482f28ac143e2c2795b files/confd 878
+SHA256 3aa1783f7da29598a9ce227ce23762a48b159325c9a6565daafb1735de7d2d1d files/confd 878
+AUX rc-addon.sh 545 RMD160 93b467010f26a9fcca565340b930f3fe37e2587b SHA1 321973da3dcb2953960df55829d5e60025f1c844 SHA256 28d4d6abe7e3235aba0b7505b050d8b630a39eb39d3d3c1156a856f63aa475b2 size 545
 MD5 fea860de4df26202a983ae2ecaeadad4 files/rc-addon.sh 545
+RMD160 93b467010f26a9fcca565340b930f3fe37e2587b files/rc-addon.sh 545
+SHA256 28d4d6abe7e3235aba0b7505b050d8b630a39eb39d3d3c1156a856f63aa475b2 files/rc-addon.sh 545
+AUX vdr-ffnetdev-0.1.0-bigpatch-headers.diff 1174 RMD160 92d43970ee24ce645c4f2c8abb19db69a5064688 SHA1 5e4278494a4c6002f4ce645beff3c2b1865e017b SHA256 62edeb498785c3da8416d8eed2727dbdb111fd414399efe87a24168f6a4160a6 size 1174
 MD5 9745931e3717cc19f99414b2039775dc files/vdr-ffnetdev-0.1.0-bigpatch-headers.diff 1174
-MD5 6ed3a923400dbba2390463cc6d5c8313 metadata.xml 465
+RMD160 92d43970ee24ce645c4f2c8abb19db69a5064688 files/vdr-ffnetdev-0.1.0-bigpatch-headers.diff 1174
+SHA256 62edeb498785c3da8416d8eed2727dbdb111fd414399efe87a24168f6a4160a6 files/vdr-ffnetdev-0.1.0-bigpatch-headers.diff 1174
+DIST vdr-ffnetdev-0.0.5.tar.bz2 33402 RMD160 b7dc28b6e7bb5e6d716f5ca73944bcc544132199 SHA256 6c1b2fb0c44f4f48570de345eec02ad0b6cfae61b621ec1cf85899fabc08202a size 33402
+DIST vdr-ffnetdev-0.1.0.tar.bz2 51213 size 51213
+EBUILD vdr-ffnetdev-0.0.5.ebuild 610 RMD160 cd7b225185f5f1821f9dceb9bb61d10ec9c421d4 SHA1 4e04b8d4a4a39f818947423de63b15c77461c662 SHA256 9eca56ed166636edbe05cc17e1df5a05a0c986ecfa70812bc4572beb6b9e18ea size 610
 MD5 cfb54b90eb28a8d13f77574685881989 vdr-ffnetdev-0.0.5.ebuild 610
-MD5 2abb7000dc731dfdc4fbc055bd62bdd9 vdr-ffnetdev-0.1.0.ebuild 798
+RMD160 cd7b225185f5f1821f9dceb9bb61d10ec9c421d4 vdr-ffnetdev-0.0.5.ebuild 610
+SHA256 9eca56ed166636edbe05cc17e1df5a05a0c986ecfa70812bc4572beb6b9e18ea vdr-ffnetdev-0.0.5.ebuild 610
+EBUILD vdr-ffnetdev-0.1.0.ebuild 857 RMD160 5fa11baf60adf7cae9d9641ead7c032e50855faf SHA1 0ea4912a9a371c765b8efaf4f2d966b0f458b979 SHA256 80d415d41d688669a9309e87c8b9aa8e7ed43cedd391e9eabfe6b3399b429e9d size 857
+MD5 0b63dada18c783bdc5059d59504447a3 vdr-ffnetdev-0.1.0.ebuild 857
+RMD160 5fa11baf60adf7cae9d9641ead7c032e50855faf vdr-ffnetdev-0.1.0.ebuild 857
+SHA256 80d415d41d688669a9309e87c8b9aa8e7ed43cedd391e9eabfe6b3399b429e9d vdr-ffnetdev-0.1.0.ebuild 857
+MISC ChangeLog 845 RMD160 892415ac35d55eb72e039d26eda431e9e3a002aa SHA1 09cd1ed72f0332f951314d350d385a6e521549b6 SHA256 3509a856e1eda96e3dcad38b8f0ae80f42e35183e55c6afbf7ea234d279ef2a3 size 845
+MD5 84bd2cd088cc5acbda855aabb2f2f9ab ChangeLog 845
+RMD160 892415ac35d55eb72e039d26eda431e9e3a002aa ChangeLog 845
+SHA256 3509a856e1eda96e3dcad38b8f0ae80f42e35183e55c6afbf7ea234d279ef2a3 ChangeLog 845
+MISC metadata.xml 465 RMD160 5285415e38341355fd6dac2be9044cd17731a8c5 SHA1 2c80e987d13ba65d58229d6fc9524b6ba81dd7ab SHA256 86abc5119557c45484af9b7affaa727793a5b3f48d3668335f759c8912b8b9c2 size 465
+MD5 6ed3a923400dbba2390463cc6d5c8313 metadata.xml 465
+RMD160 5285415e38341355fd6dac2be9044cd17731a8c5 metadata.xml 465
+SHA256 86abc5119557c45484af9b7affaa727793a5b3f48d3668335f759c8912b8b9c2 metadata.xml 465
+MD5 a701e1e2f88dca5835ff83bb25416278 files/digest-vdr-ffnetdev-0.0.5 256
+RMD160 53c57aa620da996f6c5a0c4d5f27002f4f296a3d files/digest-vdr-ffnetdev-0.0.5 256
+SHA256 9f8423394dcceb3e83e22d7ee5cfe0b983fa3ce50fa3713d9f34fb02cb528c48 files/digest-vdr-ffnetdev-0.0.5 256
+MD5 ab9ffdebbbee935befd1e314001ae333 files/digest-vdr-ffnetdev-0.1.0 70
+RMD160 daa726ddaa9662697465e4e2a1192cc8533ff2ef files/digest-vdr-ffnetdev-0.1.0 70
+SHA256 7ef8fcf8e9c332268717f1106534879bef73709001a1097cc951b3095ac2839e files/digest-vdr-ffnetdev-0.1.0 70
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-Comment: no further Information
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEXRRVdn07HTTCgIoRAocpAJ4qy3o2QKmZrWprLY7vHiTlQv8bTQCfRKpL
-DIb96m4k33FKQwEUHn2GIsQ=
-=sBr9
+iD8DBQFEakMfZfSl1Kp5KmoRAmcpAKCDwecVb8aSP/Fn0dW4GCF80cifCwCcC7DM
+XE1QCycOqohEE3sVplOrMw8=
+=oM8R
 -----END PGP SIGNATURE-----
