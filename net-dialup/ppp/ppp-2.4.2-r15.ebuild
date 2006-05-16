@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r15.ebuild,v 1.16 2006/05/15 05:04:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r15.ebuild,v 1.17 2006/05/16 06:34:23 mrness Exp $
 
 inherit eutils gnuconfig flag-o-matic linux-info
 
 DESCRIPTION="Point-to-point protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20060515.tar.gz
+	mirror://gentoo/${P}-patches-20060516.tar.gz
 	mppe-mppc? ( http://mppe-mppc.alphacron.de/ppp-2.4.2-mppe-mppc-1.1.patch.gz )
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
