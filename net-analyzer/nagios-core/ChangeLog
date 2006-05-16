@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.83 2006/05/16 13:45:05 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.84 2006/05/16 15:09:20 wolf31o2 Exp $
+
+  16 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  nagios-core-1.4.1.ebuild:
+  Stable on x86 wrt bug #133487.
 
 *nagios-core-2.3.1 (16 May 2006)
 *nagios-core-1.4.1 (16 May 2006)
