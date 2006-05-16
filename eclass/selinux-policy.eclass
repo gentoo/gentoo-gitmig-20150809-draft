@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.15 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.16 2006/05/16 02:01:02 pebenito Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the policy
@@ -18,20 +18,19 @@ IUSE=""
 
 RDEPEND=">=sec-policy/selinux-base-policy-20030729"
 
-[ -z "${POLICYDIR}" ] && POLICYDIR="/etc/security/selinux/src/policy"
-
-SAVENAME="`date +%Y%m%d%H%M`-${PN}.tar.bz2"
-SAVEDIR="`echo "${POLICYDIR}" | cut -d/ -f6`"
-
 selinux-policy_src_compile() {
 	cd ${S}
+
+	[ -z "${POLICYDIR}" ] && POLICYDIR="/etc/security/selinux/src/policy"
+	SAVENAME="`date +%Y%m%d%H%M`-${PN}.tar.bz2"
+	SAVEDIR="`echo "${POLICYDIR}" | cut -d/ -f6`"
 
 	einfo "Backup of policy source is \"${SAVENAME}\"."
 	debug-print "POLICYDIR is \"${POLICYDIR}\""
 	debug-print "SAVEDIR is \"${SAVEDIR}\""
 
 	# create a backup of the current policy
-	tar -C /etc/security/selinux/src  --exclude policy.12 --exclude tmp \
+	tar -C /etc/security/selinux/src --exclude tmp \
 		--exclude policy.conf -jcf ${SAVENAME} ${SAVEDIR}/
 }
 
@@ -39,7 +38,7 @@ selinux-policy_src_install() {
 	cd ${S}
 
 	insinto /etc/security/selinux/src/policy-backup
-	doins ${SAVENAME}
+	doins *-${PN}.tar.bz2
 
 	if [ -n "${TEFILES}" ]; then
 		debug-print "TEFILES is \"${TEFILES}\""
