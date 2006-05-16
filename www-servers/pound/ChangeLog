@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/pound
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.15 2006/05/16 11:32:59 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.16 2006/05/16 11:49:57 bangert Exp $
+
+  16 May 2006; Thilo Bangert <bangert@gentoo.org> -pound-1.7.ebuild,
+  -pound-1.8.3.ebuild:
+  removed first batch of vulnerable versions (bug #118541)
 
   16 May 2006; Thilo Bangert <bangert@gentoo.org> pound-2.0.5.ebuild:
   added a warning about incompatible configuration files in newer versions

@@ -1,6 +1,4 @@
-MD5 0393a5775acfe7b827ecf4d649704ddf ChangeLog 3478
-MD5 a5bfd8880ab9b367f5333083252548db files/digest-pound-1.7 58
-MD5 1b3ef0c3cf70a54e0ea0c16066ea3261 files/digest-pound-1.8.3 60
+MD5 4a58785b0b5d538a03efaef84c4a4d8d ChangeLog 3630
 MD5 d15f0a09b8947377df0afdedaf3a50a3 files/digest-pound-1.9 58
 MD5 bcca392bc76d616e4b38f8092402d417 files/digest-pound-2.0.3 226
 MD5 1dc035075c85945c0b99b3838ebdec1c files/digest-pound-2.0.5 60
@@ -9,8 +7,6 @@ MD5 4c7b6277bb33061b615ac9059c74cf62 files/pound.cfg 830
 MD5 887a882063050c34c66dcfb8091711bf files/pound.init 583
 MD5 8ed6124c94dc41416049aedd7355d595 files/pound.init-1.9 609
 MD5 5bf55540b34f63fe561c545abdfee3fb metadata.xml 666
-MD5 4b00b27e229a7eda8616f24ca6d1f79d pound-1.7.ebuild 1146
-MD5 985e822187e622c428c39715762a4bff pound-1.8.3.ebuild 1154
 MD5 2fa8ecf1375f09e34e5853c742021e6b pound-1.9.ebuild 1162
 MD5 e0407067e38b3e6b2d468b040ad69b9b pound-2.0.3.ebuild 1216
 MD5 b2a51b7113bfe0a04c4116cc19fa9ea0 pound-2.0.5.ebuild 1355
