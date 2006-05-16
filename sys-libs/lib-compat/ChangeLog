@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/lib-compat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.22 2006/03/18 16:21:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.23 2006/05/16 01:28:45 solar Exp $
+
+*lib-compat-1.4.1 (15 May 2006)
+
+  15 May 2006; <solar@gentoo.org> +lib-compat-1.4.1.ebuild:
+  - fix false textrel markings for x86 libs. bug 88363
 
   18 Mar 2006; Markus Rothe <corsair@gentoo.org> lib-compat-1.4.ebuild:
   Stable on ppc64

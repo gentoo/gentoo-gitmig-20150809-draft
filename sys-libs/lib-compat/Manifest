@@ -1,4 +1,18 @@
-MD5 844f16dae1b576c63dbfdcb8017f524e ChangeLog 3417
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 814e2b72dd667e70bb8de64526b5daaa ChangeLog 3564
 MD5 cd1bc668a06184e6e98d7b69aa780495 files/digest-lib-compat-1.4 68
+MD5 f81b526cb5793e0ac3f04d5b30b12cd7 files/digest-lib-compat-1.4.1 70
+MD5 de51c2bc751b4c97855fbae9d1d15b66 lib-compat-1.4.1.ebuild 1110
 MD5 31ec6270dfbbbe0bf4da1a500fc63766 lib-compat-1.4.ebuild 1104
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iQCVAwUBRGkq2J4WFLgrx1GWAQKYzgP+J/0h59rJwjeFvn+we7yEh2hEp2Y6sY5I
+5okfYcEyoRa7lQnHWRtY3ZhQhkcR6wUAP1CVjNBI4L/a8Xjaza1sqkUPBJ9t+icO
+5Y0YibJ58X+Qpz0CRB7ayq5I8iPN4OhDnRhtsmVYIVswVCTf2fGA9PFDg/g2+qpl
+RW9pR5Wj6gI=
+=PD4o
+-----END PGP SIGNATURE-----
