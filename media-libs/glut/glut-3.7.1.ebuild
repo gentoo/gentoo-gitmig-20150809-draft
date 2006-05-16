@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.28 2006/05/13 20:19:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.29 2006/05/16 16:16:56 genstef Exp $
 
-inherit libtool eutils
+inherit autotools eutils
 
 MESA_VER="5.0"
 DESCRIPTION="The OpenGL Utility Toolkit (GLUT)"
@@ -23,7 +23,8 @@ S="${WORKDIR}/Mesa-${MESA_VER}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	elibtoolize
+	epatch "${FILESDIR}/${P}-fix-GLU-linking.patch"
+	eautoreconf
 }
 
 src_compile() {

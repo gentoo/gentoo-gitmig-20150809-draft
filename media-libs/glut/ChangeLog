@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/glut
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.23 2006/05/14 23:00:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.24 2006/05/16 16:16:56 genstef Exp $
+
+  16 May 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/glut-3.7.1-fix-GLU-linking.patch, +metadata.xml, glut-3.7.1.ebuild:
+  --as-needed-patch thanks to TGL <degrenier@easyconnect.fr> in bug 131837,
+  add metadata, games herd
 
   14 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
   files/digest-glut-3.7-r2, files/digest-glut-3.7.1, Manifest:
