@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1085bff5500d0cbe226e22809bc717a2 ChangeLog 1540
+MD5 907e1692f03437ac65642dd50b6cb692 ChangeLog 1625
 MD5 3fc90565f6ced9b61d6d7d843ce2099c files/digest-xearth-1.1 62
 MD5 6b2f8ecd3ad0e55432fa394deb816e86 metadata.xml 174
-MD5 2d5b4424cdebda0d1d800be4cef6bbbe xearth-1.1.ebuild 987
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEIwr6ViELBEf1JB0RAgA5AJ9CQt/sEGHYYBwnsQAduI6pBU5iUwCfcAop
-5JVwxf4/iHAV1mNgnHJ1058=
-=uaAq
------END PGP SIGNATURE-----
+MD5 bb88e7ad3d737de2e6cb36e9052a7bd9 xearth-1.1.ebuild 986
