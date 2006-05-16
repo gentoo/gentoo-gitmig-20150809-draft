@@ -1,4 +1,14 @@
-MD5 e269935cf3307f883c3462ab42f8d8c3 nictools-20030719.ebuild 1960
-MD5 b9afcb7a5eaa634e6311ec00d6c9d996 ChangeLog 865
-MD5 e25e70948beb656da0b6fa0b48124f16 metadata.xml 227
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d9f20e9f9a6eee6d609560d6d77075fe ChangeLog 967
 MD5 6e0941cbc700e8778d79aac72edcefc1 files/digest-nictools-20030719 156
+MD5 e25e70948beb656da0b6fa0b48124f16 metadata.xml 227
+MD5 7ad5717c51211f497dcf69b3c8844371 nictools-20030719.ebuild 1965
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEamUnK3VlI3Kj19sRAm4VAKCTHbDVuAZ13qy5FoZiYvzbIzgphACggVqQ
+jNW9DcYK9ompU0ZT5yh8Fjg=
+=WjeQ
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nictools/nictools-20030719.ebuild,v 1.8 2004/07/15 02:01:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nictools/nictools-20030719.ebuild,v 1.9 2006/05/16 23:49:41 merlin Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tbz2
 		 mirror://gentoo/${P}-gcc33-multilinestring.patch"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="static"
 DEPEND=""
 
