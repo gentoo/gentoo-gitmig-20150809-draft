@@ -1,0 +1,10 @@
+--- /home/wwwchrisde/svn/amarok/src/collectiondb.h      (revision 541334)
++++ /home/wwwchrisde/svn/amarok/src/collectiondb.h      (revision 541335)
+@@ -107,6 +107,7 @@
+         enum DbConnectionType { sqlite = 0, mysql = 1, postgresql = 2 };
+ 
+         DbConnection();
++        virtual ~DbConnection() {}
+ 
+         virtual QStringList query( const QString& /* statement */ ) = 0;
+         virtual int insert( const QString& /* statement */, const QString& /* table */ ) = 0;
