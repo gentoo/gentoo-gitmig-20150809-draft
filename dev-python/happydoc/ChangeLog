@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/happydoc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.19 2006/05/16 15:39:51 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.20 2006/05/16 17:19:38 marienz Exp $
+
+*happydoc-2.1-r1 (16 May 2006)
+
+  16 May 2006; Marien Zwart <marienz@gentoo.org> +happydoc-2.1-r1.ebuild:
+  Revision bump with no ebuild changes because I forgot to bump it 4 months
+  ago when adding a python 2.4 patch.
 
   16 May 2006; Marien Zwart <marienz@gentoo.org> -happydoc-2.0.1.ebuild:
   Remove old ebuild that fails with python 2.4 and up.
