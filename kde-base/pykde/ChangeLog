@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/pykde
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.3 2006/01/22 22:53:10 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.4 2006/05/16 20:29:30 caleb Exp $
+
+  16 May 2006; Caleb Tennis <caleb@gentoo.org> pykde-3.5.0.ebuild:
+  add the -i options from bug #132950
 
 *pykde-3.5.1 (23 Jan 2006)
 

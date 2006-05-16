@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/pykde-3.5.0.ebuild,v 1.4 2006/03/22 20:15:47 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/pykde-3.5.0.ebuild,v 1.5 2006/05/16 20:29:30 caleb Exp $
 
 KMNAME=kdebindings
 KMMODULE=python
@@ -39,7 +39,7 @@ src_compile() {
 
 	use debug && myconf="${myconf} -u"
 
-	python configure.py ${myconf} || die "configure failed"
+	python -i configure.py ${myconf} || die "configure failed"
 	emake || die
 }
 
