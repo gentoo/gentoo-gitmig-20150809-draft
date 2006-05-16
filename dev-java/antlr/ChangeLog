@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.38 2006/05/15 12:55:51 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.39 2006/05/16 19:56:19 corsair Exp $
+
+  16 May 2006; Markus Rothe <corsair@gentoo.org> antlr-2.7.5-r2.ebuild:
+  Stable on ppc64; bug #133320
 
   15 May 2006; Petteri Räty <betelgeuse@gentoo.org> antlr-2.7.5-r2.ebuild:
   antlr now inherits java-utils so the error message when a jre is set as the
