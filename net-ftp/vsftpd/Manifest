@@ -1,4 +1,4 @@
-MD5 33b085d46a2e90319e4cf04b3ff6c7c2 ChangeLog 10262
+MD5 c9c7a7bd47ee66d54fb813363aeb207f ChangeLog 10369
 MD5 c3af0a9f9ed1ea8eb162da439b88bf78 files/digest-vsftpd-2.0.3-r1 64
 MD5 c3af0a9f9ed1ea8eb162da439b88bf78 files/digest-vsftpd-2.0.3-r2 64
 MD5 74f9cfe6a45389167b2aeb6b2496a30d files/digest-vsftpd-2.0.4 238
@@ -14,5 +14,5 @@ MD5 8578d5c3f50e7b090ba023dfa626ec89 files/vsftpd.xinetd 432
 MD5 0451b23327c004752edf415e25931d07 metadata.xml 344
 MD5 dc7c446f859492b83b73eb59ee07e560 vsftpd-2.0.3-r1.ebuild 2032
 MD5 5a4c26e8f75ee0f92d48815bb9fb14e4 vsftpd-2.0.3-r2.ebuild 2409
-MD5 22fd613bdf4b0dabd9ea39440ca6aa0a vsftpd-2.0.4-r1.ebuild 2865
+MD5 6c29cfea232d595a98bc26911baef055 vsftpd-2.0.4-r1.ebuild 2866
 MD5 ee0270e6094ec9f071f47cba896a119c vsftpd-2.0.4.ebuild 2556
