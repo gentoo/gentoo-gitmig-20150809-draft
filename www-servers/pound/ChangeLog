@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/pound
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.13 2006/04/01 18:52:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.14 2006/05/16 11:15:28 bangert Exp $
+
+*pound-2.0.5 (16 May 2006)
+
+  16 May 2006; Thilo Bangert <bangert@gentoo.org> +files/pound-2.cfg,
+  metadata.xml, +pound-2.0.5.ebuild:
+  assumed maintainership - added <longdescription>
+  added working configuration for 2.0.x - bumped to 2.0.5
 
   01 Apr 2006; <nixnut@gentoo.org> pound-2.0.3.ebuild:
   Stable on ppc. Bug #118541
