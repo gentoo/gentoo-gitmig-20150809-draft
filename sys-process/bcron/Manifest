@@ -1,0 +1,5 @@
+MD5 98ed73c0a85e5f9b4a9a48dedf250e9b ChangeLog 433
+MD5 b4a12da3c3d86a462a66a4e3d992f67a bcron-0.09.ebuild 2927
+MD5 4ae86a6eba29a7683dcf394be59fbb6c files/crontab 602
+MD5 c92c78bb1efe9d25069124534dbe3f27 files/digest-bcron-0.09 61
+MD5 80f1a0cf0303d7d9b847c8d14a88fc3b metadata.xml 654

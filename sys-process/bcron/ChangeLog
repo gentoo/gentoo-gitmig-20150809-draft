@@ -1,0 +1,11 @@
+# ChangeLog for sys-process/bcron
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.1 2006/05/16 12:06:30 bangert Exp $
+
+*bcron-0.09 (16 May 2006)
+
+  16 May 2006; Thilo Bangert <bangert@gentoo.org> +files/crontab,
+  +metadata.xml, +bcron-0.09.ebuild:
+  initial import. This is bcron, a new cron system designed with secure
+  operations in mind.
+
