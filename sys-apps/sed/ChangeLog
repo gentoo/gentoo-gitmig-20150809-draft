@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sed
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.69 2006/03/30 14:15:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.70 2006/05/16 05:39:22 vapier Exp $
+
+*sed-4.1.5 (16 May 2006)
+
+  16 May 2006; Mike Frysinger <vapier@gentoo.org> +sed-4.1.5.ebuild:
+  Version bump.
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> sed-4.1.4-r1.ebuild:
   Add ~x86-fbsd keyword.
