@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/twisted.eclass,v 1.4 2006/04/09 23:18:36 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/twisted.eclass,v 1.5 2006/05/16 16:52:49 marienz Exp $
 #
 # Author: Marien Zwart <marienz@gentoo.org>
 #
@@ -9,7 +9,7 @@
 # you should set MY_PACKAGE to something like 'Names' before inheriting.
 # you may set MY_PV to the right version (defaults to PV).
 
-inherit distutils versionator
+inherit distutils versionator eutils
 
 MY_PV=${MY_PV:-${PV}}
 MY_VERSION=$(get_version_component_range 1-2 ${MY_PV})
@@ -30,13 +30,15 @@ twisted_src_test() {
 	# This is a hack to make tests work without installing to the live
 	# filesystem. We copy the twisted site-packages to a temporary
 	# dir, install there, and run from there.
-	local spath="usr/lib/python${PYVER}/site-packages/"
+	local spath="usr/$(get_libdir)/python${PYVER}/site-packages/"
 	mkdir -p "${T}/${spath}"
 	cp -R "${ROOT}${spath}/twisted" "${T}/${spath}" || die
 	if has_version ">=dev-lang/python-2.3"; then
-		${python} setup.py install --root="${T}" --no-compile --force || die
+		"${python}" setup.py install --root="${T}" --no-compile --force \
+			--install-lib="${spath}" || die
 	else
-		${python} setup.py install --root="${T}" --force || die
+		"${python}" setup.py install --root="${T}" --force \
+			--install-lib="${spath}" || die
 	fi
 	cd "${T}/${spath}" || die
 	local trialopts
@@ -50,7 +52,13 @@ twisted_src_test() {
 }
 
 twisted_src_install() {
-	distutils_src_install
+	python_version
+	# The explicit --install-lib here and in src_test is needed to
+	# make everything (core and all subpackages) go into lib64 on
+	# amd64. Without it pure python subpackages install into lib while
+	# stuff with c extensions goes into lib64.
+	distutils_src_install \
+		--install-lib="usr/$(get_libdir)/python${PYVER}/site-packages/"
 
 	if [[ -d doc/man ]]; then
 		doman doc/man/*
