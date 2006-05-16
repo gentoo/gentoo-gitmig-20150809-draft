@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-via
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/ChangeLog,v 1.19 2006/04/16 14:30:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/ChangeLog,v 1.20 2006/05/16 02:42:15 joshuabaergen Exp $
+
+*xf86-video-via-0.2.1-r1 (16 May 2006)
+
+  16 May 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/missing-assert.patch, -xf86-video-via-0.2.1.ebuild,
+  +xf86-video-via-0.2.1-r1.ebuild:
+  Fix issues with dri and missing assert.h.  (Bug #130320, Bill Krueger)
 
   16 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   xf86-video-via-0.1.33.2.ebuild:
