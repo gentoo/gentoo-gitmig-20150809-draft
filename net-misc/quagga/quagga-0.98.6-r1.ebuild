@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r1.ebuild,v 1.5 2006/05/14 16:54:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r1.ebuild,v 1.6 2006/05/17 08:09:53 mrness Exp $
 
 inherit eutils multilib
 
@@ -13,6 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ~amd64 ~arm hppa ppc ~s390 ~sparc x86"
 IUSE="ipv6 snmp pam tcpmd5 bgpclassless ospfapi realms fix-connected-rt multipath tcp-zebra"
+RESTRICT="userpriv"
 
 RDEPEND="sys-apps/iproute2
 	>=sys-libs/libcap-1.10-r5
