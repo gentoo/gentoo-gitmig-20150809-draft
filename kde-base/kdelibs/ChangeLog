@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.323 2006/05/12 12:07:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.324 2006/05/17 00:21:17 psi29a Exp $
+
+  14 May 2006; <psi29a@gentoo.org> kdelibs-3.5.2-r5.ebuild:
+  added to ~mips for testing
 
 *kdelibs-3.5.2-r5 (12 May 2006)
 
