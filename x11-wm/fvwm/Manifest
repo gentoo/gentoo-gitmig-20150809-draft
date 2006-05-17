@@ -1,57 +1,29 @@
-MD5 330701d209dba032e4139847eb50e501 ChangeLog 18360
-RMD160 d5bc7a4da001c776dc501e0f492e5edf0cce5cf9 ChangeLog 18360
-SHA256 e6f101c8f97846973d7c888e83f59c1235d399fd51435c7955bacdbf4b4dbab1 ChangeLog 18360
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 be2e976bbc80896546d4f6aafbebd741 ChangeLog 18468
 MD5 9e8e5c601353e0933820fc4f2f543c13 files/README.transluceny 8910
-RMD160 417b3416aef5ddd4b13672a2760d3736cac6f900 files/README.transluceny 8910
-SHA256 0a4b3f143ee0b6fc32098cbd556b25fdc695a980bc8b4cf032b1dad4a4952ddb files/README.transluceny 8910
 MD5 a580b9f394262307f85eae492bbd68d9 files/centerplacement-2.5.10.diff 2431
-RMD160 51d22a3adbdf459b79375e23f71816cfb4b34d47 files/centerplacement-2.5.10.diff 2431
-SHA256 a53708857b330af65fb5a156a3792965ad3de080617929cceab74ef2bfc4bf83 files/centerplacement-2.5.10.diff 2431
 MD5 7d84c8175928d331e6d7b253679f5654 files/digest-fvwm-2.4.18 65
-RMD160 832e904cb30c7e438a657d1b7ea4ee754d8da5bf files/digest-fvwm-2.4.18 65
-SHA256 6f4617d4607186cee8d70ed1cfae30fc08a5df9b5f32351923d4135e2a390db3 files/digest-fvwm-2.4.18 65
 MD5 0090b1c9472d861c52746837b7e7a650 files/digest-fvwm-2.5.12 209
-RMD160 dffbe063a3b7706b87b4950b2f18a578ff91897b files/digest-fvwm-2.5.12 209
-SHA256 2ed11aaf2b3cb3f3a926773be46dfa5b0c99742799017ab2bd6ec18b4fd7e968 files/digest-fvwm-2.5.12 209
 MD5 af662d2e5316b529f16327e900cd9250 files/digest-fvwm-2.5.13-r1 459
-RMD160 32fd0c0052b3d9e6cd86c9f8a60f3e28d372878e files/digest-fvwm-2.5.13-r1 459
-SHA256 ad8631ed12b03c960ef73d512f569b0e0f515ce399c0b1532018066a7d39286e files/digest-fvwm-2.5.13-r1 459
 MD5 529811ccdd99b9143deeaaf64cfb692d files/digest-fvwm-2.5.14-r1 209
-RMD160 5064589e472b32833e1e178af4b1fde3c15e7e43 files/digest-fvwm-2.5.14-r1 209
-SHA256 57196f4381202c1c9245e495fc2cda128f0913f9a47aca22a4a2a0fd6402420a files/digest-fvwm-2.5.14-r1 209
 MD5 63b955ad6638cd02f56406a2e019699b files/digest-fvwm-2.5.16 145
-RMD160 e3fb04d0f21a96cb56dd1f17ce66289c25ffa408 files/digest-fvwm-2.5.16 145
-SHA256 61c82dc0bb09f0cda81550fd78e1572f6cc8def651cfc0484453e2168ed24f98 files/digest-fvwm-2.5.16 145
 MD5 df03a10a40a620ce8f1fab75f9758884 files/disable-debug-statements.diff 419
-RMD160 4a66f7eed0c64580ef58b7ef624857c00686575c files/disable-debug-statements.diff 419
-SHA256 aa7e44928b2b14a5402d12129a28452eadbf5e3c8986ba5d61398991fd2ccede files/disable-debug-statements.diff 419
 MD5 d91fb7d2af57653fc93a70e6e1c0a0ea files/fvwm-menu-xlock-xlockmore-compat.diff 550
-RMD160 72af6f306e5869581fcd48c84edfe00adea4a5b9 files/fvwm-menu-xlock-xlockmore-compat.diff 550
-SHA256 5db8bc279f618096b23fed04b70b626c6ff50c104283d5ece505200db1e5a8af files/fvwm-menu-xlock-xlockmore-compat.diff 550
 MD5 0dc5ddac8cf6767f4a753feef77e6c65 files/fvwm-noxbell-grab-fail.diff 360
-RMD160 f80b61033650a1145581e980e5ddb4efa498b78b files/fvwm-noxbell-grab-fail.diff 360
-SHA256 caa52d417736812829ed204522673e1bda42debeb92bca04ca118f358b9d9b07 files/fvwm-noxbell-grab-fail.diff 360
 MD5 086986f68eeafe8c662ced762dc17fe9 files/fvwm-translucent-menus.diff 12238
-RMD160 363a20b92d8136c898ba577de2445b031ee0f814 files/fvwm-translucent-menus.diff 12238
-SHA256 a5b869fd078783c1c4d6ea0da033731bfd029b929b0973c6f7ddf583323fd64c files/fvwm-translucent-menus.diff 12238
 MD5 e9263b93f666293d0a1220ea3457efcd files/mini.happy.xpm 425
-RMD160 bd6cacbb7838fece51b155b2fd8143c216d27dbd files/mini.happy.xpm 425
-SHA256 aa53d4a7575e40ee7122b62587a880ef9541f9a4c572f7775fbeef34d3d4166e files/mini.happy.xpm 425
 MD5 c5f06c61fd43ad06f06740d17ca863f2 fvwm-2.4.18.ebuild 2955
-RMD160 f8d36c9e5ab2fcb487c42181c39ff953fdfd3318 fvwm-2.4.18.ebuild 2955
-SHA256 a8ccdf6a02664724469940794d502c461eafe55508386767d070c571e25c95d1 fvwm-2.4.18.ebuild 2955
 MD5 3655db145d88f4502e26740a0e45495f fvwm-2.5.12.ebuild 8955
-RMD160 8cff76a33dc59e04d90d3dc6000bf204651d1375 fvwm-2.5.12.ebuild 8955
-SHA256 17ec7cf46a5e62caad0ff60db93984b4cf4cc80a3d930d0c2c2c045e7f5a9b1e fvwm-2.5.12.ebuild 8955
 MD5 69d332efd2d80e81ee06252067e49916 fvwm-2.5.13-r1.ebuild 7898
-RMD160 5146795db129b383f96fdbe8395f40925948b0fa fvwm-2.5.13-r1.ebuild 7898
-SHA256 41f26b5533e45a7a22d26a623b8c2ab4516eccae411fb5b633a9254847e59328 fvwm-2.5.13-r1.ebuild 7898
 MD5 a36e0c575c00ff15de3a9d3f53da9514 fvwm-2.5.14-r1.ebuild 7777
-RMD160 f05845ab70205700d0ce6a8221ef495648c1950a fvwm-2.5.14-r1.ebuild 7777
-SHA256 cc7639d59a6b681d369cfd9c74f8b407c18b046107bbe363bf207594a38ac261 fvwm-2.5.14-r1.ebuild 7777
-MD5 84eb627415c5a0bbe1b597859929079a fvwm-2.5.16.ebuild 6173
-RMD160 fc1f09ed68b4e680399c30f0ca9d004c5e3887cd fvwm-2.5.16.ebuild 6173
-SHA256 2e5421042aeaa3d2801aaf0ad0c85c1ad192b2e13210c08d40d914d9dd3f6e34 fvwm-2.5.16.ebuild 6173
+MD5 9c55539d32dfec5e48908bb9f945ff74 fvwm-2.5.16.ebuild 6175
 MD5 4833e4d0685ef48988c0c5c4f9c6b377 metadata.xml 527
-RMD160 e50357d85b1410cf8a00f1afad349ed77b986fd7 metadata.xml 527
-SHA256 e22df6337e402284589214f91894a06fd29786e4412ffd70845fe1cf86bb1375 metadata.xml 527
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEaymgKRy60XGEcJIRAtrWAJ4v0LuqYcVzBeI25eJqdlStsPxkVwCgjxzZ
+ZYVMsiMaFBAvMIqdEN/teQ0=
+=UK5G
+-----END PGP SIGNATURE-----
