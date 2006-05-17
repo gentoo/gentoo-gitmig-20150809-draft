@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.157 2006/03/30 18:58:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.158 2006/05/17 23:50:12 leonardop Exp $
+
+*libxml2-2.6.24 (17 May 2006)
+
+  17 May 2006; Leonardo Boshell <leonardop@gentoo.org>
+  +files/libxml2-2.6.24-pythondir_fix.patch, +libxml2-2.6.24.ebuild:
+  New release.
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   libxml2-2.6.23-r1.ebuild:

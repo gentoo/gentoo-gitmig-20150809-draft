@@ -1,0 +1,12 @@
+diff -NurdB libxml2-2.6.24/configure libxml2-2.6.24-patched/configure
+--- libxml2-2.6.24/configure	2006-04-28 11:32:55.000000000 -0500
++++ libxml2-2.6.24-patched/configure	2006-05-17 18:26:33.000000000 -0500
+@@ -26958,7 +26958,7 @@
+     fi
+     if test "$with_python" != ""
+     then
+-        pythondir=$(PYTHON_SITE_PACKAGES)
++        pythondir='$(PYTHON_SITE_PACKAGES)'
+     else
+         pythondir='$(libdir)/python$(PYTHON_VERSION)/site-packages'
+     fi
