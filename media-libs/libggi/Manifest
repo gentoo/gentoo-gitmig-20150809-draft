@@ -1,46 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX libggi-2.0.1-ppc.patch 291 RMD160 4c5e0a0e279ad93ebe75a849a5f0f02a920c935b SHA1 5c8aef378f8f0a3e5652217a4ad1ff21f4241500 SHA256 5a6d3963deaaaf604621ef5bf4ea119d70372e6d58b13b0c3e8582d6402befe6 size 291
-MD5 ba5500ab4d04f2478eff5056de19fd4e files/libggi-2.0.1-ppc.patch 291
-RMD160 4c5e0a0e279ad93ebe75a849a5f0f02a920c935b files/libggi-2.0.1-ppc.patch 291
-SHA256 5a6d3963deaaaf604621ef5bf4ea119d70372e6d58b13b0c3e8582d6402befe6 files/libggi-2.0.1-ppc.patch 291
-AUX libggi-2.1.1-gcc4.patch 1944 RMD160 5e7c6d284d980fcb99d2bc0f75af89826b2dc93e SHA1 78b59947838eaefb0eaebdebbd65a67ee15aa6c5 SHA256 8e2b91298753fbe6eaeecacde6f76f46e775f4209c1fce80a11b4eea7e758fbc size 1944
-MD5 63c83abc1ab956c65af57fb546f4d4eb files/libggi-2.1.1-gcc4.patch 1944
-RMD160 5e7c6d284d980fcb99d2bc0f75af89826b2dc93e files/libggi-2.1.1-gcc4.patch 1944
-SHA256 8e2b91298753fbe6eaeecacde6f76f46e775f4209c1fce80a11b4eea7e758fbc files/libggi-2.1.1-gcc4.patch 1944
-AUX libggi-2.1.1-glibc24.patch 394 RMD160 bf303d5e87009e4a969924ebc223abb36e442810 SHA1 622da899b6ffd43dad12bbfd20f07011b2f03c3a SHA256 9b14cb5ebdf9f8c295831f85929bb37fa3b74377d86caacf160f782567f202e3 size 394
-MD5 cb61bdaa9339ebec4139627f4feacb94 files/libggi-2.1.1-glibc24.patch 394
-RMD160 bf303d5e87009e4a969924ebc223abb36e442810 files/libggi-2.1.1-glibc24.patch 394
-SHA256 9b14cb5ebdf9f8c295831f85929bb37fa3b74377d86caacf160f782567f202e3 files/libggi-2.1.1-glibc24.patch 394
-DIST libggi-2.0.1.tar.bz2 572120 size 572120
-DIST libggi-2.1.1.src.tar.bz2 927060 size 927060
-EBUILD libggi-2.0.1-r1.ebuild 1870 RMD160 71f2f8336b27de2f72af7c15e80dad32d0669a95 SHA1 f08ff487ddd90511590352629ef6e054508bea9e SHA256 57b59821b8feee3d786215976292c884b2b3605a915474bf4823573e82c33a97 size 1870
-MD5 f98e7884fa7974308e3cef15be212e8b libggi-2.0.1-r1.ebuild 1870
-RMD160 71f2f8336b27de2f72af7c15e80dad32d0669a95 libggi-2.0.1-r1.ebuild 1870
-SHA256 57b59821b8feee3d786215976292c884b2b3605a915474bf4823573e82c33a97 libggi-2.0.1-r1.ebuild 1870
-EBUILD libggi-2.1.1.ebuild 1972 RMD160 5ca6fd1cef90de6523b7d9bbdc9f8cd383dba75b SHA1 48d0e3452bae0c388ea2bca8443d06386c993936 SHA256 4800dc7b559d3afcba5d1734ccafdb2d819b402fda961136e3b8c14fe3c9fa74 size 1972
-MD5 27df1112b76866be149c0e05f28ab0bc libggi-2.1.1.ebuild 1972
-RMD160 5ca6fd1cef90de6523b7d9bbdc9f8cd383dba75b libggi-2.1.1.ebuild 1972
-SHA256 4800dc7b559d3afcba5d1734ccafdb2d819b402fda961136e3b8c14fe3c9fa74 libggi-2.1.1.ebuild 1972
-MISC ChangeLog 5123 RMD160 c9b6b3483257c656d51ccbceb73b76abfab9485b SHA1 0d0479d73a58f4245bb37cf0f7ca340fcef71d8b SHA256 e19987d00ef728eaa344f5534a034ddcb0eb8edee8903c4f688c817b49aaa3f2 size 5123
-MD5 6649a72c20004734d8fe1c022c76b6de ChangeLog 5123
-RMD160 c9b6b3483257c656d51ccbceb73b76abfab9485b ChangeLog 5123
-SHA256 e19987d00ef728eaa344f5534a034ddcb0eb8edee8903c4f688c817b49aaa3f2 ChangeLog 5123
-MISC metadata.xml 223 RMD160 86b42c49b694db39ddb3fdc60b98a3ad1a0c3392 SHA1 ea8c387229caaf4b0d3c9fbef9143b70dcae0b0d SHA256 dd48e823ec9a151bc3611121402ed26ee24eb3304aa62870b1e875a8fa0ac812 size 223
-MD5 0338bfb24d7bfb6450aac4dd025c0096 metadata.xml 223
-RMD160 86b42c49b694db39ddb3fdc60b98a3ad1a0c3392 metadata.xml 223
-SHA256 dd48e823ec9a151bc3611121402ed26ee24eb3304aa62870b1e875a8fa0ac812 metadata.xml 223
+MD5 5004e3111a96f720fcabab3d0ddfac10 ChangeLog 5216
 MD5 dccabae951c60ae1cffb9318b96e5e8b files/digest-libggi-2.0.1-r1 65
-RMD160 37481c655ece291730d490cac95cdf477e28016a files/digest-libggi-2.0.1-r1 65
-SHA256 ab0f53f2c90fcd7fb43a6e0f1b7886288d29049c98257871bbc34ae55739b4d1 files/digest-libggi-2.0.1-r1 65
 MD5 026e0928dbe84dcf3e6921767870df9c files/digest-libggi-2.1.1 69
-RMD160 85d8130b0a645b5b6a4957a15718b5da3893d69f files/digest-libggi-2.1.1 69
-SHA256 bc61770105797bf65ccbc6b50776f0f3cbdfc23a6035d9e8b463d24ff116c915 files/digest-libggi-2.1.1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEZ62/5mJXAu5GbtIRAtXWAJ9iI2jlFlSGtqT8orQttLGueqfGUQCfUAGA
-wAOAR3Qbx3QbkXHS+huhUCs=
-=Eo9C
------END PGP SIGNATURE-----
+MD5 ba5500ab4d04f2478eff5056de19fd4e files/libggi-2.0.1-ppc.patch 291
+MD5 63c83abc1ab956c65af57fb546f4d4eb files/libggi-2.1.1-gcc4.patch 1944
+MD5 cb61bdaa9339ebec4139627f4feacb94 files/libggi-2.1.1-glibc24.patch 394
+MD5 f98e7884fa7974308e3cef15be212e8b libggi-2.0.1-r1.ebuild 1870
+MD5 80769c4fdd27d2cc21ab6561ad863b91 libggi-2.1.1.ebuild 1970
+MD5 0338bfb24d7bfb6450aac4dd025c0096 metadata.xml 223
