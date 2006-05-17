@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.7 2006/05/17 06:20:53 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.8 2006/05/17 06:58:27 nerdboy Exp $
+
+  17 May 2006; Steve Arnold <nerdboy@gentoo.org> cfitsio-2.510-r1.ebuild,
+  cfitsio-3.006.ebuild:
+  fixed minor issue with lib installation; added symlink
 
 *cfitsio-3.006 (17 May 2006)
 

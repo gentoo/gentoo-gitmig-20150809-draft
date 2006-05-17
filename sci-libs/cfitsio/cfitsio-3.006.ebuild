@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.006.ebuild,v 1.2 2006/05/17 06:23:49 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.006.ebuild,v 1.3 2006/05/17 06:58:27 nerdboy Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -31,7 +31,7 @@ src_compile() {
 }
 
 src_install () {
-	dodir /usr/bin /usr/include /usr/$(get_libdir)
+	dodir /usr/include
 	dolib.so libcfitsio.so.*
 	dobin fitscopy imcopy listhead
 	dodoc changes.txt README
@@ -42,4 +42,6 @@ src_install () {
 
 	insinto /usr/include
 	doins fitsio.h fitsio2.h longnam.h drvrsmem.h
+	cd ${D}/usr/$(get_libdir)
+	    dosym libcfitsio.so.0.0 /usr/$(get_libdir)/libcfitsio.so
 }
