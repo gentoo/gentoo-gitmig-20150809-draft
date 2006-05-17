@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.4.16.ebuild,v 1.1 2006/05/14 18:48:15 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.4.16.ebuild,v 1.2 2006/05/17 09:07:32 calchan Exp $
 
 DESCRIPTION="The VLSI design CAD tool."
 HOMEPAGE="http://www.opencircuitdesign.com/magic/index.html"
@@ -42,6 +42,9 @@ src_install() {
 	keepdir /var/lock/magic
 	chmod +t ${D}/var/lock/magic
 	chmod ugo+rwx ${D}/var/lock/magic
+
+	# Fix bug #133444
+	rm -rf ${D}/var/tmp
 }
 
 pkg_postinst() {
