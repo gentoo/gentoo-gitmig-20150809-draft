@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.0.5.ebuild,v 1.2 2006/05/16 11:32:59 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.0.5.ebuild,v 1.3 2006/05/17 05:56:18 tcort Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.apsis.ch/pound/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE="ssl msdav unsafe static"
 
 DEPEND="virtual/libc
