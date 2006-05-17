@@ -1,36 +1,22 @@
-MD5 70f0be53fe75a77899decabd4d424d92 ChangeLog 12974
-RMD160 2a36b3c304b316bd00e68b2d25a671f9d1ef6d0f ChangeLog 12974
-SHA256 fc21b696b4ec4b8e57c0a5413f9c1f1a61d143b828fd5e2a3c33dbc4181e7b75 ChangeLog 12974
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7cdf16a62ab3facaf4cfdf15729b6829 ChangeLog 13076
 MD5 5eb8b5fa92f61ec775be70c761ea24ae files/digest-uw-imap-2004g-r1 62
-RMD160 18a978a54ad3fd62f4242886532e731971f647d1 files/digest-uw-imap-2004g-r1 62
-SHA256 525261467e7fe540dc1059780a3511f753b89ceeb833304c03fbd2585832f93a files/digest-uw-imap-2004g-r1 62
 MD5 5eb8b5fa92f61ec775be70c761ea24ae files/digest-uw-imap-2004g-r2 62
-RMD160 18a978a54ad3fd62f4242886532e731971f647d1 files/digest-uw-imap-2004g-r2 62
-SHA256 525261467e7fe540dc1059780a3511f753b89ceeb833304c03fbd2585832f93a files/digest-uw-imap-2004g-r2 62
 MD5 cde23dc2375a8c33998202c8f0c9ae0e files/uw-imap-2004c-amd64-so-fix.patch 675
-RMD160 f13adf21e7043175d2b2dd356b2ba48554e9e99f files/uw-imap-2004c-amd64-so-fix.patch 675
-SHA256 8f80dff390a5d87afd71ab07bbff0eed00acb14b3bfa2355f33ba22e833af202 files/uw-imap-2004c-amd64-so-fix.patch 675
 MD5 a0d3f290ad8a98968896a5315628d473 files/uw-imap.xinetd 491
-RMD160 31830c6e2dad66a1436060d0a66c44bfb4082ae3 files/uw-imap.xinetd 491
-SHA256 d3c39241c283df0cd3e10a7bd06c6fb84243199399d355bd22d098418e3ff5fe files/uw-imap.xinetd 491
 MD5 f93adbc027c40ed405bbde4bb1330f2d files/uw-imaps.xinetd 486
-RMD160 4374eab026aa9a02e82561d0ec153025aaf20868 files/uw-imaps.xinetd 486
-SHA256 c17f14aa5f356becb4ba309b68935fefdb08e664ae8e4a69ebc11e388ac5cfd0 files/uw-imaps.xinetd 486
 MD5 506e7347cac698714cf5cd60eca761ba files/uw-ipop2.xinetd 563
-RMD160 bc9ff033aa6f4166d75b38691a9b32203353b4ab files/uw-ipop2.xinetd 563
-SHA256 c84a41db19eb8f903f9a1ff3088e1ae193d16f217a96f8bf402f95d8bc47bc8f files/uw-ipop2.xinetd 563
 MD5 dfcbb9b410d2d513c15520e713043769 files/uw-ipop3.xinetd 472
-RMD160 e4ad32c91284ffca80876e48d7d2fa649e4ae6f8 files/uw-ipop3.xinetd 472
-SHA256 ddcfa0d79ea53edc4905a2eb10fb04bb23951bf02fd4c5cefa03e6303d5a1512 files/uw-ipop3.xinetd 472
 MD5 7fe0f2231e5e0d8b491a8c9780048ac3 files/uw-ipop3s.xinetd 469
-RMD160 28b09d47e577643c08f959ed09b7b63371c4e029 files/uw-ipop3s.xinetd 469
-SHA256 fa2c408770b27f29ea25297540f2bc0789f2e5bd98f72f48a9f1659df3d39264 files/uw-ipop3s.xinetd 469
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
-SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
 MD5 4fa46af9a321af2aa5c5c1f0e305aceb uw-imap-2004g-r1.ebuild 5211
-RMD160 274c22fae3896e1225c5864376ea10690351dd6d uw-imap-2004g-r1.ebuild 5211
-SHA256 a9c962efb28d3025ab4290e8bdb1f31feb97ab59756674c67222585dbd9a597f uw-imap-2004g-r1.ebuild 5211
-MD5 cb024858618a8a9c1c7b26d0d4864b8b uw-imap-2004g-r2.ebuild 5155
-RMD160 588d06bee1e1d2ce4da09410052092e76360222b uw-imap-2004g-r2.ebuild 5155
-SHA256 ee578509a8d65dac77c88b1425e639d43442288dd8583db1716d813625f0a951 uw-imap-2004g-r2.ebuild 5155
+MD5 84b90d5a183029475e9a0bfde0ae20b8 uw-imap-2004g-r2.ebuild 5156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEauLoViELBEf1JB0RAp+MAJ9Z6l/4Ow/5EcOhCsdH25XFTyYqnwCfZx64
+CS3sUGkRSN2mAbnDyczcNAM=
+=Gztq
+-----END PGP SIGNATURE-----
