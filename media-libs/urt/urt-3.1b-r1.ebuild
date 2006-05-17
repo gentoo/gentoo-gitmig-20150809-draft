@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b-r1.ebuild,v 1.24 2006/04/12 14:34:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b-r1.ebuild,v 1.25 2006/05/17 12:42:01 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -38,6 +38,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-compile-updates.patch
 	epatch "${FILESDIR}"/${P}-tempfile.patch
 	epatch "${FILESDIR}"/${P}-build-fixes.patch
+	epatch "${FILESDIR}/${P}-make.patch"
 
 	# punt bogus manpage #109511
 	rm -f man/man1/template.1
