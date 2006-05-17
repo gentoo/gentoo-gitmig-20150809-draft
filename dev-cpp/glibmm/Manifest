@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0d67bfb9bcf515da2e554ef00d4fbde2 ChangeLog 6894
+MD5 41a6640f11d0a6d5ec2946a9e46448a5 ChangeLog 6994
 MD5 6228c75d9e841f3fc6883a344a98e7c3 files/digest-glibmm-2.4.4 65
 MD5 d645a289371e18df9c33719baa37d25d files/digest-glibmm-2.4.7-r1 65
 MD5 df31c402a8203f95b628cad41a9bafa0 files/digest-glibmm-2.6.1 66
@@ -13,12 +10,5 @@ MD5 8ce03c33ee4c7715e5f4be86dbe27553 glibmm-2.4.7-r1.ebuild 1054
 MD5 fecf343fd045f83562986d9c6d29e0c9 glibmm-2.6.1.ebuild 1168
 MD5 2ab74c7a7ad815cd82b32bf8cbbac5c5 glibmm-2.8.0.ebuild 1194
 MD5 2be4fcdf854369deafd69c0ee150b5f0 glibmm-2.8.1.ebuild 1187
-MD5 a553f84b62506ee1e32ad2b1533191c0 glibmm-2.8.4.ebuild 1194
+MD5 463a8b6a46b67aff67597fc8901feef3 glibmm-2.8.4.ebuild 1190
 MD5 57fc113c79155fc9e1e055642befa01e metadata.xml 255
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEazqlKRy60XGEcJIRAjCfAKCBXaaOv58MMErmBHR4Z0iiTHW7LACZAfvX
-GnNeyLtgbkZjH1k0FVWYGfY=
-=VReR
------END PGP SIGNATURE-----

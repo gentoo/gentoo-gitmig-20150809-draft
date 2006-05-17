@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.61 2006/05/17 15:00:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.62 2006/05/17 15:41:55 tcort Exp $
+
+  17 May 2006; Thomas Cort <tcort@gentoo.org> glibmm-2.8.4.ebuild:
+  Stable on alpha wrt Bug #133593.
 
   17 May 2006; Gustavo Zacarias <gustavoz@gentoo.org> glibmm-2.8.4.ebuild:
   Stable on sparc wrt #133593
