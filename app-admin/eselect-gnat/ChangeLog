@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-gnat
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.7 2006/05/12 15:11:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.8 2006/05/17 21:28:24 george Exp $
+
+*eselect-gnat-0.8-r1 (17 May 2006)
+
+  17 May 2006; George Shapovalov <george@gentoo.org>
+  +files/gnat.eselect-0.8-r1, +eselect-gnat-0.8-r1.ebuild:
+  a fix to process all the installed libs, not just the 1st one.. (revbump, so
+  that everybody picks up the right code)
 
   12 May 2006; Joseph Jezak <josejx@gentoo.org> eselect-gnat-0.8.ebuild:
   Marked ~ppc for bug #133119.
