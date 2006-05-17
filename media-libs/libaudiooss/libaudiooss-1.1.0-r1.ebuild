@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaudiooss/libaudiooss-1.1.0-r1.ebuild,v 1.7 2006/03/19 22:53:36 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaudiooss/libaudiooss-1.1.0-r1.ebuild,v 1.8 2006/05/17 09:20:03 pclouds Exp $
 
 HOMEPAGE="http://romeo.skybert.no/~erik/linux.html"
 DESCRIPTION="Transparent OSS emulation on top of the Network Audio System"
@@ -30,4 +30,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR=${D} install || die
+	dodoc README FAQ ChangeLog
 }
