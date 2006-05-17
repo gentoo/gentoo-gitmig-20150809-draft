@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/clvm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.10 2006/04/30 13:32:53 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.11 2006/05/17 18:19:05 xmerlin Exp $
+
+  17 May 2006; Christian Zoffoli <xmerlin@gentoo.org> files/clvmd.rc:
+  Fixed clvmd start order. Thanks to Frank Schliefer <f_schliefer@vcc.de>.
 
 *clvm-2.02.05 (30 Apr 2006)
 *clvm-2.01.15 (30 Apr 2006)

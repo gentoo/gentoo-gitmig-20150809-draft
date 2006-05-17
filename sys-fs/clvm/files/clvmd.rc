@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/files/clvmd.rc,v 1.2 2005/03/25 15:45:29 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/files/clvmd.rc,v 1.3 2006/05/17 18:19:05 xmerlin Exp $
 
 depend() {
 	use dns logger
@@ -73,6 +73,10 @@ start() {
 		sleep 1s
 	fi
 
+	ebegin "Starting clvmd"
+	start-stop-daemon --start --quiet --exec ${exefile}
+	eend $?
+
 	ebegin "Scanning LVM volumes"
 	/sbin/vgscan &>/dev/null
 	eend $?
@@ -82,12 +86,6 @@ start() {
 		ebegin "Setting up the Logical Volume Manager"
 		/sbin/vgchange -aly >/dev/null
 		eend $? "Failed to setup the LVM"
-		
-		if [ "$?" -eq 0 ]; then
-			ebegin "Starting clvmd"
-			start-stop-daemon --start --quiet --exec ${exefile} 
-			eend $?
-		fi
 	fi
 	
 }
