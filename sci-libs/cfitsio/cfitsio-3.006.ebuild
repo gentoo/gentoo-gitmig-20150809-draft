@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.006.ebuild,v 1.1 2006/05/17 06:20:53 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.006.ebuild,v 1.2 2006/05/17 06:23:49 nerdboy Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -21,7 +21,7 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-makefile.patch || die "epatch failed"
+	epatch ${FILESDIR}/${P}-configure.patch || die "epatch failed"
 }
 
 src_compile() {
