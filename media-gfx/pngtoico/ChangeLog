@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/pngtoico
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngtoico/ChangeLog,v 1.8 2005/10/30 19:06:05 grobian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngtoico/ChangeLog,v 1.9 2006/05/17 10:03:08 flameeyes Exp $
+
+  17 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/pngtoico-1.0-Makefile.patch, +metadata.xml, pngtoico-1.0.ebuild:
+  Don't strip binary during linking (leave it to Portage), use the correct
+  compiler, add maintainer-needed metadata.
 
   30 Oct 2005; Fabian Groffen <grobian@gentoo.org> pngtoico-1.0.ebuild:
   Marked ~ppc-macos (bug #110829)
