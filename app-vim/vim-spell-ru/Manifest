@@ -1,4 +1,6 @@
-MD5 c2809ed609f62fc8e02c9670c0598ad2 ChangeLog 588
+MD5 adbab6d71b0c928729d4965a4217e317 ChangeLog 719
 MD5 49b52227158cf4297a7db6e3947ef4e8 files/digest-vim-spell-ru-20060127 75
+MD5 b9dcf51a0e513277c177c134e3709ebc files/digest-vim-spell-ru-20060506 75
 MD5 573074ca897a3eec37dc322917be9276 metadata.xml 643
 MD5 db2b5ce62d0d64e2ea4b3eb80343635c vim-spell-ru-20060127.ebuild 326
+MD5 145c5d11bac9dcbf2f6724dc644231bc vim-spell-ru-20060506.ebuild 326
