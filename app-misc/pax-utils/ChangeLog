@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.68 2006/04/30 08:46:46 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.69 2006/05/17 22:10:06 solar Exp $
+
+*pax-utils-0.1.13 (17 May 2006)
+
+  17 May 2006; <solar@gentoo.org> +pax-utils-0.1.13.ebuild:
+  Improved Makefile handling. (vapier) QA_TEXTREL/QA_EXECSTACK/QA_WX_LOAD exempt
+  filtering flags. (kevquinn) Handle versioned symbols correctly on unstripped
+  ELF files when using the -s flag. Do not assume it is ok to read from stdin if
+  the -l -p flags were given. (solar)
 
 *pax-utils-0.1.12 (30 Apr 2006)
 
