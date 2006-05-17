@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.2.ebuild,v 1.1 2006/05/16 11:23:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.2.ebuild,v 1.2 2006/05/17 11:39:43 brix Exp $
 
 inherit eutils
 
@@ -79,9 +79,9 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "make install failed"
-	dodoc ChangeLog AUTHORS README doc/conkyrc.sample doc/variables.html
-	dodoc doc/docs.html doc/config_settings.html
+	make DESTDIR="${D}" install || die "make install failed"
+	dodoc ChangeLog AUTHORS README doc/conkyrc.sample
+	dohtml doc/docs.html doc/config_settings.html doc/variables.html
 }
 
 pkg_postinst() {
