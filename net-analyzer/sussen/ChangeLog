@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/sussen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.13 2006/05/06 15:56:28 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.14 2006/05/17 11:15:40 pva Exp $
+
+*sussen-0.21 (17 May 2006)
+
+  17 May 2006; Peter Volkov <pva@gentoo.org> sussen-0.19.ebuild,
+  +sussen-0.21.ebuild:
+  Version bump. Marking 0.21 ~amd64. Fixed bug 133413 and bug 131409. Thank
+  Henrique Rodrigues for reporting.
 
   06 May 2006; Markus Ullmann <jokey@gentoo.org> sussen-0.19.ebuild:
   Fixing dep wrt bug #131409
