@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/qt4-qtruby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.1 2006/05/05 17:21:14 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.2 2006/05/17 14:26:19 fmccor Exp $
+
+  17 May 2006; Ferris McCormick <fmccor@gentoo.org> qt4-qtruby-1.4.5.ebuild:
+  Add ~sparc keyword.  Can be built and runs examples.  NOTE:  On SMP systems,
+  you must build with MAKEOPTS="-j1" until Bug #132584 is resolved, because
+  parallel make wil fail early in autotools. (Same is true on amd64.)
 
 *qt4-qtruby-1.4.5 (05 May 2006)
 
