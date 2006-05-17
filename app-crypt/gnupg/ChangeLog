@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.185 2006/05/16 20:26:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.186 2006/05/17 12:12:41 flameeyes Exp $
+
+  17 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/gnupg-1.9.20-fbsd.patch, gnupg-1.9.20-r2.ebuild:
+  Add ~x86-fbsd keyword after applying a patch to allow compile on FreeBSD.
+  Thanks to Robert Sebastian Gerus in bug #133569.
 
   16 May 2006; Markus Rothe <corsair@gentoo.org> gnupg-1.9.20-r2.ebuild:
   Stable on ppc64; bug #132343

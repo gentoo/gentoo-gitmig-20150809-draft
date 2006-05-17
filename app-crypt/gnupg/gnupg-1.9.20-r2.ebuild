@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.20-r2.ebuild,v 1.2 2006/05/16 20:26:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.20-r2.ebuild,v 1.3 2006/05/17 12:12:41 flameeyes Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnupg/alpha/gnupg/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1.9"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="X caps ldap nls smartcard selinux"
 
 COMMON_DEPEND="
@@ -46,6 +46,9 @@ src_unpack() {
 		./autogen.sh
 	fi
 	sed -i -e 's/PIC/__PIC__/g' intl/relocatable.c || die "PIC patching failed"
+
+	epatch "${FILESDIR}/${P}-fbsd.patch"
+	AT_M4DIR="m4 gl/m4" eautoreconf
 }
 
 src_compile() {
