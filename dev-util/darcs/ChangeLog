@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/darcs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.54 2006/03/27 15:04:45 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.55 2006/05/17 12:28:13 flameeyes Exp $
+
+  17 May 2006; Diego Pettenò <flameeyes@gentoo.org> darcs-1.0.6.ebuild:
+  Add ~x86-fbsd keyword (before I forget), although this requires masked
+  ghc/ghc-bin on FreeBSD.
 
   27 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> darcs-1.0.6.ebuild:
   Marked ~ia64
