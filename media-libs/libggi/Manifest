@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5004e3111a96f720fcabab3d0ddfac10 ChangeLog 5216
 MD5 dccabae951c60ae1cffb9318b96e5e8b files/digest-libggi-2.0.1-r1 65
 MD5 026e0928dbe84dcf3e6921767870df9c files/digest-libggi-2.1.1 69
@@ -7,3 +10,10 @@ MD5 cb61bdaa9339ebec4139627f4feacb94 files/libggi-2.1.1-glibc24.patch 394
 MD5 f98e7884fa7974308e3cef15be212e8b libggi-2.0.1-r1.ebuild 1870
 MD5 80769c4fdd27d2cc21ab6561ad863b91 libggi-2.1.1.ebuild 1970
 MD5 0338bfb24d7bfb6450aac4dd025c0096 metadata.xml 223
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEazWBKRy60XGEcJIRAuByAKCCaHGM+J2tJCqUWNxhJwhJbsKLeACfcOrh
+Q6WxppAZzrWLxS3hwNzGaBA=
+=r2U6
+-----END PGP SIGNATURE-----
