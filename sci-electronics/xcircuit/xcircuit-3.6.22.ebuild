@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.6.22.ebuild,v 1.1 2006/05/12 20:57:47 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.6.22.ebuild,v 1.2 2006/05/17 13:14:12 calchan Exp $
 
 DESCRIPTION="Circuit drawing and schematic capture program."
 SRC_URI="http://opencircuitdesign.com/xcircuit/archive/${P}.tgz"
@@ -39,4 +39,9 @@ src_postinst() {
 	ewarn "You may want to emerge ng-spice-rework which integrates well with xcircuit."
 	ewarn "Note that in order for ngspice to work with xcircuit, you'll need at least"
 	ewarn "sci-electronics/ng-spice-rework-17-r1."
+}
+
+src_test () {
+	# See bug #131024
+	true
 }
