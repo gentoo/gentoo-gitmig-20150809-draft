@@ -1,6 +1,14 @@
 # ChangeLog for app-text/code2html
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/ChangeLog,v 1.12 2005/11/29 03:51:10 jer Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/ChangeLog,v 1.13 2006/05/17 08:24:09 leonardop Exp $
+
+*code2html-0.9.1-r1 (17 May 2006)
+
+  17 May 2006; Leonardo Boshell <leonardop@gentoo.org>
+  +code2html-0.9.1-r1.ebuild:
+  New revision including patches to improve Ada and C++ support (bugs #133176
+  and #133159), and to make the color codes consistent (bug #119406). Lots of
+  thanks to reporter Erik for the patches.
 
   29 Nov 2005; Jeroen Roovers <jer@gentoo.org> code2html-0.9.1.ebuild:
   Marked ~hppa wrt bug 109181.
