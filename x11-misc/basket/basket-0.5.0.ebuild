@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/basket-0.5.0.ebuild,v 1.5 2006/03/22 22:17:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/basket-0.5.0.ebuild,v 1.6 2006/05/17 18:26:24 nelchael Exp $
 
 inherit eutils kde
 
@@ -21,5 +21,5 @@ src_unpack() {
 	# patch from basket developer to solve compilation
 	# problemes on systems without arts
 	use arts || epatch ${FILESDIR}/${P}-noarts.patch
+	use amd64 && epatch ${FILESDIR}/${P}-amd64-gcc4.1.patch
 }
-
