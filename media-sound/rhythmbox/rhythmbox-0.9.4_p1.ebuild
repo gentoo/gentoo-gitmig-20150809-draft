@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.4_p1.ebuild,v 1.1 2006/04/18 00:16:43 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.4_p1.ebuild,v 1.2 2006/05/17 03:07:41 dang Exp $
 
 inherit gnome2 eutils
 
@@ -103,6 +103,15 @@ DOCS="AUTHORS COPYING ChangeLog DOCUMENTERS INSTALL INTERNALS \
 
 export GST_INSPECT=/bin/true
 USE_DESTDIR=1
+}
+
+src_unpack()
+{
+	unpack ${A}
+	cd ${S}
+
+	# Fix bug #131705
+	epatch ${FILESDIR}/${P}-libnotify.patch
 }
 
 pkg_postinst() {
