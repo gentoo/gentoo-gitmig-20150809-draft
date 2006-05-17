@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.34 2006/04/27 15:43:55 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.35 2006/05/17 03:09:17 vapier Exp $
+
+*lshw-02.08.01b (17 May 2006)
+
+  17 May 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/lshw-02.08.01b-build.patch, +lshw-02.08.01b.ebuild:
+  Version bump #133540 by Daniel Webert.
 
   27 Apr 2006; Daniel Gryniewicz <dang@gentoo.org> lshw-02.06b.ebuild:
   Marked stable on amd64 per bug #131184
