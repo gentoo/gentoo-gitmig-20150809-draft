@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20060415-r1.ebuild,v 1.1 2006/05/16 13:20:01 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20060415-r2.ebuild,v 1.1 2006/05/17 10:54:52 hattya Exp $
 
 IUSE=""
 
@@ -65,6 +65,14 @@ src_install() {
 		pkg=
 	done
 
+	# remove man pages that are provided by other packages.
+	# - sys-apps/shadow +nls
+	rm -f ${D}/usr/share/man/ja/man1/{chfn,chsh,newgrp,su,passwd,groups}.1
+	rm -f ${D}/usr/share/man/ja/man8/{vigr,vipw}.8
+
+	dodoc ChangeLog README
+
+
 	cd ${WORKDIR}/${GENTOO_MAN_P}
 
 	for x in *; do
@@ -79,9 +87,6 @@ src_install() {
 	done
 
 	newdoc ChangeLog ChangeLog.GentooJP
-	cd -
-
-	dodoc ChangeLog INSTALL README
 
 }
 
