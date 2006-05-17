@@ -1,4 +1,4 @@
-MD5 61f52bab304e926e7c713013ea66cf9e ChangeLog 1843
+MD5 194cde5ba5a46f2e3368265958580f9f ChangeLog 1940
 MD5 913a9112332add1b07f8e13567ef78c6 files/digest-sussen-0.10 63
 MD5 6bbd8221dae260aa294014e79587f74d files/digest-sussen-0.12 63
 MD5 034a05b578eae1d70b56349b853e5d92 files/digest-sussen-0.15 63
@@ -10,5 +10,5 @@ MD5 284a33f91290e58dc976067ff9438ae5 sussen-0.10.ebuild 745
 MD5 eb4b0f734206dfbff9990d9a1edb216f sussen-0.12.ebuild 745
 MD5 b1481061b30678b085039bd5c9952ef8 sussen-0.15.ebuild 855
 MD5 60d350134a4ad2790feccb71a4e472a9 sussen-0.19.ebuild 1139
-MD5 58237a730a9959a10ef13cf3174a663e sussen-0.21.ebuild 1492
+MD5 0bf766f79c197f0d2c78c925399212eb sussen-0.21.ebuild 1462
 MD5 606a391d68a2efbd6f306c20cd73fdbe sussen-0.5.3.ebuild 1118
