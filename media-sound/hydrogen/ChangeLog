@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.42 2006/05/17 04:10:58 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.43 2006/05/17 15:22:37 kingtaco Exp $
+
+  17 May 2006; Mike Doty <kingtaco@gentoo.org> hydrogen-0.9.3.ebuild:
+  amd64 stable, bug 132522
 
   17 May 2006; Joshua Jackson <tsunam@gentoo.org> hydrogen-0.9.3.ebuild:
   Stable on x86 again
