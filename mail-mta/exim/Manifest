@@ -1,7 +1,10 @@
-MD5 e78863a04c323b07189d386b40c7ea82 ChangeLog 21320
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 65eeaf3771d6eb64845784738f00744b ChangeLog 21412
 MD5 1af128deb098f20841d4af818951dd27 exim-4.50-r999.ebuild 7640
 MD5 a6bbbee630fa63abe39c7156e93cd79f exim-4.54.ebuild 8656
-MD5 d5eed320104f562ff39e65ed311e4f6b exim-4.60-r1.ebuild 9160
+MD5 98ec18ff076a65672add6d7758788fc2 exim-4.60-r1.ebuild 9158
 MD5 d167a6ce531ad11c3c5633af650417f3 exim-4.60.ebuild 9137
 MD5 ee3fee4f9106d53cb6506eedea1de501 exim-4.61.ebuild 9164
 MD5 68fc403ba2c98ccba281939085cb9052 files/auth_conf.sub 775
@@ -24,3 +27,10 @@ MD5 49698cb738763bbaebbbe89470f914ef files/mailer.conf 169
 MD5 d230e0fa45f2b65d5bc50c0879c40148 files/pam.d-exim 101
 MD5 4c0b8ee742360c08f0bc0b526fcaad10 files/system_filter.exim 8120
 MD5 ee52da73838435e93e200a5cba155fa3 metadata.xml 1029
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEauKrViELBEf1JB0RAmTWAJ9Moi7HCe0/AUt1fYZCJsAeO4qvkQCdEcx2
+YUJhfX8Klin9YNrqUroH/wY=
+=kSsh
+-----END PGP SIGNATURE-----
