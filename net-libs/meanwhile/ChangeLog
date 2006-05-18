@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/meanwhile
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.29 2006/05/13 23:26:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.30 2006/05/18 12:34:07 psi29a Exp $
+
+  17 May 2006; <psi29a@gentoo.org> meanwhile-0.4.2.ebuild:
+  added to ~mips for testing
 
   13 May 2006; Jason Wever <weeve@gentoo.org> meanwhile-0.4.2.ebuild:
   Stable on SPARC wrt bug #133152.
