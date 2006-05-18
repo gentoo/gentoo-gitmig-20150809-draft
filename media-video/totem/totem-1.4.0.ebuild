@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.4.0.ebuild,v 1.7 2006/05/14 16:19:08 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.4.0.ebuild,v 1.8 2006/05/18 05:39:45 compnerd Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -108,6 +108,10 @@ src_unpack() {
 
 	# fix for as-needed #128466
 	epatch "${FILESDIR}"/${PN}-1.4.0-as-needed.patch
+
+	# fix for linguas (bug #133526) Patch by Alexis Ballier
+	# <alexis.ballier@gmail.com>
+	epatch ${FILESDIR}/${PN}-1.4.0-linguas.patch
 
 	eautoreconf
 }
