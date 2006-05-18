@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db-use.eclass,v 1.1 2006/05/18 09:41:59 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db-use.eclass,v 1.2 2006/05/18 09:45:01 pauldv Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 
 inherit versionator
 
 #Convert a version to a db slot
-ver_to_slot() {
+db_ver_to_slot() {
 	if [ $# -ne 1 ]; then
-		eerror "Function ver_to_slot needs one argument" >&2
+		eerror "Function db_ver_to_slot needs one argument" >&2
 		eerror "args given:" >&2
 		for f in $@
 		do
@@ -20,9 +20,9 @@ ver_to_slot() {
 }
 
 #Find the version that correspond to the given atom
-findver() {
+db_findver() {
 	if [ $# -ne 1 ]; then
-		eerror "Function findver needs one argument" >&2
+		eerror "Function db_findver needs one argument" >&2
 		eerror "args given:" >&2
 		for f in $@
 		do
@@ -33,7 +33,7 @@ findver() {
 	
 	PKG="$(best_version $1)"
 	VER="$(get_version_component_range 1-2 "${PKG/*db-/}")"
-	if [ -d /usr/include/db$(ver_to_slot "$VER") ]; then
+	if [ -d /usr/include/db$(db_ver_to_slot "$VER") ]; then
 		einfo "Found db version ${VER}" >&2
 		echo -n "$VER"
 		return 0
@@ -49,8 +49,8 @@ findver() {
 
 db_includedir() {
 	if [ $# -eq 0 ]; then
-		VER="$(findver sys-libs/db)" || return 1
-		VER="$(ver_to_slot "$VER")"
+		VER="$(db_findver sys-libs/db)" || return 1
+		VER="$(db_ver_to_slot "$VER")"
 		echo "include version ${VER}" >&2
 		if [ -d "/usr/include/db${VER}" ]; then
 			echo -n "/usr/include/db${VER}"
@@ -63,9 +63,9 @@ db_includedir() {
 		#arguments given
 		for x in $@
 		do
-			if VER=$(findver "=sys-libs/db-${x}*") &&
-			   [ -d "/usr/include/db$(ver_to_slot $VER)" ]; then
-				echo -n "/usr/include/db$(ver_to_slot $VER)"
+			if VER=$(db_findver "=sys-libs/db-${x}*") &&
+			   [ -d "/usr/include/db$(db_ver_to_slot $VER)" ]; then
+				echo -n "/usr/include/db$(db_ver_to_slot $VER)"
 				return 0
 			fi
 		done
@@ -82,7 +82,7 @@ db_includedir() {
 
 db_libname() {
 	if [ $# -eq 0 ]; then
-		VER="$(findver sys-libs/db)" || return 1
+		VER="$(db_findver sys-libs/db)" || return 1
 		if [ -e "/usr/lib/libdb-${VER}" ]; then
 			echo -n "db-${VER}"
 			return 0
@@ -94,7 +94,7 @@ db_libname() {
 		#arguments given
 		for x in $@
 		do
-			if VER=$(findver "=sys-libs/db-${x}*"); then
+			if VER=$(db_findver "=sys-libs/db-${x}*"); then
 				echo -n "db-${VER}"
 				return 0
 			fi
