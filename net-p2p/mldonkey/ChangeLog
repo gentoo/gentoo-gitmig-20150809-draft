@@ -1,6 +1,18 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.120 2006/04/27 19:24:26 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.121 2006/05/18 17:49:44 squinky86 Exp $
+
+*mldonkey-2.7.5 (18 May 2006)
+
+  18 May 2006; Jon Hood <squinky86@gentoo.org>
+  -files/mldonkey-2.5.16-configure.patch,
+  -files/mldonkey-2.5.21-configure.patch,
+  -files/mldonkey-2.6.0-gtk2-gentoo.patch, +files/dp500.patch,
+  -mldonkey-2.6.0-r1.ebuild, -mldonkey-2.7.0.ebuild, -mldonkey-2.7.1.ebuild,
+  -mldonkey-2.7.2.ebuild, +mldonkey-2.7.5.ebuild:
+  Version bump, #124199. Thanks to Andreas Calvo <fflipy@hotmail.com>,
+  spiralvoice <spiralvoice@hotmail.com>, and many others in bug #124199 for
+  cleaning this up.
 
   27 Apr 2006; Matthieu Sozeau <mattam@gentoo.org>
   +files/mldonkey-2.7.3-configure.patch, mldonkey-2.7.3.ebuild:
