@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/vbetool
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/ChangeLog,v 1.5 2005/12/12 09:12:50 robbat2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/ChangeLog,v 1.6 2006/05/18 18:39:01 robbat2 Exp $
+
+*vbetool-0.5-r1 (18 May 2006)
+
+  18 May 2006; Robin H. Johnson <robbat2@gentoo.org> +vbetool-0.5-r1.ebuild:
+  Use x86emu on non-x86 arches - bug #119706.
 
   12 Dec 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml:
   Add metadata.xml
