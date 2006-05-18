@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 35a320c0bf4912482962fb12570c3a8d ChangeLog 9256
+MD5 12ca28681b40b19add5ab3735c60ffe7 ChangeLog 9470
 MD5 503ed4bbf18bb0b46850cb173873e16a files/Lucent.c.patch 814
 MD5 c9b070dfabf7bd139d53d263f869b4f0 files/digest-mgetty-1.1.30-r2 70
 MD5 c9b070dfabf7bd139d53d263f869b4f0 files/digest-mgetty-1.1.30-r3 70
 MD5 892ea03975cbf5145ed6ab5f42424461 files/digest-mgetty-1.1.31-r1 70
 MD5 192de0178f8a1dc659e1a81c7ff002c2 files/digest-mgetty-1.1.33 71
 MD5 76ca07f8e36ebf8d72099ac559bc8a81 files/digest-mgetty-1.1.34 71
-MD5 7eccb08354c669e1e6f1c2222aaadd65 files/digest-mgetty-1.1.35 71
+MD5 7eccb08354c669e1e6f1c2222aaadd65 files/digest-mgetty-1.1.35-r1 71
 MD5 bc47f96a12b21b779d57c0c2ad4b6837 files/mgetty-1.1.30-gentoo.diff 2771
 MD5 4e57a595747a3348f58b9e0acb19b5b7 files/mgetty-1.1.31-callback.diff 989
 MD5 9b39643283b470533c7e4832364aa168 files/mgetty-1.1.31-gentoo.diff 2782
@@ -21,6 +21,7 @@ MD5 3df5198ba43975d679dfd11a9c23dc5b files/mgetty-1.1.34-callback.patch 991
 MD5 b245928263a2507460ff9e99d6cd7f06 files/mgetty-1.1.34-gentoo.patch 933
 MD5 32b5b7d9a230a6dd97a35312989562f3 files/mgetty-1.1.34-strerror.patch 1573
 MD5 40d2996019a7a40907948b2a8c67e525 files/mgetty-1.1.35-callback.patch 991
+MD5 ef359bb8e8d6bd6b5f4e5373b0b4bd91 files/mgetty-1.1.35-faxrunq.patch 1428
 MD5 b3c49e2689ed9e1f4abd8d9c0a160a4f files/mgetty-1.1.35-gentoo.patch 933
 MD5 27565fcde66bcc4c9741fd88dea30d04 files/mgetty-1.1.35-strerror.patch 1573
 MD5 1bb6061bf8000d07f70ffdd74f5659f4 metadata.xml 377
@@ -29,11 +30,11 @@ MD5 613c00d8bb964fcd6799ffb1bd97356a mgetty-1.1.30-r3.ebuild 3808
 MD5 292c3f40fe41b373489b01659b894ce4 mgetty-1.1.31-r1.ebuild 3843
 MD5 466a46acdacbc2fff44f054a06731961 mgetty-1.1.33.ebuild 4309
 MD5 8761b58020dd077b7abc74b630fd3fb2 mgetty-1.1.34.ebuild 4323
-MD5 b940c08356191d498f73be1d5460457d mgetty-1.1.35.ebuild 4327
+MD5 524df432ff80ed152da521b01d4e4ae6 mgetty-1.1.35-r1.ebuild 4366
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEayUnKRy60XGEcJIRAmSnAJ9t3c5NqoOt4m+CF5/BP39QJep0eACePfyJ
-8tEq6txCW/5cpIYIXfSxkeo=
-=NWdq
+iD8DBQFEbG1mjG8pv1lIUX4RAmOfAJsGoj9ALIY9h83KBbdyFOVzMpzdKwCdEM46
+Kan5Yta/JUAkAdaAp4ZxSI8=
+=upm8
 -----END PGP SIGNATURE-----

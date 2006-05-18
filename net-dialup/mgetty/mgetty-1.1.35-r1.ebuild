@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.35.ebuild,v 1.4 2006/05/17 13:27:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.35-r1.ebuild,v 1.1 2006/05/18 12:49:23 mrness Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -30,12 +30,10 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gentoo.patch"
-	# fix deprecate warnings
-	epatch "${FILESDIR}/${P}-strerror.patch"
-	# add callback install to Makefile
-	epatch "${FILESDIR}/${P}-callback.patch"
-	# Lucent modem CallerID patch - bug #80366
-	epatch "${FILESDIR}/Lucent.c.patch"
+	epatch "${FILESDIR}/${P}-strerror.patch" # fix deprecate warnings
+	epatch "${FILESDIR}/${P}-callback.patch" # add callback install to Makefile
+	epatch "${FILESDIR}/Lucent.c.patch" # Lucent modem CallerID patch - bug #80366
+	epatch "${FILESDIR}/${P}-faxrunq.patch"
 
 	#Avoid "is setXid, dynamically linked and using lazy bindings" QA notices 
 	append-ldflags $(bindnow-flags)
