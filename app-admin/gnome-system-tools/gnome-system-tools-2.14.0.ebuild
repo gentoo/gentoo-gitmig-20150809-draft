@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.14.0.ebuild,v 1.3 2006/05/08 20:40:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.14.0.ebuild,v 1.4 2006/05/18 15:03:29 chutzpah Exp $
 
 inherit gnome2 eutils autotools
 
@@ -44,6 +44,7 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
-	epatch ${FILESDIR}/${P}-as-needed.patch
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+	epatch "${FILESDIR}/${P}-ALL_LINGUAS.patch"
 	eautoreconf
 }
