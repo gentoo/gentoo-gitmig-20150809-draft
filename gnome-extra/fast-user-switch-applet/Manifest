@@ -1,24 +1,6 @@
-DIST fast-user-switch-applet-2.14.0.tar.bz2 493986 RMD160 60d267d1312b33872a48b3761a19ba238f82480f SHA256 952865a880f54f38d1b2b4a10b7e43056f50c1c1a7964f71629fb993e8b4bb43 size 493986
-DIST fast-user-switch-applet-2.14.1.tar.bz2 491189 RMD160 dd82f8a20f04ef13c8bfe67bf940f8874c70b557 SHA256 cc3373b2079a4b0358a62040eb6d82cb8292cf2bbb5f2c56167f2c415a85c3b0 size 491189
-EBUILD fast-user-switch-applet-2.14.0.ebuild 1302 RMD160 baa7fad7556e397221a09db8e4f7c704d80e16a4 SHA1 f348a4b1b1d21f982430d7ad3545fe211abc2762 SHA256 9cb02d257897f2f5abde15a47da5e4f68f6601d9f0a82c1f2a4ea5b6b74edffa size 1302
+MD5 fa2362db8d5c4c24be76b9f057082a54 ChangeLog 1186
 MD5 5835c068004061239442bba56f1e4a2d fast-user-switch-applet-2.14.0.ebuild 1302
-RMD160 baa7fad7556e397221a09db8e4f7c704d80e16a4 fast-user-switch-applet-2.14.0.ebuild 1302
-SHA256 9cb02d257897f2f5abde15a47da5e4f68f6601d9f0a82c1f2a4ea5b6b74edffa fast-user-switch-applet-2.14.0.ebuild 1302
-EBUILD fast-user-switch-applet-2.14.1.ebuild 1315 RMD160 dd15705e3bce53f883bb1fb09679c0a27ae5d4ee SHA1 ff463aabc61881d81ab33e1bbf6a1d55ce2ac219 SHA256 32a020e92cf4ded0cc8e1f26fb7f7f34e7a783d43803e9c9b8ac223f31946985 size 1315
-MD5 d5e656e324a04eeb7d5ecf7380af08d5 fast-user-switch-applet-2.14.1.ebuild 1315
-RMD160 dd15705e3bce53f883bb1fb09679c0a27ae5d4ee fast-user-switch-applet-2.14.1.ebuild 1315
-SHA256 32a020e92cf4ded0cc8e1f26fb7f7f34e7a783d43803e9c9b8ac223f31946985 fast-user-switch-applet-2.14.1.ebuild 1315
-MISC ChangeLog 1063 RMD160 cc0c7151929dad6ad222bf4656fdbdd7824bf47e SHA1 743f214c6e5ca8b1f5ebb7c915d2dba84dce68b4 SHA256 e1547e91f40ebdb30e38bb09736206084f6377af4d94757948a3ad90bffcdf5d size 1063
-MD5 3bb3b0c6ce91b1281fa9e139eac0d367 ChangeLog 1063
-RMD160 cc0c7151929dad6ad222bf4656fdbdd7824bf47e ChangeLog 1063
-SHA256 e1547e91f40ebdb30e38bb09736206084f6377af4d94757948a3ad90bffcdf5d ChangeLog 1063
-MISC metadata.xml 159 RMD160 4aba844314249b872aefa0ef14d652f127e6334f SHA1 210583dd46159c21ce4f3289960d5014ce57e01a SHA256 d6e10a30ac9423eb5a9ba4e7b2a76322683f40b2fb428d2f310dcdbd1cfde235 size 159
-MD5 8b0560553235cfd96801898935f8ff94 metadata.xml 159
-RMD160 4aba844314249b872aefa0ef14d652f127e6334f metadata.xml 159
-SHA256 d6e10a30ac9423eb5a9ba4e7b2a76322683f40b2fb428d2f310dcdbd1cfde235 metadata.xml 159
+MD5 183a53d7c953acc8ac20d1c44419b8cc fast-user-switch-applet-2.14.1.ebuild 1317
 MD5 cc3c1a7a6f3661189a2f3ec08e453327 files/digest-fast-user-switch-applet-2.14.0 295
-RMD160 c9ce7e5d0eadef70344fb8679cf88f53141b8628 files/digest-fast-user-switch-applet-2.14.0 295
-SHA256 4832ebbacb530671b56609029b7a71ea92ce03767bff8310d8e210648ff2555f files/digest-fast-user-switch-applet-2.14.0 295
 MD5 9921f90f3435658024fd8b96d50a2de3 files/digest-fast-user-switch-applet-2.14.1 295
-RMD160 e6b55e82624bac6db4949d5d116ed65bae2f6dd9 files/digest-fast-user-switch-applet-2.14.1 295
-SHA256 dbcdcfe8aea64765efbd3bdc3a6f0394c3f4c1091465cd30b9ae4c95e19c8d53 files/digest-fast-user-switch-applet-2.14.1 295
+MD5 8b0560553235cfd96801898935f8ff94 metadata.xml 159

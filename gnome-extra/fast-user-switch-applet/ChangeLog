@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/fast-user-switch-applet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/fast-user-switch-applet/ChangeLog,v 1.6 2006/05/05 15:15:08 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/fast-user-switch-applet/ChangeLog,v 1.7 2006/05/18 14:36:51 tcort Exp $
+
+  18 May 2006; Thomas Cort <tcort@gentoo.org>
+  fast-user-switch-applet-2.14.1.ebuild:
+  Added ~alpha keyword wrt Bug #125233.
 
   05 May 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   fast-user-switch-applet-2.14.1.ebuild:
