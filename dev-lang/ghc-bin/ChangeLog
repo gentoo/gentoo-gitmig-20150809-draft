@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.49 2006/05/03 22:38:28 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.50 2006/05/18 20:44:34 dcoutts Exp $
+
+  18 May 2006; Duncan Coutts <dcoutts@gentoo.org> ghc-bin-6.4.1-r1.ebuild,
+  ghc-bin-6.4.2.ebuild:
+  Generate a ghc wrapper script with the correct GHC_CFLAGS at install time.
+  Tidy up the unpack/compile/install phases. Add all the arches that are in
+  the KEYWORDS in 6.4.1 to the KEYWORDS in 6.4.1-r1.
 
 *ghc-bin-6.4.2 (03 May 2006)
 
