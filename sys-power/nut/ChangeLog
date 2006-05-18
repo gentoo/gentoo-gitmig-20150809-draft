@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/nut
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.1 2006/05/15 23:43:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.2 2006/05/18 06:05:29 robbat2 Exp $
+
+*nut-2.0.3 (18 May 2006)
+
+  18 May 2006; Robin H. Johnson <robbat2@gentoo.org> +nut-2.0.3.ebuild:
+  Version bump and clean up of Nut (bug #85296), resolving bugs for SSL, GD
+  (bug #62745), USB (bug #73074), and moving portions to /sbin and /lib/nut to
+  allow for poweroff where /usr is a seperate partition (bug #88832). Also add
+  udev rules for new USB devices.
 
   15 May 2006; Robin H. Johnson <robbat2@gentoo.org> +files/upsd.rc6,
   +files/upsdrv.rc6, +files/upsdrv.rc6-r1, +files/upsmon.rc6, +metadata.xml,
