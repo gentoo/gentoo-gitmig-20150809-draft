@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pcmcia.eclass,v 1.10 2005/08/23 14:55:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pcmcia.eclass,v 1.11 2006/05/18 15:54:05 halcy0n Exp $
 
 # pcmcia.eclass - This eclass facilities writing ebuilds for driver packages
 # that may need to build against the pcmcia-cs drivers, depending on kernel
@@ -122,4 +122,4 @@ pcmcia_configure()
 	cd ${S}
 }
 
-EXPORT_FUNCTIONS src_unpack configure
+EXPORT_FUNCTIONS src_unpack
