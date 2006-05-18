@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/gomd-cvs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gomd-cvs/ChangeLog,v 1.9 2006/05/04 18:16:44 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gomd-cvs/ChangeLog,v 1.10 2006/05/18 16:43:35 halcy0n Exp $
+
+  18 May 2006; Mark Loeser <halcy0n@gentoo.org> gomd-cvs-0.2_beta1.ebuild:
+  Fix usage of anoncvs; bug #115327
 
   04 May 2006; Michael Imhof <tantive@gentoo.org> gomd-cvs-0.2_beta1.ebuild:
   Fixed #117768.
