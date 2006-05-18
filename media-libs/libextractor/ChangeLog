@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libextractor
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.29 2006/05/14 04:30:37 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.30 2006/05/18 15:56:31 squinky86 Exp $
+
+*libextractor-0.5.14 (18 May 2006)
+
+  18 May 2006; Jon Hood <squinky86@gentoo.org>
+  -files/libextractor-includeorder.patch, -libextractor-0.5.12.ebuild,
+  -libextractor-0.5.13.ebuild, +libextractor-0.5.14.ebuild:
+  Version bump, #133570. Remove some of the old, vulnerable versions.
 
 *libextractor-0.5.13 (14 May 2006)
 
