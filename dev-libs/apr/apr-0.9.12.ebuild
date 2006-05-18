@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.12.ebuild,v 1.1 2006/04/16 22:03:00 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.12.ebuild,v 1.2 2006/05/18 01:22:33 vericgar Exp $
 
 inherit flag-o-matic libtool
 
@@ -31,6 +31,14 @@ src_compile() {
 		einfo "Using /dev/random as random device"
 		myconf="${myconf} --with-devrandom=/dev/random"
 	fi
+
+	# We pre-load the cache with the correct answer!  This avoids
+	# it violating the sandbox.  This may have to be changed for
+	# non-Linux systems or if sem_open changes on Linux.  This
+	# hack is built around documentation in /usr/include/semaphore.h
+	# and the glibc (pthread) source
+	# See bugs 24215 and 133573
+	echo 'ac_cv_func_sem_open=${ac_cv_func_sem_open=no}' >> ${S}/config.cache
 
 	econf ${myconf} || die
 	emake || die
