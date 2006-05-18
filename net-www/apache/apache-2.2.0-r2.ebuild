@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r2.ebuild,v 1.7 2006/04/19 17:24:59 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r2.ebuild,v 1.8 2006/05/18 18:11:30 vericgar Exp $
 
-inherit eutils gnuconfig multilib
+inherit eutils flag-o-matic gnuconfig multilib
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
@@ -126,6 +126,8 @@ src_unpack() {
 
 
 src_compile() {
+
+	filter-ldflags -Wl,--as-needed --as-needed
 
 	# Detect mips and uclibc systems properly
 	gnuconfig_update

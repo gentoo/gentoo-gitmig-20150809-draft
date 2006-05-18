@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.58.ebuild,v 1.1 2006/05/16 02:51:48 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.58.ebuild,v 1.2 2006/05/18 18:11:30 vericgar Exp $
 
-inherit eutils gnuconfig multilib
+inherit eutils flag-o-matic gnuconfig multilib
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
@@ -85,6 +85,10 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# bug 128505
+	filter-ldflags -Wl,--as-needed --as-needed
+
 	# actually we do not provide a very dynamic way of those vars
 	# however, you may predefine them in shell before emerging
 	# to override the official default locations
