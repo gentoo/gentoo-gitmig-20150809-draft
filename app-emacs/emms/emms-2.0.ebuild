@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/emms-2.0.ebuild,v 1.1 2006/05/15 04:11:44 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/emms-2.0.ebuild,v 1.2 2006/05/18 07:00:13 mkennedy Exp $
 
 inherit elisp toolchain-funcs eutils
 
@@ -14,7 +14,8 @@ IUSE=""
 
 RDEPEND="virtual/emacs"
 DEPEND="${RDEPEND}
-	sys-apps/texinfo"
+	sys-apps/texinfo
+	media-libs/taglib"
 
 # EMMS can use almost anything for playing media files therefore the dependency
 # posibilities are so broad that we refrain from setting anything explicitly in
