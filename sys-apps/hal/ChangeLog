@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.87 2006/05/08 18:46:26 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.88 2006/05/18 21:45:13 kloeri Exp $
+
+  18 May 2006; Bryan Østergaard <kloeri@gentoo.org> hal-0.5.5.1-r3.ebuild:
+  Stable on alpha, bug 113818.
 
 *hal-0.5.7-r2 (08 May 2006)
 
