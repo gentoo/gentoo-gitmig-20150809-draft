@@ -41,3 +41,8 @@ ELIBC=uclibc
 #                unpack -- for debugging purposes only.
 
 FEATURES="sandbox sfperms strict nodoc noinfo noman autoconfig"
+
+# These are here because I am adding this to default-linux and removing it from
+# the leaf profiles.  If you would like these as defaults, feel free to remove
+# the following line.
+USE="${USE} -pppd -isdnlog"
