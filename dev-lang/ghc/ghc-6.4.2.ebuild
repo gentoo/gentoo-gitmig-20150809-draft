@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.4 2006/05/12 15:44:52 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.5 2006/05/18 20:42:44 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -14,7 +14,7 @@
 # can be removed once an forall after the first succesful install
 # of ghc.
 
-inherit base eutils flag-o-matic autotools ghc-package check-reqs
+inherit base eutils flag-o-matic toolchain-funcs autotools ghc-package check-reqs
 
 DESCRIPTION="The Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
@@ -125,12 +125,21 @@ ghc_setup_cflags() {
 
 	# hardened-gcc needs to be disabled, because the mangler doesn't accept
 	# its output.
-	append-ghc-cflags compile link	$(test-flags-CC -nopie)
-	append-ghc-cflags compile		$(test-flags-CC -fno-stack-protector)
+	gcc-specs-pie && append-ghc-cflags compile link	-nopie
+	gcc-specs-ssp && append-ghc-cflags compile		-fno-stack-protector
 
 	# We also add -Wa,--noexecstack to get ghc to generate .o files with
 	# non-exectable stack. This it a hack until ghc does it itself properly.
 	append-ghc-cflags assemble		"-Wa,--noexecstack"
+}
+
+ghc_setup_wrapper() {
+	echo '#!/bin/sh'
+	echo "GHCBIN=\"$(ghc-libdir)/ghc-$1\";"
+	echo "TOPDIROPT=\"-B$(ghc-libdir)\";"
+	echo "GHC_CFLAGS=\"${GHC_CFLAGS}\";"
+	echo '# Mini-driver for GHC'
+	echo 'exec $GHCBIN $TOPDIROPT $GHC_CFLAGS ${1+"$@"}'
 }
 
 src_unpack() {
@@ -139,6 +148,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch "${WORKDIR}/${P}-alut.patch"
+	epatch "${FILESDIR}/${P}-sparc32plus.patch"
 
 	# Modify the ghc driver script to use GHC_CFLAGS
 	echo "SCRIPT_SUBST_VARS += GHC_CFLAGS" >> "${S}/ghc/driver/ghc/Makefile"
@@ -202,15 +212,20 @@ src_compile() {
 		echo "SplitObjs=NO" >> mk/build.mk
 	fi
 
+	GHC_CFLAGS="" ghc_setup_wrapper $(ghc-version) > "${TMP}/ghc.sh"
+	chmod +x "${TMP}/ghc.sh"
+
 	# We've patched some configure.ac files to fix the OpenAL/ALUT bindings.
 	# So we need to autoreconf.
 	eautoreconf
 
 	econf \
+		--with-ghc="${TMP}/ghc.sh" \
 		$(use_enable opengl opengl) \
 		$(use_enable opengl glut) \
-		$(use_enable openal openal) \
-		$(use_enable openal alut) \
+		$(use openal && use opengl \
+			&& echo --enable-openal --enable-alut \
+			|| echo --disable-openal --disable-alut) \
 		$(use_enable X x11) \
 		$(use_enable X hgl) \
 		|| die "econf failed"

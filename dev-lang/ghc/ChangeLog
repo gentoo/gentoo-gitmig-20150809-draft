@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.101 2006/05/12 15:44:52 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.102 2006/05/18 20:42:44 dcoutts Exp $
+
+  18 May 2006; Duncan Coutts <dcoutts@gentoo.org>
+  +files/ghc-6.4.2-sparc32plus.patch, ghc-6.4.1-r3.ebuild, ghc-6.4.2.ebuild:
+  Support gcc-4.x better at the expense of hardened gcc-3.x.
+  Switching between gcc-3.x and gcc-4.x will now just work. Switching between
+  vanilla and hardened gcc will now require re-emerging rather than just
+  working. It should also enable anyone who has broken their ghc installation
+  by upgrading to gcc-4.x to get things working again by re-emerging ghc-6.4.2,
+  ghc-6.4.1-r3 or ghc-bin-6.4.1-r1.
+  Only build OpenAL/ALUT bindings if the OpenGL bindings will also be built
+  (since one depends on the other).
+  Fix GHCi on sparc when using the V8+ ABI (eg CFLAGS="-march=ultrasparc").
 
   12 May 2006; Duncan Coutts <dcoutts@gentoo.org>
   +files/ghc-6.4.2-alut.patch, ghc-6.4.2.ebuild:
