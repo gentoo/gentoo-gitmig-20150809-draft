@@ -1,0 +1,11 @@
+--- db/sqlblob.h.orig	2006-05-05 14:16:53.000000000 +0200
++++ db/sqlblob.h	2006-05-05 14:17:42.000000000 +0200
+@@ -68,7 +68,7 @@
+    start=end+1;
+    end=buf.find(tag);
+    if (b.mem) delete(b.mem);
+-   b.mem=new std::vector<T>(xml_decode_string(buf.c_str()+start,end-start,enc_string));
++   b.mem=new std::vector<T>(xml_decode_string<T>(buf.c_str()+start,end-start,enc_string));
+    return i;
+ }
+ 

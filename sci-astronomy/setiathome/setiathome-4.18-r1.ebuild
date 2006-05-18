@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-4.18-r1.ebuild,v 1.4 2006/04/23 03:16:11 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-4.18-r1.ebuild,v 1.5 2006/05/18 17:58:11 halcy0n Exp $
+
+inherit eutils
 
 MY_PN="seti_boinc-client-cvs"
 MY_PV="2005-08-20"
@@ -21,6 +23,13 @@ DEPEND="~sci-misc/boinc-4.72.20050813
 	>=media-libs/jpeg-6b"
 
 S=${WORKDIR}/seti_boinc
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+}
 
 src_compile() {
 	# The setiathome GUI doesn't work - so disable it for now...
