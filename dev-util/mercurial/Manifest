@@ -1,12 +1,34 @@
-MD5 1a13ab19923659aa2f8b74e517f2b11d ChangeLog 3963
-MD5 fa603181331257c62669842058e1c17a files/digest-mercurial-0.6b_p20050807 271
-MD5 a4eb8efbd68f26102cd3f890da7086c3 files/digest-mercurial-0.7 241
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c4c2e7304996b1c4120058a68e1761b2 ChangeLog 4103
+RMD160 707d9976810f02a25bf082a29bafd71e067c4dac ChangeLog 4103
+SHA256 0a7f01fdbf1032592d06741b6df1a804d01d9ba737d2213711a2fc11c3e913c9 ChangeLog 4103
 MD5 9269659eeb841b48a7ae89b9f92340cb files/digest-mercurial-0.8 241
+RMD160 6f1100ae9280b97d7bdbd58d4f026c303ef46134 files/digest-mercurial-0.8 241
+SHA256 0a5be9a2a8bc22dd12f0b792e1c1c4738804fb5a00ac4b760d5a65a598ad9127 files/digest-mercurial-0.8 241
 MD5 9c496da3816798cf4036d1c5f07cd6c5 files/digest-mercurial-0.8.1 247
+RMD160 7b4da6bcd2f69aa3e053e2f4d390bbef92094daa files/digest-mercurial-0.8.1 247
+SHA256 e96f7befb254503bfc37ed1fd2ca514ab77c3043409f1f9ccc8e91219c3bfb76 files/digest-mercurial-0.8.1 247
 MD5 f8129e7dd059951d4ff39748cf94d884 files/digest-mercurial-0.9 241
-MD5 2e06088f711c3c563c4b09f2c0594aba mercurial-0.6b_p20050807.ebuild 1023
-MD5 673d6804ef82e9f1f69a09c629088e7b mercurial-0.7.ebuild 1033
+RMD160 29e7ec22999ac83629486c352910e2614d65c23b files/digest-mercurial-0.9 241
+SHA256 8db15c292dba282f9ac7d07f2a28b98a2a243c3d556a60a73b7dfd177fe501a0 files/digest-mercurial-0.9 241
 MD5 b2bfce7cb703a45fc6ae5a54af8ce636 mercurial-0.8.1.ebuild 1190
+RMD160 2fb44d244619b776768765e4152ef62df9bc012c mercurial-0.8.1.ebuild 1190
+SHA256 4d82b66e5a50a910bb3b4fec4e9bf1a7343d7d954055adceacc67e21ceb14ae0 mercurial-0.8.1.ebuild 1190
 MD5 15059b27ac50163db47fcbb163d68520 mercurial-0.8.ebuild 1178
+RMD160 d4013c9f3b3d5f4be193958c7735bffe98a8dfbd mercurial-0.8.ebuild 1178
+SHA256 1148704c3c75fad612d614bd6b770a853f77f500cffe2923d232a986a48a01b4 mercurial-0.8.ebuild 1178
 MD5 246c0da957f141e9a051740862f3b875 mercurial-0.9.ebuild 1190
+RMD160 124b95e03a9fe407f7ad69259aaf065b5c934c94 mercurial-0.9.ebuild 1190
+SHA256 839ccfddd07d10b8ca246b2323c93102402cb0d0aeb3cdab960b228fa9be9c09 mercurial-0.9.ebuild 1190
 MD5 a665f2675f13020037bd5fe782c1c546 metadata.xml 252
+RMD160 6ee0365432e003d39675634adda53c87812f3c6c metadata.xml 252
+SHA256 8b648c81d1a574574a039336cbbb29330f22c121b1ca09c2a4d626e514fe512b metadata.xml 252
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEbH8IJrHF4yAQTrARAuXkAJwNmnvNiUXAAszARKfvyKCK0oTDtQCeKt97
+QsP5aau/1kfIcRPGfKM64Gc=
+=mFdU
+-----END PGP SIGNATURE-----
