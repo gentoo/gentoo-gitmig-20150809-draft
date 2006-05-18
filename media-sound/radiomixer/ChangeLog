@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/radiomixer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/ChangeLog,v 1.3 2006/05/18 11:47:27 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/ChangeLog,v 1.4 2006/05/18 12:00:35 jokey Exp $
+
+  18 May 2006; Markus Ullmann <jokey@gentoo.org> radiomixer-1.0.ebuild:
+  Removing the qmake call as it is done by upstreams configure now
 
 *radiomixer-1.0 (18 May 2006)
 

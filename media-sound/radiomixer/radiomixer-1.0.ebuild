@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.0.ebuild,v 1.1 2006/05/18 11:47:27 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.0.ebuild,v 1.2 2006/05/18 12:00:35 jokey Exp $
 
 inherit kde-functions eutils
 
@@ -85,16 +85,14 @@ src_compile() {
 		myconf="${myconf} --debug"
 	fi
 
-	./configure ${myconf}
-	einfo "Using QTDIR: '$QTDIR'."
-
 	# Make sure we use the right qt version
 	PATH=${QTDIR}/bin:${PATH}
 	LD_LIBRARY_PATH=${QTDIR}/lib:${LD_LIBRARY_PATH}
 	DYLD_LIBRARY_PATH=${QTDIR}/lib:${DYLD_LIBRARY_PATH}
 	export QTDIR PATH LD_LIBRARY_PATH DYLD_LIBRARY_PATH
+	einfo "Using QTDIR: '$QTDIR'."
 
-	${QTDIR}/bin/qmake -unix radiomixer.pro || die "qmake failed"
+	./configure ${myconf}
 
 	emake || die "emake failed"
 }
