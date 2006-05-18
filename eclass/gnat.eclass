@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.13 2006/05/12 13:34:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.14 2006/05/18 09:12:49 george Exp $
 #
 # This eclass provides the framework for ada lib installation with the split and
 # SLOTted gnat compilers (gnat-xxx, gnatbuild.eclass). Each lib gets built once
@@ -163,6 +163,9 @@ lib_compile() {
 # Use this function to build/install profile-specific binaries. The code
 # building/installing common stuff (docs, etc) can go before/after, as needed,
 # so that it is called only once..
+#
+# lib_compile and lib_install are passed the active gnat profile name - may be used or
+# discarded as needed..
 gnat_src_compile() {
 	debug-print-function $FUNCNAME $*
 
@@ -188,9 +191,9 @@ gnat_src_compile() {
 			# call compilation callback
 			cd ${SL}
 			gnat_filter_flags ${compilers[${i}]}
-			lib_compile
+			lib_compile ${compilers[${i}]} || die "failed compiling for ${compilers[${i}]}"
 			# call install callback
-			lib_install
+			lib_install ${compilers[${i}]} || die "failed installing profile-specific part for ${compilers[${i}]}"
 			# move installed and cleanup
 			mv ${DL} ${DL}-${compilers[${i}]}
 			rm -rf ${SL}
