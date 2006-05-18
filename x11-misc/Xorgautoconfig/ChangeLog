@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/Xorgautoconfig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/ChangeLog,v 1.15 2006/05/06 20:54:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/ChangeLog,v 1.16 2006/05/18 00:13:28 josejx Exp $
+
+*Xorgautoconfig-0.2.4 (18 May 2006)
+
+  18 May 2006; Joseph Jezak <josejx@gentoo.org>
+  +Xorgautoconfig-0.2.4.ebuild:
+  Added latest version (Modular X fixes).
 
   06 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   Xorgautoconfig-0.2.3.ebuild:
