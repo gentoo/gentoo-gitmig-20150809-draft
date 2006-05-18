@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-pango
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/ChangeLog,v 1.55 2006/05/15 08:32:49 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/ChangeLog,v 1.56 2006/05/18 17:32:20 tcort Exp $
+
+  18 May 2006; Thomas Cort <tcort@gentoo.org>
+  gst-plugins-pango-0.10.7.ebuild:
+  Added ~alpha keyword.
 
 *gst-plugins-pango-0.10.7 (15 May 2006)
 
