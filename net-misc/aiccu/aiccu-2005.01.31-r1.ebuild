@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/aiccu-2005.01.31-r1.ebuild,v 1.3 2006/05/17 14:15:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/aiccu-2005.01.31-r1.ebuild,v 1.4 2006/05/18 21:23:38 mr_bones_ Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ src_unpack () {
 	epatch ${FILESDIR}/patch_aiccu_ticservpar_${PV}
 	epatch ${FILESDIR}/init-after-ntp-client.patch
 	sed -e 's/ip -6 ro /ip -6 route /' -i common/aiccu_linux.c
-	
+
 }
 
 src_compile() {
