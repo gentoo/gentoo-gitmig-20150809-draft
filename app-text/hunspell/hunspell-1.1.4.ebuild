@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.4.ebuild,v 1.6 2006/05/12 14:35:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.4.ebuild,v 1.7 2006/05/18 00:35:46 gustavoz Exp $
 
 inherit eutils multilib
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://hunspell.sourceforge.net/"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="ncurses readline"
-KEYWORDS="~ppc ~sparc x86"
+KEYWORDS="~ppc sparc x86"
 
 DEPEND="readline? ( sys-libs/readline )
 	ncurses? ( sys-libs/ncurses )
