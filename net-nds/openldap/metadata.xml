@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-    <herd>no-herd</herd>
+    <herd>ldap</herd>
     <maintainer>
-        <email>robbat2@gentoo.org</email>
-        <name>Robin H. Johnson</name>
-    </maintainer>
-    <maintainer>
-        <email>strerror@gentoo.org</email>
-        <name>Benjamin Smee</name>
-    </maintainer>
-    <maintainer>
-        <email>jokey@gentoo.org</email>
-        <name>Markus Ullmann</name>
+        <email>ldap-bugs@gentoo.org</email>
     </maintainer>
 </pkgmetadata>
