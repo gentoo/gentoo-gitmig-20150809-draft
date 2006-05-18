@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.18 2006/05/01 17:36:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.19 2006/05/18 11:54:31 wolf31o2 Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -123,6 +123,7 @@ games-strategy/darwinia
 games-strategy/darwinia-demo
 games-strategy/dominions2
 games-strategy/majesty-demo
+games-strategy/x2-demo
 mail-client/ciphire-mail
 mail-client/mozilla-thunderbird-bin
 media-fonts/acroread-asianfonts
