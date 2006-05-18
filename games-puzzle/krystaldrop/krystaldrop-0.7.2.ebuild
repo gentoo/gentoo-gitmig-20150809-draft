@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/krystaldrop-0.7.2.ebuild,v 1.2 2004/06/24 23:06:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/krystaldrop-0.7.2.ebuild,v 1.3 2006/05/18 21:08:24 tupone Exp $
 
 inherit eutils games
 
@@ -28,7 +28,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack src_${PV}.tgz
 	cd ${S}
-	epatch "${FILESDIR}/krystaldrop-assert.patch"
+	epatch "${FILESDIR}/krystaldrop-assert.patch" \
+		"${FILESDIR}/${P}"-gcc41.patch
+
 	unpack art_${PV}.tgz
 
 	sed -i \
@@ -60,5 +62,8 @@ src_install() {
 	fperms 664 "${GAMES_STATEDIR}/${PN}/survival.sco"
 	dodoc CHANGES README
 	doman doc/kdrop.6
+	newicon art/drop.png ${PN}.png
+	make_desktop_entry kdrop "KrystalDrop" ${PN}.png
+
 	prepgamesdirs
 }
