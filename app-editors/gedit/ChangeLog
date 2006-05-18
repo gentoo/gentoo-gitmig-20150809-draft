@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.142 2006/05/15 15:36:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.143 2006/05/18 14:34:38 tcort Exp $
+
+  18 May 2006; Thomas Cort <tcort@gentoo.org> gedit-2.14.2.ebuild:
+  Added ~alpha keyword wrt Bug #131739.
 
   15 May 2006; Tobias Scherbaum <dertobi123@gentoo.org> gedit-2.14.2.ebuild:
   Added ~hppa
