@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5356 2006/05/18 20:35:05 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5357 2006/05/18 21:22:59 plasmaroo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Tim Yamin <plasmaroo@gentoo.org> (18 May 2006)
+# Security mask; bug #127104.
+sys-kernel/rsbac-sources
 
 # Tim Yamin <plasmaroo@gentoo.org> (18 May 2006)
 # Security mask; bug #112791.
