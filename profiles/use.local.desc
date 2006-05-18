@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1901 2006/05/16 16:52:59 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1902 2006/05/18 11:44:47 jokey Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -788,6 +788,8 @@ media-sound/ncmpc:raw-mode - raw terminal mode
 media-sound/ncmpc:search-screen - Enable search screen (EXPERIMENTAL)
 media-sound/prokyon3:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
 media-sound/quodlibet:musepack - Enable support for the musepack audio codec
+media-sound/radiomixer:hwmixer - Use hardware mixer instead of internal mixer routines
+media-sound/radiomixer:songdb - Enable usage of SongDB backend
 media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), usefull for slower computers
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:avahi - support for avahi mdns daemon
