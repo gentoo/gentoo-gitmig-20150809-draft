@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r2.ebuild,v 1.4 2006/05/06 08:45:02 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r2.ebuild,v 1.5 2006/05/18 17:20:37 suka Exp $
 
 inherit check-reqs eutils fdo-mime flag-o-matic kde-functions mono toolchain-funcs
 
@@ -115,7 +115,7 @@ pkg_setup() {
 	CHECKREQS_DISK_BUILD="5120"
 	check_reqs
 
-	strip-linguas af ar az be bg bs ca cs cy da de el en en_CA en_GB en_US en_ZA es et eu fi fr ga gl gu he hi hr hu is it ja ka km ko lt lv mk ms nb ne nl nn no nr nso pa pl pt pt_BR ru rw sk sl sq sr st sv sw th tr ts uk vi wa xh zh_CN zh_TW zu
+	strip-linguas af ar be_BY bg bn bs ca cs cy da de el en en_GB en_US en_ZA es et fa fi fr gu_IN he hi_IN hr hu it ja km ko lt mk nb nl nn nr ns pa_IN pl pt pt_BR ru rw sh_YU sk sl sr_CS st sv sw_TZ th tn tr ts vi xh zh_CN zh_TW zu
 
 	if [ -z "${LINGUAS}" ]; then
 		export LINGUAS_OOO="en-US"
