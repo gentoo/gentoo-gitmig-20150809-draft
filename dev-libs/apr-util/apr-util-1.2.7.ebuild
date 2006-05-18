@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.2.7.ebuild,v 1.2 2006/04/19 01:00:25 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.2.7.ebuild,v 1.3 2006/05/18 18:19:19 vericgar Exp $
 
-inherit eutils libtool
+inherit eutils flag-o-matic libtool
 
 DESCRIPTION="Apache Portable Runtime Library"
 HOMEPAGE="http://apr.apache.org/"
@@ -27,6 +27,8 @@ DEPEND="dev-libs/expat
 # but in reality the build system is broken for it....
 
 src_compile() {
+	filter-ldflags -Wl,--as-needed --as-needed
+
 	elibtoolize || die "elibtoolize failed"
 
 	local myconf=""

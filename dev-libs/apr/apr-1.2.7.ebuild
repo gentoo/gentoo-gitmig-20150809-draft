@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.2.7.ebuild,v 1.4 2006/05/18 18:13:38 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.2.7.ebuild,v 1.5 2006/05/18 18:14:40 vericgar Exp $
 
 inherit flag-o-matic libtool
 
@@ -34,7 +34,7 @@ src_compile() {
 		einfo "Using /dev/random as random device"
 		myconf="${myconf} --with-devrandom=/dev/random"
 	fi
-	
+
 	# We pre-load the cache with the correct answer!  This avoids
 	# it violating the sandbox.  This may have to be changed for
 	# non-Linux systems or if sem_open changes on Linux.  This
