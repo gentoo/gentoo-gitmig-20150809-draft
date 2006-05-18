@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r2.ebuild,v 1.29 2006/04/18 14:42:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r2.ebuild,v 1.30 2006/05/18 13:46:05 truedfx Exp $
+
+inherit eutils
 
 DESCRIPTION="GL extrusion library"
 HOMEPAGE="http://www.linas.org/gle"
@@ -18,6 +20,8 @@ DEPEND="virtual/opengl
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}"/configure-LANG.patch
 
 	# Replace inclusion of malloc.h with stdlib.h as needed by Mac OS X and
 	# FreeBSD.

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gle
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.17 2006/04/18 14:42:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.18 2006/05/18 13:46:05 truedfx Exp $
+
+  18 May 2006; Harald van Dĳk <truedfx@gentoo.org>
+  +files/configure-LANG.patch, gle-3.0.1-r2.ebuild:
+  Fix compilation with et_EE locale (#133625)
 
   18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> gle-3.0.1-r2.ebuild:
   Replace malloc.h inclusions with stdlib.h inclusions to build on FreeBSD and
