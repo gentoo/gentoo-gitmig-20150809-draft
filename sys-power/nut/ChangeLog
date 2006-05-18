@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/nut
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.2 2006/05/18 06:05:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.3 2006/05/18 23:28:07 robbat2 Exp $
+
+*nut-2.0.3-r1 (18 May 2006)
+
+  18 May 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/lighttpd_nut.conf, +files/upsstats-upsset-link.patch,
+  +nut-2.0.3-r1.ebuild:
+  Clean up permissions code, add lighttpd config, and patch for upsset.cgi
+  link from upsstats.cgi.
 
 *nut-2.0.3 (18 May 2006)
 
