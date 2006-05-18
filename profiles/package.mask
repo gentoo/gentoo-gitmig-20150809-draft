@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5351 2006/05/16 14:18:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5352 2006/05/18 09:30:22 ferdy Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# Fernando J. Pereda <ferdy@gentoo.org> (18 May 2006)
+# This ebuild is for patch testing purposes. Things might break.
+>=mail-client/mutt-1.5.11-r30
 
 # Thilo Bangert <bangert@gentoo.org> (15 May 2006)
 # masked for testing - integration stuff with other crons not there yet
