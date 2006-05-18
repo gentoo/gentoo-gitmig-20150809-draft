@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/make.defaults,v 1.13 2006/04/19 14:48:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/make.defaults,v 1.14 2006/05/18 14:22:12 wolf31o2 Exp $
 
 # Default USE flags for amd64 (Systems and GRP)
 USE="alsa avi berkdb crypt cups eds emboss encode foomaticdb gif gnome gpm gstreamer gtk gtk2 imlib ipv6 jpeg kde lzw lzw-tiff mp3 mpeg ncurses nls opengl pam pdflib perl png python qt quicktime readline sdl spell ssl tcpd tiff usb zlib X xpm xv zlib -java"
@@ -12,7 +12,3 @@ CHOST="x86_64-pc-linux-gnu"
 
 CFLAGS="-O2 -pipe"
 CXXFLAGS="${CFLAGS}"
-
-# 2006/03/29 - Stefan Schweizer <genstef@gentoo.org>
-# isdn USE flag defaults
-USE="${USE} pppd isdnlog"

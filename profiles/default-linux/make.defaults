@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.18 2006/04/21 09:11:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.19 2006/05/18 14:22:12 wolf31o2 Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -19,6 +19,10 @@ USE="${USE} fortran"
 # 2006/03/07 - Donnie Berkholz <spyderous@gentoo.org>
 # Modular X: Support direct rendering by default
 USE="${USE} dri"
+
+# 2006/03/29 - Stefan Schweizer <genstef@gentoo.org>
+# isdn USE flag defaults
+USE="${USE} pppd isdnlog"
 
 # 2006/04/19 - Chris Gianelloni <wolf31o2@gentoo.org>
 # Make sure dev-lang/php works right.  See bug #120088 for more info.
