@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.20 2006/05/15 23:43:33 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.21 2006/05/18 18:38:22 chutzpah Exp $
+
+  18 May 2006; Patrick McLean <chutzpah@gentoo.org> drscheme-301-r2.ebuild:
+  Add modified version of patch suggested by Wormo in comment #6 on bug #128635.
 
   15 May 2006; Mark Loeser <halcy0n@gentoo.org> drscheme-301-r2.ebuild:
   Stable on x86; bug #128635

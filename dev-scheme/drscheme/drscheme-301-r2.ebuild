@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-301-r2.ebuild,v 1.3 2006/05/15 23:43:33 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-301-r2.ebuild,v 1.4 2006/05/18 18:38:22 chutzpah Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -29,6 +29,7 @@ DEPEND="|| ( ( x11-libs/libICE
 
 S=${WORKDIR}/plt/src
 SED_FILES="bin/framework-test bin/framework-test-engine collects/info-domain/compiled/cache.ss"
+GL_COLLECTS="sgl games/gobblet games/checkers games/jewel games/gl-board-game"
 
 src_unpack() {
 	unpack ${A}
@@ -36,6 +37,15 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-fPIC.patch"
 	epatch "${FILESDIR}/${P}-no-setfont.patch"
+
+	if ! use opengl ; then
+		# move aside the opengl-dependent stuff or install will fail
+		mkdir collects-disabled
+
+		for dir in ${GL_COLLECTS}; do
+			mv -f collects/${dir} collects-disabled/$(basename ${dir})
+		done
+	fi
 }
 
 src_compile() {
