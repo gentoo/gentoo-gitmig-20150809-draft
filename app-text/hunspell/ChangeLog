@@ -1,6 +1,14 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.8 2006/05/18 00:35:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.9 2006/05/18 12:37:19 kevquinn Exp $
+
+*hunspell-1.1.4-r1 (18 May 2006)
+
+  18 May 2006; Kevin F. Quinn <kevquinn@gentoo.org>
+  +files/hunspell-1.1.4-libtool.patch,
+  +files/hunspell-1.1.4-renameexes.patch, +hunspell-1.1.4-r1.ebuild:
+  Build library as .so rather than .a; resolves bugs #133583 and #126452.
+  Thanks to Hanno Meyer-Thurow and the ever-present Flameeyes.
 
   18 May 2006; Gustavo Zacarias <gustavoz@gentoo.org> hunspell-1.1.4.ebuild:
   Stable on sparc
