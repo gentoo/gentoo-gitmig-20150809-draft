@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-2.20050306.ebuild,v 1.8 2006/02/19 14:03:30 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-2.20050306.ebuild,v 1.9 2006/05/19 17:59:25 corsair Exp $
 
 MY_P="${P/-2./-}"
 DESCRIPTION="Configurable and full featured theme for FVWM, with lots of transparency."
@@ -8,7 +8,7 @@ HOMEPAGE="http://fvwm-crystal.org/"
 SRC_URI="http://download.gna.org/${PN}/20050306/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="ppc ~ppc64 sparc x86"
 IUSE="xmms"
 RDEPEND=">=x11-wm/fvwm-2.5.12
 	app-admin/sudo

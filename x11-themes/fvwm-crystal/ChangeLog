@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/fvwm-crystal
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.35 2006/02/19 21:44:25 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.36 2006/05/19 17:59:25 corsair Exp $
+
+  19 May 2006; Markus Rothe <corsair@gentoo.org>
+  fvwm-crystal-2.20050306.ebuild, fvwm-crystal-3.0.ebuild,
+  fvwm-crystal-3.0.3.ebuild:
+  Added ~ppc64
 
 *fvwm-crystal-3.0.3 (19 Feb 2006)
 
