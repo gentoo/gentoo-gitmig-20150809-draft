@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1904 2006/05/19 08:12:09 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1905 2006/05/19 13:49:23 zzam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -729,6 +729,7 @@ media-plugins/eq-xmms:sse-filters - Enable SSE-based equalizer's implementation
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-plugins/mythphone:festival - Enable festival support
 media-plugins/vdr-pvr350:yaepg - Enables full support for the ouput format of vdr-yaepg
+media-plugins/vdr-softdevice:mmxext - enables mmx2 support
 media-radio/xastir:ax25 - Enable ax25 support
 media-radio/xastir:festival - Enable festival support
 media-radio/xastir:shape - Enable shapelib support
