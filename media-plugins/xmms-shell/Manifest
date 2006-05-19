@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 33edd908e099f9edadfcaf8958af050c xmms-shell-0.99.0-r1.ebuild 792
-MD5 f9ddfc55792907e04e0b86dcf18d0a84 ChangeLog 3398
-MD5 0c9290ede5b687a75493d6c2398ad9e7 xmms-shell-0.99.3-r3.ebuild 1330
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 30d875b5125e84fce576af17cc7ad83c files/xmms-shell-readline.patch 280
-MD5 1e103ba06674a17c1fe67ff49a02059d files/xmms-shell-playlist.patch 2544
-MD5 253375baf62ccb75c71216b4ee5a5414 files/xmms-shell-null-skin.patch 477
+MD5 42ef05bf51b41077ebfbd72c11ed6811 ChangeLog 3521
 MD5 f8b236d54106a623e0cf91e802d2af27 files/digest-xmms-shell-0.99.0-r1 68
-MD5 636c67df262fad8468681da1f715ee6b files/xmms-shell-gcc3.patch 2465
 MD5 79d46e1306a0de2e2888d27be745a4f6 files/digest-xmms-shell-0.99.3-r3 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDIX/jj5H05b2HAEkRApdOAJ9S/Qpb9rpMqT3ufwX6rWCWcGqmjACgpf7T
-/5F+4Cc6rZoqcZdTvWHvGiE=
-=4qrO
------END PGP SIGNATURE-----
+MD5 636c67df262fad8468681da1f715ee6b files/xmms-shell-gcc3.patch 2465
+MD5 253375baf62ccb75c71216b4ee5a5414 files/xmms-shell-null-skin.patch 477
+MD5 1e103ba06674a17c1fe67ff49a02059d files/xmms-shell-playlist.patch 2544
+MD5 30d875b5125e84fce576af17cc7ad83c files/xmms-shell-readline.patch 280
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 b4ebf67af7ecd6168dbf81244fd65fa5 xmms-shell-0.99.0-r1.ebuild 797
+MD5 829385d34f082e3fa6967457485395f8 xmms-shell-0.99.3-r3.ebuild 1336
