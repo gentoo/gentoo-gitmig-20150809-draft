@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/dired-sort-menu
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dired-sort-menu/ChangeLog,v 1.1 2006/05/19 08:53:25 mkennedy Exp $
+
+*dired-sort-menu-1.26 (19 May 2006)
+
+  19 May 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/50dired-sort-menu-gentoo.el, +metadata.xml,
+  +dired-sort-menu-1.26.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
+
