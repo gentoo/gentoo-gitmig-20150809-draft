@@ -1,6 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1-r1.ebuild,v 1.2 2006/05/18 20:44:34 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.1-r1.ebuild,v 1.3 2006/05/19 16:17:50 cparrott Exp $
+
+# Note to users of hardened gcc-3.x:
+#
+# If you emerge ghc-bin with hardened gcc it should work fine (because
+# we turn off the hardened features that would otherwise break ghc).
+# However, emerging ghc-bin while using a vanilla gcc and then switching
+# to hardened gcc (using gcc-config) will leave you with a broken ghc. To
+# fix it you would need to either switch back to vanilla gcc or re-emerge
+# ghc-bin (or ghc). Note that also if you are using hardened gcc-3.x and
+# you switch to gcc-4.x that this will also break ghc and you'll need to
+# re-emerge ghc-bin (or ghc). People using vanilla gcc can switch between
+# gcc-3.x and 4.x with no problems.
 
 inherit base multilib flag-o-matic toolchain-funcs ghc-package
 

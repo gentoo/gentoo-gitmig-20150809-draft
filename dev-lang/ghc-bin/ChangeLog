@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.50 2006/05/18 20:44:34 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.51 2006/05/19 16:17:50 cparrott Exp $
+
+  19 May 2006; Chris Parrott <cparrott@gentoo.org> ghc-bin-6.4.1-r1.ebuild,
+  ghc-bin-6.4.2.ebuild:
+  Added comments to ebuild, warning hardened gcc users that ghc
+  will break when switching from vanilla gcc to hardened gcc
+  unless the user reemerges ghc after making the switch.
 
   18 May 2006; Duncan Coutts <dcoutts@gentoo.org> ghc-bin-6.4.1-r1.ebuild,
   ghc-bin-6.4.2.ebuild:
