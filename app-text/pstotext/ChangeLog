@@ -1,6 +1,13 @@
 # ChangeLog for app-text/pstotext
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.20 2006/05/08 18:42:28 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.21 2006/05/19 10:00:41 ehmsen Exp $
+
+*pstotext-1.9-r2 (19 May 2006)
+
+  19 May 2006; Martin Ehmsen <ehmsen@gentoo.org>
+  files/pstotext-1.9-quote-chars-fix.patch, -pstotext-1.9-r1.ebuild,
+  +pstotext-1.9-r2.ebuild:
+  Fixed pstotext-1.9-quote-chars-fix.patch so input from stdin works.
 
   08 May 2006; Ferris McCormick <fmccor@gentoo.org> pstotext-1.9-r1.ebuild:
   Stable for sparc, Bug #132662 --- builds without incident and seems fine.
