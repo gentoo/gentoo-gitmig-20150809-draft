@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4.5.3.ebuild,v 1.1 2006/05/16 12:51:05 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4.5.3.ebuild,v 1.2 2006/05/19 13:15:25 rl03 Exp $
 
 inherit webapp
 MY_P="Metadot${PV}"
 S=${WORKDIR}/${PN}
 
-IUSE=""
+IUSE="apache2"
 
 DESCRIPTION="Metadot is a CMS with file, page and link management, and collaboration features."
 HOMEPAGE="http://www.metadot.com"
@@ -16,9 +16,11 @@ KEYWORDS="~x86 ~ppc"
 
 DEPEND=""
 RDEPEND="<dev-db/mysql-5
-	>=net-www/apache-1.3.6
 	>=dev-lang/perl-5.6
-	>=www-apache/mod_perl-1.21
+	!apache2? ( =net-www/apache-1*
+		<www-apache/mod_perl-1.99 )
+	apache2? ( =net-www/apache-2*
+		=www-apache/mod_perl-2* )
 
 	dev-perl/DBI
 	>=dev-perl/DBD-mysql-2.1027
@@ -60,6 +62,8 @@ src_install() {
 	cp -R [[:lower:]][[:lower:]]* ${D}/${MY_HTDOCSDIR}
 
 	cp ${FILESDIR}/${PN}.conf ${D}/${MY_HOSTROOTDIR}
+	use apache2 && sed -i "s|Apache::Registry|Modperl::Registry|" \
+		${D}/${MY_HOSTROOTDIR}/${PN}.conf
 
 	webapp_serverowned ${MY_HTDOCSDIR}
 	webapp_serverowned ${MY_HTDOCSDIR}/sitedata/public
