@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pstotext
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.23 2006/05/19 12:28:08 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.24 2006/05/19 12:39:39 fmccor Exp $
+
+  19 May 2006; Ferris McCormick <fmccor@gentoo.org> Manifest:
+  Remove pstotext-1.9-r1 at developer request --- Bug #132662 .
 
   19 May 2006; Ferris McCormick <fmccor@gentoo.org> pstotext-1.9-r2.ebuild:
   Stable on sparc (Security Bug #132662 + stdin problems fixed).
