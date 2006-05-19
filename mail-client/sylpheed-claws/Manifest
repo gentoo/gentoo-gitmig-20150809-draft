@@ -1,58 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX ldif-buffer-overflow-fix.diff 5007 RMD160 1354a6bd2687430b628b78aaf43f5c793d2f0704 SHA1 424e1dfca06488f605b9611160020227ecdd03ac SHA256 f820856aac43571b048bf83607499a08e9a4792264c04178c9735e5c1a45fedd size 5007
-MD5 06d23c04b3d6ddfb1431c22ecc5b28f6 files/ldif-buffer-overflow-fix.diff 5007
-RMD160 1354a6bd2687430b628b78aaf43f5c793d2f0704 files/ldif-buffer-overflow-fix.diff 5007
-SHA256 f820856aac43571b048bf83607499a08e9a4792264c04178c9735e5c1a45fedd files/ldif-buffer-overflow-fix.diff 5007
-AUX procmime.patch 977 RMD160 39a51a4d654759b15d1644a79fb6e8921130df3c SHA1 d76929f6dfc2179281f7ccee5789aab4e970ba9e SHA256 6b70df7ea239873c09cd26ce57b29f8990e6d66c8dbe65e97bf6d69fa9cd0a56 size 977
-MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
-RMD160 39a51a4d654759b15d1644a79fb6e8921130df3c files/procmime.patch 977
-SHA256 6b70df7ea239873c09cd26ce57b29f8990e6d66c8dbe65e97bf6d69fa9cd0a56 files/procmime.patch 977
-DIST sylpheed-claws-1.0.5.tar.bz2 3268626 RMD160 f2708b5d69bc9a5025812511fde04eca7782e367 SHA256 d596bd205f967f067a7edb244105d460106bc63df51cb52384d80aaabc125902 size 3268626
-DIST sylpheed-claws-2.0.0.tar.bz2 3764105 RMD160 a22db4c76a324dc166f10ff6f189c5927530526a SHA256 6f7e7c2ec81d6fa608f0efc785a81928dbafad3eae8b3ac3c58d3b3413eb344d size 3764105
-DIST sylpheed-claws-2.1.1.tar.bz2 3877632 RMD160 cbe8062d2b17566bc2691637e8b7afcb18e9912d SHA256 468f6e56e21076d4053a2b1ee6284c970055391d23f0429aeceefae60c3ca482 size 3877632
-DIST sylpheed-claws-2.2.0.tar.bz2 4634732 RMD160 8d6f141cc22f88bc2c8fdf306c4b3bf4796a848f SHA256 3f1c51ab33fcd8df71dcaa7237119c76a6ca080b2bf447da79f33b49f0d29636 size 4634732
-EBUILD sylpheed-claws-1.0.5-r1.ebuild 3894 RMD160 94d6e87bebd4c7199bb47260836a40f8cd016187 SHA1 5f8c5c96bdc6a95a2e3dc43ce8d867466e981366 SHA256 507c50c75a8ccc4f1eaf11f58407573f81786d56190394fdb6420af248e0c825 size 3894
-MD5 74abb664d838528a042d54de2945ebdc sylpheed-claws-1.0.5-r1.ebuild 3894
-RMD160 94d6e87bebd4c7199bb47260836a40f8cd016187 sylpheed-claws-1.0.5-r1.ebuild 3894
-SHA256 507c50c75a8ccc4f1eaf11f58407573f81786d56190394fdb6420af248e0c825 sylpheed-claws-1.0.5-r1.ebuild 3894
-EBUILD sylpheed-claws-2.0.0.ebuild 4317 RMD160 fb9ca26eb681523b6dcc91d59245a20f91b07552 SHA1 caa0776a7d07024a76560cc43610aa88cfebf2d3 SHA256 f6fff81c494e813379ba253fe3b0c2e36e3ceacc9a0403d88fd60265501a6d28 size 4317
-MD5 e530b3c0a8373fbf8382cf62fe9216ac sylpheed-claws-2.0.0.ebuild 4317
-RMD160 fb9ca26eb681523b6dcc91d59245a20f91b07552 sylpheed-claws-2.0.0.ebuild 4317
-SHA256 f6fff81c494e813379ba253fe3b0c2e36e3ceacc9a0403d88fd60265501a6d28 sylpheed-claws-2.0.0.ebuild 4317
-EBUILD sylpheed-claws-2.1.1.ebuild 4432 RMD160 8642631586e2de810d6ecbffc8602e18c00a75fc SHA1 de568362f9979394f85037d35b9b64c45e0d1dc5 SHA256 5b4fc3306fe3090b45df7f8132c07e010a9898bd3a1fc8a2d92f05c2117b4a63 size 4432
-MD5 5f97a1d3a4db5028b84cd00ee6780a77 sylpheed-claws-2.1.1.ebuild 4432
-RMD160 8642631586e2de810d6ecbffc8602e18c00a75fc sylpheed-claws-2.1.1.ebuild 4432
-SHA256 5b4fc3306fe3090b45df7f8132c07e010a9898bd3a1fc8a2d92f05c2117b4a63 sylpheed-claws-2.1.1.ebuild 4432
-EBUILD sylpheed-claws-2.2.0.ebuild 4473 RMD160 fb3ecaf4c53da73935d9fa3d010c48b23769bf4b SHA1 55ee870fd0ee000b7a66baf34f7d6df1557c1ac3 SHA256 37dc1e9be84b232dc8fc1ec50c77197c7e0b5d361bc6f38a6ffab7bdb5eaba1d size 4473
-MD5 d221ac69c5b1f7c98d8bf24072f19913 sylpheed-claws-2.2.0.ebuild 4473
-RMD160 fb3ecaf4c53da73935d9fa3d010c48b23769bf4b sylpheed-claws-2.2.0.ebuild 4473
-SHA256 37dc1e9be84b232dc8fc1ec50c77197c7e0b5d361bc6f38a6ffab7bdb5eaba1d sylpheed-claws-2.2.0.ebuild 4473
-MISC ChangeLog 29329 RMD160 afceadcbc708f1a7b1e6c583c1c9898f8dc9cd96 SHA1 3f5fe3e09705deaca5a609d9c2eeb44fde3d73e7 SHA256 e663306dc7298560ea01f02016e2f54b6767e66538e5c04a41c10caad7eefa4e size 29329
-MD5 2fcb48d6e665f79c4141232aafb84f3e ChangeLog 29329
-RMD160 afceadcbc708f1a7b1e6c583c1c9898f8dc9cd96 ChangeLog 29329
-SHA256 e663306dc7298560ea01f02016e2f54b6767e66538e5c04a41c10caad7eefa4e ChangeLog 29329
-MISC metadata.xml 269 RMD160 39d775de55f9963f8946feaf088aa0324770bacb SHA1 4fd7b285049d0e587f89e86becf06c0fd77bae6d SHA256 3787959f4a775b1e787b35ff8380949d8f68bd67b81c2cf5a748733c9740cb94 size 269
-MD5 82e806ed62f0596fb7bef493d225712f metadata.xml 269
-RMD160 39d775de55f9963f8946feaf088aa0324770bacb metadata.xml 269
-SHA256 3787959f4a775b1e787b35ff8380949d8f68bd67b81c2cf5a748733c9740cb94 metadata.xml 269
+MD5 e1abbed125860076defaa8482e57013e ChangeLog 29442
 MD5 2bb20c68dabefea0c093bba1ad227276 files/digest-sylpheed-claws-1.0.5-r1 268
-RMD160 97526fc884aaf050dbdeb08127d6542e1ff21afa files/digest-sylpheed-claws-1.0.5-r1 268
-SHA256 42b4fe0b254344b8161dffe8df51ec09aeebc19cffaa32fee7c0adcf9f677c04 files/digest-sylpheed-claws-1.0.5-r1 268
 MD5 a1eac34c9f5178a960a23b5cb711365a files/digest-sylpheed-claws-2.0.0 268
-RMD160 adcbd602816cd020626fa5ca6f56ed663b50bd48 files/digest-sylpheed-claws-2.0.0 268
-SHA256 05805ff28a06f60706cc6ca703f70e9edcd1768dc2b134b48e1d3d664d844fa7 files/digest-sylpheed-claws-2.0.0 268
 MD5 795c00217b60d952c251dc50023f0f20 files/digest-sylpheed-claws-2.1.1 268
-RMD160 df6931945b45193a720ec372eca9cdb4bba81492 files/digest-sylpheed-claws-2.1.1 268
-SHA256 021f7ea8bb9425349fde08f448737b4222d8fb486498459a14e0f19b66a0e04e files/digest-sylpheed-claws-2.1.1 268
 MD5 05d4aeee9bac4e1fb338e8e5492ff24d files/digest-sylpheed-claws-2.2.0 268
-RMD160 454e46f19d871e9660c2ff28443b350fc574b7db files/digest-sylpheed-claws-2.2.0 268
-SHA256 573a4fb0974c9c7fe07e7b38ba97f0a736d784e3f275604342efae0920d16ac8 files/digest-sylpheed-claws-2.2.0 268
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEY0c26J2i8a8J4okRAmNmAJ4txOpF28IsH5XnoKtF1WL4QiJMXQCfWtGR
-Lm6eAEaE3P3wDk63b5XgIaQ=
-=w6UN
------END PGP SIGNATURE-----
+MD5 06d23c04b3d6ddfb1431c22ecc5b28f6 files/ldif-buffer-overflow-fix.diff 5007
+MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
+MD5 82e806ed62f0596fb7bef493d225712f metadata.xml 269
+MD5 74abb664d838528a042d54de2945ebdc sylpheed-claws-1.0.5-r1.ebuild 3894
+MD5 bb34e887ef7b43d5f1ab2bf3190e0147 sylpheed-claws-2.0.0.ebuild 4317
+MD5 5f97a1d3a4db5028b84cd00ee6780a77 sylpheed-claws-2.1.1.ebuild 4432
+MD5 d221ac69c5b1f7c98d8bf24072f19913 sylpheed-claws-2.2.0.ebuild 4473
