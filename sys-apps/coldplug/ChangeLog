@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/coldplug
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/ChangeLog,v 1.14 2006/05/12 10:02:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/ChangeLog,v 1.15 2006/05/19 23:43:38 gregkh Exp $
+
+*coldplug-20040920-r1 (19 May 2006)
+
+  19 May 2006; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +coldplug-20040920-r1.ebuild:
+  Fix a few outstanding coldplug bugs (block against udev and don't download
+  tarball.)
 
   12 May 2006; Jeroen Roovers <jer@gentoo.org> coldplug-20040920.ebuild:
   Stable on hppa.
