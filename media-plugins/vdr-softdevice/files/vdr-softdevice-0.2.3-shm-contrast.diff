@@ -1,0 +1,17 @@
+Index: video-xv.c
+===================================================================
+RCS file: /cvsroot/softdevice/softdevice/video-xv.c,v
+retrieving revision 1.54
+diff -u -r1.54 video-xv.c
+--- video-xv.c	24 Apr 2006 22:56:47 -0000	1.54
++++ video-xv.c	15 May 2006 20:32:17 -0000
+@@ -705,7 +705,9 @@
+       PutXvImage();
+       XSync(dpy, False);
+     }
++#ifndef STAND_ALONE
+     attributeStore.CheckVideoParmChange();
++#endif
+   }
+ 
+   if(cursor_visible == True) {

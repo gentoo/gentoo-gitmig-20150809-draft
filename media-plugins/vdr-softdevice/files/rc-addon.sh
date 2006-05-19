@@ -9,6 +9,12 @@ plugin_pre_vdr_start() {
 	fi
 }
 
+plugin_pre_vdr_stop() {
+	if [[ ${SOFTDEVICE_VIDEO_OUT} == "shm" ]]; then
+		killall ShmClient
+	fi
+}
+
 # for compatibility
 if [[ ${SCRIPT_API:-1} -lt 2 ]]; then
         plugin_pre_vdr_start

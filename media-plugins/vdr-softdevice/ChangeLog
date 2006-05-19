@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-softdevice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.2 2006/05/11 19:24:58 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.3 2006/05/19 13:53:24 zzam Exp $
+
+*vdr-softdevice-0.2.3.20060511-r2 (19 May 2006)
+
+  19 May 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-softdevice-0.2.3-shm-contrast.diff, files/rc-addon.sh,
+  +vdr-softdevice-0.2.3.20060511-r2.ebuild:
+  Added useflags mmx and mmxext, See Bug #133698. Add another shm-xv-contrast
+  patch.
 
 *vdr-softdevice-0.2.3.20060511 (11 May 2006)
 
