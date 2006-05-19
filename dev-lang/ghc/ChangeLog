@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.102 2006/05/18 20:42:44 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.103 2006/05/19 16:06:10 dcoutts Exp $
+
+  19 May 2006; Duncan Coutts <dcoutts@gentoo.org> ghc-6.4.1-r3.ebuild,
+  ghc-6.4.2.ebuild:
+  Add note to users of hardened gcc-3.x
 
   18 May 2006; Duncan Coutts <dcoutts@gentoo.org>
   +files/ghc-6.4.2-sparc32plus.patch, ghc-6.4.1-r3.ebuild, ghc-6.4.2.ebuild:
