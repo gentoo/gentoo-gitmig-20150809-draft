@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.27 2006/05/02 09:34:22 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.28 2006/05/19 18:22:35 corsair Exp $
+
+  19 May 2006; Markus Rothe <corsair@gentoo.org> libetpan-0.45.ebuild:
+  Stable on ppc64; bug #126838
 
   02 May 2006; Andrej Kacian <ticho@gentoo.org> libetpan-0.45.ebuild:
   Force building with -j1. Bug #126848, reported by Marius Mauch <genone at
