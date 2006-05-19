@@ -1,34 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5089ba1248326fc44dbac35d34cee55d ChangeLog 962
-RMD160 37e63deecb601bdd058e458014f4d36b427f36b6 ChangeLog 962
-SHA256 97b082321ab9a5cd6cc5eff43fa67849886a385403cc216c43380eb48ccf343d ChangeLog 962
+MD5 3dc93dec44b9845704562317ae51d4b7 ChangeLog 1077
 MD5 590e1e11b8f7cff565a3edd7c719dc6b files/digest-noad-0.6.0-r2 63
-RMD160 5d6d1b4be93b033891e1d8c636af4de57140b167 files/digest-noad-0.6.0-r2 63
-SHA256 276682f0e85fceb14c392073cf383fcb20a0b4912a53746e0af25c5bf7fa4279 files/digest-noad-0.6.0-r2 63
 MD5 59537f1f5164f2b2bbb0c0a5d3174112 files/noad-0.6.0-directoryfix.diff 1254
-RMD160 f7ed26ef2478d7a3a622e288642615b8da46318b files/noad-0.6.0-directoryfix.diff 1254
-SHA256 edbadaaafcb6677b73cc368062e21dd81c81d35709cd55bd87a759068d5804ed files/noad-0.6.0-directoryfix.diff 1254
 MD5 129ab2c83615337c4242c2ec9a47a3c5 files/reccmds.noad.conf 51
-RMD160 1397191e9419547de617b3103b4b6f642d86add9 files/reccmds.noad.conf 51
-SHA256 56039e2703c6a39bb6a7d452b99ef626b368eaa3824f76ecae081f55da651a8e files/reccmds.noad.conf 51
 MD5 5ef1ed25dd3f6d4fc5a1fa3cdf773add files/record-20-noad.sh 1231
-RMD160 17d0de981fabbf432d28aae2fb3dfb1a7fe5c19f files/record-20-noad.sh 1231
-SHA256 0e1ef3878eae6bea280a38dc2d922acab540f7135182f883dc095d258789af75 files/record-20-noad.sh 1231
 MD5 4dd7bddd8e2fc8e13a875799b8491196 files/vdraddon.noad 782
-RMD160 5e92c19e19ccc171792aacfc2ac9ce3b58762129 files/vdraddon.noad 782
-SHA256 abbb5b4a020be0ad7874d5facd682a093716bbf2e3b0be224260fd7cdaa55aa3 files/vdraddon.noad 782
 MD5 a155e781925071837c62a6c0e4926a2d metadata.xml 445
-RMD160 0ac557ba851af8e6522862a45d04b65965b30c95 metadata.xml 445
-SHA256 34c7fdcb7a456284c5eb28ebb9019c4014f8b7daef435430373e5cb1289ae1ea metadata.xml 445
-MD5 1847e0376bc5e630267f2d9f5ab44bd7 noad-0.6.0-r2.ebuild 1989
-RMD160 bf23e6ba4745ef236adb40d38d3aa98f68a8a9cb noad-0.6.0-r2.ebuild 1989
-SHA256 06c50abc20423af18e765f3eca5814b9f2478232c6a954041056962db579be3c noad-0.6.0-r2.ebuild 1989
+MD5 4cd2f4d35f7facb64cf0b919fdd08b6d noad-0.6.0-r2.ebuild 1994
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
+Comment: no further Information
 
-iD8DBQFEQLYfZfSl1Kp5KmoRAlnzAJ9wsOH6E8WF8yYdwygkfZ3vapnKxQCg7/V8
-xW6WnZQJ6E2+6Q4SmsY7WB8=
-=4nf3
+iD8DBQFEbkYZdn07HTTCgIoRAga7AJ9PGrhSKUS7ok2cl3DX6wpZ+8I4zQCfYCmQ
+/rZiKJHsQ+dx5fhT9UevTuw=
+=Cffs
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r2.ebuild,v 1.4 2006/04/15 08:59:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r2.ebuild,v 1.5 2006/05/19 22:26:16 hd_brummy Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.freepgs.com/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE="ffmpeg imagemagick"
 
 DEPEND="media-libs/libmpeg2
@@ -35,7 +35,7 @@ src_compile() {
 		$(use_with ffmpeg) \
 		$(use_with imagemagick magick) \
 		--with-tools \
-		--with-mpeginlude=/usr/include/mpeg2dec
+		--with-mpeginclude=/usr/include/mpeg2dec
 
 	emake || die "emake faild"
 }

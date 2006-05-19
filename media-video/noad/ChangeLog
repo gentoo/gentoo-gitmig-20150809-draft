@@ -1,6 +1,9 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.4 2006/04/15 08:59:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.5 2006/05/19 22:26:16 hd_brummy Exp $
+
+  19 May 2006; Joerg Bornkessel <hd_brummy@gentoo.org> noad-0.6.0-r2.ebuild:
+  typo fixed; set stabel on x86
 
   15 Apr 2006; Matthias Schwarzott <zzam@gentoo.org> noad-0.6.0-r2.ebuild:
   Set correct homepage, thanks to Lars Gregori
