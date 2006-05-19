@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.5 2006/03/11 11:50:30 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.6 2006/05/19 05:13:17 squinky86 Exp $
 
-inherit flag-o-matic wxwidgets ghc-package
+inherit flag-o-matic wxwidgets ghc-package multilib
 
 DESCRIPTION="a portable and native GUI library for Haskell"
 HOMEPAGE="http://wxhaskell.sourceforge.net/"
@@ -62,7 +62,7 @@ src_compile() {
 		--wx-config="${WX_CONFIG}" \
 		--prefix=/usr \
 		--with-opengl \
-		--libdir=/usr/lib/${P} \
+		--libdir=/usr/$(get_libdir)/${P} \
 		--package-conf=${S}/$(ghc-localpkgconf) \
 		|| die "./configure failed"
 
@@ -81,9 +81,9 @@ src_install() {
 	emake -j1 install-files DESTDIR="${D}" || die "make install failed"
 
 	# the .so needs to be on the lib path
-	mkdir -p ${D}/usr/lib
-	for f in ${D}/usr/lib/${P}/libwxc-*.so; do
-		mv ${f} ${D}/usr/lib/
+	mkdir -p ${D}/usr/$(get_libdir)
+	for f in ${D}/usr/$(get_libdir)/${P}/libwxc-*.so; do
+		mv ${f} ${D}/usr/$(get_libdir)/
 	done
 
 	if use doc; then
@@ -93,9 +93,9 @@ src_install() {
 
 	# substitute for the ${wxhlibdir} in package files and register them
 	# for ghc-6.2 change the package to be exposed by default.
-	sed -i -e "s:\${wxhlibdir}:${D}/usr/lib/${P}:" \
+	sed -i -e "s:\${wxhlibdir}:${D}/usr/$(get_libdir)/${P}:" \
 		   -e "s:auto = False:auto = True:" \
-		   ${D}/usr/lib/${P}/*.pkg
-	ghc-setup-pkg ${D}/usr/lib/${P}/*.pkg
+		   ${D}/usr/$(get_libdir)/${P}/*.pkg
+	ghc-setup-pkg ${D}/usr/$(get_libdir)/${P}/*.pkg
 	ghc-install-pkg
 }
