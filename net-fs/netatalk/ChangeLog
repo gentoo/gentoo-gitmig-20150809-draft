@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/netatalk
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.42 2005/12/31 21:49:19 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.43 2006/05/19 22:58:12 flameeyes Exp $
+
+  19 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/netatalk-2.0.3-db43.patch, netatalk-2.0.3-r2.ebuild:
+  Add patch to build with sys-libs/db-4.3.
 
   31 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   -files/netatalk-1.6.4-tempfile.patch, -netatalk-1.6.4-r1.ebuild,

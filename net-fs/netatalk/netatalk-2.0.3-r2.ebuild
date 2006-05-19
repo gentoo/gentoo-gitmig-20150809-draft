@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3-r2.ebuild,v 1.8 2005/12/31 21:49:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3-r2.ebuild,v 1.9 2006/05/19 22:58:12 flameeyes Exp $
 
 inherit eutils pam flag-o-matic autotools
 IUSE="ssl pam tcpd slp cups kerberos krb4 debug cracklib"
@@ -23,10 +23,6 @@ RDEPEND=">=sys-libs/db-4.2.52
 	kerberos? ( virtual/krb5 )
 	krb4? ( virtual/krb5 )"
 
-DEPEND="${RDEPEND}
-	sys-devel/autoconf
-	sys-devel/automake"
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -41,7 +37,8 @@ src_unpack() {
 			${S}/distrib/initscripts/rc.atalk.gentoo.tmpl
 	fi
 
-	epatch ${FILESDIR}/${P}-setXid.patch
+	epatch "${FILESDIR}/${P}-setXid.patch"
+	epatch "${FILESDIR}/${P}-db43.patch"
 	AT_M4DIR="macros" eautoreconf
 }
 
