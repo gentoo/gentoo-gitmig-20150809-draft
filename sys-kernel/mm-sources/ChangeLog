@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.276 2006/05/16 15:39:37 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.277 2006/05/19 13:35:38 dsd Exp $
+
+  19 May 2006; Daniel Drake <dsd@gentoo.org> metadata.xml:
+  Move to kernel herd
 
 *mm-sources-2.6.17_rc4-r1 (16 May 2006)
 
