@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5361 2006/05/19 14:01:06 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5362 2006/05/19 16:25:21 cparrott Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -575,12 +575,6 @@ games-rpg/daimonin-client
 # Marinus Schraal <foser@gentoo.org> (29 Mar 2006)
 # mask for removal
 media-gfx/sodipodi
-
-# Duncan Coutts <dcoutts@gentoo.org> (26 Mar 2006)
-# New versions/revisions. Needs testing.
-=dev-lang/ghc-6.4.1-r3
-=dev-lang/ghc-6.4.2
-=dev-lang/ghc-bin-6.4.2
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (23 Mar 2006)
 # Masked, waiting for GNOME 2.14
