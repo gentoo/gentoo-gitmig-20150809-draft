@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b99c632da9d5e5e90716f2b4e800b99f ChangeLog 1096
-MD5 854ad93ffa90b305b1f1f87592698ed8 metadata.xml 167
-MD5 b0af8960cdc17cfc1f06384990e8d865 fvwm-themes-extra-0.7.0.ebuild 606
+MD5 a64209d499cd0b0655dbdba7308de5e7 ChangeLog 1194
 MD5 249b9fbd5363c92ae700bca6ba538c1a files/digest-fvwm-themes-extra-0.7.0 77
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDaP6cKRy60XGEcJIRAsPlAJ9ZPvUbQlW1utTPojqET4NDQ/0hkgCeK2lR
-pZc/3SvtuDIYZgcCNcB+0Bc=
-=JWJQ
------END PGP SIGNATURE-----
+MD5 0eea0e5586707e30e0f512945072ab1d fvwm-themes-extra-0.7.0.ebuild 613
+MD5 854ad93ffa90b305b1f1f87592698ed8 metadata.xml 167

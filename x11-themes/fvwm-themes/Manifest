@@ -1,25 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dec6d042996736bc9642528ae9dc6b3b ChangeLog 1821
-RMD160 bea0b94def75cc33431052dd5f2ad63652492be3 ChangeLog 1821
-SHA256 fde3204e54bce252498e7d71123e4f42b78336901f0cbd61cfda1d4a11114ab0 ChangeLog 1821
+MD5 2954fe9800fa47f27c8fa719fa04184a ChangeLog 1912
 MD5 bb635670857b6057a6a65ce5d2778a2a files/digest-fvwm-themes-0.7.0 70
-RMD160 d79128b6504c28e26ec6617464a428bb09c1d974 files/digest-fvwm-themes-0.7.0 70
-SHA256 ddd0e508ff9ea59289c547e4306190071367885d290d52c24fd150e78f135cbc files/digest-fvwm-themes-0.7.0 70
 MD5 fe26baf3e5e1b12866fe888f9b54cbc7 files/fvwm-themes-0.7.0-gentoo.patch 903
-RMD160 0be80245fb91d24ea9e7307480e40eb3ec07c028 files/fvwm-themes-0.7.0-gentoo.patch 903
-SHA256 d9e6facd31d9d84fc668a90dabd0c9801e3ca04f09e441f6090362857c41a9d9 files/fvwm-themes-0.7.0-gentoo.patch 903
 MD5 fc403291a24a48fd3bc7929d196d0004 files/fvwm-themes-0.7.0-posix-sort.patch 772
-RMD160 4f18bf0ef0d0b3d3a6ee1a8913d25ed923dec58a files/fvwm-themes-0.7.0-posix-sort.patch 772
-SHA256 5839e87c9f2faa2ebe3712824c55106f6c333039fff8dbd575e7639c3c7e7468 files/fvwm-themes-0.7.0-posix-sort.patch 772
-MD5 f0c704d192c1087296fb5fcc7b2fbe91 fvwm-themes-0.7.0.ebuild 1174
-RMD160 baad1d81b6a9350c754e80251c33568c0eb9a1a2 fvwm-themes-0.7.0.ebuild 1174
-SHA256 a307b773e2056396ed2454066dce82305c6a46cfeec4e50a5e6d5ca30149e854 fvwm-themes-0.7.0.ebuild 1174
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6abRwnQyISwouHwRAukuAJ4lW/eBUzl2osHdHjEwU6ztojr90gCeIkSd
-7QYt2JoeIcHG09FIUCqz6fw=
-=C7dM
------END PGP SIGNATURE-----
+MD5 770e6d7bad47755a0babc7ed6c7c4bd4 fvwm-themes-0.7.0.ebuild 1181
