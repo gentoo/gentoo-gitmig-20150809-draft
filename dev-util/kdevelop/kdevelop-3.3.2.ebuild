@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.2.ebuild,v 1.5 2006/05/17 10:39:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.2.ebuild,v 1.6 2006/05/19 20:00:12 flameeyes Exp $
 
-inherit kde eutils
+inherit kde eutils db-use
 
 DESCRIPTION="Integrated Development Environment for Unix, supporting KDE/Qt, C/C++ and many other languages."
 HOMEPAGE="http://www.kdevelop.org"
@@ -51,7 +51,8 @@ src_compile() {
 			$(use_enable subversion)"
 
 	# Explicitly set db include directory (bug 128897)
-	myconf="${myconf} --with-db-includedir=${ROOT}/usr/include/db4.1 --with-db-lib=db-4.1"
+	myconf="${myconf} --with-db-includedir=${ROOT}$(db_includedir)
+	       --with-db-lib=$(db_libname)"
 
 	kde_src_compile
 }
