@@ -1,4 +1,4 @@
-MD5 b5c8c8bdb6664c3b442d9f4d7b1419e9 ChangeLog 16079
+MD5 a592c7a9798b34a240dac447863035a0 ChangeLog 16216
 MD5 026dc517ef9d45268cd506ec83519a0e files/canoscan-focus.patch 472
 MD5 01607471a4380f74f7b9da650e5ca5ad files/digest-sane-backends-1.0.13-r3 160
 MD5 83640d1e7caa2aa50c676d40b64866c7 files/digest-sane-backends-1.0.15 157
@@ -18,4 +18,4 @@ MD5 4c8053c87e31c8209998ba49c07d60a5 sane-backends-1.0.13-r3.ebuild 1717
 MD5 faf6bd7e05c7d17b57793f8f3ebf5b2e sane-backends-1.0.15-r3.ebuild 3971
 MD5 e898804ea6825104b162de2ad41593ef sane-backends-1.0.15.ebuild 2598
 MD5 8c23aab107d4c5424e32e24123d4811f sane-backends-1.0.16-r4.ebuild 4386
-MD5 000bfa2b4cad5089a0b6d1e68726222c sane-backends-1.0.17.ebuild 3902
+MD5 f78fda862dbc129fdeef3743cd3b0eb0 sane-backends-1.0.17.ebuild 3886

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.17.ebuild,v 1.4 2006/05/18 16:17:52 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.17.ebuild,v 1.5 2006/05/19 13:57:44 phosphan Exp $
 
 inherit eutils
 
@@ -17,8 +17,7 @@ RDEPEND=">=media-libs/jpeg-6b
 	v4l? ( sys-kernel/linux-headers )"
 
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
-	app-text/tetex"
+	>=sys-apps/sed-4"
 
 BROTHERMFCPATCHVER="1.0.16"
 BROTHERMFCDRIVER="sane-${BROTHERMFCPATCHVER}-brother-driver.diff"
