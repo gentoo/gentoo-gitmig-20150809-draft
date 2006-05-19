@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/pstotext-1.9-r2.ebuild,v 1.3 2006/05/19 12:28:08 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/pstotext-1.9-r2.ebuild,v 1.4 2006/05/19 15:03:25 squinky86 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/contrib/${P}.tar.gz"
 
 LICENSE="PSTT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 
 DEPEND="app-arch/ncompress"
