@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db-use.eclass,v 1.3 2006/05/18 14:00:27 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db-use.eclass,v 1.4 2006/05/19 19:58:46 flameeyes Exp $
 # This is a common location for functions that aid the use of sys-libs/db
 
-inherit versionator
+inherit versionator multilib
 
 #Convert a version to a db slot
 db_ver_to_slot() {
@@ -83,7 +83,7 @@ db_includedir() {
 db_libname() {
 	if [ $# -eq 0 ]; then
 		VER="$(db_findver sys-libs/db)" || return 1
-		if [ -e "/usr/lib/libdb-${VER}" ]; then
+		if [ -e "/usr/$(get_libdir)/libdb-${VER}.so" ]; then
 			echo -n "db-${VER}"
 			return 0
 		else
