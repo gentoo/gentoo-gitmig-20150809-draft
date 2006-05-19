@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.6.1.ebuild,v 1.1 2006/05/19 02:50:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.6.1.ebuild,v 1.2 2006/05/19 04:24:38 mr_bones_ Exp $
 
 inherit games
 
@@ -18,8 +18,7 @@ RDEPEND="virtual/opengl
 	media-libs/libsndfile
 	dev-libs/libcdio
 	>=media-libs/libsdl-1.2.0
-	media-libs/sdl-net
-	media-libs/libvorbis"
+	media-libs/sdl-net"
 
 # The following likely still applies to Mednafen as it uses FCE Ultra code.
 # Because of code generation bugs, FCEUltra now depends on a version
@@ -43,7 +42,7 @@ src_unpack() {
 # v0.5.2 conf with --disable-nls fails to compile
 src_compile() {
 	egamesconf \
-	--disable-dependency-tracking || die
+		--disable-dependency-tracking || die
 	emake || die "emake failed"
 }
 
