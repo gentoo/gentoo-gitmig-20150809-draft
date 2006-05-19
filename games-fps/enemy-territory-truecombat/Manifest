@@ -1,4 +1,27 @@
-MD5 d2f2d13489a90bdb7e6dfa560f0242ca ChangeLog 1171
-MD5 33b20b70b3432fcbfff6b6f6661160ab enemy-territory-truecombat-1.0_beta4.ebuild 503
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST tce-linux_046_full.zip 134902370 size 134902370
+DIST tce-linux_048_patch.zip 7017159 size 7017159
+EBUILD enemy-territory-truecombat-0.48.ebuild 519 RMD160 23d36f7808764bfbe658c2c2fee7488b2d4567dc SHA1 dc6cd32d8138b2bfec40700c8bcd75e0049a10d9 SHA256 80e91e3dd6890e1b322b4686eaf28a620217dbca39cc3b7773c9fa59dde93ff6 size 519
+MD5 9a727a08092419911799f2e476c1135e enemy-territory-truecombat-0.48.ebuild 519
+RMD160 23d36f7808764bfbe658c2c2fee7488b2d4567dc enemy-territory-truecombat-0.48.ebuild 519
+SHA256 80e91e3dd6890e1b322b4686eaf28a620217dbca39cc3b7773c9fa59dde93ff6 enemy-territory-truecombat-0.48.ebuild 519
+MISC ChangeLog 1423 RMD160 bf18db1bc9d5710692807a8b97b30ee22ec515a9 SHA1 a50dc2755f35a7f0acec65e3ac9e609d6a460090 SHA256 bcb1a5698084989dac4469ccd5876a1f49090f5ec2e52ab64a54e1bec3f80cb3 size 1423
+MD5 35d6f2e1441dc09b9dac2cbacd2698b3 ChangeLog 1423
+RMD160 bf18db1bc9d5710692807a8b97b30ee22ec515a9 ChangeLog 1423
+SHA256 bcb1a5698084989dac4469ccd5876a1f49090f5ec2e52ab64a54e1bec3f80cb3 ChangeLog 1423
+MISC metadata.xml 254 RMD160 877a1dc36df2be58926bc51041093feafdefe429 SHA1 45f0334cd127c4a1b4ece41f7098ab70046e378a SHA256 2916aab684ec3908fffb515065eeb2c481cde563380b682646add582bed5f535 size 254
 MD5 11a7e1491b1ac042ac7216b26b4ad1fb metadata.xml 254
-MD5 b368528566fee107a2562b2b6e10f660 files/digest-enemy-territory-truecombat-1.0_beta4 139
+RMD160 877a1dc36df2be58926bc51041093feafdefe429 metadata.xml 254
+SHA256 2916aab684ec3908fffb515065eeb2c481cde563380b682646add582bed5f535 metadata.xml 254
+MD5 b368528566fee107a2562b2b6e10f660 files/digest-enemy-territory-truecombat-0.48 139
+RMD160 42289865dbb23103b028da165d733df0d8b80a7c files/digest-enemy-territory-truecombat-0.48 139
+SHA256 a6f80ffcb85c86a0de8bbcdaa316c7fb18e85b2dbe79570f19e7388517ad231a files/digest-enemy-territory-truecombat-0.48 139
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEbj9QkT4lNIS36YERAn53AKCGH8zZEJTMJjz9BSTn0NQAPqAtUgCZAc1y
+E6tKycy3FQ/Pl4mkq4dAVJw=
+=ASnu
+-----END PGP SIGNATURE-----
