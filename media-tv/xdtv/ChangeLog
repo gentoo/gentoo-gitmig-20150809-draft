@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.28 2006/05/04 00:03:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.29 2006/05/19 20:29:53 flameeyes Exp $
+
+  19 May 2006; Diego Pettenò <flameeyes@gentoo.org> xdtv-2.3.2.ebuild:
+  Bump xvid dependency as per bug #133306 thanks to Michael Mauch.
 
   04 May 2006; Diego Pettenò <flameeyes@gentoo.org> -xdtv-2.3.0.ebuild,
   -xdtv-2.3.1.ebuild:

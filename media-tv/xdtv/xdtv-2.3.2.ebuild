@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.2.ebuild,v 1.4 2006/04/07 16:53:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.2.ebuild,v 1.5 2006/05/19 20:29:53 flameeyes Exp $
 
 inherit font multilib autotools flag-o-matic
 
@@ -33,7 +33,7 @@ RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 	neXt? ( x11-libs/neXtaw )
 	Xaw3d? ( !neXt? ( x11-libs/Xaw3d ) )
 	!neXt? ( !Xaw3d? ( || ( x11-libs/libXaw virtual/x11 ) ) )
-	xvid? ( >=media-libs/xvid-1.0 )
+	xvid? ( >=media-libs/xvid-1.1 )
 	encode? ( >=media-sound/lame-3.93 )
 	jpeg? ( media-libs/jpeg )
 	lirc? ( app-misc/lirc )
