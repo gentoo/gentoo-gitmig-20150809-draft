@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.4 2006/04/03 18:34:01 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.5 2006/05/19 06:51:34 lucass Exp $
+
+*lxml-0.9.2 (19 May 2006)
+
+  19 May 2006; Lukasz Strzygowski <lucass@gentoo.org>
+  +files/lxml-0.9.2-distutils.diff, +lxml-0.9.2.ebuild:
+  Version bump. Marked ~amd64.
 
 *lxml-0.9.1 (03 Apr 2006)
 
