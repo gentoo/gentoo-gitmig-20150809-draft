@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r2.ebuild,v 1.5 2006/05/18 17:20:37 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r2.ebuild,v 1.6 2006/05/19 15:27:02 suka Exp $
 
 inherit check-reqs eutils fdo-mime flag-o-matic kde-functions mono toolchain-funcs
 
 IUSE="binfilter cairo eds firefox gnome gtk java kde ldap mono mozilla xml"
 
-MY_PV="${PV}.9"
+MY_PV="${PV}.10"
 PATCHLEVEL="OOB680"
 SRC="OOO_2_0_2"
 S="${WORKDIR}/ooo-build-${MY_PV}"
