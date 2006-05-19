@@ -1,12 +1,12 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-sv/myspell-sv-20060316.ebuild,v 1.1 2006/05/01 16:16:42 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-sv/myspell-sv-20060316.ebuild,v 1.2 2006/05/19 21:23:30 flameeyes Exp $
 
 DESCRIPTION="Swedish dictionaries for myspell/hunspell"
 LICENSE="LGPL-2.1"
 HOMEPAGE="http://lingucomponent.openoffice.org/ http://sv.speling.org/"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "sv,SE,sv_SE,Swedish (Sweden),sv_SE.zip"

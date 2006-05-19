@@ -1,12 +1,12 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/myspell-nl-20060316.ebuild,v 1.1 2006/05/01 16:11:45 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/myspell-nl-20060316.ebuild,v 1.2 2006/05/19 21:17:49 flameeyes Exp $
 
 DESCRIPTION="Dutch dictionaries for myspell/hunspell"
 LICENSE="GPL-2"
 HOMEPAGE="http://lingucomponent.openoffice.org/ http://www.goddijn.com/words.htm"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "nl,NL,nl_med,Dutch (medical),nl_med.zip"
