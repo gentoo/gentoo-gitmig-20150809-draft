@@ -1,6 +1,14 @@
 # ChangeLog for sci-misc/gri
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.4 2006/01/15 13:07:35 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.5 2006/05/19 19:39:27 mkennedy Exp $
+
+*gri-2.12.11 (19 May 2006)
+
+  19 May 2006; Matthew Kennedy <mkennedy@gentoo.org> +files/50gri-gentoo.el,
+  metadata.xml, +gri-2.12.11.ebuild:
+  New upstream version; Resolves Bug #117312; Added Emacs Herd to metadata.xml
+  for Emacs portion maintainership; Added missing virtual/ghostscript
+  depdendency; Resolves Bug #133397.
 
   15 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> gri-2.12.7.ebuild,
   gri-2.12.9.ebuild:
