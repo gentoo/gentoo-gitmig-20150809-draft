@@ -1,6 +1,11 @@
 # ChangeLog for app-text/kbibtex
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.9 2006/04/10 00:02:50 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.10 2006/05/19 19:16:38 cryos Exp $
+
+*kbibtex-0.1.4 (19 May 2006)
+
+  19 May 2006; Marcus D. Hanwell <cryos@gentoo.org> +kbibtex-0.1.4.ebuild:
+  Version bump, closes bug 132321.
 
 *kbibtex-0.1.4_beta4 (10 Apr 2006)
 
