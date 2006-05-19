@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.17 2006/01/01 01:56:54 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.18 2006/05/19 04:16:15 williamh Exp $
+
+*emacspeak-24 (19 May 2006)
+
+  19 May 2006; William Hubbs <williamh@gentoo.org> +emacspeak-24.ebuild:
+  Version bump.
 
 *emacspeak-23 (01 Jan 2006)
 
