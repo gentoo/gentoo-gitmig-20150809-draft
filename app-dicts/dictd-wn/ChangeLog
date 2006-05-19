@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/dictd-wn
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.15 2006/05/12 21:05:56 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.16 2006/05/19 18:10:30 corsair Exp $
+
+  19 May 2006; Markus Rothe <corsair@gentoo.org> dictd-wn-2.0.ebuild:
+  Added ~ppc64; bug #132804
 
   12 May 2006; Anders Rune Jensen <arj@gentoo.org> dictd-wn-2.0.ebuild:
   Added ~amd64. Fixes bug #132804

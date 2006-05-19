@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/dictd-wn-2.0.ebuild,v 1.7 2006/05/12 21:05:56 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/dictd-wn-2.0.ebuild,v 1.8 2006/05/19 18:10:30 corsair Exp $
 
 inherit gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.dict.org/pub/dict/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc ~sparc ~amd64" #  ~ppc64 removed due to errors
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND=">=app-text/dictd-1.5.5"
 
