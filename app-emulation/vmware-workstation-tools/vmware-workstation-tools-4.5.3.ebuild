@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-4.5.3.ebuild,v 1.1 2006/05/10 16:11:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-4.5.3.ebuild,v 1.2 2006/05/19 18:28:38 wolf31o2 Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ vmware_create_initd() {
 	# This is to fix a problem where if someone merges vmware and then
 	# before configuring vmware they upgrade or re-merge the vmware
 	# package which would rmdir the /etc/vmware/init.d/rc?.d directories.
-	keepdir /etc/vmware/init.d/rc{0,1,2,3,4,5,6}.d
+	keepdir /etc/vmware-tools/init.d/rc{0,1,2,3,4,5,6}.d
 }
 
 vmware_run_questions() {
@@ -52,8 +52,8 @@ vmware_run_questions() {
 	echo "answer DOCDIR ${dir}/doc" >> ${locations}
 	echo "answer SBINDIR ${dir}/sbin" >> ${locations}
 	echo "answer RUN_CONFIGURATOR no" >> ${locations}
-	echo "answer INITDIR /etc/vmware/init.d" >> ${locations}
-	echo "answer INITSCRIPTSDIR /etc/vmware/init.d" >> ${locations}
+	echo "answer INITDIR /etc/vmware-tools/init.d" >> ${locations}
+	echo "answer INITSCRIPTSDIR /etc/vmware-tools/init.d" >> ${locations}
 }
 
 pkg_setup() {
@@ -99,7 +99,7 @@ src_install() {
 
 	vmware_create_initd || die
 
-	cp -pPR installer/services.sh ${D}/etc/vmware-tools/init.d/vmware || die
+	cp -pPR installer/services.sh ${D}/etc/vmware-tools/init.d/vmware-tools || die
 
 	vmware_run_questions || die
 }
@@ -137,7 +137,7 @@ pkg_postinst () {
 	done
 	einfo "To start using the vmware-tools, please run the following:"
 	einfo
-	einfo "  /usr/bin/vmware-config-tools.pl"
+	einfo "  ${dir}/bin/vmware-config-tools.pl"
 	einfo "  rc-update add vmware-tools default"
 	einfo "  /etc/init.d/vmware-tools start"
 	einfo
