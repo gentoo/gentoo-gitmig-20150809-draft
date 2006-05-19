@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.40 2006/03/06 08:36:51 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.41 2006/05/19 19:24:21 flameeyes Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -327,7 +327,7 @@ function webapp_src_install ()
 	chmod -R g-s "${D}/"
 
 	keepdir "${MY_PERSISTDIR}"
-	fowners "root:root" "${MY_PERSISTDIR}"
+	fowners "root:0" "${MY_PERSISTDIR}"
 	fperms 755 "${MY_PERSISTDIR}"
 
 	# to test whether or not the ebuild has correctly called this function
