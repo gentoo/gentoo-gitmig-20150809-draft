@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/at76c503a
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.9 2006/03/09 19:53:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.10 2006/05/19 07:34:10 genstef Exp $
+
+  19 May 2006; Stefan Schweizer <genstef@gentoo.org>
+  -files/at76c503a-kernel-2.6-fixes.diff, -files/at76-7-gcc4.diff,
+  -files/at76c503a-adhoc-fix.diff, -at76c503a-0.12_beta23-r2.ebuild,
+  at76c503a-0.12_beta23-r3.ebuild:
+  New debian patch version with some build fixes for 2.6.17 thanks to Maxim
+  Grechkin <maximsch2@gmail.com> for notifying me, remove old ebuild
 
 *at76c503a-0.12_beta23-r3 (09 Mar 2006)
 
