@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.12_rc1.ebuild,v 1.1 2006/04/24 06:25:24 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.12_rc1.ebuild,v 1.2 2006/05/19 17:36:00 corsair Exp $
 
 
 inherit linux-info toolchain-funcs eutils
@@ -12,7 +12,7 @@ SRC_URI="http://www.saillard.org/pwc/files/pwc-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
 
 IUSE=""
 DEPEND="sys-kernel/linux-headers"
