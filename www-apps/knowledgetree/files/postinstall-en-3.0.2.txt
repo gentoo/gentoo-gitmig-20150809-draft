@@ -1,0 +1,46 @@
+------------------------------------------------------------------------
+INSTALLATION
+
+The ebuild installs most parts of knowledgeTree automatically, but 
+you will have to create a database for the document management system.
+
+You can do this using the following commands as the mysql root user:
+
+> mysql -u root -p <<EOF
+  CREATE DATABASE dms;
+  GRANT SELECT, INSERT, UPDATE, DELETE ON dms.* TO 'dms'@'localhost' IDENTIFIED BY 'djw9281js';
+  FLUSH PRIVILEGES;
+EOF
+
+> mysql -u root -p <<EOF 
+  GRANT ALL PRIVILEGES ON dms.* TO 'dmsadmin'@'localhost' IDENTIFIED BY 'js9281djw';
+  FLUSH PRIVILEGES;
+EOF
+
+Please do not forget to choose a different password than
+'js9281djw'. This is just the standard password stored as a default in
+${MY_INSTALLDIR}/config/config.ini.
+
+Now as user "dmsadmin":
+
+> mysql -u dmsadmin -pjs9281djw dms < ${MY_HTDOCSDIR}/sql/mysql/install/structure.sql
+> mysql -u dmsadmin -pjs9281djw dms < ${MY_HTDOCSDIR}/sql/mysql/install/data.sql
+
+Now you need to set the MySQL passwords for the dms and dmsadmin user
+in the ${MY_INSTALLDIR}/config/config.ini file so that knowledgeTree
+can access the database.
+
+Finally you can go to http://${VHOST_HOSTNAME}/${VHOST_APPDIR} and log in
+as user "admin" with the password "admin".
+
+------------------------------------------------------------------------
+!!! PHP4 !!!
+
+This is a php4 application. Do not try to run it under php5. It will fail!
+
+------------------------------------------------------------------------
+POSTGRES
+
+You can also use knowledgtree with postgres. This ebuild currently
+does not provide support for it but if there is a need for it, please
+submit a feature request to the gentoo buzilla system.
