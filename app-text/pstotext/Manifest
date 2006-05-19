@@ -1,13 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX pstotext-1.8g-dsafer.patch 668 RMD160 0b85092a5db456da9f231866594b32e9deff08e4 SHA1 6bda6c5d1769ed0551a369f5d7a94e066b9de1da SHA256 dfd36fbd81c7601351d233c22f005268307a0420b3ab2573c55bdc693c9d130a size 668
 MD5 7959110be19f6b828a6c39a43b79354f files/pstotext-1.8g-dsafer.patch 668
 RMD160 0b85092a5db456da9f231866594b32e9deff08e4 files/pstotext-1.8g-dsafer.patch 668
 SHA256 dfd36fbd81c7601351d233c22f005268307a0420b3ab2573c55bdc693c9d130a files/pstotext-1.8g-dsafer.patch 668
-AUX pstotext-1.9-quote-chars-fix.patch 3080 RMD160 40bd9d3cc4f7d1fa36c15ceb45c2ec721c5a9722 SHA1 d5423dd8f32416ad726e7ab82fb5282ceaf69d31 SHA256 05607a43a5eb75f87dd911676796e63c0bb2c677ce65ec58f2ee02db29f30a2c size 3080
-MD5 7dcb52ef6c942034965504f21ddcce53 files/pstotext-1.9-quote-chars-fix.patch 3080
-RMD160 40bd9d3cc4f7d1fa36c15ceb45c2ec721c5a9722 files/pstotext-1.9-quote-chars-fix.patch 3080
-SHA256 05607a43a5eb75f87dd911676796e63c0bb2c677ce65ec58f2ee02db29f30a2c files/pstotext-1.9-quote-chars-fix.patch 3080
+AUX pstotext-1.9-quote-chars-fix.patch 3491 RMD160 d9049573eb4cb69954be9a0db51e2b30b80f4af0 SHA1 ca792c059eb48d8206abd22fb22c91f973f9af8b SHA256 86a031cba40e1d5ffc7cb17970a2af25c2816d274215f0aa7ade367ae8f41ce4 size 3491
+MD5 15437d25853fc6177c0bda6e634e6f77 files/pstotext-1.9-quote-chars-fix.patch 3491
+RMD160 d9049573eb4cb69954be9a0db51e2b30b80f4af0 files/pstotext-1.9-quote-chars-fix.patch 3491
+SHA256 86a031cba40e1d5ffc7cb17970a2af25c2816d274215f0aa7ade367ae8f41ce4 files/pstotext-1.9-quote-chars-fix.patch 3491
 DIST pstotext-1.9.tar.gz 37461 RMD160 16dc199d19df64280184d11ccbced7a32770ddad SHA256 cfe0a251d0d43982a7d3bdf1d1670c854432739d00cb593c9beaca4b2cc36c27 size 37461
-DIST pstotext.tar.Z 58743 size 58743
+DIST pstotext.tar.Z 58743 RMD160 b8a49c5a0478b9ac8f7948ed75690327e8b98f48 SHA256 139ff4819bd067cb185c5d65d97b2ce62fb8109487a44e4b5450916179363652 size 58743
 EBUILD pstotext-1.8g-r1.ebuild 784 RMD160 4d7778126df64545e0cbe8737f20442fbacf8709 SHA1 43ba3867b2fed22d377c82f6fc27b41246b1e7eb SHA256 57289fdab7922f2e88382a1aa54cddf99dd661c11598d51dbda7d67dd0d04f7e size 784
 MD5 15309aebd05fad0325dac952c6747e40 pstotext-1.8g-r1.ebuild 784
 RMD160 4d7778126df64545e0cbe8737f20442fbacf8709 pstotext-1.8g-r1.ebuild 784
@@ -16,24 +19,31 @@ EBUILD pstotext-1.8g.ebuild 681 RMD160 ea3f02b3871847d42c62c7b5416d1ce5f4945247 
 MD5 8114238320af66caa1e90d5c8f67dce8 pstotext-1.8g.ebuild 681
 RMD160 ea3f02b3871847d42c62c7b5416d1ce5f4945247 pstotext-1.8g.ebuild 681
 SHA256 bd6158286646ebe85136765966da24eaae1e4ca06044c700aeeccf504d1be85f pstotext-1.8g.ebuild 681
-EBUILD pstotext-1.9-r1.ebuild 835 RMD160 045862f15b29e5df4b547e4ca86925fe84890fc8 SHA1 c463cc6fecdd2e6b13db29b35c2882f8507319f2 SHA256 32788b2bc240e9452621da7ba7e7a60deab5620728622646c37187c20ff20200 size 835
-MD5 f5006db6c49a9d0404167fc6e9e62f09 pstotext-1.9-r1.ebuild 835
-RMD160 045862f15b29e5df4b547e4ca86925fe84890fc8 pstotext-1.9-r1.ebuild 835
-SHA256 32788b2bc240e9452621da7ba7e7a60deab5620728622646c37187c20ff20200 pstotext-1.9-r1.ebuild 835
-MISC ChangeLog 2375 RMD160 b6d96266a23f22433fcc4e388384b6bdcf8cb233 SHA1 7fd540672357f695d0f7976de66cbd3047ae8a7c SHA256 63523a147337e22866e3a68be82eb7695051583ad75c5e61dffc29bb77b8de85 size 2375
-MD5 3500a3e97c7fd169e57ac83edf570fda ChangeLog 2375
-RMD160 b6d96266a23f22433fcc4e388384b6bdcf8cb233 ChangeLog 2375
-SHA256 63523a147337e22866e3a68be82eb7695051583ad75c5e61dffc29bb77b8de85 ChangeLog 2375
+EBUILD pstotext-1.9-r2.ebuild 782 RMD160 bc1a9ffca0830e903d953ca1c97299ecbfa3eece SHA1 867ac7e4a75fc3aa35560f0c3e61b8a1cef27a56 SHA256 2aea76ceef6f2ebed9022a49ee70f6af68f53f7da48c396acdbcf34e6ab0f9fe size 782
+MD5 1e3948cc2dd3003731a17c3efe1f7114 pstotext-1.9-r2.ebuild 782
+RMD160 bc1a9ffca0830e903d953ca1c97299ecbfa3eece pstotext-1.9-r2.ebuild 782
+SHA256 2aea76ceef6f2ebed9022a49ee70f6af68f53f7da48c396acdbcf34e6ab0f9fe pstotext-1.9-r2.ebuild 782
+MISC ChangeLog 2623 RMD160 20c16f009276c49abbc224e4ef78d0cd41988d20 SHA1 d572d9a525652c09235592f1cfb35912ec9dc3d9 SHA256 e58e3102bb2e4def715bb86a6341b0c98411af8320dfdd1ea7011e7cf708f6e3 size 2623
+MD5 d4f178a01cce2102dd877e24b3edad54 ChangeLog 2623
+RMD160 20c16f009276c49abbc224e4ef78d0cd41988d20 ChangeLog 2623
+SHA256 e58e3102bb2e4def715bb86a6341b0c98411af8320dfdd1ea7011e7cf708f6e3 ChangeLog 2623
 MISC metadata.xml 165 RMD160 a19f2f41b6bb8ff7e515fae359722fe97486d289 SHA1 794ccfeb82e7e572897d995ddba745bbebff326b SHA256 ed934d2d9acbec5aa808ae118e4fbd161f08a1781a5d2ec5aea5ab3b47ce7ec5 size 165
 MD5 ccf9ea2ff9f57801ca037faea678a353 metadata.xml 165
 RMD160 a19f2f41b6bb8ff7e515fae359722fe97486d289 metadata.xml 165
 SHA256 ed934d2d9acbec5aa808ae118e4fbd161f08a1781a5d2ec5aea5ab3b47ce7ec5 metadata.xml 165
-MD5 84a047e65494c9f47e4af70d3276320f files/digest-pstotext-1.8g 58
-RMD160 e8c95949a9e78bc9bc1570aec162cf990d2aef7a files/digest-pstotext-1.8g 58
-SHA256 5ed2cecba2d285e8d52cca3248dbdd8c3ac3366f8094dfa95e7816a06bb0093c files/digest-pstotext-1.8g 58
-MD5 84a047e65494c9f47e4af70d3276320f files/digest-pstotext-1.8g-r1 58
-RMD160 e8c95949a9e78bc9bc1570aec162cf990d2aef7a files/digest-pstotext-1.8g-r1 58
-SHA256 5ed2cecba2d285e8d52cca3248dbdd8c3ac3366f8094dfa95e7816a06bb0093c files/digest-pstotext-1.8g-r1 58
-MD5 7d89b7ecd34dd5b51a5de94a42a33d14 files/digest-pstotext-1.9-r1 235
-RMD160 0cd806d6f7cdc0235ebb2bc63363ac0d63f426e1 files/digest-pstotext-1.9-r1 235
-SHA256 92f4e39fb1c2d8ac86039f5671de57325db8703f3ff5ba9b9092e497f7a0905b files/digest-pstotext-1.9-r1 235
+MD5 8d4acee63e2ba5f0828480a4025fd797 files/digest-pstotext-1.8g 220
+RMD160 5158cf6c97d1a5038c32ea407e2b2c782de7ede0 files/digest-pstotext-1.8g 220
+SHA256 f175b6bc87afd9a86e60168959dfd22f3e154f02e55d61ccfb4dae97d770ffd1 files/digest-pstotext-1.8g 220
+MD5 8d4acee63e2ba5f0828480a4025fd797 files/digest-pstotext-1.8g-r1 220
+RMD160 5158cf6c97d1a5038c32ea407e2b2c782de7ede0 files/digest-pstotext-1.8g-r1 220
+SHA256 f175b6bc87afd9a86e60168959dfd22f3e154f02e55d61ccfb4dae97d770ffd1 files/digest-pstotext-1.8g-r1 220
+MD5 7d89b7ecd34dd5b51a5de94a42a33d14 files/digest-pstotext-1.9-r2 235
+RMD160 0cd806d6f7cdc0235ebb2bc63363ac0d63f426e1 files/digest-pstotext-1.9-r2 235
+SHA256 92f4e39fb1c2d8ac86039f5671de57325db8703f3ff5ba9b9092e497f7a0905b files/digest-pstotext-1.9-r2 235
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEbZdZzxUa4FWw6mwRApXsAKCslewsYFa8FSifslT5elGjRs8hcwCfcBHh
+bZsZEQSCg2XYFaC3B62KOzg=
+=Mdfi
+-----END PGP SIGNATURE-----
