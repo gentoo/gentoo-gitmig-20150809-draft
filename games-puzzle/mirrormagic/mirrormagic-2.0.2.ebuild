@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/mirrormagic-2.0.2.ebuild,v 1.14 2006/02/17 22:55:53 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/mirrormagic-2.0.2.ebuild,v 1.15 2006/05/19 20:33:13 tupone Exp $
 
 inherit flag-o-matic games
 
@@ -21,6 +21,12 @@ RDEPEND="!sdl? ( || ( x11-libs/libX11 virtual/x11 ) )
 	)"
 DEPEND="${RDEPEND}
 	!sdl? ( || ( x11-libs/libXt virtual/x11 ) )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
+}
 
 src_compile() {
 	replace-flags -march=k6 -march=i586
