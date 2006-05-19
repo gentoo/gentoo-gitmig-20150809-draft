@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/domi/domi-20060406-r1.ebuild,v 1.1 2006/05/19 11:57:12 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/domi/domi-20060406-r1.ebuild,v 1.2 2006/05/19 12:09:27 chrb Exp $
 
 inherit eutils
 DESCRIPTION="Scripts for building Xen domains"
@@ -11,7 +11,16 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="app-emulation/xen-tools"
+DEPEND="app-emulation/xen-tools
+	app-arch/rpm
+	sys-apps/parted
+	sys-fs/lvm2"
+# there are some other depends we may need depending on the target system
+# these packages aren't in gentoo yet. feel free to submit ebuilds via bugzilla.
+# yum
+# kpartx
+# y2pmsh
+
 S=${WORKDIR}/${PN}
 
 src_unpack() {
