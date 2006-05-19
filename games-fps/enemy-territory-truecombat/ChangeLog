@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/enemy-territory-truecombat
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-truecombat/ChangeLog,v 1.4 2005/06/23 19:39:58 wolf31o2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-truecombat/ChangeLog,v 1.5 2006/05/19 21:59:32 wolf31o2 Exp $
+
+*enemy-territory-truecombat-0.48 (19 May 2006)
+
+  19 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +enemy-territory-truecombat-0.48.ebuild,
+  -enemy-territory-truecombat-1.0_beta4.ebuild:
+  Changed version from 1.0_beta4 to 0.48 for bug #130424.
 
 *enemy-territory-truecombat-1.0_beta4 (23 Jun 2005)
 
