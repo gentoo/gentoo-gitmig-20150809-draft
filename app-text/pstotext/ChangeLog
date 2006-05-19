@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pstotext
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.21 2006/05/19 10:00:41 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.22 2006/05/19 10:10:36 ehmsen Exp $
+
+  19 May 2006; Martin Ehmsen <ehmsen@gentoo.org> +pstotext-1.9-r1.ebuild,
+  pstotext-1.9-r2.ebuild:
+  Forgot sparc marked 1.9-r1 stable, so readding it and changing -r2 to ~sparc
+  (argh!).
 
 *pstotext-1.9-r2 (19 May 2006)
 
