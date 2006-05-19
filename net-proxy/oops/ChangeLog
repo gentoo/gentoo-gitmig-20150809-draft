@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/oops
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.9 2006/04/25 03:11:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.10 2006/05/19 23:21:01 mrness Exp $
+
+  19 May 2006; Alin Nastac <mrness@gentoo.org>
+  +files/modules-as-needed.patch, files/oops.cfg,
+  -oops-1.5.24_pre20050503.ebuild, oops-1.5.24_pre20050503-r1.ebuild:
+  Create and use oops user and group (#133436). Use keepdir where is the case.
+  Make it compilable with custom LDFLAGS, including --as-needed. Don't install
+  example files in /etc/oops.
 
   25 Apr 2006; Jason Wever <weeve@gentoo.org>
   oops-1.5.24_pre20050503-r1.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r1.ebuild,v 1.3 2006/04/25 03:11:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r1.ebuild,v 1.4 2006/05/19 23:21:01 mrness Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 MY_P="${PN}-1.5.23"
 
@@ -25,12 +25,18 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+pkg_setup() {
+	enewgroup oops
+	enewuser oops -1 -1 /var/lib/oops oops
+}
+
 src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
 	epatch "${WORKDIR}/${P}.patch"
 	epatch "${FILESDIR}/${P/_*}-textrel.patch"
+	epatch "${FILESDIR}/modules-as-needed.patch"
 	sed -i -e 's:/usr/local/lib/libpcre:/usr/lib/libpcre:g' configure
 	sed -i -e 's:y\.tab\.h:y.tab.c:' src/Makefile.in
 }
@@ -39,7 +45,7 @@ src_compile() {
 	./configure \
 		--prefix=/usr \
 		--libdir=/usr/lib/oops \
-		--enable-oops-user=squid \
+		--enable-oops-user=oops \
 		--sysconfdir=/etc/oops \
 		--sbindir=/usr/sbin \
 		--with-regexp=pcre \
@@ -55,47 +61,41 @@ src_compile() {
 		-e "s|OOPS_LOCALSTATEDIR = /var/run/oops|OOPS_LOCALSTATEDIR = ${D}/var/run/oops|" \
 		-e "s|OOPSPATH=/usr/oops|OOPSPATH=${D}/usr/oops|" \
 		src/Makefile
+	sed -i \
+		-e "s|^\(LDFLAGS *= *\)${LDFLAGS}|\1$(raw-ldflags)|" \
+		src/modules/Makefile #modules makefile use ld directly
+
 	emake || die "compile problem"
 }
 
 src_install() {
 	dodir /usr/sbin
 	einstall || die "install problem"
-	fowners root:squid /etc/oops
-	fperms 0750 /etc/oops
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/oops.initd" "${PN}"
+	newinitd "${FILESDIR}/oops.initd" oops
+	diropts -m0750 -o root -g oops
+	dodir /etc/oops
 	insinto /etc/oops
 	doins "${FILESDIR}/oops.cfg"
 
-	diropts -m0755 -o squid
-	dodir /var/run/oops
-	diropts -m0770 -o squid
-	dodir /var/log/oops
-	dodir /var/lib/oops
-	dodir /var/lib/oops/storage
+	diropts -m0755 -o oops -g oops
+	keepdir /var/run/oops
+	diropts -m0770 -o oops -g oops
+	keepdir /var/log/oops
 	keepdir /var/lib/oops/storage
-	dodir /var/lib/oops/db
 	keepdir /var/lib/oops/db
 
 	# cleanups
 	rm -rf "${D}/usr/oops"
 	rm -rf "${D}/usr/lib/oops/modules"
-
-	# config files; if already exist, move them to *.eg
-	cd "${D}/etc/oops"
-	local x y
-	for y in . tables ; do
-		for x in "${y}"/* ; do
-			if [ -f "${x}" ] ; then
-				if [ -f "${ROOT}/etc/oops/${x}" ]; then
-					mv "${x}" "${x}.eg"
-				else
-					cp "${x}" "${x}.eg"
-				fi
-			fi
-		done
-	done
 }
 
+pkg_preinst() {
+	pkg_setup # create oops user and group
+}
+
+pkg_postinst() {
+	#Set proper owner/group if installed from binary package
+	chgrp oops "${ROOT}/etc/oops"
+	chown -R oops:oops "${ROOT}/var/run/oops" "${ROOT}/var/log/oops" "${ROOT}/var/lib/oops"
+}
