@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/prboom
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.15 2006/04/09 00:17:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.16 2006/05/19 21:18:36 wolf31o2 Exp $
+
+  19 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> prboom-2.4.1.ebuild:
+  Stable on amd64 and x86 wrt bug #133660.
 
 *prboom-2.4.1 (09 Apr 2006)
 
