@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5360 2006/05/19 13:02:42 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5361 2006/05/19 14:01:06 pauldv Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+
+# Paul de Vrieze <pauldv@gentoo.org> (19 May 2006)
+# Masked for testing cooperation with db-4.3
+>=sys-libs/db-4.4
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (19 May 2006)
 # Working towards the next release
@@ -1421,10 +1426,6 @@ net-im/mercury-bin
 # Uncertain upstream; Needs work for apache-modules eclass; mod_webapp needs to
 # be broken out of it
 dev-lisp/cl-imho
-
-# Paul de Vrieze <pauldv@gentoo.org> (02 Feb 2005)
-# Masked for testing dependend packages
->=sys-libs/db-4.3
 
 # Sven Wegener <swegener@gentoo.org> (30 Jan 2005)
 # Major changes, needs some more testing
