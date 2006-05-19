@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws-mailmbox
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-mailmbox/ChangeLog,v 1.14 2006/04/17 18:38:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-mailmbox/ChangeLog,v 1.15 2006/05/19 18:31:59 corsair Exp $
+
+  19 May 2006; Markus Rothe <corsair@gentoo.org>
+  sylpheed-claws-mailmbox-1.10.ebuild:
+  Stable on ppc64
 
   17 Apr 2006; Markus Rothe <corsair@gentoo.org>
   sylpheed-claws-mailmbox-1.10.ebuild:
