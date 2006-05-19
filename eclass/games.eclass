@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.112 2006/04/24 07:18:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.113 2006/05/19 21:27:48 wolf31o2 Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -154,18 +154,20 @@ games_pkg_preinst() {
 # pkg_postinst function ... create env.d entry and warn about games group
 games_pkg_postinst() {
 	gamesenv
-	ewarn "Remember, in order to play games, you have to"
-	ewarn "be in the '${GAMES_GROUP}' group."
-	echo
-	case ${CHOST} in
-	*-darwin*)               einfo "Just run 'niutil -appendprop / /groups/games users <USER>'";;
-	*-freebsd*|*-dragonfly*) einfo "Just run 'pw groupmod ${GAMES_GROUP} -m <USER>'";;
-	*)                       einfo "Just run 'gpasswd -a <USER> ${GAMES_GROUP}'";;
-	esac
-	echo
-	einfo "For more info about Gentoo gaming in general, see our website:"
-	einfo "   http://games.gentoo.org/"
-	echo
+	if [[ -z "${GAMES_SHOW_WARNING}" ]] ; then
+		ewarn "Remember, in order to play games, you have to"
+		ewarn "be in the '${GAMES_GROUP}' group."
+		echo
+		case ${CHOST} in
+			*-darwin*) ewarn "Just run 'niutil -appendprop / /groups/games users <USER>'";;
+			*-freebsd*|*-dragonfly*) ewarn "Just run 'pw groupmod ${GAMES_GROUP} -m <USER>'";;
+			*) ewarn "Just run 'gpasswd -a <USER> ${GAMES_GROUP}', then have <USER> re-login.";;
+		esac
+		echo
+		einfo "For more info about Gentoo gaming in general, see our website:"
+		einfo "   http://games.gentoo.org/"
+		echo
+	fi
 }
 
 # Unpack .uz(2) files for UT/UT2003/UT2004
