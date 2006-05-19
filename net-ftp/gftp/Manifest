@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 22c419c9dd97f600cb9f8dbdf4d658ba ChangeLog 7090
+MD5 00f0e6086b462f1178937d14b08d784a ChangeLog 7192
 MD5 429ea419b557eb768b0be6daa3c8b7e7 files/digest-gftp-2.0.18-r1 65
 MD5 429ea419b557eb768b0be6daa3c8b7e7 files/digest-gftp-2.0.18-r2 65
 MD5 429ea419b557eb768b0be6daa3c8b7e7 files/digest-gftp-2.0.18-r3 65
@@ -13,12 +10,5 @@ MD5 327a4df792013f011340fe5f90dbb6c1 files/gftp-2.0.18-ssh2-read.patch 326
 MD5 710d64cc8961e1dcbdf86e6311032d41 gftp-2.0.18-r1.ebuild 1460
 MD5 1ef87d022c5ff737b9836ab7b69e38d3 gftp-2.0.18-r2.ebuild 1128
 MD5 4a2142ad845485e1bc269c71da71ab40 gftp-2.0.18-r3.ebuild 1269
-MD5 45a9067b3c936db9707b370203a618fb gftp-2.0.18-r4.ebuild 1058
+MD5 5e92aa9e8c801ba1715f5c583eaa8971 gftp-2.0.18-r4.ebuild 1054
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEbc43KRy60XGEcJIRApYAAKCHOflhRGTy3x4lzKo582bW2/gYSgCgtN79
-SIzqalvyB6hF2wOyLnJSRwA=
-=reNr
------END PGP SIGNATURE-----

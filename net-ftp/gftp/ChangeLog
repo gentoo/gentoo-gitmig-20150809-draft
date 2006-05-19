@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.52 2006/05/19 13:54:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.53 2006/05/19 15:32:42 tcort Exp $
+
+  19 May 2006; Thomas Cort <tcort@gentoo.org> gftp-2.0.18-r4.ebuild:
+  Stable on alpha wrt Bug #133704.
 
   19 May 2006; Gustavo Zacarias <gustavoz@gentoo.org> gftp-2.0.18-r4.ebuild:
   Stable on sparc wrt #133704
