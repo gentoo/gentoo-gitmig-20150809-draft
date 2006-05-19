@@ -1,0 +1,12 @@
+diff -NurdB libxslt-1.1.16/configure libxslt-1.1.16-patched/configure
+--- libxslt-1.1.16/configure	2006-05-01 16:28:11.000000000 -0500
++++ libxslt-1.1.16-patched/configure	2006-05-18 22:25:53.000000000 -0500
+@@ -21724,7 +21724,7 @@
+     fi
+     if test "$with_python" != ""
+     then
+-        pythondir=$(PYTHON_SITE_PACKAGES)
++        pythondir='$(PYTHON_SITE_PACKAGES)'
+     else
+         pythondir='$(libdir)/python$(PYTHON_VERSION)/site-packages'
+     fi
