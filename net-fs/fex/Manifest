@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2fcc492ce5adefe218dba020669053c1 ChangeLog 447
+MD5 baf2ef0ed069cbd8b52dde4270315763 fex-0.8.18.ebuild 951
+MD5 9054ccf9202a1466006902c2328526ca files/digest-fex-0.8.18 62
+MD5 f2d94dd415f28efa8a1e9f1ad4a338d3 files/fex.conf.d 171
+MD5 24d61e302f0839825f3833c70e572dd6 files/fex.rc 520
+MD5 24d2ded6c5f2aa1f6567b27c583e26ea metadata.xml 222
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEbzhAgMUyd/cdjWsRAtEiAJ4iCjTmfliqDh+yaUeJfkKMFRd3JQCeMA/2
+vemaPZMvaelcLDzWe63Obvs=
+=9IFV
+-----END PGP SIGNATURE-----
