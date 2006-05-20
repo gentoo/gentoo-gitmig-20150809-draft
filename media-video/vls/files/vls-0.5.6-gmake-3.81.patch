@@ -1,0 +1,37 @@
+Index: vls-0.5.6/Makefile.dep
+===================================================================
+--- vls-0.5.6.orig/Makefile.dep
++++ vls-0.5.6/Makefile.dep
+@@ -49,16 +49,12 @@ default:
+ $(DEP): dep/%.dpp: src/%.cpp
+ 	@test -d dep/$(dir $*) || mkdir -p dep/$(dir $*)
+ 	@echo "Generating dependancies for $<..."
+-	@$(SHELL) -ec '$(CXX) $(DCFLAGS) $(INCLUDE) $< \
+-	| sed '\''s/$(subst .,\.,$(notdir $*))\.o[ :]*/src\/$(subst /,\/,$*).o \
+-	dep\/$(subst /,\/,$*).d : /g'\'' > $@; \
++	@$(SHELL) -ec '$(CXX) $(DCFLAGS) $(INCLUDE) $< | sed '\''s/$(subst .,\.,$(notdir $*))\.o[ :]*/src\/$(subst /,\/,$*).o dep\/$(subst /,\/,$*).d : /g'\'' > $@; \
+ 	[ -s $@ ] || rm -f $@'
+ 
+ $(C_DEP): dep/%.d: src/%.c
+ 	@test -d dep/$(dir $*) || mkdir -p dep/$(dir $*)
+ 	@echo "Generating dependancies for $<..."
+-	@$(SHELL) -ec '$(CC) $(DCFLAGS) $(INCLUDE) $< \
+-	| sed '\''s/$(subst .,\.,$(notdir $*))\.o[ :]*/src\/$(subst /,\/,$*).o \
+-	dep\/$(subst /,\/,$*).d : /g'\'' > $@; \
++	@$(SHELL) -ec '$(CC) $(DCFLAGS) $(INCLUDE) $< | sed '\''s/$(subst .,\.,$(notdir $*))\.o[ :]*/src\/$(subst /,\/,$*).o dep\/$(subst /,\/,$*).d : /g'\'' > $@; \
+ 	[ -s $@ ] || rm -f $@'
+ 
+Index: vls-0.5.6/Makefile.module.dep
+===================================================================
+--- vls-0.5.6.orig/Makefile.module.dep
++++ vls-0.5.6/Makefile.module.dep
+@@ -49,8 +49,6 @@ default:
+ $(MODULE_DEP): dep/%.d: %.cpp
+ 	@test -d dep/$(dir $*) || mkdir -p dep/$(dir $*)
+ 	@echo "Generating dependancies for $<..."
+-	@$(SHELL) -ec '$(CXX) $(DCFLAGS) $(MODULE_DCFLAGS) $(INCLUDE) $< \
+-	| sed '\''s/$(subst .,\.,$(notdir $*))\.o[ :]*/$(subst /,\/,$*).o \
+-	dep\/$(subst /,\/,$*).d : /g'\'' > $@; \
++	@$(SHELL) -ec '$(CXX) $(DCFLAGS) $(MODULE_DCFLAGS) $(INCLUDE) $< | sed '\''s/$(subst .,\.,$(notdir $*))\.o[ :]*/$(subst /,\/,$*).o dep\/$(subst /,\/,$*).d : /g'\'' > $@; \
+ 	[ -s $@ ] || rm -f $@'
+ 

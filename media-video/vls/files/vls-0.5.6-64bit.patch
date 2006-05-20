@@ -1,0 +1,26 @@
+Index: vls-0.5.6/src/core/hashtable.cpp
+===================================================================
+--- vls-0.5.6.orig/src/core/hashtable.cpp
++++ vls-0.5.6/src/core/hashtable.cpp
+@@ -97,7 +97,7 @@ u32 C_HashMethod<u16>::Hash(u16 iKey) co
+ 
+ u32 C_HashMethod<handle>::Hash(handle hKey) const
+ {
+-  return (u32)hKey % m_uiMaxHash;
++  return static_cast<u32>((long)hKey % m_uiMaxHash);
+ }
+ 
+ 
+Index: vls-0.5.6/src/core/stream.cpp
+===================================================================
+--- vls-0.5.6.orig/src/core/stream.cpp
++++ vls-0.5.6/src/core/stream.cpp
+@@ -339,7 +339,7 @@ template <class IOStream>
+       while(iByteCount > 0 && iRc != FILE_EOF);
+ 
+       // Deserialize them
+-      cSerializer.SetNextBytes(&aBytes);
++      cSerializer.SetNextBytes(aBytes);
+ 
+       // Next iteration
+       iByteCount = cSerializer.NextBytesCount();

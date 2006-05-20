@@ -15,7 +15,14 @@ Index: vls-0.5.6/src/modules/dvdreader/dvdreader.cpp
 ===================================================================
 --- vls-0.5.6.orig/src/modules/dvdreader/dvdreader.cpp
 +++ vls-0.5.6/src/modules/dvdreader/dvdreader.cpp
-@@ -34,6 +34,7 @@
+@@ -28,12 +28,14 @@
+ //------------------------------------------------------------------------------
+ // Preamble
+ //------------------------------------------------------------------------------
++#define __STDC_LIMIT_MACROS // We're in C++ so we need to define this before stdint.h inclusion
+ #include "../../core/defs.h"
+ 
+ #include "../../core/core.h"
  
  #include "../../core/iso_lang.h"
  
