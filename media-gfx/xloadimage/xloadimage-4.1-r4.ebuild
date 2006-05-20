@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r4.ebuild,v 1.14 2006/01/18 23:02:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r4.ebuild,v 1.15 2006/05/20 17:29:13 smithj Exp $
 
-inherit alternatives eutils flag-o-matic
+inherit alternatives eutils flag-o-matic toolchain-funcs
 
 MY_P="${P/-/.}"
 S=${WORKDIR}/${MY_P}
@@ -51,6 +51,12 @@ src_unpack() {
 	fi
 
 	chmod +x "${S}"/configure
+}
+
+src_compile() {
+	tc-export CC
+	econf || die
+	emake || die
 }
 
 src_install() {
