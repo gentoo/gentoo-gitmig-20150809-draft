@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdate
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.25 2006/05/20 06:49:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.26 2006/05/20 16:47:17 nixnut Exp $
+
+  20 May 2006; <nixnut@gentoo.org> rdate-1.4-r1.ebuild:
+  Stable on ppc. bug #129091
 
   20 May 2006; Robin H. Johnson <robbat2@gentoo.org> rdate-1.4-r1.ebuild:
   Re-add ~ppc64 that seems to have been mistakenly dropped from 1.4 series.
