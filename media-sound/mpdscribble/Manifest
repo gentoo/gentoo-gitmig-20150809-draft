@@ -1,17 +1,38 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a1a1771f130766116e695b628294f023 ChangeLog 1345
-MD5 bb3bc554122fe799b840d3af19e2a511 files/digest-mpdscribble-0.2.6 69
-MD5 6abc4c9fdc278789d117ab53d6747338 files/digest-mpdscribble-0.2.7 69
+AUX mpdscribble.rc 464 RMD160 60bfb103362766953cd020b84bc4a2bd1979aec0 SHA1 ef5d20cd3b79fd25d961db9c0fb76c61a8d5fe8a SHA256 73da3e61829907b1f30a4d54ae8380e01be32170b5e88e93fe1b69f23f67191c size 464
 MD5 71c7208eb53a7506d94cb45fe106edd2 files/mpdscribble.rc 464
-MD5 ac8292cf54418efa89fa3e29c0c1cacb metadata.xml 686
+RMD160 60bfb103362766953cd020b84bc4a2bd1979aec0 files/mpdscribble.rc 464
+SHA256 73da3e61829907b1f30a4d54ae8380e01be32170b5e88e93fe1b69f23f67191c files/mpdscribble.rc 464
+DIST mpdscribble-0.2.6.tar.gz 127387 RMD160 a4ce8fab6d6960840cd444d85d7237d185cf3fb0 SHA256 ef40495de4d829bc486f1e2c752d542a15bab9049567d258ff1c8a2b590a1c20 size 127387
+DIST mpdscribble-0.2.7.tar.gz 127675 RMD160 8330445ca7edc2341222e7bcee843d8e2938e191 SHA256 1df86cc787d8714930cdccb3e4294c8735c961b03b69123db6e9281c14a92cff size 127675
+EBUILD mpdscribble-0.2.6.ebuild 1116 RMD160 e2fc132553c6cb55fdeef87a325bbfd5383a26e7 SHA1 121f0ed1bb78428dc8e765cca291e5b978fd84f5 SHA256 369106ad4ff9bd80f129af6aa65748b4717ccb24a0c68f7ab489b542d04ee5f4 size 1116
 MD5 cddf7d84cb5f5b49f4f2c2253b69f760 mpdscribble-0.2.6.ebuild 1116
-MD5 33e5a1c308636e524e43c012cfc4684b mpdscribble-0.2.7.ebuild 1116
+RMD160 e2fc132553c6cb55fdeef87a325bbfd5383a26e7 mpdscribble-0.2.6.ebuild 1116
+SHA256 369106ad4ff9bd80f129af6aa65748b4717ccb24a0c68f7ab489b542d04ee5f4 mpdscribble-0.2.6.ebuild 1116
+EBUILD mpdscribble-0.2.7.ebuild 1122 RMD160 f81ddae6d0903fc71d9d00b2eadd5685fdd7af5b SHA1 7a79b13e3977145cf9b677242f4cbdedc9e8b54c SHA256 b9bb751830fd70f088ec679b91a01acaef0cff895650468fd8b5c09cf2f73ae7 size 1122
+MD5 ac6c4767ea0a9c90685abbebd3186274 mpdscribble-0.2.7.ebuild 1122
+RMD160 f81ddae6d0903fc71d9d00b2eadd5685fdd7af5b mpdscribble-0.2.7.ebuild 1122
+SHA256 b9bb751830fd70f088ec679b91a01acaef0cff895650468fd8b5c09cf2f73ae7 mpdscribble-0.2.7.ebuild 1122
+MISC ChangeLog 1465 RMD160 a076c04f08de622f7b5e22414a0c8b933dc075ab SHA1 a5618d2ecef20918de187dd1e1ec3e78fc9ce95f SHA256 aeed6402cc5d2ca1b33e5af9c8b3e3b80418efb97528cdadfabc54b2b0af3947 size 1465
+MD5 07baf50c9322a000f2bad7639e4d1e30 ChangeLog 1465
+RMD160 a076c04f08de622f7b5e22414a0c8b933dc075ab ChangeLog 1465
+SHA256 aeed6402cc5d2ca1b33e5af9c8b3e3b80418efb97528cdadfabc54b2b0af3947 ChangeLog 1465
+MISC metadata.xml 686 RMD160 6ed7f2032e3db46cc676a7f9bd22033ef1a427a5 SHA1 a226d5dde353a6ae3990da92fd957066f42c1325 SHA256 3bb52aa10eebaa5dfb04975c7c1899def683187a0fb8fb5de22f8be55e933ad3 size 686
+MD5 ac8292cf54418efa89fa3e29c0c1cacb metadata.xml 686
+RMD160 6ed7f2032e3db46cc676a7f9bd22033ef1a427a5 metadata.xml 686
+SHA256 3bb52aa10eebaa5dfb04975c7c1899def683187a0fb8fb5de22f8be55e933ad3 metadata.xml 686
+MD5 f11135e889df6c5f72d3c55ef91139dd files/digest-mpdscribble-0.2.6 253
+RMD160 34eeee663e9f14aa39f34a1a5ae69710aa08f5bb files/digest-mpdscribble-0.2.6 253
+SHA256 2d1aa8616282e3864bd5494e297f939346d1fb5caede16d01988c5e3adc647c2 files/digest-mpdscribble-0.2.6 253
+MD5 315f3c62ebff27e7af0de2087647ccc0 files/digest-mpdscribble-0.2.7 253
+RMD160 da825d72819c40f327ea85c862391e8bb4affbfc files/digest-mpdscribble-0.2.7 253
+SHA256 682954c7637b979862afb2a39fb63071e26d657025d8948ffc96d2f4d26384e5 files/digest-mpdscribble-0.2.7 253
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFDmgWfp5vW4rUFj5oRAvfUAJ0ccWkhXiC/jY+jo9BH9ZrRvUPaOQCfbWSy
-TPXr6zTbbTtqXaB5/G70wJA=
-=6nJt
+iD8DBQFEb5SdCHk4+ZoBpvsRAipgAKCGMJu4BATMu6gSNwjWBSZ8JJOswQCghWe0
+dEb/VDexsZriSX9QS92Rdcs=
+=UFzl
 -----END PGP SIGNATURE-----
