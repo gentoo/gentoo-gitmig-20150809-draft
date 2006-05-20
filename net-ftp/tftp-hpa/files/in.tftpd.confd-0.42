@@ -1,7 +1,11 @@
 # /etc/init.d/in.tftpd
 
 # Path to server files from
-INTFTPD_PATH="/tftproot"
+# Depending on your application you may have to change this.
+# This is commented out to force you to look at the file!
+#INTFTPD_PATH="/var/tftp/"
+#INTFTPD_PATH="/tftpboot/"
+#INTFTPD_PATH="/tftproot/"
 
 # For more options, see in.tftpd(8)
 # -R 4096:32767 solves problems with ARC firmware, and obsoletes
