@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.29.ebuild,v 1.5 2006/05/19 22:01:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.29.ebuild,v 1.6 2006/05/20 13:12:46 pauldv Exp $
 
 inherit eutils gnuconfig db flag-o-matic
 
@@ -106,7 +106,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall libdir="${D}/usr/$(get_libdir)" || die
+	einstall libdir="${D}/usr/$(get_libdir)" strip="${D}/bin/strip" || die
 
 	db_src_install_usrbinslot
 

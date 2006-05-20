@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.159 2006/05/19 22:01:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.160 2006/05/20 13:12:45 pauldv Exp $
+
+  20 May 2006; Paul de Vrieze <pauldv@gentoo.org> db-4.1.25_p2.ebuild,
+  db-4.3.27.ebuild, db-4.3.29.ebuild:
+  Port the striping fix to the other versions
 
   19 May 2006; Diego Pettenò <flameeyes@gentoo.org> db-4.3.29.ebuild:
   Add ~x86-fbsd keyword.
