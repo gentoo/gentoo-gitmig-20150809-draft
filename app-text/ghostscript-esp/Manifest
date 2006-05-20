@@ -73,10 +73,10 @@ AUX ghostscript-esp-8.15.2-cidfmap.cjk 1719 RMD160 5eefdefe4f0d1acad18a212c7d7d5
 MD5 e155c2977c61ccd043582e8d54b364f3 files/ghostscript-esp-8.15.2-cidfmap.cjk 1719
 RMD160 5eefdefe4f0d1acad18a212c7d7d5500725cd2f4 files/ghostscript-esp-8.15.2-cidfmap.cjk 1719
 SHA256 de206ce949bcd5590abda3973010e4b0d0983b0ecc483180395d83e52e233406 files/ghostscript-esp-8.15.2-cidfmap.cjk 1719
-AUX ghostscript-esp-8.15.2-cups-1.1.patch 528 RMD160 24b44ebb793218e649512b41dbb90c23b2df74ac SHA1 9a267637638765c9369cad32ce8b9b879eafe70b SHA256 e9a0232f1760216719f962086edbad5290a6a13a6630979366ad3d7786d2cb0e size 528
-MD5 6fbd93a26a894fc76cf40bb784860c45 files/ghostscript-esp-8.15.2-cups-1.1.patch 528
-RMD160 24b44ebb793218e649512b41dbb90c23b2df74ac files/ghostscript-esp-8.15.2-cups-1.1.patch 528
-SHA256 e9a0232f1760216719f962086edbad5290a6a13a6630979366ad3d7786d2cb0e files/ghostscript-esp-8.15.2-cups-1.1.patch 528
+AUX ghostscript-esp-8.15.2-cups-1.1.patch 528 RMD160 5013e14a942b2e876e7dbb3cdbbd62d3cd559173 SHA1 e4bfe1d6ae745211bd33a10d8423e9890075e18d SHA256 446e1a9ed99e2336c3f84741e16c628c89b2ddcceb314bab4eca8ea0dc489b5e size 528
+MD5 c694433b8e60e2a6c7a1bfbacc1d85a8 files/ghostscript-esp-8.15.2-cups-1.1.patch 528
+RMD160 5013e14a942b2e876e7dbb3cdbbd62d3cd559173 files/ghostscript-esp-8.15.2-cups-1.1.patch 528
+SHA256 446e1a9ed99e2336c3f84741e16c628c89b2ddcceb314bab4eca8ea0dc489b5e files/ghostscript-esp-8.15.2-cups-1.1.patch 528
 AUX ghostscript-esp-8.15.2-destdir.diff 13375 RMD160 5d6e2d4f0ab0a833cad2ce827c364b6e5954f077 SHA1 ae72af0bdbf4f7592b45a7912ef456fca1831f7a SHA256 40446a672571dbb09dbb15f0b4097547914dc34e498afa9aefe3a67f72c9ac2e size 13375
 MD5 377c67fa66d91947e3b9e5346ac37c68 files/ghostscript-esp-8.15.2-destdir.diff 13375
 RMD160 5d6e2d4f0ab0a833cad2ce827c364b6e5954f077 files/ghostscript-esp-8.15.2-destdir.diff 13375
@@ -228,7 +228,7 @@ SHA256 ce5d1227c4c4e4d246a8f4a65a612f0ea0286406fc7880e0f5b299cc842d45ba files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEbxEtNJowsmZ/PzARApPwAJwLEpNbpD+NnyDpq6V1zVkYOI1V3QCfadH5
-kJcFb3A7/uNOrpwosxQSSdE=
-=961Y
+iD8DBQFEbx/XNJowsmZ/PzARAuE6AJ9tN9JmGsTAhZ3cple6TPDx3w2uGQCgzJyK
+Wtqga6oV9TWYJw4L+N3Xpfo=
+=Tvq9
 -----END PGP SIGNATURE-----

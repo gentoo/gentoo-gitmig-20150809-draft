@@ -8,7 +8,7 @@ Index: pstoraster/gdevcups.c
  
 +#ifdef CUPS_RASTER_SYNCv1
    bandbytes = cups->header.cupsBytesPerLine / cups->header.cupsNumColors;
-+#elif
++#else
 +  bandbytes = (cups->header.cupsWidth * cups->header.cupsBitsPerColor + 7) / 8;
 +#endif /* CUPS_RASTER_SYNCv1 */
  
