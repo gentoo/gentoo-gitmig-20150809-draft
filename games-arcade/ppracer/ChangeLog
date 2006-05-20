@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/ppracer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ChangeLog,v 1.16 2006/04/04 00:49:04 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ChangeLog,v 1.17 2006/05/20 17:29:16 tcort Exp $
+
+  20 May 2006; Thomas Cort <tcort@gentoo.org> ppracer-0.3.1.ebuild:
+  Stable on alpha.
 
   04 Apr 2006; Thomas Cort <tcort@gentoo.org> ppracer-0.3.1.ebuild:
   Added ~alpha keyword. Test by Mike Hlavac <mike@flyingpenguins.org>.
