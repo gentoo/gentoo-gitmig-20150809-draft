@@ -1,0 +1,11 @@
+--- ghostscript-7.07/src/int.mak.noopt	2005-03-10 17:22:53.000000000 +0000
++++ ghostscript-7.07/src/int.mak.in	2005-03-10 17:24:10.000000000 +0000
+@@ -105,7 +105,7 @@
+ $(PSOBJ)igcref.$(OBJ) : $(PSSRC)igcref.c $(GH) $(memory__h)\
+  $(gsexit_h) $(gsstruct_h)\
+  $(iastate_h) $(idebug_h) $(igc_h) $(iname_h) $(ipacked_h) $(store_h)
+-	$(PSCC) $(PSO_)igcref.$(OBJ) $(C_) $(PSSRC)igcref.c
++	$(PSCC) -O0 $(PSO_)igcref.$(OBJ) $(C_) $(PSSRC)igcref.c
+ 
+ $(PSOBJ)igcstr.$(OBJ) : $(PSSRC)igcstr.c $(GH) $(memory__h)\
+  $(gsmdebug_h) $(gsstruct_h) $(iastate_h) $(igcstr_h)

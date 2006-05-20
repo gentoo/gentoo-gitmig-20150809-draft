@@ -1,0 +1,72 @@
+diff -u espgs-8.15.2_p9999/src/unix-dll.mak.in /files/unix-dll.mak.in
+--- espgs-8.15.2_p9999/src/unix-dll.mak.in	2006-05-20 09:59:44.000000000 +0200
++++ /files/unix-dll.mak.in	2006-05-20 09:57:14.000000000 +0200
+@@ -67,6 +67,7 @@
+ # Build the small Ghostscript loaders, with Gtk+ and without
+ 
+ @BUILD_GTK_LOADER@
++@BUILD_GTK_LOADER2@
+ 
+ $(GSSOC_XE): $(GS_SO) $(GLSRC)dxmainc.c
+ 	$(GLCC) -g -o $(GSSOC_XE) $(GLSRC)dxmainc.c -L$(BINDIR) -l$(GS)
+@@ -102,7 +103,7 @@
+ 	-mkdir -p $(DESTDIR)$(bindir)
+ 	-mkdir -p $(DESTDIR)$(libdir)
+ 	$(INSTALL_PROGRAM) $(GSSOC) $(DESTDIR)$(bindir)/$(GSSOC_XENAME)
+-	$(INSTALL_PROGRAM) $(GSSOX) $(DESTDIR)$(bindir)/$(GSSOX_XENAME)
++	@if test -e $(GSSOX); then $(INSTALL_PROGRAM) $(GSSOX) $(DESTDIR)$(bindir)/$(GSSOX_XENAME); fi
+ 	$(INSTALL_PROGRAM) $(BINDIR)/$(SOBINRELDIR)/$(GS_SONAME_MAJOR_MINOR) $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR_MINOR)
+ 	$(RM_) $(DESTDIR)$(libdir)/$(GS_SONAME)
+ 	ln -s $(GS_SONAME_MAJOR_MINOR) $(DESTDIR)$(libdir)/$(GS_SONAME)
+diff -u espgs-8.15.2_p9999/src/configure.ac /files/configure.ac
+--- espgs-8.15.2_p9999/src/configure.ac	2006-05-20 09:59:43.000000000 +0200
++++ /files/configure.ac	2006-05-20 09:57:04.000000000 +0200
+@@ -192,8 +192,8 @@
+ 		AC_MSG_CHECKING(for fontconfig)
+ 		if $PKGCONFIG --exists fontconfig; then
+ 			AC_MSG_RESULT(yes)
+-			CFLAGS="$CFLAGS `$PKG_CONFIG --cflags fontconfig`"
+-			FONTCONFIG_LIBS="`$PKG_CONFIG --libs fontconfig`"
++			CFLAGS="$CFLAGS `$PKGCONFIG --cflags fontconfig`"
++			FONTCONFIG_LIBS="`$PKGCONFIG --libs fontconfig`"
+ 			AC_DEFINE_UNQUOTED(HAVE_FONTCONFIG, 1)
+ 		else
+ 			AC_MSG_RESULT(no)
+@@ -478,20 +478,29 @@
+ dnl check if we can/should build the gtk loader
+ AC_ARG_ENABLE([gtk], AC_HELP_STRING([--disable-gtk], [Don't build the gtk loader]))
+ if test "x$enable_gtk" != "xno"; then
+-	AC_MSG_CHECKING([for gtk])
+-	if $with_gtk --cflags >/dev/null 2>/dev/null; then
+-		AC_MSG_RESULT([yes])
+-		BUILD_GTK_LOADER="\$(GSSOX_XE): \$(GS_SO) \$(GLSRC)dxmain.c
+-	\$(GLCC) -g `gtk-config --cflags` -o \$(GSSOX_XE) \$(GLSRC)dxmain.c -L$(BINDIR) -l\$(GS) `gtk-config --libs`"
+-		HAVE_GTK=yes
+-	else
+-		AC_MSG_RESULT([no])
++	# We MUST NOT use PKG_CHECK_MODULES since it is a) not a standard
++	# autoconf macro and b) requires pkg-config on the system, which is
++	# NOT standard on ANY OS, including Linux!
++	AC_PATH_PROG(PKGCONFIG, pkg-config, no)
++
++	if test "$PKGCONFIG" != no; then
++		AC_MSG_CHECKING([for gtk])
++		if $PKGCONFIG --exists gtk+-2.0; then
++			AC_MSG_RESULT([yes])
++		BUILD_GTK_LOADER='$(GSSOX_XE): $(GS_SO) $(GLSRC)dxmain.c'
++		BUILD_GTK_LOADER2="	\$(GLCC) -g `$PKGCONFIG gtk+-2.0 --cflags` -o \$(GSSOX_XE) \$(GLSRC)dxmain.c -L\$(BINDIR) -l\$(GS) `$PKGCONFIG gtk+-2.0 --libs`"
++			HAVE_GTK=yes
++		else
++			AC_MSG_RESULT([no])
++		fi
+ 	fi
+ fi
+ if test "$HAVE_GTK" != "yes"; then
+ 	BUILD_GTK_LOADER='$(GSSOX_XE): $(GSSOC_XE)'
++	BUILD_GTK_LOADER2=''
+ fi
+ AC_SUBST(BUILD_GTK_LOADER)
++AC_SUBST(BUILD_GTK_LOADER2)
+ 
+ dnl look for omni implementation
+ AC_ARG_WITH([omni], AC_HELP_STRING([--with-omni],
