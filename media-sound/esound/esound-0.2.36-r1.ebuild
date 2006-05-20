@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36-r1.ebuild,v 1.16 2006/05/06 00:39:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36-r1.ebuild,v 1.17 2006/05/20 00:30:43 flameeyes Exp $
 
-inherit libtool gnome.org eutils
+inherit libtool gnome.org eutils autotools
 
 DESCRIPTION="The Enlightened Sound Daemon"
 HOMEPAGE="http://www.tux.org/~ricdude/EsounD.html"
@@ -30,6 +30,9 @@ src_unpack() {
 	use ppc-macos && epatch ${FILESDIR}/${P}-ppc-macos.patch
 
 	epatch "${FILESDIR}/${P}-mode_t.patch"
+	epatch "${FILESDIR}/${P}-asneeded.patch"
+
+	eautomake
 
 	elibtoolize
 }
