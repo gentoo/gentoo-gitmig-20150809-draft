@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/liblbxutil
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/liblbxutil/ChangeLog,v 1.21 2006/04/28 15:17:28 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/liblbxutil/ChangeLog,v 1.22 2006/05/20 07:32:15 spyderous Exp $
+
+*liblbxutil-1.0.1 (20 May 2006)
+
+  20 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  -liblbxutil-1.0.0.ebuild, +liblbxutil-1.0.1.ebuild:
+  Bump. Remove RESTRICT=mirror and redundant commented variables, also builds
+  on Cygwin.
 
   28 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-liblbxutil-1.0.0, Manifest:
