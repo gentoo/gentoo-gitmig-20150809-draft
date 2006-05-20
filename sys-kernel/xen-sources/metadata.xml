@@ -6,4 +6,8 @@
   <email>chrb@gentoo.org</email>
   <name>Chris Bainbridge</name>
 </maintainer>
+<maintainer>
+  <email>agriffis@gentoo.org</email>
+  <name>Aron Griffis</name>
+</maintainer>
 </pkgmetadata>
