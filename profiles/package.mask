@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5371 2006/05/20 22:42:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5372 2006/05/20 22:55:18 jokey Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# Markus Ullmann <jokey@gentoo.org (21 May 2006)
+# OpenLDAP serious config problem, see bug #133898
+=net-nds/openldap-2.3.23
 
 # Carsten Lohrke <carlo@gentoo.org> (20 May 2006)
 # Digikam and KTorrent pre release versions
