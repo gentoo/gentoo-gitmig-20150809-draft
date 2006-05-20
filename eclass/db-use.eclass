@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db-use.eclass,v 1.4 2006/05/19 19:58:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db-use.eclass,v 1.5 2006/05/20 13:17:54 pauldv Exp $
 # This is a common location for functions that aid the use of sys-libs/db
 
 inherit versionator multilib
@@ -95,8 +95,10 @@ db_libname() {
 		for x in $@
 		do
 			if VER=$(db_findver "=sys-libs/db-${x}*"); then
-				echo -n "db-${VER}"
-				return 0
+				if [ -e "/usr/$(get_libdir)/libdb-${VER}.so" ]; then
+					echo -n "db-${VER}"
+					return 0
+				fi
 			fi
 		done
 		eerror "No suitable db version found" >&2
