@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 675a6606489fc4bcb88c7b116d715d86 ChangeLog 1584
-RMD160 a993ffe5123763bac7d2b0e5b4ddd8ee6a399a5a ChangeLog 1584
-SHA256 2f2963111faa78bbe39467efcd5ce047c09fcfefc5ba502bdcfda740a970fb9a ChangeLog 1584
+MD5 81ca8b96211a75f3a11ddf2fd8b3df50 ChangeLog 1683
 MD5 8b1a042a9f6e5c4e060a9bdd5d58e0a9 DBIx-DBSchema-0.27.ebuild 531
-RMD160 ddfae782f72dcd8b8bec822bc02f8caa7c6e773a DBIx-DBSchema-0.27.ebuild 531
-SHA256 c56e59ec6d6aeaacbfaa0e20fed11c003d50d2e8d0a18651af0faf0c42ded1ab DBIx-DBSchema-0.27.ebuild 531
-MD5 0e55a39edfa267571cefc10ba7aab38f DBIx-DBSchema-0.28.ebuild 555
-RMD160 e46e1040d527b425735e70af45c1bafeaabd83be DBIx-DBSchema-0.28.ebuild 555
-SHA256 a48c4ca68beeac39d03c49dee94d809d2a1b1b7448bbc25ca3d4f9932309eb64 DBIx-DBSchema-0.28.ebuild 555
+MD5 110897c97d2399c77694b0bd6533ddfb DBIx-DBSchema-0.28.ebuild 550
 MD5 b9d8fb8134e2443934fbdd0777c54c03 DBIx-DBSchema-0.31.ebuild 559
-RMD160 ff7b19faf05e45173135c4d1bec9eedfa05d35d7 DBIx-DBSchema-0.31.ebuild 559
-SHA256 906c09bceb556e97ee1e5d95493d435e823b2e8836bc32b2bdfe75f17a86ff48 DBIx-DBSchema-0.31.ebuild 559
 MD5 56131c7ac1fe033b98e79fa1ddf1690d files/digest-DBIx-DBSchema-0.27 69
-RMD160 646f8c9ef07ab2fbe0aba5400e1bd8612d0349bb files/digest-DBIx-DBSchema-0.27 69
-SHA256 9ea92fb42151c8ac039933ce1a159d351e6b2c653173d321c32edd81024660aa files/digest-DBIx-DBSchema-0.27 69
 MD5 b22e2c4ed08fedad59c1dba44365bfd9 files/digest-DBIx-DBSchema-0.28 253
-RMD160 b75fa3182766a7516de82e2c4a180292a32cd86e files/digest-DBIx-DBSchema-0.28 253
-SHA256 48bfa37ae939191467ba9706dc2ace2eabb09a4448a6f5d6e3875a40d8bfcb11 files/digest-DBIx-DBSchema-0.28 253
 MD5 cdab089e4b8c43a756bfdb6be516702a files/digest-DBIx-DBSchema-0.31 253
-RMD160 c2a3c8fa8e73237b0c6d7a2b46bef86ae7a49cdd files/digest-DBIx-DBSchema-0.31 253
-SHA256 ba5adade7cafa38d6d3eae797ada7cfe9b096a8b4b5cd67a94e582287c1b1f0c files/digest-DBIx-DBSchema-0.31 253
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFETXbStG5z4I8BtQoRAs0LAJoCGd54dzmv17t0hx/OSSF+5seoqQCfYU0T
-cr0e6rJ3ithcZEiPjDxfXy4=
-=VOSR
------END PGP SIGNATURE-----
