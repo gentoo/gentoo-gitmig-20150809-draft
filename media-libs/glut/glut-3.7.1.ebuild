@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.29 2006/05/16 16:16:56 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.30 2006/05/20 06:52:50 spyderous Exp $
 
 inherit autotools eutils
 
@@ -15,8 +15,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="virtual/opengl
-	virtual/glu"
+RDEPEND="virtual/opengl
+	virtual/glu
+	!media-libs/freeglut"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/Mesa-${MESA_VER}"
 
