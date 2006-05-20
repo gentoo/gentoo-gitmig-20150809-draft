@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3-r2.ebuild,v 1.9 2006/05/19 22:58:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3-r2.ebuild,v 1.10 2006/05/20 14:45:31 flameeyes Exp $
 
 inherit eutils pam flag-o-matic autotools
 IUSE="ssl pam tcpd slp cups kerberos krb4 debug cracklib"
@@ -39,6 +39,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-setXid.patch"
 	epatch "${FILESDIR}/${P}-db43.patch"
+	epatch "${FILESDIR}/${P}-newerdb.patch"
 	AT_M4DIR="macros" eautoreconf
 }
 
