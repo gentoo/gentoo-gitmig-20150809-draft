@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.3_rc1.ebuild,v 1.1 2006/05/18 18:46:26 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.3_rc1.ebuild,v 1.2 2006/05/20 03:01:42 mr_bones_ Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -123,7 +123,7 @@ src_unpack() {
 	for i in ${LINGUAS}; do
 		i="${i/_/-}"
 		if [ ${i} != "en" ] ; then
-			LANGDIR="${WORKDIR}/${PACKED}_${i}.${BUILDID}/RPMS/" 
+			LANGDIR="${WORKDIR}/${PACKED}_${i}.${BUILDID}/RPMS/"
 			rpm_unpack ${LANGDIR}/openoffice.org-${i}-${MY_PV3}.i586.rpm
 			rpm_unpack ${LANGDIR}/openoffice.org-${i}-help-${MY_PV3}.i586.rpm
 			rpm_unpack ${LANGDIR}/openoffice.org-${i}-res-${MY_PV3}.i586.rpm
