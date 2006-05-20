@@ -1,7 +1,7 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.19 2006/05/18 11:54:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.20 2006/05/20 18:48:39 kugelfang Exp $
 
-# Jeremy Huddleston <eradicator@gentoo.org>
-# Mask multilib amd64 things
+# AMD64 Team <amd64@gentoo.org>
+# Mask packages that rely on amd64 multilib
 app-antivirus/bitdefender-console
 app-antivirus/f-prot
 app-antivirus/vlnx
@@ -145,6 +145,8 @@ net-im/aim
 net-im/skype
 net-im/ymessenger
 net-misc/icaclient
+net-misc/nx-x11-bin
+net-misc/nxclient
 net-p2p/sancho-bin
 net-www/netscape-flash
 sci-biology/foldingathome
