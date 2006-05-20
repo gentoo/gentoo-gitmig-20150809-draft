@@ -1,21 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fb42a41f24ff6235b49c64c0c6369dad ChangeLog 4855
+MD5 09193e8aeddea22b854842c9f5637cb2 ChangeLog 5077
 MD5 2ac98b4c3bd182f4d422edead25c56d9 files/digest-kphone-4.1.0 64
 MD5 c96af639b76079a8a65e634df2154fb8 files/digest-kphone-4.1.1 64
 MD5 021fac998cd116c8390408634abaf994 files/digest-kphone-4.2 62
+MD5 021fac998cd116c8390408634abaf994 files/digest-kphone-4.2-r1 62
 MD5 13744936b73f480a658795a553dd7efe files/kphone-4.1.0-Makefiles.patch 461
 MD5 ce59ccd7de9e3fb78d4ab5bb40b0d283 files/kphone-4.1.1-gcc34.patch 456
+MD5 9cfd15f592300e5711b7c39acd5d8b8e files/kphone-4.2-CVE-2006-2442.diff 574
 MD5 aa1742f0c810c439d129b6e2d08a2f42 files/kphone-4.2-gcc4.diff 960
 MD5 79a9d63d5116f9fd85489f5b0464cfdb kphone-4.1.0.ebuild 933
 MD5 34e862915786f759ee014aa4aab3d0b9 kphone-4.1.1.ebuild 1031
+MD5 3290ab4221904a5408f9c4ff756dbb35 kphone-4.2-r1.ebuild 1251
 MD5 af646ec7a417940c2b44ccb081ba0ae5 kphone-4.2.ebuild 1041
 MD5 70f06600556327dcfbc31fa03f610042 metadata.xml 155
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEMaBTKRy60XGEcJIRAgRaAJ4lG0A5EfBW3c067WxIZHKJ4STTjgCgg5IW
-I2BOJeN++lh4GnZj4L/XN3Q=
-=0aAJ
------END PGP SIGNATURE-----
