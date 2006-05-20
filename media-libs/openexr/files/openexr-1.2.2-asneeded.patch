@@ -1,0 +1,51 @@
+--- OpenEXR-1.2.2/IlmImf/Makefile.am.orig	2004-12-16 18:01:57.000000000 -0800
++++ OpenEXR-1.2.2/IlmImf/Makefile.am	2006-05-18 01:23:30.000000000 -0700
+@@ -55,7 +55,7 @@
+ 		       ImfTestFile.cpp ImfTestFile.h
+ 
+ libIlmImf_la_LDFLAGS = -version-info @LIBTOOL_VERSION@
+-
++libIlmImf_la_LIBADD = $(top_builddir)/Iex/libIex.la $(top_builddir)/Half/libHalf.la -lz
+ libIlmImfincludedir = $(includedir)/OpenEXR
+ 
+ libIlmImfinclude_HEADERS = ImfAttribute.h ImfBoxAttribute.h \
+--- OpenEXR-1.2.2/IlmImf/Makefile.in.orig	2005-03-09 17:29:28.000000000 -0800
++++ OpenEXR-1.2.2/IlmImf/Makefile.in	2006-05-18 01:23:40.000000000 -0700
+@@ -256,7 +256,7 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+-libIlmImf_la_LIBADD =
++libIlmImf_la_LIBADD = $(top_builddir)/Iex/libIex.la $(top_builddir)/Half/libHalf.la -lz
+ am_libIlmImf_la_OBJECTS = ImfAttribute.lo ImfBoxAttribute.lo \
+ 	ImfCRgbaFile.lo ImfChannelList.lo ImfChannelListAttribute.lo \
+ 	ImfFloatAttribute.lo ImfFrameBuffer.lo ImfHeader.lo ImfIO.lo \
+--- OpenEXR-1.2.2/Imath/Makefile.am.orig	2005-03-07 20:21:53.000000000 -0800
++++ OpenEXR-1.2.2/Imath/Makefile.am	2006-05-18 01:31:30.000000000 -0700
+@@ -16,6 +16,7 @@
+ 		      ImathBox.cpp ImathRandom.cpp
+ 
+ libImath_la_LDFLAGS = -version-info @LIBTOOL_VERSION@
++libImath_la_LIBADD = $(top_builddir)/Iex/libIex.la
+ 
+ libImathincludedir = $(includedir)/OpenEXR
+ 
+--- OpenEXR-1.2.2/Imath/Makefile.in.orig	2005-03-09 17:29:29.000000000 -0800
++++ OpenEXR-1.2.2/Imath/Makefile.in	2006-05-18 01:35:04.000000000 -0700
+@@ -168,6 +168,7 @@
+ 
+ 
+ libImath_la_LDFLAGS = -version-info @LIBTOOL_VERSION@
++libImath_la_LIBADD = $(top_builddir)/Iex/libIex.la
+ 
+ libImathincludedir = $(includedir)/OpenEXR
+ 
+@@ -189,7 +190,7 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+-libImath_la_LIBADD =
++libImath_la_LIBADD = $(top_builddir)/Iex/libIex.la
+ am_libImath_la_OBJECTS = ImathShear.lo ImathMatrixAlgo.lo ImathVec.lo \
+ 	ImathColorAlgo.lo ImathFun.lo ImathBox.lo ImathRandom.lo
+ libImath_la_OBJECTS = $(am_libImath_la_OBJECTS)
