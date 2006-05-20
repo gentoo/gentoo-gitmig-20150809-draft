@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21.ebuild,v 1.1 2006/03/17 23:27:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21.ebuild,v 1.2 2006/05/20 20:03:00 dertobi123 Exp $
 
 inherit debug eutils kde-functions
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 
 DEPEND="=x11-libs/qt-3*
 	dev-lang/perl
