@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/appres
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/appres/ChangeLog,v 1.13 2006/04/28 15:29:00 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/appres/ChangeLog,v 1.14 2006/05/20 10:41:45 robbat2 Exp $
+
+  20 May 2006; Robin H. Johnson <robbat2@gentoo.org> appres-1.0.0.ebuild:
+  Added ~ppc after testing.
 
   28 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-appres-1.0.0,
   Manifest:
