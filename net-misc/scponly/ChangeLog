@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/scponly
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.24 2006/03/01 07:56:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.25 2006/05/20 05:37:27 matsuu Exp $
+
+*scponly-4.6-r1 (20 May 2006)
+
+  20 May 2006; MATSUU Takuto <matsuu@gentoo.org>
+  +files/scponly-4.6-helper.patch, +scponly-4.6-r1.ebuild:
+  Fixed to work with rysnc, Bug 127983.
+  Fixed to move the user/group setup to pkg_postint, Bug 125796.
 
   01 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> scponly-4.3.ebuild:
   Stable on ppc, sparc.
