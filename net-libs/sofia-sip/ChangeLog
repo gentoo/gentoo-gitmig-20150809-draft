@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/sofia-sip
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/ChangeLog,v 1.1 2006/05/20 20:46:03 genstef Exp $
+
+*sofia-sip-1.11.8 (20 May 2006)
+
+  20 May 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +sofia-sip-1.11.8.ebuild:
+  New ebuild inspired by the voip and zugaina overlay, first step for tapioca,
+  bug 127383
+
