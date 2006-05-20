@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>fonts</herd>
+<maintainer>
+<email>flameeyes@gentoo.org</email>
+<name>Diego Pettenò</name>
+</maintainer>
 </pkgmetadata>
