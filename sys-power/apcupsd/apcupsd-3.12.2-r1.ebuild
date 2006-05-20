@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.12.2-r1.ebuild,v 1.1 2006/03/22 23:00:35 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.12.2-r1.ebuild,v 1.2 2006/05/20 11:45:59 flameeyes Exp $
 
 inherit eutils depend.apache
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/apcupsd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="doc snmp usb apache2 cgi threads ncurses nls lighttpd"
 
 DEPEND="snmp? ( net-analyzer/net-snmp )
