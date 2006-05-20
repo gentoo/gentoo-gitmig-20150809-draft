@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.162 2006/04/05 22:52:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.163 2006/05/20 21:59:18 psi29a Exp $
+
+  20 May 2006; <psi29a@gentoo.org> kdeaddons-3.5.2-r1.ebuild:
+  added to ~mips for testing
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kdeaddons-3.5.0.ebuild, -kdeaddons-3.5.1.ebuild:
