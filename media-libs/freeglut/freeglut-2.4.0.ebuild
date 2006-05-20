@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.4.0.ebuild,v 1.6 2006/05/19 18:08:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.4.0.ebuild,v 1.7 2006/05/20 06:54:06 spyderous Exp $
 
 inherit eutils
 
@@ -13,8 +13,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc-macos ppc64 sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/opengl
-	virtual/glu"
+RDEPEND="virtual/opengl
+	virtual/glu
+	!media-libs/freeglut"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
