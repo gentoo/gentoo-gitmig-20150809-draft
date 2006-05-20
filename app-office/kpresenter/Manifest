@@ -1,4 +1,4 @@
-MD5 2d8b57155eb3d79e4c143b5cd8c0deb9 ChangeLog 4072
+MD5 685914c1dd1ac7076bf3004b6579e5e7 ChangeLog 4072
 MD5 902823ac54984271d00a3e72454440b1 files/digest-kpresenter-1.4.2 250
 MD5 b2c444dbd353b179d6f2f5a770240183 files/digest-kpresenter-1.5.0 68
 MD5 fe78a2b5bbdc967e525fd94c7a55e241 files/digest-kpresenter-1.5.1 68
@@ -7,7 +7,7 @@ MD5 a08e04910037e4b3b9e9cbfb92eda61e files/digest-kpresenter-1.5_beta2 69
 MD5 f01ddda79b7e0afa602b27c09ae05217 files/digest-kpresenter-1.5_rc1 72
 MD5 51b7bbc480bdd8687058bfa6aa393ebb kpresenter-1.4.2.ebuild 1087
 MD5 d219f7e5d0e13b9df6e66424b13f5832 kpresenter-1.5.0.ebuild 1180
-MD5 d219f7e5d0e13b9df6e66424b13f5832 kpresenter-1.5.1.ebuild 1180
+MD5 512a596f3c195f9d95e9f46829e68a76 kpresenter-1.5.1.ebuild 1180
 MD5 1fd49bcf56fb436e2af790bfc4a83998 kpresenter-1.5_beta1.ebuild 1179
 MD5 bee6d48e07f1c2621e55c405909d6ddb kpresenter-1.5_beta2.ebuild 1179
 MD5 e0b4c270c7180055308efe0ce02f79bc kpresenter-1.5_rc1.ebuild 1183

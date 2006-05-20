@@ -1,4 +1,4 @@
-MD5 1bf503d9c980305abf274e0ce566ef18 ChangeLog 3977
+MD5 cb33448ba8a520d937d98656e9d402c9 ChangeLog 3977
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kformula-1.4.2 68
 MD5 b2c444dbd353b179d6f2f5a770240183 files/digest-kformula-1.5.0 68
 MD5 fe78a2b5bbdc967e525fd94c7a55e241 files/digest-kformula-1.5.1 68
@@ -7,7 +7,7 @@ MD5 a08e04910037e4b3b9e9cbfb92eda61e files/digest-kformula-1.5_beta2 69
 MD5 f01ddda79b7e0afa602b27c09ae05217 files/digest-kformula-1.5_rc1 72
 MD5 ec5d94a086bb22c0d0aafe11953da0ca kformula-1.4.2.ebuild 855
 MD5 8f2aa505bf35cef2c5931b2f63dc92da kformula-1.5.0.ebuild 820
-MD5 8f2aa505bf35cef2c5931b2f63dc92da kformula-1.5.1.ebuild 820
+MD5 9a082b0b3d9a2dc1fb3d95835d229de6 kformula-1.5.1.ebuild 820
 MD5 02af812cdd0a56074c984a968c8994b3 kformula-1.5_beta1.ebuild 819
 MD5 90d91af84f30af852d83fa42a0480679 kformula-1.5_beta2.ebuild 819
 MD5 d36e697de8d514e3ee7e223073a560a5 kformula-1.5_rc1.ebuild 823

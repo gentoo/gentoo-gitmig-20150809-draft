@@ -1,4 +1,4 @@
-MD5 8a46e6ece16e944cff41ffe20cb55916 ChangeLog 5138
+MD5 9872e49f84373fbef59e5d945f721fa4 ChangeLog 5138
 MD5 902823ac54984271d00a3e72454440b1 files/digest-koffice-libs-1.4.2 250
 MD5 b2c444dbd353b179d6f2f5a770240183 files/digest-koffice-libs-1.5.0 68
 MD5 fe78a2b5bbdc967e525fd94c7a55e241 files/digest-koffice-libs-1.5.1 68
@@ -8,7 +8,7 @@ MD5 f01ddda79b7e0afa602b27c09ae05217 files/digest-koffice-libs-1.5_rc1 72
 MD5 0c477f65102c24f2d150d7cd310e396c files/koffice-libs-1.5_rc1-kspell2.patch 825
 MD5 8519285df64019854a727a5b9e7b64bb koffice-libs-1.4.2.ebuild 1187
 MD5 3570e39da0e7065857b7735ce4855026 koffice-libs-1.5.0.ebuild 1314
-MD5 3570e39da0e7065857b7735ce4855026 koffice-libs-1.5.1.ebuild 1314
+MD5 4287843c6bc60b0e8082f472c9b6e216 koffice-libs-1.5.1.ebuild 1314
 MD5 bbb7f6dbaf19243e004ce489aebc5669 koffice-libs-1.5_beta1.ebuild 1313
 MD5 6d56df92ee6a011e1ba7b357931e9ff5 koffice-libs-1.5_beta2.ebuild 1313
 MD5 c8580011718882bbb5f7c5bc2229dcbc koffice-libs-1.5_rc1.ebuild 1424

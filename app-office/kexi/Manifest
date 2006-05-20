@@ -1,4 +1,4 @@
-MD5 7b1a919e8bead26b9e641bfdf9de14b4 ChangeLog 3938
+MD5 396006732376d01dcd2cf15183c99be4 ChangeLog 3938
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kexi-1.4.2 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kexi-1.4.2-r1 68
 MD5 b2c444dbd353b179d6f2f5a770240183 files/digest-kexi-1.5.0 68
@@ -12,7 +12,7 @@ MD5 4a60d6e8b86c1b332def656aff1542dc files/kexi-1.5.1-kexi_checkbox_data_saving.
 MD5 01b797c688b5f719c1aa8172e7fefd1e kexi-1.4.2-r1.ebuild 1130
 MD5 3459c72e14104b6ae964cf21299a23dc kexi-1.4.2.ebuild 1077
 MD5 42b7a14f6ce9adf9b8330fc78aff709f kexi-1.5.0.ebuild 1138
-MD5 7fae8087558d43ed1da7874536d731d7 kexi-1.5.1.ebuild 1247
+MD5 ba8a554c403666ef84ff425d559398a0 kexi-1.5.1.ebuild 1247
 MD5 231ba18c6c699034c49b88c89438a10e kexi-1.5_beta1.ebuild 1137
 MD5 600bf21776840b35a9d9c3aa3e9af5ba kexi-1.5_beta2.ebuild 1137
 MD5 ccfc20f562b1be8a0aac8d6e171e0ab2 kexi-1.5_rc1.ebuild 1141

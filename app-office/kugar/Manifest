@@ -1,4 +1,4 @@
-MD5 dc9d7f47822b09024389e56bff92ddd7 ChangeLog 3907
+MD5 27c0b9dd025e329c71a233c6688b15a0 ChangeLog 3907
 MD5 902823ac54984271d00a3e72454440b1 files/digest-kugar-1.4.2 250
 MD5 b2c444dbd353b179d6f2f5a770240183 files/digest-kugar-1.5.0 68
 MD5 fe78a2b5bbdc967e525fd94c7a55e241 files/digest-kugar-1.5.1 68
@@ -7,7 +7,7 @@ MD5 a08e04910037e4b3b9e9cbfb92eda61e files/digest-kugar-1.5_beta2 69
 MD5 f01ddda79b7e0afa602b27c09ae05217 files/digest-kugar-1.5_rc1 72
 MD5 ee48955eae30f71e2331f2b92438a578 kugar-1.4.2.ebuild 857
 MD5 51276cee5f2d090a1fe5811522023bba kugar-1.5.0.ebuild 852
-MD5 51276cee5f2d090a1fe5811522023bba kugar-1.5.1.ebuild 852
+MD5 a99bbff87da489ab3dd2cc1f8fdab5f7 kugar-1.5.1.ebuild 852
 MD5 b774a204d14051e9b9aa161667a48dde kugar-1.5_beta1.ebuild 851
 MD5 68ac0537803745d4a81b0840b044d25d kugar-1.5_beta2.ebuild 851
 MD5 cbe6fa961c7aa4a65880ed708c5a27a0 kugar-1.5_rc1.ebuild 855

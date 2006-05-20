@@ -1,4 +1,4 @@
-MD5 e8a1b75a67b350885eeb3f484e649876 ChangeLog 7175
+MD5 4c71e7707146e1788f5a235c7e429ce8 ChangeLog 7175
 MD5 6ee3768e50296eb2a8158093ee518133 files/CAN-2005-0064.patch 829
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kword-1.4.2-r4 68
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-kword-1.4.2-r6 68
@@ -14,7 +14,7 @@ MD5 dd4e1252d9492a184a8a0066f734da34 kword-1.4.2-r4.ebuild 1265
 MD5 3d8c253c535cf2140989fbe5587542c2 kword-1.4.2-r6.ebuild 1265
 MD5 512a4cdd6055ce64c814620316c52c80 kword-1.4.2-r7.ebuild 1332
 MD5 6acde49899e4003e62102e165a20dbfb kword-1.5.0.ebuild 1274
-MD5 6acde49899e4003e62102e165a20dbfb kword-1.5.1.ebuild 1274
+MD5 7a37abc109a937aaa65ecc31fa2f5b24 kword-1.5.1.ebuild 1274
 MD5 67d9545996955e9f82bc52b90d2b74c9 kword-1.5_beta1.ebuild 1273
 MD5 54df45f20c1773dfdda13bedec6b8100 kword-1.5_beta2.ebuild 1273
 MD5 6042002a22aae94c29c783a22dc333e5 kword-1.5_rc1.ebuild 1277
