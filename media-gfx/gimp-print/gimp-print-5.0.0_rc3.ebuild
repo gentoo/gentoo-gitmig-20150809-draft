@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_rc3.ebuild,v 1.1 2006/05/19 23:01:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_rc3.ebuild,v 1.2 2006/05/20 11:36:39 flameeyes Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils libtool
 
 IUSE="cups foomaticdb gtk nls readline ppds"
 
@@ -36,6 +36,13 @@ pkg_setup() {
 		ewarn "Please remerge gimp with USE=-gimpprint to avoid collissions"
 		die "gimp with gimpprint USE-flag detected"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	elibtoolize
 }
 
 src_compile() {
