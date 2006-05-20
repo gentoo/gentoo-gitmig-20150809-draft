@@ -1,7 +1,8 @@
-MD5 d94d72a3b6819674ac99cbd2ad79c07b ChangeLog 8664
+MD5 54543447464ae526a0cdd9ecd38d1fe1 ChangeLog 8789
 MD5 c1a7d072ddaa87c67e47e135f6cbd1cf files/digest-fwbuilder-1.1.2 68
 MD5 1ebee6eb666d0497c90817ccbf7768dc files/digest-fwbuilder-2.0.10 69
 MD5 057ba9b40b0b6e4bbdeba7ef598b2ce4 files/digest-fwbuilder-2.0.11 69
+MD5 350a84aea9a004e27bbbb3bf64209a57 files/digest-fwbuilder-2.0.12 69
 MD5 70fea7193b1f73a34e3cf49a2ac9c9c7 files/digest-fwbuilder-2.0.6 68
 MD5 99c3ff5a964d751686899517a6b90485 files/digest-fwbuilder-2.0.7 68
 MD5 1675a2e188765ced03b1eefd161a103f files/digest-fwbuilder-2.0.8 68
@@ -10,6 +11,7 @@ MD5 b7ecd1d8440ad584eead03ccddd2a800 files/fwbuilder-1.1.2-nls_fix.patch 382
 MD5 11e6f232f520cdf75476e709f2b3bc7e fwbuilder-1.1.2.ebuild 1390
 MD5 85203384c880992ddc71e65fc0988dbc fwbuilder-2.0.10.ebuild 1073
 MD5 2301309cbaf10b3aeb0d8bf827d235ea fwbuilder-2.0.11.ebuild 1073
+MD5 0fdf3281f971482a640e64919e6bb0d7 fwbuilder-2.0.12.ebuild 1073
 MD5 665b2d8e8a0822627a068fb476f6af4b fwbuilder-2.0.6.ebuild 897
 MD5 3f87b8e4164e6f4c3f71fd427a2f6019 fwbuilder-2.0.7.ebuild 1065
 MD5 c4b7edfc17c76edf4f94cc4a96223e86 fwbuilder-2.0.8.ebuild 1065
