@@ -1,6 +1,18 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.41 2006/04/29 19:22:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.42 2006/05/20 16:39:31 chainsaw Exp $
+
+*audacious-1.1.0_beta1 (20 May 2006)
+
+  20 May 2006; Tony Vroon <chainsaw@gentoo.org>
+  +audacious-1.1.0_beta1.ebuild:
+  Bump to 1.1.0 developer release 1. The configfile interface has been
+  poisoned, nobody should have been using this since the 0.2 versions. Moving
+  dialogs should no longer corrupt the screen when composite X is used. Proxy
+  settings are unified, and the musepack playback no longer cuts out a few
+  seconds too early. The AAC plugin has had an overhaul, be sure to test that.
+  Taglib is now used for ID3 tags, which should help with UTF-8 related
+  difficulties.
 
 *audacious-1.0.0-r1 (29 Apr 2006)
 
