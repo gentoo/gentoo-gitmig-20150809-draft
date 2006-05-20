@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.2.0.ebuild,v 1.23 2006/05/20 06:54:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.2.0.ebuild,v 1.24 2006/05/20 12:15:33 joshuabaergen Exp $
 
 DESCRIPTION="A completely OpenSourced alternative to the OpenGL Utility Toolkit (GLUT) library"
 HOMEPAGE="http://freeglut.sourceforge.net/"
@@ -13,7 +13,7 @@ IUSE=""
 
 RDEPEND="virtual/opengl
 	virtual/glu
-	!media-libs/freeglut"
+	!media-libs/glut"
 DEPEND="${RDEPEND}"
 
 src_install() {
