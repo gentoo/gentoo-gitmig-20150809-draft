@@ -1,0 +1,19 @@
+default-linux/x86/2006.0
+# Gentoo has switched to 2.6 as the defaults for headers/kernels.  If you wish
+# to use 2.4 headers/kernels, then you should do the following to upgrade:
+# emerge -n '>=sys-apps/portage-2.0.51'
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/x86/no-nptl/2.4 make.profile
+
+# If you wish to use the default 2.6 kernel, do the following:
+# emerge -n '>=sys-apps/portage-2.0.51'
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/x86/2006.0 make.profile
+
+# More information can be found at the following URLs:
+# http://www.gentoo.org/doc/en/gentoo-upgrading.xml
+# http://www.gentoo.org/doc/en/migration-to-2.6.xml
+
+# This profile will be removed after June 30th, 2006.
