@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/taginfo
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/taginfo/ChangeLog,v 1.1 2006/05/20 19:33:02 jhuebel Exp $
+
+*taginfo-1.2 (20 May 2006)
+
+  20 May 2006; Jason Huebel <jhuebel@gentoo.org> +metadata.xml,
+  +taginfo-1.2.ebuild:
+  initial ebuild
+
