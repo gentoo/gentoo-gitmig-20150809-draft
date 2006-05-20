@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd-aoa/snd-aoa-060519.ebuild,v 1.1 2006/05/19 16:03:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd-aoa/snd-aoa-060519.ebuild,v 1.2 2006/05/20 07:49:56 corsair Exp $
 
 inherit linux-mod
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~ppc64"
 IUSE=""
 
 DEPEND=""
