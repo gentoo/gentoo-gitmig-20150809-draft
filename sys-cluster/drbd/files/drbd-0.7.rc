@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/files/drbd-0.7-init,v 1.5 2005/03/15 03:42:49 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/files/drbd-0.7.rc,v 1.1 2006/05/20 14:00:44 xmerlin Exp $
 
 opts="${opts} reload"
 

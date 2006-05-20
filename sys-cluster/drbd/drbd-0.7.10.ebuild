@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.10.ebuild,v 1.6 2006/01/09 03:31:06 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.10.ebuild,v 1.7 2006/05/20 14:00:44 xmerlin Exp $
 
 inherit eutils versionator linux-mod
 
@@ -48,9 +48,7 @@ src_install() {
 	make PREFIX=${D} install || die "install problem"
 
 	# gentoo-ish init-script
-	dodir /etc/init.d
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/drbd-0.7-init drbd || die
+	newinitd ${FILESDIR}/${PN}-0.7.rc ${PN} || die
 
 	# needed by drbd startup script
 	#keepdir /var/lib/drbd
