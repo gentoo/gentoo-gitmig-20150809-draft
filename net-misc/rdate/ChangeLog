@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdate
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.24 2005/12/12 09:06:17 robbat2 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.25 2006/05/20 06:49:59 robbat2 Exp $
+
+  20 May 2006; Robin H. Johnson <robbat2@gentoo.org> rdate-1.4-r1.ebuild:
+  Re-add ~ppc64 that seems to have been mistakenly dropped from 1.4 series.
 
   12 Dec 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml:
   Add metadata.
