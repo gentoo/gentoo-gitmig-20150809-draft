@@ -1,0 +1,16 @@
+Index: pstoraster/gdevcups.c
+===================================================================
+--- pstoraster/gdevcups.c	(revision 163)
++++ pstoraster/gdevcups.c	(working copy)
+@@ -3722,7 +3722,11 @@
+   * to separate each chunked color as needed...
+   */
+ 
++#ifdef CUPS_RASTER_SYNCv1
+   bandbytes = cups->header.cupsBytesPerLine / cups->header.cupsNumColors;
++#elif
++  bandbytes = (cups->header.cupsWidth * cups->header.cupsBitsPerColor + 7) / 8;
++#endif /* CUPS_RASTER_SYNCv1 */
+ 
+   for (y = 0; y < cups->height; y ++)
+   {

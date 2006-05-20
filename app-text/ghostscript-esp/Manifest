@@ -73,6 +73,10 @@ AUX ghostscript-esp-8.15.2-cidfmap.cjk 1719 RMD160 5eefdefe4f0d1acad18a212c7d7d5
 MD5 e155c2977c61ccd043582e8d54b364f3 files/ghostscript-esp-8.15.2-cidfmap.cjk 1719
 RMD160 5eefdefe4f0d1acad18a212c7d7d5500725cd2f4 files/ghostscript-esp-8.15.2-cidfmap.cjk 1719
 SHA256 de206ce949bcd5590abda3973010e4b0d0983b0ecc483180395d83e52e233406 files/ghostscript-esp-8.15.2-cidfmap.cjk 1719
+AUX ghostscript-esp-8.15.2-cups-1.1.patch 528 RMD160 24b44ebb793218e649512b41dbb90c23b2df74ac SHA1 9a267637638765c9369cad32ce8b9b879eafe70b SHA256 e9a0232f1760216719f962086edbad5290a6a13a6630979366ad3d7786d2cb0e size 528
+MD5 6fbd93a26a894fc76cf40bb784860c45 files/ghostscript-esp-8.15.2-cups-1.1.patch 528
+RMD160 24b44ebb793218e649512b41dbb90c23b2df74ac files/ghostscript-esp-8.15.2-cups-1.1.patch 528
+SHA256 e9a0232f1760216719f962086edbad5290a6a13a6630979366ad3d7786d2cb0e files/ghostscript-esp-8.15.2-cups-1.1.patch 528
 AUX ghostscript-esp-8.15.2-destdir.diff 13375 RMD160 5d6e2d4f0ab0a833cad2ce827c364b6e5954f077 SHA1 ae72af0bdbf4f7592b45a7912ef456fca1831f7a SHA256 40446a672571dbb09dbb15f0b4097547914dc34e498afa9aefe3a67f72c9ac2e size 13375
 MD5 377c67fa66d91947e3b9e5346ac37c68 files/ghostscript-esp-8.15.2-destdir.diff 13375
 RMD160 5d6e2d4f0ab0a833cad2ce827c364b6e5954f077 files/ghostscript-esp-8.15.2-destdir.diff 13375
@@ -197,10 +201,10 @@ EBUILD ghostscript-esp-8.15.1_p20060430.ebuild 4672 RMD160 35940ad6094a06584b38e
 MD5 f46f2e44de441b97b4908c3a682a0418 ghostscript-esp-8.15.1_p20060430.ebuild 4672
 RMD160 35940ad6094a06584b38e0757334c57295b745fb ghostscript-esp-8.15.1_p20060430.ebuild 4672
 SHA256 7f761da75e68d465584ee4b06c9633e93b86e6ad818e3c9a8621cf2d6536a7ef ghostscript-esp-8.15.1_p20060430.ebuild 4672
-EBUILD ghostscript-esp-8.15.2_p20060520.ebuild 4610 RMD160 f0e61096a694b339eaf002e7e6503e9fef9e6bd9 SHA1 8b04ab4318409ab8d97bac71d32a781b2ed3d29a SHA256 c3ddf0f521c53cac6dc2c9405ea2af347794dd6be4428fcaa2f9edd62a770f18 size 4610
-MD5 b57618cf5fa08d5dd5d911ec50db026a ghostscript-esp-8.15.2_p20060520.ebuild 4610
-RMD160 f0e61096a694b339eaf002e7e6503e9fef9e6bd9 ghostscript-esp-8.15.2_p20060520.ebuild 4610
-SHA256 c3ddf0f521c53cac6dc2c9405ea2af347794dd6be4428fcaa2f9edd62a770f18 ghostscript-esp-8.15.2_p20060520.ebuild 4610
+EBUILD ghostscript-esp-8.15.2_p20060520.ebuild 4707 RMD160 b6c7831de4c46c272364878f8cb996c69b4068f1 SHA1 9949c1e95c3a6b1f1e60278a7441a0d5dd465bb5 SHA256 0289f36baf49f015bcc3db11f210e6db39e30304c9e52bcb33d6e324895616e3 size 4707
+MD5 9dafc886893bed54c98bbef8ab6dca14 ghostscript-esp-8.15.2_p20060520.ebuild 4707
+RMD160 b6c7831de4c46c272364878f8cb996c69b4068f1 ghostscript-esp-8.15.2_p20060520.ebuild 4707
+SHA256 0289f36baf49f015bcc3db11f210e6db39e30304c9e52bcb33d6e324895616e3 ghostscript-esp-8.15.2_p20060520.ebuild 4707
 MISC ChangeLog 26437 RMD160 2a66a9e590cda3a75dd6c5bfdfa1ba3afebd9336 SHA1 714b355c917766995df7e2b207eba0d49a784596 SHA256 43ed3e47d0ee1fc18b0458d9148fed11d7fb3a7dbe5f76ae6cd8e6ec65b1d394 size 26437
 MD5 920b43dbd593ca557de5abb6f5fed71c ChangeLog 26437
 RMD160 2a66a9e590cda3a75dd6c5bfdfa1ba3afebd9336 ChangeLog 26437
@@ -224,7 +228,7 @@ SHA256 ce5d1227c4c4e4d246a8f4a65a612f0ea0286406fc7880e0f5b299cc842d45ba files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEburgNJowsmZ/PzARAi5KAKCOB+nLMmYonKkYzMKgz95x9nbm9QCgpZGd
-7lJ0AFXo4WDDgOkU2YWz/w0=
-=m+Uo
+iD8DBQFEbxEtNJowsmZ/PzARApPwAJwLEpNbpD+NnyDpq6V1zVkYOI1V3QCfadH5
+kJcFb3A7/uNOrpwosxQSSdE=
+=961Y
 -----END PGP SIGNATURE-----

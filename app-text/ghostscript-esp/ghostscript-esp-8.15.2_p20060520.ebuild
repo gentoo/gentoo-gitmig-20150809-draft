@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.2_p20060520.ebuild,v 1.1 2006/05/20 10:09:30 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.2_p20060520.ebuild,v 1.2 2006/05/20 12:53:03 genstef Exp $
 
 inherit eutils autotools versionator
 
@@ -73,6 +73,8 @@ src_unpack() {
 	epatch ${FILESDIR}/ghostscript-pagesize.patch
 	# http://cups.org/espgs/str.php?L1644
 	epatch ${FILESDIR}/ghostscript-esp-8.15.2-big-cmap-post.patch
+	# http://cups.org/espgs/str.php?L1712
+	epatch ${FILESDIR}/ghostscript-esp-8.15.2-cups-1.1.patch
 
 	# search path fix
 	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/${PVM}/$(get_libdir):" \
