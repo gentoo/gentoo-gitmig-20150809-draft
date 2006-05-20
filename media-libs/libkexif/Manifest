@@ -1,4 +1,4 @@
-MD5 3ce328dc009a8fdbe52569ca21da5164 ChangeLog 2061
+MD5 3fdc2cdb78267f3253501bd3456ced45 ChangeLog 2056
 MD5 e36a88fab83880a32b9e0da85493b6ca files/digest-libkexif-0.1 65
 MD5 a4bfd1b081257d97d2c1d8a52ccb1c50 files/digest-libkexif-0.2.1 67
 MD5 a4bfd1b081257d97d2c1d8a52ccb1c50 files/digest-libkexif-0.2.1-r1 67
@@ -9,5 +9,5 @@ MD5 d281168730da1227d5539d2d301767d2 libkexif-0.1.ebuild 548
 MD5 6bb403f6783ff3dbf60c4811fe2a3631 libkexif-0.2.1-r1.ebuild 650
 MD5 664b6ea08ca197961e436ad0b3704003 libkexif-0.2.1.ebuild 548
 MD5 9e17cb7712e0ee02df08c9c7977be615 libkexif-0.2.2.ebuild 571
-MD5 bc691e793ec75b7934bd6238f214f5ef libkexif-0.2.3.ebuild 569
+MD5 bb182acea5d7adbef7c95f27beb8314c libkexif-0.2.3.ebuild 564
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
