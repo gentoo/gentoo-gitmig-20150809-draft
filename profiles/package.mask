@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5366 2006/05/19 21:55:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5367 2006/05/20 00:12:31 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -75,6 +75,7 @@ sys-process/bcron
 # These are masked, sicne they only work with the 0.0.8 version of openal with
 # the split out freealut.  They will *not* work with the "best version" stable
 # or ~arch openal in the tree.
+=games-action/chromium-0.9.12-r6
 =games-arcade/excido-0.1.5c-r1
 =games-fps/blackshades-cvs-20031110-r1
 =games-rps/eternal-lands-1.2.0_p1-r2
