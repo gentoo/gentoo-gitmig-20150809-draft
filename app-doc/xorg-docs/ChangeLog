@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/xorg-docs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.14 2006/04/27 12:27:31 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.15 2006/05/20 07:56:39 spyderous Exp $
+
+*xorg-docs-1.1-r1 (20 May 2006)
+
+  20 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  -xorg-docs-1.1.ebuild, +xorg-docs-1.1-r1.ebuild:
+  Install MAINTAINERS file to docdir.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-xorg-docs-1.1,
   Manifest:
