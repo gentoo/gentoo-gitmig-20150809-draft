@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.8-r3.ebuild,v 1.2 2006/03/30 13:39:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.8-r3.ebuild,v 1.3 2006/05/20 17:29:26 solar Exp $
 
 inherit flag-o-matic eutils
 
@@ -41,6 +41,11 @@ src_compile() {
 	use static && append-ldflags -static
 
 	econf ${myconf} || die
+
+	# Cross-compile workaround #133429
+	if [[ "$CBUILD" != "$CHOST" ]] ; then
+		emake -C tools || die "emake tools"
+	fi
 
 	# work around broken dependency's in info/Makefile.am #85540
 	emake -C lib || die "emake lib"
