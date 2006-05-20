@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.53 2006/02/19 20:08:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.54 2006/05/20 03:34:57 halcy0n Exp $
+
+*autofs-4.1.3-r5 (20 May 2006)
+
+  20 May 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/autofs-4.1.3-fix-sort-opts.patch, +autofs-4.1.3-r5.ebuild:
+  Add patch to to fix sort options; bug #120403
 
   19 Feb 2006; Joshua Kinard <kumba@gentoo.org> autofs-4.1.3-r4.ebuild:
   Added ~mips to KEYWORDS.
