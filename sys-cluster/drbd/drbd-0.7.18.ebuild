@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.18.ebuild,v 1.2 2006/05/20 14:00:44 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.18.ebuild,v 1.3 2006/05/20 14:06:06 xmerlin Exp $
 
 inherit eutils versionator linux-mod
 
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 
 MY_MAJ_PV="$(get_version_component_range 1-2 ${PV})"
 DESCRIPTION="mirror/replicate block-devices across a network-connection"

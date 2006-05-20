@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1d9950b072dd766a60e8e34d56eea7c9 ChangeLog 7597
+MD5 9553a5687b3fd245f5428632175d0feb ChangeLog 7686
 MD5 028f168b40983177f6460d8e579e5487 drbd-0.6.12-r1.ebuild 2147
 MD5 f23e21a3827cbddf8887ce6fd26b0321 drbd-0.7.11.ebuild 2120
 MD5 07099ae5c85612ce7fd90dfc99698c5d drbd-0.7.17.ebuild 2038
-MD5 0ba9420f1a3ab4518f43155e0fe00ca6 drbd-0.7.18.ebuild 2039
+MD5 1ebbf2d53a34cbe5e3c6a56c09fe4933 drbd-0.7.18.ebuild 2038
 MD5 f8ceed0b6be2ded4cdb079d38ac0c3d0 files/0.6.12-Makefile.vars.patch 675
 MD5 463c9c89c7d3f156fc5581070abce14d files/0.6.12-conf.d 69
 MD5 4ab78154d6a32d13d416f9915ad4bc28 files/0.6.12-init 701
@@ -21,7 +21,7 @@ MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEbzC4gMUyd/cdjWsRAl89AJ0agW4IEI6SIbm2WcZFHe7Bri9HCwCfXZnm
-J+lcmQJXIokMPi3hSO3Xn1s=
-=3a9s
+iD8DBQFEbzEfgMUyd/cdjWsRAnCPAJ9wTJhR4yjf2d+RXp4mpZ5b58IzhgCcDZn7
+wQwP9kj+P0P6cLC15x7FSrY=
+=GraH
 -----END PGP SIGNATURE-----
