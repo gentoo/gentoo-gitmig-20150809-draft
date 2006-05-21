@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.4.ebuild,v 1.4 2006/03/17 14:11:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.4.ebuild,v 1.5 2006/05/21 21:44:41 nerdboy Exp $
 
 inherit eutils
 
@@ -11,19 +11,23 @@ SRC_URI="ftp://ftp.ncsa.uiuc.edu/HDF/HDF5/current/src/${P}.tar.gz"
 LICENSE="NCSA-HDF"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="static zlib ssl mpi hlapi szip"
+# should try to get alpha ia64 and sparc back in here
+IUSE="static zlib ssl mpi hlapi szip threads debug"
 
 DEPEND="zlib? ( sys-libs/zlib )
 		szip? ( sci-libs/szip )
-		mpi? ( virtual/mpi )"
+		mpi? ( sys-cluster/mpich2 )"
 
 src_compile() {
-	local myconf
+	local myconf="--with-pic"
 
 	#--disable-static conflicts with --enable-cxx, so we have to do either or
-	use static && myconf="--enable-cxx" || myconf="--disable-static"
-	use zlib || myconf="${myconf} --disable-zlib"
-	use ssl && myconf="${myconf} --with-ssl"
+	use static && myconf="${myconf} --enable-cxx" || \
+	    myconf="${myconf} --disable-static"
+	# fortran needs f90 support
+	#myconf="${myconf} $(use_enable fortran)"
+	use threads && myconf="${myconf} --with-pthread"
+	use debug && myconf="${myconf} --enable-debug=all"
 	use mpi && myconf="${myconf} --enable-parallel"
 	use hlapi || myconf="${myconf} --disable-hl"
 
@@ -36,8 +40,10 @@ src_compile() {
 
 	use mpi && \
 	export CC="/usr/bin/mpicc"
-	./configure ${myconf} --enable-linux-lfs \
-		--prefix=/usr \
+	./configure --prefix=/usr ${myconf} \
+		$(use_enable zlib) \
+		$(use_with ssl) \
+		--enable-linux-lfs  \
 		--sysconfdir=/etc \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man || die "configure failed"
