@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.4 2006/04/12 14:02:23 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.5 2006/05/21 01:36:38 spyderous Exp $
 
 inherit toolchain-funcs fortran
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.bmsc.washington.edu/${PN}/${NAME}_${PV}.tar.gz"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 RDEPEND="media-libs/jpeg
 	media-libs/libpng
