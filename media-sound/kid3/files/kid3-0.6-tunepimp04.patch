@@ -1,0 +1,47 @@
+Index: kid3-0.6/kid3/musicbrainzclient.cpp
+===================================================================
+--- kid3-0.6.orig/kid3/musicbrainzclient.cpp
++++ kid3-0.6/kid3/musicbrainzclient.cpp
+@@ -30,7 +30,7 @@ MusicBrainzClient::MusicBrainzClient(Imp
+ 	m_trackDataVector(trackDataList), m_tp(0), m_ids(0), m_numFiles(0)
+ {
+ 	m_tp = tp_New("kid3", "0.6");
+-	tp_SetUseUTF8(m_tp, 1);
++	tp_SetID3Encoding(m_tp, eUTF8);
+ 	tp_SetAutoFileLookup(m_tp, 1);
+ 	tp_SetRenameFiles(m_tp, 0);
+ 	tp_SetMoveFiles(m_tp, 0);
+@@ -123,8 +123,9 @@ static const char* getFileStatusText(TPF
+ void MusicBrainzClient::pollStatus()
+ {
+ 	TPCallbackEnum type;
++	TPFileStatus status;
+ 	int id;
+-	while (tp_GetNotification(m_tp, &type, &id)) {
++	while (tp_GetNotification(m_tp, &type, &id, &status)) {
+ 		QString fn = getFilename(id);
+ 		int index = getIndexOfId(id);
+ 		switch (type) {
+@@ -211,7 +212,7 @@ void MusicBrainzClient::addFiles()
+ 			 it = m_trackDataVector.begin();
+ 			 it != m_trackDataVector.end();
+ 			 ++it) {
+-		m_ids[i++] = tp_AddFile(m_tp, QFile::encodeName((*it).getAbsFilename()));
++		m_ids[i++] = tp_AddFile(m_tp, QFile::encodeName((*it).getAbsFilename()), 1);
+ 	}
+ }
+ 
+@@ -290,10 +291,10 @@ bool MusicBrainzClient::getResults(int i
+ 					albumtrackresult_t* res = *albumTrackResults++;
+ 					ImportTrackData trackData;
+ 					trackData.title = QString::fromUtf8(res->name);
+-					trackData.artist = QString::fromUtf8(res->artist->name);
+-					trackData.album = QString::fromUtf8(res->album->name);
++					trackData.artist = QString::fromUtf8(res->artist.name);
++					trackData.album = QString::fromUtf8(res->album.name);
+ 					trackData.track = res->trackNum;
+-					trackData.year = res->album->releaseYear;
++					trackData.year = res->album.releaseYear;
+ 					// year does not seem to work, so at least we should not
+ 					// overwrite it with 0
+ 					if (trackData.year == 0) {

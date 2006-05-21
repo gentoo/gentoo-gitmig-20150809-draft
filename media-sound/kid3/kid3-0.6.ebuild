@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-0.6.ebuild,v 1.2 2005/11/06 16:53:05 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-0.6.ebuild,v 1.3 2006/05/21 23:35:34 flameeyes Exp $
 
 inherit kde
 
@@ -23,6 +23,14 @@ need-kde 3
 # Support for the KDE libraries is optional,
 # but the configure step that detects them
 # cannot be avoided. So KDE support is forced on.
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	has_version '>=media-libs/tunepimp-0.4.0' && \
+		epatch "${FILESDIR}/${P}-tunepimp04.patch"
+}
 
 src_compile() {
 	local myconf="--with-kde

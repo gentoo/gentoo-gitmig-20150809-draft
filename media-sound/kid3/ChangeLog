@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kid3
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.17 2005/11/06 16:53:05 greg_g Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.18 2006/05/21 23:35:34 flameeyes Exp $
+
+  21 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kid3-0.6-tunepimp04.patch, kid3-0.6.ebuild:
+  Add patch for kid3 to build with tunepimp 0.4.
 
   06 Nov 2005; Gregorio Guidi <greg_g@gentoo.org> kid3-0.6.ebuild:
   Forcing KDE support on, as kid3 cannot be configured without having the KDE
