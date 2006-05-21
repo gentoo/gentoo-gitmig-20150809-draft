@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.0-r1.ebuild,v 1.6 2006/04/11 20:34:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.0-r1.ebuild,v 1.7 2006/05/21 09:10:37 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/conky/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="truetype X ipv6 xmms infopipe audacious"
 
 DEPEND_COMMON="
