@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ecb
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.23 2006/05/14 00:59:29 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.24 2006/05/21 09:31:25 blubb Exp $
+
+  21 May 2006; Simon Stelling <blubb@gentoo.org> ecb-2.32-r1.ebuild:
+  stable on amd64
 
   14 May 2006; Mark Loeser <halcy0n@gentoo.org> ecb-2.32-r1.ebuild:
   Stable on x86; bug #128103
