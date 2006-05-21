@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-farsight
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/ChangeLog,v 1.1 2006/05/21 14:43:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/ChangeLog,v 1.2 2006/05/21 20:22:18 genstef Exp $
+
+*gst-plugins-farsight-0.10.2_p20060521-r1 (21 May 2006)
+
+  21 May 2006; Stefan Schweizer <genstef@gentoo.org>
+  -gst-plugins-farsight-0.10.2_p20060521.ebuild,
+  +gst-plugins-farsight-0.10.2_p20060521-r1.ebuild:
+  Add yahoo(libj2k) and msn(libmimic) support
 
 *gst-plugins-farsight-0.10.2_p20060521 (21 May 2006)
 
