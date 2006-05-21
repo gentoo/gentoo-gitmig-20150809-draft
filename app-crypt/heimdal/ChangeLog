@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.99 2006/04/23 17:18:13 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.100 2006/05/21 20:44:48 seemant Exp $
+
+  21 May 2006; Seemant Kulleen <seemant@gentoo.org> heimdal-0.7.2.ebuild:
+  fix the sed, fixing bug #126387 by G
 
   28 Apr 2006; Joshua Kinard <kumba@gentoo.org> heimdal-0.7.2.ebuild:
   Marked stable on mips.
