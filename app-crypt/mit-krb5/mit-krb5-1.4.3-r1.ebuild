@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3-r1.ebuild,v 1.2 2006/05/21 20:48:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3-r1.ebuild,v 1.3 2006/05/21 20:58:24 seemant Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -77,6 +77,10 @@ src_install() {
 		DESTDIR=${D} \
 		EXAMPLEDIR=/usr/share/doc/${PF}/examples \
 		install || die
+
+	make \
+		DESTDIR=${D} \
+		install-headers || die
 
 	cd ..
 	dodoc README
