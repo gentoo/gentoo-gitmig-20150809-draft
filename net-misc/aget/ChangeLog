@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aget
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/ChangeLog,v 1.7 2004/08/11 16:33:33 gongloo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/ChangeLog,v 1.8 2006/05/21 02:51:52 chriswhite Exp $
+
+  21 May 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Japanese translation of metadata.xml. Thanks to Yoshino-san in bug #133543.
 
   11 Aug 2004; Hasan Khalil <gongloo@gentoo.org> aget-0.4.ebuild:
   Stable on macos, added metadata.xml.
