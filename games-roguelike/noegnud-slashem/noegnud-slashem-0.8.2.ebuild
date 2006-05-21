@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-slashem/noegnud-slashem-0.8.2.ebuild,v 1.7 2004/12/16 15:17:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-slashem/noegnud-slashem-0.8.2.ebuild,v 1.8 2006/05/21 15:17:05 tupone Exp $
 
 inherit eutils games
 
@@ -34,6 +34,7 @@ src_unpack() {
 	unpack noegnud-${PV}_linux_src-minimal.tar.bz2
 	epatch ${DISTDIR}/noegnud-${PV}_noegnud-${PV}.${VAR_SNAME}${VAR_VER/e/E}.diff.gz
 	ln -s ${DISTDIR}/${VAR_TAR} noegnud-${PV}/variants/tarballs/${VAR_TAR}
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_compile() {
