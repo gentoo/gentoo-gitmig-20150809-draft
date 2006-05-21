@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gprolog
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.14 2006/04/30 04:50:22 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.15 2006/05/21 03:18:23 keri Exp $
+
+  21 May 2006; Keri Harris <keri@gentoo.org>
+  -files/gprolog-1.2.16-gcc4.patch, -gprolog-1.2.13.ebuild,
+  -gprolog-1.2.16.ebuild:
+  Remove horribly broken and outdated versions from the tree.
 
   30 Apr 2006; Mark Loeser <halcy0n@gentoo.org> gprolog-1.2.19.ebuild:
   Stable on x86; bug #131201
