@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/nxml-mode
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.15 2005/09/16 21:11:56 ciaranm Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.16 2006/05/21 11:13:19 blubb Exp $
+
+  21 May 2006; Simon Stelling <blubb@gentoo.org> nxml-mode-20041004.ebuild:
+  stable on amd64
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
