@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21.ebuild,v 1.2 2006/05/20 20:03:00 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21.ebuild,v 1.3 2006/05/21 08:45:22 dertobi123 Exp $
 
 inherit debug eutils kde-functions
 
@@ -58,7 +58,7 @@ src_compile() {
 
 	#./configure $myconf || die "configure failed"
 	econf $myconf || die "configure failed"
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {

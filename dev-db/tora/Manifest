@@ -1,4 +1,4 @@
-MD5 f2210d2d16aabf592f4445e66de650c3 ChangeLog 7725
+MD5 82889d1c652796c1e58b403a13c91536 ChangeLog 7892
 MD5 360385b94626738c4ea70afa2cc2ed56 files/digest-tora-1.3.16-r1 64
 MD5 e7b421c2548859407e95274c02f11b70 files/digest-tora-1.3.18 64
 MD5 cb38d2b46fa6836ac008ee673891505a files/digest-tora-1.3.21 64
@@ -7,4 +7,4 @@ MD5 0b13d1a7a8370a01657623ade86d1c0b files/tora-1.3.16-sh-no_oracle.diff 611
 MD5 26195c7b7ebc00c63f817e3266b8c4a0 metadata.xml 545
 MD5 353ace874564984189b4bcbb3aac14fb tora-1.3.16-r1.ebuild 1748
 MD5 a90a85712370b47cb4ed37b635705452 tora-1.3.18.ebuild 1714
-MD5 9e84f75ef47ab20368e1aab79232eee5 tora-1.3.21.ebuild 1739
+MD5 fb1abbba1ff88ff4b743efc2d68963eb tora-1.3.21.ebuild 1743
