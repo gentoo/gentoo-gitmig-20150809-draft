@@ -11,4 +11,8 @@
         Support for the Broadcom 570x series of gigabit network cards.
         It's licensed under the GPL-2.
     </longdescription>
+    <longdescription lang="ja">
+	Broadcom 社製品のギガビット・ネットワーク・カードの570x
+	シリーズをサポートします。これは GPL-2 ライセンスです。
+    </longdescription>
 </pkgmetadata>
