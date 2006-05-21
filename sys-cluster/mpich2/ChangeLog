@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.2 2006/05/21 18:54:51 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.3 2006/05/21 21:39:18 nerdboy Exp $
+
+  21 May 2006; Steve Arnold <nerdboy@gentoo.org> mpich2-1.0.3.ebuild:
+  Keyworded and tested on ppc, and as the older mpich was previously
+  keyworded for both, I added them back in.
 
 *mpich2-1.0.3 (21 May 2006)
 
