@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djvu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.35 2006/05/05 15:13:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.36 2006/05/21 10:12:32 corsair Exp $
+
+  21 May 2006; Markus Rothe <corsair@gentoo.org> djvu-3.5.16.ebuild:
+  Stable on ppc64
 
   05 May 2006; Tobias Scherbaum <dertobi123@gentoo.org> djvu-3.5.17.ebuild:
   Added to ~hppa
