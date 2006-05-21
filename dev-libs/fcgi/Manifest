@@ -1,19 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d953e26a58fe9685eb9d345f8b87f271 ChangeLog 1848
-RMD160 d5a0cedd50a7a85abf956819114bc21375ba0f6d ChangeLog 1848
-SHA256 3782d1c914506d68564c7bddebcab1db7ca45a5b8a18214e9d2ade2d4986b9e4 ChangeLog 1848
-MD5 a4b5b1d7a1b3ffedfc64e5dc89a5726c fcgi-2.4.0.ebuild 815
-RMD160 36e74ccddbe4e1a408ddd47ad0146ea1157cf6c4 fcgi-2.4.0.ebuild 815
-SHA256 ce1718ee1724ee1fc58a2fa8846956da3ab3ca94722c427fce2f18136aa92f07 fcgi-2.4.0.ebuild 815
+MD5 427bd1572fa41804dc74cf8acfbb2911 ChangeLog 1933
+MD5 615da9fd81ab91f2170346c5d28b3e6b fcgi-2.4.0.ebuild 812
 MD5 1cb3aae45ae9b3e1726be66a7b61b2f5 files/digest-fcgi-2.4.0 62
-RMD160 aaefe11f5a06f0eabed6ac655c6465691e49e8fa files/digest-fcgi-2.4.0 62
-SHA256 7a7762623643a8f66ea7d5b46594ec0b2b26af6b81fde5db5df77124f778f2ec files/digest-fcgi-2.4.0 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFESg12AiZjviIA2XgRAg2oAJwNhq8hICuRssTCgR1DBsgnI59TsgCeIEXE
-ocTG+5sU3bnxg7/4q/ySt2A=
-=xKML
------END PGP SIGNATURE-----

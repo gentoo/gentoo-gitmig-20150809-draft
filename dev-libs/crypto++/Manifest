@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 29a38783c632eb7e47cd9e690dd513f2 ChangeLog 3339
-RMD160 fe36769fd1763cdf97283502a55570d4f99334a5 ChangeLog 3339
-SHA256 b468ac89e270f709e6436e72d91c887aa35296b85fc0c44f93df01ebfa255587 ChangeLog 3339
+MD5 1bfc75120f272a1b94e73eff9e3f26b1 ChangeLog 3430
 MD5 261678f19d5a8837d91c6f15681191fc crypto++-5.2-r1.ebuild 1284
-RMD160 9abc41481eccbd0d15da86e26a41518548fc5467 crypto++-5.2-r1.ebuild 1284
-SHA256 d8cd5eed9f72bb7ce7beff8b5d1362d722a02850536c89af8755b240386ce099 crypto++-5.2-r1.ebuild 1284
-MD5 3530132969b6b66451bb1e2e2612bba4 crypto++-5.2.1.ebuild 1583
-RMD160 d8c44f421db142b84d2ff7a44e95accbf29cfdba crypto++-5.2.1.ebuild 1583
-SHA256 16009c8a7f19d1d09418843a6c5a08ef7b384039b8cdd3527da384d368dcc6f4 crypto++-5.2.1.ebuild 1583
+MD5 621b2fa7872fb56463fd6d00194f08ec crypto++-5.2.1.ebuild 1582
 MD5 04a9a9a0aab549dfb7ec96bfe3b82cd6 files/crypto++-5.1-amd64.diff 3070
-RMD160 98433ffc3bc037fb8568c46e85769b8aef196bb9 files/crypto++-5.1-amd64.diff 3070
-SHA256 a97c286aef3a7e964e3cf5a3ea73f5b779e1afb65c22d835ca27ddb504ad2901 files/crypto++-5.1-amd64.diff 3070
 MD5 310ab277c77a6b47f22d898c8f180cb8 files/crypto++-5.2.1-ubuntu-gcc4.patch 18717
-RMD160 38edd1a738cf686f98c92d5b2ae1d54a5374fa81 files/crypto++-5.2.1-ubuntu-gcc4.patch 18717
-SHA256 83edc575423c1b8c2db622655cab306bd30872294c3e3789e544db540d88f9d5 files/crypto++-5.2.1-ubuntu-gcc4.patch 18717
 MD5 cf9187d21296c23c480b1086284f5093 files/digest-crypto++-5.2-r1 58
-RMD160 2b5926d9414e243421dea6e5456f4a8b9e9cbda3 files/digest-crypto++-5.2-r1 58
-SHA256 b393d2129afa51681feef19a9e1d65d0b7ec95db430e2b0c3303509a15be2b9e files/digest-crypto++-5.2-r1 58
 MD5 2bd133c2a9baa91be72e4743174e3a9e files/digest-crypto++-5.2.1 229
-RMD160 df32989529f31898c59f072fbe770e2e2df42fe8 files/digest-crypto++-5.2.1 229
-SHA256 b6cfb3d42a35f374acab3249d0f4799fb0b72b3e500ba71a749af7d7d3ae8933 files/digest-crypto++-5.2.1 229
 MD5 41bb16591c5d6df1b1ac6da78a6062e8 metadata.xml 224
-RMD160 5a18627ba5832e80344a6207eb57113a5a275528 metadata.xml 224
-SHA256 1fbf45a787bf81410f8126a10b19df4b5c278db7f448590f140303706ed32017 metadata.xml 224
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEQZg1CRZPokWLroQRAkKSAJ4+N0sk3gyTh30xVzLrFmKniLKDGACgs/qq
-dh0qWIEHJnYPaOVhOt2adAw=
-=/clm
------END PGP SIGNATURE-----
