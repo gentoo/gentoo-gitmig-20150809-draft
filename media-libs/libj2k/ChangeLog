@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/libj2k
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libj2k/ChangeLog,v 1.1 2006/05/21 20:16:56 genstef Exp $
+
+*libj2k-0.0.9 (21 May 2006)
+
+  21 May 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +libj2k-0.0.9.ebuild:
+  New ebuild libj2k, dep of gst-plugins-farsight, dep of tapioca, bug 127383,
+  original ebuild taken from the zugaina overlay
+
