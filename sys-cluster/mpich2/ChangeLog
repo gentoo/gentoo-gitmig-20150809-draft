@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/mpich2
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.1 2006/01/11 14:51:09 kanaka Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.2 2006/05/21 18:54:51 nerdboy Exp $
+
+*mpich2-1.0.3 (21 May 2006)
+
+  21 May 2006; Steve Arnold <nerdboy@gentoo.org>
+  +files/mpich2-1.0.3-make.patch, +files/mpich2-1.0.3-soname.patch,
+  +mpich2-1.0.3.ebuild:
+  Updated to new version (bug 125754) with patches; needed some help to
+  create shared libs properly, along with some DESTDIR fixes (required for
+  HDF5 dep, as virtual/mpi was barfing).
 
 *mpich2-1.0.2_p1 (27 Dec 2005)
 
