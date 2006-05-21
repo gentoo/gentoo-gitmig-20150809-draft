@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.106.ebuild,v 1.6 2006/05/06 02:10:19 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.106.ebuild,v 1.7 2006/05/21 17:49:21 corsair Exp $
 
 inherit eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ppc ~ppc64 s390 x86"
+KEYWORDS="alpha ~amd64 ia64 ppc ppc64 s390 x86"
 IUSE=""
 
 DEPEND=""
