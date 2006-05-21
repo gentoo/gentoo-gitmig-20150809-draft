@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/bonnie++
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.18 2006/04/20 20:48:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.19 2006/05/21 09:16:36 corsair Exp $
+
+  21 May 2006; Markus Rothe <corsair@gentoo.org> bonnie++-1.93c.ebuild:
+  Stable on ppc64
 
   20 Apr 2006; Brent Baude <ranger@gentoo.org> bonnie++-1.93c.ebuild:
   Marking bonnie++-1.93c ~ppc64
