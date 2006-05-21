@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.25 2006/05/08 10:13:34 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.26 2006/05/21 10:21:09 pauldv Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 
 IUSE="doc"
@@ -8,12 +8,14 @@ IUSE="doc"
 EXPORT_FUNCTIONS src_test
 
 db_fix_so () {
-	cd ${ROOT}/usr/lib
+	LIB="${ROOT}/usr/$(get_libdir)"
+
+	cd $LIB
 
 	# first clean up old symlinks
-	find ${ROOT}/usr/lib -maxdepth 1 -type l -name 'libdb[1._-]*so' -exec rm \{} \;
-	find ${ROOT}/usr/lib -maxdepth 1 -type l -name 'libdb[1._-]*so.[23]' -exec rm \{} \;
-	find ${ROOT}/usr/lib -maxdepth 1 -type l -name 'libdb[1._-]*a' -exec rm \{} \;
+	find ${LIB} -maxdepth 1 -type l -name 'libdb[1._-]*so' -exec rm \{} \;
+	find ${LIB} -maxdepth 1 -type l -name 'libdb[1._-]*so.[23]' -exec rm \{} \;
+	find ${LIB} -maxdepth 1 -type l -name 'libdb[1._-]*a' -exec rm \{} \;
 
 	# now rebuild all the correct ones
 	for ext in so a; do
@@ -81,6 +83,7 @@ db_src_install_headerslot() {
 }
 
 db_src_install_usrlibcleanup() {
+	LIB="${D}/usr/$(get_libdir)"
 	# Clean out the symlinks so that they will not be recorded in the
 	# contents (bug #60732)
 
@@ -88,11 +91,22 @@ db_src_install_usrlibcleanup() {
 		die "Calling clean_links while \$D not defined"
 	fi
 
-	find ${D}/usr/lib -maxdepth 1 -type l -name 'libdb[1._-]*so' -exec rm \{} \;
-	find ${D}/usr/lib -maxdepth 1 -type l -name 'libdb[1._-]*so.[23]' -exec rm \{} \;
-	find ${D}/usr/lib -maxdepth 1 -type l -name 'libdb[1._-]*a' -exec rm \{} \;
+	if [ -e ${LIB}/libdb.a ] && [ ! -e ${LIB}/libdb-${SLOT}.a ]; then
+		einfo "Moving libdb.a to a versioned name"
+		mv "${LIB}/libdb.a" "${LIB}/libdb-${SLOT}.a"
+	fi
 
-	rm -f ${D}/usr/include/db.h ${D}/usr/include/db_185.h
+	if [ -e ${LIB}/libdb_cxx.a ] && [ ! -e ${LIB}/libdb_cxx-${SLOT}.a ]; then
+		einfo "Moving libdb_cxx.a to a versioned name"
+		mv "${LIB}/libdb_cxx.a" "${LIB}/libdb_cxx-${SLOT}.a"
+	fi
+
+	find ${LIB} -maxdepth 1 -type l -name 'libdb[1._-]*so' -exec rm \{} \;
+	find ${LIB} -maxdepth 1 -type l -name 'libdb[1._-]*so.[23]' -exec rm \{} \;
+	einfo "removing unversioned static archives"
+	find ${LIB} -maxdepth 1 -type l -name 'libdb[1._-]*a' -exec rm \{} \;
+
+	rm -f ${D}/usr/include/db.h ${D}/usr/include/db_185.h ${LIB}/libdb.a ${LIB}/libdb_cxx.a
 }
 
 db_src_test() {
