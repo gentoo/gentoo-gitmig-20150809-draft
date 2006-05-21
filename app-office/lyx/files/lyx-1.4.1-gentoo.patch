@@ -1,6 +1,24 @@
-diff -urN lyx-1.4.0.orig/lib/configure lyx-1.4.0/lib/configure
---- lyx-1.4.0.orig/lib/configure	2006-03-07 00:49:49.000000000 +0100
-+++ lyx-1.4.0/lib/configure	2006-03-28 22:52:22.000000000 +0200
+diff -urN lyx-1.4.1.orig/lib/configure lyx-1.4.1/lib/configure
+--- lyx-1.4.1.orig/lib/configure	2006-04-11 11:18:17.000000000 +0200
++++ lyx-1.4.1/lib/configure	2006-05-21 13:05:30.000000000 +0200
+@@ -95,7 +95,7 @@
+      echo "\\begin{document}\\end{document}" >> $tmpfname
+      inpname=`cygpath -w $tmpfname | tr '\\\\' /`
+      echo "\\input{$inpname}" > wrap_temp$$.ltx
+-     check_err=`latex wrap_temp$$.ltx 2>&1 < /dev/null | grep Error`
++     check_err=`latex --no-mktex=tfm wrap_temp$$.ltx 2>&1 < /dev/null | grep Error`
+      rm -f wrap_temp$$.* /tmp/x$$.*
+      if [ x"$check_err" = "x" ]
+      then
+@@ -151,7 +151,7 @@
+ \\fi
+ \\@@end
+ EOF
+-if eval ${LATEX} chklatex.ltx </dev/null 2>/dev/null \
++if eval ${LATEX} --no-mktex=tfm chklatex.ltx </dev/null 2>/dev/null \
+ 		       | grep 'ThisIsLaTeX2e' >/dev/null; then
+   :
+ else
 @@ -1193,7 +1193,7 @@
  echo $ac_n "checking for a spellchecker""... $ac_c"
  echo "$ac_t"""
@@ -19,6 +37,15 @@ diff -urN lyx-1.4.0.orig/lib/configure lyx-1.4.0/lib/configure
    eval `cat chkconfig.vars | sed 's/-/_/g'`
    test -n "${rmcopy}" && rm -f chkconfig.ltx
  fi
+@@ -1683,7 +1683,7 @@
+   fname="a b"
+   rm -f "$fname".tex
+   echo "\\message{working^^J}" >"$fname".tex
+-  if ${LATEX} "$fname" </dev/null | grep 'working' >/dev/null ; then
++  if ${LATEX} --no-mktex=tfm "$fname" </dev/null | grep 'working' >/dev/null ; then
+     echo "$ac_t""yes"
+     tex_allows_spaces=true
+   else
 @@ -1999,6 +1999,11 @@
  
  $rc_entries

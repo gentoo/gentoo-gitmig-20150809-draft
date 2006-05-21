@@ -1,6 +1,11 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.79 2006/04/30 12:29:06 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.80 2006/05/21 11:37:52 ehmsen Exp $
+
+  21 May 2006; Martin Ehmsen <ehmsen@gentoo.org>
+  files/lyx-1.4.1-gentoo.patch:
+  Fixed sandbox violation by adding --no-mktex=tfm to all latex runs in
+  lib/configure (added to -gentoo.patch), bug #131524.
 
 *lyx-1.4.1-r1 (30 Apr 2006)
 
