@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.154 2006/04/05 22:54:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.155 2006/05/21 16:54:28 psi29a Exp $
+
+  21 May 2006; <psi29a@gentoo.org> kdeartwork-3.5.2.ebuild:
+  added to ~mips for testing
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kdeartwork-3.5.0.ebuild, -kdeartwork-3.5.1.ebuild:
