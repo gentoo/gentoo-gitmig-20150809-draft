@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Validate
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.17 2006/02/17 22:09:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.18 2006/05/21 00:17:34 chtekk Exp $
+
+  21 May 2006; Luca Longinotti <chtekk@gentoo.org>
+  -PEAR-Validate-0.5.0.ebuild:
+  Remove old-style PHP packages.
 
   17 Feb 2006; Aron Griffis <agriffis@gentoo.org>
   PEAR-Validate-0.6.2.ebuild:

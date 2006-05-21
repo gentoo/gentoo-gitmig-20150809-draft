@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Table
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table/ChangeLog,v 1.18 2006/03/30 19:08:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table/ChangeLog,v 1.19 2006/05/21 01:16:36 chtekk Exp $
+
+  21 May 2006; Luca Longinotti <chtekk@gentoo.org>
+  -PEAR-HTML_Table-1.5.ebuild:
+  Remove old-style PHP packages.
 
   30 Mar 2006; Joseph Jezak <josejx@gentoo.org>
   PEAR-HTML_Table-1.6.1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_SmartIRC
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SmartIRC/ChangeLog,v 1.23 2006/04/29 04:15:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SmartIRC/ChangeLog,v 1.24 2006/05/21 00:47:33 chtekk Exp $
+
+  21 May 2006; Luca Longinotti <chtekk@gentoo.org>
+  -PEAR-Net_SmartIRC-0.5.5_p1.ebuild:
+  Remove old-style PHP packages.
 
   29 Apr 2006; Joseph Jezak <josejx@gentoo.org>
   PEAR-Net_SmartIRC-1.0.0.ebuild:

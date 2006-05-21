@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-SOAP
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-SOAP/ChangeLog,v 1.25 2006/02/28 09:09:41 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-SOAP/ChangeLog,v 1.26 2006/05/21 00:28:15 chtekk Exp $
+
+  21 May 2006; Luca Longinotti <chtekk@gentoo.org> -PEAR-SOAP-0.8.1.ebuild:
+  Remove old-style PHP packages.
 
 *PEAR-SOAP-0.9.3 (28 Feb 2006)
 

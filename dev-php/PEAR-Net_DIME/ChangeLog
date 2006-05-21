@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_DIME
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DIME/ChangeLog,v 1.22 2006/02/17 21:58:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DIME/ChangeLog,v 1.23 2006/05/21 00:55:41 chtekk Exp $
+
+  21 May 2006; Luca Longinotti <chtekk@gentoo.org>
+  -PEAR-Net_DIME-0.3.ebuild:
+  Remove old-style PHP packages.
 
   17 Feb 2006; Aron Griffis <agriffis@gentoo.org>
   PEAR-Net_DIME-0.3-r1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_DNS
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/ChangeLog,v 1.21 2006/03/30 19:25:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/ChangeLog,v 1.22 2006/05/21 00:54:41 chtekk Exp $
+
+  21 May 2006; Luca Longinotti <chtekk@gentoo.org>
+  -PEAR-Net_DNS-0.03.ebuild:
+  Remove old-style PHP packages.
 
   30 Mar 2006; Joseph Jezak <josejx@gentoo.org> PEAR-Net_DNS-0.03-r1.ebuild:
   Marked ppc stable for bug #119722.
