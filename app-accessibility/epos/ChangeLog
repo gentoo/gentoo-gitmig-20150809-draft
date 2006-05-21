@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/epos
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.14 2006/05/15 06:12:59 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.15 2006/05/21 04:53:00 halcy0n Exp $
+
+  21 May 2006; Mark Loeser <halcy0n@gentoo.org> epos-2.5.23-r1.ebuild:
+  Move back to ~x86 as it doesn't compile with our stable gcc; bug #107705
 
 *epos-2.5.37 (15 May 2006)
 
