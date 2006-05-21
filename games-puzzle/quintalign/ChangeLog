@@ -1,6 +1,14 @@
 # ChangeLog for games-puzzle/quintalign
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quintalign/ChangeLog,v 1.3 2004/06/24 23:09:08 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quintalign/ChangeLog,v 1.4 2006/05/21 10:47:23 tupone Exp $
+
+*quintalign-1.0.1 (21 May 2006)
+
+  21 May 2006; <Tupone@gentoo.org> +files/quintalign-1.0-gcc34.patch,
+  +files/quintalign-1.0.1-gcc34.patch, quintalign-1.0.ebuild,
+  +quintalign-1.0.1.ebuild:
+  Fix emerging with new compiler and version bump
+  bug #116363 by T J McKenzie
 
   31 Aug 2003; Michael Sterrett <msterret@gentoo.org> quintalign-1.0.ebuild:
   inherit kde-base -> inherit kde; DESCRIPTION change
