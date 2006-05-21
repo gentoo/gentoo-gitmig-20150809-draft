@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/metadot
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/ChangeLog,v 1.20 2006/05/19 13:15:25 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/ChangeLog,v 1.21 2006/05/21 15:23:45 rl03 Exp $
+
+  21 May 2006; Renat Lumpau <rl03@gentoo.org> metadot-6.4.5.3.ebuild:
+  Add HTML-Format (#133780).
 
   19 May 2006; Renat Lumpau <rl03@gentoo.org> metadot-6.4.5.3.ebuild:
   Properly handle Apache2 config file wrt bug #133611.
