@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5373 2006/05/21 02:00:06 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5374 2006/05/21 14:12:32 dercorny Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -112,10 +112,6 @@ sys-process/bcron
 # This is masked currently since I am working on it pretty heavily and don't
 # want to inadvertently break anyone's installs.
 app-emulation/vmware-workstation-tools
-
-# Stefan Cornelius <dercorny@gentoo.org> (08 May 2006)
-# Affected by a security issue, needs a new maintainer. Bug 118541
-www-servers/pound
 
 # Stefan Schweizer <genstef@gentoo.org> (05 May 2006)
 # kopete needs ~0.7.1, mask newer versions to avoid up/downgrade cycles
