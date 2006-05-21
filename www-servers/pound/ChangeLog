@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/pound
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.21 2006/05/21 04:25:48 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.22 2006/05/21 09:10:24 bangert Exp $
+
+  21 May 2006; Thilo Bangert <bangert@gentoo.org> -files/pound.init,
+  -pound-1.9.ebuild, -pound-2.0.3.ebuild:
+  remove vulnerable, unused and experimental ebuilds/files
 
   21 May 2006; Mark Loeser <halcy0n@gentoo.org> pound-2.0.5.ebuild:
   Stable on x86; bug #118541
