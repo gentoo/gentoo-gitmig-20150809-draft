@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/spice-3.5.5.ebuild,v 1.2 2006/01/22 16:40:54 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/spice-3.5.5.ebuild,v 1.3 2006/05/21 20:25:25 calchan Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -32,6 +34,8 @@ src_unpack() {
 		-e "s:SPICE_DIR)/lib:SPICE_DIR)/lib/spice:g" \
 		-e "s:/usr/local/spice:/usr:g" \
 		-i.orig linux
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc-4.1.patch
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/spice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/ChangeLog,v 1.3 2006/01/22 16:40:54 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/ChangeLog,v 1.4 2006/05/21 20:25:25 calchan Exp $
+
+  21 May 2006; Denis Dupeyron <calchan@gentoo.org>
+  +files/spice-3.5.5-gcc-4.1.patch, metadata.xml, spice-3.5.5.ebuild:
+  Fix for gcc 4.1, closing bug #131048.
 
   22 Jan 2006; Markus Dittrich <markusle@gentoo.org> spice-3.5.5.ebuild:
   Fixed dependencies for modular X.
