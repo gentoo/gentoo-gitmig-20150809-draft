@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.109 2006/02/22 20:43:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.110 2006/05/21 20:41:16 seemant Exp $
+
+*mit-krb5-1.4.3-r1 (21 May 2006)
+
+  21 May 2006; Seemant Kulleen <seemant@gentoo.org>
+  +files/mit-krb5-pthreads.patch, +files/mit-krb5-robustgnu.patch,
+  +files/mit-krb5-setupterm.patch, +mit-krb5-1.4.3-r1.ebuild:
+  The setupterm patch fixes bug #124405 by Juergen Rose. The pthreads and
+  robusgnu patches were submitted in bug #125966 by Jose daLuz. Sorry for the
+  delay on both
 
   22 Feb 2006; Simon Stelling <blubb@gentoo.org> mit-krb5-1.4.3.ebuild:
   amd64 stable wrt bug 113741
