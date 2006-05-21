@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/ivan/ivan-0.50.ebuild,v 1.3 2006/01/05 05:38:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/ivan/ivan-0.50.ebuild,v 1.4 2006/05/21 14:28:57 tupone Exp $
 
 inherit flag-o-matic games
 
@@ -14,6 +14,12 @@ KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.2.0"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
+}
 
 src_compile() {
 	replace-flags -O? -O0 #bug #113627
