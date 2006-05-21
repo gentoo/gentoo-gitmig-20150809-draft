@@ -11,4 +11,11 @@
 		send and receive FAX documents with CAPI 2.0 fax controllers via a
 		hylafax server.
 	</longdescription>
+	<longdescription lang="ja">
+		capi4hylafax は hylafax 環境に faxcopi 
+		モデムを加えます。つまり hylafax 
+		サーバに対して CAPI 2.0 fax コントローラ経由で FAX 
+		ドキュメントを送信したり
+		受信したりできるようになります。
+	</longdescription>
 </pkgmetadata>
