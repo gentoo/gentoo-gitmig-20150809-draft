@@ -3,4 +3,10 @@
 <pkgmetadata>
 <herd>net-dialup</herd>
 <longdescription>Utility for configuring RFC 2684 ATM/Ethernet bridging. ATM bridging is a way to extend Ethernet over an ATM network and is mainly used for DSL connections.</longdescription>
+<longdescription lang="ja">R
+FC 2684 ATM/Ethernet bridging 
+を構成するためのユーティリティです。ATM bridging とは ATM 
+ネットワーク上で Ethernet を使う方法で、主に DSL 
+接続に使われます。
+</longdescription>
 </pkgmetadata>
