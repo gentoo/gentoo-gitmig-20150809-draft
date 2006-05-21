@@ -1,5 +1,5 @@
-MD5 6297cee9b3ba6fa7139d1f42be14f9a2 ChangeLog 1879
+MD5 d341763fe3b649214d788e6addfa0ba7 ChangeLog 1993
 MD5 95e9084323d2adf97b66193093ed2262 files/digest-spice-3.5.5 65
 MD5 490bbc3ce696fc903a2ddedd19ad6fe7 files/spice-3.5.5-gcc-4.1.patch 2511
 MD5 cefa75b0a06053277ea938f4e4fdd6e5 metadata.xml 219
-MD5 a583e1bd7d4a6d91ccb58b46f9bec0ce spice-3.5.5.ebuild 1398
+MD5 c6e9ebe669f784411b364fd9be3cd8fb spice-3.5.5.ebuild 1464
