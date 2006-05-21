@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/stgit-0.8.1.ebuild,v 1.6 2006/02/18 12:19:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/stgit-0.8.1.ebuild,v 1.7 2006/05/21 18:30:13 corsair Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://homepage.ntlworld.com/cmarinas/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ppc ~ppc64 x86"
+KEYWORDS="alpha ~amd64 ~ppc ppc64 x86"
 IUSE=""
 
 DEPEND=""

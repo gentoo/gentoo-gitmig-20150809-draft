@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/stgit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.10 2006/04/08 11:18:18 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.11 2006/05/21 18:30:13 corsair Exp $
+
+  21 May 2006; Markus Rothe <corsair@gentoo.org> stgit-0.8.1.ebuild:
+  Stable on ppc64
 
 *stgit-0.9 (08 Apr 2006)
 

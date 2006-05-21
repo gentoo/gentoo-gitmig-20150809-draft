@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/efence
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/ChangeLog,v 1.28 2005/10/03 22:24:15 matsuu Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/ChangeLog,v 1.29 2006/05/21 18:25:31 corsair Exp $
+
+  21 May 2006; Markus Rothe <corsair@gentoo.org> efence-2.4.13-r1.ebuild:
+  Stable on ppc64
 
   03 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> efence-2.4.14.ebuild:
   Added ~sh
