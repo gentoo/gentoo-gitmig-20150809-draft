@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.3.3.ebuild,v 1.1 2006/05/17 08:04:05 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.3.3.ebuild,v 1.2 2006/05/21 01:18:44 ferdy Exp $
 
-inherit python toolchain-funcs eutils
+inherit python toolchain-funcs eutils elisp-common
 
 DOC_VER=${PV}
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://kernel/software/scm/git/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="mozsha1 ppcsha1 doc curl X webdav"
+IUSE="curl doc emacs mozsha1 ppcsha1 webdav X"
 
 DEPEND="dev-libs/openssl
 		sys-libs/zlib
@@ -73,32 +73,43 @@ src_unpack() {
 
 src_compile() {
 	emake ${MY_MAKEOPTS} prefix=/usr || die "make failed"
+
+	if use emacs ; then
+		elisp-compile contrib/emacs/{,vc-}git.el || die "emacs modules failed"
+	fi
 }
 
 src_install() {
-	make ${MY_MAKEOPTS} DESTDIR=${D} prefix=/usr install || die "make install failed"
+	make ${MY_MAKEOPTS} DESTDIR="${D}" prefix=/usr install || die "make install failed"
 
-	use X || rm ${D}/usr/bin/gitk
+	use X || rm "${D}"/usr/bin/gitk
 
-	doman ${WORKDIR}/${PN}-man-${DOC_VER}/man?/*
+	doman "${WORKDIR}"/${PN}-man-${DOC_VER}/man?/*
 
 	dodoc README COPYING Documentation/SubmittingPatches
 	if use doc ; then
 		dodoc Documentation/technical/*
 		dodir /usr/share/doc/${PF}/html
-		cp -r ${WORKDIR}/${PN}-html-${DOC_VER}/* ${D}/usr/share/doc/${PF}/html
+		cp -r "${WORKDIR}"/${PN}-html-${DOC_VER}/* ${D}/usr/share/doc/${PF}/html
 	fi
 
-	newinitd "${FILESDIR}/git-daemon.initd" git-daemon
-	newconfd "${FILESDIR}/git-daemon.confd" git-daemon
+	if use emacs ; then
+		insinto "${SITELISP}"
+		doins contrib/emacs/{,vc-}git.el*
+		elisp-site-file-install "${FILESDIR}"/70git-gentoo.el
+	fi
+
+	newinitd "${FILESDIR}"/git-daemon.initd git-daemon
+	newconfd "${FILESDIR}"/git-daemon.confd git-daemon
 }
 
 src_test() {
-	cd ${S}
+	cd "${S}"
 	make ${MY_MAKEOPTS} test || die "tests failed"
 }
 
 pkg_postinst() {
+	use emacs && elisp-site-regen
 	einfo
 	einfo "If you want to import arch repositories into git, consider using the"
 	einfo "git-archimport command. You should install dev-util/tla before"
@@ -112,4 +123,10 @@ pkg_postinst() {
 	einfo "If you want to use the included CVS server you will need to install"
 	einfo "dev-perl/DBI and dev-perl/DBD-SQLite"
 	einfo
+}
+
+pkg_postrm() {
+	# regenerate site-gentoo if we are merged USE=emacs and unmerged
+	# USE=-emacs
+	has_version virtual/emacs && elisp-site-regen
 }
