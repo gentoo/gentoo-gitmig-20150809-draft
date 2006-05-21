@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.12.ebuild,v 1.3 2006/03/16 08:11:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.12.ebuild,v 1.4 2006/05/21 21:07:05 tupone Exp $
 
 inherit eutils games
 
@@ -30,7 +30,9 @@ DEPEND="|| (
 
 src_unpack() {
 	unpack ${A}
-	find "${S}/data" -type f -exec chmod a-x \{\} \;
+	cd "${S}"
+	find data -type f -exec chmod a-x \{\} \;
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_compile() {
