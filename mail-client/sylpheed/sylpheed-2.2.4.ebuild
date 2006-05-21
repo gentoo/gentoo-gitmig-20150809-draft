@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.2.4.ebuild,v 1.5 2006/05/19 18:28:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.2.4.ebuild,v 1.6 2006/05/21 23:35:07 tcort Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sylpheed.good-day.net/"
 SRC_URI="http://sylpheed.good-day.net/${PN}/v${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
 SLOT="0"
 
 PROVIDE="virtual/sylpheed"
