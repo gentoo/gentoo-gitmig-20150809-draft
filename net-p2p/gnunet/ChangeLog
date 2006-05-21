@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.45 2006/05/15 04:04:32 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.46 2006/05/21 04:20:08 halcy0n Exp $
+
+  21 May 2006; Mark Loeser <halcy0n@gentoo.org> gnunet-0.7.0d-r1.ebuild:
+  Stable on x86; bug #133240
 
 *gnunet-0.7.0d-r1 (15 May 2006)
 
