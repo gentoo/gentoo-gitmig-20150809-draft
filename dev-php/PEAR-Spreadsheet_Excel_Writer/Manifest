@@ -1,34 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 02c27ab8b6c4f0370d9f3a90d3a77c03 ChangeLog 4868
-RMD160 068298cad613433acb81dc7d557f934270680dc0 ChangeLog 4868
-SHA256 57b31ae187d901184f3a2ee0cd7947ce423095a60de2782fe9c996481fc44878 ChangeLog 4868
-MD5 09de7482aba714abce567937687289e4 PEAR-Spreadsheet_Excel_Writer-0.7.ebuild 460
-RMD160 3777d6a14c39cbca4d9ea649ddfb6c411bc6b638 PEAR-Spreadsheet_Excel_Writer-0.7.ebuild 460
-SHA256 50999a3db095d9cc6a58ec39a81180c9fd1e6b24157728a351b70675bfa9b393 PEAR-Spreadsheet_Excel_Writer-0.7.ebuild 460
-MD5 49a1cceed641e7845e6aaba0a4078ae1 PEAR-Spreadsheet_Excel_Writer-0.8.ebuild 459
-RMD160 3e78220a31f72992bd4a2a5bcc57d4e07e914386 PEAR-Spreadsheet_Excel_Writer-0.8.ebuild 459
-SHA256 7570485f295dc5154c1a2d9cd86e5e442ebd1eb0fc7841a49bfa9eaf821359d9 PEAR-Spreadsheet_Excel_Writer-0.8.ebuild 459
+DIST Spreadsheet_Excel_Writer-0.9.0.tgz 55541 RMD160 d15533eadfd3f650397d52a9664a59d75e7e36dd SHA256 12125158a2c41acf5fe7c925fe57b353366d72a10c8bae753f513be8aaeb43fd size 55541
+EBUILD PEAR-Spreadsheet_Excel_Writer-0.9.0.ebuild 473 RMD160 507dc4256137394d3444e410d66000b92da99d31 SHA1 026496855cb46c1fa3f36092aedb620b22b57ff1 SHA256 f1e80fdaf0f15faeebcc5984928f5657fb15de87e31dfe2582bcb49378bf71a2 size 473
 MD5 89bd3bc9ebbc1e0ec7fc20c5b921ed5c PEAR-Spreadsheet_Excel_Writer-0.9.0.ebuild 473
 RMD160 507dc4256137394d3444e410d66000b92da99d31 PEAR-Spreadsheet_Excel_Writer-0.9.0.ebuild 473
 SHA256 f1e80fdaf0f15faeebcc5984928f5657fb15de87e31dfe2582bcb49378bf71a2 PEAR-Spreadsheet_Excel_Writer-0.9.0.ebuild 473
-MD5 7829ee421f046aaf83445b03a13e6de7 files/digest-PEAR-Spreadsheet_Excel_Writer-0.7 76
-RMD160 d26ba495cb87305d0502d374af4049ea52040232 files/digest-PEAR-Spreadsheet_Excel_Writer-0.7 76
-SHA256 a738b74c00bd9ec57e484eba7bdfc94db1293465d79159c08d43e827f10a7225 files/digest-PEAR-Spreadsheet_Excel_Writer-0.7 76
-MD5 b6c2ea91e6fc27e638cf4a7e9eb1bc06 files/digest-PEAR-Spreadsheet_Excel_Writer-0.8 76
-RMD160 7e2ecdb27c66e1bd119ec9b9667447ffab880bcb files/digest-PEAR-Spreadsheet_Excel_Writer-0.8 76
-SHA256 667188cd9d1ec6a2d6dc2d704415bd08548cf988b6ff7bd4c464373b557fbc92 files/digest-PEAR-Spreadsheet_Excel_Writer-0.8 76
-MD5 4328b7fd8d02d91615529c41471879ec files/digest-PEAR-Spreadsheet_Excel_Writer-0.9.0 78
-RMD160 62df747e04d94e4696e02a5accb1310e33a434d9 files/digest-PEAR-Spreadsheet_Excel_Writer-0.9.0 78
-SHA256 3618f9769ebfa31f14ef67ad9850540ebb71029eb53044ac15df19a8b947874e files/digest-PEAR-Spreadsheet_Excel_Writer-0.9.0 78
+MISC ChangeLog 5041 RMD160 d9ebb9eaef0713c79cd4fd154434a8da5d51e73f SHA1 ad2d1ba58314bfa7dc2a5b9b6758d00b7668011d SHA256 ea23222588fd2f7b9270d42a4a831482bc5f7120592420542cadb89dbd91c625 size 5041
+MD5 d5b88d5e5a539237201754dc101f0785 ChangeLog 5041
+RMD160 d9ebb9eaef0713c79cd4fd154434a8da5d51e73f ChangeLog 5041
+SHA256 ea23222588fd2f7b9270d42a4a831482bc5f7120592420542cadb89dbd91c625 ChangeLog 5041
+MISC metadata.xml 156 RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 SHA1 1f452f476317b4634c684eabfd8840d06d35b414 SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba size 156
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 RMD160 a3a59cdc3ac33d711123b2d7e2b1deb2984aa101 metadata.xml 156
 SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD9kkZJrHF4yAQTrARAlJiAJ9sQQtIxcAjuLgWu+InQFxJ6mO1+gCeK3HJ
-+W3+W5AAQkneCrzr9Xv0HKM=
-=pEXx
------END PGP SIGNATURE-----
+MD5 1d034428fed13a0e757a036dad139f4a files/digest-PEAR-Spreadsheet_Excel_Writer-0.9.0 280
+RMD160 46990116cd31423e0c595fdf5d0516883a19c48e files/digest-PEAR-Spreadsheet_Excel_Writer-0.9.0 280
+SHA256 dc6fcf1bf041df9238235b04d34b6af7ca43eeb97c2643301c13f21598ee26c9 files/digest-PEAR-Spreadsheet_Excel_Writer-0.9.0 280
