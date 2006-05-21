@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0.ebuild,v 1.5 2006/04/16 22:10:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0.ebuild,v 1.6 2006/05/21 09:58:57 corsair Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.lirc.org"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="alsa debug doc X usb"
-KEYWORDS="~alpha ~amd64 ~ia64 ppc ~ppc64 x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ppc64 x86"
 
 RDEPEND="virtual/libc
 	virtual/modutils
