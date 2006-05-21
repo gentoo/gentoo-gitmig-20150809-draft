@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libextractor
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.32 2006/05/19 13:42:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.33 2006/05/21 04:45:08 squinky86 Exp $
+
+  21 May 2006; Jon Hood <squinky86@gentoo.org> -libextractor-0.5.9.ebuild,
+  libextractor-0.5.14.ebuild:
+  Remove vulnerable version, add libmpeg2 dependency (#133917- thanks Mark).
 
   19 May 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   libextractor-0.5.14.ebuild:
