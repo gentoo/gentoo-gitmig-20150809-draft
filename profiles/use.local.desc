@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1908 2006/05/20 22:54:06 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1909 2006/05/21 02:03:13 chtekk Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -390,12 +390,6 @@ dev-perl/gtk-perl:gnome-print - Enable gnome-print support
 dev-perl/HTML-Mason:modperl - Enable modperl support
 dev-perl/PDL:badval - Enable badval support in PDL
 dev-perl/RPC-XML:modperl - Enable modperl support
-dev-php/eaccelerator:inode - Enable inode-based caching.
-dev-php/mod_php:mkconfig - Package up files required for php-config package (for maintainer use only)
-dev-php/PECL-imagick:graphicsmagick - Use graphicsmagick instead of imagemagick
-dev-php/php-cgi:force-cgi-redirect - Enable security check for internal server redirects.
-dev-php/php-cgi:mkconfig - Package up files required for php-config package (for maintainer use only)
-dev-php/php:mkconfig - Package up files required for php-config package (for maintainer use only)
 dev-php4/eaccelerator:inode - Enable inode-based caching.
 dev-php4/pecl-imagick:graphicsmagick - Use graphicsmagick instead of imagemagick
 dev-php5/eaccelerator:contentcache - Enable content caching.
