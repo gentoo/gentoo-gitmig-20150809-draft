@@ -1,0 +1,11 @@
+# ChangeLog for media-tv/v4l-dvb-hg
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/ChangeLog,v 1.1 2006/05/21 17:02:22 zzam Exp $
+
+*v4l-dvb-hg-0.1 (21 May 2006)
+
+  21 May 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/v4l-dvb-hg-fix-makefile-recursion.diff, +metadata.xml,
+  +v4l-dvb-hg-0.1.ebuild:
+  Initial import of ebuild.
+
