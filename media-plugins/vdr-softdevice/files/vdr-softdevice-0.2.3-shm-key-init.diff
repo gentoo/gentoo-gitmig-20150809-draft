@@ -1,0 +1,12 @@
+diff -ru softdevice-0.2.3.cvs/video-shm.c softdevice-0.2.3.cvs-shm-key-init/video-shm.c
+--- softdevice-0.2.3.cvs/video-shm.c	2006-05-14 21:56:07.000000000 +0200
++++ softdevice-0.2.3.cvs-shm-key-init/video-shm.c	2006-05-21 17:43:07.000000000 +0200
+@@ -122,7 +122,7 @@
+         //ctl->pict_shmid=-1;
+         curr_pict=NULL;
+         osd_surface=NULL;
+-        ctl->key=kNone;
++        ctl->key=NO_KEY;
+         remote = new cShmRemote("softdevice-xv",this);
+ };
+ 

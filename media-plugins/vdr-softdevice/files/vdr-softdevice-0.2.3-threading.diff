@@ -1,0 +1,594 @@
+diff -ru softdevice-orig/mpeg2decoder.c softdevice/mpeg2decoder.c
+--- softdevice-orig/mpeg2decoder.c	2006-05-21 17:49:35.000000000 +0200
++++ softdevice/mpeg2decoder.c	2006-05-21 18:35:43.000000000 +0200
+@@ -146,14 +146,12 @@
+ 
+ //  Context->debug |=0xF|FF_DEBUG_STARTCODE|FF_DEBUG_PTS;
+ //  av_log_set_level(AV_LOG_DEBUG);
+-  active=true;
+   Start(); // starte thread
+ }
+ 
+ cStreamDecoder::~cStreamDecoder()
+ {
+   CMDDEB("~cStreamDecoder: context %p\n",context );
+-  active=false;
+   Cancel(3);
+   if (codec && context)
+     avcodec_close(context);
+@@ -165,21 +163,20 @@
+ void cStreamDecoder::Action()
+ {
+   CMDDEB("Neuer Thread gestartet: pid:%d type %d\n",getpid(),context->codec_type );
+-  running=true;
+   freezeMode=false;
+   AVPacket *pkt;
+ 
+-  while ( PacketQueue.Available() < 7 && active) {
++  while ( PacketQueue.Available() < 7 && Running()) {
+     BUFDEB("wait while loop packets %d StreamDecoder  pid:%d type %d\n",
+       PacketQueue.Available(),getpid(),context->codec_type );
+     usleep(10000);
+   };
+ 
+-  while(active)
++  while(Running())
+   {
+     BUFDEB("while loop start StreamDecoder  pid:%d type %d\n",getpid(),context->codec_type );
+ 
+-    while (freezeMode && active)
++    while (freezeMode && Running())
+         usleep(50000);
+ 
+     mutex.Lock();
+@@ -210,7 +207,6 @@
+ #endif
+ 
+   }
+-  running=false;
+   CMDDEB("thread finished pid: %d type %d \n",getpid(),context->codec_type );
+ }
+ 
+@@ -230,7 +226,6 @@
+ void cStreamDecoder::Stop(void)
+ {
+   CMDDEB("cStreamDecoder::Stop\n");
+-  active=false;
+   if (syncTimer)
+     syncTimer->Signal();
+   mutex.Lock();
+@@ -419,7 +414,7 @@
+         break;
+     }
+   }
+-  while ( size > 0 && active ) {
++  while ( size > 0 && Running() ) {
+     BUFDEB("start decode audio. pkt size: %d \n",size);
+     len=avcodec_decode_audio(context, (short *)audiosamples,
+                  &audio_size, data, size);
+@@ -1113,7 +1108,6 @@
+ 
+   StreamBuffer=NULL;
+ 
+-  running=false;
+   decoding=false;
+   IsSuspended=false;
+   Speed=1;
+@@ -1147,7 +1141,7 @@
+ start:
+     int count=0;
+     size=StreamBuffer->Available();
+-    while ( size < buf_size && ThreadActive
++    while ( size < buf_size && Running()
+            && count <  1  ) {
+       BUFDEB("read_packet EnableGet.Sleep start\n");
+       EnableGetSignal.Sleep(50000);
+@@ -1160,7 +1154,7 @@
+    };
+ 
+     // signal eof if thread should end...
+-    if (!ThreadActive && size == 0)
++    if (!Running() && size == 0)
+       return -1;
+ 
+     size = buf_size;
+@@ -1177,7 +1171,7 @@
+        return size;
+     } else  {
+        BUFDEB("read_packet u is NULL!!!\n");
+-       if (ThreadActive) {
++       if (Running()) {
+          //try again...
+          usleep(10000);
+          goto start;
+@@ -1214,16 +1208,14 @@
+ void cMpeg2Decoder::Action()
+ {
+   CMDDEB("Neuer Thread gestartet: Mpeg2Decoder pid %d\n",getpid());
+-  ThreadRunning=true;
+-  //ThreadActive=true;
+   AVPacket  pkt;
+   int ret;
+   int PacketCount=0;
+ 
+   int nStreams=0;
+ 
+-  while(ThreadActive) {
+-        while (freezeMode && ThreadActive)
++  while(Running()) {
++        while (freezeMode && Running())
+           usleep(50000);
+ 
+         BUFDEB("av_read_frame start\n");
+@@ -1231,7 +1223,7 @@
+         ret = av_read_packet(ic, &pkt);
+         if (ret < 0) {
+             BUFDEB("cMpeg2Decoder Stream Error!\n");
+-            if (ThreadActive)
++            if (Running())
+ 		    usleep(10000);
+             continue;
+         }
+@@ -1260,7 +1252,6 @@
+ //        if (PacketCount == 200)
+ //          dump_format(ic, 0, "test", 0);
+   }
+-  running=false;
+   CMDDEB("Thread beendet : mpegDecoder pid %d\n",getpid());
+ }
+ 
+@@ -1371,7 +1362,7 @@
+   voutMutex.Lock();
+   if ( packet_type == CODEC_TYPE_VIDEO && vout ) {
+     BUFDEB("QueuePacket video stream\n");
+-    while ( vout->PutPacket(pkt) == -1 && ThreadActive ) {
++    while ( vout->PutPacket(pkt) == -1 && Running() ) {
+       // PutPacket sleeps is necessary
+       //printf("Video Buffer full\n");
+     };
+@@ -1381,7 +1372,7 @@
+   aoutMutex.Lock();
+   if ( packet_type == CODEC_TYPE_AUDIO && aout ) {
+     BUFDEB("QueuePacket audio stream\n");
+-    while ( aout->PutPacket(pkt) == -1 && ThreadActive ) {
++    while ( aout->PutPacket(pkt) == -1 && Running() ) {
+       // PutPacket sleeps is necessary
+       //printf("Audio Buffer full\n");
+     };
+@@ -1398,7 +1389,7 @@
+ void cMpeg2Decoder::Start(bool GetMutex)
+ {
+   CMDDEB("Mpeg2Decoder Start IsSuspended %d  GetMutex %d\n",IsSuspended,GetMutex);
+-  if (running)
++  if (Running())
+           return;
+ 
+   if (IsSuspended)
+@@ -1416,12 +1407,10 @@
+   StreamBuffer->Clear();
+   initStream();
+ 
+-  ThreadActive=true;
+   freezeMode=false;
+   AudioIdx=NO_STREAM;
+   VideoIdx=NO_STREAM;
+   cThread::Start();
+-  running=true;
+   if (GetMutex)
+     mutex.Unlock();
+   CMDDEB("mpeg2Decoder Start finished");
+@@ -1464,7 +1453,7 @@
+ {
+   CMDDEB("Play\n");
+   freezeMode=false;
+-  if (running)
++  if (Running())
+   {
+     aoutMutex.Lock();
+     if (aout)
+@@ -1510,7 +1499,7 @@
+   // sleep a short while before putting the
+   // audio and video stream decoders to sleep
+   usleep(20000);
+-  if (running)
++  if (Running())
+   {
+     if (Stream & SOFTDEVICE_AUDIO_STREAM) {
+       aoutMutex.Lock();
+@@ -1538,10 +1527,8 @@
+   // can't stop properly in freeze mode
+   //  Freeze();
+   freezeMode=false;
+-  if (running)
++  if (Running())
+   {
+-    running=false;
+-    ThreadActive=false;
+ 
+     StreamBuffer->Clear();
+     EnableGetSignal.Signal();
+@@ -1649,7 +1636,7 @@
+   } else if (AudioIdx==DONT_PLAY)
+     AudioIdx=NO_STREAM;
+   Play();
+-  if (running)
++  if (Running())
+   {
+     aoutMutex.Lock();
+     if (aout)
+@@ -1674,7 +1661,7 @@
+ /* ----------------------------------------------------------------------------
+  */
+ int64_t cMpeg2Decoder::GetSTC(void) {
+-  if (running) {
++  if (Running()) {
+     return clock.GetPTS()*9;
+ /*
+     if (vout)
+@@ -1719,15 +1706,15 @@
+ {
+   BUFDEB("Decode %p, Length %d\n",Data,Length);
+ 
+-  if (running && !IsSuspended && setupStore.shouldSuspend)
++  if (Running() && !IsSuspended && setupStore.shouldSuspend)
+      // still running and should suspend
+      Suspend();
+ 
+-  if (!running && IsSuspended && !setupStore.shouldSuspend)
++  if (!Running() && IsSuspended && !setupStore.shouldSuspend)
+      // not running and should resume
+      Resume();
+ 
+-  if (!running) {
++  if (!Running()) {
+     BUFDEB("not running..\n");
+     return Length;
+   };
+diff -ru softdevice-orig/mpeg2decoder.h softdevice/mpeg2decoder.h
+--- softdevice-orig/mpeg2decoder.h	2006-05-21 17:49:35.000000000 +0200
++++ softdevice/mpeg2decoder.h	2006-05-21 18:33:48.000000000 +0200
+@@ -161,8 +161,6 @@
+     AVCodecContext    *context;
+ 
+     cMutex            mutex;
+-    volatile bool     active;
+-    bool              running;
+ 
+     virtual void      Action(void);
+     virtual int       DecodePacket(AVPacket *pkt) = 0;
+@@ -282,7 +280,6 @@
+     cMutex          aoutMutex;
+     cAudioOut       *audioOut;
+     cVideoOut       *videoOut;
+-    bool running;
+     bool IsSuspended;
+     bool decoding;
+     bool freezeMode;
+@@ -295,7 +292,6 @@
+     cSoftRingBufferLinear *StreamBuffer;
+     void initStream();
+     virtual void Action(void);
+-    volatile bool   ThreadActive, ThreadRunning;
+     cClock  clock;
+     //demuxing
+     int AudioIdx;
+diff -ru softdevice-orig/SoftOsd.c softdevice/SoftOsd.c
+--- softdevice-orig/SoftOsd.c	2006-05-21 17:49:35.000000000 +0200
++++ softdevice/SoftOsd.c	2006-05-21 18:14:26.000000000 +0200
+@@ -32,7 +32,7 @@
+  */
+ 
+ cSoftOsd::cSoftOsd(cVideoOut *VideoOut, int X, int Y) 
+-	: cOsd(X, Y),active(false),close(false) {
++	: cOsd(X, Y),close(false) {
+         OSDDEB("cSoftOsd constructor\n");
+         OutputConvert=&cSoftOsd::ARGB_to_ARGB32;
+         pixelMask=NULL;
+@@ -71,7 +71,6 @@
+ cSoftOsd::~cSoftOsd() {
+         OSDDEB("cSoftOsd destructor\n");
+         close=true;
+-        active=false;
+         Cancel(3);
+         if (videoOut) {
+                 videoOut->CloseOSD();
+@@ -83,8 +82,7 @@
+ /* -------------------------------------------------------------------------*/
+ void cSoftOsd::Action() {
+         OSDDEB("OSD thread started\n");
+-        active=true;
+-        while(active && videoOut && !close) {
++        while(Running() && videoOut && !close) {
+                 int newOsdWidth;
+                 int newOsdHeight;
+                 int newXPan, newYPan;
+@@ -249,7 +247,7 @@
+ 
+ 	// give priority to the other threads
+ 	pthread_yield();
+-        if (!active && !close)
++        if (!Running() && !close)
+                 Start();
+ }
+ 
+diff -ru softdevice-orig/SoftOsd.h softdevice/SoftOsd.h
+--- softdevice-orig/SoftOsd.h	2006-05-21 17:49:35.000000000 +0200
++++ softdevice/SoftOsd.h	2006-05-21 18:13:55.000000000 +0200
+@@ -75,7 +75,6 @@
+     void ConvertPalette(tColor *dest_palette, const tColor *orig_palette, 
+ 		    int maxColors);
+    
+-    bool active;
+     bool close;
+     int ScreenOsdWidth;
+     int ScreenOsdHeight;
+diff -ru softdevice-orig/VdrReplacements.c softdevice/VdrReplacements.c
+--- softdevice-orig/VdrReplacements.c	2006-05-21 17:49:35.000000000 +0200
++++ softdevice/VdrReplacements.c	2006-05-21 18:08:15.000000000 +0200
+@@ -12,6 +12,9 @@
+ #include "VdrReplacements.h"
+ #include <stdio.h>
+ #include <unistd.h>
++#include <signal.h>
++#include <errno.h>
++#include <sys/syscall.h>
+ 
+ cMutex::cMutex() {
+         pthread_mutexattr_t attr;
+@@ -34,14 +37,18 @@
+ 
+ //-------------------------------------------------------------------------
+ 
+-void StartThread(cThread *thread) {
+-        thread->active=true;
+-        thread->Action();
+-        thread->active=false;
++void *cThread::StartThread(cThread *Thread) {
++  Thread->childThreadId = ThreadId();
++  Thread->Action();
++  Thread->running = false;
++  Thread->active = false;
++  return NULL;
+ };
+ 
+ cThread::cThread() {
+-        active=false;
++        active = running = false;
++	childTid = 0;
++	childThreadId = 0;
+ };
+ 
+ cThread::~cThread() {
+@@ -49,32 +56,66 @@
+ }; 
+ 
+ bool cThread::Start() {
+-        if (active)
+-                return false;
+-
+-        active=true;
+-        if ( pthread_create(&childTid, NULL, (void *(*) (void*))&StartThread,
+-                                        (void *)this)!=0 ) {
+-                fprintf(stderr,"Error starting thread\n");
+-                active=false;
+-                return false;
+-        };
+-
+-        pthread_detach(childTid);
+-        return true;
+-};
+-
+-void cThread::Cancel(int TimeOut) {
+-        int timeoutms=TimeOut*1000;
+-        while (active && TimeOut>0) {
+-                usleep(5000);
+-                timeoutms-=5000;
+-        };
+-
+-        if (active) {
+-                pthread_cancel(childTid);
+-                childTid=0;
+-                active=false;
+-        };
+-};
++  if (!active) {
++    active = running = true;
++    if ( pthread_create(&childTid, NULL, (void *(*) (void*))&StartThread, (void *)this) == 0 ) {
++      pthread_detach(childTid); // auto-reap
++      pthread_setschedparam(childTid, SCHED_RR, 0);
++      }
++    else {
++      LOG_ERROR;
++      active = running = false;
++      return false;
++      }
++    }
++  return true;
++};
++
++void cThread::Cancel(int WaitSeconds) {
++  running = false;
++  if (active) {
++    if (WaitSeconds > 0) {
++      for (time_t t0 = time(NULL) + WaitSeconds; time(NULL) < t0; ) {
++        if (!Active())
++          return;
++        usleep(10000);
++        }
++      }
++    pthread_cancel(childTid);
++    childTid = 0;
++    active = false;
++    }
++};
++
++bool cThread::Active(void)
++{
++  if (active) {
++    //
++    // Single UNIX Spec v2 says:
++    //
++    // The pthread_kill() function is used to request
++    // that a signal be delivered to the specified thread.
++    //
++    // As in kill(), if sig is zero, error checking is
++    // performed but no signal is actually sent.
++    //
++    int err;
++    if ((err = pthread_kill(childTid, 0)) != 0) {
++      if (err != ESRCH)
++        LOG_ERROR;
++      childTid = 0;
++      active = running = false;
++      }
++    else
++      return true;
++    }
++  return false;
++}
++
++_syscall0(pid_t, gettid)
++
++tThreadId cThread::ThreadId(void)
++{
++  return gettid();
++}
+ 
+diff -ru softdevice-orig/VdrReplacements.h softdevice/VdrReplacements.h
+--- softdevice-orig/VdrReplacements.h	2006-05-21 17:49:35.000000000 +0200
++++ softdevice/VdrReplacements.h	2006-05-21 18:10:00.000000000 +0200
+@@ -15,6 +15,7 @@
+ #include <pthread.h>
+ #include <stdio.h>
+ #include <stdint.h>
++#include <sys/types.h>
+ 
+ #define VDRVERSNUM 10308
+ 
+@@ -58,22 +59,32 @@
+ 
+ };
+ 
++typedef pid_t tThreadId;
++
+ class cThread {
+-        friend void StartThread(cThread *);
++	private:
++		static void *StartThread(cThread *Thread);
+         private:
+-                bool active;
++                bool running;
++		bool active;
++	protected:
++		bool Running(void) { return running; }
+                 pthread_t childTid;
++		tThreadId childThreadId;
+         public:
+                 cThread();
+                 virtual ~cThread();
+ 
+                 bool Start();
++		bool Active(void);
+                 void Cancel( int Timeout = 0 );
++		static tThreadId ThreadId(void);
+ 
+                 virtual void Action()
+                 {};
+ };
+ 
+-        
++#define LOG_ERROR         esyslog("ERROR (%s,%d): %m", __FILE__, __LINE__)
++
+ 
+ #endif
+diff -ru softdevice-orig/video.c softdevice/video.c
+--- softdevice-orig/video.c	2006-05-21 17:49:35.000000000 +0200
++++ softdevice/video.c	2006-05-21 18:12:27.000000000 +0200
+@@ -58,13 +58,11 @@
+   init_OsdBuffers();
+ 
+   //start osd thread
+-  active=true;
+   Start();
+ }
+ 
+ cVideoOut::~cVideoOut()
+ {
+-  active=false;
+   Cancel(3);
+   dsyslog("[VideoOut]: Good bye");
+ }
+@@ -96,7 +94,7 @@
+ {
+   ClearOSD();
+ #if VDRVERSNUM >= 10307
+-  while(active)
++  while(Running())
+   {
+     OsdRefreshCounter++;
+     usleep(20000);
+diff -ru softdevice-orig/video-dfb.h softdevice/video-dfb.h
+--- softdevice-orig/video-dfb.h	2006-05-21 17:49:35.000000000 +0200
++++ softdevice/video-dfb.h	2006-05-21 18:15:23.000000000 +0200
+@@ -81,7 +81,6 @@
+  */
+ class cDFBRemote : public cRemote, private cThread {
+   private:
+-    bool                  active;
+     cDFBVideoOut          *video_out;
+ 
+     virtual void  Action(void);
+diff -ru softdevice-orig/video.h softdevice/video.h
+--- softdevice-orig/video.h	2006-05-21 17:49:35.000000000 +0200
++++ softdevice/video.h	2006-05-21 18:12:07.000000000 +0200
+@@ -144,7 +144,6 @@
+ 
+     cSetupStore *setupStore;
+ 
+-    bool active;
+     uint16_t OsdRefreshCounter;
+     // should be setted to null everytime OSD is shown
+     // (software alpha blending mode).
+diff -ru softdevice-orig/video-shm.c softdevice/video-shm.c
+--- softdevice-orig/video-shm.c	2006-05-21 17:49:35.000000000 +0200
++++ softdevice/video-shm.c	2006-05-21 18:17:45.000000000 +0200
+@@ -25,7 +25,7 @@
+ };
+ 
+ void cShmRemote::Action(void) {
+-        while (active) {
++        while (Running()) {
+                 SHMDEB("cShmRemote trying to get a lock\n");
+                 sem_wait_lock(vout->ctl->semid,KEY_MUT);
+                 SHMDEB("cShmRemote got lock\n");
+diff -ru softdevice-orig/video-shm.h softdevice/video-shm.h
+--- softdevice-orig/video-shm.h	2006-05-21 17:49:35.000000000 +0200
++++ softdevice/video-shm.h	2006-05-21 18:17:27.000000000 +0200
+@@ -63,7 +63,6 @@
+  */
+ class cShmRemote : public cRemote, private cThread {
+   private:
+-    bool        active;
+     cShmVideoOut *vout;
+ 
+     virtual void Action(void);
+@@ -71,7 +70,6 @@
+           cShmRemote(const char *Name, cShmVideoOut *video_out) 
+                   : cRemote(Name) {
+                   vout=video_out;
+-                  active=true;
+                   Start();
+           };
+           
+@@ -79,10 +77,9 @@
+           
+           void Stop()
+           {
+-                  if (!vout || !active)
++                  if (!vout || !Running())
+                           return;
+ 
+-                  active = false;
+                   // signal new key to stop the thread from waiting
+                   sem_sig_unlock(vout->ctl->semid,KEY_SIG);
+         
