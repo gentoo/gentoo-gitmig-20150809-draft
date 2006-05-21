@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3.ebuild,v 1.10 2006/02/22 20:43:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3.ebuild,v 1.11 2006/05/21 21:07:01 seemant Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -118,8 +118,6 @@ pkg_postinst() {
 		einfo "See /usr/share/doc/${PF}/html/admin.html for documentation."
 		echo ""
 	fi
-	einfo "The client apps are installed with the mit- prefix"
-	einfo "(ie. mit-ftp, mit-ftpd, mit-telnet, mit-telnetd, etc...)"
 	echo ""
 	ewarn "PLEASE READ THIS"
 	einfo "This release of mit-krb5 now depends on an external version"
