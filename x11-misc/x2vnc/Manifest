@@ -1,4 +1,6 @@
-MD5 7c6075e827dc1436773b52aeb40083a9 ChangeLog 3324
+MD5 fa72d0c8b902a7f63fcfc6afe2897b73 ChangeLog 3443
 MD5 264f33db6a52266febcbbb6bd8b8fcdf files/digest-x2vnc-1.6.1 62
+MD5 020d6d9543a5674012e05dbb139fe9f8 files/digest-x2vnc-1.7.1 62
 MD5 73306e20ac1b1ef3b82127d6585e9431 metadata.xml 229
 MD5 646bcc2e2d4a8039d43019408c8196db x2vnc-1.6.1.ebuild 860
+MD5 78fa8c643aabedfd71de86a4b21291d8 x2vnc-1.7.1.ebuild 864
