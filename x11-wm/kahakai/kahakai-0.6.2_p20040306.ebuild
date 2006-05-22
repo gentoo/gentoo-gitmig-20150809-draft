@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2_p20040306.ebuild,v 1.7 2006/03/04 14:32:33 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2_p20040306.ebuild,v 1.8 2006/05/22 02:42:53 nixphoeni Exp $
 
 inherit eutils
 
@@ -17,16 +17,15 @@ KEYWORDS="-alpha ppc ~sparc x86"
 
 RDEPEND="|| ( ( x11-libs/libX11
 		x11-libs/libXrandr
-		x11-libs/libXft
 		x11-libs/libXrender
 		x11-proto/xextproto
 		xinerama? ( x11-libs/libXinerama )
 		)
 		virtual/x11
 	)
-	truetype? ( || ( x11-libs/libXft virtual/xft ) )
+	truetype? ( || ( x11-libs/libXft virtual/xft x11-base/xorg-x11 ) )
 	ruby? ( || ( >=dev-lang/ruby-1.8 dev-lang/ruby-cvs ) )
-	>=dev-lang/swig-1.3.20
+	=dev-lang/swig-1.3.21
 	>=media-libs/imlib2-1.1.0
 	dev-util/pkgconfig
 	media-fonts/artwiz-fonts
@@ -37,6 +36,12 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool"
 
 S="${WORKDIR}/${PN}"
+
+pkg_setup() {
+	if use ruby && ! built_with_use dev-lang/swig ruby; then
+		die "dev-lang/swig must be built with ruby support"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -53,12 +58,15 @@ src_compile() {
 		$(use_enable xinerama) \
 		$(use_enable truetype xft) || die
 	emake || die
+
+	# fix the error about redefining "None"
+	sed -i -e 's:\bNone =.*::' ${S}/src/kahakai.py
 }
 
 src_install() {
 	einstall || die
 	cd doc
-	dodoc AUTHORS INSTALL NEWS COPYING README ChangeLog TODO
+	dodoc AUTHORS NEWS COPYING README ChangeLog TODO
 
 	exeinto /etc/X11/Sessions
 	echo "/usr/bin/kahakai" > ${T}/kahakai
