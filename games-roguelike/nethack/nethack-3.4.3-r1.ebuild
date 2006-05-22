@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.12 2006/01/24 20:30:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.13 2006/05/22 20:59:43 flameeyes Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/nethack/${PN}-${MY_PV}-src.tgz"
 
 LICENSE="nethack"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc ~ppc-macos sparc x86"
+KEYWORDS="amd64 ~hppa ppc ~ppc-macos sparc x86 ~x86-fbsd"
 IUSE="X qt gnome"
 
 RDEPEND="virtual/libc
@@ -103,7 +103,7 @@ src_compile() {
 		LFLAGS="${lflags}" \
 		|| die "main build failed"
 	cd ${S}/util
-	emake CFLAGS="${CFLAGS}" recover || die "util build failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" recover || die "util build failed"
 }
 
 src_install() {
@@ -112,6 +112,7 @@ src_install() {
 		CFLAGS="${CFLAGS}" \
 		LFLAGS="-L/usr/X11R6/lib" \
 		GAMEPERM=0755 \
+		GAMEUID="${GAMES_USER}" GAMEGRP="${GAMES_GROUP}" \
 		PREFIX="${D}/usr" \
 		GAMEDIR="${D}${HACKDIR}" \
 		SHELLDIR="${D}/${GAMES_BINDIR}" \
