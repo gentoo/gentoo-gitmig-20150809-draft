@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/libjingle-0.3.0_p20060508.ebuild,v 1.1 2006/05/21 14:42:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/libjingle-0.3.0_p20060508.ebuild,v 1.2 2006/05/22 15:58:07 genstef Exp $
 
 inherit autotools
 
@@ -14,11 +14,13 @@ KEYWORDS="~x86"
 IUSE="speex ilbc ortp"
 SLOT="0"
 
-RDEPEND="dev-libs/openssl"
+RDEPEND="dev-libs/openssl
+	ortp? (
+		~net-libs/ortp-0.7.1 
+		ilbc? ( dev-libs/ilbc-rfc3951 )
+		speex? ( media-libs/speex )
+	)"
 DEPEND="${RDEPEND}
-	ilbc? ( dev-libs/ilbc-rfc3951 )
-	speex? ( media-libs/speex )
-	ortp? ( ~net-libs/ortp-0.7.1 )
 	dev-util/pkgconfig"
 
 src_compile() {
@@ -29,10 +31,10 @@ src_compile() {
 	sed -i "s:libmediastreamer_la_LIBADD.*:\0 \$(SPEEX_CFLAGS):" talk/third_party/mediastreamer/Makefile.am || die
 
 	eautoreconf || die "eautoreconf failed"
-	econf --enable-linphone \
+	econf $(use_enable ortp linphone) \
+		$(use_enable ortp) \
 		$(use_with ilbc) \
 		$(use_with speex) \
-		$(use_enable ortp) \
 		--disable-examples || die "econf failed"
 	emake || die "emake failed"
 }
