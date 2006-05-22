@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 56542a242ba1cbd346974fa3fd502538 ChangeLog 987
-MD5 7233d67bafbe1a251ea18c0a203f5c95 dvipost-1.0.ebuild 970
+MD5 def6329edd2268d5666d00889dea42ea ChangeLog 1094
+MD5 f717917cbee13c25459f1a503bf167ea dvipost-1.0.ebuild 971
 MD5 aef58d69ec48be9b4a38fe74d73d0886 files/digest-dvipost-1.0 220
 MD5 20bb45f34f4a35fa7db116cb8d84dc0c files/dvipost-1.0-src_test.diff 377
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEcIq/oGcCqvCmTSIRAkFlAJ9Kd4SolbgTA+NDZXtHtYfMLnXU2gCgp5dA
-qLG3C6JROUrsQlFebV4xlkw=
-=yF9P
+iD8DBQFEcgNbKRy60XGEcJIRAmMAAKCXryEjRLQdrnWzQgZMR20v67q/1wCZAQ8v
+sK3wiHEs7l3fqiOEeVsjPzE=
+=UhFA
 -----END PGP SIGNATURE-----
