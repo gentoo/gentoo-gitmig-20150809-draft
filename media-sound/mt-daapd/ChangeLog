@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/mt-daapd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.27 2006/05/13 20:42:52 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.28 2006/05/22 00:08:29 flameeyes Exp $
+
+*mt-daapd-0.3.0_pre1050 (22 May 2006)
+
+  22 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +mt-daapd-0.3.0_pre1050.ebuild, -mt-daapd-0.3.0_pre20060324.ebuild:
+  Add new nightlie (was a while since I added one). Note: it's not a downgrade
+  although it might seems one, it's just the numbering scheme changed, now it
+  uses Subversion revision number rather than date.
 
   13 May 2006; Mark Loeser <halcy0n@gentoo.org> mt-daapd-0.2.4.ebuild:
   Stable on x86; bug #124640
