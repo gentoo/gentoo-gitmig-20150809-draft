@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/ndu
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.9 2005/12/12 03:42:09 robbat2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.10 2006/05/22 23:28:07 robbat2 Exp $
+
+*ndu-0.4-r4 (22 May 2006)
+
+  22 May 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/ndu-0.4-binary-locations.patch, +ndu-0.4-r4.ebuild:
+  Fix duplication of dnstouch, and move binaries to bin, as they are suitable
+  for non-root.
 
 *ndu-0.4-r3 (12 Dec 2005)
 
