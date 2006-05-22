@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.194 2006/05/01 18:09:17 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.195 2006/05/22 14:25:10 caleb Exp $
+
+  22 May 2006; Caleb Tennis <caleb@gentoo.org> -files/ruby-1.8.2-soap.diff,
+  -files/ruby-1.8.2-unittest.diff,
+  -files/ruby-1.8.2-xmlrpc-ipimethods-fix.diff, -files/re.c.182.patch,
+  -files/ruby-rdoc-gentoo.diff, -ruby-1.8.2-r2.ebuild, -ruby-1.8.3.ebuild,
+  -ruby-1.8.4.ebuild, -ruby-1.8.4-r2.ebuild:
+  remove old versions, particularly < 1.8.3 for GLSA 200510-05
 
   01 May 2006; Rene Nussbaumer <killerfox@gentoo.org> ruby-1.8.4-r3.ebuild:
   Stable on hppa. See bug #130657.
