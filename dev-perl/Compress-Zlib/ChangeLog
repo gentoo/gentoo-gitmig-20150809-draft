@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Compress-Zlib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.46 2006/04/24 15:11:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.47 2006/05/22 08:21:18 ian Exp $
+
+  22 May 2006; Christian Hartmann <ian@gentoo.org>
+  -Compress-Zlib-1.33.ebuild, -Compress-Zlib-1.35.ebuild:
+  Removed vulnerable (GLSA-200508-01) and outdated versions.
 
   24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   Compress-Zlib-1.41.ebuild:
