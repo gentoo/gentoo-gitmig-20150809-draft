@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/f2c
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.16 2006/05/14 07:31:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.17 2006/05/22 08:07:40 kugelfang Exp $
+
+  22 May 2006; Danny van Dyk <kugelfang@gentoo.org> -f2c-20030320.ebuild:
+  Removed vulnerable (GLSA-200501-43) and outdated version.
 
 *f2c-20060507 (14 May 2006)
 
