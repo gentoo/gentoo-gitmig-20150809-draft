@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.7.2-r1.ebuild,v 1.1 2006/05/21 21:18:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.7.2-r1.ebuild,v 1.2 2006/05/22 14:50:19 seemant Exp $
 
 inherit autotools libtool eutils virtualx toolchain-funcs
 
@@ -124,9 +124,9 @@ src_install() {
 	doinitd ${GENTOODIR}/configs/heimdal-kpasswdd
 
 	insinto /etc
-	doins ${GENTOODIR}/configs/krb5.conf
+	newins ${GENTOODIR}/configs/krb5.conf krb5.conf.example
 
-	sed -i "s:/lib:/$(get_libdir):" ${D}/etc/krb5.conf
+	sed -i "s:/lib:/$(get_libdir):" ${D}/etc/krb5.conf.example
 
 	if use ldap; then
 		insinto /etc/openldap/schema
@@ -136,18 +136,3 @@ src_install() {
 	# default database dir
 	keepdir /var/heimdal
 }
-
-pkg_postinst() {
-	echo
-	ewarn "DANGER WILL ROBINSON!"
-	einfo "There has been a change in the libgssapi shared library version"
-	einfo "This means that _EVERYTHING_ that linked against libgssapi.so.1"
-	einfo "will now be broken.  Examples include, but may not be limited to:"
-	einfo "samba, mozilla, mozilla-firefox, subversion and neon, cvs, "
-	einfo "evolution-data-server, and gnome-vfs.  As a consequence:"
-	ewarn "PLEASE PLEASE PLEASE PLEASE PLEASE run revdep-rebuild right now"
-	epause
-	ebeep 10
-	echo
-}
-
