@@ -1,4 +1,4 @@
-MD5 354f494cee79acb5d758c1835f99bfe9 ChangeLog 7718
+MD5 109e67b416516b6a4c06aedcf0b5fd1e ChangeLog 7813
 MD5 b8ef37a0c2afb0f5505932411db81db5 files/digest-gst-plugins-flac-0.10.0 76
 MD5 79245dc2c0c8a4bd23983a836b8a9e43 files/digest-gst-plugins-flac-0.10.1 76
 MD5 1bf0484455a43eabf386bde99fb4e440 files/digest-gst-plugins-flac-0.10.2 76
@@ -9,7 +9,7 @@ MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-flac-0.8.8 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-flac-0.8.9 71
 MD5 aec3c15a084bf7c16dccdcc9f8cafb34 gst-plugins-flac-0.10.0.ebuild 336
 MD5 ceac08079ca541018b1c549456402a94 gst-plugins-flac-0.10.1.ebuild 337
-MD5 11fa163efd829d44f2df34e36501acf6 gst-plugins-flac-0.10.2.ebuild 369
+MD5 388d07386ce7416489eeeedbdf673b39 gst-plugins-flac-0.10.2.ebuild 363
 MD5 f7c9bb8f865389eec82fb50693062ffe gst-plugins-flac-0.8.10.ebuild 371
 MD5 f278508ded1e47721a188f2e5c619dfd gst-plugins-flac-0.8.11.ebuild 373
 MD5 6c26a386589e05e93a64ffedb0f38cdc gst-plugins-flac-0.8.12.ebuild 380
