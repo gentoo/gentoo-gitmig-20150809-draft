@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.8-r3.ebuild,v 1.3 2006/05/20 17:29:26 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.8-r3.ebuild,v 1.4 2006/05/22 18:20:39 kugelfang Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="The GNU info program and utilities"
 HOMEPAGE="http://www.gnu.org/software/texinfo/"
@@ -43,7 +43,7 @@ src_compile() {
 	econf ${myconf} || die
 
 	# Cross-compile workaround #133429
-	if [[ "$CBUILD" != "$CHOST" ]] ; then
+	if tc-is-cross-compiler ; then
 		emake -C tools || die "emake tools"
 	fi
 
