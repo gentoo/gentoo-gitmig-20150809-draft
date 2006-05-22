@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.176 2006/04/27 20:53:53 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.177 2006/05/22 12:01:01 caleb Exp $
+
+  22 May 2006; Caleb Tennis <caleb@gentoo.org> -kdeedu-3.3.2.ebuild,
+  -kdeedu-3.3.2-r1.ebuild:
+  removing old version affected by GLSA 200502-23
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-kdeedu-3.3.2,
   files/digest-kdeedu-3.3.2-r1, files/digest-kdeedu-3.3.2-r2,
