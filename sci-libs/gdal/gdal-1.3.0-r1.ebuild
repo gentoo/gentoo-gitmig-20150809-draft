@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.0-r1.ebuild,v 1.9 2005/12/23 16:26:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.0-r1.ebuild,v 1.10 2006/05/22 06:52:51 nerdboy Exp $
 
 inherit eutils libtool gnuconfig distutils toolchain-funcs
 
-IUSE="jpeg png geos gif jpeg2k netcdf hdf hdf5 python postgres mysql \
+IUSE="jpeg png geos gif jpeg2k netcdf hdf python postgres mysql \
 	odbc sqlite ogdi fits gml doc debug"
 
 DESCRIPTION="GDAL is a translator library for raster geospatial data formats (includes OGR support)"
@@ -13,7 +13,7 @@ SRC_URI="http://dl.maptools.org/dl/gdal/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 # need to get these arches updated on several libs first
 #KEYWORDS="~alpha ~hppa ~ppc64"
 
@@ -27,7 +27,6 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	fits? ( sci-libs/cfitsio )
 	ogdi? ( sci-libs/ogdi )
 	gml? ( dev-libs/xerces-c )
-	hdf5? ( >=sci-libs/hdf5-1.6.4 )
 	|| (
 	    postgres? ( dev-db/postgresql )
 	    mysql? ( dev-db/mysql )
@@ -72,7 +71,7 @@ src_compile() {
 	    $(use_with postgres pg) $(use_with fits cfitsio) \
 	    $(use_with netcdf) $(use_with hdf hdf4) $(use_with geos) \
 	    $(use_with sqlite) $(use_with jpeg2k jasper) $(use_with odbc) \
-	    $(use_with gml xerces) $(use_with hdf5)"
+	    $(use_with gml xerces)"
 
 	# It can't find this
 	if useq ogdi ; then
