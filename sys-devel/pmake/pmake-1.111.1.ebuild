@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.1.ebuild,v 1.3 2006/01/10 10:51:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.1.ebuild,v 1.4 2006/05/22 22:27:54 flameeyes Exp $
 
 inherit eutils toolchain-funcs versionator
 
@@ -24,14 +24,18 @@ DEPEND=""
 S="${WORKDIR}/${PN}"
 
 src_unpack() {
-	unpack ${A} && cd ${S} || die
+	unpack ${A}
+	cd "${S}"
 
-	epatch ${WORKDIR}/${DEBIAN_PATCH/.gz/}
+	epatch "${WORKDIR}/${DEBIAN_PATCH/.gz/}"
 
 	# pmake makes the assumption that . and .. are the first two
 	# entries in a directory, which doesn't always appear to be the
 	# case on ext3...  (05 Apr 2004 agriffis)
-	epatch ${FILESDIR}/${PN}-1.98-skipdots.patch
+	epatch "${FILESDIR}/${PN}-1.98-skipdots.patch"
+
+	# Add inttypes.h header on OpenBSD
+	epatch "${FILESDIR}/${P}-obsd-inttypes.patch"
 
 	# Clean up headers to reduce warnings
 	sed -i -e 's|^#endif.*|#endif|' *.h */*.h
