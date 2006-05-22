@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.9.0.ebuild,v 1.4 2005/10/02 16:46:12 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.9.0.ebuild,v 1.5 2006/05/22 10:09:05 dragonheart Exp $
+
+inherit eutils
 
 DESCRIPTION="editor for executable files"
 HOMEPAGE="http://hte.sourceforge.net/"
@@ -20,6 +22,12 @@ DEPEND="${RDEPEND}
 	sys-devel/flex"
 
 S="${WORKDIR}/ht-${PV}"
+
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+	epatch "${FILESDIR}/hteditor-gcc41.patch"
+}
 
 src_compile() {
 	econf || die

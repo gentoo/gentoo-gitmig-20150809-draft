@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/hteditor
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.22 2005/10/02 16:46:12 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.23 2006/05/22 10:09:05 dragonheart Exp $
+
+  22 May 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/hteditor-gcc41.patch, -hteditor-0.8.0-r2.ebuild,
+  hteditor-0.9.0.ebuild, hteditor-0.9.1.ebuild:
+  removed old version. added patch to fix compilation with gcc-4.1 as per bug
+  #133983 thanks to Daniele Gaffuri
 
   02 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> hteditor-0.9.0.ebuild:
   Stable on ppc.
