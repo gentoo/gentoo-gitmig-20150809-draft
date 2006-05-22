@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/heretic2-demo-1.06a.ebuild,v 1.2 2006/04/13 22:14:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/heretic2-demo-1.06a.ebuild,v 1.3 2006/05/22 18:06:26 wolf31o2 Exp $
 
 inherit eutils multilib games
 
@@ -61,7 +61,7 @@ src_install() {
 
 	games_make_wrapper ${PN} "./${exe}" "${dir}" "${dir}"
 	newicon "${demo}"/icon.xpm ${PN}.xpm || die "newicon failed"
-	make_desktop_entry ${PN} "Heretic 2 Demo" ${PN}.xpm
+	make_desktop_entry ${PN} "Heretic 2 (Demo)" ${PN}.xpm
 
 	prepgamesdirs
 }
