@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.8 2006/04/22 22:28:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.9 2006/05/22 22:21:42 flameeyes Exp $
 
 # Linux-dependant flags
 selinux
@@ -69,6 +69,7 @@ elibc_glibc
 elibc_uclibc
 kernel_linux
 userland_GNU
+userland_Darwin
 
 # Mask Xorg-modular drivers that are Linux-specific
 input_devices_aiptek
