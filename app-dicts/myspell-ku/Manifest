@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 42363c488d0aec89cfa718f6f773b114 ChangeLog 620
 MD5 c0440f51717051779b59fc34b9655956 files/digest-myspell-ku-20060316 256
 MD5 b86e3c93f969dbb4f433611cb0f6b0b0 metadata.xml 222
 MD5 9c18f3473796e09dacabc5d84f5e38c3 myspell-ku-20060316.ebuild 633
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEcgrBKRy60XGEcJIRAnRuAKCVIo3w9cDp6H8gyUwRQ9fgIX/QBgCfWL8n
+6cmRBEyKuukTzbKo97E8zek=
+=qFaK
+-----END PGP SIGNATURE-----
