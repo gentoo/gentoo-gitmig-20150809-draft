@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.102 2006/05/22 14:50:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.103 2006/05/22 15:10:50 seemant Exp $
+
+*heimdal-0.7.2-r2 (22 May 2006)
+
+  22 May 2006; Seemant Kulleen <seemant@gentoo.org>
+  +heimdal-0.7.2-r2.ebuild:
+  this revbump adds the execve patch for exg in bug #118508, the cracklib
+  support in bug #118508 by Henrik Sankala, and the rshd file collision that
+  exg told me about
 
   22 May 2006; Seemant Kulleen <seemant@gentoo.org> heimdal-0.7.2.ebuild,
   heimdal-0.7.2-r1.ebuild:
