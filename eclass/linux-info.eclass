@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.44 2006/05/11 08:33:06 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.45 2006/05/22 17:35:07 mrness Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -378,13 +378,13 @@ check_modules_supported() {
 }
 
 check_extra_config() {
-	local	config negate error local_error i n
-	local	temp_config die reworkmodulenames
+	local	config negate die error reworkmodulenames
+	local	soft_errors_count=0 hard_errors_count=0
 
 	# if we haven't determined the version yet, we need too.
 	get_version;
 
-	einfo "Checking for suitable kernel configuration options:"
+	einfo "Checking for suitable kernel configuration options..."
 	for config in ${CONFIG_CHECK}
 	do
 		# if we specify any fatal, ensure we honor them
@@ -393,24 +393,23 @@ check_extra_config() {
 		negate=0
 		reworkmodulenames=0
 
-		if [[ -z ${config//\!*} ]]; then
-			negate=1
+		if [[ -z ${config/\~*} ]]; then
+			die=0
 			config=${config:1}
-		fi
-		if [[ -z ${config/\@*} ]]; then
-			die=2
+		elif [[ -z ${config/\@*} ]]; then
+			die=0
 			reworkmodulenames=1
 			config=${config:1}
 		fi
-		if [[ -z ${config/\~*} ]]; then
-			die=0
+		if [[ -z ${config//\!*} ]]; then
+			negate=1
 			config=${config:1}
 		fi
 
 		if [[ ${negate} == 1 ]]; then
 			linux_chkconfig_present ${config} && error=2
 		elif [[ ${reworkmodulenames} == 1 ]]; then
-			temp_config="${config//*:}"
+			local temp_config="${config//*:}" i n
 			config="${config//:*}"
 			if linux_chkconfig_present ${config}; then
 				for i in ${MODULE_NAMES}; do
@@ -424,39 +423,52 @@ check_extra_config() {
 			linux_chkconfig_present ${config} || error=1
 		fi
 
-		if [[ ${die} == 0 ]]; then
-			ebegin "CONFIG_${config}"
-			eend ${error}
-		else
-			if [[ ${error} > 0 ]]; then
-				local_error="ERROR_${config}"
+		if [[ ${error} > 0 ]]; then
+			local report_func="eerror" local_error
+			local_error="ERROR_${config}"
+			local_error="${!local_error}"
+
+			if [[ -z "${local_error}" ]]; then
+				# using old, deprecated format.
+				local_error="${config}_ERROR"
 				local_error="${!local_error}"
-
-				if [[ -z "${local_error}" ]]; then
-					# using old, deprecated format.
-					local_error="${config}_ERROR"
-					local_error="${!local_error}"
+			fi
+			if [[ ${die} == 0 && -z "${local_error}" ]]; then
+				#soft errors can be warnings
+				local_error="WARNING_${config}"
+				local_error="${!local_error}"
+				if [[ -n "${local_error}" ]] ; then
+					report_func="ewarn"
 				fi
+			fi
 
-				if [[ -z "${local_error}" ]]; then
-					[[ ${error} == 1 ]] \
-						&& local_error="is not set when it should be." \
-						|| local_error="should not be set. But it is."
-					local_error="CONFIG_${config}:\t ${local_error}"
-				fi
-				eerror "  ${local_error}"
+			if [[ -z "${local_error}" ]]; then
+				[[ ${error} == 1 ]] \
+					&& local_error="is not set when it should be." \
+					|| local_error="should not be set. But it is."
+				local_error="CONFIG_${config}:\t ${local_error}"
+			fi
+			if [[ ${die} == 0 ]]; then
+				${report_func} "  ${local_error}"
+				soft_errors_count=$[soft_errors_count + 1]
+			else
+				${report_func} "  ${local_error}"
+				hard_errors_count=$[hard_errors_count + 1]
 			fi
 		fi
 	done
 
-	if [[ ${error} > 0 ]]; then
+	if [[ ${hard_errors_count} > 0 ]]; then
 		eerror "Please check to make sure these options are set correctly."
 		eerror "Failure to do so may cause unexpected problems."
-		if [[ ${die} == 1 ]]; then
-			eerror "Once you have satisfied these options, please try merging"
-			eerror "this package again."
-			die "Incorrect kernel configuration options"
-		fi
+		eerror "Once you have satisfied these options, please try merging"
+		eerror "this package again."
+		die "Incorrect kernel configuration options"
+	elif [[ ${soft_errors_count} > 0 ]]; then
+		ewarn "Please check to make sure these options are set correctly."
+		ewarn "Failure to do so may cause unexpected problems."
+	else
+		eend 0
 	fi
 }
 
