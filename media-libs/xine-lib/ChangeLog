@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.343 2006/05/17 08:28:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.344 2006/05/22 21:26:04 flameeyes Exp $
+
+*xine-lib-1.1.2_pre20060328-r7 (22 May 2006)
+
+  22 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +xine-lib-1.1.2_pre20060328-r7.ebuild:
+  Add new revision with a patch to allow playing of m4b files.
 
   17 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   -xine-lib-1.1.2_pre20060328-r2.ebuild,
