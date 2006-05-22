@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.64 2006/05/11 08:23:43 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.65 2006/05/22 09:27:50 genstef Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -84,15 +84,15 @@
 # See http://bugs.gentoo.org/show_bug.cgi?id=127506
 
 inherit eutils linux-info multilib
-EXPORT_FUNCTIONS pkg_setup pkg_postinst src_install src_compile pkg_postrm
+EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst src_install src_compile pkg_postrm
 
 IUSE="" # don't put pcmcia here, rather in the ebuilds that actually support pcmcia
 SLOT="0"
 DESCRIPTION="Based on the $ECLASS eclass"
-RDEPEND="virtual/modutils
-		pcmcia? ( virtual/pcmcia )"
-DEPEND="sys-apps/sed
-		pcmcia? ( virtual/pcmcia )"
+RDEPEND="kernel_linux? ( virtual/modutils
+		pcmcia? ( virtual/pcmcia ) )"
+DEPEND="${RDEPEND}
+		sys-apps/sed"
 
 # eclass utilities
 # ----------------------------------
@@ -548,10 +548,16 @@ linux-mod_src_install() {
 	done
 }
 
+linux-mod_pkg_preinst() {
+	[ -d ${IMAGE}/lib/modules ] && UPDATE_DEPMOD=true || UPDATE_DEPMOD=false
+	[ -d ${IMAGE}/etc/modules.d ] && UPDATE_MODULES=true || UPDATE_MODULES=false
+	[ -d ${IMAGE}/lib/modules ] && UPDATE_MODULEDB=true || UPDATE_MODULEDB=false
+}
+
 linux-mod_pkg_postinst() {
-	update_depmod;
-	update_modules;
-	update_moduledb;
+	${UPDATE_DEPMOD} && update_depmod;
+	${UPDATE_MODULES} && update_modules;
+	${UPDATE_MODULEDB} && update_moduledb;
 }
 
 linux-mod_pkg_postrm() {
