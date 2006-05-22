@@ -1,12 +1,12 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/myspell-hu-20060316.ebuild,v 1.1 2006/05/01 16:03:18 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/myspell-hu-20060316.ebuild,v 1.2 2006/05/22 18:57:56 gustavoz Exp $
 
 DESCRIPTION="Hungarian dictionaries for myspell/hunspell"
 LICENSE="GPL-2"
 HOMEPAGE="http://lingucomponent.openoffice.org/ http://huhypn.tipogral.hu/"
 
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "hu,HU,hu_HU,Hungarian (Hungary),hu_HU.zip"

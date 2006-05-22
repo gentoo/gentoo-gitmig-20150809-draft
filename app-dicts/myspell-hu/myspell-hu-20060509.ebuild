@@ -1,6 +1,6 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/myspell-hu-20060509.ebuild,v 1.2 2006/05/19 21:10:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/myspell-hu-20060509.ebuild,v 1.3 2006/05/22 18:57:56 gustavoz Exp $
 
 DESCRIPTION="Hungarian dictionaries for myspell/hunspell"
 LICENSE="GPL-2"
@@ -11,7 +11,7 @@ SRC_URI="http://magyarispell.sourceforge.net/hu_HU-1.0.tar.gz
 		http://www.tipogral.hu/download/huhyphn-20050329.tar.gz
 		mirror://gentoo/myspell-thes_hu_HU-20060316.zip"
 
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd"
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "hu,HU,hu_HU_u8,Hungarian (Hungary),hu_HU-1.0.tar.gz"

@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-fr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fr/ChangeLog,v 1.2 2006/05/19 21:06:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fr/ChangeLog,v 1.3 2006/05/22 18:52:42 gustavoz Exp $
+
+  22 May 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  myspell-fr-20060316.ebuild:
+  Stick a ~sparc in
 
   19 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   myspell-fr-20060316.ebuild:
