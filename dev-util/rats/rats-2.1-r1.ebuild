@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rats/rats-2.1-r1.ebuild,v 1.1 2006/05/22 05:07:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rats/rats-2.1-r1.ebuild,v 1.2 2006/05/22 05:32:38 robbat2 Exp $
+
+inherit eutils
 
 DESCRIPTION="RATS - Rough Auditing Tool for Security"
 HOMEPAGE="http://www.securesoftware.com/download_rats.htm"
