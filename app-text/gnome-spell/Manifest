@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3ae850300af531d77b5faad250480af6 ChangeLog 9719
 MD5 e37c6ac000f882cc81e9cd814b66e3d9 files/digest-gnome-spell-1.0.5-r2 256
 MD5 cd31ce6d861f5af624c643efb45e1a14 files/digest-gnome-spell-1.0.6 256
@@ -17,3 +20,10 @@ MD5 e75b67bc2e646d264c8fcbda88d053bb gnome-spell-1.0.6.ebuild 1263
 MD5 4876ad3e62bd4eb9daf2c55a4a6e4d89 gnome-spell-1.0.7-r1.ebuild 1575
 MD5 6f726a8f311efd868c05a9c0a894d194 gnome-spell-1.0.7.ebuild 1625
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEcjIoKRy60XGEcJIRArcgAKCZ/9Ic0wUZwxuL39NJzl84fbTbBwCgll6y
+EsUJxR633mR69giP3aYE8+I=
+=hsgD
+-----END PGP SIGNATURE-----
