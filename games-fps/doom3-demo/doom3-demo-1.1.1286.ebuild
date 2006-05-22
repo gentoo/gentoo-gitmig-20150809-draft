@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.13 2006/04/13 20:39:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.14 2006/05/22 18:09:01 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -59,7 +59,7 @@ src_install() {
 	newicon ${DISTDIR}/doom3.png doom3-demo.png
 
 	games_make_wrapper doom3-demo ./doom.x86 "${dir}" "${dir}"
-	make_desktop_entry doom3-demo "Doom III Demo" doom3-demo.png
+	make_desktop_entry doom3-demo "Doom III (Demo)" doom3-demo.png
 
 	prepgamesdirs
 }

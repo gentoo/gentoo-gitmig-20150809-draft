@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/soldieroffortune-demo-0.57.ebuild,v 1.2 2006/04/13 22:12:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/soldieroffortune-demo-0.57.ebuild,v 1.3 2006/05/22 18:10:47 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -63,7 +63,7 @@ src_install() {
 
 	games_make_wrapper ${PN} "./${exe}" "${dir}" "${dir}"
 	newicon "${demo}"/launch/box.png ${PN}.png || die
-	make_desktop_entry ${PN} "Soldier of Fortune Demo"
+	make_desktop_entry ${PN} "Soldier of Fortune (Demo)"
 
 	prepgamesdirs
 }
