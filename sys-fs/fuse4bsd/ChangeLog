@@ -1,0 +1,11 @@
+# ChangeLog for sys-fs/fuse4bsd
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse4bsd/ChangeLog,v 1.1 2006/05/22 12:43:53 flameeyes Exp $
+
+*fuse4bsd-0.3.0 (22 May 2006)
+
+  22 May 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +fuse4bsd-0.3.0.ebuild:
+  Add fuse4bsd ebuild, for FUSE's FreeBSD kernel module and userland. Ebuild
+  by Robert Sebastian Gerus (bug #133548).
+
