@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/tnftp-20050625-r1.ebuild,v 1.2 2005/11/28 18:11:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/tnftp-20050625-r1.ebuild,v 1.3 2006/05/22 19:15:35 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,7 @@ HOMEPAGE="ftp://ftp.netbsd.org/pub/NetBSD/misc/tnftp/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~sparc ~x86 ~x86-fbsd"
 IUSE="ipv6"
 
 DEPEND=">=sys-libs/ncurses-5.1"
