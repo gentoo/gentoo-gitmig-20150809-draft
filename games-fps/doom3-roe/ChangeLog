@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/doom3-roe
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/ChangeLog,v 1.4 2006/03/31 20:51:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/ChangeLog,v 1.5 2006/05/22 18:24:18 wolf31o2 Exp $
+
+  22 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> doom3-roe-1.ebuild:
+  Added patch from Paul Bredbury <brebs@sent.com> and closing bug #134000.
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> doom3-roe-1.ebuild:
   Changed nostrip to strip.

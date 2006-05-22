@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/doom3-roe-1.ebuild,v 1.4 2006/03/31 20:51:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/doom3-roe-1.ebuild,v 1.5 2006/05/22 18:24:18 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -27,12 +27,20 @@ pkg_setup() {
 	cdrom_get_cds Setup/Data/d3xp/pak000.pk4
 }
 
+src_unpack() {
+	# Change from showing "d3xp" in the "mods" menu within Doom 3
+	# The ^1 changes the text to red
+	echo '^1Resurrection of Evil' > description.txt
+}
+
 src_install() {
 	insinto "${dir}"/d3xp
 
 	einfo "Copying file from the disk..."
 	doins ${CDROM_ROOT}/Setup/Data/d3xp/pak000.pk4 \
 		|| die "copying pak000"
+
+	doins description.txt
 
 	find ${Ddir} -exec touch '{}' \;
 
