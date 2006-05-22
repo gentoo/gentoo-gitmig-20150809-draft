@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-4.2-r1.ebuild,v 1.2 2006/05/21 04:46:35 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-4.2-r1.ebuild,v 1.3 2006/05/22 14:47:19 gustavoz Exp $
 
 inherit qt3 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.wirlab.net/kphone/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE="alsa debug jack"
 
 S=${WORKDIR}/${PN}
