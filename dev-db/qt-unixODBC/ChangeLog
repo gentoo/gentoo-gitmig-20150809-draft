@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qt-unixODBC
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.19 2006/05/12 22:32:48 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.20 2006/05/22 14:27:08 caleb Exp $
+
+  22 May 2006; Caleb Tennis <caleb@gentoo.org> -qt-unixODBC-3.3.4.ebuild:
+  remove for GSLA 200510-14
 
   12 May 2006; Thomas Cort <tcort@gentoo.org> qt-unixODBC-3.3.6.ebuild:
   Stable on alpha wrt Bug #132887.
