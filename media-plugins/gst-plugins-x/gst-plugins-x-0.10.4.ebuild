@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/gst-plugins-x-0.10.4.ebuild,v 1.10 2006/05/05 18:45:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/gst-plugins-x-0.10.4.ebuild,v 1.11 2006/05/21 23:59:45 tcort Exp $
 
 inherit gst-plugins-base
 
-KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
 
 IUSE=""
 RDEPEND=">=media-libs/gst-plugins-base-0.10.4-r1
