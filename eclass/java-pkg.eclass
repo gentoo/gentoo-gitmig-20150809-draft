@@ -1,6 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.34 2006/03/25 16:53:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.35 2006/05/22 01:26:51 nichoj Exp $
+
+
+# Skeleton pkg_setup, needed to provide compatibility for migration-overlay.
+java-pkg_pkg_setup() {
+	:;
+}
 
 pkglistpath="${T}/java-pkg-list"
 
@@ -367,3 +373,5 @@ java-pkg_dosrc() {
 	install ${INSOPTIONS} "${T}/${PN}-src.zip" "${D}${target}" \
 		|| die "failed to install sources"
 }
+
+EXPORT_FUNCTIONS pkg_setup
