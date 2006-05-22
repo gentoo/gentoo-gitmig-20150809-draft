@@ -1,12 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myspell.eclass,v 1.2 2006/05/09 18:20:47 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myspell.eclass,v 1.3 2006/05/22 18:09:00 kevquinn Exp $
 
 EXPORT_FUNCTIONS src_install pkg_preinst pkg_postinst
 
 IUSE=""
 
 SLOT="0"
+
+# tar, gzip, bzip2 are included in the base profile, but not unzip
+DEPEND="app-arch/unzip"
 
 # The console application for using myspell dictionaries is
 # hunspell (which is making myspell itself obsolete).
