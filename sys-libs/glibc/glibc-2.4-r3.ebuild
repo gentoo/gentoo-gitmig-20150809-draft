@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.1 2006/05/13 03:25:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.2 2006/05/22 04:07:21 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1076,7 +1076,7 @@ fi
 pkg_setup() {
 	if want_linuxthreads ; then
 		ewarn "glibc-2.4 is nptl-only!"
-		[[ ${CHOST} == i386-* ]] && eerror "NPTL requires a CHOST of i486 or better"
+		[[ ${CTARGET} == i386-* ]] && eerror "NPTL requires a CHOST of i486 or better"
 		die "please add USE='nptl nptlonly' to make.conf"
 	fi
 
