@@ -1,0 +1,23 @@
+diff -ur smbfs-1.4.5/mount_smbfs/Makefile smbfs-1.4.5-gentoo/mount_smbfs/Makefile
+--- smbfs-1.4.5/mount_smbfs/Makefile	2001-04-16 04:34:26 +0000
++++ smbfs-1.4.5-gentoo/mount_smbfs/Makefile	2005-06-08 18:10:50 +0000
+@@ -12,7 +12,7 @@
+ 
+ .PATH:	${MOUNT}
+ 
+-LDADD+= -lsmb
++LDADD+= -L${.CURDIR}/../lib/smb -lsmb
+ DPADD+= ${LIBSMB}
+ 
+ .include <bsd.prog.mk>
+diff -ur smbfs-1.4.5/smbutil/Makefile smbfs-1.4.5-gentoo/smbutil/Makefile
+--- smbfs-1.4.5/smbutil/Makefile	2001-04-16 04:34:26 +0000
++++ smbfs-1.4.5-gentoo/smbutil/Makefile	2005-06-08 18:12:29 +0000
+@@ -4,6 +4,6 @@
+ SRCS=	smbutil.c dumptree.c login.c lookup.c view.c print.c
+ 
+ DPADD=	${LIBSMB}
+-LDADD=	-lsmb
++LDADD=	-L${.CURDIR}/../lib/smb -lsmb
+ 
+ .include <bsd.prog.mk>

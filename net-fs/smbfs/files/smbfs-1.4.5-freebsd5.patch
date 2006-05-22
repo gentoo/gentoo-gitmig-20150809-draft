@@ -1,0 +1,294 @@
+Only in smbfs-1.4.5-freebsd5/examples: dot.nsmbrc.orig
+Only in smbfs-1.4.5-freebsd5/examples: dot.nsmbrc.orig~
+Only in smbfs-1.4.5-freebsd5/examples: dot.nsmbrc.rej
+diff -ur smbfs-1.4.5/lib/smb/ctx.c smbfs-1.4.5-freebsd5/lib/smb/ctx.c
+--- smbfs-1.4.5/lib/smb/ctx.c	2002-04-13 16:35:28.000000000 +0200
++++ smbfs-1.4.5-freebsd5/lib/smb/ctx.c	2005-07-09 22:01:28.417742992 +0200
+@@ -274,7 +274,7 @@
+ int
+ smb_ctx_setserver(struct smb_ctx *ctx, const char *name)
+ {
+-	if (strlen(name) >= SMB_MAXSRVNAMELEN) {
++	if (strlen(name) > SMB_MAXSRVNAMELEN) {
+ 		smb_error("server name '%s' too long", 0, name);
+ 		return ENAMETOOLONG;
+ 	}
+@@ -285,7 +285,7 @@
+ int
+ smb_ctx_setuser(struct smb_ctx *ctx, const char *name)
+ {
+-	if (strlen(name) >= SMB_MAXUSERNAMELEN) {
++	if (strlen(name) > SMB_MAXUSERNAMELEN) {
+ 		smb_error("user name '%s' too long", 0, name);
+ 		return ENAMETOOLONG;
+ 	}
+@@ -296,7 +296,7 @@
+ int
+ smb_ctx_setworkgroup(struct smb_ctx *ctx, const char *name)
+ {
+-	if (strlen(name) >= SMB_MAXUSERNAMELEN) {
++	if (strlen(name) > SMB_MAXUSERNAMELEN) {
+ 		smb_error("workgroup name '%s' too long", 0, name);
+ 		return ENAMETOOLONG;
+ 	}
+@@ -309,7 +309,7 @@
+ {
+ 	if (passwd == NULL)
+ 		return EINVAL;
+-	if (strlen(passwd) >= SMB_MAXPASSWORDLEN) {
++	if (strlen(passwd) > SMB_MAXPASSWORDLEN) {
+ 		smb_error("password too long", 0);
+ 		return ENAMETOOLONG;
+ 	}
+@@ -324,7 +324,7 @@
+ int
+ smb_ctx_setshare(struct smb_ctx *ctx, const char *share, int stype)
+ {
+-	if (strlen(share) >= SMB_MAXSHARENAMELEN) {
++	if (strlen(share) > SMB_MAXSHARENAMELEN) {
+ 		smb_error("share name '%s' too long", 0, share);
+ 		return ENAMETOOLONG;
+ 	}
+@@ -408,7 +408,7 @@
+ 			    &ctx->ct_sh.ioc_group);
+ 		}
+ 		if (*p && error == 0) {
+-			error = smb_parse_owner(cp, &ctx->ct_ssn.ioc_owner,
++			error = smb_parse_owner(p, &ctx->ct_ssn.ioc_owner,
+ 			    &ctx->ct_ssn.ioc_group);
+ 		}
+ 		free(p);
+diff -ur smbfs-1.4.5/lib/smb/file.c smbfs-1.4.5-freebsd5/lib/smb/file.c
+--- smbfs-1.4.5/lib/smb/file.c	2001-04-16 06:33:01.000000000 +0200
++++ smbfs-1.4.5-freebsd5/lib/smb/file.c	2005-07-09 22:01:28.417742992 +0200
+@@ -71,7 +71,7 @@
+ 	struct smbioc_rw rwrq;
+ 
+ 	rwrq.ioc_fh = fh;
+-	(const char*)rwrq.ioc_base = src;
++	rwrq.ioc_base = (char *)src;
+ 	rwrq.ioc_cnt = count;
+ 	rwrq.ioc_offset = offset;
+ 	if (ioctl(ctx->ct_fd, SMBIOC_WRITE, &rwrq) == -1)
+diff -ur smbfs-1.4.5/lib/smb/kiconv.c smbfs-1.4.5-freebsd5/lib/smb/kiconv.c
+--- smbfs-1.4.5/lib/smb/kiconv.c	2001-08-22 05:31:36.000000000 +0200
++++ smbfs-1.4.5-freebsd5/lib/smb/kiconv.c	2005-07-09 22:01:28.418742840 +0200
+@@ -48,7 +48,7 @@
+ {
+ 	struct iconv_add_in din;
+ 	struct iconv_add_out dout;
+-	int olen;
++	size_t olen;
+ 
+ 	if (strlen(from) > ICONV_CSNMAXLEN || strlen(to) > ICONV_CSNMAXLEN)
+ 		return EINVAL;
+diff -ur smbfs-1.4.5/lib/smb/nb_net.c smbfs-1.4.5-freebsd5/lib/smb/nb_net.c
+--- smbfs-1.4.5/lib/smb/nb_net.c	2001-02-16 03:46:12.000000000 +0100
++++ smbfs-1.4.5-freebsd5/lib/smb/nb_net.c	2005-07-09 22:01:28.418742840 +0200
+@@ -45,6 +45,7 @@
+ #include <string.h>
+ #include <stdio.h>
+ #include <unistd.h>
++#include <ifaddrs.h>
+ 
+ #include <netsmb/netbios.h>
+ #include <netsmb/smb_lib.h>
+@@ -101,68 +102,46 @@
+ int
+ nb_enum_if(struct nb_ifdesc **iflist, int maxif)
+ {  
+-	struct ifconf ifc;
+-	struct ifreq *ifrqp;
+ 	struct nb_ifdesc *ifd;
+-	struct in_addr iaddr, imask;
+-	char *ifrdata, *iname;
+-	int s, rdlen, ifcnt, error, iflags, i;
++	struct ifaddrs *ifp, *p;
++	int i;
+ 
+-	*iflist = NULL;
+-	s = socket(AF_INET, SOCK_DGRAM, 0);
+-	if (s == -1)
++	if (getifaddrs(&ifp) < 0)
+ 		return errno;
+ 
+-	rdlen = maxif * sizeof(struct ifreq);
+-	ifrdata = malloc(rdlen);
+-	if (ifrdata == NULL) {
+-		error = ENOMEM;
+-		goto bad;
+-	}
+-	ifc.ifc_len = rdlen;
+-	ifc.ifc_buf = ifrdata;
+-	if (ioctl(s, SIOCGIFCONF, &ifc) != 0) {
+-		error = errno;
+-		goto bad;
+-	} 
+-	ifrqp = ifc.ifc_req;
+-	ifcnt = ifc.ifc_len / sizeof(struct ifreq);
+-	error = 0;
+-	for (i = 0; i < ifcnt; i++, ifrqp++) {
+-		if (ioctl(s, SIOCGIFFLAGS, ifrqp) != 0)
+-			continue;
+-		iflags = ifrqp->ifr_flags;
+-		if ((iflags & IFF_UP) == 0 || (iflags & IFF_BROADCAST) == 0)
+-			continue;
++	*iflist = NULL;
++	i = 0;
++	for (p = ifp; p; p = p->ifa_next) {
+ 
+-		if (ioctl(s, SIOCGIFADDR, ifrqp) != 0 ||
+-		    ifrqp->ifr_addr.sa_family != AF_INET)
+-			continue;
+-		iname = ifrqp->ifr_name;
+-		if (strlen(iname) >= sizeof(ifd->id_name))
+-			continue;
+-		iaddr = (*(struct sockaddr_in *)&ifrqp->ifr_addr).sin_addr;
++		if (i >= maxif)
++			break;
+ 
+-		if (ioctl(s, SIOCGIFNETMASK, ifrqp) != 0)
++		if ((p->ifa_addr->sa_family != AF_INET) ||
++		    ((p->ifa_flags & (IFF_UP|IFF_BROADCAST))
++		     != (IFF_UP|IFF_BROADCAST)))
++			continue;
++		if (strlen(p->ifa_name) >= sizeof(ifd->id_name))
+ 			continue;
+-		imask = ((struct sockaddr_in *)&ifrqp->ifr_addr)->sin_addr;
+ 
+ 		ifd = malloc(sizeof(struct nb_ifdesc));
+-		if (ifd == NULL)
++		if (ifd == NULL) {
++			freeifaddrs(ifp);
++			/* XXX should free stuff already in *iflist */
+ 			return ENOMEM;
++		}
+ 		bzero(ifd, sizeof(struct nb_ifdesc));
+-		strcpy(ifd->id_name, iname);
+-		ifd->id_flags = iflags;
+-		ifd->id_addr = iaddr;
+-		ifd->id_mask = imask;
++		strcpy(ifd->id_name, p->ifa_name);
++		ifd->id_flags = p->ifa_flags;
++		ifd->id_addr = ((struct sockaddr_in *)p->ifa_addr)->sin_addr;
++		ifd->id_mask = ((struct sockaddr_in *)p->ifa_netmask)->sin_addr;
+ 		ifd->id_next = *iflist;
+ 		*iflist = ifd;
++		i++;
+ 	}
+-bad:
+-	free(ifrdata);
+-	close(s);
+-	return error;
+-}  
++
++	freeifaddrs(ifp);
++	return 0;
++}
+ 
+ /*ARGSUSED*/
+ /*int
+@@ -198,4 +177,4 @@
+ 		nb_snbfree(snb);
+ 	return error;
+ }
+-*/
+\ No newline at end of file
++*/
+diff -ur smbfs-1.4.5/lib/smb/rap.c smbfs-1.4.5-freebsd5/lib/smb/rap.c
+--- smbfs-1.4.5/lib/smb/rap.c	2001-02-24 16:56:05.000000000 +0100
++++ smbfs-1.4.5-freebsd5/lib/smb/rap.c	2005-07-09 22:01:28.419742688 +0200
+@@ -40,7 +40,7 @@
+ #include <err.h>
+ #include <stdio.h>
+ #include <unistd.h>
+-#include <strings.h>
++#include <string.h>
+ #include <stdlib.h>
+ #include <sysexits.h>
+ 
+@@ -198,7 +198,7 @@
+ 
+ 	rap = malloc(sizeof(*rap));
+ 	if (rap == NULL)
+-		return NULL;
++		return ENOMEM;
+ 	bzero(rap, sizeof(*rap));
+ 	p = rap->r_sparam = rap->r_nparam = strdup(param);
+ 	rap->r_sdata = rap->r_ndata = strdup(data);
+diff -ur smbfs-1.4.5/lib/smb/rq.c smbfs-1.4.5-freebsd5/lib/smb/rq.c
+--- smbfs-1.4.5/lib/smb/rq.c	2001-04-16 06:33:01.000000000 +0200
++++ smbfs-1.4.5-freebsd5/lib/smb/rq.c	2005-07-09 22:01:28.419742688 +0200
+@@ -162,7 +162,7 @@
+ 	bzero(&krq, sizeof(krq));
+ 	krq.ioc_setup[0] = setup;
+ 	krq.ioc_setupcnt = setupcount;
+-	(const char*)krq.ioc_name = name;
++	krq.ioc_name = (char *)name;
+ 	krq.ioc_tparamcnt = tparamcnt;
+ 	krq.ioc_tparam = tparam;
+ 	krq.ioc_tdatacnt = tdatacnt;
+diff -ur smbfs-1.4.5/mount_smbfs/mount_smbfs.8 smbfs-1.4.5-freebsd5/mount_smbfs/mount_smbfs.8
+--- smbfs-1.4.5/mount_smbfs/mount_smbfs.8	2002-04-16 04:47:41.000000000 +0200
++++ smbfs-1.4.5-freebsd5/mount_smbfs/mount_smbfs.8	2005-07-09 22:01:28.420742536 +0200
+@@ -127,7 +127,7 @@
+ .It Pa ~/.nsmbrc
+ Keeps static parameters for connections and other information.
+ See
+-.Pa ./examples/dot.nsmbrc
++.Pa /usr/share/examples/smbfs/dot.nsmbrc
+ for details.
+ .El
+ .Sh EXAMPLES
+diff -ur smbfs-1.4.5/mount_smbfs/mount_smbfs.c smbfs-1.4.5-freebsd5/mount_smbfs/mount_smbfs.c
+--- smbfs-1.4.5/mount_smbfs/mount_smbfs.c	2002-04-10 06:17:51.000000000 +0200
++++ smbfs-1.4.5-freebsd5/mount_smbfs/mount_smbfs.c	2005-07-09 22:01:28.425741776 +0200
+@@ -75,15 +75,15 @@
+ 	extern void dropsuid();
+ 	extern int loadsmbvfs();
+ #else
+-	struct vfsconf vfc;
+-#endif /* APPLE */
++	struct xvfsconf vfc;
++#endif
+ 	char *next;
+ 	int opt, error, mntflags, caseopt;
+ 
+ 
+ #ifdef APPLE
+ 	dropsuid();
+-#endif /* APPLE */
++#endif
+ 	if (argc == 2) {
+ 		if (strcmp(argv[1], "-h") == 0) {
+ 			usage();
+@@ -100,13 +100,12 @@
+ 	error = loadsmbvfs();
+ #else
+ 	error = getvfsbyname(SMBFS_VFSNAME, &vfc);
+-	if (error && vfsisloadable(SMBFS_VFSNAME)) {
+-		if(vfsload(SMBFS_VFSNAME))
+-			err(EX_OSERR, "vfsload("SMBFS_VFSNAME")");
+-		endvfsent();
++	if (error) {
++		if (kldload(SMBFS_VFSNAME) < 0)
++			err(EX_OSERR, "kldload("SMBFS_VFSNAME")");
+ 		error = getvfsbyname(SMBFS_VFSNAME, &vfc);
+ 	}
+-#endif /* APPLE */
++#endif
+ 	if (error)
+ 		errx(EX_OSERR, "SMB filesystem is not available");
+ 
+diff -ur smbfs-1.4.5/smbutil/common.h smbfs-1.4.5-freebsd5/smbutil/common.h
+--- smbfs-1.4.5/smbutil/common.h	2001-08-22 05:33:38.000000000 +0200
++++ smbfs-1.4.5-freebsd5/smbutil/common.h	2005-07-09 22:01:28.426741624 +0200
+@@ -1,6 +1,7 @@
++/* $FreeBSD: src/contrib/smbfs/smbutil/common.h,v 1.3 2003/08/23 13:05:13 tjr Exp $ */
+ 
+ #define iprintf(ident,args...)	do { printf("%-" # ident "s", ""); \
+-				printf(## args);}while(0)
++				printf(args);}while(0)
+ 
+ extern int verbose;
+ 
