@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/vdr-sysinfo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sysinfo/ChangeLog,v 1.3 2006/05/01 12:32:07 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sysinfo/ChangeLog,v 1.4 2006/05/22 21:18:15 hd_brummy Exp $
+
+*vdr-sysinfo-0.1.0a-r1 (22 May 2006)
+
+  22 May 2006; Joerg Bornkessel <hd_brummy@gentoo.org> +files/confd-0.1.0a,
+  +files/vdr-sysinfo-0.1.0a-gentoo.diff, vdr-sysinfo-0.0.4a.ebuild,
+  vdr-sysinfo-0.1.0a.ebuild, +vdr-sysinfo-0.1.0a-r1.ebuild:
+  in -r1 Version added patch http://www.vdr-portal.de/board/thread.php?postid=468888#post468888
+  make variables configurable in vdr.sysinfo conf file
+  RDEPEND inherit in 0.0.4a & 0.1.0a fixed
 
 *vdr-sysinfo-0.1.0a (01 May 2006)
 
