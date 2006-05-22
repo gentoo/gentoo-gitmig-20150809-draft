@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3-r1.ebuild,v 1.4 2006/05/21 21:07:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3-r1.ebuild,v 1.5 2006/05/22 13:44:27 seemant Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 	sys-libs/com_err
 	sys-libs/ss
 	sys-devel/autoconf
+	tcltk? ( dev-lang/tcl )
 	berkdb? ( >=sys-libs/db-4 )
 	doc? ( tetex? ( virtual/tetex ) )"
 
