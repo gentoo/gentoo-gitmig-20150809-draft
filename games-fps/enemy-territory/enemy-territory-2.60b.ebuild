@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.3 2006/05/12 18:04:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.4 2006/05/22 19:53:31 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -60,7 +60,7 @@ src_install() {
 		dosed "s:GAMES_USER_DED:${GAMES_USER_DED}:" /etc/init.d/et-ded
 		dosed "s:GENTOO_DIR:${GAMES_BINDIR}:" /etc/init.d/et-ded
 		newconfd ${S}/et-ded.conf.d et-ded || die "newconfd failed"
-		newenvd ${S}/et-ded.env.d et-ded || die "newenvd failed"
+#		newenvd ${S}/et-ded.env.d et-ded || die "newenvd failed"
 		# TODO: move this to /var/ perhaps ?
 		dodir "${dir}/etwolf-homedir"
 		dosym "${dir}/etwolf-homedir" "${GAMES_PREFIX}/.etwolf"
