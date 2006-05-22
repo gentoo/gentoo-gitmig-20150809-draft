@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.49 2006/05/08 01:58:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.50 2006/05/22 03:35:08 halcy0n Exp $
+
+  22 May 2006; Mark Loeser <halcy0n@gentoo.org> evms-2.5.5-r1.ebuild:
+  Stable on x86; bug #131157
 
   08 May 2006; Seemant Kulleen <seemant@gentoo.org> evms-2.5.5.ebuild,
   evms-2.5.5-r1.ebuild:
