@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/bsnmp
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bsnmp/ChangeLog,v 1.1 2006/05/22 23:25:21 flameeyes Exp $
+
+*bsnmp-1.11a (22 May 2006)
+
+  22 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/bsnmp-1.10-gcc34.patch, +metadata.xml, +bsnmp-1.11a.ebuild:
+  Initial import from gentoo-alt overlay, SNMP daemon for FreeBSD. Not yet
+  fixed to work on Linux, so just ~x86-fbsd.
+
