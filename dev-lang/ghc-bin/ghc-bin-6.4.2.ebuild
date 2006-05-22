@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.2.ebuild,v 1.3 2006/05/19 16:17:50 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.2.ebuild,v 1.4 2006/05/22 23:48:38 dcoutts Exp $
 
 # Note to users of hardened gcc-3.x:
 #
@@ -19,10 +19,13 @@ inherit base multilib flag-o-matic toolchain-funcs ghc-package
 DESCRIPTION="Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
 # list all arches for proper digest building:
-SRC_URI="x86-fbsd?  ( mirror://gentoo/${P}-x86-fbsd.tbz2 )"
+SRC_URI="amd64?		( mirror://gentoo/${P}-amd64.tbz2 )
+		 sparc?		( mirror://gentoo/${P}-sparc.tbz2 )
+		 x86?		( mirror://gentoo/${P}-x86.tbz2 )
+		 x86-fbsd?  ( mirror://gentoo/${P}-x86-fbsd.tbz2 )"
 
 LICENSE="as-is"
-KEYWORDS="-* ~x86-fbsd"
+KEYWORDS="-* ~amd64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 IUSE="" # use the non-binary version if you want to have more choice
 
