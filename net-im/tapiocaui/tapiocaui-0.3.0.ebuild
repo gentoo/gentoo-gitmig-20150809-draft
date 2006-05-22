@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tapiocaui/tapiocaui-0.3.0.ebuild,v 1.1 2006/05/22 00:09:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tapiocaui/tapiocaui-0.3.0.ebuild,v 1.2 2006/05/22 00:15:21 genstef Exp $
 
 inherit eutils
 
@@ -43,4 +43,10 @@ pkg_setup() {
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
+}
+
+pkg_postinst() {
+	einfo "If you are using kde you need to run"
+	echo 'eval `dbus-launch --sh-syntax --exit-with-session`'
+	einfo "in the same environment where you start tapiocaui later"
 }
