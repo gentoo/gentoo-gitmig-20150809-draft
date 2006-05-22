@@ -1,11 +1,26 @@
-MD5 c1087071bd5ca4a06e75363fec68b44e ChangeLog 7062
-MD5 5cd64f762a82a44123610969ca055ed7 files/digest-libgnomedb-1.0.1 69
-MD5 e91ab2cfd3b938f9c09d5587f8653cf6 files/digest-libgnomedb-1.0.4 69
-MD5 bac8c9a12a86e87d5ebb5febedb3fb6b files/digest-libgnomedb-1.2.2 69
-MD5 23a9e466fd3a5b35ebc66463564821b0 files/libgnomedb-1.0.3-gcc34.patch 656
-MD5 fa2e6e3b60ec75a5aca6665636c10540 files/libgnomedb-1.0.3-gtkdoc_fix.patch 1472
-MD5 37d21bd238913942c2c2815c0ae80041 files/libgnomedb-1.0.4-selector.patch 803
-MD5 3ed748096034360d7d5adf6bb8575ab7 libgnomedb-1.0.1.ebuild 1259
-MD5 c26c40435b6eca92889cb925f261b7e8 libgnomedb-1.0.4.ebuild 1543
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST libgnomedb-1.2.2.tar.bz2 654823
+EBUILD libgnomedb-1.2.2.ebuild 1102 RMD160 e2b6ec7c85575177fe5dd22a7954a8fb5ca42134 SHA1 64bd636a4aa80e32116147f0843e1475482381f0 SHA256 616bc97dc8caefdb7ba3a22957afe596dd1593d66b20b24ceadf93966a67e3bd
 MD5 69f93af91e1cfc87b29680ce975a3e3e libgnomedb-1.2.2.ebuild 1102
+RMD160 e2b6ec7c85575177fe5dd22a7954a8fb5ca42134 libgnomedb-1.2.2.ebuild 1102
+SHA256 616bc97dc8caefdb7ba3a22957afe596dd1593d66b20b24ceadf93966a67e3bd libgnomedb-1.2.2.ebuild 1102
+MISC ChangeLog 7342 RMD160 8a375f35d201c383615085054a15cc1f99a50e0f SHA1 2b4e19de957a79a4c57d8e917bd8b0099ce66a32 SHA256 651211b6ec6344cb0c9d78acd62061194fd9bc690dd9d2aaba1332e1152c4c12
+MD5 eb7ceb3675e19fd8c223db9cae48f923 ChangeLog 7342
+RMD160 8a375f35d201c383615085054a15cc1f99a50e0f ChangeLog 7342
+SHA256 651211b6ec6344cb0c9d78acd62061194fd9bc690dd9d2aaba1332e1152c4c12 ChangeLog 7342
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 bac8c9a12a86e87d5ebb5febedb3fb6b files/digest-libgnomedb-1.2.2 69
+RMD160 7ad882df470485deb05db3dba3f4c774ca0dcc06 files/digest-libgnomedb-1.2.2 69
+SHA256 4f6d0fd190bf90d73e2ce898893e739e33586e94d2ea1ff774121da3fbfcc50d files/digest-libgnomedb-1.2.2 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEcfGLomPajV0RnrERAvJ8AJ9BKqMmz5eLncFFBSejdsxY/IDsJACfWENj
+fAJsMvPsFC7ycXZpgpbXZh4=
+=vOip
+-----END PGP SIGNATURE-----
