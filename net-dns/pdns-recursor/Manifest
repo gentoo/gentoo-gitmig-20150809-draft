@@ -1,6 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+- -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX precursor 497 RMD160 d7d8c1477d8b902bdd0e35de94a9e41aeac57e00 SHA1 e8ccc8e798b89dfb88021759505e686428a84d69 SHA256 a0ee1bed43c9a9df73ddebc1333768f3cbfe4863eca03ba7640fc3f81f98d6f0
 MD5 819bca563090da7923d35799f9278af6 files/precursor 497
 RMD160 d7d8c1477d8b902bdd0e35de94a9e41aeac57e00 files/precursor 497
@@ -25,10 +28,17 @@ SHA256 742f9fd882ba627c0a7b26dff7fe7b439b8ccf728a1394725bbd85f2a28a7d4b metadata
 MD5 443cf07b87648fb66f31ee5ba8bdae72 files/digest-pdns-recursor-3.1 256
 RMD160 c60bb56161fc50256f5764bdb553e910910c3341 files/digest-pdns-recursor-3.1 256
 SHA256 b6d23c4c868ef9865b27b93b861d1f55eadb4a1168c9631bbbd05def91203ee4 files/digest-pdns-recursor-3.1 256
------BEGIN PGP SIGNATURE-----
+- -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
 iD8DBQFEc1v/I1lqEGTUzyQRAsr4AKClQdjPguDzI5H/w1pqdy5xE3y+PwCfc0Ln
 L8QzNsglF7A+Ip/1SL7TBb4=
 =2Q+a
+- -----END PGP SIGNATURE-----
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEc1zkI1lqEGTUzyQRAqSKAJ9xctWl/HYgSLSJqjPkPn3swuOc2wCgiCI6
+pBozyrxns8ZT7Vz85zkv1fs=
+=8lML
 -----END PGP SIGNATURE-----
