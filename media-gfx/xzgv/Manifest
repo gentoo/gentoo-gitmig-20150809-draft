@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c56385b84b73b2b09fe3e2fa5d5830e7 ChangeLog 3171
+MD5 c0ac09383239b4c7cd7695c7b6131d83 ChangeLog 3258
 MD5 e72199e9175d25ece180121f3031c93c files/digest-xzgv-0.8-r1 226
 MD5 e72199e9175d25ece180121f3031c93c files/digest-xzgv-0.8-r2 226
 MD5 9495e82307945c08599a0bd9ffc2f4f6 files/xzgv-0.8-integer-overflow-fix.diff 6374
 MD5 5bd803c395982c07ce099415b6f51402 files/xzgv-0.8-patched-cmyk-ycck-fix.diff 1844
 MD5 ba9c20ee3f3568176dc0dd45b3cab35b metadata.xml 218
 MD5 72bcbe17722af56b599a478b250ae931 xzgv-0.8-r1.ebuild 1391
-MD5 d6e715e94624b968e216a9e38509a932 xzgv-0.8-r2.ebuild 1467
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEOmmhKRy60XGEcJIRAtw7AJ9GgF61JU2C+pSvuDJie4cS+mBXtwCfXXA7
-NrgAflXz+FpMmHoM75ylXDU=
-=2Css
------END PGP SIGNATURE-----
+MD5 cf939bff9c4df9373f573b0911dc14aa xzgv-0.8-r2.ebuild 1465
