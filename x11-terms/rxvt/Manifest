@@ -1,4 +1,4 @@
-MD5 4c26c23bdebf15a111377b9b3721ddd8 ChangeLog 7167
+MD5 fcb5e98cdf9aafc2b9e990ff2a1d774f ChangeLog 7260
 MD5 783f67501d23b6516ec6a923b96e2b6a files/digest-rxvt-2.7.10 63
 MD5 291517d74d27db9317081ea6cdbea0bb files/digest-rxvt-2.7.10-r2 133
 MD5 64e685d793a86feb44cc43a7f82e2cc6 files/digest-rxvt-2.7.10-r3 133
@@ -6,6 +6,6 @@ MD5 a38b2f365a55cad915e1e503466ab029 files/rxvt-2.7.10-azz4.diff 5072
 MD5 bbc012ce17c6e34803302e82cdf0a082 files/rxvt-2.7.10-line-scroll.patch 432
 MD5 16be90450ba268312bb146b3d4e7b6e9 files/rxvt-2.7.10-rk.patch 2772
 MD5 cd46a87805d1d53c2c0e5f9d9169b9ae metadata.xml 491
-MD5 5b62d172156de076b267b91b6ebc5dc4 rxvt-2.7.10-r2.ebuild 2073
+MD5 65c43d5a67128a4097201c2487b280e0 rxvt-2.7.10-r2.ebuild 2071
 MD5 f7d3e8d1836488ef6fa343fb6204923b rxvt-2.7.10-r3.ebuild 2300
 MD5 dcc6040c07751ed76667a361cacbb05c rxvt-2.7.10.ebuild 1731
