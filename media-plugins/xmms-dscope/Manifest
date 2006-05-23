@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0d55be29fcfc0829b2b90fb564cacaf3 ChangeLog 1769
-MD5 a3b410fcad8c572a5228e84609b9ef6e xmms-dscope-1.3.1.ebuild 950
-MD5 35ea37282de5f33dc08f70cff761e1fc xmms-dscope-1.2.ebuild 928
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 d3cab165739dcbcab5487883a47ef32a files/dscope-v1.3.1-destdir.patch 539
+MD5 3df6caba324126e3b82a0e5e8e36aecd ChangeLog 1861
 MD5 266ce37f2632a8e30b9add66e3a7af3b files/digest-xmms-dscope-1.2 61
-MD5 498a8389487206e46147b798a7e2a49c files/dscope-1.2-destdir.patch 483
 MD5 f962d03e7ea51d2f32dee3abe29e8acd files/digest-xmms-dscope-1.3.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGsTFj5H05b2HAEkRAlAKAJ9YAxrEwwoPbkfbz9dgKa1ubdaJaACfbD8u
-MxM3XfYtOZUzZsBmEeCPwaE=
-=9UBu
------END PGP SIGNATURE-----
+MD5 498a8389487206e46147b798a7e2a49c files/dscope-1.2-destdir.patch 483
+MD5 d3cab165739dcbcab5487883a47ef32a files/dscope-v1.3.1-destdir.patch 539
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 35ea37282de5f33dc08f70cff761e1fc xmms-dscope-1.2.ebuild 928
+MD5 9056ddc840176cbb8c27a84bfeaadd1f xmms-dscope-1.3.1.ebuild 947
