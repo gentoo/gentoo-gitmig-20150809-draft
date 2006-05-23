@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9f72d16970267237574eb00fee157ad2 ChangeLog 1922
-MD5 6ba1b64275457507f16297628ff76ba4 xmms-dflowers-1.2.1.ebuild 1050
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 6fe3ee4151d7f5461169dfb8449e7a6f xmms-dflowers-1.2.ebuild 1028
-MD5 165bef5a4a02af4b850331ee9f8623ea files/dflowers-v1.2.1-destdir.patch 539
+MD5 d312845a14b0e8821693aa76d9302929 ChangeLog 2016
 MD5 b6c31670d51131a95edb2b241838c050 files/dflowers-1.2-destdir.patch 487
-MD5 740f12b25d9c8af7b49517d46d871d57 files/digest-xmms-dflowers-1.2.1 66
+MD5 165bef5a4a02af4b850331ee9f8623ea files/dflowers-v1.2.1-destdir.patch 539
 MD5 632f832b15a8ec4b220cdc4416c0ccfb files/digest-xmms-dflowers-1.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGsQMj5H05b2HAEkRAqNXAJ9bQfEWjCVBFjPCIAhFQy8brLfzmACdF5ty
-cnQcL9yjCqY8kFmw6AsnXGw=
-=zC3g
------END PGP SIGNATURE-----
+MD5 740f12b25d9c8af7b49517d46d871d57 files/digest-xmms-dflowers-1.2.1 66
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 9d4d895734b18b17703188299ed40cc1 xmms-dflowers-1.2.1.ebuild 1047
+MD5 6fe3ee4151d7f5461169dfb8449e7a6f xmms-dflowers-1.2.ebuild 1028
