@@ -1,4 +1,4 @@
-MD5 33299ff112a50e18a9355cf6f1b436eb ChangeLog 11062
+MD5 4a2bb0204a97fdfbbdbabd55052f99ed ChangeLog 11153
 MD5 d455684124113e2349a9c674b55b493e files/digest-rp-pppoe-3.5-r11 125
 MD5 25bde10ecb7d85440305687fcb0be656 files/digest-rp-pppoe-3.7 125
 MD5 dd3a8ccad00339f9497b4ed3c057cddb files/digest-rp-pppoe-3.8 125
@@ -15,5 +15,5 @@ MD5 1938913a9606e60e4fa510512e8f206e files/rp-pppoe-3.8-plugin-options.patch 136
 MD5 1d75436eae3217598ce13b690f101978 files/rp-pppoe-3.8-username-charset.patch 1946
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 d728978d28ed0d7042bac5857e5f62ff rp-pppoe-3.5-r11.ebuild 2404
-MD5 bf5eed4945bf3f01f0ef5a3d4a268d6e rp-pppoe-3.7.ebuild 3084
+MD5 a1e47715fabbc8cfa83d609347ab0829 rp-pppoe-3.7.ebuild 3085
 MD5 4df612a66a43357816f03198ec6860ce rp-pppoe-3.8.ebuild 2945
