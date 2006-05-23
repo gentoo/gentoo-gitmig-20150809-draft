@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/chmlib
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/ChangeLog,v 1.16 2005/11/27 19:47:47 josejx Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/ChangeLog,v 1.17 2006/05/23 20:10:30 kloeri Exp $
+
+  23 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove svyatogor from metadata, bug 131936.
 
   27 Nov 2005; Joseph Jezak <josejx@gentoo.org> chmlib-0.37.4.ebuild:
   Marked ppc stable for bug #110557.
