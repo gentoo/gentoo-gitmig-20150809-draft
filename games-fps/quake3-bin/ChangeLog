@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake3-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.17 2006/05/09 14:23:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.18 2006/05/23 20:39:36 wolf31o2 Exp $
+
+  23 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -quake3-bin-1.31.ebuild:
+  Removing 1.31 from the tree. There's simply too many unresolved security
+  issues to keep this around anymore.
 
 *quake3-bin-1.32c (09 May 2006)
 
