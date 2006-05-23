@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.104 2006/04/21 15:45:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.105 2006/05/23 12:49:15 flameeyes Exp $
+
+  23 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/pam-0.99.3.0-parallel-make.patch, pam-0.99.3.0.ebuild:
+  Add patch from Martin Schlemmer (azarah) to fix bug #134100 (parallel make
+  issues).
 
   21 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> files/pam_env.conf:
   Remove extra spurious \. Thanks to Allan Gottlieb in bug #70670.
