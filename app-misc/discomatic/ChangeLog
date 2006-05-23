@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/discomatic
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/discomatic/ChangeLog,v 1.7 2006/05/23 17:49:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/discomatic/ChangeLog,v 1.8 2006/05/23 18:04:19 dertobi123 Exp $
+
+  23 May 2006; Tobias Scherbaum <dertobi123@gentoo.org> metadata.xml:
+  Add myself to metadata
 
   23 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove port001 from metadata, bug 26349.

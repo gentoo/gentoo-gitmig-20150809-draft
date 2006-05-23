@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
+<maintainer>
+ <email>dertobi123@gentoo.org</email>
+ <name>Tobias Scherbaum</name>
+</maintainer>
 <longdescription>
     GTK+ CD-ROM archiving tool for mastering and burning multiple CD-ROM
 </longdescription>
