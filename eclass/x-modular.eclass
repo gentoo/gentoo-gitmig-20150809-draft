@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.59 2006/05/16 06:23:43 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.60 2006/05/23 17:50:30 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -326,6 +326,10 @@ x-modular_src_install() {
 # einstall forces datadir, so we need to re-force it
 #		datadir=${XDIR}/share \
 #		mandir=${XDIR}/share/man \
+
+	if [[ -e ${S}/ChangeLog ]]; then
+		dodoc ${S}/ChangeLog
+	fi
 
 	# Make sure docs get compressed
 	prepalldocs
