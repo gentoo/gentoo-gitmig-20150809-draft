@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wdm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.21 2006/02/07 09:06:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.22 2006/05/23 22:47:27 weeve Exp $
+
+  23 May 2006; Jason Wever <weeve@gentoo.org> wdm-1.28.ebuild:
+  Added ~sparc keyword.
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> wdm-1.28.ebuild:
   Mark 1.28 stable on alpha
