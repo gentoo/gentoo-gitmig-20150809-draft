@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/speedtouch-usb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch-usb/ChangeLog,v 1.4 2006/04/17 13:53:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch-usb/ChangeLog,v 1.5 2006/05/23 17:16:55 mrness Exp $
+
+*speedtouch-usb-3.0.1.2-r2 (23 May 2006)
+
+  23 May 2006; Alin Nastac <mrness@gentoo.org> files/README,
+  -speedtouch-usb-3.0.1.2-r1.ebuild, +speedtouch-usb-3.0.1.2-r2.ebuild:
+  Keep up with baselayout-1.12.0 development. Improve post-install messages,
+  based on new features available in linux-info.eclass.
 
 *speedtouch-usb-3.0.1.2-r1 (17 Apr 2006)
 

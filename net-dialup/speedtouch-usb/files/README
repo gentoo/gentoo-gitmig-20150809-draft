@@ -26,7 +26,7 @@ Add the following lines from the appropriate section below to
 
 a) PPPoATM configuration:
 
-config_ppp0=( 'ppp' )  # Runs /lib/rcscripts/net.modules.d/pppd.sh
+config_ppp0=( ppp )  # Runs /lib/rcscripts/net/pppd.sh
 link_ppp0='/dev/null'  # Not required by PPPoA links, but must be specified
 # The 2 numbers represent the VPI & VCI of your ISP, and they are separated
 # by a dot. Choose here, or ask your ISP:
@@ -36,8 +36,8 @@ plugins_ppp0=( 'pppoa 0.38' )
 # rarely taken advantage of, and may interfere with the connection.
 # Add option 'usepeerdns' to populate /etc/resolv.conf
 pppd_ppp0=( updetach noauth debug defaultroute noaccomp nobsdcomp noccp
-	nodeflate nopcomp novj novjccomp )
-username_ppp0='username@isp.com'  # E.g. 'fredbloggs@hg5.btclick.com'
+	nodeflate nopcomp novj novjccomp child-timeout 60 )
+username_ppp0='username@isp.com'  # ADSL login, assigned by your ISP
 password_ppp0='password'  # ADSL password, assigned by your ISP
 
 # If the kernel modules are not built-in, then they must be loaded
@@ -52,39 +52,33 @@ function preup() {
 
 b) PPPoE configuration:
 
-config_ppp0=( 'ppp' )  # Runs /lib/rcscripts/net.modules.d/pppd.sh
-# The name of the Ethernet interface over which PPPoE links
-link_ppp0='nas0' # Must correspond to the -c option of the br2684ctl utility
-plugins_ppp0=( pppoe ) 
+# Configure first the RFC2684 bridge interface 
+config_nas0=( null )
+# Use "-e 0" for LLC mux or "-e 1" for VC mux.
+# The 2 numbers after "-a" represent the VPI & VCI of your ISP, and
+# they are separated by a dot. Ask your ISP about those numbers.
+br2684ctl_nas0="-e 0 -a 0.38"
+
+config_ppp0=( ppp )  # Runs /lib/rcscripts/net/pppd.sh
+link_ppp0='nas0' # The name of the RFC2684 bridge interface
+plugins_ppp0=( 'pppoe' )
 # 'man pppd' shows other options. Compression is disabled because it is
 # rarely taken advantage of, and may interfere with the connection.
 # Add option 'usepeerdns' to populate /etc/resolv.conf
 pppd_ppp0=( updetach noauth debug defaultroute noaccomp nobsdcomp noccp
-	nodeflate nopcomp novj novjccomp )
-username_ppp0='username@isp.com'  # E.g. 'fredbloggs@hg5.btclick.com'
+	nodeflate nopcomp novj novjccomp child-timeout 60 )
+username_ppp0='username@isp.com'  # ADSL login, assigned by your ISP
 password_ppp0='password'  # ADSL password, assigned by your ISP
 
-# If the kernel modules are not built-in, then they must be loaded
-# before starting the PPP daemon:
-function preup() {
-	if [[ "$1" = "ppp0" ]] ; then
-		modprobe -q speedtch
-		# The number after "-c" corresponds with the Ethernet interface,
-		# e.g. 0 for nas0.
-		# Use "-e 0" for LLC mux or "-e 1" for VC mux.
-		# The 2 numbers after "-a" represent the VPI & VCI of your ISP, and
-		# they are separated by a dot. Choose here, or ask your ISP:
-		#   http://www.linux-usb.org/SpeedTouch/faq/index.html#q12
-		eval local nasifname=\$\{link_$1\}
-		start-stop-daemon --start --background --pidfile /var/run/${nasifname}.pid --make-pidfile \
-			--exec /sbin/br2684ctl -- -c ${nasifname#nas} -e 0 -a 0.38
-	fi
+depend_ppp0() {
+    need net.nas0
 }
 
-function postdown() {
-	if [[ "$1" = "ppp0" ]] ; then
-		eval local nasifname=\$\{link_$1\}
-		start-stop-daemon --stop --pidfile /var/run/${nasifname}.pid
+# If the kernel modules are not built-in, then they must be loaded
+# before starting the RFC2684 bridge:
+function preup() {
+	if [[ "$1" = "nas0" ]] ; then
+		modprobe -q speedtch
 		return 0
 	fi
 }
@@ -97,6 +91,9 @@ Configuration continued
 Create a symlink for the new network interface, for it to be enabled by
 baselayout:
   cd /etc/init.d && ln -sfn net.lo net.ppp0
+If you use PPPoE, you should also create the symlink for the RFC2684
+bridge interface:
+  cd /etc/init.d && ln -sfn net.lo net.nas0
 
 The "debug" option adds some extra commentary from pppd regarding the
 connection to /var/log/messages, e.g.:
