@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-null/xmms-null-0.3.ebuild,v 1.10 2005/07/09 16:03:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-null/xmms-null-0.3.ebuild,v 1.11 2006/05/23 19:46:37 corsair Exp $
 
 inherit gnuconfig
 
@@ -17,7 +17,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc amd64 sparc ~ppc64"
+KEYWORDS="amd64 ~ppc ppc64 sparc x86"
 
 DOCS="AUTHORS ChangeLog NEWS"
 

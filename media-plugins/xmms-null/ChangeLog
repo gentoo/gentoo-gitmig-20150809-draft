@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-null
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-null/ChangeLog,v 1.8 2004/11/27 20:27:03 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-null/ChangeLog,v 1.9 2006/05/23 19:46:37 corsair Exp $
+
+  23 May 2006; Markus Rothe <corsair@gentoo.org> xmms-null-0.3.ebuild:
+  Stable on ppc64
 
   27 Nov 2004; Markus Rothe <corsair@gentoo.org> xmms-null-0.3.ebuild:
   Added ~ppc64 to KEYWORDS; bug #72248

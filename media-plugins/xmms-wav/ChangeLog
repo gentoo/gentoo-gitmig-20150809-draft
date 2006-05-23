@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-wav
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wav/ChangeLog,v 1.5 2005/10/18 21:55:23 metalgod Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wav/ChangeLog,v 1.6 2006/05/23 19:52:05 corsair Exp $
+
+  23 May 2006; Markus Rothe <corsair@gentoo.org> xmms-wav-1.2.10-r1.ebuild:
+  Stable on ppc64
 
   18 Oct 2005; Luis Medinas <metalgod@gentoo.org> metadata.xml:
   Added myself as new maintainer.

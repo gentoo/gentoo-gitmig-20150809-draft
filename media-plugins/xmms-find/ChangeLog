@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-find
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-find/ChangeLog,v 1.13 2006/05/19 17:57:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-find/ChangeLog,v 1.14 2006/05/23 19:42:59 corsair Exp $
+
+  23 May 2006; Markus Rothe <corsair@gentoo.org> xmms-find-0.5.2.ebuild:
+  Stable on ppc64
 
   19 May 2006; Markus Rothe <corsair@gentoo.org> xmms-find-0.4.7.ebuild,
   xmms-find-0.5.1.ebuild, xmms-find-0.5.2.ebuild:
