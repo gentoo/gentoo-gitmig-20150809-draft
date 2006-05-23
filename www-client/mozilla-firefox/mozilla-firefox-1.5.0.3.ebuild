@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.3.ebuild,v 1.5 2006/05/12 02:47:25 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.3.ebuild,v 1.6 2006/05/23 17:56:17 gustavoz Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
@@ -24,7 +24,7 @@ for X in ${SHORTLANGS} ; do
 	SRC_URI="${SRC_URI} linguas_${X%%-*}? ( mirror://gentoo/firefox-${X}-${PV}.xpi )"
 done
 
-KEYWORDS="-* amd64 ~ia64 ppc ~x86"
+KEYWORDS="-* amd64 ~ia64 ppc ~sparc ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="java mozdevelop"
@@ -94,6 +94,9 @@ src_unpack() {
 		sed -i -e "s#OS_TEST :=.*uname -m.*\$#OS_TEST:=${ARCH}#" \
 			${S}/security/coreconf/arch.mk
 	fi
+
+	# Fix sparc bus errors #115729 <gustavoz>
+	use sparc && epatch ${FILESDIR}/firefox-bus-error.patch
 
 	WANT_AUTOCONF="2.13" \
 		eautoreconf || die "failed  running eautoreconf"
