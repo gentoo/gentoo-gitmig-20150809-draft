@@ -1,31 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9f3317cc2c4f0a375bb7c4243570b35d ChangeLog 2535
-RMD160 0cfe2e03ddc44dd7b514a786176b2007bb09a6db ChangeLog 2535
-SHA256 e4e4a24f062ead00763bc7cddbf738c39e3489200d0037a7654945fb4cc77ca9 ChangeLog 2535
+MD5 301b2c68e4dc7bcb6a44cfb245c5deee ChangeLog 2627
 MD5 66d92f45c524e9c5e737723ab0a430fe files/digest-xmms-goom-1.99.4 135
-RMD160 3d74f662d0602a15bcd76f8682b02481d6c6b218 files/digest-xmms-goom-1.99.4 135
-SHA256 0f2482f42e912abf4cc9aa114aac2c0fe572b4aca3725d467d11d2f0917ec31a files/digest-xmms-goom-1.99.4 135
 MD5 23112301f0d0c959766d6edb50e64b0b files/digest-xmms-goom-2004.0 66
-RMD160 91bcc0c423d9dfaf7d8adfae40b3b4282ae2c4c5 files/digest-xmms-goom-2004.0 66
-SHA256 dc4d029ff839a0bd517d28dca3e1b426385d775bfad6510c462d4ed40c98619d files/digest-xmms-goom-2004.0 66
 MD5 c799d0f5d602fcc614edff965046b897 files/xmms-goom-gcc-3.3.patch 5611
-RMD160 6b7523ba4ee1d8c830da5363524432f8dbc3a263 files/xmms-goom-gcc-3.3.patch 5611
-SHA256 83b70dabc2aebdff734a3a6f71c8ea02d00ca4566980c8bb5ff39083f26fa057 files/xmms-goom-gcc-3.3.patch 5611
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
-SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 MD5 a421cc53f8ced5f3c40b0ba69fd9d1e1 xmms-goom-1.99.4.ebuild 991
-RMD160 67834ae824e937dc26352a2d814eb62ca3788ea8 xmms-goom-1.99.4.ebuild 991
-SHA256 d16c8f8d56e6fe1eca6bfd5b90b4faf97efc98bebd0d6e32eeaea28076e59533 xmms-goom-1.99.4.ebuild 991
-MD5 8ba9d5d4ea554de0f5c066f5a9da1174 xmms-goom-2004.0.ebuild 930
-RMD160 a91d6edd413158e147e336ac62e91a385cdea32a xmms-goom-2004.0.ebuild 930
-SHA256 c3eb8cb576f1089f5216d9fb0cdfaef15f32854c967aaa7f7766aaca519bd0a2 xmms-goom-2004.0.ebuild 930
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6Qy/JrHF4yAQTrARArgUAKCy/DTIj1yFvReuzOuOHnYsA4cy8gCfSkgy
-dJs8N2PKwBGHFf3znxxWX1I=
-=YrNu
------END PGP SIGNATURE-----
+MD5 f2c20ded92cc92de30f78b5b844e42c1 xmms-goom-2004.0.ebuild 928

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b3d6a28950df9effcc78e8b1ff00be3f ChangeLog 1467
-MD5 2a2dc67c7dd727f2b0eca935232c8b77 xmms-finespectrum-1.0.1_alpha1.ebuild 878
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 97f611d7f2f1f7e3a26bf9f9593da115 ChangeLog 1575
 MD5 c00babedaf8f6b7231c49835a667d124 files/digest-xmms-finespectrum-1.0.1_alpha1 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGjpTj5H05b2HAEkRAu6OAKCT8ZuYNdU2NUFcFfJ/TBEhDr7NIwCgoUQj
-MeFmY8xb1Z2fnii2ahTAGYA=
-=yBXe
------END PGP SIGNATURE-----
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 7100b9c14d636575fce1613a7d33c7e1 xmms-finespectrum-1.0.1_alpha1.ebuild 875
