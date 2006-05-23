@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/telnet-bsd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.29 2006/04/27 22:11:04 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.30 2006/05/23 15:26:26 nelchael Exp $
+
+  23 May 2006; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
+  telnet-bsd-1.2-r1.ebuild:
+  Stable on x86, see bug #133919. Added metadata.xml.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
