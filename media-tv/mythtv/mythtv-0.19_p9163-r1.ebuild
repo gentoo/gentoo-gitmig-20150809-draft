@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p9163-r1.ebuild,v 1.6 2006/05/23 04:57:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p9163-r1.ebuild,v 1.7 2006/05/23 05:27:17 cardoe Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -133,11 +133,11 @@ src_compile() {
 		--mandir=/usr/share/man
 		--libdir-name=$(get_libdir)"
 	use alsa || myconf="${myconf} --disable-audio-alsa"
-	use arts || myconf="${myconf} --disable-audio-arts"
 	use jack || myconf="${myconf} --disable-audio-jack"
 	use altivec || myconf="${myconf} --disable-altivec"
 	use xvmc && myconf="${myconf} --enable-xvmc"
 	myconf="${myconf}
+		$(use_enable arts audio-arts)
 		$(use_enable lirc)
 		$(use_enable joystick joystick-menu)
 		$(use_enable dbox2)

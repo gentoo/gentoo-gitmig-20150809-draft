@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.95 2006/05/23 04:57:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.96 2006/05/23 05:27:17 cardoe Exp $
+
+  23 May 2006; Doug Goldstein <cardoe@gentoo.org>
+  mythtv-0.19_p9163-r1.ebuild:
+  enabling aRts on compile fix
 
   23 May 2006; Doug Goldstein <cardoe@gentoo.org>
   -files/mythtv-0.18.1-cputypes-configure.patch, -files/0.18-mythbackend.rc,
