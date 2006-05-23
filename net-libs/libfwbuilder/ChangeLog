@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.56 2006/05/20 15:45:39 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.57 2006/05/23 20:10:11 gustavoz Exp $
+
+  23 May 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  libfwbuilder-2.0.12.ebuild:
+  Stable on sparc wrt #130172
 
 *libfwbuilder-2.0.12 (20 May 2006)
 
