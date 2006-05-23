@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20060222.2.ebuild,v 1.4 2006/05/14 07:30:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20060222.2.ebuild,v 1.5 2006/05/23 13:29:17 markusle Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -11,24 +11,22 @@ SRC_URI="${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="ifc hardened blas"
+IUSE="hardened blas"
 
 RESTRICT="fetch"
 
 DEPEND="app-shells/tcsh
-	ifc? ( >=dev-lang/ifc-8.1 )
 	hardened? ( sys-apps/paxctl )
 	blas? ( virtual/blas )"
 
 RDEPEND="app-shells/tcsh
-	net-misc/openssh
-	ifc? ( >=dev-lang/ifc-8.1 )"
+	net-misc/openssh"
 
 S="${WORKDIR}/${PN}"
 
 GAMESS_DOWNLOAD="http://www.msg.ameslab.gov/GAMESS/License_Agreement.html"
 GAMESS_VERSION="22 FEB 2006 (R2)"
-
+FORTRAN="ifc g77 gfortran"
 
 pkg_nofetch() {
 	echo
@@ -41,17 +39,11 @@ pkg_nofetch() {
 }
 
 pkg_setup() {
-	# make sure we have the proper fortan compiler; 
-	# use ifc for USE="ifc" and g77 otherwise
-	if use ifc; then
-		need_fortran ifc
-	else
-		need_fortran gfortran g77
-	fi
+	fortran_pkg_setup
 
 	# blas and ifc don't go together
-	if use blas && use ifc; then
-		die  "${PN} can not be compiled with USE=blas and USE=ifc"
+	if use blas && [[ "${FORTRANC}" = "ifc" ]]; then
+		die  "${PN} can not be compiled with USE=blas and ifc"
 	fi
 }
 
@@ -67,14 +59,14 @@ src_unpack() {
 	# for hardened-gcc let't turn off ssp, since it breakes
 	# a few routines
 	cd "${S}"
-	if use hardened && ([[ ${FORTRANC} = g77 ]]); then
+	if use hardened && [[ "${FORTRANC}" = "g77" ]]; then
 		FFLAGS="${FFLAGS} -fno-stack-protector-all"
 	fi
 
 	# some fixes for gfortan; 
 	# also append -w otherwise we get flooded with Hollerith 
 	# constant warnings
-	if [[ ${FORTRANC} == gfortran ]]; then
+	if [[ "${FORTRANC}" == "gfortran" ]]; then
 		FFLAGS="${FFLAGS} -w"
 
 		sed -e "s|-fno-move-all-movables|-w|g" \
@@ -102,11 +94,11 @@ src_unpack() {
 	# insert proper FFLAGS into GAMESS' comp makefile
 	# in case we're using ifc let's strip all the gcc
 	# specific stuff
-	if use ifc; then
+	if [[ "${FORTRANC}" == "ifc" ]]; then
 		sed -e "s/-malign-double -fautomatic /-cm -w \$MODULE.f/" \
 			-e "s/-Wno-globals -fno-globals \$MODULE.f//" \
 			-e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS} -quiet'/" \
-			-e "s/gentoo-g77/${FORTANC}/" \
+			-e "s/gentoo-g77/${FORTRANC}/" \
 			-i comp || die "Failed setting up comp script"
 	elif ! use x86; then
 		sed -e "s/-malign-double //" \
@@ -126,7 +118,7 @@ src_unpack() {
 	fi
 
 	# fix up GAMESS' linker script;
-	if use ifc; then
+	if [[ "${FORTRANC}" == "ifc" ]]; then
 		sed -e "s/gentoo-LDR='g77'/LDR='${FORTRANC}'/" \
 			-e "s/gentoo-LDOPTS=' '/LDOPTS='${LDFLAGS}'/" \
 			-i lked || die "Failed setting up lked script"
@@ -142,7 +134,8 @@ src_unpack() {
 
 	# for ifc/gcc-4.x we have to fix the number of underscores of 
 	# fortran symbols, otherwise the linker will barf
-	if use ifc || [[ $(gcc-major-version) -ge 4 ]]; then
+	if [[ "${FORTRANC}" == "ifc" ]] || \
+		[[ $(gcc-major-version) -ge 4 ]]; then
 		sed -e "s/gentoo-F77_OPTS = '-DINT_SIZE=int -D_UNDERSCORES=2/F77_OPTS = '-DINT_SIZE=int -D_UNDERSCORES=1/" \
 			-i ddi/compddi || die "Failed fixing underscores in compddi"
 	else
@@ -154,12 +147,12 @@ src_unpack() {
 src_compile() {
 	# build actvte
 	cd "${S}"/tools
-	${FORTRANC} -o actvte.x actvte.f || \
+	"${FORTRANC}" -o actvte.x actvte.f || \
 		die "Failed to compile actvte.x"
 
 	# for hardened (PAX) users and ifc we need to turn
 	# MPROTECT off
-	if use ifc && use hardened; then
+	if [[ "${FORTRANC}" == "ifc" ]] && use hardened; then
 		/sbin/paxctl -PemRxS actvte.x 2> /dev/null || \
 			die "paxctl failed on actvte.x"
 	fi
@@ -178,7 +171,7 @@ src_compile() {
 
 	# for hardened (PAX) users and ifc we need to turn
 	# MPROTECT off
-	if use ifc && use hardened; then
+	if [[ "${FORTRANC}" == "ifc" ]] && use hardened; then
 		/sbin/paxctl -PemRxS ${PN}.00.x 2> /dev/null || \
 			die "paxctl failed on actvte.x"
 	fi
@@ -234,7 +227,7 @@ pkg_postinst() {
 		ewarn "have been addressed."
 	fi
 
-	if use ifc; then
+	if [[ "${FORTRANC}" == "ifc" ]]; then
 		echo
 		ewarn "IMPORTANT NOTE: We STRONGLY recommend to stay away"
 		ewarn "from ifc-9.0 for now and use the ifc-8.1 series of"
