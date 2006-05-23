@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.51 2006/04/24 01:06:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.52 2006/05/23 06:49:27 vapier Exp $
+
+*bison-2.2 (23 May 2006)
+
+  23 May 2006; Mike Frysinger <vapier@gentoo.org> +bison-2.2.ebuild:
+  Version bump.
 
   29 Apr 2006; Joshua Kinard <kumba@gentoo.org> bison-2.1.ebuild:
   Marked stable on mips.
