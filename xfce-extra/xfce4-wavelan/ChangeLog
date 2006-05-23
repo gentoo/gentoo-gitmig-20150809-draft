@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-wavelan
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan/ChangeLog,v 1.10 2005/10/18 15:28:20 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan/ChangeLog,v 1.11 2006/05/23 20:34:12 corsair Exp $
+
+  23 May 2006; Markus Rothe <corsair@gentoo.org>
+  xfce4-wavelan-0.4.1-r1.ebuild:
+  Stable on ppc64
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   xfce4-wavelan-0.4.1-r1.ebuild:
