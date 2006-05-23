@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-    <email>port001@gentoo.org</email>
-    <name>Ian Leitch</name>
-</maintainer>
 <longdescription>
     pal is a command-line calendar program for Unix/Linux systems that can keep track of events. It has similarities with the Unix cal command, the more complex GNU gcal program and the calendar program distributed with the BSDs.
 </longdescription>

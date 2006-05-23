@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-    <email>port001@gentoo.org</email>
-    <name>Ian Leitch</name>
-</maintainer>
 <longdescription>
     GTK+ CD-ROM archiving tool for mastering and burning multiple CD-ROM
 </longdescription>
