@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b0b710f4edce05902ef6ec9cd5309828 ChangeLog 3141
+MD5 5993ee1ee969943e328c2262b910ac3a ChangeLog 3236
 MD5 677c6c0d28b021c5c460dcd020ca6dce files/digest-ntlmaps-0.9.9-r2 64
 MD5 f80ba6da97c9b6ecf9589fcbe791abf6 files/digest-ntlmaps-0.9.9.5-r1 66
 MD5 89d940c1a5df0a265c10c920498f1a03 files/ntlmaps-0.9.9-gentoo.patch 1165
 MD5 2c97eb4d589e8a9f9e9968be5aa96daa files/ntlmaps-0.9.9.5-gentoo.patch 1183
 MD5 ac0c10a9df0cb33d46f761a5e9fc6a1e files/ntlmaps.init 727
 MD5 a65bb25d95d5de35ca0f2727b1e8e7c9 metadata.xml 489
-MD5 d747381baf8e85b94266628e01d916f8 ntlmaps-0.9.9-r2.ebuild 1828
+MD5 bf0c96f7db307e5e3eb94c949b7fe366 ntlmaps-0.9.9-r2.ebuild 1828
 MD5 3fd18d21d1ccd6dfcdb5333d150f72f7 ntlmaps-0.9.9.5-r1.ebuild 1827
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDI26jG8pv1lIUX4RAuKQAJ93js9WsSBnOYUECIUS4VNTPPaBGwCeKdn8
-MMEV3CrCkx4yCwOiIKRReqE=
-=k0MA
------END PGP SIGNATURE-----
