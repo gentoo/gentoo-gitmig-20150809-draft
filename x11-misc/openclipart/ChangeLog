@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/openclipart
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/ChangeLog,v 1.9 2006/03/16 19:24:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/ChangeLog,v 1.10 2006/05/23 21:10:42 nelchael Exp $
+
+  23 May 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -openclipart-0.18.ebuild, openclipart-0.18-r1.ebuild:
+  Stable on x86.
 
 *openclipart-0.18-r1 (16 Mar 2006)
 
