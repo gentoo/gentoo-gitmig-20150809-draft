@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_rc2.ebuild,v 1.1 2006/05/22 19:55:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_rc2.ebuild,v 1.2 2006/05/23 08:21:07 zmedico Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,8 +10,9 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 PROVIDE="virtual/portage"
 SLOT="0"
-IUSE_ELIBC="elibc_glibc elibc_uclibc elibc_FreeBSD"
-IUSE_USERLAND="userland_Darwin userland_GNU"
+# Hide these until bug #134086 is fixed.
+#IUSE_ELIBC="elibc_glibc elibc_uclibc elibc_FreeBSD"
+#IUSE_USERLAND="userland_Darwin userland_GNU"
 IUSE="build doc selinux ${IUSE_ELIBC} ${IUSE_USERLAND}"
 DEPEND=">=dev-lang/python-2.3
 	!build? ( >=sys-apps/sed-4.0.5 )"
