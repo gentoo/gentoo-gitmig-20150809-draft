@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bsnmp/bsnmp-1.11a.ebuild,v 1.1 2006/05/22 23:25:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bsnmp/bsnmp-1.11a.ebuild,v 1.2 2006/05/23 16:40:10 flameeyes Exp $
 
 inherit flag-o-matic
 
@@ -18,7 +18,7 @@ DEPEND="dev-libs/libbegemot
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-1.10-gcc34.patch"
 }
