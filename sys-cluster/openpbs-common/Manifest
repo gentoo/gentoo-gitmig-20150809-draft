@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 65c543c785b43e479ed55673e2ab19ab ChangeLog 872
+MD5 5f4f52ab38dd1ff57638c575c79ceed8 ChangeLog 971
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-openpbs-common-1.0.0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-openpbs-common-1.1.0 0
 MD5 cfb199330d75f94a15402a9d9f3bdff2 files/pbs-conf.d 448
@@ -9,11 +6,4 @@ MD5 6cc6d4bc9495323cff5288be557f6b7d files/pbs-env.d 250
 MD5 47ee3396eff14ab1876fbcb8d817a035 files/pbs-init.d 2622
 MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
 MD5 672dab79b584d5fb04002ec6edf8ef6e openpbs-common-1.0.0.ebuild 562
-MD5 41b382bc773898b3076b23d6de4cbe13 openpbs-common-1.1.0.ebuild 598
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHF9gI1lqEGTUzyQRAlbWAJ9o1UPdnfCIDM+0Iz3UfyFKXMExNACgnFVU
-KY6+dJgCyKYRdDCJv9W41KY=
-=cuhU
------END PGP SIGNATURE-----
+MD5 c8a5bef8889cc4d7efa81eab8f32a9d8 openpbs-common-1.1.0.ebuild 597
