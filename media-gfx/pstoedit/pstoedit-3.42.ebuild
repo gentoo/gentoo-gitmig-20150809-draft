@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.42.ebuild,v 1.3 2006/05/21 17:06:34 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.42.ebuild,v 1.4 2006/05/23 16:58:52 nattfodd Exp $
 
-inherit libtool
+inherit libtool eutils
 
 # see bug #29724. please don't re-enable flash support until
 # ming has the patches applied <obz@gentoo.org>
@@ -32,7 +32,7 @@ src_unpack() {
 	unpack ${A}; cd ${S}
 	# need to remove the pedantic flag, see bug #39557
 	sed -i -e "s/\-pedantic//" configure
-
+	epatch ${FILESDIR}/${PN}-m4-quoting.patch
 }
 
 src_compile() {

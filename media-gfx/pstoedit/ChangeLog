@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.24 2006/05/21 17:06:34 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.25 2006/05/23 16:58:52 nattfodd Exp $
+
+  23 May 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  +files/pstoedit-m4-quoting.patch, pstoedit-3.42.ebuild:
+  Trivial fix to the UNDERQUOTED_DEFINITION in pstoedit.m4. Thanks to TGL in
+  bug #133302.
 
   21 May 2006; Martin Ehmsen <ehmsen@gentoo.org> pstoedit-3.42.ebuild:
   Added emf use flag which pulls libemf (only on non amd64), thanks to whereami 
