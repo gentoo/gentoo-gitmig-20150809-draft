@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/perl-cleaner
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.7 2006/05/23 20:18:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.8 2006/05/23 21:10:30 wolf31o2 Exp $
+
+  23 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  perl-cleaner-1.03.ebuild:
+  Stable on x86 wrt bug #133989.
 
   23 May 2006; <mcummings@gentoo.org> perl-cleaner-1.03.ebuild:
   Marking stable sparc
