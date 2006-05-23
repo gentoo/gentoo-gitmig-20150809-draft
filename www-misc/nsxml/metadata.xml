@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
         <maintainer>
-                <email>port001@gentoo.org</email>
-                <name>Ian Leitch</name>
-                <description>Maintainer</description>
+                <email>maintainer-needed@gentoo.org</email>
         </maintainer>
         <longdescription>XML and XSLT processing capabilities for AOLServer</longdescription>
 </pkgmetadata>

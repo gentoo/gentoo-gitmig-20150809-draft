@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/nscache
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/nscache/ChangeLog,v 1.1 2005/01/05 14:11:50 port001 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/nscache/ChangeLog,v 1.2 2006/05/23 17:59:50 kloeri Exp $
+
+  23 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove port001 from metadata, bug 26349.
 
 *nscache-1.5 (05 Jan 2005)
 
