@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libstdc++
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libstdc++/ChangeLog,v 1.8 2006/04/04 12:05:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libstdc++/ChangeLog,v 1.9 2006/05/23 20:27:13 corsair Exp $
+
+  23 May 2006; Markus Rothe <corsair@gentoo.org> libstdc++-3.3.ebuild:
+  Stable on ppc64
 
   04 Apr 2006; Aron Griffis <agriffis@gentoo.org> libstdc++-3.3.ebuild:
   Mark 3.3 stable on ia64
