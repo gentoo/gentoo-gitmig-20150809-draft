@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.2.4.ebuild,v 1.2 2005/11/07 16:33:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.2.4.ebuild,v 1.3 2006/05/23 20:57:46 tupone Exp $
 
 inherit games
 
@@ -23,6 +23,7 @@ DEPEND=">=media-libs/plib-1.8.3
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 	sed -i \
 		-e "s:/games::" \
 		Make-config.in \
