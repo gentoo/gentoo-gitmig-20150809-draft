@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/ueagle-atm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ueagle-atm/ChangeLog,v 1.2 2006/05/01 08:29:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ueagle-atm/ChangeLog,v 1.3 2006/05/23 17:09:04 mrness Exp $
+
+*ueagle-atm-1.1-r2 (23 May 2006)
+
+  23 May 2006; Alin Nastac <mrness@gentoo.org> files/README,
+  -ueagle-atm-1.1-r1.ebuild, +ueagle-atm-1.1-r2.ebuild:
+  Keep up with baselayout-1.12.0 development. Improve post-install messages,
+  based on new features available in linux-info.eclass.
 
 *ueagle-atm-1.1-r1 (01 May 2006)
 

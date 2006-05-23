@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ueagle-atm/ueagle-atm-1.1-r1.ebuild,v 1.1 2006/05/01 08:29:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ueagle-atm/ueagle-atm-1.1-r2.ebuild,v 1.1 2006/05/23 17:09:04 mrness Exp $
 
 inherit eutils linux-info
 
@@ -27,11 +27,11 @@ pkg_setup() {
 		die "Unsupported kernel version"
 	fi
 
-	if ! has_version '>=sys-apps/baselayout-1.12.0_pre18' ; then
-		ewarn "The best way of using this driver is through the pppd net module of"
-		ewarn ">=sys-apps/baselayout-1.12.0_pre18, which is also the only"
-		ewarn "documented mode of using ${CATEGORY}/${PN}."
-		ewarn "Please install baselayout-1.12.0_pre18 or else you will be on your own!"
+	if ! has_version '>=sys-apps/baselayout-1.12.0' ; then
+		ewarn "The best way of using this driver is through the PPP net module of the"
+		ewarn "   >=sys-apps/baselayout-1.12.0"
+		ewarn "which is also the only documented mode of using ${PN} driver."
+		ewarn "Please install baselayout-1.12.0 or else you will be on your own!"
 		ebeep
 	fi
 }
@@ -51,29 +51,29 @@ src_install() {
 
 pkg_postinst() {
 	# Check kernel configuration
-	CONFIG_CHECK="~FW_LOADER ~NET ~PACKET ~ATM ~NETDEVICES ~USB_DEVICEFS ~USB_ATM ~USB_UEAGLEATM \
+	local CONFIG_CHECK="~FW_LOADER ~NET ~PACKET ~ATM ~NETDEVICES ~USB_DEVICEFS ~USB_ATM ~USB_UEAGLEATM \
 		~PPP ~PPPOATM ~PPPOE ~ATM_BR2684"
+	local WARNING_PPPOATM="CONFIG_PPPOATM:\t is not set (required for PPPoA links)"
+	local WARNING_PPPOE="CONFIG_PPPOE:\t is not set (required for PPPoE links)"
+	local WARNING_ATM_BR2684="CONFIG_ATM_BR2684:\t is not set (required for PPPoE links)"
 	check_extra_config
-	einfo "Note: All the above kernel configurations are required except the following:"
-	einfo "   - CONFIG_PPPOATM is needed only for PPPoA links, while"
-	einfo "   - CONFIG_PPPOE and CONFIG_ATM_BR2684 are needed only for PPPoE links."
 	echo
 
 	# Check user space for PPPoA support
 	if ! built_with_use net-dialup/ppp atm ; then
-		eerror "PPPoA support: net-dialup/ppp should be built with 'atm' USE flag enabled!"
+		ewarn "PPPoA support: net-dialup/ppp should be built with 'atm' USE flag enabled!"
 		ewarn "Run the following command if you need PPPoA support:"
 		einfo "  euse -E atm && emerge net-dialup/ppp"
 		echo
 	fi
 	# Check user space PPPoE support
 	if ! has_version net-misc/br2684ctl ; then
-		eerror "PPPoE support: net-misc/br2684ctl is not installed!"
+		ewarn "PPPoE support: net-misc/br2684ctl is not installed!"
 		ewarn "Run the following command if you need PPPoE support:"
 		einfo "   emerge net-misc/br2684ctl"
 		echo
 	fi
 
-	ewarn "To complete the installation, you must read the documentation available in"
-	ewarn "   ${ROOT}usr/share/doc/${PF}"
+	einfo "To complete the installation, you must read the documentation available in"
+	einfo "   ${ROOT}usr/share/doc/${PF}"
 }
