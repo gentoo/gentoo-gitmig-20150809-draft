@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.62 2006/05/03 00:59:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.63 2006/05/23 01:17:30 leonardop Exp $
+
+*gtk-doc-1.6 (23 May 2006)
+
+  23 May 2006; Leonardo Boshell <leonardop@gentoo.org>
+  +gtk-doc-1.6.ebuild:
+  New release. Added missing 'doc' USE flag. Added pkg-config and
+  scrollkeeper dependencies.
 
   03 May 2006; Diego Pettenò <flameeyes@gentoo.org> gtk-doc-1.4-r1.ebuild:
   Add ~x86-fbsd keyword.
