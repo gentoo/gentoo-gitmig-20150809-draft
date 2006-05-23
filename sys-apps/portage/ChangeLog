@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.150 2006/05/23 08:21:07 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.151 2006/05/23 19:01:12 zmedico Exp $
+
+*portage-2.1_rc2-r1 (23 May 2006)
+
+  23 May 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_rc2-r1.ebuild,
+  +files/bug_134135.patch,
+  +files/use_expand_hidden_kernel.patch:
+  Revbump to fix bugs #134086 and #134135.
 
   23 May 2006; Zac Medico <zmedico@gentoo.org> portage-2.1_rc2.ebuild:
   Temporarily remove ELIBC and USERLAND expansions from IUSE for bug #134086.
