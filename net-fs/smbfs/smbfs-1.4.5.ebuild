@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/smbfs/smbfs-1.4.5.ebuild,v 1.1 2006/05/22 22:39:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/smbfs/smbfs-1.4.5.ebuild,v 1.2 2006/05/23 16:53:39 flameeyes Exp $
 
 inherit bsdmk eutils
 
@@ -16,15 +16,15 @@ IUSE=""
 DEPEND="dev-libs/libiconv"
 
 pkg_setup() {
-	mymakeopts="${mymakeopts} COMPLETEBUIlD="
+	mymakeopts="${mymakeopts} COMPLETEBUILD="
 }
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-freebsd5.patch
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch "${FILESDIR}/${P}-freebsd5.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 }
 
 src_compile() {
