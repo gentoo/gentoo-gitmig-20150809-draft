@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f7fc587afb7118a82a96193a0acf12c0 ChangeLog 1778
-MD5 11b8ce31a95d2f21003836fa1d532d8c xmms-dspectogram-1.2.ebuild 941
-MD5 01e52bae9cfa0439c2508a3019aece0b xmms-dspectogram-1.2.1.ebuild 973
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 55471614080b72bb42f56eeea5e806ad ChangeLog 1877
+MD5 f28fa8903124e2aa68787121ef629157 files/digest-xmms-dspectogram-1.2 66
 MD5 7883dbebfe3fe686b4457ec8187706ce files/digest-xmms-dspectogram-1.2.1 69
 MD5 01c5dc9c4e986933898d42fd117ce9c4 files/dspectogram-1.2-destdir.patch 494
-MD5 f28fa8903124e2aa68787121ef629157 files/digest-xmms-dspectogram-1.2 66
 MD5 d3cab165739dcbcab5487883a47ef32a files/dspectogram-v1.2.1-destdir.patch 539
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGs0uj5H05b2HAEkRArBtAJsER2J2LoDxDC+iulvL0+lYILFwswCfYBNm
-Yyzek/fuR+W9Qzp6djvetV8=
-=oJSG
------END PGP SIGNATURE-----
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 07804f1ff52eac1b4ba65d9ffdbb1971 xmms-dspectogram-1.2.1.ebuild 970
+MD5 11b8ce31a95d2f21003836fa1d532d8c xmms-dspectogram-1.2.ebuild 941

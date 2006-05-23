@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectogram/xmms-dspectogram-1.2.1.ebuild,v 1.15 2005/09/04 10:31:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectogram/xmms-dspectogram-1.2.1.ebuild,v 1.16 2006/05/23 19:34:42 corsair Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.shell.linux.se/bm/f/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc amd64 sparc ~ppc64"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	media-sound/xmms"
