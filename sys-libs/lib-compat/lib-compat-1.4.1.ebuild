@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.4.1.ebuild,v 1.2 2006/05/22 00:04:33 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.4.1.ebuild,v 1.3 2006/05/23 20:25:15 corsair Exp $
 
 DESCRIPTION="Compatibility C++ and libc5 and libc6 libraries for programs new and old"
 HOMEPAGE="http://www.gentoo.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~ia64 ~ppc ppc64 ~sparc x86"
 IUSE="sdl"
 
 RDEPEND="sys-libs/glibc
