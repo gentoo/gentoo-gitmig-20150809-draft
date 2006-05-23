@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.94 2006/04/28 00:50:33 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.95 2006/05/23 04:57:12 cardoe Exp $
+
+  23 May 2006; Doug Goldstein <cardoe@gentoo.org>
+  -files/mythtv-0.18.1-cputypes-configure.patch, -files/0.18-mythbackend.rc,
+  -files/mythtv-0.18.1-cc-on-mute.patch,
+  -files/mythtv-0.18.1-opengl-fix.patch,
+  -files/mythtv-0.18.1-x86_64-configure.patch, -files/0.18-mythbackend.conf,
+  -mythtv-0.18.1-r1.ebuild, -mythtv-0.19_p9163.ebuild,
+  mythtv-0.19_p9163-r1.ebuild:
+  Marking stable per bug #123066
 
   28 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-mythtv-0.18.1-r1, Manifest:
