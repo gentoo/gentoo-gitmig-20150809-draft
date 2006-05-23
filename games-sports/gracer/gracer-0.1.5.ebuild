@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.13 2006/01/29 08:04:42 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.14 2006/05/23 17:34:21 tupone Exp $
 
 inherit gnuconfig eutils games
 
@@ -28,8 +28,9 @@ DEPEND="|| ( ( x11-libs/libXi
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-gldefs.patch
-	epatch "${FILESDIR}"/${PN}-gcc-3.4.patch
+	epatch "${FILESDIR}"/${PV}-gldefs.patch \
+		"${FILESDIR}"/${PN}-gcc-3.4.patch \
+		"${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_compile() {
