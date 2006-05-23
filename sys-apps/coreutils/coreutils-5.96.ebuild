@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.96.ebuild,v 1.2 2006/05/23 06:17:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.96.ebuild,v 1.3 2006/05/23 11:21:42 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="acl nls selinux static"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
@@ -63,9 +63,9 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"/generic
 	chmod a+rx tests/sort/sort-mb-tests
 
-	# Since we've patched many .c files, the make process will 
-	# try to re-build the manpages by running `./bin --help`.  
-	# When cross-compiling, we can't do that since 'bin' isn't 
+	# Since we've patched many .c files, the make process will
+	# try to re-build the manpages by running `./bin --help`.
+	# When cross-compiling, we can't do that since 'bin' isn't
 	# a native binary, so let's just install outdated man-pages.
 	tc-is-cross-compiler && touch man/*.1
 	# There's no reason for this crap to use the private version
@@ -90,12 +90,14 @@ src_compile() {
 	local myconf=""
 	[[ ${USERLAND} == "GNU" ]] \
 		&& myconf="${myconf} --bindir=/bin" \
-		|| myconf="${myconf} --program-prefix=g"
+		|| myconf="${myconf} --bindir=/usr/libexec/gnu"
+
+	[[ ${ELIBC} == "glibc" || ${ELIBC} == "uclibc" ]] \
+		&& myconf="${myconf} --without-included-regex"
 
 	use static && append-ldflags -static
 	econf \
 		--enable-largefile \
-		--without-included-regex \
 		$(use_enable nls) \
 		$(use_enable selinux) \
 		${myconf} \
@@ -144,5 +146,8 @@ src_install() {
 		for x in * ; do
 			dosym /bin/${x} /usr/bin/${x}
 		done
+	else
+		# For now, drop the man pages, collides with the ones of the system.
+		rm -rf ${D}/usr/share/man
 	fi
 }
