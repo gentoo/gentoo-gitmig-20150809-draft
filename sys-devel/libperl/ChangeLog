@@ -1,8 +1,8 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.107 2006/05/23 20:21:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.108 2006/05/23 20:26:52 mcummings Exp $
 
-  23 May 2006; <mcummings@gentoo.org> libperl-5.8.8-r1.ebuild:
+  23 May 2006; <mcummings@gentoo.org> ChangeLog, Manifest:
   Marking stable sparc, bug 133989
 
   23 May 2006; Markus Rothe <corsair@gentoo.org> libperl-5.8.8-r1.ebuild:
