@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Sys-Syslog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/ChangeLog,v 1.4 2006/04/04 12:08:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/ChangeLog,v 1.5 2006/05/23 18:57:03 corsair Exp $
+
+  23 May 2006; Markus Rothe <corsair@gentoo.org>
+  perl-Sys-Syslog-0.13.ebuild:
+  Stable on ppc64; bug #133989
 
   04 Apr 2006; Aron Griffis <agriffis@gentoo.org>
   perl-Sys-Syslog-0.13.ebuild:
