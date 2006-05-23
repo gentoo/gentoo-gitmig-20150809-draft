@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.201 2006/04/20 20:30:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.202 2006/05/23 18:34:36 corsair Exp $
+
+  23 May 2006; Markus Rothe <corsair@gentoo.org> perl-5.8.8-r1.ebuild:
+  Stable on ppc64; bug #133989
 
   20 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> perl-5.8.8-r1.ebuild:
   Use realpath when available, rather than readlink -f, to support
