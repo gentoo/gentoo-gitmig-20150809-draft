@@ -1,13 +1,8 @@
-MD5 5e1a082f53c8992d4ea9938cb2f6175f ChangeLog 4851
-MD5 eca949c2fcf358c97cbf8071bf15e3ae dropbear-0.43.ebuild 1685
-MD5 68c50009dd00b23b70f2c214457a75cf dropbear-0.45.ebuild 1946
-MD5 2b6d2818a1d0d0355c398221d862b01b dropbear-0.46.ebuild 2030
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e47211c4416956815e488212ea547189 ChangeLog 5014
 MD5 4d31f11ea8628646cbf69f9ab96fbea7 dropbear-0.47-r1.ebuild 2104
-MD5 4fdcadec2002d7e1e9a00c81340d22d5 dropbear-0.47.ebuild 2033
-MD5 c3634543250cd9f910161b351bb15ccc files/digest-dropbear-0.43 67
-MD5 c9381e8354263ae69eda6efabca753ad files/digest-dropbear-0.45 67
-MD5 8ae09936c352dfd5a8ddb95182b1afc6 files/digest-dropbear-0.46 67
-MD5 9d60e23c082173af1e4294b2c914c7d5 files/digest-dropbear-0.47 67
 MD5 9d60e23c082173af1e4294b2c914c7d5 files/digest-dropbear-0.47-r1 67
 MD5 df7f6fb1df6f7a44da55ad2f09ba7d26 files/dropbear-0.45-urandom.patch 1889
 MD5 c7d976a23e72e6dce3c022e588def172 files/dropbear-0.46-dbscp.patch 500
@@ -15,3 +10,12 @@ MD5 e45b86b52cc64eede67ea6d156486b70 files/dropbear-0.47-CVE-2006-0225.patch 774
 MD5 af73c487e2be37d65d0e8bf80489357e files/dropbear.conf.d 190
 MD5 34fea1c967596ebcd6d10d38444f2b92 files/dropbear.init.d 913
 MD5 ef25f543b5438ee7595e2ae0f98a5093 metadata.xml 671
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iQCVAwUBRHOFwJ4WFLgrx1GWAQIuGwQAjjov1yLQweTHIXp3/zTqnAO7SxJ4Hm78
+yqLdnoV0L0TPUByu5UFIhwUCDVdungz6cstCLDH/tnetapxX0i8DiC9UBX44Luj/
+z/AcPIPXvfHcGu/SzLqzFEeH746OX3Yn5OgD5OzOFYawRooeFx3Ls4DLPUPEvfrg
+B4QD1mIKZUk=
+=Gvl2
+-----END PGP SIGNATURE-----
