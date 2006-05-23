@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-0.4.0.ebuild,v 1.1 2006/03/09 11:48:28 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-0.4.0.ebuild,v 1.2 2006/05/23 21:20:35 markusle Exp $
 
 inherit eutils fortran
 
@@ -18,8 +18,10 @@ DEPEND="blas? ( virtual/blas )
 		dev-libs/maloc
 		mpi? ( virtual/mpi )"
 
+FORTRAN="g77 gfortran"
+
 pkg_setup() {
-	need_fortran g77
+	fortran_pkg_setup
 
 	# the configure script has a weird MPI related behaviour:
 	# if maloc was compiled with mpi, apbs requires mpi as
@@ -39,7 +41,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}"/apbs-examples-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-examples-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-gcc4-gentoo.patch
 }
 
 src_compile() {
