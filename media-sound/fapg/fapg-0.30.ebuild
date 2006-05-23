@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/fapg-0.30.ebuild,v 1.4 2006/03/07 14:37:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/fapg-0.30.ebuild,v 1.5 2006/05/23 19:53:23 corsair Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://royale.zerezo.com/fapg/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 
 src_compile() {
 	echo "$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o fapg fapg.c"

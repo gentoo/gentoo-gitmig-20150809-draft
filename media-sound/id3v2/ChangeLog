@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/id3v2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.22 2006/05/14 12:16:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.23 2006/05/23 19:55:13 corsair Exp $
+
+  23 May 2006; Markus Rothe <corsair@gentoo.org> id3v2-0.1.11.ebuild:
+  Stable on ppc64
 
   14 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/id3v2-0.1.11-makefile.patch, id3v2-0.1.11.ebuild:
