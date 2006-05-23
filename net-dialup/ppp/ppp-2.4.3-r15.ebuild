@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r15.ebuild,v 1.1 2006/05/07 22:21:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r15.ebuild,v 1.2 2006/05/23 04:44:27 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -273,7 +273,7 @@ pkg_postinst() {
 		CONFIG_CHECK="~PPP ~PPP_ASYNC ~PPP_SYNC_TTY"
 		local ERROR_PPP="CONFIG_PPP:\t missing PPP support (REQUIRED)"
 		local ERROR_PPP_ASYNC="CONFIG_PPP_ASYNC:\t missing asynchronous serial line discipline (optional, but highly recommended)"
-		local ERROR_PPP_SYNC_TTY="CONFIG_PPP_SYNC_TTY:\t missing synchronous serial line discipline (optional; used by 'sync' pppd option)"
+		local WARNING_PPP_SYNC_TTY="CONFIG_PPP_SYNC_TTY:\t missing synchronous serial line discipline (optional; used by 'sync' pppd option)"
 		if use activefilter ; then
 			CONFIG_CHECK="${CONFIG_CHECK} ~PPP_FILTER"
 			local ERROR_PPP_FILTER="CONFIG_PPP_FILTER:\t missing PPP filtering support (REQUIRED)"
@@ -283,16 +283,16 @@ pkg_postinst() {
 		local ERROR_PPP_BSDCOMP="CONFIG_PPP_BSDCOMP:\t missing BSD-Compress compression (optional, but highly recommended)"
 		if use mppe-mppc ; then
 			CONFIG_CHECK="${CONFIG_CHECK} ~PPP_MPPE_MPPC"
-			local ERROR_PPP_MPPE_MPPC="CONFIG_PPP_MPPE_MPPC:\t missing MPPE/MPPC encryption/compression (optional, mostly used by PPTP links)"
+			local WARNING_PPP_MPPE_MPPC="CONFIG_PPP_MPPE_MPPC:\t missing MPPE/MPPC encryption/compression (optional, mostly used by PPTP links)"
 		else
 			CONFIG_CHECK="${CONFIG_CHECK} ~PPP_MPPE"
-			local ERROR_PPP_MPPE="CONFIG_PPP_MPPE:\t missing MPPE encryption (optional, mostly used by PPTP links)"
+			local WARNING_PPP_MPPE="CONFIG_PPP_MPPE:\t missing MPPE encryption (optional, mostly used by PPTP links)"
 		fi
 		CONFIG_CHECK="${CONFIG_CHECK} ~PPPOE"
-		local ERROR_PPPOE="CONFIG_PPPOE:\t missing PPPoE support (optional)"
+		local WARNING_PPPOE="CONFIG_PPPOE:\t missing PPPoE support (optional needed by rp-pppoe plugin)"
 		if use atm ; then
 			CONFIG_CHECK="${CONFIG_CHECK} ~PPPOATM"
-			local ERROR_PPPOATM="CONFIG_PPPOATM:\t missing PPPoA support (optional)"
+			local WARNING_PPPOATM="CONFIG_PPPOATM:\t missing PPPoA support (optional, needed by pppoatm plugin)"
 		fi
 		check_extra_config
 	fi
