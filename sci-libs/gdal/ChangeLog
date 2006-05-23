@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.23 2006/05/22 06:52:51 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.24 2006/05/23 02:09:11 nerdboy Exp $
+
+  23 May 2006; Steve Arnold <nerdboy@gentoo.org>
+  +files/gdal-1.3.2-destdir.patch, +files/gdal-1.3.2-ruby-install.patch:
+  Sorry, dropped patches on the floor somehow...
 
 *gdal-1.3.2 (22 May 2006)
 
