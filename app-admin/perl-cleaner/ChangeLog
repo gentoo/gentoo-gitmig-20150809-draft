@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/perl-cleaner
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.6 2006/05/23 18:33:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.7 2006/05/23 20:18:38 mcummings Exp $
+
+  23 May 2006; <mcummings@gentoo.org> perl-cleaner-1.03.ebuild:
+  Marking stable sparc
 
   23 May 2006; Markus Rothe <corsair@gentoo.org> perl-cleaner-1.03.ebuild:
   Stable on ppc64; bug #133989
