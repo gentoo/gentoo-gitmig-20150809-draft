@@ -1,0 +1,198 @@
+diff -ur ghostscript-8.54.orig/lib/gs_ttf.ps ghostscript-8.54/lib/gs_ttf.ps
+--- ghostscript-8.54.orig/lib/gs_ttf.ps	2006-05-23 19:31:05.000000000 +0200
++++ ghostscript-8.54/lib/gs_ttf.ps	2006-05-23 19:33:32.000000000 +0200
+@@ -273,6 +273,54 @@
+   } for pop exch pop
+ } bind def
+ 
++/.biglength { % <str>|<array of str> .biglength <integer>
++  dup type /arraytype eq { 0 exch { length add } forall } { length } ifelse
++} bind def
++
++/concats { % [str ...] concats str
++  () exch dup length 1 sub -1 0 {
++    1 index exch get dup type /stringtype ne { dup length string cvs } if
++    3 -1 roll exch dup length 2 index length add string
++    dup dup 4 2 roll copy length 4 -1 roll putinterval exch
++  } for pop
++} bind def
++
++% <str>|<array of str> <index> <count> .biggetinterval <str>|<array of str>
++/.biggetinterval {
++  3 dict begin
++  2 index type /arraytype eq {
++    /c exch def
++    /i exch def
++    [ exch {
++      dup length /l exch def
++      i c add l gt {
++        i l lt {
++          i l i sub getinterval
++          /c i c add l sub def
++          /i 0 def
++        } {
++          pop
++          /i i l sub def
++        } ifelse
++      } {
++        i c getinterval exit
++      } ifelse
++    } forall
++    ] dup .biglength 65535 le { concats } if
++  } { getinterval } ifelse
++  end
++} bind def
++
++% <str>|<array of str> <index> getu16 <integer>
++/.biggetu16 {
++  2 .biggetinterval 0 getu16
++} bind def
++
++% <str>|<array of str> <index> getu32 <integer>
++/.biggetu32 {
++  4 .biggetinterval 0 getu32
++} bind def
++
+ % Each procedure in this dictionary is called as follows:
+ %       <encodingtable> proc <glypharray>
+ /cmapformats mark
+@@ -363,14 +411,14 @@
+   } bind
+   4 {		% Microsoft/Adobe segmented mapping.
+     /etab exch def
+-    /nseg2 etab 6 getu16 def
+-    14 /endc etab 2 index nseg2 getinterval def
++    /nseg2 etab 6 .biggetu16 def
++    14 /endc etab 2 index nseg2 .biggetinterval def
+ 		% The Apple TrueType documentation omits the 2-byte
+ 		% 'reserved pad' that follows the endCount vector!
+     2 add
+-    nseg2 add /startc etab 2 index nseg2 getinterval def
+-    nseg2 add /iddelta etab 2 index nseg2 getinterval def
+-    nseg2 add /idroff etab 2 index nseg2 getinterval def
++    nseg2 add /startc etab 2 index nseg2 .biggetinterval def
++    nseg2 add /iddelta etab 2 index nseg2 .biggetinterval def
++    nseg2 add /idroff etab 2 index nseg2 .biggetinterval def
+ 		% The following hack allows us to properly handle
+ 		% idiosyncratic fonts that start at 0xf000:
+     pop
+@@ -382,8 +430,8 @@
+     /numcodes 0 def /glyphs 0 0 2 nseg2 3 sub {
+ 		% Stack: /glyphs numglyphs i2
+       /i2 exch def
+-      /scode startc i2 getu16 def
+-      /ecode endc i2 getu16 def
++      /scode startc i2 .biggetu16 def
++      /ecode endc i2 .biggetu16 def
+       numcodes scode firstcode sub
+ 		% Hack for fonts that have only 0x0000 and 0xf000 ranges
+       %dup 16#e000 ge { 255 and } if
+@@ -404,8 +452,8 @@
+     /numcodes 0 def /code 0 def
+     0 2 nseg2 3 sub {
+       /i2 exch def
+-      /scode startc i2 getu16 def
+-      /ecode endc i2 getu16 def
++      /scode startc i2 .biggetu16 def
++      /ecode endc i2 .biggetu16 def
+       numcodes scode firstcode sub
+ 		% Hack for fonts that have only 0x0000 and 0xf000 ranges
+       %dup 16#e000 ge { 255 and } if
+@@ -417,15 +465,15 @@
+ 	(scode=) print scode =only
+ 	( ecode=) print ecode =only
+ 	( delta=) print delta =only
+-	( droff=) print idroff i2 getu16 =
++	( droff=) print idroff i2 .biggetu16 =
+       } if
+-      idroff i2 getu16 dup 0 eq {
++      idroff i2 .biggetu16 dup 0 eq {
+ 	pop scode delta add 65535 and 1 ecode delta add 65535 and
+ 	{ putglyph } for
+       } {	% The +2 is for the 'reserved pad'.
+         /gloff exch 14 nseg2 3 mul add 2 add i2 add add def
+         0 1 ecode scode sub {
+-	  2 mul gloff add etab exch getu16
++	  2 mul gloff add etab exch .biggetu16
+ 	  dup 0 ne { delta add 65535 and } if putglyph
+ 	} for
+       } ifelse
+@@ -448,12 +496,12 @@
+ 
+ % <cmaptab> cmaparray <glypharray>
+ /cmaparray {
+-  dup 0 getu16 cmapformats exch .knownget {
++  dup 0 .biggetu16 cmapformats exch .knownget {
+     TTFDEBUG {
+-      (cmap: format ) print 1 index 0 getu16 = flush
++      (cmap: format ) print 1 index 0 .biggetu16 = flush
+     } if exec
+   } {
+-    (Can't handle format ) print 0 getu16 = flush
++    (Can't handle format ) print 0 .biggetu16 = flush
+     0 1 255 { } for 256 packedarray
+   } ifelse
+   TTFDEBUG {
+@@ -591,7 +639,7 @@
+ % Adobe requirement that each sfnts entry have even length.
+ /readtables mark
+ 	% Ordinary tables
+-  (cmap) //call.readtable
++  (cmap) //call.readbigtable
+   (head) 1 index
+   (hhea) 1 index
+   (maxp) 1 index
+@@ -964,10 +1012,17 @@
+   } ifelse
+ 		% Stack: ... /FontInfo mark key1 value1 ...
+   post null ne {
+-    /ItalicAngle first_post_string 4 gets32 65536.0 div
+-    /isFixedPitch first_post_string 12 getu32 0 ne
+-    /UnderlinePosition first_post_string 8 gets16 upem div
+-    /UnderlineThickness first_post_string 10 gets16 upem div
++     post type /arraytype eq {
++       % this post table is a big table. /post should be [(...) ...]
++       % data we actually need here should be first one in array.
++       /posttable post 1 get def
++     } {
++       /posttable post def
++     } ifelse
++     /ItalicAngle posttable 4 gets32 65536.0 div
++     /isFixedPitch posttable 12 getu32 0 ne
++     /UnderlinePosition posttable 8 gets16 upem div
++     /UnderlineThickness posttable 10 gets16 upem div
+   } if
+   counttomark 0 ne { .dicttomark } { pop pop } ifelse
+   /XUID [orgXUID 42 curxuid]
+@@ -1026,22 +1081,22 @@
+     } if
+     tabdict /cmap get                                   % bool [] i PlatID SpecID (cmap)
+     dup /cmaptab exch def % temporary
+-    0 1 2 index 2 getu16 1 sub {                         % bool [] i PlatID SpecID (cmap) j
+-      8 mul 4 add 1 index exch 8 getinterval             % bool [] i PlatID SpecID (cmap) (cmapsub)
++    0 1 2 index 2 .biggetu16 1 sub {                         % bool [] i PlatID SpecID (cmap) j
++      8 mul 4 add 1 index exch 8 .biggetinterval             % bool [] i PlatID SpecID (cmap) (cmapsub)
+       TTFDEBUG {
+-        (cmap: platform ) print dup 0 getu16 =only
+-        ( encoding ) print dup 2 getu16 = flush
++        (cmap: platform ) print dup 0 .biggetu16 =only
++        ( encoding ) print dup 2 .biggetu16 = flush
+       } if
+-      dup 0 getu16 4 index eq {
+-        dup 2 getu16 3 index eq {                        % bool [] i PlatID SpecID (cmap) (cmapsub)
++      dup 0 .biggetu16 4 index eq {
++        dup 2 .biggetu16 3 index eq {                        % bool [] i PlatID SpecID (cmap) (cmapsub)
+           TTFDEBUG {
+             (Choosen a cmap for platform=) print 3 index =only
+             ( encoding=) print 2 index =
+           } if
+           /cmapsub 1 index def
+-          dup 4 getu32                                   % bool [] i PlatID SpecID (cmap) (cmapsub) p
+-          cmaptab length 1 index sub                     % bool [] i PlatID SpecID (cmap) (cmapsub) p l
+-          cmaptab 3 1 roll getinterval
++          dup 4 .biggetu32                                   % bool [] i PlatID SpecID (cmap) (cmapsub) p
++          cmaptab .biglength 1 index sub                     % bool [] i PlatID SpecID (cmap) (cmapsub) p l
++          cmaptab 3 1 roll .biggetinterval
+           /cmaptab exch def                              % bool [] i PlatID SpecID (cmap) (cmapsub)
+           5 index 5 index 1 add get                      % bool [] i PlatID SpecID (cmap) (cmapsub) /Decoding
+           /Decoding exch def                             % bool [] i PlatID SpecID (cmap) (cmapsub)

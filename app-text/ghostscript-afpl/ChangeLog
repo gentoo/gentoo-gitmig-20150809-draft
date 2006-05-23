@@ -1,6 +1,17 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.45 2006/04/08 20:50:50 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.46 2006/05/23 21:16:15 genstef Exp $
+
+*ghostscript-afpl-8.54 (23 May 2006)
+
+  23 May 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/ghostscript-afpl-8.54-big-cmap-post.patch,
+  +files/ghostscript-afpl-8.54-cups-lib.patch,
+  +files/ghostscript-afpl-8.54-destdir.diff,
+  +files/ghostscript-afpl-8.54-gtk2.patch,
+  +files/ghostscript-afpl-8.54-ps2epsi-afpl.diff,
+  +files/ghostscript-afpl-8.54-rinkj.patch, +ghostscript-afpl-8.54.ebuild:
+  Version bump, fixes among others #133842
 
   08 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
   ghostscript-afpl-8.53-r4.ebuild:
