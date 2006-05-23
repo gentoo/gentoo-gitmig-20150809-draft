@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cband/mod_cband-0.9.7.2.ebuild,v 1.2 2006/03/08 06:32:58 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cband/mod_cband-0.9.7.2.ebuild,v 1.3 2006/05/23 21:16:01 nelchael Exp $
 
 inherit apache-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://dembol.nasa.pl/?op=projekty&it=cband&pg="
 LICENSE="GPL-2"
 SRC_URI="http://cband.linux.pl/download/mod-cband-${PV}.tgz"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 SLOT="0"
 
