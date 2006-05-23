@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.4 2006/05/23 16:51:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.5 2006/05/23 22:04:19 wolf31o2 Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -66,10 +66,6 @@ src_unpack() {
 	else
 		unpack ${A}
 	fi
-	# This is a dirty hack around bug #121428 and should be removed once the
-	# upstream bug https://bugzilla.icculus.org/show_bug.cgi?id=2634 has been
-	# resolved.
-	sed -i -e 's|botlib.log|/dev/null|' ${S}/code/botlib/be_interface.c
 }
 
 src_compile() {
