@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Getopt-Long
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Getopt-Long/ChangeLog,v 1.4 2006/05/23 18:43:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Getopt-Long/ChangeLog,v 1.5 2006/05/23 20:56:19 mcummings Exp $
+
+  23 May 2006; <mcummings@gentoo.org> perl-Getopt-Long-2.35.ebuild:
+  Marking stable sparc, bug 133989
 
   23 May 2006; Markus Rothe <corsair@gentoo.org>
   perl-Getopt-Long-2.35.ebuild:
