@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8032e7a5542835895ef0b8dab3bf98df ChangeLog 4178
 MD5 ac2865a22563af78175dcace3ad04ce9 files/digest-libraw1394-1.1.0 68
 MD5 2bc0a95108d281eccd478c423bb9f918 files/digest-libraw1394-1.2.0 68
 MD5 cd2861b2bc0983859e05134ce9941777 libraw1394-1.1.0.ebuild 611
 MD5 da98fdf2afba50fbb015c2da3c6faa9d libraw1394-1.2.0.ebuild 644
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEc0QSKRy60XGEcJIRAiTQAJ4n4eKQMzooRkqnOX99Zd+SPHkUBACcDlN4
+Ij//00HJyuCgnfcx9+VpCeo=
+=zPSs
+-----END PGP SIGNATURE-----
