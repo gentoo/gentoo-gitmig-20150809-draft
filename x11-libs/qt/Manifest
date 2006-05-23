@@ -1,4 +1,4 @@
-MD5 7f1d13f12cf6d977950798812765cfc6 ChangeLog 10215
+MD5 fde70977b6fef7ad8bfe28f11e7f532e ChangeLog 10315
 MD5 8ffca1b1b7523339af04fd24b4595ce4 files/0001-dnd_optimization.patch 5623
 MD5 8b3da5dae8babfcbdee3be465579d6c2 files/0002-dnd_active_window_fix.patch 7289
 MD5 0cc401186f490faf55906cd458280db8 files/0037-dnd-timestamp-fix.patch 2138
@@ -30,4 +30,4 @@ MD5 4ee80ec5a3442194b166e2de3325b443 qt-3.3.4-r9.ebuild 10631
 MD5 31af7b0892b6ed9bef4b5345e486a841 qt-3.3.6-r1.ebuild 10751
 MD5 89e833edcc86131631514ddd92ee51fc qt-3.3.6.ebuild 10582
 MD5 dec77c41b5849f0ebdcde7fa9ea25690 qt-4.1.1.ebuild 6351
-MD5 c33fc445c6b9bfbdc6316587789ade8e qt-4.1.2.ebuild 6459
+MD5 56812decd25cc8ca535e888f2b72c1dc qt-4.1.2.ebuild 6460
