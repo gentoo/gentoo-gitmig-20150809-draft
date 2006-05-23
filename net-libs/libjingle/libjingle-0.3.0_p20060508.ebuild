@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/libjingle-0.3.0_p20060508.ebuild,v 1.2 2006/05/22 15:58:07 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/libjingle-0.3.0_p20060508.ebuild,v 1.3 2006/05/23 17:09:33 mr_bones_ Exp $
 
 inherit autotools
 
@@ -16,7 +16,7 @@ SLOT="0"
 
 RDEPEND="dev-libs/openssl
 	ortp? (
-		~net-libs/ortp-0.7.1 
+		~net-libs/ortp-0.7.1
 		ilbc? ( dev-libs/ilbc-rfc3951 )
 		speex? ( media-libs/speex )
 	)"
