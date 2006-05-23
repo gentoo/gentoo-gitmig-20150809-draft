@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-freebsd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-freebsd/ChangeLog,v 1.2 2006/04/30 07:11:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-freebsd/ChangeLog,v 1.3 2006/05/23 17:48:02 flameeyes Exp $
+
+*nvidia-freebsd-1.0.8762 (23 May 2006)
+
+  23 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +nvidia-freebsd-1.0.8762.ebuild:
+  Bump to latest version, fix CC handling, use nostrip RESTRICT for now, fix
+  quoting.
 
 *nvidia-freebsd-1.0.8756 (30 Apr 2006)
 
