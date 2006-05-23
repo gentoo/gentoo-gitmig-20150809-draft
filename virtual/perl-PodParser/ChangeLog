@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-PodParser
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-PodParser/ChangeLog,v 1.8 2006/05/23 21:01:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-PodParser/ChangeLog,v 1.9 2006/05/23 21:17:13 wolf31o2 Exp $
+
+  23 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  perl-PodParser-1.32.ebuild, perl-PodParser-1.34.ebuild:
+  Stable on x86 wrt bug #133989.
 
   23 May 2006; <mcummings@gentoo.org> perl-PodParser-1.32.ebuild,
   perl-PodParser-1.34.ebuild:
