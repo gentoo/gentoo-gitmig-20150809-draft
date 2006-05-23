@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.281 2006/05/15 03:12:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.282 2006/05/23 05:47:28 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -346,7 +346,7 @@ SRC_URI=$(get_gcc_src_uri)
 get_make_var() {
 	local var=$1 makefile=${2:-${WORKDIR}/build/Makefile}
 	echo -e "e:\\n\\t@echo \$(${var})\\ninclude ${makefile}" | \
-		r=${makefile%/*} emake -s -f - 2>/dev/null
+		r=${makefile%/*} emake --no-print-directory -s -f - 2>/dev/null
 }
 XGCC() { get_make_var GCC_FOR_TARGET ; }
 
