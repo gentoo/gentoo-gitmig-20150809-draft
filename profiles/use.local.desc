@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1916 2006/05/23 16:59:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1917 2006/05/23 17:00:28 wolf31o2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -224,8 +224,6 @@ dev-db/rekall:xbase - Support for the Xbase db family, covering dBase, Clipper, 
 dev-db/sqlite:nothreadsafe - turn off thread safe operation of sqlite
 dev-games/cegui:devil - image loading support with DevIL
 dev-games/cegui:xerces-c - use external Xerces-C++ XML parser instead of tiny embedded XML parser
-dev-games/clanlib:clanJavaScript - Enables javascript support in clanlib
-dev-games/clanlib:clanVoice - Enables voice support in clanlib
 dev-games/crystalspace-cvs:3ds - Enables support for .3DS files in CrystalSpace
 dev-games/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
 dev-games/guichan:allegro - Build the Allegro frontend
