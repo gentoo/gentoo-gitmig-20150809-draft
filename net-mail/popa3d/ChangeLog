@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/popa3d
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.24 2006/05/23 18:20:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.25 2006/05/23 18:52:27 ferdy Exp $
+
+*popa3d-1.0.2 (23 May 2006)
+
+  23 May 2006; Fernando J. Pereda <ferdy@gentoo.org> +popa3d-1.0.2.ebuild:
+  Version bump + cleanups and QA fixes. Closes bug #125814
 
   23 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove port001 from metadata, bug 26349.
