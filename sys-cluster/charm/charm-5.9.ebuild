@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.6 2006/04/21 02:58:35 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.7 2006/05/23 01:58:15 robbat2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -17,7 +17,7 @@ RESTRICT="fetch"
 
 DEPEND="icc? ( >=dev-lang/icc-8.1 )
 	doc? (
-		|| ( app-text/pdftohtml app-text/poppler )
+		app-text/poppler
 		dev-tex/latex2html
 		virtual/tetex
 	)"
