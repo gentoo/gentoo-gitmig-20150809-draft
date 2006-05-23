@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.3 2006/03/31 02:11:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.4 2006/05/23 16:51:03 wolf31o2 Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -34,7 +34,7 @@ HOMEPAGE="http://icculus.org/quake3/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-*"
-IUSE="dedicated opengl"
+IUSE="dedicated opengl teamarena"
 
 RDEPEND="opengl? (
 	virtual/opengl
