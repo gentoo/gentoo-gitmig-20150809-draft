@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bdaa96bdba34d1fa10caf6c79634984d ChangeLog 3941
-RMD160 a40d03bf0714dc1c9a852226329d12364b0b36f8 ChangeLog 3941
-SHA256 64fef3db3bbc889d49cf32bd0fbaed75c56bd71d18ee3c0796eaea8afc863df0 ChangeLog 3941
+MD5 6df273aced09ccf6d1ded3aa7f6a6272 ChangeLog 4030
 MD5 e328cdec7e54dc60be77116181727d5a files/digest-ogdi-3.1.4-r1 62
-RMD160 ea2cd4196db5cbdc61eda53e4c60b802c703cf60 files/digest-ogdi-3.1.4-r1 62
-SHA256 d8672e43b909c08d066136e3f7be1cceec392a943ada9c16c69c581e62d61460 files/digest-ogdi-3.1.4-r1 62
 MD5 74a3ce4489f2fb78319ceeb5689e459c files/digest-ogdi-3.1.5-r1 62
-RMD160 ebc51e18503e870210487ac0b1be944c5288b195 files/digest-ogdi-3.1.5-r1 62
-SHA256 b723f6d561037828bbb17a0af7c533c2bd58775f0f69f2c628cc5437a7cfe8ff files/digest-ogdi-3.1.5-r1 62
 MD5 071752cb51961701a22258f05c390413 files/ogdi-3.1.4-fpic.patch 7619
-RMD160 090f659286e14cf53689ce48c0b8f2dda71e6b13 files/ogdi-3.1.4-fpic.patch 7619
-SHA256 4cb6775b0b8af81a7a4a18bbdbac004b64df7661e3ad8fa89c26ef664fca1f46 files/ogdi-3.1.4-fpic.patch 7619
 MD5 071752cb51961701a22258f05c390413 files/ogdi-3.1.5-fpic.patch 7619
-RMD160 090f659286e14cf53689ce48c0b8f2dda71e6b13 files/ogdi-3.1.5-fpic.patch 7619
-SHA256 4cb6775b0b8af81a7a4a18bbdbac004b64df7661e3ad8fa89c26ef664fca1f46 files/ogdi-3.1.5-fpic.patch 7619
 MD5 3cd06cd3d8efbe532cd128301ca23678 metadata.xml 219
-RMD160 afa364dd7c619c7179794d9b79d1605cbf2b30e0 metadata.xml 219
-SHA256 23e5a7dc2ac7cb650cd59b8021fcfc866ee0cc4154e9f1f3be5db58f5ac49cd9 metadata.xml 219
 MD5 9f85517245c7d9b79117d94cc9eaa5a3 ogdi-3.1.4-r1.ebuild 1227
-RMD160 a8ecbfe4af4882dd7eeaa34c75f953ca18810157 ogdi-3.1.4-r1.ebuild 1227
-SHA256 d25215e3dc84f85df368d921c0d8c4ad102b42b1605b3e7121a0a7c59162316c ogdi-3.1.4-r1.ebuild 1227
-MD5 db6e6c95c25a2ad20321d18a56409615 ogdi-3.1.5-r1.ebuild 1226
-RMD160 7814ce2841dd2b448e76b276aed57d0f0541b575 ogdi-3.1.5-r1.ebuild 1226
-SHA256 09d58c919af43fb2aaab4db1a3e9fbbb9f5e88fbc93e9ff726eaeab6354fa30c ogdi-3.1.5-r1.ebuild 1226
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6nWPJrHF4yAQTrARAtOKAJ95mCYli1ciAROFYiHMD12r2fPzJACfcbJ/
-2stDT2ZTxHFZjnTpf8KJZjs=
-=BenL
------END PGP SIGNATURE-----
+MD5 c07ee2587c551e0df137da8aa8463b1e ogdi-3.1.5-r1.ebuild 1225
