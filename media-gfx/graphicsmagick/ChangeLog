@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/graphicsmagick
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.29 2006/04/02 21:35:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.30 2006/05/23 11:42:55 corsair Exp $
+
+  23 May 2006; Markus Rothe <corsair@gentoo.org>
+  graphicsmagick-1.1.7.ebuild:
+  Stable on ppc64
 
   02 Apr 2006; Mike Frysinger <vapier@gentoo.org>
   graphicsmagick-1.1.5.ebuild, graphicsmagick-1.1.5-r1.ebuild,
