@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.19.ebuild,v 1.1 2006/02/12 05:53:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.19.ebuild,v 1.2 2006/05/23 04:55:45 cardoe Exp $
 
 inherit qt3
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mythtv.org/mc/myththemes-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="$(qt_min_version 3.3)
