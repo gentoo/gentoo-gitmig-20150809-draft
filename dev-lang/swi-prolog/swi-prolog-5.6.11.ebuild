@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.11.ebuild,v 1.2 2006/04/19 07:29:27 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.11.ebuild,v 1.3 2006/05/23 11:24:23 keri Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -56,12 +56,20 @@ src_compile() {
 	append-flags -fno-strict-aliasing
 
 	einfo "Building SWI-Prolog compiler"
+
+	local threadconf
+	if use java && ! use minimal || use threads ; then
+		threadconf="--enable-mt"
+	else
+		threadconf="--disable-mt"
+	fi
+
 	cd "${S}"/src
 	econf \
+		${threadconf} \
 		$(use_enable gmp) \
 		$(use_enable readline) \
 		$(use_enable !static shared) \
-		$(use_enable threads mt) \
 		--disable-custom-flags \
 		|| die "econf failed"
 	emake -j1 || die "emake failed"
@@ -77,8 +85,8 @@ src_compile() {
 
 		cd "${S}/packages"
 		econf \
+			${threadconf} \
 			$(use_enable !static shared) \
-			$(use_enable threads mt) \
 			--without-C-sicstus \
 			--with-chr \
 			--with-clib \
