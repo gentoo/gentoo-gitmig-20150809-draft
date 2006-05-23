@@ -1,0 +1,11 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/elibc.desc,v 1.1 2006/05/23 03:10:42 zmedico Exp $
+
+# This file contains descriptions of ELIBC USE_EXPAND flags.
+
+# Keep it sorted.
+
+FreeBSD - ELIBC setting for systems that use the FreeBSD C library
+glibc - ELIBC setting for systems that use the GNU C library
+uclibc - ELIBC setting for systems that use the uClibc C library
