@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1915 2006/05/23 16:57:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1916 2006/05/23 16:59:04 wolf31o2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -466,7 +466,6 @@ games-emulation/xmame:net - Add network support
 games-emulation/xmess:net - Add network support
 games-engines/exult:timidity - Add sound support (timidity)
 games-fps/doom3:roe - Adds support for the Resurrection of Evil expansion
-games-fps/duke3d:nophysfs - Disables support for physfs
 games-fps/quake2-icculus:noqmax - Do not build the pretty version (quake max)
 games-fps/quake2-icculus:rogue - Build support for the 'Ground Zero' Mission Pack (rogue)
 games-fps/quake2-icculus:xatrix - Build support for the 'The Reckoning' Mission Pack (xatrix)
