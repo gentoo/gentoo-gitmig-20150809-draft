@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-1.0.514.ebuild,v 1.1 2006/03/07 08:26:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-1.0.514.ebuild,v 1.2 2006/05/23 01:55:46 robbat2 Exp $
 
 inherit versionator linux-mod eutils flag-o-matic
 
@@ -13,7 +13,7 @@ MY_P="${PN}-${MY_PV}"
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="debug"
 DEPEND="virtual/libc
 		virtual/linux-sources"
