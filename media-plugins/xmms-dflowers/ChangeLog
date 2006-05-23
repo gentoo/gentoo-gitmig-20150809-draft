@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-dflowers
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dflowers/ChangeLog,v 1.17 2005/09/04 09:52:46 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dflowers/ChangeLog,v 1.18 2006/05/23 19:22:51 corsair Exp $
+
+  23 May 2006; Markus Rothe <corsair@gentoo.org> xmms-dflowers-1.2.1.ebuild:
+  Stable on ppc64
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   xmms-dflowers-1.2.ebuild, xmms-dflowers-1.2.1.ebuild:
