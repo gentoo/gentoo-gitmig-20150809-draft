@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/latex2html
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.27 2006/05/12 18:53:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.28 2006/05/23 07:40:01 nattfodd Exp $
+
+*latex2html-2002.2.1_pre20041025-r1 (23 May 2006)
+
+  23 May 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  +files/latex2html-perl_name.patch,
+  +latex2html-2002.2.1_pre20041025-r1.ebuild:
+  Fix the perl executable name so it can survive perl bumps. Fixes bug #80468.
 
   12 May 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   latex2html-2002.2.1_pre20041025.ebuild:
