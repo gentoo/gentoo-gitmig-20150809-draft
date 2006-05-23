@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/popa3d
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.23 2005/12/01 03:26:22 weeve Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.24 2006/05/23 18:20:55 kloeri Exp $
+
+  23 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove port001 from metadata, bug 26349.
 
   01 Dec 2005; Jason Wever <weeve@gentoo.org> popa3d-1.0.ebuild:
   Stable on SPARC.
