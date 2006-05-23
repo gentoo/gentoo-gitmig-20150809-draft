@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-6.5.3-r1.ebuild,v 1.2 2006/02/14 04:07:37 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-6.5.3-r1.ebuild,v 1.3 2006/05/23 17:06:17 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,7 +11,6 @@ SRC_URI="mirror://sourceforge/gcompris/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-#IUSE="python editor" #editor didn't compile for me.; doesn't like python-2.4
 IUSE=""
 
 RDEPEND="|| ( x11-libs/libXrandr virtual/x11 )
@@ -22,11 +21,8 @@ RDEPEND="|| ( x11-libs/libXrandr virtual/x11 )
 	media-libs/libsdl
 	dev-libs/libxml2
 	dev-libs/popt
-	games-board/gnuchess
-	editor? (
-		>=gnome-base/libgnome-1.96.0
-		>=gnome-base/libgnomeui-1.96.0
-	)"
+	games-board/gnuchess"
+
 DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	app-text/texi2html"
@@ -59,7 +55,6 @@ src_install() {
 	rm -f "${D}/usr/share/gcompris/boards/followline.xml"
 	# mailing list reports crash
 	rm -f "${D}/usr/share/gcompris/boards/click_on_letter.xml"
-	use editor || rm -f "${D}/usr/share/applications/gcompris-edit.desktop"
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	prepgamesdirs
 }
