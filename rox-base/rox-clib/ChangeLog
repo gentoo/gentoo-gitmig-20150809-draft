@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox-clib
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.5 2005/12/09 21:31:05 svyatogor Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.6 2006/05/23 20:22:55 kloeri Exp $
+
+  23 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove svyatogor from metadata, bug 131936.
 
   09 Dec 2005; Sergey Kuleshov <svyatogor@gentoo.org> rox-clib-2.1.7.ebuild:
   Moving to stable on x86

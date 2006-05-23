@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/systemtray
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/systemtray/ChangeLog,v 1.2 2005/10/03 18:57:50 svyatogor Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/systemtray/ChangeLog,v 1.3 2006/05/23 20:18:23 kloeri Exp $
+
+  23 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove svyatogor from metadata, bug 131936.
 
 *systemtray-0.2-r1 (03 Oct 2005)
 
