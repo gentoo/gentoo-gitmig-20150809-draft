@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zebedee
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.13 2005/09/17 00:59:23 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.14 2006/05/23 20:08:23 corsair Exp $
+
+  23 May 2006; Markus Rothe <corsair@gentoo.org> zebedee-2.4.1-r1.ebuild:
+  Stable on ppc64
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> zebedee-2.5.3.ebuild:
   Mark 2.5.3 stable on ia64
