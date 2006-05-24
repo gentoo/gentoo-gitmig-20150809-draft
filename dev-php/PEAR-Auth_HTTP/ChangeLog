@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-Auth_HTTP
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth_HTTP/ChangeLog,v 1.1 2006/05/24 12:18:56 sebastian Exp $
+
+*PEAR-Auth_HTTP-2.1.6 (24 May 2006)
+
+  24 May 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +PEAR-Auth_HTTP-2.1.6.ebuild:
+  Initial ebuild.
+
