@@ -1,18 +1,19 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/wengophone-2.0_pre20099999.ebuild,v 1.2 2006/05/24 18:19:05 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/wengophone-2.0_pre20060524.ebuild,v 1.1 2006/05/24 18:19:05 genstef Exp $
 
-inherit subversion eutils toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Wengophone NG is a VoIP client featuring the SIP protcol"
 HOMEPAGE="http://dev.openwengo.com"
-SRC_URI=""
-ESVN_REPO_URI="http://dev.openwengo.com/svn/openwengo/wengophone-ng/trunk"
-ESVN_OPTIONS="--username guest --password guest"
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	http://dev.gentoo.org/~genstef/public_html/files/dist/${P}.tar.bz2"
+#ESVN_REPO_URI="http://dev.openwengo.com/svn/openwengo/wengophone-ng/trunk"
+#ESVN_OPTIONS="--username guest --password guest"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="dev-libs/boost
