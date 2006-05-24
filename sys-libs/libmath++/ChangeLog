@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libmath++
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/ChangeLog,v 1.9 2005/03/17 02:36:00 trapni Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/ChangeLog,v 1.10 2006/05/24 23:35:31 halcy0n Exp $
+
+  24 May 2006; Mark Loeser <halcy0n@gentoo.org> libmath++-0.0.4.ebuild:
+  Add doc USE flag to install doxygen documentation; bug #109416
 
   17 Mar 2005; Christian Parpart <trapni@gentoo.org> libmath++-0.0.4.ebuild:
   adding to amd64
