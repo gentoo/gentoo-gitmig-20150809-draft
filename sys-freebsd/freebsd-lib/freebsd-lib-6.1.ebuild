@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.3 2006/05/14 17:05:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.4 2006/05/24 23:26:02 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -207,6 +207,11 @@ src_install() {
 
 	# Don't install the rest of the configuration files if crosscompiling
 	[[ ${CTARGET} != ${CHOST} ]] && return 0
+
+	# Compatibility symlinks to run FreeBSD 5.x binaries (ABI is mostly
+	# identical, remove when problems will actually happen)
+	dosym /lib/libc.so.6 /usr/lib/libc.so.5
+	dosym /lib/libm.so.4 /usr/lib/libm.so.3
 
 	# install libstand files
 	dodir /usr/include/libstand
