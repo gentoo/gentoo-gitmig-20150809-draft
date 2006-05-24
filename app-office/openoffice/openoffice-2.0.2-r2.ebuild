@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r2.ebuild,v 1.7 2006/05/20 06:34:59 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r2.ebuild,v 1.8 2006/05/24 08:53:18 suka Exp $
 
 inherit check-reqs eutils fdo-mime flag-o-matic kde-functions mono toolchain-funcs
 
@@ -50,7 +50,7 @@ RDEPEND="!app-office/openoffice-bin
 	mozilla? ( !firefox? ( >=www-client/mozilla-1.7.12 )
 		firefox? ( >=www-client/mozilla-firefox-1.5-r9 ) )
 	>=x11-libs/startup-notification-0.5
-	>=media-libs/freetype-2.1.4
+	>=media-libs/freetype-2.1.10
 	>=media-libs/fontconfig-2.2.0
 	media-libs/libpng
 	sys-devel/flex
