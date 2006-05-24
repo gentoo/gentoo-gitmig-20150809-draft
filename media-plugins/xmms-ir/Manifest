@@ -1,4 +1,6 @@
-MD5 21f5aff913dda8b2f18293a863d1e029 ChangeLog 796
+MD5 99e013f34a18d102441a198d72907e89 ChangeLog 1036
 MD5 f930420b092ea660e8da0c4b24e0f6a4 files/digest-xmms-ir-1.2.10 142
+MD5 164735bc6585e80ca4a3b7a2a3178745 files/digest-xmms-ir-1.2.10-r1 227
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
+MD5 d1ab5f92e72ae715864d7e671e1a0732 xmms-ir-1.2.10-r1.ebuild 431
 MD5 e83c0370cdc3486da3af95133b7d04aa xmms-ir-1.2.10.ebuild 407
