@@ -1,13 +1,14 @@
 # ChangeLog for dev-perl/sdl-perl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.23 2006/05/24 22:26:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.24 2006/05/24 22:28:34 mcummings Exp $
 
 *sdl-perl-2.1.3-r1 (24 May 2006)
 
   24 May 2006; <mcummings@gentoo.org> +files/sdl-2.1.3.build.patch,
   +sdl-perl-2.1.3-r1.ebuild:
   Fixes bug with Module::Build-0.28 and above and the Build.PL that comes with
-  sdl - a silent killer bug at that. no bug in bugzie for this.
+  sdl - a silent killer bug at that. no bug in bugzie for this. 
+  Forgot to add - rt.cpan.org ticket number 19155.
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> sdl-perl-2.1.3.ebuild:
   Mark 2.1.3 ~ia64
