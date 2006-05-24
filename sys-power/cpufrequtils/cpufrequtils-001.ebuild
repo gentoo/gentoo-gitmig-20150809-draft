@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-001.ebuild,v 1.3 2006/04/26 15:07:57 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-001.ebuild,v 1.4 2006/05/24 20:56:32 hansmi Exp $
 
 inherit toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/cpufreq/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 
 IUSE="debug nls"
 RDEPEND="sys-fs/sysfsutils"
