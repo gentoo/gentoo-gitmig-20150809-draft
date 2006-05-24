@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1920 2006/05/24 02:39:44 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1921 2006/05/24 18:03:39 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -701,6 +701,7 @@ media-libs/sdl-sound:physfs - Enable physfs support
 media-libs/sge:image - enable sdl-image support
 media-libs/speex:vorbis-psy - Enable Vorbis-style psychoacoustics
 media-libs/svgalib:no-helper - Do not build the helper kernel module
+media-libs/tunepimp:taglib - Enable TagLib backend support
 media-libs/urt:gs - Add support for postscript
 media-libs/win32codecs:real - Installs the real video codecs
 media-libs/x264-svn:mp4 - Enables mp4 encoding support
