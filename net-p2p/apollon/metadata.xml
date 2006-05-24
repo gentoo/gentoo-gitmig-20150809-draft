@@ -3,8 +3,4 @@
 <pkgmetadata>
 <herd>kde</herd>
 <longdescription>KDE frontend for giFT P2P network.</longdescription>
-<maintainer>
-<email>svyatogor@gentoo.org</email>
-<name>Sergey Kuleshov</name>
-</maintainer>
 </pkgmetadata>
