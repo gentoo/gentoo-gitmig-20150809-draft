@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.8762.ebuild,v 1.1 2006/05/23 15:59:21 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.8762.ebuild,v 1.2 2006/05/24 22:46:57 flameeyes Exp $
 
 inherit eutils multilib versionator
 
@@ -73,6 +73,13 @@ src_unpack() {
 	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-defines.patch
 	# Use some more sensible gl headers and make way for new glext.h
 	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-glheader.patch
+}
+
+src_compile() {
+	# This is already the default on Linux, as there's no toplevel Makefile, but
+	# on FreeBSD there's one and triggers the kernel module build, as we install
+	# it by itself, pass this.
+	return 0
 }
 
 src_install() {
