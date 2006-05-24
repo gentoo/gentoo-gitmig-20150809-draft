@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ueagle-atm/ueagle-atm-1.1-r2.ebuild,v 1.1 2006/05/23 17:09:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ueagle-atm/ueagle-atm-1.1-r2.ebuild,v 1.2 2006/05/24 09:45:19 mrness Exp $
 
 inherit eutils linux-info
 
@@ -59,21 +59,19 @@ pkg_postinst() {
 	check_extra_config
 	echo
 
-	# Check user space for PPPoA support
+	# Check user-space for PPPoA support
 	if ! built_with_use net-dialup/ppp atm ; then
-		ewarn "PPPoA support: net-dialup/ppp should be built with 'atm' USE flag enabled!"
-		ewarn "Run the following command if you need PPPoA support:"
-		einfo "  euse -E atm && emerge net-dialup/ppp"
+		ewarn "Run the following command if connecting via PPPoA protocol:"
+		ewarn "   euse -E atm && emerge net-dialup/ppp"
 		echo
 	fi
-	# Check user space PPPoE support
+	# Check user-space for PPPoE support
 	if ! has_version net-misc/br2684ctl ; then
-		ewarn "PPPoE support: net-misc/br2684ctl is not installed!"
-		ewarn "Run the following command if you need PPPoE support:"
-		einfo "   emerge net-misc/br2684ctl"
+		ewarn "Run the following command if connecting via PPPoE protocol:"
+		ewarn "   emerge net-misc/br2684ctl"
 		echo
 	fi
 
-	einfo "To complete the installation, you must read the documentation available in"
-	einfo "   ${ROOT}usr/share/doc/${PF}"
+	ewarn "To complete the installation, you must read the documentation in"
+	ewarn "   ${ROOT}usr/share/doc/${PF}"
 }
