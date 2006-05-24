@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.2.1.ebuild,v 1.10 2006/04/13 19:02:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.2.1.ebuild,v 1.11 2006/05/24 21:00:04 flameeyes Exp $
 
-inherit rpm eutils flag-o-matic versionator
+inherit rpm eutils flag-o-matic versionator toolchain-funcs
 
 MY_P=${PN}-$(replace_version_separator 3 '-alt')
 S=${WORKDIR}/${PN}-$(get_version_component_range 1-3)
@@ -42,6 +42,7 @@ src_unpack() {
 
 src_compile() {
 	make \
+		CC="$(tc-getCC)" \
 		RPM_OPT_FLAGS="${CFLAGS}" \
 		libdir=/usr/$(get_libdir) \
 		libexecdir=/usr/$(get_libdir) || die
