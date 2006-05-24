@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx-firmware/acx-firmware-20060207.ebuild,v 1.2 2006/03/03 03:58:28 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx-firmware/acx-firmware-20060207.ebuild,v 1.3 2006/05/24 22:04:45 josejx Exp $
 
 DESCRIPTION="Firmware for the ACX100 and ACX111 wireless chipsets"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.we-can-do.de/gentoo/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE=""
 DEPEND=">=sys-apps/hotplug-20040923"
