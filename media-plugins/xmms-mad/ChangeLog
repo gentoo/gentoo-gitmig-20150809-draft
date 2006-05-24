@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/xmms-mad
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.40 2005/12/05 22:32:21 metalgod Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.41 2006/05/24 03:29:34 tcort Exp $
+
+*xmms-mad-0.8-r2 (23 May 2006)
+
+  23 May 2006; Thomas Cort <tcort@gentoo.org>
+  +files/xmms-mad-0.8-song_change.patch, +xmms-mad-0.8-r2.ebuild:
+  Added a patch to fix an infinite loop if a button (stop,pause,next,prev,etc)
+  was pressed during a song change. Fixes Bug #127270. Patch by Thomas Cort
+  <tcort@gentoo.org>.
 
 *xmms-mad-0.8-r1 (05 Dec 2005)
 
