@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.9 2006/05/22 22:21:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.10 2006/05/24 19:36:52 flameeyes Exp $
 
 # Linux-dependant flags
 selinux
@@ -63,6 +63,9 @@ sybase-ct
 # Java requires that new-style virtuals are prepared for kaffe
 java
 gcj
+
+# This requires a kernel module that's Linux specific right now
+ifp
 
 # Mask extraneous elibc/kernel combinations
 elibc_glibc
