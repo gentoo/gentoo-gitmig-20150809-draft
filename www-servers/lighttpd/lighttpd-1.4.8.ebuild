@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.8.ebuild,v 1.3 2006/02/13 15:24:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.8.ebuild,v 1.4 2006/05/24 16:57:24 ranger Exp $
 
 inherit eutils depend.php
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lighttpd.net/download/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~mips ~ppc ppc64 ~sparc ~x86"
 IUSE="bzip2 doc fam fastcgi gdbm ipv6 ldap lua minimal memcache mysql pcre php rrdtool ssl test webdav xattr"
 
 RDEPEND=">=sys-libs/zlib-1.1
