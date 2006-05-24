@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0bea6987eb8c456a7b976af0c9354a45 ChangeLog 968
 MD5 11711e91149b2f12316af9838aec7374 files/README 8892
 MD5 0d747d791cf20ab224f960ab892c767d files/digest-ueagle-atm-1.1-r2 72
 MD5 7bb58ae97db72c0e60691f42e245e6ba metadata.xml 312
 MD5 fb1450bb86e92327be25fae40d68a23a ueagle-atm-1.1-r2.ebuild 2492
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEdCs8jG8pv1lIUX4RAl/HAJ9Be4EO95nQQgJ1jG9QCb6nzQNRrgCeNvGJ
+bLvZPg1v76913eVswZFlvh0=
+=xm+q
+-----END PGP SIGNATURE-----
