@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.52 2006/04/30 18:46:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.53 2006/05/24 23:49:51 flameeyes Exp $
+
+  24 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libsndfile-1.0.16.ebuild:
+  Add elibtoolize call.
 
   30 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   libsndfile-1.0.11.ebuild, libsndfile-1.0.16.ebuild:

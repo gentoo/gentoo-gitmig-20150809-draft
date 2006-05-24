@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.16.ebuild,v 1.2 2006/04/30 18:46:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.16.ebuild,v 1.3 2006/05/24 23:49:51 flameeyes Exp $
 
 inherit eutils libtool
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	elibtoolize
 	epunt_cxx
 }
 
