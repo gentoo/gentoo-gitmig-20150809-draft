@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dekorator
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dekorator/ChangeLog,v 1.5 2006/04/10 19:29:00 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dekorator/ChangeLog,v 1.6 2006/05/24 21:43:36 josejx Exp $
+
+  24 May 2006; Joseph Jezak <josejx@gentoo.org> dekorator-0.3.ebuild:
+  Marked ~ppc for bug #134123.
 
   10 Apr 2006; <smithj@gentoo.org> dekorator-0.2.ebuild,
   dekorator-0.3.ebuild:
