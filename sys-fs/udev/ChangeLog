@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.195 2006/05/01 08:12:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.196 2006/05/24 11:03:30 uberlord Exp $
+
+  24 May 2006; Roy Marples <uberlord@gentoo.org> files/udev-start-077-r2.sh,
+  files/udev-start-077-r4.sh, files/udev-start-079.sh,
+  files/udev-start-089.sh, files/udev-start-090.sh:
+  Fix typo "Finializing" > "Finalizing"
 
   01 May 2006; Simon Stelling <blubb@gentoo.org> udev-087.ebuild:
   stable on amd64

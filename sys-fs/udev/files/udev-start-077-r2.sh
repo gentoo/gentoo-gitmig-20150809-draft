@@ -71,7 +71,7 @@ populate_udev() {
 	#einfo "loop = $loop"
 	eend 0
 
-	ebegin "Finializing udev configuration"
+	ebegin "Finalizing udev configuration"
 
 	# Not provided by sysfs but needed
 	ln -snf /proc/self/fd /dev/fd

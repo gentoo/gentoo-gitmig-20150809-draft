@@ -162,7 +162,7 @@ main() {
 	populate_udev
 
 	# Create nodes that udev can't
-	ebegin "Finializing udev configuration"
+	ebegin "Finalizing udev configuration"
 	[[ -x /sbin/dmsetup ]] && /sbin/dmsetup mknodes &>/dev/null
 	[[ -x /sbin/lvm ]] && \
 		/sbin/lvm vgscan -P --mknodes --ignorelockingfailure &>/dev/null
