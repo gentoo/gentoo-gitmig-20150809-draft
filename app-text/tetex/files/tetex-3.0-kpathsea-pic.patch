@@ -6,7 +6,7 @@ diff --exclude-from=/home/dang/.diffrc -u -ruN tetex-src-3.0.orig/texk/kpathsea/
  
  # Always use our own libtool.
 -LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-+if [ ${USERLAND} -eq "Darwin" ]; then
++if [ "${USERLAND}" = "Darwin" ]; then
 +LIBTOOL='glibtool'
 +else
 +LIBTOOL='libtool'
@@ -24,7 +24,7 @@ diff --exclude-from=/home/dang/.diffrc -u -ruN tetex-src-3.0.orig/texk/libtool.m
 -# Always use our own libtool.
 -LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 +# Use the system libtool
-+if [ ${USERLAND} -eq "Darwin" ]; then
++if [ "${USERLAND}" = "Darwin" ]; then
 +LIBTOOL='glibtool'
 +else
 +LIBTOOL='libtool'
