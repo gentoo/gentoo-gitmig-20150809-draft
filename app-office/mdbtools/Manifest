@@ -1,20 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cbf5d03166de36309f0c6178c1ca9dff ChangeLog 1964
-MD5 48d861b456922a79e1c3ddf47137ced9 files/digest-mdbtools-0.4 64
+MD5 8681cecb1f16c1af60e414688c1b8b76 ChangeLog 2077
 MD5 402da6348fabe50879d699674f8239ea files/digest-mdbtools-0.5 64
 MD5 c914c548d600b31e1df77d482ed39822 files/digest-mdbtools-0.6_pre1 68
-MD5 d056516aee83f6794540f87e15521059 files/mdbtools-0.4-termcap.diff 412
 MD5 96e88f8e3b0a2ffc9628083a8b924d71 files/mdbtools-0.5-gcc34.patch 1682
 MD5 7899f05ce1ebcdf1517ea62a21409da8 files/mdbtools-0.6_pre1-gcc34.patch 1571
-MD5 f20000401696bdca4939487a5b0aee35 mdbtools-0.4.ebuild 1483
 MD5 74e2feb6cc446de6d11236d50f0fed73 mdbtools-0.5.ebuild 1181
 MD5 032abe97e58152d9c0c2c73739252a74 mdbtools-0.6_pre1.ebuild 1239
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEdO3WK3VlI3Kj19sRAp2uAKCfnjXgC35m3FTsP/vumTXu5D7lAgCgl9hX
-oKJTM10FdxD0UDRZpsbDkck=
-=PZAY
+iD8DBQFEdO7BK3VlI3Kj19sRAlc9AKCdSqkIKvlAfXSA4xJNfM3nTtgDZwCeJDTU
+SyiO1ttZRcCeUC6QvKM7A2E=
+=w+pp
 -----END PGP SIGNATURE-----

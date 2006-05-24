@@ -1,6 +1,9 @@
 # ChangeLog for app-office/mdbtools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.18 2006/05/24 23:35:05 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.19 2006/05/24 23:39:28 merlin Exp $
+
+  24 May 2006; Cory Visi <visi@gentoo.org> :
+  Removed mdbtools-0.4 from the tree (outdated and not maintained)
 
   24 May 2006; Cory Visi <visi@gentoo.org> :
   Updated to version 0.6_pre1, change X flag to gnome, Removed gtk dependency,
