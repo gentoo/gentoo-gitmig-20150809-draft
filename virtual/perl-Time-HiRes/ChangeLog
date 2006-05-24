@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Time-HiRes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.8 2006/05/23 21:20:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.9 2006/05/24 21:03:12 hansmi Exp $
+
+  24 May 2006; Michael Hanselmann <hansmi@gentoo.org>
+  perl-Time-HiRes-1.86.ebuild:
+  Stable on ppc.
 
   23 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   perl-Time-HiRes-1.86.ebuild:
