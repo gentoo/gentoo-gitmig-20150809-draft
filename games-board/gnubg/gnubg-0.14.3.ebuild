@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3.ebuild,v 1.5 2006/05/02 05:07:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3.ebuild,v 1.6 2006/05/24 15:28:12 wolf31o2 Exp $
 
 inherit gnuconfig flag-o-matic eutils games
 
@@ -26,9 +26,9 @@ DEPEND="dev-libs/glib
 	arts? ( kde-base/arts )
 	esd? ( media-sound/esound )
 	gdbm? ( sys-libs/gdbm )
+	=dev-libs/glib-2*
 	gtk? (
 		=x11-libs/gtk+-2*
-		=dev-libs/glib-2*
 		media-libs/libart_lgpl
 		opengl? ( x11-libs/gtkglext
 			media-libs/ftgl )
