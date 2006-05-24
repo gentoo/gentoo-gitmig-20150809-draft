@@ -1,12 +1,48 @@
-MD5 4e4fece6496f35302ef90cc01b9c8d43 ChangeLog 429
-MD5 43a44e5f4cf8c9078b730460bab5a9e9 compface-1.4.ebuild 830
-MD5 44a484191ef5bb9693b152dfd0c6f964 compface-1.5.1.ebuild 867
-MD5 41a7149cd357500cc93169a111145981 compface-1.5.2.ebuild 734
+AUX compface-1.4-destdir.diff 1759 RMD160 1be6e3ee4077bddc66dedf4e8ddcc49becaa5f16 SHA1 23cd4cb2cb969453ef166667dda464d2ae34a7e9 SHA256 095b2a8750525e0ba2c6ab9fe0e01b8bf0431e0cdb985dc24bfff52d7e04f11c
 MD5 92cd926808b9b818d1a0228938edd8e4 files/compface-1.4-destdir.diff 1759
+RMD160 1be6e3ee4077bddc66dedf4e8ddcc49becaa5f16 files/compface-1.4-destdir.diff 1759
+SHA256 095b2a8750525e0ba2c6ab9fe0e01b8bf0431e0cdb985dc24bfff52d7e04f11c files/compface-1.4-destdir.diff 1759
+AUX compface-1.4-errno.diff 908 RMD160 c97c2b79c3064b1344b009c0f29958e246307694 SHA1 50dc1ddc517578fe0b33f6dbbdca99b28a4a0d69 SHA256 7bcb27529af6d3ea7e0a042400e3b91eabfce3f6b6f65fad717ff603a40cd72c
 MD5 99136b248ff383abec90471de2c701ac files/compface-1.4-errno.diff 908
+RMD160 c97c2b79c3064b1344b009c0f29958e246307694 files/compface-1.4-errno.diff 908
+SHA256 7bcb27529af6d3ea7e0a042400e3b91eabfce3f6b6f65fad717ff603a40cd72c files/compface-1.4-errno.diff 908
+AUX compface-1.5.1-destdir.diff 1648 RMD160 981cb938240501a14c607f635564a9245671eb65 SHA1 62e6589bc4d12bb9924e2bf3caa2b8dd2e927d08 SHA256 16d9dd6936615ed7a569e383ba4ec538b2340b2b50e96ec9637b75284783af5e
 MD5 bfbda4c57251fde19873b043d920fef7 files/compface-1.5.1-destdir.diff 1648
+RMD160 981cb938240501a14c607f635564a9245671eb65 files/compface-1.5.1-destdir.diff 1648
+SHA256 16d9dd6936615ed7a569e383ba4ec538b2340b2b50e96ec9637b75284783af5e files/compface-1.5.1-destdir.diff 1648
+AUX compface-1.5.2-destdir.diff 549 RMD160 76a86e2c9b6d2a3e3859c3e0c22bb3e3b8a1ecae SHA1 22948391acfad8b2f66886f6915fab40c4c4edbd SHA256 d0c2a59db5b3e957b62fad1dcee7342a28cbb7561ede7059c03ba67ca42d1b2a
 MD5 54146587d73a019766650482fd262795 files/compface-1.5.2-destdir.diff 549
-MD5 9b8d9c4812b5caa0557fe8bc88a688d8 files/digest-compface-1.4 63
-MD5 f7f2d3f516dc4843604ade194eb8ccf5 files/digest-compface-1.5.1 65
-MD5 d747f3964b74ce18b1e779c46eb098ef files/digest-compface-1.5.2 65
+RMD160 76a86e2c9b6d2a3e3859c3e0c22bb3e3b8a1ecae files/compface-1.5.2-destdir.diff 549
+SHA256 d0c2a59db5b3e957b62fad1dcee7342a28cbb7561ede7059c03ba67ca42d1b2a files/compface-1.5.2-destdir.diff 549
+DIST compface-1.4.tar.gz 29154
+DIST compface-1.5.1.tar.gz 30565
+DIST compface-1.5.2.tar.gz 46970
+EBUILD compface-1.4.ebuild 830 RMD160 1b26ba1fd306f92016966be44aa1f4fd358ab988 SHA1 810383b94892f742e56f779c2fe4b74202bdbc5a SHA256 cfaab7a74d02a295d9d9def87598a791f181c10f3f7005dd58b6de7294bcd87b
+MD5 43a44e5f4cf8c9078b730460bab5a9e9 compface-1.4.ebuild 830
+RMD160 1b26ba1fd306f92016966be44aa1f4fd358ab988 compface-1.4.ebuild 830
+SHA256 cfaab7a74d02a295d9d9def87598a791f181c10f3f7005dd58b6de7294bcd87b compface-1.4.ebuild 830
+EBUILD compface-1.5.1.ebuild 867 RMD160 469b28d43ec46cf139c3cf858b59410eeaec642f SHA1 86ec73469cf623f99f746c3f260e5dc3158030b4 SHA256 b7d6ccac0a5a24f69e6bccc6d8a10268c879b7a34ae5f55998446efc6da86f8a
+MD5 44a484191ef5bb9693b152dfd0c6f964 compface-1.5.1.ebuild 867
+RMD160 469b28d43ec46cf139c3cf858b59410eeaec642f compface-1.5.1.ebuild 867
+SHA256 b7d6ccac0a5a24f69e6bccc6d8a10268c879b7a34ae5f55998446efc6da86f8a compface-1.5.1.ebuild 867
+EBUILD compface-1.5.2.ebuild 732 RMD160 b4fef5caeb9c78f89db04ab575217ce1e91fe0b8 SHA1 4c326777fb2436bd3df9f67795e6341224a79d2c SHA256 908a6f4d6c5b9b362fa7779c4a8a9078caddba2c8344271534af0069e69b1675
+MD5 1d053548317417e6f8e6ee5a5ae7b64d compface-1.5.2.ebuild 732
+RMD160 b4fef5caeb9c78f89db04ab575217ce1e91fe0b8 compface-1.5.2.ebuild 732
+SHA256 908a6f4d6c5b9b362fa7779c4a8a9078caddba2c8344271534af0069e69b1675 compface-1.5.2.ebuild 732
+MISC ChangeLog 523 RMD160 812a80b1953df10b3c38685baafa06e4f770f2f1 SHA1 11f976f6429b8f8fea74b5ced67c73ec54326d78 SHA256 9dc0df04c2d8d15928d84b17ff0be2e117129cbe97784f7029cd9cb8ea0dd487
+MD5 0c51748fb56cd0ff209dd2b084bce0bf ChangeLog 523
+RMD160 812a80b1953df10b3c38685baafa06e4f770f2f1 ChangeLog 523
+SHA256 9dc0df04c2d8d15928d84b17ff0be2e117129cbe97784f7029cd9cb8ea0dd487 ChangeLog 523
+MISC metadata.xml 436 RMD160 a6c04564a0e8fafffed76b522d42b188f10c9ede SHA1 54b649a05da8d30d01e54c6b487061a326caefcd SHA256 6dde6f72daac80a16b99f5ceb65cca3a496b5661e17a2779ee079ce97ada970e
 MD5 eec73fbea3403356a034bd509fe1a022 metadata.xml 436
+RMD160 a6c04564a0e8fafffed76b522d42b188f10c9ede metadata.xml 436
+SHA256 6dde6f72daac80a16b99f5ceb65cca3a496b5661e17a2779ee079ce97ada970e metadata.xml 436
+MD5 9b8d9c4812b5caa0557fe8bc88a688d8 files/digest-compface-1.4 63
+RMD160 1d75a4b7a3ecea831df1c7561e3a6dd58df82184 files/digest-compface-1.4 63
+SHA256 849b286425f54d2dd33a2f97ae017ee61f6935fef4eba899e664debd61d3207f files/digest-compface-1.4 63
+MD5 f7f2d3f516dc4843604ade194eb8ccf5 files/digest-compface-1.5.1 65
+RMD160 7de7ebbad7226d341979bf4f8ddbdec3535591c4 files/digest-compface-1.5.1 65
+SHA256 32f33bdf13bbac38dc4ce2a882fc1347fb73931f5e6d734cff56611be4ff1d30 files/digest-compface-1.5.1 65
+MD5 d747f3964b74ce18b1e779c46eb098ef files/digest-compface-1.5.2 65
+RMD160 0dc9a5d37e80b883bd7cb7767aa05a2ed8d3f7d3 files/digest-compface-1.5.2 65
+SHA256 61a947bc2e387c367a53bc01d6cd3f16ee95a7c9c3b216f6f87fd352ab8e7e59 files/digest-compface-1.5.2 65
