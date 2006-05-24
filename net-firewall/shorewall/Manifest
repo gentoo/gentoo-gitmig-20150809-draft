@@ -1,8 +1,9 @@
-MD5 19ad57589a7c532d6fb721c68a701a7c ChangeLog 14858
+MD5 10fecb6fc3f82838669796d244dd7ea1 ChangeLog 15113
 MD5 e119bb212e45f53e1948e7a1ed93ef36 files/digest-shorewall-2.4.2 139
 MD5 7271403f189568f22d949752fc7773b3 files/digest-shorewall-3.0.4 139
 MD5 06092daa018082fd77b0b38d62276869 files/digest-shorewall-3.0.5-r1 139
 MD5 cf528f350ac0dd013025a8443ee5cec0 files/digest-shorewall-3.0.6 139
+MD5 33dc8d349708115427a15c2004f1387e files/digest-shorewall-3.0.7 139
 MD5 874d62a846eefd6330b3bba8b8721cef files/shorewall 1057
 MD5 faebfe0a2045ed8e1e996332df1823c4 files/shorewall-r1 1147
 MD5 9683bb7323c40d69b48d54ad0eb169ed metadata.xml 221
@@ -10,3 +11,4 @@ MD5 561cf6684de229fe37921356b62bb6c1 shorewall-2.4.2.ebuild 1488
 MD5 408d1bca3fd821d2064605409b5c9dd2 shorewall-3.0.4.ebuild 1980
 MD5 304d11756c940bb4d1626144bb19a563 shorewall-3.0.5-r1.ebuild 2006
 MD5 b47cdf6ca788e27e9cef7fe0a110bd9e shorewall-3.0.6.ebuild 2084
+MD5 ff9954eb17e241451bfa53ef38f73b27 shorewall-3.0.7.ebuild 2216
