@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.33 2006/01/13 15:10:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.34 2006/05/24 14:17:37 wolf31o2 Exp $
 
 inherit games
 
@@ -81,14 +81,14 @@ games-q3mod_pkg_postinst() {
 games-q3mod_make_q3ded_exec() {
 cat << EOF > "${T}"/q3${MOD_NAME}-ded.bin
 #!/bin/sh
-exec "${GAMES_BINDIR}"/q3ded +set fs_game ${MOD_NAME} +set dedicated 1 +exec server.cfg \${@}
+exec "${GAMES_BINDIR}"/q3ded-bin +set fs_game ${MOD_NAME} +set dedicated 1 +exec server.cfg \${@}
 EOF
 }
 
 games-q3mod_make_quake3_exec() {
 cat << EOF > "${T}"/quake3-${MOD_NAME}.bin
 #!/bin/sh
-exec "${GAMES_BINDIR}"/quake3 +set fs_game ${MOD_NAME} \${@}
+exec "${GAMES_BINDIR}"/quake3-bin +set fs_game ${MOD_NAME} \${@}
 EOF
 }
 
