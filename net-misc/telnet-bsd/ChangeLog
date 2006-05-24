@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/telnet-bsd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.31 2006/05/23 17:17:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.32 2006/05/24 20:42:47 hansmi Exp $
+
+  24 May 2006; Michael Hanselmann <hansmi@gentoo.org>
+  telnet-bsd-1.2-r1.ebuild:
+  Stable on ppc.
 
   23 May 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   telnet-bsd-1.2-r1.ebuild:
