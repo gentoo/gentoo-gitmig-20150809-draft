@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.137 2006/05/18 21:45:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.138 2006/05/24 19:29:50 flameeyes Exp $
+
+  24 May 2006; Diego Pettenò <flameeyes@gentoo.org> amarok-1.4.0a.ebuild:
+  Add ~x86-fbsd keyword.
 
 *amarok-1.4.0a (18 May 2006)
 
