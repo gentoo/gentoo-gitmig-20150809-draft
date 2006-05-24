@@ -1,6 +1,9 @@
 # ChangeLog for games-action/rune
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/ChangeLog,v 1.9 2006/05/24 20:51:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/ChangeLog,v 1.10 2006/05/24 20:54:40 wolf31o2 Exp $
+
+  24 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> rune-1.07-r2.ebuild:
+  Changed libsdl dependency and closing bug #117918.
 
 *rune-1.07-r2 (24 May 2006)
 
