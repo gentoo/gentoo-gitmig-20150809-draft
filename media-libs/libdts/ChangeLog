@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdts
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.26 2006/03/06 15:00:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.27 2006/05/24 23:48:19 flameeyes Exp $
+
+  24 May 2006; Diego Pettenò <flameeyes@gentoo.org> libdts-0.0.2-r3.ebuild:
+  Rice it down, don't add extra flags to the build, like the deprecated -mtune
+  or -O3 -fomit-frame-pointer.
 
   06 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> libdts-0.0.2-r3.ebuild:
   Remove redundant dependencies.
