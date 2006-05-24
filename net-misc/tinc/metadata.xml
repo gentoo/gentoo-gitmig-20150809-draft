@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>secure-tunneling</herd>
 <maintainer>
-  <email>warpzero@gentoo.org</email>
-  <name>Joshua Charles Campbell</name>
-</maintainer>
-<maintainer>
   <email>dragonheart@gentoo.org</email>
   <name>Daniel Black</name>
 </maintainer>
