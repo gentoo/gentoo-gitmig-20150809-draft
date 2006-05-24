@@ -1,6 +1,14 @@
 # ChangeLog for app-forensics/samhain
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/ChangeLog,v 1.2 2005/12/26 00:42:11 chtekk Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/ChangeLog,v 1.3 2006/05/24 13:10:34 chtekk Exp $
+
+*samhain-2.2.0 (24 May 2006)
+*samhain-2.1.3 (24 May 2006)
+
+  24 May 2006; Luca Longinotti <chtekk@gentoo.org> -samhain-2.1.1a.ebuild,
+  +samhain-2.1.3.ebuild, +samhain-2.2.0.ebuild:
+  Fix bug #125035 by adding both 2.1.3 and 2.2.0 to the tree, remove 2.1.1a.
+  Fix bug #130988, the libdir is now created if not emerged in stealth mode.
 
   26 Dec 2005; Luca Longinotti <chtekk@gentoo.org> samhain-2.1.1a.ebuild:
   Fix bug #116739.
