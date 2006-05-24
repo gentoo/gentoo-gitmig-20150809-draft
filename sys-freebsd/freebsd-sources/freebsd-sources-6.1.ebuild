@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.1.ebuild,v 1.1 2006/05/09 07:43:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.1.ebuild,v 1.2 2006/05/24 14:14:11 flameeyes Exp $
 
 inherit bsdmk freebsd
 
@@ -15,9 +15,9 @@ SRC_URI="mirror://gentoo/${SYS}.tar.bz2"
 RDEPEND=">=sys-freebsd/freebsd-mk-defs-6.0-r1"
 DEPEND=""
 
-RESTRICT="nostrip"
+RESTRICT="strip binchecks"
 
-S=${WORKDIR}/sys
+S="${WORKDIR}/sys"
 
 MY_PVR="${PVR}"
 
@@ -25,13 +25,13 @@ MY_PVR="${PVR}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# This replaces the gentoover patch, it doesn't need reapply every time.
 	sed -i -e 's:^REVISION=.*:REVISION="'${PVR}'":' \
 		-e 's:^BRANCH=.*:BRANCH="Gentoo":' \
 		-e 's:^VERSION=.*:VERSION="${TYPE} ${BRANCH} ${REVISION}":' \
-		${S}/conf/newvers.sh
+		"${S}/conf/newvers.sh"
 
 	epatch "${FILESDIR}/${PN}-gentoo.patch"
 	epatch "${FILESDIR}/${PN}-6.0-flex-2.5.31.patch"
@@ -48,23 +48,23 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/src/sys-${MY_PVR}
-	doins -r ${S}/*
+	insinto "/usr/src/sys-${MY_PVR}"
+	doins -r "${S}/"*
 }
 
 pkg_postinst() {
-	if [[ ! -L ${ROOT}/usr/src/sys ]]; then
+	if [[ ! -L $"{ROOT}/usr/src/sys" ]]; then
 		einfo "/usr/src/sys symlink doesn't exist; creating..."
-		ln -sf sys-${MY_PVR} ${ROOT}/usr/src/sys || \
+		ln -sf "sys-${MY_PVR}" "${ROOT}/usr/src/sys" || \
 			eerror "Couldn't create ${ROOT}/usr/src/sys symlink."
-		ln -sf sys-${MY_PVR} ${ROOT}/usr/src/sys-${RV} || \
+		ln -sf "sys-${MY_PVR}" "${ROOT}/usr/src/sys-${RV}" || \
 			eerror "Couldn't create ${ROOT}/usr/src/sys-${RV} symlink."
 	elif use symlink; then
 		einfo "Updating /usr/src/sys symlink..."
-		rm ${ROOT}/usr/src/sys ${ROOT}/usr/src/sys-${RV}
-		ln -sf sys-${MY_PVR} ${ROOT}/usr/src/sys || \
+		rm "${ROOT}/usr/src/sys" "${ROOT}/usr/src/sys-${RV}"
+		ln -sf "sys-${MY_PVR}" "${ROOT}/usr/src/sys" || \
 			eerror "Couldn't create ${ROOT}/usr/src/sys symlink."
-		ln -sf sys-${MY_PVR} ${ROOT}/usr/src/sys-${RV} || \
+		ln -sf "sys-${MY_PVR}" "${ROOT}/usr/src/sys-${RV}" || \
 			eerror "Couldn't create ${ROOT}/usr/src/sys-${RV} symlink."
 	fi
 }
