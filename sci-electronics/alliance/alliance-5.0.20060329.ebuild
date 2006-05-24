@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20060329.ebuild,v 1.1 2006/04/21 20:12:14 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20060329.ebuild,v 1.2 2006/05/24 09:39:27 calchan Exp $
 
 inherit versionator
 
@@ -16,6 +16,9 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND="x11-libs/openmotif"
 S=${WORKDIR}/${PN}-${UPSTREAM_VERSION}
+
+# Fix bug #134145
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_compile() {
 	# Alliance requires everything to be in the same directory
