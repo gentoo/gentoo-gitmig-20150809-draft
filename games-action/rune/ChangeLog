@@ -1,6 +1,14 @@
 # ChangeLog for games-action/rune
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/ChangeLog,v 1.8 2006/04/13 19:53:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/ChangeLog,v 1.9 2006/05/24 20:51:27 wolf31o2 Exp $
+
+*rune-1.07-r2 (24 May 2006)
+
+  24 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> +rune-1.07-r2.ebuild:
+  Added a new revision to use xdelta to save users from having to download as
+  much. This is especially important for the people with the Linux CD that
+  don't really need anything from the download. Thanks to Patrick Zimmermann
+  <patrick@zakweb.de> for doing the legwork on this one. Closing bug #125257.
 
   13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> rune-1.07-r1.ebuild:
   Moved games_pkg_setup to the beginning of pkg_setup.
