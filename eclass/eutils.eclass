@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.234 2006/04/25 15:47:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.235 2006/05/24 16:01:59 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -893,6 +893,7 @@ make_desktop_entry() {
 		local desktop_name="${PN}-${SLOT}"
 	fi
 	local desktop=${T}/${exec%% *}-${desktop_name}.desktop
+#	local desktop=${T}/${exec%% *:-${desktop_name}}.desktop
 
 echo "[Desktop Entry]
 Encoding=UTF-8
