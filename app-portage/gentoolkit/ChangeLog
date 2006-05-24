@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.78 2006/05/09 19:23:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.79 2006/05/24 14:18:09 fuzzyray Exp $
+
+*gentoolkit-0.2.2_rc1 (23 May 2006)
+
+  23 May 2006; Paul Varner <fuzzyray@gentoo.org>
+  -files/qpkg-deprecated.patch, -files/revdep-rebuild.112099.patch,
+  -gentoolkit-0.2.0.ebuild, -gentoolkit-0.2.0-r3.ebuild,
+  -gentoolkit-0.2.2_pre3.ebuild, +gentoolkit-0.2.2_rc1.ebuild:
+  First release candidate for stablization along with portage-2.1. Removed
+  older gentoolkit-0.2.0
 
   09 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   gentoolkit-0.2.2_pre4.ebuild:
