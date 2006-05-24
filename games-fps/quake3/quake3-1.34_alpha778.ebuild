@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.34_alpha778.ebuild,v 1.3 2006/05/23 22:04:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.34_alpha778.ebuild,v 1.4 2006/05/24 23:26:49 flameeyes Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -33,7 +33,7 @@ HOMEPAGE="http://icculus.org/quake3/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="dedicated opengl teamarena"
 
 RDEPEND="opengl? (
@@ -65,6 +65,9 @@ src_unpack() {
 		subversion_src_unpack
 	else
 		unpack ${A}
+		cd "${S}"
+
+		epatch "${FILESDIR}/${P}-gfbsd.patch"
 	fi
 }
 
