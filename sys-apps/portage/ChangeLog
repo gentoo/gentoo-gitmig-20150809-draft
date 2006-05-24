@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.151 2006/05/23 19:01:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.152 2006/05/24 03:03:02 zmedico Exp $
+
+*portage-2.1_rc2-r2 (24 May 2006)
+
+  24 May 2006; <zmedico@gentoo.org> +portage-2.1_rc2-r2.ebuild:
+  Revbump to fix bug #109961.  Pruned some ChangeLog cruft.
 
 *portage-2.1_rc2-r1 (23 May 2006)
 
@@ -71,80 +76,14 @@
   portage-2.0.54-r2.ebuild:
   Stable on sparc
 
-*portage-2.1_pre10-r5 (08 May 2006)
-
-  08 May 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre10-r5.ebuild,
-  +files/2.1/pre10/1150_r3334_make_profile_realpath.patch:
-  2.1_pre10-r5 bug fix revbump. Most patches are now distributed via the
-  mirrors in order to reduce $FILESDIR bloat (thanks to Halcy0n for noticing).
-
-*portage-2.1_pre10-r4 (08 May 2006)
-
-  08 May 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre10-r4.ebuild,
-  +files/2.1/pre10/1090_r3324_bug_132410_missing_digest.patch,
-  +files/2.1/pre10/1100_r3326_bug_132442_root_clone.patch,
-  +files/2.1/pre10/1110_r3330_bug_130395_homedir.patch:
-  2.1_pre10-r4 bug fix revbump for #130395, #132410, and #132442.
-
-*portage-2.1_pre10-r3 (05 May 2006)
-
-  05 May 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre10-r3.ebuild,
-  +files/2.1/pre10/1030_r3304_fetch_digests.patch,
-  +files/2.1/pre10/1040_r3306_bug_117509_xterm.patch,
-  +files/2.1/pre10/1050_r3313_bug_126692_cache_corruption.patch,
-  +files/2.1/pre10/1060_r3317_bug_132182_assume_digests.patch,
-  +files/2.1/pre10/1070_r3320_bug_132338_config_clone.patch,
-  +files/2.1/pre10/1080_r3321_bug_132373_search_digest.patch:
-  2.1_pre10-r3 bug fix revbump for #117509, #126692, #132182, #132338, and
-  #132373.
-
 *portage-2.0.54-r2 (03 May 2006)
 
   03 May 2006; <solar@gentoo.org> +portage-2.0.54-r2.ebuild:
   - QA_TEXTREL/EXECSTACK bug 131779; emptytree system restarts after emerging
   portage. bug 131207
 
-*portage-2.1_pre10-r2 (01 May 2006)
-
-  01 May 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre10-r2.ebuild,
-  +files/2.1/pre10/1020_r3293_bug_131820_noauto.patch:
-  Revbump to fix a regression from the patch for bug #131820.
-
-*portage-2.1_pre10-r1 (01 May 2006)
-
-  01 May 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre10-r1.ebuild,
-  +files/2.1/pre10/1000_r3291_bug_73350_configroot.patch,
-  +files/2.1/pre10/1010_r3292_bug_131820_noauto.patch:
-  Bug fix revbump for #73350 and #131820.
-
-  29 Apr 2006; Marien Zwart <marienz@gentoo.org>
-  files/digest-portage-2.0.51.22-r3, files/digest-portage-2.0.53,
-  files/digest-portage-2.0.54, files/digest-portage-2.0.54-r1,
-  files/digest-portage-2.1_pre7-r5, files/digest-portage-2.1_pre9-r5,
-  Manifest:
-  Remove SHA256 digests for a smoother upgrade.
-
   29 Apr 2006; Joseph Jezak <josejx@gentoo.org> portage-2.0.54-r1.ebuild:
   Marked ppc stable for bug #130527.
-
-*portage-2.1_pre10 (29 Apr 2006)
-
-  29 Apr 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre10.ebuild:
-  2.1_pre10 bug fix release
-
-*portage-2.1_pre9-r5 (28 Apr 2006)
-
-  28 Apr 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre9-r5.ebuild:
-  Bump pycrypto dependency to >=dev-python/pycrypto-2.0.1-r5 for bugs #131293
-  and #131396.  All ~arch portage users must upgrade pycrypto to avoid faulty
-  SHA256 digests.
-
-  27 Apr 2006; Alec Warner <antarus@gentoo.org>
-  files/digest-portage-2.0.51.22-r3, files/digest-portage-2.0.53,
-  files/digest-portage-2.0.54, files/digest-portage-2.0.54-r1,
-  files/digest-portage-2.1_pre7-r5, files/digest-portage-2.1_pre9-r4,
-  Manifest:
-  Fixing SHA256 digest, pass four
 
   26 Apr 2006; Mark Loeser <halcy0n@gentoo.org> portage-2.0.54-r1.ebuild:
   Stable on x86; bug #130527
@@ -156,42 +95,6 @@
   24 Apr 2006; Joshua Kinard <kumba@gentoo.org> portage-2.0.54-r1.ebuild:
   Marked stable on mips.
 
-*portage-2.1_pre9-r4 (23 Apr 2006)
-
-  23 Apr 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre9-r4.ebuild,
-  +files/2.1/pre9/1070_r3184_bug_130750_distfiles_size.patch,
-  +files/2.1/pre9/1080_r3185_bug_116796_download_size.patch,
-  +files/2.1/pre9/1090_r3189_bug_130824_pkgdir_sandbox.patch,
-  +files/2.1/pre9/1100_r3193_manifest_size.patch,
-  +files/2.1/pre9/1110_r3194_bug_130928.patch:
-  2.1_pre9-r4 bug fix revbump for #116796, #130750, #130824, and #116796.
-
-*portage-2.1_pre9-r3 (22 Apr 2006)
-
-  22 Apr 2006; Alec Warner <antarus@gentoo.org> +files/sed,
-  +portage-2.1_pre9-r3.ebuild:
-  Added sed wrapper at Flameeyes request
-
-*portage-2.1_pre9-r2 (21 Apr 2006)
-
-  21 Apr 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre9-r2.ebuild,
-  +files/2.1/pre9/1020_r3176_bug_130406_bz.patch,
-  +files/2.1/pre9/1040_r3178_bug_127585_other_phase.patch,
-  +files/2.1/pre9/1030_r3177_bug_130541_auto_manifest.patch,
-  +files/2.1/pre9/1050_r3179_commitmsgfile.patch,
-  +files/2.1/pre9/1060_r3181_gpg_dir.patch:
-  2.1_pre9-r2 bug fix revbump for #127585, #130406, and #130541.
-
-  18 Apr 2006; <solar@gentoo.org> +portage-2.0.54-r1.ebuild:
-  - added back 2.0.54-r1 but moved the patches into a tarball
-
-  18 Apr 2006; <solar@gentoo.org> -files/2.0.54/bin_ebuild.sh.patch,
-  -files/2.0.54/bin_emerge.patch, -files/2.0.54/bin_fowners.patch,
-  -files/2.0.54/bin_fperms.patch, -files/2.0.54/bin_prepallstrip.patch,
-  -files/2.0.54/bin_prepstrip.patch, -files/2.0.54/man_ebuild.5.patch,
-  -files/2.0.54/man_portage.5.patch, -portage-2.0.54-r1.ebuild:
-  - reverted 2.0.54-r1 for now. Have to move patches into a tarball
-
 *portage-2.0.54-r1 (18 Apr 2006)
 
   18 Apr 2006; <solar@gentoo.org> metadata.xml,
@@ -201,248 +104,6 @@
   +files/2.0.54/man_ebuild.5.patch, +files/2.0.54/man_portage.5.patch,
   +portage-2.0.54-r1.ebuild:
   - backported a few fixes from 2.1
-
-*portage-2.1_pre9-r1 (18 Apr 2006)
-
-  18 Apr 2006; <zmedico@gentoo.org> +portage-2.1_pre9-r1.ebuild,
-  +files/2.1/pre9/1000_r3171_readDigests.patch,
-  +files/2.1/pre9/1010_r3173_bug_57445_gpgsign.patch:
-  Bug fix revbump for #57445.
-
-*portage-2.1_pre9 (17 Apr 2006)
-
-  17 Apr 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre9.ebuild:
-  2.1_pre9 bug fix release.
-
-  16 Apr 2006; Simon Stelling <blubb@gentoo.org> portage-2.0.54.ebuild,
-  portage-2.1_pre8-r5.ebuild:
-  mention the portage handbook after merging; credits to antarus; bug 77345
-
-*portage-2.1_pre8-r5 (14 Apr 2006)
-
-  14 Apr 2006; <zmedico@gentoo.org> +portage-2.1_pre8-r5.ebuild,
-  +files/2.1/pre8/1090_r3146_bug_129720_slot_collision.patch,
-  +files/2.1/pre8/1100_r3143_lazy_autouse.patch.
-  +files/2.1/pre8/1110_r3147_bug_129852_chflags.patch:
-  Bug fix revbump for #129720.
-
-*portage-2.1_pre8-r4 (14 Apr 2006)
-
-  14 Apr 2006; <zmedico@gentoo.org> +portage-2.1_pre8-r4.ebuild,
-  +files/2.1/pre8/1080_r3142_bug_129839_digestcheck.patch:
-  Bug fix revbump for #129839.
-
-*portage-2.1_pre8-r3 (13 Apr 2006)
-
-  13 Apr 2006; <zmedico@gentoo.org> +portage-2.1_pre8-r3.ebuild,
-  +files/2.1/pre8/1070_r3136_bug_129737_digest.patch:
-  Bug fix revbump for #129737.
-
-*portage-2.1_pre8-r2 (12 Apr 2006)
-
-  12 Apr 2006; <zmedico@gentoo.org> +portage-2.1_pre8-r2.ebuild,
-  +files/2.1/pre8/1050_r3133_lazy_items.patch,
-  +files/2.1/pre8/1060_r3134_porttrees_realpath.patch:
-  Regression fix revbump.
-
-*portage-2.1_pre8-r1 (11 Apr 2006)
-
-  11 Apr 2006; <zmedico@gentoo.org> +portage-2.1_pre8-r1.ebuild,
-  +files/2.1/pre8/1000_r3120_fetchlist_dict.patch,
-  +files/2.1/pre8/1010_r3123_manifest2_fixes.patch,
-  +files/2.1/pre8/1020_r3118_bug_121368.patch,
-  +files/2.1/pre8/1030_r3128_bug_129559_qmerge.patch,
-  +files/2.1/pre8/1040_r3126_bug_129244_ebuild_phase.patch,
-  +files/2.1/pre8/1050_r3131_lazy_databases.patch:
-  2.1_pre8-r1 bug fix revbump. This is in package.mask because the new
-  Manifest2 support (see GLEP 44) needs testing.  Gentoo devs, please limit the
-  number of repoman commits with Manifest2 while we test this.
-
-*portage-2.1_pre7-r5 (09 Apr 2006)
-
-  09 Apr 2006; <zmedico@gentoo.org> +portage-2.1_pre7-r5.ebuild,
-  +files/2.1_pre7/1110_r3096_emerge_args_validation.patch,
-  +files/2.1_pre7/1120_r3094_bug_129193.patch,
-  +files/2.1_pre7/1130_r3087_bug_129098.patch,
-  +files/2.1_pre7/1140_r3077_noclean.patch,
-  +files/2.1_pre7/1150_r3082_bug_117713.patch,
-  +files/2.1_pre7/1160_r3083_bug_126801.patch,
-  +files/2.1_pre7/1170_r3084_bug_128362.patch:
-  Bug fixes for #129098, #117713, #129193, #126801, #128362 and more.
-
-  08 Apr 2006; <zmedico@gentoo.org> -portage-2.1_pre8.ebuild:
-  Withdrawing 2.1_pre8 due to bug #128946.
-
-*portage-2.1_pre8 (08 Apr 2006)
-
-  08 Apr 2006; <zmedico@gentoo.org> +portage-2.1_pre8.ebuild:
-  Bug fix release for 2.1.  Includes Manifest2 support.
-
-*portage-2.1_pre7-r4 (03 Apr 2006)
-
-  03 Apr 2006; <zmedico@gentoo.org> +portage-2.1_pre7-r4.ebuild,
-  +files/2.1_pre7/1090_r3055_bug_128284_get_open_fds.patch,
-  +files/2.1_pre7/1100_r3063_bug_128506_distdir_error.patch:
-  Bug fixes for #128284 and #128506.
-
-  31 Mar 2006; Zac Medico <zmedico@gentoo.org> portage-2.1_pre7-r3.ebuild:
-  Make sandbox dependency conditional on elibc_glibc or elibc_uclibc as
-  suggested by Flameeyes.
-
-  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
-  portage-2.1_pre7-r3.ebuild:
-  Add ~x86-fbsd keyword.
-
-*portage-2.1_pre7-r3 (30 Mar 2006)
-
-  30 Mar 2006; <zmedico@gentoo.org> +portage-2.1_pre7-r3.ebuild,
-  +files/2.1_pre7/1060_r3034_bug_127897_realpath.patch,
-  +files/2.1_pre7/1070_r3036_bug_127930_unpack_timestamp.patch,
-  +files/2.1_pre7/1080_ensure_dirs.patch:
-  Regression fixes for bug #127897 and bug #127930.  Also fixes cvs-src
-  permission messages reported by marienz.
-
-*portage-2.1_pre7-r2 (27 Mar 2006)
-
-  27 Mar 2006; <zmedico@gentoo.org> +portage-2.1_pre7-r2.ebuild,
-  +files/2.1_pre7/1050_forum_3210399_empty_digest.patch:
-  Regression fix for creation of an empty digest file when SRC_URI is empty.
-
-*portage-2.1_pre7-r1 (26 Mar 2006)
-
-  26 Mar 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre7-r1.ebuild,
-  +files/2.1_pre7/1020_r3006_bug_127573_cachedir.patch,
-  +files/2.1_pre7/1030_r3009_bug_127563_ccache_stat.patch,
-  +files/2.1_pre7/1040_r3015_user_fetch.patch:
-  Regression fixes for bug #127563, bug #127573, and fetch permission for
-  users in the portage group (reported by truedfx).
-
-*portage-2.1_pre7 (25 Mar 2006)
-
-  25 Mar 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre7.ebuild,
-  +files/2.1_pre7/1000_r2994_workdir_mode.patch,
-  +files/2.1_pre7/1010_r3004_lazy_virtuals.patch:
-  Bug fix release for 2.1.
-
-*portage-2.1_pre6-r7 (25 Mar 2006)
-
-  25 Mar 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre6-r7.ebuild,
-  +files/2.1_pre6/1170_r2986_bug_127374_selinux_labels.patch:
-  Regression fix for bug #127374 and improved package phase efficiency.
-
-*portage-2.1_pre6-r6 (23 Mar 2006)
-
-  23 Mar 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre6-r6.ebuild,
-  +files/2.1_pre6/1150_r2974_bug_126442.patch,
-  +files/2.1_pre6/1160_r2979_python_trace.patch:
-  Regression fixes for bug #126442 and new python-trace feature for --debug
-  mode.
-
-  22 Mar 2006; Zac Medico <zmedico@gentoo.org> portage-2.1_pre6-r5.ebuild:
-  Respect LDFLAGS when compiling tbz2tool.  Thanks to Flameeyes for reporting.
-
-*portage-2.1_pre6-r5 (20 Mar 2006)
-
-  20 Mar 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre6-r5.ebuild,
-  +files/2.1_pre6/1140_r2963_bug_126711_sandbox.patch:
-  Regression fix to restore sandbox functionality which was disabled by the
-  patch for bug #126711.
-
-*portage-2.1_pre6-r4 (19 Mar 2006)
-
-  19 Mar 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre6-r4.ebuild,
-  +files/2.1_pre6/1110_r2947_bug_126711_selinux_context.patch
-  +files/2.1_pre6/1120_r2952_bug_126756_nocolor_ebuild.patch
-  +files/2.1_pre6/1130_r2942_inst_uid_gid_defaults.patch
-  Regression fixes for bug #126711 and problems with dobin when make.globals
-  is not updated properly.  New NOCOLOR support in ebuilds for bug #126756.
-
-*portage-2.1_pre6-r3 (14 Mar 2006)
-
-  14 Mar 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre6-r3.ebuild,
-  +files/2.1_pre6/1090_r2892_bug_126111_global_updates_stdout.patch,
-  +files/2.1_pre6/1100_r2890_bug_126120_applied_useflags.patch:
-  Revision bump for small bug fixes, including bugs #125942 and #126111.
-
-*portage-2.1_pre6-r2 (12 Mar 2006)
-
-  12 Mar 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre6-r2.ebuild,
-  +files/2.1_pre6/1070_r2864_bug_125993_mergelist_keyerror.patch,
-  +files/2.1_pre6/1080_r2865_bug_125942_postinst_env.patch:
-  Regression fixes for bug #125993 and bug #125942.
-
-*portage-2.1_pre6-r1 (12 Mar 2006)
-
-  12 Mar 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre6-r1.ebuild,
-  +files/2.1_pre6/1010_r2854_obey_keeptemp.patch,
-  +files/2.1_pre6/1020_r2857_bug_54040_resume_tree.patch,
-  +files/2.1_pre6/1030_r2860_exec_stack_no_ppc64.patch,
-  +files/2.1_pre6/1040_r2861_cache_cleanse.patch,
-  +files/2.1_pre6/1050_r2862_ebuild_unmerge.patch,
-  +files/2.1_pre6/1060_r2863_bug_125919_find_compat.patch:
-  Revision bump for small bug fixes, including #54040 and #125919.  Also fixes
-  bugs reported in #gentoo-portage by kosmikus and phreak.
-
-*portage-2.1_pre6 (11 Mar 2006)
-
-  11 Mar 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_pre6.ebuild,
-  +files/2.1_pre6, +files/2.1_pre6/1000-r2849-quiet-spinner.patch:
-  Bug fix release for 2.1.
-
-  05 Mar 2006; Zac Medico <zmedico@gentoo.org> portage-2.1_pre5-r4.ebuild:
-  Readded keywords for ~mips and ~s390 since both have pycrypto in ~arch for
-  bug #120716.
-
-*portage-2.1_pre5-r4 (04 Mar 2006)
-
-  04 Mar 2006; Zac Medico <zmedico@gentoo.org>
-  +portage-2.1_pre5-r4.ebuild, +files/2.1_pre5,
-  +files/2.1_pre5/1000_r2763_fixpackages_features.patch,
-  +files/2.1_pre5/1010_r2764_emergelog_genlop.patch,
-  +files/2.1_pre5/1020_r2800_bug_124203_clean_phase_sanity.patch,
-  +files/2.1_pre5/1030_r2790_bug_124140_portage_locks_hardlink.patch,
-  +files/2.1_pre5/1040_r2804_bug_124568_dobin_wheel.patch,
-  +files/2.1_pre5/1050_r2805_bug_124621_webrsync_niceness.patch,
-  +files/2.1_pre5/1060_r2812_bug_124471_worldfile_ROOT.patch,
-  +files/2.1_pre5/version_bump_2.1_pre5-r4.patch:
-  Regression fix for bug #124471 world file corruption when ROOT != /.
-  All regression fixes for 2.1_pre5 are now split into separate patches.
-
-*portage-2.1_pre5-r3 (03 Mar 2006)
-
-  03 Mar 2006; Zac Medico <zmedico@gentoo.org>
-  +portage-2.1_pre5-r3.ebuild:
-  Regression fix for emerge-webrsync.  See bug #124621.
-
-*portage-2.1_pre5-r2 (01 Mar 2006)
-
-  01 Mar 2006; Zac Medico <zmedico@gentoo.org>
-  +portage-2.1_pre5-r2.ebuild:
-  Regression fix for bug #124568 problem with wheel group in dobin and dosbin
-  for *bsd and darwin.  A fix is also included for bug #124203 clean phase
-  misbehavior on upgrade from portage-2.0.x.
-
-  27 Feb 2006; Zac Medico <zmedico@gentoo.org>
-  portage-2.0.53.ebuild, portage-2.0.54.ebuild:
-  Bump dependencies to >=dev-lang/python-2.3 due to usage of the enumerate
-  function.  See bug #124302.
-
-  26 Feb 2006; Zac Medico <zmedico@gentoo.org>
-  files/2.1_pre5-r1.patch:
-  Bump 2.1_pre5 to 2.1_pre5-r1 in portage.py.
-
-*portage-2.1_pre5-r1 (26 Feb 2006)
-
-  26 Feb 2006; Zac Medico <zmedico@gentoo.org>
-  +portage-2.1_pre5-r1.ebuild:
-  Regression fix for bug #124140 'Bad file descriptor' error when hardlink
-  file locking is used.
-
-*portage-2.1_pre5 (25 Feb 2006)
-
-  25 Feb 2006; Zac Medico <zmedico@gentoo.org>
-  +portage-2.1_pre5.ebuild:
-  Bug fix release for 2.1.
 
   19 Feb 2006; Joshua Kinard <kumba@gentoo.org> portage-2.0.54.ebuild:
   Marked stable on mips.
