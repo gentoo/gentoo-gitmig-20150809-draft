@@ -1,31 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5dab6ce318520b34d85d4bd07a6ad826 ChangeLog 1789
-RMD160 c6f07218f633d284561a2c8dca3fa49168d9d96f ChangeLog 1789
-SHA256 ad8081415b534e876e73654c1494da79533835abb1219e57da142205ca3af3e3 ChangeLog 1789
+MD5 cbf5d03166de36309f0c6178c1ca9dff ChangeLog 1964
 MD5 48d861b456922a79e1c3ddf47137ced9 files/digest-mdbtools-0.4 64
-RMD160 6ccae3688da26b94d3204fe42bf6694b63ba5230 files/digest-mdbtools-0.4 64
-SHA256 77e8c7fff4b56818f3eb32038cc6d06bda303749f05ba7956b349ab786e0d47e files/digest-mdbtools-0.4 64
 MD5 402da6348fabe50879d699674f8239ea files/digest-mdbtools-0.5 64
-RMD160 72e60faf07e6729b4f59839e2ee931420876a4df files/digest-mdbtools-0.5 64
-SHA256 0b42964ea7703dbd2d6e95706841fe59c42e0571841b297baf467c6ee896043b files/digest-mdbtools-0.5 64
+MD5 c914c548d600b31e1df77d482ed39822 files/digest-mdbtools-0.6_pre1 68
 MD5 d056516aee83f6794540f87e15521059 files/mdbtools-0.4-termcap.diff 412
-RMD160 08ad7adbaca4fb3125dad8e1a9c4e93c4f505552 files/mdbtools-0.4-termcap.diff 412
-SHA256 19af39a4700e7efcd2710fbb0aa8a5ba959e621c3d72749e6df00d39f59d6124 files/mdbtools-0.4-termcap.diff 412
 MD5 96e88f8e3b0a2ffc9628083a8b924d71 files/mdbtools-0.5-gcc34.patch 1682
-RMD160 b8e28cafa5f891db2d084ebee0cc32634414e9b4 files/mdbtools-0.5-gcc34.patch 1682
-SHA256 3e78debfa1406801bfa9db920989b69acbc5dd3e653598acfe7f799bff720c9e files/mdbtools-0.5-gcc34.patch 1682
-MD5 656da105f920c8956b290d5b7769c170 mdbtools-0.4.ebuild 1486
-RMD160 79189de9a5cc1e7b19ead5f5161ed2bb1d8e527a mdbtools-0.4.ebuild 1486
-SHA256 271349722cdfb2e0aeb244601fe7def9a0d4f8a0087729d133eaa002a1e5c488 mdbtools-0.4.ebuild 1486
+MD5 7899f05ce1ebcdf1517ea62a21409da8 files/mdbtools-0.6_pre1-gcc34.patch 1571
+MD5 f20000401696bdca4939487a5b0aee35 mdbtools-0.4.ebuild 1483
 MD5 74e2feb6cc446de6d11236d50f0fed73 mdbtools-0.5.ebuild 1181
-RMD160 fdf993562baa95ec3f786fb91a5bde81b3c5b8f0 mdbtools-0.5.ebuild 1181
-SHA256 8398ed525831e99ac392d0a46401f6c9bc53851314231e0e9ac0ac83a6ee0947 mdbtools-0.5.ebuild 1181
+MD5 032abe97e58152d9c0c2c73739252a74 mdbtools-0.6_pre1.ebuild 1239
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD96cSJrHF4yAQTrARArI5AKCCa2B6n1SSsnU76h//NKFt9j60egCgteXZ
-RrgNFRLIlkVn6XCM4SngKiA=
-=LaAV
+iD8DBQFEdO3WK3VlI3Kj19sRAp2uAKCfnjXgC35m3FTsP/vumTXu5D7lAgCgl9hX
+oKJTM10FdxD0UDRZpsbDkck=
+=PZAY
 -----END PGP SIGNATURE-----

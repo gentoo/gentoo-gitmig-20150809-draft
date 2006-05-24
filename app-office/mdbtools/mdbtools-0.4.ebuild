@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.4.ebuild,v 1.9 2005/01/01 15:37:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.4.ebuild,v 1.10 2006/05/24 23:35:05 merlin Exp $
 
 DESCRIPTION="A set of libraries and utilities for reading Microsoft Access database (MDB) files"
 HOMEPAGE="http://sourceforge.net/projects/mdbtools/"
