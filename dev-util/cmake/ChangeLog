@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.31 2006/04/29 02:43:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.32 2006/05/24 22:26:33 dragonheart Exp $
+
+*cmake-2.4.2 (24 May 2006)
+
+  24 May 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/cmake-2.4.2-rpath-fix.patch, +cmake-2.4.2.ebuild:
+  verion bump as per bug #131080 thanks to Tobias Roeser, Diego, and others
 
   29 Apr 2006; Jason Wever <weeve@gentoo.org> cmake-2.0.6-r1.ebuild:
   Stable on SPARC.
