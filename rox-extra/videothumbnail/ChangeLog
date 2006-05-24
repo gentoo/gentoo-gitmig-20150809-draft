@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/videothumbnail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/videothumbnail/ChangeLog,v 1.2 2006/04/16 12:52:35 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/videothumbnail/ChangeLog,v 1.3 2006/05/24 17:57:40 kloeri Exp $
+
+  24 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove svyatogor from metadata.xml, bug 131936.
 
 *videothumbnail-0.1.12 (16 Apr 2006)
 
