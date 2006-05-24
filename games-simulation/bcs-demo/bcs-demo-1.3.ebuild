@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/bcs-demo/bcs-demo-1.3.ebuild,v 1.3 2006/05/12 13:35:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/bcs-demo/bcs-demo-1.3.ebuild,v 1.4 2006/05/24 15:37:38 mr_bones_ Exp $
 
 inherit eutils games
 
 DESCRIPTION="design and build bridges and then stress test them with trains"
-HOMEPAGE="http://garagegames.com/pg/product/view.php?id=17"
+HOMEPAGE="http://www.garagegames.com/pg/product/view.php?id=17"
 SRC_URI="ftp://ggdev-1.homelan.com/bcs/bcsdemo_v${PV/./_}.sh.bin
 	http://www.highprogrammer.com/alan/pfx2/openal-alan-hack-0.0.1.tar.gz"
 
@@ -41,22 +41,22 @@ src_unpack() {
 }
 
 src_install() {
-	dodir ${dir} ${GAMES_BINDIR}
+	dodir "${dir}" "${GAMES_BINDIR}"
 
-	tar -zxf bcsdemo.tar.gz -C ${Ddir} || die "extracting bcsdemo.tar.gz"
-	rm -f ${Ddir}/bcs-linux-openal-fixer.sh
+	tar -zxf bcsdemo.tar.gz -C "${Ddir}" || die "extracting bcsdemo.tar.gz"
+	rm -f "${Ddir}"/bcs-linux-openal-fixer.sh
 
-	exeinto ${dir}
+	exeinto "${dir}"
 #	doexe bin/Linux/x86/rungame.sh || die
 #	exeinto ${dir}/lib
-	mv ${Ddir}/bcs ${Ddir}/bcs-bin
+	mv "${Ddir}"/bcs "${Ddir}"/bcs-bin
 	newexe libopenal.so.0.0.6 libopenal.so.0 || die
-	echo '#!/bin/bash' >> ${Ddir}/bcs
-	echo 'LD_PRELOAD="./libopenal.so.0" ./bcs-bin' >> ${Ddir}/bcs
-	fperms 750 ${dir}/bcs
+	echo '#!/bin/bash' >> "${Ddir}"/bcs
+	echo 'LD_PRELOAD="./libopenal.so.0" ./bcs-bin' >> "${Ddir}"/bcs
+	fperms 750 "${dir}"/bcs
 	games_make_wrapper bcs-demo ./bcs "${dir}" "${dir}"
 
-	insinto ${dir}
+	insinto "${dir}"
 	doins *.cfg || die
 	dodoc readme* || die
 
