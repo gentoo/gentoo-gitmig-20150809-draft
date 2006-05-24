@@ -1,6 +1,34 @@
-MD5 72d560d89b39f70f502563739fb68f88 ChangeLog 630
-MD5 4dc0d87a50ce80765794ceffbdab0e04 files/digest-videothumbnail-0.1.12 72
-MD5 4b8fd1e4c5ba3b4f7746ee67f59b2866 files/digest-videothumbnail-0.1.6 71
-MD5 5394559a5f84d1ca65c57c3b2380195b metadata.xml 256
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST VideoThumbnail-0.1.12.tar.gz 21654
+DIST VideoThumbnail-0.1.6.tar.gz 20583
+EBUILD videothumbnail-0.1.12.ebuild 731 RMD160 832d5e687018b694afa9d2fa9a9e4322f620a86f SHA1 89f1b8d6960fffb9fc8988fc0e6671121f57f00e SHA256 53f0abad47688f129097023b504e03675edd883626703b3a49b2de1078e9e14a
 MD5 4e77870257e7ca1cba6e214af4402b75 videothumbnail-0.1.12.ebuild 731
+RMD160 832d5e687018b694afa9d2fa9a9e4322f620a86f videothumbnail-0.1.12.ebuild 731
+SHA256 53f0abad47688f129097023b504e03675edd883626703b3a49b2de1078e9e14a videothumbnail-0.1.12.ebuild 731
+EBUILD videothumbnail-0.1.6.ebuild 711 RMD160 fff395849e15a41db741daa06739812dc7d4857a SHA1 974c5cc0928e84ec3dc1938195dd2074ed311b93 SHA256 6d3f3ca8371acfbabd2332facc908e6e02ccaabf20f1eb8bff08fd00df136f81
 MD5 45724c655eafdaab17ad655e0f8e586d videothumbnail-0.1.6.ebuild 711
+RMD160 fff395849e15a41db741daa06739812dc7d4857a videothumbnail-0.1.6.ebuild 711
+SHA256 6d3f3ca8371acfbabd2332facc908e6e02ccaabf20f1eb8bff08fd00df136f81 videothumbnail-0.1.6.ebuild 711
+MISC ChangeLog 745 RMD160 7c1cc84e6a5def943c65b474b09eb3dab7aa1055 SHA1 4de18b744a266af93bc364db18bacf907342e9a8 SHA256 706fa3213d23f6bc53681b213f0f7380f3cd301a4b5fdbbdabe96847899a5333
+MD5 e2857b56aac1387f6b7da9b047c63e9d ChangeLog 745
+RMD160 7c1cc84e6a5def943c65b474b09eb3dab7aa1055 ChangeLog 745
+SHA256 706fa3213d23f6bc53681b213f0f7380f3cd301a4b5fdbbdabe96847899a5333 ChangeLog 745
+MISC metadata.xml 160 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 SHA1 d6147d00f16e8cfeef893d0764b0675a93d62849 SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
+MD5 4dc0d87a50ce80765794ceffbdab0e04 files/digest-videothumbnail-0.1.12 72
+RMD160 b4ae1af3c25e174ffe5016f3965ea7b19733e474 files/digest-videothumbnail-0.1.12 72
+SHA256 4353ad29417dd86686d6784de19f6df940f8bfe3c5a85730cd5c07451bd49549 files/digest-videothumbnail-0.1.12 72
+MD5 4b8fd1e4c5ba3b4f7746ee67f59b2866 files/digest-videothumbnail-0.1.6 71
+RMD160 8cf3e913637fdb0dca3a23d76fc13e9e60e498dc files/digest-videothumbnail-0.1.6 71
+SHA256 6eeb6c4009f23984fde9da5db37ea28f0ea68462a2c8d3292c7b3c9a9b7a73da files/digest-videothumbnail-0.1.6 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEdLrgugEuf3OQ0akRAvd5AJ9z7YhVW3qV7bze82phN+Sm0GLWCQCcDQ3+
+djNLYmxYG/zL2+BmcNuU2S8=
+=5Ulb
+-----END PGP SIGNATURE-----

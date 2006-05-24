@@ -1,8 +1,42 @@
-MD5 f65c2b7b8aa38c8ca893e4c9f256dab9 ChangeLog 749
-MD5 95db82c4026ed28e8d444be07b5d1a73 files/digest-wallpaper-1.9.2 63
-MD5 3ed246e93660503ca4dcf2e839aa8897 files/digest-wallpaper-2.0 61
-MD5 9d0b281fbd09d0f6856a46675ba92293 files/digest-wallpaper-2.1 65
-MD5 5394559a5f84d1ca65c57c3b2380195b metadata.xml 256
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST wallpaper-1.9.2.tgz 16601
+DIST wallpaper-2.0.tgz 21415
+DIST wallpaper-2.1.tar.bz2 21218
+EBUILD wallpaper-1.9.2.ebuild 491 RMD160 cc3f7eee78493ffe5aa67c048905e929f38ecbdf SHA1 2da65b37bf770c1ee4eed18717d15edbd787e4d5 SHA256 0bab9321a8053fb19fa1fd3ea35f448ef9e1f2fe1ff6afdeebbd5f5996aa1835
 MD5 82f8cddfcad12e29585fa7f4a5faebbe wallpaper-1.9.2.ebuild 491
+RMD160 cc3f7eee78493ffe5aa67c048905e929f38ecbdf wallpaper-1.9.2.ebuild 491
+SHA256 0bab9321a8053fb19fa1fd3ea35f448ef9e1f2fe1ff6afdeebbd5f5996aa1835 wallpaper-1.9.2.ebuild 491
+EBUILD wallpaper-2.0.ebuild 620 RMD160 2857afb4437b04cceffc3d14db3e3fb82b157f04 SHA1 d78e46328f73625dfa764230e47d2b3e542929a5 SHA256 968f751edb0b892be9a94073a94eadf0ae95d5dc7b1c9b8d4f17bce1ac494743
 MD5 663461b051e2706de63d6c5106373592 wallpaper-2.0.ebuild 620
+RMD160 2857afb4437b04cceffc3d14db3e3fb82b157f04 wallpaper-2.0.ebuild 620
+SHA256 968f751edb0b892be9a94073a94eadf0ae95d5dc7b1c9b8d4f17bce1ac494743 wallpaper-2.0.ebuild 620
+EBUILD wallpaper-2.1.ebuild 489 RMD160 0faed44c4116c73a28a73a235b7dd6a2a4fc3045 SHA1 858a7034841d1c8c885a232881e923404385d6cc SHA256 608de7a4d039b22684b8add4a86f39b6364848ef97a546d74763f8c3237bbcaf
 MD5 31362ebbf17900d4868e7af65c89d54b wallpaper-2.1.ebuild 489
+RMD160 0faed44c4116c73a28a73a235b7dd6a2a4fc3045 wallpaper-2.1.ebuild 489
+SHA256 608de7a4d039b22684b8add4a86f39b6364848ef97a546d74763f8c3237bbcaf wallpaper-2.1.ebuild 489
+MISC ChangeLog 864 RMD160 29395a51fd088c1aeec732b14defd01cdd695c8b SHA1 60584d1d6e2250d67c3ddeefd045af559e0f530b SHA256 05d855bf49e98126af87b38ae3744ce0701499e2ae57a28e557a460c4d89dae3
+MD5 7c69309a656b2c595e183444226c80e1 ChangeLog 864
+RMD160 29395a51fd088c1aeec732b14defd01cdd695c8b ChangeLog 864
+SHA256 05d855bf49e98126af87b38ae3744ce0701499e2ae57a28e557a460c4d89dae3 ChangeLog 864
+MISC metadata.xml 160 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 SHA1 d6147d00f16e8cfeef893d0764b0675a93d62849 SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
+MD5 95db82c4026ed28e8d444be07b5d1a73 files/digest-wallpaper-1.9.2 63
+RMD160 0a2991a6165d4a3c8b55048e9f1625dc851a1bc3 files/digest-wallpaper-1.9.2 63
+SHA256 5262bb22e3cce8debef79af218e6a226a7877140fd0deb05a14a6fddc1100eb9 files/digest-wallpaper-1.9.2 63
+MD5 3ed246e93660503ca4dcf2e839aa8897 files/digest-wallpaper-2.0 61
+RMD160 0d261e56acde8e15880623813698e0dfd9fffc4c files/digest-wallpaper-2.0 61
+SHA256 fe9fff16e42d9d271b1e1d5c1b14ce4145b4ad9ed73a03f2e6abb78c9c95bb68 files/digest-wallpaper-2.0 61
+MD5 9d0b281fbd09d0f6856a46675ba92293 files/digest-wallpaper-2.1 65
+RMD160 46c85cdf1202dce90b1a8a353240f54b58ca97bf files/digest-wallpaper-2.1 65
+SHA256 7c86aab79c33a58381712f2f3c380e06136e797d83d1293066ffc5b13ae1f0a7 files/digest-wallpaper-2.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEdLreugEuf3OQ0akRAtxPAJ9Ju6YvKNkuoZbnet30ft42vVbnHACeJ/v0
+j6ZdtZIqXMSxxu4WUKuh0Uo=
+=Vy3D
+-----END PGP SIGNATURE-----
