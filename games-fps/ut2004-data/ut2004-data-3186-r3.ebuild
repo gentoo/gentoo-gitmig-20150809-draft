@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.6 2006/04/18 14:14:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.7 2006/05/24 15:12:12 wolf31o2 Exp $
 
 inherit games games-ut2k4mod
 
@@ -23,15 +23,15 @@ dir=${GAMES_PREFIX_OPT}/ut2004
 Ddir=${D}/${dir}
 
 grabdirs() {
-	local srcdir
+	local d srcdir
 
 	for d in {Music,Sounds,Speech,StaticMeshes,Textures} ; do
 		srcdir=${CDROM_ROOT}/$1${d}
 		# Is flexible to handle CD_ROOT vs CD_ROOT_1 mixups
 		[[ -d "${srcdir}" ]] || srcdir=${CDROM_ROOT}/${d}
 		if [[ -d "${srcdir}" ]] ; then
-			echo "Copying ${srcdir}"
-			cp -r "${srcdir}" "${Ddir}" || die "copying ${srcdir}"
+			insinto "${dir}"
+			doins -r "${srcdir}" || die "doins ${srcdir} failed"
 		fi
 	done
 }
@@ -80,46 +80,36 @@ pkg_setup() {
 src_unpack() {
 	unpack_makeself "${CDROM_ROOT}"/linux-installer.sh \
 		|| die "unpacking linux installer"
-	use x86 && tar -xf "${S}"/linux-x86.tar
-	use amd64 && tar -xf "${S}"/linux-amd64.tar
+	use x86 && unpack ./linux-x86.tar
+	use amd64 && unpack ./linux-amd64.tar
 }
 
 src_install() {
-	dodir "${dir}"/System/editorres
+	local diskno srcdir varname
 
 	# Disk 1
 	einfo "Copying files from Disk 1..."
-	cp -r "${CDROM_ROOT}/${DISK1}"{Animations,ForceFeedback,Help,KarmaData,Maps,Sounds,Web} "${Ddir}" \
-		|| die "copying files"
-	cp -r "${CDROM_ROOT}/${DISK1}"System/{editorres,*.{bat,bmp,dat,det,est,frt,ini,int,itt,kot,md5,smt,tmt,u,ucl,upl,url}} \
-		"${Ddir}"/System || die "copying files"
-	mkdir -p "${Ddir}"/Manual || die "creating manual folder"
-	cp "${CDROM_ROOT}/${DISK1}"Manual/Manual.pdf "${Ddir}"/Manual \
+	insinto "${dir}"
+	doins -r "${CDROM_ROOT}/${DISK1}"{Animations,ForceFeedback,Help,KarmaData,Maps,Sounds,Web} \
+		|| die "copying directories"
+	insinto "${dir}"/System
+	doins -r "${CDROM_ROOT}/${DISK1}"System/{editorres,*.{bat,bmp,dat,det,est,frt,ini,int,itt,kot,md5,smt,tmt,u,ucl,upl,url}} \
+		|| die "copying System files"
+	insinto "${dir}"/Manual
+	doins "${CDROM_ROOT}/${DISK1}"Manual/Manual.pdf \
 		|| die "copying manual"
-	mkdir -p "${Ddir}"/Benchmark/Stuff || die "creating benchmark folders"
-	cp -r "${CDROM_ROOT}/${DISK1}"Benchmark/Stuff/* "${Ddir}"/Benchmark/Stuff \
-		|| die "copying benchmark files"
+	insinto "${dir}"/Benchmark/Stuff
+	doins -r "${CDROM_ROOT}/${DISK1}"Benchmark/Stuff/* \
+		|| die "copying Benchmark files"
 	cdrom_load_next_cd
 
-	# Disk 2
-	einfo "Copying files from Disk 2..."
-	grabdirs "${DISK2}"
-	cdrom_load_next_cd
-
-	# Disk 3
-	einfo "Copying files from Disk 3..."
-	grabdirs "${DISK3}"
-	cdrom_load_next_cd
-
-	# Disk 4
-	einfo "Copying files from Disk 4..."
-	grabdirs "${DISK4}"
-	cdrom_load_next_cd
-
-	# Disk 5
-	einfo "Copying files from Disk 5..."
-	grabdirs "${DISK5}"
-	cdrom_load_next_cd
+	for diskno in 2 3 4 5 ; do
+		einfo "Copying files from Disk ${diskno}..."
+		varname="DISK${diskno}"
+		srcdir=${!varname}
+		grabdirs "${srcdir}"
+		cdrom_load_next_cd
+	done
 
 	# Disk 6
 	einfo "Copying files from Disk 6..."
@@ -128,8 +118,8 @@ src_install() {
 	# Create empty files in Benchmark
 	for j in {CSVs,Logs,Results}
 	do
-		mkdir -p "${Ddir}/Benchmark/${j}" || die "creating folders"
-		touch "${Ddir}/Benchmark/${j}"/DO_NOT_DELETE.ME || die "creating files"
+		dodir "${dir}/Benchmark/${j}"
+		touch "${Ddir}/Benchmark/${j}"/DO_NOT_DELETE.ME || die "creating dummy files"
 	done
 
 	# Install extra help files
@@ -206,8 +196,7 @@ src_install() {
 
 	# Installing documentation/icon
 	dodoc "${S}"/README.linux || die "dodoc README.linux"
-	insinto /usr/share/pixmaps
-	doins "${S}"/ut2004.xpm || die "copying pixmap"
+	doicon "${S}"/ut2004.xpm || die "doicon ut2004.xpm"
 	insinto "${dir}"
 	doins "${S}"/{README.linux,ut2004.xpm} || die "copying readme/icon"
 
