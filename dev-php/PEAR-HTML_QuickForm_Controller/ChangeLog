@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_QuickForm_Controller
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm_Controller/ChangeLog,v 1.1 2006/03/02 06:53:35 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm_Controller/ChangeLog,v 1.2 2006/05/25 18:00:18 nixnut Exp $
+
+  25 May 2006; <nixnut@gentoo.org>
+  PEAR-HTML_QuickForm_Controller-1.0.5.ebuild:
+  Added ~ppc. bug #134270
 
 *PEAR-HTML_QuickForm_Controller-1.0.5 (02 Mar 2006)
 

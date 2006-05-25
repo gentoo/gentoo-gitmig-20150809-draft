@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Crypt_HMAC
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_HMAC/ChangeLog,v 1.1 2006/05/24 12:50:23 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_HMAC/ChangeLog,v 1.2 2006/05/25 18:17:56 nixnut Exp $
+
+  25 May 2006; <nixnut@gentoo.org> PEAR-Crypt_HMAC-1.0.1.ebuild:
+  Added ~ppc. bug #134270
 
 *PEAR-Crypt_HMAC-1.0.1 (24 May 2006)
 
