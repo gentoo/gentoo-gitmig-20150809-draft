@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r5.ebuild,v 1.12 2006/02/04 15:38:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r5.ebuild,v 1.13 2006/05/25 00:18:32 flameeyes Exp $
 
 inherit eutils flag-o-matic libtool autotools
 
@@ -19,9 +19,9 @@ RDEPEND=""
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-build.patch
-	epatch ${FILESDIR}/${P}-freebsd.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-build.patch"
+	epatch "${FILESDIR}/${P}-freebsd.patch"
 
 	eautoreconf
 	epunt_cxx
@@ -35,7 +35,7 @@ src_compile() {
 	econf \
 		$(use_enable djbfft) \
 		${myconf} || die
-	emake || die "emake failed"
+	emake CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
