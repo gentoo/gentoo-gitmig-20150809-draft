@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake2-icculus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.19 2006/05/06 10:15:39 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.20 2006/05/25 13:13:34 flameeyes Exp $
+
+  25 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  quake2-icculus-0.16.1.ebuild:
+  Use the correct CC value for cross-distcc, and add missing jpeg dependency.
+  Closes bug #134319.
 
   06 May 2006; <Tupone@gentoo.org> +files/quake2-icculus-0.16.1-gcc41.patch,
   quake2-icculus-0.16.1.ebuild:

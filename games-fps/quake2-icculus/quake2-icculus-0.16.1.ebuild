@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.13 2006/05/06 10:15:39 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.14 2006/05/25 13:13:34 flameeyes Exp $
 
-inherit eutils games
+inherit eutils toolchain-funcs games
 
 MY_P="quake2-r${PV}"
 DESCRIPTION="The icculus.org linux port of iD's quake2 engine"
@@ -26,7 +26,8 @@ RDEPEND="opengl? ( virtual/opengl )
 		virtual/x11
 	) )
 	alsa? ( media-libs/alsa-lib )
-	arts? ( kde-base/arts )"
+	arts? ( kde-base/arts )
+	media-libs/jpeg"
 DEPEND="${RDEPEND}
 	X? ( || (
 		( x11-proto/xproto x11-proto/xextproto x11-proto/xf86dgaproto x11-proto/xf86vidmodeproto )
@@ -110,6 +111,7 @@ src_compile() {
 			DEFAULT_BASEDIR="${GAMES_DATADIR}/quake2" \
 			DEFAULT_LIBDIR="${GAMES_LIBDIR}/${PN}${libsuffix}" \
 			OPT_CFLAGS="${CFLAGS}" \
+			CC="$(tc-getCC)" \
 			|| die "make failed"
 		# now we save the build dir ... except for the object files ...
 		rm release*/*/*.o
