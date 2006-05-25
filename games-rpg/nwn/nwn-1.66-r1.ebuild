@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66-r1.ebuild,v 1.14 2006/03/31 21:38:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66-r1.ebuild,v 1.15 2006/05/25 15:10:23 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -136,6 +136,12 @@ src_install() {
 		-e "s:GENTOO_GROUP:${GAMES_GROUP}:" \
 		-e "s:GENTOO_DIR:${GAMES_PREFIX_OPT}:" \
 		${Ddir}/fixinstall || die "sed"
+	if use hou || use sou
+	then
+		sed -i \
+			-e "s:nwmain patch.key:nwmain:" \
+			${Ddir}/fixinstall || die "sed"
+	fi
 	fperms ug+x ${dir}/fixinstall || die "perms"
 	mv ${S}/* ${Ddir}
 	games_make_wrapper nwn ./nwn "${dir}" "${dir}"
