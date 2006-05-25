@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdts
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.27 2006/05/24 23:48:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.28 2006/05/25 02:46:28 flameeyes Exp $
+
+  25 May 2006; Diego Pettenò <flameeyes@gentoo.org> libdts-0.0.2-r3.ebuild:
+  Add ~x86-fbsd keyword.
 
   24 May 2006; Diego Pettenò <flameeyes@gentoo.org> libdts-0.0.2-r3.ebuild:
   Rice it down, don't add extra flags to the build, like the deprecated -mtune
