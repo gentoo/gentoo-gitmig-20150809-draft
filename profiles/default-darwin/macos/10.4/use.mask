@@ -49,3 +49,6 @@ prelude
 
 # pike doesn't link for some reason #109649
 pike
+
+# xattr pulls in some deps that probably won't ever fly on OSX #121092
+xattr
