@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.5.ebuild,v 1.1 2006/05/12 00:09:17 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.5.ebuild,v 1.2 2006/05/25 00:33:32 tester Exp $
 
-inherit multilib eutils
+inherit libtool
 
 DESCRIPTION="libmp4v2 extracted from mpeg4ip"
 HOMEPAGE="http://www.mpeg4ip.net/"
@@ -17,28 +17,18 @@ DEPEND=""
 RDEPEND="!<media-video/mpeg4ip-1.4.1
 	!<media-libs/faad2-2.0-r9"
 
-S=${WORKDIR}/mpeg4ip-${PV}
+S="${WORKDIR}/mpeg4ip-${PV}"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
-	cd ${S}
-	epatch ${FILESDIR}/mpeg4ip-1.4.1-disable-faac-test.patch
-	epatch ${FILESDIR}/mpeg4ip-1.4.1-disable-sdl-test.patch
+	elibtoolize
 }
 
 src_compile() {
-
-	cd ${S}
-
-	./bootstrap --prefix=/usr \
-		--host=${CHOST} \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		--datadir=/usr/share \
-		--sysconfdir=/etc \
-		--libdir=/usr/$(get_libdir) \
-		--localstatedir=/var/lib \
+	touch bootstrapped
+	econf \
 		--disable-warns-as-err \
 		--disable-server \
 		--disable-player \
@@ -53,10 +43,9 @@ src_compile() {
 		--disable-faac \
 		--disable-ffmpeg \
 		--disable-x264 \
-		--with-pic \
-		${EXTRA_ECONF} || die "configure failed"
+		|| die "econf failed"
 
-	cd ${S}/lib/mp4v2
+	cd "${S}/lib/mp4v2"
 
 	sed -i -e 's:SUBDIRS = . test util:SUBDIRS = .:' Makefile \
 		 || die "sed failed"
@@ -66,23 +55,22 @@ src_compile() {
 
 src_install() {
 
-	cd ${S}/lib/mp4v2
+	cd "${S}/lib/mp4v2"
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc README INTERNALS API_CHANGES TODO
 
 	sed -i -e 's:"mpeg4ip.h":<libmp4v2/mpeg4ip.h>:' \
-		${D}/usr/include/mp4.h || die "sed failed"
+		"${D}/usr/include/mp4.h" || die "sed failed"
 
 	dodir /usr/include/libmp4v2
 
-	cp ${S}/include/mpeg4ip.h  ${D}/usr/include/libmp4v2/
+	cp "${S}/include/mpeg4ip.h"  "${D}/usr/include/libmp4v2/"
 	sed -i -e 's:mpeg4ip_config.h:libmp4v2/mpeg4ip_config.h:' \
 		-e 's:"mpeg4ip_version.h":<libmp4v2/mpeg4ip_version.h>:' \
-		 ${D}/usr/include/libmp4v2/mpeg4ip.h  || die "sed failed"
+		 "${D}/usr/include/libmp4v2/mpeg4ip.h"  || die "sed failed"
 
-	cp ${S}/include/mpeg4ip_version.h  ${D}/usr/include/libmp4v2/
-	cp ${S}/mpeg4ip_config.h ${D}/usr/include/libmp4v2/
-
+	cp "${S}/include/mpeg4ip_version.h" "${D}/usr/include/libmp4v2/"
+	cp "${S}/mpeg4ip_config.h" "${D}/usr/include/libmp4v2/"
 }
