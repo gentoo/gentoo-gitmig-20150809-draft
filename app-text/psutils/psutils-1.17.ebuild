@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/psutils-1.17.ebuild,v 1.27 2006/04/02 14:49:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/psutils-1.17.ebuild,v 1.28 2006/05/25 22:32:19 flameeyes Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="PostScript Utilities"
 HOMEPAGE="http://www.tardis.ed.ac.uk/~ajcd/psutils"
@@ -22,15 +24,15 @@ src_unpack() {
 	sed \
 		-e "s:/usr/local:\$(DESTDIR)/usr:" \
 		-e "s:-DUNIX -O:-DUNIX ${CFLAGS}:" \
-		${S}/Makefile.unix > ${S}/Makefile
+		"${S}/Makefile.unix" > "${S}/Makefile"
 }
 
 src_compile() {
-	make || die
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install () {
 	dodir /usr/{bin,share/man}
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc README
 }

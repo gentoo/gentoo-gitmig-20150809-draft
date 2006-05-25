@@ -1,6 +1,11 @@
 # ChangeLog for app-text/psutils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.18 2006/04/02 14:49:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.19 2006/05/25 22:32:19 flameeyes Exp $
+
+  25 May 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  psutils-1.17.ebuild:
+  Fix quoting, make use of the right CC value, use emake instead of make
+  (parallel make works), add maintainer-needed metadata.
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> psutils-1.17.ebuild:
   Add ~x86-fbsd keyword.
