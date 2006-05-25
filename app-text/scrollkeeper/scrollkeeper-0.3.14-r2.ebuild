@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14-r2.ebuild,v 1.9 2006/02/07 05:43:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14-r2.ebuild,v 1.10 2006/05/25 21:34:34 vapier Exp $
 
 inherit libtool eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="FDL-1.1 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls"
 
 RDEPEND=">=dev-libs/libxml2-2.4.19
@@ -25,50 +25,48 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.patch
-	epatch ${FILESDIR}/${P}-gcc2_fix.patch
-	epatch ${FILESDIR}/${P}-nls.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-gcc2_fix.patch
+	epatch "${FILESDIR}"/${P}-nls.patch
+
+	elibtoolize
 }
 
 src_compile() {
-	elibtoolize
-
-	local myconf=""
-
 	econf \
 		--localstatedir=/var \
 		$(use_enable nls) \
-		${myconf} || die
+		|| die
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	insinto /etc/logrotate.d
-	newins ${FILESDIR}/scrollkeeper-logrotate scrollkeeper
+	newins "${FILESDIR}"/scrollkeeper-logrotate scrollkeeper
 
-	dodoc ABOUT-NLS AUTHORS ChangeLog NEWS README TODO scrollkeeper-spec.txt
+	dodoc AUTHORS ChangeLog NEWS README TODO scrollkeeper-spec.txt
 }
 
 pkg_preinst() {
-	if [ -d ${ROOT}/usr/share/scrollkeeper/Templates ]
+	if [[ -d ${ROOT}/usr/share/scrollkeeper/Templates ]]
 	then
-		rm -rf ${ROOT}/usr/share/scrollkeeper/Templates
+		rm -rf "${ROOT}"/usr/share/scrollkeeper/Templates
 	fi
 }
 
 pkg_postinst() {
 	einfo "Installing catalog..."
-	${ROOT}/usr/bin/xmlcatalog --noout --add "public" \
+	"${ROOT}"/usr/bin/xmlcatalog --noout --add "public" \
 		"-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" \
-		"`echo "${ROOT}/usr/share/xml/scrollkeeper/dtds/scrollkeeper-omf.dtd" |sed -e "s://:/:g"`" \
+		"`echo "${ROOT}/usr/share/xml/scrollkeeper/dtds/scrollkeeper-omf.dtd" | sed -e "s://:/:g"`" \
 		${ROOT}/etc/xml/catalog
 	einfo "Rebuilding Scrollkeeper database..."
-	scrollkeeper-rebuilddb -q -p ${ROOT}/var/lib/scrollkeeper
+	scrollkeeper-rebuilddb -q -p "${ROOT}"/var/lib/scrollkeeper
 	einfo "Updating Scrollkeeper database..."
-	scrollkeeper-update -v &>${T}/foo
+	scrollkeeper-update -v &> "${T}"/foo
 }
 
 pkg_postrm() {
