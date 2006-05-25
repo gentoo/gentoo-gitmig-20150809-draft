@@ -1,14 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1.1.ebuild,v 1.5 2006/05/25 21:28:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1.1.ebuild,v 1.6 2006/05/25 21:55:35 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
-MB_PATCH="${P/-/_}-10"
+DEB_PATCH="${P/-/_}-12"
 DESCRIPTION="Text formatter used for man pages"
 HOMEPAGE="http://www.gnu.org/software/groff/groff.html"
 SRC_URI="mirror://gnu/groff/${P}.tar.gz
-	cjk? ( mirror://debian/pool/main/g/groff/${MB_PATCH}.diff.gz )"
+	mirror://debian/pool/main/g/groff/${DEB_PATCH}.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,32 +20,24 @@ PDEPEND=">=sys-apps/man-1.5k-r1"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	if use cjk; then
-		# multibyte patch contains no-color-segfault
-		epatch ${WORKDIR}/${MB_PATCH}.diff
-		epatch ${FILESDIR}/${MB_PATCH}-fix.patch
-	else
-		# Do not segfault if no color is defined in input, bug #14329
-		# <azarah@gentoo.org> (08 Feb 2003)
-		epatch ${FILESDIR}/groff-1.18.1-no-color-segfault.patch
-	fi
+	# We lub Debian
+	epatch "${WORKDIR}"/${DEB_PATCH}.diff
+	epatch "${FILESDIR}"/${P}-deb-fix.patch
 
 	# Fix the info pages to have .info extensions,
 	# else they do not get gzipped.
-	epatch ${FILESDIR}/groff-1.18-infoext.patch
+	epatch "${FILESDIR}"/groff-1.18-infoext.patch
 
 	# Do not generate example files that require us to
 	# depend on netpbm.
-	epatch ${FILESDIR}/groff-1.18-no-netpbm-depend.patch
+	epatch "${FILESDIR}"/groff-1.18-no-netpbm-depend.patch
 
 	# Make dashes the same as minus on the keyboard so that you
 	# can search for it. Fixes #17580 and #16108
 	# Thanks to James Cloos <cloos@jhcloos.com>
-	epatch ${FILESDIR}/${PN}-man-UTF-8.diff
-
-	epatch "${FILESDIR}"/${P}-gcc41.patch
+	epatch "${FILESDIR}"/${PN}-man-UTF-8.diff
 
 	# Fix syntax error in pic2graph. Closes #32300.
 	sed -i -e "s:groffpic_opts=\"-U\":groffpic_opts=\"-U\";;:" contrib/pic2graph/pic2graph.sh
