@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.0_beta20060517.ebuild,v 1.1 2006/05/20 07:00:23 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.0_beta20060517.ebuild,v 1.2 2006/05/25 19:51:10 mr_bones_ Exp $
 
 inherit eutils versionator
 
@@ -23,7 +23,7 @@ IUSE="minimal readline"
 
 DEPEND="readline? ( sys-libs/readline )"
 
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
