@@ -1,14 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r6.ebuild,v 1.1 2006/05/25 13:37:33 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r6.ebuild,v 1.2 2006/05/25 15:22:30 flameeyes Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
 DESCRIPTION="KDE libraries needed by all kde programs"
 HOMEPAGE="http://www.kde.org/"
 SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
-	mirror://gentoo/kdelibs-3.5.2-patchset.tar.bz2"
-#SRC_URI="mirror://kde/stable/3.5/src/${P}.tar.bz2"
+	mirror://gentoo/kdelibs-3.5.2-patchset.tar.bz2
+	cups? ( mirror://gentoo/kdeprint-${PV}-cups-1.2-patches.tar.bz2 )"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
@@ -17,6 +17,8 @@ IUSE="acl alsa arts cups doc jpeg2k kerberos legacyssl openexr spell ssl tiff ze
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
+
+# Added aspell-en as dependency to work around bug 131512.
 RDEPEND="$(qt_min_version 3.3.3)
 	arts? ( ~kde-base/arts-${PV} )
 	app-arch/bzip2
@@ -36,7 +38,7 @@ RDEPEND="$(qt_min_version 3.3.3)
 	kerberos? ( virtual/krb5 )
 	jpeg2k? ( media-libs/jasper )
 	openexr? ( >=media-libs/openexr-1.2 )
-	spell? ( || ( app-text/aspell
+	spell? ( || (  ( app-text/aspell app-dicts/aspell-en )
 	              app-text/ispell ) )
 	zeroconf? ( net-misc/mDNSResponder )
 	virtual/fam
@@ -72,6 +74,15 @@ src_unpack() {
 		# This patch won't be included upstream, see bug #128922
 		epatch ${FILESDIR}/kdelibs-3.5.2-kssl-3des.patch || die "Patch did not apply."
 	fi
+
+	if use cups && has_version '>=net-print/cups-1.2_pre'; then
+		cd "${S}"
+
+		EPATCH_SUFFIX="diff" \
+		EPATCH_MULTI_MSG="Applying KUbuntu patches for CUPS 1.2 support ..." \
+		EPATCH_FORCE="yes" \
+		epatch ${WORKDIR}/kdeprint-${PV}-cups-1.2-patches/
+	fi
 }
 
 src_compile() {
@@ -98,7 +109,7 @@ src_compile() {
 	fi
 
 	if has_version x11-apps/rgb; then
-		myconf="${myconf} --with-rgbfile=${ROOT}/usr/share/X11/rgb.txt"
+		myconf="${myconf} --with-rgbfile=/usr/share/X11/rgb.txt"
 	fi
 
 	myconf="${myconf} --disable-fast-malloc"
