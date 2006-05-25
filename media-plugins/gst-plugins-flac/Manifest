@@ -1,18 +1,80 @@
-MD5 109e67b416516b6a4c06aedcf0b5fd1e ChangeLog 7813
-MD5 b8ef37a0c2afb0f5505932411db81db5 files/digest-gst-plugins-flac-0.10.0 76
-MD5 79245dc2c0c8a4bd23983a836b8a9e43 files/digest-gst-plugins-flac-0.10.1 76
-MD5 1bf0484455a43eabf386bde99fb4e440 files/digest-gst-plugins-flac-0.10.2 76
-MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-flac-0.8.10 72
-MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-flac-0.8.11 72
-MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-flac-0.8.12 72
-MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-flac-0.8.8 71
-MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-flac-0.8.9 71
+DIST gst-plugins-0.8.10.tar.bz2 2397528
+DIST gst-plugins-0.8.11.tar.bz2 2439654
+DIST gst-plugins-0.8.12.tar.bz2 2506926 RMD160 cc0bbf3d790cb5791ce982fe6493bf2d8496a507 SHA1 3b65fe96aa849c463f5f968830ad76143c4b9952 SHA256 8728da4f71bc87e10fb064d28154220d66a3d8332482fd2c8a7ed47c5f0a03ba
+DIST gst-plugins-0.8.8.tar.bz2 2214274
+DIST gst-plugins-0.8.9.tar.bz2 2356958
+DIST gst-plugins-good-0.10.0.tar.bz2 898690
+DIST gst-plugins-good-0.10.1.tar.bz2 928881
+DIST gst-plugins-good-0.10.2.tar.bz2 963026 RMD160 63103286d064dc47a464c365604579c9a9ecfdab SHA1 2a4116d8bfb815b3fff117df3414b977e821dcec SHA256 dd92993d08930cca071893b5d3f5cb40a4498f3ddaf12da98c0bbe8c27605e81
+DIST gst-plugins-good-0.10.3.tar.bz2 1165391 RMD160 9010c136cfe11659f17dac05f587f51c23a37d95 SHA1 4989c57fd6c080d75f40e508ae9036ed69ff71fe SHA256 8c09374656aca4b8ffbe109a24dcdb98c5d519c4b05bf9eeeb3a34f16b26eaf5
+EBUILD gst-plugins-flac-0.10.0.ebuild 336 RMD160 16203b4202283a3e19d26c801158ec63a4873cb5 SHA1 06c8b615f594556bc80dc91fa9b4e9e119f27596 SHA256 68f81551d520a37a1590417642619db2d16d517e326313997c898e6d7743525c
 MD5 aec3c15a084bf7c16dccdcc9f8cafb34 gst-plugins-flac-0.10.0.ebuild 336
+RMD160 16203b4202283a3e19d26c801158ec63a4873cb5 gst-plugins-flac-0.10.0.ebuild 336
+SHA256 68f81551d520a37a1590417642619db2d16d517e326313997c898e6d7743525c gst-plugins-flac-0.10.0.ebuild 336
+EBUILD gst-plugins-flac-0.10.1.ebuild 337 RMD160 855078101d3c74dcfecd8378719771c34aca2ddc SHA1 323bd60395714e364b17350519988392fb3df1a5 SHA256 a7493e89c5fa2f3d32cdd43cdebad8e0a423fc4e455fe1c9aacb940126e86ef3
 MD5 ceac08079ca541018b1c549456402a94 gst-plugins-flac-0.10.1.ebuild 337
+RMD160 855078101d3c74dcfecd8378719771c34aca2ddc gst-plugins-flac-0.10.1.ebuild 337
+SHA256 a7493e89c5fa2f3d32cdd43cdebad8e0a423fc4e455fe1c9aacb940126e86ef3 gst-plugins-flac-0.10.1.ebuild 337
+EBUILD gst-plugins-flac-0.10.2.ebuild 363 RMD160 04d7abfcd7accc9ea0476ff33d57d0770c04f0c5 SHA1 785d989b15fb4d2b718b092a3489061540ca0ca1 SHA256 e65eb77bcdef022632e73d0d47426ffa6b7760464cf180be288669cefa82888f
 MD5 388d07386ce7416489eeeedbdf673b39 gst-plugins-flac-0.10.2.ebuild 363
+RMD160 04d7abfcd7accc9ea0476ff33d57d0770c04f0c5 gst-plugins-flac-0.10.2.ebuild 363
+SHA256 e65eb77bcdef022632e73d0d47426ffa6b7760464cf180be288669cefa82888f gst-plugins-flac-0.10.2.ebuild 363
+EBUILD gst-plugins-flac-0.10.3.ebuild 459 RMD160 e5dae82c688092efce162247bd8f48247f828e1c SHA1 57e706ae598b97d8e5e6906883d89f1d87ed689b SHA256 eeb429dd5774cec2ee687033a939208fb014ea1cc2b3bc4dbaeac7f79d9c3893
+MD5 ed66773655a98c35988885247b8cb332 gst-plugins-flac-0.10.3.ebuild 459
+RMD160 e5dae82c688092efce162247bd8f48247f828e1c gst-plugins-flac-0.10.3.ebuild 459
+SHA256 eeb429dd5774cec2ee687033a939208fb014ea1cc2b3bc4dbaeac7f79d9c3893 gst-plugins-flac-0.10.3.ebuild 459
+EBUILD gst-plugins-flac-0.8.10.ebuild 371 RMD160 801b21c65f85c5bb61bf54ae2df8643f5b47eb45 SHA1 c3cd32a699185a4d1e73da93c04b40bc811c70ab SHA256 dd8961929a86b34499b3e76d5e2dd1bb9c8dd316606552103db370169206f56c
 MD5 f7c9bb8f865389eec82fb50693062ffe gst-plugins-flac-0.8.10.ebuild 371
+RMD160 801b21c65f85c5bb61bf54ae2df8643f5b47eb45 gst-plugins-flac-0.8.10.ebuild 371
+SHA256 dd8961929a86b34499b3e76d5e2dd1bb9c8dd316606552103db370169206f56c gst-plugins-flac-0.8.10.ebuild 371
+EBUILD gst-plugins-flac-0.8.11.ebuild 373 RMD160 e1208b896db8108837f82bbd6763430de6e6181d SHA1 aa30aefe8f01b682739b1f0e2b879d8e188c3d31 SHA256 0de5db6d323006af0c1ff14bf52561af11fa39752cdc55be5ace16be720a7859
 MD5 f278508ded1e47721a188f2e5c619dfd gst-plugins-flac-0.8.11.ebuild 373
+RMD160 e1208b896db8108837f82bbd6763430de6e6181d gst-plugins-flac-0.8.11.ebuild 373
+SHA256 0de5db6d323006af0c1ff14bf52561af11fa39752cdc55be5ace16be720a7859 gst-plugins-flac-0.8.11.ebuild 373
+EBUILD gst-plugins-flac-0.8.12.ebuild 380 RMD160 67746933f3f95b6a0a37aad8e4be847f75ebcde5 SHA1 df1c12282f82aea1177ae23c2eab9efbb8dc6140 SHA256 6187f04490878e90eb795f494c0fe9878d33c40115652b9dc81a87ed5d220b8d
 MD5 6c26a386589e05e93a64ffedb0f38cdc gst-plugins-flac-0.8.12.ebuild 380
+RMD160 67746933f3f95b6a0a37aad8e4be847f75ebcde5 gst-plugins-flac-0.8.12.ebuild 380
+SHA256 6187f04490878e90eb795f494c0fe9878d33c40115652b9dc81a87ed5d220b8d gst-plugins-flac-0.8.12.ebuild 380
+EBUILD gst-plugins-flac-0.8.8.ebuild 369 RMD160 fe5dcb6597d402e516b7d746dbc5671948035c46 SHA1 e64ef66bd235eac2264c465df45536ddcae2f8a4 SHA256 ee1e1d4d5b05da29e5bb899ee27d39118c8cbd67e9ff9a0a60ae090efddb67f1
 MD5 5b885863069276abb80da1463a3503ee gst-plugins-flac-0.8.8.ebuild 369
+RMD160 fe5dcb6597d402e516b7d746dbc5671948035c46 gst-plugins-flac-0.8.8.ebuild 369
+SHA256 ee1e1d4d5b05da29e5bb899ee27d39118c8cbd67e9ff9a0a60ae090efddb67f1 gst-plugins-flac-0.8.8.ebuild 369
+EBUILD gst-plugins-flac-0.8.9.ebuild 379 RMD160 082b0c1ddd4dda714c0e9fd1b0966d8006d99e98 SHA1 e7fc6bbda3cfc7230ebcb9cd03006dca6ec097e1 SHA256 e9e519b69cd056af59a347a2f495a4543138ef9b320ffdced89729f2fb54e0a5
 MD5 decd926997ab22bc8b0b0066bb95c01e gst-plugins-flac-0.8.9.ebuild 379
+RMD160 082b0c1ddd4dda714c0e9fd1b0966d8006d99e98 gst-plugins-flac-0.8.9.ebuild 379
+SHA256 e9e519b69cd056af59a347a2f495a4543138ef9b320ffdced89729f2fb54e0a5 gst-plugins-flac-0.8.9.ebuild 379
+MISC ChangeLog 7962 RMD160 dadce1389280ff321fd54a44db42e735ccd50cb8 SHA1 4c7ba9dad799a216a45b6931d4ca08e71175abbe SHA256 d5f46cf987029a65c214965c3863016926393beab3f38cc95d753df935611ae7
+MD5 8f26eb34c9c60c02fe2d2189c0d76d72 ChangeLog 7962
+RMD160 dadce1389280ff321fd54a44db42e735ccd50cb8 ChangeLog 7962
+SHA256 d5f46cf987029a65c214965c3863016926393beab3f38cc95d753df935611ae7 ChangeLog 7962
+MISC metadata.xml 181 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d SHA1 faf40c45bd66b0072b95556cf7ab097d3be19511 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
+SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
+MD5 b8ef37a0c2afb0f5505932411db81db5 files/digest-gst-plugins-flac-0.10.0 76
+RMD160 c2c9a85e856fc974509b7fc93f99ffb4de03b311 files/digest-gst-plugins-flac-0.10.0 76
+SHA256 ebfe7a7cf0ee2f608f7037959107ec0ff92bbdf85c16ac3bf2562efb8ea4f3bf files/digest-gst-plugins-flac-0.10.0 76
+MD5 79245dc2c0c8a4bd23983a836b8a9e43 files/digest-gst-plugins-flac-0.10.1 76
+RMD160 97d21777d5f71055e3c8195f020410e701de998a files/digest-gst-plugins-flac-0.10.1 76
+SHA256 ea5ad800ee837feabe74ff1d5fac6d75b364dbd5e8713b3fbe0ce741318ed99a files/digest-gst-plugins-flac-0.10.1 76
+MD5 fe9a62d6f739f7cfd223099d201d8834 files/digest-gst-plugins-flac-0.10.2 274
+RMD160 22c35dad51ee8ae394e206b6a6a92eb0342f54ee files/digest-gst-plugins-flac-0.10.2 274
+SHA256 9b259ce24ad9f7b760050d3916bb8f2e376b3118bbc5b6b55c61eda4a7c54fac files/digest-gst-plugins-flac-0.10.2 274
+MD5 057902ada65c96bc6629874aac6c56ae files/digest-gst-plugins-flac-0.10.3 277
+RMD160 f3e88dabe4f78e8068e2a126106b8ddafddadf55 files/digest-gst-plugins-flac-0.10.3 277
+SHA256 0be7c43b8feb4594d9ff28266d21cb341070ed587a67fcb346ae21e7b869d8ea files/digest-gst-plugins-flac-0.10.3 277
+MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-flac-0.8.10 72
+RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-flac-0.8.10 72
+SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-flac-0.8.10 72
+MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-flac-0.8.11 72
+RMD160 07cd6ccf43ed8faecb5ed4337eea60fbc6e3e3bb files/digest-gst-plugins-flac-0.8.11 72
+SHA256 a76335f344c7fb9dc3151468f9e4fab17f2112d74ba799a05906df748b74f5fd files/digest-gst-plugins-flac-0.8.11 72
+MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-flac-0.8.12 262
+RMD160 2131a3433f3081297079de64ac7f2335c1f82036 files/digest-gst-plugins-flac-0.8.12 262
+SHA256 bac5ba90fbb314a2f7ea2a53506021944ec1b8707b20d47545a23a6fd5f4cefd files/digest-gst-plugins-flac-0.8.12 262
+MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-flac-0.8.8 71
+RMD160 74fb762aa4b4c37e0cf13ceb60aec1e2c80a83dd files/digest-gst-plugins-flac-0.8.8 71
+SHA256 8c042a1f86509a2d902bbc3d63874d8347af12c132215e8c67582fa8835e6089 files/digest-gst-plugins-flac-0.8.8 71
+MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-flac-0.8.9 71
+RMD160 59910917ac9fe162d7686f1702fb5bdd98a25154 files/digest-gst-plugins-flac-0.8.9 71
+SHA256 06e49fc70cfec9d2553ced28a9c9246324fdd21c25f6bea9142de83f1f5a8153 files/digest-gst-plugins-flac-0.8.9 71
