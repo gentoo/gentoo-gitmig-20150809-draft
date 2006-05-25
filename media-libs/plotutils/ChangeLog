@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/plotutils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.26 2005/12/13 05:34:09 spyderous Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.27 2006/05/25 13:11:50 merlin Exp $
+
+*plotutils-2.4.1-r4 (25 May 2006)
+
+  25 May 2006; Cory Visi <visi@gentoo.org> +plotutils-2.4.1-r4.ebuild:
+  Fixed syntax of replace-cpu-flags according to Bug 115242
 
   13 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   plotutils-2.4.1-r3.ebuild:
