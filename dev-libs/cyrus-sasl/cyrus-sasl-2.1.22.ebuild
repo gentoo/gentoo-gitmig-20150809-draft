@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.2 2006/05/25 19:17:49 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.3 2006/05/25 22:26:31 langthang Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -95,7 +95,7 @@ src_unpack() {
 	use crypt && epatch "${FILESDIR}/cyrus-sasl-2.1.19-checkpw.c.patch"
 
 	# Upstream doesn't even honor their own configure options... grumble
-	sed -i 's:^sasldir = .*$:sasldir = $(plugindir):' "${S}/plugins/Makefile.{am,in}"
+	sed -i 's:^sasldir = .*$:sasldir = $(plugindir):' "${S}"/plugins/Makefile.{am,in}
 
 	# Recreate configure.
 	export WANT_AUTOCONF="2.5"
@@ -224,19 +224,6 @@ src_install () {
 			|| die "failed to copy java files to ${D}/usr/share/doc/${PF}/java/Test/"
 	fi
 
-	# Generate an empty sasldb2 with correct permissions.
-	if ( use berkdb || use gdbm ) && [[ ! -f "${ROOT}/etc/sasl2/sasldb2" ]]; then
-		LD_OLD="${LD_LIBRARY_PATH}"
-		export LD_LIBRARY_PATH="${D}/usr/$(get_libdir)" SASL_PATH="${D}/usr/$(get_libdir)/sasl2"
-		einfo "Generate an empty sasldb2 with correct permissions."
-		echo "p" | "${D}/usr/sbin/saslpasswd2" -f "${D}/etc/sasl2/sasldb2" -p login \
-			|| die "failed to generate sasldb2"
-		"${D}/usr/sbin/saslpasswd2" -f "${D}/etc/sasl2/sasldb2" -d login
-		export LD_LIBRARY_PATH="${LD_OLD}"
-		chown root:mail "${D}/etc/sasl2/sasldb2"
-		chmod 0640 "${D}/etc/sasl2/sasldb2"
-	fi
-
 	docinto ""
 	dodoc AUTHORS COPYING ChangeLog NEWS README doc/TODO doc/*.txt
 	newdoc pwcheck/README README.pwcheck
@@ -259,6 +246,19 @@ src_install () {
 }
 
 pkg_postinst () {
+	# Generate an empty sasldb2 with correct permissions.
+	if ( use berkdb || use gdbm ) && [[ ! -f "${ROOT}/etc/sasl2/sasldb2" ]]; then
+		einfo "Generate an empty sasldb2 with correct permissions."
+		echo "p" | "${ROOT}/usr/sbin/saslpasswd2" -f "${ROOT}/etc/sasl2/sasldb2" -p login \
+			|| die "failed to generate sasldb2"
+		"${ROOT}/usr/sbin/saslpasswd2" -f "${ROOT}/etc/sasl2/sasldb2" -d login \
+			|| die "failed to delete temp user"
+		chown root:mail "${D}/etc/sasl2/sasldb2" \
+			|| die "failed to chown ${ROOT}/etc/sasl2/sasldb2"
+		chmod 0640 "${D}/etc/sasl2/sasldb2" \
+			|| die "failed to chmod ${ROOT}/etc/sasl2/sasldb2"
+	fi
+
 	if use sample; then
 		einfo "You have chosen to install sources for example client and server."
 		einfo "To build these, please type:"

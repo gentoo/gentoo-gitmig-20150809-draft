@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.146 2006/05/25 18:18:50 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.147 2006/05/25 22:26:31 langthang Exp $
+
+  25 May 2006; Tuấn Văn <langthang@gentoo.org> cyrus-sasl-2.1.22.ebuild:
+  move the block generates sasldb2 to pkg_postinst.
 
 *cyrus-sasl-2.1.22 (25 May 2006)
 
