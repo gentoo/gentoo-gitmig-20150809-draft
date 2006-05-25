@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX libfwbuilder-1.0.2-libxml2.patch 2166 RMD160 7d049cdf9e5d4ea24f0c47a00416451ccd459893 SHA1 e19a9ca1f4fda2747554bd8f3d1944d09ac847a9 SHA256 075d97fd4df4b6e012f24de946de2744228e9865aa896657d34dfd1484d82ab2
 MD5 bd7f345d52b044e87b5cea9d1017f4bf files/libfwbuilder-1.0.2-libxml2.patch 2166
 RMD160 7d049cdf9e5d4ea24f0c47a00416451ccd459893 files/libfwbuilder-1.0.2-libxml2.patch 2166
@@ -13,7 +10,7 @@ DIST libfwbuilder-1.0.2-2.tar.gz 403462
 DIST libfwbuilder-2.0.10.tar.gz 281849 RMD160 52421549d403785421a667c0dd4238d2cecf6b16 SHA256 468aa458877f324778220af1cf823b9f33e8d55b2d491f9741fa04e3729051df
 DIST libfwbuilder-2.0.11.tar.gz 282022
 DIST libfwbuilder-2.0.12.tar.gz 282065
-DIST libfwbuilder-2.0.6.tar.gz 281256
+DIST libfwbuilder-2.0.6.tar.gz 281256 RMD160 ea8cb352a34d495614ba41445e2062b09f0574d4 SHA1 532c668d25e166b4da2f9a202ebad014f6385b3b SHA256 1744fb3f1efe0593245d0ceada1c06e56bb002c493f31233a0b2536b6a0b95ab
 DIST libfwbuilder-2.0.7.tar.gz 281340
 DIST libfwbuilder-2.0.8.tar.gz 281404
 DIST libfwbuilder-2.0.9.tar.gz 281637
@@ -29,10 +26,10 @@ EBUILD libfwbuilder-2.0.11.ebuild 830 RMD160 fb3654f241144a0d5666b542006eb0f1c2f
 MD5 c22b1141a664a9bf4b462f359b25d0c1 libfwbuilder-2.0.11.ebuild 830
 RMD160 fb3654f241144a0d5666b542006eb0f1c2fcb848 libfwbuilder-2.0.11.ebuild 830
 SHA256 09194900d47bae7274e04501f71444cded60791f5dd32b59c630eb0c3128fb06 libfwbuilder-2.0.11.ebuild 830
-EBUILD libfwbuilder-2.0.12.ebuild 831 RMD160 932a50d49ea18b06c1e83384a68f7db4c2872b66 SHA1 6125bba99e2115b275ee37c187abcc466faf6b84 SHA256 e84f8e6eb50306fa816ffe7dbac6a370c1832fb108d0f518769dd0007862810b
-MD5 99205627438b50e470b1bece7fa5ae5a libfwbuilder-2.0.12.ebuild 831
-RMD160 932a50d49ea18b06c1e83384a68f7db4c2872b66 libfwbuilder-2.0.12.ebuild 831
-SHA256 e84f8e6eb50306fa816ffe7dbac6a370c1832fb108d0f518769dd0007862810b libfwbuilder-2.0.12.ebuild 831
+EBUILD libfwbuilder-2.0.12.ebuild 828 RMD160 dd9e9f754e5e5cdbaee810f2742ead5197b660af SHA1 d4f1cf629378e1fd139a553951e1b6c88ae0d645 SHA256 fd862a7bf40df8d6e6724a6fb8962678a85b8d35aa2ea677baf82499bb7ffed6
+MD5 8435271550234c7404ca30a0e0468aed libfwbuilder-2.0.12.ebuild 828
+RMD160 dd9e9f754e5e5cdbaee810f2742ead5197b660af libfwbuilder-2.0.12.ebuild 828
+SHA256 fd862a7bf40df8d6e6724a6fb8962678a85b8d35aa2ea677baf82499bb7ffed6 libfwbuilder-2.0.12.ebuild 828
 EBUILD libfwbuilder-2.0.6.ebuild 799 RMD160 fccccdb7986dd8637ca447bf128d723eefc528f1 SHA1 a86bb3ee260f2c9ff22e782f233673853141500e SHA256 86521bce4f2d7ede126de2cca8c90d43ef20e74984e7e34f5c09ca281d5fc7ea
 MD5 990394895c89adcecd264ca76a39f1bd libfwbuilder-2.0.6.ebuild 799
 RMD160 fccccdb7986dd8637ca447bf128d723eefc528f1 libfwbuilder-2.0.6.ebuild 799
@@ -49,10 +46,10 @@ EBUILD libfwbuilder-2.0.9.ebuild 811 RMD160 3e5fa0670c337da8e6d298822a47045b9828
 MD5 7b940aa96bd322bd7f08ec693cb72b1b libfwbuilder-2.0.9.ebuild 811
 RMD160 3e5fa0670c337da8e6d298822a47045b98285a8c libfwbuilder-2.0.9.ebuild 811
 SHA256 d9d6eb6bcf2a2f88cae71410b9649f317ff3550affcd90937f5eb27f8c2b17c3 libfwbuilder-2.0.9.ebuild 811
-MISC ChangeLog 8830 RMD160 7531a1d13341dbd9e38c63b2151b7e3cf0b6c196 SHA1 fbecc0cf63edb632d1f603161af9c09eca5854ee SHA256 2c16827fab3daf50f2dac1fcc46fb59fcffa232d3841892e68581ea6bc64a08e
-MD5 d3c61a8e0c715e92ef3b19f660dd5f9d ChangeLog 8830
-RMD160 7531a1d13341dbd9e38c63b2151b7e3cf0b6c196 ChangeLog 8830
-SHA256 2c16827fab3daf50f2dac1fcc46fb59fcffa232d3841892e68581ea6bc64a08e ChangeLog 8830
+MISC ChangeLog 8942 RMD160 c66e907bb1c2d9a1aa4b696129944997474ae227 SHA1 68bf722d69f1c0d4331fceb31ad53fb086ea9f23 SHA256 5c5984a9bbf7cd97e7ef87c2bbf0d0ebad406bb424fa93b4bdf5dfb9b4c47010
+MD5 31c74e2f63288700c168cd6127aaac85 ChangeLog 8942
+RMD160 c66e907bb1c2d9a1aa4b696129944997474ae227 ChangeLog 8942
+SHA256 5c5984a9bbf7cd97e7ef87c2bbf0d0ebad406bb424fa93b4bdf5dfb9b4c47010 ChangeLog 8942
 MISC metadata.xml 233 RMD160 d81ec1a0582856aeac5ef3bfec5c80d9850216f6 SHA1 9b94f113e7f382076b1749c2a856e409c96cade3 SHA256 dce03f6cdd96135caf3c971a5ca4a8c916f44532fe8cfb6df88b7bdade407e8b
 MD5 4eda2fda81ea6a89d8f1f4a2dcd12a85 metadata.xml 233
 RMD160 d81ec1a0582856aeac5ef3bfec5c80d9850216f6 metadata.xml 233
@@ -69,9 +66,9 @@ SHA256 f9be4b59d9ede3521d5096a917fd5f80b8f9b2ef8f20aa03894eeb0fa1674462 files/di
 MD5 98b05431ace7cb0b432b2412cf9bf644 files/digest-libfwbuilder-2.0.12 71
 RMD160 222b34d43e0bc8a26f3850d0fcf24d2db096e835 files/digest-libfwbuilder-2.0.12 71
 SHA256 16b6d5157c1675f979ae1bc28b25e37ae9249451135fef3c4eb56caf75065232 files/digest-libfwbuilder-2.0.12 71
-MD5 318eed1dc99e8153d2dfdfd9cca6923e files/digest-libfwbuilder-2.0.6 70
-RMD160 f0ddb0a4556752b933e1a0eca1e745f7aec578c0 files/digest-libfwbuilder-2.0.6 70
-SHA256 d263684296ee0d6eeef7deab21ae42d6dc52d47b80d4d3dc67ba51c1040db26d files/digest-libfwbuilder-2.0.6 70
+MD5 e91d71eb71bee45bd1ada85bc8842130 files/digest-libfwbuilder-2.0.6 256
+RMD160 515e2722c53df9d09860364835b07faaade1c90f files/digest-libfwbuilder-2.0.6 256
+SHA256 d083709663f7cf92532c0299aa807bc7e7dbc2176d8169088d30851edf34f202 files/digest-libfwbuilder-2.0.6 256
 MD5 5814377092615185560afd95d6514ffe files/digest-libfwbuilder-2.0.7 70
 RMD160 dc08c250eaa051d508a854f05bc765c2c7fbaa58 files/digest-libfwbuilder-2.0.7 70
 SHA256 0579be00fe2511e42b11b51dd8a4ade44cde3b62a64309d187c8bc764d7aa16f files/digest-libfwbuilder-2.0.7 70
@@ -81,10 +78,3 @@ SHA256 45f8ea93bf5967db7b494879839945a9aeb94366659e39d608354b0f55f74193 files/di
 MD5 385e4e0f1c7c8636e0f9b213785ff7c4 files/digest-libfwbuilder-2.0.9 70
 RMD160 8efec0451733bba3294b144c0c39ce877f8410f9 files/digest-libfwbuilder-2.0.9 70
 SHA256 fc73762fb9ddba597a76cbe720b8f48ceaf9a1eb184106740a7a1fe8a8e8d07a files/digest-libfwbuilder-2.0.9 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdck1kT4lNIS36YERArWNAJ9FZLMG5fKcdva4HaK+WwVdnUvv/QCgj56k
-26Pp0HHCVcIodH26pR950ms=
-=a7Ca
------END PGP SIGNATURE-----
