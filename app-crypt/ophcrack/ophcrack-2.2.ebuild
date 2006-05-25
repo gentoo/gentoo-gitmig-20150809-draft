@@ -1,14 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-2.2.ebuild,v 1.1 2006/05/15 10:39:11 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-2.2.ebuild,v 1.2 2006/05/25 21:57:33 kugelfang Exp $
 
 inherit eutils
 
 DESCRIPTION="A time-memory-trade-off-cracker"
 HOMEPAGE="http://ophcrack.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-		 !ophsmall?(http://lasecwww.epfl.ch/SSTIC04-5k.zip)
-		 ophsmall?(http://lasecwww.epfl.ch/SSTIC04-10k.zip)"
+		 !ophsmall? ( http://lasecwww.epfl.ch/SSTIC04-5k.zip )
+		 ophsmall? ( http://lasecwww.epfl.ch/SSTIC04-10k.zip )"
 
 LICENSE="GPL-2"
 SLOT="0"
