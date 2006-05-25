@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.4.ebuild,v 1.6 2006/05/25 23:22:32 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.5.ebuild,v 1.1 2006/05/25 23:22:32 nerdboy Exp $
 
 inherit eutils
 
@@ -10,14 +10,14 @@ SRC_URI="ftp://ftp.ncsa.uiuc.edu/HDF/HDF5/current/src/${P}.tar.gz"
 
 LICENSE="NCSA-HDF"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86"
-# need to update szip to get sparc, alpha, and ia64 back in here, 
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+# need to update szip to get sparc, alpha, and ia64 back in here,
 # as well as work out the mpi issues
 IUSE="static zlib ssl mpi hlapi szip threads debug"
 
 DEPEND="zlib? ( sys-libs/zlib )
 		szip? ( sci-libs/szip )
-		mpi? ( sys-cluster/mpich2 )"
+		mpi? ( virtual/mpi )"
 
 src_compile() {
 	local myconf="--with-pic"
