@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmp4v2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.16 2006/05/25 00:33:31 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.17 2006/05/25 02:55:19 flameeyes Exp $
+
+  25 May 2006; Diego Pettenò <flameeyes@gentoo.org> libmp4v2-1.5.ebuild:
+  Add ~x86-fbsd keyword.
 
   25 May 2006; Olivier Crête <tester@gentoo.org> libmp4v2-1.5.ebuild:
   Stopped using useless bootstrap scripts, made ebuild saner, thanks to patch

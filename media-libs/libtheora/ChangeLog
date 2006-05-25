@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libtheora
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.37 2006/05/25 00:20:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.38 2006/05/25 02:58:36 flameeyes Exp $
+
+  25 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libtheora-1.0_alpha5.ebuild:
+  Add ~x86-fbsd keyword.
 
   25 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   libtheora-1.0_alpha5.ebuild:

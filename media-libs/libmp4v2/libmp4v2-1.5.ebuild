@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.5.ebuild,v 1.2 2006/05/25 00:33:32 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.5.ebuild,v 1.3 2006/05/25 02:55:19 flameeyes Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ LICENSE="MPL-1.1"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 DEPEND=""
 RDEPEND="!<media-video/mpeg4ip-1.4.1
