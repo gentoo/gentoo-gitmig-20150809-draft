@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/boson
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.15 2006/05/12 15:42:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.16 2006/05/25 21:50:54 tupone Exp $
+
+  25 May 2006; <Tupone@gentoo.org> +files/boson-0.11-gcc41.patch,
+  +files/boson-0.11-install.patch, boson-0.11.ebuild:
+  Fix installation, bug #133851 by nyhm
+  Fix for gcc-4.1, bug #133852 by nyhm
 
   12 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> -boson-0.10.ebuild,
   boson-0.11.ebuild:
