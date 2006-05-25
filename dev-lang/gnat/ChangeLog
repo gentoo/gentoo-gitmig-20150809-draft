@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gnat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.48 2006/05/13 20:17:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.49 2006/05/25 14:07:32 hansmi Exp $
+
+  25 May 2006; Michael Hanselmann <hansmi@gentoo.org> gnat-3.45.ebuild:
+  Stable on ppc.
 
   13 May 2006; George Shapovalov <george@gentoo.org> gnat-3.15p-r3.ebuild,
   gnat-3.15p-r4.ebuild, gnat-3.15p-r5.ebuild, gnat-3.41.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.45.ebuild,v 1.8 2006/05/13 20:17:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.45.ebuild,v 1.9 2006/05/25 14:07:32 hansmi Exp $
 
 inherit flag-o-matic
 
@@ -19,7 +19,7 @@ DEPEND="=sys-devel/gcc-3.4*
 	!dev-lang/gnat-gpl"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 LICENSE="GMGPL"
 IUSE=""
 
