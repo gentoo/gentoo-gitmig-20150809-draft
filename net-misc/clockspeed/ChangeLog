@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/clockspeed
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.17 2004/11/02 00:30:23 robbat2 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.18 2006/05/25 21:50:38 robbat2 Exp $
+
+*clockspeed-0.62-r4 (25 May 2006)
+
+  25 May 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/leapsecs.dat.20060525, +clockspeed-0.62-r4.ebuild:
+  Bug #114251, revision bump with updated leapsecs.dat for the leap second at
+  the end of 2005. Also did minor QA cleanups.
 
   01 Nov 2004; Robin H. Johnson <robbat2@gentoo.org>
   clockspeed-0.62-r3.ebuild:
