@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.40-r2.ebuild,v 1.2 2006/05/23 18:18:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.40-r2.ebuild,v 1.3 2006/05/25 19:53:15 wolf31o2 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 IUSE="gtk doc"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
 
 DEPEND=">=media-libs/netpbm-9.12
 	doc? ( >=media-gfx/transfig-3.2 )
