@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.7.5c-r1.ebuild,v 1.1 2005/10/12 00:27:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.7.5c-r1.ebuild,v 1.2 2006/05/25 19:27:50 kloeri Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://spe.pycs.net/"
 SRC_URI="http://download.berlios.de/python/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 S=${WORKDIR}/${MY_P}
 

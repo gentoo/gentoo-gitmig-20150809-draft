@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/spe
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.24 2006/05/25 19:17:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.25 2006/05/25 19:27:50 kloeri Exp $
+
+  25 May 2006; Bryan Østergaard <kloeri@gentoo.org> spe-0.7.5c-r1.ebuild:
+  Bump stable to 0.7.5c, fixing bug 111954.
 
 *spe-0.8.2 (25 May 2006)
 
