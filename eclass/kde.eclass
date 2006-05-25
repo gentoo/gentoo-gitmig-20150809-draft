@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.154 2006/05/25 11:12:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.155 2006/05/25 11:24:11 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -21,12 +21,11 @@ fi
 
 # Set USE_KEG_PACKAGING=1 before inheriting if the package use extragear-like
 # packaging and then supports ${LANGS} and ${LANGS_DOC} variables.
-# Don't enable until repoman is fixed.
-# if [[ -n ${USE_KEG_PACKAGING} && -n "${LANGS}${LANGS_DOC}" ]]; then
-# 	for lang in ${LANGS} ${LANGS_DOC}; do
-# 		IUSE="${IUSE} linguas_${lang}"
-# 	done
-# fi
+if [[ -n ${USE_KEG_PACKAGING} && -n "${LANGS}${LANGS_DOC}" ]]; then
+	for lang in ${LANGS} ${LANGS_DOC}; do
+		IUSE="${IUSE} linguas_${lang}"
+	done
+fi
 
 DEPEND=">=sys-devel/automake-1.7.0
 	sys-devel/autoconf
