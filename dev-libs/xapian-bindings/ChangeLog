@@ -1,6 +1,18 @@
 # ChangeLog for dev-libs/xapian-bindings
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.1 2006/05/05 16:04:57 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.2 2006/05/25 01:33:58 marienz Exp $
+
+*xapian-bindings-0.9.6 (25 May 2006)
+
+  25 May 2006; Marien Zwart <marienz@gentoo.org>
+  +files/xapian-bindings-0.9.6-java-array-delete.patch,
+  +files/xapian-bindings-0.9.6-parallel-make.patch,
+  +files/xapian-bindings-0.9.6-php-tests.patch,
+  +files/xapian-bindings-0.9.6-php-tests-2.patch,
+  +xapian-bindings-0.9.6.ebuild:
+  Version bump with new ruby bindings. Now also builds the java bindings if
+  requested. Ebuild cleanup based on suggestions from Olly Betts
+  (<olly@survex.com>).
 
 *xapian-bindings-0.9.5 (05 May 2006)
 
