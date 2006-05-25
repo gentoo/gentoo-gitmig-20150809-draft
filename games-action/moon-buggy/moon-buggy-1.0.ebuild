@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/moon-buggy-1.0.ebuild,v 1.4 2005/09/02 19:39:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/moon-buggy-1.0.ebuild,v 1.5 2006/05/25 23:59:01 mr_bones_ Exp $
 
-inherit eutils games
+inherit autotools eutils games
 
 DESCRIPTION="A simple console game, where you drive a car across the moon's surface"
 HOMEPAGE="http://www.seehuhn.de/comp/moon-buggy.html"
@@ -26,7 +26,7 @@ src_unpack() {
 		|| die "sed Makefile.in failed"
 	use esd && epatch sound.patch
 	rm -f missing
-	autoreconf -i || die "autoreconf failed"
+	eautoreconf
 }
 
 src_compile() {
