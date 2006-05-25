@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.14 2006/05/18 09:12:49 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.15 2006/05/25 11:53:26 george Exp $
 #
 # This eclass provides the framework for ada lib installation with the split and
 # SLOTted gnat compilers (gnat-xxx, gnatbuild.eclass). Each lib gets built once
@@ -64,10 +64,83 @@ expand_BuildEnv() {
 	local line
 	for line in $(cat $1); do
 		EnvVar=$(echo ${line}|cut -d"=" -f1)
-		echo "export ${line}:\${${EnvVar}}" >> $1.tmp
+		if [[ "${EnvVar}" == "PATH" ]] ; then
+			echo "export ${line}:\${${EnvVar}}" >> $1.tmp
+		else
+			echo "export ${line}" >> $1.tmp
+		fi
 	done
 	mv $1.tmp $1
 }
+
+
+# ------------------------------------
+# Helpers
+#
+# may be moved to a seperate eclas, if enough accumulated inthis one and in
+# gnatbuild.eclass..
+
+# get_all_profile_components splits gnat profile and returns array of its components:
+# x86_64-pc-linux-gnu-gnat-gcc-4.1  -> x86_64-pc-linux-gnu-gnat gcc 4.1
+# params:
+#  $1 - the string to split
+get_all_profile_components() {
+	local GnatSLOT=${1##*-}
+	local remainder=${1%-*}
+	local GnatPkg=${reminder##*-}
+	remainder=${1%-*}
+	echo "${remainder} ${GnatPkg} ${GnatSLOT}"
+}
+
+# similar to above, returns only SLOT component:
+# x86_64-pc-linux-gnu-gnat-gcc-4.1  -> 4.1
+# params:
+#  $1 - the string to extract the slot from
+get_gnat_SLOT() {
+	echo "${1##*-}"
+}
+
+# returns only Pkg component:
+# x86_64-pc-linux-gnu-gnat-gcc-4.1  -> gcc
+# params:
+#  $1 - the string to extract the slot from
+get_gnat_Pkg() {
+	local items=(get_all_profile_components $1)
+	echo ${items[1]}
+}
+
+# returns only Arch component:
+# x86_64-pc-linux-gnu-gnat-gcc-4.1  -> x86_64-pc-linux-gnu
+# params:
+#  $1 - the string to extract the slot from
+get_gnat_Arch() {
+	local items=(get_all_profile_components $1)
+	echo ${items[0]}
+}
+
+
+
+# The purpose of this one is to remove all parts of the env entry specific to a
+# given lib. Usefull when some lib wants to act differently upon detecting
+# itself installed..
+# params:
+#  $1 - name of env var to process
+#  $2 (opt) - name of the lib to filter out (defaults to ${PN})
+filter_env_var() {
+	local entries=(${!1//:/ })
+	local libName=${2:-${PN}}
+	echo "entries=${entries[@]}" >> /tmp/gnat.eclass.rep
+	ewarn "libName=${libName}" >> /tmp/gnat.eclass.rep
+	local env_str
+	for entry in ${entries[@]} ; do
+		echo "entry=${entry}" >> /tmp/gnat.eclass.rep
+		if [[ ${entry:$((-${#libName}))} != ${libName} ]] ; then
+			env_str="${env_str}:${entry}"
+		fi
+	done
+	echo ${env_str}
+}
+
 
 # ------------------------------------
 # Functions
@@ -182,16 +255,25 @@ gnat_src_compile() {
 			# copy sources
 			mkdir ${DL}
 			cp -dpR ${S} ${SL}
+
 			# setup environment
 			# As eselect-gnat also manages the libs, this will ensure the right
 			# lib profiles are activated too (in case we depend on some Ada lib)
 			do_set ${compilers[${i}]} ${BuildEnv}
 			expand_BuildEnv ${BuildEnv}
 			. ${BuildEnv}
+			# many libs (notably xmlada and gtkada) do not like to see
+			# themselves installed. Need to strip them from ADA_*_PATH
+			# NOTE: this should not be done in pkg_setup, as we setup
+			# environment right above
+			export ADA_INCLUDE_PATH=$(filter_env_var ADA_INCLUDE_PATH)
+			export ADA_OBJECTS_PATH=$(filter_env_var ADA_OBJECTS_PATH)
+
 			# call compilation callback
 			cd ${SL}
 			gnat_filter_flags ${compilers[${i}]}
 			lib_compile ${compilers[${i}]} || die "failed compiling for ${compilers[${i}]}"
+
 			# call install callback
 			lib_install ${compilers[${i}]} || die "failed installing profile-specific part for ${compilers[${i}]}"
 			# move installed and cleanup
