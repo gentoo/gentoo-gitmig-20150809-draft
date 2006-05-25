@@ -1,4 +1,4 @@
-MD5 b30e83ebd982c2d718e903241599195e ChangeLog 52599
+MD5 edd69441c105c0b911b47306a26a9bda ChangeLog 52771
 MD5 9cca33d11b8344231d13330e0ccffe36 files/digest-kdelibs-3.3.2-r10 1873
 MD5 c9cf9449167d9dfb76d6d964f43224ba files/digest-kdelibs-3.4.1-r1 247
 MD5 c9cf9449167d9dfb76d6d964f43224ba files/digest-kdelibs-3.4.1-r2 247
@@ -10,6 +10,7 @@ MD5 85fd726353f691cf1582d2d026621525 files/digest-kdelibs-3.5.2-r2 250
 MD5 85fd726353f691cf1582d2d026621525 files/digest-kdelibs-3.5.2-r3 250
 MD5 278ff9ac32b7ca6efb3e76996ad8e962 files/digest-kdelibs-3.5.2-r4 542
 MD5 d35882ad289a95a0c4bb1554c39f59d8 files/digest-kdelibs-3.5.2-r5 150
+MD5 bd085bf627590d1adf02c13763dd811e files/digest-kdelibs-3.5.2-r6 142
 MD5 a5d3cb18c9572d8ca3dd06cbe5d226f1 files/kde3-dcopidlng.patch 681
 MD5 25ab050b323a8efb2049fd770f50058b files/kdelibs-3.3.2-anchor-fix.patch 5947
 MD5 d3df6d042148fd884422822aaf4ffbab files/kdelibs-3.3.2-aspell-dir.patch 467
@@ -44,4 +45,5 @@ MD5 a16c66fff6c663988a028192d97a00db kdelibs-3.5.2-r2.ebuild 4092
 MD5 18775b90e73dcefd4db71497d6017420 kdelibs-3.5.2-r3.ebuild 4123
 MD5 089cd3566acc95b1bdb233c6cb058e5b kdelibs-3.5.2-r4.ebuild 5054
 MD5 1048447b0822e4735b004830fb2cb2b9 kdelibs-3.5.2-r5.ebuild 5057
+MD5 6d601b7af099f2dc1e152aafa44d734f kdelibs-3.5.2-r6.ebuild 4725
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

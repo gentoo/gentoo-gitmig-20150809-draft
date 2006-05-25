@@ -1,4 +1,4 @@
-MD5 58304499e0d6774062737bc90680c569 ChangeLog 26240
+MD5 8c8697d7c4be494862dd6e75cec21271 ChangeLog 26515
 MD5 c14a4c18500dc39686b2942d92cc42fd files/digest-kdepim-3.3.2 244
 MD5 c14a4c18500dc39686b2942d92cc42fd files/digest-kdepim-3.3.2-r1 244
 MD5 c17af48925ddb684ccf7e9adb654b70a files/digest-kdepim-3.4.1 247
@@ -10,6 +10,7 @@ MD5 078792b016dc323d645d7a2b33ed6913 files/digest-kdepim-3.4.3 247
 MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kdepim-3.5.2 247
 MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kdepim-3.5.2-r1 247
 MD5 342529061ff068b5002fa430c5c6b20c files/digest-kdepim-3.5.2-r2 67
+MD5 49eecd190e7c26b1797147da88ebcada files/digest-kdepim-3.5.2-r3 140
 MD5 d35a0d3aa0ceb7fabae33d323ae281dd files/imap-dos.diff 588
 MD5 678530a6c8baabd5d9cbe817b5c571f2 files/kdepim-3.2.3-cjk.diff 6957
 MD5 c516924ee249a2899621263d30ac3676 files/kdepim-3.3.2-kmail-imap-preview.diff 667
@@ -34,5 +35,6 @@ MD5 00f99ae1a1b1e152e071f2f91da7e96f kdepim-3.4.2.ebuild 973
 MD5 40662a512fc737c13db04684ac1782b9 kdepim-3.4.3.ebuild 871
 MD5 3e28baa8b3c3eb6206216af71fe48655 kdepim-3.5.2-r1.ebuild 714
 MD5 50acf3000c2725a9c64734ca0f1779b9 kdepim-3.5.2-r2.ebuild 937
+MD5 6b4e9a75849e23dda57abce965b6a5d8 kdepim-3.5.2-r3.ebuild 1055
 MD5 522b4644f1bff6c1f1b7d592573ed72b kdepim-3.5.2.ebuild 677
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

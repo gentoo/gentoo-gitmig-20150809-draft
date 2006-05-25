@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.201 2006/05/19 01:49:48 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.202 2006/05/25 13:33:41 carlo Exp $
+
+  25 May 2006; Carsten Lohrke <carlo@gentoo.org> +kdepim-3.5.2-r3.ebuild:
+  Accumulated patches from the split packages.
+
+*kdepim-3.5.2-r3 (25 May 2006)
+
+  25 May 2006; Carsten Lohrke <carlo@gentoo.org> +kdepim-3.5.2-r3.ebuild:
+  Accumulated patches form the split packages.
 
   17 May 2006; <psi29a@gentoo.org> kdepim-3.5.2-r2.ebuild:
   added to ~mips for testing
