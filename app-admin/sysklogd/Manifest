@@ -1,49 +1,29 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 07f84fcc7e9ccbc8778d5863c927e987 ChangeLog 5895
-RMD160 0d1437f1bebff65fce068a70ce495aa5eb93aade ChangeLog 5895
-SHA256 255269d3da377a61bf3781090e44c4f4be997313289d5fdfa85d4fa33b321eba ChangeLog 5895
+MD5 8141eece68f0b78b43f72cbdd9be76f2 ChangeLog 6357
 MD5 01d7ea5644c29972a910ab27e3ab4738 files/digest-sysklogd-1.4.1-r11 65
-RMD160 e06309208fab2d610d3ad14345c44e63aba9c1ce files/digest-sysklogd-1.4.1-r11 65
-SHA256 77b92afe4ae03d0a2ee4621ea0aae64f20452808c895641a095f269a17d9c93c files/digest-sysklogd-1.4.1-r11 65
+MD5 5f4c00c1c302c0e501fb6c6fb205a31e files/digest-sysklogd-1.4.2 145
 MD5 295e4c6eea23fe444002333ffff7b1dc files/sysklogd-1.4.1-2.6.headers.patch 25062
-RMD160 8b0b177d2a3741e452243f465158110bf981dcf6 files/sysklogd-1.4.1-2.6.headers.patch 25062
-SHA256 206aa506b0943e24b5f5305c669ddcfe88a72fc18e221b6eaf087cefb39c50d6 files/sysklogd-1.4.1-2.6.headers.patch 25062
 MD5 e1376d40e02cf8026882cd4451267fed files/sysklogd-1.4.1-SO_BSDCOMPAT.patch 2523
-RMD160 be25a8670bc2653344e4a8412feb0649ab3885d1 files/sysklogd-1.4.1-SO_BSDCOMPAT.patch 2523
-SHA256 e86b24d2f8312b2d4ccfc1d0bb14c5e4553494732758170ba3efae0713eef8b9 files/sysklogd-1.4.1-SO_BSDCOMPAT.patch 2523
+MD5 02bb787e1a15cf24e8673f629fa645da files/sysklogd-1.4.1-caen-owl-klogd-drop-root.diff 4320
+MD5 d58d980a5d4360697e858b24b78e0b29 files/sysklogd-1.4.1-caen-owl-syslogd-bind.diff 3215
+MD5 8094b334231fcf44732763868133eeec files/sysklogd-1.4.1-caen-owl-syslogd-drop-root.diff 2907
 MD5 25bda21e29fe4f22b6f57691e395e0f3 files/sysklogd-1.4.1-mips.patch 363
-RMD160 1ea8316ee6d38b7049581882b91490f515ac0eb9 files/sysklogd-1.4.1-mips.patch 363
-SHA256 b5369c61e9c169ab8ee6a82c0f4f7678f001403098bc233a5139e4045dc4d22c files/sysklogd-1.4.1-mips.patch 363
+MD5 69f88108e424b23702d9398ce09d00b7 files/sysklogd-1.4.1-querymod.patch 10441
 MD5 e25d7b583b7e4bd8be503b89e1771e90 files/sysklogd.confd 113
-RMD160 08edc849adba1b6678832f50fb822b6338c464d5 files/sysklogd.confd 113
-SHA256 11a1eeb9edd09639d5143227bada137945822b23c5abb88fec5ebaef064b991d files/sysklogd.confd 113
-MD5 faf75c09d1694eea615a03b8f2c9aee2 files/sysklogd.rc6 1735
-RMD160 f1b9e42aff8e4f38636387cfdd4dfff2b32628b4 files/sysklogd.rc6 1735
-SHA256 a98294f13fe4fc591c5ebdc87bca2f2e32161028b28d2d6aa2d2544dc0cd9480 files/sysklogd.rc6 1735
+MD5 076b94f99cc06543e18693ca3d8de4fd files/sysklogd.rc6 1893
 MD5 ed1fec7ebbb4eb91447909e972f1a224 files/syslog-cron 701
-RMD160 d05e3345a59b96ab1446be171c0300fba7b2ca00 files/syslog-cron 701
-SHA256 97f22ed6ef785d396dcf0f67df43af30457f9155fc21a973f48b50b4981f4c74 files/syslog-cron 701
 MD5 a4ca2a78eecd855928cc313d7c243819 files/syslog.conf 2332
-RMD160 1b3ee0e7bee6098849379fe7cbb31101f401c9bb files/syslog.conf 2332
-SHA256 1b5f4782d958760de5842a34471676892624df8e972c07148d598bb7128b79e8 files/syslog.conf 2332
 MD5 39526162728783b83aabc6754a6df208 files/syslogd-listfiles 2759
-RMD160 c5991ba76e451ca43a1cf7d92addda8dec15055c files/syslogd-listfiles 2759
-SHA256 8622d5efba7bcbaa912f689cde94d6d331dfd1b53701be7bf6bfc06e57fe3a98 files/syslogd-listfiles 2759
 MD5 5d4b89ceb689887a6cbb582b875bf3e7 files/syslogd-listfiles.8 2540
-RMD160 338e2e6313f7ff0b7f5939ee4297000e91927084 files/syslogd-listfiles.8 2540
-SHA256 e8e624d7efef7e2c74be3f87cf3708fe25334feb6e759705d1560001df81c145 files/syslogd-listfiles.8 2540
 MD5 6fe58567b648100d4ff11902921b6889 metadata.xml 165
-RMD160 84307ea324cd4f0f46d52f2fa096a1873e2fbe53 metadata.xml 165
-SHA256 23a8851c12bd4cf7cf0528250ad5605be6b0780bbec0c51331d6d2c618c13f6a metadata.xml 165
-MD5 36f8c203391cef46e6f7e95283f9a7c3 sysklogd-1.4.1-r11.ebuild 1430
-RMD160 3ec039f821285febe4a16658900a7d4af35fef1e sysklogd-1.4.1-r11.ebuild 1430
-SHA256 56bfea442b34c04f1083ccb4e1efebf63988a51c754db86ba8624d169cf4a961 sysklogd-1.4.1-r11.ebuild 1430
+MD5 39840d555ebf738d6250ea9796f53f28 sysklogd-1.4.1-r11.ebuild 1430
+MD5 32183b29bda176450c70d43d628a8b20 sysklogd-1.4.2.ebuild 1852
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD+0l3CRZPokWLroQRAv9iAJ9YO/Nr0KezOzqtkKENjoaGQJXaLQCgyt0X
-bcMgR1pMZAnuzlRBM+riyGM=
-=MG92
+iD8DBQFEdQBxK3VlI3Kj19sRArQQAJ9dGTpB9NV23V38BwLR0ggKQ+vCbQCgqrNG
++tWXDvnQ927lb5V8JeRpuNc=
+=HQ2l
 -----END PGP SIGNATURE-----

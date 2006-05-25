@@ -1,9 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/files/sysklogd.rc6,v 1.10 2005/02/12 00:59:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/files/sysklogd.rc6,v 1.11 2006/05/25 00:54:56 merlin Exp $
 
 opts="reload"
+
+opts="start stop reload restart"
 
 depend() {
 	need clock hostname
@@ -33,6 +35,13 @@ stop_daemon() {
 
 	[[ -z ${daemon} ]] && return 1
 
+
+reload(){
+	ebegin "Reloading configuration"
+	killall -HUP syslogd &>/dev/null
+	killall -USR2 klogd &> /dev/null
+	eend $?
+}
 	ebegin "sysklogd -> stop: ${daemon}"
 	# syslogd can be stubborn some times (--retry 15)...
 	start-stop-daemon --stop --oknodo --retry 15 \

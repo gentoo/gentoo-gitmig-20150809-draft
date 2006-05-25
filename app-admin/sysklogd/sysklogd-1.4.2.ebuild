@@ -1,16 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r11.ebuild,v 1.6 2006/05/25 00:54:56 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.2.ebuild,v 1.1 2006/05/25 00:54:56 merlin Exp $
 
 inherit eutils
 
+CVS_DATE="20051017"
+MY_P=${PN}-1.4.1
+S="${WORKDIR}/${MY_P}"
+
 DESCRIPTION="Standard log daemons"
 HOMEPAGE="http://www.infodrom.org/projects/sysklogd/"
-SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/${P}.tar.gz"
+SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/${MY_P}.tar.gz
+	http://dev.gentoo.org/~merlin/${MY_P}-cvs-${CVS_DATE}.patch.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="test"
 
@@ -21,16 +26,25 @@ PROVIDE="virtual/logger"
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
+
+	# CVS patch / effectively version to 1.4.2
+	epatch "${WORKDIR}/${MY_P}-cvs-${CVS_DATE}.patch"
+
+	# CAEN/OWL security patches
+	epatch "${FILESDIR}/${MY_P}-caen-owl-syslogd-bind.diff"
+	epatch "${FILESDIR}/${MY_P}-caen-owl-syslogd-drop-root.diff"
+	epatch "${FILESDIR}/${MY_P}-caen-owl-klogd-drop-root.diff"
+
+	# Handle SO_BSDCOMPAT being depricated in 2.5+ kernels.
+	epatch "${FILESDIR}/${MY_P}-SO_BSDCOMPAT.patch"
+
+	# http://linuxfromscratch.org/pipermail/patches/2003-October/000432.html
+	epatch "${FILESDIR}/${MY_P}-querymod.patch"
+
 	sed -i \
 		-e "s:-O3:${CFLAGS} -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE:" \
 		Makefile || die "sed CFLAGS"
-
-	# Handle SO_BSDCOMPAT being depricated in 2.5+ kernels.
-	epatch "${FILESDIR}"/${P}-SO_BSDCOMPAT.patch
-	epatch "${FILESDIR}"/${P}-2.6.headers.patch
-	epatch "${FILESDIR}"/${PN}-1.4.1-mips.patch
 }
 
 src_compile() {

@@ -1,6 +1,17 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.39 2006/02/21 17:09:02 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.40 2006/05/25 00:54:56 merlin Exp $
+
+*sysklogd-1.4.2 (24 May 2006)
+
+  24 May 2006; Cory Visi <visi@gentoo.org>
+  +files/sysklogd-1.4.1-caen-owl-klogd-drop-root.diff,
+  +files/sysklogd-1.4.1-caen-owl-syslogd-bind.diff,
+  +files/sysklogd-1.4.1-caen-owl-syslogd-drop-root.diff,
+  +files/sysklogd-1.4.1-cvs-20051017.patch,
+  +files/sysklogd-1.4.1-querymod.patch, +sysklogd-1.4.2.ebuild:
+  Updated to version 1.4.2 using CVS patch, added a security update, fix header
+  patch, see Bug 109671 for details
 
   21 Feb 2006; Mark Loeser <halcy0n@gentoo.org> +metadata.xml:
   Add metadata.xml
