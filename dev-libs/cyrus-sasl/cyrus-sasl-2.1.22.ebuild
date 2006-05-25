@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.3 2006/05/25 22:26:31 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.4 2006/05/25 22:38:28 langthang Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -253,9 +253,9 @@ pkg_postinst () {
 			|| die "failed to generate sasldb2"
 		"${ROOT}/usr/sbin/saslpasswd2" -f "${ROOT}/etc/sasl2/sasldb2" -d login \
 			|| die "failed to delete temp user"
-		chown root:mail "${D}/etc/sasl2/sasldb2" \
+		chown root:mail "${ROOT}/etc/sasl2/sasldb2" \
 			|| die "failed to chown ${ROOT}/etc/sasl2/sasldb2"
-		chmod 0640 "${D}/etc/sasl2/sasldb2" \
+		chmod 0640 "${ROOT}/etc/sasl2/sasldb2" \
 			|| die "failed to chmod ${ROOT}/etc/sasl2/sasldb2"
 	fi
 
