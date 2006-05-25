@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.7 2006/01/27 01:46:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.8 2006/05/25 06:00:32 robbat2 Exp $
+
+*ipset-2.2.9.20060508 (25 May 2006)
+
+  25 May 2006; Robin H. Johnson <robbat2@gentoo.org>
+  ipset-2.2.8.20051203.ebuild, +ipset-2.2.9.20060508.ebuild:
+  Bug #126878, upstream seems to have changed the directory name inside the
+  tarball. Also version bump that fixes a return code issue.
 
   27 Jan 2006; Robin H. Johnson <robbat2@gentoo.org>
   ipset-2.2.8.20051203.ebuild:

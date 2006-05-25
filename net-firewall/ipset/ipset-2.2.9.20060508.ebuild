@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.2.8.20051203.ebuild,v 1.3 2006/05/25 06:00:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.2.9.20060508.ebuild,v 1.1 2006/05/25 06:00:32 robbat2 Exp $
 
 inherit eutils flag-o-matic versionator linux-info
 
