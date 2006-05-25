@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/kio_burn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/ChangeLog,v 1.5 2006/05/25 14:42:32 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/ChangeLog,v 1.6 2006/05/25 16:19:07 wolf31o2 Exp $
+
+  25 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> konqburn-0.9.ebuild:
+  Stable on x86 wrt bug #134332.
 
   25 May 2006; Carsten Lohrke <carlo@gentoo.org> konqburn-0.9.ebuild:
   Missing dependency.
