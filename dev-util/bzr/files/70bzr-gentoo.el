@@ -1,3 +1,3 @@
 ;;; bzr site-lisp configuration
 
-(load "bzr-mode.el")
+(load "bzr-mode")
