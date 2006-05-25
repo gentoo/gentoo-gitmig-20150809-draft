@@ -1,29 +1,86 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 81cc968fd43c5335cb9284b6d78be4ca ChangeLog 8904
-MD5 c1a7d072ddaa87c67e47e135f6cbd1cf files/digest-fwbuilder-1.1.2 68
-MD5 1ebee6eb666d0497c90817ccbf7768dc files/digest-fwbuilder-2.0.10 69
-MD5 057ba9b40b0b6e4bbdeba7ef598b2ce4 files/digest-fwbuilder-2.0.11 69
-MD5 350a84aea9a004e27bbbb3bf64209a57 files/digest-fwbuilder-2.0.12 69
-MD5 70fea7193b1f73a34e3cf49a2ac9c9c7 files/digest-fwbuilder-2.0.6 68
-MD5 99c3ff5a964d751686899517a6b90485 files/digest-fwbuilder-2.0.7 68
-MD5 1675a2e188765ced03b1eefd161a103f files/digest-fwbuilder-2.0.8 68
-MD5 654b2735bc2da5c253033998bd6ae490 files/digest-fwbuilder-2.0.9 68
+AUX fwbuilder-1.1.2-nls_fix.patch 382 RMD160 3e99d476def7f388c4d6651399054d667821e0a3 SHA1 1386926557e7b057f50385c8a04deb9a1eba284d SHA256 30ed10eac60f9ad2a7203a1f67d7155a258539c92fa9f8218765cf34dd6d80ac
 MD5 b7ecd1d8440ad584eead03ccddd2a800 files/fwbuilder-1.1.2-nls_fix.patch 382
+RMD160 3e99d476def7f388c4d6651399054d667821e0a3 files/fwbuilder-1.1.2-nls_fix.patch 382
+SHA256 30ed10eac60f9ad2a7203a1f67d7155a258539c92fa9f8218765cf34dd6d80ac files/fwbuilder-1.1.2-nls_fix.patch 382
+DIST fwbuilder-1.1.2.tar.gz 1720734
+DIST fwbuilder-2.0.10.tar.gz 1385925
+DIST fwbuilder-2.0.11.tar.gz 1388530
+DIST fwbuilder-2.0.12.tar.gz 1389953
+DIST fwbuilder-2.0.6.tar.gz 1178100
+DIST fwbuilder-2.0.7.tar.gz 1222857
+DIST fwbuilder-2.0.8.tar.gz 1299625
+DIST fwbuilder-2.0.9.tar.gz 1383715
+EBUILD fwbuilder-1.1.2.ebuild 1390 RMD160 841992aa45d13d3b7196fe7a7d8b28ee7b598f24 SHA1 d0e16c7f470f07f18a99c698eaf3117966c026c6 SHA256 276510e5c76cdb9ac0fbe1ec34f40efa4b97144d16970ac57c46bcc5cd5953d0
 MD5 11e6f232f520cdf75476e709f2b3bc7e fwbuilder-1.1.2.ebuild 1390
+RMD160 841992aa45d13d3b7196fe7a7d8b28ee7b598f24 fwbuilder-1.1.2.ebuild 1390
+SHA256 276510e5c76cdb9ac0fbe1ec34f40efa4b97144d16970ac57c46bcc5cd5953d0 fwbuilder-1.1.2.ebuild 1390
+EBUILD fwbuilder-2.0.10.ebuild 1073 RMD160 4515ab00ba24e61baceb76a51d8f2486b7c73290 SHA1 e0dc85dd64ad65c26a5cb3582f8f5ab04a5f6aa2 SHA256 dd880cd278d2571ace49d3d5c480da3dfa9880ebb4c5d8374617603cacc75f20
 MD5 85203384c880992ddc71e65fc0988dbc fwbuilder-2.0.10.ebuild 1073
+RMD160 4515ab00ba24e61baceb76a51d8f2486b7c73290 fwbuilder-2.0.10.ebuild 1073
+SHA256 dd880cd278d2571ace49d3d5c480da3dfa9880ebb4c5d8374617603cacc75f20 fwbuilder-2.0.10.ebuild 1073
+EBUILD fwbuilder-2.0.11.ebuild 1073 RMD160 b8d98a53dc405d89c4a9aa2f8d3f674b338b01f5 SHA1 df76c20fe2413cb7bf7468eb9348c01e3e157c83 SHA256 ebc36f282d9808e93510d2305267a3f07c47f2bb0be0ee91fbd71f3359821b35
 MD5 2301309cbaf10b3aeb0d8bf827d235ea fwbuilder-2.0.11.ebuild 1073
-MD5 c55956d58fb3ad65f121b6f2270491ce fwbuilder-2.0.12.ebuild 1075
+RMD160 b8d98a53dc405d89c4a9aa2f8d3f674b338b01f5 fwbuilder-2.0.11.ebuild 1073
+SHA256 ebc36f282d9808e93510d2305267a3f07c47f2bb0be0ee91fbd71f3359821b35 fwbuilder-2.0.11.ebuild 1073
+EBUILD fwbuilder-2.0.12.ebuild 1074 RMD160 b06233506348e9b0a51054c78443760c9b34c0a8 SHA1 d90aabb905167f71e21c1c4902387d8c6b2ff6a9 SHA256 5f42309f0c6a7df2dac7663b3d476047491a94b61b99d6b153b54a748010ae3f
+MD5 621201b1ad3ebd0679c408c57725b9f9 fwbuilder-2.0.12.ebuild 1074
+RMD160 b06233506348e9b0a51054c78443760c9b34c0a8 fwbuilder-2.0.12.ebuild 1074
+SHA256 5f42309f0c6a7df2dac7663b3d476047491a94b61b99d6b153b54a748010ae3f fwbuilder-2.0.12.ebuild 1074
+EBUILD fwbuilder-2.0.6.ebuild 897 RMD160 55ab0564254113e460085dc9f294eafd10f6c31e SHA1 759dc7aa0a17741b2609fd13e6855ddeb5af6c62 SHA256 a5411b51fc4b3e5d107d40a5da0e88d8316732817fc6c6f88fec5028ad8284b8
 MD5 665b2d8e8a0822627a068fb476f6af4b fwbuilder-2.0.6.ebuild 897
+RMD160 55ab0564254113e460085dc9f294eafd10f6c31e fwbuilder-2.0.6.ebuild 897
+SHA256 a5411b51fc4b3e5d107d40a5da0e88d8316732817fc6c6f88fec5028ad8284b8 fwbuilder-2.0.6.ebuild 897
+EBUILD fwbuilder-2.0.7.ebuild 1065 RMD160 5b0da637d959f916e1dba74d7eb494d2cfcae0a8 SHA1 1d10faa06f0d9dc672e8fb2f7be521edee164226 SHA256 a2cc1fdce5bb004c5bd3e550bf4a22f0860aa5c1386aa7cdbce7358178461716
 MD5 3f87b8e4164e6f4c3f71fd427a2f6019 fwbuilder-2.0.7.ebuild 1065
+RMD160 5b0da637d959f916e1dba74d7eb494d2cfcae0a8 fwbuilder-2.0.7.ebuild 1065
+SHA256 a2cc1fdce5bb004c5bd3e550bf4a22f0860aa5c1386aa7cdbce7358178461716 fwbuilder-2.0.7.ebuild 1065
+EBUILD fwbuilder-2.0.8.ebuild 1065 RMD160 a815215ef35f9d50d717a5d65951925dc8640871 SHA1 bb1d9271bd3fcfa74d4ea2d7314b42e18dc86915 SHA256 23ec51d2793fc935d8a724702130e6968167efc5bc11c7aa077de9c21a61a1bb
 MD5 c4b7edfc17c76edf4f94cc4a96223e86 fwbuilder-2.0.8.ebuild 1065
+RMD160 a815215ef35f9d50d717a5d65951925dc8640871 fwbuilder-2.0.8.ebuild 1065
+SHA256 23ec51d2793fc935d8a724702130e6968167efc5bc11c7aa077de9c21a61a1bb fwbuilder-2.0.8.ebuild 1065
+EBUILD fwbuilder-2.0.9.ebuild 1072 RMD160 c6ccffb6c8b68ec34292d5009b9774a12b778c96 SHA1 8bd0971fbbab685799ae250e1895ccc14dc868c0 SHA256 e1f19fb921e8bd7833c3e1f4656513378261125903dbed18fdfcab91af366075
 MD5 e52a5762b7b935db4155c3c5d10f62da fwbuilder-2.0.9.ebuild 1072
+RMD160 c6ccffb6c8b68ec34292d5009b9774a12b778c96 fwbuilder-2.0.9.ebuild 1072
+SHA256 e1f19fb921e8bd7833c3e1f4656513378261125903dbed18fdfcab91af366075 fwbuilder-2.0.9.ebuild 1072
+MISC ChangeLog 9019 RMD160 8d1ac1c1b2a82182877dd451ab01d804a5f9c74f SHA1 b44ded6c2aeac09e1a9ca626319c2eb561de34e2 SHA256 27b55aeebdc6bc608a10d374ab27c59abd339b4c580b55d723619b6f7031aff7
+MD5 77ab9c6a348668e3aae22e8f29eff39c ChangeLog 9019
+RMD160 8d1ac1c1b2a82182877dd451ab01d804a5f9c74f ChangeLog 9019
+SHA256 27b55aeebdc6bc608a10d374ab27c59abd339b4c580b55d723619b6f7031aff7 ChangeLog 9019
+MISC metadata.xml 233 RMD160 d81ec1a0582856aeac5ef3bfec5c80d9850216f6 SHA1 9b94f113e7f382076b1749c2a856e409c96cade3 SHA256 dce03f6cdd96135caf3c971a5ca4a8c916f44532fe8cfb6df88b7bdade407e8b
 MD5 4eda2fda81ea6a89d8f1f4a2dcd12a85 metadata.xml 233
+RMD160 d81ec1a0582856aeac5ef3bfec5c80d9850216f6 metadata.xml 233
+SHA256 dce03f6cdd96135caf3c971a5ca4a8c916f44532fe8cfb6df88b7bdade407e8b metadata.xml 233
+MD5 c1a7d072ddaa87c67e47e135f6cbd1cf files/digest-fwbuilder-1.1.2 68
+RMD160 773385458f545eeab4d7129c21b0e93d71d15618 files/digest-fwbuilder-1.1.2 68
+SHA256 9894e425fc3539a66c7a1d034f218855378cecd5ad43884cba96853a25daff7c files/digest-fwbuilder-1.1.2 68
+MD5 1ebee6eb666d0497c90817ccbf7768dc files/digest-fwbuilder-2.0.10 69
+RMD160 7c623b438fcf114e680940dc2ff871f7f02cb8ec files/digest-fwbuilder-2.0.10 69
+SHA256 dc7a2dea0b7b2b13f840610d3f3727ad5965ac6ee659daa140ab6f95070c1e6a files/digest-fwbuilder-2.0.10 69
+MD5 057ba9b40b0b6e4bbdeba7ef598b2ce4 files/digest-fwbuilder-2.0.11 69
+RMD160 59d92ec5705715e48c0719af215fd96586b15402 files/digest-fwbuilder-2.0.11 69
+SHA256 6d891877464b31101008e8df135ee422417eeca6f642c581e94e778dd078c9d0 files/digest-fwbuilder-2.0.11 69
+MD5 350a84aea9a004e27bbbb3bf64209a57 files/digest-fwbuilder-2.0.12 69
+RMD160 98be4e6bd043e51f9add9cf580be2cdc78e09884 files/digest-fwbuilder-2.0.12 69
+SHA256 7b4d78ab561635959d8f7a92001bdc9529950025c48cc7a360c5ec96bf1511f9 files/digest-fwbuilder-2.0.12 69
+MD5 70fea7193b1f73a34e3cf49a2ac9c9c7 files/digest-fwbuilder-2.0.6 68
+RMD160 4e94e0d2933b6e90f8dfbddf315e420e9c60b6e2 files/digest-fwbuilder-2.0.6 68
+SHA256 9b8730e03e943afecf5eb6fe65ea18b2b5865fc41601a5b8192cf79a26585a3a files/digest-fwbuilder-2.0.6 68
+MD5 99c3ff5a964d751686899517a6b90485 files/digest-fwbuilder-2.0.7 68
+RMD160 6da0892937d200ba8a4bac8760e1c95257f40370 files/digest-fwbuilder-2.0.7 68
+SHA256 b55dddeb42b30a03f00b145157fa71b7b966fd1da99d3172e2449d2503410e16 files/digest-fwbuilder-2.0.7 68
+MD5 1675a2e188765ced03b1eefd161a103f files/digest-fwbuilder-2.0.8 68
+RMD160 6d9db9ecd567addd426271c0e2a710c7fb8f6c9d files/digest-fwbuilder-2.0.8 68
+SHA256 f930559f1ea35ca8f0e0e639bf055565ac2ad8fa722981b413c045c7f8f681f0 files/digest-fwbuilder-2.0.8 68
+MD5 654b2735bc2da5c253033998bd6ae490 files/digest-fwbuilder-2.0.9 68
+RMD160 b6b118b4fcf3ca3643c0c6198a5ce49f90dbeb5c files/digest-fwbuilder-2.0.9 68
+SHA256 9897703b8bf32ebcbdebab54cde4458642f487b6a8d30146d77e5998e0674a2e files/digest-fwbuilder-2.0.9 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEc2x+KRy60XGEcJIRAjJ9AJ9vJSVXUTfeqiBWqliuePXn1BrtQwCeJrAD
-DON6aFSTBonsQ51C8BKVatw=
-=l9eC
+iD8DBQFEdcl8kT4lNIS36YERAoixAJ9FDiZZy7fgrgyUvOliMHGcPLjFiwCeLJfs
+wQZzjPaEWpTR43KgBrm+p1c=
+=IMp9
 -----END PGP SIGNATURE-----
