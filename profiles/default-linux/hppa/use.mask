@@ -1,24 +1,28 @@
-# 2006/05/14 - Tobias Scherbaum <dertobi123@gentoo.org>
+# 2006/05/25 Guy Martin <gmsoft@gentoo.org>
+# libaio is not ported on hppa
+aio
+
+# 2006/05/14 Tobias Scherbaum <dertobi123@gentoo.org>
 # media-video/totem
 nvtv
 
-# 2006/05/12 - Tobias Scherbaum <dertobi123@gentoo.org>
+# 2006/05/12 Tobias Scherbaum <dertobi123@gentoo.org>
 # gnome-extra/nautilus et al: Masking as mono is still not supported on hppa
 beagle
 
-# 2006/04/26 - Saleem Abdulrasool <compnerd@gentoo.org>
+# 2006/04/26 Saleem Abdulrasool <compnerd@gentoo.org>
 # sys-apps/dmidecode: masking with vapier's blessings
 dmi
 
-# 2006/03/13 - Jeroen Roovers <jer@gentoo.org>
+# 2006/03/13 Jeroen Roovers <jer@gentoo.org>
 # media-libs/openal: Masking until a version is available for hppa
 openal
 
-# 2006/03/07 - Donnie Berkholz <spyderous@gentoo.org>
+# 2006/03/07 Donnie Berkholz <spyderous@gentoo.org>
 # Modular X: mask for architectures lacking direct rendering      
 dri
 
-# 2006/02/05 - Donnie Berkholz <spyderous@gentoo.org>
+# 2006/02/05 Donnie Berkholz <spyderous@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
 video_cards_apm
 video_cards_ark
