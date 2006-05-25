@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.7.ebuild,v 1.3 2006/02/21 15:04:43 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.7.ebuild,v 1.4 2006/05/25 13:23:30 dragonheart Exp $
+
+inherit eutils
 
 MY_P="WepDecrypt-${PV}"
 DESCRIPTION="Enhanced version of WepAttack a tool for breaking 802.11 WEP keys"
@@ -19,6 +21,11 @@ RDEPEND="X? ( >=x11-libs/fltk-1.1.6 )
 	dev-libs/openssl"
 
 DEPEND="${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-makefile.patch
+}
 
 src_compile() {
 	local conf
