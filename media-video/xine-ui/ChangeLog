@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.122 2006/05/03 21:06:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.123 2006/05/25 03:02:13 flameeyes Exp $
+
+  25 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xine-ui-0.99.4-r5.ebuild:
+  Add ~x86-fbsd keyword.
 
   03 May 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata to list media-video@gentoo.org as maintainer.

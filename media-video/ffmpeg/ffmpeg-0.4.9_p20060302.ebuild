@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060302.ebuild,v 1.14 2006/05/08 04:23:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060302.ebuild,v 1.15 2006/05/25 03:01:00 flameeyes Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -21,7 +21,7 @@ SLOT="0"
 # ~alpha need to test aac useflag
 # ~ia64 ~arm ~mips ~hppa
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="aac altivec amr debug doc ieee1394 a52 encode imlib mmx ogg vorbis oss
 	test theora threads truetype v4l x264 xvid dts network zlib sdl"
 
