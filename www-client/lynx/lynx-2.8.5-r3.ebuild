@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.5-r3.ebuild,v 1.4 2006/04/02 17:50:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.5-r3.ebuild,v 1.5 2006/05/25 22:42:59 exg Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,6 @@ DEPEND="sys-libs/ncurses
 	nls? ( sys-devel/gettext )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	bzip2? ( app-arch/bzip2 )"
-PROVIDE="virtual/textbrowser"
 
 S="${WORKDIR}/${PN}${PV//./-}"
 
