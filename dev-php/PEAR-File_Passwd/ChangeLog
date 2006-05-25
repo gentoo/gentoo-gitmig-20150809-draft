@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-File_Passwd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Passwd/ChangeLog,v 1.1 2006/02/25 07:29:44 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Passwd/ChangeLog,v 1.2 2006/05/25 18:52:20 nixnut Exp $
+
+  25 May 2006; <nixnut@gentoo.org> PEAR-File_Passwd-1.1.6.ebuild:
+  Added ~ppc. bug #134270
 
 *PEAR-File_Passwd-1.1.6 (25 Feb 2006)
 
