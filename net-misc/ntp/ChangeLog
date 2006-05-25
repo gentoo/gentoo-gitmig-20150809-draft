@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.72 2006/05/04 01:10:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.73 2006/05/25 22:33:48 exg Exp $
+
+  25 May 2006; Emanuele Giaquinta <exg@gentoo.org> ntp-4.2.0-r2.ebuild,
+  ntp-4.2.0.20040617-r3.ebuild, ntp-4.2.0.20050303-r1.ebuild,
+  ntp-4.2.0.20060224.ebuild:
+  Use caps instead of !nodroproot to enable libcap support.
 
 *ntp-4.2.0.20060224 (04 May 2006)
 

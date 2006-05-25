@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20050303-r1.ebuild,v 1.5 2006/03/31 00:37:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20050303-r1.ebuild,v 1.6 2006/05/25 22:33:48 exg Exp $
 
 inherit eutils
 
@@ -13,11 +13,11 @@ SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/snapshots/ntp-stable/${PV
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="logrotate parse-clocks nodroproot selinux ssl ipv6 openntpd debug"
+IUSE="logrotate parse-clocks caps selinux ssl ipv6 openntpd debug"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.1
-	kernel_linux? ( !nodroproot? ( sys-libs/libcap ) )
+	kernel_linux? ( caps? ( sys-libs/libcap ) )
 	!openntpd? ( !net-misc/openntpd )
 	ssl? ( dev-libs/openssl )
 	selinux? ( sec-policy/selinux-ntp )"
@@ -66,7 +66,7 @@ src_unpack() {
 src_compile() {
 	hax_bitkeeper
 	econf \
-		$(use_enable !nodroproot linuxcaps) \
+		$(use_enable caps linuxcaps) \
 		$(use_enable parse-clocks) \
 		$(use_enable ipv6) \
 		$(use_enable debug debugging) \
@@ -105,7 +105,7 @@ src_install() {
 	newconfd "${FILESDIR}"/ntpd.confd ntpd
 	newinitd "${FILESDIR}"/ntp-client.rc ntp-client
 	newconfd "${FILESDIR}"/ntp-client.confd ntp-client
-	use nodroproot && dosed "s|-u ntp:ntp||" /etc/conf.d/ntpd
+	use caps || dosed "s|-u ntp:ntp||" /etc/conf.d/ntpd
 	dosed "s:-Q::" /etc/conf.d/ntp-client # no longer needed
 	dosed "s:/usr/bin:/usr/sbin:" /etc/init.d/ntpd
 
