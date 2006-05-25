@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.9-r4.ebuild,v 1.3 2005/01/01 16:01:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.9-r4.ebuild,v 1.4 2006/05/25 17:40:49 merlin Exp $
 
 inherit flag-o-matic eutils
 
