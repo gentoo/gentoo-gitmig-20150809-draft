@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.155 2006/05/25 11:24:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.156 2006/05/25 14:41:40 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -191,7 +191,7 @@ kde_src_compile() {
 				# Visiblity stuff is broken. Just disable it when it's present.
 				export kde_cv_prog_cxx_fvisibility_hidden=no
 
-				if hasq kdehiddenvisibility ${IUSE}; then
+				if hasq kdehiddenvisibility ${IUSE} && use kdehiddenvisibility; then
 					if [[ $(gcc-major-version)$(gcc-minor-version) -ge 41 ]]; then
 						unset kde_cv_prog_cxx_fvisibility_hidden
 						myconf="$myconf $(use_enable kdehiddenvisibility gcc-hidden-visibility)"
