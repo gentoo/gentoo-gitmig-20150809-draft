@@ -1,9 +1,45 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 23791191f1c4d093b02634496951f899 ChangeLog 6187
-RMD160 5ec12b8256051e13b80b5c17968c200d8886d5f9 ChangeLog 6187
-SHA256 23efeab83435cad1dadc08f4e759c9522357346b5a82bc255ece809218b6e666 ChangeLog 6187
+AUX kdebase-3.4.2-konqueror-filter.patch 899 RMD160 5161e8c9895372eef07a962d7f64adabb951313e SHA1 d327caae0b0522016b9b41fc66973afb5d1a363e SHA256 0debb9cd5d8ac571924a135893c146d58aa5770e9fc60fd6363607432d6bab77
+MD5 3a0e10a5717024b020d970bd121d589a files/kdebase-3.4.2-konqueror-filter.patch 899
+RMD160 5161e8c9895372eef07a962d7f64adabb951313e files/kdebase-3.4.2-konqueror-filter.patch 899
+SHA256 0debb9cd5d8ac571924a135893c146d58aa5770e9fc60fd6363607432d6bab77 files/kdebase-3.4.2-konqueror-filter.patch 899
+DIST kdebase-3.4.0-3.4.1.tar.xdelta 1089415
+DIST kdebase-3.4.0.tar.bz2 22670772
+DIST kdebase-3.4.1-3.4.2.tar.xdelta 928157
+DIST kdebase-3.4.1.tar.bz2 22433034
+DIST kdebase-3.4.2.tar.bz2 22466433
+DIST kdebase-3.4.3.tar.bz2 22425835
+DIST kdebase-3.5.2.tar.bz2 23590820 RMD160 216ff59c49bb4fee2aa3b7d976ec40a8cccff107 SHA256 21150b7e553e83487e70e70e3d13ce107c6c5d57133b40f413807887a9e431f7
+EBUILD konqueror-3.4.1.ebuild 774 RMD160 bd1f07b58497dce6c170789f4c2a39daf075bea1 SHA1 3739c76625320cc4a73caed7d8f879a2392b617e SHA256 91f5916f09b1a8e8a64cf4b7142124e48ac1b666d99bfb287736d0b3303bffca
+MD5 56e97c5040d28b656c9e7c9c6e05a95f konqueror-3.4.1.ebuild 774
+RMD160 bd1f07b58497dce6c170789f4c2a39daf075bea1 konqueror-3.4.1.ebuild 774
+SHA256 91f5916f09b1a8e8a64cf4b7142124e48ac1b666d99bfb287736d0b3303bffca konqueror-3.4.1.ebuild 774
+EBUILD konqueror-3.4.2-r1.ebuild 969 RMD160 c108601e2df4dc2248ae1915e72fb035b1c50641 SHA1 ae7debcd4be90e061f183b3fba8a8fdeeb69f6ed SHA256 b6efbe4248db79f173ebd9532b765469c508c64949ae0bfcf2c7b65dc8614cec
+MD5 0451e0225115ecd1a652e2ecfebc180f konqueror-3.4.2-r1.ebuild 969
+RMD160 c108601e2df4dc2248ae1915e72fb035b1c50641 konqueror-3.4.2-r1.ebuild 969
+SHA256 b6efbe4248db79f173ebd9532b765469c508c64949ae0bfcf2c7b65dc8614cec konqueror-3.4.2-r1.ebuild 969
+EBUILD konqueror-3.4.2.ebuild 780 RMD160 cab3d9dfe8b0d54dc702712a97ce3bdfc3940e86 SHA1 fc9814ea0fcfc05723535dd32eb8ccf701d872ad SHA256 fe94b32011bae2dc6d366fa7e0d66a1cd2a8a37b02ddcf75ff3abe5e0dfa57d0
+MD5 9de0d7f28bcceea80bbdb2a1b1def058 konqueror-3.4.2.ebuild 780
+RMD160 cab3d9dfe8b0d54dc702712a97ce3bdfc3940e86 konqueror-3.4.2.ebuild 780
+SHA256 fe94b32011bae2dc6d366fa7e0d66a1cd2a8a37b02ddcf75ff3abe5e0dfa57d0 konqueror-3.4.2.ebuild 780
+EBUILD konqueror-3.4.3.ebuild 787 RMD160 fb05abe7f7bdd624daa27f0e36fec1ded8d1312b SHA1 467e3265d85cb91b635da9f755ea6e42525d68ac SHA256 0b199bd2f4c62034ab81341cf42e50288050ea7d898cfa21c1e75c7721bd7d72
+MD5 7ddfc44bfabb7b27c5aa2c1065cb007f konqueror-3.4.3.ebuild 787
+RMD160 fb05abe7f7bdd624daa27f0e36fec1ded8d1312b konqueror-3.4.3.ebuild 787
+SHA256 0b199bd2f4c62034ab81341cf42e50288050ea7d898cfa21c1e75c7721bd7d72 konqueror-3.4.3.ebuild 787
+EBUILD konqueror-3.5.2.ebuild 810 RMD160 f2e32cfeeaf0da088084aff83cb969a04791d288 SHA1 162d32782f721bd586b6d7feb6ec61d33cec5ccd SHA256 5fc9f3309a7e34855819395d8ba605b4880a2d8d2916f9a9d5654eb93b3efb3e
+MD5 3fbc78cbe087b585abe661d3f884d452 konqueror-3.5.2.ebuild 810
+RMD160 f2e32cfeeaf0da088084aff83cb969a04791d288 konqueror-3.5.2.ebuild 810
+SHA256 5fc9f3309a7e34855819395d8ba605b4880a2d8d2916f9a9d5654eb93b3efb3e konqueror-3.5.2.ebuild 810
+MISC ChangeLog 6299 RMD160 d01c03e496b5e74cd8f55da18c67c907c919ea92 SHA1 9c13d1ab845d143d0c3522b93575c4952c45d210 SHA256 c1d7b5ab2f6f857f2ee0eed5723c4e0bb882b6d6dd6d226d890eed351b356e35
+MD5 afa1fcd20aafb62cf05e5adf41595a66 ChangeLog 6299
+RMD160 d01c03e496b5e74cd8f55da18c67c907c919ea92 ChangeLog 6299
+SHA256 c1d7b5ab2f6f857f2ee0eed5723c4e0bb882b6d6dd6d226d890eed351b356e35 ChangeLog 6299
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-konqueror-3.4.1 212
 RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-konqueror-3.4.1 212
 SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-konqueror-3.4.1 212
@@ -19,31 +55,10 @@ SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/di
 MD5 612323f8728d639ddab8f055f88070ff files/digest-konqueror-3.5.2 250
 RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-konqueror-3.5.2 250
 SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-konqueror-3.5.2 250
-MD5 3a0e10a5717024b020d970bd121d589a files/kdebase-3.4.2-konqueror-filter.patch 899
-RMD160 5161e8c9895372eef07a962d7f64adabb951313e files/kdebase-3.4.2-konqueror-filter.patch 899
-SHA256 0debb9cd5d8ac571924a135893c146d58aa5770e9fc60fd6363607432d6bab77 files/kdebase-3.4.2-konqueror-filter.patch 899
-MD5 56e97c5040d28b656c9e7c9c6e05a95f konqueror-3.4.1.ebuild 774
-RMD160 bd1f07b58497dce6c170789f4c2a39daf075bea1 konqueror-3.4.1.ebuild 774
-SHA256 91f5916f09b1a8e8a64cf4b7142124e48ac1b666d99bfb287736d0b3303bffca konqueror-3.4.1.ebuild 774
-MD5 0451e0225115ecd1a652e2ecfebc180f konqueror-3.4.2-r1.ebuild 969
-RMD160 c108601e2df4dc2248ae1915e72fb035b1c50641 konqueror-3.4.2-r1.ebuild 969
-SHA256 b6efbe4248db79f173ebd9532b765469c508c64949ae0bfcf2c7b65dc8614cec konqueror-3.4.2-r1.ebuild 969
-MD5 9de0d7f28bcceea80bbdb2a1b1def058 konqueror-3.4.2.ebuild 780
-RMD160 cab3d9dfe8b0d54dc702712a97ce3bdfc3940e86 konqueror-3.4.2.ebuild 780
-SHA256 fe94b32011bae2dc6d366fa7e0d66a1cd2a8a37b02ddcf75ff3abe5e0dfa57d0 konqueror-3.4.2.ebuild 780
-MD5 7ddfc44bfabb7b27c5aa2c1065cb007f konqueror-3.4.3.ebuild 787
-RMD160 fb05abe7f7bdd624daa27f0e36fec1ded8d1312b konqueror-3.4.3.ebuild 787
-SHA256 0b199bd2f4c62034ab81341cf42e50288050ea7d898cfa21c1e75c7721bd7d72 konqueror-3.4.3.ebuild 787
-MD5 f7cd53683348979e1bec34e7969d11cd konqueror-3.5.2.ebuild 812
-RMD160 794ae93c48165780f828b00449fe023dc3288d18 konqueror-3.5.2.ebuild 812
-SHA256 75a19d2c97a67b37377ed6e13a648ce5cf8efa1d68295ef75045dcab686799df konqueror-3.5.2.ebuild 812
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFENHw5AiZjviIA2XgRAuquAJ0d28IeyoV6g1CgjY+h0slZuxAQqACg8JLC
-RMWWiVW0+opFTZ0YSjZysdk=
-=IZeq
+iD8DBQFEdjopkT4lNIS36YERAhbBAKCyYK1bev2N+tDc/L52F+wq1DHdEwCfRanP
+5FlEpHbotLJdKQgodmPVigk=
+=Jpmm
 -----END PGP SIGNATURE-----

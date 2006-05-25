@@ -1,9 +1,48 @@
-MD5 2afb6a33d52acd3dbe2ca29e933b27c9 ChangeLog 5707
-MD5 c9d4d9c2c2f4446a1e62871a2d56e7be artsplugin-mpeglib-3.4.1.ebuild 747
-MD5 5aa0bd546ff587a683bff585b6005e66 artsplugin-mpeglib-3.4.3.ebuild 757
-MD5 ffa7831b60935b73e7edb42591dd0edd artsplugin-mpeglib-3.5.2.ebuild 758
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX artsplugin-mpeglib-3.5.2-libarts.patch 829 RMD160 6e95b62be4f109f04103992d3ac315bd9cb131c2 SHA1 580115d3f0380c7b238f31670b2b8938fe6ca156 SHA256 8eb4e248b49e7140e53e7dd397a653eafc8a4afaf85321d307950e8fc42f495d
 MD5 8293ec8b724eb5387413f4e6165c9455 files/artsplugin-mpeglib-3.5.2-libarts.patch 829
-MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-artsplugin-mpeglib-3.4.1 227
-MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-artsplugin-mpeglib-3.4.3 73
-MD5 c6f3f23fcb5a1fa806c5073f45b26b59 files/digest-artsplugin-mpeglib-3.5.2 265
+RMD160 6e95b62be4f109f04103992d3ac315bd9cb131c2 files/artsplugin-mpeglib-3.5.2-libarts.patch 829
+SHA256 8eb4e248b49e7140e53e7dd397a653eafc8a4afaf85321d307950e8fc42f495d files/artsplugin-mpeglib-3.5.2-libarts.patch 829
+DIST kdemultimedia-3.4.0-3.4.1.tar.xdelta 277869
+DIST kdemultimedia-3.4.0.tar.bz2 5581865
+DIST kdemultimedia-3.4.1.tar.bz2 5547552
+DIST kdemultimedia-3.4.3.tar.bz2 5495757
+DIST kdemultimedia-3.5.2.tar.bz2 6272386 RMD160 4f6fcb790e63f4af7a309677babd5e2ed938514f SHA256 01562af68008c10c04346a94d0dea7cedcb77673c0b7cd5cfc74360bf309a2f8
+EBUILD artsplugin-mpeglib-3.4.1.ebuild 747 RMD160 0f79a242dc961a11a8b8d60a95044107a41b44dc SHA1 9179e8e5689defefa84f52fc8b4d596292d0fb86 SHA256 3f5b765299d5d853ff091868748428c0e213254ae351aa606f124cd536f0cee2
+MD5 c9d4d9c2c2f4446a1e62871a2d56e7be artsplugin-mpeglib-3.4.1.ebuild 747
+RMD160 0f79a242dc961a11a8b8d60a95044107a41b44dc artsplugin-mpeglib-3.4.1.ebuild 747
+SHA256 3f5b765299d5d853ff091868748428c0e213254ae351aa606f124cd536f0cee2 artsplugin-mpeglib-3.4.1.ebuild 747
+EBUILD artsplugin-mpeglib-3.4.3.ebuild 757 RMD160 567ef69e5c43d3df7a0b4772155325c82821c386 SHA1 5cb5641561668440d575badb0f7394bd2530dee9 SHA256 3a258be7c8c96f5e5a5a7f04db728c3a54161af39e2a59a0d4d007b9e637e0d8
+MD5 5aa0bd546ff587a683bff585b6005e66 artsplugin-mpeglib-3.4.3.ebuild 757
+RMD160 567ef69e5c43d3df7a0b4772155325c82821c386 artsplugin-mpeglib-3.4.3.ebuild 757
+SHA256 3a258be7c8c96f5e5a5a7f04db728c3a54161af39e2a59a0d4d007b9e637e0d8 artsplugin-mpeglib-3.4.3.ebuild 757
+EBUILD artsplugin-mpeglib-3.5.2.ebuild 760 RMD160 3ff75bc6e8b5a8ebb0ee06a23168cd32de1cc8c8 SHA1 e61641cd796531422c973c37965200a7f7197dbf SHA256 b05561b69dd3512bb91374cdade1b26585ab6f06057c04a04add4c5e21467587
+MD5 035358afb39196ae5af9406532a04e6f artsplugin-mpeglib-3.5.2.ebuild 760
+RMD160 3ff75bc6e8b5a8ebb0ee06a23168cd32de1cc8c8 artsplugin-mpeglib-3.5.2.ebuild 760
+SHA256 b05561b69dd3512bb91374cdade1b26585ab6f06057c04a04add4c5e21467587 artsplugin-mpeglib-3.5.2.ebuild 760
+MISC ChangeLog 5832 RMD160 10c2d8375630632a434d7c45c78a0f1d27d1942d SHA1 9f5f1f665f3ed524c67cdf520f7fa993a8943f57 SHA256 1f31fb211a5b59a659ca62928f6712f05c9797f8f10b331200d0fe284f0bdd25
+MD5 14a4f0cb028d8fc731c072e33d0f670b ChangeLog 5832
+RMD160 10c2d8375630632a434d7c45c78a0f1d27d1942d ChangeLog 5832
+SHA256 1f31fb211a5b59a659ca62928f6712f05c9797f8f10b331200d0fe284f0bdd25 ChangeLog 5832
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-artsplugin-mpeglib-3.4.1 227
+RMD160 58f8a5f7fe31a86b0b07163b26bef37f1c7d10a2 files/digest-artsplugin-mpeglib-3.4.1 227
+SHA256 80b474a3df150d09f2cf2fb08f5d774eb58d5067a71e26fcce28f19ce7566e18 files/digest-artsplugin-mpeglib-3.4.1 227
+MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-artsplugin-mpeglib-3.4.3 73
+RMD160 0980cde95a4b1374dfe3d266b26c41861b3ae2cd files/digest-artsplugin-mpeglib-3.4.3 73
+SHA256 fd38c00fe48ae0b8ae9f5df74927d5ff51d616ba33d77e28dd70f9df31ce6069 files/digest-artsplugin-mpeglib-3.4.3 73
+MD5 c6f3f23fcb5a1fa806c5073f45b26b59 files/digest-artsplugin-mpeglib-3.5.2 265
+RMD160 5e81c0b91adc803bf7923ec3176b9ff50217ed22 files/digest-artsplugin-mpeglib-3.5.2 265
+SHA256 da5960a94d94974711cce49b9e15a2465e392feb2dd48db846adce8d9e02d864 files/digest-artsplugin-mpeglib-3.5.2 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEdiGOkT4lNIS36YERAjqaAKDFwGPM5vvACTEKXjIzmZc6xcpfQgCffzSJ
+9E1begXe9izdWev5ULuBVjI=
+=f0nw
+-----END PGP SIGNATURE-----

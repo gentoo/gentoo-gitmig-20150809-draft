@@ -1,28 +1,36 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3460e80f8b38a77e3ac4b40681f398eb ChangeLog 3724
-RMD160 a89fa7c6dcf691264510aad3a9ec63939f76f05d ChangeLog 3724
-SHA256 4ea8a4a29d5372b2351351ab0369ea843065e789b157ee08f8b533e100b62190 ChangeLog 3724
+DIST kdesdk-3.4.0-3.4.1.tar.xdelta 255144
+DIST kdesdk-3.4.0.tar.bz2 4571452
+DIST kdesdk-3.4.1.tar.bz2 4589829
+DIST kdesdk-3.5.1.tar.bz2 4972114
+EBUILD kdesdk-kfile-plugins-3.4.1.ebuild 462 RMD160 057f35808ad5f4b30b27f6c5c84e9e80674cecae SHA1 17b44d10d84290cb81f8465d8bdc89605b811dd4 SHA256 3ea81eac71da463ffedbdb43a5f471f3fda099dba2c3cb0fd97de8af2364d61c
+MD5 e32a3ab0d2bd77a9786c373f598c5ec4 kdesdk-kfile-plugins-3.4.1.ebuild 462
+RMD160 057f35808ad5f4b30b27f6c5c84e9e80674cecae kdesdk-kfile-plugins-3.4.1.ebuild 462
+SHA256 3ea81eac71da463ffedbdb43a5f471f3fda099dba2c3cb0fd97de8af2364d61c kdesdk-kfile-plugins-3.4.1.ebuild 462
+EBUILD kdesdk-kfile-plugins-3.5.1.ebuild 454 RMD160 fa1a60acc68f65d46f588854119ac9b69105d5a7 SHA1 c1d6a42eb3db9c663c350029b226b575d8b2284b SHA256 d6e0a4c66bf3038852ca9aabfd9714f6dc41153f146068e33d33a8bb7cac158f
+MD5 3aaa780185636140a6589a6c9678d90c kdesdk-kfile-plugins-3.5.1.ebuild 454
+RMD160 fa1a60acc68f65d46f588854119ac9b69105d5a7 kdesdk-kfile-plugins-3.5.1.ebuild 454
+SHA256 d6e0a4c66bf3038852ca9aabfd9714f6dc41153f146068e33d33a8bb7cac158f kdesdk-kfile-plugins-3.5.1.ebuild 454
+MISC ChangeLog 3847 RMD160 29a7c31e753674363b5c526a7c1c98d7f88a961e SHA1 9836d7b216f840de84e6fcc28817c26b4d56ea16 SHA256 d953c848917176563056f4fa3bbb7dee8623882c793cc5baedab3241bb93f765
+MD5 a25672302ccda31fdb337411b78f2909 ChangeLog 3847
+RMD160 29a7c31e753674363b5c526a7c1c98d7f88a961e ChangeLog 3847
+SHA256 d953c848917176563056f4fa3bbb7dee8623882c793cc5baedab3241bb93f765 ChangeLog 3847
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kdesdk-kfile-plugins-3.4.1 206
 RMD160 537c88444c961cfc4b7af18ca00a8be224f64cee files/digest-kdesdk-kfile-plugins-3.4.1 206
 SHA256 39c922f0ac54c84622428b955b44427f3e093a3f6d089f601670375413cda7fc files/digest-kdesdk-kfile-plugins-3.4.1 206
 MD5 37b63842d3bb2d884b13ebf46628a792 files/digest-kdesdk-kfile-plugins-3.5.1 66
 RMD160 4a4f776257134dc5753f59936f47f0a5c89ead63 files/digest-kdesdk-kfile-plugins-3.5.1 66
 SHA256 c55dc0a628300f22699d6bed9ebcd180dec8d93221eadc66b964184b1e09ca50 files/digest-kdesdk-kfile-plugins-3.5.1 66
-MD5 e32a3ab0d2bd77a9786c373f598c5ec4 kdesdk-kfile-plugins-3.4.1.ebuild 462
-RMD160 057f35808ad5f4b30b27f6c5c84e9e80674cecae kdesdk-kfile-plugins-3.4.1.ebuild 462
-SHA256 3ea81eac71da463ffedbdb43a5f471f3fda099dba2c3cb0fd97de8af2364d61c kdesdk-kfile-plugins-3.4.1.ebuild 462
-MD5 efc03bff33751f9843a4c4fcc116c483 kdesdk-kfile-plugins-3.5.1.ebuild 455
-RMD160 fc0f22839f716f3ee3db19a5bb2d251682727ee5 kdesdk-kfile-plugins-3.5.1.ebuild 455
-SHA256 4cfd694902144b9a07cb9b7b5631d13b8dd869aa9e3c793e51bc4f621102b6ac kdesdk-kfile-plugins-3.5.1.ebuild 455
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFENHC1AiZjviIA2XgRArpYAKDeczq+9Tq/chmPogjI/lHmfcOBNQCgnRmV
-430w1azqIJ5kr8wajq7RIyI=
-=i+w/
+iD8DBQFEdi8qkT4lNIS36YERAgTaAKDABPqjp9ywaekW8KobueqqF7EQLQCfUNEK
+h/dhSIESfTiV40gCXm12Bvk=
+=1whN
 -----END PGP SIGNATURE-----

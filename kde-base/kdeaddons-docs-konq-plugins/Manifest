@@ -1,28 +1,36 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 34679aac4f041ce9acb70d57be11e9d3 ChangeLog 4542
-RMD160 557ab77c0883b5107f293295aa41f98cce49a376 ChangeLog 4542
-SHA256 1f57f5f555a4ebf46d7bd01ddd965a567d2ca12e654963ff2a43d9fbaf1773b9 ChangeLog 4542
+DIST kdeaddons-3.4.0-3.4.1.tar.xdelta 120597
+DIST kdeaddons-3.4.0.tar.bz2 1670919
+DIST kdeaddons-3.4.1.tar.bz2 1626243
+DIST kdeaddons-3.5.2.tar.bz2 1640284 RMD160 bc2ce1f93b34fcb2c7662da22edf4894c6524a12 SHA256 2a3eea9ff6b550b90d3f51d4862f7d7b992182ac225fdac0684cc16fb990c2ec
+EBUILD kdeaddons-docs-konq-plugins-3.4.1.ebuild 521 RMD160 9aa90a10f5c63262d643c6622ece16a221744207 SHA1 972bb268202ba4b51eb02665c3b9ff839659efed SHA256 96b671be3bcd9e947b12533fe1d4c00e4c2a32f483e959c14e5488002dff7d07
+MD5 11cf1fabd52d6035da02064d3b6d5724 kdeaddons-docs-konq-plugins-3.4.1.ebuild 521
+RMD160 9aa90a10f5c63262d643c6622ece16a221744207 kdeaddons-docs-konq-plugins-3.4.1.ebuild 521
+SHA256 96b671be3bcd9e947b12533fe1d4c00e4c2a32f483e959c14e5488002dff7d07 kdeaddons-docs-konq-plugins-3.4.1.ebuild 521
+EBUILD kdeaddons-docs-konq-plugins-3.5.2.ebuild 524 RMD160 6f5778237f156bf69df1ab2a437922ec192560b9 SHA1 6d0cca2ddf0cf296d7bed88743c84c37e3ba69c2 SHA256 f364c4e1394c37cf2af661173fb4b9109b7aa1e97fbe99735517bbe6610e4895
+MD5 30ee412efae503ed449f57ec36dce521 kdeaddons-docs-konq-plugins-3.5.2.ebuild 524
+RMD160 6f5778237f156bf69df1ab2a437922ec192560b9 kdeaddons-docs-konq-plugins-3.5.2.ebuild 524
+SHA256 f364c4e1394c37cf2af661173fb4b9109b7aa1e97fbe99735517bbe6610e4895 kdeaddons-docs-konq-plugins-3.5.2.ebuild 524
+MISC ChangeLog 4672 RMD160 9e6228b24c18a565923dd9217b29bf0dd3f6906f SHA1 66061c3f77377971b72c56f4dd42f4cd46549b9b SHA256 3fd1f790aa98b350219dca5f351b0ca6df12279e6054fb475c9a6f1c876ad782
+MD5 41d956fc2fee7e17fd48d66b05a96d3f ChangeLog 4672
+RMD160 9e6228b24c18a565923dd9217b29bf0dd3f6906f ChangeLog 4672
+SHA256 3fd1f790aa98b350219dca5f351b0ca6df12279e6054fb475c9a6f1c876ad782 ChangeLog 4672
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-kdeaddons-docs-konq-plugins-3.4.1 215
 RMD160 d7f34f43e468cb2e4d7935d3c0cb7b9b9ada730b files/digest-kdeaddons-docs-konq-plugins-3.4.1 215
 SHA256 b84fe2088931cc38a26102f7f2482756d5286bd5ee2c8c28754b0b0c321112cd files/digest-kdeaddons-docs-konq-plugins-3.4.1 215
 MD5 191f6bee80885d21495b154d0b9b84fa files/digest-kdeaddons-docs-konq-plugins-3.5.2 253
 RMD160 7ceef00c96f7c9306805433a9ea566dafc129421 files/digest-kdeaddons-docs-konq-plugins-3.5.2 253
 SHA256 f5eb118862fc6790d69ceb8771ddb6feb108003b6c8147c31412bea7a36b4d8b files/digest-kdeaddons-docs-konq-plugins-3.5.2 253
-MD5 11cf1fabd52d6035da02064d3b6d5724 kdeaddons-docs-konq-plugins-3.4.1.ebuild 521
-RMD160 9aa90a10f5c63262d643c6622ece16a221744207 kdeaddons-docs-konq-plugins-3.4.1.ebuild 521
-SHA256 96b671be3bcd9e947b12533fe1d4c00e4c2a32f483e959c14e5488002dff7d07 kdeaddons-docs-konq-plugins-3.4.1.ebuild 521
-MD5 54f7ea6aec093053ca0f926eec3aaa25 kdeaddons-docs-konq-plugins-3.5.2.ebuild 525
-RMD160 c1543c0c28f8888bb592185d3c307734eb3437f6 kdeaddons-docs-konq-plugins-3.5.2.ebuild 525
-SHA256 e61bc391160ddada2d26df2a4bb34921e78d3ec67f98c5b7a021b37be400c9b1 kdeaddons-docs-konq-plugins-3.5.2.ebuild 525
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFENGqdAiZjviIA2XgRAr2xAKDi6uvQLByZBmE6Q9ULdedS0b3r5wCg8SqG
-oDmzlbLMmQ/c+NSz+U4Z5q8=
-=4DiN
+iD8DBQFEdikbkT4lNIS36YERAoD5AJ9qL0R5h40bTqrtUNItCpHmslVNQQCglOim
+pxIouSroFmwY+2kr7Sx7BMY=
+=8YZB
 -----END PGP SIGNATURE-----

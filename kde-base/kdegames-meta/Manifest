@@ -1,40 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4460498f20d8f17e0dd2176774eab4fb ChangeLog 5601
-RMD160 29a0ee99c16534381d3ba9389fff1ee5c825286f ChangeLog 5601
-SHA256 174174b2802dca6fdedee57efe4f80c637326d5f2a7901365212361e51a9fe7e ChangeLog 5601
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegames-meta-3.4.1 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdegames-meta-3.4.1 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdegames-meta-3.4.1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegames-meta-3.4.2 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdegames-meta-3.4.2 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdegames-meta-3.4.2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegames-meta-3.4.3 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdegames-meta-3.4.3 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdegames-meta-3.4.3 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegames-meta-3.5.2 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdegames-meta-3.5.2 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdegames-meta-3.5.2 0
+EBUILD kdegames-meta-3.4.1.ebuild 1867 RMD160 fc9a1449a60d7c151ab6450576e530092a9ec3f5 SHA1 9e76f7353b72b4c8fb71680adf2a6329a390b140 SHA256 f1ce5b0524040e8745a2fa2c84c749eedeaad62b23df7cc5cf84ec3fc310b8a7
 MD5 7b6d9a711de2dc6c791876da178773cc kdegames-meta-3.4.1.ebuild 1867
 RMD160 fc9a1449a60d7c151ab6450576e530092a9ec3f5 kdegames-meta-3.4.1.ebuild 1867
 SHA256 f1ce5b0524040e8745a2fa2c84c749eedeaad62b23df7cc5cf84ec3fc310b8a7 kdegames-meta-3.4.1.ebuild 1867
+EBUILD kdegames-meta-3.4.2.ebuild 1877 RMD160 3c918562d071bd673126f2f83de76859847f343c SHA1 2868ebf9f5db91928f80829d2754b7b6628a6042 SHA256 9f40ca78da052d143a8b1004428ebdae0397f97986d5f9f669f83f44e118373c
 MD5 91d7168af2caffd9f91e900cc4d8111f kdegames-meta-3.4.2.ebuild 1877
 RMD160 3c918562d071bd673126f2f83de76859847f343c kdegames-meta-3.4.2.ebuild 1877
 SHA256 9f40ca78da052d143a8b1004428ebdae0397f97986d5f9f669f83f44e118373c kdegames-meta-3.4.2.ebuild 1877
+EBUILD kdegames-meta-3.4.3.ebuild 1878 RMD160 dd3a33457631c2dcc5d2f2aaf378e809c0d67bc3 SHA1 10a6075c0d4c0536892a12648a137b35d405cfc8 SHA256 bd5c0fd8e6a066e53d3db591383938e304ac1ddf60c5f3c7eee20d171f66a2f7
 MD5 e04437e768060f6b98c70742dc927e1e kdegames-meta-3.4.3.ebuild 1878
 RMD160 dd3a33457631c2dcc5d2f2aaf378e809c0d67bc3 kdegames-meta-3.4.3.ebuild 1878
 SHA256 bd5c0fd8e6a066e53d3db591383938e304ac1ddf60c5f3c7eee20d171f66a2f7 kdegames-meta-3.4.3.ebuild 1878
-MD5 f521d57c621f71bb9451839943d8c45b kdegames-meta-3.5.2.ebuild 1885
-RMD160 db30adf7ba4a1ba7703a89250e47558b67883624 kdegames-meta-3.5.2.ebuild 1885
-SHA256 87a4628e9105e62a024f14139e7f83876b69e8b1d9c52c50ce369d569564e1a7 kdegames-meta-3.5.2.ebuild 1885
+EBUILD kdegames-meta-3.5.2.ebuild 1884 RMD160 c00df19451967fb43552dee3d1382abbc7768e45 SHA1 3c5207e3aa3bf04a939484bea79b5b2509b2f786 SHA256 3b2c1a518272a2b8c6593951ceed23986f1d0aee69df7b834d9943f53f5b9c5a
+MD5 b702962ae63697c57c01e8980d22da2d kdegames-meta-3.5.2.ebuild 1884
+RMD160 c00df19451967fb43552dee3d1382abbc7768e45 kdegames-meta-3.5.2.ebuild 1884
+SHA256 3b2c1a518272a2b8c6593951ceed23986f1d0aee69df7b834d9943f53f5b9c5a kdegames-meta-3.5.2.ebuild 1884
+MISC ChangeLog 5717 RMD160 2373f9856e5ea9240be383955a3ba69cb54e0a53 SHA1 101ada481ed9495d28ee0b1e6eee7026a512b5e5 SHA256 998c2fed2208e9df487fdaaf3146d733d456c63dce5d188dbabdd94ee669e0a9
+MD5 ceb071023c2000fc2590402565244068 ChangeLog 5717
+RMD160 2373f9856e5ea9240be383955a3ba69cb54e0a53 ChangeLog 5717
+SHA256 998c2fed2208e9df487fdaaf3146d733d456c63dce5d188dbabdd94ee669e0a9 ChangeLog 5717
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdegames-meta-3.4.1 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdegames-meta-3.4.1 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdegames-meta-3.4.1 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdegames-meta-3.4.2 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdegames-meta-3.4.2 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdegames-meta-3.4.2 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdegames-meta-3.4.3 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdegames-meta-3.4.3 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdegames-meta-3.4.3 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdegames-meta-3.5.2 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdegames-meta-3.5.2 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdegames-meta-3.5.2 1
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFENEfrAiZjviIA2XgRAijpAJ9ke6yzpmkGRbr5cGPJPzKVZjAGdgCcDYXB
-ugEL8mJR+o0vba1hGoRG51c=
-=Dcim
+iD8DBQFEdiwxkT4lNIS36YERAq1SAJ40EyTxJ/bnkr12HMxB+XggFZJULgCgwyS+
+/E6uVm+iHKpEHGkNE9l6Y6w=
+=Ifwg
 -----END PGP SIGNATURE-----

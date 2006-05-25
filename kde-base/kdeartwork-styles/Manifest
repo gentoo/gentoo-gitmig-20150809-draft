@@ -1,9 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ed7bc71159de809169bee658c687ce72 ChangeLog 5586
-RMD160 0c8cf2e9bd9337e8c68f0ef5a7b979576c5d9ae0 ChangeLog 5586
-SHA256 5418f04f5b445bead15bb33fca31ecdc0933da043bf51d5e1655e002422c10a7 ChangeLog 5586
+DIST kdeartwork-3.4.0-3.4.1.tar.xdelta 301755
+DIST kdeartwork-3.4.0.tar.bz2 18077818
+DIST kdeartwork-3.4.1-3.4.2.tar.xdelta 291128
+DIST kdeartwork-3.4.1.tar.bz2 18066167
+DIST kdeartwork-3.4.2.tar.bz2 18023334
+DIST kdeartwork-3.4.3.tar.bz2 18022458
+DIST kdeartwork-3.5.2.tar.bz2 16620565 RMD160 55c68134beb452c6316211f7a4fe1c0c4404a154 SHA256 c1df39d5eba36e5071e47c3534c3117abd91d0c9ae2b798a457fd29257218a31
+EBUILD kdeartwork-styles-3.4.1.ebuild 424 RMD160 5e64c41b03a7d50d5269544660dd7f971cc20541 SHA1 23d5e3154666e072dafb9dbb21847e3443ea17aa SHA256 517580833989748a84e6bba37fcc5ed8079856df50053711a27cd6d703ff4737
+MD5 55c3d246e65bff2332b99f52d5216d2e kdeartwork-styles-3.4.1.ebuild 424
+RMD160 5e64c41b03a7d50d5269544660dd7f971cc20541 kdeartwork-styles-3.4.1.ebuild 424
+SHA256 517580833989748a84e6bba37fcc5ed8079856df50053711a27cd6d703ff4737 kdeartwork-styles-3.4.1.ebuild 424
+EBUILD kdeartwork-styles-3.4.2.ebuild 437 RMD160 1095024f81e74d96930ab2ff6c686258ef0e18b7 SHA1 dcf855ac2d2a93633708556171a629a5b7b1cfb5 SHA256 e838d7e60a4d9e3874f5d5ab22af759e5ebacfeeb15f6e658672f58ff3d7efe8
+MD5 715f62a7b8d771069df28c38ba7b844b kdeartwork-styles-3.4.2.ebuild 437
+RMD160 1095024f81e74d96930ab2ff6c686258ef0e18b7 kdeartwork-styles-3.4.2.ebuild 437
+SHA256 e838d7e60a4d9e3874f5d5ab22af759e5ebacfeeb15f6e658672f58ff3d7efe8 kdeartwork-styles-3.4.2.ebuild 437
+EBUILD kdeartwork-styles-3.4.3.ebuild 438 RMD160 cada86bf5dadaffbea6c6c7d1790c9586215f12c SHA1 96518f282a7c63afb4dcb84c2efffdc08eaa70df SHA256 d1d2e126be60827a29f76c94e6a653eed5b4f4fab040f58cf15698d9e229c25d
+MD5 1b3594c83099b64e3dd4f5516e50c716 kdeartwork-styles-3.4.3.ebuild 438
+RMD160 cada86bf5dadaffbea6c6c7d1790c9586215f12c kdeartwork-styles-3.4.3.ebuild 438
+SHA256 d1d2e126be60827a29f76c94e6a653eed5b4f4fab040f58cf15698d9e229c25d kdeartwork-styles-3.4.3.ebuild 438
+EBUILD kdeartwork-styles-3.5.2.ebuild 444 RMD160 c22723672dc3ecf43a272d96f882649c0370599b SHA1 f7ed440281683b81a0c22036712f3e8eb6861caf SHA256 042687fd90d4a0deff13bc92fdc7d7efb8afc423df69d7158c597bb3b1515aae
+MD5 4d487c840080af601c33f40501573c9e kdeartwork-styles-3.5.2.ebuild 444
+RMD160 c22723672dc3ecf43a272d96f882649c0370599b kdeartwork-styles-3.5.2.ebuild 444
+SHA256 042687fd90d4a0deff13bc92fdc7d7efb8afc423df69d7158c597bb3b1515aae kdeartwork-styles-3.5.2.ebuild 444
+MISC ChangeLog 5706 RMD160 f63ba1f09a7e69a701e29f11dc50351624c959a6 SHA1 e2bc8df5981d04e586d125f2cafa9b378f76742e SHA256 3ba9e844bd372fda1a25e21172c3b13d8f61ce768637d7975e7e5e8152bf5d3f
+MD5 c8befd867dad1321f262683d2dd3a6d8 ChangeLog 5706
+RMD160 f63ba1f09a7e69a701e29f11dc50351624c959a6 ChangeLog 5706
+SHA256 3ba9e844bd372fda1a25e21172c3b13d8f61ce768637d7975e7e5e8152bf5d3f ChangeLog 5706
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-styles-3.4.1 220
 RMD160 3e5302e33525d3febecd531d77d35cb3cd2fe128 files/digest-kdeartwork-styles-3.4.1 220
 SHA256 be730128b71cbcccad3f99877dc388a7f3f3b0d0e678e0c7457b2fa749243b56 files/digest-kdeartwork-styles-3.4.1 220
@@ -16,25 +44,10 @@ SHA256 7fa0f246c9164e90bde612cc330288e4b9f1de1131cb9d853bf08ab7bc984ae3 files/di
 MD5 a703f4c18266818b6057e09748eba62d files/digest-kdeartwork-styles-3.5.2 259
 RMD160 f78abaabc7634910f3df6f87ffd89baf5fb1840b files/digest-kdeartwork-styles-3.5.2 259
 SHA256 d29a0491904a0dd51e3fbb6f84794819177db93160bdea3043b5175331cd244c files/digest-kdeartwork-styles-3.5.2 259
-MD5 55c3d246e65bff2332b99f52d5216d2e kdeartwork-styles-3.4.1.ebuild 424
-RMD160 5e64c41b03a7d50d5269544660dd7f971cc20541 kdeartwork-styles-3.4.1.ebuild 424
-SHA256 517580833989748a84e6bba37fcc5ed8079856df50053711a27cd6d703ff4737 kdeartwork-styles-3.4.1.ebuild 424
-MD5 715f62a7b8d771069df28c38ba7b844b kdeartwork-styles-3.4.2.ebuild 437
-RMD160 1095024f81e74d96930ab2ff6c686258ef0e18b7 kdeartwork-styles-3.4.2.ebuild 437
-SHA256 e838d7e60a4d9e3874f5d5ab22af759e5ebacfeeb15f6e658672f58ff3d7efe8 kdeartwork-styles-3.4.2.ebuild 437
-MD5 1b3594c83099b64e3dd4f5516e50c716 kdeartwork-styles-3.4.3.ebuild 438
-RMD160 cada86bf5dadaffbea6c6c7d1790c9586215f12c kdeartwork-styles-3.4.3.ebuild 438
-SHA256 d1d2e126be60827a29f76c94e6a653eed5b4f4fab040f58cf15698d9e229c25d kdeartwork-styles-3.4.3.ebuild 438
-MD5 6272170a5d4f23762512034340e5de28 kdeartwork-styles-3.5.2.ebuild 445
-RMD160 6928a8e543bab33435d19bedd4d8c9aedfc0ca7b kdeartwork-styles-3.5.2.ebuild 445
-SHA256 06293f6979511a9ba0097614df7f43daa9ed159f97563456fd408614c3ecc6c8 kdeartwork-styles-3.5.2.ebuild 445
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFENGvXAiZjviIA2XgRAsLXAKDs8Q/lpThm8DWOFDcVL0piexCGKwCeMFsZ
-W7uEu+InuDx5Fo0RsHeu68Q=
-=2bVW
+iD8DBQFEdirXkT4lNIS36YERAldIAKCG0NzSfjUeUIXXS9d1AZYc4kPADgCguQHw
++MpQgMazp4h50fCmK8nS/+o=
+=Kslg
 -----END PGP SIGNATURE-----

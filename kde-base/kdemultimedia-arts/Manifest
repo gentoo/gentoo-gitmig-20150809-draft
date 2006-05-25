@@ -1,6 +1,36 @@
-MD5 d8e51a133acaaa254a1c8ffb11711e49 ChangeLog 4976
-MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kdemultimedia-arts-3.4.1 227
-MD5 c6f3f23fcb5a1fa806c5073f45b26b59 files/digest-kdemultimedia-arts-3.5.2 265
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdemultimedia-3.4.0-3.4.1.tar.xdelta 277869
+DIST kdemultimedia-3.4.0.tar.bz2 5581865
+DIST kdemultimedia-3.4.1.tar.bz2 5547552
+DIST kdemultimedia-3.5.2.tar.bz2 6272386 RMD160 4f6fcb790e63f4af7a309677babd5e2ed938514f SHA256 01562af68008c10c04346a94d0dea7cedcb77673c0b7cd5cfc74360bf309a2f8
+EBUILD kdemultimedia-arts-3.4.1.ebuild 737 RMD160 426bdf7974030c4101751aee3b1693774d4c5122 SHA1 80c2014dbf5e597863ee102539fa8279551b7539 SHA256 08bf3420a4e6e1078ec488329bf20b105f46c2a1f0211f1ba7f82f63a8c59668
 MD5 0cb813d90e1976720ad2079295ea7c85 kdemultimedia-arts-3.4.1.ebuild 737
-MD5 595b4049a566fb53b050a0968a46bc65 kdemultimedia-arts-3.5.2.ebuild 753
+RMD160 426bdf7974030c4101751aee3b1693774d4c5122 kdemultimedia-arts-3.4.1.ebuild 737
+SHA256 08bf3420a4e6e1078ec488329bf20b105f46c2a1f0211f1ba7f82f63a8c59668 kdemultimedia-arts-3.4.1.ebuild 737
+EBUILD kdemultimedia-arts-3.5.2.ebuild 755 RMD160 5d61f26d54f5fc8db16ac2dea2957156bc0b2980 SHA1 c76d4867d2154ce99b7b14ac48e5ccc7e325f8e5 SHA256 8d23bf6d3b873e4eae5325cc5bf7adf0607b58e4c7c3e25fc0456ebd69319049
+MD5 382d6a3e39eed5c6a2cad1a16fef84d7 kdemultimedia-arts-3.5.2.ebuild 755
+RMD160 5d61f26d54f5fc8db16ac2dea2957156bc0b2980 kdemultimedia-arts-3.5.2.ebuild 755
+SHA256 8d23bf6d3b873e4eae5325cc5bf7adf0607b58e4c7c3e25fc0456ebd69319049 kdemultimedia-arts-3.5.2.ebuild 755
+MISC ChangeLog 5101 RMD160 a9b406a39ad417419078d82b8d78e997c797186a SHA1 c94de7e694c91c0e0d7c349cc885c539a9c29816 SHA256 b04af40bd075ebd8f0bc96957276ba311921923c4cb32bf52313fbf9738c3580
+MD5 19a37573b2d0e8c7d8219cd708c13995 ChangeLog 5101
+RMD160 a9b406a39ad417419078d82b8d78e997c797186a ChangeLog 5101
+SHA256 b04af40bd075ebd8f0bc96957276ba311921923c4cb32bf52313fbf9738c3580 ChangeLog 5101
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kdemultimedia-arts-3.4.1 227
+RMD160 58f8a5f7fe31a86b0b07163b26bef37f1c7d10a2 files/digest-kdemultimedia-arts-3.4.1 227
+SHA256 80b474a3df150d09f2cf2fb08f5d774eb58d5067a71e26fcce28f19ce7566e18 files/digest-kdemultimedia-arts-3.4.1 227
+MD5 c6f3f23fcb5a1fa806c5073f45b26b59 files/digest-kdemultimedia-arts-3.5.2 265
+RMD160 5e81c0b91adc803bf7923ec3176b9ff50217ed22 files/digest-kdemultimedia-arts-3.5.2 265
+SHA256 da5960a94d94974711cce49b9e15a2465e392feb2dd48db846adce8d9e02d864 files/digest-kdemultimedia-arts-3.5.2 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEdi00kT4lNIS36YERAmVXAJ4rxv5epIzmmdIjybL/MMMzEMaINQCePulx
+TgGkYxHTbTl9sTI7YjwTArw=
+=wQmQ
+-----END PGP SIGNATURE-----
