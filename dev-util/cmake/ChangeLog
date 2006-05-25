@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.32 2006/05/24 22:26:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.33 2006/05/25 03:02:59 flameeyes Exp $
+
+  25 May 2006; Diego Pettenò <flameeyes@gentoo.org> cmake-2.4.2.ebuild:
+  Add ~x86-fbsd keyword.
 
 *cmake-2.4.2 (24 May 2006)
 
