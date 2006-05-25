@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/konq-plugins-3.5.2-r1.ebuild,v 1.1 2006/04/03 13:47:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/konq-plugins-3.5.2-r1.ebuild,v 1.2 2006/05/25 23:12:58 wolf31o2 Exp $
 KMNAME=kdeaddons
 KMNODOCS=true
 MAXKDEVER=$PV
 inherit kde-meta
 
 DESCRIPTION="Various plugins for Konqueror."
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 DEPEND="$(deprange-dual $PV $MAXKDEVER kde-base/konqueror)
 	!kde-misc/metabar"

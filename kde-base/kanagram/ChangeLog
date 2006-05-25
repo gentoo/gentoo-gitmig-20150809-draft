@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kanagram
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.16 2006/04/27 20:44:18 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.17 2006/05/25 21:42:02 wolf31o2 Exp $
+
+  25 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> kanagram-3.5.2.ebuild:
+  Stable on x86 wrt bug #132213
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four

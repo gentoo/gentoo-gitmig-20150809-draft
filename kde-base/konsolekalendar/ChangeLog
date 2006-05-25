@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konsolekalendar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.43 2006/04/27 21:47:40 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.44 2006/05/25 23:16:10 wolf31o2 Exp $
+
+  25 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  konsolekalendar-3.5.2.ebuild:
+  Stable on x86 wrt bug #132213
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-konsolekalendar-3.4.1, files/digest-konsolekalendar-3.4.2,
