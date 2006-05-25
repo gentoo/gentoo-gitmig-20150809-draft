@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-0.2.2.ebuild,v 1.4 2006/05/11 15:16:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-0.2.2.ebuild,v 1.5 2006/05/25 14:58:41 wolf31o2 Exp $
 
 inherit eutils games
 
 DESCRIPTION="Warzone 2100, the 3D real-time strategy game"
-HOMEPAGE="http://warzone2100.sourceforge.net/"
+HOMEPAGE="http://home.gna.org/warzone/"
 SRC_URI="mirror://sourceforge/warzone2100/${P}.tar.bz2"
 
 LICENSE="GPL-2"
