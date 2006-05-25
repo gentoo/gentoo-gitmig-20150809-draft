@@ -1,5 +1,5 @@
---- stdafx.h
-+++ stdafx.h
+--- src/libmodplug/stdafx.h
++++ src/libmodplug/stdafx.h
 23a24,91
 > #elif defined(__x86_64__)
 > 

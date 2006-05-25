@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmodplug
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.16 2006/04/21 21:25:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.17 2006/05/25 00:31:25 flameeyes Exp $
+
+  25 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/libmodplug-0.7-amd64.patch, libmodplug-0.8.ebuild:
+  Rice it down, don't append -ffast-math unconditionally. Also simplify
+  applying of patches.
 
   21 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> libmodplug-0.7.ebuild:
   Stable on hppa wrt #130123

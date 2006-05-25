@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/libmodplug-0.8.ebuild,v 1.1 2006/03/25 02:22:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/libmodplug-0.8.ebuild,v 1.2 2006/05/25 00:31:25 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -19,10 +19,11 @@ DEPEND="dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"/src/libmodplug
+	cd "${S}"
 	epatch "${FILESDIR}/${PN}-0.7-amd64.patch"
-	cd ${S}
 	epatch "${FILESDIR}/${PN}-0.7-asneeded.patch"
+
+	sed -i -e 's:-ffast-math::' "${S}/configure.in"
 
 	eautoreconf
 }
