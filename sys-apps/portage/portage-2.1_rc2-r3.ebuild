@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_rc2-r3.ebuild,v 1.1 2006/05/25 14:04:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_rc2-r3.ebuild,v 1.2 2006/05/25 17:42:23 zmedico Exp $
 
 inherit toolchain-funcs eutils
 
@@ -20,7 +20,8 @@ RDEPEND=">=dev-lang/python-2.3
 	!build? ( >=sys-apps/sed-4.0.5
 		dev-python/python-fchksum
 		userland_GNU? ( sys-apps/debianutils )
-		>=app-shells/bash-3.0 )
+		!userland_Darwin? ( >=app-shells/bash-3.0 )
+		userland_Darwin? ( >=app-shells/bash-2.05a ) )
 	elibc_glibc? ( sys-apps/sandbox )
 	elibc_uclibc? ( sys-apps/sandbox )
 	!userland_Darwin? ( >=app-misc/pax-utils-0.1.10 )
