@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/rte-0.5.6.ebuild,v 1.4 2005/10/30 19:15:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/rte-0.5.6.ebuild,v 1.5 2006/05/25 06:48:25 robbat2 Exp $
 
 inherit eutils
 
@@ -15,7 +15,11 @@ DEPEND="esd? ( media-sound/esound )
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -sparc"
+# This package contains x86 assembly.
+# It could potentially be made to work with other packages, as it uses a
+# modified ffmpeg as one of the backends.
+# ~amd64 may work, but is not tested at this time.
+KEYWORDS="-* x86"
 
 src_unpack() {
 	unpack ${A}
