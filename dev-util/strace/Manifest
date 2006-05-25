@@ -1,4 +1,4 @@
-MD5 f7365146c1a0d0a1f6c12eea37ea5f53 ChangeLog 9522
+MD5 763a7fd0c4b7eebd7751f4e37c7316f1 ChangeLog 9608
 MD5 fdb191f71c367e18de7f236b17d51401 files/digest-strace-4.5.11 66
 MD5 bc0e241dc2e0a817e72b6351cc95bbc8 files/digest-strace-4.5.12 244
 MD5 3d24c4fda96efb8d9c51c4666b80a980 files/digest-strace-4.5.14 66
@@ -14,5 +14,5 @@ MD5 ff683dfacf57a09947ca5e6c4406249d files/strace-superh-update.patch 300
 MD5 661ca5a1974846c6f778c6c47d8b382e files/strace-undef-syscall.patch 656
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 0ad191371a52a40b85dfb14db954593a strace-4.5.11.ebuild 1675
-MD5 087cd109ad629a122c88dedc01e4e7ff strace-4.5.12.ebuild 2116
+MD5 2258e59be3de2c1a9313591a61906c68 strace-4.5.12.ebuild 2114
 MD5 1178adf39b00ab51df610467d2679ce6 strace-4.5.14.ebuild 2059
