@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.1.4.ebuild,v 1.1 2005/08/27 13:35:32 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.1.4.ebuild,v 1.2 2006/05/25 19:18:46 nerdboy Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://geos.refractions.net/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc ~sparc"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="static doc python"
 
 RDEPEND="virtual/libc"

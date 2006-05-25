@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.11 2006/04/14 19:56:06 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.12 2006/05/25 19:18:46 nerdboy Exp $
+
+*geos-2.2.2 (25 May 2006)
+
+  25 May 2006; Steve Arnold <nerdboy@gentoo.org>
+  -files/geos-2.1.1-multilib.patch, -geos-2.1.1.ebuild, geos-2.1.2.ebuild,
+  geos-2.1.4.ebuild, geos-2.2.1.ebuild, +geos-2.2.2.ebuild:
+  Overdue stable bumps, added newest version, removed oldest, added ~ppc64
+  to latest versions (for gdal support).
 
 *geos-2.2.1 (14 Apr 2006)
 

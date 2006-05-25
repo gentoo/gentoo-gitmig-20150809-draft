@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.1.ebuild,v 1.3 2006/05/25 19:18:46 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.2.ebuild,v 1.1 2006/05/25 19:18:46 nerdboy Exp $
 
 inherit eutils
 
@@ -10,18 +10,13 @@ SRC_URI="http://geos.refractions.net/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="static doc python"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 		doc? ( app-doc/doxygen )\
 		python? ( dev-lang/python dev-lang/swig )"
-
-src_unpack() {
-	unpack ${A}
-	epatch ${FILESDIR}/${P}-gcc-41.patch
-}
 
 src_compile() {
 	cd ${S}
@@ -33,7 +28,8 @@ src_compile() {
 
 	econf ${myconf} || die "Error: econf failed"
 
-	emake || die "Error: emake failed"
+	# intermittent build failures with emake
+	make || die "Error: make failed"
 	if use python; then
 		einfo "Compilling PyGEOS"
 		cd ${S}/swig/python
@@ -71,4 +67,3 @@ src_install(){
 		doins tests/cases/*
 	fi
 }
-
