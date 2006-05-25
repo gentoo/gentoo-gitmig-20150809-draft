@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.153 2006/05/07 18:27:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.154 2006/05/25 11:12:46 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -14,6 +14,9 @@ IUSE="debug arts xinerama"
 
 if [[ ${CATEGORY} == "kde-base" ]]; then
 	IUSE="${IUSE} kdeenablefinal"
+	if [[ ${PV} == "3.5"* ]]; then
+		IUSE="${IUSE} kdehiddenvisibility"
+	fi
 fi
 
 # Set USE_KEG_PACKAGING=1 before inheriting if the package use extragear-like
@@ -59,6 +62,7 @@ kde_pkg_setup() {
 	fi
 
 	# Let filter visibility flags that will *really* hurt your KDE
+	# _experimental_ support for this is enabled by kdehiddenvisibility useflag
 	filter-flags -fvisibility=hidden -fvisibility-inlines-hidden
 }
 
@@ -187,6 +191,17 @@ kde_src_compile() {
 
 				# Visiblity stuff is broken. Just disable it when it's present.
 				export kde_cv_prog_cxx_fvisibility_hidden=no
+
+				if hasq kdehiddenvisibility ${IUSE}; then
+					if [[ $(gcc-major-version)$(gcc-minor-version) -ge 41 ]]; then
+						unset kde_cv_prog_cxx_fvisibility_hidden
+						myconf="$myconf $(use_enable kdehiddenvisibility gcc-hidden-visibility)"
+					else
+						eerror "You're trying to enable hidden visibility, but"
+						eerror "you are using an old GCC version. Hidden visibility"
+						eerror "can be enabled only with GCC 4.1 and later."
+					fi
+				fi
 
 				# If we're in a kde-base ebuild, set the prefixed directories to
 				# override the ones set by econf.
