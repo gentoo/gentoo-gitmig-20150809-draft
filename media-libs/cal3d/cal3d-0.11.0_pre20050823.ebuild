@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.11.0_pre20050823.ebuild,v 1.4 2006/04/01 19:54:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.11.0_pre20050823.ebuild,v 1.5 2006/05/25 19:48:28 kloeri Exp $
 
 inherit debug eutils
 
@@ -15,7 +15,8 @@ IUSE="debug"
 
 RDEPEND=""
 DEPEND=">=sys-devel/automake-1.4
-	>=sys-devel/autoconf-2.13"
+	>=sys-devel/autoconf-2.13
+	!<media-libs/cal3d-0.11"
 
 S=${WORKDIR}/${PN}
 

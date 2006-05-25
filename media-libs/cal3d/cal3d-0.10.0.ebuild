@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.10.0.ebuild,v 1.4 2006/01/26 23:14:57 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.10.0.ebuild,v 1.5 2006/05/25 19:48:28 kloeri Exp $
 
 inherit eutils
 
@@ -16,7 +16,8 @@ IUSE=""
 
 RDEPEND=""
 DEPEND=">=sys-devel/automake-1.4
-	>=sys-devel/autoconf-2.13"
+	>=sys-devel/autoconf-2.13
+	!>=media-libs/cal3d-0.11"
 
 src_unpack() {
 	unpack ${A}
