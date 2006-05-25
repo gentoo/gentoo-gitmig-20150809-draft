@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmp4v2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.17 2006/05/25 02:55:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.18 2006/05/25 19:57:27 wolf31o2 Exp $
+
+  25 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> libmp4v2-1.4.1.ebuild:
+  Stable on x86 wrt bug #133605.
 
   25 May 2006; Diego Pettenò <flameeyes@gentoo.org> libmp4v2-1.5.ebuild:
   Add ~x86-fbsd keyword.
