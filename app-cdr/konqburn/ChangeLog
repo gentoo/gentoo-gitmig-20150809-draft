@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/kio_burn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/ChangeLog,v 1.4 2006/05/08 12:54:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/ChangeLog,v 1.5 2006/05/25 14:42:32 carlo Exp $
+
+  25 May 2006; Carsten Lohrke <carlo@gentoo.org> konqburn-0.9.ebuild:
+  Missing dependency.
 
   08 May 2006; Jason Wever <weeve@gentoo.org> konqburn-0.9.ebuild:
   Added ~sparc keyword.
