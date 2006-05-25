@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.61 2006/05/14 00:00:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.62 2006/05/25 13:18:23 carlo Exp $
+
+  25 May 2006; Carsten Lohrke <carlo@gentoo.org> kmail-3.5.2-r3.ebuild:
+  Remove pinentry Qt check, #133245.
 
   13 May 2006; Diego Pettenò <flameeyes@gentoo.org> kmail-3.5.2-r3.ebuild:
   Add missing crypt useflag to IUSE.
