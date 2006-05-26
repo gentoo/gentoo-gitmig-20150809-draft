@@ -1,17 +1,79 @@
-MD5 c9d1e56d78b95ca688355a40f9decc83 ChangeLog 6553
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-ksysguard-3.4.1 212
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-ksysguard-3.4.1-r1 212
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-ksysguard-3.4.2 287
-MD5 b334b621242eaf5a23035e870f09dea6 files/digest-ksysguard-3.4.3 68
-MD5 5efe75301bc0d47d1f2af0ce2feb2603 files/digest-ksysguard-3.5.2-r1 68
-MD5 5efe75301bc0d47d1f2af0ce2feb2603 files/digest-ksysguard-3.5.2-r2 68
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX kdebase-3.4.1-configure.patch 1248 RMD160 5542d96773b37094366695802bad0420a948dcea SHA1 09be407bf55e375fc02049bd55ec2d835cadab26 SHA256 df2f86ecb787a28b4b7eb936d39eb20a1541f5383bb32b9c8a31c7ccf918264d
 MD5 430a0cdfc39b2da16bcf5cd41b65b1d6 files/kdebase-3.4.1-configure.patch 1248
+RMD160 5542d96773b37094366695802bad0420a948dcea files/kdebase-3.4.1-configure.patch 1248
+SHA256 df2f86ecb787a28b4b7eb936d39eb20a1541f5383bb32b9c8a31c7ccf918264d files/kdebase-3.4.1-configure.patch 1248
+AUX ksysguard-3.5.2-crash-fix.diff 1043 RMD160 de0a61191c3d5d16e958e71a9cb4c2375991fd8f SHA1 bfd0e72adc000cb0b6700fd2f259bc1ddd81adc3 SHA256 fe5896f9e5cd301646719e80a27649979d92c41831fa9f11c1c98b6ee89900f5
 MD5 47c75c73f23c83e62d38658401b4c20b files/ksysguard-3.5.2-crash-fix.diff 1043
+RMD160 de0a61191c3d5d16e958e71a9cb4c2375991fd8f files/ksysguard-3.5.2-crash-fix.diff 1043
+SHA256 fe5896f9e5cd301646719e80a27649979d92c41831fa9f11c1c98b6ee89900f5 files/ksysguard-3.5.2-crash-fix.diff 1043
+AUX ksysguard-3.5.2-fixes.diff 2527 RMD160 5a8b9ff2eb1467715b45b6d61c80a141c9c44056 SHA1 f49a40b9647f46bbaf847359ec25c9c288a2a03e SHA256 51573942a8789972a500f67278b091ccd6a4c29adc33ac89a29d5b4ef7109c2f
 MD5 2a51179765d5a570594de8a59ba40ce1 files/ksysguard-3.5.2-fixes.diff 2527
+RMD160 5a8b9ff2eb1467715b45b6d61c80a141c9c44056 files/ksysguard-3.5.2-fixes.diff 2527
+SHA256 51573942a8789972a500f67278b091ccd6a4c29adc33ac89a29d5b4ef7109c2f files/ksysguard-3.5.2-fixes.diff 2527
+DIST kdebase-3.4.0-3.4.1.tar.xdelta 1089415
+DIST kdebase-3.4.0.tar.bz2 22670772
+DIST kdebase-3.4.1-3.4.2.tar.xdelta 928157
+DIST kdebase-3.4.1.tar.bz2 22433034
+DIST kdebase-3.4.2.tar.bz2 22466433
+DIST kdebase-3.4.3.tar.bz2 22425835
+DIST kdebase-3.5.2.tar.bz2 23590820
+EBUILD ksysguard-3.4.1-r1.ebuild 582 RMD160 3aa4122e900def0ae247bdf75fd51d531853f744 SHA1 7bfbb45c9ea07a7dd1faef04e1ecc091c605b542 SHA256 66eb3a41c8cb637b38cc8c9a5c686b4f4f1ea5bb6cec61a9003767431fc69ae5
 MD5 4d73618fea5e571d8486e8d253f6915e ksysguard-3.4.1-r1.ebuild 582
+RMD160 3aa4122e900def0ae247bdf75fd51d531853f744 ksysguard-3.4.1-r1.ebuild 582
+SHA256 66eb3a41c8cb637b38cc8c9a5c686b4f4f1ea5bb6cec61a9003767431fc69ae5 ksysguard-3.4.1-r1.ebuild 582
+EBUILD ksysguard-3.4.1.ebuild 446 RMD160 384085686a08a40225ca282b1c92341e7c3e5e27 SHA1 9623c1f7d3ece415376974ef1f3c8eea6c12817f SHA256 1ac60212b1d2f9937aac017e53583e7daf6c757618056d0fac0a995e0f797ef3
 MD5 9fe1b72a5365ccbc9e7b788ddbc4f6b7 ksysguard-3.4.1.ebuild 446
+RMD160 384085686a08a40225ca282b1c92341e7c3e5e27 ksysguard-3.4.1.ebuild 446
+SHA256 1ac60212b1d2f9937aac017e53583e7daf6c757618056d0fac0a995e0f797ef3 ksysguard-3.4.1.ebuild 446
+EBUILD ksysguard-3.4.2.ebuild 592 RMD160 0e9cb3be749f4b4dc9cde7c46165c0c7bff2c74f SHA1 d145b757f2111cf4e787e6ceff7ea10b9c9921a7 SHA256 9bf3834b009f5a814683ddb0fee56f74597a91be6c60d3e8f46d7744849d59b9
 MD5 ae2847a5d3a13f0813b8aefef185e54a ksysguard-3.4.2.ebuild 592
+RMD160 0e9cb3be749f4b4dc9cde7c46165c0c7bff2c74f ksysguard-3.4.2.ebuild 592
+SHA256 9bf3834b009f5a814683ddb0fee56f74597a91be6c60d3e8f46d7744849d59b9 ksysguard-3.4.2.ebuild 592
+EBUILD ksysguard-3.4.3.ebuild 593 RMD160 9b5ec44c12469c0536ea1a4e89880f65988fb20a SHA1 2844238e26f8fa55dc15f27194b1e51466b945b3 SHA256 f1e29df04b6c53e47837096e462bf20d98b2693fd227a6959e947b5dd02f4328
 MD5 c388907b22169601ee853aeca2f63763 ksysguard-3.4.3.ebuild 593
+RMD160 9b5ec44c12469c0536ea1a4e89880f65988fb20a ksysguard-3.4.3.ebuild 593
+SHA256 f1e29df04b6c53e47837096e462bf20d98b2693fd227a6959e947b5dd02f4328 ksysguard-3.4.3.ebuild 593
+EBUILD ksysguard-3.5.2-r1.ebuild 701 RMD160 4750f0ae3c1548f2a64839078191d08be25aef50 SHA1 f123ec423b0a3a644ae646c9e3e928ed65c86e61 SHA256 0443ff8c4bc20cf6d778e8d3e58659491f0e6645af8f3b28d6d247f0926591f6
 MD5 a82cddf483331a5b97d0e811d52a171c ksysguard-3.5.2-r1.ebuild 701
-MD5 2335dcd304883a18e8caff5b8e6c6d67 ksysguard-3.5.2-r2.ebuild 799
+RMD160 4750f0ae3c1548f2a64839078191d08be25aef50 ksysguard-3.5.2-r1.ebuild 701
+SHA256 0443ff8c4bc20cf6d778e8d3e58659491f0e6645af8f3b28d6d247f0926591f6 ksysguard-3.5.2-r1.ebuild 701
+EBUILD ksysguard-3.5.2-r2.ebuild 801 RMD160 fe09acd01b836870be1b1b025ec394225450ea00 SHA1 7e755bee0591779232f05f85dacc5acc3ec738dd SHA256 db65cbc79a47e0228444767e9b572ae2cbb3d8e892dd8a5ad43e0cea47ba9d89
+MD5 4b20a3afdbd5548bf360c83bf1d06c0a ksysguard-3.5.2-r2.ebuild 801
+RMD160 fe09acd01b836870be1b1b025ec394225450ea00 ksysguard-3.5.2-r2.ebuild 801
+SHA256 db65cbc79a47e0228444767e9b572ae2cbb3d8e892dd8a5ad43e0cea47ba9d89 ksysguard-3.5.2-r2.ebuild 801
+MISC ChangeLog 6672 RMD160 26c0716f7c96d5c02dbe2f27a4d5c3de66733678 SHA1 760e2b2874fe1373606fa23fa15aafee95bb2157 SHA256 778a41c42bd2d2145cce22fa83a5a022d1472ebfd09cbd6a255de988f1b83d2e
+MD5 24e620bb1c105a4c5493dde4be011535 ChangeLog 6672
+RMD160 26c0716f7c96d5c02dbe2f27a4d5c3de66733678 ChangeLog 6672
+SHA256 778a41c42bd2d2145cce22fa83a5a022d1472ebfd09cbd6a255de988f1b83d2e ChangeLog 6672
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-ksysguard-3.4.1 212
+RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-ksysguard-3.4.1 212
+SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-ksysguard-3.4.1 212
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-ksysguard-3.4.1-r1 212
+RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-ksysguard-3.4.1-r1 212
+SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-ksysguard-3.4.1-r1 212
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-ksysguard-3.4.2 287
+RMD160 db88376c4259165535f83f3529f0834fb2209612 files/digest-ksysguard-3.4.2 287
+SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/digest-ksysguard-3.4.2 287
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-ksysguard-3.4.3 68
+RMD160 fe4b253b0a7c2e30a2aa1d0d796dfcb11e30590a files/digest-ksysguard-3.4.3 68
+SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/digest-ksysguard-3.4.3 68
+MD5 5efe75301bc0d47d1f2af0ce2feb2603 files/digest-ksysguard-3.5.2-r1 68
+RMD160 e75b5aeaf92e72ffb4e94df99d0f81490f287b93 files/digest-ksysguard-3.5.2-r1 68
+SHA256 19fc0b34e2f9464359bac8b07b2aec31b9b080ecc053164cc9bf8ee952e564a1 files/digest-ksysguard-3.5.2-r1 68
+MD5 5efe75301bc0d47d1f2af0ce2feb2603 files/digest-ksysguard-3.5.2-r2 68
+RMD160 e75b5aeaf92e72ffb4e94df99d0f81490f287b93 files/digest-ksysguard-3.5.2-r2 68
+SHA256 19fc0b34e2f9464359bac8b07b2aec31b9b080ecc053164cc9bf8ee952e564a1 files/digest-ksysguard-3.5.2-r2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEdlDHkT4lNIS36YERAlxFAJ0ck/Rub85PCXYcNcrF2EuQ6HuCXACeOY2A
+iNhpdWJBiZroSe3U13wtlW8=
+=6Ve6
+-----END PGP SIGNATURE-----
