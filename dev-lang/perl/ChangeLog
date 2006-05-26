@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.211 2006/05/26 13:46:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.212 2006/05/26 14:41:50 wolf31o2 Exp $
+
+  26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> perl-5.8.8-r2.ebuild:
+  Stable on amd64 and x86 wrt bug #133989.
 
   26 May 2006; Diego Pettenò <flameeyes@gentoo.org> perl-5.8.8-r2.ebuild:
   Re-add ~x86-fbsd keyword.
