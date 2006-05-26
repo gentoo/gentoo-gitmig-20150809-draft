@@ -1,0 +1,11 @@
+--- banshee-0.10.10/configure.ac.orig	2006-05-26 18:42:19.041013272 +0100
++++ banshee-0.10.10/configure.ac	2006-05-26 18:42:55.849417544 +0100
+@@ -423,8 +423,6 @@
+ src/Banshee.Plugins/Makefile
+ src/Banshee.Plugins/Audioscrobbler/Makefile
+ src/Banshee.Plugins/Audioscrobbler/Audioscrobbler.dll.config
+-src/Banshee.Plugins/FileSystemMonitor/Makefile
+-src/Banshee.Plugins/FileSystemMonitor/FileSystemMonitor.dll.config
+ src/Banshee.Plugins/MetadataSearch/Makefile
+ src/Banshee.Plugins/MetadataSearch/MetadataSearch.dll.config
+ src/Banshee.Plugins/MMKeys/Makefile
