@@ -1,46 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-EBUILD kdemultimedia-meta-3.4.1.ebuild 1472 RMD160 4b86f95c956f3175a6a5f4ab695ac0764e8f347d SHA1 b581ee3eae3aa172a198bb18d9ceeb3834cf100c SHA256 422f1900637cbf8912000d14b5aec86f6360ef7c9ee1ef226781b275c4cfd27c
-MD5 fd4f557d97cb49e1fcff50c9c3e2dc8a kdemultimedia-meta-3.4.1.ebuild 1472
-RMD160 4b86f95c956f3175a6a5f4ab695ac0764e8f347d kdemultimedia-meta-3.4.1.ebuild 1472
-SHA256 422f1900637cbf8912000d14b5aec86f6360ef7c9ee1ef226781b275c4cfd27c kdemultimedia-meta-3.4.1.ebuild 1472
-EBUILD kdemultimedia-meta-3.4.2.ebuild 1501 RMD160 12dc37d5ac5474422546ed591f109915a9e27f68 SHA1 8e6218b34a5b5b8007c8cc3a5d69fcb065591300 SHA256 bf8db89819ab0a95ef06e35cb9f7537de8d12869cdb8652380f4a5f6ecc37537
-MD5 84165c13764e375cc3efa8f0c8b8b2cf kdemultimedia-meta-3.4.2.ebuild 1501
-RMD160 12dc37d5ac5474422546ed591f109915a9e27f68 kdemultimedia-meta-3.4.2.ebuild 1501
-SHA256 bf8db89819ab0a95ef06e35cb9f7537de8d12869cdb8652380f4a5f6ecc37537 kdemultimedia-meta-3.4.2.ebuild 1501
-EBUILD kdemultimedia-meta-3.4.3.ebuild 1496 RMD160 b4c124292470a8aa2ac0f24eff350c4cac1354b7 SHA1 430a6e3bd29e382110ed2160a1b351ae9af1df5f SHA256 01667e45238c778e5fa311881f218c08db956567ce3ec1ccda0037ef16aef235
-MD5 3e2efd7f0992e432485ba2e5ac55d292 kdemultimedia-meta-3.4.3.ebuild 1496
-RMD160 b4c124292470a8aa2ac0f24eff350c4cac1354b7 kdemultimedia-meta-3.4.3.ebuild 1496
-SHA256 01667e45238c778e5fa311881f218c08db956567ce3ec1ccda0037ef16aef235 kdemultimedia-meta-3.4.3.ebuild 1496
-EBUILD kdemultimedia-meta-3.5.2.ebuild 1581 RMD160 c61fe844d2d6d97317d9155f193b5b40247af6e4 SHA1 39013ed25f1c5557c8be0fe1a55e4bbd75b182c3 SHA256 bd710d8c089c84f4f508adddaf32ef12143864954ef4da86594a1708480db494
-MD5 f15ff54237f17a99939d693b28838b1f kdemultimedia-meta-3.5.2.ebuild 1581
-RMD160 c61fe844d2d6d97317d9155f193b5b40247af6e4 kdemultimedia-meta-3.5.2.ebuild 1581
-SHA256 bd710d8c089c84f4f508adddaf32ef12143864954ef4da86594a1708480db494 kdemultimedia-meta-3.5.2.ebuild 1581
-MISC ChangeLog 6702 RMD160 29987ef9463037519422cc0bb2140f94cb5f1e5f SHA1 a3b863971d74aa2cd214b00fbee83d860454deee SHA256 ec9462a85770ae039555c739737e031579d3d62c7c06e17265b686df99097cf0
-MD5 d5759120b543429de77cb9eb8d157601 ChangeLog 6702
-RMD160 29987ef9463037519422cc0bb2140f94cb5f1e5f ChangeLog 6702
-SHA256 ec9462a85770ae039555c739737e031579d3d62c7c06e17265b686df99097cf0 ChangeLog 6702
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 230a5669d4463eed1db7beb93071e373 ChangeLog 6804
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdemultimedia-meta-3.4.1 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdemultimedia-meta-3.4.1 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdemultimedia-meta-3.4.1 1
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdemultimedia-meta-3.4.2 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdemultimedia-meta-3.4.2 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdemultimedia-meta-3.4.2 1
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdemultimedia-meta-3.4.3 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdemultimedia-meta-3.4.3 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdemultimedia-meta-3.4.3 1
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdemultimedia-meta-3.5.2 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdemultimedia-meta-3.5.2 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdemultimedia-meta-3.5.2 1
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdzLOkT4lNIS36YERAshKAJ9/POIsDPHxsuhm9g0hzIHwSTCodQCeMc4F
-wc6dtkWSLr01lzSQrKmcnaI=
-=D9ta
------END PGP SIGNATURE-----
+MD5 fd4f557d97cb49e1fcff50c9c3e2dc8a kdemultimedia-meta-3.4.1.ebuild 1472
+MD5 84165c13764e375cc3efa8f0c8b8b2cf kdemultimedia-meta-3.4.2.ebuild 1501
+MD5 3e2efd7f0992e432485ba2e5ac55d292 kdemultimedia-meta-3.4.3.ebuild 1496
+MD5 3f218dd310de67c0706d12da1d7efd69 kdemultimedia-meta-3.5.2.ebuild 1579
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

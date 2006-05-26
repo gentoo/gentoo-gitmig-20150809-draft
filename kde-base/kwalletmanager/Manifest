@@ -1,53 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST kdeutils-3.4.0-3.4.1.tar.xdelta 162715
-DIST kdeutils-3.4.0.tar.bz2 2328791
-DIST kdeutils-3.4.1-3.4.2.tar.xdelta 150534
-DIST kdeutils-3.4.1.tar.bz2 2287376
-DIST kdeutils-3.4.2.tar.bz2 2290150
-DIST kdeutils-3.4.3.tar.bz2 2257060
-DIST kdeutils-3.5.2.tar.bz2 2976691 RMD160 f561b714f401056ce771dfa5d04b5436e9865627 SHA256 985b2b5a5fa0aff37161b3aaa5ef7b1e6e938f6b9445fd39b8c554a4570376f6
-EBUILD kwalletmanager-3.4.1.ebuild 419 RMD160 19a1f58fc80d9598d4f193c9dbe87e9d2f04cfe0 SHA1 2ad9b610f19a8943727e268c41c8f607affaa62c SHA256 c344f5f64456a8beeab73512a11bd1ee80038dcbfe4f00be58137e76acd04d5a
-MD5 08d9da04ac9ad3511ff31ec0478cbd94 kwalletmanager-3.4.1.ebuild 419
-RMD160 19a1f58fc80d9598d4f193c9dbe87e9d2f04cfe0 kwalletmanager-3.4.1.ebuild 419
-SHA256 c344f5f64456a8beeab73512a11bd1ee80038dcbfe4f00be58137e76acd04d5a kwalletmanager-3.4.1.ebuild 419
-EBUILD kwalletmanager-3.4.2.ebuild 432 RMD160 b5387413736408f6698fdd26438699469ed41a41 SHA1 897b74d4024618c4fb9ed9c704fece27ab95598d SHA256 78a0b3e1e5c2aacac603587b31e230d595e2bdfe9cbd0d0fa5cdbb8edf4a9f85
-MD5 9239e1a3c3a8e8be42dd2570fa95daa3 kwalletmanager-3.4.2.ebuild 432
-RMD160 b5387413736408f6698fdd26438699469ed41a41 kwalletmanager-3.4.2.ebuild 432
-SHA256 78a0b3e1e5c2aacac603587b31e230d595e2bdfe9cbd0d0fa5cdbb8edf4a9f85 kwalletmanager-3.4.2.ebuild 432
-EBUILD kwalletmanager-3.4.3.ebuild 434 RMD160 9bad32a104316608d96dd37604bdba6544229b03 SHA1 02a0213c9989426110e3b5ca694750eca16fa7d6 SHA256 551d59b362810c16fca62389e2b8589ce7d511c4799a4f184bf6e8abbcb27c39
-MD5 4be5f2eb732b131ebbc9c3c7885f08a8 kwalletmanager-3.4.3.ebuild 434
-RMD160 9bad32a104316608d96dd37604bdba6544229b03 kwalletmanager-3.4.3.ebuild 434
-SHA256 551d59b362810c16fca62389e2b8589ce7d511c4799a4f184bf6e8abbcb27c39 kwalletmanager-3.4.3.ebuild 434
-EBUILD kwalletmanager-3.5.2.ebuild 448 RMD160 c7c32f5f88c191b0895d3757f26388756b18225d SHA1 409627d9320ae026191838e78e43c35acd4abd0b SHA256 a6a62b4a889f32de7e0fd88ebb26324b5cfff2f3c3dbf0fdf8e9d75b4c60e65a
-MD5 8328423ea137f830dfa074bbb920912b kwalletmanager-3.5.2.ebuild 448
-RMD160 c7c32f5f88c191b0895d3757f26388756b18225d kwalletmanager-3.5.2.ebuild 448
-SHA256 a6a62b4a889f32de7e0fd88ebb26324b5cfff2f3c3dbf0fdf8e9d75b4c60e65a kwalletmanager-3.5.2.ebuild 448
-MISC ChangeLog 5596 RMD160 39d4ef86db2ba5f2ad66137e30eff835cb31fbe5 SHA1 f02b2443ea45862e1cf0ed00c7a690aceaba5594 SHA256 05443be9db2a69773370e9849ca37d2717baacac56b9d016ebc42118d4d101a7
-MD5 dd432094db3c67fd0d45ec08a91dcaad ChangeLog 5596
-RMD160 39d4ef86db2ba5f2ad66137e30eff835cb31fbe5 ChangeLog 5596
-SHA256 05443be9db2a69773370e9849ca37d2717baacac56b9d016ebc42118d4d101a7 ChangeLog 5596
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 b9a9f1ccd28f127ea136a097b0987a23 ChangeLog 5694
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kwalletmanager-3.4.1 212
-RMD160 082e4ebaa6fdaa57b2afd3b86f625546fd132255 files/digest-kwalletmanager-3.4.1 212
-SHA256 1d91d34c31e6b41919fab52855c22eac84a1d67cf046f583b321ad6cbc2a460e files/digest-kwalletmanager-3.4.1 212
 MD5 062bb93297f13fe72d1e78a55a449788 files/digest-kwalletmanager-3.4.2 288
-RMD160 1b8b5d859e3c8b86d4e406bfd91653a227fc6132 files/digest-kwalletmanager-3.4.2 288
-SHA256 f9e39259f6a4f6a7e0401c00cfa25de45f575c4b702e03595c7c9a0c9999659d files/digest-kwalletmanager-3.4.2 288
 MD5 7693585dde083d1c2cc205db10692163 files/digest-kwalletmanager-3.4.3 68
-RMD160 18e67adb3e5348923b5ccfda95ccecd92a7ac993 files/digest-kwalletmanager-3.4.3 68
-SHA256 88674a343b751715a238ebdca6ecca37fbb8471c0b519d20d7ade79ae9ea6ed7 files/digest-kwalletmanager-3.4.3 68
 MD5 215488123a318281ac9687845ce3f247 files/digest-kwalletmanager-3.5.2 250
-RMD160 20ae70b7b70bbb1c67a9f18e73a62d86e3002e51 files/digest-kwalletmanager-3.5.2 250
-SHA256 f1a2913c3ce615ce4c875426f15752336f065f7ff67391e6243d280db059ec8b files/digest-kwalletmanager-3.5.2 250
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdzYBkT4lNIS36YERAqjKAKC/cv0QS2sm9/0+K1SsVhwYGk0GeACfQNuO
-Fsl8fMHn/2XwxcDjLIzTdpY=
-=pT3q
------END PGP SIGNATURE-----
+MD5 08d9da04ac9ad3511ff31ec0478cbd94 kwalletmanager-3.4.1.ebuild 419
+MD5 9239e1a3c3a8e8be42dd2570fa95daa3 kwalletmanager-3.4.2.ebuild 432
+MD5 4be5f2eb732b131ebbc9c3c7885f08a8 kwalletmanager-3.4.3.ebuild 434
+MD5 0de97f8b002f2d99ad7b064474724f66 kwalletmanager-3.5.2.ebuild 446
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

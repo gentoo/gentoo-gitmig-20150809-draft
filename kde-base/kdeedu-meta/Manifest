@@ -1,46 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-EBUILD kdeedu-meta-3.4.1.ebuild 1254 RMD160 2d5631e8331057f80caab2ac02a242de7f96b1b4 SHA1 be6b947cb0ba06aeb2d7dacba51c02c622a20da2 SHA256 0ee2286785e1db8582b124cb386e70f73f79258ed9710899e535835709c9f283
-MD5 ffcbac4950384ff18e370e31f9b12ed0 kdeedu-meta-3.4.1.ebuild 1254
-RMD160 2d5631e8331057f80caab2ac02a242de7f96b1b4 kdeedu-meta-3.4.1.ebuild 1254
-SHA256 0ee2286785e1db8582b124cb386e70f73f79258ed9710899e535835709c9f283 kdeedu-meta-3.4.1.ebuild 1254
-EBUILD kdeedu-meta-3.4.2.ebuild 1266 RMD160 780fb33bf160f337e0f7f8d0a331bae37ce5e447 SHA1 e600a8ccf7ff0efadff85ac924745fd6b62c5b18 SHA256 3d03411b54016c8fca9da2b19cfa20d01fbf9b629e48d0126371dbd92eab4960
-MD5 0564ff3afd36e73da94c03858f9434c0 kdeedu-meta-3.4.2.ebuild 1266
-RMD160 780fb33bf160f337e0f7f8d0a331bae37ce5e447 kdeedu-meta-3.4.2.ebuild 1266
-SHA256 3d03411b54016c8fca9da2b19cfa20d01fbf9b629e48d0126371dbd92eab4960 kdeedu-meta-3.4.2.ebuild 1266
-EBUILD kdeedu-meta-3.4.3.ebuild 1362 RMD160 a316052a0a0bf806c05d30ee737df780462504ae SHA1 5dfb23ca103ae17f1e10ef74c719a953e168d0ba SHA256 c13deca4079f9b1fc294af3f7853eaf43ffe6a9d34839d6317862a7c04fd51db
-MD5 e5fed529c4dcce9bd8843b2e5f510633 kdeedu-meta-3.4.3.ebuild 1362
-RMD160 a316052a0a0bf806c05d30ee737df780462504ae kdeedu-meta-3.4.3.ebuild 1362
-SHA256 c13deca4079f9b1fc294af3f7853eaf43ffe6a9d34839d6317862a7c04fd51db kdeedu-meta-3.4.3.ebuild 1362
-EBUILD kdeedu-meta-3.5.2.ebuild 1362 RMD160 48a53657c3280020c5a7af4de7042789301937d0 SHA1 4e183317bd0bfbdd91fc26edf80d0dc372b1b802 SHA256 fbefd720721ac59b047bfc4e56e556c589bfd4c4d0200aa4f6c5cef3fb4758fe
-MD5 1cf0462a2f7d116468175202869dba65 kdeedu-meta-3.5.2.ebuild 1362
-RMD160 48a53657c3280020c5a7af4de7042789301937d0 kdeedu-meta-3.5.2.ebuild 1362
-SHA256 fbefd720721ac59b047bfc4e56e556c589bfd4c4d0200aa4f6c5cef3fb4758fe kdeedu-meta-3.5.2.ebuild 1362
-MISC ChangeLog 6432 RMD160 fa3fc7428ca2acade1a406274b9e1d04b4dbe5eb SHA1 13542edde83d9d5f178d71015d27cf98020df3df SHA256 519009fae3aef1cea70869fcc83dfa872cb2fdbab442a1ec6419fbed2b1a2ce1
-MD5 4ef3e82839fbd0ef6b033d393374bef8 ChangeLog 6432
-RMD160 fa3fc7428ca2acade1a406274b9e1d04b4dbe5eb ChangeLog 6432
-SHA256 519009fae3aef1cea70869fcc83dfa872cb2fdbab442a1ec6419fbed2b1a2ce1 ChangeLog 6432
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 60333c1191af85d6a8b2b818236689b0 ChangeLog 6525
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeedu-meta-3.4.1 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeedu-meta-3.4.1 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeedu-meta-3.4.1 1
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeedu-meta-3.4.2 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeedu-meta-3.4.2 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeedu-meta-3.4.2 1
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeedu-meta-3.4.3 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeedu-meta-3.4.3 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeedu-meta-3.4.3 1
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeedu-meta-3.5.2 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeedu-meta-3.5.2 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeedu-meta-3.5.2 1
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdzDlkT4lNIS36YERAq4lAJwJOTY9MI75smdyGZ6ONaszyD7+eACfT7B7
-/aH/VKkCnn/LwO4XF3FDu7c=
-=PX4f
------END PGP SIGNATURE-----
+MD5 ffcbac4950384ff18e370e31f9b12ed0 kdeedu-meta-3.4.1.ebuild 1254
+MD5 0564ff3afd36e73da94c03858f9434c0 kdeedu-meta-3.4.2.ebuild 1266
+MD5 e5fed529c4dcce9bd8843b2e5f510633 kdeedu-meta-3.4.3.ebuild 1362
+MD5 4eee893d08376547da18c46ef5bc0886 kdeedu-meta-3.5.2.ebuild 1360
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
