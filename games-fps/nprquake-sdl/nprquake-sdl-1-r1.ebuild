@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nprquake-sdl/nprquake-sdl-1-r1.ebuild,v 1.9 2006/05/26 00:46:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nprquake-sdl/nprquake-sdl-1-r1.ebuild,v 1.10 2006/05/26 02:48:18 vapier Exp $
 
 inherit eutils games
 
@@ -51,7 +51,7 @@ pkg_postinst() {
 	games_pkg_postinst
 	echo
 	einfo "Before you can play, you must make sure"
-	einfo "QuakeForge can find your Quake .pak files"
+	einfo "${PN} can find your Quake .pak files"
 	echo
 	einfo "You have 2 choices to do this"
 	einfo "1 Copy pak*.pak files to ${GAMES_DATADIR}/quake1/id1"
