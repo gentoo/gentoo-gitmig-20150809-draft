@@ -1,36 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST kdeartwork-3.4.0-3.4.1.tar.xdelta 301755
-DIST kdeartwork-3.4.0.tar.bz2 18077818
-DIST kdeartwork-3.4.1.tar.bz2 18066167
-DIST kdeartwork-3.5.0.tar.bz2 16610564
-EBUILD kdeartwork-icewm-themes-3.4.1.ebuild 471 RMD160 3c5cea36dec58672232aef55fbaa704f91c055c4 SHA1 56e3cf253443a9781e4edfd384052ee6e0d5f915 SHA256 c7f99760cacdef3bc81216c9ceeec53ae47ce6e5685cf1481ae3c5d341bce943
-MD5 a14e2ddcaeb34674798f5b110f574e66 kdeartwork-icewm-themes-3.4.1.ebuild 471
-RMD160 3c5cea36dec58672232aef55fbaa704f91c055c4 kdeartwork-icewm-themes-3.4.1.ebuild 471
-SHA256 c7f99760cacdef3bc81216c9ceeec53ae47ce6e5685cf1481ae3c5d341bce943 kdeartwork-icewm-themes-3.4.1.ebuild 471
-EBUILD kdeartwork-icewm-themes-3.5.0.ebuild 476 RMD160 d310577c864a14e1fef91e3edfd791864b62c82c SHA1 0bf202e00a4ec6b4b261454c38f2ea191d0de8d4 SHA256 bbca694dab334c39397b5115acb6552a587bda4a7d6552d4e9358dc2d86acc88
-MD5 3c45d5d16ffeef66faa5163b6537c1da kdeartwork-icewm-themes-3.5.0.ebuild 476
-RMD160 d310577c864a14e1fef91e3edfd791864b62c82c kdeartwork-icewm-themes-3.5.0.ebuild 476
-SHA256 bbca694dab334c39397b5115acb6552a587bda4a7d6552d4e9358dc2d86acc88 kdeartwork-icewm-themes-3.5.0.ebuild 476
-MISC ChangeLog 4235 RMD160 f84079bf06f62c981dfdcdacab8b534d5b3bf374 SHA1 10ef5ceff07a6ed86fec9505bb9a65aef8c6a360 SHA256 16e6d348577acea515646d466de1cfa4c00a691ceec3c91b23b1d6644f99d38d
-MD5 5cf9be5409d1517365d63528b9afc07b ChangeLog 4235
-RMD160 f84079bf06f62c981dfdcdacab8b534d5b3bf374 ChangeLog 4235
-SHA256 16e6d348577acea515646d466de1cfa4c00a691ceec3c91b23b1d6644f99d38d ChangeLog 4235
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 40a4079bfce80125e14269e3cc323069 ChangeLog 4342
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-icewm-themes-3.4.1 220
-RMD160 3e5302e33525d3febecd531d77d35cb3cd2fe128 files/digest-kdeartwork-icewm-themes-3.4.1 220
-SHA256 be730128b71cbcccad3f99877dc388a7f3f3b0d0e678e0c7457b2fa749243b56 files/digest-kdeartwork-icewm-themes-3.4.1 220
 MD5 5d798bbc72f84bd47d8347da83a552a2 files/digest-kdeartwork-icewm-themes-3.5.0 71
-RMD160 296a8c2ceb9d34db7fe300ca9bebf27270221a0b files/digest-kdeartwork-icewm-themes-3.5.0 71
-SHA256 f3751e7ae79bc535a6178005ffc614818c6d7b10db84cbb0fb3caac156bdd2b4 files/digest-kdeartwork-icewm-themes-3.5.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdyf3kT4lNIS36YERAtn3AJ9hYxzRygKkkrLGBCh6CqqQgY9mYQCdHmCA
-Jn8QCd2rtkLn67mW8Tg7mwo=
-=/A1c
------END PGP SIGNATURE-----
+MD5 a14e2ddcaeb34674798f5b110f574e66 kdeartwork-icewm-themes-3.4.1.ebuild 471
+MD5 71c07d58f32971ed94519b463773b617 kdeartwork-icewm-themes-3.5.0.ebuild 474
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

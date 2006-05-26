@@ -1,44 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST kdeaddons-3.4.0-3.4.1.tar.xdelta 120597
-DIST kdeaddons-3.4.0.tar.bz2 1670919
-DIST kdeaddons-3.4.1.tar.bz2 1626243
-DIST kdeaddons-3.4.3.tar.bz2 1593317
-DIST kdeaddons-3.5.2.tar.bz2 1640284 RMD160 bc2ce1f93b34fcb2c7662da22edf4894c6524a12 SHA256 2a3eea9ff6b550b90d3f51d4862f7d7b992182ac225fdac0684cc16fb990c2ec
-EBUILD kaddressbook-plugins-3.4.1.ebuild 546 RMD160 51549878f2aba3856cc60104805fa544a1de637e SHA1 ee39b642357fc6612da62bb5eb75ea38cd61a7a5 SHA256 96edd557739032cef4607afbc08fa5bbe13a14ec23fa5947fa69b757bf5ff749
-MD5 e81e3d20b60c3a2038e91bb16e8bc8a4 kaddressbook-plugins-3.4.1.ebuild 546
-RMD160 51549878f2aba3856cc60104805fa544a1de637e kaddressbook-plugins-3.4.1.ebuild 546
-SHA256 96edd557739032cef4607afbc08fa5bbe13a14ec23fa5947fa69b757bf5ff749 kaddressbook-plugins-3.4.1.ebuild 546
-EBUILD kaddressbook-plugins-3.4.3.ebuild 554 RMD160 e2b002099a555d41440dfae7ec3a577762fa3128 SHA1 2e6e79a003c162d6db73b11f59a3bde8125d548e SHA256 aea25bc80dd43c7baebbbc1cfc86320a5c16ef7fb7aa2bfe72e6fb8fd07a5179
-MD5 c3ff3886fe0fb5dabdb2dfaea143b8be kaddressbook-plugins-3.4.3.ebuild 554
-RMD160 e2b002099a555d41440dfae7ec3a577762fa3128 kaddressbook-plugins-3.4.3.ebuild 554
-SHA256 aea25bc80dd43c7baebbbc1cfc86320a5c16ef7fb7aa2bfe72e6fb8fd07a5179 kaddressbook-plugins-3.4.3.ebuild 554
-EBUILD kaddressbook-plugins-3.5.2.ebuild 521 RMD160 1a0d546fe796003905bd66938bcb89b1b2073731 SHA1 50fa568869e847d08258a88ea5b715a84ffd28c3 SHA256 268741e82d115e292fb5fb5984f66e399a2f546c446bb1559b89cb72541401b8
-MD5 1cc80085d22350e5b609c5d20c834d5b kaddressbook-plugins-3.5.2.ebuild 521
-RMD160 1a0d546fe796003905bd66938bcb89b1b2073731 kaddressbook-plugins-3.5.2.ebuild 521
-SHA256 268741e82d115e292fb5fb5984f66e399a2f546c446bb1559b89cb72541401b8 kaddressbook-plugins-3.5.2.ebuild 521
-MISC ChangeLog 5615 RMD160 78f1d5c87dc7af87bb3b52ad67eb9b5d3157e894 SHA1 12abd851065e70a6cbab7004c489199c068cc8b5 SHA256 8bf25ffaba78cda39190cd1fd238eedb06e52e06d0e007e717ca8364095ec9fb
-MD5 02b2578d45bdb83958376e1d043e9f93 ChangeLog 5615
-RMD160 78f1d5c87dc7af87bb3b52ad67eb9b5d3157e894 ChangeLog 5615
-SHA256 8bf25ffaba78cda39190cd1fd238eedb06e52e06d0e007e717ca8364095ec9fb ChangeLog 5615
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 cd72458336b69c49b8db19fbe33c87b0 ChangeLog 5719
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-kaddressbook-plugins-3.4.1 215
-RMD160 d7f34f43e468cb2e4d7935d3c0cb7b9b9ada730b files/digest-kaddressbook-plugins-3.4.1 215
-SHA256 b84fe2088931cc38a26102f7f2482756d5286bd5ee2c8c28754b0b0c321112cd files/digest-kaddressbook-plugins-3.4.1 215
 MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-kaddressbook-plugins-3.4.3 69
-RMD160 d32846177c0fadbb5676684fa4305a4d5633b08c files/digest-kaddressbook-plugins-3.4.3 69
-SHA256 5702f1f85638e9ae3dc7bdb8ff199d24c1ec45e26c0bf11173f5ffcb511d87b6 files/digest-kaddressbook-plugins-3.4.3 69
 MD5 191f6bee80885d21495b154d0b9b84fa files/digest-kaddressbook-plugins-3.5.2 253
-RMD160 7ceef00c96f7c9306805433a9ea566dafc129421 files/digest-kaddressbook-plugins-3.5.2 253
-SHA256 f5eb118862fc6790d69ceb8771ddb6feb108003b6c8147c31412bea7a36b4d8b files/digest-kaddressbook-plugins-3.5.2 253
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdx3GkT4lNIS36YERAhovAJ4r1Pse35hciHoJrn0RETEcV7LxFwCfcG7V
-Z/2acI8hkgMhXPj3b8r6KUs=
-=kP6t
------END PGP SIGNATURE-----
+MD5 e81e3d20b60c3a2038e91bb16e8bc8a4 kaddressbook-plugins-3.4.1.ebuild 546
+MD5 c3ff3886fe0fb5dabdb2dfaea143b8be kaddressbook-plugins-3.4.3.ebuild 554
+MD5 546b819e4f8d23b97013bb86bc230938 kaddressbook-plugins-3.5.2.ebuild 519
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

@@ -1,36 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST kdeartwork-3.4.0-3.4.1.tar.xdelta 301755
-DIST kdeartwork-3.4.0.tar.bz2 18077818
-DIST kdeartwork-3.4.1.tar.bz2 18066167
-DIST kdeartwork-3.5.1.tar.bz2 16595339
-EBUILD kdeartwork-emoticons-3.4.1.ebuild 482 RMD160 3a9379dfc62739daf4533caf8540db5b5853f4ca SHA1 9b3de05a1cece789cf024a5c96a612a5fdea743b SHA256 415c5df1ece1cf3076d70efe092eee7383a89e3fa67e7b96b31c31755b7b21c2
-MD5 10510cf930645b90f10a8491ed471294 kdeartwork-emoticons-3.4.1.ebuild 482
-RMD160 3a9379dfc62739daf4533caf8540db5b5853f4ca kdeartwork-emoticons-3.4.1.ebuild 482
-SHA256 415c5df1ece1cf3076d70efe092eee7383a89e3fa67e7b96b31c31755b7b21c2 kdeartwork-emoticons-3.4.1.ebuild 482
-EBUILD kdeartwork-emoticons-3.5.1.ebuild 486 RMD160 8bd271410ae9c83c2aba7741b2f75c6af156a0d0 SHA1 b2fbfd76a175861525fcdd8f84618e13287e546b SHA256 975b214fd738d3ed8a1c93b90ac8b5827a28d716fec1cb3de946c694cf3c8837
-MD5 1d10c1a5c4a2706506ecc421ec014ee7 kdeartwork-emoticons-3.5.1.ebuild 486
-RMD160 8bd271410ae9c83c2aba7741b2f75c6af156a0d0 kdeartwork-emoticons-3.5.1.ebuild 486
-SHA256 975b214fd738d3ed8a1c93b90ac8b5827a28d716fec1cb3de946c694cf3c8837 kdeartwork-emoticons-3.5.1.ebuild 486
-MISC ChangeLog 4134 RMD160 f683e92901266144a7738884e0cc695445bfd1b0 SHA1 70d39f8d99ebce818b1a52e173debd92a77dfce6 SHA256 63ffdc49dda96c6cd0b9220ab6a522b5c4ea471625c3b47d8d1ab5b35551100c
-MD5 bd0124159ece0687b7c4ac58f766631c ChangeLog 4134
-RMD160 f683e92901266144a7738884e0cc695445bfd1b0 ChangeLog 4134
-SHA256 63ffdc49dda96c6cd0b9220ab6a522b5c4ea471625c3b47d8d1ab5b35551100c ChangeLog 4134
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 23a36bc5a19e2ac47bc6a643980e9096 ChangeLog 4238
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-emoticons-3.4.1 220
-RMD160 3e5302e33525d3febecd531d77d35cb3cd2fe128 files/digest-kdeartwork-emoticons-3.4.1 220
-SHA256 be730128b71cbcccad3f99877dc388a7f3f3b0d0e678e0c7457b2fa749243b56 files/digest-kdeartwork-emoticons-3.4.1 220
 MD5 884bfbc2c4b4225b3520577c0ac6fe75 files/digest-kdeartwork-emoticons-3.5.1 71
-RMD160 03e08aae5874698d6aac8d303988b10b91295f53 files/digest-kdeartwork-emoticons-3.5.1 71
-SHA256 86983850076e32092628040fa50fcc262eb294f1e8531a8690aec3127720b225 files/digest-kdeartwork-emoticons-3.5.1 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdyfWkT4lNIS36YERAi+jAJ4pX5emHFk9QV4D4E8druJGW6bS3ACfa04e
-J65VD7APlQRl+JdQHEcBFtc=
-=ta+z
------END PGP SIGNATURE-----
+MD5 10510cf930645b90f10a8491ed471294 kdeartwork-emoticons-3.4.1.ebuild 482
+MD5 5c7baf1cf6cbfc938afd5dcca04059b7 kdeartwork-emoticons-3.5.1.ebuild 484
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

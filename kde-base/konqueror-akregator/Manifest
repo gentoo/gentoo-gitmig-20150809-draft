@@ -1,53 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST kdeaddons-3.4.0-3.4.1.tar.xdelta 120597
-DIST kdeaddons-3.4.0.tar.bz2 1670919
-DIST kdeaddons-3.4.1-3.4.2.tar.xdelta 93540
-DIST kdeaddons-3.4.1.tar.bz2 1626243
-DIST kdeaddons-3.4.2.tar.bz2 1591335
-DIST kdeaddons-3.4.3.tar.bz2 1593317
-DIST kdeaddons-3.5.2.tar.bz2 1640284 RMD160 bc2ce1f93b34fcb2c7662da22edf4894c6524a12 SHA256 2a3eea9ff6b550b90d3f51d4862f7d7b992182ac225fdac0684cc16fb990c2ec
-EBUILD konqueror-akregator-3.4.1.ebuild 652 RMD160 4b99e8928ffb12d92bc985bcc673726de75c2dab SHA1 743ed57500bf5f769fd684d0645a05e01eb48a74 SHA256 a5fab5f278bc7bed502ab100323433f0aa0c56d0b2a60b93d8ddf3b7defe5048
-MD5 68b6c01cea68645753003becd3257d6c konqueror-akregator-3.4.1.ebuild 652
-RMD160 4b99e8928ffb12d92bc985bcc673726de75c2dab konqueror-akregator-3.4.1.ebuild 652
-SHA256 a5fab5f278bc7bed502ab100323433f0aa0c56d0b2a60b93d8ddf3b7defe5048 konqueror-akregator-3.4.1.ebuild 652
-EBUILD konqueror-akregator-3.4.2.ebuild 667 RMD160 ad593ba4e2a8673e4211e7fe940dc2f85c588428 SHA1 d5dd85662ec887b1960b978095db5f91fcd3d29e SHA256 91a6427102bd1310ec8d798247868fd6a3cea01d20da929c30b3b3ce9830a08c
-MD5 5e9f31ba95c766a56e4e9800e874cb49 konqueror-akregator-3.4.2.ebuild 667
-RMD160 ad593ba4e2a8673e4211e7fe940dc2f85c588428 konqueror-akregator-3.4.2.ebuild 667
-SHA256 91a6427102bd1310ec8d798247868fd6a3cea01d20da929c30b3b3ce9830a08c konqueror-akregator-3.4.2.ebuild 667
-EBUILD konqueror-akregator-3.4.3.ebuild 668 RMD160 21f032aaafdcafc8fe06a5116bfecea00d7bbec0 SHA1 b688c078fce8279fe9eb3a34895c490a5dcd01ac SHA256 fd6d88cf25c0a993fc79a4e4e69e45a05afef2270543830b1b623aa0e2b3c0ef
-MD5 9d037595ab71867865909bc152a9e5b8 konqueror-akregator-3.4.3.ebuild 668
-RMD160 21f032aaafdcafc8fe06a5116bfecea00d7bbec0 konqueror-akregator-3.4.3.ebuild 668
-SHA256 fd6d88cf25c0a993fc79a4e4e69e45a05afef2270543830b1b623aa0e2b3c0ef konqueror-akregator-3.4.3.ebuild 668
-EBUILD konqueror-akregator-3.5.2.ebuild 671 RMD160 82f9886946ba6bca7a692d1cf3f2adfe61be4d8b SHA1 0606e0ec01164484133081be0c7f225a2fc569b6 SHA256 434a0fcfed8d1f7271e3e7ceb0fab591dce294334081aaeb326ba231695ac66f
-MD5 1dbde8630ce984be1f62bbe5583e1ea2 konqueror-akregator-3.5.2.ebuild 671
-RMD160 82f9886946ba6bca7a692d1cf3f2adfe61be4d8b konqueror-akregator-3.5.2.ebuild 671
-SHA256 434a0fcfed8d1f7271e3e7ceb0fab591dce294334081aaeb326ba231695ac66f konqueror-akregator-3.5.2.ebuild 671
-MISC ChangeLog 5844 RMD160 5b91f78f1a2a9d92fcbb07a750cfcd5c3e480ea2 SHA1 689b0ecd5e7c933ec981c07f1dd27e23995c54af SHA256 b1abfbf2ab108e26851da52cbaf76f22d0688529d0b6f7204665620e4cffe08d
-MD5 bd38d033682d0e3f30eb9f31a505ef0e ChangeLog 5844
-RMD160 5b91f78f1a2a9d92fcbb07a750cfcd5c3e480ea2 ChangeLog 5844
-SHA256 b1abfbf2ab108e26851da52cbaf76f22d0688529d0b6f7204665620e4cffe08d ChangeLog 5844
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 e544bbc3473f26eb0cfddae70d372559 ChangeLog 5947
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-konqueror-akregator-3.4.1 215
-RMD160 d7f34f43e468cb2e4d7935d3c0cb7b9b9ada730b files/digest-konqueror-akregator-3.4.1 215
-SHA256 b84fe2088931cc38a26102f7f2482756d5286bd5ee2c8c28754b0b0c321112cd files/digest-konqueror-akregator-3.4.1 215
 MD5 aef1ad04d3f153a78e0b5aa9742d6f9e files/digest-konqueror-akregator-3.4.2 291
-RMD160 82a7f55a1506e3dc4110b3f257b0de264bbe92e0 files/digest-konqueror-akregator-3.4.2 291
-SHA256 e1b286fd0afe6a640380070ffecffba03ddabf4abf2b2d59cb3c786922a54a6c files/digest-konqueror-akregator-3.4.2 291
 MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-konqueror-akregator-3.4.3 69
-RMD160 d32846177c0fadbb5676684fa4305a4d5633b08c files/digest-konqueror-akregator-3.4.3 69
-SHA256 5702f1f85638e9ae3dc7bdb8ff199d24c1ec45e26c0bf11173f5ffcb511d87b6 files/digest-konqueror-akregator-3.4.3 69
 MD5 191f6bee80885d21495b154d0b9b84fa files/digest-konqueror-akregator-3.5.2 253
-RMD160 7ceef00c96f7c9306805433a9ea566dafc129421 files/digest-konqueror-akregator-3.5.2 253
-SHA256 f5eb118862fc6790d69ceb8771ddb6feb108003b6c8147c31412bea7a36b4d8b files/digest-konqueror-akregator-3.5.2 253
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdyCskT4lNIS36YERAtTvAJ9ewoIYKlDgQ9pdeFhgVMSPF/ma4wCeLcaH
-P+/7lOOsIYY/UgXbi/Sk7XE=
-=UEsS
------END PGP SIGNATURE-----
+MD5 68b6c01cea68645753003becd3257d6c konqueror-akregator-3.4.1.ebuild 652
+MD5 5e9f31ba95c766a56e4e9800e874cb49 konqueror-akregator-3.4.2.ebuild 667
+MD5 9d037595ab71867865909bc152a9e5b8 konqueror-akregator-3.4.3.ebuild 668
+MD5 47ed14247a549e54ac3a93617bebf43f konqueror-akregator-3.5.2.ebuild 669
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

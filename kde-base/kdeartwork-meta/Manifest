@@ -1,46 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-EBUILD kdeartwork-meta-3.4.1.ebuild 989 RMD160 1990b1798aa332758eb044e8b186fb4fd6ddc9fa SHA1 382696dcc3380aa8777a26bf0153d7a213dcc9e6 SHA256 64af841da01a3ab77c3e6e5c8960f77f8950ea23ea3b02126516feaa82e1662d
-MD5 0568a67f40cae03b57bcbcd07a213f49 kdeartwork-meta-3.4.1.ebuild 989
-RMD160 1990b1798aa332758eb044e8b186fb4fd6ddc9fa kdeartwork-meta-3.4.1.ebuild 989
-SHA256 64af841da01a3ab77c3e6e5c8960f77f8950ea23ea3b02126516feaa82e1662d kdeartwork-meta-3.4.1.ebuild 989
-EBUILD kdeartwork-meta-3.4.2.ebuild 1010 RMD160 484584b3b39244e074de38dc4f6736cac633bf7c SHA1 83f2e6375d041ef299d978122a2f7516a569c0df SHA256 3b61c7dab77b655d944140e3219bc82dd8ba92bc4df13f7f71e8eba0789b5646
-MD5 e203adf71436a8122d389e6860647b92 kdeartwork-meta-3.4.2.ebuild 1010
-RMD160 484584b3b39244e074de38dc4f6736cac633bf7c kdeartwork-meta-3.4.2.ebuild 1010
-SHA256 3b61c7dab77b655d944140e3219bc82dd8ba92bc4df13f7f71e8eba0789b5646 kdeartwork-meta-3.4.2.ebuild 1010
-EBUILD kdeartwork-meta-3.4.3.ebuild 1010 RMD160 c162d4ab0fe1f960277953ed48875b8f9f1588be SHA1 b26f22ba9b326c101394d485bf93867b39a3a840 SHA256 6c0a90930e15230a4b4eb71e0c75833c0bdef49bb0dd74a2be20db8fc36306cb
-MD5 c632ddbf07b226cb89f64c7da5bbaeae kdeartwork-meta-3.4.3.ebuild 1010
-RMD160 c162d4ab0fe1f960277953ed48875b8f9f1588be kdeartwork-meta-3.4.3.ebuild 1010
-SHA256 6c0a90930e15230a4b4eb71e0c75833c0bdef49bb0dd74a2be20db8fc36306cb kdeartwork-meta-3.4.3.ebuild 1010
-EBUILD kdeartwork-meta-3.5.2.ebuild 1014 RMD160 0e6d667db3d83275c34253cff8c433c565692aba SHA1 126eca5e6be3417014d088ac3e938b98246c4179 SHA256 60385e1651932c76d753bc29f259b8f82423466b1d516334641fe34d2b7874fd
-MD5 a627e7f7945f77715a0e1024a60a405f kdeartwork-meta-3.5.2.ebuild 1014
-RMD160 0e6d667db3d83275c34253cff8c433c565692aba kdeartwork-meta-3.5.2.ebuild 1014
-SHA256 60385e1651932c76d753bc29f259b8f82423466b1d516334641fe34d2b7874fd kdeartwork-meta-3.5.2.ebuild 1014
-MISC ChangeLog 5965 RMD160 3974164d774846e788310e2ddc3aebdac3d4546e SHA1 c1975998990d73ff32921d936588303faaeb5805 SHA256 f655694edde13827c1e4362c65ef10138b5b7d290d563e355d754a23fc92e398
-MD5 d186cfffcfa7239e7e8109e6bfa325ac ChangeLog 5965
-RMD160 3974164d774846e788310e2ddc3aebdac3d4546e ChangeLog 5965
-SHA256 f655694edde13827c1e4362c65ef10138b5b7d290d563e355d754a23fc92e398 ChangeLog 5965
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 46e249f0cd9fc51ab9bc6dd5930175d3 ChangeLog 6064
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeartwork-meta-3.4.1 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeartwork-meta-3.4.1 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeartwork-meta-3.4.1 1
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeartwork-meta-3.4.2 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeartwork-meta-3.4.2 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeartwork-meta-3.4.2 1
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeartwork-meta-3.4.3 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeartwork-meta-3.4.3 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeartwork-meta-3.4.3 1
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeartwork-meta-3.5.2 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeartwork-meta-3.5.2 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeartwork-meta-3.5.2 1
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdyikkT4lNIS36YERAp/xAJ9V+HxRomPe2xWjrymaodoGryae2wCfTCsN
-OrJXlPMhPOsI6h0LjZbGTfA=
-=NOIy
------END PGP SIGNATURE-----
+MD5 0568a67f40cae03b57bcbcd07a213f49 kdeartwork-meta-3.4.1.ebuild 989
+MD5 e203adf71436a8122d389e6860647b92 kdeartwork-meta-3.4.2.ebuild 1010
+MD5 c632ddbf07b226cb89f64c7da5bbaeae kdeartwork-meta-3.4.3.ebuild 1010
+MD5 1782d3502ee98f030ffc9e9c1e08a689 kdeartwork-meta-3.5.2.ebuild 1012
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

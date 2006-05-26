@@ -1,57 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX konq-plugins-3.5.2-arkplugin-crash-fix.diff 8388 RMD160 b459d3727268b9739a6528490eb745a3bd893804 SHA1 744708b8a7b57dccf33bbe819b90ab05b3045070 SHA256 4a2db411cfab3e6e80ca77309d2ee88e5ad19172c2fca855528c8e4f793b4bf4
-MD5 b11067e88ee43ae4d8e2c5c71ef0b76f files/konq-plugins-3.5.2-arkplugin-crash-fix.diff 8388
-RMD160 b459d3727268b9739a6528490eb745a3bd893804 files/konq-plugins-3.5.2-arkplugin-crash-fix.diff 8388
-SHA256 4a2db411cfab3e6e80ca77309d2ee88e5ad19172c2fca855528c8e4f793b4bf4 files/konq-plugins-3.5.2-arkplugin-crash-fix.diff 8388
-DIST kdeaddons-3.4.0-3.4.1.tar.xdelta 120597
-DIST kdeaddons-3.4.0.tar.bz2 1670919
-DIST kdeaddons-3.4.1-3.4.2.tar.xdelta 93540
-DIST kdeaddons-3.4.1.tar.bz2 1626243
-DIST kdeaddons-3.4.2.tar.bz2 1591335
-DIST kdeaddons-3.4.3.tar.bz2 1593317
-DIST kdeaddons-3.5.2.tar.bz2 1640284
-EBUILD konq-plugins-3.4.1.ebuild 657 RMD160 e282b2c31457d72e73818bd590b8e25ea13654c9 SHA1 ed27070cd0e54d5d1e4bc53981ea582c1b5699a7 SHA256 103af725ccd7e14dba5b0688a6a80ea15b39fe8e019afe0af772dab45fdc9e3c
-MD5 c92307aa366e79b8743fd96262ae8f01 konq-plugins-3.4.1.ebuild 657
-RMD160 e282b2c31457d72e73818bd590b8e25ea13654c9 konq-plugins-3.4.1.ebuild 657
-SHA256 103af725ccd7e14dba5b0688a6a80ea15b39fe8e019afe0af772dab45fdc9e3c konq-plugins-3.4.1.ebuild 657
-EBUILD konq-plugins-3.4.2.ebuild 672 RMD160 366c4333e41def8011c58a1e1343b3c628e75591 SHA1 5a4bf25ae42a1aab96fdf08dd1ea5df468601398 SHA256 5880af94362220244f6c5cdf6aa768bad38d2e1669916f55a6b1381415422704
-MD5 0216edfe2fd1617b1dac5b8bd42668ff konq-plugins-3.4.2.ebuild 672
-RMD160 366c4333e41def8011c58a1e1343b3c628e75591 konq-plugins-3.4.2.ebuild 672
-SHA256 5880af94362220244f6c5cdf6aa768bad38d2e1669916f55a6b1381415422704 konq-plugins-3.4.2.ebuild 672
-EBUILD konq-plugins-3.4.3.ebuild 673 RMD160 4ab2d409c9e969a5c40cb108ae199469df6e8f63 SHA1 df795615740cfc0e55c739b330b0ceb9d405a70c SHA256 71fa5d7b304625ea2390a2dba69f86b4b59a7270de8190a74d5642be7c6abc7f
-MD5 8aa6853ba0dd1c1a6784610a2f70f9f2 konq-plugins-3.4.3.ebuild 673
-RMD160 4ab2d409c9e969a5c40cb108ae199469df6e8f63 konq-plugins-3.4.3.ebuild 673
-SHA256 71fa5d7b304625ea2390a2dba69f86b4b59a7270de8190a74d5642be7c6abc7f konq-plugins-3.4.3.ebuild 673
-EBUILD konq-plugins-3.5.2-r1.ebuild 765 RMD160 cd4270ce38ae88bba2ae553abedc67ff55bc1644 SHA1 9756f754511964a46ac068d5ab6f9ab7f37f03b5 SHA256 bbb013c230d049d15743b784b9ae5141049c49490aff8f878a499b1d3a29f701
-MD5 cc4f761331ca8823b0a2a2d06926b756 konq-plugins-3.5.2-r1.ebuild 765
-RMD160 cd4270ce38ae88bba2ae553abedc67ff55bc1644 konq-plugins-3.5.2-r1.ebuild 765
-SHA256 bbb013c230d049d15743b784b9ae5141049c49490aff8f878a499b1d3a29f701 konq-plugins-3.5.2-r1.ebuild 765
-MISC ChangeLog 6275 RMD160 94c50e2926b23f6ba6193f8beb2ba079f79afb68 SHA1 949a1d267ba8410d1d7927f3881b8e551243530d SHA256 2a15cd8ebcb867fc3fe464304dcbcbd8d64da4119f7ba68e103bd846c040d30c
-MD5 d6770c4035627e077e39fede6ae10a7f ChangeLog 6275
-RMD160 94c50e2926b23f6ba6193f8beb2ba079f79afb68 ChangeLog 6275
-SHA256 2a15cd8ebcb867fc3fe464304dcbcbd8d64da4119f7ba68e103bd846c040d30c ChangeLog 6275
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 361a01e4c3b895786d6460a25ccdb1f4 ChangeLog 6374
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-konq-plugins-3.4.1 215
-RMD160 d7f34f43e468cb2e4d7935d3c0cb7b9b9ada730b files/digest-konq-plugins-3.4.1 215
-SHA256 b84fe2088931cc38a26102f7f2482756d5286bd5ee2c8c28754b0b0c321112cd files/digest-konq-plugins-3.4.1 215
 MD5 aef1ad04d3f153a78e0b5aa9742d6f9e files/digest-konq-plugins-3.4.2 291
-RMD160 82a7f55a1506e3dc4110b3f257b0de264bbe92e0 files/digest-konq-plugins-3.4.2 291
-SHA256 e1b286fd0afe6a640380070ffecffba03ddabf4abf2b2d59cb3c786922a54a6c files/digest-konq-plugins-3.4.2 291
 MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-konq-plugins-3.4.3 69
-RMD160 d32846177c0fadbb5676684fa4305a4d5633b08c files/digest-konq-plugins-3.4.3 69
-SHA256 5702f1f85638e9ae3dc7bdb8ff199d24c1ec45e26c0bf11173f5ffcb511d87b6 files/digest-konq-plugins-3.4.3 69
 MD5 f7027a49231b57508788c4b6843e4091 files/digest-konq-plugins-3.5.2-r1 69
-RMD160 ee5e49ccc7f3197c200f936f12182fb7f4ccc7b4 files/digest-konq-plugins-3.5.2-r1 69
-SHA256 52499b1da7aa4e15471ec927d233c03481e29b54b47783a21498ca724a7b26ec files/digest-konq-plugins-3.5.2-r1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdyBgkT4lNIS36YERArYvAJ9569+pXYekxtOpusMeAoeZhGPB+wCeP9+a
-kFwx81lpd7rTklRKAin3M4k=
-=hl/J
------END PGP SIGNATURE-----
+MD5 b11067e88ee43ae4d8e2c5c71ef0b76f files/konq-plugins-3.5.2-arkplugin-crash-fix.diff 8388
+MD5 c92307aa366e79b8743fd96262ae8f01 konq-plugins-3.4.1.ebuild 657
+MD5 0216edfe2fd1617b1dac5b8bd42668ff konq-plugins-3.4.2.ebuild 672
+MD5 8aa6853ba0dd1c1a6784610a2f70f9f2 konq-plugins-3.4.3.ebuild 673
+MD5 cdf762a9347fc095d76b93646ead74e9 konq-plugins-3.5.2-r1.ebuild 763
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

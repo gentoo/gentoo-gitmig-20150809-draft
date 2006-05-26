@@ -1,53 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST kdeartwork-3.4.0-3.4.1.tar.xdelta 301755
-DIST kdeartwork-3.4.0.tar.bz2 18077818
-DIST kdeartwork-3.4.1-3.4.2.tar.xdelta 291128
-DIST kdeartwork-3.4.1.tar.bz2 18066167
-DIST kdeartwork-3.4.2.tar.bz2 18023334
-DIST kdeartwork-3.4.3.tar.bz2 18022458
-DIST kdeartwork-3.5.2.tar.bz2 16620565 RMD160 55c68134beb452c6316211f7a4fe1c0c4404a154 SHA256 c1df39d5eba36e5071e47c3534c3117abd91d0c9ae2b798a457fd29257218a31
-EBUILD kdeartwork-kwin-styles-3.4.1.ebuild 518 RMD160 b3f571bf393804e208bb74ec014b8d6d2b07a942 SHA1 bf35526a0d269a43e662e790c8eacb3f75d09b86 SHA256 d10cf6d25a755a04f2c237be6bfbffd98935609f293f46a7f693cd95c1be5549
-MD5 e42a767a0366a3edd96790b9c72d6f52 kdeartwork-kwin-styles-3.4.1.ebuild 518
-RMD160 b3f571bf393804e208bb74ec014b8d6d2b07a942 kdeartwork-kwin-styles-3.4.1.ebuild 518
-SHA256 d10cf6d25a755a04f2c237be6bfbffd98935609f293f46a7f693cd95c1be5549 kdeartwork-kwin-styles-3.4.1.ebuild 518
-EBUILD kdeartwork-kwin-styles-3.4.2.ebuild 531 RMD160 b05742c1fcc52f58006956f13656658f527f693a SHA1 686a1774f02b4c38f0695696e1b2f3ae325da053 SHA256 c391ea994af48424ed296c1d19b401ec4d960a1d489676bd4c877958c8e27b84
-MD5 bbb08f7d1ad937a126d320b1aa65767a kdeartwork-kwin-styles-3.4.2.ebuild 531
-RMD160 b05742c1fcc52f58006956f13656658f527f693a kdeartwork-kwin-styles-3.4.2.ebuild 531
-SHA256 c391ea994af48424ed296c1d19b401ec4d960a1d489676bd4c877958c8e27b84 kdeartwork-kwin-styles-3.4.2.ebuild 531
-EBUILD kdeartwork-kwin-styles-3.4.3.ebuild 532 RMD160 bd2493ea9e7bd4758f622b5c4558960bb6d8f574 SHA1 fcda2d4adbe31711c679db1a25421ce53a8a9bd7 SHA256 6c7f757eed1ccfd08a4e3223fee04ae6c0d18a57eb1130f5db99a2fb3020df1c
-MD5 61d146ccc129412cff1c78e8e70ff2ab kdeartwork-kwin-styles-3.4.3.ebuild 532
-RMD160 bd2493ea9e7bd4758f622b5c4558960bb6d8f574 kdeartwork-kwin-styles-3.4.3.ebuild 532
-SHA256 6c7f757eed1ccfd08a4e3223fee04ae6c0d18a57eb1130f5db99a2fb3020df1c kdeartwork-kwin-styles-3.4.3.ebuild 532
-EBUILD kdeartwork-kwin-styles-3.5.2.ebuild 507 RMD160 d3ce8ff1093a7123df27b083d462f29061bff69f SHA1 aca7da3fe6ca952be49b99427757958eb41906c5 SHA256 e1f68eca17646b81617264be9a5af085e22b046ef1bb7fde57fc02f71a9ae186
-MD5 34446e1a3f1a24ee9fe4a02df0a9637c kdeartwork-kwin-styles-3.5.2.ebuild 507
-RMD160 d3ce8ff1093a7123df27b083d462f29061bff69f kdeartwork-kwin-styles-3.5.2.ebuild 507
-SHA256 e1f68eca17646b81617264be9a5af085e22b046ef1bb7fde57fc02f71a9ae186 kdeartwork-kwin-styles-3.5.2.ebuild 507
-MISC ChangeLog 6123 RMD160 0e7d63fe210865a56bf846a3a43fd72e0736b896 SHA1 06c16cb78bfc05cbf5a82e739c385cc9e25912e3 SHA256 53921d9c4119b2e4379ae3aeb81ea6d1c13280c19b46f65852227d197a533545
-MD5 3f4ea12a17a29695cfa9d48be2ad0e8f ChangeLog 6123
-RMD160 0e7d63fe210865a56bf846a3a43fd72e0736b896 ChangeLog 6123
-SHA256 53921d9c4119b2e4379ae3aeb81ea6d1c13280c19b46f65852227d197a533545 ChangeLog 6123
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 e8899867972dd4d08daf2f98ad740212 ChangeLog 6229
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-kwin-styles-3.4.1 220
-RMD160 3e5302e33525d3febecd531d77d35cb3cd2fe128 files/digest-kdeartwork-kwin-styles-3.4.1 220
-SHA256 be730128b71cbcccad3f99877dc388a7f3f3b0d0e678e0c7457b2fa749243b56 files/digest-kdeartwork-kwin-styles-3.4.1 220
 MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-kwin-styles-3.4.2 298
-RMD160 f34482d261d2a40b31b2e87ec65674180f0a9323 files/digest-kdeartwork-kwin-styles-3.4.2 298
-SHA256 d34186e3eba0d41ab331fc47ebb75c0fe9599068ee1b24381a365b776a8698c8 files/digest-kdeartwork-kwin-styles-3.4.2 298
 MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-kwin-styles-3.4.3 71
-RMD160 598a814056e62dd7fbf9d314a3cb14aee36dd815 files/digest-kdeartwork-kwin-styles-3.4.3 71
-SHA256 7fa0f246c9164e90bde612cc330288e4b9f1de1131cb9d853bf08ab7bc984ae3 files/digest-kdeartwork-kwin-styles-3.4.3 71
 MD5 a703f4c18266818b6057e09748eba62d files/digest-kdeartwork-kwin-styles-3.5.2 259
-RMD160 f78abaabc7634910f3df6f87ffd89baf5fb1840b files/digest-kdeartwork-kwin-styles-3.5.2 259
-SHA256 d29a0491904a0dd51e3fbb6f84794819177db93160bdea3043b5175331cd244c files/digest-kdeartwork-kwin-styles-3.5.2 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdyhikT4lNIS36YERAs/MAJwKFA2j+UWT5OhXtW8FJsGJl2XclACgruEg
-TUAX96Kjr7RbbWZpk+X5Ucs=
-=hpHJ
------END PGP SIGNATURE-----
+MD5 e42a767a0366a3edd96790b9c72d6f52 kdeartwork-kwin-styles-3.4.1.ebuild 518
+MD5 bbb08f7d1ad937a126d320b1aa65767a kdeartwork-kwin-styles-3.4.2.ebuild 531
+MD5 61d146ccc129412cff1c78e8e70ff2ab kdeartwork-kwin-styles-3.4.3.ebuild 532
+MD5 91a6782d3da6d402032db3e1d9dfcab6 kdeartwork-kwin-styles-3.5.2.ebuild 505
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
