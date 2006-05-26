@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.60 2006/01/27 19:20:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.61 2006/05/26 00:32:04 josejx Exp $
+
+  26 May 2006; Joseph Jezak <josejx@gentoo.org>
+  -files/mol-0.9.70-makefile-fix.patch, -files/mol-0.9.70-nopriority.patch,
+  -files/mol-0.9.71_pre1-big-filesystem.patch,
+  -files/mol-0.9.71_pre1-linux-2.6.9.patch,
+  -files/mol-0.9.71_pre1-nopriority.patch,
+  -files/mol-0.9.71_pre1-tmp-offset.patch, -files/mol-module-fix.patch,
+  -files/mol-tiger.patch, -files/mol-uname.diff,
+  -files/mol-verify_area.diff, -mol-0.9.70.ebuild, -mol-0.9.70-r1.ebuild,
+  -mol-0.9.71_pre1-r3.ebuild, -mol-0.9.71_pre6.ebuild,
+  -mol-0.9.71_pre7.ebuild:
+  Cleanup
 
 *mol-0.9.71_pre8 (27 Jan 2006)
 
