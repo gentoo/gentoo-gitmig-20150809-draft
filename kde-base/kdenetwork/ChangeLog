@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.197 2006/05/18 12:40:44 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.198 2006/05/26 04:01:12 tsunam Exp $
+
+  26 May 2006; Joshua Jackson <tsunam@gentoo.org> kdenetwork-3.5.2.ebuild:
+  Stable on x86; bug #132213
 
   17 May 2006; <psi29a@gentoo.org> kdenetwork-3.5.2.ebuild:
   added to ~mips for testing

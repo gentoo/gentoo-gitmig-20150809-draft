@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.2.ebuild,v 1.1 2006/03/25 19:57:51 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.2.ebuild,v 1.2 2006/05/26 03:58:58 tsunam Exp $
 
 inherit kde-dist
 
 DESCRIPTION="KDE SDK: Cervisia, KBabel, KCachegrind, Kompare, Umbrello,..."
 
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc x86"
 IUSE="berkdb subversion"
 
 DEPEND="x86? ( dev-util/callgrind )
