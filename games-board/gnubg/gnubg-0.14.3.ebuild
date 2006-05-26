@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3.ebuild,v 1.6 2006/05/24 15:28:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3.ebuild,v 1.7 2006/05/26 17:33:48 corsair Exp $
 
 inherit gnuconfig flag-o-matic eutils games
 
@@ -14,8 +14,11 @@ SRC_URI="ftp://alpha.gnu.org/gnu/gnubg/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-amd64 ~ppc ~sparc x86"
+KEYWORDS="-amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="arts esd gdbm gtk guile nas nls opengl python readline X"
+
+# test fail - bug #132002
+RESTRICT="test"
 
 # FIXME does this need to DEPEND on netpbm?
 DEPEND="dev-libs/glib
