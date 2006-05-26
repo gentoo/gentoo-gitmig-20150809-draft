@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.46 2006/05/23 21:16:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.47 2006/05/26 12:46:15 genstef Exp $
+
+  26 May 2006; <stefan@gentoo.org> ghostscript-afpl-8.54.ebuild:
+  fix patch order thanks to Bo Ørsted Andresen <bo.andresen@zlin.dk> in bug
+  134391
 
 *ghostscript-afpl-8.54 (23 May 2006)
 

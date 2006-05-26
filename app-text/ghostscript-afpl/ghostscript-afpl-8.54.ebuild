@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.54.ebuild,v 1.1 2006/05/23 21:16:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.54.ebuild,v 1.2 2006/05/26 12:46:15 genstef Exp $
 
 inherit eutils autotools versionator
 
@@ -87,17 +87,17 @@ src_unpack() {
 		-i "${S}"/src/Makefile.in  || die
 	sed -i -e "s:#if 1:#if 0:" "${S}"/src/gdevhl12.c || die
 
+	# #128650, #128645, http://bugs.ghostscript.com/show_bug.cgi?id=688703
+	epatch ${FILESDIR}/ghostscript-afpl-8.54-ps2epsi-afpl.diff
+	epatch ${FILESDIR}/ghostscript-afpl-8.54-rinkj.patch
+	epatch ${FILESDIR}/ghostscript-afpl-8.54-destdir.diff
+
 	# already fixed inSVN, http://bugs.ghostscript.com/show_bug.cgi?id=688702
 	epatch ${FILESDIR}/ghostscript-afpl-8.54-gtk2.patch
 	if ! use gtk; then
 		sed -i "s:\$(GSSOX)::" src/*.mak || die "gsx sed failed"
 		sed -i "s:.*\$(GSSOX_XENAME)$::" src/*.mak || die "gsxso sed failed"
 	fi
-
-	# #128650, #128645, http://bugs.ghostscript.com/show_bug.cgi?id=688703
-	epatch ${FILESDIR}/ghostscript-afpl-8.54-ps2epsi-afpl.diff
-	epatch ${FILESDIR}/ghostscript-afpl-8.54-rinkj.patch
-	epatch ${FILESDIR}/ghostscript-afpl-8.54-destdir.diff
 
 	# search path fix
 	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/${PVM}/$(get_libdir):" \
