@@ -1,53 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST kdebase-3.4.0-3.4.1.tar.xdelta 1089415
-DIST kdebase-3.4.0.tar.bz2 22670772
-DIST kdebase-3.4.1-3.4.2.tar.xdelta 928157
-DIST kdebase-3.4.1.tar.bz2 22433034
-DIST kdebase-3.4.2.tar.bz2 22466433
-DIST kdebase-3.4.3.tar.bz2 22425835
-DIST kdebase-3.5.2.tar.bz2 23590820 RMD160 216ff59c49bb4fee2aa3b7d976ec40a8cccff107 SHA256 21150b7e553e83487e70e70e3d13ce107c6c5d57133b40f413807887a9e431f7
-EBUILD kpersonalizer-3.4.1.ebuild 401 RMD160 e6ea32f8e0df387547f6b56fe725f73cdba5479f SHA1 5f97ba7b83b79a9128bd0b438fe8b448cbbfec23 SHA256 ab30c35f40666599b16b889997c56e682351305e36cf23cd280f0183b0eed62b
-MD5 8813ba5f121b35e19fe79572207ef851 kpersonalizer-3.4.1.ebuild 401
-RMD160 e6ea32f8e0df387547f6b56fe725f73cdba5479f kpersonalizer-3.4.1.ebuild 401
-SHA256 ab30c35f40666599b16b889997c56e682351305e36cf23cd280f0183b0eed62b kpersonalizer-3.4.1.ebuild 401
-EBUILD kpersonalizer-3.4.2.ebuild 414 RMD160 97b3a6e789164a96174f3f99fd6e762b25c1ae9c SHA1 cd9587296a00cdf66f3a05157b8bb3d7f6b96b7f SHA256 b7d821dfa1f9da106f392e5c388c4f9051979fe26d85bea67a753d8bf9dd0d9b
-MD5 a91c6e82ca3cea74a65b1c0a554a49d9 kpersonalizer-3.4.2.ebuild 414
-RMD160 97b3a6e789164a96174f3f99fd6e762b25c1ae9c kpersonalizer-3.4.2.ebuild 414
-SHA256 b7d821dfa1f9da106f392e5c388c4f9051979fe26d85bea67a753d8bf9dd0d9b kpersonalizer-3.4.2.ebuild 414
-EBUILD kpersonalizer-3.4.3.ebuild 415 RMD160 ebf29c0ee6f4552cb7ec3ca81f0bcbb880ba952c SHA1 ceebb88e06f49caf6269b972c43dce5ec5b5e25b SHA256 e381cbbcf8b1ac6d1ad732f9d35b7f486e78188146b73ad737c70875e2e9c888
-MD5 6dd3e3f99999a5be9303ebb86d322707 kpersonalizer-3.4.3.ebuild 415
-RMD160 ebf29c0ee6f4552cb7ec3ca81f0bcbb880ba952c kpersonalizer-3.4.3.ebuild 415
-SHA256 e381cbbcf8b1ac6d1ad732f9d35b7f486e78188146b73ad737c70875e2e9c888 kpersonalizer-3.4.3.ebuild 415
-EBUILD kpersonalizer-3.5.2.ebuild 455 RMD160 6bb277e06670d690d0c4f568caef855dce0387e5 SHA1 18c75886afd1074e225456efa31f3c04b8c4dd4e SHA256 d8b075df38579d3ad765ac12e287b5c9328df29ddf365d511071eb58b98c151d
-MD5 50bedbea097f84257a10a38721a4c853 kpersonalizer-3.5.2.ebuild 455
-RMD160 6bb277e06670d690d0c4f568caef855dce0387e5 kpersonalizer-3.5.2.ebuild 455
-SHA256 d8b075df38579d3ad765ac12e287b5c9328df29ddf365d511071eb58b98c151d kpersonalizer-3.5.2.ebuild 455
-MISC ChangeLog 5512 RMD160 096bb6dadc5b1b91b2b71f23ae7aaafdc1737485 SHA1 36d97fe900e7222f59a3955228c3f25e91082363 SHA256 8ccd67d38ff26ff5e0f02f6d90a89a51eb4f2dcc056b77e3ea29f1be7c4b24fa
-MD5 8761e0d1aa9f5b9a0bcfb5b720007b28 ChangeLog 5512
-RMD160 096bb6dadc5b1b91b2b71f23ae7aaafdc1737485 ChangeLog 5512
-SHA256 8ccd67d38ff26ff5e0f02f6d90a89a51eb4f2dcc056b77e3ea29f1be7c4b24fa ChangeLog 5512
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 3a358f1f5d1b4c85b383c43dc264fabe ChangeLog 5607
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kpersonalizer-3.4.1 212
-RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-kpersonalizer-3.4.1 212
-SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-kpersonalizer-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kpersonalizer-3.4.2 287
-RMD160 db88376c4259165535f83f3529f0834fb2209612 files/digest-kpersonalizer-3.4.2 287
-SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/digest-kpersonalizer-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kpersonalizer-3.4.3 68
-RMD160 fe4b253b0a7c2e30a2aa1d0d796dfcb11e30590a files/digest-kpersonalizer-3.4.3 68
-SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/digest-kpersonalizer-3.4.3 68
 MD5 612323f8728d639ddab8f055f88070ff files/digest-kpersonalizer-3.5.2 250
-RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-kpersonalizer-3.5.2 250
-SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-kpersonalizer-3.5.2 250
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdjyLkT4lNIS36YERApGYAJ961rHNFPsNcStmBL7uU3DlgsvEqgCgjHWw
-65ouazKfo/H0AqUtuYo02Cc=
-=qmxF
------END PGP SIGNATURE-----
+MD5 8813ba5f121b35e19fe79572207ef851 kpersonalizer-3.4.1.ebuild 401
+MD5 a91c6e82ca3cea74a65b1c0a554a49d9 kpersonalizer-3.4.2.ebuild 414
+MD5 6dd3e3f99999a5be9303ebb86d322707 kpersonalizer-3.4.3.ebuild 415
+MD5 4338a184ba9131b320aa4765f5b9fced kpersonalizer-3.5.2.ebuild 453
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

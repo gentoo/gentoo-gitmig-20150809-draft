@@ -1,79 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX configure.in.in-kdm-settings.diff 686 RMD160 e26a29248e9825c87287107e3fb2767424fead9f SHA1 d765ad762d8113812f197d847669aea5a4a271b5 SHA256 ad228d3e7841ab73fda0987c5e8a21456787a040fb884a988a31c75e7c9f087b
+MD5 0843cdc63a247c430f86e4faa82b1db9 ChangeLog 7378
 MD5 64e656c39553f20b12d38eca1f8120d6 files/configure.in.in-kdm-settings.diff 686
-RMD160 e26a29248e9825c87287107e3fb2767424fead9f files/configure.in.in-kdm-settings.diff 686
-SHA256 ad228d3e7841ab73fda0987c5e8a21456787a040fb884a988a31c75e7c9f087b files/configure.in.in-kdm-settings.diff 686
-AUX kdebase-3.4.1-configure.patch 2936 RMD160 1a9a3892915d8aae06dae6ca610201884c4ca628 SHA1 806745a33bfcecd6c09458e0645b3e16e02fbfab SHA256 28fe61ad330a8337232ca2fb1d3d6d4f22b48953b0e2a915478f9012a73303fc
-MD5 5da6ade21525a3e320c94c4b3351a7a3 files/kdebase-3.4.1-configure.patch 2936
-RMD160 1a9a3892915d8aae06dae6ca610201884c4ca628 files/kdebase-3.4.1-configure.patch 2936
-SHA256 28fe61ad330a8337232ca2fb1d3d6d4f22b48953b0e2a915478f9012a73303fc files/kdebase-3.4.1-configure.patch 2936
-AUX kdebase-3.4.2-kinfocenter-opengl-fix.patch 346 RMD160 6eda9169a469f4b403588266c359af960574be77 SHA1 ae3faa8b024626fe82765fc687204049583042de SHA256 913a471769ed045badc10cec6d1788896b3c6a8b993e234ca74ebb7c415cb5c0
-MD5 65ca7243fb9d880e763019fdcf5b7264 files/kdebase-3.4.2-kinfocenter-opengl-fix.patch 346
-RMD160 6eda9169a469f4b403588266c359af960574be77 files/kdebase-3.4.2-kinfocenter-opengl-fix.patch 346
-SHA256 913a471769ed045badc10cec6d1788896b3c6a8b993e234ca74ebb7c415cb5c0 files/kdebase-3.4.2-kinfocenter-opengl-fix.patch 346
-DIST kdebase-3.4.0-3.4.1.tar.xdelta 1089415
-DIST kdebase-3.4.0.tar.bz2 22670772
-DIST kdebase-3.4.1-3.4.2.tar.xdelta 928157
-DIST kdebase-3.4.1.tar.bz2 22433034
-DIST kdebase-3.4.2.tar.bz2 22466433
-DIST kdebase-3.4.3.tar.bz2 22425835
-DIST kdebase-3.5.2.tar.bz2 23590820 RMD160 216ff59c49bb4fee2aa3b7d976ec40a8cccff107 SHA256 21150b7e553e83487e70e70e3d13ce107c6c5d57133b40f413807887a9e431f7
-EBUILD kcontrol-3.4.1-r1.ebuild 1551 RMD160 89fb1538b73689a0ad1b741f77ecd605d99791cb SHA1 a901cfcb6c4078eb5b7f65d763f88c616a49fdd5 SHA256 3f2cb32017d1652a7d31069d1161b438286e11fee872ec597d5d1bd7c2089fd5
-MD5 4a0b15f07ae8a1bc4c778165f7083a13 kcontrol-3.4.1-r1.ebuild 1551
-RMD160 89fb1538b73689a0ad1b741f77ecd605d99791cb kcontrol-3.4.1-r1.ebuild 1551
-SHA256 3f2cb32017d1652a7d31069d1161b438286e11fee872ec597d5d1bd7c2089fd5 kcontrol-3.4.1-r1.ebuild 1551
-EBUILD kcontrol-3.4.1.ebuild 1326 RMD160 2f5789974ce3a6832f0c2a62c93ea9a3c38feede SHA1 92a9b4ef22b8e9ed863e4c63d7e76f46915c3523 SHA256 c4a28e4214c72f67b9f883ac9da15dc7bc6c48ffd03fded2000313bb4062eee5
-MD5 8c071d64261cb5641d4f140ab61debd2 kcontrol-3.4.1.ebuild 1326
-RMD160 2f5789974ce3a6832f0c2a62c93ea9a3c38feede kcontrol-3.4.1.ebuild 1326
-SHA256 c4a28e4214c72f67b9f883ac9da15dc7bc6c48ffd03fded2000313bb4062eee5 kcontrol-3.4.1.ebuild 1326
-EBUILD kcontrol-3.4.2-r1.ebuild 1916 RMD160 3d62f01ae864bf0cf4fbde06f804520ae882610d SHA1 4739bcab782e0c1a8e4e002dd949c574b03fdcfa SHA256 ea64bed761458a60d3aa44cb83469e83f0c1b1e3c51f7f6a4cffc9bdfbb5c91c
-MD5 ac9c4ad066ae48aaee618b7f297f1768 kcontrol-3.4.2-r1.ebuild 1916
-RMD160 3d62f01ae864bf0cf4fbde06f804520ae882610d kcontrol-3.4.2-r1.ebuild 1916
-SHA256 ea64bed761458a60d3aa44cb83469e83f0c1b1e3c51f7f6a4cffc9bdfbb5c91c kcontrol-3.4.2-r1.ebuild 1916
-EBUILD kcontrol-3.4.2.ebuild 1779 RMD160 705d61eea5bbfd70beb9097b47b5a6ab8304df71 SHA1 3733b2f298a09e8fc9be0fd6f5d86bb5db51cfc7 SHA256 1199e1caa5c2fc1498410ede78f075cf0d9f61d8a1652b72dada7becc3d41461
-MD5 f6ddcb89e8d636e9dad86a9ff397928e kcontrol-3.4.2.ebuild 1779
-RMD160 705d61eea5bbfd70beb9097b47b5a6ab8304df71 kcontrol-3.4.2.ebuild 1779
-SHA256 1199e1caa5c2fc1498410ede78f075cf0d9f61d8a1652b72dada7becc3d41461 kcontrol-3.4.2.ebuild 1779
-EBUILD kcontrol-3.4.3.ebuild 1780 RMD160 40eee6722129a7e20d4c75491da8bcfbae53aa61 SHA1 f443f1544689494e02f291eb9eb20fa4b3b9d035 SHA256 7e1d2d1c17c7705a826d74b3dfcd90d82346414012c72aeeb80bc18dd4f35424
-MD5 3009691b844665932075ee1768009172 kcontrol-3.4.3.ebuild 1780
-RMD160 40eee6722129a7e20d4c75491da8bcfbae53aa61 kcontrol-3.4.3.ebuild 1780
-SHA256 7e1d2d1c17c7705a826d74b3dfcd90d82346414012c72aeeb80bc18dd4f35424 kcontrol-3.4.3.ebuild 1780
-EBUILD kcontrol-3.5.2.ebuild 1716 RMD160 4de7d4e1cb7283b4553a395476ff5eff7e311dd4 SHA1 19aaac0f0ed62b249709ec1404cb52d8b19b987e SHA256 241f8d6b73eea505ec517c86e869c79f941207198d5c386f5a188c19f5605f07
-MD5 9ad05e78c0260de6ac7e652621e072bc kcontrol-3.5.2.ebuild 1716
-RMD160 4de7d4e1cb7283b4553a395476ff5eff7e311dd4 kcontrol-3.5.2.ebuild 1716
-SHA256 241f8d6b73eea505ec517c86e869c79f941207198d5c386f5a188c19f5605f07 kcontrol-3.5.2.ebuild 1716
-MISC ChangeLog 7288 RMD160 9f5380c88c25a9f3039e82f8ae054b2d34aab0a7 SHA1 ce3f95ce06f5ff1233c457bf37abea7dc38c6e26 SHA256 3e0d0331dfdeaf6068b32578002d1021a3219df4abec8da93ad470fe61cd7cec
-MD5 4f14f8d126a6533e954edbe0a34726a7 ChangeLog 7288
-RMD160 9f5380c88c25a9f3039e82f8ae054b2d34aab0a7 ChangeLog 7288
-SHA256 3e0d0331dfdeaf6068b32578002d1021a3219df4abec8da93ad470fe61cd7cec ChangeLog 7288
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kcontrol-3.4.1 212
-RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-kcontrol-3.4.1 212
-SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-kcontrol-3.4.1 212
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kcontrol-3.4.1-r1 212
-RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-kcontrol-3.4.1-r1 212
-SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-kcontrol-3.4.1-r1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kcontrol-3.4.2 287
-RMD160 db88376c4259165535f83f3529f0834fb2209612 files/digest-kcontrol-3.4.2 287
-SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/digest-kcontrol-3.4.2 287
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kcontrol-3.4.2-r1 287
-RMD160 db88376c4259165535f83f3529f0834fb2209612 files/digest-kcontrol-3.4.2-r1 287
-SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/digest-kcontrol-3.4.2-r1 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kcontrol-3.4.3 68
-RMD160 fe4b253b0a7c2e30a2aa1d0d796dfcb11e30590a files/digest-kcontrol-3.4.3 68
-SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/digest-kcontrol-3.4.3 68
 MD5 612323f8728d639ddab8f055f88070ff files/digest-kcontrol-3.5.2 250
-RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-kcontrol-3.5.2 250
-SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-kcontrol-3.5.2 250
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdighkT4lNIS36YERAsPtAJ9vHsxM7+lGse120713r89qfct1swCeKB0j
-TZ10a4uiN/z3S+eOqW4oNP0=
-=pWgR
------END PGP SIGNATURE-----
+MD5 5da6ade21525a3e320c94c4b3351a7a3 files/kdebase-3.4.1-configure.patch 2936
+MD5 65ca7243fb9d880e763019fdcf5b7264 files/kdebase-3.4.2-kinfocenter-opengl-fix.patch 346
+MD5 4a0b15f07ae8a1bc4c778165f7083a13 kcontrol-3.4.1-r1.ebuild 1551
+MD5 8c071d64261cb5641d4f140ab61debd2 kcontrol-3.4.1.ebuild 1326
+MD5 ac9c4ad066ae48aaee618b7f297f1768 kcontrol-3.4.2-r1.ebuild 1916
+MD5 f6ddcb89e8d636e9dad86a9ff397928e kcontrol-3.4.2.ebuild 1779
+MD5 3009691b844665932075ee1768009172 kcontrol-3.4.3.ebuild 1780
+MD5 c81329447d752f6f0ef4d1894ec6f419 kcontrol-3.5.2.ebuild 1714
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
