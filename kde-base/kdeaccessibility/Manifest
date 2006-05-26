@@ -1,16 +1,73 @@
-MD5 ad5d49dddbe4c31b17d41a35551a7393 ChangeLog 12863
-MD5 39b0d45ba034c139eed4599fe33074d0 files/digest-kdeaccessibility-3.3.2 76
-MD5 a96a1d7a63ac3bfb215cda52b2a9c3e6 files/digest-kdeaccessibility-3.4.1 76
-MD5 8340ca34cb0bed2c4acfd82f444a2624 files/digest-kdeaccessibility-3.4.2 76
-MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kdeaccessibility-3.4.3 76
-MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kdeaccessibility-3.4.3-r1 76
-MD5 603d00856aee677d0c5958279a7de496 files/digest-kdeaccessibility-3.5.2 76
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX kdeaccessibility-3.4.0-noarts.patch 3826 RMD160 9aa4835000149d0b9c2f67ab3834184f14b2f02e SHA1 ea697033cb5c45b18bacd29a82ba8634c9ad9730 SHA256 8221d0dfd9f13cb2a50b99daf86e432236ef36c23c81713d32393cf7a660c5da
 MD5 a4a2fe961dac0445daa5ceffc2e2c841 files/kdeaccessibility-3.4.0-noarts.patch 3826
+RMD160 9aa4835000149d0b9c2f67ab3834184f14b2f02e files/kdeaccessibility-3.4.0-noarts.patch 3826
+SHA256 8221d0dfd9f13cb2a50b99daf86e432236ef36c23c81713d32393cf7a660c5da files/kdeaccessibility-3.4.0-noarts.patch 3826
+AUX kdeaccessibility-3.4.3-pointer.patch 536 RMD160 734500dc25d42304f50b52501d80e68db393e4c5 SHA1 3b832a6ec5469416d7a45dcf305c9565ef83ce90 SHA256 9290e6b7b9897099161a776db636e00542f541e86167b3188c2e56fd390c4b33
 MD5 f5bf9356477cd9c9feb666e6e94915b0 files/kdeaccessibility-3.4.3-pointer.patch 536
+RMD160 734500dc25d42304f50b52501d80e68db393e4c5 files/kdeaccessibility-3.4.3-pointer.patch 536
+SHA256 9290e6b7b9897099161a776db636e00542f541e86167b3188c2e56fd390c4b33 files/kdeaccessibility-3.4.3-pointer.patch 536
+DIST kdeaccessibility-3.3.2.tar.bz2 1242912
+DIST kdeaccessibility-3.4.1.tar.bz2 7469093
+DIST kdeaccessibility-3.4.2.tar.bz2 7413579
+DIST kdeaccessibility-3.4.3.tar.bz2 7414953
+DIST kdeaccessibility-3.5.2.tar.bz2 8489866
+EBUILD kdeaccessibility-3.3.2.ebuild 364 RMD160 4c5049a9d1212505a37702956ac365a9f45dcb64 SHA1 712a96582f7ad29d46b5a60bcdc099f60ab313fb SHA256 c073316fafd488ee2580f3353ffd69b20eec3c79ca80aa617dccf9f5a5943cae
 MD5 d8d24de351d4616955249a64e3071e88 kdeaccessibility-3.3.2.ebuild 364
+RMD160 4c5049a9d1212505a37702956ac365a9f45dcb64 kdeaccessibility-3.3.2.ebuild 364
+SHA256 c073316fafd488ee2580f3353ffd69b20eec3c79ca80aa617dccf9f5a5943cae kdeaccessibility-3.3.2.ebuild 364
+EBUILD kdeaccessibility-3.4.1.ebuild 996 RMD160 ec2a72594643c836e63d836afba9c5f4a1c640e2 SHA1 2dd94d5077e367669e4ff143fc5abd49ae792ee6 SHA256 efadd9897157ac77cea08ed338cac86bcbf874711bf2c53da30e043a92a4cbac
 MD5 d0a1d06ed0fcf05d425606f15b87923a kdeaccessibility-3.4.1.ebuild 996
+RMD160 ec2a72594643c836e63d836afba9c5f4a1c640e2 kdeaccessibility-3.4.1.ebuild 996
+SHA256 efadd9897157ac77cea08ed338cac86bcbf874711bf2c53da30e043a92a4cbac kdeaccessibility-3.4.1.ebuild 996
+EBUILD kdeaccessibility-3.4.2.ebuild 1136 RMD160 081dd748a2d5509259019560435917d20d1178b1 SHA1 1c9f542885fd14873f4b42b7190e42e40589cac3 SHA256 0435156fe2d9e5c0228d200bf95c27eb9407f608ff24bd044d3d881545813444
 MD5 c3e9d3070a019305dab7a3440b9c4a73 kdeaccessibility-3.4.2.ebuild 1136
+RMD160 081dd748a2d5509259019560435917d20d1178b1 kdeaccessibility-3.4.2.ebuild 1136
+SHA256 0435156fe2d9e5c0228d200bf95c27eb9407f608ff24bd044d3d881545813444 kdeaccessibility-3.4.2.ebuild 1136
+EBUILD kdeaccessibility-3.4.3-r1.ebuild 1245 RMD160 33081fc7ff608dab348514496d87c13b074256f1 SHA1 c1c50c7b3dd279f743a4cf2d3d408829ce4ff72c SHA256 ce812adbd83c47ae978d414e99238589d7548b72d453212c6e7ddfa518a7e507
 MD5 aa692641f9f0f6a6b9a3cfbbcdc35a95 kdeaccessibility-3.4.3-r1.ebuild 1245
+RMD160 33081fc7ff608dab348514496d87c13b074256f1 kdeaccessibility-3.4.3-r1.ebuild 1245
+SHA256 ce812adbd83c47ae978d414e99238589d7548b72d453212c6e7ddfa518a7e507 kdeaccessibility-3.4.3-r1.ebuild 1245
+EBUILD kdeaccessibility-3.4.3.ebuild 1202 RMD160 efaf26d7705cddfe2e6e9c5fc051e738cb60d92b SHA1 23a514527efc574a6a728d308502e04286c7b7db SHA256 4101ba8178fa29a2c64394818e82bb58db2c6e9e5112ba92fdd9b1ca55228768
 MD5 92fb385bf6414b9756f55bf9d7d71992 kdeaccessibility-3.4.3.ebuild 1202
-MD5 5bda6b647276ea7c41d0a3b4443df34c kdeaccessibility-3.5.2.ebuild 834
+RMD160 efaf26d7705cddfe2e6e9c5fc051e738cb60d92b kdeaccessibility-3.4.3.ebuild 1202
+SHA256 4101ba8178fa29a2c64394818e82bb58db2c6e9e5112ba92fdd9b1ca55228768 kdeaccessibility-3.4.3.ebuild 1202
+EBUILD kdeaccessibility-3.5.2.ebuild 833 RMD160 edbc59508d163c1a47282c5921ab739037055c8d SHA1 504dfccf9f3af152f6538b20f2519e4399e7fe9e SHA256 9a2575f7d4a5925eff001cc966a918534ed8944257f57901d99c5a69b102aa87
+MD5 313d2548f55eb0d5f71c5ae66d6c0da7 kdeaccessibility-3.5.2.ebuild 833
+RMD160 edbc59508d163c1a47282c5921ab739037055c8d kdeaccessibility-3.5.2.ebuild 833
+SHA256 9a2575f7d4a5925eff001cc966a918534ed8944257f57901d99c5a69b102aa87 kdeaccessibility-3.5.2.ebuild 833
+MISC ChangeLog 12976 RMD160 de803d7c6da2b1d687447bf57c459e0588f2ab28 SHA1 5c71695e90e2e58c32e051ca18b7e0964fc759f5 SHA256 79ce9544eb99772b94741acd2c4cdf59e6bb8294e03f3b8d9391d72e1ea56b90
+MD5 17614239e5cefc0026c71827182260a8 ChangeLog 12976
+RMD160 de803d7c6da2b1d687447bf57c459e0588f2ab28 ChangeLog 12976
+SHA256 79ce9544eb99772b94741acd2c4cdf59e6bb8294e03f3b8d9391d72e1ea56b90 ChangeLog 12976
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 39b0d45ba034c139eed4599fe33074d0 files/digest-kdeaccessibility-3.3.2 76
+RMD160 faf56ea1803f62f3c04ebd9cda118e4140cef795 files/digest-kdeaccessibility-3.3.2 76
+SHA256 13aa4d3d0b84af702e265189b402d9f238497a551c45341baa68fb66e93e6246 files/digest-kdeaccessibility-3.3.2 76
+MD5 a96a1d7a63ac3bfb215cda52b2a9c3e6 files/digest-kdeaccessibility-3.4.1 76
+RMD160 25c7922fb21da23771909b254d667a97a0fadfbf files/digest-kdeaccessibility-3.4.1 76
+SHA256 c5e328068ca246f8d2034c46eb7a97e6918f75f872dea2beda33b198c7abc361 files/digest-kdeaccessibility-3.4.1 76
+MD5 8340ca34cb0bed2c4acfd82f444a2624 files/digest-kdeaccessibility-3.4.2 76
+RMD160 66cc57f034f3551181c9c5b39fd25aa1c154fd71 files/digest-kdeaccessibility-3.4.2 76
+SHA256 a54e67548e172a7a3eccff5460dd69d2bfa308a8223b7d103b8645a209630a8f files/digest-kdeaccessibility-3.4.2 76
+MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kdeaccessibility-3.4.3 76
+RMD160 32a1cb8edf191e440a47fd7db89a38888fd45e42 files/digest-kdeaccessibility-3.4.3 76
+SHA256 9d11d9846d5c715731ba94721350c984a05a412cf522c2fe4ac8e64a079029c9 files/digest-kdeaccessibility-3.4.3 76
+MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kdeaccessibility-3.4.3-r1 76
+RMD160 32a1cb8edf191e440a47fd7db89a38888fd45e42 files/digest-kdeaccessibility-3.4.3-r1 76
+SHA256 9d11d9846d5c715731ba94721350c984a05a412cf522c2fe4ac8e64a079029c9 files/digest-kdeaccessibility-3.4.3-r1 76
+MD5 603d00856aee677d0c5958279a7de496 files/digest-kdeaccessibility-3.5.2 76
+RMD160 59816d5daec12cf901683303429205d6512d793b files/digest-kdeaccessibility-3.5.2 76
+SHA256 4b124049a8dfd56492840832c23000b3edbee2b2404afe206131541b98dcbf5b files/digest-kdeaccessibility-3.5.2 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEdnmhSENan+PfizARAvELAJ9ByBQsMcet1OVXmeguGItunYHa7QCfdb2I
+t3IzH5tpGzDhd2VuZNn64sg=
+=FjoR
+-----END PGP SIGNATURE-----
