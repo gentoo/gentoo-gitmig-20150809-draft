@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.210 2006/05/26 15:14:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.211 2006/05/26 19:11:25 corsair Exp $
+
+  26 May 2006; Markus Rothe <corsair@gentoo.org> arts-3.5.2.ebuild:
+  Stable on ppc64
 
   26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> arts-3.5.2.ebuild:
   Stable on amd64 wrt bug #132213
