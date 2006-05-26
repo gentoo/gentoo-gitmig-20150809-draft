@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX fix-sys_printf.patch 666 RMD160 f15d2c23a34aa736754d4fa955b97b4503c15be2 SHA1 7e404baad3c3c252ffe1b67f1b91aa84bd7afc89 SHA256 100b6fe9a73ce0bbdcb0def8b64960828d46681afda7689885f889d4bd3bf1b3
-MD5 b9e1b8831a33b812643b9d5f3cab8cf2 files/fix-sys_printf.patch 666
-RMD160 f15d2c23a34aa736754d4fa955b97b4503c15be2 files/fix-sys_printf.patch 666
-SHA256 100b6fe9a73ce0bbdcb0def8b64960828d46681afda7689885f889d4bd3bf1b3 files/fix-sys_printf.patch 666
+AUX fix-sys_printf.patch 512 RMD160 c7144e07887a44a38ed95c4bb8dd75537e6d1dfd SHA1 4fb637aa29c768305fcbec10749af582b86d82a6 SHA256 1962412ac87b1a02b5558ae8ac0bd226e9267f0e255aa2bda43a5600645031ea
+MD5 fa192953363978707a7f5d8d3e42c943 files/fix-sys_printf.patch 512
+RMD160 c7144e07887a44a38ed95c4bb8dd75537e6d1dfd files/fix-sys_printf.patch 512
+SHA256 1962412ac87b1a02b5558ae8ac0bd226e9267f0e255aa2bda43a5600645031ea files/fix-sys_printf.patch 512
 AUX gentoo-paths.patch 1183 RMD160 309f98d7e2aa1764f6fc911067e9bd189bc1f4bb SHA1 a218ffdbce9cecc94457b9226828a4cec284feaf SHA256 38edbf6560e81b105ac9b1e59c4c575db678d787c3104bb7eb5b3a984359275d
 MD5 976762754aa92b2d6db912e4414ddf3b files/gentoo-paths.patch 1183
 RMD160 309f98d7e2aa1764f6fc911067e9bd189bc1f4bb files/gentoo-paths.patch 1183
@@ -40,7 +40,7 @@ SHA256 d13007d40751ea074ff7ca50283401d0b835f43a1f48292f7e596ff52b2e8fcd files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEdlB02+ySkm8kpY0RAgROAJ4hSj8AYt9qfTBOxlEpzNCTw37azwCfW2Vw
-kT/nlwHpcPZyaMt4wTa/bQ0=
-=LGmM
+iD8DBQFEdlHu2+ySkm8kpY0RAm1eAKCBDxPlwveRgPfoPmyHjF58XU58TQCeP0yB
++Co4vcamyYzx50tFMSp/qBk=
+=/zR9
 -----END PGP SIGNATURE-----
