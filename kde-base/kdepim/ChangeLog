@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.204 2006/05/26 03:52:39 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.205 2006/05/26 21:33:00 corsair Exp $
+
+  26 May 2006; Markus Rothe <corsair@gentoo.org> kdepim-3.5.2-r2.ebuild:
+  Stable on ppc64
 
   26 May 2006; Joshua Jackson <tsunam@gentoo.org> kdepim-3.5.2-r2.ebuild:
   Stable on x86; bug #132213

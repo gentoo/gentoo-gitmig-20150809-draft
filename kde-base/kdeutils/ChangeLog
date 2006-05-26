@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.160 2006/05/26 03:55:55 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.161 2006/05/26 21:45:33 corsair Exp $
+
+  26 May 2006; Markus Rothe <corsair@gentoo.org> kdeutils-3.5.2.ebuild:
+  Stable on ppc64
 
   26 May 2006; Joshua Jackson <tsunam@gentoo.org> kdeutils-3.5.2.ebuild:
   Stable on x86; bug #132213

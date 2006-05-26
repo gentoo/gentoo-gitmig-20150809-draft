@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.152 2006/05/26 04:09:17 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.153 2006/05/26 21:34:46 corsair Exp $
+
+  26 May 2006; Markus Rothe <corsair@gentoo.org> kdegames-3.5.2.ebuild:
+  Stable on ppc64
 
   26 May 2006; Joshua Jackson <tsunam@gentoo.org> kdegames-3.5.2.ebuild:
   Stable on x86; bug #132213
