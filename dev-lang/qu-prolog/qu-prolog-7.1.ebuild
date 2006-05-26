@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.1.ebuild,v 1.4 2006/04/01 05:07:04 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.1.ebuild,v 1.5 2006/05/26 09:49:36 keri Exp $
 
 inherit eutils flag-o-matic
 
@@ -65,7 +65,7 @@ src_install() {
 
 	doman doc/man/man1/*.1
 
-	dodoc INSTALL README
+	dodoc README
 
 	if use doc ; then
 		docinto reference-manual
