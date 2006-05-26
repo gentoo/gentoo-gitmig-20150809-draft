@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.1-r1.ebuild,v 1.4 2006/05/14 10:34:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.1-r1.ebuild,v 1.5 2006/05/26 17:51:07 flameeyes Exp $
 
 inherit flag-o-matic toolchain-funcs eutils autotools
 
@@ -63,7 +63,6 @@ src_compile() {
 		$(use_enable gtk mp3x) \
 		${myconf} || die "econf failed"
 
-	# Parallel make isn't happy
 	emake || die "emake failed"
 }
 
