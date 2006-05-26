@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20060329.ebuild,v 1.2 2006/05/24 09:39:27 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20060329.ebuild,v 1.3 2006/05/26 17:35:56 calchan Exp $
 
-inherit versionator
+inherit versionator flag-o-matic
 
 MY_PV=$(replace_version_separator 2 '-' )
 UPSTREAM_VERSION=$(get_version_component_range 1-2)
@@ -21,6 +21,9 @@ S=${WORKDIR}/${PN}-${UPSTREAM_VERSION}
 MAKEOPTS="${MAKEOPTS} -j1"
 
 src_compile() {
+	# Fix bug #134285
+	replace-flags -O3 -O2
+
 	# Alliance requires everything to be in the same directory
 	econf \
 		--prefix=/usr/lib/${PN} \
