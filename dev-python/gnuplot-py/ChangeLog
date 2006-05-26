@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gnuplot-py
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.15 2006/04/27 19:10:05 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.16 2006/05/26 21:37:54 kugelfang Exp $
+
+  26 May 2006; Danny van Dyk <kugelfang@gentoo.org> gnuplot-py-1.7.ebuild:
+  Marked stable on amd64.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-gnuplot-py-1.6, files/digest-gnuplot-py-1.7,
