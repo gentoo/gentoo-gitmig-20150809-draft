@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.35 2006/05/26 18:19:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.36 2006/05/26 21:17:33 corsair Exp $
+
+  26 May 2006; Markus Rothe <corsair@gentoo.org> qtruby-3.5.2.ebuild:
+  Added ~ppc64
 
   26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> qtruby-3.5.2.ebuild:
   Stable on amd64 wrt bug #132213
