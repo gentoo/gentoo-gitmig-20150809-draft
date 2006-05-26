@@ -1,6 +1,6 @@
 # Copyright 2004-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.13 2006/05/26 04:14:58 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.14 2006/05/26 04:18:43 nixphoeni Exp $
 #
 # Authors:	Joe Sapp <nixphoeni@gentoo.org>
 #		Mike Gardiner <obz@gentoo.org>
@@ -111,13 +111,9 @@ gdesklets_src_install() {
 			# relative to the display.
 			for SCR in ${SCRIPTS[@]}; do
 
-				cd `dirname ${SCR}`
-
 				insinto ${DESKLET_INSDIR}/`dirname ${SCR}`
-				doins `basename ${SCR}`
-				debug-print "Installed `basename ${SCR}` into ${DESKLET_INSDIR}/`dirname ${SCR}`"
-
-				cd ${S}/`dirname ${DSP}`
+				doins ${SCR}
+				debug-print "Installed ${SCR} into ${DESKLET_INSDIR}/`dirname ${SCR}`"
 
 			done # for in ${SCRIPTS}
 
@@ -199,7 +195,7 @@ gdesklets_src_install() {
 	fi # if -n "${GFX}"
 
 	# Install some docs if so requested
-	[[ -n "${DOCS}" ]] && dodoc ${DOCS}
+	[[ -n "${DOCS}" ]] && dodoc ${DOCS} && \
 	debug-print "Installed ${DOCS}"
 
 }
