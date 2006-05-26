@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.4 2006/05/24 23:26:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.5 2006/05/26 12:41:55 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -23,18 +23,20 @@ SRC_URI="mirror://gentoo/${LIB}.tar.bz2
 		!kernel_FreeBSD? (
 			mirror://gentoo/${SYS}.tar.bz2 )"
 
-RDEPEND="ssl? ( dev-libs/openssl )
-	kerberos? ( virtual/krb5 )
-	!sys-freebsd/freebsd-headers"
-DEPEND="${RDEPEND}
-	>=sys-devel/flex-2.5.31-r2
-	=sys-freebsd/freebsd-mk-defs-${RV}*
-	=sys-freebsd/freebsd-sources-${RV}*"
-
 if [[ ${CATEGORY/cross-} == {CATEGORY} ]]; then
+	RDEPEND="ssl? ( dev-libs/openssl )
+		kerberos? ( virtual/krb5 )
+		!sys-freebsd/freebsd-headers"
+	DEPEND="${RDEPEND}
+		>=sys-devel/flex-2.5.31-r2
+		=sys-freebsd/freebsd-sources-${RV}*"
+
 	PROVIDE="virtual/libc
 		virtual/os-headers"
 fi
+
+DEPEND="${DEPEND}
+		=sys-freebsd/freebsd-mk-defs-${RV}*"
 
 S="${WORKDIR}/lib"
 
@@ -121,6 +123,7 @@ src_compile() {
 	# Don't use ssp until properly fixed
 	append-flags -fno-stack-protector -fno-stack-protector-all
 
+	strip-flags
 	if [[ ${CTARGET} != ${CHOST} ]]; then
 		export YACC='yacc -by'
 		CHOST=${CTARGET} tc-export CC LD CXX
@@ -147,7 +150,6 @@ src_compile() {
 		cd "${S}/msun"
 		$(freebsd_get_bmake) ${mymakeopts} || die "make libc failed"
 	else
-		strip-flags
 		# Forces to use the local copy of headers as they might be outdated in
 		# the system
 		append-flags "-isystem '${WORKDIR}/sys' -isystem '${WORKDIR}/include'"
