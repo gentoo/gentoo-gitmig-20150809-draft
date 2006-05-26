@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/htpdate-0.9.1-r1.ebuild,v 1.1 2006/04/09 05:50:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/htpdate-0.9.1-r1.ebuild,v 1.2 2006/05/26 14:57:28 vapier Exp $
 
-inherit toolchain-funcs eutils
+inherit toolchain-funcs
 
 DESCRIPTION="Synchronize local workstation with time offered by remote webservers"
 HOMEPAGE="http://www.clevervest.com/htp/"
@@ -19,19 +19,20 @@ RDEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	gunzip htpdate.8.gz || die
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die
+	emake CFLAGS="-Wall ${CFLAGS} ${LDFLAGS}" CC="$(tc-getCC)" || die
 }
 
-src_install () {
+src_install() {
 	dosbin htpdate || die
-	doman htpdate.8.gz || die
-	dodoc README Changelog || die
+	doman htpdate.8
+	dodoc README Changelog
 
-	newconfd ${FILESDIR}/htpdate.conf htpdate
-	newinitd ${FILESDIR}/htpdate.init htpdate
+	newconfd "${FILESDIR}"/htpdate.conf htpdate
+	newinitd "${FILESDIR}"/htpdate.init htpdate
 }
 
 pkg_postinst() {
