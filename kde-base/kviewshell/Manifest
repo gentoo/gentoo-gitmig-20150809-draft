@@ -1,57 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX kviewshell-qt-3.3.5.patch 469 RMD160 b76da91e128ee59a8fe966b7245a5fec8c0cbb53 SHA1 e8cbf46a1b9ba8d1c2442c4b8b93f1346eb9633a SHA256 cdd7a881f75db291bd216835f333660644b9a633755d237337998cd8349d9485
-MD5 339eca37408cf1043fc3ec09e4e66db5 files/kviewshell-qt-3.3.5.patch 469
-RMD160 b76da91e128ee59a8fe966b7245a5fec8c0cbb53 files/kviewshell-qt-3.3.5.patch 469
-SHA256 cdd7a881f75db291bd216835f333660644b9a633755d237337998cd8349d9485 files/kviewshell-qt-3.3.5.patch 469
-DIST kdegraphics-3.4.0-3.4.1.tar.xdelta 292428
-DIST kdegraphics-3.4.0.tar.bz2 6667685
-DIST kdegraphics-3.4.1-3.4.2.tar.xdelta 271381
-DIST kdegraphics-3.4.1.tar.bz2 6581563
-DIST kdegraphics-3.4.2.tar.bz2 6579227
-DIST kdegraphics-3.4.3.tar.bz2 6554272
-DIST kdegraphics-3.5.2.tar.bz2 7288264 RMD160 cf2fce91b76af7d570b20f336ba551c5c3bd767f SHA256 b33e26d99188f0aee2dc0ff95923a1c1bca7f2a2510a1f761b155b8d2781e64f
-EBUILD kviewshell-3.4.1.ebuild 417 RMD160 c1b922a02fc5162db99d41ed4abb17fc3c51779b SHA1 2e1cc0ae7c9d795b92160a63cadf2f707ab9e47b SHA256 783a34fdf3bd52c9faa61959509cf36dddcdead96c0542262e4d6f14331920de
-MD5 c90e809e5a7b27ae4809d31bb1bfaefe kviewshell-3.4.1.ebuild 417
-RMD160 c1b922a02fc5162db99d41ed4abb17fc3c51779b kviewshell-3.4.1.ebuild 417
-SHA256 783a34fdf3bd52c9faa61959509cf36dddcdead96c0542262e4d6f14331920de kviewshell-3.4.1.ebuild 417
-EBUILD kviewshell-3.4.2.ebuild 479 RMD160 26dcce45409f1591535a644c50d50229fe265f9d SHA1 ee3323736e1f0a0c11c16ef9a2a56af6d2b0dbd4 SHA256 b6dfba55fe9bec08f5a69e84c4dfafa6c07bb09f703e70470c2e9d0233c4dc98
-MD5 bf8cd2a605ca59751c3572a7c340f611 kviewshell-3.4.2.ebuild 479
-RMD160 26dcce45409f1591535a644c50d50229fe265f9d kviewshell-3.4.2.ebuild 479
-SHA256 b6dfba55fe9bec08f5a69e84c4dfafa6c07bb09f703e70470c2e9d0233c4dc98 kviewshell-3.4.2.ebuild 479
-EBUILD kviewshell-3.4.3.ebuild 432 RMD160 aca0a012d28a6da296c489f08ff2a214544979b7 SHA1 1c1db9b9ac1cbcccea9c6792c1e59b7e7b598a01 SHA256 49adfd0a099962860ab62e2835ab2ec7ef077a673ed5f2d73a3c918c5602450d
-MD5 b2ca6b12b2b6e78684a2685baee48ec0 kviewshell-3.4.3.ebuild 432
-RMD160 aca0a012d28a6da296c489f08ff2a214544979b7 kviewshell-3.4.3.ebuild 432
-SHA256 49adfd0a099962860ab62e2835ab2ec7ef077a673ed5f2d73a3c918c5602450d kviewshell-3.4.3.ebuild 432
-EBUILD kviewshell-3.5.2.ebuild 448 RMD160 ec2c4b1f65e499f43b377ba4e1081427381ad0e2 SHA1 7b3fe5d4212d442a5eb9383fe8b7bbc43e788825 SHA256 5d78d1ae1d774c7f8a3958c0cc1e06db80a5505f5bda5c7e1cfe2c3c94d673b5
-MD5 68cdc5cf04f7e998ade5a6fc7bd71f3a kviewshell-3.5.2.ebuild 448
-RMD160 ec2c4b1f65e499f43b377ba4e1081427381ad0e2 kviewshell-3.5.2.ebuild 448
-SHA256 5d78d1ae1d774c7f8a3958c0cc1e06db80a5505f5bda5c7e1cfe2c3c94d673b5 kviewshell-3.5.2.ebuild 448
-MISC ChangeLog 6041 RMD160 6934d178d94506f88ed45cfedcea3477938f7796 SHA1 9786e9a21f1104eea89544d5a6ff3af6ef5f07a8 SHA256 59896eb1b90a5808925d530caa6b99a459af3d47dc9b8ea1c9f4571ff1d5713c
-MD5 cf2575ade0461495c75c42a99b959a32 ChangeLog 6041
-RMD160 6934d178d94506f88ed45cfedcea3477938f7796 ChangeLog 6041
-SHA256 59896eb1b90a5808925d530caa6b99a459af3d47dc9b8ea1c9f4571ff1d5713c ChangeLog 6041
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 56ac595c7d864832da45cb331126065e ChangeLog 6133
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kviewshell-3.4.1 221
-RMD160 ce80baa4c1806e9aacce02a4860a401e0ed7408f files/digest-kviewshell-3.4.1 221
-SHA256 a5c43c1dc911a886d673620d40b300bcc9d5847fd0c55deaa7fa4fbc3b435c71 files/digest-kviewshell-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kviewshell-3.4.2 300
-RMD160 fb98c79539826f284ce816ad665d2d59517f0eda files/digest-kviewshell-3.4.2 300
-SHA256 5650b82e45604f03199e3747fc1916c11be6561cc2bca4a212d344280ef18ad3 files/digest-kviewshell-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kviewshell-3.4.3 71
-RMD160 ffd5641d032574a27bee5145d077046b4b16b929 files/digest-kviewshell-3.4.3 71
-SHA256 855a1a4a8a0ad7e737acc281482598e137f230dfb23b434b6d773a00a165a2ad files/digest-kviewshell-3.4.3 71
 MD5 64d3a195496428cb92d68de29ebf0fa0 files/digest-kviewshell-3.5.2 259
-RMD160 2a4a7d812c7c571f5c5a8e4d4b8c8eb4fe7f52ae files/digest-kviewshell-3.5.2 259
-SHA256 087152d6d869b8938c16752f1b5571e63dc1db0fa19f2e8913c00e77cebe3970 files/digest-kviewshell-3.5.2 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdzWgkT4lNIS36YERAuhAAJwPZCSe4NIUGx1BQFkrwfRuqMSzZwCgo3zt
-CSM1bAhwsV6ESDgihVjZQe8=
-=twTX
------END PGP SIGNATURE-----
+MD5 339eca37408cf1043fc3ec09e4e66db5 files/kviewshell-qt-3.3.5.patch 469
+MD5 c90e809e5a7b27ae4809d31bb1bfaefe kviewshell-3.4.1.ebuild 417
+MD5 bf8cd2a605ca59751c3572a7c340f611 kviewshell-3.4.2.ebuild 479
+MD5 b2ca6b12b2b6e78684a2685baee48ec0 kviewshell-3.4.3.ebuild 432
+MD5 6f702d393eb8aac7dcda3401608db040 kviewshell-3.5.2.ebuild 446
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
