@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-gnat
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.9 2006/05/17 21:32:32 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.10 2006/05/26 11:21:30 george Exp $
+
+*eselect-gnat-0.9 (26 May 2006)
+
+  26 May 2006; George Shapovalov <george@gentoo.org>
+  +files/gnat.eselect-0.9, +eselect-gnat-0.9.ebuild:
+  added LDPATH settings for gnat and the libs
 
   17 May 2006; George Shapovalov <george@gentoo.org>
   -files/gnat.eselect-0.6, -files/gnat.eselect, -eselect-gnat-0.5.ebuild,
