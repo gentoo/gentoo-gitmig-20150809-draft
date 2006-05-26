@@ -1,0 +1,75 @@
+===================================================================
+RCS file: /cvsroot/shadow/src/useradd.c,v
+retrieving revision 1.93
+retrieving revision 1.94
+diff -u -r1.93 -r1.94
+--- shadow/src/useradd.c	2006/05/07 17:44:39	1.93
++++ shadow/src/useradd.c	2006/05/19 13:36:25	1.94
+@@ -1585,46 +1585,38 @@
+  */
+ static void create_mail (void)
+ {
+-	char *ms;
++	char *spool, *file;
+ 	int fd;
+-	struct group *mail;
+-	gid_t mail_gid;
++	struct group *gr;
++	gid_t gid;
+ 	mode_t mode;
+ 
++	spool = getdef_str ("MAIL_DIR") ? : "/var/mail";
++	file = alloca (strlen (spool) + strlen (user_name) + 2);
++	sprintf (file, "%s/%s", spool, user_name);
++	fd = open (file, O_CREAT | O_WRONLY | O_TRUNC | O_EXCL, 0);
++	if (fd < 0) {
++		perror (_("Creating mailbox"));
++		return;
++	}
++
+ 	if (strcasecmp (create_mail_spool, "yes") == 0) {
+-		mail = getgrnam ("mail");
+-		if (mail == NULL) {
++		gr = getgrnam ("mail");
++		if (!gr) {
+ 			fprintf (stderr,
+ 				 _
+-				 ("No group named \"mail\" exists, creating mail spool with mode 0600.\n"));
++				 ("Group 'mail' not found. Creating the mailbox with 0600 mode.\n"));
++			gid = user_gid;
+ 			mode = 0600;
+-			mail_gid = user_gid;
+ 		} else {
++			gid = gr->gr_gid;
+ 			mode = 0660;
+-			mail_gid = mail->gr_gid;
+ 		}
+ 
+-		ms = malloc (strlen (user_name) + 11);
+-		if (ms != NULL) {
+-			sprintf (ms, "/var/mail/%s", user_name);
+-			if (access (ms, R_OK) != 0) {
+-				fd = open (ms,
+-					   O_CREAT | O_EXCL |
+-					   O_WRONLY | O_TRUNC, 0);
+-				if (fd != -1) {
+-					fchown (fd, user_id, mail_gid);
+-					fchmod (fd, mode);
+-					close (fd);
+-				}
+-			} else {
+-				fprintf (stderr,
+-					 _
+-					 ("Can't create mail spool for user %s.\n"),
+-					 user_name);
+-				fail_exit (E_MAIL_SPOOL);
+-			}
+-		}
+-		free (ms);
++		if (fchown (fd, user_id, gid) || fchmod (fd, mode))
++			perror (_("Setting mailbox permissions"));
++
++		close (fd);
+ 	}
+ }
+ 
