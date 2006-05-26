@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kuiviewer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.30 2006/05/26 04:32:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.31 2006/05/26 17:04:48 wolf31o2 Exp $
+
+  26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  kuiviewer-3.5.1.ebuild:
+  Stable on amd64 wrt bug #132213
 
   26 May 2006; Jason Wever <weeve@gentoo.org> kuiviewer-3.5.1.ebuild:
   Added ~sparc keyword.
