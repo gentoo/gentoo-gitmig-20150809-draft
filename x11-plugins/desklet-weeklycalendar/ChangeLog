@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/desklet-weeklycalendar
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-weeklycalendar/ChangeLog,v 1.1 2006/05/26 04:32:58 nixphoeni Exp $
+
+*desklet-weeklycalendar-0.41 (26 May 2006)
+
+  26 May 2006; Joe Sapp <nixphoeni@gentoo.org> +metadata.xml,
+  +desklet-weeklycalendar-0.41.ebuild:
+  Initial commit
+
