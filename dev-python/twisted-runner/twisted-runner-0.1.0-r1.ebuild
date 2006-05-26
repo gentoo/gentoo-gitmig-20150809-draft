@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/twisted-runner-0.1.0-r1.ebuild,v 1.5 2006/05/03 23:04:18 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/twisted-runner-0.1.0-r1.ebuild,v 1.6 2006/05/26 17:45:20 marienz Exp $
 
 MY_PACKAGE=Runner
 
@@ -10,6 +10,7 @@ DESCRIPTION="Twisted Runner is a process management library and inetd replacemen
 
 KEYWORDS="~ia64 ~ppc sparc x86"
 
-DEPEND=">=dev-python/twisted-2"
+DEPEND=">=dev-python/twisted-2
+	<dev-python/twisted-2.4"
 
 PROVIDE="virtual/inetd"
