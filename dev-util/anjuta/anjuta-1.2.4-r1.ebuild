@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.4-r1.ebuild,v 1.5 2006/04/29 09:44:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.4-r1.ebuild,v 1.6 2006/05/26 14:53:39 wolf31o2 Exp $
 
 inherit eutils gnome2 multilib
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://anjuta.sourceforge.net/"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc sparc ~x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 
 RDEPEND=">=dev-libs/glib-2.0.6
 	>=x11-libs/gtk+-2.0.8
