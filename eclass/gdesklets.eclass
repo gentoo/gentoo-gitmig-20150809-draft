@@ -1,6 +1,6 @@
-# Copyright 2004 Gentoo Foundation
+# Copyright 2004-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.12 2006/02/17 22:18:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.13 2006/05/26 04:14:58 nixphoeni Exp $
 #
 # Authors:	Joe Sapp <nixphoeni@gentoo.org>
 #		Mike Gardiner <obz@gentoo.org>
@@ -16,7 +16,7 @@
 # 	RDEPEND: *Optional* Set if the desklet requires a minimum version
 #		of gDesklets greater than 0.34 or other packages.
 
-inherit eutils multilib
+inherit eutils multilib python
 
 
 MY_P="${DESKLET_NAME}-${PV}"
@@ -34,6 +34,12 @@ GDESKLETS_INST_DIR="/usr/$(get_libdir)/gdesklets"
 gdesklets_src_install() {
 
 	debug-print-function $FUNCNAME $*
+
+	# Disable compilation of included python modules (Controls)
+	python_disable_pyc
+
+	# Do not remove - see bugs 126890 and 128289
+	addwrite "${ROOT}/root/.gnome2"
 
 	has_version ">=gnome-extra/gdesklets-core-0.33.1" || \
 				GDESKLETS_INST_DIR="/usr/share/gdesklets"
@@ -158,7 +164,7 @@ gdesklets_src_install() {
 		for CTRL in ${CONTROL_INITS[@]}; do
 
 			cd `dirname ${CTRL}`
-			CTRL_NAME=$( PYTHON_DONTCOMPILE=1 ${GDESKLETS_INST_DIR}/gdesklets-control-getid `pwd` )
+			CTRL_NAME=$( ${GDESKLETS_INST_DIR}/gdesklets-control-getid `pwd` )
 			einfo "Installing Control ${CTRL_NAME}"
 			# This creates the subdirectory of ${CTRL_NAME}
 			# in the global Controls directory
