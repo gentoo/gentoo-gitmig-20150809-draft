@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060409.ebuild,v 1.9 2006/05/26 17:41:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060409.ebuild,v 1.10 2006/05/26 17:45:18 flameeyes Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -42,7 +42,7 @@ src_compile() {
 		$(use_enable mp4 mp4-output) \
 		$myconf \
 		|| die "configure failed"
-	emake -j1 CC="$(tc-getCC)" || die "make failed"
+	emake CC="$(tc-getCC)" || die "make failed"
 }
 
 src_install() {
