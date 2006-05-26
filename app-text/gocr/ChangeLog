@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gocr
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.32 2006/05/25 19:53:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.33 2006/05/26 07:37:28 josejx Exp $
+
+  26 May 2006; Joseph Jezak <josejx@gentoo.org> gocr-0.40-r2.ebuild:
+  Marked ppc stable for bug #133376.
 
   25 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> gocr-0.40-r2.ebuild:
   Stable on x86 wrt bug #133376.
