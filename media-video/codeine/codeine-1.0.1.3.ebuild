@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/codeine-1.0.1.3.ebuild,v 1.1 2006/05/12 13:36:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/codeine-1.0.1.3.ebuild,v 1.2 2006/05/26 21:34:39 flameeyes Exp $
 
-inherit kde multilib versionator
+inherit kde multilib versionator toolchain-funcs
 
 S="${WORKDIR}/${PN}-$(get_version_component_range 1-3)"
 
@@ -22,14 +22,27 @@ DEPEND="${RDEPEND}
 
 need-kde 3.3
 
-src_compile(){
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-respect-cc.patch"
+}
+
+src_compile() {
 	local myconf="prefix=/usr"
 	# Fix multilib issue.
 	myconf="${myconf} libdir=/usr/$(get_libdir)
 			qtlibs=${QTDIR}/$(get_libdir)"
 
-	scons configure ${myconf} || die
-	scons || die
+	local sconsopts=$(echo "${MAKEOPTS}" | sed -e "s/.*\(-j[0-9]\+\).*/\1/")
+	[[ ${MAKEOPTS/-s/} != ${MAKEOPTS} ]] && sconsopts="${sconsopts} -s"
+
+	tc-export CC CXX
+
+	scons configure ${myconf} \
+		|| die "scons configure failed, if you report this please attach ${S}/configure.log"
+	scons ${sconsopts} || die "scons make failed"
 }
 
 src_install() {
