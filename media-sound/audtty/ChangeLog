@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audtty
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.5 2006/03/04 21:59:23 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.6 2006/05/26 19:50:03 flameeyes Exp $
+
+  26 May 2006; Diego Pettenò <flameeyes@gentoo.org> audtty-0.1.3.ebuild:
+  Fix quoting.
 
   04 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> audtty-0.1.3.ebuild:
   Add ~alpha keyword, wrt bug #125011. Tested by Thomas Cort
