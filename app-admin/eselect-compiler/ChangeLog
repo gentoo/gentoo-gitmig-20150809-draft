@@ -1,6 +1,17 @@
 # ChangeLog for app-admin/eselect-compiler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.14 2006/05/26 14:04:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.15 2006/05/26 22:19:58 eradicator Exp $
+
+*eselect-compiler-2.0.0_rc1-r2 (26 May 2006)
+
+  26 May 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/25eselect-compiler, -eselect-compiler-2.0.0_rc1-r1.ebuild,
+  +eselect-compiler-2.0.0_rc1-r2.ebuild:
+  Added env.d entry for CONFIG_PROTECT_MASK. Just tell new users about
+  'eselect compiler migrate' rather than use it since most users will probably
+  already have eselect-compiler profiles installed, and those are superior to
+  the migrated ones. Added logic to choose the compiler during the first
+  install.
 
   26 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   eselect-compiler-2.0.0_rc1-r1.ebuild:
