@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.58 2006/05/25 03:07:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.59 2006/05/26 07:40:19 josejx Exp $
+
+  26 May 2006; Joseph Jezak <josejx@gentoo.org> openal-0.0.8.ebuild:
+  Marked ppc stable for bug #133501.
 
   24 May 2006; Mark Loeser <halcy0n@gentoo.org> openal-0.0.8.ebuild:
   Stable on x86; bug #133501
