@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r3.ebuild,v 1.14 2006/03/11 03:35:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r3.ebuild,v 1.15 2006/05/26 05:26:05 vapier Exp $
 
 inherit toolchain-funcs fixheadtails eutils gnuconfig flag-o-matic
 
@@ -66,7 +66,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PV}-nobuggy-X.patch #30089
+	epatch "${FILESDIR}"/1.2.8-nobuggy-X.patch #30089
 	epatch "${FILESDIR}"/${PN}-1.2.8-libcaca.patch #40224
 	[ "$(gcc-major-version)" != "2" ] \
 		&& epatch "${FILESDIR}"/${PV}-gcc34.patch #48947
