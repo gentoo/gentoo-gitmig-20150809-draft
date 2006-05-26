@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kturtle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kturtle/ChangeLog,v 1.39 2006/04/27 22:02:30 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kturtle/ChangeLog,v 1.40 2006/05/26 00:57:20 wolf31o2 Exp $
+
+  26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> kturtle-3.5.2.ebuild:
+  Stable on x86 wrt bug #132213
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-kturtle-3.4.1,
   files/digest-kturtle-3.4.2, Manifest:
