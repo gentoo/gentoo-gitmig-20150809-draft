@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.2.ebuild,v 1.1 2006/05/22 06:52:51 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.2.ebuild,v 1.2 2006/05/26 00:11:02 nerdboy Exp $
 
 inherit eutils libtool gnuconfig distutils toolchain-funcs
 
@@ -13,12 +13,9 @@ SRC_URI="http://dl.maptools.org/dl/gdal/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 # need to get these arches updated on several libs first
-#KEYWORDS="~alpha ~hppa ~ppc64"
-
-#USE_RUBY="1.7"
-#RUBY_ECONF="--with-rubydir=/usr/$(get_libdir)/ruby/site_ruby"
+#KEYWORDS="~alpha ~hppa"
 
 DEPEND=">=sys-libs/zlib-1.1.4
 	>=media-libs/tiff-3.7.0
@@ -40,7 +37,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	)
 	jpeg2k? ( media-libs/jasper )
 	odbc?   ( dev-db/unixODBC )
-	geos?   ( sci-libs/geos )
+	geos?   ( >=sci-libs/geos-2.2.1 )
 	sqlite? ( >=dev-db/sqlite-3 )
 	doc? ( app-doc/doxygen )"
 
@@ -49,9 +46,6 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-destdir.patch || die "epatch failed"
 	epatch ${FILESDIR}/${P}-ruby-install.patch || die "epatch failed"
-	if [ $(gcc-major-version) -eq 4 ] ; then
-	    epatch ${FILESDIR}/${PN}-gcc4.patch || die "gcc4 patch failed"
-	fi
 	elibtoolize --patch-only
 	gnuconfig_update
 	if useq netcdf && useq hdf; then
@@ -84,9 +78,9 @@ src_compile() {
 	    use_conf="--with-ogdi=/usr/$(get_libdir) ${use_conf}"
 	fi
 
-#	if useq mysql ; then
-#	    use_conf="--with-mysql=/usr/bin/mysql_config ${use_conf}"
-#	fi
+	#if useq mysql ; then
+	#    use_conf="--with-mysql=/usr/bin/mysql_config ${use_conf}"
+	#fi
 
 	if useq gif ; then
 	    use_conf="--with-gif=internal ${use_conf}"
@@ -110,14 +104,15 @@ src_compile() {
 
 	econf ${pkg_conf} ${use_conf} || die "econf failed"
 	# parallel makes fail on the ogr stuff (C++, what can I say?)
-	emake || die "emake failed"
+	# also failing with gcc4 in libcsf
+	make || die "make failed"
 	if useq ruby ; then
 	    cd ${S}/swig
 	    make build || die "make ruby failed"
 	    cd ${S}
 	fi
 	if useq doc ; then
-	    emake docs || die "emake docs failed"
+	    make docs || die "make docs failed"
 	fi
 }
 
