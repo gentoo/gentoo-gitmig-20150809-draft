@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.11 2006/05/06 22:11:49 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.12 2006/05/26 00:46:09 vapier Exp $
 
 inherit eutils games
 
@@ -122,6 +122,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	# same warning used in quake1 / quakeforge / nprquake-sdl
 	games_pkg_postinst
 	echo
 	einfo "Before you can play, you must make sure"

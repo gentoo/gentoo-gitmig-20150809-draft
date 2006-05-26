@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40-r1.ebuild,v 1.5 2006/03/15 22:23:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40-r1.ebuild,v 1.6 2006/05/26 00:45:56 vapier Exp $
 
 inherit eutils games
 
@@ -83,4 +83,23 @@ src_install() {
 	dogamesbin WinQuake/release*/bin/* QW/release*/*qw* || die "dogamesbin failed"
 	dodoc readme.txt {WinQuake,QW}/*.txt
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	# same warning used in quake1 / quakeforge / nprquake-sdl
+	games_pkg_postinst
+	echo
+	einfo "Before you can play, you must make sure"
+	einfo "QuakeForge can find your Quake .pak files"
+	echo
+	einfo "You have 2 choices to do this"
+	einfo "1 Copy pak*.pak files to ${GAMES_DATADIR}/quake1/id1"
+	einfo "2 Symlink pak*.pak files in ${GAMES_DATADIR}/quake1/id1"
+	echo
+	einfo "Example:"
+	einfo "my pak*.pak files are in /mnt/secondary/Games/Quake/Id1/"
+	einfo "ln -s /mnt/secondary/Games/Quake/Id1/pak0.pak ${GAMES_DATADIR}/quake1/id1/pak0.pak"
+	echo
+	einfo "You only need pak0.pak to play the demo version,"
+	einfo "the others are needed for registered version"
 }
