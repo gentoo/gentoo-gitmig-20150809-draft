@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15.ebuild,v 1.1 2006/05/26 08:57:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15.ebuild,v 1.2 2006/05/26 20:07:05 robbat2 Exp $
 
 inherit eutils
 
@@ -23,7 +23,8 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-byteswap.patch
-	epatch ${FILESDIR}/${P}-maxtor-diamondmax10.patch
+	cp ${FILESDIR}/hddtemp.db ${T}
+	EPATCH_OPTS="-d ${T}" epatch ${FILESDIR}/${P}-maxtor-diamondmax10.patch
 }
 
 src_compile() {
@@ -41,7 +42,7 @@ src_install() {
 	dodoc README TODO ChangeLog
 
 	insinto /usr/share/hddtemp
-	doins ${FILESDIR}/hddtemp.db
+	doins ${T}/hddtemp.db
 
 	newconfd ${FILESDIR}/hddtemp-conf.d hddtemp
 	newinitd ${FILESDIR}/hddtemp-init hddtemp
