@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.1-r1.ebuild,v 1.3 2006/05/25 19:41:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.1-r1.ebuild,v 1.4 2006/05/26 14:24:20 wolf31o2 Exp $
 
 inherit autotools eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://poppler.freedesktop.org/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="gtk qt cairo qt4"
 
 RDEPEND="~app-text/poppler-${PV}
