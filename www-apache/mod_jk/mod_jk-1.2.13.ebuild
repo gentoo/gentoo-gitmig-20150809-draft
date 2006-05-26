@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.13.ebuild,v 1.3 2005/10/17 18:15:11 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.13.ebuild,v 1.4 2006/05/26 09:51:21 nixnut Exp $
 
 inherit apache-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://apache/jakarta/tomcat-connectors/jk/source/jk-${PV}/${MY_P}.ta
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="apache2"
 
 DEPEND=""
