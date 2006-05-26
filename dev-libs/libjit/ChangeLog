@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libjit
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/ChangeLog,v 1.1 2004/08/08 07:28:08 scandium Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/ChangeLog,v 1.2 2006/05/26 16:50:04 antarus Exp $
+
+  26 May 2006; Alec Warner <antarus@gentoo.org> libjit-0.0.4.ebuild:
+  Fixing keywords for QA bug 132847
 
 *libjit-0.0.4 (08 Aug 2004)
 
