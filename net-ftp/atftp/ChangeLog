@@ -1,6 +1,16 @@
 # ChangeLog for net-ftp/atftp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.12 2006/01/21 15:28:20 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.13 2006/05/26 21:46:53 robbat2 Exp $
+
+*atftp-0.7-r1 (26 May 2006)
+
+  26 May 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/atftp-0.7-glibc24.patch, +files/atftp-0.7-password.patch,
+  +files/atftp-0.7-pcre.patch, +files/atftp-0.7-tests.patch,
+  +atftp-0.7-r1.ebuild:
+  Major fixups, bugs: #104218 - password extension for linksys gear, #109638 -
+  pcre fix and more features, #109912 - 64bit fixes, #110591 - test fixes,
+  #126520 - glibc 2.4 support.
 
   21 Jan 2006; Lars Weiler <pylon@gentoo.org> atftp-0.7.ebuild:
   Stable on ppc.
