@@ -1,4 +1,4 @@
-MD5 090d73cd57790186c415ee973a547705 ChangeLog 12182
+MD5 c9489baef5921c97fadb31c0340dee6f ChangeLog 12328
 MD5 001b0a631c9fc28133013a1f8f78f74c files/CAN-2004-1056.patch 8458
 MD5 cd0a7533c43364e377348613c6d76bb7 files/CAN-2004-1235.patch 9736
 MD5 9003bddd0b720bc1b027419bd78b95ea files/CVE-2005-3356.patch 3803
@@ -20,6 +20,7 @@ MD5 634295dab55744bfa1f95881bb77acd3 files/digest-hppa-sources-2.6.15.1_p4 262
 MD5 2183fc7750b67fca6000d11b85dec076 files/digest-hppa-sources-2.6.15.4_p4 263
 MD5 f58dfc4f2c986723ea95fa9fcdff98c2 files/digest-hppa-sources-2.6.15_p1 201
 MD5 69f2e8514e72d66efe1534059c7e2540 files/digest-hppa-sources-2.6.16.14_p11 265
+MD5 68ccb5f96ed6883ac6daf4d3dc70f759 files/digest-hppa-sources-2.6.16.18_p11 265
 MD5 c36ccd08a4fc9a3410fcef455a2aacfb files/digest-hppa-sources-2.6.16.5_p11 264
 MD5 4cacf148a639d649df45b028f77c6f59 files/digest-hppa-sources-2.6.16.9_p11 976
 MD5 9cd2b385c7819ec3dbf600f5bcf3fbf3 files/digest-hppa-sources-2.6.16_p0 201
@@ -41,6 +42,7 @@ MD5 fee5e14956fb0c0bb644ecf358cceb1d hppa-sources-2.6.15.1_p4.ebuild 1444
 MD5 b4a56c71e6b6253fd439c7771ec563ab hppa-sources-2.6.15.4_p4.ebuild 1412
 MD5 74bdf5e30038d4da2c499ef24c65107c hppa-sources-2.6.15_p1.ebuild 1410
 MD5 85c31f17ae31441475a08d0f468f7594 hppa-sources-2.6.16.14_p11.ebuild 1414
+MD5 63a005f43e9b6fe9eb56ba046a416407 hppa-sources-2.6.16.18_p11.ebuild 1414
 MD5 dd63822b7a1a2c551c41d38bc1a88243 hppa-sources-2.6.16.5_p11.ebuild 1413
 MD5 149606b1befc4b48e29bec9756c02290 hppa-sources-2.6.16.9_p11.ebuild 1413
 MD5 4059ad53a76389e766c90011f507ede2 hppa-sources-2.6.16_p0.ebuild 1411
