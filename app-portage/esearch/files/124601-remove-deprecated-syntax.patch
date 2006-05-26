@@ -1,0 +1,11 @@
+--- esync.py	2006-05-25 22:07:24.000000000 -0400
++++ esync.py	2006-05-25 22:12:52.287867750 -0400
+@@ -22,7 +22,7 @@
+ 
+ from common import needdbversion
+ 
+-syncprogram =   "/usr/bin/emerge sync"
++syncprogram =   "/usr/bin/emerge --sync"
+ logfile_sync =  "/var/log/emerge-sync.log"
+ tmp_prefix =    "/tmp/esync"
+ 
