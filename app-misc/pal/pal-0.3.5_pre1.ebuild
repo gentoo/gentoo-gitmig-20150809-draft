@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/pal-0.3.5_pre1.ebuild,v 1.1 2005/11/13 16:07:31 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/pal-0.3.5_pre1.ebuild,v 1.2 2006/05/26 20:44:31 flameeyes Exp $
 
 inherit toolchain-funcs
 
@@ -13,11 +13,13 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="ical"
 
-DEPEND=">=dev-libs/glib-2.0
-	sys-devel/gettext
-	virtual/libc
+RDEPEND=">=dev-libs/glib-2.0
 	sys-libs/readline
-	ical? ( dev-libs/libical )"
+	ical? ( dev-libs/libical )
+	virtual/libintl"
+
+DEPEND="${RDEPEND}
+	sys-devel/gettext"
 
 S="${WORKDIR}/${P}/src"
 
