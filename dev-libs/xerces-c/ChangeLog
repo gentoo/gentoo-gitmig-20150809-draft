@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.42 2006/03/25 17:10:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.43 2006/05/26 00:06:12 nerdboy Exp $
 
-  25 Mar 2006; Bryan Østergaard <kloeri@gentoo.org
+  26 May 2006; Steve Arnold <nerdboy@gentoo.org> xerces-c-2.7.0-r1.ebuild:
+  Requires ~ppc64 for gdal gml support.
+
+  25 Mar 2006; Bryan Østergaard <kloeri@gentoo.org>
   xerces-c-2.7.0-r1.ebuild:
   Add ~alpha keyword, bug 127497.
 
