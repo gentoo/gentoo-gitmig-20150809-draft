@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.13.0.ebuild,v 1.5 2006/05/25 14:11:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.13.0.ebuild,v 1.6 2006/05/26 04:15:57 vapier Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_unpack() {
 src_compile() {
 	sed -i -e 's:-ggdb3::' configure
 	econf \
-		$(use_enable crypt) \
+		$(use_enable crypt crypto) \
 		$(use_enable debug) \
 		$(use_enable fuse fuse-module) \
 		$(use_enable gnome gnome-vfs) \
