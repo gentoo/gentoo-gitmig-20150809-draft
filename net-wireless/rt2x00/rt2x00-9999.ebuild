@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.5 2006/05/12 10:30:13 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.6 2006/05/26 15:32:48 uberlord Exp $
 
 inherit linux-mod cvs
 
@@ -17,8 +17,9 @@ IUSE="debug"
 RDEPEND="net-wireless/wireless-tools"
 
 MODULE_NAMES="
-	ieee80211/80211(rt2x00/ieee80211:)
-	ieee80211/rate_control(rt2x00/ieee80211:)
+	80211(rt2x00:)
+	radiobtn(rt2x00:)
+	rate_control(rt2x00:)
 	rt2400pci(rt2x00:)
 	rt2500pci(rt2x00:)
 	rt2500usb(rt2x00:)
@@ -33,18 +34,25 @@ ERROR_NET_RADIO="${P} requires support for Firmware module loading (CONFIG_FW_LO
 
 pkg_setup() {
 	kernel_is lt 2 6 13 && die "${P} requires at least kernel 2.6.13"
-
 	linux-mod_pkg_setup
-
 	BUILD_PARAMS="KERNDIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
-	if use debug ; then
-		BUILD_TARGETS="debug"
-	else
-		BUILD_TARGETS="nodebug"
-	fi
+	BUILD_TARGETS=" " # Target "module" is not supported, so we blank it
 }
 
 src_compile() {
+	local m= d="n"
+	use debug && debug="y"
+
+	# Build everything except ASM files
+	# Maybe have USE flags for each driver at some point?
+	for m in RT2400PCI RT2500PCI RT2500USB RT61PCI RT73USB \
+	D80211 RADIOBTN ; do
+		echo "CONFIG_${m}=y" >> config
+		echo "CONFIG_${m}_ASM=n" >> config
+		echo "CONFIG_${m}_DEBUG=${debug}" >> config
+		echo "CONFIG_${m}_BUTTON=y" >> config
+	done
+
 	linux-mod_src_compile
 }
 
