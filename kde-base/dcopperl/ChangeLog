@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcopperl
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.23 2006/01/22 22:52:51 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.24 2006/05/26 12:40:58 wolf31o2 Exp $
+
+  26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> dcopperl-3.5.0.ebuild:
+  Stable on x86 wrt bug #132213.
 
 *dcopperl-3.5.1 (23 Jan 2006)
 

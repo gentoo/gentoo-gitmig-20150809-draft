@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-3.5.2.ebuild,v 1.2 2006/03/31 14:15:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-3.5.2.ebuild,v 1.3 2006/05/26 12:40:21 wolf31o2 Exp $
 
 KMNAME=kdebindings
 KMCOPYLIB="libsmokeqt smoke/qt libsmokekde smoke/kde"
@@ -13,7 +13,7 @@ inherit kde-meta
 DESCRIPTION="KDE ruby bindings"
 HOMEPAGE="http://developer.kde.org/language-bindings/ruby/"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 OLDDEPEND=">=virtual/ruby-1.8 ~kde-base/qtruby-$PV ~kde-base/smoke-3.3.1"
 DEPEND=" >=virtual/ruby-1.8

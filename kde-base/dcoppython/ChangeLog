@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/dcoppython
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.22 2006/01/22 22:52:51 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.23 2006/05/26 12:42:22 wolf31o2 Exp $
+
+  26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  dcoppython-3.5.0.ebuild:
+  Stable on x86 wrt bug #132213.
 
 *dcoppython-3.5.1 (23 Jan 2006)
 

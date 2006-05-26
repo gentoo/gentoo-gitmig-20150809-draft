@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/qtruby-3.5.2.ebuild,v 1.2 2006/03/31 14:14:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/qtruby-3.5.2.ebuild,v 1.3 2006/05/26 12:39:48 wolf31o2 Exp $
 
 KMNAME=kdebindings
 KMCOPYLIB="libsmokeqt smoke/qt"
@@ -12,7 +12,7 @@ inherit kde-meta
 DESCRIPTION="Ruby bindings for QT"
 HOMEPAGE="http://developer.kde.org/language-bindings/ruby/"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 DEPEND=" >=virtual/ruby-1.8
 $(deprange $PV $MAXKDEVER kde-base/smoke)"
