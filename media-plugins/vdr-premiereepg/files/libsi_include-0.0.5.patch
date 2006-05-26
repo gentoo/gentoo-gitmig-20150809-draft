@@ -1,0 +1,13 @@
+--- premiereepg.c.orig	2005-11-07 20:48:11.000000000 +0100
++++ premiereepg.c	2005-11-07 20:43:11.000000000 +0100
+@@ -29,8 +29,8 @@
+ #include <vdr/channels.h>
+ #include <vdr/dvbdevice.h>
+ #include <vdr/i18n.h>
+-#include <libsi/section.h>
+-#include <libsi/descriptor.h>
++#include <vdr/libsi/section.h>
++#include <vdr/libsi/descriptor.h>
+ 
+ //#define DEBUG
+ //#define DEBUG2

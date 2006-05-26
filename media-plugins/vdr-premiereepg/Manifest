@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fe918fe0855bcbd72c00ef699e998823 ChangeLog 451
+MD5 abfeb30e6849e1bc24ca96ed635a14ca files/digest-vdr-premiereepg-0.0.5 72
+MD5 ffed710f6e9e35b604b9e698f15d8c4f files/libsi_include-0.0.5.patch 372
+MD5 10939b1c9902b7d17a993893942a9fc0 metadata.xml 447
+MD5 e333bfb1bc3f055fe5adf6426223884e vdr-premiereepg-0.0.5.ebuild 620
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+Comment: no further Information
+
+iD8DBQFEd4hLdn07HTTCgIoRAhjBAJ92EBXlRvKbhHBPHz/YTEY2vne6FwCeLO8Z
+/nL157BKPQ4JEwIJMPbOWHw=
+=aevP
+-----END PGP SIGNATURE-----
