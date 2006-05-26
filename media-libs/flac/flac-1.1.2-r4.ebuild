@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r4.ebuild,v 1.4 2006/05/24 18:41:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r4.ebuild,v 1.5 2006/05/26 17:21:14 flameeyes Exp $
 
 inherit libtool eutils flag-o-matic autotools
 
@@ -45,8 +45,11 @@ src_compile() {
 	# the man page ebuild requires docbook2man... yick!
 	sed -i -e 's:include man:include:g' Makefile
 
-	# parallel make seems to mess up the building of the xmms input plugin
-	emake -j1 || die "make failed"
+	# FIXME parallel make seems to mess up the building of the xmms input plugin
+	local makeopts
+	use xmms && makeopts="-j1"
+
+	emake ${makeopts} || die "make failed"
 }
 
 src_install() {
