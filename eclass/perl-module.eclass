@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.91 2006/05/26 15:19:55 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.92 2006/05/26 15:22:54 antarus Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -126,7 +126,6 @@ perl-module_src_compile() {
 }
 
 perl-module_src_test() {
-	echo "Boobies"
 	if [ "${SRC_TEST}" == "do" ]; then
 		perlinfo
 		if [ -f Makefile ]; then
