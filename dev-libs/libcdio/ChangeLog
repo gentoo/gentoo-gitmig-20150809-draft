@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.53 2006/05/26 19:04:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.54 2006/05/26 19:25:34 flameeyes Exp $
+
+  26 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/libcdio-0.75-freebsd.patch, -files/libcdio-0.76-dragonfly.patch,
+  -files/libcdio-0.76-nrg-crash.patch, -libcdio-0.64.ebuild,
+  -libcdio-0.69.ebuild, -libcdio-0.74.ebuild, -libcdio-0.75.ebuild,
+  -libcdio-0.75-r1.ebuild, -libcdio-0.76.ebuild, -libcdio-0.76-r1.ebuild:
+  Drop old versions.
 
   26 May 2006; Diego Pettenò <flameeyes@gentoo.org> libcdio-0.77.ebuild:
   Don't force -j1, works fine with parallel make now.
