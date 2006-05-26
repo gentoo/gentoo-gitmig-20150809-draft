@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.12 2005/08/23 14:55:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.13 2006/05/26 15:19:55 antarus Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -21,7 +21,7 @@ SLOT="0"
 
 S="${WORKDIR}"
 
-DICSDIRFILE="$(echo ${FILESDIR}/*.dics.dir)"
+DICSDIRFILE="${FILESDIR}/*.dics.dir"
 CANNADICS="${CANNADICS}"			# (optional)
 DOCS="README*"
 
