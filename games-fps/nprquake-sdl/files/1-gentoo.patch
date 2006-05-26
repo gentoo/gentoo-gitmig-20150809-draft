@@ -1,15 +1,13 @@
-diff -ur NPRQuake-SDL.orig/Makefile NPRQuake-SDL/Makefile
---- NPRQuake-SDL.orig/Makefile	2003-09-28 20:09:29.010852408 -0400
-+++ NPRQuake-SDL/Makefile	2003-09-28 20:09:29.521774736 -0400
+--- NPRQuake-SDL/Makefile
++++ NPRQuake-SDL/Makefile
 @@ -1,4 +1,4 @@
 -RELEASE_CFLAGS=-Dstricmp=strcasecmp -mcpu=i586 -march=i586 -O6 -ffast-math -funroll-loops -fomit-frame-pointer -fexpensive-optimizations
 +RELEASE_CFLAGS=-Dstricmp=strcasecmp $(OPTFLAGS) -DGENTOO_LIBDIR='\"$(GENTOO_LIBDIR)\"' -DGENTOO_DATADIR='\"$(GENTOO_DATADIR)\"'
  
  DEBUG_CFLAGS=-Dstricmp=strcasecmp -g
  
-diff -ur NPRQuake-SDL.orig/NPRQuakeSrc/Makefile NPRQuake-SDL/NPRQuakeSrc/Makefile
---- NPRQuake-SDL.orig/NPRQuakeSrc/Makefile	2003-09-28 20:09:29.065844048 -0400
-+++ NPRQuake-SDL/NPRQuakeSrc/Makefile	2003-09-28 20:09:43.153702368 -0400
+--- NPRQuake-SDL/NPRQuakeSrc/Makefile
++++ NPRQuake-SDL/NPRQuakeSrc/Makefile
 @@ -29,7 +29,7 @@
  
  CC=gcc
@@ -28,9 +26,8 @@ diff -ur NPRQuake-SDL.orig/NPRQuakeSrc/Makefile NPRQuake-SDL/NPRQuakeSrc/Makefil
  
  $(BUILDDIR)/glquake/console.o :      console.c
  	$(DO_GL_CC)
-diff -ur NPRQuake-SDL.orig/NPRQuakeSrc/common.c NPRQuake-SDL/NPRQuakeSrc/common.c
---- NPRQuake-SDL.orig/NPRQuakeSrc/common.c	2003-09-28 20:09:29.140832648 -0400
-+++ NPRQuake-SDL/NPRQuakeSrc/common.c	2003-09-28 20:09:29.525774128 -0400
+--- NPRQuake-SDL/NPRQuakeSrc/common.c
++++ NPRQuake-SDL/NPRQuakeSrc/common.c
 @@ -1775,11 +1775,16 @@
  // start up with GAMENAME by default (id1)
  //
@@ -58,9 +55,8 @@ diff -ur NPRQuake-SDL.orig/NPRQuakeSrc/common.c NPRQuake-SDL/NPRQuakeSrc/common.
  	}
  
  //
-diff -ur NPRQuake-SDL.orig/NPRQuakeSrc/gl_rmisc.c NPRQuake-SDL/NPRQuakeSrc/gl_rmisc.c
---- NPRQuake-SDL.orig/NPRQuakeSrc/gl_rmisc.c	2003-09-28 20:09:29.139832800 -0400
-+++ NPRQuake-SDL/NPRQuakeSrc/gl_rmisc.c	2003-09-28 20:09:29.529773520 -0400
+--- NPRQuake-SDL/NPRQuakeSrc/gl_rmisc.c
++++ NPRQuake-SDL/NPRQuakeSrc/gl_rmisc.c
 @@ -563,13 +563,15 @@
  
      // this should be as big as the number of functions we pull out.
@@ -78,3 +74,14 @@ diff -ur NPRQuake-SDL.orig/NPRQuakeSrc/gl_rmisc.c NPRQuake-SDL/NPRQuakeSrc/gl_rm
  #endif
  
      if( hnewlib == NULL ) {
+--- NPRQuake-SDL/NPRQuakeSrc/sys_linux.c
++++ NPRQuake-SDL/NPRQuakeSrc/sys_linux.c
+@@ -86,7 +86,7 @@
+ void Sys_Printf (char *fmt, ...)
+ {
+ 	va_list		argptr;
+-	char		text[2048];
++	char		text[4096];
+ 	unsigned char		*p;
+ 
+ 	va_start (argptr,fmt);
