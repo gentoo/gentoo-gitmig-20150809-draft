@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.6-r2.ebuild,v 1.3 2006/05/12 20:44:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.6-r2.ebuild,v 1.4 2006/05/26 17:35:43 flameeyes Exp $
 
 inherit libtool eutils autotools
 
@@ -21,13 +21,9 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	esd? ( >=media-sound/esound-0.2.22 )
 	nas? ( media-libs/nas )"
 
-DEPEND="${RDEPEND}
-	sys-devel/autoconf
-	sys-devel/automake"
-
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}
 
@@ -44,16 +40,15 @@ src_compile() {
 		`use_enable esd` \
 		`use_enable nas` \
 		--enable-shared \
-		`use_enable static` || die
+		--enable-static || die
 
-	# See bug #37218.  Build problems with parallel make.
-	emake -j1 || die
+	emake || die
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
-	rm -rf ${D}/usr/share/doc
+	rm -rf "${D}/usr/share/doc"
 	dodoc AUTHORS CHANGES README TODO
 	dohtml -A c doc/*.html
 }
