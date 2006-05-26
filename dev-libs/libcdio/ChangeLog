@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.52 2006/05/03 20:38:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.53 2006/05/26 19:04:45 flameeyes Exp $
+
+  26 May 2006; Diego Pettenò <flameeyes@gentoo.org> libcdio-0.77.ebuild:
+  Don't force -j1, works fine with parallel make now.
 
   03 May 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata to list media-video@gentoo.org as maintainer.

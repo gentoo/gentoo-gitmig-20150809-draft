@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.77.ebuild,v 1.4 2006/04/17 14:30:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.77.ebuild,v 1.5 2006/05/26 19:04:45 flameeyes Exp $
 
 inherit libtool autotools
 
@@ -45,8 +45,7 @@ src_compile() {
 		--with-cd-paranoia-name=libcdio-paranoia \
 		--disable-vcd-info \
 		--disable-dependency-tracking || die "configure failed"
-	# had problem with parallel make (phosphan@gentoo.org)
-	emake -j1 || die "make failed"
+	emake || die "make failed"
 }
 
 src_install() {
