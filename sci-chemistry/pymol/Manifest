@@ -1,8 +1,9 @@
-MD5 9c6fb81bdd4f2b19aa43ca96c1bdccbd ChangeLog 4755
+MD5 f1865218de9c08a5f4251f725e134126 ChangeLog 4977
 MD5 cb324029606a6b5048895957143c7a44 files/digest-pymol-0.97 64
 MD5 2dbc83e197b07cf99e7b02a03555a3d6 files/digest-pymol-0.98 64
 MD5 925dc45d0ae6070f5506dffc1d100975 files/digest-pymol-0.99_rc6 247
 MD5 9c414f568a3de5c4af6aee28e735a7a3 files/digest-pymol-0.99_rc6-r1 67
+MD5 9c414f568a3de5c4af6aee28e735a7a3 files/digest-pymol-0.99_rc6-r2 67
 MD5 1a6ba582a7928c370c8dfe44c8867e7c files/header_order.patch 905
 MD5 929741dc2da6577e6e99c5542d68dbd5 files/nosplash-gentoo.patch 332
 MD5 035c32a87c619d2c2cf6c0d7466d92e0 files/pymol-0.99_rc6-data-path.patch 2473
@@ -13,4 +14,5 @@ MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 2e14ab661047ad8d8c2fe6b21b72c5cc pymol-0.97.ebuild 1131
 MD5 178d73732fb90d64350e98c172b9b594 pymol-0.98.ebuild 1131
 MD5 03c375c56799851b4df5b75cdb5f2720 pymol-0.99_rc6-r1.ebuild 1811
+MD5 6d53dad82375c2a8aac59f780e9dc475 pymol-0.99_rc6-r2.ebuild 2206
 MD5 e339da592644e001ae3b497400f08716 pymol-0.99_rc6.ebuild 1720
