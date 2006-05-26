@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/quanta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/ChangeLog,v 1.44 2006/05/26 01:22:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/ChangeLog,v 1.45 2006/05/26 16:52:51 corsair Exp $
+
+  26 May 2006; Markus Rothe <corsair@gentoo.org> quanta-3.5.2.ebuild:
+  Stable on ppc64
 
   26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> quanta-3.5.2.ebuild:
   Stable on x86 wrt bug #132213
