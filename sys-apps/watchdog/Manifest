@@ -1,4 +1,4 @@
-MD5 4a6052d3f290036c7a5a252f4f68c5e4 ChangeLog 3199
+MD5 6c845bf61e236f9f09b6c1070d7e9abe ChangeLog 3300
 MD5 287794d799d9743d47a4cdcaea6eadb1 files/digest-watchdog-5.2.4_p5 139
 MD5 6ad7ba12ce51412cb95df32eb14e572f files/digest-watchdog-5.2.5_p1 138
 MD5 0e792c9c9654889661f8cccf2582417c files/watchdog-5.2.4_p5-conf.d 279
@@ -11,4 +11,4 @@ MD5 ba2c02768a2e772c14e6332dd6b2e65e files/watchdog-5.2.5_p1-sundries.patch 752
 MD5 e3a3640b31e70f2956ed8ed4bb39f04a files/watchdog-5.2.5_p1-uclibc.patch 312
 MD5 c58db060ae5f8ffd1d141930b0c7c02c metadata.xml 219
 MD5 2d89608080fd1e9229cc30b2f409a2d7 watchdog-5.2.4_p5.ebuild 1469
-MD5 e04d7f2e8d3a87030c1ae9c9bb216399 watchdog-5.2.5_p1.ebuild 1233
+MD5 9eb8b1b12ce1f99c2a1aefd8b0e9838c watchdog-5.2.5_p1.ebuild 1232
