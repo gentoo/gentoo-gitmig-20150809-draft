@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/freehdl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/ChangeLog,v 1.7 2006/05/27 11:59:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/ChangeLog,v 1.8 2006/05/27 22:01:52 calchan Exp $
+
+  27 May 2006; Denis Dupeyron <calchan@gentoo.org>
+  -files/freehdl-20040113-gcc3.4.patch,
+  -files/freehdl-20050510-memory.patch, -freehdl-20040113.ebuild,
+  -freehdl-20050510.ebuild:
+  Removed ebuilds with old versioning scheme.
 
   27 May 2006; <nixnut@gentoo.org> freehdl-0.0.1.ebuild:
   Added ~ppc keyword. bug #134091
