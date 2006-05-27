@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1.ebuild,v 1.1 2006/05/25 09:59:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1.ebuild,v 1.2 2006/05/27 09:26:38 genstef Exp $
 
 inherit eutils pam flag-o-matic multilib autotools
 
@@ -33,7 +33,8 @@ RDEPEND="${DEP}
 	nls? ( virtual/libintl )
 	!virtual/lpr
 	>=app-text/poppler-0.4.3-r1"
-PDEPEND="samba? ( >=net-fs/samba-3.0.8 )"
+PDEPEND="samba? ( >=net-fs/samba-3.0.8 )
+	virtual/ghostscript"
 PROVIDE="virtual/lpr"
 
 # upstream includes an interactive test which is a nono for gentoo.
@@ -72,6 +73,7 @@ src_compile() {
 		--with-cups-group=lp \
 		--with-system-groups=lpadmin \
 		--localstatedir=/var \
+		--with-docdir=/usr/share/doc/${PF}/html \
 		--with-bindnow=$(bindnow-flags) \
 		$(use_enable pam) \
 		$(use_enable ssl) \
@@ -97,13 +99,13 @@ src_compile() {
 src_install() {
 	make BUILDROOT=${D} install || die "make install failed"
 
-	dodoc {CHANGES,CREDITS,LICENSE,README}.txt
-	dosym /usr/share/cups/docs /usr/share/doc/${PF}/html
-
 	# cleanups
 	rm -rf ${D}/etc/init.d ${D}/etc/pam.d ${D}/etc/rc* ${D}/usr/share/man/cat*
 
+	dodoc {CHANGES,CREDITS,LICENSE,README}.txt
+
 	pamd_mimic_system cups auth account
+	newinitd ${FILESDIR}/cupsd.rc6 cupsd
 
 	sed -i -e "s:server = .*:server = /usr/libexec/cups/daemon/cups-lpd:" ${D}/etc/xinetd.d/cups-lpd
 
@@ -132,4 +134,7 @@ pkg_postinst() {
 	einfo "http://www.gentoo.org/doc/en/printing-howto.xml."
 	einfo
 	einfo "You need to emerge ghostscript with the cups-USEflag turned on"
+	ewarn
+	ewarn "If you are updating from cups-1.1.* you need to remerge every ebuild"
+	ewarn "that installed into /usr/lib/cups: \"emerge -va \$(qfile -qC /usr/lib/cups)\""
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.169 2006/05/25 09:59:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.170 2006/05/27 09:26:38 genstef Exp $
+
+  27 May 2006; <stefan@gentoo.org> cups-1.2.1.ebuild:
+  Add ghostscript PDEPEND, add --with-docdir, readd initd file
 
 *cups-1.2.1 (25 May 2006)
 
