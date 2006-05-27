@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.3.ebuild,v 1.2 2006/04/30 21:08:53 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.3.ebuild,v 1.3 2006/05/27 16:59:33 nixphoeni Exp $
 
-inherit gnome2 eutils multilib
+inherit gnome2 eutils autotools multilib
 
 MY_PN="gDesklets"
 MY_P="${MY_PN}-${PV/_/}"
@@ -34,6 +34,20 @@ DEPEND="${RDEPEND}
 
 USE_DESTDIR="1"
 DOCS="AUTHORS ChangeLog NEWS README TODO"
+
+src_unpack() {
+
+	gnome2_src_unpack
+
+	if use alpha ; then
+
+		epatch ${FILESDIR}/${P}-alpha.patch
+
+		eautoreconf
+
+	fi
+
+}
 
 src_install() {
 

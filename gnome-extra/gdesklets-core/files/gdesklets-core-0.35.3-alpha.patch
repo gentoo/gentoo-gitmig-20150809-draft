@@ -1,0 +1,89 @@
+diff -urN gDesklets-0.35.3.orig/libdesklets/system/ArchFactory.py gDesklets-0.35.3/libdesklets/system/ArchFactory.py
+--- gDesklets-0.35.3.orig/libdesklets/system/ArchFactory.py	2005-01-22 15:33:31.000000000 +0000
++++ gDesklets-0.35.3/libdesklets/system/ArchFactory.py	2006-04-30 12:58:04.000000000 +0000
+@@ -27,6 +27,9 @@
+         if (uname[-1] in ('ppc', 'ppc64')):
+             return Linux.PPC()
+ 
++        if (uname[-1] in ('alpha')):
++            return Linux.Alpha()
++
+         return Linux.Generic()
+ 
+ 
+diff -urN gDesklets-0.35.3.orig/libdesklets/system/Linux/Alpha.py gDesklets-0.35.3/libdesklets/system/Linux/Alpha.py
+--- gDesklets-0.35.3.orig/libdesklets/system/Linux/Alpha.py	1970-01-01 00:00:00.000000000 +0000
++++ gDesklets-0.35.3/libdesklets/system/Linux/Alpha.py	2006-04-30 16:06:54.000000000 +0000
+@@ -0,0 +1,52 @@
++from Generic import Generic
++
++import re
++
++class Alpha(Generic):
++
++    def __init__(self):
++
++        Generic.__init__(self)
++
++        def _get_model():
++            r = re.compile('^system type\s+:\s+(.+)$', re.M)
++            m = r.search( self._read_cpuinfo() )
++            return m.group(1)
++
++        def _get_speed():
++            r = re.compile('^cycle frequency \[Hz\]\s+:\s+(\d+)\s+est\.$', re.M);
++            m = r.search( self._read_cpuinfo() )
++            return float(int(m.group(1))/1000000.0)
++
++        self.__model_name = _get_model()
++        self.__speed      = _get_speed()
++
++        # set cache size to 0, since size is not present in /proc/cpuinfo
++        self.__cache_size = int(0)
++
++
++    def cpu_cache(self):
++        """
++        @return : 2nd level cache of installed processor
++        @rtype  : int
++        """
++
++        return self.__cache_size
++
++    def cpu_model(self):
++        """
++        @return : model/type of installed processor
++        @rtype  : str
++        """
++
++        return self.__model_name
++
++
++
++    def cpu_speed(self):
++        """
++        @return : current clock of installed processor
++        @rtype  : float
++        """
++
++        return self.__speed
+diff -urN gDesklets-0.35.3.orig/libdesklets/system/Linux/Makefile.am gDesklets-0.35.3/libdesklets/system/Linux/Makefile.am
+--- gDesklets-0.35.3.orig/libdesklets/system/Linux/Makefile.am	2004-11-22 19:42:53.000000000 +0000
++++ gDesklets-0.35.3/libdesklets/system/Linux/Makefile.am	2006-04-30 12:58:43.000000000 +0000
+@@ -2,6 +2,7 @@
+ 
+ install_DATA = \
+ 	__init__.py	\
++	Alpha.py	\
+ 	Generic.py \
+ 	PPC.py \
+ 	Sparc.py \
+diff -urN gDesklets-0.35.3.orig/libdesklets/system/Linux/__init__.py gDesklets-0.35.3/libdesklets/system/Linux/__init__.py
+--- gDesklets-0.35.3.orig/libdesklets/system/Linux/__init__.py	2004-04-19 18:24:26.000000000 +0000
++++ gDesklets-0.35.3/libdesklets/system/Linux/__init__.py	2006-04-30 13:14:47.000000000 +0000
+@@ -1,4 +1,5 @@
+ from X86 import X86
+ from Sparc import Sparc
+ from PPC import PPC
++from Alpha import Alpha
+ from Generic import Generic
