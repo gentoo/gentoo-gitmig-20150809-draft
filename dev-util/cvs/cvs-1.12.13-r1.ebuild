@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.13-r1.ebuild,v 1.1 2006/05/27 00:25:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.13-r1.ebuild,v 1.2 2006/05/27 00:26:59 robbat2 Exp $
 
 inherit eutils pam
 
@@ -87,7 +87,7 @@ src_install() {
 }
 
 src_test() {
-	einfo "If you want to see realtime status, or check out a failure," 
+	einfo "If you want to see realtime status, or check out a failure,"
 	einfo "please look at ${S}/src/check.log*"
 	if [ -n "$TEST_REMOTE_AND_PROXY" ]; then
 		einfo "local, remote, and proxy tests enabled."
@@ -99,7 +99,7 @@ src_test() {
 	export TESTDIR="${T}/tests-local"
 	mkdir -p "$TESTDIR"
 	# we only do the local tests by default
-	make localcheck || die "Some local test failed." 
+	make localcheck || die "Some local test failed."
 	mv -f check.log check.log-local
 
 	# if you want to test the remote and proxy modes, things get a little bit
@@ -114,7 +114,7 @@ src_test() {
 	  mkdir -p "$TESTDIR"
 	  make remotecheck || die "Some remote test failed."
 	  mv -f check.log check.log-remote
-	  
+
 	  cd ${S}/src
 	  export TESTDIR="${T}/tests-proxy"
 	  mkdir -p "$TESTDIR"
