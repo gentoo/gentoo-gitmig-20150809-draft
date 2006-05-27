@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.30-r1.ebuild,v 1.3 2006/05/08 05:30:35 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.30-r1.ebuild,v 1.4 2006/05/27 02:21:41 nerdboy Exp $
 
 inherit eutils libtool distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/gpsd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~arm ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~arm amd64 ppc ~ppc64 ~sparc x86"
 
 IUSE="X usb dbus"
 
@@ -67,7 +67,6 @@ src_install() {
 
 	if use usb ; then
 	    sed -i -e "s/gpsd.hotplug/gpsd/g" gpsd.hotplug gpsd.usermap
-	    sed -i -e "s:run/gpsd.sock:run/gpsd/gpsd.sock:g" gpsd.hotplug
 	    insinto /etc/hotplug/usb
 	    doins gpsd.usermap
 	    exeinto /etc/hotplug/usb
@@ -86,9 +85,6 @@ src_install() {
 	exeinto /usr/$(get_libdir)/python${PYVER}/site-packages
 	doexe gps.py gpsfake.py
 	dodoc AUTHORS HACKING INSTALL README TODO ${FILESDIR}/40-usb-serial.rules
-	diropts "-m1755"
-	dodir /var/run/gpsd
-	fowners nobody /var/run/gpsd
 }
 
 pkg_postinst() {
