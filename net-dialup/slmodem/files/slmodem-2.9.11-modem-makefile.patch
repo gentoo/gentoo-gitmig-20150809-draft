@@ -6,7 +6,7 @@ diff -Nru modem.orig/Makefile modem/Makefile
  RM:= rm -f
  
 -CFLAGS+= -Wall -g -O -I. -DCONFIG_DEBUG_MODEM
-+CFLAGS+= -Wall -g -I. -DCONFIG_DEBUG_MODEM
++CFLAGS+= -Wall -g -finline -I. -DCONFIG_DEBUG_MODEM
  
  
  modem-objs:= \
