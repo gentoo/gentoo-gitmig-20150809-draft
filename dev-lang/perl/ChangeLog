@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.213 2006/05/26 22:05:10 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.214 2006/05/27 19:43:00 mcummings Exp $
+
+  27 May 2006; <mcummings@gentoo.org> perl-5.8.8-r2.ebuild:
+  Marking sparc stable
 
   26 May 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   perl-5.8.8-r2.ebuild:
