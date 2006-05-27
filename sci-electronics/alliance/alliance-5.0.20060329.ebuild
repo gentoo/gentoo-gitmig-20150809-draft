@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20060329.ebuild,v 1.3 2006/05/26 17:35:56 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20060329.ebuild,v 1.4 2006/05/27 15:53:58 calchan Exp $
 
 inherit versionator flag-o-matic
 
@@ -17,9 +17,6 @@ IUSE=""
 DEPEND="x11-libs/openmotif"
 S=${WORKDIR}/${PN}-${UPSTREAM_VERSION}
 
-# Fix bug #134145
-MAKEOPTS="${MAKEOPTS} -j1"
-
 src_compile() {
 	# Fix bug #134285
 	replace-flags -O3 -O2
@@ -32,7 +29,9 @@ src_compile() {
 		--with-motif \
 		--with-xpm \
 		|| die "./configure failed"
-	emake || die "emake failed"
+
+	# Not using emake since it doesn't parallelize, bug #134145
+	make || die "make failed"
 }
 
 src_install() {
