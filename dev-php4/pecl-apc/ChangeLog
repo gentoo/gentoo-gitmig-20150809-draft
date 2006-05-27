@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-apc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/ChangeLog,v 1.7 2006/03/12 07:25:33 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/ChangeLog,v 1.8 2006/05/27 00:44:31 chtekk Exp $
+
+  27 May 2006; Luca Longinotti <chtekk@gentoo.org> pecl-apc-3.0.10.ebuild:
+  Added to ~amd64.
 
 *pecl-apc-3.0.10 (12 Mar 2006)
 

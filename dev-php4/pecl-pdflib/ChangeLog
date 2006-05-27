@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/pecl-pdflib
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-pdflib/ChangeLog,v 1.5 2005/11/24 23:11:24 chtekk Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-pdflib/ChangeLog,v 1.6 2006/05/27 00:48:31 chtekk Exp $
+
+  27 May 2006; Luca Longinotti <chtekk@gentoo.org>
+  pecl-pdflib-2.0.4-r1.ebuild:
+  Added to ~amd64.
 
   24 Nov 2005; Luca Longinotti <chtekk@gentoo.org>
   pecl-pdflib-2.0.4-r1.ebuild:
