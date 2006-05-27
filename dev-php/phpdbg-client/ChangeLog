@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/phpdbg-client
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg-client/ChangeLog,v 1.4 2006/04/15 22:56:34 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg-client/ChangeLog,v 1.5 2006/05/27 00:54:48 chtekk Exp $
+
+  27 May 2006; Luca Longinotti <chtekk@gentoo.org>
+  phpdbg-client-2.13.1.ebuild:
+  Added to ~amd64.
 
 *phpdbg-client-2.13.1 (15 Apr 2006)
 
