@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1-r2.ebuild,v 1.1 2006/05/26 22:19:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1-r2.ebuild,v 1.2 2006/05/27 06:37:53 halcy0n Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -57,19 +57,19 @@ pkg_postinst() {
 		einfo "The following profiles have been activated.  If an incorrect profile is"
 		einfo "chosen or an error is reported, please use 'eselect compiler set' to"
 		einfo "manually choose it"
-        
+
 		local abi
 		for abi in $(get_all_abis) ; do
 			local ctarget=$(get_abi_CHOST ${abi})
 
-            local spec
-            if use hardened ; then
-                spec="hardened"
-            else
-                spec="vanilla"
-            fi
+			local spec
+			if use hardened ; then
+				spec="hardened"
+			else
+				spec="vanilla"
+			fi
 
-            local isset=0
+			local isset=0
 			local tuple
 			for tuple in "${CHOST}" "${CTARGET}" "${ctarget}" ; do
 				local version
@@ -84,13 +84,13 @@ pkg_postinst() {
 						fi
 					done
 					[[ ${isset} == 1 ]] && break
-                done
+				done
 				[[ ${isset} == 1 ]] && break
-            done
+			done
 
-            if [[ ${isset} == 0 ]] ; then
-                eerror "${abi}: Unable to determine an appropriate profile.  Please set manually."
-            fi
+			if [[ ${isset} == 0 ]] ; then
+				eerror "${abi}: Unable to determine an appropriate profile.  Please set manually."
+			fi
 		done
 	else
 		eselect compiler update
