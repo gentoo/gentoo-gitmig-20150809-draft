@@ -1,0 +1,121 @@
+diff --exclude='*~' -Naur ethereal-0.99.0.orig/capture_loop.c ethereal-0.99.0/capture_loop.c
+--- ethereal-0.99.0.orig/capture_loop.c	2006-05-27 18:18:33.000000000 -0300
++++ ethereal-0.99.0/capture_loop.c	2006-05-27 18:19:08.000000000 -0300
+@@ -744,7 +744,8 @@
+ 
+   /* Set up to write to the capture file. */
+   if (capture_opts->multi_files_on) {
+-    ld->pdh = ringbuf_init_libpcap_fdopen(ld->linktype, file_snaplen, &err);
++    ld->pdh = ringbuf_init_libpcap_fdopen(ld->linktype, file_snaplen,
++                                          &ld->bytes_written, &err);
+   } else {
+     ld->pdh = libpcap_fdopen(save_file_fd, ld->linktype, file_snaplen,
+                              &ld->bytes_written, &err);
+@@ -1233,7 +1234,7 @@
+ 
+           /* Switch to the next ringbuffer file */
+           if (ringbuf_switch_file(&ld.pdh, &capture_opts->save_file,
+-              &save_file_fd, &ld.err)) {
++              &save_file_fd, &ld.bytes_written, &ld.err)) {
+             /* File switch succeeded: reset the conditions */
+             cnd_reset(cnd_autostop_size);
+             if (cnd_file_duration) {
+@@ -1303,7 +1304,8 @@
+           }
+ 
+           /* Switch to the next ringbuffer file */
+-          if (ringbuf_switch_file(&ld.pdh, &capture_opts->save_file, &save_file_fd, &ld.err)) {
++          if (ringbuf_switch_file(&ld.pdh, &capture_opts->save_file,
++                                  &save_file_fd, &ld.bytes_written, &ld.err)) {
+             /* file switch succeeded: reset the conditions */
+             cnd_reset(cnd_file_duration);
+             if(cnd_autostop_size)
+diff --exclude='*~' -Naur ethereal-0.99.0.orig/ringbuffer.c ethereal-0.99.0/ringbuffer.c
+--- ethereal-0.99.0.orig/ringbuffer.c	2006-05-27 18:18:33.000000000 -0300
++++ ethereal-0.99.0/ringbuffer.c	2006-05-27 18:19:15.000000000 -0300
+@@ -88,7 +88,6 @@
+ 
+   int           fd;		     /* Current ringbuffer file descriptor */
+   FILE         *pdh;
+-  long          bytes_written;	     /* Bytes written to the current file */
+ } ringbuf_data;
+ 
+ static ringbuf_data rb_data;
+@@ -231,14 +230,15 @@
+  * Calls libpcap_fdopen() for the current ringbuffer file
+  */
+ FILE *
+-ringbuf_init_libpcap_fdopen(int linktype, int snaplen, int *err)
++ringbuf_init_libpcap_fdopen(int linktype, int snaplen,
++                            long *bytes_written, int *err)
+ {
+ 
+   rb_data.linktype = linktype;
+   rb_data.snaplen  = snaplen;
+ 
+-  rb_data.pdh = libpcap_fdopen(rb_data.fd, linktype, snaplen,
+-                               &rb_data.bytes_written, err);
++  rb_data.pdh = libpcap_fdopen(rb_data.fd, linktype, snaplen, bytes_written,
++                               err);
+   return rb_data.pdh;
+ }
+ 
+@@ -246,7 +246,8 @@
+  * Switches to the next ringbuffer file
+  */
+ gboolean
+-ringbuf_switch_file(FILE **pdh, gchar **save_file, int *save_file_fd, int *err)
++ringbuf_switch_file(FILE **pdh, gchar **save_file, int *save_file_fd, 
++                    long *bytes_written, int *err)
+ {
+   int     next_file_num;
+   rb_file *next_rfile = NULL;
+@@ -274,7 +275,7 @@
+   }
+ 
+   if (ringbuf_init_libpcap_fdopen(rb_data.linktype, rb_data.snaplen,
+-                                  err) == NULL) {
++                                  bytes_written, err) == NULL) {
+     return FALSE;
+   }
+ 
+diff --exclude='*~' -Naur ethereal-0.99.0.orig/ringbuffer.h ethereal-0.99.0/ringbuffer.h
+--- ethereal-0.99.0.orig/ringbuffer.h	2006-05-27 18:18:33.000000000 -0300
++++ ethereal-0.99.0/ringbuffer.h	2006-05-27 18:19:16.000000000 -0300
+@@ -40,8 +40,10 @@
+ 
+ int ringbuf_init(const char *capture_name, guint num_files);
+ const gchar *ringbuf_current_filename(void);
+-FILE *ringbuf_init_libpcap_fdopen(int linktype, int snaplen, int *err);
+-gboolean ringbuf_switch_file(FILE **pdh, gchar **save_file, int *save_file_fd, int *err);
++FILE *ringbuf_init_libpcap_fdopen(int linktype, int snaplen,
++                                  long *bytes_written, int *err);
++gboolean ringbuf_switch_file(FILE **pdh, gchar **save_file, int *save_file_fd,
++                             long *bytes_written, int *err);
+ gboolean ringbuf_libpcap_dump_close(gchar **save_file, int *err);
+ void ringbuf_free(void);
+ void ringbuf_error_cleanup(void);
+diff --exclude='*~' -Naur ethereal-0.99.0.orig/tethereal.c ethereal-0.99.0/tethereal.c
+--- ethereal-0.99.0.orig/tethereal.c	2006-05-27 18:18:33.000000000 -0300
++++ ethereal-0.99.0/tethereal.c	2006-05-27 18:19:21.000000000 -0300
+@@ -1716,7 +1716,9 @@
+            its maximum size. */
+         if (capture_opts.multi_files_on) {
+           /* Switch to the next ringbuffer file */
+-          if (ringbuf_switch_file(&ld.pdh, &capture_opts.save_file, &save_file_fd, &loop_err)) {
++          if (ringbuf_switch_file(&ld.pdh, &capture_opts.save_file,
++                                  &save_file_fd, &ld.bytes_written,
++                                  &loop_err)) {
+             /* File switch succeeded: reset the condition */
+             cnd_reset(cnd_autostop_size);
+             if (cnd_file_duration) {
+@@ -1889,7 +1891,8 @@
+    */
+   if (cnd_file_duration != NULL && cnd_eval(cnd_file_duration)) {
+     /* time elapsed for this ring file, switch to the next */
+-    if (ringbuf_switch_file(&ld->pdh, &ld->save_file, &save_file_fd, &loop_err)) {
++    if (ringbuf_switch_file(&ld->pdh, &ld->save_file, &save_file_fd,
++                            &ld->bytes_written, &loop_err)) {
+       /* File switch succeeded: reset the condition */
+       cnd_reset(cnd_file_duration);
+     } else {
