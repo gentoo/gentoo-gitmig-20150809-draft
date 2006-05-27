@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.12 2006/05/26 13:49:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.13 2006/05/27 11:19:37 flameeyes Exp $
 
 # Someone who knows kerberos is needed to make sure that this works
 kerberos
@@ -14,6 +14,9 @@ apache
 
 # Unlikely that we'll ever get xmms working
 xmms
+
+# fftw requires sinl and cosl function, not present in FreeBSD
+fftw
 
 # PIE doesn't work on FreeBSD, so just mask the no* flag as the eclass drop it
 # entirely, but we have hardened.
