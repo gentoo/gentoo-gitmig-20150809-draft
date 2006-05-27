@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r5.ebuild,v 1.9 2005/10/02 05:49:04 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r5.ebuild,v 1.10 2006/05/27 18:20:18 taviso Exp $
 
 inherit flag-o-matic libtool eutils toolchain-funcs
 
