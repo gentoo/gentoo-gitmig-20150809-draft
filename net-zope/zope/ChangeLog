@@ -1,6 +1,13 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.101 2006/04/27 22:24:48 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.102 2006/05/27 12:57:45 radek Exp $
+
+*zope-3.2.1 (27 May 2006)
+*zope-2.9.3 (27 May 2006)
+
+  27 May 2006; Radoslaw Stachowiak <radek@gentoo.org> +zope-2.9.3.ebuild,
+  +zope-3.2.1.ebuild:
+  version bump
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-zope-2.6.4-r1,
   files/digest-zope-2.7.7, files/digest-zope-2.7.8, files/digest-zope-2.8.3,
