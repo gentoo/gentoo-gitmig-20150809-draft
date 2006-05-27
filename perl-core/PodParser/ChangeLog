@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/PodParser
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/ChangeLog,v 1.15 2006/05/26 14:39:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/ChangeLog,v 1.16 2006/05/27 19:40:59 mcummings Exp $
+
+  27 May 2006; <mcummings@gentoo.org> PodParser-1.32.ebuild:
+  Marking sparc stable
 
   26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> PodParser-1.32.ebuild:
   Stable on amd64 and x86 wrt bug #133989.
