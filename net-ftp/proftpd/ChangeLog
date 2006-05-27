@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/proftpd
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.105 2005/12/31 14:03:34 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.106 2006/05/27 14:24:49 humpback Exp $
+
+  27 May 2006; Gustavo Felisberto <humpback@gentoo.org>; metadata.xml,
+  -proftpd-1.2.9-r2.ebuild, -proftpd-1.2.10.ebuild,
+  -proftpd-1.2.10-r1.ebuild, -proftpd-1.2.10-r2.ebuild,
+  -proftpd-1.2.10-r3.ebuild, -proftpd-1.2.10-r5.ebuild,
+  -proftpd-1.2.10-r6.ebuild:
+  Removed older versions at request from sollar@g.o (Ned Ludd)
 
   31 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   proftpd-1.2.10-r5.ebuild:

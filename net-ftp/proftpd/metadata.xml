@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 
-<herd>no-herd</herd>
+<herd>net-ftp</herd>
 <maintainer>
   <email>humpback@gentoo.org</email>
 </maintainer>
