@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.21.11.ebuild,v 1.4 2006/04/15 22:57:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.21.11.ebuild,v 1.5 2006/05/27 08:11:27 calchan Exp $
 
 inherit gnuconfig eutils libtool autotools
 
@@ -24,22 +24,17 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	sed -i.orig \
-	-e '864s,&& defined HAVE_GUI,,g' \
-	-e '774s,#ifdef HAVE_GUI,,g' \
-	-e '793s,#endif,,g' \
-	${S}/cli/input.cc
-	#for i in ${S}/gpsim/Makefile.{in,am} ; do
-	#	sed -i.orig -e '/^gpsim_LDFLAGS/s,$, -lpthread,g' $i
-	#done
-	for i in ${S}/cli/Makefile.{in,am} ; do
-		sed -i.orig -e '/^libgpsimcli_la_LDFLAGS/s,$, -lpthread,g' $i
-	done
-	for i in ${S}/src/Makefile.{in,am} ; do
-		sed -i.orig -e '/^libgpsim_la_LDFLAGS/s,$, -lpthread,g' $i
-	done
+	cd ${S}
 
-	cd "${S}"
+	sed -i \
+		-e '864s,&& defined HAVE_GUI,,g' \
+		-e '774s,#ifdef HAVE_GUI,,g' \
+		-e '793s,#endif,,g' \
+		cli/input.cc
+	sed -i -e '/^gpsim_LDFLAGS/s,$, -lpthread -ldl,g' gpsim/Makefile.am
+	sed -i -e '/^libgpsimcli_la_LDFLAGS/s,$, -lpthread,g' cli/Makefile.am
+	sed -i -e '/^libgpsim_la_LDFLAGS/s,$, -lpthread,g' src/Makefile.am
+
 
 	epatch "${FILESDIR}/${P}-gcc41.patch"
 	epatch "${FILESDIR}/${P}-asneeded.patch"
