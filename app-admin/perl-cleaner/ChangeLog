@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/perl-cleaner
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.13 2006/05/27 21:40:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.14 2006/05/27 23:00:46 mcummings Exp $
+
+*perl-cleaner-1.03-r1 (27 May 2006)
+
+  27 May 2006; <mcummings@gentoo.org> +perl-cleaner-1.03-r1.ebuild:
+  Version bump is because of bug 134449
 
   27 May 2006; Bryan Østergaard <kloeri@gentoo.org>
   perl-cleaner-1.03.ebuild:
