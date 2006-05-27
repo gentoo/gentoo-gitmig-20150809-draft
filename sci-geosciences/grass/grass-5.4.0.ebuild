@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.4 2006/05/16 00:19:32 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.5 2006/05/27 21:33:38 nerdboy Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,10 +12,10 @@ SRC_URI="http://grass.itc.it/grass54/source/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 sparc"
+KEYWORDS="x86 amd64 sparc"
 IUSE="tcltk png jpeg tiff postgres odbc motif gdal mysql blas lapack X fftw truetype nls opengl"
 
-DEPEND=">=sys-devel/make-3.80
+RDEPEND=">=sys-devel/make-3.80
 	>=sys-libs/zlib-1.1.4
 	>=sys-devel/flex-2.5.4a
 	>=sys-devel/bison-1.35
@@ -34,12 +34,37 @@ DEPEND=">=sys-devel/make-3.80
 	mysql? ( dev-db/mysql )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
 	postgres? ( >=dev-db/postgresql-7.3 )
+	nls? ( x11-terms/mlterm )
 	tcltk? ( >=dev-lang/tcl-8.3.4
 		>=dev-lang/tk-8.3.4 )
 	truetype? ( >=media-libs/freetype-2.0.0 )
 	motif? ( x11-libs/openmotif )
-	X? ( || ( x11-libs/libX11 virtual/x11 ) )
-	nls? ( x11-terms/mlterm )"
+	X? || (
+	    ( x11-libs/libXmu
+	    x11-libs/libXext
+	    x11-libs/libXp
+	    x11-libs/libX11
+	    x11-libs/libXt
+	    x11-libs/libSM
+	    x11-libs/libICE
+	    x11-libs/libXpm
+	    x11-libs/libXaw )
+	virtual/x11 )"
+
+DEPEND="${RDEPEND}
+	X? ( || (
+	    ( x11-proto/xproto x11-proto/xextproto )
+	        virtual/x11
+	    )
+	)"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	einfo "Patching configure..."
+	sed -i -e "s:relid':relid:g" configure || die "sed blew chunks"
+}
 
 src_compile() {
 	MYCONF="--prefix=${D}usr --host=${CHOST} --infodir=${D}usr/share/info \

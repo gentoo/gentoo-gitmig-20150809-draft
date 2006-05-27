@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.2.ebuild,v 1.2 2006/03/19 18:34:07 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.2.ebuild,v 1.3 2006/05/27 21:33:38 nerdboy Exp $
 
 inherit eutils
 
@@ -58,12 +58,10 @@ RDEPEND=">=sys-devel/make-3.80
 	)"
 
 DEPEND="${RDEPEND}
-	X? ( || (
+	|| (
 	    ( x11-proto/xproto x11-proto/xextproto )
 	        virtual/x11
-	    )
 	)"
-
 
 src_unpack() {
 	unpack ${A}
