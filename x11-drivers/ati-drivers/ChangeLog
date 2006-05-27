@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.38 2006/05/26 07:36:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.39 2006/05/27 10:16:00 lu_zero Exp $
+
+  27 May 2006; Luca Barbato <lu_zero@gentoo.org> ChangeLog:
+  Manifest fix
 
   26 May 2006; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.25.18.ebuild:
   QA warnings suppression
