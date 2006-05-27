@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.283 2006/05/26 03:46:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.284 2006/05/27 06:05:02 eradicator Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -2100,42 +2100,45 @@ do_eselect_compiler() {
 		return 0
 	fi
 
-	local current_specs=$(env -i eselect compiler show ${CTARGET} | cut -f2 -d/)
+    for abi in $(get_all_abis) ; do
+        local ctarget=$(get_abi_CHOST ${abi})
+        local current_specs=$(env -i eselect compiler show ${ctarget} | cut -f2 -d/)
 
-	if [[ -n ${current_specs} && ${current_specs} != "(none)" ]] && eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${current_specs} &> /dev/null; then
-		einfo "The following compiler profile has been activated based on your previous profile:"
-		einfo "${CTARGET}-${GCC_CONFIG_VER}/${current_specs}"
-	else
-		# We couldn't choose based on the old specs, so fall back on vanilla/hardened based on USE
+        if [[ -n ${current_specs} && ${current_specs} != "(none)" ]] && eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${current_specs} &> /dev/null; then
+            einfo "The following compiler profile has been activated based on your previous profile:"
+            einfo "${CTARGET}-${GCC_CONFIG_VER}/${current_specs}"
+        else
+            # We couldn't choose based on the old specs, so fall back on vanilla/hardened based on USE
 
-		local spec
-		if use hardened ; then
-			spec="hardened"
-		else
-			spec="vanilla"
-		fi
+            local spec
+            if use hardened ; then
+                spec="hardened"
+            else
+                spec="vanilla"
+            fi
 
-		local profile
-		local isset=0
-		for profile in "${current_specs%-*}-${spec}" "${DEFAULT_ABI}-${spec}" "${spec}" ; do
-			if eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${profile} &> /dev/null ; then
-				ewarn "We were not able to select the currently in use profile with"
-				ewarn "your newly emerged gcc.  Instead, we have enabled the following:"
-				ewarn "${CTARGET}-${GCC_CONFIG_VER}/${profile}"
-				ewarn "If this is incorrect, please use 'eselect compiler set' to"
-				ewarn "select another profile."
+            local profile
+            local isset=0
+            for profile in "${current_specs%-*}-${spec}" "${abi}-${spec}" "${spec}" ; do
+                if eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${profile} &> /dev/null ; then
+                    ewarn "The newly installed version of gcc does not have a profile that matches the name of your"
+                    ewarn "currently selected profile for ${ctarget}, so we have enabled the following instead:"
+                    ewarn "${CTARGET}-${GCC_CONFIG_VER}/${profile}"
+                    ewarn "If this is incorrect, please use 'eselect compiler set' to"
+                    ewarn "select another profile."
 
-				isset=1
-				break
-			fi
-		done
+                    isset=1
+                    break
+                fi
+            done
 
-		if [[ ${isset} == 0 ]] ; then
-			eerror "We were not able to automatically set the current compiler"
-			eerror "to your newly emerged gcc.  Please use 'eselect compiler set'"
-			eerror "to select your compiler."
-		fi
-	fi
+            if [[ ${isset} == 0 ]] ; then
+                eerror "We were not able to automatically set the current compiler for ${ctarget}"
+                eerror "to your newly emerged gcc.  Please use 'eselect compiler set'"
+                eerror "to select your compiler."
+            fi
+        fi
+	done
 }
 
 # This function allows us to gentoo-ize gcc's version number and bugzilla
