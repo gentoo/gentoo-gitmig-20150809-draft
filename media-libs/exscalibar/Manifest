@@ -1,6 +1,46 @@
-MD5 0281abcf3fd523a5b5020ad3423b6632 ChangeLog 1238
-MD5 33f4915137bd4d04c6cc5faf7e00fc5d exscalibar-1.0.4.ebuild 1702
-MD5 87632b2e0e2cba931319f1e98874c54a files/digest-exscalibar-1.0.4 69
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX exscalibar-1.0.4-fbsd.patch 506 RMD160 977fefc92121bc7f7f6e7863e1fd60cd62e62a01 SHA1 8297174dd13df58f2634f2500dc32fba549cc1aa SHA256 9957798dd457dcf58e2c0bdf80b544be9f626bdfec75d2619a047a6fb50fc4c2
+MD5 93f7d0923a6494f285781f1ad2f3bdd1 files/exscalibar-1.0.4-fbsd.patch 506
+RMD160 977fefc92121bc7f7f6e7863e1fd60cd62e62a01 files/exscalibar-1.0.4-fbsd.patch 506
+SHA256 9957798dd457dcf58e2c0bdf80b544be9f626bdfec75d2619a047a6fb50fc4c2 files/exscalibar-1.0.4-fbsd.patch 506
+AUX exscalibar-1.0.4-gcc4-amd64.diff 2410 RMD160 ccedcd06f4f214d473bf79f1296794e19210d1b2 SHA1 e771ba4f755a9e1cbc837803569588ffd095eb63 SHA256 4ef9ba45473890e23d596ea0207c28f9a8a91da74576ff7609bd91fce5b876c9
 MD5 9c62e7295131f1e5b2a4caf4f1b4d10f files/exscalibar-1.0.4-gcc4-amd64.diff 2410
+RMD160 ccedcd06f4f214d473bf79f1296794e19210d1b2 files/exscalibar-1.0.4-gcc4-amd64.diff 2410
+SHA256 4ef9ba45473890e23d596ea0207c28f9a8a91da74576ff7609bd91fce5b876c9 files/exscalibar-1.0.4-gcc4-amd64.diff 2410
+AUX exscalibar-1.0.4-noextraflags.patch 520 RMD160 95e919dd20b1a154f57a096358889ba04a0c7f75 SHA1 f1acb365bd1dad0e3815b342f2379cd3d03ce71f SHA256 545c59ac5bb836c05e877690b50032a6ffa24fa3721d66084465afd51f5da809
+MD5 b11bef847d12c2e5c02880353c048973 files/exscalibar-1.0.4-noextraflags.patch 520
+RMD160 95e919dd20b1a154f57a096358889ba04a0c7f75 files/exscalibar-1.0.4-noextraflags.patch 520
+SHA256 545c59ac5bb836c05e877690b50032a6ffa24fa3721d66084465afd51f5da809 files/exscalibar-1.0.4-noextraflags.patch 520
+AUX exscalibar-1.0.4-parallelmake.patch 765 RMD160 aa9f5803f6811718a41e187021e090e84fcba5d5 SHA1 e48b0066761ce552428baf24ddf1886fcd66deb4 SHA256 00f61fef4509e8122f6d68fb6e45cc148b378cab57cbb695ae76932eb0a72f2d
+MD5 339eb117eddb57fe74601cd7ceece79b files/exscalibar-1.0.4-parallelmake.patch 765
+RMD160 aa9f5803f6811718a41e187021e090e84fcba5d5 files/exscalibar-1.0.4-parallelmake.patch 765
+SHA256 00f61fef4509e8122f6d68fb6e45cc148b378cab57cbb695ae76932eb0a72f2d files/exscalibar-1.0.4-parallelmake.patch 765
+AUX exscalibar-configure-disable-features.diff 2003 RMD160 385279c665a3081c8c7cd4d1fd727bdec915609e SHA1 eb9b8295505668ce587e06b0d01637a613c034f4 SHA256 c970304c250a2cfa92496b5c1ea604e6f8252d98d5b69baad734c83d5460a1b6
 MD5 25502ff1fad3f11b96935ae9abaaf0d8 files/exscalibar-configure-disable-features.diff 2003
+RMD160 385279c665a3081c8c7cd4d1fd727bdec915609e files/exscalibar-configure-disable-features.diff 2003
+SHA256 c970304c250a2cfa92496b5c1ea604e6f8252d98d5b69baad734c83d5460a1b6 files/exscalibar-configure-disable-features.diff 2003
+DIST exscalibar-1.0.4.tar.bz2 230962 RMD160 cebb089881c674e7ad472ad40d822e8fc30b8e7c SHA1 40828f9638797a19f7bed2aab273874389b4ae55 SHA256 7553305c140311d499f98bdae08787d0ff5e0e4ccdc2596fc604a727d087f78a
+EBUILD exscalibar-1.0.4.ebuild 1834 RMD160 0a78f64c633219770c95baf7dad259dd905457ca SHA1 ec69d8553be49a1d7d976c4d2f74ab08e8ef3554 SHA256 334e9f7ec50be75a97657396e81fc6a1fb7c8b1b4d4f215ae1b1b5218fc3dfe3
+MD5 9f867e7e6bd8c27611047ad700174028 exscalibar-1.0.4.ebuild 1834
+RMD160 0a78f64c633219770c95baf7dad259dd905457ca exscalibar-1.0.4.ebuild 1834
+SHA256 334e9f7ec50be75a97657396e81fc6a1fb7c8b1b4d4f215ae1b1b5218fc3dfe3 exscalibar-1.0.4.ebuild 1834
+MISC ChangeLog 1586 RMD160 667bcc8d25e59fae82d636ae0f0457e5dfc30e89 SHA1 114e8ec3eee533fb82bc71f3c0db70db9fd0afdd SHA256 88dca046419e8b975b18af56c9dee38ec603f644ac3f81220c24d3336fe3321d
+MD5 47fec7292b4eb2459a7c8cdae0a1f6c3 ChangeLog 1586
+RMD160 667bcc8d25e59fae82d636ae0f0457e5dfc30e89 ChangeLog 1586
+SHA256 88dca046419e8b975b18af56c9dee38ec603f644ac3f81220c24d3336fe3321d ChangeLog 1586
+MISC metadata.xml 215 RMD160 3c90f64bec54294d08fbffbc172ebc321c5245f1 SHA1 faf99b79c2a047877c7a548a12d9dba3a45b51de SHA256 258b7218817d5b106d0de87dff165d12f747ce78b9333ca5ab0b07129823849c
 MD5 2b0e9087ef8939ab0578160c97b115e0 metadata.xml 215
+RMD160 3c90f64bec54294d08fbffbc172ebc321c5245f1 metadata.xml 215
+SHA256 258b7218817d5b106d0de87dff165d12f747ce78b9333ca5ab0b07129823849c metadata.xml 215
+MD5 101fa04dd319f3cf78f79dbe528ee52c files/digest-exscalibar-1.0.4 253
+RMD160 4d5ff8c620369fffe46b5a6456449d291d2ba06c files/digest-exscalibar-1.0.4 253
+SHA256 43c3bdf8cc0737373dd2fd2d7581f0601bd52209c621f248385a742080604259 files/digest-exscalibar-1.0.4 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEeEVDAiZjviIA2XgRAtEtAJ9Gm9q9uv/PjogDBXA6XRa4N8EmhwCdGPTg
+AZmdMU28xiHnjlUk/T/oKKU=
+=vjWM
+-----END PGP SIGNATURE-----

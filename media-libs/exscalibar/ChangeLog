@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/exscalibar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/ChangeLog,v 1.7 2006/04/17 20:21:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/ChangeLog,v 1.8 2006/05/27 12:25:25 flameeyes Exp $
+
+  27 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/exscalibar-1.0.4-fbsd.patch,
+  +files/exscalibar-1.0.4-noextraflags.patch,
+  +files/exscalibar-1.0.4-parallelmake.patch, exscalibar-1.0.4.ebuild:
+  Add one patch to build on FreeBSD, one to allow parallel make (thus drop
+  forcing -j1), and one to avoid adding extra compiler flags.
 
   17 Apr 2006; Markus Rothe <corsair@gentoo.org> exscalibar-1.0.4.ebuild:
   Added ~ppc64; bug #129409

@@ -1,0 +1,28 @@
+Index: exscalibar-1.0.4/src/src.pro
+===================================================================
+--- exscalibar-1.0.4.orig/src/src.pro
++++ exscalibar-1.0.4/src/src.pro
+@@ -6,9 +6,10 @@
+ SUBDIRS += qtextra \
+            geddei \
+            processors \
+-           tests \
+            remote \
++           tests \
+            exinfo \
+            nite \
+            examples 
+ TEMPLATE = subdirs
++CONFIG += ordered
+Index: exscalibar-1.0.4/src/remote/remote.pro
+===================================================================
+--- exscalibar-1.0.4.orig/src/remote/remote.pro
++++ exscalibar-1.0.4/src/remote/remote.pro
+@@ -10,5 +10,7 @@ SUBDIRS += rgeddei \
+            nodeserver \
+            tests
+ 
++CONFIG += ordered
++
+ gat:SUBDIRS += nodecontroller
+ 

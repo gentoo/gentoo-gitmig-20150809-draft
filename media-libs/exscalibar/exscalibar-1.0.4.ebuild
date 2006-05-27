@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/exscalibar-1.0.4.ebuild,v 1.8 2006/04/17 20:21:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/exscalibar-1.0.4.ebuild,v 1.9 2006/05/27 12:25:25 flameeyes Exp $
 
 inherit eutils qt3
 
@@ -24,8 +24,11 @@ DEPEND="$(qt_min_version 3.2)
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/exscalibar-configure-disable-features.diff
-	epatch ${FILESDIR}/exscalibar-1.0.4-gcc4-amd64.diff
+	epatch "${FILESDIR}/exscalibar-configure-disable-features.diff"
+	epatch "${FILESDIR}/exscalibar-1.0.4-gcc4-amd64.diff"
+	epatch "${FILESDIR}/${P}-fbsd.patch"
+	epatch "${FILESDIR}/${P}-parallelmake.patch"
+	epatch "${FILESDIR}/${P}-noextraflags.patch"
 }
 
 src_compile () {
@@ -41,7 +44,7 @@ src_compile () {
 	./configure || die "configure failed"
 	echo "QMAKE_CFLAGS_RELEASE = ${CFLAGS}" >> global.pro
 	echo "QMAKE_CXXFLAGS_RELEASE = ${CXXFLAGS}" >> global.pro
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
