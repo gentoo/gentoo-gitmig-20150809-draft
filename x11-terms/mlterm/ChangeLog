@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/mlterm
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.47 2005/12/25 15:42:15 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.48 2006/05/27 21:23:43 nerdboy Exp $
+
+  27 May 2006; Steve Arnold <nerdboy@gentoo.org> mlterm-2.9.2.ebuild:
+  stable on amd64 (required for grass)
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> mlterm-2.9.2.ebuild:
   Use bindnow-flags function instead of -Wl,-z,now.
