@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.39.ebuild,v 1.1 2006/04/16 10:26:38 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.39.ebuild,v 1.2 2006/05/27 21:53:55 radek Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -34,7 +34,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake all2 || die "compilation error"
+	emake all3 || die "compilation error"
 }
 
 src_install() {
