@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.22 2006/02/28 02:58:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.23 2006/05/27 14:15:26 radek Exp $
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
 
 # This eclass is designed to streamline the construction of
@@ -76,12 +76,12 @@ docs_move() {
 	else
 		docinto /
 	fi
-	dodoc $1HISTORY.txt $1README{.txt,} $1INSTALL{.txt,} > /dev/null
-	dodoc $1AUTHORS $1COPYING $1CREDITS.txt $1TODO{.txt,} > /dev/null
-	dodoc $1LICENSE{.GPL,.txt,} $1CHANGES{.txt,} > /dev/null
-	dodoc $1DEPENDENCIES.txt $1FAQ.txt $1UPGRADE.txt > /dev/null
+	dodoc $1HISTORY.txt $1README{.txt,} $1INSTALL{.txt,} > /dev/null 2>/dev/null
+	dodoc $1AUTHORS $1COPYING $1CREDITS.txt $1TODO{.txt,} > /dev/null 2>/dev/null
+	dodoc $1LICENSE{.GPL,.txt,} $1CHANGES{.txt,} > /dev/null 2>/dev/null
+	dodoc $1DEPENDENCIES.txt $1FAQ.txt $1UPGRADE.txt > /dev/null 2>/dev/null
 	for item in ${MYDOC} ; do
-		dodoc ${1}${item} > /dev/null
+		dodoc ${1}${item} > /dev/null 2>/dev/null
 	done
 }
 
