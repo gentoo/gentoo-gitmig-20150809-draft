@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/kid
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/ChangeLog,v 1.6 2006/04/01 15:04:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/ChangeLog,v 1.7 2006/05/27 13:52:17 lucass Exp $
+
+*kid-0.9.1 (27 May 2006)
+
+  27 May 2006; Lukasz Strzygowski <lucass@gentoo.org> +kid-0.9.1.ebuild:
+  Version bump. Closing bug #134509, thanks to Nicolas Lalevee.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> kid-0.9.ebuild:
   Mark 0.9 ~ia64
