@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.0.2.ebuild,v 1.1 2006/05/10 02:16:59 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.0.2.ebuild,v 1.2 2006/05/27 13:43:44 allanonjl Exp $
 
-inherit eutils gnome2
+inherit eutils gnome2 autotools
 
 DESCRIPTION="A text entry interface, driven by continuous pointing gestures"
 HOMEPAGE="http://www.inference.phy.cam.ac.uk/dasher/"
@@ -59,12 +59,13 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
-	cd "${S}"
+	gnome2_src_unpack
 
 	# Fix compilation with USE=-gnome (bug #132510)
 	epatch "${FILESDIR}"/${P}-without_gnome.patch
 
-	gnome2_omf_fix
-	sed -i -e 's:gtk-update-icon-cache:true:' ./Data/Makefile.am ./Data/Makefile.in
+	# fix configure flags
+	epatch "${FILESDIR}"/${P}-fix_enable_flags.patch
+
+	eautoreconf
 }
