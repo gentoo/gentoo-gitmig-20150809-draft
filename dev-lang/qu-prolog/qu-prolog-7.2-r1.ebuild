@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.2-r1.ebuild,v 1.1 2006/05/26 23:49:30 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.2-r1.ebuild,v 1.2 2006/05/27 08:05:28 keri Exp $
 
-inherit eutils flag-o-matic
+inherit autotools eutils versionator
 
 MY_P=qp${PV}
 
@@ -15,23 +15,34 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE="debug doc qt threads"
 
-DEPEND="qt? ( =x11-libs/qt-3* )"
+DEPEND="qt? ( x11-libs/qt )"
 
 S="${WORKDIR}"/${MY_P}
+
+get_qt_ver() {
+	qt_ver="$(best_version x11-libs/qt)"
+	qt_ver=${qt_ver//*qt-}
+	qt_ver=${qt_ver//-*}
+	qt_ver=$(get_major_version ${qt_ver})
+}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-portage.patch
+	epatch "${FILESDIR}"/${P}-configure.patch
 	epatch "${FILESDIR}"/${P}-gcc4.patch
 	epatch "${FILESDIR}"/${P}-debug.patch
 
-	sed -i	-e "s:DEBUGGING=$:DEBUGGING=\"-DDEBUG_BLOCK -DDEBUG_IO -DDEBUG_MT -DDEBUG_RETRY -DDEBUG_SCHED -DDEBUG_TIMEOUT\":" \
-		-e "s:head -1:head -n 1:" configure
+	get_qt_ver
+	[[ ${qt_ver} -eq 4 ]] && epatch "${FILESDIR}"/${P}-qt4.patch
 }
 
 src_compile() {
+	eautoconf
 	econf \
+		--disable-elvin \
+		--disable-icm \
 		$(use_enable debug) \
 		$(use_enable threads multiple-threads) \
 		|| die "econf failed"
@@ -39,7 +50,11 @@ src_compile() {
 
 	if use qt ; then
 		cd "${S}"/src/xqp
-		"${QTDIR}"/bin/qmake || die "qmake xqp failed"
+		if [ ${qt_ver} -eq 4 ] ; then \
+			qmake || die "qmake xqp failed"
+		else
+			"${QTDIR}"/bin/qmake || die "qmake xqp failed"
+		fi
 		emake || die "emake xqp failed"
 	fi
 }

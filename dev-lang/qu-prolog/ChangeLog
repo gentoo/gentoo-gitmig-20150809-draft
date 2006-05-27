@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.7 2006/05/26 23:49:30 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.8 2006/05/27 08:05:28 keri Exp $
+
+  27 May 2006; Keri Harris <keri@gentoo.org>
+  +files/qu-prolog-7.2-configure.patch, +files/qu-prolog-7.2-qt4.patch,
+  qu-prolog-7.2-r1.ebuild:
+  Add support for qt4.
 
 *qu-prolog-7.2-r1 (26 May 2006)
 
