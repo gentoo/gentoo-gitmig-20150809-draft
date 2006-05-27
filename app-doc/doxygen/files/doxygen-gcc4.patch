@@ -1,19 +1,11 @@
-*** qtools/qvaluestack.h.old	Wed Nov 23 22:27:00 2005
---- qtools/qvaluestack.h	Wed Nov 23 22:27:06 2005
-***************
-*** 54,60 ****
-      {
-  	T elem( this->last() );
-  	if ( !this->isEmpty() )
-! 	    remove( this->fromLast() );
-  	return elem;
-      }
-      T& top() { return this->last(); }
---- 54,60 ----
-      {
-  	T elem( this->last() );
-  	if ( !this->isEmpty() )
-! 	    this->remove( this->fromLast() );
-  	return elem;
-      }
-      T& top() { return this->last(); }
+--- qtools/qvaluestack.h.orig
++++ qtools/qvaluestack.h
+@@ -54,7 +54,7 @@
+     {
+ 	T elem( this->last() );
+ 	if ( !this->isEmpty() )
+-	    remove( this->fromLast() );
++	    this->remove( this->fromLast() );
+ 	return elem;
+     }
+     T& top() { return this->last(); }
