@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.107 2006/04/22 22:14:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.108 2006/05/28 14:14:58 carlo Exp $
+
+  28 May 2006; Carsten Lohrke <carlo@gentoo.org> ggv-2.8.3.ebuild,
+  ggv-2.8.5.ebuild, ggv-2.12.0.ebuild:
+  Removed PROVIDE as of bug #130746.
 
   22 Apr 2006; Carsten Lohrke <carlo@gentoo.org> ChangeLog:
   Removed PROVIDE as of bug #130746.

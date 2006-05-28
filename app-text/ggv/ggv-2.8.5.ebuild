@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.8.5.ebuild,v 1.10 2005/10/10 20:57:17 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.8.5.ebuild,v 1.11 2006/05/28 14:14:58 carlo Exp $
 
 inherit gnome2
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.30"
 
-PROVIDE="virtual/psviewer"
+
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
 G2CONF="${G2CONF} --enable-pdf-options $(use_enable debug bonobo-debug)"

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.8.3.ebuild,v 1.11 2005/07/12 00:07:10 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.8.3.ebuild,v 1.12 2006/05/28 14:14:58 carlo Exp $
 
 inherit gnome2
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.30"
 
-PROVIDE="virtual/psviewer"
+
 
 DOCS="AUTHORS ChangeLog MAINTAINERS TODO README"
 
