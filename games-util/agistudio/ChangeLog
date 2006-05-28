@@ -1,6 +1,10 @@
 # ChangeLog for games-util/agistudio
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/ChangeLog,v 1.4 2005/06/05 11:31:26 hansmi Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/ChangeLog,v 1.5 2006/05/28 15:24:32 tupone Exp $
+
+  28 May 2006; <Tupone@gentoo.org> +files/agistudio-1.2.1-gcc41.patch,
+  agistudio-1.2.1.ebuild:
+  Fix for gcc-4.1
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   agistudio-1.2.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/agistudio-1.2.1.ebuild,v 1.4 2005/06/05 11:31:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/agistudio-1.2.1.ebuild,v 1.5 2006/05/28 15:24:32 tupone Exp $
 
 inherit kde
 need-qt 3.1
@@ -19,6 +19,7 @@ S="${WORKDIR}/${P}/src"
 src_unpack() {
 	unpack "${A}"
 	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 	sed -i \
 		-e "s#^QTDIR.*#QTDIR = ${QTDIR}#" \
 		-e "s#^INCPATH.*#INCPATH = -I\$(QTDIR)/include#" \
