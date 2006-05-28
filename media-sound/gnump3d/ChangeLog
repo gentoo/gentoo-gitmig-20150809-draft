@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnump3d
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.47 2005/11/18 09:10:37 ferdy Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.48 2006/05/28 18:01:33 flameeyes Exp $
+
+  28 May 2006; Diego Pettenò <flameeyes@gentoo.org> -gnump3d-2.9.7.ebuild:
+  Remove vulnerable version.
 
   18 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org>
   gnump3d-2.9.7-r1.ebuild:
