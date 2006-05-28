@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.2.4-r1.ebuild,v 1.2 2006/01/15 04:24:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.2.4-r1.ebuild,v 1.3 2006/05/28 21:41:56 tupone Exp $
 
 inherit eutils
 
@@ -25,7 +25,8 @@ src_unpack() {
 	epatch \
 		"${FILESDIR}"/${P}-destdir.patch \
 		"${FILESDIR}"/${P}-noasm.patch \
-		"${FILESDIR}"/${P}-agl_write_line_c.patch
+		"${FILESDIR}"/${P}-agl_write_line_c.patch \
+		"${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_compile() {
