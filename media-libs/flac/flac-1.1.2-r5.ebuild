@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r5.ebuild,v 1.1 2006/05/28 02:00:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r5.ebuild,v 1.2 2006/05/28 02:16:10 flameeyes Exp $
 
 inherit libtool eutils flag-o-matic autotools
 
-PATCHLEVEL="4"
+PATCHLEVEL="5"
 DESCRIPTION="free lossless audio encoder which includes an XMMS plugin"
 HOMEPAGE="http://flac.sourceforge.net/"
 SRC_URI="mirror://sourceforge/flac/${P}.tar.gz
