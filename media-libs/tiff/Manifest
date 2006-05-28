@@ -1,4 +1,4 @@
-MD5 43589d844b1baa42d4efd553cacf3130 ChangeLog 10716
+MD5 c05664f89dc5863deb1abec23f57a718 ChangeLog 10824
 MD5 682485e08733a151395f3ed8954acb2a files/digest-tiff-3.7.1-r1 235
 MD5 998cc343f819f9e893d7bed35a84b667 files/digest-tiff-3.7.2 235
 MD5 02a115675b4308f9503f4d4cd327deeb files/digest-tiff-3.7.3 235
@@ -13,4 +13,4 @@ MD5 166fd9aaada6d4eaa3404493f7dd6063 tiff-3.7.1-r1.ebuild 1040
 MD5 feac1826cb9ce6b1287dceb83680d6d6 tiff-3.7.2.ebuild 981
 MD5 099c1157188a0fd8278fd51e3dd03e68 tiff-3.7.3.ebuild 846
 MD5 c3b3e0b1520885b87b2525a74c2c4e10 tiff-3.7.4.ebuild 1036
-MD5 94125327422b42bba70e7ac62d6aa2a3 tiff-3.8.2.ebuild 1019
+MD5 54c841c83845ae5d5f0a1e9b1987b5c6 tiff-3.8.2.ebuild 1016
