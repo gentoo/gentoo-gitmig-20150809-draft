@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.7.ebuild,v 1.4 2006/04/28 21:25:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.7.ebuild,v 1.5 2006/05/28 00:36:08 tupone Exp $
 
 inherit eutils games
 
 DESCRIPTION="Free Warlords clone"
-HOMEPAGE="http://www.freelords.org/"
+HOMEPAGE="http://freelords.sourceforge.net/"
 SRC_URI="mirror://sourceforge/freelords/${P}.tar.bz2"
 
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -35,6 +35,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 	sed -i \
 		-e "s:\"freelordsrc\":\"${GAMES_SYSCONFDIR}/freelordsrc\":" \
 		src/main.cpp \

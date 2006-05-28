@@ -1,0 +1,44 @@
+--- src/ai_smart.h.old	2006-05-28 01:45:00.000000000 +0200
++++ src/ai_smart.h	2006-05-28 01:45:14.000000000 +0200
+@@ -106,7 +106,7 @@
+         Threat *getBiggestDangerTo(City *city, Threatlist *threats);
+         
+         // examine cities to see if we need to change production
+-        void AI_Smart::examineCities();
++        void examineCities();
+ };
+ 
+ #endif // AI_SMART_H
+--- src/path.h.old	2006-05-28 01:41:44.000000000 +0200
++++ src/path.h	2006-05-28 01:42:02.000000000 +0200
+@@ -60,7 +60,7 @@
+         /* This function is used to verify if the stack can move on the Tile
+          * of the given destination point
+          */
+-        bool Path::canMoveThere(Stack* s, PG_Point* dest);
++        bool canMoveThere(Stack* s, PG_Point* dest);
+ 
+         /** Validates an existing path.
+           * 
+--- src/scroller.h.old	2006-05-28 01:51:44.000000000 +0200
++++ src/scroller.h	2006-05-28 01:51:56.000000000 +0200
+@@ -39,7 +39,7 @@
+         void eventMouseLeave();
+ 
+         //! Begin the scroll
+-        Uint32 Scroller::eventTimer (ID id, Uint32 interval);
++        Uint32 eventTimer (ID id, Uint32 interval);
+ 
+         Uint32 d_timer;
+         SmallMap * d_smap;
+--- src/tooltip.h.old	2006-05-28 01:52:04.000000000 +0200
++++ src/tooltip.h	2006-05-28 01:52:15.000000000 +0200
+@@ -55,7 +55,7 @@
+         bool eventMouseMotion(const SDL_MouseMotionEvent* event);
+         bool eventMouseButtonDown(const SDL_MouseButtonEvent* event);
+         //! Shows the tooltip after TOOLTIP_WAIT milliseconds
+-        Uint32 ToolTip::eventTimer (ID id, Uint32 interval);
++        Uint32 eventTimer (ID id, Uint32 interval);
+ 
+         Uint32 d_timer;
+         int d_movecounter;
