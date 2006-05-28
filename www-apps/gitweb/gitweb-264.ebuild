@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/gitweb-264.ebuild,v 1.1 2006/02/19 00:59:55 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/gitweb-264.ebuild,v 1.2 2006/05/28 22:47:53 flameeyes Exp $
 
 inherit webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://git.or.cz/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="~alpha ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
