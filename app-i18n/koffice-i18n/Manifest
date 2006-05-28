@@ -1,8 +1,109 @@
-MD5 0530853bd8c3ca2d6238004f8c85902b ChangeLog 8271
-MD5 03214bf88607cb7d938520f3e8246e16 files/digest-koffice-i18n-1.4.2 2166
-MD5 ad85819d9bef19aa9a98ed9cd58c72ac files/digest-koffice-i18n-1.5.0 3870
-MD5 f653dc30ea3a30c5fd3fcc5bd4779efd files/digest-koffice-i18n-1.5.1 3576
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST koffice-l10n-af-1.5.1.tar.bz2 296643
+DIST koffice-l10n-ar-1.5.1.tar.bz2 316953
+DIST koffice-l10n-bg-1.4.2.tar.bz2 376676
+DIST koffice-l10n-bg-1.5.1.tar.bz2 355616
+DIST koffice-l10n-br-1.5.1.tar.bz2 341344
+DIST koffice-l10n-bs-1.5.1.tar.bz2 318009
+DIST koffice-l10n-ca-1.4.2.tar.bz2 438905
+DIST koffice-l10n-ca-1.5.1.tar.bz2 414688
+DIST koffice-l10n-cs-1.4.2.tar.bz2 396202
+DIST koffice-l10n-cs-1.5.1.tar.bz2 347217
+DIST koffice-l10n-cy-1.4.2.tar.bz2 411106
+DIST koffice-l10n-cy-1.5.1.tar.bz2 368554
+DIST koffice-l10n-da-1.4.2.tar.bz2 832248
+DIST koffice-l10n-da-1.5.1.tar.bz2 1009829
+DIST koffice-l10n-de-1.4.2.tar.bz2 2822690
+DIST koffice-l10n-de-1.5.1.tar.bz2 2813991
+DIST koffice-l10n-el-1.4.2.tar.bz2 368866
+DIST koffice-l10n-el-1.5.1.tar.bz2 365646
+DIST koffice-l10n-en_GB-1.4.2.tar.bz2 364462
+DIST koffice-l10n-en_GB-1.5.1.tar.bz2 340890
+DIST koffice-l10n-eo-1.5.1.tar.bz2 357414
+DIST koffice-l10n-es-1.4.2.tar.bz2 852702
+DIST koffice-l10n-es-1.5.1.tar.bz2 8804520
+DIST koffice-l10n-et-1.4.2.tar.bz2 953648
+DIST koffice-l10n-et-1.5.1.tar.bz2 1131254
+DIST koffice-l10n-eu-1.4.2.tar.bz2 399804
+DIST koffice-l10n-eu-1.5.1.tar.bz2 350236
+DIST koffice-l10n-fi-1.4.2.tar.bz2 397433
+DIST koffice-l10n-fi-1.5.1.tar.bz2 346277
+DIST koffice-l10n-fr-1.4.2.tar.bz2 6765244
+DIST koffice-l10n-fr-1.5.1.tar.bz2 6588898
+DIST koffice-l10n-ga-1.5.1.tar.bz2 317666
+DIST koffice-l10n-he-1.5.1.tar.bz2 336036
+DIST koffice-l10n-hi-1.5.1.tar.bz2 324579
+DIST koffice-l10n-hu-1.4.2.tar.bz2 411408
+DIST koffice-l10n-hu-1.5.1.tar.bz2 371932
+DIST koffice-l10n-is-1.5.1.tar.bz2 351465
+DIST koffice-l10n-it-1.4.2.tar.bz2 1117301 RMD160 be03967468cffaa94b0d2ca864d35ab126373052 SHA1 15a13460e354a2f6ae32c226fbc8b5fce1227fba SHA256 8bfe66dba81bb57a5315ccd5b4b66bfbf5f599f7d6de1afa914a04cfe8902f1d
+DIST koffice-l10n-it-1.5.1.tar.bz2 1349698 RMD160 50f4ff6ee2a0f98bac9fcafca42db2d844af5f4c SHA1 c3445b5084cc317e4607f5e165f666918bd7ad33 SHA256 c6b5f9696fd3d03eefd1eb92669dee2f6f4c0942d5604310d0d07868baf7fc2d
+DIST koffice-l10n-ja-1.5.1.tar.bz2 346160
+DIST koffice-l10n-lt-1.5.1.tar.bz2 265022
+DIST koffice-l10n-mk-1.5.1.tar.bz2 239231
+DIST koffice-l10n-ms-1.5.1.tar.bz2 345179
+DIST koffice-l10n-nb-1.4.2.tar.bz2 413430
+DIST koffice-l10n-nb-1.5.1.tar.bz2 359337
+DIST koffice-l10n-nl-1.4.2.tar.bz2 3025440
+DIST koffice-l10n-nl-1.5.1.tar.bz2 3271404
+DIST koffice-l10n-nn-1.4.2.tar.bz2 409225
+DIST koffice-l10n-nn-1.5.1.tar.bz2 362572
+DIST koffice-l10n-pl-1.4.2.tar.bz2 410976
+DIST koffice-l10n-pl-1.5.1.tar.bz2 380625
+DIST koffice-l10n-pt-1.4.2.tar.bz2 869741
+DIST koffice-l10n-pt-1.5.1.tar.bz2 1038506
+DIST koffice-l10n-pt_BR-1.4.2.tar.bz2 2017117
+DIST koffice-l10n-pt_BR-1.5.1.tar.bz2 1988904
+DIST koffice-l10n-ro-1.5.1.tar.bz2 306773
+DIST koffice-l10n-ru-1.4.2.tar.bz2 796367
+DIST koffice-l10n-ru-1.5.1.tar.bz2 827060
+DIST koffice-l10n-se-1.5.1.tar.bz2 275034
+DIST koffice-l10n-sk-1.5.1.tar.bz2 944380
+DIST koffice-l10n-sl-1.4.2.tar.bz2 399962
+DIST koffice-l10n-sl-1.5.1.tar.bz2 360715
+DIST koffice-l10n-sr-1.4.2.tar.bz2 379682
+DIST koffice-l10n-sr-1.5.1.tar.bz2 366780
+DIST koffice-l10n-sr@Latn-1.4.2.tar.bz2 406186
+DIST koffice-l10n-sr@Latn-1.5.1.tar.bz2 375600
+DIST koffice-l10n-sv-1.4.2.tar.bz2 4783393
+DIST koffice-l10n-sv-1.5.1.tar.bz2 5970774
+DIST koffice-l10n-ta-1.4.2.tar.bz2 364788
+DIST koffice-l10n-ta-1.5.1.tar.bz2 342666
+DIST koffice-l10n-tg-1.4.2.tar.bz2 376879
+DIST koffice-l10n-tg-1.5.1.tar.bz2 349226
+DIST koffice-l10n-tr-1.5.1.tar.bz2 352993
+DIST koffice-l10n-uk-1.5.1.tar.bz2 349259
+DIST koffice-l10n-uz-1.5.1.tar.bz2 289164
+DIST koffice-l10n-zh_CN-1.4.2.tar.bz2 393618
+DIST koffice-l10n-zh_CN-1.5.1.tar.bz2 343337
+EBUILD koffice-i18n-1.4.2.ebuild 1418 RMD160 59b7b4bb5342c8868916fffc5ac2eb40773bdc89 SHA1 16fe15e049a84c4302774d758870a7eec4bfe8ed SHA256 4a79ef46e8b9049dbb43906eff17ac683da948bfbb09137ae6d16cbba76ce425
 MD5 f08877d76901bc126621cf8305fa4d02 koffice-i18n-1.4.2.ebuild 1418
-MD5 2a12672223f95a1cdd6388431e2611c6 koffice-i18n-1.5.0.ebuild 1498
+RMD160 59b7b4bb5342c8868916fffc5ac2eb40773bdc89 koffice-i18n-1.4.2.ebuild 1418
+SHA256 4a79ef46e8b9049dbb43906eff17ac683da948bfbb09137ae6d16cbba76ce425 koffice-i18n-1.4.2.ebuild 1418
+EBUILD koffice-i18n-1.5.1.ebuild 1484 RMD160 8e53cc81d3da3dc1af7c2aa5be577272895fed11 SHA1 d9f9d3ceb6a4052293ec593890b5829719371171 SHA256 246f3a80e56468f9f1ce43c9f029a4104c72c727c42b1cc4b797c6f862a6e880
 MD5 4d9b35bf6d14037e05df08ba33e8e9b8 koffice-i18n-1.5.1.ebuild 1484
+RMD160 8e53cc81d3da3dc1af7c2aa5be577272895fed11 koffice-i18n-1.5.1.ebuild 1484
+SHA256 246f3a80e56468f9f1ce43c9f029a4104c72c727c42b1cc4b797c6f862a6e880 koffice-i18n-1.5.1.ebuild 1484
+MISC ChangeLog 8382 RMD160 a5566bec40e6b5f95f65ccfc1ad962561c48d987 SHA1 7987d4b56d90322f98149811d871c7eb5d7682f4 SHA256 7f0a7b8a1db423699ef42c5d7a892f4be9d04302e4feeb83417554413ea86b45
+MD5 b1043d9fadbc0317bfb3a5c43b312285 ChangeLog 8382
+RMD160 a5566bec40e6b5f95f65ccfc1ad962561c48d987 ChangeLog 8382
+SHA256 7f0a7b8a1db423699ef42c5d7a892f4be9d04302e4feeb83417554413ea86b45 ChangeLog 8382
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 0ca87f60e2cdde0805b225c50632e970 files/digest-koffice-i18n-1.4.2 2362
+RMD160 af3acdacb3a77741ae3e6948f449732792becbe7 files/digest-koffice-i18n-1.4.2 2362
+SHA256 b7cb6d5e132b98e098d12cc370146a572b0d97b75b0d2a260378169afdda5f78 files/digest-koffice-i18n-1.4.2 2362
+MD5 6d0f3e4276b884bc547b6df18dc8fbd0 files/digest-koffice-i18n-1.5.1 3772
+RMD160 8cd7c8cd6eca9d5d05f9c11f0840497dd444e356 files/digest-koffice-i18n-1.5.1 3772
+SHA256 d1c5e379ba0f8b9a68119bd12c4e01af01d171bcb307c46119539200d75adb9c files/digest-koffice-i18n-1.5.1 3772
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEefU3AiZjviIA2XgRAtlqAJ0SUkKtyNvm8XYPHS5fMh+t5t3hmgCeMgpY
+grLFtC+S9U4podTfQ/Zxc7o=
+=ADKP
+-----END PGP SIGNATURE-----
