@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ibm-powerpc-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.5 2006/04/19 20:11:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.6 2006/05/28 19:33:42 ranger Exp $
+
+  28 May 2006; Brent Baude <ranger@gentoo.org>
+  ibm-powerpc-utils-1.0.2.ebuild:
+  Marking ibm-powerpc-utils-1.0.2 ppc & ppc64 stable
 
 *ibm-powerpc-utils-1.0.2 (19 Apr 2006)
 

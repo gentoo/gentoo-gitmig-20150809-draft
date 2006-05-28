@@ -1,4 +1,4 @@
-MD5 d331cbdadfb05c6504314897dde3a731 ChangeLog 1196
+MD5 554e4c6d1dd68946177da836d9b30388 ChangeLog 1341
 MD5 fd1096c8145fb3fe4a2f409d1cadfb1b files/digest-ibm-powerpc-utils-papr-1.0.1 76
 MD5 30f3170fc969bc07035f4c9ec91ee2ef files/digest-ibm-powerpc-utils-papr-1.0.2 76
 MD5 2871acc1fdd5410ef5573aaef24cd177 files/ibm-powerpc-utils-papr-1.0.1-remove-doc.patch 425
@@ -7,5 +7,5 @@ MD5 9b39e8c9b297c14495593d6471b7acd3 files/ibm-powerpc-utils-papr-1.0.2-remove-d
 MD5 d094dcafc6432fdf6213801a559ca81d files/ibm-powerpc-utils-papr-1.0.2-removeinitandvscsis.patch 662
 MD5 0e926695e3fc71b75d3965ff50e4729a files/ibmvscsis 1673
 MD5 9fbd7229dd2e07434b9edcb43869a004 ibm-powerpc-utils-papr-1.0.1.ebuild 1618
-MD5 d5335d90355e31e035a9942c2b4df18c ibm-powerpc-utils-papr-1.0.2.ebuild 1627
+MD5 3bd6726b76e805f15320d0f3f71e5510 ibm-powerpc-utils-papr-1.0.2.ebuild 1625
 MD5 702fa4fed6bdb3969c5e5bad5b654368 metadata.xml 245
