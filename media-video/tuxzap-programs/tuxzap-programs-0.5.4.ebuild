@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/tuxzap-programs-0.5.4.ebuild,v 1.2 2005/12/08 07:48:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/tuxzap-programs-0.5.4.ebuild,v 1.3 2006/05/28 13:11:18 zzam Exp $
 
-inherit multilib
+inherit multilib eutils
 
 MY_P=${PN/-/_}-${PV}
 S=${WORKDIR}/${MY_P}
@@ -19,6 +19,12 @@ DEPEND=">=media-libs/libdvb-0.2.1
 	media-tv/linuxtv-dvb-headers
 	dev-libs/cdk
 	gtk? ( =x11-libs/gtk+-1.2* )"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch ${FILESDIR}/${P}-gcc-34.diff
+}
 
 src_compile() {
 	local myconf=""

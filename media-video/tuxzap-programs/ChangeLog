@@ -1,6 +1,10 @@
 # ChangeLog for media-video/tuxzap-programs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/ChangeLog,v 1.11 2006/05/03 21:03:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/ChangeLog,v 1.12 2006/05/28 13:11:18 zzam Exp $
+
+  28 May 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/tuxzap-programs-0.5.4-gcc-34.diff, tuxzap-programs-0.5.4.ebuild:
+  Added patch for compilation with gcc 3.4. See Bug #123007.
 
   03 May 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata to list media-video@gentoo.org as maintainer.

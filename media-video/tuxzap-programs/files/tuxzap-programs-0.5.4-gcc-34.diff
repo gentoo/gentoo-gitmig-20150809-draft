@@ -1,0 +1,42 @@
+Nur in tuxzap_programs-0.5.4/src: cam_set.
+diff -ru tuxzap_programs-0.5.4-orig/src/interface2.cc tuxzap_programs-0.5.4/src/interface2.cc
+--- tuxzap_programs-0.5.4-orig/src/interface2.cc	2006-05-28 13:00:39.379215952 +0200
++++ tuxzap_programs-0.5.4/src/interface2.cc	2006-05-28 13:01:24.615531456 +0200
+@@ -576,7 +576,7 @@
+ 	gtvscreen_get_values(gwid, GTV_NINPUT, &ninput);
+ 
+ 	GtkWidget **intool;
+-	intool = new(GtkWidget *)[ninput];
++	intool = new(GtkWidget * [ninput]);
+ 	// first button of radio box for input switching : tuner
+ 	switch (ninput) {
+ 
+Nur in tuxzap_programs-0.5.4/src: interface2.o.
+Nur in tuxzap_programs-0.5.4/src: ntuxplayer.
+Nur in tuxzap_programs-0.5.4/src: ntuxzap.
+diff -ru tuxzap_programs-0.5.4-orig/src/ntuxzap.cc tuxzap_programs-0.5.4/src/ntuxzap.cc
+--- tuxzap_programs-0.5.4-orig/src/ntuxzap.cc	2006-05-28 13:00:39.379215952 +0200
++++ tuxzap_programs-0.5.4/src/ntuxzap.cc	2006-05-28 13:01:09.494088957 +0200
+@@ -249,7 +249,7 @@
+ 	switch (k){
+ 	case 0:
+ 		num = dvb.num[CHAN];
+-		info = new (char *) [num];
++		info = new (char * [num]);
+ 		for (int i=0; i < num; i++){
+ 			ostringstream str;
+ 			str << dvb.chans[i].name << "  (" << i << ")"<< ends;
+@@ -260,7 +260,7 @@
+ 
+ 	case 1 ... NLIST:
+ 		num = chlist[k-1].NumChan();
+-		info = new (char *) [num];
++		info = new (char * [num]);
+ 		j = 0;
+ 		for (int i = 0; i < num; i++) {
+ 			ostringstream str;
+Nur in tuxzap_programs-0.5.4/src: ntuxzap.o.
+Nur in tuxzap_programs-0.5.4/src: rtuxzap.
+Nur in tuxzap_programs-0.5.4/src: tuxplayer.
+Nur in tuxzap_programs-0.5.4/src: tuxview.
+Nur in tuxzap_programs-0.5.4/src: tuxzap.
