@@ -1,9 +1,15 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.79 2006/05/28 02:47:44 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.80 2006/05/28 09:20:02 nerdboy Exp $
+
+  28 May 2006; Steve Arnold <nerdboy@gentoo.org> graphviz-2.4.ebuild,
+  graphviz-2.6.ebuild, graphviz-2.6-r1.ebuild, graphviz-2.8.ebuild:
+  Added missing tcl depends to 2.4 and above (not sure why it was
+  missing).
 
   28 May 2006; Steve Arnold <nerdboy@gentoo.org> graphviz-2.8.ebuild:
-  made swig a hard dep for now
+  Made swig a hard dep for now (feel free to suggest additional ways
+  to handle the language bindings).
 
   28 May 2006; Steve Arnold <nerdboy@gentoo.org> graphviz-2.4.ebuild,
   graphviz-2.6.ebuild, graphviz-2.6-r1.ebuild, graphviz-2.8.ebuild:
