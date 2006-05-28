@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libvisual
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.18 2006/02/24 23:53:38 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.19 2006/05/28 16:19:45 flameeyes Exp $
+
+*libvisual-0.4.0 (28 May 2006)
+
+  28 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/libvisual-0.1.6-destdir.patch, -files/libvisual-0.1.6-libdir.patch,
+  -libvisual-0.1.6.ebuild, -libvisual-0.1.7.ebuild, +libvisual-0.4.0.ebuild:
+  Version bump to latest version upstream, slotted as this is incompatible
+  with 0.2 series. Thanks to Alejandro Nova and Gleb Litvjak in bug #131733.
 
   24 Feb 2006; Stephen P. Becker <spbecker@gentoo.org>
   libvisual-0.2.0.ebuild:
