@@ -1,0 +1,29 @@
+--- src/global.h.old	2006-05-28 12:30:33.000000000 +0200
++++ src/global.h	2006-05-28 12:31:10.000000000 +0200
+@@ -412,6 +412,7 @@
+ extern DATAFILE *datafile;
+ extern int NOTICEremote;
+ extern Wind *info_win;
++class Icon;
+ extern Icon *icon;
+ extern int g_time_limit;
+ extern int g_p2_start_sit;
+--- src/server.h.old	2006-05-28 12:31:30.000000000 +0200
++++ src/server.h	2006-05-28 12:32:09.000000000 +0200
+@@ -40,7 +40,7 @@
+     NLsocket    m_socket;
+ public:
+     virtual ~ClientServer();
+-    bool ClientServer::connect(
++    bool connect(
+         const std::string &host,
+         const std::string &proxy,
+         std::string &error_message);
+@@ -54,6 +54,7 @@
+ /**
+  * Server side client-server connection
+  */
++class ServerDispatch;
+ class ServerClient
+ {
+ protected:

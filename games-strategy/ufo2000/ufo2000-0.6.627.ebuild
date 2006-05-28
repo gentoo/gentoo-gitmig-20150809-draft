@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.6.627.ebuild,v 1.5 2005/09/06 13:01:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.6.627.ebuild,v 1.6 2006/05/28 10:51:30 tupone Exp $
 
 inherit games
 
@@ -44,6 +44,8 @@ src_unpack() {
 		cd "${S}/newmusic"
 		unpack ufo2000-music-20041222.zip
 	fi
+	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_compile() {
