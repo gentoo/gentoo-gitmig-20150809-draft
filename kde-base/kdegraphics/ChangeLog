@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.252 2006/05/26 21:42:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.253 2006/05/28 19:29:13 flameeyes Exp $
+
+  28 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/post-3.4.1-kdegraphics-4.diff,
+  -files/kdegraphics-3.4.2-kpdf-contentcrash.patch,
+  -files/kdegraphics-3.4.2-kpdf-fix.patch, -kdegraphics-3.4.1-r1.ebuild,
+  -kdegraphics-3.4.1-r3.ebuild, -kdegraphics-3.4.2-r2.ebuild,
+  -kdegraphics-3.4.3.ebuild, -kdegraphics-3.4.3-r2.ebuild,
+  -kdegraphics-3.4.3-r3.ebuild:
+  Remove old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> kdegraphics-3.5.2.ebuild:
   Stable on ppc64
