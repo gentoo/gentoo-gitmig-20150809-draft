@@ -1,0 +1,11 @@
+--- ndiswrapper-1.15/driver/ntoskernel.c	2006-05-06 04:46:30.000000000 -0700
++++ ndiswrapper/driver/ntoskernel.c	2006-05-27 21:37:57.000000000 -0700
+@@ -1625,7 +1625,7 @@
+ 	(struct nt_event *nt_event)
+ {
+ 	EVENTENTER("event = %p", nt_event);
+-	xchg(&nt_event->dh.signal_state, 0);
++	(void)xchg(&nt_event->dh.signal_state, 0);
+ 	EVENTEXIT(return);
+ }
+ 
