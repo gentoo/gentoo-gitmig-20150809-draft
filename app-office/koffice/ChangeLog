@@ -1,6 +1,14 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.166 2006/05/28 18:07:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.167 2006/05/28 21:12:37 carlo Exp $
+
+*koffice-1.5.1-r1 (28 May 2006)
+
+  28 May 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/kexi-1.5.1-form_plugins.patch,
+  +files/kexi-1.5.1-kexi_checkbox_data_saving.patch, -koffice-1.5.1.ebuild,
+  +koffice-1.5.1-r1.ebuild:
+  Missed to add Kexi patches to the monolithic KOffice ebuild.
 
   28 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/CAN-2005-0064.patch, -koffice-1.4.2-r4.ebuild,
