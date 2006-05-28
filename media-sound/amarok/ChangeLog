@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.139 2006/05/25 13:29:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.140 2006/05/28 16:16:37 flameeyes Exp $
+
+  28 May 2006; Diego Pettenò <flameeyes@gentoo.org> amarok-1.3.8.ebuild,
+  amarok-1.4.0a.ebuild:
+  Fix libvisual-plugins dependency on the 0.2 slot.
 
   25 May 2006; Diego Pettenò <flameeyes@gentoo.org> amarok-1.4.0a.ebuild:
   Remove xx value for translation.
