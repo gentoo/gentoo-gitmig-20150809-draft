@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.148 2006/05/13 03:44:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.149 2006/05/28 04:27:38 rphillips Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -524,6 +524,7 @@ vim_src_install() {
 				installmanlinks \
 				installmacros \
 				installtutor \
+				installtutorbin \
 				installtools \
 				install-languages \
 				install-icons \
