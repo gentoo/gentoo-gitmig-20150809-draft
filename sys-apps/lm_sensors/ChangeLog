@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.50 2006/03/15 23:38:59 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.51 2006/05/28 14:57:00 brix Exp $
+
+  28 May 2006; Henrik Brix Andersen <brix@gentoo.org>
+  lm_sensors-2.9.2.ebuild, lm_sensors-2.10.0.ebuild:
+  Fix DEPEND/RDEPEND issue, thanks to carlo in bug #134644.
 
   15 Mar 2006; Henrik Brix Andersen <brix@gentoo.org>
   lm_sensors-2.10.0.ebuild:
