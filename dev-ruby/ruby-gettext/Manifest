@@ -1,28 +1,42 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3f52d3785e9a6307e810a861e4448313 ChangeLog 2254
-RMD160 acdfc40ed2ef07aa4f4ad1191ad8734379eb4ab1 ChangeLog 2254
-SHA256 5585b572e623fa373933deb782ffa4df60d2383c1e8c02e42c62bca125ed5eb5 ChangeLog 2254
-MD5 3f9f54c54433f47db8d8f61aa187bc25 files/digest-ruby-gettext-0.8.0 77
-RMD160 4a8f20d2f89f679ec7addf9831708f1cef4b0bed files/digest-ruby-gettext-0.8.0 77
-SHA256 52476a222e497a53184389364c43710cd38e300a864a1bdfaaa1e8347c035427 files/digest-ruby-gettext-0.8.0 77
-MD5 bed4c16fad0716a9da8bde7df44262e6 files/digest-ruby-gettext-1.0.0 62
-RMD160 f3db44dfb0c628a991eaec6b6ae281f372cc7749 files/digest-ruby-gettext-1.0.0 62
-SHA256 2277a697eeeb9047a24dd2b2f8c51058c7f9ab5ad4c4ef57a8ba0c8e42116fd3 files/digest-ruby-gettext-1.0.0 62
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
-SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
+DIST gettext-1.0.0.gem 118784 RMD160 2047bb12b69487d8335b598e736e3fb70d678848 SHA1 8c19160e7090eedca03f6da6467ea94568bbf9d8 SHA256 4757e7a455c45ba27ae2faec7dec868d3276b6da67a9b38751c6979557759651
+DIST gettext-1.4.0.gem 183296 RMD160 55bca7b3d3ee8caa6ced32301e41f32e22cbd2ea SHA1 e069a8d0654748f85c2cfa9af73a4b4ce1306087 SHA256 c4c9cfadd8bc49a2f17523b256634afbd81f092adb70068668d895c81a8c51bb
+DIST ruby-gettext-package-0.8.0.tar.gz 39927
+EBUILD ruby-gettext-0.8.0.ebuild 771 RMD160 d0066ffe6e8598aa77d3ac4f1536e09da90b09dc SHA1 c75942d4568fc0617c8130de6ff8271dc7230fc6 SHA256 08b20e87ee628141b790559de4718fc33b5aa720bc44be9b1aea1a1a3979b9b8
 MD5 47fef26c7e70e1176f8c6ce7f7766919 ruby-gettext-0.8.0.ebuild 771
 RMD160 d0066ffe6e8598aa77d3ac4f1536e09da90b09dc ruby-gettext-0.8.0.ebuild 771
 SHA256 08b20e87ee628141b790559de4718fc33b5aa720bc44be9b1aea1a1a3979b9b8 ruby-gettext-0.8.0.ebuild 771
+EBUILD ruby-gettext-1.0.0.ebuild 766 RMD160 5847dcbcde6e5af1fc9d7f6fabad6eee5db18e7c SHA1 ce6940a1a47b10f516ac7996e25af988ad40b4ec SHA256 12a1eef13ee8b86c7c267605b38034c3bad3fe99eaf4ab7ebf2507375bd291df
 MD5 5205e914238103ae90c55cef27ff5149 ruby-gettext-1.0.0.ebuild 766
 RMD160 5847dcbcde6e5af1fc9d7f6fabad6eee5db18e7c ruby-gettext-1.0.0.ebuild 766
 SHA256 12a1eef13ee8b86c7c267605b38034c3bad3fe99eaf4ab7ebf2507375bd291df ruby-gettext-1.0.0.ebuild 766
+EBUILD ruby-gettext-1.4.0.ebuild 767 RMD160 00aac9c61805695d3eed82def5e759277306002e SHA1 71a4e80ed22f77605137619cafba2a4965c7d354 SHA256 4e0bcba3901bfc40168b362fa9a29314fc5597a4c48075053dc99d931f0125e0
+MD5 0f20dd226687c33a5f8cdefa510c084f ruby-gettext-1.4.0.ebuild 767
+RMD160 00aac9c61805695d3eed82def5e759277306002e ruby-gettext-1.4.0.ebuild 767
+SHA256 4e0bcba3901bfc40168b362fa9a29314fc5597a4c48075053dc99d931f0125e0 ruby-gettext-1.4.0.ebuild 767
+MISC ChangeLog 2410 RMD160 48bfa0c6c00dde4aec96f29f2c956a450643ef16 SHA1 3fceab33e4f997ebaf7bb621e7eafa012e8543a7 SHA256 10d50edbbe866e856f60cefa5dd2dcb58f462dab81b7ac449f61e148d236a532
+MD5 2d59d78d78adce8742330c0260ef8849 ChangeLog 2410
+RMD160 48bfa0c6c00dde4aec96f29f2c956a450643ef16 ChangeLog 2410
+SHA256 10d50edbbe866e856f60cefa5dd2dcb58f462dab81b7ac449f61e148d236a532 ChangeLog 2410
+MISC metadata.xml 157 RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 SHA1 8ce15dcc608eeb5616aeec610dc695cbe6f93e02 SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
+SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
+MD5 3f9f54c54433f47db8d8f61aa187bc25 files/digest-ruby-gettext-0.8.0 77
+RMD160 4a8f20d2f89f679ec7addf9831708f1cef4b0bed files/digest-ruby-gettext-0.8.0 77
+SHA256 52476a222e497a53184389364c43710cd38e300a864a1bdfaaa1e8347c035427 files/digest-ruby-gettext-0.8.0 77
+MD5 13e2fae049b28bb5d40b9fe509db12fd files/digest-ruby-gettext-1.0.0 232
+RMD160 2db09bf65d5a8b8bb525927a4cec1c92776eb99d files/digest-ruby-gettext-1.0.0 232
+SHA256 e43ad5710c51886796d5362c4b0ea6598c21dc40520f345817bb06e44162b1b6 files/digest-ruby-gettext-1.0.0 232
+MD5 4370e2510b0e94e8a6535d609e98297b files/digest-ruby-gettext-1.4.0 232
+RMD160 e5d8d44551592cfeb4b3ee3c3f7089f7e7249493 files/digest-ruby-gettext-1.4.0 232
+SHA256 71b88bb41bd0c0bc9c8ffcca2201d5a89f88525948a796b75698d8b0737f190e files/digest-ruby-gettext-1.4.0 232
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEK1UcJrHF4yAQTrARAsKAAKDA3WjSsZZzNRjUBfBeSgjACXt3VACaA1cl
-wZObt5SOL1C7kTStjAeqoTk=
-=kRyL
+iD8DBQFEejTuAiZjviIA2XgRAjlkAKDPaQjpuyGaNnJCleq2Itg86yt32gCfVCr4
+sfuS2x7LJde/MVEYFfDIbjo=
+=ifRa
 -----END PGP SIGNATURE-----
