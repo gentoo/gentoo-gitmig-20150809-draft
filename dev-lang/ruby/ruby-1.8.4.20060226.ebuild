@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4.20060226.ebuild,v 1.4 2006/05/27 10:38:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4.20060226.ebuild,v 1.5 2006/05/28 20:13:11 flameeyes Exp $
 
 ONIGURUMA="onigd2_5_4"
 
@@ -32,16 +32,16 @@ DEPEND="sys-devel/autoconf
 	${RDEPEND}"
 PROVIDE="virtual/ruby"
 
-S=${WORKDIR}/ruby
+S="${WORKDIR}/ruby"
 
 src_unpack() {
 	unpack ${A}
 
 	if use cjk ; then
 		einfo "Applying ${ONIGURUMA}"
-		pushd ${WORKDIR}/oniguruma
+		pushd "${WORKDIR}/oniguruma"
 #		epatch ${FILESDIR}/oniguruma-2.3.1-gentoo.patch
-		econf --with-rubydir=${S} || die "econf failed"
+		econf --with-rubydir="${S}" || die "econf failed"
 		make ${SLOT/./}
 		popd
 	fi
@@ -49,7 +49,7 @@ src_unpack() {
 	# Enable build on alpha EV67 (but run gnuconfig_update everywhere)
 	gnuconfig_update || die "gnuconfig_update failed"
 
-	cd ${S}
+	cd "${S}"
 
 	# Fix a hardcoded lib path in configure script
 	sed -i -e "s:\(RUBY_LIB_PREFIX=\"\${prefix}/\)lib:\1$(get_libdir):" \
@@ -89,22 +89,22 @@ src_compile() {
 }
 
 src_install() {
-	LD_LIBRARY_PATH=${D}/usr/$(get_libdir)
+	LD_LIBRARY_PATH="${D}/usr/$(get_libdir)"
 	RUBYLIB="${S}:${D}/usr/$(get_libdir)/ruby/${SLOT}"
-	for d in $(find ${S}/ext -type d) ; do
+	for d in $(find "${S}/ext" -type d) ; do
 		RUBYLIB="${RUBYLIB}:$d"
 	done
 	export LD_LIBRARY_PATH RUBYLIB
 
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	if use doc; then
-		make DESTDIR=${D} install-doc || die "make install-doc failed"
+		make DESTDIR="${D}" install-doc || die "make install-doc failed"
 	fi
 
 	if use examples; then
-		dodir ${ROOT}usr/share/doc/${PF}
-		cp -pPR sample ${D}/${ROOT}usr/share/doc/${PF}
+		dodir "${ROOT}usr/share/doc/${PF}"
+		cp -pPR sample "${D}/${ROOT}usr/share/doc/${PF}"
 	fi
 
 	if use ppc-macos ; then
@@ -126,8 +126,8 @@ pkg_postinst() {
 		ewarn "In that case, you will need to remerge vim."
 		ewarn
 
-		if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
-			${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
+		if [ ! -n "$(readlink "${ROOT}usr/bin/ruby")" ] ; then
+			"${ROOT}usr/sbin/ruby-config" ruby${SLOT/./}
 		fi
 		einfo
 		einfo "You can change the default ruby interpreter by ${ROOT}usr/sbin/ruby-config"
@@ -137,8 +137,8 @@ pkg_postinst() {
 
 pkg_postrm() {
 	if ! use ppc-macos ; then
-		if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
-			${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
+		if [ ! -n "$(readlink "${ROOT}usr/bin/ruby")" ] ; then
+			"${ROOT}usr/sbin/ruby-config" ruby${SLOT/./}
 		fi
 	fi
 }
