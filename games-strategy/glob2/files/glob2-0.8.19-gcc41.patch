@@ -1,0 +1,62 @@
+--- src/EndGameScreen.h.old	2006-05-28 11:35:22.000000000 +0200
++++ src/EndGameScreen.h	2006-05-28 11:35:45.000000000 +0200
+@@ -64,7 +64,7 @@
+ 
+ protected:
+ 	//! resort players
+-	void EndGameScreen::sortAndSet(EndOfGameStat::Type type);
++	void sortAndSet(EndOfGameStat::Type type);
+ 	
+ public:
+ 	EndGameScreen(GameGUI *gui);
+--- src/GameGUILoadSave.cpp.old	2006-05-28 11:37:45.000000000 +0200
++++ src/GameGUILoadSave.cpp	2006-05-28 11:38:40.000000000 +0200
+@@ -31,7 +31,7 @@
+ {
+ 
+ public:
+-	FuncFileList::FuncFileList(int x, int y, int w, int h, Uint32 hAlign, Uint32 vAlign, const char *font, 
++	FuncFileList(int x, int y, int w, int h, Uint32 hAlign, Uint32 vAlign, const char *font, 
+ 		const char *dir, const char *extension, const bool recurse, 
+ 		std::string (*filenameToNameFunc)(const char *filename),
+ 		std::string (*nameToFilenameFunc)(const char *dir, const char *name, const char *extension))
+@@ -41,16 +41,16 @@
+ 		this->generateList();
+ 	}
+ 	
+-	FuncFileList::~FuncFileList()
++	~FuncFileList()
+ 	{}
+ 
+ private:
+-	std::string FuncFileList::fileToList(const char* fileName) const
++	std::string fileToList(const char* fileName) const
+ 	{
+ 		return filenameToNameFunc(fullName(fileName).c_str());
+ 	}
+ 	
+-	std::string FuncFileList::listToFile(const char* listName) const
++	std::string listToFile(const char* listName) const
+ 	{
+ 		return nameToFilenameFunc(fullDir().c_str(), listName, extension.c_str());
+ 	}
+--- src/IRC.h.old	2006-05-28 11:35:30.000000000 +0200
++++ src/IRC.h	2006-05-28 11:36:07.000000000 +0200
+@@ -69,7 +69,7 @@
+ 		char diffusion[IRC_CHANNEL_SIZE+1];
+ 		char message[IRC_MESSAGE_SIZE+1];
+ 		
+-		ChatMessage::ChatMessage() { source[0]=0; diffusion[0]=0; message[0]=0; }
++		ChatMessage() { source[0]=0; diffusion[0]=0; message[0]=0; }
+ 	};
+ 
+ 	struct InfoMessage
+@@ -79,7 +79,7 @@
+ 		char diffusion[IRC_CHANNEL_SIZE+1];
+ 		char message[IRC_MESSAGE_SIZE+1];
+ 		
+-		InfoMessage::InfoMessage(InfoMessageType t) { type=t; source[0]=0; diffusion[0]=0; message[0]=0; }
++		InfoMessage(InfoMessageType t) { type=t; source[0]=0; diffusion[0]=0; message[0]=0; }
+ 	};
+ 
+ protected:

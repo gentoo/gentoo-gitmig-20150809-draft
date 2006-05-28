@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.19.ebuild,v 1.1 2006/03/13 08:35:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.19.ebuild,v 1.2 2006/05/28 10:13:20 tupone Exp $
 
 inherit games
 
@@ -27,6 +27,7 @@ DEPEND="virtual/opengl
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 	sed -i \
 		-e "/^glob2linkdir/s:\$(datadir):/usr/share:" \
 		data/Makefile.in \
