@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.23 2006/05/27 14:15:26 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.24 2006/05/28 13:18:39 radek Exp $
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
 
 # This eclass is designed to streamline the construction of
@@ -12,7 +12,7 @@ DESCRIPTION="This is a zope product"
 #HOMEPAGE=""
 #SRC_URI=""
 
-RDEPEND=">=net-zope/zope-2.6.0-r2
+RDEPEND="net-zope/zope
 	app-admin/zprod-manager"
 
 IUSE=""
