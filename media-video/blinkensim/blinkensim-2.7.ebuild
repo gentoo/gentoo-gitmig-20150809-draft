@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/blinkensim-2.7.ebuild,v 1.3 2005/12/18 23:23:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/blinkensim-2.7.ebuild,v 1.4 2006/05/28 11:37:16 pylon Exp $
 
 DESCRIPTION="Graphical Blinkenlights simulator with networking support"
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.blinkenlights.de/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE="aalib gtk2 directfb"
 
 # if the config script finds any of the optional library it will try to

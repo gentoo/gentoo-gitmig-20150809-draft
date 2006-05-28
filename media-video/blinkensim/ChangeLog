@@ -1,6 +1,9 @@
 # ChangeLog for media-video/blinkensim
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/ChangeLog,v 1.3 2005/12/18 23:23:47 chainsaw Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/ChangeLog,v 1.4 2006/05/28 11:37:16 pylon Exp $
+
+  28 May 2006; Lars Weiler <pylon@gentoo.org> blinkensim-2.7.ebuild:
+  Stable on x86.
 
   18 Dec 2005; <chainsaw@gentoo.org> blinkensim-2.7.ebuild:
   Keyword ~amd64.
