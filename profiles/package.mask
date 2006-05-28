@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5409 2006/05/28 12:49:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5410 2006/05/28 13:03:00 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1055,11 +1055,6 @@ games-action/slune
 # Gustavo Felisberto <humpback@gentoo.org> (03 Sep 2005)
 # Beta code
 =net-im/psi-0.10_rc2
-
-# Christian Zoffoli <xmerlin@gentoo.org> (1 Sep 2005)
-# Masked as this version has a bug
-=sys-cluster/drbd-0.7.12
-=sys-cluster/drbd-0.7.13
 
 # Brandon Low <lostlogic@lostlogicx.com> (29 Aug 2005)
 # Masked because it needs java 1.5
