@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/xorg-sgml-doctools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-sgml-doctools/ChangeLog,v 1.5 2006/02/14 19:45:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-sgml-doctools/ChangeLog,v 1.6 2006/05/28 16:33:29 joshuabaergen Exp $
+
+*xorg-sgml-doctools-1.1 (28 May 2006)
+
+  28 May 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xorg-sgml-doctools-1.1.ebuild:
+  Version bump.  Includes updates for 7.1.
 
   14 Feb 2006; Markus Rothe <corsair@gentoo.org>
   xorg-sgml-doctools-1.0.1.ebuild:
