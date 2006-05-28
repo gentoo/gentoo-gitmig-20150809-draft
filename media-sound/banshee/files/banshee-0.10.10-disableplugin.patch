@@ -1,5 +1,17 @@
---- banshee-0.10.10/configure.ac.orig	2006-05-26 18:42:19.041013272 +0100
-+++ banshee-0.10.10/configure.ac	2006-05-26 18:42:55.849417544 +0100
+d426 2
+--- src/Banshee.Plugins/Makefile.am.orig	2006-05-28 03:54:57.637343928 +0100
++++ src/Banshee.Plugins/Makefile.am	2006-05-28 03:54:05.052338064 +0100
+@@ -1,7 +1,6 @@
+ SUBDIRS = \
+ 	Audioscrobbler \
+ 	Daap \
+-	FileSystemMonitor \
+ 	MetadataSearch \
+ 	MMKeys \
+ 	NotificationAreaIcon
+
+--- configure.ac.orig	2006-05-26 18:42:19.041013272 +0100
++++ configure.ac	2006-05-26 18:42:55.849417544 +0100
 @@ -423,8 +423,6 @@
  src/Banshee.Plugins/Makefile
  src/Banshee.Plugins/Audioscrobbler/Makefile

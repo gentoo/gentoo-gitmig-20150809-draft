@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.29 2006/05/26 18:27:24 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.30 2006/05/28 03:11:32 metalgod Exp $
+
+*banshee-0.10.10-r3 (28 May 2006)
+
+  28 May 2006; Luis Medinas <metalgod@gentoo.org>
+  files/banshee-0.10.10-disableplugin.patch, -banshee-0.10.10-r2.ebuild,
+  +banshee-0.10.10-r3.ebuild:
+  Revbump to fix the previous commit thanks to Bertrand Lorentz
+  <bertrand.lorentz@free.fr> for reporting the issue on bug #134562.
 
 *banshee-0.10.10-r2 (26 May 2006)
 
