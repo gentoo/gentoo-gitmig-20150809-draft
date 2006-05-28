@@ -1,0 +1,143 @@
+diff -ru linuxtv-dvb-apps-1.1.1-orig/util/av7110_loadkeys/Makefile linuxtv-dvb-apps-1.1.1/util/av7110_loadkeys/Makefile
+--- linuxtv-dvb-apps-1.1.1-orig/util/av7110_loadkeys/Makefile	2006-05-28 15:14:41.000000000 +0200
++++ linuxtv-dvb-apps-1.1.1/util/av7110_loadkeys/Makefile	2006-05-28 15:15:30.000000000 +0200
+@@ -42,6 +42,9 @@
+ 	@echo '#endif  /* __INPUT_KEYNAMES_H */' >> $@
+ 	@echo '' >> $@
+ 
++install: av7110_loadkeys evtest
++	install -m 755 av7110_loadkeys $(DESTDIR)/$(bindir)
++	install -m 755 evtest $(DESTDIR)/$(bindir)
+ 
+ clean:
+ 	$(RM) core* *.o input_keynames.h av7110_loadkeys evtest
+diff -ru linuxtv-dvb-apps-1.1.1-orig/util/dvbdate/Makefile linuxtv-dvb-apps-1.1.1/util/dvbdate/Makefile
+--- linuxtv-dvb-apps-1.1.1-orig/util/dvbdate/Makefile	2006-05-28 15:14:41.000000000 +0200
++++ linuxtv-dvb-apps-1.1.1/util/dvbdate/Makefile	2006-05-28 15:20:01.000000000 +0200
+@@ -5,7 +5,7 @@
+ 
+ OBJS    = dvbdate.o
+ TARGET  = dvbdate
+-DESTDIR = /usr/local/bin/
++bindir  ?= /usr/local/bin/
+ 
+ all: $(TARGET)
+ 
+@@ -16,7 +16,7 @@
+ 	$(CC) -o $@ $(OBJS) $(LFLAGS)
+ 
+ install: all
+-	install -m 755 $(TARGET) $(DESTDIR) 
++	install -m 755 $(TARGET) $(DESTDIR)/$(bindir) 
+ 
+ clean:
+ 	rm -f $(TARGET) $(OBJS) core* *~ *.d
+diff -ru linuxtv-dvb-apps-1.1.1-orig/util/dvbnet/Makefile linuxtv-dvb-apps-1.1.1/util/dvbnet/Makefile
+--- linuxtv-dvb-apps-1.1.1-orig/util/dvbnet/Makefile	2006-05-28 15:14:41.000000000 +0200
++++ linuxtv-dvb-apps-1.1.1/util/dvbnet/Makefile	2006-05-28 15:18:27.000000000 +0200
+@@ -5,7 +5,7 @@
+ 
+ OBJS    = dvbnet.o
+ TARGET  = dvbnet
+-DESTDIR = /usr/local/bin/
++bindir  ?= /usr/local/bin/
+ 
+ all: version.h $(TARGET)
+ 
+@@ -20,7 +20,7 @@
+ 		"`cat $@.in`" "`date +'%a %b %d %X %Y'`" > $@
+ 
+ install: all
+-	install -m 755 $(TARGET) $(DESTDIR) 
++	install -m 755 $(TARGET) $(DESTDIR)/$(bindir) 
+ 
+ clean:
+ 	rm -f $(TARGET) $(OBJS) version.h core* *~ *.d
+diff -ru linuxtv-dvb-apps-1.1.1-orig/util/dvbtraffic/Makefile linuxtv-dvb-apps-1.1.1/util/dvbtraffic/Makefile
+--- linuxtv-dvb-apps-1.1.1-orig/util/dvbtraffic/Makefile	2006-05-28 15:14:41.000000000 +0200
++++ linuxtv-dvb-apps-1.1.1/util/dvbtraffic/Makefile	2006-05-28 15:15:30.000000000 +0200
+@@ -2,5 +2,8 @@
+ dvbtraffic: dvbtraffic.c
+ 	gcc -MD -g -O2 -Wall -I../../include $< -o $@
+ 
++install: dvbtraffic
++	install -m 755 dvbtraffic $(DESTDIR)/$(bindir) 
++
+ clean:
+ 	rm -f *.o *.d dvbtraffic
+diff -ru linuxtv-dvb-apps-1.1.1-orig/util/lib/Makefile linuxtv-dvb-apps-1.1.1/util/lib/Makefile
+--- linuxtv-dvb-apps-1.1.1-orig/util/lib/Makefile	2006-05-28 15:14:41.000000000 +0200
++++ linuxtv-dvb-apps-1.1.1/util/lib/Makefile	2006-05-28 15:19:28.000000000 +0200
+@@ -8,11 +8,15 @@
+ 
+ TARGET = lnb.o
+ 
++all: $(TARGET)
++
+ $(TARGET): $(SRCS)
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) -c $< -o $@
+ 
++install: all
++
+ clean:
+ 	$(RM) *.o *.d $(TARGET)
+ 
+diff -ru linuxtv-dvb-apps-1.1.1-orig/util/scan/Makefile linuxtv-dvb-apps-1.1.1/util/scan/Makefile
+--- linuxtv-dvb-apps-1.1.1-orig/util/scan/Makefile	2006-05-28 15:14:41.000000000 +0200
++++ linuxtv-dvb-apps-1.1.1/util/scan/Makefile	2006-05-28 15:30:43.000000000 +0200
+@@ -6,7 +6,7 @@
+ OBJS = diseqc.o dump-zap.o dump-vdr.o scan.o lnb.o section.o atsc_psip_section.o
+ SRCS = $(OBJS:.o=.c)
+ 
+-TARGET = scan
++TARGET = dvbscan
+ 
+ $(TARGET): $(OBJS)
+ 	$(CC) $(LFLAGS) -o $(TARGET) $(OBJS)
+@@ -14,8 +14,21 @@
+ .c.o:
+ 	$(CC) $(CFLAGS) -c $< -o $@
+ 
++install-bin: $(TARGET)
++	install -m 755 $(TARGET) $(DESTDIR)/$(bindir) 
++
++install-data:
++	mkdir -p $(DESTDIR)$(datadir)/dvb
++	for d in dvb-* atsc ; do test -d $$d || continue ; echo ..... $$d ..... \
++	; mkdir -p $(DESTDIR)$(datadir)/dvb/scan/$$d/ \
++	; cp `find $$d -type f|grep -v CVS` $(DESTDIR)$(datadir)/dvb/scan/$$d/ ; done
++
++install: install-bin install-data
++
+ clean:
+ 	$(RM) *.o *.d $(TARGET)
+ 
++.PHONY: install install-bin install-data
++
+ -include $(wildcard *.d) dummy
+ 
+diff -ru linuxtv-dvb-apps-1.1.1-orig/util/szap/Makefile linuxtv-dvb-apps-1.1.1/util/szap/Makefile
+--- linuxtv-dvb-apps-1.1.1-orig/util/szap/Makefile	2006-05-28 15:14:41.000000000 +0200
++++ linuxtv-dvb-apps-1.1.1/util/szap/Makefile	2006-05-28 15:24:44.000000000 +0200
+@@ -28,8 +28,19 @@
+ .o:
+ 	$(CC) $(LFLAGS) -o $@ $<
+ 
++install: install-bin install-data
++install-bin: all
++	test "$(bindir)/" != "/" && mkdir -p $(DESTDIR)$(bindir)/
++	for i in $(TARGETS) ; do cp $$i $(DESTDIR)$(bindir)/ ; done
++install-data:
++	test "$(datadir)/" != "/" && mkdir -p $(DESTDIR)$(datadir)/dvb/zap
++	for d in dvb-{s,c,t} atsc ; do test -d channels-conf/$$d || continue ; echo ..... $$d ..... \
++	; mkdir -p $(DESTDIR)$(datadir)/dvb/zap/$$d/ \
++	; cp `find channels-conf/$$d -type f|grep -v CVS` $(DESTDIR)$(datadir)/dvb/zap/$$d/ ; done
+ clean:
+ 	$(RM) $(TARGETS) core* *.o *.d .depend
+ 
++.PHONY: install install-bin install-data
++
+ -include $(wildcard *.d) dummy
+ 

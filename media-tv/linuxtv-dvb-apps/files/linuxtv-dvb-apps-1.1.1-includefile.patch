@@ -1,0 +1,12 @@
+diff -Naur linuxtv-dvb-apps-1.1.1-orig/util/dvbnet/dvbnet.c linuxtv-dvb-apps-1.1.1/util/dvbnet/dvbnet.c
+--- linuxtv-dvb-apps-1.1.1-orig/util/dvbnet/dvbnet.c	2006-05-17 18:37:58.000000000 -0500
++++ linuxtv-dvb-apps-1.1.1/util/dvbnet/dvbnet.c	2006-05-23 10:20:23.000000000 -0500
+@@ -35,7 +35,7 @@
+ #include <sys/ioctl.h>
+ 
+ #include <linux/dvb/net.h>
+-#include <version.h>
++#include "version.h"
+ 
+ #ifndef VERSION_INFO
+ #define VERSION_INFO "1.1.1"
