@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.123 2006/05/25 03:02:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.124 2006/05/28 19:59:39 flameeyes Exp $
+
+  28 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xine-ui-0.99.4-r5.ebuild:
+  Add -fvisibility=hidden while using GCC 4.1.
 
   25 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   xine-ui-0.99.4-r5.ebuild:

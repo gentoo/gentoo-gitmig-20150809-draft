@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.4-r5.ebuild,v 1.8 2006/05/25 03:02:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.4-r5.ebuild,v 1.9 2006/05/28 19:59:39 flameeyes Exp $
 
-inherit eutils autotools
+inherit eutils toolchain-funcs flag-o-matic autotools
 
 PATCHLEVEL="10"
 DESCRIPTION="Xine movie player"
@@ -56,7 +56,9 @@ src_unpack() {
 
 src_compile() {
 	rm misc/xine-bugreport
-	local myconf=""
+
+	[[ $(gcc-major-version)$(gcc-minor-version) -ge 41 ]] && \
+		append-flags -fvisibility=hidden
 
 	econf \
 		$(use_enable lirc) \
@@ -69,8 +71,8 @@ src_compile() {
 		$(use_with curl) \
 		$(use_with readline) \
 		$(use_with ncurses) \
-		${myconf} || die
-	emake || die "Make failed!"
+		|| die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
