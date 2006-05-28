@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mdbtools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.19 2006/05/24 23:39:28 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.20 2006/05/28 22:21:14 halcy0n Exp $
+
+  28 May 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/mdbtools-0.6_pre1-gcc41.patch, mdbtools-0.6_pre1.ebuild:
+  Add patch to fix compilation with gcc-4.1; bug #134524
 
   24 May 2006; Cory Visi <visi@gentoo.org> :
   Removed mdbtools-0.4 from the tree (outdated and not maintained)

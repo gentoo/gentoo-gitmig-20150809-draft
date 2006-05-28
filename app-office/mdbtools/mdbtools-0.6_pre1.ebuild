@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre1.ebuild,v 1.1 2006/05/24 23:35:05 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre1.ebuild,v 1.2 2006/05/28 22:21:14 halcy0n Exp $
 
 inherit eutils
 
@@ -28,7 +28,8 @@ DEPEND=">=dev-libs/glib-2
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gcc34.patch
+	epatch "${FILESDIR}"/${P}-gcc34.patch
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 }
 
 src_compile() {
