@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.01.15.ebuild,v 1.2 2006/05/17 18:19:05 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.01.15.ebuild,v 1.3 2006/05/28 00:31:53 xmerlin Exp $
 
 MY_P="${PN/clvm/LVM2}.${PV}"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://sources.redhat.com/pub/lvm2/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="readline nocman "
 
 DEPEND=">=sys-fs/device-mapper-1.00.17
