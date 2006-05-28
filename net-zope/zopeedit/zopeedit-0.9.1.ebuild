@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeedit/zopeedit-0.9.1.ebuild,v 1.1 2006/05/27 14:19:02 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeedit/zopeedit-0.9.1.ebuild,v 1.2 2006/05/28 18:16:15 swegener Exp $
 
 inherit distutils
 
@@ -17,5 +17,5 @@ IUSE=""
 
 pkg_postinst() {
 	einfo "Please consider emerging also externaleditor zope product"
-    einfo "Complete help available at: http://plope.com/software/ExternalEditor/install-unix/"
+	einfo "Complete help available at: http://plope.com/software/ExternalEditor/install-unix/"
 }
