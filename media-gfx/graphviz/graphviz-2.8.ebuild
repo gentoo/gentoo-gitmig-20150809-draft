@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8.ebuild,v 1.2 2006/05/28 02:44:07 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8.ebuild,v 1.3 2006/05/28 02:47:44 nerdboy Exp $
 
 inherit eutils libtool
 
@@ -29,7 +29,8 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 	)"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	dev-lang/swig"
 
 src_unpack() {
 	unpack ${A}
