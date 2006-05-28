@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/refe
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/refe/ChangeLog,v 1.7 2006/03/30 03:43:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/refe/ChangeLog,v 1.8 2006/05/28 23:29:53 flameeyes Exp $
+
+  28 May 2006; Diego Pettenò <flameeyes@gentoo.org> refe-0.8.0.ebuild:
+  Add ~amd64 keyword.
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> refe-0.8.0.ebuild:
   Mark 0.8.0 ~ia64
