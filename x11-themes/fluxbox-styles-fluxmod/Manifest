@@ -1,9 +1,53 @@
-MD5 7b9bdc0217c834af866b5a5261f81615 fluxbox-styles-fluxmod-20041024.ebuild 1510
-MD5 471e0b53b8ab1c61dcc80b4e86e3bdc6 fluxbox-styles-fluxmod-20050128.ebuild 1755
-MD5 5a158c9771be12c6f44d6c5f877548c7 fluxbox-styles-fluxmod-20040809.ebuild 1117
-MD5 5e61ce4a0854b4c3ed02e37ce9b5dfdc ChangeLog 3936
-MD5 579076f73457df8c5cba170b0e99634d metadata.xml 163
-MD5 65c95cf3bdb69ad4ca8132bc287ccda8 files/digest-fluxbox-styles-fluxmod-20040809 84
-MD5 37e5a66e1eca2a46e5d52696577e4499 files/digest-fluxbox-styles-fluxmod-20041024 84
-MD5 6d917a0eead4cbcd5b236a22c20ba209 files/digest-fluxbox-styles-fluxmod-20050128 85
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX styles-menu-fluxmod 116 RMD160 cb5b0fed8365310798b24518cf2273fd21958c95 SHA1 51f0f0303058a122686447438940ed091b28dfb9 SHA256 779cd6d7f17d5641e373acbadb051de930f0479681f083a7fff95c0598ec5030
 MD5 413ae7a600614b5e276f85a301529764 files/styles-menu-fluxmod 116
+RMD160 cb5b0fed8365310798b24518cf2273fd21958c95 files/styles-menu-fluxmod 116
+SHA256 779cd6d7f17d5641e373acbadb051de930f0479681f083a7fff95c0598ec5030 files/styles-menu-fluxmod 116
+DIST fluxbox-styles-fluxmod-20040809.tar.bz2 187728
+DIST fluxbox-styles-fluxmod-20041024.tar.bz2 246097
+DIST fluxbox-styles-fluxmod-20050128.tar.bz2 1279479
+EBUILD fluxbox-styles-fluxmod-20040809.ebuild 1117 RMD160 7cc1e46eee9be858662cfe8c56ff4908a88f5d7c SHA1 b4c6fc658a211c1a991ad57d7ad80aa7e433982b SHA256 84b71cdd149b371897f5d47160e510fc6a829edbc945e0e22eafdf2e77d9dfb0
+MD5 5a158c9771be12c6f44d6c5f877548c7 fluxbox-styles-fluxmod-20040809.ebuild 1117
+RMD160 7cc1e46eee9be858662cfe8c56ff4908a88f5d7c fluxbox-styles-fluxmod-20040809.ebuild 1117
+SHA256 84b71cdd149b371897f5d47160e510fc6a829edbc945e0e22eafdf2e77d9dfb0 fluxbox-styles-fluxmod-20040809.ebuild 1117
+EBUILD fluxbox-styles-fluxmod-20041024.ebuild 1510 RMD160 542b87c319929ac18c626b059dd3be5d44a8f5ee SHA1 d08d3fdb32f0aaa236375227b0ea3cccfab32288 SHA256 7497e379ea6f032055d83cc042015493edfde5b02b2a8aefc2634d316f09e150
+MD5 7b9bdc0217c834af866b5a5261f81615 fluxbox-styles-fluxmod-20041024.ebuild 1510
+RMD160 542b87c319929ac18c626b059dd3be5d44a8f5ee fluxbox-styles-fluxmod-20041024.ebuild 1510
+SHA256 7497e379ea6f032055d83cc042015493edfde5b02b2a8aefc2634d316f09e150 fluxbox-styles-fluxmod-20041024.ebuild 1510
+EBUILD fluxbox-styles-fluxmod-20050128-r1.ebuild 1766 RMD160 faed77b1ef871f2f3f24f43b95eae8e8b675c4f2 SHA1 9a896a98803c8943b5aeac6ffa07e4192811e06a SHA256 c889f80a766a8179ca4304cd31f09ab342bfe54266c79a5f96da4a92c9216e52
+MD5 061f9b41f6e030dd4dc3633712675bd9 fluxbox-styles-fluxmod-20050128-r1.ebuild 1766
+RMD160 faed77b1ef871f2f3f24f43b95eae8e8b675c4f2 fluxbox-styles-fluxmod-20050128-r1.ebuild 1766
+SHA256 c889f80a766a8179ca4304cd31f09ab342bfe54266c79a5f96da4a92c9216e52 fluxbox-styles-fluxmod-20050128-r1.ebuild 1766
+EBUILD fluxbox-styles-fluxmod-20050128.ebuild 1755 RMD160 5f511b94165458eb226911a84c4251439dddf080 SHA1 44142a75f43e548bf2f2113f58a42a5f43f70494 SHA256 ec5ad9994dd2d6ffdc9a97b2739637df352d80dba0513bf1b5d0742db523ecaa
+MD5 471e0b53b8ab1c61dcc80b4e86e3bdc6 fluxbox-styles-fluxmod-20050128.ebuild 1755
+RMD160 5f511b94165458eb226911a84c4251439dddf080 fluxbox-styles-fluxmod-20050128.ebuild 1755
+SHA256 ec5ad9994dd2d6ffdc9a97b2739637df352d80dba0513bf1b5d0742db523ecaa fluxbox-styles-fluxmod-20050128.ebuild 1755
+MISC ChangeLog 4164 RMD160 2f8ec55ca95bbae50c030320ecc59ec0bd023718 SHA1 246130827d524ab95e3335d3e4fdc3c89777fec5 SHA256 094fbe41aeff0e66b728aef39eaaedcde1c26be2db3974da3da5c8c9a327de99
+MD5 f70ac01ae6a7afb4ba06de3f0644c8b9 ChangeLog 4164
+RMD160 2f8ec55ca95bbae50c030320ecc59ec0bd023718 ChangeLog 4164
+SHA256 094fbe41aeff0e66b728aef39eaaedcde1c26be2db3974da3da5c8c9a327de99 ChangeLog 4164
+MISC metadata.xml 163 RMD160 f3a3f66a62012d6c9635ae33abfe28f549471c0a SHA1 923ee2f9b457e2110de082bbe17302c70c81a1f2 SHA256 058ba1219e0871827744b5cde326ae73cc7d326079e21e492b84333190ff1b6a
+MD5 579076f73457df8c5cba170b0e99634d metadata.xml 163
+RMD160 f3a3f66a62012d6c9635ae33abfe28f549471c0a metadata.xml 163
+SHA256 058ba1219e0871827744b5cde326ae73cc7d326079e21e492b84333190ff1b6a metadata.xml 163
+MD5 65c95cf3bdb69ad4ca8132bc287ccda8 files/digest-fluxbox-styles-fluxmod-20040809 84
+RMD160 41824ef6fa269cf2b51e8e02f57400902a0fee80 files/digest-fluxbox-styles-fluxmod-20040809 84
+SHA256 2a221657416d105042b5f81ef6f4f99f833fe4999a56c600eea31662529e5a3c files/digest-fluxbox-styles-fluxmod-20040809 84
+MD5 37e5a66e1eca2a46e5d52696577e4499 files/digest-fluxbox-styles-fluxmod-20041024 84
+RMD160 9773e774de2eb8b7ae2d0377979388e010c86ccf files/digest-fluxbox-styles-fluxmod-20041024 84
+SHA256 9721abecbb8ee3b00c35aa2a3b2f0db560865a4a08da9cd4fb90a4cafcc35736 files/digest-fluxbox-styles-fluxmod-20041024 84
+MD5 6d917a0eead4cbcd5b236a22c20ba209 files/digest-fluxbox-styles-fluxmod-20050128 85
+RMD160 1329aca5a38527be7b20ff83722d32ae25d80f39 files/digest-fluxbox-styles-fluxmod-20050128 85
+SHA256 2a347103738ea0d4bbee5671d5cc3447bc614297694200db668e4f7fe59f9758 files/digest-fluxbox-styles-fluxmod-20050128 85
+MD5 6d917a0eead4cbcd5b236a22c20ba209 files/digest-fluxbox-styles-fluxmod-20050128-r1 85
+RMD160 1329aca5a38527be7b20ff83722d32ae25d80f39 files/digest-fluxbox-styles-fluxmod-20050128-r1 85
+SHA256 2a347103738ea0d4bbee5671d5cc3447bc614297694200db668e4f7fe59f9758 files/digest-fluxbox-styles-fluxmod-20050128-r1 85
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEeeZ9I1lqEGTUzyQRApRrAKCnMAGaitY5telkVIDjxcSfmr+9ewCg0VAB
+ShJw+F/ey3ix14LHtnECZEs=
+=tDv4
+-----END PGP SIGNATURE-----
