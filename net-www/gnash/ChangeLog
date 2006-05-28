@@ -1,6 +1,12 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.7 2006/05/11 17:09:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.8 2006/05/28 21:27:59 anarchy Exp $
+
+*gnash-0.7.1_p20060528 (28 May 2006)
+
+  28 May 2006; Jory A. Pratt <anarchy@gentoo.org>
+  +files/gnash-0.7.1_p20060528-opengl.diff, +gnash-0.7.1_p20060528.ebuild:
+  snapshot of cvs tree, many bug fixes including x86_64 fixes
 
   11 May 2006; Stefan Schweizer <genstef@gentoo.org> gnash-0.7.1.ebuild:
   Workaround install problem thanks to Roie Kerstein
