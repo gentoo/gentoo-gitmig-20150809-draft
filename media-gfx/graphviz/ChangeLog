@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.76 2006/04/27 22:56:04 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.77 2006/05/28 01:28:54 nerdboy Exp $
+
+*graphviz-2.8 (28 May 2006)
+
+  27 May 2006; Steve Arnold <nerdboy@gentoo.org> graphviz-2.4.ebuild,
+  graphviz-2.6.ebuild, graphviz-2.6-r1.ebuild, +graphviz-2.8.ebuild:
+  Fixes and updates for bugs 123279, 120012, 132165, and 132689, but not yet
+  cleaning up any packages.  Stable bumps for known working versions.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-graphviz-1.10,
   files/digest-graphviz-1.12, files/digest-graphviz-1.12-r1,
