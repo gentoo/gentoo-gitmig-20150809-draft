@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.177 2006/05/08 14:18:04 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.178 2006/05/28 11:28:52 brix Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -72,6 +72,9 @@ fi
 
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
+
+# No need to run scanelf/strip on kernel sources/headers (bug #134453).
+RESTRICT="binchecks strip"
 
 # set LINUX_HOSTCFLAGS if not already set
 [[ -z ${LINUX_HOSTCFLAGS} ]] && \
