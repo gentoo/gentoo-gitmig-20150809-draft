@@ -16,7 +16,7 @@
 +SECURE_LOG = /var/log/messages
  #
 +# Metalog:
-+SECURE_LOG = /var/log/sshd/current
++#SECURE_LOG = /var/log/sshd/current
  # Mac OS X (v10.4 or greater - 
  #   also refer to:   http://www.denyhosts.net/faq.html#macos
  #SECURE_LOG = /private/var/log/asl.log
