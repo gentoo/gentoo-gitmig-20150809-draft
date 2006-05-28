@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.48 2006/03/09 16:30:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.49 2006/05/28 19:31:33 blubb Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -392,6 +392,9 @@ prep_ml_includes() {
 # Example:
 # create_ml_includes /usr/include/asm __sparc__:/usr/include/asm-sparc __sparc64__:/usr/include/asm-sparc64
 # create_ml_includes /usr/include/asm __i386__:/usr/include/asm-i386 __x86_64__:/usr/include/asm-x86_64
+#
+# Warning: Be careful with the ordering here. The default ABI has to be the
+# last, because it is always defined (by GCC)
 create_ml_includes() {
 	local dest=$1
 	shift
