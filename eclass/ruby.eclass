@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.52 2006/04/13 11:50:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.53 2006/05/28 21:39:02 flameeyes Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -100,7 +100,7 @@ ruby_econf() {
 
 ruby_emake() {
 	if [ -f makefiles -o -f GNUmakefile -o -f makefile -o -f Makefile ] ; then
-		make CC="$(tc-getCC)" CXX="$(tc-getCXX)" ${MAKEOPTS} ${EXTRA_EMAKE} "$@" || die "emake for ruby failed"
+		make CC="$(tc-getCC)" CXX="$(tc-getCXX)" DLDFLAGS="${LDFLAGS}" ${MAKEOPTS} ${EXTRA_EMAKE} "$@" || die "emake for ruby failed"
 	fi
 }
 
