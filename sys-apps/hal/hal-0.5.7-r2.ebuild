@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7-r2.ebuild,v 1.1 2006/05/08 18:46:26 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7-r2.ebuild,v 1.2 2006/05/28 06:55:08 cardoe Exp $
 
 inherit eutils linux-info debug
 
@@ -179,4 +179,6 @@ pkg_postinst() {
 	einfo "work. Suggested is to add the init script to your start-up"
 	einfo "scripts, this should be done like this :"
 	einfo "\`rc-update add hald default\`"
+	echo
+	einfo "Looking for automounting support? Add yourself to the plugdev group"
 }
