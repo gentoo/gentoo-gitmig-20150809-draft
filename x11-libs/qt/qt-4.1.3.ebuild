@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.3.ebuild,v 1.1 2006/05/25 16:37:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.3.ebuild,v 1.2 2006/05/28 21:57:24 carlo Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -83,6 +83,7 @@ qt_mkspecs_dir() {
 src_unpack() {
 
 	unpack ${A}
+	epatch ${FILESDIR}/qt-4.1.3-mysql4-support.diff
 	cd ${S}
 
 	sed -i -e 's:read acceptance:acceptance=yes:' configure

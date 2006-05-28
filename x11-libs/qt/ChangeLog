@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.321 2006/05/26 14:27:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.322 2006/05/28 21:57:24 carlo Exp $
+
+  28 May 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/qt-4.1.3-mysql4-support.diff, qt-4.1.3.ebuild:
+  Build against MySQL 4.0.
 
   26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> qt-3.3.6-r1.ebuild:
   Stable on amd64 wrt bug #132887.
