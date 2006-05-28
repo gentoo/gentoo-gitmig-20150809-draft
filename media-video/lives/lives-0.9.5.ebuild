@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.5.ebuild,v 1.3 2006/05/28 16:10:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.5.ebuild,v 1.4 2006/05/28 19:48:54 lu_zero Exp $
 
 inherit flag-o-matic
 
@@ -61,6 +61,6 @@ src_compile() {
 
 src_install() {
 	dodir /usr/share/lives/icons
-	emake DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
 	dodoc AUTHORS CHANGELOG FEATURES GETTING.STARTED
 }
