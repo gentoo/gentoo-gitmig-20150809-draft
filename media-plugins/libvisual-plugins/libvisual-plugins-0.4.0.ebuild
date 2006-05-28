@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.2.0.ebuild,v 1.11 2006/05/28 16:20:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0.ebuild,v 1.1 2006/05/28 16:20:40 flameeyes Exp $
 
 inherit eutils
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://libvisual.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libvisual/${P}.tar.gz"
 LICENSE="GPL-2"
 
-SLOT="0"
-KEYWORDS="amd64 ~mips ppc ppc64 sparc x86"
+SLOT="0.4"
+KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug esd gtk jack opengl"
 
 RDEPEND="~media-libs/libvisual-${PV}
@@ -33,14 +33,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.14"
 
 src_compile() {
-	# stupid configure assumes $x_libaries cannot be empty
-	epatch "${FILESDIR}/${P}-configure.patch"
-	epatch "${FILESDIR}/${P}-mkdirhier.patch"
-
-	# GCC 4 compatability fix for 'display.c:115: error: memory input 1 is not directly addressable'
-	# Upstream fix as reported by Mark Loeser <halcy0n@gentoo.org> in bug #118050
-	epatch "${FILESDIR}/${P}-gcc4.patch"
-
 	econf $(use_enable debug) || die
 	emake || die
 }
