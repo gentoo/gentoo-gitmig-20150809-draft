@@ -1,6 +1,9 @@
 # ChangeLog for media-video/blinkentools
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkentools/ChangeLog,v 1.2 2005/12/18 01:21:13 chainsaw Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkentools/ChangeLog,v 1.3 2006/05/28 11:13:38 pylon Exp $
+
+  28 May 2006; Lars Weiler <pylon@gentoo.org> blinkentools-2.9.ebuild:
+  Stable on x86.
 
   18 Dec 2005; <chainsaw@gentoo.org> blinkentools-2.9.ebuild:
   Add ~amd64 keyword.
