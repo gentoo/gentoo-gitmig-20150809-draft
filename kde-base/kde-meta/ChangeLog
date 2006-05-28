@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.48 2006/05/26 18:40:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.49 2006/05/28 19:14:50 flameeyes Exp $
+
+  28 May 2006; Diego Pettenò <flameeyes@gentoo.org> -kde-meta-3.4.1.ebuild,
+  -kde-meta-3.4.2.ebuild:
+  Remove old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> kde-meta-3.5.2.ebuild:
   Stable on ppc64
