@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/itund/itund-0.3.1.ebuild,v 1.1 2006/02/10 21:41:28 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/itund/itund-0.3.1.ebuild,v 1.2 2006/05/28 22:57:24 sbriesen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/itund/${P}.tgz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 DEPEND="sys-libs/zlib
 	net-dialup/capi4k-utils"
