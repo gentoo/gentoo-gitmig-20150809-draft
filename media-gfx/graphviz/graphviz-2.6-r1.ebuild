@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.6-r1.ebuild,v 1.3 2006/05/28 01:28:54 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.6-r1.ebuild,v 1.4 2006/05/28 02:44:07 nerdboy Exp $
 
 inherit eutils libtool
 
@@ -22,9 +22,10 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 	sys-libs/zlib
 	tcltk? ( >=dev-lang/tk-8.3 )
 	cairo? ( >=x11-libs/libsvg-cairo-0.1.3 )
-	X? || (
+	X? ( || (
 	    ( x11-libs/libXaw x11-libs/libXpm )
-	virtual/x11 )"
+	virtual/x11 )
+	)"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
