@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-0.9.5.ebuild,v 1.1 2006/05/05 16:04:57 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-0.9.5.ebuild,v 1.2 2006/05/28 18:13:54 swegener Exp $
 
 inherit mono eutils autotools
 
@@ -15,7 +15,7 @@ IUSE="python php tcltk mono"
 
 DEPEND="=dev-libs/xapian-${PV}
 	python? ( >=dev-lang/python-2.1 )
-	php? ( >=dev-lang/php )
+	php? ( dev-lang/php )
 	tcltk? ( >=dev-lang/tcl-8.1 )
 	mono? ( >=dev-lang/mono-1.0.8 )"
 
