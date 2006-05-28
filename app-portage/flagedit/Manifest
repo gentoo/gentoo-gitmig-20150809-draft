@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6dc518a739696784f6c173aa6f9813ef ChangeLog 1359
+MD5 b9e7a02821190510559c29ca0b59e748 ChangeLog 1461
 MD5 92b9af1bbae1bb2cd67c5e4eb996b986 files/digest-flagedit-0.0.2 65
 MD5 6408f28d6916ebe9f93105cd20de82e8 files/digest-flagedit-0.0.3 65
 MD5 a1d207ee2d2cbcad738c791c7fea13ec files/digest-flagedit-0.0.4 65
@@ -10,13 +7,6 @@ MD5 521120f8b13d127647a16e274c79f2e7 files/digest-flagedit-0.0.7 65
 MD5 88cf61ba2e1f14b4474a4ab87fb3b98e flagedit-0.0.2.ebuild 603
 MD5 8f0075605581970c95ce45049b090af6 flagedit-0.0.3.ebuild 603
 MD5 58f9b0f59769e2e74a2d6a157300bf0b flagedit-0.0.4.ebuild 603
-MD5 b3e4af2442164688698b62424cf71f13 flagedit-0.0.5.ebuild 601
+MD5 669c14502a5cf8b97a4f8654df8f8011 flagedit-0.0.5.ebuild 596
 MD5 fdebfea61406d3b4788c0fa267152434 flagedit-0.0.7.ebuild 603
 MD5 b65665d43270676b80e0389cf877dbb3 metadata.xml 251
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDyowTtG5z4I8BtQoRAl/sAJ9w+XBLpvuRAEtDXnNRhYU47GScTwCdEziw
-57bUA3HWJm8DcmsROIqya34=
-=WTuv
------END PGP SIGNATURE-----

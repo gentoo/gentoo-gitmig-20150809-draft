@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/flagedit-0.0.5.ebuild,v 1.3 2006/01/15 17:53:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/flagedit-0.0.5.ebuild,v 1.4 2006/05/28 14:40:42 tcort Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://damz.net/flagedit/download/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 RDEPEND="dev-lang/perl
 >=dev-util/libconf-0.40.00"

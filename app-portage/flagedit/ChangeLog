@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/flagedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.9 2006/01/15 17:53:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.10 2006/05/28 14:40:42 tcort Exp $
+
+  28 May 2006; Thomas Cort <tcort@gentoo.org> flagedit-0.0.5.ebuild:
+  Stable on amd64 wrt Bug #134636.
 
   15 Jan 2006; Michael Cummings <mcummings@gentoo.org>
   flagedit-0.0.2.ebuild, flagedit-0.0.3.ebuild, flagedit-0.0.4.ebuild,
