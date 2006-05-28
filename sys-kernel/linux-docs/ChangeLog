@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-docs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.2 2006/05/28 12:35:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.3 2006/05/28 20:29:26 tcort Exp $
+
+  28 May 2006; Thomas Cort <tcort@gentoo.org> linux-docs-2.4.32.ebuild,
+  linux-docs-2.6.16.ebuild:
+  Added ~alpha keyword wrt Bug #134615.
 
   28 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   linux-docs-2.4.32.ebuild, linux-docs-2.6.16.ebuild:
