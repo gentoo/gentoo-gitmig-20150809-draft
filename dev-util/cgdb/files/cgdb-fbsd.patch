@@ -1,0 +1,21 @@
+Index: cgdb-0.5.3/various/util/src/pseudo.c
+===================================================================
+--- cgdb-0.5.3.orig/various/util/src/pseudo.c
++++ cgdb-0.5.3/various/util/src/pseudo.c
+@@ -35,6 +35,8 @@
+  */
+ 
+ #include "config.h"
++#include <sys/types.h>
++
+ #define _GNU_SOURCE /* ptsname_r() under Linux */
+ #include <fcntl.h>
+ #include <grp.h>
+@@ -49,7 +51,6 @@
+ #include <libutil.h>
+ #endif
+ 
+-#include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/ioctl.h>
+ #include <stdio.h>
