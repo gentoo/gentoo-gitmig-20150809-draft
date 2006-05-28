@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5404 2006/05/28 05:02:09 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5405 2006/05/28 05:08:48 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1336,10 +1336,6 @@ dev-lisp/cl-imho
 # <ribosome@gentoo.org> (09 Jan 2005)
 # Beta release
 =sci-biology/vienna-rna-1.5_beta
-
-# <chriswhite@gentoo.org> (30 Dec 2004)
-# Junkie being masked per security bug #74696
-net-ftp/junkie
 
 # <mkennedy@gentoo.org> (14 Dec 2004)
 # Masked pending removal
