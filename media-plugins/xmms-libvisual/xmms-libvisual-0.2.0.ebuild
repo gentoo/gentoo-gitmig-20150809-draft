@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-libvisual/xmms-libvisual-0.2.0.ebuild,v 1.2 2006/02/21 00:10:42 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-libvisual/xmms-libvisual-0.2.0.ebuild,v 1.3 2006/05/28 16:05:30 flameeyes Exp $
 
 inherit eutils
 
@@ -18,9 +18,9 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="media-sound/xmms
-	 >=media-libs/libvisual-0.2
-	 virtual/opengl
-	 media-libs/libsdl"
+	=media-libs/libvisual-0.2*
+	virtual/opengl
+	media-libs/libsdl"
 
 DEPEND="${DEPEND}
 	>=dev-util/pkgconfig-0.14"
