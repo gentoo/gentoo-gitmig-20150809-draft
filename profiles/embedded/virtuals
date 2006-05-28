@@ -38,7 +38,6 @@ virtual/skkserv			app-i18n/skkserv
 virtual/ssh			net-misc/openssh
 virtual/sylpheed		mail-client/sylpheed
 virtual/tetex			app-text/tetex
-virtual/textbrowser		www-client/links
 virtual/tftp			net-ftp/tftp-hpa
 virtual/wine			app-emulation/wine
 virtual/x11			x11-base/xorg-x11

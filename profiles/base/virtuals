@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.92 2006/05/13 05:13:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.93 2006/05/28 14:17:30 carlo Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -59,10 +59,8 @@ virtual/pager				sys-apps/less
 # directive to phase out pam_stack.
 virtual/pam					>=sys-libs/pam-0.78
 virtual/pbs					sys-cluster/torque
-virtual/pdfviewer			app-text/xpdf
 virtual/php					dev-lang/php
 virtual/portage				sys-apps/portage
-virtual/psviewer			app-text/gv
 virtual/python				dev-lang/python
 virtual/quicktime			media-libs/libquicktime
 virtual/ruby				dev-lang/ruby
@@ -72,7 +70,6 @@ virtual/squeak-image		dev-lang/squeak-fullimage
 virtual/ssh					net-misc/openssh
 virtual/sylpheed			mail-client/sylpheed
 virtual/tetex				app-text/tetex
-virtual/textbrowser			www-client/links
 virtual/tftp				net-ftp/tftp-hpa
 virtual/utempter			sys-apps/utempter
 virtual/w3m					www-client/w3m
