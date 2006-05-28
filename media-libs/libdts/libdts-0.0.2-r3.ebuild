@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2-r3.ebuild,v 1.12 2006/05/25 02:46:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2-r3.ebuild,v 1.13 2006/05/28 10:09:32 flameeyes Exp $
 
-inherit eutils autotools
+inherit eutils toolchain-funcs autotools
 
 DESCRIPTION="library for decoding DTS Coherent Acoustics streams used in DVD"
 HOMEPAGE="http://www.videolan.org/dtsdec.html"
@@ -20,8 +20,10 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-libtool.patch"
 	epatch "${FILESDIR}/${P}-freebsd.patch"
+	[[ $(gcc-major-version)$(gcc-minor-version) -ge 41 ]] && \
+		epatch "${FILESDIR}/${P}-visibility.patch"
 
-	eautoreconf
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {

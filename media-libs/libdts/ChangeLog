@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdts
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.28 2006/05/25 02:46:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.29 2006/05/28 10:09:32 flameeyes Exp $
+
+  28 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libdts-0.0.2-visibility.patch, libdts-0.0.2-r3.ebuild:
+  Add patch to add support for visibility (with GCC 4.1).
 
   25 May 2006; Diego Pettenò <flameeyes@gentoo.org> libdts-0.0.2-r3.ebuild:
   Add ~x86-fbsd keyword.
