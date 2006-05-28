@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5411 2006/05/28 16:17:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5412 2006/05/28 16:28:31 joshuabaergen Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -347,6 +347,8 @@ net-misc/asterisk-app_authenticate_ldap
 
 # Joshua Baergen <joshuabaergen@gentoo.org> (14 Apr 2006)
 # Mask for X7.1 RC
+>=app-doc/xorg-sgml-doctools-1.1
+>=app-doc/xorg-docs-1.2
 >=x11-base/xorg-server-1.0.99
 >=x11-base/xorg-x11-7.1_rc0
 >=x11-drivers/xf86-input-acecad-1.1.0
