@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4.20060226.ebuild,v 1.5 2006/05/28 20:13:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4.20060226.ebuild,v 1.6 2006/05/28 21:26:19 flameeyes Exp $
 
 ONIGURUMA="onigd2_5_4"
 
@@ -58,6 +58,11 @@ src_unpack() {
 
 src_compile() {
 	filter-flags -fomit-frame-pointer
+	export EXTLDFLAGS="${LDFLAGS}"
+
+	filter-flags -Wl,-Bdirect
+	filter-ldflags -Wl,-Bdirect
+	filter-ldflags -Bdirect
 
 	# Socks support via dante
 	if use socks5; then
@@ -85,7 +90,11 @@ src_compile() {
 		--with-sitedir=/usr/$(get_libdir)/ruby/site_ruby \
 		|| die "econf failed"
 
-	emake || die "emake failed"
+	emake EXTLDFLAGS="${EXTLDFLAGS}" DLDFLAGS="${LDFLAGS}" || die "emake failed"
+
+	# Remove the expanded ${LDFLAGS} variable on the configuration file
+	sed -i -e 's:CONFIG\["LDFLAGS"\] =.*:CONFIG["LDFLAGS"] = "-Wl,-export-dynamic":' \
+		rbconfig.rb
 }
 
 src_install() {
