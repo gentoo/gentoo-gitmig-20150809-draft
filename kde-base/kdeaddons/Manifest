@@ -1,18 +1,58 @@
-MD5 1b02d01a7d82c9ec212f3c4e60652d43 ChangeLog 21184
-MD5 f510fb4a423935c458f3e01d994b5bd2 files/digest-kdeaddons-3.3.2 69
-MD5 b222a3f919d71f11915038fe18b0a7d7 files/digest-kdeaddons-3.4.1 69
-MD5 bed9e2e46d8e7de37c5996e1ad3025bd files/digest-kdeaddons-3.4.2 69
-MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-kdeaddons-3.4.3 69
-MD5 191f6bee80885d21495b154d0b9b84fa files/digest-kdeaddons-3.5.2 253
-MD5 191f6bee80885d21495b154d0b9b84fa files/digest-kdeaddons-3.5.2-r1 253
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX kdeaddons-3.2.0-kvim.diff 363 RMD160 ec733ed4c266f4909ce584d49ea120def0adc191 SHA1 d350de4634ba3133d101b4d5f934212c77bab896 SHA256 d009e26c93b517470d1e2ccdcc04972cf3deb3aa3ac0fcdb4379d48e4d2aa885
 MD5 3bec1549e74c6f661045a83198e45290 files/kdeaddons-3.2.0-kvim.diff 363
+RMD160 ec733ed4c266f4909ce584d49ea120def0adc191 files/kdeaddons-3.2.0-kvim.diff 363
+SHA256 d009e26c93b517470d1e2ccdcc04972cf3deb3aa3ac0fcdb4379d48e4d2aa885 files/kdeaddons-3.2.0-kvim.diff 363
+AUX kdeaddons-3.4-configure.patch 3422 RMD160 5e67950bf392fcf3870d211abb6cb0177a94ed7a SHA1 101e01a69f6f9ddac56cbbd38072cddd11a4c6c2 SHA256 8fbed7fb602a3d27185d03b480d13397469c07fce3374fbec0a19474266578bc
 MD5 76a1c9bb2b631b0233e79ed5ab7eb20e files/kdeaddons-3.4-configure.patch 3422
+RMD160 5e67950bf392fcf3870d211abb6cb0177a94ed7a files/kdeaddons-3.4-configure.patch 3422
+SHA256 8fbed7fb602a3d27185d03b480d13397469c07fce3374fbec0a19474266578bc files/kdeaddons-3.4-configure.patch 3422
+AUX konq-plugins-3.5.2-arkplugin-crash-fix.diff 8388 RMD160 b459d3727268b9739a6528490eb745a3bd893804 SHA1 744708b8a7b57dccf33bbe819b90ab05b3045070 SHA256 4a2db411cfab3e6e80ca77309d2ee88e5ad19172c2fca855528c8e4f793b4bf4
 MD5 b11067e88ee43ae4d8e2c5c71ef0b76f files/konq-plugins-3.5.2-arkplugin-crash-fix.diff 8388
+RMD160 b459d3727268b9739a6528490eb745a3bd893804 files/konq-plugins-3.5.2-arkplugin-crash-fix.diff 8388
+SHA256 4a2db411cfab3e6e80ca77309d2ee88e5ad19172c2fca855528c8e4f793b4bf4 files/konq-plugins-3.5.2-arkplugin-crash-fix.diff 8388
+AUX noatun-oblique-db-location-3.4.0.diff 625 RMD160 4f448fd3e34a0f4c4feb2f4d41a9396fe61019fe SHA1 5535cd765ea81dcb2c1489a169b8b06057cf9812 SHA256 58e7b324264a0253599d1ef917026d86e3b4bef70d087c8d2becddfeb587c00f
 MD5 6ec5a8a3f0f5ae85d431525c926c27fe files/noatun-oblique-db-location-3.4.0.diff 625
+RMD160 4f448fd3e34a0f4c4feb2f4d41a9396fe61019fe files/noatun-oblique-db-location-3.4.0.diff 625
+SHA256 58e7b324264a0253599d1ef917026d86e3b4bef70d087c8d2becddfeb587c00f files/noatun-oblique-db-location-3.4.0.diff 625
+DIST kdeaddons-3.3.2.tar.bz2 1563856
+DIST kdeaddons-3.4.3.tar.bz2 1593317
+DIST kdeaddons-3.5.2.tar.bz2 1640284 RMD160 bc2ce1f93b34fcb2c7662da22edf4894c6524a12 SHA1 9d47ca0accdb37aa5c1f05dccd2991119800dbc8 SHA256 2a3eea9ff6b550b90d3f51d4862f7d7b992182ac225fdac0684cc16fb990c2ec
+EBUILD kdeaddons-3.3.2.ebuild 994 RMD160 436a491bd3080aa7d7d30327e28d15239f54b895 SHA1 ed4dc2d375d7a27284222f3e6cc9f261296eba0d SHA256 ec32067287721d03b85ca864f510ff78ddbbc7489e8722c759a11b312a615c13
 MD5 3a692b7c76a442ddec552bbb5786d366 kdeaddons-3.3.2.ebuild 994
-MD5 5cb3102b5887be89c0079df0a6028d51 kdeaddons-3.4.1.ebuild 1350
-MD5 4b184080c3a26edabff3c4d61409516d kdeaddons-3.4.2.ebuild 1549
+RMD160 436a491bd3080aa7d7d30327e28d15239f54b895 kdeaddons-3.3.2.ebuild 994
+SHA256 ec32067287721d03b85ca864f510ff78ddbbc7489e8722c759a11b312a615c13 kdeaddons-3.3.2.ebuild 994
+EBUILD kdeaddons-3.4.3.ebuild 1550 RMD160 997876f1bd83d30303211c812d068f039172c962 SHA1 9bb8fc59db7f89d05865d581e2c0221ce7bd851c SHA256 2ada036ac90eedb27c62f04d9f0cb4830027e987ad8e4972a846854db44f92da
 MD5 d53eab038c88cbc4ff74f34c73522b45 kdeaddons-3.4.3.ebuild 1550
+RMD160 997876f1bd83d30303211c812d068f039172c962 kdeaddons-3.4.3.ebuild 1550
+SHA256 2ada036ac90eedb27c62f04d9f0cb4830027e987ad8e4972a846854db44f92da kdeaddons-3.4.3.ebuild 1550
+EBUILD kdeaddons-3.5.2-r1.ebuild 1240 RMD160 53e4e3d187f0b694917605b735ad6b3402353967 SHA1 1c7dbcc232b989207729e736d11b8b180b4bfb6d SHA256 f045ffbc0a3b2b3e7de9ecd4e76bab10c3d5cbf37cf85a93f0c190ad6526254d
 MD5 7bf787b85b226d39b59abb3e7e303ca7 kdeaddons-3.5.2-r1.ebuild 1240
-MD5 cb4138a2a853c8f8541ffd6a26ce267b kdeaddons-3.5.2.ebuild 1166
+RMD160 53e4e3d187f0b694917605b735ad6b3402353967 kdeaddons-3.5.2-r1.ebuild 1240
+SHA256 f045ffbc0a3b2b3e7de9ecd4e76bab10c3d5cbf37cf85a93f0c190ad6526254d kdeaddons-3.5.2-r1.ebuild 1240
+MISC ChangeLog 21338 RMD160 79c7d8983ca6f5acec2577103628f4c247fb11e5 SHA1 dde34b03f926e9c9077a4678260c53b533d1da56 SHA256 b239d5a3cc298845c416b10cda253b08a2effe8993449f6ca43bc0d7be6d07be
+MD5 4c144ad7819013f574ffa280117cb59a ChangeLog 21338
+RMD160 79c7d8983ca6f5acec2577103628f4c247fb11e5 ChangeLog 21338
+SHA256 b239d5a3cc298845c416b10cda253b08a2effe8993449f6ca43bc0d7be6d07be ChangeLog 21338
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 f510fb4a423935c458f3e01d994b5bd2 files/digest-kdeaddons-3.3.2 69
+RMD160 c518f1930778e8a6154e133a32c9bd7b944738fb files/digest-kdeaddons-3.3.2 69
+SHA256 2730b6b69c8750679d8c29fc0cef3c4d40dacbba02bcabec55ab6a2e6eeddd95 files/digest-kdeaddons-3.3.2 69
+MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-kdeaddons-3.4.3 69
+RMD160 d32846177c0fadbb5676684fa4305a4d5633b08c files/digest-kdeaddons-3.4.3 69
+SHA256 5702f1f85638e9ae3dc7bdb8ff199d24c1ec45e26c0bf11173f5ffcb511d87b6 files/digest-kdeaddons-3.4.3 69
+MD5 191f6bee80885d21495b154d0b9b84fa files/digest-kdeaddons-3.5.2-r1 253
+RMD160 7ceef00c96f7c9306805433a9ea566dafc129421 files/digest-kdeaddons-3.5.2-r1 253
+SHA256 f5eb118862fc6790d69ceb8771ddb6feb108003b6c8147c31412bea7a36b4d8b files/digest-kdeaddons-3.5.2-r1 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEeyNRAiZjviIA2XgRAmFkAJ9nl9vwBl/1L9ofwcknf2sX+PQyRACg7UP3
+PxBYztNMof9Z9Q2ZOgJCXOU=
+=aHgY
+-----END PGP SIGNATURE-----

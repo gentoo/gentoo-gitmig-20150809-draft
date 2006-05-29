@@ -1,10 +1,32 @@
-MD5 0386c96bb50733638ed60746bbea4743 ChangeLog 6851
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeaccessibility-meta-3.4.1 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeaccessibility-meta-3.4.2 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeaccessibility-meta-3.4.3 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeaccessibility-meta-3.5.2 1
-MD5 d3bdd888a8e1b0ffed94c20d97505763 kdeaccessibility-meta-3.4.1.ebuild 836
-MD5 7af52742df7cab35a7660867e9984a89 kdeaccessibility-meta-3.4.2.ebuild 849
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+EBUILD kdeaccessibility-meta-3.4.3.ebuild 850 RMD160 a97cbc3d6ae46b7bec06ce859043f5fb3341a7c3 SHA1 7a91a833ad25880f726624021ebb390f91a1235f SHA256 d82771ab6c7b983314ca745dd9d58d35edd283772126623077e6216656399461
 MD5 15a82dab65de1586261e4ba631f22648 kdeaccessibility-meta-3.4.3.ebuild 850
+RMD160 a97cbc3d6ae46b7bec06ce859043f5fb3341a7c3 kdeaccessibility-meta-3.4.3.ebuild 850
+SHA256 d82771ab6c7b983314ca745dd9d58d35edd283772126623077e6216656399461 kdeaccessibility-meta-3.4.3.ebuild 850
+EBUILD kdeaccessibility-meta-3.5.2.ebuild 853 RMD160 f07ee2a9d252c31a5e6a09675e30a46270fc1575 SHA1 3ce55029c8d48c0c8553b570cdb9768a04a3c7bc SHA256 a6f952b3075d7735f2ef4ac0dced255c73bab3efa641a376af1d4862e4f86590
 MD5 c38aa942687744905b42548689935274 kdeaccessibility-meta-3.5.2.ebuild 853
+RMD160 f07ee2a9d252c31a5e6a09675e30a46270fc1575 kdeaccessibility-meta-3.5.2.ebuild 853
+SHA256 a6f952b3075d7735f2ef4ac0dced255c73bab3efa641a376af1d4862e4f86590 kdeaccessibility-meta-3.5.2.ebuild 853
+MISC ChangeLog 7004 RMD160 b63dcb7e401fb33e3fc5eff2c1807d9a148d9601 SHA1 c6409a0f995101b098850b56efb3656e2ceb0cf4 SHA256 899723f6ebfafdff523ca3945e4a3bb8526178bdddb08f4a6334404af1ab6a8c
+MD5 eb8f7fde84aff5a371b1dd21d3bcd552 ChangeLog 7004
+RMD160 b63dcb7e401fb33e3fc5eff2c1807d9a148d9601 ChangeLog 7004
+SHA256 899723f6ebfafdff523ca3945e4a3bb8526178bdddb08f4a6334404af1ab6a8c ChangeLog 7004
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeaccessibility-meta-3.4.3 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeaccessibility-meta-3.4.3 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeaccessibility-meta-3.4.3 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeaccessibility-meta-3.5.2 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeaccessibility-meta-3.5.2 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeaccessibility-meta-3.5.2 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEeyMvAiZjviIA2XgRAs/DAJ9dnwuoOteYRmX3HyOVa8k5wwVvYACg4rr9
+HV7QnmCpVdYzlp4/gQUkUFw=
+=5r1Z
+-----END PGP SIGNATURE-----

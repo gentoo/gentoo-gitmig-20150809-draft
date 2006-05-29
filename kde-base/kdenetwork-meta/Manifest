@@ -1,10 +1,32 @@
-MD5 e11009d651176f289d59b27eed6fd13d ChangeLog 6466
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdenetwork-meta-3.4.1 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdenetwork-meta-3.4.2 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdenetwork-meta-3.4.3 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdenetwork-meta-3.5.2 1
-MD5 de32ca424d36992cd8b652d30f359048 kdenetwork-meta-3.4.1.ebuild 1259
-MD5 3cb4e2e0f3dbb9747a2b6cb6585e02de kdenetwork-meta-3.4.2.ebuild 1274
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+EBUILD kdenetwork-meta-3.4.3.ebuild 1287 RMD160 7ada29fe9a7e25b2a651dc53b170deb3ff2a32df SHA1 f8f3872c00837b151cd418cf1eb8a42b1e7985e8 SHA256 c407dced0113b727584df61fa6a8ad6de77a85545c3525f87eea74ecb817ad7a
 MD5 db5a251280d49f20b9ad4bcd50e3a553 kdenetwork-meta-3.4.3.ebuild 1287
+RMD160 7ada29fe9a7e25b2a651dc53b170deb3ff2a32df kdenetwork-meta-3.4.3.ebuild 1287
+SHA256 c407dced0113b727584df61fa6a8ad6de77a85545c3525f87eea74ecb817ad7a kdenetwork-meta-3.4.3.ebuild 1287
+EBUILD kdenetwork-meta-3.5.2.ebuild 1309 RMD160 f60e550e28a4e4e344fe3fca3d05161ea89bce91 SHA1 a86e6c9a6283fd438dd9a9c17f16f049716087ae SHA256 cb298b16fbfe8227e5a3757ae88f00ba05ab314a4e59cc56c83c497fd9960067
 MD5 c48981751783d86ce8705f2bdfb6d2c1 kdenetwork-meta-3.5.2.ebuild 1309
+RMD160 f60e550e28a4e4e344fe3fca3d05161ea89bce91 kdenetwork-meta-3.5.2.ebuild 1309
+SHA256 cb298b16fbfe8227e5a3757ae88f00ba05ab314a4e59cc56c83c497fd9960067 kdenetwork-meta-3.5.2.ebuild 1309
+MISC ChangeLog 6607 RMD160 2c85aa78df7ecb0b4c94ad97a43a93161a525782 SHA1 0fff053ebb4cd08ccdeac3b93d23ff9537c7faab SHA256 45cd69d6cc2b386a5eda231f6466c579448ed7ec929d922357ce026b98d6f105
+MD5 dd58adda69b82858edae7996f48ca67b ChangeLog 6607
+RMD160 2c85aa78df7ecb0b4c94ad97a43a93161a525782 ChangeLog 6607
+SHA256 45cd69d6cc2b386a5eda231f6466c579448ed7ec929d922357ce026b98d6f105 ChangeLog 6607
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdenetwork-meta-3.4.3 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdenetwork-meta-3.4.3 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdenetwork-meta-3.4.3 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdenetwork-meta-3.5.2 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdenetwork-meta-3.5.2 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdenetwork-meta-3.5.2 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEeyRrAiZjviIA2XgRAnKWAJoCV8khh7Vvp2uNHEdKyjUSZauY+ACg2cvL
+iD/M8B6nuFEEanAg4dU6nR0=
+=eNr4
+-----END PGP SIGNATURE-----
