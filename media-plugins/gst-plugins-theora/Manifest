@@ -1,4 +1,4 @@
-MD5 bd002186dd203afcbf7c7ae44bab8383 ChangeLog 7591
+MD5 904160b4f8794c540ab88e5c77bbcefa ChangeLog 7693
 MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-theora-0.10.4 277
 MD5 450e13cee4577b1b569d1ceefe9eabd4 files/digest-gst-plugins-theora-0.10.6 277
 MD5 d940ec4125bf9095e8113f5771fb74f8 files/digest-gst-plugins-theora-0.10.7 277
@@ -7,7 +7,7 @@ MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-theora-0.8.11 262
 MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-theora-0.8.12 262
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-theora-0.8.8 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-theora-0.8.9 71
-MD5 7775e678675a6ebcd0cf528c5b46d9c5 gst-plugins-theora-0.10.4.ebuild 450
+MD5 ed69cc40a85ab1283ed7a8a079aba486 gst-plugins-theora-0.10.4.ebuild 451
 MD5 772dbd04efe0348e54127b7fc36be532 gst-plugins-theora-0.10.6.ebuild 460
 MD5 1224e0afdb4ad10d520f62916b25c665 gst-plugins-theora-0.10.7.ebuild 462
 MD5 ab83653d5b723de6ba167b42d768c0c9 gst-plugins-theora-0.8.10.ebuild 376
