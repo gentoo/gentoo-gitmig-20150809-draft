@@ -1,12 +1,39 @@
-MD5 bd572fb28be105f97f02543a2ac583bb ChangeLog 5425
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdebindings-meta-3.3.2 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdebindings-meta-3.4.1 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdebindings-meta-3.4.2 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdebindings-meta-3.4.3 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdebindings-meta-3.5.2 1
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+EBUILD kdebindings-meta-3.3.2.ebuild 868 RMD160 3808a517cfbf7ae5a438dd9735a165327525f9de SHA1 bfe4e0798713307a2d3baa43319d8dae877adcc6 SHA256 0f8d3c70cc87c80a9593c6bce49ef18c84b292c43f2e14fd2101c377f95fbd40
 MD5 12b79deb58d7cc5f2296eef7b59fda85 kdebindings-meta-3.3.2.ebuild 868
-MD5 2730af65ee19bbce168461c9ebcf6710 kdebindings-meta-3.4.1.ebuild 870
-MD5 75a15cf3ac183925f2cbf9e9370962eb kdebindings-meta-3.4.2.ebuild 935
+RMD160 3808a517cfbf7ae5a438dd9735a165327525f9de kdebindings-meta-3.3.2.ebuild 868
+SHA256 0f8d3c70cc87c80a9593c6bce49ef18c84b292c43f2e14fd2101c377f95fbd40 kdebindings-meta-3.3.2.ebuild 868
+EBUILD kdebindings-meta-3.4.3.ebuild 932 RMD160 2365b5498ae3b63bf07a2711feb7191fb1456b6c SHA1 604eee4e74e08f7b64329dd64338d8e120d83c82 SHA256 f34abf1174064557c4535c21ec51449ae0bc5d43b6590dc462dd761bde4b6e37
 MD5 3892b4c063ddf7aab83e20cece8a0ba8 kdebindings-meta-3.4.3.ebuild 932
+RMD160 2365b5498ae3b63bf07a2711feb7191fb1456b6c kdebindings-meta-3.4.3.ebuild 932
+SHA256 f34abf1174064557c4535c21ec51449ae0bc5d43b6590dc462dd761bde4b6e37 kdebindings-meta-3.4.3.ebuild 932
+EBUILD kdebindings-meta-3.5.2.ebuild 933 RMD160 7bcbfcbef462f36997281ddbd86e2db875beeafd SHA1 2c92c8072ecaf2414f77731f3c40917b0e477ccb SHA256 8d9a3a12018dd85db46cc1b523e82db4dac477ec6fb5cd2409441c42fe458bd2
 MD5 882439bb8a35276c577b95b956b8858e kdebindings-meta-3.5.2.ebuild 933
+RMD160 7bcbfcbef462f36997281ddbd86e2db875beeafd kdebindings-meta-3.5.2.ebuild 933
+SHA256 8d9a3a12018dd85db46cc1b523e82db4dac477ec6fb5cd2409441c42fe458bd2 kdebindings-meta-3.5.2.ebuild 933
+MISC ChangeLog 5568 RMD160 d9c235573c0146fb9253087bb9e96ae885a60455 SHA1 b0a9c03b2d48ff5c7e2629e6a5a6f0e6fa6fc9d6 SHA256 3aa0bf2ab062f7ffd65acf473ff670687f30ada32ffcbf760a4081faea21c5df
+MD5 eb0a1ae269ad249f33bd3531f7588186 ChangeLog 5568
+RMD160 d9c235573c0146fb9253087bb9e96ae885a60455 ChangeLog 5568
+SHA256 3aa0bf2ab062f7ffd65acf473ff670687f30ada32ffcbf760a4081faea21c5df ChangeLog 5568
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdebindings-meta-3.3.2 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdebindings-meta-3.3.2 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdebindings-meta-3.3.2 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdebindings-meta-3.4.3 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdebindings-meta-3.4.3 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdebindings-meta-3.4.3 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdebindings-meta-3.5.2 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdebindings-meta-3.5.2 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdebindings-meta-3.5.2 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEevm7AiZjviIA2XgRAg5qAKCKWmr9CjoAiQ7D5lGOd62/YFLUxwCg6kdP
+B6v9tJVZZJEHKsY53HI4VC4=
+=FM9J
+-----END PGP SIGNATURE-----

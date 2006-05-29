@@ -1,10 +1,32 @@
-MD5 dd8890ee6e756a19d06274f123745831 ChangeLog 5846
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdetoys-meta-3.4.1 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdetoys-meta-3.4.2 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdetoys-meta-3.4.3 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdetoys-meta-3.5.2 1
-MD5 ce1f15c41a4b11e43a331d24b8ff0150 kdetoys-meta-3.4.1.ebuild 857
-MD5 ca231c20af0ae5484670b1782bb3ccd7 kdetoys-meta-3.4.2.ebuild 874
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+EBUILD kdetoys-meta-3.4.3.ebuild 875 RMD160 05d4639d2442e36864c433f99793a7a71b8fc4ef SHA1 5f401ca003d68b972d9d98b0662ea7d76d79d139 SHA256 39b8ed2ceaef516a6e8cdfb6763288415f030ef22261b2089dabac44f14df244
 MD5 89447d789b815d64254071e85a6ae772 kdetoys-meta-3.4.3.ebuild 875
+RMD160 05d4639d2442e36864c433f99793a7a71b8fc4ef kdetoys-meta-3.4.3.ebuild 875
+SHA256 39b8ed2ceaef516a6e8cdfb6763288415f030ef22261b2089dabac44f14df244 kdetoys-meta-3.4.3.ebuild 875
+EBUILD kdetoys-meta-3.5.2.ebuild 874 RMD160 b1b141463e9d09c142cb837ada20fcff233fd903 SHA1 1fbd2c70af19f11331753fd7f78fb74836faf798 SHA256 f1fad2bbff472d58e2472eb7d9cb97ee8d9fb46dfd09dd94ae4b47ccde933d91
 MD5 6dfd1b59ed8198cab5ad5a947ce364b8 kdetoys-meta-3.5.2.ebuild 874
+RMD160 b1b141463e9d09c142cb837ada20fcff233fd903 kdetoys-meta-3.5.2.ebuild 874
+SHA256 f1fad2bbff472d58e2472eb7d9cb97ee8d9fb46dfd09dd94ae4b47ccde933d91 kdetoys-meta-3.5.2.ebuild 874
+MISC ChangeLog 5981 RMD160 300c5d8ee4ad3c465b8f1d4942dc5bf87d3141fb SHA1 f32ca5597b077b3eef0647c0e7cc3190e6f66ac5 SHA256 a56de633423d1fd45c5eb76bd6512a5368a7c0f0f936b481f987027105bb5d43
+MD5 1982ea8599068b6308b703569a3ee6bf ChangeLog 5981
+RMD160 300c5d8ee4ad3c465b8f1d4942dc5bf87d3141fb ChangeLog 5981
+SHA256 a56de633423d1fd45c5eb76bd6512a5368a7c0f0f936b481f987027105bb5d43 ChangeLog 5981
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdetoys-meta-3.4.3 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdetoys-meta-3.4.3 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdetoys-meta-3.4.3 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdetoys-meta-3.5.2 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdetoys-meta-3.5.2 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdetoys-meta-3.5.2 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEewBbAiZjviIA2XgRAv8SAJ9ihDDUSs+ALspEEv4jeocvYMC2jACgs34e
+1rOh0RY0EG/tbMDLxV5E8y4=
+=O+2A
+-----END PGP SIGNATURE-----

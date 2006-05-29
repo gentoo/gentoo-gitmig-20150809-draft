@@ -1,6 +1,36 @@
-MD5 aa34435b82aad9d9f81b15cef0ded6f1 ChangeLog 4149
-MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-sounds-3.4.1 220
-MD5 5d798bbc72f84bd47d8347da83a552a2 files/digest-kdeartwork-sounds-3.5.0 71
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdeartwork-3.4.0-3.4.1.tar.xdelta 301755
+DIST kdeartwork-3.4.0.tar.bz2 18077818
+DIST kdeartwork-3.4.1.tar.bz2 18066167
+DIST kdeartwork-3.5.0.tar.bz2 16610564
+EBUILD kdeartwork-sounds-3.4.1.ebuild 447 RMD160 3d9436f72c466c52deb40d9486545b4a848e9990 SHA1 58719ef6a8a04cb8b815f240657055de8dce3166 SHA256 b70edab4e326389f72a3b04743fd5e8c6fbdc9fd42ae084960d75bddda3d8eb6
 MD5 c766cc83164c987f25b11c5cef996784 kdeartwork-sounds-3.4.1.ebuild 447
+RMD160 3d9436f72c466c52deb40d9486545b4a848e9990 kdeartwork-sounds-3.4.1.ebuild 447
+SHA256 b70edab4e326389f72a3b04743fd5e8c6fbdc9fd42ae084960d75bddda3d8eb6 kdeartwork-sounds-3.4.1.ebuild 447
+EBUILD kdeartwork-sounds-3.5.0.ebuild 450 RMD160 6d404e99c047318a0be2b73386f92cb256a622bd SHA1 ea8dc038b11b0f8a36be0d6bbc535f4ebf60313d SHA256 c9673794db992128c246f32cc3c9c6e101643e79415c7462402621184a820670
 MD5 61920795d70015b8a2f344303b9c9720 kdeartwork-sounds-3.5.0.ebuild 450
+RMD160 6d404e99c047318a0be2b73386f92cb256a622bd kdeartwork-sounds-3.5.0.ebuild 450
+SHA256 c9673794db992128c246f32cc3c9c6e101643e79415c7462402621184a820670 kdeartwork-sounds-3.5.0.ebuild 450
+MISC ChangeLog 4237 RMD160 a2475e2c8799c8aac7097af04cb7e361e505de26 SHA1 4b80165a3d9e6264017cc202cad75ad7e8538348 SHA256 b5f5e49a4b4521aa84df203f8076ded8ed1fb828d68a31117929072957c590b5
+MD5 abb3707a5dc191f1cd6a4047492b4453 ChangeLog 4237
+RMD160 a2475e2c8799c8aac7097af04cb7e361e505de26 ChangeLog 4237
+SHA256 b5f5e49a4b4521aa84df203f8076ded8ed1fb828d68a31117929072957c590b5 ChangeLog 4237
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-sounds-3.4.1 220
+RMD160 3e5302e33525d3febecd531d77d35cb3cd2fe128 files/digest-kdeartwork-sounds-3.4.1 220
+SHA256 be730128b71cbcccad3f99877dc388a7f3f3b0d0e678e0c7457b2fa749243b56 files/digest-kdeartwork-sounds-3.4.1 220
+MD5 5d798bbc72f84bd47d8347da83a552a2 files/digest-kdeartwork-sounds-3.5.0 71
+RMD160 296a8c2ceb9d34db7fe300ca9bebf27270221a0b files/digest-kdeartwork-sounds-3.5.0 71
+SHA256 f3751e7ae79bc535a6178005ffc614818c6d7b10db84cbb0fb3caac156bdd2b4 files/digest-kdeartwork-sounds-3.5.0 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEevg+AiZjviIA2XgRAgjgAJ9RC+NX8e7Fx+UP2qgknKGHtTYdhwCg4wvt
+cx5UVi9DC4u3qIUb1yP5FM0=
+=O1sX
+-----END PGP SIGNATURE-----

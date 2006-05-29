@@ -1,10 +1,34 @@
-MD5 4367b214773b1e19fbb5a9563e289e9d ChangeLog 6066
-MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-kworldclock-3.4.1 220
-MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-kworldclock-3.4.2 298
-MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-kworldclock-3.4.3 71
-MD5 a703f4c18266818b6057e09748eba62d files/digest-kdeartwork-kworldclock-3.5.2 259
-MD5 cf3349896ee1e58a53a73cf4cb4821b1 kdeartwork-kworldclock-3.4.1.ebuild 500
-MD5 cb5b9a8d02e0062330eeb83fc1dcaa57 kdeartwork-kworldclock-3.4.2.ebuild 513
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdeartwork-3.4.3.tar.bz2 18022458
+DIST kdeartwork-3.5.2.tar.bz2 16620565 RMD160 55c68134beb452c6316211f7a4fe1c0c4404a154 SHA1 12128d459cf26312769a66d3ec1935dd2cebc17d SHA256 c1df39d5eba36e5071e47c3534c3117abd91d0c9ae2b798a457fd29257218a31
+EBUILD kdeartwork-kworldclock-3.4.3.ebuild 514 RMD160 76fac973aae70a08cc06185b7b6c32f1049fca6e SHA1 4961f8c0051184999dfdd8dd199ccb14b3130314 SHA256 d30e4adb2461cb5245d38f00430a1363e965ca0c3a17ed5f79510351daf2afd7
 MD5 cc82fc53e9e390dc3d5c8aeac02bba66 kdeartwork-kworldclock-3.4.3.ebuild 514
+RMD160 76fac973aae70a08cc06185b7b6c32f1049fca6e kdeartwork-kworldclock-3.4.3.ebuild 514
+SHA256 d30e4adb2461cb5245d38f00430a1363e965ca0c3a17ed5f79510351daf2afd7 kdeartwork-kworldclock-3.4.3.ebuild 514
+EBUILD kdeartwork-kworldclock-3.5.2.ebuild 517 RMD160 fa546dbdb8da63be3a2e7aa0e0c47dff6fcf6202 SHA1 fd2ad6432242dc36ec76b4e45cf5ed99c9ced076 SHA256 28807358e563e0b48544491f5a0a9fa5406bbd22424c35a57b031c8550a34092
 MD5 4c50d021a612497c43288acc91ef7b5a kdeartwork-kworldclock-3.5.2.ebuild 517
+RMD160 fa546dbdb8da63be3a2e7aa0e0c47dff6fcf6202 kdeartwork-kworldclock-3.5.2.ebuild 517
+SHA256 28807358e563e0b48544491f5a0a9fa5406bbd22424c35a57b031c8550a34092 kdeartwork-kworldclock-3.5.2.ebuild 517
+MISC ChangeLog 6223 RMD160 3de1fc40cdfcf142c5b7d6c351bc46fbaa8b7add SHA1 4e0761b3c6f3e9bba17aaa4ac64ee748c5aea57a SHA256 0abee37909b95bd956a63c8d7e1494da14a734090d0de76dbcc1ff560dd3026a
+MD5 3d09ee8dfdc150407492552d1519adeb ChangeLog 6223
+RMD160 3de1fc40cdfcf142c5b7d6c351bc46fbaa8b7add ChangeLog 6223
+SHA256 0abee37909b95bd956a63c8d7e1494da14a734090d0de76dbcc1ff560dd3026a ChangeLog 6223
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-kworldclock-3.4.3 71
+RMD160 598a814056e62dd7fbf9d314a3cb14aee36dd815 files/digest-kdeartwork-kworldclock-3.4.3 71
+SHA256 7fa0f246c9164e90bde612cc330288e4b9f1de1131cb9d853bf08ab7bc984ae3 files/digest-kdeartwork-kworldclock-3.4.3 71
+MD5 a703f4c18266818b6057e09748eba62d files/digest-kdeartwork-kworldclock-3.5.2 259
+RMD160 f78abaabc7634910f3df6f87ffd89baf5fb1840b files/digest-kdeartwork-kworldclock-3.5.2 259
+SHA256 d29a0491904a0dd51e3fbb6f84794819177db93160bdea3043b5175331cd244c files/digest-kdeartwork-kworldclock-3.5.2 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEevftAiZjviIA2XgRAlSoAKDL1eaLvoYFktNdgT6YT1rX0vFBFgCgxp2I
+7iH0kZc6y/ogFFcH1lKwlzQ=
+=0JwL
+-----END PGP SIGNATURE-----

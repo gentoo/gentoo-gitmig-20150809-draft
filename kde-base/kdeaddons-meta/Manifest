@@ -1,10 +1,32 @@
-MD5 5cf411e4cbc7656221f79e540b6983b8 ChangeLog 8206
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeaddons-meta-3.4.1 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeaddons-meta-3.4.2 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeaddons-meta-3.4.3 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeaddons-meta-3.5.2 1
-MD5 c8bcb90d2f904bacbf363f6bc221b737 kdeaddons-meta-3.4.1.ebuild 1216
-MD5 6950192ed4daaee921df3b638c51ca50 kdeaddons-meta-3.4.2.ebuild 1243
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+EBUILD kdeaddons-meta-3.4.3.ebuild 1242 RMD160 67725ceabd223859231db8fc18094c3df5eed004 SHA1 b62f954adf0f734ab34d75f564e0b0289b3a3d59 SHA256 a684808c7b04d1bb8945190101c35b2133a3eaaf48e9a12a85fb27ac617f62a4
 MD5 c0ee95ec83c79cfcc6c94320811e716c kdeaddons-meta-3.4.3.ebuild 1242
+RMD160 67725ceabd223859231db8fc18094c3df5eed004 kdeaddons-meta-3.4.3.ebuild 1242
+SHA256 a684808c7b04d1bb8945190101c35b2133a3eaaf48e9a12a85fb27ac617f62a4 kdeaddons-meta-3.4.3.ebuild 1242
+EBUILD kdeaddons-meta-3.5.2.ebuild 1193 RMD160 0876b0d438922277ae2fe5355cb5d606fcd979b0 SHA1 024dae6e7cc22b8eb23876e295d05fbfa3011602 SHA256 25d2084c576bf75a053f034180ead37f9ae8aacb3ab5a11345f86636a4073a16
 MD5 8819053659fe273e178c9a7e7263c933 kdeaddons-meta-3.5.2.ebuild 1193
+RMD160 0876b0d438922277ae2fe5355cb5d606fcd979b0 kdeaddons-meta-3.5.2.ebuild 1193
+SHA256 25d2084c576bf75a053f034180ead37f9ae8aacb3ab5a11345f86636a4073a16 kdeaddons-meta-3.5.2.ebuild 1193
+MISC ChangeLog 8345 RMD160 5a44e4c906dfcff982fcbf2d421ec796c9e6cfab SHA1 875d1d37962d4ac1d5822f3635270ee2558e4816 SHA256 45543964efd30a545eacaebdce9e79f27b080a0bc398b32cbdf72f5ec03a374f
+MD5 fee07159e2e5adc99aa51435a562711d ChangeLog 8345
+RMD160 5a44e4c906dfcff982fcbf2d421ec796c9e6cfab ChangeLog 8345
+SHA256 45543964efd30a545eacaebdce9e79f27b080a0bc398b32cbdf72f5ec03a374f ChangeLog 8345
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeaddons-meta-3.4.3 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeaddons-meta-3.4.3 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeaddons-meta-3.4.3 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeaddons-meta-3.5.2 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeaddons-meta-3.5.2 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeaddons-meta-3.5.2 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEevZcAiZjviIA2XgRAnClAKCvSEDGxYWVZr9X4TEuk/D8xy2jvgCaA1BF
+Zx05Nv1DNyZoBulTKQ3twpw=
+=B1Zr
+-----END PGP SIGNATURE-----

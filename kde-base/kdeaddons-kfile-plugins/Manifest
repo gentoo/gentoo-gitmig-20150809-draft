@@ -1,6 +1,36 @@
-MD5 cdd39365eac2eff43800ed3245dd06cf ChangeLog 4436
-MD5 60c005ebe876a0e127dcf1083620803e files/digest-kdeaddons-kfile-plugins-3.4.1 215
-MD5 8388fec393a55f10e04a5ca2466e0dc5 files/digest-kdeaddons-kfile-plugins-3.5.0 69
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdeaddons-3.4.0-3.4.1.tar.xdelta 120597
+DIST kdeaddons-3.4.0.tar.bz2 1670919
+DIST kdeaddons-3.4.1.tar.bz2 1626243
+DIST kdeaddons-3.5.0.tar.bz2 1618786 RMD160 1c6522752697ab4f54fa877767dae6714bcb6afe SHA1 c3ccd6d54f46c8164480a17956e11033908d03ff SHA256 2b232ec558937b04191f08aa937d91c5f0d154e1ddebcc19b5630f9adf948e08
+EBUILD kdeaddons-kfile-plugins-3.4.1.ebuild 532 RMD160 6f8827d77326298b2101ed86aec46cd9f8cc704f SHA1 6c6d36252a1d1f35811b49a884b52a8aa77fa8ff SHA256 0bebf7072c8b94083c970b2937d30313a0503a9c7c0e391a404792065054b53b
 MD5 656e4adf424ce8c34cdee88370acd516 kdeaddons-kfile-plugins-3.4.1.ebuild 532
+RMD160 6f8827d77326298b2101ed86aec46cd9f8cc704f kdeaddons-kfile-plugins-3.4.1.ebuild 532
+SHA256 0bebf7072c8b94083c970b2937d30313a0503a9c7c0e391a404792065054b53b kdeaddons-kfile-plugins-3.4.1.ebuild 532
+EBUILD kdeaddons-kfile-plugins-3.5.0.ebuild 621 RMD160 67344b2b8b40f25377dac345ef5dc7baf49838eb SHA1 0d702c162985822eec3cf2025eda8d00859b7045 SHA256 53b5494c890b1a0fb858e6c74e4bf0e9f0bc19f8e25b4607e39ab0fba0f9c75a
 MD5 502a3e437f68e028f3a5ce79b16481ba kdeaddons-kfile-plugins-3.5.0.ebuild 621
+RMD160 67344b2b8b40f25377dac345ef5dc7baf49838eb kdeaddons-kfile-plugins-3.5.0.ebuild 621
+SHA256 53b5494c890b1a0fb858e6c74e4bf0e9f0bc19f8e25b4607e39ab0fba0f9c75a kdeaddons-kfile-plugins-3.5.0.ebuild 621
+MISC ChangeLog 4524 RMD160 2a059b4b616d71cf4cbfbed21ca21d02f40f5d05 SHA1 ea2ba83ad55d5c48cb162904cc850bbbb6bb8e39 SHA256 b925db13e85575b5303cc398112c08cf0016a18e7afad5cedabf1ea79f8af0ba
+MD5 7abc3e8738d12a2c8110be39fecd30fe ChangeLog 4524
+RMD160 2a059b4b616d71cf4cbfbed21ca21d02f40f5d05 ChangeLog 4524
+SHA256 b925db13e85575b5303cc398112c08cf0016a18e7afad5cedabf1ea79f8af0ba ChangeLog 4524
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 60c005ebe876a0e127dcf1083620803e files/digest-kdeaddons-kfile-plugins-3.4.1 215
+RMD160 d7f34f43e468cb2e4d7935d3c0cb7b9b9ada730b files/digest-kdeaddons-kfile-plugins-3.4.1 215
+SHA256 b84fe2088931cc38a26102f7f2482756d5286bd5ee2c8c28754b0b0c321112cd files/digest-kdeaddons-kfile-plugins-3.4.1 215
+MD5 020bb268c48fb6d47b7837885ea6ec1f files/digest-kdeaddons-kfile-plugins-3.5.0 253
+RMD160 64ff910e6d45685495add348ed7e2e062dff740e files/digest-kdeaddons-kfile-plugins-3.5.0 253
+SHA256 1a4a7b5ad7b3831682bb7db47c2defc0c331eab5f1580db1ad41136bd6d54e51 files/digest-kdeaddons-kfile-plugins-3.5.0 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEevY4AiZjviIA2XgRAml0AKCcUTqch1UJfJg87gc3SrVRUtZjeQCfeoQG
+DxWGZdu3v7zS7afjwt8ZHlQ=
+=T/Tv
+-----END PGP SIGNATURE-----

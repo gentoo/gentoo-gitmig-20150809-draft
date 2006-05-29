@@ -1,10 +1,34 @@
-MD5 1912a8a4c9875bf5065d29476f5a668d ChangeLog 6168
-MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-iconthemes-3.4.1 220
-MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-iconthemes-3.4.2 298
-MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-iconthemes-3.4.3 71
-MD5 a703f4c18266818b6057e09748eba62d files/digest-kdeartwork-iconthemes-3.5.2 259
-MD5 49c82deba802d55d2811f10d0438d9b1 kdeartwork-iconthemes-3.4.1.ebuild 435
-MD5 ceca23e226349a196bb13bb517b44830 kdeartwork-iconthemes-3.4.2.ebuild 448
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdeartwork-3.4.3.tar.bz2 18022458
+DIST kdeartwork-3.5.2.tar.bz2 16620565 RMD160 55c68134beb452c6316211f7a4fe1c0c4404a154 SHA1 12128d459cf26312769a66d3ec1935dd2cebc17d SHA256 c1df39d5eba36e5071e47c3534c3117abd91d0c9ae2b798a457fd29257218a31
+EBUILD kdeartwork-iconthemes-3.4.3.ebuild 449 RMD160 33b70f3ba6f286331294d4cb3e5222c574984080 SHA1 632d9458117c11c10a1848d4d01f579f6bbcd912 SHA256 6caaabec21c024b2ca0f434c016c813577df407294ee49dacaf4edac512f2145
 MD5 acca812510238b10e065baba8001a642 kdeartwork-iconthemes-3.4.3.ebuild 449
+RMD160 33b70f3ba6f286331294d4cb3e5222c574984080 kdeartwork-iconthemes-3.4.3.ebuild 449
+SHA256 6caaabec21c024b2ca0f434c016c813577df407294ee49dacaf4edac512f2145 kdeartwork-iconthemes-3.4.3.ebuild 449
+EBUILD kdeartwork-iconthemes-3.5.2.ebuild 452 RMD160 453ca885dc5ef84e6c40126aaf266a25c4722af1 SHA1 28d1f776cf9b04296ab0edbff9553405c6a24bc9 SHA256 c3655e23ec58f77d9bae086ea5ce066fecf55e7b0fae48ea8e1226970a62c713
 MD5 326a6927368c2c747dafe24f284dea75 kdeartwork-iconthemes-3.5.2.ebuild 452
+RMD160 453ca885dc5ef84e6c40126aaf266a25c4722af1 kdeartwork-iconthemes-3.5.2.ebuild 452
+SHA256 c3655e23ec58f77d9bae086ea5ce066fecf55e7b0fae48ea8e1226970a62c713 kdeartwork-iconthemes-3.5.2.ebuild 452
+MISC ChangeLog 6321 RMD160 c8cb2736260978f371e7cda23f90dd166744147e SHA1 8e1895a86be9e5bf363660b20f248b5910c544f6 SHA256 5eda78f32d4f7a7e7e47d32142f262c41f289c859684a00aa7d03b417181ef7d
+MD5 88ee66c5cb9948e97e8c394630911943 ChangeLog 6321
+RMD160 c8cb2736260978f371e7cda23f90dd166744147e ChangeLog 6321
+SHA256 5eda78f32d4f7a7e7e47d32142f262c41f289c859684a00aa7d03b417181ef7d ChangeLog 6321
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-iconthemes-3.4.3 71
+RMD160 598a814056e62dd7fbf9d314a3cb14aee36dd815 files/digest-kdeartwork-iconthemes-3.4.3 71
+SHA256 7fa0f246c9164e90bde612cc330288e4b9f1de1131cb9d853bf08ab7bc984ae3 files/digest-kdeartwork-iconthemes-3.4.3 71
+MD5 a703f4c18266818b6057e09748eba62d files/digest-kdeartwork-iconthemes-3.5.2 259
+RMD160 f78abaabc7634910f3df6f87ffd89baf5fb1840b files/digest-kdeartwork-iconthemes-3.5.2 259
+SHA256 d29a0491904a0dd51e3fbb6f84794819177db93160bdea3043b5175331cd244c files/digest-kdeartwork-iconthemes-3.5.2 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEevdlAiZjviIA2XgRAk9nAKDw0tJTlWv03XMXnZPd0ZsSBP/T1gCglWGp
+ccTswkP34jK88qjr9zlPGYY=
+=wBok
+-----END PGP SIGNATURE-----

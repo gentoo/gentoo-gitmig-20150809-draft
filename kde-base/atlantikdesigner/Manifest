@@ -1,10 +1,34 @@
-MD5 f60939bc3ac3ca04166272783878a43e ChangeLog 5857
-MD5 c85f14ce2dda1942f774b5c12700f4b2 atlantikdesigner-3.4.1.ebuild 492
-MD5 5aea3cb64a24ec01389c2667aff99a89 atlantikdesigner-3.4.2.ebuild 505
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdeaddons-3.4.3.tar.bz2 1593317
+DIST kdeaddons-3.5.2.tar.bz2 1640284 RMD160 bc2ce1f93b34fcb2c7662da22edf4894c6524a12 SHA1 9d47ca0accdb37aa5c1f05dccd2991119800dbc8 SHA256 2a3eea9ff6b550b90d3f51d4862f7d7b992182ac225fdac0684cc16fb990c2ec
+EBUILD atlantikdesigner-3.4.3.ebuild 506 RMD160 1518fad23fdc56cc61de70062263c43279e5b8d6 SHA1 3bc29e073ba11e6f64dd08f48cfa91f26dc6a9d0 SHA256 d02d7d4224d5743009c44cf09ceaf6bb0476b06a719d715b2cff6860a447d7d9
 MD5 144e6f5c59b28d2c8d109724417d7194 atlantikdesigner-3.4.3.ebuild 506
+RMD160 1518fad23fdc56cc61de70062263c43279e5b8d6 atlantikdesigner-3.4.3.ebuild 506
+SHA256 d02d7d4224d5743009c44cf09ceaf6bb0476b06a719d715b2cff6860a447d7d9 atlantikdesigner-3.4.3.ebuild 506
+EBUILD atlantikdesigner-3.5.2.ebuild 475 RMD160 6fd3097479a6b68ab44e03e0439cd566fdf74fa4 SHA1 8361ba1b8c9a5eb8a0a8b08e9e68b5d3df4c1b30 SHA256 5d43080825fa9c297efdf80e3f64f83e5c18193da56d82d869bba75f6315110d
 MD5 03a2c512435405a3bfe8e819f295e5ad atlantikdesigner-3.5.2.ebuild 475
-MD5 60c005ebe876a0e127dcf1083620803e files/digest-atlantikdesigner-3.4.1 215
-MD5 aef1ad04d3f153a78e0b5aa9742d6f9e files/digest-atlantikdesigner-3.4.2 291
-MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-atlantikdesigner-3.4.3 69
-MD5 191f6bee80885d21495b154d0b9b84fa files/digest-atlantikdesigner-3.5.2 253
+RMD160 6fd3097479a6b68ab44e03e0439cd566fdf74fa4 atlantikdesigner-3.5.2.ebuild 475
+SHA256 5d43080825fa9c297efdf80e3f64f83e5c18193da56d82d869bba75f6315110d atlantikdesigner-3.5.2.ebuild 475
+MISC ChangeLog 6000 RMD160 34b87aa66d24155869b5ea8a160cfbeb911f3c79 SHA1 3df047eac7b8946d2f758530805b530330a84dad SHA256 dfab4726a7200c8226f50cd97d2d313a898f5396742673d3f27fff55e97d8d68
+MD5 cc9ca0f67f901347fe374a5f13336a90 ChangeLog 6000
+RMD160 34b87aa66d24155869b5ea8a160cfbeb911f3c79 ChangeLog 6000
+SHA256 dfab4726a7200c8226f50cd97d2d313a898f5396742673d3f27fff55e97d8d68 ChangeLog 6000
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-atlantikdesigner-3.4.3 69
+RMD160 d32846177c0fadbb5676684fa4305a4d5633b08c files/digest-atlantikdesigner-3.4.3 69
+SHA256 5702f1f85638e9ae3dc7bdb8ff199d24c1ec45e26c0bf11173f5ffcb511d87b6 files/digest-atlantikdesigner-3.4.3 69
+MD5 191f6bee80885d21495b154d0b9b84fa files/digest-atlantikdesigner-3.5.2 253
+RMD160 7ceef00c96f7c9306805433a9ea566dafc129421 files/digest-atlantikdesigner-3.5.2 253
+SHA256 f5eb118862fc6790d69ceb8771ddb6feb108003b6c8147c31412bea7a36b4d8b files/digest-atlantikdesigner-3.5.2 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEeu2rAiZjviIA2XgRAopuAJ9lqsVXUvyEps32shbEKdc21nOhlACfehuL
+cpQ+S34AWHsD+Urnvop8ric=
+=ukdq
+-----END PGP SIGNATURE-----

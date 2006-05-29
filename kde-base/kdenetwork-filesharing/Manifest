@@ -1,8 +1,37 @@
-MD5 49287d7b8e567c4a63e121c2671993e9 ChangeLog 6317
-MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kdenetwork-filesharing-3.4.1 218
-MD5 1277f401bade54acfa086cf013950252 files/digest-kdenetwork-filesharing-3.4.2 296
-MD5 490109d9cea36a78cfcb0fbd933c7661 files/digest-kdenetwork-filesharing-3.5.2 256
-MD5 49580aea427534893bb110fe6a9765c1 kdenetwork-filesharing-3.4.1.ebuild 467
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdenetwork-3.4.0-3.4.1.tar.xdelta 827657
+DIST kdenetwork-3.4.0.tar.bz2 7327047
+DIST kdenetwork-3.4.1-3.4.2.tar.xdelta 342828
+DIST kdenetwork-3.4.2.tar.bz2 7392788
+DIST kdenetwork-3.5.2.tar.bz2 7524328 RMD160 7c924c66fb71af001795f55be47a9e75405742ca SHA1 7c013939cce68c31f51d66143dc2092db7db2cbd SHA256 e716de377d254fb666417a54407ff3e99c407d0507c13cda8077367f1b8b43eb
+EBUILD kdenetwork-filesharing-3.4.2.ebuild 484 RMD160 8082f30f0fb7c1684b0f2f4d71b53b5fed3b5c95 SHA1 d5f4c8677ac42cebe492a307f4eef11ed7d299e4 SHA256 157c5adc4c77bca699689da632c4e022a386d0e46f917db3593cb7c77a739ba8
 MD5 d7d433dc4e667408d70b8acf47577b80 kdenetwork-filesharing-3.4.2.ebuild 484
+RMD160 8082f30f0fb7c1684b0f2f4d71b53b5fed3b5c95 kdenetwork-filesharing-3.4.2.ebuild 484
+SHA256 157c5adc4c77bca699689da632c4e022a386d0e46f917db3593cb7c77a739ba8 kdenetwork-filesharing-3.4.2.ebuild 484
+EBUILD kdenetwork-filesharing-3.5.2.ebuild 494 RMD160 7eb4dc596b119cd4cf261ea71f2e31eb923e9dc7 SHA1 3bdc2a3a7e08ad009cf8cef42884cb5853af72bb SHA256 b266f881b09aa68ba0c199e15f3d7c4fb5fc94dc96875630f50b3d791fb44da1
 MD5 6ce8fb7f18a0b11966e1be69fe1d55d6 kdenetwork-filesharing-3.5.2.ebuild 494
+RMD160 7eb4dc596b119cd4cf261ea71f2e31eb923e9dc7 kdenetwork-filesharing-3.5.2.ebuild 494
+SHA256 b266f881b09aa68ba0c199e15f3d7c4fb5fc94dc96875630f50b3d791fb44da1 kdenetwork-filesharing-3.5.2.ebuild 494
+MISC ChangeLog 6434 RMD160 6aef2ed9e614c9b8724f1b590cd30c1fea5eadca SHA1 5c6713f37141680bc949d9be8fe7566a0c394ccf SHA256 29b3959ee87a442ade1b9c02c6126dd1fad58cbd5fa704f457348b9637a6a3cb
+MD5 474474994b375b1c4607e918bd8af764 ChangeLog 6434
+RMD160 6aef2ed9e614c9b8724f1b590cd30c1fea5eadca ChangeLog 6434
+SHA256 29b3959ee87a442ade1b9c02c6126dd1fad58cbd5fa704f457348b9637a6a3cb ChangeLog 6434
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 1277f401bade54acfa086cf013950252 files/digest-kdenetwork-filesharing-3.4.2 296
+RMD160 25f31f341409407368cbb98ec5a1bdb1a3c6f5b5 files/digest-kdenetwork-filesharing-3.4.2 296
+SHA256 7f8d2d70de0661bf1840f7d946517baf43c8f28e3514c29137023d48a32747ca files/digest-kdenetwork-filesharing-3.4.2 296
+MD5 490109d9cea36a78cfcb0fbd933c7661 files/digest-kdenetwork-filesharing-3.5.2 256
+RMD160 2e2c4d19f1af34887fbebf30e14bd3a0cffc7cdd files/digest-kdenetwork-filesharing-3.5.2 256
+SHA256 62e96a8a0d7a0612c90f34910550fd8cc4fa7dba4d787baafbf765e03edc995b files/digest-kdenetwork-filesharing-3.5.2 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEev1bAiZjviIA2XgRAkzDAKDvjRMZM/teXphhrifF0HkjpXfmDgCg4EKv
+bJovgJU+2+rQylJfe7DSzi8=
+=rFCt
+-----END PGP SIGNATURE-----

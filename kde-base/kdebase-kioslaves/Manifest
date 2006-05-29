@@ -9,31 +9,9 @@ AUX kdebase-3.4.1-configure.patch 1916 RMD160 2f326eaed73034ab535688efa0efb22cde
 MD5 51057f5a3aacb159e8d4cc4af02b00e6 files/kdebase-3.4.1-configure.patch 1916
 RMD160 2f326eaed73034ab535688efa0efb22cdedd98c5 files/kdebase-3.4.1-configure.patch 1916
 SHA256 67c6cabff4379f504d890c5305ddc28a7c05c9833ae8810481c0279f1429301b files/kdebase-3.4.1-configure.patch 1916
-DIST kdebase-3.4-kubuntu-hal.patch.gz 8340
-DIST kdebase-3.4.0-3.4.1.tar.xdelta 1089415
-DIST kdebase-3.4.0.tar.bz2 22670772
-DIST kdebase-3.4.1-3.4.2.tar.xdelta 928157
-DIST kdebase-3.4.1.tar.bz2 22433034
-DIST kdebase-3.4.2.tar.bz2 22466433
 DIST kdebase-3.4.3-kubuntu-hal.patch.gz 8441
 DIST kdebase-3.4.3.tar.bz2 22425835
-DIST kdebase-3.5.2.tar.bz2 23590820 RMD160 216ff59c49bb4fee2aa3b7d976ec40a8cccff107 SHA256 21150b7e553e83487e70e70e3d13ce107c6c5d57133b40f413807887a9e431f7
-EBUILD kdebase-kioslaves-3.4.1-r1.ebuild 962 RMD160 e8054cc276af2bfd1e72011373ed30bcc05d2d8a SHA1 9caee1fe1e1dfcde1e4bc8a635c8e67c2e67e948 SHA256 dddf87dd5a7dc2c61dd04d42fc4157ed9f12f3ca59bf9e339846a58decc14b82
-MD5 905699f5d72415ca005d2a915cb4731c kdebase-kioslaves-3.4.1-r1.ebuild 962
-RMD160 e8054cc276af2bfd1e72011373ed30bcc05d2d8a kdebase-kioslaves-3.4.1-r1.ebuild 962
-SHA256 dddf87dd5a7dc2c61dd04d42fc4157ed9f12f3ca59bf9e339846a58decc14b82 kdebase-kioslaves-3.4.1-r1.ebuild 962
-EBUILD kdebase-kioslaves-3.4.1.ebuild 895 RMD160 2ae47febedaf5283a36118ae0767ee8e2a1cfbeb SHA1 5ad8ba3013754f19717fe2de370eacfae39a9bb2 SHA256 6a54710843f00811ac26b11803ece545a8d84d34e1746a08facd887d0e6f10f8
-MD5 3196f5d7edade715c6861def61990244 kdebase-kioslaves-3.4.1.ebuild 895
-RMD160 2ae47febedaf5283a36118ae0767ee8e2a1cfbeb kdebase-kioslaves-3.4.1.ebuild 895
-SHA256 6a54710843f00811ac26b11803ece545a8d84d34e1746a08facd887d0e6f10f8 kdebase-kioslaves-3.4.1.ebuild 895
-EBUILD kdebase-kioslaves-3.4.2-r1.ebuild 1299 RMD160 f8049be1fbc0434bc5d0d3a94c4ca729aa48b8aa SHA1 0f2b781d234aeb2d8d8275c65728d19005be40af SHA256 dc5dce22d0a9917183fff91c03284268bc091c52c7bb421f26403cd3f927398e
-MD5 aa60665f6528f6da8f064764de4bfe70 kdebase-kioslaves-3.4.2-r1.ebuild 1299
-RMD160 f8049be1fbc0434bc5d0d3a94c4ca729aa48b8aa kdebase-kioslaves-3.4.2-r1.ebuild 1299
-SHA256 dc5dce22d0a9917183fff91c03284268bc091c52c7bb421f26403cd3f927398e kdebase-kioslaves-3.4.2-r1.ebuild 1299
-EBUILD kdebase-kioslaves-3.4.2.ebuild 1096 RMD160 47038076a278a1fb13115175e2acd4054772ec13 SHA1 b581a3b13ff2b27c99f6d28010f2354f8110dd5a SHA256 4a7bd2605946cdbcbcfad6172ebab757d3fe667d5a397f6941cafa1f4bbeb158
-MD5 baa5d6bb5f0bda49ce3e96283732ca46 kdebase-kioslaves-3.4.2.ebuild 1096
-RMD160 47038076a278a1fb13115175e2acd4054772ec13 kdebase-kioslaves-3.4.2.ebuild 1096
-SHA256 4a7bd2605946cdbcbcfad6172ebab757d3fe667d5a397f6941cafa1f4bbeb158 kdebase-kioslaves-3.4.2.ebuild 1096
+DIST kdebase-3.5.2.tar.bz2 23590820 RMD160 216ff59c49bb4fee2aa3b7d976ec40a8cccff107 SHA1 16cddd8766c3bd8821044fe9cce66f5291c8412b SHA256 21150b7e553e83487e70e70e3d13ce107c6c5d57133b40f413807887a9e431f7
 EBUILD kdebase-kioslaves-3.4.3.ebuild 1301 RMD160 478aa883913578b07b116d3f2d7b389e434b7d2c SHA1 8cbf19b9d46343218c84e69a882963b494633f7f SHA256 ae60ad6a774127ba56851e8faa555057789fd43225b454a022caa2ed5aa5bc28
 MD5 f72c5ad38cb757d5d9b4d50763d1c839 kdebase-kioslaves-3.4.3.ebuild 1301
 RMD160 478aa883913578b07b116d3f2d7b389e434b7d2c kdebase-kioslaves-3.4.3.ebuild 1301
@@ -42,26 +20,14 @@ EBUILD kdebase-kioslaves-3.5.2.ebuild 978 RMD160 45d716d6ed75721d9140ad7b7c154e4
 MD5 5084527ccb6b2bc9f422222e3877bca6 kdebase-kioslaves-3.5.2.ebuild 978
 RMD160 45d716d6ed75721d9140ad7b7c154e485c6cde21 kdebase-kioslaves-3.5.2.ebuild 978
 SHA256 3314bf267bc720bc95515c52795707574a0a898e478dc18d69fbb120742391f4 kdebase-kioslaves-3.5.2.ebuild 978
-MISC ChangeLog 7731 RMD160 7ca677a7ce3ed78c595453c38d4a967cb74121bb SHA1 d95edc8a79127f9a40a6d4e2eeeddc0bb50ffe0a SHA256 4169c821af141b047fd0eb9609dcd2dac75a4c971e72a0ec016f4dec5146cc09
-MD5 48196e77faddfcfbd94681cb6fe7282f ChangeLog 7731
-RMD160 7ca677a7ce3ed78c595453c38d4a967cb74121bb ChangeLog 7731
-SHA256 4169c821af141b047fd0eb9609dcd2dac75a4c971e72a0ec016f4dec5146cc09 ChangeLog 7731
+MISC ChangeLog 7949 RMD160 a9926ca620fa66d4e4d4756d6425b1adcfb4a43d SHA1 75741492d21e9178fb178c3d5ec19202fb00d7ab SHA256 c5d46444a28d4d6fbfc7618f28d4ad5327e51d9781a7e0123cb1f82a2cb73254
+MD5 1981f9e2a651ecb18ffa5b97c43d1547 ChangeLog 7949
+RMD160 a9926ca620fa66d4e4d4756d6425b1adcfb4a43d ChangeLog 7949
+SHA256 c5d46444a28d4d6fbfc7618f28d4ad5327e51d9781a7e0123cb1f82a2cb73254 ChangeLog 7949
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdebase-kioslaves-3.4.1 212
-RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-kdebase-kioslaves-3.4.1 212
-SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-kdebase-kioslaves-3.4.1 212
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdebase-kioslaves-3.4.1-r1 212
-RMD160 507b5780112807385327a808ffffb5c897cbf1f4 files/digest-kdebase-kioslaves-3.4.1-r1 212
-SHA256 a64c99717e47d1f6143f531b9767e3e022d6c789e8d5a14aaf174814cb51a21d files/digest-kdebase-kioslaves-3.4.1-r1 212
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdebase-kioslaves-3.4.2 287
-RMD160 db88376c4259165535f83f3529f0834fb2209612 files/digest-kdebase-kioslaves-3.4.2 287
-SHA256 3f1b77c90587a110ffb3a1402c6f10a87ef93bfdbc1345bb2138188a52c9cb8b files/digest-kdebase-kioslaves-3.4.2 287
-MD5 b6281505be2ad7a32d59e136fad31976 files/digest-kdebase-kioslaves-3.4.2-r1 362
-RMD160 3404f1b573885491de22a943ca9731266372bb99 files/digest-kdebase-kioslaves-3.4.2-r1 362
-SHA256 aba6c8c6962e653db2bf3fd88fe09a43c346c0248ff263bbafce4956b5eb94d6 files/digest-kdebase-kioslaves-3.4.2-r1 362
 MD5 b00bc3487e612ed4aa511ace892d5937 files/digest-kdebase-kioslaves-3.4.3 145
 RMD160 6b15d62234180bb1a6bdb93eaaf00b8e8c250831 files/digest-kdebase-kioslaves-3.4.3 145
 SHA256 17214120d785f9b7a57adde1d220b7b9cedd8d8ece850501b1695f2dd6db257f files/digest-kdebase-kioslaves-3.4.3 145
@@ -71,7 +37,7 @@ SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEdyydkT4lNIS36YERAom4AJ9DEuKORIRlY/ajCMTicaP7PhI5mwCdGa98
-jQSo+dGEFgVaUFJC8jxOzAU=
-=Gy7U
+iD8DBQFEevkHAiZjviIA2XgRApX3AKCAIYdgnS3vNOQXWQ+C1Coh8s7yIACggAQh
+GKHLw1FIJ2M7T+W0584v8+A=
+=FQTi
 -----END PGP SIGNATURE-----

@@ -1,14 +1,42 @@
-MD5 fc32c8ba4e2c8ad8de5e7b4d6b740589 ChangeLog 6082
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-konsole-3.4.1 212
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-konsole-3.4.2 287
-MD5 b334b621242eaf5a23035e870f09dea6 files/digest-konsole-3.4.3 68
-MD5 612323f8728d639ddab8f055f88070ff files/digest-konsole-3.5.2 250
-MD5 612323f8728d639ddab8f055f88070ff files/digest-konsole-3.5.2-r1 250
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX konsole-3.5.1-detach-send2all.patch 951 RMD160 e299f233a2960feb34ceea378ce80e09bebfbf33 SHA1 23d50f2e93d6bab79adfa55357edd95cdcca0de7 SHA256 7ac555c300f1de47672bdd186a1ef40eb4f0db4054861cd40aac4b87dad3133a
 MD5 568485759876c71e1165233732805315 files/konsole-3.5.1-detach-send2all.patch 951
+RMD160 e299f233a2960feb34ceea378ce80e09bebfbf33 files/konsole-3.5.1-detach-send2all.patch 951
+SHA256 7ac555c300f1de47672bdd186a1ef40eb4f0db4054861cd40aac4b87dad3133a files/konsole-3.5.1-detach-send2all.patch 951
+AUX konsole-3.5.2-session-save-crash.fix.diff 290 RMD160 77a3a44cad9071f3e4902b9ac60cc2ca80143ab8 SHA1 d3e6c71bac5a0d00acee3dc3c2b857340ba67ef1 SHA256 a0d8f7ec1542b65fe811f8f14e5be80dace5712cd86dd52964278f1ed2ecb317
 MD5 3c84180623f74d6a6ed74f7c18a5f769 files/konsole-3.5.2-session-save-crash.fix.diff 290
-MD5 6633760e033c5f04ab794e91bfdbff8f konsole-3.4.1.ebuild 392
-MD5 caded7869fdce4348fc731037bbcc504 konsole-3.4.2.ebuild 405
+RMD160 77a3a44cad9071f3e4902b9ac60cc2ca80143ab8 files/konsole-3.5.2-session-save-crash.fix.diff 290
+SHA256 a0d8f7ec1542b65fe811f8f14e5be80dace5712cd86dd52964278f1ed2ecb317 files/konsole-3.5.2-session-save-crash.fix.diff 290
+DIST kdebase-3.4.3.tar.bz2 22425835
+DIST kdebase-3.5.2.tar.bz2 23590820 RMD160 216ff59c49bb4fee2aa3b7d976ec40a8cccff107 SHA1 16cddd8766c3bd8821044fe9cce66f5291c8412b SHA256 21150b7e553e83487e70e70e3d13ce107c6c5d57133b40f413807887a9e431f7
+EBUILD konsole-3.4.3.ebuild 406 RMD160 0cc02536bf85c117a0fadf2ba6205904d167bda3 SHA1 9ab84a86dec3f14ceeb79ef39f18a9ce9424a522 SHA256 2278bbc3ba2c401ba37e870a8e2ff7650a93a8b19d628c3834f662626317b64f
 MD5 9811302868cc54800e8db391afab300a konsole-3.4.3.ebuild 406
+RMD160 0cc02536bf85c117a0fadf2ba6205904d167bda3 konsole-3.4.3.ebuild 406
+SHA256 2278bbc3ba2c401ba37e870a8e2ff7650a93a8b19d628c3834f662626317b64f konsole-3.4.3.ebuild 406
+EBUILD konsole-3.5.2-r1.ebuild 710 RMD160 d4c2bedb09d288684bf277a094b85b7ce347cf88 SHA1 a689dedadc4b271f1c1b06c5f4f1b52a27d4b5e9 SHA256 107edf20ade24b3b59a19b004faa7cdb0812720c7ae0248b47ee9e859c5fd9f9
 MD5 81d4bd6b6882bb99ebdd78c2dbf0b4b2 konsole-3.5.2-r1.ebuild 710
-MD5 8f4c65c9fc8d9aeaef78aff34c38c8c6 konsole-3.5.2.ebuild 659
+RMD160 d4c2bedb09d288684bf277a094b85b7ce347cf88 konsole-3.5.2-r1.ebuild 710
+SHA256 107edf20ade24b3b59a19b004faa7cdb0812720c7ae0248b47ee9e859c5fd9f9 konsole-3.5.2-r1.ebuild 710
+MISC ChangeLog 6230 RMD160 3cc9dea3a63b935404cc062735d9a94c8f52dd52 SHA1 84998795e77d6a0afc7747499670b93ca14ddcae SHA256 92dea9d5b96c5898ddf78c6292f7332a2c2ffa1b6efb3234ead03a1bb1d874c1
+MD5 7c108eee2f0fc4ab206c4b64924de60e ChangeLog 6230
+RMD160 3cc9dea3a63b935404cc062735d9a94c8f52dd52 ChangeLog 6230
+SHA256 92dea9d5b96c5898ddf78c6292f7332a2c2ffa1b6efb3234ead03a1bb1d874c1 ChangeLog 6230
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-konsole-3.4.3 68
+RMD160 fe4b253b0a7c2e30a2aa1d0d796dfcb11e30590a files/digest-konsole-3.4.3 68
+SHA256 2c163305cf238b4283a2263d089f3a5cdacfe053018c1fa5d8a5879593baf1a8 files/digest-konsole-3.4.3 68
+MD5 612323f8728d639ddab8f055f88070ff files/digest-konsole-3.5.2-r1 250
+RMD160 b6e5ff095263b6bdb0f28016a100b78ce0d038ae files/digest-konsole-3.5.2-r1 250
+SHA256 e5c44a3cade03e986c8babd8c9302549943c3d0da8bcd264d957ef079c4d68d0 files/digest-konsole-3.5.2-r1 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEew0CAiZjviIA2XgRAgNOAJ9OhCRqHVIKeytwKh8UJjuXT7Kf1wCgj+KG
+c3cjYAnKCbJIkGxLMEfGV8Q=
+=TFmE
+-----END PGP SIGNATURE-----
