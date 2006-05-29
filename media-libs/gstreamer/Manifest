@@ -1,4 +1,4 @@
-MD5 808d2b0111af3a6760f56ec26ac7625a ChangeLog 19142
+MD5 e22893c164f973864a4a04e6a939e191 ChangeLog 19233
 MD5 cfd2a1dab17c2a9a7fbd8340ac632cfd files/digest-gstreamer-0.10.4 256
 MD5 cde9af24b777f6fe298cd3e3f9af5871 files/digest-gstreamer-0.10.5 256
 MD5 4dabe9abdba7013922d9e4d9a52d2dd3 files/digest-gstreamer-0.10.6 256
@@ -9,7 +9,7 @@ MD5 465e9b8e2f33205128b7a69eca2e2c02 files/gstreamer-0.8.3-jade_fix.patch 1713
 MD5 eb396dce225d8cbcae77d8c7a60cae55 files/gstreamer-0.8.9-64_dataprotocol.patch 557
 MD5 5adc10998a8ad71887996272e5775022 files/gstreamer-0.8.9-fixpluginload.patch 3982
 MD5 fd63f7bf7d7eacc104d81267e447fcab files/gstreamer-0.8.9-gstqueue_lock.patch 3975
-MD5 910a9bb3c63d7a28bd7f6b2520701035 gstreamer-0.10.4.ebuild 1947
+MD5 ee579ffaeb7a2525b291c70207b17b21 gstreamer-0.10.4.ebuild 1953
 MD5 319c35e2791af3672bbf7cc7105c1c15 gstreamer-0.10.5.ebuild 1963
 MD5 0860dc0ffe9cb0c2d1a8026eb6013734 gstreamer-0.10.6.ebuild 1960
 MD5 301bbbe66729c54178c3244326b42651 gstreamer-0.8.10.ebuild 2810
