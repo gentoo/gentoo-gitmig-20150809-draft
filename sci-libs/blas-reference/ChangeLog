@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.9 2006/05/15 06:41:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.10 2006/05/29 00:06:43 spyderous Exp $
+
+*blas-reference-19940131-r3 (29 May 2006)
+
+  29 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/blas-reference-19940131-autotool.patch,
+  +blas-reference-19940131-r3.ebuild:
+  Bump to autotool the package, which makes the build work much better in
+  parallel and with gcc4.
 
   15 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
   blas-reference-19940131-r2.ebuild:
