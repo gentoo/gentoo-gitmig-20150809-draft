@@ -1,65 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX configure-fix-kdeaddons-db.patch 1612 RMD160 3b9d7431d25551c4bd36c6e3e886ef8e4558ce84 SHA1 1fa8a2479dd44a22c625cd7bca0acdb8fe08488e SHA256 afa444884d157d0513a10d0ac3652c3481eb48ef9995a4772878cd82a574f692
+MD5 5a65d21b7a97970165c406b38a138780 ChangeLog 5499
 MD5 440dc255b1315302c2dfbf0f1233f3bf files/configure-fix-kdeaddons-db.patch 1612
-RMD160 3b9d7431d25551c4bd36c6e3e886ef8e4558ce84 files/configure-fix-kdeaddons-db.patch 1612
-SHA256 afa444884d157d0513a10d0ac3652c3481eb48ef9995a4772878cd82a574f692 files/configure-fix-kdeaddons-db.patch 1612
-AUX configure-fix-kdeaddons-sdl.patch 867 RMD160 b8e228102c711610203cc9cf9cb2e36aa78dbb47 SHA1 ba8b280d83e184aa24bc06ce99106961492568ce SHA256 031347e57dbd8c83fd62c0cbcc88b755401543e6c696a2b26ba5eb58498be280
 MD5 8ad71a2139b4a330c5adfb4247b84c8c files/configure-fix-kdeaddons-sdl.patch 867
-RMD160 b8e228102c711610203cc9cf9cb2e36aa78dbb47 files/configure-fix-kdeaddons-sdl.patch 867
-SHA256 031347e57dbd8c83fd62c0cbcc88b755401543e6c696a2b26ba5eb58498be280 files/configure-fix-kdeaddons-sdl.patch 867
-AUX noatun-oblique-db-location-3.4.0_rc1.diff 625 RMD160 4f448fd3e34a0f4c4feb2f4d41a9396fe61019fe SHA1 5535cd765ea81dcb2c1489a169b8b06057cf9812 SHA256 58e7b324264a0253599d1ef917026d86e3b4bef70d087c8d2becddfeb587c00f
-MD5 6ec5a8a3f0f5ae85d431525c926c27fe files/noatun-oblique-db-location-3.4.0_rc1.diff 625
-RMD160 4f448fd3e34a0f4c4feb2f4d41a9396fe61019fe files/noatun-oblique-db-location-3.4.0_rc1.diff 625
-SHA256 58e7b324264a0253599d1ef917026d86e3b4bef70d087c8d2becddfeb587c00f files/noatun-oblique-db-location-3.4.0_rc1.diff 625
-DIST kdeaddons-3.4.0-3.4.1.tar.xdelta 120597
-DIST kdeaddons-3.4.0.tar.bz2 1670919
-DIST kdeaddons-3.4.1-3.4.2.tar.xdelta 93540
-DIST kdeaddons-3.4.1.tar.bz2 1626243
-DIST kdeaddons-3.4.2.tar.bz2 1591335
-DIST kdeaddons-3.4.3.tar.bz2 1593317
-DIST kdeaddons-3.5.2.tar.bz2 1640284 RMD160 bc2ce1f93b34fcb2c7662da22edf4894c6524a12 SHA256 2a3eea9ff6b550b90d3f51d4862f7d7b992182ac225fdac0684cc16fb990c2ec
-EBUILD noatun-plugins-3.4.1.ebuild 866 RMD160 c776c19aab8061d399a00db853aaf8761399c9ae SHA1 dc7139637a4cff997b11068b41ee31571856fc0b SHA256 4f452a983ce58c3c1ef35a132d652edf5960f09e115bdd6dac1c4662de949543
-MD5 29c3d2be2f371b987d1730480efabc4b noatun-plugins-3.4.1.ebuild 866
-RMD160 c776c19aab8061d399a00db853aaf8761399c9ae noatun-plugins-3.4.1.ebuild 866
-SHA256 4f452a983ce58c3c1ef35a132d652edf5960f09e115bdd6dac1c4662de949543 noatun-plugins-3.4.1.ebuild 866
-EBUILD noatun-plugins-3.4.2.ebuild 1216 RMD160 5661dd307490c624cadee71803539b2d23dcd3b9 SHA1 68721bd88809bf3488068ab4c47999c847fefed6 SHA256 9322e8ff7c0545fead414fa16e8196aa69500a21a71924b351de83c150e6dfce
-MD5 7aee034eac1d6a331009f0e16647a965 noatun-plugins-3.4.2.ebuild 1216
-RMD160 5661dd307490c624cadee71803539b2d23dcd3b9 noatun-plugins-3.4.2.ebuild 1216
-SHA256 9322e8ff7c0545fead414fa16e8196aa69500a21a71924b351de83c150e6dfce noatun-plugins-3.4.2.ebuild 1216
-EBUILD noatun-plugins-3.4.3.ebuild 1217 RMD160 571f1b2c083630e279f9ac09dc9b20d75c4ace2b SHA1 507738c30e79236e9fb2cd8d1cb5e264274b9bdb SHA256 d5a45ebd53d411735b3e647c81f45849ab7b68b9c6b51ff8f4d3483c6ac5c78b
-MD5 24b147cd09dea82bc9f009aa767c2f62 noatun-plugins-3.4.3.ebuild 1217
-RMD160 571f1b2c083630e279f9ac09dc9b20d75c4ace2b noatun-plugins-3.4.3.ebuild 1217
-SHA256 d5a45ebd53d411735b3e647c81f45849ab7b68b9c6b51ff8f4d3483c6ac5c78b noatun-plugins-3.4.3.ebuild 1217
-EBUILD noatun-plugins-3.5.2.ebuild 1123 RMD160 8c70ea68f75a2a3748485086b9ff6f8aba45febf SHA1 63d4da4d021a694262a128ea1bfbd6ba0176536a SHA256 bd50f63463f25ff7bc8626b8719d6e47ed0b27bea721555e30a64822726344e6
-MD5 a56c34ef48a85f0f7f68ba8f78302e9f noatun-plugins-3.5.2.ebuild 1123
-RMD160 8c70ea68f75a2a3748485086b9ff6f8aba45febf noatun-plugins-3.5.2.ebuild 1123
-SHA256 bd50f63463f25ff7bc8626b8719d6e47ed0b27bea721555e30a64822726344e6 noatun-plugins-3.5.2.ebuild 1123
-MISC ChangeLog 5401 RMD160 4fef7fb433ef59963c9c6db20b402f6f27114376 SHA1 6ac18927849b2692970a4e4fe211baf1df1ded86 SHA256 caecbc906cad3ef97bcd202db3937ed4cf896797593a718a09210653346a00ac
-MD5 00251b6c12bbe1da2046c5a373162fb7 ChangeLog 5401
-RMD160 4fef7fb433ef59963c9c6db20b402f6f27114376 ChangeLog 5401
-SHA256 caecbc906cad3ef97bcd202db3937ed4cf896797593a718a09210653346a00ac ChangeLog 5401
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-noatun-plugins-3.4.1 215
-RMD160 d7f34f43e468cb2e4d7935d3c0cb7b9b9ada730b files/digest-noatun-plugins-3.4.1 215
-SHA256 b84fe2088931cc38a26102f7f2482756d5286bd5ee2c8c28754b0b0c321112cd files/digest-noatun-plugins-3.4.1 215
 MD5 aef1ad04d3f153a78e0b5aa9742d6f9e files/digest-noatun-plugins-3.4.2 291
-RMD160 82a7f55a1506e3dc4110b3f257b0de264bbe92e0 files/digest-noatun-plugins-3.4.2 291
-SHA256 e1b286fd0afe6a640380070ffecffba03ddabf4abf2b2d59cb3c786922a54a6c files/digest-noatun-plugins-3.4.2 291
 MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-noatun-plugins-3.4.3 69
-RMD160 d32846177c0fadbb5676684fa4305a4d5633b08c files/digest-noatun-plugins-3.4.3 69
-SHA256 5702f1f85638e9ae3dc7bdb8ff199d24c1ec45e26c0bf11173f5ffcb511d87b6 files/digest-noatun-plugins-3.4.3 69
 MD5 191f6bee80885d21495b154d0b9b84fa files/digest-noatun-plugins-3.5.2 253
-RMD160 7ceef00c96f7c9306805433a9ea566dafc129421 files/digest-noatun-plugins-3.5.2 253
-SHA256 f5eb118862fc6790d69ceb8771ddb6feb108003b6c8147c31412bea7a36b4d8b files/digest-noatun-plugins-3.5.2 253
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdzyEkT4lNIS36YERApuKAJ400Z8e2g0+RnHjZvBJ4m4/AvopUQCdEUj4
-aV2Xi0iWUYjt1FvDnuwyAm8=
-=Bgg6
------END PGP SIGNATURE-----
+MD5 6ec5a8a3f0f5ae85d431525c926c27fe files/noatun-oblique-db-location-3.4.0_rc1.diff 625
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 29c3d2be2f371b987d1730480efabc4b noatun-plugins-3.4.1.ebuild 866
+MD5 7aee034eac1d6a331009f0e16647a965 noatun-plugins-3.4.2.ebuild 1216
+MD5 24b147cd09dea82bc9f009aa767c2f62 noatun-plugins-3.4.3.ebuild 1217
+MD5 cfbef4687d94f5ae6f054bf87c4d64c6 noatun-plugins-3.5.2.ebuild 1121
