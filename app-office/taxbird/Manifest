@@ -1,4 +1,6 @@
-MD5 5eae298206f00b75fd22627b04e95e10 ChangeLog 416
+MD5 00fb658f0f2dc7232543e2d7aa35f862 ChangeLog 523
 MD5 ae65362d25c2379bef5063e00905e461 files/digest-taxbird-0.6 63
+MD5 de7a6e95dcbe5179b0b1622fbdee934a files/digest-taxbird-0.7 63
 MD5 20ca8cef75bee52dd57a2efd53154477 metadata.xml 251
 MD5 394d1efc35e6feaa47cdb5a9bcb86c34 taxbird-0.6.ebuild 773
+MD5 a1560410a3b623c965de07621f0b63d3 taxbird-0.7.ebuild 771
