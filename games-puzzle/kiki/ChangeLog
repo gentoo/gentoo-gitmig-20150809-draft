@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/kiki
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/ChangeLog,v 1.9 2006/05/07 21:32:51 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/ChangeLog,v 1.10 2006/05/29 22:22:39 tupone Exp $
+
+  29 May 2006; <Tupone@gentoo.org> Manifest:
+  Fixing Manifest
 
   07 May 2006; <Tupone@gentoo.org> +files/kiki-1.0.2-gcc41.patch,
   kiki-1.0.2.ebuild:
