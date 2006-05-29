@@ -1,6 +1,10 @@
 # ChangeLog for games-util/gamepick
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/ChangeLog,v 1.5 2006/05/22 18:01:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/ChangeLog,v 1.6 2006/05/29 20:32:23 wolf31o2 Exp $
+
+  29 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> gamepick-0.35.ebuild:
+  Change KEYWORDS to -* until I can figure out what in the hell I was doing
+  with this package and how I broke it.
 
 *gamepick-0.35 (22 May 2006)
 
