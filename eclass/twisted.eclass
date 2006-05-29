@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/twisted.eclass,v 1.5 2006/05/16 16:52:49 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/twisted.eclass,v 1.6 2006/05/29 18:46:08 marienz Exp $
 #
 # Author: Marien Zwart <marienz@gentoo.org>
 #
@@ -8,6 +8,9 @@
 #
 # you should set MY_PACKAGE to something like 'Names' before inheriting.
 # you may set MY_PV to the right version (defaults to PV).
+#
+# twisted_src_test relies on the package installing twisted.names to
+# have a ${PN} of twisted-names.
 
 inherit distutils versionator eutils
 
@@ -33,6 +36,14 @@ twisted_src_test() {
 	local spath="usr/$(get_libdir)/python${PYVER}/site-packages/"
 	mkdir -p "${T}/${spath}"
 	cp -R "${ROOT}${spath}/twisted" "${T}/${spath}" || die
+
+	# We have to get rid of the existing version of this package
+	# instead of just installing on top of it, since if the existing
+	# package has tests in files the version we are installing does
+	# not have we end up running fex twisted-names-0.3.0 tests when
+	# downgrading to twisted-names-0.1.0-r1.
+	rm -rf "${T}/${spath}/${PN/-//}"
+
 	if has_version ">=dev-lang/python-2.3"; then
 		"${python}" setup.py install --root="${T}" --no-compile --force \
 			--install-lib="${spath}" || die
