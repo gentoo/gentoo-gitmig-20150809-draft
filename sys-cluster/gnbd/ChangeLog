@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/gnbd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/ChangeLog,v 1.12 2006/04/30 13:09:41 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/ChangeLog,v 1.13 2006/05/29 19:05:09 cardoe Exp $
+
+  29 May 2006; Doug Goldstein <cardoe@gentoo.org> gnbd-1.02.00.ebuild:
+  gnbd compiles against sysfsutils versions under 2.0.. adding it to DEPENDS.
 
 *gnbd-1.02.00 (30 Apr 2006)
 
