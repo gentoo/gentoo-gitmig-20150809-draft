@@ -1,23 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST kdeadmin-3.4.0-3.4.1.tar.xdelta 68985
 DIST kdeadmin-3.4.0.tar.bz2 1567785
 DIST kdeadmin-3.4.1-3.4.2.tar.xdelta 63771
 DIST kdeadmin-3.4.2.tar.bz2 1520873
-DIST kdeadmin-3.5.1.tar.bz2 2099139
+DIST kdeadmin-3.5.1.tar.bz2 2099139 RMD160 4b031a2aa04046170805b5abffcbfe59b06d0013 SHA1 2197e764a806e93a8f593717694d999483a92bfd SHA256 d0572395160aca062893136fae9552d6217e9c620d6072634b9bc9617d07c5d5
 EBUILD kdeadmin-kfile-plugins-3.4.2.ebuild 463 RMD160 02f4797d879d1ade2886786b3fc51742981836e3 SHA1 3361c5179c65265952c10ea0ef7e9eb059d23c83 SHA256 3ee2335119bfd96f2fe45880b218aae48166074c67d4686265fb6d6bf31d5097
 MD5 be0ed9d19081065b37fac24c06a560ae kdeadmin-kfile-plugins-3.4.2.ebuild 463
 RMD160 02f4797d879d1ade2886786b3fc51742981836e3 kdeadmin-kfile-plugins-3.4.2.ebuild 463
 SHA256 3ee2335119bfd96f2fe45880b218aae48166074c67d4686265fb6d6bf31d5097 kdeadmin-kfile-plugins-3.4.2.ebuild 463
-EBUILD kdeadmin-kfile-plugins-3.5.1.ebuild 465 RMD160 09313a17c4a6dd2a1eb0d5152a93d770f22a0927 SHA1 6c4cac2eb6dedfacfa46384b651b80f51805b0f9 SHA256 57c70041103b5e33cb7d9f48f19618066ebc054f6bf4743ab52976009da6bc48
-MD5 f25243dffebc40660fd76e225d2835da kdeadmin-kfile-plugins-3.5.1.ebuild 465
-RMD160 09313a17c4a6dd2a1eb0d5152a93d770f22a0927 kdeadmin-kfile-plugins-3.5.1.ebuild 465
-SHA256 57c70041103b5e33cb7d9f48f19618066ebc054f6bf4743ab52976009da6bc48 kdeadmin-kfile-plugins-3.5.1.ebuild 465
-MISC ChangeLog 5575 RMD160 bf75e2985768ea19a64e66b6a45360f0209f7ac0 SHA1 6b1755de299b33b83c60b5d85d64bd6fe4d33d3f SHA256 576f9883dade1b063242a0b16545c50f07d7a5adfd99e0259af47cf739925ade
-MD5 612b678615a39200fd2040f12144e134 ChangeLog 5575
-RMD160 bf75e2985768ea19a64e66b6a45360f0209f7ac0 ChangeLog 5575
-SHA256 576f9883dade1b063242a0b16545c50f07d7a5adfd99e0259af47cf739925ade ChangeLog 5575
+EBUILD kdeadmin-kfile-plugins-3.5.1.ebuild 462 RMD160 a4e3b919516719c6f001eb612a28b55ca9abc0d4 SHA1 bc0b7cd30981f4d403e23ba3d00245652d3a965f SHA256 40cbf09ff8e0ab57bbc633b3b9c54a595d50827d19b9db1e3ddd3ba13e9c5c5b
+MD5 3b7af079191e0dd34e66d757a82a77d7 kdeadmin-kfile-plugins-3.5.1.ebuild 462
+RMD160 a4e3b919516719c6f001eb612a28b55ca9abc0d4 kdeadmin-kfile-plugins-3.5.1.ebuild 462
+SHA256 40cbf09ff8e0ab57bbc633b3b9c54a595d50827d19b9db1e3ddd3ba13e9c5c5b kdeadmin-kfile-plugins-3.5.1.ebuild 462
+MISC ChangeLog 5692 RMD160 cd9fa27f36ab7828464028772703177e753749c4 SHA1 16ad8f8b6e67a62bb9b0991b4e883311597dcb3c SHA256 d95cfa7a6e67311f48bfcc4f63fe4adbafcf7f588f92ac703e6e3d156bb08a9f
+MD5 414146ab3408edce3241abd8d4e15007 ChangeLog 5692
+RMD160 cd9fa27f36ab7828464028772703177e753749c4 ChangeLog 5692
+SHA256 d95cfa7a6e67311f48bfcc4f63fe4adbafcf7f588f92ac703e6e3d156bb08a9f ChangeLog 5692
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -25,13 +22,6 @@ SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata
 MD5 4b92ac44ef132509b28ad5752293f1c9 files/digest-kdeadmin-kfile-plugins-3.4.2 286
 RMD160 f19bd0d5f29ecd5b357aa4e4826e5fa4b6d83783 files/digest-kdeadmin-kfile-plugins-3.4.2 286
 SHA256 ac70d6853853a3321a3dc3167e476fcc4a870bf41300da0fb45050d9efc3bfb3 files/digest-kdeadmin-kfile-plugins-3.4.2 286
-MD5 223a891a18c8ca71d7a7fb46a382f708 files/digest-kdeadmin-kfile-plugins-3.5.1 68
-RMD160 22fc0d1bc5636a0e0d644255dbd9342da7d026c1 files/digest-kdeadmin-kfile-plugins-3.5.1 68
-SHA256 c116dac50d0504b0dc6fc4b18da68abfeeb5ede009e99a6810e9c61a43ef3de6 files/digest-kdeadmin-kfile-plugins-3.5.1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEeva5AiZjviIA2XgRAmqZAJ9yGahzOvkWSDUfa+V2vFyeGpoCcgCeKcc/
-nAa2V492Je9iFdlXyIVSQy4=
-=Mq3D
------END PGP SIGNATURE-----
+MD5 2a5d559a6b0920c11b87e6ffdee46e51 files/digest-kdeadmin-kfile-plugins-3.5.1 250
+RMD160 c84d5458a1f0e87928374a4724b4af34b6003e34 files/digest-kdeadmin-kfile-plugins-3.5.1 250
+SHA256 781bb1c5de338dfdce18f5ebaf2749d3454b873eef7843581d782bbc80586584 files/digest-kdeadmin-kfile-plugins-3.5.1 250
