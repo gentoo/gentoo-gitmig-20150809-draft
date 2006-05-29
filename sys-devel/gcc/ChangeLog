@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.545 2006/05/29 00:16:25 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.546 2006/05/29 16:02:33 gmsoft Exp $
+
+  29 May 2006; Guy Martin <gmsoft@gentoo.org> gcc-3.4.4-r1.ebuild,
+  gcc-3.4.5.ebuild, gcc-3.4.5-r1.ebuild:
+  Set KEYWORDS -hppa to gcc-3.4* as it can't build a glibc on hppa 1.1
 
   29 May 2006; Mark Loeser <halcy0n@gentoo.org> gcc-3.4.6-r1.ebuild:
   Stable on x86
@@ -16,7 +20,7 @@
   27 May 2006; Mark Loeser <halcy0n@gentoo.org> gcc-4.1.1.ebuild:
   Exclude patch for pr22889; bug #110002
 
-  26 May 2006; Bryan Østergaard <kloeri@gentoo.org> gcc-3.4.6-r1.ebuild:
+  26 May 2006; Bryan Ãstergaard <kloeri@gentoo.org> gcc-3.4.6-r1.ebuild:
   Stable on alpha.
 
 *gcc-4.1.1 (25 May 2006)
@@ -95,7 +99,7 @@
   Manifest:
   Fix digest for 3.4.5-r1 patchset
 
-  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> gcc-3.4.6-r1.ebuild,
+  18 Apr 2006; Diego PettenÃ² <flameeyes@gentoo.org> gcc-3.4.6-r1.ebuild,
   gcc-4.1.0.ebuild, gcc-4.2.0_alpha20060415.ebuild:
   Add dependency over virtual/libiconv (for three series of gcc) as it's
   needed to build gcc also without nls.
@@ -115,7 +119,7 @@
   -gcc-4.2.0_alpha20060408.ebuild, +gcc-4.2.0_alpha20060415.ebuild:
   4.2 snapshot bump
 
-  12 Apr 2006; Bryan Østergaard <kloeri@gentoo.org> gcc-3.4.6.ebuild:
+  12 Apr 2006; Bryan Ãstergaard <kloeri@gentoo.org> gcc-3.4.6.ebuild:
   ~alpha 3.4.6 - solves a ld segfault in binutils when emerging gmp.
 
 *gcc-4.2.0_alpha20060408 (11 Apr 2006)
@@ -141,7 +145,7 @@
   08 Apr 2006; <nixnut@gentoo.org> gcc-3.4.6.ebuild:
   Added ~ppc
 
-  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> gcc-3.4.6.ebuild:
+  30 Mar 2006; Diego PettenÃ² <flameeyes@gentoo.org> gcc-3.4.6.ebuild:
   Add ~x86-fbsd keyword.
 
   28 Mar 2006; Mark Loeser <halcy0n@gentoo.org> gcc-3.4.5-r1.ebuild:
@@ -396,7 +400,7 @@
   Adding back the gcc-4.1 snapshots. The installation should be fixed now; bug
   #100679
 
-  31 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> gcc-3.4.4-r1.ebuild:
+  31 Oct 2005; Bryan Ãstergaard <kloeri@gentoo.org> gcc-3.4.4-r1.ebuild:
   Stable on alpha.
 
   31 Oct 2005; Mark Loeser <halcy0n@gentoo.org> gcc-4.0.2-r1.ebuild:
@@ -703,7 +707,7 @@
   work (glibc I only depend on something we can build against, not build at
   this stage). Remove my patching crud that got included by mistake.
 
-  11 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  11 May 2005; Diego PettenÃ² <flameeyes@gentoo.org>
   gcc-3.4.3.20050110-r2.ebuild, gcc-4.0.1_beta20050507.ebuild:
   Make latest gcc (3.4 and 4) depend on glibc just for glibc systems.
 
