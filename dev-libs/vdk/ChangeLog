@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/vdk
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.18 2005/10/07 18:01:45 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.19 2006/05/29 19:31:39 gustavoz Exp $
+
+*vdk-2.4.1 (29 May 2006)
+
+  29 May 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  -files/vdk-2.0.2-makefile.in.patch, -files/vdk-2.4.0-gcc3.4.patch,
+  +files/vdk-2.4-gcc3.4.patch, -vdk-2.0.2.ebuild, -vdk-2.0.2-r1.ebuild,
+  vdk-2.4.0.ebuild, +vdk-2.4.1.ebuild:
+  Cleanup old and revbump
 
   07 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> vdk-2.0.2.ebuild,
   vdk-2.0.2-r1.ebuild, vdk-2.4.0.ebuild:

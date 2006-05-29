@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0a888276c1e4a77d106063fcd81c9a25 ChangeLog 2290
 MD5 8bbcc0a70a6e499bd8539275f40e574a files/digest-vdk-2.4.0 62
 MD5 b64e64fcf7ea1c72741ce8e08c0c88c0 files/digest-vdk-2.4.1 62
@@ -5,3 +8,10 @@ MD5 c3617790721213fc5725772e45f7b02b files/vdk-2.4-gcc3.4.patch 4695
 MD5 4947ebb6ec8d86caf11db3b648b545b4 metadata.xml 226
 MD5 7019dd18924de38038136a0f3016ebc1 vdk-2.4.0.ebuild 1663
 MD5 8b067f3f42e8d5f160f623315fec8fe6 vdk-2.4.1.ebuild 1663
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEe0wvKRy60XGEcJIRAkHDAJ90fIZV/a92jXqG5LKuiPh2bYZUcgCgnFPu
+32YMgkAAuUIi5NovShAGJWs=
+=rOia
+-----END PGP SIGNATURE-----

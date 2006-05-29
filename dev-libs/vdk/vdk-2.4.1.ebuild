@@ -1,16 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.0.ebuild,v 1.10 2006/05/29 19:31:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.1.ebuild,v 1.1 2006/05/29 19:31:39 gustavoz Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A Visual Development Kit for RAD"
-SRC_URI="mirror://sourceforge/vdkbuilder/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/vdklib/${P}.tar.gz"
 HOMEPAGE="http://http://www.mariomotta.it/vdklib/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~hppa ppc sparc x86"
+KEYWORDS="~alpha ~hppa ~ppc ~sparc ~x86"
 IUSE="doc debug"
 
 DEPEND=">x11-libs/gtk+-2.4
@@ -22,7 +22,8 @@ src_compile() {
 
 	local myconf=""
 
-	if [ "$(gcc-major-version)" -ge "4" ] || [ "$(gcc-major-version)" -ge "3" -a "$(gcc-minor-version)" -ge "4" ]
+	if [ "$(gcc-major-version)" -ge "4" ] || [ "$(gcc-major-version)" -ge "3" -a
+	"$(gcc-minor-version)" -ge "4" ]
 	then
 		epatch ${FILESDIR}/vdk-2.4-gcc3.4.patch
 	fi
