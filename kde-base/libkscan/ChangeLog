@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkscan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/ChangeLog,v 1.44 2006/05/29 16:07:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/ChangeLog,v 1.45 2006/05/29 21:36:56 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> libkscan-3.5.2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -libkscan-3.4.1.ebuild,
   -libkscan-3.4.2.ebuild:

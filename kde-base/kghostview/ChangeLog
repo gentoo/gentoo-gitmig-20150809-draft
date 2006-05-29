@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kghostview
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kghostview/ChangeLog,v 1.51 2006/05/29 14:22:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kghostview/ChangeLog,v 1.52 2006/05/29 21:38:22 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> kghostview-3.5.2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kghostview-3.4.1.ebuild, -kghostview-3.4.2.ebuild:

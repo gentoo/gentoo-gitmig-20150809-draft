@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.50 2006/05/29 14:30:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.51 2006/05/29 21:19:56 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> kig-3.5.2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -kig-3.4.1.ebuild,
   -kig-3.4.1-r10.ebuild, -kig-3.4.2.ebuild, -kig-3.4.3.ebuild:

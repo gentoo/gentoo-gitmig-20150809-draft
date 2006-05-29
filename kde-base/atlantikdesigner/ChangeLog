@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/atlantikdesigner
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/atlantikdesigner/ChangeLog,v 1.43 2006/05/29 12:48:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/atlantikdesigner/ChangeLog,v 1.44 2006/05/29 20:55:49 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> atlantikdesigner-3.5.2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   -atlantikdesigner-3.4.1.ebuild, -atlantikdesigner-3.4.2.ebuild:

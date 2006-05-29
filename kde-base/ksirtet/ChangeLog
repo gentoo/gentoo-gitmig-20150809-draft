@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksirtet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirtet/ChangeLog,v 1.43 2006/05/29 15:27:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirtet/ChangeLog,v 1.44 2006/05/29 21:27:11 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> ksirtet-3.5.2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -ksirtet-3.4.1.ebuild,
   -ksirtet-3.4.2.ebuild:
