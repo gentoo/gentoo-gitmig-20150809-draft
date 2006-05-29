@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.62 2006/05/26 17:08:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.63 2006/05/29 21:29:57 blubb Exp $
+
+  29 May 2006; Simon Stelling <blubb@gentoo.org> libfwbuilder-2.0.12.ebuild:
+  stable on amd64
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> libfwbuilder-2.0.12.ebuild:
   Stable on ppc64 (bug #130172)
