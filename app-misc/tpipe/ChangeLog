@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/tpipe
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tpipe/ChangeLog,v 1.1 2006/05/29 21:53:57 robbat2 Exp $
+
+*tpipe-1.6 (29 May 2006)
+
+  29 May 2006; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +tpipe-1.6.ebuild:
+  Initial commit. Based on ebuild submitted by Moshe Kaminsky
+  <kaminsky@math.huji.ac.il> in bug #50184.
+
