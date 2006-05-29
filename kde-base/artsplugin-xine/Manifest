@@ -1,6 +1,26 @@
-MD5 bf99619c485a1ddd73cebf12b3dd23fd ChangeLog 5245
+DIST kdemultimedia-3.4.0-3.4.1.tar.xdelta 277869
+DIST kdemultimedia-3.4.0.tar.bz2 5581865
+DIST kdemultimedia-3.4.1.tar.bz2 5547552
+DIST kdemultimedia-3.5.2.tar.bz2 6272386 RMD160 4f6fcb790e63f4af7a309677babd5e2ed938514f SHA1 68e5e24709a2c06777bb3f12fc76e733f5896c5d SHA256 01562af68008c10c04346a94d0dea7cedcb77673c0b7cd5cfc74360bf309a2f8
+EBUILD artsplugin-xine-3.4.1.ebuild 634 RMD160 7d11b3bd52b5e8b7728fd63655d5ce35af8842c4 SHA1 b23225d201fda2abc9dbb1e591d5b2b96bd1faf9 SHA256 1bab073cd21fc4fe7c6a36066e59d8cc4e0e15a51153fb250aafaaa03da062c3
 MD5 ce3560c013e26f51a29813d10b485c18 artsplugin-xine-3.4.1.ebuild 634
-MD5 886473d54f3732304bd877214a25729d artsplugin-xine-3.5.2.ebuild 649
-MD5 a42e89d9f8f16a0854b5e5ae91b4db9d files/digest-artsplugin-xine-3.4.1 227
-MD5 c6f3f23fcb5a1fa806c5073f45b26b59 files/digest-artsplugin-xine-3.5.2 265
+RMD160 7d11b3bd52b5e8b7728fd63655d5ce35af8842c4 artsplugin-xine-3.4.1.ebuild 634
+SHA256 1bab073cd21fc4fe7c6a36066e59d8cc4e0e15a51153fb250aafaaa03da062c3 artsplugin-xine-3.4.1.ebuild 634
+EBUILD artsplugin-xine-3.5.2.ebuild 646 RMD160 013dd1fa1ebe7b65155f0fc8a95906d545a541fa SHA1 e74c8858f1bd3a66bc77eb51943009a25bb6d1c7 SHA256 a990b38f340f11d14622ba53ec87b3a3297c4658524dddd2751c8345091c324f
+MD5 a67154473bb8bc34f44adeb82a0f915a artsplugin-xine-3.5.2.ebuild 646
+RMD160 013dd1fa1ebe7b65155f0fc8a95906d545a541fa artsplugin-xine-3.5.2.ebuild 646
+SHA256 a990b38f340f11d14622ba53ec87b3a3297c4658524dddd2751c8345091c324f artsplugin-xine-3.5.2.ebuild 646
+MISC ChangeLog 5355 RMD160 afc0d47e62ec4db82737f75ee019b428b99baddb SHA1 fec896139d64e6611d4f2313ed6404b40c1038cb SHA256 3525f4a51c2f6ce07e91cf668db3c8fec298be56f339d390392a2de8ccca8cf4
+MD5 f81bc06f681268289fbd7b4fbb41473d ChangeLog 5355
+RMD160 afc0d47e62ec4db82737f75ee019b428b99baddb ChangeLog 5355
+SHA256 3525f4a51c2f6ce07e91cf668db3c8fec298be56f339d390392a2de8ccca8cf4 ChangeLog 5355
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 a42e89d9f8f16a0854b5e5ae91b4db9d files/digest-artsplugin-xine-3.4.1 227
+RMD160 51c6e3d4dbe2615ec02022a0590ed7eee43ce433 files/digest-artsplugin-xine-3.4.1 227
+SHA256 b8955dadf5c1048bcf408d70a5695fa6e302e27175154bd6d0dbdd6fead51381 files/digest-artsplugin-xine-3.4.1 227
+MD5 c6f3f23fcb5a1fa806c5073f45b26b59 files/digest-artsplugin-xine-3.5.2 265
+RMD160 5e81c0b91adc803bf7923ec3176b9ff50217ed22 files/digest-artsplugin-xine-3.5.2 265
+SHA256 da5960a94d94974711cce49b9e15a2465e392feb2dd48db846adce8d9e02d864 files/digest-artsplugin-xine-3.5.2 265

@@ -1,6 +1,26 @@
-MD5 f650888e22ca4cfff81cff1c2cfdda62 ChangeLog 4581
+DIST kdemultimedia-3.4.0-3.4.1.tar.xdelta 277869
+DIST kdemultimedia-3.4.0.tar.bz2 5581865
+DIST kdemultimedia-3.4.1.tar.bz2 5547552
+DIST kdemultimedia-3.5.0.tar.bz2 5519386
+EBUILD artsplugin-audiofile-3.4.1.ebuild 648 RMD160 b56aa0d7105ed830e5a251606db5ecf012499668 SHA1 5dc655b916b4baee201b93327af9719c541c25ba SHA256 9136ff7f6be171d839285a0a28950e373fe6ec4e6ae8288bd6e8179d235e02de
 MD5 3e1414c510bd768a2d3d58d6ebf9f92c artsplugin-audiofile-3.4.1.ebuild 648
-MD5 8f9c97f6b95ace9e69cb35d9a9b1e78c artsplugin-audiofile-3.5.0.ebuild 666
-MD5 a42e89d9f8f16a0854b5e5ae91b4db9d files/digest-artsplugin-audiofile-3.4.1 227
-MD5 e3784b0621b80bc67e95d6226fd30369 files/digest-artsplugin-audiofile-3.5.0 73
+RMD160 b56aa0d7105ed830e5a251606db5ecf012499668 artsplugin-audiofile-3.4.1.ebuild 648
+SHA256 9136ff7f6be171d839285a0a28950e373fe6ec4e6ae8288bd6e8179d235e02de artsplugin-audiofile-3.4.1.ebuild 648
+EBUILD artsplugin-audiofile-3.5.0.ebuild 663 RMD160 94b7c9587215a2eda615ab12004fec2086f8830c SHA1 3ccff167b8dac4c1f51151e8680581763700b2f9 SHA256 5e887a32c83c8ad75124017273bb639329bc06c60b9490bdec0aebf9567127ef
+MD5 c7bd5254543824a79ffc9d0a025ef62e artsplugin-audiofile-3.5.0.ebuild 663
+RMD160 94b7c9587215a2eda615ab12004fec2086f8830c artsplugin-audiofile-3.5.0.ebuild 663
+SHA256 5e887a32c83c8ad75124017273bb639329bc06c60b9490bdec0aebf9567127ef artsplugin-audiofile-3.5.0.ebuild 663
+MISC ChangeLog 4698 RMD160 272369bb44def80ef03c55988b496d5f94fb4835 SHA1 082c9e55abf607d971d9e8efda5336ed8c06ae85 SHA256 7b8f0e10f2125edab522c9dd36161d8b2a86130b794f77a7234ca21577487463
+MD5 df20411b06be024b51355e3500a8aceb ChangeLog 4698
+RMD160 272369bb44def80ef03c55988b496d5f94fb4835 ChangeLog 4698
+SHA256 7b8f0e10f2125edab522c9dd36161d8b2a86130b794f77a7234ca21577487463 ChangeLog 4698
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 a42e89d9f8f16a0854b5e5ae91b4db9d files/digest-artsplugin-audiofile-3.4.1 227
+RMD160 51c6e3d4dbe2615ec02022a0590ed7eee43ce433 files/digest-artsplugin-audiofile-3.4.1 227
+SHA256 b8955dadf5c1048bcf408d70a5695fa6e302e27175154bd6d0dbdd6fead51381 files/digest-artsplugin-audiofile-3.4.1 227
+MD5 e3784b0621b80bc67e95d6226fd30369 files/digest-artsplugin-audiofile-3.5.0 73
+RMD160 83fa8dd19f40c8fe320ad48c9dead36103fc2a05 files/digest-artsplugin-audiofile-3.5.0 73
+SHA256 d820d31e6020bc01706b8a240f639cae757e994ff0d5e5481151c21da38408ea files/digest-artsplugin-audiofile-3.5.0 73
