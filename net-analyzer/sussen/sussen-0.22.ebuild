@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.21.ebuild,v 1.3 2006/05/29 17:07:47 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.22.ebuild,v 1.1 2006/05/29 17:07:47 pva Exp $
 
 inherit gnome2 mono autotools
 
@@ -26,13 +26,6 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	eautoreconf || die
-}
-
 src_compile () {
 	econf ${myconf} || die "./configure failed"
 	LANG=C emake -j1 || die
@@ -48,7 +41,7 @@ src_install () {
 	einfo "the command line. Use GNOME panel to invoke it."
 	einfo "You can also run it as the tray icon: sussen-applet --tray-icon"
 	echo
-	ewarn "sussen-editor is still work in progress and most things are not yet"
-	ewarn "imlemented!"
+	ewarn "sussen-editor is still work in progress. Just basic functionality is"
+	ewarn "working (New, Save, Execute)."
 	echo
 }
