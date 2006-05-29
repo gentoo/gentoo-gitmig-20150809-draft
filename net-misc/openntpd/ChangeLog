@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.25 2006/03/31 21:48:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.26 2006/05/29 13:57:39 bangert Exp $
+
+*openntpd-3.9_p1 (29 May 2006)
+
+  29 May 2006; Thilo Bangert <bangert@gentoo.org> metadata.xml,
+  +openntpd-3.9_p1.ebuild:
+  assumed maintainership - version bump (thanks Hack Kampbjorn)
+  added longdescription
 
   31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> openntpd-3.7_p1.ebuild:
   Add ~x86-fbsd keyword.
