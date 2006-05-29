@@ -1,34 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST kdeaccessibility-3.4.3.tar.bz2 7414953
-DIST kdeaccessibility-3.5.2.tar.bz2 8489866 RMD160 542bf0c725d4a5e1434cd7cc1ac04369be98e1f8 SHA1 85fbf169cdcbcba6fc380ceeeb5067724aeb391b SHA256 968074ddb58a2772de75bf63b6dd1cd58a41aa2ff20ae4909e5595dc65e6767a
-EBUILD kdeaccessibility-iconthemes-3.4.3.ebuild 500 RMD160 cf18e1e682a56636fd2fa011c1d501de234c429e SHA1 651f5e6401bc4748d72d5557439499d0ff84cb02 SHA256 810de08150e3b961949c6c2648bb70df90d7de705816f3041082968f7dcb705b
-MD5 aa703dd9b2e771796a227a7a47eaf840 kdeaccessibility-iconthemes-3.4.3.ebuild 500
-RMD160 cf18e1e682a56636fd2fa011c1d501de234c429e kdeaccessibility-iconthemes-3.4.3.ebuild 500
-SHA256 810de08150e3b961949c6c2648bb70df90d7de705816f3041082968f7dcb705b kdeaccessibility-iconthemes-3.4.3.ebuild 500
-EBUILD kdeaccessibility-iconthemes-3.5.2.ebuild 505 RMD160 c8507cd4af9c198a679f3f70cab98b7467357e9d SHA1 ef52e135404d1cbe937b0f24e775aab0554c91e7 SHA256 a0742f630f1fa9d8580850bca5ea6d06c410f9b0dca959a4288659ddd07e57d6
-MD5 4d2bec52fe5448c434c42a5183172185 kdeaccessibility-iconthemes-3.5.2.ebuild 505
-RMD160 c8507cd4af9c198a679f3f70cab98b7467357e9d kdeaccessibility-iconthemes-3.5.2.ebuild 505
-SHA256 a0742f630f1fa9d8580850bca5ea6d06c410f9b0dca959a4288659ddd07e57d6 kdeaccessibility-iconthemes-3.5.2.ebuild 505
-MISC ChangeLog 6263 RMD160 7474482a9e244a521df44ba09cd3187e7b2e1b11 SHA1 d3fb950b8bfcf1df02b8da106fd6de2f59e93682 SHA256 aee5b22e08386abbe3c485acc450fc611c8ad4d59667ffc00025d0578cdca1b0
-MD5 6d1a2600a08f07f94aa895923d19d4bb ChangeLog 6263
-RMD160 7474482a9e244a521df44ba09cd3187e7b2e1b11 ChangeLog 6263
-SHA256 aee5b22e08386abbe3c485acc450fc611c8ad4d59667ffc00025d0578cdca1b0 ChangeLog 6263
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 57f504fe05239c165a0e39d5ea00719d ChangeLog 6373
 MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kdeaccessibility-iconthemes-3.4.3 76
-RMD160 32a1cb8edf191e440a47fd7db89a38888fd45e42 files/digest-kdeaccessibility-iconthemes-3.4.3 76
-SHA256 9d11d9846d5c715731ba94721350c984a05a412cf522c2fe4ac8e64a079029c9 files/digest-kdeaccessibility-iconthemes-3.4.3 76
 MD5 2c7fe1ef1dceba63787773e4e12798cf files/digest-kdeaccessibility-iconthemes-3.5.2 274
-RMD160 8ed7a40695310d0bba199b2502351f34b5cf8f4b files/digest-kdeaccessibility-iconthemes-3.5.2 274
-SHA256 052cacf7cb87717c4f1ecd0188f8dc1d8e56117ae51b92fa3750b2e1775e6c24 files/digest-kdeaccessibility-iconthemes-3.5.2 274
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEevXMAiZjviIA2XgRAiErAKDxDqTke+a2soD8992HDDFxPt+fKgCfR3r8
-hKdEPb+dJ+SevvcoToUr+0w=
-=R9v9
------END PGP SIGNATURE-----
+MD5 aa703dd9b2e771796a227a7a47eaf840 kdeaccessibility-iconthemes-3.4.3.ebuild 500
+MD5 cb38f3554d8cc12f602a0369af5d76ec kdeaccessibility-iconthemes-3.5.2.ebuild 503
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
