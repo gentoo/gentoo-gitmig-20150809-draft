@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-xkb/gkrellm-xkb-1.05.ebuild,v 1.2 2005/09/02 19:22:32 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-xkb/gkrellm-xkb-1.05.ebuild,v 1.3 2006/05/29 23:10:48 robbat2 Exp $
 
 DESCRIPTION="XKB keyboard switcher for gkrellm2"
 HOMEPAGE="http://sweb.cz/tripie/gkrellm/xkb/"
@@ -8,7 +8,7 @@ SRC_URI="http://sweb.cz/tripie/gkrellm/xkb/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND=">=app-admin/gkrellm-2"

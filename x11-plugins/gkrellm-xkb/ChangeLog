@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-xkb
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-xkb/ChangeLog,v 1.2 2005/09/02 19:22:32 ticho Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-xkb/ChangeLog,v 1.3 2006/05/29 23:10:48 robbat2 Exp $
+
+  29 May 2006; Robin H. Johnson <robbat2@gentoo.org>
+  gkrellm-xkb-1.05.ebuild:
+  Add ~amd64 after compile test as requested by bug #33152.
 
   02 Sep 2005; Andrej Kacian <ticho@gentoo.org> gkrellm-xkb-1.05.ebuild:
   Stable on x86.
