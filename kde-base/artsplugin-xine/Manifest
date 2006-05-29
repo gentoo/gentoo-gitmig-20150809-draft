@@ -1,36 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST kdemultimedia-3.4.0-3.4.1.tar.xdelta 277869
-DIST kdemultimedia-3.4.0.tar.bz2 5581865
-DIST kdemultimedia-3.4.1.tar.bz2 5547552
-DIST kdemultimedia-3.5.2.tar.bz2 6272386 RMD160 4f6fcb790e63f4af7a309677babd5e2ed938514f SHA1 68e5e24709a2c06777bb3f12fc76e733f5896c5d SHA256 01562af68008c10c04346a94d0dea7cedcb77673c0b7cd5cfc74360bf309a2f8
-EBUILD artsplugin-xine-3.4.1.ebuild 634 RMD160 7d11b3bd52b5e8b7728fd63655d5ce35af8842c4 SHA1 b23225d201fda2abc9dbb1e591d5b2b96bd1faf9 SHA256 1bab073cd21fc4fe7c6a36066e59d8cc4e0e15a51153fb250aafaaa03da062c3
+MD5 bf99619c485a1ddd73cebf12b3dd23fd ChangeLog 5245
 MD5 ce3560c013e26f51a29813d10b485c18 artsplugin-xine-3.4.1.ebuild 634
-RMD160 7d11b3bd52b5e8b7728fd63655d5ce35af8842c4 artsplugin-xine-3.4.1.ebuild 634
-SHA256 1bab073cd21fc4fe7c6a36066e59d8cc4e0e15a51153fb250aafaaa03da062c3 artsplugin-xine-3.4.1.ebuild 634
-EBUILD artsplugin-xine-3.5.2.ebuild 651 RMD160 cdf26ec6f01c2a4dcad1a98ded8a7e906c98652e SHA1 5171782de5438e5ade81ae93a2c06ae7d6731d16 SHA256 cda1a1d0de254dd8a7f3dcdaec21ba715efe3305f6bdf6db52a108b249c50814
-MD5 9a2908737d146d834494066b9bb03d6a artsplugin-xine-3.5.2.ebuild 651
-RMD160 cdf26ec6f01c2a4dcad1a98ded8a7e906c98652e artsplugin-xine-3.5.2.ebuild 651
-SHA256 cda1a1d0de254dd8a7f3dcdaec21ba715efe3305f6bdf6db52a108b249c50814 artsplugin-xine-3.5.2.ebuild 651
-MISC ChangeLog 5147 RMD160 8328d1f43a68d8487e66b280e5a8c242093f7327 SHA1 218c94b922350be688ea83da5ebdf29137153a5f SHA256 e70dad114e47a23595f07be14ee63ff147a81607be3b9b31622f836ed967e159
-MD5 7a4590ef314f42cd2ee2ad77cd01bacc ChangeLog 5147
-RMD160 8328d1f43a68d8487e66b280e5a8c242093f7327 ChangeLog 5147
-SHA256 e70dad114e47a23595f07be14ee63ff147a81607be3b9b31622f836ed967e159 ChangeLog 5147
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 886473d54f3732304bd877214a25729d artsplugin-xine-3.5.2.ebuild 649
 MD5 a42e89d9f8f16a0854b5e5ae91b4db9d files/digest-artsplugin-xine-3.4.1 227
-RMD160 51c6e3d4dbe2615ec02022a0590ed7eee43ce433 files/digest-artsplugin-xine-3.4.1 227
-SHA256 b8955dadf5c1048bcf408d70a5695fa6e302e27175154bd6d0dbdd6fead51381 files/digest-artsplugin-xine-3.4.1 227
 MD5 c6f3f23fcb5a1fa806c5073f45b26b59 files/digest-artsplugin-xine-3.5.2 265
-RMD160 5e81c0b91adc803bf7923ec3176b9ff50217ed22 files/digest-artsplugin-xine-3.5.2 265
-SHA256 da5960a94d94974711cce49b9e15a2465e392feb2dd48db846adce8d9e02d864 files/digest-artsplugin-xine-3.5.2 265
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEeu1ZAiZjviIA2XgRAi78AKDcWhs1BOXdo4/sMmCDyIKk0rsF2gCfZRu+
-gyTPsoKGgegzrj7f998kfc0=
-=Mrj3
------END PGP SIGNATURE-----
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
