@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.22 2006/04/02 23:32:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.23 2006/05/29 21:58:25 kumba Exp $
+
+  29 May 2006; Joshua Kinard <kumba@gentoo.org> autoconf-wrapper-3.2.ebuild:
+  Marking stable on mips to plug a catalyst stage3 build error (autom4te not
+  found for libtool).
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   autoconf-wrapper-3-r1.ebuild, autoconf-wrapper-3.2.ebuild:
