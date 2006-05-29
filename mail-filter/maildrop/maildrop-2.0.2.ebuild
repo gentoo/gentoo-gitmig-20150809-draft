@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.2.ebuild,v 1.2 2006/04/12 00:35:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.2.ebuild,v 1.3 2006/05/29 10:28:08 pauldv Exp $
 
 inherit eutils flag-o-matic
 
@@ -48,7 +48,7 @@ src_unpack() {
 	if use gdbm ; then
 		use berkdb && einfo "Both gdbm and berkdb selected. Using gdbm."
 	elif use berkdb ; then
-			epatch "${FILESDIR}"/${PN}-1.8.0-db4.patch
+			epatch "${FILESDIR}"/${PN}-1.8.0-db4-r1.patch
 			cd "${S}"/bdbobj
 			libtoolize --copy --force
 			WANT_AUTOCONF=2.59 autoconf || die "recreate configure failed (bdbobj)"

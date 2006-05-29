@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.56 2006/03/01 22:27:19 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.57 2006/05/29 10:28:08 pauldv Exp $
+
+  29 May 2006; <pauldv@gentoo.org> +files/maildrop-1.8.0-db4-r1.patch,
+  maildrop-2.0.2.ebuild:
+  Make the checking of db libraries compatible with db-4.4 and db-4.3. 
+  Fixes bug #124982
 
 *maildrop-2.0.2 (01 Mar 2006)
 

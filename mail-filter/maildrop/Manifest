@@ -1,9 +1,73 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 325f70e63c49a89c01c87c6d1c753cea ChangeLog 14322
-RMD160 c32726a4a9c5821490a5849ebbb9cab6714bb42d ChangeLog 14322
-SHA256 3dc4162de3006ec39f60f6ad72c6a0dd01a0c18181dc0c3c7712f18c35fe4838 ChangeLog 14322
+AUX maildrop-1.7.0-0x0B-fix.patch 525 RMD160 db7547cc0800d2e502cc18c012c69fe6a588d087 SHA1 d393d2dcf5ff582fbfeb9bfeb358c4e73d06972a SHA256 2ac802ab86b82ea2634e98856c87e16491a67b69d198c35f222472e85054197b
+MD5 54e776919d1cd1729e5c6c1f27c40444 files/maildrop-1.7.0-0x0B-fix.patch 525
+RMD160 db7547cc0800d2e502cc18c012c69fe6a588d087 files/maildrop-1.7.0-0x0B-fix.patch 525
+SHA256 2ac802ab86b82ea2634e98856c87e16491a67b69d198c35f222472e85054197b files/maildrop-1.7.0-0x0B-fix.patch 525
+AUX maildrop-1.7.0-db4-bdbobj_configure.in.patch 1211 RMD160 a38bb840e311b2c115f12e8111a9be131166fc25 SHA1 cd82555aac68d22a12626206ff89e3e7ebb34d9c SHA256 26de11d01c61c9c165e74137efce6aeafe18a5695e8ee80f9814ddb7c816dd11
+MD5 532cc225eb7ae73b01639168857445be files/maildrop-1.7.0-db4-bdbobj_configure.in.patch 1211
+RMD160 a38bb840e311b2c115f12e8111a9be131166fc25 files/maildrop-1.7.0-db4-bdbobj_configure.in.patch 1211
+SHA256 26de11d01c61c9c165e74137efce6aeafe18a5695e8ee80f9814ddb7c816dd11 files/maildrop-1.7.0-db4-bdbobj_configure.in.patch 1211
+AUX maildrop-1.7.0-db4-configure.in.patch 1290 RMD160 ccb29cb4378fc0e1468171bee8c0dba4661f3bff SHA1 e63287e058250e50b17e2e77cbd4b0a999b335c1 SHA256 33274eb1d0b675a3f7cd711c681df37b69948a8451b8157d5524b8b9a3e07b1c
+MD5 72eeead0d2cb72de0ee2571af5c63bd5 files/maildrop-1.7.0-db4-configure.in.patch 1290
+RMD160 ccb29cb4378fc0e1468171bee8c0dba4661f3bff files/maildrop-1.7.0-db4-configure.in.patch 1290
+SHA256 33274eb1d0b675a3f7cd711c681df37b69948a8451b8157d5524b8b9a3e07b1c files/maildrop-1.7.0-db4-configure.in.patch 1290
+AUX maildrop-1.8.0-db4-r1.patch 2529 RMD160 bf6e31be2227b53f5e7cbc5838b819f81dcd62d9 SHA1 4ba67fa469c422deef77c461e0ea33d97c511687 SHA256 1e5eef7afba0c496e8e6ee627bb8ccf182ffd39ea4c8f8fc8f9723fce97c51ae
+MD5 903a0ac519b0a5a2f988e001072a5736 files/maildrop-1.8.0-db4-r1.patch 2529
+RMD160 bf6e31be2227b53f5e7cbc5838b819f81dcd62d9 files/maildrop-1.8.0-db4-r1.patch 2529
+SHA256 1e5eef7afba0c496e8e6ee627bb8ccf182ffd39ea4c8f8fc8f9723fce97c51ae files/maildrop-1.8.0-db4-r1.patch 2529
+AUX maildrop-1.8.0-db4.patch 2501 RMD160 75957b5fd95f6d434be35750de3a51881eff03fa SHA1 7d88e430cb777d904b9bb6e5c68be40d12ea8fe7 SHA256 4a18da4c712246c019b68a5d3f947b8ab1659dc07d155f877d1d99549ceb3b27
+MD5 2f8014fea76e32d9bb682d00ee5ce7c7 files/maildrop-1.8.0-db4.patch 2501
+RMD160 75957b5fd95f6d434be35750de3a51881eff03fa files/maildrop-1.8.0-db4.patch 2501
+SHA256 4a18da4c712246c019b68a5d3f947b8ab1659dc07d155f877d1d99549ceb3b27 files/maildrop-1.8.0-db4.patch 2501
+AUX maildrop-1.8.1-disable-fam.patch 2511 RMD160 3fc7bf21d425c6e676475458c99a5ed2d4e93469 SHA1 7b6148b485bbc0379fa849a8af2706b93ea22432 SHA256 e4621bbe990d7a90d703e7a8b8cf07bb59655a22a96e62c275352d28c79684a3
+MD5 e7efb3052fe6605244b78179990197f0 files/maildrop-1.8.1-disable-fam.patch 2511
+RMD160 3fc7bf21d425c6e676475458c99a5ed2d4e93469 files/maildrop-1.8.1-disable-fam.patch 2511
+SHA256 e4621bbe990d7a90d703e7a8b8cf07bb59655a22a96e62c275352d28c79684a3 files/maildrop-1.8.1-disable-fam.patch 2511
+AUX maildroprc 58 RMD160 1d53d6c05cb809bb9d637ae347d9dee1362f1b09 SHA1 a2fd605991606a3bf89296f2d3f3a5f7a7327aba SHA256 2feec7b63d9b3fae442ddab96810929ce4080871c31a1f23401cd3b61d00add1
+MD5 c9c1f6d4020a5fd19162f20c537eb5cf files/maildroprc 58
+RMD160 1d53d6c05cb809bb9d637ae347d9dee1362f1b09 files/maildroprc 58
+SHA256 2feec7b63d9b3fae442ddab96810929ce4080871c31a1f23401cd3b61d00add1 files/maildroprc 58
+DIST maildrop-1.7.0.20040907.tar.bz2 1210399
+DIST maildrop-1.7.0.tar.bz2 1209721
+DIST maildrop-1.8.0.tar.bz2 2013203
+DIST maildrop-1.8.1.tar.bz2 2014670
+DIST maildrop-2.0.1.tar.bz2 2105424
+DIST maildrop-2.0.2.tar.bz2 2139549 RMD160 7b2bd7fc0b3d9e7f8cefd9236e7e387d9d5ae1ce SHA1 a7f3ac17cd1e14256b047e36810d3e8ec6cb872e SHA256 6f10d3b503a8bf878b8d270543a15acca645667504803c586a2a0cc0642413cd
+EBUILD maildrop-1.7.0-r3.ebuild 3318 RMD160 00ad770c83615bb52ec0a5bc26edaab5684083b1 SHA1 a6896bd3bdd4bc196459666136dd4a1eccabd0aa SHA256 3481c850927aba77a1f7a68c980527b9bea29176f0c7807aceddb305d7733e40
+MD5 1b7667f17727f2ff5bb8b8ffa61d69e2 maildrop-1.7.0-r3.ebuild 3318
+RMD160 00ad770c83615bb52ec0a5bc26edaab5684083b1 maildrop-1.7.0-r3.ebuild 3318
+SHA256 3481c850927aba77a1f7a68c980527b9bea29176f0c7807aceddb305d7733e40 maildrop-1.7.0-r3.ebuild 3318
+EBUILD maildrop-1.7.0.20040907-r1.ebuild 3248 RMD160 a08730003f610f5267ab8a532d97ec3a62d620f7 SHA1 08276ac7fa8aa3a28d61ae77936d2e425af00d81 SHA256 554a85c336eccef43dabeabf1c17fc23e2cd96accc765d4fef2a4eb96ec5b2cf
+MD5 572398e0dc4c55a532433635a82d1408 maildrop-1.7.0.20040907-r1.ebuild 3248
+RMD160 a08730003f610f5267ab8a532d97ec3a62d620f7 maildrop-1.7.0.20040907-r1.ebuild 3248
+SHA256 554a85c336eccef43dabeabf1c17fc23e2cd96accc765d4fef2a4eb96ec5b2cf maildrop-1.7.0.20040907-r1.ebuild 3248
+EBUILD maildrop-1.8.0-r3.ebuild 3642 RMD160 8c7391f0dc3376d18c7e04ea92de7f7e096355d5 SHA1 20fe76ea2fd3caf17b09f50e2a1194bfb0196a8d SHA256 3a73cdd0c104c6b85baab3fbbc2d0da9cdabd04a0c92b5c7b7222ffa28d2836f
+MD5 3cbb6f6a6e1be7d2339173ab6d4a23cd maildrop-1.8.0-r3.ebuild 3642
+RMD160 8c7391f0dc3376d18c7e04ea92de7f7e096355d5 maildrop-1.8.0-r3.ebuild 3642
+SHA256 3a73cdd0c104c6b85baab3fbbc2d0da9cdabd04a0c92b5c7b7222ffa28d2836f maildrop-1.8.0-r3.ebuild 3642
+EBUILD maildrop-1.8.1-r2.ebuild 3326 RMD160 5bac13f5ac6bc9e63bc0076551eb8f7421061460 SHA1 32096a7506797f32582228ae7bb65b566bc5cd5f SHA256 7e84f0b8b5646d454e442d590b7be6553bca5732f76fe2ea90e39daf4c8a11c7
+MD5 3afda1bc9f2b87b3b5bd598cb2097421 maildrop-1.8.1-r2.ebuild 3326
+RMD160 5bac13f5ac6bc9e63bc0076551eb8f7421061460 maildrop-1.8.1-r2.ebuild 3326
+SHA256 7e84f0b8b5646d454e442d590b7be6553bca5732f76fe2ea90e39daf4c8a11c7 maildrop-1.8.1-r2.ebuild 3326
+EBUILD maildrop-2.0.1-r1.ebuild 3517 RMD160 8aae0fa792053e1141eabb5a326068d8b795f725 SHA1 723dd83a5fb88b05e91779c4135fb72b910628a7 SHA256 bb3bd8e7693da5d0b76a0c5f56faec972e8a3e6d643d34ff1591b788f28696b4
+MD5 089de69d87a8ffbeaed10ebf4bf9c0ab maildrop-2.0.1-r1.ebuild 3517
+RMD160 8aae0fa792053e1141eabb5a326068d8b795f725 maildrop-2.0.1-r1.ebuild 3517
+SHA256 bb3bd8e7693da5d0b76a0c5f56faec972e8a3e6d643d34ff1591b788f28696b4 maildrop-2.0.1-r1.ebuild 3517
+EBUILD maildrop-2.0.1.ebuild 3442 RMD160 8bfa72613fcf2ee4be916f5b6d5cc466f0ab2cdc SHA1 b729689dc4deacbe277ee43375c045e1226d2744 SHA256 69c9aba10b966ef169025c3bdb579f8681e9e0526cbf1b9e89af901e4983a892
+MD5 f846ac496f3c8e757caaa2f15b7bd410 maildrop-2.0.1.ebuild 3442
+RMD160 8bfa72613fcf2ee4be916f5b6d5cc466f0ab2cdc maildrop-2.0.1.ebuild 3442
+SHA256 69c9aba10b966ef169025c3bdb579f8681e9e0526cbf1b9e89af901e4983a892 maildrop-2.0.1.ebuild 3442
+EBUILD maildrop-2.0.2.ebuild 3477 RMD160 82b8132373eb102b95da5ede75da6efb78754ac4 SHA1 e3c6db365989f2aeee368c806faad86da92b4f7f SHA256 48271c8e037cb4282ea2f68928adfae9c91dd05ec9282428c487ba0fb67bc7c5
+MD5 0c1492c5be2e283f1db361bdf8b7ff2d maildrop-2.0.2.ebuild 3477
+RMD160 82b8132373eb102b95da5ede75da6efb78754ac4 maildrop-2.0.2.ebuild 3477
+SHA256 48271c8e037cb4282ea2f68928adfae9c91dd05ec9282428c487ba0fb67bc7c5 maildrop-2.0.2.ebuild 3477
+MISC ChangeLog 14512 RMD160 cea1642fbe9b6a6bde20062e3d346e6d792cd370 SHA1 e4c0e176edda2b897ecbd92b507a6520dd1af596 SHA256 6723cfaf1cfea0b31cf97d52cd4401d3894c068ea5e12ad17bbdc55265f5f0f5
+MD5 641cba1fb83bf320392763956a0f3fff ChangeLog 14512
+RMD160 cea1642fbe9b6a6bde20062e3d346e6d792cd370 ChangeLog 14512
+SHA256 6723cfaf1cfea0b31cf97d52cd4401d3894c068ea5e12ad17bbdc55265f5f0f5 ChangeLog 14512
+MISC metadata.xml 259 RMD160 ce66370016fba0ddf047802d9dc8463041b4a585 SHA1 9f7a04d0cab1654d39498db3f124fc755202adb7 SHA256 d0e8725b6ece5de6014dd4b18064854b993b1e3ab04d838370d7744756656ae5
+MD5 2fc9863fa18fa7e25fedaa87a92a3c43 metadata.xml 259
+RMD160 ce66370016fba0ddf047802d9dc8463041b4a585 metadata.xml 259
+SHA256 d0e8725b6ece5de6014dd4b18064854b993b1e3ab04d838370d7744756656ae5 metadata.xml 259
 MD5 5db4117db5eca1f36f1778625e85d190 files/digest-maildrop-1.7.0-r3 68
 RMD160 1ea2c638d9c044c61f3311b18d021b6a54e47bf7 files/digest-maildrop-1.7.0-r3 68
 SHA256 aa001000930db16dfd5e8e851ded7ab14610c424465e301dd752b98eaaec42ec files/digest-maildrop-1.7.0-r3 68
@@ -22,55 +86,6 @@ SHA256 2591b6575327d1b0d54969dff83d38dee76d952b1f0b5131c0401f90e8f99d0a files/di
 MD5 95b2557a809befe8206f23973a7012bc files/digest-maildrop-2.0.1-r1 68
 RMD160 70f3b285785c62919f39d48c617e4984a8e4f9ce files/digest-maildrop-2.0.1-r1 68
 SHA256 2591b6575327d1b0d54969dff83d38dee76d952b1f0b5131c0401f90e8f99d0a files/digest-maildrop-2.0.1-r1 68
-MD5 8236b9e4c30c863a0002ac4b562a8c82 files/digest-maildrop-2.0.2 68
-RMD160 7ce419873a6a98f6ba96b09e9739e228f31c90aa files/digest-maildrop-2.0.2 68
-SHA256 1705a0886ac152ca53042e377f36b39604f119e49a29bc8af895f448dc591f7b files/digest-maildrop-2.0.2 68
-MD5 54e776919d1cd1729e5c6c1f27c40444 files/maildrop-1.7.0-0x0B-fix.patch 525
-RMD160 db7547cc0800d2e502cc18c012c69fe6a588d087 files/maildrop-1.7.0-0x0B-fix.patch 525
-SHA256 2ac802ab86b82ea2634e98856c87e16491a67b69d198c35f222472e85054197b files/maildrop-1.7.0-0x0B-fix.patch 525
-MD5 532cc225eb7ae73b01639168857445be files/maildrop-1.7.0-db4-bdbobj_configure.in.patch 1211
-RMD160 a38bb840e311b2c115f12e8111a9be131166fc25 files/maildrop-1.7.0-db4-bdbobj_configure.in.patch 1211
-SHA256 26de11d01c61c9c165e74137efce6aeafe18a5695e8ee80f9814ddb7c816dd11 files/maildrop-1.7.0-db4-bdbobj_configure.in.patch 1211
-MD5 72eeead0d2cb72de0ee2571af5c63bd5 files/maildrop-1.7.0-db4-configure.in.patch 1290
-RMD160 ccb29cb4378fc0e1468171bee8c0dba4661f3bff files/maildrop-1.7.0-db4-configure.in.patch 1290
-SHA256 33274eb1d0b675a3f7cd711c681df37b69948a8451b8157d5524b8b9a3e07b1c files/maildrop-1.7.0-db4-configure.in.patch 1290
-MD5 2f8014fea76e32d9bb682d00ee5ce7c7 files/maildrop-1.8.0-db4.patch 2501
-RMD160 75957b5fd95f6d434be35750de3a51881eff03fa files/maildrop-1.8.0-db4.patch 2501
-SHA256 4a18da4c712246c019b68a5d3f947b8ab1659dc07d155f877d1d99549ceb3b27 files/maildrop-1.8.0-db4.patch 2501
-MD5 e7efb3052fe6605244b78179990197f0 files/maildrop-1.8.1-disable-fam.patch 2511
-RMD160 3fc7bf21d425c6e676475458c99a5ed2d4e93469 files/maildrop-1.8.1-disable-fam.patch 2511
-SHA256 e4621bbe990d7a90d703e7a8b8cf07bb59655a22a96e62c275352d28c79684a3 files/maildrop-1.8.1-disable-fam.patch 2511
-MD5 c9c1f6d4020a5fd19162f20c537eb5cf files/maildroprc 58
-RMD160 1d53d6c05cb809bb9d637ae347d9dee1362f1b09 files/maildroprc 58
-SHA256 2feec7b63d9b3fae442ddab96810929ce4080871c31a1f23401cd3b61d00add1 files/maildroprc 58
-MD5 1b7667f17727f2ff5bb8b8ffa61d69e2 maildrop-1.7.0-r3.ebuild 3318
-RMD160 00ad770c83615bb52ec0a5bc26edaab5684083b1 maildrop-1.7.0-r3.ebuild 3318
-SHA256 3481c850927aba77a1f7a68c980527b9bea29176f0c7807aceddb305d7733e40 maildrop-1.7.0-r3.ebuild 3318
-MD5 572398e0dc4c55a532433635a82d1408 maildrop-1.7.0.20040907-r1.ebuild 3248
-RMD160 a08730003f610f5267ab8a532d97ec3a62d620f7 maildrop-1.7.0.20040907-r1.ebuild 3248
-SHA256 554a85c336eccef43dabeabf1c17fc23e2cd96accc765d4fef2a4eb96ec5b2cf maildrop-1.7.0.20040907-r1.ebuild 3248
-MD5 3cbb6f6a6e1be7d2339173ab6d4a23cd maildrop-1.8.0-r3.ebuild 3642
-RMD160 8c7391f0dc3376d18c7e04ea92de7f7e096355d5 maildrop-1.8.0-r3.ebuild 3642
-SHA256 3a73cdd0c104c6b85baab3fbbc2d0da9cdabd04a0c92b5c7b7222ffa28d2836f maildrop-1.8.0-r3.ebuild 3642
-MD5 3afda1bc9f2b87b3b5bd598cb2097421 maildrop-1.8.1-r2.ebuild 3326
-RMD160 5bac13f5ac6bc9e63bc0076551eb8f7421061460 maildrop-1.8.1-r2.ebuild 3326
-SHA256 7e84f0b8b5646d454e442d590b7be6553bca5732f76fe2ea90e39daf4c8a11c7 maildrop-1.8.1-r2.ebuild 3326
-MD5 089de69d87a8ffbeaed10ebf4bf9c0ab maildrop-2.0.1-r1.ebuild 3517
-RMD160 8aae0fa792053e1141eabb5a326068d8b795f725 maildrop-2.0.1-r1.ebuild 3517
-SHA256 bb3bd8e7693da5d0b76a0c5f56faec972e8a3e6d643d34ff1591b788f28696b4 maildrop-2.0.1-r1.ebuild 3517
-MD5 f846ac496f3c8e757caaa2f15b7bd410 maildrop-2.0.1.ebuild 3442
-RMD160 8bfa72613fcf2ee4be916f5b6d5cc466f0ab2cdc maildrop-2.0.1.ebuild 3442
-SHA256 69c9aba10b966ef169025c3bdb579f8681e9e0526cbf1b9e89af901e4983a892 maildrop-2.0.1.ebuild 3442
-MD5 3144bea68a164e453f1be6d5a1307090 maildrop-2.0.2.ebuild 3474
-RMD160 f6a54fdfef85bf9af055f41ecc67e7766196a6a1 maildrop-2.0.2.ebuild 3474
-SHA256 93ccd35e8d5996b1dbc3a5f7dd00aa8e750d0cf71e6d418f13047be7d93304ed maildrop-2.0.2.ebuild 3474
-MD5 2fc9863fa18fa7e25fedaa87a92a3c43 metadata.xml 259
-RMD160 ce66370016fba0ddf047802d9dc8463041b4a585 metadata.xml 259
-SHA256 d0e8725b6ece5de6014dd4b18064854b993b1e3ab04d838370d7744756656ae5 metadata.xml 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEPEtR2+ySkm8kpY0RAs2hAKCUHOyz/zkO5cBglgcl5S+flyxGlgCfaOqa
-Z4OJzmSna5EjeKIdY21c7hU=
-=kF3w
------END PGP SIGNATURE-----
+MD5 314f55ae652c9de7988cceea00abef5e files/digest-maildrop-2.0.2 250
+RMD160 3d91f12684eb8796bef3ce82fa4877e6e11e2a5c files/digest-maildrop-2.0.2 250
+SHA256 78431eb9d4c6051cbab5179e262d754b4fea3883832c0630050dbbc1d19ee3f4 files/digest-maildrop-2.0.2 250
