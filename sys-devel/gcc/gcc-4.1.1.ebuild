@@ -1,14 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.1.ebuild,v 1.2 2006/05/27 23:30:26 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.1.ebuild,v 1.3 2006/05/29 00:10:40 halcy0n Exp $
 
-PATCH_VER="1.1"
+PATCH_VER="1.3"
 UCLIBC_GCC_VER="4.1.0"
 UCLIBC_VER="1.1"
 
 ETYPE="gcc-compiler"
-
-GENTOO_PATCH_EXCLUDE="34_all_gcc4-pr22889.patch"
 
 # whether we should split out specs files for multiple {PIE,SSP}-by-default
 # and vanilla configurations.
