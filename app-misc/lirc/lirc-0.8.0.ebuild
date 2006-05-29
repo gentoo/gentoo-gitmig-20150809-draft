@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0.ebuild,v 1.6 2006/05/21 09:58:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0.ebuild,v 1.7 2006/05/29 10:45:07 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -14,7 +14,6 @@ IUSE="alsa debug doc X usb"
 KEYWORDS="~alpha ~amd64 ~ia64 ppc ppc64 x86"
 
 RDEPEND="virtual/libc
-	virtual/modutils
 	sys-apps/coreutils
 	alsa? ( media-libs/alsa-lib )
 	usb? ( dev-libs/libusb )
@@ -24,12 +23,11 @@ RDEPEND="virtual/libc
 	virtual/x11 ) )"
 
 DEPEND="${RDEPEND}
-	sys-kernel/linux-headers
+	virtual/linux-sources
 	sys-devel/autoconf
 	sys-devel/libtool"
 
 SRC_URI="mirror://sourceforge/lirc/${P/_pre/pre}.tar.bz2"
-#SRC_URI="http://lirc.sourceforge.net/software/snapshots/lirc-0.8.0pre3.tar.bz2"
 
 S=${WORKDIR}/${P/_pre/pre}
 
