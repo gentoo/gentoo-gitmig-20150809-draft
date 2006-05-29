@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.276 2006/05/26 21:41:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.277 2006/05/29 16:38:46 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kdebase-3.4.1-r1.ebuild, -kdebase-3.4.2.ebuild, -kdebase-3.4.2-r1.ebuild,
+  -kdebase-3.4.2-r2.ebuild, -kdebase-3.4.3.ebuild, -kdebase-3.5.2.ebuild:
+  Drop old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> kdebase-3.5.2-r1.ebuild:
   Stable on ppc64
