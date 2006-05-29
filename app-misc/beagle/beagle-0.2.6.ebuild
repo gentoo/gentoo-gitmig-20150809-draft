@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.6.ebuild,v 1.1 2006/04/29 18:19:12 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.6.ebuild,v 1.2 2006/05/29 17:49:54 metalgod Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -47,7 +47,7 @@ RDEPEND="
 	ole?	(	>=app-text/wv-1.2.0
 				>=dev-dotnet/gsf-sharp-0.6
 				>=app-office/gnumeric-1.4.3-r3 )
-"
+	pdf?	(	>=app-text/poppler-0.5.1 ) "
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
