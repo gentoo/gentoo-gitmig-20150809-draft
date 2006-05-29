@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20060528.ebuild,v 1.1 2006/05/28 21:27:59 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20060528.ebuild,v 1.2 2006/05/29 00:54:50 genstef Exp $
 
 inherit nsplugins kde-functions autotools
 
@@ -54,6 +54,7 @@ src_unpack() {
 	#Fix a busted opengl as-needed
 	cd ${S}
 	epatch ${FILESDIR}/${P}-opengl.diff
+	epatch ${FILESDIR}/${P}-confcache-gtkglext.patch
 
 	# we want sound
 	sed -i -e "s:bool do_sound = .*:bool do_sound = true;:" backend/gnash.cpp
