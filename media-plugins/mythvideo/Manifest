@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST mythplugins-0.19.tar.bz2 5418591 RMD160 33e65196760476713cf91f1edf94b1e082475bfb SHA256 5dd3df0204bf22cbf5f9ee0a636bcbe4ea6fd8754dd23af78f35fc1feec8c0e7
 EBUILD mythvideo-0.19.ebuild 583 RMD160 3195470777752f50f5dde47fad188decdb5d70ce SHA1 b668f7b47b79a709b2bda37e91911f920c17ba12 SHA256 45ec34e4bc292949433eba24e0964c8d3dffe18556a6830f67cccf0e07916243
 MD5 fbeb3fd59810c015e9ad9e7fc8eca2e8 mythvideo-0.19.ebuild 583
@@ -14,3 +17,10 @@ SHA256 8b2065fecfbbdd0caa3c5eb86b98c22766db07f555edbf3127e9454b468ecff6 metadata
 MD5 02bb9708cbe2cdf3fba5ddd88dbce656 files/digest-mythvideo-0.19 256
 RMD160 e9516bf4b7b132f1258633b15dfb223d99b1a56c files/digest-mythvideo-0.19 256
 SHA256 d305873fee173a927a0701caaf2bd9d023f2c4668dd14c5774267c1fce166928 files/digest-mythvideo-0.19 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEeo5loeSe8B0zEfwRAje6AJwNw1qNwR2b5Y6w1KthVxP3mQWyTQCZATBi
+TjADJmJixfHlOh4u6fObLI4=
+=oOX6
+-----END PGP SIGNATURE-----
