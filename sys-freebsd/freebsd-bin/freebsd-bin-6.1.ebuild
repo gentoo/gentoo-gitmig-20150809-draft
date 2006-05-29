@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/freebsd-bin-6.1.ebuild,v 1.1 2006/05/09 07:34:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/freebsd-bin-6.1.ebuild,v 1.2 2006/05/29 23:43:07 flameeyes Exp $
 
 inherit bsdmk freebsd
 
@@ -27,7 +27,7 @@ S=${WORKDIR}/bin
 PATCHES="${FILESDIR}/${PN}-6.0-flex-2.5.31.patch"
 
 pkg_setup() {
-	use rcp || mymakeopts="${mymakeopts} NO_RCMNDS= "
+	use rcp || mymakeopts="${mymakeopts} NO_RCMDS= "
 	use nls || mymakeopts="${mymakeopts} NO_NLS= "
 
 	mymakeopts="${mymakeopts} NO_TCSH= NO_SENDMAIL= NO_OPENSSL= NO_CRYPT= "
