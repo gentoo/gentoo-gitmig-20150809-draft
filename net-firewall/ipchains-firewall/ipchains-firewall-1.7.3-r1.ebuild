@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipchains-firewall/ipchains-firewall-1.7.3.ebuild,v 1.6 2006/05/29 04:58:21 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipchains-firewall/ipchains-firewall-1.7.3-r1.ebuild,v 1.1 2006/05/29 04:58:21 antarus Exp $
 
 S=${WORKDIR}/ipchains-firewall-1.7
 DESCRIPTION="IP-Chains Firewall Script "
@@ -11,7 +11,8 @@ IUSE=""
 LICENSE="as-is"
 SLOT="0"
 
-RDEPEND="dev-lang/perl"
+RDEPEND="dev-lang/perl
+	 net-firewall/ipchains"
 
 src_install() {
 	cd ${S}
