@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-flow
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-flow/ChangeLog,v 1.10 2006/05/26 17:35:46 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-flow/ChangeLog,v 1.11 2006/05/29 17:58:05 blubb Exp $
+
+  29 May 2006; Simon Stelling <blubb@gentoo.org>
+  twisted-flow-0.1.0-r1.ebuild:
+  stable on amd64
 
   26 May 2006; Marien Zwart <marienz@gentoo.org>
   twisted-flow-0.1.0-r1.ebuild:
