@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.10.ebuild,v 1.1 2006/05/26 05:26:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.10.ebuild,v 1.2 2006/05/29 18:57:35 tupone Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -78,6 +78,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/libsdl-1.2.10-libcaca.patch #40224
 	epatch "${FILESDIR}"/libsdl-1.2.10-sdl-config.patch
 	epatch "${FILESDIR}"/libsdl-1.2.10-PIC-hidden-symbols.patch
+	epatch "${FILESDIR}/${P}"-noxinerama.patch
 
 	./autogen.sh || die "autogen failed"
 	elibtoolize
