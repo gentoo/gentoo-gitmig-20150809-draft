@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kapptemplate
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.24 2006/05/29 13:04:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.25 2006/05/29 13:48:30 corsair Exp $
+
+  29 May 2006; Markus Rothe <corsair@gentoo.org> kapptemplate-3.5.0.ebuild:
+  Stable on ppc64
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Drop old versions.
