@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.156 2006/05/25 14:41:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.157 2006/05/29 22:24:47 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -75,6 +75,8 @@ kde_src_unpack() {
 
 	# kde-specific stuff stars here
 
+	[[ -z ${KDE_S} ]] && KDE_S="${S}"
+	
 	# if extragear-like packaging is enabled, set the translations and the
 	# documentation depending on LINGUAS settings
 	if [[ -n ${USE_KEG_PACKAGING} ]]; then
@@ -88,17 +90,17 @@ kde_src_unpack() {
 			if [[ -n ${LANGS} ]]; then
 				MAKE_PO=$(echo $(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d))
 				einfo "Enabling translations for: ${MAKE_PO}"
-				sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_PO}:" "${S}/po/Makefile.am" \
+				sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_PO}:" "${KDE_S}/po/Makefile.am" \
 					|| die "sed for locale failed"
-				rm -f "${S}/configure"
+				rm -f "${KDE_S}/configure"
 			fi
 
 			if [[ -n ${LANGS_DOC} ]]; then
 				MAKE_DOC=$(echo $(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d))
 				einfo "Enabling documentation for: ${MAKE_DOC}"
 				sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_DOC} ${PN}:" \
-					"${S}/doc/Makefile.am" || die "sed for locale failed"
-				rm -f "${S}/configure"
+					"${KDE_S}/doc/Makefile.am" || die "sed for locale failed"
+				rm -f "${KDE_S}/configure"
 			fi
 		fi
 	fi
@@ -122,7 +124,9 @@ kde_src_compile() {
 	debug-print-function $FUNCNAME $*
 	[ -z "$1" ] && kde_src_compile all
 
-	cd ${S}
+	[[ -z ${KDE_S} ]] && KDE_S="${S}"
+	cd "${KDE_S}"
+
 	export kde_widgetdir="$KDEDIR/$(get_libdir)/kde3/plugins/designer"
 
 	# fix the sandbox errors "can't writ to .kde or .qt" problems.
@@ -225,9 +229,9 @@ kde_src_compile() {
 						--with-extra-libs=${KDEDIR}/$(get_libdir)"
 				fi
 
-				if grep "cope with newer libtools" "${S}/admin/ltconfig" &> /dev/null; then
+				if grep "cope with newer libtools" "${KDE_S}/admin/ltconfig" &> /dev/null; then
 					einfo "Removing the dummy ltconfig file."
-					rm "${S}/admin/ltconfig"
+					rm "${KDE_S}/admin/ltconfig"
 				fi
 				elibtoolize
 				econf \
@@ -238,7 +242,7 @@ kde_src_compile() {
 				if [[ "${ARCH}" = "hppa" ]]
 				then
 					einfo Fixating Makefiles
-					find ${S} -name Makefile -print0 | xargs -0 sed -i -e \
+					find ${KDE_S} -name Makefile -print0 | xargs -0 sed -i -e \
 						's:-O2:-ffunction-sections:g'
 				fi
 				;;
@@ -263,7 +267,8 @@ kde_src_install() {
 	debug-print-function $FUNCNAME $*
 	[[ -z "$1" ]] && kde_src_install all
 
-	cd ${S}
+	[[ -z ${KDE_S} ]] && KDE_S="${S}"
+	cd "${KDE_S}"
 
 	while [[ "$1" ]]; do
 
