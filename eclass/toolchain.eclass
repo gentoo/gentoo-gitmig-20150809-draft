@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.284 2006/05/27 06:05:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.285 2006/05/29 22:05:02 kumba Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -142,7 +142,7 @@ else
 
 	# gcc-{nios2,bfin} don't accept these
 	if [[ ${PN} == "gcc" ]] ; then
-		IUSE="${IUSE} ip28 n32 n64"
+		IUSE="${IUSE} ip28 ip32r10k n32 n64"
 	fi
 
 	# these are features introduced in 4.0
