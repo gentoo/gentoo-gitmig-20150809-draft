@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kaboodle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaboodle/ChangeLog,v 1.45 2006/05/29 12:57:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaboodle/ChangeLog,v 1.46 2006/05/29 13:15:13 corsair Exp $
+
+  29 May 2006; Markus Rothe <corsair@gentoo.org> kaboodle-3.5.2.ebuild:
+  Stable on ppc64
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -kaboodle-3.4.1.ebuild:
   Drop old versions.
