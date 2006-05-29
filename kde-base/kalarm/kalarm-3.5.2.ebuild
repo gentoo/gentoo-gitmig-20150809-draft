@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/kalarm-3.5.2.ebuild,v 1.5 2006/05/26 18:14:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/kalarm-3.5.2.ebuild,v 1.6 2006/05/29 22:04:00 weeve Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="Personal alarm message, command and email scheduler for KDE"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 sparc x86"
 IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
 $(deprange 3.5.0 $MAXKDEVER kde-base/libkdenetwork)

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim-wizards
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.45 2006/05/29 14:01:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.46 2006/05/29 22:05:04 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> kdepim-wizards-3.5.2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kdepim-wizards-3.4.1.ebuild, -kdepim-wizards-3.4.2.ebuild:

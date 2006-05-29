@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kxsldbg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxsldbg/ChangeLog,v 1.54 2006/05/29 15:57:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxsldbg/ChangeLog,v 1.55 2006/05/29 22:18:41 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> kxsldbg-3.5.2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -kxsldbg-3.4.1.ebuild,
   -kxsldbg-3.4.1-r1.ebuild, -kxsldbg-3.4.3.ebuild:

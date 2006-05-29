@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-3.5.2.ebuild,v 1.6 2006/05/26 16:15:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-3.5.2.ebuild,v 1.7 2006/05/29 21:51:18 weeve Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE remote desktop connection (RDP and VNC) client"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="rdesktop slp"
 DEPEND=">=dev-libs/openssl-0.9.6b
 	slp? ( net-libs/openslp )"

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-arts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-arts/ChangeLog,v 1.38 2006/05/29 16:40:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-arts/ChangeLog,v 1.39 2006/05/29 21:46:38 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org>
+  kdemultimedia-arts-3.5.2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Markus Rothe <corsair@gentoo.org>
   kdemultimedia-arts-3.5.2.ebuild:

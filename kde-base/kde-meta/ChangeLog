@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.50 2006/05/29 16:36:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.51 2006/05/29 22:19:41 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> kde-meta-3.5.2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Drop old versions.

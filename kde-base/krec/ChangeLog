@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krec
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/ChangeLog,v 1.48 2006/05/29 16:46:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/ChangeLog,v 1.49 2006/05/29 21:47:30 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> krec-3.5.2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Markus Rothe <corsair@gentoo.org> krec-3.5.2.ebuild:
   Stable on ppc64

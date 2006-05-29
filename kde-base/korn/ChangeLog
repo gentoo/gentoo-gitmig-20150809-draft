@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/ChangeLog,v 1.48 2006/05/29 15:07:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/ChangeLog,v 1.49 2006/05/29 22:05:38 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> korn-3.5.2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -korn-3.4.1.ebuild,
   -korn-3.4.2.ebuild:

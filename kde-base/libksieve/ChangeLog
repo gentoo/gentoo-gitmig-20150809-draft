@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libksieve
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/ChangeLog,v 1.30 2006/05/29 16:08:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/ChangeLog,v 1.31 2006/05/29 21:59:32 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> libksieve-3.5.0.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Drop old versions.

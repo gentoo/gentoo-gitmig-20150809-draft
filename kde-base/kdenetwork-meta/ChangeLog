@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.48 2006/05/29 16:42:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.49 2006/05/29 21:54:56 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> kdenetwork-meta-3.5.2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kdenetwork-meta-3.4.1.ebuild, -kdenetwork-meta-3.4.2.ebuild:

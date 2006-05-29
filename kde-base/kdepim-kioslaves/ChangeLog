@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-kioslaves
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.50 2006/05/29 13:59:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.51 2006/05/29 22:00:54 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org>
+  kdepim-kioslaves-3.5.2-r3.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kdepim-kioslaves-3.4.1.ebuild, -kdepim-kioslaves-3.4.2.ebuild,

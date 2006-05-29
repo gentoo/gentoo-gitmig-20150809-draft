@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kppp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.45 2006/05/29 15:16:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.46 2006/05/29 21:53:25 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> kppp-3.5.2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -kppp-3.4.1.ebuild,
   -kppp-3.4.2.ebuild:

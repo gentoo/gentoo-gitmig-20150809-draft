@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kitchensync
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/ChangeLog,v 1.48 2006/05/29 14:31:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/ChangeLog,v 1.49 2006/05/29 22:07:23 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> kitchensync-3.5.2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kitchensync-3.4.1.ebuild, -kitchensync-3.4.2.ebuild:
