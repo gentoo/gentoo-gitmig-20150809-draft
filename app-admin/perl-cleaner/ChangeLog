@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/perl-cleaner
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.20 2006/05/29 20:22:30 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.21 2006/05/29 20:42:01 blubb Exp $
+
+  29 May 2006; Simon Stelling <blubb@gentoo.org> perl-cleaner-1.04.ebuild:
+  stable on amd64 wrt bug 134796
 
   29 May 2006; Mark Loeser <halcy0n@gentoo.org> perl-cleaner-1.04.ebuild:
   Stable on x86; bug #134796
