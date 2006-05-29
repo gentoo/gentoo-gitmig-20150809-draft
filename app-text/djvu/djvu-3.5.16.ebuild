@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.16.ebuild,v 1.11 2006/05/26 14:21:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.16.ebuild,v 1.12 2006/05/29 19:46:49 weeve Exp $
 
 inherit nsplugins flag-o-matic fdo-mime eutils multilib toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/djvu/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ia64 ~ppc ppc64 sparc x86"
 IUSE="xml qt jpeg tiff debug threads nls nsplugin kde"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b-r2 )
