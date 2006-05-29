@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_rc3-r1.ebuild,v 1.1 2006/05/29 02:19:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_rc3-r1.ebuild,v 1.2 2006/05/29 12:04:01 zmedico Exp $
 
 inherit toolchain-funcs eutils
 
@@ -55,6 +55,7 @@ src_unpack() {
 	if [ "${PR}" != "r0" ]; then
 		cd "${S}"
 		epatch "${WORKDIR}/${PN}-${PV}${PATCHVER}.patch"
+		epatch "${FILESDIR}/bug_134743_selinux.patch"
 		einfo "Setting portage.VERSION to ${PVR} ..."
 		sed -i "s/^VERSION=.*/VERSION=\"${PVR}\"/" pym/portage.py || \
 			die "Failed to patch portage.VERSION"

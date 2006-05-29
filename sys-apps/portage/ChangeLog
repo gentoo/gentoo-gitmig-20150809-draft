@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.158 2006/05/29 02:19:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.159 2006/05/29 12:04:01 zmedico Exp $
+
+  29 May 2006; Zac Medico <zmedico@gentoo.org>
+  +files/bug_134743_selinux.patch, portage-2.1_rc3-r1.ebuild:
+  Add a patch for bug #134743 which only affects selinux users.
 
 *portage-2.1_rc3-r1 (29 May 2006)
 
