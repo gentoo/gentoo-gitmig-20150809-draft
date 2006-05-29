@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.5 2006/05/26 12:41:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.6 2006/05/29 23:06:20 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -121,7 +121,7 @@ src_compile() {
 	use _E_CROSS_HEADERS_ONLY && return 0
 
 	# Don't use ssp until properly fixed
-	append-flags -fno-stack-protector -fno-stack-protector-all
+	append-flags $(test-flags -fno-stack-protector -fno-stack-protector-all)
 
 	strip-flags
 	if [[ ${CTARGET} != ${CHOST} ]]; then
