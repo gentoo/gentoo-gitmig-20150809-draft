@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12_beta2-r1.ebuild,v 1.1 2006/05/06 19:53:42 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12_beta2-r1.ebuild,v 1.2 2006/05/29 16:22:46 flameeyes Exp $
 
 inherit kde eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://kopete.kde.org/"
 LICENSE="GPL-2"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="jingle sametime ssl xmms xscreensaver"
+IUSE="jingle sametime ssl xmms xscreensaver kdehiddenvisibility"
 
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
