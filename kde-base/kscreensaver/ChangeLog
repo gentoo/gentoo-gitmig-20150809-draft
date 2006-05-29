@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kscreensaver
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.42 2006/05/26 16:24:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.43 2006/05/29 15:24:01 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kscreensaver-3.4.1.ebuild, -kscreensaver-3.4.2.ebuild:
+  Drop old versions.
 
   26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   kscreensaver-3.5.1.ebuild:

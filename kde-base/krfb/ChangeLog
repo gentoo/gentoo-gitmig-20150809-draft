@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.43 2006/05/26 16:22:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.44 2006/05/29 15:20:42 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -krfb-3.4.1.ebuild,
+  -krfb-3.4.2.ebuild:
+  Drop old versions.
 
   26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> krfb-3.5.2.ebuild:
   Stable on amd64 wrt bug #132213

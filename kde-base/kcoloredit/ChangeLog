@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcoloredit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcoloredit/ChangeLog,v 1.40 2006/05/26 16:08:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcoloredit/ChangeLog,v 1.41 2006/05/29 13:18:47 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kcoloredit-3.4.1.ebuild:
+  Drop old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> kcoloredit-3.5.2.ebuild:
   Stable on ppc64

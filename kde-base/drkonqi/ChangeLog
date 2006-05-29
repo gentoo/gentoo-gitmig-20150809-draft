@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/drkonqi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.46 2006/05/26 15:40:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.47 2006/05/29 12:54:26 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -drkonqi-3.4.1.ebuild,
+  -drkonqi-3.4.2.ebuild:
+  Drop old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> drkonqi-3.5.2.ebuild:
   Stable on ppc64

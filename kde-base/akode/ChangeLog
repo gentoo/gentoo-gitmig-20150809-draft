@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/akode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/ChangeLog,v 1.31 2006/03/26 01:38:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/ChangeLog,v 1.32 2006/05/29 12:40:58 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -akode-3.4.1.ebuild,
+  -akode-3.4.1-r1.ebuild, -akode-3.4.2.ebuild:
+  Drop old versions.
 
   26 Mar 2006; Aron Griffis <agriffis@gentoo.org> akode-3.4.3.ebuild:
   Mark 3.4.3 stable on ia64

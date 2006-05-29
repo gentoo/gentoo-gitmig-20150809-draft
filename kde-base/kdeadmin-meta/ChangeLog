@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeadmin-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.46 2006/05/26 18:31:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.47 2006/05/29 13:27:57 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kdeadmin-meta-3.4.1.ebuild, -kdeadmin-meta-3.4.2.ebuild:
+  Drop old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> kdeadmin-meta-3.5.2.ebuild:
   Stable on ppc64

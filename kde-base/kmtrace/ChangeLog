@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmtrace
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmtrace/ChangeLog,v 1.28 2006/05/26 15:28:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmtrace/ChangeLog,v 1.29 2006/05/29 14:50:30 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Drop old versions.
 
   26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> kmtrace-3.5.2.ebuild:
   Stable on amd64 wrt bug #132213

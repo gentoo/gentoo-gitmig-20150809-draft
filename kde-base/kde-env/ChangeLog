@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-env
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.30 2006/04/01 02:55:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.31 2006/05/29 13:43:46 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -kde-env-3-r3.ebuild:
+  Drop old versions.
 
   01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> kde-env-3-r4.ebuild:
   Add ~x86-fbsd keyword.

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeaccessibility
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.104 2006/05/26 21:28:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.105 2006/05/29 13:22:34 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kdeaccessibility-3.4.1.ebuild, -kdeaccessibility-3.4.2.ebuild,
+  -kdeaccessibility-3.4.3.ebuild:
+  Drop old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org>
   kdeaccessibility-3.5.2.ebuild:

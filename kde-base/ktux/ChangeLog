@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktux
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.39 2006/05/26 18:20:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.40 2006/05/29 15:45:49 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -ktux-3.4.1.ebuild:
+  Drop old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> ktux-3.5.2.ebuild:
   Stable on ppc64

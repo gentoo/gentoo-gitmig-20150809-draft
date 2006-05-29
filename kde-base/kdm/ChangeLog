@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.49 2006/05/26 20:23:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.50 2006/05/29 14:12:44 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -kdm-3.4.1.ebuild,
+  -kdm-3.4.2.ebuild, -kdm-3.4.3.ebuild:
+  Drop old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> kdm-3.5.2.ebuild:
   Stable on ppc64

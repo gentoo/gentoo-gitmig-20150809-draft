@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.48 2006/05/26 18:18:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.49 2006/05/29 14:00:34 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kdepim-meta-3.4.1.ebuild, -kdepim-meta-3.4.2.ebuild:
+  Drop old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> kdepim-meta-3.5.2.ebuild:
   Stable on ppc64

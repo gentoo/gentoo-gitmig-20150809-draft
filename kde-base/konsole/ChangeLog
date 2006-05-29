@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.46 2006/05/26 15:43:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.47 2006/05/29 15:02:18 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -konsole-3.4.1.ebuild,
+  -konsole-3.4.2.ebuild, -konsole-3.5.2.ebuild:
+  Drop old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> konsole-3.5.2-r1.ebuild:
   Stable on ppc64

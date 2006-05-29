@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/artsplugin-akode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-akode/ChangeLog,v 1.21 2006/05/26 15:14:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-akode/ChangeLog,v 1.22 2006/05/29 12:44:55 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Drop old versions.
 
   26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   artsplugin-akode-3.5.2-r1.ebuild:

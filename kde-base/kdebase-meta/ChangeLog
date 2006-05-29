@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.47 2006/05/26 16:29:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.48 2006/05/29 13:37:50 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kdebase-meta-3.4.1.ebuild, -kdebase-meta-3.4.2.ebuild:
+  Drop old versions.
 
   26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   kdebase-meta-3.5.2.ebuild:

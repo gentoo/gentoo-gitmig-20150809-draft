@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kbabel
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/ChangeLog,v 1.35 2006/05/26 15:33:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/ChangeLog,v 1.36 2006/05/29 13:09:31 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -kbabel-3.4.1.ebuild,
+  -kbabel-3.4.2.ebuild:
+  Drop old versions.
 
   26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> kbabel-3.5.2.ebuild:
   Stable on amd64 wrt bug #132213

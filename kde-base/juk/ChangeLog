@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.51 2006/05/26 15:22:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.52 2006/05/29 12:56:38 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -juk-3.4.1.ebuild,
+  -juk-3.4.2.ebuild, -juk-3.5.2.ebuild:
+  Drop old versions.
 
   26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> juk-3.5.2-r1.ebuild:
   Stable on amd64 wrt bug #132213

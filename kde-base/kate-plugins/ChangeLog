@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kate-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate-plugins/ChangeLog,v 1.44 2006/05/26 16:45:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate-plugins/ChangeLog,v 1.45 2006/05/29 13:07:23 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kate-plugins-3.4.1.ebuild, -kate-plugins-3.4.2.ebuild:
+  Drop old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> kate-plugins-3.5.2.ebuild:
   Stable on ppc64

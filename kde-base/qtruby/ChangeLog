@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.36 2006/05/26 21:17:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.37 2006/05/29 16:17:44 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -qtruby-3.4.1.ebuild,
+  -qtruby-3.4.1-r1.ebuild, -qtruby-3.4.2.ebuild, -qtruby-3.4.3.ebuild:
+  Drop old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> qtruby-3.5.2.ebuild:
   Added ~ppc64

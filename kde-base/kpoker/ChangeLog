@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpoker
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpoker/ChangeLog,v 1.42 2006/05/26 17:38:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpoker/ChangeLog,v 1.43 2006/05/29 15:15:23 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -kpoker-3.4.1.ebuild,
+  -kpoker-3.4.2.ebuild:
+  Drop old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> kpoker-3.5.2.ebuild:
   Stable on ppc64

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtsharp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtsharp/ChangeLog,v 1.14 2006/01/22 22:53:10 danarmak Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtsharp/ChangeLog,v 1.15 2006/05/29 16:18:20 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Drop old versions.
 
 *qtsharp-3.5.1 (23 Jan 2006)
 

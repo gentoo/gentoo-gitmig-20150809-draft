@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kbattleship
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/ChangeLog,v 1.42 2006/05/26 17:49:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/ChangeLog,v 1.43 2006/05/29 13:10:59 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kbattleship-3.4.1.ebuild, -kbattleship-3.4.2.ebuild:
+  Drop old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> kbattleship-3.5.2.ebuild:
   Stable on ppc64

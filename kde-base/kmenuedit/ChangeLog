@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmenuedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/ChangeLog,v 1.37 2006/05/26 15:35:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/ChangeLog,v 1.38 2006/05/29 14:43:25 flameeyes Exp $
+
+  29 May 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Drop old versions.
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> kmenuedit-3.5.2.ebuild:
   Stable on ppc64
