@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.6-r1.ebuild,v 1.2 2006/05/01 11:07:23 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.6-r1.ebuild,v 1.3 2006/05/29 18:32:34 ehmsen Exp $
 
 # although flag-o-matic functions in portage, we should inherit it
 inherit flag-o-matic eutils
@@ -39,7 +39,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-maxima-5.9.3.patch" || die "patch failed"
+	epatch "${FILESDIR}/${P}-maxima-5.9.3.patch" || die "maxima patch failed"
+	epatch "${FILESDIR}/${P}-gcc-4.1.patch" || die "gcc-4.1 patch failed"
 }
 
 src_compile() {

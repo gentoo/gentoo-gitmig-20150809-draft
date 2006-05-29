@@ -1,0 +1,107 @@
+--- texmacs-1.0.6.orig/src/Classes/Atomic/parse_string.hpp
++++ texmacs-1.0.6/src/Classes/Atomic/parse_string.hpp
+@@ -48,4 +48,6 @@
+ };
+ CONCRETE_CODE(parse_string);
+ 
++bool test (parse_string s, string what);
++
+ #endif // defined PARSE_STRING_H
+only in patch2:
+unchanged:
+--- texmacs-1.0.6.orig/src/System/Classes/url.hpp
++++ texmacs-1.0.6/src/System/Classes/url.hpp
+@@ -42,6 +42,8 @@
+ };
+ CONCRETE_CODE(url);
+ 
++inline url as_url (tree t);
++
+ ostream& operator << (ostream& out, url u);
+ string as_string (url u, int type= URL_SYSTEM);
+ 
+only in patch2:
+unchanged:
+--- texmacs-1.0.6.orig/src/Typeset/boxes.hpp
++++ texmacs-1.0.6/src/Typeset/boxes.hpp
+@@ -252,6 +252,8 @@
+ };
+ ABSTRACT_NULL_CODE(box);
+ 
++void make_eps (url dest, ::display dis, box b, int dpi);
++
+ extern int box_count;
+ inline box_rep::box_rep (path ip2):
+   x0(0), y0(0), x1(0), y1(0), x2(0), y2(0), x3(0), y3(0), x4(0), y4(0),
+only in patch2:
+unchanged:
+--- texmacs-1.0.6.orig/src/Typeset/env.hpp
++++ texmacs-1.0.6/src/Typeset/env.hpp
+@@ -433,5 +433,6 @@
+ tree texmacs_exec (edit_env env, tree cmd);
+ void extract_format (tree fm, tree* r, int n);
+ tree load_inclusion (url u); // implemented in tm_file.cpp
++ostream& operator << (ostream& out, edit_env env);
+ 
+ #endif // defined ENV_H
+only in patch2:
+unchanged:
+--- texmacs-1.0.6.orig/src/Typeset/Bridge/bridge.hpp
++++ texmacs-1.0.6/src/Typeset/Bridge/bridge.hpp
+@@ -73,6 +73,7 @@
+ };
+ ABSTRACT_NULL_CODE(bridge);
+ 
++bridge make_bridge (typesetter ttt, tree st, path ip);
+ ostream& operator << (ostream& out, bridge br);
+ extern bridge nil_bridge;
+ tree substitute (tree t, path p, tree u);
+only in patch2:
+unchanged:
+--- texmacs-1.0.6.orig/src/Typeset/Concat/concater.hpp
++++ texmacs-1.0.6/src/Typeset/Concat/concater.hpp
+@@ -169,6 +169,9 @@
+   friend array<line_item> typeset_marker (edit_env env, path ip);
+ };
+ 
++array<line_item> typeset_concat (edit_env env, tree t, path ip);
++array<line_item> typeset_marker (edit_env env, path ip);
++
+ typedef concater_rep* concater;
+ 
+ #endif // defined CONCATER_H
+only in patch2:
+unchanged:
+--- texmacs-1.0.6.orig/src/Window/ps_device.hpp
++++ texmacs-1.0.6/src/Window/ps_device.hpp
+@@ -102,4 +102,8 @@
+   virtual void apply_shadow (SI x1, SI y1, SI x2, SI y2) = 0;
+ };
+ 
++void abs_round (SI& l);
++void abs_round (SI& x, SI& y);
++void abs_outer_round (SI& x1, SI& y1, SI& x2, SI& y2);
++
+ #endif // defined PS_DEVICE_H
+only in patch2:
+unchanged:
+--- texmacs-1.0.6.orig/src/Window/Widget/Basic/basic_widget.cpp
++++ texmacs-1.0.6/src/Window/Widget/Basic/basic_widget.cpp
+@@ -259,7 +259,7 @@
+ test_window_attached (event ev, widget w) {
+   if (!w->attached ()) {
+     cerr << "\n" << HRULE << "\n";
+-    cerr << ev << " was sent to\n" << w;
++    cerr << (tree)ev << " was sent to\n" << w;
+     cerr << HRULE << "\n";
+     fatal_error ("widget was not yet attached to window",
+ 		 "basic_widget::handle", "basic_diwget.cpp");
+@@ -268,7 +268,7 @@
+ 
+ bool
+ basic_widget_rep::handle (event ev) {
+-  if (DEBUG_EVENTS) cout << "TeXmacs] " << ev << "\n";
++  if (DEBUG_EVENTS) cout << "TeXmacs] " << (tree)ev << "\n";
+   // " ---> " << widget(this) << "\n";
+   if (attached ()) win->set_origin (ox, oy);
+   switch (ev->type) {
