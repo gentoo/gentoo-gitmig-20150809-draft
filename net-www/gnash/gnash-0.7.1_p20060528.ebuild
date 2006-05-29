@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20060528.ebuild,v 1.2 2006/05/29 00:54:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20060528.ebuild,v 1.3 2006/05/29 13:42:56 genstef Exp $
 
 inherit nsplugins kde-functions autotools
 
@@ -26,6 +26,7 @@ RDEPEND="dmalloc? ( dev-libs/dmalloc )
 	media-libs/libpng
 	media-libs/libsdl
 	media-libs/sdl-mixer
+	x11-libs/gtkglext
 	virtual/opengl
 	|| (
 		( x11-libs/libX11
@@ -40,7 +41,6 @@ RDEPEND="dmalloc? ( dev-libs/dmalloc )
 		dev-libs/glib
 		x11-libs/cairo
 		>x11-libs/gtk+-2
-		x11-libs/gtkglext
 		x11-libs/pango
 	)"
 
@@ -69,6 +69,17 @@ src_compile() {
 		myconf="${myconf}  --enable-plugin --with-plugindir=/opt/netscape/plugins"
 	fi
 
+	#--enable-renderer=engine Specify rendering engine:
+	#				OpenGL (default)
+	#				Cairo  (experimental)
+	#cairo: does not compile, offers flash for non-accelerated gfx?
+	#if use cairo; then
+	#	myconf="${myconf}  --enable-renderer=cairo"
+	#fi
+	#--enable-gui=flavor Specify gui flavor:
+	#				GTK
+	#				SDL -> has no controls, we do not USE it
+
 	econf \
 		$(use_enable dmalloc) \
 		$(use_enable kde klash) \
@@ -85,7 +96,7 @@ src_install() {
 	sed -i -e "s:-lXmu @inst_prefix_dir:-lXmu -L../backend/.libs -L../server/.libs -L../libgeometry/.libs -L../libbase/.libs -L. @inst_prefix_dir:" server/libgnashserver.la
 	make DESTDIR=${D} install || die "make install failed"
 	use nsplugin && inst_plugin /opt/netscape/plugins/libgnashplugin.so \
-		|| rm ${D}/opt/netscape/plugins/libgnashplugin.so
+		|| rm -r ${D}/opt
 	dodoc AUTHORS ChangeLog NEWS README
 }
 
