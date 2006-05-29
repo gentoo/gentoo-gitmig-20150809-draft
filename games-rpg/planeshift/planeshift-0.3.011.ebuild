@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.3.011.ebuild,v 1.2 2005/11/02 00:05:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.3.011.ebuild,v 1.3 2006/05/29 19:55:07 wolf31o2 Exp $
 
 inherit eutils games debug
 
@@ -14,10 +14,8 @@ KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE="debug"
 
 RDEPEND="net-misc/curl
-	>=dev-games/crystalspace-0.99_pre*
-	>=dev-games/cel-0.99_pre*"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+	=dev-games/crystalspace-0.99_pre*
+	=dev-games/cel-0.99_pre*"
 
 S=${WORKDIR}/${PN}
 

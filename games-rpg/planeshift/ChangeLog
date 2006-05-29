@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/planeshift
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/ChangeLog,v 1.9 2005/08/31 19:34:16 malverian Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/ChangeLog,v 1.10 2006/05/29 19:55:07 wolf31o2 Exp $
+
+  29 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  planeshift-0.3.011.ebuild:
+  Fixing dependencies and closing bug #134704.
 
 *planeshift-0.3.011 (31 Aug 2005)
 
