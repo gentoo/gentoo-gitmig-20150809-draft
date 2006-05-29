@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.7.1-r2.ebuild,v 1.3 2006/04/05 18:25:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.7.1-r2.ebuild,v 1.4 2006/05/29 18:17:59 flameeyes Exp $
 
 inherit eutils kde
 
@@ -22,7 +22,7 @@ RDEPEND="|| ( x11-base/xorg-server
 
 DEPEND="${RDEPEND}
 	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
-	dvb? ( >=sys-kernel/linux-headers-2.6 )
+	dvb? ( media-tv/linuxtv-dvb-headers )
 	dev-util/pkgconfig"
 
 # the dependency on xorg-x11 is meant to avoid bug #59746
