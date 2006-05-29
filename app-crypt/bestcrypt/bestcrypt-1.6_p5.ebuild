@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p5.ebuild,v 1.1 2006/04/23 07:24:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p5.ebuild,v 1.2 2006/05/29 00:30:09 halcy0n Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.jetico.com/linux/BestCrypt-${PV/_p/-}.tar.gz
 LICENSE="bestcrypt"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 DEPEND="virtual/linux-sources"
 
