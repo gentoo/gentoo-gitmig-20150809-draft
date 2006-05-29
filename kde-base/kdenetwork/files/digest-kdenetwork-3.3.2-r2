@@ -1,2 +1,6 @@
 MD5 652a5703b8dc937c4009e002dc3035f3 kdenetwork-3.3.2.tar.bz2 6959207
+RMD160 b118fc9e56b6fee029d98a0d72ee23cb15bd8979 kdenetwork-3.3.2.tar.bz2 6959207
+SHA256 bbba075b117558c30beeba84bbf67cf04f04e410204c9239b8112af44a93cd10 kdenetwork-3.3.2.tar.bz2 6959207
 MD5 73ebcef42173bf567d473414693898b0 post-3.3.2-kdenetwork-libgadu.patch 62808
+RMD160 3504959e6719a6655f385bca94ca1a7c6f3cd454 post-3.3.2-kdenetwork-libgadu.patch 62808
+SHA256 574f40aba6138333dd3e188d6b7be345072128f071c0e3353dacb292eadda744 post-3.3.2-kdenetwork-libgadu.patch 62808

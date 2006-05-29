@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaccessibility
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.105 2006/05/29 13:22:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.106 2006/05/29 19:56:22 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> kdeaccessibility-3.5.2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kdeaccessibility-3.4.1.ebuild, -kdeaccessibility-3.4.2.ebuild,

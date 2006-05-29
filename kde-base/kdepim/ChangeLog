@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.206 2006/05/29 13:58:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.207 2006/05/29 20:00:08 weeve Exp $
+
+  29 May 2006; Jason Wever <weeve@gentoo.org> kdepim-3.5.2-r2.ebuild:
+  Stable on SPARC wrt bug #132213.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -kdepim-3.4.1.ebuild,
   -kdepim-3.4.1-r1.ebuild, -kdepim-3.4.1-r2.ebuild, -kdepim-3.4.2.ebuild,
