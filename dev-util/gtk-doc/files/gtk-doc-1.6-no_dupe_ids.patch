@@ -1,0 +1,330 @@
+Index: gtk-doc.xsl
+===================================================================
+RCS file: /cvs/gnome/gtk-doc/gtk-doc.xsl,v
+retrieving revision 1.23
+diff -u -d -r1.23 gtk-doc.xsl
+--- gtk-doc.xsl	9 Dec 2005 09:07:39 -0000	1.23
++++ gtk-doc.xsl	24 May 2006 23:35:17 -0000
+@@ -170,18 +170,18 @@
+     <xsl:param name="next" select="/foo"/>
+     <xsl:variable name="home" select="/*[1]"/>
+     <xsl:variable name="up" select="parent::*"/>
+-    <xsl:variable name="sections" select="./refsect1[@id]"/>
+-    <xsl:variable name="sect_object_hierarchy" select="./refsect1[@id='object_hierarchy']"/>
+-    <xsl:variable name="sect_prerequisites" select="./refentry/refsect1[@id='prerequisites']"/>
+-    <xsl:variable name="sect_derived_interfaces" select="./refentry/refsect1[@id='derived_interfaces']"/>
+-    <xsl:variable name="sect_impl_interfaces" select="./refentry/refsect1[@id='impl_interfaces']"/>
+-    <xsl:variable name="sect_implementations" select="./refentry/refsect1[@id='implementations']"/>
+-    <xsl:variable name="sect_properties" select="./refsect1[@id='properties']"/>
+-    <xsl:variable name="sect_child_properties" select="./refsect1[@id='child_properties']"/>
+-    <xsl:variable name="sect_style_properties" select="./refsect1[@id='style_properties']"/>
+-    <xsl:variable name="sect_signal_proto" select="./refsect1[@id='signal_proto']"/>
+-    <xsl:variable name="sect_desc" select="./refsect1[@id='desc']"/>
+-    <xsl:variable name="sect_synopsis" select="./refsynopsisdiv[@id='synopsis']"/>
++    <xsl:variable name="sections" select="./refsect1[@role]"/>
++    <xsl:variable name="sect_object_hierarchy" select="./refsect1[@role='object_hierarchy']"/>
++    <xsl:variable name="sect_prerequisites" select="./refsect1[@role='prerequisites']"/>
++    <xsl:variable name="sect_derived_interfaces" select="./refsect1[@role='derived_interfaces']"/>
++    <xsl:variable name="sect_impl_interfaces" select="./refsect1[@role='impl_interfaces']"/>
++    <xsl:variable name="sect_implementations" select="./refsect1[@role='implementations']"/>
++    <xsl:variable name="sect_properties" select="./refsect1[@role='properties']"/>
++    <xsl:variable name="sect_child_properties" select="./refsect1[@role='child_properties']"/>
++    <xsl:variable name="sect_style_properties" select="./refsect1[@role='style_properties']"/>
++    <xsl:variable name="sect_signal_proto" select="./refsect1[@role='signal_proto']"/>
++    <xsl:variable name="sect_desc" select="./refsect1[@role='desc']"/>
++    <xsl:variable name="sect_synopsis" select="./refsynopsisdiv[@role='synopsis']"/>
+     <!--
+     <xsl:variable name="sect_details" select="./refsect1[@id='details']"/>
+     <xsl:variable name="sect_property_details" select="./refsect1[@id='property_details']"/>
+@@ -296,72 +296,66 @@
+             <td colspan="5" class="shortcuts">
+               <nobr>
+                 <xsl:if test="count($sect_synopsis) > 0">
+-                  <a href="#top_of_page" class="shortcut">Top</a>
++                  <a href="#{generate-id(.//*[@role='top_of_page'])}" class="shortcut">Top</a>
+                 </xsl:if>
+                 <xsl:if test="count($sect_desc) > 0">
+                   &#160;|&#160;
+-                  <a href="#desc" class="shortcut">
+-                    <xsl:value-of select="./refsect1[@id='desc']/title"/>
++                  <a href="#{generate-id(./refsect1[@role='desc'])}" class="shortcut">
++                    <xsl:value-of select="./refsect1[@role='desc']/title"/>
+                   </a>
+                 </xsl:if>
+                 <xsl:if test="count($sect_object_hierarchy) > 0">
+                   &#160;|&#160;
+-                  <a href="#object_hierarchy" class="shortcut">
+-                    <xsl:value-of select="./refsect1[@id='object_hierarchy']/title"/>
++                  <a href="#{generate-id(./refsect1[@role='object_hierarchy'])}" class="shortcut">
++                    <xsl:value-of select="./refsect1[@role='object_hierarchy']/title"/>
+                   </a>
+                 </xsl:if>
+                 <xsl:if test="count($sect_impl_interfaces) > 0">
+                   &#160;|&#160;
+-                  <a href="#impl_interfaces" class="shortcut">
+-                    <xsl:value-of select="./refsect1[@id='impl_interfaces']/title"/>
++                  <a href="#{generate-id(./refsect1[@role='impl_interfaces'])}" class="shortcut">
++                    <xsl:value-of select="./refsect1[@role='impl_interfaces']/title"/>
+                   </a>
+                 </xsl:if>
+                 <xsl:if test="count($sect_prerequisites) > 0">
+                   &#160;|&#160;
+-                  <a href="#object_prerequisites" class="shortcut">
+-                    <xsl:value-of select="./refsect1[@id='object_prerequisites']/title"/>
++                  <a href="#{generate-id(./refsect1[@role='object_prerequisites'])}" class="shortcut">
++                    <xsl:value-of select="./refsect1[@role='object_prerequisites']/title"/>
+                   </a>
+                 </xsl:if>
+                 <xsl:if test="count($sect_derived_interfaces) > 0">
+                   &#160;|&#160;
+-                  <a href="#derived_interfaces" class="shortcut">
+-                    <xsl:value-of select="./refsect1[@id='derived_interfaces']/title"/>
+-                  </a>
+-                </xsl:if>
+-                <xsl:if test="count($sect_impl_interfaces) > 0">
+-                  &#160;|&#160;
+-                  <a href="#impl_interfaces" class="shortcut">
+-                    <xsl:value-of select="./refsect1[@id='properties']/title"/>
++                  <a href="#{generate-id(./refsect1[@role='derived_interfaces'])}" class="shortcut">
++                    <xsl:value-of select="./refsect1[@role='derived_interfaces']/title"/>
+                   </a>
+                 </xsl:if>
+                 <xsl:if test="count($sect_implementations) > 0">
+                   &#160;|&#160;
+-                  <a href="#implementations" class="shortcut">
+-                    <xsl:value-of select="./refsect1[@id='implementations']/title"/>
++                  <a href="#{generate-id(./refsect1[@role='implementations'])}" class="shortcut">
++                    <xsl:value-of select="./refsect1[@role='implementations']/title"/>
+                   </a>
+                 </xsl:if>
+                 <xsl:if test="count($sect_properties) > 0">
+                   &#160;|&#160;
+-                  <a href="#properties" class="shortcut">
+-                    <xsl:value-of select="./refsect1[@id='properties']/title"/>
++                  <a href="#{generate-id(./refsect1[@role='properties'])}" class="shortcut">
++                    <xsl:value-of select="./refsect1[@role='properties']/title"/>
+                   </a>
+                 </xsl:if>
+                 <xsl:if test="count($sect_child_properties) > 0">
+                   &#160;|&#160;
+-                  <a href="#child_properties" class="shortcut">
+-                    <xsl:value-of select="./refsect1[@id='child_properties']/title"/>
++                  <a href="#{generate-id(./refsect1[@role='child_properties'])}" class="shortcut">
++                    <xsl:value-of select="./refsect1[@role='child_properties']/title"/>
+                   </a>
+                 </xsl:if>
+                 <xsl:if test="count($sect_style_properties) > 0">
+                   &#160;|&#160;
+-                  <a href="#style_properties" class="shortcut">
+-                    <xsl:value-of select="./refsect1[@id='style_properties']/title"/>
++                  <a href="#{generate-id(./refsect1[@role='style_properties'])}" class="shortcut">
++                    <xsl:value-of select="./refsect1[@role='style_properties']/title"/>
+                   </a>
+                 </xsl:if>
+                 <xsl:if test="count($sect_signal_proto) > 0">
+                   &#160;|&#160;
+-                  <a href="#signal_proto" class="shortcut">
+-                    <xsl:value-of select="./refsect1[@id='signal_proto']/title"/>
++                  <a href="#{generate-id(./refsect1[@role='signal_proto'])}" class="shortcut">
++                    <xsl:value-of select="./refsect1[@role='signal_proto']/title"/>
+                   </a>
+                 </xsl:if>
+                 <!--
+@@ -497,6 +491,13 @@
+         </td></tr>
+        </table>
+      </div>
++  </xsl:template>
++
++  <!-- Add anchor with ID. Note that elements such as refsect1 don't need this
++       since the docbook stylesheets should add it -->
++  <xsl:template match="*[@role='top_of_page']">
++    <a name="{generate-id(.)}"/>
++    <xsl:apply-imports/>
+   </xsl:template>
+   
+ </xsl:stylesheet>
+Index: gtkdoc-mkdb.in
+===================================================================
+RCS file: /cvs/gnome/gtk-doc/gtkdoc-mkdb.in,v
+retrieving revision 1.142
+diff -u -d -r1.142 gtkdoc-mkdb.in
+--- gtkdoc-mkdb.in	21 May 2006 11:18:22 -0000	1.142
++++ gtkdoc-mkdb.in	24 May 2006 23:35:19 -0000
+@@ -412,16 +412,16 @@
+ 
+ 		if ($signals_synop ne '') {
+ 		    $signals_synop = <<EOF;
+-<refsect1 id="signal_proto">
+-<title id="signal_proto.title">Signals</title>
++<refsect1 role="signal_proto">
++<title role="signal_proto.title">Signals</title>
+ <synopsis>
+ 
+ ${signals_synop}</synopsis>
+ </refsect1>
+ EOF
+ 		    $signals_desc  = <<EOF;
+-<refsect1 id="signals">
+-<title id="signals.title">Signal Details</title>
++<refsect1 role="signals">
++<title role="signals.title">Signal Details</title>
+ $signals_desc
+ </refsect1>
+ EOF
+@@ -429,16 +429,16 @@
+ 
+ 		if ($args_synop ne '') {
+ 		    $args_synop = <<EOF;
+-<refsect1 id="properties">
+-<title id="properties.title">Properties</title>
++<refsect1 role="properties">
++<title role="properties.title">Properties</title>
+ <synopsis>
+ 
+ ${args_synop}</synopsis>
+ </refsect1>
+ EOF
+ 		    $args_desc  = <<EOF;
+-<refsect1 id="property_details">
+-<title id="property_details.title">Property Details</title>
++<refsect1 role="property_details">
++<title role="property_details.title">Property Details</title>
+ $args_desc
+ </refsect1>
+ EOF
+@@ -446,16 +446,16 @@
+ 
+ 		if ($child_args_synop ne '') {
+ 		    $args_synop .= <<EOF;
+-<refsect1 id="child_properties">
+-<title id="child_properties.title">Child Properties</title>
++<refsect1 role="child_properties">
++<title role="child_properties.title">Child Properties</title>
+ <synopsis>
+ 
+ ${child_args_synop}</synopsis>
+ </refsect1>
+ EOF
+ 		    $args_desc .= <<EOF;
+-<refsect1 id="child_property_details">
+-<title id="child_property_details.title">Child Property Details</title>
++<refsect1 role="child_property_details">
++<title role="child_property_details.title">Child Property Details</title>
+ $child_args_desc
+ </refsect1>
+ EOF
+@@ -463,16 +463,16 @@
+ 
+ 		if ($style_args_synop ne '') {
+ 		    $args_synop .= <<EOF;
+-<refsect1 id="style_properties">
+-<title id="style_properties.title">Style Properties</title>
++<refsect1 role="style_properties">
++<title role="style_properties.title">Style Properties</title>
+ <synopsis>
+ 
+ ${style_args_synop}</synopsis>
+ </refsect1>
+ EOF
+ 		    $args_desc .= <<EOF;
+-<refsect1 id="style_properties_details">
+-<title id="style_properties_details.title">Style Property Details</title>
++<refsect1 role="style_properties_details">
++<title role="style_properties_details.title">Style Property Details</title>
+ $style_args_desc
+ </refsect1>
+ EOF
+@@ -480,8 +480,8 @@
+ 
+ 		if ($hierarchy ne "") {
+ 		    $hierarchy = <<EOF;
+-<refsect1 id="object_hierarchy">
+-<title id="object_hierarchy.title">Object Hierarchy</title>
++<refsect1 role="object_hierarchy">
++<title role="object_hierarchy.title">Object Hierarchy</title>
+ $hierarchy
+ </refsect1>
+ EOF
+@@ -489,8 +489,8 @@
+ 
+ 		if ($interfaces ne "") {
+ 		    $interfaces = <<EOF;
+-<refsect1 id="impl_interfaces">
+-<title id="impl_interfaces.title">Implemented Interfaces</title>
++<refsect1 role="impl_interfaces">
++<title role="impl_interfaces.title">Implemented Interfaces</title>
+ $interfaces
+ </refsect1>
+ EOF
+@@ -498,8 +498,8 @@
+ 
+ 		if ($implementations ne "") {
+ 		    $implementations = <<EOF;
+-<refsect1 id="implementations">
+-<title id="implementations.title">Known Implementations</title>
++<refsect1 role="implementations">
++<title role="implementations.title">Known Implementations</title>
+ $implementations
+ </refsect1>
+ EOF
+@@ -507,8 +507,8 @@
+ 
+ 		if ($prerequisites ne "") {
+ 		    $prerequisites = <<EOF;
+-<refsect1 id="prerequisites">
+-<title id="prerequisites.title">Prerequisites</title>
++<refsect1 role="prerequisites">
++<title role="prerequisites.title">Prerequisites</title>
+ $prerequisites
+ </refsect1>
+ EOF
+@@ -516,8 +516,8 @@
+ 
+ 		if ($derived ne "") {
+ 		    $derived = <<EOF;
+-<refsect1 id="derived_interfaces">
+-<title id="derived_interfaces.title">Known Derived Interfaces</title>
++<refsect1 role="derived_interfaces">
++<title role="derived_interfaces.title">Known Derived Interfaces</title>
+ $derived
+ </refsect1>
+ EOF
+@@ -1558,7 +1558,7 @@
+     print OUTPUT <<EOF;
+ <refentry id="$section_id">
+ <refmeta>
+-<refentrytitle id="top_of_page">$title</refentrytitle>
++<refentrytitle role="top_of_page">$title</refentrytitle>
+ <manvolnum>3</manvolnum>
+ <refmiscinfo>\U$MODULE\E Library</refmiscinfo>
+ </refmeta>
+@@ -1569,8 +1569,8 @@
+ <!--[<xref linkend="desc" endterm="desc.title"/>]-->
+ </refnamediv>
+ $stability
+-<refsynopsisdiv id="synopsis">
+-<title id="synopsis.title">Synopsis</title>
++<refsynopsisdiv role="synopsis">
++<title role="synopsis.title">Synopsis</title>
+ $object_anchors
+ <synopsis>
+ 
+@@ -1587,13 +1587,13 @@
+ $$args_synop
+ $$signals_synop
+ 
+-<refsect1 id="desc">
+-<title id="desc.title">Description</title>
++<refsect1 role="desc">
++<title role="desc.title">Description</title>
+ $long_desc
+ </refsect1>
+ 
+-<refsect1 id="details">
+-<title id="details.title">Details</title>
++<refsect1 role="details">
++<title role="details.title">Details</title>
+ $$details
+ </refsect1>
+ $$args_desc
