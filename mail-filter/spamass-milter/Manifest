@@ -1,19 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 07fdb510227d93aecb8d8948ed3b9e9c ChangeLog 2021
-MD5 6eb8a3de8515f037fac65110c0f01563 files/README.gentoo 756
+MD5 a62edd219e5a7a4bd1abfedcfdbb1188 ChangeLog 2321
+MD5 6991afd951bb7430fa90ec0681d237f4 files/README.gentoo 826
 MD5 61950fa1041550e97fa464db1faafa92 files/digest-spamass-milter-0.3.0 73
 MD5 ba9a68bf6aa5dce14dd7d2a655165ae1 files/digest-spamass-milter-0.3.1 73
+MD5 ba9a68bf6aa5dce14dd7d2a655165ae1 files/digest-spamass-milter-0.3.1-r1 73
 MD5 9b3cd222a3e0e7e2d9efcf05ab733597 files/spamass-milter.conf 388
+MD5 4af380c79f46c2eae4030f39d3267cd2 files/spamass-milter.conf2 445
 MD5 6a292dff25de76c223735d09f8c25c8b files/spamass-milter.rc 750
+MD5 0ce853a0b7dfdd66659466bc449108de files/spamass-milter.rc2 702
 MD5 06dd3cc51e395ab6b5a26a08d478a20b metadata.xml 224
 MD5 093f3e9855739d8691eaeebd450928dc spamass-milter-0.3.0.ebuild 1068
+MD5 8c0b22c69e960c0ced1052bfd506fd0b spamass-milter-0.3.1-r1.ebuild 1291
 MD5 5e0c600422ef3c5e473790f3757099be spamass-milter-0.3.1.ebuild 1070
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFENDpTKRy60XGEcJIRAq8jAKCHh415ndlKA7crgSJTszCK2Y59/ACgk1h8
-HIcrt3azQviNclOBcZDQT5I=
-=Al9p
+iD8DBQFEezg4KRy60XGEcJIRAojlAJ4vIAo7pFgJ2yzI9xMRAFsgM2kqTACcDYin
+EP+dm+HvEzyT81ajQrru1sg=
+=HA4b
 -----END PGP SIGNATURE-----

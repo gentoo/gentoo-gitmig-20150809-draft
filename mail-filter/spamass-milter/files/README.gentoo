@@ -1,14 +1,15 @@
-Simple install instructions by raker@gentoo.org :)
---------------------------------------------------
+Simple install instructions by raker @ g.o, updates by gustavoz
+---------------------------------------------------------------
 
 Open /etc/mail/sendmail.mc in your favorite editor:
 
-	nano /etc/mail/sendmail.mc
+	vi /etc/mail/sendmail.mc
 
 Add these lines before MAILER(local):
 
 INPUT_MAIL_FILTER(`spamassassin', `S=local:/var/run/spamass-milter.sock, F=, T=C:15m;S:4m;R:4m;E:10m')dnl
 define(`confMILTER_MACROS_CONNECT',`b, j, _, {daemon_name}, {if_name}, {if_addr}')dnl
+define(`confMILTER_MACROS_ENVRCPT',`r, v, Z')
 
 When that's done run this command:
 
