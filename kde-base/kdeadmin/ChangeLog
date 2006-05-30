@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.162 2006/05/30 04:05:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.163 2006/05/30 12:25:18 wolf31o2 Exp $
+
+  30 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> kdeadmin-3.5.2.ebuild:
+  Stable on amd64 wrt bug #132213
 
   30 May 2006; Joseph Jezak <josejx@gentoo.org> kdeadmin-3.5.2.ebuild:
   Marked ppc stable for bug #132213.

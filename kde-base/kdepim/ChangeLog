@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.208 2006/05/30 04:16:05 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.209 2006/05/30 12:33:09 wolf31o2 Exp $
+
+  30 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  kdepim-3.5.2-r2.ebuild:
+  Stable on amd64 wrt bug #132213
 
   30 May 2006; Joseph Jezak <josejx@gentoo.org> kdepim-3.5.2-r3.ebuild:
   Marked ppc stable for bug #132213.
