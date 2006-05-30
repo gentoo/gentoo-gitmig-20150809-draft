@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.47 2006/05/14 16:53:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.48 2006/05/30 14:45:08 uberlord Exp $
+
+*dovecot-1.0_beta8-r1 (30 May 2006)
+
+  30 May 2006; Roy Marples <uberlord@gentoo.org>
+  +dovecot-1.0_beta8-r1.ebuild:
+  Install sample LDAP and/or SQL config files based on USE flags.
+  Fixes #123049 thanks to Max Lorenz.
 
   14 May 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   dovecot-1.0_beta8.ebuild:
