@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tlslite
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.3 2006/04/27 19:17:21 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.4 2006/05/30 19:06:01 sbriesen Exp $
+
+  30 May 2006; Stefan Briesenick <sbriesen@gentoo.org> tlslite-0.3.8.ebuild:
+  fixed 'userpriv' problem, see bug #134917.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-tlslite-0.3.8,
   Manifest:

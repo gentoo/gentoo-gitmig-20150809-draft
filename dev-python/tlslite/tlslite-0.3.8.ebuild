@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/tlslite-0.3.8.ebuild,v 1.2 2006/04/01 19:09:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/tlslite-0.3.8.ebuild,v 1.3 2006/05/30 19:06:01 sbriesen Exp $
 
-inherit eutils distutils portability
+inherit eutils distutils
 
 DESCRIPTION="TLS Lite is a free python library that implements SSL 3.0 and TLS 1.0/1.1"
 HOMEPAGE="http://trevp.net/tlslite/"
@@ -27,7 +27,5 @@ PYTHON_MODNAME="tlslite"
 src_install(){
 	DOCS="readme.txt"
 	distutils_src_install
-	if use doc; then
-		cd docs && treecopy . "${D}/usr/share/doc/${PF}/html"
-	fi
+	use doc && dohtml -r docs/.
 }
