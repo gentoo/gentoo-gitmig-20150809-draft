@@ -1,0 +1,12 @@
+diff -uNr jpilot-0.99.8.orig/jpilot.c jpilot-0.99.8/jpilot.c
+--- jpilot-0.99.8.orig/jpilot.c	2005-10-24 20:15:41.000000000 +0100
++++ jpilot-0.99.8/jpilot.c	2006-05-23 08:57:41.000000000 +0100
+@@ -1371,7 +1371,7 @@
+    gdk_pixdata_from_pixbuf(pixdata, pixbuf, FALSE);
+    data = gdk_pixdata_serialize(pixdata, &len);
+ 
+-   g_free(pixbuf);
++   g_object_unref(pixbuf);
+    g_free(pixdata);
+ 
+    return data;
