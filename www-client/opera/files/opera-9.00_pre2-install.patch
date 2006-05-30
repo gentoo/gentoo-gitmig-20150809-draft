@@ -1,0 +1,12 @@
+--- install.sh.orig	2006-05-30 13:11:54.000000000 +0200
++++ install.sh	2006-05-30 13:12:28.000000000 +0200
+@@ -1835,6 +1835,9 @@
+ 
+ xdg()
+ {   # http://standards.freedesktop.org
++
++	return; # Handled by ebuild.
++
+     UDD=''
+     for BIN_DIR in `pathdirs`; do
+ 	test -x ${BIN_DIR}/update-desktop-database || continue
