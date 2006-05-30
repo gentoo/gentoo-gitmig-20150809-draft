@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.95.1.ebuild,v 1.2 2006/05/30 17:59:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.95.1.ebuild,v 1.3 2006/05/30 19:26:12 corsair Exp $
 
 inherit eutils gnome2 libtool autotools versionator
 
@@ -15,7 +15,7 @@ MY_P="${PN}-${MY_PV}"
 SRC_URI="mirror://gnome/sources/${PN}/${MY_PV_MM}/${PN}-${MY_PV}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ppc ppc64 ~sparc ~x86"
 IUSE="gnome png python zlib"
 
 RDEPEND=">=x11-libs/gtk+-2.6.0
