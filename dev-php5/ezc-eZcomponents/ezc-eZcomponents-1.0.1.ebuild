@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-eZcomponents/ezc-eZcomponents-1.0.1.ebuild,v 1.2 2006/02/27 09:08:34 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-eZcomponents/ezc-eZcomponents-1.0.1.ebuild,v 1.3 2006/05/30 11:31:19 corsair Exp $
 
 DESCRIPTION="eZ components is an enterprise ready general purpose PHP platform."
 HOMEPAGE="http://ez.no/products/ez_components"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-php5/ezc-Archive-1.0.1

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-ConsoleTools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-ConsoleTools/ChangeLog,v 1.3 2006/01/30 17:41:06 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-ConsoleTools/ChangeLog,v 1.4 2006/05/30 11:18:10 corsair Exp $
+
+  30 May 2006; Markus Rothe <corsair@gentoo.org>
+  ezc-ConsoleTools-1.0.ebuild:
+  Added ~ppc64; bug #134717
 
   30 Jan 2006; Sebastian Bergmann <sebastian@gentoo.org>
   ezc-ConsoleTools-1.0.ebuild:

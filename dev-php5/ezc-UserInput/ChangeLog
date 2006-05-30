@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ezc-UserInput
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-UserInput/ChangeLog,v 1.3 2006/01/30 17:26:50 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-UserInput/ChangeLog,v 1.4 2006/05/30 11:22:30 corsair Exp $
+
+  30 May 2006; Markus Rothe <corsair@gentoo.org> ezc-UserInput-1.0.ebuild:
+  Added ~ppc64; bug #134717
 
   30 Jan 2006; Sebastian Bergmann <sebastian@gentoo.org>
   ezc-UserInput-1.0.ebuild:
