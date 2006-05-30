@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.6.1_alpha.ebuild,v 1.2 2006/03/23 06:02:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.7.0_alpha.ebuild,v 1.1 2006/05/30 18:58:25 mrness Exp $
 
 inherit eutils
 
@@ -50,7 +50,9 @@ src_compile() {
 	local myconf="--with-logdir=/var/log/dansguardian
 		--with-piddir=/var/run
 		$(use_enable pcre)
-		$(use_enable ntlm)"
+		$(use_enable ntlm)
+		--enable-fancydm
+		--enable-email"
 	if use clamav; then
 		myconf="${myconf} --enable-clamd=yes
 			--with-proxyuser=clamav
