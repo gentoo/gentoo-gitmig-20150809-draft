@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.456 2006/05/30 13:08:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.457 2006/05/30 19:45:22 eradicator Exp $
+
+  30 May 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.4.20041102-r2.ebuild, glibc-2.3.4.20050125-r1.ebuild,
+  glibc-2.3.5.ebuild, glibc-2.3.5-r1.ebuild, glibc-2.3.5-r2.ebuild,
+  glibc-2.3.5-r3.ebuild, glibc-2.3.6.ebuild, glibc-2.3.6-r1.ebuild,
+  glibc-2.3.6-r2.ebuild, glibc-2.3.6-r3.ebuild, glibc-2.3.6-r4.ebuild,
+  glibc-2.4-r1.ebuild, glibc-2.4-r2.ebuild, glibc-2.4-r3.ebuild:
+  Let app-admin/eselect-compiler be used instead of sys-devel/gcc-config if
+  it's available.
 
   30 May 2006; Luca Barbato <lu_zero@gentoo.org> glibc-2.4-r3.ebuild:
   Marked ~ppc
