@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.0.8b.ebuild,v 1.1 2006/04/24 09:03:17 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.0.8b.ebuild,v 1.2 2006/05/30 17:19:44 zzam Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.deltab.de/vdr/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=media-video/ffmpeg-0.4.9"
