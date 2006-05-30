@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r4.ebuild,v 1.2 2006/02/17 01:41:30 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r4.ebuild,v 1.3 2006/05/30 20:50:04 yvasilev Exp $
 
 inherit gnuconfig eutils
 
@@ -42,6 +42,9 @@ src_unpack() {
 	# improve tempfile handling
 	epatch ${FILESDIR}/${P}-fixps.patch
 	epatch ${FILESDIR}/${P}-psmandup.diff
+
+	# fix fnmatch replacement, bug #134546
+	epatch ${FILESDIR}/${P}-fnmatch-replacement.patch
 
 	# fix sandbox violation, bug #79012
 	sed -i -e 's:$acroread -helpall:acroread4 -helpall:' configure configure.in
