@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/kblogger
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/ChangeLog,v 1.2 2006/05/20 15:29:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/ChangeLog,v 1.3 2006/05/30 01:42:08 flameeyes Exp $
+
+*kblogger-0.6 (30 May 2006)
+
+  30 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kblogger-0.6_beta1.ebuild, -kblogger-0.6_beta2.ebuild,
+  +kblogger-0.6.ebuild:
+  Version bump, avoid double configure run.
 
 *kblogger-0.6_beta2 (20 May 2006)
 
