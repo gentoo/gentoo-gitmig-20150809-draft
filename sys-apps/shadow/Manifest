@@ -1,91 +1,329 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 351e433b0603b39e06612e70c24f13d3 ChangeLog 26726
+AUX default/useradd 96 RMD160 55c38953c800c6aae1ebe4312028560f77e7414f SHA1 348916abd4f794ee99310e1c006fbf00296ea2d7 SHA256 31aa2cbe4a34a9f7d4d134c1fecd007c9bbf4d40e19d0dcddbcd396f1853b490 size 96
 MD5 6e0bc0211949c624da0ea08d994a7038 files/default/useradd 96
-MD5 66f1d02cf29b251a4fe8c990665af50e files/digest-shadow-4.0.11.1-r1 253
-MD5 66f1d02cf29b251a4fe8c990665af50e files/digest-shadow-4.0.11.1-r2 253
-MD5 beef08dfc02c59440b74c70d188eb37b files/digest-shadow-4.0.12 247
-MD5 baa03a2db72283ddb5cea1a09bd5adc6 files/digest-shadow-4.0.13 247
-MD5 e762a86e8069be90d8d92c729a7ea723 files/digest-shadow-4.0.14-r1 247
-MD5 e762a86e8069be90d8d92c729a7ea723 files/digest-shadow-4.0.14-r2 247
-MD5 e762a86e8069be90d8d92c729a7ea723 files/digest-shadow-4.0.14-r3 247
-MD5 1f78dde9910133ab48d69abc6bd19a88 files/digest-shadow-4.0.15 247
-MD5 1f78dde9910133ab48d69abc6bd19a88 files/digest-shadow-4.0.15-r1 247
-MD5 1f78dde9910133ab48d69abc6bd19a88 files/digest-shadow-4.0.15-r2 247
-MD5 9130da1995073352cee951d0a18ad227 files/digest-shadow-4.0.7-r4 244
+RMD160 55c38953c800c6aae1ebe4312028560f77e7414f files/default/useradd 96
+SHA256 31aa2cbe4a34a9f7d4d134c1fecd007c9bbf4d40e19d0dcddbcd396f1853b490 files/default/useradd 96
+AUX login.defs 6254 RMD160 1daa093f13d56126833e6e97d6dd60498a68304a SHA1 0cb67ea901d9544f1bb6f8f147aa25bb2f50628e SHA256 b7bfd7b1c34ce3d35865b572abc69d278dea4eef4f349c26b238735547c4ac22 size 6254
 MD5 b1efe75ceba3c645eaab09c580809342 files/login.defs 6254
+RMD160 1daa093f13d56126833e6e97d6dd60498a68304a files/login.defs 6254
+SHA256 b7bfd7b1c34ce3d35865b572abc69d278dea4eef4f349c26b238735547c4ac22 files/login.defs 6254
+AUX login.pamd 1019 RMD160 062e018d7c0e6c3b9963f695051322f762809edc SHA1 9d7d986a0e89efab8454c6528722e6e0d2ad5cb2 SHA256 4d1844dbfc9292ae82789c26767190b6ca2cad0f77a55fee86dbf292444762e0 size 1019
 MD5 e01e197ed3b6d2ec6ae83d23b33088b8 files/login.pamd 1019
+RMD160 062e018d7c0e6c3b9963f695051322f762809edc files/login.pamd 1019
+SHA256 4d1844dbfc9292ae82789c26767190b6ca2cad0f77a55fee86dbf292444762e0 files/login.pamd 1019
+AUX pam.d-include/login 245 RMD160 100e5514b65603d1fa0001cc0dce5dd2caaf232f SHA1 12c3524fe5565c722adffef58804b18bdaa1f411 SHA256 39bbe2ed696a22c7549a39a7cfd47c16e347e5af4fd71b8c01ec87fce59ba0a0 size 245
 MD5 4b7d75b12f1bea9f349dff4c48c18b8b files/pam.d-include/login 245
+RMD160 100e5514b65603d1fa0001cc0dce5dd2caaf232f files/pam.d-include/login 245
+SHA256 39bbe2ed696a22c7549a39a7cfd47c16e347e5af4fd71b8c01ec87fce59ba0a0 files/pam.d-include/login 245
+AUX pam.d-include/other 142 RMD160 ccd73af37364c1c7edbe9150255fd0bcf8b12b09 SHA1 e038542a11ff3da16756518f236b6d273da1d08d SHA256 5e05df2743ec0021364b05f4bbe2e5a3a670abb5af845c3fa760731e5b7272ca size 142
 MD5 5bff4f2134b72dabc4afa5bb296e874d files/pam.d-include/other 142
+RMD160 ccd73af37364c1c7edbe9150255fd0bcf8b12b09 files/pam.d-include/other 142
+SHA256 5e05df2743ec0021364b05f4bbe2e5a3a670abb5af845c3fa760731e5b7272ca files/pam.d-include/other 142
+AUX pam.d-include/passwd 104 RMD160 15f20c39c10b3ebd53d9ef41da3e35e84b37a8ca SHA1 11cfabf1c2620c8485a2dcd6b10fef0739adc3f0 SHA256 7ec450d9ca70382a524aacd42c979969aca21ef4d26433026d35bda398d3361c size 104
 MD5 5df27e06de913de76e24790642eecfd2 files/pam.d-include/passwd 104
+RMD160 15f20c39c10b3ebd53d9ef41da3e35e84b37a8ca files/pam.d-include/passwd 104
+SHA256 7ec450d9ca70382a524aacd42c979969aca21ef4d26433026d35bda398d3361c files/pam.d-include/passwd 104
+AUX pam.d-include/shadow 152 RMD160 7d411afa672ae0fc5bac7d2d72f818e991957f63 SHA1 545a8a22af457ef71bec657a2e3bff0500352a4b SHA256 7fc1ccca85d2b1ac4dad9909792453c8d26e9aeab48c620d861a92b9355ac69f size 152
 MD5 50d7c96eab701fd6ddbf4b283e493b4c files/pam.d-include/shadow 152
+RMD160 7d411afa672ae0fc5bac7d2d72f818e991957f63 files/pam.d-include/shadow 152
+SHA256 7fc1ccca85d2b1ac4dad9909792453c8d26e9aeab48c620d861a92b9355ac69f files/pam.d-include/shadow 152
+AUX pam.d-include/su 1059 RMD160 6829acf0231c9e89a513425a24fba2d7238e34d7 SHA1 f1fd36489612b3453239db85eef8ec04a55c5f19 SHA256 63a6a6fb6194f4dff8fdd16214a563242a4ea6cb682f49af337378dfddaf2962 size 1059
 MD5 97b4f01b65fd3b8caa8983489e9b6848 files/pam.d-include/su 1059
+RMD160 6829acf0231c9e89a513425a24fba2d7238e34d7 files/pam.d-include/su 1059
+SHA256 63a6a6fb6194f4dff8fdd16214a563242a4ea6cb682f49af337378dfddaf2962 files/pam.d-include/su 1059
+AUX pam.d-include/su-openpam 249 RMD160 f89c58a177c15c8c6b515280c1c3e4a843eba191 SHA1 d4e2fad078873b09b1123cd45f1e19b6af41c982 SHA256 8d26b735b1b5aa598fc29a88a2d52eeed587210dd1dbd3180ef9bb440a3375b7 size 249
 MD5 e3a7d5b7abee1ba6e7f09ee607da87ba files/pam.d-include/su-openpam 249
+RMD160 f89c58a177c15c8c6b515280c1c3e4a843eba191 files/pam.d-include/su-openpam 249
+SHA256 8d26b735b1b5aa598fc29a88a2d52eeed587210dd1dbd3180ef9bb440a3375b7 files/pam.d-include/su-openpam 249
+AUX pam.d-include/system-auth 380 RMD160 21b5e82097a1d0bef37b40a56f47c6bdbcc6c7b2 SHA1 f8416f974e41156e7990bcbdfde1c6554088f106 SHA256 704c07b9bab8201d55d80970e5a086ea35d93d62969aeb27ee9ebef85a029ed9 size 380
 MD5 caa5f36d54cb7a75ce5728f7f1badafb files/pam.d-include/system-auth 380
+RMD160 21b5e82097a1d0bef37b40a56f47c6bdbcc6c7b2 files/pam.d-include/system-auth 380
+SHA256 704c07b9bab8201d55d80970e5a086ea35d93d62969aeb27ee9ebef85a029ed9 files/pam.d-include/system-auth 380
+AUX pam.d-include/system-auth-1.1 365 RMD160 28d216f6542554bf175a43a8763827831009224d SHA1 91af0856563242ca34c6f49ee57d90c8a9e6a0f8 SHA256 e073f573c88515cf38fb22faa26ccf87d55d34e6d460d28ad25682958de4c13e size 365
 MD5 33d9efd092b6999143ea42c99a59bfb1 files/pam.d-include/system-auth-1.1 365
+RMD160 28d216f6542554bf175a43a8763827831009224d files/pam.d-include/system-auth-1.1 365
+SHA256 e073f573c88515cf38fb22faa26ccf87d55d34e6d460d28ad25682958de4c13e files/pam.d-include/system-auth-1.1 365
+AUX pam.d/login 333 RMD160 8ace0beb3722c58397794265c09648d37eb217a1 SHA1 e57eee17d985274363941047c9eaea54d23e74be SHA256 7c678613cadb447e882c24fa491a4fd5d01d9345e5b7f115663fbe779c7535b9 size 333
 MD5 987d0bd2e5dd1f96dc28ae2963054022 files/pam.d/login 333
+RMD160 8ace0beb3722c58397794265c09648d37eb217a1 files/pam.d/login 333
+SHA256 7c678613cadb447e882c24fa491a4fd5d01d9345e5b7f115663fbe779c7535b9 files/pam.d/login 333
+AUX pam.d/other 142 RMD160 ccd73af37364c1c7edbe9150255fd0bcf8b12b09 SHA1 e038542a11ff3da16756518f236b6d273da1d08d SHA256 5e05df2743ec0021364b05f4bbe2e5a3a670abb5af845c3fa760731e5b7272ca size 142
 MD5 5bff4f2134b72dabc4afa5bb296e874d files/pam.d/other 142
+RMD160 ccd73af37364c1c7edbe9150255fd0bcf8b12b09 files/pam.d/other 142
+SHA256 5e05df2743ec0021364b05f4bbe2e5a3a670abb5af845c3fa760731e5b7272ca files/pam.d/other 142
+AUX pam.d/passwd 172 RMD160 27c31ba3ad64b6bf8bb465b51c1908d85a42da16 SHA1 d4b4e6106767cf618d9817767e3d2d54215d8388 SHA256 13c8375bf208924598422d35cf9066c9e77a234b90ee8e2b845e55bc0f5876ef size 172
 MD5 8a59937d720a19824db6e4a8cd173a4b files/pam.d/passwd 172
+RMD160 27c31ba3ad64b6bf8bb465b51c1908d85a42da16 files/pam.d/passwd 172
+SHA256 13c8375bf208924598422d35cf9066c9e77a234b90ee8e2b845e55bc0f5876ef files/pam.d/passwd 172
+AUX pam.d/shadow 171 RMD160 3cb1b04370f3492ab4caa13742e95485167cc1e8 SHA1 9d7a005421d78711d88703209f6f1b97cbcb2d97 SHA256 7f181ffaf004d4ae5ca1a6c3b9dbb87a6195c1c005d17c76b32602d812864b12 size 171
 MD5 a5721c39446539b751dceae4b054542b files/pam.d/shadow 171
+RMD160 3cb1b04370f3492ab4caa13742e95485167cc1e8 files/pam.d/shadow 171
+SHA256 7f181ffaf004d4ae5ca1a6c3b9dbb87a6195c1c005d17c76b32602d812864b12 files/pam.d/shadow 171
+AUX pam.d/su 1142 RMD160 031016dd8fb2721b668c6cf9c4e7be27ecdaa198 SHA1 dfc5a5a3c010d455dcb10cc34d686363f5c79c46 SHA256 6a8e7a11f8d7089676cecb52b2bcdc93bfb7459f6bca1b2ef01847c53fdfd9c2 size 1142
 MD5 a1fc81dbd0d41face776fba4ca929d8f files/pam.d/su 1142
+RMD160 031016dd8fb2721b668c6cf9c4e7be27ecdaa198 files/pam.d/su 1142
+SHA256 6a8e7a11f8d7089676cecb52b2bcdc93bfb7459f6bca1b2ef01847c53fdfd9c2 files/pam.d/su 1142
+AUX pam.d/system-auth 373 RMD160 f0bbc8a9f69854ffadc81de532e9a993f9761ae7 SHA1 95cab48dff43b02b624050b5cb64d55159006590 SHA256 118ac8c88e9cb0f12fecfc2ff6b503f6ea151bb306cb6b58963068eea04c3668 size 373
 MD5 deed69f8fa52ca844f3669414bd5cf01 files/pam.d/system-auth 373
+RMD160 f0bbc8a9f69854ffadc81de532e9a993f9761ae7 files/pam.d/system-auth 373
+SHA256 118ac8c88e9cb0f12fecfc2ff6b503f6ea151bb306cb6b58963068eea04c3668 files/pam.d/system-auth 373
+AUX pam.d/system-auth-1.1 365 RMD160 28d216f6542554bf175a43a8763827831009224d SHA1 91af0856563242ca34c6f49ee57d90c8a9e6a0f8 SHA256 e073f573c88515cf38fb22faa26ccf87d55d34e6d460d28ad25682958de4c13e size 365
 MD5 33d9efd092b6999143ea42c99a59bfb1 files/pam.d/system-auth-1.1 365
+RMD160 28d216f6542554bf175a43a8763827831009224d files/pam.d/system-auth-1.1 365
+SHA256 e073f573c88515cf38fb22faa26ccf87d55d34e6d460d28ad25682958de4c13e files/pam.d/system-auth-1.1 365
+AUX securetty 253 RMD160 20e9b398e7bd3c6d50db92d403ade8e3f5b13cb1 SHA1 ca723296318773733d1e53486088579ff43e210b SHA256 158ba98d557a8e3241d8635e5f8e2d6712847ec0b92741f8bdd65daecd834843 size 253
 MD5 a744152ec905f4c06f3b92142b7fec8a files/securetty 253
+RMD160 20e9b398e7bd3c6d50db92d403ade8e3f5b13cb1 files/securetty 253
+SHA256 158ba98d557a8e3241d8635e5f8e2d6712847ec0b92741f8bdd65daecd834843 files/securetty 253
+AUX shadow-4.0.10-dots-in-usernames.patch 1894 RMD160 b7f6b19debccfccd1cc6b7e3d58dbe23803c38d3 SHA1 caa17ea7b85e2d6ef64a9d8c69dfe17f5925674e SHA256 4689d739f336e21ad2a1d3703223e4eb63af2cdf0f34b4c70daa2cb8659dfac4 size 1894
 MD5 6355d65b618395c4adf46f733269546c files/shadow-4.0.10-dots-in-usernames.patch 1894
+RMD160 b7f6b19debccfccd1cc6b7e3d58dbe23803c38d3 files/shadow-4.0.10-dots-in-usernames.patch 1894
+SHA256 4689d739f336e21ad2a1d3703223e4eb63af2cdf0f34b4c70daa2cb8659dfac4 files/shadow-4.0.10-dots-in-usernames.patch 1894
+AUX shadow-4.0.10-fix-configure.patch 579 RMD160 08b0e601819cffdf63f41f0923e8030647d38f73 SHA1 cc1956861e182a33d27afaf763304a5d7da8080f SHA256 c510904831d44d62b622c954dbd69ff3a88349f52d4c1ffdc659e27ea5803756 size 579
 MD5 95f7b8980169e81352229bd548909ea7 files/shadow-4.0.10-fix-configure.patch 579
+RMD160 08b0e601819cffdf63f41f0923e8030647d38f73 files/shadow-4.0.10-fix-configure.patch 579
+SHA256 c510904831d44d62b622c954dbd69ff3a88349f52d4c1ffdc659e27ea5803756 files/shadow-4.0.10-fix-configure.patch 579
+AUX shadow-4.0.10-long-groupnames.patch 1205 RMD160 a1aca5864b17745a21a28593fbae8195dca078e7 SHA1 288770e3352c01e2dca636c2deb13c2394ee5d6d SHA256 f243c6b275860cf23e1a7fa0f7f179d103dd28c16c127cd00abe5b18c0ee56fa size 1205
 MD5 aaedecd7edcccff66f962fd82928eec9 files/shadow-4.0.10-long-groupnames.patch 1205
+RMD160 a1aca5864b17745a21a28593fbae8195dca078e7 files/shadow-4.0.10-long-groupnames.patch 1205
+SHA256 f243c6b275860cf23e1a7fa0f7f179d103dd28c16c127cd00abe5b18c0ee56fa files/shadow-4.0.10-long-groupnames.patch 1205
+AUX shadow-4.0.10-nls-manpages.patch 367 RMD160 aae28d4c6b03827b3544a4c15eb5b6fde35d1e67 SHA1 d9b9695a7e09391eaeec0dcf7df34a7d908752da SHA256 63f3b748333cf2ade745bd003f9f1c702b340cfb3ed035839b8151744e7afe3e size 367
 MD5 f9846ea2aeefba54443ef5d6796f0bbc files/shadow-4.0.10-nls-manpages.patch 367
+RMD160 aae28d4c6b03827b3544a4c15eb5b6fde35d1e67 files/shadow-4.0.10-nls-manpages.patch 367
+SHA256 63f3b748333cf2ade745bd003f9f1c702b340cfb3ed035839b8151744e7afe3e files/shadow-4.0.10-nls-manpages.patch 367
+AUX shadow-4.0.10-nonis.patch 1434 RMD160 6cfbc8f6364731f25d5ffe2b73974b2c8abc2916 SHA1 f2f93e833f271829a09f55496ed2e3d29b48548b SHA256 11d16d368deb92a1484dfd2ee3ac1e69674ee792fdc6fd8d76461db724d0b7e3 size 1434
 MD5 fdb23bff28b70bd53f200379c33dd27c files/shadow-4.0.10-nonis.patch 1434
+RMD160 6cfbc8f6364731f25d5ffe2b73974b2c8abc2916 files/shadow-4.0.10-nonis.patch 1434
+SHA256 11d16d368deb92a1484dfd2ee3ac1e69674ee792fdc6fd8d76461db724d0b7e3 files/shadow-4.0.10-nonis.patch 1434
+AUX shadow-4.0.11.1-SUPATH.patch 1614 RMD160 ce6578b0a337c36f15a6c1c6f84c210dda1ab675 SHA1 bba8436b2a0381d2b51c24405754d00e04557047 SHA256 ec01306f0e6328c940a5abff451ea5151a8a810b2955dc308a5f97808f54093c size 1614
 MD5 44f064b586ea49c8e2dc1fca8b9e4599 files/shadow-4.0.11.1-SUPATH.patch 1614
+RMD160 ce6578b0a337c36f15a6c1c6f84c210dda1ab675 files/shadow-4.0.11.1-SUPATH.patch 1614
+SHA256 ec01306f0e6328c940a5abff451ea5151a8a810b2955dc308a5f97808f54093c files/shadow-4.0.11.1-SUPATH.patch 1614
+AUX shadow-4.0.11.1-ngettext.patch 1038 RMD160 2a34d80576303d08309bbe3d0f7ae18a6fc4488d SHA1 1c539c1c3c1872e0bdb94f72cd2dbf99af470d58 SHA256 71e8bfba38616e091dfe69793508063869f8a7307db90c66f7f742787ec21175 size 1038
 MD5 450a2289f2a383296ad9af005e46da74 files/shadow-4.0.11.1-ngettext.patch 1038
+RMD160 2a34d80576303d08309bbe3d0f7ae18a6fc4488d files/shadow-4.0.11.1-ngettext.patch 1038
+SHA256 71e8bfba38616e091dfe69793508063869f8a7307db90c66f7f742787ec21175 files/shadow-4.0.11.1-ngettext.patch 1038
+AUX shadow-4.0.11.1-perms.patch 1659 RMD160 ee52a5ceee5edba881bfd16618e3c8f91fff86e3 SHA1 4338d459cda46b030769f40cb1a87c550aee6065 SHA256 71fec5c9214f6bbd2c2bb27426887d4a77e0d29a3dad024e1be56473c0cce4fa size 1659
 MD5 ae5d078bc6b651b5f081dcfc64b5df69 files/shadow-4.0.11.1-perms.patch 1659
+RMD160 ee52a5ceee5edba881bfd16618e3c8f91fff86e3 files/shadow-4.0.11.1-perms.patch 1659
+SHA256 71fec5c9214f6bbd2c2bb27426887d4a77e0d29a3dad024e1be56473c0cce4fa files/shadow-4.0.11.1-perms.patch 1659
+AUX shadow-4.0.11.1-su-fix-environment.patch 966 RMD160 63e102f6c0c165e9b2f8a203eed046ac46ef6e6b SHA1 538b25e241d9aebbc3b157224ea3821ac6bea4a3 SHA256 e46fb1e932cd43a995e1b0757765ed1790627c7beee794b026eb0a7232ea41da size 966
 MD5 f4ae7cde924d5d91ce4010760439b836 files/shadow-4.0.11.1-su-fix-environment.patch 966
+RMD160 63e102f6c0c165e9b2f8a203eed046ac46ef6e6b files/shadow-4.0.11.1-su-fix-environment.patch 966
+SHA256 e46fb1e932cd43a995e1b0757765ed1790627c7beee794b026eb0a7232ea41da files/shadow-4.0.11.1-su-fix-environment.patch 966
+AUX shadow-4.0.11.1-uclibc-missing-l64a.patch 1269 RMD160 137ad062a0639cca6d95f3c72097c1f2e027a6ea SHA1 7191787d2de72176c8fbf13c2090ec1b1889eab0 SHA256 17bbde43ee8b8eea869411939c0063a71811e946e2624f629218ab8fb13f0c8d size 1269
 MD5 c87c0968ace90b32753b91f93ad7bab1 files/shadow-4.0.11.1-uclibc-missing-l64a.patch 1269
+RMD160 137ad062a0639cca6d95f3c72097c1f2e027a6ea files/shadow-4.0.11.1-uclibc-missing-l64a.patch 1269
+SHA256 17bbde43ee8b8eea869411939c0063a71811e946e2624f629218ab8fb13f0c8d files/shadow-4.0.11.1-uclibc-missing-l64a.patch 1269
+AUX shadow-4.0.12-dots-in-usernames.patch 1466 RMD160 c80dcd57060a084a6d97b8af3595692fbcfb8e4e SHA1 7a25d9dfe5fa754b3d22d58c8061c2105f3b261c SHA256 84c017a62788959e97749b2c577d5fb9f55e5e3ae5153f90455430198b66e182 size 1466
 MD5 b52179dd78e6b6d207600184022114db files/shadow-4.0.12-dots-in-usernames.patch 1466
+RMD160 c80dcd57060a084a6d97b8af3595692fbcfb8e4e files/shadow-4.0.12-dots-in-usernames.patch 1466
+SHA256 84c017a62788959e97749b2c577d5fb9f55e5e3ae5153f90455430198b66e182 files/shadow-4.0.12-dots-in-usernames.patch 1466
+AUX shadow-4.0.12-gcc2.patch 962 RMD160 957d464b6ed164496a99b8243a07103ddc5dd28a SHA1 2c7367740319e1b2a3f43f8de73e6700cf916973 SHA256 5a0099878940dbe4fe976e076841c869481c6ee473fdcf46f11f8270e7c98606 size 962
 MD5 e1c86a7766f97cff8d5196821b6b1913 files/shadow-4.0.12-gcc2.patch 962
+RMD160 957d464b6ed164496a99b8243a07103ddc5dd28a files/shadow-4.0.12-gcc2.patch 962
+SHA256 5a0099878940dbe4fe976e076841c869481c6ee473fdcf46f11f8270e7c98606 files/shadow-4.0.12-gcc2.patch 962
+AUX shadow-4.0.12-long-groupnames.patch 923 RMD160 081dfbad582b3066fc96a0b97e59cce4cea8360d SHA1 c0fb73c58e75803e4e3147d37cced9e83dd2fb26 SHA256 2c8c135cfa74faf4739b2599f10f03821f2992e9e56297395c460a8cdd37cc43 size 923
 MD5 804242385ef14139f4b46167396f26f8 files/shadow-4.0.12-long-groupnames.patch 923
+RMD160 081dfbad582b3066fc96a0b97e59cce4cea8360d files/shadow-4.0.12-long-groupnames.patch 923
+SHA256 2c8c135cfa74faf4739b2599f10f03821f2992e9e56297395c460a8cdd37cc43 files/shadow-4.0.12-long-groupnames.patch 923
+AUX shadow-4.0.13-dots-in-usernames.patch 917 RMD160 999f1f6a6468527db1fbc21b7b2a1113fa2aef86 SHA1 bf8fd187ea3b80f98b3dbd5a7af6b17385673b42 SHA256 ddd255ec0e5abd2aeb708ddb3f03a8dd2ecf318cfa5cdbd179f599322d1092f3 size 917
 MD5 fc7dcebbbe2fae05629e848bc886f454 files/shadow-4.0.13-dots-in-usernames.patch 917
+RMD160 999f1f6a6468527db1fbc21b7b2a1113fa2aef86 files/shadow-4.0.13-dots-in-usernames.patch 917
+SHA256 ddd255ec0e5abd2aeb708ddb3f03a8dd2ecf318cfa5cdbd179f599322d1092f3 files/shadow-4.0.13-dots-in-usernames.patch 917
+AUX shadow-4.0.13-login.defs.patch 672 RMD160 bcd9b8714c26f79ea2eb7af23778d81d5397f366 SHA1 148fdb22beb5e4606d7eef6a060f19d866233442 SHA256 bc15f859c0d120b917c0a4a3c9351acbce93463bb1f9b4b76b76f11382766220 size 672
 MD5 08f11e5b0c4a987e49367f245f475728 files/shadow-4.0.13-login.defs.patch 672
+RMD160 bcd9b8714c26f79ea2eb7af23778d81d5397f366 files/shadow-4.0.13-login.defs.patch 672
+SHA256 bc15f859c0d120b917c0a4a3c9351acbce93463bb1f9b4b76b76f11382766220 files/shadow-4.0.13-login.defs.patch 672
+AUX shadow-4.0.13-long-groupnames.patch 398 RMD160 a1fdef5d2c87579838332558624f86d591b85c4b SHA1 ea8eb52bd13b4cd24c564db02ee73fff65fa0372 SHA256 e0f7969be35f190d09d355aa3b76a09f2b1b5ea9a461a27ac1b9ead982211a16 size 398
 MD5 acdc5a5ac62bfd3495bde25438b49734 files/shadow-4.0.13-long-groupnames.patch 398
+RMD160 a1fdef5d2c87579838332558624f86d591b85c4b files/shadow-4.0.13-long-groupnames.patch 398
+SHA256 e0f7969be35f190d09d355aa3b76a09f2b1b5ea9a461a27ac1b9ead982211a16 files/shadow-4.0.13-long-groupnames.patch 398
+AUX shadow-4.0.13-nonis.patch 1795 RMD160 ed7ece3f676283f24daa4d7506a0ed73a5bb4e77 SHA1 c2f1472da3865370201d1c43e26db86da7fdd6c5 SHA256 4a4bbed01da45aa7217e12a070e0a86c70a4c9049bddaa881d404a362e5df145 size 1795
 MD5 dfa169094cacf64d4980b0c8d76374d8 files/shadow-4.0.13-nonis.patch 1795
+RMD160 ed7ece3f676283f24daa4d7506a0ed73a5bb4e77 files/shadow-4.0.13-nonis.patch 1795
+SHA256 4a4bbed01da45aa7217e12a070e0a86c70a4c9049bddaa881d404a362e5df145 files/shadow-4.0.13-nonis.patch 1795
+AUX shadow-4.0.13-su-fix-environment.patch 1070 RMD160 7bbac959459458a312a196388a6ab99b0e306897 SHA1 89916707d6fb4abc7516cfe7116c657c28e5ba18 SHA256 1554809ff2dbe6768ef8f8c7f14ccad8fa4eb2d5765ef67714a42fb35a34dab4 size 1070
 MD5 223a6d64e1635462fcca48217644cfd0 files/shadow-4.0.13-su-fix-environment.patch 1070
+RMD160 7bbac959459458a312a196388a6ab99b0e306897 files/shadow-4.0.13-su-fix-environment.patch 1070
+SHA256 1554809ff2dbe6768ef8f8c7f14ccad8fa4eb2d5765ef67714a42fb35a34dab4 files/shadow-4.0.13-su-fix-environment.patch 1070
+AUX shadow-4.0.14-nls-manpages.patch 373 RMD160 8b9a8a006adf8a449593140284dcde4901addec5 SHA1 f49d3d629269526addf2a7b0f1a89d016758b35e SHA256 882f86a47813c458bf1a1e05efb177eb1e6ab6f5e40d74773ff899aa7a9eec23 size 373
 MD5 ab488dd7dc2c40e1311479470b28d140 files/shadow-4.0.14-nls-manpages.patch 373
+RMD160 8b9a8a006adf8a449593140284dcde4901addec5 files/shadow-4.0.14-nls-manpages.patch 373
+SHA256 882f86a47813c458bf1a1e05efb177eb1e6ab6f5e40d74773ff899aa7a9eec23 files/shadow-4.0.14-nls-manpages.patch 373
+AUX shadow-4.0.14-su-cvs.patch 1986 RMD160 0900e0cb28baa7c4a2c5ba5a5a69cce909a83aa3 SHA1 cbb57982bfd879ada869ae2c3608daa04b2ad48e SHA256 0ff94befbf323f60a52cb811a69ca8f966a3c65a59689baf6088dbf402e7c8b6 size 1986
 MD5 d31e7b9100b625d9b07638b84062db49 files/shadow-4.0.14-su-cvs.patch 1986
+RMD160 0900e0cb28baa7c4a2c5ba5a5a69cce909a83aa3 files/shadow-4.0.14-su-cvs.patch 1986
+SHA256 0ff94befbf323f60a52cb811a69ca8f966a3c65a59689baf6088dbf402e7c8b6 files/shadow-4.0.14-su-cvs.patch 1986
+AUX shadow-4.0.14-su-fix-environment.patch 701 RMD160 0375f0d5ef4e7f85b9465b0b4fad828ee6394e60 SHA1 d0bad5098f05f2194ce343a1bf95e930eadd8183 SHA256 15bf4978d71f4f3f96ddda031b608a0fecb6a95644f47b058fb1e3d38bfc99a8 size 701
 MD5 afc6edd720c3e704f48553ef9ca8631b files/shadow-4.0.14-su-fix-environment.patch 701
+RMD160 0375f0d5ef4e7f85b9465b0b4fad828ee6394e60 files/shadow-4.0.14-su-fix-environment.patch 701
+SHA256 15bf4978d71f4f3f96ddda031b608a0fecb6a95644f47b058fb1e3d38bfc99a8 files/shadow-4.0.14-su-fix-environment.patch 701
+AUX shadow-4.0.14-userdel-group-remove.patch 3043 RMD160 f1fdcc15eb7172ad852a20784233182206c3cab3 SHA1 ea2fa8f562ba90f9103a712a9f7564b4597bf6a5 SHA256 fb8d16b18b94b4878b7303b5ee0a0071a393975b0cc50404896de438b802a0e9 size 3043
 MD5 98a04c2b05e656367aa6e2abbebd32cb files/shadow-4.0.14-userdel-group-remove.patch 3043
+RMD160 f1fdcc15eb7172ad852a20784233182206c3cab3 files/shadow-4.0.14-userdel-group-remove.patch 3043
+SHA256 fb8d16b18b94b4878b7303b5ee0a0071a393975b0cc50404896de438b802a0e9 files/shadow-4.0.14-userdel-group-remove.patch 3043
+AUX shadow-4.0.15-no-default-MAIL.patch 879 RMD160 c380e0a00ef0be8a99927de8bb6cf70f1dfd33ce SHA1 fc30b336b7f22c76ee2276d6b6d8cf361bdfffea SHA256 57aa93bae1cbaffc51250bc415384991992e6ebb6cc5bb1f3c0dc90bb3dd0354 size 879
 MD5 3ce54cb32b7564df1386544bf3d1e035 files/shadow-4.0.15-no-default-MAIL.patch 879
+RMD160 c380e0a00ef0be8a99927de8bb6cf70f1dfd33ce files/shadow-4.0.15-no-default-MAIL.patch 879
+SHA256 57aa93bae1cbaffc51250bc415384991992e6ebb6cc5bb1f3c0dc90bb3dd0354 files/shadow-4.0.15-no-default-MAIL.patch 879
+AUX shadow-4.0.15-sanity-checks.patch 1875 RMD160 10cf79e08349848cbfb407dd3e010e86c46938bd SHA1 79dd0697a5acdb9eb484a90581b8e46efa2f73be SHA256 54fbf4ab6c3593b5d66c6ad5e5e9eb1f6eef09f7198c9825ddd838835d6adfec size 1875
 MD5 186ba47908dc805ae97cdee9248e873d files/shadow-4.0.15-sanity-checks.patch 1875
+RMD160 10cf79e08349848cbfb407dd3e010e86c46938bd files/shadow-4.0.15-sanity-checks.patch 1875
+SHA256 54fbf4ab6c3593b5d66c6ad5e5e9eb1f6eef09f7198c9825ddd838835d6adfec files/shadow-4.0.15-sanity-checks.patch 1875
+AUX shadow-4.0.15-uclibc-missing-l64a.patch 1354 RMD160 6d35c4ddad876edacdd41be056fa8abd567ae802 SHA1 27012d25d41a19dcafab1fb45921bbf7aa12885d SHA256 37ac2cdea64f849e0cf9e92ccefeab05b0466541268fb4844f18a94c377c8514 size 1354
 MD5 f79f1051bedb185f81f24fb9d30dcc35 files/shadow-4.0.15-uclibc-missing-l64a.patch 1354
+RMD160 6d35c4ddad876edacdd41be056fa8abd567ae802 files/shadow-4.0.15-uclibc-missing-l64a.patch 1354
+SHA256 37ac2cdea64f849e0cf9e92ccefeab05b0466541268fb4844f18a94c377c8514 files/shadow-4.0.15-uclibc-missing-l64a.patch 1354
+AUX shadow-4.0.4.1-nonis.patch 1504 RMD160 f8e5fc3fb33c2d57206d813e88abe6a7d6198ed7 SHA1 2f05f7dcd62248c974b58909c8951a7eeb64f7a4 SHA256 3e126ef9e1e9b7d95297e2e1dd450557438f9a7f13a120fae8863e3d80534e08 size 1504
 MD5 020e030c2d09b206e88cf9051ced6244 files/shadow-4.0.4.1-nonis.patch 1504
+RMD160 f8e5fc3fb33c2d57206d813e88abe6a7d6198ed7 files/shadow-4.0.4.1-nonis.patch 1504
+SHA256 3e126ef9e1e9b7d95297e2e1dd450557438f9a7f13a120fae8863e3d80534e08 files/shadow-4.0.4.1-nonis.patch 1504
+AUX shadow-4.0.5-login.defs.patch 766 RMD160 5704075ad7606b9a5a55999ebf0b4d240375e17c SHA1 c84e22b384d85e30f2cbbb7c2b1c4436c7c853b8 SHA256 cb813c17199f3a388b47dba28e95de5e6fddca62081b241ae964a6f68a19a605 size 766
 MD5 d14e133da535d64d1b397784e17c213a files/shadow-4.0.5-login.defs.patch 766
+RMD160 5704075ad7606b9a5a55999ebf0b4d240375e17c files/shadow-4.0.5-login.defs.patch 766
+SHA256 cb813c17199f3a388b47dba28e95de5e6fddca62081b241ae964a6f68a19a605 files/shadow-4.0.5-login.defs.patch 766
+AUX shadow-4.0.5-nls-manpages.patch 362 RMD160 e3a152d62af99d95f30bddb79eea543b737bd17e SHA1 e86f414425d969f03204a56c347c4dee86fd158d SHA256 fb6a2d8db11bde75c72d9fb12c717ca76208a8f8a5ae61b8bf9ad0d32fc2a1df size 362
 MD5 c31db5c71b0cdfca75346abc2887aa02 files/shadow-4.0.5-nls-manpages.patch 362
+RMD160 e3a152d62af99d95f30bddb79eea543b737bd17e files/shadow-4.0.5-nls-manpages.patch 362
+SHA256 fb6a2d8db11bde75c72d9fb12c717ca76208a8f8a5ae61b8bf9ad0d32fc2a1df files/shadow-4.0.5-nls-manpages.patch 362
+AUX shadow-4.0.5-skey.patch 395 RMD160 4a60c6946f316ba2cc7df56c65cec48e39f2484d SHA1 ddf582510ead8681b8bf8e47d5afd60d1db3349a SHA256 50f69d77686c5c009732b496af23156492eaecf9b8b777ac4eee49aa08056bdc size 395
 MD5 636f233fa173a998195016c3808173d4 files/shadow-4.0.5-skey.patch 395
+RMD160 4a60c6946f316ba2cc7df56c65cec48e39f2484d files/shadow-4.0.5-skey.patch 395
+SHA256 50f69d77686c5c009732b496af23156492eaecf9b8b777ac4eee49aa08056bdc files/shadow-4.0.5-skey.patch 395
+AUX shadow-4.0.6-dots-in-usernames.patch 1993 RMD160 b59eda70af6ed77d420d59617f1f3faf43c9e2ba SHA1 da42e1c08d6479b66aef76a8f2362ee299c4a10e SHA256 814adaaf543aef869b829045b897cb591edc9e9b7394a2527ce5cfe9833ca905 size 1993
 MD5 b4d0fc0f54800978591791493d6b2ec3 files/shadow-4.0.6-dots-in-usernames.patch 1993
+RMD160 b59eda70af6ed77d420d59617f1f3faf43c9e2ba files/shadow-4.0.6-dots-in-usernames.patch 1993
+SHA256 814adaaf543aef869b829045b897cb591edc9e9b7394a2527ce5cfe9833ca905 files/shadow-4.0.6-dots-in-usernames.patch 1993
+AUX shadow-4.0.6-fix-configure.patch 3047 RMD160 95b11b5f26c97fc03ba70ba511553eea82497381 SHA1 30b3c81f23047a8cd1e5f4078f348529f3e63a0f SHA256 7f2a4b4d240e545edf0719fbb0819599c4ecb7df79b374143027f22983c2c39c size 3047
 MD5 90e2ab53494f677dc23b5137d6e39110 files/shadow-4.0.6-fix-configure.patch 3047
+RMD160 95b11b5f26c97fc03ba70ba511553eea82497381 files/shadow-4.0.6-fix-configure.patch 3047
+SHA256 7f2a4b4d240e545edf0719fbb0819599c4ecb7df79b374143027f22983c2c39c files/shadow-4.0.6-fix-configure.patch 3047
+AUX shadow-4.0.6-long-groupnames.patch 1625 RMD160 de5da792428f0953e26c149f96171fd943d0b4c2 SHA1 c659db2e57259c003a807aa7d50140b0665e26ef SHA256 6e1a6c96c26cdc11fc1c20c96b49ed3a3812bf409cd7ed23aea7d7ca3778a793 size 1625
 MD5 8bf11ce0e8ee683fe290462473871dab files/shadow-4.0.6-long-groupnames.patch 1625
+RMD160 de5da792428f0953e26c149f96171fd943d0b4c2 files/shadow-4.0.6-long-groupnames.patch 1625
+SHA256 6e1a6c96c26cdc11fc1c20c96b49ed3a3812bf409cd7ed23aea7d7ca3778a793 files/shadow-4.0.6-long-groupnames.patch 1625
+AUX shadow-4.0.6-manpages.patch 564 RMD160 cee29e96fb6ddeeff74cc4c9a5126e76ff3819cb SHA1 1233bb73c085ee40660e3e2ab3e8dc39354e58ae SHA256 2a2b755309dcebebc53329688e0c34f5e616a9d338405c5a74d6a7542d7b824c size 564
 MD5 d15398f7d8c06b906abdf73ae3a55f54 files/shadow-4.0.6-manpages.patch 564
+RMD160 cee29e96fb6ddeeff74cc4c9a5126e76ff3819cb files/shadow-4.0.6-manpages.patch 564
+SHA256 2a2b755309dcebebc53329688e0c34f5e616a9d338405c5a74d6a7542d7b824c files/shadow-4.0.6-manpages.patch 564
+AUX shadow-4.0.7-iswheel.patch 416 RMD160 806db46a24656fb81168b3cd7ce6eaf0e84bf1c3 SHA1 87ee387adc2efb9afbdc633ec09ec5953479529f SHA256 545bbe5d1f07c844403b77c080fe77fe22550ff284f14204c80f13ae316bd4a6 size 416
 MD5 d06833980d79d4f001b6064a3f52f938 files/shadow-4.0.7-iswheel.patch 416
+RMD160 806db46a24656fb81168b3cd7ce6eaf0e84bf1c3 files/shadow-4.0.7-iswheel.patch 416
+SHA256 545bbe5d1f07c844403b77c080fe77fe22550ff284f14204c80f13ae316bd4a6 files/shadow-4.0.7-iswheel.patch 416
+AUX shadow-4.0.7-lastlog.patch 455 RMD160 7a3a31a0b40ef3dd2b463f3324107e0bb7e7ebe5 SHA1 08231fbe6083615ff922349a1f1c4f9676a17055 SHA256 cd036bb022971092d4bd8fcee98643f5600c8a9244d1dfa246948dbac457fb17 size 455
 MD5 a63ee37286c486567191c7c6b24432e2 files/shadow-4.0.7-lastlog.patch 455
+RMD160 7a3a31a0b40ef3dd2b463f3324107e0bb7e7ebe5 files/shadow-4.0.7-lastlog.patch 455
+SHA256 cd036bb022971092d4bd8fcee98643f5600c8a9244d1dfa246948dbac457fb17 files/shadow-4.0.7-lastlog.patch 455
+AUX shadow-4.0.7-nscd-EPIPE-failure.patch 947 RMD160 bea29cb71a62e78203d3b058780bf04c0a402e53 SHA1 216361e31682e4c2dda98756351456e199845128 SHA256 78edc70d41df246490d8fa766995cd064972dc01afdf2adbd8bb19c601fb0490 size 947
 MD5 70b7c7f1725841e335e5f2361fc9ebab files/shadow-4.0.7-nscd-EPIPE-failure.patch 947
+RMD160 bea29cb71a62e78203d3b058780bf04c0a402e53 files/shadow-4.0.7-nscd-EPIPE-failure.patch 947
+SHA256 78edc70d41df246490d8fa766995cd064972dc01afdf2adbd8bb19c601fb0490 files/shadow-4.0.7-nscd-EPIPE-failure.patch 947
+AUX shadow-4.0.7-nscd-socket-path.patch 1081 RMD160 63c873ea739ec292a98bce24c4c5c6cd9818abc0 SHA1 937524d46b2048eb15cad8738a8f5df583c565b7 SHA256 b1c441abcd7f6cf34d387a1bda7133ffb8d7d407729112e9372bcb0a0e2ad5fe size 1081
 MD5 e32464f2df5a85f4f6c67bc78e9a23d1 files/shadow-4.0.7-nscd-socket-path.patch 1081
+RMD160 63c873ea739ec292a98bce24c4c5c6cd9818abc0 files/shadow-4.0.7-nscd-socket-path.patch 1081
+SHA256 b1c441abcd7f6cf34d387a1bda7133ffb8d7d407729112e9372bcb0a0e2ad5fe files/shadow-4.0.7-nscd-socket-path.patch 1081
+AUX shadow-4.0.7-perms.patch 1768 RMD160 d0dcb046314fd9db40406617c77e93d4b18c3bb2 SHA1 9889ce78caef6e330ca5cd36a5c3cee11cf476b7 SHA256 3cebd9b132cf64b9b33378e294538aa5d563e0cedceb8a14e7274df5547d322d size 1768
 MD5 13cddd2e24cbcaf5164e13f9105c222c files/shadow-4.0.7-perms.patch 1768
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 d0dcb046314fd9db40406617c77e93d4b18c3bb2 files/shadow-4.0.7-perms.patch 1768
+SHA256 3cebd9b132cf64b9b33378e294538aa5d563e0cedceb8a14e7274df5547d322d files/shadow-4.0.7-perms.patch 1768
+DIST shadow-4.0.11.1.tar.bz2 1056103 RMD160 16453f7205c05a11a03cec79217ada57ae9c7f16 SHA256 f092452a1ee39cc15a205dc1bfdde596da78f96160c36e03c685723a634a3e3b size 1056103
+DIST shadow-4.0.12.tar.bz2 1082217 RMD160 f0a532ee3d71c368313cbe9ab49f22986cde102c SHA256 abeeefd2cb3bfea62f8bdab29451f4585e7c4bb3b252b57e7e3a72ba9b0573cf size 1082217
+DIST shadow-4.0.13.tar.bz2 1087998 RMD160 02124e789e13e877727eb9072ad43900d4e50f56 SHA256 ef31bc7511214cb84f0d8c1821f841269d75d40ca8d48b1913b3b529f954b962 size 1087998
+DIST shadow-4.0.14.tar.bz2 1246902 RMD160 555bb154ba73b9e322ddd17517a77470cdfb7902 SHA256 e9beb4edf8689f94c32e9a8f53d1c6c542ef1a5678e8037d4c452c53dfbeb0ae size 1246902
+DIST shadow-4.0.15.tar.bz2 1294860 RMD160 b7b9ee9469561205037a1eacaa8791f069ba124c SHA256 e486bdb083df453c2d15ac58887ef45a3006182c0cdb1c6092058ea588be538d size 1294860
+DIST shadow-4.0.7.tar.bz2 1019749 RMD160 f8551c8267c8da60366f24db7370ec03273f38bc SHA256 4bf9a7289d1e72b03d53e94c9f5de13cdc9573809270dab27b203fa471518f1b size 1019749
+EBUILD shadow-4.0.11.1-r1.ebuild 7065 RMD160 553033afb14b9b0808293d365df989dfcacff36b SHA1 6f13960c2c9a33bf26f3ff435e347348a20b04b7 SHA256 0dc36d228ded134469b9042d87b71fd6f72678b2201e367fd8419f415c950451 size 7065
 MD5 ad6ed0863f5c1ead00f5cdfc2d399cab shadow-4.0.11.1-r1.ebuild 7065
+RMD160 553033afb14b9b0808293d365df989dfcacff36b shadow-4.0.11.1-r1.ebuild 7065
+SHA256 0dc36d228ded134469b9042d87b71fd6f72678b2201e367fd8419f415c950451 shadow-4.0.11.1-r1.ebuild 7065
+EBUILD shadow-4.0.11.1-r2.ebuild 7196 RMD160 b71e65ff8993542283e1071485dff8194f84d459 SHA1 66fd46be8129730932444e45874772c9995fa0d8 SHA256 9b8eb7468be47371b7b2cea6385350f50e8694f798554be9ed09272164a3f631 size 7196
 MD5 462d7a3ff543f7947013c11b9d53f75b shadow-4.0.11.1-r2.ebuild 7196
+RMD160 b71e65ff8993542283e1071485dff8194f84d459 shadow-4.0.11.1-r2.ebuild 7196
+SHA256 9b8eb7468be47371b7b2cea6385350f50e8694f798554be9ed09272164a3f631 shadow-4.0.11.1-r2.ebuild 7196
+EBUILD shadow-4.0.12.ebuild 7091 RMD160 f4dc0c1a082d652ffa8fe6380d1d7b535c391d70 SHA1 715c57dc261d8dbb57b193d5bef452afe5b5cc9a SHA256 da5fa1bd77e42c3f3d8cf69a323db75a2082b1ef8a0e6fd70abeabafe97d941d size 7091
 MD5 1d4079412434eb76df96a5aeed1dfd80 shadow-4.0.12.ebuild 7091
+RMD160 f4dc0c1a082d652ffa8fe6380d1d7b535c391d70 shadow-4.0.12.ebuild 7091
+SHA256 da5fa1bd77e42c3f3d8cf69a323db75a2082b1ef8a0e6fd70abeabafe97d941d shadow-4.0.12.ebuild 7091
+EBUILD shadow-4.0.13.ebuild 7141 RMD160 c1eedea0a5a8d35e84f792720ecc2df7319b6750 SHA1 da05b2037a1a6a4e1ca83f14f54268dacb35998e SHA256 f2266a47dbfa95400e66afa3ce6020e3471f6d781ed419b437253c5184e1b894 size 7141
 MD5 3ef7ee56f06e933507ce93d28fe287ec shadow-4.0.13.ebuild 7141
+RMD160 c1eedea0a5a8d35e84f792720ecc2df7319b6750 shadow-4.0.13.ebuild 7141
+SHA256 f2266a47dbfa95400e66afa3ce6020e3471f6d781ed419b437253c5184e1b894 shadow-4.0.13.ebuild 7141
+EBUILD shadow-4.0.14-r1.ebuild 7100 RMD160 29db89e19dd4dcb5fb8c04d51c9f264475ab47e8 SHA1 af26fe4263ddb3e4865b2aa837fdce04f7593b22 SHA256 b5e3c50f6d506dde487e62f60a96fa9ffa6b5993385c4c1b9a7c21870019dd8f size 7100
 MD5 d82b25e8d7ebbf89ead8a401a1eca674 shadow-4.0.14-r1.ebuild 7100
+RMD160 29db89e19dd4dcb5fb8c04d51c9f264475ab47e8 shadow-4.0.14-r1.ebuild 7100
+SHA256 b5e3c50f6d506dde487e62f60a96fa9ffa6b5993385c4c1b9a7c21870019dd8f shadow-4.0.14-r1.ebuild 7100
+EBUILD shadow-4.0.14-r2.ebuild 7657 RMD160 01674c57c602a82ba3435f4eb2d1d9746ddc6222 SHA1 2d35534c3eaaad76f9e437d57c28e2f848ae657f SHA256 09c2ac4bdebafc443cb51e865abb48182a4faf4fd3d064e42e182bfaf3b9042c size 7657
 MD5 5d65b3a61204dbb93449fd0baf97e819 shadow-4.0.14-r2.ebuild 7657
+RMD160 01674c57c602a82ba3435f4eb2d1d9746ddc6222 shadow-4.0.14-r2.ebuild 7657
+SHA256 09c2ac4bdebafc443cb51e865abb48182a4faf4fd3d064e42e182bfaf3b9042c shadow-4.0.14-r2.ebuild 7657
+EBUILD shadow-4.0.14-r3.ebuild 7767 RMD160 1747afff427f284d232cac9ebf0b66c092ecf178 SHA1 f5c68a34896c1d9aa26fcf8da967e53edd0e5f6d SHA256 2663b6964a5b25b3e95d1d11939faba04cbd64e932cdeffd25d96f1688f23d6d size 7767
 MD5 b9e0df4af9449f1fe46e7661dc216405 shadow-4.0.14-r3.ebuild 7767
+RMD160 1747afff427f284d232cac9ebf0b66c092ecf178 shadow-4.0.14-r3.ebuild 7767
+SHA256 2663b6964a5b25b3e95d1d11939faba04cbd64e932cdeffd25d96f1688f23d6d shadow-4.0.14-r3.ebuild 7767
+EBUILD shadow-4.0.15-r1.ebuild 7416 RMD160 4747273504d1dff97494e92ef4f12b3efaaa5452 SHA1 421f2aa718deba4990fe92871a1d530456b19902 SHA256 03e24e9f358501f52857ab934ec8084e2ddd3e59f4af7c8e37b9d47925a66971 size 7416
 MD5 a6058e7c7b0234530c929ca7f38e617b shadow-4.0.15-r1.ebuild 7416
-MD5 85a73f61ffcc296016e12002dc95b677 shadow-4.0.15-r2.ebuild 7476
+RMD160 4747273504d1dff97494e92ef4f12b3efaaa5452 shadow-4.0.15-r1.ebuild 7416
+SHA256 03e24e9f358501f52857ab934ec8084e2ddd3e59f4af7c8e37b9d47925a66971 shadow-4.0.15-r1.ebuild 7416
+EBUILD shadow-4.0.15-r2.ebuild 7472 RMD160 14c6fd046a7261efb8ccc13a2cb71c3fa4626ccb SHA1 6cbf10e94464dcb49d3c309de1262dad4d81c4a3 SHA256 516bdf854d78162ee29c8d0ac6e75e9949a1e5c2c48abbe278457bf757f18ab3 size 7472
+MD5 205ba57e87e8f7dad9cce2cb58860d98 shadow-4.0.15-r2.ebuild 7472
+RMD160 14c6fd046a7261efb8ccc13a2cb71c3fa4626ccb shadow-4.0.15-r2.ebuild 7472
+SHA256 516bdf854d78162ee29c8d0ac6e75e9949a1e5c2c48abbe278457bf757f18ab3 shadow-4.0.15-r2.ebuild 7472
+EBUILD shadow-4.0.15.ebuild 7381 RMD160 1c7e6e9121f50c3c95574bb80276e40fde1e8f77 SHA1 77f7eaf8ba2fff618bcd50fe46c33cf6a4b49a69 SHA256 6312212d7e5547d940ae2254966e2808bc861ae6263291d58e0a7fe882a1d729 size 7381
 MD5 7c680b08d906f9d4c044fdd536a6cbf5 shadow-4.0.15.ebuild 7381
+RMD160 1c7e6e9121f50c3c95574bb80276e40fde1e8f77 shadow-4.0.15.ebuild 7381
+SHA256 6312212d7e5547d940ae2254966e2808bc861ae6263291d58e0a7fe882a1d729 shadow-4.0.15.ebuild 7381
+EBUILD shadow-4.0.7-r4.ebuild 7163 RMD160 0622f67c225f3cb59116708993ac7d269fd4b868 SHA1 d3abf0d864c9bc69bc961ce5460d2a01df3ae671 SHA256 e6b7becb236cbba5362ebc9475b6974893c3c90164384ba572be273966e1ba48 size 7163
 MD5 550a7571df41e2be2d4808f6a2ba51a7 shadow-4.0.7-r4.ebuild 7163
+RMD160 0622f67c225f3cb59116708993ac7d269fd4b868 shadow-4.0.7-r4.ebuild 7163
+SHA256 e6b7becb236cbba5362ebc9475b6974893c3c90164384ba572be273966e1ba48 shadow-4.0.7-r4.ebuild 7163
+MISC ChangeLog 26830 RMD160 727f6d235a317820ffa3647fe2c62f14972c095a SHA1 253e261672bbfd64bc6bfb1e284508a40d3892bf SHA256 c302ce714cf47c4b274c29b61eccc7230ecbee593a95ad037023d87c9fc5dfea size 26830
+MD5 0dfe593c4ee389b35fe4d5fef1651031 ChangeLog 26830
+RMD160 727f6d235a317820ffa3647fe2c62f14972c095a ChangeLog 26830
+SHA256 c302ce714cf47c4b274c29b61eccc7230ecbee593a95ad037023d87c9fc5dfea ChangeLog 26830
+MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 size 164
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 66f1d02cf29b251a4fe8c990665af50e files/digest-shadow-4.0.11.1-r1 253
+RMD160 f81a8a1ba2abe2213f77c817dba70ba3fd5f5f78 files/digest-shadow-4.0.11.1-r1 253
+SHA256 bcefe00d44c05b766148d9112b9e69cc476d5bd4b009722c28d9200992bdd791 files/digest-shadow-4.0.11.1-r1 253
+MD5 66f1d02cf29b251a4fe8c990665af50e files/digest-shadow-4.0.11.1-r2 253
+RMD160 f81a8a1ba2abe2213f77c817dba70ba3fd5f5f78 files/digest-shadow-4.0.11.1-r2 253
+SHA256 bcefe00d44c05b766148d9112b9e69cc476d5bd4b009722c28d9200992bdd791 files/digest-shadow-4.0.11.1-r2 253
+MD5 beef08dfc02c59440b74c70d188eb37b files/digest-shadow-4.0.12 247
+RMD160 e1f795a917571f16d5a5cfa9a5a86b20bc5a151c files/digest-shadow-4.0.12 247
+SHA256 b7c340137d23540175751cd7a11c25271c6f262164c218053797f4f8353998c0 files/digest-shadow-4.0.12 247
+MD5 baa03a2db72283ddb5cea1a09bd5adc6 files/digest-shadow-4.0.13 247
+RMD160 b22b25b71f9cea123a3dcc73aecbc6d8626b5b15 files/digest-shadow-4.0.13 247
+SHA256 593d659e66fc5e4e96fa535190cc5060feb24aaca8dc9f43d72296620b89d19b files/digest-shadow-4.0.13 247
+MD5 e762a86e8069be90d8d92c729a7ea723 files/digest-shadow-4.0.14-r1 247
+RMD160 538a905f79791302dcdccc7b0ea73a31bbe89f6b files/digest-shadow-4.0.14-r1 247
+SHA256 5210b269d7a062b2eb8f39cf076802210b525c8eccd18c4dc382049cfee7aba3 files/digest-shadow-4.0.14-r1 247
+MD5 e762a86e8069be90d8d92c729a7ea723 files/digest-shadow-4.0.14-r2 247
+RMD160 538a905f79791302dcdccc7b0ea73a31bbe89f6b files/digest-shadow-4.0.14-r2 247
+SHA256 5210b269d7a062b2eb8f39cf076802210b525c8eccd18c4dc382049cfee7aba3 files/digest-shadow-4.0.14-r2 247
+MD5 e762a86e8069be90d8d92c729a7ea723 files/digest-shadow-4.0.14-r3 247
+RMD160 538a905f79791302dcdccc7b0ea73a31bbe89f6b files/digest-shadow-4.0.14-r3 247
+SHA256 5210b269d7a062b2eb8f39cf076802210b525c8eccd18c4dc382049cfee7aba3 files/digest-shadow-4.0.14-r3 247
+MD5 1f78dde9910133ab48d69abc6bd19a88 files/digest-shadow-4.0.15 247
+RMD160 87f79656daa81999e698a293ad570f2ffac99768 files/digest-shadow-4.0.15 247
+SHA256 10c8764de8a7feb230419e232290d7f8c35a28ad69e7174b509fcd358aeed237 files/digest-shadow-4.0.15 247
+MD5 1f78dde9910133ab48d69abc6bd19a88 files/digest-shadow-4.0.15-r1 247
+RMD160 87f79656daa81999e698a293ad570f2ffac99768 files/digest-shadow-4.0.15-r1 247
+SHA256 10c8764de8a7feb230419e232290d7f8c35a28ad69e7174b509fcd358aeed237 files/digest-shadow-4.0.15-r1 247
+MD5 1f78dde9910133ab48d69abc6bd19a88 files/digest-shadow-4.0.15-r2 247
+RMD160 87f79656daa81999e698a293ad570f2ffac99768 files/digest-shadow-4.0.15-r2 247
+SHA256 10c8764de8a7feb230419e232290d7f8c35a28ad69e7174b509fcd358aeed237 files/digest-shadow-4.0.15-r2 247
+MD5 9130da1995073352cee951d0a18ad227 files/digest-shadow-4.0.7-r4 244
+RMD160 6c749ed8204533cd854c78251f158c2bd1d3a555 files/digest-shadow-4.0.7-r4 244
+SHA256 6945583c30661308f30bd36bf7e5e64c0b923a06914def8622b702b447daf849 files/digest-shadow-4.0.7-r4 244
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEfLhqKRy60XGEcJIRAsJDAJkBkPip8ZBP5I4Op1BP04MTXVt+ugCgqtF5
-mtZ2ej8nabNZHwP55MGwCKM=
-=01qb
+iD8DBQFEfMSgz974XjDVpbkRAiJmAJ951EB51KikYJAElfd2aU9mxJhT4QCgyETm
+Pf8+FA7zO6zPVFQVQOrjLxA=
+=iVQp
 -----END PGP SIGNATURE-----
