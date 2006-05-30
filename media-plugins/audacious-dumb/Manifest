@@ -1,4 +1,6 @@
-MD5 294dd28a656a3c6404e7732effd6a6c0 ChangeLog 479
+MD5 f5967c8451bbfb20c6ddd09c8dcb8ea0 ChangeLog 618
+MD5 b8260957e67d07d3feb044f9f75b6b9c audacious-dumb-0.10.ebuild 713
 MD5 9fd058c73e7fdbe349c57934bb113fa1 audacious-dumb-0.6.ebuild 704
+MD5 41add5a98cd92bfe82fa6d14819b2961 files/digest-audacious-dumb-0.10 70
 MD5 ee07532636e6d819508e92bfc6a14bcf files/digest-audacious-dumb-0.6 69
 MD5 19526790f2a5b32ab58a25bc2a57a5f7 metadata.xml 251
