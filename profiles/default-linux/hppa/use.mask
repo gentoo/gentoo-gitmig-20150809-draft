@@ -106,6 +106,7 @@ jack
 # 11 Aug 2004 Guy Martin <gmsoft@gentoo.org>
 # No nptl support yet
 nptl
+nptlonly
 
 # 08 Aug 2004 Guy Martin <gmsoft@gentoo.org>
 # Wifi stuff not test yet because of lack of hardware
