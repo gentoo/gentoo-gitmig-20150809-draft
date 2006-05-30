@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.8.1.ebuild,v 1.2 2006/05/29 21:58:12 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.8.1.ebuild,v 1.3 2006/05/30 11:43:16 calchan Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ DEPEND=">=x11-libs/gtk+-2.6.0
 	media-video/mjpegtools
 	media-sound/rawrec
 	alsa? ( >=media-libs/alsa-lib-1.0.9 )
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20051216 )
 	quicktime? ( || ( >=media-libs/libquicktime-0.9.5 media-video/cinelerra-cvs ) )
 	dvdr? ( media-video/dvdauthor )"
 
