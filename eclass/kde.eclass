@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.160 2006/05/30 01:03:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.161 2006/05/30 01:37:39 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -55,7 +55,7 @@ SLOT="0"
 
 kde_pkg_setup() {
 	if [[ ${PN} != "arts" ]] && [[ ${PN} != "kdelibs" ]] ; then
-		if [ ${ARTS_REQUIRED} == 'yes' ] || use arts ; then
+		if [[ ${ARTS_REQUIRED} == 'yes' ]] || use arts ; then
 			if ! built_with_use kde-base/kdelibs arts ; then
 				use arts && \
 					eerror "You are trying to compile ${CATEGORY}/${PF} with the \"arts\" USE flag enabled." || \
