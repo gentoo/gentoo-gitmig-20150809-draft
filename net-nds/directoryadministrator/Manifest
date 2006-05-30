@@ -1,6 +1,42 @@
-MD5 9d587c29549ccff4b49a7312eab5b13f directoryadministrator-1.5.1.ebuild 1101
-MD5 eca45190a4cb8914dd074a925176fd1b directoryadministrator-1.4.ebuild 839
-MD5 db2dea681d94727c0b9cf1d7e5bbcd1c ChangeLog 882
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST directory_administrator-1.4.tar.gz 433971 RMD160 0a162a3392f10fb46e284a67372a559d23453206 SHA256 bd42ec3c29b56575623bf901d555fabb021eb1fa0dd2d6c657ee8a523979fe7b size 433971
+DIST directory_administrator-1.5.1.tar.gz 460818 RMD160 3f85f03dba3a9e6ea8d50bd6e344cc1969bdad6f SHA256 d785fd8575ca068254b3fead5ee54a2b01ed701622a79796661d02a70f664490 size 460818
+DIST directory_administrator-1.7.1.tar.gz 473157 RMD160 fad58e822bf90e2864e72506defbb5572aaad318 SHA256 74f6e1da83050849d016c1089ac3eb96c5c8588d525d8fd0d5a4594ad50650f3 size 473157
+EBUILD directoryadministrator-1.4.ebuild 766 RMD160 309af25342529b7aa4288082c6a490d862d98bc0 SHA1 38795bfb1f04486d2e4c4b8f3a6a1cf549888ec6 SHA256 af2f6b74c43925dd13c193b9ec6cd4863baae143b7d7eedc91aecfe08a71a5d4 size 766
+MD5 5a4ecdf0b41dfa2d7dccfc5608f72c73 directoryadministrator-1.4.ebuild 766
+RMD160 309af25342529b7aa4288082c6a490d862d98bc0 directoryadministrator-1.4.ebuild 766
+SHA256 af2f6b74c43925dd13c193b9ec6cd4863baae143b7d7eedc91aecfe08a71a5d4 directoryadministrator-1.4.ebuild 766
+EBUILD directoryadministrator-1.5.1.ebuild 774 RMD160 cf9697a4b853c1914025a60dd214b228c5bb40ca SHA1 1a4b7179040201fc193c48f6fbf2377c410af536 SHA256 e98ef067813a033b6e3e8a5186c25802fa5c39f77664989236d9b8046ef16cfd size 774
+MD5 bdba1e35b5cc53ffe6c3aa138cb0575e directoryadministrator-1.5.1.ebuild 774
+RMD160 cf9697a4b853c1914025a60dd214b228c5bb40ca directoryadministrator-1.5.1.ebuild 774
+SHA256 e98ef067813a033b6e3e8a5186c25802fa5c39f77664989236d9b8046ef16cfd directoryadministrator-1.5.1.ebuild 774
+EBUILD directoryadministrator-1.7.1.ebuild 807 RMD160 117196db9830d42952a7f43afadbd50cc16f5a63 SHA1 7b6bd94df0329c895f0cec5b075adf884d169529 SHA256 9192a4f1feb05afe3a37df97bc9332405305c0a009349365288e7cb3fb35f519 size 807
+MD5 5fa2156f38211169e080a8b7dcf46ef9 directoryadministrator-1.7.1.ebuild 807
+RMD160 117196db9830d42952a7f43afadbd50cc16f5a63 directoryadministrator-1.7.1.ebuild 807
+SHA256 9192a4f1feb05afe3a37df97bc9332405305c0a009349365288e7cb3fb35f519 directoryadministrator-1.7.1.ebuild 807
+MISC ChangeLog 1130 RMD160 d2608a7ce971827bcf65d110b56a7ef67923f206 SHA1 99e97b8ffc2330c0ec8428315e9f0b69f0605dec SHA256 83565b9e651344d39b0c379d61ece52eccf4339eea45b1b95be67ca8fd05d24d size 1130
+MD5 9b6146672a30a93609af1fe20af45bce ChangeLog 1130
+RMD160 d2608a7ce971827bcf65d110b56a7ef67923f206 ChangeLog 1130
+SHA256 83565b9e651344d39b0c379d61ece52eccf4339eea45b1b95be67ca8fd05d24d ChangeLog 1130
+MISC metadata.xml 160 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 SHA1 d6147d00f16e8cfeef893d0764b0675a93d62849 SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e size 160
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 b181545c2aaa4559ad835ffc8290829d files/digest-directoryadministrator-1.4 79
-MD5 d70312f66114bbafbcaa90436727fdd1 files/digest-directoryadministrator-1.5.1 81
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
+MD5 983ca5179c5c8c75f738792827c8d1dd files/digest-directoryadministrator-1.4 283
+RMD160 5ee2ed7bf84f6e63a276f6a5c64dcbaacbeae7c5 files/digest-directoryadministrator-1.4 283
+SHA256 a567caefa8089d2022f5643ba690a7d53c44e94723dc9b56d70a9613cdd0d74f files/digest-directoryadministrator-1.4 283
+MD5 3be7502be7531a198b8052352304f11f files/digest-directoryadministrator-1.5.1 289
+RMD160 123a28c45dee5b18590ad28c0cc215df9917163b files/digest-directoryadministrator-1.5.1 289
+SHA256 a685bd9f7019b9948b3bce8741abb3d77422034cfda14a7cc861c3fce4e5c2d3 files/digest-directoryadministrator-1.5.1 289
+MD5 117641aef72e5d008fe42c6a004cb446 files/digest-directoryadministrator-1.7.1 289
+RMD160 4a56f53fa83e077304177841ecc9c61bbfc05c72 files/digest-directoryadministrator-1.7.1 289
+SHA256 5bf453f13e65a4d536a55d02f3b61c4b106e7abfa50cf866583bfecbeb4dc5d8 files/digest-directoryadministrator-1.7.1 289
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEfMIFz974XjDVpbkRAjTeAKDYjDWQMJ1O7IRtAvIfgu8UBicXkACfduPu
+EWEiRpadmLg4gXlM/PlUGI8=
+=nCT2
+-----END PGP SIGNATURE-----
