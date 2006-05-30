@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.6.ebuild,v 1.7 2006/05/30 15:17:21 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.5-r1.ebuild,v 1.1 2006/05/30 15:17:21 chtekk Exp $
 
 inherit eutils webapp versionator
 
@@ -27,6 +27,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# Fix security bug #130487
+	epatch ${FILESDIR}/${PN}-6.5-CVE-2006-2237-CVE-2006-1945.diff
 
 	epatch ${FILESDIR}/${PN}-6.3-gentoo.diff
 

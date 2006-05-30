@@ -1,6 +1,17 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.34 2006/05/21 04:49:30 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.35 2006/05/30 15:17:21 chtekk Exp $
+
+*awstats-6.5-r1 (30 May 2006)
+
+  30 May 2006; Luca Longinotti <chtekk@gentoo.org>
+  -files/awstats-6.3-CAN-2005-0363.diff,
+  +files/awstats-6.5-CVE-2006-2237-CVE-2006-1945.diff,
+  -awstats-6.3-r2.ebuild, +awstats-6.5-r1.ebuild, awstats-6.6.ebuild:
+  Fixed security bug #130487 and bug #122913. Drop awstats 6.3 release
+  (mirrors seem to not have the patchset needed for it anymore, and it's old).
+  Dropped keywords for awstats 6.6 back to testing, as it should not be stable
+  and will remain p.masked anyway for now.
 
   21 May 2006; Mark Loeser <halcy0n@gentoo.org> awstats-6.6.ebuild:
   Stable on x86; bug #130487
