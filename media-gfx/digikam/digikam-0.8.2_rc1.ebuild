@@ -1,22 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.8.2_rc1.ebuild,v 1.1 2006/05/20 16:41:14 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.8.2_rc1.ebuild,v 1.2 2006/05/30 00:58:30 flameeyes Exp $
 
 inherit kde
 
 P_DOC="${PN}-doc-0.8.0"
-MY_P=${P/_/-}
-S=${WORKDIR}/${MY_P}
+MY_P="${P/_/-}"
+S="${WORKDIR}/${MY_P}"
+S_DOC="${WORKDIR}/${P_DOC}"
 
 DESCRIPTION="A digital photo management application for KDE."
 HOMEPAGE="http://www.digikam.org/"
-SRC_URI="mirror://sourceforge/digikam/${MY_P}.tar.bz2
-	mirror://sourceforge/digikam/${P_DOC}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86"
-IUSE="nfs"
+IUSE="nfs doc kdehiddenvisibility"
 
 DEPEND=">=media-libs/libgphoto2-2
 	>=media-libs/libkexif-0.2.1
@@ -30,54 +29,65 @@ RDEPEND="${DEPEND}
 
 need-kde 3.4
 
-LANGS="bg br ca cs cy da de el en_GB es et eu fi fr ga gl he hu is it ja km lt mk ms mt nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tr uk zh_CN"
-LANGS_DOC_DC="da es et it nl pt_BR pt sv"
-LANGS_DOC_SF="da et it nl pt sv"
+LANGS="bg br ca cs cy da de el en_GB es et e fi fr ga gl he hu is it ja km lt mk
+ms mt nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tr uk zh_CN"
+LANGS_DOC="da es et it nl pt_BR pt sv"
+
+DOC_URI="mirror://sourceforge/digikam/${P_DOC}.tar.bz2"
+SRC_URI="${DOC_URI}"
+
+for lang in ${LANGS}; do
+	IUSE="${IUSE} linguas_${lang}"
+	[[ " ${LANGS_DOC} " != *" ${lang} "* ]] && SRC_URI="!linguas_${lang}? ( ${SRC_URI} )"
+done
+
+for lang in ${LANGS_DOC}; do
+	IUSE="${IUSE} linguas_${lang}"
+	SRC_URI="linguas_${lang}? (
+		mirror://gentoo/${P_DOC}-${lang}.tar.bz2
+		mirror://gentoo/${P_DOC}-gentoo.tar.bz2
+		)
+		!linguas_${lang}? ( ${SRC_URI} )"
+done
+
+SRC_URI="mirror://sourceforge/digikam/${MY_P}.tar.bz2
+	doc? ( linguas_en? ( mirror://gentoo/${P_DOC}-gentoo.tar.bz2 )
+		!linguas_en? ( ${SRC_URI} ) )"
 
 pkg_setup(){
-	kde_pkg_setup
 	slot_rebuild "media-libs/libkipi media-libs/libkexif" && die
+	kde_pkg_setup
 }
 
 src_unpack(){
 	kde_src_unpack
+	rm -f "${S}/configure" "${S_DOC}/configure"
 
-	local MAKE_PO=$(echo "${LINGUAS} ${LANGS}" | tr ' ' $'\n' | sort | uniq -d | tr $'\n' ' ')
-	einfo "Enabling translations for: ${MAKE_PO}"
+	local MAKE_PO=$(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d | tr '\n' ' ')
+	einfo "Enabling translations for: en ${MAKE_PO}"
+	sed -i -e "s:^SUBDIRS =.*:SUBDIRS = . ${MAKE_PO}:" "${S}/po/Makefile.am" || die "sed for locale failed"
 
-	local MAKE_DOC_DC=$(echo "${LINGUAS} ${LANGS_DOC_DC}" | tr ' ' $'\n' | sort | uniq -d | tr $'\n' ' ')
-	local MAKE_DOC_SF=$(echo "${LINGUAS} ${LANGS_DOC_SF}" | tr ' ' $'\n' | sort | uniq -d | tr $'\n' ' ')
-	einfo "Enabling documentation for: $(echo "${MAKE_DOC_DC} ${MAKE_DOC_SF}" | tr ' ' $'\n' | sort -u | tr $'\n' ' ')"
-
-	local MAKE_DOC
-	for i in ${MAKE_DOC_DC} ; do MAKE_DOC="${MAKE_DOC} ${i}_digikam" ; done
-	for i in ${MAKE_DOC_SF} ; do MAKE_DOC="${MAKE_DOC} ${i}_showfoto" ; done
-
-	sed -i -e "s:^SUBDIRS =.*:SUBDIRS = . ${MAKE_PO}:" ${S}/po/Makefile.am || die "sed for locale failed"
-	sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_DOC} ${PN}:" ${WORKDIR}/${P_DOC}/doc/Makefile.am || die "sed for locale failed"
+	if use doc; then
+		local MAKE_DOC=$(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d | tr '\n' ' ')
+		einfo "Enabling documentation for: en ${LANG_DOCS}"
+	fi
 }
 
 src_compile(){
+	local myconf
+
 	myconf="$(use_enable nfs nfs-hack)"
 	kde_src_compile
 	myconf=""
-	_S=${S}
-	S=${WORKDIR}/${P_DOC}
-	cd ${S}
-	kde_src_compile
-	S=${_S}
+	[[ -d "${S_DOC}" ]] && KDE_S="${S_DOC}" kde_src_compile
 }
 
 src_install(){
 	kde_src_install
-	_S=${S}
-	S=${WORKDIR}/${P_DOC}
-	cd ${S}
-	kde_src_install
-	S=${_S}
+	[[ -d "${S_DOC}" ]] && KDE_S="${S_DOC}" kde_src_install
 
 	# Install the .desktop in FDO's suggested directory
 	dodir /usr/share/applications/kde
-	mv ${D}/usr/share/applnk/Graphics/digikam.desktop \
-		${D}/usr/share/applications/kde
+	mv "${D}/usr/share/applnk/Graphics/digikam.desktop" \
+		"${D}/usr/share/applications/kde"
 }
