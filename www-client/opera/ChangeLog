@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.42 2006/05/26 15:26:01 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.43 2006/05/30 11:20:22 axxo Exp $
+
+  30 May 2006; Thomas Matthijs <axxo@gentoo.org>
+  +files/opera-8.54-install.patch, opera-8.54.ebuild:
+  Fix(hopefully) bug 114302, 134422, 134368. Thanks too Jakub Moc, Paul
+  Varner, Frank Richter
 
   26 May 2006; Thomas Matthijs <axxo@gentoo.org> files/digest-opera-8.54,
   Manifest:

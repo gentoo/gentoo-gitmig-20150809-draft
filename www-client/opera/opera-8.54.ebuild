@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.54.ebuild,v 1.3 2006/05/26 04:40:14 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.54.ebuild,v 1.4 2006/05/30 11:20:22 axxo Exp $
 
-inherit eutils
+inherit eutils gnome2
 
-IUSE="qt-static spell qt kde"
+IUSE="qt-static spell gnome"
 
 OPERAVER="8.54-20060330"
 OPERAFTPDIR="854/final/en"
@@ -59,6 +59,7 @@ KEYWORDS="~amd64 ppc ~sparc x86"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch "${FILESDIR}/${P}-install.patch"
 	sed -i -e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
 	       -e "s:/usr/share/applnk:${D}/usr/share/applnk:g" \
 	       -e "s:/usr/share/pixmaps:${D}/usr/share/pixmaps:g" \
@@ -100,6 +101,10 @@ src_install() {
 	# Install the icons
 	insinto /usr/share/pixmaps
 	doins images/opera.xpm
+	for res in 16x16 22x22 32x32 48x48 ; do
+		insinto /usr/share/icons/hicolor/${res}/apps/
+		newins images/opera_${res}.png opera.png
+	done
 
 	# Install the menu entry
 	insinto /usr/share/applications
@@ -122,19 +127,23 @@ src_install() {
 		echo "Spell Check Engine=/opt/opera/lib/opera/${DIR}/spellcheck.so" >> ${D}/opt/opera/share/opera/ini/spellcheck.ini
 	fi
 
-	#if use qt || use kde; then
-	#	cd ${D}/opt/opera/bin
-	#	epatch ${FILESDIR}/opera-qt.2.patch
-	#fi
-
-	dodir /etc/env.d
-	echo 'SEARCH_DIRS_MASK="/opt/opera/lib/opera/plugins"' > ${D}/etc/env.d/90opera
+	dodir /etc/revdep-rebuild
+	echo 'SEARCH_DIRS_MASK="/opt/opera/lib/opera/plugins"' > ${D}/etc/revdep-rebuild/90opera
 }
 
 pkg_postinst() {
+	if use gnome; then
+		gnome2_pkg_postinst
+	fi
 	einfo "For localized language files take a look at:"
 	einfo "http://www.opera.com/download/languagefiles/index.dml?platform=linux"
 	einfo
 	einfo "To change the spellcheck language edit /opt/opera/share/opera/ini/spellcheck.ini"
 	einfo "and emerge app-text/aspell-language."
+}
+
+pkg_postrm() {
+	if use gnome; then
+		gnome2_pkg_postrm
+	fi
 }
