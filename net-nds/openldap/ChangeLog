@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.181 2006/05/18 23:30:32 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.182 2006/05/30 21:01:58 jokey Exp $
+
+*openldap-2.3.24 (30 May 2006)
+
+  30 May 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/openldap-2.3.24-contrib-smbk5pwd.patch, +openldap-2.3.24.ebuild:
+  Version bump, closing bug #116045, security bug #134010, bug #134505 and bug
+  #134919
 
 *openldap-2.3.23 (18 May 2006)
 
