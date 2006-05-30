@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.17.ebuild,v 1.2 2006/05/05 15:13:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.17.ebuild,v 1.3 2006/05/30 09:31:32 ehmsen Exp $
 
 inherit nsplugins flag-o-matic fdo-mime eutils multilib toolchain-funcs
 
@@ -61,7 +61,7 @@ src_compile() {
 		|| die "econf failed"
 
 	if ! use nsplugin; then
-		sed -e 's:nsdjvu::' -i ${S}/gui/Makefile
+		sed -e 's:nsdejavu::' -i ${S}/gui/Makefile || die
 	fi
 
 	emake -j1 || die "emake failed"
