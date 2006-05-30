@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5_alpha46.ebuild,v 1.10 2005/04/14 03:03:42 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5_alpha46.ebuild,v 1.11 2006/05/30 23:39:53 merlin Exp $
 
 S=${WORKDIR}/${P/_alpha[0-9][0-9]}
 

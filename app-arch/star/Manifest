@@ -1,58 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 81d992516eda0d4a19f9340b6fe6938c ChangeLog 5688
-RMD160 f05cc77834ac58d2f97f82447707991b2b2c7e42 ChangeLog 5688
-SHA256 85642be5edfea08dca678cc48ed2108b4cb90883f5e567f173ba4adf154cc196 ChangeLog 5688
+MD5 28aa57dab950a5c343d7578f08042c8d ChangeLog 5896
 MD5 51c5a572668976f36d47a998460f6c25 files/digest-star-1.4.3 63
-RMD160 237d2841fbbaf685cc3deec54dfc1795ec1ae21b files/digest-star-1.4.3 63
-SHA256 2129923f8f190724b1f1dc023e1e436512fc746aad3e72349b39fa92e12c58c4 files/digest-star-1.4.3 63
-MD5 afa8850f0412c5a1fc1be0747513e375 files/digest-star-1.5_alpha14 64
-RMD160 65c472cb800ef41dfdbbd6b3fed9d50a42fa39ec files/digest-star-1.5_alpha14 64
-SHA256 f64b30c2c27cb8d7f456495ece087d16fa8767134602d99360842833f32ab0f3 files/digest-star-1.5_alpha14 64
-MD5 200081c92e7a1c69770604660375d50c files/digest-star-1.5_alpha43 64
-RMD160 b541afd5674b718fe311c6dff706dca00ab819b2 files/digest-star-1.5_alpha43 64
-SHA256 c41b16abc1a374c17e4f57cef975cc44b36a351475522cdff6d1a832291b53c9 files/digest-star-1.5_alpha43 64
 MD5 55da8c5d43b7ab89c146ccedcd4657ed files/digest-star-1.5_alpha46 64
-RMD160 b5956dc2885701b630a456cfb262c40a320404f5 files/digest-star-1.5_alpha46 64
-SHA256 3098b03961ad4b6be9a6cb584be2928941a2245e25c77443dda86a8e2c1c7967 files/digest-star-1.5_alpha46 64
-MD5 33476b51813faa52e458f45fd14a7f47 files/digest-star-1.5_alpha50 64
-RMD160 6ef0b6368968e822598fea69d178d17953c144d7 files/digest-star-1.5_alpha50 64
-SHA256 90a4037865355dd658400fade8d83dd9a92dd47f43cdab5c234f368dca64cae3 files/digest-star-1.5_alpha50 64
-MD5 33476b51813faa52e458f45fd14a7f47 files/digest-star-1.5_alpha50-r1 64
-RMD160 6ef0b6368968e822598fea69d178d17953c144d7 files/digest-star-1.5_alpha50-r1 64
-SHA256 90a4037865355dd658400fade8d83dd9a92dd47f43cdab5c234f368dca64cae3 files/digest-star-1.5_alpha50-r1 64
 MD5 2dc4f724b12c48f47df70d2420a52e78 files/digest-star-1.5_alpha62 64
-RMD160 9c5fe54d9b9dc2baf2306face872768a4420d67e files/digest-star-1.5_alpha62 64
-SHA256 bac1f086213084715218496c25d8ddf8670d6fbd2ab7ab6861e8977a4bf50af3 files/digest-star-1.5_alpha62 64
 MD5 68a1afaae4d1ef216d3a5313b572a19c metadata.xml 229
-RMD160 38821f44b8dd52042c0592f485bb68223fd4a8f8 metadata.xml 229
-SHA256 7b441e06e969399ef018feb90c7f933886e132dc7f49c893397f64ccc42142c4 metadata.xml 229
-MD5 6f0468b4b1bfa3a29b8a8193422e48bd star-1.4.3.ebuild 1393
-RMD160 056f94da0955323f6e1241b5f7ec12da1c0528c3 star-1.4.3.ebuild 1393
-SHA256 bf202c1349b0778cef74f689bca61ef8e686e20161eeba8947acd116bf502951 star-1.4.3.ebuild 1393
-MD5 d0bcf3d2a94c600b0d4ca313b4ca82d9 star-1.5_alpha14.ebuild 1607
-RMD160 821fbb9345960fe9f6d7e5edb2f1e93ab0cd1ac4 star-1.5_alpha14.ebuild 1607
-SHA256 842adef071dd6ca261c1ff381897fc87786c3472a41c3ca2db482dfd66572c9f star-1.5_alpha14.ebuild 1607
-MD5 3ffccc8deb09b92b1a2ec904c75a6579 star-1.5_alpha43.ebuild 1613
-RMD160 f38affac263370dd19c1b5088180259d29276e73 star-1.5_alpha43.ebuild 1613
-SHA256 0fdb904db491834313fa1e357c336b1114751dae7134934ce0774bf83901bf19 star-1.5_alpha43.ebuild 1613
-MD5 0995a0723b411cdeff07f6ead18a2805 star-1.5_alpha46.ebuild 1747
-RMD160 25efe32b32ffdf750e113cc97d2c4aa753e37e79 star-1.5_alpha46.ebuild 1747
-SHA256 36f7ed8a4a42b65d92ea70fdab919775e839461e9c93bca6327cf380c59ed58d star-1.5_alpha46.ebuild 1747
-MD5 03f189fd5a2236491c135c8e39147d9c star-1.5_alpha50-r1.ebuild 1740
-RMD160 a7deaf9501b06c5bb7f69d8f9bc3e3e251910bac star-1.5_alpha50-r1.ebuild 1740
-SHA256 06c822432c4b68daae692d011ce4044a41a0523613d025284de0fe4cbaf4676e star-1.5_alpha50-r1.ebuild 1740
-MD5 6a86d4a42c83f6ae5dbbfc1c25570084 star-1.5_alpha50.ebuild 1697
-RMD160 107d8c6f2af54ff5915b9bde957375e6ce49e90b star-1.5_alpha50.ebuild 1697
-SHA256 0e542f0c4260c6e22392762a50eb789c0b3f734f9ed86d4f4a9eeac60781b3c9 star-1.5_alpha50.ebuild 1697
+MD5 a91562d91eb1fb98753fe719b86ed0b2 star-1.4.3.ebuild 1389
+MD5 4a06606ea917917883f1b8308227b240 star-1.5_alpha46.ebuild 1748
 MD5 0dcc82803fdc76709c91388e55e08d4a star-1.5_alpha62.ebuild 1736
-RMD160 314969cd0d5a2c43367d5e3111e953fd7307c6bd star-1.5_alpha62.ebuild 1736
-SHA256 aeecd4d9e01fa96065b99257f6eccfce4b3c4c3b511d0e4b966b518943ada448 star-1.5_alpha62.ebuild 1736
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFD6lrAV3J2n04EauwRArfjAJ9y0kfABCAZ1QfSCZUA2s9/Mc+a/wCgjbfD
-kc94+XRdP/Dnoj4s7XY64tI=
-=j/d8
+iD8DBQFEfNffK3VlI3Kj19sRAuZSAJ9GZpJbR+CcWL5Ula6LbS2C6izwOwCgqdhl
+/O/zMY01sVsy0fwwpMtOFvA=
+=oXWq
 -----END PGP SIGNATURE-----
