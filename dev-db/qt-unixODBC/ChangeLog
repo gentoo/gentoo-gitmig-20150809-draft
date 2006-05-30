@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/qt-unixODBC
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.21 2006/05/25 22:26:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.22 2006/05/30 15:54:28 wolf31o2 Exp $
+
+  30 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  qt-unixODBC-3.3.6.ebuild:
+  Stable on amd64 wrt bug #132887.
 
   25 May 2006; Guy Martin <gmsoft@gentoo.org> qt-unixODBC-3.3.6.ebuild:
   Stable on hppa.
