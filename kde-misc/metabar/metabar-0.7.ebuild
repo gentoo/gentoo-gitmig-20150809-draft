@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/metabar/metabar-0.7.ebuild,v 1.6 2006/02/21 18:25:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/metabar/metabar-0.7.ebuild,v 1.7 2006/05/30 01:40:45 flameeyes Exp $
 
+ARTS_REQUIRED="yes"
 inherit kde
 
 DESCRIPTION="A sidebar plugin for konqueror."
@@ -19,15 +20,6 @@ DEPEND="|| ( kde-base/konqueror >=kde-base/kdebase-3.4 )
 need-kde 3.4
 
 S="${WORKDIR}/${PN}"
-
-pkg_setup() {
-	if ! use arts; then
-		eerror "${PN} needs USE=\"arts\" (and kdelibs compiled with USE=\"arts\")"
-		die
-	fi
-
-	kde_pkg_setup
-}
 
 pkg_postinst()
 {
