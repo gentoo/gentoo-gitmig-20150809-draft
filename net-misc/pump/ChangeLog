@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pump
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.31 2006/05/30 10:32:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.32 2006/05/30 23:15:52 weeve Exp $
+
+  30 May 2006; Jason Wever <weeve@gentoo.org> pump-0.8.24.ebuild:
+  Stable on SPARC wrt bug #134896.
 
   30 May 2006; Luca Barbato <lu_zero@gentoo.org> pump-0.8.24.ebuild:
   Marked ppc, requested in bug #134896
