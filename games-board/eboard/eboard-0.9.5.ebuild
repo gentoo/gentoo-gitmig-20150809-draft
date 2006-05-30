@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-0.9.5.ebuild,v 1.11 2006/01/03 02:32:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-0.9.5.ebuild,v 1.12 2006/05/30 07:15:58 tupone Exp $
 
 inherit eutils games
 
@@ -10,7 +10,8 @@ DESCRIPTION="chess interface for POSIX systems"
 HOMEPAGE="http://eboard.sourceforge.net/"
 SRC_URI="mirror://sourceforge/eboard/${P}.tar.gz
 	mirror://sourceforge/eboard/${EXTRAS1}.tar.gz
-	mirror://sourceforge/eboard/${EXTRAS2}.tar.gz"
+	mirror://sourceforge/eboard/${EXTRAS2}.tar.gz
+	mirror://gentoo/${P}-gcc41.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,7 +29,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch "${FILESDIR}"/${P}-gcc4.patch \
+		../${P}-gcc41.patch
 
 	sed -i \
 		-e "/DATADIR/ s:\$prefix/share:${GAMES_DATADIR}:" \
