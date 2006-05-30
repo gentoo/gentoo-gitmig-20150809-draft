@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.8 2006/05/06 20:15:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.9 2006/05/30 17:56:29 hansmi Exp $
+
+  30 May 2006; Michael Hanselmann <hansmi@gentoo.org>
+  -netqmail-1.05-r1.ebuild:
+  Remove old version.
 
   06 May 2006; Michael Hanselmann <hansmi@gentoo.org>
   files/qmail-genrsacert.sh:
