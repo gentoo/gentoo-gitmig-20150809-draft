@@ -1,8 +1,8 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.62 2006/05/27 19:23:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.63 2006/05/30 11:27:58 genstef Exp $
 
-  27 May 2006; <stefan@gentoo.org>
+  27 May 2006; Stefan Schweizer <genstef@gentoo.org>
   files/slmodem-2.9.11-modem-makefile.patch:
   Add -finline flag in replacement for upstreams -O, thanks to Ph. Bobo
   <phbobofr@yahoo.fr> in bug 134529
