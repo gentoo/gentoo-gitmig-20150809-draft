@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5428 2006/05/30 12:32:27 dercorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5429 2006/05/30 15:20:49 chtekk Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Luca Longinotti <chtekk@gentoo.org> (30 May 2006)
+# awstats 6.6 is completely unusable - bug #134296
+=net-www/awstats-6.6
 
 # Mark Loeser <halcy0n@gentoo.org> (29 May 2006)
 # Masked pending removal.  Dead upstream, doesn't compile with gcc-3.4
@@ -71,11 +75,6 @@ perl-core/ExtUtils-MakeMaker
 # Stefan Cornelius <dercorny@gentoo.org> (27 May 2006)
 # Masked because of security bug #131866
 sys-apps/resmgr
-
-# Stefan Cornelius <dercorny@gentoo.org> (27 May 2006)
-# 6.6 is completely unusable - bug 134296
-# other versions include security bug #130487
-net-www/awstats
 
 # Doug Goldstein <cardoe@gentoo.org> (26 May 2006)
 # it doesn't work for me but people want it..
