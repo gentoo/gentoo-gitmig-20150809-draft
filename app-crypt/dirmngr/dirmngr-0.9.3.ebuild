@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-0.9.3.ebuild,v 1.9 2006/05/29 19:25:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-0.9.3.ebuild,v 1.10 2006/05/30 01:50:01 josejx Exp $
 
 DESCRIPTION="DirMngr is a daemon to handle CRL and certificate requests for GnuPG"
 HOMEPAGE="http://www.gnupg.org/(en)/download/index.html#dirmngr"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gnupg/alpha/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
 IUSE="nls"
 
 RDEPEND=">=net-nds/openldap-2.1.26
