@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/cloop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/ChangeLog,v 1.10 2006/05/30 11:19:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/ChangeLog,v 1.11 2006/05/30 15:29:04 wolf31o2 Exp $
+
+  30 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
+  Stable on x86 wrt bug #131161.
 
 *cloop-2.02.1-r1 (30 May 2006)
 
