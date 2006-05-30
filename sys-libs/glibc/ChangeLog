@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.455 2006/05/26 19:55:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.456 2006/05/30 13:08:52 lu_zero Exp $
+
+  30 May 2006; Luca Barbato <lu_zero@gentoo.org> glibc-2.4-r3.ebuild:
+  Marked ~ppc
 
   26 May 2006; Guy Martin <gmsoft@gentoo.org> glibc-2.3.6-r4.ebuild:
   Added ~hppa to KEYWORDS.
