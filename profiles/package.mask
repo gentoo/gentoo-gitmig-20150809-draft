@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5431 2006/05/30 20:17:57 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5432 2006/05/30 21:29:39 kevquinn Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Kevin F. Quinn <kevquinn@gentoo.org> (30 May 2006)
+# Masked for review prior to release - bug #132247
+app-admin/eselect-oodict
 
 # Luca Longinotti <chtekk@gentoo.org> (30 May 2006)
 # awstats 6.6 is completely unusable - bug #134296
