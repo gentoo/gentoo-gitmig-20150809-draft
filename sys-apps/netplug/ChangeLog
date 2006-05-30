@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/netplug
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.8 2006/04/30 13:26:23 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.9 2006/05/30 13:42:49 uberlord Exp $
+
+*netplug-1.2.9-r3 (30 May 2006)
+
+  30 May 2006; Roy Marples <uberlord@gentoo.org>
+  +files/netplug-1.2.9-ignore-wireless.patch, +netplug-1.2.9-r3.ebuild:
+  Add a patch to ignore silly wireless messages that don't have an interface
+  name and yet claim they are a newlink.
 
   30 Apr 2006; Simon Stelling <blubb@gentoo.org> netplug-1.2.9-r2.ebuild:
   stable on amd64
