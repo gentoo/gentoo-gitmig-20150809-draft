@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/l2tpd
 # Copyright 2003-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/ChangeLog,v 1.15 2006/03/12 16:07:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/ChangeLog,v 1.16 2006/05/30 21:13:21 mrness Exp $
+
+  30 May 2006; Alin Nastac <mrness@gentoo.org> files/l2tpd-init,
+  l2tpd-0.70_pre20031121.ebuild:
+  Interblock l2tpd with xl2tpd. Install only basic configuration files and
+  change init script to check the existence of the l2tpd.conf file (#134029).
 
   12 Mar 2006; Alin Nastac <mrness@gentoo.org>
   -files/l2tpd-0.69-can-2004-0649.patch, -l2tpd-0.69-r2.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.70_pre20031121.ebuild,v 1.5 2006/03/12 16:07:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.70_pre20031121.ebuild,v 1.6 2006/05/30 21:13:21 mrness Exp $
 
 inherit eutils
 
@@ -15,6 +15,9 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
 SLOT="0"
 IUSE=""
+
+RDEPEND="!net-dialup/xl2tpd
+	net-dialup/ppp"
 
 S="${WORKDIR}/${P/_/-}.orig"
 
@@ -32,12 +35,12 @@ src_install() {
 	doman doc/*.[85]
 	doman *.[85]
 
-	dodoc BUGS CHANGELOG LICENSE CREDITS README TODO \
+	dodoc BUGS CHANGELOG CREDITS README TODO \
 		doc/rfc2661.txt doc/*.sample
 
-	insinto /etc/l2tpd
-	newins doc/l2tp-secrets.sample l2tp-secrets
-	newins doc/l2tpd.conf.sample l2tpd.conf
+	dodir /etc/l2tpd
+	head -n 2 doc/l2tp-secrets.sample > "${D}/etc/l2tpd/l2tp-secrets"
+	fperms 0600 /etc/l2tpd/l2tp-secrets
 
 	newinitd "${FILESDIR}/l2tpd-init" l2tpd
 }
