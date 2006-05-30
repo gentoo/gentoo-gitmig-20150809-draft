@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5430 2006/05/30 15:37:13 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5431 2006/05/30 20:17:57 plasmaroo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -843,12 +843,6 @@ sci-mathematics/mupad
 # Doesn't work reliably with new PDO 1.0.X and is
 # in need of new upstream maintainers
 dev-php5/pecl-pdo-firebird
-
-# Tim Yamin <plasmaroo@gentoo.org> (20 Dec 2005)
-# Probably broken and dangerous. Combustible if brought near PPC or PPC64
-# machines so I don't recommend trying unless on those platforms unless
-# you've got spare time to help me fix things.
->=sys-kernel/linux-headers-2.6.15_rc6
 
 # Kathryn Kulick <gothgirl@gentoo.org> (20 Dec 2005)
 # Gaim 2.0.0 beta1 plugins.
