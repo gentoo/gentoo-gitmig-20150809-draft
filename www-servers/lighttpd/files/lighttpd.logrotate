@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.logrotate,v 1.1 2005/08/22 16:01:18 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.logrotate,v 1.2 2006/05/30 19:49:29 bangert Exp $
 # lighttpd logrotate script for Gentoo
 
 /var/log/lighttpd/*.log {
@@ -11,7 +11,7 @@
         sharedscripts
         postrotate
            if [ -f /var/run/lighttpd.pid ]; then \
-                /etc/init.d/lighttpd restart > /dev/null 2>&1 || true ; \
+                /etc/init.d/lighttpd reload > /dev/null 2>&1 || true ; \
            fi;
         endscript
 }

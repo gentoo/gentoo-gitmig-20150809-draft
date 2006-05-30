@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.7 2005/10/12 12:51:22 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.8 2006/05/30 19:49:29 bangert Exp $
 
-opts="depend checkconfig start stop"
+opts="depend checkconfig start stop reload"
 
 LIGHTTPD_CONF="/etc/lighttpd/lighttpd.conf"
 LIGHTTPD_PID="/var/run/lighttpd.pid"
@@ -38,9 +38,20 @@ stop() {
 	ebegin "Stopping lighttpd"
 	if start-stop-daemon --stop --quiet --pidfile ${LIGHTTPD_PID} \
 			--signal 2 ; then
-		rm -f /var/run/lighttpd.pid
+		rm -f ${LIGHTTPD_PID} 
 	else
 		rv=1
 	fi
 	eend $rv
+}
+
+reload() {
+	if [ ! -f ${LIGHTTPD_PID} ]; then
+		eerror "lighttpd isn't running"
+		return 1
+	fi
+	checkconfig || return 1
+	ebegin "Re-opening lighttpd log files"
+	kill -HUP `cat ${LIGHTTPD_PID}` &>/dev/null
+	eend $?
 }
