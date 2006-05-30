@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.157 2006/05/29 22:24:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.158 2006/05/30 00:34:52 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -107,7 +107,7 @@ kde_src_unpack() {
 
 	# fix the 'languageChange undeclared' bug group: touch all .ui files, so that the
 	# makefile regenerate any .cpp and .h files depending on them.
-	cd $S
+	cd "${KDE_S}"
 	debug-print "$FUNCNAME: Searching for .ui files in $PWD"
 	UIFILES="`find . -name '*.ui' -print`"
 	debug-print "$FUNCNAME: .ui files found:"
@@ -189,8 +189,6 @@ kde_src_compile() {
 				# in fact, if it does, it sometimes tries to use the wrong dcopidl, etc.
 				# due to the messed up way configure searches for things
 				export KDEDIRS="${PREFIX}:${KDEDIR}"
-
-				cd $S
 
 				# Visiblity stuff is broken. Just disable it when it's present.
 				export kde_cv_prog_cxx_fvisibility_hidden=no
