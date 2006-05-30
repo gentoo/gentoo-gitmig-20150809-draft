@@ -1,0 +1,18 @@
+Index: fbsd-6.1/usr.sbin/IPXrouted/trace.c
+===================================================================
+--- fbsd-6.1.orig/usr.sbin/IPXrouted/trace.c
++++ fbsd-6.1/usr.sbin/IPXrouted/trace.c
+@@ -66,12 +66,12 @@ int	tracing = 0;
+ 
+ void dumpif(FILE *fd, struct interface *ifp);
+ void dumptrace(FILE *fd, char *dir, struct ifdebug *ifd);
++static int iftraceinit();
+ 
+ void
+ traceinit(ifp)
+ 	register struct interface *ifp;
+ {
+-	static int iftraceinit();
+ 
+ 	if (iftraceinit(ifp, &ifp->int_input) &&
+ 	    iftraceinit(ifp, &ifp->int_output))
