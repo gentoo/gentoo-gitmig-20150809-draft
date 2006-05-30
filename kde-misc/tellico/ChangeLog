@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.38 2006/05/13 12:01:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.39 2006/05/30 01:58:16 weeve Exp $
+
+  30 May 2006; Jason Wever <weeve@gentoo.org> tellico-1.1.6.ebuild:
+  Stable on SPARC wrt bug #134764.
 
 *tellico-1.1.6 (13 May 2006)
 
