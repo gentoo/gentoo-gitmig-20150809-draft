@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-2.6.16.ebuild,v 1.3 2006/05/28 20:29:26 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-2.6.16.ebuild,v 1.4 2006/05/30 04:28:08 weeve Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://kernel/pub/linux/kernel/v2.6/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~sparc ~x86"
 
 IUSE="html"
 DEPEND="app-text/docbook-sgml-utils
