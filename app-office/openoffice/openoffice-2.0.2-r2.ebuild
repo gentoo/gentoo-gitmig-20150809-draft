@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r2.ebuild,v 1.8 2006/05/24 08:53:18 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r2.ebuild,v 1.9 2006/05/30 18:16:06 suka Exp $
 
-inherit check-reqs eutils fdo-mime flag-o-matic kde-functions mono toolchain-funcs
+inherit check-reqs eutils fdo-mime flag-o-matic java-pkg kde-functions mono toolchain-funcs
 
 IUSE="binfilter cairo eds firefox gnome gtk java kde ldap mono mozilla xml"
 
@@ -144,6 +144,8 @@ pkg_setup() {
 	#Detect which look and patchset we are using, amd64 is known not to be working atm, so this is here for testing purposes only
 	use amd64 && export DISTRO="Gentoo64" || export DISTRO="Gentoo"
 
+	use java && java-pkg_pkg_setup
+
 }
 
 src_unpack() {
@@ -192,7 +194,7 @@ src_compile() {
 	filter-flags "-fno-default-inline"
 	filter-flags "-fstack-protector"
 	filter-flags "-ftracer"
-	append-flags "-fno-strict-aliasing"
+	filter-flags "-ffast-math"
 	replace-flags "-O3" "-O2"
 	replace-flags "-Os" "-O2"
 
