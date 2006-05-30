@@ -1,0 +1,11 @@
+--- lighttpd-1.4.11.orig/src/mod_scgi.c	2006-04-05 19:29:01.000000000 +0200
++++ lighttpd-1.4.11/src/mod_scgi.c	2006-04-05 19:27:32.000000000 +0200
+@@ -2536,7 +2536,7 @@
+ 					return HANDLER_WAIT_FOR_FD;
+ 				}
+ 				
+-				log_error_write(srv, __FILE__, __LINE__, "sdsdsd", 
++				log_error_write(srv, __FILE__, __LINE__, "sosdsd", 
+ 						"response not sent, request sent:", hctx->wb->bytes_out,
+ 						"connection-fd:", con->fd,
+ 						"fcgi-fd:", hctx->fd);

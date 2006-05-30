@@ -1,0 +1,157 @@
+--- lighttpd-1.4.11.orig/src/mod_ssi.c	Sun Apr  2 01:20:30 2006
++++ lighttpd-1.4.11/src/mod_ssi.c.modify	Sun Apr  2 01:21:05 2006
+@@ -36,6 +36,9 @@
+ #include <sys/filio.h>
+ #endif
+ 
++/* determine if process finished */
++int h_finished = 0;
++
+ /* init the plugin data */
+ INIT_FUNC(mod_ssi_init) {
+ 	plugin_data *p;
+@@ -57,7 +60,7 @@ FREE_FUNC(mod_ssi_free) {
+ 	UNUSED(srv);
+ 	
+ 	if (!p) return HANDLER_GO_ON;
+-	
++
+ 	if (p->config_storage) {
+ 		size_t i;
+ 		for (i = 0; i < srv->config_context->used; i++) {
+@@ -286,6 +289,37 @@ static int build_ssi_cgi_vars(server *sr
+ 	return 0;
+ }
+ 
++URIHANDLER_FUNC(mod_ssi_physical_path) {
++	plugin_data *p = p_d;
++	size_t k;
++	
++	if (con->physical.path->used == 0) return HANDLER_GO_ON;
++
++	con->loops_per_request++;
++	
++	mod_ssi_patch_connection(srv, con, p);
++	
++	for (k = 0; k < p->conf.ssi_extension->used; k++) {
++		data_string *ds = (data_string *)p->conf.ssi_extension->data[k];
++		
++		if (ds->value->used == 0) continue;
++		
++		if (buffer_is_equal_right_len(con->physical.path, ds->value, ds->value->used - 1)) {
++			/* handle ssi-request */
++			
++			if (mod_ssi_handle_request(srv, con, p)) {
++				/* on error */
++				con->http_status = 500;
++			}
++			
++			return HANDLER_FINISHED;
++		}
++	}
++	
++	/* not found */
++	return HANDLER_GO_ON;
++}
++
+ static int process_ssi_stmt(server *srv, connection *con, plugin_data *p, 
+ 			    const char **l, size_t n) {
+ 	size_t i, ssicmd = 0;
+@@ -467,7 +501,11 @@ static int process_ssi_stmt(server *srv,
+ 			if (NULL != (ds = (data_string *)array_get_element(p->ssi_cgi_env, var_val))) {
+ 				buffer_copy_string_buffer(b, ds->value);
+ 			} else {
+-				buffer_copy_string(b, "(none)");
++				if (NULL != (ds = (data_string *)array_get_element(p->ssi_vars, var_val))) {
++					buffer_copy_string_buffer(b, ds->value);
++				} else {
++					buffer_copy_string(b, "(none)");
++				}
+ 			}
+ 			
+ 			break;
+@@ -481,6 +519,7 @@ static int process_ssi_stmt(server *srv,
+ 		const char * file_path = NULL, *virt_path = NULL;
+ 		struct stat st;
+ 		char *sl;
++		buffer *tmp;
+ 		
+ 		for (i = 2; i < n; i += 2) {
+ 			if (0 == strcmp(l[i], "file")) {
+@@ -574,7 +613,26 @@ static int process_ssi_stmt(server *srv,
+ 				}
+ 				break;
+ 			case SSI_INCLUDE:
+-				chunkqueue_append_file(con->write_queue, p->stat_fn, 0, st.st_size);
++                                /* do recursive SSI expansion */
++                                /* prevents infinite loop */
++                                if (con->loops_per_request > 25 || buffer_is_equal(con->physical.path, p->stat_fn)) {
++                                        buffer_copy_string(srv->tmp_buf, "<!-- your include directives create an infinite loop, aborting -->");
++                                        chunkqueue_append_buffer(con->write_queue, srv->tmp_buf);
++                                        break;
++                                }
++
++                                tmp = buffer_init();
++                                buffer_copy_string_buffer(tmp, con->physical.path); /* save path of current document */
++                                buffer_copy_string_buffer(con->physical.path, p->stat_fn); /* next sub-document to parse */
++                                if (mod_ssi_physical_path(srv, con, p) != HANDLER_FINISHED) {
++                                        /* the document was not processed, so write it as is */
++                                        chunkqueue_append_file(con->write_queue, con->physical.path, 0, st.st_size);
++				} else {
++					h_finished = 1;	
++				}
++                                buffer_copy_string_buffer(con->physical.path, tmp); /* restore saved path */
++                                buffer_free(tmp);
++				
+ 				break;
+ 			}
+ 		} else {
+@@ -897,7 +955,11 @@ static int mod_ssi_handle_request(server
+ 	
+ 	/* get a stream to the file */
+ 	
+-	array_reset(p->ssi_vars);
++	if (h_finished == 1)
++	{
++		array_reset(p->ssi_vars);
++		h_finished = 0;
++	}
+ 	array_reset(p->ssi_cgi_env);
+ 	buffer_copy_string(p->timefmt, "%a, %d %b %Y %H:%M:%S %Z");
+ 	p->sizefmt = 0;
+@@ -1038,35 +1100,6 @@ static int mod_ssi_patch_connection(serv
+ }
+ #undef PATCH
+ 
+-URIHANDLER_FUNC(mod_ssi_physical_path) {
+-	plugin_data *p = p_d;
+-	size_t k;
+-	
+-	if (con->physical.path->used == 0) return HANDLER_GO_ON;
+-	
+-	mod_ssi_patch_connection(srv, con, p);
+-	
+-	for (k = 0; k < p->conf.ssi_extension->used; k++) {
+-		data_string *ds = (data_string *)p->conf.ssi_extension->data[k];
+-		
+-		if (ds->value->used == 0) continue;
+-		
+-		if (buffer_is_equal_right_len(con->physical.path, ds->value, ds->value->used - 1)) {
+-			/* handle ssi-request */
+-			
+-			if (mod_ssi_handle_request(srv, con, p)) {
+-				/* on error */
+-				con->http_status = 500;
+-			}
+-			
+-			return HANDLER_FINISHED;
+-		}
+-	}
+-	
+-	/* not found */
+-	return HANDLER_GO_ON;
+-}
+-
+ /* this function is called at dlopen() time and inits the callbacks */
+ 
+ int mod_ssi_plugin_init(plugin *p) {

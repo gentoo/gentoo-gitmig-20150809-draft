@@ -1,0 +1,14 @@
+--- lighttpd-1.4.11.orig/src/connections.c (revision 1092)
++++ lighttpd-1.4.11/src/connections.c (revision 1095)
+@@ -1182,4 +1182,11 @@
+ 	    con->state == CON_STATE_READ_POST) {
+ 		connection_handle_read_state(srv, con);
++		/**
++		 * if SSL_read() is not readin in the full packet we won't get
++		 * a fdevent as the low-level has already fetched everything.
++		 *
++		 * we have to call the state-engine to read the rest of the packet
++		 */
++		if (con->is_readable) joblist_append(srv, con);
+ 	}
+ 
