@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-arts/kdemultimedia-arts-3.4.1.ebuild,v 1.12 2006/03/24 20:41:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-arts/kdemultimedia-arts-3.4.1.ebuild,v 1.13 2006/05/30 01:06:49 flameeyes Exp $
 
+ARTS_REQUIRED="yes"
 KMNAME=kdemultimedia
 KMMODULE=arts
 MAXKDEVER=3.4.3
@@ -14,9 +15,3 @@ IUSE=""
 KMEXTRACTONLY="mpeglib_artsplug/configure.in.in" # needed because the artsc-config call is here
 KMEXTRA="doc/artsbuilder"
 
-pkg_setup() {
-	if ! useq arts; then
-		eerror "${PN} needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
-		die
-	fi
-}

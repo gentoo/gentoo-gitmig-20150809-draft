@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpeglib/artsplugin-mpeglib-3.5.2.ebuild,v 1.5 2006/05/26 15:15:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpeglib/artsplugin-mpeglib-3.5.2.ebuild,v 1.6 2006/05/30 01:10:56 flameeyes Exp $
 
+ARTS_REQUIRED="yes"
 KMNAME=kdemultimedia
 KMMODULE=mpeglib_artsplug
 MAXKDEVER=$PV
@@ -17,11 +18,3 @@ KMCOPYLIB="libmpeg mpeglib/lib/"
 KMEXTRACTONLY="mpeglib/"
 
 PATCHES="${FILESDIR}/${P}-libarts.patch"
-
-pkg_setup() {
-	if ! useq arts; then
-		eerror "${PN} needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
-		die
-	fi
-	kde_pkg_setup
-}

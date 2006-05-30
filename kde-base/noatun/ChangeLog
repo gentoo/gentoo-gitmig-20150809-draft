@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/noatun
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.52 2006/05/29 21:46:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.53 2006/05/30 01:28:27 flameeyes Exp $
+
+  30 May 2006; Diego Pettenò <flameeyes@gentoo.org> noatun-3.4.3.ebuild,
+  noatun-3.5.2.ebuild:
+  Make sure aRTs is required.
 
   29 May 2006; Jason Wever <weeve@gentoo.org> noatun-3.5.2.ebuild:
   Stable on SPARC wrt bug #132213.

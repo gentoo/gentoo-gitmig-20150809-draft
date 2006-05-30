@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpg123/artsplugin-mpg123-3.5.0.ebuild,v 1.7 2006/05/26 15:16:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpg123/artsplugin-mpg123-3.5.0.ebuild,v 1.8 2006/05/30 01:12:22 flameeyes Exp $
 
+ARTS_REQUIRED="yes"
 KMNAME=kdemultimedia
 KMMODULE=mpg123_artsplugin
 MAXKDEVER=3.5.2
@@ -11,11 +12,3 @@ inherit kde-meta eutils
 DESCRIPTION="aRts plugin for mpg123"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
-
-pkg_setup() {
-	if ! useq arts; then
-		eerror "${PN} needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
-		die
-	fi
-	kde_pkg_setup
-}

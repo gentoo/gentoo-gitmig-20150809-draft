@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krec
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/ChangeLog,v 1.49 2006/05/29 21:47:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/ChangeLog,v 1.50 2006/05/30 01:25:09 flameeyes Exp $
+
+  30 May 2006; Diego Pettenò <flameeyes@gentoo.org> krec-3.4.3.ebuild,
+  krec-3.5.2.ebuild:
+  Make sure aRTs is required.
 
   29 May 2006; Jason Wever <weeve@gentoo.org> krec-3.5.2.ebuild:
   Stable on SPARC wrt bug #132213.
