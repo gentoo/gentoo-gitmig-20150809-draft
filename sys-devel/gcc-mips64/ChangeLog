@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc-mips64
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.17 2005/12/28 18:46:16 kumba Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.18 2006/05/30 00:20:01 kumba Exp $
+
+*gcc-mips64-3.4.6 (30 May 2006)
+
+  30 May 2006; Joshua Kinard <kumba@gentoo.org>
+  +files/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch,
+  gcc-mips64-3.4.5.ebuild, +gcc-mips64-3.4.6.ebuild:
+  Bump to 3.4.6, and mark 3.4.5 as stable.
 
   28 Dec 2005; Joshua Kinard <kumba@gentoo.org> gcc-mips64-3.4.4.ebuild,
   gcc-mips64-3.4.5.ebuild:

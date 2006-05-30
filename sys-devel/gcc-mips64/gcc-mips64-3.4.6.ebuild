@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.4.5.ebuild,v 1.4 2006/05/30 00:20:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.4.6.ebuild,v 1.1 2006/05/30 00:20:01 kumba Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,7 +21,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="mips"
+KEYWORDS="~mips"
 
 DEPEND="virtual/libc
 	>=sys-devel/binutils-2.16.1
@@ -66,7 +66,7 @@ src_unpack() {
 	epatch ${FILESDIR}/gcc-3.4.x-mips-add-march-r10k.patch
 
 	# Allows building of kernels for IP28 systems (enable w/ -mip28-cache-barrier)
-	epatch ${FILESDIR}/gcc-3.4.2-mips-ip28_cache_barriers-v2.patch
+	epatch ${FILESDIR}/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch
 
 	# Make gcc's version info specific to Gentoo
 	gcc_version_patch "(Gentoo Linux ${PVR})"
