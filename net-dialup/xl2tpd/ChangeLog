@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/xl2tpd
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/ChangeLog,v 1.1 2006/05/30 20:54:12 mrness Exp $
+
+*xl2tpd-1.04 (30 May 2006)
+
+  30 May 2006; Alin Nastac <mrness@gentoo.org> +files/l2tpd-init,
+  +metadata.xml, +xl2tpd-1.04.ebuild:
+  Initial import from bug #134029, thanks to Alexandre Ghisoli <alex@ghisoli.ch>.
+

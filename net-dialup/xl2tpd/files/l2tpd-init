@@ -1,0 +1,32 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/files/l2tpd-init,v 1.1 2006/05/30 20:54:12 mrness Exp $
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [[ ! -f /etc/l2tpd/l2tpd.conf ]] ; then
+		eerror "Missing /etc/l2tpd/l2tpd.conf configuration file!"
+		eerror "Example configuration file could be found in doc directory."
+		return 1
+	fi
+
+	return 0
+}
+
+start() {
+	checkconfig || return 1
+
+	ebegin "Starting l2tpd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/l2tpd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping l2tpd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/l2tpd.pid
+	eend $?
+}

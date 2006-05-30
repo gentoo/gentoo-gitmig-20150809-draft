@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6d44dde40a3d062edc266137af3251fa ChangeLog 422
+MD5 c0494910abd2a9c98e958d5b764d4d0b files/digest-xl2tpd-1.04 63
+MD5 e9f9b7f11f160180074c80fc8e3ba42d files/l2tpd-init 719
+MD5 2489971def1ce6f019a703c6b877a124 metadata.xml 281
+MD5 c1f0801f8bcd1453960a77726f031864 xl2tpd-1.04.ebuild 835
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEfLEEjG8pv1lIUX4RAoPxAJ4zNDg1Lul4fOdI7aCyBmSiofChhwCeI43/
+IEXswqTzN2mPRDpIiebto44=
+=skFO
+-----END PGP SIGNATURE-----
