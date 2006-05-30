@@ -1,6 +1,9 @@
 # ChangeLog for media-video/spca5xx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.22 2006/05/30 18:36:59 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.23 2006/05/30 18:56:00 kingtaco Exp $
+
+  30 May 2006; Mike Doty <kingtaco@gentoo.org> spca5xx-20060501.ebuild:
+  ebuild enhancements from genstef
 
 *spca5xx-20060501 (30 May 2006)
 
