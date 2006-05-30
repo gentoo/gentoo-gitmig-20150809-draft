@@ -1,0 +1,28 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/files/motion.init,v 1.1 2006/05/30 18:44:04 lu_zero Exp $
+
+opts="${opts} reload"
+
+depend() {
+	need modules
+}
+
+start() {
+	ebegin "Starting motion detection"
+	start-stop-daemon --start --quiet --exec /usr/bin/motion
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping motion detection"
+	start-stop-daemon --stop --quiet --exec /usr/bin/motion
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading motion detection configuration"
+	start-stop-daemon --stop --signal HUP --exec /usr/bin/motion
+	eend $?
+}
