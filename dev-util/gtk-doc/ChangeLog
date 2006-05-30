@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.64 2006/05/29 09:36:26 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.65 2006/05/30 21:54:15 leonardop Exp $
+
+  30 May 2006; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-doc-1.6-r1.ebuild:
+  Use gnome2_src_unpack to avoid sandbox violations.
 
 *gtk-doc-1.6-r1 (29 May 2006)
 
