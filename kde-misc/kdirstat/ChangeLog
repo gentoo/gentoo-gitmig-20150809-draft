@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdirstat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/ChangeLog,v 1.11 2006/04/03 23:16:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/ChangeLog,v 1.12 2006/05/30 02:00:38 weeve Exp $
+
+  30 May 2006; Jason Wever <weeve@gentoo.org> kdirstat-2.4.4.ebuild:
+  Stable on SPARC wrt bug #134765.
 
 *kdirstat-2.4.4 (03 Apr 2006)
 
