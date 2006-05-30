@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.158 2006/05/30 00:34:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.159 2006/05/30 00:59:03 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -10,7 +10,11 @@
 inherit base eutils kde-functions flag-o-matic libtool
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
-IUSE="debug arts xinerama"
+IUSE="debug xinerama"
+
+if [[ ${ARTS_REQUIRED} != "yes" ]]; then
+	IUSE="${IUSE} arts"
+fi
 
 if [[ ${CATEGORY} == "kde-base" ]]; then
 	IUSE="${IUSE} kdeenablefinal"
@@ -38,18 +42,28 @@ DEPEND=">=sys-devel/automake-1.7.0
 RDEPEND="~kde-base/kde-env-3
 	xinerama? ( || ( x11-libs/libXinerama virtual/x11 ) )"
 
+if [[ ${ARTS_REQUIRED} == "yes" ]]; then
+	DEPEND="${DEPEND} kde-base/arts"
+	RDEPEND="${RDEPEND} kde-base/arts"
+elif [[ ${PN} != "arts" ]]; then
+	DEPEND="${DEPEND} arts? ( kde-base/arts )"
+	RDEPEND="${RDEPEND} arts? ( kde-base/arts )"
+fi
+
 # overridden in other places like kde-dist, kde-source and some individual ebuilds
 SLOT="0"
 
 kde_pkg_setup() {
-	if [ "${PN}" != "arts" ] && [ "${PN}" != "kdelibs" ] ; then
-		use arts && if ! built_with_use kde-base/kdelibs arts ; then
-			eerror "You are trying to compile ${CATEGORY}/${P} with the \"arts\" USE flag enabled."
-			eerror "However, $(best_version kde-base/kdelibs) was compiled with this flag disabled."
-			eerror
-			eerror "You must either disable this use flag, or recompile"
-			eerror "$(best_version kde-base/kdelibs) with this use flag enabled."
-			die
+	if [[ ${PN} != "arts" ]] && [[ ${PN} != "kdelibs" ]] ; then
+		if [ ${ARTS_REQUIRED} == 'yes' ] || use arts ; then
+			if ! built_with_use kde-base/kdelibs arts ; then
+				eerror "You are trying to compile ${CATEGORY}/${P} with the \"arts\" USE flag enabled."
+				eerror "However, $(best_version kde-base/kdelibs) was compiled with this flag disabled."
+				eerror
+				eerror "You must either disable this use flag, or recompile"
+				eerror "$(best_version kde-base/kdelibs) with this use flag enabled."
+				die
+			fi
 		fi
 	fi
 
@@ -162,8 +176,12 @@ kde_src_compile() {
 				if hasq kdeenablefinal ${IUSE}; then
 					myconf="$myconf $(use_enable kdeenablefinal final)"
 				fi
-				[[ -z "$KDEBASE" ]] && myconf="$myconf $(use_with arts)"
-				[[ -n "$KDEBASE" && "$KDEMINORVER" -ge 3 ]] && myconf="$myconf $(use_with arts)"
+				if [[ ${ARTS_REQUIRED} != 'yes' ]]; then
+					# This might break some external package until
+					# ARTS_REQUIRED="yes" is set on them, KDE 3.2 is no more
+					# supported anyway.
+					myconf="$myconf $(use_with arts)"
+				fi
 				debug-print "$FUNCNAME: myconf: set to ${myconf}"
 				;;
 			configure)
