@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX kdeaddons-3.2.0-kvim.diff 363 RMD160 ec733ed4c266f4909ce584d49ea120def0adc191 SHA1 d350de4634ba3133d101b4d5f934212c77bab896 SHA256 d009e26c93b517470d1e2ccdcc04972cf3deb3aa3ac0fcdb4379d48e4d2aa885
 MD5 3bec1549e74c6f661045a83198e45290 files/kdeaddons-3.2.0-kvim.diff 363
 RMD160 ec733ed4c266f4909ce584d49ea120def0adc191 files/kdeaddons-3.2.0-kvim.diff 363
@@ -8,7 +5,7 @@ SHA256 d009e26c93b517470d1e2ccdcc04972cf3deb3aa3ac0fcdb4379d48e4d2aa885 files/kd
 DIST kdeaddons-3.4.0-3.4.1.tar.xdelta 120597
 DIST kdeaddons-3.4.0.tar.bz2 1670919
 DIST kdeaddons-3.4.1-3.4.2.tar.xdelta 93540
-DIST kdeaddons-3.4.2.tar.bz2 1591335
+DIST kdeaddons-3.4.2.tar.bz2 1591335 RMD160 76675daeefc9bd500d0f323d119d4e9b430a7320 SHA1 e420b3ed3f8b56340f0215272ea67bbe922d74f5 SHA256 c4ecde610ea4d0d2d11cf73babb32665b8e15827829dc4dd7b2b71ff1658a471
 EBUILD vimpart-3.4.2.ebuild 592 RMD160 43128f89b4bb3b526c170b7e84185e539b9b9a1e SHA1 1a5d097e8a372621eda779de95fa7765a368975f SHA256 c0bac2b64cad280064e882dd65b917fb8f7a7b6fe1de12dd51f9e33322cac177
 MD5 18185b6fb32703af627db47f1f17e68c vimpart-3.4.2.ebuild 592
 RMD160 43128f89b4bb3b526c170b7e84185e539b9b9a1e vimpart-3.4.2.ebuild 592
@@ -21,13 +18,6 @@ MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 aef1ad04d3f153a78e0b5aa9742d6f9e files/digest-vimpart-3.4.2 291
-RMD160 82a7f55a1506e3dc4110b3f257b0de264bbe92e0 files/digest-vimpart-3.4.2 291
-SHA256 e1b286fd0afe6a640380070ffecffba03ddabf4abf2b2d59cb3c786922a54a6c files/digest-vimpart-3.4.2 291
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEeyAqAiZjviIA2XgRAjrkAKDriGsslFgxzcVd6UDTK4b7N0XKQACggf/Z
-CmReRhJXWK/YqPTqlIrJjgU=
-=rN/P
------END PGP SIGNATURE-----
+MD5 8ae30a28da2cd35bd91318737b4cf5e4 files/digest-vimpart-3.4.2 475
+RMD160 0853e48ecc8ea6981201f93145742ff792130c01 files/digest-vimpart-3.4.2 475
+SHA256 e74f2b2e68fa4137806bf691fd7dabb966c48e9660e61ee269dcc7f6b83a61a7 files/digest-vimpart-3.4.2 475

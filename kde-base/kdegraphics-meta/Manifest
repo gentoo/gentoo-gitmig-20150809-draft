@@ -2,10 +2,10 @@ EBUILD kdegraphics-meta-3.4.3.ebuild 1471 RMD160 77352873d4993e5d56dde8759ee23d3
 MD5 a8a66ca9b2fa8ee07d7588b4120b061c kdegraphics-meta-3.4.3.ebuild 1471
 RMD160 77352873d4993e5d56dde8759ee23d3c58d66ec7 kdegraphics-meta-3.4.3.ebuild 1471
 SHA256 dec5f0a0f915183ce55e64362a21a4e4bf7b56799aba00768b4348504b887943 kdegraphics-meta-3.4.3.ebuild 1471
-EBUILD kdegraphics-meta-3.5.2.ebuild 1496 RMD160 be153d60bcbea2dc0eb53807975e7fbe8470bea0 SHA1 1fab92b5f3cc7a4deb6956b8d4817ad64738a51c SHA256 84732a9534d4f2a26acbe00207557fdc2876e49e40ff82bb2da62e3d68298833
-MD5 bd7b23d7568def1c44655db7c65d3dbe kdegraphics-meta-3.5.2.ebuild 1496
-RMD160 be153d60bcbea2dc0eb53807975e7fbe8470bea0 kdegraphics-meta-3.5.2.ebuild 1496
-SHA256 84732a9534d4f2a26acbe00207557fdc2876e49e40ff82bb2da62e3d68298833 kdegraphics-meta-3.5.2.ebuild 1496
+EBUILD kdegraphics-meta-3.5.2.ebuild 1497 RMD160 a97cca992ebdad98adb54fde0e0a61fb87acbb9f SHA1 74edf2eefebe5218ef63170eaa4fc18dcf5a8579 SHA256 ccdffdd37bf893bf0c1ac2bf78aa2f28e9fc8534d5dbdad25f5ecef79fdda07a
+MD5 1295a5b88eb3d9991206cf6ae9f9d1d2 kdegraphics-meta-3.5.2.ebuild 1497
+RMD160 a97cca992ebdad98adb54fde0e0a61fb87acbb9f kdegraphics-meta-3.5.2.ebuild 1497
+SHA256 ccdffdd37bf893bf0c1ac2bf78aa2f28e9fc8534d5dbdad25f5ecef79fdda07a kdegraphics-meta-3.5.2.ebuild 1497
 MISC ChangeLog 7701 RMD160 9b8e86f28c51f2494f4df964663ba8ec804940c8 SHA1 bf35a29186aa837539f92fb0d350b5806ab8d28f SHA256 98b187dd4da2d67c85ba5765ea966f1534659b879dd3401e81013f616a802fa3
 MD5 3e84433999dc0ae6a19e88a06c1cc96d ChangeLog 7701
 RMD160 9b8e86f28c51f2494f4df964663ba8ec804940c8 ChangeLog 7701

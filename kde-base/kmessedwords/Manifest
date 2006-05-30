@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST kdeedu-3.4.0-3.4.1.tar.xdelta 651600
 DIST kdeedu-3.4.0.tar.bz2 23559284
 DIST kdeedu-3.4.1-3.4.2.tar.xdelta 430474
-DIST kdeedu-3.4.2.tar.bz2 24028133
+DIST kdeedu-3.4.2.tar.bz2 24028133 RMD160 aef63fb2cfbf8ce0ae45b9fe903d3b9d333424b5 SHA1 ac204edb196d2ec28de2ded3c2cbf560f2a70174 SHA256 134b8d753cd4fc12313b8a9caf8028626f3690757d77b9f1edb3b9ac53fdf98d
 EBUILD kmessedwords-3.4.2.ebuild 413 RMD160 fbba17de8c65a3570130531264a02a0ca57addbe SHA1 ea1b062ba0ba5c12cc3a7ab8fcc707488577d287 SHA256 53f26de63e674c671ad5b8eef92a40e45409bee5f01e47c72b936b62c0651403
 MD5 033565f1eec51914817372924027f3aa kmessedwords-3.4.2.ebuild 413
 RMD160 fbba17de8c65a3570130531264a02a0ca57addbe kmessedwords-3.4.2.ebuild 413
@@ -17,13 +14,6 @@ MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kmessedwords-3.4.2 282
-RMD160 f2a1268561e24e46368658fbb1e8bc680eeaaf26 files/digest-kmessedwords-3.4.2 282
-SHA256 85080ff055c6575eb61dc8f2c7ec8103cb76db1f0ecb0a11a71487b99d39a8b6 files/digest-kmessedwords-3.4.2 282
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEewi5AiZjviIA2XgRAg1uAKDQHog0Xlg5bqlAUNQOaba2w86kwACeJ30o
-9i5XcXa7MwVcGrKtI4fsbqM=
-=3LI0
------END PGP SIGNATURE-----
+MD5 b4ff052e439423ebdd6f967230cf74b1 files/digest-kmessedwords-3.4.2 462
+RMD160 9b0f778ace634a380634328dc8ceb240f2e3f026 files/digest-kmessedwords-3.4.2 462
+SHA256 922f913d5be2893d55668be0a8a4b40e84df127988d53135d73760002474a316 files/digest-kmessedwords-3.4.2 462

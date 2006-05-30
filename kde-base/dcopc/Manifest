@@ -1,14 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX remove-configure.diff 265 RMD160 b12e4375160afbeae28b524b65bba7085571861a SHA1 47b87577a4240f61a12457451bdef5a78790849e SHA256 601b9c65c8c52f0c947123544e4d47d38efe85f84bfa0c1357329e90b0fd4c4d
 MD5 44ed3a0bfa44a55b883dafba9e944e3f files/remove-configure.diff 265
 RMD160 b12e4375160afbeae28b524b65bba7085571861a files/remove-configure.diff 265
 SHA256 601b9c65c8c52f0c947123544e4d47d38efe85f84bfa0c1357329e90b0fd4c4d files/remove-configure.diff 265
-DIST kdebindings-3.3.1.tar.bz2 7168111
+DIST kdebindings-3.3.1.tar.bz2 7168111 RMD160 1ae670098bd20a235e5e2c4a64b9a3d7ad14d438 SHA1 35b416a4317a47638d0db6b8382f7b4617aa1bec SHA256 06f21589453226f1d5e7158baaf298f809633f637bb21ca4982e29bf70849fe4
 DIST kdebindings-3.4.0-3.4.1.tar.xdelta 792004
 DIST kdebindings-3.4.0.tar.bz2 7161497
-DIST kdebindings-3.4.1.tar.bz2 7219233
+DIST kdebindings-3.4.1.tar.bz2 7219233 RMD160 23552c80590c0e8b4e02107ba0a6507d25e46196 SHA1 c9c7b64e22ac8a934e1d6bbd4c155ad7a54bcf75 SHA256 bc17cfb26cd1ccec75effdc4eae9d8b6db722a9bbb2fd89604fdcb26c2fd2d27
 DIST kdebindings-3.5.0.tar.bz2 5387839
 EBUILD dcopc-3.3.1.ebuild 471 RMD160 96766d658b4f1bb0b6f27336bdc42cc8caf529d5 SHA1 7a5135c23e20429c3624bc897e7bc32d05a25e3f SHA256 e91170df6b01c84e34098151077dc8a41c37508dd9bcd57cfe4c6e511fafe284
 MD5 2b0ef9043cc4c732a674e528cfedb90b dcopc-3.3.1.ebuild 471
@@ -30,19 +27,12 @@ MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 6830fc45ae55313b9f8515babcf58b79 files/digest-dcopc-3.3.1 71
-RMD160 e6de37af9c285c1e29930bc6248857ce441a1c57 files/digest-dcopc-3.3.1 71
-SHA256 b03d4ca02205838c3caed3fb3b0be04f08c97b15a6e68319c610c77b2a482ec9 files/digest-dcopc-3.3.1 71
-MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-dcopc-3.4.1 221
-RMD160 92ebe5e95333b848c73e1505d4ccd2d1b3931977 files/digest-dcopc-3.4.1 221
-SHA256 afa7e3c23fbcc310ac991a2bb53aa46210788ea0f588f634915923ffde7ae700 files/digest-dcopc-3.4.1 221
+MD5 6925c385220aa9498095a9b0bd06843b files/digest-dcopc-3.3.1 259
+RMD160 38e9c8f964fa834bed9b86118f2bda53bd2f6cc3 files/digest-dcopc-3.3.1 259
+SHA256 cf5a8fcfdde454d00aec56a8a5e247bafb39654e51acfd64afefb3949e3eeba4 files/digest-dcopc-3.3.1 259
+MD5 a00d890e1eb706f47146ba510395729a files/digest-dcopc-3.4.1 409
+RMD160 cc70f3a0f6a67537e4bead542c7d9cac69f0df9a files/digest-dcopc-3.4.1 409
+SHA256 59670b30593c5bcc36bbf509a62b9fbd76fd896dbbec7521a9c0b0d1f93172c2 files/digest-dcopc-3.4.1 409
 MD5 b3d2330daa33ba3077c0a2e5d0ffaa31 files/digest-dcopc-3.5.0 71
 RMD160 e45615c7169e429df693f96d82f2b1e4a7b7da45 files/digest-dcopc-3.5.0 71
 SHA256 e404e4cbf9b2af3d8127502c55c627cb3f2f27b3445ea3dac5ac2d5ad382bed2 files/digest-dcopc-3.5.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEeu5NAiZjviIA2XgRAnH/AJ9xbPjy9uU0M/IxLqaflsluagWqWQCgwoTA
-C3c7N1CWxxOuNSkq6YJ0iDY=
-=GMov
------END PGP SIGNATURE-----

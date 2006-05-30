@@ -1,18 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST kdemultimedia-3.4.0-3.4.1.tar.xdelta 277869
 DIST kdemultimedia-3.4.0.tar.bz2 5581865
-DIST kdemultimedia-3.4.1.tar.bz2 5547552
+DIST kdemultimedia-3.4.1.tar.bz2 5547552 RMD160 d54a6abae1b991b5b5a4ed20b9c4b7adf8812fa5 SHA1 5408c92d06f7cc2103bd58e50f8126a5a9b15934 SHA256 2a908bae45c3c13c49fce271089761f5a5fe14623793245050744918711fe5d5
 DIST kdemultimedia-3.5.0.tar.bz2 5519386
 EBUILD artsplugin-audiofile-3.4.1.ebuild 513 RMD160 db9dcc259d3cf6c199481374e1e0e16e744f9592 SHA1 e7c9a47f1a449c2f4aa141c04907f3a2ec950ca6 SHA256 957b252e1de96a6576e3aba2d27f52e1c704a7e2f247146ca33820cecdf7f672
 MD5 73623b348e040c12fa9065ffeec90371 artsplugin-audiofile-3.4.1.ebuild 513
 RMD160 db9dcc259d3cf6c199481374e1e0e16e744f9592 artsplugin-audiofile-3.4.1.ebuild 513
 SHA256 957b252e1de96a6576e3aba2d27f52e1c704a7e2f247146ca33820cecdf7f672 artsplugin-audiofile-3.4.1.ebuild 513
-EBUILD artsplugin-audiofile-3.5.0.ebuild 516 RMD160 a7136710086885ee489f6136d45f7514f5175dc7 SHA1 5c1ac81bef26279691ba8f2c8fedc87b09363b17 SHA256 290048cfdea6ba560686fabcf270ae58389db2ffe004b8286ff987851b6829dc
-MD5 d8b08bba60dd9e6efd0b67bb75c304e6 artsplugin-audiofile-3.5.0.ebuild 516
-RMD160 a7136710086885ee489f6136d45f7514f5175dc7 artsplugin-audiofile-3.5.0.ebuild 516
-SHA256 290048cfdea6ba560686fabcf270ae58389db2ffe004b8286ff987851b6829dc artsplugin-audiofile-3.5.0.ebuild 516
+EBUILD artsplugin-audiofile-3.5.0.ebuild 512 RMD160 222e01c0e767e270baec27c67b2bb881b00d16eb SHA1 aabb8777b86fed68110290249e08ae7fda88997f SHA256 59882e0a30fdf0ce0a346f5345f611d85186ead38aa89de621da8c0cf9be2e4b
+MD5 1bc05de6e721b0cbfc7a7d11b68435d3 artsplugin-audiofile-3.5.0.ebuild 512
+RMD160 222e01c0e767e270baec27c67b2bb881b00d16eb artsplugin-audiofile-3.5.0.ebuild 512
+SHA256 59882e0a30fdf0ce0a346f5345f611d85186ead38aa89de621da8c0cf9be2e4b artsplugin-audiofile-3.5.0.ebuild 512
 MISC ChangeLog 4858 RMD160 df7e9eb5e71b366a8ba5f7669330862e6a9b68ef SHA1 8de9909b8d6d7ebccc3df10f514d91e87e9381b8 SHA256 89837afda30c842bc9906231b0068a6f898dd8dde264986a2bab0da0ed847af6
 MD5 e24f02fe850700a0a4d11243cbd9b4ad ChangeLog 4858
 RMD160 df7e9eb5e71b366a8ba5f7669330862e6a9b68ef ChangeLog 4858
@@ -21,16 +18,9 @@ MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 a42e89d9f8f16a0854b5e5ae91b4db9d files/digest-artsplugin-audiofile-3.4.1 227
-RMD160 51c6e3d4dbe2615ec02022a0590ed7eee43ce433 files/digest-artsplugin-audiofile-3.4.1 227
-SHA256 b8955dadf5c1048bcf408d70a5695fa6e302e27175154bd6d0dbdd6fead51381 files/digest-artsplugin-audiofile-3.4.1 227
+MD5 0c85407020479fe5456b8c4818f831a6 files/digest-artsplugin-audiofile-3.4.1 419
+RMD160 2f6711009beac95c7a62352d6a54a7f46c1c2d5d files/digest-artsplugin-audiofile-3.4.1 419
+SHA256 ec48ed4f6bf18ab29dc6ae3688381e89680afb723f134364f344cb39069b6476 files/digest-artsplugin-audiofile-3.4.1 419
 MD5 e3784b0621b80bc67e95d6226fd30369 files/digest-artsplugin-audiofile-3.5.0 73
 RMD160 83fa8dd19f40c8fe320ad48c9dead36103fc2a05 files/digest-artsplugin-audiofile-3.5.0 73
 SHA256 d820d31e6020bc01706b8a240f639cae757e994ff0d5e5481151c21da38408ea files/digest-artsplugin-audiofile-3.5.0 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEe500AiZjviIA2XgRAgQvAKCZ42LNbbWMxMXkFSz635fIaFg2UgCg0zW1
-Ya1eVtwu5+s6psPuF/wvlvA=
-=oJAC
------END PGP SIGNATURE-----
