@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/udhcp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.24 2006/05/26 14:50:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.25 2006/05/30 23:17:30 weeve Exp $
+
+  30 May 2006; Jason Wever <weeve@gentoo.org>
+  udhcp-0.9.9_pre20041216-r3.ebuild:
+  Stable on SPARC wrt bug #134320.
 
   26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   udhcp-0.9.9_pre20041216-r3.ebuild:
