@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.ebuild,v 1.6 2006/03/08 20:17:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.ebuild,v 1.7 2006/05/30 01:34:29 flameeyes Exp $
 
+ARTS_REQUIRED="yes"
 inherit kde
 
 DESCRIPTION="MP3/Ogg/Wav-Manager and Jukebox"
@@ -30,19 +31,6 @@ RDEPEND="${DEPEND}
 # based on the obsolete gst kde bindings.
 
 need-kde 3
-
-pkg_setup() {
-	if ! use arts; then
-		eerror "${PN} can only be built with USE=\"arts\","
-		eerror "and with kde-base/kdelibs compiled with USE=\"arts\"."
-		die
-	fi
-}
-
-src_unpack() {
-	# override kde_src_unpack, to prevent automake from running
-	unpack ${A}
-}
 
 src_compile() {
 	myconf="$(use_enable xmms)"
