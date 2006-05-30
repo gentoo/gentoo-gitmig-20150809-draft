@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.56 2006/05/30 15:00:50 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.57 2006/05/30 17:12:35 antarus Exp $
+
+*autofs-4.1.3-r7 (30 May 2006)
+
+  30 May 2006; Alec Warner <antarus@gentoo.org> -autofs-4.1.3-r6.ebuild,
+  +autofs-4.1.3-r7.ebuild:
+  revbump for sort fix
 
   30 May 2006; Alec Warner <antarus@gentoo.org> files/auto.net:
   s/+/-/ for bug #120403, completely my fault :(
