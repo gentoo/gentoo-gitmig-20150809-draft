@@ -1,4 +1,6 @@
-MD5 a156c08896bdf1ca16ccf0ecc93b529f ChangeLog 739
+MD5 0c9115888ad88b7a09ba91aa37d0692b ChangeLog 870
 MD5 498673a304b60eac87a76582f112aff4 files/digest-listen-0.4.2-r2 64
+MD5 607680a587aeefb3fe452507847dbab9 files/digest-listen-0.4.3 64
 MD5 75da7dc075f568958f616fe6f97caab2 listen-0.4.2-r2.ebuild 2632
+MD5 fe43fea7db78dc8c8fb5ec1b87230431 listen-0.4.3.ebuild 2654
 MD5 05c53ecbaaf53640e2f9cba67505205a metadata.xml 1147

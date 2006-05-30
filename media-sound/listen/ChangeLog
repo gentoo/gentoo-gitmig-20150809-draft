@@ -1,20 +1,26 @@
 # ChangeLog for media-sound/listen
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.4 2006/04/13 12:14:32 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.5 2006/05/30 11:03:17 bass Exp $
 
-  13 Apr 2006; J. Alberto Suárez López <bass@gentoo.orgrg>
+*listen-0.4.3 (30 May 2006)
+
+  30 May 2006; J. Alberto Suárez López <bass@gentoo.org>
+  +listen-0.4.3.ebuild:
+  Version bump. #132686
+
+*listen-0.4.2-r2 (9 Apr 2006)
+
+  13 Apr 2006; J. Alberto Suárez López <bass@gentoo.org>
   listen-0.4.2-r2.ebuild:
   added gnome-vfs hal check
 
-  12 Apr 2006; J. Alberto Suárez López <bass@gentoo.orgrg>
+  12 Apr 2006; J. Alberto Suárez López <bass@gentoo.org>
   listen-0.4.2-r2.ebuild:
   added cdr flag and serpentine rdepend
 
-  12 Apr 2006; J. Alberto Suárez López <bass@gentoo.orgrg>
+  12 Apr 2006; J. Alberto Suárez López <bass@gentoo.org>
   listen-0.4.2-r2.ebuild:
   added cdr flag and serpentine rdepend
-
-*listen-0.4.2-r2 (9 Apr 2006)
 
   9 Apr 2006: Jose Alberto Suarez Lopez <bass@gentoo.org> listen-0.4.2-r2.ebuild:
   First relase.
