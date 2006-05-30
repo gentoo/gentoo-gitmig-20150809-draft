@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.1.ebuild,v 1.1 2006/05/09 07:44:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.1.ebuild,v 1.2 2006/05/30 01:22:19 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic pam
 
@@ -51,7 +51,8 @@ PATCHES="${FILESDIR}/${PN}-6.0-bsdcmp.patch
 	${FILESDIR}/${PN}-6.0-fixmakefiles.patch
 	${FILESDIR}/${PN}-setXid.patch
 	${FILESDIR}/${PN}-lint-stdarg.patch
-	${FILESDIR}/${PN}-6.0-kdump-ioctl.patch"
+	${FILESDIR}/${PN}-6.0-kdump-ioctl.patch
+	${FILESDIR}/${P}-gcc41.patch"
 
 # Here we remove some sources we don't need because they are already
 # provided by portage's packages or similar. In order:

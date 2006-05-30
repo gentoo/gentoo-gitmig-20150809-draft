@@ -1,0 +1,35 @@
+Index: fbsd-6.1/usr.bin/window/wwgets.c
+===================================================================
+--- fbsd-6.1.orig/usr.bin/window/wwgets.c
++++ fbsd-6.1/usr.bin/window/wwgets.c
+@@ -43,6 +43,8 @@ static char rcsid[] =
+ #include "ww.h"
+ #include "char.h"
+ 
++static void rub();
++
+ wwgets(buf, n, w)
+ char *buf;
+ int n;
+@@ -51,7 +53,6 @@ register struct ww *w;
+ 	register char *p = buf;
+ 	register int c;
+ 	char uc = w->ww_unctrl;
+-	static void rub();
+ 
+ 	w->ww_unctrl = 0;
+ 	for (;;) {
+Index: fbsd-6.1/usr.bin/xlint/xlint/xlint.c
+===================================================================
+--- fbsd-6.1.orig/usr.bin/xlint/xlint/xlint.c
++++ fbsd-6.1/usr.bin/xlint/xlint/xlint.c
+@@ -402,7 +402,8 @@ main(int argc, char *argv[])
+ 			break;
+ 
+ 		case 'p':
+-			appcstrg(&lcflags, "-Wtraditional -Wno-system-headers");
++			appcstrg(&lcflags, "-Wtraditional");
++			appcstrg(&lcflags, "-Wno-system-headers");
+ 			appcstrg(&l1flags, "-p");
+ 			appcstrg(&l2flags, "-p");
+ 			if (*deflibs != NULL) {
