@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.02.0030.ebuild,v 1.8 2006/04/11 12:00:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.02.0030.ebuild,v 1.9 2006/05/30 21:01:47 wolf31o2 Exp $
 
-inherit eutils linux-info
+inherit eutils linux-mod
 
 MY_PV=${PV}-k9
 DESCRIPTION="Cisco VPN Client (3DES)"
@@ -87,6 +87,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	linux-mod_pkg_postinst
 	einfo "You must run \`/etc/init.d/vpnclient start\` before using the client."
 	echo
 	ewarn "Configuration directory has moved to ${VPNDIR}!"
