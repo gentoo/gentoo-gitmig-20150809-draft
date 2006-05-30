@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.213 2006/05/29 19:51:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.214 2006/05/30 03:15:43 josejx Exp $
+
+  30 May 2006; Joseph Jezak <josejx@gentoo.org> arts-3.5.2.ebuild:
+  Marked ppc stable for bug #132213.
 
   29 May 2006; Jason Wever <weeve@gentoo.org> arts-3.5.2.ebuild:
   Stable on SPARC wrt bug #132213.
