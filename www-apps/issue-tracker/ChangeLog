@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/issue-tracker
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/issue-tracker/ChangeLog,v 1.4 2004/09/08 15:58:15 karltk Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/issue-tracker/ChangeLog,v 1.5 2006/05/30 10:37:59 lu_zero Exp $
+
+  30 May 2006; Luca Barbato <lu_zero@gentoo.org>
+  issue-tracker-4.0.3-r1.ebuild:
+  Marked ppc, requested in bug #134759
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
