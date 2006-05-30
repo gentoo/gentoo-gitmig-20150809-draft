@@ -1,4 +1,4 @@
-MD5 61a5e2561a2954801cb5a1d67040e1ef ChangeLog 20802
+MD5 034f702704ac9058bfac75e6b356896c ChangeLog 20907
 MD5 24669453e8f69faf4212dfa43e90e3dd files/1.4.10/01_all_r990_mod_cgi_dont_reset_physical_path.diff 517
 MD5 8c00894c801011ca682400a243aa49cb files/1.4.10/02_all_r991_posix_fadvise.diff 805
 MD5 f9b6a2f0c377777945de48d3e7bdda40 files/1.4.10/03_all_r992_posix_fadvise_2.4.x.diff 638
@@ -46,7 +46,7 @@ MD5 f18029dea31126d04d7287f80610b2ca lighttpd-1.3.13-r3.ebuild 2649
 MD5 0df89754aec138ad20821ef93c45833b lighttpd-1.3.16.ebuild 2589
 MD5 051c33f9eaa96575c4e85ff92ee8b149 lighttpd-1.4.10-r1.ebuild 5028
 MD5 6ace08416c92fb7660ab425f0b3927a7 lighttpd-1.4.10-r2.ebuild 5047
-MD5 8fc216298265168be14a425ec4c517a7 lighttpd-1.4.11.ebuild 5085
+MD5 5e96067e61b78859b2c8a201810af083 lighttpd-1.4.11.ebuild 5084
 MD5 409c3573899a53281837a5bcb1bb1813 lighttpd-1.4.7.ebuild 5153
 MD5 9a318d179b54cb88bd1c8ac45a1e643b lighttpd-1.4.8.ebuild 5156
 MD5 6a9d4814404d8d51327e5b8306ee3d7e metadata.xml 726
