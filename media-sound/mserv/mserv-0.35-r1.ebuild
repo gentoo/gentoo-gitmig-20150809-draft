@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35-r1.ebuild,v 1.4 2006/05/08 04:22:30 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35-r1.ebuild,v 1.5 2006/05/30 04:23:49 weeve Exp $
 
 inherit webapp eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.mserv.org"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="mserv"
 
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc sparc ~x86"
 IUSE="vorbis"
 
 WEBAPP_MANUAL_SLOT="yes"
