@@ -1,12 +1,56 @@
-MD5 655c4fd3a42a5910b561e23a5b4fc0dc cloop-2.02.1.ebuild 1511
-MD5 06f22b38961cce2906d9f50a3992c260 cloop-2.01.5-r1.ebuild 1811
-MD5 63c104024671f184771d990a497a4594 ChangeLog 3502
-MD5 6e89ba8198764bfd079a0cfa18dca593 metadata.xml 264
-MD5 a2d63d27b9964865fe89d44549587504 files/cloop.fix-create_compressed_fs-segfault-on-amd64.patch 1091
-MD5 eba344b1fcf93c086a762d9f059adf84 files/digest-cloop-2.01.5-r1 64
-MD5 4666ce65a6ce33f0a2c449fcec7e0488 files/cloop.fix-7z-syntax-for-gcc-3.4.patch 2071
-MD5 d5cbfe4d18b529a9dfb5fc67675cfa09 files/cloop-2.02.1-netinet-gentoo.patch 538
-MD5 6ae2fe661ad5deb5e98a50537d06b43f files/cloop.fix-incompatible-kernel-2.6.7-and-later.patch 995
-MD5 ab48f2b1094c297eaa04e42906bf652b files/cloop.fix-Makefile-for-kernel-2.6-and-amd64.patch 2121
+AUX cloop-2.01.5-netinet-gentoo.patch 535 RMD160 b115bc77cbb454e86e05777a612c7c0406470f10 SHA1 a0f753fc34a32a833913c46d1cb09037aad47291 SHA256 4c21c78717c8c51fbc1d7d4a9f9a48f63c7f1cd55bd321c6c32dba8050861a55
 MD5 a4ba7f6242034c7d6253cb26c32c1dc1 files/cloop-2.01.5-netinet-gentoo.patch 535
-MD5 e0582b3bcd31933e3380d490cc9acb61 files/digest-cloop-2.02.1 64
+RMD160 b115bc77cbb454e86e05777a612c7c0406470f10 files/cloop-2.01.5-netinet-gentoo.patch 535
+SHA256 4c21c78717c8c51fbc1d7d4a9f9a48f63c7f1cd55bd321c6c32dba8050861a55 files/cloop-2.01.5-netinet-gentoo.patch 535
+AUX cloop-2.02.1-netinet-gentoo.patch 538 RMD160 847494273d2a1a5e128ae17e09a2d981a14acb18 SHA1 518de891119df1bec4646122776a0fbd4ffcb9df SHA256 5db49be233041ce801508448d25d1adf601de4181b09786a87eb095f43d26d5b
+MD5 d5cbfe4d18b529a9dfb5fc67675cfa09 files/cloop-2.02.1-netinet-gentoo.patch 538
+RMD160 847494273d2a1a5e128ae17e09a2d981a14acb18 files/cloop-2.02.1-netinet-gentoo.patch 538
+SHA256 5db49be233041ce801508448d25d1adf601de4181b09786a87eb095f43d26d5b files/cloop-2.02.1-netinet-gentoo.patch 538
+AUX cloop.fix-7z-syntax-for-gcc-3.4.patch 2071 RMD160 f32cb29f89a3aab27d32f7a74d072692a34acaee SHA1 2c2af7276d015078ea2a6cc82ab4d1f112408315 SHA256 45d5aca91b98185ce9c90dacee026479ccef7fcff35f4c2d3a96bb4e5bb023c4
+MD5 4666ce65a6ce33f0a2c449fcec7e0488 files/cloop.fix-7z-syntax-for-gcc-3.4.patch 2071
+RMD160 f32cb29f89a3aab27d32f7a74d072692a34acaee files/cloop.fix-7z-syntax-for-gcc-3.4.patch 2071
+SHA256 45d5aca91b98185ce9c90dacee026479ccef7fcff35f4c2d3a96bb4e5bb023c4 files/cloop.fix-7z-syntax-for-gcc-3.4.patch 2071
+AUX cloop.fix-Makefile-for-kernel-2.6-and-amd64.patch 2121 RMD160 42c38152b54bcf3d0e133e9723470e630d437bb6 SHA1 cc952a426655f876320a5dbb41af2a488c043c0e SHA256 a2e646f368d07dd9f589754461c4e4dba0f03e88ac11fd5e455480f3e87ea0dd
+MD5 ab48f2b1094c297eaa04e42906bf652b files/cloop.fix-Makefile-for-kernel-2.6-and-amd64.patch 2121
+RMD160 42c38152b54bcf3d0e133e9723470e630d437bb6 files/cloop.fix-Makefile-for-kernel-2.6-and-amd64.patch 2121
+SHA256 a2e646f368d07dd9f589754461c4e4dba0f03e88ac11fd5e455480f3e87ea0dd files/cloop.fix-Makefile-for-kernel-2.6-and-amd64.patch 2121
+AUX cloop.fix-create_compressed_fs-segfault-on-amd64.patch 1091 RMD160 45e4c7f743355bf18aad2eb8f3e0b072cc347135 SHA1 37663c85d4e3042b5e5f04c7c9c566fa0c5f133e SHA256 935d3d4f36337ab63ac23df71739d19c75b68b4b1353261cdc38325129aa4f76
+MD5 a2d63d27b9964865fe89d44549587504 files/cloop.fix-create_compressed_fs-segfault-on-amd64.patch 1091
+RMD160 45e4c7f743355bf18aad2eb8f3e0b072cc347135 files/cloop.fix-create_compressed_fs-segfault-on-amd64.patch 1091
+SHA256 935d3d4f36337ab63ac23df71739d19c75b68b4b1353261cdc38325129aa4f76 files/cloop.fix-create_compressed_fs-segfault-on-amd64.patch 1091
+AUX cloop.fix-incompatible-kernel-2.6.7-and-later.patch 995 RMD160 4110d932952db7e6f180ac27316675d34c684157 SHA1 71391846b42ac90105c02409104810fbb86b014b SHA256 1adef8bd51ad49ffbf4b752eaa254f932ac01d2915c004584fa56b95d5695c82
+MD5 6ae2fe661ad5deb5e98a50537d06b43f files/cloop.fix-incompatible-kernel-2.6.7-and-later.patch 995
+RMD160 4110d932952db7e6f180ac27316675d34c684157 files/cloop.fix-incompatible-kernel-2.6.7-and-later.patch 995
+SHA256 1adef8bd51ad49ffbf4b752eaa254f932ac01d2915c004584fa56b95d5695c82 files/cloop.fix-incompatible-kernel-2.6.7-and-later.patch 995
+DIST cloop_2.01-5.tar.gz 428324
+DIST cloop_2.02-1.tar.gz 428919 RMD160 9d80010ac817f488a9f0c67b74e59aadb670490a SHA1 6ddd254413b2c1fb292a5f90890a823ff1a26732 SHA256 cfb243a5301e452bbe67fb6f84d5accf1a72f858037cc628046522fa1f212c06
+DIST cloop_2.02.1+eb.10.tar.gz 348471 RMD160 bf63e46622d4f1289ea1f577fde08f6b5e977ef0 SHA1 403bcd4f874fe8a475439fe61008b6f811b3d163 SHA256 4e6770379a98588ad82f5fd2800454333ba19e33606f239cc44c2e127187f757
+EBUILD cloop-2.01.5-r1.ebuild 1811 RMD160 6530bb57bd18e7b84187cfa4080ce631a65ad186 SHA1 e3e05cf40086928e20d5c3b41398720204b619d3 SHA256 71e79407f1cb042e7fa3211da961f3610af32d2dff32613769052065e8d80644
+MD5 06f22b38961cce2906d9f50a3992c260 cloop-2.01.5-r1.ebuild 1811
+RMD160 6530bb57bd18e7b84187cfa4080ce631a65ad186 cloop-2.01.5-r1.ebuild 1811
+SHA256 71e79407f1cb042e7fa3211da961f3610af32d2dff32613769052065e8d80644 cloop-2.01.5-r1.ebuild 1811
+EBUILD cloop-2.02.1-r1.ebuild 1482 RMD160 fa48b3872cde66ace02dcea41af69d4bc0b638c8 SHA1 28b57c240efd008438b66899d3dce5ac28f5da37 SHA256 6635b79d43307556bf5a965c7ed209d3e59b9dc175ffc980cf0a72167fa3f5a2
+MD5 f577396841093d9bddeb196f1d1f5180 cloop-2.02.1-r1.ebuild 1482
+RMD160 fa48b3872cde66ace02dcea41af69d4bc0b638c8 cloop-2.02.1-r1.ebuild 1482
+SHA256 6635b79d43307556bf5a965c7ed209d3e59b9dc175ffc980cf0a72167fa3f5a2 cloop-2.02.1-r1.ebuild 1482
+EBUILD cloop-2.02.1.ebuild 1511 RMD160 95a15bbfddedd218fc5d698285f4c3b4a7ab874e SHA1 9f67bcf414cd8ebaf1163e19784d970422c8b5a1 SHA256 d8862fc485ecc6707f6fa0b290fe206705373c1f8eae33aeeed2445dcc434663
+MD5 655c4fd3a42a5910b561e23a5b4fc0dc cloop-2.02.1.ebuild 1511
+RMD160 95a15bbfddedd218fc5d698285f4c3b4a7ab874e cloop-2.02.1.ebuild 1511
+SHA256 d8862fc485ecc6707f6fa0b290fe206705373c1f8eae33aeeed2445dcc434663 cloop-2.02.1.ebuild 1511
+MISC ChangeLog 3686 RMD160 3bb6ca6c0c4cd912b0af06bd850ab046b1a770e3 SHA1 268b7a36f1b2ca54da5411bfc43ff8d018dd56b6 SHA256 3f3c7e1ef929fd7a46f789eccc1ee8ee41dcd3ab5cdaa2ed7e0fd9fa49381d52
+MD5 89e1f4a18a3b662229cf6f4130a361a1 ChangeLog 3686
+RMD160 3bb6ca6c0c4cd912b0af06bd850ab046b1a770e3 ChangeLog 3686
+SHA256 3f3c7e1ef929fd7a46f789eccc1ee8ee41dcd3ab5cdaa2ed7e0fd9fa49381d52 ChangeLog 3686
+MISC metadata.xml 264 RMD160 ff3b07b3794623e4733a4dd289cffc9606d6e432 SHA1 310c846802ac0f01334ee8677c428e2962594d01 SHA256 62bbe388ec16f0c4a20cfbb752b05fdefd1349254c494cdea67c096bb553c06b
+MD5 6e89ba8198764bfd079a0cfa18dca593 metadata.xml 264
+RMD160 ff3b07b3794623e4733a4dd289cffc9606d6e432 metadata.xml 264
+SHA256 62bbe388ec16f0c4a20cfbb752b05fdefd1349254c494cdea67c096bb553c06b metadata.xml 264
+MD5 eba344b1fcf93c086a762d9f059adf84 files/digest-cloop-2.01.5-r1 64
+RMD160 17d91551fafcd554154024dee217c0d8a5eda35b files/digest-cloop-2.01.5-r1 64
+SHA256 85be80d1951d14a26bf8c5647bca932281cf8a3a410c6670c612a029c8d60958 files/digest-cloop-2.01.5-r1 64
+MD5 9d7297ac63d9c6eddd6e0aaf51d70253 files/digest-cloop-2.02.1 238
+RMD160 05a51db2fbcb7e253c2d37c0ded6a39a0ea2a593 files/digest-cloop-2.02.1 238
+SHA256 2e831ab345ab6b39d59270fa28c2059c992b8b80e3c2e2cd18c6a5862d3f4649 files/digest-cloop-2.02.1 238
+MD5 1937f415be76d41a9cca4fccd67495ef files/digest-cloop-2.02.1-r1 256
+RMD160 8c3eab6a46ce47053f1b636ed21fe34ed1467b41 files/digest-cloop-2.02.1-r1 256
+SHA256 e867f4602ee5a808ec3e317a4b9bdbd360248e06f79fc2d9d5b229a1df06a560 files/digest-cloop-2.02.1-r1 256
