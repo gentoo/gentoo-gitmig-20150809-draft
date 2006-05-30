@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.3.2-r1.ebuild,v 1.1 2006/05/25 17:40:49 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.3.2-r1.ebuild,v 1.2 2006/05/30 23:07:22 merlin Exp $
 
 inherit eutils multilib
 
@@ -72,7 +72,7 @@ src_compile() {
 			config.modules || die
 	else
 		# avoid linking to libs in /usr/lib, see Bug #27064
-		sed -i -e "/LIBS/s%-lpcre%/usr/lib/libpcre.a%" \
+		sed -i -e "/LIBS/s%-lpcre%/usr/$(get_libdir)/libpcre.a%" \
 			Makefile || die
 	fi
 

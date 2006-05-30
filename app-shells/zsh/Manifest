@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 77d3caaa4a96ba65b8449e1f650b3df3 ChangeLog 14996
-MD5 de58f149f41740c394800ba8d2cdf361 files/digest-zsh-4.0.9-r4 199
-MD5 9001ff5324448d902a296276500ac3fb files/digest-zsh-4.2.4 199
-MD5 1710d7b038f0aac2aca3520bb546659c files/digest-zsh-4.2.5 199
+MD5 015aea10f1972ff76f5b2326c7d1fe06 ChangeLog 15162
+MD5 5a1c6f322578120f1cdfcbe935753641 files/digest-zsh-4.0.9-r4 199
+MD5 b824db86f4faa040c73723f000a220fe files/digest-zsh-4.2.4 199
+MD5 77f1924526d9d12feba8ce108113192f files/digest-zsh-4.2.5 199
 MD5 6a0124cadb5fb33bee5400ae9acc74c0 files/digest-zsh-4.2.6 199
 MD5 0a98d1389721ff23a192e03df3825e70 files/digest-zsh-4.2.6-r1 199
 MD5 da3a0178918bcb34c920992cd720b743 files/digest-zsh-4.3.2 130
@@ -19,14 +19,14 @@ MD5 28ed8ea6cdccb353e2e8ad783eb51f5b metadata.xml 506
 MD5 d5f3557fedf35ebc49211049d7b3b641 zsh-4.0.9-r4.ebuild 2889
 MD5 6759a1e89716a3959efa0101fac89c74 zsh-4.2.4.ebuild 4308
 MD5 15f3385fc425d0200754f217be128a24 zsh-4.2.5.ebuild 4542
-MD5 2099038cbaa05af96adf1cbeaf123b73 zsh-4.2.6-r1.ebuild 4328
+MD5 fdacee8eb8546a769d16aa58ebfd05a5 zsh-4.2.6-r1.ebuild 4338
 MD5 1e9e170f3700df829209f023474a13f2 zsh-4.2.6.ebuild 4335
-MD5 08c69fb491b83da9add58099d5cbb4a8 zsh-4.3.2-r1.ebuild 4277
+MD5 5614aff778d4072c5a9aa907042682f2 zsh-4.3.2-r1.ebuild 4287
 MD5 0c33f6eca98cae88529ebc47bb3e2e35 zsh-4.3.2.ebuild 4284
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEdexWK3VlI3Kj19sRArH0AJ4pEzwpWq4kOI3ZEcQG0qVfkxsVdACfY4mr
-pUnUzNJrjTjJgHSHk1BYtzU=
-=hWgT
+iD8DBQFEfNA7K3VlI3Kj19sRAqFKAJ9+MNN9X7YA6TGNSsf9VP7dD1KlmACgoB7i
+qCATEAdXpkEyeTIp2tKjUdI=
+=ZK3n
 -----END PGP SIGNATURE-----
