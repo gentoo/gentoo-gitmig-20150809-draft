@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-reelchannelscan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-reelchannelscan/ChangeLog,v 1.2 2006/05/02 20:44:10 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-reelchannelscan/ChangeLog,v 1.3 2006/05/30 13:19:09 zzam Exp $
+
+*vdr-reelchannelscan-0.3.0-r1 (30 May 2006)
+
+  30 May 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-reelchannelscan-0.3.0-empty-channellist.diff,
+  +vdr-reelchannelscan-0.3.0-r1.ebuild:
+  Added a patch to be able to scan with a complete empty channel-list before.
 
 *vdr-reelchannelscan-0.3.0 (02 May 2006)
 

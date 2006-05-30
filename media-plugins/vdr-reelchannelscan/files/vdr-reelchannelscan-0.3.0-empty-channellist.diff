@@ -1,0 +1,16 @@
+diff -ru reelchannelscan-0.3.0-orig/csmenu.c reelchannelscan-0.3.0/csmenu.c
+--- reelchannelscan-0.3.0-orig/csmenu.c	2006-05-30 15:01:08.000000000 +0200
++++ reelchannelscan-0.3.0/csmenu.c	2006-05-30 15:11:02.000000000 +0200
+@@ -100,7 +100,11 @@
+   // CurrentChannel has to be greater than 0!
+   CurrentChannelNr = CurrentChannelNr == 0 ? 1 : CurrentChannelNr;
+   cChannel *channel = Channels.GetByNumber(CurrentChannelNr);
+-  source = channel->Source();
++  if (channel) {
++    source = channel->Source();
++  } else {
++    source = cSource::FromString("S19.2E");
++  }
+   currentChannel = CurrentChannelNr;
+   scanActiveMenu = false;
+   // timer for loop mode
