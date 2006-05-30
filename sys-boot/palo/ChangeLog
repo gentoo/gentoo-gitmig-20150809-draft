@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/palo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.15 2006/02/09 09:41:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.16 2006/05/30 20:14:37 gmsoft Exp $
+
+*palo-1.14_pre20060409 (30 May 2006)
+
+  30 May 2006; Guy Martin <gmsoft@gentoo.org> +palo-1.14_pre20060409.ebuild:
+  Version bump. Fix compilation with gcc-4.1.1.
 
 *palo-1.13_pre20060123 (09 Feb 2006)
 
