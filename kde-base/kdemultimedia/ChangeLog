@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.206 2006/05/29 20:04:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.207 2006/05/30 04:15:14 josejx Exp $
+
+  30 May 2006; Joseph Jezak <josejx@gentoo.org>
+  kdemultimedia-3.5.2-r2.ebuild:
+  Marked ppc stable for bug #132213.
 
   29 May 2006; Jason Wever <weeve@gentoo.org> kdemultimedia-3.5.2-r2.ebuild:
   Stable on SPARC wrt bug #132213.
