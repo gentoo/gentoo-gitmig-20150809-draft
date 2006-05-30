@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.3.ebuild,v 1.2 2006/05/28 21:57:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.3.ebuild,v 1.3 2006/05/30 12:05:31 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -42,11 +42,6 @@ DEPEND="|| ( ( x11-libs/libXrandr
 	zlib? ( sys-libs/zlib )"
 
 pkg_setup() {
-	if has nodoc ${FEATURES}; then
-		eerror "Qt-4 is incompatible with the 'nodoc' feature of portage.  Please disable this feature and retry"
-		die
-	fi
-
 	QTBASEDIR=/usr/$(get_libdir)/qt4
 	QTPREFIXDIR=/usr
 	QTBINDIR=/usr/bin
