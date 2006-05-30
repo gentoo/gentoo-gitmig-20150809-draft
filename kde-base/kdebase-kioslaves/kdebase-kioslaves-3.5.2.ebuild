@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.2.ebuild,v 1.7 2006/05/29 20:32:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.2.ebuild,v 1.8 2006/05/30 05:09:35 josejx Exp $
 
 KMNAME=kdebase
 KMMODULE=kioslave
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="kioslave: the kde VFS framework - kioslave plugins present a filesystem-like view of arbitrary data"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="hal ldap samba openexr"
 DEPEND="ldap? ( net-nds/openldap )
 	samba? ( >=net-fs/samba-3.0.1 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeprint/kdeprint-3.5.2.ebuild,v 1.13 2006/05/29 20:39:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeprint/kdeprint-3.5.2.ebuild,v 1.14 2006/05/30 05:09:44 josejx Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE printer queue/device manager"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="cups kde"
 
 # TODO Makefile reads ppd models from /usr/share/cups/model  (hardcoded !!)
