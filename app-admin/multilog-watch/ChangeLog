@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/multilog-watch
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/multilog-watch/ChangeLog,v 1.1 2006/05/30 20:55:35 bangert Exp $
+
+*multilog-watch-1.12 (30 May 2006)
+
+  30 May 2006; Thilo Bangert <bangert@gentoo.org> +metadata.xml,
+  +multilog-watch-1.12.ebuild:
+  initial import - this is multilog watch
+  it watches a multilog file for irregularities
+
