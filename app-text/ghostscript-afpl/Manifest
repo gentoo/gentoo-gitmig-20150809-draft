@@ -18,14 +18,18 @@ AUX ghostscript-afpl-8.54-big-cmap-post.patch 7588 RMD160 7afa1acae19228903e94b7
 MD5 33ed647c4208f611993c427a0d5a0264 files/ghostscript-afpl-8.54-big-cmap-post.patch 7588
 RMD160 7afa1acae19228903e94b7203515602701d45bff files/ghostscript-afpl-8.54-big-cmap-post.patch 7588
 SHA256 e207a316591ab6d827c1752efd79e7d5c0b072e93a7adca1508bf63b51cae549 files/ghostscript-afpl-8.54-big-cmap-post.patch 7588
+AUX ghostscript-afpl-8.54-cups-destdir.diff 699 RMD160 290c2f81a51d1656f0f0907fb061170595938964 SHA1 8b5327ed8b7726cd103a13094a6aac9907fc226f SHA256 d739789264b0051a52764e68af298cd5da0edaa8e65fb909f022b0fc44fc5f56
+MD5 c75892c93d1df123f1a1c84fed8df9c6 files/ghostscript-afpl-8.54-cups-destdir.diff 699
+RMD160 290c2f81a51d1656f0f0907fb061170595938964 files/ghostscript-afpl-8.54-cups-destdir.diff 699
+SHA256 d739789264b0051a52764e68af298cd5da0edaa8e65fb909f022b0fc44fc5f56 files/ghostscript-afpl-8.54-cups-destdir.diff 699
 AUX ghostscript-afpl-8.54-cups-lib.patch 4053 RMD160 62b00a754179c3b564b03e2dc7d0fe191b2652e0 SHA1 58f53e82b7d23e01885a8f65ca6b52249d19f144 SHA256 d6d8732c32a21bffafc6bab544f44d02041f15d8135bb940bedd851955eef678
 MD5 f8d20e0e6dfd916554ecbef5e5d66f07 files/ghostscript-afpl-8.54-cups-lib.patch 4053
 RMD160 62b00a754179c3b564b03e2dc7d0fe191b2652e0 files/ghostscript-afpl-8.54-cups-lib.patch 4053
 SHA256 d6d8732c32a21bffafc6bab544f44d02041f15d8135bb940bedd851955eef678 files/ghostscript-afpl-8.54-cups-lib.patch 4053
-AUX ghostscript-afpl-8.54-destdir.diff 11832 RMD160 b728320d4943962e074f4e140aff372643733bf8 SHA1 fa32e645a434754bfcc9b70e75958f2a392720cc SHA256 6c82e5d3c65bbe3142fa1700a98e1d7fe26f060ca5ad1875f01e7cf3cc4403bc
-MD5 5abcbf7e5af2148fdba655b00d472ae7 files/ghostscript-afpl-8.54-destdir.diff 11832
-RMD160 b728320d4943962e074f4e140aff372643733bf8 files/ghostscript-afpl-8.54-destdir.diff 11832
-SHA256 6c82e5d3c65bbe3142fa1700a98e1d7fe26f060ca5ad1875f01e7cf3cc4403bc files/ghostscript-afpl-8.54-destdir.diff 11832
+AUX ghostscript-afpl-8.54-destdir.diff 11133 RMD160 e23c41dbe807b9388d00cd1974e1d2a710ed2a5d SHA1 d3cf9da7e848fb55e08672c7e4f556fbf58a97e8 SHA256 05837115e7671768f7ef3a698cff5ea5e6d385bab87e98257ea42c8528c27e67
+MD5 d638424ef6990aa5172f21b35c5506ac files/ghostscript-afpl-8.54-destdir.diff 11133
+RMD160 e23c41dbe807b9388d00cd1974e1d2a710ed2a5d files/ghostscript-afpl-8.54-destdir.diff 11133
+SHA256 05837115e7671768f7ef3a698cff5ea5e6d385bab87e98257ea42c8528c27e67 files/ghostscript-afpl-8.54-destdir.diff 11133
 AUX ghostscript-afpl-8.54-gtk2.patch 610 RMD160 b6f6ff2b5667e698d38c6340fcb027e381e765de SHA1 3d3b60695510dbe7537f9d24327350ab7dab66f3 SHA256 5330aedcdccc78af21d87179f93917d0e025a41bcce3b863301bdd0e4f9d23ea
 MD5 e8974faf06541ccb8c271180d87175bd files/ghostscript-afpl-8.54-gtk2.patch 610
 RMD160 b6f6ff2b5667e698d38c6340fcb027e381e765de files/ghostscript-afpl-8.54-gtk2.patch 610
@@ -38,6 +42,10 @@ AUX ghostscript-afpl-8.54-rinkj.patch 983 RMD160 9206c5acf0631512c77437931811bb6
 MD5 0f7664981cfc60e05a0890e28a5c1611 files/ghostscript-afpl-8.54-rinkj.patch 983
 RMD160 9206c5acf0631512c77437931811bb6fcebe4c53 files/ghostscript-afpl-8.54-rinkj.patch 983
 SHA256 b159586fac2ef5dc397371db0fb7207e726fc3c6472fe9e479664fd7dea2a0e9 files/ghostscript-afpl-8.54-rinkj.patch 983
+AUX ghostscript-afpl-8.54-segfault.patch 505 RMD160 c02811990117b8b78934ba9b636007c782bb29f7 SHA1 4357a5e9e67ab1066b642fc7b6ed0bf591b161ca SHA256 63e75cf1815cc19529d02be94d3eba5be5f5a1d6e3f20cf680e2e4b5bd1c35e0
+MD5 f343c63f09ff29ea27783b73e202f823 files/ghostscript-afpl-8.54-segfault.patch 505
+RMD160 c02811990117b8b78934ba9b636007c782bb29f7 files/ghostscript-afpl-8.54-segfault.patch 505
+SHA256 63e75cf1815cc19529d02be94d3eba5be5f5a1d6e3f20cf680e2e4b5bd1c35e0 files/ghostscript-afpl-8.54-segfault.patch 505
 AUX gs-8.11-ijs.patch 757 RMD160 39257b67cc13666686c1115930c0089b8355d439 SHA1 7703a6ceeda6d7da8b09d83545ae64341cbef98c SHA256 1fe3f9a9938ea74113aad2ee9141dc6192d92241d33a7d91cdfae835a1b6a483
 MD5 dbdb3cd0aea8f9032baa11bc335d181a files/gs-8.11-ijs.patch 757
 RMD160 39257b67cc13666686c1115930c0089b8355d439 files/gs-8.11-ijs.patch 757
@@ -76,14 +84,14 @@ EBUILD ghostscript-afpl-8.53-r5.ebuild 4638 RMD160 8d96c8e52d43ad5bb44317d671b2c
 MD5 5c242c8908b9c38553a655b25e2aa384 ghostscript-afpl-8.53-r5.ebuild 4638
 RMD160 8d96c8e52d43ad5bb44317d671b2c93ce6505dc5 ghostscript-afpl-8.53-r5.ebuild 4638
 SHA256 4edb5c1a6a3e1bd78cbab85a3dfa3f8c971ec86d15b54a114dd89259816722ee ghostscript-afpl-8.53-r5.ebuild 4638
-EBUILD ghostscript-afpl-8.54.ebuild 4708 RMD160 d3434dab1306f7836c8ec698d7172e9d4431c06b SHA1 0c0501957ab2f6947428682fc48d9b8522080d94 SHA256 8f0013eeb57a13dcd73e2dba43c731f65cb14f7e05b140f632223586fea5f112
-MD5 7bbf69ed7dd7aa2981c4a68fb7147c7b ghostscript-afpl-8.54.ebuild 4708
-RMD160 d3434dab1306f7836c8ec698d7172e9d4431c06b ghostscript-afpl-8.54.ebuild 4708
-SHA256 8f0013eeb57a13dcd73e2dba43c731f65cb14f7e05b140f632223586fea5f112 ghostscript-afpl-8.54.ebuild 4708
-MISC ChangeLog 7355 RMD160 b459948b3d669e1a2485400e0a626ead6cb1462d SHA1 13ef7be19c11c13e3e363bc203952541e3f83dc9 SHA256 27775cc0939f8842e9466c945de329a9a0b288f4cedf3a3da4997782bdf6c1fb
-MD5 6b1999a99c0311823a78c41ebddb7a69 ChangeLog 7355
-RMD160 b459948b3d669e1a2485400e0a626ead6cb1462d ChangeLog 7355
-SHA256 27775cc0939f8842e9466c945de329a9a0b288f4cedf3a3da4997782bdf6c1fb ChangeLog 7355
+EBUILD ghostscript-afpl-8.54-r1.ebuild 4921 RMD160 4981822be91da9630897f8a35e48f9c3ae71e4bb SHA1 4be2b1c91986c7a091bdc601b95aef0f7c379ad2 SHA256 0884509124cdcb8891a2b79b085f2af0268e1e1ba2470d7f6a12cf0598fb32c5
+MD5 5468c1a6154b77e29681b89893b28f1b ghostscript-afpl-8.54-r1.ebuild 4921
+RMD160 4981822be91da9630897f8a35e48f9c3ae71e4bb ghostscript-afpl-8.54-r1.ebuild 4921
+SHA256 0884509124cdcb8891a2b79b085f2af0268e1e1ba2470d7f6a12cf0598fb32c5 ghostscript-afpl-8.54-r1.ebuild 4921
+MISC ChangeLog 7869 RMD160 d8b5db01254aae7a3d0cdd8afbdf5840d36a209c SHA1 7fff94b651e0f64564c4332bdea5cec832daddb8 SHA256 9462080fd2df6ee4bef28dc2bcff43de1634f758917580edca2a82df819d6964
+MD5 e2dc3e61b2ae159f37ea01b6d9d90203 ChangeLog 7869
+RMD160 d8b5db01254aae7a3d0cdd8afbdf5840d36a209c ChangeLog 7869
+SHA256 9462080fd2df6ee4bef28dc2bcff43de1634f758917580edca2a82df819d6964 ChangeLog 7869
 MISC metadata.xml 161 RMD160 1e5b1e42553c8869b93c4a5448e9a2a2ed9fe525 SHA1 209c6a46e4cdd891980115e42ba419e3799f8088 SHA256 7c85e6739a71f5bb23e8de36c88677d772946e61f7285892f7554e37bd2bca76
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 RMD160 1e5b1e42553c8869b93c4a5448e9a2a2ed9fe525 metadata.xml 161
@@ -100,6 +108,6 @@ SHA256 1e771841332a357f28609f5446d3fa9e2cba37164a749e830a9fc7c184c21c2e files/di
 MD5 620935159c3a805ea710483ca8229dce files/digest-ghostscript-afpl-8.53-r5 1524
 RMD160 aef5338d861db1d793c0b29fdc95962c8c9eae60 files/digest-ghostscript-afpl-8.53-r5 1524
 SHA256 555a2e6535ff7262d94fe3e782ddc10eba84ab9805beaac739b887548ebb60f4 files/digest-ghostscript-afpl-8.53-r5 1524
-MD5 ef3ebee1e5a0e9a1cfabccb6e41d8340 files/digest-ghostscript-afpl-8.54 1244
-RMD160 20e1029e4746bb7cdf1779b4350e8658bef40d42 files/digest-ghostscript-afpl-8.54 1244
-SHA256 b91dcab50e980fdbc105deb6979f8dc0d460f8c90a721c1050eda309b742a029 files/digest-ghostscript-afpl-8.54 1244
+MD5 ef3ebee1e5a0e9a1cfabccb6e41d8340 files/digest-ghostscript-afpl-8.54-r1 1244
+RMD160 20e1029e4746bb7cdf1779b4350e8658bef40d42 files/digest-ghostscript-afpl-8.54-r1 1244
+SHA256 b91dcab50e980fdbc105deb6979f8dc0d460f8c90a721c1050eda309b742a029 files/digest-ghostscript-afpl-8.54-r1 1244
