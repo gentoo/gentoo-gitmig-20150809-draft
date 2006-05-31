@@ -1,7 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/krconlinux/krconlinux-0.2.ebuild,v 1.5 2005/10/31 05:33:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/krconlinux/krconlinux-0.2.ebuild,v 1.6 2006/05/31 15:54:53 flameeyes Exp $
 
+ARTS_REQUIRED="yes"
 inherit kde
 
 DESCRIPTION="A tool for querying, managing and browsing game servers"
@@ -13,5 +14,4 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="kde-base/arts"
 need-kde 3

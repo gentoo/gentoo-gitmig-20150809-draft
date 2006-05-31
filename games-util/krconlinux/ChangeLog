@@ -1,6 +1,9 @@
 # ChangeLog for games-util/krconlinux
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/krconlinux/ChangeLog,v 1.3 2005/10/31 05:33:18 mr_bones_ Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/krconlinux/ChangeLog,v 1.4 2006/05/31 15:54:53 flameeyes Exp $
+
+  31 May 2006; Diego Pettenò <flameeyes@gentoo.org> krconlinux-0.2.ebuild:
+  Make sure aRTs is required. Thanks to Jakub Moc.
 
   31 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org>
   krconlinux-0.2.ebuild:
