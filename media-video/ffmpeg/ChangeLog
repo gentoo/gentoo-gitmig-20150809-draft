@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.142 2006/05/31 10:04:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.143 2006/05/31 11:37:31 flameeyes Exp $
+
+  31 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  ffmpeg-0.4.9_p20060530.ebuild:
+  Remove old hack for $LDFLAGS passing (fixed upstream), remove the
+  append-flags (fixed upstream).
 
   31 May 2006; Luca Barbato <lu_zero@gentoo.org>
   ffmpeg-0.4.9_p20060530.ebuild:

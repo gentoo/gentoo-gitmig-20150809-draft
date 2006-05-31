@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060530.ebuild,v 1.2 2006/05/31 10:04:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060530.ebuild,v 1.3 2006/05/31 11:37:31 flameeyes Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -155,7 +155,6 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--enable-static --disable-shared \
 		"--cc=$(tc-getCC)" \
-		"--extra-ldflags=${LDFLAGS}" \
 		${myconf} || die "static failed"
 
 
@@ -176,11 +175,6 @@ src_compile() {
 		fi
 	fi
 
-	# This is needed to make sure that when linking with --as-needed all the
-	# libraries are found in the right places, not suitable for upstream yet as
-	# it's GNU-ld only (most likely).
-	append-ldflags "-Wl,-rpath-link,${S_SHARED}/libav"{codec,format,util}
-
 	cd ${S_SHARED}
 	#econf generates configure options unknown to ffmpeg's configure, so configure manually
 	./configure \
@@ -188,7 +182,6 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--disable-static --enable-shared \
 		"--cc=$(tc-getCC)" \
-		"--extra-ldflags=${LDFLAGS}" \
 		${myconf} || die "shared failed"
 
 	emake || die "shared failed"
