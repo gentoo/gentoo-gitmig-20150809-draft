@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ethtool
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.20 2005/09/17 00:26:19 ciaranm Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.21 2006/05/31 20:16:21 robbat2 Exp $
+
+*ethtool-3_p20060531 (31 May 2006)
+
+  31 May 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +ethtool-3_p20060531.ebuild:
+  Version bump using snapshot of git from upstream, supports PCI-E hardware
+  better.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
