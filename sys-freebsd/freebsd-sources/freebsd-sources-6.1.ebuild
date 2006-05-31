@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.1.ebuild,v 1.2 2006/05/24 14:14:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.1.ebuild,v 1.3 2006/05/31 23:42:08 flameeyes Exp $
 
 inherit bsdmk freebsd
 
@@ -37,6 +37,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-6.0-flex-2.5.31.patch"
 	epatch "${FILESDIR}/${PN}-6.0-asm.patch"
 	epatch "${FILESDIR}/${PN}-6.0-werror.patch"
+	epatch "${FILESDIR}/${PN}-6.1-gcc41.patch"
 
 	# Disable SSP for the kernel
 	grep -Zlr -- -ffreestanding "${S}" | xargs -0 sed -i -e \
