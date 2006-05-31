@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.143 2006/05/31 11:37:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.144 2006/05/31 12:16:03 flameeyes Exp $
+
+  31 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  ffmpeg-0.4.9_p20060530.ebuild:
+  Remove keywording comments, we always add and drop them every other release.
 
   31 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   ffmpeg-0.4.9_p20060530.ebuild:
