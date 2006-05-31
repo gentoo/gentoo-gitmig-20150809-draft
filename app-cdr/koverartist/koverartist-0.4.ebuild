@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/koverartist-0.4.ebuild,v 1.2 2006/05/31 09:54:25 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/koverartist-0.4.ebuild,v 1.3 2006/05/31 19:14:11 mattepiu Exp $
 
 inherit kde eutils
 
@@ -15,8 +15,3 @@ IUSE=""
 DEPEND="!app-cdr/kover"
 need-kde 3.3
 
-src_compile () {
-	cd ${S}
-	PREFIX=`kde-config --prefix`
-	kde_src_compile
-}
