@@ -1,0 +1,16 @@
+diff -urN deng-1.9.0-beta4.orig/configure deng-1.9.0-beta4/configure
+--- deng-1.9.0-beta4.orig/configure	2006-05-28 13:54:06.000000000 -0400
++++ deng-1.9.0-beta4/configure	2006-05-31 12:13:39.000000000 -0400
+@@ -21001,10 +21001,10 @@
+                                                                                                     ac_config_files="$ac_config_files Makefile Src/Makefile Src/drOpenGL/Makefile Src/jDoom/Makefile Src/jHeretic/Makefile Src/jHexen/Makefile Src/dpDehRead/Makefile Src/dpMapLoad/Makefile Src/dsSDLMixer/Makefile Src/dsOpenAL/Makefile"
+ 
+ 
+-cd ..
++#cd ..
+ rm -f ./Data/Doomsday.pk3
+ zip -v -0  ./Data/Doomsday.pk3  ./Data/Graphics/* ./Data/Fonts/* ./Data/KeyMaps/*
+-cd Build
++#cd Build
+ 
+ #cd ..
+ #python ./Scripts/makedmt.py < ./Include/mapdata.hs
