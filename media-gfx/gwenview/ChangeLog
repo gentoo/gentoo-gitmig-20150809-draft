@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gwenview
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.38 2006/05/28 23:58:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.39 2006/05/31 13:19:41 flameeyes Exp $
+
+  31 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  gwenview-1.3.1-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
   28 May 2006; Diego Pettenò <flameeyes@gentoo.org> -gwenview-1.0.1.ebuild:
   Remove old version.
