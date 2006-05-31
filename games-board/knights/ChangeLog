@@ -1,6 +1,9 @@
 # ChangeLog for games-board/knights
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.11 2006/03/20 20:21:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.12 2006/05/31 15:47:21 flameeyes Exp $
+
+  31 May 2006; Diego Pettenò <flameeyes@gentoo.org> knights-0.6.ebuild:
+  Make sure aRTs is required. Thanks to Jakub Moc.
 
   20 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> knights-0.6.ebuild:
   Added dependency on kdebase-kioslaves and closing bug #126792.

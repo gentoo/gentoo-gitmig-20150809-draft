@@ -1,7 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/six/six-0.5.2.ebuild,v 1.5 2005/09/12 03:48:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/six/six-0.5.2.ebuild,v 1.6 2006/05/31 15:49:27 flameeyes Exp $
 
+ARTS_REQUIRED="yes"
 inherit kde
 
 DESCRIPTION="A Hex playing program for KDE"
@@ -13,5 +14,4 @@ SLOT="0"
 KEYWORDS="ppc ~sparc x86"
 IUSE=""
 
-DEPEND="kde-base/arts"
 need-kde 3

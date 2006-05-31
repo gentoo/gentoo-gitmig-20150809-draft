@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-0.6.ebuild,v 1.15 2006/03/20 20:21:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-0.6.ebuild,v 1.16 2006/05/31 15:47:21 flameeyes Exp $
 
+ARTS_REQUIRED="yes"
 inherit eutils kde
 
 THEME=${PN}-themepack-0.5.9
@@ -16,10 +17,7 @@ KEYWORDS="x86 ppc sparc amd64"
 IUSE=""
 
 # need-kde isn't smart enough yet so we have to set both *DEPEND right now
-# arts dep - bug #73352
-DEPEND="kde-base/arts"
-RDEPEND="kde-base/arts
-	|| ( kde-base/kdebase-kioslaves kde-base/kdebase )"
+RDEPEND="|| ( kde-base/kdebase-kioslaves kde-base/kdebase )"
 
 need-kde 3
 
