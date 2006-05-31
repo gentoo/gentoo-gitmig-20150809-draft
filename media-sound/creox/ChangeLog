@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/creox
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/creox/ChangeLog,v 1.9 2005/08/13 12:56:23 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/creox/ChangeLog,v 1.10 2006/05/31 11:07:42 flameeyes Exp $
+
+  31 May 2006; Diego Pettenò <flameeyes@gentoo.org> creox-0.2.2_rc2.ebuild:
+  Make sure aRTs is required. Thanks to Jakub Moc.
 
   13 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> creox-0.2.2_rc2.ebuild:
   Added strict dependency on arts as per bug #81919.

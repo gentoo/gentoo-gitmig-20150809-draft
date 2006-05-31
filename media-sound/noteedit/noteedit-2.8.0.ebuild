@@ -1,9 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.8.0.ebuild,v 1.2 2005/10/31 02:12:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.8.0.ebuild,v 1.3 2006/05/31 11:10:10 flameeyes Exp $
 
 IUSE=""
 
+ARTS_REQUIRED="yes"
 inherit kde-functions kde eutils flag-o-matic
 
 DESCRIPTION="Musical score editor (for Linux)."
@@ -15,7 +16,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="|| ( kde-base/kmid kde-base/kdemultimedia )
-	kde-base/arts
 	media-libs/tse3"
 
 need-kde 3
@@ -30,7 +30,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-qt-3.3.5.patch"
 
 	# Force rebuilding configure for the patch above
-	rm configure
+	rm -f "${S}/configure"
 }
 
 src_install() {

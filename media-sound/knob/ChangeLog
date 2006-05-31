@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/knob
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/knob/ChangeLog,v 1.9 2005/10/05 13:09:52 matsuu Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/knob/ChangeLog,v 1.10 2006/05/31 11:05:50 flameeyes Exp $
+
+  31 May 2006; Diego Pettenò <flameeyes@gentoo.org> knob-1.2-r1.ebuild:
+  Make sure aRTs is required. Thanks to Jakub Moc.
 
   05 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> knob-1.2-r1.ebuild:
   Added kde-base/arts to DEPEND. Bug 108130.
