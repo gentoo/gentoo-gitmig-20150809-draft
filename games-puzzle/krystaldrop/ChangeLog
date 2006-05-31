@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/krystaldrop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/ChangeLog,v 1.3 2006/05/18 21:08:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/ChangeLog,v 1.4 2006/05/31 19:34:10 flameeyes Exp $
+
+  31 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/krystaldrop-0.7.2-deps.patch, krystaldrop-0.7.2.ebuild:
+  Add patch to build with gmake 3.81 closing bug #131834.
 
   18 May 2006; <Tupone@gentoo.org> +files/krystaldrop-0.7.2-gcc41.patch,
   krystaldrop-0.7.2.ebuild:
