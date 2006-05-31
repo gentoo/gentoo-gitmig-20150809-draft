@@ -1,6 +1,10 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.149 2006/05/31 12:59:28 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.150 2006/05/31 14:22:29 solar Exp $
+
+  31 May 2006; <solar@gentoo.org> -clamav-0.87.1.ebuild, -clamav-0.87.ebuild,
+  -clamav-0.88.1.ebuild, -clamav-0.88.ebuild:
+  - security/qa cleanup. flush old/vuln ebuilds
 
   31 May 2006; <plasmaroo@gentoo.org> clamav-0.88.2.ebuild:
   Stable on IA64; bug #131791.
