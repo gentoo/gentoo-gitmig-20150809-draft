@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.6.627.ebuild,v 1.6 2006/05/28 10:51:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.6.627.ebuild,v 1.7 2006/05/31 22:00:45 wolf31o2 Exp $
 
 inherit games
 
@@ -20,7 +20,8 @@ RDEPEND="virtual/libc
 	dev-libs/expat
 	>=dev-games/hawknl-1.66
 	>=media-libs/allegro-4.0.0
-	vorbis? ( >=media-libs/aldumb-0.9.2
+	vorbis? ( ~media-libs/aldumb-0.9.2
+		~media-libs/dumb-0.9.2
 		media-libs/libogg
 		media-libs/libvorbis )"
 DEPEND="${RDEPEND}
