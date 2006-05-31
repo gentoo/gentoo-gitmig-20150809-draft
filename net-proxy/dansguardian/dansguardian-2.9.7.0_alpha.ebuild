@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.7.0_alpha.ebuild,v 1.1 2006/05/30 18:58:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.7.0_alpha.ebuild,v 1.2 2006/05/31 21:18:35 mrness Exp $
 
-inherit eutils
+inherit eutils autotools
 
 MY_P=${P/_alpha/}
 
@@ -43,7 +43,12 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
+	epatch "${FILESDIR}/${P%_alpha}-ctime.patch"
+	epatch "${FILESDIR}/${P%_alpha}-lm.patch"
 	epatch "${FILESDIR}/${P}-gentoo.patch"
+
+	cd "${S}"
+	eautoreconf
 }
 
 src_compile() {

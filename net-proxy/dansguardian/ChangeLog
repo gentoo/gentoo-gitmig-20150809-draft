@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/dansguardian
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.19 2006/05/30 18:58:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.20 2006/05/31 21:18:35 mrness Exp $
+
+  31 May 2006; Alin Nastac <mrness@gentoo.org>
+  +files/dansguardian-2.8.0.6-ctime.patch,
+  +files/dansguardian-2.9.7.0-ctime.patch,
+  +files/dansguardian-2.9.7.0-lm.patch, dansguardian-2.8.0.6-r1.ebuild,
+  dansguardian-2.9.7.0_alpha.ebuild:
+  Fix compilation issues on systems with uclibc++ (#134197).
 
 *dansguardian-2.9.7.0_alpha (30 May 2006)
 

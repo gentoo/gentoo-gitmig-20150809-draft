@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.8.0.6-r1.ebuild,v 1.6 2006/02/07 20:53:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.8.0.6-r1.ebuild,v 1.7 2006/05/31 21:18:35 mrness Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Web content filtering via proxy"
 HOMEPAGE="http://dansguardian.org"
@@ -12,15 +12,15 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE=""
-DEPEND="!net-proxy/dansguardian-dgav
-	virtual/libc"
+DEPEND="!net-proxy/dansguardian-dgav"
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/dansguardian-xnaughty-2.7.6-1.diff
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	cd "${S}"
+	epatch "${FILESDIR}/dansguardian-xnaughty-2.7.6-1.diff"
+	epatch "${FILESDIR}/${P}-ctime.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 }
 
 src_compile() {
@@ -30,16 +30,16 @@ src_compile() {
 		--mandir=/usr/share/man/ \
 		--cgidir=/var/www/localhost/cgi-bin/ \
 		--logrotatedir="${D}/etc/logrotate.d" || die "./configure failed"
-	emake OPTIMISE="${CFLAGS}" || die "emake failed"
+	emake CPP=$(tc-getCXX) OPTIMISE="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
 	make install || die "make install failed"
 
-	newinitd ${FILESDIR}/dansguardian.init dansguardian
+	newinitd "${FILESDIR}/dansguardian.init" dansguardian
 
 	insinto /etc/logrotate.d
-	newins ${FILESDIR}/dansguardian.logrotate dansguardian
+	newins "${FILESDIR}/dansguardian.logrotate" dansguardian
 
 	doman dansguardian.8
 	dodoc README

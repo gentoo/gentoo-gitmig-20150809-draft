@@ -1,0 +1,66 @@
+diff -ru dansguardian-2.8.0.6.orig/ConnectionHandler.cpp dansguardian-2.8.0.6/ConnectionHandler.cpp
+--- dansguardian-2.8.0.6.orig/ConnectionHandler.cpp	2006-05-24 11:06:32 +0000
++++ dansguardian-2.8.0.6/ConnectionHandler.cpp	2006-05-24 11:08:53 +0000
+@@ -36,6 +36,7 @@
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ #include <cstdio>
++#include <ctime>
+ #include <algorithm>
+ #include <iostream>
+ #include <netdb.h>
+diff -ru dansguardian-2.8.0.6.orig/DynamicURLList.cpp dansguardian-2.8.0.6/DynamicURLList.cpp
+--- dansguardian-2.8.0.6.orig/DynamicURLList.cpp	2006-05-24 11:06:32 +0000
++++ dansguardian-2.8.0.6/DynamicURLList.cpp	2006-05-24 11:09:06 +0000
+@@ -19,6 +19,7 @@
+ 
+ #include <syslog.h>
+ #include <algorithm>
++#include <ctime>
+ #include "DynamicURLList.hpp"
+ #include "OptionContainer.hpp"
+ #include <sys/stat.h>
+diff -ru dansguardian-2.8.0.6.orig/FatController.cpp dansguardian-2.8.0.6/FatController.cpp
+--- dansguardian-2.8.0.6.orig/FatController.cpp	2006-05-24 11:06:32 +0000
++++ dansguardian-2.8.0.6/FatController.cpp	2006-05-24 11:09:47 +0000
+@@ -21,6 +21,7 @@
+ #include <syslog.h>
+ #include "FatController.hpp"
+ #include <csignal>
++#include <ctime>
+ #ifdef __BSD
+ 	#include <sys/wait.h>
+ #else
+diff -ru dansguardian-2.8.0.6.orig/ListContainer.cpp dansguardian-2.8.0.6/ListContainer.cpp
+--- dansguardian-2.8.0.6.orig/ListContainer.cpp	2006-05-24 11:06:32 +0000
++++ dansguardian-2.8.0.6/ListContainer.cpp	2006-05-24 11:10:13 +0000
+@@ -24,6 +24,7 @@
+ #include "RegExp.hpp"
+ #include <cstdlib>
+ #include <cstdio>
++#include <ctime>
+ #include <unistd.h>
+ #include "String.hpp"
+ #include <iostream>
+diff -ru dansguardian-2.8.0.6.orig/ListManager.cpp dansguardian-2.8.0.6/ListManager.cpp
+--- dansguardian-2.8.0.6.orig/ListManager.cpp	2006-05-24 11:06:32 +0000
++++ dansguardian-2.8.0.6/ListManager.cpp	2006-05-24 11:10:27 +0000
+@@ -22,6 +22,7 @@
+ #include "ListManager.hpp"
+ #include "RegExp.hpp"
+ #include <sys/stat.h>
++#include <ctime>
+ 
+ extern bool isDaemonised;
+ 
+diff -ru dansguardian-2.8.0.6.orig/dansguardian.cpp dansguardian-2.8.0.6/dansguardian.cpp
+--- dansguardian-2.8.0.6.orig/dansguardian.cpp	2006-05-24 11:06:32 +0000
++++ dansguardian-2.8.0.6/dansguardian.cpp	2006-05-24 11:10:50 +0000
+@@ -24,6 +24,7 @@
+ #include <iostream>
+ #include <arpa/inet.h>
+ #include <cstdio>
++#include <ctime>
+ #include <string>
+ #include <unistd.h>
+ #include <cerrno>

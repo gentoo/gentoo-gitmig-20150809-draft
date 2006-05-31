@@ -1,0 +1,66 @@
+diff -ru dansguardian-2.9.7.0.orig/src/ConnectionHandler.cpp dansguardian-2.9.7.0/src/ConnectionHandler.cpp
+--- dansguardian-2.9.7.0.orig/src/ConnectionHandler.cpp	2006-05-30 21:36:58 +0000
++++ dansguardian-2.9.7.0/src/ConnectionHandler.cpp	2006-05-30 21:38:25 +0000
+@@ -32,6 +32,7 @@
+ #include <syslog.h>
+ #include <cerrno>
+ #include <cstdio>
++#include <ctime>
+ #include <algorithm>
+ #include <netdb.h>
+ #include <cstdlib>
+diff -ru dansguardian-2.9.7.0.orig/src/DynamicURLList.cpp dansguardian-2.9.7.0/src/DynamicURLList.cpp
+--- dansguardian-2.9.7.0.orig/src/DynamicURLList.cpp	2006-05-30 21:36:58 +0000
++++ dansguardian-2.9.7.0/src/DynamicURLList.cpp	2006-05-30 21:38:52 +0000
+@@ -25,6 +25,7 @@
+ 
+ #include <syslog.h>
+ #include <algorithm>
++#include <ctime>
+ #include <sys/stat.h>
+ #include <sys/time.h>
+ 
+diff -ru dansguardian-2.9.7.0.orig/src/FatController.cpp dansguardian-2.9.7.0/src/FatController.cpp
+--- dansguardian-2.9.7.0.orig/src/FatController.cpp	2006-05-30 21:36:58 +0000
++++ dansguardian-2.9.7.0/src/FatController.cpp	2006-05-30 21:39:28 +0000
+@@ -33,6 +33,7 @@
+ 
+ #include <syslog.h>
+ #include <csignal>
++#include <ctime>
+ #include <sys/stat.h>
+ #include <pwd.h>
+ #include <cerrno>
+diff -ru dansguardian-2.9.7.0.orig/src/ListContainer.cpp dansguardian-2.9.7.0/src/ListContainer.cpp
+--- dansguardian-2.9.7.0.orig/src/ListContainer.cpp	2006-05-30 21:36:58 +0000
++++ dansguardian-2.9.7.0/src/ListContainer.cpp	2006-05-30 21:39:57 +0000
+@@ -29,6 +29,7 @@
+ #include "RegExp.hpp"
+ #include <cstdlib>
+ #include <cstdio>
++#include <ctime>
+ #include <unistd.h>
+ #include "String.hpp"
+ #include <iostream>
+diff -ru dansguardian-2.9.7.0.orig/src/ListManager.cpp dansguardian-2.9.7.0/src/ListManager.cpp
+--- dansguardian-2.9.7.0.orig/src/ListManager.cpp	2006-05-30 21:36:58 +0000
++++ dansguardian-2.9.7.0/src/ListManager.cpp	2006-05-30 21:40:25 +0000
+@@ -25,6 +25,7 @@
+ 
+ #include <syslog.h>
+ #include <sys/stat.h>
++#include <ctime>
+ 
+ 
+ // GLOBALS
+diff -ru dansguardian-2.9.7.0.orig/src/dansguardian.cpp dansguardian-2.9.7.0/src/dansguardian.cpp
+--- dansguardian-2.9.7.0.orig/src/dansguardian.cpp	2006-05-30 21:36:58 +0000
++++ dansguardian-2.9.7.0/src/dansguardian.cpp	2006-05-30 21:41:24 +0000
+@@ -27,6 +27,7 @@
+ 
+ #include <iostream>
+ #include <cstdio>
++#include <ctime>
+ #include <unistd.h>
+ #include <cerrno>
+ #include <syslog.h>

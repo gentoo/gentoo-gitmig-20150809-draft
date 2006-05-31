@@ -1,0 +1,11 @@
+diff -Nru dansguardian-2.9.7.0.orig/configure.ac dansguardian-2.9.7.0/configure.ac
+--- dansguardian-2.9.7.0.orig/configure.ac	2006-05-08 14:57:53.000000000 +0300
++++ dansguardian-2.9.7.0/configure.ac	2006-06-01 00:08:39.953911500 +0300
+@@ -135,6 +135,7 @@
+ AC_CHECK_FUNCS([dup2 gettimeofday memset select])
+ AC_CHECK_FUNCS([strerror strstr strtol])
+ AC_CHECK_FUNCS([setuid setgid umask seteuid setreuid setlocale strdup])
++AC_SEARCH_LIBS([floor], [m])
+ AC_SEARCH_LIBS([gethostbyname], [nsl])
+ AC_SEARCH_LIBS([socket], [socket], [], [
+ 	AC_CHECK_LIB(
