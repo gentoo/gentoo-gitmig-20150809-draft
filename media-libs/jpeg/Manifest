@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 909a8d6b25c47fe4883237c1a0d0aa45 ChangeLog 6257
 MD5 9c09db40a4d1ea3e898d2e74b197e373 files/digest-jpeg-6b-r4 235
 MD5 9c09db40a4d1ea3e898d2e74b197e373 files/digest-jpeg-6b-r5 235
@@ -9,3 +12,10 @@ MD5 3a95014add9d0fcc6f28c23e0858a16c jpeg-6b-r5.ebuild 1485
 MD5 6c97dc73b6ffbb3fd0a75c4864df90e6 jpeg-6b-r6.ebuild 1265
 MD5 dc443d0a09aface8d9a60e5404580dfc jpeg-6b-r7.ebuild 1276
 MD5 3637cbaea842b04f1aa4693a1f68e286 metadata.xml 224
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEfeXHKRy60XGEcJIRApjiAKCtnfA824lU/UlOMswAScpD8k9n8gCeJaQk
+QFu3s0+FfUIl/L+6hcHVe80=
+=oChE
+-----END PGP SIGNATURE-----
