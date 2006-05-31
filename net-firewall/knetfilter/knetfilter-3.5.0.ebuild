@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/knetfilter/knetfilter-3.5.0.ebuild,v 1.3 2006/05/30 01:55:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/knetfilter/knetfilter-3.5.0.ebuild,v 1.4 2006/05/31 04:39:43 tsunam Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://expansa.sns.it/knetfilter/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND=">=net-firewall/iptables-1.2.5"
