@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.40 2006/05/30 04:51:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.41 2006/05/31 04:50:37 tsunam Exp $
+
+  31 May 2006; Joshua Jackson <tsunam@gentoo.org> tellico-1.1.6.ebuild:
+  Stable on x86; bug #134764
 
   30 May 2006; Joseph Jezak <josejx@gentoo.org> tellico-1.1.6.ebuild:
   Marked ppc stable for bug #134764.
