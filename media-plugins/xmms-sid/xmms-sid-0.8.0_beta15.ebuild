@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/xmms-sid-0.8.0_beta15.ebuild,v 1.4 2006/05/26 05:08:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/xmms-sid-0.8.0_beta15.ebuild,v 1.5 2006/05/31 01:41:58 metalgod Exp $
 
 inherit eutils autotools libtool
 
@@ -13,7 +13,7 @@ SRC_URI="http://tnsp.org/xs-files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ppc sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ppc sparc x86"
 IUSE=""
 
 # This really NEEDs one of the libsidplays, but unfortunately we need to RDEPEND on both for
