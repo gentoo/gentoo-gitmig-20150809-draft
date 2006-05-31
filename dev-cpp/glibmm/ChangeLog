@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.66 2006/05/30 17:03:57 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.67 2006/05/31 01:44:37 metalgod Exp $
+
+  31 May 2006; Luis Medinas <metalgod@gentoo.org> glibmm-2.8.4.ebuild:
+  Stable on amd64. See bug #133593.
 
   30 May 2006; Guy Martin <gmsoft@gentoo.org> glibmm-2.8.4.ebuild:
   Stable on hppa.
