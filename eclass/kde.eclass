@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.161 2006/05/30 01:37:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.162 2006/05/31 15:58:29 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -12,7 +12,7 @@ DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
 IUSE="debug xinerama"
 
-if [[ ${ARTS_REQUIRED} != "yes" ]]; then
+if [[ ${ARTS_REQUIRED} != "yes" && ${ARTS_REQUIRED} != "never" ]]; then
 	IUSE="${IUSE} arts"
 fi
 
@@ -45,7 +45,7 @@ RDEPEND="~kde-base/kde-env-3
 if [[ ${ARTS_REQUIRED} == "yes" ]]; then
 	DEPEND="${DEPEND} kde-base/arts"
 	RDEPEND="${RDEPEND} kde-base/arts"
-elif [[ ${PN} != "arts" ]]; then
+elif [[ ${ARTS_REQUIRED} != "never" ]]; then
 	DEPEND="${DEPEND} arts? ( kde-base/arts )"
 	RDEPEND="${RDEPEND} arts? ( kde-base/arts )"
 fi
@@ -55,7 +55,8 @@ SLOT="0"
 
 kde_pkg_setup() {
 	if [[ ${PN} != "arts" ]] && [[ ${PN} != "kdelibs" ]] ; then
-		if [[ ${ARTS_REQUIRED} == 'yes' ]] || use arts ; then
+		if [[ ${ARTS_REQUIRED} == 'yes' ]] || \
+			( [[ ${ARTS_REQUIRED} != "never" ]] && use arts )  ; then
 			if ! built_with_use kde-base/kdelibs arts ; then
 				use arts && \
 					eerror "You are trying to compile ${CATEGORY}/${PF} with the \"arts\" USE flag enabled." || \
@@ -180,7 +181,9 @@ kde_src_compile() {
 				if hasq kdeenablefinal ${IUSE}; then
 					myconf="$myconf $(use_enable kdeenablefinal final)"
 				fi
-				if [[ ${ARTS_REQUIRED} != 'yes' ]]; then
+				if [[ ${ARTS_REQUIRED} == "never" ]]; then
+					myconf="$myconf --without-arts"
+				elif [[ ${ARTS_REQUIRED} != 'yes' ]]; then
 					# This might break some external package until
 					# ARTS_REQUIRED="yes" is set on them, KDE 3.2 is no more
 					# supported anyway.
