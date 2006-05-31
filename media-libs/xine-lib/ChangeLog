@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.347 2006/05/28 22:11:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.348 2006/05/31 15:26:21 flameeyes Exp $
+
+*xine-lib-1.1.2_pre20060328-r9 (31 May 2006)
+
+  31 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -xine-lib-1.1.2_pre20060328-r6.ebuild,
+  -xine-lib-1.1.2_pre20060328-r7.ebuild,
+  -xine-lib-1.1.2_pre20060328-r8.ebuild,
+  +xine-lib-1.1.2_pre20060328-r9.ebuild:
+  Patchset bump to fix the buffer overflow reported in bug #134951. Also
+  disable the visibility patch if the compiler does not support
+  -fvisibility=hidden.
 
 *xine-lib-1.1.2_pre20060328-r8 (28 May 2006)
 
