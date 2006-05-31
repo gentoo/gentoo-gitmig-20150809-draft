@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.42 2006/05/11 12:55:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.43 2006/05/31 13:34:22 kingtaco Exp $
+
+  31 May 2006; Mike Doty <kingtaco@gentoo.org>
+  files/digest-emul-linux-x86-xlibs-7.0-r1, Manifest:
+  Attempting to fix bad digest, bug 127058
 
   11 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   emul-linux-x86-xlibs-7.0-r1.ebuild:
