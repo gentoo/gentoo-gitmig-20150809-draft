@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.79 2006/05/24 14:18:09 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.80 2006/05/31 18:58:59 fuzzyray Exp $
+
+*gentoolkit-0.2.2 (31 May 2006)
+
+  31 May 2006; Paul Varner <fuzzyray@gentoo.org>
+  -gentoolkit-0.2.2_pre4.ebuild, -gentoolkit-0.2.2_rc1.ebuild,
+  +gentoolkit-0.2.2.ebuild:
+  Release gentoolkit-0.2.2 for going stable in conjunction with portage-2.1.
+  Remove outdated ebuilds.
 
 *gentoolkit-0.2.2_rc1 (23 May 2006)
 
