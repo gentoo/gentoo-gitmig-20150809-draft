@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.11 2006/02/17 22:28:23 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.12 2006/05/31 18:19:34 tupone Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -48,9 +48,14 @@ src_compile() {
 }
 
 src_install() {
-	egamesinstall || die
-	doicon "${D}/${GAMES_DATADIR}/pixmaps/quadra.xpm"
-	rm -rf "${D}/usr/share/games/pixmaps"
+	dogamesbin ${PN}
+	if use svga; then
+		dogameslib.so ${PN}-svga.so
+	fi
+	insinto ${GAMES_DATADIR}/${PN}
+	doins ${PN}.res
+	doicon images/${PN}.xpm
+	make_desktop_entry ${PN} "Quadra" ${PN}.xpm
 
 	dodoc ChangeLog NEWS README
 	dohtml help/*
