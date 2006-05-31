@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unarj
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unarj/ChangeLog,v 1.18 2005/02/06 18:21:29 corsair Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unarj/ChangeLog,v 1.19 2006/05/31 17:26:28 solar Exp $
+
+  31 May 2006; <solar@gentoo.org> -unarj-2.63a-r1.ebuild:
+  - security/qa cleanup. flush old/vuln ebuilds
 
   06 Feb 2005; Markus Rothe <corsair@gentoo.org> unarj-2.63a-r2.ebuild:
   Stable on ppc64
