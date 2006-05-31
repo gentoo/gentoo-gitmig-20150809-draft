@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.52 2006/05/23 06:49:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.53 2006/05/31 21:28:03 kumba Exp $
+
+  01 Jun 2006; Joshua Kinard <kumba@gentoo.org> bison-2.1.ebuild,
+  bison-2.2.ebuild:
+  Move sys-devel/m4 from DEPEND to RDEPEND so stage1 builds via catalyst pull
+  it into the stage1root correctly.
 
 *bison-2.2 (23 May 2006)
 
