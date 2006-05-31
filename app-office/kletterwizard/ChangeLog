@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kletterwizard
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.15 2006/02/15 15:22:11 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.16 2006/05/31 04:28:59 tsunam Exp $
+
+  31 May 2006; Joshua Jackson <tsunam@gentoo.org>
+  kletterwizard-0.9.7.ebuild:
+  Stable on x86; bug #134762
 
 *kletterwizard-0.9.7 (15 Feb 2006)
 
