@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.57 2006/05/29 21:30:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.58 2006/05/31 15:04:33 carlo Exp $
+
+  31 May 2006; Carsten Lohrke <carlo@gentoo.org>
+  -files/fwbuilder-1.1.2-nls_fix.patch, -fwbuilder-1.1.2.ebuild,
+  -fwbuilder-2.0.6.ebuild, -fwbuilder-2.0.7.ebuild, -fwbuilder-2.0.8.ebuild,
+  -fwbuilder-2.0.9.ebuild, -fwbuilder-2.0.10.ebuild,
+  -fwbuilder-2.0.11.ebuild:
+  Clean up.
 
   29 May 2006; Simon Stelling <blubb@gentoo.org> fwbuilder-2.0.12.ebuild:
   stable on amd64
