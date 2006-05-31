@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/star
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.27 2006/05/30 23:39:53 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.28 2006/05/31 00:11:24 merlin Exp $
+
+*star-1.5_alpha74 (30 May 2006)
+
+  30 May 2006; Cory Visi <visi@gentoo.org> metadata.xml,
+  +star-1.5_alpha74.ebuild:
+  Took over maintainership, revbumped to alpha74, and corrected symlink bug
 
   30 May 2006; Cory Visi <visi@gentoo.org> -star-1.5_alpha14.ebuild,
   -star-1.5_alpha43.ebuild, -star-1.5_alpha50-r1.ebuild,
