@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/flexplaylist
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/flexplaylist/ChangeLog,v 1.8 2005/01/14 23:48:21 danarmak Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/flexplaylist/ChangeLog,v 1.9 2006/05/31 11:11:35 flameeyes Exp $
+
+  31 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  flexplaylist-0.4.8.ebuild:
+  Make sure aRTs is required. Thanks to Jakub Moc.
 
   15 Jan 2005; Dan Armak <danarmak@gentoo.org> flexplaylist-0.4.8.ebuild:
   Changed dep on kdemultimedia to accept noatun, the new split ebuild.
