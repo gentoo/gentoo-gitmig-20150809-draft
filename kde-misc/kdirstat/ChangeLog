@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdirstat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/ChangeLog,v 1.13 2006/05/30 04:53:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/ChangeLog,v 1.14 2006/05/31 05:10:31 tsunam Exp $
+
+  31 May 2006; Joshua Jackson <tsunam@gentoo.org> kdirstat-2.4.4.ebuild:
+  Stable on x86; bug #134765
 
   30 May 2006; Joseph Jezak <josejx@gentoo.org> kdirstat-2.4.4.ebuild:
   Marked ppc stable for bug #134765.
