@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.15.ebuild,v 1.1 2006/04/12 14:40:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.15.ebuild,v 1.2 2006/05/31 16:05:27 flameeyes Exp $
 
 inherit kde eutils
 
@@ -50,6 +50,7 @@ LANGS="af bg br bs ca cs cy da de el en_GB es et eu fr ga he hi hu is it ja lt m
 
 for X in ${LANGS}; do
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/k3b/${I18N}.tar.bz2 )"
+	IUSE="${IUSE} linguas_${X}"
 done
 
 pkg_setup() {
