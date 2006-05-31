@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5433 2006/05/31 14:20:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5434 2006/05/31 20:22:09 carlo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,28 @@
 ##
 ##   End example
 ##
+
+# Carsten Lohrke <carlo@gentoo.org> (31 May 2006)
+# Masked pending removal, use kde-base/superkaramba instead
+
+x11-misc/superkaramba
+x11-plugins/karamba-agenda
+x11-plugins/karamba-albums
+x11-plugins/karamba-bluebar_kroller
+x11-plugins/karamba-bofh_bar
+x11-plugins/karamba-disk
+x11-plugins/karamba-docker
+x11-plugins/karamba-kroller
+x11-plugins/karamba-news_panel
+x11-plugins/karamba-odin
+x11-plugins/karamba-osxbar
+x11-plugins/karamba-smbwho
+x11-plugins/karamba-sys
+x11-plugins/karamba-test
+x11-plugins/karamba-time
+x11-plugins/karamba-tuxbar
+x11-plugins/karamba-webcam
+x11-plugins/karamba-xmmsbar
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (31 May 2006)
 # Masked pending removal - bug #122993
