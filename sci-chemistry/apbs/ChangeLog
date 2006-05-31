@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/apbs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.5 2006/05/23 21:20:35 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.6 2006/05/31 07:41:09 spyderous Exp $
+
+  31 May 2006; Donnie Berkholz <spyderous@gentoo.org>; apbs-0.4.0.ebuild:
+  Fix crackrock SRC_URI, reported by Brian Harring.
 
   23 May 2006; Markus Dittrich <markusle@gentoo.org>
   +files/apbs-gcc4-gentoo.patch, apbs-0.4.0.ebuild:
