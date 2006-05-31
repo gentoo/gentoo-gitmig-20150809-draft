@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_beta8-r1.ebuild,v 1.1 2006/05/30 14:45:08 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_beta8-r1.ebuild,v 1.2 2006/05/31 15:38:47 uberlord Exp $
 
 inherit eutils
 
@@ -39,17 +39,16 @@ src_compile() {
 	use ssl && myconf="${myconf} --with-ssl=openssl" \
 		|| myconf="${myconf} --without-ssl"
 
-#	Enable when linux-headers-2.6.13 hits portage for inotify
-#	or epoll gets more stable.
-#
-#	# Enable Linux only features
-#	if [[ ${KERNEL} == "linux" ]] ; then
-#		# epoll is too unstable
-#		# myconf="${myconf} --with-ioloop=epoll"
-#		if has_version ">=sys-kernel/linux-headers-2.6.13" ; then
-#			myconf="${myconf} --with-notify=inotify"
-#		fi
-#	fi
+	# Enable Linux or FreeBSD only features
+	if use kernel_linux ; then
+		myconf="${myconf} --with-ioloop=epoll"
+		if has_version ">=sys-libs/glibc-2.4" ; then
+			myconf="${myconf} --with-notify=inotify"
+		fi
+	elif use kernel_FreeBSD ; then
+		myconf="${myconf} --with-ioloop=kqueue"
+		myconf="${myconf} --with-notify=kqueue"
+	fi
 
 	econf --localstatedir=/var \
 		$(use_enable debug) \
