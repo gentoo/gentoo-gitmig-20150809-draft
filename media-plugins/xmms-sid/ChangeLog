@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-sid
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/ChangeLog,v 1.21 2006/05/31 01:41:58 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/ChangeLog,v 1.22 2006/05/31 18:59:17 tcort Exp $
+
+  31 May 2006; Thomas Cort <tcort@gentoo.org> xmms-sid-0.8.0_beta15.ebuild:
+  Stable on alpha wrt Bug #133529.
 
   31 May 2006; Luis Medinas <metalgod@gentoo.org>
   xmms-sid-0.8.0_beta15.ebuild:
