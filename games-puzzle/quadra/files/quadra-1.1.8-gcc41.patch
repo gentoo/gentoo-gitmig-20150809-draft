@@ -1,0 +1,92 @@
+diff -ur quadra-1.1.8-orig/skelton/include/array.h quadra-1.1.8/skelton/include/array.h
+--- quadra-1.1.8-orig/skelton/include/array.h	2006-05-21 16:35:30.000000000 -0400
++++ quadra-1.1.8/skelton/include/array.h	2006-05-21 16:53:06.000000000 -0400
+@@ -21,6 +21,7 @@
+ #ifndef _HEADER_ARRAY
+ #define _HEADER_ARRAY
+ #include <vector>
++#include <algorithm>
+ 
+ #ifndef max
+ #define max(a,b) (((a) > (b)) ? (a) : (b))
+@@ -37,7 +38,9 @@
+ 		v.push_back(t);
+ 	}
+ 	void add_before(const T& t, int i) {
+-		v.insert(&v[i], t);
++		typename std::vector<T>::iterator iter = v.begin();
++		std::advance(iter, i);
++		v.insert(iter, t);
+ 	}
+ 	bool remove_item(const T& t) {
+ 		for(int i=0; i<size(); i++)
+@@ -51,7 +54,9 @@
+ 		v.pop_back();
+ 	}
+ 	void remove(int i) {
+-		v.erase(&v[i]);
++		typename std::vector<T>::iterator iter = v.begin();
++		std::advance(iter, i);
++		v.erase(iter);
+ 	}
+ 	int size() const {
+ 		return v.size();
+diff -ur quadra-1.1.8-orig/source/net_server.cpp quadra-1.1.8/source/net_server.cpp
+--- quadra-1.1.8-orig/source/net_server.cpp	2006-05-21 16:35:30.000000000 -0400
++++ quadra-1.1.8/source/net_server.cpp	2006-05-21 16:54:27.000000000 -0400
+@@ -400,13 +400,14 @@
+ 				}
+ 			}
+ 		}
++		unsigned i;
+ 		if(playeraccepted.accepted == 0) {
+ 			if(game->net_list.size() == MAXPLAYERS)
+ 				playeraccepted.accepted = 5; // game is full, can't join
+ 			if(game->server_max_players && game->net_list.size() >= game->server_max_players)
+ 				playeraccepted.accepted = 5; // game is full, can't join
+ 			if(game->server_max_teams && game->net_list.count_teams() >= game->server_max_teams) {
+-				for(unsigned i=0; i<MAXPLAYERS; ++i) {
++				for(i=0; i<MAXPLAYERS; ++i) {
+ 					Canvas* c=game->net_list.get(i);
+ 					if(c && c->color==p->team)
+ 						break;
+diff -ur quadra-1.1.8-orig/source/net_stuff.cpp quadra-1.1.8/source/net_stuff.cpp
+--- quadra-1.1.8-orig/source/net_stuff.cpp	2006-05-21 16:35:30.000000000 -0400
++++ quadra-1.1.8/source/net_stuff.cpp	2006-05-21 16:55:03.000000000 -0400
+@@ -29,6 +29,7 @@
+ #include "texte.h"
+ #include "video.h"
+ #include "nglog.h"
++#include <stdarg.h>
+ 
+ RCSID("$Id: quadra-1.1.8-gcc41.patch,v 1.1 2006/05/31 18:55:36 tupone Exp $")
+ 
+diff -ur quadra-1.1.8-orig/source/quadra.cpp quadra-1.1.8/source/quadra.cpp
+--- quadra-1.1.8-orig/source/quadra.cpp	2006-05-21 16:35:30.000000000 -0400
++++ quadra-1.1.8/source/quadra.cpp	2006-05-21 16:56:12.000000000 -0400
+@@ -65,6 +65,7 @@
+ #include "clock.h"
+ #include "net_server.h"
+ #include "quadra.h"
++#include <exception>
+ 
+ RCSID("$Id: quadra-1.1.8-gcc41.patch,v 1.1 2006/05/31 18:55:36 tupone Exp $")
+ 
+@@ -2387,7 +2388,7 @@
+ 				try {
+ 					overmind.step();
+ 				}
+-				catch(exception *e) {
++				catch(std::exception *e) {
+ 					msgbox("Exception caught from overmind.step(): %s\n", e->what());
+ 				}
+ 				#ifdef PAINTDETECTOR2000
+@@ -2406,7 +2407,7 @@
+ 			try {
+ 				ecran->draw_zone();
+ 			}
+-			catch(exception *e) {
++			catch(std::exception *e) {
+ 				msgbox("Exception caught from ecran->draw_zone(): %s\n", e->what());
+ 			}
+ 

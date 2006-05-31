@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/quadra
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/ChangeLog,v 1.12 2006/05/31 18:19:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/ChangeLog,v 1.13 2006/05/31 18:55:36 tupone Exp $
+
+  31 May 2006; <Tupone@gentoo.org> +files/quadra-1.1.8-gcc41.patch,
+  quadra-1.1.8.ebuild:
+  Fix for gcc-4.1, bug #133815 by me
 
   31 May 2006; <Tupone@gentoo.org> quadra-1.1.8.ebuild:
   Fix sandbox violation
