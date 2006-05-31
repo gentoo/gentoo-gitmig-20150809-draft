@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0.ebuild,v 1.7 2006/05/29 10:45:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0.ebuild,v 1.8 2006/05/31 18:52:09 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -75,7 +75,7 @@ pkg_setup() {
 # --without-soft-carrier        # if your serial hw generates carrier
 # --with-transmitter    # if you use a transmitter diode
 		EOF
-		sleep 5
+		epause
 	fi
 
 	export WANT_AUTOCONF=2.5
@@ -142,6 +142,7 @@ src_install() {
 }
 
 pkg_preinst() {
+	linux-mod_pkg_preinst
 	[ -f "${ROOT}/etc/lircd.conf" ] && cp ${ROOT}/etc/lircd.conf ${IMAGE}/etc
 }
 
