@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/cryptsetup-luks
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.27 2006/05/03 14:40:00 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.28 2006/05/31 09:10:07 strerror Exp $
+
+*cryptsetup-luks-1.0.3-r1 (31 May 2006)
+
+  31 May 2006; Benjamin Smee <strerror@gentoo.org>
+  +files/cryptsetup-luks-1.0.3-selinux.patch,
+  +cryptsetup-luks-1.0.3-r1.ebuild:
+  Fix for bug #132126 and added pic USE flag
 
   03 May 2006; Benjamin Smee <strerror@gentoo.org>
   cryptsetup-luks-1.0.3.ebuild:

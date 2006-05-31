@@ -1,0 +1,10 @@
+--- configure.in	2006-04-05 17:21:29.000000000 +0000
++++ configure.in.new	2006-05-30 10:48:25.000000000 +0000
+@@ -96,6 +96,7 @@
+                           [[default=auto]]],auto,[
+ 	have_module=yes
+ 	saved_LIBS="$LIBS"
++	AC_CHECK_LIB(sepol, sepol_bool_set)
+ 	AC_CHECK_LIB(selinux, is_selinux_enabled)
+ 	AC_CHECK_LIB(devmapper, dm_task_set_name,,unset have_module)
+ 	AC_CHECK_HEADER(libdevmapper.h,,unset have_module=)
