@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/xpertmud
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/xpertmud/ChangeLog,v 1.7 2006/05/07 10:53:26 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/xpertmud/ChangeLog,v 1.8 2006/05/31 15:53:47 flameeyes Exp $
+
+  31 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xpertmud-3.1_pre1.ebuild:
+  Make sure aRTs is required. Thanks to Jakub Moc.
 
   07 May 2006; <Tupone@gentoo.org> +files/xpertmud-3.1_pre1-gcc41.patch,
   xpertmud-3.1_pre1.ebuild:
