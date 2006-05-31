@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.2-r4.ebuild,v 1.1 2006/05/11 23:58:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.2-r4.ebuild,v 1.2 2006/05/31 10:34:46 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # This is enabled due to modified Makefile.am from the patches
@@ -13,9 +13,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 RDEPEND="x11-libs/libX11
 		x11-wm/twm
 		x11-apps/xclock
-		x11-apps/xrdb
-		x11-terms/xterm"
+		x11-apps/xrdb"
 DEPEND="${RDEPEND}"
+PDEPEND="x11-terms/xterm"
 LICENSE="${LICENSE} GPL-2"
 
 PATCHES="${FILESDIR}/nolisten-tcp-and-black-background.patch
