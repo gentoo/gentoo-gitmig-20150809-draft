@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.1.ebuild,v 1.14 2006/04/05 20:02:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.1.ebuild,v 1.15 2006/05/31 04:14:50 leonardop Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,11 +16,6 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-f
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
-PDEPEND=">=app-text/openjade-1.3.2"
-
-# Note: openjade is in PDEPEND because starting from openjade-1.3.2, opensp
-#       has been SPLIT from openjade into its own package. Hence if you
-#       install this, you need to upgrade to a new openjade as well.
 
 
 src_unpack() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/opensp
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.31 2006/05/23 23:55:30 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.32 2006/05/31 04:14:50 leonardop Exp $
+
+  31 May 2006; Leonardo Boshell <leonardop@gentoo.org> opensp-1.5.1.ebuild:
+  Drop PDEPEND in here too.
 
   23 May 2006; Leonardo Boshell <leonardop@gentoo.org> opensp-1.5.2.ebuild:
   Added 'doc' USE flag, used to enable man and html documentation, requiring
