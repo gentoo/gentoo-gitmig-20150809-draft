@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-1.16.3.0.ebuild,v 1.1 2006/01/22 23:20:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-1.16.3.0.ebuild,v 1.2 2006/05/31 19:49:42 tupone Exp $
 
-inherit games
+inherit toolchain-funcs flag-o-matic games
 
 DESCRIPTION="turn based strategy game designed in the tradition of the Battle Isle series"
 HOMEPAGE="http://www.asc-hq.org/"
@@ -26,6 +26,9 @@ src_compile() {
 	# Added --disable-paraguitest for bugs 26402 and 4488
 	# Added --disable-paragui for bug 61154 since it's not really used much
 	# and the case is well documented at http://www.asc-hq.org/
+	if [[ $(gcc-major-version) -eq 4 ]] ; then
+		replace-flags -O3 -O2
+	fi
 	egamesconf \
 		--disable-dependency-tracking \
 		--disable-paraguitest \
