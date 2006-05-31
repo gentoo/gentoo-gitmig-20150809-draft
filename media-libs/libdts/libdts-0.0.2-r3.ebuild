@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2-r3.ebuild,v 1.13 2006/05/28 10:09:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2-r3.ebuild,v 1.14 2006/05/31 18:48:38 flameeyes Exp $
 
 inherit eutils toolchain-funcs autotools
 
@@ -17,6 +17,7 @@ RESTRICT="test"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	mkdir "${S}/m4"
 
 	epatch "${FILESDIR}/${P}-libtool.patch"
 	epatch "${FILESDIR}/${P}-freebsd.patch"

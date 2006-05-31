@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdts
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.29 2006/05/28 10:09:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.30 2006/05/31 18:48:38 flameeyes Exp $
+
+  31 May 2006; Diego Pettenò <flameeyes@gentoo.org> libdts-0.0.2-r3.ebuild:
+  Create the m4 directory so that it doesn't fail if visibility patch is not
+  applied, fixes problems reported by many people. Thanks to Seemant for
+  showing me the problem.
 
   28 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/libdts-0.0.2-visibility.patch, libdts-0.0.2-r3.ebuild:
