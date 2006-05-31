@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.48 2006/05/31 11:58:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.49 2006/05/31 15:44:38 genstef Exp $
+
+  31 May 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/ghostscript-esp-8.15.2-FAPIcidfmap.cjk,
+  +files/ghostscript-esp-8.15.2-cidfmap.cjk:
+  Add cjk files, bug 133842
 
 *ghostscript-afpl-8.54-r1 (31 May 2006)
 
