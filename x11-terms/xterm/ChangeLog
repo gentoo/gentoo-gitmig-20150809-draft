@@ -1,6 +1,14 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.135 2006/05/10 11:23:44 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.136 2006/05/31 11:19:17 exg Exp $
+
+*xterm-213 (31 May 2006)
+
+  31 May 2006; Emanuele Giaquinta <exg@gentoo.org> -files/xterm-LANG.patch,
+  -xterm-204.ebuild, -xterm-210.ebuild, -xterm-211.ebuild,
+  -xterm-212.ebuild, -xterm-212-r1.ebuild, xterm-212-r2.ebuild,
+  +xterm-213.ebuild:
+  Version bump. Cleanup.
 
 *xterm-212-r2 (10 May 2006)
 
