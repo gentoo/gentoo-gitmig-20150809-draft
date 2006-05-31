@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.88 2006/05/30 21:23:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.89 2006/05/31 17:13:32 tcort Exp $
+
+  31 May 2006; Thomas Cort <tcort@gentoo.org> dia-0.95.1.ebuild:
+  Stable on alpha wrt security Bug #133699.
 
   30 May 2006; Gustavo Zacarias <gustavoz@gentoo.org> dia-0.95.1.ebuild:
   Stable on sparc wrt security #133699

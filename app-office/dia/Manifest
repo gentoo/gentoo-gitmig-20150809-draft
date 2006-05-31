@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1426f4327fd5e1ca18d8498c678fb953 ChangeLog 10785
+MD5 6e633f8387e71a197725049cfb9b2116 ChangeLog 10892
 MD5 126c5416e6df9153e3d83cc38a6559b6 dia-0.94-r3.ebuild 1738
 MD5 89e3745db7606051a56915fc427f803f dia-0.94-r4.ebuild 2191
 MD5 283aa721473b2cee7483d56dac50bc7d dia-0.94-r5.ebuild 2259
-MD5 4c0471223402b1b3ccd745975b23dfc2 dia-0.95.1.ebuild 1671
+MD5 f14ca96a582c86852761c20e852f57b8 dia-0.95.1.ebuild 1667
 MD5 275b4e09a76a808202872cae5ac90f7c files/0.94-disable_python_gtk_import.patch 313
 MD5 bf246d9c1eae9246fd3026d76077d7c3 files/dia-0.94-db2man.patch 901
 MD5 159070f80a109b691f1a945755bf2b7c files/dia-0.94-gcc4.patch 934
@@ -20,10 +17,3 @@ MD5 d6db5d92d74a6b9ef5c2f55493e7de4e files/digest-dia-0.94-r4 488
 MD5 d6db5d92d74a6b9ef5c2f55493e7de4e files/digest-dia-0.94-r5 488
 MD5 30dc3948e6f3de8197c055bcc0b48996 files/digest-dia-0.95.1 238
 MD5 005c0ccc7908df18dd83361a36ed07ee metadata.xml 596
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEfLfJKRy60XGEcJIRAnbWAJ98Ml7OwaIPetEKSX4yBs89qvd6GwCfTDjR
-/IuY3HjBTVpU9e5Y+EksNls=
-=CZyP
------END PGP SIGNATURE-----
