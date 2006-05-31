@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mawk
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/ChangeLog,v 1.7 2004/09/03 21:03:24 pvdabeel Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/ChangeLog,v 1.8 2006/05/31 09:22:09 solar Exp $
+
+  31 May 2006; <solar@gentoo.org> mawk-1.3.3.ebuild:
+  - dont use full hardcoded path for the math library. bug 134956
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> mawk-1.3.3.ebuild:
   Masked mawk-1.3.3.ebuild stable for ppc

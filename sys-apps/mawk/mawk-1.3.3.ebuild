@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/mawk-1.3.3.ebuild,v 1.10 2004/09/03 21:03:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/mawk-1.3.3.ebuild,v 1.11 2006/05/31 09:22:09 solar Exp $
 
 DESCRIPTION="an (often faster than gawk) awk-interpreter"
 SRC_URI="ftp://ftp.whidbey.net/pub/brennan/${P}.tar.gz"
@@ -14,7 +14,7 @@ DEPEND="virtual/libc"
 IUSE=""
 
 src_compile() {
-	export MATHLIB="/lib/libm.so.6"
+	export MATHLIB="-lm"
 
 	./configure --prefix=/usr || die "Failed to configure"
 	emake -j1 || die "Make failed"
