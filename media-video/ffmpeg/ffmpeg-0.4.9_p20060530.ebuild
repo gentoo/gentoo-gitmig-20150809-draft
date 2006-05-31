@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060530.ebuild,v 1.1 2006/05/30 23:15:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060530.ebuild,v 1.2 2006/05/31 10:04:05 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -65,7 +65,7 @@ src_unpack() {
 		# Patch if we're on 64-bit
 		if useq alpha || useq amd64 || useq ia64 || useq ppc64; then
 			cd ${S_BASE}
-			epatch ${FILESDIR}/${P}-amr-64bit.patch
+			epatch "${FILESDIR}/ffmpeg-0.4.9_p20060302-amr-64bit.patch"
 		fi
 	fi
 
