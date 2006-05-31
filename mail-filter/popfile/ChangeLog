@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/popfile
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.9 2006/02/13 14:34:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.10 2006/05/31 07:12:37 stuart Exp $
+
+*popfile-0.22.4 (31 May 2006)
+
+  31 May 2006; Stuart Herbert <stuart@gentoo.org> +popfile-0.22.4.ebuild:
+  Version bump; thanks to Lasse Bigum <zenith@cs.aau.dk> for the patch
+  Closes bug 124308
+  Closes bug 133800
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   popfile-0.20.1.ebuild, popfile-0.21.1.ebuild:
