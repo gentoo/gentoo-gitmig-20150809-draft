@@ -1,6 +1,17 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.47 2006/05/26 12:46:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.48 2006/05/31 11:58:41 genstef Exp $
+
+*ghostscript-afpl-8.54-r1 (31 May 2006)
+
+  31 May 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/ghostscript-afpl-8.54-cups-destdir.diff,
+  files/ghostscript-afpl-8.54-destdir.diff,
+  +files/ghostscript-afpl-8.54-segfault.patch,
+  -ghostscript-afpl-8.54.ebuild, +ghostscript-afpl-8.54-r1.ebuild:
+  Revision bump including an amd64 segfault fix, thanks to ivo welch
+  <ivo.welch@yale.edu> in bug 134446 and make it work with USE=-cups thanks to
+  Jan Jitse Venselaar <janjitse@a-eskwadraat.nl> in bug 134791
 
   26 May 2006; <stefan@gentoo.org> ghostscript-afpl-8.54.ebuild:
   fix patch order thanks to Bo Ørsted Andresen <bo.andresen@zlin.dk> in bug
