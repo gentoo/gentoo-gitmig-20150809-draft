@@ -1,0 +1,10 @@
+diff -ur sbcl-0.9.13.orig/contrib/vanilla-module.mk sbcl-0.9.13/contrib/vanilla-module.mk
+--- sbcl-0.9.13.orig/contrib/vanilla-module.mk	2003-11-08 09:04:47.000000000 -0600
++++ sbcl-0.9.13/contrib/vanilla-module.mk	2006-05-29 22:49:12.000000000 -0500
+@@ -5,4 +5,4 @@
+ test:: $(MODULE).fasl
+ 
+ install:
+-	cp $(MODULE).fasl $(BUILD_ROOT)$(INSTALL_DIR)
++	cp $(MODULE).fasl $(MODULE).lisp $(BUILD_ROOT)$(INSTALL_DIR)
+Only in sbcl-0.9.13/contrib: vanilla-module.mk.~1.5.~

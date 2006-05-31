@@ -1,0 +1,30 @@
+$Id: README.Gentoo,v 1.1 2006/05/31 02:41:01 mkennedy Exp $
+
+Gentoo GNU/Linux specific notes for SBCL
+----------------------------------------
+
+This is the README.Gentoo file from /usr/share/doc/@PF@/ directory.
+
+  * The Gentoo port uses patches from the Debian project's SBCL port.
+
+  * An SBCL with support for multi-threading on GNU/Linux for the x86 and amd64
+    platforms is available with 'USE="threads" emerge dev-lisp/sbcl'.  Note, an
+    NPTL-enabled GLIBC is a requirement beginning with SBCL 0.9.5.
+
+  * asdf-install is installed as sbcl-asdf-install (the man-page is similarly
+    named).
+
+  * Support for the Common Lisp Controller is available.
+
+  * If "nosource" is in your USE flags, then SBCL's source will not be installed
+    (in /usr/lib/sbcl/src).
+
+  * If "unicode" is in your USE flags, then support for SBCL
+    Unicode will be included.
+
+  * If "ldb" is in your USE flags, then support for the SBCL low-level debugger
+    will be included.
+
+If you encounter any problems or have suggestions, use http://bugs.gentoo.org.
+Please don't bother the upstream authors unless you are absolutely certain it is
+not Gentoo-related.
