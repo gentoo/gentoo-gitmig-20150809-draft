@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-20051209.ebuild,v 1.4 2006/01/18 02:35:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-20051209.ebuild,v 1.5 2006/05/31 13:37:21 lu_zero Exp $
 
 DESCRIPTION="MLT is an open source multimedia framework, designed and developed
 for television broadcasting"
@@ -45,7 +45,7 @@ src_compile() {
 	fi
 	if ! use sox ; 		then myconf="${myconf} --disable-sox"
 	fi
-	if ! use quicktime || !use dv ; then myconf="${myconf} --disable-kino"
+	if ! use quicktime || ! use dv ; then myconf="${myconf} --disable-kino"
 	fi
 
 	./configure --prefix=/usr \

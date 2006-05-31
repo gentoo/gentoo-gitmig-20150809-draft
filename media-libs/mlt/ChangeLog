@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.3 2006/01/18 02:35:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.4 2006/05/31 13:37:21 lu_zero Exp $
+
+  31 May 2006; Luca Barbato <lu_zero@gentoo.org> mlt-20051209.ebuild:
+  Minor fix, thanks to wishmerhill <wishmerhill@nousefornames.it> for spotting it
 
   18 Jan 2006; Luca Barbato <lu_zero@gentoo.org> mlt-20051209.ebuild:
   Added mmx useflag, should workaround amd64 build problems
