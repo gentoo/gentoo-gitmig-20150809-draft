@@ -3,8 +3,10 @@ MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-nagios-1.4 1
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-nagios-1.4.1 1
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-nagios-2.3 1
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-nagios-2.3.1 1
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nagios-2.4 0
 MD5 bb0bc884a0383e5be0a4bae6cba836dc metadata.xml 1049
 MD5 330d8a00ccb142bcf11210a2fd49f69b nagios-1.4.1.ebuild 862
 MD5 d832645c1d24539a0afcfe416c383c8a nagios-1.4.ebuild 858
 MD5 10848add545f8347f1ca7f786e19d40c nagios-2.3.1.ebuild 860
 MD5 06f4505097758627e5bb355eb218aaae nagios-2.3.ebuild 858
+MD5 10848add545f8347f1ca7f786e19d40c nagios-2.4.ebuild 860

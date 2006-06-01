@@ -6,6 +6,7 @@ MD5 155842cf933f59e8cd68b61d84280e70 files/digest-nagios-core-1.4 151
 MD5 2e5fdbc8e1063290d5589c1091bde0bb files/digest-nagios-core-1.4.1 153
 MD5 0112e82ce6b3c7360d47e40bdf76a990 files/digest-nagios-core-2.3 131
 MD5 801bbf98c4aa4b4d10fc5de369933342 files/digest-nagios-core-2.3.1 133
+MD5 7f02929ded7ed06c70d2b670a264d48f files/digest-nagios-core-2.4 131
 MD5 f83fb59efe215d8191866a95685b4b39 files/nagios 1416
 MD5 354f5aeb0e831ee8e218962eb85d07e4 files/nagios-1.x-Makefile-asneeded.diff 5460
 MD5 dad3fb46e8f73ac54d9239a542bc82e0 files/nagios.conf 362
@@ -15,3 +16,4 @@ MD5 b77809d363ccf9b561c099866e60ad3b nagios-core-1.4.1.ebuild 7508
 MD5 71fc67b930bb60a4b18c2fd2e55febbf nagios-core-1.4.ebuild 7504
 MD5 0db78682d06f57a5c4af37bad8cea745 nagios-core-2.3.1.ebuild 5995
 MD5 bad76591d737b015d248479440d94a51 nagios-core-2.3.ebuild 5990
+MD5 0db78682d06f57a5c4af37bad8cea745 nagios-core-2.4.ebuild 5995
