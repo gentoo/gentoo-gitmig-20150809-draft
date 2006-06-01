@@ -1,23 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 95faf4e56c277fdee8a648e0bcaa8180 hashcash-1.16-r1.ebuild 851
-MD5 b17309ace87f4689d784066b93ee93e9 ChangeLog 1514
-MD5 3d4ff62a799a78821c08196a1581cf55 hashcash-1.02.ebuild 750
-MD5 ae5592e9a022e6beab44a52a4f23c3f0 metadata.xml 221
-MD5 dce3c44b192e5b062dec4cedd1dbe0f5 hashcash-0.27.ebuild 772
-MD5 d2f9388d5d5b31fd96de828a5c0a87d1 hashcash-1.16.ebuild 757
-MD5 3e535ae2e91ba63f40454ea02f6458f3 hashcash-1.13.ebuild 751
-MD5 b8945440c5d5fc363304c85279d43771 files/digest-hashcash-1.13 62
+AUX hashcash-1.16-format-string.diff 382 RMD160 93fc61160ab9f9a25746e70a1ffe2f5e8f0318cf SHA1 3352b8c027cef9898023b37614952af6a95af091 SHA256 565b14d180a34bee3123d8f4d98ad8ff49fda922566b50dc3e7cbb9dce30e59d
 MD5 bbbb9afa01623d57687863a50253f858 files/hashcash-1.16-format-string.diff 382
-MD5 7feef9e0dbfa8622b9c284116e4bbbc6 files/digest-hashcash-1.16-r1 62
-MD5 574981d65f92a3870bb9b254ebcf31d5 files/digest-hashcash-1.02 62
-MD5 16b3bf4afa6be029dcb2f921e988f698 files/digest-hashcash-0.27 61
-MD5 7feef9e0dbfa8622b9c284116e4bbbc6 files/digest-hashcash-1.16 62
+RMD160 93fc61160ab9f9a25746e70a1ffe2f5e8f0318cf files/hashcash-1.16-format-string.diff 382
+SHA256 565b14d180a34bee3123d8f4d98ad8ff49fda922566b50dc3e7cbb9dce30e59d files/hashcash-1.16-format-string.diff 382
+DIST hashcash-1.16.tgz 183465 RMD160 eda1b9bea333a8fb2f958eb990cc16e3304359e4 SHA1 e88c5a195b0093ab621fb8457e19d9063432100f SHA256 a161d750c2d4451c4d17adfd8eac4ea4090f2ee4cd0e23da6707426a3b4c27bb
+EBUILD hashcash-1.16-r1.ebuild 851 RMD160 55461d5845dae48107a0b9378f42c30de14446d5 SHA1 7b1b14b9c26ae8bf4e8f9a5a3aad2455b8b37fdd SHA256 483f064fe60a8a4c9ba4a597f407bd42099c1ce4e7e50b74cbd95b37beac60a1
+MD5 95faf4e56c277fdee8a648e0bcaa8180 hashcash-1.16-r1.ebuild 851
+RMD160 55461d5845dae48107a0b9378f42c30de14446d5 hashcash-1.16-r1.ebuild 851
+SHA256 483f064fe60a8a4c9ba4a597f407bd42099c1ce4e7e50b74cbd95b37beac60a1 hashcash-1.16-r1.ebuild 851
+MISC ChangeLog 1704 RMD160 2eecf40cb52da0f57e534011b74a32bfbff6bb0a SHA1 5eee60bedeb0eb22492c53088ab024ef8678b409 SHA256 2e21213b9b1e7bc98385e1949a75f00bead0a7193c3e5b4613004a099197ac18
+MD5 3452c908c7fe47bb08894e017eafd7af ChangeLog 1704
+RMD160 2eecf40cb52da0f57e534011b74a32bfbff6bb0a ChangeLog 1704
+SHA256 2e21213b9b1e7bc98385e1949a75f00bead0a7193c3e5b4613004a099197ac18 ChangeLog 1704
+MISC metadata.xml 221 RMD160 d561aac5f9cce6f53ce0acf4a4c389d9117e83d5 SHA1 f80f884dfe6bd964ec984b360cfd4e4fd58de029 SHA256 deff9d13ac2b171f486d8f70fcfe2046d6374066022a13154bf9a16824f0865b
+MD5 ae5592e9a022e6beab44a52a4f23c3f0 metadata.xml 221
+RMD160 d561aac5f9cce6f53ce0acf4a4c389d9117e83d5 metadata.xml 221
+SHA256 deff9d13ac2b171f486d8f70fcfe2046d6374066022a13154bf9a16824f0865b metadata.xml 221
+MD5 853a606140af7433a1d7aa02986f1254 files/digest-hashcash-1.16-r1 232
+RMD160 878d7c1fb1cb486b0ae51372ab1c2e62f82a2919 files/digest-hashcash-1.16-r1 232
+SHA256 fccfe4fa48449d1ddbd293e40e99e93a60b515fa0f164aa0b357d792a4f082c8 files/digest-hashcash-1.16-r1 232
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.3-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCJhXyugEuf3OQ0akRAsb8AJ9tjB6dCJbXPn2NG+vRxSwHAzeQkQCfbk29
-UfyVRC3/Eo9i1gD1UzAyHaI=
-=t3sB
+iD8DBQFEf2PbmdTrptrqvGERAtDuAJ4+hQ7qcmDetnDyolU1jWsO3PW/oQCfXqWS
+ydzDu97rApOlxzFLdeFRlVk=
+=/q9D
 -----END PGP SIGNATURE-----
