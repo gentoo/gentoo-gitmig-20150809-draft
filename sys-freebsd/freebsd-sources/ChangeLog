@@ -1,6 +1,15 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.13 2006/05/31 23:42:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.14 2006/06/01 11:36:19 flameeyes Exp $
+
+*freebsd-sources-6.1-r1 (01 Jun 2006)
+*freebsd-sources-6.0-r5 (01 Jun 2006)
+
+  01 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/SA-06-16-smbfs.patch, -freebsd-sources-6.0-r4.ebuild,
+  +freebsd-sources-6.0-r5.ebuild, -freebsd-sources-6.1.ebuild,
+  +freebsd-sources-6.1-r1.ebuild:
+  Revision bumps to fix security issue SA-06:16.
 
   31 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/freebsd-sources-6.1-gcc41.patch, freebsd-sources-6.1.ebuild:
