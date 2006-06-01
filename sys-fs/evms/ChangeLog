@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.52 2006/05/24 20:52:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.53 2006/06/01 21:24:17 eradicator Exp $
+
+  01 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/2.5.3/md_expand.patch, +files/evms-2.5.5-as-needed.patch,
+  -files/2.5.3/compaq_segments.patch, -evms-2.5.3-r1.ebuild,
+  evms-2.5.5-r1.ebuild:
+  Fixed Makefile to work properly with --as-needed. Closes bug #135152.
+  Removing old version.
 
   24 May 2006; Michael Hanselmann <hansmi@gentoo.org> evms-2.5.5-r1.ebuild:
   Stable on ppc.

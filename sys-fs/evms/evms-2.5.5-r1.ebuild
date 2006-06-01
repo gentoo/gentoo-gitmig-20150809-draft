@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r1.ebuild,v 1.7 2006/05/24 20:52:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r1.ebuild,v 1.8 2006/06/01 21:24:17 eradicator Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE="ncurses gtk nls"
 
 #EVMS uses libuuid from e2fsprogs
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
 	sys-fs/e2fsprogs
 	sys-fs/device-mapper
 	>=sys-apps/baselayout-1.9.4-r6
@@ -27,6 +27,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/raid5_degrade_fix.patch
 	epatch ${FILESDIR}/${PV}/md_super_fix.patch
+	epatch ${FILESDIR}/evms-2.5.5-as-needed.patch
 }
 
 src_compile() {
