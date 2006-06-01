@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.334 2006/05/30 04:03:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.335 2006/06/01 04:22:48 tcort Exp $
+
+  01 Jun 2006; Thomas Cort <tcort@gentoo.org> kdelibs-3.5.2-r6.ebuild:
+  Stable on alpha wrt Bug #132213.
 
   30 May 2006; Joseph Jezak <josejx@gentoo.org> kdelibs-3.5.2-r6.ebuild:
   Marked ppc stable for bug #132213.
