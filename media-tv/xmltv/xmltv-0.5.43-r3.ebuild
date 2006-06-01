@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.43-r3.ebuild,v 1.1 2006/06/01 10:05:53 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.43-r3.ebuild,v 1.2 2006/06/01 13:47:19 mattepiu Exp $
 
 inherit eutils perl-module
 
@@ -235,7 +235,9 @@ src_unpack() {
 	unpack "${A}"
 
 	cd "${S}"
+	if [ -z "${XMLTV_OPTS}" ] || has tv_grab_de_tvtoday ${XMLTV_OPTS} ; then
 	epatch "${FILESDIR}/tv_grab_de_tvtoday-0.5.43.diff"
+	fi
 }
 
 src_compile() {
