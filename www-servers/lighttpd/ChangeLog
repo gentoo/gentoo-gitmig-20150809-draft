@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.72 2006/05/30 20:27:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.73 2006/06/01 01:16:24 steev Exp $
+
+  01 Jun 2006; Steev Klimaszewski <steev@gentoo.org>
+  lighttpd-1.4.10-r2.ebuild, lighttpd-1.4.11.ebuild:
+  Change the fam useflag to strictly depend on app-admin/gamin since that is
+  the preferred app for fam these days, not to mention that famd needs to die.
+  This should fix bug 123022 to stablize lighttpd 1.4.10-r2. Changed the
+  dependency in both 1.4.10-r2 and 1.4.11.
 
   30 May 2006; Markus Rothe <corsair@gentoo.org> lighttpd-1.4.11.ebuild:
   Stable on ppc64; bug #123022

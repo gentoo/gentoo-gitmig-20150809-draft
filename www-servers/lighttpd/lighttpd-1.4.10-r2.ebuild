@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.10-r2.ebuild,v 1.2 2006/05/05 11:04:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.10-r2.ebuild,v 1.3 2006/06/01 01:16:24 steev Exp $
 
 inherit eutils autotools depend.php
 
@@ -15,7 +15,7 @@ IUSE="bzip2 doc fam fastcgi gdbm ipv6 ldap lua minimal memcache mysql pcre php r
 
 RDEPEND=">=sys-libs/zlib-1.1
 	bzip2?    ( app-arch/bzip2 )
-	fam?      ( virtual/fam )
+	fam?      ( app-admin/gamin )
 	gdbm?     ( sys-libs/gdbm )
 	ldap?     ( >=net-nds/openldap-2.1.26 )
 	lua?      ( dev-lang/lua )
