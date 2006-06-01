@@ -1,9 +1,54 @@
-MD5 62e24ed9280605914785b98c98fbb936 ChangeLog 11328
-MD5 93ab65741d48212d255f35e7cbd54270 files/digest-nessus-libraries-2.2.6 74
-MD5 b5cffe1077c184a3e6f3a7115359662e files/digest-nessus-libraries-2.2.7 74
-MD5 91aa63c59feb2d3adb4838a5808c1865 files/digest-nessus-libraries-2.3.1 74
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX linux26.patch 1278 RMD160 9ee5a9f371480c1b2ae903bf585dcb94197b8dac SHA1 97c65f4b15222e743a8e6e1332087ef2acd66899 SHA256 2a07d9c07799bed57085cd77abe4c0ea19ce46e69297bdcc433e90011c74a649 size 1278
 MD5 33d8a49602ab3e7f0c037188ed7d4cb7 files/linux26.patch 1278
-MD5 fda214dc78c8ac3a9e8d50f5f0cee8aa metadata.xml 249
+RMD160 9ee5a9f371480c1b2ae903bf585dcb94197b8dac files/linux26.patch 1278
+SHA256 2a07d9c07799bed57085cd77abe4c0ea19ce46e69297bdcc433e90011c74a649 files/linux26.patch 1278
+DIST nessus-libraries-2.2.6.tar.gz 426911 RMD160 6fd4b60515fa17657a015a3a31d380ee5d2c23ba SHA256 3389d0579aa28e6c2da86682cad994976e15938fd47bcf31ef6decc2841cbc67 size 426911
+DIST nessus-libraries-2.2.7.tar.gz 426429 RMD160 08f0602635cd9ca5f2bc4513067c0c5251249a97 SHA256 5aefd97c5a400088ddbf793cd4b2b688a5a9b7aec51c1403be316453f86f1834 size 426429
+DIST nessus-libraries-2.2.8.tar.gz 426546 RMD160 9f498c04c6084c9b27b799c2af6dfad26060dd83 SHA256 ed3e072d241352e5cc941d9b5b9acc2f38858c7d806b7a0e4a865c854193aa03 size 426546
+DIST nessus-libraries-2.3.1.tar.gz 424748 RMD160 c219015f13e5b7ccba3856823605b2aa71d680d3 SHA256 04528fe8882b51da65860ab4fe823fada56f4009d7961ca92970ace32a796c27 size 424748
+EBUILD nessus-libraries-2.2.6.ebuild 866 RMD160 8acf16d9583df4cfe17e445d39fde3f0308ab50d SHA1 4a0e68bd21c3ba4fecb6aba0cc9b385f982ebb56 SHA256 421fb52d3e3800636f1970d7d13eb6a7356f264b6fcfb372dbd8a55ba6cf6df7 size 866
 MD5 d0678dcb72fb35fa7adfce5efe45bfa7 nessus-libraries-2.2.6.ebuild 866
+RMD160 8acf16d9583df4cfe17e445d39fde3f0308ab50d nessus-libraries-2.2.6.ebuild 866
+SHA256 421fb52d3e3800636f1970d7d13eb6a7356f264b6fcfb372dbd8a55ba6cf6df7 nessus-libraries-2.2.6.ebuild 866
+EBUILD nessus-libraries-2.2.7.ebuild 877 RMD160 f897f4055c2b59efc9d03592fbfd387c260f2e03 SHA1 99fefebe984033d01a147d533142132536ed296c SHA256 cff012248a930a96501eeb88695c33e05433965ccd17efbad835bcf51c6f658c size 877
 MD5 5b35a63d60f660cb738dd50b38c383b1 nessus-libraries-2.2.7.ebuild 877
+RMD160 f897f4055c2b59efc9d03592fbfd387c260f2e03 nessus-libraries-2.2.7.ebuild 877
+SHA256 cff012248a930a96501eeb88695c33e05433965ccd17efbad835bcf51c6f658c nessus-libraries-2.2.7.ebuild 877
+EBUILD nessus-libraries-2.2.8.ebuild 872 RMD160 14ee74104248474bfc1dc874c60bc9658c7a86fd SHA1 31f91caa5900a6780c67e6b2deaa41f82784cc74 SHA256 79c6b180bd892c20862efce6d2750fa9fdd870d72f529ab78651cca7b2cb2ebd size 872
+MD5 6e9b32437dcafa53a44202d418dd8075 nessus-libraries-2.2.8.ebuild 872
+RMD160 14ee74104248474bfc1dc874c60bc9658c7a86fd nessus-libraries-2.2.8.ebuild 872
+SHA256 79c6b180bd892c20862efce6d2750fa9fdd870d72f529ab78651cca7b2cb2ebd nessus-libraries-2.2.8.ebuild 872
+EBUILD nessus-libraries-2.3.1.ebuild 892 RMD160 d5ca2ab0eb038224639f53ab1c647258fdbd609c SHA1 249c9e0fcd9164f159fff78f162869ddb129e777 SHA256 0f49d47079c0e2de97fa06d4d756a8b703d2c8eb20b9fdce9dcaa2e06f0df1e1 size 892
 MD5 577c7ee51b774829cf464200655ee864 nessus-libraries-2.3.1.ebuild 892
+RMD160 d5ca2ab0eb038224639f53ab1c647258fdbd609c nessus-libraries-2.3.1.ebuild 892
+SHA256 0f49d47079c0e2de97fa06d4d756a8b703d2c8eb20b9fdce9dcaa2e06f0df1e1 nessus-libraries-2.3.1.ebuild 892
+MISC ChangeLog 11477 RMD160 1644bacf5cf227b040b1e2ea9f327161af09a111 SHA1 566f6004862bd27a1cf2d405e20f451e0ac09d5c SHA256 2042daf82d31a35b2465bfa42d8996cbcb55e3f73c6f9aaebd7ec1f54f99b403 size 11477
+MD5 1f7218cb4ba57ef80c36d9a3efa7b576 ChangeLog 11477
+RMD160 1644bacf5cf227b040b1e2ea9f327161af09a111 ChangeLog 11477
+SHA256 2042daf82d31a35b2465bfa42d8996cbcb55e3f73c6f9aaebd7ec1f54f99b403 ChangeLog 11477
+MISC metadata.xml 249 RMD160 733e7145e60c54eb0c583195b4c0c6ebb91756c0 SHA1 0a5d282d1381312bc9eaee4f4cc282811ba33a64 SHA256 14643d9de5c8caeb0c6ab8044426e00b98dab06667ef8d75472a365ef8011754 size 249
+MD5 fda214dc78c8ac3a9e8d50f5f0cee8aa metadata.xml 249
+RMD160 733e7145e60c54eb0c583195b4c0c6ebb91756c0 metadata.xml 249
+SHA256 14643d9de5c8caeb0c6ab8044426e00b98dab06667ef8d75472a365ef8011754 metadata.xml 249
+MD5 6396708bbb488cbae4d7f3171cc7549c files/digest-nessus-libraries-2.2.6 268
+RMD160 1d8b7831566019bdcda7c6596186b7c24877a498 files/digest-nessus-libraries-2.2.6 268
+SHA256 3e9083a90f57291bb2da00cbadf6ab8a3cbea2a0e288e9f007bc2233b86878c3 files/digest-nessus-libraries-2.2.6 268
+MD5 b26453e877d7c0a213489c737930e2b7 files/digest-nessus-libraries-2.2.7 268
+RMD160 72878950cd5a9472da1188fe5ea03e7e3c8aca32 files/digest-nessus-libraries-2.2.7 268
+SHA256 4d1cfd44fab3213e884703b56f23f2590c66cc13d36ba499a765bce55ae12afb files/digest-nessus-libraries-2.2.7 268
+MD5 b0b4373161b7b0f3754aa0c4bb801048 files/digest-nessus-libraries-2.2.8 268
+RMD160 49eca31fb28fc2d18c0369a320eadc8ac83778e4 files/digest-nessus-libraries-2.2.8 268
+SHA256 575758d8f374f9fd5bafc30521ebd3b551fac1c0d547ad5afd7c40ff40bb3248 files/digest-nessus-libraries-2.2.8 268
+MD5 d7021bafc902079e801dc40d97e85858 files/digest-nessus-libraries-2.3.1 268
+RMD160 73d53a535e90a5865c2c3ecaee0c74451f0dcafc files/digest-nessus-libraries-2.3.1 268
+SHA256 b3d0daf5dbf1eb09c10359b5e05fce821c135e2fb3b6e829b1cf62499f8195df files/digest-nessus-libraries-2.3.1 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEf12Qz974XjDVpbkRAj1qAKC3S0qepqlr4KBhkU8jqziQRymPNwCeIf7h
+l5B5/Z2ftwHpOVB22567DsA=
+=deIk
+-----END PGP SIGNATURE-----
