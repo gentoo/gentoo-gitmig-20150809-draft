@@ -57,6 +57,6 @@ earlier versions) to enable you to switch between cmd.php and cactid.
 
 Also make sure that the user poller.php runs as ( ${VHOST_SERVER_GID} ) has
 permission to create new files in Cacti's 'rra/' directory which is
-${MY_INSTALLDIR}/rrd
+${MY_INSTALLDIR}/rra
 
 
