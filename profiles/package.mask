@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5436 2006/05/31 23:57:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5437 2006/06/01 00:11:24 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,6 +23,7 @@
 
 # Diego Pettenò <flameeyes@gentoo.org> (1 Jun 2006)
 # Masked for testing - I know I'm late.
+=kde-base/arts-3.5.3
 =kde-base/kdelibs-3.5.3
 =kde-base/libkdegames-3.5.3
 =kde-base/kdebase-data-3.5.3
