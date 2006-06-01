@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.43 2006/06/01 13:47:19 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.44 2006/06/01 17:09:36 mattepiu Exp $
+
+  1 Jun 2006; Matteo Azzali <mattepiu@gentoo.org> xmltv-0.5.43-r3.ebuild:
+  Added Unicode-UTF8simple dep for pt users, thanks to mcummings.
 
   1 Jun 2006; Matteo Azzali <mattepiu@gentoo.org> xmltv-0.5.43-r3.ebuild:
   Changed de_tvtoday patch and changed ebuild to patch only when needed.
