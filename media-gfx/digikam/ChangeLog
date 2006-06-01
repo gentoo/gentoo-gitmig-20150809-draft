@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.50 2006/05/30 00:58:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.51 2006/06/01 23:29:59 flameeyes Exp $
+
+  01 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  digikam-0.8.2_rc1.ebuild:
+  Remove 'e' language (my typo). Thanks to Jakub Moc in bug #135137.
 
   30 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   digikam-0.8.1-r1.ebuild, digikam-0.8.2_rc1.ebuild:
