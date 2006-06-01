@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.3-r2.ebuild,v 1.1 2006/06/01 09:39:59 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.3-r2.ebuild,v 1.2 2006/06/01 23:35:00 flameeyes Exp $
 
 inherit autotools linux-info eutils flag-o-matic
 
@@ -18,6 +18,8 @@ DEPEND=">=sys-fs/device-mapper-1.00.07-r1
 	>=dev-libs/libgpg-error-1.0-r1
 	selinux? ( sys-libs/libselinux )
 	!sys-fs/cryptsetup"
+
+RESTRICT="confcache"
 
 dm-crypt_check() {
 	ebegin "Checking for dm-crypt support"

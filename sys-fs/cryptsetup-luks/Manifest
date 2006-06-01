@@ -1,14 +1,65 @@
-MD5 db13fc9ca61363b96304c8b0b6977a2b ChangeLog 4120
-MD5 e9db29331962729c373695ee3d7e8fed cryptsetup-luks-1.0.1-r1.ebuild 2043
-MD5 06345bb64c18f0ab5857556a8bd52de0 cryptsetup-luks-1.0.1-r2.ebuild 2113
-MD5 648e59cde465f5acc399f8707299ca1c cryptsetup-luks-1.0.3-r2.ebuild 2261
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX cryptfs.confd 1548 RMD160 a009482d77e0c467fc9b26bbf7cd0a46ed5eb26e SHA1 a51fd66f741436626706f6221be4709f5b6870ad SHA256 7e6d165edb4e3971d949847629e56849c0839c73f43de07822b4c942171dc16a
 MD5 6d86b15e07cd0cdf96d8a363b1d778cd files/cryptfs.confd 1548
+RMD160 a009482d77e0c467fc9b26bbf7cd0a46ed5eb26e files/cryptfs.confd 1548
+SHA256 7e6d165edb4e3971d949847629e56849c0839c73f43de07822b4c942171dc16a files/cryptfs.confd 1548
+AUX cryptsetup-luks-1.0.1-libmapper.patch 534 RMD160 7a7c29c426cb1d884f000654317b51ed9ca5fc7f SHA1 b836498d48787872f9d27a67b3db6a7fd9962f57 SHA256 f877a45493d0c5a8031b58d56651ac1d784f29160f73130eb18a3b1900fa0b73
 MD5 906131d3cdd20ac94109052236e469b9 files/cryptsetup-luks-1.0.1-libmapper.patch 534
+RMD160 7a7c29c426cb1d884f000654317b51ed9ca5fc7f files/cryptsetup-luks-1.0.1-libmapper.patch 534
+SHA256 f877a45493d0c5a8031b58d56651ac1d784f29160f73130eb18a3b1900fa0b73 files/cryptsetup-luks-1.0.1-libmapper.patch 534
+AUX cryptsetup-luks-1.0.1-no-nls.patch 597 RMD160 fb2604d5de69ddaeeeb9b771c80cc72663bd95a3 SHA1 0d09e9c63a32503f37ff3a893620acfb8570223a SHA256 f147f820e5b0bb391b160161e38454db3f719ee94fbd6e497c7454eb410df0c6
 MD5 c66058fc1ba9f980485e2b9e3b66df52 files/cryptsetup-luks-1.0.1-no-nls.patch 597
+RMD160 fb2604d5de69ddaeeeb9b771c80cc72663bd95a3 files/cryptsetup-luks-1.0.1-no-nls.patch 597
+SHA256 f147f820e5b0bb391b160161e38454db3f719ee94fbd6e497c7454eb410df0c6 files/cryptsetup-luks-1.0.1-no-nls.patch 597
+AUX cryptsetup-luks-1.0.3-selinux.patch 418 RMD160 2f0d805d378ce0629e81abf84929bb54a1324e45 SHA1 32f3c01ffa9bbbda5ca62ee15cd0f2d937e7b447 SHA256 8203c3c77c5c091103d329f48bba51bfc7e5d6feb8c51348e7b192d2872ac9b3
 MD5 8e76b60d4e94130170c49c7f32bb2ee6 files/cryptsetup-luks-1.0.3-selinux.patch 418
-MD5 1c0c01504919b985fca8352924530b59 files/digest-cryptsetup-luks-1.0.1-r1 268
-MD5 1c0c01504919b985fca8352924530b59 files/digest-cryptsetup-luks-1.0.1-r2 268
-MD5 1af32c51e65cb0cc90ccf7cb90192283 files/digest-cryptsetup-luks-1.0.3-r2 74
+RMD160 2f0d805d378ce0629e81abf84929bb54a1324e45 files/cryptsetup-luks-1.0.3-selinux.patch 418
+SHA256 8203c3c77c5c091103d329f48bba51bfc7e5d6feb8c51348e7b192d2872ac9b3 files/cryptsetup-luks-1.0.3-selinux.patch 418
+AUX dm-crypt-start.sh 4306 RMD160 558705676a62acdaacb1362ad5459c1719f5b247 SHA1 07c4aafe6e0a3defc654215796e22165fbad777e SHA256 48669629db92c204f208406cf5ca78acce9088568e0bc03bba511b38a668b0fc
 MD5 c653a0b4ace27569ccc659b7cb43b4a9 files/dm-crypt-start.sh 4306
+RMD160 558705676a62acdaacb1362ad5459c1719f5b247 files/dm-crypt-start.sh 4306
+SHA256 48669629db92c204f208406cf5ca78acce9088568e0bc03bba511b38a668b0fc files/dm-crypt-start.sh 4306
+AUX dm-crypt-stop.sh 1297 RMD160 aae23fdb24788b31992f61afd750d0be270a586b SHA1 185ac9098155cc4e070a277baca7b29976d68618 SHA256 c160c65b947af563e5e5ee0b090f3d2a4f4097361b1088be05cba3f3461907b7
 MD5 a3bb6598f67c8922ccb6576ff256ced0 files/dm-crypt-stop.sh 1297
+RMD160 aae23fdb24788b31992f61afd750d0be270a586b files/dm-crypt-stop.sh 1297
+SHA256 c160c65b947af563e5e5ee0b090f3d2a4f4097361b1088be05cba3f3461907b7 files/dm-crypt-stop.sh 1297
+DIST cryptsetup-luks-1.0.1.tar.bz2 286161 RMD160 18dd277463607b3b9cc348e0af27af41c5ebcfe1 SHA256 f93f062785f4619735eed4855d3e8b062428a161e498d8b77eca446db940a2a5
+DIST cryptsetup-luks-1.0.3.tar.bz2 304836 RMD160 302304c28bbda40cbb19dd4fd31f3684ef2e6ba1 SHA1 b4e5658891dcad943dd45bc5d4a7f31396e9b83f SHA256 f8b7e9b410a581decd948cd0b4efcd3eea3bfeb729e01ad11eb24ddec54ac45b
+EBUILD cryptsetup-luks-1.0.1-r1.ebuild 2043 RMD160 f874c0e679bc70b69476504342a60dc5d5b4838d SHA1 7f9f5e335ea9e444075df6b7454c9d62680f421e SHA256 93be14fa4eaafaf0d8f427e195de320d438113392a963c3db7547008df5c407b
+MD5 e9db29331962729c373695ee3d7e8fed cryptsetup-luks-1.0.1-r1.ebuild 2043
+RMD160 f874c0e679bc70b69476504342a60dc5d5b4838d cryptsetup-luks-1.0.1-r1.ebuild 2043
+SHA256 93be14fa4eaafaf0d8f427e195de320d438113392a963c3db7547008df5c407b cryptsetup-luks-1.0.1-r1.ebuild 2043
+EBUILD cryptsetup-luks-1.0.1-r2.ebuild 2113 RMD160 9e2a4262487ac28c5187608d7f55611a3427b438 SHA1 c848c074853b85b70fe064d369139f7cd910d170 SHA256 b694e6dd1aee7872022e048ab9db572fdaf2ffeda36603dc2dbd268cb639f495
+MD5 06345bb64c18f0ab5857556a8bd52de0 cryptsetup-luks-1.0.1-r2.ebuild 2113
+RMD160 9e2a4262487ac28c5187608d7f55611a3427b438 cryptsetup-luks-1.0.1-r2.ebuild 2113
+SHA256 b694e6dd1aee7872022e048ab9db572fdaf2ffeda36603dc2dbd268cb639f495 cryptsetup-luks-1.0.1-r2.ebuild 2113
+EBUILD cryptsetup-luks-1.0.3-r2.ebuild 2284 RMD160 3f2c42877d51e5ca4532c05ff658c65819f73011 SHA1 066e445996c815fcb6270b81e8f5a60ab80f3c3b SHA256 0246331a8542ed2d46301115eb3dbd118b6a21eda725651cb9b136f3c2c9ab11
+MD5 bc65dcacffc403dc31c2b358fdcfb6b6 cryptsetup-luks-1.0.3-r2.ebuild 2284
+RMD160 3f2c42877d51e5ca4532c05ff658c65819f73011 cryptsetup-luks-1.0.3-r2.ebuild 2284
+SHA256 0246331a8542ed2d46301115eb3dbd118b6a21eda725651cb9b136f3c2c9ab11 cryptsetup-luks-1.0.3-r2.ebuild 2284
+MISC ChangeLog 4251 RMD160 fbc643b2ff8c0ceb61fbef1093607367b7eaeca5 SHA1 5db82d324b9364681c0fabb75ce8804387b0b6c5 SHA256 c11a0df5928b3915319c9f3a9856b5c2710670d4ca7e8f81bcd4c88e34a2d150
+MD5 144d2896e8d38b9b90ec51c4a83a0990 ChangeLog 4251
+RMD160 fbc643b2ff8c0ceb61fbef1093607367b7eaeca5 ChangeLog 4251
+SHA256 c11a0df5928b3915319c9f3a9856b5c2710670d4ca7e8f81bcd4c88e34a2d150 ChangeLog 4251
+MISC metadata.xml 228 RMD160 4ecb17bc29c5805c7d009098d379f85807f0ff9a SHA1 0f7be0d47f13ff42c97b3787385fe6e1cd9cbfc0 SHA256 157fd3642e30749762584d579cbeb8095379a572897d3f60dc30414cfd0f5c34
 MD5 6c788beeca78bd11e5cd6e759e52fadc metadata.xml 228
+RMD160 4ecb17bc29c5805c7d009098d379f85807f0ff9a metadata.xml 228
+SHA256 157fd3642e30749762584d579cbeb8095379a572897d3f60dc30414cfd0f5c34 metadata.xml 228
+MD5 1c0c01504919b985fca8352924530b59 files/digest-cryptsetup-luks-1.0.1-r1 268
+RMD160 75bee6ae3c1574f5602a48be8f2791985e4a26b5 files/digest-cryptsetup-luks-1.0.1-r1 268
+SHA256 44f9a55c285900d0fbbdc7268257cde094c0968a33f99e993510147af84a5471 files/digest-cryptsetup-luks-1.0.1-r1 268
+MD5 1c0c01504919b985fca8352924530b59 files/digest-cryptsetup-luks-1.0.1-r2 268
+RMD160 75bee6ae3c1574f5602a48be8f2791985e4a26b5 files/digest-cryptsetup-luks-1.0.1-r2 268
+SHA256 44f9a55c285900d0fbbdc7268257cde094c0968a33f99e993510147af84a5471 files/digest-cryptsetup-luks-1.0.1-r2 268
+MD5 27723e8b4ff24b9ba390777aaa73fbf0 files/digest-cryptsetup-luks-1.0.3-r2 268
+RMD160 e8a465408fe58d69af0ca1cc38c5743e621e3d0b files/digest-cryptsetup-luks-1.0.3-r2 268
+SHA256 b3e05fc5b08998b29b5c80fdab6eb5f3b9c7558ddd447c785cb4baf998bde190 files/digest-cryptsetup-luks-1.0.3-r2 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEf3mtAiZjviIA2XgRAiypAJ95jAU9Co5A1UZOitUuIn7mxnBeJACgrmqY
+hhx2+RUc4r36b0ubtcCa6Ho=
+=Cmb6
+-----END PGP SIGNATURE-----
