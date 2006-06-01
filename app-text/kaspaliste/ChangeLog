@@ -1,6 +1,10 @@
 # ChangeLog for app-text/kaspaliste
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/ChangeLog,v 1.10 2006/02/06 12:34:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/ChangeLog,v 1.11 2006/06/01 18:34:09 genstef Exp $
+
+  01 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
+  -kaspaliste-0.96.ebuild, kaspaliste-0.96-r1.ebuild:
+  remove bogus arts use flag, bug 135015, remove old ebuilds
 
   06 Feb 2006; Stefan Schweizer <genstef@gentoo.org>
   kaspaliste-0.96-r1.ebuild:
