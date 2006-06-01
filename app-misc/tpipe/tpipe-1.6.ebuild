@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Technologies, Inc.
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tpipe/tpipe-1.6.ebuild,v 1.1 2006/05/29 21:53:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tpipe/tpipe-1.6.ebuild,v 1.2 2006/06/01 16:42:28 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
