@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksysv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysv/ChangeLog,v 1.24 2006/06/01 10:10:43 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysv/ChangeLog,v 1.25 2006/06/01 20:08:55 flameeyes Exp $
+
+*ksysv-3.5.3 (01 Jun 2006)
+
+  01 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> +ksysv-3.5.3.ebuild:
+  Update to new release.
 
   01 Jun 2006; Thomas Cort <tcort@gentoo.org> ksysv-3.5.1.ebuild:
   Stable on alpha wrt Bug #132213.

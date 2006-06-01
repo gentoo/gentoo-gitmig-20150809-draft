@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/dcopjava
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.16 2006/05/29 12:51:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.17 2006/06/01 16:33:51 flameeyes Exp $
+
+*dcopjava-3.5.3 (01 Jun 2006)
+
+  01 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> +dcopjava-3.5.3.ebuild:
+  Update to new release.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Drop old versions.

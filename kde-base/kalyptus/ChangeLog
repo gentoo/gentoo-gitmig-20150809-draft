@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalyptus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/ChangeLog,v 1.29 2006/05/29 13:00:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/ChangeLog,v 1.30 2006/06/01 16:44:38 flameeyes Exp $
+
+  01 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> kalyptus-3.5.2.ebuild:
+  Update to new release.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -kalyptus-3.4.1.ebuild:
   Drop old versions.

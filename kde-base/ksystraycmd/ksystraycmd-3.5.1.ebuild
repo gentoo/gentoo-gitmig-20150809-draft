@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ksystraycmd-3.5.1.ebuild,v 1.11 2006/06/01 08:10:00 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ksystraycmd-3.5.1.ebuild,v 1.12 2006/06/01 20:07:49 flameeyes Exp $
 
 KMNAME=kdebase
-MAXKDEVER=3.5.2
+MAXKDEVER=3.5.3
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.47 2006/06/01 09:31:46 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.48 2006/06/01 19:27:13 flameeyes Exp $
+
+*korganizer-3.5.3 (01 Jun 2006)
+
+  01 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +korganizer-3.5.3.ebuild:
+  Update to new release.
 
   01 Jun 2006; Thomas Cort <tcort@gentoo.org> korganizer-3.5.2.ebuild:
   Stable on alpha wrt Bug #132213.
