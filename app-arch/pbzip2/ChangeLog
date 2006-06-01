@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.24 2006/04/27 12:18:48 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.25 2006/06/01 10:41:29 pvdabeel Exp $
+
+  01 Jun 2006; Pieter Van den Abeele <pvdabeel@gentoo.org> pbzip2-0.9.6.ebuild:
+  Stable on ppc. Upstream states this release fixes a  bug that caused blocks to 
+  be missed by decompression routine under certain conditions. 
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-pbzip2-0.9.5,
   files/digest-pbzip2-0.9.6, Manifest:
