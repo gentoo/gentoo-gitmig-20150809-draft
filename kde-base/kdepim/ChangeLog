@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.210 2006/06/01 10:40:42 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.211 2006/06/01 13:12:38 flameeyes Exp $
+
+  01 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/akregator-3.5-hppa.patch, kdepim-3.5.2-r2.ebuild,
+  kdepim-3.5.2-r3.ebuild:
+  Add patch to build on HPPA Linux, thanks to Guy Martin (gmsoft).
 
   01 Jun 2006; Thomas Cort <tcort@gentoo.org> kdepim-3.5.2-r2.ebuild:
   Stable on alpha wrt Bug #132213.
