@@ -3,7 +3,7 @@
 # Tom Gall <tgall@gentoo.org> manages this list
 directfb
 krb4
-pcmcia
+
 pda
 prelude
 mzscheme
@@ -58,3 +58,6 @@ video_cards_voodoo
 
 #until netbeans is keyworded
 netbeans
+
+#build is busted
+pike
