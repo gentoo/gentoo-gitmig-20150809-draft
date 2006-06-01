@@ -1,0 +1,133 @@
+Index: grab/de_tvtoday/tv_grab_de_tvtoday.in
+===================================================================
+RCS file: /cvsroot/xmltv/xmltv/grab/de_tvtoday/tv_grab_de_tvtoday.in,v
+retrieving revision 1.42
+retrieving revision 1.45
+diff -p -u -r1.42 -r1.45
+--- grab/de_tvtoday/tv_grab_de_tvtoday.in	21 Apr 2006 17:17:21 -0000	1.42
++++ grab/de_tvtoday/tv_grab_de_tvtoday.in	25 May 2006 17:10:18 -0000	1.45
+@@ -99,7 +99,7 @@ at http://sourceforge.net/projects/xmltv
+ 
+ use warnings;
+ use strict;
+-use XMLTV::Version '$Id: tv_grab_de_tvtoday-0.5.43.diff,v 1.1 2006/06/01 10:05:53 mattepiu Exp $ ';
++use XMLTV::Version '$Id: tv_grab_de_tvtoday-0.5.43.diff,v 1.1 2006/06/01 10:05:53 mattepiu Exp $ ';
+ use XMLTV::Capabilities qw/baseline manualconfig cache share/;
+ use XMLTV::Description 'Germany (www.tvtoday.de)';
+ use Date::Manip;
+@@ -138,6 +138,7 @@ BEGIN {
+     else {
+         *t = \&Log::TraceMessages::t;
+         *d = \&Log::TraceMessages::d;
++	#$Log::TraceMessages::On = 1;
+     }
+ }
+ 
+@@ -502,9 +503,10 @@ sub parse_page($$) {
+     }
+ 	
+     #-- extract date of grabbed data from retrieved webpage ...
+-    $_ = $page->look_down('_tag' => 'td', 'class' => 'navigator-hhead-large');
++    $_ = $page->look_down('_tag' => 'span', 'class' => 'text-weiss');
+     die("cannot find date on requested page") 
+       unless($_->as_text() =~ m/([1-3]?[0-9])\.(1?[0-9])\.(20[0-9]{2})/);
++    t "extracted date: $3-$2-$1";
+     $day = ParseDate("$3-$2-$1 00:00:00");
+ 
+     #-- well, now let's scan the table for programme data
+@@ -573,6 +575,7 @@ sub parse_page($$) {
+ 		$show{q(episode-num)} = [ [ $1, "onscreen" ] ];
+ 	    }
+ 
++	    t "show title: $span";
+ 	    $show{title} = [[ $span, $lang ]];
+ 	} 
+ 	elsif (ref($span) eq "HTML::Element" and $span->tag eq "a") {
+@@ -583,7 +586,7 @@ sub parse_page($$) {
+ 	    
+ 	    my $title = ($tag->content_list())[0];
+ 
+-	    $title = convert_cp1252_chars(\$title);
++	    convert_cp1252_chars(\$title);
+ 
+ 	    $title =~ s/\s*\([^\(]+\)\s*$//;
+ 	    if ($title =~ s/\s*(\d+)\.\sTeil//gi) {
+@@ -836,6 +839,7 @@ sub squeeze_out_desc($$) {
+     # try to match <category>, <country> <year>; R: <names>; D: <names> construct
+     # where <country>/<year> or the [RD]: stuff may be missing ...
+     if(my @parts = ($$desc =~ m/^\s*(\(([^\)]*)\))?\s+([^,;0-9]+)(,?\s+([^,;]+)\s+([12][09][0-9]{2}(?:[\/-][0-9]{2})?))?\s*; (?:(?:; )?(Buch\/Regie|R): ([^;]+))?\s*((?:; )?D: (.+))?\s*$/)) {
++        t "split rule: <category>, <country> <year> ...";
+ 	$$desc = "";
+ 
+ 	#-- $parts[1] is the show title in English (doesn't have to be available)
+@@ -887,9 +891,14 @@ sub squeeze_out_desc($$) {
+ 	}
+     } 
+     else {
++        t "split rule: dot splitting";
+ 	my @data = split "·", $$desc;
+ 	s/(^\s|\s$)//g foreach(@data); #CHG#
+ 
++	for(0 .. (scalar(@data) - 1)) {
++	    t "dot-split part $_: " . $data[$_];
++	}
++
+ 	if(scalar(@data) == 3 
+ 	   && not($data[1] =~ m/[\wäöüßÄÖÜ]+:/) #- FIX false positive: tvtoday.de seems to publish "guests: <names>" here some (rare) times :-(  
+ 	   && $data[2] =~ m/^Mit (.*?)$/) {
+@@ -945,15 +954,22 @@ sub squeeze_out_desc($$) {
+ 		    next;
+ 		}
+ 
+-		if (my ($cat, $rest1, $names, $guests, $rest2) = m/^([^,]+?)((?:\s+-\s+..+?)*) - Moderation: (.+?) - Gäste: (..+?)(?:\s+-\s+(.+))?$/) {
++		if (my ($nocat, $cat, $rest1, $names, $guests, $rest2) = m/^(([^,.%^&*();]+?)((?:\s+-\s+..+?)*)|.+) - Moderation: (.+?) - Gäste: (..+?)(?:\s+-\s+(.+))?$/) {
+ 		    my @data = split_up_names($names, $show);
+ 		    push @{$show->{"credits"}{"presenter"}}, @data;
+ 		    my @guest_data = split_up_names($guests, $show);
+ 		    push @{$show->{"credits"}{"guest"}}, @guest_data;
+-		    $show->{"category"} = [[ $cat, $lang ]];
+-		    
+-	            warn "misdetected category: $cat" 
+-		      if($cat =~ m/\d{4}/);
++
++		    if(defined($cat)) {
++			$show->{"category"} = [[ $cat, $lang ]];
++			
++			warn "misdetected category: $cat" 
++			  if($cat =~ m/\d{4}/);
++		    }
++		    else {
++		        t "no-cat match: $nocat";
++			$rest1 = $nocat;
++		    }
+ 		      
+ 		    my @rest; 
+ 		    foreach(defined($rest1) ? split(m/\s+-\s+/, $rest1) : undef, $rest2) {
+@@ -963,14 +979,21 @@ sub squeeze_out_desc($$) {
+ 		    next unless length($_);
+ 		}
+ 
+-		if (my ($cat, $rest1, $names, $rest2) = m/^([^,]+?)((?:\s+-\s+..+?)*) - Moderation: (.+?)(?:\s+-\s+(.+))?$/) {
++		if (my ($nocat, $cat, $rest1, $names, $rest2) = m/^(([^,]+?)((?:\s+-\s+..+?)*)|.+) - Moderation: (.+?)(?:\s+-\s+(.+))?$/) {
+ 		    my @data = split_up_names($names, $show);
+ 		    push @{$show->{"credits"}{"presenter"}}, @data;
+-		    $show->{"category"} = [[ $cat, $lang ]];
+ 
+-	            warn "misdetected category: $cat" 
+-		      if($cat =~ m/\d{4}/);
+-		    
++		    if(defined($cat)) {
++			$show->{"category"} = [[ $cat, $lang ]];
++
++			warn "misdetected category: $cat" 
++			  if($cat =~ m/\d{4}/);
++		    }
++		    else {
++		        t "no-cat match: $nocat";
++			$rest1 = $nocat;
++		    }
++			
+ 		    my @rest; 
+ 		    foreach(defined($rest1) ? split(m/\s+-\s+/, $rest1) : undef, $rest2) {
+ 			push @rest, $_ if(defined($_) && length($_));
+

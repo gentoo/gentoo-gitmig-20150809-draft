@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>media-tv</herd>
+<maintainer>
+	<email>mattepiu@gentoo.org</email>
+	<name>Matteo Azzali </name>
+</maintainer>
 </pkgmetadata>

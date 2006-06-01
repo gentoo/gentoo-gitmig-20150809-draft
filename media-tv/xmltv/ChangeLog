@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.41 2006/02/13 14:51:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.42 2006/06/01 10:05:53 mattepiu Exp $
+
+  1 Jun 2006; Matteo Azzali <mattepiu@gentoo.org> +xmltv-0.5.43-r3.ebuild,
+  Bumped to a more updated, useful verion. bug #95166 and #116612 and #94101
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org> xmltv-0.5.34.ebuild,
   xmltv-0.5.37-r1.ebuild, xmltv-0.5.39.ebuild:
