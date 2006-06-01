@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/noatun
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.53 2006/05/30 01:28:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.54 2006/06/01 05:14:28 tcort Exp $
+
+  01 Jun 2006; Thomas Cort <tcort@gentoo.org> noatun-3.5.2.ebuild:
+  Stable on alpha wrt Bug #132213.
 
   30 May 2006; Diego Pettenò <flameeyes@gentoo.org> noatun-3.4.3.ebuild,
   noatun-3.5.2.ebuild:

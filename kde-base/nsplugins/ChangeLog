@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nsplugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.46 2006/05/29 20:40:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.47 2006/06/01 05:13:39 tcort Exp $
+
+  01 Jun 2006; Thomas Cort <tcort@gentoo.org> nsplugins-3.5.2.ebuild:
+  Stable on alpha wrt Bug #132213.
 
   29 May 2006; Jason Wever <weeve@gentoo.org> nsplugins-3.5.2.ebuild:
   Stable on SPARC wrt bug #132213.

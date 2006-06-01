@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.2-r1.ebuild,v 1.9 2006/05/31 14:53:51 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.2-r1.ebuild,v 1.10 2006/06/01 05:27:48 tcort Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="Jukebox and music manager for KDE"
-KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE="akode flac gstreamer mp3 vorbis musicbrainz"
 
 DEPEND="media-libs/taglib
