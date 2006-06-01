@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.335 2006/06/01 04:22:48 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.336 2006/06/01 12:31:19 flameeyes Exp $
+
+*kdelibs-3.5.3 (01 Jun 2006)
+
+  01 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> +kdelibs-3.5.3.ebuild:
+  Version bump to avoid blocking more the monolithic ebuilds development. Add
+  fam useflag so that inotify can be used instead (on Linux). Don't use
+  --as-needed for first install for now.
 
   01 Jun 2006; Thomas Cort <tcort@gentoo.org> kdelibs-3.5.2-r6.ebuild:
   Stable on alpha wrt Bug #132213.
