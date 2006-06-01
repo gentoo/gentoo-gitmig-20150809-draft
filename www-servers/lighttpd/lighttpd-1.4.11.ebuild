@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.11.ebuild,v 1.3 2006/06/01 01:16:24 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.11.ebuild,v 1.4 2006/06/01 21:56:36 bangert Exp $
 
 inherit eutils autotools depend.php
 
@@ -15,7 +15,7 @@ IUSE="bzip2 doc fam fastcgi gdbm ipv6 ldap lua minimal memcache mysql pcre php r
 
 RDEPEND=">=sys-libs/zlib-1.1
 	bzip2?    ( app-arch/bzip2 )
-	fam?      ( app-admin/gamin )
+	fam?      ( virtual/fam )
 	gdbm?     ( sys-libs/gdbm )
 	ldap?     ( >=net-nds/openldap-2.1.26 )
 	lua?      ( dev-lang/lua )
@@ -35,6 +35,7 @@ RDEPEND=">=sys-libs/zlib-1.1
 	xattr? ( kernel_linux? ( sys-apps/attr ) )"
 
 DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
 	doc?  ( dev-python/docutils )
 	test? (
 		virtual/perl-Test-Harness
@@ -142,6 +143,8 @@ src_install() {
 
 	# init script stuff
 	newinitd ${FILESDIR}/lighttpd.initd lighttpd || die
+	use fam && has_version app-admin/fam && \
+		sed -i 's/after famd/need famd/g' "${D}"/etc/init.d/lighttpd
 
 	if use php || use fastcgi ; then
 		newinitd ${FILESDIR}/spawn-fcgi.initd spawn-fcgi || die

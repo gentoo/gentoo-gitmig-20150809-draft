@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.8 2006/05/30 19:49:29 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.9 2006/06/01 21:56:36 bangert Exp $
 
 opts="depend checkconfig start stop reload"
 
@@ -10,7 +10,8 @@ LIGHTTPD_PID="/var/run/lighttpd.pid"
 
 depend() {
 	need net
-	use mysql logger spawn-fcgi ldap famd slapd
+	use mysql logger spawn-fcgi ldap slapd
+	after famd
 	after sshd
 }
 

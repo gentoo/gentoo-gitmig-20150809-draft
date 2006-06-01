@@ -1,6 +1,25 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.73 2006/06/01 01:16:24 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.74 2006/06/01 21:56:36 bangert Exp $
+
+*lighttpd-1.4.11-r1 (01 Jun 2006)
+
+  01 Jun 2006; Thilo Bangert <bangert@gentoo.org>
+  +files/1.4.11/01_all_r1046.mod_compress.c-fixes.diff,
+  -files/1.4.11/01_r1046.diff_mod_compress.c-fixes.diff,
+  +files/1.4.11/02_all_r1057_fix_If-Modified-Since-ETag.diff,
+  -files/1.4.11/02_r1057_fix_If-Modified-Since-ETag.diff,
+  +files/1.4.11/03_all_r1095_fix_stalling_SSL_POST_requests.diff,
+  -files/1.4.11/03_r1095_fix_stalling_SSL_POST_requests.diff,
+  -files/1.4.11/04_r1116_fix_env_conf_segfault.diff,
+  +files/1.4.11/21_all_mod_scgi_segfault.diff,
+  -files/1.4.11/21_mod_scgi_segfault.diff,
+  +files/1.4.11/22_all_bug606_fix_SSI_echo.diff,
+  -files/1.4.11/22_bug606_fix_SSI_echo.diff, files/lighttpd.initd,
+  +lighttpd-1.4.11-r1.ebuild:
+  fix naming of patches - remove 04_diff
+  change startup script to 'need famd' in cases where app-admin/fam 
+  provides virtual/fam
 
   01 Jun 2006; Steev Klimaszewski <steev@gentoo.org>
   lighttpd-1.4.10-r2.ebuild, lighttpd-1.4.11.ebuild:
