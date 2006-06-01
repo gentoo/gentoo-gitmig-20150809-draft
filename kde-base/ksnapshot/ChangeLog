@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksnapshot
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnapshot/ChangeLog,v 1.46 2006/05/29 21:40:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnapshot/ChangeLog,v 1.47 2006/06/01 09:11:44 tcort Exp $
+
+  01 Jun 2006; Thomas Cort <tcort@gentoo.org> ksnapshot-3.5.2.ebuild:
+  Stable on alpha wrt Bug #132213.
 
   29 May 2006; Jason Wever <weeve@gentoo.org> ksnapshot-3.5.2.ebuild:
   Stable on SPARC wrt bug #132213.

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.35 2006/05/29 20:29:51 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.36 2006/06/01 07:07:50 tcort Exp $
+
+  01 Jun 2006; Thomas Cort <tcort@gentoo.org> kcminit-3.5.0.ebuild:
+  Stable on alpha wrt Bug #132213.
 
   29 May 2006; Jason Wever <weeve@gentoo.org> kcminit-3.5.0.ebuild:
   Stable on SPARC wrt bug #132213.

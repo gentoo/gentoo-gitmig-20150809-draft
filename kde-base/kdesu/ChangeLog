@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.38 2006/05/29 20:29:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.39 2006/06/01 07:10:16 tcort Exp $
+
+  01 Jun 2006; Thomas Cort <tcort@gentoo.org> kdesu-3.5.0.ebuild:
+  Stable on alpha wrt Bug #132213.
 
   29 May 2006; Jason Wever <weeve@gentoo.org> kdesu-3.5.0.ebuild:
   Stable on SPARC wrt bug #132213.

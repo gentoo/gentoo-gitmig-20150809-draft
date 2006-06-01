@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kruler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kruler/ChangeLog,v 1.45 2006/05/29 21:37:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kruler/ChangeLog,v 1.46 2006/06/01 09:05:40 tcort Exp $
+
+  01 Jun 2006; Thomas Cort <tcort@gentoo.org> kruler-3.5.2.ebuild:
+  Stable on alpha wrt Bug #132213.
 
   29 May 2006; Jason Wever <weeve@gentoo.org> kruler-3.5.2.ebuild:
   Stable on SPARC wrt bug #132213.

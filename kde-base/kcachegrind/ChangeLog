@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcachegrind
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.37 2006/05/29 13:45:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.38 2006/06/01 07:13:32 tcort Exp $
+
+  01 Jun 2006; Thomas Cort <tcort@gentoo.org> kcachegrind-3.5.2.ebuild:
+  Stable on alpha wrt Bug #132213.
 
   29 May 2006; Markus Rothe <corsair@gentoo.org> kcachegrind-3.5.2.ebuild:
   Stable on ppc64
