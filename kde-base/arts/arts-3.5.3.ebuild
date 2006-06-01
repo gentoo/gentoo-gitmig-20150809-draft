@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.3.ebuild,v 1.1 2006/06/01 00:37:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.3.ebuild,v 1.2 2006/06/01 01:08:29 flameeyes Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.5
 
-MY_PV=1.5.2
+MY_PV=1.5.3
 S=${WORKDIR}/${PN}-${MY_PV}
 
 RESTRICT="test"
