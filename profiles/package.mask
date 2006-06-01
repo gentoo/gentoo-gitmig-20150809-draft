@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5443 2006/06/01 12:39:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5444 2006/06/01 12:47:03 tove Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -547,7 +547,7 @@ net-analyzer/tcpick
 # Working on this, it's in a very fluid state
 =sys-libs/pam-0.99*
 
-# Benedikt BÃ¶hm <hollow@gentoo> (20 Apr 2006)
+# Benedikt Böhm <hollow@gentoo> (20 Apr 2006)
 # Upstream dead; obsoleted by sys-apps/lomoco
 sys-apps/lmctl
 
@@ -860,7 +860,7 @@ net-libs/enet
 # Dirty fix that needs testing, see Changelog
 =net-libs/obby-0.3.0-r1
 
-# Petteri RÃ¤ty <betelgeuse@gentoo.org> (12 Mar 2006)
+# Petteri Räty <betelgeuse@gentoo.org> (12 Mar 2006)
 # Because of changes in ebay our current versions do not work
 # See bug #125813 for details.
 <=app-misc/jbidwatcher-0.9.9
@@ -1345,7 +1345,7 @@ games-rpg/nwn-data
 # Causes problems with several packages. See bug # 99243 and bug # 102301.
 =dev-util/scons-0.96.90
 
-# Bryan Ãstergaard <kloeri@gentoo.org> (12 Sep 2005)
+# Bryan Østergaard <kloeri@gentoo.org> (12 Sep 2005)
 # Masked for security reasons, bug 103524
 dev-python/py2play
 games-action/slune
