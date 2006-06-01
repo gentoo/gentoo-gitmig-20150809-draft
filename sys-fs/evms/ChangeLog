@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.53 2006/06/01 21:24:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.54 2006/06/01 21:31:03 eradicator Exp $
+
+*evms-2.5.5-r2 (01 Jun 2006)
+
+  01 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/2.5.5/raid5_remove_spare_fix.patch,
+  +files/2.5.5/raid5_remove_spare_fix_2.patch, +evms-2.5.5-r2.ebuild:
+  Added patches from upstream to fix issues with allowing the user to remove a
+  spare from a degraded raid5 array.
 
   01 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
   -files/2.5.3/md_expand.patch, +files/evms-2.5.5-as-needed.patch,
