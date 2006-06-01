@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4-r2.ebuild,v 1.1 2006/04/09 20:00:23 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4-r2.ebuild,v 1.2 2006/06/01 21:20:10 jokey Exp $
 
 inherit eutils toolchain-funcs
 
@@ -65,8 +65,8 @@ pkg_postinst() {
 		einfo "vnstat\'s cron script is now installed as /etc/cron.hourly/vnstat."
 		einfo "Please remove /etc/cron.d/vnstat."
 	else
-		einfo "A cron script has been installed to /etc/cron.hourly/vnstat.cron."
+		einfo "A cron script has been installed to /etc/cron.hourly/vnstat."
 	fi
 	einfo "To update your interface database automatically with"
-	einfo "cron, uncomment the lines in /etc/cron.hourly/vnstat.cron."
+	einfo "cron, uncomment the lines in /etc/cron.hourly/vnstat."
 }

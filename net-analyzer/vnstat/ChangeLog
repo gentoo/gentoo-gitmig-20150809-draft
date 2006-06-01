@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.13 2006/04/09 20:00:23 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.14 2006/06/01 21:20:10 jokey Exp $
+
+  01 Jun 2006; Markus Ullmann <jokey@gentoo.org> vnstat-1.4.ebuild,
+  vnstat-1.4-r1.ebuild, vnstat-1.4-r2.ebuild:
+  Fixing typos in postinst, thanks to Ricardo Cordeiro in bug #135084
 
 *vnstat-1.4-r2 (09 Apr 2006)
 
