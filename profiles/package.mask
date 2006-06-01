@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5447 2006/06/01 21:57:17 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5448 2006/06/01 22:15:34 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -520,10 +520,6 @@ net-misc/xfsamba
 # Stefan Cornelius <dercorny@gentoo.org> (30 Apr 2006)
 # Masking due to security issue described in bug 129874
 www-client/amaya
-
-# Markus Dittrich <markusle@gentoo.org> (25 Apr 2006)
-# further testing needed
-=sci-mathematics/scilab-4.0
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (25 Apr 2006)
 # Initial import
