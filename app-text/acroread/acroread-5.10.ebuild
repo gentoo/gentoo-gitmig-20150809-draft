@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.10.ebuild,v 1.9 2006/04/21 17:00:40 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.10.ebuild,v 1.10 2006/06/01 18:30:41 genstef Exp $
 
 inherit nsplugins eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="-* x86 amd64"
 IUSE="cjk noplugin"
 RESTRICT="nostrip"
 
-DEPEND="virtual/libc
+DEPEND="~virtual/libstdc++-3.3
 	>=sys-apps/sed-4"
 RDEPEND="amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.2-r1 )"
 PDEPEND="cjk? ( =media-fonts/acroread-asianfonts-5* )"

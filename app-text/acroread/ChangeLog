@@ -1,6 +1,13 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.75 2006/04/21 17:00:40 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.76 2006/06/01 18:30:41 genstef Exp $
+
+  01 Jun 2006; Stefan Schweizer <genstef@gentoo.org> acroread-5.10.ebuild,
+  -acroread-7.0.1.1.ebuild, -acroread-7.0.5.ebuild,
+  -acroread-7.0.5-r1.ebuild, acroread-7.0.5-r2.ebuild,
+  acroread-7.0.5-r3.ebuild:
+  RDEPEND on ~virtual/libstdc++-3.3 thanks to Yuri Vasilevski
+  <yvasilev@gentoo.org> in bug 109750, remove unused ebuilds
 
   21 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> acroread-5.10.ebuild,
   acroread-7.0.1.1.ebuild, acroread-7.0.5.ebuild, acroread-7.0.5-r1.ebuild,

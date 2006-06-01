@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.5-r2.ebuild,v 1.4 2006/04/21 17:00:40 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.5-r2.ebuild,v 1.5 2006/06/01 18:30:41 genstef Exp $
 
 inherit eutils nsplugins rpm versionator
 
@@ -31,7 +31,7 @@ KEYWORDS="-* amd64 x86"
 IUSE="cups ldap nsplugin nls"
 RESTRICT="nostrip nomirror"
 
-RDEPEND="virtual/libc
+RDEPEND="~virtual/libstdc++-3.3
 	x86? ( >=x11-libs/gtk+-2.0
 			cups? ( net-print/cups )
 			ldap? ( net-nds/openldap ) )
