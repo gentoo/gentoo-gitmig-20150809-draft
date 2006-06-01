@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.6_pre18.ebuild,v 1.1 2006/05/31 11:48:22 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.6_pre18.ebuild,v 1.2 2006/06/01 16:56:07 mr_bones_ Exp $
 
 inherit eutils versionator
 
@@ -40,7 +40,7 @@ pkg_setup() {
 src_compile() {
 	local myconf
 	use unicode && myconf="--with-screen=ncursesw"
-	
+
 	econf \
 		--libdir=/etc/lynx \
 		--enable-cgi-links \
