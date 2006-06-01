@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.3 2006/05/01 22:22:54 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.4 2006/06/01 15:34:16 markusle Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools
 
@@ -64,7 +64,7 @@ src_unpack() {
 
 	sed -e "s:@CC_OPTIONS@:${CFLAGS}:" \
 		-e "s:@FC_OPTIONS@:${FFLAGS}:" \
-		-e "s:@LD_LDFLAGS@:$LDFLAGS}:" \
+		-e "s:@LD_LDFLAGS@:${LDFLAGS} -lpthread:" \
 		-i Makefile.incl.in || die "Failed to fix Makefile.incl.in"
 }
 
