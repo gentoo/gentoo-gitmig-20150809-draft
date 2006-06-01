@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.148 2006/06/01 11:28:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.149 2006/06/01 16:35:38 tcort Exp $
+
+  01 Jun 2006; Thomas Cort <tcort@gentoo.org> kde-3.5.2.ebuild:
+  Stable on alpha wrt Bug #132213.
 
   01 Jun 2006; Carsten Lohrke <carlo@gentoo.org> kde-3.3.2.ebuild:
   kdeedu 3.3.2 is not mips'ified
