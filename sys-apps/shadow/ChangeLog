@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.146 2006/05/30 22:17:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.147 2006/06/01 03:38:22 tcort Exp $
+
+  31 May 2006; Thomas Cort <tcort@gentoo.org> shadow-4.0.15-r2.ebuild:
+  Stable on alpha wrt security Bug #133615.
 
   30 May 2006; Markus Ullmann <jokey@gentoo.org> shadow-4.0.15-r2.ebuild:
   Stable on arm wrt bug #133615
