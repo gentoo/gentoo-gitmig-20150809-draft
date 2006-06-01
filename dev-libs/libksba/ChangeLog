@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libksba
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.46 2006/05/30 21:38:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.47 2006/06/01 04:45:53 tcort Exp $
+
+  01 Jun 2006; Thomas Cort <tcort@gentoo.org> libksba-0.9.13.ebuild:
+  Stable on alpha wrt Bug #132343.
 
   30 May 2006; Gustavo Zacarias <gustavoz@gentoo.org> libksba-0.9.14.ebuild:
   Stable on sparc

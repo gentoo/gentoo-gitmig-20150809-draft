@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/libksba-0.9.13.ebuild,v 1.10 2006/05/30 01:55:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/libksba-0.9.13.ebuild,v 1.11 2006/06/01 04:45:53 tcort Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnupg/alpha/libksba/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ia64 ~mips ppc ~ppc-macos ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ~ppc-macos ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-libs/libgpg-error-0.7
