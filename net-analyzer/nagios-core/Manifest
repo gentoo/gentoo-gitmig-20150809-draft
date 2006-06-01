@@ -1,4 +1,4 @@
-MD5 73b0ed9174e0582dee85b5c38b0208c5 ChangeLog 15346
+MD5 31462a4d8ec68b4a639cefdaf6113f4b ChangeLog 15477
 MD5 446906907cccdbf195442373c6f17f77 files/2.x-series-nsca.patch 767
 MD5 673bda0ac6ab9230d23331e7f3846b7b files/99_nagios.conf 350
 MD5 f2947dec6b9a839da79606bcc394036b files/conf.d 409
@@ -16,4 +16,4 @@ MD5 b77809d363ccf9b561c099866e60ad3b nagios-core-1.4.1.ebuild 7508
 MD5 71fc67b930bb60a4b18c2fd2e55febbf nagios-core-1.4.ebuild 7504
 MD5 0db78682d06f57a5c4af37bad8cea745 nagios-core-2.3.1.ebuild 5995
 MD5 bad76591d737b015d248479440d94a51 nagios-core-2.3.ebuild 5990
-MD5 0db78682d06f57a5c4af37bad8cea745 nagios-core-2.4.ebuild 5995
+MD5 3632b2e5d0ab6ff9f5ba1e8bcdec7c87 nagios-core-2.4.ebuild 5993
