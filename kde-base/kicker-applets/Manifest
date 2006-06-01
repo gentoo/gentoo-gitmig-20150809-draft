@@ -1,7 +1,46 @@
-MD5 3e771d4980d9057381e573c497c98964 ChangeLog 6303
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX configure-fix-kdeaddons-xmms.patch 691 RMD160 2d029d99d3ee9037af30495d58d44dd67a6c4ec7 SHA1 299554e38c4cea7e1cb861f013069c5c4e79348b SHA256 d36247bc3bdda7c9109ed8af4de010b933b092c84a28e00f35c29d0a7cc2b64b
 MD5 a1717c6a0c5ce2efbdca2ecac8ac058e files/configure-fix-kdeaddons-xmms.patch 691
-MD5 fd6d25399b14b46e427295c383884e5b files/digest-kicker-applets-3.4.3 253
-MD5 191f6bee80885d21495b154d0b9b84fa files/digest-kicker-applets-3.5.2 253
+RMD160 2d029d99d3ee9037af30495d58d44dd67a6c4ec7 files/configure-fix-kdeaddons-xmms.patch 691
+SHA256 d36247bc3bdda7c9109ed8af4de010b933b092c84a28e00f35c29d0a7cc2b64b files/configure-fix-kdeaddons-xmms.patch 691
+DIST kdeaddons-3.4.3.tar.bz2 1593317 RMD160 1c11919ecbf1cfc31423e9fcda21e3c223ec1b28 SHA256 eec9d764d67cb2b93d86b3bde61736ff29214da1cf8a02fa7c7d80c6170de41b
+DIST kdeaddons-3.5.2.tar.bz2 1640284 RMD160 bc2ce1f93b34fcb2c7662da22edf4894c6524a12 SHA1 9d47ca0accdb37aa5c1f05dccd2991119800dbc8 SHA256 2a3eea9ff6b550b90d3f51d4862f7d7b992182ac225fdac0684cc16fb990c2ec
+DIST kdeaddons-3.5.3.tar.bz2 1646490 RMD160 c9b3eb823c4a66fc0b92fa932fc8312143c4fee3 SHA1 fd202fd051983765ec7b38bf0d5a7ac4c36cfb1f SHA256 a78e407820e7734b6374fd008560a7d3c0b22518cc29264560fa9df4239d6329
+EBUILD kicker-applets-3.4.3.ebuild 690 RMD160 bbfbadd71fa9007762a62c06947bef99a23b4f33 SHA1 73bd01fb7eaf4b5cdd87beed8e9bee8013fdec79 SHA256 7a10a80ecd3f970467fbc4cb299718b6549b4270976a6de164d74ef57d4553c2
 MD5 1ba35a6add1ab94202bfc893fccb3cff kicker-applets-3.4.3.ebuild 690
+RMD160 bbfbadd71fa9007762a62c06947bef99a23b4f33 kicker-applets-3.4.3.ebuild 690
+SHA256 7a10a80ecd3f970467fbc4cb299718b6549b4270976a6de164d74ef57d4553c2 kicker-applets-3.4.3.ebuild 690
+EBUILD kicker-applets-3.5.2.ebuild 571 RMD160 f1e03cd1be94a247e2c602d6872ffb964def4507 SHA1 1dc273ae45544ef8847b59c80a72ddccb27a0c52 SHA256 8900dcb8b832a9b9c6d14e4e28c99a3e6d8f97858e7505d5538ea9338328795c
 MD5 def898eae5dac37622738c60b8dcf094 kicker-applets-3.5.2.ebuild 571
+RMD160 f1e03cd1be94a247e2c602d6872ffb964def4507 kicker-applets-3.5.2.ebuild 571
+SHA256 8900dcb8b832a9b9c6d14e4e28c99a3e6d8f97858e7505d5538ea9338328795c kicker-applets-3.5.2.ebuild 571
+EBUILD kicker-applets-3.5.3.ebuild 581 RMD160 ac0c50db57214881dc27a75bb669092aa7fc2afb SHA1 40be83a59be9b615273ca8ce7bfb332380bafad1 SHA256 6d3f47508586f33f980ed3aeeccc9dc9c63e91e3f8bb11889c482af8bbf9a7d3
+MD5 8a436ad7b13da3a8d31d0ab31c669afe kicker-applets-3.5.3.ebuild 581
+RMD160 ac0c50db57214881dc27a75bb669092aa7fc2afb kicker-applets-3.5.3.ebuild 581
+SHA256 6d3f47508586f33f980ed3aeeccc9dc9c63e91e3f8bb11889c482af8bbf9a7d3 kicker-applets-3.5.3.ebuild 581
+MISC ChangeLog 6455 RMD160 a7d7923a9a5b26c9d22433d0c39fc0f52d486610 SHA1 2405c376c4561a870202703420477e9c7cc8e5d9 SHA256 e85e0f4fa4bd55d18e2dbc0410096ef24c39a798a4e2a71e988fb13f4d38b003
+MD5 456ea5fbed1d19bcb7231e73e39549dd ChangeLog 6455
+RMD160 a7d7923a9a5b26c9d22433d0c39fc0f52d486610 ChangeLog 6455
+SHA256 e85e0f4fa4bd55d18e2dbc0410096ef24c39a798a4e2a71e988fb13f4d38b003 ChangeLog 6455
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 fd6d25399b14b46e427295c383884e5b files/digest-kicker-applets-3.4.3 253
+RMD160 a8071b762f34309fc4da5fec31701ca5e0dbf4ff files/digest-kicker-applets-3.4.3 253
+SHA256 231a506a225cc64e1a74e9fcb90226f88e394d8c8bbe81384831257a5aa4193c files/digest-kicker-applets-3.4.3 253
+MD5 191f6bee80885d21495b154d0b9b84fa files/digest-kicker-applets-3.5.2 253
+RMD160 7ceef00c96f7c9306805433a9ea566dafc129421 files/digest-kicker-applets-3.5.2 253
+SHA256 f5eb118862fc6790d69ceb8771ddb6feb108003b6c8147c31412bea7a36b4d8b files/digest-kicker-applets-3.5.2 253
+MD5 fe87aa2a226c3d223f80fd6695141fa8 files/digest-kicker-applets-3.5.3 253
+RMD160 7cbfbb5dde613e0ab1039a5b9124ffd9e6f413c5 files/digest-kicker-applets-3.5.3 253
+SHA256 1bf34385e31edf42e9463af567e33db94d4c568246f174df253041b90ac55ec2 files/digest-kicker-applets-3.5.3 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEfzQeAiZjviIA2XgRAjBmAKDu8Lf+Sq9xn8NxFavY10wQce9VkQCg8FHF
+4l6t9boytbR2fCerrxjM3n8=
+=9gFV
+-----END PGP SIGNATURE-----

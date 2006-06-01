@@ -1,6 +1,42 @@
-MD5 3f4b1813504220eadde5b0ca02a3dc5e ChangeLog 6557
-MD5 da602d961a0b503c562f05868fba32fb files/digest-kdeartwork-iconthemes-3.4.3 259
-MD5 a703f4c18266818b6057e09748eba62d files/digest-kdeartwork-iconthemes-3.5.2 259
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdeartwork-3.4.3.tar.bz2 18022458 RMD160 d83c67eed8190c46b57682f5f8a96e083616fea9 SHA256 a7ce528fee0863bb39912af0467a1d7c463fba36f9dede8f2a2c1c8676b32172
+DIST kdeartwork-3.5.2.tar.bz2 16620565 RMD160 55c68134beb452c6316211f7a4fe1c0c4404a154 SHA1 12128d459cf26312769a66d3ec1935dd2cebc17d SHA256 c1df39d5eba36e5071e47c3534c3117abd91d0c9ae2b798a457fd29257218a31
+DIST kdeartwork-3.5.3.tar.bz2 16599096 RMD160 1dad7543b60acf98f143364e1910c3c49a66f607 SHA1 5eb0aa93b9be182721918d1f81d8ebe41cc857bb SHA256 92d78c09e960f99a6c0f6b026470e096b88357fd7c5646494f3beced6ac22d53
+EBUILD kdeartwork-iconthemes-3.4.3.ebuild 449 RMD160 33b70f3ba6f286331294d4cb3e5222c574984080 SHA1 632d9458117c11c10a1848d4d01f579f6bbcd912 SHA256 6caaabec21c024b2ca0f434c016c813577df407294ee49dacaf4edac512f2145
 MD5 acca812510238b10e065baba8001a642 kdeartwork-iconthemes-3.4.3.ebuild 449
+RMD160 33b70f3ba6f286331294d4cb3e5222c574984080 kdeartwork-iconthemes-3.4.3.ebuild 449
+SHA256 6caaabec21c024b2ca0f434c016c813577df407294ee49dacaf4edac512f2145 kdeartwork-iconthemes-3.4.3.ebuild 449
+EBUILD kdeartwork-iconthemes-3.5.2.ebuild 447 RMD160 5cd43ad86d00be0e6d100eb50cd4e10f93df6bf1 SHA1 f992b19dfa793694c4ba86092d0ab63f21ddd0a3 SHA256 a2d95df7e848fb5c085245f2b85df4469e178675454c8b5df201318cf8dc9fce
 MD5 b1b2ba8bd405c353eed376150b6ad093 kdeartwork-iconthemes-3.5.2.ebuild 447
+RMD160 5cd43ad86d00be0e6d100eb50cd4e10f93df6bf1 kdeartwork-iconthemes-3.5.2.ebuild 447
+SHA256 a2d95df7e848fb5c085245f2b85df4469e178675454c8b5df201318cf8dc9fce kdeartwork-iconthemes-3.5.2.ebuild 447
+EBUILD kdeartwork-iconthemes-3.5.3.ebuild 457 RMD160 2b8d4281d62a24314d2b24b46d10dc4603f79a2c SHA1 5536d57f59582e8f21294699d2a39516ebfb4b08 SHA256 661c189f69e10dea14caed87e56f434e13f537df972e782d03ab00e2d56a0141
+MD5 69c1a47eb625e28b12640b9dd7737b81 kdeartwork-iconthemes-3.5.3.ebuild 457
+RMD160 2b8d4281d62a24314d2b24b46d10dc4603f79a2c kdeartwork-iconthemes-3.5.3.ebuild 457
+SHA256 661c189f69e10dea14caed87e56f434e13f537df972e782d03ab00e2d56a0141 kdeartwork-iconthemes-3.5.3.ebuild 457
+MISC ChangeLog 6723 RMD160 0bbaf25ee01da6062603b26cd0df42cef73ec1c1 SHA1 0f20beaf95714d7d61d33814d38ed2301ace2011 SHA256 179e7b48951b6be871960833a1fa43e694d6433bcb4807d204ab1094bf2ac237
+MD5 747d2cd9c5b6749ff7a5b04f63e48411 ChangeLog 6723
+RMD160 0bbaf25ee01da6062603b26cd0df42cef73ec1c1 ChangeLog 6723
+SHA256 179e7b48951b6be871960833a1fa43e694d6433bcb4807d204ab1094bf2ac237 ChangeLog 6723
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 da602d961a0b503c562f05868fba32fb files/digest-kdeartwork-iconthemes-3.4.3 259
+RMD160 d06abdb953981b17ede0b38b32a5de16884d583e files/digest-kdeartwork-iconthemes-3.4.3 259
+SHA256 50f91495fd2af5b19534a266d15c6216dcbda1919f55143d88345a954682ec49 files/digest-kdeartwork-iconthemes-3.4.3 259
+MD5 a703f4c18266818b6057e09748eba62d files/digest-kdeartwork-iconthemes-3.5.2 259
+RMD160 f78abaabc7634910f3df6f87ffd89baf5fb1840b files/digest-kdeartwork-iconthemes-3.5.2 259
+SHA256 d29a0491904a0dd51e3fbb6f84794819177db93160bdea3043b5175331cd244c files/digest-kdeartwork-iconthemes-3.5.2 259
+MD5 32bf8c73c382e302a8b5beb0b0d2a227 files/digest-kdeartwork-iconthemes-3.5.3 259
+RMD160 1d8a5dfeeff5c3fa611b8935db1b7d99ed551f35 files/digest-kdeartwork-iconthemes-3.5.3 259
+SHA256 20beedeb46ef552f7d76938ce400b1f09acf7fd9a711734effbdb79e92e333c2 files/digest-kdeartwork-iconthemes-3.5.3 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEfyL/AiZjviIA2XgRAjILAJ40sZQNg0RgE08JxKoX4FgN/x+FYACgk2xZ
+tpM4NLZe6OI+ls15TCoIJ2c=
+=h+7l
+-----END PGP SIGNATURE-----

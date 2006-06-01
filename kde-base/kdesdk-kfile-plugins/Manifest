@@ -1,6 +1,44 @@
-MD5 2be84b6459b7163d38b1162b49cdfb5c ChangeLog 4388
-MD5 5596e49bb1fddea11ef9f8873da38337 files/digest-kdesdk-kfile-plugins-3.4.1 384
-MD5 3c2988dddde0b22990ae183163bd5e0b files/digest-kdesdk-kfile-plugins-3.5.1 244
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdesdk-3.4.0-3.4.1.tar.xdelta 255144
+DIST kdesdk-3.4.0.tar.bz2 4571452
+DIST kdesdk-3.4.1.tar.bz2 4589829 RMD160 1904a64db8249a149cf73077d22265ccf7f754f5 SHA256 97f4356aec68488ffe52be5d036510c281506153d4504deca20da0ae95807435
+DIST kdesdk-3.5.1.tar.bz2 4972114 RMD160 1f37f4bdc73ac2e5c8c75009ee24377ac981a2c0 SHA1 824cfe8ef8c05f2ebd25e90686bc26a68c084494 SHA256 198e09e1dbf6a7e34e74192eaed2b48f74a67be82781464a0b0c7a51f967d47c
+DIST kdesdk-3.5.3.tar.bz2 4909060 RMD160 53555dfd14889003d596790b8566b0f7f6dabc32 SHA1 6d463bff975605bef1ab89fe78ce6d9a8284fb64 SHA256 b600fe704db89a15cf908e36314dcfd7edfb896ee535fac00f5bf87b7eeb9971
+EBUILD kdesdk-kfile-plugins-3.4.1.ebuild 462 RMD160 057f35808ad5f4b30b27f6c5c84e9e80674cecae SHA1 17b44d10d84290cb81f8465d8bdc89605b811dd4 SHA256 3ea81eac71da463ffedbdb43a5f471f3fda099dba2c3cb0fd97de8af2364d61c
 MD5 e32a3ab0d2bd77a9786c373f598c5ec4 kdesdk-kfile-plugins-3.4.1.ebuild 462
+RMD160 057f35808ad5f4b30b27f6c5c84e9e80674cecae kdesdk-kfile-plugins-3.4.1.ebuild 462
+SHA256 3ea81eac71da463ffedbdb43a5f471f3fda099dba2c3cb0fd97de8af2364d61c kdesdk-kfile-plugins-3.4.1.ebuild 462
+EBUILD kdesdk-kfile-plugins-3.5.1.ebuild 468 RMD160 a63ac396710d222e76c30c03054b58c67442b2f2 SHA1 177bb9962b956b92f76cb52cea20bf0e55802036 SHA256 7fd1753e8a9d3d2f7050e59f2497031646cec6acba7c01cc5cd87ac56c114d3c
 MD5 d49c48d1f4024359190cb3a6edc94879 kdesdk-kfile-plugins-3.5.1.ebuild 468
+RMD160 a63ac396710d222e76c30c03054b58c67442b2f2 kdesdk-kfile-plugins-3.5.1.ebuild 468
+SHA256 7fd1753e8a9d3d2f7050e59f2497031646cec6acba7c01cc5cd87ac56c114d3c kdesdk-kfile-plugins-3.5.1.ebuild 468
+EBUILD kdesdk-kfile-plugins-3.5.3.ebuild 468 RMD160 a1bf59ddceb7431a3a088ab85c565868f013ffe9 SHA1 0c40d7c1881c54edb091e18f7e538c53db510157 SHA256 391d45559199fe3bb24185d650f06a5098237799464fa83d7e818249d066fb6c
+MD5 30e2e82a07f649479705c50739397729 kdesdk-kfile-plugins-3.5.3.ebuild 468
+RMD160 a1bf59ddceb7431a3a088ab85c565868f013ffe9 kdesdk-kfile-plugins-3.5.3.ebuild 468
+SHA256 391d45559199fe3bb24185d650f06a5098237799464fa83d7e818249d066fb6c kdesdk-kfile-plugins-3.5.3.ebuild 468
+MISC ChangeLog 4552 RMD160 b0fcdae5ac900ede2d5e3eceb95b98590d4ee3de SHA1 21aa1f38067d4bc4dbbbba05528fb587021faad9 SHA256 e48bd47d5e2a6a6f9968f0b81794778be86fc358116fab43afceaf8411179dde
+MD5 fc56d2fcb03b9d85efb32b27d425922b ChangeLog 4552
+RMD160 b0fcdae5ac900ede2d5e3eceb95b98590d4ee3de ChangeLog 4552
+SHA256 e48bd47d5e2a6a6f9968f0b81794778be86fc358116fab43afceaf8411179dde ChangeLog 4552
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 5596e49bb1fddea11ef9f8873da38337 files/digest-kdesdk-kfile-plugins-3.4.1 384
+RMD160 2decb2a4d1845334017989032d26428c23fd2103 files/digest-kdesdk-kfile-plugins-3.4.1 384
+SHA256 11207d780e31dd7cd77ce706b72457f2713e2212898811e47b9b6b80c68d9c8e files/digest-kdesdk-kfile-plugins-3.4.1 384
+MD5 3c2988dddde0b22990ae183163bd5e0b files/digest-kdesdk-kfile-plugins-3.5.1 244
+RMD160 faf5c8df6c8e8f93371d48641caca1ea762d60dc files/digest-kdesdk-kfile-plugins-3.5.1 244
+SHA256 a462032c397ef5f6f9bb0856d2c9467dac35821ee6a4a3db603ea3ec7225c12e files/digest-kdesdk-kfile-plugins-3.5.1 244
+MD5 4b7423569f4c5351c3cbfd09fbb8426d files/digest-kdesdk-kfile-plugins-3.5.3 244
+RMD160 f216fec63db827a60c69bb3f01027ef5e36ad599 files/digest-kdesdk-kfile-plugins-3.5.3 244
+SHA256 57e2205ec5b0917ef19b696f28fbcb17f97081c3237706feb5ab86aebe6aed1e files/digest-kdesdk-kfile-plugins-3.5.3 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEfyxIAiZjviIA2XgRAr/mAJ4g1PsQ3Le239WTzn2ErJDqUWXSYACeK+Q+
+zLw/oyg5oaxE4WKcsgr4qgg=
+=64h/
+-----END PGP SIGNATURE-----

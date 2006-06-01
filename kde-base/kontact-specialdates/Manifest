@@ -1,6 +1,42 @@
-MD5 fabb60ae6d5e6155d592c27c2c2c9b98 ChangeLog 6899
-MD5 078792b016dc323d645d7a2b33ed6913 files/digest-kontact-specialdates-3.4.3 247
-MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kontact-specialdates-3.5.2 247
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdepim-3.4.3.tar.bz2 11327132 RMD160 a1c15ae5759b9865297a28e0ee00f66b04fc2a96 SHA256 c44f3987e66a81b5cba6a9aded7f8deef6e7ea93ae9fb000a12c9865f609e5c6
+DIST kdepim-3.5.2.tar.bz2 12887336 RMD160 8e6571d14bbf6b3370c4fdb108a1a79625e87365 SHA1 1907bc219d2dd51a376a99d0f7e6b9af97d5adf7 SHA256 9c038a80912894b3ec132b2c7219ec5549ca80dcdeec88555928d2e038966539
+DIST kdepim-3.5.3.tar.bz2 12912017 RMD160 fdd951d6c117246f170986d944d3d61c094e9a00 SHA1 c957fffefaa73e8be670b2a2d639b82205fe5309 SHA256 460f9104c63c8a57801f5405be7c709e8604abf93c7f35ee9d60d20e0e0e5adb
+EBUILD kontact-specialdates-3.4.3.ebuild 1146 RMD160 acb13efea72402c6922fc10594ea4c719460f34d SHA1 5aa1d792369253eed7fd704c3d7c7fbb56995e80 SHA256 02011ae7b95c269dd6092e0347502a47af3f4fa438170bdd1d84f232a2254cb3
 MD5 aaa7c31a10028d13d4519432f16ef6fe kontact-specialdates-3.4.3.ebuild 1146
+RMD160 acb13efea72402c6922fc10594ea4c719460f34d kontact-specialdates-3.4.3.ebuild 1146
+SHA256 02011ae7b95c269dd6092e0347502a47af3f4fa438170bdd1d84f232a2254cb3 kontact-specialdates-3.4.3.ebuild 1146
+EBUILD kontact-specialdates-3.5.2.ebuild 1146 RMD160 fac364f576d5793e77cdc5d2f45ef135187eba55 SHA1 7729472fadf5927d5b7f026471b8ed1ad605bdc4 SHA256 6dca73836f44b51f1413330e9f0de48dc9161aa24cb169fff99cde5eaaaa58bb
 MD5 57bdbee9df13152a5d0faf4e10a1a156 kontact-specialdates-3.5.2.ebuild 1146
+RMD160 fac364f576d5793e77cdc5d2f45ef135187eba55 kontact-specialdates-3.5.2.ebuild 1146
+SHA256 6dca73836f44b51f1413330e9f0de48dc9161aa24cb169fff99cde5eaaaa58bb kontact-specialdates-3.5.2.ebuild 1146
+EBUILD kontact-specialdates-3.5.3.ebuild 1154 RMD160 4da6ea71df9bde9bf3db83a894b751f9a235229f SHA1 4c199db87a4024318bf694dc3a56b900a5aae35e SHA256 3099e017fe88d68adf6c489f615fc12aeec083018edf2efcd70b9f32fb6aba26
+MD5 b565dc349a5d260f2e5eaec77fe9b4f5 kontact-specialdates-3.5.3.ebuild 1154
+RMD160 4da6ea71df9bde9bf3db83a894b751f9a235229f kontact-specialdates-3.5.3.ebuild 1154
+SHA256 3099e017fe88d68adf6c489f615fc12aeec083018edf2efcd70b9f32fb6aba26 kontact-specialdates-3.5.3.ebuild 1154
+MISC ChangeLog 7063 RMD160 5e2a401d9c9a4d056cc96873b30c2783b2a35998 SHA1 d40ab9f0a21fd8a96fe4c5458302be9ded4a33b6 SHA256 ac416c51cc0a6f4b92591bf878e52e1724112944819afd34cda8e4bfeb422f25
+MD5 090d5bb687878228138065866fcc6aa4 ChangeLog 7063
+RMD160 5e2a401d9c9a4d056cc96873b30c2783b2a35998 ChangeLog 7063
+SHA256 ac416c51cc0a6f4b92591bf878e52e1724112944819afd34cda8e4bfeb422f25 ChangeLog 7063
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 078792b016dc323d645d7a2b33ed6913 files/digest-kontact-specialdates-3.4.3 247
+RMD160 bc5edc9614ec6bc755f7eebf14f94a4cce174e18 files/digest-kontact-specialdates-3.4.3 247
+SHA256 541b17828da40a695b28451a60321cd1bc8879fbd8deb2405ed060940085ac5a files/digest-kontact-specialdates-3.4.3 247
+MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kontact-specialdates-3.5.2 247
+RMD160 6593013cc2b82f2b51819d483733f409262d7d91 files/digest-kontact-specialdates-3.5.2 247
+SHA256 93b85550a7cebd0f79e5aed63e5719488cfdcc0ee049038fd423aefa50f64e59 files/digest-kontact-specialdates-3.5.2 247
+MD5 aa58a845e4fbca330f30697aa96d4ca4 files/digest-kontact-specialdates-3.5.3 247
+RMD160 c4c58f3aa2abb3ada2b022f3ef7139b337797f55 files/digest-kontact-specialdates-3.5.3 247
+SHA256 e33cfb820005fa9274027bcfa9177fa56650623d36aaef9a3a5625c5afc3af0b files/digest-kontact-specialdates-3.5.3 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEfz7uAiZjviIA2XgRAhuJAJ9Tya2OPWJQm92kkh+SVgBkpoehewCgm9ca
+sb/q5+cdOB27rSLaBxoz/D0=
+=4kJm
+-----END PGP SIGNATURE-----

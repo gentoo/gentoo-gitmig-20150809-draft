@@ -1,6 +1,39 @@
-MD5 279a4d04f865df14b72896ae3a225617 ChangeLog 6425
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeartwork-meta-3.4.3 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeartwork-meta-3.5.2 1
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+EBUILD kdeartwork-meta-3.4.3.ebuild 1010 RMD160 c162d4ab0fe1f960277953ed48875b8f9f1588be SHA1 b26f22ba9b326c101394d485bf93867b39a3a840 SHA256 6c0a90930e15230a4b4eb71e0c75833c0bdef49bb0dd74a2be20db8fc36306cb
 MD5 c632ddbf07b226cb89f64c7da5bbaeae kdeartwork-meta-3.4.3.ebuild 1010
+RMD160 c162d4ab0fe1f960277953ed48875b8f9f1588be kdeartwork-meta-3.4.3.ebuild 1010
+SHA256 6c0a90930e15230a4b4eb71e0c75833c0bdef49bb0dd74a2be20db8fc36306cb kdeartwork-meta-3.4.3.ebuild 1010
+EBUILD kdeartwork-meta-3.5.2.ebuild 1007 RMD160 08c74bf3d090b1a9b9be4cdf2f405fc680677e78 SHA1 092117800208889298876db5680483131e3dd23f SHA256 d559acbba1da99ef8d5f57605c5c925b7c61ccda25e25926c2a80cbc64e4bcd2
 MD5 2d49a84e6611b90560cf8523b2d57093 kdeartwork-meta-3.5.2.ebuild 1007
+RMD160 08c74bf3d090b1a9b9be4cdf2f405fc680677e78 kdeartwork-meta-3.5.2.ebuild 1007
+SHA256 d559acbba1da99ef8d5f57605c5c925b7c61ccda25e25926c2a80cbc64e4bcd2 kdeartwork-meta-3.5.2.ebuild 1007
+EBUILD kdeartwork-meta-3.5.3.ebuild 1017 RMD160 84c7da025a1482fb89cd1bfc16ec4f39027d0a1b SHA1 560bb068a30c93d551e380bf0fda7bb7c57c41a7 SHA256 c783ce66451d6af0dbfab15cc8e3724f924bc1a42d23261d7f82855a08f4b9ae
+MD5 a92920b408019c2de8ae941af94ebeb7 kdeartwork-meta-3.5.3.ebuild 1017
+RMD160 84c7da025a1482fb89cd1bfc16ec4f39027d0a1b kdeartwork-meta-3.5.3.ebuild 1017
+SHA256 c783ce66451d6af0dbfab15cc8e3724f924bc1a42d23261d7f82855a08f4b9ae kdeartwork-meta-3.5.3.ebuild 1017
+MISC ChangeLog 6579 RMD160 59e5448e40ce1d4e7c4a723ba369f3ce467223ef SHA1 ec534ab0199ddd57d89df523db9c2c2f374d80cb SHA256 499d9c0d03d016f2c1f3524cf39eb69943ae3be09b1ada24a99a08930d5d27f2
+MD5 a4ee78968fe3545b6a5ae92cc42fa43c ChangeLog 6579
+RMD160 59e5448e40ce1d4e7c4a723ba369f3ce467223ef ChangeLog 6579
+SHA256 499d9c0d03d016f2c1f3524cf39eb69943ae3be09b1ada24a99a08930d5d27f2 ChangeLog 6579
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeartwork-meta-3.4.3 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeartwork-meta-3.4.3 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeartwork-meta-3.4.3 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeartwork-meta-3.5.2 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeartwork-meta-3.5.2 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeartwork-meta-3.5.2 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeartwork-meta-3.5.3 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeartwork-meta-3.5.3 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeartwork-meta-3.5.3 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEfyP9AiZjviIA2XgRAg45AKCiW0RUkgJCc+eoSg+L/MuCUbjf1wCgz+xe
+bnkjagIxh9k3LykFwnoehws=
+=jQwD
+-----END PGP SIGNATURE-----

@@ -1,6 +1,36 @@
-MD5 77de754ea63d39d6fb2d04839063fd1a ChangeLog 5252
-MD5 2e3f0e138201fc8f5d2def5506a12f4d files/digest-kdeaddons-docs-konq-plugins-3.4.1 399
-MD5 191f6bee80885d21495b154d0b9b84fa files/digest-kdeaddons-docs-konq-plugins-3.5.2 253
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdeaddons-3.4.0-3.4.1.tar.xdelta 120597
+DIST kdeaddons-3.4.0.tar.bz2 1670919
+DIST kdeaddons-3.4.1.tar.bz2 1626243 RMD160 5f25241b250831d867652649ce06bf8bd37d2f16 SHA256 9a1751d604c15b42fd1764094b32f2970bac2865bb18c5177e57f1987c9b4dd6
+DIST kdeaddons-3.5.2.tar.bz2 1640284 RMD160 bc2ce1f93b34fcb2c7662da22edf4894c6524a12 SHA1 9d47ca0accdb37aa5c1f05dccd2991119800dbc8 SHA256 2a3eea9ff6b550b90d3f51d4862f7d7b992182ac225fdac0684cc16fb990c2ec
+EBUILD kdeaddons-docs-konq-plugins-3.4.1.ebuild 521 RMD160 9aa90a10f5c63262d643c6622ece16a221744207 SHA1 972bb268202ba4b51eb02665c3b9ff839659efed SHA256 96b671be3bcd9e947b12533fe1d4c00e4c2a32f483e959c14e5488002dff7d07
 MD5 11cf1fabd52d6035da02064d3b6d5724 kdeaddons-docs-konq-plugins-3.4.1.ebuild 521
-MD5 f8693faecdbb1127a06510a0bda49a2e kdeaddons-docs-konq-plugins-3.5.2.ebuild 516
+RMD160 9aa90a10f5c63262d643c6622ece16a221744207 kdeaddons-docs-konq-plugins-3.4.1.ebuild 521
+SHA256 96b671be3bcd9e947b12533fe1d4c00e4c2a32f483e959c14e5488002dff7d07 kdeaddons-docs-konq-plugins-3.4.1.ebuild 521
+EBUILD kdeaddons-docs-konq-plugins-3.5.2.ebuild 522 RMD160 7993d2d80e25c64d982f15e79d70b5e91cd9f9c9 SHA1 870e99723deb19c483e2c0a53ed783e2074a8536 SHA256 f74c4240849b1eb18df6ae79fbc7857b177becab2b35ae997acab535a7c84c19
+MD5 22d4280a7fa83ccb6b38101260cd6d71 kdeaddons-docs-konq-plugins-3.5.2.ebuild 522
+RMD160 7993d2d80e25c64d982f15e79d70b5e91cd9f9c9 kdeaddons-docs-konq-plugins-3.5.2.ebuild 522
+SHA256 f74c4240849b1eb18df6ae79fbc7857b177becab2b35ae997acab535a7c84c19 kdeaddons-docs-konq-plugins-3.5.2.ebuild 522
+MISC ChangeLog 5379 RMD160 3f2408a6196bdbfee5172329f4ab0fedad0a0203 SHA1 f0bfc683bc4d78f7484df3f8500738aa05aa3921 SHA256 8c585cc1158373fc7fe9f892d8f438b4640497ca8ad5864c44fcf0092b4ba7f0
+MD5 26f65cfbec07bf211f760548cd024144 ChangeLog 5379
+RMD160 3f2408a6196bdbfee5172329f4ab0fedad0a0203 ChangeLog 5379
+SHA256 8c585cc1158373fc7fe9f892d8f438b4640497ca8ad5864c44fcf0092b4ba7f0 ChangeLog 5379
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 2e3f0e138201fc8f5d2def5506a12f4d files/digest-kdeaddons-docs-konq-plugins-3.4.1 399
+RMD160 6dc6b454663724247da12f49a37dfa8c72b6dc5b files/digest-kdeaddons-docs-konq-plugins-3.4.1 399
+SHA256 e6ea3c097a7cfcce7485f936cc121e9a3e9c7fa88e066e8ed01505e2ae46585d files/digest-kdeaddons-docs-konq-plugins-3.4.1 399
+MD5 191f6bee80885d21495b154d0b9b84fa files/digest-kdeaddons-docs-konq-plugins-3.5.2 253
+RMD160 7ceef00c96f7c9306805433a9ea566dafc129421 files/digest-kdeaddons-docs-konq-plugins-3.5.2 253
+SHA256 f5eb118862fc6790d69ceb8771ddb6feb108003b6c8147c31412bea7a36b4d8b files/digest-kdeaddons-docs-konq-plugins-3.5.2 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEfyFzAiZjviIA2XgRAoZzAJ0WYZOZ1k6fw/1f0B2VJKNILM8KAgCfQ7m5
+6WhhG4NrBrBRG4PZnPUSUq0=
+=CXeD
+-----END PGP SIGNATURE-----

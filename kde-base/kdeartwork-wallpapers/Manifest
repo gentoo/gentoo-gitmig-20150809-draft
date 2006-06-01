@@ -1,6 +1,44 @@
-MD5 9d701ed05c48660e9a114da8bd53eedc ChangeLog 5446
-MD5 33e36dd7fa3219f4e514b9ff2ebf1b94 files/digest-kdeartwork-wallpapers-3.4.1 408
-MD5 a703f4c18266818b6057e09748eba62d files/digest-kdeartwork-wallpapers-3.5.2 259
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdeartwork-3.4.0-3.4.1.tar.xdelta 301755
+DIST kdeartwork-3.4.0.tar.bz2 18077818
+DIST kdeartwork-3.4.1.tar.bz2 18066167 RMD160 5bc92f78ea7967d4ffc6bb23802bc41d0881a974 SHA256 ae574222c96235e23816d5a903a1562101522e627bc265ed40fe79ce16391866
+DIST kdeartwork-3.5.2.tar.bz2 16620565 RMD160 55c68134beb452c6316211f7a4fe1c0c4404a154 SHA1 12128d459cf26312769a66d3ec1935dd2cebc17d SHA256 c1df39d5eba36e5071e47c3534c3117abd91d0c9ae2b798a457fd29257218a31
+DIST kdeartwork-3.5.3.tar.bz2 16599096 RMD160 1dad7543b60acf98f143364e1910c3c49a66f607 SHA1 5eb0aa93b9be182721918d1f81d8ebe41cc857bb SHA256 92d78c09e960f99a6c0f6b026470e096b88357fd7c5646494f3beced6ac22d53
+EBUILD kdeartwork-wallpapers-3.4.1.ebuild 452 RMD160 0f256db2034d770ca32aa64f7851b79cd57a9fec SHA1 ceef6ca2a6121b7d5cc4d1d249038b02b02cc959 SHA256 3646b5c3bf0ee3775db51b873665c6af12ec7f6e44221b4a090370c62c3c4e8c
 MD5 a28c63cd0e076379f52b193822446132 kdeartwork-wallpapers-3.4.1.ebuild 452
+RMD160 0f256db2034d770ca32aa64f7851b79cd57a9fec kdeartwork-wallpapers-3.4.1.ebuild 452
+SHA256 3646b5c3bf0ee3775db51b873665c6af12ec7f6e44221b4a090370c62c3c4e8c kdeartwork-wallpapers-3.4.1.ebuild 452
+EBUILD kdeartwork-wallpapers-3.5.2.ebuild 447 RMD160 ddd70a08e942005478af1bf0f2da9e89eec0e4fd SHA1 3312dea5c549305aaa9d6c3c6296eb4d9371abdb SHA256 4762be6847ea9114beec1fcbbd164575013ebd4cc57a50bdcc993cfa0a4dc0b4
 MD5 174d8686eff54da1302bd7375d3e1306 kdeartwork-wallpapers-3.5.2.ebuild 447
+RMD160 ddd70a08e942005478af1bf0f2da9e89eec0e4fd kdeartwork-wallpapers-3.5.2.ebuild 447
+SHA256 4762be6847ea9114beec1fcbbd164575013ebd4cc57a50bdcc993cfa0a4dc0b4 kdeartwork-wallpapers-3.5.2.ebuild 447
+EBUILD kdeartwork-wallpapers-3.5.3.ebuild 457 RMD160 cc1c4edb76dee1f0b15c9a4bc597be9ac843d126 SHA1 a7dd86822ea6c2365a62e2103eb580922afad7de SHA256 e4616f9498a9040165fc479d95dc8d2287ed165a81076a91e531bacef1f10b9a
+MD5 342b23da152d835dec1e1446448801dc kdeartwork-wallpapers-3.5.3.ebuild 457
+RMD160 cc1c4edb76dee1f0b15c9a4bc597be9ac843d126 kdeartwork-wallpapers-3.5.3.ebuild 457
+SHA256 e4616f9498a9040165fc479d95dc8d2287ed165a81076a91e531bacef1f10b9a kdeartwork-wallpapers-3.5.3.ebuild 457
+MISC ChangeLog 5612 RMD160 622d42b1c0d5d50a3c0deee2d01a88d8081c1ff6 SHA1 982b4d3c726c66b8aeee5af85a9a6617b5f5f515 SHA256 869205940858f79a48c1dc75021aee7caf87eaf414b132ff8d179272cf2a20f0
+MD5 e8804e5cd1ec5a21b6c6614a172dcb1f ChangeLog 5612
+RMD160 622d42b1c0d5d50a3c0deee2d01a88d8081c1ff6 ChangeLog 5612
+SHA256 869205940858f79a48c1dc75021aee7caf87eaf414b132ff8d179272cf2a20f0 ChangeLog 5612
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 33e36dd7fa3219f4e514b9ff2ebf1b94 files/digest-kdeartwork-wallpapers-3.4.1 408
+RMD160 074e8f98285166f0ebdceaaeb03ab0170c66574a files/digest-kdeartwork-wallpapers-3.4.1 408
+SHA256 405dde1e1a811777883f20d4368d27c1201ba547024b8af5dd1a9fbbcbb0b59c files/digest-kdeartwork-wallpapers-3.4.1 408
+MD5 a703f4c18266818b6057e09748eba62d files/digest-kdeartwork-wallpapers-3.5.2 259
+RMD160 f78abaabc7634910f3df6f87ffd89baf5fb1840b files/digest-kdeartwork-wallpapers-3.5.2 259
+SHA256 d29a0491904a0dd51e3fbb6f84794819177db93160bdea3043b5175331cd244c files/digest-kdeartwork-wallpapers-3.5.2 259
+MD5 32bf8c73c382e302a8b5beb0b0d2a227 files/digest-kdeartwork-wallpapers-3.5.3 259
+RMD160 1d8a5dfeeff5c3fa611b8935db1b7d99ed551f35 files/digest-kdeartwork-wallpapers-3.5.3 259
+SHA256 20beedeb46ef552f7d76938ce400b1f09acf7fd9a711734effbdb79e92e333c2 files/digest-kdeartwork-wallpapers-3.5.3 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEfySXAiZjviIA2XgRApXPAKC5YQ9igkydikYV8JXGPp/30VAqXwCeKuSJ
+jzVpaDIo+59JpkHXUIBd55c=
+=fFcp
+-----END PGP SIGNATURE-----

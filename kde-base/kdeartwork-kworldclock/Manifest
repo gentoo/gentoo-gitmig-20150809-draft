@@ -1,6 +1,42 @@
-MD5 dea80c326284b4a551864ed5b9e9dd09 ChangeLog 6461
-MD5 da602d961a0b503c562f05868fba32fb files/digest-kdeartwork-kworldclock-3.4.3 259
-MD5 a703f4c18266818b6057e09748eba62d files/digest-kdeartwork-kworldclock-3.5.2 259
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdeartwork-3.4.3.tar.bz2 18022458 RMD160 d83c67eed8190c46b57682f5f8a96e083616fea9 SHA256 a7ce528fee0863bb39912af0467a1d7c463fba36f9dede8f2a2c1c8676b32172
+DIST kdeartwork-3.5.2.tar.bz2 16620565 RMD160 55c68134beb452c6316211f7a4fe1c0c4404a154 SHA1 12128d459cf26312769a66d3ec1935dd2cebc17d SHA256 c1df39d5eba36e5071e47c3534c3117abd91d0c9ae2b798a457fd29257218a31
+DIST kdeartwork-3.5.3.tar.bz2 16599096 RMD160 1dad7543b60acf98f143364e1910c3c49a66f607 SHA1 5eb0aa93b9be182721918d1f81d8ebe41cc857bb SHA256 92d78c09e960f99a6c0f6b026470e096b88357fd7c5646494f3beced6ac22d53
+EBUILD kdeartwork-kworldclock-3.4.3.ebuild 514 RMD160 76fac973aae70a08cc06185b7b6c32f1049fca6e SHA1 4961f8c0051184999dfdd8dd199ccb14b3130314 SHA256 d30e4adb2461cb5245d38f00430a1363e965ca0c3a17ed5f79510351daf2afd7
 MD5 cc82fc53e9e390dc3d5c8aeac02bba66 kdeartwork-kworldclock-3.4.3.ebuild 514
+RMD160 76fac973aae70a08cc06185b7b6c32f1049fca6e kdeartwork-kworldclock-3.4.3.ebuild 514
+SHA256 d30e4adb2461cb5245d38f00430a1363e965ca0c3a17ed5f79510351daf2afd7 kdeartwork-kworldclock-3.4.3.ebuild 514
+EBUILD kdeartwork-kworldclock-3.5.2.ebuild 512 RMD160 dfcf1c7e93d7c8f450d6991b12638663e2109cea SHA1 a9b6c2db2af794c05fe0e3c919e3981333887bea SHA256 404594e016faab0dcfa413b79abaa955a143bbcdb425b86149470557332671d6
 MD5 5de34030857e2986f4b91aa89daca863 kdeartwork-kworldclock-3.5.2.ebuild 512
+RMD160 dfcf1c7e93d7c8f450d6991b12638663e2109cea kdeartwork-kworldclock-3.5.2.ebuild 512
+SHA256 404594e016faab0dcfa413b79abaa955a143bbcdb425b86149470557332671d6 kdeartwork-kworldclock-3.5.2.ebuild 512
+EBUILD kdeartwork-kworldclock-3.5.3.ebuild 522 RMD160 b96f2726c1a1a81d40f247f22308dd1e13cf6bf6 SHA1 e29a8615103b47818d18eb1b63a655f2f6796347 SHA256 b75f160bb46641aaeb540d793dcebf7ca3cc717176cefa4e9a2bc74b9d857e03
+MD5 5c5a7a2c05deeffa498792b2d555ef45 kdeartwork-kworldclock-3.5.3.ebuild 522
+RMD160 b96f2726c1a1a81d40f247f22308dd1e13cf6bf6 kdeartwork-kworldclock-3.5.3.ebuild 522
+SHA256 b75f160bb46641aaeb540d793dcebf7ca3cc717176cefa4e9a2bc74b9d857e03 kdeartwork-kworldclock-3.5.3.ebuild 522
+MISC ChangeLog 6629 RMD160 ca8cdc47d27599c51884008614c26c205b998e6f SHA1 72866bdb4b5053f615399ee01bef759e0fad1446 SHA256 8a0815d7e76eb1e4f6a9ec1d96b0e330c5c41a7f88b04339e688249643e9043a
+MD5 b5e2f64d2dc9b802ef2599a40c4bc4a7 ChangeLog 6629
+RMD160 ca8cdc47d27599c51884008614c26c205b998e6f ChangeLog 6629
+SHA256 8a0815d7e76eb1e4f6a9ec1d96b0e330c5c41a7f88b04339e688249643e9043a ChangeLog 6629
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 da602d961a0b503c562f05868fba32fb files/digest-kdeartwork-kworldclock-3.4.3 259
+RMD160 d06abdb953981b17ede0b38b32a5de16884d583e files/digest-kdeartwork-kworldclock-3.4.3 259
+SHA256 50f91495fd2af5b19534a266d15c6216dcbda1919f55143d88345a954682ec49 files/digest-kdeartwork-kworldclock-3.4.3 259
+MD5 a703f4c18266818b6057e09748eba62d files/digest-kdeartwork-kworldclock-3.5.2 259
+RMD160 f78abaabc7634910f3df6f87ffd89baf5fb1840b files/digest-kdeartwork-kworldclock-3.5.2 259
+SHA256 d29a0491904a0dd51e3fbb6f84794819177db93160bdea3043b5175331cd244c files/digest-kdeartwork-kworldclock-3.5.2 259
+MD5 32bf8c73c382e302a8b5beb0b0d2a227 files/digest-kdeartwork-kworldclock-3.5.3 259
+RMD160 1d8a5dfeeff5c3fa611b8935db1b7d99ed551f35 files/digest-kdeartwork-kworldclock-3.5.3 259
+SHA256 20beedeb46ef552f7d76938ce400b1f09acf7fd9a711734effbdb79e92e333c2 files/digest-kdeartwork-kworldclock-3.5.3 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEfyPCAiZjviIA2XgRAggiAJ4qb6cKqi1468gQ2rUWbj0dJgSIPwCgrOUF
+KDyleRj5dDylcW7bHBluyzY=
+=nmBP
+-----END PGP SIGNATURE-----

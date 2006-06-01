@@ -1,6 +1,42 @@
-MD5 6447de697f170c548a2ea85a83fc64a7 ChangeLog 6212
-MD5 fd6d25399b14b46e427295c383884e5b files/digest-knewsticker-scripts-3.4.3 253
-MD5 191f6bee80885d21495b154d0b9b84fa files/digest-knewsticker-scripts-3.5.2 253
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdeaddons-3.4.3.tar.bz2 1593317 RMD160 1c11919ecbf1cfc31423e9fcda21e3c223ec1b28 SHA256 eec9d764d67cb2b93d86b3bde61736ff29214da1cf8a02fa7c7d80c6170de41b
+DIST kdeaddons-3.5.2.tar.bz2 1640284 RMD160 bc2ce1f93b34fcb2c7662da22edf4894c6524a12 SHA1 9d47ca0accdb37aa5c1f05dccd2991119800dbc8 SHA256 2a3eea9ff6b550b90d3f51d4862f7d7b992182ac225fdac0684cc16fb990c2ec
+DIST kdeaddons-3.5.3.tar.bz2 1646490 RMD160 c9b3eb823c4a66fc0b92fa932fc8312143c4fee3 SHA1 fd202fd051983765ec7b38bf0d5a7ac4c36cfb1f SHA256 a78e407820e7734b6374fd008560a7d3c0b22518cc29264560fa9df4239d6329
+EBUILD knewsticker-scripts-3.4.3.ebuild 527 RMD160 f198607fa1377bfb915f7975558971ce08149e00 SHA1 f50fbabb4e569af555df004d7f7cfcfd7f053419 SHA256 bf4064402686fc245b79c733711df34defde6ef8002be49b65c0d798c8906a91
 MD5 bb6c943133ad913c279c0c1f7ebad6fe knewsticker-scripts-3.4.3.ebuild 527
+RMD160 f198607fa1377bfb915f7975558971ce08149e00 knewsticker-scripts-3.4.3.ebuild 527
+SHA256 bf4064402686fc245b79c733711df34defde6ef8002be49b65c0d798c8906a91 knewsticker-scripts-3.4.3.ebuild 527
+EBUILD knewsticker-scripts-3.5.2.ebuild 488 RMD160 00f46414953cd4e94b42658d4c110cadba0b9969 SHA1 8dd7ecdcd89605cf99302ac7a33e9dc485cad97f SHA256 5b74f4e398198ffdfe9e0c17bf57b763cfb0e6351ad0f70786c87c4ea8d58e21
 MD5 798abb96469f3eae89108e9d7aeec2f6 knewsticker-scripts-3.5.2.ebuild 488
+RMD160 00f46414953cd4e94b42658d4c110cadba0b9969 knewsticker-scripts-3.5.2.ebuild 488
+SHA256 5b74f4e398198ffdfe9e0c17bf57b763cfb0e6351ad0f70786c87c4ea8d58e21 knewsticker-scripts-3.5.2.ebuild 488
+EBUILD knewsticker-scripts-3.5.3.ebuild 498 RMD160 e6fdfe44cb269c0100ad89f0941a8a394e9fd05b SHA1 028258e9ecad45810225cb10de6ce288adec9b13 SHA256 7473c8e367cccfcc9f57cb653fff34db0b20784bc8a9c6c353d3f7bca4555288
+MD5 6c3278a2a865875066d01cb0efb3e48d knewsticker-scripts-3.5.3.ebuild 498
+RMD160 e6fdfe44cb269c0100ad89f0941a8a394e9fd05b knewsticker-scripts-3.5.3.ebuild 498
+SHA256 7473c8e367cccfcc9f57cb653fff34db0b20784bc8a9c6c353d3f7bca4555288 knewsticker-scripts-3.5.3.ebuild 498
+MISC ChangeLog 6374 RMD160 44f3dfa958bc0acce669c765659354b6c3be72b8 SHA1 c913d74d2659d6aeacc49c7ffe6a540e0bd8a2ee SHA256 564c53c2575e545f4c9146132dddfec0899417abc37b2e164be4cc00df91ab6e
+MD5 86aab3b9f589223d639c280a87c8eeb9 ChangeLog 6374
+RMD160 44f3dfa958bc0acce669c765659354b6c3be72b8 ChangeLog 6374
+SHA256 564c53c2575e545f4c9146132dddfec0899417abc37b2e164be4cc00df91ab6e ChangeLog 6374
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 fd6d25399b14b46e427295c383884e5b files/digest-knewsticker-scripts-3.4.3 253
+RMD160 a8071b762f34309fc4da5fec31701ca5e0dbf4ff files/digest-knewsticker-scripts-3.4.3 253
+SHA256 231a506a225cc64e1a74e9fcb90226f88e394d8c8bbe81384831257a5aa4193c files/digest-knewsticker-scripts-3.4.3 253
+MD5 191f6bee80885d21495b154d0b9b84fa files/digest-knewsticker-scripts-3.5.2 253
+RMD160 7ceef00c96f7c9306805433a9ea566dafc129421 files/digest-knewsticker-scripts-3.5.2 253
+SHA256 f5eb118862fc6790d69ceb8771ddb6feb108003b6c8147c31412bea7a36b4d8b files/digest-knewsticker-scripts-3.5.2 253
+MD5 fe87aa2a226c3d223f80fd6695141fa8 files/digest-knewsticker-scripts-3.5.3 253
+RMD160 7cbfbb5dde613e0ab1039a5b9124ffd9e6f413c5 files/digest-knewsticker-scripts-3.5.3 253
+SHA256 1bf34385e31edf42e9463af567e33db94d4c568246f174df253041b90ac55ec2 files/digest-knewsticker-scripts-3.5.3 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEfztzAiZjviIA2XgRAoc0AKDSJmeo5IFIp/RoS1hbfltm2NuVZgCgj4ZR
+WucjHEEGHSW1olFf3WeB+Dc=
+=wF5X
+-----END PGP SIGNATURE-----

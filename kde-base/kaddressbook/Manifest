@@ -1,8 +1,50 @@
-MD5 51cc51c884c72fd35e40e4586562ece5 ChangeLog 6612
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX configure-fix-kdepim-gnokii-3.4.patch 1965 RMD160 1e0c88eeb8c74cf7d052ce9d8e27e3c250d9340d SHA1 7e4d23d242f3b55a1a4a3d8f68b63f099cb6db3a SHA256 00e603dec06e30d22a22deedb3d7cf1b424e7af0c6b283919b5208c55e5d895e
 MD5 98742ffe69ec2a609069bb2804d85af8 files/configure-fix-kdepim-gnokii-3.4.patch 1965
-MD5 078792b016dc323d645d7a2b33ed6913 files/digest-kaddressbook-3.4.3 247
-MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kaddressbook-3.5.2-r1 247
+RMD160 1e0c88eeb8c74cf7d052ce9d8e27e3c250d9340d files/configure-fix-kdepim-gnokii-3.4.patch 1965
+SHA256 00e603dec06e30d22a22deedb3d7cf1b424e7af0c6b283919b5208c55e5d895e files/configure-fix-kdepim-gnokii-3.4.patch 1965
+AUX kaddressbook-3.5.2-addressee-hompage-fix.diff 730 RMD160 a814b811d5dec75b6a21ac8c37c4d36e85fc8342 SHA1 ca76353770ae6fb7d4175e1c82ec00fb9c2564d9 SHA256 6d90bd8d5995a3d13efdfd81ff298946cdb837eb8e032f742e5abf0b9b69b929
 MD5 6cc2ca285f46bebab23dc9c21174b027 files/kaddressbook-3.5.2-addressee-hompage-fix.diff 730
+RMD160 a814b811d5dec75b6a21ac8c37c4d36e85fc8342 files/kaddressbook-3.5.2-addressee-hompage-fix.diff 730
+SHA256 6d90bd8d5995a3d13efdfd81ff298946cdb837eb8e032f742e5abf0b9b69b929 files/kaddressbook-3.5.2-addressee-hompage-fix.diff 730
+DIST kdepim-3.4.3.tar.bz2 11327132 RMD160 a1c15ae5759b9865297a28e0ee00f66b04fc2a96 SHA256 c44f3987e66a81b5cba6a9aded7f8deef6e7ea93ae9fb000a12c9865f609e5c6
+DIST kdepim-3.5.2.tar.bz2 12887336 RMD160 8e6571d14bbf6b3370c4fdb108a1a79625e87365 SHA1 1907bc219d2dd51a376a99d0f7e6b9af97d5adf7 SHA256 9c038a80912894b3ec132b2c7219ec5549ca80dcdeec88555928d2e038966539
+DIST kdepim-3.5.3.tar.bz2 12912017 RMD160 fdd951d6c117246f170986d944d3d61c094e9a00 SHA1 c957fffefaa73e8be670b2a2d639b82205fe5309 SHA256 460f9104c63c8a57801f5405be7c709e8604abf93c7f35ee9d60d20e0e0e5adb
+EBUILD kaddressbook-3.4.3.ebuild 1678 RMD160 5d5b9ed9dedee92091be21f73e1caaf92572134a SHA1 9f9b70a56f13d92c1f613ac1cdf1c2cbcdc9c563 SHA256 b792571fd5cb7923171f8ded1c3c06bfd8a6409f1d4f24f2cdf2a90a52356dbd
 MD5 41f6eaae93daafd3e92a8abbe77dabf7 kaddressbook-3.4.3.ebuild 1678
+RMD160 5d5b9ed9dedee92091be21f73e1caaf92572134a kaddressbook-3.4.3.ebuild 1678
+SHA256 b792571fd5cb7923171f8ded1c3c06bfd8a6409f1d4f24f2cdf2a90a52356dbd kaddressbook-3.4.3.ebuild 1678
+EBUILD kaddressbook-3.5.2-r1.ebuild 1689 RMD160 da3f093bc02a4fbd73302d90fe19883f51282754 SHA1 9e43d589bc2b76c76be50f28dd951be09ede7140 SHA256 67a8bad6fd0736a68da0f6b2c70fb31f12e140a04facf7a33c08cea39c52a7df
 MD5 e942a64935ee287ba68a3d0a83974cd6 kaddressbook-3.5.2-r1.ebuild 1689
+RMD160 da3f093bc02a4fbd73302d90fe19883f51282754 kaddressbook-3.5.2-r1.ebuild 1689
+SHA256 67a8bad6fd0736a68da0f6b2c70fb31f12e140a04facf7a33c08cea39c52a7df kaddressbook-3.5.2-r1.ebuild 1689
+EBUILD kaddressbook-3.5.3.ebuild 1626 RMD160 310598edc16f291d84e310738d3503cf9e195ac4 SHA1 3a1fd03a0da41b16c19c6775014a7dd12a7aaa40 SHA256 f629889d14c0be3c295045be939542c9460832041e664e879a290dac26d293a1
+MD5 3e2c7efd3fc571bd69ab3d66ee1c65b2 kaddressbook-3.5.3.ebuild 1626
+RMD160 310598edc16f291d84e310738d3503cf9e195ac4 kaddressbook-3.5.3.ebuild 1626
+SHA256 f629889d14c0be3c295045be939542c9460832041e664e879a290dac26d293a1 kaddressbook-3.5.3.ebuild 1626
+MISC ChangeLog 6760 RMD160 c4a039c5d4cd51230267ff2e831ebb3488c36cd5 SHA1 4e3a8d7b45257574e18a470140dfa508c9f1efd1 SHA256 345bf0f06a7bb4dd82ca87abaa59c3e73acd91ffdd9a2d33311cd8e1257d84f8
+MD5 4d472f8db7425b9ea63d9f734c140861 ChangeLog 6760
+RMD160 c4a039c5d4cd51230267ff2e831ebb3488c36cd5 ChangeLog 6760
+SHA256 345bf0f06a7bb4dd82ca87abaa59c3e73acd91ffdd9a2d33311cd8e1257d84f8 ChangeLog 6760
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 078792b016dc323d645d7a2b33ed6913 files/digest-kaddressbook-3.4.3 247
+RMD160 bc5edc9614ec6bc755f7eebf14f94a4cce174e18 files/digest-kaddressbook-3.4.3 247
+SHA256 541b17828da40a695b28451a60321cd1bc8879fbd8deb2405ed060940085ac5a files/digest-kaddressbook-3.4.3 247
+MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kaddressbook-3.5.2-r1 247
+RMD160 6593013cc2b82f2b51819d483733f409262d7d91 files/digest-kaddressbook-3.5.2-r1 247
+SHA256 93b85550a7cebd0f79e5aed63e5719488cfdcc0ee049038fd423aefa50f64e59 files/digest-kaddressbook-3.5.2-r1 247
+MD5 aa58a845e4fbca330f30697aa96d4ca4 files/digest-kaddressbook-3.5.3 247
+RMD160 c4c58f3aa2abb3ada2b022f3ef7139b337797f55 files/digest-kaddressbook-3.5.3 247
+SHA256 e33cfb820005fa9274027bcfa9177fa56650623d36aaef9a3a5625c5afc3af0b files/digest-kaddressbook-3.5.3 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEfxjeAiZjviIA2XgRAr0fAKDDWRmT73JT4GQQ+Q+N2a88jWDzRgCdGCr4
+kmgtmf97pir7+WXY1omg6rU=
+=rdTM
+-----END PGP SIGNATURE-----

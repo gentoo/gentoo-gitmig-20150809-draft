@@ -1,6 +1,42 @@
-MD5 eded3dc9e6ab70f0963a2ee0757d961e ChangeLog 7368
-MD5 940122572881cf125988ce027b22e781 files/digest-kdemultimedia-kfile-plugins-3.4.3 265
-MD5 c6f3f23fcb5a1fa806c5073f45b26b59 files/digest-kdemultimedia-kfile-plugins-3.5.2 265
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdemultimedia-3.4.3.tar.bz2 5495757 RMD160 318ebd3149019ec2e5d98b57a548d3ef350a7924 SHA256 adc29df6c427b505c3b1559c2ea393e9a65c3120dfce5207419ba5dd16aa2d4e
+DIST kdemultimedia-3.5.2.tar.bz2 6272386 RMD160 4f6fcb790e63f4af7a309677babd5e2ed938514f SHA1 68e5e24709a2c06777bb3f12fc76e733f5896c5d SHA256 01562af68008c10c04346a94d0dea7cedcb77673c0b7cd5cfc74360bf309a2f8
+DIST kdemultimedia-3.5.3.tar.bz2 6276838 RMD160 2ae4ba9266b84b972e3bcd106896b6ea0124aa32 SHA1 2a75ba49bbc513b4ab5cb0d039949984742f94f5 SHA256 4e976190f71b4a86feb2350d014bb775d230feee0013ac92b40e4b0aaf23a12f
+EBUILD kdemultimedia-kfile-plugins-3.4.3.ebuild 671 RMD160 69e4660a835e6a3b6cc5fdf46bbbc84f259e30f3 SHA1 75e26860db1f2e3a36e9f7bf4173486f6dc798a6 SHA256 0e9d935642d03682978142ffec7e0ae3ff4a253eaaefc37d65013b07765656ac
 MD5 937af5b05f577b850c8d5ce38f12d977 kdemultimedia-kfile-plugins-3.4.3.ebuild 671
+RMD160 69e4660a835e6a3b6cc5fdf46bbbc84f259e30f3 kdemultimedia-kfile-plugins-3.4.3.ebuild 671
+SHA256 0e9d935642d03682978142ffec7e0ae3ff4a253eaaefc37d65013b07765656ac kdemultimedia-kfile-plugins-3.4.3.ebuild 671
+EBUILD kdemultimedia-kfile-plugins-3.5.2.ebuild 669 RMD160 66207b5065b31fcf672589ddf6b84a02e0f6c02a SHA1 5556a2c721bfec229337ce9f484a7f4ef7bf05e4 SHA256 10c29d3baed9308faf810beff43979f06da8ff70fdd430c947000554bdbba7eb
 MD5 fc27e02f3bc11f61842e16a49b474e06 kdemultimedia-kfile-plugins-3.5.2.ebuild 669
+RMD160 66207b5065b31fcf672589ddf6b84a02e0f6c02a kdemultimedia-kfile-plugins-3.5.2.ebuild 669
+SHA256 10c29d3baed9308faf810beff43979f06da8ff70fdd430c947000554bdbba7eb kdemultimedia-kfile-plugins-3.5.2.ebuild 669
+EBUILD kdemultimedia-kfile-plugins-3.5.3.ebuild 679 RMD160 049c3629710a300b72392a0825d1046fc2a986ed SHA1 80cf92c1ecf03ae92aa066159342f4c7d16bd6e1 SHA256 ac73fcb552be88623150faefab5436e29f93ae2eeca15a845a564c21d99e3ce3
+MD5 94f5b7d53c81424640b456329ac736a5 kdemultimedia-kfile-plugins-3.5.3.ebuild 679
+RMD160 049c3629710a300b72392a0825d1046fc2a986ed kdemultimedia-kfile-plugins-3.5.3.ebuild 679
+SHA256 ac73fcb552be88623150faefab5436e29f93ae2eeca15a845a564c21d99e3ce3 kdemultimedia-kfile-plugins-3.5.3.ebuild 679
+MISC ChangeLog 7546 RMD160 4efc10e77f14acaea82c12f23acfe71639a22833 SHA1 725bd7d71a2d468b544a5a294184e0835a67cebb SHA256 45d6fa3cf1c0c3bf9008b2ab0329a9d544899893aaecc302d6b06093e008fa3b
+MD5 145bd55cb9f5ca5a19fdcee63ad999b0 ChangeLog 7546
+RMD160 4efc10e77f14acaea82c12f23acfe71639a22833 ChangeLog 7546
+SHA256 45d6fa3cf1c0c3bf9008b2ab0329a9d544899893aaecc302d6b06093e008fa3b ChangeLog 7546
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 940122572881cf125988ce027b22e781 files/digest-kdemultimedia-kfile-plugins-3.4.3 265
+RMD160 1b3c4a801605535bd75648e814a9955b3f535632 files/digest-kdemultimedia-kfile-plugins-3.4.3 265
+SHA256 2eb27eba7bd8dfb53a9f66dbb91ffe5ef3b7ee1d721bbc64272ddd2cea4ac5e7 files/digest-kdemultimedia-kfile-plugins-3.4.3 265
+MD5 c6f3f23fcb5a1fa806c5073f45b26b59 files/digest-kdemultimedia-kfile-plugins-3.5.2 265
+RMD160 5e81c0b91adc803bf7923ec3176b9ff50217ed22 files/digest-kdemultimedia-kfile-plugins-3.5.2 265
+SHA256 da5960a94d94974711cce49b9e15a2465e392feb2dd48db846adce8d9e02d864 files/digest-kdemultimedia-kfile-plugins-3.5.2 265
+MD5 ce67ee8c3e2975ac7bc343af2f0ef87f files/digest-kdemultimedia-kfile-plugins-3.5.3 265
+RMD160 1dedc9e07392c66c424497d1e686c3af8ec30ff5 files/digest-kdemultimedia-kfile-plugins-3.5.3 265
+SHA256 40d78b21ca110b497ec4b7377ae5dff2436e974a675297ec5d269b4a747f7920 files/digest-kdemultimedia-kfile-plugins-3.5.3 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEfymJAiZjviIA2XgRAg1aAJ9A/n/SYTl/tEYiXjWIsYEiSHNqPACg3BhH
+iZRvh7dJXLyXlFIeX0YO1kc=
+=wtgH
+-----END PGP SIGNATURE-----

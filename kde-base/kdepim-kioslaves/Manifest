@@ -1,10 +1,58 @@
-MD5 b54eafa3ed96fe030417f701c7ae9c30 ChangeLog 7656
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX configure-fix-kdepim-sasl.patch 1750 RMD160 12241086d3236561dbfd0b6327e2e74d14d36fe2 SHA1 3a6c8a31652bd12cbb58dcaec9cd0c226b6c8c37 SHA256 f2be81ff5a865624f5b55613ea5aa1ecf45f5c7fa99bec514e0ab973fe2bdc9a
 MD5 4781ed6b323012399cdd6a4c4f5070f0 files/configure-fix-kdepim-sasl.patch 1750
-MD5 078792b016dc323d645d7a2b33ed6913 files/digest-kdepim-kioslaves-3.4.3 247
-MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kdepim-kioslaves-3.5.2-r3 247
+RMD160 12241086d3236561dbfd0b6327e2e74d14d36fe2 files/configure-fix-kdepim-sasl.patch 1750
+SHA256 f2be81ff5a865624f5b55613ea5aa1ecf45f5c7fa99bec514e0ab973fe2bdc9a files/configure-fix-kdepim-sasl.patch 1750
+AUX imap-dos.diff 588 RMD160 1386a3f440a0f6ca6b2131e75ddeff14ab939231 SHA1 3a4b8d34fd2740d671abd1d9397c60ae02130929 SHA256 ff0d36381d76ecd05fc7b159d1d552fc402d76c94981122b08d0cd37d52c2dd3
 MD5 d35a0d3aa0ceb7fabae33d323ae281dd files/imap-dos.diff 588
+RMD160 1386a3f440a0f6ca6b2131e75ddeff14ab939231 files/imap-dos.diff 588
+SHA256 ff0d36381d76ecd05fc7b159d1d552fc402d76c94981122b08d0cd37d52c2dd3 files/imap-dos.diff 588
+AUX kdepim-kioslaves-3.5.2-fixes-2.diff 2836 RMD160 ff7ddc20225b1b9ccbd91506dc6ab457099b3e67 SHA1 e674d13c4b2315fe8e9c2e91082de89f4aa169ea SHA256 d9a6632a47ee4e5d10b6f0b2a37d6f315a68e860bcc41b695b4d209e1a0217bf
 MD5 8402c9a25324281f38c83ea3ebc20c24 files/kdepim-kioslaves-3.5.2-fixes-2.diff 2836
+RMD160 ff7ddc20225b1b9ccbd91506dc6ab457099b3e67 files/kdepim-kioslaves-3.5.2-fixes-2.diff 2836
+SHA256 d9a6632a47ee4e5d10b6f0b2a37d6f315a68e860bcc41b695b4d209e1a0217bf files/kdepim-kioslaves-3.5.2-fixes-2.diff 2836
+AUX kdepim-kioslaves-3.5.2-fixes.diff 1655 RMD160 6fd8a2ddd856362b687c4e37e8225ab518f40c73 SHA1 c28feb3eb620569f70b97431a72c6ad314bc02ab SHA256 dbf01e6c006c824aa1c0ca8e5b0fa7f1fd9f56f5cbfc2741c8f35d747f182ebe
 MD5 9a96c94ff9bc1bbd832aecdf10ba3d9c files/kdepim-kioslaves-3.5.2-fixes.diff 1655
+RMD160 6fd8a2ddd856362b687c4e37e8225ab518f40c73 files/kdepim-kioslaves-3.5.2-fixes.diff 1655
+SHA256 dbf01e6c006c824aa1c0ca8e5b0fa7f1fd9f56f5cbfc2741c8f35d747f182ebe files/kdepim-kioslaves-3.5.2-fixes.diff 1655
+DIST kdepim-3.4.3.tar.bz2 11327132 RMD160 a1c15ae5759b9865297a28e0ee00f66b04fc2a96 SHA256 c44f3987e66a81b5cba6a9aded7f8deef6e7ea93ae9fb000a12c9865f609e5c6
+DIST kdepim-3.5.2.tar.bz2 12887336 RMD160 8e6571d14bbf6b3370c4fdb108a1a79625e87365 SHA1 1907bc219d2dd51a376a99d0f7e6b9af97d5adf7 SHA256 9c038a80912894b3ec132b2c7219ec5549ca80dcdeec88555928d2e038966539
+DIST kdepim-3.5.3.tar.bz2 12912017 RMD160 fdd951d6c117246f170986d944d3d61c094e9a00 SHA1 c957fffefaa73e8be670b2a2d639b82205fe5309 SHA256 460f9104c63c8a57801f5405be7c709e8604abf93c7f35ee9d60d20e0e0e5adb
+EBUILD kdepim-kioslaves-3.4.3.ebuild 717 RMD160 edaf263d9d7953a9fab079cdb2e78ee8929b61cc SHA1 1a411693ff5d67eb1d58f8c606f6ea5be1e0a03a SHA256 50168152006a9cd5e4bd9540282796469d00b7f0a1a07cb64088cabd69ff127c
 MD5 b6560bfad14a08b0198917343ac20a0f kdepim-kioslaves-3.4.3.ebuild 717
+RMD160 edaf263d9d7953a9fab079cdb2e78ee8929b61cc kdepim-kioslaves-3.4.3.ebuild 717
+SHA256 50168152006a9cd5e4bd9540282796469d00b7f0a1a07cb64088cabd69ff127c kdepim-kioslaves-3.4.3.ebuild 717
+EBUILD kdepim-kioslaves-3.5.2-r3.ebuild 750 RMD160 bb47c5e05c85217e20d51178c9faf73baf8007fb SHA1 a783f421959508803e80c7eb9c72356a0513c4a0 SHA256 3e96ab68c92d63b73554176316a4b6ad019ad66d0901b74a1e426a7e1ef9c492
 MD5 8bc95434e55ad2decae9a3cf7d42af81 kdepim-kioslaves-3.5.2-r3.ebuild 750
+RMD160 bb47c5e05c85217e20d51178c9faf73baf8007fb kdepim-kioslaves-3.5.2-r3.ebuild 750
+SHA256 3e96ab68c92d63b73554176316a4b6ad019ad66d0901b74a1e426a7e1ef9c492 kdepim-kioslaves-3.5.2-r3.ebuild 750
+EBUILD kdepim-kioslaves-3.5.3.ebuild 755 RMD160 9ac1524a20b3c4818c1006f3c33e46de1fa2538a SHA1 6d52410147de91b03a706fb47e83406b5fb273d2 SHA256 c04fd15a224a94e3b33602f6870254412d3620ae375cdbcfe557ac1a62ff42b5
+MD5 78b12e2568a4f8d6888eb7172df79852 kdepim-kioslaves-3.5.3.ebuild 755
+RMD160 9ac1524a20b3c4818c1006f3c33e46de1fa2538a kdepim-kioslaves-3.5.3.ebuild 755
+SHA256 c04fd15a224a94e3b33602f6870254412d3620ae375cdbcfe557ac1a62ff42b5 kdepim-kioslaves-3.5.3.ebuild 755
+MISC ChangeLog 7812 RMD160 f55d3da256233f9753d24343fee3a49487dbc9c1 SHA1 4cb69c8072687a4fa77fc7fb4cec19576da68463 SHA256 ad6200c117c6fbf753a131a328e910277b02defdd20293afa198dfed0961084c
+MD5 48907eb9222ea959176cc80867e1bf0b ChangeLog 7812
+RMD160 f55d3da256233f9753d24343fee3a49487dbc9c1 ChangeLog 7812
+SHA256 ad6200c117c6fbf753a131a328e910277b02defdd20293afa198dfed0961084c ChangeLog 7812
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 078792b016dc323d645d7a2b33ed6913 files/digest-kdepim-kioslaves-3.4.3 247
+RMD160 bc5edc9614ec6bc755f7eebf14f94a4cce174e18 files/digest-kdepim-kioslaves-3.4.3 247
+SHA256 541b17828da40a695b28451a60321cd1bc8879fbd8deb2405ed060940085ac5a files/digest-kdepim-kioslaves-3.4.3 247
+MD5 4b77483fe398773d23a75714c3dd6223 files/digest-kdepim-kioslaves-3.5.2-r3 247
+RMD160 6593013cc2b82f2b51819d483733f409262d7d91 files/digest-kdepim-kioslaves-3.5.2-r3 247
+SHA256 93b85550a7cebd0f79e5aed63e5719488cfdcc0ee049038fd423aefa50f64e59 files/digest-kdepim-kioslaves-3.5.2-r3 247
+MD5 aa58a845e4fbca330f30697aa96d4ca4 files/digest-kdepim-kioslaves-3.5.3 247
+RMD160 c4c58f3aa2abb3ada2b022f3ef7139b337797f55 files/digest-kdepim-kioslaves-3.5.3 247
+SHA256 e33cfb820005fa9274027bcfa9177fa56650623d36aaef9a3a5625c5afc3af0b files/digest-kdepim-kioslaves-3.5.3 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEfyscAiZjviIA2XgRAgRDAKCwNOVwc+wDuesvs3O92/YdZajfvwCg8S8l
+AgUp/45sk0c32CZKQOD1F2k=
+=bG3y
+-----END PGP SIGNATURE-----

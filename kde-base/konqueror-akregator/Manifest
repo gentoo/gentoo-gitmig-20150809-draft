@@ -1,6 +1,42 @@
-MD5 e588748e3b26c41c5d1683ffe98cb8f4 ChangeLog 6328
-MD5 fd6d25399b14b46e427295c383884e5b files/digest-konqueror-akregator-3.4.3 253
-MD5 191f6bee80885d21495b154d0b9b84fa files/digest-konqueror-akregator-3.5.2 253
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdeaddons-3.4.3.tar.bz2 1593317 RMD160 1c11919ecbf1cfc31423e9fcda21e3c223ec1b28 SHA256 eec9d764d67cb2b93d86b3bde61736ff29214da1cf8a02fa7c7d80c6170de41b
+DIST kdeaddons-3.5.2.tar.bz2 1640284 RMD160 bc2ce1f93b34fcb2c7662da22edf4894c6524a12 SHA1 9d47ca0accdb37aa5c1f05dccd2991119800dbc8 SHA256 2a3eea9ff6b550b90d3f51d4862f7d7b992182ac225fdac0684cc16fb990c2ec
+DIST kdeaddons-3.5.3.tar.bz2 1646490 RMD160 c9b3eb823c4a66fc0b92fa932fc8312143c4fee3 SHA1 fd202fd051983765ec7b38bf0d5a7ac4c36cfb1f SHA256 a78e407820e7734b6374fd008560a7d3c0b22518cc29264560fa9df4239d6329
+EBUILD konqueror-akregator-3.4.3.ebuild 668 RMD160 21f032aaafdcafc8fe06a5116bfecea00d7bbec0 SHA1 b688c078fce8279fe9eb3a34895c490a5dcd01ac SHA256 fd6d88cf25c0a993fc79a4e4e69e45a05afef2270543830b1b623aa0e2b3c0ef
 MD5 9d037595ab71867865909bc152a9e5b8 konqueror-akregator-3.4.3.ebuild 668
+RMD160 21f032aaafdcafc8fe06a5116bfecea00d7bbec0 konqueror-akregator-3.4.3.ebuild 668
+SHA256 fd6d88cf25c0a993fc79a4e4e69e45a05afef2270543830b1b623aa0e2b3c0ef konqueror-akregator-3.4.3.ebuild 668
+EBUILD konqueror-akregator-3.5.2.ebuild 664 RMD160 e511acf388d358798a3cc6c1a055312bb3d1e5db SHA1 457274228802132b935b100de126ffbd5664fbc9 SHA256 382a131bdf83213cd7ab274fb5529d60b5ca1ee36fce05de78bcb7ec50db0a07
 MD5 bd7209d690a002db473bb5ab0eef8770 konqueror-akregator-3.5.2.ebuild 664
+RMD160 e511acf388d358798a3cc6c1a055312bb3d1e5db konqueror-akregator-3.5.2.ebuild 664
+SHA256 382a131bdf83213cd7ab274fb5529d60b5ca1ee36fce05de78bcb7ec50db0a07 konqueror-akregator-3.5.2.ebuild 664
+EBUILD konqueror-akregator-3.5.3.ebuild 676 RMD160 18c5c6ec8ddbffd656d2a4eb52a48350a9c2e0d6 SHA1 c856c5a51fd87e7ef0502baba4b1d6a2a8167e17 SHA256 6ad77074938b22098ceffc08b14f5f8f9373e72ec691f9c84423139667551eaf
+MD5 31dc56560e831b8048c6c9299afedce9 konqueror-akregator-3.5.3.ebuild 676
+RMD160 18c5c6ec8ddbffd656d2a4eb52a48350a9c2e0d6 konqueror-akregator-3.5.3.ebuild 676
+SHA256 6ad77074938b22098ceffc08b14f5f8f9373e72ec691f9c84423139667551eaf konqueror-akregator-3.5.3.ebuild 676
+MISC ChangeLog 6490 RMD160 1e387fb874f1b9e86ead9dbee5b37fad6c6d85c0 SHA1 25a634dcc2c19e76ef830a7bdc2a26298dd1c75d SHA256 0b6440771b8579faeb87c2250f8b4f3bd393a30d01f7b5afc6e2770c9e36693d
+MD5 39b582fe8dea46d7e90f9b507ca59061 ChangeLog 6490
+RMD160 1e387fb874f1b9e86ead9dbee5b37fad6c6d85c0 ChangeLog 6490
+SHA256 0b6440771b8579faeb87c2250f8b4f3bd393a30d01f7b5afc6e2770c9e36693d ChangeLog 6490
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 fd6d25399b14b46e427295c383884e5b files/digest-konqueror-akregator-3.4.3 253
+RMD160 a8071b762f34309fc4da5fec31701ca5e0dbf4ff files/digest-konqueror-akregator-3.4.3 253
+SHA256 231a506a225cc64e1a74e9fcb90226f88e394d8c8bbe81384831257a5aa4193c files/digest-konqueror-akregator-3.4.3 253
+MD5 191f6bee80885d21495b154d0b9b84fa files/digest-konqueror-akregator-3.5.2 253
+RMD160 7ceef00c96f7c9306805433a9ea566dafc129421 files/digest-konqueror-akregator-3.5.2 253
+SHA256 f5eb118862fc6790d69ceb8771ddb6feb108003b6c8147c31412bea7a36b4d8b files/digest-konqueror-akregator-3.5.2 253
+MD5 fe87aa2a226c3d223f80fd6695141fa8 files/digest-konqueror-akregator-3.5.3 253
+RMD160 7cbfbb5dde613e0ab1039a5b9124ffd9e6f413c5 files/digest-konqueror-akregator-3.5.3 253
+SHA256 1bf34385e31edf42e9463af567e33db94d4c568246f174df253041b90ac55ec2 files/digest-konqueror-akregator-3.5.3 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEfz3HAiZjviIA2XgRAqa5AJ9czsHqWhO21OvpagFbazx737EARgCg9DSS
+WGhQZ2cyNjOH1w1yWEHzOgs=
+=mZOh
+-----END PGP SIGNATURE-----

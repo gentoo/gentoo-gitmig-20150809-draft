@@ -1,6 +1,42 @@
-MD5 a87fd2a0f490209c2e35c2166af86395 ChangeLog 6068
-MD5 fd6d25399b14b46e427295c383884e5b files/digest-kaddressbook-plugins-3.4.3 253
-MD5 191f6bee80885d21495b154d0b9b84fa files/digest-kaddressbook-plugins-3.5.2 253
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kdeaddons-3.4.3.tar.bz2 1593317 RMD160 1c11919ecbf1cfc31423e9fcda21e3c223ec1b28 SHA256 eec9d764d67cb2b93d86b3bde61736ff29214da1cf8a02fa7c7d80c6170de41b
+DIST kdeaddons-3.5.2.tar.bz2 1640284 RMD160 bc2ce1f93b34fcb2c7662da22edf4894c6524a12 SHA1 9d47ca0accdb37aa5c1f05dccd2991119800dbc8 SHA256 2a3eea9ff6b550b90d3f51d4862f7d7b992182ac225fdac0684cc16fb990c2ec
+DIST kdeaddons-3.5.3.tar.bz2 1646490 RMD160 c9b3eb823c4a66fc0b92fa932fc8312143c4fee3 SHA1 fd202fd051983765ec7b38bf0d5a7ac4c36cfb1f SHA256 a78e407820e7734b6374fd008560a7d3c0b22518cc29264560fa9df4239d6329
+EBUILD kaddressbook-plugins-3.4.3.ebuild 554 RMD160 e2b002099a555d41440dfae7ec3a577762fa3128 SHA1 2e6e79a003c162d6db73b11f59a3bde8125d548e SHA256 aea25bc80dd43c7baebbbc1cfc86320a5c16ef7fb7aa2bfe72e6fb8fd07a5179
 MD5 c3ff3886fe0fb5dabdb2dfaea143b8be kaddressbook-plugins-3.4.3.ebuild 554
+RMD160 e2b002099a555d41440dfae7ec3a577762fa3128 kaddressbook-plugins-3.4.3.ebuild 554
+SHA256 aea25bc80dd43c7baebbbc1cfc86320a5c16ef7fb7aa2bfe72e6fb8fd07a5179 kaddressbook-plugins-3.4.3.ebuild 554
+EBUILD kaddressbook-plugins-3.5.2.ebuild 514 RMD160 0f79bbec69557e8887c92c6fb807d6f9e40e0aa8 SHA1 3cafac07159c1ccebccff9898afc346ddb0d027a SHA256 a3fd795e400b86882d51a73e1302883e9b0944c544948def9b92513aaf17cd58
 MD5 3849b12add43937554fcdc0d0b890e4c kaddressbook-plugins-3.5.2.ebuild 514
+RMD160 0f79bbec69557e8887c92c6fb807d6f9e40e0aa8 kaddressbook-plugins-3.5.2.ebuild 514
+SHA256 a3fd795e400b86882d51a73e1302883e9b0944c544948def9b92513aaf17cd58 kaddressbook-plugins-3.5.2.ebuild 514
+EBUILD kaddressbook-plugins-3.5.3.ebuild 524 RMD160 1d1748e83b8866af33f543ef531cddc8a2c5efc7 SHA1 d4b0efaa2fddce48331269cf104e2861f1bcf5be SHA256 b13d8244f5001e1b33181666fc8db427d87ef0d99daddb4aaf6d576503c71b15
+MD5 679e73fc8ded2566a19bd6618945ed74 kaddressbook-plugins-3.5.3.ebuild 524
+RMD160 1d1748e83b8866af33f543ef531cddc8a2c5efc7 kaddressbook-plugins-3.5.3.ebuild 524
+SHA256 b13d8244f5001e1b33181666fc8db427d87ef0d99daddb4aaf6d576503c71b15 kaddressbook-plugins-3.5.3.ebuild 524
+MISC ChangeLog 6232 RMD160 29c3d98daa7b726615d32a8c5dc67988b802d04c SHA1 108e077c7f7130bdb2286134637a0e5565b8f7c7 SHA256 c148a0f9a27feb27f7b73c6b25a11428c650246e74f213958845c6e1e3e8becf
+MD5 5b819c10c876b699b367f74cb388b474 ChangeLog 6232
+RMD160 29c3d98daa7b726615d32a8c5dc67988b802d04c ChangeLog 6232
+SHA256 c148a0f9a27feb27f7b73c6b25a11428c650246e74f213958845c6e1e3e8becf ChangeLog 6232
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
+SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 fd6d25399b14b46e427295c383884e5b files/digest-kaddressbook-plugins-3.4.3 253
+RMD160 a8071b762f34309fc4da5fec31701ca5e0dbf4ff files/digest-kaddressbook-plugins-3.4.3 253
+SHA256 231a506a225cc64e1a74e9fcb90226f88e394d8c8bbe81384831257a5aa4193c files/digest-kaddressbook-plugins-3.4.3 253
+MD5 191f6bee80885d21495b154d0b9b84fa files/digest-kaddressbook-plugins-3.5.2 253
+RMD160 7ceef00c96f7c9306805433a9ea566dafc129421 files/digest-kaddressbook-plugins-3.5.2 253
+SHA256 f5eb118862fc6790d69ceb8771ddb6feb108003b6c8147c31412bea7a36b4d8b files/digest-kaddressbook-plugins-3.5.2 253
+MD5 fe87aa2a226c3d223f80fd6695141fa8 files/digest-kaddressbook-plugins-3.5.3 253
+RMD160 7cbfbb5dde613e0ab1039a5b9124ffd9e6f413c5 files/digest-kaddressbook-plugins-3.5.3 253
+SHA256 1bf34385e31edf42e9463af567e33db94d4c568246f174df253041b90ac55ec2 files/digest-kaddressbook-plugins-3.5.3 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEfxkPAiZjviIA2XgRAipvAKCEIiii7ymA3qCHnH0spHouQ+AJcQCfbxip
+fPb0Dd15oErGoWxq5SRohkE=
+=v3ow
+-----END PGP SIGNATURE-----
