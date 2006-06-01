@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.54 2006/04/23 15:31:36 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.55 2006/06/01 03:05:53 dercorny Exp $
+
+*tor-0.1.1.20 (01 Jun 2006)
+
+  01 Jun 2006; Stefan Cornelius <dercorny@gentoo.org> +tor-0.1.1.20.ebuild:
+  Bumping to version 0.1.1.20 for security bugs #134329 and #118918
 
   23 Apr 2006; Emanuele Giaquinta <exg@gentoo.org> tor-0.1.0.14-r1.ebuild,
   tor-0.1.0.16.ebuild, tor-0.1.0.17.ebuild:
