@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/py-rrdtool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-rrdtool/ChangeLog,v 1.6 2006/04/01 15:14:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-rrdtool/ChangeLog,v 1.7 2006/06/01 21:58:16 jokey Exp $
+
+  01 Jun 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/py-rrdtool-rrdtool12.patch, py-rrdtool-0.2.1-r1.ebuild:
+  Adding rrdtool 1.2 patch wrt bug #133422 thanks to Angelo Leto
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org>
   py-rrdtool-0.2.1-r1.ebuild:

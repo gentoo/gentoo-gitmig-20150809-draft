@@ -1,0 +1,19 @@
+--- _rrdtoolmodule.c	2006-05-16 12:17:46.016327100 +0200
++++ src/_rrdtoolmodule.c	2006-05-16 12:16:51.853797870 +0200
+@@ -233,10 +233,15 @@
+     char           **argv, **calcpr;
+     int              argc, xsize, ysize, i;
+ 
++    double ymin,ymax; //needed by:
++    FILE *outstream;  //rrd_graph (RRDtool 1.2.*)
++
+     if (create_args("graph", args, &argc, &argv) < 0)
+         return NULL;
+ 
+-    if (rrd_graph(argc, argv, &calcpr, &xsize, &ysize) == -1) {
++    //rrd_graph version 1.2.*
++    if (rrd_graph(argc, argv, &calcpr, &xsize, &ysize,
++			    outstream,&ymin,&ymax) == -1) {
+         PyErr_SetString(ErrorObject, rrd_get_error());
+         rrd_clear_error();
+         r = NULL;
