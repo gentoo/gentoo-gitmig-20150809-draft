@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.7-r1.ebuild,v 1.3 2006/04/05 12:46:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.7-r1.ebuild,v 1.4 2006/06/01 14:50:20 genstef Exp $
 
 inherit eutils
 
@@ -44,6 +44,9 @@ pkg_setup() {
 }
 
 src_compile() {
+	# Do not remove the addwrite. bug #128289, bug #133357
+	addwrite "${ROOT}/root/.gnome2"
+
 	# disable some tests to save time ;)
 	econf $(use_enable debug bug-replay) \
 		$(use_with readline) \
