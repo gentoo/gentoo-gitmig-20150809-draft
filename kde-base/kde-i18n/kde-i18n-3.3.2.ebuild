@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.3.2.ebuild,v 1.13 2005/06/23 09:54:27 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.3.2.ebuild,v 1.14 2006/06/01 19:51:59 greg_g Exp $
 
 inherit kde eutils
 
@@ -49,6 +49,7 @@ src_compile() {
 	local _S=${S}
 	for dir in `ls ${WORKDIR}`; do
 		S=${WORKDIR}/$dir
+		KDE_S=$S
 		kde_src_compile myconf
 		myconf="$myconf --prefix=$KDEDIR -C"
 		kde_src_compile configure
