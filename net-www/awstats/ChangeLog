@@ -1,6 +1,10 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.36 2006/05/31 04:26:21 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.37 2006/06/01 18:07:51 dertobi123 Exp $
+
+  01 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  awstats-6.5-r1.ebuild:
+  ppc stable, bug #130487
 
   31 May 2006; Joshua Jackson <tsunam@gentoo.org> awstats-6.5-r1.ebuild:
   stable on x86; security bug #130487
