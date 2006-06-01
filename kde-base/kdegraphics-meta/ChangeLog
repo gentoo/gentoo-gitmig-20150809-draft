@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.54 2006/05/29 21:43:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.55 2006/06/01 09:25:57 tcort Exp $
+
+  01 Jun 2006; Thomas Cort <tcort@gentoo.org> kdegraphics-meta-3.5.2.ebuild:
+  Stable on alpha wrt Bug #132213.
 
   29 May 2006; Jason Wever <weeve@gentoo.org> kdegraphics-meta-3.5.2.ebuild:
   Stable on SPARC wrt bug #132213.

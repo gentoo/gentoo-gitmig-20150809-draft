@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktux
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.41 2006/05/29 22:10:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.42 2006/06/01 09:38:42 tcort Exp $
+
+  01 Jun 2006; Thomas Cort <tcort@gentoo.org> ktux-3.5.2.ebuild:
+  Stable on alpha wrt Bug #132213.
 
   29 May 2006; Jason Wever <weeve@gentoo.org> ktux-3.5.2.ebuild:
   Stable on SPARC wrt bug #132213.

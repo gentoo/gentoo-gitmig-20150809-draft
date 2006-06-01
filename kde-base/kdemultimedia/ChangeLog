@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.208 2006/05/30 12:31:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.209 2006/06/01 10:43:25 tcort Exp $
+
+  01 Jun 2006; Thomas Cort <tcort@gentoo.org> kdemultimedia-3.5.2-r2.ebuild:
+  Stable on alpha wrt Bug #132213.
 
   30 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   kdemultimedia-3.5.2-r2.ebuild:
