@@ -1,0 +1,143 @@
+diff -Nupr foo2zjs.orig/hplj.usermap foo2zjs/hplj.usermap
+--- foo2zjs.orig/hplj.usermap	1970-01-01 01:00:00.000000000 +0100
++++ foo2zjs/hplj.usermap	2006-06-01 17:19:51.000000000 +0200
+@@ -0,0 +1,4 @@
++hplj1000 0x0003 0x03f0 0x0517 0x0000 0x0000 0x00 0x00 0x00 0x00 0x00 0x00 0x00000000
++hplj1005 0x0003 0x03f0 0x1317 0x0000 0x0000 0x00 0x00 0x00 0x00 0x00 0x00 0x00000000
++hplj1018 0x0003 0x03f0 0x4117 0x0000 0x0000 0x00 0x00 0x00 0x00 0x00 0x00 0x00000000
++hplj1020 0x0003 0x03f0 0x2b17 0x0000 0x0000 0x00 0x00 0x00 0x00 0x00 0x00 0x00000000
+diff -Nupr foo2zjs.orig/icc2ps/Makefile foo2zjs/icc2ps/Makefile
+--- foo2zjs.orig/icc2ps/Makefile	2006-06-01 17:22:44.000000000 +0200
++++ foo2zjs/icc2ps/Makefile	2006-06-01 17:20:26.000000000 +0200
+@@ -1,10 +1,10 @@
+-PREFIX=	/usr
++PREFIX=	$(DESTDIR)/usr
+ BIN=	$(PREFIX)/bin
+ SRC=	icc2ps.c xgetopt.c
+ LIB=	cmscam97.c cmscnvrt.c cmserr.c cmsgamma.c cmsgmt.c cmsintrp.c cmsio1.c \
+ 	cmslut.c cmsmatsh.c cmsmtrx.c cmsnamed.c cmspack.c cmspcs.c cmsps2.c \
+ 	cmssamp.c cmswtpnt.c cmsxform.c cmsio0.c cmsvirt.c
+-CFLAGS=	-O3
++CFLAGS?=	-O3
+ 
+ all: foo2zjs-icc2ps
+ 
+diff -Nupr foo2zjs.orig/Makefile foo2zjs/Makefile
+--- foo2zjs.orig/Makefile	2006-06-01 17:22:44.000000000 +0200
++++ foo2zjs/Makefile	2006-06-01 17:19:51.000000000 +0200
+@@ -7,7 +7,7 @@ VERSION=0.0
+ 
+ # Installation prefix...
+ PREFIX=/usr/local
+-PREFIX=/usr
++PREFIX=$(DESTDIR)/usr
+ 
+ # Pathnames for this package...
+ BIN=$(PREFIX)/bin
+@@ -18,7 +18,7 @@ MANDIR=$(PREFIX)/share/man
+ DOCDIR=$(PREFIX)/share/doc/foo2zjs/
+ 
+ # Pathnames for referenced packages...
+-FOODB=/usr/share/foomatic/db/source
++FOODB=$(PREFIX)/share/foomatic/db/source
+ 
+ # User ID's
+ LPuid=-olp
+@@ -150,7 +150,7 @@ ifeq ($(UNAME),Linux)
+ endif
+ 
+ # Compiler flags
+-CFLAGS +=	-O2 -Wall
++CFLAGS ?=      -O2 -Wall
+ 
+ #
+ # Rules to create test documents
+@@ -316,12 +316,14 @@ install-test:
+     
+ 
+ install-prog:
++	[ -d $(BIN) ] || install -d -m 755 $(BIN)/
++	[ -d $(DESTDIR)/bin/ ] || install -d -m 755 $(DESTDIR)/bin/
+ 	#
+ 	# Install driver, wrapper, and development tools
+ 	#
+ 	install -c $(PROGS) $(SHELLS) $(BIN)/
+ 	if [ "$(BINPROGS)" != "" ]; then \
+-	    install -c $(BINPROGS) /bin/; \
++	    install -c $(BINPROGS) $(DESTDIR)/bin/; \
+ 	fi
+ 	#
+ 	# Install gamma correction files.  These are just templates,
+@@ -347,6 +349,7 @@ install-foo:
+ 	#
+ 	@if [ -d $(FOODB) ]; then \
+ 	    for dir in driver printer opt; do \
++		[ -d $(FOODB)/$$dir/ ] || install -d -m 755 $(FOODB)/$$dir/; \
+ 		echo install -m 644 foomatic-db/$$dir/*.xml $(FOODB)/$$dir/; \
+ 		install -c -m 644 foomatic-db/$$dir/*.xml $(FOODB)/$$dir/; \
+ 	    done \
+@@ -364,10 +367,10 @@ install-foo:
+ 	#
+ 	# Clear foomatic cache and rebuild database if needed
+ 	#
+-	rm -rf /var/cache/foomatic/*/*
+-	rm -f /var/cache/foomatic/printconf.pickle
+-	if [ -d /var/cache/foomatic/compiled ]; then \
+-	    cd /var/cache/foomatic/compiled; \
++	rm -rf $(DESTDIR)/var/cache/foomatic/*/*
++	rm -f $(DESTDIR)/var/cache/foomatic/printconf.pickle
++	if [ -d $(DESTDIR)/var/cache/foomatic/compiled ]; then \
++	    cd $(DESTDIR)/var/cache/foomatic/compiled; \
+ 	    foomatic-combo-xml -O >overview.xml; \
+ 	fi
+ 
+@@ -431,8 +434,8 @@ install-extra:
+ 	    fi; \
+ 	done
+ 
+-MODEL=/usr/share/cups/model
+-LOCALMODEL=/usr/local/share/cups/model
++MODEL=$(PREFIX)/share/cups/model
++#LOCALMODEL=/usr/local/share/cups/model
+ install-ppd:
+ 	#
+ 	# Install PPD files for CUPS
+@@ -449,22 +452,20 @@ install-ppd:
+ 	    done; \
+ 	fi
+ 
+-USBDIR=/etc/hotplug/usb
+-UDEVDIR=/etc/udev/rules.d
+-RULES=hplj10xx.rules
++USBDIR=$(DESTDIR)/etc/hotplug/usb
+ install-hotplug:
+ 	[ -d $(USBDIR) ] || install -d -m 755 $(USBDIR)/
+ 	install -c -m 755 hplj1000 $(USBDIR)/
+ 	ln -sf $(USBDIR)/hplj1000 $(USBDIR)/hplj1005
+ 	ln -sf $(USBDIR)/hplj1000 $(USBDIR)/hplj1018
+ 	ln -sf $(USBDIR)/hplj1000 $(USBDIR)/hplj1020
+-	$(USBDIR)/hplj1000 install-usermap
+-	$(USBDIR)/hplj1005 install-usermap
+-	$(USBDIR)/hplj1018 install-usermap
+-	$(USBDIR)/hplj1020 install-usermap
+-	if [ -d $(UDEVDIR) ]; then \
+-	    install -c -m 644 $(RULES) $(UDEVDIR)/11-$(RULES); \
+-	fi
++	install -c -m 644 hplj.usermap $(USBDIR)/
++
++UDEVDIR=$(DESTDIR)/etc/udev/rules.d
++RULES=hplj10xx.rules
++install-udev:
++	[ -d $(UDEVDIR) ] || install -d -m 755 $(UDEVDIR)/
++	install -c -m 644 $(RULES) $(UDEVDIR)/11-$(RULES)
+ 
+ cups:	FRC
+ 	if [ -x /etc/init.d/cups ]; then \
+@@ -757,7 +758,6 @@ install-doc: doc
+ 	install -c -m 644 README $(DOCDIR)
+ 	install -c -m 644 ChangeLog $(DOCDIR)
+ 
+-GROFF=/usr/local/test/bin/groff
+ GROFF=groff
+ manual.pdf: $(MANPAGES)
+ 	-$(GROFF) -t -man $(MANPAGES) | ps2pdf - $@

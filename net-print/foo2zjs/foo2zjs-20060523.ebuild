@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20060501-r1.ebuild,v 1.3 2006/06/01 16:45:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20060523.ebuild,v 1.1 2006/06/01 16:45:38 genstef Exp $
 
 inherit eutils
 
@@ -9,7 +9,13 @@ HOMEPAGE="http://foo2zjs.rkkda.com/"
 SRC_URI="ftp://ftp.minolta-qms.com/pub/crc/out_going/win/m23dlicc.exe
 		ftp://ftp.minolta-qms.com/pub/crc/out_going/win2000/m22dlicc.exe
 		ftp://ftp.minolta-qms.com/pub/crc/out_going/windows/cpplxp.exe
-		http://gentooexperimental.org/~genstef/dist/${P}.tar.gz"
+		http://gentooexperimental.org/~genstef/dist/${P}.tar.gz
+		http://foo2zjs.rkkda.com/sihp1000.tar.gz
+		http://foo2zjs.rkkda.com/sihp1005.tar.gz
+		http://foo2zjs.rkkda.com/sihp1018.tar.gz
+		http://foo2zjs.rkkda.com/sihp1020.tar.gz
+		http://foo2zjs.rkkda.com/km2430.tar.gz
+		http://foo2hp.rkkda.com/hpclj2600n.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,8 +37,8 @@ src_unpack() {
 	done
 
 	cd ${S}
-	epatch ${FILESDIR}/foo2zjs-Makefile-20060501.diff
-	epatch ${FILESDIR}/foo2zjs-udevfwld-20060501.diff
+	epatch ${FILESDIR}/foo2zjs-Makefile-20060523.diff
+	epatch ${FILESDIR}/foo2zjs-udevfwld-20060523.diff
 }
 
 src_compile() {
