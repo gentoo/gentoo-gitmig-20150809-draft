@@ -1,6 +1,10 @@
 # ChangeLog for app-text/diction
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.10 2006/04/25 21:06:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.11 2006/06/01 13:33:34 seemant Exp $
+
+  01 Jun 2006; Seemant Kulleen <seemant@gentoo.org> diction-1.02.ebuild,
+  diction-1.07.ebuild:
+  homepage fix by James
 
 *diction-1.09 (25 Apr 2006)
 
