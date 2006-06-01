@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf.eclass,v 1.7 2006/03/25 16:42:04 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf.eclass,v 1.8 2006/06/01 21:56:31 anarchy Exp $
 #
 # mozcoreconf.eclass : core options for mozilla
 # inherit mozconfig-2 if you need USE flags
@@ -31,6 +31,7 @@ mozconfig_init() {
 	declare TB=$([[ ${PN} == *thunderbird ]] && echo true || echo false)
 	declare SB=$([[ ${PN} == *sunbird ]] && echo true || echo false)
 	declare EM=$([[ ${PN} == enigmail ]] && echo true || echo false)
+       declare XUL=$([[ ${PN} == *xulrunner ]] && echo true || echo false)
 	declare SM=$([[ ${PN} == seamonkey ]] && echo true || echo false)
 
 	####################################
@@ -53,6 +54,9 @@ mozconfig_init() {
 		enigmail)
 			cp mail/config/mozconfig .mozconfig \
 				|| die "cp mail/config/mozconfig failed" ;;
+               *xulrunner)
+                       cp xulrunner/config/mozconfig .mozconfig \
+                               || die "cp xulrunner/config/mozconfig failed" ;;
 		*sunbird)
 			cp calendar/sunbird/config/mozconfig .mozconfig \
 				|| die "cp calendar/sunbird/config/mozconfig failed" ;;
