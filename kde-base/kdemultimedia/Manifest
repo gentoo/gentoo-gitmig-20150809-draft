@@ -1,70 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX artsplugin-akode-3.5.2-memleak.patch 797 RMD160 593b8a40af0b373259d37410f57989cdfb9ec568 SHA1 40e58675d2417c92bcb1e0351489da7ab17a82ae SHA256 1a6d341f130430ca7faef4188899e4fe98c4ba808ea9702d352a9b28eb2b3642
+MD5 a41be8073a65924e27ba7ead14bf1f7c ChangeLog 30174
 MD5 d860129d92634080c3f7368ed282e098 files/artsplugin-akode-3.5.2-memleak.patch 797
-RMD160 593b8a40af0b373259d37410f57989cdfb9ec568 files/artsplugin-akode-3.5.2-memleak.patch 797
-SHA256 1a6d341f130430ca7faef4188899e4fe98c4ba808ea9702d352a9b28eb2b3642 files/artsplugin-akode-3.5.2-memleak.patch 797
-AUX juk-3.5.2-do_not_use_gstreamer-0.10.diff 400 RMD160 b44932cca3b3f0c3b7c1605ee52986cae154421d SHA1 0c6bdfef799f039cbf84b09abdf826f42ead7450 SHA256 0a5af0a2ecddcae887121aa61166b2959c5ec07f8e13c56fc3bfebea05e68a52
-MD5 0aacb785c8be1d7ee16a7fe69d4ff1c9 files/juk-3.5.2-do_not_use_gstreamer-0.10.diff 400
-RMD160 b44932cca3b3f0c3b7c1605ee52986cae154421d files/juk-3.5.2-do_not_use_gstreamer-0.10.diff 400
-SHA256 0a5af0a2ecddcae887121aa61166b2959c5ec07f8e13c56fc3bfebea05e68a52 files/juk-3.5.2-do_not_use_gstreamer-0.10.diff 400
-AUX juk-3.5.2-filerename.diff 477 RMD160 1a99226091f34f33ef7a20dda0bcf17f2a4d51fa SHA1 384096c6e237dec2b0353923919cbcef9ea7d07c SHA256 997381f32540650d90517c4ca61fbec7026492f348e46115905ca31b88d73df3
-MD5 843346e52d5bd259568adc2cd01e7612 files/juk-3.5.2-filerename.diff 477
-RMD160 1a99226091f34f33ef7a20dda0bcf17f2a4d51fa files/juk-3.5.2-filerename.diff 477
-SHA256 997381f32540650d90517c4ca61fbec7026492f348e46115905ca31b88d73df3 files/juk-3.5.2-filerename.diff 477
-AUX kdemultimedia-3.4-configure.patch 5211 RMD160 5c3916b02411206806637b107bcf0f9f703c7cfc SHA1 6aba0a2dcdcde56b41c7521b7edf7f8c55cfbb6a SHA256 8f101cbf2f37d5f99cdf4fdb5376be2315be2127d714d200d25d502c88feff11
-MD5 ab4383e2b9810696530127a0a5464bfc files/kdemultimedia-3.4-configure.patch 5211
-RMD160 5c3916b02411206806637b107bcf0f9f703c7cfc files/kdemultimedia-3.4-configure.patch 5211
-SHA256 8f101cbf2f37d5f99cdf4fdb5376be2315be2127d714d200d25d502c88feff11 files/kdemultimedia-3.4-configure.patch 5211
-AUX kdemultimedia-3.4.0-amd64.patch 523 RMD160 818db0ade15f6d1fd84331d000bdac0aaa63fb97 SHA1 77edbe95cec7c7a0d0c44ca71a8a0890c3f1a334 SHA256 37f7d3e1b2799e520e7fc490b68bba48ba3ee6c2c67f751e5b5f17140d959bc9
-MD5 b7a984a57c27e1e62a606d90d0c39437 files/kdemultimedia-3.4.0-amd64.patch 523
-RMD160 818db0ade15f6d1fd84331d000bdac0aaa63fb97 files/kdemultimedia-3.4.0-amd64.patch 523
-SHA256 37f7d3e1b2799e520e7fc490b68bba48ba3ee6c2c67f751e5b5f17140d959bc9 files/kdemultimedia-3.4.0-amd64.patch 523
-AUX kdemultimedia-3.4.1-akode-hang.patch 653 RMD160 8779e6a3d1a853867b0b33c849f79424c218c9f9 SHA1 9097a1c39d5485d1cef441b6d2707a8d2593830d SHA256 69e031855da180e4915d4dae07559f9f33d62efaf5ec05e44cf7b2246969833d
-MD5 0ed594ab9238b688fca70c1959d3932e files/kdemultimedia-3.4.1-akode-hang.patch 653
-RMD160 8779e6a3d1a853867b0b33c849f79424c218c9f9 files/kdemultimedia-3.4.1-akode-hang.patch 653
-SHA256 69e031855da180e4915d4dae07559f9f33d62efaf5ec05e44cf7b2246969833d files/kdemultimedia-3.4.1-akode-hang.patch 653
-AUX kdemultimedia-64bit.patch 634 RMD160 4b72fcf4253e201e3c0760fb34c3fdc4ca664d82 SHA1 36b2e01e64e67696ddf56a0cc74951c8b699b7b9 SHA256 19b133440b23f10ee54f11962f120f6d27c1720c87680506f2f028b1105d2e7b
-MD5 0af60268ec8424c72256db89062b6f31 files/kdemultimedia-64bit.patch 634
-RMD160 4b72fcf4253e201e3c0760fb34c3fdc4ca664d82 files/kdemultimedia-64bit.patch 634
-SHA256 19b133440b23f10ee54f11962f120f6d27c1720c87680506f2f028b1105d2e7b files/kdemultimedia-64bit.patch 634
-DIST kdemultimedia-3.3.2.tar.bz2 5384470 RMD160 b41cfeb8b410e1da1fb128e928c8aecaf66c8b00 SHA1 383515292f8c02df9a960a2e9c511aebacf13b78 SHA256 cc1db51f4a5a716cf90a7ace8035711d2b03c0d8b319df6e140cb97722969250
-DIST kdemultimedia-3.4.3.tar.bz2 5495757 RMD160 318ebd3149019ec2e5d98b57a548d3ef350a7924 SHA1 8916577123446be621527603b31febb9997609ba SHA256 adc29df6c427b505c3b1559c2ea393e9a65c3120dfce5207419ba5dd16aa2d4e
-DIST kdemultimedia-3.5.2.tar.bz2 6272386 RMD160 4f6fcb790e63f4af7a309677babd5e2ed938514f SHA1 68e5e24709a2c06777bb3f12fc76e733f5896c5d SHA256 01562af68008c10c04346a94d0dea7cedcb77673c0b7cd5cfc74360bf309a2f8
-EBUILD kdemultimedia-3.3.2.ebuild 1757 RMD160 d3cfc2b850b63f279df05130628c04efb78c625c SHA1 e2a42d8f8c770bb20e80b43960eed0574569bab7 SHA256 6696e9fa10b1fcde27506aeef2daa179363493db4d915288458c0425f05bbe68
-MD5 127d4cff1f95952f349c134f5b2cb861 kdemultimedia-3.3.2.ebuild 1757
-RMD160 d3cfc2b850b63f279df05130628c04efb78c625c kdemultimedia-3.3.2.ebuild 1757
-SHA256 6696e9fa10b1fcde27506aeef2daa179363493db4d915288458c0425f05bbe68 kdemultimedia-3.3.2.ebuild 1757
-EBUILD kdemultimedia-3.4.3.ebuild 2016 RMD160 238813088e1a2d45718759a85ec345fe37a228fd SHA1 20ffaabd351e20379f89de5d40f6f34e69192dd1 SHA256 60ee40c5f90a6d64ba0c2409bc0e8fbc07ccefe83024218e86e5afd59ab5c730
-MD5 d47c2bc5565e8dd0cd99eb9dee5d9723 kdemultimedia-3.4.3.ebuild 2016
-RMD160 238813088e1a2d45718759a85ec345fe37a228fd kdemultimedia-3.4.3.ebuild 2016
-SHA256 60ee40c5f90a6d64ba0c2409bc0e8fbc07ccefe83024218e86e5afd59ab5c730 kdemultimedia-3.4.3.ebuild 2016
-EBUILD kdemultimedia-3.5.2-r2.ebuild 2995 RMD160 a1dae9653467a2f24218539221b46323d6420ad6 SHA1 36b1f36e996ca731ecded75815af74762bdacc92 SHA256 3489305c1f5307a852dd004df10bfc3d5f01ac2ea2f40421ffffe200bca0c07b
-MD5 1cb4aa5218fb0c2365c489b56cf2dac5 kdemultimedia-3.5.2-r2.ebuild 2995
-RMD160 a1dae9653467a2f24218539221b46323d6420ad6 kdemultimedia-3.5.2-r2.ebuild 2995
-SHA256 3489305c1f5307a852dd004df10bfc3d5f01ac2ea2f40421ffffe200bca0c07b kdemultimedia-3.5.2-r2.ebuild 2995
-MISC ChangeLog 30064 RMD160 c50e9a609ab20004ceddf5867f2658d06915c2ce SHA1 cedc598a8bc7cce93fb6b7fcad99ba32813e741d SHA256 5caf4283a30a5c6b6c8f983369b62950da35b8dec94091cbb1eb7282c65958d3
-MD5 8ac09227fff8836158989a801f5e2457 ChangeLog 30064
-RMD160 c50e9a609ab20004ceddf5867f2658d06915c2ce ChangeLog 30064
-SHA256 5caf4283a30a5c6b6c8f983369b62950da35b8dec94091cbb1eb7282c65958d3 ChangeLog 30064
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
 MD5 298c480a223614a6631c0be09812517e files/digest-kdemultimedia-3.3.2 265
-RMD160 0cb62cd184a201e8bb836a7da79cd9f17726b15b files/digest-kdemultimedia-3.3.2 265
-SHA256 d1c3697acaf2fe65621bba029fa9c2204a5cc6164ae38d3f1e06acd974aa319a files/digest-kdemultimedia-3.3.2 265
 MD5 940122572881cf125988ce027b22e781 files/digest-kdemultimedia-3.4.3 265
-RMD160 1b3c4a801605535bd75648e814a9955b3f535632 files/digest-kdemultimedia-3.4.3 265
-SHA256 2eb27eba7bd8dfb53a9f66dbb91ffe5ef3b7ee1d721bbc64272ddd2cea4ac5e7 files/digest-kdemultimedia-3.4.3 265
 MD5 c6f3f23fcb5a1fa806c5073f45b26b59 files/digest-kdemultimedia-3.5.2-r2 265
-RMD160 5e81c0b91adc803bf7923ec3176b9ff50217ed22 files/digest-kdemultimedia-3.5.2-r2 265
-SHA256 da5960a94d94974711cce49b9e15a2465e392feb2dd48db846adce8d9e02d864 files/digest-kdemultimedia-3.5.2-r2 265
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEfDsUkT4lNIS36YERAsqZAJ4zPJzO9M66k4Qczp6AHZiHEyWIgACfVlSa
-42rATVmZbG2rJklVIgRpJL8=
-=Ju4C
------END PGP SIGNATURE-----
+MD5 0aacb785c8be1d7ee16a7fe69d4ff1c9 files/juk-3.5.2-do_not_use_gstreamer-0.10.diff 400
+MD5 843346e52d5bd259568adc2cd01e7612 files/juk-3.5.2-filerename.diff 477
+MD5 ab4383e2b9810696530127a0a5464bfc files/kdemultimedia-3.4-configure.patch 5211
+MD5 b7a984a57c27e1e62a606d90d0c39437 files/kdemultimedia-3.4.0-amd64.patch 523
+MD5 0ed594ab9238b688fca70c1959d3932e files/kdemultimedia-3.4.1-akode-hang.patch 653
+MD5 0af60268ec8424c72256db89062b6f31 files/kdemultimedia-64bit.patch 634
+MD5 127d4cff1f95952f349c134f5b2cb861 kdemultimedia-3.3.2.ebuild 1757
+MD5 d47c2bc5565e8dd0cd99eb9dee5d9723 kdemultimedia-3.4.3.ebuild 2016
+MD5 7c268397b41f5e204b817320aeef2eae kdemultimedia-3.5.2-r2.ebuild 2992
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

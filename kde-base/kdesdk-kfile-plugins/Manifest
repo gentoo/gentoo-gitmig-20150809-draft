@@ -1,26 +1,6 @@
-DIST kdesdk-3.4.0-3.4.1.tar.xdelta 255144
-DIST kdesdk-3.4.0.tar.bz2 4571452
-DIST kdesdk-3.4.1.tar.bz2 4589829 RMD160 1904a64db8249a149cf73077d22265ccf7f754f5 SHA256 97f4356aec68488ffe52be5d036510c281506153d4504deca20da0ae95807435
-DIST kdesdk-3.5.1.tar.bz2 4972114 RMD160 1f37f4bdc73ac2e5c8c75009ee24377ac981a2c0 SHA256 198e09e1dbf6a7e34e74192eaed2b48f74a67be82781464a0b0c7a51f967d47c
-EBUILD kdesdk-kfile-plugins-3.4.1.ebuild 462 RMD160 057f35808ad5f4b30b27f6c5c84e9e80674cecae SHA1 17b44d10d84290cb81f8465d8bdc89605b811dd4 SHA256 3ea81eac71da463ffedbdb43a5f471f3fda099dba2c3cb0fd97de8af2364d61c
-MD5 e32a3ab0d2bd77a9786c373f598c5ec4 kdesdk-kfile-plugins-3.4.1.ebuild 462
-RMD160 057f35808ad5f4b30b27f6c5c84e9e80674cecae kdesdk-kfile-plugins-3.4.1.ebuild 462
-SHA256 3ea81eac71da463ffedbdb43a5f471f3fda099dba2c3cb0fd97de8af2364d61c kdesdk-kfile-plugins-3.4.1.ebuild 462
-EBUILD kdesdk-kfile-plugins-3.5.1.ebuild 464 RMD160 2efa6af6de647224d24ca8c149b38e4c8093131a SHA1 9274f5d89e707ad796db3dfe8844c06c08f12604 SHA256 5cd5d450f55cdcfcfc5833a8ca5abe6089a3e1df4543bb91cf8249af27ff7482
-MD5 bf7129ba24c62a262b0f95c1ca23f775 kdesdk-kfile-plugins-3.5.1.ebuild 464
-RMD160 2efa6af6de647224d24ca8c149b38e4c8093131a kdesdk-kfile-plugins-3.5.1.ebuild 464
-SHA256 5cd5d450f55cdcfcfc5833a8ca5abe6089a3e1df4543bb91cf8249af27ff7482 kdesdk-kfile-plugins-3.5.1.ebuild 464
-MISC ChangeLog 4271 RMD160 a22fcb8951725c4e159d33807cb84929c7232954 SHA1 227c46e37a4b5b477182ccf685d3bc54fae663a2 SHA256 8fc36199eb355fd33b2f214e204d634428e69212b7c7093ab703e059777aa557
-MD5 71d29c926551d850b2edb95ae713bacf ChangeLog 4271
-RMD160 a22fcb8951725c4e159d33807cb84929c7232954 ChangeLog 4271
-SHA256 8fc36199eb355fd33b2f214e204d634428e69212b7c7093ab703e059777aa557 ChangeLog 4271
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 2be84b6459b7163d38b1162b49cdfb5c ChangeLog 4388
 MD5 5596e49bb1fddea11ef9f8873da38337 files/digest-kdesdk-kfile-plugins-3.4.1 384
-RMD160 2decb2a4d1845334017989032d26428c23fd2103 files/digest-kdesdk-kfile-plugins-3.4.1 384
-SHA256 11207d780e31dd7cd77ce706b72457f2713e2212898811e47b9b6b80c68d9c8e files/digest-kdesdk-kfile-plugins-3.4.1 384
 MD5 3c2988dddde0b22990ae183163bd5e0b files/digest-kdesdk-kfile-plugins-3.5.1 244
-RMD160 faf5c8df6c8e8f93371d48641caca1ea762d60dc files/digest-kdesdk-kfile-plugins-3.5.1 244
-SHA256 a462032c397ef5f6f9bb0856d2c9467dac35821ee6a4a3db603ea3ec7225c12e files/digest-kdesdk-kfile-plugins-3.5.1 244
+MD5 e32a3ab0d2bd77a9786c373f598c5ec4 kdesdk-kfile-plugins-3.4.1.ebuild 462
+MD5 d49c48d1f4024359190cb3a6edc94879 kdesdk-kfile-plugins-3.5.1.ebuild 468
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
