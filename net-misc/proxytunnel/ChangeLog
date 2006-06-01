@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/proxytunnel
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxytunnel/ChangeLog,v 1.13 2006/04/27 22:09:44 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxytunnel/ChangeLog,v 1.14 2006/06/01 21:54:00 dragonheart Exp $
+
+  01 Jun 2006; Daniel Black <dragonheart@gentoo.org>
+  -files/1.2.0-makefile.patch, -proxytunnel-1.2.0.ebuild:
+  purge security vulnerable versions
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-proxytunnel-1.2.0, files/digest-proxytunnel-1.2.3, Manifest:
