@@ -1,26 +1,6 @@
-DIST kdeaddons-3.4.0-3.4.1.tar.xdelta 120597
-DIST kdeaddons-3.4.0.tar.bz2 1670919
-DIST kdeaddons-3.4.1.tar.bz2 1626243 RMD160 5f25241b250831d867652649ce06bf8bd37d2f16 SHA1 cbe884300aec58ba4eb7978df8e764f0813efb1a SHA256 9a1751d604c15b42fd1764094b32f2970bac2865bb18c5177e57f1987c9b4dd6
-DIST kdeaddons-3.5.0.tar.bz2 1618786 RMD160 1c6522752697ab4f54fa877767dae6714bcb6afe SHA1 c3ccd6d54f46c8164480a17956e11033908d03ff SHA256 2b232ec558937b04191f08aa937d91c5f0d154e1ddebcc19b5630f9adf948e08
-EBUILD kdeaddons-kfile-plugins-3.4.1.ebuild 532 RMD160 6f8827d77326298b2101ed86aec46cd9f8cc704f SHA1 6c6d36252a1d1f35811b49a884b52a8aa77fa8ff SHA256 0bebf7072c8b94083c970b2937d30313a0503a9c7c0e391a404792065054b53b
-MD5 656e4adf424ce8c34cdee88370acd516 kdeaddons-kfile-plugins-3.4.1.ebuild 532
-RMD160 6f8827d77326298b2101ed86aec46cd9f8cc704f kdeaddons-kfile-plugins-3.4.1.ebuild 532
-SHA256 0bebf7072c8b94083c970b2937d30313a0503a9c7c0e391a404792065054b53b kdeaddons-kfile-plugins-3.4.1.ebuild 532
-EBUILD kdeaddons-kfile-plugins-3.5.0.ebuild 618 RMD160 4e5545bce35960bd4e7bace9e863cc1e2cb599b9 SHA1 f1e5a6180f375a330f99edb22895757836ddc842 SHA256 a2fed34fcde2b0597a876317bb617530eca2bb3746c72af04a5057de73f989af
-MD5 783af1386e00f18cc6e38d495dbcc0aa kdeaddons-kfile-plugins-3.5.0.ebuild 618
-RMD160 4e5545bce35960bd4e7bace9e863cc1e2cb599b9 kdeaddons-kfile-plugins-3.5.0.ebuild 618
-SHA256 a2fed34fcde2b0597a876317bb617530eca2bb3746c72af04a5057de73f989af kdeaddons-kfile-plugins-3.5.0.ebuild 618
-MISC ChangeLog 4642 RMD160 c277695cd2fc600349d7bc53b0b8b4d75f6cd51c SHA1 160d372ef8141864a4845ad163c1f0fa07eea6e0 SHA256 e32abe5facbe5503a5290993cdc77593eb695a2197a125350a00c3b418774fa3
-MD5 114b7a21b2606f38d49017c0d1eb8891 ChangeLog 4642
-RMD160 c277695cd2fc600349d7bc53b0b8b4d75f6cd51c ChangeLog 4642
-SHA256 e32abe5facbe5503a5290993cdc77593eb695a2197a125350a00c3b418774fa3 ChangeLog 4642
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 b60b760d51167b302e75c0f8af73e14d ChangeLog 4764
 MD5 2e3f0e138201fc8f5d2def5506a12f4d files/digest-kdeaddons-kfile-plugins-3.4.1 399
-RMD160 6dc6b454663724247da12f49a37dfa8c72b6dc5b files/digest-kdeaddons-kfile-plugins-3.4.1 399
-SHA256 e6ea3c097a7cfcce7485f936cc121e9a3e9c7fa88e066e8ed01505e2ae46585d files/digest-kdeaddons-kfile-plugins-3.4.1 399
 MD5 020bb268c48fb6d47b7837885ea6ec1f files/digest-kdeaddons-kfile-plugins-3.5.0 253
-RMD160 64ff910e6d45685495add348ed7e2e062dff740e files/digest-kdeaddons-kfile-plugins-3.5.0 253
-SHA256 1a4a7b5ad7b3831682bb7db47c2defc0c331eab5f1580db1ad41136bd6d54e51 files/digest-kdeaddons-kfile-plugins-3.5.0 253
+MD5 656e4adf424ce8c34cdee88370acd516 kdeaddons-kfile-plugins-3.4.1.ebuild 532
+MD5 84cbb24e8670b9bde6555d77d277ea83 kdeaddons-kfile-plugins-3.5.0.ebuild 616
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

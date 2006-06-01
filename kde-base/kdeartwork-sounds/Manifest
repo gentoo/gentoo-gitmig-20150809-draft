@@ -1,26 +1,6 @@
-DIST kdeartwork-3.4.0-3.4.1.tar.xdelta 301755
-DIST kdeartwork-3.4.0.tar.bz2 18077818
-DIST kdeartwork-3.4.1.tar.bz2 18066167 RMD160 5bc92f78ea7967d4ffc6bb23802bc41d0881a974 SHA1 397050cd93f2297c65199cf2c86f69925a27a6be SHA256 ae574222c96235e23816d5a903a1562101522e627bc265ed40fe79ce16391866
-DIST kdeartwork-3.5.0.tar.bz2 16610564
-EBUILD kdeartwork-sounds-3.4.1.ebuild 447 RMD160 3d9436f72c466c52deb40d9486545b4a848e9990 SHA1 58719ef6a8a04cb8b815f240657055de8dce3166 SHA256 b70edab4e326389f72a3b04743fd5e8c6fbdc9fd42ae084960d75bddda3d8eb6
-MD5 c766cc83164c987f25b11c5cef996784 kdeartwork-sounds-3.4.1.ebuild 447
-RMD160 3d9436f72c466c52deb40d9486545b4a848e9990 kdeartwork-sounds-3.4.1.ebuild 447
-SHA256 b70edab4e326389f72a3b04743fd5e8c6fbdc9fd42ae084960d75bddda3d8eb6 kdeartwork-sounds-3.4.1.ebuild 447
-EBUILD kdeartwork-sounds-3.5.0.ebuild 447 RMD160 a4c811df1a5054c758d0ec3d4c28e69984f33f96 SHA1 aa79f03edea0c94dcae94454c1b7fde0727a8e39 SHA256 51f646d4b81b8a3c943885a54b57974d13fed55264c2215fd6879c6423e38072
-MD5 b9af9175cd7ffaf6d863ecba8fabe3d6 kdeartwork-sounds-3.5.0.ebuild 447
-RMD160 a4c811df1a5054c758d0ec3d4c28e69984f33f96 kdeartwork-sounds-3.5.0.ebuild 447
-SHA256 51f646d4b81b8a3c943885a54b57974d13fed55264c2215fd6879c6423e38072 kdeartwork-sounds-3.5.0.ebuild 447
-MISC ChangeLog 4349 RMD160 41db6a9fff0f4a0a54e813b3d5052e6eb91362c8 SHA1 17108ddca6e09094b6a078432daaad7e47f1f0bf SHA256 2d9d012e446ba12ec5d12b8c3a8a6d49378074e5a4e92f39c80eb1672b1d04c6
-MD5 9fcfe13d12dbbbb48f4d239f474c1a42 ChangeLog 4349
-RMD160 41db6a9fff0f4a0a54e813b3d5052e6eb91362c8 ChangeLog 4349
-SHA256 2d9d012e446ba12ec5d12b8c3a8a6d49378074e5a4e92f39c80eb1672b1d04c6 ChangeLog 4349
-MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
+MD5 f5cfbd8f2c4b52da04247d95b7f77ff2 ChangeLog 4465
 MD5 33e36dd7fa3219f4e514b9ff2ebf1b94 files/digest-kdeartwork-sounds-3.4.1 408
-RMD160 074e8f98285166f0ebdceaaeb03ab0170c66574a files/digest-kdeartwork-sounds-3.4.1 408
-SHA256 405dde1e1a811777883f20d4368d27c1201ba547024b8af5dd1a9fbbcbb0b59c files/digest-kdeartwork-sounds-3.4.1 408
 MD5 5d798bbc72f84bd47d8347da83a552a2 files/digest-kdeartwork-sounds-3.5.0 71
-RMD160 296a8c2ceb9d34db7fe300ca9bebf27270221a0b files/digest-kdeartwork-sounds-3.5.0 71
-SHA256 f3751e7ae79bc535a6178005ffc614818c6d7b10db84cbb0fb3caac156bdd2b4 files/digest-kdeartwork-sounds-3.5.0 71
+MD5 c766cc83164c987f25b11c5cef996784 kdeartwork-sounds-3.4.1.ebuild 447
+MD5 db9c997c873f3527ea2b9c2d3e841033 kdeartwork-sounds-3.5.0.ebuild 445
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
