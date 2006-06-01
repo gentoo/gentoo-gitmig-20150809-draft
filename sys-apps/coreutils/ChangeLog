@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.171 2006/05/23 11:21:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.172 2006/06/01 23:32:05 flameeyes Exp $
+
+  01 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> coreutils-5.96.ebuild:
+  Restrict confcache as per bug #134459.
 
   23 May 2006; Diego Pettenò <flameeyes@gentoo.org> coreutils-5.96.ebuild:
   Add ~x86-fbsd keyword. Change strategy for non-GNU userlands, instead of
