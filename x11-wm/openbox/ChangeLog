@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.107 2006/05/10 00:44:23 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.108 2006/06/01 01:09:15 anarchy Exp $
+
+*openbox-20060509-r1 (01 Jun 2006)
+
+  01 Jun 2006; Jory A. Pratt <anarchy@gentoo.org>
+  +files/openbox-20060509-hideMenuHeader.patch,
+  +files/openbox-20060509-pipedsplitgradient.patch,
+  +openbox-20060509-r1.ebuild:
+  revision for hiding menu header, and pipedslitgradient patch for more
+  advanced themeing possibilities
 
 *openbox-20060509 (10 May 2006)
 

@@ -1,0 +1,256 @@
+Index: openbox/openbox.c
+===================================================================
+RCS file: /cvs/cvsroot/openbox/openbox/openbox.c,v
+retrieving revision 1.130
+diff -p -u -r1.130 openbox.c
+--- openbox/openbox.c	1 Apr 2005 13:04:55 -0000	1.130
++++ openbox/openbox.c	19 Feb 2006 22:21:25 -0000
+@@ -163,7 +163,7 @@ gint main(gint argc, gchar **argv)
+     cursors[OB_CURSOR_BUSY] =
+         XCreateFontCursor(ob_display, XC_watch);
+     cursors[OB_CURSOR_MOVE] =
+-        XCreateFontCursor(ob_display, XC_fleur);
++        XCreateFontCursor(ob_display, XC_cross);
+     cursors[OB_CURSOR_NORTH] =
+         XCreateFontCursor(ob_display, XC_top_side);
+     cursors[OB_CURSOR_NORTHEAST] =
+Index: render/gradient.c
+===================================================================
+RCS file: /cvs/cvsroot/openbox/render/gradient.c,v
+retrieving revision 1.45
+diff -p -u -r1.45 gradient.c
+--- render/gradient.c	15 Oct 2003 03:59:35 -0000	1.45
++++ render/gradient.c	19 Feb 2006 22:21:26 -0000
+@@ -24,6 +24,7 @@
+ 
+ static void highlight(RrPixel32 *x, RrPixel32 *y, gboolean raised);
+ static void gradient_solid(RrAppearance *l, gint w, gint h);
++static void gradient_split(RrAppearance *a, gint w, gint h);
+ static void gradient_vertical(RrSurface *sf, gint w, gint h);
+ static void gradient_horizontal(RrSurface *sf, gint w, gint h);
+ static void gradient_diagonal(RrSurface *sf, gint w, gint h);
+@@ -41,6 +42,9 @@ void RrRender(RrAppearance *a, gint w, g
+     case RR_SURFACE_SOLID:
+         gradient_solid(a, w, h);
+         break;
++    case RR_SURFACE_SPLIT:
++        gradient_split(a, w, h);
++        break;
+     case RR_SURFACE_VERTICAL:
+         gradient_vertical(&a->surface, w, h);
+         break;
+@@ -60,7 +64,7 @@ void RrRender(RrAppearance *a, gint w, g
+         g_assert_not_reached(); /* unhandled gradient */
+         return;
+     }
+-  
++    
+     if (a->surface.interlaced) {
+         gint i;
+         RrPixel32 *p;
+@@ -76,7 +80,7 @@ void RrRender(RrAppearance *a, gint w, g
+             for (x = 0; x < w; ++x, ++p)
+                 *p = current;
+     }
+-
++  
+     if (a->surface.relief == RR_RELIEF_FLAT && a->surface.border) {
+         r = a->surface.border_color->r;
+         g = a->surface.border_color->g;
+@@ -132,11 +136,11 @@ static void highlight(RrPixel32 *x, RrPi
+         down = x;
+     }
+     r = (*up >> RrDefaultRedOffset) & 0xFF;
+-    r += r >> 1;
++    r += r >> 2;
+     g = (*up >> RrDefaultGreenOffset) & 0xFF;
+-    g += g >> 1;
++    g += g >> 2;
+     b = (*up >> RrDefaultBlueOffset) & 0xFF;
+-    b += b >> 1;
++    b += b >> 2;
+     if (r > 0xFF) r = 0xFF;
+     if (g > 0xFF) g = 0xFF;
+     if (b > 0xFF) b = 0xFF;
+@@ -144,12 +148,15 @@ static void highlight(RrPixel32 *x, RrPi
+         + (b << RrDefaultBlueOffset);
+   
+     r = (*down >> RrDefaultRedOffset) & 0xFF;
+-    r = (r >> 1) + (r >> 2);
++    r = (r >> 1) + (r >> 2) * 1.6;
+     g = (*down >> RrDefaultGreenOffset) & 0xFF;
+-    g = (g >> 1) + (g >> 2);
++    g = (g >> 1) + (g >> 2) * 1.6;
+     b = (*down >> RrDefaultBlueOffset) & 0xFF;
+-    b = (b >> 1) + (b >> 2);
+-    *down = (r << RrDefaultRedOffset) + (g << RrDefaultGreenOffset)
++    b = (b >> 1) + (b >> 2) * 1.6;
++    if (r > 0xFF) r = 0xFF;
++    if (g > 0xFF) g = 0xFF;
++    if (b > 0xFF) b = 0xFF;
++  *down = (r << RrDefaultRedOffset) + (g << RrDefaultGreenOffset)
+         + (b << RrDefaultBlueOffset);
+ }
+ 
+@@ -159,11 +166,11 @@ static void create_bevel_colors(RrAppear
+ 
+     /* light color */
+     r = l->surface.primary->r;
+-    r += r >> 1;
++    r += r >> 2;
+     g = l->surface.primary->g;
+-    g += g >> 1;
++    g += g >> 2;
+     b = l->surface.primary->b;
+-    b += b >> 1;
++    b += b >> 2;
+     if (r > 0xFF) r = 0xFF;
+     if (g > 0xFF) g = 0xFF;
+     if (b > 0xFF) b = 0xFF;
+@@ -172,11 +179,11 @@ static void create_bevel_colors(RrAppear
+ 
+     /* dark color */
+     r = l->surface.primary->r;
+-    r = (r >> 1) + (r >> 2);
++    r = (r >> 1) + (r >> 2) * 1.6;
+     g = l->surface.primary->g;
+-    g = (g >> 1) + (g >> 2);
++    g = (g >> 1) + (g >> 2) * 1.6;
+     b = l->surface.primary->b;
+-    b = (b >> 1) + (b >> 2);
++    b = (b >> 1) + (b >> 2) * 1.6;
+     g_assert(!l->surface.bevel_dark);
+     l->surface.bevel_dark = RrColorNew(l->inst, r, g, b);
+ }
+@@ -198,7 +205,7 @@ static void gradient_solid(RrAppearance 
+ 
+     XFillRectangle(RrDisplay(l->inst), l->pixmap, RrColorGC(sp->primary),
+                    0, 0, w, h);
+-
++    
+     if (sp->interlaced) {
+         for (i = 0; i < h; i += 2)
+             XDrawLine(RrDisplay(l->inst), l->pixmap,
+@@ -359,6 +366,77 @@ static void gradient_solid(RrAppearance 
+     }                                                     \
+ }
+ 
++static void gradient_split(RrAppearance *a, gint w, gint h)
++{
++    gint x, y1, y3, r, g, b;
++    RrSurface *sf = &a->surface;
++    RrPixel32 *data = sf->pixel_data;
++    RrPixel32 current;
++    RrColor *primary_light, *secondary_light;
++
++/*
++   maybe this is a better way, or maybe not! 
++    r = sf->primary->r;
++    r = (r >> 1) + (r >> 2) + (r >> 3) ;
++    g = sf->primary->g;
++    g = (g >> 1) + (g >> 2) + (g >> 3);
++    b = sf->primary->b;
++    b = (b >> 1) + (b >> 2) + (b >> 3);
++    primary_dark = RrColorNew(a->inst, r, g, b);
++*/
++
++
++    r = sf->primary->r;
++    r += r >> 2;
++    g = sf->primary->g;
++    g += g >> 2;
++    b = sf->primary->b;
++    b += b >> 2;
++    if (r > 0xFF) r = 0xFF;
++    if (g > 0xFF) g = 0xFF;
++    if (b > 0xFF) b = 0xFF;
++      primary_light = RrColorNew(a->inst, r, g, b);
++
++
++    r = sf->secondary->r;
++    r += r >> 4;
++    g = sf->secondary->g;
++    g += g >> 4;
++    b = sf->secondary->b;
++    b += b >> 4;
++    if (r > 0xFF) r = 0xFF;
++    if (g > 0xFF) g = 0xFF;
++    if (b > 0xFF) b = 0xFF;
++    secondary_light = RrColorNew(a->inst, r, g, b);
++
++    VARS(y1);
++    SETUP(y1, primary_light, sf->primary, (h / 2) -1);
++  
++    VARS(y3);
++    SETUP(y3, sf->secondary, secondary_light,  (h / 2) -1);
++
++    for (y1 = h - 1; y1 > (h / 2) -1; --y1) {  /* 0 -> h-1 */
++        current = COLOR(y1);
++        for (x = w - 1; x >= 0; --x)  /* 0 -> w */
++            *(data++) = current;
++
++        NEXT(y1);
++    }
++
++    
++    for (y3 = (h / 2) - 1; y3 > 0; --y3) {
++        current = COLOR(y3);
++        for (x = w - 1; x >= 0; --x)
++            *(data++) = current;
++
++        NEXT(y3);
++    }
++
++    current = COLOR(y3);
++    for (x = w - 1; x >= 0; --x)  /* 0 -> w */
++        *(data++) = current;
++}
++
+ static void gradient_horizontal(RrSurface *sf, gint w, gint h)
+ {
+     gint x, y;
+@@ -567,4 +645,3 @@ static void gradient_pyramid(RrSurface *
+     *(end-x) = current;
+     *(end-(inw-x)) = current;
+ }
+-
+Index: render/render.h
+===================================================================
+RCS file: /cvs/cvsroot/openbox/render/render.h,v
+retrieving revision 1.57
+diff -p -u -r1.57 render.h
+--- render/render.h	15 Jul 2005 14:39:31 -0000	1.57
++++ render/render.h	19 Feb 2006 22:21:26 -0000
+@@ -61,6 +61,7 @@ typedef enum {
+     RR_SURFACE_NONE,
+     RR_SURFACE_PARENTREL,
+     RR_SURFACE_SOLID,
++    RR_SURFACE_SPLIT,
+     RR_SURFACE_HORIZONTAL,
+     RR_SURFACE_VERTICAL,
+     RR_SURFACE_DIAGONAL,
+Index: render/theme.c
+===================================================================
+RCS file: /cvs/cvsroot/openbox/render/theme.c,v
+retrieving revision 1.76
+diff -p -u -r1.76 theme.c
+--- render/theme.c	14 Jul 2005 20:41:24 -0000	1.76
++++ render/theme.c	19 Feb 2006 22:21:28 -0000
+@@ -904,7 +904,7 @@ RrTheme* RrThemeNew(const RrInstance *in
+             theme->padding * 2;
+     }
+     theme->button_size = theme->label_height - 2;
+-    theme->grip_width = theme->title_height * 1.5;
++    theme->grip_width = 25;
+ 
+     return theme;
+ }
+@@ -1200,6 +1200,8 @@ static void parse_appearance(gchar *tex,
+                 *grad = RR_SURFACE_HORIZONTAL;
+             else if (strstr(tex, "vertical") != NULL)
+                 *grad = RR_SURFACE_VERTICAL;
++            else if (strstr(tex, "split") != NULL)
++                *grad = RR_SURFACE_SPLIT;
+             else
+                 *grad = RR_SURFACE_DIAGONAL;
+         } else {

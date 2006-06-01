@@ -1,0 +1,64 @@
+Index: openbox/config.c
+===================================================================
+RCS file: /cvs/cvsroot/openbox/openbox/config.c,v
+retrieving revision 1.92
+diff -u -p -r1.92 config.c
+--- openbox/config.c	25 Sep 2005 14:45:24 -0000	1.92
++++ openbox/config.c	16 Apr 2006 18:29:18 -0000
+@@ -36,6 +36,7 @@ ObPlacePolicy config_place_policy;
+ gchar   *config_theme;
+ gboolean config_theme_keepborder;
+ gboolean config_theme_hidedisabled;
++gboolean config_theme_hidemenuheader;
+ 
+ gchar *config_title_layout;
+ 
+@@ -260,6 +261,8 @@ static void parse_theme(ObParseInst *i, 
+         config_theme_keepborder = parse_bool(doc, n);
+     if ((n = parse_find_node("hideDisabled", node)))
+         config_theme_hidedisabled = parse_bool(doc, n);
++    if ((n = parse_find_node("hideMenuHeader", node)))
++        config_theme_hidemenuheader = parse_bool(doc, n);
+ }
+ 
+ static void parse_desktops(ObParseInst *i, xmlDocPtr doc, xmlNodePtr node,
+@@ -563,6 +566,7 @@ void config_startup(ObParseInst *i)
+     config_title_layout = g_strdup("NLIMC");
+     config_theme_keepborder = TRUE;
+     config_theme_hidedisabled = FALSE;
++    config_theme_hidemenuheader = FALSE;
+ 
+     parse_register(i, "theme", parse_theme, NULL);
+ 
+Index: openbox/config.h
+===================================================================
+RCS file: /cvs/cvsroot/openbox/openbox/config.h,v
+retrieving revision 1.57
+diff -u -p -r1.57 config.h
+--- openbox/config.h	25 Sep 2005 14:45:24 -0000	1.57
++++ openbox/config.h	16 Apr 2006 18:29:18 -0000
+@@ -88,6 +88,8 @@ extern gchar *config_theme;
+ extern gboolean config_theme_keepborder;
+ /* Hide window frame buttons that the window doesn't allow */
+ extern gboolean config_theme_hidedisabled;
++/* Hide the menu header? */
++extern gboolean config_theme_hidemenuheader;
+ /* Titlebar button layout */
+ extern gchar *config_title_layout;
+ 
+Index: openbox/menuframe.c
+===================================================================
+RCS file: /cvs/cvsroot/openbox/openbox/menuframe.c,v
+retrieving revision 1.52
+diff -u -p -r1.52 menuframe.c
+--- openbox/menuframe.c	14 Sep 2005 17:40:47 -0000	1.52
++++ openbox/menuframe.c	16 Apr 2006 18:29:18 -0000
+@@ -61,7 +61,7 @@ ObMenuFrame* menu_frame_new(ObMenu *menu
+     self->type = Window_Menu;
+     self->menu = menu;
+     self->selected = NULL;
+-    self->show_title = TRUE;
++    self->show_title = !config_theme_hidemenuheader;
+     self->client = client;
+ 
+     attr.event_mask = FRAME_EVENTMASK;
