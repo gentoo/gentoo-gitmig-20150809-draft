@@ -1,58 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 80b027d4bc042737e5c6ec94b5fd1037 ChangeLog 6792
-RMD160 493725a76cc663d343d5fb822080ff769ea14b56 ChangeLog 6792
-SHA256 82be765c8259e293c69ec0af19ea9df8f3804d7bf913d4f91d8153b4c0194f49 ChangeLog 6792
-MD5 469236380f880bdb92903ecee4587ae3 files/0.8.4-postinst-en.txt 1035
-RMD160 75cd65ba73d0e822a95fea1cedd865f95befb6de files/0.8.4-postinst-en.txt 1035
-SHA256 c073653e3abf0173eecb381c19760d4b6ad4d380b9caaf47797c419feb9db4b0 files/0.8.4-postinst-en.txt 1035
-MD5 1ef68ae7232130e8152d6e007afc4352 files/0.9.3-postinst-en.txt 2275
-RMD160 5434d1d4174621455f3983daf56b6d60b071bee2 files/0.9.3-postinst-en.txt 2275
-SHA256 1b89d5b0d69da1aad5be058096e4237ddef9e0b1fd46909495f9297b6b63f85d files/0.9.3-postinst-en.txt 2275
-MD5 1ef68ae7232130e8152d6e007afc4352 files/0.9.4-postinst-en.txt 2275
-RMD160 5434d1d4174621455f3983daf56b6d60b071bee2 files/0.9.4-postinst-en.txt 2275
-SHA256 1b89d5b0d69da1aad5be058096e4237ddef9e0b1fd46909495f9297b6b63f85d files/0.9.4-postinst-en.txt 2275
+MD5 4fd69735194d319feab359371f2d7eb6 ChangeLog 7024
 MD5 1ef68ae7232130e8152d6e007afc4352 files/0.9.5-postinst-en.txt 2275
-RMD160 5434d1d4174621455f3983daf56b6d60b071bee2 files/0.9.5-postinst-en.txt 2275
-SHA256 1b89d5b0d69da1aad5be058096e4237ddef9e0b1fd46909495f9297b6b63f85d files/0.9.5-postinst-en.txt 2275
-MD5 8923e5fb9575c109266bbab2350940ff files/digest-trac-0.8.4 62
-RMD160 8b0e3f93f8e864db17e31b07ad0de75256ff4ef4 files/digest-trac-0.8.4 62
-SHA256 a0a30280b7caa2cbe426aa43b6c66aba6c63cd55013c9922f43829b4ae2fbc41 files/digest-trac-0.8.4 62
-MD5 34f51a4e22b9c551e4d20d56daf45c85 files/digest-trac-0.9.3 62
-RMD160 9f155b7b6525b6a227bc53a15e51b44bd5b4f8fc files/digest-trac-0.9.3 62
-SHA256 dcc4e175b7cfd4742063e5ee57ee3c6070582a109bce86ae6dd0f0258067d6c8 files/digest-trac-0.9.3 62
-MD5 4bb7201947635e068560898c42ada2b5 files/digest-trac-0.9.4 62
-RMD160 f0e5410df2c3d37b07a8fa5d7e20e0db4180b782 files/digest-trac-0.9.4 62
-SHA256 e5e4b0c7ef33f92e92fe437ff373e9e5d440120d1b8b694bc6d41e155f6dcf8f files/digest-trac-0.9.4 62
 MD5 d79dfe3a7f4a8e6a1d365df766bcb3c8 files/digest-trac-0.9.5 62
-RMD160 0f374006f0871928ba9abee6c11df5346dd3a644 files/digest-trac-0.9.5 62
-SHA256 de0057039cb4619b66be5f9631f9e1e95a9de1343220d4211c47293572fe1e87 files/digest-trac-0.9.5 62
 MD5 95b1311ca65e1ffcd51a191542f45ba4 files/tracd.confd 359
-RMD160 7328dd041576abbc76130ce220041d837289dd00 files/tracd.confd 359
-SHA256 6ae50c887d18f8eeda7d59c4d3fd1b5e07e407711c4e4679fef3583f7be8ed6e files/tracd.confd 359
 MD5 4dc8d28369a56b8efd84fd118c2cb28b files/tracd.initd 743
-RMD160 ddc2bcf9dc907054882f35b5cc0f835c6fb450be files/tracd.initd 743
-SHA256 c55b46edae5e7600890c426362f7e00b3a5fd5290fe3616d189f809b8626265d files/tracd.initd 743
 MD5 fc3b5dec4ccef02547c54bf840024aa6 metadata.xml 220
-RMD160 dcc7b97d4b6eb6a017014b427fa9fd9c2ce04583 metadata.xml 220
-SHA256 09bece3580791397bbf0b4d68ff9ac4abbc37150cf11fe7848f924119ca76b84 metadata.xml 220
-MD5 f605a49aef73a61cbcc7527da21fd418 trac-0.8.4.ebuild 1511
-RMD160 d069973898472a9cb7da225557625134e54d86bc trac-0.8.4.ebuild 1511
-SHA256 18b7fdb72e13daf9c8e41509145055ae1efe96836973f7a0e67bcfb2836af1e4 trac-0.8.4.ebuild 1511
-MD5 77a1c85e49192f2beab5eaed1a331785 trac-0.9.3.ebuild 2486
-RMD160 5844d0d85e3c8e48825e7a8857538dc1a41489e9 trac-0.9.3.ebuild 2486
-SHA256 e9828a9e96f2179feb22b3149be18ae603d2dbd72b1fab188f606a3af97b67b8 trac-0.9.3.ebuild 2486
-MD5 c326214db79b5b93ee26a324371e186d trac-0.9.4.ebuild 2711
-RMD160 47de0355a37f66a56884aff0f15ce484ea8f1222 trac-0.9.4.ebuild 2711
-SHA256 05cafec6ab59464cc0bd5e5e0c98c4baf595dc13815ced28c5d3320c6d1a9c95 trac-0.9.4.ebuild 2711
 MD5 106a9f94e78c56bca94a3e6434680ecf trac-0.9.5.ebuild 2706
-RMD160 ad75382046264d3a42b33fd00ff8305d865f4a25 trac-0.9.5.ebuild 2706
-SHA256 16e442b7c412d109abff836845b2414b3b484a03e071079440abd84ca615ce8a trac-0.9.5.ebuild 2706
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFESY1bCRZPokWLroQRAqZOAKDUWbD+htVPdQOijdBlgxafWEGq3ACfeh/2
-YML+8YGlksf3CRtanSVLP6o=
-=ZNle
------END PGP SIGNATURE-----

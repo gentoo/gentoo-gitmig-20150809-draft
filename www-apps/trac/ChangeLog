@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/trac
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.35 2006/04/22 01:56:33 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.36 2006/06/01 22:13:56 dju Exp $
+
+  01 Jun 2006; Julien Allanos <dju@gentoo.org> -files/0.9.3-postinst-en.txt,
+  -files/0.9.4-postinst-en.txt, -files/0.8.4-postinst-en.txt,
+  -trac-0.8.4.ebuild, -trac-0.9.3.ebuild, -trac-0.9.4.ebuild:
+  Removed old vulnerable ebuilds.
 
   22 Apr 2006; Mark Loeser <halcy0n@gentoo.org> trac-0.9.5.ebuild:
   Stable on x86; bug #130399
