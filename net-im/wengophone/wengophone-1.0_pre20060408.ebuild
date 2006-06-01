@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/wengophone-1.0_pre20060408.ebuild,v 1.1 2006/04/08 22:45:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/wengophone-1.0_pre20060408.ebuild,v 1.2 2006/06/01 17:15:03 genstef Exp $
 
 inherit qt3 eutils
 
@@ -15,6 +15,7 @@ IUSE="oss"
 
 RDEPEND="!oss? ( media-libs/alsa-lib )
 	dev-libs/glib
+	media-video/ffmpeg
 	sys-libs/zlib
 	$(qt_min_version 3.3.4)"
 DEPEND="${RDEPEND}
