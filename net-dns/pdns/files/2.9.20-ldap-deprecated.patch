@@ -1,0 +1,12 @@
+diff -Nur pdns-2.9.20.orig/modules/ldapbackend/Makefile.am pdns-2.9.20/modules/ldapbackend/Makefile.am
+--- pdns-2.9.20.orig/modules/ldapbackend/Makefile.am	2006-03-15 18:29:39.000000000 +0000
++++ pdns-2.9.20/modules/ldapbackend/Makefile.am	2006-06-01 20:23:42.047117750 +0000
+@@ -2,6 +2,8 @@
+ 
+ EXTRA_DIST=OBJECTFILES OBJECTLIBS
+ 
++DEFS+=-DLDAP_DEPRECATED
++
+ libldapbackend_la_SOURCES=ldapbackend.cc ldapbackend.hh \
+ 		powerldap.hh powerldap.cc utils.hh
+ 
