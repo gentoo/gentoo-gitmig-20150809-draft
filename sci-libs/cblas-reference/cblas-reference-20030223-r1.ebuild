@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r1.ebuild,v 1.1 2006/05/29 00:15:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r1.ebuild,v 1.2 2006/06/01 16:53:05 mr_bones_ Exp $
 
 inherit autotools eutils fortran multilib
 
@@ -50,5 +50,5 @@ src_install() {
 }
 
 pkg_postinst() {
-    blas-config c-reference
+	blas-config c-reference
 }
