@@ -1,7 +1,6 @@
 MD5 db13fc9ca61363b96304c8b0b6977a2b ChangeLog 4120
 MD5 e9db29331962729c373695ee3d7e8fed cryptsetup-luks-1.0.1-r1.ebuild 2043
 MD5 06345bb64c18f0ab5857556a8bd52de0 cryptsetup-luks-1.0.1-r2.ebuild 2113
-MD5 37d175ab74fa667692d33cd505ccbaa0 cryptsetup-luks-1.0.3-r1.ebuild 2206
 MD5 648e59cde465f5acc399f8707299ca1c cryptsetup-luks-1.0.3-r2.ebuild 2261
 MD5 6d86b15e07cd0cdf96d8a363b1d778cd files/cryptfs.confd 1548
 MD5 906131d3cdd20ac94109052236e469b9 files/cryptsetup-luks-1.0.1-libmapper.patch 534
@@ -9,7 +8,6 @@ MD5 c66058fc1ba9f980485e2b9e3b66df52 files/cryptsetup-luks-1.0.1-no-nls.patch 59
 MD5 8e76b60d4e94130170c49c7f32bb2ee6 files/cryptsetup-luks-1.0.3-selinux.patch 418
 MD5 1c0c01504919b985fca8352924530b59 files/digest-cryptsetup-luks-1.0.1-r1 268
 MD5 1c0c01504919b985fca8352924530b59 files/digest-cryptsetup-luks-1.0.1-r2 268
-MD5 1af32c51e65cb0cc90ccf7cb90192283 files/digest-cryptsetup-luks-1.0.3-r1 74
 MD5 1af32c51e65cb0cc90ccf7cb90192283 files/digest-cryptsetup-luks-1.0.3-r2 74
 MD5 c653a0b4ace27569ccc659b7cb43b4a9 files/dm-crypt-start.sh 4306
 MD5 a3bb6598f67c8922ccb6576ff256ced0 files/dm-crypt-stop.sh 1297
