@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/konsole-3.5.3.ebuild,v 1.1 2006/06/01 19:21:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/konsole-3.5.3.ebuild,v 1.2 2006/06/01 23:37:00 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -22,5 +22,4 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	|| ( x11-apps/bdftopcf virtual/x11 )"
 
-PATCHES="${FILESDIR}/${PN}-3.5.1-detach-send2all.patch
-	${FILESDIR}/konsole-3.5.2-session-save-crash.fix.diff"
+PATCHES="${FILESDIR}/${PN}-3.5.1-detach-send2all.patch"
