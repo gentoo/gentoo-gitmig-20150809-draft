@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libprelude
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.45 2006/04/30 10:17:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.46 2006/06/01 20:50:26 jokey Exp $
+
+*libprelude-0.9.8 (01 Jun 2006)
+
+  01 Jun 2006; Markus Ullmann <jokey@gentoo.org> +libprelude-0.9.8.ebuild:
+  Version bump wrt bug #135188
 
   30 Apr 2006; Simon Stelling <blubb@gentoo.org> libprelude-0.9.3.ebuild:
   stable on amd64
