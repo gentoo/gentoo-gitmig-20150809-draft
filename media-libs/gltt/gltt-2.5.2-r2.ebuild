@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gltt/gltt-2.5.2-r2.ebuild,v 1.2 2005/12/16 10:59:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gltt/gltt-2.5.2-r2.ebuild,v 1.3 2006/06/01 14:10:10 seemant Exp $
 
 inherit eutils libtool gnuconfig
 
@@ -9,7 +9,6 @@ PATCHVER=0.1
 DESCRIPTION="GL truetype library"
 HOMEPAGE="http://gltt.sourceforge.net/"
 SRC_URI="http://gltt.sourceforge.net/download/${P}.tar.gz
-	http://dev.gentoo.org/~seemant/distfiles/${P}-gentoo-${PATCHVER}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2"
 
 LICENSE="LGPL-2"
@@ -25,7 +24,7 @@ PATCHDIR=${WORKDIR}/gentoo
 
 src_unpack() {
 	unpack ${A}; cd ${S}
-	EPATCH_SUFFIX="patch" epatch ${FILESDIR}
+	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
 }
 
 src_compile() {
