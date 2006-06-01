@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5438 2006/06/01 01:10:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5439 2006/06/01 01:26:37 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -283,6 +283,7 @@ games-misc/typespeed
 =kde-base/ksync-3.5.3
 =kde-base/kig-3.5.3
 =kde-base/ksirc-3.5.3
+=dev-util/kdevelop-3.3.3
 
 # Carsten Lohrke <carlo@gentoo.org> (31 May 2006)
 # Masked pending removal, use kde-base/superkaramba instead
