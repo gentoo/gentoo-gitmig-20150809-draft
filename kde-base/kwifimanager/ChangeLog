@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kwifimanager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwifimanager/ChangeLog,v 1.38 2006/05/29 16:48:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwifimanager/ChangeLog,v 1.39 2006/06/01 20:40:19 flameeyes Exp $
+
+*kwifimanager-3.5.3 (01 Jun 2006)
+
+  01 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +kwifimanager-3.5.3.ebuild:
+  Update to new release.
 
   29 May 2006; Markus Rothe <corsair@gentoo.org> kwifimanager-3.5.2.ebuild:
   Stable on ppc64

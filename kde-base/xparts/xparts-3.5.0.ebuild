@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/xparts-3.5.0.ebuild,v 1.3 2006/03/22 20:15:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/xparts-3.5.0.ebuild,v 1.4 2006/06/01 21:18:47 flameeyes Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY="dcopc"
 KMCOPYLIB="libdcopc dcopc"
 KM_MAKEFILESREV=1
-MAXKDEVER=3.5.2
+MAXKDEVER=3.5.3
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
