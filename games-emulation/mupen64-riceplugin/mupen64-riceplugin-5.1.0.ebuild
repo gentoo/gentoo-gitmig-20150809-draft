@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/mupen64-riceplugin-5.1.0.ebuild,v 1.9 2005/09/20 15:26:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/mupen64-riceplugin-5.1.0.ebuild,v 1.10 2006/06/01 18:51:02 tupone Exp $
 
-inherit eutils libtool games
+inherit toolchain-funcs eutils libtool flag-o-matic games
 
 DESCRIPTION="an graphics plugin for mupen64"
 SRC_URI="http://mupen64.emulation64.com/files/0.4/riceplugin.tar.bz2"
@@ -35,6 +35,7 @@ src_unpack() {
 }
 
 src_compile() {
+	[[ $(gcc-major-version) -ge 4 ]] && ! is-flag -msse && append-flags -msse
 	emake || die "emake failed"
 }
 

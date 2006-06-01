@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/mupen64-riceplugin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/ChangeLog,v 1.13 2006/04/27 19:46:20 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/ChangeLog,v 1.14 2006/06/01 18:51:02 tupone Exp $
+
+  01 Jun 2006; <Tupone@gentoo.org> mupen64-riceplugin-5.1.0.ebuild:
+  Fix for gcc-4.1 not compiling without -msse, bug #132051 by me
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
