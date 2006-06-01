@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gtk-theme-switch
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.30 2005/11/19 12:59:45 killerfox Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.31 2006/06/01 14:24:30 seemant Exp $
+
+  01 Jun 2006; Seemant Kulleen <seemant@gentoo.org>
+  gtk-theme-switch-1.0.1-r2.ebuild:
+  fix the man page and stuff, so it all installs like switch2 anyway. should
+  fix bug #129687 by Pawel Kilian
 
   19 Nov 2005; Rene Nussbaumer <killerfox@gentoo.org>
   gtk-theme-switch-1.0.1-r2.ebuild, gtk-theme-switch-2.0.0_rc2-r2.ebuild:

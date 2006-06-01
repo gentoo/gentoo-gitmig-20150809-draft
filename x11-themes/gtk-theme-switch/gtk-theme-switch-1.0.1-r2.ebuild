@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-1.0.1-r2.ebuild,v 1.6 2005/11/20 06:20:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-1.0.1-r2.ebuild,v 1.7 2006/06/01 14:24:30 seemant Exp $
 
 inherit eutils
 
@@ -27,19 +27,8 @@ src_compile() {
 }
 
 src_install () {
-	dodir usr/share
-	dodir usr/share/man
-	dodir usr/share/man/man1
-	make PREFIX=${D}usr install || die
-	mv ${D}usr/man/switch.1* ${D}usr/share/man/man1/
-	# fix for 63012
-	mv ${D}/usr/share/man/man1/{,gtk-theme-}switch.1*
+	dobin switch
+	newman switch.1 gtk-theme-switch.1
+	dosym gtk-theme-switch.1 /usr/share/man/man1/switch.1
 	dodoc ChangeLog readme*
-}
-
-pkg_preinst() {
-	if [ ! -f ${ROOT}/usr/share/man/man1/switch.1* ]
-	then
-		ln -sf ${IMAGE}/usr/share/man/man1/{gtk-theme-,}switch.1.gz
-	fi
 }
