@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/perl-cleaner
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.21 2006/05/29 20:42:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.22 2006/06/01 00:40:04 mcummings Exp $
+
+*perl-cleaner-1.04.1 (01 Jun 2006)
+
+  01 Jun 2006; <mcummings@gentoo.org> +perl-cleaner-1.04.1.ebuild:
+  Bug 135080 - ph-clean is removing current ph files as well.
 
   29 May 2006; Simon Stelling <blubb@gentoo.org> perl-cleaner-1.04.ebuild:
   stable on amd64 wrt bug 134796
