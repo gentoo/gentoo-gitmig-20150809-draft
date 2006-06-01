@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.1-r1.ebuild,v 1.1 2006/05/03 14:47:46 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.1-r1.ebuild,v 1.2 2006/06/01 22:13:26 ticho Exp $
 
 inherit flag-o-matic eutils
 
@@ -59,6 +59,11 @@ src_unpack() {
 		epatch ${DISTDIR}/${P}-utf8.patch.bz2
 	fi
 	epatch ${FILESDIR}/${P}-nonblock.patch
+
+	# Prevent lazy bindings in cons.saver binary. (bug #135009)
+	#  - not using bindnow-flags() because cons.saver is only built on GNU/Linux
+	sed -i -e "s:^\(cons_saver_LDADD = .*\):\1 -Wl,-z,now:" \
+		src/Makefile.in
 }
 
 src_compile() {
