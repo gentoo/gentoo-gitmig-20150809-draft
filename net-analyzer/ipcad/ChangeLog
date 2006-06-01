@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ipcad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.19 2006/03/05 20:48:48 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.20 2006/06/01 21:13:58 jokey Exp $
+
+  01 Jun 2006; Markus Ullmann <jokey@gentoo.org> files/ipcad.conf.d:
+  Adjusting conf.d file, thanks to Ricardo Cordeiro in bug #135085
 
   05 Mar 2006; Markus Ullmann <jokey@gentoo.org> ipcad-3.6.6.ebuild:
   COPYING/INSTALL cleanup
