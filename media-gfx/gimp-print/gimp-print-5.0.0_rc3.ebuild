@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_rc3.ebuild,v 1.2 2006/05/20 11:36:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_rc3.ebuild,v 1.3 2006/06/01 18:50:35 genstef Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -56,13 +56,13 @@ src_compile() {
 		&& myconf="${myconf} --with-foomatic3" \
 		|| myconf="${myconf} --without-foomatic"
 
-	# --without-translated-ppds enabled \
 	econf \
 		--enable-test \
 		--with-ghostscript \
 		--with-user-guide \
 		--with-samples \
 		--with-escputil \
+		--disable-translated-cups-ppds \
 		$(use_enable nls) \
 		$(use_with readline) \
 		$(use_enable gtk lexmarkutil) \
