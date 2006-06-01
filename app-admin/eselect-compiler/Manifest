@@ -10,32 +10,25 @@ MD5 41ae1c7a156d13710a458bd1a70078f3 files/eselect-compiler-2.0.0_rc1-inherit.pa
 RMD160 67805308fc7dacb16730873b2cc72f902b0ed61f files/eselect-compiler-2.0.0_rc1-inherit.patch 645
 SHA256 b22f15cf016ee3e4314a88c148c3b2fd02fc97128a94af5eab0fb015939a61fe files/eselect-compiler-2.0.0_rc1-inherit.patch 645
 DIST compiler-config-2.0.0_rc1.tar.gz 117180 RMD160 dbcd8120139c75f40ae2405746ab2a5f26e810b4 SHA1 3a1a1605dd0e8b59ba5d796c4583244f46f97a03 SHA256 a911a7b0a1184c576500df8530e77823f976dce387001c581ba89ac8edfe30c2
-EBUILD eselect-compiler-2.0.0_rc1-r2.ebuild 3773 RMD160 fae03db56fed581d1f066fd519114ae4d7cdd8bc SHA1 e339bc5dae2ddd55b1bac173c676997d28a36760 SHA256 31becb85cd8fd8b6a25428c8cc23092a6a6d6cf014b5ddc621b56ca89e90e6a4
-MD5 2c81c4b0f3b6d850bd57cbd692925d9a eselect-compiler-2.0.0_rc1-r2.ebuild 3773
-RMD160 fae03db56fed581d1f066fd519114ae4d7cdd8bc eselect-compiler-2.0.0_rc1-r2.ebuild 3773
-SHA256 31becb85cd8fd8b6a25428c8cc23092a6a6d6cf014b5ddc621b56ca89e90e6a4 eselect-compiler-2.0.0_rc1-r2.ebuild 3773
-EBUILD eselect-compiler-2.0.0_rc1-r3.ebuild 3893 RMD160 e9b123a60b8c785eeb1e4f4910ea6c7b32c72877 SHA1 d7e42c810a82cc86091d32dab62e70f44348e5f9 SHA256 3f2c2bc5a261568b02278ab9fb6d0e4e46f59000307ce534902495dcd112ef6f
-MD5 0ae20a1af8e2db8ecd1e92536f9135d7 eselect-compiler-2.0.0_rc1-r3.ebuild 3893
-RMD160 e9b123a60b8c785eeb1e4f4910ea6c7b32c72877 eselect-compiler-2.0.0_rc1-r3.ebuild 3893
-SHA256 3f2c2bc5a261568b02278ab9fb6d0e4e46f59000307ce534902495dcd112ef6f eselect-compiler-2.0.0_rc1-r3.ebuild 3893
-MISC ChangeLog 4546 RMD160 8d48e2bf2344d7a5f96af195f9ed4fc26cf2b5dc SHA1 8202666ee3a26e6bf9be2c3005cbed83bc909ed9 SHA256 317c99ff9898932b36fcfbcdd755f63259ea3bc461c72fecd5682719168eaa29
-MD5 4aaf0ace187f73f037965368cd2dac19 ChangeLog 4546
-RMD160 8d48e2bf2344d7a5f96af195f9ed4fc26cf2b5dc ChangeLog 4546
-SHA256 317c99ff9898932b36fcfbcdd755f63259ea3bc461c72fecd5682719168eaa29 ChangeLog 4546
+EBUILD eselect-compiler-2.0.0_rc1-r4.ebuild 4246 RMD160 401573e619ddf4733541db40facb6f96b06041a5 SHA1 e37ba0b77a228eb8ddcf20b2aa6e36ba13f2c435 SHA256 485956da88c03fb2aa6429729ba512307dfea65580362a3b174c4ec04beee7e4
+MD5 fac84df6970f982ab7018f072a9afd58 eselect-compiler-2.0.0_rc1-r4.ebuild 4246
+RMD160 401573e619ddf4733541db40facb6f96b06041a5 eselect-compiler-2.0.0_rc1-r4.ebuild 4246
+SHA256 485956da88c03fb2aa6429729ba512307dfea65580362a3b174c4ec04beee7e4 eselect-compiler-2.0.0_rc1-r4.ebuild 4246
+MISC ChangeLog 4893 RMD160 087da48a75c1dd6ed4dcf7729bf687e84a8681f1 SHA1 ad0fbcc5fb01d874761be5e7daf81008926e2375 SHA256 a377aadaa85441cc970670570eec63ef16fd5820a93df76bcae459df7140d598
+MD5 36357866e3211fdee955476a6f39f43d ChangeLog 4893
+RMD160 087da48a75c1dd6ed4dcf7729bf687e84a8681f1 ChangeLog 4893
+SHA256 a377aadaa85441cc970670570eec63ef16fd5820a93df76bcae459df7140d598 ChangeLog 4893
 MISC metadata.xml 162 RMD160 d002486a43522f2116b1d9d59828c484956d66e2 SHA1 d6b4923897f6ae673b4f93646f5b4ba61d5a2c3c SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
 SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
-MD5 63440bc21fdf46cc94352893f2fd6e3e files/digest-eselect-compiler-2.0.0_rc1-r2 277
-RMD160 3b08c6248c4f7f8d14ac66ff0fb70bb8c8276c53 files/digest-eselect-compiler-2.0.0_rc1-r2 277
-SHA256 ba21ae92f613fd0a6f34b3fda34d1d82c6b284c045481b9686b66fd9e373c21e files/digest-eselect-compiler-2.0.0_rc1-r2 277
-MD5 63440bc21fdf46cc94352893f2fd6e3e files/digest-eselect-compiler-2.0.0_rc1-r3 277
-RMD160 3b08c6248c4f7f8d14ac66ff0fb70bb8c8276c53 files/digest-eselect-compiler-2.0.0_rc1-r3 277
-SHA256 ba21ae92f613fd0a6f34b3fda34d1d82c6b284c045481b9686b66fd9e373c21e files/digest-eselect-compiler-2.0.0_rc1-r3 277
+MD5 63440bc21fdf46cc94352893f2fd6e3e files/digest-eselect-compiler-2.0.0_rc1-r4 277
+RMD160 3b08c6248c4f7f8d14ac66ff0fb70bb8c8276c53 files/digest-eselect-compiler-2.0.0_rc1-r4 277
+SHA256 ba21ae92f613fd0a6f34b3fda34d1d82c6b284c045481b9686b66fd9e373c21e files/digest-eselect-compiler-2.0.0_rc1-r4 277
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEfrJGOpjtAl+gMRURAnoRAJ4jxriIDHni4pxeVMLX8g/yucy7LgCfcT1j
-DQJn06ZzrFpwAsU3+E9ZvXY=
-=PUPy
+iD8DBQFEfrZXOpjtAl+gMRURAqPjAKDHTqAB9r1/8AgayxZIdx1uJmTmGQCgrXj6
+XxrzjLQMhgmA4BNI1FE777c=
+=Yxko
 -----END PGP SIGNATURE-----
