@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/vixie-cron
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.30 2006/06/01 17:57:30 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.31 2006/06/01 18:16:29 dertobi123 Exp $
+
+  01 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  vixie-cron-4.1-r9.ebuild:
+  ppc stable, bug #134194
 
   01 Jun 2006; Thomas Cort <tcort@gentoo.org> vixie-cron-4.1-r9.ebuild:
   Stable on alpha wrt security Bug #134194.
