@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5440 2006/06/01 03:50:17 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5441 2006/06/01 03:55:19 mkennedy Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -29,7 +29,7 @@ app-arch/ipkg-utils
 # masked pending unresolved security bug #135071
 games-misc/typespeed
 
-# Diego Pettenò <flameeyes@gentoo.org> (01 Jun 2006)
+# Diego PettenÃ² <flameeyes@gentoo.org> (01 Jun 2006)
 # Masked for testing - I know I'm late.
 =kde-base/arts-3.5.3
 =kde-base/kdelibs-3.5.3
@@ -375,10 +375,9 @@ sys-apps/resmgr
 
 # Doug Goldstein <cardoe@gentoo.org> (26 May 2006)
 # it doesn't work for me but people want it..
-=media-tv/ivtv-0.4.5
 =media-tv/ivtv-0.6.2
 
-# Diego Pettenò <flameeyes@gentoo.org> (26 May 2006)
+# Diego PettenÃ² <flameeyes@gentoo.org> (26 May 2006)
 # Pending removal - superseded by xine-lib itself
 media-plugins/xine-vcdx
 
@@ -521,7 +520,7 @@ www-client/amaya
 # Initial import
 gnome-extra/gnome-power-manager
 
-# Diego Pettenò <flameeyes@gentoo.org> (24 Apr 2006)
+# Diego PettenÃ² <flameeyes@gentoo.org> (24 Apr 2006)
 # Pre-release snapshots
 =app-mobilephone/kmobiletools-0.5*
 
@@ -543,11 +542,11 @@ app-crypt/gpg-agent
 # unresolved security issues #125491
 net-analyzer/tcpick
 
-# Diego Pettenò <flameeyes@gentoo.org> (21 Apr 2006)
+# Diego PettenÃ² <flameeyes@gentoo.org> (21 Apr 2006)
 # Working on this, it's in a very fluid state
 =sys-libs/pam-0.99*
 
-# Benedikt Böhm <hollow@gentoo> (20 Apr 2006)
+# Benedikt BÃ¶hm <hollow@gentoo> (20 Apr 2006)
 # Upstream dead; obsoleted by sys-apps/lomoco
 sys-apps/lmctl
 
@@ -860,7 +859,7 @@ net-libs/enet
 # Dirty fix that needs testing, see Changelog
 =net-libs/obby-0.3.0-r1
 
-# Petteri Räty <betelgeuse@gentoo.org> (12 Mar 2006)
+# Petteri RÃ¤ty <betelgeuse@gentoo.org> (12 Mar 2006)
 # Because of changes in ebay our current versions do not work
 # See bug #125813 for details.
 <=app-misc/jbidwatcher-0.9.9
@@ -960,7 +959,7 @@ dev-util/glimmer
 # masked due to runtime instability
 =dev-libs/liboil-0.3.7
 
-# Diego Pettenò <flameeyes@gentoo.org> (21 Feb 2006)
+# Diego PettenÃ² <flameeyes@gentoo.org> (21 Feb 2006)
 # Pre-releases outside of KDE release cycle
 >=net-im/kopete-0.12_alpha1
 
@@ -1054,7 +1053,7 @@ sci-misc/zetagrid
 # sys-fs/convertfs is broken. Masked pending likely removal. Bug # 107635.
 sys-fs/convertfs
 
-# Diego Pettenò <flameeyes@gentoo.org> (13 Jan 2006)
+# Diego PettenÃ² <flameeyes@gentoo.org> (13 Jan 2006)
 # Vulnerable to security issue. See bug #115760
 media-video/xmovie
 
@@ -1062,7 +1061,7 @@ media-video/xmovie
 # Mask development version
 =media-gfx/swftools-0.7.1.20051207
 
-# Diego Pettenò <flameeyes@gentoo.org> (12 Jan 2006)
+# Diego PettenÃ² <flameeyes@gentoo.org> (12 Jan 2006)
 # Nightlie, masked while testing
 =media-sound/mt-daapd-0.3.0_pre*
 
@@ -1251,7 +1250,7 @@ games-strategy/scorched3d
 # Previous SCons upgrade broke lots of packages, so latest version is getting some testing first!
 =dev-util/scons-0.96.91
 
-# Diego Pettenò <flameeyes@gentoo.org> (30 Oct 2005)
+# Diego PettenÃ² <flameeyes@gentoo.org> (30 Oct 2005)
 # Crashes on startup on my box, needs testing.
 =media-sound/noteedit-2.8.0
 
@@ -1345,7 +1344,7 @@ games-rpg/nwn-data
 # Causes problems with several packages. See bug # 99243 and bug # 102301.
 =dev-util/scons-0.96.90
 
-# Bryan Østergaard <kloeri@gentoo.org> (12 Sep 2005)
+# Bryan Ãstergaard <kloeri@gentoo.org> (12 Sep 2005)
 # Masked for security reasons, bug 103524
 dev-python/py2play
 games-action/slune
@@ -1374,11 +1373,11 @@ net-im/wildfire
 # Mask since it breaks wings #97798
 =dev-lang/erlang-10.2.6
 
-# Diego Pettenò <flameeyes@gentoo.org> (22 Aug 2005)
+# Diego PettenÃ² <flameeyes@gentoo.org> (22 Aug 2005)
 # Pre-release heavy patched
 =media-video/avidemux-2.1_pre*
 
-# Diego Pettenò <flameeyes@gentoo.org> (18 August 2005)
+# Diego PettenÃ² <flameeyes@gentoo.org> (18 August 2005)
 # Toxine needs to be verified with upstream for a few issues.
 media-video/toxine
 
@@ -1483,7 +1482,7 @@ gnome-extra/gnobog
 # tables on some configurations. Use parted instead.
 sys-fs/amiga-fdisk
 
-# Diego Pettenò <flameeyes@gentoo.org> (10 Jun 2005)
+# Diego PettenÃ² <flameeyes@gentoo.org> (10 Jun 2005)
 # Still no way to test this, waiting ofr upstream or someone to come up
 # with a decent test suite.
 media-video/dirac
