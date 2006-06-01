@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.42.ebuild,v 1.1 2006/05/28 17:14:32 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.42.ebuild,v 1.2 2006/06/01 16:49:04 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -59,7 +59,7 @@ src_install() {
 
 	doman man1/7z.1 man1/7za.1 man1/7zr.1
 	dodoc ChangeLog README TODO
-	
+
 	if use doc ; then
 		dodoc DOCS/*.txt
 		dohtml -r DOCS/MANUAL/*
