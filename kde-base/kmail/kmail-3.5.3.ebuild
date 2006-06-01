@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.3.ebuild,v 1.1 2006/06/01 18:55:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.3.ebuild,v 1.2 2006/06/01 23:05:58 flameeyes Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -53,11 +53,6 @@ KMCOMPILEONLY="libemailfunctions"
 KMEXTRA="indexlib
 	plugins/kmail/
 	kontact/plugins/kmail/" # We add here the kontact's plugin instead of compiling it with kontact because it needs a lot of this programs deps.
-
-PATCHES="${FILESDIR}/kmail-3.5.2-imap-fixes-2.diff
-	${FILESDIR}/kmail-3.5.2-misc-fixes-2.diff
-	${FILESDIR}/kmail-3.5-ham_spam_icons.diff" # This patch did not make it into svn, yet.
-
 
 src_unpack() {
 	kde-meta_src_unpack
