@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20060528.ebuild,v 1.3 2006/05/29 13:42:56 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20060528.ebuild,v 1.4 2006/06/01 19:39:12 genstef Exp $
 
 inherit nsplugins kde-functions autotools
 
@@ -11,7 +11,7 @@ SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86 ~amd64"
-IUSE="dmalloc mad nsplugin nptl xml kde gtk video_cards_i810"
+IUSE="dmalloc mad nsplugin nptl xml kde video_cards_i810"
 
 RDEPEND="dmalloc? ( dev-libs/dmalloc )
 	xml? ( dev-libs/libxml2 )
@@ -26,7 +26,6 @@ RDEPEND="dmalloc? ( dev-libs/dmalloc )
 	media-libs/libpng
 	media-libs/libsdl
 	media-libs/sdl-mixer
-	x11-libs/gtkglext
 	virtual/opengl
 	|| (
 		( x11-libs/libX11
@@ -36,13 +35,11 @@ RDEPEND="dmalloc? ( dev-libs/dmalloc )
 		x11-proto/xproto )
 		virtual/x11
 	)
-	gtk? (
-		dev-libs/atk
-		dev-libs/glib
-		x11-libs/cairo
-		>x11-libs/gtk+-2
-		x11-libs/pango
-	)"
+	dev-libs/atk
+	dev-libs/glib
+	x11-libs/cairo
+	>x11-libs/gtk+-2
+	x11-libs/pango"
 
 S=${WORKDIR}/gnash
 
@@ -79,6 +76,7 @@ src_compile() {
 	#--enable-gui=flavor Specify gui flavor:
 	#				GTK
 	#				SDL -> has no controls, we do not USE it
+	#$(use_enable gtk glext) with USE=-gtk, fails to detect gtkglext, bug 135010
 
 	econf \
 		$(use_enable dmalloc) \
@@ -86,7 +84,6 @@ src_compile() {
 		$(use_enable mad mp3) \
 		$(use_enable nptl pthreads) \
 		$(use_enable xml) \
-		$(use_enable gtk glext) \
 		$(use_enable video_cards_i810 i810-lod-bias) \
 		${myconf} || die "econf failed"
 	emake || die "emake failed"
