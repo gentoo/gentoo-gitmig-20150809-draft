@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/ezquake-bin
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ChangeLog,v 1.1 2006/06/01 00:32:01 wolf31o2 Exp $
+
+*ezquake-bin-1517 (01 Jun 2006)
+
+  01 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +ezquake-bin-1517.ebuild:
+  Initial import. Ebuild by Patryk Rzadzinski <rzadzins@wit.edu.pl> and
+  modified by me. Closing bug #130823.
+
