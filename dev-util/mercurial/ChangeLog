@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.26 2006/05/18 14:04:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.27 2006/06/01 17:25:50 agriffis Exp $
+
+  01 Jun 2006; Aron Griffis <agriffis@gentoo.org> mercurial-0.9.ebuild:
+  Mark 0.9 stable on alpha/ia64
 
   18 May 2006; Aron Griffis <agriffis@gentoo.org>
   -mercurial-0.6b_p20050807.ebuild, -mercurial-0.7.ebuild:
