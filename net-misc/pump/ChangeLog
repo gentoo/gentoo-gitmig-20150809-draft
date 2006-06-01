@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pump
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.32 2006/05/30 23:15:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.33 2006/06/01 21:44:02 anarchy Exp $
+
+  01 Jun 2006; Jory A. Pratt <anarchy@gentoo.org> pump-0.8.24.ebuild:
+  stable on amd64 wrt bug #134896
 
   30 May 2006; Jason Wever <weeve@gentoo.org> pump-0.8.24.ebuild:
   Stable on SPARC wrt bug #134896.
