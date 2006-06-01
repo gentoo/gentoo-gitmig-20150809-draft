@@ -1,0 +1,85 @@
+--- src/minimap.h.old	2006-06-01 22:56:42.000000000 +0200
++++ src/minimap.h	2006-06-01 22:56:54.000000000 +0200
+@@ -59,8 +59,8 @@
+   bool directMode;
+     
+  public:
+-  MiniMap::MiniMap();
+-  MiniMap::~MiniMap();
++  MiniMap();
++  ~MiniMap();
+   MiniMap( Scourge *scourge, bool directMode = false );
+ 
+   void reset();
+--- src/preferences.h.old	2006-06-01 22:56:04.000000000 +0200
++++ src/preferences.h	2006-06-01 22:56:20.000000000 +0200
+@@ -113,10 +113,10 @@
+     TEST
+   };
+  
+-  Preferences::Preferences() {
++  Preferences() {
+     stencilBufInitialized = false;
+   }
+-  virtual Preferences::~Preferences() {}
++  virtual ~Preferences() {}
+   
+   // engine variables
+   virtual bool getFullscreen() = 0;
+--- src/userconfiguration.h.old	2006-06-01 22:57:08.000000000 +0200
++++ src/userconfiguration.h	2006-06-01 22:57:20.000000000 +0200
+@@ -100,8 +100,8 @@
+    
+  public:
+  
+-  UserConfiguration::UserConfiguration();
+-  UserConfiguration::~UserConfiguration();
++  UserConfiguration();
++  ~UserConfiguration();
+   
+   const char * getEngineActionDescription(int i);  
+   const char * getEngineActionKeyName(int i);      
+--- src/render/glcaveshape.h.old	2006-06-01 23:04:35.000000000 +0200
++++ src/render/glcaveshape.h	2006-06-01 23:04:48.000000000 +0200
+@@ -94,7 +94,7 @@
+ 
+   static char *names[];
+ 
+-  static GLCaveShape *GLCaveShape::shapeList[];
++  static GLCaveShape *shapeList[];
+ 
+   static std::vector<CVector3*> points;
+   static std::vector<std::vector<CaveFace*>*> polys;
+--- src/render/map.h.old	2006-06-01 23:03:49.000000000 +0200
++++ src/render/map.h	2006-06-01 23:04:19.000000000 +0200
+@@ -368,10 +368,10 @@
+   Shape *removePosition(Sint16 x, Sint16 y, Sint16 z);
+   Shape *removeLocation(Sint16 x, Sint16 y, Sint16 z);
+   
+-  void Map::setItem(Sint16 x, Sint16 y, Sint16 z, RenderedItem *item);
++  void setItem(Sint16 x, Sint16 y, Sint16 z, RenderedItem *item);
+   RenderedItem *removeItem(Sint16 x, Sint16 y, Sint16 z);
+   
+-  void Map::setCreature(Sint16 x, Sint16 y, Sint16 z, RenderedCreature *creature);
++  void setCreature(Sint16 x, Sint16 y, Sint16 z, RenderedCreature *creature);
+   RenderedCreature *removeCreature(Sint16 x, Sint16 y, Sint16 z);
+   
+   /**
+@@ -426,7 +426,7 @@
+   // like shapefits, but returns the blocking location or, NULL if there's nothing there
+   Location *getBlockingLocation(Shape *shape, int x, int y, int z);
+ 
+-  Location *Map::getDropLocation(Shape *shape, int x, int y, int z);
++  Location *getDropLocation(Shape *shape, int x, int y, int z);
+ 
+   inline void updateLightMap() { lightMapChanged = resortShapes = true; }
+ 
+@@ -455,7 +455,7 @@
+            DrawLater *later=NULL);
+ 
+   bool isDoor(int x, int y);
+-  bool Map::isDoor(Shape *shape);
++  bool isDoor(Shape *shape);
+ 
+   // ====================================================================
+   // Locked doors/chests code
