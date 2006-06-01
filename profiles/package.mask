@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5437 2006/06/01 00:11:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5438 2006/06/01 01:10:24 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,7 +21,11 @@
 ##   End example
 ##
 
-# Diego Pettenò <flameeyes@gentoo.org> (1 Jun 2006)
+# Michael Sterrett <mr_bones_@gentoo.org> (01 Jun 2006)
+# masked pending unresolved security bug #135071
+games-misc/typespeed
+
+# Diego Pettenò <flameeyes@gentoo.org> (01 Jun 2006)
 # Masked for testing - I know I'm late.
 =kde-base/arts-3.5.3
 =kde-base/kdelibs-3.5.3
@@ -1341,7 +1345,7 @@ games-rpg/nwn-data
 dev-python/py2play
 games-action/slune
 
-# Joshua Baergen <joshuabaergen@gentoo.org> (8 Sep 2005)
+# Joshua Baergen <joshuabaergen@gentoo.org> (08 Sep 2005)
 # Donnie Berkholz <spyderous@gentoo.org> (14 May 2006)
 # Donnie: Unmask <0.9
 # Waiting for a 0.9.1 release with updated translations
@@ -1586,7 +1590,7 @@ dev-db/pgcluster
 # Masked while waiting on apache module refresh
 dev-lisp/tbnl
 
-# Tavis Ormandy <taviso@gentoo.org> (9 Feb 2005)
+# Tavis Ormandy <taviso@gentoo.org> (09 Feb 2005)
 # Masked pending security audit.
 www-client/prozilla
 
@@ -1594,18 +1598,18 @@ www-client/prozilla
 # Mask offlineimap testing versions
 =net-irc/ctrlproxy-2.7*
 
-# Christian Parpart <trapni@gentoo.org> (4 Feb 2005)
+# Christian Parpart <trapni@gentoo.org> (04 Feb 2005)
 # Apache herd package refresh
 # These ebuilds are incompatible with new apache and related ebuilds.
 # See Meta-bug #76457.
 net-www/mod_protection
 net-www/mod_contribs
 
-#Gustavo Felisberto <humpback@gentoo.org> (4 Feb 2005)
+#Gustavo Felisberto <humpback@gentoo.org> (04 Feb 2005)
 #Masked for user testing
 net-im/mercury-bin
 
-# Matthew Kennedy <mkennedy@gentoo.org> (2 Feb 2005)
+# Matthew Kennedy <mkennedy@gentoo.org> (02 Feb 2005)
 # Uncertain upstream; Needs work for apache-modules eclass; mod_webapp needs to
 # be broken out of it
 dev-lisp/cl-imho
@@ -1677,16 +1681,16 @@ www-client/netscape-communicator
 =sys-apps/mindi-1.10
 =app-backup/mondo-rescue-2.10
 
-# <mkennedy@gentoo.org> (8 Aug 2004)
+# <mkennedy@gentoo.org> (08 Aug 2004)
 # won't build for now
 dev-lisp/cl-rsm-gen-prog
 dev-lisp/cl-rsm-genetic-alg
 
-# <twp@gentoo.org> (6 Aug 2004)
+# <twp@gentoo.org> (06 Aug 2004)
 # Masked until linking problems are solved
 =dev-lang/lua-5.0.2-r1
 
-# <usata@gentoo.org> (2 July 2004)
+# <usata@gentoo.org> (02 July 2004)
 # emacs-unicode-2 branch is not stable and SLOT support for emacs
 # is incomplete. info directory handling should be reconsidered.
 =app-editors/emacs-cvs-22.0.0*
