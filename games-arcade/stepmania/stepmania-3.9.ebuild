@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.1 2006/04/26 22:42:07 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.2 2006/06/01 20:09:07 tupone Exp $
 
-inherit eutils games
+inherit eutils autotools games
 
 IUSE="debug gtk jpeg mp3 mpeg vorbis force-oss"
 
@@ -35,7 +35,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}"-gentoo.patch \
 		"${FILESDIR}/${P}"-gcc41.patch \
 		"${FILESDIR}/${P}"-ffmpeg.patch \
+		"${FILESDIR}/${P}"-vorbis.patch \
 		"${FILESDIR}/${P}"-alsa.patch
+	eautoconf
 }
 
 src_compile() {
