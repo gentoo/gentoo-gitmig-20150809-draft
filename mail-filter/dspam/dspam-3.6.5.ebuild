@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.5.ebuild,v 1.1 2006/05/29 16:04:00 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.5.ebuild,v 1.2 2006/06/01 16:08:37 mr_bones_ Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="berkdb clamav cyrus daemon debug large-domain ldap logrotate mysql oci8 po
 DEPEND="berkdb? ( >=sys-libs/db-4.0 )
 	clamav? ( >=app-antivirus/clamav-0.86 )
 	ldap? ( >=net-nds/openldap-2.2 )
-	daemon? ( || (mysql? ( >=dev-db/mysql-3.23 )) (postgres? (>=dev-db/postgresql-7.4.3 )) )
+	daemon? ( || ( mysql? ( >=dev-db/mysql-3.23 ) ) ( postgres? ( >=dev-db/postgresql-7.4.3 ) ) )
 	sqlite? ( <dev-db/sqlite-3 )
 	sqlite3? ( =dev-db/sqlite-3* )"
 
@@ -77,7 +77,7 @@ pkg_setup() {
 	if use virtual-users && use user-homedirs ; then
 		ewarn "If the users are virtual, then they probably should not have home directories."
 	fi
-	
+
 	if use user-homedirs ; then
 		ewarn "WARNING: dspam-web will not work with user-homedirs.  Disable this USE flag"
 		ewarn "if you intend on using dspam-web."
@@ -91,7 +91,7 @@ src_compile() {
 	local myconf
 
 	myconf="${myconf} --enable-long-username"
-	
+
 	use large-domain && myconf="${myconf} --enable-large-scale" ||\
 	    myconf="${myconf} --enable-domain-scale"
 
@@ -106,7 +106,7 @@ src_compile() {
 	elif use procmail; then
 	    myconf="${myconf} --with-delivery-agent=/usr/bin/procmail"
 	fi
-	
+
 	# enables support for debugging (touch /etc/dspam/.debug to turn on)
 	# optional: even MORE debugging output, use with extreme caution!
 	use debug && myconf="${myconf} --enable-debug --enable-verbose-debug --enable-bnr-debug"
@@ -384,7 +384,7 @@ pkg_postinst() {
 		einfo "PostgreSQL or Oracle database, run:"
 		einfo "emerge --config =${PF}"
 	fi
-	
+
 	if has_version ">dev-db/postgresql-8.0"; then
 		echo
 		einfo "Before executing the configuration command mentioned above you have"
@@ -484,5 +484,4 @@ pkg_config () {
 		einfo "more info on how to setup DSPAM with Oracle."
 		einfo "objects for each user upon first use of DSPAM by that user."
 	fi
-
 }
