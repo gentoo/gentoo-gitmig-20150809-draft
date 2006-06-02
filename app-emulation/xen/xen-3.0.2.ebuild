@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.4 2006/05/22 16:00:27 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.5 2006/06/02 09:01:27 uberlord Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -9,10 +9,10 @@ HOMEPAGE="http://xen.sourceforge.net"
 if [[ ${PV} == *_p* ]]; then
 	XEN_UNSTABLE="xen-unstable-${PV#*_p}"
 	SRC_URI="mirror://gentoo/${XEN_UNSTABLE}.tar.bz2"
-	S=${WORKDIR}/${XEN_UNSTABLE}
+	S="${WORKDIR}/${XEN_UNSTABLE}"
 else
 	SRC_URI="http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/${P}-src.tgz"
-	S=${WORKDIR}/xen-${PV}
+	S="${WORKDIR}/xen-${PV}"
 fi
 
 LICENSE="GPL-2"
@@ -29,7 +29,7 @@ src_unpack() {
 	if use custom-cflags; then
 		einfo "User wants their own CFLAGS - removing defaults"
 		# try and remove all the default custom-cflags
-		find ${S} -name Makefile -o -name Rules.mk -o -name Config.mk -exec sed \
+		find "${S}" -name Makefile -o -name Rules.mk -o -name Config.mk -exec sed \
 			-e 's/CFLAGS\(.*\)=\(.*\)-O3\(.*\)/CFLAGS\1=\2\3/' \
 			-e 's/CFLAGS\(.*\)=\(.*\)-march=i686\(.*\)/CFLAGS\1=\2\3/' \
 			-e 's/CFLAGS\(.*\)=\(.*\)-fomit-frame-pointer\(.*\)/CFLAGS\1=\2\3/' \
@@ -38,8 +38,8 @@ src_unpack() {
 			-i {} \;
 	fi
 	if use hardened; then
-		cd ${S}
-		epatch ${FILESDIR}/${PN}-3.0.2-nopiessp.patch
+		cd "${S}"
+		epatch "${FILESDIR}/${PN}"-3.0.2-nopiessp.patch
 	fi
 }
 
@@ -54,19 +54,20 @@ src_compile() {
 		unset CFLAGS
 	fi
 
-	emake -C xen ${myopt} || die "compile failed"
+	# Send raw LDFLAGS so that --as-needed works
+	emake LDFLAGS="$(raw-ldflags)" -C xen ${myopt} || die "compile failed"
 }
 
 src_install() {
 	local myopt
 	use pae && myopt="${myopt} pae=y"
 
-	make DESTDIR=${D} ${myopt} install-xen \
+	make DESTDIR="${D}" ${myopt} install-xen \
 		|| die "install failed"
 
 	# for upstream change tracking
 	if [[ -n ${XEN_UNSTABLE} ]]; then
-		dodoc ${S}/XEN-VERSION
+		dodoc "${S}"/XEN-VERSION
 	fi
 }
 

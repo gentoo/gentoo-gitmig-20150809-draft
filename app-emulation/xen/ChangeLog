@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.37 2006/05/22 16:00:27 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.38 2006/06/02 09:01:27 uberlord Exp $
+
+  02 Jun 2006; Roy Marples <uberlord@gentoo.org> xen-3.0.2.ebuild:
+  Send raw LDFLAGS via make to support --as-needed, #135140
 
   22 May 2006; <chrb@gentoo.org> +files/xen-3.0.2-nopiessp.patch,
   -xen-3.0.1-r4.ebuild, -xen-3.0.1-r5.ebuild, -xen-3.0.1_p9029.ebuild,
