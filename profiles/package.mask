@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5455 2006/06/02 09:10:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5456 2006/06/02 14:00:38 eldad Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -541,12 +541,6 @@ dev-python/PyQt4
 # Markus Ullmann <jokey@gentoo.org> (06 Apr 2006)
 # adding language pack builder, needs testing
 =app-text/acroread-7.0.5-r3
-
-# <eldad@gentoo.org> (06 Apr 2005)
-# nagios-*2 having stability problems until 2.1* including random segfaults. 2.2 had a security issue.
-# I'll be reading the -ml, will unmask 2.3 when 2.4 gets out the door if no serious problems are reported.
-=net-analyzer/nagios-core-2*
-=net-analyzer/nagios-2*
 
 # Jonathan Smith <smithj@gentoo.org> (03 Apr 2006)
 # Depends on app-misc/colortail which is currently unmaintained and also masked
