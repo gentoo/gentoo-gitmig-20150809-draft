@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.8.12.ebuild,v 1.1 2006/04/22 12:52:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.9.00.ebuild,v 1.1 2006/06/02 20:19:53 mrness Exp $
 
 inherit distutils
 
@@ -23,17 +23,27 @@ RDEPEND="${DEPEND}
 	media-video/ffmpeg
 	media-libs/netpbm"
 
-#pkg_setup() { maketarball; } #Uncomment this line when you want to make the tarball
+#For Gentoo devs only: uncomment this line when you want to make the tarball
+#then COMMENT IT BACK!
+#pkg_setup() { maketarball; } 
 maketarball() { #For building the tarball. To be used only by ebuild maintainers
-	local x
+	local x svnrev
+	svnrev=$(svn log -q --limit 1 https://svn.sourceforge.net/svnroot/${PN}/releases/${PV} | sed -r '/^[^r]/d;s/^r([0-9]+) .*$/\1/')
+	[ $? = 0 ] || return 1
+
 	#Fetch the source (only those directories that are needed)
 	cd "${DISTDIR}" && mkdir ${P} || return 1
-	for x in resources src ; do
+	for x in resources packaging src ; do
 		svn export https://svn.sourceforge.net/svnroot/${PN}/releases/${PV}/${x} ${P}/${x} || return 1
 	done
 
 	#Remove unneeded stuff
-	rm resources/*.chm
+	rm ${P}/resources/*.chm ${P}/src/package.py
+
+	#Freeze version and set vendor name to Gentoo
+	sed -i -e 's/\(^__FROZEN__="[$]Id: \).*\( $"\)/\1'${svnrev}'\2/' \
+		-e 's/^vendor=".*"/vendor="Gentoo"/' \
+		${P}/src/version.py || return 1
 
 	#Make the tarball
 	tar -cjf ${P}.tar.bz2 ${P}
@@ -127,38 +137,24 @@ src_install() {
 
 	# Creating scripts
 	echo '#!/bin/sh' > "${T}/bitpim"
-	echo "export PYTHONPATH='$RLOC:$PYTHONPATH'" >> "${T}/bitpim"
 	echo "exec python ${RLOC}/bp.py bitpim" >> "${T}/bitpim"
 	dobin "${T}/bitpim"
 	if use crypt; then
 		echo '#!/bin/sh' > "${T}/bitfling"
-		echo "export PYTHONPATH='$RLOC:$PYTHONPATH'" >> "${T}/bitfling"
 		echo "exec python ${RLOC}/bp.py bitfling" >> "${T}/bitfling"
 		dobin "${T}/bitfling"
 	fi
 
 	# Desktop file
 	insinto /usr/share/applications
-	cat <<EOF > "${T}/bitpim.desktop"
-[Desktop Entry]
-Name=BitPim
-Comment=CDMA Mobile Phone Tool
-Encoding=UTF-8
-Exec=/usr/bin/bitpim
-Icon=${RLOC}/resources/bitpim.ico
-Terminal=0
-Type=Application
-Categories=Application;Calendar;ContactManagement;Utility;
-EOF
-	doins "${T}/bitpim.desktop"
+	sed -i -e "s|%%INSTALLBINDIR%%|/usr/bin|" -e "s|%%INSTALLLIBDIR%%|${RLOC}|" \
+		packaging/bitpim.desktop
+	doins packaging/bitpim.desktop
 }
 
 pkg_postinst() {
 	# Optimize in installed directory
 	python_mod_optimize "${ROOT}/usr/lib/${P}"
-
-	# Helpful message re. support
-	einfo "For support information please visit http://bitpim.org/"
 }
 
 pkg_postrm() {

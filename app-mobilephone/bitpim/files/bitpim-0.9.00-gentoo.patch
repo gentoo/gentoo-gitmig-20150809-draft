@@ -1,0 +1,54 @@
+diff -Nru bitpim-0.9.00.orig/src/common.py bitpim-0.9.00/src/common.py
+--- bitpim-0.9.00.orig/src/common.py	2006-04-13 06:13:47.000000000 +0300
++++ bitpim-0.9.00/src/common.py	2006-06-02 22:51:56.384073500 +0300
+@@ -848,4 +848,4 @@
+         # windows running from exe, return as is
+         return os.path.abspath(os.path.dirname(sys.executable))
+     # running from src, up one
+-    return os.path.split(os.path.abspath(os.path.dirname(sys.argv[0])))[0]
++    return os.path.abspath(os.path.dirname(sys.argv[0]))
+diff -Nru bitpim-0.9.00.orig/src/conversions.py bitpim-0.9.00/src/conversions.py
+--- bitpim-0.9.00.orig/src/conversions.py	2006-03-04 01:37:32.000000000 +0200
++++ bitpim-0.9.00/src/conversions.py	2006-06-02 22:51:56.384073500 +0300
+@@ -20,11 +20,11 @@
+ 
+ class ConversionFailed(Exception): pass
+ 
+-helperdir=os.path.join(common.get_main_dir(), "helpers")
++helperdir="/usr/bin"
+ 
+ osext={'win32': '.exe',
+        'darwin': '.mbin',
+-       'linux2': '.lbin'} \
++       'linux2': ''} \
+        [sys.platform]
+ 
+ # This shortname crap is needed because Windows programs (including ffmpeg)
+@@ -125,14 +125,14 @@
+     p=sys.path[0]
+     if os.path.isfile(p):
+         p=os.path.dirname(p)
+-    helpersdirectory=os.path.abspath(os.path.join(p, 'helpers'))
++    helpersdirectory="/usr/bin"
+     print "Helper Directory: "+helpersdirectory
+     if sys.platform=='win32':
+         osext=".exe"
+     if sys.platform=='darwin':
+         osext=".mbin"
+     if sys.platform=='linux2':
+-        osext=".lbin"
++        osext=""
+         
+     pngtopnmbin=gethelperbinary('pngtopnm')
+     ppmquantbin=gethelperbinary('ppmquant')
+diff -Nru bitpim-0.9.00.orig/src/native/av/bmp2avi/Makefile bitpim-0.9.00/src/native/av/bmp2avi/Makefile
+--- bitpim-0.9.00.orig/src/native/av/bmp2avi/Makefile	2006-05-05 10:10:08.000000000 +0300
++++ bitpim-0.9.00/src/native/av/bmp2avi/Makefile	2006-06-02 22:59:09.295128750 +0300
+@@ -13,6 +13,6 @@
+ 
+ SRC=avi_file.cxx bmp_file.cxx b2a.cxx
+ 
+-bmp2avi.lbin bmp2avi.mbin bmp2avi.exe: $(SRC)
++bmp2avi bmp2avi.mbin bmp2avi.exe: $(SRC)
+ 	$(CXX) $(EXTRADEFINES) -O2 -o $@ $(SRC)
+ 
