@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonik/sonik-1.0_beta2.ebuild,v 1.1 2006/05/05 10:34:48 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonik/sonik-1.0_beta2.ebuild,v 1.2 2006/06/02 13:40:38 eldad Exp $
+
+ARTS_REQUIRED="yes"
 
 inherit eutils kde autotools
 
@@ -20,21 +22,6 @@ RDEPEND="media-libs/liblrdf ladspa? ( media-libs/ladspa-sdk ) sci-libs/gsl"
 DEPEND="${RDEPEND} media-libs/audiofile"
 
 S=${WORKDIR}/${PN}-${MY_PV}
-
-pkg_setup()
-{
-	if useq !arts
-	then
-		eerror ""
-		eerror "sonik requires arts in order to compile and run."
-		eerror "please enable arts useflag."
-		eerror ""
-
-		die "arts useflag needed but is disabled."
-	fi
-
-	kde_pkg_setup
-}
 
 src_compile() {
 	eautoheader

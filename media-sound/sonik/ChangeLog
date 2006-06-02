@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonik
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonik/ChangeLog,v 1.1 2006/05/05 10:34:48 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonik/ChangeLog,v 1.2 2006/06/02 13:40:38 eldad Exp $
+
+  02 Jun 2006; Eldad Zack <eldad@gentoo.org> sonik-1.0_beta2.ebuild:
+  Removed arts useflag, better failure notice via kde.eclass. bug #134682.
 
 *sonik-1.0_beta2 (05 May 2006)
 
