@@ -1,46 +1,70 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bc29664f36a50e484d0f035be5d759f0 ChangeLog 17742
-RMD160 7c885da5fee60bccc20dd370a4722c230665538e ChangeLog 17742
-SHA256 5b47171cfd49d91f43887c7ec0446ca31ec2e8ec8200e472cd3d72906a87f73c ChangeLog 17742
-MD5 de7d1997fec041935959665b31b9269e amavisd-new-2.3.3-r2.ebuild 5489
-RMD160 e1957c225187e0d85652adb83e2b3fe4c4b2a559 amavisd-new-2.3.3-r2.ebuild 5489
-SHA256 883d41ea495fe942dc20078a38fc897634fab91b0a0d248f78e23dbeee876a51 amavisd-new-2.3.3-r2.ebuild 5489
-MD5 a5e2c52b30bbf16a0610381849fa769d amavisd-new-2.4.0.ebuild 5341
-RMD160 e4fdf7045941c2689e448ce3cbc9b6fc6749f39c amavisd-new-2.4.0.ebuild 5341
-SHA256 d4b6cb5426f6de4a4001db7027a5d55b08043dd735fc37b4f30e6276de1035fe amavisd-new-2.4.0.ebuild 5341
+AUX amavisd-new-2.2.1-qmail-lf-workaround.patch 688 RMD160 45092cfb4180d5cac8abc38068105b619945dfe6 SHA1 5ab50c58bd125d545dd6a2081c3b4bc2892af7a2 SHA256 5e32e1fbcf172ce108ba1b494722894719ea31ed90d55610bffdb241246cfb57
 MD5 ee33de51df853bd8426a4304f264245f files/amavisd-new-2.2.1-qmail-lf-workaround.patch 688
 RMD160 45092cfb4180d5cac8abc38068105b619945dfe6 files/amavisd-new-2.2.1-qmail-lf-workaround.patch 688
 SHA256 5e32e1fbcf172ce108ba1b494722894719ea31ed90d55610bffdb241246cfb57 files/amavisd-new-2.2.1-qmail-lf-workaround.patch 688
+AUX amavisd-new-2.3.0-amavisd.conf-gentoo.patch 6687 RMD160 076fc2e894241a8820a30f7c9b6dc63a90a0fe08 SHA1 6c974a507f34c71d9658eeda23accf9e9a20d28d SHA256 df9b91d6bbc0ff7b051e5dd155362607906969f862d9d610379d7e79b42e72bf
 MD5 a9c49eb16b5fa7dfecd54a436bc07200 files/amavisd-new-2.3.0-amavisd.conf-gentoo.patch 6687
 RMD160 076fc2e894241a8820a30f7c9b6dc63a90a0fe08 files/amavisd-new-2.3.0-amavisd.conf-gentoo.patch 6687
 SHA256 df9b91d6bbc0ff7b051e5dd155362607906969f862d9d610379d7e79b42e72bf files/amavisd-new-2.3.0-amavisd.conf-gentoo.patch 6687
+AUX amavisd-new-2.3.3-bsmtp-quarantine.patch 949 RMD160 2f393892399dc29ebbc76e08e2249be59607f083 SHA1 7a8c8d35e4772dffe35162b4f3282588d69f3fd4 SHA256 2815958cca7bbccdf6b7aecb345cba9a25177f9158c1867880db69bef71f2036
 MD5 bfca14b90ddc76f513a6f96752003da5 files/amavisd-new-2.3.3-bsmtp-quarantine.patch 949
 RMD160 2f393892399dc29ebbc76e08e2249be59607f083 files/amavisd-new-2.3.3-bsmtp-quarantine.patch 949
 SHA256 2815958cca7bbccdf6b7aecb345cba9a25177f9158c1867880db69bef71f2036 files/amavisd-new-2.3.3-bsmtp-quarantine.patch 949
-MD5 5016ca81ad91de76977e2e10bdd8f10c files/amavisd-new-2.4-amavisd.conf-gentoo.patch 5152
-RMD160 5753f65df108557cc8dcedb18696d4da2863127e files/amavisd-new-2.4-amavisd.conf-gentoo.patch 5152
-SHA256 03d03a35e9addac5f6d56ebd6e763609a3dbffcaed7f36c342dfc1f4104e12cb files/amavisd-new-2.4-amavisd.conf-gentoo.patch 5152
+AUX amavisd-new-2.4-qmail-lf-workaround.patch 722 RMD160 e7d9bfc83343ca63ffc56f85e0dd216c4a2aff30 SHA1 1b7b9a4fb8d299bc9de3e307fb5952428d8143fa SHA256 988aeb0c74c8d644f716532d8dafbe2a6ace6f0a2aa826cb4c41ece8be662c13
 MD5 94e64bc4551facaccf22f62feca69b5d files/amavisd-new-2.4-qmail-lf-workaround.patch 722
 RMD160 e7d9bfc83343ca63ffc56f85e0dd216c4a2aff30 files/amavisd-new-2.4-qmail-lf-workaround.patch 722
 SHA256 988aeb0c74c8d644f716532d8dafbe2a6ace6f0a2aa826cb4c41ece8be662c13 files/amavisd-new-2.4-qmail-lf-workaround.patch 722
+AUX amavisd-new-2.4.0-amavisd.conf-gentoo.patch 5152 RMD160 5753f65df108557cc8dcedb18696d4da2863127e SHA1 ef2044fd96f8e99281cb85c94808446e9bba68f9 SHA256 03d03a35e9addac5f6d56ebd6e763609a3dbffcaed7f36c342dfc1f4104e12cb
+MD5 5016ca81ad91de76977e2e10bdd8f10c files/amavisd-new-2.4.0-amavisd.conf-gentoo.patch 5152
+RMD160 5753f65df108557cc8dcedb18696d4da2863127e files/amavisd-new-2.4.0-amavisd.conf-gentoo.patch 5152
+SHA256 03d03a35e9addac5f6d56ebd6e763609a3dbffcaed7f36c342dfc1f4104e12cb files/amavisd-new-2.4.0-amavisd.conf-gentoo.patch 5152
+AUX amavisd-new-2.4.1-amavisd.conf-gentoo.patch 5641 RMD160 1e2b587e22a9f51ae692de41325439fc4feb19ad SHA1 008a421db17efcd65fea6342128a4c069b1938e7 SHA256 2fdbdda5b293e5c3b10c74504a1368ea470e328155823caddfbf7d16f9e79036
+MD5 e6b97c52be60c6af986a9b0b8eaa54d5 files/amavisd-new-2.4.1-amavisd.conf-gentoo.patch 5641
+RMD160 1e2b587e22a9f51ae692de41325439fc4feb19ad files/amavisd-new-2.4.1-amavisd.conf-gentoo.patch 5641
+SHA256 2fdbdda5b293e5c3b10c74504a1368ea470e328155823caddfbf7d16f9e79036 files/amavisd-new-2.4.1-amavisd.conf-gentoo.patch 5641
+AUX amavisd.rc6 310 RMD160 c06ac94f57382b5cbb7f9dea94007b927aaf6c8c SHA1 9674be4ffe07c6dea0c4f4ea34ff74d948536190 SHA256 c136451b550176c6292554c60e0d41d91e6ad3538dedecbdb48925898623dbd8
 MD5 1da4ebb5c79b4892074a61f52aff3eff files/amavisd.rc6 310
 RMD160 c06ac94f57382b5cbb7f9dea94007b927aaf6c8c files/amavisd.rc6 310
 SHA256 c136451b550176c6292554c60e0d41d91e6ad3538dedecbdb48925898623dbd8 files/amavisd.rc6 310
-MD5 d252feb4cca639dcab4ebd07f2b20a90 files/digest-amavisd-new-2.3.3-r2 69
-RMD160 9b929043bd1b91f477cd533d7c4a1cc16708cc19 files/digest-amavisd-new-2.3.3-r2 69
-SHA256 84073b4f97577e56566685a30a8d65e91e0cd590bce94e80b7de942084fff22b files/digest-amavisd-new-2.3.3-r2 69
-MD5 ec88a6e10f5bf474a29b62a15c7a04f0 files/digest-amavisd-new-2.4.0 253
-RMD160 574942aab478c178853b5adb053cbd36d2ee5098 files/digest-amavisd-new-2.4.0 253
-SHA256 1cbf0cd691fa7158781472d164195ee0e764962e4a4d38ff392449a3d358ef87 files/digest-amavisd-new-2.4.0 253
+DIST amavisd-new-2.3.3.tar.gz 772280 RMD160 c2213190582fe8fea9b8f1736e3b3e49b2906887 SHA1 5676f7df377b5af8349c989b9da8fd07ce383242 SHA256 8c6d78cc0a703f0aa36d52fdf833e074c6adca2d21bd334ef381f9e9c92b8f0b
+DIST amavisd-new-2.4.0.tar.gz 825490 RMD160 83f215d66a7d77e5568fe66a469ef2beac9d1417 SHA1 5fe9472a3fe2f8ef994313db8b05429bd57920bc SHA256 f9e5649cb23429bca9db2121470943859063a1733821304bea538c7e76a3aeae
+DIST amavisd-new-2.4.1.tar.gz 841988 RMD160 edd91dde774838345159064ef6012f7927d5aa6c SHA1 1de9fdac377c58a29a93c8a246553c8e363b212c SHA256 c067cbae60ccff3932574fcaf7971c04b118f6b2e9fe6db772d33538b53b0a54
+EBUILD amavisd-new-2.3.3-r2.ebuild 5489 RMD160 e1957c225187e0d85652adb83e2b3fe4c4b2a559 SHA1 905e58fd52cae8f854b1227b2dc7a9bf2b1c52a8 SHA256 883d41ea495fe942dc20078a38fc897634fab91b0a0d248f78e23dbeee876a51
+MD5 de7d1997fec041935959665b31b9269e amavisd-new-2.3.3-r2.ebuild 5489
+RMD160 e1957c225187e0d85652adb83e2b3fe4c4b2a559 amavisd-new-2.3.3-r2.ebuild 5489
+SHA256 883d41ea495fe942dc20078a38fc897634fab91b0a0d248f78e23dbeee876a51 amavisd-new-2.3.3-r2.ebuild 5489
+EBUILD amavisd-new-2.4.0.ebuild 5333 RMD160 c9333616c157267a3553dd103bd84f705cbf256f SHA1 9e8dfe03eedc0e75a02df062ff60e1d1d63b11b0 SHA256 4a9c180a0a02a0c5c243f049917bd29600b8f8a3f4b516646b8f0dede5455876
+MD5 a7007441f2faa1e7acf000ff4984b777 amavisd-new-2.4.0.ebuild 5333
+RMD160 c9333616c157267a3553dd103bd84f705cbf256f amavisd-new-2.4.0.ebuild 5333
+SHA256 4a9c180a0a02a0c5c243f049917bd29600b8f8a3f4b516646b8f0dede5455876 amavisd-new-2.4.0.ebuild 5333
+EBUILD amavisd-new-2.4.1.ebuild 5333 RMD160 98ee9b4d3aa51a4c17ef0cbd32f057870468fc48 SHA1 20b725a0d31fbaaf98e1977ea60457c7446219b9 SHA256 e341775864c7543a8ccbb2105093ac11355a87d9fbebcde9026c79963a7a2883
+MD5 2e2c8ce31fdebc7cf5892c24816800ba amavisd-new-2.4.1.ebuild 5333
+RMD160 98ee9b4d3aa51a4c17ef0cbd32f057870468fc48 amavisd-new-2.4.1.ebuild 5333
+SHA256 e341775864c7543a8ccbb2105093ac11355a87d9fbebcde9026c79963a7a2883 amavisd-new-2.4.1.ebuild 5333
+MISC ChangeLog 18250 RMD160 80561732794e8b677d4af7236e52299bbd9bff0b SHA1 b9f810478577ed8930c8dba71a67285e9652d41c SHA256 ee89e8fbdd9c681da8c3626c6995fe3633d2f927f6cbd7cc25465867a1733e4f
+MD5 feeeedfc7984d2cb932d6b6c9386fd0d ChangeLog 18250
+RMD160 80561732794e8b677d4af7236e52299bbd9bff0b ChangeLog 18250
+SHA256 ee89e8fbdd9c681da8c3626c6995fe3633d2f927f6cbd7cc25465867a1733e4f ChangeLog 18250
+MISC metadata.xml 184 RMD160 c37bff1fc1cd7139c91dae9b0fa5082e1d81f153 SHA1 cc0a188d9ad2411e78747326c62dd046bd5413c8 SHA256 d51011aa837db802ef539a1321a4af0a4a00879d475b92fd58f3c01df7320b58
 MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
 RMD160 c37bff1fc1cd7139c91dae9b0fa5082e1d81f153 metadata.xml 184
 SHA256 d51011aa837db802ef539a1321a4af0a4a00879d475b92fd58f3c01df7320b58 metadata.xml 184
+MD5 f59b0d7f558af277b9d70c223cd44ae9 files/digest-amavisd-new-2.3.3-r2 253
+RMD160 df53bd7d8886410e2a60c89686cdaa0d183e3082 files/digest-amavisd-new-2.3.3-r2 253
+SHA256 267bc36b4f38da775864aa2215b314c36652a5be4ce55d173f733d8edd60537d files/digest-amavisd-new-2.3.3-r2 253
+MD5 ec88a6e10f5bf474a29b62a15c7a04f0 files/digest-amavisd-new-2.4.0 253
+RMD160 574942aab478c178853b5adb053cbd36d2ee5098 files/digest-amavisd-new-2.4.0 253
+SHA256 1cbf0cd691fa7158781472d164195ee0e764962e4a4d38ff392449a3d358ef87 files/digest-amavisd-new-2.4.0 253
+MD5 bde25cc23c0895235b8c9f281256d6d4 files/digest-amavisd-new-2.4.1 253
+RMD160 e7931a5f593031c730abfbdcc42e43d906e1abca files/digest-amavisd-new-2.4.1 253
+SHA256 3112111007ffb987dca3f6a4fdf95b670c09c8974696d373d725a809fe5e5c2a files/digest-amavisd-new-2.4.1 253
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEPJHAQlM6RnzZP+IRAvFUAKChHumQogn/pTzQcqj8i2quNFUq6gCdH7d3
-Zjv47l9GzkA7pHBlaJdjp3s=
-=8QSg
+iD8DBQFEgKaZQlM6RnzZP+IRAhIwAKCUDr2mNW7Q5w0/Z1nb5QTxljzaUwCdFlpk
+ts+7LYqxldKQv6AV8kTQgGY=
+=rZyX
 -----END PGP SIGNATURE-----
