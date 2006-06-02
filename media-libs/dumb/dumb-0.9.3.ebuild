@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.3.ebuild,v 1.2 2006/05/31 07:28:56 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.3.ebuild,v 1.3 2006/06/02 01:33:57 joker Exp $
 
 IUSE="debug"
 
@@ -26,10 +26,7 @@ PREFIX := /usr
 EOF
 
 	epatch ${FILESDIR}/${PN}-0.9.2-PIC.patch
-
-	sed -e 's/libdumb\(d\)*.a/libdumb\1.so/g' \
-		-i Makefile.rdy
-
+	cp Makefile Makefile.rdy
 }
 
 src_compile() {
