@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.0.ebuild,v 1.1 2006/06/02 09:10:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.0.ebuild,v 1.2 2006/06/02 10:52:34 flameeyes Exp $
 
 inherit kde eutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="KDE multi-protocol IM client"
 HOMEPAGE="http://kopete.kde.org/"
 LICENSE="GPL-2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="jingle sametime ssl xmms xscreensaver kdehiddenvisibility"
 
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
