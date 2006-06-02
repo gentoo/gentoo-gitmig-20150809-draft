@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.1.ebuild,v 1.7 2006/06/02 19:31:37 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.1.ebuild,v 1.8 2006/06/02 20:13:01 kugelfang Exp $
 
-inherit fortran toolchain-funcs
+inherit fortran toolchain-funcs flag-o-matic
 
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
 HOMEPAGE="http://www.r-project.org/"
