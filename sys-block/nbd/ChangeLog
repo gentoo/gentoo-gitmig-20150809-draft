@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.11 2006/04/27 22:43:14 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.12 2006/06/02 07:45:55 dragonheart Exp $
+
+  02 Jun 2006; Daniel Black <dragonheart@gentoo.org>
+  -files/docbook2man.patch, -nbd-2.7.2.ebuild, -nbd-2.7.3.ebuild,
+  -nbd-2.7.4.ebuild, -nbd-2.8.2.ebuild:
+  purge security vulnerable versions
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-nbd-2.7.2,
   files/digest-nbd-2.7.3, files/digest-nbd-2.7.4, files/digest-nbd-2.8.2,
