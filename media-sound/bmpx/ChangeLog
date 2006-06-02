@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.31 2006/05/04 01:31:04 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.32 2006/06/02 18:28:05 chutzpah Exp $
+
+  02 Jun 2006; Patrick McLean <chutzpah@gentoo.org> bmpx-0.12.9-r2.ebuild,
+  -bmpx-0.14.3.ebuild:
+  Remove sparc keyword since it apparently doesn't work very well, and clean
+  up 0.14.3.
 
 *bmpx-0.14.4 (04 May 2006)
 
