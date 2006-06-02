@@ -1,6 +1,6 @@
 --- rhythmbox-0.9.4-old/widgets/eggtrayicon.c   2006-04-29 19:37:20.000000000 +0100
 +++ rhythmbox-0.9.4/widgets/eggtrayicon.c       2006-04-29 19:11:50.000000000 +0100
-@@ -571,7 +571,7 @@
+@@ -574,7 +574,7 @@
 
    if (pixbuf)
      {
