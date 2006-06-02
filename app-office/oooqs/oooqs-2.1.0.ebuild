@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/oooqs-2.1.0.ebuild,v 1.1 2006/05/30 19:14:49 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/oooqs-2.1.0.ebuild,v 1.2 2006/06/02 06:11:31 suka Exp $
 
 inherit kde eutils
 
@@ -18,7 +18,7 @@ IUSE=""
 SLOT="0"
 
 RDEPEND=">=virtual/ooo-2.0.0
-	kde-base/ksysguard"
+	|| ( kde-base/ksysguard kde-base/kdebase )"
 
 src_unpack() {
 	unpack ${A}
