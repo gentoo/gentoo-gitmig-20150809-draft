@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a1cf53039dfa1e988eb937223038b323 ChangeLog 399
-MD5 8efb5110f96df1cc1f0412cef80b9e4d apsw-3.2.7.1.ebuild 633
+MD5 3a74e983d68630b22adee5d78af4fe18 ChangeLog 552
+MD5 fb702558d63d1fd46419160882a0a782 apsw-3.2.7.1.ebuild 632
+MD5 82c9caaa77e7f96f08d72d91567ba495 apsw-3.3.5.1.ebuild 633
 MD5 8283a2ab48a478faa56e05ec633c2c4e files/digest-apsw-3.2.7.1 61
+MD5 09401ab3a21f6df59946733d403f5cc7 files/digest-apsw-3.3.5.1 61
 MD5 ca5f16ca4f221c33ef69b275b9d1a5e5 metadata.xml 521
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEL61LjG8pv1lIUX4RAqzFAJ9S2DZC9Lw14yzu5i82WeunkdqlOQCdHxHr
-Cm/5kl7/QMhzKvR/xdFOyEU=
-=ZxUz
+iD8DBQFEgHk7jG8pv1lIUX4RAgOqAJ9CqTWqiE0xKW7yyPkahb6NIgFWdgCeIi7d
+OARwwQiUhFZ8XHm9PxHMPTA=
+=Kij4
 -----END PGP SIGNATURE-----
