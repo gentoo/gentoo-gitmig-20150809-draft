@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.164 2006/05/28 01:18:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.165 2006/06/02 21:03:30 flameeyes Exp $
+
+*vlc-0.8.5-r1 (02 Jun 2006)
+
+  02 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> +vlc-0.8.5-r1.ebuild:
+  Add new revision with a fix for stream containing ' character.
 
   28 May 2006; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.5.ebuild:
   Bump patchlevel to add a patch to support ffmpeg with (experimental) hidden
