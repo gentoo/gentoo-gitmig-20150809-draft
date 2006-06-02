@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.04.0-r2.ebuild,v 1.6 2006/06/02 18:09:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.06.00.ebuild,v 1.1 2006/06/02 18:09:47 mrness Exp $
 
 inherit eutils
 
@@ -10,10 +10,10 @@ DESCRIPTION="a fork of the gnokii project, a tool to handle your cellular phone"
 HOMEPAGE="http://www.gammu.org"
 SRC_URI="http://www.mwiacek.com/zips/gsm/${PN}/stable/${MY_MAJOR_VER/./_}x/${P}.tar.gz"
 
-IUSE="debug bluetooth irda mysql"
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ia64 ppc x86"
+SLOT="0"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+IUSE="debug bluetooth irda mysql"
 
 RDEPEND="bluetooth? ( net-wireless/bluez-libs )
 	mysql? ( dev-db/mysql )"
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/${P}-devfunc-sock.patch
+	epatch "${FILESDIR}/${P}-backup-limits.patch"
 }
 
 src_compile() {
@@ -43,6 +43,6 @@ src_compile() {
 }
 
 src_install () {
-	make "DESTDIR=${D}" installshared || die "install failed"
+	make DESTDIR="${D}" installshared || die "install failed"
 	mv "${D}/usr/share/doc/${PN}" "${D}/usr/share/doc/${P}"
 }

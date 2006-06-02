@@ -1,18 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 583df02081f7c7ca7d052d4d9d888e86 ChangeLog 5375
+MD5 37cf674515e3acbd6e30c02af2c9e8e6 ChangeLog 5629
 MD5 33f5aa8593cdf2bf3524869f6f128ec5 files/digest-gammu-1.04.0-r2 64
 MD5 b12e70f5f534269b8ed6358b05350b8e files/digest-gammu-1.05.00 66
+MD5 93fac4a88c6f33c083076613aa1af9cf files/digest-gammu-1.06.00 66
 MD5 2dba94c27d92141070e9b76dba40f24b files/gammu-1.04.0-devfunc-sock.patch 381
 MD5 0f5efcaf936daef66d322f1a9976ec7c files/gammu-1.05.00-backup-limits.patch 670
-MD5 cf332dc522be33df5f1c43e37b5d4439 gammu-1.04.0-r2.ebuild 1348
-MD5 6af767151a858e771eede22957662fd0 gammu-1.05.00.ebuild 1349
+MD5 f623f4b321d332f16773fb2bea973fb7 files/gammu-1.06.00-backup-limits.patch 670
+MD5 1abfdf38578cdeaa100c3410cf929189 gammu-1.04.0-r2.ebuild 1327
+MD5 2196de4267a5c5089eabfba8244afbec gammu-1.05.00.ebuild 1329
+MD5 10711bc4d1edbf6773eda090c2cad907 gammu-1.06.00.ebuild 1330
 MD5 e161c5ddb0e2ddbe68a21690f41e90e1 metadata.xml 227
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEY6hDjG8pv1lIUX4RAk3WAJ4iQkKcHLkkga5eUN57y4vN46GLXACg6x6m
-pkNuSztDM3UV4qzfqGxIeFc=
-=Fm3L
+iD8DBQFEgH77jG8pv1lIUX4RAruwAJ9Eb2geC4FyscbWvoqFUUMFwTNt0QCbBJJe
+TYY5DyMM9DFqjzxXFxr4NcE=
+=orWJ
 -----END PGP SIGNATURE-----

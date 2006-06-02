@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.16 2006/05/11 21:10:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.17 2006/06/02 18:09:47 mrness Exp $
+
+*gammu-1.06.00 (02 Jun 2006)
+
+  02 Jun 2006; Alin Nastac <mrness@gentoo.org>
+  +files/gammu-1.06.00-backup-limits.patch, gammu-1.04.0-r2.ebuild,
+  gammu-1.05.00.ebuild, +gammu-1.06.00.ebuild:
+  Update HOMEPAGE. Mark 1.05.00 stable on x86. Version bump.
 
 *gammu-1.05.00 (06 Apr 2006)
 
