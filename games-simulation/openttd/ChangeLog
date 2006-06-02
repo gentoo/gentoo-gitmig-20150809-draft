@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.20 2006/06/02 10:40:41 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.21 2006/06/02 10:46:21 pylon Exp $
+
+  02 Jun 2006; Lars Weiler <pylon@gentoo.org> openttd-0.4.7.ebuild:
+  Only depend on media-libs/libsdl when no dedicated server is built; bug
+  #131704.
 
   02 Jun 2006; Lars Weiler <pylon@gentoo.org> metadata.xml,
   openttd-0.4.7.ebuild:
