@@ -1,6 +1,10 @@
 # ChangeLog for app-text/djvu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.40 2006/05/30 09:31:32 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.41 2006/06/02 07:33:38 ehmsen Exp $
+
+  02 Jun 2006; Martin Ehmsen <ehmsen@gentoo.org>
+  +files/djvu-3.5.17-dont-prestrip-bins.patch, djvu-3.5.17.ebuild:
+  Patched Makefiles so they don't strip binaries, bug #135208.
 
   30 May 2006; Martin Ehmsen <ehmsen@gentoo.org> djvu-3.5.17.ebuild:
   Fixed problem with nspluging being installed also with unset use flag, 
