@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lastfmplayer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.3 2006/04/27 15:03:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.4 2006/06/02 15:57:23 genstef Exp $
+
+  02 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
+  lastfmplayer-1.2_pre2099.ebuild:
+  Add browser-setting information thanks to Pietro Franchi
+  <tinaught@gmail.com> in bug 135279
 
 *lastfmplayer-1.2_pre2099 (27 Apr 2006)
 

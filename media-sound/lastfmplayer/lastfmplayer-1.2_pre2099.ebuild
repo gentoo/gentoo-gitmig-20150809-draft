@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.2_pre2099.ebuild,v 1.3 2006/05/13 21:41:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.2_pre2099.ebuild,v 1.4 2006/06/02 15:57:23 genstef Exp $
 
 inherit eutils subversion
 
@@ -75,4 +75,7 @@ pkg_postinst() {
 	einfo
 	einfo "If you experiance awkward fonts or widgets, you may consider"
 	einfo "running \"qtconfig\" and change the settings"
+	einfo
+	einfo "To configure a browser you need to add something like"
+	einfo "\"Browser=/usr/bin/firefox\" under [general] in ~/.config/last.fm/player.ini"
 }
