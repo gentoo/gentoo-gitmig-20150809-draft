@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpeglib/artsplugin-mpeglib-3.5.3.ebuild,v 1.2 2006/06/02 00:36:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpeglib/artsplugin-mpeglib-3.5.3.ebuild,v 1.3 2006/06/02 14:31:38 flameeyes Exp $
 
 ARTS_REQUIRED="yes"
 KMNAME=kdemultimedia
@@ -16,5 +16,3 @@ DEPEND="$(deprange 3.5.1 $MAXKDEVER kde-base/mpeglib)"
 
 KMCOPYLIB="libmpeg mpeglib/lib/"
 KMEXTRACTONLY="mpeglib/"
-
-PATCHES="${FILESDIR}/${PN}-3.5.2-libarts.patch"

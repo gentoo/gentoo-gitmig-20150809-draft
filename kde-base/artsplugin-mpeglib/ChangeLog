@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/artsplugin-mpeglib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpeglib/ChangeLog,v 1.47 2006/06/02 00:36:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpeglib/ChangeLog,v 1.48 2006/06/02 14:31:38 flameeyes Exp $
+
+  02 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  artsplugin-mpeglib-3.5.3.ebuild:
+  Drop patch, thanks to Keith Kastorff on forums.
 
   02 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   artsplugin-mpeglib-3.5.3.ebuild:
