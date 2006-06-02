@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ruby-glib2-0.12.0.ebuild,v 1.7 2005/08/23 16:34:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ruby-glib2-0.12.0.ebuild,v 1.8 2006/06/02 13:39:36 flameeyes Exp $
 
 inherit ruby ruby-gnome2 eutils
 
@@ -10,15 +10,4 @@ IUSE=""
 USE_RUBY="ruby16 ruby18 ruby19"
 DEPEND=">=dev-libs/glib-2"
 
-src_test() {
-	if [ -z "$DISPLAY" ] || ! (/usr/X11R6/bin/xhost &>/dev/null) ; then
-		ewarn
-		ewarn "You are not authorised to connect to X server to run test."
-		ewarn "Disabling run test."
-		ewarn
-		epause; ebeep; epause
-	else
-		cd tests
-		ruby test-glib2.rb || die "test-glib2.rb failed"
-	fi
-}
+RESTRICT="test"
