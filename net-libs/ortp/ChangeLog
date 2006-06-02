@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.6 2006/05/05 10:36:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.7 2006/06/02 10:51:47 flameeyes Exp $
+
+  02 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> ortp-0.7.1-r1.ebuild:
+  Add ~ppc keyword (okay from lu_zero).
 
   05 May 2006; Stefan Schweizer <genstef@gentoo.org>
   files/digest-ortp-0.7.1-r1, +files/digest-ortp-0.9.1, Manifest:
