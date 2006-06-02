@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/knowledgetree
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/ChangeLog,v 1.6 2006/06/01 14:50:02 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/ChangeLog,v 1.7 2006/06/02 04:27:42 halcy0n Exp $
+
+  02 Jun 2006; Mark Loeser <halcy0n@gentoo.org>
+  -files/digest-knowledgetree-3.0.1, -files/digest-knowledgetree-3.0.2:
+  Trim stray digests
 
 *knowledgetree-3.0.3 (01 Jun 2006)
 
