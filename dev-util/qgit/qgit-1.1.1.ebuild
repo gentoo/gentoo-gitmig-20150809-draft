@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-1.1.1.ebuild,v 1.2 2006/03/25 19:35:04 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-1.1.1.ebuild,v 1.3 2006/06/02 12:00:33 caleb Exp $
 
 inherit qt3
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-3.3"
+DEPEND="=x11-libs/qt-3*"
 RDEPEND="${DEPEND}
 	>=dev-util/git-1.2.4"
 

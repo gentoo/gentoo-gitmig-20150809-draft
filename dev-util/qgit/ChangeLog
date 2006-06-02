@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/qgit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.7 2006/05/02 01:39:30 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.8 2006/06/02 12:00:33 caleb Exp $
+
+  02 Jun 2006; Caleb Tennis <caleb@gentoo.org> qgit-1.1.1.ebuild,
+  qgit-1.2.ebuild:
+  Make qt-3 dep a hard dep on qt-3
 
   01 May 2006; Scott Stoddard <deltacow@gentoo.org> qgit-1.2.ebuild:
   Added ~amd64 (bug #131714)
