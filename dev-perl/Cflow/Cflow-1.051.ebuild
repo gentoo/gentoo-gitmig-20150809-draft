@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cflow/Cflow-1.051.ebuild,v 1.5 2006/03/30 22:18:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cflow/Cflow-1.051.ebuild,v 1.6 2006/06/02 13:39:49 strerror Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ IUSE=""
 
 DEPEND="dev-lang/perl"
 
-PDEPEND="=net-analyzer/flow-tools-${FLOW_TOOLS_VERSION}-r1"
+PDEPEND=">=net-analyzer/flow-tools-${FLOW_TOOLS_VERSION}-r1"
 RDEPEND=""
 
 src_unpack() {
