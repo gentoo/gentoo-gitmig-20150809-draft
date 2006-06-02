@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/pmtools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmtools/ChangeLog,v 1.1 2006/05/07 02:22:00 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmtools/ChangeLog,v 1.2 2006/06/02 02:35:36 robbat2 Exp $
+
+*pmtools-20051111-r1 (02 Jun 2006)
+
+  02 Jun 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/pmtools-20051111-acpixtract-pmtools.patch,
+  +files/pmtools-20051111-madt.patch, metadata.xml,
+  +pmtools-20051111-r1.ebuild:
+  Revamp ebuild to include all binaries, not conflict with iasl, build
+  cleaner, and be generally better. Also add myself to the maintainer list.
 
 *pmtools-20051111 (07 May 2006)
 
