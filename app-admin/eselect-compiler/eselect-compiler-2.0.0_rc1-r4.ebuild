@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1-r4.ebuild,v 1.1 2006/06/01 09:41:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1-r4.ebuild,v 1.2 2006/06/02 18:08:01 eradicator Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -45,8 +45,8 @@ pkg_postinst() {
 	if [[ ! -f "${ROOT}/etc/eselect/compiler/selection.conf" ]] ; then
 		ewarn "This looks like the first time you are installing eselect-compiler.  We are"
 		ewarn "activating toolchain profiles for the CTARGETs needed by your portage"
-		ewarn "profile You should have profiles installed from compilers that you emerged"
-		ewarn "after October, 2005. If a compiler you have installed is missing an"
+		ewarn "profile.  You should have profiles installed from compilers that you emerged"
+		ewarn "after October, 2005.  If a compiler you have installed is missing an"
 		ewarn "eselect-compiler profile, you can either re-emerge the compiler, create the"
 		ewarn "profile yourself, or you can migrate profiles from gcc-config-1.x by doing:"
 		ewarn "# eselect compiler migrate"
@@ -110,9 +110,23 @@ pkg_postinst() {
 		eselect compiler update
 	fi
 
-	if rm -f ${ROOT}/etc/env.d/05gcc* &> /dev/null ; then
+	local file
+	local resource_profile=0
+	for file in ${ROOT}/etc/env.d/05gcc* ; do
+		if [[ -f ${file} ]] ; then
+			ewarn "Removing env.d entry which was used by gcc-config:"
+			ewarn "    ${file}"
+
+			rm -f ${file}
+
+			resource_profile=1
+		fi
+	done
+
+	if [[ ${resource_profile} == 1 ]] ; then
 		echo
 		ewarn "You should source /etc/profile in your open shells."
+
 	fi
 }
 
