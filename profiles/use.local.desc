@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1925 2006/06/01 17:12:43 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1926 2006/06/02 14:57:18 seemant Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -70,6 +70,7 @@ app-editors/gvim:mzscheme - Include support for the mzscheme interpreter
 app-editors/gvim:netbeans - Include netbeans integration support
 app-editors/gvim:nextaw - Include support for the neXtaw GUI
 app-editors/gvim:termcap-compat - Use libtermcap-compat rather than ncurses (not generally recommended)
+app-editors/jove:unix98 - Use the Unix98 pty's instead of the BSD pts's
 app-editors/nano:justify - Toggle the justify option ...
 app-editors/nano:nomac - Turn off mac formatting output
 app-editors/nvu:moznoxft - placeholder until mozilla eclass is modified for nvu
