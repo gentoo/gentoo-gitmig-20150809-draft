@@ -1,6 +1,6 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.14 2006/06/02 16:01:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.15 2006/06/02 16:07:06 genstef Exp $
 
   02 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
   -files/foo2zjs-Makefile-20060501.diff,
@@ -8,7 +8,7 @@
   -files/hp-printer-udev.patch, -foo2zjs-20050319.ebuild,
   -foo2zjs-20060501-r1.ebuild:
   Remove old broken releases. This package is ~arch only because upstream does
-  not liek the idea of users using old releases. Thanks to Asfand Yar Qazi
+  not like the idea of users using old releases. Thanks to Asfand Yar Qazi
   <ayqazi@yahoo.co.uk> in bug 135155
 
 *foo2zjs-20060523 (01 Jun 2006)
