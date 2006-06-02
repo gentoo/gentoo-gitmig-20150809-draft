@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/trigger-0.5.2-r1.ebuild,v 1.2 2006/05/23 21:48:57 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/trigger-0.5.2-r1.ebuild,v 1.3 2006/06/02 00:04:02 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -21,7 +21,7 @@ RDEPEND="virtual/opengl
 	>=media-libs/libsdl-1.2.5
 	>=media-libs/sdl-image-1.2
 	media-libs/sdl-mixer
-	~media-libs/openal
+	~media-libs/openal-0.0.8
 	media-libs/freealut
 	dev-games/physfs"
 DEPEND="${RDEPEND}
