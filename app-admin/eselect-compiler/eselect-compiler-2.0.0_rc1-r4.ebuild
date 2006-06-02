@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1-r4.ebuild,v 1.3 2006/06/02 22:01:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1-r4.ebuild,v 1.4 2006/06/02 22:17:20 eradicator Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -22,17 +22,7 @@ RDEPEND=">=app-admin/eselect-1.0_rc1"
 
 # We want to verify that compiler profiles exist for our toolchain
 pkg_setup() {
-	# Some toolchain.eclass installed confs had some bugs in them. We
-	# could just use sed to update them, but then portage won't remove
-	# them automatically on unmerge. 
-
-	local file
-	for file in $(grep "^[[:space:]]*chost=" ${ROOT}/etc/eselect/compiler/*.conf | cut -f1 -d:)  ; do
-		rm ${file}
-	done
-	for file in $(grep "^[[:space:]]*spec=" ${ROOT}/etc/eselect/compiler/*.conf | cut -f1 -d:)  ; do
-		rm ${file}
-	done
+	delete_invalid_profiles
 
 	local abi
 	for abi in $(get_all_abis) ; do
@@ -65,15 +55,6 @@ pkg_postinst() {
 		einfo "The following profiles have been activated.  If an incorrect profile is"
 		einfo "chosen or an error is reported, please use 'eselect compiler set' to"
 		einfo "manually choose it"
-
-		# First we need to clean out /etc/eselect/compiler as there may
-		# be some profiles in there which were not unmerged with gcc.
-		local item
-		for item in $(grep "^[[:space:]]*binpath=" ${ROOT}/etc/eselect/compiler/*.conf | sed 's/:.*binpath=/:/') ; do
-			local file=${item%:*}
-			local binpath=${item#*:}
-			[[ -d ${binpath} ]] || rm ${file}
-		done
 
 		local abi
 		for abi in $(get_all_abis) ; do
@@ -153,3 +134,28 @@ src_install() {
 	# This is installed by sys-devel/gcc-config
 	rm ${D}/usr/bin/gcc-config
 }
+
+# The profiles are protected by CONFIG_PROJECT until eselect-compiler is installed, so we need to clean out
+# the invalid profiles when eselect-compiler is first installed
+delete_invalid_profiles() {
+	# Some toolchain.eclass installed confs had some bugs in them. We
+	# could just use sed to update them, but then portage won't remove
+	# them automatically on unmerge. 
+	local file
+	for file in $(grep "^[[:space:]]*chost=" ${ROOT}/etc/eselect/compiler/*.conf | cut -f1 -d:)  ; do
+		rm ${file}
+	done
+	for file in $(grep "^[[:space:]]*spec=" ${ROOT}/etc/eselect/compiler/*.conf | cut -f1 -d:)  ; do
+		rm ${file}
+	done
+
+	# First we need to clean out /etc/eselect/compiler as there may
+	# be some profiles in there which were not unmerged with gcc.
+	local item
+	for item in $(grep "^[[:space:]]*binpath=" ${ROOT}/etc/eselect/compiler/*.conf | sed 's/:.*binpath=/:/') ; do
+		local file=${item%:*}
+		local binpath=${item#*:}
+		[[ -d ${binpath} ]] || rm ${file}
+	done
+}
+
