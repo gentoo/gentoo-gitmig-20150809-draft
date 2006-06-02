@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/p3nfs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.14 2006/05/05 14:32:01 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.15 2006/06/02 17:10:39 mrness Exp $
+
+  02 Jun 2006; Alin Nastac <mrness@gentoo.org>
+  -files/p3nfs-5.18-fix-defines.patch, -p3nfs-5.18-r1.ebuild:
+  Remove obsolete version.
 
   05 May 2006; Jon Hood <squinky86@gentoo.org> p3nfs-5.19.ebuild:
   Add ~amd64, #108311.
