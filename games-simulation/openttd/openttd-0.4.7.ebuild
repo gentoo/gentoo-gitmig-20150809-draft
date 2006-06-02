@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.4.7.ebuild,v 1.3 2006/05/28 11:01:27 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.4.7.ebuild,v 1.4 2006/06/02 10:40:41 pylon Exp $
 
 inherit eutils games
 
@@ -16,7 +16,8 @@ IUSE="debug png zlib timidity alsa dedicated scenarios"
 
 DEPEND="media-libs/libsdl
 	png? ( media-libs/libpng )
-	zlib? ( sys-libs/zlib )"
+	zlib? ( sys-libs/zlib )
+	scenarios? ( app-arch/unzip )"
 RDEPEND="${DEPEND}
 	!dedicated? (
 		timidity? ( media-sound/timidity++ )

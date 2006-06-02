@@ -6,4 +6,9 @@
   <email>dholm@gentoo.org</email>
   <name>David Holm</name>
 </maintainer>
+<maintainer>
+  <email>pylon@gentoo.org</email>
+  <name>Lars Weiler</name>
+  <description>Backup for dholm</description>
+</maintainer>
 </pkgmetadata>
