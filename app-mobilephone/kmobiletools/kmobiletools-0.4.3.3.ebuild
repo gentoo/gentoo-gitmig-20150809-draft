@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/kmobiletools-0.4.3.3.ebuild,v 1.2 2006/04/22 13:39:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/kmobiletools-0.4.3.3.ebuild,v 1.3 2006/06/02 19:20:29 mrness Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.kmobiletools.org/"
 LICENSE="GPL-2"
 
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 need-kde 3.2
 
