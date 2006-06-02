@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r2.ebuild,v 1.5 2006/05/20 00:42:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r2.ebuild,v 1.6 2006/06/02 23:11:19 gmsoft Exp $
 
 inherit eutils libtool autotools
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.openexr.com"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc examples"
 
 RDEPEND="virtual/opengl"
