@@ -1,0 +1,10 @@
+--- xen-3.0.2/tools/xenmon/Makefile	2006-06-01 13:40:40.468687762 +0100
++++ xen-3.0.2/tools/xenmon/Makefile	2006-06-01 13:41:04.000000000 +0100
+@@ -43,6 +43,6 @@
+ 
+ 
+ %: %.c Makefile
+-	$(CC) $(CFLAGS) $(LDFLAGS) -lxenctrl -o $@ $<
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $< -lxenctrl
+ 
+ 

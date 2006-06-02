@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2.ebuild,v 1.7 2006/04/26 16:45:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2.ebuild,v 1.8 2006/06/02 09:23:34 uberlord Exp $
 
 inherit mount-boot flag-o-matic eutils
 
@@ -9,10 +9,10 @@ HOMEPAGE="http://xen.sourceforge.net"
 if [[ ${PV} == *_p* ]]; then
 	XEN_UNSTABLE="xen-unstable-${PV#*_p}"
 	SRC_URI="mirror://gentoo/${XEN_UNSTABLE}.tar.bz2"
-	S=${WORKDIR}/${XEN_UNSTABLE}
+	S="${WORKDIR}/${XEN_UNSTABLE}"
 else
 	SRC_URI="http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/xen-${PV}-src.tgz"
-	S=${WORKDIR}/xen-${PV}
+	S="${WORKDIR}/xen-${PV}"
 fi
 
 LICENSE="GPL-2"
@@ -44,7 +44,7 @@ src_unpack() {
 	if use custom-cflags; then
 		einfo "User wants their own CFLAGS - removing defaults"
 		# try and remove all the default custom-cflags
-		find ${S} -name Makefile -o -name Rules.mk -o -name Config.mk -exec sed \
+		find "${S}" -name Makefile -o -name Rules.mk -o -name Config.mk -exec sed \
 			-e 's/CFLAGS\(.*\)=\(.*\)-O3\(.*\)/CFLAGS\1=\2\3/' \
 			-e 's/CFLAGS\(.*\)=\(.*\)-march=i686\(.*\)/CFLAGS\1=\2\3/' \
 			-e 's/CFLAGS\(.*\)=\(.*\)-fomit-frame-pointer\(.*\)/CFLAGS\1=\2\3/' \
@@ -56,11 +56,14 @@ src_unpack() {
 	if use hardened; then
 		HARDFLAGS="-nopie -fno-stack-protector -fno-stack-protector-all"
 		sed -e "s/CFLAGS :=/CFLAGS := ${HARDFLAGS}/" \
-		-i ${S}/tools/firmware/hvmloader/Makefile \
-		${S}/tools/firmware/vmxassist/Makefile
-		cd ${S}
-		epatch ${FILESDIR}/hardened-bx-clobber.patch
+		-i "${S}"/tools/firmware/hvmloader/Makefile \
+		"${S}"/tools/firmware/vmxassist/Makefile
+		cd "${S}"
+		epatch "${FILESDIR}"/hardened-bx-clobber.patch
 	fi
+
+	# Allow --as-needed LDFLAGS
+	epatch "${FILESDIR}/${P}"--as-needed.patch
 }
 
 src_compile() {
@@ -73,7 +76,7 @@ src_compile() {
 
 	if use doc; then
 		sh ./docs/check_pkgs || die "package check failed"
-		make -C docs || die "compiling docs failed"
+		emake -C docs || die "compiling docs failed"
 	fi
 
 	emake -C docs man-pages || die "make man-pages failed"
@@ -86,20 +89,20 @@ src_install() {
 		|| die "install failed"
 
 	if use doc; then
-		make DESTDIR=${D} -C docs install || die "install docs failed"
+		make DESTDIR="${D}" -C docs install || die "install docs failed"
 		# Rename doc/xen to the Gentoo-style doc/xen-x.y
-		mv ${D}/usr/share/doc/{${PN},${PF}}
+		mv "${D}"/usr/share/doc/{${PN},${PF}}
 	fi
 
 	doman docs/man?/*
 
-	newinitd ${FILESDIR}/xend-init xend
-	newconfd ${FILESDIR}/xend-conf xend
-	newconfd ${FILESDIR}/xendomains-conf xendomains
-	newinitd ${FILESDIR}/xendomains-init xendomains
+	newinitd "${FILESDIR}"/xend-init xend
+	newconfd "${FILESDIR}"/xend-conf xend
+	newconfd "${FILESDIR}"/xendomains-conf xendomains
+	newinitd "${FILESDIR}"/xendomains-init xendomains
 
 	if use screen; then
-		sed -i -e 's/SCREEN="no"/SCREEN="yes"/' ${D}/etc/init.d/xendomains
+		sed -i -e 's/SCREEN="no"/SCREEN="yes"/' "${D}"/etc/init.d/xendomains
 	fi
 
 	# xend expects these to exist
@@ -107,7 +110,7 @@ src_install() {
 
 	# for upstream change tracking
 	if [[ -n ${XEN_UNSTABLE} ]]; then
-		dodoc ${S}/XEN-VERSION
+		dodoc "${S}"/XEN-VERSION
 	fi
 }
 
