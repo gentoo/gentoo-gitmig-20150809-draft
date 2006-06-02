@@ -1,6 +1,10 @@
 # ChangeLog for net-im/kopete
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.59 2006/06/02 10:52:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.60 2006/06/02 20:03:48 genstef Exp $
+
+  02 Jun 2006; Stefan Schweizer <genstef@gentoo.org> kopete-0.12.0.ebuild:
+  Properly block kde-base/kdenetwork and net-libs/libjingle thanks to Daniel
+  Webert <rockoo@gmail.com> in bug 135310
 
   02 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> kopete-0.12.0.ebuild:
   Add ~ppc keyword (okay from lu_zero).

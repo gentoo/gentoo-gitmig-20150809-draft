@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.0.ebuild,v 1.2 2006/06/02 10:52:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.0.ebuild,v 1.3 2006/06/02 20:03:48 genstef Exp $
 
 inherit kde eutils
 
@@ -40,7 +40,9 @@ BOTH_DEPEND="dev-libs/libxslt
 
 RDEPEND="${BOTH_DEPEND}
 	ssl? ( app-crypt/qca-tls )
-	!kde-base/kopete"
+	!kde-base/kopete
+	!kde-base/kdenetwork
+	!net-libs/libjingle"
 
 DEPEND="${BOTH_DEPEND}
 	kernel_linux? ( virtual/os-headers )
