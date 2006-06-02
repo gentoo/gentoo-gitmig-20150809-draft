@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.170 2006/06/01 10:44:27 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.171 2006/06/02 19:47:18 genstef Exp $
+
+*kdeaddons-3.5.3 (02 Jun 2006)
+
+  02 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
+  +kdeaddons-3.5.3.ebuild:
+  version bump
 
   01 Jun 2006; Thomas Cort <tcort@gentoo.org> kdeaddons-3.5.2-r1.ebuild:
   Stable on alpha wrt Bug #132213.
