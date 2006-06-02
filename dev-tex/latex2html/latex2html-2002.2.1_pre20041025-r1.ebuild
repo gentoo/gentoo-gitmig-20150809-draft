@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20041025-r1.ebuild,v 1.1 2006/05/23 07:40:01 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20041025-r1.ebuild,v 1.2 2006/06/02 18:57:50 ehmsen Exp $
 
 inherit eutils
 
@@ -35,8 +35,9 @@ DEPEND="virtual/ghostscript
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-convert-length.patch
-	epatch ${FILESDIR}/${PN}-perl_name.patch
+	epatch "${FILESDIR}/${PN}-convert-length.patch" || die
+	epatch "${FILESDIR}/${PN}-perl_name.patch" || die
+	epatch "${FILESDIR}/${PN}-extract-major-version.patch" || die
 }
 
 src_compile() {

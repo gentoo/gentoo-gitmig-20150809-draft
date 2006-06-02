@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/latex2html
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.28 2006/05/23 07:40:01 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.29 2006/06/02 18:57:50 ehmsen Exp $
+
+  02 Jun 2006; Martin Ehmsen <ehmsen@gentoo.org>
+  +files/latex2html-extract-major-version.patch,
+  latex2html-2002.2.1_pre20041025-r1.ebuild:
+  Fixed the extraction of netpbms major verions number in config/config.pl,
+  bug #122927.
 
 *latex2html-2002.2.1_pre20041025-r1 (23 May 2006)
 
