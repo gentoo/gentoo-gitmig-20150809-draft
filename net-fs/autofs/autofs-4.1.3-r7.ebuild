@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r7.ebuild,v 1.1 2006/05/30 17:12:35 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r7.ebuild,v 1.2 2006/06/02 20:41:49 robbat2 Exp $
 
 inherit eutils multilib
 
@@ -36,7 +36,12 @@ src_unpack() {
 	autoconf || die "Autoconf failed"
 
 	cd ${S}/daemon
-	sed -i 's/LIBS \= \-ldl/LIBS \= \-ldl \-lnsl \$\{LIBLDAP\}/' Makefile || die "LIBLDAP change failed"
+	sed -i 's/LIBS \= \-ldl/LIBS \= \-ldl \-lnsl \$\{LIBLDAP\}/' Makefile \
+		|| die "LIBLDAP change failed"
+
+	cd ${S}/lib
+	sed -i '/^listmount.o:/s,$, mount.h,g' Makefile \
+		|| die "Failed to fix dependancies"
 }
 
 src_compile() {
