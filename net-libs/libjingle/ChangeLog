@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libjingle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/ChangeLog,v 1.2 2006/05/22 15:58:07 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/ChangeLog,v 1.3 2006/06/02 20:06:14 genstef Exp $
+
+  02 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
+  libjingle-0.3.0_p20060508.ebuild:
+  block kopete
 
   22 May 2006; Stefan Schweizer <genstef@gentoo.org>
   libjingle-0.3.0_p20060508.ebuild:
