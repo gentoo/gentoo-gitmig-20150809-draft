@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.12.ebuild,v 1.2 2006/04/30 20:59:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.12.ebuild,v 1.3 2006/06/02 19:38:42 mrness Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnokii.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="nls X bluetooth irda sms postgres mysql"
 
 RESTRICT="maketest" #test fails; maybe it will work in the future, but till then...
@@ -73,7 +73,7 @@ src_install() {
 	rm -rf Docs/man Docs/sample Docs/protocol
 	dodoc Docs/*
 
-	# only one file needs suid root to make a psuedo device
+	# only one file needs suid root to make a pseudo device
 	fperms 4755 /usr/sbin/mgnokiidev
 
 	if use sms;	then
