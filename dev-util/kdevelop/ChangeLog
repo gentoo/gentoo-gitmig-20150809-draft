@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.117 2006/05/19 20:00:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.118 2006/06/02 00:06:46 flameeyes Exp $
+
+*kdevelop-3.3.3 (02 Jun 2006)
+
+  02 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> +kdevelop-3.3.3.ebuild:
+  Bump to latest release.
 
   19 May 2006; Diego Pettenò <flameeyes@gentoo.org> kdevelop-3.3.2.ebuild:
   Make sure that the correct includedir and the correct library name is used.
