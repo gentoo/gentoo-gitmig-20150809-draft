@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/schroedinger
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.1 2006/05/31 12:39:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.2 2006/06/02 14:51:17 lu_zero Exp $
+
+  02 Jun 2006; Luca Barbato <lu_zero@gentoo.org>
+  schroedinger-0.2.0.0.ebuild:
+  Useflag fix
 
 *schroedinger-0.2.0.0 (31 May 2006)
 
