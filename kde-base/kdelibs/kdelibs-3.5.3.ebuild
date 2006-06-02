@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.3.ebuild,v 1.1 2006/06/01 12:31:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.3.ebuild,v 1.2 2006/06/02 16:16:40 flameeyes Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -102,10 +102,6 @@ src_compile() {
 	fi
 
 	myconf="${myconf} --disable-fast-malloc"
-
-	# When compiling a new release there are problems with cross-linking, so
-	# avoid using --as-needed in that case.
-	has_version "~${CATEGORY}/${P}" || append-ldflags -Wl,--no-as-needed
 
 	# fix bug 58179, bug 85593
 	# kdelibs-3.4.0 needed -fno-gcse; 3.4.1 needs -mminimal-toc; this needs a
