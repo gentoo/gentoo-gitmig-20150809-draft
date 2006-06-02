@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.42 2006/05/18 17:42:42 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.43 2006/06/02 08:44:10 ferdy Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -142,3 +142,7 @@ netbeans
 
 # No go in Alpha
 nvtv
+
+# dspam and dspam-web use this one
+# We've never supported cyrus-imapd because nobody asked for
+cyrus
