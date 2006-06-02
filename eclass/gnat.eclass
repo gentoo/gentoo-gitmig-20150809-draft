@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.15 2006/05/25 11:53:26 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.16 2006/06/02 14:33:47 george Exp $
 #
 # This eclass provides the framework for ada lib installation with the split and
 # SLOTted gnat compilers (gnat-xxx, gnatbuild.eclass). Each lib gets built once
@@ -129,11 +129,8 @@ get_gnat_Arch() {
 filter_env_var() {
 	local entries=(${!1//:/ })
 	local libName=${2:-${PN}}
-	echo "entries=${entries[@]}" >> /tmp/gnat.eclass.rep
-	ewarn "libName=${libName}" >> /tmp/gnat.eclass.rep
 	local env_str
 	for entry in ${entries[@]} ; do
-		echo "entry=${entry}" >> /tmp/gnat.eclass.rep
 		if [[ ${entry:$((-${#libName}))} != ${libName} ]] ; then
 			env_str="${env_str}:${entry}"
 		fi
