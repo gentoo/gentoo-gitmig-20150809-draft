@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/xulrunner
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.1 2006/06/02 01:56:01 anarchy Exp $
+
+*xulrunner-1.8.0.1 (02 Jun 2006)
+
+  02 Jun 2006; Jory A. Pratt <anarchy@gentoo.org> +metadata.xml,
+  +xulrunner-1.8.0.1.ebuild:
+  initial import to tree
+
