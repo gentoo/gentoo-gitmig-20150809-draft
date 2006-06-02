@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5453 2006/06/02 07:38:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5454 2006/06/02 07:40:37 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -42,6 +42,7 @@
 # masking because of security bug #127757
 dev-libs/libvc
 mail-client/mutt-vc-query
+app-misc/rolo
 
 # Alec Warner <antarus@gentoo.org> (01 Jun 2006)
 # masked pending removal
