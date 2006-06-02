@@ -23,8 +23,8 @@
      ;;
    lnx)
      SHLIB_LD=":"
-+    LD_FLAGS="-shared -Wl,-soname,libcfitsio.so.1"
-+    SHLIB_SUFFIX=".so.0"
++    LD_FLAGS="-shared -Wl,-soname,libcfitsio.so.0.0"
++    SHLIB_SUFFIX=".so.0.0"
      ;;
    osf)
      SHLIB_LD="ld -shared -expect_unresolved '*'"
@@ -33,7 +33,7 @@
  # if test "x$GCC" = xyes; then
  if test "x$GCC" = xyes && test "x$EXT" != xdarwin && test "x$EXT" != xcygwin; then
 -  SHLIB_LD="$CC -shared"
-+  SHLIB_LD="gcc -shared -Wl,-soname,libcfitsio.so.1"
++  SHLIB_LD="gcc -shared -Wl,-soname,libcfitsio.so.0.0"
    lhea_shlib_cflags='-fPIC'
  fi
  if test "x$lhea_shlib_cflags" != x; then
