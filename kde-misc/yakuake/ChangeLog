@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/yakuake
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.5 2006/04/05 19:30:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.6 2006/06/02 09:37:58 cryos Exp $
+
+  02 Jun 2006; Marcus D. Hanwell <cryos@gentoo.org> -yakuake-2.7.3.ebuild,
+  yakuake-2.7.5.ebuild:
+  Stable on amd64, prune old version from the tree.
 
   05 Apr 2006; Markus Rothe <corsair@gentoo.org> yakuake-2.7.5.ebuild:
   Added ~ppc64
