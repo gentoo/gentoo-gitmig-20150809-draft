@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.9.0-r1.ebuild,v 1.1 2006/03/25 18:45:04 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.9.0-r1.ebuild,v 1.2 2006/06/02 15:14:24 sbriesen Exp $
 
 inherit autotools eutils gnome2
 
@@ -55,5 +55,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-lang.patch
 	epatch ${FILESDIR}/${P}-gcc4.patch
 	epatch ${FILESDIR}/${P}-mplayercvs.patch
+	epatch ${FILESDIR}/${P}-types.patch
 	eautoreconf
 }

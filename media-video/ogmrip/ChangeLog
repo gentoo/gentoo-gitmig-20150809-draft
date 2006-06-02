@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ogmrip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.3 2006/03/25 18:45:02 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.4 2006/06/02 15:14:23 sbriesen Exp $
+
+  02 Jun 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/ogmrip-0.9.0-types.patch, ogmrip-0.9.0-r1.ebuild:
+  Add patch to allow building against latest libdvdread. Bug #135036.
 
 *ogmrip-0.9.0-r1 (25 Mar 2006)
 
