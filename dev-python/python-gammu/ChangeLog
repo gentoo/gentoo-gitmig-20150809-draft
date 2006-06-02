@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-gammu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.13 2006/04/06 12:15:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.14 2006/06/02 18:10:53 mrness Exp $
+
+*python-gammu-0.13 (02 Jun 2006)
+
+  02 Jun 2006; Alin Nastac <mrness@gentoo.org> python-gammu-0.10.ebuild,
+  python-gammu-0.12.ebuild, +python-gammu-0.13.ebuild:
+  Update SRC_URI. Mark 0.12 stable on x86. Version bump.
 
 *python-gammu-0.12 (06 Apr 2006)
 

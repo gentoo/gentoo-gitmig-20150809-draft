@@ -1,16 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/python-gammu-0.12.ebuild,v 1.1 2006/04/06 12:15:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/python-gammu-0.12.ebuild,v 1.2 2006/06/02 18:10:53 mrness Exp $
 
 inherit distutils
 
 DESCRIPTION="Python bindings for Gammu"
 HOMEPAGE="http://www.cihar.com/gammu/python/"
-SRC_URI="http://www.cihar.com/gammu/python/${P}.tar.bz2"
+SRC_URI="ftp://dl.cihar.com/python-gammu/v0/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc x86"
 IUSE=""
 
 RDEPEND=">=app-mobilephone/gammu-1.05"

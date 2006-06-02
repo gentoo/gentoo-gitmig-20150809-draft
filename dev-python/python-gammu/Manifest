@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ef05fe3ef97aa7fe97394975f8ae01cc ChangeLog 2070
+MD5 8af1038a062802773c753c98a0e18799 ChangeLog 2290
 MD5 418694e98b566c37f4896f9831abd683 files/digest-python-gammu-0.10 253
 MD5 2cf6c26ae1b0fcc5b4d03fe5be99086f files/digest-python-gammu-0.12 69
+MD5 48d865344322a9997026d3911f5a3ffe files/digest-python-gammu-0.13 69
 MD5 75f04bb37618ce7e210781d51af9b582 metadata.xml 428
-MD5 5ee8642db938c03a3a53eaa6aebd1311 python-gammu-0.10.ebuild 690
-MD5 c9f8b13371fa2ec5a3e667e780930646 python-gammu-0.12.ebuild 733
+MD5 a6f9779be84f4cfd68a643685f84e974 python-gammu-0.10.ebuild 691
+MD5 fb6e5ebda18bfb577d44c649444ab2d3 python-gammu-0.12.ebuild 733
+MD5 a2d623e7823a072ad1f9ec0b0ae49ff9 python-gammu-0.13.ebuild 734
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFENQZ7jG8pv1lIUX4RAk4OAJ419Cyv6RKMVqN1dSqO3WeMTH6fhQCfWhmt
-VFm1zWzJxjzY24/nSW3H5mg=
-=xvZg
+iD8DBQFEgH85jG8pv1lIUX4RAqz9AKCdssKNkDJtgLnrjL+mAL4ytAsbKgCfSucr
+vem0LUZAbqh0SomrpOn2ihY=
+=eUD+
 -----END PGP SIGNATURE-----
