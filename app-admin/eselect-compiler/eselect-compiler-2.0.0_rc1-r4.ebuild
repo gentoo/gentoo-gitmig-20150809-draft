@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1-r4.ebuild,v 1.2 2006/06/02 18:08:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1-r4.ebuild,v 1.3 2006/06/02 22:01:10 eradicator Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -22,6 +22,18 @@ RDEPEND=">=app-admin/eselect-1.0_rc1"
 
 # We want to verify that compiler profiles exist for our toolchain
 pkg_setup() {
+	# Some toolchain.eclass installed confs had some bugs in them. We
+	# could just use sed to update them, but then portage won't remove
+	# them automatically on unmerge. 
+
+	local file
+	for file in $(grep "^[[:space:]]*chost=" ${ROOT}/etc/eselect/compiler/*.conf | cut -f1 -d:)  ; do
+		rm ${file}
+	done
+	for file in $(grep "^[[:space:]]*spec=" ${ROOT}/etc/eselect/compiler/*.conf | cut -f1 -d:)  ; do
+		rm ${file}
+	done
+
 	local abi
 	for abi in $(get_all_abis) ; do
 		local ctarget=$(get_abi_CHOST ${abi})
@@ -37,10 +49,6 @@ pkg_setup() {
 }
 
 pkg_postinst() {
-	# Some toolchain.eclass installed confs had some bugs that need fixing
-	sed -i 's:chost:ctarget:g' ${ROOT}/etc/eselect/compiler/*
-	sed -i 's:spec=:specs=:g' ${ROOT}/etc/eselect/compiler/*
-
 	# Activate the profiles
 	if [[ ! -f "${ROOT}/etc/eselect/compiler/selection.conf" ]] ; then
 		ewarn "This looks like the first time you are installing eselect-compiler.  We are"
