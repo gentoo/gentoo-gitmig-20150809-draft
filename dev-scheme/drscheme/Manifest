@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX drscheme-301-fPIC.patch 2802 RMD160 51d04864d5b1127f50ece3a1bb87f14adb1a8fb9 SHA1 48d906483efa841dd2b402ebf7a51098fd51c75d SHA256 e9ddebf2fcd4b1b37209a04d9b4e29799bf70c8cc6732c916be8e323840e9e7a size 2802
 MD5 4ada17dfe65cb9defc23a29d23eb3c2d files/drscheme-301-fPIC.patch 2802
 RMD160 51d04864d5b1127f50ece3a1bb87f14adb1a8fb9 files/drscheme-301-fPIC.patch 2802
@@ -22,3 +25,10 @@ SHA256 b63c1d1ae1adc89c062f612f797abf9e0933fc67725d301558f27832bd8c875d metadata
 MD5 b00dc440a5ec2cd08f98f34f827a25b7 files/digest-drscheme-301-r2 247
 RMD160 d308beb49ef1f2b187f28a033f86ed182934d152 files/digest-drscheme-301-r2 247
 SHA256 751aa53e4159ea7d464ed7c599b8468066b2ea79d23dba37c5e8da3a1fcde30e files/digest-drscheme-301-r2 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEgIaPWt/XSf2CZdkRAmRgAJ4oJfAYGEr4XQ1zTkpkgAidVa7wZgCfQjzb
+MYF9kCMAdt4akJ7mYsEyg2Q=
+=QYwQ
+-----END PGP SIGNATURE-----
