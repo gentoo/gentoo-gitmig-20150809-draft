@@ -1,4 +1,4 @@
-MD5 e4f7f46c3f54232224df5d8f77b42d0a ChangeLog 2927
+MD5 cf8cc9a391f99c03e643d3e6e2a52a0e ChangeLog 3044
 MD5 9189e450f113f622c8253fedce7730f3 files/digest-icon-naming-utils-0.6.8 268
 MD5 c4d189f845d2510d659dbb24a09b4772 files/digest-icon-naming-utils-0.7.0 268
 MD5 e3cd7e1601998f273aa719e24822113f files/digest-icon-naming-utils-0.7.1 268
@@ -6,5 +6,5 @@ MD5 be5237c635fb2b95b4520d68367c0958 files/digest-icon-naming-utils-0.7.2 268
 MD5 eb25638e253b38a999c1d555fef7530e icon-naming-utils-0.6.8.ebuild 739
 MD5 9fe0878ca8486f5e67a7fa9231d1f95f icon-naming-utils-0.7.0.ebuild 734
 MD5 ec6735bca3515c42bc3cddec58b522c0 icon-naming-utils-0.7.1.ebuild 747
-MD5 4288ad250b65ef169e5909124937ca9e icon-naming-utils-0.7.2.ebuild 761
+MD5 9973b24abe33b4154c931cdfcff55c74 icon-naming-utils-0.7.2.ebuild 762
 MD5 870a91577a60ccb6ea581e99f879e9b8 metadata.xml 248
