@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.12.ebuild,v 1.2 2006/04/06 12:32:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.12.ebuild,v 1.3 2006/06/02 18:17:22 mrness Exp $
 
 inherit distutils
 
@@ -8,7 +8,7 @@ IUSE=""
 
 DESCRIPTION="front-end for gammu (Nokia and others mobiles)"
 HOMEPAGE="http://www.cihar.com/gammu/wammu/"
-SRC_URI="http://www.cihar.com/gammu/wammu/${P}.tar.bz2"
+SRC_URI="http://dl.cihar.com/wammu/v0/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 IUSE="bluetooth"

@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/wammu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.9 2006/05/11 21:14:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.10 2006/06/02 18:17:22 mrness Exp $
+
+  02 Jun 2006; Alin Nastac <mrness@gentoo.org> -wammu-0.11.ebuild,
+  wammu-0.12.ebuild, wammu-0.13.ebuild:
+  Update SRC_URI. Mark 0.13 stable on x86.
 
   11 May 2006; Alin Nastac <mrness@gentoo.org> wammu-0.13.ebuild:
   Fix bluetooth dependencies (#133014).
