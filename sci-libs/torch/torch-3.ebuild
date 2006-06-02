@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/torch-3.ebuild,v 1.3 2005/08/24 16:28:34 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/torch-3.ebuild,v 1.4 2006/06/02 04:40:06 markusle Exp $
 
 inherit toolchain-funcs multilib
 
@@ -47,7 +47,7 @@ src_install() {
 	sed -i \
 		-e "s:^LIBS_DIR.*:LIBS_DIR=/usr/$(get_libdir):" \
 		-e 's|^INCS := .*|INCS := -I /usr/include/torch $(MYINCS)|' \
-		-e '/^INCS +=/c\' \
+		-e '/^INCS +=/c\\' \
 		Makefile_options_Linux
 	dodir /usr/share/${PN}
 	insinto /usr/share/${PN}
@@ -59,7 +59,7 @@ src_install() {
 	cd ${D}/usr/share/doc/${PF}
 	sed -i \
 		-e 's|^TORCHDIR.*|TORCHDIR := /usr/share/torch|' \
-		-e '/MAKE/c\' -e '/VERSION_KEY/c\' \
+		-e '/MAKE/c\\' -e '/VERSION_KEY/c\\' \
 		examples/*/Makefile
 	for ex in examples/*/Makefile; do
 		echo -e '\t$(CC) $(CFLAGS_$(MODE)) $(INCS) -o $@ $< $(LIBS)' >> ${ex}
