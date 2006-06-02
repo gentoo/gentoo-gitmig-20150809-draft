@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/axel
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.21 2005/07/10 17:07:18 j4rg0n Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.22 2006/06/02 07:33:30 dragonheart Exp $
+
+  02 Jun 2006; Daniel Black <dragonheart@gentoo.org> -axel-1.0a.ebuild:
+  purge security vulnerable versions
 
   10 Jul 2005; Lina Pezzella <j4rg0n@gentoo.org> axel-1.0b.ebuild:
   Stable ppc-macos. Bug #88264. Submitted on behalf of Fabian Groffen.
