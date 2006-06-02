@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libvformat
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvformat/ChangeLog,v 1.1 2006/04/22 08:29:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvformat/ChangeLog,v 1.2 2006/06/02 17:34:54 mrness Exp $
+
+  02 Jun 2006; Alin Nastac <mrness@gentoo.org> libvformat-1.13.ebuild:
+  Stable on x86.
 
 *libvformat-1.13 (22 Apr 2006)
 

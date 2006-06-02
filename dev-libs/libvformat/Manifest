@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 215c1e3e8808f31349ea5d2cee5a144e ChangeLog 399
+MD5 816c98d1e379d38ec32e9fe2fd9226d3 ChangeLog 488
 MD5 d63d3979614d4353aa9c3597ee804a50 files/digest-libvformat-1.13 141
 MD5 2a17758141b45012683181757bdf8da0 files/libvformat-nodoc.patch 531
-MD5 19ca14ce02d3ee5bd57d5faf1e9b94d3 libvformat-1.13.ebuild 880
+MD5 874c759eddc0a37edee6aa9357f81ae2 libvformat-1.13.ebuild 879
 MD5 818041c85cd218cf09522459f2570994 metadata.xml 342
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFESelpjG8pv1lIUX4RAvx8AKCHWBDWZOPKWz1LTwJN0FNFROmYwwCgqZH6
-PETPPnW28ClTghs0M4WuWkI=
-=Va7y
+iD8DBQFEgHbOjG8pv1lIUX4RApNnAJ4ivynEvjtNwknZZXWoHjldl2jYmACg5ynT
+Uu9ySVddDJdZ6f2KEilpZLM=
+=d3Bd
 -----END PGP SIGNATURE-----
