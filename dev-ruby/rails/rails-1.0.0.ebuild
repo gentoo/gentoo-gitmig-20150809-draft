@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-1.0.0.ebuild,v 1.6 2006/03/31 12:04:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-1.0.0.ebuild,v 1.7 2006/06/02 13:28:16 flameeyes Exp $
 
 inherit ruby gems
 
@@ -25,3 +25,13 @@ DEPEND=">=dev-lang/ruby-1.8.2
 	sqlite? ( >=dev-ruby/sqlite-ruby-2.2.2 )
 	mysql? ( >=dev-ruby/mysql-ruby-2.7 )
 	postgres? ( >=dev-ruby/ruby-postgres-0.7.1 )"
+
+src_install() {
+	gems_src_install
+
+	# gems extract and install the data all in one step, so we have to patch it
+	# here, it's not compiled anyway
+	cd "${D}/${GEMSDIR}/gems/"
+	epatch "${FILESDIR}/${P}-rdoc-rake-0.7.patch"
+}
+

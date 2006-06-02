@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.47 2006/05/16 05:11:32 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.48 2006/06/02 13:28:16 flameeyes Exp $
+
+  02 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/rails-1.0.0-rdoc-rake-0.7.patch, rails-1.0.0.ebuild:
+  Add patch to fix rdoc call with rake 0.7. Thanks to Stephen Tallowitz in bug
+  #132692.
 
   16 May 2006; Joshua Jackson <tsunam@gentoo.org> rails-1.1.2.ebuild:
   x86 stable; bug #133003
