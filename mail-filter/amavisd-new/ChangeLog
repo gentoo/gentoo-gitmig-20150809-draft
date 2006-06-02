@@ -1,6 +1,6 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.83 2006/06/02 20:58:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.84 2006/06/02 21:00:32 ticho Exp $
 
 *amavisd-new-2.4.1 (02 Jun 2006)
 
@@ -11,7 +11,7 @@
   amavisd-new-2.4.0.ebuild, +amavisd-new-2.4.1.ebuild:
   Version bump. Provide sane final destiny for major content categories in
   default config. Closes bugs #133346 by Janne Pikkarainen
-  <jaba@mikrobitti.fi> and #130492 by Fred Krogh <fkrogh@mathalacarte.com>.
+  <jaba at mikrobitti.fi> and #130492 by Fred Krogh <fkrogh at mathalacarte.com>.
 
   12 Apr 2006; Andrej Kacian <ticho@gentoo.org>
   files/amavisd-new-2.4-amavisd.conf-gentoo.patch:
