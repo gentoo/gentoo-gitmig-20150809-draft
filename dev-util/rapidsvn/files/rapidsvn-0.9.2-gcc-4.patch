@@ -1,0 +1,22 @@
+--- src/action.hpp.orig	2006-04-04 11:53:17.000000000 +0200
++++ src/action.hpp	2006-05-31 02:01:19.000000000 +0200
+@@ -299,7 +299,7 @@
+     * @return temporary filename
+     */
+   svn::Path
+-  Action::GetPathAsTempFile (
++  GetPathAsTempFile (
+     const svn::Path & path,
+     const svn::Revision & revision = svn::Revision::HEAD);
+ 
+--- src/preferences_dlg.cpp.orig	2006-05-10 15:52:36.000000000 +0200
++++ src/preferences_dlg.cpp	2006-05-31 02:11:31.000000000 +0200
+@@ -94,7 +94,7 @@
+ class ProgramsPanel : public wxPanel
+ {
+ public:
+-  ProgramsPanel::ProgramsPanel (wxWindow* parent, Preferences * prefs)
++  ProgramsPanel (wxWindow* parent, Preferences * prefs)
+     : wxPanel (parent), m_prefs (prefs)
+   {
+     InitializeData ();

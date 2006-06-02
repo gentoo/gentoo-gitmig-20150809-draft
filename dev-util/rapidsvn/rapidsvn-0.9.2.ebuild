@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.2.ebuild,v 1.1 2006/05/28 19:52:26 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.2.ebuild,v 1.2 2006/06/02 06:06:52 nerdboy Exp $
 
-inherit eutils libtool
+inherit eutils libtool autotools
 
 DESCRIPTION="Cross-platform GUI front-end for the Subversion revision system."
 HOMEPAGE="http://rapidsvn.tigris.org/"
@@ -23,7 +23,8 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/svncpp_0.6.1_link.patch
+	epatch ${FILESDIR}/${P}-gcc-4.patch
+	eautoreconf
 }
 
 src_compile() {
