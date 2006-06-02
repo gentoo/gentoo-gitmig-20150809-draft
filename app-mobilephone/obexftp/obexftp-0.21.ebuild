@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.19.ebuild,v 1.2 2006/03/06 20:36:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.21.ebuild,v 1.1 2006/06/02 18:57:18 mrness Exp $
 
-inherit perl-module flag-o-matic
+inherit perl-module flag-o-matic eutils
 
 DESCRIPTION="File transfer over OBEX for mobile phones"
-SRC_URI="http://triq.net/obexftp/${P}.tar.gz"
+SRC_URI="http://triq.net/obexftp/${P}.tar.bz2"
 HOMEPAGE="http://triq.net/obex"
 
 SLOT="0"
@@ -19,6 +19,12 @@ DEPEND=">=dev-libs/openobex-1.1
 	python? ( >=dev-lang/python-2.4.2 )
 	tcltk? ( >=dev-lang/tcl-8.4.9 )
 	swig? ( >=dev-lang/swig-1.3.7 )"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch "${FILESDIR}/${P}-cobex_write.patch"
+}
 
 src_compile() {
 	if use debug ; then
@@ -35,7 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS ChangeLog NEWS README* THANKS TODO
 	dohtml doc/*.html
