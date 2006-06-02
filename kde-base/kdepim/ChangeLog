@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.211 2006/06/01 13:12:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.212 2006/06/02 20:14:34 genstef Exp $
+
+*kdepim-3.5.3 (02 Jun 2006)
+
+  02 Jun 2006; Stefan Schweizer <genstef@gentoo.org> +kdepim-3.5.3.ebuild:
+  version bump
 
   01 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/akregator-3.5-hppa.patch, kdepim-3.5.2-r2.ebuild,
