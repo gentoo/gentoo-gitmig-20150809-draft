@@ -1,0 +1,9 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/kernel.desc,v 1.1 2006/06/02 04:38:43 halcy0n Exp $
+
+# This file contains descriptions of KERNEL USE_EXPAND flags.
+
+# Keep it sorted.
+
+linux - KERNEL setting for systems using the Linux kernel
