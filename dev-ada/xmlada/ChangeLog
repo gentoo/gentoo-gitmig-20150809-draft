@@ -1,6 +1,11 @@
 # ChangeLog for dev-ada/xmlada
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/ChangeLog,v 1.17 2006/05/25 17:45:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/ChangeLog,v 1.18 2006/06/02 14:25:47 george Exp $
+
+*xmlada-1.0-r4 (02 Jun 2006)
+
+  02 Jun 2006; George Shapovalov <george@gentoo.org> +xmlada-1.0-r4.ebuild:
+  added LD_RUN_PATH to generated config
 
 *xmlada-1.0-r3 (25 May 2006)
 
