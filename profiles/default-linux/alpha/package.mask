@@ -1,2 +1,6 @@
+# Thomas Cort <tcort@gentoo.org> (02 Jun 2006)
+# Masked for security Bug #130888
+<=mail-client/mozilla-thunderbird-1.0.7
+
 # Completely broken on alpha. See bug #116610
 dev-libs/aterm
