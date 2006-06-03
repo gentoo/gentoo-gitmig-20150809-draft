@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/nss-mdns
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.5 2006/05/11 04:49:27 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.6 2006/06/03 19:05:24 nerdboy Exp $
+
+  03 Jun 2006; Steve Arnold <nerdboy@gentoo.org> nss-mdns-0.8.ebuild:
+  added ~amd64 to keywords (works fine here)
 
   11 May 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   Japanese metadata.xml for bug #132585. Thanks to Yoshino-san for the
