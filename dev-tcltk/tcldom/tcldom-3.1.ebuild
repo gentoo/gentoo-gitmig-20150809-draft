@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/tcldom-3.1.ebuild,v 1.1 2006/06/03 19:33:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/tcldom-3.1.ebuild,v 1.2 2006/06/03 19:56:32 matsuu Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Document Object Model For Tcl"
 HOMEPAGE="http://tclxml.sourceforge.net/tcldom.html"
 SRC_URI="mirror://sourceforge/tclxml/${P}.tar.gz"
 
-IUSE="expat xml2 threads"
+IUSE="expat xml threads"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -35,7 +35,7 @@ src_compile() {
 
 	use threads && myconf="${myconf} --enable-threads"
 
-	if use xml2 ; then
+	if use xml ; then
 		cd "${S}/src-libxml2"
 		econf ${myconf} || die
 		emake || die
@@ -51,7 +51,7 @@ src_install() {
 	insinto /usr/$(get_libdir)/${PN}${PV}
 	doins library/*.tcl || die
 
-	if use xml2 ; then
+	if use xml ; then
 		cd "${S}/src-libxml2"
 		make DESTDIR="${D}" install || die
 	fi

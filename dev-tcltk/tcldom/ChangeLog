@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tcldom
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/ChangeLog,v 1.7 2006/06/03 19:33:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/ChangeLog,v 1.8 2006/06/03 19:56:32 matsuu Exp $
+
+  03 Jun 2006; MATSUU Takuto <matsuu@gentoo.org> tcldom-3.0.ebuild,
+  tcldom-3.1.ebuild:
+  Changed xml2 USE flag for xml, bug 116346.
 
 *tcldom-3.1 (03 Jun 2006)
 
