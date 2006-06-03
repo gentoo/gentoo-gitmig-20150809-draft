@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.2.4-r1.ebuild,v 1.1 2006/06/03 04:50:30 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.2.4-r1.ebuild,v 1.2 2006/06/03 17:08:19 kaiowas Exp $
 
 inherit autotools eutils
 
@@ -14,8 +14,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND=""
-DEPEND="${RDEPEND}
-	sys-devel/autoconf"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -25,7 +24,7 @@ src_unpack() {
 
 	# enable fallback operation mode for imported keys
 	# patch written by Kent Yoder
-	epatch "${DISTDIR}/opencryptoki-tpm_stdll-sw_fallback-June012006.patch.bz2" || die
+	epatch "${WORKDIR}/opencryptoki-tpm_stdll-sw_fallback-June012006.patch" || die
 
 	eautoreconf
 }
@@ -43,12 +42,12 @@ src_install() {
 	ln -s pkcs11/stdll/libpkcs11_tpm.so.0.0.0 "${D}/usr/lib/libpkcs11_tpm.so"
 
 	# we have no man pages so at least these should be installed
-	dodoc ${S}/doc/openCryptoki-HOWTO.pdf
-	dodoc ${S}/doc/opencryptoki_man.txt
-	dodoc ${S}/doc/pk_config_data_man.txt
-	dodoc ${S}/doc/pkcs11_startup_man.txt
-	dodoc ${S}/doc/pkcsconf_man.txt
-	dodoc ${S}/doc/pkcsslotd_man.txt
+	dodoc doc/openCryptoki-HOWTO.pdf
+	dodoc doc/opencryptoki_man.txt
+	dodoc doc/pk_config_data_man.txt
+	dodoc doc/pkcs11_startup_man.txt
+	dodoc doc/pkcsconf_man.txt
+	dodoc doc/pkcsslotd_man.txt
 }
 
 pkg_setup() {
