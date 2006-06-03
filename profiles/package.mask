@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5459 2006/06/02 22:55:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5460 2006/06/03 06:22:11 joshuabaergen Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -425,83 +425,6 @@ net-misc/asterisk-app_authenticate_ldap
 =www-apache/mod_fcgid-1.06-r1
 =www-apache/mod_fcgid-1.07
 =www-apache/mod_tcl-1.0
-
-# Joshua Baergen <joshuabaergen@gentoo.org> (14 Apr 2006)
-# Mask for X7.1 RC
->=app-doc/xorg-sgml-doctools-1.1
->=app-doc/xorg-docs-1.2
->=x11-base/xorg-server-1.0.99
->=x11-base/xorg-x11-7.1_rc0
->=x11-drivers/xf86-input-acecad-1.1.0
->=x11-drivers/xf86-input-aiptek-1.0.1
->=x11-drivers/xf86-input-calcomp-1.1.0
->=x11-drivers/xf86-input-citron-2.2.0
->=x11-drivers/xf86-input-digitaledge-1.1.0
->=x11-drivers/xf86-input-dmc-1.1.0
->=x11-drivers/xf86-input-dynapro-1.1.0
->=x11-drivers/xf86-input-elo2300-1.1.0
->=x11-drivers/xf86-input-elographics-1.1.0
->=x11-drivers/xf86-input-evdev-1.1.0
->=x11-drivers/xf86-input-fpit-1.1.0
->=x11-drivers/xf86-input-hyperpen-1.1.0
->=x11-drivers/xf86-input-jamstudio-1.1.0
->=x11-drivers/xf86-input-joystick-1.1.0
->=x11-drivers/xf86-input-keyboard-1.1.0
->=x11-drivers/xf86-input-magellan-1.1.0
->=x11-drivers/xf86-input-microtouch-1.1.0
->=x11-drivers/xf86-input-mouse-1.1.0
->=x11-drivers/xf86-input-mutouch-1.1.0
->=x11-drivers/xf86-input-palmax-1.1.0
->=x11-drivers/xf86-input-penmount-1.1.0
->=x11-drivers/xf86-input-spaceorb-1.1.0
->=x11-drivers/xf86-input-summa-1.1.0
->=x11-drivers/xf86-input-tek4957-1.1.0
->=x11-drivers/xf86-input-ur98-1.1.0
->=x11-drivers/xf86-input-vmmouse-12.4.0
->=x11-drivers/xf86-input-void-1.1.0
->=x11-drivers/xf86-video-apm-1.1.1
->=x11-drivers/xf86-video-ark-0.6.0
->=x11-drivers/xf86-video-ast-0.81.0
->=x11-drivers/xf86-video-ati-6.6.0
->=x11-drivers/xf86-video-chips-1.1.1
->=x11-drivers/xf86-video-cirrus-1.1.0
->=x11-drivers/xf86-video-cyrix-1.1.0
->=x11-drivers/xf86-video-dummy-0.2.0
->=x11-drivers/xf86-video-fbdev-0.2.0
->=x11-drivers/xf86-video-glint-1.1.1
->=x11-drivers/xf86-video-i128-1.2.0
->=x11-drivers/xf86-video-i740-1.1.0
->=x11-drivers/xf86-video-i810-1.5.0
->=x11-drivers/xf86-video-imstt-1.1.0
->=x11-drivers/xf86-video-mga-1.4.1
->=x11-drivers/xf86-video-neomagic-1.1.1
->=x11-drivers/xf86-video-newport-0.2.0
->=x11-drivers/xf86-video-nsc-2.8.1
->=x11-drivers/xf86-video-nv-1.1.1
->=x11-drivers/xf86-video-rendition-4.1.0
->=x11-drivers/xf86-video-s3-0.4.1
->=x11-drivers/xf86-video-s3virge-1.9.1
->=x11-drivers/xf86-video-savage-2.1.1
->=x11-drivers/xf86-video-siliconmotion-1.4.1
->=x11-drivers/xf86-video-sis-0.9.1
->=x11-drivers/xf86-video-sisusb-0.8.1
->=x11-drivers/xf86-video-sunbw2-1.1.0
->=x11-drivers/xf86-video-suncg14-1.1.0
->=x11-drivers/xf86-video-suncg3-1.1.0
->=x11-drivers/xf86-video-suncg6-1.1.0
->=x11-drivers/xf86-video-sunffb-1.1.0
->=x11-drivers/xf86-video-sunleo-1.1.0
->=x11-drivers/xf86-video-suntcx-1.1.0
->=x11-drivers/xf86-video-tdfx-1.2.1
->=x11-drivers/xf86-video-tga-1.1.0
->=x11-drivers/xf86-video-trident-1.2.1
->=x11-drivers/xf86-video-tseng-1.1.0
->=x11-drivers/xf86-video-v4l-0.1.1
->=x11-drivers/xf86-video-vesa-1.1.0
->=x11-drivers/xf86-video-vga-4.1.0
->=x11-drivers/xf86-video-via-0.2.1
->=x11-drivers/xf86-video-vmware-10.13.0
->=x11-drivers/xf86-video-voodoo-1.1.0
 
 # Mark Loeser <halcy0n@gentoo.org> (11 Apr 2006)
 # GCC 4.2 snapshots; use with extreme care and only report bugs if you have
