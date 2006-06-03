@@ -1,6 +1,14 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.123 2006/06/03 05:51:24 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.124 2006/06/03 06:13:03 joshuabaergen Exp $
+
+  03 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  nvidia-glx-1.0.6111-r3.ebuild, nvidia-glx-1.0.6629-r7.ebuild,
+  nvidia-glx-1.0.7167-r3.ebuild, nvidia-glx-1.0.7174-r5.ebuild,
+  nvidia-glx-1.0.7667-r1.ebuild, nvidia-glx-1.0.7676-r3.ebuild,
+  nvidia-glx-1.0.8174-r2.ebuild, nvidia-glx-1.0.8178-r1.ebuild,
+  nvidia-glx-1.0.8756.ebuild, nvidia-glx-1.0.8762.ebuild:
+  Actually block xorg-server, rather than depending on an older version.
 
   03 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   nvidia-glx-1.0.6111-r3.ebuild, nvidia-glx-1.0.6629-r7.ebuild,
