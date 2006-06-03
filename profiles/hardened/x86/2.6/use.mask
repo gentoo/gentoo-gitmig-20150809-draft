@@ -1,5 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.1 2006/06/03 10:04:53 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.2 2006/06/03 10:06:34 solar Exp $
 
 -nptl
+-nptlonly
