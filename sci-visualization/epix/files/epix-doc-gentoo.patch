@@ -1,0 +1,36 @@
+diff -Naur epix-1.0.7-old/Makefile.in epix-1.0.7/Makefile.in
+--- epix-1.0.7-old/Makefile.in	2006-05-19 17:33:19.000000000 -0400
++++ epix-1.0.7/Makefile.in	2006-06-03 10:05:47.000000000 -0400
+@@ -242,7 +242,7 @@
+ #
+ man_MANS = epix.1 elaps.1 flix.1 laps.1
+ EPIX_CONFFILES = bash_completions epix.ebuild epix.el epix.spec
+-EPIX_NOTEFILES = AUTHORS BUGS ChangeLog COPYING INSTALL NEWS POST-INSTALL \
++EPIX_NOTEFILES = AUTHORS BUGS ChangeLog NEWS POST-INSTALL \
+ 	README README-changes README-porting THANKS VERSION
+ 
+ EXTRA_DIST = $(bin_SCRIPTS) $(man_MANS) $(EPIX_CONFFILES) $(EPIX_NOTEFILES)
+@@ -889,9 +889,8 @@
+ # Extra things to install
+ install-data-local:
+ 	@echo; echo "Installing notes and configuration files"
+-	./mkinstalldirs $(DESTDIR)$(docdir)/notes $(DESTDIR)$(docdir)/config
+-	$(INSTALL_DATA) $(EPIX_NOTEFILES) $(DESTDIR)$(docdir)/notes
+-	$(INSTALL_DATA) $(EPIX_CONFFILES) $(DESTDIR)$(docdir)/config
++	./mkinstalldirs $(DESTDIR)$(docdir) 
++	$(INSTALL_DATA) $(EPIX_NOTEFILES) $(DESTDIR)$(docdir)
+ 
+ # This is being installed by install-exec, but should not be executable
+ install-exec-local: install-pkglibDATA
+diff -Naur epix-1.0.7-old/samples/Makefile.in epix-1.0.7/samples/Makefile.in
+--- epix-1.0.7-old/samples/Makefile.in	2006-05-19 17:33:19.000000000 -0400
++++ epix-1.0.7/samples/Makefile.in	2006-06-03 10:04:16.000000000 -0400
+@@ -145,7 +145,7 @@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ docdir = $(datadir)/doc/epix
+-EPIXFLAGS = --no-defaults -I.. -L.. -lepix -v
++EPIXFLAGS = --no-defaults -I.. -L.. -lepix
+ XPS := $(wildcard *.xp)
+ EEPICS = $(XPS:.xp=.eepic)
+ CLEANFILES = *~ *.dvi *.log *.out *.ilg sample_src.tar sample.pdf sample.ps \
