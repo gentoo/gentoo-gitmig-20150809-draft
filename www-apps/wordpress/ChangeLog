@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.51 2006/06/02 13:44:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.52 2006/06/03 09:31:23 killerfox Exp $
+
+  03 Jun 2006; Rene Nussbaumer <killerfox@gentoo.org>
+  wordpress-2.0.3.ebuild:
+  Stable on hppa. See bug #134397.
 
   02 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   wordpress-2.0.3.ebuild:
