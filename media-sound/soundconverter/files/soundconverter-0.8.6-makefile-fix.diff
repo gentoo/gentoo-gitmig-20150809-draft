@@ -1,0 +1,13 @@
+--- soundconverter-0.8.6/Makefile	2006-05-25 14:17:21.000000000 +0200
++++ soundconverter-0.8.6-fix/Makefile	2006-05-28 19:41:58.000000000 +0200
+@@ -49,8 +49,8 @@ install:
+ 	for x in $$(cd po; ls *.mo); do \
+ 	    lang=$$(basename $$x .mo); \
+ 	    dir=$(localedir)/$$lang/LC_MESSAGES; \
+-	    install -d $$dir; \
+-	    install -m 0644 po/$$x $$dir/soundconverter.mo; \
++	    install -d $(DESTDIR)$$dir; \
++	    install -D -m 0644 po/$$x $(DESTDIR)$$dir/soundconverter.mo; \
+ 	    done
+ 	sed 's,^GLADE *=.*,GLADE = "$(sharedir)/soundconverter.glade",' \
+ 	soundconverter.py > make-install-temp

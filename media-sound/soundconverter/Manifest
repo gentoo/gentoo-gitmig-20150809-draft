@@ -1,15 +1,42 @@
-MD5 dd1b6b8ea8d4918ae1fe211996a86c23 ChangeLog 525
-RMD160 527e9e9650dd898c32d995098d5f43c0e6b34349 ChangeLog 525
-SHA256 66f9dee4b1331252e8526d0a0958845570ca08cfefc0b4f73731740f1064076e ChangeLog 525
-MD5 ea85cfc6bf5694d715ec61f3eb7ee56a files/digest-soundconverter-0.8.3 71
-RMD160 b7efe5787d7d18e5743c087b02ae08aee20b3b66 files/digest-soundconverter-0.8.3 71
-SHA256 0522cd6719c8659da99bc201970d37f48dbbc1dc4207d8a951e32f6a402607eb files/digest-soundconverter-0.8.3 71
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX soundconverter-0.8.3-makefile-fix.diff 1026 RMD160 17f9e7190c8197cc224fdba336bfe90be399ab8d SHA1 eab1e23a07193f0226fe56281a2863103634c2e1 SHA256 48ca63bde14bc07a8997fb4c6a4c2fe85a1948f80e58a93bd091c183a756d617
 MD5 55caebb0cf39466dbb5e4e322d8a1498 files/soundconverter-0.8.3-makefile-fix.diff 1026
 RMD160 17f9e7190c8197cc224fdba336bfe90be399ab8d files/soundconverter-0.8.3-makefile-fix.diff 1026
 SHA256 48ca63bde14bc07a8997fb4c6a4c2fe85a1948f80e58a93bd091c183a756d617 files/soundconverter-0.8.3-makefile-fix.diff 1026
-MD5 d9885b371cf444e9a26ef0f8a0418d9b metadata.xml 219
-RMD160 c3357aa8edfab7033261267720250a36fc96e7f8 metadata.xml 219
-SHA256 c76952c442b16a3d2efe40e95e84f1110ec9b13775882012b30a25ca3b063ada metadata.xml 219
+AUX soundconverter-0.8.6-makefile-fix.diff 593 RMD160 49a4a867f78d78cee81511f9572e1349c970019b SHA1 d4b48084879a069e88706625cf0c46640bd8027a SHA256 0fccb26a8c1ad927c99d86b7af75a74b662e0481449d8b1996813ec66a066013
+MD5 41e21bb3fd1b8a72311f11dd0818aa8a files/soundconverter-0.8.6-makefile-fix.diff 593
+RMD160 49a4a867f78d78cee81511f9572e1349c970019b files/soundconverter-0.8.6-makefile-fix.diff 593
+SHA256 0fccb26a8c1ad927c99d86b7af75a74b662e0481449d8b1996813ec66a066013 files/soundconverter-0.8.6-makefile-fix.diff 593
+DIST soundconverter-0.8.3.tar.gz 47008
+DIST soundconverter-0.8.6.tar.gz 50819 RMD160 f1abe47ff0d6e3add52af3b692ae3fe0c9ea7513 SHA1 402895ecabb7d7509dc2478a88c0f25b7a2063bb SHA256 365f266aedf9b55be70f89c16ff6f56296e21db290d6667ff3e3eddc87d174ba
+EBUILD soundconverter-0.8.3.ebuild 1074 RMD160 ea532ad5e8d516e26d78ea104c8fb425c847ab6d SHA1 017487b4a644485be34273325f5b2b08c102ef6a SHA256 2d45cb6a14b7387e96cc7fc5ad15396f89a1c89820afca5b10b200b75f1ab4cd
 MD5 5552890682b3195a7c9e09f82b889bb0 soundconverter-0.8.3.ebuild 1074
 RMD160 ea532ad5e8d516e26d78ea104c8fb425c847ab6d soundconverter-0.8.3.ebuild 1074
 SHA256 2d45cb6a14b7387e96cc7fc5ad15396f89a1c89820afca5b10b200b75f1ab4cd soundconverter-0.8.3.ebuild 1074
+EBUILD soundconverter-0.8.6.ebuild 1078 RMD160 b1a625044f0ca03a4f379bd7afa0b3f27825afe8 SHA1 f93fbc211a96bfee6345b5d7edfd7f1cf224738a SHA256 f53a15171a23755097355d4727d2abd44c79fdbe47a86730268970e5cc87c91f
+MD5 45d52ee7a585f1aba190a2c19718869e soundconverter-0.8.6.ebuild 1078
+RMD160 b1a625044f0ca03a4f379bd7afa0b3f27825afe8 soundconverter-0.8.6.ebuild 1078
+SHA256 f53a15171a23755097355d4727d2abd44c79fdbe47a86730268970e5cc87c91f soundconverter-0.8.6.ebuild 1078
+MISC ChangeLog 764 RMD160 d20160c0349c97e42495a8c8cc4a63ef6e6c6d39 SHA1 7ec22346185e0ca675a99923dbc73872e8dcddd3 SHA256 c98e7e0f6783a2a586cbbc378718eb83e93d09bd7dfb29a2f6db2f254c66f59b
+MD5 68bf0ae88a08cd83b08d72ea6eae030b ChangeLog 764
+RMD160 d20160c0349c97e42495a8c8cc4a63ef6e6c6d39 ChangeLog 764
+SHA256 c98e7e0f6783a2a586cbbc378718eb83e93d09bd7dfb29a2f6db2f254c66f59b ChangeLog 764
+MISC metadata.xml 219 RMD160 c3357aa8edfab7033261267720250a36fc96e7f8 SHA1 fef872e700565309235dbfe0f45d81a1692829c0 SHA256 c76952c442b16a3d2efe40e95e84f1110ec9b13775882012b30a25ca3b063ada
+MD5 d9885b371cf444e9a26ef0f8a0418d9b metadata.xml 219
+RMD160 c3357aa8edfab7033261267720250a36fc96e7f8 metadata.xml 219
+SHA256 c76952c442b16a3d2efe40e95e84f1110ec9b13775882012b30a25ca3b063ada metadata.xml 219
+MD5 ea85cfc6bf5694d715ec61f3eb7ee56a files/digest-soundconverter-0.8.3 71
+RMD160 b7efe5787d7d18e5743c087b02ae08aee20b3b66 files/digest-soundconverter-0.8.3 71
+SHA256 0522cd6719c8659da99bc201970d37f48dbbc1dc4207d8a951e32f6a402607eb files/digest-soundconverter-0.8.3 71
+MD5 489dd818b01b0ceb618171b1784eaca7 files/digest-soundconverter-0.8.6 259
+RMD160 d0611c42746902b7e084dd8048aa2bc0bf0dd5fe files/digest-soundconverter-0.8.6 259
+SHA256 e3fbde887990b1df5aeb8c5ca56b4d3921c77ffa73f057505685fdfd7ff1c8b2 files/digest-soundconverter-0.8.6 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEgQ+ar2QksT29OyARAksGAJ9TirgYgcPeJpaTiT/aESKkV8tOSQCfWCuY
+Tub09UIAzFSLtt4WDFCXNJE=
+=7BCv
+-----END PGP SIGNATURE-----
