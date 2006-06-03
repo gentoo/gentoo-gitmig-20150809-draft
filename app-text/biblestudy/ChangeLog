@@ -1,6 +1,10 @@
 # ChangeLog for app-text/biblestudy
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/biblestudy/ChangeLog,v 1.5 2005/04/30 16:40:42 pythonhead Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/biblestudy/ChangeLog,v 1.6 2006/06/03 05:15:44 antarus Exp $
+
+  03 Jun 2006; Alec Warner <antarus@gentoo.org> +metadata.xml,
+  biblestudy-1.0.ebuild:
+  Add metadata.xml, fix usage of newdepend()
 
   30 Apr 2005; Rob Cakebread <pythonhead@gentoo.org> biblestudy-1.0.ebuild:
   Fixed wxGTK dependency bug# 83973
