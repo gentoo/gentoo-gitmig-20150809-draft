@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.53 2006/04/27 09:25:15 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.54 2006/06/03 23:19:22 lu_zero Exp $
+
+*rpm-4.4.1 (03 Jun 2006)
+
+  03 Jun 2006; Luca Barbato <lu_zero@gentoo.org>
+  +files/rpm-4.4.1-ubuntu-fixup.patch, +rpm-4.4.1.ebuild:
+  New version, hopefully builds
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-rpm-4.0.4-r5,
   files/digest-rpm-4.2, files/digest-rpm-4.2.1, Manifest:

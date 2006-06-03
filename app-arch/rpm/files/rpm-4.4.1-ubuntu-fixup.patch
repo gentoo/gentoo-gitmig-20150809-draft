@@ -1,0 +1,215 @@
+--- rpm-4.4.1.orig/configure.ac
++++ rpm-4.4.1/configure.ac
+@@ -1180,9 +1180,9 @@
+ 
+ dnl XXX Choose /usr/lib or /usr/lib64 for library installs.
+ MARK64=
+-case "${target_cpu}" in
+-x86_64*|ppc64*|powerpc64*|sparc64*|s390x*)	MARK64=64 ;;
+-esac
++dnl case "${target_cpu}" in
++dnl x86_64*|ppc64*|powerpc64*|sparc64*|s390x*)	MARK64=64 ;;
++dnl esac
+ AC_SUBST(MARK64)
+ 
+ dnl Determine the canonical arch-vendor-os for the build machine
+--- rpm-4.4.1.orig/po/de.po
++++ rpm-4.4.1/po/de.po
+@@ -190,7 +190,7 @@
+ #: rpmqv.c:370
+ msgid "one type of query/verify may be performed at a time"
+ msgstr ""
+-"Nur nur eine Art der Anfrage/Überprüfung kann pro Programmlauf durchgeführt "
++"Nur eine Art der Anfrage/Überprüfung kann pro Programmlauf durchgeführt "
+ "werden"
+ 
+ #: rpmqv.c:374
+@@ -4612,7 +4612,7 @@
+ 
+ # oder besser: "... verletzen" ?
+ #~ msgid "removing these packages would break dependencies:\n"
+-#~ msgstr "Das Enfernen dieser Pakete würde Paket-Abhängigkeiten missachten:\n"
++#~ msgstr "Das Entfernen dieser Pakete würde Paket-Abhängigkeiten missachten:\n"
+ 
+ #, fuzzy
+ #~ msgid "package %s has unsatisfied Requires: %s\n"
+@@ -5520,7 +5520,7 @@
+ 
+ #, fuzzy
+ #~ msgid "rename of %s to %s failed: %s\n"
+-#~ msgstr "umbennen von %s nach %s fehlgeschlagen: %s"
++#~ msgstr "umbenennen von %s nach %s fehlgeschlagen: %s"
+ 
+ #, fuzzy
+ #~ msgid "removal of %s failed: %s\n"
+--- rpm-4.4.1.orig/lib/depends.c
++++ rpm-4.4.1/lib/depends.c
+@@ -1294,14 +1294,12 @@
+ 	    switch (rpmteType(p)) {
+ 	    case TR_REMOVED:
+ 		/* Skip if not %preun/%postun requires or legacy prereq. */
+-		if (isInstallPreReq(Flags)
+-		 || !( isErasePreReq(Flags) || isLegacyPreReq(Flags) ) )
++		if (!( isErasePreReq(Flags) || isLegacyPreReq(Flags) ) )
+ 		    /*@innercontinue@*/ continue;
+ 		/*@switchbreak@*/ break;
+ 	    case TR_ADDED:
+ 		/* Skip if not %pre/%post requires or legacy prereq. */
+-		if (isErasePreReq(Flags)
+-		 || !( isInstallPreReq(Flags) || isLegacyPreReq(Flags) ) )
++		if (!( isInstallPreReq(Flags) || isLegacyPreReq(Flags) ) )
+ 		    /*@innercontinue@*/ continue;
+ 		/*@switchbreak@*/ break;
+ 	    }
+--- rpm-4.4.1.orig/python/header-py.c
++++ rpm-4.4.1/python/header-py.c
+@@ -477,7 +477,7 @@
+ 	while (extensions->name) {
+ 	    if (extensions->type == HEADER_EXT_TAG
+ 		&& !xstrcasecmp(extensions->name + 7, str)) {
+-		(const struct headerSprintfExtension *) ext = extensions;
++		ext = extensions;
+ 	    }
+ 	    extensions++;
+ 	}
+--- rpm-4.4.1.orig/lsb-rpm.1
++++ rpm-4.4.1/lsb-rpm.1
+@@ -0,0 +1,16 @@
++.TH LSB-RPM 1
++.SH NAME
++lsb-rpm \- build a LSB package 
++.SH SYNOPSIS
++.B lsb-rpm -b package.spec
++.SH "DESCRIPTION"
++This is a special version of rpm that can only be used to build RPM v3
++format packages, for use as LSB packages. It cannot query or install
++packages, just build them. See the BUILD OPTIONS section of
++.BR rpm (8)
++for the details.
++.SH "SEE ALSO"
++.BR rpm (8)
++.SH AUTHOR
++This manual page was written by Joey Hess,
++for the Debian GNU/Linux system.
+--- rpm-4.4.1.orig/macros.in
++++ rpm-4.4.1/macros.in
+@@ -218,7 +218,7 @@
+ %_tmppath		%{_var}/tmp
+ 
+ #	Path to top of build area.
+-%_topdir		%{_usrsrc}/redhat
++%_topdir		%{_usrsrc}/rpm
+ 
+ #	The path to the unzip executable (legacy, use %{__unzip} instead).
+ %_unzipbin		%{__unzip}
+@@ -658,8 +658,8 @@
+ 
+ # Horowitz Key Protocol server configuration
+ #
+-%_hkp_keyserver         hkp://pgp.mit.edu
+-%_hkp_keyserver_query   %{_hkp_keyserver}/pks/lookup?op=get&search=0x
++#%_hkp_keyserver         hkp://pgp.mit.edu
++#%_hkp_keyserver_query   %{_hkp_keyserver}/pks/lookup?op=get&search=0x
+ 
+ #==============================================================================
+ # ---- Transaction macros.
+@@ -1058,15 +1058,15 @@
+ %_sbindir		%{_exec_prefix}/sbin
+ %_libexecdir		%{_exec_prefix}/libexec
+ %_datadir		%{_prefix}/share
+-%_sysconfdir		%{_prefix}/etc
++%_sysconfdir		/etc
+ %_sharedstatedir	%{_prefix}/com
+-%_localstatedir		%{_prefix}/var
++%_localstatedir		/var
+ %_lib			lib
+ %_libdir		%{_exec_prefix}/%{_lib}
+ %_includedir		%{_prefix}/include
+ %_oldincludedir		/usr/include
+-%_infodir		%{_prefix}/info
+-%_mandir		%{_prefix}/man
++%_infodir		/usr/share/info
++%_mandir		/usr/share/man
+ 
+ #==============================================================================
+ # ---- config.guess platform macros.
+--- rpm-4.4.1.orig/platform.in
++++ rpm-4.4.1/platform.in
+@@ -28,7 +28,7 @@
+ %_oldincludedir		@oldincludedir@
+ %_infodir		@infodir@
+ %_mandir		@mandir@
+-%_initrddir		%{_sysconfdir}/rc.d/init.d
++%_initrddir		%{_sysconfdir}/init.d
+ 
+ %_defaultdocdir		@DEFAULTDOCDIR@
+ 
+--- rpm-4.4.1.orig/lib/poptI.c
++++ rpm-4.4.1/lib/poptI.c
+@@ -16,8 +16,7 @@
+ /*@unchecked@*/
+ struct rpmInstallArguments_s rpmIArgs = {
+     0,			/* transFlags */
+-			/* probFilter */
+-    (RPMPROB_FILTER_REPLACEOLDFILES | RPMPROB_FILTER_REPLACENEWFILES),
++    0,			/* probFilter */
+     0,			/* installInterfaceFlags */
+     0,			/* eraseInterfaceFlags */
+     0,			/* qva_flags */
+--- rpm-4.4.1.orig/lib/rpmal.c
++++ rpm-4.4.1/lib/rpmal.c
+@@ -744,7 +744,7 @@
+ 
+     /*@-branchstate@*/ /* FIX: ret is a problem */
+     for (found = 0, ret = NULL;
+-	 die <= al->dirs + al->numDirs && dieCompare(die, dieNeedle) == 0;
++	 die < al->dirs + al->numDirs && dieCompare(die, dieNeedle) == 0;
+ 	 die++)
+     {
+ 
+--- rpm-4.4.1.orig/rpmio/rpmio.h
++++ rpm-4.4.1/rpmio/rpmio.h
+@@ -637,7 +637,7 @@
+ /*@unused@*/ int timedRead(FD_t fd, /*@out@*/ void * bufptr, int length)
+ 	/*@globals fileSystem @*/
+ 	/*@modifies fd, *bufptr, fileSystem @*/;
+-#define	timedRead	ufdio->read
++#define	timedRead	(ufdio->read)
+ 
+ /*@-exportlocal@*/
+ /**
+--- rpm-4.4.1.orig/lib/rpmlib.h
++++ rpm-4.4.1/lib/rpmlib.h
+@@ -501,8 +501,7 @@
+     RPMSENSE_EQUAL	= (1 << 3),
+     RPMSENSE_PROVIDES	= (1 << 4), /* only used internally by builds */
+     RPMSENSE_CONFLICTS	= (1 << 5), /* only used internally by builds */
+-	/* bit 6 used to be RPMSENSE_PREREQ */
+-#define	RPMSENSE_PREREQ	RPMSENSE_ANY
++    RPMSENSE_PREREQ     = (1 << 6),     /*!< @todo Legacy. */
+     RPMSENSE_OBSOLETES	= (1 << 7), /* only used internally by builds */
+     RPMSENSE_INTERP	= (1 << 8),	/*!< Interpreter used by scriptlet. */
+     RPMSENSE_SCRIPT_PRE	= ((1 << 9)|RPMSENSE_PREREQ), /*!< %pre dependency. */
+--- rpm-4.4.1.orig/python/rpmmodule.c
++++ rpm-4.4.1/python/rpmmodule.c
+@@ -293,7 +293,7 @@
+ 
+     while (extensions->name) {
+ 	if (extensions->type == HEADER_EXT_TAG) {
+-            (const struct headerSprintfExtension *) ext = extensions;
++            ext = extensions;
+             PyDict_SetItemString(d, (char *) extensions->name, o=PyCObject_FromVoidPtr(ext, NULL));
+ 	    Py_DECREF(o);
+             PyDict_SetItem(dict, tag, o=PyString_FromString(ext->name + 7));
+--- rpm-4.4.1.orig/lib/transaction.c
++++ rpm-4.4.1/lib/transaction.c
+@@ -2285,7 +2285,7 @@
+ 	p->fi = rpmfiFree(p->fi);
+ 
+ 	/* If no post-transaction script, then don't bother. */
+-	if (haspostscript)
++	if (!haspostscript)
+ 	    continue;
+ 
+ 	p->fd = ts->notify(p->h, RPMCALLBACK_INST_OPEN_FILE, 0, 0,
+
