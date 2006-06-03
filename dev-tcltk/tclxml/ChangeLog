@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tclxml
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.21 2006/04/27 19:28:23 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.22 2006/06/03 19:54:56 matsuu Exp $
+
+  03 Jun 2006; MATSUU Takuto <matsuu@gentoo.org> tclxml-3.0-r1.ebuild,
+  tclxml-3.1.ebuild:
+  Changed xml2 USE flag for xml, bug 116346
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-tclxml-2.4,
   files/digest-tclxml-2.5, files/digest-tclxml-2.6, Manifest:

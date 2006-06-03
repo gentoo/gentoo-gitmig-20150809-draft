@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.0-r1.ebuild,v 1.1 2006/04/08 10:45:13 reb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.0-r1.ebuild,v 1.2 2006/06/03 19:54:56 matsuu Exp $
 
 inherit eutils
 
@@ -8,14 +8,14 @@ DESCRIPTION="Pure Tcl implementation of an XML parser."
 HOMEPAGE="http://tclxml.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tclxml/${P}.tar.gz"
 
-IUSE="expat threads xml2"
+IUSE="expat threads xml"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 
 DEPEND=">=dev-lang/tcl-8.2
 	>=dev-tcltk/tcllib-1.2
-	xml2? ( >=dev-libs/libxml2-2.6.9 )
+	xml? ( >=dev-libs/libxml2-2.6.9 )
 	expat? ( dev-libs/expat )
 	!dev-tcltk/tclxml-expat"
 
@@ -37,7 +37,7 @@ src_compile() {
 	econf ${myconf} || die
 	emake || die
 
-	if use xml2 ; then
+	if use xml ; then
 		cd ${S}/libxml2
 		econf ${myconf} --with-Tclxml=.. || die
 		emake || die
@@ -52,7 +52,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	if use xml2 ; then
+	if use xml ; then
 		cd ${S}/libxml2
 		make DESTDIR=${D} install || die
 	fi
