@@ -1,0 +1,8 @@
+
+
+*opencryptoki-2.2.4-r1 (03 Jun 2006)
+
+  03 Jun 2006; Petre Rodan <kaiowas@gentoo.org> +files/pkcsslotd.init,
+  +metadata.xml, +opencryptoki-2.2.4-r1.ebuild:
+  initial commit
+
