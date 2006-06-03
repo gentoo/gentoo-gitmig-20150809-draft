@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.44 2006/01/23 05:49:26 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.45 2006/06/03 18:28:42 gmsoft Exp $
+
+  03 Jun 2006; Guy Martin <gmsoft@gentoo.org> kaffe-1.1.4.ebuild,
+  kaffe-1.1.4-r1.ebuild:
+  Removing hppa KEYWORDS. HPPA will not support java anymore.
 
   23 Jan 2006; Karl Trygve Kalleberg <karltk@gentoo.org>
   -kaffe-1.1.5.ebuild, -kaffe-1.1.6.ebuild:

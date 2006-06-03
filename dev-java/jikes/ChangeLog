@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jikes
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.39 2006/03/18 15:47:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.40 2006/06/03 18:35:14 gmsoft Exp $
+
+  03 Jun 2006; Guy Martin <gmsoft@gentoo.org> jikes-1.22-r1.ebuild:
+  Removing hppa KEYWORDS. HPPA will not support java anymore.
 
   18 Mar 2006; Markus Rothe <corsair@gentoo.org> jikes-1.22-r1.ebuild:
   Stable on ppc64
