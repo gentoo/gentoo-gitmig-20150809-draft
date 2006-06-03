@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libXcursor
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcursor/ChangeLog,v 1.28 2006/04/29 15:29:20 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcursor/ChangeLog,v 1.29 2006/06/03 16:27:45 joshuabaergen Exp $
+
+*libXcursor-1.1.7 (03 Jun 2006)
+
+  03 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +libXcursor-1.1.7.ebuild:
+  Version bump.  Fixes a small memory leak.
 
   29 Apr 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   libXcursor-1.1.6.ebuild:
