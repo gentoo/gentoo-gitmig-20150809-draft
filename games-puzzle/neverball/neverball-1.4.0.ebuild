@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.4.0.ebuild,v 1.2 2005/01/03 22:38:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.4.0.ebuild,v 1.3 2006/06/03 04:13:44 mr_bones_ Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://icculus.org/neverball/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.2
@@ -40,13 +40,11 @@ src_compile() {
 
 src_install() {
 	dogamesbin ${PN}-mapc neverball neverputt || die "dogamesbin failed"
-	dodir "${GAMES_DATADIR}/${PN}"
-	cp -R data/* "${D}/${GAMES_DATADIR}/${PN}/" || die "cp failed"
+	insinto "${GAMES_DATADIR}/${PN}"
+	doins -r data/* || die "doins failed"
 	dodoc CHANGES README
 
-	insinto /usr/share/pixmaps
-	doins icon/*.png
-
+	doicon icon/*.png
 	make_desktop_entry neverball Neverball neverball.png
 	make_desktop_entry neverputt Neverputt neverputt.png
 
