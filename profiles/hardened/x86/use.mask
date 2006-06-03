@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.9 2006/04/05 17:27:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.10 2006/06/03 10:04:53 solar Exp $
 
 # We don't have any ppc sub profiles yet. bug #74103
 altivec
@@ -29,3 +29,4 @@ altivec
 # Modular X: mask for architectures on which they aren't available
 video_cards_newport
 
+nptl
