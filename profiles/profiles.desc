@@ -79,3 +79,30 @@ x86		default-linux/x86/dev/2006.1/desktop		dev
 x86-fbsd	default-bsd/fbsd/6.0/x86			dev
 x86-fbsd	default-bsd/fbsd/6.1/x86			dev
 
+
+# hardened multiarch profiles
+amd64		hardened/amd64					stable
+amd64		hardened/amd64/multilib				stable
+ppc		hardened/ppc					dev
+ppc64		hardened/ppc64					dev
+x86		hardened/x86					stable
+x86		hardened/x86/2.6				stable
+
+# uclibc/embedded multiarch profiles
+#amd64		uclibc/amd64					dev
+#arm		uclibc/arm					dev
+#arm		uclibc/arm/2.4					dev
+#mips		uclibc/mips					dev
+#mips		uclibc/mips/hardened				dev
+#ppc		uclibc/ppc					dev
+#ppc		uclibc/ppc/2.4					dev
+#ppc		uclibc/ppc/hardened				dev
+#ppc		uclibc/ppc/hardened/2.4				dev
+#sh		uclibc/sh					dev
+#sh		uclibc/sh/2.4					dev
+#x86		uclibc/x86					dev
+#x86		uclibc/x86/2.4					dev
+#x86		uclibc/x86/2005.1				dev
+#x86		uclibc/x86/2005.1/2.4				dev
+#x86		uclibc/x86/hardened				dev
+#x86		uclibc/x86/hardened/2.4				dev
