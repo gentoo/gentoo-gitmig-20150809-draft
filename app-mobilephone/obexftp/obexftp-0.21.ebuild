@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.21.ebuild,v 1.1 2006/06/02 18:57:18 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.21.ebuild,v 1.2 2006/06/03 17:19:14 mrness Exp $
 
-inherit perl-module flag-o-matic eutils
+inherit eutils perl-module flag-o-matic autotools
 
 DESCRIPTION="File transfer over OBEX for mobile phones"
 SRC_URI="http://triq.net/obexftp/${P}.tar.bz2"
@@ -24,6 +24,10 @@ src_unpack() {
 	unpack ${A}
 
 	epatch "${FILESDIR}/${P}-cobex_write.patch"
+	epatch "${FILESDIR}/${P}-sdp-detection.patch"
+
+	cd "${S}"
+	eautoreconf
 }
 
 src_compile() {

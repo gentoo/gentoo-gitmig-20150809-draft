@@ -1,0 +1,44 @@
+diff -Nru obexftp-0.21.orig/apps/obexftp_sdp.c obexftp-0.21/apps/obexftp_sdp.c
+--- obexftp-0.21.orig/apps/obexftp_sdp.c	2006-06-03 20:02:27.529609000 +0300
++++ obexftp-0.21/apps/obexftp_sdp.c	2006-06-03 20:03:26.753310250 +0300
+@@ -34,6 +34,8 @@
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ 
++#ifdef HAVE_SDPLIB
++
+ #include <bluetooth/bluetooth.h>
+ #include <bluetooth/sdp.h>
+ #include <bluetooth/sdp_lib.h>
+@@ -173,3 +175,17 @@
+ 	return 0;
+ }
+ */
++
++#else
++
++void obexftp_sdp_unregister(void)
++{
++}
++
++int obexftp_sdp_register(void)
++{
++	syslog(LOG_ERR, "SDP not supported.");
++	return -1;
++}
++
++#endif // HAVE_SDPLIB
+diff -Nru obexftp-0.21.orig/configure.in obexftp-0.21/configure.in
+--- obexftp-0.21.orig/configure.in	2006-06-03 20:02:27.529609000 +0300
++++ obexftp-0.21/configure.in	2006-06-03 20:00:45.000000000 +0300
+@@ -27,7 +27,9 @@
+ AM_ICONV
+ dnl IRDA_CHECK
+ BLUETOOTH_CHECK
+-SDPLIB_CHECK
++if test $am_cv_bluetooth_found = yes; then
++	SDPLIB_CHECK
++fi
+ USB_CHECK
+ 
+ # check for optional swig rebuild
