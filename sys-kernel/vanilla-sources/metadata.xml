@@ -8,6 +8,10 @@
     <name>x86 kernel team</name>
     <description>Actively maintained</description>
   </maintainer>
+  <maintainer>
+    <email>brix@gentoo.org</email>
+    <name>Henrik Brix Andersen</name>
+  </maintainer>
   <longdescription>
     Vanilla prepatch/rc sources, for people who like to have the latest kernel available
   </longdescription>
