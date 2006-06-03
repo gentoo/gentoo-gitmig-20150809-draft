@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libp11
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.1 2006/06/03 13:20:33 kaiowas Exp $
+
+*libp11-0.2.1 (03 Jun 2006)
+
+  03 Jun 2006; Petre Rodan <kaiowas@gentoo.org> +metadata.xml,
+  +libp11-0.2.1.ebuild:
+  initial commit. contributed by Mark Raddatz in bug #115276
+
