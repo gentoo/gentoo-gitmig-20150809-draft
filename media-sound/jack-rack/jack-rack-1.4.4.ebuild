@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.4.ebuild,v 1.1 2005/11/07 14:09:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.4.ebuild,v 1.2 2006/06/03 20:48:55 ticho Exp $
 
-IUSE="gnome ladcca nls xml2"
+IUSE="gnome ladcca nls xml"
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND="ladcca? ( >=media-libs/ladcca-0.4 )
 	media-sound/jack-audio-connection-kit
 	gnome? ( >=gnome-base/libgnomeui-2 )
 	nls? ( sys-devel/gettext )
-	xml2? ( dev-libs/libxml2 )"
+	xml? ( dev-libs/libxml2 )"
 
 MAKEOPTS="-j1"
 
@@ -34,7 +34,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		`use_enable gnome` \
-		`use_enable xml2 xml` \
+		`use_enable xml` \
 		`use_enable ladcca` \
 		`use_enable nls` \
 		|| die "econf failed"
