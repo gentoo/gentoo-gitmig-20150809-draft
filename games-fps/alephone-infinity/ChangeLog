@@ -1,0 +1,10 @@
+# ChangeLog for games-fps/alephone-infinity
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone-infinity/ChangeLog,v 1.1 2006/06/03 22:07:59 tupone Exp $
+
+*alephone-infinity-1 (03 Jun 2006)
+
+  03 Jun 2006; <Tupone@gentoo.org> +files/AlephOne.png,
+  +alephone-infinity-1.ebuild:
+  Initial import.  Ebuild submitted by David Bailey and Ben Urban, bug #82912
+
