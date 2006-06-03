@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.13 2006/03/09 23:49:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.14 2006/06/03 10:10:35 kaiowas Exp $
+
+*openct-0.6.7 (03 Jun 2006)
+
+  03 Jun 2006; Petre Rodan <kaiowas@gentoo.org> -files/usb.usermap,
+  metadata.xml, +openct-0.6.7.ebuild:
+  version bump. changed HOMEPAGE SRC_URI LICENSE and dodoc, added fix for
+  upstream bug #18
 
   09 Mar 2006; Mike Frysinger <vapier@gentoo.org> openct-0.6.6.ebuild:
   Use revdep-rebuild --library instead of revdep-rebuild --soname #125506 by
