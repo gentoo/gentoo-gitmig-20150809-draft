@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pypgsql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.11 2006/04/01 18:48:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.12 2006/06/03 13:06:20 lucass Exp $
+
+*pypgsql-2.5 (03 Jun 2006)
+
+  03 Jun 2006; Lukasz Strzygowski <lucass@gentoo.org> +pypgsql-2.5.ebuild:
+  Version bump, ebuild cleanup, closing bug #126413.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pypgsql-2.4.ebuild:
   Mark 2.4 ~ia64
