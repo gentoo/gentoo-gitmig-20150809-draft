@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/aimsniff
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.18 2006/05/23 18:18:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.19 2006/06/03 22:10:21 vanquirius Exp $
+
+*aimsniff-0.9-r2 (03 Jun 2006)
+
+  03 Jun 2006; Marcelo Goes <vanquirius@gentoo.org> +files/aimsniff.rc,
+  +aimsniff-0.9-r2.ebuild:
+  Add initscript for bug 67444. Thanks to Bryan Ragon <mygentoo at ragon dot
+  org> and Josh <sciolizer at gmail dot com>.
 
   23 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove port001 from metadata, bug 26349.
