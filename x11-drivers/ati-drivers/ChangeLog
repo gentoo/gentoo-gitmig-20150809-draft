@@ -1,6 +1,19 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.40 2006/06/03 05:29:33 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.41 2006/06/03 06:06:54 joshuabaergen Exp $
+
+  03 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  ati-drivers-8.14.13-r2.ebuild, ati-drivers-8.14.13-r3.ebuild,
+  ati-drivers-8.14.13-r4.ebuild, ati-drivers-8.14.13-r5.ebuild,
+  ati-drivers-8.16.20.ebuild, ati-drivers-8.16.20-r1.ebuild,
+  ati-drivers-8.18.6.ebuild, ati-drivers-8.18.6-r1.ebuild,
+  ati-drivers-8.18.8.ebuild, ati-drivers-8.18.8-r1.ebuild,
+  ati-drivers-8.18.8-r2.ebuild, ati-drivers-8.19.10.ebuild,
+  ati-drivers-8.20.8.ebuild, ati-drivers-8.21.7.ebuild,
+  ati-drivers-8.21.7-r1.ebuild, ati-drivers-8.22.5.ebuild,
+  ati-drivers-8.23.7.ebuild, ati-drivers-8.24.8.ebuild,
+  ati-drivers-8.25.18.ebuild:
+  Actually block xorg-server, rather than depending on an older version.
 
   03 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   ati-drivers-8.14.13-r2.ebuild, ati-drivers-8.14.13-r3.ebuild,
