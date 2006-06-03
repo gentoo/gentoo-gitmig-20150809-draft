@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/platon
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.1 2005/12/16 05:32:46 spyderous Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.2 2006/06/03 06:17:36 spyderous Exp $
+
+*platon-20060530 (03 Jun 2006)
+
+  03 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +platon-20060530.ebuild:
+  Bump to latest. Fix for gcc4 by linking against libf2c in the non-gcc3 case.
+  Keyword ~ppc.
 
 *platon-20051215 (16 Dec 2005)
 
