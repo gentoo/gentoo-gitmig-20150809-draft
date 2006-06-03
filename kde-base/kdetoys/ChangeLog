@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.151 2006/06/02 20:19:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.152 2006/06/03 14:53:38 gmsoft Exp $
+
+  03 Jun 2006; Guy Martin <gmsoft@gentoo.org> kdetoys-3.5.2.ebuild:
+  Stable on hppa.
 
 *kdetoys-3.5.3 (02 Jun 2006)
 
