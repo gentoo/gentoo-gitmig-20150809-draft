@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7167-r3.ebuild,v 1.6 2006/03/03 23:52:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7167-r3.ebuild,v 1.7 2006/06/03 05:51:24 joshuabaergen Exp $
 
 inherit eutils multilib versionator
 
@@ -21,7 +21,7 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 RESTRICT="nostrip multilib-pkg-force"
 
-RDEPEND="|| ( virtual/x11 >=x11-base/xorg-server-0.99.1-r7 )
+RDEPEND="|| ( <=virtual/x11-6.9 <x11-base/xorg-server-1.0.99 )
 	 || ( virtual/x11 media-libs/mesa )
 	 app-admin/eselect-opengl
 	 ~media-video/nvidia-kernel-${PV}
