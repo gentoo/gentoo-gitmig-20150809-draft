@@ -24,3 +24,4 @@ stop() {
 	start-stop-daemon --stop --exec /usr/sbin/pkcsslotd --pidfile "${PKCSSLOTDPID}"
 	eend $?
 }
+
