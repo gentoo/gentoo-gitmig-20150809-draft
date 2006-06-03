@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.3-r1.ebuild,v 1.8 2006/01/16 09:28:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.3-r1.ebuild,v 1.9 2006/06/03 20:48:45 ticho Exp $
 
 inherit libtool
 
@@ -15,10 +15,10 @@ SRC_URI="mirror://sourceforge/wvware/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86"
-IUSE="jpeg X expat xml2 debug doc gtk"
+IUSE="jpeg X expat xml debug doc gtk"
 
 RDEPEND="virtual/ghostscript
-	xml2? ( !expat? ( dev-libs/libxml2 ) )
+	xml? ( !expat? ( dev-libs/libxml2 ) )
 	expat? ( dev-libs/expat )
 	>=media-libs/freetype-2.0.1
 	sys-libs/zlib
@@ -63,12 +63,14 @@ src_compile() {
 	#still needed !? <vapier@gentoo.org>
 	#elibtoolize --reverse-deps
 
-	if use expat && use xml2; then
-		einfo "You can specify only one flag of expat and xml2."
-		einfo "It will be defaulted to expat (like autocheck does)."
+	if use expat && use xml; then
+		einfo "You can specify only one USE flag from expat and xml, to use expat"
+		einfo "or libxml2, respectively."
+		einfo
+		einfo "You have both flags enabled, we will default to expat (like autocheck does)."
 		myconf="${myconf} --with-expat --without-libxml2"
 	else
-		myconf="${myconf} $(use_with expat) $(use_with xml2 libxml2)"
+		myconf="${myconf} $(use_with expat) $(use_with xml libxml2)"
 	fi
 
 	econf \
