@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.187 2006/06/03 00:29:28 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.188 2006/06/03 08:43:18 nixnut Exp $
+
+  03 Jun 2006; <nixnut@gentoo.org> openldap-2.3.24-r1.ebuild:
+  Stable on ppc; bug #134010
 
 *openldap-2.3.24-r2 (03 Jun 2006)
 *openldap-2.3.24-r1 (03 Jun 2006)
