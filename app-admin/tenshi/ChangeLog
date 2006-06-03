@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.14 2006/02/27 16:35:20 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.15 2006/06/03 22:49:08 lcars Exp $
+
+  03 Jun 2006; Andrea Barisani <lcars@gentoo.org> tenshi-0.4.ebuild:
+  Stable on x86.
 
   27 Feb 2006; Patrick McLean <chutzpah@gentoo.org> tenshi-0.3.4.ebuild:
   Stable on amd64.
