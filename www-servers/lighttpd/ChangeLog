@@ -1,6 +1,29 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.74 2006/06/01 21:56:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.75 2006/06/03 12:33:17 bangert Exp $
+
+  03 Jun 2006; Thilo Bangert <bangert@gentoo.org>
+  -files/1.4.10/05_all_r996_fallback_to_madvise.diff,
+  -files/lighttpd-1.3.13-pam-name.diff,
+  -files/1.4.10/06_all_r997_fastcgi_fixes.diff,
+  -files/lighttpd-1.3.13-valid-user.diff,
+  -files/1.4.10/07_all_r998_sendfile_fixes.diff,
+  -files/1.4.10/01_all_r990_mod_cgi_dont_reset_physical_path.diff,
+  -files/1.4.10/08_all_r999_mod_cgi_terminate.diff,
+  -files/1.4.10/03_all_r992_posix_fadvise_2.4.x.diff,
+  -files/1.4.10/09_all_r1000_sendfile_compile_fix.diff,
+  -files/lighttpd-1.3.13-zope-deserves-lovins-too.diff,
+  -files/1.4.10/10_all_r1001_mod_auth_errormsg_fix.diff,
+  -files/1.4.10/11_all_r1002_var_and_env_docs.diff,
+  -files/1.4.10/02_all_r991_posix_fadvise.diff,
+  -files/1.4.10/04_all_r994_remove_xopen_and_bsd_source_defines.diff,
+  -files/1.4.10/12_all_r1003_mod_fastcgi_doc_fix.diff,
+  -files/1.4.10/13_all_r1006_mod_cgi_close_unused_pipe_fds.diff,
+  -files/1.4.10/14_all_r1007_mod_alias_lowercase_support.diff,
+  -lighttpd-1.3.13-r3.ebuild, -lighttpd-1.4.7.ebuild,
+  -lighttpd-1.4.8.ebuild, -lighttpd-1.4.10-r1.ebuild,
+  -lighttpd-1.4.10-r2.ebuild:
+  punt old / vulnerable / experimental versions
 
 *lighttpd-1.4.11-r1 (01 Jun 2006)
 
