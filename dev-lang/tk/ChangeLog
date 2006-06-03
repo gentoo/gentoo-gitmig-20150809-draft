@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.69 2006/05/30 09:24:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.70 2006/06/03 19:37:48 matsuu Exp $
+
+*tk-8.4.13 (03 Jun 2006)
+
+  03 Jun 2006; MATSUU Takuto <matsuu@gentoo.org>
+  +files/tk-8.3.5-tclm4-soname.patch, +tk-8.4.13.ebuild:
+  Version bumped, Bug 128681.
+  Added debug USE flag, Bug 123444.
+  Added soname patch, Bug 125971.
 
   30 May 2006; Diego Pettenò <flameeyes@gentoo.org> tk-8.4.12.ebuild:
   Add ~x86-fbsd keyword.
