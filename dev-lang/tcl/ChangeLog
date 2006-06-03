@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.67 2006/04/11 16:27:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.68 2006/06/03 19:35:20 matsuu Exp $
+
+*tcl-8.4.13 (03 Jun 2006)
+
+  03 Jun 2006; MATSUU Takuto <matsuu@gentoo.org>
+  +files/tcl-8.3.5-tclm4-soname.patch, +tcl-8.4.13.ebuild:
+  Version bumped, Bug 128681.
+  Added debug USE flag, Bug 123444.
+  Added soname patch, Bug 125971.
+  Removed PDEPEND.
 
   11 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> tcl-8.4.12.ebuild:
   Add ~x86-fbsd keyword.
