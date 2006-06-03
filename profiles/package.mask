@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5462 2006/06/03 16:38:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5463 2006/06/03 21:00:11 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -723,10 +723,6 @@ sys-fs/convertfs
 # Diego Pettenò <flameeyes@gentoo.org> (13 Jan 2006)
 # Vulnerable to security issue. See bug #115760
 media-video/xmovie
-
-# Marcelo Goes <vanquirius@gentoo.org> (12 Jan 2006)
-# Mask development version
-=media-gfx/swftools-0.7.1.20051207
 
 # Diego Pettenò <flameeyes@gentoo.org> (12 Jan 2006)
 # Nightlie, masked while testing
