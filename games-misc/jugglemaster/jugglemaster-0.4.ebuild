@@ -1,7 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.2 2005/08/24 04:45:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.3 2006/06/03 10:30:06 tupone Exp $
 
+inherit eutils
 DESCRIPTION="A siteswap animator"
 HOMEPAGE="http://icculus.org/jugglemaster/"
 SRC_URI="http://icculus.org/${PN}/download/${P}.tar.bz2"
@@ -17,6 +18,7 @@ DEPEND="x11-libs/wxGTK
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/${P}"-ffmpeg.patch
 	if use ffmpeg ; then
 		sed -i \
 			-e "s/libavcodec/ffmpeg/" \
