@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-8.0.8.ebuild,v 1.6 2006/06/03 03:35:30 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-8.0.8.ebuild,v 1.7 2006/06/03 15:28:17 killerfox Exp $
 
 inherit eutils gnuconfig flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://postgresql/source/v${PV}/postgresql-base-${PV}.tar.bz2"
 
 LICENSE="POSTGRESQL"
 SLOT="4"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="ssl nls pam readline zlib kerberos"
 #pg-hier"
 
