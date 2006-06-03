@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.10 2006/05/30 11:39:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.11 2006/06/03 18:08:15 gmsoft Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -108,6 +108,11 @@ src_unpack() {
 	# chance to work it out. Bug #97452
 	[[ -n $(test-flags -fno-stack-protector) ]] && \
 		epatch ${FILESDIR}/${PN}-regexp-nossp.patch
+
+
+	# On PA7200, uname -a contains a single quote and we need to 
+	# filter it otherwise configure fails. See #125535.
+	epatch ${FILESDIR}/perl-hppa-pa7200-configure.patch
 
 	use amd64 && cd ${S} && epatch ${FILESDIR}/${P}-lib64.patch
 
