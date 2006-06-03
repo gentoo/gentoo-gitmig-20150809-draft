@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.38 2006/05/29 00:44:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.39 2006/06/03 21:08:03 radek Exp $
+
+  03 Jun 2006; Radoslaw Stachowiak <radek@gentoo.org> p7zip-4.42.ebuild:
+  Cross compilation fix, thanks to Josu Lopez Fernandez #135417
 
   29 May 2006; Mark Loeser <halcy0n@gentoo.org> p7zip-4.39.ebuild:
   Stable on x86; bug #134513

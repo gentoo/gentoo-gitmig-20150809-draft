@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.42.ebuild,v 1.2 2006/06/01 16:49:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.42.ebuild,v 1.3 2006/06/03 21:08:03 radek Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -19,9 +19,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	use static && epatch "${FILESDIR}"/p7zip-4.16_x86_static.patch
-	# be aware that CXX is now gcc in pattern due to upstream  (radek@20060318)
 	sed -i \
-		-e "/^CXX=/s:gcc:$(tc-getCXX):" \
+		-e "/^CXX=/s:g++:$(tc-getCXX):" \
 		-e "/^CC=/s:gcc:$(tc-getCC):" \
 		-e "s:OPTFLAGS=-O:OPTFLAGS=${CXXFLAGS}:" \
 		makefile* || die "changing makefiles"
