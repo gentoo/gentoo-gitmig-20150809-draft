@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.1.6-r1.ebuild,v 1.1 2006/06/03 16:30:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.1.6-r1.ebuild,v 1.2 2006/06/03 20:47:24 compnerd Exp $
 
 inherit eutils autotools
 
@@ -53,7 +53,7 @@ src_compile() {
 		$(use_enable pdf) \
 		$(use_enable doc gtk-doc) \
 		$(use_enable glitz) \
-		--enable-freetype
+		--enable-freetype \
 		--enable-ps || die "./configure failed"
 
 	emake || die "Compilation failed"
