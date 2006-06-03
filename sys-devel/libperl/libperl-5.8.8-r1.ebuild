@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8-r1.ebuild,v 1.9 2006/05/27 21:34:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8-r1.ebuild,v 1.10 2006/06/03 18:18:00 gmsoft Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -134,6 +134,11 @@ src_unpack() {
 
 	# we need the same @INC-inversion magic here we do in perl
 	cd ${S}; epatch ${FILESDIR}/${P}-reorder-INC.patch
+
+	# On PA7200, uname -a contains a single quote and we need to 
+	# filter it otherwise configure fails. See #125535.
+	epatch ${FILESDIR}/perl-hppa-pa7200-configure.patch
+
 
 	use amd64 && cd ${S} && epatch ${FILESDIR}/${P}-lib64.patch
 	[[ ${CHOST} == *-dragonfly* ]] && cd ${S} && epatch ${FILESDIR}/${P}-dragonfly-clean.patch
