@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.13 2006/03/31 21:37:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.14 2006/06/03 03:56:19 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -34,10 +34,12 @@ RDEPEND="virtual/opengl
 	>=media-libs/libsdl-1.2.5
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs )"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S=${WORKDIR}/nwn
 
-GAMES_LICENSE_CHECK="yes"
+GAMES_LICENSE_CHECK=yes
 dir=${GAMES_PREFIX_OPT}/nwn
 Ddir=${D}/${dir}
 
@@ -97,10 +99,10 @@ src_unpack() {
 	fi
 	if use sou
 	then
-		unzip -o ${CDROM_ROOT}/Data_Shared.zip
-		unzip -o ${CDROM_ROOT}/Language_data.zip
-		unzip -o ${CDROM_ROOT}/Language_update.zip
-		unzip -o ${CDROM_ROOT}/Data_Linux.zip
+		unzip -o "${CDROM_ROOT}"/Data_Shared.zip
+		unzip -o "${CDROM_ROOT}"/Language_data.zip
+		unzip -o "${CDROM_ROOT}"/Language_update.zip
+		unzip -o "${CDROM_ROOT}"/Data_Linux.zip
 		rm -f data/patch.bif patch.key
 		touch .metadata/sou || die "touching sou"
 	fi
@@ -112,9 +114,9 @@ src_unpack() {
 			cdrom_load_next_cd
 		fi
 		rm -f data/patch.bif patch.key
-		unzip -o ${CDROM_ROOT}/Data_Shared.zip
-		unzip -o ${CDROM_ROOT}/Language_data.zip
-		unzip -o ${CDROM_ROOT}/Language_update.zip
+		unzip -o "${CDROM_ROOT}"/Data_Shared.zip
+		unzip -o "${CDROM_ROOT}"/Language_data.zip
+		unzip -o "${CDROM_ROOT}"/Language_update.zip
 		touch .metadata/hou || die "touching hou"
 	fi
 
@@ -137,12 +139,12 @@ src_install() {
 		"${S}"/nwserver  "${S}"/nwm/* "${S}"/SDL-1.2.5 "${S}"/fixinstall
 	mv "${S}"/* "${Ddir}"
 	mv "${S}"/.metadata "${Ddir}"
-	keepdir ${dir}/servervault
-	keepdir ${dir}/scripttemplates
-	keepdir ${dir}/saves
-	keepdir ${dir}/portraits
-	keepdir ${dir}/hak
-	cd ${Ddir}
+	keepdir "${dir}"/servervault
+	keepdir "${dir}"/scripttemplates
+	keepdir "${dir}"/saves
+	keepdir "${dir}"/portraits
+	keepdir "${dir}"/hak
+	cd "${Ddir}"
 	for d in ambient data dmvault hak localvault music override portraits
 	do
 		if [ -d ${d} ]
@@ -155,7 +157,7 @@ src_install() {
 					mv ${f} $(echo ${f} | tr [:upper:] [:lower:])
 				fi
 			done
-			cd ${Ddir}
+			cd "${Ddir}"
 		fi
 	done
 	if ! use sou && ! use hou && use nowin
