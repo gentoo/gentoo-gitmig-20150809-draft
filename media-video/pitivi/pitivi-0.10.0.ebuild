@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.10.0.ebuild,v 1.1 2006/05/13 20:49:28 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.10.0.ebuild,v 1.2 2006/06/03 01:45:48 hanno Exp $
 
 DESCRIPTION="A non-linear video editor using the GStreamer multimedia framework"
 HOMEPAGE="http://www.pitivi.org"
@@ -23,6 +23,14 @@ RDEPEND="${DEPEND}
 	>=media-plugins/gst-plugins-ffmpeg-0.10.0
 	>=media-plugins/gst-plugins-xvideo-0.10.0
 	>=media-plugins/gst-plugins-libpng-0.10.0"
+
+src_compile() {
+	addpredict "/root/.gconf"
+	addpredict "/root/.gconfd"
+	addpredict "/root/.gstreamer-0.10"
+	econf || die
+	emake || die
+}
 
 src_install() {
 	einstall || die
