@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_rc4.ebuild,v 1.1 2006/06/03 04:40:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1_rc4.ebuild,v 1.2 2006/06/03 17:01:13 zmedico Exp $
 
 inherit toolchain-funcs eutils
 
@@ -62,17 +62,9 @@ src_unpack() {
 }
 
 src_compile() {
-	python -O -c "import compileall; compileall.compile_dir('${S}/pym')"
-
 	cd "${S}"/src
 	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o tbz2tool tbz2tool.c || \
 		die "Failed to build tbz2tool"
-
-	if ! use userland_Darwin; then
-		cd "${S}"/src/python-missingos
-		chmod +x setup.py
-		./setup.py build || die "Failed to build missingos module"
-	fi
 
 	if use elibc_FreeBSD; then
 		cd "${S}"/src/bsd-flags
@@ -98,12 +90,6 @@ src_install() {
 		newins make.conf make.conf.example
 	fi
 
-	if ! use userland_Darwin; then
-		cd "${S}"/src/python-missingos
-		./setup.py install --root "${D}" || \
-			die "Failed to install missingos module"
-	fi
-
 	if use elibc_FreeBSD; then
 		cd "${S}"/src/bsd-flags
 		./setup.py install --root "${D}" || \
@@ -125,7 +111,7 @@ src_install() {
 		dodir ${portage_base}/${mydir}
 		insinto ${portage_base}/${mydir}
 		cd "${S}"/${mydir}
-		doins *.py *.pyo
+		doins *.py
 	done
 
 	doman "${S}"/man/*.[0-9]

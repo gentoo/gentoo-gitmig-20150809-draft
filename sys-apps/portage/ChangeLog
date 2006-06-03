@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.165 2006/06/03 04:40:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.166 2006/06/03 17:01:13 zmedico Exp $
+
+  03 Jun 2006; Zac Medico <zmedico@gentoo.org> portage-2.1_rc4.ebuild:
+  Remove pointless compilation of python bytecodes and the missingos module
+  in order to fix cross compiles for bug #135398.
 
 *portage-2.1_rc4 (03 Jun 2006)
 
