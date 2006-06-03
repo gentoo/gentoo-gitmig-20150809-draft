@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.22.5.ebuild,v 1.4 2006/03/08 15:11:38 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.22.5.ebuild,v 1.5 2006/06/03 05:29:33 joshuabaergen Exp $
 
 IUSE="opengl"
 
@@ -14,7 +14,7 @@ SRC_URI="x86? ( mirror://gentoo/ati-driver-installer-${PV}-i386.run )
 LICENSE="ATI"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="|| ( x11-base/xorg-server virtual/x11 )
+RDEPEND="|| ( <x11-base/xorg-server-1.0.99 <=virtual/x11-6.9 )
 	 app-admin/eselect-opengl
 	 || ( sys-libs/libstdc++-v3 =sys-devel/gcc-3.3* )"
 
