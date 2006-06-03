@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-oodict
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.1 2006/06/02 13:28:52 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.2 2006/06/03 14:37:18 kevquinn Exp $
+
+*eselect-oodict-20060603 (03 Jun 2006)
+
+  03 Jun 2006; Kevin F. Quinn <kevquinn@gentoo.org>
+  +eselect-oodict-20060603.ebuild:
+  Update to tidy up messages, provide sensible output when no dictionaries
+  installed.
 
 *eselect-oodict-20060601 (02 Jun 2006)
 
