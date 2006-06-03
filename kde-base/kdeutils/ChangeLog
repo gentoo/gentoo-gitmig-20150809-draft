@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.167 2006/06/02 20:21:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.168 2006/06/03 16:12:46 gmsoft Exp $
+
+  03 Jun 2006; Guy Martin <gmsoft@gentoo.org> kdeutils-3.5.2.ebuild:
+  Stable on hppa.
 
 *kdeutils-3.5.3 (02 Jun 2006)
 
