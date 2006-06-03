@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/alephone
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.10 2006/06/02 23:19:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.11 2006/06/03 21:39:59 tupone Exp $
+
+*alephone-20060506-r1 (03 Jun 2006)
+
+  03 Jun 2006; <Tupone@gentoo.org> +files/alephone.sh,
+  +alephone-20060506-r1.ebuild:
+  Wrapper rewritten, bug #135428 by Ben Urban
 
 *alephone-20060506 (02 Jun 2006)
 
