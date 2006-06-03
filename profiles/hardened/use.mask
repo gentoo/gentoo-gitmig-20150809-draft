@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.8 2006/03/05 23:12:35 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.9 2006/06/03 18:32:13 solar Exp $
 
 # uclibc only in uclibc profiles.
 uclibc
@@ -10,3 +10,6 @@ aqua
 coreaudio
 
 emul-linux-x86
+
+# suggested by GMsoft
+pbbuttonsd
