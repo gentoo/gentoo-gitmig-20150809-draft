@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/ipod-sharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ChangeLog,v 1.7 2006/04/08 14:58:18 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ChangeLog,v 1.8 2006/06/03 02:05:55 metalgod Exp $
+
+*ipod-sharp-0.5.16 (03 Jun 2006)
+
+  03 Jun 2006; Luis Medinas <metalgod@gentoo.org> +ipod-sharp-0.5.16.ebuild:
+  Version Bump from upstream that contains a fix for bug #134707.
 
   08 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   ipod-sharp-0.5.15.ebuild:
