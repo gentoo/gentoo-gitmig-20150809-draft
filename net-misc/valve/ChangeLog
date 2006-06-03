@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/valve
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/valve/ChangeLog,v 1.1 2006/06/03 00:27:57 robbat2 Exp $
+
+*valve-1.0 (03 Jun 2006)
+
+  03 Jun 2006; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +valve-1.0.ebuild:
+  Initial commit. Based on submission in bug #78841, thanks to Cl?udio Valente
+  <claudiovalente@yahoo.com>.
+
