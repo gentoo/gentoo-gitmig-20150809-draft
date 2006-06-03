@@ -25,4 +25,3 @@ stop() {
 	eend $?
 }
 
-# vim: ts=4
