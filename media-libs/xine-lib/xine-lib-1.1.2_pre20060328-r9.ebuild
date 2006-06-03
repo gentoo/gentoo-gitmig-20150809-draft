@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328-r9.ebuild,v 1.6 2006/06/03 01:48:47 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328-r9.ebuild,v 1.7 2006/06/03 09:39:41 killerfox Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -27,7 +27,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
 
 IUSE_VIDEO_CARDS="video_cards_nvidia video_cards_via video_cards_i810"
 
