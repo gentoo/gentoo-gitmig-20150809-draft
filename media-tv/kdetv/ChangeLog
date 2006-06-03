@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/kdetv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.22 2006/03/16 23:34:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.23 2006/06/03 14:19:49 deathwing00 Exp $
+
+  03 Jun 2006; Ioannis Aslanidis <deathwing00@gentoo.org> kdetv-0.8.8.ebuild,
+  kdetv-0.8.8.ebuild:
+  Fixed HOMEPAGE of ebuilds to match the new site.
 
   16 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> kdetv-0.8.8-r1.ebuild:
   Move the .desktop file in FDO's suggested directory.

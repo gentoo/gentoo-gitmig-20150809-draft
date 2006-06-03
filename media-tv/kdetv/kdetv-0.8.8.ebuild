@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8.ebuild,v 1.1 2005/10/06 16:48:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8.ebuild,v 1.2 2006/06/03 14:19:49 deathwing00 Exp $
 
 inherit kde
 
 DESCRIPTION="A TV application for KDE"
-HOMEPAGE="http://www.kwintv.org/"
+HOMEPAGE="http://www.kdetv.org/"
 SRC_URI="http://dziegel.free.fr/releases/${P}.tar.bz2"
 LICENSE="GPL-2"
 
