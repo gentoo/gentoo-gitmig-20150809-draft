@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.30 2005/12/07 17:57:12 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.31 2006/06/03 17:56:35 radek Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -23,9 +23,12 @@ inherit python eutils
 
 # This helps make it possible to add extensions to python slots.
 # Normally only a -py21- ebuild would set PYTHON_SLOT_VERSION.
-if [ "${PYTHON_SLOT_VERSION}" = 2.1 ] ; then
+if [ "${PYTHON_SLOT_VERSION}" = "2.1" ] ; then
 	DEPEND="=dev-lang/python-2.1*"
 	python="python2.1"
+elif [ "${PYTHON_SLOT_VERSION}" = "2.3" ] ; then
+	DEPEND="=dev-lang/python-2.3*"
+	python="python2.3"
 else
 	DEPEND="virtual/python"
 	python="python"
