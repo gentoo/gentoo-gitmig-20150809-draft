@@ -1,31 +1,38 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3dfcd11e647d1998005e951676b44be1 ChangeLog 1205
-RMD160 a1688742a177e0ea6240ac0855fdf98e9be92f83 ChangeLog 1205
-SHA256 d3dd7f1e1066bdd597842b154149e8121f70e54cd3cadde66e8441fa92ce554a ChangeLog 1205
-MD5 f37bc0821cc417e5995a74ea0da04a74 files/digest-text-format-0.61 67
-RMD160 f813ab304d3e8897dfbe3b431dc311a17661317c files/digest-text-format-0.61 67
-SHA256 b9f1aab99803677baa0d8b30ad4aabd23c914930cdd4b3c4fe3978305d492198 files/digest-text-format-0.61 67
-MD5 9626de3ffd69104cee2d33803f700216 files/digest-text-format-0.64 68
-RMD160 0ef185513adb7fa229b3baea52546cc38474f191 files/digest-text-format-0.64 68
-SHA256 ba5ec95139437296ca20f11b991343113e3f2eb69868785f299f1ac3399efa11 files/digest-text-format-0.64 68
+AUX text-format-0.64-prefix.diff 747 RMD160 1b9ebc72a7a9a10aaf9a7e0b40e6a6ff49d6a39b SHA1 42a6185dcb66297ae04116adda36a45296fd8254 SHA256 0b1ce1bec46bcb4fc7e6f84d979c1fcb60f5b009c369d058cdb3179225bdd1c9
 MD5 59d7d1d5f91e596f23be50226ddd8aa3 files/text-format-0.64-prefix.diff 747
 RMD160 1b9ebc72a7a9a10aaf9a7e0b40e6a6ff49d6a39b files/text-format-0.64-prefix.diff 747
 SHA256 0b1ce1bec46bcb4fc7e6f84d979c1fcb60f5b009c369d058cdb3179225bdd1c9 files/text-format-0.64-prefix.diff 747
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
-SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
+DIST text-format-0.61.tar.gz 47279
+DIST text-format-0.64.tar.gz 128585 RMD160 90544a0f73b438547a35f3e65f7ad2e1bb7ff9a1 SHA1 edfb9ab4ce37dacd491e81abda6cb8c5ec8554f0 SHA256 f2a137459cd1a66902fedaaac7a91e6e144782d4f41f6bedf909d2e4e6c6c3c3
+EBUILD text-format-0.61.ebuild 573 RMD160 57b116bbdb9fdbc96964f965d81f8206d4d76e7e SHA1 1beea2cc46213bf1f40612ccf15bba6e6197ba6d SHA256 6961463716729d2ab9ff029002a274b24ba17fc353cb927a0f4788139625d4aa
 MD5 09de8d703fa0fb4684c21244b94a07b9 text-format-0.61.ebuild 573
 RMD160 57b116bbdb9fdbc96964f965d81f8206d4d76e7e text-format-0.61.ebuild 573
 SHA256 6961463716729d2ab9ff029002a274b24ba17fc353cb927a0f4788139625d4aa text-format-0.61.ebuild 573
-MD5 1f060812b61e9cbe14098f37f5e8361b text-format-0.64.ebuild 821
-RMD160 27b3b29d5483a0b292a0d37902db8e13ed717979 text-format-0.64.ebuild 821
-SHA256 ffcf4c1b748542d12fe2e5c8f95bffe5a4082ff7d53ace0e0f4813caffe003ce text-format-0.64.ebuild 821
+EBUILD text-format-0.64.ebuild 839 RMD160 18989197f54e7182a866d73f371c0eb85c6ca209 SHA1 7448b7b4d16895e27914063afdb6b8331add12b1 SHA256 c3e11c4f156c7add35ce89aeaa42367664707394133aaeffeb60c59b2b5ab4a5
+MD5 10069442f017a542a6fbdac3258ae69a text-format-0.64.ebuild 839
+RMD160 18989197f54e7182a866d73f371c0eb85c6ca209 text-format-0.64.ebuild 839
+SHA256 c3e11c4f156c7add35ce89aeaa42367664707394133aaeffeb60c59b2b5ab4a5 text-format-0.64.ebuild 839
+MISC ChangeLog 1323 RMD160 98c803baee3a259c85eedd8abd9663af9263b340 SHA1 455d47ef58b98e04f8d15288ef4e4d26e2c92b0a SHA256 08e57f001c7cbffb048bc39a9e621f81ee2311e6ffd9ca2b7e3479e287cbd1a0
+MD5 e5840156c35c9a3f1c92a1eb9bc5d600 ChangeLog 1323
+RMD160 98c803baee3a259c85eedd8abd9663af9263b340 ChangeLog 1323
+SHA256 08e57f001c7cbffb048bc39a9e621f81ee2311e6ffd9ca2b7e3479e287cbd1a0 ChangeLog 1323
+MISC metadata.xml 157 RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 SHA1 8ce15dcc608eeb5616aeec610dc695cbe6f93e02 SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
+SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
+MD5 f37bc0821cc417e5995a74ea0da04a74 files/digest-text-format-0.61 67
+RMD160 f813ab304d3e8897dfbe3b431dc311a17661317c files/digest-text-format-0.61 67
+SHA256 b9f1aab99803677baa0d8b30ad4aabd23c914930cdd4b3c4fe3978305d492198 files/digest-text-format-0.61 67
+MD5 7594a10f1dc61b8d469442f82a390411 files/digest-text-format-0.64 250
+RMD160 43ea74fb4e42879c98e1564ddf4be9deaf2a53d0 files/digest-text-format-0.64 250
+SHA256 53a8fbaa6f5af31f777f806698b5111201c65edcab2fdf4401675c3cd80f5032 files/digest-text-format-0.64 250
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEK1fwJrHF4yAQTrARAisAAJ0Q2P1sktWgC9kjJuG6QOCTJWL+pwCcCk6S
-z+CtAm6W/vvGoxOwJ6rbp3o=
-=71c0
+iD8DBQFEgcepAiZjviIA2XgRAi/lAJ9EHdczytfERTEAzcymt8Axi4higgCg8ff4
+lg7tg5gcL6JfhV3e75QJRrQ=
+=Uiki
 -----END PGP SIGNATURE-----
