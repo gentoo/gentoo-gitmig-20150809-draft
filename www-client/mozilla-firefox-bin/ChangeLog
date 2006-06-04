@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.41 2006/06/03 02:49:01 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.42 2006/06/04 02:46:04 halcy0n Exp $
+
+  04 Jun 2006; Mark Loeser <halcy0n@gentoo.org>
+  mozilla-firefox-bin-1.5.0.4.ebuild:
+  Stable on x86; bug #135254
 
   03 Jun 2006; Jory A. Pratt <anarchy@gentoo.org> ChangeLog:
   amd64 stable wrt bug #135254

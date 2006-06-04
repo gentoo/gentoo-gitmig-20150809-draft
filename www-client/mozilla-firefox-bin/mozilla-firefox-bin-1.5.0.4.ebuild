@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.5.0.4.ebuild,v 1.1 2006/06/03 00:16:10 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.5.0.4.ebuild,v 1.2 2006/06/04 02:46:04 halcy0n Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -20,7 +20,7 @@ for X in ${SHORTLANGS} ; do
 	SRC_URI="${SRC_URI} linguas_${X%%-*}? ( mirror://gentoo/firefox-${X}-${PV}.xpi )"
 done
 
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE=""
