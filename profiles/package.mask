@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5464 2006/06/04 11:11:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5465 2006/06/04 12:35:13 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -38,6 +38,7 @@
 >=net-print/foomatic-3.0.20060601
 >=net-print/foomatic-db-20060601
 >=net-print/foomatic-db-engine-3.0.20060601
+>=net-print/foomatic-db-ppds-20060601
 >=net-print/foomatic-filters-3.0.20060601
 >=net-print/foomatic-filters-ppds-20060601
 
@@ -292,10 +293,6 @@ gnome-extra/gnome-power-manager
 # net-analyzer/base should replace net-analyzer/acid
 # For more information, please see bug 130980
 net-analyzer/acid
-
-# Stefan Schweizer <genstef@gentoo.org> (23 Apr 2005)
-# Please use app-crypt/gnupg-1.9.* now
-app-crypt/gpg-agent
 
 # Marcelo Goes <vanquirius@gentoo.org> (21 Apr 2006)
 # utf8 patch remains to be ported
