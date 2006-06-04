@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/tcldom-2.6.ebuild,v 1.5 2005/05/12 03:31:24 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/tcldom-2.6.ebuild,v 1.6 2006/06/04 02:34:19 matsuu Exp $
 
 DESCRIPTION="Document Object Model For Tcl"
 HOMEPAGE="http://tclxml.sourceforge.net/tcldom.html"
@@ -13,6 +13,14 @@ KEYWORDS="x86 ~ppc ~amd64"
 DEPEND=">=dev-lang/tcl-8.3.3"
 RDEPEND="${DEPEND}
 	>=dev-tcltk/tclxml-2.6"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# bug 131148
+	sed -i -e "s/relid'/relid/" \
+		{,src-libxml2/}configure {config,tclconfig}/tcl.m4 || die
+}
 
 src_compile() {
 	econf || die
