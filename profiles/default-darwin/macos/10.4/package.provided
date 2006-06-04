@@ -123,7 +123,7 @@ sys-libs/ncurses-8.1
 sys-libs/pam-1.9
 sys-libs/pam-modules-13
 sys-libs/yacc-1.1.4
-sys-libs/zlib-1.2.2
+sys-libs/zlib-1.2.3
 sys-process/lsof-4.73
 sys-process/vixie-cron-3.0.1
 www-servers/jboss-3.2.3
