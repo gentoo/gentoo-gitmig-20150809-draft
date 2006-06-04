@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.32.ebuild,v 1.7 2006/06/04 14:07:42 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.32.ebuild,v 1.8 2006/06/04 14:25:50 xmerlin Exp $
 
 DESCRIPTION="Cluster synchronization tool."
 SRC_URI="http://oss.linbit.com/csync2/${P}.tar.gz"
 HOMEPAGE="http://oss.linbit.com/csync2/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 
@@ -55,6 +55,10 @@ pkg_postinst() {
 	einfo "this command after you install:"
 	echo
 	einfo "emerge  --config =${PF}"
+	echo
+	einfo "Now you can find csync2.cfg under /etc/${PN}"
+	einfo "Please move you old config to the right location"
+	echo
 }
 
 pkg_config() {
