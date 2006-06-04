@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.3_rc5.ebuild,v 1.1 2006/06/04 14:00:21 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.3_rc5.ebuild,v 1.2 2006/06/04 21:32:31 mr_bones_ Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -190,9 +190,9 @@ pkg_postinst() {
 
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
-	
+
 	eselect oodict update
-	
+
 	[ -x /sbin/chpax ] && [ -e /usr/lib/openoffice/program/soffice.bin ] && chpax -zm /usr/lib/openoffice/program/soffice.bin
 
 	einfo " To start OpenOffice.org, run:"
