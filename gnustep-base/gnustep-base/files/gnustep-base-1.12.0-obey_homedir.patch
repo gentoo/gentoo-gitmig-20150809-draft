@@ -1,0 +1,39 @@
+To avoid sandbox violations, we need GNUstep to obey the environment
+variables before digging around in the password database for the
+homedir.
+-- grobian@gentoo.org
+
+--- gnustep-base-1.12.0/Source/NSPathUtilities.m
++++ gnustep-base-1.12.0/Source/NSPathUtilities.m
+@@ -1050,12 +1050,28 @@
+ 
+ #if !defined(__MINGW32__)
+   struct passwd *pw;
++  char *env_var;
+ 
+   [gnustep_global_lock lock];
+-  pw = getpwnam ([loginName cString]);
+-  if (pw != 0  && pw->pw_dir != NULL)
++  /* First try to get the homedir from the environment; it may be more
++   * up-to-date then the password backend.  If this fails for some
++   * reason, retrieve the homedir from the password backend.  The first
++   * step to obey the user's environment variables is at least necessary
++   * for avoiding  Gentoo portage's sandbox violations when building
++   * other GNUstep applications.
++   */
++  if((env_var = getenv("HOME")) != NULL)
++    {
++      s = [NSString stringWithCString: (const char *)env_var];
++    }
++  else
+     {
+-      s = [NSString stringWithCString: pw->pw_dir];
++      /* ok, homedir variable not found, do a lookup */
++      pw = getpwnam ([loginName cString]);
++      if (pw != 0  && pw->pw_dir != NULL)
++      {
++        s = [NSString stringWithCString: pw->pw_dir];
++      }
+     }
+   [gnustep_global_lock unlock];
+ #else

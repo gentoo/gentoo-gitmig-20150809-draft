@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.12.0.ebuild,v 1.1 2006/03/19 14:37:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.12.0.ebuild,v 1.2 2006/06/04 12:58:53 grobian Exp $
 
 inherit gnustep
 
@@ -48,7 +48,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-#	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/base-user-defaults.patch-1.10.0
+	epatch "${FILESDIR}/${P}"-obey_homedir.patch
 }
 
 src_compile() {
