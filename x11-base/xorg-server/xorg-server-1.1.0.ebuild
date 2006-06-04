@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0.ebuild,v 1.1 2006/05/23 04:30:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0.ebuild,v 1.2 2006/06/04 18:28:25 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -106,10 +106,12 @@ IUSE_VIDEO_CARDS="
 
 	video_cards_nvidia
 	video_cards_fglrx"
+IUSE_SERVERS="dmx kdrive xorg"
 IUSE="${IUSE_VIDEO_CARDS}
 	${IUSE_INPUT_DEVICES}
+	${IUSE_SERVERS}
 	3dfx
-	dmx dri ipv6 kdrive minimal nptl sdl xorg xprint"
+	dri ipv6 minimal nptl sdl xprint"
 RDEPEND="x11-libs/libXfont
 	x11-libs/xtrans
 	x11-libs/libXau
@@ -475,6 +477,8 @@ PDEPEND="
 LICENSE="${LICENSE} MIT"
 
 pkg_setup() {
+	ensure_a_server_is_building
+
 	# localstatedir is used for the log location; we need to override the default
 	# from ebuild.sh
 	# sysconfdir is used for the xorg.conf location; same applies
@@ -645,4 +649,13 @@ xprint_src_install() {
 	# Move profile scripts, we can't touch /etc/profile.d/ in Gentoo
 	dodoc ${D}/etc/profile.d/xprint*
 	rm -f ${D}/etc/profile.d/xprint*
+}
+
+ensure_a_server_is_building() {
+	for server in ${IUSE_SERVERS}; do
+		use ${server} && return;
+	done
+	eerror "You need to specify at least one server to build."
+	eerror "Valid servers are: ${IUSE_SERVERS}."
+	die "No servers were specified to build."
 }
