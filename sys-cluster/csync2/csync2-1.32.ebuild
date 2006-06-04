@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.32.ebuild,v 1.4 2006/06/04 13:23:50 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.32.ebuild,v 1.5 2006/06/04 13:37:00 xmerlin Exp $
 
 DESCRIPTION="Cluster synchronization tool."
 SRC_URI="http://oss.linbit.com/csync2/${P}.tar.gz"
@@ -25,8 +25,6 @@ src_compile() {
 		--localstatedir=/var \
 		--sysconfdir=/etc/csync2 \
 		|| die
-
-	econf --localstatedir=/var || die
 
 	emake || die
 }
