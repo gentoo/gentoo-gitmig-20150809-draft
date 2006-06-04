@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.2.ebuild,v 1.5 2006/05/19 20:29:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.2.ebuild,v 1.6 2006/06/04 21:06:35 flameeyes Exp $
 
 inherit font multilib autotools flag-o-matic
 
@@ -129,6 +129,10 @@ src_compile() {
 	( use mmx || use amd64 ) && myconf="${myconf} --enable-mmx" || \
 		myconf="${myconf} --disable-mmx"
 
+	has_version 'x11-base/xorg-server' && \
+		appdefaultsdir="/usr/share/X11/app-defaults" || \
+		appdefaultsdir="/etc/X11/app-defaults"
+
 	econf ${xawconf} \
 		$(use_enable alsa) \
 		$(use_enable jpeg) \
@@ -149,6 +153,7 @@ src_compile() {
 		--enable-pixmaps \
 		--disable-cpu-detection \
 		--disable-divx4linux \
+		--with-appdefaultsdir=${appdefaultsdir} \
 		${myconf} \
 		|| die "Configuration failed."
 
