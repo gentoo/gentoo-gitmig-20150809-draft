@@ -1,0 +1,149 @@
+diff -ruN obconf-1.6/src/handlers.c obconf-1.6_hideMenuHeader/src/handlers.c
+--- obconf-1.6/src/handlers.c	2006-03-06 23:40:50.000000000 -0800
++++ obconf-1.6_hideMenuHeader/src/handlers.c	2006-04-16 22:10:59.000000000 -0700
+@@ -164,6 +164,14 @@
+     mapping = FALSE;
+ }
+ 
++void setup_hide_menu_header(GtkWidget *w)
++{
++    mapping = TRUE;
++    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w),
++                                 tree_get_bool("theme/hideMenuHeader", TRUE));
++    mapping = FALSE;
++}
++
+ void setup_place_mouse(GtkWidget *w)
+ {
+     gchar *s;
+@@ -592,6 +600,13 @@
+     tree_set_bool("focus/focusNew", gtk_toggle_button_get_active(w));
+ }
+ 
++void on_hide_menu_header_toggled(GtkToggleButton *w, gpointer data)
++{
++    if (mapping) return;
++
++    tree_set_bool("theme/hideMenuHeader", gtk_toggle_button_get_active(w));
++}
++
+ void on_place_mouse_toggled(GtkToggleButton *w, gpointer data)
+ {
+     if (mapping) return;
+diff -ruN obconf-1.6/src/main.c obconf-1.6_hideMenuHeader/src/main.c
+--- obconf-1.6/src/main.c	2006-03-06 23:40:50.000000000 -0800
++++ obconf-1.6_hideMenuHeader/src/main.c	2006-04-16 22:10:49.000000000 -0700
+@@ -90,6 +90,7 @@
+     setup_focus_raise(glade_xml_get_widget(glade, "focus_raise"));
+     setup_focus_delay(glade_xml_get_widget(glade, "focus_delay"));
+     setup_focus_new(glade_xml_get_widget(glade, "focus_new"));
++    setup_hide_menu_header(glade_xml_get_widget(glade, "hide_menu_header"));
+     setup_place_mouse(glade_xml_get_widget(glade, "place_mouse"));
+     setup_resist_window(glade_xml_get_widget(glade, "resist_window"));
+     setup_resist_edge(glade_xml_get_widget(glade, "resist_edge"));
+diff -ruN obconf-1.6/src/obconf.glade obconf-1.6_hideMenuHeader/src/obconf.glade
+--- obconf-1.6/src/obconf.glade	2006-03-07 00:23:34.000000000 -0800
++++ obconf-1.6_hideMenuHeader/src/obconf.glade	2006-04-16 22:10:54.000000000 -0700
+@@ -297,6 +297,102 @@
+ 		      <property name="fill">True</property>
+ 		    </packing>
+ 		  </child>
++
++		  <child>
++		    <widget class="GtkLabel" id="label85">
++		      <property name="visible">True</property>
++		      <property name="label" translatable="yes">&lt;span weight=&quot;bold&quot;&gt;Menu&lt;/span&gt;</property>
++		      <property name="use_underline">False</property>
++		      <property name="use_markup">True</property>
++		      <property name="justify">GTK_JUSTIFY_LEFT</property>
++		      <property name="wrap">False</property>
++		      <property name="selectable">False</property>
++		      <property name="xalign">0</property>
++		      <property name="yalign">0.5</property>
++		      <property name="xpad">0</property>
++		      <property name="ypad">0</property>
++		      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
++		      <property name="width_chars">-1</property>
++		      <property name="single_line_mode">False</property>
++		      <property name="angle">0</property>
++		    </widget>
++		    <packing>
++		      <property name="padding">0</property>
++		      <property name="expand">False</property>
++		      <property name="fill">False</property>
++		    </packing>
++		  </child>
++
++		  <child>
++		    <widget class="GtkHBox" id="hbox41">
++		      <property name="visible">True</property>
++		      <property name="homogeneous">False</property>
++		      <property name="spacing">0</property>
++
++		      <child>
++			<widget class="GtkLabel" id="label84">
++			  <property name="visible">True</property>
++			  <property name="label" translatable="yes">    </property>
++			  <property name="use_underline">False</property>
++			  <property name="use_markup">False</property>
++			  <property name="justify">GTK_JUSTIFY_LEFT</property>
++			  <property name="wrap">False</property>
++			  <property name="selectable">False</property>
++			  <property name="xalign">0.5</property>
++			  <property name="yalign">0.5</property>
++			  <property name="xpad">0</property>
++			  <property name="ypad">0</property>
++			  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
++			  <property name="width_chars">-1</property>
++			  <property name="single_line_mode">False</property>
++			  <property name="angle">0</property>
++			</widget>
++			<packing>
++			  <property name="padding">0</property>
++			  <property name="expand">False</property>
++			  <property name="fill">False</property>
++			</packing>
++		      </child>
++
++		      <child>
++			<widget class="GtkVBox" id="vbox36">
++			  <property name="visible">True</property>
++			  <property name="homogeneous">False</property>
++			  <property name="spacing">6</property>
++
++			  <child>
++			    <widget class="GtkCheckButton" id="hide_menu_header">
++			      <property name="visible">True</property>
++			      <property name="can_focus">True</property>
++			      <property name="label" translatable="yes">_Hide menu header</property>
++			      <property name="use_underline">True</property>
++			      <property name="relief">GTK_RELIEF_NORMAL</property>
++			      <property name="focus_on_click">True</property>
++			      <property name="active">False</property>
++			      <property name="inconsistent">False</property>
++			      <property name="draw_indicator">True</property>
++			      <signal name="toggled" handler="on_hide_menu_header_toggled" after="yes" last_modification_time="Sun, 14 Sep 2003 11:25:04 GMT"/>
++			    </widget>
++			    <packing>
++			      <property name="padding">0</property>
++			      <property name="expand">False</property>
++			      <property name="fill">False</property>
++			    </packing>
++			  </child>
++			</widget>
++			<packing>
++			  <property name="padding">0</property>
++			  <property name="expand">True</property>
++			  <property name="fill">True</property>
++			</packing>
++		      </child>
++		    </widget>
++		    <packing>
++		      <property name="padding">0</property>
++		      <property name="expand">True</property>
++		      <property name="fill">True</property>
++		    </packing>
++		  </child>
+ 		</widget>
+ 		<packing>
+ 		  <property name="padding">0</property>
