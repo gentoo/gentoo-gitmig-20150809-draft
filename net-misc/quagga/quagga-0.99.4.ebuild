@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.4.ebuild,v 1.1 2006/05/23 21:23:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.4.ebuild,v 1.2 2006/06/04 21:51:28 mrness Exp $
 
 inherit eutils multilib autotools
 
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP. Includes OSPFAPI, NET-SNMP and IPV6 support."
 HOMEPAGE="http://quagga.net/"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20060523.tar.gz"
+	mirror://gentoo/${P}-patches-20060604.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,6 +24,7 @@ src_unpack() {
 	unpack ${A} || die "failed to unpack sources"
 
 	cd "${S}" || die "source dir not found"
+	epatch "${WORKDIR}/patch/${P}-zebra-linkorder.patch"
 
 	# TCP MD5 for BGP patch for Linux (RFC 2385) - http://hasso.linux.ee/doku.php/english:network:rfc2385
 	use tcpmd5 && epatch "${WORKDIR}/patch/ht-20050321-0.98.2-bgp-md5_adapted.patch"
