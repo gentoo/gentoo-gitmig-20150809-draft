@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 e8c12f391d0bc5622b88f9894b2235b7 ChangeLog 2485
 MD5 032a62f61bd560e76f0130861b79be73 files/digest-l2tpd-0.70_pre20031121 155
-MD5 b585ccb98a0e98b243e3f49335dbd380 files/l2tpd-0.70_pre20031121-gcc41.patch 687
+MD5 0578517e4aacffe7a13b53a9f2028128 files/l2tpd-0.70_pre20031121-gcc41.patch 476
 MD5 650e9deed5657b0b1e9722c8316fd70d files/l2tpd-init 718
 MD5 4c2ed2117f6736eda2db5fa5b5a52df7 l2tpd-0.70_pre20031121.ebuild 1203
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEgpIhjG8pv1lIUX4RAq1pAJ4vgyMjubifw/Ap+BLLFIkVyzr7TgCdHYsS
-tqrDwfDFt/qayJ1zMdFpPS8=
-=YzKb
+iD8DBQFEgpMujG8pv1lIUX4RAo8sAKDMBqqzCEbtEtEEwEAlm090+gSblwCgm0Ke
+CEScS7vvx3vxJUUsbe6dpLo=
+=lZCL
 -----END PGP SIGNATURE-----
