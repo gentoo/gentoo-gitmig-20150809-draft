@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nx-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.13 2006/04/30 17:16:01 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.14 2006/06/04 08:56:56 stuart Exp $
+
+  04 Jun 2006; Stuart Herbert <stuart@gentoo.org> nx-x11-1.5.0-r8.ebuild:
+  Added ~amd64, to allow testing on no-multilib profiles
 
 *nx-x11-1.5.0-r8 (30 Apr 2006)
 

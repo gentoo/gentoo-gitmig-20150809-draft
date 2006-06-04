@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/nx-x11-1.5.0-r8.ebuild,v 1.1 2006/04/30 17:16:01 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/nx-x11-1.5.0-r8.ebuild,v 1.2 2006/06/04 08:56:56 stuart Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ SRC_URI="$URI_BASE/$SRC_NX_X11 $URI_BASE/$SRC_NXAGENT
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="rdesktop vnc"
 
 DEPEND="!<net-misc/nx-x11-1.5.0-r8

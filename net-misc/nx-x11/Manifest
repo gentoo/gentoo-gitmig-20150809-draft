@@ -1,4 +1,4 @@
-MD5 e96a4e910a0b5f30e367ebf23ac99b91 ChangeLog 4391
+MD5 5a5e08f22754fd5aedfbb44b89cf1f9c ChangeLog 4523
 MD5 1b2af928e4694faf7b78f267bd670f61 files/1.5.0/nx-x11-1.5.0-nxcomp-fix.patch 3479
 MD5 196a4104b3be214d69bc1a9ef841597c files/1.5.0/nx-x11-1.5.0-plastik-render-fix.patch 694
 MD5 5895e099c63cb7b52258ccc29814d9b8 files/1.5.0/nx-x11-1.5.0-xorg7-font-fix.patch 19674
@@ -14,4 +14,4 @@ MD5 d2caae40bdf5748d68ca46ad1d0ec951 files/nx-x11-1.4.0.xprint.patch 341
 MD5 77fd36d93b0a1b9f35abbe6a1c146561 metadata.xml 482
 MD5 dd061df9cf4e99f32835ce0c74fc024e nx-x11-1.4.0-r3.ebuild 2847
 MD5 02c0cb9a393c005800a850130c417b22 nx-x11-1.4.0-r4.ebuild 2917
-MD5 6a9ab59eacc5b2748bd4085686b456e1 nx-x11-1.5.0-r8.ebuild 2620
+MD5 a4ba4e1eb775d2f6f9ce6ffaf1a7424f nx-x11-1.5.0-r8.ebuild 2627
