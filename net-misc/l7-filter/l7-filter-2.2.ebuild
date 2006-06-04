@@ -1,14 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.1_p1.ebuild,v 1.2 2006/06/04 13:01:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.2.ebuild,v 1.1 2006/06/04 13:01:26 dragonheart Exp $
 
 inherit linux-info eutils
 
 MY_P=netfilter-layer7-v${PV/_/-}
 DESCRIPTION="Kernel modules for layer 7 iptables filtering"
 HOMEPAGE="http://l7-filter.sourceforge.net"
-#SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz
-SRC_URI="mirror://gentoo/l7-filter/${MY_P}.tar.gz
+SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz
 	mirror://gentoo/additional_patch_for_2.6.13.diff"
 
 LICENSE="GPL-2"
@@ -24,7 +23,7 @@ RDEPEND="net-misc/l7-protocols"
 which_patch() {
 	if kernel_is ge 2 6 13
 	then
-		PATCH=kernel-2.6.13-2.6.15-layer7-2.1.patch
+		PATCH=kernel-2.6.13-2.6.16-layer7-2.2.patch
 	elif kernel_is ge 2 6 11
 	then
 		PATCH=for_older_kernels/kernel-2.6.11-2.6.12-layer7-1.4.patch
@@ -33,7 +32,7 @@ which_patch() {
 		PATCH=for_older_kernels/kernel-2.6.9-2.6.10-layer7-1.2.patch
 	elif kernel_is 2 4
 	then
-		PATCH=kernel-2.4-layer7-2.1.patch
+		PATCH=kernel-2.4-layer7-2.2.patch
 	else
 		die "No L7-filter patch for Kernel version ${KV_FULL} - sorry not supported"
 	fi
