@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/kdeaccessibility-3.5.3.ebuild,v 1.1 2006/06/02 20:25:04 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/kdeaccessibility-3.5.3.ebuild,v 1.2 2006/06/04 09:19:45 genstef Exp $
 
 inherit kde-dist
 
 DESCRIPTION="KDE accessibility module"
-KEYWORDS="alpha amd64 ~hppa ~ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa gstreamer"
 
 DEPEND="media-libs/akode
