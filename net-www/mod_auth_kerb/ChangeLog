@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_auth_kerb
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/ChangeLog,v 1.12 2006/05/13 21:30:08 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/ChangeLog,v 1.13 2006/06/04 19:21:02 vericgar Exp $
+
+  04 Jun 2006; Michael Stewart <vericgar@gentoo.org>
+  -mod_auth_kerb-4.11.ebuild, -mod_auth_kerb-4.11-r1.ebuild:
+  Remove old-style ebuilds
 
   13 May 2006; Mark Loeser <halcy0n@gentoo.org>
   mod_auth_kerb-5.0_rc6.ebuild:
