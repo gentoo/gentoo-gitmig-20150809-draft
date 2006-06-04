@@ -1,0 +1,11 @@
+# ChangeLog for x11-plugins/matchbox-desktop-image-browser
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/ChangeLog,v 1.1 2006/06/04 21:51:23 yvasilev Exp $
+
+*matchbox-desktop-image-browser-0.2 (04 Jun 2006)
+
+  04 Jun 2006; <yvasilev@gentoo.org>
+  +files/matchbox-desktop-image-browser-0.2-include_fix.patch,
+  +metadata.xml, +matchbox-desktop-image-browser-0.2.ebuild:
+  Initial Import.
+
