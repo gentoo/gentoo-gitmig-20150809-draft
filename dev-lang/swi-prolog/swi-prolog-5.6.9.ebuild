@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.9.ebuild,v 1.3 2006/05/23 11:24:23 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.9.ebuild,v 1.4 2006/06/04 08:50:57 keri Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -40,6 +40,7 @@ src_unpack() {
 
 	sed -i -e "s/man boot library/boot library/" src/Makefile.in
 	epatch "${FILESDIR}"/${PN}-CFLAGS.patch
+	epatch "${FILESDIR}"/${PN}-PLBASE.patch
 	epatch "${FILESDIR}"/${PN}-test.patch
 
 	if ! use minimal ; then
@@ -66,6 +67,7 @@ src_compile() {
 
 	cd "${S}"/src
 	econf \
+		--libdir=/usr/$(get_libdir) \
 		${threadconf} \
 		$(use_enable gmp) \
 		$(use_enable readline) \
@@ -85,6 +87,7 @@ src_compile() {
 
 		cd "${S}/packages"
 		econf \
+			--libdir=/usr/$(get_libdir) \
 			${threadconf} \
 			$(use_enable !static shared) \
 			--without-C-sicstus \
