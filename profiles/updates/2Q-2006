@@ -17,3 +17,4 @@ move www-apps/nut sys-power/nut
 move media-tv/v4l-dvb-cvs media-tv/v4l-dvb-hg
 move sys-apps/pmtools sys-power/pmtools
 move app-crypt/gpg-agent app-crypt/gnupg
+move app-mobilephone/obexfs sys-fs/obexfs
