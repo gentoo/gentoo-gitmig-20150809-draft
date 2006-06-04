@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.3 2006/06/02 04:14:07 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.4 2006/06/04 05:19:30 halcy0n Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -45,6 +45,7 @@ kk - Kazakh locale
 km - Khmer locale
 ko - Korean locale
 ku - Kurdish (latin) locale
+la - Latin2 locale
 lo - Lao locale
 lt - Lithuanian locale
 lv - Latvian locale
