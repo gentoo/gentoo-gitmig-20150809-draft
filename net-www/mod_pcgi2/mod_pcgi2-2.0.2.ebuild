@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.2.ebuild,v 1.4 2005/10/03 03:51:46 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.2.ebuild,v 1.5 2006/06/04 18:44:30 vericgar Exp $
 
 inherit eutils apache-module
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND="www-apps/pcgi"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN/mod_}
 
