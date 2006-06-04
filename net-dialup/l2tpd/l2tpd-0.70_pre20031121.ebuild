@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.70_pre20031121.ebuild,v 1.6 2006/05/30 21:13:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.70_pre20031121.ebuild,v 1.7 2006/06/04 07:55:51 mrness Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 
 	epatch "${MY_P}-2.diff"
+	epatch "${FILESDIR}/${P}-gcc41.patch"
 
 	#Put CFLAGS from make.conf and disable builtin definition of log function
 	sed -i.orig -e "s|-ggdb|${CFLAGS} -fno-builtin-log|" "${S}/Makefile" || die "failed to change CFLAGS in Makefile"

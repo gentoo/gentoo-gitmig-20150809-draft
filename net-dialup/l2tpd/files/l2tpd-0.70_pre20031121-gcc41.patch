@@ -1,0 +1,16 @@
+diff -ur l2tpd-0.70-pre20031121.orig-orig/aaa.h l2tpd-0.70-pre20031121.orig/aaa.h
+--- l2tpd-0.70-pre20031121.orig-orig/aaa.h	2006-06-03 14:26:19.000000000 -0400
++++ l2tpd-0.70-pre20031121.orig/aaa.h	2006-06-03 14:27:41.000000000 -0400
+@@ -48,7 +48,7 @@
+ };
+ 
+ extern struct lns *get_lns (struct tunnel *);
+-extern struct addr_ent *uaddr[];
++static struct addr_ent *uaddr[];
+ extern unsigned int get_addr (struct iprange *);
+ extern void reserve_addr (unsigned int);
+ extern void unreserve_addr (unsigned int);
+Only in l2tpd-0.70-pre20031121.orig: .aaa.h.swp
+Only in l2tpd-0.70-pre20031121.orig: aaa.o
+Only in l2tpd-0.70-pre20031121.orig: l2tpd
+Only in l2tpd-0.70-pre20031121.orig: md5.o
