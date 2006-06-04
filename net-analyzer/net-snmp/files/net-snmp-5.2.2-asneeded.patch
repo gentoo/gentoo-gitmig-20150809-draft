@@ -20,7 +20,21 @@ Index: net-snmp-5.2.2/configure.in
 ===================================================================
 --- net-snmp-5.2.2.orig/configure.in
 +++ net-snmp-5.2.2/configure.in
-@@ -2671,6 +2671,7 @@ if test "x$useopenssl" != "xno" ; then
+@@ -2362,11 +2362,12 @@ if test $? -eq 0 ; then
+         *)
+             AC_CHECK_HEADER(sensors/sensors.h,,
+                 [AC_MSG_ERROR([asked to use lm_sensors but I couldn't find sensors/sensors.h])])
+-            AC_CHECK_LIB(sensors, sensors_get_detected_chips, LIBS="${LIBS} -lsensors",
++            AC_CHECK_LIB(sensors, sensors_get_detected_chips, SENSORLIBS="-lsensors",
+                 [AC_MSG_ERROR([asked to use lm_sensors but I couldn't find -lsensors])])
+             ;;
+         esac
+ fi
++AC_SUBST(SENSORLIBS)
+ 
+ #
+ # Install the various perl modules
+@@ -2691,6 +2692,7 @@ if test "x$useopenssl" != "xno" ; then
          encrmodes="[disabled]"
      fi
      AC_DEFINE(USE_OPENSSL)
@@ -28,7 +42,7 @@ Index: net-snmp-5.2.2/configure.in
      AC_MSG_RESULT(OpenSSL Support)
  elif test "x$usepkcs" != "xno" ; then
      authmodes="MD5 SHA1"
-@@ -2690,6 +2691,7 @@ fi
+@@ -2710,6 +2712,7 @@ fi
  if test "x$enable_md5" = "xno"; then
      authmodes=`echo $authmodes | sed 's/MD5 *//;'`
  fi
@@ -36,3 +50,21 @@ Index: net-snmp-5.2.2/configure.in
  
  AC_MSG_CACHE_ADD(Authentication support:     $authmodes)
  AC_MSG_CACHE_ADD(Encryption support:         $encrmodes)
+Index: net-snmp-5.2.2/agent/Makefile.in
+===================================================================
+--- net-snmp-5.2.2.orig/agent/Makefile.in
++++ net-snmp-5.2.2/agent/Makefile.in
+@@ -130,11 +130,11 @@ snmpd$(EXEEXT):	${LAGENTOBJS} $(USELIBS)
+ 
+ 
+ libnetsnmpagent.$(LIB_EXTENSION)$(LIB_VERSION):    ${LLIBAGENTOBJS} libnetsnmpmibs.$(LIB_EXTENSION)$(LIB_VERSION)
+-	$(LIB_LD_CMD) libnetsnmpagent.$(LIB_EXTENSION)$(LIB_VERSION) ${LLIBAGENTOBJS}  $(LIB_LD_LIBS)
++	$(LIB_LD_CMD) libnetsnmpagent.$(LIB_EXTENSION)$(LIB_VERSION) ${LLIBAGENTOBJS}  $(LIB_LD_LIBS) helpers/libnetsnmphelpers.la
+ 	$(RANLIB) libnetsnmpagent.$(LIB_EXTENSION)$(LIB_VERSION)
+ 
+ libnetsnmpmibs.$(LIB_EXTENSION)$(LIB_VERSION):    ${LMIBOBJS}
+-	$(LIB_LD_CMD) libnetsnmpmibs.$(LIB_EXTENSION)$(LIB_VERSION) ${LMIBOBJS}  $(LIB_LD_LIBS)
++	$(LIB_LD_CMD) libnetsnmpmibs.$(LIB_EXTENSION)$(LIB_VERSION) ${LMIBOBJS}  $(LIB_LD_LIBS) @SENSORLIBS@
+ 	$(RANLIB) libnetsnmpmibs.$(LIB_EXTENSION)$(LIB_VERSION)
+ 
+ embedperlinstall:
