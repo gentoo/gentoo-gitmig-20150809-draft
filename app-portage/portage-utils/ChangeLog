@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.47 2006/05/16 21:33:12 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.48 2006/06/04 22:48:14 solar Exp $
+
+*portage-utils-0.1.18 (04 Jun 2006)
+
+  04 Jun 2006; <solar@gentoo.org> +portage-utils-0.1.18.ebuild:
+  - version bump. rename qimlate to qcache [tcort]. make qpkg restrict chmod
+  settings when -P option is used. Make qdepends static buffer even bigger for X
+  and PHP
 
 *portage-utils-0.1.17-r1 (16 May 2006)
 

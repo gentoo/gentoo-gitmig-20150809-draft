@@ -1,12 +1,67 @@
-MD5 c9140af0541ce1fe55be6f399c850843 ChangeLog 10513
-MD5 c1884644ce45bbd0053fa0450906637a files/digest-portage-utils-0.1.15 262
-MD5 bceb8979c5802dcfdd92ce05626af703 files/digest-portage-utils-0.1.16 72
-MD5 95d8fbb9e5074beb0ecb70bb89a4c78b files/digest-portage-utils-0.1.17 72
-MD5 95d8fbb9e5074beb0ecb70bb89a4c78b files/digest-portage-utils-0.1.17-r1 72
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX portage-utils-0.1.17-bug133514.patch 992 RMD160 202f56f76847de9881f99b316b4b5e972e7ae645 SHA1 c5adc2a23fc6a4f018fea8431913744c02f7d06a SHA256 63330fe007959eb162f22c5fdcd38d0153129da24c7a57cdbce2596ddb3215ac
 MD5 777e171783321a0a006df55f25102878 files/portage-utils-0.1.17-bug133514.patch 992
+RMD160 202f56f76847de9881f99b316b4b5e972e7ae645 files/portage-utils-0.1.17-bug133514.patch 992
+SHA256 63330fe007959eb162f22c5fdcd38d0153129da24c7a57cdbce2596ddb3215ac files/portage-utils-0.1.17-bug133514.patch 992
+AUX portage-utils-0.1.17-enum.patch 3237 RMD160 86beef198c9bce242f1b9cb523a9c69bd1504582 SHA1 0e8f3b6ecc7f13e544d0a0c3dc61d0105c0dcc0a SHA256 80f17923559875c2217c6fa4472d94a58d8289e483dd1bddcbd0a6f50fd1960c
 MD5 9a7f00bdf4ed218d4f33fc5909c1e25c files/portage-utils-0.1.17-enum.patch 3237
-MD5 5a808b54f37942c1de1ff75edc43f69d metadata.xml 281
+RMD160 86beef198c9bce242f1b9cb523a9c69bd1504582 files/portage-utils-0.1.17-enum.patch 3237
+SHA256 80f17923559875c2217c6fa4472d94a58d8289e483dd1bddcbd0a6f50fd1960c files/portage-utils-0.1.17-enum.patch 3237
+DIST portage-utils-0.1.15.tar.bz2 57132 RMD160 c41aa8aa5ce5d36fd009a1533b4eb5e67b8a934f SHA256 94f228be8372d409deefe709e2d0ab49cf4143024084d5abee8c0f6da15c7d7e
+DIST portage-utils-0.1.16.tar.bz2 58921
+DIST portage-utils-0.1.17.tar.bz2 60785
+DIST portage-utils-0.1.18.tar.bz2 62442 RMD160 90ecac3fcf1134a39ba51ab9d0a853b1c5d67b58 SHA1 d2bd583e4ee0e2bcb66c5448b57edd0155f67b2f SHA256 4263b9f4e25ed9bfab19b00a8041fb7b015d67649a17762c96630603ad2e369b
+EBUILD portage-utils-0.1.15.ebuild 714 RMD160 2de791d66f3475c1b6b8828209d05b443a19b62c SHA1 47bcb2e7a59fa1c8c4535d7bbcea4c011f81ac93 SHA256 a4b32454dec0bed3d72f283bdf7e13dd74e906aeababa4b135d00c7aa08f78c6
 MD5 44bea646c7eec7a2d090794f752e5753 portage-utils-0.1.15.ebuild 714
+RMD160 2de791d66f3475c1b6b8828209d05b443a19b62c portage-utils-0.1.15.ebuild 714
+SHA256 a4b32454dec0bed3d72f283bdf7e13dd74e906aeababa4b135d00c7aa08f78c6 portage-utils-0.1.15.ebuild 714
+EBUILD portage-utils-0.1.16.ebuild 679 RMD160 bfcd065f61c2e5a9d6b9afc57e8b22d430c16fd2 SHA1 3575c695435b7b6f10d35c55bc1436d68403b242 SHA256 5cdf5d2d1211ace73d741c3f647d7cd8cdf5ed61aa5df02c5afc026078964762
 MD5 dd973c166758e6297dc16888171d2d94 portage-utils-0.1.16.ebuild 679
+RMD160 bfcd065f61c2e5a9d6b9afc57e8b22d430c16fd2 portage-utils-0.1.16.ebuild 679
+SHA256 5cdf5d2d1211ace73d741c3f647d7cd8cdf5ed61aa5df02c5afc026078964762 portage-utils-0.1.16.ebuild 679
+EBUILD portage-utils-0.1.17-r1.ebuild 806 RMD160 db5cb77fb06b460c47bdf426add9ecd8a3fd46e3 SHA1 6ddb29f0369d0fea1fb27ab860be8cd25b549a8e SHA256 d7d9444b959145aea96be8fecda000a90fbf48f06e993beabe48834e5df916b5
 MD5 b991b702a029658f62aadb74884de14c portage-utils-0.1.17-r1.ebuild 806
+RMD160 db5cb77fb06b460c47bdf426add9ecd8a3fd46e3 portage-utils-0.1.17-r1.ebuild 806
+SHA256 d7d9444b959145aea96be8fecda000a90fbf48f06e993beabe48834e5df916b5 portage-utils-0.1.17-r1.ebuild 806
+EBUILD portage-utils-0.1.17.ebuild 762 RMD160 b0cf5e717888b023b06888c78606065c11de2f00 SHA1 c7a95c81209e879e04e41346aca2028bcdf2b833 SHA256 3e22254253ffd12982838e0467747e4b4a7ee57cca4a1d30efc84037ada84b58
 MD5 31d4a62883d41d2435728d517fa2ace6 portage-utils-0.1.17.ebuild 762
+RMD160 b0cf5e717888b023b06888c78606065c11de2f00 portage-utils-0.1.17.ebuild 762
+SHA256 3e22254253ffd12982838e0467747e4b4a7ee57cca4a1d30efc84037ada84b58 portage-utils-0.1.17.ebuild 762
+EBUILD portage-utils-0.1.18.ebuild 763 RMD160 9741b7db5fdf4e94400223a2790fe811592973b3 SHA1 dd56eba197afb8ff6db187e6bf5e8baa0f6fdfb2 SHA256 f21975325ac54c04bdac3cc2da0e9a639a022a619cb9b83a251a74fac3a1028f
+MD5 1c87685af7ad495b9c437e31adba345a portage-utils-0.1.18.ebuild 763
+RMD160 9741b7db5fdf4e94400223a2790fe811592973b3 portage-utils-0.1.18.ebuild 763
+SHA256 f21975325ac54c04bdac3cc2da0e9a639a022a619cb9b83a251a74fac3a1028f portage-utils-0.1.18.ebuild 763
+MISC ChangeLog 10783 RMD160 0071070b1fa8f7b372c8e707e09efe0d3fb899ce SHA1 62d8b77c87f71f4d9be805dc33ed4ad2cbb62849 SHA256 a8b068aebedf87b06c33efe93096834d9d869a3c55429867f71c00b3250bfaec
+MD5 a0079771e657f5a797869eb99b431dc5 ChangeLog 10783
+RMD160 0071070b1fa8f7b372c8e707e09efe0d3fb899ce ChangeLog 10783
+SHA256 a8b068aebedf87b06c33efe93096834d9d869a3c55429867f71c00b3250bfaec ChangeLog 10783
+MISC metadata.xml 281 RMD160 15e60807f6da5cfa6d15c44e7a1a1dd75b67400d SHA1 03af06e261462e5d0bc1ad6349e9d840fe9165b6 SHA256 5d1926670f5323ff9aefe20d10a36ac00f23a49bf13985c9a77baea4f3b4abbd
+MD5 5a808b54f37942c1de1ff75edc43f69d metadata.xml 281
+RMD160 15e60807f6da5cfa6d15c44e7a1a1dd75b67400d metadata.xml 281
+SHA256 5d1926670f5323ff9aefe20d10a36ac00f23a49bf13985c9a77baea4f3b4abbd metadata.xml 281
+MD5 c1884644ce45bbd0053fa0450906637a files/digest-portage-utils-0.1.15 262
+RMD160 ca940cafa819aca309fbcc84b5d8e264b96860f0 files/digest-portage-utils-0.1.15 262
+SHA256 fba286c808611d7a596c7d6250b79a2c668ccc2d1d42554ff390dfdb3d62bb50 files/digest-portage-utils-0.1.15 262
+MD5 bceb8979c5802dcfdd92ce05626af703 files/digest-portage-utils-0.1.16 72
+RMD160 04391979045b6b9ad0aae419027ea7de2fdcc027 files/digest-portage-utils-0.1.16 72
+SHA256 42759ff6feb37920d921e7406d8ebd2704e0d291d661b9385a84308b69ecac6f files/digest-portage-utils-0.1.16 72
+MD5 95d8fbb9e5074beb0ecb70bb89a4c78b files/digest-portage-utils-0.1.17 72
+RMD160 9785d4b3ebf678c4f3e93a9805d031d66eaa4e5c files/digest-portage-utils-0.1.17 72
+SHA256 55b7d5a9c86cee14b2afbba08e2273a0704e7fc69d0108c806cfb89a27e036ea files/digest-portage-utils-0.1.17 72
+MD5 95d8fbb9e5074beb0ecb70bb89a4c78b files/digest-portage-utils-0.1.17-r1 72
+RMD160 9785d4b3ebf678c4f3e93a9805d031d66eaa4e5c files/digest-portage-utils-0.1.17-r1 72
+SHA256 55b7d5a9c86cee14b2afbba08e2273a0704e7fc69d0108c806cfb89a27e036ea files/digest-portage-utils-0.1.17-r1 72
+MD5 c3b64945a68ae0b3219543fffb423863 files/digest-portage-utils-0.1.18 262
+RMD160 ec163ae3dff11f4030ea5582ec0167f2599bf8c8 files/digest-portage-utils-0.1.18 262
+SHA256 6ad7bc7dcd78894b29eaa6860955f301234f7cc8d514387cfd68244e5ca5c5ac files/digest-portage-utils-0.1.18 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iQCVAwUBRINjN54WFLgrx1GWAQJE4wQAhGUa6+BPb83CXo8sogq/lfyTEz0QKBPO
+D/Jz+QhYJQMpbtzqc1hKKifUS1hR+8t0a4kJ9foEqR6w5zX2bH0pSOidC2KKX07f
+DyXiguoUkq+fqDBHlKb8ggxWas2XirQ6RMDxq6c0JayI0yvfaPgmMfMJnRZhl/tb
+bWyWC4EZK78=
+=4T7P
+-----END PGP SIGNATURE-----
