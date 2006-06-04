@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20060523.ebuild,v 1.2 2006/06/04 13:44:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20060523.ebuild,v 1.3 2006/06/04 13:57:44 genstef Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ SLOT="0"
 IUSE="cups foomaticdb usb"
 DEPEND="app-arch/unzip"
 RDEPEND="cups? ( net-print/cups )
+	foomaticdb? ( net-print/foomatic-db-engine )
 	net-print/foomatic-filters
 	usb? ( || ( sys-fs/udev sys-apps/hotplug ) )"
 KEYWORDS="~x86 ~amd64 ~ppc"
