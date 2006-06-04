@@ -1,0 +1,22 @@
+--- src/Makefile.am.orig	2006-06-04 15:45:19.000000000 +0200
++++ src/Makefile.am	2006-06-04 15:46:10.000000000 +0200
+@@ -45,7 +45,7 @@
+ 	private.h nat.h
+ 
+ if EXTRAS
+-libccext2_la_LIBADD = @BASE_LIB@ @THREAD_LIBS@
++libccext2_la_LIBADD = @BASE_LIB@ @THREAD_LIBS@ @XML_LIBS@
+ libccext2_la_LDFLAGS = $(RELEASE) $(SHARED_FLAGS)
+ 
+ if GETOPT_LONG
+--- src/Makefile.in.orig	2006-06-04 15:45:26.000000000 +0200
++++ src/Makefile.in	2006-06-04 15:46:36.000000000 +0200
+@@ -327,7 +327,7 @@
+ 	nat.cpp runlist.cpp assoc.cpp pointer.cpp linked.cpp map.cpp \
+ 	private.h nat.h
+ 
+-@EXTRAS_TRUE@libccext2_la_LIBADD = @BASE_LIB@ @THREAD_LIBS@
++@EXTRAS_TRUE@libccext2_la_LIBADD = @BASE_LIB@ @THREAD_LIBS@ @XML_LIBS@
+ @EXTRAS_TRUE@libccext2_la_LDFLAGS = $(RELEASE) $(SHARED_FLAGS)
+ @EXTRAS_TRUE@@GETOPT_LONG_TRUE@optincludedir = $(includedir)/cc++2
+ @EXTRAS_TRUE@@GETOPT_LONG_TRUE@optinclude_HEADERS = getopt.h
