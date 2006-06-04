@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.50 2006/04/27 16:05:46 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.51 2006/06/04 13:23:34 chtekk Exp $
+
+  04 Jun 2006; Luca Longinotti <chtekk@gentoo.org> apr-util-0.9.7.ebuild,
+  apr-util-0.9.12.ebuild, apr-util-1.2.2.ebuild, apr-util-1.2.7.ebuild:
+  Fix bug #133871 for all apr-util versions save the all-stable one.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four

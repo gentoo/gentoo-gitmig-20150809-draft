@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.2.2.ebuild,v 1.5 2006/04/19 01:00:25 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.2.2.ebuild,v 1.6 2006/06/04 13:23:34 chtekk Exp $
 
-inherit eutils libtool
+inherit eutils libtool db-use
 
 DESCRIPTION="Apache Portable Runtime Library"
 HOMEPAGE="http://apr.apache.org/"
@@ -38,16 +38,11 @@ src_compile() {
 	myconf="${myconf} $(use_with sqlite3)"
 
 	if use berkdb; then
-		if has_version '=sys-libs/db-4.3*'; then
-			myconf="${myconf} --with-dbm=db43
-			--with-berkeley-db=/usr/include/db4.3:/usr/$(get_libdir)"
-		elif has_version '=sys-libs/db-4.2*'; then
-			myconf="${myconf} --with-dbm=db42
-			--with-berkeley-db=/usr/include/db4.2:/usr/$(get_libdir)"
-		elif has_version '=sys-libs/db-4*'; then
-			myconf="${myconf} --with-dbm=db4
-			--with-berkeley-db=/usr/include/db4:/usr/$(get_libdir)"
-		fi
+		dbver="$(db_findver sys-libs/db)" || die "Unable to find db version"
+		dbver="$(db_ver_to_slot "$dbver")"
+		dbver="${dbver/\./}"
+		myconf="${myconf} --with-dbm=db${dbver}
+		--with-berkeley-db=$(db_includedir):/usr/$(get_libdir)"
 	else
 		myconf="${myconf} --without-berkeley-db"
 	fi
