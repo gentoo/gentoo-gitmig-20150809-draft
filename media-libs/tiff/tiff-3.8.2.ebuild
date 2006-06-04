@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.8.2.ebuild,v 1.9 2006/05/28 21:06:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.8.2.ebuild,v 1.10 2006/06/04 14:23:04 grobian Exp $
 
 inherit eutils libtool
 
@@ -19,7 +19,7 @@ DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	use ppc-macos || elibtoolize
+	elibtoolize
 }
 
 src_compile() {
