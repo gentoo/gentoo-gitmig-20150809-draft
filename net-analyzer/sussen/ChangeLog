@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/sussen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.16 2006/05/29 17:07:47 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.17 2006/06/04 18:11:15 pva Exp $
+
+*sussen-0.22-r1 (04 Jun 2006)
+
+  04 Jun 2006; Peter Volkov <pva@gentoo.org>
+  +files/sussen-0.22-applet-cancel-scan-crash.patch, +sussen-0.22-r1.ebuild:
+  Partial fix for bug 135493. sussen-applet should not crash when cancel pressed
+  during execution.
 
 *sussen-0.22 (29 May 2006)
 
