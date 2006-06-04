@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.72 2006/05/09 17:50:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.73 2006/06/04 13:25:56 exg Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -180,13 +180,7 @@ elibtoolize() {
 	[[ ${CHOST} == *"-freebsd"* ]] && \
 		elt_patches="${elt_patches} fbsd-conf fbsd-ltconf"
 
-	if useq ppc-macos ; then
-		local opts
-		[[ -f Makefile.am ]] && opts="--automake"
-		glibtoolize --copy --force ${opts}
-
-		elt_patches="${elt_patches} darwin-ltconf darwin-ltmain"
-	fi
+	useq ppc-macos && elt_patches="${elt_patches} darwin-ltconf darwin-ltmain"
 
 	for x in ${my_dirlist} ; do
 		local tmp=$(echo "${x}" | sed -e "s|${WORKDIR}||")
