@@ -1,11 +1,16 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Michael Tindal <urilith@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.13 2005/08/02 23:26:14 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.14 2006/06/04 19:15:09 vericgar Exp $
 
 inherit depend.apache
 
 # This eclass provides a common set of functions for Apache modules.
+
+# NOTE: If you use this, be sure you use the need_* call after you have
+# defined DEPEND and RDEPEND. Also note that you can not rely on the 
+# automatic RDEPEND=DEPEND that portage does if you use this eclass.
+# See bug 107127 for more information.
 
 ######
 ## Common ebuild variables
