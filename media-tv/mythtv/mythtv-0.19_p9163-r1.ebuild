@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p9163-r1.ebuild,v 1.7 2006/05/23 05:27:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p9163-r1.ebuild,v 1.8 2006/06/04 23:25:20 lu_zero Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -19,7 +19,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE_VIDEO_CARDS="video_cards_i810 video_cards_nvidia video_cards_via"
 
 IUSE="alsa altivec arts backendonly debug dbox2 dvb dvd frontendonly ieee1394 jack joystick lcd
-lirc mmx oggvorbis opengl xvmc ${IUSE_VIDEO_CARDS}"
+lirc mmx vorbis opengl xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -47,7 +47,7 @@ RDEPEND=">=media-libs/freetype-2.0
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
-	oggvorbis? ( media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	opengl? ( virtual/opengl )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
 			>=sys-libs/libavc1394-0.5.0
