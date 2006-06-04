@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20060528.ebuild,v 1.4 2006/06/01 19:39:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20060528.ebuild,v 1.5 2006/06/04 09:23:47 genstef Exp $
 
 inherit nsplugins kde-functions autotools
 
@@ -39,6 +39,7 @@ RDEPEND="dmalloc? ( dev-libs/dmalloc )
 	dev-libs/glib
 	x11-libs/cairo
 	>x11-libs/gtk+-2
+	x11-libs/gtkglext
 	x11-libs/pango"
 
 S=${WORKDIR}/gnash
