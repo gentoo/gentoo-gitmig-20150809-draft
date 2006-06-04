@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ldap_userdir/mod_ldap_userdir-1.1.5.ebuild,v 1.4 2006/03/18 11:18:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ldap_userdir/mod_ldap_userdir-1.1.5.ebuild,v 1.5 2006/06/04 18:34:42 vericgar Exp $
 
 inherit apache-module
 
@@ -13,6 +13,7 @@ SRC_URI="http://horde.net/~jwm/software/mod_ldap_userdir/${P}.tar.gz"
 
 DEPEND="ssl? ( dev-libs/openssl )
 		net-nds/openldap"
+RDEPEND="${DEPEND}"
 LICENSE="GPL-1"
 SLOT="0"
 

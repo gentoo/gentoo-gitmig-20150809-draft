@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_gzip/mod_gzip-1.3.26.1a-r2.ebuild,v 1.7 2005/12/24 16:20:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_gzip/mod_gzip-1.3.26.1a-r2.ebuild,v 1.8 2006/06/04 18:30:43 vericgar Exp $
 
 inherit eutils apache-module
 
@@ -14,6 +14,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND=">=sys-libs/zlib-1.1.4"
+RDEPEND="${DEPEND}"
 
 APACHE1_MOD_CONF="10_${PN}"
 APACHE1_MOD_DEFINE="GZIP"

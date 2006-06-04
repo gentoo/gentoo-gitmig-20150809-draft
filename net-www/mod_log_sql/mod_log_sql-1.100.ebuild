@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.100.ebuild,v 1.8 2006/03/24 14:41:34 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.100.ebuild,v 1.9 2006/06/04 18:37:03 vericgar Exp $
 
 inherit eutils apache-module
 
@@ -16,6 +16,7 @@ IUSE="apache2 dbi ssl"
 DEPEND=">=dev-db/mysql-3.23.30
 		dbi? ( >=dev-db/libdbi-0.7.0 )
 		ssl? ( dev-libs/openssl !apache2? ( net-www/mod_ssl ) )"
+RDEPEND="${DEPEND}"
 
 APACHE1_MOD_CONF="${PV}/42_${PN}"
 APACHE2_MOD_CONF="${PV}/42_${PN}"

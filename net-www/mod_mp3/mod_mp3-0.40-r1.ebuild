@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/mod_mp3-0.40-r1.ebuild,v 1.6 2006/01/26 02:06:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/mod_mp3-0.40-r1.ebuild,v 1.7 2006/06/04 18:39:16 vericgar Exp $
 
 inherit apache-module
 
@@ -18,6 +18,7 @@ SRC_URI="http://download.tangent.org/${P}.tar.gz"
 DEPEND="dev-lang/perl
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	postgres? ( dev-db/postgresql )"
+RDEPEND="${DEPEND}"
 
 LICENSE="as-is"
 SLOT="0"
