@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.1.4-r1.ebuild,v 1.8 2006/04/01 15:10:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.1.4-r1.ebuild,v 1.9 2006/06/04 18:20:40 vericgar Exp $
 
 inherit python eutils apache-module autotools
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~ia64 ppc sparc x86"
 IUSE=""
 DEPEND="dev-lang/python"
+RDEPEND="${DEPEND}"
 
 #APACHE2_MOD_CONF="2.7.11/16_${PN}"
 APACHE2_MOD_DEFINE="PYTHON"
