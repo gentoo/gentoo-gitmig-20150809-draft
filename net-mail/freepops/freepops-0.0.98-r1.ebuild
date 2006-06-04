@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.0.98.ebuild,v 1.2 2006/06/04 14:46:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.0.98-r1.ebuild,v 1.1 2006/06/04 14:46:42 dragonheart Exp $
 
 inherit eutils
 
 DESCRIPTION="WebMail->POP3 converter and more"
 HOMEPAGE="http://freepops.sourceforge.net/"
 SRC_URI="mirror://sourceforge/freepops/${P}.tar.gz
-		mirror://gentoo/${P}-luaupdates.tar.gz"
+		mirror://gentoo/${PF}-luaupdates.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -29,6 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-0.0.97-system-lua.patch"
+	epatch "${FILESDIR}/${P}-doc.patch"
 }
 
 src_compile() {
@@ -41,10 +42,10 @@ src_compile() {
 	sed -i -e '/^WHERE=/s/=.*$/=\/usr\//' config
 	emake -j1 all || die "make failed"
 	# doc fails bug #133614. seems to require alteration of the freepopsd
-	# executable to fix.
-	#	if use doc ; then
-	#		emake -j1 doc || die "make doc failed"
-	#	fi
+	# executable to fix
+	#if use doc ; then
+	#	emake -j1 doc || die "make doc failed"
+	#fi
 }
 
 src_install() {
@@ -52,9 +53,9 @@ src_install() {
 	dodoc AUTHORS README ChangeLog TODO \
 		"${D}"/usr/share/doc/${PN}/*
 	rm -rf "${D}"/usr/share/doc/${PN}
-#	if use doc; then
-#		mv doc/manual/html-manual "${D}/usr/share/doc/${PF}"
-#	fi
+	#if use doc; then
+	#	mv doc/manual/html-manual "${D}/usr/share/doc/${PF}"
+	#fi
 
 	newinitd buildfactory/freePOPsd.initd freepopsd
 	newconfd buildfactory/freePOPsd.confd freepopsd
