@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.27 2006/05/24 02:51:19 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.28 2006/06/04 14:53:32 kaiowas Exp $
+
+*opensc-0.11.0-r1 (04 Jun 2006)
+
+  04 Jun 2006; Petre Rodan <kaiowas@gentoo.org> -opensc-0.11.0.ebuild,
+  +opensc-0.11.0-r1.ebuild:
+  updated HOMEPAGE and LICENSE, added default config and html docs. fix for
+  #134754 reported by Andreas Jellinghaus
 
 *opensc-0.11.0 (24 May 2006)
 
