@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.13.ebuild,v 1.1 2006/06/03 19:35:20 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.13.ebuild,v 1.2 2006/06/04 15:29:56 flameeyes Exp $
 
-inherit eutils multilib
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Tool Command Language"
 HOMEPAGE="http://www.tcl.tk/"
@@ -47,6 +47,7 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC
 	local local_config_use=""
 
 	if use threads ; then
