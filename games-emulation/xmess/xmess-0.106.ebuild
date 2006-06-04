@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.1 2006/06/02 07:14:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.2 2006/06/04 07:34:36 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -12,7 +12,8 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 
 LICENSE="XMAME"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ppc sparc x86"
+# dropped sparc keyword - bug #135467
+KEYWORDS="alpha ~amd64 ~hppa ia64 ppc -sparc x86"
 IUSE="alsa arts dga esd expat ggi joystick lirc mmx net opengl sdl svga X xinerama xv"
 
 RDEPEND="sys-libs/zlib
