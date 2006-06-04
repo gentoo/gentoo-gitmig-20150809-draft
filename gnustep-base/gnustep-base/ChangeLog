@@ -1,13 +1,15 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.31 2006/06/04 12:58:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.32 2006/06/04 18:42:19 grobian Exp $
 
   04 Jun 2006; Fabian Groffen <grobian@gentoo.org>
   -files/base-path.patch-gsstartup-0.10.2,
   -files/base-user-defaults.patch-1.10.2_pre20050312,
   +files/gnustep-base-1.12.0-obey_homedir.patch, gnustep-base-1.12.0.ebuild:
   Adding a patch for 1.12.0 to obey HOME env variable, which allows it to get
-  out of package.mask.  Removed some stray files.
+  out of package.mask.  Removed some stray files.  Changed USE-flag ffcall
+  into libffi to change the default message passing method to ffcall, as
+  mentioned by Hypnos in http://forums.gentoo.org/viewtopic-t-462949.html.
 
 *gnustep-base-1.12.0 (19 Mar 2006)
 

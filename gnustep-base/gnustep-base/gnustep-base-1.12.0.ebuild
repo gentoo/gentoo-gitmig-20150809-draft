@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.12.0.ebuild,v 1.2 2006/06/04 12:58:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.12.0.ebuild,v 1.3 2006/06/04 18:42:19 grobian Exp $
 
 inherit gnustep
 
@@ -13,13 +13,13 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 
 # disable doc as it appears to be broken
-IUSE="ffcall gcc-libffi"
+IUSE="libffi gcc-libffi"
 DEPEND="${GNUSTEP_CORE_DEPEND}
 	~gnustep-base/gnustep-make-1.12.0
 	|| (
-		ffcall? ( dev-libs/ffcall )
+		dev-libs/ffcall
 		gcc-libffi? ( >=sys-devel/gcc-3.3.5 )
-		>=dev-libs/libffi-3.3.5
+		libffi? ( >=dev-libs/libffi-3.3.5 )
 	)
 	>=dev-libs/libxml2-2.6
 	>=dev-libs/libxslt-1.1
@@ -36,12 +36,10 @@ egnustep_install_domain "System"
 
 pkg_setup() {
 	# Order of preferences: ffcall, libffi from gcc, dev-libs/libffi
-	if ! use ffcall; then
-		if use gcc-libffi; then
-			if [ "$(ffi_available)" == "no" ]; then
-				ffi_not_available_info
-				die "libffi is not available"
-			fi
+	if use gcc-libffi; then
+		if [ "$(ffi_available)" == "no" ]; then
+			ffi_not_available_info
+			die "libffi is not available"
 		fi
 	fi
 }
@@ -54,7 +52,7 @@ src_unpack() {
 src_compile() {
 	egnustep_env
 	local myconf
-	if use ffcall; then
+	if ! use libffi && ! use gcc-libffi; then
 		einfo "Using ffcall for FFI, not libffi"
 		myconf="--disable-libffi --enable-ffcall"
 	else
