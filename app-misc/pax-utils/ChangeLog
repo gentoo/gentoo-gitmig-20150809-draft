@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.72 2006/06/04 07:03:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.73 2006/06/04 11:55:33 ferdy Exp $
+
+  04 Jun 2006; Fernando J. Pereda <ferdy@gentoo.org>
+  pax-utils-0.1.13.ebuild:
+  Stable on alpha. Thanks to Mike Hlavac <mike@flyingpenguins.org> for
+  testing. Bug #135427
 
   04 Jun 2006; Markus Rothe <corsair@gentoo.org> pax-utils-0.1.13.ebuild:
   Stable on ppc64; bug #135427
