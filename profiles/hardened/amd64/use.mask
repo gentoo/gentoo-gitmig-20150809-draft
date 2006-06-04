@@ -1,12 +1,75 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.8 2006/06/04 01:49:44 solar Exp $
+# Copyright 2006 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.9 2006/06/04 04:33:22 solar Exp $
 
-#unknowns
+multilib
+
+# UNKNOWN - SECTION
 afs
 drac
 
+# UNMASK - SECTION
+
+# media-libs/libemf only works by luck (see bug #127328)
+# this flag makes media-gfx/inkscape dep on media-gfx/pstoedit
+# which deps on libemf
+plugin
+
+# 2005/09/14 - Diego Pettenò <flameeyes@gentoo.org>
+# nVidia XvMC support works on amd64
 -nvidia
 
+# 2005/12/01 - Daniel Gryniewicz <dang@gentoo.org>
+# There is now a kqemu that works and is stable on amd64
+-kqemu
+
+# 2006/03/03 - Luca Barbato <lu_zero@gentoo.org>
+# codec support x264
+-x264
+
+# 2006/02/05 - Donnie Berkholz <spyderous@gentoo.org>
+# Modular X: mask for architectures on which they aren't available
+video_cards_i740
+video_cards_imstt
+video_cards_newport
+video_cards_nsc
+
+# 2006/01/28 - Donnie Berkholz <spyderous@gentoo.org>
+# Modular X: unmask for architectures on which they are available
+-input_devices_synaptics
+-input_devices_vmmouse
+-input_devices_wacom
+-video_cards_nvidia
+-video_cards_fglrx
+-video_cards_vmware
+
+# WON'T WORK - SECTION
+
+asm
+
+# 2005/06/04 - Simon Stelling <blubb@gentoo.org>
+# dev-util/xdelta doesn't work as expected by this use flag, it can only use
+# xdelta-files made on a 64bit system
+kdexdeltas
+
 # WON'T BUILD - SECTION
+
+# 2005/09/19 - Olivier Fisette <ribosome@gentoo.org>
+# cmucl is not available on amd64. Masking to keep "sci-mathematics/maxima"
+# happy.
+cmucl
+
+# 2005/08/28 - Simon Stelling <blubb@gentoo.org>
+# sci-libs/cdf doesn't build
+cdf
+
+# 2004/11/13 - Tom Martin <slarti@gentoo.org>
+# dev-libs/mzscheme won't build, #65216
+mzscheme
+
+# 2004/10/06 - Jeremy Huddleston <eradicator@gentoo.org>
+# sys-cluster/pvm won't build
+pvm
 
 # 2004/06/22 - Taken from 2004.0 profile
 # Anything that relies on vm86.h will not built on amd64
@@ -36,24 +99,7 @@ ifc
 # masked
 3dfx
 
-# 2004/07/22 - Danny van Dyk <kugelfang@gentoo.org>
-# libcaca part of libSDL causes breakage due to missing shared object.
-# BUG #53857
-libcaca
-
 # NOT NECESSARY - SECTION
-
-# 2004/06/22 - Taken from 2004.0 profile
-# Too many packages assume that mmx/sse/sse2/3dnow are 86-32 only things to
-# make them useful on amd64. Anyway, all amd64 cpus have them, so they should
-# not be many flag dependant in this case
-mmx
-sse
-sse2
-3dnow
-
-# altivec is a ppc instruction set.
-altivec
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
@@ -76,21 +122,14 @@ solid
 sybase
 sybase-ct
 
-# Breaks reverse deps. USE="-*" emerge -pve --tree dbus
-mono
+# dev-lang/tcc won't build
+tcc
 
-# Copied from default-linux/amd64/use.mask 2006-04-02
-# Modular X: mask for architectures on which they aren't available
-video_cards_i740
-video_cards_imstt
-video_cards_newport
-video_cards_nsc
-# Modular X: unmask for architectures on which they are available
--input_devices_synaptics
--input_devices_vmmouse
--input_devices_wacom
--video_cards_nvidia
--video_cards_fglrx
--video_cards_vmware
+# gcc doesn't build if we have a multitarget binutils
+multitarget
 
-pvm
+# Unmask emul-linux-x86
+-emul-linux-x86
+
+# Vidix support doesn't work on amd64 for now.
+vidix
