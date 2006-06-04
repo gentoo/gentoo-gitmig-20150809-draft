@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.550 2006/05/31 13:14:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.551 2006/06/04 01:31:05 halcy0n Exp $
+
+*gcc-4.2.0_alpha20060603 (04 Jun 2006)
+
+  04 Jun 2006; Mark Loeser <halcy0n@gentoo.org>
+  -gcc-4.2.0_alpha20060527.ebuild, +gcc-4.2.0_alpha20060603.ebuild:
+  Bump weekly 4.2 snapshot
 
   31 May 2006; Joseph Jezak <josejx@gentoo.org> gcc-3.4.6-r1.ebuild:
   Marked ppc stable.
