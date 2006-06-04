@@ -1,8 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.235 2006/05/24 16:01:59 wolf31o2 Exp $
-#
-# Author: Martin Schlemmer <azarah@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.236 2006/06/04 13:25:04 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -1443,7 +1441,7 @@ strip-linguas() {
 	local ls newls
 	if [[ $1 == "-i" ]] || [[ $1 == "-u" ]] ; then
 		local op=$1; shift
-		ls=" $(find "$1" -name '*.po' -exec basename {} \;) "; shift
+		ls=$(find "$1" -name '*.po' -exec basename {} .po \;); shift
 		local d f
 		for d in "$@" ; do
 			if [[ ${op} == "-u" ]] ; then
@@ -1451,24 +1449,22 @@ strip-linguas() {
 			else
 				newls=""
 			fi
-			for f in $(find "$d" -name '*.po' -exec basename {} \;) ; do
+			for f in $(find "$d" -name '*.po' -exec basename {} .po \;) ; do
 				if [[ ${op} == "-i" ]] ; then
-					[[ ${ls/ ${f} /} != ${ls} ]] && newls="${newls} ${f}"
+					hasq ${f} ${ls} && newls="${newls} ${f}"
 				else
-					[[ ${ls/ ${f} /} == ${ls} ]] && newls="${newls} ${f}"
+					hasq ${f} ${ls} || newls="${newls} ${f}"
 				fi
 			done
 			ls=${newls}
 		done
-		ls=${ls//.po}
 	else
-		ls=$@
+		ls="$@"
 	fi
 
-	ls=" ${ls} "
 	newls=""
 	for f in ${LINGUAS} ; do
-		if [[ ${ls/ ${f} /} != ${ls} ]] ; then
+		if hasq ${f} ${ls} ; then
 			newls="${newls} ${f}"
 		else
 			ewarn "Sorry, but ${PN} does not support the ${f} LINGUA"
