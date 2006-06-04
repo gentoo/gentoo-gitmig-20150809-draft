@@ -1,0 +1,14 @@
+-sys-apps/hal
+-net-firewall/ipsec-tools
+-net-misc/lksctp-tools
+-dev-util/rootstrap
+-media-plugins/gst-plugins-v4l2
+-media-video/transcode
+-net-misc/lksctp-tools
+-net-misc/mrouted
+-sys-apps/raidutils
+-sys-cluster/dlm-kernel
+-sys-cluster/gfs-kernel
+-sys-cluster/gnbd-kernel
+-x11-misc/linuxwacom
+
