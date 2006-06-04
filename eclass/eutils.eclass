@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.236 2006/06/04 13:25:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.237 2006/06/04 15:18:12 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -1470,11 +1470,7 @@ strip-linguas() {
 			ewarn "Sorry, but ${PN} does not support the ${f} LINGUA"
 		fi
 	done
-	if [[ -z ${newls} ]] ; then
-		export LINGUAS=""
-	else
-		export LINGUAS=${newls:1}
-	fi
+	export LINGUAS=${newls:1}
 }
 
 # moved from kernel.eclass since they are generally useful outside of
