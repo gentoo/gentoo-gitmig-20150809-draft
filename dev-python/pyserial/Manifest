@@ -1,4 +1,4 @@
-MD5 fd9af20ea9fb31a09c133c4860e562c4 ChangeLog 2199
+MD5 34e866faa2b5b900d891a6334d0405bd ChangeLog 2361
 MD5 2113c1cafc4d908581e1e3d38e2f0a8d files/digest-pyserial-1.18 61
 MD5 b7667a4a031f4c96a953e61a5dc48d53 files/digest-pyserial-2.0 60
 MD5 e9357a610f14dd701ef8f69bb7e0dedf files/digest-pyserial-2.1 60
@@ -7,4 +7,4 @@ MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 f097db4a56037fd6a334ff3b1cb3fa8c pyserial-1.18.ebuild 463
 MD5 c0a88477a4e619eab21ab856b216b12d pyserial-2.0.ebuild 501
 MD5 96a7ed399cb828757628f2135f4c9a8f pyserial-2.1.ebuild 510
-MD5 7889bfc4a1bcef366b34415c143a3e41 pyserial-2.2.ebuild 525
+MD5 b5df02466fda0d5e83152fb5c5cc6bf1 pyserial-2.2.ebuild 520

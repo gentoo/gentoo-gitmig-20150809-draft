@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyserial
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.20 2006/05/12 18:55:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.21 2006/06/04 02:41:15 ranger Exp $
+
+  04 Jun 2006; Brent Baude <ranger@gentoo.org> pyserial-2.2.ebuild:
+  Marking pyserial-2.2 ppc64 stable as a dep to twisted and in turn avahi per
+  Mr Bones request
 
   12 May 2006; Tobias Scherbaum <dertobi123@gentoo.org> pyserial-2.2.ebuild:
   Added ~hppa
