@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.0-r4.ebuild,v 1.1 2005/10/01 21:29:34 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.0-r4.ebuild,v 1.2 2006/06/04 09:47:44 spyderous Exp $
 
-inherit flag-o-matic fortran
+inherit autotools flag-o-matic fortran
 
 # substitute second dot by "r"
 MY_PV="${PV/./X}"
@@ -25,21 +25,19 @@ DEPEND="sys-libs/zlib
 		>=sys-apps/sed-4
 		szip? ( sci-libs/szip )"
 
+FORTRAN="g77 gfortran"
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# We need shared libraries, see BUG #75415.
+	# Danny van Dyk <kugelfang@gentoo.org> 2005/01/24
 	epatch "${FILESDIR}"/${P}-shared-libs.patch
+	eautoreconf
 }
 
 src_compile() {
-	# We need shared libraries, see BUG #75415.
-	# To use libtool for shared libs, we need above patch and the following lines.
-	# Danny van Dyk <kugelfang@gentoo.org> 2005/01/24
-	aclocal
-	libtoolize --copy --force
-	automake --add-missing
-	autoconf
-
 	# BUG #75415, the shipped config/linux-gnu settings are broken.
 	# -Wsign-compare does not work with g77, causing lack of -fPIC for shared
 	# objects.
@@ -50,7 +48,10 @@ src_compile() {
 	use szip && myconf="${myconf} --with-szlib=/usr"
 	use ppc && append-flags -DSUN
 
-	econf ${myconf} || die "configure failed"
+	econf \
+		${myconf} \
+		F77="${FORTRANC}" \
+		|| die "configure failed"
 
 	make LDFLAGS="${LDFLAGS} -lm" || die "make failed"
 }
