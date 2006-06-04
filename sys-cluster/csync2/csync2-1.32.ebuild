@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.32.ebuild,v 1.2 2006/06/03 18:52:58 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.32.ebuild,v 1.3 2006/06/04 13:17:28 xmerlin Exp $
 
 DESCRIPTION="Cluster synchronization tool."
 SRC_URI="http://oss.linbit.com/csync2/${P}.tar.gz"
 HOMEPAGE="http://oss.linbit.com/csync2/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 
@@ -21,6 +21,11 @@ RDEPEND="${DEPEND}"
 SLOT="0"
 
 src_compile() {
+	econf \
+		--localstatedir=/var \
+		--sysconfdir=/etc/csync2 \
+		|| die
+
 	econf --localstatedir=/var || die
 
 	emake || die
@@ -58,4 +63,23 @@ pkg_config() {
 	} > /etc/services.new
 	mv -f /etc/services.new /etc/services
 
+	if [ ! -f /etc/${PN}/csync2_ssl_key.pem ]; then
+		einfo "Creating default certificate in /etc/${PN}"
+
+		openssl genrsa -out /etc/${PN}/csync2_ssl_key.pem 1024 &> /dev/null
+
+		yes '' | \
+		openssl req -new \
+			-key /etc/${PN}/csync2_ssl_key.pem \
+			-out /etc/${PN}/csync2_ssl_cert.csr \
+			&> /dev/null
+
+		openssl x509 -req -days 600 \
+			-in /etc/${PN}/csync2_ssl_cert.csr \
+			-signkey /etc/${PN}/csync2_ssl_key.pem \
+			-out /etc/${PN}/csync2_ssl_cert.pem \
+			&> /dev/null
+
+		rm /etc/${PN}/csync2_ssl_cert.csr
+	fi
 }

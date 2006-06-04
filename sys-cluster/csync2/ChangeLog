@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/csync2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.12 2006/06/03 18:52:58 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.13 2006/06/04 13:17:28 xmerlin Exp $
+
+  04 Jun 2006; Christian Zoffoli <xmerlin@gentoo.org> -csync2-1.16.ebuild,
+  -csync2-1.22.ebuild, -csync2-1.26.ebuild, -csync2-1.29.ebuild,
+  -csync2-1.30.ebuild, csync2-1.32.ebuild:
+  Removed old ebuilds.
+
+  04 Jun 2006; Christian Zoffoli <xmerlin@gentoo.org> csync2-1.32.ebuild:
+  Added default certificate creation, stable on x86.
 
   03 Jun 2006; Christian Zoffoli <xmerlin@gentoo.org> csync2-1.16.ebuild,
   csync2-1.22.ebuild, csync2-1.26.ebuild, csync2-1.29.ebuild,
