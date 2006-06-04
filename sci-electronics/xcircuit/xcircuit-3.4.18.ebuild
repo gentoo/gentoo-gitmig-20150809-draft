@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.4.18.ebuild,v 1.5 2006/05/20 13:47:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.4.18.ebuild,v 1.6 2006/06/04 08:06:41 calchan Exp $
 
 DESCRIPTION="Circuit drawing and schematic capture program."
 SRC_URI="http://opencircuitdesign.com/xcircuit/archive/${P}.tgz"
@@ -17,25 +17,29 @@ DEPEND="virtual/ghostscript
 	     virtual/x11
 	)"
 
+src_unpack() {
+	unpack ${A}
+	sed -i \
+		-e "s:\$(datadir):\$(libdir):" \
+		-e "s:\$(appmandir):\$(mandir)/man1:" \
+		${S}/Makefile.in
+}
+
 src_compile() {
-	econf || die 'econf failed!'
-	emake tcl || die 'emake tcl failed!'
-	emake || die 'emake failed!'
+	econf \
+	--with-tcl \
+	--with-ngspice \
+	--disable-dependency-tracking \
+	|| die 'econf failed!'
+	emake CFLAGS="${CFLAGS} -fPIC" || die 'emake failed!'
 }
 
 src_install () {
-	emake DESTDIR=${D} install || die "Installation failed"
-	if use tcltk; then
-		emake DESTDIR=${D} install-tcl || die "Installation failed"
-	fi
-	dodoc COPYRIGHT README*
-
-	doman ${D}/usr/lib/xcircuit-3.4/man/xcircuit.1
-	rm ${D}/usr/lib/xcircuit-3.4/man -rf
+	make DESTDIR=${D} install || die "Installation failed"
+	dodoc CHANGES README* TODO
 }
 
 src_test () {
 	# See bug #131024
 	true
 }
-

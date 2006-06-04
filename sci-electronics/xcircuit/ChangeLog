@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/xcircuit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.13 2006/05/20 13:47:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.14 2006/06/04 08:06:41 calchan Exp $
+
+  04 Jun 2006; Denis Dupeyron <calchan@gentoo.org> xcircuit-3.4.18.ebuild,
+  xcircuit-3.4.21.ebuild:
+  Fixed --libdir configure option not being effective and tcltk USE flag
+  issue (see bug #131024).
 
   20 May 2006; <nixnut@gentoo.org> xcircuit-3.4.18.ebuild:
   Stable on ppc. bug #131024
