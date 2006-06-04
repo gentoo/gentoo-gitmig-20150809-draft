@@ -1,0 +1,17 @@
+all_devices is an exported symbol so we cant declare it static
+
+Fix by Pablo De Nápoli
+
+http://bugs.gentoo.org/133936
+
+--- svgalib-1.9.24/kernel/svgalib_helper/main.c
++++ svgalib-1.9.24/kernel/svgalib_helper/main.c
+@@ -55,7 +55,7 @@
+ #include "displaystart.h"
+ 
+ int debug=0;
+-static int all_devices=0;
++int all_devices=0;
+ int num_devices=0;
+ 
+ static char *sdev_id="svgalib_helper";

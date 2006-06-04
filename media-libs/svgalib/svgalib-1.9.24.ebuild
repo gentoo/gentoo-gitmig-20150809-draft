@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.24.ebuild,v 1.2 2006/04/23 19:52:19 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.24.ebuild,v 1.3 2006/06/04 09:50:17 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -33,6 +33,7 @@ src_unpack() {
 
 	# Get it to work with kernel 2.6
 	epatch "${FILESDIR}"/${PN}-1.9.24-linux2.6.patch
+	epatch "${FILESDIR}"/${PN}-1.9.24-all_devices.patch #133936
 
 	# -fPIC does work for lrmi, see bug #51698
 	epatch "${FILESDIR}"/${PN}-1.9.19-pic.patch

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.67 2006/04/23 19:52:19 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.68 2006/06/04 09:50:17 vapier Exp $
+
+  04 Jun 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/svgalib-1.9.24-all_devices.patch, svgalib-1.9.24.ebuild:
+  Fix by Pablo De Nápoli to make sure all_devices is an exported symbol
+  #133936 by Walter Meinl.
 
   23 Apr 2006; John Mylchreest <johnm@gentoo.org> svgalib-1.9.24.ebuild:
   Honour kbuild_output correctly.
