@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.346 2006/06/03 14:44:05 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.347 2006/06/04 00:35:10 chtekk Exp $
+
+  03 Jun 2006; Luca Longinotti <chtekk@gentoo.org> -mysql-4.1.19.ebuild:
+  Remove old MySQL version now that keywords are ok.
 
   03 Jun 2006; Rene Nussbaumer <killerfox@gentoo.org> mysql-4.1.20.ebuild:
   Stable on hppa. See bug #135076.
