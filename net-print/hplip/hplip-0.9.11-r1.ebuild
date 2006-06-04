@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.11-r1.ebuild,v 1.2 2006/06/04 13:52:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.11-r1.ebuild,v 1.3 2006/06/04 13:56:38 genstef Exp $
 
 inherit eutils
 
@@ -35,6 +35,7 @@ RDEPEND="virtual/ghostscript
 	>=dev-libs/libusb-0.1.10a
 	sys-apps/hotplug
 	net-print/cups
+	foomaticdb? ( net-print/foomatic-db-engine )
 	>=net-print/foomatic-filters-3.0.2
 	${DEPEND}"
 
