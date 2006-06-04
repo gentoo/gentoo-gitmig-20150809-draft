@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.32.ebuild,v 1.3 2006/06/04 13:17:28 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.32.ebuild,v 1.4 2006/06/04 13:23:50 xmerlin Exp $
 
 DESCRIPTION="Cluster synchronization tool."
 SRC_URI="http://oss.linbit.com/csync2/${P}.tar.gz"
@@ -33,7 +33,10 @@ src_compile() {
 
 src_install() {
 
-	make DESTDIR=${D} localstatedir=${D}/var install || die "install problem"
+	make DESTDIR=${D} \
+		localstatedir=${D}/var \
+		sysconfdir=${D}/etc/csync2 \
+		install || die "install problem"
 
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/${PN}.xinetd ${PN} || die
@@ -63,7 +66,7 @@ pkg_config() {
 	} > /etc/services.new
 	mv -f /etc/services.new /etc/services
 
-	if [ ! -f /etc/${PN}/csync2_ssl_key.pem ]; then
+	#if [ ! -f /etc/${PN}/csync2_ssl_key.pem ]; then
 		einfo "Creating default certificate in /etc/${PN}"
 
 		openssl genrsa -out /etc/${PN}/csync2_ssl_key.pem 1024 &> /dev/null
@@ -81,5 +84,5 @@ pkg_config() {
 			&> /dev/null
 
 		rm /etc/${PN}/csync2_ssl_cert.csr
-	fi
+	#fi
 }
