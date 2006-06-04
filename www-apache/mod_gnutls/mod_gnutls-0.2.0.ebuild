@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.2.0.ebuild,v 1.2 2005/12/10 13:22:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.2.0.ebuild,v 1.3 2006/06/04 18:56:25 vericgar Exp $
 
 inherit apache-module ssl-cert
 
@@ -16,6 +16,7 @@ KEYWORDS="amd64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=net-libs/gnutls-1.2.0"
+RDEPEND="${DEPEND}"
 
 APACHE2_MOD_CONF="47_${PN}"
 APACHE2_MOD_DEFINE="GNUTLS"

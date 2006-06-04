@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.07.ebuild,v 1.8 2006/04/11 22:33:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.07.ebuild,v 1.9 2006/06/04 18:53:35 vericgar Exp $
 
 inherit perl-module depend.apache
 
@@ -15,9 +15,9 @@ KEYWORDS="~alpha ~amd64 ppc sparc x86"
 
 DEPEND="${DEPEND}
 	>=dev-perl/ExtUtils-XSBuilder-0.23
-	>=net-www/apache-2.0.48
 	app-doc/doxygen
 	>=www-apache/mod_perl-2"
+RDEPEND="${DEPEND}"
 
 mydoc="TODO README CHANGES INSTALL"
 myconf="--with-apache2-apxs=${APXS2}"
