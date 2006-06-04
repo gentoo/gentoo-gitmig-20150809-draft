@@ -1,0 +1,10 @@
+# ChangeLog for app-text/utrac
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/utrac/ChangeLog,v 1.1 2006/06/04 21:05:57 wschlich Exp $
+
+*utrac-0.3.0 (04 Jun 2006)
+
+  04 Jun 2006; Wolfram Schlich <wschlich@gentoo.org> +metadata.xml,
+  +utrac-0.3.0.ebuild:
+  initial import
+
