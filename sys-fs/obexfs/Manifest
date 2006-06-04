@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c023ca635a6ed6e8c283e1b493aa3352 ChangeLog 1122
+MD5 55acde7b07b4c77b5a675c19c794e143 files/digest-obexfs-0.7 61
+MD5 51c836bcfb2b0082c1a3edf09cb4d1c5 files/digest-obexfs-0.8 61
+MD5 24b502193838717cb0c12147f2b25848 files/obexfs-0.8-as-needed.patch 491
+MD5 aa9331331ad16eda792444cec50914ab metadata.xml 285
+MD5 e54964cac04bd3d6544ca53a17565b1d obexfs-0.7.ebuild 626
+MD5 f4a5cc42e8fc1ea8274a62a6c6dc0374 obexfs-0.8.ebuild 692
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEguCkjG8pv1lIUX4RAtbbAKDVmxZT564GZD69cE6UbypJGdTnjgCfdMvi
+pZJLi0fjY8wLqrjWPYid320=
+=xJtA
+-----END PGP SIGNATURE-----
