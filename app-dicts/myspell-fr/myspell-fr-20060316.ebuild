@@ -1,12 +1,12 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fr/myspell-fr-20060316.ebuild,v 1.3 2006/05/22 18:52:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fr/myspell-fr-20060316.ebuild,v 1.4 2006/06/04 10:56:51 kevquinn Exp $
 
 DESCRIPTION="French dictionaries for myspell/hunspell"
 LICENSE="LGPL-2.1"
 HOMEPAGE="http://lingucomponent.openoffice.org/"
 
-KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "fr,BE,fr_FR,French (Belgium),fr_FR.zip"

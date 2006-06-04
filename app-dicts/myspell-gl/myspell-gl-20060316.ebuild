@@ -1,12 +1,12 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-gl/myspell-gl-20060316.ebuild,v 1.3 2006/05/22 18:54:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-gl/myspell-gl-20060316.ebuild,v 1.4 2006/06/04 10:57:59 kevquinn Exp $
 
 DESCRIPTION="Galician dictionaries for myspell/hunspell"
 LICENSE="GPL-2 LGPL-2.1"
 HOMEPAGE="http://lingucomponent.openoffice.org/"
 
-KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
 # Note; since the Galician dictionary uses the Spanish
 # hypenation file, it causes collision problems with
