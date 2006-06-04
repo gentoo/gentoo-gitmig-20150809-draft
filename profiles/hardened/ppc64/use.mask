@@ -114,3 +114,10 @@ video_cards_voodoo
 
 #until netbeans is keyworded
 netbeans
+
+cg
+dmi
+interbase
+mbrola
+multilib
+
