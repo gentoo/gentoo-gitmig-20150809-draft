@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.40 2006/03/17 00:38:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.41 2006/06/04 19:40:41 flameeyes Exp $
+
+*skim-1.4.5 (04 Jun 2006)
+
+  04 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> +skim-1.4.5.ebuild:
+  Version bump to 1.4.5, use kde-functions eclass rather than kde to avoid
+  unnecessary IUSEs and dependencies, export CC and CXX to use the right
+  compilers when doing cross-distcc, translate MAKEOPTS into scons options to
+  use parallel building.
 
   17 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> skim-1.4.4.ebuild:
   Move the .desktop file in FDO's suggested directory.
