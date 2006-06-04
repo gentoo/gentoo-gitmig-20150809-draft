@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.32.ebuild,v 1.6 2006/06/04 13:43:36 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.32.ebuild,v 1.7 2006/06/04 14:07:42 xmerlin Exp $
 
 DESCRIPTION="Cluster synchronization tool."
 SRC_URI="http://oss.linbit.com/csync2/${P}.tar.gz"
 HOMEPAGE="http://oss.linbit.com/csync2/"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 IUSE=""
 
@@ -42,7 +42,7 @@ src_install() {
 	dodir /var/lib/csync2/ || die
 	keepdir /var/lib/csync2/
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
+	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO csync2_locheck.sh
 }
 
 pkg_postinst() {
@@ -82,5 +82,6 @@ pkg_config() {
 			&> /dev/null
 
 		rm /etc/${PN}/csync2_ssl_cert.csr
+		chmod 400 /etc/${PN}/csync2_ssl_key.pem /etc/${PN}/csync2_ssl_cert.pem
 	fi
 }

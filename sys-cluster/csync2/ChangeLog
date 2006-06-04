@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/csync2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.14 2006/06/04 13:23:50 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.15 2006/06/04 14:07:42 xmerlin Exp $
+
+  04 Jun 2006; Christian Zoffoli <xmerlin@gentoo.org> csync2-1.32.ebuild:
+  Added csync2_locheck.sh to doc, fixed cert perm.
 
   04 Jun 2006; Christian Zoffoli <xmerlin@gentoo.org> csync2-1.32.ebuild:
   Conf. moved to /etc/csync2 .
