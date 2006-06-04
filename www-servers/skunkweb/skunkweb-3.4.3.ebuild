@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.3.ebuild,v 1.1 2006/05/23 08:59:39 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.3.ebuild,v 1.2 2006/06/04 19:10:13 vericgar Exp $
 
 inherit eutils apache-module
 
@@ -15,6 +15,7 @@ IUSE="apache2 doc"
 DEPEND=">=dev-lang/python-2.2
 		>=dev-python/egenix-mx-base-2.0.4
 		app-admin/sudo"
+RDEPEND="${DEPEND}"
 
 APACHE1_MOD_FILE="${S}/SkunkWeb/mod_skunkweb/mod_skunkweb.so"
 APACHE2_MOD_FILE="${S}/SkunkWeb/mod_skunkweb/.libs/mod_skunkweb.so"
