@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-0.20.1.ebuild,v 1.6 2006/02/13 14:34:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-0.20.1.ebuild,v 1.7 2006/06/04 02:53:02 halcy0n Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/popfile/${P}.zip"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="-*"
 
 DEPEND=">=dev-lang/perl-5.8
 	>=dev-perl/BerkeleyDB-0.25

@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/popfile
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.10 2006/05/31 07:12:37 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.11 2006/06/04 02:53:02 halcy0n Exp $
+
+  04 Jun 2006; Mark Loeser <halcy0n@gentoo.org> popfile-0.20.1.ebuild:
+  Pull x86 keyword
 
 *popfile-0.22.4 (31 May 2006)
 
