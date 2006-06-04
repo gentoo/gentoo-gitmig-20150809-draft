@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.1.ebuild,v 1.5 2006/05/28 19:48:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.1.ebuild,v 1.6 2006/06/04 21:32:12 halcy0n Exp $
 
 inherit flag-o-matic
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE="xmms matroska ogg theora libvisual"
 
@@ -40,10 +40,6 @@ DEPEND=">=media-video/mplayer-0.90-r2
 		libvisual? ( =media-libs/libvisual-0.2* )"
 
 S=${WORKDIR}/${MY_P}
-
-src_unpack() {
-	unpack ${A}
-}
 
 src_compile() {
 	use amd64 && append-flags -fPIC -DPIC
