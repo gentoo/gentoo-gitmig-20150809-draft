@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 babbd53a32c17934c3425095f7a834a8 ChangeLog 2328
-MD5 58624614ccc7948417caff194c4ecd9e csync2-1.32.ebuild 1958
+MD5 94898f55c9bc0cd13def71bed9763120 csync2-1.32.ebuild 1956
 MD5 8f6c0e3b7da5a8b1a5fd7730f6ae8bdd files/csync2.xinetd 388
 MD5 6e7da398a741c7c58e088b026b71a37d files/digest-csync2-1.32 63
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEgvEYgMUyd/cdjWsRAoCbAJ0dcDHzvVMLl/8diD827BjsyXfdRgCdFoMo
-qfLu2XPH7jDzV89jPyg902E=
-=O1oN
+iD8DBQFEgvKkgMUyd/cdjWsRAiXbAJ4qL0dptmHG+6m/H5Q1IOtfgJp4qACdGtJp
+ehaua54yBKCZLAdhjw23W8o=
+=r7Lt
 -----END PGP SIGNATURE-----
