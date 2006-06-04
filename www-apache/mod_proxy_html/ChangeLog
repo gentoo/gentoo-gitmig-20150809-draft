@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_proxy_html
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/ChangeLog,v 1.6 2006/02/27 17:46:19 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/ChangeLog,v 1.7 2006/06/04 19:07:22 vericgar Exp $
+
+  04 Jun 2006; Michael Stewart <vericgar@gentoo.org>
+  mod_proxy_html-2.4.3.ebuild:
+  Address dependency issues caused by depend.apache. Refer to bug 107127.
 
   27 Feb 2006; Michael Stewart <vericgar@gentoo.org>
   mod_proxy_html-2.4.3.ebuild, mod_proxy_html-2.5.1.ebuild:

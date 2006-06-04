@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.22 2006/04/27 23:28:41 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.23 2006/06/04 19:05:52 vericgar Exp $
+
+  04 Jun 2006; Michael Stewart <vericgar@gentoo.org> mod_perl-1.29.ebuild,
+  mod_perl-2.0.1-r1.ebuild, mod_perl-2.0.1-r2.ebuild, mod_perl-2.0.2.ebuild:
+  Address dependency issues caused by depend.apache. Refer to bug 107127.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-mod_perl-1.27-r1, files/digest-mod_perl-1.27-r2,

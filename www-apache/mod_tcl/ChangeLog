@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_tcl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/ChangeLog,v 1.7 2005/11/01 18:14:44 dertobi123 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/ChangeLog,v 1.8 2006/06/04 19:08:27 vericgar Exp $
+
+  04 Jun 2006; Michael Stewart <vericgar@gentoo.org> mod_tcl-1.0-r1.ebuild:
+  Address dependency issues caused by depend.apache. Refer to bug 107127.
 
   01 Nov 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   mod_tcl-1.0-r1.ebuild:

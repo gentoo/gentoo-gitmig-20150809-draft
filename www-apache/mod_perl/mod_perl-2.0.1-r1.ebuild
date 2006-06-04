@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.1-r1.ebuild,v 1.4 2006/02/13 15:11:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.1-r1.ebuild,v 1.5 2006/06/04 19:05:52 vericgar Exp $
 
 inherit apache-module perl-module eutils
 DESCRIPTION="An embedded Perl interpreter for Apache2"
@@ -13,18 +13,18 @@ IUSE=""
 SLOT="1"
 
 # see bug 30087 for why sudo is in here
-need_apache2
-
 DEPEND="!dev-perl/Apache-Test
 	dev-lang/perl
 	>=virtual/perl-CGI-3.08
 	>=dev-perl/Compress-Zlib-1.09
-	>=net-www/apache-2.0.47
 	app-admin/sudo"
+RDEPEND="${DEPEND}"
 
 APACHE2_MOD_CONF="75_${PN}.conf apache2-mod_perl-startup.pl"
 DOCFILES="Changes INSTALL LICENSE README STATUS"
 APACHE2_MOD_DEFINE="PERL"
+
+need_apache2
 
 src_unpack() {
 	unpack ${A}

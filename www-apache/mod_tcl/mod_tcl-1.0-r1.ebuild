@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/mod_tcl-1.0-r1.ebuild,v 1.4 2005/11/01 18:14:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/mod_tcl-1.0-r1.ebuild,v 1.5 2006/06/04 19:08:27 vericgar Exp $
 
 inherit eutils apache-module
 
@@ -14,6 +14,7 @@ IUSE=""
 SLOT="0"
 
 DEPEND="dev-lang/tcl"
+RDEPEND="${DEPEND}"
 
 APXS2_ARGS="-c -Wl,-ltcl -DHAVE_TCL_H ${PN}.c tcl_cmds.c tcl_misc.c"
 APACHE2_MOD_CONF="${PVR}/27_mod_tcl"
