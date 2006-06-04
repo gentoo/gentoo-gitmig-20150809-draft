@@ -1,0 +1,10 @@
+# ChangeLog for net-print/foomatic-filters-ppds
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/ChangeLog,v 1.1 2006/06/04 14:51:42 genstef Exp $
+
+*foomatic-filters-ppds-20060601 (04 Jun 2006)
+
+  04 Jun 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +foomatic-filters-ppds-20060601.ebuild:
+  Split up foomatic-db
+
