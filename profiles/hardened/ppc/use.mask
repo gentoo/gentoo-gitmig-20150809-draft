@@ -1,43 +1,51 @@
-# Copyright 2005 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/use.mask,v 1.4 2006/01/22 01:20:48 chtekk Exp $
-
 3dfx
-3dnow
-3dnowext
 acpi
 adabas
 afs
-aqua
 avi
 birdstep
+cg
+cmucl
+cpdflib
 db2
 dbmaker
+dmi
+empress
+empress-bcs
 esoob
 fdftk
 filepro
 firebird
 fmod
+frontbase
+fusion
 hdf
 hyperwave
+i8x0
 icc
 icc-pgo
 ifc
 informix
 ingres
-mmx
-mmx2
+interbase
+ip28
+lm_sensors
+mbrola
+nvtv
+oci8
+oracle7
 pfpro
+rar
+real
 solid
-sse
-sse2
 svga
 sybase
 sybase-ct
 tcc
-uclibc
 uml
+xvmc
+-altivec
+-pbbuttonsd
+-ppcsha1
+-x264
 
-# Luca Longinotti <chtekk@gentoo.org>
-# mask Oracle
-oci8

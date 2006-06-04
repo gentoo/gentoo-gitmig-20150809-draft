@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.7 2006/04/02 11:55:12 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.8 2006/06/04 01:49:44 solar Exp $
 
 #unknowns
 afs
@@ -93,3 +93,4 @@ video_cards_nsc
 -video_cards_fglrx
 -video_cards_vmware
 
+pvm
