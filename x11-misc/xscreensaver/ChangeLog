@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.137 2006/05/24 21:03:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.138 2006/06/04 10:01:47 nelchael Exp $
+
+*xscreensaver-5.00 (04 Jun 2006)
+
+  04 Jun 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/xscreensaver-5.00-gentoo.patch,
+  +files/xscreensaver-5.00-nsfw.patch, +xscreensaver-5.00.ebuild:
+  Version bump, see bug #135210. This version has changed API, all third party
+  screen savers will not work until ported to the new API by upstream.
 
   24 May 2006; Michael Hanselmann <hansmi@gentoo.org>
   xscreensaver-4.24.ebuild:
