@@ -1,10 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0.ebuild,v 1.2 2006/06/04 18:28:25 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0.ebuild,v 1.3 2006/06/04 18:51:49 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
-# Hack to make sure autoreconf gets run
-SNAPSHOT="yes"
+#SNAPSHOT="yes"
 
 inherit x-modular multilib
 
@@ -567,10 +566,16 @@ src_unpack() {
 				-e "s:^\(VESA_SUBDIRS.*\)\\\:\1:g" \
 				${S}/hw/kdrive/Makefile.am
 		fi
-
-		# Only need to reconf if we're modifying kdrive's Makefile.am
-		x-modular_reconf_source
 	fi
+
+	# Make sure eautoreconf gets run if we need the autoconf/make
+	# changes.
+	if [[ ${SNAPSHOT} != "yes" ]]; then
+		if use kdrive || use xprint; then
+			eautoreconf
+		fi
+	fi
+	x-modular_reconf_source
 }
 
 src_install() {
