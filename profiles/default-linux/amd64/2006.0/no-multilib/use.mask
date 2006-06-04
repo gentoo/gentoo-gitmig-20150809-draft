@@ -1,5 +1,9 @@
 # USE flags masked because providing packages have ABI=x86
 
+# 2006/06/04 Stuart Herbert <stuart@gentoo.org>
+# net-misc/nxclient is x86 only
+nxclient
+
 # 2006/03/22 Danny van Dyk <kugelfang@gentoo.org>
 # media-sound/realplayer is x86 only.
 real
