@@ -50,6 +50,10 @@ x11-libs/gtk+
 # end collision-protect
 ##
 
+# This is scary stuff that shouldn't be used any more
+sys-apps/coreutils-darwin
+sys-apps/baselayout-darwin
+
 # libidn needs java-config.  When shut up about that, it persists on
 # using jikes, then continues complaining jikes isn't good enough.
 net-dns/libidn
