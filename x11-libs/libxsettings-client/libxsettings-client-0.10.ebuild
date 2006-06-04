@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.10.ebuild,v 1.7 2006/01/15 15:28:56 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.10.ebuild,v 1.8 2006/06/04 09:24:18 nelchael Exp $
+
+inherit libtool
 
 IUSE=""
 
@@ -19,6 +21,13 @@ DEPEND="|| ( (
 	virtual/x11 )"
 
 S=${WORKDIR}/Xsettings-client-${PV}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	elibtoolize
+}
 
 src_compile() {
 	econf || die "configure failed"

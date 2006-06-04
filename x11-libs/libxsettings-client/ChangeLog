@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxsettings-client
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/ChangeLog,v 1.9 2006/01/15 15:28:56 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/ChangeLog,v 1.10 2006/06/04 09:24:18 nelchael Exp $
+
+  04 Jun 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  libxsettings-client-0.10.ebuild:
+  Fix building shared libs on uclibc, see bug #135462.
 
   15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   libxsettings-client-0.10.ebuild:
