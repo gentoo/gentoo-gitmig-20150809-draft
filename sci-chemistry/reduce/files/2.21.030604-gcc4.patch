@@ -1,0 +1,100 @@
+Files reduce.2.21.030604.source.orig/libpdb/libpdb++.a and reduce.2.21.030604.source/libpdb/libpdb++.a differ
+diff -urN -x '*Makefile*' reduce.2.21.030604.source.orig/reduce_src/PDBrec.h reduce.2.21.030604.source/reduce_src/PDBrec.h
+--- reduce.2.21.030604.source.orig/reduce_src/PDBrec.h	2003-06-04 16:32:12.000000000 -0700
++++ reduce.2.21.030604.source/reduce_src/PDBrec.h	2006-06-01 15:50:07.000000000 -0700
+@@ -233,7 +233,7 @@
+ 
+    friend ostream& operator << (ostream& s, const PDBrecNAMEout& p);
+ private:
+-   PDBrecNAMEout(const PDBrecNAMEout& p); // can't copy or assign
++//   PDBrecNAMEout(const PDBrecNAMEout& p); // can't copy or assign
+    PDBrecNAMEout& operator=(const PDBrecNAMEout& p);
+ 
+    const PDBrec& _r;
+Files reduce.2.21.030604.source.orig/reduce_src/reduce and reduce.2.21.030604.source/reduce_src/reduce differ
+diff -urN -x '*Makefile*' reduce.2.21.030604.source.orig/toolclasses/Dict.C reduce.2.21.030604.source/toolclasses/Dict.C
+--- reduce.2.21.030604.source.orig/toolclasses/Dict.C	1999-03-15 08:42:34.000000000 -0800
++++ reduce.2.21.030604.source/toolclasses/Dict.C	2006-06-01 15:51:58.000000000 -0700
+@@ -13,6 +13,7 @@
+ // Copyright (C) 1999 J. Michael Word
+ // **************************************************************
+ 
++using std::endl;
+ #include "Dict.h"
+ 
+ // ---------------------------------------------------
+Files reduce.2.21.030604.source.orig/toolclasses/libtoolclasses.a and reduce.2.21.030604.source/toolclasses/libtoolclasses.a differ
+diff -urN -x '*Makefile*' reduce.2.21.030604.source.orig/toolclasses/List.h reduce.2.21.030604.source/toolclasses/List.h
+--- reduce.2.21.030604.source.orig/toolclasses/List.h	2003-06-04 16:48:51.000000000 -0700
++++ reduce.2.21.030604.source/toolclasses/List.h	2006-06-01 16:31:43.000000000 -0700
+@@ -9,6 +9,8 @@
+ #ifndef LIST_H
+ #define LIST_H 1
+ 
++#include "utility.h"
++
+ #ifdef OLD_STD_HDRS
+ #include <iostream.h>
+ #include <limits.h>
+diff -urN -x '*Makefile*' reduce.2.21.030604.source.orig/toolclasses/ListIter.C reduce.2.21.030604.source/toolclasses/ListIter.C
+--- reduce.2.21.030604.source.orig/toolclasses/ListIter.C	1999-01-13 09:58:42.000000000 -0800
++++ reduce.2.21.030604.source/toolclasses/ListIter.C	2006-06-01 15:32:13.000000000 -0700
+@@ -58,29 +58,29 @@
+ 
+ template <class T>
+ bool NonConstListIter<T>::drop() {
+-   bool rc = (_node != NULL);
++   bool rc = (this->_node != NULL);
+    if (rc) {
+-      DblLnkLstNode<T>* prev = _NClist.linkPrev(_node);
+-      _NClist.drop(_node);
+-      _node = prev;
++      DblLnkLstNode<T>* prev = _NClist.linkPrev(this->_node);
++      _NClist.drop(this->_node);
++      this->_node = prev;
+    }
+    return rc;
+ }
+ 
+ template <class T>
+ bool NonConstListIter<T>::insertBefore(const T& e) {
+-   bool rc = (_node != NULL);
++   bool rc = (this->_node != NULL);
+    if (rc) {
+-      _NClist.insertBefore(e, _node);
++      _NClist.insertBefore(e, this->_node);
+    }
+    return rc;
+ }
+ 
+ template <class T>
+ bool NonConstListIter<T>::insertAfter(const T& e) {
+-   bool rc = (_node != NULL);
++   bool rc = (this->_node != NULL);
+    if (rc) {
+-      _NClist.insertAfter(e, _node);
++      _NClist.insertAfter(e, this->_node);
+    }
+    return rc;
+ }
+diff -urN -x '*Makefile*' reduce.2.21.030604.source.orig/toolclasses/ListIter.h reduce.2.21.030604.source/toolclasses/ListIter.h
+--- reduce.2.21.030604.source.orig/toolclasses/ListIter.h	1999-01-13 09:58:42.000000000 -0800
++++ reduce.2.21.030604.source/toolclasses/ListIter.h	2006-06-01 15:07:29.000000000 -0700
+@@ -63,13 +63,13 @@
+ 			      : ListIter<T>(li), _NClist(li._NClist) {}
+ 
+    T& data() const {
+-      assert(_node);
+-      return _NClist.linkData(_node);
++      assert(this->_node);
++      return _NClist.linkData(this->_node);
+    }
+ 
+    void update(const T& e) const {
+-      assert(_node);
+-      _NClist.linkData(_node) = e;
++      assert(this->_node);
++      _NClist.linkData(this->_node) = e;
+    }
+ 
+    bool drop(); // remove the current element
