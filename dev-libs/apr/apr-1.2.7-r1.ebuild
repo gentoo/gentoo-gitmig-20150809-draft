@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.2.7-r1.ebuild,v 1.1 2006/05/26 04:04:59 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.2.7-r1.ebuild,v 1.2 2006/06/04 18:08:08 vericgar Exp $
 
 inherit autotools
 
@@ -18,7 +18,12 @@ DEPEND=""
 
 src_compile() {
 
-	eautoreconf
+	# for some reason not all the .m4 files that are referenced in 
+	# configure.in exist, so we remove all references and include every
+	# .m4 file in build using aclocal via eautoreconf
+	# See bug 135463
+	sed -i -e '/sinclude/d' configure.in
+	AT_M4DIR="build" eautoreconf
 
 	myconf="--datadir=/usr/share/apr-1"
 
