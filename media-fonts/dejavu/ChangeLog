@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/dejavu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.21 2006/05/20 11:35:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.22 2006/06/04 13:50:26 flameeyes Exp $
+
+  04 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> -dejavu-1.11.ebuild,
+  -dejavu-1.15.ebuild, -dejavu-2.2.ebuild, -dejavu-2.4.ebuild,
+  -dejavu-2.4.1.ebuild, -dejavu-2.5.ebuild:
+  Remove old versions.
 
 *dejavu-2.6 (20 May 2006)
 
