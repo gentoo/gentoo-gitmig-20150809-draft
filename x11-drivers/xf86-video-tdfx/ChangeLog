@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-tdfx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tdfx/ChangeLog,v 1.18 2006/04/16 14:24:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tdfx/ChangeLog,v 1.19 2006/06/05 21:29:27 flameeyes Exp $
+
+  05 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xf86-video-tdfx-1.2.1.ebuild:
+  Add ~x86-fbsd keyword.
 
   16 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   xf86-video-tdfx-1.1.1.3.ebuild:

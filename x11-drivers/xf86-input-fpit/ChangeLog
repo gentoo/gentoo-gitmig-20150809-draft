@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-fpit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-fpit/ChangeLog,v 1.18 2006/04/16 12:53:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-fpit/ChangeLog,v 1.19 2006/06/05 21:21:35 flameeyes Exp $
+
+  05 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xf86-input-fpit-1.1.0.ebuild:
+  Add ~x86-fbsd keyword.
 
   16 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   xf86-input-fpit-1.0.0.5.ebuild:
