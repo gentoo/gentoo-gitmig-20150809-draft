@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.123 2006/05/21 19:35:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.124 2006/06/05 17:02:18 allanonjl Exp $
+
+  05 Jun 2006; <allanonl@gentoo.org> evolution-2.6.1.ebuild:
+  add specific dep on gnome-common due to missing GNOME_COMPILE_WARNINGS.
+  thanks to LordVan for the report and testing.
 
   21 May 2006; Markus Rothe <corsair@gentoo.org>
   files/digest-evolution-2.4.2.1, Manifest:

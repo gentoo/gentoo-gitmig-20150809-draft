@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.1.ebuild,v 1.2 2006/05/15 15:35:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.1.ebuild,v 1.3 2006/06/05 17:02:18 allanonjl Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -62,7 +62,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	sys-devel/bison
 	app-text/scrollkeeper
-	gnome-base/gnome-common
+	>=gnome-base/gnome-common-2.12.0
 	doc? ( >=dev-util/gtk-doc-0.6 )"
 
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
