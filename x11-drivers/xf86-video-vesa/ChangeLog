@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-vesa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vesa/ChangeLog,v 1.17 2006/06/03 16:23:47 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vesa/ChangeLog,v 1.18 2006/06/05 09:51:41 flameeyes Exp $
+
+  05 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xf86-video-vesa-1.2.1.ebuild:
+  Add ~x86-fbsd keyword.
 
 *xf86-video-vesa-1.2.1 (03 Jun 2006)
 
