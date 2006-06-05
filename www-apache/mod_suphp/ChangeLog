@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_suphp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/ChangeLog,v 1.8 2006/06/05 13:24:10 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/ChangeLog,v 1.9 2006/06/05 18:16:40 hollow Exp $
+
+*mod_suphp-0.6.1-r2 (05 Jun 2006)
+
+  05 Jun 2006; Benedikt Böhm <hollow@gentoo.org>
+  +files/suphp-mod_userdir.patch, +mod_suphp-0.6.1-r2.ebuild:
+  fix #111081
 
   05 Jun 2006; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
   -mod_suphp-0.6.0.ebuild, -mod_suphp-0.6.1.ebuild,
