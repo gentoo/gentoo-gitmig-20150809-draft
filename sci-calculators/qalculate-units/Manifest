@@ -1,16 +1,31 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b82799d21b5cc3ab1522b26a81774db4 ChangeLog 936
-MD5 89399b41b9888bcffaef263c2db8e1d5 files/digest-qalculate-units-0.9.0 73
-MD5 89399b41b9888bcffaef263c2db8e1d5 files/digest-qalculate-units-0.9.0-r1 73
-MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
+DIST qalculate-units-0.9.0.tar.gz 367622
+DIST qalculate-units-0.9.4.tar.gz 375642 RMD160 621636ecc487b71a85f7e6f9785e275ed2ac2e17 SHA1 1a6c124e572671973be9d249aba682e745f01f91 SHA256 1f0269c15a61d69e209ebdc4d38c1812c53a1becb8e9335ef2d5539385939398
+EBUILD qalculate-units-0.9.0-r1.ebuild 792 RMD160 d21149094fb4fc8c9afa44db190a90e09c521dbd SHA1 f6fad3bddbfab2fb63f8aba9fc4fd782ffdb569a SHA256 e47763fa3be6f4a5e621fe43e4559da3a2f43194dc67f260176edc6ccb0057d2
 MD5 2041e0323cf572d97a7600d8f5565c6c qalculate-units-0.9.0-r1.ebuild 792
+RMD160 d21149094fb4fc8c9afa44db190a90e09c521dbd qalculate-units-0.9.0-r1.ebuild 792
+SHA256 e47763fa3be6f4a5e621fe43e4559da3a2f43194dc67f260176edc6ccb0057d2 qalculate-units-0.9.0-r1.ebuild 792
+EBUILD qalculate-units-0.9.0.ebuild 788 RMD160 7b37cb4345bd953d10c5eb7cece3cd693bc74d70 SHA1 a16a1b16be978608f605f573d093247c8a8484cc SHA256 4a850ec931cbcb3f62fc223a22f9953ec0a7b4d285c9116280c104c1aa24f2b1
 MD5 8e3a9aa82593fb2630b1745b4f52cdc6 qalculate-units-0.9.0.ebuild 788
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxFNvCRZPokWLroQRAkLeAKCsPiL4HKBeQRrZfYz968FNcWaRzACeKW5W
-z4NU+HEdjrDycoMH1Xc1aVE=
-=+hLE
------END PGP SIGNATURE-----
+RMD160 7b37cb4345bd953d10c5eb7cece3cd693bc74d70 qalculate-units-0.9.0.ebuild 788
+SHA256 4a850ec931cbcb3f62fc223a22f9953ec0a7b4d285c9116280c104c1aa24f2b1 qalculate-units-0.9.0.ebuild 788
+EBUILD qalculate-units-0.9.4.ebuild 789 RMD160 75a3857d5d919e7c3cd43f46f475967bda534f6e SHA1 d4a25ce4f6ef6bca21ad206f4702663d033e6fb8 SHA256 04f3e057654176d3f6d7f960e498e4eed7c00a4de992f46feeb1fd363b98bdc1
+MD5 38cf1eed2d8385ac4170f2ed6d25b9c5 qalculate-units-0.9.4.ebuild 789
+RMD160 75a3857d5d919e7c3cd43f46f475967bda534f6e qalculate-units-0.9.4.ebuild 789
+SHA256 04f3e057654176d3f6d7f960e498e4eed7c00a4de992f46feeb1fd363b98bdc1 qalculate-units-0.9.4.ebuild 789
+MISC ChangeLog 1151 RMD160 eef8a62e7fc463577bad8f09c9512f3072c79ed9 SHA1 f638a11adba8c987be01bbacd4eaf32ab3b20060 SHA256 4204f79c339a784f796cb8220f2daa337a07b906c59a833a2f5614434c6e6c87
+MD5 3bcf3d1c95b0fa8a8d4f91dfeab23930 ChangeLog 1151
+RMD160 eef8a62e7fc463577bad8f09c9512f3072c79ed9 ChangeLog 1151
+SHA256 4204f79c339a784f796cb8220f2daa337a07b906c59a833a2f5614434c6e6c87 ChangeLog 1151
+MISC metadata.xml 157 RMD160 ed43b99e7bf8bbf62cf4e46152138ab42d3a88c5 SHA1 2182a6de0b10959aad51af2990f1a6c69e34dd97 SHA256 750cb9e46ac2b77e1adf73de43c186a8c2d2234a9c6a89d9358d0969dc5cf8ac
+MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
+RMD160 ed43b99e7bf8bbf62cf4e46152138ab42d3a88c5 metadata.xml 157
+SHA256 750cb9e46ac2b77e1adf73de43c186a8c2d2234a9c6a89d9358d0969dc5cf8ac metadata.xml 157
+MD5 89399b41b9888bcffaef263c2db8e1d5 files/digest-qalculate-units-0.9.0 73
+RMD160 bea8d51d745dd03c3d686f5cab7753c8b4efbb3e files/digest-qalculate-units-0.9.0 73
+SHA256 e0654cc8d35d87b2282cd17912c3e4feb4055514e96e95fe8942268f8d4e7812 files/digest-qalculate-units-0.9.0 73
+MD5 89399b41b9888bcffaef263c2db8e1d5 files/digest-qalculate-units-0.9.0-r1 73
+RMD160 bea8d51d745dd03c3d686f5cab7753c8b4efbb3e files/digest-qalculate-units-0.9.0-r1 73
+SHA256 e0654cc8d35d87b2282cd17912c3e4feb4055514e96e95fe8942268f8d4e7812 files/digest-qalculate-units-0.9.0-r1 73
+MD5 13b74cfa8cae2a577a752210f49bcc5f files/digest-qalculate-units-0.9.4 265
+RMD160 41010009c42d44d95bcf91f20cacc7655278f447 files/digest-qalculate-units-0.9.4 265
+SHA256 6fd6c1c8b34980550471409d5294e121ae95f030e7492aeaf277a437229dab30 files/digest-qalculate-units-0.9.4 265
