@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cplay
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.16 2006/01/09 17:11:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.17 2006/06/05 19:33:38 genstef Exp $
+
+  05 Jun 2006; Stefan Schweizer <genstef@gentoo.org> cplay-1.49.ebuild:
+  new use flags thanks to Samuli Suominen <sasuomin@uusikaupunki.fi> in bug
+  135668
 
   09 Jan 2006; Jeroen Roovers <jer@gentoo.org> cplay-1.49.ebuild:
   Marked ~hppa.
