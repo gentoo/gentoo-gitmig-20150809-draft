@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/memcached
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.26 2006/05/23 20:04:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.27 2006/06/05 20:41:59 flameeyes Exp $
+
+  05 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  memcached-1.1.13_pre.ebuild:
+  Add ~x86-fbsd keyword.
 
   23 May 2006; Markus Rothe <corsair@gentoo.org> memcached-1.1.12-r2.ebuild:
   Stable on ppc64
