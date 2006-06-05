@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnat-gpl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/ChangeLog,v 1.7 2006/04/27 15:36:03 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/ChangeLog,v 1.8 2006/06/05 09:10:26 george Exp $
+
+  05 Jun 2006; George Shapovalov <george@gentoo.org>
+  gnat-gpl-3.4.5.1-r2.ebuild:
+  fixed creation of symlink to nonexistent info file
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-gnat-gpl-3.4.5.1-r1, files/digest-gnat-gpl-3.4.5.1-r2,

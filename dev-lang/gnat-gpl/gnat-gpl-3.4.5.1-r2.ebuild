@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.5.1-r2.ebuild,v 1.2 2006/03/27 15:06:42 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.5.1-r2.ebuild,v 1.3 2006/06/05 09:10:26 george Exp $
 
 inherit gnatbuild
 
@@ -57,6 +57,9 @@ src_install() {
 	cd ${GNATSOURCE}
 	dodoc COPYING README features-503 features-ada0y known-problems-503a
 	cp -pPR examples/ "${D}/usr/share/doc/${PF}/"
+
+	# this version of gnat does not provide info files yet
+	rm -f ${D}${DATAPATH}/info/gnat.info
 }
 
 pkg_postinst() {
