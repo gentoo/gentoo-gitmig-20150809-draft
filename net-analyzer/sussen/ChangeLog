@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/sussen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.17 2006/06/04 18:11:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.18 2006/06/05 14:00:20 pva Exp $
+
+*sussen-0.22-r2 (05 Jun 2006)
+
+  05 Jun 2006; Peter Volkov <pva@gentoo.org>
+  +files/sussen-0.22-panel-applet-crash.patch, -sussen-0.22.ebuild,
+  -sussen-0.22-r1.ebuild, +sussen-0.22-r2.ebuild:
+  Fix for another crash reported in bug 135493.
 
 *sussen-0.22-r1 (04 Jun 2006)
 

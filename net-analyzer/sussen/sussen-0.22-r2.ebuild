@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.22.ebuild,v 1.1 2006/05/29 17:07:47 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.22-r2.ebuild,v 1.1 2006/06/05 14:00:20 pva Exp $
 
 inherit gnome2 mono autotools
 
@@ -25,6 +25,15 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.34.2"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	pwd
+	epatch ${FILESDIR}/${P}-applet-cancel-scan-crash.patch
+	epatch ${FILESDIR}/${P}-panel-applet-crash.patch
+}
 
 src_compile () {
 	econf ${myconf} || die "./configure failed"

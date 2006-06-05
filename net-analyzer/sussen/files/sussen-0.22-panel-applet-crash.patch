@@ -1,0 +1,41 @@
+diff -Naur sussen-0.22.orig/applet/ActionDialog.cs sussen-0.22/applet/ActionDialog.cs
+--- sussen-0.22.orig/applet/ActionDialog.cs	2006-06-05 17:42:51.000000000 +0400
++++ sussen-0.22/applet/ActionDialog.cs	2006-06-05 17:41:20.000000000 +0400
+@@ -269,6 +269,14 @@
+ 			
+ 			return retVal;
+ 		}
++
++		static string GetTempFileName ()
++		{
++			string tmpFile = Path.GetTempFileName ();
++			File.Delete (tmpFile);
++
++			return tmpFile;
++		}
+ 		
+ 		public void OnExecuteClicked (object o, EventArgs args)
+ 		{
+@@ -307,6 +315,8 @@
+ 
+ 					return;				
+ 				}
++			} else {
++				config.DataFileName = GetTempFileName ();
+ 			}
+ 
+ 			if (saveResultsCheckButton.Active) {
+diff -Naur sussen-0.22.orig/applet/Applet.cs sussen-0.22/applet/Applet.cs
+--- sussen-0.22.orig/applet/Applet.cs	2006-05-13 19:38:50.000000000 +0400
++++ sussen-0.22/applet/Applet.cs	2006-06-05 17:42:27.000000000 +0400
+@@ -152,7 +152,9 @@
+ 			tips.Enable ();
+ 			tips.Sink ();
+ 			
+-			Console.WriteLine ("{0} created.", Defines.PACKAGE);			
++			Console.WriteLine ("{0} created.", Defines.PACKAGE);
++
++			program.Run ();
+ 		}
+ 
+ 		void ShowScanSystemDialog ()
