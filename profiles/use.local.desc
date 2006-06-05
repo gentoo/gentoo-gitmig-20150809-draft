@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1929 2006/06/04 20:24:39 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1930 2006/06/05 07:25:37 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1501,6 +1501,7 @@ www-apps/lxr:cvs - Adds support for indexing CVS
 www-apps/lxr:freetext - Adds support for freetext search using swish-e
 www-apps/mediawiki:math - Adds math rendering support
 www-apps/moinmoin:rss - Add RSS support
+www-apps/open-xchange:sieve - Install Smartsieve-OX
 www-apps/open-xchange:webdav - Enable WebDav (Web-based Distributed Authoring and Versioning) support.  
 www-apps/rt:lighttpd - Add lighttpd support
 www-apps/tikiwiki:graphviz - enable graphviz support
