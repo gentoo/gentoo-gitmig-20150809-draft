@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.1-r1.ebuild,v 1.2 2006/05/27 00:34:14 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.1-r1.ebuild,v 1.3 2006/06/05 13:24:10 chtekk Exp $
 
 inherit apache-module eutils
 
-MY_P=${P/mod_/}
+MY_P="${P/mod_/}"
 
 SETIDMODES="mode-force mode-owner mode-paranoid"
 
-DESCRIPTION="A PHP wrapper for Apache"
-HOMEPAGE="http://www.suphp.org"
+DESCRIPTION="A PHP wrapper for Apache."
+HOMEPAGE="http://www.suphp.org/"
 SRC_URI="http://www.suphp.org/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -33,16 +33,16 @@ pkg_setup() {
 	modecnt=0
 	for mode in ${SETIDMODES}; do
 		if use ${mode}; then
-			if [ ${modecnt} -eq 0 ]; then
+			if [[ ${modecnt} -eq 0 ]]; then
 				SUPHP_SETIDMODE=${mode/mode-}
 				let modecnt++
-			elif [ ${modecnt} -ge 1 ]; then
+			elif [[ ${modecnt} -ge 1 ]]; then
 				die "You can only select ONE mode in your USE flags!"
 			fi
 		fi
 	done
 
-	if [ ${modecnt} -eq 0 ]; then
+	if [[ ${modecnt} -eq 0 ]]; then
 		ewarn
 		ewarn "No mode selected, defaulting to paranoid!"
 		ewarn
@@ -75,7 +75,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/suphp-apache22-compat.patch"
-	if has_version ">=dev-libs/apr-1.0.0" ; then
+	if has_version ">=dev-libs/apr-1.0.0"; then
 		sed -e "s|apr-config|apr-1-config|g" -i configure
 	fi
 }
@@ -85,7 +85,7 @@ src_compile() {
 	use checkpath || myargs="${myargs} --disable-checkpath"
 
 	myargs="${myargs} \
-		--with-setid-mode=${SUPHP_SETIDMODE} \
+			--with-setid-mode=${SUPHP_SETIDMODE} \
 	        --with-min-uid=${SUPHP_MINUID} \
 	        --with-min-gid=${SUPHP_MINGID} \
 	        --with-apache-user=${SUPHP_APACHEUSER} \
@@ -112,7 +112,7 @@ src_install() {
 	dodoc doc/apache/CONFIG doc/apache/INSTALL
 
 	insinto /etc
-	doins ${FILESDIR}/suphp.conf
+	doins "${FILESDIR}/suphp.conf"
 }
 
 pkg_postinst() {
