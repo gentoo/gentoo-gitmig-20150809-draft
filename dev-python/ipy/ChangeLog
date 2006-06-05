@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.1 2006/06/05 05:38:38 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.2 2006/06/05 10:20:53 genstef Exp $
+
+  05 Jun 2006; Stefan Schweizer <genstef@gentoo.org> ipy-0.42.ebuild:
+  add ~x86
 
 *ipy-0.42 (05 Jun 2006)
 

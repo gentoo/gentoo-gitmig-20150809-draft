@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ipy-0.42.ebuild,v 1.1 2006/06/05 05:38:38 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ipy-0.42.ebuild,v 1.2 2006/06/05 10:20:53 genstef Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://c0re.23.nu/c0de/IPy/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="virtual/python"
 IUSE=""
