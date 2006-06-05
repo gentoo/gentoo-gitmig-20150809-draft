@@ -1,6 +1,6 @@
 # Copyright 2000-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5.ebuild,v 1.1 2006/06/04 19:40:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5.ebuild,v 1.2 2006/06/05 06:09:24 flameeyes Exp $
 
 inherit kde-functions multilib toolchain-funcs
 
@@ -38,6 +38,8 @@ src_install() {
 	dodir /usr/share/applications/kde
 	mv ${D}/usr/share/applnk/Utilities/skim.desktop \
 		${D}/usr/share/applications/kde
+
+	dodoc ChangeLog AUTHORS NEWS README TODO
 }
 
 pkg_postinst() {
