@@ -1,24 +1,56 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+DIST install-crossover-standard-3.0.1.sh 11818406
+DIST install-crossover-standard-4.0.sh 12792374
+DIST install-crossover-standard-4.1.sh 12794303
+DIST install-crossover-standard-4.2.sh 12876096
+DIST install-crossover-standard-5.0.0.sh 15936867
+DIST install-crossover-standard-5.0.1.sh 16160351
+EBUILD crossover-office-bin-3.0.1.ebuild 1174 RMD160 118a6c2a429be22ea2812f67f88c022dc7bfb1ec SHA1 4afafd2076eb5ab6d338cb78124c8c1618f639ce SHA256 3084b0a96b20997bc4604d7b936db0949c32235e6e7145429aef4476841fe103
+MD5 522c90b86d563eda2241dad0935fae2a crossover-office-bin-3.0.1.ebuild 1174
+RMD160 118a6c2a429be22ea2812f67f88c022dc7bfb1ec crossover-office-bin-3.0.1.ebuild 1174
+SHA256 3084b0a96b20997bc4604d7b936db0949c32235e6e7145429aef4476841fe103 crossover-office-bin-3.0.1.ebuild 1174
+EBUILD crossover-office-bin-4.0.ebuild 1172 RMD160 dc5b24221588504e05ac86324b844608686aa353 SHA1 cdc15f8042eea6192873fa210f2d21b1caa0ebf4 SHA256 d8c0c55c63d61696a1860fb20534b259600facea9aef52119b05115d30d3f6f5
+MD5 558dea503d8c65906c9ab4d8141d3b5e crossover-office-bin-4.0.ebuild 1172
+RMD160 dc5b24221588504e05ac86324b844608686aa353 crossover-office-bin-4.0.ebuild 1172
+SHA256 d8c0c55c63d61696a1860fb20534b259600facea9aef52119b05115d30d3f6f5 crossover-office-bin-4.0.ebuild 1172
+EBUILD crossover-office-bin-4.1.ebuild 1289 RMD160 0d6cbb6032955387e0265f62b84e4d4c819d3651 SHA1 e17d445cf50cfa097fc3700ebe117b752257e4d7 SHA256 44257c1c9951275c1a548aac181dc03e4803ff47fa2b150f9cbe16a51a6ab35e
+MD5 89b2b4133dae1c19c8ba0ea8708b5d85 crossover-office-bin-4.1.ebuild 1289
+RMD160 0d6cbb6032955387e0265f62b84e4d4c819d3651 crossover-office-bin-4.1.ebuild 1289
+SHA256 44257c1c9951275c1a548aac181dc03e4803ff47fa2b150f9cbe16a51a6ab35e crossover-office-bin-4.1.ebuild 1289
+EBUILD crossover-office-bin-4.2.ebuild 1342 RMD160 b4f1327a94ba7de9a4afc591f4a8477b12276f71 SHA1 bee5de0f9633d1e5629484f043f06c7242871405 SHA256 8a0d9e6dc7d00c691ae054391e8758f5a3e5721ee7c9f6442b72cc87c9eff989
+MD5 a9119ea69577960598f6cfa239f96060 crossover-office-bin-4.2.ebuild 1342
+RMD160 b4f1327a94ba7de9a4afc591f4a8477b12276f71 crossover-office-bin-4.2.ebuild 1342
+SHA256 8a0d9e6dc7d00c691ae054391e8758f5a3e5721ee7c9f6442b72cc87c9eff989 crossover-office-bin-4.2.ebuild 1342
+EBUILD crossover-office-bin-5.0.0.ebuild 1229 RMD160 d34b8401e736d8ad807fbec085cddf6fd856f892 SHA1 bd277699441947268d32440a6aba6f4485b87e38 SHA256 aedbf578ffd7c7eb50ace6c40934938135a5d0f13bd22f9129b586283fd5a060
+MD5 a4e953754f6208654a8b7d114cb1eb08 crossover-office-bin-5.0.0.ebuild 1229
+RMD160 d34b8401e736d8ad807fbec085cddf6fd856f892 crossover-office-bin-5.0.0.ebuild 1229
+SHA256 aedbf578ffd7c7eb50ace6c40934938135a5d0f13bd22f9129b586283fd5a060 crossover-office-bin-5.0.0.ebuild 1229
+EBUILD crossover-office-bin-5.0.1.ebuild 1229 RMD160 2da8f42ab17c5810b43334af2aa95d518db8bb97 SHA1 b26d20fefc028c0c9b307b2130b82ef28ca8906e SHA256 b6846f1bfd8bfb29fa781607ace91f92abb97b67f7ee39bd2c77cee5d850c58a
+MD5 3905a2018024bcf875793d99f6c1eaa3 crossover-office-bin-5.0.1.ebuild 1229
+RMD160 2da8f42ab17c5810b43334af2aa95d518db8bb97 crossover-office-bin-5.0.1.ebuild 1229
+SHA256 b6846f1bfd8bfb29fa781607ace91f92abb97b67f7ee39bd2c77cee5d850c58a crossover-office-bin-5.0.1.ebuild 1229
+MISC ChangeLog 1522 RMD160 0239548b258a1d29ed92a1ff5be8c2d107c9793a SHA1 35646c73db349f9eecfd3ea5daf4559bc1ee95b3 SHA256 2c387527ad12ed95f78241e80c04646c8bc446c1ff695645adc9cb794c98bbc4
 MD5 56e97f6637fbc1fb714d8cf262881cb5 ChangeLog 1522
-MD5 32f50956c30404cdf67eb1c8fe6f0559 crossover-office-bin-3.0.1.ebuild 1039
-MD5 c46ca20aebca1e00f895bdd3717aab2b crossover-office-bin-4.0.ebuild 1037
-MD5 10d558a2f42aad9528d9358b462729ed crossover-office-bin-4.1.ebuild 1154
-MD5 5081e37db99db71af08fbc0d96fb22d8 crossover-office-bin-4.2.ebuild 1207
-MD5 c9c0501966c773bfb2123a11382e5b63 crossover-office-bin-5.0.0.ebuild 1094
-MD5 88216eb31fdd98ffcd49f4178ff69333 crossover-office-bin-5.0.1.ebuild 1094
-MD5 cd3ffa8407ac094aa56c0d80edb96e61 files/digest-crossover-office-bin-3.0.1 82
-MD5 7ecc5ba7b6c1138905b6f352ec7e6e9d files/digest-crossover-office-bin-4.0 80
-MD5 f381c74d9cb69f7e54447e0ebe1680b9 files/digest-crossover-office-bin-4.1 80
-MD5 1e60da20abc768da5f823acc9f1254b2 files/digest-crossover-office-bin-4.2 80
-MD5 23dafc6887d2577101cf9eecb5c6eea4 files/digest-crossover-office-bin-5.0.0 82
-MD5 b18d5fe39eb10c26bd181e2b184ee114 files/digest-crossover-office-bin-5.0.1 82
+RMD160 0239548b258a1d29ed92a1ff5be8c2d107c9793a ChangeLog 1522
+SHA256 2c387527ad12ed95f78241e80c04646c8bc446c1ff695645adc9cb794c98bbc4 ChangeLog 1522
+MISC metadata.xml 157 RMD160 b892a0c64131e9d8668b2aac5920c256bf64b0b1 SHA1 64f437370b4a6e795b5eb37d4f5a4c45d9159551 SHA256 4bc5b7df954a173f1b0a30195797200b7a638f25f3442f2a97ce9a6f0cd7ccdc
 MD5 6e817c3f6b82338028366853fddccf5f metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD3FWW2+ySkm8kpY0RAjWDAKCnniGvIdGwJTI4Mztb7miW6+/uQgCfWV+f
-v9sOeljJ06TDroXzccyR9I4=
-=Ffky
------END PGP SIGNATURE-----
+RMD160 b892a0c64131e9d8668b2aac5920c256bf64b0b1 metadata.xml 157
+SHA256 4bc5b7df954a173f1b0a30195797200b7a638f25f3442f2a97ce9a6f0cd7ccdc metadata.xml 157
+MD5 cd3ffa8407ac094aa56c0d80edb96e61 files/digest-crossover-office-bin-3.0.1 82
+RMD160 77df79cbf66396c2b9bce6f27c9b11245af70999 files/digest-crossover-office-bin-3.0.1 82
+SHA256 3832e109f2b03933770f923b59a64400a6113fb5f4a42bb0fb6f3d7dbf2d704a files/digest-crossover-office-bin-3.0.1 82
+MD5 7ecc5ba7b6c1138905b6f352ec7e6e9d files/digest-crossover-office-bin-4.0 80
+RMD160 f268a6171a6b34b20f0cef184d48dfcfa0ba1ee8 files/digest-crossover-office-bin-4.0 80
+SHA256 c7c83c4bb53818e061b0e991837f8eebd09abe6353c48835cbda61911a7c88da files/digest-crossover-office-bin-4.0 80
+MD5 f381c74d9cb69f7e54447e0ebe1680b9 files/digest-crossover-office-bin-4.1 80
+RMD160 74eba2c4712ff9ceae55f49f7cf37d6c0dce8b59 files/digest-crossover-office-bin-4.1 80
+SHA256 63a1114c069ecac87299caeda9cf1f5bf7dbe979573bec49006762717345271b files/digest-crossover-office-bin-4.1 80
+MD5 1e60da20abc768da5f823acc9f1254b2 files/digest-crossover-office-bin-4.2 80
+RMD160 31a751323552093d165cbc1fec705b1ee574d168 files/digest-crossover-office-bin-4.2 80
+SHA256 7188a928a7664db19aa27b91824c40618988b4c046e304478fc047847eb88044 files/digest-crossover-office-bin-4.2 80
+MD5 23dafc6887d2577101cf9eecb5c6eea4 files/digest-crossover-office-bin-5.0.0 82
+RMD160 c4f714e4bb8f25badcd1a5c097f775671440d1ef files/digest-crossover-office-bin-5.0.0 82
+SHA256 49d22edd344df51f3863fd2512971c4c1cf781435f039d4dbc4e23ba475601b4 files/digest-crossover-office-bin-5.0.0 82
+MD5 b18d5fe39eb10c26bd181e2b184ee114 files/digest-crossover-office-bin-5.0.1 82
+RMD160 4d34825e2950c885b467a4f8115b54b89ff34e03 files/digest-crossover-office-bin-5.0.1 82
+SHA256 3db413b39692412f00a7a82ce362d17632050afd25b7fd06d265237027e1ce3b files/digest-crossover-office-bin-5.0.1 82
