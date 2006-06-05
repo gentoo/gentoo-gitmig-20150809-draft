@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.6.ebuild,v 1.2 2006/06/01 16:08:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.6.ebuild,v 1.3 2006/06/05 00:13:58 st_lim Exp $
 
 inherit eutils
 
@@ -46,15 +46,16 @@ pkg_setup() {
 	if [ "${multiple_dbs}" -ge "2" ]; then
 		echo
 		ewarn "You have multiple database backends active in your USE flags."
-		ewarn "Will default to MySQL as your dspam database backend."
+		ewarn "The default USE flag will be used in this order"
+		ewarn "mysql postgres sqlite sqlite3 oic8 berkdb"
 		ewarn "If you want to build with another database backend; hit Control-C now."
-		ewarn "Change your USE flag -mysql and emerge again."
+		ewarn "Change your USE flag and emerge again."
 		echo
 		has_version ">=sys-apps/portage-2.0.50" && (
 		einfo "It would be best practice to add the set of USE flags that you use for this"
 		einfo "package to the file: /etc/portage/package.use. Example:"
-		einfo "\`echo \"mail-filter/dspam -mysql postgres -oci8 -sqlite -sqlite3\" >> /etc/portage/package.use\`"
-		einfo "to build dspam with a PostgreSQL database as your dspam backend."
+		einfo "\`echo \"mail-filter/dspam -mysql -postgres -oci8 -sqlite sqlite3\" >> /etc/portage/package.use\`"
+		einfo "to build dspam with a SQLite database as your dspam backend."
 		)
 	elif [ "${multiple_dbs}" -eq "0" ]; then
 		echo
@@ -136,6 +137,12 @@ src_compile() {
 		myconf="${myconf} --enable-preferences-extension"
 
 		use virtual-users && myconf="${myconf} --enable-virtual-users"
+	elif use sqlite ; then
+		myconf="${myconf} --with-storage-driver=sqlite_drv"
+		myconf="${myconf} --enable-virtual-users"
+	elif use sqlite3 ; then
+		myconf="${myconf} --with-storage-driver=sqlite3_drv"
+		myconf="${myconf} --enable-virtual-users"
 	elif use oci8 ; then
 		myconf="${myconf} --with-storage-driver=ora_drv"
 		myconf="${myconf} --with-oracle-home=${ORACLE_HOME}"
@@ -146,8 +153,6 @@ src_compile() {
 		if (expr ${ORACLE_HOME/*\/} : 10 1>/dev/null 2>&1); then
 			myconf="${myconf} --with-oracle-version=10"
 		fi
-	elif use berkdb ; then
-		myconf="${myconf} --with-storage-driver=libdb4_drv"
 	else
 		myconf="${myconf} --with-storage-driver=hash_drv"
 	fi
@@ -377,6 +382,10 @@ src_install () {
 }
 
 pkg_postinst() {
+	# need enewgroup/enewuser in this function for binary install.
+	enewgroup dspam 26
+	enewuser dspam 26 /bin/bash ${HOMEDIR} dspam
+
 	env-update
 	if use mysql || use postgres || use oci8; then
 		echo
