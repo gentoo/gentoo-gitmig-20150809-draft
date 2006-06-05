@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-UTF8simple/Unicode-UTF8simple-1.06.ebuild,v 1.1 2006/06/01 15:35:12 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-UTF8simple/Unicode-UTF8simple-1.06.ebuild,v 1.2 2006/06/05 15:56:44 nixnut Exp $
 
 inherit perl-module
 
@@ -13,6 +13,6 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~ppc ~sparc ~x86"
 
 SRC_TEST="do"

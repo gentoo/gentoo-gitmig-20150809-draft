@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Unicode-UTF8simple
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-UTF8simple/ChangeLog,v 1.1 2006/06/01 15:35:12 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-UTF8simple/ChangeLog,v 1.2 2006/06/05 15:56:44 nixnut Exp $
+
+  05 Jun 2006; <nixnut@gentoo.org> Unicode-UTF8simple-1.06.ebuild:
+  Added ~ppc keyword; bug #135640
 
 *Unicode-UTF8simple-1.06 (01 Jun 2006)
 
