@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-  <email>mr_bones_@gentoo.org</email>
-</maintainer>
 <longdescription>A tool that can dynamically adjust the nice-level of processes
 under Unix-like operating systems.</longdescription>
 </pkgmetadata>
