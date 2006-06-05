@@ -1,0 +1,67 @@
+--- Linux/Cli/Makefile.orig	2006-03-26 06:29:38.000000000 +1100
++++ Linux/Cli/Makefile	2006-06-05 17:57:29.000000000 +1000
+@@ -3,27 +3,16 @@
+ TC_COMMON := ../../Common
+ TC_CRYPTO := ../../Crypto
+ 
+-CC := gcc
++CC ?= gcc
+ 
+ ifneq ($(MAKECMDGOALS),clean)
+ -include ../Common/.platform
+ endif
+ 
+-ifdef NO_WARNINGS
+-CFLAGS := -w
+-else
+-CFLAGS := -W
+-endif
+ CFLAGS += -I../../Crypto -I../../Common -I../Kernel
+ CFLAGS += -D_cdecl="" -DBOOL=int -DTRUE=1 -DFALSE=0 -DMAX_PATH=260
+ CFLAGS += $(TYPES)
+ 
+-ifndef DEBUG
+-CFLAGS += -O2 -fno-strict-aliasing
+-else
+-CFLAGS += -ggdb
+-endif
+-
+ KERNEL_OBJS_F := ../.kernel-objs
+ USER_OBJS_F := ../.user-objs
+ 
+@@ -61,18 +50,18 @@
+ 	@echo Compiling $(<F)
+ 	@$(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -o $@ -c $<
+ 
+-all: objclean truecrypt
++all: $(USER_OBJS_F) truecrypt
+ 	@echo Done.
+ 
+ ../Common/.platform: ../Common/Platform.c
+-	@$(CC) -o ../Common/platform $<
++	$(CC) -o ../Common/platform $<
+ 	@../Common/platform >../Common/.platform
+ 
+ -include $(OBJS:.o=.d)
+ 
+ truecrypt: $(OBJS)
+ 	@echo Linking $@
+-	@$(CC) -o $@ $(OBJS)
++	$(CC) -o $@ $(OBJS)
+ ifndef DEBUG
+ 	@strip $@
+ endif
+@@ -82,9 +71,11 @@
+ truecrypt.1: objclean truecrypt
+ 	help2man -N -i Man/help2man.inc ./truecrypt >Man/truecrypt.1
+ 	
+-objclean:
+-	@if [ -f $(KERNEL_OBJS_F) ]; then rm -f ${OBJS} $(KERNEL_OBJS_F); fi
++$(USER_OBJS_F):
++	@[ -f $(KERNEL_OBJS_F) ] && rm -f ${OBJS} $(KERNEL_OBJS_F)
+ 	@>$(USER_OBJS_F)
+ 
+ clean:
+ 	-rm -f truecrypt ${OBJS} *.d $(TC_COMMON)/*.d $(TC_CRYPTO)/*.d ../Common/platform ../Common/.platform
++
++.PHONY: man clean

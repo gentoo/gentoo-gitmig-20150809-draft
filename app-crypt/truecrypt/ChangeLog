@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/truecrypt
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.1 2006/06/05 08:19:18 dragonheart Exp $
+
+*truecrypt-4.2 (05 Jun 2006)
+
+  05 Jun 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/truecrypt-4.2-makefile.patch, +metadata.xml, +truecrypt-4.2.ebuild:
+  initial ebuild as per bug #112197 largely based off ebuild by Greg Tassone
+
