@@ -1,6 +1,42 @@
-MD5 3305bff8cba54b1a3554c7f13da2de82 ChangeLog 862
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST html-encode-1.0.tar.gz 2073
+DIST html-encode-1.1.tar.gz 2971
+DIST html-encode-1.2.tar.gz 3132 RMD160 6ec6ffdd29d88000f3fbc0b7d6c43eb24a0f73c8 SHA1 4bd629f7e1bdeab303ae0254e4926f6e27708139 SHA256 8e3da4ad3416b5b9969a76bad7c6a08e7a923bb89bcc5f21d7c5f9922c47ae1a
+EBUILD cl-html-encode-1.0.ebuild 734 RMD160 596741fdd8b5f2f4a0a34ee526f534bf10ff0b04 SHA1 3223a4c19fc0867571c096f6602bce8e1d1a0af4 SHA256 0ab59daca37df414f6287da5e595fabdbb2abf75e1b5737881962abd7a42d9e3
 MD5 710923d0dc3757bc44573e44e8c45b0d cl-html-encode-1.0.ebuild 734
-MD5 394263b1141a12674b7944e5652f9433 metadata.xml 606
+RMD160 596741fdd8b5f2f4a0a34ee526f534bf10ff0b04 cl-html-encode-1.0.ebuild 734
+SHA256 0ab59daca37df414f6287da5e595fabdbb2abf75e1b5737881962abd7a42d9e3 cl-html-encode-1.0.ebuild 734
+EBUILD cl-html-encode-1.1.ebuild 734 RMD160 400d254c1aec450db4a55844e1d2c83a4a935946 SHA1 be6d3eabda1fed8e01f43b4b69821788b9e17cc9 SHA256 74ff89fd0ffae00149e5a4664ed470ea777cdbcbb433634e800d5184cfe44cdf
 MD5 9866e9d5028c8277480af016f929de87 cl-html-encode-1.1.ebuild 734
+RMD160 400d254c1aec450db4a55844e1d2c83a4a935946 cl-html-encode-1.1.ebuild 734
+SHA256 74ff89fd0ffae00149e5a4664ed470ea777cdbcbb433634e800d5184cfe44cdf cl-html-encode-1.1.ebuild 734
+EBUILD cl-html-encode-1.2.ebuild 735 RMD160 7c60b765b0008016f9c6d878f6ab8b1844cacaa3 SHA1 1ebc4cd288afec4901b9dee2d171ece412703708 SHA256 150900fa6dc94cdcbccb736c2389d84d59e9caa4fe5c00237f52388652c4eaec
+MD5 3f6dae9523f75a2c6fab3f1e2190e4cc cl-html-encode-1.2.ebuild 735
+RMD160 7c60b765b0008016f9c6d878f6ab8b1844cacaa3 cl-html-encode-1.2.ebuild 735
+SHA256 150900fa6dc94cdcbccb736c2389d84d59e9caa4fe5c00237f52388652c4eaec cl-html-encode-1.2.ebuild 735
+MISC ChangeLog 1005 RMD160 412b750a22da9f2fa98c2fda44e61f41a49fe2a4 SHA1 323818e19178178a062c5d1591261907057ea791 SHA256 0d685d4a8e7cff3c7b5d08da6c13ac43cc9624ca3a51b3fdfba5e03d3bba200f
+MD5 2b5693da7b53e8e309aa9b380b3a019c ChangeLog 1005
+RMD160 412b750a22da9f2fa98c2fda44e61f41a49fe2a4 ChangeLog 1005
+SHA256 0d685d4a8e7cff3c7b5d08da6c13ac43cc9624ca3a51b3fdfba5e03d3bba200f ChangeLog 1005
+MISC metadata.xml 606 RMD160 66fdb247048b792b87635ed12ff8906563baec13 SHA1 ab3ff9cc25c54633d4afd9935fc5be9fa3a0008b SHA256 3a98e88e7d05ce425f4727213e0bfcc9f21a5a0860f3e8e252db58b2b2047a02
+MD5 394263b1141a12674b7944e5652f9433 metadata.xml 606
+RMD160 66fdb247048b792b87635ed12ff8906563baec13 metadata.xml 606
+SHA256 3a98e88e7d05ce425f4727213e0bfcc9f21a5a0860f3e8e252db58b2b2047a02 metadata.xml 606
 MD5 21936a14f75d367c4934f891d7300f12 files/digest-cl-html-encode-1.0 65
+RMD160 5dfbbd600d8a6637492394536b68172e0f45bcca files/digest-cl-html-encode-1.0 65
+SHA256 ff911a2418ab9200231795382531148a56d54ee116e243074e89baa3cc70d964 files/digest-cl-html-encode-1.0 65
 MD5 c17e7cba92a5573dc089691e8cc06c7f files/digest-cl-html-encode-1.1 65
+RMD160 cf54cd8384a46003dd7a812b2d793e97026355dd files/digest-cl-html-encode-1.1 65
+SHA256 f1e06d22d09b8c4a9ca1743dffbf9ac121503ae14bc975b4b1010f342dd70652 files/digest-cl-html-encode-1.1 65
+MD5 ad7bc6ef59e3fe0fb8f520385ceb0e52 files/digest-cl-html-encode-1.2 241
+RMD160 ec98739cae5b2f2788c0a4ddaef6472df8dcdfad files/digest-cl-html-encode-1.2 241
+SHA256 84dae139610bc881338694f36c8b83491b835a30e4524e418d07895afd720726 files/digest-cl-html-encode-1.2 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEhMEoyiNZaEAZA+ARAsk3AJ49uiLD2HOfl+a4OEHvO6cGjScRNACeMcv0
+/Kpg6SJ/irOUvBEIMtKFg/o=
+=1PaL
+-----END PGP SIGNATURE-----
