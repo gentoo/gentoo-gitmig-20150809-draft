@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ifc
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.18 2005/10/01 16:19:57 ribosome Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.19 2006/06/05 17:11:48 spyderous Exp $
+
+*ifc-9.0.031 (05 Jun 2006)
+
+  05 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; +ifc-9.0.031.ebuild:
+  New public version.
 
   01 Oct 2005; Olivier Fisette <ribosome@gentoo.org> ifc-6.0.ebuild,
   ifc-7.0.064-r1.ebuild, ifc-9.0.021.ebuild, ifc-9.0.026.ebuild:
