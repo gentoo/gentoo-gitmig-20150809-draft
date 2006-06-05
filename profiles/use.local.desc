@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1933 2006/06/05 09:42:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1934 2006/06/05 09:54:14 george Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -512,8 +512,7 @@ gnome-extra/yelp:firefox - Build against firefox instead of mozilla
 gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages.
 gnustep-base/gnustep-back-art:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-xlib:xim - Enable X11 XiM input method
-gnustep-base/gnustep-base:libffi - enable use of libffi package in
-gnustep-base, rather than ffcall
+gnustep-base/gnustep-base:libffi - enable use of libffi package in gnustep-base, rather than ffcall
 gnustep-base/gnustep-base:gcc-libffi - Offers a migration path away from the ill fated dev-libs/libffi; gcc-3.* will generally have to be compiled with 'gcj' on, >=gcc-3.4.3-r1 can be used with only 'objc' turned on (this will reduce compile time).
 gnustep-base/gnustep-gui:gsnd - Enable GNUstep sound server
 gnustep-base/gnustep-make:layout-from-conf-file - Layout GNUstep according to /etc/conf.d/gnustep.env; GNUSTEP_SYSTEM_ROOT, GNUSTEP_LOCAL_ROOT, GNUSTEP_NETWORK_ROOT, and GNUSTEP_USER_ROOT (use '~' or '~/whatever' -- SURROUNDED BY SINGLE QUOTES -- for the user root); the only required entry is GNUSTEP_SYSTEM_ROOT; GNUSTEP_SYSTEM_ROOT must end with "System".
