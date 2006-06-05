@@ -1,6 +1,17 @@
 # ChangeLog for www-apps/open-xchange
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/ChangeLog,v 1.14 2006/04/27 23:31:11 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/ChangeLog,v 1.15 2006/06/05 07:08:18 eradicator Exp $
+
+*open-xchange-0.8.2 (05 Jun 2006)
+
+  05 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/open-xchange-0.8.1.2-login.patch,
+  -files/open-xchange-0.8.1.5-oxFolder.patch,
+  +files/open-xchange-0.8.2-mysql.patch,
+  +files/open-xchange-0.8.2-mysql-2.patch,
+  +files/open-xchange-0.8.2-sieve.patch, -open-xchange-0.8.0.6.ebuild,
+  -open-xchange-0.8.1.5.ebuild, +open-xchange-0.8.2.ebuild:
+  Version bump and updates from Martin in bug #62197.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-open-xchange-0.8.0.6, files/digest-open-xchange-0.8.1.5,
