@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5473 2006/06/05 19:00:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5474 2006/06/05 19:06:17 josejx Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -22,9 +22,12 @@
 ##
 
 # Joseph Jezak <josejx@gentoo.org> (05 Jun 2006)
+# The softmac stack is in 2.6.17, the ebuilds are obsolete
+net-wireless/ieee80211softmac
+
+# Joseph Jezak <josejx@gentoo.org> (05 Jun 2006)
 # This driver is in 2.6.17, the ebuilds are obsolete
 net-wireless/bcm43xx
-
 
 # Joshua Baergen <joshuabaergen@gentoo.org> (03 Jun 2006)
 # X.Org development snapshots
