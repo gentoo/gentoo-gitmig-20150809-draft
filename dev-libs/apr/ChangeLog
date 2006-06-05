@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/apr
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.57 2006/06/04 18:08:08 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.58 2006/06/05 04:48:14 vericgar Exp $
+
+  05 Jun 2006; Michael Stewart <vericgar@gentoo.org>
+  +files/apr-0.9.12-linking.patch, apr-0.9.12.ebuild:
+  Add patch to allow correct linking with --as-needed
 
   04 Jun 2006; Michael Stewart <vericgar@gentoo.org> apr-1.2.7-r1.ebuild:
   Remove hardcoding of .m4 files from configure.in. Fixes bug 135463
