@@ -1,21 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7c73b7ec715636414d34e969aa9800d6 ChangeLog 1282
-MD5 200d553ad04ef5a11f6df39beb716b39 mod_roaming-1.0.2.ebuild 690
-MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
-MD5 ad3de522a8fb07f9a45866eae9ae89dd mod_roaming-2.0.0-r1.ebuild 715
-MD5 94f2ca6a0cb84f8378d3c30ebd44af38 mod_roaming-2.0.0.ebuild 962
-MD5 af5066c084bd8572017f9e005e03298e files/digest-mod_roaming-2.0.0-r1 67
-MD5 25bf9970222aa6e8bcb2eb03f6687fc3 files/digest-mod_roaming-1.0.2 67
+AUX 18_mod_roaming.conf 414 RMD160 376a4704b309db115151fb20b2aada7c4f8e291f SHA1 b8252b91063383d7b3f6758f2f2bd3dcf57e5b0d SHA256 02355b1fd5c1492a368530085da8817243803ef7268610f74a8d9d99842043b8
 MD5 6ccb5bfdbe8bfba614da810c60d0acee files/18_mod_roaming.conf 414
-MD5 af5066c084bd8572017f9e005e03298e files/digest-mod_roaming-2.0.0 67
-MD5 0c01fe5f077bd4d205041537b5ac85e1 files/mod_roaming-register.patch 761
+RMD160 376a4704b309db115151fb20b2aada7c4f8e291f files/18_mod_roaming.conf 414
+SHA256 02355b1fd5c1492a368530085da8817243803ef7268610f74a8d9d99842043b8 files/18_mod_roaming.conf 414
+AUX 2.0.0-r1/18_mod_roaming.conf 413 RMD160 ce4418f1f63ba997c7aa207356f315b1129be094 SHA1 f4edde9e2586eded128de95682f726f9a50e089b SHA256 769f04055af2833064b0f52ced38e42292d2c6bd36e8c9c2173e23a00b09b46c
 MD5 39366ec603c2b484b4172523fba873b6 files/2.0.0-r1/18_mod_roaming.conf 413
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDp1RjugEuf3OQ0akRAgFZAKCU3l+9Os6dC3OVnt/Ascj/UXBgUgCfcVQ8
-dJgrXsJEgDIqgE3EyRs8slA=
-=9hFy
------END PGP SIGNATURE-----
+RMD160 ce4418f1f63ba997c7aa207356f315b1129be094 files/2.0.0-r1/18_mod_roaming.conf 413
+SHA256 769f04055af2833064b0f52ced38e42292d2c6bd36e8c9c2173e23a00b09b46c files/2.0.0-r1/18_mod_roaming.conf 413
+AUX mod_roaming-register.patch 761 RMD160 b79222eaa38af60eacc91575129ad21a35225da4 SHA1 54d0242bb110cca82503cf9b9c2c232c98bd109e SHA256 eeb36e95c946e2b5fade575131f113a19d20df3de939426fcf370ca42547dafe
+MD5 0c01fe5f077bd4d205041537b5ac85e1 files/mod_roaming-register.patch 761
+RMD160 b79222eaa38af60eacc91575129ad21a35225da4 files/mod_roaming-register.patch 761
+SHA256 eeb36e95c946e2b5fade575131f113a19d20df3de939426fcf370ca42547dafe files/mod_roaming-register.patch 761
+DIST mod_roaming-1.0.2.tar.gz 9742
+DIST mod_roaming-2.0.0.tar.gz 9227 RMD160 b3220f30fbb41a01e3b25fd39811461974f909e9 SHA1 7213894a8168f7a9a1dbe0974b337121a96f6a24 SHA256 7b63e1a486bad5713cc1a8965d4eaf23474cf6614dec32cd76e69e670a7b20ac
+EBUILD mod_roaming-1.0.2.ebuild 690 RMD160 192d39aeb5fc59bcfbc547c433e174ea9074d7aa SHA1 a69a434cf7f2c65483df475adb7177cb12015f5a SHA256 458adcef024eaf7d6c4d290e76baa5c397fc2b351b36013f7377dc6b5de0c5f6
+MD5 200d553ad04ef5a11f6df39beb716b39 mod_roaming-1.0.2.ebuild 690
+RMD160 192d39aeb5fc59bcfbc547c433e174ea9074d7aa mod_roaming-1.0.2.ebuild 690
+SHA256 458adcef024eaf7d6c4d290e76baa5c397fc2b351b36013f7377dc6b5de0c5f6 mod_roaming-1.0.2.ebuild 690
+EBUILD mod_roaming-2.0.0-r1.ebuild 715 RMD160 2370dc51fa14b34a13bac7a2f901d1668cb29e5f SHA1 4bc52b7cd049bcad0cafb78f0c4de726b8c06ccb SHA256 87c306423b7d1c869f17edab5cd2e48620a1cae214ec1efbebbd6c3a68039ba6
+MD5 ad3de522a8fb07f9a45866eae9ae89dd mod_roaming-2.0.0-r1.ebuild 715
+RMD160 2370dc51fa14b34a13bac7a2f901d1668cb29e5f mod_roaming-2.0.0-r1.ebuild 715
+SHA256 87c306423b7d1c869f17edab5cd2e48620a1cae214ec1efbebbd6c3a68039ba6 mod_roaming-2.0.0-r1.ebuild 715
+MISC ChangeLog 1394 RMD160 dc84fb7ab33f27ce88c79253c12be69f2f0c0836 SHA1 d202944766bf1fb26066176a7515c7965ec92154 SHA256 260f1c7e11af6b758f9938a436a5ece28a1803107bb7dc5c97802ecb66bda798
+MD5 4a68d56052b2b907667a9cfc66f720ba ChangeLog 1394
+RMD160 dc84fb7ab33f27ce88c79253c12be69f2f0c0836 ChangeLog 1394
+SHA256 260f1c7e11af6b758f9938a436a5ece28a1803107bb7dc5c97802ecb66bda798 ChangeLog 1394
+MISC metadata.xml 226 RMD160 d11ce73e47adf4b3d91309ec6489fded2f4d4e0e SHA1 fe9f7ce6f2281683065abb3255c8b731665c82ac SHA256 376a327f91f69eb96f0c1b05cc1481dd7017a0570f631a03b1f6d14d58215ca8
+MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
+RMD160 d11ce73e47adf4b3d91309ec6489fded2f4d4e0e metadata.xml 226
+SHA256 376a327f91f69eb96f0c1b05cc1481dd7017a0570f631a03b1f6d14d58215ca8 metadata.xml 226
+MD5 25bf9970222aa6e8bcb2eb03f6687fc3 files/digest-mod_roaming-1.0.2 67
+RMD160 e7f2113491c64f1fbe33e62d8a912003413a6dee files/digest-mod_roaming-1.0.2 67
+SHA256 90acbf91d65ee12f4f1358d824f8f1b93c4498d7c3fe6c43c128b7b66b5124d3 files/digest-mod_roaming-1.0.2 67
+MD5 1af134b20fe244b75fbf72dfce0aaf17 files/digest-mod_roaming-2.0.0-r1 247
+RMD160 d31d2548d9ef396dca254b3d5df20b36b9f34d94 files/digest-mod_roaming-2.0.0-r1 247
+SHA256 f573fece8c23dc18a554bdc8480908bc805e6436eed48a0a025a65dd53744199 files/digest-mod_roaming-2.0.0-r1 247
