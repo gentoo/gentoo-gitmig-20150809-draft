@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.30 2006/05/11 06:35:38 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.31 2006/06/05 12:04:36 s4t4n Exp $
+
+*qingy-0.8.0 (05 Jun 2006)
+
+  05 June 2006; Michele Noberasco <s4t4n@gentoo.org> qingy-0.8.0.ebuild:
+  Version bump.
+  qingy-0.6.0.ebuild:
+  Removed older version.
 
   11 May 2006; Michele Noberasco <s4t4n@gentoo.org> qingy-0.7.4.ebuild:
   Stable for x86.
