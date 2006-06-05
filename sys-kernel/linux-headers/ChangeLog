@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.181 2006/05/30 20:23:31 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.182 2006/06/05 14:56:30 gmsoft Exp $
+
+  05 Jun 2006; Guy Martin <gmsoft@gentoo.org>
+  linux-headers-2.6.11-r5.ebuild:
+  Stable on hppa.
 
   30 May 2006; <plasmaroo@gentoo.org> linux-headers-2.6.16.ebuild:
   Keywording ~amd64.
