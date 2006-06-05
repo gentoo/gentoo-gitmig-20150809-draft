@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.476 2006/06/05 03:25:08 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.477 2006/06/05 20:11:41 hollow Exp $
+
+*apache-1.3.34-r13 (05 Jun 2006)
+
+  05 Jun 2006; Benedikt Böhm <hollow@gentoo.org> +apache-1.3.34-r13.ebuild:
+  fix #112919 and #106455
 
   05 Jun 2006; Michael Stewart <vericgar@gentoo.org>
   -files/apache-2.0.48-export.diff, -files/apache-2.0.48-gentoo.diff,
