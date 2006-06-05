@@ -1,9 +1,18 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.329 2006/05/24 19:36:00 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.330 2006/06/05 14:32:04 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-1.12.1 (05 Jun 2006)
+
+  05 Jun 2006; Roy Marples <uberlord@gentoo.org>
+  +files/baselayout-1.11.14-man.patch, baselayout-1.11.14-r8.ebuild,
+  baselayout-1.11.15-r3.ebuild, +baselayout-1.12.1.ebuild:
+  New 1.12 release fixing a slew of bugs - check the ChangeLog.
+  
+  Added a patch to 1.14 and 1.15 which adds the man user/group back, #113298.
 
 *baselayout-1.12.0-r1 (24 May 2006)
 

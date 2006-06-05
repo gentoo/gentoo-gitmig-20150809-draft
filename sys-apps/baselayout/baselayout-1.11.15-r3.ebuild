@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.15-r3.ebuild,v 1.1 2006/05/04 09:18:46 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.15-r3.ebuild,v 1.2 2006/06/05 14:32:04 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -40,6 +40,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}"-halt-sort.patch
 	epatch "${FILESDIR}/${P}"-coldplug.patch
+	epatch "${FILESDIR}/${PN}"-1.11.14-man.patch #113298
 
 	# Setup unicode defaults for silly unicode users
 	if use unicode ; then
