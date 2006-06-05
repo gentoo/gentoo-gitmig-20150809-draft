@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/apmd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.31 2006/05/14 21:19:03 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.32 2006/06/05 09:56:08 genstef Exp $
+
+  05 Jun 2006; Stefan Schweizer <genstef@gentoo.org> apmd-3.2.1_p4.ebuild,
+  apmd-3.2.2_p5.ebuild:
+  Fix cross compiling thanks to Josu López Fernández <zamorate@zamorate.net>
+  in bug 134104
 
   14 May 2006; Mark Loeser <halcy0n@gentoo.org> apmd-3.2.2_p5.ebuild:
   Stable on x86; bug #131757

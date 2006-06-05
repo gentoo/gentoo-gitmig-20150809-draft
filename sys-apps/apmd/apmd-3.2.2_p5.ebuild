@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.2_p5.ebuild,v 1.5 2006/05/14 21:19:03 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.2_p5.ebuild,v 1.6 2006/06/05 09:56:08 genstef Exp $
 
-inherit eutils multilib
+inherit eutils multilib toolchain-funcs
 
 MY_PV="${PV%_p*}"
 MY_P="${PN}_${MY_PV}"
@@ -53,7 +53,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake CC=$(tc-getCC) || die "emake failed"
 }
 
 src_install() {
