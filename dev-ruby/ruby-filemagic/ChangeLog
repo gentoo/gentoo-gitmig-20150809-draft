@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-filemagic
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-filemagic/ChangeLog,v 1.3 2006/05/30 17:30:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-filemagic/ChangeLog,v 1.4 2006/06/05 20:43:53 flameeyes Exp $
+
+  05 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  ruby-filemagic-0.1.1.ebuild:
+  Add ~x86-fbsd keyword.
 
   30 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   ruby-filemagic-0.1.1.ebuild:
