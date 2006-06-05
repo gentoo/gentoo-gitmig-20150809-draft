@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.24 2006/05/05 05:18:01 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.25 2006/06/05 00:14:45 st_lim Exp $
+
+*drupal-4.7.2 (05 Jun 2006)
+*drupal-4.6.8 (05 Jun 2006)
+
+  05 Jun 2006; Lim Swee Tat <st_lim@gentoo.org> +drupal-4.6.8.ebuild,
+  +drupal-4.7.2.ebuild:
+  Added 4.7.2 and 4.6.8
 
 *drupal-4.7.0 (05 May 2006)
 *drupal-4.6.6 (05 May 2006)
