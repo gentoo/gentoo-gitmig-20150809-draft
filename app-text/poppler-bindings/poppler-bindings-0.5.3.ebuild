@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.3.ebuild,v 1.1 2006/05/31 07:03:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.3.ebuild,v 1.2 2006/06/05 11:22:35 exg Exp $
 
 inherit autotools eutils multilib
 
@@ -62,7 +62,6 @@ src_compile() {
 }
 
 src_install() {
-	use cairo && dolib.a poppler/libpoppler-cairo.la
 	make DESTDIR=${D} install || die "make install failed"
 }
 
