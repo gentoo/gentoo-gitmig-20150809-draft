@@ -1,16 +1,31 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fc38e1c743aea63f45d895b43e2c6234 ChangeLog 966
-MD5 20caf431e315bf8e481d023835e95ea3 files/digest-qalculate-currency-0.9.0 76
-MD5 20caf431e315bf8e481d023835e95ea3 files/digest-qalculate-currency-0.9.0-r1 76
-MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
+DIST qalculate-currency-0.9.0.tar.gz 362008
+DIST qalculate-currency-0.9.4.tar.gz 370506 RMD160 fa7a52c922ed0c01494e43b6a9c971124a9856cb SHA1 8352fd1bc8434299e4c3a1111f1b6b275246ee0f SHA256 1b3e6f971c3a9d44645a3e644d8db188653a48f44659979f9d9493230f6d3755
+EBUILD qalculate-currency-0.9.0-r1.ebuild 796 RMD160 c39add8510d2cd57c43528b3039fa04e50848537 SHA1 e0c28f028f2bb60e51eb828c4e6ac1111aec5c02 SHA256 8af4ca256198478b044d8ff3060d35e7b7a1a4fbee28a24f16b40b2ce189afd7
 MD5 b8917fa2443ff50b1ccef79e37b84391 qalculate-currency-0.9.0-r1.ebuild 796
+RMD160 c39add8510d2cd57c43528b3039fa04e50848537 qalculate-currency-0.9.0-r1.ebuild 796
+SHA256 8af4ca256198478b044d8ff3060d35e7b7a1a4fbee28a24f16b40b2ce189afd7 qalculate-currency-0.9.0-r1.ebuild 796
+EBUILD qalculate-currency-0.9.0.ebuild 792 RMD160 f453d636aca1a1cd046715bdc1fa7dfac0f3e782 SHA1 e4c66060c1de078cee82921ec2ec95ad28bb5dcd SHA256 35e6a2f95c44ae7edf7368b51ca9cf0e3be75819bfb233b452ee7717846e880b
 MD5 fb0274d85087898bc2dd40151cc4544a qalculate-currency-0.9.0.ebuild 792
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxFCSCRZPokWLroQRAjKpAKDFnir3CNvBfM0UjKCVWfq9PyY/oACeInmD
-8ptCCCGW40Roiy3IxkybzpY=
-=lfZ4
------END PGP SIGNATURE-----
+RMD160 f453d636aca1a1cd046715bdc1fa7dfac0f3e782 qalculate-currency-0.9.0.ebuild 792
+SHA256 35e6a2f95c44ae7edf7368b51ca9cf0e3be75819bfb233b452ee7717846e880b qalculate-currency-0.9.0.ebuild 792
+EBUILD qalculate-currency-0.9.4.ebuild 793 RMD160 c6488f0b2fabe4505d5423b5fc8f71f7aca3bd86 SHA1 63edc56e0a59eed1d8a73d2ddc1a9eb345253db0 SHA256 77057ac1c0e47e23a7257cfec79ad90339b0d34657e9e24d0297916fc157cdc1
+MD5 148d674d3b96d488e81177ae09f7f186 qalculate-currency-0.9.4.ebuild 793
+RMD160 c6488f0b2fabe4505d5423b5fc8f71f7aca3bd86 qalculate-currency-0.9.4.ebuild 793
+SHA256 77057ac1c0e47e23a7257cfec79ad90339b0d34657e9e24d0297916fc157cdc1 qalculate-currency-0.9.4.ebuild 793
+MISC ChangeLog 1187 RMD160 6e829e482be218a8c23feb74bc3ed39fed98eeee SHA1 d2acc718ccf9d5efc637e777cadf16a3f64b483e SHA256 d2ae679916d8f44cde96e2e33a45ec69bf27da19027bc1b301c40109aec776da
+MD5 4e738763dabf35e9b39c8a0ef3c61e43 ChangeLog 1187
+RMD160 6e829e482be218a8c23feb74bc3ed39fed98eeee ChangeLog 1187
+SHA256 d2ae679916d8f44cde96e2e33a45ec69bf27da19027bc1b301c40109aec776da ChangeLog 1187
+MISC metadata.xml 157 RMD160 ed43b99e7bf8bbf62cf4e46152138ab42d3a88c5 SHA1 2182a6de0b10959aad51af2990f1a6c69e34dd97 SHA256 750cb9e46ac2b77e1adf73de43c186a8c2d2234a9c6a89d9358d0969dc5cf8ac
+MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
+RMD160 ed43b99e7bf8bbf62cf4e46152138ab42d3a88c5 metadata.xml 157
+SHA256 750cb9e46ac2b77e1adf73de43c186a8c2d2234a9c6a89d9358d0969dc5cf8ac metadata.xml 157
+MD5 20caf431e315bf8e481d023835e95ea3 files/digest-qalculate-currency-0.9.0 76
+RMD160 27947e5e398b17582d3dd4beda9d5c1094c71dd4 files/digest-qalculate-currency-0.9.0 76
+SHA256 b3824c72fe3c502c2fbe1c1ea3395612ed6ec585474d2d072073dccbec0fa65d files/digest-qalculate-currency-0.9.0 76
+MD5 20caf431e315bf8e481d023835e95ea3 files/digest-qalculate-currency-0.9.0-r1 76
+RMD160 27947e5e398b17582d3dd4beda9d5c1094c71dd4 files/digest-qalculate-currency-0.9.0-r1 76
+SHA256 b3824c72fe3c502c2fbe1c1ea3395612ed6ec585474d2d072073dccbec0fa65d files/digest-qalculate-currency-0.9.0-r1 76
+MD5 dae722e85ddfbd83ce05b595dde3803c files/digest-qalculate-currency-0.9.4 274
+RMD160 bb0d177f1c2a0a3e9599fa72698a5c12a00cd982 files/digest-qalculate-currency-0.9.4 274
+SHA256 60892673102f894eae2334b75115f34bb1ffff38339b71d839cb65fb4eac19dc files/digest-qalculate-currency-0.9.4 274
