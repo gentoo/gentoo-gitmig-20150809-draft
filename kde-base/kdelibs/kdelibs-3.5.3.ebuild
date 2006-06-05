@@ -1,13 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.3.ebuild,v 1.2 2006/06/02 16:16:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.3.ebuild,v 1.3 2006/06/05 22:07:51 flameeyes Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
 DESCRIPTION="KDE libraries needed by all kde programs"
 HOMEPAGE="http://www.kde.org/"
-SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
+	cups? ( mirror://gentoo/kdeprint-3.5.2-cups-1.2-patches.tar.bz2 )"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
@@ -71,6 +72,16 @@ src_unpack() {
 	if use legacyssl ; then
 		# This patch won't be included upstream, see bug #128922
 		epatch ${FILESDIR}/kdelibs-3.5.2-kssl-3des.patch || die "Patch did not apply."
+	fi
+
+	if use cups && has_version '>=net-print/cups-1.2_pre'; then
+		cd "${S}"
+
+		EPATCH_EXCLUDE="kubuntu_39_cups12_compile_fixes.diff" \
+		EPATCH_SUFFIX="diff" \
+		EPATCH_MULTI_MSG="Applying KUbuntu patches for CUPS 1.2 support ..." \
+		EPATCH_FORCE="yes" \
+		epatch "${WORKDIR}/kdeprint-3.5.2-cups-1.2-patches/"
 	fi
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.338 2006/06/03 09:53:43 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.339 2006/06/05 22:07:51 flameeyes Exp $
+
+  05 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> kdelibs-3.5.3.ebuild:
+  Apply all the KUbuntu patches for cups 1.2 but the first. Note to self:
+  check not to skip one patch when trying if they apply.
 
   03 Jun 2006; Guy Martin <gmsoft@gentoo.org> kdelibs-3.5.2-r6.ebuild:
   Stable on hppa.
