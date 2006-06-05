@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.7.2.ebuild,v 1.1 2006/06/05 00:14:45 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.7.2.ebuild,v 1.2 2006/06/05 14:52:53 uberlord Exp $
 
 inherit webapp eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~ppc ~x86 ~amd64"
 
 DEPEND="virtual/php"
 RDEPEND="|| ( dev-db/mysql dev-db/postgresql )
-		>=net-www/apache-1.3"
+		virtual/httpd-php"
 
 src_compile() {
 	#Default compile hangs!
