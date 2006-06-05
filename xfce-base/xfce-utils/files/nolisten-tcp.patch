@@ -6,14 +6,14 @@ diff -ur xfce-utils-4.2.3/scripts/startxfce4.in xfce-utils-4.2.3-r1/scripts/star
  
  if [ -f $BASEDIR/xinitrc ]; then
 -  exec $prog $BASEDIR/xinitrc $*
-+  exec $prog $BASEDIR/xinitrc -- -nolisten tcp$*
++  exec $prog $BASEDIR/xinitrc -- -nolisten tcp $*
  elif [ -f $HOME/.xfce4/xinitrc ]; then
    mkdir -p $BASEDIR
    cp $HOME/.xfce4/xinitrc $BASEDIR/
 -  exec $prog $BASEDIR/xinitrc $*
-+  exec $prog $BASEDIR/xinitrc -- -nolisten tcp$*
++  exec $prog $BASEDIR/xinitrc -- -nolisten tcp $*
  else
 -  exec $prog @sysconfdir@/xdg/xfce4/xinitrc $*
-+  exec $prog @sysconfdir@/xdg/xfce4/xinitrc -- -nolisten tcp$*
++  exec $prog @sysconfdir@/xdg/xfce4/xinitrc -- -nolisten tcp $*
  fi  
  
