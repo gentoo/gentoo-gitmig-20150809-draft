@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.12.ebuild,v 1.5 2006/06/04 13:23:34 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.12.ebuild,v 1.6 2006/06/05 04:55:21 vericgar Exp $
 
 inherit eutils flag-o-matic libtool db-use
 
@@ -20,10 +20,16 @@ DEPEND="dev-libs/expat
 	gdbm? ( sys-libs/gdbm )
 	ldap? ( =net-nds/openldap-2* )"
 
-src_compile() {
-	filter-ldflags -Wl,--as-needed --as-needed
+src_unpack() {
+	unpack ${A} || die
+	cd ${S} || die
 
+	epatch ${FILESDIR}/apr-util-0.9.12-linking.patch
 	elibtoolize || die "elibtoolize failed"
+}
+
+
+src_compile() {
 
 	local myconf=""
 
