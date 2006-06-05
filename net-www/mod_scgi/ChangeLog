@@ -1,6 +1,14 @@
 # ChangeLog for net-www/mod_scgi
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_scgi/ChangeLog,v 1.15 2006/06/04 18:46:40 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_scgi/ChangeLog,v 1.16 2006/06/05 17:33:25 hollow Exp $
+
+*mod_scgi-1.10 (05 Jun 2006)
+
+  05 Jun 2006; Benedikt Böhm <hollow@gentoo.org>
+  -mod_scgi-1.2_alpha1.ebuild, -mod_scgi-1.2_alpha1-r1.ebuild,
+  -mod_scgi-1.2_alpha1-r2.ebuild, -mod_scgi-1.2_alpha2.ebuild,
+  +mod_scgi-1.10.ebuild:
+  Version bump
 
   04 Jun 2006; Michael Stewart <vericgar@gentoo.org> mod_scgi-1.2.ebuild:
   Address dependency issues caused by depend.apache. Refer to bug 107127.
