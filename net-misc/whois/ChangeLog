@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.49 2006/05/23 11:24:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.50 2006/06/05 07:10:11 flameeyes Exp $
+
+  05 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> whois-4.7.12.ebuild:
+  Add ~x86-fbsd keyword to latest version, and fix.
 
   23 May 2006; Diego Pettenò <flameeyes@gentoo.org> whois-4.7.8.ebuild:
   Add ~x86-fbsd keyword.
