@@ -1,210 +1,54 @@
-AUX 2.0/slapd 584 RMD160 c271616a92d0646ee55f2a23abd386c14b9b5d76 SHA1 5b9b3418b433c15df1a0cb72d2c7f8f361cf33e1 SHA256 25e592f3e3c163dacab29bfa9e4e0dda03ada5ae9cbda9440e148f5f29f10db4
+MD5 3ab08a902ee8cf6a7326ab26efa8207d ChangeLog 33650
 MD5 1a7084c17a74e59db33578c0833e4099 files/2.0/slapd 584
-RMD160 c271616a92d0646ee55f2a23abd386c14b9b5d76 files/2.0/slapd 584
-SHA256 25e592f3e3c163dacab29bfa9e4e0dda03ada5ae9cbda9440e148f5f29f10db4 files/2.0/slapd 584
-AUX 2.0/slapd.conf 436 RMD160 764d5e2915d9af33fd1db2489ceac6d953750984 SHA1 a16b4674b45ac1e1c8a8f9e84ad0de519c81aa11 SHA256 1ccb8a3b78b65b125b24779dd065cf8000e2d5e4da267bb0a892e730edd2055d
 MD5 b672311fca605c398240cd37a2ae080a files/2.0/slapd.conf 436
-RMD160 764d5e2915d9af33fd1db2489ceac6d953750984 files/2.0/slapd.conf 436
-SHA256 1ccb8a3b78b65b125b24779dd065cf8000e2d5e4da267bb0a892e730edd2055d files/2.0/slapd.conf 436
-AUX 2.0/slurpd 495 RMD160 44a8cd8cb7fb7f88df686f5d43959a33a218166e SHA1 17ce85dc8515a2a5cfdf8e03e7c9227210e1a631 SHA256 de81e634ec905bbff0e05cb4d43eab4bbe2e5bae35cc24afdb2e24a89ef7e4af
 MD5 d68ba97d9f54b8455c1e2d93c352d24a files/2.0/slurpd 495
-RMD160 44a8cd8cb7fb7f88df686f5d43959a33a218166e files/2.0/slurpd 495
-SHA256 de81e634ec905bbff0e05cb4d43eab4bbe2e5bae35cc24afdb2e24a89ef7e4af files/2.0/slurpd 495
-AUX DB_CONFIG.fast.example 746 RMD160 03d179d1c58d695c442eb5e3e69c245f3c2f2358 SHA1 c76a2a9f346a733ed6617d42229b434ce723c59e SHA256 69fc9aa6e4f0b888bc02d3f75642fe1ebf9345c685257a5c1236b2e79ed56e0b
 MD5 d00ccd5b4b44ac1df463da80d5ebb8a1 files/DB_CONFIG.fast.example 746
-RMD160 03d179d1c58d695c442eb5e3e69c245f3c2f2358 files/DB_CONFIG.fast.example 746
-SHA256 69fc9aa6e4f0b888bc02d3f75642fe1ebf9345c685257a5c1236b2e79ed56e0b files/DB_CONFIG.fast.example 746
-AUX gencert.sh 3505 RMD160 9de31e9a4d4b654ac9e0f899e51a8c5049bf90bf SHA1 c725139698999415a7076b369222172949c2635f SHA256 73f1f7f0d76132da878ae8739f4f4403bb5f17d630ffa109fe4b1645e7f073c6
-MD5 c8d6f4ebeb92ef1085b1bb77d7b4db5f files/gencert.sh 3505
-RMD160 9de31e9a4d4b654ac9e0f899e51a8c5049bf90bf files/gencert.sh 3505
-SHA256 73f1f7f0d76132da878ae8739f4f4403bb5f17d630ffa109fe4b1645e7f073c6 files/gencert.sh 3505
-AUX gencert.sh-2.2.27 2939 RMD160 fa7501bec63ea372904a215d7ae44d2ad9c99e23 SHA1 9e82bdfa35440c3a46481192d936d1c258ff642f SHA256 517884e873390eabbaf7d13880d1a676e2cb384331a9c65e3301ca6ac3642693
-MD5 c16eada85fafe1c17bf0089d0ef90ae3 files/gencert.sh-2.2.27 2939
-RMD160 fa7501bec63ea372904a215d7ae44d2ad9c99e23 files/gencert.sh-2.2.27 2939
-SHA256 517884e873390eabbaf7d13880d1a676e2cb384331a9c65e3301ca6ac3642693 files/gencert.sh-2.2.27 2939
-AUX openldap-2.1.27-db40.patch 718 RMD160 89803b72228deb5772a57fa7e70b35530c7353b6 SHA1 9a6a9fb9608a1abfbafa3a4e4915d67e8e36ec4c SHA256 c312198115be7f9e63d073de9429b0253bb73e4d9c39aa03cbe5ab30c6309d53
-MD5 b10517f0e7be829d47bb8096d86fb519 files/openldap-2.1.27-db40.patch 718
-RMD160 89803b72228deb5772a57fa7e70b35530c7353b6 files/openldap-2.1.27-db40.patch 718
-SHA256 c312198115be7f9e63d073de9429b0253bb73e4d9c39aa03cbe5ab30c6309d53 files/openldap-2.1.27-db40.patch 718
-AUX openldap-2.1.27-perlthreadsfix.patch 967 RMD160 560fff078d5a446519164881bd25e8dfaaf39f69 SHA1 e4be7942cd2f54c83ba5cbe92d1e35e540b29dfb SHA256 4798278284ab6ccd768594db18a56525a34f7d8c890a5f2198b2542573173fcf
-MD5 ca2c43219df88502aafeab9db9eda4d5 files/openldap-2.1.27-perlthreadsfix.patch 967
-RMD160 560fff078d5a446519164881bd25e8dfaaf39f69 files/openldap-2.1.27-perlthreadsfix.patch 967
-SHA256 4798278284ab6ccd768594db18a56525a34f7d8c890a5f2198b2542573173fcf files/openldap-2.1.27-perlthreadsfix.patch 967
-AUX openldap-2.1.30-autoconf-archived-fix.patch 1912 RMD160 e2ecd27a8dac980903804cc0cbc9210fb0cabe18 SHA1 0522ce713b8153f42550eb90d71cb1927d0e97da SHA256 52e82990d4c93499e1a53d533921732979cd1dfc3119db48eedd525a4ea79e2f
-MD5 b51f63396bab5123f8b24674ed4481b2 files/openldap-2.1.30-autoconf-archived-fix.patch 1912
-RMD160 e2ecd27a8dac980903804cc0cbc9210fb0cabe18 files/openldap-2.1.30-autoconf-archived-fix.patch 1912
-SHA256 52e82990d4c93499e1a53d533921732979cd1dfc3119db48eedd525a4ea79e2f files/openldap-2.1.30-autoconf-archived-fix.patch 1912
-AUX openldap-2.1.30-autoconf25.patch 382 RMD160 1c2dbcd122e86487098ac8d563896aa1002b9238 SHA1 c9ea3892c092afde74cfed622b54ce6ac5e69a3a SHA256 aa43c6d8fa15e31b75243580ebc0d10e41975ba658c0b8bb534df15e11503df5
-MD5 14cfcdbe422004e2e42bfb14cea16a5e files/openldap-2.1.30-autoconf25.patch 382
-RMD160 1c2dbcd122e86487098ac8d563896aa1002b9238 files/openldap-2.1.30-autoconf25.patch 382
-SHA256 aa43c6d8fa15e31b75243580ebc0d10e41975ba658c0b8bb534df15e11503df5 files/openldap-2.1.30-autoconf25.patch 382
-AUX openldap-2.1.30-db40.patch 718 RMD160 13d21287d7ad881ba28d42deea507dbe973a0d5b SHA1 628624f9c3f6980759fda65676438d35acfb2620 SHA256 4c68a8b052968dd9b7fc823144fd3f2b0b1d686ce5d8899d27ad3e8d99301cc2
-MD5 c58db81c8d7084a9abf48747134da0a8 files/openldap-2.1.30-db40.patch 718
-RMD160 13d21287d7ad881ba28d42deea507dbe973a0d5b files/openldap-2.1.30-db40.patch 718
-SHA256 4c68a8b052968dd9b7fc823144fd3f2b0b1d686ce5d8899d27ad3e8d99301cc2 files/openldap-2.1.30-db40.patch 718
-AUX openldap-2.1.30-glibc24.patch 376 RMD160 eccf72b0d4eb6fff0de91889e735bf5ff3bc07f4 SHA1 2199dc3138a3d6877d43360fc89ccf99913f494a SHA256 8310792c201d98e2b2a55d62882098726633bfbc8ddef6af1cf3a5a1485612d1
-MD5 624d84051bd96193e20f66bbb112b85f files/openldap-2.1.30-glibc24.patch 376
-RMD160 eccf72b0d4eb6fff0de91889e735bf5ff3bc07f4 files/openldap-2.1.30-glibc24.patch 376
-SHA256 8310792c201d98e2b2a55d62882098726633bfbc8ddef6af1cf3a5a1485612d1 files/openldap-2.1.30-glibc24.patch 376
-AUX openldap-2.1.30-m4_underquoted.patch 3916 RMD160 8190e85d91c3f6e64ceed786581615c765176a4d SHA1 0b63f3b5f082dddf56841513802d97c0e0edbab0 SHA256 b48f5a56ce2f26d117d8ca491bb22229fc25d05808bef1c1fabc98b5164d87d0
-MD5 a240004c097944335b15bcb489661c2c files/openldap-2.1.30-m4_underquoted.patch 3916
-RMD160 8190e85d91c3f6e64ceed786581615c765176a4d files/openldap-2.1.30-m4_underquoted.patch 3916
-SHA256 b48f5a56ce2f26d117d8ca491bb22229fc25d05808bef1c1fabc98b5164d87d0 files/openldap-2.1.30-m4_underquoted.patch 3916
-AUX openldap-2.1.30-rpath.patch 13131 RMD160 e2e2e2e0a244a1265e5af821499762c7bf7194a8 SHA1 329d550198818b578f29c80f8bd98e9be9164398 SHA256 7f0f65f5837c67613953e06793a23b1580481b7ee5bb56020f31061a4d46cbd6
-MD5 07a689148742f0fd74dcedf572a8f092 files/openldap-2.1.30-rpath.patch 13131
-RMD160 e2e2e2e0a244a1265e5af821499762c7bf7194a8 files/openldap-2.1.30-rpath.patch 13131
-SHA256 7f0f65f5837c67613953e06793a23b1580481b7ee5bb56020f31061a4d46cbd6 files/openldap-2.1.30-rpath.patch 13131
-AUX openldap-2.1.30-tests.patch 378 RMD160 c3a64faa592be085166a44b7acd3095f7f5dcb2d SHA1 28d673c2162695adc2c363c19069fcaf4e92dc9d SHA256 bace9ce39bba49d55b2b9aa52518acb193ff507ebe4f9cdb39c5d713daa755c9
-MD5 c3c348e2e475de1b8f04c674aa15d27e files/openldap-2.1.30-tests.patch 378
-RMD160 c3a64faa592be085166a44b7acd3095f7f5dcb2d files/openldap-2.1.30-tests.patch 378
-SHA256 bace9ce39bba49d55b2b9aa52518acb193ff507ebe4f9cdb39c5d713daa755c9 files/openldap-2.1.30-tests.patch 378
-AUX openldap-2.1.30-tls-activedirectory-hang-fix.patch 1122 RMD160 1c39aa073ffb1616d2542e8a949f50d54f765635 SHA1 dbbf04d7d0646be5e0e31ef5bf908bf5e38cf500 SHA256 9daf88287cc0a0a62817b3d765fdc0eb64abf931b46b11c03f6f91b0ccc5172f
-MD5 1afdae6ce6fa709abed41ce45f41f5e8 files/openldap-2.1.30-tls-activedirectory-hang-fix.patch 1122
-RMD160 1c39aa073ffb1616d2542e8a949f50d54f765635 files/openldap-2.1.30-tls-activedirectory-hang-fix.patch 1122
-SHA256 9daf88287cc0a0a62817b3d765fdc0eb64abf931b46b11c03f6f91b0ccc5172f files/openldap-2.1.30-tls-activedirectory-hang-fix.patch 1122
-AUX openldap-2.1.30-ximian_connector.patch 6435 RMD160 5e33c988ad0d26596d6ed6f130edcace9c8dec77 SHA1 73b6363cb1022785f5911e07222ff570f71a8c27 SHA256 fed7526974d1d17df5bdfc69cbc23191e519041840b8c914a79a09e7804b6e94
-MD5 2e6d3f7cf49a1d85468befdff2bfc1d8 files/openldap-2.1.30-ximian_connector.patch 6435
-RMD160 5e33c988ad0d26596d6ed6f130edcace9c8dec77 files/openldap-2.1.30-ximian_connector.patch 6435
-SHA256 fed7526974d1d17df5bdfc69cbc23191e519041840b8c914a79a09e7804b6e94 files/openldap-2.1.30-ximian_connector.patch 6435
-AUX openldap-2.2.14-db40.patch 773 RMD160 de210089942e6effeb0fa272296cc72c64480418 SHA1 5db78bfdded7cc0f7ae0e9831e0fedd68b66aae4 SHA256 8cd763aecaa0c81fe510b20bad348a9541bd6e85e2cd131239d27968c3110dec
-MD5 4c6ef684996786b3a7cc2dc15c4ae7a4 files/openldap-2.2.14-db40.patch 773
-RMD160 de210089942e6effeb0fa272296cc72c64480418 files/openldap-2.2.14-db40.patch 773
-SHA256 8cd763aecaa0c81fe510b20bad348a9541bd6e85e2cd131239d27968c3110dec files/openldap-2.2.14-db40.patch 773
-AUX openldap-2.2.14-perlthreadsfix.patch 614 RMD160 6e868aa5a5cc4e80c0340af25d18d010b342ed15 SHA1 3bb05c7ed511e8464331619ce23064d236a5fe82 SHA256 bb719cc1fed47ff0f111c960f3295781ae6f0d9e98b4266a87751044b4bb3175
-MD5 95a998755d69f0f30cb64b9cb8eeab15 files/openldap-2.2.14-perlthreadsfix.patch 614
-RMD160 6e868aa5a5cc4e80c0340af25d18d010b342ed15 files/openldap-2.2.14-perlthreadsfix.patch 614
-SHA256 bb719cc1fed47ff0f111c960f3295781ae6f0d9e98b4266a87751044b4bb3175 files/openldap-2.2.14-perlthreadsfix.patch 614
-AUX openldap-2.2.26-tls-fix-connection-test.patch 663 RMD160 8a076e406e95dd6a9e64aafd2ce32b40e63f5389 SHA1 243a9b32d085beec8f63ed5c8b85177f2b5e8946 SHA256 9a0995a0075c0067cc20fefeb1080a9c2767f16d8efe1ca73ec072649f297a76
-MD5 4591bdcf0bd459c6fdbcabc93f5b6b55 files/openldap-2.2.26-tls-fix-connection-test.patch 663
-RMD160 8a076e406e95dd6a9e64aafd2ce32b40e63f5389 files/openldap-2.2.26-tls-fix-connection-test.patch 663
-SHA256 9a0995a0075c0067cc20fefeb1080a9c2767f16d8efe1ca73ec072649f297a76 files/openldap-2.2.26-tls-fix-connection-test.patch 663
-AUX openldap-2.2.28-autoconf-archived-fix.patch 2001 RMD160 183e1d364f98e906d643ecbf81a3049ab3590844 SHA1 392b709e92e61e60b32ed013f1362df814667c6e SHA256 8bf925033a625842c31f69ba66a2a62d5c7eb09478951e574496c0bd43a8d1db
-MD5 f92be2e2c3b130cc9ff6ff738165e40e files/openldap-2.2.28-autoconf-archived-fix.patch 2001
-RMD160 183e1d364f98e906d643ecbf81a3049ab3590844 files/openldap-2.2.28-autoconf-archived-fix.patch 2001
-SHA256 8bf925033a625842c31f69ba66a2a62d5c7eb09478951e574496c0bd43a8d1db files/openldap-2.2.28-autoconf-archived-fix.patch 2001
-AUX openldap-2.2.28-cleartext-passwords.patch 1497 RMD160 49bbb0364b349d84e9d60eca8957bad7a7fbef61 SHA1 cac15b91305b79cdb6e83d771386d642c71d18b5 SHA256 46feb1eec1c92c9b45082f594526a9e67f72a62980153d6c03616e020db29b5c
-MD5 c0b486ddc5a55fa4879cec74e9a11748 files/openldap-2.2.28-cleartext-passwords.patch 1497
-RMD160 49bbb0364b349d84e9d60eca8957bad7a7fbef61 files/openldap-2.2.28-cleartext-passwords.patch 1497
-SHA256 46feb1eec1c92c9b45082f594526a9e67f72a62980153d6c03616e020db29b5c files/openldap-2.2.28-cleartext-passwords.patch 1497
-AUX openldap-2.2.28-r1-configure.in-rpath.patch 382 RMD160 1c2dbcd122e86487098ac8d563896aa1002b9238 SHA1 c9ea3892c092afde74cfed622b54ce6ac5e69a3a SHA256 aa43c6d8fa15e31b75243580ebc0d10e41975ba658c0b8bb534df15e11503df5
-MD5 14cfcdbe422004e2e42bfb14cea16a5e files/openldap-2.2.28-r1-configure.in-rpath.patch 382
-RMD160 1c2dbcd122e86487098ac8d563896aa1002b9238 files/openldap-2.2.28-r1-configure.in-rpath.patch 382
-SHA256 aa43c6d8fa15e31b75243580ebc0d10e41975ba658c0b8bb534df15e11503df5 files/openldap-2.2.28-r1-configure.in-rpath.patch 382
-AUX openldap-2.2.28-tests.patch 385 RMD160 a37869af6204e294d58b613f80300c8b57c4a934 SHA1 13f5cff50c21e994d478eecb2d493d0d411a4769 SHA256 d493bfce2cbb9958416b8c90053f56183de46dc1965c5c16cb3586aabef6beb6
-MD5 91f97e6962d63d9a7f12697ff34772f7 files/openldap-2.2.28-tests.patch 385
-RMD160 a37869af6204e294d58b613f80300c8b57c4a934 files/openldap-2.2.28-tests.patch 385
-SHA256 d493bfce2cbb9958416b8c90053f56183de46dc1965c5c16cb3586aabef6beb6 files/openldap-2.2.28-tests.patch 385
-AUX openldap-2.2.28-ximian_connector.patch 5669 RMD160 a099ae0fbcd52b3b5ddf6450374ffaaff1c0d4b9 SHA1 c526fa88e45e7f9b9dc51f7bace5ff086a13b5b8 SHA256 6ac33c6ca0da7b24070402dfa6bafbe6ad44561141fbba9f22f842fce1636968
-MD5 f940f4e9ac544ed0a0f28b87df5cd2c8 files/openldap-2.2.28-ximian_connector.patch 5669
-RMD160 a099ae0fbcd52b3b5ddf6450374ffaaff1c0d4b9 files/openldap-2.2.28-ximian_connector.patch 5669
-SHA256 6ac33c6ca0da7b24070402dfa6bafbe6ad44561141fbba9f22f842fce1636968 files/openldap-2.2.28-ximian_connector.patch 5669
-AUX openldap-2.2.6-ntlm.patch 5011 RMD160 317f4b6dc9589826739a14a8ad7200ed287c87be SHA1 29b8e9c4835235c976f026cd5883228b77581083 SHA256 1f7e766bcafb412ec336aad7e07295d6d62d2e2a62b6804b07b06a5056102243
-MD5 7d80c3708d5940a3b7a428740af863d0 files/openldap-2.2.6-ntlm.patch 5011
-RMD160 317f4b6dc9589826739a14a8ad7200ed287c87be files/openldap-2.2.6-ntlm.patch 5011
-SHA256 1f7e766bcafb412ec336aad7e07295d6d62d2e2a62b6804b07b06a5056102243 files/openldap-2.2.6-ntlm.patch 5011
-AUX openldap-2.3.21-ppolicy.patch 402 RMD160 72da1c4a886a329607608f8fa07857874ea8973a SHA1 0c6fe313ad06ccee5a96402fc116cf243d37146b SHA256 97feaaff03e839aaad402024082ba62fb2cbe0c721664a85af8674ebb28d7dbd
-MD5 bb6f4b0447caaf5d07edd35d88cc375a files/openldap-2.3.21-ppolicy.patch 402
-RMD160 72da1c4a886a329607608f8fa07857874ea8973a files/openldap-2.3.21-ppolicy.patch 402
-SHA256 97feaaff03e839aaad402024082ba62fb2cbe0c721664a85af8674ebb28d7dbd files/openldap-2.3.21-ppolicy.patch 402
-AUX openldap-2.3.24-contrib-smbk5pwd.patch 1631 RMD160 01e394da82c2ca8493d0dc15c400675545f463bb SHA1 33781455168d2041f3ec00bbaf2da4ffbe411396 SHA256 277990c6bc9e00c29bc5123d5074e1a741a224e884f92651b301375b02edc70e
-MD5 c3eaf17d4936f6793f9c6486c51ef677 files/openldap-2.3.24-contrib-smbk5pwd.patch 1631
-RMD160 01e394da82c2ca8493d0dc15c400675545f463bb files/openldap-2.3.24-contrib-smbk5pwd.patch 1631
-SHA256 277990c6bc9e00c29bc5123d5074e1a741a224e884f92651b301375b02edc70e files/openldap-2.3.24-contrib-smbk5pwd.patch 1631
-DIST openldap-2.1.30.tgz 2044673 RMD160 431aa798c6197530c17611b931f0169d7a53e831 SHA1 c036f88abbafc16cb64c4e00ccc1c65563864755 SHA256 7fcefd45dfc82038cf0875e36b86a67d3af44b6a734e0127bae9ff2582ae8b25
-DIST openldap-2.2.23.tgz 2600908 RMD160 fc34d3f874d3976e4f8902820190dceda8d940c5 SHA1 cce3b19dd31a532f64557abf5042775226b24abe SHA256 303ae734d343f54228e6745d7660be2a46ecb7e6cd27199e027535dd35a63b14
-DIST openldap-2.2.28.tgz 2630427 RMD160 ca3f5aff42e6afc6b7c0a62beb8c13d4ff43d44c SHA1 0b3a3b9b61f6f033685218957fb84ba1d58887de SHA256 05c75b719305578dec799f05eaddae6b77eb51857abc6284e47b6abc4317dfba
-DIST openldap-2.3.21.tgz 3750778 RMD160 8fb7bce91452e24a8bd5e23f6dd3d17a3b2711cf SHA1 556975f22a5f32be3e127a2f6b896b03efbaf54a SHA256 12204e82276036742f4595122ca2c4ca173e7144a449f1d6d4950273c94a0ef5
-DIST openldap-2.3.23.tgz 3755995 RMD160 29bfd36b986cdcd56982082d2d6cb630840053df SHA1 30739e29eed78a261232375a9e3f276887ad626f SHA256 69646370351b9f46dbfdd9c029a99a96537305c8197027e81935b6fe35fa19d6
-DIST openldap-2.3.24.tgz 3756405 RMD160 8b4be685de2c2a7ace1debe97d5bda2354b57a06 SHA1 e00f7a017d9223708b77b0df3a612d236789b380 SHA256 e5247204dc0a41fa9b14ec1110fd2c179210b2288b27ebdee0a465b9e8e100cf
-EBUILD openldap-2.1.30-r2.ebuild 7481 RMD160 d3cf18053b469d1b482a116e2811ae4b5ddb8a0d SHA1 0219daa09b088949f4f776bed06cd9fc23d13cb4 SHA256 99dbf308566ccbe3c3be588c6e92bbcf6f476c80f95a6093d8667c6e46e09348
-MD5 fd027aaa5f21cf18f10ed713411feda0 openldap-2.1.30-r2.ebuild 7481
-RMD160 d3cf18053b469d1b482a116e2811ae4b5ddb8a0d openldap-2.1.30-r2.ebuild 7481
-SHA256 99dbf308566ccbe3c3be588c6e92bbcf6f476c80f95a6093d8667c6e46e09348 openldap-2.1.30-r2.ebuild 7481
-EBUILD openldap-2.1.30-r5.ebuild 7626 RMD160 5e87d91bc6a410fd3da49aefd318e3e27d71304d SHA1 fd14c868487dde95e2dd5b1328e5e92b0b6d7ccc SHA256 f4190477d36047a1765fff17d7a12ec2375c01ff35a92523b8eaee66f6c0872f
-MD5 c139349233c8544ea01f31b593c17baf openldap-2.1.30-r5.ebuild 7626
-RMD160 5e87d91bc6a410fd3da49aefd318e3e27d71304d openldap-2.1.30-r5.ebuild 7626
-SHA256 f4190477d36047a1765fff17d7a12ec2375c01ff35a92523b8eaee66f6c0872f openldap-2.1.30-r5.ebuild 7626
-EBUILD openldap-2.1.30-r6.ebuild 8137 RMD160 dfacbe171a40150594b2dd6089b3d21fa388b019 SHA1 4ff56a43f98aea74b9608b5b1367360a73f1d85f SHA256 6a94fa3ef332a2425b87dbe4b44227d7194eaf2ff50bd688e532afebb34c4f3a
-MD5 cf3459ef7f70916905138caeed991715 openldap-2.1.30-r6.ebuild 8137
-RMD160 dfacbe171a40150594b2dd6089b3d21fa388b019 openldap-2.1.30-r6.ebuild 8137
-SHA256 6a94fa3ef332a2425b87dbe4b44227d7194eaf2ff50bd688e532afebb34c4f3a openldap-2.1.30-r6.ebuild 8137
-EBUILD openldap-2.1.30-r7.ebuild 8904 RMD160 b317d16176ddc9cfb8c329cd9642275c378a7615 SHA1 b3e6eee160ef78ee0c13b274aceb3acf60fa8ae2 SHA256 e196cb66fc9b0225f7e6b5c74f37386c563c6850daf18582e0c192f95dde5b28
-MD5 41ddaae1efa5f62acef48fd20236b9e0 openldap-2.1.30-r7.ebuild 8904
-RMD160 b317d16176ddc9cfb8c329cd9642275c378a7615 openldap-2.1.30-r7.ebuild 8904
-SHA256 e196cb66fc9b0225f7e6b5c74f37386c563c6850daf18582e0c192f95dde5b28 openldap-2.1.30-r7.ebuild 8904
-EBUILD openldap-2.2.23-r1.ebuild 8791 RMD160 84f5f420371877d3107eeb25f06af26840e30824 SHA1 7b598285483be8310d5aab87f9648ff735151f7c SHA256 01c44304fb6c82b6bfe8b28f8d59f81433c6bf51fa2ce591446f89bfa9c5693e
-MD5 621f16d84bb0cb752ac3171f9c231eb4 openldap-2.2.23-r1.ebuild 8791
-RMD160 84f5f420371877d3107eeb25f06af26840e30824 openldap-2.2.23-r1.ebuild 8791
-SHA256 01c44304fb6c82b6bfe8b28f8d59f81433c6bf51fa2ce591446f89bfa9c5693e openldap-2.2.23-r1.ebuild 8791
-EBUILD openldap-2.2.28-r3.ebuild 13717 RMD160 841dd06f816c4d266a638ef9e056fe48ddacd698 SHA1 8f091fe7fc2e6e71d8da7bafd536f4b5d4ef1d22 SHA256 45465cbe50c9815d4bb251c90ce9fcd528774a3b7b7272c7a57e95c77b620a36
-MD5 d4c182a4f028e7ad79cfc127f3a2632d openldap-2.2.28-r3.ebuild 13717
-RMD160 841dd06f816c4d266a638ef9e056fe48ddacd698 openldap-2.2.28-r3.ebuild 13717
-SHA256 45465cbe50c9815d4bb251c90ce9fcd528774a3b7b7272c7a57e95c77b620a36 openldap-2.2.28-r3.ebuild 13717
-EBUILD openldap-2.2.28-r4.ebuild 15039 RMD160 877596a4decb66f573a27d037e44cccc0e2f16f8 SHA1 689a6f63a98593fd93a3d058aa0985aa795458c3 SHA256 e657a90c473a982dd42ed088c2ccd8ad1c3c7d58f06415f2c7670e907f6e8c62
-MD5 e93204fdc9325e31a07f8c3a435f087b openldap-2.2.28-r4.ebuild 15039
-RMD160 877596a4decb66f573a27d037e44cccc0e2f16f8 openldap-2.2.28-r4.ebuild 15039
-SHA256 e657a90c473a982dd42ed088c2ccd8ad1c3c7d58f06415f2c7670e907f6e8c62 openldap-2.2.28-r4.ebuild 15039
-EBUILD openldap-2.3.21-r1.ebuild 13339 RMD160 c26aa553cbdded6cac522d7c47ab33704a4a7590 SHA1 43ecedc2300a61d621a68616a2b38b98157b3637 SHA256 74c6332477466ab8e1cd46a844c087f68c11aeb181b185f89535b4777e0c08f8
-MD5 b153178085f6f9eedc149fc8f63fedf7 openldap-2.3.21-r1.ebuild 13339
-RMD160 c26aa553cbdded6cac522d7c47ab33704a4a7590 openldap-2.3.21-r1.ebuild 13339
-SHA256 74c6332477466ab8e1cd46a844c087f68c11aeb181b185f89535b4777e0c08f8 openldap-2.3.21-r1.ebuild 13339
-EBUILD openldap-2.3.21.ebuild 12948 RMD160 afa1c92a3512191c0739115194cab97bf8019aef SHA1 3649e82d6b6aa83da4cbae68e466e2bc60f5204b SHA256 ff59e7728f5a2ac0ae8ff873ae0d04bf7941785872b467e598f6763227ec6b85
-MD5 d5546d9d6f63b754dbf3f07a4871d041 openldap-2.3.21.ebuild 12948
-RMD160 afa1c92a3512191c0739115194cab97bf8019aef openldap-2.3.21.ebuild 12948
-SHA256 ff59e7728f5a2ac0ae8ff873ae0d04bf7941785872b467e598f6763227ec6b85 openldap-2.3.21.ebuild 12948
-EBUILD openldap-2.3.23.ebuild 14146 RMD160 a1b0b90e1e31cf849e3e63f4dc6b84b24cc64ec1 SHA1 b207546fc152cdc94753803109e6f836da2acd04 SHA256 ce3425f81a66ba4a5019ffcaeb71a9a51ca9ac0d93d3f30ff71dd88e905d2aa1
-MD5 0d37122fbd8c111bbfd05cb74807e065 openldap-2.3.23.ebuild 14146
-RMD160 a1b0b90e1e31cf849e3e63f4dc6b84b24cc64ec1 openldap-2.3.23.ebuild 14146
-SHA256 ce3425f81a66ba4a5019ffcaeb71a9a51ca9ac0d93d3f30ff71dd88e905d2aa1 openldap-2.3.23.ebuild 14146
-EBUILD openldap-2.3.24-r1.ebuild 14214 RMD160 934a9e73c7c2edb78127521d760a3f57d8d625ba SHA1 b257a24c05a05400fa40ecf839c61262d9a45d5b SHA256 6f7ecf81b988069ff7fbb3a03ee4784260afcbb5bc264ae9b86a7890ab093e87
-MD5 46e3df8a41e8504a0e6b5ca61f69a7ba openldap-2.3.24-r1.ebuild 14214
-RMD160 934a9e73c7c2edb78127521d760a3f57d8d625ba openldap-2.3.24-r1.ebuild 14214
-SHA256 6f7ecf81b988069ff7fbb3a03ee4784260afcbb5bc264ae9b86a7890ab093e87 openldap-2.3.24-r1.ebuild 14214
-EBUILD openldap-2.3.24-r2.ebuild 17306 RMD160 c1a6ae69f6a498db16da84f340abbd834ff77f69 SHA1 00cce093e53376999656d8971bb583bd23da8249 SHA256 f5d4cdbbce625124985c0a4754578b91084cb47ab81adc14bf228149d5918274
-MD5 ae4c50017d7970c68b08efb5a69e589a openldap-2.3.24-r2.ebuild 17306
-RMD160 c1a6ae69f6a498db16da84f340abbd834ff77f69 openldap-2.3.24-r2.ebuild 17306
-SHA256 f5d4cdbbce625124985c0a4754578b91084cb47ab81adc14bf228149d5918274 openldap-2.3.24-r2.ebuild 17306
-MISC ChangeLog 33536 RMD160 f143a2087abd78d9d4460e2b8585d59fd8e78c08 SHA1 746c991a9e23dcafaef60ed9bc375ece16421649 SHA256 7f2fdf3ebe358627a98f601ea1f40ccca0987dafee428972bf52e2f6f57d4f8c
-MD5 6dfa8350283c0c4766460b2623f1367b ChangeLog 33536
-RMD160 f143a2087abd78d9d4460e2b8585d59fd8e78c08 ChangeLog 33536
-SHA256 7f2fdf3ebe358627a98f601ea1f40ccca0987dafee428972bf52e2f6f57d4f8c ChangeLog 33536
-MISC metadata.xml 240 RMD160 3dfef965b1bac3faa4abfec78fb98b0ed5a9ddaf SHA1 21c64f9ef102b6649bccfca61f06d7b328ef1727 SHA256 fecb6db825d33099fa9f18392db0b7a5ab89a4895ac6ca0f8a2313f348dfaaa6
-MD5 9a8efd7efb44b06913bf1d906d493407 metadata.xml 240
-RMD160 3dfef965b1bac3faa4abfec78fb98b0ed5a9ddaf metadata.xml 240
-SHA256 fecb6db825d33099fa9f18392db0b7a5ab89a4895ac6ca0f8a2313f348dfaaa6 metadata.xml 240
 MD5 c9e269ba9c43c4aefb19e6cce36405a6 files/digest-openldap-2.1.30-r2 241
-RMD160 41352ebe2a161b8683f2706cb6c460c4ba4e1fee files/digest-openldap-2.1.30-r2 241
-SHA256 93bf80b5f142956ebcafc98f71500106ffddbf3e1bfd5986c3573a6567e61b54 files/digest-openldap-2.1.30-r2 241
 MD5 c9e269ba9c43c4aefb19e6cce36405a6 files/digest-openldap-2.1.30-r5 241
-RMD160 41352ebe2a161b8683f2706cb6c460c4ba4e1fee files/digest-openldap-2.1.30-r5 241
-SHA256 93bf80b5f142956ebcafc98f71500106ffddbf3e1bfd5986c3573a6567e61b54 files/digest-openldap-2.1.30-r5 241
 MD5 c9e269ba9c43c4aefb19e6cce36405a6 files/digest-openldap-2.1.30-r6 241
-RMD160 41352ebe2a161b8683f2706cb6c460c4ba4e1fee files/digest-openldap-2.1.30-r6 241
-SHA256 93bf80b5f142956ebcafc98f71500106ffddbf3e1bfd5986c3573a6567e61b54 files/digest-openldap-2.1.30-r6 241
 MD5 c9e269ba9c43c4aefb19e6cce36405a6 files/digest-openldap-2.1.30-r7 241
-RMD160 41352ebe2a161b8683f2706cb6c460c4ba4e1fee files/digest-openldap-2.1.30-r7 241
-SHA256 93bf80b5f142956ebcafc98f71500106ffddbf3e1bfd5986c3573a6567e61b54 files/digest-openldap-2.1.30-r7 241
 MD5 53cbc4c51f8a94dd0a63de1720ab8d0f files/digest-openldap-2.2.23-r1 241
-RMD160 fff59d5410606841b9171605497a59daa1271d1b files/digest-openldap-2.2.23-r1 241
-SHA256 fbb35dd6189e32c2dd4f5842bc8471d4c9cecc94f7866f9a3c69556c01817544 files/digest-openldap-2.2.23-r1 241
 MD5 7e4e22b26b4b86007460dcf3252bc08c files/digest-openldap-2.2.28-r3 482
-RMD160 f24d179480f1f0d0b0138beb7675e2d99dcb2419 files/digest-openldap-2.2.28-r3 482
-SHA256 f158ecb35b525da1bd32b3d0742f83a05ae925d77d71fcf9268584c06e07de63 files/digest-openldap-2.2.28-r3 482
 MD5 7e4e22b26b4b86007460dcf3252bc08c files/digest-openldap-2.2.28-r4 482
-RMD160 f24d179480f1f0d0b0138beb7675e2d99dcb2419 files/digest-openldap-2.2.28-r4 482
-SHA256 f158ecb35b525da1bd32b3d0742f83a05ae925d77d71fcf9268584c06e07de63 files/digest-openldap-2.2.28-r4 482
 MD5 89ce9849e81c7760fc9c32c8239f6b1b files/digest-openldap-2.3.21 241
-RMD160 fd85d267b554c255aea32edf92a44c1046443cce files/digest-openldap-2.3.21 241
-SHA256 e00ac18f0faf58d41a73109775715224d49093c682e31cf0d3236468918974c7 files/digest-openldap-2.3.21 241
 MD5 89ce9849e81c7760fc9c32c8239f6b1b files/digest-openldap-2.3.21-r1 241
-RMD160 fd85d267b554c255aea32edf92a44c1046443cce files/digest-openldap-2.3.21-r1 241
-SHA256 e00ac18f0faf58d41a73109775715224d49093c682e31cf0d3236468918974c7 files/digest-openldap-2.3.21-r1 241
 MD5 9637426cb88f831690cb821c7a99ec4c files/digest-openldap-2.3.23 241
-RMD160 f1a1d237e74b9157ea1304085fa473d25b081621 files/digest-openldap-2.3.23 241
-SHA256 27eb67c20af52823887678e3b1e8171e368afa11d55601a73d3c49b4be59de2c files/digest-openldap-2.3.23 241
 MD5 90715e5ebf5339aaaa881c3ed3b46b3c files/digest-openldap-2.3.24-r1 241
-RMD160 13c05b3ac61d04c0b78a7788823a866477e2eb16 files/digest-openldap-2.3.24-r1 241
-SHA256 1421251aff6fc052097eddf5d854cd3001eaa984555a64343b705d18325b7ece files/digest-openldap-2.3.24-r1 241
 MD5 90715e5ebf5339aaaa881c3ed3b46b3c files/digest-openldap-2.3.24-r2 241
-RMD160 13c05b3ac61d04c0b78a7788823a866477e2eb16 files/digest-openldap-2.3.24-r2 241
-SHA256 1421251aff6fc052097eddf5d854cd3001eaa984555a64343b705d18325b7ece files/digest-openldap-2.3.24-r2 241
+MD5 c8d6f4ebeb92ef1085b1bb77d7b4db5f files/gencert.sh 3505
+MD5 c16eada85fafe1c17bf0089d0ef90ae3 files/gencert.sh-2.2.27 2939
+MD5 b10517f0e7be829d47bb8096d86fb519 files/openldap-2.1.27-db40.patch 718
+MD5 ca2c43219df88502aafeab9db9eda4d5 files/openldap-2.1.27-perlthreadsfix.patch 967
+MD5 b51f63396bab5123f8b24674ed4481b2 files/openldap-2.1.30-autoconf-archived-fix.patch 1912
+MD5 14cfcdbe422004e2e42bfb14cea16a5e files/openldap-2.1.30-autoconf25.patch 382
+MD5 c58db81c8d7084a9abf48747134da0a8 files/openldap-2.1.30-db40.patch 718
+MD5 624d84051bd96193e20f66bbb112b85f files/openldap-2.1.30-glibc24.patch 376
+MD5 a240004c097944335b15bcb489661c2c files/openldap-2.1.30-m4_underquoted.patch 3916
+MD5 07a689148742f0fd74dcedf572a8f092 files/openldap-2.1.30-rpath.patch 13131
+MD5 c3c348e2e475de1b8f04c674aa15d27e files/openldap-2.1.30-tests.patch 378
+MD5 1afdae6ce6fa709abed41ce45f41f5e8 files/openldap-2.1.30-tls-activedirectory-hang-fix.patch 1122
+MD5 2e6d3f7cf49a1d85468befdff2bfc1d8 files/openldap-2.1.30-ximian_connector.patch 6435
+MD5 4c6ef684996786b3a7cc2dc15c4ae7a4 files/openldap-2.2.14-db40.patch 773
+MD5 95a998755d69f0f30cb64b9cb8eeab15 files/openldap-2.2.14-perlthreadsfix.patch 614
+MD5 4591bdcf0bd459c6fdbcabc93f5b6b55 files/openldap-2.2.26-tls-fix-connection-test.patch 663
+MD5 f92be2e2c3b130cc9ff6ff738165e40e files/openldap-2.2.28-autoconf-archived-fix.patch 2001
+MD5 c0b486ddc5a55fa4879cec74e9a11748 files/openldap-2.2.28-cleartext-passwords.patch 1497
+MD5 14cfcdbe422004e2e42bfb14cea16a5e files/openldap-2.2.28-r1-configure.in-rpath.patch 382
+MD5 91f97e6962d63d9a7f12697ff34772f7 files/openldap-2.2.28-tests.patch 385
+MD5 f940f4e9ac544ed0a0f28b87df5cd2c8 files/openldap-2.2.28-ximian_connector.patch 5669
+MD5 7d80c3708d5940a3b7a428740af863d0 files/openldap-2.2.6-ntlm.patch 5011
+MD5 bb6f4b0447caaf5d07edd35d88cc375a files/openldap-2.3.21-ppolicy.patch 402
+MD5 c3eaf17d4936f6793f9c6486c51ef677 files/openldap-2.3.24-contrib-smbk5pwd.patch 1631
+MD5 9a8efd7efb44b06913bf1d906d493407 metadata.xml 240
+MD5 fd027aaa5f21cf18f10ed713411feda0 openldap-2.1.30-r2.ebuild 7481
+MD5 c139349233c8544ea01f31b593c17baf openldap-2.1.30-r5.ebuild 7626
+MD5 cf3459ef7f70916905138caeed991715 openldap-2.1.30-r6.ebuild 8137
+MD5 41ddaae1efa5f62acef48fd20236b9e0 openldap-2.1.30-r7.ebuild 8904
+MD5 621f16d84bb0cb752ac3171f9c231eb4 openldap-2.2.23-r1.ebuild 8791
+MD5 d4c182a4f028e7ad79cfc127f3a2632d openldap-2.2.28-r3.ebuild 13717
+MD5 e93204fdc9325e31a07f8c3a435f087b openldap-2.2.28-r4.ebuild 15039
+MD5 b153178085f6f9eedc149fc8f63fedf7 openldap-2.3.21-r1.ebuild 13339
+MD5 d5546d9d6f63b754dbf3f07a4871d041 openldap-2.3.21.ebuild 12948
+MD5 0d37122fbd8c111bbfd05cb74807e065 openldap-2.3.23.ebuild 14146
+MD5 9df77bf592cc1721759038bb8b22a50b openldap-2.3.24-r1.ebuild 14209
+MD5 ae4c50017d7970c68b08efb5a69e589a openldap-2.3.24-r2.ebuild 17306
