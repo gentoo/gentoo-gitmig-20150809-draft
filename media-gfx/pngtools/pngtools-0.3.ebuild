@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngtools/pngtools-0.3.ebuild,v 1.1 2006/06/03 21:40:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngtools/pngtools-0.3.ebuild,v 1.2 2006/06/05 22:23:17 robbat2 Exp $
 
 MY_PV="${PV/./_}"
 
@@ -18,7 +18,7 @@ DEPEND=">=media-libs/libpng-1.2.8-r1
 		virtual/libc"
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
+	emake -j1 install DESTDIR="${D}" || die "emake install failed"
 	dodoc ABOUT AUTHORS ChangeLog NEWS README chunks.txt *.png
 }
 
