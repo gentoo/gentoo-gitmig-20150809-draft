@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/peksystray
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.13 2006/06/05 17:51:53 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.14 2006/06/05 17:53:13 nelchael Exp $
+
+  05 Jun 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  peksystray-0.3.0.ebuild:
+  Restored dropped keywords.
 
 *peksystray-0.3.0 (05 Jun 2006)
 
