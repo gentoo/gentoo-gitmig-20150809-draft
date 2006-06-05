@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1.ebuild,v 1.2 2006/05/27 09:26:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1.ebuild,v 1.3 2006/06/05 18:47:34 genstef Exp $
 
 inherit eutils pam flag-o-matic multilib autotools
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.easysw.com/pub/cups/${PV}/${MY_P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="ssl slp pam samba nls gnutls dbus"
 
 DEP="pam? ( virtual/pam )
@@ -48,13 +48,16 @@ pkg_setup() {
 	enewgroup lp
 	enewuser lp -1 -1 -1 lp
 
-	enewgroup lpadmin
+	enewgroup lpadmin 106
 }
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/cups-1.2.0-bindnow.patch
+
+	# upstream has refused to fix this for me
+	sed -i -e "s:#if defined(__linux) && defined(LP_POUTPA):#if 0:" backend/usb-unix.c
 
 	# cups does not use autotools "the usual way" and ship a static config.h.in
 	eaclocal
