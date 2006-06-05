@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/g-cpan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.13 2006/04/17 12:45:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.14 2006/06/05 10:51:49 mcummings Exp $
+
+*g-cpan-0.14.0_rc1 (05 Jun 2006)
+
+  05 Jun 2006; <mcummings@gentoo.org> +g-cpan-0.14.0_rc1.ebuild:
+  RC1 of the new g-cpan, feedback wanted.
 
   17 Apr 2006; <mcummings@gentoo.org> files/digest-g-cpan-0.13.02, Manifest:
   Ye olde manifest signature
