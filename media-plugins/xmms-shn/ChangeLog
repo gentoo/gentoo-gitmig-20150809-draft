@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-shn
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shn/ChangeLog,v 1.13 2006/05/23 19:49:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shn/ChangeLog,v 1.14 2006/06/05 12:57:58 gmsoft Exp $
+
+  05 Jun 2006; Guy Martin <gmsoft@gentoo.org> xmms-shn-2.4.0.ebuild:
+  Stable on hppa.
 
   23 May 2006; Markus Rothe <corsair@gentoo.org> xmms-shn-2.4.0.ebuild:
   Stable on ppc64
