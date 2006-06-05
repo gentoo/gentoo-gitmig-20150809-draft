@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.14 2006/04/28 01:20:27 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.15 2006/06/05 06:56:08 spyderous Exp $
 #
 # Author: Danny van Dyk <kugelfang@gentoo.org>
 #
@@ -130,8 +130,14 @@ need_fortran() {
 		use debug && echo "MY_FORTRAN: \"${MY_FORTRAN}\""
 		if hasq gfortran ${AVAILABLE}; then
 			MY_FORTRAN=${MY_FORTRAN:=gfortran}
-		else
+		elif hasq g77 ${AVAILABLE}; then
 			MY_FORTRAN=${MY_FORTRAN:=g77}
+		else
+			# Default to the first valid Fortran compiler
+			for i in ${AVAILABLE}; do
+				MY_FORTRAN=$i
+				break
+			done
 		fi
 		use debug && echo "MY_FORTRAN: \"${MY_FORTRAN}\""
 
