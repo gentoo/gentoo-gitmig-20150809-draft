@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.54 2006/05/23 20:07:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.55 2006/06/05 02:52:37 ramereth Exp $
+
+  05 Jun 2006; Lance Albertson <ramereth@gentoo.org>
+  -files/stunnel-4.05-gentoo.diff, -files/stunnel-4.09-gentoo.diff,
+  -files/stunnel-4.10-inetd.patch, -files/stunnel.conf.4.05,
+  -files/stunnel.conf.4.09, -files/stunnel.rc6.4.05,
+  -files/stunnel.rc6.4.09, -stunnel-4.09.ebuild, stunnel-4.14-r1.ebuild,
+  stunnel-4.15.ebuild:
+  * Stable on x86
+  * Removed old ebuild
+  * Cleaned up files dir
 
   23 May 2006; Markus Rothe <corsair@gentoo.org> stunnel-4.09-r1.ebuild:
   Stable on ppc64
