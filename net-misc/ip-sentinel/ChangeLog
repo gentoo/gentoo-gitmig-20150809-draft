@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ip-sentinel
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ChangeLog,v 1.1 2006/01/15 22:16:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ChangeLog,v 1.2 2006/06/05 16:58:01 pva Exp $
+
+  05 Jun 2006; Peter Volkov <pva@gentoo.org> files/ip-sentinel.init:
+  Added restart section in init.d script. Just stop/start doesn't work as
+  child process occupies port for some time after stop.
 
 *ip-sentinel-0.12 (15 Jan 2006)
 
