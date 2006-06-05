@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdate
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.31 2006/05/27 11:10:45 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.32 2006/06/05 17:15:59 blubb Exp $
+
+  05 Jun 2006; Simon Stelling <blubb@gentoo.org> rdate-1.4-r1.ebuild:
+  stable on amd64
 
   27 May 2006; Jose Luis Rivero <yoswink@gentoo.org> rdate-1.4-r1.ebuild:
   Stable on alpha wrt bug #129091
