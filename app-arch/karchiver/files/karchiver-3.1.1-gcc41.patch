@@ -1,0 +1,11 @@
+--- karchiver-3.1.1-orig/karchiver/cpreferences.h	2005-02-28 16:33:37.000000000 +0100
++++ karchiver-3.1.1/karchiver/cpreferences.h	2006-06-06 00:14:43.000000000 +0200
+@@ -71,7 +71,7 @@
+ 		* uncompressing gzip and bzip2 archives */
+   bool getOverwriteGzip();
+   /** return true if we will use RAR header encryption */
+-  bool CPreferences::getHeaderEncryption();
++  bool getHeaderEncryption();
+   /** return 0 if we'll display small icons, 1 for medium,
+ 		* 2 for large */
+   int getSizeofIconListe();

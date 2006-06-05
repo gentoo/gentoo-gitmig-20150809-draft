@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/karchiver-3.1.1-r1.ebuild,v 1.5 2005/08/09 23:21:04 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/karchiver-3.1.1-r1.ebuild,v 1.6 2006/06/05 22:55:34 flameeyes Exp $
 
 inherit kde
 
@@ -14,6 +14,8 @@ SLOT="0"
 IUSE=""
 
 need-kde 3.1
+
+PATCHES="${FILESDIR}/${P}-gcc41.patch"
 
 # Nasty packaging...
 src_unpack() {
