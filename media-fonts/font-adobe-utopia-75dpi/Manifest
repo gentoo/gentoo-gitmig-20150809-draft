@@ -1,4 +1,16 @@
-MD5 21f7d73e738c07b45b48f8c2c28741f6 ChangeLog 2348
-MD5 b61ac3673761d82163ecaff09bf7d9a8 files/digest-font-adobe-utopia-75dpi-1.0.1 82
-MD5 98a633e6ee2572d9868f55e4ec7ec8a5 font-adobe-utopia-75dpi-1.0.1.ebuild 580
+DIST font-adobe-utopia-75dpi-1.0.1.tar.bz2 213520
+EBUILD font-adobe-utopia-75dpi-1.0.1.ebuild 588 RMD160 a37dbd94b48a20e8ff3b8c6f18e4f0ead8af8685 SHA1 47838376eb5700e7969f8527260e70ed19f6bdca SHA256 7a438d0cbce8a351fcfbc543f9be317989080dffa45eeb784eaaf9b83f8e8f16
+MD5 97cb6515a749f0ae1a3b2776fba5b373 font-adobe-utopia-75dpi-1.0.1.ebuild 588
+RMD160 a37dbd94b48a20e8ff3b8c6f18e4f0ead8af8685 font-adobe-utopia-75dpi-1.0.1.ebuild 588
+SHA256 7a438d0cbce8a351fcfbc543f9be317989080dffa45eeb784eaaf9b83f8e8f16 font-adobe-utopia-75dpi-1.0.1.ebuild 588
+MISC ChangeLog 2495 RMD160 1c74ff2178517cb7e52dce5a091eac1bb2aa5b48 SHA1 84dc00e974036a44011d1fa5ebb0ac01ee2f9216 SHA256 7f5def47909dc16b4044815e92d3339538027344bd7e025b508e8089262c6660
+MD5 ad9382b7824c4ea5106d86a8d7a41cad ChangeLog 2495
+RMD160 1c74ff2178517cb7e52dce5a091eac1bb2aa5b48 ChangeLog 2495
+SHA256 7f5def47909dc16b4044815e92d3339538027344bd7e025b508e8089262c6660 ChangeLog 2495
+MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
+SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
+MD5 b61ac3673761d82163ecaff09bf7d9a8 files/digest-font-adobe-utopia-75dpi-1.0.1 82
+RMD160 ef6f88160e84adf52776b2148447c75d172116e8 files/digest-font-adobe-utopia-75dpi-1.0.1 82
+SHA256 bd39cc8224b8eea93e9ff67fd1d760380cb0717a4877e508e1ed909e2015a0a1 files/digest-font-adobe-utopia-75dpi-1.0.1 82

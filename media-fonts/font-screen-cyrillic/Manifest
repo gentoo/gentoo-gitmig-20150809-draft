@@ -1,4 +1,16 @@
-MD5 b4be3beb73b04a7cbf13b9a8d53fd5a3 ChangeLog 1812
-MD5 ee640c3fdbc84bdfdb51fe5563d38dd0 files/digest-font-screen-cyrillic-1.0.0 78
-MD5 8d356f7008ff0151e3e1ed6d5860aff1 font-screen-cyrillic-1.0.0.ebuild 489
+DIST font-screen-cyrillic-1.0.0.tar.bz2 42895
+EBUILD font-screen-cyrillic-1.0.0.ebuild 493 RMD160 c44173a713e2fe83c1cfdd01d65883a1c1995aad SHA1 f78ef31bd65b21714ba006255ffc82d1fe17b857 SHA256 fb4cf4abe9342e32834514683582bb876b375c6645c087907fe632f8428fb58b
+MD5 f8da1cefa6d93111df4ee23a980c32c0 font-screen-cyrillic-1.0.0.ebuild 493
+RMD160 c44173a713e2fe83c1cfdd01d65883a1c1995aad font-screen-cyrillic-1.0.0.ebuild 493
+SHA256 fb4cf4abe9342e32834514683582bb876b375c6645c087907fe632f8428fb58b font-screen-cyrillic-1.0.0.ebuild 493
+MISC ChangeLog 1956 RMD160 5287f452336e2c32558bb70e886c311a6ace909d SHA1 b2eaa43ae06f989b909eabe760c01d97eaca9be4 SHA256 48b76ab3906560426c2cf9d5dba4dd942e4c458fb98598b966596aac42f0674d
+MD5 fa4c87dee438e98d098f57e08d4267ed ChangeLog 1956
+RMD160 5287f452336e2c32558bb70e886c311a6ace909d ChangeLog 1956
+SHA256 48b76ab3906560426c2cf9d5dba4dd942e4c458fb98598b966596aac42f0674d ChangeLog 1956
+MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
+SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
+MD5 ee640c3fdbc84bdfdb51fe5563d38dd0 files/digest-font-screen-cyrillic-1.0.0 78
+RMD160 fb411c6eb80de7b8ca8ea3d10f08c762611c29a8 files/digest-font-screen-cyrillic-1.0.0 78
+SHA256 8e9097eb9ae0b3517a58ed47c79ca5e644f8ab8004fd66230c130f30c48c5d1a files/digest-font-screen-cyrillic-1.0.0 78

@@ -1,4 +1,16 @@
-MD5 2fdafbc4ab179156b111deb895bbc879 ChangeLog 1970
-MD5 6b3b260b22420ff8588fd07823efdfe7 files/digest-font-misc-cyrillic-1.0.0 76
-MD5 b58922fbf7a98a344c65cbfb2db4c087 font-misc-cyrillic-1.0.0.ebuild 486
+DIST font-misc-cyrillic-1.0.0.tar.bz2 65701
+EBUILD font-misc-cyrillic-1.0.0.ebuild 488 RMD160 2bfd86a2193dee21bbbdf154df2fce005e02c9bf SHA1 b7e86a34ce2d09de57f42ba7ec284d78bceebd02 SHA256 cd5766c6439536055de7e219a313e17292c4ad614fd03e18c69d00d1f84a7a3e
+MD5 3a34d7b144d22f9e3ee586859e70f466 font-misc-cyrillic-1.0.0.ebuild 488
+RMD160 2bfd86a2193dee21bbbdf154df2fce005e02c9bf font-misc-cyrillic-1.0.0.ebuild 488
+SHA256 cd5766c6439536055de7e219a313e17292c4ad614fd03e18c69d00d1f84a7a3e font-misc-cyrillic-1.0.0.ebuild 488
+MISC ChangeLog 2112 RMD160 c64906546c88fcda0d9f90bf3baf700ea634dd64 SHA1 0315968f1de64f5412c660ed4ab807a638115c35 SHA256 11e820f6da0d2001a7f4fa06d5e4c2ecbea0a773347c8cf261409cdd6cab9c18
+MD5 a971acdf4bce7f0813531b49a5ee527f ChangeLog 2112
+RMD160 c64906546c88fcda0d9f90bf3baf700ea634dd64 ChangeLog 2112
+SHA256 11e820f6da0d2001a7f4fa06d5e4c2ecbea0a773347c8cf261409cdd6cab9c18 ChangeLog 2112
+MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
+SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
+MD5 6b3b260b22420ff8588fd07823efdfe7 files/digest-font-misc-cyrillic-1.0.0 76
+RMD160 5d98518ecf58103c3788eebb108ec4db1f8da77f files/digest-font-misc-cyrillic-1.0.0 76
+SHA256 dfbf98b6d3e80be62d9cab322e22e3c0e3d4e5c732d3bbcd74e60f203282e36d files/digest-font-misc-cyrillic-1.0.0 76

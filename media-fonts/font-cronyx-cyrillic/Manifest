@@ -1,4 +1,16 @@
-MD5 924e2d1747c4ed52156b033dc0df0a07 ChangeLog 1812
-MD5 0331fafc4dc5acb770fde04fdca5dc62 files/digest-font-cronyx-cyrillic-1.0.0 79
-MD5 9195705b40b8d5ad773d5a4bf89d81bd font-cronyx-cyrillic-1.0.0.ebuild 489
+DIST font-cronyx-cyrillic-1.0.0.tar.bz2 197094
+EBUILD font-cronyx-cyrillic-1.0.0.ebuild 493 RMD160 75b360f4763d8d4df511e0bc0f17acc32bf5c5ff SHA1 41d7679473b1f3e4d085c1caa55127be4cdaff91 SHA256 9228820fede1b7c1ca68fc9006692d7db095f36f8352daa7d4b422e1112d644c
+MD5 8e8145f5d17e2fa893dc23c2b9218683 font-cronyx-cyrillic-1.0.0.ebuild 493
+RMD160 75b360f4763d8d4df511e0bc0f17acc32bf5c5ff font-cronyx-cyrillic-1.0.0.ebuild 493
+SHA256 9228820fede1b7c1ca68fc9006692d7db095f36f8352daa7d4b422e1112d644c font-cronyx-cyrillic-1.0.0.ebuild 493
+MISC ChangeLog 1956 RMD160 8f52248582ec0124524bed85012b7477ede1ce15 SHA1 840a455df299d2df378ea8546977202293f7935a SHA256 3ae5556a15a3555e681628b56a7c8515766f2fbf389702ac275f5ef1ac171f0f
+MD5 6774bce3de064b95caf49bcb313d8750 ChangeLog 1956
+RMD160 8f52248582ec0124524bed85012b7477ede1ce15 ChangeLog 1956
+SHA256 3ae5556a15a3555e681628b56a7c8515766f2fbf389702ac275f5ef1ac171f0f ChangeLog 1956
+MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
+SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
+MD5 0331fafc4dc5acb770fde04fdca5dc62 files/digest-font-cronyx-cyrillic-1.0.0 79
+RMD160 c0d1aad49322b73353784a8b72fe43965773ec5b files/digest-font-cronyx-cyrillic-1.0.0 79
+SHA256 ec6ea14736b5981ee7427b79d18060fb845c2cba7dfcedcca8b8309f0254d411 files/digest-font-cronyx-cyrillic-1.0.0 79

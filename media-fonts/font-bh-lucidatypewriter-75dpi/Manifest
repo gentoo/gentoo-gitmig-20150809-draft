@@ -1,4 +1,16 @@
-MD5 ccb37307fd20ecd4505fee4d06bedab5 ChangeLog 2202
-MD5 1266b1e8cc9f3cab042a7f80a53e7d8b files/digest-font-bh-lucidatypewriter-75dpi-1.0.0 89
-MD5 f86def35eb47875836c7dd475cbad059 font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 603
+DIST font-bh-lucidatypewriter-75dpi-1.0.0.tar.bz2 153177
+EBUILD font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 622 RMD160 1b5f9ccf57fb67192da17100104351826daabcc5 SHA1 4826a51e2dd9a96830656f9b8773b141697cdccb SHA256 06ec6bb9a028795cd863a6b5e244fca350bbf6d19a97d092f157334802c8ff66
+MD5 2e03e40f530a4d34af8e805c4fb74b01 font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 622
+RMD160 1b5f9ccf57fb67192da17100104351826daabcc5 font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 622
+SHA256 06ec6bb9a028795cd863a6b5e244fca350bbf6d19a97d092f157334802c8ff66 font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 622
+MISC ChangeLog 2356 RMD160 8fb22e1ddf03d1177d40875279758c2cb9122b87 SHA1 c375fb111a1888746335d9bafe7bc0d9a5eaf668 SHA256 58baf8a63142a80099f3bc754c6bd41a1f94d4ee36c6228c93740a9fa9a80eb3
+MD5 e5a138b1845fadbb7bf8999404f8fc68 ChangeLog 2356
+RMD160 8fb22e1ddf03d1177d40875279758c2cb9122b87 ChangeLog 2356
+SHA256 58baf8a63142a80099f3bc754c6bd41a1f94d4ee36c6228c93740a9fa9a80eb3 ChangeLog 2356
+MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
+SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
+MD5 1266b1e8cc9f3cab042a7f80a53e7d8b files/digest-font-bh-lucidatypewriter-75dpi-1.0.0 89
+RMD160 fe393b668c2d0fea4e08dfb3b93e14083ca91107 files/digest-font-bh-lucidatypewriter-75dpi-1.0.0 89
+SHA256 d0d560c75b53a4508850322c4e1ac216debc5ba18a306dab7d9ca4b1ff7a41c6 files/digest-font-bh-lucidatypewriter-75dpi-1.0.0 89
