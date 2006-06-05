@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.27 2006/03/05 20:41:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.28 2006/06/05 16:41:08 pva Exp $
+
+*iftop-0.17 (05 Jun 2006)
+
+  05 Jun 2006; Peter Volkov <pva@gentoo.org> +iftop-0.17.ebuild:
+  Version bump.
 
   05 Mar 2006; Markus Ullmann <jokey@gentoo.org> iftop-0.16.ebuild:
   COPYING cleanup
