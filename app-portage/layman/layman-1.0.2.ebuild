@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.0.1.ebuild,v 1.1 2006/06/05 06:36:32 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.0.2.ebuild,v 1.1 2006/06/05 07:56:33 wrobel Exp $
 
 inherit eutils distutils
 
@@ -10,11 +10,12 @@ SRC_URI="http://dev.gentoo.org/~wrobel/layman/${PF}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86"
-IUSE=""
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+IUSE="git"
 S=${WORKDIR}/${PF}
 
-DEPEND="dev-util/subversion"
+DEPEND="dev-util/subversion
+git? dev-util/git"
 
 src_install() {
 
@@ -41,25 +42,25 @@ src_test() {
 pkg_postinst() {
 	einfo "If you emerged layman for the first time, you should update your local list"
 	einfo "of available overlays first. Run "
-	echo
+	einfo
 	einfo "layman -f"
-	echo
+	einfo
 	einfo "in order to do that."
-	echo
+	einfo
 	einfo "You are then ready to add overlays into your system."
-	echo
+	einfo
 	einfo "layman -L"
-	echo
+	einfo
 	einfo "will display a list of available overlays."
-	echo
+	einfo
 	einfo "Select one and add it using"
-	echo
+	einfo
 	einfo "layman -a overlay-name"
-	echo
+	einfo
 	einfo "If this is the very first overlay you add with layman, you need to append"
 	einfo "the following statement to your /etc/make.conf file:"
-	echo
+	einfo
 	einfo "source /usr/portage/local/layman/make.conf"
-	echo
+	einfo
 	epause 5
 }
