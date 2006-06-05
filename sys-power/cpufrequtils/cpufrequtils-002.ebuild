@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-002.ebuild,v 1.1 2006/06/01 12:02:01 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-002.ebuild,v 1.2 2006/06/05 08:56:59 brix Exp $
 
-inherit toolchain-funcs multilib
+inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="Userspace utilities for the Linux kernel cpufreq subsystem"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html"
@@ -14,6 +14,13 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 IUSE="debug nls"
 DEPEND="sys-fs/sysfsutils"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-parallel-make.patch
+}
 
 src_compile() {
 	local debug=false nls=false
