@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/icc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.31 2005/12/16 11:08:55 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.32 2006/06/05 18:04:10 spyderous Exp $
+
+*icc-9.0.030 (05 Jun 2006)
+
+  05 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/9.0.030/05icc-ifc, +files/9.0.030/icc, +files/9.0.030/icpc,
+  +icc-9.0.030.ebuild:
+  New public version.
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> icc-9.0.023.ebuild:
   Remove GNUish cp -a call. Bug #103487.
