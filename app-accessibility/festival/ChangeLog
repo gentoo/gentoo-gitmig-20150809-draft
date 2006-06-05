@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.38 2006/05/16 05:16:47 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.39 2006/06/05 08:14:12 eradicator Exp $
+
+  05 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-1.4.3-r4.ebuild:
+  Stable amd64 and sparc.
 
 *festival-1.95_beta (16 May 2006)
 
