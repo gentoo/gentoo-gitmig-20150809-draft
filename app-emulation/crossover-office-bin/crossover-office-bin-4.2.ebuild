@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/crossover-office-bin-4.2.ebuild,v 1.7 2006/01/29 05:41:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/crossover-office-bin-4.2.ebuild,v 1.8 2006/06/05 16:15:11 vapier Exp $
 
 inherit eutils
 
@@ -44,4 +44,9 @@ src_install() {
 	rm -r "${D}"/opt/cxoffice/setup.{sh,data}
 	insinto /opt/cxoffice/etc
 	doins support/templates/cxoffice.conf
+}
+
+pkg_postinst() {
+	einfo "Run /opt/cxoffice/bin/cxsetup as normal user to create"
+	einfo "bottles and install Windows applications."
 }
