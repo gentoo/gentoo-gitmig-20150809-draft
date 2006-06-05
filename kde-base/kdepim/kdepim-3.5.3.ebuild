@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.3.ebuild,v 1.1 2006/06/02 20:14:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.3.ebuild,v 1.2 2006/06/05 10:47:40 gmsoft Exp $
 
 inherit kde-dist
 
@@ -17,7 +17,7 @@ DEPEND="~kde-base/kdebase-${PV}
 		 <app-crypt/gnupg-1.9 )"
 	# We use GnuPG 1.4.x for OpenPGP and 1.9 (via gpgme) for s/mime as upstream advises.
 RDEPEND="${DEPEND}
-	crypt? ( !hppa? ( ( app-crypt/pinentry ) ) )"
+	crypt? ( app-crypt/pinentry )"
 
 PATCHES="${FILESDIR}/akregator-3.5-hppa.patch"
 
