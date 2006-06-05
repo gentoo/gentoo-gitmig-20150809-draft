@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.2.ebuild,v 1.1 2006/06/05 07:08:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.2.ebuild,v 1.2 2006/06/05 07:24:01 eradicator Exp $
 
 inherit eutils autotools webapp ssl-cert toolchain-funcs java-pkg versionator depend.apache
 
@@ -511,7 +511,7 @@ pkg_postinst() {
 
 	ewarn "If you upgrade from a version prior 0.8.1.5 you should execute the following command:"
 	ewarn "psql -U ${OX_DBUSER} ${OX_DBNAME} < ${ROOT}usr/share/open-xchange/ox_reminder.sql"
-	
+
 	ewarn "If you upgrade from a version prior 0.8.1.6 you should execute the following command:"
 	ewarn "psql -U ${OX_DBUSER} ${OX_DBNAME} < ${ROOT}usr/share/open-xchange/ox_project.sql"
 
@@ -591,7 +591,7 @@ pkg_config() {
 	if [[ ${OX_DB} == postgres ]]; then
 		einfo "HOWTO: Setup PostgreSQL database (following commands)"
 		einfo "++++++++++++++++++++++++++++++++++++++++++"
-	
+
 		einfo "echo \"CREATE USER ${OX_DBUSER} WITH PASSWORD '${OX_DBPASS}' CREATEDB NOCREATEUSER\" | psql -h localhost -U postgres template1 -f -"
 		einfo "echo \"CREATE DATABASE ${OX_DBNAME} WITH OWNER=${OX_DBUSER} ENCODING='UNICODE'\" | psql -h localhost -U postgres template1 -f -"
 		einfo "psql -U ${OX_DBUSER} ${OX_DBNAME} < ${ROOT}usr/share/open-xchange/init_database.sql"
@@ -599,7 +599,7 @@ pkg_config() {
 	else
 		einfo "HOWTO: Setup MySQL database (following commands)"
 		einfo "++++++++++++++++++++++++++++++++++++++++++"
-	
+
 		einfo "mysql < /usr/share/open-xchange/create_mysql_database.sql"
 		einfo "mysql -u ${OX_DBUSER} --password=${OX_DBPASS} ${OX_DBNAME} < /usr/share/open-xchange/init_mysql_database.sql"
 		einfo "/usr/sbin/dbinit_ox"
