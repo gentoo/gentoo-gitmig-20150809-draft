@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.0-r1.ebuild,v 1.1 2006/03/27 01:27:51 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.0-r1.ebuild,v 1.2 2006/06/05 17:44:32 pva Exp $
 
-inherit flag-o-matic autotools
+inherit eutils flag-o-matic autotools
 
 MY_P=${P/_rc/-rc}
 S=${WORKDIR}/${MY_P}

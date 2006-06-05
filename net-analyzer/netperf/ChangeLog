@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netperf
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.28 2006/03/27 01:27:51 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.29 2006/06/05 17:44:32 pva Exp $
+
+  05 Jun 2006; Peter Volkov <pva@gentoo.org> netperf-2.4.0-r1.ebuild:
+  Fixed eutils inheritance as we use epatch.
 
 *netperf-2.4.0-r1 (27 Mar 2006)
 
