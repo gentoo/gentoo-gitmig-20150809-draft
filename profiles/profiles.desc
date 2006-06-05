@@ -17,7 +17,8 @@ amd64		default-linux/amd64/2006.0			stable
 amd64		default-linux/amd64/2006.0/no-symlinks		dev
 amd64		default-linux/amd64/2006.0/no-multilib		stable
 # I have commented this profile for the following reason:
-# <blubb> it doesn't work with a normal stage tarball and will break within 5 minutes for sure
+# <blubb> it doesn't work with a normal stage tarball and will break within 5
+# minutes for sure
 #amd64		default-linux/amd64/2006.0/32bit-userland	dev
 
 # ARM Profiles
