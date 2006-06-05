@@ -1,6 +1,6 @@
 # ChangeLog for media-fonts/arphicfonts
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.24 2006/06/04 02:09:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.25 2006/06/05 19:53:19 tove Exp $
 
 *arphicfonts-0.1.20060513 (04 Jun 2006)
 
@@ -8,7 +8,7 @@
   +arphicfonts-0.1.20060513.ebuild:
   Added CJKUnifonts.
 
-  02 Apr 2006; Diego Petten嘆 <flameeyes@gentoo.org>
+  02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   arphicfonts-0.1-r2.ebuild:
   Add ~x86-fbsd keyword.
 
