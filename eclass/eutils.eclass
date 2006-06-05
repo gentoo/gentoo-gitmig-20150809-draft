@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.237 2006/06/04 15:18:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.238 2006/06/05 18:03:19 tupone Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -767,9 +767,9 @@ edos2unix() {
 # Great for making those icons in kde/gnome startmenu !
 # Amaze your friends !  Get the women !  Join today !
 #
-# make_desktop_entry(<binary>, [name], [icon], [type], [path])
+# make_desktop_entry(<command>, [name], [icon], [type], [path])
 #
-# binary:	what binary does the app run with ?
+# binary:	what command does the app run with ?
 # name:		the name that will show up in the menu
 # icon:		give your little like a pretty little icon ...
 #			this can be relative (to /usr/share/pixmaps) or
@@ -900,7 +900,7 @@ Name=${name}
 Type=Application
 Comment=${DESCRIPTION}
 Exec=${exec}
-TryExec=${exec}
+TryExec=${exec%% *}
 Path=${path}
 Icon=${icon}
 Categories=Application;${type};" > "${desktop}"
