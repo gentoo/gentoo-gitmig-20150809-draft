@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.3-r2.ebuild,v 1.2 2006/06/01 23:35:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.3-r2.ebuild,v 1.3 2006/06/05 15:16:03 chutzpah Exp $
 
-inherit autotools linux-info eutils flag-o-matic
+inherit autotools linux-info eutils flag-o-matic multilib
 
 DESCRIPTION="Tool to setup encrypted devices with dm-crypt"
 HOMEPAGE="http://luks.endorphin.org/"
@@ -63,12 +63,12 @@ src_compile() {
 		ewarn "If you need cryptsetup for an initrd or initramfs then you"
 		ewarn "should NOT use the dynamic USE flag"
 		epause 5
-		econf --sbindir=/bin --disable-static "${PIC_FLAG}" \
+		econf --sbindir=/bin --disable-static --libdir=/usr/$(get_libdir) "${PIC_FLAG}" \
 		$(use_enable nls) \
 		$(use_enable selinux) \
 		|| die
 	else
-		econf --sbindir=/bin --enable-static "${PIC_FLAG}" \
+		econf --sbindir=/bin --enable-static --libdir=/usr/$(get_libdir) "${PIC_FLAG}" \
 		$(use_enable nls) \
 		$(use_enable selinux) \
 		|| die
@@ -79,7 +79,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"
-	rmdir "${D}/usr/lib/cryptsetup"
+	rmdir "${D}/usr/$(get_libdir)/cryptsetup"
 	insinto /lib/rcscripts/addons
 	newconfd ${FILESDIR}/cryptfs.confd cryptfs
 	doins "${FILESDIR}"/dm-crypt-{start,stop}.sh
