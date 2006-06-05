@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/shelx
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/ChangeLog,v 1.1 2006/06/05 09:01:43 spyderous Exp $
+
+*shelx-20060317 (05 Jun 2006)
+
+  05 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/20060317-autotool.patch, +metadata.xml, +shelx-20060317.ebuild:
+  New program for X-ray crystallographic structure determination.
+
