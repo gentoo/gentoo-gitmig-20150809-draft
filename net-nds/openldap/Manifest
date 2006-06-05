@@ -1,4 +1,4 @@
-MD5 3ab08a902ee8cf6a7326ab26efa8207d ChangeLog 33650
+MD5 11cbe81df3676e566e825c873227cd6a ChangeLog 33768
 MD5 1a7084c17a74e59db33578c0833e4099 files/2.0/slapd 584
 MD5 b672311fca605c398240cd37a2ae080a files/2.0/slapd.conf 436
 MD5 d68ba97d9f54b8455c1e2d93c352d24a files/2.0/slurpd 495
@@ -50,5 +50,5 @@ MD5 e93204fdc9325e31a07f8c3a435f087b openldap-2.2.28-r4.ebuild 15039
 MD5 b153178085f6f9eedc149fc8f63fedf7 openldap-2.3.21-r1.ebuild 13339
 MD5 d5546d9d6f63b754dbf3f07a4871d041 openldap-2.3.21.ebuild 12948
 MD5 0d37122fbd8c111bbfd05cb74807e065 openldap-2.3.23.ebuild 14146
-MD5 9df77bf592cc1721759038bb8b22a50b openldap-2.3.24-r1.ebuild 14209
+MD5 9d268349a12d18ae61f985caed7709c2 openldap-2.3.24-r1.ebuild 14208
 MD5 ae4c50017d7970c68b08efb5a69e589a openldap-2.3.24-r2.ebuild 17306
