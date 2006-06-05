@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/yakuake
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.6 2006/06/02 09:37:58 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.7 2006/06/05 16:23:30 nixnut Exp $
+
+  05 Jun 2006; <nixnut@gentoo.org> ChangeLog:
+  Stable on ppc; bug #135142
 
   02 Jun 2006; Marcus D. Hanwell <cryos@gentoo.org> -yakuake-2.7.3.ebuild,
   yakuake-2.7.5.ebuild:
