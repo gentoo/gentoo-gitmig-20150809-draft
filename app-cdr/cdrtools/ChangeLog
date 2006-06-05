@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.141 2006/05/30 18:55:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.142 2006/06/05 22:13:46 pylon Exp $
+
+*cdrtools-2.01.01_alpha10 (05 Jun 2006)
+
+  05 Jun 2006; Lars Weiler <pylon@gentoo.org>
+  -cdrtools-2.01.01_alpha09.ebuild, +cdrtools-2.01.01_alpha10.ebuild:
+  Version bump. Contains upstream-workaround for kernel-issue with writing as
+  user.
 
   21 May 2006; Markus Rothe <corsair@gentoo.org>
   cdrtools-2.01.01_alpha01-r2.ebuild, cdrtools-2.01.01_alpha07.ebuild,
