@@ -1,0 +1,19 @@
+diff -ur xfce-utils-4.2.3/scripts/startxfce4.in xfce-utils-4.2.3-r1/scripts/startxfce4.in
+--- xfce-utils-4.2.3/scripts/startxfce4.in	2005-11-05 19:03:34.000000000 +0200
++++ xfce-utils-4.2.3-r1/scripts/startxfce4.in	2006-06-06 01:02:47.000000000 +0300
+@@ -36,12 +36,12 @@
+ fi
+ 
+ if [ -f $BASEDIR/xinitrc ]; then
+-  exec $prog $BASEDIR/xinitrc $*
++  exec $prog $BASEDIR/xinitrc -- -nolisten tcp$*
+ elif [ -f $HOME/.xfce4/xinitrc ]; then
+   mkdir -p $BASEDIR
+   cp $HOME/.xfce4/xinitrc $BASEDIR/
+-  exec $prog $BASEDIR/xinitrc $*
++  exec $prog $BASEDIR/xinitrc -- -nolisten tcp$*
+ else
+-  exec $prog @sysconfdir@/xdg/xfce4/xinitrc $*
++  exec $prog @sysconfdir@/xdg/xfce4/xinitrc -- -nolisten tcp$*
+ fi  
+ 

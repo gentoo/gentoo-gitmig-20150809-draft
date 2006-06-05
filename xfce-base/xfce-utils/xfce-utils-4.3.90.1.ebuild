@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.3.90.1.ebuild,v 1.2 2006/04/20 14:51:13 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.3.90.1.ebuild,v 1.3 2006/06/05 22:40:09 genstef Exp $
 
-inherit xfce44
+inherit eutils xfce44
 
 xfce44_beta
 
@@ -23,6 +23,12 @@ RDEPEND="|| ( x11-apps/xrdb
 XFCE_CONFIG="--enable-gdm --with-vendor-info=Gentoo"
 
 xfce44_core_package
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/nolisten-tcp.patch
+}
 
 src_install() {
 	make DESTDIR=${D} install || die
