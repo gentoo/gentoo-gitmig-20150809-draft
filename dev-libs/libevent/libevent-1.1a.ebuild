@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.1a.ebuild,v 1.9 2006/03/09 23:48:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.1a.ebuild,v 1.10 2006/06/05 20:40:17 flameeyes Exp $
+
+inherit libtool
 
 DESCRIPTION="A library to execute a function when a specific event occurs on a file descriptor"
 HOMEPAGE="http://monkey.org/~provos/libevent/"
@@ -21,6 +23,8 @@ src_unpack() {
 	# don't waste time building tests/samples
 	sed -i 's|^\(SUBDIRS =.*\)sample test\(.*\)$|\1\2|' Makefile.in || \
 		die "sed Makefile.in failed"
+
+	elibtoolize
 }
 
 src_test() {
