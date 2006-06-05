@@ -1,0 +1,292 @@
+Downloaded from http://wojci.dk/lirc-xbox/
+
+diff -d -r -u lirc-0.8.0pre4-orig/drivers/Makefile.kernel lirc-0.8.0pre4/drivers/Makefile.kernel
+--- lirc-0.8.0pre4-orig/drivers/Makefile.kernel	2004-01-19 21:04:09.000000000 +0100
++++ lirc-0.8.0pre4/drivers/Makefile.kernel	2006-01-22 14:44:25.000000000 +0100
+@@ -1,5 +1,5 @@
+ 
+-EXTRA_CFLAGS += $(LIRC_EXTRA_CFLAGS)
++EXTRA_CFLAGS += $(LIRC_EXTRA_CFLAGS) -DXBOX_SUPPORT=1
+ 
+ obj-m=$(module_DATA)
+ MI_OBJS      = $(module_DATA)
+diff -d -r -u lirc-0.8.0pre4-orig/drivers/lirc_atiusb/lirc_atiusb.c lirc-0.8.0pre4/drivers/lirc_atiusb/lirc_atiusb.c
+--- lirc-0.8.0pre4-orig/drivers/lirc_atiusb/lirc_atiusb.c	2005-10-29 16:18:53.000000000 +0200
++++ lirc-0.8.0pre4/drivers/lirc_atiusb/lirc_atiusb.c	2006-01-22 14:22:47.000000000 +0100
+@@ -62,11 +62,22 @@
+ #define DRIVER_VERSION		"0.5"
+ #define DRIVER_AUTHOR		"Paul Miller <pmiller9@users.sourceforge.net>"
+ #define DRIVER_DESC		"USB remote driver for LIRC"
+-#define DRIVER_NAME		"lirc_atiusb"
+ 
+-#define CODE_LENGTH		5
+-#define CODE_LENGTH_ATI2	3
+-#define CODE_MIN_LENGTH		3
++#ifdef XBOX_SUPPORT
++#  define DRIVER_NAME		"lirc_atiusb (xbox version)"
++#else
++#  define DRIVER_NAME		"lirc_atiusb"
++#endif // XBOX_SUPPORT
++
++#ifdef XBOX_SUPPORT
++#	define CODE_LENGTH		1 // length of code sent to lirc
++#	define CODE_MIN_LENGTH		1
++#	define USB_BUFLEN		6 // code received from xbox ir
++#else
++#	define CODE_LENGTH		5
++#	define CODE_LENGTH_ATI2	3
++#	define CODE_MIN_LENGTH		3
++#endif // XBOX_SUPPORT
+ 
+ #define RW2_MODENAV_KEYCODE	0x3F
+ #define RW2_NULL_MODE		0xFF
+@@ -79,11 +90,16 @@
+ #define RW2_RELEASE_CODE	0
+ 
+ /* module parameters */
++//#ifndef XBOX_SUPPORT
+ #ifdef CONFIG_USB_DEBUG
+ 	static int debug = 1;
+ #else
+ 	static int debug = 0;
+ #endif
++//#else
++//	static int debug = 1;
++//#endif // !XBOX_SUPPORT
++
+ #define dprintk(fmt, args...)                                 \
+ 	do{                                                   \
+ 		if(debug) printk(KERN_DEBUG fmt, ## args);    \
+@@ -120,8 +136,14 @@
+ 
+ #define VENDOR_ATI1		0x0bc7
+ #define VENDOR_ATI2		0x0471
++#define VENDOR_MS1		0x040b
++#define VENDOR_MS2		0x045e
+ 
+ static struct usb_device_id usb_remote_table [] = {
++#ifdef XBOX_SUPPORT
++	{ USB_DEVICE(VENDOR_MS1, 0x6521) }, /* Gamester Xbox DVD Movie Playback Kit IR */
++	{ USB_DEVICE(VENDOR_MS2, 0x0284) }, /* Microsoft Xbox DVD Movie Playback Kit IR */
++#else
+ 	{ USB_DEVICE(VENDOR_ATI1, 0x0002) },	/* X10 USB Firecracker Interface */
+ 	{ USB_DEVICE(VENDOR_ATI1, 0x0003) },	/* X10 VGA Video Sender */
+ 	{ USB_DEVICE(VENDOR_ATI1, 0x0004) },	/* ATI Wireless Remote Receiver */
+@@ -139,6 +161,7 @@
+ 
+ 	{ USB_DEVICE(VENDOR_ATI2, 0x0602) },	/* ATI Remote Wonder 2: Input Device */
+ 	{ USB_DEVICE(VENDOR_ATI2, 0x0603) },	/* ATI Remote Wonder 2: Controller (???) */
++#endif // XBOX_SUPPORT
+ 
+ 	{ }					/* Terminating entry */
+ };
+@@ -168,7 +191,13 @@
+ #endif
+ 
+ 	/* handle repeats */
++#if XBOX_SUPPORT
++	// Store the whole input and use 
++	// to compare when receiving new data.
++	unsigned char old[USB_BUFLEN];
++#else
+ 	unsigned char old[CODE_LENGTH];
++#endif // XBOX_SUPPORT
+ 	unsigned long old_jiffies;
+ };
+ 
+@@ -367,6 +396,26 @@
+ 	MOD_DEC_USE_COUNT;
+ }
+ 
++#ifdef XBOX_SUPPORT
++static void print_xbox_data(char* buf, int len)
++{
++	unsigned char *idata=buf;
++	if (len >= USB_BUFLEN)
++	{
++		dprintk(DRIVER_NAME ": received bytes %02x %02x %02x %02x %02x %02x\n",
++                idata[0],
++                idata[1],
++                idata[2],
++                idata[3],
++                idata[4],
++                idata[5]);
++	}
++	else
++	{
++		dprintk(DRIVER_NAME ": unrecognized, length=%d\n", len);
++	}
++}
++#else
+ static void print_data(struct in_endpt *iep, char *buf, int len)
+ {
+ 	char codes[CODE_LENGTH*3 + 1];
+@@ -381,7 +430,42 @@
+ 	printk(DRIVER_NAME "[%d]: data received %s (ep=0x%x length=%d)\n",
+ 		iep->ir->devnum, codes, iep->ep->bEndpointAddress, len);
+ }
++#endif // XBOX_SUPPORT
++
++#ifdef XBOX_SUPPORT
++static int code_check_xbox(struct in_endpt *iep, int len)
++{
++	int i;
++
++	if (len != USB_BUFLEN)
++	{
++		dprintk(DRIVER_NAME ": We didn't get 6 bytes from xbox ir.. ?\n");
++		return -1;
++	}
++
++	// Using USB_BUFLEN, as the original input is compared.
++
++       	/* check for repeats */
++	if (memcmp(iep->old, iep->buf, len) == 0) 
++	{
++		if (iep->old_jiffies + repeat_jiffies > jiffies) 
++		{
++			return -1;
++		}
++	} 
++	else 
++	{
++		for (i = len; i < USB_BUFLEN; i++) 
++		{
++			iep->buf[i] = 0;
++		}
++		memcpy(iep->old, iep->buf, USB_BUFLEN);
++        }
++	iep->old_jiffies = jiffies;
+ 
++	return SUCCESS;
++}
++#else
+ static int code_check_ati1(struct in_endpt *iep, int len)
+ {
+ 	struct irctl *ir = iep->ir;
+@@ -598,6 +682,7 @@
+ 	return SUCCESS;
+ }
+ 
++#endif // !XBOX_SUPPORT
+ 
+ #ifdef KERNEL_2_5
+ static void usb_remote_recv(struct urb *urb, struct pt_regs *regs)
+@@ -607,6 +692,9 @@
+ {
+ 	struct in_endpt *iep;
+ 	int len, result;
++#if XBOX_SUPPORT
++	char buf[CODE_LENGTH];
++#endif // XBOX_SUPPORT
+ 
+ 	if (!urb)
+ 		return;
+@@ -622,13 +710,37 @@
+ 
+ 	len = urb->actual_length;
+ 	if (debug)
++#ifdef XBOX_SUPPORT
++		print_xbox_data(urb->transfer_buffer, len);
++#else
+ 		print_data(iep,urb->transfer_buffer,len);
++#endif // XBOX_SUPPORT
+ 
+ 	switch (urb->status) {
+ 
+ 	/* success */
+ 	case SUCCESS:
++#ifdef XBOX_SUPPORT
++		{
++			if (len != USB_BUFLEN)
++			{
++				dprintk(DRIVER_NAME ": We didn't get 6 bytes from xbox ir.. ?\n");
++				return;
++			}
++
++			if (code_check_xbox(iep, len) == SUCCESS)
++			{
++				// the third byte of xbox ir packet seems to contain key info
++        	        	// the last two bytes are.. some kind of clock?
++	        	        buf[0]=((char*)urb->transfer_buffer)[2];
+ 
++				dprintk(DRIVER_NAME ": write to lirc buffer and wakeup\n");
++				lirc_buffer_write_1(iep->ir->p->rbuf, buf);
++				wake_up(&iep->ir->p->rbuf->wait_poll);
++			}
++		break;
++		}
++#else
+ 		switch (iep->ir->remote_type) {
+ 		case ATI2_COMPATIBLE:
+ 			result = code_check_ati2(iep, len);
+@@ -641,7 +753,7 @@
+ 		lirc_buffer_write_1(iep->ir->p->rbuf, iep->buf);
+ 		wake_up(&iep->ir->p->rbuf->wait_poll);
+ 		break;
+-
++#endif // XBOX_SUPPORT
+ 	/* unlink */
+ 	case -ECONNRESET:
+ 	case -ENOENT:
+@@ -759,9 +871,18 @@
+ 	pipe = usb_rcvintpipe(dev, addr);
+ 	maxp = usb_maxpacket(dev, pipe, usb_pipeout(pipe));
+ 
++#ifdef XBOX_SUPPORT
++	dprintk("maxp = %d\n", maxp);
++#endif // XBOX_SUPPORT 
++
+ //	len = (maxp > USB_BUFLEN) ? USB_BUFLEN : maxp;
+ //	len -= (len % CODE_LENGTH);
++
++#if XBOX_SUPPORT
++        len = USB_BUFLEN;
++#else
+ 	len = CODE_LENGTH;
++#endif // XBOX_SUPPORT
+ 
+ 	dprintk(DRIVER_NAME "[%d]: acceptable inbound endpoint (0x%x) found (maxp=%d len=%d)\n", ir->devnum, addr, maxp, len);
+ 
+@@ -940,12 +1061,19 @@
+ 
+ 	/* determine remote type */
+ 	switch (dev->descriptor.idVendor) {
++#ifdef XBOX_SUPPORT
++	case VENDOR_MS1:
++	case VENDOR_MS2:
++		type = ATI1_COMPATIBLE;
++		break;
++#else
+ 	case VENDOR_ATI1:
+ 		type = ATI1_COMPATIBLE;
+ 		break;
+ 	case VENDOR_ATI2:
+ 		type = ATI2_COMPATIBLE;
+ 		break;
++#endif // XBOX_SUPPORT
+ 	default:
+ 		dprintk(DRIVER_NAME "[%d]: unknown type\n", devnum);
+ 		return NULL;
+@@ -1140,9 +1268,10 @@
+ 
+ 		/* Note new driver registration in kernel logs */
+ 		log_usb_dev_info(dev);
+-
++//#ifndef XBOX_SUPPORT
+ 		/* outbound data (initialization) */
+ 		send_outbound_init(ir);
++//#endif // !XBOX_SUPPORT
+ 	}
+ 
+ #ifdef KERNEL_2_5
+@@ -1196,6 +1325,9 @@
+ 	printk("\n" DRIVER_NAME ": " DRIVER_DESC " v" DRIVER_VERSION "\n");
+ 	printk(DRIVER_NAME ": " DRIVER_AUTHOR "\n");
+ 	dprintk(DRIVER_NAME ": debug mode enabled: $Id: lirc_atiusb.c,v 1.51 2005/10/29 14:18:53 lirc Exp $\n");
++#ifdef XBOX_SUPPORT
++	dprintk(DRIVER_NAME ": XBOX support enabled..\n");
++#endif
+ 
+ 	request_module("lirc_dev");
+ 

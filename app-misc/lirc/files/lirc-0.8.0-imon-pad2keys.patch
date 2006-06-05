@@ -1,0 +1,216 @@
+Downloaded from http://www.brakemeier.de/
+
+diff -uBbwr lirc-0.8.0/drivers/lirc_imon/lirc_imon.c lirc-0.8.0-imon-pad2keys/drivers/lirc_imon/lirc_imon.c
+--- lirc-0.8.0/drivers/lirc_imon/lirc_imon.c	2005-12-03 16:18:07.000000000 +0100
++++ lirc-0.8.0-imon-pad2keys/drivers/lirc_imon/lirc_imon.c	2006-03-31 19:06:00.000000000 +0200
+@@ -65,10 +65,27 @@
+ #include "drivers/lirc_dev/lirc_dev.h"
+ 
+ 
++// imon pad2keys patch
++//
++// make PAD and mouse buttons available for use with VDR,
++// based on pad-mouse-emu patch from venky's forum
++//
++// M.Brakemeier 2006-03-31
++//
++// generated PAD key codes:
++// Mouse_N                  0x690281B7
++// Mouse_S                  0x688291B7
++// Mouse_W                  0x6A8281B7
++// Mouse_E                  0x688A81B7
++//
++// mouse buttons (non-synthetic):
++// MouseRightClick          0x688481B7
++// MouseLeftClick           0x688301B7
++
+ #define MOD_AUTHOR	"Venky Raju <dev@venky.ws>"
+-#define MOD_DESC	"Driver for Soundgraph iMON MultiMedian IR/VFD"
++#define MOD_DESC	"Driver for Soundgraph iMON MultiMedian IR/VFD w/imon pad2keys patch"
+ #define MOD_NAME	"lirc_imon"
+-#define MOD_VERSION	"0.3"
++#define MOD_VERSION	"0.3p2k"
+ 
+ #define VFD_MINOR_BASE	144	/* Same as LCD */
+ #define DEVFS_MODE	S_IFCHR | S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH
+@@ -83,6 +100,7 @@
+ #define	TRUE		1
+ #define FALSE		0
+ 
++#define CURSOR_LIMIT    16
+ 
+ /* ------------------------------------------------------------
+  *                     P R O T O T Y P E S
+@@ -161,6 +179,10 @@
+ 		atomic_t busy;		     /* write in progress         */
+ 		int status;		     /* status of tx completion   */
+ 	} tx;
++
++    int key_x;
++    int key_y;
++    int last_count;                      /* number of times pressed   */
+ };
+ 
+ #define LOCK_CONTEXT	down (&context ->sem)
+@@ -251,6 +273,7 @@
+ 
+ MODULE_AUTHOR (MOD_AUTHOR);
+ MODULE_DESCRIPTION (MOD_DESC);
++MODULE_VERSION(MOD_VERSION);    /* MBr: was missing */
+ MODULE_LICENSE ("GPL");
+ module_param (debug, int, 0);
+ MODULE_PARM_DESC (debug, "Debug messages: 0=no, 1=yes (default: no)");
+@@ -575,6 +598,11 @@
+ 	context ->rx.initial_space = 1;
+ 	context ->rx.prev_bit = 0;
+ 
++        /* init pad context */
++        context ->key_x = 0;
++        context ->key_y = 0;
++        context ->last_count = 0;
++
+ 	usb_fill_int_urb (context ->rx_urb, context ->dev,
+ 		usb_rcvintpipe (context ->dev,
+ 				context ->rx_endpoint-> bEndpointAddress),
+@@ -705,6 +733,76 @@
+ 
+ 		/* The signals have been decoded onboard the iMON controller */
+ 
++    	        /* encode mouse pad as key events */
++    	        /* we like pad events, not mouse button events*/
++    	        if((buf[0] & 0x40) &&
++                   !(buf[1] & 0x01 || buf[1] >> 2 & 0x01))
++                {
++                    int rel_x = (buf[1] & 0x08) | (buf[1] & 0x10) >> 2 | (buf[1] & 0x20) >> 4 | (buf[1] & 0x40) >> 6;
++                    int rel_y = (buf[2] & 0x08) | (buf[2] & 0x10) >> 2 | (buf[2] & 0x20) >> 4 | (buf[2] & 0x40) >> 6;
++
++                    if(buf[0] & 0x02)
++                        rel_x |= ~0x10+1;
++                    if(buf[0] & 0x01)
++                        rel_y |= ~0x10+1;
++
++                    /* keyboard direction key emulation */
++                    if( context->last_count > 32 )
++                    {  /* Hopefully eliminate drift*/
++                        context->last_count=0;
++                        context->key_y=0;
++                        context->key_x=0;
++                    }
++                    context->last_count++;
++
++                    /* limit decoded events */
++                    if(abs(context->key_x) > CURSOR_LIMIT || abs(context->key_y) > CURSOR_LIMIT )
++                    {
++                        if(abs(context->key_y ) > abs(context->key_x))
++                        { /* mouse s/n */
++                            if(context->key_y > 0 && rel_y > 0)
++                            { /* mouse s */
++                                buf[0] = 0x68;
++                                buf[1] = 0x82;
++                                buf[2] = 0x91;
++                            }
++                            else if(context->key_y < 0 && rel_y < 0)
++                            { /* mouse n */
++                                buf[0] = 0x69;
++                                buf[1] = 0x02;
++                                buf[2] = 0x81;
++                            }
++                        }
++                        else
++                        { /* mouse e/w*/
++                            if(context->key_x > 0 && rel_x > 0 )
++                            { /* mouse e */
++                                buf[0] = 0x68;
++                                buf[1] = 0x8A;
++                                buf[2] = 0x81;
++                            }
++                            else if(context->key_x < 0 && rel_x < 0  )
++                            { /* mouse w */
++                                buf[0] = 0x6A;
++                                buf[1] = 0x82;
++                                buf[2] = 0x81;
++                            }
++                        }
++                    }
++                    else
++                    {
++                        context->key_x += rel_x;
++                        context->key_y += rel_y;
++
++                        return; /* discard those key codes */
++                    }
++                }
++
++                /* a key was pressed, reset count */
++                context->key_x = 0;
++                context->key_y = 0;
++                context->last_count = 0;
++
+ 		lirc_buffer_write_1 (context ->plugin ->rbuf, buf);
+ 		wake_up (&context ->plugin ->rbuf ->wait_poll);
+ 		return;
+diff -uBbwr lirc-0.8.0/remotes/imon/lircd.conf.imon-pad lirc-0.8.0-imon-pad2keys/remotes/imon/lircd.conf.imon-pad
+--- lirc-0.8.0/remotes/imon/lircd.conf.imon-pad	2005-04-15 02:50:16.000000000 +0200
++++ lirc-0.8.0-imon-pad2keys/remotes/imon/lircd.conf.imon-pad	2006-03-31 19:04:09.000000000 +0200
+@@ -2,11 +2,11 @@
+ # by sending it to <lirc@bartelmus.de>
+ #
+ # this config file was automatically generated
+-# using lirc-0.7.1pre2(imon) on Tue Mar  1 23:15:44 2005
++# using lirc-0.8.0(imon_pad) on Mon Jan 23 20:22:11 2006
+ #
+-# contributed by Venky Raju
++# contributed by M.Brakemeier
+ #
+-# brand:                       iMON-New
++# brand:                       SoundGraph
+ # model no. of remote control: iMON-PAD
+ # devices being controlled by this remote:
+ #
+@@ -24,12 +24,12 @@
+   min_repeat      1
+   toggle_bit      0
+ 
+-
+       begin codes
+           AppExit                  0x288195B7
++        Power                    0x289115B7
+           Record                   0x298115B7
+           Play                     0x2A8115B7
+-          SlowMotion               0x29B195B7
++        Open                     0x29B1D5B7
+           Rewind                   0x2A8195B7
+           Pause                    0x2A9115B7
+           FastForward              0x2B8115B7
+@@ -59,15 +59,15 @@
+           0                        0x2BA595B7
+           ShiftTab                 0x28B515B7
+           Tab                      0x29A115B7
+-          MyMovie                  0x2B8515B7
+-          MyMusic                  0x299195B7
+-          MyPhoto                  0x2BA115B7
+-          MyTV                     0x28A515B7
++        Red                      0x2B8515B7 # MyMovie
++        Green                    0x299195B7 # MyMusic
++        Blue                     0x2BA115B7 # MyPhoto
++        Yellow                   0x28A515B7 # MyTV
+           Bookmark                 0x288515B7
+           Thumbnail                0x2AB715B7
+           AspectRatio              0x29A595B7
+           FullScreen               0x2AA395B7
+-          MyDVD                    0x29A295B7
++        Purple                   0x29A295B7 # MyDVD
+           Menu                     0x2BA385B7
+           Caption                  0x298595B7
+           Language                 0x2B8595B7
+@@ -79,6 +79,10 @@
+           MouseLeftClick           0x688301B7
+           WindowsKey               0x2B8195B7
+           Backspace                0x28A115B7
++        Mouse_N                  0x690281B7
++        Mouse_S                  0x688291B7
++        Mouse_W                  0x6A8281B7
++        Mouse_E                  0x688A81B7
+       end codes
+ 
+ end remote 

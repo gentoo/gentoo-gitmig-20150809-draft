@@ -1,6 +1,17 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.88 2006/05/31 18:52:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.89 2006/06/05 10:31:55 zzam Exp $
+
+*lirc-0.8.0-r1 (05 Jun 2006)
+
+  05 Jun 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/lirc-0.8.0-imon-pad2keys.patch,
+  +files/lirc-0.8.0pre4-xbox-remote.diff, +lirc-0.8.0-r1.ebuild:
+  Redesigned ebuild to use use-expanded variable LIRC_DEVICES instead of
+  LIRC_OPTS. Now uses /dev/lirc/0 per default as created by udev. Has proper
+  depends now (Bug #131306). Added support for xboxusb (Bug #135490). Added
+  imon_pad2keys driver. Removed ~ppc64 because of not keyworded
+  media-libs/libirman.
 
   31 May 2006; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.0.ebuild:
   Small corrections (sleep -> epause, added missing call to
