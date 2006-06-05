@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mod_xslt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/ChangeLog,v 1.20 2006/06/05 02:41:54 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/ChangeLog,v 1.21 2006/06/05 18:41:13 chtekk Exp $
+
+  05 Jun 2006; Luca Longinotti <chtekk@gentoo.org>
+  -files/mod-xslt-1.0.5a-debug.patch, -files/mod_xslt-1.0.5a-register.patch,
+  -files/mod_xslt-1.05a.patch, -files/1.0.5a-r1/25_mod_xslt.conf,
+  files/25_mod_xslt.conf, -files/mod-xslt-1.0.5a-content.patch,
+  metadata.xml, mod_xslt-2.0.4.ebuild:
+  Cleanup old files and fix bug #132117.
 
   05 Jun 2006; Michael Stewart <vericgar@gentoo.org>
   -mod_xslt-1.0.5a.ebuild, -mod_xslt-1.0.5a-r1.ebuild:
