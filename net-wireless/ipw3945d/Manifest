@@ -1,5 +1,5 @@
-MD5 9af89a1791109ec2cdd41966ddddac0e ChangeLog 500
+MD5 2e5e20bec91b08a8405711294b6eb096 ChangeLog 598
 MD5 1061e520ac43a427c47de7e712d70f05 files/digest-ipw3945d-1.7.18 63
 MD5 d7554e7f05ae1b034ce6b9629e8f40c8 files/ipw3945d-1.7.18-modprobe.conf 171
-MD5 135f2fc883609ebefd773ac4cc68c2ef ipw3945d-1.7.18.ebuild 945
+MD5 de7e5237ca6dc6332c4a49526ea8a856 ipw3945d-1.7.18.ebuild 944
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
