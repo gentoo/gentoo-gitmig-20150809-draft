@@ -1,0 +1,13 @@
+Index: banshee-0.10.10/entagged-sharp/Mp4/Mp4FileReader.cs
+===================================================================
+--- banshee-0.10.10.orig/entagged-sharp/Mp4/Mp4FileReader.cs
++++ banshee-0.10.10/entagged-sharp/Mp4/Mp4FileReader.cs
+@@ -34,6 +34,8 @@ using Entagged.Audioformats.Mp4.Util;
+ namespace Entagged.Audioformats.Mp4
+ {
+     [SupportedMimeType ("audio/x-m4a")]
++    [SupportedMimeType ("audio/mp4")]
++    [SupportedMimeType ("audio/m4a")]
+     [SupportedMimeType ("entagged/m4a")]
+     [SupportedMimeType ("entagged/m4p")]    
+     public class Mp4FileReader : AudioFileReader
