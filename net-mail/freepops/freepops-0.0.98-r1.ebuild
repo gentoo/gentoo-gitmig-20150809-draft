@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.0.98-r1.ebuild,v 1.1 2006/06/04 14:46:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.0.98-r1.ebuild,v 1.2 2006/06/05 08:31:02 dragonheart Exp $
 
 inherit eutils
 
@@ -29,7 +29,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-0.0.97-system-lua.patch"
-	epatch "${FILESDIR}/${P}-doc.patch"
 }
 
 src_compile() {
