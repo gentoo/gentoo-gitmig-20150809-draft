@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.1-r1.ebuild,v 1.3 2006/06/05 13:24:10 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.1-r1.ebuild,v 1.4 2006/06/05 21:08:18 chtekk Exp $
 
 inherit apache-module eutils
 
@@ -49,6 +49,7 @@ pkg_setup() {
 		ewarn "If you want to choose another mode, put mode-force OR mode-owner"
 		ewarn "into your USE flags and run emerge again."
 		ewarn
+		SUPHP_SETIDMODE=paranoid
 	fi
 
 	einfo
@@ -75,7 +76,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/suphp-apache22-compat.patch"
-	if has_version ">=dev-libs/apr-1.0.0"; then
+	if has_version ">=dev-libs/apr-1.0.0" ; then
 		sed -e "s|apr-config|apr-1-config|g" -i configure
 	fi
 }
