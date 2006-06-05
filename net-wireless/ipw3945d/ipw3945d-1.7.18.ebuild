@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ipw3945d-1.7.18.ebuild,v 1.1 2006/04/13 21:30:26 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ipw3945d-1.7.18.ebuild,v 1.2 2006/06/05 13:06:43 brix Exp $
 
 DESCRIPTION="Regulatory daemon for the Intel PRO/Wireless 3945ABG miniPCI express adapter"
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.bughost.org/ipw3945/daemon/${P}.tgz"
 
 LICENSE="ipw3945"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 DEPEND=""

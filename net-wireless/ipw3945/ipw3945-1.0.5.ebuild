@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.0.5.ebuild,v 1.1 2006/05/27 19:15:02 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.0.5.ebuild,v 1.2 2006/06/05 13:07:55 brix Exp $
 
 inherit linux-mod
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="debug"
 DEPEND=">=net-wireless/ieee80211-${IEEE80211_VERSION}
