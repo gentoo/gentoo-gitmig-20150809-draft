@@ -1,0 +1,12 @@
+diff -ur -x '*.o' -x '*.a' -x '*.class' -x tags -x '*.h' -x pdftk pdftk-1.12.orig/java_libs/com/lowagie/text/pdf/PdfReader.java pdftk-1.12/java_libs/com/lowagie/text/pdf/PdfReader.java
+--- pdftk-1.12.orig/java_libs/com/lowagie/text/pdf/PdfReader.java	2004-10-23 02:22:44.000000000 +0200
++++ pdftk-1.12/java_libs/com/lowagie/text/pdf/PdfReader.java	2006-03-28 21:15:37.000000000 +0200
+@@ -107,7 +107,7 @@
+     protected char pdfVersion;
+     protected PdfEncryption decrypt;
+     protected byte password[] = null; //added by ujihara for decryption
+-    protected boolean passwordIsOwner= false; // added by ssteward
++    protected boolean passwordIsOwner= true;
+     protected ArrayList strings = new ArrayList();
+     protected boolean sharedStreams = true;
+     protected boolean consolidateNamedDestinations = false;

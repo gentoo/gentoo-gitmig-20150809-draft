@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.12.ebuild,v 1.8 2006/03/19 23:11:42 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.12.ebuild,v 1.9 2006/06/05 22:16:06 genstef Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.pdfhacks.com/pdftk/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ppc"
-IUSE=""
+IUSE="nodrm"
 DEPEND="virtual/libc
 	>=sys-devel/gcc-3.3"
 S=${WORKDIR}/${P}/${PN}
@@ -31,6 +31,7 @@ src_unpack() {
 		< ${T}/Makefile.Generic.orig > ${S}/Makefile.Generic
 	# Fix gcc-4 compilation, bug #126735.
 	epatch "${FILESDIR}/${P}-gcc-4-compilation.patch" || die
+	use nodrm && epatch "${FILESDIR}"/${P}-user-pw.patch
 }
 
 src_compile() {
