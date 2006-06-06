@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.26.ebuild,v 1.11 2006/02/13 13:05:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.26.ebuild,v 1.12 2006/06/06 00:35:49 mcummings Exp $
 
 inherit perl-module
 
@@ -24,6 +24,7 @@ DEPEND="${DEPEND}
 	virtual/perl-File-Spec
 	>=dev-perl/Cache-Cache-1.01"
 
+RDEPEND="${DEPEND}"
 mydoc="CREDITS UPGRADE"
 
 src_install () {

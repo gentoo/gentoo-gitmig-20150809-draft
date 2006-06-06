@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/XML-DOM-1.39-r3.ebuild,v 1.9 2005/01/04 14:08:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/XML-DOM-1.39-r3.ebuild,v 1.10 2006/06/06 00:34:16 mcummings Exp $
 
 inherit perl-module
 
@@ -16,3 +16,5 @@ IUSE=""
 DEPEND="${DEPEND}
 	dev-perl/libxml-perl
 	dev-perl/XML-RegExp"
+
+RDEPEND="${DEPEND}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-1.42.ebuild,v 1.2 2006/02/13 11:00:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-1.42.ebuild,v 1.3 2006/06/06 00:37:59 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -17,6 +17,8 @@ DEPEND="virtual/perl-Test-Simple
 	>=virtual/perl-Test-Harness-2.03
 	>=dev-perl/DBI-1.35
 	>=dev-db/postgresql-7.3"
+
+RDEPEND="${DEPEND}"
 
 # env variables for compilation:
 export POSTGRES_INCLUDE=/usr/include/postgresql/pgsql
