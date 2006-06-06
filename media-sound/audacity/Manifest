@@ -1,61 +1,52 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a2b16ad1e9e04879706c97f97f3746c ChangeLog 7928
-RMD160 57b67b4387dfe5ed1ef9b6403abdc082492af67d ChangeLog 7928
-SHA256 6da3fdee7ea3fe2206b36bb39a9d1625ab97d48d51bf748d8901997320d7df89 ChangeLog 7928
-MD5 93c9059ec89a928748fbc4c6ff7ce950 audacity-1.2.1.ebuild 2263
-RMD160 6a76742c6d067e4f42cbd3ea8a24f52cfdf8a55e audacity-1.2.1.ebuild 2263
-SHA256 f93c97a76b5361e4ea3b8a21c3868cd3b0e57f12265047cc510a97f6fbcbb139 audacity-1.2.1.ebuild 2263
-MD5 2fa288b95d1713417e3342b869c83967 audacity-1.2.2.ebuild 2172
-RMD160 400e1e321563722d477630e774604b4d27deaa2d audacity-1.2.2.ebuild 2172
-SHA256 a53ea98bb0e575cc36f10d73e7e863d0f861be54bdf024b9ad894ccd2f87d3ff audacity-1.2.2.ebuild 2172
-MD5 2d7b8330e198f9fc6f5727f293b13d49 audacity-1.2.3-r1.ebuild 1926
-RMD160 a9eb3ee65937f55df42b006ecb4b3aef659590f2 audacity-1.2.3-r1.ebuild 1926
-SHA256 a8d3a9a1fb811455bb461e7969801c83567a12ec8c092c6189cf9594a6cff28d audacity-1.2.3-r1.ebuild 1926
-MD5 466b743fd1ead3cc85a21538f707d2aa audacity-1.2.3.ebuild 2175
-RMD160 51aa5e0400c9fcb04dc1b50b92c2d1efd8b17330 audacity-1.2.3.ebuild 2175
-SHA256 4a5bd7dc10e92a34f047eaca4b99b18199f48d89620dfc079b87bb7b7519932c audacity-1.2.3.ebuild 2175
-MD5 e70429c147ff7db0336207930a462b0c audacity-1.2.4b-r1.ebuild 1585
-RMD160 d8ae98f60b50ecee55c247a14d129f874d82bc6f audacity-1.2.4b-r1.ebuild 1585
-SHA256 f189a3bddff6dab768f1c7b18ad6134483b15e97f51fe96edcd7bd792a86eda3 audacity-1.2.4b-r1.ebuild 1585
-MD5 c7b795988ee39799680c03a81643908d audacity-1.2.4b.ebuild 2301
-RMD160 c5279675f1b96b778b2351346409ceb526569bfc audacity-1.2.4b.ebuild 2301
-SHA256 02189826a206be9da44342ff7e45be4361a2d7aeccb1801c2516d4ca2338b078 audacity-1.2.4b.ebuild 2301
+AUX audacity-1.2.3-gcc41.patch 650 RMD160 4fabdb072b9e4a6c9d908694cc2e7cea8e1ce16e SHA1 dd9f41c9f011a244062ea0c0c28188716f7165ca SHA256 c8acd7c59f69d6bf8fba8773e47cd6b3b4a4cbfbc510b0ac7aa2f3b88ea344fb
 MD5 8d8b48aa5931322a0a0a8ad826335c38 files/audacity-1.2.3-gcc41.patch 650
 RMD160 4fabdb072b9e4a6c9d908694cc2e7cea8e1ce16e files/audacity-1.2.3-gcc41.patch 650
 SHA256 c8acd7c59f69d6bf8fba8773e47cd6b3b4a4cbfbc510b0ac7aa2f3b88ea344fb files/audacity-1.2.3-gcc41.patch 650
+AUX audacity-1.2.3-x86.patch 995 RMD160 2b78053f34ed3ee2cd0e0a8e4be581dfb3c47652 SHA1 3d711eaca9d8d45732e00eb49c33e2375eb3cf01 SHA256 858c60a82be1a533e1f1799f34033f7a32b991ad12f76a5850631a5591c889b9
 MD5 502eabf8993eb2af91e1265425024091 files/audacity-1.2.3-x86.patch 995
 RMD160 2b78053f34ed3ee2cd0e0a8e4be581dfb3c47652 files/audacity-1.2.3-x86.patch 995
 SHA256 858c60a82be1a533e1f1799f34033f7a32b991ad12f76a5850631a5591c889b9 files/audacity-1.2.3-x86.patch 995
+AUX audacity.desktop 155 RMD160 7b9c9ba3ece67e05b559aa4084acb2f8ef460fc6 SHA1 4bbfb063c543da30faa5918db08e50e48723d199 SHA256 bdb6be282827d7a5995fb53529978233411c611b4eebbc24fe6ec0a6a6834b5a
 MD5 8332a9c72a43ed19ab1904a935a25e03 files/audacity.desktop 155
 RMD160 7b9c9ba3ece67e05b559aa4084acb2f8ef460fc6 files/audacity.desktop 155
 SHA256 bdb6be282827d7a5995fb53529978233411c611b4eebbc24fe6ec0a6a6834b5a files/audacity.desktop 155
-MD5 8f1e5073472cee2da1987db62e7db3a9 files/digest-audacity-1.2.1 72
-RMD160 c06dcb4355a0531458247c8f5c87784b5f60f5c0 files/digest-audacity-1.2.1 72
-SHA256 9eab83781c400cac50b16183982a7ef17a110f39d0bae88138bac3f8e722cdaa files/digest-audacity-1.2.1 72
-MD5 a150eb16468631b07901c6ca01451679 files/digest-audacity-1.2.2 71
-RMD160 e73f9df2e401c9c443a2d12a5e1c0c6ca6cae47f files/digest-audacity-1.2.2 71
-SHA256 d0622c81f8416711b1346ebbadcc5030a1d64bec592ceb0c77411529e82da613 files/digest-audacity-1.2.2 71
-MD5 bf35b35e84d0c0be6fa8e87acf085294 files/digest-audacity-1.2.3 71
-RMD160 447743dd8bc035a958e8eb6813d5b3851c1e57c2 files/digest-audacity-1.2.3 71
-SHA256 6ba40a320564d094975a753f8ecbbbeada91ee65ef92e1ca925ca1bad17b75a5 files/digest-audacity-1.2.3 71
-MD5 bf35b35e84d0c0be6fa8e87acf085294 files/digest-audacity-1.2.3-r1 71
-RMD160 447743dd8bc035a958e8eb6813d5b3851c1e57c2 files/digest-audacity-1.2.3-r1 71
-SHA256 6ba40a320564d094975a753f8ecbbbeada91ee65ef92e1ca925ca1bad17b75a5 files/digest-audacity-1.2.3-r1 71
-MD5 66713de531f00118315348503d7c52c1 files/digest-audacity-1.2.4b 72
-RMD160 dbdeac373da544e5c81118cba49bbca5c2a2c385 files/digest-audacity-1.2.4b 72
-SHA256 2faaff63f65817cb1173dfdedfc53f9f4e05c3b9b8e1a22094d413d11e50e32d files/digest-audacity-1.2.4b 72
-MD5 66713de531f00118315348503d7c52c1 files/digest-audacity-1.2.4b-r1 72
-RMD160 dbdeac373da544e5c81118cba49bbca5c2a2c385 files/digest-audacity-1.2.4b-r1 72
-SHA256 2faaff63f65817cb1173dfdedfc53f9f4e05c3b9b8e1a22094d413d11e50e32d files/digest-audacity-1.2.4b-r1 72
+DIST audacity-src-1.2.1.tar.bz2 2742327
+DIST audacity-src-1.2.3.tar.gz 4175943
+DIST audacity-src-1.2.4b.tar.gz 4499894 RMD160 4c6609b200a86ff081ecaa1789525404031563d6 SHA1 cc159cbda4647af91460a1785db2bfa6a1ab9760 SHA256 7c6f53ceffc10fbff96cc3fdf2a2b61072ed8b527d4f7313b3216390907de113
+DIST audacity-src-1.3.0b.tar.gz 4938302 RMD160 4ada2e40799f60477d6c2aabb0b91bb03c8882f9 SHA1 6ba57ee1a3a9b6c57bf98142fbe4561b7cadf5db SHA256 cff02da856622acbca7b6ce9e0c05ad0cabc0c10fc5f79e349d2e586176e49f9
+EBUILD audacity-1.2.1.ebuild 2263 RMD160 6a76742c6d067e4f42cbd3ea8a24f52cfdf8a55e SHA1 2eede53289c766507984526435f9107e442f326a SHA256 f93c97a76b5361e4ea3b8a21c3868cd3b0e57f12265047cc510a97f6fbcbb139
+MD5 93c9059ec89a928748fbc4c6ff7ce950 audacity-1.2.1.ebuild 2263
+RMD160 6a76742c6d067e4f42cbd3ea8a24f52cfdf8a55e audacity-1.2.1.ebuild 2263
+SHA256 f93c97a76b5361e4ea3b8a21c3868cd3b0e57f12265047cc510a97f6fbcbb139 audacity-1.2.1.ebuild 2263
+EBUILD audacity-1.2.3.ebuild 2175 RMD160 51aa5e0400c9fcb04dc1b50b92c2d1efd8b17330 SHA1 a7aad717f3b17d287ab62fcbd277b308f861dd2a SHA256 4a5bd7dc10e92a34f047eaca4b99b18199f48d89620dfc079b87bb7b7519932c
+MD5 466b743fd1ead3cc85a21538f707d2aa audacity-1.2.3.ebuild 2175
+RMD160 51aa5e0400c9fcb04dc1b50b92c2d1efd8b17330 audacity-1.2.3.ebuild 2175
+SHA256 4a5bd7dc10e92a34f047eaca4b99b18199f48d89620dfc079b87bb7b7519932c audacity-1.2.3.ebuild 2175
+EBUILD audacity-1.2.4b-r1.ebuild 1585 RMD160 d8ae98f60b50ecee55c247a14d129f874d82bc6f SHA1 7e7988f1ffcd68638daad94a06ee49d8e4ad11ab SHA256 f189a3bddff6dab768f1c7b18ad6134483b15e97f51fe96edcd7bd792a86eda3
+MD5 e70429c147ff7db0336207930a462b0c audacity-1.2.4b-r1.ebuild 1585
+RMD160 d8ae98f60b50ecee55c247a14d129f874d82bc6f audacity-1.2.4b-r1.ebuild 1585
+SHA256 f189a3bddff6dab768f1c7b18ad6134483b15e97f51fe96edcd7bd792a86eda3 audacity-1.2.4b-r1.ebuild 1585
+EBUILD audacity-1.3.0b.ebuild 1508 RMD160 731cfc41e144d0ab8104f5394c7cf80c1647baf8 SHA1 f960394d843d1c2f29faaf8c832ca31a44c14d4b SHA256 cf5353f2572d75495d3f4572489b0d79f1e449b25d8c5ecaba9fc4da7c92a6dd
+MD5 7cf6d14fc780525b574cac56be2bf6e3 audacity-1.3.0b.ebuild 1508
+RMD160 731cfc41e144d0ab8104f5394c7cf80c1647baf8 audacity-1.3.0b.ebuild 1508
+SHA256 cf5353f2572d75495d3f4572489b0d79f1e449b25d8c5ecaba9fc4da7c92a6dd audacity-1.3.0b.ebuild 1508
+MISC ChangeLog 8144 RMD160 5c7d9381afee892040f7c1b94f1f1d21f7c833c2 SHA1 b4505c097e3988a4ba4a079af79a255fb6038e25 SHA256 6430af829f527b070af2f3ceb1f2578a0427a53cb9bc25628f937cb9149dcb06
+MD5 f84d31415bcee7eecfe469c76f72d335 ChangeLog 8144
+RMD160 5c7d9381afee892040f7c1b94f1f1d21f7c833c2 ChangeLog 8144
+SHA256 6430af829f527b070af2f3ceb1f2578a0427a53cb9bc25628f937cb9149dcb06 ChangeLog 8144
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDyhuV3J2n04EauwRAh44AKDVkxlFY27p8VDEBKBcTzKtUo2hAwCfSC6P
-BE6AaD3jBpaUtoz9SsjROAo=
-=yxrD
------END PGP SIGNATURE-----
+MD5 8f1e5073472cee2da1987db62e7db3a9 files/digest-audacity-1.2.1 72
+RMD160 c06dcb4355a0531458247c8f5c87784b5f60f5c0 files/digest-audacity-1.2.1 72
+SHA256 9eab83781c400cac50b16183982a7ef17a110f39d0bae88138bac3f8e722cdaa files/digest-audacity-1.2.1 72
+MD5 bf35b35e84d0c0be6fa8e87acf085294 files/digest-audacity-1.2.3 71
+RMD160 447743dd8bc035a958e8eb6813d5b3851c1e57c2 files/digest-audacity-1.2.3 71
+SHA256 6ba40a320564d094975a753f8ecbbbeada91ee65ef92e1ca925ca1bad17b75a5 files/digest-audacity-1.2.3 71
+MD5 4200ff5195300f61f256370299c1b52a files/digest-audacity-1.2.4b-r1 262
+RMD160 258cf7ca06b6a8c052e4c51c6a98fe72520f0087 files/digest-audacity-1.2.4b-r1 262
+SHA256 db7f49eddca3d4c1c19248124eb9c64c4a97cdf8a3b8a760dee13e64fb3cf303 files/digest-audacity-1.2.4b-r1 262
+MD5 a0e48e967a9c450f62afb1d8e879d7e1 files/digest-audacity-1.3.0b 262
+RMD160 ac06a2a7424a43ec4eb978934ed239787bbf051b files/digest-audacity-1.3.0b 262
+SHA256 6b57e9e5b74084d73ba901bf32af44a0e9b4bf4eb1da81905f1f7ae523d91e27 files/digest-audacity-1.3.0b 262
