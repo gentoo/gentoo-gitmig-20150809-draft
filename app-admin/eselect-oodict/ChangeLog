@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-oodict
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.3 2006/06/04 10:26:05 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.4 2006/06/06 18:14:14 slarti Exp $
+
+  06 Jun 2006; Tom Martin <slarti@gentoo.org>
+  eselect-oodict-20060603.ebuild:
+  Marked ~amd64 for bug #135520.
 
   04 Jun 2006; Kevin F. Quinn <kevquinn@gentoo.org>
   -files/oodict.eselect-20060601, -eselect-oodict-20060601.ebuild,
