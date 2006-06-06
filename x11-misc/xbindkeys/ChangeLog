@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xbindkeys
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.29 2005/12/18 12:52:00 nelchael Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.30 2006/06/06 21:14:41 nelchael Exp $
+
+  06 Jun 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  xbindkeys-1.7.2-r1.ebuild:
+  Stable on x86.
 
 *xbindkeys-1.7.2-r1 (18 Dec 2005)
 
