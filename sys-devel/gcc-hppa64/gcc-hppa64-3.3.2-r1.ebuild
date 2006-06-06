@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/gcc-hppa64-3.3.2-r1.ebuild,v 1.4 2004/07/15 03:23:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/gcc-hppa64-3.3.2-r1.ebuild,v 1.5 2006/06/06 01:28:21 eradicator Exp $
 
 inherit eutils
 
@@ -24,10 +24,10 @@ IUSE="build"
 DEPEND="virtual/libc
 	>=sys-devel/binutils-hppa64-2.14.90.0.7
 	>=sys-devel/binutils-2.14.90.0.7
-	>=sys-devel/gcc-config-1.3.1"
+	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )"
 
 RDEPEND="virtual/libc
-	>=sys-devel/gcc-config-1.3.1
+	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
