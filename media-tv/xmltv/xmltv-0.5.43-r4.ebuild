@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.43-r4.ebuild,v 1.1 2006/06/06 14:43:43 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.43-r4.ebuild,v 1.2 2006/06/06 17:38:03 mattepiu Exp $
 
 inherit eutils perl-module
 
@@ -162,7 +162,6 @@ make_config() {
 	use ee && echo "yes" || echo "no"
 	#Enable Reunion Island
 	use re && echo "yes" || echo "no"
-	i
 }
 
 src_unpack() {
