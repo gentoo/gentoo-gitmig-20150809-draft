@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.56.ebuild,v 1.2 2006/06/06 21:01:21 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.56.ebuild,v 1.3 2006/06/06 21:06:25 sekretarz Exp $
 
 MY_P=${P/-bin/}
 MY_P=${MY_P%.*}-${MY_P##*.}
@@ -9,7 +9,7 @@ DESCRIPTION="a powerful frontend for mldonkey"
 HOMEPAGE="http://sancho-gui.sourceforge.net/"
 SRC_URI="http://sancho-gui.sourceforge.net/dl/tmp94/${MY_P}-linux-gtk.tar.bz2"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="CPL-1.0 LGPL-2.1"
 
