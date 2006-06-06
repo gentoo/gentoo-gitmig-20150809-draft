@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.71 2006/06/02 20:13:01 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.72 2006/06/06 18:49:39 corsair Exp $
+
+  06 Jun 2006; Markus Rothe <corsair@gentoo.org> R-2.2.1.ebuild:
+  Stable on ppc64; bug #135318
 
   02 Jun 2006; Danny van Dyk <kugelfang@gentoo.org> R-2.1.1.ebuild,
   R-2.2.0-r1.ebuild, R-2.2.1.ebuild, R-2.3.0.ebuild, R-2.3.1.ebuild:
