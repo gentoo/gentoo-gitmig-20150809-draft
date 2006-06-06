@@ -6,4 +6,4 @@ MD5 ad0e358f60075a903529f7e8d4b64d3f files/suspend2-userui-0.6.3-skewed-text.pat
 MD5 914b309d095d1ba985ebb419a5fcabf8 files/suspend2-userui-0.6.4-remove-debug.patch 580
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 5f15373b602355b6db9a66247405c4f0 suspend2-userui-0.6.3-r1.ebuild 1642
-MD5 9a57feb65cc405f2363f0082c9aee986 suspend2-userui-0.6.4.ebuild 1596
+MD5 451b964a8d3b95567e5f888c53b1f6a8 suspend2-userui-0.6.4.ebuild 1597
