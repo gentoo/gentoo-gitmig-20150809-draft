@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5475 2006/06/05 22:15:55 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5476 2006/06/06 01:52:59 eradicator Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -850,11 +850,6 @@ dev-java/eclipse-jface
 # was released 1,5 year ago and it's CVS is empty. I'll remove it from
 # the tree soon
 net-p2p/dc-gui
-
-# Jeremy Huddleston <eradicator@gentoo.org> (24 Sep 2005)
-# Still in development
-app-admin/eselect-compiler
->=sys-devel/gcc-config-2.0.0_alpha1
 
 # Jeremy Huddleston <eradicator@gentoo.org> (24 Sep 2005)
 # Not quite ready for prime time...
