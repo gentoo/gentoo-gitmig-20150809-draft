@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycrash
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrash/ChangeLog,v 1.10 2006/04/01 15:18:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrash/ChangeLog,v 1.11 2006/06/06 22:26:26 carlo Exp $
+
+  06 Jun 2006; Carsten Lohrke <carlo@gentoo.org> pycrash-0.4_pre2.ebuild,
+  pycrash-0.4_pre3.ebuild:
+  Fix use of nonexistent versioned virtual/python.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pycrash-0.4_pre3.ebuild:
   Mark 0.4_pre3 ~ia64

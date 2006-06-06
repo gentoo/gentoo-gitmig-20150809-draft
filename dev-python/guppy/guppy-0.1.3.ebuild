@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/guppy-0.1.3.ebuild,v 1.3 2006/04/03 21:27:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/guppy-0.1.3.ebuild,v 1.4 2006/06/06 22:27:26 carlo Exp $
+
+NEED_PYTHON=2.3
 
 inherit distutils eutils
 
@@ -12,8 +14,6 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-
-DEPEND=">=virtual/python-2.3"
 
 DOCS="ANNOUNCE changelog"
 
