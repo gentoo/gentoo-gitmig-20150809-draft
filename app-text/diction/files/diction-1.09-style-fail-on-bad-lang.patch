@@ -1,0 +1,18 @@
+# Fix for problem spotted by Matthias Langer in bug #131637
+
+Index: diction-1.10/style.c
+===================================================================
+--- diction-1.10/style.c	{cset f20f6f20-d7da-4aa0-9160-88cf480ce937}
++++ diction-1.10/style.c	{local clone}
+@@ -911,6 +911,11 @@ int main(int argc, char *argv[]) /*{{{*/
+   }
+   /*}}}*/
+   newHit(&lengths);
++  if (strcmp(docLanguage,"de") && strcmp(docLanguage,"en"))
++  {
++    fprintf(stderr,_("style: Incorrect language option `%s'.\n"),docLanguage);
++    exit(1);
++  }
+   if (optind==argc) sentence("style",stdin,"(stdin)",style,docLanguage);
+   else while (optind<argc)
+   {
