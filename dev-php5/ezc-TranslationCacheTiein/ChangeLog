@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-TranslationCacheTiein
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-TranslationCacheTiein/ChangeLog,v 1.2 2006/05/30 11:16:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-TranslationCacheTiein/ChangeLog,v 1.3 2006/06/06 20:14:54 dertobi123 Exp $
+
+  06 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  ezc-TranslationCacheTiein-1.0.ebuild:
+  Added ~ppc, bug #134717
 
   30 May 2006; Markus Rothe <corsair@gentoo.org>
   ezc-TranslationCacheTiein-1.0.ebuild:
