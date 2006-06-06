@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/memtest86
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.26 2005/11/26 20:15:33 eradicator Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.27 2006/06/06 20:17:17 mr_bones_ Exp $
+
+  06 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org> memtest86-3.2.ebuild:
+  fixup RESTRICT; error check sed; less cat abuse
 
   26 Nov 2005; Jeremy Huddleston <eradicator@gentoo.org>
   memtest86-3.2.ebuild:

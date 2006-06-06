@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.2.ebuild,v 1.5 2005/11/26 20:15:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.2.ebuild,v 1.6 2006/06/06 20:17:17 mr_bones_ Exp $
 
 inherit mount-boot eutils flag-o-matic
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 x86"
 IUSE="serial"
-RESTRICT="maketest"
+RESTRICT="test"
 
 DEPEND="virtual/libc"
 
@@ -23,21 +23,25 @@ src_unpack() {
 	test_flag -fno-stack-protector && \
 		epatch "${FILESDIR}"/${P}-solar.patch #66630
 
-	sed -i -e '/DISCARD/d' memtest_shared.lds
-
-	use serial && \
 	sed -i \
-		-e '/^#define SERIAL_CONSOLE_DEFAULT/s:0:1:' \
-		config.h
+		-e '/DISCARD/d' memtest_shared.lds \
+		|| die "sed failed"
+
+	if use serial ; then
+		sed -i \
+			-e '/^#define SERIAL_CONSOLE_DEFAULT/s:0:1:' \
+			config.h \
+			|| die "sed failed"
+	fi
 }
 
 src_compile() {
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
 	insinto /boot/memtest86
-	doins memtest.bin || die
+	doins memtest.bin || die "doins failed"
 	dodoc README README.build-process
 }
 
@@ -52,11 +56,11 @@ pkg_postinst() {
 	# a little magic to make users' life as easy as possible ;)
 	bootpart=0
 	root="(hd0,0)"
-	res=`cat /etc/fstab | grep /boot | grep -v "^#" | awk '{print $1}' | grep '/dev/hd[a-z0-9]\+'`
+	res=`grep /boot /etc/fstab | grep -v "^#" | awk '{print $1}' | grep '/dev/hd[a-z0-9]\+'`
 	if [ -n "${res}" ] ; then
 		bootpart=1
 	else
-		res=`cat /etc/fstab | grep -v '^#' | grep -e '/dev/hd[a-z0-9]\+[[:space:]]\+\/[[:space:]]\+' | awk '{print $1}'`
+		res=`grep -v '^#' /etc/fstab | grep -e '/dev/hd[a-z0-9]\+[[:space:]]\+\/[[:space:]]\+' | awk '{print $1}'`
 	fi
 
 	if [ -n "${res}" ] ; then
