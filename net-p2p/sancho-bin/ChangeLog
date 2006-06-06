@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/sancho-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.30 2006/01/19 19:23:26 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.31 2006/06/06 21:01:21 nelchael Exp $
+
+  06 Jun 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  sancho-bin-0.9.4.56.ebuild:
+  Stable on x86.
 
 *sancho-bin-0.9.4.56 (19 Jan 2006)
 
