@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.22 2006/06/06 22:03:52 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.23 2006/06/06 22:33:09 carlo Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -20,7 +20,7 @@
 inherit alternatives
 
 
-if [[ -n NEED_PYTHON ]] ; then
+if [[ -n "${NEED_PYTHON}" ]] ; then
         DEPEND=">=dev-lang/python-${NEED_PYTHON}"
         RDEPEND="${DEPEND}"
 fi
