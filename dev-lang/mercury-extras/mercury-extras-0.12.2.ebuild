@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2.ebuild,v 1.5 2006/05/20 07:51:59 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2.ebuild,v 1.6 2006/06/06 07:52:32 keri Exp $
 
 inherit eutils
 
 DESCRIPTION="Additional libraries and tools that are not part of the Mercury standard library"
 HOMEPAGE="http://www.cs.mu.oz.au/research/mercury/index.html"
-SRC_URI="ftp://ftp.mercury.cs.mu.oz.au/pub/${P}.tar.gz"
+SRC_URI="ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -14,7 +14,7 @@ KEYWORDS="~ppc ~x86"
 
 IUSE="doc glut iodbc opengl tcltk"
 
-DEPEND="~dev-lang/mercury-0.12.2
+DEPEND="=dev-lang/mercury-0.12.2*
 	sys-libs/ncurses
 	glut? ( virtual/glut )
 	iodbc? ( dev-db/libiodbc )
