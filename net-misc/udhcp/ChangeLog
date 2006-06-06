@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/udhcp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.25 2006/05/30 23:17:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.26 2006/06/06 15:25:35 blubb Exp $
+
+  06 Jun 2006; Simon Stelling <blubb@gentoo.org>
+  udhcp-0.9.9_pre20041216-r3.ebuild:
+  stable on amd64
 
   30 May 2006; Jason Wever <weeve@gentoo.org>
   udhcp-0.9.9_pre20041216-r3.ebuild:
