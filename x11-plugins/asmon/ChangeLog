@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/asmon
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.13 2006/01/02 10:42:49 s4t4n Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.14 2006/06/06 22:54:22 weeve Exp $
+
+  06 Jun 2006; Jason Wever <weeve@gentoo.org> asmon-0.65.ebuild:
+  Stable on SPARC.
 
   02 Jan 2006; Michele Noberasco <s4t4n@gentoo.org> asmon-0.65.ebuild:
   Removed INSTALL and COPYING from dodoc
