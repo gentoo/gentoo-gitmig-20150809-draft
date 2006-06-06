@@ -1,6 +1,9 @@
 # ChangeLog for app-text/diction
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.13 2006/06/06 14:33:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.14 2006/06/06 14:36:11 seemant Exp $
+
+  06 Jun 2006; Seemant Kulleen <seemant@gentoo.org> metadata.xml:
+  added long description, thanks to James in bug #135487
 
 *diction-1.09-r1 (06 Jun 2006)
 *diction-1.07-r1 (06 Jun 2006)
