@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.2-r3.ebuild,v 1.10 2006/06/01 09:35:41 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.2-r3.ebuild,v 1.11 2006/06/06 21:30:04 flameeyes Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -10,11 +10,11 @@ inherit kde-meta eutils
 DESCRIPTION="KDE mail client"
 KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE="crypt"
-DEPEND="$(deprange 3.5.0-r3 $MAXKDEVER kde-base/libkdenetwork)
+DEPEND="$(deprange 3.5.0 $MAXKDEVER kde-base/libkdenetwork)
 	$(deprange $PV $MAXKDEVER kde-base/libkdepim)
 	$(deprange $PV $MAXKDEVER kde-base/libkpimidentities)
 	$(deprange 3.5.1 $MAXKDEVER kde-base/mimelib)
-	$(deprange 3.5.0-r3 $MAXKDEVER kde-base/libksieve)
+	$(deprange 3.5.0 $MAXKDEVER kde-base/libksieve)
 	$(deprange $PV $MAXKDEVER kde-base/certmanager)
 	$(deprange $PV $MAXKDEVER kde-base/libkcal)
 	$(deprange $PV $MAXKDEVER kde-base/kontact)"
@@ -57,7 +57,6 @@ KMEXTRA="indexlib
 PATCHES="${FILESDIR}/kmail-3.5.2-imap-fixes-2.diff
 	${FILESDIR}/kmail-3.5.2-misc-fixes-2.diff
 	${FILESDIR}/kmail-3.5-ham_spam_icons.diff" # This patch did not make it into svn, yet.
-
 
 src_unpack() {
 	kde-meta_src_unpack

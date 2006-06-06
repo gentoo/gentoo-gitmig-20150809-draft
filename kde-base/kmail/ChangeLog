@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.71 2006/06/01 23:05:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.72 2006/06/06 21:30:04 flameeyes Exp $
+
+  06 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> kmail-3.5.2-r3.ebuild,
+  kmail-3.5.3.ebuild:
+  Remove -r3 versions for libkdenetwork and libksieve, artifacts from the kde
+  split script.
 
   01 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> kmail-3.5.3.ebuild:
   Remove obsolete patches.
