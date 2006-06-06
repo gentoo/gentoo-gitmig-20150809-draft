@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-0.1.3.ebuild,v 1.2 2006/04/28 09:28:15 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-0.1.3.ebuild,v 1.3 2006/06/06 18:45:50 sebastian Exp $
 
 inherit php-lib-r1
 
@@ -11,7 +11,7 @@ SRC_URI="http://framework.zend.com/releases/${P}.tar.gz"
 LICENSE="ZendFramework-1.0"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="doc examples"
 
 PHP_LIB_NAME="Zend"
 
@@ -24,9 +24,14 @@ src_install() {
 	insinto /usr/share/${PHP_SHARED_CAT}
 	doins library/Zend.php
 
-	insinto /usr/share/doc/${P}
-	doins -r demos
+	if use examples ; then
+		insinto /usr/share/doc/${P}
+		doins -r demos
+	fi
 
-	dodoc *.txt
-	dohtml -r documentation/*
+	if use doc ; then
+		insinto /usr/share/doc/${P}
+		dodoc *.txt
+		dohtml -r documentation/*
+	fi
 }
