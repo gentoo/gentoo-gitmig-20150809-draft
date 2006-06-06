@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sqlite-ruby
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/ChangeLog,v 1.23 2006/03/29 14:13:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/ChangeLog,v 1.24 2006/06/06 16:54:00 blubb Exp $
+
+  06 Jun 2006; Simon Stelling <blubb@gentoo.org> sqlite-ruby-2.2.2.ebuild,
+  sqlite-ruby-2.2.3-r1.ebuild:
+  stable on amd64
 
   29 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   sqlite-ruby-2.2.3-r1.ebuild:
