@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libXft
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.23 2006/06/03 16:20:41 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.24 2006/06/06 17:29:02 spyderous Exp $
+
+*libXft-2.1.10 (06 Jun 2006)
+
+  06 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; -libXft-2.1.9.ebuild,
+  +libXft-2.1.10.ebuild:
+  (#135787) Also export XftNameUnparse.
 
 *libXft-2.1.9 (03 Jun 2006)
 
