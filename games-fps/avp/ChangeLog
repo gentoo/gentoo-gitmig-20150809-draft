@@ -1,0 +1,47 @@
+# ChangeLog for games-fps/avp-cvs
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/ChangeLog,v 1.1 2006/06/06 14:11:25 wolf31o2 Exp $
+
+*avp-20031110 (06 Jun 2006)
+
+  06 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/avp-20031110-gcc34.patch, +metadata.xml, +avp-20031110.ebuild:
+  Moved from games-fps/avp-cvs to games-fps/avp.
+
+  13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  avp-cvs-20031110.ebuild:
+  Moved games_pkg_setup to the beginning of pkg_setup.
+
+  09 Mar 2006; <Tupone@gentoo.org> +files/avp-cvs-20031110-gcc34.patch,
+  avp-cvs-20031110.ebuild:
+  Modular X dependency fix
+  Fix gcc-3.4 bug (#99756), thanks Triffid Hunter for report.
+
+  21 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  avp-cvs-20031110.ebuild:
+  use default src_compile; tidy
+
+  03 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  avp-cvs-20031110.ebuild:
+  Change XFree86 references to X11.
+
+  30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  avp-cvs-20031110.ebuild:
+  use emake; don't RDEPEND on sed; virtual/x11
+
+  29 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  avp-cvs-20031110.ebuild:
+  sed in unpack; make it easier to use live cvs; more error checking/messages
+
+*avp-cvs-20031110 (10 Nov 2003)
+
+  10 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  CVS snapshot so we dont keep overloading cvs server.
+
+*avp-cvs-20030314 (11 Jul 2003)
+
+  03 Sep 2003; Michael Sterrett <msterret@gentoo.org> avp-cvs-20030314.ebuild:
+  use sed >= 4; tidy
+
+  11 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Dirk-Jan Heijs <heijs@phys.rug.nl> #17529.
