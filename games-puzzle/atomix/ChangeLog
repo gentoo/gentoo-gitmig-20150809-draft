@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/atomix
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/ChangeLog,v 1.8 2004/10/23 14:00:16 liquidx Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/ChangeLog,v 1.9 2006/06/06 17:05:34 wolf31o2 Exp $
+
+*atomix-2.14.0 (06 Jun 2006)
+
+  06 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> +atomix-2.14.0.ebuild:
+  Version bumped and closing bug #126749.
 
   23 Oct 2004; Alastair Tse <liquidx@gentoo.org> atomix-1.0.1.ebuild:
   add workaround for intltool-0.31.3 for INTLTOOL_ICONV
