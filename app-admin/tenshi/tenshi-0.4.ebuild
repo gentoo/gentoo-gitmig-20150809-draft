@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.4.ebuild,v 1.2 2006/06/03 22:49:08 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.4.ebuild,v 1.3 2006/06/06 18:38:52 dertobi123 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86 ~ppc ~sparc"
+KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
