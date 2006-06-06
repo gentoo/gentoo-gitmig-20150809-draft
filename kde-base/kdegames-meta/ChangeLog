@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegames-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.48 2006/06/01 17:44:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.49 2006/06/06 19:29:46 flameeyes Exp $
+
+  06 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdegames-meta-3.5.3.ebuild:
+  Add ~x86-fbsd keyword.
 
 *kdegames-meta-3.5.3 (01 Jun 2006)
 

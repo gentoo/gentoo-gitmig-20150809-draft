@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kspaceduel
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kspaceduel/ChangeLog,v 1.46 2006/06/01 20:00:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kspaceduel/ChangeLog,v 1.47 2006/06/06 19:25:15 flameeyes Exp $
+
+  06 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kspaceduel-3.5.3.ebuild:
+  Add ~x86-fbsd keyword.
 
 *kspaceduel-3.5.3 (01 Jun 2006)
 
