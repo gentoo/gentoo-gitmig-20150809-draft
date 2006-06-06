@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/bcron
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.1 2006/05/16 12:06:30 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.2 2006/06/06 19:16:01 bangert Exp $
+
+  06 Jun 2006; Thilo Bangert <bangert@gentoo.org> bcron-0.09.ebuild:
+  fix creation of trigger fifo
 
 *bcron-0.09 (16 May 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09.ebuild,v 1.1 2006/05/16 12:06:30 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09.ebuild,v 1.2 2006/06/06 19:16:01 bangert Exp $
 
 inherit cron eutils toolchain-funcs
 DESCRIPTION="A new cron system designed with secure operations in mind by Bruce Guenter"
@@ -93,7 +93,7 @@ pkg_config() {
 	cp bcron-update.run run
 	chmod u+x run
 
-	[ ! -e /var/spool/trigger ] && mkfifo /var/spool/cron/trigger
+	[ ! -e /var/spool/cron/trigger ] && mkfifo /var/spool/cron/trigger
 	chown cron:cron /var/spool/cron/trigger
 	chmod go-rwx /var/spool/cron/trigger
 }
