@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-1.3.3.ebuild,v 1.3 2006/05/12 13:37:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-1.3.3.ebuild,v 1.4 2006/06/06 09:25:27 matsuu Exp $
 
 inherit eutils cvs
 
@@ -28,8 +28,7 @@ RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
 	gtk? ( ${GTK_DEPEND} )
 	immqt? ( ${GTK_DEPEND} )
 	immqt-bc? ( ${GTK_DEPEND} )
-	!app-i18n/scim
-	!<app-i18n/scim-chinese-0.4.0"
+	!app-i18n/scim"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-devel/autoconf
@@ -94,7 +93,7 @@ pkg_postinst() {
 	einfo "If you prefer KDE/Qt interface, try emerge app-i18n/skim."
 	einfo
 	einfo "To use Chinese input methods:"
-	einfo "	# emerge app-i18n/scim-tables app-i18n/scim-chinese"
+	einfo "	# emerge app-i18n/scim-tables app-i18n/scim-pinyin"
 	einfo "To use Korean input methods:"
 	einfo "	# emerge app-i18n/scim-hangul"
 	einfo "To use Japanese input methods:"
