@@ -1,8 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/i8krellm-2.5.ebuild,v 1.6 2006/03/24 10:02:57 kloeri Exp $
-
-IUSE="gtk2"
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/i8krellm-2.5.ebuild,v 1.7 2006/06/06 11:14:58 genstef Exp $
 
 DESCRIPTION="GKrellM2 Plugin for the Dell Inspiron and Latitude notebooks"
 SRC_URI="http://www.coding-zone.com/${P}.tar.gz"
@@ -14,8 +12,6 @@ KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa"
 
 DEPEND="app-admin/gkrellm
 	x11-libs/gtk+
-	gtk2? ( =x11-libs/gtk+-2*
-		=app-admin/gkrellm-2* )
 	>=app-laptop/i8kutils-1.5"
 
 src_compile() {
