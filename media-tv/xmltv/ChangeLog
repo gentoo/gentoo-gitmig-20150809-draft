@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.44 2006/06/01 17:09:36 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.45 2006/06/06 14:43:43 mattepiu Exp $
+
+  6 Jun 2006; Matteo Azzali <mattepiu@gentoo.org> +xmltv-0.5.43-r4.ebuild:
+  Implemented new version based on use flag as per topic in gentoo-dev.
+  -xmltv-0.5.43-r3.ebuild: removing masked old implementation.
+  
+  1 Jun 2006; Matteo Azzali <mattepiu@gentoo.org> xmltv-0.5.43-r3.ebuild:
+  Masked cause XMLTV_OPTS is not accessible anymore. I'll need to mail 
+  gentoo-dev and wait 3 days at least to unmask, wish me luck..
 
   1 Jun 2006; Matteo Azzali <mattepiu@gentoo.org> xmltv-0.5.43-r3.ebuild:
   Added Unicode-UTF8simple dep for pt users, thanks to mcummings.
