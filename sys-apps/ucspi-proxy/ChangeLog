@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ucspi-proxy
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ChangeLog,v 1.4 2004/07/01 21:41:51 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ChangeLog,v 1.5 2006/06/06 01:35:20 eradicator Exp $
+
+  06 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  ucspi-proxy-0.95.ebuild:
+  Removed gcc-config from DEPEND as it's not neccessary.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ucspi-proxy-0.95.ebuild:
