@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r2.ebuild,v 1.10 2006/05/30 19:50:03 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r2.ebuild,v 1.11 2006/06/06 13:28:52 suka Exp $
 
 inherit check-reqs eutils fdo-mime flag-o-matic java-pkg kde-functions mono toolchain-funcs
 
@@ -76,7 +76,7 @@ DEPEND="${RDEPEND}
 		virtual/x11 )
 	net-print/cups
 	>=sys-apps/findutils-4.1.20-r1
-	app-shells/tcsh
+	>=app-shells/tcsh-6.14-r3
 	dev-perl/Archive-Zip
 	dev-util/pkgconfig
 	dev-util/intltool
