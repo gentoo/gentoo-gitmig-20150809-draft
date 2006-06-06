@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.92 2006/05/26 15:22:54 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.93 2006/06/06 14:01:48 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -101,11 +101,11 @@ perl-module_src_prep() {
 		einfo "Using ExtUtils::MakeMaker"
 		#perl Makefile.PL ${myconf} \
 		perl Makefile.PL ${myconf} INSTALLMAN3DIR='none'\
-		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
+		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D} || die "Unable to build! (are you using USE=\"build\"?)"
 	fi
 	if [ -f Build.PL ] ; then
 		einfo "Using Module::Build"
-		perl Build.PL --installdirs=vendor --destdir=${D} --libdoc=
+		perl Build.PL --installdirs=vendor --destdir=${D} --libdoc= || die "Unable to build! (are you using USE=\"build\"?)"
 	fi
 	if [ ! -f Build.PL ] && [ ! -f Makefile.PL ]; then
 		einfo "No Make or Build file detected..."
