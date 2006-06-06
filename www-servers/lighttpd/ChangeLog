@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.75 2006/06/03 12:33:17 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.76 2006/06/06 18:52:54 bangert Exp $
+
+  06 Jun 2006; Thilo Bangert <bangert@gentoo.org>
+  +files/1.4.11/23_all_mod_ssi_gcc-4.1.1_compile_fix.diff,
+  lighttpd-1.4.11.ebuild:
+  fix compile on gcc-4.1.1 (bug #135317)
+  add warning about the need to re-merge when switching
+  from app-admin/fam to app-admin/gamin and vice versa
 
   03 Jun 2006; Thilo Bangert <bangert@gentoo.org>
   -files/1.4.10/05_all_r996_fallback_to_madvise.diff,

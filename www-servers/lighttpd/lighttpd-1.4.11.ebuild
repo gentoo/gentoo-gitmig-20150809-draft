@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.11.ebuild,v 1.4 2006/06/01 21:56:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.11.ebuild,v 1.5 2006/06/06 18:52:54 bangert Exp $
 
 inherit eutils autotools depend.php
 
@@ -192,6 +192,11 @@ pkg_postinst () {
 		ewarn "which is now located in /etc/lighttpd.  Please migrate your"
 		ewarn "existing configuration."
 		ebeep 5
+	fi
+
+	if use fam ; then
+		einfo "Remember to re-emerge lighttpd should you switch from"
+		einfo "app-admin/famd to app-admin/gamin or vice versa."
 	fi
 	echo
 }

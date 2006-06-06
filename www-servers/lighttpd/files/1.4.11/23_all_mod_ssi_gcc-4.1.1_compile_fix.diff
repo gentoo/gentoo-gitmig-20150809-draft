@@ -1,0 +1,12 @@
+--- lighttpd-1.4.11.orig/src/mod_ssi.c
++++ lighttpd-1.4.11/src/mod_ssi.c
+@@ -36,6 +36,9 @@
+ #include <sys/filio.h>
+ #endif
+ 
++static int mod_ssi_handle_request(server *srv, connection *con, plugin_data *p);
++static int mod_ssi_patch_connection(server *srv, connection *con, plugin_data *p);
++
+ /* determine if process finished */
+ int h_finished = 0;
+ 
