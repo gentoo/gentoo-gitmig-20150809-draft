@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5480 2006/06/06 11:18:28 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5481 2006/06/06 12:36:46 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (06 Jun 2006)
+# New snapshot, waiting testing.
+~media-libs/xine-lib-1.1.2_pre20060606
 
 # Joseph Jezak <josejx@gentoo.org> (05 Jun 2006)
 # The softmac stack is in 2.6.17, the ebuilds are obsolete
