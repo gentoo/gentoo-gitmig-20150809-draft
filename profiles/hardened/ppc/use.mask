@@ -1,3 +1,4 @@
+mmx
 3dfx
 acpi
 adabas
