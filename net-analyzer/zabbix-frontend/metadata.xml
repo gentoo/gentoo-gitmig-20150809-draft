@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-
 <pkgmetadata>
 <herd>no-herd</herd>
-  <maintainer>
-    <email>iggy@gentoo.org</email>
-  </maintainer>
-  <longdescription>ZABBIX is software for monitoring of your applications, network and servers.</longdescription>
+<maintainer>
+	<email>wschlich@gentoo.org</email>
+	<name>Wolfram Schlich</name>
+	<description>Primary maintainer</description>
+</maintainer>
+<longdescription>
+ZABBIX is software for monitoring of your applications, network and servers.
+ZABBIX supports both polling and trapping techniques to collect data from
+monitored hosts. A flexible notification mechanism allows easy and quickly
+configure different types of notifications for pre-defined events.
+</longdescription>
 </pkgmetadata>
