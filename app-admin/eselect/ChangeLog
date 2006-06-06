@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.22 2006/04/19 11:45:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.23 2006/06/06 16:07:19 spb Exp $
+
+  06 Jun 2006; Stephen Bennett <spb@gentoo.org> eselect-1.0.ebuild:
+  Mips stable for bug #125630
 
   19 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> eselect-1.0.2.ebuild:
   Add dependency over freebsd-bin as alternative to realpath, it does already
