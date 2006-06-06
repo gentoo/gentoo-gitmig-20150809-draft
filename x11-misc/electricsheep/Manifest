@@ -1,20 +1,62 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ce3a5f34232f721d30689e3eaa051004 ChangeLog 5128
-MD5 862d6e4165a0f0b5fbd2e6deb02648ed electricsheep-2.6.3-r2.ebuild 2149
-MD5 7c76f020fd1c00d3f881200462d83b28 electricsheep-2.6.4.ebuild 2107
-MD5 d74dadadc142bec28238e9e3994fc179 files/digest-electricsheep-2.6.3-r2 72
-MD5 98c39f556a932b59addaf35ba7e16268 files/digest-electricsheep-2.6.4 72
+AUX electricsheep-2.6.3-cflagsfix.patch 16890 RMD160 1217c0a3f671aa99c6ef29f457189135aa89d904 SHA1 ca0c11a47a2cd7d03debe4ffeef5ae77ed80d1b3 SHA256 6bb51aaf6ad3552dc0128e9a551b556bebcdf65bdb5268984a6386f620576ab3
 MD5 8573de509811af15cb08905c91a05864 files/electricsheep-2.6.3-cflagsfix.patch 16890
+RMD160 1217c0a3f671aa99c6ef29f457189135aa89d904 files/electricsheep-2.6.3-cflagsfix.patch 16890
+SHA256 6bb51aaf6ad3552dc0128e9a551b556bebcdf65bdb5268984a6386f620576ab3 files/electricsheep-2.6.3-cflagsfix.patch 16890
+AUX electricsheep-2.6.3-xloadimg.patch 810 RMD160 94a0e1c6407332db19e44b9e653b12c13e47944a SHA1 4350ab457428cbb786c75722968f8123225edadb SHA256 a3bb1d806142cc21f58c267fd8833d694ddae730daaafc21a837081d556a1839
 MD5 022c0e46046b916c0cff67c0be5dc1d3 files/electricsheep-2.6.3-xloadimg.patch 810
+RMD160 94a0e1c6407332db19e44b9e653b12c13e47944a files/electricsheep-2.6.3-xloadimg.patch 810
+SHA256 a3bb1d806142cc21f58c267fd8833d694ddae730daaafc21a837081d556a1839 files/electricsheep-2.6.3-xloadimg.patch 810
+AUX electricsheep-2.6.4-cflagsfix.patch 17080 RMD160 d660f4fc283b2ea0985a03243b88762bd626baaf SHA1 86cb3900e2df4f585cecb3fc5ce3940920fe9669 SHA256 28ad317686c3c84bec31970728ca3ad8b0ededd72f54c1a18f72dce13ed6818a
 MD5 188a0eed95226cf2419172bb60d586e0 files/electricsheep-2.6.4-cflagsfix.patch 17080
+RMD160 d660f4fc283b2ea0985a03243b88762bd626baaf files/electricsheep-2.6.4-cflagsfix.patch 17080
+SHA256 28ad317686c3c84bec31970728ca3ad8b0ededd72f54c1a18f72dce13ed6818a files/electricsheep-2.6.4-cflagsfix.patch 17080
+AUX electricsheep-2.6.7-cflagsfix.patch 16890 RMD160 2ee5709fb7bfd2ae5a3fa11f271f5d8b8b9633fd SHA1 00c59e7196f69a066b16acca67350ea550070390 SHA256 b4d6343d1159c5c755d75412548c20ef6b27b18aeee6386e64cc84acc46f9ff0
+MD5 d73734597cf76749bb649d73d7e7f3bb files/electricsheep-2.6.7-cflagsfix.patch 16890
+RMD160 2ee5709fb7bfd2ae5a3fa11f271f5d8b8b9633fd files/electricsheep-2.6.7-cflagsfix.patch 16890
+SHA256 b4d6343d1159c5c755d75412548c20ef6b27b18aeee6386e64cc84acc46f9ff0 files/electricsheep-2.6.7-cflagsfix.patch 16890
+AUX electricsheep.desktop 3973 RMD160 d765b848da913d773617817612fe4f6ac961c644 SHA1 fa9ec961fb025a9c02b40889b9ed4953e95cd8f3 SHA256 56884adb9d05705617f37874b72de83b4d37ef411f3d90d7fb7ca78019045fe1
 MD5 cf3d6d65b467f83063fea471d22e2f37 files/electricsheep.desktop 3973
+RMD160 d765b848da913d773617817612fe4f6ac961c644 files/electricsheep.desktop 3973
+SHA256 56884adb9d05705617f37874b72de83b4d37ef411f3d90d7fb7ca78019045fe1 files/electricsheep.desktop 3973
+DIST electricsheep-2.6.3.tar.gz 1438987 RMD160 2732d689843320c48f328defe80891e94f71df7a SHA1 5fec56d65b6b717a13808be8aaeb6e372ce40329 SHA256 771d42106a765942fd6fb6f63e4506a983f067896c8b6f5e8e447e2001dd2abd
+DIST electricsheep-2.6.4.tar.gz 1387634 RMD160 98d328abc5e6856ef7ce07fc73b53cc414e69da7 SHA1 8a83389e00f78e22c25c26334f737e82444f427e SHA256 2941d130365a4a6fc02fe3173b674d9034ef3d8fdd4d00f8e7aa34317b7e945e
+DIST electricsheep-2.6.7.tar.gz 1387836 RMD160 b842ec3761294bb6501127daf9fc377752bd830d SHA1 e666abbad9146ccbe0b20e5ce39ca131770d5512 SHA256 f7b91f7a81a556a213543ab76c9595a738dd931fe2bc2acac6b704b5d09253f0
+EBUILD electricsheep-2.6.3-r2.ebuild 2149 RMD160 f244ff0fd832920bbbf1171bfdfd8e62e712aa16 SHA1 905e526892420c18ba3fe93b024c18981ee1323f SHA256 4c0546d58ba4b5af3517ce958e1b91179b918a7ec6f4291c444555ac33d4a8b6
+MD5 862d6e4165a0f0b5fbd2e6deb02648ed electricsheep-2.6.3-r2.ebuild 2149
+RMD160 f244ff0fd832920bbbf1171bfdfd8e62e712aa16 electricsheep-2.6.3-r2.ebuild 2149
+SHA256 4c0546d58ba4b5af3517ce958e1b91179b918a7ec6f4291c444555ac33d4a8b6 electricsheep-2.6.3-r2.ebuild 2149
+EBUILD electricsheep-2.6.4.ebuild 2107 RMD160 3c2526bd7798dd8c2bcf76ddfc4d70c321279f0b SHA1 397ff963b81932115c6e6bea96112fd5e161928e SHA256 5888a9e267d5624cba21c26feb550905a7fed735ef1b071cf470892d8bd936ae
+MD5 7c76f020fd1c00d3f881200462d83b28 electricsheep-2.6.4.ebuild 2107
+RMD160 3c2526bd7798dd8c2bcf76ddfc4d70c321279f0b electricsheep-2.6.4.ebuild 2107
+SHA256 5888a9e267d5624cba21c26feb550905a7fed735ef1b071cf470892d8bd936ae electricsheep-2.6.4.ebuild 2107
+EBUILD electricsheep-2.6.7.ebuild 2128 RMD160 9a1c193dcda823f3c3da7549f831db0cc8f944e1 SHA1 ceef7563b27eab9702d8a56b67ba7b57c4e18f36 SHA256 da531ee2a7689ddbc747252457d26696952d9f2341afe2e8087cd0444b35e2f2
+MD5 a072a5542e9924f7e5ca2cd5f7d23176 electricsheep-2.6.7.ebuild 2128
+RMD160 9a1c193dcda823f3c3da7549f831db0cc8f944e1 electricsheep-2.6.7.ebuild 2128
+SHA256 da531ee2a7689ddbc747252457d26696952d9f2341afe2e8087cd0444b35e2f2 electricsheep-2.6.7.ebuild 2128
+MISC ChangeLog 5342 RMD160 a4fbdaec19c0877073eab3a6ef735e710ce4c80f SHA1 a9edb7cd1beba91010fc80e37ea632bfb58c1277 SHA256 d67859710c12f564c204da22199391ff07878eb36ab4ca188339de99a7cf9b0b
+MD5 80645886482eadbd0113ff30adedd4d6 ChangeLog 5342
+RMD160 a4fbdaec19c0877073eab3a6ef735e710ce4c80f ChangeLog 5342
+SHA256 d67859710c12f564c204da22199391ff07878eb36ab4ca188339de99a7cf9b0b ChangeLog 5342
+MISC metadata.xml 319 RMD160 8d2b4fb22841a8e8465a2cd5b6ebe73524b34a7a SHA1 eef4c6d4f7d83fecca5844d10e6efd0b9566a5e3 SHA256 ff313e851d928bdcbd4d7a4ee641ac93aef523b1524ff5bd72acb60ddfc2d2ed
 MD5 f84d0865990260d30b1b5180364dd6a8 metadata.xml 319
+RMD160 8d2b4fb22841a8e8465a2cd5b6ebe73524b34a7a metadata.xml 319
+SHA256 ff313e851d928bdcbd4d7a4ee641ac93aef523b1524ff5bd72acb60ddfc2d2ed metadata.xml 319
+MD5 fea1d43d815ea2c8a39728b80367a286 files/digest-electricsheep-2.6.3-r2 262
+RMD160 26795c02d5dc15499d841897349c03b3b1c12a1a files/digest-electricsheep-2.6.3-r2 262
+SHA256 6b8b32c40065c22fa4fd8c766d3316f6a190d7e970c61d9ca94b6cfb4af8a420 files/digest-electricsheep-2.6.3-r2 262
+MD5 8126271c36c1ac1a8ebb5741794d652e files/digest-electricsheep-2.6.4 262
+RMD160 58d3d72485b43fbb2473697700089c7d4136e13c files/digest-electricsheep-2.6.4 262
+SHA256 30d7ca195b124a61702061d005f46acb1958a0621d73ee5149b55d38c2ef40a8 files/digest-electricsheep-2.6.4 262
+MD5 c2de50fded303fac66eadc4d38c6869b files/digest-electricsheep-2.6.7 262
+RMD160 199d17c30d2f9340c91fb02399fafa8c9d53595c files/digest-electricsheep-2.6.7 262
+SHA256 4bd8a14d43ec63eb5f662cec2cb62c5a5a8690ea2617259954ea12c3c67edd5a files/digest-electricsheep-2.6.7 262
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.3-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDvFDJmdTrptrqvGERArOCAJ9S+Slm+D07Dut2zrMk7DX5O7qCfgCfXFcy
-Nw6gmPeRfMugua5045KxsHA=
-=sxgf
+iD8DBQFEhNgimdTrptrqvGERAvJtAKCFTDwu8HDhRU+vdXDNImQ8rkV8HgCdHImj
+l4CcvZMFuZjSWQw6B9itaYM=
+=ZArf
 -----END PGP SIGNATURE-----

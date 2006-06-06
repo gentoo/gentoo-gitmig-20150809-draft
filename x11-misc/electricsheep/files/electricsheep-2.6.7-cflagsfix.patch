@@ -1,0 +1,591 @@
+--- electricsheep-2.6.7/mpeg2dec/configure.in.orig	2005-07-20 16:19:40.000000000 +1000
++++ electricsheep-2.6.7/mpeg2dec/configure.in	2006-06-06 10:55:02.000000000 +1000
+@@ -15,70 +15,6 @@
+ AC_PROG_CC
+ AC_PROG_GCC_TRADITIONAL
+ 
+-dnl CC-specific flags
+-if test x"$CC" = x"checkergcc"; then
+-    enable_sdl=no
+-elif test x"$GCC" = x"yes"; then
+-
+-    dnl GCC-specific flags
+-    dnl -Wall -Werror moved to the end to not disturb the configure script
+-
+-    dnl -O3
+-    changequote(<<,>>)
+-    OPT_CFLAGS=`echo "$CFLAGS"|sed "s/-O[0-9]*//g;"`
+-    changequote([,])
+-    OPT_CFLAGS="$OPT_CFLAGS -O3"
+-    AC_TRY_CFLAGS([$OPT_CFLAGS],[CFLAGS=$OPT_CFLAGS])
+-
+-    dnl -fomit-frame-pointer
+-    OPT_CFLAGS="$CFLAGS -fomit-frame-pointer"
+-    AC_TRY_CFLAGS([$OPT_CFLAGS],[CFLAGS=$OPT_CFLAGS])
+-
+-    dnl arch-specific flags
+-    case "$host_alias" in
+-    i?86-* | k?-*)
+-	AC_DEFINE([ARCH_X86],,[x86 architecture])
+-	case "$host_alias" in
+-	i386-*) OPT_CFLAGS="$CFLAGS -march=i386";;
+-	i486-*) OPT_CFLAGS="$CFLAGS -march=i486";;
+-	i586-*) OPT_CFLAGS="$CFLAGS -march=pentium";;
+-	i686-*) OPT_CFLAGS="$CFLAGS -march=pentiumpro";;
+-	k6-*)   OPT_CFLAGS="$CFLAGS -march=k6";;
+-	esac
+-	AC_TRY_CFLAGS([$OPT_CFLAGS],[CFLAGS=$OPT_CFLAGS]);;
+-    ppc-* | powerpc-*)
+-	OPT_CFLAGS="$CFLAGS -Wa,-m7400"
+-	AC_TRY_CFLAGS([$OPT_CFLAGS],
+-	    [CFLAGS=$OPT_CFLAGS; AC_DEFINE([ARCH_PPC],,[ppc architecture])]);;
+-    sparc-* | sparc64-*)
+-	OPT_CFLAGS="$CFLAGS -march=ultrasparc -mvis -Wa,-Av9"
+-	AC_TRY_CFLAGS([$OPT_CFLAGS],[CFLAGS=$OPT_CFLAGS]);;
+-    mips-sgi-irix6.*)	dnl do we need to be that specific ?
+-	OPT_CFLAGS="$CFLAGS -mabi=64"
+-	AC_TRY_CFLAGS([$OPT_CFLAGS],[CFLAGS=$OPT_CFLAGS]);;
+-    esac
+-elif test x"$CC" = x"tcc" -a x"`$CC -version 2>&1 | grep TenDRA`" != x""; then
+-    dnl TenDRA portability checking compiler
+-    TENDRA=yes
+-    CFLAGS="-Xp -Yansi -f`pwd`/include/tendra.h -DELIDE_CODE"
+-    enable_mlib=no
+-    no_x=yes
+-    enable_sdl=no
+-elif test x"$CC" = x"icc" -a x"`$CC -V 2>&1 | grep Intel`" != x""; then
+-    dnl Intel C++ compiler
+-    CFLAGS="-g -O3 -unroll -ip"
+-else
+-    dnl non-gcc flags - we probably need exact configuration triplets here.
+-    case "$host_alias" in
+-    mips-sgi-irix6.*)
+-	OPT_CFLAGS="$CFLAGS -64"
+-	AC_TRY_CFLAGS([$OPT_CFLAGS],[CFLAGS=$OPT_CFLAGS]);;
+-    sparc-sun-solaris*)
+-	OPT_CFLAGS="$CFLAGS -xCC -fast -xO5"
+-	AC_TRY_CFLAGS([$OPT_CFLAGS],[CFLAGS=$OPT_CFLAGS]);;
+-    esac
+-fi
+-
+ dnl Checks for libtool - this must be done after we set cflags
+ AC_DISABLE_SHARED
+ AC_LIBTOOL_WIN32_DLL
+--- electricsheep-2.6.7/mpeg2dec/configure.orig	2005-07-20 16:24:34.000000000 +1000
++++ electricsheep-2.6.7/mpeg2dec/configure	2006-06-06 10:55:02.000000000 +1000
+@@ -3245,515 +3245,6 @@
+ fi
+ 
+ 
+-if test x"$CC" = x"checkergcc"; then
+-    enable_sdl=no
+-elif test x"$GCC" = x"yes"; then
+-
+-
+-
+-    OPT_CFLAGS=`echo "$CFLAGS"|sed "s/-O[0-9]*//g;"`
+-
+-    OPT_CFLAGS="$OPT_CFLAGS -O3"
+-    echo "$as_me:$LINENO: checking if $CC supports $OPT_CFLAGS flags" >&5
+-echo $ECHO_N "checking if $CC supports $OPT_CFLAGS flags... $ECHO_C" >&6
+-    SAVE_CFLAGS="$CFLAGS"
+-    CFLAGS="$OPT_CFLAGS"
+-    cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"
+-			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_try_cflags_ok=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-ac_cv_try_cflags_ok=no
+-fi
+-rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+-    CFLAGS="$SAVE_CFLAGS"
+-    echo "$as_me:$LINENO: result: $ac_cv_try_cflags_ok" >&5
+-echo "${ECHO_T}$ac_cv_try_cflags_ok" >&6
+-    if test x"$ac_cv_try_cflags_ok" = x"yes"; then
+-	CFLAGS=$OPT_CFLAGS
+-    else
+-	:
+-    fi
+-
+-        OPT_CFLAGS="$CFLAGS -fomit-frame-pointer"
+-    echo "$as_me:$LINENO: checking if $CC supports $OPT_CFLAGS flags" >&5
+-echo $ECHO_N "checking if $CC supports $OPT_CFLAGS flags... $ECHO_C" >&6
+-    SAVE_CFLAGS="$CFLAGS"
+-    CFLAGS="$OPT_CFLAGS"
+-    cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"
+-			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_try_cflags_ok=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-ac_cv_try_cflags_ok=no
+-fi
+-rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+-    CFLAGS="$SAVE_CFLAGS"
+-    echo "$as_me:$LINENO: result: $ac_cv_try_cflags_ok" >&5
+-echo "${ECHO_T}$ac_cv_try_cflags_ok" >&6
+-    if test x"$ac_cv_try_cflags_ok" = x"yes"; then
+-	CFLAGS=$OPT_CFLAGS
+-    else
+-	:
+-    fi
+-
+-        case "$host_alias" in
+-    i?86-* | k?-*)
+-
+-cat >>confdefs.h <<\_ACEOF
+-#define ARCH_X86
+-_ACEOF
+-
+-	case "$host_alias" in
+-	i386-*) OPT_CFLAGS="$CFLAGS -march=i386";;
+-	i486-*) OPT_CFLAGS="$CFLAGS -march=i486";;
+-	i586-*) OPT_CFLAGS="$CFLAGS -march=pentium";;
+-	i686-*) OPT_CFLAGS="$CFLAGS -march=pentiumpro";;
+-	k6-*)   OPT_CFLAGS="$CFLAGS -march=k6";;
+-	esac
+-	echo "$as_me:$LINENO: checking if $CC supports $OPT_CFLAGS flags" >&5
+-echo $ECHO_N "checking if $CC supports $OPT_CFLAGS flags... $ECHO_C" >&6
+-    SAVE_CFLAGS="$CFLAGS"
+-    CFLAGS="$OPT_CFLAGS"
+-    cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"
+-			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_try_cflags_ok=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-ac_cv_try_cflags_ok=no
+-fi
+-rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+-    CFLAGS="$SAVE_CFLAGS"
+-    echo "$as_me:$LINENO: result: $ac_cv_try_cflags_ok" >&5
+-echo "${ECHO_T}$ac_cv_try_cflags_ok" >&6
+-    if test x"$ac_cv_try_cflags_ok" = x"yes"; then
+-	CFLAGS=$OPT_CFLAGS
+-    else
+-	:
+-    fi;;
+-    ppc-* | powerpc-*)
+-	OPT_CFLAGS="$CFLAGS -Wa,-m7400"
+-	echo "$as_me:$LINENO: checking if $CC supports $OPT_CFLAGS flags" >&5
+-echo $ECHO_N "checking if $CC supports $OPT_CFLAGS flags... $ECHO_C" >&6
+-    SAVE_CFLAGS="$CFLAGS"
+-    CFLAGS="$OPT_CFLAGS"
+-    cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"
+-			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_try_cflags_ok=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-ac_cv_try_cflags_ok=no
+-fi
+-rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+-    CFLAGS="$SAVE_CFLAGS"
+-    echo "$as_me:$LINENO: result: $ac_cv_try_cflags_ok" >&5
+-echo "${ECHO_T}$ac_cv_try_cflags_ok" >&6
+-    if test x"$ac_cv_try_cflags_ok" = x"yes"; then
+-	CFLAGS=$OPT_CFLAGS;
+-cat >>confdefs.h <<\_ACEOF
+-#define ARCH_PPC
+-_ACEOF
+-
+-    else
+-	:
+-    fi;;
+-    sparc-* | sparc64-*)
+-	OPT_CFLAGS="$CFLAGS -march=ultrasparc -mvis -Wa,-Av9"
+-	echo "$as_me:$LINENO: checking if $CC supports $OPT_CFLAGS flags" >&5
+-echo $ECHO_N "checking if $CC supports $OPT_CFLAGS flags... $ECHO_C" >&6
+-    SAVE_CFLAGS="$CFLAGS"
+-    CFLAGS="$OPT_CFLAGS"
+-    cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"
+-			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_try_cflags_ok=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-ac_cv_try_cflags_ok=no
+-fi
+-rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+-    CFLAGS="$SAVE_CFLAGS"
+-    echo "$as_me:$LINENO: result: $ac_cv_try_cflags_ok" >&5
+-echo "${ECHO_T}$ac_cv_try_cflags_ok" >&6
+-    if test x"$ac_cv_try_cflags_ok" = x"yes"; then
+-	CFLAGS=$OPT_CFLAGS
+-    else
+-	:
+-    fi;;
+-    mips-sgi-irix6.*)		OPT_CFLAGS="$CFLAGS -mabi=64"
+-	echo "$as_me:$LINENO: checking if $CC supports $OPT_CFLAGS flags" >&5
+-echo $ECHO_N "checking if $CC supports $OPT_CFLAGS flags... $ECHO_C" >&6
+-    SAVE_CFLAGS="$CFLAGS"
+-    CFLAGS="$OPT_CFLAGS"
+-    cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"
+-			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_try_cflags_ok=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-ac_cv_try_cflags_ok=no
+-fi
+-rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+-    CFLAGS="$SAVE_CFLAGS"
+-    echo "$as_me:$LINENO: result: $ac_cv_try_cflags_ok" >&5
+-echo "${ECHO_T}$ac_cv_try_cflags_ok" >&6
+-    if test x"$ac_cv_try_cflags_ok" = x"yes"; then
+-	CFLAGS=$OPT_CFLAGS
+-    else
+-	:
+-    fi;;
+-    esac
+-elif test x"$CC" = x"tcc" -a x"`$CC -version 2>&1 | grep TenDRA`" != x""; then
+-        TENDRA=yes
+-    CFLAGS="-Xp -Yansi -f`pwd`/include/tendra.h -DELIDE_CODE"
+-    enable_mlib=no
+-    no_x=yes
+-    enable_sdl=no
+-elif test x"$CC" = x"icc" -a x"`$CC -V 2>&1 | grep Intel`" != x""; then
+-        CFLAGS="-g -O3 -unroll -ip"
+-else
+-        case "$host_alias" in
+-    mips-sgi-irix6.*)
+-	OPT_CFLAGS="$CFLAGS -64"
+-	echo "$as_me:$LINENO: checking if $CC supports $OPT_CFLAGS flags" >&5
+-echo $ECHO_N "checking if $CC supports $OPT_CFLAGS flags... $ECHO_C" >&6
+-    SAVE_CFLAGS="$CFLAGS"
+-    CFLAGS="$OPT_CFLAGS"
+-    cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"
+-			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_try_cflags_ok=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-ac_cv_try_cflags_ok=no
+-fi
+-rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+-    CFLAGS="$SAVE_CFLAGS"
+-    echo "$as_me:$LINENO: result: $ac_cv_try_cflags_ok" >&5
+-echo "${ECHO_T}$ac_cv_try_cflags_ok" >&6
+-    if test x"$ac_cv_try_cflags_ok" = x"yes"; then
+-	CFLAGS=$OPT_CFLAGS
+-    else
+-	:
+-    fi;;
+-    sparc-sun-solaris*)
+-	OPT_CFLAGS="$CFLAGS -xCC -fast -xO5"
+-	echo "$as_me:$LINENO: checking if $CC supports $OPT_CFLAGS flags" >&5
+-echo $ECHO_N "checking if $CC supports $OPT_CFLAGS flags... $ECHO_C" >&6
+-    SAVE_CFLAGS="$CFLAGS"
+-    CFLAGS="$OPT_CFLAGS"
+-    cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"
+-			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_try_cflags_ok=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-ac_cv_try_cflags_ok=no
+-fi
+-rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+-    CFLAGS="$SAVE_CFLAGS"
+-    echo "$as_me:$LINENO: result: $ac_cv_try_cflags_ok" >&5
+-echo "${ECHO_T}$ac_cv_try_cflags_ok" >&6
+-    if test x"$ac_cv_try_cflags_ok" = x"yes"; then
+-	CFLAGS=$OPT_CFLAGS
+-    else
+-	:
+-    fi;;
+-    esac
+-fi
+-
+ # Check whether --enable-shared or --disable-shared was given.
+ if test "${enable_shared+set}" = set; then
+   enableval="$enable_shared"
