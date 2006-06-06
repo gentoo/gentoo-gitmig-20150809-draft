@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.8 2006/04/24 21:45:54 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.9 2006/06/06 01:20:31 eradicator Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -145,19 +145,19 @@ DEPEND="virtual/libc
 	!nptl? ( elibc_glibc? ( >=sys-libs/glibc-2.3.2-r3 ) )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
-	>=sys-devel/gcc-config-1.3.1
+	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
 	>=sys-devel/gcc-3.3.3_pre20040130
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
 RDEPEND="virtual/libc
 	!nptl? ( elibc_glibc? ( >=sys-libs/glibc-2.3.2-r3 ) )
-	>=sys-devel/gcc-config-1.3.1
+	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
-PDEPEND="sys-devel/gcc-config"
+PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )"
 
 src_unpack() {
 	unpack ${A}

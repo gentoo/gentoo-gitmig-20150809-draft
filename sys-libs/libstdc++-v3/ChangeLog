@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.45 2006/04/27 23:23:03 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.46 2006/06/06 01:20:31 eradicator Exp $
+
+  06 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  libstdc++-v3-3.3.3-r1.ebuild, libstdc++-v3-3.3.4.ebuild,
+  libstdc++-v3-3.3.6.ebuild:
+  Updated DEPEND to accept eselect-compiler.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-libstdc++-v3-3.3.3-r1, Manifest:
