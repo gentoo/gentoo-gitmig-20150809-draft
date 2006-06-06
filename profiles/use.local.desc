@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1937 2006/06/05 22:13:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1938 2006/06/06 07:36:41 hollow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1257,6 +1257,9 @@ net-www/mod_auth_ldap:mem-cache - Enables support for memory cache.
 net-www/mod_ftpd:dbi - Enables support for libDBI
 net-www/mod_log_sql:dbi - Enables support for libDBI
 net-www/mplayerplug-in:gecko-sdk - Forces use of Gecko-SDK instead of firefox/mozilla
+net-www/pwauth:domain-aware - Ignore leading domain names in username (Windows compat)
+net-www/pwauth:faillog - Log failed login attempts
+net-www/pwauth:ignore-case - Ignore string case in username (mostly Windows compat)
 sci-astronomy/orsa:cln - Use the Class Library for Numbers for calculations
 sci-astronomy/orsa:gsl - Use the GNU scientific library for calculations
 sci-astronomy/predict:xforms - Add a "map" client which uses the xforms library for its GUI
