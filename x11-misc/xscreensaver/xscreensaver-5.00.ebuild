@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.00.ebuild,v 1.1 2006/06/04 10:01:47 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.00.ebuild,v 1.2 2006/06/06 10:26:18 nelchael Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -157,6 +157,13 @@ src_install() {
 
 	use pam && fperms 755 /usr/bin/xscreensaver
 	pamd_mimic_system xscreensaver auth
+
+	# Fix bug #135549:
+	rm -f "${D}/usr/share/xscreensaver/config/electricsheep.xml"
+	rm -f "${D}/usr/share/xscreensaver/config/fireflies.xml"
+	dodir /usr/share/man/man6x
+	mv "${D}/usr/share/man/man6/worm.6" \
+		"${D}/usr/share/man/man6x/worm.6x"
 
 }
 
