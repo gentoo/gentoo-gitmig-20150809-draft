@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.98 2006/06/06 15:54:51 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.99 2006/06/06 15:58:32 jokey Exp $
+
+  06 Jun 2006; Markus Ullmann <jokey@gentoo.org> snort-2.3.3.ebuild,
+  snort-2.3.3-r1.ebuild, snort-2.4.3.ebuild, snort-2.4.3-r1.ebuild,
+  snort-2.4.3-r2.ebuild, snort-2.4.4.ebuild, snort-2.4.4-r1.ebuild,
+  snort-2.4.5.ebuild:
+  Changing dep to virtual/libpcap wrt bug #117898
 
 *snort-2.4.5 (06 Jun 2006)
 
