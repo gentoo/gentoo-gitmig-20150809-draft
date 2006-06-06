@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.138 2006/06/06 12:24:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.139 2006/06/06 16:40:39 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -488,7 +488,7 @@ deprange-list() {
 			# Revision constraint on lower bound
 			if [ -n "$MINREV" ]; then
 				NEWDEP="$NEWDEP
-						$(deprange-iterate-numbers "=$PACKAGE-$BASEVER.${MINMINOR}_$MINSUFFIX-r" $MINREV 50)"
+						$(deprange-iterate-numbers "=$PACKAGE-$BASEVER.${MINMINOR}_$MINSUFFIX-r" $MINREV 99)"
 			fi
 
 		# If the minor version numbers are different too
@@ -499,14 +499,12 @@ deprange-list() {
 				NEWDEP="$(deprange-iterate-suffixes "~$PACKAGE-$BASEVER.$MAXMINOR" alpha1 $MAXSUFFIX)"
 			fi
 
-			STARTMINOR="${MINMINOR}"
-
 			# regular versions in between
 			if [ -n "$MINREV" -a -z "$MINSUFFIX" ]; then
-				let STARTMINOR++
+				let MAXMINOR++
 			fi
 			NEWDEP="$NEWDEP
-					$(deprange-iterate-numbers "~${PACKAGE}-${BASEVER}." $STARTMINOR $MAXMINOR)"
+					$(deprange-iterate-numbers "~${PACKAGE}-${BASEVER}." $MINMINOR $MAXMINOR)"
 
 			# Min version's allowed suffixes
 			if [ -n "$MINSUFFIX" ]; then
@@ -521,7 +519,7 @@ deprange-list() {
 					BASE="=$PACKAGE-$BASEVER.${MINMINOR%-r*}-r"
 				fi
 				NEWDEP="$NEWDEP
-						$(deprange-iterate-numbers $BASE ${MINREV#r} 50)"
+						$(deprange-iterate-numbers $BASE ${MINREV#r} 99)"
 			fi
 		fi
 
