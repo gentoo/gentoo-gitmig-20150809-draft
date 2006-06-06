@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r2.ebuild,v 1.8 2006/05/18 18:11:30 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.0-r2.ebuild,v 1.9 2006/06/06 16:28:00 vericgar Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib
 
@@ -126,8 +126,6 @@ src_unpack() {
 
 
 src_compile() {
-
-	filter-ldflags -Wl,--as-needed --as-needed
 
 	# Detect mips and uclibc systems properly
 	gnuconfig_update
