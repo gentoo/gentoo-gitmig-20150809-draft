@@ -1,6 +1,11 @@
 # ChangeLog for app-text/docbook-sgml-utils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.49 2006/04/28 10:16:52 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.50 2006/06/06 03:26:38 leonardop Exp $
+
+  06 Jun 2006; Leonardo Boshell <leonardop@gentoo.org>
+  +files/docbook-utils-0.6.14-elinks.patch,
+  docbook-sgml-utils-0.6.14.ebuild:
+  Re-add support for links (bug #134894).
 
   28 Apr 2006; Martin Ehmsen <ehmsen@gentoo.org>
   docbook-sgml-utils-0.6.14.ebuild:

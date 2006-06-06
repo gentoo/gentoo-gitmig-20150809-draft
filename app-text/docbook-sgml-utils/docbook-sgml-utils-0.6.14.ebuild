@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.14.ebuild,v 1.23 2006/04/28 10:16:52 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.14.ebuild,v 1.24 2006/06/06 03:26:38 leonardop Exp $
 
 inherit eutils
 
@@ -30,20 +30,28 @@ DEPEND=">=dev-lang/perl-5
 	~app-text/docbook-sgml-dtd-4.1
 	tetex? ( app-text/jadetex )
 	userland_GNU? ( sys-apps/which )
-	|| ( www-client/lynx www-client/elinks virtual/w3m )"
+	|| (
+		www-client/lynx
+		www-client/links
+		www-client/elinks
+		virtual/w3m )"
 
 # including both xml-simple-dtd 4.1.2.4 and 1.0, to ease
 # transition to simple-dtd 1.0, <obz@gentoo.org>
 
+
 src_unpack() {
-	unpack ${A}
-	cd ${S} || die
-	sed -i -e "s:links:elinks:g" backends/txt || die
+	unpack "${A}"
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${MY_P}-elinks.patch
 }
 
 src_install() {
-	#einstall htmldir=${D}/usr/share/doc/${PF}/html || die
-	make DESTDIR=${D} htmldir=/usr/share/doc/${PF}/html install || die
+	make DESTDIR="${D}" \
+		htmldir="/usr/share/doc/${PF}/html" \
+		install || die "Installation failed"
+
 	if ! use tetex ; then
 		for i in dvi pdf ps ; do
 			rm ${D}/usr/bin/docbook2$i
