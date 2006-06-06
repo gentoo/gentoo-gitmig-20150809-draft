@@ -1,6 +1,12 @@
 # ChangeLog for games-board/pioneers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.4 2006/06/03 22:21:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.5 2006/06/06 23:42:56 mr_bones_ Exp $
+
+*pioneers-0.9.64 (06 Jun 2006)
+
+  06 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +pioneers-0.9.64.ebuild:
+  version bump
 
 *pioneers-0.9.63 (03 Jun 2006)
 
