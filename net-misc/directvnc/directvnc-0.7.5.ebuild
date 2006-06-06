@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/directvnc-0.7.5.ebuild,v 1.6 2006/02/17 11:01:24 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/directvnc-0.7.5.ebuild,v 1.7 2006/06/06 07:03:01 s4t4n Exp $
 
 inherit eutils
 
@@ -31,5 +31,5 @@ src_compile() {
 src_install() {
 	make install DESTDIR=${D} || die
 	rm -rf ${D}/usr/doc
-	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS TODO
+	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 }
