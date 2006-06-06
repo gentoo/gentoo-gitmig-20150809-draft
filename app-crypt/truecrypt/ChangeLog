@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.1 2006/06/05 08:19:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.2 2006/06/06 11:46:08 dragonheart Exp $
+
+  06 Jun 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/truecrypt-4.2-nosectorformat.patch, truecrypt-4.2.ebuild:
+  fix for 2.6.17 kernels that nolonger define SECTOR_FORMAT as per bug #135741
 
 *truecrypt-4.2 (05 Jun 2006)
 

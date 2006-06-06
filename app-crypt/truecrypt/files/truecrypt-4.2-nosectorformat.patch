@@ -1,0 +1,77 @@
+--- ./Linux/Kernel/Dm-target.c.orig	2006-06-06 21:31:51.000000000 +1000
++++ ./Linux/Kernel/Dm-target.c	2006-06-06 21:45:08.000000000 +1000
+@@ -161,7 +161,7 @@
+ 		goto err;
+ 	}
+ 
+-	if (sscanf (argv[ARG_SEC], SECTOR_FORMAT, &tc->start) != 1)
++	if (sscanf (argv[ARG_SEC], "%uL", &tc->start) != 1)
+ 	{
+ 		ti->error = "truecrypt: Invalid device sector";
+ 		goto err;
+@@ -224,14 +224,14 @@
+ 	}
+ 
+ 	// Read-only start sector
+-	if (sscanf (argv[ARG_RO_START], SECTOR_FORMAT, &tc->read_only_start) != 1)
++	if (sscanf (argv[ARG_RO_START], "%uL", &tc->read_only_start) != 1)
+ 	{
+ 		ti->error = "truecrypt: Invalid read-only start sector";
+ 		goto err;
+ 	}
+ 
+ 	// Read-only end sector
+-	if (sscanf (argv[ARG_RO_END], SECTOR_FORMAT, &tc->read_only_end) != 1)
++	if (sscanf (argv[ARG_RO_END], "%uL", &tc->read_only_end) != 1)
+ 	{
+ 		ti->error = "truecrypt: Invalid read-only end sector";
+ 		goto err;
+@@ -375,8 +375,8 @@
+ 	int seg_no;
+ 	
+ 	trace (3, "truecrypt_endio (%p, %d, %d)\n", bio, bytes_done, error);
+-	trace (1, "end: sc=" SECTOR_FORMAT " fl=%ld rw=%ld sz=%d ix=%hd vc=%hd dn=%d er=%d\n",
+-		bio->bi_sector, bio->bi_flags, bio->bi_rw, bio->bi_size, bio->bi_idx, bio->bi_vcnt, bytes_done, error);
++	trace (1, "end: sc=%llu fl=%ld rw=%ld sz=%d ix=%hd vc=%hd dn=%d er=%d\n",
++		(unsigned long long) bio->bi_sector, bio->bi_flags, bio->bi_rw, bio->bi_size, bio->bi_idx, bio->bi_vcnt, bytes_done, error);
+ 
+ 	if (error != 0)
+ 		bc->error = error;
+@@ -420,8 +420,8 @@
+ 	int seg_no;
+ 
+ 	trace (3, "truecrypt_map (%p, %p, %p)\n", ti, bio, map_context);
+-	trace (1, "map: sc=" SECTOR_FORMAT " fl=%ld rw=%ld sz=%d ix=%hd vc=%hd\n",
+-		bio->bi_sector, bio->bi_flags, bio->bi_rw, bio->bi_size, bio->bi_idx, bio->bi_vcnt);
++	trace (1, "map: sc=%llu fl=%ld rw=%ld sz=%d ix=%hd vc=%hd\n",
++		(unsigned long long) bio->bi_sector, bio->bi_flags, bio->bi_rw, bio->bi_size, bio->bi_idx, bio->bi_vcnt);
+ 
+ 	// Write protection
+ 	if (bio_data_dir (bio) == WRITE && READ_ONLY (tc))
+@@ -547,7 +547,7 @@
+ 
+ 	atomic_inc (&bc->ref_count);
+ 
+-	trace (3, "generic_make_request (rw=%ld sc=" SECTOR_FORMAT ")\n", bion->bi_rw, bion->bi_sector);
++	trace (3, "generic_make_request (rw=%ld sc=%llu )\n", bion->bi_rw,(unsigned long long) bion->bi_sector);
+ 	generic_make_request (bion);
+ 
+ 	dereference_bio_ctx (bc);
+@@ -569,13 +569,13 @@
+ 		{
+ 			char name[32];
+ 			format_dev_t (name, tc->dev->bdev->bd_dev);
+-			snprintf (result, maxlen, "%d %d 0 0 %s " SECTOR_FORMAT " " SECTOR_FORMAT " " SECTOR_FORMAT " %Ld %Ld %d %s",
++			snprintf (result, maxlen, "%d %d 0 0 %s %llu %llu %llu %Ld %Ld %d %s",
+ 				tc->ci->ea,
+ 				tc->ci->mode,
+ 				name,
+-				tc->start,
+-				tc->read_only_start,
+-				tc->read_only_end,
++				(unsigned long long) tc->start,
++				(unsigned long long) tc->read_only_start,
++				(unsigned long long) tc->read_only_end,
+ 				tc->mtime,
+ 				tc->atime,
+ 				tc->flags,

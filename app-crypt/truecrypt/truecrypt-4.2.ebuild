@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.2.ebuild,v 1.1 2006/06/05 08:19:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.2.ebuild,v 1.2 2006/06/06 11:46:08 dragonheart Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -33,6 +33,7 @@ src_unpack() {
 	cd "${S}"
 	linux-mod_pkg_setup
 	epatch "${FILESDIR}/${P}-makefile.patch"
+	epatch "${FILESDIR}/${P}-nosectorformat.patch"
 }
 
 src_compile() {
