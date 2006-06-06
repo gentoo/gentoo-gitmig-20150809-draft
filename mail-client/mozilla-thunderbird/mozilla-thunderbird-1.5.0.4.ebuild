@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.4.ebuild,v 1.4 2006/06/04 02:44:24 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.4.ebuild,v 1.5 2006/06/06 17:05:58 gustavoz Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/sourc
 	mirror://gentoo/${P}-patches-${PVER}.tar.bz2
 	http://dev.gentoo.org/~anarchy/dist/${P}-patches-${PVER}.tar.bz2"
 
-KEYWORDS="amd64 ~ia64 ppc ~sparc x86"
+KEYWORDS="amd64 ~ia64 ppc sparc x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="ldap crypt"
@@ -54,9 +54,6 @@ src_unpack() {
 		sed -i -e "s#OS_TEST :=.*uname -m.*\$#OS_TEST:=${ARCH}#" \
 			${S}/security/coreconf/arch.mk
 	fi
-
-	# Fix sparc bus errors #115729 <gustavoz>
-	use sparc && epatch ${FILESDIR}/firefox-bus-error.patch
 
 	WANT_AUTOCONF="2.13" \
 		WANT_AUTOMAKE="2.13" \
