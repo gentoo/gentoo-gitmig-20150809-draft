@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythgame
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.31 2006/05/29 06:05:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.32 2006/06/06 03:35:57 halcy0n Exp $
+
+  06 Jun 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/mythgame-0.19-gcc41.patch, mythgame-0.19.ebuild:
+  Add patch to fix compilation with gcc-4.1 by Stephen Bridges <widget AT
+  stdin DOT co DOT uk>; bug #132453
 
   29 May 2006; Doug Goldstein <cardoe@gentoo.org> -mythgame-0.18.1.ebuild:
   getting rid of old stuff

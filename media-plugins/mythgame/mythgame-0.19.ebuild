@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/mythgame-0.19.ebuild,v 1.2 2006/02/12 10:32:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/mythgame-0.19.ebuild,v 1.3 2006/06/06 03:35:57 halcy0n Exp $
 
-inherit mythtv-plugins
+inherit eutils mythtv-plugins
 
 DESCRIPTION="Game emulator module for MythTV."
 HOMEPAGE="http://www.mythtv.org/"
@@ -14,6 +14,11 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}"
+
+src_unpack() {
+	mythtv-plugins_src_unpack
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+}
 
 src_install () {
 	mythtv-plugins_src_install || die "install failed"
