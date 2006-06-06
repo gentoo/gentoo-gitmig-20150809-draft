@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/wop/wop-0.4.3.ebuild,v 1.1 2006/03/30 17:31:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/wop/wop-0.4.3.ebuild,v 1.2 2006/06/06 16:31:51 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ SRC_URI="http://wormsofprey.org/download/${P}-src.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="sys-libs/zlib
