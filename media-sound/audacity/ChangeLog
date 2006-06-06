@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.41 2006/03/08 18:54:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.42 2006/06/06 11:16:17 matsuu Exp $
+
+*audacity-1.3.0b (06 Jun 2006)
+
+  06 Jun 2006; MATSUU Takuto <matsuu@gentoo.org> -audacity-1.2.2.ebuild,
+  -audacity-1.2.3-r1.ebuild, -audacity-1.2.4b.ebuild,
+  Version bumped, Bug 124120.
+  Removed old versions.
 
   27 Feb 2006; MATSUU Takuto <matsuu@gentoo.org> audacity-1.2.4b-r1.ebuild:
   Added epatch ${FILESDIR}/${PN}-1.2.3-x86.patch, Bug 121634.
