@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.2.ebuild,v 1.7 2006/02/06 19:25:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.2.ebuild,v 1.8 2006/06/06 09:29:44 matsuu Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,8 +21,7 @@ RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
 	gtk? ( ${GTK_DEPEND} )
 	immqt? ( ${GTK_DEPEND} )
 	immqt-bc? ( ${GTK_DEPEND} )
-	!app-i18n/scim-cvs
-	!<app-i18n/scim-chinese-0.4.0"
+	!app-i18n/scim-cvs"
 DEPEND="${RDEPEND}
 	|| ( x11-libs/libXt virtual/x11 )
 	dev-lang/perl"
