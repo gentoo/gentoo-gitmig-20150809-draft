@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qtools/qtools-0.56.ebuild,v 1.10 2006/01/01 21:07:52 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qtools/qtools-0.56.ebuild,v 1.11 2006/06/06 01:36:14 eradicator Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 ~hppa ~mips ppc ~sparc x86"
 IUSE="static"
 
-DEPEND="sys-devel/gcc-config"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
