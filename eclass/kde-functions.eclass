@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.137 2006/06/06 12:14:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.138 2006/06/06 12:24:26 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -488,7 +488,7 @@ deprange-list() {
 			# Revision constraint on lower bound
 			if [ -n "$MINREV" ]; then
 				NEWDEP="$NEWDEP
-						$(deprange-iterate-numbers "=$PACKAGE-$BASEVER.${MINMINOR}_$MINSUFFIX-r" $MINREV 99)"
+						$(deprange-iterate-numbers "=$PACKAGE-$BASEVER.${MINMINOR}_$MINSUFFIX-r" $MINREV 50)"
 			fi
 
 		# If the minor version numbers are different too
@@ -521,7 +521,7 @@ deprange-list() {
 					BASE="=$PACKAGE-$BASEVER.${MINMINOR%-r*}-r"
 				fi
 				NEWDEP="$NEWDEP
-						$(deprange-iterate-numbers $BASE ${MINREV#r} 99)"
+						$(deprange-iterate-numbers $BASE ${MINREV#r} 50)"
 			fi
 		fi
 
