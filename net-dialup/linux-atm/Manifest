@@ -6,12 +6,12 @@ MD5 377f9a635f2f11c0d0e8b5c6b83d14d7 files/2.4.1-gcc34.patch 1175
 MD5 30ac2602fbe634b8719307df79b1f4cb files/2.4.1-gcc4.patch 3394
 MD5 d7dd6d910e147168b4d1204e618f5a79 files/2.4.1-stdlib.patch 1216
 MD5 6a54ce48b2a9cb74b5b968847fe7a1ea files/digest-linux-atm-2.4.1-r1 67
-MD5 dfc93796fd982b5014f0d6d6e798ece2 linux-atm-2.4.1-r1.ebuild 1319
+MD5 1ca39b81b7090870f2253bd69df86a0d linux-atm-2.4.1-r1.ebuild 1315
 MD5 aca8fbd1d23180a4c3434d1ca7f812e1 metadata.xml 221
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.2.2 (GNU/Linux)
 
-iD8DBQFEFFLyjG8pv1lIUX4RAogLAJkByRfQyRto6dtRa7Px7YbLMetlEgCePUVI
-yLiHhf4oZm/aYUD9YSVtqkQ=
-=jo81
+iD8DBQFEhR9RjG8pv1lIUX4RAthyAKC0elKcD55cOPNIHjYxIJ7w17+JIwCfQVX1
+1CiIinppSGsM/yCxiq8AKKI=
+=D8g5
 -----END PGP SIGNATURE-----
