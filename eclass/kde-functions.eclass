@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.136 2006/05/19 22:39:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.137 2006/06/06 12:14:06 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -499,12 +499,14 @@ deprange-list() {
 				NEWDEP="$(deprange-iterate-suffixes "~$PACKAGE-$BASEVER.$MAXMINOR" alpha1 $MAXSUFFIX)"
 			fi
 
+			STARTMINOR="${MINMINOR}"
+
 			# regular versions in between
 			if [ -n "$MINREV" -a -z "$MINSUFFIX" ]; then
-				let MAXMINOR++
+				let STARTMINOR++
 			fi
 			NEWDEP="$NEWDEP
-					$(deprange-iterate-numbers "~${PACKAGE}-${BASEVER}." $MINMINOR $MAXMINOR)"
+					$(deprange-iterate-numbers "~${PACKAGE}-${BASEVER}." $STARTMINOR $MAXMINOR)"
 
 			# Min version's allowed suffixes
 			if [ -n "$MINSUFFIX" ]; then
