@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.2.ebuild,v 1.3 2006/04/17 11:58:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.2.ebuild,v 1.4 2006/06/06 19:25:40 dertobi123 Exp $
 
 inherit eutils
 
@@ -10,21 +10,28 @@ MY_PSDK_x86="${MY_P_x86/basic/sdk}"
 MY_P_amd64="${PN/oracle-/}-linux-x86-64-${PV}-20060228"
 MY_PSDK_amd64="${MY_P_amd64/basic/sdk}"
 
+MY_P_ppc="${PN/oracle-/}-linuxppc32-${PV}-20060327"
+MY_PSDK_ppc="${MY_P_ppc/basic/sdk}"
+
+MY_P_ppc64="${PN/oracle-/}-linuxppc-${PV}-20060327"
+MY_PSDK_ppc64="${MY_P_ppc64/basic/sdk}"
+
 S=${WORKDIR}
 DESCRIPTION="Oracle 10g client installation for Linux with SDK"
 HOMEPAGE="http://otn.oracle.com/software/tech/oci/instantclient/htdocs/linuxsoft.html"
 SRC_URI="x86? ( ${MY_P_x86}.zip ${MY_PSDK_x86}.zip )
-		 amd64? ( ${MY_P_amd64}.zip ${MY_PSDK_amd64}.zip )"
+		 amd64? ( ${MY_P_amd64}.zip ${MY_PSDK_amd64}.zip )
+		 ppc? ( ${MY_P_ppc}.zip ${MY_PSDK_ppc}.zip )
+		 ppc64? ( ${MY_P_ppc64}.zip ${MY_PSDK_ppc64}.zip )"
 
 LICENSE="OTN"
 SLOT="${PV}"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~ppc ~x86"
 RESTRICT="fetch"
 IUSE=""
 
 DEPEND="app-arch/unzip"
-RDEPEND="|| ( =sys-libs/libstdc++-v3-3.3* =sys-devel/gcc-3.3* )
-	app-admin/eselect-oracle"
+RDEPEND="|| ( =sys-libs/libstdc++-v3-3.3* =sys-devel/gcc-3.3* )"
 
 my_arch() {
 	MY_P=MY_P_${ARCH}
@@ -92,8 +99,4 @@ pkg_postinst() {
 	einfo "packages as well."
 	einfo
 	einfo "Examples are located in /usr/share/doc/${PF}/"
-	einfo
-	ewarn "A new eselect module has been added to easily switch between"
-	ewarn "different Instantclient versions and to set your ORACLE_HOME."
-	ewarn "See 'eselect oracle help' for reference"
 }

@@ -1,21 +1,25 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.2.0.2.ebuild,v 1.1 2006/04/05 18:59:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.2.0.2.ebuild,v 1.2 2006/06/06 19:27:50 dertobi123 Exp $
 
 inherit eutils
 
 MY_P_x86="${PN/oracle-/}-linux32-${PV}-20060331"
 MY_P_amd64="${PN/oracle-/}-linux-x86-64-${PV}-20060228"
+MY_P_ppc="${PN/oracle-/}-linuxppc32-${PV}-20060327"
+MY_P_ppc64="${PN/oracle-/}-linuxppc-${PV}-20060327"
 
 S=${WORKDIR}
 DESCRIPTION="Oracle 10g client installation for Linux: SQL*Plus"
 HOMEPAGE="http://otn.oracle.com/software/tech/oci/instantclient/htdocs/linuxsoft.html"
 SRC_URI="x86? ( ${MY_P_x86}.zip )
-		 amd64? ( ${MY_P_amd64}.zip )"
+		 amd64? ( ${MY_P_amd64}.zip )
+		 ppc? ( ${MY_P_ppc}.zip )
+		 ppc64? ( ${MY_P_ppc64}.zip )"
 
 LICENSE="OTN"
 SLOT="${PV}"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~ppc ~x86"
 RESTRICT="fetch"
 IUSE=""
 
