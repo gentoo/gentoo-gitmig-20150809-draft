@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5477 2006/06/06 01:54:37 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5478 2006/06/06 07:20:55 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -559,10 +559,6 @@ net-print/hpoj
 >=net-www/apache-2.2.0
 >=dev-libs/apr-1.0.0
 >=dev-libs/apr-util-1.0.0
-
-# Michael Sterrett <mr_bones_@gentoo.org> (31 Jan 2006)
-# multiplayer is broken
-=games-strategy/glob-0.8.18
 
 # Luca Barbato <lu_zero@gentoo.org> (25 Jan 2006)
 # untested
