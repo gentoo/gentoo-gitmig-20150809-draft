@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 1.0/conf.d/zabbix-suckerd 334 RMD160 f7a074de1a3edb9c3901cb90a44ffc2c08c4c9e4 SHA1 0737581ff71e5426f07f613199f05b9a46ff992e SHA256 bfdf4f181403ca8722b54b1a3e6d54aaf66f338a87a399d97290f9126914b374
 MD5 ee29fececd9e7e7b108b691b854020b0 files/1.0/conf.d/zabbix-suckerd 334
 RMD160 f7a074de1a3edb9c3901cb90a44ffc2c08c4c9e4 files/1.0/conf.d/zabbix-suckerd 334
@@ -26,10 +29,10 @@ AUX 1.0/zabbix_trapperd.conf 1197 RMD160 49cd2d3186e590ad94743affc8af245986410db
 MD5 1a70ae90c2e9f4e94bc5798c80a01697 files/1.0/zabbix_trapperd.conf 1197
 RMD160 49cd2d3186e590ad94743affc8af245986410dbe files/1.0/zabbix_trapperd.conf 1197
 SHA256 88e5e6fc032d54abc00af805095b8c54b80cb5a560027fb640dba7bf92529cc4 files/1.0/zabbix_trapperd.conf 1197
-AUX 1.1/init.d/zabbix-server 448 RMD160 8472e7fd3db92bee4d2be3a90f9f33058716f1ff SHA1 1914bcac1d6fe9338acec169624d759a934d5ede SHA256 81c470ac304e6eeb62d943a7f6d250eac7a274aa578f7fe5537c6f970ae27654
-MD5 cfd40bb7903f80df0aca6bccf5cb6935 files/1.1/init.d/zabbix-server 448
-RMD160 8472e7fd3db92bee4d2be3a90f9f33058716f1ff files/1.1/init.d/zabbix-server 448
-SHA256 81c470ac304e6eeb62d943a7f6d250eac7a274aa578f7fe5537c6f970ae27654 files/1.1/init.d/zabbix-server 448
+AUX 1.1/init.d/zabbix-server 569 RMD160 7fd0ec8870f94769815017659a73e1bddaed4973 SHA1 3ed7f9640c25e955b03734321051631a30d3809b SHA256 c4581d0251866cfc23cad9d7038c299cc38a410e46c89809d47367418e193e0f
+MD5 2d0614aa4306e4621d65564824734ee2 files/1.1/init.d/zabbix-server 569
+RMD160 7fd0ec8870f94769815017659a73e1bddaed4973 files/1.1/init.d/zabbix-server 569
+SHA256 c4581d0251866cfc23cad9d7038c299cc38a410e46c89809d47367418e193e0f files/1.1/init.d/zabbix-server 569
 AUX 1.1/zabbix_server.conf 2309 RMD160 bd02a9d9508e3f17aa18b10c7234e6c23d7d8c5a SHA1 240cbb4165c368072db5803b9f5a51bd9c8bcf66 SHA256 c9222019b4221e9c6b661eb6918b2b01c9d19dafc62cc380878a29d0b65c30be
 MD5 89f183ec3d230d518a1b20b00be21ad6 files/1.1/zabbix_server.conf 2309
 RMD160 bd02a9d9508e3f17aa18b10c7234e6c23d7d8c5a files/1.1/zabbix_server.conf 2309
@@ -86,3 +89,10 @@ SHA256 0da858ef9c249d9fe814beefe60ef90c8012f70f022b2f575e6d716d2736971a files/di
 MD5 4990ea7476a1a66671f7faf9b1c93719 files/digest-zabbix-server-1.1_alpha7 68
 RMD160 a7f96c94c87207b1892c72dc1af24655ec5acd60 files/digest-zabbix-server-1.1_alpha7 68
 SHA256 2d4b8595b2103d43be706e78f1fc1cb549bfe7a8cb33841424bb6bb19132cf2b files/digest-zabbix-server-1.1_alpha7 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEheNbI1lqEGTUzyQRAt6pAKDVEJtBrmW+xu+TisQiB0tMCjCW5QCePAoR
+l//3W4Pc9bidtX++2jalpjg=
+=UYIY
+-----END PGP SIGNATURE-----
