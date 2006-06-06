@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_roaming/mod_roaming-1.0.2.ebuild,v 1.3 2005/12/19 23:44:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_roaming/mod_roaming-1.0.2.ebuild,v 1.4 2006/06/06 09:37:33 hollow Exp $
 
 inherit eutils apache-module
 
@@ -13,7 +13,7 @@ KEYWORDS="x86"
 IUSE=""
 SLOT="0"
 
-APACHE1_MOD_CONF="2.0.0-r1/18_mod_roaming"
+APACHE1_MOD_CONF="18_mod_roaming"
 APACHE1_MOD_DEFINE="ROAMING"
 
 DOCFILES="CHANGES INSTALL LICENSE README"
