@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.142 2006/06/05 22:13:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.143 2006/06/06 11:12:04 pylon Exp $
+
+  06 Jun 2006; Lars Weiler <pylon@gentoo.org>
+  files/digest-cdrtools-2.01.01_alpha10, Manifest:
+  New Digest due to file-change after announcement; bug #135709.
 
 *cdrtools-2.01.01_alpha10 (05 Jun 2006)
 
