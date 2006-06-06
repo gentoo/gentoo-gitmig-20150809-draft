@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-app.eclass,v 1.5 2006/05/05 13:58:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-app.eclass,v 1.6 2006/06/06 14:08:47 mcummings Exp $
 
 #
 # Author: Michael Cummings <mcummings@gentoo.org>
@@ -28,11 +28,11 @@ perl-app_src_prep() {
 		einfo "Using ExtUtils::MakeMaker"
 		#perl Makefile.PL ${myconf} \
 		perl Makefile.PL ${myconf} INSTALLMAN3DIR='none'\
-		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
+		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D} || die "Unable to build! (are you using USE=\"build\"?)"
 	fi
 	if [ -f Build.PL ] && [ ! -f Makefile ] ; then
 		einfo "Using Module::Build"
-		perl Build.PL installdirs=vendor destdir=${D} libdoc=
+		perl Build.PL --installdirs=vendor --destdir=${D} --libdoc= || die "Unable to build! (are you using USE=\"build\"?)"
 	fi
 	if [ ! -f Build.PL ] && [ ! -f Makefile.PL ]; then
 		einfo "No Make or Build file detected..."
@@ -47,7 +47,7 @@ perl-app_src_compile() {
 	if [ -f Makefile ]; then
 		make ${mymake} || die "compilation failed"
 	elif [ -f Build ]; then
-		perl Build build
+		perl Build build || die "compilation failed"
 	fi
 
 }
