@@ -5,7 +5,7 @@
  	}
  
 -	if (sscanf (argv[ARG_SEC], SECTOR_FORMAT, &tc->start) != 1)
-+	if (sscanf (argv[ARG_SEC], "%uL", &tc->start) != 1)
++	if (sscanf (argv[ARG_SEC], "%Lu", &tc->start) != 1)
  	{
  		ti->error = "truecrypt: Invalid device sector";
  		goto err;
@@ -14,7 +14,7 @@
  
  	// Read-only start sector
 -	if (sscanf (argv[ARG_RO_START], SECTOR_FORMAT, &tc->read_only_start) != 1)
-+	if (sscanf (argv[ARG_RO_START], "%uL", &tc->read_only_start) != 1)
++	if (sscanf (argv[ARG_RO_START], "%Lu", &tc->read_only_start) != 1)
  	{
  		ti->error = "truecrypt: Invalid read-only start sector";
  		goto err;
@@ -22,7 +22,7 @@
  
  	// Read-only end sector
 -	if (sscanf (argv[ARG_RO_END], SECTOR_FORMAT, &tc->read_only_end) != 1)
-+	if (sscanf (argv[ARG_RO_END], "%uL", &tc->read_only_end) != 1)
++	if (sscanf (argv[ARG_RO_END], "%Lu", &tc->read_only_end) != 1)
  	{
  		ti->error = "truecrypt: Invalid read-only end sector";
  		goto err;

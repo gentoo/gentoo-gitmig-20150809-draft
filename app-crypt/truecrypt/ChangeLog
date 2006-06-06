@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.2 2006/06/06 11:46:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.3 2006/06/06 12:05:42 dragonheart Exp $
+
+*truecrypt-4.2-r1 (06 Jun 2006)
+
+  06 Jun 2006; Daniel Black <dragonheart@gentoo.org>
+  files/truecrypt-4.2-nosectorformat.patch, +truecrypt-4.2-r1.ebuild,
+  -truecrypt-4.2.ebuild:
+  %uL should be %Lu in patch
 
   06 Jun 2006; Daniel Black <dragonheart@gentoo.org>
   +files/truecrypt-4.2-nosectorformat.patch, truecrypt-4.2.ebuild:
