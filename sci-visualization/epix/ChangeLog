@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/epix
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.3 2006/06/03 14:49:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.4 2006/06/06 22:07:12 markusle Exp $
+
+  06 Jun 2006; Markus Dittrich <markusle@gentoo.org>
+  files/epix-doc-gentoo.patch:
+  Fix makefile patch to address sandbox issues when building the docs
+  (see bug #135266).
 
 *epix-1.0.7 (03 Jun 2006)
 

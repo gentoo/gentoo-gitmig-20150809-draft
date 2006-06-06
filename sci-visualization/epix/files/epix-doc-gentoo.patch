@@ -1,6 +1,6 @@
 diff -Naur epix-1.0.7-old/Makefile.in epix-1.0.7/Makefile.in
 --- epix-1.0.7-old/Makefile.in	2006-05-19 17:33:19.000000000 -0400
-+++ epix-1.0.7/Makefile.in	2006-06-03 10:05:47.000000000 -0400
++++ epix-1.0.7/Makefile.in	2006-06-06 17:44:06.000000000 -0400
 @@ -242,7 +242,7 @@
  #
  man_MANS = epix.1 elaps.1 flix.1 laps.1
@@ -22,9 +22,33 @@ diff -Naur epix-1.0.7-old/Makefile.in epix-1.0.7/Makefile.in
  
  # This is being installed by install-exec, but should not be executable
  install-exec-local: install-pkglibDATA
+diff -Naur epix-1.0.7-old/contrib/doc/Makefile.in epix-1.0.7/contrib/doc/Makefile.in
+--- epix-1.0.7-old/contrib/doc/Makefile.in	2006-05-19 17:33:18.000000000 -0400
++++ epix-1.0.7/contrib/doc/Makefile.in	2006-06-06 17:45:36.000000000 -0400
+@@ -145,7 +145,7 @@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ docdir = $(datadir)/doc/epix
+-EPIXFLAGS = --no-defaults -I.. -I../.. -L.. -L../.. -lepixext -lepix -v
++EPIXFLAGS = --no-defaults -I.. -I../.. -L.. -L../.. -lepixext -lepix 
+ XPS := $(wildcard *.cc)
+ EEPICS = $(XPS:.cc=.eepic)
+ CLEANFILES = *~ *.dvi *.log contrib_src.tar contrib_src.tar.gz \
+diff -Naur epix-1.0.7-old/doc/Makefile.in epix-1.0.7/doc/Makefile.in
+--- epix-1.0.7-old/doc/Makefile.in	2006-05-19 17:33:19.000000000 -0400
++++ epix-1.0.7/doc/Makefile.in	2006-06-06 17:45:12.000000000 -0400
+@@ -145,7 +145,7 @@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ docdir = $(datadir)/doc/epix
+-EPIXFLAGS = --no-defaults -I.. -L.. -lepix -v
++EPIXFLAGS = --no-defaults -I.. -L.. -lepix
+ XPS := $(wildcard *.xp)
+ EEPICS = $(XPS:.xp=.eepic)
+ CLEANFILES = *~ *.dvi *.log *.out *.ilg *.idx \
 diff -Naur epix-1.0.7-old/samples/Makefile.in epix-1.0.7/samples/Makefile.in
 --- epix-1.0.7-old/samples/Makefile.in	2006-05-19 17:33:19.000000000 -0400
-+++ epix-1.0.7/samples/Makefile.in	2006-06-03 10:04:16.000000000 -0400
++++ epix-1.0.7/samples/Makefile.in	2006-06-06 17:44:06.000000000 -0400
 @@ -145,7 +145,7 @@
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
