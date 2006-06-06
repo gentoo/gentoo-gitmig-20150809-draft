@@ -18,3 +18,4 @@ move media-tv/v4l-dvb-cvs media-tv/v4l-dvb-hg
 move sys-apps/pmtools sys-power/pmtools
 move app-crypt/gpg-agent app-crypt/gnupg
 move app-mobilephone/obexfs sys-fs/obexfs
+move app-i18n/scim-chinese app-i18n/scim-pinyin
