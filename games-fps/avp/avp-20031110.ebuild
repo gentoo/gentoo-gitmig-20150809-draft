@@ -1,11 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20031110.ebuild,v 1.1 2006/06/06 14:11:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20031110.ebuild,v 1.2 2006/06/06 14:20:29 wolf31o2 Exp $
 
 #ECVS_SERVER="icculus.org:/cvs/cvsroot"
 ECVS_PASS="anonymous"
 ECVS_MODULE="avp"
-inherit eutils cvs games
+#inherit eutils cvs games
+inherit eutils games
 
 DESCRIPTION="Linux port of Aliens vs Predator"
 HOMEPAGE="http://www.icculus.org/avp/"
