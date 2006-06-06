@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.8 2006/03/31 21:12:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.9 2006/06/06 18:51:10 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -20,26 +20,30 @@ KEYWORDS="-* amd64 x86"
 IUSE="alsa opengl dedicated"
 RESTRICT="strip"
 
-RDEPEND="sys-libs/glibc
-	!amd64? (
-		media-libs/libsdl )
+UIDEPEND="virtual/opengl
+	x86? (
+		|| (
+			(
+				x11-libs/libXext
+				x11-libs/libX11
+				x11-libs/libXau
+				x11-libs/libXdmcp )
+			virtual/x11 ) )
+		media-libs/libsdl
 	amd64? (
 		app-emulation/emul-linux-x86-sdl
-		app-emulation/emul-linux-x86-xlibs )
-	opengl? (
-		virtual/opengl
-		x86? (
-			|| (
-				(
-					x11-libs/libXext
-					x11-libs/libX11
-					x11-libs/libXau
-					x11-libs/libXdmcp )
-				virtual/x11 ) ) )
-	dedicated? (
-		app-misc/screen )
-	alsa? (
-		>=media-libs/alsa-lib-1.0.6 )"
+		app-emulation/emul-linux-x86-xlibs
+		|| (
+			>=app-emulation/emul-linux-x86-xlibs-7.0
+			>=media-video/nvidia-glx-1.0.6629-r3
+			>=x11-drivers/ati-drivers-8.8.25-r1 ) )
+	alsa? ( >=media-libs/alsa-lib-1.0.6 )"
+
+RDEPEND="sys-libs/glibc
+	dedicated? ( app-misc/screen )
+	amd64? ( app-emulation/emul-linux-x86-baselibs )
+	opengl? ( ${UIDEPEND} )
+	!dedicated? ( !opengl? ( ${UIDEPEND} ) )"
 
 S=${WORKDIR}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.14 2006/05/22 18:09:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.15 2006/06/06 18:45:47 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://3dgamers/doom3/doom3-linux-${PV}-demo.x86.run
 
 LICENSE="DOOM3"
 SLOT="0"
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* amd64 x86"
 IUSE="opengl dedicated"
 RESTRICT="strip mirror"
 
@@ -24,7 +24,8 @@ DEPEND="app-arch/bzip2
 RDEPEND="virtual/libc
 	opengl? ( virtual/opengl )
 	amd64? ( app-emulation/emul-linux-x86-xlibs
-		|| ( >=media-video/nvidia-glx-1.0.6629-r3
+		|| ( >=app-emulation/emul-linux-x86-xlibs-7.0
+			>=media-video/nvidia-glx-1.0.6629-r3
 			>=x11-drivers/ati-drivers-8.8.25-r1 ) )
 	dedicated? ( app-misc/screen )"
 

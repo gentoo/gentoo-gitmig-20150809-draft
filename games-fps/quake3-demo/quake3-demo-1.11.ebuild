@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.14 2006/04/13 21:10:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.15 2006/06/06 18:53:17 wolf31o2 Exp $
 
 inherit games
 
@@ -14,10 +14,27 @@ SLOT="0"
 KEYWORDS="-* x86"
 IUSE="opengl dedicated 3dfx"
 
-DEPEND=""
-RDEPEND="dedicated? ( app-misc/screen )
-	!dedicated? ( virtual/opengl )
-	opengl? ( virtual/opengl )"
+UIDEPEND="virtual/opengl
+	x86? (
+		|| (
+			(
+				x11-libs/libXext
+				x11-libs/libX11
+				x11-libs/libXau
+				x11-libs/libXdmcp )
+			virtual/x11 ) )
+	amd64? (
+		app-emulation/emul-linux-x86-xlibs
+		|| (
+			>=app-emulation/emul-linux-x86-xlibs-7.0
+			>=media-video/nvidia-glx-1.0.6629-r3
+			>=x11-drivers/ati-drivers-8.8.25-r1 ) )"
+
+RDEPEND="sys-libs/glibc
+	dedicated? ( app-misc/screen )
+	amd64? ( app-emulation/emul-linux-x86-baselibs )
+	opengl? ( ${UIDEPEND} )
+	!dedicated? ( !opengl? ( ${UIDEPEND} ) )"
 
 S=${WORKDIR}
 
