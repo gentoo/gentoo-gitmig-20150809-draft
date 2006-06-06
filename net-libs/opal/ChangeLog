@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.1 2006/03/20 23:39:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.2 2006/06/06 18:09:22 genstef Exp $
+
+*opal-2.2.2 (06 Jun 2006)
+
+  06 Jun 2006; Stefan Schweizer <genstef@gentoo.org> +opal-2.2.2.ebuild:
+  version bump thanks to David PIRY <klessou@gmail.com> in bug 135785
 
 *opal-2.2.1 (20 Mar 2006)
 
