@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.29 2006/05/14 09:11:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.30 2006/06/06 22:35:03 carlo Exp $
+
+  06 Jun 2006; Carsten Lohrke <carlo@gentoo.org>
+  gnome-python-extras-2.12.1.ebuild, gnome-python-extras-2.14.0.ebuild:
+  Fix use of nonexistent versioned virtual/python.
 
   14 May 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   gnome-python-extras-2.14.0.ebuild:

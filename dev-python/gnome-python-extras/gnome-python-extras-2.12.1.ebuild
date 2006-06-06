@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.12.1.ebuild,v 1.5 2006/05/05 17:32:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.12.1.ebuild,v 1.6 2006/06/06 22:35:03 carlo Exp $
+
+NEED_PYTHON=2.4
 
 inherit eutils gnome2 python
 
@@ -12,8 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc firefox mozilla"
 
-RDEPEND=">=virtual/python-2.4
-	>=x11-libs/gtk+-2.4
+RDEPEND=">=x11-libs/gtk+-2.4
 	>=dev-libs/glib-2.6
 	>=dev-python/gnome-python-2.10
 	>=dev-python/pygtk-2.4

@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.16 2006/05/02 13:16:17 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.17 2006/06/06 22:34:13 carlo Exp $
+
+  06 Jun 2006; Carsten Lohrke <carlo@gentoo.org> gst-python-0.10.1.ebuild,
+  gst-python-0.10.2.ebuild, gst-python-0.10.3.ebuild,
+  gst-python-0.10.4.ebuild:
+  Fix use of nonexistent versioned virtual/python.
+
+  06 Jun 2006; Carsten Lohrke <carlo@gentoo.org> gst-python-0.10.1.ebuild,
+  gst-python-0.10.2.ebuild, gst-python-0.10.3.ebuild,
+  gst-python-0.10.4.ebuild:
+  Fix use of nonexistent versioned virtual/python.
 
 *gst-python-0.10.4 (02 May 2006)
 
