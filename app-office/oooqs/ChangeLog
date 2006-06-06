@@ -1,6 +1,9 @@
 # ChangeLog for app-office/oooqs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/ChangeLog,v 1.25 2006/06/02 06:11:31 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/ChangeLog,v 1.26 2006/06/06 19:11:10 dertobi123 Exp $
+
+  06 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org> oooqs-2.1.0.ebuild:
+  ppc stable, bug #134952
 
   02 Jun 2006; Andreas Proschofsky <suka@gentoo.org> oooqs-2.1.0.ebuild:
   Fix dependenies
