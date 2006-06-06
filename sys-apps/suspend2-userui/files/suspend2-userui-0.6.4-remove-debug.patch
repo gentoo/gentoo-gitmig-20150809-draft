@@ -1,0 +1,13 @@
+Common subdirectories: suspend2-userui-0.6.4/fbsplash and suspend2-userui-0.6.4-remove-debug/fbsplash
+diff -u suspend2-userui-0.6.4/userui_core.c suspend2-userui-0.6.4-remove-debug/userui_core.c
+--- suspend2-userui-0.6.4/userui_core.c	2006-06-06 19:25:12.000000000 +0200
++++ suspend2-userui-0.6.4-remove-debug/userui_core.c	2006-06-06 20:07:33.000000000 +0200
+@@ -875,7 +875,6 @@
+ 	enforce_lifesavers();
+ 
+ 	if (test_run) {
+-	test_run = 0;
+ 	safe_to_exit = 0;
+ 
+ 		do_test_run();
+Common subdirectories: suspend2-userui-0.6.4/usplash and suspend2-userui-0.6.4-remove-debug/usplash
