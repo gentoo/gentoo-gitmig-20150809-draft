@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.1.ebuild,v 1.1 2006/06/06 18:08:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.1.ebuild,v 1.2 2006/06/06 18:50:13 genstef Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -54,8 +54,11 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf=""
 	# may cause ICE (bug #70638)
 	filter-flags -fstack-protector
+	# disable-alsa breaks oss, see bug 127677
+	use alsa && myconf="--enable-alsa"
 
 	econf \
 		--enable-plugins \
@@ -64,7 +67,6 @@ src_compile() {
 		$(use_enable ieee1394 dc) \
 		$(use_enable ieee1394 avc) \
 		$(use_enable oss) \
-		$(use_enable alsa) \
 		$(use_enable ipv6) \
 		$(use_enable sdl) \
 		$(use_enable ssl openssl) \
@@ -73,6 +75,7 @@ src_compile() {
 		$(use_enable ldap openldap) \
 		$(use_enable sasl) \
 		$(use_enable xml expat) \
+		${myconf} \
 		|| die "configure failed"
 
 	# Horrible hack to strip out -L/usr/lib to allow upgrades
