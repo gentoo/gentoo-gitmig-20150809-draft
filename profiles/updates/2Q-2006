@@ -19,3 +19,4 @@ move sys-apps/pmtools sys-power/pmtools
 move app-crypt/gpg-agent app-crypt/gnupg
 move app-mobilephone/obexfs sys-fs/obexfs
 move app-i18n/scim-chinese app-i18n/scim-pinyin
+move games-fps/avp-cvs games-fps/avp
