@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.66 2006/04/23 22:08:00 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.67 2006/06/06 18:19:55 gmsoft Exp $
+
+  06 Jun 2006; Guy Martin <gmsoft@gentoo.org> tightvnc-1.3_alpha7.ebuild:
+  Stable on hppa.
 
 *tightvnc-1.2.9-r2 (23 Apr 2006)
 
