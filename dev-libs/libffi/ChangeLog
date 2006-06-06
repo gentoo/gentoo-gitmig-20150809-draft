@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.37 2006/01/08 12:35:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.38 2006/06/06 01:23:21 eradicator Exp $
+
+  06 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  libffi-3.3.5.ebuild, libffi-3.4.1.ebuild, libffi-3.4.1-r1.ebuild,
+  libffi-3.4.3.ebuild:
+  Updated DEPEND to accept eselect-compiler.
 
   08 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> metadata.xml:
   Remove retiring dev from metadata.
