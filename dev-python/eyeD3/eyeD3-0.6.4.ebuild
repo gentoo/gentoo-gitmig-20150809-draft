@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.6.4.ebuild,v 1.4 2006/02/06 20:58:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.6.4.ebuild,v 1.5 2006/06/06 22:27:02 carlo Exp $
 
-IUSE=""
+NEED_PYTHON=2.3
 
 inherit distutils
 
@@ -13,8 +13,7 @@ SRC_URI="http://eyed3.nicfit.net/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
-
-DEPEND=">=virtual/python-2.3"
+IUSE=""
 
 src_compile() {
 	econf || die
