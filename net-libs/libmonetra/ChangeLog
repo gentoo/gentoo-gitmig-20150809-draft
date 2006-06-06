@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libmonetra
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmonetra/ChangeLog,v 1.17 2006/02/07 20:51:03 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmonetra/ChangeLog,v 1.18 2006/06/06 21:52:00 cardoe Exp $
+
+  06 Jun 2006; <dougg@gentoo.org> metadata.xml, libmonetra-5.2.ebuild:
+  Marking stable on amd64 & x86 since these are our production platforms and
+  use this. Adding myself as maintainer since this is my employeer and I
+  maintain the code.
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> libmonetra-4.2.2.ebuild:
   stable on amd64

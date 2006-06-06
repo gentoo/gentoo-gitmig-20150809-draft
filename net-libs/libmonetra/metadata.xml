@@ -6,4 +6,8 @@
         <email>robbat2@gentoo.org</email>
         <name>Robin H. Johnson</name>
     </maintainer>
+    <maintainer>
+	<email>cardoe@gentoo.org</email>
+	<name>Doug Goldstein</name>
+    </maintainer>
 </pkgmetadata>
