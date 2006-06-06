@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kolf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kolf/ChangeLog,v 1.48 2006/06/01 19:13:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kolf/ChangeLog,v 1.49 2006/06/06 22:45:52 flameeyes Exp $
+
+  06 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> kolf-3.5.3.ebuild:
+  Add ~x86-fbsd keyword.
 
 *kolf-3.5.3 (01 Jun 2006)
 
