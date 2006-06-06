@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5482 2006/06/06 14:50:57 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5483 2006/06/06 22:34:29 gustavoz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1236,10 +1236,6 @@ games-fps/aaut
 # Needs some more testing
 >=net-im/jabberoo-1.9.3
 >=net-im/gabber-1.9.3
-
-# <raker@gentoo.org> (18 Mar 2004)
-# The latest AfterStep beta is broken :(
-=x11-wm/afterstep-2.0_beta4
 
 # <weeve@gentoo.org> (02 Mar 2004)
 # mask slib-3.1.1 until gnucash can get a fix for it
