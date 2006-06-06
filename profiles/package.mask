@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5476 2006/06/06 01:52:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5477 2006/06/06 01:54:37 halcy0n Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -250,11 +250,6 @@ app-emulation/vmware-workstation-tools
 # Stefan Schweizer <genstef@gentoo.org> (05 May 2006)
 # many changes, requires remerging of "qfile /usr/lib/cups"
 =net-print/cups-1.2*
-
-# Mark Loeser <halcy0n@gentoo.org> (30 Apr 2006)
-# Masked pending removal - merged into xffm a while ago, so this is unmaintained
-# bug #127166
-net-misc/xfsamba
 
 # Stefan Cornelius <dercorny@gentoo.org> (30 Apr 2006)
 # Masking due to security issue described in bug 129874
