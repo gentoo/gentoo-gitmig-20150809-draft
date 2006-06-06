@@ -1,16 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+DIST supervise-scripts-3.4.tar.gz 16345
+DIST supervise-scripts-3.5.tar.gz 19994
+EBUILD supervise-scripts-3.4.ebuild 851 RMD160 750cbf7dd119ef4a74702fb514ad7840698efc33 SHA1 08645b2a8309f54131e29c1854121eed99784de4 SHA256 9bce31fede0f80fd57189a72941ab06cb222f0be0e19045cd9f4913a7a33942f
 MD5 bbcf6ba426fad94f85800888605ac523 supervise-scripts-3.4.ebuild 851
-MD5 4b2bbce7806cb93e1c1e7486d4869f01 supervise-scripts-3.5.ebuild 1291
-MD5 ba82c3922146151a1a66123e21d3c689 ChangeLog 2660
+RMD160 750cbf7dd119ef4a74702fb514ad7840698efc33 supervise-scripts-3.4.ebuild 851
+SHA256 9bce31fede0f80fd57189a72941ab06cb222f0be0e19045cd9f4913a7a33942f supervise-scripts-3.4.ebuild 851
+EBUILD supervise-scripts-3.5.ebuild 1252 RMD160 be9d2903aa60a580ea6dced8565c87bc7b242779 SHA1 375ff85f20b0719842c1ab20769a89813946a939 SHA256 9bb1da311c871a87e6fd456124c4eecb612584ac9622c78d5654a87693496cf4
+MD5 1a000c4115d6a83e1ddcafddc5420348 supervise-scripts-3.5.ebuild 1252
+RMD160 be9d2903aa60a580ea6dced8565c87bc7b242779 supervise-scripts-3.5.ebuild 1252
+SHA256 9bb1da311c871a87e6fd456124c4eecb612584ac9622c78d5654a87693496cf4 supervise-scripts-3.5.ebuild 1252
+MISC ChangeLog 2809 RMD160 c50f7b998ff8cf6eb3e7255dd821b58ea549a473 SHA1 e64b3f6042f2ff8b60d501397c2329afe38bc2de SHA256 d47c1d933ad71126d1700b951e5c5171971674a172ebdba8c7e7e112fe914b1b
+MD5 ad925a5c5d434c9266c0b60ae601b22a ChangeLog 2809
+RMD160 c50f7b998ff8cf6eb3e7255dd821b58ea549a473 ChangeLog 2809
+SHA256 d47c1d933ad71126d1700b951e5c5171971674a172ebdba8c7e7e112fe914b1b ChangeLog 2809
+MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 MD5 072f48fc3c8c9a942e1aa433c27ac5c9 files/digest-supervise-scripts-3.4 72
+RMD160 e7654cf64667ef25b32fb019ee1c21b529fedc40 files/digest-supervise-scripts-3.4 72
+SHA256 d49d992eea908b3ec4fec4d80a20aaf34b27d1f301e9bcafea8613a4f8aa44ae files/digest-supervise-scripts-3.4 72
 MD5 b395db3b33c2a089329b5cbe3cc524a8 files/digest-supervise-scripts-3.5 72
+RMD160 178d7136f3a7bbdaeefc224164285026d330c2ee files/digest-supervise-scripts-3.5 72
+SHA256 236fccbdbe17dd0c42feaf952a2fcabaa3a7ab5439fc4531388d5f7f4c5b75cc files/digest-supervise-scripts-3.5 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFCJ2pDI1lqEGTUzyQRAv3eAJ9KG+f2UeWC7ruKZCBie0q0ZLauSACgvPuZ
-segk3o5hM65d2CY9E4dLZFU=
-=HnR6
+iD8DBQFEhNvFOpjtAl+gMRURAqx5AKCXHmSXaX4twHZz5npf4ORUuPPBlQCfWXo7
+VPVyIzFJIj88Q4N3W2o4W6w=
+=Yn65
 -----END PGP SIGNATURE-----

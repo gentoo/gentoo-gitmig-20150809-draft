@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/supervise-scripts
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/supervise-scripts/ChangeLog,v 1.3 2005/03/03 19:49:17 swegener Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/supervise-scripts/ChangeLog,v 1.4 2006/06/06 01:34:30 eradicator Exp $
+
+  06 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  supervise-scripts-3.5.ebuild:
+  Removed gcc-config from DEPEND as it's not neccessary.
 
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   supervise-scripts-3.4.ebuild, supervise-scripts-3.5.ebuild:

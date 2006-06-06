@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/supervise-scripts/supervise-scripts-3.5.ebuild,v 1.2 2005/03/03 18:38:32 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/supervise-scripts/supervise-scripts-3.5.ebuild,v 1.3 2006/06/06 01:34:30 eradicator Exp $
 
 inherit fixheadtails toolchain-funcs
 
@@ -14,9 +14,8 @@ KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=sys-process/daemontools-0.70"
-DEPEND=">=sys-process/daemontools-0.70
-	dev-libs/bglibs
-	sys-devel/gcc-config"
+DEPEND="${RDEPEND}
+	dev-libs/bglibs"
 
 src_unpack() {
 	unpack ${A}
