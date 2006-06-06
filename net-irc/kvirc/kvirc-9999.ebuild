@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.1 2006/04/23 20:43:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.2 2006/06/06 06:08:16 jokey Exp $
 
 inherit kde cvs
 
@@ -15,8 +15,6 @@ IUSE="arts debug esd ipv6 kde oss ssl"
 DEPEND="esd? ( media-sound/esound )
 	oss? ( media-libs/audiofile )
 	ssl? ( dev-libs/openssl )"
-
-RESTRICT="distcc ccache"
 
 ECVS_SERVER="cvs.kvirc.net:/cvs"
 ECVS_MODULE="kvirccvs/kvirc"
