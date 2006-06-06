@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_p11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/ChangeLog,v 1.1 2006/06/03 14:56:35 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/ChangeLog,v 1.2 2006/06/06 18:51:34 dertobi123 Exp $
+
+  06 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  pam_p11-0.1.2.ebuild:
+  Added ~ppc, bug #135397
 
 *pam_p11-0.1.2 (03 Jun 2006)
 
