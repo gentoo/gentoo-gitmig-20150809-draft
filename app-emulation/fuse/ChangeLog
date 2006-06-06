@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/fuse
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.17 2006/03/10 06:02:40 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.18 2006/06/06 12:29:53 genstef Exp $
+
+  06 Jun 2006; Stefan Schweizer <genstef@gentoo.org> metadata.xml,
+  -fuse-0.6.2.1.ebuild, fuse-0.7.0.ebuild:
+  Fix building with -X, bug 113093, xml2->xml, bug 116346, modular X deps, bug
+  123933, merge gtk2 and gtk flags, bug 106560, remove old
 
   10 Mar 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/fuse-0.7.0-gcc4.patch, fuse-0.7.0.ebuild:
