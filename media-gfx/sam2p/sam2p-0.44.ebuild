@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/sam2p-0.44.ebuild,v 1.8 2005/07/25 12:42:37 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/sam2p-0.44.ebuild,v 1.9 2006/06/06 01:33:22 eradicator Exp $
 
 inherit toolchain-funcs
 
@@ -12,8 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc x86"
 IUSE="gif"
-DEPEND="dev-lang/perl
-	sys-devel/gcc-config"
+DEPEND="dev-lang/perl"
 RDEPEND="virtual/libc"
 
 S=${WORKDIR}

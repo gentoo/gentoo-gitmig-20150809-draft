@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sam2p
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.11 2005/07/25 12:42:37 twp Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.12 2006/06/06 01:33:22 eradicator Exp $
+
+  06 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org> sam2p-0.44.ebuild:
+  Removed gcc-config from DEPEND as it's not neccessary.
 
   25 Jul 2005; Tom Payne <twp@gentoo.org> sam2p-0.44.ebuild:
   Update DESCRIPTION and RDEPEND. Bug # 99718.
