@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.2.1.ebuild,v 1.1 2006/05/03 18:30:59 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.2.1.ebuild,v 1.2 2006/06/07 14:23:44 zaheerm Exp $
 
 inherit eutils gnome2
 
@@ -60,6 +60,7 @@ src_compile() {
 	mkdir -p "${T}/home"
 	export HOME="${T}/home"
 	export GST_REGISTRY=${T}/home/registry.cache.xml
+	unset LINGUAS
 	addpredict /root/.gconfd
 	addpredict /root/.gconf
 	addpredict /var/lib/cache/gstreamer-0.8

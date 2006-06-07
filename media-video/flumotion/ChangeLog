@@ -1,6 +1,9 @@
 # ChangeLog for media-video/flumotion
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/ChangeLog,v 1.9 2006/05/03 18:30:59 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/ChangeLog,v 1.10 2006/06/07 14:23:44 zaheerm Exp $
+
+  07 Jun 2006; <zaheer@gentoo.org> flumotion-0.2.1.ebuild:
+  fix LINGUAS issue, flumotion requires all linguas to be installed
 
 *flumotion-0.2.1 (03 May 2006)
 
