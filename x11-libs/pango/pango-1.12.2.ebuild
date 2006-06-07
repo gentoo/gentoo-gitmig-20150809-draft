@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.12.2.ebuild,v 1.1 2006/04/30 21:10:03 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.12.2.ebuild,v 1.2 2006/06/07 14:09:47 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -57,9 +57,6 @@ src_install() {
 	gnome2_src_install
 
 	rm ${D}/etc/pango/pango.modules
-	use amd64 && mkdir ${D}/etc/pango/${CHOST}
-	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && mkdir ${D}/etc/pango/${CHOST}
-
 }
 
 pkg_postinst() {
@@ -69,6 +66,7 @@ pkg_postinst() {
 		use amd64 && PANGO_CONFDIR="/etc/pango/${CHOST}"
 		use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && PANGO_CONFDIR="/etc/pango/${CHOST}"
 		PANGO_CONFDIR=${PANGO_CONFDIR:=/etc/pango}
+		mkdir -p ${PANGO_CONFDIR}
 		pango-querymodules > ${PANGO_CONFDIR}/pango.modules
 	fi
 
