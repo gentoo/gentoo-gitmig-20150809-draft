@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtkglext
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.16 2006/04/01 15:21:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.17 2006/06/07 22:13:31 spyderous Exp $
+
+  07 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  pygtkglext-1.0.1-r1.ebuild:
+  Keyword ~ppc.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org>
   pygtkglext-1.0.1-r1.ebuild:
