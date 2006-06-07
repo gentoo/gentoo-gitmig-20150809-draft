@@ -1,20 +1,25 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.2 2006/06/06 06:08:16 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.3 2006/06/07 07:58:34 jokey Exp $
 
-inherit kde cvs
+inherit eutils kde-functions cvs autotools
 
 DESCRIPTION="An advanced IRC Client"
-HOMEPAGE="http://www.kvirc.net"
+HOMEPAGE="http://www.kvirc.net/"
 
 LICENSE="kvirc"
 SLOT="3"
 KEYWORDS="-*"
-IUSE="arts debug esd ipv6 kde oss ssl"
+IUSE="debug esd ipv6 kde oss ssl"
 
-DEPEND="esd? ( media-sound/esound )
+RDEPEND="esd? ( media-sound/esound )
+	ssl? ( dev-libs/openssl )
 	oss? ( media-libs/audiofile )
-	ssl? ( dev-libs/openssl )"
+	kde? ( >=kde-base/kdelibs-3 )
+	=x11-libs/qt-3*"
+
+DEPEND="${RDEPEND}
+	sys-devel/gettext"
 
 ECVS_SERVER="cvs.kvirc.net:/cvs"
 ECVS_MODULE="kvirccvs/kvirc"
@@ -22,42 +27,42 @@ ECVS_TOP_DIR="${DISTDIR}/cvs-src/${P}"
 
 S="${WORKDIR}/${ECVS_MODULE}"
 
-if use kde ; then
-	need-kde 3.3
-else
-	need-qt 3
-fi
-
 src_unpack() {
 	cvs_src_unpack
+	cd ${S}
+	einfo "Generating configure script, this takes a moment"
+	./autogen.sh
+	epatch ${FILESDIR}/${PN}-3.2.3-kdedir-fix.patch
 }
 
 src_compile() {
 	set-qtdir 3
 	set-kdedir 3
 
-	local myconf
+	# use aa even when kde support is disabled; remove the splash screen
+	# to speed up the startup.
+	local myconf="--with-aa-fonts --without-splash-screen
+		--with-big-channels --with-pizza"
 
-	export myconf="${myconf} \
-		--with-aa-fonts --with-big-channels --with-pizza \
-		$(use_with arts arts-support) \
-		$(use_with debug debug-symbols) \
-		$(use_with esd esd-support) \
-		$(use_with ipv6 ipv6-support) \
-		$(use_with kde kde-support) \
-		$(use_with oss af-support) \
-		$(use_with ssl ssl-support)"
+	# For myconf, we can't do it the easy way (use_with) because the configure
+	# script will assume we're telling it not to include support.
+	myconf="${myconf} `use_with debug debug-symbols`"
+	use kde || myconf="${myconf} --without-kde-support --without-arts-support"
+	use ipv6 || myconf="${myconf} --without-ipv6-support"
+	use esd || myconf="${myconf} --without-esd-support"
+	use ssl || myconf="${myconf} --without-ssl-support"
 
-	export WANT_AUTOCONF="2.5"
-	export WANT_AUTOMAKE="1.5"
+	[ "${ARCH}" == "x86" ] && myconf="${myconf} --with-ix86-asm"
 
-	./autogen.sh
-	econf ${myconf} || dir "failed to configure"
+	need-autoconf 2.5
+	need-automake 1.5
+
+	econf ${myconf} || die "failed to configure"
 	emake -j1 || die "failed to make"
 }
 
 src_install() {
-	make install docs DESTDIR=${D} || die "make install failed"
+	make install DESTDIR="${D}" || die "make install failed"
+	make docs DESTDIR="${D}" || die "make docs failed"
 	dodoc ChangeLog README TODO
 }
-
