@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.190 2006/06/06 15:32:36 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.191 2006/06/07 03:28:25 fuzzyray Exp $
+
+  07 Jun 2006; Paul Varner <fuzzyray@gentoo.org>
+  vanilla-sources-2.4.32.ebuild:
+  Stable on x86; bug #135444
 
 *vanilla-sources-2.6.17_rc6 (06 Jun 2006)
 
