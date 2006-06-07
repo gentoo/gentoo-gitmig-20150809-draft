@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1-r4.ebuild,v 1.5 2006/06/07 02:36:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1-r5.ebuild,v 1.1 2006/06/07 02:36:16 eradicator Exp $
 
 inherit eutils multilib toolchain-funcs
 
