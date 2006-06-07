@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>embedded</herd>
-  <maintainer>
-    <email>tigger@gentoo.org</email>
-    <description>Primary Maintainer</description>
-  </maintainer>
-  <maintainer>
-    <email>solar@gentoo.org</email>
-    <description>Secondary Maintainer</description>
-  </maintainer>
-  <longdescription>Tools for working with the ipkg package format</longdescription>
+<herd>no-herd</herd>
+<maintainer>
+	<email>jnrowe@ukfsn.org</email>
+	<name>James Rowe</name>
+</maintainer>
+<maintainer>
+	<email>seemant@gentoo.org</email>
+	<name>Seemant Kulleen</name>
+	<description>Proxy maintainer for James</description>
+</maintainer>
+<description>
+	Tools for working with the ipkg format.
+</description>
 </pkgmetadata>
