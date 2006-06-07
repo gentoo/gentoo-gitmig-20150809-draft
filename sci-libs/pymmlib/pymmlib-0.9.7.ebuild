@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-0.9.7.ebuild,v 1.3 2006/06/07 22:14:53 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-0.9.7.ebuild,v 1.4 2006/06/07 22:16:38 spyderous Exp $
 
 inherit python
 
@@ -25,7 +25,7 @@ src_compile() {
 
 src_install() {
 	python setup.py install --prefix="${D}/usr" || die "install failed"
-	EXEDESTTREE="/usr/bin" doexe ${S}/applications/* ${S}/examples/*
+	dobin ${S}/applications/* ${S}/examples/*
 	dodoc ${S}/README.txt
 	dohtml -r ${S}/doc
 }
