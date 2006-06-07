@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r4.ebuild,v 1.3 2006/03/22 20:53:06 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r4.ebuild,v 1.4 2006/06/07 13:12:54 allanonjl Exp $
 
 inherit eutils gnome2 libtool
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/dia/"
 LICENSE="GPL-2"
 
 SRC_URI="${SRC_URI}
-	mirrors://gentoo/${P}-sheets-png.tar.bz2"
+	mirror://gentoo/${P}-sheets-png.tar.bz2"
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
