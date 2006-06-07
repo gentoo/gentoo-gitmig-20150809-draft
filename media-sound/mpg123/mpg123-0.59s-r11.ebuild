@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r11.ebuild,v 1.2 2006/06/06 21:55:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r11.ebuild,v 1.3 2006/06/07 07:17:22 eradicator Exp $
 
 inherit eutils toolchain-funcs
 
@@ -24,7 +24,8 @@ RDEPEND="esd? ( media-sound/esound )
 # alsa-1 b0rks and it's not a simple fix
 #	 alsa? ( media-libs/alsa-lib )"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-lang/perl"
 
 PROVIDE="virtual/mpg123"
 
@@ -53,6 +54,10 @@ src_unpack() {
 	sed -i "s:${PV}-mh4:${PVR}:" version.h
 
 	epatch "${FILESDIR}/${P}-gmake-3.81.patch"
+
+	# Bug #130577
+	perl -e 'my @text = <STDIN>; my $str = join "",@text; $str =~ s/\\\n//gs; print $str' < Makefile > Makefile.fixed
+	mv Makefile.fixed Makefile
 }
 
 src_compile() {
