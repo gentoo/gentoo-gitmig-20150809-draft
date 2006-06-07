@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.77 2006/06/07 02:03:51 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.78 2006/06/07 02:26:26 tcort Exp $
+
+  07 Jun 2006; Thomas Cort <tcort@gentoo.org> lighttpd-1.4.11.ebuild:
+  Stable on amd64 wrt security Bug #123022.
 
   07 Jun 2006; Mark Loeser <halcy0n@gentoo.org> lighttpd-1.4.11.ebuild:
   Stable on x86; bug #123022
