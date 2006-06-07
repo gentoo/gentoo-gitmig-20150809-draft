@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.16 2006/05/12 19:27:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.17 2006/06/07 20:47:50 flameeyes Exp $
+
+  07 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  gpac-0.4.1_pre20060122.ebuild:
+  Remove mpeg? () dependency that is misplaced. Thanks to Jakub Moc in bug
+  #135985.
 
   12 May 2006; Diego Pettenò <flameeyes@gentoo.org> gpac-0.4.0.ebuild:
   Remove ECVS_* variables.

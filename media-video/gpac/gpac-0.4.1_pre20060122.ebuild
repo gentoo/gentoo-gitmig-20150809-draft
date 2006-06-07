@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.1_pre20060122.ebuild,v 1.8 2006/04/29 15:31:18 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.1_pre20060122.ebuild,v 1.9 2006/06/07 20:47:50 flameeyes Exp $
 
 inherit wxwidgets flag-o-matic
 
@@ -20,7 +20,6 @@ RDEPEND="aac? ( media-libs/faad2 )
 	jpeg? ( media-libs/jpeg )
 	mad? ( media-libs/libmad )
 	mozilla? ( dev-lang/spidermonkey )
-	mpeg? ( media-libs/faad2 )
 	opengl? ( virtual/opengl )
 	ogg? ( media-libs/libogg )
 	png? ( media-libs/libpng )
