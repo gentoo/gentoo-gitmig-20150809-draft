@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.23 2006/05/12 01:39:25 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.24 2006/06/07 15:14:00 chutzpah Exp $
+
+  07 Jun 2006; Patrick McLean <chutzpah@gentoo.org>
+  +files/vile-9.5-define-LEAD-before-use.patch, vile-9.5.ebuild:
+  Compile fix, patch to make sure a variable is defined before it is used.
+  (bug #129299)
 
   11 May 2006; Thomas Cort <tcort@gentoo.org> vile-9.4d.ebuild:
   Stable on amd64.
