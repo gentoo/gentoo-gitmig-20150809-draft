@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-net
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/ChangeLog,v 1.30 2005/12/22 04:30:13 nichoj Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/ChangeLog,v 1.31 2006/06/07 20:31:31 nichoj Exp $
+
+  07 Jun 2006; Joshua Nichols <jnichols@gentoo.org>
+  commons-net-1.4.1.ebuild:
+  Removed junit USE flag which is no longer used (bug #135960)
 
 *commons-net-1.4.1 (22 Dec 2005)
 
