@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-182.ebuild,v 1.1 2006/05/29 01:57:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-182.ebuild,v 1.2 2006/06/07 20:46:00 robbat2 Exp $
 
 inherit eutils pam
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.padl.com/download/${P}.tar.gz"
 LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="ssl"
+IUSE="ssl sasl"
 DEPEND=">=sys-libs/glibc-2.1.3
 		>=sys-libs/pam-0.72
 		>=net-nds/openldap-2.1.30-r5

@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_ldap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.26 2006/05/29 01:57:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.27 2006/06/07 20:46:00 robbat2 Exp $
+
+  07 Jun 2006; Robin H. Johnson <robbat2@gentoo.org> pam_ldap-182.ebuild:
+  Bug #135903, fix IUSE.
 
 *pam_ldap-182 (29 May 2006)
 
