@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.50 2006/06/01 18:23:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.51 2006/06/07 09:21:22 genstef Exp $
+
+  07 Jun 2006; Stefan Schweizer <genstef@gentoo.org> gv-3.6.1-r4.ebuild:
+  Allow nice font rendering even with gs-8, thanks to xalan
+  <xalanxerces@yahoo.com> and Karl Tomlinson
+  <tomlinso+gentoo@esu1.auckland.ac.nz> in bug 135354
 
 *gv-3.6.1-r4 (01 Jun 2006)
 

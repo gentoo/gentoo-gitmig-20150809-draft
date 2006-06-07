@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.1-r4.ebuild,v 1.1 2006/06/01 18:23:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.1-r4.ebuild,v 1.2 2006/06/07 09:21:22 genstef Exp $
 
 inherit eutils
 
@@ -40,6 +40,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-fixedmedia.patch
 	epatch "${WORKDIR}"/gv_3.6.1-13.diff
 	epatch ${P}/debian/patches/*.dpatch
+	# Make font render nicely even with gs-8, bug 135354
+	sed -i -e "s:-dGraphicsAlphaBits=2:\0 -dAlignToPixels=0:" \
+		src/{gv_{class,user,system}.ad,Makefile.{am,in}}
 }
 
 src_compile() {
