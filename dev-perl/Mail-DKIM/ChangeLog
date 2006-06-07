@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Mail-DKIM
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.1 2006/06/07 14:59:38 ian Exp $
+
+*Mail-DKIM-0.17 (07 Jun 2006)
+
+  07 Jun 2006; Christian Hartmann <ian@gentoo.org> +metadata.xml,
+  +Mail-DKIM-0.17.ebuild:
+  New package for future usedeps of spamassassin wrt bug #134541
+
