@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath-inetlib
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.14 2006/05/15 07:39:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.15 2006/06/07 18:00:54 sanchan Exp $
+
+  07 Jun 2006; Sandro Bonazzola <sanchan@gentoo.org>
+  gnu-classpath-inetlib-1.0-r1.ebuild:
+  Fixed SRC_URI, bug #135899.
 
   15 May 2006; Petteri Räty <betelgeuse@gentoo.org>
   gnu-classpath-inetlib-1.0-r1.ebuild, gnu-classpath-inetlib-1.1-r1.ebuild:
