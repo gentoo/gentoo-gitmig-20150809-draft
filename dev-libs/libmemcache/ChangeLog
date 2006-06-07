@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmemcache
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/ChangeLog,v 1.6 2006/05/24 16:56:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/ChangeLog,v 1.7 2006/06/07 02:03:00 halcy0n Exp $
+
+  07 Jun 2006; Mark Loeser <halcy0n@gentoo.org> libmemcache-1.2.4.ebuild:
+  Stable on x86; bug #123022
 
   24 May 2006; Brent Baude <ranger@gentoo.org> libmemcache-1.2.4.ebuild:
   Marking  libmemcache-1.2.4 ppc64 stable for lighttpd dep
