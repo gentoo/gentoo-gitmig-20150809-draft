@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.2.ebuild,v 1.1 2006/06/06 18:11:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.2.ebuild,v 1.2 2006/06/07 18:06:45 genstef Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.ekiga.org/includes/clicks_counter.php?http://www.ekiga.org/a
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="avahi dbus doc gnome ipv6 sdl ssl"
+IUSE="avahi dbus doc gnome sdl"
 
 RDEPEND="~dev-libs/pwlib-1.10.1
 	~net-libs/opal-2.2.2
@@ -19,7 +19,6 @@ RDEPEND="~dev-libs/pwlib-1.10.1
 	>=x11-libs/gtk+-2.4.0
 	>=dev-libs/glib-2.0.0
 	>=dev-libs/libxml2-2.6.1
-	ssl? ( >=dev-libs/openssl-0.9.6g )
 	sdl? ( >=media-libs/libsdl-1.2.4 )
 	dbus? ( >=sys-apps/dbus-0.61 )
 	avahi? ( net-dns/avahi )
@@ -59,36 +58,13 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-
-	# filter -O3, causes trouble with plugins (bug #88710)
-	replace-flags -O3 -O2
-
-	# don't touch! yes, it works this way.
-	# no, changing to use_enable / use_with breaks it
-	#
-	if use ssl; then
-		myconf="${myconf} --with-openssl-libs=/usr/lib"
-		myconf="${myconf} --with-openssl-includes=/usr/include/openssl"
-	fi
-
-	use sdl \
-		&& myconf="${myconf} --with-sdl-prefix=/usr" \
-		|| myconf="${myconf} --disable-sdltest"
-
-	use gnome \
-		|| myconf="${myconf} --disable-gnome --disable-scrollkeeper --disable-schemas-install"
-
-	use dbus \
-		&& myconf="${myconf} --enable-dbus"
-
-	use avahi \
-		|| myconf="${myconf} --disable-avahi"
-
 	econf \
-		$(use_enable ipv6) \
+		$(use_enable dbus) \
+		$(use_enable sdl) \
+		$(use_enable avahi) \
 		$(use_enable doc) \
-		${myconf} || die "configure failed"
+		$(use_enable gnome) \
+		|| die "econf failed"
 
 	emake || die "emake failed"
 }
@@ -98,20 +74,19 @@ src_install() {
 		gnome2_src_install
 	else
 		make DESTDIR=${D} install || die "make install failed"
-		rm -rf ${D}/usr/lib/bonobo
 
-		dodoc AUTHORS ChangeLog COPYING README INSTALL NEWS FAQ TODO
+		dodoc AUTHORS ChangeLog NEWS
 	fi
 }
 
 pkg_postinst() {
 	if use gnome; then
 		gnome2_pkg_postinst
+
 		# we need to fix the GConf permissions, see bug #59764
-		# <obz@gentoo.org>
 		einfo "Fixing GConf permissions for ekiga"
 		ekiga-config-tool --fix-permissions
 	fi
 }
 
-DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS FAQ TODO"
+DOCS="AUTHORS ChangeLog NEWS"
