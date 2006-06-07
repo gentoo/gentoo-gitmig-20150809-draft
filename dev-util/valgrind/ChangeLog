@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.59 2006/04/11 04:56:06 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.60 2006/06/07 09:24:49 lu_zero Exp $
+
+*valgrind-3.2.0 (07 Jun 2006)
+
+  07 Jun 2006; Luca Barbato <lu_zero@gentoo.org> +valgrind-3.2.0.ebuild:
+  New version
 
   11 Apr 2006; Joshua Jackson <tsunam@gentoo.org> valgrind-3.1.1.ebuild:
   stable on x86; bug #129127
