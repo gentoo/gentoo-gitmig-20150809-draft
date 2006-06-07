@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.74 2006/06/06 21:08:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.75 2006/06/07 21:04:31 joem Exp $
+
+  07 Jun 2006; Joe McCann <joem@gentoo.org> rhythmbox-0.9.4.1.ebuild:
+  remove restrict since it shouldn't be there in the first place
 
   06 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   rhythmbox-0.9.4.1.ebuild:
