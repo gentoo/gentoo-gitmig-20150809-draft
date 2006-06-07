@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgsasl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.31 2006/01/02 15:57:55 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.32 2006/06/07 21:19:48 slarti Exp $
+
+  07 Jun 2006; Tom Martin <slarti@gentoo.org> libgsasl-0.2.4.ebuild:
+  Missing idn from IUSE, resolves bug #135990.
 
 *libgsasl-0.2.10 (02 Jan 2006)
 
