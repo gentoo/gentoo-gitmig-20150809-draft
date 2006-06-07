@@ -1,0 +1,23 @@
+let portage compress CHANGES
+
+--- doc/Makefile
++++ doc/Makefile
+@@ -17,16 +17,13 @@
+ 
+ LDIRT = *.gz
+ 
+-default: CHANGES.gz
++default:
+ 
+ include $(BUILDRULES)
+ 
+-CHANGES.gz:
+-	$(ZIP) --best -c < CHANGES > $@
+-
+ install: default
+ 	$(INSTALL) -m 755 -d $(PKG_DOC_DIR)
+-	$(INSTALL) -m 644 PORTING CHANGES.gz $(README) $(PKG_DOC_DIR)
++	$(INSTALL) -m 644 PORTING CHANGES $(README) $(PKG_DOC_DIR)
+ ifeq ($(PKG_DISTRIBUTION), debian)
+ 	$(INSTALL) -S CHANGES.gz $(PKG_DOC_DIR)/changelog.gz
+ else
