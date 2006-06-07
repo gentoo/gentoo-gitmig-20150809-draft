@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-250.ebuild,v 1.1 2006/05/29 01:50:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-250.ebuild,v 1.2 2006/06/07 20:45:04 robbat2 Exp $
 
 inherit fixheadtails eutils gnuconfig multilib
 
-IUSE="debug"
+IUSE="debug sasl"
 
 DESCRIPTION="NSS LDAP Module"
 HOMEPAGE="http://www.padl.com/OSS/nss_ldap.html"
