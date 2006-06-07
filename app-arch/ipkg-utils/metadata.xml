@@ -11,7 +11,7 @@
 	<name>Seemant Kulleen</name>
 	<description>Proxy maintainer for James</description>
 </maintainer>
-<description>
+<longdescription>
 	Tools for working with the ipkg format.
-</description>
+</longdescription>
 </pkgmetadata>
