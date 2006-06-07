@@ -1,11 +1,14 @@
 # ChangeLog for app-admin/eselect-compiler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.20 2006/06/07 02:36:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.21 2006/06/07 02:40:04 eradicator Exp $
+
+  07 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  -eselect-compiler-2.0.0_rc1-r4.ebuild:
+  Removing old version.
 
 *eselect-compiler-2.0.0_rc1-r5 (07 Jun 2006)
 
   07 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
-  eselect-compiler-2.0.0_rc1-r4.ebuild,
   +eselect-compiler-2.0.0_rc1-r5.ebuild:
   Make sure /lib/cpp is installed. Right now, the ebuild is just copying the
   wrapper to that location, but I'll have this handled properly by
