@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r15.ebuild,v 1.1 2006/05/31 03:02:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r15.ebuild,v 1.2 2006/06/07 11:19:57 vapier Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -15,8 +15,7 @@ SRC_URI="
 	ssl? (
 		!ipv6? ( http://www.nrg4u.com/qmail/ucspi-tcp-ssl-20050405.patch.gz )
 		ipv6? ( mirror://gentoo/ucspi-tcp-0.88-ipv6-ssl-20050405.patch )
-	)
-"
+	)"
 
 LICENSE="as-is"
 SLOT="0"
@@ -25,24 +24,24 @@ IUSE="ssl ipv6 selinux doc"
 RESTRICT="test"
 
 DEPEND="virtual/libc
-		ssl? ( >=dev-libs/openssl-0.9.6g )"
+	ssl? ( >=dev-libs/openssl-0.9.6g )"
 RDEPEND="${DEPEND}
-		doc? ( app-doc/ucspi-tcp-man )
-		selinux? ( sec-policy/selinux-ucspi-tcp )"
+	doc? ( app-doc/ucspi-tcp-man )
+	selinux? ( sec-policy/selinux-ucspi-tcp )"
 PROVIDE="virtual/inetd"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	cd ${S}
+	cd "${S}"
 
-	if use ipv6; then
-		epatch ${DISTDIR}/ucspi-tcp-0.88-ipv6.${IPV6_PATCH}.bz2
+	if use ipv6 ; then
+		epatch "${DISTDIR}"/ucspi-tcp-0.88-ipv6.${IPV6_PATCH}.bz2
 		# Fixes bug 18892
-		epatch ${FILESDIR}/${PV}-bigendian.patch
-		epatch ${FILESDIR}/${PV}-tcprules.patch
+		epatch "${FILESDIR}"/${PV}-bigendian.patch
+		epatch "${FILESDIR}"/${PV}-tcprules.patch
 	fi
 
-	if use ssl; then
+	if use ssl ; then
 		if use ipv6 ; then
 			# Rediffed patch by hansmi@g.o
 			# -> broken, hansmi on 2006-03-14
@@ -53,20 +52,20 @@ src_unpack() {
 			ebeep
 			echo
 		else
-			epatch ${DISTDIR}/ucspi-tcp-ssl-20050405.patch.gz
+			epatch "${DISTDIR}"/ucspi-tcp-ssl-20050405.patch.gz
 		fi
 	fi
 
-	if use !ssl && use !ipv6; then
-		epatch ${FILESDIR}/${PV}-errno.patch
+	if use !ssl && use !ipv6 ; then
+		epatch "${FILESDIR}"/${PV}-errno.patch
 	fi
 
-	epatch ${DISTDIR}/ucspi-rss.diff
-	epatch ${FILESDIR}/${PV}-rblsmtpd-ignore-on-RELAYCLIENT.patch
+	epatch "${DISTDIR}"/ucspi-rss.diff
+	epatch "${FILESDIR}"/${PV}-rblsmtpd-ignore-on-RELAYCLIENT.patch
 
 	# Bug 98726
-	#epatch ${FILESDIR}/${PV}-limits.patch
-	#use ipv6 && epatch ${FILESDIR}/${PV}-limits-ipv6.patch
+	#epatch "${FILESDIR}"/${PV}-limits.patch
+	#use ipv6 && epatch "${FILESDIR}"/${PV}-limits-ipv6.patch
 
 	ht_fix_file Makefile
 
@@ -88,12 +87,13 @@ src_compile() {
 }
 
 src_install() {
-	dobin tcpserver tcprules tcprulescheck argv0 recordio tcpclient *\@ tcpcat mconnect mconnect-io addcr delcr fixcrio rblsmtpd || die
+	dobin tcpserver tcprules tcprulescheck argv0 recordio tcpclient *\@ \
+		tcpcat mconnect mconnect-io addcr delcr fixcrio rblsmtpd || die
 	doman *.[15]
 	dodoc CHANGES FILES README SYSDEPS TARGETS TODO VERSION
 	dodoc README.tcpserver-limits-patch
 	insinto /etc/tcprules.d/
-	newins ${FILESDIR}/tcprules-Makefile Makefile
+	newins "${FILESDIR}"/tcprules-Makefile Makefile
 }
 
 pkg_postinst() {
