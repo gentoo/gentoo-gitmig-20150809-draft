@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/bss
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bss/ChangeLog,v 1.1 2006/06/07 04:28:21 robbat2 Exp $
+
+*bss-0.6 (07 Jun 2006)
+
+  07 Jun 2006; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +bss-0.6.ebuild:
+  Initial commit. Bug #127988, thanks to Michael Zanetta <grimmlin@pentoo.ch>.
+
