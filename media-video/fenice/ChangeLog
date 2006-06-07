@@ -1,6 +1,9 @@
 # ChangeLog for media-video/fenice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/fenice/ChangeLog,v 1.13 2006/06/07 17:47:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/fenice/ChangeLog,v 1.14 2006/06/07 20:43:39 lu_zero Exp $
+
+  07 Jun 2006; Luca Barbato <lu_zero@gentoo.org> fenice-1.11.ebuild:
+  Minor workaround
 
 *fenice-1.11 (07 Jun 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/fenice/fenice-1.11.ebuild,v 1.1 2006/06/07 17:47:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/fenice/fenice-1.11.ebuild,v 1.2 2006/06/07 20:43:39 lu_zero Exp $
 
 DESCRIPTION="Experimental rtsp streaming server"
 HOMEPAGE="http://streaming.polito.it/server"
@@ -23,5 +23,6 @@ src_compile() {
 }
 
 src_install() {
+	dodir /var/log
 	make DESTDIR=${D} install || die "make install failed"
 }
