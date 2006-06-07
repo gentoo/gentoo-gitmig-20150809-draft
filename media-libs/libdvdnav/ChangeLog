@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdvdnav
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.32 2006/02/07 20:48:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.33 2006/06/07 23:04:00 flameeyes Exp $
+
+  07 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/libdvdnav-0.1.9-darwin.diff, -libdvdnav-0.1.9.ebuild,
+  libdvdnav-0.1.10.ebuild:
+  Remove old version, make sure DEPEND/RDEPEND is correct.
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> libdvdnav-0.1.10.ebuild:
   Mark 0.1.10 stable on alpha
