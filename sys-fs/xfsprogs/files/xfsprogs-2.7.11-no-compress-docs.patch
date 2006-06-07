@@ -21,8 +21,3 @@ let portage compress CHANGES
  ifeq ($(PKG_DISTRIBUTION), debian)
  	$(INSTALL) -S CHANGES.gz $(PKG_DOC_DIR)/changelog.gz
  else
-@@ -25,3 +22,4 @@
- endif
- 
- install-dev:
-+
