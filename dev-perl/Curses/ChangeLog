@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/Curses
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/ChangeLog,v 1.28 2006/02/06 20:05:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/ChangeLog,v 1.29 2006/06/07 06:05:11 ian Exp $
+
+*Curses-1.14 (07 Jun 2006)
+
+  07 Jun 2006; Christian Hartmann <ian@gentoo.org>
+  -files/Curses-1.06-p5.8-fixes.diff, -files/Curses-1.07-p5.8-fixes.diff,
+  -Curses-1.06.ebuild, -Curses-1.06-r1.ebuild, -Curses-1.06-r2.ebuild,
+  -Curses-1.07.ebuild, -Curses-1.08.ebuild, -Curses-1.12.ebuild,
+  +Curses-1.14.ebuild:
+  Version bump and cleanup of obsolete versions and patches
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> Curses-1.13.ebuild:
   stable on amd64
