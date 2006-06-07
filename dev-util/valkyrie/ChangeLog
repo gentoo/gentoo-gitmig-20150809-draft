@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/valkyrie
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/ChangeLog,v 1.1 2006/06/07 20:29:19 flameeyes Exp $
+
+*valkyrie-1.2.0 (07 Jun 2006)
+
+  07 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +valkyrie-1.2.0.ebuild:
+  Initial import, based on the work of David Wang in bug #124232.
+
