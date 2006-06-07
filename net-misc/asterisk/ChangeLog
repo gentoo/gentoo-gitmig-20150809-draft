@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.116 2006/05/06 14:48:07 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.117 2006/06/07 18:08:56 stkn Exp $
+
+*asterisk-1.2.9_p1 (07 Jun 2006)
+*asterisk-1.0.11_p1 (07 Jun 2006)
+
+  07 Jun 2006; Stefan Knoblich <stkn@gentoo.org> +asterisk-1.0.11_p1.ebuild,
+  +asterisk-1.2.9_p1.ebuild:
+  Security bump (bug #135680), genericjb dropped from 1.2.9_p1 for now
+  (latest patch does not apply), 1.0.11_p1 updated to use bristuff-0.2.0-PRE8r,
+  1.2.9_p1 updated to use bristuff-0.3.0-PRE-1p.
 
 *asterisk-1.2.7_p1-r1 (06 May 2006)
 
