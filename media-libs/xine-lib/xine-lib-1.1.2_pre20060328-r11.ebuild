@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328-r11.ebuild,v 1.3 2006/06/06 18:21:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328-r11.ebuild,v 1.4 2006/06/07 13:54:21 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -94,8 +94,6 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	[[ -z $(test-flags -fvisibility=hidden) ]] && export EPATCH_EXCLUDE="237_all_visibility.patch"
 
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patches
 
