@@ -13,7 +13,7 @@ MD5 4317a67804cac69648fa72cbf25d22c5 files/digest-mediawiki-1.5.8 250
 MD5 1d666786db723b5caccc83db0e7d0f23 files/digest-mediawiki-1.6.4 68
 MD5 ec639b9694b19e3a8d65d34c3b4300d1 files/digest-mediawiki-1.6.5 68
 MD5 af06ad7ae2a018da1f398fef6cf3b348 files/digest-mediawiki-1.6.6 68
-MD5 6a545d68d6bf95571e3619196b0f9186 files/digest-mediawiki-1.6.7 66
+MD5 86a21e2a6444c94c8ccb084e90b0cc4c files/digest-mediawiki-1.6.7 68
 MD5 7ec90d807694699cb90d9a56ec2ff67b files/postinstall-1.4-en.txt 1843
 MD5 90f0eb21b7617d28f1c524baabdf6c8c files/postinstall-1.5-en.txt 1842
 MD5 85f32b5fca9afd6479cdcea022c096f2 files/postinstall-en.txt 1731
