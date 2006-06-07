@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/zabbix-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/ChangeLog,v 1.6 2006/06/06 13:47:10 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/ChangeLog,v 1.7 2006/06/07 10:10:46 wschlich Exp $
+
+  07 Jun 2006; Wolfram Schlich <wschlich@gentoo.org>
+  zabbix-server-1.1.ebuild:
+  Fix handling of postgres and oracle USE flags
 
 *zabbix-server-1.1 (06 Jun 2006)
 

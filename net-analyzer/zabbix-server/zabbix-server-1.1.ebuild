@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.ebuild,v 1.1 2006/06/06 13:47:10 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.ebuild,v 1.2 2006/06/07 10:10:46 wschlich Exp $
 
 inherit eutils
 
@@ -22,52 +22,86 @@ RDEPEND="${RDEPEND} net-analyzer/fping"
 
 S=${WORKDIR}/${MY_P}-${MY_PV}
 
+pkg_setup() {
+	if useq postgres; then
+		eerror ""
+		eerror "PostgreSQL support is broken/missing in 1.1."
+		eerror "Please use MySQL or Oracle until this is resolved."
+		eerror "Turn the postgres USE flag off for zabbix-server and select your database."
+		eerror "For MySQL:"
+		eerror "  echo 'net-analyzer/zabbix-server -postgres mysql' >>/etc/portage/package.use"
+		eerror ""
+		die "USE flag 'postgres' unsupported in this version :-("
+	fi
+	if useq oracle; then
+		if [ -z "${ORACLE_HOME}" ]; then
+			eerror
+			eerror "The environment variable ORACLE_HOME must be set"
+			eerror "and point to the correct location."
+			eerror "It looks like you don't have Oracle installed."
+			eerror
+			die "Environment variable ORACLE_HOME is not set"
+		fi
+		if has_version 'dev-db/oracle-instantclient-basic'; then
+			ewarn
+			ewarn "Please ensure you have a full install of the Oracle client."
+			ewarn "dev-db/oracle-instantclient* is NOT sufficient."
+			ewarn
+		fi
+	fi
+}
+
 pkg_preinst() {
 	enewgroup zabbix
 	enewuser zabbix -1 -1 /var/lib/zabbix/home zabbix
 }
 
 pkg_postinst() {
-	einfo ""
-	if useq mysql; then
-		einfo "You need to configure MySQL for Zabbix."
-	elif useq postgres; then
-		einfo "You need to configure PostgreSQL for Zabbix."
-	fi
-	einfo ""
+	einfo
+	einfo "You need to configure your database for Zabbix."
+	einfo
 	einfo "Have a look at /usr/share/zabbix/database for"
 	einfo "database creation and upgrades."
-	einfo ""
+	einfo
 	einfo "For more info read the Zabbix manual at"
 	einfo "http://www.zabbix.com/manual/v1.1/"
-	einfo ""
+	einfo
 
 	zabbix_homedir="$(egetent passwd zabbix | cut -d : -f 6 )"
 	if [ -n "${zabbix_homedir}" ] && \
 	   [ "${zabbix_homedir}" != "/var/lib/zabbix/home" ]; then
-		ewarn ""
+		ewarn
 		ewarn "The user 'zabbix' should have his homedir changed"
 		ewarn "to /var/lib/zabbix/home if you want to use"
 		ewarn "custom alert scripts."
-		ewarn ""
+		ewarn
 		ewarn "A real homedir might be needed for configfiles"
 		ewarn "for custom alert scripts (e.g. ~/.sendxmpprc when"
 		ewarn "using sendxmpp for Jabber alerts)."
-		ewarn ""
+		ewarn
 		ewarn "To change the homedir use:"
 		ewarn "  usermod -d /var/lib/zabbix/home zabbix"
-		ewarn ""
+		ewarn
 	fi
 }
 
 src_unpack() {
-	# This needs do be fixed! :-(
-	if useq mysql && useq postgres; then
-		eerror "You can't use both MySQL and PostgreSQL in Zabbix. Select one database."
-		die "Both database types selected"
-	elif ! ( useq mysql || useq postgres || useq oracle ); then
-		eerror "Select MySQL, PostgreSQL or Oracle database"
-		die "No database selected"
+	local dbnum dbtypes="mysql postgres oracle" dbtype
+	declare -i dbnum=0
+	for dbtype in ${dbtypes}; do
+		useq ${dbtype} && let dbnum++
+	done
+	if [ ${dbnum} -gt 1 ]; then
+		eerror
+		eerror "You can't use more than one database type in Zabbix."
+		eerror "Select exactly one database type out of these: ${dbtypes}"
+		eerror
+		die "Multiple database types selected."
+	elif [ ${dbnum} -lt 1 ]; then
+		eerror
+		eerror "Select exactly one database type out of these: ${dbtypes}"
+		eerror
+		die "No database type selected."
 	fi
 	unpack ${A}
 }
