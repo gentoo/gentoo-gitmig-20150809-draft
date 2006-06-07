@@ -1,0 +1,22 @@
+Index: gnupg-1.9.20/tools/gpgparsemail.c
+===================================================================
+--- gnupg-1.9.20.orig/tools/gpgparsemail.c
++++ gnupg-1.9.20/tools/gpgparsemail.c
+@@ -145,17 +145,6 @@ xstrdup (const char *string)
+   return p;
+ }
+ 
+-static char *
+-stpcpy (char *a,const char *b)
+-{
+-  while (*b)
+-    *a++ = *b++;
+-  *a = 0;
+-  
+-  return (char*)a;
+-}
+-
+-
+ static int
+ run_gnupg (int smime, int sig_fd, int data_fd, int *close_list)
+ {

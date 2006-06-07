@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.20-r3.ebuild,v 1.6 2006/06/01 04:47:40 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.20-r3.ebuild,v 1.7 2006/06/07 13:01:51 flameeyes Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -48,6 +48,7 @@ src_unpack() {
 	sed -i -e 's/PIC/__PIC__/g' intl/relocatable.c || die "PIC patching failed"
 
 	epatch "${FILESDIR}/${P}-fbsd.patch"
+	epatch "${FILESDIR}/${P}-fbsd-gcc41.patch"
 	AT_M4DIR="m4 gl/m4" eautoreconf
 }
 

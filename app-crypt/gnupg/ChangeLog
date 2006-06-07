@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.195 2006/06/01 04:47:40 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.196 2006/06/07 13:01:51 flameeyes Exp $
+
+  07 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/gnupg-1.9.20-fbsd-gcc41.patch, gnupg-1.9.20-r3.ebuild:
+  Add extra patch to build with GCC 4.1 on FreeBSD.
 
   01 Jun 2006; Thomas Cort <tcort@gentoo.org> gnupg-1.9.20-r3.ebuild:
   Stable on alpha wrt Bug #132343.
