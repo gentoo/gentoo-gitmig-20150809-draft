@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libtheora
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.38 2006/05/25 02:58:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.39 2006/06/07 12:01:51 flameeyes Exp $
+
+*libtheora-1.0_alpha6 (07 Jun 2006)
+
+  07 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libtheora-1.0alpha6-buildfixes.patch, +libtheora-1.0_alpha6.ebuild:
+  Version bump with huge build fixes patch as the release is broken upstream.
+  Thanks to Ian Leonard in bug #135221 for the notice and part of the patches.
 
   25 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   libtheora-1.0_alpha5.ebuild:
