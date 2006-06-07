@@ -12,3 +12,4 @@ sys-apps/sandbox
 dev-util/confcache
 dev-util/ccache
 dev-python/pycrypto
+sys-devel/gcc-config
