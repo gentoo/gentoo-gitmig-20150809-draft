@@ -30,7 +30,7 @@ diff -Naur epix-1.0.7-old/contrib/doc/Makefile.in epix-1.0.7/contrib/doc/Makefil
  target_alias = @target_alias@
  docdir = $(datadir)/doc/epix
 -EPIXFLAGS = --no-defaults -I.. -I../.. -L.. -L../.. -lepixext -lepix -v
-+EPIXFLAGS = --no-defaults -I.. -I../.. -L.. -L../.. -lepixext -lepix 
++EPIXFLAGS = --no-defaults -I.. -I../.. -L.. -L../.. -lepixext -lepix -q
  XPS := $(wildcard *.cc)
  EEPICS = $(XPS:.cc=.eepic)
  CLEANFILES = *~ *.dvi *.log contrib_src.tar contrib_src.tar.gz \
@@ -42,7 +42,7 @@ diff -Naur epix-1.0.7-old/doc/Makefile.in epix-1.0.7/doc/Makefile.in
  target_alias = @target_alias@
  docdir = $(datadir)/doc/epix
 -EPIXFLAGS = --no-defaults -I.. -L.. -lepix -v
-+EPIXFLAGS = --no-defaults -I.. -L.. -lepix
++EPIXFLAGS = --no-defaults -I.. -L.. -lepix -q
  XPS := $(wildcard *.xp)
  EEPICS = $(XPS:.xp=.eepic)
  CLEANFILES = *~ *.dvi *.log *.out *.ilg *.idx \
@@ -54,7 +54,7 @@ diff -Naur epix-1.0.7-old/samples/Makefile.in epix-1.0.7/samples/Makefile.in
  target_alias = @target_alias@
  docdir = $(datadir)/doc/epix
 -EPIXFLAGS = --no-defaults -I.. -L.. -lepix -v
-+EPIXFLAGS = --no-defaults -I.. -L.. -lepix
++EPIXFLAGS = --no-defaults -I.. -L.. -lepix -q
  XPS := $(wildcard *.xp)
  EEPICS = $(XPS:.xp=.eepic)
  CLEANFILES = *~ *.dvi *.log *.out *.ilg sample_src.tar sample.pdf sample.ps \
