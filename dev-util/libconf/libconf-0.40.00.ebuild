@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.40.00.ebuild,v 1.6 2005/11/23 10:50:32 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.40.00.ebuild,v 1.7 2006/06/07 21:10:21 dams Exp $
 
-IUSE=""
+IUSE="xml"
 
 MY_P=perl-${PN/l/L}-${PV}
 S=${WORKDIR}/${MY_P}
