@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/pwmanager
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/ChangeLog,v 1.6 2005/11/10 15:27:33 greg_g Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/ChangeLog,v 1.7 2006/06/07 05:12:15 tsunam Exp $
+
+  07 Jun 2006; Joshua Jackson <tsunam@gentoo.org> pwmanager-1.2.4.ebuild:
+  Stable on x86; bug #135658
 
 *pwmanager-1.2.4 (10 Nov 2005)
 
