@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/pyenchant
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.1 2006/06/07 16:51:55 marienz Exp $
+
+*pyenchant-1.1.5 (07 Jun 2006)
+
+  07 Jun 2006; Marien Zwart <marienz@gentoo.org> +metadata.xml,
+  +pyenchant-1.1.5.ebuild:
+  New package, based on an ebuild from Ryan Kelly (ryan-gentoo@rfk.id.au).
+  Closes bug #85959.
+
