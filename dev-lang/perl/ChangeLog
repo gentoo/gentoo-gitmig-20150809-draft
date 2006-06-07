@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.219 2006/06/07 02:13:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.220 2006/06/07 22:09:29 kumba Exp $
+
+  07 Jun 2006; Joshua Kinard <kumba@gentoo.org> perl-5.8.8-r2.ebuild:
+  Marked stable on mips.
 
   07 Jun 2006; <mcummings@gentoo.org> perl-5.8.8-r2.ebuild:
   Following a conversation with agaffney, removed code that is dup'd from
