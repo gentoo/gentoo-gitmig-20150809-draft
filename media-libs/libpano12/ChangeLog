@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libpano12
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano12/ChangeLog,v 1.13 2006/06/06 01:10:49 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano12/ChangeLog,v 1.14 2006/06/07 23:55:32 halcy0n Exp $
+
+  07 Jun 2006; Mark Loeser <halcy0n@gentoo.org>
+  +files/libpano12-2.8.3-insertfilename.patch, libpano12-2.8.3.ebuild:
+  Add patch to fix compilation on amd64; bug #135984
 
 *libpano12-2.8.3 (06 Jun 2006)
 
