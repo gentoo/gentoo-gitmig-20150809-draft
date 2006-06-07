@@ -1,34 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 354dc0a66dfa886aa39f95a297b8ebdd ChangeLog 8585
-RMD160 258d66ad8af31d7bc652bc2b23d8fd3194f2355a ChangeLog 8585
-SHA256 630b6da842b9d7707992429773d2c3a75b816bc01561d587c472d9bf88a42c48 ChangeLog 8585
-MD5 aeab458855a8d1075990862c8309c8dc docbook-xsl-stylesheets-1.66.1.ebuild 1659
-RMD160 c39b64f458cd669b29d2af4368af9ffe33b54394 docbook-xsl-stylesheets-1.66.1.ebuild 1659
-SHA256 b1b43f5f241fab251f044c71c9e5205c5890439eeb8f099650109accfa4bf04e docbook-xsl-stylesheets-1.66.1.ebuild 1659
-MD5 ce545093031db27c72ff4179a812b39e docbook-xsl-stylesheets-1.68.1-r1.ebuild 1389
-RMD160 47afecaf66da3965de696f4d537d1276d80c3281 docbook-xsl-stylesheets-1.68.1-r1.ebuild 1389
-SHA256 2a86e680af828cd379e99112d0d0f33dc787be500f7920571e2036e2a647cd20 docbook-xsl-stylesheets-1.68.1-r1.ebuild 1389
-MD5 5416943ee81126e7183eb57129f3fd46 docbook-xsl-stylesheets-1.69.1.ebuild 1299
-RMD160 585a6b59fb3d5769c30afebbd4ed22e71fae659e docbook-xsl-stylesheets-1.69.1.ebuild 1299
-SHA256 3a9bfb6fc901392b5ff0e420ac2ae4994c0f5ad9e02088e6d144c37f75469b3d docbook-xsl-stylesheets-1.69.1.ebuild 1299
-MD5 f417ba6045c3ea9fffe8dd97ee167acc files/digest-docbook-xsl-stylesheets-1.66.1 71
-RMD160 f1c31fce4eb50df4099d85830675f5f2e7eef5e2 files/digest-docbook-xsl-stylesheets-1.66.1 71
-SHA256 fe356314769dcd67450efaab50f596262ebc56f4ba404ce17fd666fce5efc3c3 files/digest-docbook-xsl-stylesheets-1.66.1 71
-MD5 0875240a791257dcc5fc852888d3ab74 files/digest-docbook-xsl-stylesheets-1.68.1-r1 71
-RMD160 3b0a461bd11e9bf754bc4c0fc37c38779d038711 files/digest-docbook-xsl-stylesheets-1.68.1-r1 71
-SHA256 355b1a819fcf8e35c9f22537125fc01c9267026a6c3a307c2924d4d5a73f0a9a files/digest-docbook-xsl-stylesheets-1.68.1-r1 71
-MD5 845118086deb63a17cdabd61eb3bb631 files/digest-docbook-xsl-stylesheets-1.69.1 72
-RMD160 b62a04e810830cbc4dabd2cdb12b87297c43a054 files/digest-docbook-xsl-stylesheets-1.69.1 72
-SHA256 375368d12c45fe660aa6781342be5bbfbf4ea1e61cec97c5b3504c0b3e8ebbe7 files/digest-docbook-xsl-stylesheets-1.69.1 72
+DIST docbook-xsl-1.68.1.tar.bz2 967283 RMD160 3d73528a80e26b82935e0d26420eaa9355b49a3c SHA1 b39a164cbfa6ec1373266bf1593610a366d72fa8 SHA256 57019b2f3d2967d5e464aafa15c29b8780f23c0f9e071a38b2951587e20d7cf6
+DIST docbook-xsl-1.69.1.tar.bz2 1058962 RMD160 4cc1a26acdcbe7af8f037cfb261b5e9dca15938c SHA1 aaabf0e274609134e187a6c36d2be23f3471f507 SHA256 5fc60ef22794df816baa2539ed6224c10a3786578dfa6d6a062048830d5ad7a3
+EBUILD docbook-xsl-stylesheets-1.68.1-r1.ebuild 1389 RMD160 b2cb8723827573fc9946f4c768fa0432551e0e7b SHA1 318dde855656a4fb104b3ac6122a39a30cd94391 SHA256 2d134c778d24bf31a816d2acf1002cb0fb715da6cff86f8429137a589d74b1b5
+MD5 7ec01ee33861d7a8b664836fee102c07 docbook-xsl-stylesheets-1.68.1-r1.ebuild 1389
+RMD160 b2cb8723827573fc9946f4c768fa0432551e0e7b docbook-xsl-stylesheets-1.68.1-r1.ebuild 1389
+SHA256 2d134c778d24bf31a816d2acf1002cb0fb715da6cff86f8429137a589d74b1b5 docbook-xsl-stylesheets-1.68.1-r1.ebuild 1389
+EBUILD docbook-xsl-stylesheets-1.69.1.ebuild 1296 RMD160 6ba51314fffd8bb4f726249a126075afbdad2683 SHA1 0cb2f83129d0ae61e923aa8133980dd4fbc85be2 SHA256 65a11095db5bc2bdd2bd89f3fc71fb8c085a24e79ea96bb1c0087732f28a7540
+MD5 f8af19fa83491054008943ee64e5a287 docbook-xsl-stylesheets-1.69.1.ebuild 1296
+RMD160 6ba51314fffd8bb4f726249a126075afbdad2683 docbook-xsl-stylesheets-1.69.1.ebuild 1296
+SHA256 65a11095db5bc2bdd2bd89f3fc71fb8c085a24e79ea96bb1c0087732f28a7540 docbook-xsl-stylesheets-1.69.1.ebuild 1296
+MISC ChangeLog 8766 RMD160 23b0f8320a78ed09b19b7db26fd65b1178522192 SHA1 b22e3332563844ce9c157c3b8ff9683306978edd SHA256 2916cde8eb10da2c4f37c674ec99197f5ca7232b3a5ba7c169877762d32dbc73
+MD5 a2361bcb26f63621383930e4f73defed ChangeLog 8766
+RMD160 23b0f8320a78ed09b19b7db26fd65b1178522192 ChangeLog 8766
+SHA256 2916cde8eb10da2c4f37c674ec99197f5ca7232b3a5ba7c169877762d32dbc73 ChangeLog 8766
+MISC metadata.xml 164 RMD160 698422e821458386b8da17baa6014296f8284e0b SHA1 a805613d38e6e3bff93cba3858d6a92cc79fe2f7 SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
 SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENFXcAiZjviIA2XgRAgGqAKCgy3ocEBQfOCigWwjiemzrdLzPMgCg2UUt
-zvS0n87J2FOu/sn4U8cqapY=
-=p4Lk
------END PGP SIGNATURE-----
+MD5 8452f3152f0c32d66bfeb64aaf399c0a files/digest-docbook-xsl-stylesheets-1.68.1-r1 259
+RMD160 51e1fe523a215fe197d70395b013e5f5648ce8e9 files/digest-docbook-xsl-stylesheets-1.68.1-r1 259
+SHA256 8e0f57b40aa9e9dc1df27e5fecfbafa622ea49729391212ca9ac4c8e12fb2100 files/digest-docbook-xsl-stylesheets-1.68.1-r1 259
+MD5 514c96208a9d39a0317064dd2d4128d0 files/digest-docbook-xsl-stylesheets-1.69.1 262
+RMD160 e12d6636035d3f485138d13ba827ff2b2d1b41b5 files/digest-docbook-xsl-stylesheets-1.69.1 262
+SHA256 7a6abfdff5f0ab6da828fd7d2040a96408195d1c4c87a062c3ed5943d4ade803 files/digest-docbook-xsl-stylesheets-1.69.1 262
