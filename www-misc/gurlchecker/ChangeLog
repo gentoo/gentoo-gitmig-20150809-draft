@@ -1,6 +1,17 @@
 # ChangeLog for www-misc/gurlchecker
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.15 2005/12/22 03:24:01 leonardop Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.16 2006/06/07 14:38:27 leonardop Exp $
+
+*gurlchecker-0.10.0 (07 Jun 2006)
+
+  07 Jun 2006; Leonardo Boshell <leonardop@gentoo.org>
+  +gurlchecker-0.10.0.ebuild:
+  New release. Added 'clamav' and 'tidy' USE flags. Updated dependencies.
+
+  07 Jun 2006; Leonardo Boshell <leonardop@gentoo.org>
+  gurlchecker-0.8.3.ebuild:
+  Added docbook-sgml-utils to DEPEND, since it's necessary to build the man
+  page (bug #135867).
 
 *gurlchecker-0.8.3 (22 Dec 2005)
 
