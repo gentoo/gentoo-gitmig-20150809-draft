@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbindkeys
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.32 2006/06/07 01:16:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.33 2006/06/07 05:15:28 corsair Exp $
+
+  07 Jun 2006; Markus Rothe <corsair@gentoo.org> xbindkeys-1.7.2-r1.ebuild:
+  Stable on ppc64; bug #135822
 
   07 Jun 2006; Jason Wever <weeve@gentoo.org> xbindkeys-1.7.2-r1.ebuild:
   Stable on SPARC wrt bug #135822.
