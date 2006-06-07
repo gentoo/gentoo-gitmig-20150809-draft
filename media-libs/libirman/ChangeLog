@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libirman
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/ChangeLog,v 1.16 2006/03/06 15:28:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/ChangeLog,v 1.17 2006/06/07 05:32:11 corsair Exp $
+
+  07 Jun 2006; Markus Rothe <corsair@gentoo.org> libirman-0.4.2-r1.ebuild:
+  Added ~ppc64; bug #131306
 
   06 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/libirman-0.4.2-format.patch, +files/libirman-0.4.2-gcc4.patch,

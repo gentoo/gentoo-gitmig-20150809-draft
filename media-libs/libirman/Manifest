@@ -1,34 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 01935384005552c46535dfdfa23b0d9b ChangeLog 2287
-RMD160 c1d238bd2cc0f3f4996119eac7494c93237b6fbf ChangeLog 2287
-SHA256 6a169054424b01a297c8b1910b3960cde9998e0527cdfd4c9a2e8dc57c989565 ChangeLog 2287
+MD5 99e9c9f8cb18d7134df772f352cacdc8 ChangeLog 2389
 MD5 3cd23162cf3639176a9e24d4b1fd6b80 files/digest-libirman-0.4.2-r1 65
-RMD160 06dad47c1660ba5ce4b88cb9413a6ee446bdcee3 files/digest-libirman-0.4.2-r1 65
-SHA256 c9053f0d646d61b624797719d4e60d6e715a252adc9cc660d497c664b56d80e0 files/digest-libirman-0.4.2-r1 65
 MD5 831a488284f41ff536f9f16429321fd0 files/libirman-0.4.2-PICShared.patch 2217
-RMD160 e9d6416be13ac4df8ab5cd0348ce6b3c8e070b5e files/libirman-0.4.2-PICShared.patch 2217
-SHA256 e24eba3c68e14e677e01e29c15d82d00084e95daa9fa98f7f3bcac880d6f6f1a files/libirman-0.4.2-PICShared.patch 2217
 MD5 50d07f277bdd8d7ff6e2a74cddc0eadd files/libirman-0.4.2-destdir.patch 1726
-RMD160 9ecedb06dddcbae7e4ab6263ef535e988506c048 files/libirman-0.4.2-destdir.patch 1726
-SHA256 79bcfe9e6548dffb9015fa26cfff44994a68a9ee550966fa2774c9fd9fc9aecc files/libirman-0.4.2-destdir.patch 1726
 MD5 1d37c878801902984d1bcb16aaa85fd2 files/libirman-0.4.2-format.patch 466
-RMD160 20d7e3353618d46b411192ea8c703b1ba2dfda60 files/libirman-0.4.2-format.patch 466
-SHA256 f767ec7ddfbcb663ee8cbc6809a7832ade47efcb67b81cfbcd1a9b51679f9e9a files/libirman-0.4.2-format.patch 466
 MD5 b49a6481a95a16ff722c90af78f7c5a0 files/libirman-0.4.2-gcc4.patch 359
-RMD160 94cdb3534a72551bb7cbda5fef671d5ae432c485 files/libirman-0.4.2-gcc4.patch 359
-SHA256 622c9c5c21daa80193e1e71a1841235eb9485a1f2da3edd6ac1be5f3c5bac015 files/libirman-0.4.2-gcc4.patch 359
-MD5 4de80cc889d8eb6e3c6a2b7522eb2e2d libirman-0.4.2-r1.ebuild 1023
-RMD160 6078e035f881e1ce90749d492e460af03d50207a libirman-0.4.2-r1.ebuild 1023
-SHA256 05144935a2e5337ecf2b85b2138c85a2ed8fc8b5b62bae72aa80ce077db36d67 libirman-0.4.2-r1.ebuild 1023
+MD5 d9f80d6623f66c5c335b563ba955a53f libirman-0.4.2-r1.ebuild 1028
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
-SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEDFUtAiZjviIA2XgRAh/kAKDHqAhPiZBtjCr/oHMyuuKEk/ulwACgxYCA
-cjlrxbLFo9u9sLwgCjuazU8=
-=5QBy
------END PGP SIGNATURE-----
