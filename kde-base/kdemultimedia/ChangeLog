@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.211 2006/06/03 10:49:20 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.212 2006/06/07 20:05:03 flameeyes Exp $
+
+  07 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdemultimedia-3.5.2-r2.ebuild:
+  Add missing akode in useflags. Thanks to Jakub Moc in bug #135978.
 
   03 Jun 2006; Guy Martin <gmsoft@gentoo.org> kdemultimedia-3.5.2-r2.ebuild:
   Stable on hppa.
