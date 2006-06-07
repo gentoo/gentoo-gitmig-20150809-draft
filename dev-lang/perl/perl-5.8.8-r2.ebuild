@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.11 2006/06/03 18:08:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.12 2006/06/07 02:04:29 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -28,8 +28,7 @@ DEPEND="berkdb? ( sys-libs/db )
 	<sys-devel/libperl-5.9
 	!<perl-core/ExtUtils-MakeMaker-6.17
 	!<perl-core/File-Spec-0.87
-	!<perl-core/Test-Simple-0.47-r1
-	|| ( sys-apps/coreutils app-admin/realpath sys-freebsd/freebsd-bin )"
+	!<perl-core/Test-Simple-0.47-r1"
 
 RDEPEND="~sys-devel/libperl-${PV}
 	berkdb? ( sys-libs/db )
@@ -565,33 +564,6 @@ src_remove_extra_files()
 }
 
 pkg_postinst() {
-	# Make sure we do not have stale/invalid libperl.so 's ...
-	if [ -f "${ROOT}usr/$(get_libdir)/libperl$(get_libname)" -a ! -L "${ROOT}usr/$(get_libdir)/libperl$(get_libname)" ]
-	then
-		mv -f ${ROOT}usr/$(get_libdir)/libperl$(get_libname) ${ROOT}usr/$(get_libdir)/libperl$(get_libname).old
-	fi
-
-	local perllib
-	if [[ -z $(type -p realpath) ]]; then
-		perllib="`readlink -f ${ROOT}usr/$(get_libdir)/libperl$(get_libname) | sed -e 's:^.*/::'`"
-	else
-		perllib="`realpath ${ROOT}usr/$(get_libdir)/libperl$(get_libname) | sed -e 's:^.*/::'`"
-	fi
-
-	# If we are installing perl, we need the /usr/lib/libperl.so symlink to
-	# point to the version of perl we are running, else builing something
-	# against libperl.so will break ...
-	if [ "${perllib}" != "${LIBPERL}" ]
-	then
-		# Delete stale symlinks
-		rm -f ${ROOT}usr/$(get_libdir)/libperl$(get_libname)
-		rm -f ${ROOT}usr/$(get_libdir)/libperl$(get_libname ${PERLSLOT})
-		# Regenerate libperl.so.${PERLSLOT}
-		ln -snf ${LIBPERL} ${ROOT}usr/$(get_libdir)/libperl$(get_libname).${PERLSLOT}
-		# Create libperl.so (we use the *soname* versioned lib here ..)
-		ln -snf libperl$(get_libname ${PERLSLOT}) ${ROOT}usr/$(get_libdir)/libperl$(get_libname)
-	fi
-
 	INC=$(perl -e 'for $line (@INC) { next if $line eq "."; next if $line =~ m/'${MY_PV}'|etc|local|perl$/; print "$line\n" }')
 	if [ "${ROOT}" = "/" ]
 	then
