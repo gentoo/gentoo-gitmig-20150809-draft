@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/zile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.18 2006/04/04 18:10:22 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.19 2006/06/07 18:18:46 fmccor Exp $
+
+  07 Jun 2006; Ferris McCormick <fmccor@gentoo.org> zile-2.2.13.ebuild:
+  Add ~sparc keyword at developer request (Bug #135947 --- KingTaco). Builds
+  fine and brief test works.
 
   04 Apr 2006; Emanuele Giaquinta <exg@gentoo.org> zile-2.2.13.ebuild:
   Provide virtual/editor.
