@@ -1,0 +1,10 @@
+# ChangeLog for app-arch/tapeutils
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tapeutils/ChangeLog,v 1.1 2006/06/07 00:43:43 robbat2 Exp $
+
+*tapeutils-0.4 (07 Jun 2006)
+
+  07 Jun 2006; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +tapeutils-0.4.ebuild:
+  Initial commit. Bug 116387, submitted by Ulrich Mueller <ulm@kph.uni-mainz.de>.
+
