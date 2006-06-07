@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.4.1.ebuild,v 1.1 2006/06/06 20:59:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.4.1.ebuild,v 1.2 2006/06/07 12:03:56 flameeyes Exp $
 
 inherit rpm eutils flag-o-matic versionator toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.altlinux.ru/pub/distributions/ALTLinux/Sisyphus/files/SRPMS/$
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=""
@@ -26,18 +26,9 @@ pkg_setup() {
 	enewgroup utmp 406
 }
 
-src_unpack() {
-	unpack ${A}
-	rpm_src_unpack
-	cd "${S}"
-
-#	if [[ ${CHOST} == *-freebsd* ]] ; then
-#		epatch ${PATCHDIR}/freebsd
-#	fi
-}
-
 src_compile() {
-	make \
+	use elibc_FreeBSD && append-flags -lutil
+	emake \
 		CC="$(tc-getCC)" \
 		RPM_OPT_FLAGS="${CFLAGS}" \
 		libdir=/usr/$(get_libdir) \
