@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.1.ebuild,v 1.3 2006/06/05 17:02:18 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.1.ebuild,v 1.4 2006/06/07 21:05:30 allanonjl Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI}
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2.0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="bogofilter crypt dbus debug doc gstreamer ipv6 kerberos krb4 ldap mono nntp pda profile spell ssl widescreen"
+IUSE="bogofilter crypt dbus debug doc gstreamer hal ipv6 kerberos krb4 ldap mono nntp pda profile spell ssl widescreen"
 
 # Pango dependency required to avoid font rendering problems
 # evolution-data-server dep is 1.5 because in the e-utils directories,
