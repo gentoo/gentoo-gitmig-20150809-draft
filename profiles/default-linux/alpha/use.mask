@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.44 2006/06/05 17:05:48 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.45 2006/06/07 14:22:40 tcort Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -150,3 +150,7 @@ cyrus
 # Masked until firefox is removed from package.mask
 # See security Bug #135254 ; all other versions are broken, Bug #128777.
 firefox
+
+# Masked until qt4 is keyworded, see Bug #128411 (re-keyword poppler-bindings)
+# Remove once Bug #112811 (keyword qt4) is resolved
+qt4
