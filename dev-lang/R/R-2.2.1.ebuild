@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.1.ebuild,v 1.9 2006/06/06 18:49:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.1.ebuild,v 1.10 2006/06/07 02:20:24 wolf31o2 Exp $
 
 inherit fortran toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ppc64 ~sparc x86"
 IUSE="blas jpeg nls png readline tcltk X lapack"
 
 RDEPEND=">=dev-lang/perl-5.6.1-r3
