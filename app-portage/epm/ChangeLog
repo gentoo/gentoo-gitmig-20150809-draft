@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/epm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.17 2006/03/15 21:52:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.18 2006/06/07 18:43:37 agriffis Exp $
+
+  07 Jun 2006; Aron Griffis <agriffis@gentoo.org> -epm-0.8.8.ebuild,
+  epm-0.9.1.ebuild:
+  Mark 0.9.1 stable everywhere.  Remove 0.8.8
 
 *epm-0.9.1 (15 Mar 2006)
 
