@@ -61,3 +61,6 @@ netbeans
 
 #build is busted
 pike
+
+# mask pcmcia (bug #131306)
+pcmcia

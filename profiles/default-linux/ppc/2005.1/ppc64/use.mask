@@ -66,3 +66,6 @@ pyste
 
 # we don't have hardware to test. also see bug #113398
 dvb
+
+# mask pcmcia (bug #131306)
+pcmcia
