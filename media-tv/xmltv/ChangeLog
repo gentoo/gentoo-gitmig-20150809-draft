@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.46 2006/06/06 21:38:31 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.47 2006/06/07 10:13:47 mattepiu Exp $
+
+  07 Jun 2006; <matte@gentoo.org> xmltv-0.5.43-r4.ebuild:
+  removed na_dd special MethodMaker dep as per bug #95166.
 
   06 Jun 2006; Matteo Azzali <mattepiu@gentoo.org> +xmltv-0.5.43-r4:
   Implemented new version based on use flag as per topic in gentoo-dev. bug

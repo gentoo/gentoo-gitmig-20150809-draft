@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.43-r4.ebuild,v 1.2 2006/06/06 17:38:03 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.43-r4.ebuild,v 1.3 2006/06/07 10:13:47 mattepiu Exp $
 
 inherit eutils perl-module
 
@@ -70,8 +70,7 @@ RDEPEND=">=dev-perl/libwww-perl-5.65
 	dev-perl/Compress-Zlib
 	dev-perl/Unicode-String
 	dev-perl/TermReadKey
-	na_dd? ( <dev-perl/Class-MethodMaker-2 )
-	!na_dd? ( >=dev-perl/Class-MethodMaker-2 )
+	>=dev-perl/Class-MethodMaker-2
 	>=dev-lang/perl-5.6.1"
 
 DEPEND="${RDEPEND}
@@ -197,7 +196,5 @@ pkg_postinst() {
 		einfo "To use tv_pick_cgi, please link it from /usr/bin/tv_pick_cgi"
 		einfo "to where the ScriptAlias directive is configured."
 	fi
-	einfo "users with na_dd may experience issues if na_dd is not set,"
-	einfo "please set it: you may need an old version of dev-perl/Class-MethodMaker"
 }
 
