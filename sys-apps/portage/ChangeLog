@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.169 2006/06/06 05:35:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.170 2006/06/07 17:21:13 zmedico Exp $
+
+*portage-2.1_rc4-r4 (07 Jun 2006)
+
+  07 Jun 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1_rc4-r4.ebuild:
+  Revbump for #135398 and #135856.
 
 *portage-2.1_rc4-r3 (06 Jun 2006)
 
