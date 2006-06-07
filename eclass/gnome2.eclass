@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.70 2006/04/23 15:21:46 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.71 2006/06/07 21:13:17 allanonjl Exp $
 
 # GNOME 2 ECLASS
 inherit libtool gnome.org debug fdo-mime eutils
@@ -26,7 +26,9 @@ SCROLLKEEPER_UPDATE_BIN=${SCROLLKEEPER_UPDATE_BIN:="${ROOT}/usr/bin/scrollkeeper
 # Path to gconftool-2
 GCONFTOOL_BIN=${GCONFTOOL_BIN:="${ROOT}/usr/bin/gconftool-2"}
 
-IUSE="debug"
+if [[ ${GCONF_DEBUG} != "no" ]]; then
+	IUSE="debug"
+fi
 
 DEPEND=">=sys-apps/sed-4"
 
@@ -40,7 +42,9 @@ gnome2_src_unpack() {
 
 gnome2_src_configure() {
 	# Update the GNOME configuration options
-	use debug && G2CONF="${G2CONF} --enable-debug=yes"
+	if [[ ${GCONF_DEBUG} != 'no' ]] || use debug ; then
+		use debug && G2CONF="${G2CONF} --enable-debug=yes"
+	fi
 	G2CONF="${G2CONF} $(use_enable doc gtk-doc)"
 
 	# Run libtoolize
