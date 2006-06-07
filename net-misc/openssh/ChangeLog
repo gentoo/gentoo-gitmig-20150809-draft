@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.171 2006/04/23 17:58:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.172 2006/06/07 19:15:40 kumba Exp $
+
+  07 Jun 2006; Joshua Kinard <kumba@gentoo.org> openssh-4.3_p2-r1.ebuild:
+  Add sys-apps/shadow to RDEPEND/DEPEND so group/useradd is available. Fixes
+  Bug #135966.
 
   29 Apr 2006; Joshua Kinard <kumba@gentoo.org> openssh-4.3_p2-r1.ebuild:
   Marked stable on mips.
