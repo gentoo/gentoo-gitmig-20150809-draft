@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0.ebuild,v 1.2 2005/12/25 19:22:45 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0.ebuild,v 1.3 2006/06/07 18:49:09 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://apache/jakarta/commons/jelly/source/${MY_P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="1"
 KEYWORDS="~x86"
-IUSE="doc jikes junit source"
+IUSE="doc jikes test source"
 
 RDEPEND=">=virtual/jre-1.4
 	~dev-java/servletapi-2.3
@@ -53,7 +53,7 @@ src_unpack() {
 	java-pkg_jar-from commons-beanutils-1.6,commons-collections
 	java-pkg_jar-from dom4j-1,jaxen-1.1,xerces-2
 
-	if use junit; then
+	if use test; then
 		java-pkg_jar-from commons-logging
 	fi
 }
@@ -61,7 +61,7 @@ src_unpack() {
 src_compile() {
 	local antflags="-Dlibdir=lib jar"
 	use doc && antflags="${antflags} javadoc"
-	use junit && antflags="${antflags} test"
+	use test && antflags="${antflags} test"
 
 	ant ${antflags} || die "Ant failed"
 }
