@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.3.3.ebuild,v 1.8 2005/07/10 02:15:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.3.3.ebuild,v 1.9 2006/06/07 21:50:58 brix Exp $
 
 DESCRIPTION="ncurses based monitor util for your wavelan cards"
 SRC_URI="http://www.jm-music.de/wavemon-current.tar.gz"
