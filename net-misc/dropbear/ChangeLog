@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.39 2006/05/23 21:59:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.40 2006/06/07 13:07:12 vapier Exp $
+
+*dropbear-0.48.1 (07 Jun 2006)
+
+  07 Jun 2006; Mike Frysinger <vapier@gentoo.org> +dropbear-0.48.1.ebuild:
+  Version bump #134512 by Milan Holzäpfel.
 
   23 May 2006; <solar@gentoo.org> -dropbear-0.43.ebuild,
   -dropbear-0.45.ebuild, -dropbear-0.46.ebuild, -dropbear-0.47.ebuild:
