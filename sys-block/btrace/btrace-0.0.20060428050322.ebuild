@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-0.0.20060428050322.ebuild,v 1.1 2006/05/07 09:20:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-0.0.20060428050322.ebuild,v 1.2 2006/06/07 20:47:41 robbat2 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ IUSE="doc"
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 		|| ( sys-kernel/linux-headers sys-kernel/mips-headers )
-		docs? ( app-text/tetex )"
+		doc? ( app-text/tetex )"
 S="${WORKDIR}/${MY_PN}"
 
 src_compile() {
