@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.2.1.ebuild,v 1.11 2006/05/24 21:00:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.2.1.ebuild,v 1.12 2006/06/07 13:13:23 seemant Exp $
 
 inherit rpm eutils flag-o-matic versionator toolchain-funcs
 
@@ -64,18 +64,15 @@ src_install() {
 
 
 pkg_postinst() {
-	if [ "${ROOT}" = "/" ]
+	if [ -f ${ROOT}/var/log/wtmp ]
 	then
-		if [ -f /var/log/wtmp ]
-		then
-			chown root:utmp /var/log/wtmp
-			chmod 664 /var/log/wtmp
-		fi
+		chown root:utmp ${ROOT}/var/log/wtmp
+		chmod 664 ${ROOT}/var/log/wtmp
+	fi
 
-		if [ -f /var/run/utmp ]
-		then
-			chown root:utmp /var/run/utmp
-			chmod 664 /var/run/utmp
-		fi
+	if [ -f ${ROOT}/var/run/utmp ]
+	then
+		chown root:utmp ${ROOT}/var/run/utmp
+		chmod 664 ${ROOT}/var/run/utmp
 	fi
 }
