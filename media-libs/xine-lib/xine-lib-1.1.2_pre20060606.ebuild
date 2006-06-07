@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060606.ebuild,v 1.1 2006/06/06 19:21:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060606.ebuild,v 1.2 2006/06/07 19:25:15 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -18,7 +18,7 @@ else
 	SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 fi
 
-PATCHLEVEL="46"
+PATCHLEVEL="47"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -95,9 +95,15 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	[[ -z $(test-flags -fvisibility=hidden) ]] && export EPATCH_EXCLUDE="237_all_visibility.patch"
+	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 
-	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patches
+	if use nls && [[ -d "${WORKDIR}/patches/poupdate/" ]]; then
+		ebegin "Updating translation files"
+		cp "${WORKDIR}/patches/poupdate/"*.po "${S}/po"
+		find "${S}/po" -name '*.po' -exec basename {} .po \; \
+			> "${S}/po/LINGUAS"
+		eend
+	fi
 
 	# ffmpeg doesn'g use libtool, so the condition for PIC code
 	# is __PIC__, not PIC.
