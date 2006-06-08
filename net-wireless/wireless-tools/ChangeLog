@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.106 2006/05/24 21:10:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.107 2006/06/08 03:23:15 tcort Exp $
+
+  08 Jun 2006; Thomas Cort <tcort@gentoo.org>
+  wireless-tools-29_pre10.ebuild:
+  Added ~alpha keyword. Tested with Linksys ADMtek ADM8211 802.11b Wireless
+  Interface (rev 11).
 
   24 May 2006; Michael Hanselmann <hansmi@gentoo.org>
   wireless-tools-28.ebuild:
