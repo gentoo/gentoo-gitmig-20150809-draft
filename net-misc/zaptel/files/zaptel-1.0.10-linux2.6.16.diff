@@ -1,0 +1,44 @@
+--- zaptel-1.0.10/zaptel.c.orig	2006-06-08 01:53:19.000000000 +0000
++++ zaptel-1.0.10/zaptel.c	2006-06-08 01:56:35.000000000 +0000
+@@ -4419,7 +4419,11 @@
+ 	for (x = 0; x < span->channels; x++) {
+ 		char chan_name[50];
+ 		sprintf(chan_name, "zap%d", span->chans[x].channo);
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,16)
+ 		class_device_create(zap_class, MKDEV(ZT_MAJOR, span->chans[x].channo), NULL, chan_name);
++#else
++		class_device_create(zap_class, NULL, MKDEV(ZT_MAJOR, span->chans[x].channo), NULL, chan_name);
++#endif
+ 	}
+ #endif /* CONFIG_ZAP_UDEV */
+ 
+@@ -6445,10 +6449,17 @@
+ 
+ #ifdef CONFIG_ZAP_UDEV /* udev support functions */
+ 	zap_class = class_create(THIS_MODULE, "zaptel");
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,16)
+ 	class_device_create(zap_class, MKDEV(ZT_MAJOR, 253), NULL, "zaptimer");
+ 	class_device_create(zap_class, MKDEV(ZT_MAJOR, 254), NULL, "zapchannel");
+ 	class_device_create(zap_class, MKDEV(ZT_MAJOR, 255), NULL, "zappseudo");
+ 	class_device_create(zap_class, MKDEV(ZT_MAJOR, 0), NULL, "zapctl");
++#else
++	class_device_create(zap_class, NULL, MKDEV(ZT_MAJOR, 253), NULL, "zaptimer");
++	class_device_create(zap_class, NULL, MKDEV(ZT_MAJOR, 254), NULL, "zapchannel");
++	class_device_create(zap_class, NULL, MKDEV(ZT_MAJOR, 255), NULL, "zappseudo");
++	class_device_create(zap_class, NULL, MKDEV(ZT_MAJOR, 0), NULL, "zapctl");
++#endif
+ #endif /* CONFIG_ZAP_UDEV */
+ 
+ #ifdef CONFIG_DEVFS_FS
+--- zaptel-1.0.10/wcusb.c.orig	2006-06-08 02:05:33.000000000 +0000
++++ zaptel-1.0.10/wcusb.c	2006-06-08 02:06:08.000000000 +0000
+@@ -1448,7 +1448,9 @@
+ static struct usb_driver wc_usb_driver =
+ {
+ #ifdef LINUX26
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,16)
+ 	owner: THIS_MODULE,
++#endif
+ #else	
+ 	fops: NULL,
+ 	minor: 0,

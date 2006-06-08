@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.10.ebuild,v 1.1 2005/12/02 03:32:51 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.10.ebuild,v 1.2 2006/06/08 02:19:26 stkn Exp $
 
 IUSE="bri devfs26 rtc ukcid"
 
@@ -135,6 +135,11 @@ src_unpack() {
 	# see http://www.lusyn.com/asterisk/patches.html for more information
 	use ukcid && \
 		epatch ${FILESDIR}/${PN}-1.0.10-ukcid.patch
+
+	# buy some time to get 1.2 into shape,
+	# fix 2.6.16 compile errors and CONFIG_ZAPATA_DEBUG undefined warnings
+	epatch ${FILESDIR}/zaptel-1.0.10-linux2.6.16.diff
+	epatch ${FILESDIR}/zaptel-1.0.10-fix-zapata-debug-undefined-warnings.diff
 }
 
 src_compile() {

@@ -1,0 +1,118 @@
+--- zaptel-1.0.10/zaptel.c.orig	2006-06-08 01:59:11.000000000 +0000
++++ zaptel-1.0.10/zaptel.c	2006-06-08 02:00:02.000000000 +0000
+@@ -1260,7 +1260,7 @@
+ #ifndef LINUX26
+ 	MOD_INC_USE_COUNT;
+ #endif	
+-#if CONFIG_ZAPATA_DEBUG
++#ifdef CONFIG_ZAPATA_DEBUG
+ 	printk("ZAPNET: Opened channel %d name %s\n", ms->channo, ms->name);
+ #endif
+ 	return 0;
+@@ -1420,7 +1420,7 @@
+ 		dev->trans_start = jiffies;
+ 		stats->tx_packets++;
+ 		stats->tx_bytes += ss->writen[oldbuf];
+-#if CONFIG_ZAPATA_DEBUG
++#ifdef CONFIG_ZAPATA_DEBUG
+ 		printk("Buffered %d bytes to go out in buffer %d\n", ss->writen[oldbuf], oldbuf);
+ 		for (x=0;x<ss->writen[oldbuf];x++)
+ 		     printk("%02x ", ss->writebuf[oldbuf][x]);
+@@ -1521,7 +1521,7 @@
+ 			   some space for us */
+ 			ss->outwritebuf = oldbuf;
+ 		}
+-#if CONFIG_ZAPATA_DEBUG
++#ifdef CONFIG_ZAPATA_DEBUG
+ 		printk("Buffered %d bytes (skblen = %d) to go out in buffer %d\n", ss->writen[oldbuf], skb->len, oldbuf);
+ 		for (x=0;x<ss->writen[oldbuf];x++)
+ 		     printk("%02x ", ss->writebuf[oldbuf][x]);
+@@ -1732,7 +1732,7 @@
+ 			amnt = chan->blocksize;
+ 	}
+ 
+-#if CONFIG_ZAPATA_DEBUG
++#ifdef CONFIG_ZAPATA_DEBUG
+ 	printk("zt_chan_write(unit: %d, inwritebuf: %d, outwritebuf: %d amnt: %d\n", 
+ 		unit, chan->inwritebuf, chan->outwritebuf, amnt);
+ #endif
+@@ -1918,7 +1918,7 @@
+ 	} else {
+ 		for (x=0;x<NUM_SIGS;x++) {
+ 			if (outs[x][0] == chan->sig) {
+-#if CONFIG_ZAPATA_DEBUG
++#ifdef CONFIG_ZAPATA_DEBUG
+ 				printk("Setting bits to %d for channel %s state %d in %d signalling\n", outs[x][txsig + 1], chan->name, txsig, chan->sig);
+ #endif
+ 				chan->txhooksig = txsig;
+@@ -3008,14 +3008,14 @@
+ 	if (!chan->span)
+ 		return;
+ 
+-#if CONFIG_ZAPATA_DEBUG
++#ifdef CONFIG_ZAPATA_DEBUG
+ 	printk("Recalculating slaves on %s\n", chan->name);
+ #endif
+ 
+ 	/* Link all slaves appropriately */
+ 	for (x=chan->chanpos;x<chan->span->channels;x++)
+ 		if (chan->span->chans[x].master == chan) {
+-#if CONFIG_ZAPATA_DEBUG
++#ifdef CONFIG_ZAPATA_DEBUG
+ 			printk("Channel %s, slave to %s, last is %s, its next will be %d\n", 
+ 			       chan->span->chans[x].name, chan->name, last->name, x);
+ #endif
+@@ -3024,7 +3024,7 @@
+ 		}
+ 	/* Terminate list */
+ 	last->nextslave = 0;
+-#if CONFIG_ZAPATA_DEBUG
++#ifdef CONFIG_ZAPATA_DEBUG
+ 	printk("Done Recalculating slaves on %s (last is %s)\n", chan->name, last->name);
+ #endif
+ }
+@@ -3271,7 +3271,7 @@
+ 			if (y >= 0) chans[ch.chan]->rxsig = (unsigned char)y;
+ 			chans[ch.chan]->rxhooksig = ZT_RXSIG_INITIAL;
+ 		}
+-#if CONFIG_ZAPATA_DEBUG
++#ifdef CONFIG_ZAPATA_DEBUG
+ 		printk("Configured channel %s, flags %04x, sig %04x\n", chans[ch.chan]->name, chans[ch.chan]->flags, chans[ch.chan]->sig);
+ #endif		
+ 		spin_unlock_irqrestore(&chans[ch.chan]->lock, flags);
+@@ -5229,7 +5229,7 @@
+ 				zt_rbs_sethook(chan,ZT_TXSIG_OFFHOOK, ZT_TXSTATE_AFTERSTART, ZT_AFTERSTART_TIME);
+ 			}
+ 			chan->kewlonhook = 0;
+-#if CONFIG_ZAPATA_DEBUG
++#ifdef CONFIG_ZAPATA_DEBUG
+ 			printk("Off hook on channel %d, itimer = %d, gotgs = %d\n", chan->channo, chan->itimer, chan->gotgs);
+ #endif
+ 			if (chan->itimer) /* if timer still running */
+@@ -5748,7 +5748,7 @@
+ 				oldbuf = ms->inreadbuf;
+ 				ms->infcs = PPP_INITFCS;
+ 				ms->readn[ms->inreadbuf] = ms->readidx[ms->inreadbuf];
+-#if CONFIG_ZAPATA_DEBUG
++#ifdef CONFIG_ZAPATA_DEBUG
+ 				printk("EOF, len is %d\n", ms->readn[ms->inreadbuf]);
+ #endif
+ #if defined(CONFIG_ZAPATA_NET) || defined(CONFIG_ZAPATA_PPP)
+@@ -5818,7 +5818,7 @@
+ 						/* Whoops, we're full, and have no where else
+ 						to store into at the moment.  We'll drop it
+ 						until there's a buffer available */
+-#if CONFIG_ZAPATA_DEBUG
++#ifdef CONFIG_ZAPATA_DEBUG
+ 						printk("Out of storage space\n");
+ #endif
+ 						ms->inreadbuf = -1;
+@@ -5841,7 +5841,7 @@
+ 					if (!ms->rxdisable) { /* if receiver enabled */
+ 						/* Notify a blocked reader that there is data available
+ 						to be read, unless we're waiting for it to be full */
+-#if CONFIG_ZAPATA_DEBUG
++#ifdef CONFIG_ZAPATA_DEBUG
+ 						printk("Notifying reader data in block %d\n", oldbuf);
+ #endif
+ 						wake_up_interruptible(&ms->readbufq);

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.75 2006/06/07 17:55:54 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.76 2006/06/08 02:19:26 stkn Exp $
+
+  08 Jun 2006; Stefan Knoblich <stkn@gentoo.org>
+  +files/zaptel-1.0.10-fix-zapata-debug-undefined-warnings.diff,
+  +files/zaptel-1.0.10-linux2.6.16.diff, zaptel-1.0.10.ebuild:
+  Fix zaptel-1.0.10 for linux-2.6.16 and silence some warning messages.
 
 *zaptel-1.2.6 (07 Jun 2006)
 
