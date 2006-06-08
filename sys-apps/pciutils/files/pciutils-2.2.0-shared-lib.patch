@@ -21,7 +21,7 @@
 +	$(CC) $(CFLAGS) -fPIC -c -o $@ $^
 +
 +$(PCISHLIB): $(SHOBJS)
-+	$(CC) -shared $(CFLAGS) $(LDFLAGS) -o $@ $^ -fPIC
++	$(CC) -shared $(CFLAGS) -Wl,-soname,$@ $(LDFLAGS) -o $@ $^ -fPIC
  
  $(PCILIB): $(OBJS)
  	rm -f $@

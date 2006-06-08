@@ -1,52 +1,77 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0a1b44fae85b6c7994a3876071601a4e ChangeLog 9517
-RMD160 05379f77d7d3b14f692228911b3c561443bd735f ChangeLog 9517
-SHA256 99839a34d643e5c71fe4a541bc0ad39df0e13a4b4e6c9815a57a6327f8c46a92 ChangeLog 9517
+AUX 2.1.11-scan.patch 277 RMD160 4ebb68ee6f34367cd7da31dca4947c07516a0410 SHA1 9773be1e903a3d48ea11ada5fe78ddb9bd09cd49 SHA256 1072171abf68b6ff4f0ca66d17c9fc01238aca9b929da93ca880f0c0482911ba
 MD5 60d79fbf53038186b939f83841d5f318 files/2.1.11-scan.patch 277
 RMD160 4ebb68ee6f34367cd7da31dca4947c07516a0410 files/2.1.11-scan.patch 277
 SHA256 1072171abf68b6ff4f0ca66d17c9fc01238aca9b929da93ca880f0c0482911ba files/2.1.11-scan.patch 277
+AUX pcimodules-pciutils-2.1.11.diff 11026 RMD160 729b0042dfdf16b810b5c8fda71948dc1cf7c9d5 SHA1 bc74cc63d5040ee29dfe6d39e9ce8bce25fd28a1 SHA256 6c0df36e1c8de2ff06e981968f17c8701ca77cbba5bbd2d6d0ecadee7a183950
+MD5 c6135ce795940ebf3777592d4e6f8049 files/pcimodules-pciutils-2.1.11.diff 11026
+RMD160 729b0042dfdf16b810b5c8fda71948dc1cf7c9d5 files/pcimodules-pciutils-2.1.11.diff 11026
+SHA256 6c0df36e1c8de2ff06e981968f17c8701ca77cbba5bbd2d6d0ecadee7a183950 files/pcimodules-pciutils-2.1.11.diff 11026
+AUX pcimodules-pciutils-2.2.0.patch 10872 RMD160 bd0afa31c5f3bd21613bba02facc236f9148ce9a SHA1 2a5654b8c5d2084c9fe94851b29c1cd815e620a0 SHA256 8033133b947511a7083fa40038e14b20a02746122b67dd3ffab7b8a46f35b674
+MD5 d3c7e97420324c1d5d1dc032fc39006e files/pcimodules-pciutils-2.2.0.patch 10872
+RMD160 bd0afa31c5f3bd21613bba02facc236f9148ce9a files/pcimodules-pciutils-2.2.0.patch 10872
+SHA256 8033133b947511a7083fa40038e14b20a02746122b67dd3ffab7b8a46f35b674 files/pcimodules-pciutils-2.2.0.patch 10872
+AUX pciutils-2.1.11-bsd.patch 921 RMD160 f9f14c67db5abdaa1e1b11d7fd7616367e91911b SHA1 bd5321a5abccdfad905dbff04df7f031161c56cf SHA256 ba0088e82e6c121025ceafdd97dc9ee7828dbe37ce4016a151bf1f404f89138e
+MD5 05277cd33401a99ed9fe18fe614231d0 files/pciutils-2.1.11-bsd.patch 921
+RMD160 f9f14c67db5abdaa1e1b11d7fd7616367e91911b files/pciutils-2.1.11-bsd.patch 921
+SHA256 ba0088e82e6c121025ceafdd97dc9ee7828dbe37ce4016a151bf1f404f89138e files/pciutils-2.1.11-bsd.patch 921
+AUX pciutils-2.1.11-gentoo-paths.patch 521 RMD160 10e5d785a268dbc3e80be3b06449961bca5dadbf SHA1 7b7e3a5f8125b2b54b517d8caedfdcd79bdb817c SHA256 3e6de9c6232566793c5e4845ea4fed33ced34be52e4d93f6cd216159fb0b6f7f
+MD5 6a0ae94d528195517f54f66653f8322e files/pciutils-2.1.11-gentoo-paths.patch 521
+RMD160 10e5d785a268dbc3e80be3b06449961bca5dadbf files/pciutils-2.1.11-gentoo-paths.patch 521
+SHA256 3e6de9c6232566793c5e4845ea4fed33ced34be52e4d93f6cd216159fb0b6f7f files/pciutils-2.1.11-gentoo-paths.patch 521
+AUX pciutils-2.1.11-malloc.patch 272 RMD160 c497a409922d21f57e92cea27a17a7aa7c620034 SHA1 fa9ec462b29ee0e8d593b96737fd8321f8a25973 SHA256 bfd1be19d9dcf7040d604486c20a7fe08f974d0145cf246b719c3da95eff75ef
+MD5 d4b9ca6816f7e4310f2ed629531361fe files/pciutils-2.1.11-malloc.patch 272
+RMD160 c497a409922d21f57e92cea27a17a7aa7c620034 files/pciutils-2.1.11-malloc.patch 272
+SHA256 bfd1be19d9dcf7040d604486c20a7fe08f974d0145cf246b719c3da95eff75ef files/pciutils-2.1.11-malloc.patch 272
+AUX pciutils-2.1.11-sysfs.patch 10374 RMD160 137e92ffc404ce4842aeda44e8aaf842124a4cdd SHA1 3e4d23f82b1bd548cf187a42ae1e9258c02d2893 SHA256 fabe657681a39d63ab56cc206767f8761f1b0b3b8ddc65f093fb9a97f1c69fa3
+MD5 f4d220c568a00c1ceafe6dc129ae6e95 files/pciutils-2.1.11-sysfs.patch 10374
+RMD160 137e92ffc404ce4842aeda44e8aaf842124a4cdd files/pciutils-2.1.11-sysfs.patch 10374
+SHA256 fabe657681a39d63ab56cc206767f8761f1b0b3b8ddc65f093fb9a97f1c69fa3 files/pciutils-2.1.11-sysfs.patch 10374
+AUX pciutils-2.2.0-shared-lib.patch 511 RMD160 c3d4553bb5a0070f3d0904669e1aff656cee74cc SHA1 f7681c43c229de9e2f2981d962d4f2e65e7f2fd3 SHA256 dcac8dd49d510459afa71addd6fcc3d25868061c8784c14c0bbbae215a19f3c9
+MD5 6c903c6d36593f991a2084d559b6b2cf files/pciutils-2.2.0-shared-lib.patch 511
+RMD160 c3d4553bb5a0070f3d0904669e1aff656cee74cc files/pciutils-2.2.0-shared-lib.patch 511
+SHA256 dcac8dd49d510459afa71addd6fcc3d25868061c8784c14c0bbbae215a19f3c9 files/pciutils-2.2.0-shared-lib.patch 511
+DIST pci.ids-20041019.bz2 86174
+DIST pci.ids-20051015.bz2 98776
+DIST pci.ids-20060608.bz2 108285 RMD160 0768e2232a6003711de498ef8e7df805d4c880c7 SHA1 ca8f12a439c422b9248c7bf81f0a228fc8f8d9fd SHA256 81418596523d437b260573d727d77130e91890f84265b58907f1175fa81224ed
+DIST pciutils-2.1.11.tar.gz 120948
+DIST pciutils-2.2.0.tar.gz 194290
+DIST pciutils-2.2.3.tar.gz 1121334 RMD160 429b3b21f4cb079c2f3620a4c4d14c6dc610a098 SHA1 114b811d176c125ebdd3d10b6e7bf6d09686b780 SHA256 e501df7734738d0625a3765498e1c4625a2fbaf408c86599eca2070c57bc4d4b
+EBUILD pciutils-2.1.11-r5.ebuild 2298 RMD160 5e312a470476c1bdbe2a8fc77b1a740229dde593 SHA1 794cc663e37aa25ac57ec509bb6663bf1b95bc05 SHA256 752135de20bc99a4eeec8a78962d3194a934290df2391a47bbbeee5df8e2545d
+MD5 61778080ed55196416ece68570ba885a pciutils-2.1.11-r5.ebuild 2298
+RMD160 5e312a470476c1bdbe2a8fc77b1a740229dde593 pciutils-2.1.11-r5.ebuild 2298
+SHA256 752135de20bc99a4eeec8a78962d3194a934290df2391a47bbbeee5df8e2545d pciutils-2.1.11-r5.ebuild 2298
+EBUILD pciutils-2.2.0-r1.ebuild 1791 RMD160 a5b5bd0aa1f2cd54b2ee42af4cdabc18cd1c9aca SHA1 7305a5983a6e0d8466af21ca4ea8690cd34210ec SHA256 e00eb100eec93035a32b8f81881f88ad7a2593752a96c3b7ccea371732bd75a5
+MD5 6a6fb40695c9a06bad1c4265c8ed512c pciutils-2.2.0-r1.ebuild 1791
+RMD160 a5b5bd0aa1f2cd54b2ee42af4cdabc18cd1c9aca pciutils-2.2.0-r1.ebuild 1791
+SHA256 e00eb100eec93035a32b8f81881f88ad7a2593752a96c3b7ccea371732bd75a5 pciutils-2.2.0-r1.ebuild 1791
+EBUILD pciutils-2.2.3.ebuild 1811 RMD160 a7f8ff44bd93cb40dd3ec2cad2ad82c46e9a3ba9 SHA1 714b3d9845c00bbd7056f17c3476e1dc580ac96c SHA256 b3510e4e471369aa2bba274537f19ea1a36702f1a5ed214f2e6994aef0b9bbf2
+MD5 8da704770e96f91c2d09d741a4945470 pciutils-2.2.3.ebuild 1811
+RMD160 a7f8ff44bd93cb40dd3ec2cad2ad82c46e9a3ba9 pciutils-2.2.3.ebuild 1811
+SHA256 b3510e4e471369aa2bba274537f19ea1a36702f1a5ed214f2e6994aef0b9bbf2 pciutils-2.2.3.ebuild 1811
+MISC ChangeLog 9654 RMD160 5255cde44995ae7a6843d5243737d4ff000a19d5 SHA1 c3becb45f4312b123087de07d6dcffd84de1d235 SHA256 c7fdede0e314c8ce18968872e778a0156305d3fb901145f1d6157ffc40468292
+MD5 dc66dc9262aebee80c082fcb10f1a4df ChangeLog 9654
+RMD160 5255cde44995ae7a6843d5243737d4ff000a19d5 ChangeLog 9654
+SHA256 c7fdede0e314c8ce18968872e778a0156305d3fb901145f1d6157ffc40468292 ChangeLog 9654
+MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 MD5 a6be9cf60dc5043160d757c9772b1e57 files/digest-pciutils-2.1.11-r5 131
 RMD160 7e7b7f82db4e19d2f7f79981dc05dd9541e9899d files/digest-pciutils-2.1.11-r5 131
 SHA256 c6afa59d8b749c9eb8ef279e220046cf5dfdd688f1ce6195f080e5adb2572720 files/digest-pciutils-2.1.11-r5 131
 MD5 ae29f04095b43ceb06e6b0cc94653c36 files/digest-pciutils-2.2.0-r1 130
 RMD160 60b5f33bacacce1da354124b4950fd0080c0537a files/digest-pciutils-2.2.0-r1 130
 SHA256 f86adc6f79d48c406a7abf2b396f8717b508a48fcec817de60253167b08e5713 files/digest-pciutils-2.2.0-r1 130
-MD5 c6135ce795940ebf3777592d4e6f8049 files/pcimodules-pciutils-2.1.11.diff 11026
-RMD160 729b0042dfdf16b810b5c8fda71948dc1cf7c9d5 files/pcimodules-pciutils-2.1.11.diff 11026
-SHA256 6c0df36e1c8de2ff06e981968f17c8701ca77cbba5bbd2d6d0ecadee7a183950 files/pcimodules-pciutils-2.1.11.diff 11026
-MD5 d3c7e97420324c1d5d1dc032fc39006e files/pcimodules-pciutils-2.2.0.patch 10872
-RMD160 bd0afa31c5f3bd21613bba02facc236f9148ce9a files/pcimodules-pciutils-2.2.0.patch 10872
-SHA256 8033133b947511a7083fa40038e14b20a02746122b67dd3ffab7b8a46f35b674 files/pcimodules-pciutils-2.2.0.patch 10872
-MD5 05277cd33401a99ed9fe18fe614231d0 files/pciutils-2.1.11-bsd.patch 921
-RMD160 f9f14c67db5abdaa1e1b11d7fd7616367e91911b files/pciutils-2.1.11-bsd.patch 921
-SHA256 ba0088e82e6c121025ceafdd97dc9ee7828dbe37ce4016a151bf1f404f89138e files/pciutils-2.1.11-bsd.patch 921
-MD5 6a0ae94d528195517f54f66653f8322e files/pciutils-2.1.11-gentoo-paths.patch 521
-RMD160 10e5d785a268dbc3e80be3b06449961bca5dadbf files/pciutils-2.1.11-gentoo-paths.patch 521
-SHA256 3e6de9c6232566793c5e4845ea4fed33ced34be52e4d93f6cd216159fb0b6f7f files/pciutils-2.1.11-gentoo-paths.patch 521
-MD5 d4b9ca6816f7e4310f2ed629531361fe files/pciutils-2.1.11-malloc.patch 272
-RMD160 c497a409922d21f57e92cea27a17a7aa7c620034 files/pciutils-2.1.11-malloc.patch 272
-SHA256 bfd1be19d9dcf7040d604486c20a7fe08f974d0145cf246b719c3da95eff75ef files/pciutils-2.1.11-malloc.patch 272
-MD5 f4d220c568a00c1ceafe6dc129ae6e95 files/pciutils-2.1.11-sysfs.patch 10374
-RMD160 137e92ffc404ce4842aeda44e8aaf842124a4cdd files/pciutils-2.1.11-sysfs.patch 10374
-SHA256 fabe657681a39d63ab56cc206767f8761f1b0b3b8ddc65f093fb9a97f1c69fa3 files/pciutils-2.1.11-sysfs.patch 10374
-MD5 cf455fe33057e081ba7aaec93e481642 files/pciutils-2.2.0-shared-lib.patch 496
-RMD160 5177ba0c7e87738c3b5cb6e658293a07d1ea6975 files/pciutils-2.2.0-shared-lib.patch 496
-SHA256 0b74012e357303e74fd6267873fb52ecccc9946283e999baeb623ba5dd9e54e6 files/pciutils-2.2.0-shared-lib.patch 496
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
-SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
-MD5 61778080ed55196416ece68570ba885a pciutils-2.1.11-r5.ebuild 2298
-RMD160 5e312a470476c1bdbe2a8fc77b1a740229dde593 pciutils-2.1.11-r5.ebuild 2298
-SHA256 752135de20bc99a4eeec8a78962d3194a934290df2391a47bbbeee5df8e2545d pciutils-2.1.11-r5.ebuild 2298
-MD5 6a6fb40695c9a06bad1c4265c8ed512c pciutils-2.2.0-r1.ebuild 1791
-RMD160 a5b5bd0aa1f2cd54b2ee42af4cdabc18cd1c9aca pciutils-2.2.0-r1.ebuild 1791
-SHA256 e00eb100eec93035a32b8f81881f88ad7a2593752a96c3b7ccea371732bd75a5 pciutils-2.2.0-r1.ebuild 1791
+MD5 b732720cadb97dd00e0795917204fb53 files/digest-pciutils-2.2.3 488
+RMD160 4a75b00875f3a50f155f90f29857e00bd3e970d7 files/digest-pciutils-2.2.3 488
+SHA256 9245c7a384f17782114ee6bcd739fded1c8c250cec9c5ebc560960bf817ffa33 files/digest-pciutils-2.2.3 488
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFERRu8AiZjviIA2XgRAp8XAJ9yCvTFEgSIUdrdLC7CI2ZhohUxuQCeK2/j
-eI7zZlneheZq0uX73zgnVd4=
-=qyC/
+iD8DBQFEh/0w2+ySkm8kpY0RAh5SAJ9wQSLcZq58Ya+2U5tvPxI45MumlgCfdjsf
+uvP5aFZt8of0qXtBPDT/7gw=
+=Xa7O
 -----END PGP SIGNATURE-----
