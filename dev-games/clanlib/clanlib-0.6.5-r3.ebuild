@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r3.ebuild,v 1.6 2006/02/11 16:57:21 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r3.ebuild,v 1.7 2006/06/08 09:52:04 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -46,6 +46,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-DirectFB-update.patch
 	epatch "${FILESDIR}"/${P}-freetype.patch
 	epatch "${FILESDIR}"/${P}-gcc41.patch
+	epatch "${FILESDIR}"/${P}-uclibc.patch
 	sed -i 's:@comp_mode@::' Setup/Unix/clanlib-config.in
 }
 

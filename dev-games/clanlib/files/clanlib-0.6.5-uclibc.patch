@@ -1,0 +1,64 @@
+Add support for building on uClibc systems
+
+http://bugs.gentoo.org/135081
+
+Patch by James Le Cuirot
+
+--- ClanLib-0.6.5/Sources/Sound/Sound/ClanSound/cdaudio_linux.cpp
++++ ClanLib-0.6.5/Sources/Sound/Sound/ClanSound/cdaudio_linux.cpp
+@@ -19,7 +19,7 @@
+ #include <fcntl.h>
+ 
+ #ifndef Solaris // we'll need to define Solaris
+-#include <fstab.h> // there's no fstab.h on Solaris...
++#include <mntent.h> // not sure if mntent.h is on Solaris...
+ #else
+ #include <sys/vfstab.h> //...but vfstab.h
+ #endif
+@@ -82,17 +82,17 @@
+ 	
+ 	// We start by looking the mounttab:
+ 	
+-#ifdef Solaris
+ 	FILE *f_mnttab = fopen("/etc/mnttab", "r");
++#ifdef Solaris
+ 	vfstab *mount_file;
+ 	getvfsent(f_mnttab, mount_file);
+ #else
+-	fstab *mount_file = getfsent();
++	mntent *mount_file = getmntent(f_mnttab);
+ #endif
+ 	while(mount_file != NULL)
+ 	{
+ #ifndef Solaris
+-		if(strncmp(mount_file->fs_vfstype,"iso9660",7)==0) 
++		if(strncmp(mount_file->mnt_type,"iso9660",7)==0) 
+ #else
+ 		if(strncmp(mount_file->vfs_fstype,"iso9660",7)==0) // ugly code... suggestions ?
+ #endif
+@@ -100,7 +100,7 @@
+ 			try
+ 		 	{
+ #ifndef Solaris
+-				CL_CDAudio::cd_drives.push_back(new CL_CDDrive_Linux(mount_file->fs_spec));
++				CL_CDAudio::cd_drives.push_back(new CL_CDDrive_Linux(mount_file->mnt_fsname));
+ #else
+ 				CL_CDAudio::cd_drives.push_back(new CL_CDDrive_Linux(mount_file->vfs_special));
+ #endif
+@@ -112,14 +112,14 @@
+ 			}
+ 		}
+ #ifndef Solaris
+-		mount_file = getfsent();
++		mount_file = getmntent(f_mnttab);
+ #else
+ 		getvfsent(f_mnttab, mount_file);
+ #endif
+ 		//		cout << mount_file->fs_vfstype << endl;
+ 	}
+ #ifndef Solaris
+-	endfsent();
++	endmntent(f_mnttab);
+ #else
+ 	fclose(f_mnttab);
+ #endif
