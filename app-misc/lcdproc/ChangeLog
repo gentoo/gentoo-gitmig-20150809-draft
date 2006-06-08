@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lcdproc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.26 2005/04/24 11:23:24 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.27 2006/06/08 23:59:10 eradicator Exp $
+
+  08 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  lcdproc-0.4.5.ebuild:
+  Added to ~ppc64.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> lcdproc-0.4.5.ebuild:
   Stable on ppc.
