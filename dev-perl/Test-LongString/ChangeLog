@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-LongString
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-LongString/ChangeLog,v 1.7 2006/04/05 10:35:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-LongString/ChangeLog,v 1.8 2006/06/08 20:11:43 dertobi123 Exp $
+
+  08 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  Test-LongString-0.07.ebuild:
+  ppc stable
 
   05 Apr 2006; <mcumming@gentoo.org> Test-LongString-0.09.ebuild:
   Marking ~amd64, tested on pitr
