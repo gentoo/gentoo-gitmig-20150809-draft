@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/eaccelerator
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.2 2006/04/12 13:25:20 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.3 2006/06/08 19:07:27 voxus Exp $
+
+  08 Jun 2006; Konstantin Arkhipov <voxus@gentoo.org>
+  eaccelerator-0.9.5_beta2.ebuild:
+  Added ~amd64 keyword.
 
 *eaccelerator-0.9.5_beta2 (12 Apr 2006)
 
