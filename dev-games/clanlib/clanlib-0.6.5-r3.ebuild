@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r3.ebuild,v 1.8 2006/06/08 09:52:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r3.ebuild,v 1.9 2006/06/08 09:53:06 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,6 +23,7 @@ DEPEND=">=media-libs/hermes-1.3.2
 			virtual/x11
 		)
 	)
+	lua? ( dev-lang/lua )
 	png? ( media-libs/libpng )
 	jpeg? ( >=media-libs/jpeg-6b )
 	mikmod? ( >=media-libs/libmikmod-3.1.9 )
@@ -65,6 +66,7 @@ src_compile() {
 		--includedir=/usr/include/${P} \
 		--enable-network \
 		$(use_enable x86 asm386) \
+		$(use_enable lua) \
 		--enable-dyn \
 		$(use_enable X x11) \
 		$(use_enable directfb) \
