@@ -1,28 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a7f1be6feefbe75027e78c7fb3971a68 ChangeLog 1951
-RMD160 3966fc2e26d7618fe148b7875670245708fa5e76 ChangeLog 1951
-SHA256 416e2f9f9ad7a6f6c734a7a638c8b13f6d1a9636e2d2f02aebbd4c21ae4aa049 ChangeLog 1951
+DIST Class-ReturnValue-0.52.tar.gz 19430
+DIST Class-ReturnValue-0.53.tar.gz 19473 RMD160 71f1a8382edfd5c815af806fd4f27dc09cbf4942 SHA1 391d752f7a34b32f1ef4827054ef2fe48d334096 SHA256 6fbb9db277d7a7daad28416e2a82e92dea98eb8ae1d90a1b008be23393fbfc4e
+EBUILD class-returnvalue-0.52.ebuild 673 RMD160 21db3097e55ff619d88a36120fae71c258702c4b SHA1 a91ddf21dc2deaf6ca512ada7bce579bfeca1991 SHA256 915d52cfff157b5c74785bebe84f89ebfd1ae188de5f1866dccb227039c12a2e
 MD5 a66db3d720be221cbd3f818c7778ccc6 class-returnvalue-0.52.ebuild 673
 RMD160 21db3097e55ff619d88a36120fae71c258702c4b class-returnvalue-0.52.ebuild 673
 SHA256 915d52cfff157b5c74785bebe84f89ebfd1ae188de5f1866dccb227039c12a2e class-returnvalue-0.52.ebuild 673
-MD5 51ce75b49bb10fac686db823eac2300d class-returnvalue-0.53.ebuild 693
-RMD160 f537e437f5f08707f05b324d902e27c46c51325c class-returnvalue-0.53.ebuild 693
-SHA256 23855437a0d49bab1cd44076e97524a4be7b023256fba9b383c6bfd53dea516d class-returnvalue-0.53.ebuild 693
-MD5 87a17806ec77b0474478b5b445894dbe files/digest-class-returnvalue-0.52 73
-RMD160 3ffe315469d6d1defbabb044c808995db47cdef6 files/digest-class-returnvalue-0.52 73
-SHA256 a0c7404003d65078a29610f3740ad463785126d691ce800fa1a276d6020bf246 files/digest-class-returnvalue-0.52 73
-MD5 ce7eef18dff80c55f9fe26658a6d65fb files/digest-class-returnvalue-0.53 73
-RMD160 1ed7ed4325247988ead180db2dcba6a7a622815b files/digest-class-returnvalue-0.53 73
-SHA256 6fcf625178fe1c7469a572a2614b4abdbbd09544ba2fb256f3f8318ba86cda94 files/digest-class-returnvalue-0.53 73
+EBUILD class-returnvalue-0.53.ebuild 694 RMD160 afd49cf3b7009ab88c3bfb24f86fdfe0fcab9b2c SHA1 6d86c6e0b81c3eb79af06cd697b1b1c2c9410c27 SHA256 9f5621b201778b0aa7b5b0c013d03ebbd9c4c6517e6306da16a22a56fc8ba12b
+MD5 f00077d9286762da9b37d3e7b5a76cab class-returnvalue-0.53.ebuild 694
+RMD160 afd49cf3b7009ab88c3bfb24f86fdfe0fcab9b2c class-returnvalue-0.53.ebuild 694
+SHA256 9f5621b201778b0aa7b5b0c013d03ebbd9c4c6517e6306da16a22a56fc8ba12b class-returnvalue-0.53.ebuild 694
+MISC ChangeLog 2056 RMD160 f342db091e89e8cbcc87ae5e893533823d094c66 SHA1 9b3e400be5627e68349f5af0dc1a903c4206662b SHA256 9c684618717edfc8fd0ce285c785af0ce3ae381f3db4388aa26f52fccf576cf6
+MD5 ffabee90f22671593d043c434959f46b ChangeLog 2056
+RMD160 f342db091e89e8cbcc87ae5e893533823d094c66 ChangeLog 2056
+SHA256 9c684618717edfc8fd0ce285c785af0ce3ae381f3db4388aa26f52fccf576cf6 ChangeLog 2056
+MISC metadata.xml 305 RMD160 647980838c590f54441a053916ea629e53e551c0 SHA1 99ef1deeae9a934fb6e46cf5fc4a5fcb8379a74a SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD5NcIJrHF4yAQTrARAvkaAKCrqBoBh8xLbvuQdLDYrMQsqKNeVQCgxCmG
-NFUKF5I9yQB3rqsYjxDZ8VY=
-=JYMg
------END PGP SIGNATURE-----
+MD5 87a17806ec77b0474478b5b445894dbe files/digest-class-returnvalue-0.52 73
+RMD160 3ffe315469d6d1defbabb044c808995db47cdef6 files/digest-class-returnvalue-0.52 73
+SHA256 a0c7404003d65078a29610f3740ad463785126d691ce800fa1a276d6020bf246 files/digest-class-returnvalue-0.52 73
+MD5 d264c23e3fe6b6b5afcdcd108b0839c0 files/digest-class-returnvalue-0.53 265
+RMD160 d46c97249971464815be59a0eb02372d6ad0ff2d files/digest-class-returnvalue-0.53 265
+SHA256 c136f0639510a75925176342d6f9eab11c0575c5fcc08edc6e38d27c54d1d2bd files/digest-class-returnvalue-0.53 265
