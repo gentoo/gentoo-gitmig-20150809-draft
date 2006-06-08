@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r3.ebuild,v 1.7 2006/06/08 09:52:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r3.ebuild,v 1.8 2006/06/08 09:52:15 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.clanlib.org/download/legacy/ClanLib-${PV}-1.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0.6"
 KEYWORDS="amd64 x86" #not big endian safe #82779
-IUSE="arts oss esd alsa png opengl truetype X vorbis mikmod jpeg directfb joystick"
+IUSE="lua arts oss esd alsa png opengl truetype X vorbis mikmod jpeg directfb joystick"
 
 DEPEND=">=media-libs/hermes-1.3.2
 	X? (
