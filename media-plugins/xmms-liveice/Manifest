@@ -1,7 +1,27 @@
-MD5 db759572fb2ef8ac8da3bc12783cec25 ChangeLog 1395
-MD5 e9ec7e7520ed1846f7ab43ab089007fc files/digest-xmms-liveice-1.0.0 64
-MD5 e9ec7e7520ed1846f7ab43ab089007fc files/digest-xmms-liveice-1.0.0-r1 64
+AUX xmms-liveice-1.0.0_gtk_fix.patch 433 RMD160 f5b72921ee7c91da5d2aae454e7f579cdb87593f SHA1 e451a7aabd9a0e9641c54813d56b67edb470566b SHA256 6874a66bada09b2f89ecc15cdb5bd5fdecc20314821ee7eea28d135da9ba2b27
 MD5 b647105b00c839047c621814633fbb55 files/xmms-liveice-1.0.0_gtk_fix.patch 433
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 463e28cd8a7e888b6055b95ff534cf83 xmms-liveice-1.0.0-r1.ebuild 903
+RMD160 f5b72921ee7c91da5d2aae454e7f579cdb87593f files/xmms-liveice-1.0.0_gtk_fix.patch 433
+SHA256 6874a66bada09b2f89ecc15cdb5bd5fdecc20314821ee7eea28d135da9ba2b27 files/xmms-liveice-1.0.0_gtk_fix.patch 433
+DIST liveice-xmms.tar.gz 132719
+EBUILD xmms-liveice-1.0.0-r1.ebuild 895 RMD160 4a86c22971cc5e46ced28d02f0902fbc88de05a6 SHA1 3dcafd5e36f483c5b3162d82853070281b9048ab SHA256 7909eda168835632e65d95204ef1ddba72dbb2124edc3c8db1c596c00b9b1410
+MD5 fad03b6d02b5c9cd79fbe1295f007b45 xmms-liveice-1.0.0-r1.ebuild 895
+RMD160 4a86c22971cc5e46ced28d02f0902fbc88de05a6 xmms-liveice-1.0.0-r1.ebuild 895
+SHA256 7909eda168835632e65d95204ef1ddba72dbb2124edc3c8db1c596c00b9b1410 xmms-liveice-1.0.0-r1.ebuild 895
+EBUILD xmms-liveice-1.0.0.ebuild 830 RMD160 01f6a417a3aca64551ac76a3b88290038dec1593 SHA1 5eb86ea7e33b0e5c0ace4570dcd124cf572ca3eb SHA256 b578c7a998aece2bc55cac8a3e476dd092107cb5af42a4e7c89f5ae38ce1805d
 MD5 96f292e616b939ee18a89a70b1601829 xmms-liveice-1.0.0.ebuild 830
+RMD160 01f6a417a3aca64551ac76a3b88290038dec1593 xmms-liveice-1.0.0.ebuild 830
+SHA256 b578c7a998aece2bc55cac8a3e476dd092107cb5af42a4e7c89f5ae38ce1805d xmms-liveice-1.0.0.ebuild 830
+MISC ChangeLog 1517 RMD160 90de434bf2644f4c174c8d2b963480855ced95e6 SHA1 a6b3ed91e18029440658c770870b60fbf46ee945 SHA256 36e33cc836443fc4c10329d74286787e3c4a29a644bac2cb524f4020cb14a62f
+MD5 58cdfbc646a64ccb5a7a31b6bd249b63 ChangeLog 1517
+RMD160 90de434bf2644f4c174c8d2b963480855ced95e6 ChangeLog 1517
+SHA256 36e33cc836443fc4c10329d74286787e3c4a29a644bac2cb524f4020cb14a62f ChangeLog 1517
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 e9ec7e7520ed1846f7ab43ab089007fc files/digest-xmms-liveice-1.0.0 64
+RMD160 acb8c76f038d756f36b6e997c5b7a5334b6e87d3 files/digest-xmms-liveice-1.0.0 64
+SHA256 f2ca92ad0c19ddd8cb44141a2cda00db987d8e8eac0693986b53db70e7bce9cc files/digest-xmms-liveice-1.0.0 64
+MD5 e9ec7e7520ed1846f7ab43ab089007fc files/digest-xmms-liveice-1.0.0-r1 64
+RMD160 acb8c76f038d756f36b6e997c5b7a5334b6e87d3 files/digest-xmms-liveice-1.0.0-r1 64
+SHA256 f2ca92ad0c19ddd8cb44141a2cda00db987d8e8eac0693986b53db70e7bce9cc files/digest-xmms-liveice-1.0.0-r1 64

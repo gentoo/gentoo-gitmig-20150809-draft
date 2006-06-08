@@ -1,12 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-liveice/xmms-liveice-1.0.0-r1.ebuild,v 1.1 2006/01/16 19:24:20 metalgod Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-liveice/xmms-liveice-1.0.0-r1.ebuild,v 1.2 2006/06/08 01:27:12 mr_bones_ Exp $
 
 IUSE=""
 
-inherit gnuconfig
+inherit eutils gnuconfig
 
 MY_P=LiveIce-${PV}
 S=${WORKDIR}/${MY_P}
