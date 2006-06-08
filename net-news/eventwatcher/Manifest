@@ -1,8 +1,42 @@
-MD5 8cc18a4fb1aad00f79a25b3ae05c185b ChangeLog 2337
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST eventwatcher-0.4.1.tar.bz2 516143
+DIST eventwatcher-0.4.2.tar.bz2 512427
+DIST eventwatcher-0.4.3.tar.bz2 612187
+EBUILD eventwatcher-0.4.1.ebuild 551 RMD160 8cc6a3add54ebda38d74a3a98ccb361b832e9d66 SHA1 2d03f4c40a01fd114fe146dd4bf517907ea344e5 SHA256 2b4458054a9ab68a6dfb1a39233f5c6265288ec932aa7ba7e8233a99829477e9
 MD5 03eed28f8d8a9555815bc1386e8a52db eventwatcher-0.4.1.ebuild 551
+RMD160 8cc6a3add54ebda38d74a3a98ccb361b832e9d66 eventwatcher-0.4.1.ebuild 551
+SHA256 2b4458054a9ab68a6dfb1a39233f5c6265288ec932aa7ba7e8233a99829477e9 eventwatcher-0.4.1.ebuild 551
+EBUILD eventwatcher-0.4.2.ebuild 550 RMD160 ad279cff460fe9339f9f3bcaa907c29c95bf73e8 SHA1 f58eed843a231a268c5275cc156ff5e77741523d SHA256 0db5b816c72435ff5b02ad979e0b9d0872f996db184a8b800868908d8317d8a8
 MD5 964a83e1a31b22701a00709b83406375 eventwatcher-0.4.2.ebuild 550
-MD5 0b4f132738b6e32042a5544da5d5d12a eventwatcher-0.4.3.ebuild 551
-MD5 304c4a092488847276952be861142c4a files/digest-eventwatcher-0.4.1 71
-MD5 8098a7b7b1c7806f2221c742a6fb9b17 files/digest-eventwatcher-0.4.2 71
-MD5 fac17f78e836af7da9aae2601abd6447 files/digest-eventwatcher-0.4.3 71
+RMD160 ad279cff460fe9339f9f3bcaa907c29c95bf73e8 eventwatcher-0.4.2.ebuild 550
+SHA256 0db5b816c72435ff5b02ad979e0b9d0872f996db184a8b800868908d8317d8a8 eventwatcher-0.4.2.ebuild 550
+EBUILD eventwatcher-0.4.3.ebuild 551 RMD160 0bed90f6ea1bc0a557c25dda29c908bcaee07eda SHA1 656d48c898b9fc5e4341812014f06687d8671ce8 SHA256 c7f3ae3b782434317b4f26b4c778e82d3b843b24292cafd14ceac9bc4beaff25
+MD5 dabe2dc2b7b73dba1341c20f6aff7dcf eventwatcher-0.4.3.ebuild 551
+RMD160 0bed90f6ea1bc0a557c25dda29c908bcaee07eda eventwatcher-0.4.3.ebuild 551
+SHA256 c7f3ae3b782434317b4f26b4c778e82d3b843b24292cafd14ceac9bc4beaff25 eventwatcher-0.4.3.ebuild 551
+MISC ChangeLog 2445 RMD160 2e37936ca00b7c2c285b991376ae4c394e62e8ee SHA1 e5a62413ef696f4d220274cb50d52c2c7e797d2f SHA256 e11220de9069520cc43a1d0a8c9ad4bd5d8c52fd040ae509ba64781ef9c17135
+MD5 461c9227a0e9c3263bb2762f3de91891 ChangeLog 2445
+RMD160 2e37936ca00b7c2c285b991376ae4c394e62e8ee ChangeLog 2445
+SHA256 e11220de9069520cc43a1d0a8c9ad4bd5d8c52fd040ae509ba64781ef9c17135 ChangeLog 2445
+MISC metadata.xml 255 RMD160 7b73e774a16ec7d8c869079df3aa8ad6da4d7a9f SHA1 3f8c1f76e0af22d1e20adf5ea0fa8e6df374f482 SHA256 1b3af5bea1147e4249e3f637047557a036d896177a9d01cb280adbedbaa15664
 MD5 bb20e1aed73be1502e9b1f87dc925b4d metadata.xml 255
+RMD160 7b73e774a16ec7d8c869079df3aa8ad6da4d7a9f metadata.xml 255
+SHA256 1b3af5bea1147e4249e3f637047557a036d896177a9d01cb280adbedbaa15664 metadata.xml 255
+MD5 304c4a092488847276952be861142c4a files/digest-eventwatcher-0.4.1 71
+RMD160 ea07e9528473bb2c11575b9e8826506eb5f162d0 files/digest-eventwatcher-0.4.1 71
+SHA256 f71de2a83c1adcc04912734f9c61f1112d10a24acafefd61b3654716882147ee files/digest-eventwatcher-0.4.1 71
+MD5 8098a7b7b1c7806f2221c742a6fb9b17 files/digest-eventwatcher-0.4.2 71
+RMD160 6ea5c1eda0f55bb0ef13051bfe12d705674c9b1b files/digest-eventwatcher-0.4.2 71
+SHA256 9e071be8ab997ddc819101d0308cdf22346c69f194b6e55c2e56077b4c21132f files/digest-eventwatcher-0.4.2 71
+MD5 fac17f78e836af7da9aae2601abd6447 files/digest-eventwatcher-0.4.3 71
+RMD160 d04cc70f019b24707d08d225d0c1f561e2393a67 files/digest-eventwatcher-0.4.3 71
+SHA256 238c4527db9d965941f46a232af9f1f40eea425512a95ed892989fbd1dc0f309 files/digest-eventwatcher-0.4.3 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEh6nNSENan+PfizARAl+LAJ9MctJ+VW6MZWqa8kyTLQ13hf8INQCeOYGe
+u1J+OgVLxKzBvlcyYpQA4HI=
+=0Dve
+-----END PGP SIGNATURE-----
