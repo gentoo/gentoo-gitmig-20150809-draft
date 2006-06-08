@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.120 2006/06/06 06:05:21 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.121 2006/06/08 06:00:44 leonardop Exp $
+
+  08 Jun 2006; Leonardo Boshell <leonardop@gentoo.org>
+  +files/vte-0.12-nonls.patch, vte-0.12.2.ebuild:
+  Added patch to allow compiling vte on systems without gettext (e.g.
+  uclibc-based). Patch contributed by Yuri Vasilevski on bug #134436.
 
 *vte-0.12.2 (06 Jun 2006)
 
