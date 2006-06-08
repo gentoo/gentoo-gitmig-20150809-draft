@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.1 2006/06/08 03:40:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.2 2006/06/08 03:41:36 robbat2 Exp $
+
+  08 Jun 2006; Robin H. Johnson <robbat2@gentoo.org>
+  mtd-utils-20060606.ebuild:
+  Forgot to block old package.
 
 *mtd-utils-20060606 (08 Jun 2006)
 

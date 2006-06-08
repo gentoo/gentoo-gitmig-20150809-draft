@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20060606.ebuild,v 1.1 2006/06/08 03:40:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20060606.ebuild,v 1.2 2006/06/08 03:41:36 robbat2 Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -15,7 +15,8 @@ IUSE=""
 S="${WORKDIR}/${PN}"
 
 DEPEND="sys-libs/zlib
-		virtual/libc"
+		virtual/libc
+		!sys-fs/mtd"
 
 src_unpack() {
 	unpack ${A}
