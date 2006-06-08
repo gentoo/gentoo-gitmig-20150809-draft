@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/nis-utils/nis-utils-1.4.1-r1.ebuild,v 1.4 2006/06/01 03:59:19 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/nis-utils/nis-utils-1.4.1-r1.ebuild,v 1.5 2006/06/08 03:51:15 antarus Exp $
 
 inherit eutils
 
@@ -14,6 +14,8 @@ KEYWORDS="~ppc x86"
 IUSE="nls"
 
 DEPEND="dev-libs/gmp"
+
+RESTRICT="test"
 
 src_compile() {
 	econf $(use_enable nls) || die "Configure failed"
