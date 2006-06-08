@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.1 2006/05/20 02:43:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.2 2006/06/08 15:47:17 agriffis Exp $
 
 # mercurial: Fetch sources from mercurial repositories, similar to cvs.eclass.
 # To use this from an ebuild, set EHG_REPO_URI in your ebuild.  Then either
@@ -14,19 +14,21 @@ DEPEND="dev-util/mercurial net-misc/rsync"
 EHG_STORE_DIR="${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}/hg-src"
 
 # This must be set by the ebuild
-: ${EHG_REPO_URI:=}                                 # repository uri
+: ${EHG_REPO_URI:=}              # repository uri
 
 # These can be set by the ebuild but are usually fine as-is
-: ${EHG_CLONE_CMD:=hg clone}                        # clone cmd
-: ${EHG_PULL_CMD:=hg pull -u}                       # pull cmd
+: ${EHG_PROJECT:=$PN}            # dir under EHG_STORE_DIR
+: ${EHG_CLONE_CMD:=hg clone}     # clone cmd
+: ${EHG_PULL_CMD:=hg pull -u}    # pull cmd
 
 # should be set but blank to prevent using $HOME/.hgrc
 export HGRCPATH=
 
 function mercurial_fetch {
-	declare repo=${1:-$EHG_REPO_URI} proj=${2:-${PN/-hg}}
-	repo=${repo%/}	# remove trailing slash
+	declare repo=${1:-$EHG_REPO_URI}
+	repo=${repo%/}  # remove trailing slash
 	[[ -n $repo ]] || die "EHG_REPO_URI is empty"
+	declare module=${2:-${repo##*/}}
 
 	if [[ ! -d ${EHG_STORE_DIR} ]]; then
 		ebegin "create ${EHG_STORE_DIR}"
@@ -37,31 +39,34 @@ function mercurial_fetch {
 		eend $? || die
 	fi
 
-	cd "${EHG_STORE_DIR}" || die "can't chdir to ${EHG_STORE_DIR}"
+	pushd "${EHG_STORE_DIR}" >/dev/null \
+		|| die "can't chdir to ${EHG_STORE_DIR}"
 	addwrite "$(pwd -P)"
 
-	if [[ ! -d ${proj}/${repo##*/} ]]; then
+	if [[ ! -d ${EHG_PROJECT}/${module} ]]; then
 		# first check out
 		ebegin "${EHG_CLONE_CMD} ${repo}"
-		mkdir -p "${proj}" &&
-			chmod -f o+rw "${proj}" &&
-			cd "${proj}" &&
-			${EHG_CLONE_CMD} "${repo}" &&
-			cd "${repo##*/}"
+		mkdir -p "${EHG_PROJECT}" &&
+			chmod -f o+rw "${EHG_PROJECT}" &&
+			cd "${EHG_PROJECT}" &&
+			${EHG_CLONE_CMD} "${repo}" "${module}" &&
+			cd "${module}"
 		eend $? || die
 	else
 		# update working copy
 		ebegin "${EHG_PULL_CMD} ${repo}"
-		cd "${proj}/${repo##*/}" &&
+		cd "${EHG_PROJECT}/${module}" &&
 			${EHG_PULL_CMD}
 		eend $? || die
 	fi
 
 	# use rsync instead of cp for --exclude
-	ebegin "rsync to ${S}"
-	mkdir -p "${S}" &&
-		rsync -av --delete --exclude=.hg/ . "${S}"
+	ebegin "rsync to ${WORKDIR}/${module}"
+	mkdir -p "${WORKDIR}/${module}" &&
+		rsync -a --delete --exclude=.hg/ . "${WORKDIR}/${module}"
 	eend $? || die
+
+	popd >/dev/null
 }
 
 function mercurial_src_unpack {
