@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.48 2006/04/22 04:34:11 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.49 2006/06/08 20:26:07 kumba Exp $
 
 # 2006/03/07 - Donnie Berkholz <spyderous@gentoo.org>
 # Modular X: mask for architectures lacking direct rendering
@@ -186,6 +186,7 @@ evo
 # Ilya A. Volynets-Evenbach
 # no nptl on mips yet
 nptl
+nptlonly
 
 # Paul de Vrieze <pauldv@gentoo.org>
 # There is no java in this profile (if there is it must be available). Without
@@ -274,7 +275,3 @@ glitz
 pike
 ocaml
 timidity
-
-# Unmask our instruction sets
--n32
--n64

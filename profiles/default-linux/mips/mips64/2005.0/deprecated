@@ -1,8 +1,0 @@
-default-linux/mips/mips64/2006.0
-# emerge -n '>=sys-apps/portage-2.0.51'
-# cd /etc/
-# rm make.profile
-# ln -s ../usr/portage/profiles/default-linux/mips/mips64/2006.0 make.profile
-
-# More information can be found at the following URLs:
-# http://www.gentoo.org/doc/en/gentoo-upgrading.xml
