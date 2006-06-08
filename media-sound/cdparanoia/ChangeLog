@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.39 2006/05/16 18:22:36 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.40 2006/06/08 18:21:02 flameeyes Exp $
+
+*cdparanoia-3.9.8-r4 (08 Jun 2006)
+
+  08 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +cdparanoia-3.9.8-r4.ebuild:
+  Add new revision with patch to build on Gentoo/FreeBSD. Thanks to Stefano
+  Takekawa in bug #129775 and for the patience.
 
   16 May 2006; Patrick McLean <chutzpah@gentoo.org>
   cdparanoia-3.9.8-r3.ebuild:
