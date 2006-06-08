@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.23_p1869-r1.ebuild,v 1.2 2005/11/10 15:50:43 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.23_p1869-r1.ebuild,v 1.3 2006/06/08 10:56:06 satya Exp $
 
 inherit python eutils distutils
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.gentoo.org/~satya/packages/pykota/${P}.tar.bz2"
 HOMEPAGE="http://www.librelogiciel.com/software/PyKota/Presentation/action_Presentation"
 LICENSE="GPL-2"
 
-IUSE="ldap postgres snmp xml xml2"
+IUSE="ldap postgres snmp xml"
 
 DEPEND="dev-lang/python
 	dev-python/egenix-mx-base
@@ -17,8 +17,7 @@ DEPEND="dev-lang/python
 	postgres? ( dev-db/postgresql dev-db/pygresql )
 	ldap?     ( net-nds/openldap dev-python/python-ldap )
 	snmp?     ( net-analyzer/net-snmp =dev-python/pysnmp-3.4.2 )
-	xml?      ( dev-python/jaxml )
-	xml2?     ( dev-python/jaxml ) "
+	xml?      ( dev-python/jaxml ) "
 RDEPEND="${DEPEND}"
 
 KEYWORDS="~x86"
