@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r5.ebuild,v 1.16 2005/04/28 18:49:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r5.ebuild,v 1.17 2006/06/08 10:57:53 vapier Exp $
 
 MY_P="${P}ii"
 DESCRIPTION="Perl library for parsing the output of nsgmls"
@@ -9,7 +9,7 @@ SRC_URI="mirror://cpan/authors/id/D/DM/DMEGG/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.8.0-r12"
@@ -20,10 +20,10 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cp ${FILESDIR}/${P}-Makefile ${S}/Makefile
+	cp "${FILESDIR}"/${P}-Makefile "${S}"/Makefile
 	eval `perl '-V:package'`
 	eval `perl '-V:version'`
-	cd ${S}
+	cd "${S}"
 	sed -i -e "s:5.6.1:${version}:" Makefile
 #	sed -i -e "s:perl5:perl5/vendor_perl/${version}:" Makefile
 	sed -i -e "s:MODULEDIR = \${PERL5DIR}/site_perl/${version}/SGMLS:MODULEDIR = \${PERL5DIR}/vendor_perl/${version}/SGMLS:" Makefile
@@ -37,7 +37,7 @@ src_install () {
 	dodir /usr/lib/${package}/vendor_perl/${version}
 	dodir /usr/share/SGMLS
 	dodoc BUGS ChangeLog README TODO
-	make install -f ${S}/Makefile || die
-	make docs -f ${S}/Makefile || die
+	make install -f "${S}"/Makefile || die
+	make docs -f "${S}"/Makefile || die
 #	cd ${D}/usr/lib/${package}/vendor_perl/${version}
 }
