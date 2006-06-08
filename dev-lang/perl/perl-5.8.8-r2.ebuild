@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.13 2006/06/07 22:09:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.14 2006/06/08 00:24:28 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -35,8 +35,10 @@ RDEPEND="~sys-devel/libperl-${PV}
 	gdbm? ( >=sys-libs/gdbm-1.8.3 )"
 
 PDEPEND=">=app-admin/perl-cleaner-1.03
-		>=perl-core/PodParser-1.32
-		>=perl-core/Test-Harness-2.56"
+		!build? (
+			>=perl-core/PodParser-1.32
+			>=perl-core/Test-Harness-2.56
+		)"
 
 pkg_setup() {
 	# I think this should rather be displayed if you *have* 'ithreads'
