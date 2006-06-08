@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libiec61883
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.9 2006/05/23 04:52:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.10 2006/06/08 23:49:23 eradicator Exp $
+
+  08 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  libiec61883-1.0.0-r1.ebuild:
+  Added to ~ppc64.
 
   23 May 2006; Doug Goldstein <cardoe@gentoo.org>
   libiec61883-1.0.0-r1.ebuild:
