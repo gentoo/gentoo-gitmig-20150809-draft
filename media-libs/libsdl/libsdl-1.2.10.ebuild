@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.10.ebuild,v 1.2 2006/05/29 18:57:35 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.10.ebuild,v 1.3 2006/06/08 09:42:28 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -79,6 +79,17 @@ src_unpack() {
 	epatch "${FILESDIR}"/libsdl-1.2.10-sdl-config.patch
 	epatch "${FILESDIR}"/libsdl-1.2.10-PIC-hidden-symbols.patch
 	epatch "${FILESDIR}/${P}"-noxinerama.patch
+
+	# add yasm-compatible defines to nasm code (hopefully we
+	# can get this killed soonish)
+	local f
+	for f in "${S}"/src/hermes/*.asm ; do
+		cat <<-EOF >> "${f}"
+		%ifidn __YASM_OBJFMT__,elf
+		section ".note.GNU-stack" noalloc noexec nowrite progbits
+		%endif
+		EOF
+	done
 
 	./autogen.sh || die "autogen failed"
 	elibtoolize
