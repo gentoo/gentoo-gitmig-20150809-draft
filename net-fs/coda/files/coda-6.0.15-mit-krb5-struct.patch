@@ -1,0 +1,29 @@
+diff -ruN coda-6.0.15/coda-src/auth2/krb5.c coda-6.0.15-fixed/coda-src/auth2/krb5.c
+--- coda-6.0.15/coda-src/auth2/krb5.c	2005-04-13 16:27:00.000000000 +0200
++++ coda-6.0.15-fixed/coda-src/auth2/krb5.c	2006-06-08 14:11:17.287528250 +0200
+@@ -54,14 +54,14 @@
+ #define tkt_realm(t)    ((t)->client->realm)
+ #define tkt_realmlen(t) (strlen((t)->client->realm))
+ #define tkt_client(t)   ((t)->client)
+-#define tkt_key(t)	((t)->ticket.key)
++#define tkt_key(t)      (&(t)->ticket.key)
+ #define key_data(k)     ((k)->keyvalue.data)
+ #define key_length(k)   ((k)->keyvalue.length)
+ #else
+ #define tkt_realm(t)    ((t)->enc_part2->client->realm.data)
+ #define tkt_realmlen(t) ((t)->enc_part2->client->realm.length)
+ #define tkt_client(t)   ((t)->enc_part2->client)
+-#define tkt_key(t)	((t)->session)
++#define tkt_key(t)      ((t)->enc_part2->session)
+ #define key_data(k)     ((k)->contents)
+ #define key_length(k)   ((k)->length)
+ #endif
+@@ -334,7 +334,7 @@
+     /* now prepare the keys */
+ 
+     /* hKey is the md5 hash of the kerberos session secret */
+-    HashSecret(key_data(&tkt_key(ticket)), key_length(&tkt_key(ticket)), hKey);
++    HashSecret(key_data(tkt_key(ticket)), key_length(tkt_key(ticket)), hKey);
+ 
+     /* sKey is a random sequence of bytes */
+     GenerateSecret(sKey);
