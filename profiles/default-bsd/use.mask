@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.13 2006/06/05 18:11:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.14 2006/06/08 11:58:37 flameeyes Exp $
 
 # Linux-dependant flags
 selinux
@@ -68,6 +68,9 @@ gcj
 
 # This requires a kernel module that's Linux specific right now
 ifp
+
+# This requires hal and a usb-eject command
+ipod
 
 # Mask extraneous elibc/kernel combinations
 elibc_glibc
