@@ -46,7 +46,7 @@ http://www.libsdl.org/pipermail/sdl/2006-March/073618.html
  
 -GLOBAL _ConvertMMX
 -GLOBAL _mmxreturn
-+%include "common.asm"
++%include "common.inc"
 +
 +SDL_FUNC _ConvertMMX
 +SDL_FUNC _mmxreturn
@@ -59,7 +59,7 @@ http://www.libsdl.org/pipermail/sdl/2006-March/073618.html
  
  BITS 32
  
-+%include "common.asm"
++%include "common.inc"
  	
 -GLOBAL _ConvertMMXpII32_24RGB888
 -GLOBAL _ConvertMMXpII32_16RGB565
@@ -82,7 +82,7 @@ http://www.libsdl.org/pipermail/sdl/2006-March/073618.html
  
 -GLOBAL _ConvertX86
 -GLOBAL _x86return
-+%include "common.asm"
++%include "common.inc"
 +
 +SDL_FUNC _ConvertX86
 +SDL_FUNC _x86return
@@ -111,7 +111,7 @@ http://www.libsdl.org/pipermail/sdl/2006-March/073618.html
 -GLOBAL _ConvertX86p16_16RGB555
 -GLOBAL _ConvertX86p16_16BGR555
 -GLOBAL _ConvertX86p16_8RGB332
-+%include "common.asm"
++%include "common.inc"
 +
 +SDL_FUNC _ConvertX86p16_16BGR565
 +SDL_FUNC _ConvertX86p16_16RGB555
@@ -139,7 +139,7 @@ http://www.libsdl.org/pipermail/sdl/2006-March/073618.html
 -GLOBAL _ConvertX86p32_16RGB555
 -GLOBAL _ConvertX86p32_16BGR555
 -GLOBAL _ConvertX86p32_8RGB332
-+%include "common.asm"
++%include "common.inc"
 +
 +SDL_FUNC _ConvertX86p32_32BGR888
 +SDL_FUNC _ConvertX86p32_32RGBA888
@@ -154,8 +154,8 @@ http://www.libsdl.org/pipermail/sdl/2006-March/073618.html
  
  EXTERN _x86return
  	
---- src/hermes/common.asm
-+++ src/hermes/common.asm
+--- src/hermes/common.inc
++++ src/hermes/common.inc
 @@ -0,0 +1,9 @@
 +; Some common macros for hermes nasm code
 +
