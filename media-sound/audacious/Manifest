@@ -17,10 +17,10 @@ EBUILD audacious-1.0.0.ebuild 2611 RMD160 1a3718ccdbd406937f7a7a22dd80382ff05440
 MD5 c81132c30362be6170e33b0948af5f15 audacious-1.0.0.ebuild 2611
 RMD160 1a3718ccdbd406937f7a7a22dd80382ff0544006 audacious-1.0.0.ebuild 2611
 SHA256 82da5580623f3da52468195d07680b41a6c22b0a78d175b04e666d66ede9e466 audacious-1.0.0.ebuild 2611
-EBUILD audacious-1.1.0_beta1.ebuild 2695 RMD160 52ed43df4612a2047d0c330bf3bba0bc93eb7faf SHA1 aeda596f8a8618cd36131536d23738f66cc529be SHA256 5829437a545e7ab2059d017521ac7dbb5eba3f5c3ade5d731eacbc20c684e054
-MD5 e89058e60de16a759a5565a38dbb0819 audacious-1.1.0_beta1.ebuild 2695
-RMD160 52ed43df4612a2047d0c330bf3bba0bc93eb7faf audacious-1.1.0_beta1.ebuild 2695
-SHA256 5829437a545e7ab2059d017521ac7dbb5eba3f5c3ade5d731eacbc20c684e054 audacious-1.1.0_beta1.ebuild 2695
+EBUILD audacious-1.1.0_beta1.ebuild 2712 RMD160 eac3bf4a1bac8add5e3dece38eb3a26c66ea3a74 SHA1 4f42fa7cdd8fe04870ae049f8d4a63f784e00d9f SHA256 750f8ddcf7909db2a72e1f17eed659eacbf67e1a02b3aadd95e01078091b031d
+MD5 9eec1650c5681a0f6ade191b2d11dc1b audacious-1.1.0_beta1.ebuild 2712
+RMD160 eac3bf4a1bac8add5e3dece38eb3a26c66ea3a74 audacious-1.1.0_beta1.ebuild 2712
+SHA256 750f8ddcf7909db2a72e1f17eed659eacbf67e1a02b3aadd95e01078091b031d audacious-1.1.0_beta1.ebuild 2712
 MISC ChangeLog 7748 RMD160 cd1586a1f11c06630fb413d6fc1d9f80705f4a5f SHA1 b2ecf4b3ffa3e62a0064cbd422676c6442adc1f9 SHA256 0ab0b2e35296839b64f883c72208b606652c2c9458142abcacd45d2c73a79d53
 MD5 f26dd5fd38d32adc8b58addef474f600 ChangeLog 7748
 RMD160 cd1586a1f11c06630fb413d6fc1d9f80705f4a5f ChangeLog 7748
@@ -42,9 +42,9 @@ MD5 af29d12665104369f15f605a53c28cc3 files/digest-audacious-1.1.0_beta1 512
 RMD160 738eaa94b55228830a1b2c386fd64471d35b62b7 files/digest-audacious-1.1.0_beta1 512
 SHA256 ab8d6a6c85723afd9464667f5977a5d4678b877607e2067e97afd5c66875db2a files/digest-audacious-1.1.0_beta1 512
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEhZulp5vW4rUFj5oRAixpAJ4718N6yqsga45zfhGDxqD+ZjS5gwCggKPE
-iM9RBmHNEP/saxiJA1+JUV8=
-=a0nC
+iD8DBQFEh/rp2+ySkm8kpY0RAqjpAJ9Q5PBeaiNNCApHW3nQclXHvR9oGwCfQ+2q
+RNP8ikfDR4IdzcDJSYw77xw=
+=1d+E
 -----END PGP SIGNATURE-----
