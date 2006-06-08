@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/valkyrie
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/ChangeLog,v 1.2 2006/06/08 12:05:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/ChangeLog,v 1.3 2006/06/08 16:43:18 flameeyes Exp $
+
+  08 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/valkyrie-1.2.0-warnings.patch, valkyrie-1.2.0.ebuild:
+  Add a patch to fix the few warnings spawning (fixes one format string error,
+  maybe not vulnerability but always better to fix), and fix the path for
+  documentation.
 
   08 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> valkyrie-1.2.0.ebuild:
   Add ~ppc (okay'd by lu_zero), and use emake for install.

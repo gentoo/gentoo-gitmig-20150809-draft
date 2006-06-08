@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/valkyrie-1.2.0.ebuild,v 1.2 2006/06/08 12:05:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/valkyrie-1.2.0.ebuild,v 1.3 2006/06/08 16:43:18 flameeyes Exp $
 
 inherit eutils qt3
 
@@ -16,6 +16,13 @@ IUSE="debug"
 DEPEND="$(qt_min_version 3)
 	>=dev-util/valgrind-3.2.0"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-warnings.patch"
+}
+
 src_compile() {
 	use debug || sed -i -e '/#define DEBUG_ON/ s:1:0:' \
 		"${S}/valkyrie/vk_utils.h"
@@ -23,6 +30,11 @@ src_compile() {
 	econf \
 		--disable-dependency-tracking \
 		--with-Qt-dir="${QTDIR}" || die "econf failed"
+
+	# Use the right path for the documentation
+	sed -i -e '/VK_DOC_PATH/ s:/doc/:/share/doc/'${PF}'/html/:g' \
+		"${S}/config.h"
+
 	emake || die "emake failed"
 }
 

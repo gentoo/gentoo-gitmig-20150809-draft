@@ -1,0 +1,53 @@
+Index: valkyrie-1.2.0/valkyrie/tool_utils/vglog.cpp
+===================================================================
+--- valkyrie-1.2.0.orig/valkyrie/tool_utils/vglog.cpp
++++ valkyrie-1.2.0/valkyrie/tool_utils/vglog.cpp
+@@ -863,7 +863,7 @@ bool VgLog::mergeErrors( VgErrorList sEr
+ {
+    VgErrCounts mErrCounts = errorcounts();
+ 
+-   vklmPrint( 2, "--- update matches (n=%d) --- ", sErrors.count());
++   vklmPrint( 2, "--- update matches (n=%zu) --- ", sErrors.count());
+ 
+    /* --- find matches: update master err, delete slave err ---  */
+ 
+@@ -927,7 +927,7 @@ bool VgLog::mergeErrors( VgErrorList sEr
+       vklmPrint( 2, " ");
+    }
+ 
+-   vklmPrint( 2, "--- append non-matches (n=%d) --- ", sErrors.count() );
++   vklmPrint( 2, "--- append non-matches (n=%zu) --- ", sErrors.count() );
+ 
+    /* if no errcounts, and sErrors > 0, create empty errcounts */
+    if ( mErrCounts.isNull() && sErrors.count() > 0 ) {
+@@ -965,7 +965,7 @@ bool VgLog::mergeErrors( VgErrorList sEr
+ 
+ bool VgLog::mergeLeakErrors( VgErrorList sLeakErrors )
+ {
+-   vklmPrint( 2, "--- update matches (n=%d) ---", sLeakErrors.count() );
++   vklmPrint( 2, "--- update matches (n=%zu) ---", sLeakErrors.count() );
+ 
+    /* --- for each leak in master ---  */
+    VgErrorList errs = leaks();
+@@ -1001,7 +1001,7 @@ bool VgLog::mergeLeakErrors( VgErrorList
+       vklmPrint( 2, " ");
+    }
+ 
+-   vklmPrint( 2, "--- append non-matches (n=%d) ---", sLeakErrors.count() );
++   vklmPrint( 2, "--- append non-matches (n=%zu) ---", sLeakErrors.count() );
+ 
+    /* --- append remaining slave leaks to master --- */
+    VgErrorList::Iterator sIt;
+Index: valkyrie-1.2.0/valkyrie/vk_file_utils.cpp
+===================================================================
+--- valkyrie-1.2.0.orig/valkyrie/vk_file_utils.cpp
++++ valkyrie-1.2.0/valkyrie/vk_file_utils.cpp
+@@ -3021,7 +3021,7 @@ void FileDialog::urlFinished( QNetworkOp
+       if ( d->paths->hasFocus() )
+          d->ignoreNextKeyPress = true;
+ 
+-		vkWarn( this, "Error", op->protocolDetail().latin1() );
++		vkWarn( this, "Error", "%s", op->protocolDetail().latin1() );
+       switch ( op->errorCode() ) {
+       case QNetworkProtocol::ErrParse:
+       case QNetworkProtocol::ErrValid:
