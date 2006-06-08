@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/gli-0.3.1.ebuild,v 1.3 2006/06/08 20:55:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/gli-0.3.2.ebuild,v 1.1 2006/06/08 20:55:45 wolf31o2 Exp $
 
 inherit python eutils
 
@@ -11,17 +11,19 @@ SRC_URI="http://dev.gentoo.org/~agaffney/${PN}/releases/installer-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk"
 
 RDEPEND=">=dev-python/pyparted-1.6.6
 	gtk? ( >=dev-python/pygtk-2.4.0 )
 	=dev-python/pythondialog-2.7*
 	sys-fs/e2fsprogs
-	sys-fs/hfsutils
 	sys-fs/ntfsprogs
 	sys-fs/reiserfsprogs
-	sys-fs/dosfstools"
+	sys-fs/dosfstools
+	!amd64? (
+		sys-fs/hfsutils
+		sys-fs/hfsplusutils )"
 
 S=${WORKDIR}/installer/src
 
@@ -45,7 +47,8 @@ src_install() {
 	make_wrapper installer ./installer ${dir}/bin
 	doicon ${FILESDIR}/gli.png ${FILESDIR}/gli-dialog.png
 	domenu ${FILESDIR}/installer-gtk.desktop \
-		${FILESDIR}/installer-dialog.desktop
+		${FILESDIR}/installer-dialog.desktop \
+		${FILESDIR}/installer-faq.desktop
 }
 
 pkg_postinst() {
