@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.0a.ebuild,v 1.4 2006/05/28 16:16:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.0a.ebuild,v 1.5 2006/06/08 11:52:22 flameeyes Exp $
 
 LANGS="az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja km
 ko lt nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tg th tr uk uz
@@ -18,7 +18,7 @@ MY_PV="${MY_PV/_beta/-beta}${PKG_SUFFIX}"
 MY_S="${PN}-${MY_PV/_RC*/}"
 S="${WORKDIR}/${MY_S/0a/0}"
 
-DESCRIPTION="amaroK - the audio player for KDE."
+DESCRIPTION="Advanced audio player based on KDE framework."
 HOMEPAGE="http://amarok.kde.org/"
 
 if [[ ${MY_PV} == ${MY_PV/_RC*/} ]]; then
