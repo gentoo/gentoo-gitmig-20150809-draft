@@ -1,6 +1,10 @@
 # ChangeLog for games-board/mahjongg3d
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/ChangeLog,v 1.8 2006/02/09 13:55:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/ChangeLog,v 1.9 2006/06/08 18:41:57 mr_bones_ Exp $
+
+  08 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  mahjongg3d-0.96.ebuild:
+  Add in upstream patch and sed patch to fix bug #135885
 
   09 Feb 2006; Caleb Tennis <caleb@gentoo.org> mahjongg3d-0.96.ebuild:
   Fix qmake call to get the Qt3 version
