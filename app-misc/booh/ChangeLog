@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/booh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.15 2006/05/27 12:41:16 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.16 2006/06/08 20:38:14 malc Exp $
+
+  08 Jun 2006; <malc@gentoo.org> booh-0.8.5.ebuild:
+  ~amd64 - closes bug #134308
 
 *booh-0.8.6 (27 May 2006)
 
