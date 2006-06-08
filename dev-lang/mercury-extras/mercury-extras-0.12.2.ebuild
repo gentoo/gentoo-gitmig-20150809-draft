@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2.ebuild,v 1.6 2006/06/06 07:52:32 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2.ebuild,v 1.7 2006/06/08 18:52:38 keri Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="=dev-lang/mercury-0.12.2*
 	glut? ( virtual/glut )
 	iodbc? ( dev-db/libiodbc )
 	opengl? ( virtual/opengl )
-	tcktk? ( =dev-lang/tk-8.4*
+	tcltk? ( =dev-lang/tk-8.4*
 		|| ( (
 			x11-libs/libX11
 			x11-libs/libXmu )
