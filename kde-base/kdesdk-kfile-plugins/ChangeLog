@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-kfile-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kfile-plugins/ChangeLog,v 1.31 2006/06/01 18:04:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kfile-plugins/ChangeLog,v 1.32 2006/06/08 14:04:07 flameeyes Exp $
+
+  08 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdesdk-kfile-plugins-3.5.3.ebuild:
+  Add ~x86-fbsd keyword
 
 *kdesdk-kfile-plugins-3.5.3 (01 Jun 2006)
 
