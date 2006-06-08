@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20031110.ebuild,v 1.2 2006/06/06 14:20:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20031110.ebuild,v 1.3 2006/06/08 19:51:47 wolf31o2 Exp $
 
 #ECVS_SERVER="icculus.org:/cvs/cvsroot"
 ECVS_PASS="anonymous"
@@ -31,11 +31,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	if [ "${ECVS_SERVER}" == "offline" ] ; then
+#	if [ "${ECVS_SERVER}" == "offline" ] ; then
 		unpack ${A}
-	else
-		cvs_src_unpack
-	fi
+#	else
+#		cvs_src_unpack
+#	fi
 
 	cd "${S}"
 

@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/avp-cvs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/ChangeLog,v 1.2 2006/06/06 14:20:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/ChangeLog,v 1.3 2006/06/08 19:51:47 wolf31o2 Exp $
+
+  08 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> avp-20031110.ebuild:
+  Changed to use normal unpack. Thanks to Tristan Heaven
+  <tristanheaven@gmail.com> for pointing this out.
 
   06 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> avp-20031110.ebuild:
   Commented inherit line to remove cvs and added a new inherit line without
