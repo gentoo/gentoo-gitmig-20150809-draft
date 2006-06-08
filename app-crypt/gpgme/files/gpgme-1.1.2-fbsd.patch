@@ -1,0 +1,41 @@
+Index: gpgme-1.1.2/assuan/assuan.h
+===================================================================
+--- gpgme-1.1.2.orig/assuan/assuan.h
++++ gpgme-1.1.2/assuan/assuan.h
+@@ -23,6 +23,7 @@
+ 
+ #include <stdio.h>
+ #include <sys/types.h>
++#include <sys/socket.h>
+ #include <unistd.h>
+ 
+ 
+Index: gpgme-1.1.2/assuan/funopen.c
+===================================================================
+--- gpgme-1.1.2.orig/assuan/funopen.c
++++ gpgme-1.1.2/assuan/funopen.c
+@@ -38,7 +38,7 @@
+   cookie instead of the fiel descripor.
+ */
+ 
+-
++#ifndef HAVE_FUNOPEN
+ #ifdef HAVE_FOPENCOOKIE
+ FILE *
+ _assuan_funopen(void *cookie,
+@@ -61,3 +61,4 @@ _assuan_funopen(void *cookie,
+ #else
+ #error No known way to implement funopen.
+ #endif
++#endif
+Index: gpgme-1.1.2/assuan/mkerrors
+===================================================================
+--- gpgme-1.1.2.orig/assuan/mkerrors
++++ gpgme-1.1.2/assuan/mkerrors
+@@ -83,4 +83,4 @@ cat <<EOF
+   return s;
+ }
+ 
+-EOF
+\ No newline at end of file
++EOF
