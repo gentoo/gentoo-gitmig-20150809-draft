@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.97 2006/06/04 23:25:20 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.98 2006/06/08 23:59:49 eradicator Exp $
+
+  08 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  mythtv-0.19_p9163-r1.ebuild:
+  Added to ~ppc64.
 
   04 Jun 2006; Luca Barbato <lu_zero@gentoo.org>
   mythtv-0.19_p9163-r1.ebuild:
