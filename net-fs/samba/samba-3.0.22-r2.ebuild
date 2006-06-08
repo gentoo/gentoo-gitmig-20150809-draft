@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.22-r2.ebuild,v 1.2 2006/05/15 09:03:12 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.22-r2.ebuild,v 1.3 2006/06/08 10:51:02 satya Exp $
 
 inherit eutils versionator
 
 IUSE_LINGUAS="ja pl"
 IUSE="acl async automount cups doc examples kerberos ldap ldapsam libclamav
 	mysql oav pam postgres python quotas readline selinux swat syslog
-	winbind xml xml2"
+	winbind xml"
 RESTRICT="test"
 
 VSCAN_VER="0.3.6b"
@@ -43,7 +43,6 @@ RDEPEND="dev-libs/popt
 	swat?      ( sys-apps/xinetd )
 	syslog?    ( virtual/logger )
 	xml?       ( dev-libs/libxml2 sys-libs/zlib )
-	xml2?      ( dev-libs/libxml2 sys-libs/zlib )
 	"
 
 DEPEND="${RDEPEND}
@@ -80,9 +79,7 @@ src_compile() {
 	local mymods
 	local mylangs
 
-	if use xml || use xml2 ; then
-		mymods="xml,${mymods}"
-	fi
+	use xml && mymods="xml,${mymods}"
 	use mysql && mymods="mysql,${mymods}"
 	use postgres && mymods="pgsql,${mymods}"
 	[[ -n "${mymods}" ]] && myconf="--with-expsam=${mymods}"

@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.240 2006/05/15 09:07:44 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.241 2006/06/08 10:51:02 satya Exp $
+
+  08 Jun 2006; Christian Andreetta <satya@gentoo.org>
+  samba-3.0.14a-r2.ebuild, samba-3.0.20b.ebuild, samba-3.0.21a.ebuild,
+  samba-3.0.21b-r1.ebuild, samba-3.0.22.ebuild, samba-3.0.22-r2.ebuild:
+  deprecated 'xml2' use flag removed (use 'xml' instead)
 
   15 May 2006; Christian Andreetta <satya@gentoo.org>
   -samba-3.0.14a-r3.ebuild, -samba-3.0.21c-r1.ebuild,
