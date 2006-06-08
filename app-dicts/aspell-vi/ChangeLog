@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/aspell-vi
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-vi/ChangeLog,v 1.1 2006/06/08 17:38:08 pclouds Exp $
+
+*aspell-vi-0.01.1.1 (08 Jun 2006)
+
+  08 Jun 2006; <pclouds@gentoo.org> +metadata.xml,
+  +aspell-vi-0.01.1.1.ebuild:
+  Initial ebuild for aspell-vi-0.01.1.1
+
