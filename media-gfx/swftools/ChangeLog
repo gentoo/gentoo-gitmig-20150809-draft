@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/swftools
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.17 2006/06/03 20:55:34 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.18 2006/06/08 04:29:54 tsunam Exp $
+
+  08 Jun 2006; Joshua Jackson <tsunam@gentoo.org> swftools-0.7.0.ebuild:
+  Stable on x86; bug #135393
 
   03 Jun 2006; Marcelo Goes <vanquirius@gentoo.org>
   +files/swftools-0.7.0-gcc41.patch, swftools-0.7.0.ebuild,
