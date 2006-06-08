@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsamplerate
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.33 2006/01/07 01:36:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.34 2006/06/08 13:56:55 flameeyes Exp $
+
+  08 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libsamplerate-0.1.2.ebuild:
+  Add ~x86-fbsd keyword
 
   07 Jan 2006; Mike Frysinger <vapier@gentoo.org>
   libsamplerate-0.1.2.ebuild:
