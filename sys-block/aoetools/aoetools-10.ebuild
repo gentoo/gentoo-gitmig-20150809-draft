@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/aoetools-9.ebuild,v 1.4 2006/06/08 17:16:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/aoetools-10.ebuild,v 1.1 2006/06/08 17:16:17 robbat2 Exp $
 
 DESCRIPTION="aoetools are programs for users of the ATA over Ethernet (AoE) network storage protocol"
 HOMEPAGE="http://sf.net/projects/aoetools/"
@@ -11,8 +11,7 @@ KEYWORDS="~ppc64 ~ppc ~x86"
 IUSE=""
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
-		sys-apps/util-linux
-		sys-devel/bc"
+		sys-apps/util-linux"
 
 src_unpack() {
 	unpack ${A}
@@ -23,6 +22,13 @@ src_unpack() {
 		-e '/mkdir/s, \(${.*}\), ${DESTDIR}\1,g' \
 		-e 's,^CFLAGS.*,CFLAGS += -Wall,g' \
 		Makefile || die "Failed to clean up makefile"
+	for i in aoe-stat aoe-mkshelf.in ; do
+		sed -i \
+			-e '/bc/s!\\\*!*!g' \
+			-e '/bc/s!"!!g' \
+			-e '/bc/s!=`echo \(.*\) | bc`!=$((\1))!g' \
+			${i}
+	done
 }
 src_compile() {
 	emake || die "emake failed"
