@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.162 2006/05/31 15:58:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.163 2006/06/08 10:39:53 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -12,7 +12,7 @@ DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
 IUSE="debug xinerama"
 
-if [[ ${ARTS_REQUIRED} != "yes" && ${ARTS_REQUIRED} != "never" ]]; then
+if [[ ${ARTS_REQUIRED} != "yes" && ${ARTS_REQUIRED} != "never" && ${PN} != "arts" ]]; then
 	IUSE="${IUSE} arts"
 fi
 
@@ -45,7 +45,7 @@ RDEPEND="~kde-base/kde-env-3
 if [[ ${ARTS_REQUIRED} == "yes" ]]; then
 	DEPEND="${DEPEND} kde-base/arts"
 	RDEPEND="${RDEPEND} kde-base/arts"
-elif [[ ${ARTS_REQUIRED} != "never" ]]; then
+elif [[ ${ARTS_REQUIRED} != "never" && ${PN} != "arts" ]]; then
 	DEPEND="${DEPEND} arts? ( kde-base/arts )"
 	RDEPEND="${RDEPEND} arts? ( kde-base/arts )"
 fi
@@ -183,7 +183,7 @@ kde_src_compile() {
 				fi
 				if [[ ${ARTS_REQUIRED} == "never" ]]; then
 					myconf="$myconf --without-arts"
-				elif [[ ${ARTS_REQUIRED} != 'yes' ]]; then
+				elif [[ ${ARTS_REQUIRED} != 'yes' && ${PN} != "arts" ]]; then
 					# This might break some external package until
 					# ARTS_REQUIRED="yes" is set on them, KDE 3.2 is no more
 					# supported anyway.
