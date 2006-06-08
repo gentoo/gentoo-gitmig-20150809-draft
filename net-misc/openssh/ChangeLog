@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.172 2006/06/07 19:15:40 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.173 2006/06/08 11:23:45 vapier Exp $
+
+*openssh-4.3_p2-r2 (08 Jun 2006)
+
+  08 Jun 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-4.3_p2-securid-hpn-glue.patch,
+  +files/openssh-4.3_p2-x509-hpn-glue.patch, openssh-4.2_p1-r1.ebuild,
+  +openssh-4.3_p2-r2.ebuild:
+  Update hpn and x509 patches #135691 by Scott Jones.
 
   07 Jun 2006; Joshua Kinard <kumba@gentoo.org> openssh-4.3_p2-r1.ebuild:
   Add sys-apps/shadow to RDEPEND/DEPEND so group/useradd is available. Fixes
