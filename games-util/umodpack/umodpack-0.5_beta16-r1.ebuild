@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16-r1.ebuild,v 1.2 2005/12/21 23:07:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16-r1.ebuild,v 1.3 2006/06/09 01:19:29 wolf31o2 Exp $
 
 inherit perl-module toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://umodpack.sourceforge.net/${MY_P}-allinone.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="X"
+IUSE="tcltk"
 
 DEPEND="dev-lang/perl
 	dev-perl/Archive-Zip
