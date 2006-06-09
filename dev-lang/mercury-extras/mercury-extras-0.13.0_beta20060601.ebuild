@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.13.0_beta20060601.ebuild,v 1.2 2006/06/08 18:52:38 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.13.0_beta20060601.ebuild,v 1.3 2006/06/09 09:37:15 keri Exp $
 
 inherit eutils versionator
 
@@ -22,13 +22,12 @@ KEYWORDS="~ppc ~x86"
 IUSE="doc glut iodbc odbc opengl tcltk"
 
 DEPEND="~dev-lang/mercury-${PV}
-	!<dev-lang/mercury-extras-0.13.0_beta
 	sys-libs/ncurses
 	glut? ( virtual/glut )
 	odbc? ( dev-db/unixODBC )
 	iodbc? ( !odbc? ( dev-db/libiodbc ) )
 	opengl? ( virtual/opengl )
-	tcltk? ( =dev-lang/tk-8.4*
+	tcktk? ( =dev-lang/tk-8.4*
 		|| ( (
 			x11-libs/libX11
 			x11-libs/libXmu )
@@ -52,8 +51,14 @@ src_unpack() {
 
 	sed -i	-e "s:curs:concurrency curs:" \
 		-e "s:posix:posix quickcheck:" \
-		-e "s:windows_installer_generator ::" \
-		-e "s:xml:trailed_update xml:" Mmakefile
+		-e "s:windows_installer_generator ::" Mmakefile
+	sed -i  -e "s:lib/mercury:lib/mercury-${PV}:" posix/Mmakefile
+
+	if built_with_use dev-lang/mercury minimal; then
+		sed -i -e "s:references::" Mmakefile
+	else
+		sed -i -e "s:xml:trailed_update xml:" Mmakefile
+	fi
 
 	use glut && sed -i -e "s: lex : graphics/mercury_glut lex :" Mmakefile
 	use tcltk && sed -i -e "s: lex : graphics/mercury_tcltk lex :" Mmakefile
