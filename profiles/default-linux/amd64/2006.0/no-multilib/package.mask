@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.20 2006/05/20 18:48:39 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.21 2006/06/09 20:26:32 vapier Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -88,6 +88,7 @@ games-fps/quake3-bin
 games-fps/quake3-brainworks
 games-fps/quake3-cpma
 games-fps/quake3-defrag
+games-fps/quake3-demo
 games-fps/quake3-matrix
 games-fps/quake3-nsco
 games-fps/quake3-osp
