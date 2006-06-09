@@ -1,6 +1,13 @@
 # ChangeLog for dev-ada/adasockets
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/ChangeLog,v 1.14 2006/05/13 20:46:04 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/ChangeLog,v 1.15 2006/06/09 15:40:17 george Exp $
+
+*adasockets-1.8.4.7 (09 Jun 2006)
+
+  09 Jun 2006; George Shapovalov <george@gentoo.org>
+  +adasockets-1.8.4.7.ebuild:
+  new version, converted to use new style gnat compilers and gnat.eclass
+  (##111340, 134259)
 
   13 May 2006; George Shapovalov <george@gentoo.org>
   adasockets-1.7-r1.ebuild, adasockets-1.8.4.4.ebuild:
