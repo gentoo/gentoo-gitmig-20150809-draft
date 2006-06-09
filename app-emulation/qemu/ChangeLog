@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.46 2006/05/06 10:21:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.47 2006/06/09 06:16:29 mr_bones_ Exp $
+
+  09 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/qemu-0.6.0-configure.patch, -files/qemu-0.6.0-sigaction.patch,
+  -files/qemu-0.6.0-typo.patch, -files/qemu-0.6.1-20041126.patch,
+  -files/qemu-0.7.0-errno.patch, -files/kqemu-sysfs.patch,
+  -qemu-0.6.1.ebuild, -qemu-0.6.1-r1.ebuild, -qemu-0.7.0-r1.ebuild,
+  -qemu-0.7.1.ebuild, -qemu-0.7.2.ebuild:
+  clean out old versions
 
 *qemu-0.8.1 (06 May 2006)
 
