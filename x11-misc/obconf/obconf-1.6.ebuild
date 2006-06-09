@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-1.6.ebuild,v 1.1 2006/06/04 01:05:51 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-1.6.ebuild,v 1.2 2006/06/09 02:01:39 anarchy Exp $
+
+inherit eutils
 
 DESCRIPTION="ObConf is a tool for configuring the Openbox window manager."
 SRC_URI="http://tr.openmonkey.com/files/obconf/${P}.tar.gz"
