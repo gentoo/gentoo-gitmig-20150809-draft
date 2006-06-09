@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.16.ebuild,v 1.1 2006/06/07 13:29:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.16.ebuild,v 1.2 2006/06/09 20:34:53 flameeyes Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic autotools pam
 
@@ -105,14 +105,18 @@ src_install() {
 		use selinux || sed -i -e '/@selinux@/d' ${D}/etc/pam.d/login
 		use selinux && sed -i -e 's:@selinux@::g' ${D}/etc/pam.d/login
 
+		cp "${FILESDIR}/login.defs.4.0.16" "${T}/login.defs"
+
+		use skey && sed -i -e 's:^# GETPASS_ASTERISKS 0$:GETPASS_ASTERISKS 0:'
+
 		insinto /etc
 		insopts -m0644
-		newins "${FILESDIR}/login.defs" login.defs
+		doins "${T}/login.defs"
 
 		# Also install another one that we can use to check if
 		# we need to update it if FORCE_LOGIN_DEFS = "yes"
 		[ "${FORCE_LOGIN_DEFS}" = "yes" ] \
-			&& newins "${FILESDIR}/login.defs" login.defs.new
+			&& newins "${T}/login.defs" login.defs.new
 	fi
 	# Output arch-specific cruft
 	case $(tc-arch) in
