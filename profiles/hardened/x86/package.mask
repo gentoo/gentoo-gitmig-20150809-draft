@@ -6,7 +6,7 @@ net-misc/lksctp-tools
 
 dev-util/rootstrap
 media-plugins/gst-plugins-v4l2
-media-video/transcode
+#media-video/transcode
 net-misc/lksctp-tools
 net-misc/mrouted
 sys-apps/raidutils
