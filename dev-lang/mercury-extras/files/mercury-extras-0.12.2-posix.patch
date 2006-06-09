@@ -1,0 +1,11 @@
+--- mercury-extras-0.12.2.orig/posix/Mmakefile	2004-02-11 17:35:14.000000000 +1300
++++ mercury-extras-0.12.2/posix/Mmakefile	2006-06-07 18:41:15.000000000 +1200
+@@ -34,7 +34,7 @@
+ 
+ .PHONY: install
+ install: libposix.install
+-	cp $(ADDITIONAL_HDRS) $(INSTALL_PREFIX)/lib/mercury/inc
++	cp $(ADDITIONAL_HDRS) $(INSTALL_PREFIX)/lib/mercury-0.12.2/inc
+ 
+ .PHONY: clean
+ clean:

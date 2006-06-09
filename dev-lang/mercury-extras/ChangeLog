@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.28 2006/06/08 18:52:38 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.29 2006/06/09 09:05:40 keri Exp $
+
+*mercury-extras-0.12.2-r1 (09 Jun 2006)
+
+  09 Jun 2006; Keri Harris <keri@gentoo.org>
+  +files/mercury-extras-0.12.2-posix.patch,
+  +mercury-extras-0.12.2-r1.ebuild:
+  Append ${PV} to install_libdir so we can install when mercury interfaces
+  change.
 
   08 Jun 2006; Keri Harris <keri@gentoo.org> mercury-extras-0.12.2.ebuild,
   mercury-extras-0.13.0_beta20060601.ebuild:

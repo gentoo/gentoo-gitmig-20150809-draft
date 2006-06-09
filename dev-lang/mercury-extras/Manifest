@@ -30,6 +30,10 @@ AUX mercury-extras-0.12.2-odbc.patch 1220 RMD160 e697733a639f81bcdc9010da481226f
 MD5 89a0a45245bd72fe139becbd4398ac29 files/mercury-extras-0.12.2-odbc.patch 1220
 RMD160 e697733a639f81bcdc9010da481226fbab50f375 files/mercury-extras-0.12.2-odbc.patch 1220
 SHA256 7b20c88383ced7e9d7c5be480885cf220c8cac65ef4729c441b7aca741d8d792 files/mercury-extras-0.12.2-odbc.patch 1220
+AUX mercury-extras-0.12.2-posix.patch 373 RMD160 4a451c2cb37d05aefac0f127f9971fba5bbc7535 SHA1 3c30540ffe61ebde533652736c65e9f935979dde SHA256 bb7f179bf838f76738d0cac0d1b30e07aea6ae6cb0a7e05ab2cba69bb3a5d85d
+MD5 9b59270ad11a77897c8ccb3a58dcf09c files/mercury-extras-0.12.2-posix.patch 373
+RMD160 4a451c2cb37d05aefac0f127f9971fba5bbc7535 files/mercury-extras-0.12.2-posix.patch 373
+SHA256 bb7f179bf838f76738d0cac0d1b30e07aea6ae6cb0a7e05ab2cba69bb3a5d85d files/mercury-extras-0.12.2-posix.patch 373
 AUX mercury-extras-0.12.2-references.patch 513 RMD160 caa71ac5e0c9457b9ce48a0ea852fe107e3af0d8 SHA1 7944097b207480f6aede7d56754b6085e77b0c33 SHA256 02b567cd088fca260d80ca795d2f303860f87fd4005b7157ba97ef31f448fbe6
 MD5 b9fac0e10816ce66ea6e2ebe6034a1a9 files/mercury-extras-0.12.2-references.patch 513
 RMD160 caa71ac5e0c9457b9ce48a0ea852fe107e3af0d8 files/mercury-extras-0.12.2-references.patch 513
@@ -80,6 +84,10 @@ RMD160 80643d6cc0b83f415629d7c00fee6fc2a40de3cf files/mercury-extras-0.13.0_beta
 SHA256 47cc0bef68e63e5ac5eb22746c8266991c1af41af06d30d8b014a56a095ca079 files/mercury-extras-0.13.0_beta-trailed_update-r1.patch 1927
 DIST mercury-extras-0.12.2.tar.gz 759070 RMD160 3e7c4c67590408d2da056135c9560ff4d078eff6 SHA1 fc0f446f8b7f448c27f61bfe226a33fbaa007e0a SHA256 3a5be0941fad7ed8f8d2e967138984127510ba388b65b0f3f35f46ae8b6b43a8
 DIST mercury-extras-0.13.0-beta-2006-06-01-unstable.tar.gz 873674 RMD160 f3d8ac4a3893c1e3e6c3a10e04787d640ac1526d SHA1 42beb340355f58766d391390f4d8badd20842aa5 SHA256 4f7e5778bfa6beb887bf78dd8c165052293bd1f88869ee311ff19213fa941ec3
+EBUILD mercury-extras-0.12.2-r1.ebuild 2925 RMD160 01ab097622ed3a6078334a6e76c24727a9749afc SHA1 817f48d724234f52611f52e36134e14d33b975fb SHA256 03b301bb258bc3935ba964baf05092fe2ac86d48a02a0ecf593a11443d3299b4
+MD5 ee13ceebc253e76bb0fa2ee4a5b5d7db mercury-extras-0.12.2-r1.ebuild 2925
+RMD160 01ab097622ed3a6078334a6e76c24727a9749afc mercury-extras-0.12.2-r1.ebuild 2925
+SHA256 03b301bb258bc3935ba964baf05092fe2ac86d48a02a0ecf593a11443d3299b4 mercury-extras-0.12.2-r1.ebuild 2925
 EBUILD mercury-extras-0.12.2.ebuild 2777 RMD160 a11653067245453e30d16bbc705cb92bb9bda3e1 SHA1 36f73c5d0f61bf79c0a242e44dc05e533177ccd7 SHA256 f47d31c83312916d483a24d5ceb7dd6a1fdc4c11e00b13846460773cfa531d6a
 MD5 c402d3623e15c6a4adfdd487dbcaff09 mercury-extras-0.12.2.ebuild 2777
 RMD160 a11653067245453e30d16bbc705cb92bb9bda3e1 mercury-extras-0.12.2.ebuild 2777
@@ -88,10 +96,10 @@ EBUILD mercury-extras-0.13.0_beta20060601.ebuild 3538 RMD160 f06e2e28c2a9c080603
 MD5 cf948aaeb0d357c3d67a85fc89f6a507 mercury-extras-0.13.0_beta20060601.ebuild 3538
 RMD160 f06e2e28c2a9c0806036e9b779886248a9ab88af mercury-extras-0.13.0_beta20060601.ebuild 3538
 SHA256 f8e162124ae394447366aefe12f8366df6dc51ff4f0a0f244fecfac7a966888f mercury-extras-0.13.0_beta20060601.ebuild 3538
-MISC ChangeLog 8893 RMD160 57e8d404cfae0f6701af265b0ce41b4f4c82fb93 SHA1 da4a4f96fb2743ce717e95f98871c9f06bf6a41a SHA256 3993be9367e65befcbd04621c128ec89c2eb4de11e850d2076a7aa3105bf871f
-MD5 0ee16d5d289087a9884374ed7d6bcbdd ChangeLog 8893
-RMD160 57e8d404cfae0f6701af265b0ce41b4f4c82fb93 ChangeLog 8893
-SHA256 3993be9367e65befcbd04621c128ec89c2eb4de11e850d2076a7aa3105bf871f ChangeLog 8893
+MISC ChangeLog 9145 RMD160 db975ad1a8d4bba5eabb3c3a6388abd2862eceac SHA1 66d18bbcf40b452ff90dee2ba31c2af04135ce3f SHA256 ee2a12176f58e7b392871ffb1973c8aec917262f2e9192eec7f6bfbbb006da8b
+MD5 cd1383b9603fe0ec3d798e15d2a41dae ChangeLog 9145
+RMD160 db975ad1a8d4bba5eabb3c3a6388abd2862eceac ChangeLog 9145
+SHA256 ee2a12176f58e7b392871ffb1973c8aec917262f2e9192eec7f6bfbbb006da8b ChangeLog 9145
 MISC metadata.xml 247 RMD160 1b3df3c501d9a3b2e2651668be405677e8416397 SHA1 7b705a8a3368abab6ad31ea2fcb5e5db865d92b1 SHA256 2768d0688d443184194068497dcafb2e5d67521980cb46b7e8efc07d3900bcaa
 MD5 6fca20d17d6d55a28537204aa9bb626f metadata.xml 247
 RMD160 1b3df3c501d9a3b2e2651668be405677e8416397 metadata.xml 247
@@ -99,6 +107,9 @@ SHA256 2768d0688d443184194068497dcafb2e5d67521980cb46b7e8efc07d3900bcaa metadata
 MD5 04bb3f50c82519cd929f7754557a4124 files/digest-mercury-extras-0.12.2 265
 RMD160 e18050a352bc3f86650cf53244bbb17545ef0817 files/digest-mercury-extras-0.12.2 265
 SHA256 087bf13f383826ff1da30ff861cfc48008b7037a9a844f14fee94f51934ec525 files/digest-mercury-extras-0.12.2 265
+MD5 04bb3f50c82519cd929f7754557a4124 files/digest-mercury-extras-0.12.2-r1 265
+RMD160 e18050a352bc3f86650cf53244bbb17545ef0817 files/digest-mercury-extras-0.12.2-r1 265
+SHA256 087bf13f383826ff1da30ff861cfc48008b7037a9a844f14fee94f51934ec525 files/digest-mercury-extras-0.12.2-r1 265
 MD5 3d662708a10fc49552af1357034f5956 files/digest-mercury-extras-0.13.0_beta20060601 340
 RMD160 844b34191eaa1e899fc57e5e7ea61f8122e9f2b3 files/digest-mercury-extras-0.13.0_beta20060601 340
 SHA256 0a3eb881ff0efef6698b63ab380f8b402e376eee34af9b23ebcd8509ec24a769 files/digest-mercury-extras-0.13.0_beta20060601 340
