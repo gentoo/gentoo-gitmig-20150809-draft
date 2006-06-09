@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/eselect-compiler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.21 2006/06/07 02:40:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.22 2006/06/09 19:10:50 eradicator Exp $
+
+*eselect-compiler-2.0.0_rc1-r6 (09 Jun 2006)
+
+  09 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/eselect-compiler-2.0.0_rc1-env-update.patch,
+  -eselect-compiler-2.0.0_rc1-r5.ebuild,
+  +eselect-compiler-2.0.0_rc1-r6.ebuild:
+  Run env-update after updating /etc/env.d file.
 
   07 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
   -eselect-compiler-2.0.0_rc1-r4.ebuild:

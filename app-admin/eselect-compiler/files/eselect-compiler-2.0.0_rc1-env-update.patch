@@ -1,0 +1,14 @@
+Index: compiler.eselect.in
+===================================================================
+--- compiler-config-2.0.0_rc1.orig/src/profile-manager/compiler.eselect.in	(revision 270)
++++ compiler-config-2.0.0_rc1/src/profile-manager/compiler.eselect.in	(working copy)
+@@ -441,6 +443,8 @@
+ 
+ 	set_env ${preopts} || die -q "Could not set ${ENV_FILE}"
+ 
++	env-update
++
+ 	echo "Successfully set compiler for ${ctarget} to ${profile}."
+ }
+ 
+
