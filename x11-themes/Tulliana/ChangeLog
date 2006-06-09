@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/Tulliana
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/Tulliana/ChangeLog,v 1.1 2006/06/09 22:11:33 flameeyes Exp $
+
+*Tulliana-2.0 (09 Jun 2006)
+
+  09 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +Tulliana-2.0.ebuild:
+  Initial import from my overlay.
+
