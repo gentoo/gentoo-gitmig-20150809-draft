@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.99 2006/05/23 13:03:28 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.100 2006/06/09 16:00:39 uberlord Exp $
+
+  09 Jun 2006; <roy@gentoo.org> -dhcp-3.0.4.ebuild, dhcp-3.0.4-r1.ebuild:
+  minimal USE flag stops the building of the DHCP server
+  doc USE flag installs the documentation
 
 *dhcp-3.0.3-r9 (23 May 2006)
 
