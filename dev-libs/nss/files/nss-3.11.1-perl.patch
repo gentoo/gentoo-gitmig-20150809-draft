@@ -1,0 +1,45 @@
+--- .pc/make-perl-problem-in-coreconf.diff/security/coreconf/rules.mk	2006-01-31 00:06:21.000000000 +0100
++++ security/coreconf/rules.mk	2006-01-31 00:31:37.000000000 +0100
+@@ -865,18 +865,18 @@ endif
+ 
+ 
+ ################################################################################
+ 
+ -include $(DEPENDENCIES)
+ 
+ ifneq (,$(filter-out OpenVMS OS2 WIN%,$(OS_TARGET)))
+ # Can't use sed because of its 4000-char line length limit, so resort to perl
+-.DEFAULT:
+-	@perl -e '                                                            \
++
++PERL_DEPENDENCIES_PROGRAM=\
+ 	    open(MD, "< $(DEPENDENCIES)");                                    \
+ 	    while (<MD>) {                                                    \
+ 		if (m@ \.*/*$< @) {                                           \
+ 		    $$found = 1;                                              \
+ 		    last;                                                     \
+ 		}                                                             \
+ 	    }                                                                 \
+ 	    if ($$found) {                                                    \
+@@ -893,17 +893,20 @@ ifneq (,$(filter-out OpenVMS OS2 WIN%,$(
+ 		}                                                             \
+ 		close(TMD);                                                   \
+ 		if (!rename($$tmpname, "$(DEPENDENCIES)")) {                  \
+ 		    unlink(($$tmpname));                                      \
+ 		}                                                             \
+ 	    } elsif ("$<" ne "$(DEPENDENCIES)") {                             \
+ 		print "$(MAKE): *** No rule to make target $<.  Stop.\n";     \
+ 		exit(1);                                                      \
+-	    }'
++	    }
++
++.DEFAULT:
++	@perl -e '$(PERL_DEPENDENCIES_PROGRAM)'
+ endif
+ 
+ #############################################################################
+ # X dependency system
+ #############################################################################
+ 
+ ifdef MKDEPENDENCIES
+ 

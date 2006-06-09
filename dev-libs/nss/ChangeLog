@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.57 2006/06/03 17:48:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.58 2006/06/09 18:33:37 anarchy Exp $
+
+*nss-3.11.1-r1 (09 Jun 2006)
+
+  09 Jun 2006; Jory A. Pratt <anarchy@gentoo.org>
+  +files/nss-3.11.1-perl.patch, -files/nss-3.11.1-zdefs.patch,
+  -nss-3.11.ebuild, -nss-3.11.1.ebuild, +nss-3.11.1-r1.ebuild:
+  perl -e cleanup, small clean up to tree
 
   03 Jun 2006; Guy Martin <gmsoft@gentoo.org> nss-3.11-r1.ebuild:
   Stable on hppa.
