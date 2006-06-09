@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-2.2.2820.5.ebuild,v 1.2 2006/06/09 12:26:28 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-2.2.2820.5.ebuild,v 1.3 2006/06/09 15:20:19 genstef Exp $
 
 inherit eutils versionator
 
@@ -11,6 +11,7 @@ SRC_URI="http://dl.google.com/linux/standalone/${MY_P}.i386.bin"
 LICENSE="google-picasa LGPL-2 GPL-2 MPL-1.1 BSD"
 SLOT="0"
 KEYWORDS="-* ~x86"
+RESTRICT="mirror"
 
 RDEPEND="dev-libs/atk
 	dev-libs/glib
