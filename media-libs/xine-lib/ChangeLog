@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.363 2006/06/07 20:54:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.364 2006/06/09 00:48:57 flameeyes Exp $
+
+  09 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.1.2_pre20060606.ebuild:
+  Bump patchset to fix issues with streams after security fix. Use emake for
+  install stage.
 
   07 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   xine-lib-1.1.2_pre20060328-r11.ebuild:
