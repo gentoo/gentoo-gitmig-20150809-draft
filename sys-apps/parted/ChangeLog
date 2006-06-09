@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.94 2006/05/30 18:40:08 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.95 2006/06/09 21:18:27 allanonjl Exp $
+
+*parted-1.7.1-r1 (09 Jun 2006)
+
+  09 Jun 2006; John N. Laliberte <allanonjl@gentoo.org>
+  +files/parted-1.7.1-fix-seg.patch, -parted-1.7.1.ebuild,
+  +parted-1.7.1-r1.ebuild:
+  add patch to fix segfault
 
 *parted-1.7.1 (30 May 2006)
 
