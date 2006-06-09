@@ -1,0 +1,171 @@
+diff -ur libjingle-0.3.9.orig/config.h.in libjingle-0.3.9/config.h.in
+--- libjingle-0.3.9.orig/config.h.in	2006-06-10 00:09:51.000000000 +0200
++++ libjingle-0.3.9/config.h.in	2006-06-10 00:08:19.000000000 +0200
+@@ -21,7 +21,7 @@
+ /* Defined when we have ilbc codec lib */
+ #undef HAVE_ILBC
+ 
+-/* Define to 1 if you have the <iLBC_decode.h> header file. */
++/* Define to 1 if you have the <ilbc/iLBC_decode.h> header file. */
+ #undef HAVE_ILBC_DECODE_H
+ 
+ /* Define to 1 if you have the <inttypes.h> header file. */
+@@ -36,7 +36,7 @@
+ /* has speex */
+ #undef HAVE_SPEEX
+ 
+-/* Define to 1 if you have the <speex.h> header file. */
++/* Define to 1 if you have the <speex/speex.h> header file. */
+ #undef HAVE_SPEEX_H
+ 
+ /* Define to 1 if you have the <stdint.h> header file. */
+diff -ur libjingle-0.3.9.orig/configure.ac libjingle-0.3.9/configure.ac
+--- libjingle-0.3.9.orig/configure.ac	2006-06-10 00:09:51.000000000 +0200
++++ libjingle-0.3.9/configure.ac	2006-06-10 00:08:19.000000000 +0200
+@@ -102,7 +102,7 @@
+       [  --with-speex      Set prefix where speex lib can be found (ex:/usr, /usr/local) [default=/usr] ],
+       [ speex_prefix=${withval}],[ speex_prefix="/usr" ])
+ 
+-AC_CHECK_HEADERS(speex.h,[AC_CHECK_LIB(speex,speex_encode_int,speex_found=yes,speex_found=no)
++AC_CHECK_HEADERS(speex/speex.h,[AC_CHECK_LIB(speex,speex_encode_int,speex_found=yes,speex_found=no)
+ ],speex_found=no)
+ 
+ if test "$speex_found" = "no" ; then
+@@ -135,7 +135,7 @@
+         CPPFLAGS=$ILBC_CFLAGS
+         LDFLAGS_save=$LDFLAGS
+         LDFLAGS=$ILBC_LIBS
+-        AC_CHECK_HEADERS(iLBC_decode.h,[AC_CHECK_LIB(ilbc,iLBC_decode,ilbc_found=yes,ilbc_found=no)
++        AC_CHECK_HEADERS(ilbc/iLBC_decode.h,[AC_CHECK_LIB(ilbc,iLBC_decode,ilbc_found=yes,ilbc_found=no)
+         ],ilbc_found=no)
+ 
+         CPPFLAGS=$CPPFLAGS_save
+diff -ur libjingle-0.3.9.orig/talk/base/xmpppassword.h libjingle-0.3.9/talk/base/xmpppassword.h
+--- libjingle-0.3.9.orig/talk/base/xmpppassword.h	2006-06-10 00:09:51.000000000 +0200
++++ libjingle-0.3.9/talk/base/xmpppassword.h	2006-06-10 00:08:19.000000000 +0200
+@@ -30,6 +30,7 @@
+ 
+ #include "talk/base/linked_ptr.h"
+ #include "talk/base/scoped_ptr.h"
++#include <string>
+ 
+ namespace buzz {
+ 
+diff -ur libjingle-0.3.9.orig/talk/examples/call/Makefile.am libjingle-0.3.9/talk/examples/call/Makefile.am
+--- libjingle-0.3.9.orig/talk/examples/call/Makefile.am	2006-06-10 00:09:51.000000000 +0200
++++ libjingle-0.3.9/talk/examples/call/Makefile.am	2006-06-10 00:08:19.000000000 +0200
+@@ -5,11 +5,11 @@
+ noinst_HEADERS = callclient.h  console.h  presenceouttask.h  presencepushtask.h  status.h
+ call_LDADD =  \
+ 	       $(top_srcdir)/talk/examples/login/libcricketexampleslogin.la \
+-	       $(top_srcdir)/talk/session/phone/libjinglesessionphone.la \
+-	       $(top_srcdir)/talk/p2p/client/libjinglep2pclient.la \
+-	       $(top_srcdir)/talk/p2p/base/libjinglep2pbase.la \
+-	       $(top_srcdir)/talk/xmpp/libjinglexmpp.la \
+-	       $(top_srcdir)/talk/xmllite/libjinglexmllite.la \
+-	       $(top_srcdir)/talk/base/libjinglebase.la \
++	       $(top_srcdir)/talk/session/phone/libjinglesessionphone-0.3.la \
++	       $(top_srcdir)/talk/p2p/client/libjinglep2pclient-0.3.la \
++	       $(top_srcdir)/talk/p2p/base/libjinglep2pbase-0.3.la \
++	       $(top_srcdir)/talk/xmpp/libjinglexmpp-0.3.la \
++	       $(top_srcdir)/talk/xmllite/libjinglexmllite-0.3.la \
++	       $(top_srcdir)/talk/base/libjinglebase-0.3.la \
+ 	       $(EXPAT_LIBS) $(ORTP_LIBS) -lpthread $(ILBC_LIBS) $(SPEEX_LIBS) $(GLIB_LIBS) $(MEDIA_LIBS) 
+ AM_CPPFLAGS  = -DPOSIX
+diff -ur libjingle-0.3.9.orig/talk/examples/login/Makefile.am libjingle-0.3.9/talk/examples/login/Makefile.am
+--- libjingle-0.3.9.orig/talk/examples/login/Makefile.am	2006-06-10 00:09:51.000000000 +0200
++++ libjingle-0.3.9/talk/examples/login/Makefile.am	2006-06-10 00:08:19.000000000 +0200
+@@ -7,8 +7,8 @@
+ bin_PROGRAMS = login
+ login_CXXFLAGS = $(AM_CXXFLAGS)
+ login_SOURCES = login_main.cc xmppsocket.cc xmppthread.cc xmpppump.cc xmppauth.cc
+-login_LDADD =  $(top_srcdir)/talk/xmpp/libjinglexmpp.la \
+-	       $(top_srcdir)/talk/xmllite/libjinglexmllite.la \
+-	       $(top_srcdir)/talk/base/libjinglebase.la \
++login_LDADD =  $(top_srcdir)/talk/xmpp/libjinglexmpp-0.3.la \
++	       $(top_srcdir)/talk/xmllite/libjinglexmllite-0.3.la \
++	       $(top_srcdir)/talk/base/libjinglebase-0.3.la \
+ 	       $(EXPAT_LIBS) -lpthread
+ AM_CPPFLAGS  = -DPOSIX
+diff -ur libjingle-0.3.9.orig/talk/examples/pcp/Makefile.am libjingle-0.3.9/talk/examples/pcp/Makefile.am
+--- libjingle-0.3.9.orig/talk/examples/pcp/Makefile.am	2006-06-10 00:09:51.000000000 +0200
++++ libjingle-0.3.9/talk/examples/pcp/Makefile.am	2006-06-10 00:08:19.000000000 +0200
+@@ -2,12 +2,12 @@
+ pcp_CXXFLAGS = $(AM_CXXFLAGS)
+ pcp_SOURCES = pcp_main.cc
+ pcp_LDADD = $(top_srcdir)/talk/examples/login/libcricketexampleslogin.la \
+-             $(top_srcdir)/talk/session/tunnel/libjinglesessiontunnel.la \
+-             $(top_srcdir)/talk/p2p/client/libjinglep2pclient.la \
+-             $(top_srcdir)/talk/p2p/base/libjinglep2pbase.la \
+-             $(top_srcdir)/talk/xmpp/libjinglexmpp.la \
+-             $(top_srcdir)/talk/xmllite/libjinglexmllite.la \
+-             $(top_srcdir)/talk/base/libjinglebase.la \
++             $(top_srcdir)/talk/session/tunnel/libjinglesessiontunnel-0.3.la \
++             $(top_srcdir)/talk/p2p/client/libjinglep2pclient-0.3.la \
++             $(top_srcdir)/talk/p2p/base/libjinglep2pbase-0.3.la \
++             $(top_srcdir)/talk/xmpp/libjinglexmpp-0.3.la \
++             $(top_srcdir)/talk/xmllite/libjinglexmllite-0.3.la \
++             $(top_srcdir)/talk/base/libjinglebase-0.3.la \
+              $(EXPAT_LIBS) -lpthread
+ AM_CPPFLAGS = -DPOSIX
+ EXTRA_DIST = pcp.vcproj
+diff -ur libjingle-0.3.9.orig/talk/third_party/mediastreamer/Makefile.am libjingle-0.3.9/talk/third_party/mediastreamer/Makefile.am
+--- libjingle-0.3.9.orig/talk/third_party/mediastreamer/Makefile.am	2006-06-10 00:09:51.000000000 +0200
++++ libjingle-0.3.9/talk/third_party/mediastreamer/Makefile.am	2006-06-10 00:08:19.000000000 +0200
+@@ -84,7 +84,7 @@
+ 			      sndcard.h
+ 
+ 
+-libmediastreamer_la_LIBADD= $(GLIB_LIBS) $(ORTP_LIBS)
++libmediastreamer_la_LIBADD= $(GLIB_LIBS) $(ORTP_LIBS) $(SPEEX_CFLAGS)
+ 
+ AM_CFLAGS=$(GLIB_CFLAGS) -DG_LOG_DOMAIN=\"MediaStreamer\" $(ORTP_CFLAGS) $(IPV6_CFLAGS) $(ILBC_CFLAGS) $(SPEEX_CFLAGS)
+ 
+diff -ur libjingle-0.3.9.orig/talk/third_party/mediastreamer/msilbcdec.h libjingle-0.3.9/talk/third_party/mediastreamer/msilbcdec.h
+--- libjingle-0.3.9.orig/talk/third_party/mediastreamer/msilbcdec.h	2006-06-10 00:09:51.000000000 +0200
++++ libjingle-0.3.9/talk/third_party/mediastreamer/msilbcdec.h	2006-06-10 00:08:18.000000000 +0200
+@@ -24,7 +24,7 @@
+ 
+ #include <msfilter.h>
+ #include <mscodec.h>
+-#include <iLBC_decode.h>
++#include <ilbc/iLBC_decode.h>
+ 
+ /*this is the class that implements a ILBCdecoder filter*/
+ 
+diff -ur libjingle-0.3.9.orig/talk/third_party/mediastreamer/msilbcenc.h libjingle-0.3.9/talk/third_party/mediastreamer/msilbcenc.h
+--- libjingle-0.3.9.orig/talk/third_party/mediastreamer/msilbcenc.h	2006-06-10 00:09:51.000000000 +0200
++++ libjingle-0.3.9/talk/third_party/mediastreamer/msilbcenc.h	2006-06-10 00:08:19.000000000 +0200
+@@ -23,7 +23,7 @@
+ #define MSILBCENCODER_H
+ 
+ #include "mscodec.h"
+-#include <iLBC_encode.h>
++#include <ilbc/iLBC_encode.h>
+ 
+ #define ILBC_BITS_IN_COMPRESSED_FRAME 400
+ 
+diff -ur libjingle-0.3.9.orig/talk/third_party/mediastreamer/msspeexdec.h libjingle-0.3.9/talk/third_party/mediastreamer/msspeexdec.h
+--- libjingle-0.3.9.orig/talk/third_party/mediastreamer/msspeexdec.h	2006-06-10 00:09:51.000000000 +0200
++++ libjingle-0.3.9/talk/third_party/mediastreamer/msspeexdec.h	2006-06-10 00:10:29.000000000 +0200
+@@ -23,7 +23,7 @@
+ #define MSSPEEXDEC_H
+ 
+ #include <mscodec.h>
+-#include <speex.h>
++#include <speex/speex.h>
+ 
+ struct _MSSpeexDec
+ {
+diff -ur libjingle-0.3.9.orig/talk/third_party/mediastreamer/msspeexenc.h libjingle-0.3.9/talk/third_party/mediastreamer/msspeexenc.h
+--- libjingle-0.3.9.orig/talk/third_party/mediastreamer/msspeexenc.h	2006-06-10 00:09:51.000000000 +0200
++++ libjingle-0.3.9/talk/third_party/mediastreamer/msspeexenc.h	2006-06-10 00:10:45.000000000 +0200
+@@ -23,7 +23,7 @@
+ #define MSSPEEXENC_H
+ 
+ #include <mscodec.h>
+-#include <speex.h>
++#include <speex/speex.h>
+ 
+ struct _MSSpeexEnc
+ {
