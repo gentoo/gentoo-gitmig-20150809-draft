@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/mon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/ChangeLog,v 1.21 2006/06/09 12:47:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/ChangeLog,v 1.22 2006/06/09 12:50:16 mcummings Exp $
+
+  09 Jun 2006; Michael Cummings <mcummings@gentoo.org> mon-0.99.2-r3.ebuild:
+  One more pass, this time with valid use flags.
 
   09 Jun 2006; Michael Cummings <mcummings@gentoo.org> mon-0.99.2-r3.ebuild:
   Bug 135900, missing IUSE - thanks jakub :)
