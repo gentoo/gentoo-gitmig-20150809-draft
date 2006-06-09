@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.551 2006/06/04 01:31:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.552 2006/06/09 05:18:15 kumba Exp $
+
+  09 Jun 2006; Joshua Kinard <kumba@gentoo.org> gcc-4.1.0-r1.ebuild,
+  gcc-4.1.1.ebuild:
+  Updated the patchball to include a corrected version of the IP28 R10000
+  cache barriers patch. Gcc was mistaking a call to a function in the patch as
+  the ptototype, and later mistaking the actual prototype as the function
+  call.
 
 *gcc-4.2.0_alpha20060603 (04 Jun 2006)
 
