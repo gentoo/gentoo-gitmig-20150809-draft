@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.19 2006/03/27 06:43:05 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.20 2006/06/09 10:59:48 ticho Exp $
+
+  09 Jun 2006; Andrej Kacian <ticho@gentoo.org> gmpc-0.13.0.ebuild:
+  Added gnome USE flag to IUSE. Closes bug #135982, by Jakub Moc <jakub at
+  gentoo.org>.
 
   27 Mar 2006; <ticho@gentoo.org> -gmpc-0.11.1.ebuild, -gmpc-0.11.2.ebuild,
   gmpc-0.12.0-r1.ebuild:
