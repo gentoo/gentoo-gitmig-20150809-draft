@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5487 2006/06/09 15:11:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5488 2006/06/09 20:59:49 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Michael Sterrett <mr_bones_@gentoo.org> (09 Jun 2006)
+# masked pending unresolved security bug #136222
+games-action/0verkill
 
 # Joseph Jezak <josejx@gentoo.org> (05 Jun 2006)
 # The softmac stack is in 2.6.17, the ebuilds are obsolete
