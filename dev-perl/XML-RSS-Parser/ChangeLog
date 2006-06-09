@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-RSS-Parser
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Parser/ChangeLog,v 1.3 2006/03/30 23:44:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Parser/ChangeLog,v 1.4 2006/06/09 16:00:24 squinky86 Exp $
+
+  09 Jun 2006; Jon Hood <squinky86@gentoo.org> XML-RSS-Parser-4.0.ebuild:
+  Add ~amd64 in preparation of bug #91091.
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> XML-RSS-Parser-4.0.ebuild:
   Mark 4.0 ~ia64
