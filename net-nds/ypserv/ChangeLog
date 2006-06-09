@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.32 2006/04/10 20:00:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.33 2006/06/09 06:44:31 eradicator Exp $
+
+  09 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org> ypserv-2.19.ebuild:
+  Stable amd64, ppc64, sparc.
 
   10 Apr 2006; Jeremy Huddleston <eradicator@gentoo.org> files/ypserv,
   -ypserv-2.13-r1.ebuild:
