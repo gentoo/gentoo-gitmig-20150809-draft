@@ -93,10 +93,10 @@ AUX openssh-4.3_p2-selinux.patch.glue 1057 RMD160 3bd4e77ceffafaa88505641393210f
 MD5 b1a753373208c815d11a7dabd7f7b45d files/openssh-4.3_p2-selinux.patch.glue 1057
 RMD160 3bd4e77ceffafaa88505641393210f5366575c7e files/openssh-4.3_p2-selinux.patch.glue 1057
 SHA256 174524b2c5168bd4c3724753c359152c22148587ddbd59198262755fcc1d1c71 files/openssh-4.3_p2-selinux.patch.glue 1057
-AUX openssh-4.3_p2-x509-hpn-glue.patch 1090 RMD160 a514ce75950a19b0e3b86b2e5a372442e9f20b6f SHA1 28adcf69a550ce61e5b066fa9077aa2f0a85b060 SHA256 eaf2555076893645c3ea9c5a70e2f80aa1c59dd23ce48f4080e3ac0fd1741a93
-MD5 4cc66bcc75744747914a227352a6bd29 files/openssh-4.3_p2-x509-hpn-glue.patch 1090
-RMD160 a514ce75950a19b0e3b86b2e5a372442e9f20b6f files/openssh-4.3_p2-x509-hpn-glue.patch 1090
-SHA256 eaf2555076893645c3ea9c5a70e2f80aa1c59dd23ce48f4080e3ac0fd1741a93 files/openssh-4.3_p2-x509-hpn-glue.patch 1090
+AUX openssh-4.3_p2-x509-hpn-glue.patch 1137 RMD160 97e52373a1513cd0befb54dfe71fc2750015ca16 SHA1 398901d805976087ded173fa818f530eb3896a13 SHA256 0a240dd6a689f76bb3812294b47c201677747470200627dc15f88b020e493344
+MD5 321fae6531f66e344a2271b909e958ee files/openssh-4.3_p2-x509-hpn-glue.patch 1137
+RMD160 97e52373a1513cd0befb54dfe71fc2750015ca16 files/openssh-4.3_p2-x509-hpn-glue.patch 1137
+SHA256 0a240dd6a689f76bb3812294b47c201677747470200627dc15f88b020e493344 files/openssh-4.3_p2-x509-hpn-glue.patch 1137
 AUX openssh-securid-1.3.1-updates.patch 445 RMD160 b1db3dfa75f7e03d0dff41e85e285f8b749f27f0 SHA1 757a8b0c1586fdcbff0762b39a52f1b315d4b110 SHA256 11c95cc508d20c8eb1e8faa0d2b5e68346cbb93db8fb560cfa8b4d2c0d1104b3
 MD5 eca7ba0b23754a710b42a79c1fb5e248 files/openssh-securid-1.3.1-updates.patch 445
 RMD160 b1db3dfa75f7e03d0dff41e85e285f8b749f27f0 files/openssh-securid-1.3.1-updates.patch 445
@@ -204,7 +204,7 @@ SHA256 73e81f8ca9f772d6ffe2cbefd8c838942124416f199c3533844263f1aff80e1d files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEiAm22+ySkm8kpY0RAiR3AJ9l0pb7AdBR9FzmphDew6ZpFLz5twCfeYrv
-fnuhdmxTeR1KtA0wkWyuvuE=
-=Vkp5
+iD8DBQFEiQOq2+ySkm8kpY0RAkeoAJsFVrqOj6G83j2fUnk7bvWmSQkyngCdHFzX
+qsZOzlFvgvpFotABcYNodEc=
+=2iod
 -----END PGP SIGNATURE-----
