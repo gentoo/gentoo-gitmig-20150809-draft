@@ -1,6 +1,20 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.60 2006/06/07 09:24:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.61 2006/06/09 20:01:40 griffon26 Exp $
+
+  09 Jun 2006; Maurice van der Pot <griffon26@gentoo.org>
+  -files/valgrind-2.2.0-current-macro-clash.patch,
+  -files/valgrind-2.2.0-no-exec-stack.patch,
+  -files/valgrind-2.4.0-pie-fix.patch,
+  -files/valgrind-2.4.1-dont-trample-cflags.patch,
+  -files/valgrind-2.4.1-static-const.patch,
+  -files/valgrind-3.0.0-pie-fix.patch, -files/valgrind-3.0.1-mfence.patch,
+  -files/valgrind-3.0.1-pic-fix.patch, -valgrind-2.2.0-r2.ebuild,
+  -valgrind-2.4.0.ebuild, -valgrind-2.4.1.ebuild, -valgrind-3.0.0.ebuild,
+  -valgrind-3.0.1.ebuild, -valgrind-3.0.1-r1.ebuild, -valgrind-3.1.0.ebuild,
+  valgrind-3.1.1.ebuild:
+  Removed a bunch of old ebuilds and fixed bug #131987 reported by Marti 
+  Raudsepp <marti@juffo.org> in valgrind-3.1.1.
 
 *valgrind-3.2.0 (07 Jun 2006)
 

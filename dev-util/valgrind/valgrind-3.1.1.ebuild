@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.1.1.ebuild,v 1.2 2006/04/11 04:56:06 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.1.1.ebuild,v 1.3 2006/06/09 20:01:40 griffon26 Exp $
 
-inherit eutils flag-o-matic
+inherit autotools eutils flag-o-matic
 
 DESCRIPTION="An open-source memory debugger for GNU/Linux"
 HOMEPAGE="http://www.valgrind.org"
@@ -31,9 +31,8 @@ src_unpack() {
 	# Correct hard coded doc location
 	sed -i -e "s:doc/valgrind/:doc/${P}/:" docs/Makefile.am
 
-	einfo "Regenerating autotools files..."
-	autoconf || die "autoconf failed"
-	automake || die "automake failed"
+	# Regenerate autotools files
+	eautoreconf
 
 	# fix for amd64 no-multilib profile till valgrind 3.2.0 is out (bug #114407)
 	use amd64 && (has_multilib_profile || epatch "${FILESDIR}/valgrind-3.1.0-amd64-nomultilib-fix.patch")
