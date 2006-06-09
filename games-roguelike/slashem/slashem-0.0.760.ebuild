@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.760.ebuild,v 1.5 2005/07/09 23:04:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.760.ebuild,v 1.6 2006/06/09 01:23:15 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -27,6 +27,7 @@ RDEPEND=">=sys-libs/ncurses-5.2-r5
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl )"
 DEPEND="${RDEPEND}
+	sys-devel/bc
 	dev-util/yacc"
 
 HACKDIR=${GAMES_STATEDIR}/${PN}
