@@ -1,6 +1,14 @@
 # ChangeLog for games-strategy/boson
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.18 2006/06/03 15:29:40 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.19 2006/06/09 01:55:51 wolf31o2 Exp $
+
+*boson-0.12 (09 Jun 2006)
+
+  09 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/boson-0.11-openal.patch, +files/boson-0.12-gcc41.patch,
+  +boson-0.12.ebuild:
+  Version bump. Thanks to Tristan Heaven <tristanheaven@gmail.com> for the
+  updated ebuild. Closing bug #134701.
 
   03 Jun 2006; <Tupone@gentoo.org> boson-0.11.ebuild:
   Dependency on arts is optional, bug #134241 by Andrei Slavoiu

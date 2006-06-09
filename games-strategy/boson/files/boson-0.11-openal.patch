@@ -1,0 +1,23 @@
+--- bosound/openal/bosonaudioal.h
++++ bosound/openal/bosonaudioal.h
+@@ -21,7 +21,7 @@
+ 
+ #include "../bosonaudio.h"
+ 
+-#include <AL/altypes.h>
++#include <AL/al.h>
+ 
+ class QString;
+ class BosonMusic;
+
+--- bosound/openal/bosonsound.h
++++ bosound/openal/bosonsound.h
+@@ -24,7 +24,7 @@
+ #include <qptrlist.h>
+ #include <qmap.h>
+ 
+-#include <AL/altypes.h>
++#include <AL/al.h>
+ 
+ class BoPlayObject;
+ class BosonAudioAL;
