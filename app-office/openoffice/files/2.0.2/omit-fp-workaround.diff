@@ -1,0 +1,121 @@
+diff -Nur bridges.orig/source/cpp_uno/gcc3_freebsd_intel/makefile.mk bridges/source/cpp_uno/gcc3_freebsd_intel/makefile.mk
+--- bridges.orig/source/cpp_uno/gcc3_freebsd_intel/makefile.mk	2005-09-08 00:20:36.000000000 +0200
++++ bridges/source/cpp_uno/gcc3_freebsd_intel/makefile.mk	2006-04-27 16:15:35.000000000 +0200
+@@ -55,6 +55,7 @@
+ CFLAGS += -DLEAK_STATIC_DATA
+ .ENDIF
+ 
++CFLAGSEXCEPTIONS += -mno-omit-leaf-frame-pointer -fno-omit-frame-pointer
+ CFLAGSNOOPT=-O0
+ 
+ SLOFILES= \
+diff -Nur bridges.orig/source/cpp_uno/gcc3_linux_intel/makefile.mk bridges/source/cpp_uno/gcc3_linux_intel/makefile.mk
+--- bridges.orig/source/cpp_uno/gcc3_linux_intel/makefile.mk	2005-09-08 00:21:49.000000000 +0200
++++ bridges/source/cpp_uno/gcc3_linux_intel/makefile.mk	2006-04-27 16:15:35.000000000 +0200
+@@ -55,6 +55,7 @@
+ CFLAGS += -DLEAK_STATIC_DATA
+ .ENDIF
+ 
++CFLAGSEXCEPTIONS += -mno-omit-leaf-frame-pointer -fno-omit-frame-pointer
+ CFLAGSNOOPT=-O0
+ 
+ SLOFILES= \
+diff -Nur bridges.orig/source/cpp_uno/gcc3_linux_powerpc/makefile.mk bridges/source/cpp_uno/gcc3_linux_powerpc/makefile.mk
+--- bridges.orig/source/cpp_uno/gcc3_linux_powerpc/makefile.mk	2005-09-08 00:23:04.000000000 +0200
++++ bridges/source/cpp_uno/gcc3_linux_powerpc/makefile.mk	2006-04-27 16:15:35.000000000 +0200
+@@ -59,6 +59,7 @@
+ 	$(SLO)$/uno2cpp.obj
+ 
+ 
++CFLAGSEXCEPTIONS += -fno-omit-frame-pointer
+ CFLAGSNOOPT=-O0
+ 
+ SLOFILES= \
+diff -Nur bridges.orig/source/cpp_uno/gcc3_linux_s390/makefile.mk bridges/source/cpp_uno/gcc3_linux_s390/makefile.mk
+--- bridges.orig/source/cpp_uno/gcc3_linux_s390/makefile.mk	2005-09-08 00:24:22.000000000 +0200
++++ bridges/source/cpp_uno/gcc3_linux_s390/makefile.mk	2006-04-27 16:15:35.000000000 +0200
+@@ -55,6 +55,7 @@
+ CFLAGS += -DLEAK_STATIC_DATA
+ .ENDIF
+ 
++CFLAGSEXCEPTIONS += -mno-omit-leaf-frame-pointer -fno-omit-frame-pointer
+ CFLAGSNOOPT=-O0
+ 
+ SLOFILES= \
+diff -Nur bridges.orig/source/cpp_uno/gcc3_linux_sparc/makefile.mk bridges/source/cpp_uno/gcc3_linux_sparc/makefile.mk
+--- bridges.orig/source/cpp_uno/gcc3_linux_sparc/makefile.mk	2005-09-08 00:25:31.000000000 +0200
++++ bridges/source/cpp_uno/gcc3_linux_sparc/makefile.mk	2006-04-27 16:15:35.000000000 +0200
+@@ -54,6 +54,7 @@
+ CFLAGS += -DLEAK_STATIC_DATA
+ .ENDIF
+ 
++CFLAGSEXCEPTIONS += -mno-omit-leaf-frame-pointer -fno-omit-frame-pointer
+ CFLAGSNOOPT=-O0
+ 
+ NOOPTFILES = \
+diff -Nur bridges.orig/source/cpp_uno/gcc3_linux_x86-64/makefile.mk bridges/source/cpp_uno/gcc3_linux_x86-64/makefile.mk
+--- bridges.orig/source/cpp_uno/gcc3_linux_x86-64/makefile.mk	2006-03-08 09:50:54.000000000 +0100
++++ bridges/source/cpp_uno/gcc3_linux_x86-64/makefile.mk	2006-04-27 16:15:35.000000000 +0200
+@@ -59,6 +59,7 @@
+ 	$(SLO)$/uno2cpp.obj
+ 
+ 
++CFLAGSEXCEPTIONS += -mno-omit-leaf-frame-pointer -fno-omit-frame-pointer
+ CFLAGSNOOPT=-O0
+ 
+ SLOFILES= \
+diff -Nur bridges.orig/source/cpp_uno/gcc3_macosx_intel/makefile.mk bridges/source/cpp_uno/gcc3_macosx_intel/makefile.mk
+--- bridges.orig/source/cpp_uno/gcc3_macosx_intel/makefile.mk	2006-02-03 18:35:29.000000000 +0100
++++ bridges/source/cpp_uno/gcc3_macosx_intel/makefile.mk	2006-04-27 16:15:35.000000000 +0200
+@@ -55,6 +55,7 @@
+ CFLAGS += -DLEAK_STATIC_DATA
+ .ENDIF
+ 
++CFLAGSEXCEPTIONS += -mno-omit-leaf-frame-pointer -fno-omit-frame-pointer
+ CFLAGSNOOPT=-O0
+ 
+ SLOFILES= \
+diff -Nur bridges.orig/source/cpp_uno/gcc3_macosx_powerpc/makefile.mk bridges/source/cpp_uno/gcc3_macosx_powerpc/makefile.mk
+--- bridges.orig/source/cpp_uno/gcc3_macosx_powerpc/makefile.mk	2006-04-06 13:52:41.000000000 +0200
++++ bridges/source/cpp_uno/gcc3_macosx_powerpc/makefile.mk	2006-04-27 16:15:35.000000000 +0200
+@@ -59,6 +59,7 @@
+ 	$(SLO)$/uno2cpp.obj
+ 
+ 
++CFLAGSEXCEPTIONS += -mno-omit-leaf-frame-pointer -fno-omit-frame-pointer
+ CFLAGSNOOPT=-O0
+ 
+ SLOFILES= \
+diff -Nur bridges.orig/source/cpp_uno/gcc3_netbsd_intel/makefile.mk bridges/source/cpp_uno/gcc3_netbsd_intel/makefile.mk
+--- bridges.orig/source/cpp_uno/gcc3_netbsd_intel/makefile.mk	2005-09-08 00:29:20.000000000 +0200
++++ bridges/source/cpp_uno/gcc3_netbsd_intel/makefile.mk	2006-04-27 16:15:35.000000000 +0200
+@@ -55,6 +55,7 @@
+ CFLAGS += -DLEAK_STATIC_DATA
+ .ENDIF
+ 
++CFLAGSEXCEPTIONS += -mno-omit-leaf-frame-pointer -fno-omit-frame-pointer
+ CFLAGSNOOPT=-O0
+ 
+ SLOFILES= \
+diff -Nur bridges.orig/source/cpp_uno/gcc3_solaris_intel/makefile.mk bridges/source/cpp_uno/gcc3_solaris_intel/makefile.mk
+--- bridges.orig/source/cpp_uno/gcc3_solaris_intel/makefile.mk	2005-09-08 00:30:32.000000000 +0200
++++ bridges/source/cpp_uno/gcc3_solaris_intel/makefile.mk	2006-04-27 16:15:35.000000000 +0200
+@@ -55,6 +55,7 @@
+ CFLAGS += -DLEAK_STATIC_DATA
+ .ENDIF
+ 
++CFLAGSEXCEPTIONS += -mno-omit-leaf-frame-pointer -fno-omit-frame-pointer
+ CFLAGSNOOPT=-O0
+ 
+ SLOFILES= \
+diff -Nur bridges.orig/source/cpp_uno/gcc3_solaris_sparc/makefile.mk bridges/source/cpp_uno/gcc3_solaris_sparc/makefile.mk
+--- bridges.orig/source/cpp_uno/gcc3_solaris_sparc/makefile.mk	2005-09-08 00:31:42.000000000 +0200
++++ bridges/source/cpp_uno/gcc3_solaris_sparc/makefile.mk	2006-04-27 16:15:35.000000000 +0200
+@@ -54,6 +54,7 @@
+ CFLAGS += -DLEAK_STATIC_DATA
+ .ENDIF
+ 
++CFLAGSEXCEPTIONS += -mno-omit-leaf-frame-pointer -fno-omit-frame-pointer
+ CFLAGSNOOPT=-O0
+ 
+ NOOPTFILES = \

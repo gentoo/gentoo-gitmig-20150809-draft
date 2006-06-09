@@ -60,3 +60,23 @@
  +CFLAGS+=-DHAS_ATKRECTANGLE
  +.ENDIF
  +
+--- patches/src680/apply
++++ patches/src680/apply
+@@ -1005,8 +1005,6 @@
+ gcj-encoding-utf8.diff
+ # enable/disable hunspell
+ gentoo-hunspell.diff
+-# build with -fomit-frame-pointer
+-omit-fp-workaround.diff
+ # more system db >= 4.3
+ system-db-4.3-use-lpthread.diff
+ # iz#58474 - build this part with db 4.2/4.3/4.4
+@@ -1033,6 +1031,8 @@
+ gentoo-xmlsecurity-system-nss.diff
+ # hack: drop gcc libs
+ store-drop-gcc-libs-on-linking.diff
++# build with -fomit-frame-pointer
++omit-fp-workaround.diff
+ 
+ #
+ # NOTE: 64 bit OOo is work in progress!

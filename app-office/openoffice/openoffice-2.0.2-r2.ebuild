@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r2.ebuild,v 1.11 2006/06/06 13:28:52 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r2.ebuild,v 1.12 2006/06/09 06:39:13 suka Exp $
 
 inherit check-reqs eutils fdo-mime flag-o-matic java-pkg kde-functions mono toolchain-funcs
 
@@ -154,6 +154,7 @@ src_unpack() {
 
 	#Some fixes for our patchset
 	cd ${S}
+	cp -vf ${FILESDIR}/${PV}/omit-fp-workaround.diff ${S}/patches/src680
 	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
 
 	#Use flag checks
@@ -189,7 +190,6 @@ src_compile() {
 
 	# Compile problems with these ...
 	filter-flags "-funroll-loops"
-	filter-flags "-fomit-frame-pointer"
 	filter-flags "-fprefetch-loop-arrays"
 	filter-flags "-fno-default-inline"
 	filter-flags "-fstack-protector"
@@ -199,8 +199,10 @@ src_compile() {
 	replace-flags "-Os" "-O2"
 	replace-flags "-O1" "-O2"
 
+	use ppc && append-flags "-D_STLP_STRICT_ANSI"
+
 	# Now for our optimization flags ...
-	export ARCH_FLAGS="${CFLAGS}"
+	export ARCH_FLAGS="${CXXFLAGS}"
 
 	# Make sure gnome-users get gtk-support
 	export GTKFLAG="`use_enable gtk`" && use gnome && GTKFLAG="--enable-gtk"
