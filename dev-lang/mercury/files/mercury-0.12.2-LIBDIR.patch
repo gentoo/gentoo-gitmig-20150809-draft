@@ -1,0 +1,55 @@
+--- mercury-compiler-0.12.2.orig/configure	2006-01-25 17:24:01.000000000 +1300
++++ mercury-compiler-0.12.2/configure	2006-06-06 20:57:45.000000000 +1200
+@@ -1599,7 +1599,7 @@
+ 
+ 
+ PREFIX="`$CYGPATH $PREFIX`"
+-LIBDIR="`$CYGPATH $PREFIX/lib/mercury`"
++LIBDIR="`$CYGPATH $PREFIX/lib/mercury-$PACKAGE_VERSION`"
+ NONSHARED_LIB_DIR=${MERCURY_NONSHARED_LIB_DIR=$PREFIX/lib/nonshared}
+ 
+ 
+--- mercury-compiler-0.12.2.orig/scripts/Mmake.vars.in	2005-08-17 03:57:40.000000000 +1200
++++ mercury-compiler-0.12.2/scripts/Mmake.vars.in	2006-06-06 20:04:46.000000000 +1200
+@@ -716,18 +716,18 @@
+ INSTALL_PREFIX		= @prefix@
+ FINAL_INSTALL_PREFIX	= @prefix@
+ INSTALL_BINDIR		= $(INSTALL_PREFIX)/bin
+-INSTALL_LIBDIR		= $(INSTALL_PREFIX)/lib/mercury
+-FINAL_INSTALL_LIBDIR	= $(FINAL_INSTALL_PREFIX)/lib/mercury
+-INSTALL_JAVA_LIBRARY_DIR= $(INSTALL_PREFIX)/lib/mercury/lib/java
++INSTALL_LIBDIR		= $(INSTALL_PREFIX)/lib/mercury-@PACKAGE_VERSION@
++FINAL_INSTALL_LIBDIR	= $(FINAL_INSTALL_PREFIX)/lib/mercury-@PACKAGE_VERSION@
++INSTALL_JAVA_LIBRARY_DIR= $(INSTALL_LIBDIR)/lib/java
+ INSTALL_INFO_DIR	= $(INSTALL_PREFIX)/info
+-INSTALL_DVI_DIR		= $(INSTALL_PREFIX)/lib/mercury/doc
+-INSTALL_TEXT_DIR	= $(INSTALL_PREFIX)/lib/mercury/doc
+-INSTALL_PS_DIR		= $(INSTALL_PREFIX)/lib/mercury/doc
+-INSTALL_PDF_DIR		= $(INSTALL_PREFIX)/lib/mercury/doc
++INSTALL_DVI_DIR		= $(INSTALL_LIBDIR)/doc
++INSTALL_TEXT_DIR	= $(INSTALL_LIBDIR)/doc
++INSTALL_PS_DIR		= $(INSTALL_LIBDIR)/doc
++INSTALL_PDF_DIR		= $(INSTALL_LIBDIR)/doc
+ INSTALL_MAN_DIR		= $(INSTALL_PREFIX)/man
+-INSTALL_HTML_DIR	= $(INSTALL_PREFIX)/lib/mercury/html
+-INSTALL_MDB_DOC_DIR	= $(INSTALL_PREFIX)/lib/mercury/mdb
+-INSTALL_ELISP_DIR	= $(INSTALL_PREFIX)/lib/mercury/elisp
++INSTALL_HTML_DIR	= $(INSTALL_LIBDIR)/html
++INSTALL_MDB_DOC_DIR	= $(INSTALL_LIBDIR)/mdb
++INSTALL_ELISP_DIR	= $(INSTALL_LIBDIR)/elisp
+ INSTALL_CGI_DIR		= @CGIDIR@
+ 
+ # You should not need to override anything below here
+--- mercury-compiler-0.12.2.orig/scripts/mercury_config.in	2005-09-11 01:47:49.000000000 +1200
++++ mercury-compiler-0.12.2/scripts/mercury_config.in	2006-06-07 18:55:12.000000000 +1200
+@@ -90,8 +90,8 @@
+ 	shift
+ done
+ 
+-input_libdir="$input_prefix/lib/mercury"
+-output_libdir="$output_prefix/lib/mercury"
++input_libdir="$input_prefix/lib/mercury-@PACKAGE_VERSION@"
++output_libdir="$output_prefix/lib/mercury-@PACKAGE_VERSION@"
+ 
+ # mercury_config regenerates itself, so we can't just execute it in place.
+ case $recursive in

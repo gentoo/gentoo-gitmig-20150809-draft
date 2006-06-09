@@ -42,3 +42,14 @@
  
  .PHONY: install_main
  install_main: all \
+--- mercury-compiler-0.12.2.orig/configure	2006-01-25 17:24:01.000000000 +1300
++++ mercury-compiler-0.12.2/configure	2006-06-08 19:31:53.000000000 +1200
+@@ -8861,7 +8861,7 @@
+ # Check whether --enable-debug-grades or --disable-debug-grades was given.
+ if test "${enable_debug_grades+set}" = set; then
+   enableval="$enable_debug_grades"
+-  enable_debug_grades="enableval"
++  enable_debug_grades="$enableval"
+ else
+   enable_debug_grades=yes
+ fi;
