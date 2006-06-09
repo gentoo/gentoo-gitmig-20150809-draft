@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.2.53.ebuild,v 1.3 2006/05/14 21:46:06 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.2.53.ebuild,v 1.4 2006/06/09 20:15:28 exg Exp $
 
 inherit eutils autotools
 
@@ -39,7 +39,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	if ! use userland_Darwin && ( use static || use build ); then
+	if use static || use build; then
 		myconf="${myconf} --enable-static-bsdtar"
 	else
 		myconf="${myconf} --disable-static-bsdtar"

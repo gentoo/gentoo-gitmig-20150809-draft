@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bsdtar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.28 2006/05/14 22:01:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.29 2006/06/09 20:15:28 exg Exp $
+
+  09 Jun 2006; Emanuele Giaquinta <exg@gentoo.org> bsdtar-1.2.53.ebuild:
+  Simplify test for static, no need to special case darwin.
 
   14 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/bsdtar-1.02.027-osx.patch, -bsdtar-1.02.027-r1.ebuild,
