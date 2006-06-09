@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.0_beta20060601.ebuild,v 1.1 2006/06/04 06:58:12 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.0_beta20060601.ebuild,v 1.2 2006/06/09 09:25:01 keri Exp $
 
 inherit eutils versionator
 
@@ -19,7 +19,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
 
-IUSE="minimal readline"
+IUSE="debug minimal readline"
 
 DEPEND="readline? ( sys-libs/readline )"
 
@@ -31,14 +31,17 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-portage.patch
 	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-CFLAGS.patch
+	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-LIBDIR.patch
 	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-docs.patch
 }
 
 src_compile() {
 	econf \
 		--disable-dotnet-grades \
+		$(use_enable debug debug-grades) \
 		$(use_enable !minimal most-grades) \
 		$(use_with readline) \
+		PACKAGE_VERSION=${PV} \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
