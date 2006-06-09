@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.339 2006/06/05 22:07:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.340 2006/06/09 01:02:18 flameeyes Exp $
+
+*kdelibs-3.5.3-r1 (09 Jun 2006)
+
+  09 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +kdelibs-3.5.3-r1.ebuild:
+  Add new revision of kdelibs without utempter dependency, disabling utempter
+  entirely as kdelibs has its own better code to handle that.
 
   05 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> kdelibs-3.5.3.ebuild:
   Apply all the KUbuntu patches for cups 1.2 but the first. Note to self:
