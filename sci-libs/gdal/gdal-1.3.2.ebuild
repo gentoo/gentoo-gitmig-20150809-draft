@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.2.ebuild,v 1.2 2006/05/26 00:11:02 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.2.ebuild,v 1.3 2006/06/09 19:22:52 nerdboy Exp $
 
 inherit eutils libtool gnuconfig distutils toolchain-funcs
 
@@ -46,6 +46,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-destdir.patch || die "epatch failed"
 	epatch ${FILESDIR}/${P}-ruby-install.patch || die "epatch failed"
+	if [ $(gcc-major-version) -eq 4 ]; then
+	    epatch ${FILESDIR}/${P}-gcc4-stl.patch || die "epatch failed"
+	fi
 	elibtoolize --patch-only
 	gnuconfig_update
 	if useq netcdf && useq hdf; then
