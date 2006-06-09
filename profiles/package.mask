@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5485 2006/06/09 09:57:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5486 2006/06/09 15:09:35 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -229,11 +229,6 @@ sys-process/bcron
 # Roy Marples <uberlord@gentoo.org> (09 May 2006)
 # Masked for testing, although it works very well for me.
 >=net-misc/openvpn-2.1_beta
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (08 May 2006)
-# This is masked currently since I am working on it pretty heavily and don't
-# want to inadvertently break anyone's installs.
-app-emulation/vmware-workstation-tools
 
 # Stefan Schweizer <genstef@gentoo.org> (05 May 2006)
 # kopete needs ~0.7.1, mask newer versions to avoid up/downgrade cycles
