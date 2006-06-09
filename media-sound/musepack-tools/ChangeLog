@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.29 2006/05/12 22:43:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.30 2006/06/09 02:36:36 metalgod Exp $
+
+  09 Jun 2006; Luis Medinas <metalgod@gentoo.org>
+  musepack-tools-1.15v.ebuild:
+  Stable on amd64.
 
   12 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/musepack-tools-1.15v-fbsd.patch, musepack-tools-1.15v.ebuild:
