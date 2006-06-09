@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.22.ebuild,v 1.3 2006/04/28 11:57:32 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.22.ebuild,v 1.4 2006/06/09 22:15:38 rl03 Exp $
 
 inherit webapp
 
@@ -26,7 +26,7 @@ RDEPEND="
 	>=dev-perl/DBI-1.38
 	>=virtual/perl-File-Spec-0.84
 	virtual/perl-File-Temp
-	>=dev-perl/Template-Toolkit-2.08
+	>=dev-perl/Template-Toolkit-2.13
 	>=dev-perl/Text-Tabs+Wrap-2001.0131
 	>=dev-perl/MailTools-1.67
 	>=virtual/perl-MIME-Base64-3.01
