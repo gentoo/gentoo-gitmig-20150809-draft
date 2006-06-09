@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.0.ebuild,v 1.4 2006/06/07 20:46:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.0.ebuild,v 1.5 2006/06/09 21:34:04 mattepiu Exp $
 
 inherit kde eutils
 
@@ -62,6 +62,7 @@ need-kde 3.4
 src_unpack() {
 	kde_src_unpack
 	epatch "${FILESDIR}/${PN}-0.12_alpha1-xscreensaver.patch"
+	epatch "${FILESDIR}/${PN}-0.12-away.diff"
 	rm -f ${S}/configure
 }
 
