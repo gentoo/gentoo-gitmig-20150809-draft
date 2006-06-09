@@ -1,28 +1,25 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-4.5.3.ebuild,v 1.3 2006/06/09 15:07:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-5.5.1.ebuild,v 1.1 2006/06/09 15:07:39 wolf31o2 Exp $
 
 inherit eutils
 
 DESCRIPTION="Guest-os tools for VMware Workstation"
 HOMEPAGE="http://www.vmware.com/"
 
-# the vmware-tools sources are part of the vmware virtual machine;
-# they must be installed by hand
 SRC_URI=""
 LICENSE="vmware"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 x86"
 IUSE="X"
 RESTRICT=""
 
-DEPEND=""
 RDEPEND="sys-apps/pciutils"
 
 dir=/opt/vmware/tools
 Ddir=${D}/${dir}
-TARBALL="vmware-linux-tools.tar.gz"
-#VMwareTools-5.0.0-13124.tar.gz
+#TARBALL="vmware-linux-tools.tar.gz"
+TARBALL="VMwareTools-5.5.1-19175.tar.gz"
 
 S=${WORKDIR}/vmware-tools-distrib
 
@@ -63,7 +60,9 @@ pkg_setup() {
 }
 
 src_unpack() {
+	cd "${S}"
 	tar xf "${CDROM_ROOT}"/"${TARBALL}"
+	epatch "${FILESDIR}"/${P}-config.patch || die "patching"
 }
 
 src_install() {
@@ -78,8 +77,8 @@ src_install() {
 
 	into ${dir}
 	# install the binaries
-	dosbin sbin/vmware-checkvm || die
-	dosbin sbin/vmware-guestd || die
+#	dosbin sbin/vmware-checkvm || die
+#	dosbin sbin/vmware-guestd || die
 
 	# install the config files
 	dodir /etc/vmware-tools
@@ -136,16 +135,10 @@ pkg_postinst () {
 		fi
 	done
 	einfo "To start using the vmware-tools, please run the following:"
-	echo
+	einfo
 	einfo "  ${dir}/bin/vmware-config-tools.pl"
 	einfo "  rc-update add vmware-tools default"
 	einfo "  /etc/init.d/vmware-tools start"
-	echo
+	einfo
 	einfo "Please report all bugs to http://bugs.gentoo.org/"
-	echo
-	ewarn "These tools might not compile with newer kernels.  I am unable to"
-	ewarn "find any patches for these to make them compile, so you're on your"
-	ewarn "own if using a newer kernel in your VM.  If you know of any patches,"
-	ewarn "then please file a bug so everyone can benefit."
-	echo
 }
