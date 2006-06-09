@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.239 2006/06/07 17:39:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.240 2006/06/09 15:36:40 wolf31o2 Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -1109,7 +1109,7 @@ unpack_makeself() {
 		local skip=0
 		exe=tail
 		case ${ver} in
-			1.5.*)	# tested 1.5.{3,4,5} ... guessing 1.5.x series is same
+			1.5.*|1.6.0-nv)	# tested 1.5.{3,4,5} ... guessing 1.5.x series is same
 				skip=$(grep -a ^skip= "${src}" | cut -d= -f2)
 				;;
 			2.0|2.0.1)
