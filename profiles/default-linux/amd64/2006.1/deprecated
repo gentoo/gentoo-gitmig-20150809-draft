@@ -1,0 +1,7 @@
+This is the Gentoo/AMD64 development profile not intended for end-users.
+
+If you still want to use this: We don't care if it breaks your system,
+expect this to change whenever we feel like it with absolutely no warning,
+including changing to be unusable.
+
+2006/06/07 - Danny van Dyk <kugelfang@gentoo.org>
