@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.43 2006/03/31 21:12:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.44 2006/06/09 23:54:44 robbat2 Exp $
+
+*ccache-2.4-r2 (09 Jun 2006)
+
+  09 Jun 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/ccache-2.4-utimes.patch, +ccache-2.4-r2.ebuild:
+  Patch to fix bug #136233, to use utimes instead of utime.
 
   31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> ccache-2.4-r1.ebuild:
   Remove virtual/libc dependency and add keyword ~x86-fbsd.
