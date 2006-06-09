@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.285 2006/05/29 22:05:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.286 2006/06/09 18:18:06 eradicator Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -752,11 +752,12 @@ create_eselect_conf() {
 	echo "	stdcxx_incdir=${STDCXX_INCDIR##*/}" >> ${compiler_config_file}
 	echo "	bin_prefix=${CTARGET}" >> ${compiler_config_file}
 
-	if [[ -x "${D}/${BINPATH}/${CTARGET}-g77" ]] ; then
-		echo "	alias_gfortran=g77" >> ${compiler_config_file}
-	elif [[ -x "${D}/${BINPATH}/${CTARGET}-gfortran" ]] ; then
-		echo "	alias_g77=gfortran" >> ${compiler_config_file}
-	fi
+	# Per spyderous, it is best not to alias the fortran compilers
+	#if [[ -x "${D}/${BINPATH}/${CTARGET}-g77" ]] ; then
+	#	echo "	alias_gfortran=g77" >> ${compiler_config_file}
+	#elif [[ -x "${D}/${BINPATH}/${CTARGET}-gfortran" ]] ; then
+	#	echo "	alias_g77=gfortran" >> ${compiler_config_file}
+	#fi
 
 	for abi in $(get_all_abis) ; do
 		add_profile_eselect_conf "${compiler_config_file}" "${abi}"
