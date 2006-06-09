@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.182 2006/06/05 14:56:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.183 2006/06/09 05:56:25 corsair Exp $
+
+  09 Jun 2006; Markus Rothe <corsair@gentoo.org>
+  linux-headers-2.6.16.ebuild:
+  Added ~ppc64
 
   05 Jun 2006; Guy Martin <gmsoft@gentoo.org>
   linux-headers-2.6.11-r5.ebuild:
