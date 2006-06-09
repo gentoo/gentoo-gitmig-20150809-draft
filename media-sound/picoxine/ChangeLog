@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/picoxine
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picoxine/ChangeLog,v 1.2 2006/06/09 20:09:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picoxine/ChangeLog,v 1.3 2006/06/09 20:50:39 flameeyes Exp $
+
+  09 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  picoxine-0.0.5.1.ebuild:
+  Add ~ppc keyword (okay'd by exg).
 
   09 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/digest-picoxine-0.0.5.1:
