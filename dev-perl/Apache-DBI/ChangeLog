@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-DBI
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.25 2006/03/05 03:14:12 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.26 2006/06/09 13:38:14 mcummings Exp $
+
+  09 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Apache-DBI-0.99.01.ebuild:
+  Marking stable sparc
 
 *Apache-DBI-0.99.01 (05 Mar 2006)
 
