@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r9.ebuild,v 1.1 2006/05/23 13:03:28 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r9.ebuild,v 1.2 2006/06/09 19:12:32 uberlord Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -14,12 +14,10 @@ SRC_URI="ftp://ftp.isc.org/isc/dhcp/${MY_P}.tar.gz"
 LICENSE="isc-dhcp"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="static selinux"
+IUSE="doc minimal static selinux"
 
-RDEPEND="selinux? ( sec-policy/selinux-dhcp )
-	kernel_linux? ( sys-apps/net-tools )"
 DEPEND="selinux? ( sec-policy/selinux-dhcp )
-	>=sys-apps/sed-4"
+	kernel_linux? ( sys-apps/net-tools )"
 
 PROVIDE="virtual/dhcpc"
 
@@ -31,61 +29,60 @@ src_unpack() {
 
 	# Gentoo patches - these will probably never be accepted upstream
 	# Enable chroot support
-	epatch "${FILESDIR}/${PN}-3.0-paranoia.patch"
+	epatch "${FILESDIR}/${PN}"-3.0-paranoia.patch
 	# Fix some permission issues
-	epatch "${FILESDIR}/${PN}-3.0-fix-perms.patch"
+	epatch "${FILESDIR}/${PN}"-3.0-fix-perms.patch
 	# Enable dhclient to equery NTP servers
-	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-ntp.patch"
+	epatch "${FILESDIR}/${PN}"-3.0.3-dhclient-ntp.patch
 	# resolvconf support in dhclient-script
-	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-resolvconf.patch"
+	epatch "${FILESDIR}/${PN}"-3.0.3-dhclient-resolvconf.patch
 	# Fix setting hostnames on Linux
-	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-hostname.patch"
+	epatch "${FILESDIR}/${PN}"-3.0.3-dhclient-hostname.patch
 	# Allow mtu settings
-	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-mtu.patch"
+	epatch "${FILESDIR}/${PN}"-3.0.3-dhclient-mtu.patch
 	# Allow dhclient to use IF_METRIC to set route metrics
-	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-metric.patch"
+	epatch "${FILESDIR}/${PN}"-3.0.3-dhclient-metric.patch
 	# Stop downing the interface on Linux as that breaks link dameons
 	# such as wpa_supplicant and netplug
-	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-no-down.patch"
+	epatch "${FILESDIR}/${PN}"-3.0.3-dhclient-no-down.patch
 	# Quiet the isc blurb
-	epatch "${FILESDIR}/${PN}-3.0.3-no_isc_blurb.patch"
+	epatch "${FILESDIR}/${PN}"-3.0.3-no_isc_blurb.patch
 	# Enable dhclient to get extra configuration from stdin
-	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-stdin-conf.patch"
+	epatch "${FILESDIR}/${PN}"-3.0.3-dhclient-stdin-conf.patch
 
 	# General fixes which will probably be accepted upstream eventually
-	# Fix token ring compiling, #102473
-	epatch "${FILESDIR}/${P}-tr.patch"
 	# Install libdst, #75544
-	epatch "${FILESDIR}/${PN}-3.0.3-libdst.patch"
+	epatch "${FILESDIR}/${PN}"-3.0.3-libdst.patch
 	# Fix building on Gentoo/FreeBSD
-	epatch "${FILESDIR}/${PN}-3.0.2-gmake.patch"
+	epatch "${FILESDIR}/${PN}"-3.0.2-gmake.patch
 
 	# NetworkManager support patches
 	# If they fail to apply to future versions they will be dropped
 	# Enable eXtended options
-	epatch "${FILESDIR}/${PN}-3.0.3-x-option.patch"
+	epatch "${FILESDIR}/${PN}"-3.0.3-x-option.patch
 	# Add dbus support to dhclient
-	epatch "${FILESDIR}/${PN}-3.0.3-dhclient-dbus.patch"
+	epatch "${FILESDIR}/${PN}"-3.0.3-dhclient-dbus.patch
 
 	# Brand the version with Gentoo
 	# include revision if >0
 	local newver="${MY_PV}-Gentoo"
 	[[ ${PR} != "r0" ]] && newver="${newver}-${PR}"
-	sed -i -e '/^#define DHCP_VERSION[ \t]\+/ s/'"${MY_PV}/${newver}/g" \
-		includes/version.h
+	sed -i '/^#define DHCP_VERSION[ \t]\+/ s/'"${MY_PV}/${newver}/g" \
+		includes/version.h || die
 
 	# Change the hook script locations of the scripts
 	sed -i -e 's,/etc/dhclient-exit-hooks,/etc/dhcp/dhclient-exit-hooks,g' \
 		-e 's,/etc/dhclient-enter-hooks,/etc/dhcp/dhclient-enter-hooks,g' \
-		client/scripts/*
+		client/scripts/* || die
 
 	# Remove these options from the sample config
-	sed -i -e "/\(script\|host-name\|domain-name\) / d" client/dhclient.conf
+	sed -i -e "/\(script\|host-name\|domain-name\) / d" \
+		client/dhclient.conf || die
 
 	# Build sed man pages as we don't ever support BSD 4.4 and older, #130251.
 	local x=
 	for x in Makefile.dist $(ls */Makefile.dist) ; do
-		sed -i -e 's/$(CATMANPAGES)/$(SEDMANPAGES)/g' "${x}"
+		sed -i -e 's/$(CATMANPAGES)/$(SEDMANPAGES)/g' "${x}" || die
 	done
 
 	# Only install different man pages if we don't have en
@@ -103,9 +100,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# 01/Mar/2003: Fix for bug #11960 by Jason Wever <weeve@gentoo.org>
-	[[ ${ARCH} == "sparc" ]] && filter-flags -O3 -O2 -O
-
 	use static && append-ldflags -static
 
 	cat <<-END >> includes/site.h
@@ -140,39 +134,47 @@ src_compile() {
 	./configure --copts "-DPARANOIA -DEARLY_CHROOT -DEXTENDED_NEW_OPTION_INFO \
 		${CFLAGS}" || die "configure failed"
 
+	# Remove server support from the Makefile
+	# We still install some extra crud though
+	if use minimal ; then
+		sed -i -e 's/\(server\|relay\|dhcpctl\)/ /g' work.*/Makefile || die
+	fi
 	emake || die "compile problem"
 }
 
 src_install() {
 	make install DESTDIR="${D}" || die
+	use doc && dodoc README RELNOTES doc/*
 
 	insinto /etc/dhcp
-	newins server/dhcpd.conf dhcpd.conf.sample
 	newins client/dhclient.conf dhclient.conf.sample
-
-	dodoc README RELNOTES doc/*
-	newdoc client/dhclient.conf dhclient.conf.sample
-	newdoc client/scripts/linux dhclient-script.sample
-	newdoc server/dhcpd.conf dhcpd.conf.sample
-
-	newinitd "${FILESDIR}/dhcpd.init" dhcpd
-	newinitd "${FILESDIR}/dhcrelay.init" dhcrelay
-	insinto /etc/conf.d
-	newins "${FILESDIR}/dhcpd.conf" dhcpd
-	newins "${FILESDIR}/dhcrelay.conf" dhcrelay
-
 	keepdir /var/{lib,run}/dhcp
+
+	# Install our server files
+	if ! use minimal ; then
+		insinto /etc/dhcp
+		newins server/dhcpd.conf dhcpd.conf.sample
+		newinitd "${FILESDIR}"/dhcpd.init dhcpd
+		newinitd "${FILESDIR}"/dhcrelay.init dhcrelay
+		insinto /etc/conf.d
+		newins "${FILESDIR}"/dhcpd.conf dhcpd
+		newins "${FILESDIR}"/dhcrelay.conf dhcrelay
+	fi
 }
 
 pkg_preinst() {
-	enewgroup dhcp
-	enewuser dhcp -1 -1 /var/lib/dhcp dhcp
+	if ! use minimal ; then
+		enewgroup dhcp
+		enewuser dhcp -1 -1 /var/lib/dhcp dhcp
+	fi
 }
 
 pkg_postinst() {
+	use minimal && return
+
 	chown dhcp:dhcp "${ROOT}"/var/{lib,run}/dhcp
 
-	if [[ -e "${ROOT}/etc/init.d/dhcp" ]] ; then
+	if [[ -e "${ROOT}"/etc/init.d/dhcp ]] ; then
 		ewarn
 		ewarn "WARNING: The dhcp init script has been renamed to dhcpd"
 		ewarn "/etc/init.d/dhcp and /etc/conf.d/dhcp need to be removed and"
@@ -188,15 +190,23 @@ pkg_postinst() {
 }
 
 pkg_config() {
+	if use minimal ; then
+		eerror "${PN} has not been compiled for server support"
+		eerror "emerge ${PN} without the minimal USE flag to use dhcp sever"
+		return 1
+	fi
+
 	local CHROOT="$(
-		sed -n 's/^[[:blank:]]\?DHCPD_CHROOT="*\([^#"]\+\)"*/\1/p' \
-		/etc/conf.d/dhcpd
+		sed -n -e 's/^[[:blank:]]\?DHCPD_CHROOT="*\([^#"]\+\)"*/\1/p' \
+		"${ROOT}"/etc/conf.d/dhcpd
 	)"
 
 	if [[ -z ${CHROOT} ]]; then
 		eerror "CHROOT not defined in /etc/conf.d/dhcpd"
 		return 1
 	fi
+
+	CHROOT="${ROOT}/${CHROOT}"
 
 	if [[ -d ${CHROOT} ]] ; then
 		ewarn "${CHROOT} already exists - aborting"
@@ -205,11 +215,12 @@ pkg_config() {
 
 	ebegin "Setting up the chroot directory"
 	mkdir -m 0755 -p "${CHROOT}/"{dev,etc,var/lib,var/run/dhcp}
-	cp /etc/{localtime,resolv.conf} "${CHROOT}/etc"
-	cp -R /etc/dhcp "${CHROOT}/etc/"
-	cp -R /var/lib/dhcp "${CHROOT}/var/lib"
+	cp /etc/{localtime,resolv.conf} "${CHROOT}"/etc
+	cp -R /etc/dhcp "${CHROOT}"/etc
+	cp -R /var/lib/dhcp "${CHROOT}"/var/lib
+	ln -s ../../var/lib/dhcp "${CHROOT}"/etc/dhcp/lib
 	chown -R dhcp:dhcp "${CHROOT}"/var/{lib,run}/dhcp
-	eend
+	eend 0
 
 	local logger="$(best_version virtual/logger)"
 	einfo "To enable logging from the dhcpd server, configure your"
