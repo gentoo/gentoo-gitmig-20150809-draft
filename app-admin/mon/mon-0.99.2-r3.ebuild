@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r3.ebuild,v 1.3 2006/05/15 14:51:23 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r3.ebuild,v 1.4 2006/06/09 12:47:49 mcummings Exp $
 
 inherit toolchain-funcs
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="~ppc ~sparc ~x86"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE=""
+IUSE="ldap dns mysql telnet"
 
 DEPEND=">=dev-perl/Mon-0.9
 	>=virtual/perl-Time-HiRes-1.20
