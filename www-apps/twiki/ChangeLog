@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/twiki
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.28 2006/04/30 14:42:02 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.29 2006/06/09 22:32:32 rl03 Exp $
+
+  09 Jun 2006; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt:
+  Add info on ExecCGI ( bug #134132 ).
 
   30 Apr 2006; Renat Lumpau <rl03@gentoo.org> twiki-4.0.2.ebuild:
   Fix bug #131721.

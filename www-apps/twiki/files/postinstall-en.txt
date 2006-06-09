@@ -12,6 +12,7 @@ You are almost done!
 
 2. Take a look at twiki_httpd_conf.txt and modify your Apache configs as
    needed. Make sure your webserver can execute ${MY_INSTALLDIR}/bin/configure
+   Pay attention to the ExecCGI option (see https://bugs.gentoo.org/134132).
 
 3. Visit http://${VHOST_HOSTNAME}/twiki/bin/configure
    Most values should have been automatically set for you.
