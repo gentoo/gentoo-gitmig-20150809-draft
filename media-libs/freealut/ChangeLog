@@ -1,6 +1,6 @@
-# ChangeLog for media-libs/alut
+# ChangeLog for media-libs/freealut
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/ChangeLog,v 1.6 2006/05/26 16:55:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/ChangeLog,v 1.7 2006/06/10 15:58:44 swegener Exp $
 
   26 May 2006; Markus Rothe <corsair@gentoo.org> freealut-1.0.1.ebuild:
   Stable on ppc64; bug #133501
