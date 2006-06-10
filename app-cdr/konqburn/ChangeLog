@@ -1,6 +1,6 @@
-# ChangeLog for app-cdr/kio_burn
+# ChangeLog for app-cdr/konqburn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/ChangeLog,v 1.7 2006/05/26 10:33:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/ChangeLog,v 1.8 2006/06/10 15:49:50 swegener Exp $
 
   26 May 2006; <nixnut@gentoo.org> konqburn-0.9.ebuild:
   Stable on ppc. Bug #134332
