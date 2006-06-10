@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/linuxtv-dvb-apps
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.14 2006/05/29 16:10:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.15 2006/06/10 13:11:05 zzam Exp $
+
+*linuxtv-dvb-apps-1.1.1-r1 (10 Jun 2006)
+
+  10 Jun 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +linuxtv-dvb-apps-1.1.1-r1.ebuild:
+  Added missing scan/channel-files.
 
   29 May 2006; Matthias Schwarzott <zzam@gentoo.org>
   files/linuxtv-dvb-apps-1.1.1-makefile.patch:
