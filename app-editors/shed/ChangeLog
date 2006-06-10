@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/shed
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/shed/ChangeLog,v 1.12 2006/06/05 15:53:55 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/shed/ChangeLog,v 1.13 2006/06/10 09:22:50 hansmi Exp $
+
+  10 Jun 2006; Michael Hanselmann <hansmi@gentoo.org> shed-1.12.ebuild:
+  Stable on ppc.
 
   05 Jun 2006; Akinori Hattori <hattya@gentoo.org> shed-1.12.ebuild:
   stable on x86.
