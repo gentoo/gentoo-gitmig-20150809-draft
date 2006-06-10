@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.73 2006/06/07 02:20:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.74 2006/06/10 09:22:59 hansmi Exp $
+
+  10 Jun 2006; Michael Hanselmann <hansmi@gentoo.org> R-2.2.1.ebuild:
+  Stable on ppc.
 
   07 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> R-2.2.1.ebuild:
   Stable on x86 wrt bug #135318.
