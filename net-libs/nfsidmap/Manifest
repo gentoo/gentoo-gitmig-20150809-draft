@@ -1,7 +1,0 @@
-MD5 0dbb1924a44ef13fe804f60da614ee9e nfsidmap-0.10.ebuild 903
-MD5 71b96dd125a2a572d417cab3f802d854 ChangeLog 698
-MD5 a3dd8511b8874ce1b494dce2472c709c metadata.xml 159
-MD5 c9bcc3efd8253fbace1f35b594e86242 nfsidmap-0.9.ebuild 897
-MD5 ee7821d4e0ff21074ca53995ea350187 files/digest-nfsidmap-0.10 65
-MD5 27bfa91df9f2be4c9d5e6e2c5b1ea20e files/digest-nfsidmap-0.9 64
-MD5 002c00b85ac1181c098ab90c84fc1dbf files/nfsidmap-0.9-optional-ldap.patch 1078
