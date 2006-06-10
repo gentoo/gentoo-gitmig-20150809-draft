@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-2.5.ebuild,v 1.1 2006/06/08 10:22:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-2.5.ebuild,v 1.2 2006/06/10 21:20:18 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,15 +11,16 @@ SRC_URI="mirror://kernel/linux/utils/raid/mdadm/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="static"
+IUSE="static ssl"
 
-RDEPEND=""
+RDEPEND="ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.51"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-ssl-cleanup.patch
 	epatch "${FILESDIR}"/${PN}-2.3.1-endian.patch #122269
 	epatch "${FILESDIR}"/${PN}-1.9.0-dont-make-man.patch
 	epatch "${FILESDIR}"/${PN}-2.4.1-syslog-updates.patch
@@ -27,6 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
+	use ssl && export USE_SSL=1 || export USE_SSL=0
 	emake \
 		CWFLAGS="-Wall" \
 		CXFLAGS="${CFLAGS}" \
