@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gpc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.17 2006/01/26 01:27:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.18 2006/06/10 18:44:27 george Exp $
+
+  10 Jun 2006; George Shapovalov <george@gentoo.org> -gpc-20040516.ebuild,
+  -gpc-20050331.ebuild:
+  pulled old version for which matching gcc has been removed
 
   26 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> gpc-20051104.ebuild:
   Added ROOTPATH in env.d/56gpc, keyworded ~sparc wrt #119138
