@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.15.ebuild,v 1.2 2006/06/10 22:39:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.15.ebuild,v 1.3 2006/06/10 22:52:19 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -60,6 +60,9 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
+# this will not build as 64bit code
+export ABI=x86
+
 src_unpack() {
 	unpack wine-${PV}.tar.bz2
 	cd "${S}"
@@ -101,19 +104,6 @@ src_compile() {
 	use x86 && config_cache truetype freetype:FT_Init_FreeType
 
 	strip-flags
-
-	if use amd64 ; then
-		# If we don't want --enable-win64, then we need override the
-		# toolchain.  If we do --enable-win64, then configure takes
-		# care of it for us
-
-		export CHOST="i686-pc-linux-gnu"
-		export CBUILD="${CHOST}"
-
-		# This should be handled by eselect-binutils in the future:
-		export LD="$(tc-getLD) -m elf_i386"
-		export AS="$(tc-getAS) --32"
-	fi
 
 	#	$(use_enable amd64 win64)
 	econf \
