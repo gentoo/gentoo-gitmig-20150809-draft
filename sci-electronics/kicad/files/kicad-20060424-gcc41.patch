@@ -1,6 +1,6 @@
-diff -urN kicad-20060424.orig/3d-viewer/3d_struct.h kicad-20060424/3d-viewer/3d_struct.h
---- kicad-20060424.orig/3d-viewer/3d_struct.h	2006-03-03 11:03:24.000000000 +0100
-+++ kicad-20060424/3d-viewer/3d_struct.h	2006-06-02 20:44:00.000000000 +0200
+diff -urN kicad-20060424/3d-viewer/3d_struct.h kicad-20060424-gcc41/3d-viewer/3d_struct.h
+--- kicad-20060424/3d-viewer/3d_struct.h	2006-03-03 11:03:24.000000000 +0100
++++ kicad-20060424-gcc41/3d-viewer/3d_struct.h	2006-06-09 07:53:32.000000000 +0200
 @@ -21,7 +21,7 @@
  public:
  	double x, y, z;
@@ -10,9 +10,9 @@ diff -urN kicad-20060424.orig/3d-viewer/3d_struct.h kicad-20060424/3d-viewer/3d_
  };
  
  class S3D_Material: public EDA_BaseStruct		/* openGL "material" data*/
-diff -urN kicad-20060424.orig/3d-viewer/3d_viewer.h kicad-20060424/3d-viewer/3d_viewer.h
---- kicad-20060424.orig/3d-viewer/3d_viewer.h	2005-12-05 09:47:58.000000000 +0100
-+++ kicad-20060424/3d-viewer/3d_viewer.h	2006-06-02 20:44:00.000000000 +0200
+diff -urN kicad-20060424/3d-viewer/3d_viewer.h kicad-20060424-gcc41/3d-viewer/3d_viewer.h
+--- kicad-20060424/3d-viewer/3d_viewer.h	2005-12-05 09:47:58.000000000 +0100
++++ kicad-20060424-gcc41/3d-viewer/3d_viewer.h	2006-06-09 07:53:32.000000000 +0200
 @@ -125,7 +125,7 @@
  	
  
@@ -22,89 +22,9 @@ diff -urN kicad-20060424.orig/3d-viewer/3d_viewer.h kicad-20060424/3d-viewer/3d_
  	const wxString& title );
  
      void Exit3DFrame(wxCommandEvent& event);
-diff -urN kicad-20060424.orig/cvpcb/makefile.gtk kicad-20060424/cvpcb/makefile.gtk
---- kicad-20060424.orig/cvpcb/makefile.gtk	2006-06-02 20:43:04.000000000 +0200
-+++ kicad-20060424/cvpcb/makefile.gtk	2006-06-02 20:44:32.000000000 +0200
-@@ -1,39 +1,39 @@
--# File:		makefile
--
--# Compiler flags.
--CC = gcc $(CFLAGS)
--LD = gcc $(CFLAGS)
--
--FINAL = 1
--
--# Compiler flags.
--
--CPPFLAGS = -Wall $(shell /usr/lib/wx/config/gtk2-unicode-release-2.6 --cxxflags) -DNO_GCC_PRAGMA
--
--#LDFLAGS =  -s
--
--EDACPPFLAGS = $(CPPFLAGS)
--
--include ../libs.linux
--
--
--TARGET = cvpcb
--
--all: $(TARGET)
--
--include makefile.include
--
--CPPFLAGS += $(EXTRACPPFLAGS)
--EDACPPFLAGS = $(CPPFLAGS)
--
--
--$(TARGET):	$(OBJECTS) makefile.gtk makefile.include $(EXTRALIBS) ../libs.linux $(LIBVIEWER3D)
--	$(LD) $(OBJECTS) $(LDFLAGS)  $(LIBVIEWER3D)  $(LIBS_WITH_GL) -o $(TARGET)
--
--
-+# File:		makefile
-+
-+# Compiler flags.
-+CC = gcc $(CFLAGS)
-+LD = gcc $(CFLAGS)
-+
-+FINAL = 1
-+
-+# Compiler flags.
-+
-+CPPFLAGS = -Wall $(shell /usr/lib/wx/config/gtk2-unicode-release-2.6 --cxxflags) -DNO_GCC_PRAGMA
-+
-+#LDFLAGS =  -s
-+
-+EDACPPFLAGS = $(CPPFLAGS)
-+
-+include ../libs.linux
-+
-+
-+TARGET = cvpcb
-+
-+all: $(TARGET)
-+
-+include makefile.include
-+
-+CPPFLAGS += $(EXTRACPPFLAGS)
-+EDACPPFLAGS = $(CPPFLAGS)
-+
-+
-+$(TARGET):	$(OBJECTS) makefile.gtk makefile.include $(EXTRALIBS) ../libs.linux $(LIBVIEWER3D)
-+	$(LD) $(OBJECTS) $(LDFLAGS)  $(LIBVIEWER3D)  $(LIBS_WITH_GL) -lGLU -o $(TARGET)
-+
-+
- install:
--	cp -f $(TARGET) $(KICAD_BIN)
-+	cp -f $(TARGET) $(KICAD_BIN)
-+
-+clean:
-+		-erase *.o
- 
--clean:
--		-erase *.o
--
-diff -urN kicad-20060424.orig/eeschema/libcmp.h kicad-20060424/eeschema/libcmp.h
---- kicad-20060424.orig/eeschema/libcmp.h	2005-12-05 09:47:54.000000000 +0100
-+++ kicad-20060424/eeschema/libcmp.h	2006-06-02 20:44:00.000000000 +0200
+diff -urN kicad-20060424/eeschema/libcmp.h kicad-20060424-gcc41/eeschema/libcmp.h
+--- kicad-20060424/eeschema/libcmp.h	2005-12-05 09:47:54.000000000 +0100
++++ kicad-20060424-gcc41/eeschema/libcmp.h	2006-06-09 07:53:32.000000000 +0200
 @@ -208,7 +208,7 @@
  				wxPoint & pin_pos, int orient,
  				int TextInside, bool DrawPinNum, bool DrawPinName,
@@ -114,9 +34,9 @@ diff -urN kicad-20060424.orig/eeschema/libcmp.h kicad-20060424/eeschema/libcmp.h
  				int TextInside, bool DrawPinNum, bool DrawPinName);
  };
  
-diff -urN kicad-20060424.orig/include/pcbstruct.h kicad-20060424/include/pcbstruct.h
---- kicad-20060424.orig/include/pcbstruct.h	2006-01-03 12:16:44.000000000 +0100
-+++ kicad-20060424/include/pcbstruct.h	2006-06-02 20:44:00.000000000 +0200
+diff -urN kicad-20060424/include/pcbstruct.h kicad-20060424-gcc41/include/pcbstruct.h
+--- kicad-20060424/include/pcbstruct.h	2006-01-03 12:16:44.000000000 +0100
++++ kicad-20060424-gcc41/include/pcbstruct.h	2006-06-09 07:53:32.000000000 +0200
 @@ -212,7 +212,7 @@
  	EDGE_ZONE * m_CurrentLimitZone;	/* pointeur sur la liste des segments
  									de delimitation de la zone en cours de trace */
@@ -161,9 +81,9 @@ diff -urN kicad-20060424.orig/include/pcbstruct.h kicad-20060424/include/pcbstru
  	void UnLink( void );
  	void Draw( WinEDA_DrawPanel * panel, wxDC * DC, int DrawMode);
  };
-diff -urN kicad-20060424.orig/include/wxstruct.h kicad-20060424/include/wxstruct.h
---- kicad-20060424.orig/include/wxstruct.h	2006-04-19 16:31:12.000000000 +0200
-+++ kicad-20060424/include/wxstruct.h	2006-06-02 20:44:00.000000000 +0200
+diff -urN kicad-20060424/include/wxstruct.h kicad-20060424-gcc41/include/wxstruct.h
+--- kicad-20060424/include/wxstruct.h	2006-04-19 16:31:12.000000000 +0200
++++ kicad-20060424-gcc41/include/wxstruct.h	2006-06-09 07:53:32.000000000 +0200
 @@ -416,7 +416,7 @@
  	// Chargement de modules
  	MODULE * Get_Librairie_Module(wxWindow * winaff, const wxString & library,
@@ -183,9 +103,9 @@ diff -urN kicad-20060424.orig/include/wxstruct.h kicad-20060424/include/wxstruct
  	void Edit_PinSheet(DrawSheetLabelStruct * SheetLabel, wxDC * DC);
  	void StartMove_PinSheet(DrawSheetLabelStruct * SheetLabel, 	wxDC * DC);
  	void Place_PinSheet(DrawSheetLabelStruct * SheetLabel, wxDC * DC);
-diff -urN kicad-20060424.orig/kicad/kicad.h kicad-20060424/kicad/kicad.h
---- kicad-20060424.orig/kicad/kicad.h	2006-03-20 13:31:36.000000000 +0100
-+++ kicad-20060424/kicad/kicad.h	2006-06-02 20:44:00.000000000 +0200
+diff -urN kicad-20060424/kicad/kicad.h kicad-20060424-gcc41/kicad/kicad.h
+--- kicad-20060424/kicad/kicad.h	2006-03-20 13:31:36.000000000 +0100
++++ kicad-20060424-gcc41/kicad/kicad.h	2006-06-09 07:53:32.000000000 +0200
 @@ -78,7 +78,7 @@
  	WinEDA_TreePrj * m_TreeProject;
  
@@ -195,9 +115,9 @@ diff -urN kicad-20060424.orig/kicad/kicad.h kicad-20060424/kicad/kicad.h
  				const wxPoint & pos, const wxSize & size );
  	~WinEDA_PrjFrame(void) {}
  	void OnSelect(wxTreeEvent & Event);
-diff -urN kicad-20060424.orig/pcbnew/autorout.h kicad-20060424/pcbnew/autorout.h
---- kicad-20060424.orig/pcbnew/autorout.h	2006-01-11 07:57:34.000000000 +0100
-+++ kicad-20060424/pcbnew/autorout.h	2006-06-02 20:44:00.000000000 +0200
+diff -urN kicad-20060424/pcbnew/autorout.h kicad-20060424-gcc41/pcbnew/autorout.h
+--- kicad-20060424/pcbnew/autorout.h	2006-01-11 07:57:34.000000000 +0100
++++ kicad-20060424-gcc41/pcbnew/autorout.h	2006-06-09 07:53:32.000000000 +0200
 @@ -138,8 +138,8 @@
  	int m_MemSize;
  
@@ -209,9 +129,9 @@ diff -urN kicad-20060424.orig/pcbnew/autorout.h kicad-20060424/pcbnew/autorout.h
  	int InitBoard(void);
  	void UnInitBoard(void);
  
-diff -urN kicad-20060424.orig/pcbnew/class_cotation.h kicad-20060424/pcbnew/class_cotation.h
---- kicad-20060424.orig/pcbnew/class_cotation.h	2006-01-03 12:16:50.000000000 +0100
-+++ kicad-20060424/pcbnew/class_cotation.h	2006-06-02 20:44:00.000000000 +0200
+diff -urN kicad-20060424/pcbnew/class_cotation.h kicad-20060424-gcc41/pcbnew/class_cotation.h
+--- kicad-20060424/pcbnew/class_cotation.h	2006-01-03 12:16:50.000000000 +0100
++++ kicad-20060424-gcc41/pcbnew/class_cotation.h	2006-06-09 07:53:32.000000000 +0200
 @@ -26,8 +26,8 @@
  	int FlecheG2_ox, FlecheG2_oy, FlecheG2_fx, FlecheG2_fy;
  
@@ -223,9 +143,9 @@ diff -urN kicad-20060424.orig/pcbnew/class_cotation.h kicad-20060424/pcbnew/clas
  
  	bool ReadCotationDescr(FILE * File, int * LineNum);
  	bool WriteCotationDescr(FILE * File);
-diff -urN kicad-20060424.orig/pcbnew/class_equipot.h kicad-20060424/pcbnew/class_equipot.h
---- kicad-20060424.orig/pcbnew/class_equipot.h	2005-02-02 08:45:24.000000000 +0100
-+++ kicad-20060424/pcbnew/class_equipot.h	2006-06-02 20:44:00.000000000 +0200
+diff -urN kicad-20060424/pcbnew/class_equipot.h kicad-20060424-gcc41/pcbnew/class_equipot.h
+--- kicad-20060424/pcbnew/class_equipot.h	2005-02-02 08:45:24.000000000 +0100
++++ kicad-20060424-gcc41/pcbnew/class_equipot.h	2006-06-09 07:53:32.000000000 +0200
 @@ -22,8 +22,8 @@
  	CHEVELU * m_RatsnestStart;	// pointeur sur debut de liste ratsnests du net
  	CHEVELU * m_RatsnestEnd;	// pointeur sur fin de liste ratsnests du net
@@ -237,9 +157,9 @@ diff -urN kicad-20060424.orig/pcbnew/class_equipot.h kicad-20060424/pcbnew/class
  
  	/* Effacement memoire de la structure */
  	void UnLink( void );
-diff -urN kicad-20060424.orig/pcbnew/class_mire.h kicad-20060424/pcbnew/class_mire.h
---- kicad-20060424.orig/pcbnew/class_mire.h	2005-06-07 09:51:48.000000000 +0200
-+++ kicad-20060424/pcbnew/class_mire.h	2006-06-02 20:44:00.000000000 +0200
+diff -urN kicad-20060424/pcbnew/class_mire.h kicad-20060424-gcc41/pcbnew/class_mire.h
+--- kicad-20060424/pcbnew/class_mire.h	2005-06-07 09:51:48.000000000 +0200
++++ kicad-20060424-gcc41/pcbnew/class_mire.h	2006-06-09 07:53:32.000000000 +0200
 @@ -17,8 +17,8 @@
  	int m_Size;
  
@@ -251,9 +171,9 @@ diff -urN kicad-20060424.orig/pcbnew/class_mire.h kicad-20060424/pcbnew/class_mi
  
  	bool WriteMirePcbDescr(FILE * File);
  	bool ReadMirePcbDescr(FILE * File, int * LineNum);
-diff -urN kicad-20060424.orig/pcbnew/class_module.h kicad-20060424/pcbnew/class_module.h
---- kicad-20060424.orig/pcbnew/class_module.h	2005-12-14 11:18:06.000000000 +0100
-+++ kicad-20060424/pcbnew/class_module.h	2006-06-02 20:44:00.000000000 +0200
+diff -urN kicad-20060424/pcbnew/class_module.h kicad-20060424-gcc41/pcbnew/class_module.h
+--- kicad-20060424/pcbnew/class_module.h	2005-12-14 11:18:06.000000000 +0100
++++ kicad-20060424-gcc41/pcbnew/class_module.h	2006-06-09 07:53:32.000000000 +0200
 @@ -67,9 +67,9 @@
  	wxString m_KeyWord;		// Liste des mots cles relatifs au module
  
@@ -267,9 +187,9 @@ diff -urN kicad-20060424.orig/pcbnew/class_module.h kicad-20060424/pcbnew/class_
  
  	void Copy(MODULE * Module);	// Copy structure
  	MODULE * Next(void) { return (MODULE *) Pnext; }
-diff -urN kicad-20060424.orig/pcbnew/class_pcb_text.h kicad-20060424/pcbnew/class_pcb_text.h
---- kicad-20060424.orig/pcbnew/class_pcb_text.h	2005-06-07 09:51:48.000000000 +0200
-+++ kicad-20060424/pcbnew/class_pcb_text.h	2006-06-02 20:44:00.000000000 +0200
+diff -urN kicad-20060424/pcbnew/class_pcb_text.h kicad-20060424-gcc41/pcbnew/class_pcb_text.h
+--- kicad-20060424/pcbnew/class_pcb_text.h	2005-06-07 09:51:48.000000000 +0200
++++ kicad-20060424-gcc41/pcbnew/class_pcb_text.h	2006-06-09 07:53:32.000000000 +0200
 @@ -9,9 +9,9 @@
  class TEXTE_PCB: public EDA_BaseStruct, public EDA_TextStruct
  {
@@ -283,9 +203,9 @@ diff -urN kicad-20060424.orig/pcbnew/class_pcb_text.h kicad-20060424/pcbnew/clas
  
  	/* supprime du chainage la structure Struct */
  	void UnLink( void );
-diff -urN kicad-20060424.orig/pcbnew/class_text_mod.h kicad-20060424/pcbnew/class_text_mod.h
---- kicad-20060424.orig/pcbnew/class_text_mod.h	2005-12-05 09:47:58.000000000 +0100
-+++ kicad-20060424/pcbnew/class_text_mod.h	2006-06-02 20:44:00.000000000 +0200
+diff -urN kicad-20060424/pcbnew/class_text_mod.h kicad-20060424-gcc41/pcbnew/class_text_mod.h
+--- kicad-20060424/pcbnew/class_text_mod.h	2005-12-05 09:47:58.000000000 +0100
++++ kicad-20060424-gcc41/pcbnew/class_text_mod.h	2006-06-09 07:53:32.000000000 +0200
 @@ -24,8 +24,8 @@
  	wxString m_Text;
  
@@ -297,9 +217,9 @@ diff -urN kicad-20060424.orig/pcbnew/class_text_mod.h kicad-20060424/pcbnew/clas
  
  	/* supprime du chainage la structure Struct */
  	void UnLink( void );
-diff -urN kicad-20060424.orig/pcbnew/class_track.h kicad-20060424/pcbnew/class_track.h
---- kicad-20060424.orig/pcbnew/class_track.h	2006-01-27 16:55:04.000000000 +0100
-+++ kicad-20060424/pcbnew/class_track.h	2006-06-02 20:44:00.000000000 +0200
+diff -urN kicad-20060424/pcbnew/class_track.h kicad-20060424-gcc41/pcbnew/class_track.h
+--- kicad-20060424/pcbnew/class_track.h	2006-01-27 16:55:04.000000000 +0100
++++ kicad-20060424-gcc41/pcbnew/class_track.h	2006-06-09 07:53:32.000000000 +0200
 @@ -32,8 +32,8 @@
  	int m_Param;					// Auxiliary variable ( used in some computations )
  
@@ -327,86 +247,9 @@ diff -urN kicad-20060424.orig/pcbnew/class_track.h kicad-20060424/pcbnew/class_t
  	bool IsViaOnLayer(int layer);
  	void SetLayerPair(int top_layer, int bottom_layer);
  	void ReturnLayerPair(int * top_layer, int * bottom_layer);
-diff -urN kicad-20060424.orig/pcbnew/makefile.gtk kicad-20060424/pcbnew/makefile.gtk
---- kicad-20060424.orig/pcbnew/makefile.gtk	2006-06-02 20:43:04.000000000 +0200
-+++ kicad-20060424/pcbnew/makefile.gtk	2006-06-02 20:45:06.000000000 +0200
-@@ -1,38 +1,38 @@
--## Makefile for PCBNEW et wxGTK
--CC = gcc $(CFLAGS)
--LD = gcc $(CFLAGS)
--
--# Compiler flags.
--
--CPPFLAGS = -Wall $(shell /usr/lib/wx/config/gtk2-unicode-release-2.6 --cxxflags) -DNO_GCC_PRAGMA
--
--#LDFLAGS = -s
--
--include ../libs.linux
--
--TARGET = pcbnew
--
--all: $(TARGET)
--
--include makefile.include
--
--CPPFLAGS += $(EXTRACPPFLAGS)
--EDACPPFLAGS = $(CPPFLAGS)
--
--
--
--$(TARGET): $(OBJECTS) makefile.gtk  makefile.include $(LIBVIEWER3D) $(EXTRALIBS) ../libs.linux
--		$(LD) $(LDFLAGS) $(OBJECTS) $(LIBVIEWER3D) $(LIBS_WITH_GL)\
-+## Makefile for PCBNEW et wxGTK
-+CC = gcc $(CFLAGS)
-+LD = gcc $(CFLAGS)
-+
-+# Compiler flags.
-+
-+CPPFLAGS = -Wall $(shell /usr/lib/wx/config/gtk2-unicode-release-2.6 --cxxflags) -DNO_GCC_PRAGMA
-+
-+#LDFLAGS = -s
-+
-+include ../libs.linux
-+
-+TARGET = pcbnew
-+
-+all: $(TARGET)
-+
-+include makefile.include
-+
-+CPPFLAGS += $(EXTRACPPFLAGS)
-+EDACPPFLAGS = $(CPPFLAGS)
-+
-+
-+
-+$(TARGET): $(OBJECTS) makefile.gtk  makefile.include $(LIBVIEWER3D) $(EXTRALIBS) ../libs.linux
-+		$(LD) $(LDFLAGS) $(OBJECTS) $(LIBVIEWER3D) $(LIBS_WITH_GL) -lGLU \
- 		-o $(TARGET)
- 		
- 		
--install:
--		cp $(TARGET) $(KICAD_BIN)
--
--
--clean:
--		-erase *.o
--		-erase *.map
--
--
--
-+install:
-+		cp $(TARGET) $(KICAD_BIN)
-+
-+
-+clean:
-+		-erase *.o
-+		-erase *.map
-+
-+
-+
-diff -urN kicad-20060424.orig/pcbnew/track.cpp kicad-20060424/pcbnew/track.cpp
---- kicad-20060424.orig/pcbnew/track.cpp	2006-04-19 16:31:18.000000000 +0200
-+++ kicad-20060424/pcbnew/track.cpp	2006-06-02 20:44:00.000000000 +0200
+diff -urN kicad-20060424/pcbnew/track.cpp kicad-20060424-gcc41/pcbnew/track.cpp
+--- kicad-20060424/pcbnew/track.cpp	2006-04-19 16:31:18.000000000 +0200
++++ kicad-20060424-gcc41/pcbnew/track.cpp	2006-06-09 07:53:32.000000000 +0200
 @@ -17,7 +17,7 @@
  	TRACK * RefTrack;
  

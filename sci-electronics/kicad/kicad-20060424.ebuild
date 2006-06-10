@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20060424.ebuild,v 1.3 2006/06/02 20:50:09 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20060424.ebuild,v 1.4 2006/06/10 07:59:04 calchan Exp $
 
 inherit eutils wxwidgets
 
@@ -35,18 +35,25 @@ src_unpack() {
 	unpack ${A} || die "unpack failed"
 	cd ${S}
 
+	# Patch to compile with gcc-4.1
+	epatch ${FILESDIR}/${P}-gcc41.patch || die "epatch failed"
+
+	# Fix wxGTK configuration
 	sed -i \
 		-e "s:\`wx-config:\$(shell wx-config:" \
 		-e "s:flags\`:flags) -DNO_GCC_PRAGMA:" \
 		*/makefile.* \
 		|| die "sed failed"
+	sed -i \
+		-e "s:\`wx-config:\$(shell wx-config:" \
+		-e "s:\`:):" \
+		-e "s:\$(WXSYSLIB_WITH_GL):\$(WXSYSLIB_WITH_GL) -lGLU:" \
+		libs.* \
+		|| die "sed failed"
 
 	# Use the chosen wx-config executable
 	sed -i -e "s:wx-config:${WX_CONFIG}:" libs.* || die "sed failed"
 	sed -i -e "s:wx-config:${WX_CONFIG}:" */makefile.* || die "sed failed"
-
-	# Patch to compile with gcc-4.1
-	epatch ${FILESDIR}/${P}-gcc41.patch || die "epatch failed"
 }
 
 src_compile() {
