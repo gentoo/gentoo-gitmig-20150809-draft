@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.5-r1.ebuild,v 1.5 2006/06/09 23:29:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.5-r1.ebuild,v 1.6 2006/06/10 14:15:20 nixnut Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -19,7 +19,7 @@ SRC_URI="http://iptables.org/projects/iptables/files/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh sparc ~x86"
+KEYWORDS="alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc ~x86"
 IUSE="ipv6 static extensions"
 
 DEPEND="virtual/os-headers
