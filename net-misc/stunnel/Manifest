@@ -1,4 +1,4 @@
-MD5 da987be212dfea340e1c1f17ba1310b3 ChangeLog 8456
+MD5 62a8530d370e2337a3c96a53cdff01c5 ChangeLog 8653
 MD5 ea2086dcf69dddf6d075a7040d209335 files/digest-stunnel-3.26 64
 MD5 b562ecc7a9dab7e2e2582a0601b42569 files/digest-stunnel-4.09-r1 64
 MD5 ae279447729ad0d6d59b870b4ed28683 files/digest-stunnel-4.14-r1 64
@@ -9,5 +9,5 @@ MD5 f4879ffd6081bf6db14af6fac04f6b9e files/stunnel.rc6 933
 MD5 3c7d56a1f6a95f21ceb95ddf5c76073c metadata.xml 703
 MD5 40938d8bb3bba86aea441e89ad04bdc9 stunnel-3.26.ebuild 1085
 MD5 0c914a1eb8d80cfa0ef23f0722d6afc9 stunnel-4.09-r1.ebuild 2225
-MD5 556f3f03c87d8082ed77e3fa473fda59 stunnel-4.14-r1.ebuild 2425
-MD5 be09639174dbee86d2811850b0dc5060 stunnel-4.15.ebuild 2422
+MD5 c750363920d058c25099bded2e536a3e stunnel-4.14-r1.ebuild 2426
+MD5 b5d65721e12b226aec773f6d616c9c06 stunnel-4.15.ebuild 2423

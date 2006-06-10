@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.55 2006/06/05 02:52:37 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.56 2006/06/10 03:11:27 ramereth Exp $
+
+  10 Jun 2006; Lance Albertson <ramereth@gentoo.org> stunnel-4.14-r1.ebuild,
+  stunnel-4.15.ebuild:
+  * Re-keywording because of a few issues I've encountered. (mainly dealing with
+  segfaulting)
 
   05 Jun 2006; Lance Albertson <ramereth@gentoo.org>
   -files/stunnel-4.05-gentoo.diff, -files/stunnel-4.09-gentoo.diff,
