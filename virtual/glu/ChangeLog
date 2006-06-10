@@ -1,6 +1,6 @@
-# ChangeLog for gentoo-x86/virtual
+# ChangeLog for virtual/glu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/glu/ChangeLog,v 1.1 2006/05/13 05:11:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/glu/ChangeLog,v 1.2 2006/06/10 16:02:45 swegener Exp $
 
 *glu-7.0 (13 May 2006)
 *glu-6.8 (13 May 2006)
