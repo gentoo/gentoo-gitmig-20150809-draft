@@ -1,0 +1,50 @@
+--- typespeed-0.5.0/file.c
++++ typespeed-0.5.0/file.c
+@@ -97,6 +97,7 @@ loadwords(char *filename)
+ 
+ 	ignore = 1;
+ 
++chdir("GENTOO_WORDLIST_PATH");
+ 	if ((wordlist = fopen(filename, "r")) == NULL)
+ 		return 1;
+ 
+@@ -204,6 +205,7 @@ choose_wordfile(int operation)
+ 
+ 	drawscreen();
+ 	xcolor_set(5, NULL);
++chdir("GENTOO_WORDLIST_PATH");
+ 	if ((n = scandir(".", &namelist, iswordlist, alphasort)) < 0) {
+ 		fputs("scandir failed.\n", stderr);
+ 		exit(1);
+@@ -400,6 +402,7 @@ resetscorefile(char *sanafile)
+ 	strcpy(filetys, "high.");
+ 	strcat(filetys, sanafile);
+ 
++chdir("GENTOO_HIGHSCORE_PATH");
+ 	if ((highfile = fopen(filetys, "w")) != NULL) {
+ 		for (i = 0; i < 10; i++) {
+ 			fwrite(entry[i], sizeof(struct list), 1, highfile);
+@@ -432,6 +435,7 @@ loadhighscores(char *sanafile)
+ 	drawscreen();
+ 	xcolor_set(4, NULL);
+ 
++chdir("GENTOO_HIGHSCORE_PATH");
+ 	if ((highfile = fopen(filetys, "r")) != NULL) {
+ 		mvaddstr(1, 0,
+ 			 "Top10  (score) (name)                   (level)   (cps)  (tcps) (typoinfos)");
+@@ -500,6 +504,7 @@ addtop10(char *sanaf, struct stats *stat
+ 	strcpy(filet, "high.");
+ 	strcat(filet, sanaf);
+ 
++chdir("GENTOO_HIGHSCORE_PATH");
+ 	if ((highf = fopen(filet, "r")) != NULL)
+ 		fclose(highf);
+ 	else
+@@ -643,6 +648,7 @@ makescorefiles(void)
+ 	int n;
+ 	struct dirent **namelist;
+ 
++chdir("GENTOO_HIGHSCORE_PATH");
+ 	if ((n = scandir(".", &namelist, iswordlist, alphasort)) < 0) {
+ 		fputs("scandir failed.\n", stderr);
+ 		exit(1);

@@ -1,0 +1,16 @@
+Fix build failure where 'clock_t' isn't defined:
+
+cc -O2 -march=k8 -pipe -Wimplicit-function-declaration -Wall -c typespeed.c
+misc.c:47: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'timenow'
+make: *** [misc.o] Error 1
+
+--- misc.c
++++ misc.c
+@@ -23,6 +23,7 @@
+  * misc.c - misc functions
+  */
+ 
++#include <time.h>
+ #include <sys/time.h>
+ 
+ #include <curses.h>
