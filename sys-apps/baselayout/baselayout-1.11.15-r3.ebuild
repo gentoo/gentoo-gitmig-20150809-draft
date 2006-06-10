@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.15-r3.ebuild,v 1.2 2006/06/05 14:32:04 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.15-r3.ebuild,v 1.3 2006/06/10 17:02:37 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -539,21 +539,6 @@ pkg_postinst() {
 		/sbin/modules-update force &>/dev/null
 	else
 		rm -f ${ROOT}/etc/modules.conf
-	fi
-
-	# Enable shadow groups (we need ROOT=/ here, as grpconv only
-	# operate on / ...).
-	if [[ ${ROOT} == / && \
-	     ! -f /etc/gshadow && -x /usr/sbin/grpck && -x /usr/sbin/grpconv ]]
-	then
-		if /usr/sbin/grpck -r &>/dev/null; then
-			/usr/sbin/grpconv
-		else
-			echo
-			ewarn "Running 'grpck' returned errors.  Please run it by hand, and then"
-			ewarn "run 'grpconv' afterwards!"
-			echo
-		fi
 	fi
 
 	# This is also written in src_install (so it's in CONTENTS), but
