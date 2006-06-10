@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.14-r1.ebuild,v 1.13 2006/04/23 18:24:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.14-r1.ebuild,v 1.14 2006/06/10 16:54:22 uberlord Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic
 
@@ -213,6 +213,17 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	# Enable shadow groups (we need ROOT=/ here, as grpconv only
+	# operate on / ...).
+	if [[ ${ROOT} == / && ! -f /etc/gshadow ]] ; then
+		if grpck -r &>/dev/null; then
+			grpconv
+		else
+			ewarn "Running 'grpck' returned errors.  Please run it by hand, and then"
+			ewarn "run 'grpconv' afterwards!"
+		fi
+	fi
+
 	use pam || return 0
 
 	if [ "${FORCE_SYSTEMAUTH_UPDATE}" = "yes" ]; then
