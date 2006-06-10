@@ -1,0 +1,7 @@
+# ChangeLog for kde-misc/kxdocker-dcop
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker-dcop/ChangeLog,v 1.2 2006/06/10 15:58:06 swegener Exp $
+
+  10 Jun 2006; Sven Wegener <swegener@gentoo.org> ChangeLog:
+  Added missing ChangeLog contents.
+
