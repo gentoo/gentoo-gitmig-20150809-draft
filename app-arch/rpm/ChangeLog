@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.54 2006/06/03 23:19:22 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.55 2006/06/10 08:10:48 chrb Exp $
+
+*rpm-4.4.1-r1 (10 Jun 2006)
+
+  10 Jun 2006; Chris Bainbridge <chrb@gentoo.org> +rpm-4.4.1-r1.ebuild:
+  Mark ~x86 #135854. Add DEPEND on neon #135760.
 
 *rpm-4.4.1 (03 Jun 2006)
 
