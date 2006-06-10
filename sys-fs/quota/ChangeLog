@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.12 2006/04/29 01:09:54 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.13 2006/06/10 19:49:04 vapier Exp $
+
+  10 Jun 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/quota-3.13-configure-LANG.patch, quota-3.13.ebuild:
+  Fix building in et_EE locale #131432 by Andres Toomsalu.
 
   29 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-quota-3.06,
   files/digest-quota-3.06-r1, files/digest-quota-3.06-r2,

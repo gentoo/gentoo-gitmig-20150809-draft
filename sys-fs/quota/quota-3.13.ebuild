@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.13.ebuild,v 1.1 2005/08/17 00:28:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.13.ebuild,v 1.2 2006/06/10 19:49:04 vapier Exp $
 
 inherit eutils
 
@@ -24,6 +24,8 @@ S=${WORKDIR}/quota-tools
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-configure-LANG.patch #131432
 
 	# patch to prevent quotactl.2 manpage from being installed
 	# that page is provided by man-pages instead
