@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-1.9.1.ebuild,v 1.1 2006/05/06 12:46:44 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-1.9.1.ebuild,v 1.2 2006/06/10 13:35:34 dragonheart Exp $
 
-inherit gnome2
+inherit gnome2 fixheadtails
 
 DESCRIPTION="A gtk+ frontend for libgksu"
 HOMEPAGE="http://www.nongnu.org/gksu/"
@@ -33,3 +33,20 @@ DEPEND="${RDEPEND}"
 
 GCONF2="$(use_enable nls)"
 USE_DESTDIR="1"
+
+src_unpack() {
+	gnome2_src_unpack
+	ht_fix_file "${S}/gksu-migrate-conf.sh"
+}
+
+src_install() {
+	gnome2_src_install
+	chmod +x "${D}/usr/share/gksu/gksu-migrate-conf.sh"
+}
+
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	einfo 'updating configuration'
+	"${ROOT}"/usr/share/gksu/gksu-migrate-conf.sh
+}

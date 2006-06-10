@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.17 2006/05/06 12:46:44 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.18 2006/06/10 13:35:34 dragonheart Exp $
+
+  10 Jun 2006; Daniel Black <dragonheart@gentoo.org> gksu-1.9.1.ebuild:
+  few little QA fixes
 
 *gksu-1.9.1 (06 May 2006)
 
