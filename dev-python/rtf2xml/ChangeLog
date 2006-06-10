@@ -1,6 +1,6 @@
-# ChangeLog for dev-python/imaging
+# ChangeLog for dev-python/rtf2xml
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rtf2xml/ChangeLog,v 1.1 2006/05/28 12:14:50 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rtf2xml/ChangeLog,v 1.2 2006/06/10 15:52:31 swegener Exp $
 
 *rtf2xml-1.32 (28 May 2006)
 
