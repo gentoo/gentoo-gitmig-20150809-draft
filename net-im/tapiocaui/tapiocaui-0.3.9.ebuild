@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tapiocaui/tapiocaui-0.3.9.ebuild,v 1.1 2006/06/09 23:30:56 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tapiocaui/tapiocaui-0.3.9.ebuild,v 1.2 2006/06/10 19:16:45 genstef Exp $
 
 inherit eutils
 
@@ -27,17 +27,17 @@ RDEPEND="net-im/tapiocad
 	>=x11-libs/gtk+-2"
 
 pkg_setup() {
-	if ! built_with_use dev-libs/farsight-darcs jingle ; then
-		eerror "In order to use tapioca core and client, you need to have"
-		eerror "dev-libs/farsight-darcs emerged with 'jingle' flags. Please"
-		eerror "add that flag, re-emerge farsight and then tapioca-core-client"
-		die "dev-libs/farsight-darcs is missing jingle"
-	fi
 	if ! built_with_use media-plugins/gst-plugins-farsight jingle ; then
 		eerror "In order to use tapioca core and client, you need to have"
 		eerror "media-plugins/gst-plugins-farsight emerged with 'jingle' flags. Please"
-		eerror "add that flag, re-emerge gst-plugins-farsight and then tapioca-core-client"
+		eerror "add that flag, re-emerge gst-plugins-farsight and then tapiocaui"
 		die "media-plugins/gst-plugins-farsight is missing jingle"
+	fi
+	if ! built_with_use media-libs/farsight jingle ; then
+		eerror "In order to use tapioca core and client, you need to have"
+		eerror "media-libs/farsight emerged with 'jingle' flags. Please"
+		eerror "add that flag, re-emerge farsight and then tapiocaui"
+		die "media-libs/farsight is missing jingle"
 	fi
 }
 
