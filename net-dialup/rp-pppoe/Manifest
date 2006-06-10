@@ -1,19 +1,77 @@
-MD5 32169b5a8037adf533de81a282fa6857 ChangeLog 11522
-MD5 c82407d680d0e14d384f30bf412eddc2 files/digest-rp-pppoe-3.5-r11 293
-MD5 0f199889bf87a81f63b3f99cd7954d21 files/digest-rp-pppoe-3.7 467
-MD5 7b5599ac4dcfb47d7308905400348306 files/digest-rp-pppoe-3.8 293
+AUX rp-pppoe-3.5-dsa-557.patch 5581 RMD160 282029c6428d276419bf7088ae5ef9562625549f SHA1 9558efe6ffabca44a685cf8fb940d5a22ae880c3 SHA256 13c0324b84d17a41409f0d530cec85f0ae6ed2f72fba9fc2ca732babb4484d8a
 MD5 3ec97394e888b357e2c6020b3ab0155c files/rp-pppoe-3.5-dsa-557.patch 5581
+RMD160 282029c6428d276419bf7088ae5ef9562625549f files/rp-pppoe-3.5-dsa-557.patch 5581
+SHA256 13c0324b84d17a41409f0d530cec85f0ae6ed2f72fba9fc2ca732babb4484d8a files/rp-pppoe-3.5-dsa-557.patch 5581
+AUX rp-pppoe-3.5-gentoo-netscripts.patch 5180 RMD160 5dd98dddb75a3464633f1335b1be8691dca26443 SHA1 a0098beac6988b42ed12e5ce9859b5d6459b0973 SHA256 60ef54dbb18d285faa6104f782fea318d2e42d6385352697bf89b74c23942d1b
 MD5 4e9fa8d65d286e5e37e953e7c822c70e files/rp-pppoe-3.5-gentoo-netscripts.patch 5180
+RMD160 5dd98dddb75a3464633f1335b1be8691dca26443 files/rp-pppoe-3.5-gentoo-netscripts.patch 5180
+SHA256 60ef54dbb18d285faa6104f782fea318d2e42d6385352697bf89b74c23942d1b files/rp-pppoe-3.5-gentoo-netscripts.patch 5180
+AUX rp-pppoe-3.5-on-demand-with-plugin.patch 1058 RMD160 dfa230ac0b7d6d50eb92ff1dd820780254219eef SHA1 1d6ae82a00b004e181971343267b72aeb5b4933c SHA256 f817e9afa1b571f8b2c87ea2598f8eba5e3a3df040951888134550fe306c5a46
 MD5 d6678e5d124fa519195709326558af27 files/rp-pppoe-3.5-on-demand-with-plugin.patch 1058
+RMD160 dfa230ac0b7d6d50eb92ff1dd820780254219eef files/rp-pppoe-3.5-on-demand-with-plugin.patch 1058
+SHA256 f817e9afa1b571f8b2c87ea2598f8eba5e3a3df040951888134550fe306c5a46 files/rp-pppoe-3.5-on-demand-with-plugin.patch 1058
+AUX rp-pppoe-3.5-username-charset.patch 1991 RMD160 4fdad76eccedf01ca83b61da0a60661021d2e1b1 SHA1 ed0a15071d405a12aa5ec053cf91411278c43814 SHA256 2d4103aa289a3215277afe51f90b73e404808b69dcbf3f65c37781bf7cfff058
 MD5 fa756506d5f5af4fbd15dac93d9a1e69 files/rp-pppoe-3.5-username-charset.patch 1991
+RMD160 4fdad76eccedf01ca83b61da0a60661021d2e1b1 files/rp-pppoe-3.5-username-charset.patch 1991
+SHA256 2d4103aa289a3215277afe51f90b73e404808b69dcbf3f65c37781bf7cfff058 files/rp-pppoe-3.5-username-charset.patch 1991
+AUX rp-pppoe-3.7-gentoo-netscripts.patch 5218 RMD160 65f79efbf018d2deb98345041d4c7fdf39df5fba SHA1 7e3f4593b24af6b89e09f9810e2c8f2735173de4 SHA256 22e1dc000286a3d22c42163c85b49bbf7e9fb154aaf4becabb7b42dd777403c3
 MD5 1136fc6ab8a39846868abeecc59addfc files/rp-pppoe-3.7-gentoo-netscripts.patch 5218
+RMD160 65f79efbf018d2deb98345041d4c7fdf39df5fba files/rp-pppoe-3.7-gentoo-netscripts.patch 5218
+SHA256 22e1dc000286a3d22c42163c85b49bbf7e9fb154aaf4becabb7b42dd777403c3 files/rp-pppoe-3.7-gentoo-netscripts.patch 5218
+AUX rp-pppoe-3.7-on-demand-with-plugin.patch 1062 RMD160 18f124f6c794e7c93c6b0da13658aaf41df9d5ab SHA1 79d05febb6c8e4a54d75f01ba2a2b1fa938e2faa SHA256 58e0802f67e190a30ffaf2e791a0a2b4dfa68151b105b3c8e852ea80d2973b63
 MD5 10c9907b8295cb2bde533dc839be54dd files/rp-pppoe-3.7-on-demand-with-plugin.patch 1062
+RMD160 18f124f6c794e7c93c6b0da13658aaf41df9d5ab files/rp-pppoe-3.7-on-demand-with-plugin.patch 1062
+SHA256 58e0802f67e190a30ffaf2e791a0a2b4dfa68151b105b3c8e852ea80d2973b63 files/rp-pppoe-3.7-on-demand-with-plugin.patch 1062
+AUX rp-pppoe-3.7-plugin-options.patch 554 RMD160 a8dc4289950889713c93a3999124f78c1a343bc9 SHA1 cad5f83a3c0ef3567b25cf52306a61cc903a928e SHA256 43af25e72723d569a7b9f6684aa1f62816af538d7aec2797bcb36d73add1d37c
 MD5 d33f0962a5a8171533812f5701181421 files/rp-pppoe-3.7-plugin-options.patch 554
+RMD160 a8dc4289950889713c93a3999124f78c1a343bc9 files/rp-pppoe-3.7-plugin-options.patch 554
+SHA256 43af25e72723d569a7b9f6684aa1f62816af538d7aec2797bcb36d73add1d37c files/rp-pppoe-3.7-plugin-options.patch 554
+AUX rp-pppoe-3.7-username-charset.patch 1946 RMD160 347798d851b13f1e01f12805cb7f996d8c7c7310 SHA1 e2ccc9e44af650cc07e13b4d74f6ccb87dda4114 SHA256 641bffa798cdf97942e8f9794b87ed3c53d67994533670a501c0a8dd14a9b7e1
 MD5 161308d48042efd0ade491fd5429e4bc files/rp-pppoe-3.7-username-charset.patch 1946
+RMD160 347798d851b13f1e01f12805cb7f996d8c7c7310 files/rp-pppoe-3.7-username-charset.patch 1946
+SHA256 641bffa798cdf97942e8f9794b87ed3c53d67994533670a501c0a8dd14a9b7e1 files/rp-pppoe-3.7-username-charset.patch 1946
+AUX rp-pppoe-3.8-gentoo-netscripts.patch 5218 RMD160 9ba899b3282ce0bae119e35c5d610c697f11565a SHA1 b04de3b2417b4f0bfba1cea22d27bbb0456d7bce SHA256 4b1018f1f9d1ed7fb8ef6f63fced3850128536954c82273c10ab660b2daf849c
 MD5 338e60715ff505051dc5b3549936124f files/rp-pppoe-3.8-gentoo-netscripts.patch 5218
+RMD160 9ba899b3282ce0bae119e35c5d610c697f11565a files/rp-pppoe-3.8-gentoo-netscripts.patch 5218
+SHA256 4b1018f1f9d1ed7fb8ef6f63fced3850128536954c82273c10ab660b2daf849c files/rp-pppoe-3.8-gentoo-netscripts.patch 5218
+AUX rp-pppoe-3.8-plugin-options.patch 1364 RMD160 8af5cccf80a2c1b26fa50e4ee0da749dacc44222 SHA1 38868f162dc64c69673f1a85dc22bfcbbe7183dc SHA256 508bedec65a24eb876b2eb2151adce84efd51689e8472383debb01b29b82be13
 MD5 1938913a9606e60e4fa510512e8f206e files/rp-pppoe-3.8-plugin-options.patch 1364
+RMD160 8af5cccf80a2c1b26fa50e4ee0da749dacc44222 files/rp-pppoe-3.8-plugin-options.patch 1364
+SHA256 508bedec65a24eb876b2eb2151adce84efd51689e8472383debb01b29b82be13 files/rp-pppoe-3.8-plugin-options.patch 1364
+AUX rp-pppoe-3.8-username-charset.patch 1946 RMD160 9aa18182f5a611f54041162976b4f33740439443 SHA1 423b76327e679b48cfee6dca6d611012680b2830 SHA256 21209268903d2c359e5eb4547ab6417f0c63d41791fe413728d690ed879c93bd
 MD5 1d75436eae3217598ce13b690f101978 files/rp-pppoe-3.8-username-charset.patch 1946
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+RMD160 9aa18182f5a611f54041162976b4f33740439443 files/rp-pppoe-3.8-username-charset.patch 1946
+SHA256 21209268903d2c359e5eb4547ab6417f0c63d41791fe413728d690ed879c93bd files/rp-pppoe-3.8-username-charset.patch 1946
+DIST ppp-2.4.3.tar.gz 688092 RMD160 845821496bacb07d93bb7572a171854853ef722b SHA1 5e2789f4dedc81943fa9f94c840cccc2407056f7 SHA256 1e0fddb5f53613dd14ab10b25435e88092fed1eff09b4ac4448d5be01f3b0b11
+DIST rp-pppoe-3.5.tar.gz 189321
+DIST rp-pppoe-3.7.tar.gz 212326 RMD160 c4700c4871b85d38010d362fab5483329828ccdd SHA1 dc62480b11b48694ac32b851121a67d5082650f0 SHA256 6647e36d5164268ee469c771ee24f3f5fc84112396510d1f79be994b2d125de7
+DIST rp-pppoe-3.8.tar.gz 212931 RMD160 039798154acae9e7a066172f23904d766ba68a9a SHA1 d9a4346701e580b4a6049a940557b38533f9e8f7 SHA256 d916e9cfe1e62395f63a5361936fa855f6d0f0a37dc7227b394cdb725f553479
+EBUILD rp-pppoe-3.5-r11.ebuild 2404 RMD160 778fbfc594e0d96f5e60016161abdd0188a4f9c4 SHA1 4c80efef7827ae0161edf8ae194b99aac1dfda97 SHA256 6b8a34f44463f4501fd1f7c3ff26516ab012960b100e1982034bfd6e32e6e070
 MD5 d728978d28ed0d7042bac5857e5f62ff rp-pppoe-3.5-r11.ebuild 2404
+RMD160 778fbfc594e0d96f5e60016161abdd0188a4f9c4 rp-pppoe-3.5-r11.ebuild 2404
+SHA256 6b8a34f44463f4501fd1f7c3ff26516ab012960b100e1982034bfd6e32e6e070 rp-pppoe-3.5-r11.ebuild 2404
+EBUILD rp-pppoe-3.7.ebuild 3087 RMD160 086a80a6c07a7dcc25a69a89a5c68b4caba030bc SHA1 952a6e4ceee843324bf251199dddfc3f074f4eea SHA256 b0de30dbafb4684ae4e65bb1f51a0bc5c7ff8bd82b516b5c560e62140bb03e11
 MD5 8bdaf7efabc8d32ad8e4c0b0684904b2 rp-pppoe-3.7.ebuild 3087
-MD5 76abe849bcea513fdf95ac21fbf266e1 rp-pppoe-3.8.ebuild 2943
+RMD160 086a80a6c07a7dcc25a69a89a5c68b4caba030bc rp-pppoe-3.7.ebuild 3087
+SHA256 b0de30dbafb4684ae4e65bb1f51a0bc5c7ff8bd82b516b5c560e62140bb03e11 rp-pppoe-3.7.ebuild 3087
+EBUILD rp-pppoe-3.8.ebuild 2941 RMD160 113763a4d0aa86e92d33ae8891295fe838a43063 SHA1 0088cb159742d3911b5de871910885ef4d8257f1 SHA256 fea916bd7e0eabecd13d0258d6e80beebcb8e3f9564826cbd8472663650422d7
+MD5 210935d140d78e9f7ef0774562394667 rp-pppoe-3.8.ebuild 2941
+RMD160 113763a4d0aa86e92d33ae8891295fe838a43063 rp-pppoe-3.8.ebuild 2941
+SHA256 fea916bd7e0eabecd13d0258d6e80beebcb8e3f9564826cbd8472663650422d7 rp-pppoe-3.8.ebuild 2941
+MISC ChangeLog 11614 RMD160 1988361dabdf09c20593c1623a7a674835a4dde0 SHA1 fdf65a0d120ec2c2a73a0476b090d7e4ea733da1 SHA256 96a05e10d6159eb1d25ceb2d2e6fd6adaefdd4c3326ea63deed36e24e5b14acd
+MD5 143504e2a3486b9c1d3f2475f264ecb1 ChangeLog 11614
+RMD160 1988361dabdf09c20593c1623a7a674835a4dde0 ChangeLog 11614
+SHA256 96a05e10d6159eb1d25ceb2d2e6fd6adaefdd4c3326ea63deed36e24e5b14acd ChangeLog 11614
+MISC metadata.xml 163 RMD160 df94c60cc0bb7abe5913b464a33966b142b2fe1e SHA1 d8332605fd22c32f15438bbdf24aa622c3d2738a SHA256 1137a0fd866641cf719b0c2e9e77ca9fa4541a42f2cc851fe4659cf2677acca3
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+RMD160 df94c60cc0bb7abe5913b464a33966b142b2fe1e metadata.xml 163
+SHA256 1137a0fd866641cf719b0c2e9e77ca9fa4541a42f2cc851fe4659cf2677acca3 metadata.xml 163
+MD5 c82407d680d0e14d384f30bf412eddc2 files/digest-rp-pppoe-3.5-r11 293
+RMD160 3747d518b53df1234dba3df0efa8abb49abe437f files/digest-rp-pppoe-3.5-r11 293
+SHA256 1180e73f30d516f3cdc1f7c0ae5888635c553eb749a55a4b0ea2199b71be1f6a files/digest-rp-pppoe-3.5-r11 293
+MD5 0f199889bf87a81f63b3f99cd7954d21 files/digest-rp-pppoe-3.7 467
+RMD160 d90ed138a08ca1c99f0c00853bfc98970ab2708c files/digest-rp-pppoe-3.7 467
+SHA256 07d7a65c3bcaff1e95d3bdbccbebb0a8a24a7fee61353f0c694e4b65190a9ab8 files/digest-rp-pppoe-3.7 467
+MD5 c345665140f7ae9908f3256aee68a72f files/digest-rp-pppoe-3.8 467
+RMD160 7b4162f713393d8f869d7436d009f2ebe2d5c38a files/digest-rp-pppoe-3.8 467
+SHA256 9f689e517bfc64f62e853de28c0b87a95e877d2ecf076ec4d556663820303ebe files/digest-rp-pppoe-3.8 467
