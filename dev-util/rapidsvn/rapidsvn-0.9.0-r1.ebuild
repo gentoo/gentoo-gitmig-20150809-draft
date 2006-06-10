@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.0-r1.ebuild,v 1.4 2006/05/28 19:52:26 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.0-r1.ebuild,v 1.5 2006/06/10 09:21:51 hansmi Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.rapidsvn.org/download/${P}.tar.gz
 		mirror://gentoo/nodoc-configure.patch.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="doc static"
 
 DEPEND="~net-misc/neon-0.24.7
