@@ -6,7 +6,7 @@ Index: compiler.eselect.in
  
  	set_env ${preopts} || die -q "Could not set ${ENV_FILE}"
  
-+	env-update
++	do_action env update &> /dev/null
 +
  	echo "Successfully set compiler for ${ctarget} to ${profile}."
  }
