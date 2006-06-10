@@ -1,9 +1,7 @@
-#lang.desc
+# lang.desc
 #
-#This is a list of all language tags. Some of these are supported in Gentoo, and 
-#some are not.
-#
-#Last edited by ZhEN <zhen@gentoo.org>, November 7, 2002
+# This is a list of all language tags. Some of these are supported in Gentoo, and
+# some are not.
 
 ab - Abkhazian
 ace - Achinese
@@ -19,19 +17,19 @@ ale - Aleut
 am - Amharic
 i-ami - Ami
 ar - Arabic
-ar-dz -  Algerian Arabic
+ar-dz - Algerian Arabic
 ar-eg - Egyptian Arabic
-ar-iq - Iraqi Arabic 
-ar-jo - Jordanian Arabic 
+ar-iq - Iraqi Arabic
+ar-jo - Jordanian Arabic
 ar-kw - Kuwait Arabic
-ar-lb - Lebanese Arabic 
-ar-ly - Libyan Arabic 
+ar-lb - Lebanese Arabic
+ar-ly - Libyan Arabic
 ar-ma - Moroccan Arabic
-ar-om - Omani Arabic 
+ar-om - Omani Arabic
 ar-qa - Qatari Arabic
-ar-sa - Sauda Arabic 
-ar-sy - Syrian Arabic 
-ar-tn - Tunisian Arabic 
+ar-sa - Sauda Arabic
+ar-sy - Syrian Arabic
+ar-tn - Tunisian Arabic
 ar-ye - Yemen Arabic
 arc - Aramaic
 arp - Arapaho
@@ -84,9 +82,9 @@ zh - Chinese
 zh-mo - Macau Chinese
 zh-sg - Singapore Chinese
 zh-min-nan - Southern Hokkien
-zh-wuu - Shanghaiese 
-zh-xiang - Hunanese 
-zh-gan - Gan 
+zh-wuu - Shanghaiese
+zh-xiang - Hunanese
+zh-gan - Gan
 zh-yue - Cantonese
 chn - Chinook Jargon
 chp - Chipewyan
@@ -121,15 +119,15 @@ egy - Ancient Egyptian
 eka - Ekajuk
 elx - Elamite
 en - English
-en-ca - Canadian English 
-en-gb - UK English 
-en-ie - Irish English 
-en-jm - Jamaican English 
-en-nz - New Zealand English 
-en-ph - Philippine English 
+en-ca - Canadian English
+en-gb - UK English
+en-ie - Irish English
+en-jm - Jamaican English
+en-nz - New Zealand English
+en-ph - Philippine English
 en-tt - Trinidad English
-en-us - US English 
-en-za - South African English 
+en-us - US English
+en-za - South African English
 en-zw - Zimbabwe English
 enm - Old English (1100-1500)
 ang - Old English (ca.450-1100)
@@ -144,9 +142,9 @@ fj - Fijian
 fi - Finnish
 fon - Fon
 fr - French
-fr-ca - Canadian French 
-fr-ch - Swiss French 
-fr-lu - Luxembourg French 
+fr-ca - Canadian French
+fr-ch - Swiss French
+fr-lu - Luxembourg French
 fr-mc - Monaco French
 frm - Middle French (ca.1400-1600)
 fro - Old French (842-ca.1400)
@@ -369,7 +367,7 @@ es-cl - Chilean Spanish
 es-co - Colombian Spanish
 es-do - Dominican Spanish
 es-ec - Ecuadorian Spanish
-es-es - Spain Spanish 
+es-es - Spain Spanish
 es-gt - Guatemalan Spanish
 es-hn - Honduran Spanish
 es-mx - Mexican Spanish
