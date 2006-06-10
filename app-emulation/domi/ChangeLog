@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/domi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/domi/ChangeLog,v 1.5 2006/06/10 14:16:36 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/domi/ChangeLog,v 1.6 2006/06/10 14:17:58 chrb Exp $
+
+  10 Jun 2006; Chris Bainbridge <chrb@gentoo.org> -domi-20060406-r2.ebuild:
+  remove old version
 
   10 Jun 2006; Chris Bainbridge <chrb@gentoo.org> domi-20060406-r3.ebuild:
   Don't run tests as they require root privs. Bug #136267.
