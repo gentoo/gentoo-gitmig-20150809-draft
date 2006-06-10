@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/watchdog
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.10 2006/05/26 12:18:38 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.11 2006/06/10 09:24:24 hansmi Exp $
+
+  10 Jun 2006; Michael Hanselmann <hansmi@gentoo.org>
+  watchdog-5.2.5_p1.ebuild:
+  Stable on ppc.
 
   26 May 2006; Henrik Brix Andersen <brix@gentoo.org>
   watchdog-5.2.5_p1.ebuild:
