@@ -1,6 +1,6 @@
 # Copyright 2000-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.10.ebuild,v 1.6 2006/05/26 14:54:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.10.ebuild,v 1.7 2006/06/10 13:31:25 swegener Exp $
 
 inherit eutils qt3 mono python
 
@@ -102,6 +102,9 @@ src_compile() {
 	then
 		myconf="${myconf} --enable-python --enable-dbus --enable-python-dbus"
 	fi
+
+	# We need to unset DISPLAY, else the configure script might have problems detecting the pygtk module
+	unset DISPLAY
 
 	econf \
 		--localstatedir=/var \
