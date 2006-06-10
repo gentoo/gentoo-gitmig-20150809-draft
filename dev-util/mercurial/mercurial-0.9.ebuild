@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.9.ebuild,v 1.3 2006/06/01 17:25:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.9.ebuild,v 1.4 2006/06/10 15:04:41 agriffis Exp $
 
 inherit bash-completion distutils
 
@@ -13,11 +13,13 @@ SRC_URI="http://www.selenic.com/mercurial/release/${PN}-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ~amd64 ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="doc"
 
 DEPEND=">=dev-lang/python-2.3
-	app-text/asciidoc
-	app-text/xmlto"
+	doc? (
+		app-text/asciidoc
+		app-text/xmlto
+	)"
 
 if [[ ${PV} == *_p* ]]; then
 	S=${WORKDIR}/mercurial-snapshot
@@ -28,13 +30,15 @@ fi
 src_compile() {
 	distutils_src_compile
 
-	cd doc
-	local x
-	for x in *.?.txt; do
-		asciidoc -d manpage -b docbook $x || die
-		xmlto man ${x%txt}xml || die
-		sed -nie '/./p' ${x%.*} || die
-	done
+	if use doc; then
+		cd doc
+		local x
+		for x in *.?.txt; do
+			asciidoc -d manpage -b docbook $x || die
+			xmlto man ${x%txt}xml || die
+			sed -nie '/./p' ${x%.*} || die
+		done
+	fi
 }
 
 src_install() {
@@ -45,7 +49,9 @@ src_install() {
 	dodoc CONTRIBUTORS PKG-INFO README *.txt
 	cp hgweb*.cgi ${D}/usr/share/doc/${PF}/
 	cp -r contrib ${D}/usr/share/doc/${PF}/
-	doman doc/*.?
+	if use doc; then
+		doman doc/*.?
+	fi
 }
 
 pkg_postinst() {
