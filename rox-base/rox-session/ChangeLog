@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-session
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.6 2006/04/16 13:04:46 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.7 2006/06/10 05:06:11 mr_bones_ Exp $
+
+  10 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  rox-session-0.27.ebuild:
+  only one inherit line is allowed
 
 *rox-session-0.27 (16 Apr 2006)
 
