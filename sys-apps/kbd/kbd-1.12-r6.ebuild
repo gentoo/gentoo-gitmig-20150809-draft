@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r6.ebuild,v 1.1 2006/03/16 03:32:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r6.ebuild,v 1.2 2006/06/10 19:47:24 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -45,6 +45,8 @@ src_unpack() {
 
 	# Other patches from RH
 	epatch "${FILESDIR}"/${PN}-1.08-terminal.patch
+
+	epatch "${FILESDIR}"/${P}-configure-LANG.patch #128253
 
 	# Fixes a problem where loadkeys matches dvorak the dir, and not the
 	# .map inside
