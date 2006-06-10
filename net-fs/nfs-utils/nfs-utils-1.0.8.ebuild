@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.8.ebuild,v 1.1 2006/06/10 19:14:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.8.ebuild,v 1.2 2006/06/10 19:16:25 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -34,26 +34,13 @@ src_unpack() {
 
 	epatch "${DISTDIR}"/nfs-utils-1.0.8-CITI_NFS4_ALL-2.dif
 	epatch "${FILESDIR}"/${PN}-1.0.7-man-pages.patch #107991
-
-return 0
-	#epatch "${FILESDIR}"/${P}-gcc4.patch #88421
-	#epatch "${FILESDIR}"/${P}-no-stripping.patch
-
-	# getrpcbynumber_r is not in the SuSv3 spec. disable it for uClibc
-	#epatch "${FILESDIR}"/nfs-utils-1.0.6-uclibc.patch
-
-	# since the usn36 patch is now integrated (at least the parts we care about)
-	# into 1.0.7, we need to re-apply the rquoted patch (04 Feb 2005 agriffis)
-	#epatch "${FILESDIR}"/nfs-utils-0.3.3-rquotad-overflow.patch
-
-	#sed -i 's:@mandir@:$(install_prefix)@mandir@:' config.mk.in
 }
 
 src_compile() {
-#		--disable-rquotad 
 	econf \
 		--mandir=/usr/share/man \
 		--with-statedir=/var/lib/nfs \
+		--disable-rquotad \
 		--enable-nfsv3 \
 		--enable-secure-statd \
 		$(use_with tcpd tcp-wrappers) \
@@ -61,8 +48,6 @@ src_compile() {
 		$(use_enable kerberos gss) \
 		|| die "Configure failed"
 
-	# parallel make fails for depend target
-#	emake -j1 depend || die "failed to make depend"
 	emake || die "Failed to compile"
 }
 
