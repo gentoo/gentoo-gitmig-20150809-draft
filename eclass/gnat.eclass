@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.16 2006/06/02 14:33:47 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.17 2006/06/10 16:19:54 swegener Exp $
 #
 # This eclass provides the framework for ada lib installation with the split and
 # SLOTted gnat compilers (gnat-xxx, gnatbuild.eclass). Each lib gets built once
@@ -41,7 +41,7 @@ AdalibLibTop=${PREFIX}/lib/ada
 SL=${WORKDIR}/LocalSource
 
 # DL is a "localized destination", where ARCH/SLOT dependent binaries should be
-# installed in lib_install 
+# installed in lib_install
 DL=${WORKDIR}/LocalDest
 
 # location of cleaned-up eselect script, for sourcing

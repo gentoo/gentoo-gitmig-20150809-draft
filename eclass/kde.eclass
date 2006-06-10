@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.163 2006/06/08 10:39:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.164 2006/06/10 16:19:54 swegener Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -95,7 +95,7 @@ kde_src_unpack() {
 	# kde-specific stuff stars here
 
 	[[ -z ${KDE_S} ]] && KDE_S="${S}"
-	
+
 	# if extragear-like packaging is enabled, set the translations and the
 	# documentation depending on LINGUAS settings
 	if [[ -n ${USE_KEG_PACKAGING} ]]; then

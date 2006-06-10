@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.286 2006/06/09 18:18:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.287 2006/06/10 16:19:54 swegener Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -497,15 +497,15 @@ libc_has_ssp() {
 
 	# Check for gcc-4.x style ssp support
 	if  [[ -n $(readelf -s "${my_libc}" 2>/dev/null | \
-	            grep 'FUNC.*GLOBAL.*__stack_chk_fail') ]]
+				grep 'FUNC.*GLOBAL.*__stack_chk_fail') ]]
 	then
 		return 0
 	else
 		# Check for gcc-3.x style ssp support
 		if  [[ -n $(readelf -s "${my_libc}" 2>/dev/null | \
-		            grep 'OBJECT.*GLOBAL.*__guard') ]] && \
-		    [[ -n $(readelf -s "${my_libc}" 2>/dev/null | \
-		            grep 'FUNC.*GLOBAL.*__stack_smash_handler') ]]
+					grep 'OBJECT.*GLOBAL.*__guard') ]] && \
+			[[ -n $(readelf -s "${my_libc}" 2>/dev/null | \
+					grep 'FUNC.*GLOBAL.*__stack_smash_handler') ]]
 		then
 			return 0
 		elif is_crosscompile ; then
@@ -1289,7 +1289,7 @@ gcc_do_make() {
 		# resulting binaries natively ^^;
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-all}
 	elif [[ $(tc-arch) == "x86" || $(tc-arch) == "amd64" || $(tc-arch) == "ppc64" ]] \
-	     && [[ ${GCCMAJOR}.${GCCMINOR} > 3.3 ]]
+	 	&& [[ ${GCCMAJOR}.${GCCMINOR} > 3.3 ]]
 	then
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-profiledbootstrap}
 	else
@@ -1393,7 +1393,7 @@ gcc_do_filter_flags() {
 		case $(tc-arch) in
 			x86)   filter-flags '-mtune=*';;
 			amd64) filter-flags '-mtune=*'
-			       replace-cpu-flags k8 athlon64 opteron i686;;
+			   	replace-cpu-flags k8 athlon64 opteron i686;;
 		esac
 		;;
 	3.4|4.*)
@@ -2101,44 +2101,44 @@ do_eselect_compiler() {
 		return 0
 	fi
 
-    for abi in $(get_all_abis) ; do
-        local ctarget=$(get_abi_CHOST ${abi})
-        local current_specs=$(env -i eselect compiler show ${ctarget} | cut -f2 -d/)
+	for abi in $(get_all_abis) ; do
+		local ctarget=$(get_abi_CHOST ${abi})
+		local current_specs=$(env -i eselect compiler show ${ctarget} | cut -f2 -d/)
 
-        if [[ -n ${current_specs} && ${current_specs} != "(none)" ]] && eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${current_specs} &> /dev/null; then
-            einfo "The following compiler profile has been activated based on your previous profile:"
-            einfo "${CTARGET}-${GCC_CONFIG_VER}/${current_specs}"
-        else
-            # We couldn't choose based on the old specs, so fall back on vanilla/hardened based on USE
+		if [[ -n ${current_specs} && ${current_specs} != "(none)" ]] && eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${current_specs} &> /dev/null; then
+			einfo "The following compiler profile has been activated based on your previous profile:"
+			einfo "${CTARGET}-${GCC_CONFIG_VER}/${current_specs}"
+		else
+			# We couldn't choose based on the old specs, so fall back on vanilla/hardened based on USE
 
-            local spec
-            if use hardened ; then
-                spec="hardened"
-            else
-                spec="vanilla"
-            fi
+			local spec
+			if use hardened ; then
+				spec="hardened"
+			else
+				spec="vanilla"
+			fi
 
-            local profile
-            local isset=0
-            for profile in "${current_specs%-*}-${spec}" "${abi}-${spec}" "${spec}" ; do
-                if eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${profile} &> /dev/null ; then
-                    ewarn "The newly installed version of gcc does not have a profile that matches the name of your"
-                    ewarn "currently selected profile for ${ctarget}, so we have enabled the following instead:"
-                    ewarn "${CTARGET}-${GCC_CONFIG_VER}/${profile}"
-                    ewarn "If this is incorrect, please use 'eselect compiler set' to"
-                    ewarn "select another profile."
+			local profile
+			local isset=0
+			for profile in "${current_specs%-*}-${spec}" "${abi}-${spec}" "${spec}" ; do
+				if eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${profile} &> /dev/null ; then
+					ewarn "The newly installed version of gcc does not have a profile that matches the name of your"
+					ewarn "currently selected profile for ${ctarget}, so we have enabled the following instead:"
+					ewarn "${CTARGET}-${GCC_CONFIG_VER}/${profile}"
+					ewarn "If this is incorrect, please use 'eselect compiler set' to"
+					ewarn "select another profile."
 
-                    isset=1
-                    break
-                fi
-            done
+					isset=1
+					break
+				fi
+			done
 
-            if [[ ${isset} == 0 ]] ; then
-                eerror "We were not able to automatically set the current compiler for ${ctarget}"
-                eerror "to your newly emerged gcc.  Please use 'eselect compiler set'"
-                eerror "to select your compiler."
-            fi
-        fi
+			if [[ ${isset} == 0 ]] ; then
+				eerror "We were not able to automatically set the current compiler for ${ctarget}"
+				eerror "to your newly emerged gcc.  Please use 'eselect compiler set'"
+				eerror "to select your compiler."
+			fi
+		fi
 	done
 }
 
@@ -2156,7 +2156,7 @@ gcc_version_patch() {
 	else
 		version_string="$1 ($2)"
 		sed -i -e "s~\(const char version_string\[\] = \"\).*\(\".*\)~\1$version_string\2~" \
-		        "${S}"/gcc/version.c || die "failed to update version.c with Gentoo branding."
+				"${S}"/gcc/version.c || die "failed to update version.c with Gentoo branding."
 	fi
 	sed -i -e 's~gcc\.gnu\.org\/bugs\.html~bugs\.gentoo\.org\/~'\
 	"${S}"/gcc/version.c || die "Failed to change the bug URL"

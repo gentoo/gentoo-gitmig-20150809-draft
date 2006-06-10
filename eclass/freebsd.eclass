@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.7 2006/05/09 16:50:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.8 2006/06/10 16:19:54 swegener Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -84,7 +84,7 @@ freebsd_src_compile() {
 			5.*) mymakeopts="${mymakeopts} NOPROFILE= " ;;
 			6.*) mymakeopts="${mymakeopts} NO_PROFILE= " ;;
 		esac
-	
+
 	mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS="
 
 	# Many things breaks when using ricer flags here
@@ -104,7 +104,7 @@ freebsd_src_install() {
 		esac
 
 	mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS="
-	
+
 	[[ -z ${BMAKE} ]] && BMAKE="$(freebsd_get_bmake)"
 
 	bsdmk_src_install

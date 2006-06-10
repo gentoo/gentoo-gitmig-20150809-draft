@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db-use.eclass,v 1.5 2006/05/20 13:17:54 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db-use.eclass,v 1.6 2006/06/10 16:19:54 swegener Exp $
 # This is a common location for functions that aid the use of sys-libs/db
 
 inherit versionator multilib
@@ -30,7 +30,7 @@ db_findver() {
 		done
 		return 1
 	fi
-	
+
 	PKG="$(best_version $1)"
 	VER="$(get_version_component_range 1-2 "${PKG/*db-/}")"
 	if [ -d /usr/include/db$(db_ver_to_slot "$VER") ]; then

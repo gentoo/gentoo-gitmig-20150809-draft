@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.25 2006/06/04 19:15:09 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.26 2006/06/10 16:19:54 swegener Exp $
 
 inherit multilib
 
@@ -8,7 +8,7 @@ inherit multilib
 # information about where certain interfaces are located.
 
 # NOTE: If you use this, be sure you use the need_* call after you have
-# defined DEPEND and RDEPEND. Also note that you can not rely on the 
+# defined DEPEND and RDEPEND. Also note that you can not rely on the
 # automatic RDEPEND=DEPEND that portage does if you use this eclass.
 # See bug 107127 for more information.
 

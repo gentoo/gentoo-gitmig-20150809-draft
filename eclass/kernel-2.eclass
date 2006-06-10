@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.178 2006/05/28 11:28:52 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.179 2006/06/10 16:19:54 swegener Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -373,7 +373,7 @@ unpack_2_6() {
 
 	make -s include/linux/version.h ${xmakeopts} 2>/dev/null \
 		|| die "make include/linux/version.h failed"
-	rm -f .config >/dev/null 
+	rm -f .config >/dev/null
 }
 
 universal_unpack() {
