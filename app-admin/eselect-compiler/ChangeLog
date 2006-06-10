@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-compiler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.22 2006/06/09 19:10:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.23 2006/06/10 12:41:58 truedfx Exp $
+
+  10 Jun 2006; Harald van Dĳk <truedfx@gentoo.org>
+  eselect-compiler-2.0.0_rc1-r6.ebuild:
+  Move /lib/cpp creation to pkg_postinst for bug #135862
 
 *eselect-compiler-2.0.0_rc1-r6 (09 Jun 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1-r6.ebuild,v 1.1 2006/06/09 19:10:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1-r6.ebuild,v 1.2 2006/06/10 12:41:58 truedfx Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -39,6 +39,9 @@ pkg_setup() {
 }
 
 pkg_postinst() {
+	# For bug #135749
+	cp -f "${ROOT}"/usr/libexec/eselect/compiler/compiler-wrapper "${ROOT}"/lib/cpp
+
 	# Activate the profiles
 	if [[ ! -f "${ROOT}/etc/eselect/compiler/selection.conf" ]] ; then
 		ewarn "This looks like the first time you are installing eselect-compiler.  We are"
@@ -129,10 +132,6 @@ src_unpack() {
 src_install() {
 	dodoc README
 	make DESTDIR="${D}" install || die
-
-	# For bug #135749
-	exeinto /lib
-	newexe ${D}/usr/libexec/eselect/compiler/compiler-wrapper cpp
 
 	doenvd ${FILESDIR}/25eselect-compiler
 
