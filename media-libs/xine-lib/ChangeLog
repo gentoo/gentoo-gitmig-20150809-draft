@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.365 2006/06/10 11:06:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.366 2006/06/10 11:16:51 flameeyes Exp $
+
+  10 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.1.1-r3.ebuild, xine-lib-1.1.2_pre20060328-r9.ebuild,
+  xine-lib-1.1.2_pre20060328-r11.ebuild:
+  Disable nls for all older versions, as it's broken and doesn't work anyway.
 
 *xine-lib-1.1.2_pre20060606-r1 (10 Jun 2006)
 
