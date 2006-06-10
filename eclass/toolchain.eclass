@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.287 2006/06/10 16:19:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.288 2006/06/10 23:08:43 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -483,33 +483,30 @@ glibc_have_pie() {
 # This function determines whether or not libc has been patched with stack
 # smashing protection support.
 libc_has_ssp() {
-	local libc_prefix
-	[[ $(tc-arch) == "ppc64" ]] && [[ -z ${ABI} ]] && libc_prefix="lib64"
-	libc_prefix=${libc_prefix:-$(get_libdir)}
-	libc_prefix=${libc_prefix:-lib}
+	[[ ${ROOT} != "/" ]] && return 0
 
+	# lib hacks taken from sandbox configure
 	echo 'int main(){}' > "${T}"/libctest.c
-	gcc "${T}"/libctest.c -lc -o libctest
-	local libc_file=$(readelf -d libctest | grep 'NEEDED.*\[libc\.so[0-9\.]*\]' | awk '{print $NF}')
-	libc_file=${libc_file:1:${#libc_file}-2}
+	gcc "${T}"/libctest.c -lc -o libctest -Wl,-verbose &> "${T}"/libctest.log || return 1
+	local libc_file=$(awk '/attempt to open/ { if (($4 ~ /\/libc\.so/) && ($5 == "succeeded")) LIBC = $4; }; END {print LIBC}' "${T}"/libctest.log)
 
-	local my_libc=${ROOT}/${libc_prefix}/${libc_file}
+	[[ -z ${libc_file} ]] && die "Unable to find a libc !?"
 
 	# Check for gcc-4.x style ssp support
-	if  [[ -n $(readelf -s "${my_libc}" 2>/dev/null | \
+	if  [[ -n $(readelf -s "${libc_file}" 2>/dev/null | \
 				grep 'FUNC.*GLOBAL.*__stack_chk_fail') ]]
 	then
 		return 0
 	else
 		# Check for gcc-3.x style ssp support
-		if  [[ -n $(readelf -s "${my_libc}" 2>/dev/null | \
+		if  [[ -n $(readelf -s "${libc_file}" 2>/dev/null | \
 					grep 'OBJECT.*GLOBAL.*__guard') ]] && \
-			[[ -n $(readelf -s "${my_libc}" 2>/dev/null | \
+			[[ -n $(readelf -s "${libc_file}" 2>/dev/null | \
 					grep 'FUNC.*GLOBAL.*__stack_smash_handler') ]]
 		then
 			return 0
 		elif is_crosscompile ; then
-			die "'${my_libc}' was detected w/out ssp, that sucks (a lot)"
+			die "'${libc_file}' was detected w/out ssp, that sucks (a lot)"
 		else
 			return 1
 		fi
