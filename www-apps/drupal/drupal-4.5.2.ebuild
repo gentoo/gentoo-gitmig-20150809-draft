@@ -1,17 +1,18 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.5.2.ebuild,v 1.10 2005/08/28 20:07:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.5.2.ebuild,v 1.11 2006/06/10 11:52:36 vapier Exp $
 
 inherit webapp eutils
 
-DESCRIPTION="Drupal is a PHP-based open-source platform and content management system for building dynamic web sites offering a broad range of features and services; including user administration, publishing workflow, discussion capabilities, news aggregation, metadata functionalities using controlled vocabularies and XML publishing for content sharing purposes. Equipped with a powerful blend of features and configurability, Drupal can support a diverse range of web projects ranging from personal weblogs to large community-driven sites."
-HOMEPAGE="http://drupal.org"
-IUSE="minimal"
 MOD_PV="4.5.0"
 
+DESCRIPTION="PHP-based open-source platform and content management system"
+HOMEPAGE="http://drupal.org/"
 SRC_URI="http://drupal.org/files/projects/${P}.tar.gz"
+
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~amd64"
+KEYWORDS="~alpha ~amd64 ~x86"
+IUSE="minimal"
 
 DEPEND="virtual/php"
 
