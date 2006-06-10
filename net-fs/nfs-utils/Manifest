@@ -1,58 +1,83 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3a73784118ede5f34ef6bcd450fba792 ChangeLog 10942
-RMD160 3a91e8fb65dd6e85d210b332feb3136d4f9c4e19 ChangeLog 10942
-SHA256 56805ab83900215b436ba469d02056793cbaca54be478e6701dba7c79e66b7d7 ChangeLog 10942
+AUX exports 66 RMD160 0a61ad40dc321be39fb54d5b9fe717caa714e878 SHA1 52ed6b74643e084cfc17ff4638c2e06c86602034 SHA256 5d6356df546682e2f1a87131d1bb67de9b1f9a34d3a5742343dc64e890cf71d5
+MD5 a02eed87e5d581e56feb0f6dfd18e6df files/exports 66
+RMD160 0a61ad40dc321be39fb54d5b9fe717caa714e878 files/exports 66
+SHA256 5d6356df546682e2f1a87131d1bb67de9b1f9a34d3a5742343dc64e890cf71d5 files/exports 66
+AUX nfs 6863 RMD160 b10f9fabdd7ebc778467f304ffc4021207bbd929 SHA1 4da6493868e921a10d6462687725a164f56b462f SHA256 e17fb64add8c70e8b891e6e074f1fd6f2af0ba471b2329f91787dacce6411f66
+MD5 1d8228f424a87830f927ea90b9ad2b7f files/nfs 6863
+RMD160 b10f9fabdd7ebc778467f304ffc4021207bbd929 files/nfs 6863
+SHA256 e17fb64add8c70e8b891e6e074f1fd6f2af0ba471b2329f91787dacce6411f66 files/nfs 6863
+AUX nfs-utils-0.3.3-rquotad-overflow.patch 1243 RMD160 6ee6c4780080fc85ab51064a816fb2fa505ea0c5 SHA1 4078e806388cdcea5218e10d2ba5a1cf1e1fcb41 SHA256 eab80cae9dca3c9682f124981ae79cb5f953aff53a4f7e456df6dc15513cc568
+MD5 3c693e012dcb68827b8f82cc98fa129b files/nfs-utils-0.3.3-rquotad-overflow.patch 1243
+RMD160 6ee6c4780080fc85ab51064a816fb2fa505ea0c5 files/nfs-utils-0.3.3-rquotad-overflow.patch 1243
+SHA256 eab80cae9dca3c9682f124981ae79cb5f953aff53a4f7e456df6dc15513cc568 files/nfs-utils-0.3.3-rquotad-overflow.patch 1243
+AUX nfs-utils-1.0.6-uclibc.patch 547 RMD160 64efb01e8ac745fd5aebc20fc77d6beee4fa6a2f SHA1 f0c89b7ed7c36f9fc8bd9bfb192ee2e9a3d589da SHA256 101e9152171b445894c6254251a79aef4cf71e916cd4055b0cdb006be97b6703
+MD5 3878538fac900450212b414f8c8c39ab files/nfs-utils-1.0.6-uclibc.patch 547
+RMD160 64efb01e8ac745fd5aebc20fc77d6beee4fa6a2f files/nfs-utils-1.0.6-uclibc.patch 547
+SHA256 101e9152171b445894c6254251a79aef4cf71e916cd4055b0cdb006be97b6703 files/nfs-utils-1.0.6-uclibc.patch 547
+AUX nfs-utils-1.0.6-usn36.patch 3676 RMD160 b2a435fa3003eab20d49ce12190514bfb3744675 SHA1 f377504e760ce17c5ccffe76b48f8f736809b213 SHA256 a1c58833558b7eb39777ae4aea598a6989b73492b533a4b0337ee275bc828a71
+MD5 2c74906c8e74e98c9bd309177e7e2053 files/nfs-utils-1.0.6-usn36.patch 3676
+RMD160 b2a435fa3003eab20d49ce12190514bfb3744675 files/nfs-utils-1.0.6-usn36.patch 3676
+SHA256 a1c58833558b7eb39777ae4aea598a6989b73492b533a4b0337ee275bc828a71 files/nfs-utils-1.0.6-usn36.patch 3676
+AUX nfs-utils-1.0.7-gcc4.patch 553 RMD160 91102f66da5d6736469c2308b270450386467ac9 SHA1 4d60589fc45875264e45ec6fdd11b3cf1087a626 SHA256 697490e2fbef35617cfa34434e0a90ec2bf804d51409d2bbfb6b9fcea4310a0e
+MD5 77b7b275efe6533d3aaf065c89f804ef files/nfs-utils-1.0.7-gcc4.patch 553
+RMD160 91102f66da5d6736469c2308b270450386467ac9 files/nfs-utils-1.0.7-gcc4.patch 553
+SHA256 697490e2fbef35617cfa34434e0a90ec2bf804d51409d2bbfb6b9fcea4310a0e files/nfs-utils-1.0.7-gcc4.patch 553
+AUX nfs-utils-1.0.7-man-pages.patch 219 RMD160 7fdda782077c5bf423586bf5385a23dbf8204aca SHA1 1f79cc230a5cd80ceb9496992530d8e2fe4f04f8 SHA256 0ae11565eea729a409df095450593060320039e18a4a67fac71db176ed27fcce
+MD5 39cf4f293c56793694cb75afbd5c0c17 files/nfs-utils-1.0.7-man-pages.patch 219
+RMD160 7fdda782077c5bf423586bf5385a23dbf8204aca files/nfs-utils-1.0.7-man-pages.patch 219
+SHA256 0ae11565eea729a409df095450593060320039e18a4a67fac71db176ed27fcce files/nfs-utils-1.0.7-man-pages.patch 219
+AUX nfs-utils-1.0.7-no-stripping.patch 394 RMD160 8faa5132e5a92f8d2a2fb6f7ed55bb07d526aea9 SHA1 0aec7a10f894820903660adfa6bb425198454df2 SHA256 694b544c651a9191cdf4b6fe927364fcb97b9100bdaa0f9dbcb07bcd5ab03a12
+MD5 cf22f0e5e058bf8171c2604d9a278368 files/nfs-utils-1.0.7-no-stripping.patch 394
+RMD160 8faa5132e5a92f8d2a2fb6f7ed55bb07d526aea9 files/nfs-utils-1.0.7-no-stripping.patch 394
+SHA256 694b544c651a9191cdf4b6fe927364fcb97b9100bdaa0f9dbcb07bcd5ab03a12 files/nfs-utils-1.0.7-no-stripping.patch 394
+AUX nfs.confd 533 RMD160 bad552a256a86bc374cd7ff3d685afa4ff5d816e SHA1 43fbdfba5a61ad79375265c120fb4784da7b1462 SHA256 a9b8395590b8d15b52eee8cb637fdc23afce007de42442ef4448e76f2ac899fd
+MD5 fc332370f9517304bc251f505b17abf2 files/nfs.confd 533
+RMD160 bad552a256a86bc374cd7ff3d685afa4ff5d816e files/nfs.confd 533
+SHA256 a9b8395590b8d15b52eee8cb637fdc23afce007de42442ef4448e76f2ac899fd files/nfs.confd 533
+AUX nfsmount 1171 RMD160 d6c720dd7f25332dfe1a01fa5afe814867188f88 SHA1 e1abeb1277ea5cc75b105a41a82eacbcfd53e4a4 SHA256 a174969140860185bfc19cec33f25e565feb81a4cd8d76d91b11bb17b5566a01
+MD5 1f3e6130e4a60767a213d34ff3131ae4 files/nfsmount 1171
+RMD160 d6c720dd7f25332dfe1a01fa5afe814867188f88 files/nfsmount 1171
+SHA256 a174969140860185bfc19cec33f25e565feb81a4cd8d76d91b11bb17b5566a01 files/nfsmount 1171
+DIST nfs-utils-1.0.6.tar.gz 265964
+DIST nfs-utils-1.0.7.tar.gz 398577
+DIST nfs-utils-1.0.8-CITI_NFS4_ALL-2.dif 36171 RMD160 7b8fc4905326b2affdf20305ec407be69bfdd8f5 SHA1 044255ff0b02a0924d86b31a0a144f44015f66c5 SHA256 d27507189f7641a1a67dac808288cf9560c067380fe2d7f441211ed9e208ba17
+DIST nfs-utils-1.0.8.tar.gz 732829 RMD160 2650814ca04dd4447855e4055243d0c66588e8aa SHA1 db21bf211150f84b462113b81e4d727afcaa6543 SHA256 b7e2304167b2c1bdcd0cad7ee005c7030556897ec8bd8c13fcdcc3365c0cd1a0
+EBUILD nfs-utils-1.0.6-r6.ebuild 2923 RMD160 91d0907cfdf42ba33a5d869960d44d335c6db846 SHA1 8baa121572769f11ea83fce8ad9c597ca1f9e914 SHA256 67f8ae21a2b2fd81b18ed552a3ba173ee3524020432db068a2dd020407176240
+MD5 9ff9d72b0fb667d05d3d3ae955bf8f55 nfs-utils-1.0.6-r6.ebuild 2923
+RMD160 91d0907cfdf42ba33a5d869960d44d335c6db846 nfs-utils-1.0.6-r6.ebuild 2923
+SHA256 67f8ae21a2b2fd81b18ed552a3ba173ee3524020432db068a2dd020407176240 nfs-utils-1.0.6-r6.ebuild 2923
+EBUILD nfs-utils-1.0.7-r2.ebuild 3395 RMD160 b33824d81fef08c0976cb7694370128ca986bd9d SHA1 b0db544219969ddcad9062eee01596e01d1bebd8 SHA256 68db78e66897bc7e02b80f6d1631b8b38e356c582f58f2f4268fde15388d119f
+MD5 01f2e46602cfc6d42ca139775b561c02 nfs-utils-1.0.7-r2.ebuild 3395
+RMD160 b33824d81fef08c0976cb7694370128ca986bd9d nfs-utils-1.0.7-r2.ebuild 3395
+SHA256 68db78e66897bc7e02b80f6d1631b8b38e356c582f58f2f4268fde15388d119f nfs-utils-1.0.7-r2.ebuild 3395
+EBUILD nfs-utils-1.0.8.ebuild 3543 RMD160 d4ca6b5992a5025714d8c317b58229cd08aacebe SHA1 be413637d17e7cebd7c3bff2af78dc67e28af827 SHA256 827a89b93e3b0109388d33bf8f5ad1ed20512a383cab6cde59370a71dad27abf
+MD5 97407e5f0f34ed2038874dcecb8dd0f2 nfs-utils-1.0.8.ebuild 3543
+RMD160 d4ca6b5992a5025714d8c317b58229cd08aacebe nfs-utils-1.0.8.ebuild 3543
+SHA256 827a89b93e3b0109388d33bf8f5ad1ed20512a383cab6cde59370a71dad27abf nfs-utils-1.0.8.ebuild 3543
+MISC ChangeLog 11089 RMD160 b0606b36f4fa2fb5778840d80f42870a9e2fed57 SHA1 a9d22655ecf2b85d198657652fd493daec1f5a8b SHA256 587adccd411275289385d2953c5e4a1903eda995c25aa1e678fd1e2038d1f77b
+MD5 e769d09d98a65b9e7c1ee80f327338aa ChangeLog 11089
+RMD160 b0606b36f4fa2fb5778840d80f42870a9e2fed57 ChangeLog 11089
+SHA256 587adccd411275289385d2953c5e4a1903eda995c25aa1e678fd1e2038d1f77b ChangeLog 11089
+MISC metadata.xml 225 RMD160 477581252d7edf18d7b8a274766e2ed04c61935a SHA1 02c4f79d48d465ad7bca76f706d0f7cb7dd039df SHA256 42f511d0cc6e82e29b011c686ba8bb7965f4d92eb6e47ba3e63d4c7edfe9883a
+MD5 9cee4adcef8a47ea4ee35090f7f89b0a metadata.xml 225
+RMD160 477581252d7edf18d7b8a274766e2ed04c61935a metadata.xml 225
+SHA256 42f511d0cc6e82e29b011c686ba8bb7965f4d92eb6e47ba3e63d4c7edfe9883a metadata.xml 225
 MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6-r6 67
 RMD160 813c5ac91e1e991aa5f5b7396051e66ceadb76a3 files/digest-nfs-utils-1.0.6-r6 67
 SHA256 1352c2a3716deea0bfbbdfcc1e498379611fe929bf0d842d11f5b31c7b399a9a files/digest-nfs-utils-1.0.6-r6 67
 MD5 46e91b0dea9cbbfedcdccc9386b6326d files/digest-nfs-utils-1.0.7-r2 67
 RMD160 6b6ef3960cee9f3504e52e84d34d05bbd2f4d90e files/digest-nfs-utils-1.0.7-r2 67
 SHA256 fb7a810340d1b8f7a0998fe8b3ea7ffb327d5039a27e76b33e3f3fbf2dd10ef8 files/digest-nfs-utils-1.0.7-r2 67
-MD5 a02eed87e5d581e56feb0f6dfd18e6df files/exports 66
-RMD160 0a61ad40dc321be39fb54d5b9fe717caa714e878 files/exports 66
-SHA256 5d6356df546682e2f1a87131d1bb67de9b1f9a34d3a5742343dc64e890cf71d5 files/exports 66
-MD5 1d8228f424a87830f927ea90b9ad2b7f files/nfs 6863
-RMD160 b10f9fabdd7ebc778467f304ffc4021207bbd929 files/nfs 6863
-SHA256 e17fb64add8c70e8b891e6e074f1fd6f2af0ba471b2329f91787dacce6411f66 files/nfs 6863
-MD5 3c693e012dcb68827b8f82cc98fa129b files/nfs-utils-0.3.3-rquotad-overflow.patch 1243
-RMD160 6ee6c4780080fc85ab51064a816fb2fa505ea0c5 files/nfs-utils-0.3.3-rquotad-overflow.patch 1243
-SHA256 eab80cae9dca3c9682f124981ae79cb5f953aff53a4f7e456df6dc15513cc568 files/nfs-utils-0.3.3-rquotad-overflow.patch 1243
-MD5 3878538fac900450212b414f8c8c39ab files/nfs-utils-1.0.6-uclibc.patch 547
-RMD160 64efb01e8ac745fd5aebc20fc77d6beee4fa6a2f files/nfs-utils-1.0.6-uclibc.patch 547
-SHA256 101e9152171b445894c6254251a79aef4cf71e916cd4055b0cdb006be97b6703 files/nfs-utils-1.0.6-uclibc.patch 547
-MD5 2c74906c8e74e98c9bd309177e7e2053 files/nfs-utils-1.0.6-usn36.patch 3676
-RMD160 b2a435fa3003eab20d49ce12190514bfb3744675 files/nfs-utils-1.0.6-usn36.patch 3676
-SHA256 a1c58833558b7eb39777ae4aea598a6989b73492b533a4b0337ee275bc828a71 files/nfs-utils-1.0.6-usn36.patch 3676
-MD5 77b7b275efe6533d3aaf065c89f804ef files/nfs-utils-1.0.7-gcc4.patch 553
-RMD160 91102f66da5d6736469c2308b270450386467ac9 files/nfs-utils-1.0.7-gcc4.patch 553
-SHA256 697490e2fbef35617cfa34434e0a90ec2bf804d51409d2bbfb6b9fcea4310a0e files/nfs-utils-1.0.7-gcc4.patch 553
-MD5 39cf4f293c56793694cb75afbd5c0c17 files/nfs-utils-1.0.7-man-pages.patch 219
-RMD160 7fdda782077c5bf423586bf5385a23dbf8204aca files/nfs-utils-1.0.7-man-pages.patch 219
-SHA256 0ae11565eea729a409df095450593060320039e18a4a67fac71db176ed27fcce files/nfs-utils-1.0.7-man-pages.patch 219
-MD5 cf22f0e5e058bf8171c2604d9a278368 files/nfs-utils-1.0.7-no-stripping.patch 394
-RMD160 8faa5132e5a92f8d2a2fb6f7ed55bb07d526aea9 files/nfs-utils-1.0.7-no-stripping.patch 394
-SHA256 694b544c651a9191cdf4b6fe927364fcb97b9100bdaa0f9dbcb07bcd5ab03a12 files/nfs-utils-1.0.7-no-stripping.patch 394
-MD5 fc332370f9517304bc251f505b17abf2 files/nfs.confd 533
-RMD160 bad552a256a86bc374cd7ff3d685afa4ff5d816e files/nfs.confd 533
-SHA256 a9b8395590b8d15b52eee8cb637fdc23afce007de42442ef4448e76f2ac899fd files/nfs.confd 533
-MD5 1f3e6130e4a60767a213d34ff3131ae4 files/nfsmount 1171
-RMD160 d6c720dd7f25332dfe1a01fa5afe814867188f88 files/nfsmount 1171
-SHA256 a174969140860185bfc19cec33f25e565feb81a4cd8d76d91b11bb17b5566a01 files/nfsmount 1171
-MD5 9cee4adcef8a47ea4ee35090f7f89b0a metadata.xml 225
-RMD160 477581252d7edf18d7b8a274766e2ed04c61935a metadata.xml 225
-SHA256 42f511d0cc6e82e29b011c686ba8bb7965f4d92eb6e47ba3e63d4c7edfe9883a metadata.xml 225
-MD5 9ff9d72b0fb667d05d3d3ae955bf8f55 nfs-utils-1.0.6-r6.ebuild 2923
-RMD160 91d0907cfdf42ba33a5d869960d44d335c6db846 nfs-utils-1.0.6-r6.ebuild 2923
-SHA256 67f8ae21a2b2fd81b18ed552a3ba173ee3524020432db068a2dd020407176240 nfs-utils-1.0.6-r6.ebuild 2923
-MD5 4c8dfc12ffcb58cd0ea75ce4332dceee nfs-utils-1.0.7-r2.ebuild 3392
-RMD160 80b1e54ca7c7beacb66e990a7dffbbbf7b18acce nfs-utils-1.0.7-r2.ebuild 3392
-SHA256 48310cde36c845d3e0b04d5a4462c8706f767f3043d6d3ca67e908d8568705de nfs-utils-1.0.7-r2.ebuild 3392
+MD5 10b5ba641b8f196dfa4daf18bd65831d files/digest-nfs-utils-1.0.8 530
+RMD160 2bc404c2664969ab91ee305873cb7a3663805af1 files/digest-nfs-utils-1.0.8 530
+SHA256 108102572f4dbecddc47014832dce4f7769adadfe23e48f421c50075b2bc369e files/digest-nfs-utils-1.0.8 530
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFED3qW2+ySkm8kpY0RAmD5AJ9c4JzPVwAwfge6tHM3cA8xQpLRtACcDVRF
-hLzaJSSITJ80Dzhe1xKVDkA=
-=GBxl
+iD8DBQFEixsN2+ySkm8kpY0RAuWdAKCo46ncLu/l0iFVhGStNypJQ3ZDggCdHhO4
+xkVW0TDf2mmGcHIOQsUdSHE=
+=zuGa
 -----END PGP SIGNATURE-----
