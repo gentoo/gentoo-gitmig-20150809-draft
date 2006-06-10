@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.381 2006/05/10 12:25:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.382 2006/06/10 21:10:53 lu_zero Exp $
+
+  10 Jun 2006; Luca Barbato <lu_zero@gentoo.org>
+  mplayer-1.0.20060415.ebuild:
+  typo for the speex support fixed, see bug #136287, thanks to Adam Jones
+  <adam@yggdrasl.demon.co.uk> for spotting it
 
   10 May 2006; Luca Barbato <lu_zero@gentoo.org>
   mplayer-1.0.20060415.ebuild:
