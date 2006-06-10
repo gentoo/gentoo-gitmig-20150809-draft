@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/yum
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.1 2006/06/10 07:51:12 chrb Exp $
+
+*yum-2.6.1 (10 Jun 2006)
+
+  10 Jun 2006; Chris Bainbridge <chrb@gentoo.org> +metadata.xml,
+  +yum-2.6.1.ebuild:
+  New package, submitted by Andrew Ross in bug #133848
+
