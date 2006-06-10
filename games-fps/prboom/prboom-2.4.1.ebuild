@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.4.1.ebuild,v 1.3 2006/05/23 17:50:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.4.1.ebuild,v 1.4 2006/06/10 12:33:05 vapier Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -14,10 +14,9 @@ KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="opengl"
 
 DEPEND=">=media-libs/libsdl-1.1.3
-		media-libs/sdl-mixer
-		media-libs/sdl-net
-		opengl? ( virtual/opengl virtual/glu )
-		media-libs/smpeg"
+	media-libs/sdl-mixer
+	media-libs/sdl-net
+	opengl? ( virtual/opengl virtual/glu )"
 
 src_unpack() {
 	unpack ${A}
@@ -33,7 +32,7 @@ src_compile() {
 	local myconf
 	# configure.in should be fixed as
 	# --enable-gl and 
-	# --disable-gl are threated the same
+	# --disable-gl are treated the same
 	use opengl && myconf="--enable-gl"
 	# leave --disable-cpu-opt in otherwise the configure script
 	# will append -march=i686 and crap ... let the user's CFLAGS
