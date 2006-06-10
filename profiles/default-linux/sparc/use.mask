@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.71 2006/06/02 18:19:40 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.72 2006/06/10 19:46:00 weeve Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -182,3 +182,7 @@ qt4
 # Mask bmpx USE flag since new versions don't work on sparc (comment #11 
 # on bug #111975)
 bmpx
+
+# Jason Wever <weeve@gentoo.org> - 10 Jun 2006
+# Mask kdehiddenvisibility as we don't have gcc-4.1.x unmasked in any profiles
+kdehiddenvisibility
