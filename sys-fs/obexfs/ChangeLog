@@ -1,6 +1,6 @@
-# ChangeLog for app-mobilephone/obexfs
+# ChangeLog for sys-fs/obexfs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/obexfs/ChangeLog,v 1.1 2006/06/04 13:30:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/obexfs/ChangeLog,v 1.2 2006/06/10 16:01:24 swegener Exp $
 
   04 Jun 2006; Alin Nastac <mrness@gentoo.org>
   +files/obexfs-0.8-as-needed.patch, +metadata.xml, +obexfs-0.7.ebuild,
