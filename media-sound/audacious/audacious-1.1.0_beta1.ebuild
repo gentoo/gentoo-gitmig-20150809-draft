@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.1.0_beta1.ebuild,v 1.2 2006/06/08 10:20:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.1.0_beta1.ebuild,v 1.3 2006/06/10 14:51:55 vapier Exp $
 
 inherit flag-o-matic
 
 MY_P="${P/_beta/-dr}"
 S="${WORKDIR}/${MY_P}"
-DESCRIPTION="Audacious Player - Your music, your way, no exceptions."
+DESCRIPTION="Audacious Player - Your music, your way, no exceptions"
 HOMEPAGE="http://audacious-media-player.org/"
 SRC_URI="http://audacious-media-player.org/beta/${MY_P}.tgz
 	mirror://gentoo/gentoo_ice-xmms-0.2.tar.bz2"
@@ -45,10 +45,16 @@ DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )
 	>=dev-util/pkgconfig-0.9.0"
 
-src_compile() {
-	if ! useq mp3; then
-		ewarn "MP3 support is now optional and you have not enabled it."
+mp3_warning() {
+	if ! useq mp3 ; then
+		echo
+		ewarn "MP3 support is now optional, you may want to enable the mp3 USE-flag"
+		echo
 	fi
+}
+
+src_compile() {
+	mp3_warning
 
 	# Bug #42893
 	replace-flags "-Os" "-O2"
@@ -94,7 +100,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	einfo "MP3 support is now optional, you may want to enable the mp3 USE-flag"
-	echo
+	mp3_warning
 }
