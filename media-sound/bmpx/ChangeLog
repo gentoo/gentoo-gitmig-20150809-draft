@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.32 2006/06/02 18:28:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.33 2006/06/10 01:26:57 chutzpah Exp $
+
+  10 Jun 2006; Patrick McLean <chutzpah@gentoo.org>
+  -files/bmpx-0.12.9-dbus-fix.patch,
+  -files/bmpx-0.12.9-libtoolize-static-libs.patch,
+  -files/bmpx-0.12.9-no-config.patch,
+  -files/bmpx-0.12.9-old-config-crash.patch, -bmpx-0.12.9-r2.ebuild:
+  Clean up 0.12.9 since it's now keyworded on all the arches it works on (see
+  bug #111975 for alpha and sparc).
 
   02 Jun 2006; Patrick McLean <chutzpah@gentoo.org> bmpx-0.12.9-r2.ebuild,
   -bmpx-0.14.3.ebuild:
