@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.10.ebuild,v 1.3 2006/04/09 17:49:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.10.ebuild,v 1.4 2006/06/10 22:39:15 eradicator Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -60,7 +60,15 @@ DEPEND="${RDEPEND}
 	sys-devel/flex"
 
 pkg_setup() {
-	use amd64 && has_multilib_profile && export ABI=x86
+	if use amd64 ; then
+		has_multilib_profile || die "Your profile does not support compilation of wine."
+
+		export ABI=x86
+		if has_version app-admin/eselect-compiler ; then
+			CHOST=$(get_abi_CHOST ${ABI})
+			CBUILD=${CHOST}
+		fi
+	fi
 }
 
 src_unpack() {

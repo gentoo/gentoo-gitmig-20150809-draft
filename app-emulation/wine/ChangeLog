@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.143 2006/06/09 05:16:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.144 2006/06/10 22:39:15 eradicator Exp $
+
+  10 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org> wine-0.9.10.ebuild,
+  wine-0.9.15.ebuild:
+  Fixed to compile properly on amd64 with eselect-compiler. Closes bug #128772.
 
 *wine-0.9.15 (09 Jun 2006)
 
