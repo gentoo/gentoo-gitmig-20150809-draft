@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.198 2006/05/03 06:01:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.199 2006/06/10 03:06:18 mr_bones_ Exp $
+
+  10 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org> xchat-2.4.3.ebuild,
+  xchat-2.4.5.ebuild, xchat-2.4.5-r1.ebuild, xchat-2.6.1.ebuild,
+  xchat-2.6.2.ebuild:
+  don't call replace-flags in global scope
 
   03 May 2006; Markus Rothe <corsair@gentoo.org> xchat-2.6.2.ebuild:
   Stable on ppc64; bug #116345

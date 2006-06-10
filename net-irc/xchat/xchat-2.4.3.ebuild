@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.3.ebuild,v 1.15 2006/02/19 16:43:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.3.ebuild,v 1.16 2006/06/10 03:06:18 mr_bones_ Exp $
 
 inherit flag-o-matic eutils versionator
 
@@ -13,12 +13,6 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="perl tcltk python ssl mmx ipv6 nls xchattext xchatnogtk xchatdccserver"
-
-# Added for to fix a sparc seg fault issue by Jason Wever <weeve@gentoo.org>
-if [ ${ARCH} = "sparc" ]
-then
-	replace-flags "-O[3-9]" "-O2"
-fi
 
 RDEPEND=">=dev-libs/glib-2.0.3
 	!xchatnogtk? ( >=x11-libs/gtk+-2.0.3 )
@@ -47,6 +41,10 @@ src_unpack() {
 }
 
 src_compile() {
+	# Added for to fix a sparc seg fault issue by Jason Wever <weeve@gentoo.org>
+	if [ ${ARCH} = "sparc" ] ; then
+		replace-flags "-O[3-9]" "-O2"
+	fi
 
 	# xchat's configure script uses sys.path to find library path
 	# instead of python-config (#25943)
