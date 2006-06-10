@@ -1,6 +1,6 @@
-# ChangeLog for www-apps/nut
+# ChangeLog for sys-power/nut
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.5 2006/05/27 01:14:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.6 2006/06/10 16:01:59 swegener Exp $
 
   27 May 2006; Robin H. Johnson <robbat2@gentoo.org> nut-2.0.3-r1.ebuild:
   Bug #133827, support for the fbsd/2.4 users.
