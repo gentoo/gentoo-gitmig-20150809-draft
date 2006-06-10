@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.102 2006/06/07 01:48:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.103 2006/06/10 15:39:14 tcort Exp $
+
+  10 Jun 2006; Thomas Cort <tcort@gentoo.org> snort-2.4.5.ebuild:
+  Stable on amd64 wrt security Bug #135112.
 
   07 Jun 2006; Mark Loeser <halcy0n@gentoo.org> snort-2.4.5.ebuild:
   Stable on x86; bug #135112
