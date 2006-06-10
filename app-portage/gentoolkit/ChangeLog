@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.84 2006/06/09 21:57:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.85 2006/06/10 14:52:20 wolf31o2 Exp $
+
+  10 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  gentoolkit-0.2.2.ebuild:
+  Stable on x86 wrt bug #135068.
 
   09 Jun 2006; Guy Martin <gmsoft@gentoo.org> gentoolkit-0.2.2.ebuild:
   Stable on hppa.
