@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.39.ebuild,v 1.3 2006/05/29 00:44:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.39.ebuild,v 1.4 2006/06/10 09:24:52 hansmi Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_src_all.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~hppa ~ppc x86"
+KEYWORDS="~hppa ppc x86"
 IUSE="static doc"
 
 S=${WORKDIR}/${PN}_${PV}
