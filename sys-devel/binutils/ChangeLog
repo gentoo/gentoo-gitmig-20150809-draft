@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.250 2006/06/09 12:12:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.251 2006/06/10 09:24:35 hansmi Exp $
+
+  10 Jun 2006; Michael Hanselmann <hansmi@gentoo.org>
+  binutils-2.16.1-r2.ebuild:
+  Stable on ppc.
 
   09 Jun 2006; Markus Rothe <corsair@gentoo.org> binutils-2.16.1-r2.ebuild:
   Stable on ppc64
