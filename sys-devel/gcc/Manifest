@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 3.2.1/gcc31-loop-load-final-value.patch 3324 RMD160 8bb0e9133923821daf2e9d10a27a0a1930e00bbd SHA1 c73dc6e19a76a1dcbb11a15ff5ff04b11a9f0343 SHA256 70aa8433fb19c95f334b6cbc155cae22a3b61a6892ed9e18f95860509d0091a8
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
 RMD160 8bb0e9133923821daf2e9d10a27a0a1930e00bbd files/3.2.1/gcc31-loop-load-final-value.patch 3324
@@ -230,10 +233,10 @@ AUX fix_libtool_files.sh 1712 RMD160 01788fd6927a9f7bba4a01ec133d6f3494644fe9 SH
 MD5 1acd56209164ab837c5f91723434464e files/fix_libtool_files.sh 1712
 RMD160 01788fd6927a9f7bba4a01ec133d6f3494644fe9 files/fix_libtool_files.sh 1712
 SHA256 6b47fb8fa34920ca9ccb449396b25205ad8fe307c869a50e5c4442971e8d4d15 files/fix_libtool_files.sh 1712
-AUX gcc-configure-LANG.patch 1686 RMD160 4ff8355af81705058fd411910dfae94887bcd884 SHA1 67ae0deff73689cb39cd6e7451262bdda9c25a39 SHA256 dc9386b88eac48c282d63d0be7e7be81d4a0a08035a8b97138a61133e057bcea
-MD5 e0ebf10eb8bf4542ae57ba591daa68a4 files/gcc-configure-LANG.patch 1686
-RMD160 4ff8355af81705058fd411910dfae94887bcd884 files/gcc-configure-LANG.patch 1686
-SHA256 dc9386b88eac48c282d63d0be7e7be81d4a0a08035a8b97138a61133e057bcea files/gcc-configure-LANG.patch 1686
+AUX gcc-configure-LANG.patch 1464 RMD160 75cb1ee7f63098c95515c6fda47f1c63e1d83487 SHA1 cbe4cb2ffad094da09ec271e67b3bbe49d9e5e14 SHA256 f3cfc4ecd3a59a02163dc865f6948239082629ed740e5e583f34e159b8fe8b2f
+MD5 d9048a5b51508963fda0673f8180f9d8 files/gcc-configure-LANG.patch 1464
+RMD160 75cb1ee7f63098c95515c6fda47f1c63e1d83487 files/gcc-configure-LANG.patch 1464
+SHA256 f3cfc4ecd3a59a02163dc865f6948239082629ed740e5e583f34e159b8fe8b2f files/gcc-configure-LANG.patch 1464
 AUX gcc-spec-env.patch 1389 RMD160 55e3920f2db033629d2846e8a8aef69ef98d4508 SHA1 7c18d7afc89f74108c2c357b4a8c000394834076 SHA256 9d157b7dabd7e0921b1a72d551281a7500351748329c6bd442005d61a470a70d
 MD5 f6eef7e81b209ca3c63c39e319b4a7a5 files/gcc-spec-env.patch 1389
 RMD160 55e3920f2db033629d2846e8a8aef69ef98d4508 files/gcc-spec-env.patch 1389
@@ -493,3 +496,10 @@ SHA256 3c5d25d6b3e93d2ff145ee09ad252c867ee2fc554ad1ae3f9d04daf987a68df3 files/di
 MD5 b441ed4e02a28767849dc5e815ee91d4 files/digest-gcc-4.2.0_alpha20060603 259
 RMD160 25d8d76c436c724bc8c918c2988ed2e2b7175c34 files/digest-gcc-4.2.0_alpha20060603 259
 SHA256 d2d943ae10a0508a10859046b0c9ef2b968f3e7a1bb70f7830cde8485f88aef2 files/digest-gcc-4.2.0_alpha20060603 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEiyBq2+ySkm8kpY0RAjrlAJ9qILMez+wefLDlGx2lu/mHpj8yOwCZAePF
+zklJ+eFgKYnVWSTvzWiiydE=
+=FA69
+-----END PGP SIGNATURE-----
