@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/s390-oco-2.6.5.ebuild,v 1.10 2006/03/15 23:49:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/s390-oco-2.6.5.ebuild,v 1.11 2006/06/11 16:30:17 vapier Exp $
 
 inherit linux-mod
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="s390"
 IUSE=""
 
-DEPEND="=sys-kernel/vanilla-sources-${PV}*"
+DEPEND="=sys-kernel/vanilla-sources-2.6*"
 
 S=${WORKDIR}
 
