@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.52 2006/06/11 19:59:52 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.53 2006/06/11 20:04:36 antarus Exp $
+
+*xosd-2.2.14-r1 (11 Jun 2006)
+*xosd-2.2.10-r1 (11 Jun 2006)
+
+  11 Jun 2006; Alec Warner <antarus@gentoo.org>
+  -files/xosd-2.2.14-bmp-fixes.patch, -xosd-2.2.10.ebuild,
+  +xosd-2.2.10-r1.ebuild, -xosd-2.2.14.ebuild, +xosd-2.2.14-r1.ebuild:
+  forgot to devbump :/
 
   11 Jun 2006; Alec Warner <antarus@gentoo.org> xosd-2.2.10.ebuild,
   xosd-2.2.14.ebuild:
