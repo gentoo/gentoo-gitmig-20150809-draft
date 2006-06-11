@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xfsdump-2.2.30-docs.patch 456 RMD160 a25f0aefc53da10aeb51411be1433d44316d4b11 SHA1 f6218843faf5532e900dcb4382162cae1a3e576c SHA256 63b668ce7a01d5b7902dc39a379cfc5a67cefe5f35a2005d5e1d503c6d0d5f9f
 MD5 e6c3a4b8814bbbc2914e1a7c105d9de0 files/xfsdump-2.2.30-docs.patch 456
 RMD160 a25f0aefc53da10aeb51411be1433d44316d4b11 files/xfsdump-2.2.30-docs.patch 456
@@ -6,10 +9,10 @@ AUX xfsdump-2.2.33-LDFLAGS.patch 611 RMD160 92927ece6c525908542c4a97a4cbb75c3daf
 MD5 fd221ded991b5761c2d69503d90a0d3f files/xfsdump-2.2.33-LDFLAGS.patch 611
 RMD160 92927ece6c525908542c4a97a4cbb75c3daf54fe files/xfsdump-2.2.33-LDFLAGS.patch 611
 SHA256 82989176be09cec7fb1af9843f3d5936a78512910bc1d2d1fdbcdda3a910ad1b files/xfsdump-2.2.33-LDFLAGS.patch 611
-AUX xfsdump-2.2.33-Makefile-deps.patch 1051 RMD160 92b970a32ef6f17397968db33bef4f09c6ad8fe5 SHA1 9faa313352e5bedfa9b9416ed2fa0edc49095dda SHA256 eb1a2e156fa5385a4429bdbe5caa9e50d40a19af545767ea2b92c95570481882
-MD5 62ead6c6fcabf8057d7c848d03df1c56 files/xfsdump-2.2.33-Makefile-deps.patch 1051
-RMD160 92b970a32ef6f17397968db33bef4f09c6ad8fe5 files/xfsdump-2.2.33-Makefile-deps.patch 1051
-SHA256 eb1a2e156fa5385a4429bdbe5caa9e50d40a19af545767ea2b92c95570481882 files/xfsdump-2.2.33-Makefile-deps.patch 1051
+AUX xfsdump-2.2.33-Makefile-deps.patch 592 RMD160 ec9fd8d7828b787af1993005538ad1ad98ef03f2 SHA1 55cc656585c6646d04c580625760b8eb9865927e SHA256 69162b77f4f8399b461f86c1d7051f24ce2f27b32c917555b9f0dce8284fb407
+MD5 62d62f9adf296c1d6e29c6559454f488 files/xfsdump-2.2.33-Makefile-deps.patch 592
+RMD160 ec9fd8d7828b787af1993005538ad1ad98ef03f2 files/xfsdump-2.2.33-Makefile-deps.patch 592
+SHA256 69162b77f4f8399b461f86c1d7051f24ce2f27b32c917555b9f0dce8284fb407 files/xfsdump-2.2.33-Makefile-deps.patch 592
 AUX xfsdump-2.2.33-no-compress-docs.patch 487 RMD160 b77c339a3e376a7d3885dd80e131cd31ec63eb14 SHA1 74f94c41cb0976f331a495417df5490153184a96 SHA256 862485ec275e656a75761d9da9806d4b91db5f94f212724cfd9476d2504bafa7
 MD5 3cf7f941e0b89b8e41ff47ca16cd18f8 files/xfsdump-2.2.33-no-compress-docs.patch 487
 RMD160 b77c339a3e376a7d3885dd80e131cd31ec63eb14 files/xfsdump-2.2.33-no-compress-docs.patch 487
@@ -45,3 +48,10 @@ SHA256 8153642b7e366aa980fe26b34d0cf393541b07b401a00a78bfb8680e9c7a640e files/di
 MD5 068d73ba9154523893ed061b660c7aeb files/digest-xfsdump-2.2.33-r1 256
 RMD160 07587d2927d4bc5482db1fcd42555bfaf6df5428 files/digest-xfsdump-2.2.33-r1 256
 SHA256 8153642b7e366aa980fe26b34d0cf393541b07b401a00a78bfb8680e9c7a640e files/digest-xfsdump-2.2.33-r1 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEjCWM2+ySkm8kpY0RAhPfAJ9E4ZXZzC1Vlor+aFZUECQI5wN/BQCfWItw
+TFRzp8kj49aSTzUS/qFqSQ0=
+=/8WD
+-----END PGP SIGNATURE-----
