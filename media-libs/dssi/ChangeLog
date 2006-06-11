@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/dssi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.8 2006/05/01 12:14:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.9 2006/06/11 19:11:25 corsair Exp $
+
+  11 Jun 2006; Markus Rothe <corsair@gentoo.org> dssi-0.9.1.ebuild:
+  Stable on ppc64
 
   01 May 2006; Markus Rothe <corsair@gentoo.org> dssi-0.9.1.ebuild:
   Added ~ppc64
