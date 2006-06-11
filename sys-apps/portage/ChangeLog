@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.178 2006/06/11 10:12:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.179 2006/06/11 16:28:29 zmedico Exp $
+
+  11 Jun 2006; Zac Medico <zmedico@gentoo.org> portage-2.1.ebuild:
+  Add einfo about the default USE_ORDER change.
 
   11 Jun 2006; Simon Stelling <blubb@gentoo.org> portage-2.1.ebuild:
   stable on amd64

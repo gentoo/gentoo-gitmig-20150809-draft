@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.ebuild,v 1.7 2006/06/11 10:12:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.ebuild,v 1.8 2006/06/11 16:28:29 zmedico Exp $
 
 inherit toolchain-funcs eutils
 
@@ -204,6 +204,14 @@ pkg_postinst() {
 	einfo "Flag ordering has changed for \`emerge --pretend --verbose\`."
 	einfo "Add EMERGE_DEFAULT_OPTS=\"--alphabetical\" to /etc/make.conf"
 	einfo "to restore the previous ordering."
+	echo
+	einfo "The default USE_ORDER setting (see make.conf.5) has changed in"
+	einfo "2.1 so that auto USE flags (from use.defaults) are no longer"
+	einfo "enabled.  In order to find out which flags have been disabled,"
+	einfo "the command \`env USE_ORDER=auto portageq envvar USE\` may be"
+	einfo "helpful.  These flags can be manually added to make.conf by the"
+	einfo "user (the command output may contain a few other automatically"
+	einfo "generated flags that do not need to be added to make.conf)."
 	echo
 	einfo "See NEWS and RELEASE-NOTES for further changes."
 
