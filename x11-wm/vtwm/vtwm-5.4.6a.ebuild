@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/vtwm-5.4.6a.ebuild,v 1.9 2004/08/30 19:19:31 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/vtwm-5.4.6a.ebuild,v 1.10 2006/06/11 12:09:07 nelchael Exp $
 
 IUSE=""
 
@@ -10,11 +10,25 @@ SRC_URI="ftp://ftp.visi.com/users/hawkeyd/X/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="x86 alpha ppc sparc"
-DEPEND="virtual/x11"
+
+RDEPEND="|| ( (
+		x11-libs/libX11
+		x11-libs/libXmu
+		x11-libs/libXt
+		x11-libs/libXext
+		x11-libs/libXpm )
+	virtual/x11 )"
+DEPEND="${RDEPEND}
+	|| ( (
+		x11-misc/imake
+		app-text/rman
+		x11-proto/xproto
+		x11-proto/xextproto )
+	virtual/x11 )"
 
 src_compile() {
-	xmkmf || die
-	make || die
+	xmkmf || die "xmkmf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -22,7 +36,7 @@ src_install() {
 	make BINDIR=/usr/bin \
 		LIBDIR=/etc/X11 \
 		MANPATH=/usr/share/man \
-		DESTDIR=${D} install || die
+		DESTDIR=${D} install || die "make install failed"
 
 	echo "#!/bin/sh" > vtwm
 	echo "xsetroot -cursor_name left_ptr &" >> vtwm

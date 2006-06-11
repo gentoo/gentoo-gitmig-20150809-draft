@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/vtwm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/ChangeLog,v 1.7 2004/08/30 19:19:31 pvdabeel Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/ChangeLog,v 1.8 2006/06/11 12:09:07 nelchael Exp $
+
+  11 Jun 2006; Krzysiek Pawlik <nelchael@gentoo.org> vtwm-5.4.6a.ebuild:
+  Migrated to modular X.
 
   30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> vtwm-5.4.6a.ebuild:
   Masked vtwm-5.4.6a.ebuild stable for ppc
