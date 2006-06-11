@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmp4v2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.21 2006/06/10 09:28:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.22 2006/06/11 10:26:18 gmsoft Exp $
+
+  11 Jun 2006; Guy Martin <gmsoft@gentoo.org> libmp4v2-1.4.1.ebuild:
+  Stable on hppa.
 
   10 Jun 2006; Michael Hanselmann <hansmi@gentoo.org> libmp4v2-1.4.1.ebuild:
   Stable on ppc.
