@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.1-r1.ebuild,v 1.2 2006/03/07 11:44:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.1-r1.ebuild,v 1.3 2006/06/11 09:52:53 robbat2 Exp $
 
 DESCRIPTION="The libdbi-drivers project maintains drivers for libdbi."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -16,6 +16,11 @@ DEPEND=">=dev-db/libdbi-0.8.0
 IUSE="mysql postgres sqlite oci8 firebird sqlite3"
 KEYWORDS="~amd64 hppa ~ppc ~sparc ~x86"
 SLOT=0
+
+src_unpack() {
+	unpack ${A}
+	EPATCH_OPTS="-p1 -d${S}" epatch ${FILESDIR}/${P}-oci8.diff
+}
 
 src_compile() {
 	local myconf=""
