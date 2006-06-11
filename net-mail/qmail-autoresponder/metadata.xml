@@ -2,4 +2,15 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>qmail</herd>
+<maintainer>
+	<email>bangert@gentoo.org</email>
+	<name>Thilo Bangert</name>
+</maintainer>
+<longdescription lang="en">
+This is a simple program to automatically respond to emails.
+
+It is based on some ideas (but little or no code) from a similar
+autoresponder by Eric Huss, and ideas presented
+on the qmail mailing list.
+</longdescription>
 </pkgmetadata>
