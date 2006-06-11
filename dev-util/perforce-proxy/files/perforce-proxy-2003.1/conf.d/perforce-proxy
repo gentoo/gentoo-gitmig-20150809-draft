@@ -1,6 +1,0 @@
-# Config file for /etc/init.d/perforce
-#
-# You *must* change the 'localhost:1666' to point to the p4d that
-# you want to proxy
-
-P4P="-q -p 1999 -r /var/cache/perforce-proxy -t localhost:1666 -L /var/log/perforce-proxy"
