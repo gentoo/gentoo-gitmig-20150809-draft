@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/xbindkeys-1.7.2-r1.ebuild,v 1.5 2006/06/07 05:15:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/xbindkeys-1.7.2-r1.ebuild,v 1.6 2006/06/11 10:24:15 blubb Exp $
 
 IUSE="guile tcltk"
 
@@ -8,7 +8,7 @@ DESCRIPTION="Tool for launching commands on keystrokes"
 SRC_URI="http://hocwp.free.fr/xbindkeys/${P}.tar.gz"
 HOMEPAGE="http://hocwp.free.fr/xbindkeys/"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="amd64 ppc ~ppc-macos ppc64 sparc x86"
 SLOT="0"
 
 RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
