@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/rox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.17 2006/04/27 04:31:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.18 2006/06/11 13:07:02 dragonheart Exp $
+
+*rox-2.4.1-r1 (11 Jun 2006)
+
+  11 Jun 2006; Daniel Black <dragonheart@gentoo.org> +rox-2.4.1-r1.ebuild:
+  permission fix as per bug #130353 thanks to Peter Hyman
 
   27 Apr 2006; Jason Wever <weeve@gentoo.org> rox-2.4.1.ebuild:
   Re-added ~sparc keyword as it mysteriously went missing.
