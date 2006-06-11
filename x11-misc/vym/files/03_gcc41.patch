@@ -1,0 +1,11 @@
+--- xml.h.orig	2006-06-04 21:39:54.000000000 +1000
++++ xml.h	2006-06-04 21:40:14.000000000 +1000
+@@ -16,7 +16,7 @@
+ 	~mapBuilderHandler();
+ 	QString errorProtocol();
+ 	bool startDocument();
+-	QString mapBuilderHandler::parseHREF(QString);
++	QString parseHREF(QString);
+ 	bool startElement ( const QString&, const QString&,
+                         const QString& eName, const QXmlAttributes& atts ); 
+ 	bool   endElement ( const QString&, const QString&, const QString& ); 

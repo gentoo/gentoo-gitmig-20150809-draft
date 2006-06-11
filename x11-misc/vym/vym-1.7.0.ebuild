@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.7.0.ebuild,v 1.3 2006/01/08 13:06:56 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.7.0.ebuild,v 1.4 2006/06/11 15:04:12 stuart Exp $
 
 inherit eutils qt3
 
@@ -25,6 +25,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/01_all_linkablemapobj-math.patch
 	epatch ${FILESDIR}/02_all_misc-math.patch
+	epatch ${FILESDIR}/03_gcc41.patch
 }
 
 src_compile() {

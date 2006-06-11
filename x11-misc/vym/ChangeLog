@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/vym
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.8 2006/01/08 13:06:56 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.9 2006/06/11 15:04:12 stuart Exp $
+
+  11 Jun 2006; Stuart Herbert <stuart@gentoo.org> +files/03_gcc41.patch,
+  vym-1.7.0.ebuild:
+  Added patch for gcc-4.1, closes bug 135496
+  Thanks for Ron MacNeil <macro@hotmail.com> for the patch
 
   08 Jan 2006; Stefan Schweizer <genstef@gentoo.org> vym-1.7.0.ebuild:
   modular depends, bug 118241
