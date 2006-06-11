@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/quodlibet-notify
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-notify/ChangeLog,v 1.1 2006/04/30 05:39:16 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-notify/ChangeLog,v 1.2 2006/06/11 22:47:25 tcort Exp $
+
+*quodlibet-notify-3316 (11 Jun 2006)
+
+  11 Jun 2006; Thomas Cort <tcort@gentoo.org> +quodlibet-notify-3316.ebuild:
+  Version bump to 3316.
 
 *quodlibet-notify-3083 (30 Apr 2006)
 
