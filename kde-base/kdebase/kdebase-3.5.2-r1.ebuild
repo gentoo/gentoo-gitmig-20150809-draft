@@ -1,16 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.2-r1.ebuild,v 1.11 2006/06/03 10:19:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.2-r1.ebuild,v 1.12 2006/06/11 13:08:04 carlo Exp $
 
 inherit kde-dist eutils flag-o-matic
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/kdebase-3.5.0-patches-1.tar.bz2
-	mirror://gentoo/kdebase-3.5.2-patchset.tar.bz2"
+	mirror://gentoo/kdebase-3.5.2-patchset.tar.bz2
+	mirror://gentoo/kdebase-3.5-patchset-01.tar.bz2"
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
-KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="arts cups java ldap ieee1394 hal lm_sensors logitech-mouse openexr opengl
 pam samba ssl zeroconf xcomposite xscreensaver xinerama"
 # hal: enables hal backend for 'media:' ioslave
@@ -76,20 +76,14 @@ DEPEND="${DEPEND}
 		) virtual/x11 )
 	dev-util/pkgconfig"
 
-PATCHES="${FILESDIR}/konsole-3.5.1-detach-send2all.patch
-	${WORKDIR}/kdebase-3.5.2-patchset.diff
-	${FILESDIR}/kwin-3.5.2-parallel-make.diff"
+PATCHES="${WORKDIR}/kdebase-3.5.2-patchset.diff"
 
 src_unpack() {
 	kde_src_unpack
 
-	epatch "${WORKDIR}/patches/kdebase-3.5-startkde-gentoo.patch"
-
 	# Avoid using imake (kde bug 114466).
 	epatch "${WORKDIR}/patches/kdebase-3.5.0_beta2-noimake.patch"
 	rm -f ${S}/configure
-
-	epatch "${FILESDIR}/drkonqi-${PV}-splitdebug.patch"
 }
 
 src_compile() {

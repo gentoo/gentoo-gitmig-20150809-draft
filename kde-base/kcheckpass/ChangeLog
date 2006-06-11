@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.50 2006/06/01 17:08:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.51 2006/06/11 13:09:49 carlo Exp $
+
+  11 Jun 2006; Carsten Lohrke <carlo@gentoo.org> kcheckpass-3.5.0.ebuild:
+  Adjust ebuilds to kde_src_unpack() patch handling changes.
 
   01 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   kcheckpass-3.5.0.ebuild:

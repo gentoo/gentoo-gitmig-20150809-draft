@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.3.ebuild,v 1.1 2006/06/02 19:43:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.3.ebuild,v 1.2 2006/06/11 13:08:04 carlo Exp $
 
 inherit kde-dist eutils flag-o-matic
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/kdebase-3.5.0-patches-1.tar.bz2"
+	mirror://gentoo/kdebase-3.5-patchset-01.tar.bz2"
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
@@ -75,18 +75,12 @@ DEPEND="${DEPEND}
 		) virtual/x11 )
 	dev-util/pkgconfig"
 
-PATCHES="${FILESDIR}/konsole-3.5.1-detach-send2all.patch"
-
 src_unpack() {
 	kde_src_unpack
-
-	epatch "${WORKDIR}/patches/kdebase-3.5-startkde-gentoo.patch"
 
 	# Avoid using imake (kde bug 114466).
 	epatch "${WORKDIR}/patches/kdebase-3.5.0_beta2-noimake.patch"
 	rm -f ${S}/configure
-
-	epatch "${FILESDIR}/drkonqi-3.5.2-splitdebug.patch"
 }
 
 src_compile() {
