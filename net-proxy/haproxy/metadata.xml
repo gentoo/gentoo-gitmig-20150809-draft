@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>net-proxy</herd>
+  <longdescription>HA-Proxy is a TCP/HTTP reverse proxy which is particularly suited for high availability environments.
+It can:
+ - route HTTP requests depending on statically assigned cookies
+ - spread the load among several servers while assuring server persistence through the use of HTTP cookies
+ - switch to backup servers in the event a main one fails
+ - accept connections to special ports dedicated to service monitoring
+ - stop accepting connections without breaking existing ones
+ - add/modify/delete HTTP headers both ways
+ - block requests matching a particular pattern
+Its event-driven architecture allows it to easily handle thousands of simultaneous connections on hundreds of instances without risking the system's stability.
+</longdescription>
+</pkgmetadata>

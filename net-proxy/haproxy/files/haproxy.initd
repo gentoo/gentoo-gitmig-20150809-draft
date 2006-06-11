@@ -1,0 +1,33 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/files/haproxy.initd,v 1.1 2006/06/11 14:05:43 mrness Exp $
+
+checkconfig() {
+	if [[ ! -f /etc/haproxy.cfg ]] ; then
+		eerror "/etc/haproxy.cfg does not exist!"
+		return 1
+	fi
+	/usr/bin/haproxy -c -f /etc/haproxy.cfg >/dev/null 
+}
+
+depend() {
+	need net
+	use dns logger
+}
+
+start() {
+	checkconfig || return 1
+
+	ebegin "Starting haproxy"
+	start-stop-daemon --start --quiet \
+		--exec /usr/bin/haproxy \
+		-- -D -p /var/run/haproxy.pid -f /etc/haproxy.cfg
+	eend ${?}
+}
+
+stop() {
+	ebegin "Stopping haproxy"
+	start-stop-daemon --stop --quiet --pidfile /var/run/haproxy.pid
+	eend ${?}
+}
