@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.4.2.ebuild,v 1.2 2006/05/25 03:02:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.4.2.ebuild,v 1.3 2006/06/11 19:04:28 vapier Exp $
 
 inherit toolchain-funcs eutils versionator
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cmake.org/files/v$(get_version_component_range 1-2)/${P}.tar
 
 LICENSE="CMake"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 src_unpack() {
