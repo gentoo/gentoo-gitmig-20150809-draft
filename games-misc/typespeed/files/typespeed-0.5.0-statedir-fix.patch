@@ -45,6 +45,7 @@
  	struct dirent **namelist;
  
 +chdir("GENTOO_HIGHSCORE_PATH");
- 	if ((n = scandir(".", &namelist, iswordlist, alphasort)) < 0) {
+-	if ((n = scandir(".", &namelist, iswordlist, alphasort)) < 0) {
++	if ((n = scandir("GENTOO_WORDLIST_PATH", &namelist, iswordlist, alphasort)) < 0) {
  		fputs("scandir failed.\n", stderr);
  		exit(1);
