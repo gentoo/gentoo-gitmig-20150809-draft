@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.75 2006/06/11 10:42:29 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.76 2006/06/11 12:57:07 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -366,9 +366,6 @@ function kde-meta_src_unpack() {
 
 		# Don't add a param here without looking at its implementation.
 		kde_src_unpack
-
-		# revert for now
-		kde_src_unpack autopatch
 
 		# kdebase: Remove the installation of the "startkde" script.
 		if [[ "$KMNAME" == "kdebase" ]]; then
