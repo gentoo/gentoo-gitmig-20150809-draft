@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py2play
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py2play/ChangeLog,v 1.14 2006/02/09 00:08:46 tove Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py2play/ChangeLog,v 1.15 2006/06/11 18:16:37 kloeri Exp $
+
+*py2play-0.1.9 (11 Jun 2006)
+
+  11 Jun 2006; Bryan Østergaard <kloeri@gentoo.org> +py2play-0.1.9.ebuild:
+  Bump version, removing network code. This fixes bug 103524.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> py2play-0.1.7.ebuild:
   Stable on ppc.
