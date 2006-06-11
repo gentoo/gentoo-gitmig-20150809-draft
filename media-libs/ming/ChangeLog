@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/ming
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.19 2006/03/07 11:56:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.20 2006/06/11 12:19:48 robbat2 Exp $
+
+*ming-0.2a-r3 (11 Jun 2006)
+
+  11 Jun 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/ming-0.2a-linking.patch, +ming-0.2a-r3.ebuild:
+  Bug #123728, fix python module linking brokenness. Also fix QA issue of
+  missing SONAME.
 
   07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
   ming-0.2a.ebuild, ming-0.2a-r1.ebuild:
