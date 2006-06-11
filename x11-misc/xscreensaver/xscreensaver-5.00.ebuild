@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.00.ebuild,v 1.2 2006/06/06 10:26:18 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.00.ebuild,v 1.3 2006/06/11 13:08:16 nelchael Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -141,10 +141,7 @@ src_install() {
 		insinto /usr/share/gnome/capplets
 		doins driver/screensaver-properties.desktop
 
-		dodir /usr/share/pixmaps
-		insinto /usr/share/pixmaps
-		newins "${S}/utils/images/logo-50.xpm"
-		xscreensaver.xpm
+		newicon "${S}/utils/images/logo-50.xpm" xscreensaver.xpm
 
 		dodir /usr/share/control-center-2.0/capplets
 		insinto /usr/share/control-center-2.0/capplets
