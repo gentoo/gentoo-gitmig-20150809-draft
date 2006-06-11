@@ -1,0 +1,23 @@
+Index: xf86-video-sis/src/sis_dri.c
+===================================================================
+RCS file: /cvs/xorg/driver/xf86-video-sis/src/sis_dri.c,v
+retrieving revision 1.26
+diff -u -B -r1.26 sis_dri.c
+--- xf86-video-sis/src/sis_dri.c	21 Oct 2005 18:40:19 -0000	1.26
++++ xf86-video-sis/src/sis_dri.c	6 Jun 2006 15:15:53 -0000
+@@ -1,5 +1,5 @@
+ /* $XFree86$ */
+-/* $XdotOrg: driver/xf86-video-sis/src/sis_dri.c,v 1.26 2005/10/21 18:40:19 ajax Exp $ */
++/* $XdotOrg$ */
+ /*
+  * DRI wrapper for 300 and 315 series
+  *
+@@ -40,6 +40,8 @@
+ #include "config.h"
+ #endif
+ 
++#include <assert.h>
++
+ #include "sis.h"
+ #include "sis_regs.h"
+ 

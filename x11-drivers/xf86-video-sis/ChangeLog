@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-sis
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sis/ChangeLog,v 1.15 2006/06/05 21:36:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sis/ChangeLog,v 1.16 2006/06/11 18:56:55 joshuabaergen Exp $
+
+*xf86-video-sis-0.9.1-r1 (11 Jun 2006)
+
+  11 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/xf86-video-sis-assert.patch, -xf86-video-sis-0.9.1.ebuild,
+  +xf86-video-sis-0.9.1-r1.ebuild:
+  Include Donnie's patch for missing assert.h include.  (Toffanin, bug #135759)
 
   05 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   xf86-video-sis-0.9.1.ebuild:
