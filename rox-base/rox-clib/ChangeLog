@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/rox-clib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.6 2006/05/23 20:22:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.7 2006/06/11 14:02:36 dragonheart Exp $
+
+*rox-clib-2.1.8 (11 Jun 2006)
+
+  11 Jun 2006; Daniel Black <dragonheart@gentoo.org> +rox-clib-2.1.8.ebuild:
+  version bump as per bug #126049 thanks to Peter Hyman
 
   23 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove svyatogor from metadata, bug 131936.
