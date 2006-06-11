@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.3 2005/08/20 20:06:46 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.4 2006/06/11 10:42:54 robbat2 Exp $
 
 inherit eutils
 
@@ -14,28 +14,38 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE="X debug doc fortran gnome ifc itcl java jpeg octave png python tcltk tetex truetype"
 
-DEPEND="dev-util/pkgconfig
+RDEPEND="virtual/libc
+		 dev-lang/perl
+	  	 python? ( dev-python/numeric )
+	  	 java? ( virtual/jre )
+	  	 tetex? ( app-text/jadetex )
+	  	 octave? ( sci-mathematics/octave )
+	  	 jpeg? ( media-libs/gd )
+	  	 png? ( media-libs/gd )
+	  	 truetype? ( media-libs/freetype )
+		 X? ( || (	( x11-libs/libX11
+					  x11-libs/libXau
+					  x11-libs/libXdmcp
+						)
+					virtual/x11 )
+				tcltk? ( dev-lang/tcl
+						 dev-lang/tk
+						itcl? ( dev-tcltk/itcl )
+						)
+				gnome? ( gnome-base/gnome-libs )
+			   )"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	ifc? ( dev-lang/ifc )
-	virtual/libc
 	sys-apps/man
-	dev-lang/perl
 	app-text/opensp
-	python? ( dev-python/numeric )
-	java? ( virtual/jre )
-	tetex? ( app-text/jadetex )
-	octave? ( sci-mathematics/octave )
-	jpeg? ( media-libs/gd )
-	png? ( media-libs/gd )
-	truetype? ( media-libs/freetype )
-	X? ( virtual/x11
-		tcltk? ( dev-lang/tcl
-			dev-lang/tk
-			itcl? ( dev-tcltk/itcl )
-		)
-		gnome? ( gnome-base/gnome-libs )
+	java? ( virtual/jdk )
+	X? ( || ( (	x11-proto/xproto )
+			virtual/x11 )
 	)
 	doc? ( sys-apps/texinfo )"
 	# Optional support for libqhull (currently doesn't work).
