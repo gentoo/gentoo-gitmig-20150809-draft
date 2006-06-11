@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r2.ebuild,v 1.1 2006/06/08 11:23:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r2.ebuild,v 1.2 2006/06/11 16:26:48 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -11,7 +11,7 @@ PARCH=${P/_/}
 X509_PATCH="${PARCH}+x509-5.5.diff.gz"
 SECURID_PATCH="${PARCH}+SecurID_v1.3.2.patch"
 LDAP_PATCH="${PARCH/-4.3p2/-lpk-4.3p1}-0.3.7.patch"
-HPN_PATCH="${PARCH}-hpn12.diff.gz"
+HPN_PATCH="${PARCH}-hpn12-gentoo.patch.bz2"
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
