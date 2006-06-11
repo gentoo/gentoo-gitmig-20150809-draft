@@ -1,12 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/xstroke-0.6-r1.ebuild,v 1.1 2006/02/11 13:33:29 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/xstroke-0.6-r1.ebuild,v 1.2 2006/06/11 12:48:04 nelchael Exp $
 
 inherit eutils
 
 DESCRIPTION="Gesture/Handwriting recognition engine for X"
-HOMEPAGE="http://www.xstroke.org/"
-SRC_URI="http://www.xstroke.org/releases/${P}.tar.bz2"
+# Dead upstream?
+#HOMEPAGE="http://www.xstroke.org/"
+HOMEPAGE="http://freshmeat.net/projects/xstroke/"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
