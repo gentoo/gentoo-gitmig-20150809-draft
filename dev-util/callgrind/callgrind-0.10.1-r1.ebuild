@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/callgrind-0.10.1-r1.ebuild,v 1.2 2006/04/30 04:21:07 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/callgrind-0.10.1-r1.ebuild,v 1.3 2006/06/11 16:46:46 griffon26 Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-DEPEND=">=dev-util/valgrind-3.1
+DEPEND="=dev-util/valgrind-3.1*
+	!>=dev-util/valgrind-3.2.0
 	!dev-util/calltree"
 
 src_unpack() {
