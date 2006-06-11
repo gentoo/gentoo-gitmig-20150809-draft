@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.8.ebuild,v 1.2 2006/06/10 19:16:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.8.ebuild,v 1.3 2006/06/11 00:00:08 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -53,7 +53,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-return 0
 
 	# Don't overwrite existing xtab/etab, install the original
 	# versions somewhere safe...  more info in pkg_postinst
