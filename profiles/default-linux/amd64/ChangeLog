@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.1 2006/06/09 15:12:46 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.2 2006/06/11 02:38:37 kugelfang Exp $
+
+  11 Jun 2006; Danny van Dyk <kugelfang@gentoo.org> 2006.1/make.defaults:
+  Added 'unicode' 2006.1 profile's USE to sync with STAGE1_USE.
 
 *2006.1
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/make.defaults,v 1.1 2006/06/09 15:12:46 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/make.defaults,v 1.2 2006/06/11 02:38:38 kugelfang Exp $
 
 ABI=amd64
 
@@ -11,7 +11,7 @@ STAGE1_USE="nptl nptlonly unicode"
 
 # General 2006.1 profile settings
 # These USE flags are what is common between the various sub-profiles.
-USE="cups gdbm gpm libg++ nptl nptlonly udev"
+USE="cups gdbm gpm libg++ nptl nptlonly udev unicode"
 # Possibly removed in the future.
 USE="${USE} foomaticdb"
 # Possibly added in the future
