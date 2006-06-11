@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/compare
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/compare/ChangeLog,v 1.1 2005/01/07 22:56:39 stuart Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/compare/ChangeLog,v 1.2 2006/06/11 14:33:46 stuart Exp $
+
+  11 Jun 2006; Stuart Herbert <stuart@gentoo.org> compare-1.16.ebuild:
+  Added blocker against media-gfx/imagemagick; closes bug 117739
 
 *compare-1.16 (07 Jan 2005)
 
