@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gxmms
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gxmms/ChangeLog,v 1.16 2006/04/24 02:27:20 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gxmms/ChangeLog,v 1.17 2006/06/11 23:44:34 metalgod Exp $
+
+  11 Jun 2006; Luis Medinas <metalgod@gentoo.org> -gxmms-0.1.0.ebuild,
+  -gxmms-0.1.1.ebuild, -gxmms-0.2.1.ebuild, gxmms-0.3.0.ebuild:
+  Remove bmp use flag since it's obsolete thanks to jakub <jakub@gentoo.org>
+  fixes bug #136492. Remove older versions.
 
   24 Apr 2006; Luis Medinas <metalgod@gentoo.org> gxmms-0.3.0.ebuild:
   Stable on amd64. Bug #128317.
