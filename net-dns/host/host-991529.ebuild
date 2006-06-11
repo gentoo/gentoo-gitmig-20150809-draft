@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/host/host-991529.ebuild,v 1.1 2005/07/15 10:19:20 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/host/host-991529.ebuild,v 1.2 2006/06/11 15:33:29 george Exp $
 
 # This is somewhat old tool, has not been changed since 1999,
 # Still looks like host from bind does not provide all possible functionality
 # at least xtraceroute wants LOC support, which is provided by this tool.
 
-# This is the homepage for xtraceroute, not host, but that's best I can do -
+# This is the homepage for xtraceroute, not host, but that's the best I can do -
 # at least it is mentioned there.
 
 inherit toolchain-funcs
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa mips ppc ppc64 sparc x86"
 IUSE=""
 
-RESTRICT="maketest"
+RESTRICT="test"
 
 DEPEND=">=sys-apps/sed-4"
 
