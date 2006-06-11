@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.30 2006/06/09 09:37:15 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.31 2006/06/11 19:19:31 keri Exp $
+
+  11 Jun 2006; Keri Harris <keri@gentoo.org>
+  mercury-extras-0.12.2-r1.ebuild,
+  mercury-extras-0.13.0_beta20060601.ebuild:
+  Fixing typo in DEPEND. Thanks to Jakub Moc <jakub@gentoo.org>.
 
   09 Jun 2006; Keri Harris <keri@gentoo.org>
   mercury-extras-0.13.0_beta20060601.ebuild:
