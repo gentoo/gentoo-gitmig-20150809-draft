@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.43-r4.ebuild,v 1.3 2006/06/07 10:13:47 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.43-r4.ebuild,v 1.4 2006/06/11 10:01:59 mattepiu Exp $
 
 inherit eutils perl-module
 
@@ -14,46 +14,18 @@ KEYWORDS="~x86 ~ppc"
 PREFIX="/usr"
 
 # NOTE: you can customize the xmltv installation by
-#       defining USE FLAGS:
+#       defining USE FLAGS (custom ones in 
+#	/etc/portage/package.use for example).
 #
-#  huro        Alternate Hungarian and Romania grabber
-#  uk_rt:      Alternate Britain listings grabber
-#  uk_bleb:    Fast alternative grabber for the UK
-#  it:         Italy listings grabber
-#  il:         Israel listings grabber
-#  na_dd:      Alternate American listings grabber
-#  na_icons:   Downloads icons from Zap2IT (needs na_dd to work)
-#  fi:         Finland listings grabber
-#  es:         Spain listings grabber
-#  nl:         Netherlands listings grabber
-#  nl_wolf:    Alternate Netherlands listings grabber
-#  dk:         Denmark listings grabber
-#  jp:         Japan listings grabber
-#  de_tvtoday: Germany listings grabber
-#  se_swedb:   New grabber for Sweden
-#  fr:         France listings grabber
-#  br:         Brazil listings grabber
-#  brnet:      Brazil NET Cable listings grabber
-#  ch:         Switzerland listings grabber
-#  be:         Belgium and Luxemburg listings grabber
-#  is:         Iceland listings grabber
-#  no:         Norway listings grabber
-#  pt:         Portugal listings grabber
-#  za:         South Africa listings grabber
-#  ee:         Estonia listings grabber
-#  re:         Reunion Island listings grabber
+#	Do "equery u media-tv/xmltv" for the complete
+#	list of the flags you can set, with description.
 
 # EXAMPLES:
 # enable just North American grabber
-#   XMLTV_OPTS="tv_grab_na"
+#  in /etc/portage/package.use : media-tv/xmltv na_dd
 #
 # enable graphical front-end, Italy grabber
-#   XMLTV_OPTS="tv_check tv_grab_it"
-
-#for X in ${LANGS} ; do
-#        SRC_URI="${SRC_URI} linguas_${X/-/_}? ( mirror://gentoo/firefox-${X}-${PV}.xpi )"
-#done
-
+#  in /etc/portage/package.use : media-tv/xmltv tv_check it
 
 IUSE="br brnet ch uk_rt uk_bleb uk_be is it na_dd na_icons fi es ee il re nl nl_wolf huro dk jp de_tvtoday se_swedb fr no pt za tv_pick_cgi tv_check"
 
@@ -172,15 +144,16 @@ src_unpack() {
 
 src_compile() {
 	sed -i "s:\$VERSION = '${PV}':\$VERSION = '${PVR}':" Makefile.PL || die
-	make_config | perl Makefile.PL PREFIX=/usr
+	make_config | perl-module_src_compile
 }
 
 src_install() {
-	make
 	# actually make test should be unneede, but if non na grabbers
 	# start to not install remove comment below
 	# make test
-	make DESTDIR=${D} install
+	#make
+	#make DESTDIR=${D} install
+	perl-module_src_install
 
 	for i in `grep -rl "${D}" "${D}"` ; do
 		sed -e "s:${D}::g" -i "${i}"
