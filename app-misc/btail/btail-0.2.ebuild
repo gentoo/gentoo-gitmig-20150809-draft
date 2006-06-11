@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/btail/btail-0.2.ebuild,v 1.1 2005/01/02 17:11:15 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/btail/btail-0.2.ebuild,v 1.2 2006/06/11 14:49:41 stuart Exp $
 
 inherit eutils
 
@@ -13,11 +13,17 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 #RESTRICT="nostrip"
 
-DEPEND=""
+DEPEND="sys-libs/gdbm"
 #RDEPEND=""
 
-src_compile() {
-	make || die "make failed"
+src_unpack() {
+	unpack ${A}; cd ${S}
+
+	sed -i -e 1iCXX=$(tc-getCXX) \
+		-e "s,^\(CXXFLAGS=\).*$,\1${CXXFLAGS}," \
+		-e "s,^\(LDFLAGS=\),&${LDFLAGS} ," \
+		-e "s,\$(CC) -Wall -W,$(tc-getCXX)," \
+		Makefile
 }
 
 src_install() {
