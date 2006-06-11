@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.6.2.ebuild,v 1.2 2006/06/04 23:13:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.6.2.ebuild,v 1.3 2006/06/11 15:41:08 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -33,7 +33,7 @@ pkg_setup() {
 	linux-mod_pkg_setup
 	MODULE_NAMES="ivtv(extra:${S}/driver)"
 
-	if [ ${KV_PATCH} -eq 16 ]; then
+	if kernel_is 2 6 16; then
 		CONFIG_CHECK="${CONFIG_CHECK} VIDEO_DECODER VIDEO_AUDIO_DECODER VIDEO_BT848"
 	else
 		die "This only works on 2.6.16 kernels"

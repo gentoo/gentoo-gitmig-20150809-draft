@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.4.5.ebuild,v 1.1 2006/05/27 02:04:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.4.5.ebuild,v 1.2 2006/06/11 15:41:08 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -30,10 +30,16 @@ RDEPEND="sys-apps/hotplug"
 DEPEND="app-arch/unzip"
 
 pkg_setup() {
-	linux-mod_pkg_setup
 	MODULE_NAMES="ivtv(extra:${S}/driver)"
 
-	if [ ${KV_PATCH} -le 14 ]; then
+	if kernel_is gt 2 6 15; then
+		ewarn "You must use 0.6.x with a 2.6.16 kernel. However the kernel is broken"
+		ewarn "with IVTV for a great number of people. Including the maintainer of"
+		ewarn "IVTV in Gentoo. Your best bet is to use a 2.6.15 kernel"
+		die "This does not work with kernel versions higher then 2.6.15"
+	fi
+
+	if kernel_is le 2 6 14; then
 		MODULE_NAMES="${MODULE_NAMES}
 		msp3400(extra:${S}/driver)
 		saa7115(extra:${S}/driver)
