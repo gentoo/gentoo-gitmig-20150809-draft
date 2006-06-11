@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.11_p1.ebuild,v 1.1 2006/06/07 18:08:56 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.11_p1.ebuild,v 1.2 2006/06/11 15:26:59 rajiv Exp $
 
 inherit eutils perl-app
 
@@ -31,19 +31,19 @@ DEPEND="dev-libs/newt
 	media-sound/sox
 	doc? ( app-doc/doxygen )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	pri? ( <net-libs/libpri-1.2* )
-	bri? ( <net-libs/libpri-1.2*
-		<net-misc/zaptel-1.2* )
+	pri? ( <net-libs/libpri-1.2 )
+	bri? ( <net-libs/libpri-1.2
+		<net-misc/zaptel-1.2 )
 	alsa? ( media-libs/alsa-lib )
 	mysql? ( dev-db/mysql )
 	speex? ( media-libs/speex )
-	zaptel? ( <net-misc/zaptel-1.2* )
+	zaptel? ( <net-misc/zaptel-1.2 )
 	postgres? ( dev-db/postgresql )
 	vmdbmysql? ( dev-db/mysql )
 	mysqlfriends? ( dev-db/mysql )
 	vmdbpostgres? ( dev-db/postgresql )
 	resperl? ( dev-lang/perl
-		   <net-misc/zaptel-1.2* )"
+		   <net-misc/zaptel-1.2 )"
 
 pkg_setup() {
 	local n
