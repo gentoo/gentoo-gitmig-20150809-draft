@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/pptpconfig-20060410.ebuild,v 1.1 2006/05/14 12:28:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/pptpconfig-20060410.ebuild,v 1.2 2006/06/11 22:23:54 mrness Exp $
 
 inherit depend.php
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="|| ( dev-php4/php-gtk dev-php/php-gtk )
+RDEPEND="dev-php4/php-gtk
 	net-dialup/pptpclient
 	sys-apps/iproute2"
 
