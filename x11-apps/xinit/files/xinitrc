@@ -28,7 +28,7 @@ fi
 # First try ~/.xinitrc
 if [ -f "$HOME/.xinitrc" ]; then
 	XINITRC="$HOME/.xinitrc"
-	if [ -e $XINITRC ]; then
+	if [ -x $XINITRC ]; then
 		# if the x bit is set on .xinitrc
 		# it means the xinitrc is not a
 		# shell script but something else
