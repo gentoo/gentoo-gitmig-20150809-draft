@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/mcelog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.8 2006/05/07 13:52:11 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.9 2006/06/11 08:52:41 blubb Exp $
+
+  11 Jun 2006; Simon Stelling <blubb@gentoo.org> mcelog-0.7.ebuild:
+  stable on amd64
 
 *mcelog-0.7 (07 May 2006)
 
