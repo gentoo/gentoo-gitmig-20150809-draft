@@ -1,0 +1,27 @@
+diff -Nuar --exclude '*~' xfsdump-2.2.33.orig/dump/Makefile xfsdump-2.2.33/dump/Makefile
+--- xfsdump-2.2.33.orig/dump/Makefile	2006-01-11 21:06:47.000000000 -0800
++++ xfsdump-2.2.33/dump/Makefile	2006-06-11 05:08:10.187705660 -0700
+@@ -106,3 +106,5 @@
+ 
+ $(INVINCL) $(INVCOMMON):
+ 	@$(RM) $@; $(LN_S) ../inventory/$@ $@
++
++$(LOCALS): $(LINKS)
+diff -Nuar --exclude '*~' xfsdump-2.2.33.orig/invutil/Makefile xfsdump-2.2.33/invutil/Makefile
+--- xfsdump-2.2.33.orig/invutil/Makefile	2006-01-11 21:06:48.000000000 -0800
++++ xfsdump-2.2.33/invutil/Makefile	2006-06-11 05:05:17.077263668 -0700
+@@ -70,3 +70,5 @@
+ 
+ $(INVINCL) $(INVCOMMON):
+ 	@$(RM) $@; $(LN_S) ../inventory/$@ $@
++
++$(LOCALS): $(LINKS)
+diff -Nuar --exclude '*~' xfsdump-2.2.33.orig/restore/Makefile xfsdump-2.2.33/restore/Makefile
+--- xfsdump-2.2.33.orig/restore/Makefile	2006-01-11 21:06:49.000000000 -0800
++++ xfsdump-2.2.33/restore/Makefile	2006-06-11 05:07:04.512296744 -0700
+@@ -116,3 +116,5 @@
+ 
+ $(INVINCL) $(INVCOMMON):
+ 	@$(RM) $@; $(LN_S) ../inventory/$@ $@
++
++$(LOCALS): $(LINKS)
