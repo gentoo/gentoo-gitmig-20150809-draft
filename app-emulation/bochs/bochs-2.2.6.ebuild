@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.6.ebuild,v 1.1 2006/06/02 14:24:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.6.ebuild,v 1.2 2006/06/11 21:01:38 lu_zero Exp $
 
 inherit eutils wxwidgets
 
@@ -67,8 +67,9 @@ src_compile() {
 		myconf="${myconf} --without-wx"
 	use debugger && \
 		myconf="$myconf --enable-debugger --enable-disasm \
-				--enable-x86-debugger --enable-iodebug \
-				--enable-gdb-stub"
+				--enable-x86-debugger --enable-iodebug"
+	use debugger || \
+		myconf="$myconf --enable-gdb-stub"
 	use vnc && \
 		myconf="$myconf --with-rfb"
 
