@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.218 2006/06/03 09:51:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.219 2006/06/11 13:14:57 carlo Exp $
+
+*arts-3.5.3-r1 (11 Jun 2006)
+*arts-3.5.2-r1 (11 Jun 2006)
+*arts-3.4.3-r1 (11 Jun 2006)
+
+  11 Jun 2006; Carsten Lohrke <carlo@gentoo.org> +files/arts-1.2.x.diff,
+  +arts-3.4.3-r1.ebuild, +arts-3.5.2-r1.ebuild, +arts-3.5.3-r1.ebuild:
+  Fix for bug #135970.
 
   03 Jun 2006; Guy Martin <gmsoft@gentoo.org> arts-3.5.2.ebuild:
   Stable on hppa.
