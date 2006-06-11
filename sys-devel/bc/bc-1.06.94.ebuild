@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06.94.ebuild,v 1.1 2006/06/10 23:29:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06.94.ebuild,v 1.2 2006/06/11 11:16:54 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="libedit readline static"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
-	libedit? ( dev-libs/libedit )"
+	libedit? ( || ( sys-freebsd/freebsd-lib dev-libs/libedit ) )"
 DEPEND="${RDEPEND}
 	sys-devel/flex"
 

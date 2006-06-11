@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.24 2006/06/10 23:29:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.25 2006/06/11 11:16:54 flameeyes Exp $
+
+  11 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> bc-1.06.94.ebuild:
+  Add freebsd-lib as option for libedit.
 
 *bc-1.06.94 (10 Jun 2006)
 
