@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-epgsearch
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.10 2006/06/10 13:08:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.11 2006/06/11 13:03:56 zzam Exp $
+
+  11 Jun 2006; Matthias Schwarzott <zzam@gentoo.org>
+  files/digest-vdr-epgsearch-0.9.17b, Manifest:
+  Adapted digest to modified original-tarball.
 
 *vdr-epgsearch-0.9.17b (10 Jun 2006)
 
