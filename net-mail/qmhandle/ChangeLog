@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmhandle
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmhandle/ChangeLog,v 1.16 2006/02/20 00:21:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmhandle/ChangeLog,v 1.17 2006/06/11 20:46:53 hansmi Exp $
+
+  11 Jun 2006; Michael Hanselmann <hansmi@gentoo.org>
+  qmhandle-1.2.0-r1.ebuild:
+  Remove RESTRICT="compile", bug 136443.
 
   20 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
   -qmhandle-1.2.0.ebuild, qmhandle-1.2.0-r1.ebuild:
