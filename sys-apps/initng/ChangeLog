@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/initng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/ChangeLog,v 1.37 2006/03/31 05:53:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/ChangeLog,v 1.38 2006/06/11 19:05:11 vapier Exp $
+
+*initng-0.6.7 (11 Jun 2006)
+
+  11 Jun 2006; Mike Frysinger <vapier@gentoo.org> +initng-0.6.7.ebuild:
+  Version bump #135904 by Thomas Kear.
 
 *initng-0.6.0 (31 Mar 2006)
 
