@@ -1,18 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-1.5.ebuild,v 1.5 2006/03/31 00:10:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-1.5.ebuild,v 1.6 2006/06/11 10:01:27 blubb Exp $
 
 inherit eutils games
 
 MY_PV=${PV//./}
 MY_PN=${PN/n/N}
 
-DESCRIPTION="Deathmatch FPS based on the Quake 1 engine"
+DESCRIPTION="Deathmatch FPS based on DarkPlaces, an advanced Quake1 engine"
 HOMEPAGE="http://www.nexuiz.com"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="dedicated opengl sdl"
 
 UIDEPEND="media-libs/alsa-lib
