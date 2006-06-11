@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kcachegrind
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.40 2006/06/08 14:04:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.41 2006/06/11 16:03:31 genstef Exp $
+
+  11 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
+  kcachegrind-3.4.3.ebuild, kcachegrind-3.5.2.ebuild,
+  kcachegrind-3.5.3.ebuild:
+  Change callgrind to newer valgrind or callgrind depend thanks to Daniel
+  Franke <franke.daniel@gmail.com> and Maurice van der Pot
+  <griffon26@gentoo.org> in bug 136303
 
   08 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   kcachegrind-3.5.3.ebuild:
