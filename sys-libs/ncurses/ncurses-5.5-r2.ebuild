@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.5-r2.ebuild,v 1.6 2006/06/11 19:05:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.5-r2.ebuild,v 1.7 2006/06/11 19:14:34 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -96,7 +96,6 @@ src_install() {
 	# files overwrite the unicode versions
 	if use unicode ; then
 		cd "${WORKDIR}"/widec
-		sed -i '2iexit 0' man/edit_man.sh
 		make DESTDIR="${D}" install || die "make widec install failed"
 	fi
 	cd "${WORKDIR}"/narrowc
