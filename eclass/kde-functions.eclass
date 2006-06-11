@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.140 2006/06/06 22:19:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.141 2006/06/11 10:28:58 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -375,6 +375,13 @@ get-child-packages () {
 			echo -n "$child "
 		fi
 	done
+}
+
+is-parent-package() {
+	echo "$KDE_DERIVATION_MAP" | while read parent child; do
+		[[ "${parent}" == "$1" ]] && return 1
+	done
+	return 0
 }
 
 # convinience functions for requesting autotools versions
