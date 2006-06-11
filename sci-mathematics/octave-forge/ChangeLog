@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/octave-forge
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.15 2006/05/11 15:32:09 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.16 2006/06/11 19:08:59 markusle Exp $
+
+  11 Jun 2006; Markus Dittrich <markusle@gentoo.org>
+  octave-forge-2006.03.17.ebuild:
+  Changed DEPEND to allow compilation against octave-2.1.73
+  since this includes a gcc-4.1 fix. This closes bug #136366.
 
   11 May 2006; Danny van Dyk <kugelfang@gentoo.org>
   octave-forge-2006.01.28.ebuild, octave-forge-2006.03.17.ebuild:
