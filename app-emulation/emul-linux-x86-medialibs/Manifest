@@ -1,40 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8764170e9f03cf6ab6c17dcd604a7608 ChangeLog 1803
-RMD160 db7c176333b660b433f4cd92aca3f12b86cc6a16 ChangeLog 1803
-SHA256 bc0bc7a93583db5de13ac359d6ba16ff24ead2238afb5b561a7e7628b64239d8 ChangeLog 1803
-MD5 1e1c2cc600026b464c44ca601eba3511 emul-linux-x86-medialibs-1.0.ebuild 637
-RMD160 161c518cc947866574575ffd636b7acae4f07034 emul-linux-x86-medialibs-1.0.ebuild 637
-SHA256 bd9ac7e41a995be126ee9b052b070b28f45a1400553be46cbdfa951ec7de8fe9 emul-linux-x86-medialibs-1.0.ebuild 637
+DIST emul-linux-x86-medialibs-1.1.tar.bz2 1594464
+DIST emul-linux-x86-medialibs-1.2.tar.bz2 1586690
+EBUILD emul-linux-x86-medialibs-1.1-r1.ebuild 744 RMD160 1c28c9932506bd7bfff0017af69457fcd1588ce5 SHA1 0e20d8fe2e95bf8ba7f37d1072e5d8005285243e SHA256 17dfed2b98f28753c49f2f731ebc98accabb41b536cddb065bb5e55c5750140a
 MD5 f3270bcf981922aae60c081220a05c16 emul-linux-x86-medialibs-1.1-r1.ebuild 744
 RMD160 1c28c9932506bd7bfff0017af69457fcd1588ce5 emul-linux-x86-medialibs-1.1-r1.ebuild 744
 SHA256 17dfed2b98f28753c49f2f731ebc98accabb41b536cddb065bb5e55c5750140a emul-linux-x86-medialibs-1.1-r1.ebuild 744
-MD5 bfed3c9d95539299c761054ac9a0ae8d emul-linux-x86-medialibs-1.1.ebuild 637
-RMD160 237268789513d2ce1aeab8bdd14c765f195336f5 emul-linux-x86-medialibs-1.1.ebuild 637
-SHA256 53e1a27a9f9c77b54d9cf401171bed28f3fa100e1aa9dd5823c225ac1eeaf88b emul-linux-x86-medialibs-1.1.ebuild 637
+EBUILD emul-linux-x86-medialibs-1.2.ebuild 637 RMD160 90f8c7f9ea5a4cf72b3fc1eb3dfb8316ad1113ad SHA1 fb7ac38dadcd56e8d7ffa8cee7d3d6a11d08745a SHA256 dababacecc9fad024668c3b9fd04f2ebf9cbcb9ccce2c9b8efb090cbacc8f19a
 MD5 e4c43937fb9f6dbc0069ed769174c6dc emul-linux-x86-medialibs-1.2.ebuild 637
 RMD160 90f8c7f9ea5a4cf72b3fc1eb3dfb8316ad1113ad emul-linux-x86-medialibs-1.2.ebuild 637
 SHA256 dababacecc9fad024668c3b9fd04f2ebf9cbcb9ccce2c9b8efb090cbacc8f19a emul-linux-x86-medialibs-1.2.ebuild 637
-MD5 94e018f2997f208cf4b244821cd0d34e files/digest-emul-linux-x86-medialibs-1.0 82
-RMD160 e39edf04f60edc1481836304533ba96e5dfe2538 files/digest-emul-linux-x86-medialibs-1.0 82
-SHA256 f1847b4e032b3a55e99969e41359545acb1c8c59b5a85cb6783ca751730050cb files/digest-emul-linux-x86-medialibs-1.0 82
-MD5 0a1289c66e38536fa8b2b7b57b72850d files/digest-emul-linux-x86-medialibs-1.1 82
-RMD160 99b0db9ca1f28f4743250a51681c7b556c29720c files/digest-emul-linux-x86-medialibs-1.1 82
-SHA256 8f3984988c5cf3e6d08e65b8a5971ceddc23a6a4460c45f13cf3be5b0cce7f2a files/digest-emul-linux-x86-medialibs-1.1 82
+MISC ChangeLog 1953 RMD160 d1507536e1342351f602f50b0faae9bf245539cc SHA1 d61eacdca2136a825711bc80198f4b1978441f37 SHA256 122f3accccfc06a1cf8ca17aa9860098b8416824fb0f74391af9d299e71cff6b
+MD5 877ba65764cfd5d7bac33f111650a79d ChangeLog 1953
+RMD160 d1507536e1342351f602f50b0faae9bf245539cc ChangeLog 1953
+SHA256 122f3accccfc06a1cf8ca17aa9860098b8416824fb0f74391af9d299e71cff6b ChangeLog 1953
+MISC metadata.xml 218 RMD160 cbc93b26738b5e98e127744c5a949cf2f0920778 SHA1 e6c4a3379b1d26bd7a87fe3a64f4b8185bf208d4 SHA256 0522168dc16d1a5fe22d19e63237544b3bdbb06dcefb1df3d4fe8c54975a6d3b
+MD5 d138fbd38b04f78fe9b3766051723a5b metadata.xml 218
+RMD160 cbc93b26738b5e98e127744c5a949cf2f0920778 metadata.xml 218
+SHA256 0522168dc16d1a5fe22d19e63237544b3bdbb06dcefb1df3d4fe8c54975a6d3b metadata.xml 218
 MD5 0a1289c66e38536fa8b2b7b57b72850d files/digest-emul-linux-x86-medialibs-1.1-r1 82
 RMD160 99b0db9ca1f28f4743250a51681c7b556c29720c files/digest-emul-linux-x86-medialibs-1.1-r1 82
 SHA256 8f3984988c5cf3e6d08e65b8a5971ceddc23a6a4460c45f13cf3be5b0cce7f2a files/digest-emul-linux-x86-medialibs-1.1-r1 82
 MD5 040ada0570f0eac380635526c2207fe2 files/digest-emul-linux-x86-medialibs-1.2 82
 RMD160 1f53e819b2915ceca1b85749fdddc283691c559b files/digest-emul-linux-x86-medialibs-1.2 82
 SHA256 824cf52d925241eef50631eeedb0818ffd29d2f6075c64c4ab3af68388598160 files/digest-emul-linux-x86-medialibs-1.2 82
-MD5 d138fbd38b04f78fe9b3766051723a5b metadata.xml 218
-RMD160 cbc93b26738b5e98e127744c5a949cf2f0920778 metadata.xml 218
-SHA256 0522168dc16d1a5fe22d19e63237544b3bdbb06dcefb1df3d4fe8c54975a6d3b metadata.xml 218
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFED4luAiZjviIA2XgRAkyKAKCykZ7KU4hEx2dqV+yTIxfreDOQtACdGRUG
-Kf5ZHz3oDNbNNEWdNa7S2jE=
-=h8sh
------END PGP SIGNATURE-----
