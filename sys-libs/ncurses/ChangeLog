@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.109 2006/06/07 18:46:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.110 2006/06/11 16:42:35 nixnut Exp $
+
+  11 Jun 2006; <nixnut@gentoo.org> ncurses-5.5-r2.ebuild:
+  Stable on ppc; bug #136414
 
   07 Jun 2006; Joshua Kinard <kumba@gentoo.org> ncurses-5.4-r5.ebuild,
   ncurses-5.4-r6.ebuild, ncurses-5.5-r2.ebuild:
