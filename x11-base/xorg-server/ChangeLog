@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.123 2006/06/04 18:51:49 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.124 2006/06/11 18:48:39 joshuabaergen Exp $
+
+*xorg-server-1.0.2-r5 (11 Jun 2006)
+
+  11 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/1.0.2-fix-readKernelMapping-overrun.patch,
+  +xorg-server-1.0.2-r5.ebuild:
+  Fix an overrun that was causing various issues on VT switch.  This is already
+  fixed in 1.1.  (Matthias Dahl, bug #127608)
 
   04 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.1.0.ebuild:
