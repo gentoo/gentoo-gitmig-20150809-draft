@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.60 2006/04/22 07:57:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.61 2006/06/11 18:00:47 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -118,8 +118,15 @@ tc-binutils_apply_patches() {
 	fi
 
 	# fix locale issues if possible #122216
-	[[ -e ${FILESDIR}/binutils-configure-LANG.patch ]] \
-		&& epatch "${FILESDIR}"/binutils-configure-LANG.patch
+	if [[ -e ${FILESDIR}/binutils-configure-LANG.patch ]] ; then
+		einfo "Fixing misc issues in configure files"
+		for f in $(grep -l 'autoconf version 2.13' $(find "${S}" -name configure)) ; do
+			ebegin "  Updating ${f/${S}\/}"
+			patch "${f}" "${FILESDIR}"/binutils-configure-LANG.patch >& "${T}"/configure-patch.log \
+				|| eerror "Please file a bug about this"
+			eend $?
+		done
+	fi
 
 	# Fix po Makefile generators
 	sed -i \
