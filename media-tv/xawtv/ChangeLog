@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.38 2006/04/30 09:09:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.39 2006/06/11 10:50:04 robbat2 Exp $
+
+  11 Jun 2006; Robin H. Johnson <robbat2@gentoo.org> xawtv-3.95-r1.ebuild:
+  Bug #131673 - missing dep on xset with modular X.
 
   30 Apr 2006; Simon Stelling <blubb@gentoo.org> xawtv-3.94-r1.ebuild:
   stable on amd64
