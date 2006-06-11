@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/swftools
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.18 2006/06/08 04:29:54 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.19 2006/06/11 17:19:52 vanquirius Exp $
+
+  11 Jun 2006; Marcelo Goes <vanquirius@gentoo.org> swftools-0.7.0.ebuild:
+  Warn that avi2swf and gif2swf are not installed for bug 136046. Thanks to
+  Samuli Suominen <sasuomin at uusikaupunki dot fi>.
 
   08 Jun 2006; Joshua Jackson <tsunam@gentoo.org> swftools-0.7.0.ebuild:
   Stable on x86; bug #135393
