@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/kxkb-3.5.2.ebuild,v 1.13 2006/06/11 13:04:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/kxkb-3.5.2.ebuild,v 1.14 2006/06/11 15:01:36 carlo Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdebase-3.5-patchset-01.tar.bz2"
 
 DESCRIPTION="Kxkb is a KControl module and frontend for X11 keyboard extension, allowing the user to configure and switch between keyboard mappings."
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="${RDEPEND}
