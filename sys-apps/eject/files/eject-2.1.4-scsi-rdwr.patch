@@ -1,6 +1,7 @@
-diff -urN eject-2.0.13deb.orig/eject.c eject-2.0.13deb/eject.c
---- eject-2.0.13deb.orig/eject.c	2005-12-19 16:20:43.000000000 -0500
-+++ eject-2.0.13deb/eject.c	2005-12-19 16:23:08.000000000 -0500
+http://bugs.gentoo.org/116731
+
+--- eject-2.0.13/eject.c
++++ eject-2.0.13/eject.c
 @@ -657,7 +657,15 @@
  /* Open a device file. */
  static int OpenDevice(const char *fullName)
