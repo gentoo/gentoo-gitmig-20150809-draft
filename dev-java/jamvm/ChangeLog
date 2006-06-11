@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jamvm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.19 2006/05/12 13:37:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.20 2006/06/11 19:17:33 corsair Exp $
+
+  11 Jun 2006; Markus Rothe <corsair@gentoo.org> jamvm-1.4.2.ebuild:
+  Stable on ppc64; bug #105973
 
   12 May 2006; Petteri Räty <betelgeuse@gentoo.org> -jamvm-1.3.0.ebuild,
   -jamvm-1.4.1.ebuild:
