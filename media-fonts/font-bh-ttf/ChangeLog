@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bh-ttf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.20 2006/06/05 00:21:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.21 2006/06/11 15:50:39 joshuabaergen Exp $
+
+  11 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  files/digest-font-bh-ttf-1.0.0, Manifest:
+  Fix digest. (Kevin Quinn, bug #136151)
 
   04 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
   font-bh-ttf-1.0.0.ebuild:
