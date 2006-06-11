@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.16.20060323.ebuild,v 1.2 2006/04/19 00:32:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.16.20060323.ebuild,v 1.3 2006/06/11 14:47:54 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -37,9 +37,9 @@ src_unpack() {
 	# don't build arpd if USE=-berkdb #81660
 	use berkdb || sed -i '/^TARGETS=/s: arpd : :' misc/Makefile
 	# Multilib fixes
-	sed -i 's:/usr/local:/usr:' tc/m_ipt.c
+	sed -i 's:/usr/local:/usr:' tc/m_ipt.c include/iptables.h
 	sed -i "s:/usr/lib:/usr/$(get_libdir):g" \
-		netem/Makefile tc/{Makefile,tc.c,q_netem.c,m_ipt.c} || die
+		netem/Makefile tc/{Makefile,tc.c,q_netem.c,m_ipt.c} include/iptables.h || die
 }
 
 src_compile() {
