@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.44 2006/03/26 18:51:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.45 2006/06/11 18:11:30 sbriesen Exp $
+
+  11 Jun 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  capi4k-utils-20050718-r1.ebuild:
+  fixing permissions of capiplugin man-page (see bug #136120)
 
   26 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
   capi4k-utils-20050718-r1.ebuild:
