@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmsvencd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsvencd/ChangeLog,v 1.5 2006/01/31 20:48:53 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsvencd/ChangeLog,v 1.6 2006/06/11 16:06:48 nelchael Exp $
+
+  11 Jun 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmsvencd-0.5.0.ebuild:
+  Fix DEPEND, see bug #136421.
 
   31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmsvencd-0.5.0.ebuild:
   Fixed DEPEND for modular X.

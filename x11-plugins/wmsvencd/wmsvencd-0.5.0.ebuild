@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsvencd/wmsvencd-0.5.0.ebuild,v 1.5 2006/01/31 20:48:53 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsvencd/wmsvencd-0.5.0.ebuild,v 1.6 2006/06/11 16:06:48 nelchael Exp $
 
 inherit eutils
 
@@ -10,8 +10,7 @@ DESCRIPTION="Window Maker Dockable CD-Player with CDDB"
 SRC_URI="http://www.harshbutfair.org/dl/${P}.tar.gz"
 HOMEPAGE="http://www.harshbutfair.org/software/wmsvencd.html"
 
-DEPEND="|| ( >=x11-wm/windowmaker-0.62.0
-	x11-wm/windowmaker-cvs )"
+DEPEND="x11-wm/windowmaker"
 
 SLOT="0"
 LICENSE="GPL-2"
