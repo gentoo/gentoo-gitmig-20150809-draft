@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/grub-static-0.93.20030118.ebuild,v 1.4 2006/06/11 13:22:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/grub-static-0.96.ebuild,v 1.1 2006/06/11 13:22:58 blubb Exp $
 
 DESCRIPTION="Static GNU GRUB boot loader"
 

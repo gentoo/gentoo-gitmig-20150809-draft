@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/grub-static
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.4 2006/02/15 02:52:08 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.5 2006/06/11 13:22:58 blubb Exp $
+
+*grub-static-0.96 (11 Jun 2006)
+
+  11 Jun 2006; Simon Stelling <blubb@gentoo.org>
+  grub-static-0.93.20030118.ebuild, +grub-static-0.96.ebuild:
+  clean up KEYWORDS and bump to  amore recent version
 
   15 Feb 2006; Olivier Crête <tester@gentoo.org>
   grub-static-0.93.20030118.ebuild:
