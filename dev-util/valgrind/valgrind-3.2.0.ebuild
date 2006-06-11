@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.2.0.ebuild,v 1.1 2006/06/07 09:24:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.2.0.ebuild,v 1.2 2006/06/11 12:12:37 griffon26 Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,6 +15,8 @@ IUSE="X"
 
 # bug #49147 (bogus stacktrace in gdb with --db-attach=yes) does not seem to be applicable anymore
 #RESTRICT="strip"
+
+RDEPEND="!dev-util/callgrind"
 
 src_unpack() {
 	unpack ${A}
@@ -34,9 +36,6 @@ src_unpack() {
 	einfo "Regenerating autotools files..."
 	autoconf || die "autoconf failed"
 	automake || die "automake failed"
-
-	# fix for amd64 no-multilib profile till valgrind 3.2.0 is out (bug #114407)
-	use amd64 && (has_multilib_profile || epatch "${FILESDIR}/valgrind-3.1.0-amd64-nomultilib-fix.patch")
 }
 
 src_compile() {
@@ -56,6 +55,10 @@ src_compile() {
 
 	# Optionally build in X suppression files
 	use X && myconf="--with-x" || myconf="--with-x=no"
+
+	if use amd64 && ! has_multilib_profile; then
+		myconf="${myconf} --enable-only64bit"
+	fi
 
 	econf ${myconf} || die "Configure failed!"
 	emake || die "Make failed!"
