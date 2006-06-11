@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14.ebuild,v 1.7 2006/01/08 01:37:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14.ebuild,v 1.8 2006/06/11 19:59:52 antarus Exp $
 
 inherit eutils
 
@@ -13,14 +13,11 @@ SRC_URI="mirror://debian/pool/main/x/xosd/${PN}_${PV}.orig.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="xinerama xmms bmp"
+IUSE="xinerama xmms"
 
 RDEPEND="|| ( ( x11-libs/libX11
 	x11-libs/libXext )
 	virtual/x11 )
-	bmp? (
-		media-sound/beep-media-player
-	)
 	xmms? (
 		media-sound/xmms
 		>=media-libs/gdk-pixbuf-0.22.0
@@ -43,7 +40,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-m4.patch
 	epatch "${FILESDIR}"/2.2.8-xmms-trackpos.patch
 	epatch "${DISTDIR}"/${PN}_${PV}-1.diff.gz
-	epatch ${FILESDIR}/xosd-2.2.14-bmp-fixes.patch
 
 	export WANT_AUTOMAKE=1.8
 	export WANT_AUTOCONF=2.5
@@ -57,7 +53,6 @@ src_compile() {
 	econf \
 		`use_enable xinerama` \
 		`use_enable xmms new-xmms` \
-		`use_enable bmp  new-bmp` || die "econf failed"
 	emake || die "emake failed"
 }
 
