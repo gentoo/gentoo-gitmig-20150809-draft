@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.165 2006/06/11 10:28:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.166 2006/06/11 10:42:29 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -87,32 +87,32 @@ kde_pkg_setup() {
 kde_src_unpack() {
 	debug-print-function $FUNCNAME $*
 
-	local PATCHDIR="${WORKDIR}/patches/"
-	if [[ -z $* ]] ; then
-		# Unpack first and deal with KDE patches after examing possible patch sets.
-		# To be picked up, patches need to be named $PN-$PV-*{diff,patch} and be 
-		# placed in $PATCHDIR. Monolithic ebuilds will use the split ebuild patches.
-		base_src_unpack unpack
-		if [[ -d "${PATCHDIR}" ]] ; then
-			if is-parent-package ${CATEGORY}/${PN} ; then
-				packages="$(get-child-packages ${CATEGORY}/${PN})"
-				packages="${packages//${CATEGORY}\//} ${PN}"
-			else
-				packages="${PN}"
-			fi
-			for _p in ${packages} ; do
-				PATCHES="${PATCHES} $(ls ${PATCHDIR}/${_p}-${PV}-*{diff,patch} 2>/dev/null)"
-				if [[ -n "${KDEBASE}" ]] ; then
-					PATCHES="${PATCHES} $(ls ${PATCHDIR}/${_p}-${SLOT}-*{diff,patch} 2>/dev/null)"
-				fi
-			done
-		fi
-		[[ -n ${PATCHES} ]] && base_src_unpack autopatch
-	else
+# 	local PATCHDIR="${WORKDIR}/patches/"
+# 	if [[ -z $* ]] ; then
+# 		# Unpack first and deal with KDE patches after examing possible patch sets.
+# 		# To be picked up, patches need to be named $PN-$PV-*{diff,patch} and be 
+# 		# placed in $PATCHDIR. Monolithic ebuilds will use the split ebuild patches.
+# 		base_src_unpack unpack
+# 		if [[ -d "${PATCHDIR}" ]] ; then
+# 			if is-parent-package ${CATEGORY}/${PN} ; then
+# 				packages="$(get-child-packages ${CATEGORY}/${PN})"
+# 				packages="${packages//${CATEGORY}\//} ${PN}"
+# 			else
+# 				packages="${PN}"
+# 			fi
+# 			for _p in ${packages} ; do
+# 				PATCHES="${PATCHES} $(ls ${PATCHDIR}/${_p}-${PV}-*{diff,patch} 2>/dev/null)"
+# 				if [[ -n "${KDEBASE}" ]] ; then
+# 					PATCHES="${PATCHES} $(ls ${PATCHDIR}/${_p}-${SLOT}-*{diff,patch} 2>/dev/null)"
+# 				fi
+# 			done
+# 		fi
+# 		[[ -n ${PATCHES} ]] && base_src_unpack autopatch
+# 	else
 		# Call base_src_unpack, which has sections, to do unpacking and patching
 		# step by step transparently as defined in the ebuild.
 		base_src_unpack $*
-	fi
+# 	fi
 
 	[[ -z ${KDE_S} ]] && KDE_S="${S}"
 
