@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.289 2006/06/11 00:02:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.290 2006/06/11 00:03:14 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -519,7 +519,7 @@ libc_has_ssp() {
 # Travis Tilley <lv@gentoo.org> (26 Oct 2004)
 #
 gcc-lang-supported() {
-	grep ^language=\"${1}\" ${S}/gcc/*/config-lang.in > /dev/null && return 0
+	grep ^language=\"${1}\" "${S}"/gcc/*/config-lang.in > /dev/null && return 0
 	return 1
 }
 
@@ -2152,15 +2152,15 @@ gcc_version_patch() {
 	[[ -z $1 ]] && die "no arguments to gcc_version_patch"
 
 	if grep -qs VERSUFFIX "${S}"/gcc/version.c ; then
-		sed -i -e "s~VERSUFFIX \"\"~VERSUFFIX \" ($2)\"~" "${S}"/gcc/version.c \
-		|| die "failed to update VERSUFFIX with Gentoo branding"
+		sed -i -e "s~VERSUFFIX \"\"~VERSUFFIX \" ($2)\"~" \
+			"${S}"/gcc/version.c || die "failed to update VERSUFFIX with Gentoo branding"
 	else
 		version_string="$1 ($2)"
 		sed -i -e "s~\(const char version_string\[\] = \"\).*\(\".*\)~\1$version_string\2~" \
-				"${S}"/gcc/version.c || die "failed to update version.c with Gentoo branding."
+			"${S}"/gcc/version.c || die "failed to update version.c with Gentoo branding."
 	fi
-	sed -i -e 's~gcc\.gnu\.org\/bugs\.html~bugs\.gentoo\.org\/~'\
-	"${S}"/gcc/version.c || die "Failed to change the bug URL"
+	sed -i -e 's~gcc\.gnu\.org\/bugs\.html~bugs\.gentoo\.org\/~' \
+		"${S}"/gcc/version.c || die "Failed to change the bug URL"
 }
 
 # The purpose of this DISGUSTING gcc multilib hack is to allow 64bit libs
