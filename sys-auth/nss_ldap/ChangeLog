@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/nss_ldap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.22 2006/06/07 20:45:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.23 2006/06/11 10:20:23 blubb Exp $
+
+  11 Jun 2006; Simon Stelling <blubb@gentoo.org> nss_ldap-249.ebuild:
+  stable on amd64
 
   07 Jun 2006; Robin H. Johnson <robbat2@gentoo.org> nss_ldap-250.ebuild:
   Bug #135902, fix IUSE.
