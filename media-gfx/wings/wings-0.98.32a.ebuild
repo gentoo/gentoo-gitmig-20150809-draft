@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/wings-0.98.32a.ebuild,v 1.1 2005/12/05 06:09:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/wings-0.98.32a.ebuild,v 1.2 2006/06/11 12:33:31 flameeyes Exp $
+
+inherit multilib
 
 DESCRIPTION="excellent 3D polygon mesh modeler"
 HOMEPAGE="http://www.wings3d.com/"
@@ -14,7 +16,9 @@ IUSE=""
 DEPEND=">=dev-lang/erlang-10.2.7
 	>=media-libs/esdl-0.95.0630"
 
-ERL_PATH=/usr/lib/erlang/lib/
+pkg_setup() {
+	ERL_PATH="/usr/$(get_libdir)/erlang/lib/"
+}
 
 src_compile() {
 	make ESDL_PATH="${ERL_PATH}/$(best_version media-libs/esdl | cut -d/ -f1)" || die
