@@ -1,14 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8.ebuild,v 1.1 2006/06/11 22:52:30 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8.ebuild,v 1.2 2006/06/11 23:16:09 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
 RESTRICT="nostrip"
 IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts bidi bl bindist
 cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dv
-dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca
-lirc live livecd lzo mad matroska matrox mmx mmxext musepack nas nls nvidia
+dvdread encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca
+lirc live livecd lzo mad matrox mmx mmxext musepack nas nls nvidia
 unicode vorbis opengl openal oss png real rtc samba sdl speex sse sse2 svga tga
 theora truetype v4l v4l2 win32codecs X x264 xanim xinerama xmms xv xvid xvmc"
 # openal
@@ -269,7 +269,6 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-dvdread --disable-mpdvdkit"
 	fi
-	myconf="${myconf} $(use_enable edl)"
 
 	if use encode ; then
 		myconf="${myconf} --enable-mencoder $(use_enable dv libdv) \
@@ -319,7 +318,6 @@ src_compile() {
 	#myconf="${myconf} $(use_enable ladspa)"
 	myconf="${myconf} $(use_enable dts libdts)"
 	myconf="${myconf} $(use_enable lzo liblzo)"
-	myconf="${myconf} $(use_enable matroska internal-matroska)"
 	myconf="${myconf} $(use_enable musepack)"
 	myconf="${myconf} $(use_enable aac internal-faad)"
 	myconf="${myconf} $(use_enable vorbis)"
