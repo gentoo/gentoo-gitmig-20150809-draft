@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/style-check/style-check-0.7.ebuild,v 1.3 2005/06/24 21:48:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/style-check/style-check-0.7.ebuild,v 1.4 2006/06/12 19:47:11 blubb Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.cs.umd.edu/~nspring/software/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 ~x86"
 DEPEND="virtual/ruby"
 
 src_install() {
