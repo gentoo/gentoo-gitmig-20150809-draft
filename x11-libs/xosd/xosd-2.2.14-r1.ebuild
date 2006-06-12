@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.1 2006/06/11 20:04:36 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.2 2006/06/12 19:06:51 flameeyes Exp $
 
 inherit eutils
 
@@ -33,6 +33,8 @@ DEPEND="|| ( (
 	${RDEPEND}
 	>=sys-devel/autoconf-2.57
 	>=sys-devel/automake-1.8"
+
+RESTRICT="confcache"
 
 src_unpack() {
 	unpack ${A}

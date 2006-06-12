@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.53 2006/06/11 20:04:36 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.54 2006/06/12 19:06:51 flameeyes Exp $
+
+  12 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> xosd-2.2.14-r1.ebuild:
+  Add confcache restriction, probabably build system's fault. Thanks to Bo
+  Ørsted Andresen for reporting in bug #136511.
 
 *xosd-2.2.14-r1 (11 Jun 2006)
 *xosd-2.2.10-r1 (11 Jun 2006)
