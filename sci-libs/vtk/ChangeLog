@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.17 2006/04/27 22:29:18 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.18 2006/06/12 12:38:38 markusle Exp $
+
+  11 Jun 2006; Markus Dittrich <markusle@gentoo.org> vtk-5.0.0.ebuild:
+  Fix RDEPEND and cmake configuration such that tcl/tk is only 
+  pulled in and used if USE=tcltk. This closes bug #136324.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four

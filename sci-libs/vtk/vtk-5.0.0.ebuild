@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.5 2006/04/21 02:18:26 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.6 2006/06/12 12:38:38 markusle Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
@@ -21,8 +21,8 @@ IUSE="doc examples java mpi patented python tcltk threads qt3 qt4"
 RDEPEND="java? ( virtual/jdk )
 	mpi? ( sys-cluster/mpich )
 	python? ( >=dev-lang/python-2.0 )
-	>=dev-lang/tcl-8.2.3
-	>=dev-lang/tk-8.2.3
+	tcltk? ( >=dev-lang/tcl-8.2.3
+			>=dev-lang/tk-8.2.3 )
 	dev-libs/expat
 	media-libs/jpeg
 	media-libs/libpng
@@ -123,7 +123,14 @@ src_compile() {
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_QMAKE_EXECUTABLE:PATH=/usr/bin/qmake"
 	fi
 
-	use tcltk && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_TCL:BOOL=ON"
+	if use tcltk; then
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_TCL:BOOL=ON"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_TK:BOOL=ON"
+	else
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_TCL:BOOL=OFF"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_TK:BOOL=OFF"
+	fi
+
 	use threads && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_PARALLEL:BOOL=ON"
 	use patented && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_PATENTED:BOOL=ON"
 	use doc && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DDOCUMENTATION_HTML_HELP:BOOL=ON -DBUILD_DOCUMENTATION:BOOL=ON"
