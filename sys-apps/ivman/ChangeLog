@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.32 2006/04/18 11:54:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.33 2006/06/12 19:36:15 gustavoz Exp $
+
+  12 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> ivman-0.6.11.ebuild:
+  Stable on sparc wrt #136292
 
 *ivman-0.6.11 (18 Apr 2006)
 
