@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<maintainer>
-		<email>uberlord@gentoo.org</email>
-		<name>Roy Marples</name>
-	</maintainer>
-	<longdescription>DNS configuration management framework</longdescription>
-</pkgmetadata>
