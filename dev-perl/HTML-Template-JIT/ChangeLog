@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Template-JIT
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-JIT/ChangeLog,v 1.2 2006/03/30 22:50:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-JIT/ChangeLog,v 1.3 2006/06/12 15:31:57 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  HTML-Template-JIT-0.05.ebuild:
+  Marking sparc stable
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   HTML-Template-JIT-0.05.ebuild:

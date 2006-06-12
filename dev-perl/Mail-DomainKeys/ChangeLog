@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-DomainKeys
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DomainKeys/ChangeLog,v 1.8 2006/05/21 18:01:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DomainKeys/ChangeLog,v 1.9 2006/06/12 15:44:22 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Mail-DomainKeys-0.80.ebuild:
+  Marking sparc stable
 
   21 May 2006; Markus Rothe <corsair@gentoo.org>
   Mail-DomainKeys-0.80.ebuild:

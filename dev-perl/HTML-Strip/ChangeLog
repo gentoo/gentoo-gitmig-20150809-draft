@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Strip
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Strip/ChangeLog,v 1.16 2006/04/26 20:30:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Strip/ChangeLog,v 1.17 2006/06/12 15:30:19 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  HTML-Strip-1.06.ebuild:
+  Marking sparc stable
 
 *HTML-Strip-1.06 (26 Apr 2006)
 

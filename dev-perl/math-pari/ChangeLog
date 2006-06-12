@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/math-pari
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.22 2006/04/26 22:19:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.23 2006/06/12 15:46:38 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  math-pari-2.010702-r1.ebuild, math-pari-2.010704.ebuild:
+  Marking sparc stable
 
 *math-pari-2.010704 (26 Apr 2006)
 

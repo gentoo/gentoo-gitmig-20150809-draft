@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Filesys-DiskSpace
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-DiskSpace/ChangeLog,v 1.3 2006/05/15 14:49:16 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-DiskSpace/ChangeLog,v 1.4 2006/06/12 15:24:12 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Filesys-DiskSpace-0.05.ebuild:
+  Marking sparc stable
 
   15 May 2006; Jon Hood <squinky86@gentoo.org>
   Filesys-DiskSpace-0.05.ebuild:
