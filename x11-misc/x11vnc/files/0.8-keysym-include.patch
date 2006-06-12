@@ -1,0 +1,10 @@
+diff -Nur x11vnc-0.8.orig/rfb/keysym.h x11vnc-0.8/rfb/keysym.h
+--- x11vnc-0.8.orig/rfb/keysym.h	2003-02-18 17:02:45.000000000 +0000
++++ x11vnc-0.8/rfb/keysym.h	2006-06-12 23:19:12.184884500 +0000
+@@ -1,5 +1,4 @@
+-#ifndef KEYSYM_H
+-#define KEYSYM_H
++#ifndef XK_0
+ 
+ /* $XConsortium: keysym.h,v 1.15 94/04/17 20:10:55 rws Exp $ */
+ 

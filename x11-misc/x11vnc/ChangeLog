@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.18 2006/06/06 21:46:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.19 2006/06/12 23:24:27 swegener Exp $
+
+  12 Jun 2006; Sven Wegener <swegener@gentoo.org>
+  +files/0.8-keysym-include.patch, x11vnc-0.8.ebuild:
+  Add a patch to fix the double keysym include.
 
 *x11vnc-0.8.1 (06 Jun 2006)
 
