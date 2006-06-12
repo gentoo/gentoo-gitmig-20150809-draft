@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub-static
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.5 2006/06/11 13:22:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.6 2006/06/12 14:00:35 tester Exp $
+
+  12 Jun 2006; Olivier Crête <tester@gentoo.org>
+  files/digest-grub-static-0.96, Manifest:
+  Fixed digest
 
 *grub-static-0.96 (11 Jun 2006)
 
