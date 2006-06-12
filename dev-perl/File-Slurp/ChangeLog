@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Slurp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/ChangeLog,v 1.24 2006/06/12 15:07:45 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/ChangeLog,v 1.25 2006/06/12 15:12:15 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  File-Slurp-9999.12.ebuild:
+  Actual stable mark - sorry
 
   12 Jun 2006; Michael Cummings <mcummings@gentoo.org> Manifest:
   Marking stable sparc
