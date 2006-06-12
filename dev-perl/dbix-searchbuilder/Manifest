@@ -1,14 +1,66 @@
-MD5 4c8301deb5017b0e4e80f9ab4c19b02b ChangeLog 4301
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST DBIx-SearchBuilder-0.95.tar.gz 37884
+DIST DBIx-SearchBuilder-1.01.tar.gz 38274
+DIST DBIx-SearchBuilder-1.27.tar.gz 46762
+DIST DBIx-SearchBuilder-1.35.tar.gz 68516
+DIST DBIx-SearchBuilder-1.38.tar.gz 71132
+DIST DBIx-SearchBuilder-1.43.tar.gz 73570 RMD160 dc0e59699b1a1645156f382070f310209e127f01 SHA256 6a4af3be3e215d57920f5675382da070fdff38ff59794e26c627bdee046ae05c
+EBUILD dbix-searchbuilder-0.95.ebuild 645 RMD160 c736be494fe79321a114f130a4beb9055d03ce72 SHA1 02a82ddf3be51ed7a76fc94c5bd6c659409a0d36 SHA256 0dff3fff229ebf25707dc3571a47bfc21e52da31c71abff192d0c0000c1afef5
 MD5 a3561c9f1327128905c4c7d9a7eed548 dbix-searchbuilder-0.95.ebuild 645
+RMD160 c736be494fe79321a114f130a4beb9055d03ce72 dbix-searchbuilder-0.95.ebuild 645
+SHA256 0dff3fff229ebf25707dc3571a47bfc21e52da31c71abff192d0c0000c1afef5 dbix-searchbuilder-0.95.ebuild 645
+EBUILD dbix-searchbuilder-1.01.ebuild 696 RMD160 e95ddff78952823f46f26135b7c5e333a612b300 SHA1 6f57be414638b9c2fa721c57c60b4feed197850a SHA256 111a496eafe684c5e75c24c7a0fbe350836e2edab370094e5eaf826528e43811
 MD5 40c4df363bf82b041a3bbcc4d34ca093 dbix-searchbuilder-1.01.ebuild 696
+RMD160 e95ddff78952823f46f26135b7c5e333a612b300 dbix-searchbuilder-1.01.ebuild 696
+SHA256 111a496eafe684c5e75c24c7a0fbe350836e2edab370094e5eaf826528e43811 dbix-searchbuilder-1.01.ebuild 696
+EBUILD dbix-searchbuilder-1.27.ebuild 706 RMD160 3207fca0f5427fa504b7caf154b9f706fade301a SHA1 4a942d1a9c328af1bc0f41a44d24e5baf396e463 SHA256 952debda8ca62512c9ff32cf393a38cff7e95797dd0ae3a0029302542ee9833d
 MD5 49ffa735a07bae010b6c2bda5f31e417 dbix-searchbuilder-1.27.ebuild 706
+RMD160 3207fca0f5427fa504b7caf154b9f706fade301a dbix-searchbuilder-1.27.ebuild 706
+SHA256 952debda8ca62512c9ff32cf393a38cff7e95797dd0ae3a0029302542ee9833d dbix-searchbuilder-1.27.ebuild 706
+EBUILD dbix-searchbuilder-1.35.ebuild 916 RMD160 8103ac0c3feb6342b525e14aa5f515f0657f6b59 SHA1 0cdbece8c545153fe3bf1dad5626c2eaef755b6f SHA256 77c9c65823e00ef0dbf59a17a32a20f244c99a6a7dc534602918cf243af457db
 MD5 f16d21893764f1bb69140d0abbb0e2ee dbix-searchbuilder-1.35.ebuild 916
+RMD160 8103ac0c3feb6342b525e14aa5f515f0657f6b59 dbix-searchbuilder-1.35.ebuild 916
+SHA256 77c9c65823e00ef0dbf59a17a32a20f244c99a6a7dc534602918cf243af457db dbix-searchbuilder-1.35.ebuild 916
+EBUILD dbix-searchbuilder-1.38.ebuild 952 RMD160 b2723f5bef3fe753bc3f8f6ab5934d94e80b5f30 SHA1 22086bcbf3cd648b9381f8e21b738a6400d2676e SHA256 7b1d2aaf6b6d6c5c96c41dfd79b59d803cbbb52c0272e4909266a793b81b2ddc
 MD5 8dcb0e197e453035cf78ff6f060f6c80 dbix-searchbuilder-1.38.ebuild 952
-MD5 617b349d7e29d3c534e08c818054e9a9 dbix-searchbuilder-1.43.ebuild 959
-MD5 b8e5f466cabcb00dc4c5a3ab0fdfb8ed files/digest-dbix-searchbuilder-0.95 74
-MD5 31ce4083b3b970cc289c5dc99512af59 files/digest-dbix-searchbuilder-1.01 74
-MD5 4bf49fbaa280026b24ed168dd6894ec8 files/digest-dbix-searchbuilder-1.27 74
-MD5 de559bfdca62a963c7b4bd141aaa9718 files/digest-dbix-searchbuilder-1.35 74
-MD5 a9d62ac612a152669b8f62b07cdec9d1 files/digest-dbix-searchbuilder-1.38 74
-MD5 03d36ace42c079d352321a8874dced26 files/digest-dbix-searchbuilder-1.43 268
+RMD160 b2723f5bef3fe753bc3f8f6ab5934d94e80b5f30 dbix-searchbuilder-1.38.ebuild 952
+SHA256 7b1d2aaf6b6d6c5c96c41dfd79b59d803cbbb52c0272e4909266a793b81b2ddc dbix-searchbuilder-1.38.ebuild 952
+EBUILD dbix-searchbuilder-1.43.ebuild 958 RMD160 6647ce7b2dad1356ac0de0eaec9070660af72397 SHA1 2bf8514bf584af80b88701f8ae84651ba46ac18f SHA256 98d9ce56e9d253a9e460d7b0255bef52448e1f6ba265a258824e2319be1f6671
+MD5 585b379e9902dda9e1364743feedc387 dbix-searchbuilder-1.43.ebuild 958
+RMD160 6647ce7b2dad1356ac0de0eaec9070660af72397 dbix-searchbuilder-1.43.ebuild 958
+SHA256 98d9ce56e9d253a9e460d7b0255bef52448e1f6ba265a258824e2319be1f6671 dbix-searchbuilder-1.43.ebuild 958
+MISC ChangeLog 4418 RMD160 0dc137978b1e1e6947bb8131de510490ac892ca8 SHA1 eaa4bfe6334266958ed8bfe78ff0137ed00dc768 SHA256 774143a4dca4320b04bde4062ce9924c60818242e1a58defe1e7fd50aba87960
+MD5 cd6372c8e488cef57a8a995b55aba5a2 ChangeLog 4418
+RMD160 0dc137978b1e1e6947bb8131de510490ac892ca8 ChangeLog 4418
+SHA256 774143a4dca4320b04bde4062ce9924c60818242e1a58defe1e7fd50aba87960 ChangeLog 4418
+MISC metadata.xml 305 RMD160 647980838c590f54441a053916ea629e53e551c0 SHA1 99ef1deeae9a934fb6e46cf5fc4a5fcb8379a74a SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
+MD5 b8e5f466cabcb00dc4c5a3ab0fdfb8ed files/digest-dbix-searchbuilder-0.95 74
+RMD160 a868b632e6ac0c945107d6d76856640772811c8d files/digest-dbix-searchbuilder-0.95 74
+SHA256 ebd2903326ea132f0a6249ae6da46476f0ac75e99aba89764b20e5d23af5d90f files/digest-dbix-searchbuilder-0.95 74
+MD5 31ce4083b3b970cc289c5dc99512af59 files/digest-dbix-searchbuilder-1.01 74
+RMD160 d89f9c8bc5518fddec5f54f02d0d2fa741e03c3a files/digest-dbix-searchbuilder-1.01 74
+SHA256 b3be44edae4671dbd54144f95b1394c17df584ed4033e942f98d6ef0e285bb69 files/digest-dbix-searchbuilder-1.01 74
+MD5 4bf49fbaa280026b24ed168dd6894ec8 files/digest-dbix-searchbuilder-1.27 74
+RMD160 8d763c8a67341351b32e2cce97f2346036729b23 files/digest-dbix-searchbuilder-1.27 74
+SHA256 bb658f929fe7a76ffc07f3f92b6185e0dd40b1a765e66121339c1c122708fa8c files/digest-dbix-searchbuilder-1.27 74
+MD5 de559bfdca62a963c7b4bd141aaa9718 files/digest-dbix-searchbuilder-1.35 74
+RMD160 a44c385c8cecdf6441566ed8f75580cba977263e files/digest-dbix-searchbuilder-1.35 74
+SHA256 d203950d33530cbae9ee2ab4c882a0ddf55b5db6d402d6c9b93b022504f223a2 files/digest-dbix-searchbuilder-1.35 74
+MD5 a9d62ac612a152669b8f62b07cdec9d1 files/digest-dbix-searchbuilder-1.38 74
+RMD160 de4097979988b0219bc5b96022f0d0a7db7fa130 files/digest-dbix-searchbuilder-1.38 74
+SHA256 fb87789ba4564842940c3d322a5a5d39e90e5124e3ecf654bd6bb40c9a96e442 files/digest-dbix-searchbuilder-1.38 74
+MD5 03d36ace42c079d352321a8874dced26 files/digest-dbix-searchbuilder-1.43 268
+RMD160 ce8f67418865fbae627c05dd036196607015d41e files/digest-dbix-searchbuilder-1.43 268
+SHA256 28e390881d34d834feb8abf34f8ae4d2deaed5b26a4729e18d2ba49b9f0a9a37 files/digest-dbix-searchbuilder-1.43 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEjK8vtG5z4I8BtQoRAgL9AJsFHI8Pbd3Ezeo21WN3tQZ/k+T+EgCdE2uw
+O9iIOWQ/2RlLxzJC7A/LajE=
+=kaUZ
+-----END PGP SIGNATURE-----
