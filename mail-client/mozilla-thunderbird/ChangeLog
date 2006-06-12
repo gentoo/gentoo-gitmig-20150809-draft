@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.118 2006/06/06 17:05:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.119 2006/06/12 02:18:27 anarchy Exp $
+
+  12 Jun 2006; Jory A. Pratt <anarchy@gentoo.org>
+  -mozilla-thunderbird-1.0.7-r1.ebuild,
+  -mozilla-thunderbird-1.0.7-r2.ebuild,
+  -mozilla-thunderbird-1.0.7-r3.ebuild, -mozilla-thunderbird-1.0.8.ebuild,
+  -mozilla-thunderbird-1.5-r3.ebuild, -mozilla-thunderbird-1.5.0.2.ebuild,
+  -mozilla-thunderbird-1.5.0.2-r1.ebuild:
+  removed most vulnerable versions, will remove 1.0.7 when ia64 marks 1.5.0.4
+  stable
 
   06 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   mozilla-thunderbird-1.5.0.4.ebuild:
