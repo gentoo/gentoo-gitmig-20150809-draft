@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.5 2006/05/23 14:44:16 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.6 2006/06/12 13:13:02 markusle Exp $
+
+  12 Jun 2006; Markus Dittrich <markusle@gentoo.org> itpp-3.10.2.ebuild:
+  Replaced app-text/tetex with virtual/tetex in DEPEND. This fixes
+  bug #136476.
 
 *itpp-3.10.2 (23 May 2006)
 

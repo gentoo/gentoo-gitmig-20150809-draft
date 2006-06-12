@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-3.10.2.ebuild,v 1.1 2006/05/23 14:44:16 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-3.10.2.ebuild,v 1.2 2006/06/12 13:13:02 markusle Exp $
 
 inherit fortran
 
@@ -21,7 +21,7 @@ DEPEND="fftw? ( >=sci-libs/fftw-3.0.0 )
 							sci-libs/cblas-reference ) )
 				lapack? ( virtual/lapack ) )
 		doc? ( app-doc/doxygen
-				app-text/tetex )"
+				virtual/tetex )"
 
 pkg_setup() {
 	# lapack/cblas can only be used in conjunction with blas
