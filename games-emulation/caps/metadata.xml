@@ -6,5 +6,14 @@
   <email>dholm@gentoo.org</email>
   <name>David Holm</name>
 </maintainer>
-<longdescription>C.A.P.S., the Classic Amiga Preservation Society, as the name implies, dedicates itself to the preservation  of classic Amiga software for the future, namely classic Amiga games. This is the C.A.P.S. support library that allows third party applications access to and use of C.A.P.S. images.</longdescription>
+<maintainer>
+  <email>pva@gentoo.org</email>
+  <name>Peter Volkov</name>
+</maintainer>
+<longdescription lang="en">
+  C.A.P.S., the Classic Amiga Preservation Society, as the name implies, dedicates
+  itself to the preservation  of classic Amiga software for the future, namely
+  classic Amiga games. This is the C.A.P.S. support library that allows third
+  party applications access to and use of C.A.P.S. images.
+</longdescription>
 </pkgmetadata>
