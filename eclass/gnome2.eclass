@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.71 2006/06/07 21:13:17 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.72 2006/06/12 14:40:49 allanonjl Exp $
 
 # GNOME 2 ECLASS
 inherit libtool gnome.org debug fdo-mime eutils
@@ -42,8 +42,10 @@ gnome2_src_unpack() {
 
 gnome2_src_configure() {
 	# Update the GNOME configuration options
-	if [[ ${GCONF_DEBUG} != 'no' ]] || use debug ; then
-		use debug && G2CONF="${G2CONF} --enable-debug=yes"
+	if [[ ${GCONF_DEBUG} != 'no' ]] ; then
+		if use debug ; then
+			G2CONF="${G2CONF} --enable-debug=yes"
+		fi
 	fi
 	G2CONF="${G2CONF} $(use_enable doc gtk-doc)"
 
