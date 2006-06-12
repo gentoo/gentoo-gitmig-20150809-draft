@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3-r1.ebuild,v 1.6 2006/05/22 14:46:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3-r1.ebuild,v 1.7 2006/06/12 17:27:47 seemant Exp $
 
-inherit eutils flag-o-matic versionator
+inherit eutils flag-o-matic versionator autotools
 
 MY_P=${P/mit-}
 P_DIR=$(get_version_component_range 1-2)
@@ -35,6 +35,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-robustgnu.patch
 	epatch ${FILESDIR}/${PN}-pthreads.patch
 	epatch ${FILESDIR}/${PN}-setupterm.patch
+	ebegin "Reconfiguring configure scripts (be patient)"
+	cd ${S}/appl/telnet
+	autoreconf --force -I ${S}
+	eend $?
 }
 
 src_compile() {
