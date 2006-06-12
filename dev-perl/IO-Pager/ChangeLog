@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Pager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Pager/ChangeLog,v 1.8 2006/04/30 15:10:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Pager/ChangeLog,v 1.9 2006/06/12 15:40:28 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org> IO-Pager-0.06.ebuild:
+  marking sparc stable
 
 *IO-Pager-0.06 (30 Apr 2006)
 

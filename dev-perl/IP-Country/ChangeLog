@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IP-Country
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/ChangeLog,v 1.16 2006/05/21 18:00:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/ChangeLog,v 1.17 2006/06/12 15:40:57 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  IP-Country-2.21.ebuild:
+  marking sparc stable
 
   21 May 2006; Markus Rothe <corsair@gentoo.org> IP-Country-2.20.ebuild:
   Stable on ppc64

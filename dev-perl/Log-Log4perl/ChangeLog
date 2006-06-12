@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Log-Log4perl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/ChangeLog,v 1.9 2006/05/01 16:02:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/ChangeLog,v 1.10 2006/06/12 15:43:55 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Log-Log4perl-1.04.ebuild:
+  marking sparc stable
 
 *Log-Log4perl-1.04 (01 May 2006)
 
