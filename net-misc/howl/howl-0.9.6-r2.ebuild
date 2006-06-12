@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.6-r2.ebuild,v 1.14 2005/08/24 20:57:45 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.6-r2.ebuild,v 1.15 2006/06/12 21:21:54 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,7 +17,7 @@ DEPEND="virtual/libc"
 # sys-devel/automake - needed if we remove the html docs from /usr/share
 
 # sw_log is not provided (Bug #87436)
-RESTRICT="maketest"
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
