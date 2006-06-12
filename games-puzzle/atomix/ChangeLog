@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/atomix
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/ChangeLog,v 1.9 2006/06/06 17:05:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/ChangeLog,v 1.10 2006/06/12 17:28:39 wolf31o2 Exp $
+
+  12 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> atomix-2.14.0.ebuild:
+  Stable on x86 wrt bug #136196.
 
 *atomix-2.14.0 (06 Jun 2006)
 
