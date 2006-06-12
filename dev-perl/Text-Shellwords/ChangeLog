@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-Shellwords
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Shellwords/ChangeLog,v 1.16 2006/01/13 16:47:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Shellwords/ChangeLog,v 1.17 2006/06/12 16:51:17 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Text-Shellwords-1.08.ebuild:
+  Marking sparc stable
 
 *Text-Shellwords-1.08 (13 Jan 2006)
 

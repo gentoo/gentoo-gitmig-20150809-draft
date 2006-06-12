@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Exception
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.18 2006/03/30 23:23:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.19 2006/06/12 16:41:54 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Test-Exception-0.21.ebuild:
+  Marking sparc stable
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   Test-Exception-0.21.ebuild:

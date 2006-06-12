@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Base
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.13 2006/04/24 15:58:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.14 2006/06/12 16:47:15 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Test-Base-0.46.ebuild, Test-Base-0.47.ebuild, Test-Base-0.50.ebuild:
+  Marking sparc stable
 
   24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> Test-Base-0.50.ebuild:
   Add ~x86-fbsd keyword.

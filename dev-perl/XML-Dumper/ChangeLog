@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Dumper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Dumper/ChangeLog,v 1.6 2006/04/25 08:00:47 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Dumper/ChangeLog,v 1.7 2006/06/12 16:59:59 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  XML-Dumper-0.81.ebuild:
+  Marking sparc stable
 
 *XML-Dumper-0.81 (25 Apr 2006)
 

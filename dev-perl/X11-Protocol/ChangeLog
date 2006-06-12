@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/X11-Protocol
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.20 2006/05/01 22:20:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.21 2006/06/12 16:59:13 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  X11-Protocol-0.54.ebuild, X11-Protocol-0.55.ebuild:
+  Marking sparc stable
 
 *X11-Protocol-0.55 (01 May 2006)
 

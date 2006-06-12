@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sub-Uplevel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.17 2006/05/01 22:00:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.18 2006/06/12 16:41:08 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Sub-Uplevel-0.09-r1.ebuild, Sub-Uplevel-0.10.ebuild:
+  Marking sparc stable
 
 *Sub-Uplevel-0.10 (01 May 2006)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SVG
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG/ChangeLog,v 1.17 2006/01/13 16:12:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG/ChangeLog,v 1.18 2006/06/12 16:42:31 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org> SVG-2.33.ebuild:
+  Marking sparc stable
 
 *SVG-2.33 (13 Jan 2006)
 

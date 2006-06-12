@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Filter-DOMFilter-LibXML
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Filter-DOMFilter-LibXML/ChangeLog,v 1.2 2006/03/30 23:41:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Filter-DOMFilter-LibXML/ChangeLog,v 1.3 2006/06/12 17:00:23 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  XML-Filter-DOMFilter-LibXML-0.02.ebuild:
+  Marking sparc stable
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   XML-Filter-DOMFilter-LibXML-0.02.ebuild:
