@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.8 2006/06/11 17:33:25 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.9 2006/06/12 20:56:46 ticho Exp $
+
+  12 Jun 2006; Andrej Kacian <ticho@gentoo.org> dokuwiki-20060309-r1.ebuild:
+  Stable on x86. Bug #135623.
 
   11 Jun 2006; Stuart Herbert <stuart@gentoo.org> -dokuwiki-20050713.ebuild,
   -dokuwiki-20060305.ebuild, -dokuwiki-20060309.ebuild,
