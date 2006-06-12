@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/profuse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.47 2006/02/15 22:06:18 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.48 2006/06/12 19:26:21 gustavoz Exp $
+
+  12 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> profuse-0.25.3.ebuild:
+  Stable on sparc wrt #131242
 
   15 Feb 2006; Damien Krotkine <dams@gentoo.org> Manifest:
   corrected bad digest
