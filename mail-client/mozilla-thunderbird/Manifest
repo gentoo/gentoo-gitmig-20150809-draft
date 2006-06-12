@@ -1,47 +1,96 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6a4bf6dca431107b0c555f8a2156b874 ChangeLog 18373
-MD5 56fbb889c56c6882123dbb546dd6dd49 files/digest-mozilla-thunderbird-1.0.7 1093
-MD5 56fbb889c56c6882123dbb546dd6dd49 files/digest-mozilla-thunderbird-1.0.7-r1 1093
-MD5 db08982bdb7527b9adec1b414e4811ad files/digest-mozilla-thunderbird-1.0.7-r2 819
-MD5 56fbb889c56c6882123dbb546dd6dd49 files/digest-mozilla-thunderbird-1.0.7-r3 1093
-MD5 35e419fa9bfece22ff8faf4996199ffe files/digest-mozilla-thunderbird-1.0.8 1093
-MD5 5748e9c3b3cf0e8667d9177fba436388 files/digest-mozilla-thunderbird-1.5-r3 584
-MD5 7dc5bcd188145133e5bdc8f0352e97a6 files/digest-mozilla-thunderbird-1.5.0.2 608
-MD5 eeca791a63fe49222fab693f3f513da6 files/digest-mozilla-thunderbird-1.5.0.2-r1 608
-MD5 6440010a598af488eaa541c614ce5bf3 files/digest-mozilla-thunderbird-1.5.0.4 608
+AUX firefox-1.1-uriloader-1.patch 13902 RMD160 cb816967a91e0a60a238ad11736eec5ac5da3754 SHA1 cbb5303137bf7f94ff1cfae760d5a64a810b3021 SHA256 ac9ef7ec790856d35609a051596579b0cc5a327542614ab420505a2669b388bb
 MD5 b92734c051b7734d459e23f7c4a01b63 files/firefox-1.1-uriloader-1.patch 13902
+RMD160 cb816967a91e0a60a238ad11736eec5ac5da3754 files/firefox-1.1-uriloader-1.patch 13902
+SHA256 ac9ef7ec790856d35609a051596579b0cc5a327542614ab420505a2669b388bb files/firefox-1.1-uriloader-1.patch 13902
+AUX firefox-1.1-uriloader.patch 15300 RMD160 46565d8f558cb3d5b3a45b97dec00c69c076ee9d SHA1 830d757f480bc21b44ef34921296b2f62d71c9bc SHA256 f9fb3bc8ecf6705e485252d3988988919d071695ad6da6bb1730e243805c694a
 MD5 2bd0dd9035dcb875b8340be358347e8d files/firefox-1.1-uriloader.patch 15300
+RMD160 46565d8f558cb3d5b3a45b97dec00c69c076ee9d files/firefox-1.1-uriloader.patch 15300
+SHA256 f9fb3bc8ecf6705e485252d3988988919d071695ad6da6bb1730e243805c694a files/firefox-1.1-uriloader.patch 15300
+AUX firefox-1.1-visibility.patch 930 RMD160 9d369c6348ce0fe6f4b63bd251dac1812b2f1c8a SHA1 431c40d0347c4bc654aaf6c1946b6e2e00b8e257 SHA256 96b259301defc82535326a40b2a9146c458a0299cf87e3769ea0616b25d64a7e
 MD5 cc5756b8c7af5c88b248b86c73fc5c8d files/firefox-1.1-visibility.patch 930
+RMD160 9d369c6348ce0fe6f4b63bd251dac1812b2f1c8a files/firefox-1.1-visibility.patch 930
+SHA256 96b259301defc82535326a40b2a9146c458a0299cf87e3769ea0616b25d64a7e files/firefox-1.1-visibility.patch 930
+AUX firefox-1.5-visibility-check.patch 10955 RMD160 9a5db3a7d6f5539ca77e116aed276d833925a43a SHA1 b43088167a5a9f86986030979f0a572edc445b73 SHA256 439355e899ea43fd2f82adae6fb4dc7363ca526ce307ce0faba76e533af1dc7c
 MD5 c00ea2b2717491804ceababb4c14cc5b files/firefox-1.5-visibility-check.patch 10955
+RMD160 9a5db3a7d6f5539ca77e116aed276d833925a43a files/firefox-1.5-visibility-check.patch 10955
+SHA256 439355e899ea43fd2f82adae6fb4dc7363ca526ce307ce0faba76e533af1dc7c files/firefox-1.5-visibility-check.patch 10955
+AUX firefox-1.5-visibility-fix.patch 485 RMD160 86461454b4723c19c43bb81b77a7067656e0f0ff SHA1 53ad985dfd359edad05ae4be23be553bf13d5648 SHA256 9d9afd53a6c16d81e43b779371bc7d38a95a44c599fe500e368c4024652c058a
 MD5 9c2b48ceea1c5ec25a32bf5225946f7b files/firefox-1.5-visibility-fix.patch 485
+RMD160 86461454b4723c19c43bb81b77a7067656e0f0ff files/firefox-1.5-visibility-fix.patch 485
+SHA256 9d9afd53a6c16d81e43b779371bc7d38a95a44c599fe500e368c4024652c058a files/firefox-1.5-visibility-fix.patch 485
+AUX firefox-bus-error.patch 4959 RMD160 99b7fd5ca78039c726d727352d4fb6f67c3169c5 SHA1 578445ebe1789d53dd83dce9a1961530a9808fde SHA256 e86a249c739bb2a90b1719db1afa5ae40a381e82e6595737394fe00a87161c7c
 MD5 d1856a2f534676ca597db22afedf824a files/firefox-bus-error.patch 4959
+RMD160 99b7fd5ca78039c726d727352d4fb6f67c3169c5 files/firefox-bus-error.patch 4959
+SHA256 e86a249c739bb2a90b1719db1afa5ae40a381e82e6595737394fe00a87161c7c files/firefox-bus-error.patch 4959
+AUX icon/mozillathunderbird.desktop 184 RMD160 77953b3d9f191b94611a9953464ffd04d3e4148b SHA1 a19de7fcabb5be6339731d12e2f469d13e2a3ea2 SHA256 46dce3eb853408a169f5755faf63d973d69c21b47c641442a0e7c666e213aab3
 MD5 1c810870d0c92c730341e491c310e2d4 files/icon/mozillathunderbird.desktop 184
+RMD160 77953b3d9f191b94611a9953464ffd04d3e4148b files/icon/mozillathunderbird.desktop 184
+SHA256 46dce3eb853408a169f5755faf63d973d69c21b47c641442a0e7c666e213aab3 files/icon/mozillathunderbird.desktop 184
+AUX icon/thunderbird-icon.png 6499 RMD160 1aeece7719c1c1629b98fc11870641769681a048 SHA1 651d244e96fa0edf13f68f5ef9047432eb6ed3bf SHA256 ff9749e42b82b80425bb52883d63baa53298af7be98870ee6b73f0a6cf0ab22d
 MD5 04115f0e204444eac76a092a63c89027 files/icon/thunderbird-icon.png 6499
+RMD160 1aeece7719c1c1629b98fc11870641769681a048 files/icon/thunderbird-icon.png 6499
+SHA256 ff9749e42b82b80425bb52883d63baa53298af7be98870ee6b73f0a6cf0ab22d files/icon/thunderbird-icon.png 6499
+AUX mozilla-alpha-xpcom-subs-fix.patch 4953 RMD160 8703ed9d22d35fc6a95ca1607c3dedcfb377c267 SHA1 131abd5bc314b5a509b234bbcd1937d63520a29c SHA256 7ad36d16f9811742bdb95e838afb5f2d1cc9c58a7d180fc8f304b4d10bf53197
 MD5 23d6b685fd5e49a07cc4a1786871bf47 files/mozilla-alpha-xpcom-subs-fix.patch 4953
+RMD160 8703ed9d22d35fc6a95ca1607c3dedcfb377c267 files/mozilla-alpha-xpcom-subs-fix.patch 4953
+SHA256 7ad36d16f9811742bdb95e838afb5f2d1cc9c58a7d180fc8f304b4d10bf53197 files/mozilla-alpha-xpcom-subs-fix.patch 4953
+AUX mozilla-thunderbird-1.0.6-gcc4.patch 6131 RMD160 7b4e7a6a493cca427c1cfb2b4097db60e65b1fca SHA1 bd4940e89c2f1f5cb68c15969a24a268309bc9b6 SHA256 6ce4807f90ed77063cd4f4b2046e5323727798d676f1957e589ba035c00fd702
 MD5 07a5a1ce0146f1badc4e04849a9b1830 files/mozilla-thunderbird-1.0.6-gcc4.patch 6131
+RMD160 7b4e7a6a493cca427c1cfb2b4097db60e65b1fca files/mozilla-thunderbird-1.0.6-gcc4.patch 6131
+SHA256 6ce4807f90ed77063cd4f4b2046e5323727798d676f1957e589ba035c00fd702 files/mozilla-thunderbird-1.0.6-gcc4.patch 6131
+AUX mozilla-thunderbird-1.0.7-draft-template.patch 761 RMD160 e04a550771a0c39f69648ca8a53d4ce7cc4eba91 SHA1 1fec9bb1a8b44538abe8fd8ce1e6e3a579ba012c SHA256 de8df94dd6e8eda1743f22408826b282487ed0f4d4aa3ec83642ddb1074ed7aa
 MD5 30b381b5ba910ec5ffa7b9eafbfe86ef files/mozilla-thunderbird-1.0.7-draft-template.patch 761
+RMD160 e04a550771a0c39f69648ca8a53d4ce7cc4eba91 files/mozilla-thunderbird-1.0.7-draft-template.patch 761
+SHA256 de8df94dd6e8eda1743f22408826b282487ed0f4d4aa3ec83642ddb1074ed7aa files/mozilla-thunderbird-1.0.7-draft-template.patch 761
+AUX mozilla-thunderbird-1.0.7-gcc-4.0.2.patch 6861 RMD160 7bb61b353a84ae5798fb4c5766e154fd7957e1cd SHA1 7c65f1392a9d4b9db36bf25c132059be98c21593 SHA256 3dd142b65c76769f6781f296d02ee4222d3dc32df93395d307d4c94de7341711
 MD5 1783f8e4678fb4731ccc67b4bfba1981 files/mozilla-thunderbird-1.0.7-gcc-4.0.2.patch 6861
+RMD160 7bb61b353a84ae5798fb4c5766e154fd7957e1cd files/mozilla-thunderbird-1.0.7-gcc-4.0.2.patch 6861
+SHA256 3dd142b65c76769f6781f296d02ee4222d3dc32df93395d307d4c94de7341711 files/mozilla-thunderbird-1.0.7-gcc-4.0.2.patch 6861
+AUX mozilla-thunderbird-1.0.8-gcc-4.patch 5043 RMD160 ed0cfa69d9660a410f0433d82ab0a2e40541beba SHA1 0559fed9d3f9079c94982ace37eba78d3378d504 SHA256 d5c449a59d336a0017183ed2daac6368c1f16ebc223cba15823d7e41c8f9f26d
 MD5 7ee71876f41b10be9b68093bbd41817f files/mozilla-thunderbird-1.0.8-gcc-4.patch 5043
+RMD160 ed0cfa69d9660a410f0433d82ab0a2e40541beba files/mozilla-thunderbird-1.0.8-gcc-4.patch 5043
+SHA256 d5c449a59d336a0017183ed2daac6368c1f16ebc223cba15823d7e41c8f9f26d files/mozilla-thunderbird-1.0.8-gcc-4.patch 5043
+AUX pango-cairo-1.patch 4372 RMD160 53bb1177dcfed87152fc4114a29eaf606f90b931 SHA1 330332b58ab53713a3d44ad4953459c2def9e6f1 SHA256 72569e102da702f102be32e70747ec28eb86625312954d9e99ec79f0f3a87930
 MD5 d2386bbbf480062153de1b154cb63e6c files/pango-cairo-1.patch 4372
+RMD160 53bb1177dcfed87152fc4114a29eaf606f90b931 files/pango-cairo-1.patch 4372
+SHA256 72569e102da702f102be32e70747ec28eb86625312954d9e99ec79f0f3a87930 files/pango-cairo-1.patch 4372
+AUX thunderbird-cairo-canvas.patch 446 RMD160 d2387063069bdec617c9596d20e6cc69b5589d1a SHA1 691b2da041ceda726a483d65ff3b1099d3fbc83d SHA256 b239605715f3ec8af3671237cd2cedecf0221cc23b31c8f5bada08ef3bd1880b
 MD5 7847d262e628dcac303586fe02f2e8c4 files/thunderbird-cairo-canvas.patch 446
+RMD160 d2387063069bdec617c9596d20e6cc69b5589d1a files/thunderbird-cairo-canvas.patch 446
+SHA256 b239605715f3ec8af3671237cd2cedecf0221cc23b31c8f5bada08ef3bd1880b files/thunderbird-cairo-canvas.patch 446
+AUX thunderbird-nopangoxft.patch 839 RMD160 847b068b2242826a75da5548f1062966300d6b83 SHA1 bfc9331a4b804de536fe3a69e18292f267bfb8cf SHA256 da4c937226082e784eae24152ffff32bad3cc5d3556744dc21f5f88f67f109f4
 MD5 91661761f2f232b08b74f5adc4f1eff0 files/thunderbird-nopangoxft.patch 839
+RMD160 847b068b2242826a75da5548f1062966300d6b83 files/thunderbird-nopangoxft.patch 839
+SHA256 da4c937226082e784eae24152ffff32bad3cc5d3556744dc21f5f88f67f109f4 files/thunderbird-nopangoxft.patch 839
+AUX thunderbird-rpath-1.patch 1716 RMD160 23bf20d57b996f6c86658aad378682497a07544c SHA1 5079624a2927f5c4bac1387e64e2632351092305 SHA256 e34d5bae7787b76253add7ec03de19a85919d42dd949f6dd4d8e0fe3ed7fc620
 MD5 07f9a980afa2dde67554657c00b8be18 files/thunderbird-rpath-1.patch 1716
-MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
-MD5 2896cc99ffbb38fe463d98feb1e954f0 mozilla-thunderbird-1.0.7-r1.ebuild 5640
-MD5 feb3d5b0156f6a9f1af491b50907e32e mozilla-thunderbird-1.0.7-r2.ebuild 6156
-MD5 778b71cc8a385fabd02a28033fa1f4a1 mozilla-thunderbird-1.0.7-r3.ebuild 6378
+RMD160 23bf20d57b996f6c86658aad378682497a07544c files/thunderbird-rpath-1.patch 1716
+SHA256 e34d5bae7787b76253add7ec03de19a85919d42dd949f6dd4d8e0fe3ed7fc620 files/thunderbird-rpath-1.patch 1716
+DIST mozilla-1.7.10-nsplugins-v2.patch 1968 RMD160 42f20651c93d904829fd80d4bf6bf8f07456124d SHA256 bd5ce9f3b58496ce66852f7decec1e9531966568c9530bf4d7c1cc6d97ea0a06
+DIST mozilla-firefox-1.0-4ft2.patch.bz2 5601 RMD160 b3ea2512d641d4aa0af4925ddab75351889c3c35 SHA256 10b20c0acf58650992c01e5481478304ebb709298d42748033cb252b40525b7f
+DIST mozilla-jslibmath-alpha.patch 625 RMD160 25215a45e8c97259666252dcfb3ad90c547d632f SHA256 5b2b47453bdcaba6970d3773a2d9882688c3e26e2f6d5a96192977c8b3cd5569
+DIST mozilla-thunderbird-1.5.0.4-patches-0.1.tar.bz2 33086 RMD160 9b97f3844cdc82f0488a5ee7e1ed6d28cfd0eeca SHA1 c8206bd45df2ca28d559310db096327749690bce SHA256 3120bfd43d5960a5be9f2be9e59d082d8397620a7c11a335a7a2faaecf068a2c
+DIST thunderbird-1.0.7-source.tar.bz2 33385665 RMD160 4f040dfe2468ee33d69ccffe3abc31eccc59899e SHA256 6b964fb220a46438adf6ec37082da66332a3ce74ca4913b863b17d9ab720681f
+DIST thunderbird-1.5.0.4-source.tar.bz2 35872600 RMD160 27e88578d8857e48b46ee4dff2900f27b8a0f447 SHA256 b665c89bfc18a84c57d85370889973cfc547e1e942aba5798321ea34e4ddbca7
+EBUILD mozilla-thunderbird-1.0.7.ebuild 5632 RMD160 8bd50c2ff4f286eb3d8712bfe438ec9c9ef17864 SHA1 c907a58139164d0dee1586bfc6f44c5ef7ec3295 SHA256 72668acde3d6f126b387f99b6ec45e23721618b4d1cd96dc728165d2f9a288c0
 MD5 55697b53bd932c2ea9c20d3d5e3b771e mozilla-thunderbird-1.0.7.ebuild 5632
-MD5 1477afe15525778e1c2766fddffbf7e1 mozilla-thunderbird-1.0.8.ebuild 6367
-MD5 57740a117c0daa2b629751d2bc471faa mozilla-thunderbird-1.5-r3.ebuild 5768
-MD5 7e45156ab91859d50f1f2ad70d4ba4f8 mozilla-thunderbird-1.5.0.2-r1.ebuild 5930
-MD5 fe4696a5f18a8a10103db013efd2ea79 mozilla-thunderbird-1.5.0.2.ebuild 5818
+RMD160 8bd50c2ff4f286eb3d8712bfe438ec9c9ef17864 mozilla-thunderbird-1.0.7.ebuild 5632
+SHA256 72668acde3d6f126b387f99b6ec45e23721618b4d1cd96dc728165d2f9a288c0 mozilla-thunderbird-1.0.7.ebuild 5632
+EBUILD mozilla-thunderbird-1.5.0.4.ebuild 5824 RMD160 e0677a29759ba5bd3503e0aa7aba054e46d91204 SHA1 85f5d40591131f24e117b5fbbb0a887d5e83d219 SHA256 74575b8e7f3a1ad4d9ccfe6c205cbf98e7f04dfcea82566657a836f656ee51e7
 MD5 6f0d09c9f5d40e5e71248213687cb8f9 mozilla-thunderbird-1.5.0.4.ebuild 5824
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEhbYFKRy60XGEcJIRAnljAJ0W1gXpTyZrQKSHAM7Hfq1Tz5/NAQCfRvQK
-njgHbhOzbX9lZOczoMoqZyU=
-=Cyen
------END PGP SIGNATURE-----
+RMD160 e0677a29759ba5bd3503e0aa7aba054e46d91204 mozilla-thunderbird-1.5.0.4.ebuild 5824
+SHA256 74575b8e7f3a1ad4d9ccfe6c205cbf98e7f04dfcea82566657a836f656ee51e7 mozilla-thunderbird-1.5.0.4.ebuild 5824
+MISC ChangeLog 18782 RMD160 1c1dede298ab556dc4ceaf9c088f00c53b6d1f21 SHA1 27f25d6291c902fe2e7fe70bf7b2461b762db17c SHA256 6025d93a06d30833d892932acdf6de94f7f9eb5a55dae04fea99d7514f3009b2
+MD5 a8d8fa4242c62ac50e6d3ffe95276fe7 ChangeLog 18782
+RMD160 1c1dede298ab556dc4ceaf9c088f00c53b6d1f21 ChangeLog 18782
+SHA256 6025d93a06d30833d892932acdf6de94f7f9eb5a55dae04fea99d7514f3009b2 ChangeLog 18782
+MISC metadata.xml 160 RMD160 d5a9f0bf8989621c2bde30facb53bcae00aba709 SHA1 5015c07af2083f20f9552d7fb11afb5ea69af345 SHA256 0cc5126362a12cee42ec1197c528a804cf36859329dd2c6d9225726831d14b8b
+MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
+RMD160 d5a9f0bf8989621c2bde30facb53bcae00aba709 metadata.xml 160
+SHA256 0cc5126362a12cee42ec1197c528a804cf36859329dd2c6d9225726831d14b8b metadata.xml 160
+MD5 56fbb889c56c6882123dbb546dd6dd49 files/digest-mozilla-thunderbird-1.0.7 1093
+RMD160 e17fac29791c7681f5242fba554af205ed605aad files/digest-mozilla-thunderbird-1.0.7 1093
+SHA256 92e7f2e3654ca7df333c04e2e5adb9577746008bc13502f4eef6f4b47d2941fa files/digest-mozilla-thunderbird-1.0.7 1093
+MD5 6440010a598af488eaa541c614ce5bf3 files/digest-mozilla-thunderbird-1.5.0.4 608
+RMD160 5ed57d893dddc84d4191c8c0c104ca182d96459c files/digest-mozilla-thunderbird-1.5.0.4 608
+SHA256 48c008994d82d1d4e0d9989be8dcb540777146738599f3180c55dd398cbe4182 files/digest-mozilla-thunderbird-1.5.0.4 608
