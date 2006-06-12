@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-app.eclass,v 1.6 2006/06/06 14:08:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-app.eclass,v 1.7 2006/06/12 20:11:39 mcummings Exp $
 
 #
 # Author: Michael Cummings <mcummings@gentoo.org>
@@ -30,7 +30,7 @@ perl-app_src_prep() {
 		perl Makefile.PL ${myconf} INSTALLMAN3DIR='none'\
 		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D} || die "Unable to build! (are you using USE=\"build\"?)"
 	fi
-	if [ -f Build.PL ] && [ ! -f Makefile ] ; then
+	if [ -f Build.PL ] && ( [ ! -f Makefile.PL ] || [ ${PN} == "module-build" ]); then
 		einfo "Using Module::Build"
 		perl Build.PL --installdirs=vendor --destdir=${D} --libdoc= || die "Unable to build! (are you using USE=\"build\"?)"
 	fi
