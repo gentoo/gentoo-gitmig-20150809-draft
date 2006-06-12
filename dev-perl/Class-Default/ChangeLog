@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Default
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/ChangeLog,v 1.22 2006/05/25 19:24:20 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/ChangeLog,v 1.23 2006/06/11 23:52:22 mcummings Exp $
+
+  11 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Class-Default-1.4.ebuild:
+  Marking stable sparc
 
   25 May 2006; Guy Martin <gmsoft@gentoo.org> Class-Default-1.0.ebuild:
   Stable on hppa.

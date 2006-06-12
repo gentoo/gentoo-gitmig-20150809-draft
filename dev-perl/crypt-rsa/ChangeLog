@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/crypt-rsa
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/ChangeLog,v 1.18 2006/02/13 14:20:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/ChangeLog,v 1.19 2006/06/11 23:59:31 mcummings Exp $
+
+  11 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  crypt-rsa-1.50.ebuild, crypt-rsa-1.55.ebuild, crypt-rsa-1.57.ebuild:
+  Marking stable sparc
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   crypt-rsa-1.50.ebuild, crypt-rsa-1.55.ebuild, crypt-rsa-1.57.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-DBI
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.28 2006/04/24 01:37:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.29 2006/06/11 23:52:07 mcummings Exp $
+
+  11 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Class-DBI-3.0.14.ebuild:
+  Marking stable sparc
 
 *Class-DBI-3.0.14 (24 Apr 2006)
 

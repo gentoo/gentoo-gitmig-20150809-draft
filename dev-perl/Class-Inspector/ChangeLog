@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Inspector
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.30 2006/05/22 00:24:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.31 2006/06/11 23:52:43 mcummings Exp $
+
+  11 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Class-Inspector-1.14.ebuild:
+  Marking stable sparc
 
 *Class-Inspector-1.16 (22 May 2006)
 

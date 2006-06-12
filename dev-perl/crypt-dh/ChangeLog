@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/crypt-dh
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/ChangeLog,v 1.13 2006/02/13 14:19:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/ChangeLog,v 1.14 2006/06/11 23:56:11 mcummings Exp $
+
+  11 Jun 2006; Michael Cummings <mcummings@gentoo.org> crypt-dh-0.03.ebuild,
+  crypt-dh-0.06.ebuild:
+  Marking stable sparc
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org> crypt-dh-0.06.ebuild:
   Virtuals for some perl-core deps

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/BSD-Resource
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/ChangeLog,v 1.18 2006/05/22 21:38:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/ChangeLog,v 1.19 2006/06/11 23:46:47 mcummings Exp $
+
+  11 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  BSD-Resource-1.25.ebuild:
+  Marking stable sparc
 
 *BSD-Resource-1.26 (22 May 2006)
 

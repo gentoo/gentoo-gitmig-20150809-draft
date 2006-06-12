@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CDDB
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB/ChangeLog,v 1.16 2006/04/24 00:37:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB/ChangeLog,v 1.17 2006/06/11 23:48:09 mcummings Exp $
+
+  11 Jun 2006; Michael Cummings <mcummings@gentoo.org> CDDB-1.17.ebuild:
+  Marking stable sparc
 
 *CDDB-1.17 (24 Apr 2006)
 
