@@ -1,6 +1,24 @@
-MD5 96c02b527932ecc00ff6b685114c3632 gnome-pim-1.4.8.ebuild 957
-MD5 7cf2ed2d3ea469689e8ac77f0a6e5e46 gnome-pim-1.4.9.ebuild 969
-MD5 da11588a841223fb5407daa1905017e5 ChangeLog 2530
+DIST gnome-pim-1.4.8.tar.gz 1452005
+DIST gnome-pim-1.4.9.tar.gz 1467095
+EBUILD gnome-pim-1.4.8.ebuild 998 RMD160 201b1bc420a5e13234d014a391cc9da0dfea8eb6 SHA1 95775044fb9587a7eb52333d8dd2fe7fe97f116f SHA256 3d3ff49728f6290f1b81451f6a05ee8fc9cf623f2f6b1cfbbb799d01a539b504
+MD5 9c41172bfdffbddd04b4dbcbf671acfe gnome-pim-1.4.8.ebuild 998
+RMD160 201b1bc420a5e13234d014a391cc9da0dfea8eb6 gnome-pim-1.4.8.ebuild 998
+SHA256 3d3ff49728f6290f1b81451f6a05ee8fc9cf623f2f6b1cfbbb799d01a539b504 gnome-pim-1.4.8.ebuild 998
+EBUILD gnome-pim-1.4.9.ebuild 1010 RMD160 120cbcc304c0cbb4f64df72174d3a83ab1a2dbfc SHA1 5dfa4c7dba0e42c70ec08a75be0de4c36a13a825 SHA256 c410c4d7671febaa97a09f2ca24cb5edc57a4a5df6e92b9777deb1e5249111e7
+MD5 ef2ce7d8a8ef35cc6bdaca85014853a2 gnome-pim-1.4.9.ebuild 1010
+RMD160 120cbcc304c0cbb4f64df72174d3a83ab1a2dbfc gnome-pim-1.4.9.ebuild 1010
+SHA256 c410c4d7671febaa97a09f2ca24cb5edc57a4a5df6e92b9777deb1e5249111e7 gnome-pim-1.4.9.ebuild 1010
+MISC ChangeLog 2671 RMD160 b21f6039d8f391075a4fd01102646ffaad1317f3 SHA1 f6bd2c72426af6f73f8e03c673b005b1b4f591d3 SHA256 b6939c7661eed8cb182b1c9343458bbcbcffee8d16ff8a4ea5110be34c0d984c
+MD5 438e27c2fed7863b19d85c34b979ac4f ChangeLog 2671
+RMD160 b21f6039d8f391075a4fd01102646ffaad1317f3 ChangeLog 2671
+SHA256 b6939c7661eed8cb182b1c9343458bbcbcffee8d16ff8a4ea5110be34c0d984c ChangeLog 2671
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 MD5 cb1d2cd51f69dff9863bfd8b97b7b726 files/digest-gnome-pim-1.4.8 68
+RMD160 0b6603eef13096fc80a6a3b6bdd1d9991c67b2d0 files/digest-gnome-pim-1.4.8 68
+SHA256 15ab4875a1dccd22a6e6284ad20933d7ba97b50d2946aecd742b810c25465008 files/digest-gnome-pim-1.4.8 68
 MD5 619c550d9ed98e3e79c54d5baa9e3b03 files/digest-gnome-pim-1.4.9 68
+RMD160 52111bb39139146dd04d0ea9ce9fd0cc6c90812b files/digest-gnome-pim-1.4.9 68
+SHA256 2a1433c45b315ebcafd2e27e7d03efca35c7799986ddd103c32f2527cbf719e1 files/digest-gnome-pim-1.4.9 68
