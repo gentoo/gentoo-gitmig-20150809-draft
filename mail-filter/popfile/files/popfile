@@ -25,7 +25,7 @@ if [[ ! -d $POPFILE_DIR ]] ; then
 fi
 
 if [[ ! -e $POPFILE_DIR/$POPFILE_PL ]] ; then
-	echo "*** error: popfile.pl is missing or not executable" > &2
+	echo "*** error: popfile.pl is missing or not executable" >&2
 	exit 1
 fi
 
