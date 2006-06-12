@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.10-r1.ebuild,v 1.1 2006/06/11 15:55:27 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.10-r1.ebuild,v 1.2 2006/06/12 12:41:36 rajiv Exp $
 
 IUSE="bri devfs26 rtc ukcid"
 
@@ -19,7 +19,7 @@ SRC_URI="http://ftp1.digium.com/pub/telephony/zaptel/zaptel-${MY_PV}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 DEPEND="virtual/libc
 	virtual/linux-sources

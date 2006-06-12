@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.77 2006/06/11 15:55:27 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.78 2006/06/12 12:41:36 rajiv Exp $
+
+  12 Jun 2006; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  zaptel-1.0.10-r1.ebuild:
+  stable on x86 for security bug #135680.
 
 *zaptel-1.0.10-r1 (11 Jun 2006)
 
