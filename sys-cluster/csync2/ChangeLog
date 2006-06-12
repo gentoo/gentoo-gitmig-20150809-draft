@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/csync2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.16 2006/06/04 14:25:50 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.17 2006/06/12 19:05:12 xmerlin Exp $
+
+  12 Jun 2006; Christian Zoffoli <xmerlin@gentoo.org> csync2-1.32.ebuild:
+  Fixed bug # 131458, thanks to Aaron Randall <aaron.randall@visionoss.com and
+  Mark Glines <mark-gentoo@glines.org>.
 
   04 Jun 2006; Christian Zoffoli <xmerlin@gentoo.org> csync2-1.32.ebuild:
   Added postinstall warning regarding new config location.
