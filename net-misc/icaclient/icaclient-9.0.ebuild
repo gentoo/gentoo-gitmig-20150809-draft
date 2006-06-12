@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-9.0.ebuild,v 1.5 2006/01/11 05:24:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-9.0.ebuild,v 1.6 2006/06/12 21:07:16 wolf31o2 Exp $
 
 inherit multilib
 
 DESCRIPTION="ICA Client"
-HOMEPAGE="http://www.citrix.com/site/SS/downloads/details.asp?dID=2755&downloadID=3323"
+HOMEPAGE="http://www.citrix.com/"
 SRC_URI="ICAClient-9.0-1.i386.rpm"
 
 LICENSE="as-is"
@@ -15,14 +15,13 @@ IUSE="gnome"
 RESTRICT="fetch"
 
 RDEPEND="virtual/libc
-	|| ( ( x11-libs/libXp
-		   x11-libs/libXaw
-		   x11-libs/libX11
-		   x11-libs/libSM
-		   x11-libs/libICE
-		 )
-		 virtual/x11
-	   )
+	|| (
+		( x11-libs/libXp
+			x11-libs/libXaw
+			x11-libs/libX11
+			x11-libs/libSM
+			x11-libs/libICE )
+		 virtual/x11 )
 	>=x11-libs/openmotif-2.2.2
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 DEPEND="${RDEPEND}
@@ -37,6 +36,7 @@ pkg_setup() {
 
 pkg_nofetch() {
 	einfo "Please download ${A} yourself from www.citrix.com"
+	einfo "http://www.citrix.com/English/SS/downloads/details.asp?dID=2755&downloadID=3323&pID=186"
 	einfo "and place it in ${DISTDIR}"
 }
 

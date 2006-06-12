@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.26 2006/01/11 05:24:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.27 2006/06/12 21:07:16 wolf31o2 Exp $
+
+  12 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  icaclient-6.30-r1.ebuild, icaclient-7.0.ebuild, -icaclient-8.0-r2.ebuild,
+  icaclient-8.0-r3.ebuild, icaclient-9.0.ebuild:
+  Fixed HOMEPAGE and download URL, as well as posted the older ebuilds to
+  modular X. Closing bug #132426.
 
   11 Jan 2006; Jason Wever <weeve@gentoo.org> icaclient-9.0.ebuild:
   Added x-modular dependencies, resolves bug #115959. Thanks to Mike Auty
