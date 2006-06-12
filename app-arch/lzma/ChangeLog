@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzma
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/ChangeLog,v 1.2 2005/09/14 16:55:51 grobian Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/ChangeLog,v 1.3 2006/06/12 05:37:38 kumba Exp $
+
+  12 Jun 2006; Joshua Kinard <kumba@gentoo.org> lzma-4.27.ebuild:
+  Added ~mips to KEYWORDS.
 
   14 Sep 2005; Fabian Groffen <grobian@gentoo.org> lzma-4.27.ebuild:
   Marking ~ppc-macos (bug #105844)
