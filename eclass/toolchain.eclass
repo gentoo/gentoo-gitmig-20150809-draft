@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.290 2006/06/11 00:03:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.291 2006/06/12 01:06:03 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -487,7 +487,7 @@ libc_has_ssp() {
 
 	# lib hacks taken from sandbox configure
 	echo 'int main(){}' > "${T}"/libctest.c
-	gcc "${T}"/libctest.c -lc -o libctest -Wl,-verbose &> "${T}"/libctest.log || return 1
+	LC_ALL=C gcc "${T}"/libctest.c -lc -o libctest -Wl,-verbose &> "${T}"/libctest.log || return 1
 	local libc_file=$(awk '/attempt to open/ { if (($4 ~ /\/libc\.so/) && ($5 == "succeeded")) LIBC = $4; }; END {print LIBC}' "${T}"/libctest.log)
 
 	[[ -z ${libc_file} ]] && die "Unable to find a libc !?"
