@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060530.ebuild,v 1.6 2006/05/31 14:19:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060530.ebuild,v 1.7 2006/06/12 17:12:46 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -84,6 +84,9 @@ src_unpack() {
 	# is __PIC__, not PIC.
 	sed -i -e 's/#\(\(.*def *\)\|\(.*defined *\)\|\(.*defined(*\)\)PIC/#\1__PIC__/' \
 		libavcodec/i386/dsputil_mmx{.c,_rnd.h,_avg.h} \
+		libavcodec/i386/mpegvideo_mmx_template.c \
+		libavcodec/libpostproc/mangle.h \
+		libavcodec/libpostproc/postprocess_template.c \
 		libavcodec/msmpeg4.c \
 		libavutil/common.h \
 		|| die "sed failed (__PIC__)"
