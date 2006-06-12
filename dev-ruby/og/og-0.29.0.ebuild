@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/og/og-0.29.0.ebuild,v 1.1 2006/04/17 23:34:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/og/og-0.29.0.ebuild,v 1.2 2006/06/12 14:47:48 rajiv Exp $
 
 inherit ruby gems
 
 USE_RUBY="ruby18"
 DESCRIPTION="Og (ObjectGraph) is a powerfull object-relational mapping library."
-HOMEPAGE="http://www.nitrohq.com/"
+HOMEPAGE="http://www.nitroproject.org/"
 SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="Ruby"

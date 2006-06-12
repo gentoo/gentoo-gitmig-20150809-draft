@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nitro
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nitro/ChangeLog,v 1.6 2006/04/17 23:36:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nitro/ChangeLog,v 1.7 2006/06/12 14:45:56 rajiv Exp $
+
+  12 Jun 2006; Rajiv Aaron Manglani <rajiv@gentoo.org> nitro-0.29.0.ebuild:
+  update homepage.
 
   17 Apr 2006; Caleb Tennis <caleb@gentoo.org> -nitro-0.22.0.ebuild,
   -nitro-0.23.0.ebuild, -nitro-0.25.0.ebuild:
