@@ -1,8 +1,8 @@
 # ChangeLog for net-misc/resolvconf-gentoo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/ChangeLog,v 1.1 2006/06/12 10:50:42 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/ChangeLog,v 1.2 2006/06/12 10:55:21 uberlord Exp $
 
-  12 Jun 2006; <roy@gentoo.org> +metadata.xml,
+  12 Jun 2006; <uberlord@gentoo.org> +metadata.xml,
   +resolvconf-gentoo-1.0.ebuild:
   Moved from net-misc/resolvconf-gentoo to net-dns/resolvconf-gentoo.
 
