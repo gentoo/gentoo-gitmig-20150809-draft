@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.17 2006/06/06 22:34:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.18 2006/06/12 23:50:47 weeve Exp $
+
+  12 Jun 2006; Jason Wever <weeve@gentoo.org> gst-python-0.10.4.ebuild:
+  Added ~sparc keyword wrt bug #130382.
 
   06 Jun 2006; Carsten Lohrke <carlo@gentoo.org> gst-python-0.10.1.ebuild,
   gst-python-0.10.2.ebuild, gst-python-0.10.3.ebuild,
