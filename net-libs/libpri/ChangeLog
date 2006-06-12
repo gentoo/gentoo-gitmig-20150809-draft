@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpri
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.53 2006/06/07 17:52:33 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.54 2006/06/12 12:51:27 rajiv Exp $
+
+  12 Jun 2006; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  -libpri-1.0.9-r1.ebuild, libpri-1.0.9-r2.ebuild:
+  stable on x86 for security bug #135680. remove old ebuilds.
 
 *libpri-1.2.3 (07 Jun 2006)
 
