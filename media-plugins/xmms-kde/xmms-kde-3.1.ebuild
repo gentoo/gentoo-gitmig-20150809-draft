@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kde/xmms-kde-3.1.ebuild,v 1.7 2005/07/15 19:25:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kde/xmms-kde-3.1.ebuild,v 1.8 2006/06/12 00:08:12 metalgod Exp $
+
+ARTS_REQUIRED="yes"
 
 inherit kde eutils
 
@@ -14,8 +16,7 @@ KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="xmms sdl"
 
 DEPEND="xmms? ( >=media-sound/xmms-1.2.7-r23 )
-	sdl? ( >=media-libs/smpeg-0.4.4-r4 )
-	kde-base/arts"
+	sdl? ( >=media-libs/smpeg-0.4.4-r4 )"
 
 need-kde 3.1
 
