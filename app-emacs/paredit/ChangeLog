@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/paredit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/paredit/ChangeLog,v 1.1 2006/05/19 04:34:15 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/paredit/ChangeLog,v 1.2 2006/06/12 21:56:50 mkennedy Exp $
+
+  12 Jun 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  files/digest-paredit-20, Manifest:
+  Upstream changes paredit-20.html without changing version -- recompute digest.
 
 *paredit-20 (19 May 2006)
 
