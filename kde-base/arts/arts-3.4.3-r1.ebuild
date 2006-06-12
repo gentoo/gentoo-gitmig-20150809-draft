@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.4.3-r1.ebuild,v 1.1 2006/06/11 13:14:57 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.4.3-r1.ebuild,v 1.2 2006/06/12 18:09:01 corsair Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.4
@@ -16,7 +16,7 @@ RESTRICT="test"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.4"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
 IUSE="alsa esd artswrappersuid jack mp3 nas hardened vorbis"
 
 RDEPEND="$(qt_min_version 3.3)
