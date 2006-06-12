@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation-tools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/ChangeLog,v 1.9 2006/06/12 20:44:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/ChangeLog,v 1.10 2006/06/12 20:51:14 wolf31o2 Exp $
+
+  12 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  files/vmware-workstation-tools.rc:
+  Added before net and closing bug #81196.
 
   12 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-workstation-tools-5.5.1.ebuild:
