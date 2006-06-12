@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8.ebuild,v 1.4 2006/06/11 23:28:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8.ebuild,v 1.5 2006/06/12 01:20:28 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -26,7 +26,7 @@ SRC_URI="mirror://mplayer/releases/${MY_P}.tar.bz2
 	gtk? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )"
 
 # Only install Skin if GUI should be build (gtk as USE flag)
-DESCRIPTION="Media Player for Linux (snapshot)"
+DESCRIPTION="Media Player for Linux "
 HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder.
