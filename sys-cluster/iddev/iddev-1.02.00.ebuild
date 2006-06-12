@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/iddev/iddev-1.02.00.ebuild,v 1.1 2006/05/02 21:19:33 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/iddev/iddev-1.02.00.ebuild,v 1.2 2006/06/12 19:16:17 xmerlin Exp $
 
 MY_P="cluster-${PV}"
 
-DESCRIPTION="iddev"
+DESCRIPTION="iddev is a library that identifies device contents."
 HOMEPAGE="http://sources.redhat.com/cluster/"
 SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz"
 

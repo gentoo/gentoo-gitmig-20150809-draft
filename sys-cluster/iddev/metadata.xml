@@ -5,4 +5,9 @@
 <maintainer>
   <email>cluster@gentoo.org</email>
 </maintainer>
+<longdescription>
+iddev is a library that identifies device contents.  It will
+tell you what file system (or logical volume manager) has
+formatted the device.
+</longdescription>
 </pkgmetadata>
