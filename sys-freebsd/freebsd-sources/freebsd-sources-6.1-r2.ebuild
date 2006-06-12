@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.1-r1.ebuild,v 1.2 2006/06/12 09:52:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.1-r2.ebuild,v 1.1 2006/06/12 09:52:13 flameeyes Exp $
 
-inherit bsdmk freebsd
+inherit bsdmk freebsd flag-o-matic
 
 DESCRIPTION="FreeBSD kernel sources"
 SLOT="${PVR}"
@@ -37,12 +37,13 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-6.0-flex-2.5.31.patch"
 	epatch "${FILESDIR}/${PN}-6.0-asm.patch"
 	epatch "${FILESDIR}/${PN}-6.0-werror.patch"
+	epatch "${FILESDIR}/${PN}-6.1-gcc41.patch"
 
 	epatch "${FILESDIR}/SA-06-16-smbfs.patch"
 
 	# Disable SSP for the kernel
 	grep -Zlr -- -ffreestanding "${S}" | xargs -0 sed -i -e \
-		's:-ffreestanding:-ffreestanding -fno-stack-protector -fno-stack-protector-all:g'
+		"s:-ffreestanding:-ffreestanding $(test-flags -fno-stack-protector -fno-stack-protector-all):g"
 }
 
 src_compile() {

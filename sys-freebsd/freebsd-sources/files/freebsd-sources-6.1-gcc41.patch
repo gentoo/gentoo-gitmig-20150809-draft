@@ -1,7 +1,285 @@
-Index: fbsd-6.1/sys/kern/kern_tc.c
-===================================================================
---- fbsd-6.1.orig/sys/kern/kern_tc.c
-+++ fbsd-6.1/sys/kern/kern_tc.c
+diff -ru sys.orig/conf/kern.pre.mk sys-gcc4.1/conf/kern.pre.mk
+--- sys/conf/kern.pre.mk	2006-06-11 08:30:14 -0300
++++ sys-gcc4.1/conf/kern.pre.mk	2006-06-10 21:53:27 -0300
+@@ -46,7 +46,7 @@
+ NOSTDINC= -nostdinc
+ .endif
+ 
+-INCLUDES= ${NOSTDINC} -I- ${INCLMAGIC} -I. -I$S
++INCLUDES= ${NOSTDINC} ${INCLMAGIC} -I. -I$S
+ 
+ # This hack lets us use the OpenBSD altq code without spamming a new
+ # include path into contrib'ed source files.
+diff -ru sys/conf/kmod.mk sys-gcc4.1/conf/kmod.mk
+--- sys/conf/kmod.mk	2006-06-11 08:30:14 -0300
++++ sys-gcc4.1/conf/kmod.mk	2006-06-09 13:22:22 -0300
+@@ -87,7 +87,7 @@
+ .else
+ NOSTDINC=	-nostdinc
+ .endif
+-CFLAGS:=	${CFLAGS:N-I*} ${NOSTDINC} -I- ${INCLMAGIC} ${CFLAGS:M-I*}
++CFLAGS:=	${CFLAGS:N-I*} ${NOSTDINC} ${INCLMAGIC} ${CFLAGS:M-I*}
+ .if defined(KERNBUILDDIR)
+ CFLAGS+=	-DHAVE_KERNEL_OPTION_HEADERS -include ${KERNBUILDDIR}/opt_global.h
+ .endif
+diff -ru sys/ddb/db_command.c sys-gcc4.1/ddb/db_command.c
+--- sys/ddb/db_command.c	2005-10-25 17:10:56 -0300
++++ sys-gcc4.1/ddb/db_command.c	2006-06-09 22:26:53 -0300
+@@ -75,7 +75,7 @@
+ static db_cmdfcn_t	db_watchdog;
+ 
+ /* XXX this is actually forward-static. */
+-extern struct command	db_show_cmds[];
++static struct command	db_show_cmds[];
+ 
+ /*
+  * if 'ed' style: 'dot' is set at start of last item printed,
+diff -ru sys/dev/cp/if_cp.c sys-gcc4.1/dev/cp/if_cp.c
+--- sys/dev/cp/if_cp.c	2005-08-25 02:01:06 -0300
++++ sys-gcc4.1/dev/cp/if_cp.c	2006-06-09 08:08:56 -0300
+@@ -338,7 +338,7 @@
+ #endif
+ }
+ 
+-extern struct cdevsw cp_cdevsw;
++static struct cdevsw cp_cdevsw;
+ 
+ static void
+ cp_bus_dmamap_addr (void *arg, bus_dma_segment_t *segs, int nseg, int error)
+diff -ru sys/dev/ctau/if_ct.c sys-gcc4.1/dev/ctau/if_ct.c
+--- sys/dev/ctau/if_ct.c	2005-08-25 02:01:06 -0300
++++ sys-gcc4.1/dev/ctau/if_ct.c	2006-06-09 08:10:31 -0300
+@@ -486,7 +486,7 @@
+ 	return 0;
+ }
+ 
+-extern struct cdevsw ct_cdevsw;
++static struct cdevsw ct_cdevsw;
+ 
+ static void
+ ct_bus_dmamap_addr (void *arg, bus_dma_segment_t *segs, int nseg, int error)
+diff -ru sys/dev/cx/if_cx.c sys-gcc4.1/dev/cx/if_cx.c
+--- sys/dev/cx/if_cx.c	2006-03-10 16:37:31 -0300
++++ sys-gcc4.1/dev/cx/if_cx.c	2006-06-09 08:12:01 -0300
+@@ -229,7 +229,7 @@
+ static drv_t *channel [NCX*NCHAN];
+ static struct callout led_timo [NCX];
+ static struct callout timeout_handle;
+-extern struct cdevsw cx_cdevsw;
++static struct cdevsw cx_cdevsw;
+ 
+ static int MY_SOFT_INTR;
+ 
+diff -ru sys/dev/fb/vga.c sys-gcc4.1/dev/fb/vga.c
+--- sys/dev/fb/vga.c	2005-10-05 18:48:02 -0300
++++ sys-gcc4.1/dev/fb/vga.c	2006-06-09 12:58:32 -0300
+@@ -206,7 +206,7 @@
+  * with a physical address in the following table, as verify_adapter()
+  * will perform address conversion at run-time.
+  */
+-static video_adapter_t adapter_init_value[] = {
++video_adapter_t adapter_init_value[] = {
+     /* DCC_MONO */
+     { 0, KD_MONO, "mda", 0, 0, 0, 	    IO_MDA, IO_MDASIZE, MONO_CRTC,
+       MDA_BUF_BASE, MDA_BUF_SIZE, MDA_BUF_BASE, MDA_BUF_SIZE, MDA_BUF_SIZE, 
+@@ -748,10 +748,7 @@
+ }
+ 
+ #ifndef VGA_NO_BIOS
+-static void
+-fill_adapter_param(int code, video_adapter_t *adp)
+-{
+-    static struct {
++    struct {
+ 	int primary;
+ 	int secondary;
+     } dcc[] = {
+@@ -768,7 +765,9 @@
+ 	{ DCC_EGAMONO, 			DCC_CGA40 },
+ 	{ DCC_EGAMONO, 			DCC_CGA80 },
+     };
+-
++static void
++fill_adapter_param(int code, video_adapter_t *adp)
++{
+     if ((code < 0) || (code >= sizeof(dcc)/sizeof(dcc[0]))) {
+ 	adp[V_ADP_PRIMARY] = adapter_init_value[DCC_MONO];
+ 	adp[V_ADP_SECONDARY] = adapter_init_value[DCC_CGA80];
+diff -ru sys/dev/iicbus/iicbus.c sys-gcc4.1/dev/iicbus/iicbus.c
+--- sys/dev/iicbus/iicbus.c	2004-05-27 10:29:09 -0300
++++ sys-gcc4.1/dev/iicbus/iicbus.c	2006-06-09 08:31:40 -0300
+@@ -45,7 +45,7 @@
+ 
+ #define DEVTOIICBUS(dev) ((struct iicbus_device*)device_get_ivars(dev))
+ 
+-static devclass_t iicbus_devclass;
++static devclass_t iicbus_dev_class;
+ 
+ /* See comments below for why auto-scanning is a bad idea. */
+ #define SCAN_IICBUS 0
+@@ -187,8 +187,8 @@
+ 	return (IIC_ENOTSUPP);
+ }
+ 
+-DRIVER_MODULE(iicbus, pcf, iicbus_driver, iicbus_devclass, 0, 0);
+-DRIVER_MODULE(iicbus, envctrl, iicbus_driver, iicbus_devclass, 0, 0);
+-DRIVER_MODULE(iicbus, iicbb, iicbus_driver, iicbus_devclass, 0, 0);
+-DRIVER_MODULE(iicbus, bti2c, iicbus_driver, iicbus_devclass, 0, 0);
++DRIVER_MODULE(iicbus, pcf, iicbus_driver, iicbus_dev_class, 0, 0);
++DRIVER_MODULE(iicbus, envctrl, iicbus_driver, iicbus_dev_class, 0, 0);
++DRIVER_MODULE(iicbus, iicbb, iicbus_driver, iicbus_dev_class, 0, 0);
++DRIVER_MODULE(iicbus, bti2c, iicbus_driver, iicbus_dev_class, 0, 0);
+ MODULE_VERSION(iicbus, IICBUS_MODVER);
+diff -ru sys/dev/ppbus/ppb_msq.c sys-gcc4.1/dev/ppbus/ppb_msq.c
+--- sys/dev/ppbus/ppb_msq.c	2003-08-24 14:54:16 -0300
++++ sys-gcc4.1/dev/ppbus/ppb_msq.c	2006-06-09 07:26:54 -0300
+@@ -153,31 +153,32 @@
+  * Execute a microseq loop
+  *
+  */
++struct ppb_microseq loop_microseq_1[] = {
++	  MS_CALL(0),			/* execute prolog */
++
++	  MS_SET(MS_UNKNOWN),		/* set size of transfer */
++	/* loop: */
++	  MS_CALL(0),			/* execute body */
++	  MS_DBRA(-1 /* loop: */),
++
++	  MS_CALL(0),			/* execute epilog */
++	  MS_RET(0)
++};
++
+ int
+ ppb_MS_loop(device_t bus, device_t dev, struct ppb_microseq *prolog,
+ 		struct ppb_microseq *body, struct ppb_microseq *epilog,
+ 		int iter, int *ret)
+ {
+-	struct ppb_microseq loop_microseq[] = {
+-		  MS_CALL(0),			/* execute prolog */
+-
+-		  MS_SET(MS_UNKNOWN),		/* set size of transfer */
+-	/* loop: */
+-		  MS_CALL(0),			/* execute body */
+-		  MS_DBRA(-1 /* loop: */),
+-
+-		  MS_CALL(0),			/* execute epilog */
+-		  MS_RET(0)
+-	};
+ 
+ 	/* initialize the structure */
+-	loop_microseq[0].arg[0].p = (void *)prolog;
+-	loop_microseq[1].arg[0].i = iter;
+-	loop_microseq[2].arg[0].p = (void *)body;
+-	loop_microseq[4].arg[0].p = (void *)epilog;
++	loop_microseq_1[0].arg[0].p = (void *)prolog;
++	loop_microseq_1[1].arg[0].i = iter;
++	loop_microseq_1[2].arg[0].p = (void *)body;
++	loop_microseq_1[4].arg[0].p = (void *)epilog;
+ 
+ 	/* execute the loop */
+-	return (ppb_MS_microseq(bus, dev, loop_microseq, ret));
++	return (ppb_MS_microseq(bus, dev, loop_microseq_1, ret));
+ }
+ 
+ /*
+diff -ru sys/fs/fdescfs/fdesc_vnops.c sys-gcc4.1/fs/fdescfs/fdesc_vnops.c
+--- sys/fs/fdescfs/fdesc_vnops.c	2006-03-22 14:39:27 -0300
++++ sys-gcc4.1/fs/fdescfs/fdesc_vnops.c	2006-06-09 08:18:20 -0300
+@@ -74,7 +74,7 @@
+ static vop_reclaim_t	fdesc_reclaim;
+ static vop_setattr_t	fdesc_setattr;
+ 
+-extern struct vop_vector fdesc_vnodeops;
++static struct vop_vector fdesc_vnodeops;
+ 
+ /*
+  * Initialise cache headers
+diff -ru sys/fs/ntfs/ntfs_vfsops.c sys/fs/ntfs/ntfs_vfsops.c
+--- sys/fs/ntfs/ntfs_vfsops.c	2006-02-19 21:53:13 -0300
++++ sys-gcc4.1/fs/ntfs/ntfs_vfsops.c	2006-06-09 08:54:14 -0300
+@@ -60,7 +60,7 @@
+ #include <fs/ntfs/ntfs_ihash.h>
+ #include <fs/ntfs/ntfsmount.h>
+ 
+-static MALLOC_DEFINE(M_NTFSMNT, "NTFS mount", "NTFS mount structure");
++static MALLOC_DEFINE(M_NTFS_MNT, "NTFS mount", "NTFS mount structure");
+ MALLOC_DEFINE(M_NTFSNTNODE,"NTFS ntnode",  "NTFS ntnode information");
+ MALLOC_DEFINE(M_NTFSFNODE,"NTFS fnode",  "NTFS fnode information");
+ MALLOC_DEFINE(M_NTFSDIR,"NTFS dir",  "NTFS dir buffer");
+@@ -286,7 +286,7 @@
+ 	error = bread(devvp, BBLOCK, BBSIZE, NOCRED, &bp);
+ 	if (error)
+ 		goto out;
+-	ntmp = malloc( sizeof *ntmp, M_NTFSMNT, M_WAITOK | M_ZERO);
++	ntmp = malloc( sizeof *ntmp, M_NTFS_MNT, M_WAITOK | M_ZERO);
+ 	bcopy( bp->b_data, &ntmp->ntm_bootfile, sizeof(struct bootfile) );
+ 	/*
+ 	 * We must not cache the boot block if its size is not exactly
+@@ -411,7 +411,7 @@
+ 		/* Alloc memory for attribute definitions */
+ 		MALLOC(ntmp->ntm_ad, struct ntvattrdef *,
+ 			num * sizeof(struct ntvattrdef),
+-			M_NTFSMNT, M_WAITOK);
++			M_NTFS_MNT, M_WAITOK);
+ 
+ 		ntmp->ntm_adnum = num;
+ 
+@@ -515,8 +515,8 @@
+ 	ntfs_82u_uninit(ntmp);
+ 	mp->mnt_data = (qaddr_t)0;
+ 	mp->mnt_flag &= ~MNT_LOCAL;
+-	FREE(ntmp->ntm_ad, M_NTFSMNT);
+-	FREE(ntmp, M_NTFSMNT);
++	FREE(ntmp->ntm_ad, M_NTFS_MNT);
++	FREE(ntmp, M_NTFS_MNT);
+ 	return (error);
+ }
+ 
+diff -ru sys/fs/unionfs/union_vfsops.c sys-gcc4.1/fs/unionfs/union_vfsops.c
+--- sys/fs/unionfs/union_vfsops.c	2005-04-27 06:07:13 -0300
++++ sys-gcc4.1/fs/unionfs/union_vfsops.c	2006-06-09 09:02:09 -0300
+@@ -466,7 +466,7 @@
+ 	return (0);
+ }
+ 
+-static struct vfsops union_vfsops = {
++static struct vfsops union_vfs_ops = {
+ 	.vfs_init = 		union_init,
+ 	.vfs_mount =		union_mount,
+ 	.vfs_root =		union_root,
+@@ -474,4 +474,4 @@
+ 	.vfs_unmount =		union_unmount,
+ };
+ 
+-VFS_SET(union_vfsops, unionfs, VFCF_LOOPBACK);
++VFS_SET(union_vfs_ops, unionfs, VFCF_LOOPBACK);
+diff -ru sys/i386/i386/vm86.c sys-gcc4.1/i386/i386/vm86.c
+--- sys/i386/i386/vm86.c	2004-11-27 03:51:36 -0300
++++ sys-gcc4.1/i386/i386/vm86.c	2006-06-10 21:48:24 -0300
+@@ -505,7 +505,7 @@
+ 	panic("vm86_addpage: not enough room");
+ }
+ 
+-static void
++void
+ vm86_initflags(struct vm86frame *vmf)
+ {
+ 	int eflags = vmf->vmf_eflags;
+diff -ru sys/i386/include/segments.h sys-gcc4.1/i386/include/segments.h
+--- sys/i386/include/segments.h	2005-04-13 19:57:17 -0300
++++ sys-gcc4.1/i386/include/segments.h	2006-06-09 07:29:09 -0300
+@@ -244,7 +244,7 @@
+ extern struct soft_segment_descriptor gdt_segs[];
+ extern struct gate_descriptor *idt;
+ extern union descriptor ldt[NLDT];
+-extern struct region_descriptor r_gdt, r_idt;
++//extern struct region_descriptor r_gdt, r_idt;
+ 
+ void	lgdt(struct region_descriptor *rdp);
+ void	sdtossd(struct segment_descriptor *sdp,
+diff -ru sys/kern/kern_tc.c sys-gcc4.1/kern/kern_tc.c
+--- sys/kern/kern_tc.c	2006-04-04 17:07:23 -0300
++++ sys-gcc4.1/kern/kern_tc.c	2006-06-09 05:26:02 -0300
 @@ -61,7 +61,7 @@ struct timehands {
  	struct timehands	*th_next;
  };
@@ -11,3 +289,218 @@ Index: fbsd-6.1/sys/kern/kern_tc.c
  static struct timehands th9 = { NULL, 0, 0, 0, {0, 0}, {0, 0}, {0, 0}, 0, &th0};
  static struct timehands th8 = { NULL, 0, 0, 0, {0, 0}, {0, 0}, {0, 0}, 0, &th9};
  static struct timehands th7 = { NULL, 0, 0, 0, {0, 0}, {0, 0}, {0, 0}, 0, &th8};
+diff -ru sys/net/rtsock.c sys-gcc4.1/net/rtsock.c
+--- sys/net/rtsock.c	2006-04-04 17:07:23 -0300
++++ sys-gcc4.1/net/rtsock.c	2006-06-09 05:26:02 -0300
+@@ -1243,7 +1243,7 @@
+  * Definitions of protocols supported in the ROUTE domain.
+  */
+ 
+-extern struct domain routedomain;		/* or at least forward */
++static struct domain routedomain;		/* or at least forward */
+ 
+ static struct protosw routesw[] = {
+ {
+diff -ru sys/net/zlib.c sys-gcc4.1/net/zlib.c
+--- sys/net/zlib.c	2005-01-06 22:45:35 -0300
++++ sys-gcc4.1/net/zlib.c	2006-06-09 09:06:42 -0300
+@@ -94,7 +94,7 @@
+ typedef ush FAR ushf;
+ typedef unsigned long  ulg;
+ 
+-extern const char *z_errmsg[10]; /* indexed by 2-zlib_error */
++static const char *z_errmsg[10]; /* indexed by 2-zlib_error */
+ /* (size given to avoid silly warnings with Visual C++) */
+ 
+ #define ERR_MSG(err) z_errmsg[Z_NEED_DICT-(err)]
+diff -ru sys/netinet6/in6_proto.c sys-gcc4.1/netinet6/in6_proto.c
+--- sys/netinet6/in6_proto.c	2005-11-16 07:31:23 -0300
++++ sys-gcc4.1/netinet6/in6_proto.c	2006-06-09 06:52:31 -0300
+@@ -145,7 +145,7 @@
+  */
+ 
+ extern	struct domain inet6domain;
+-static	struct pr_usrreqs nousrreqs;
++static	struct pr_usrreqs nousr_reqs;
+ 
+ #define PR_LISTEN	0
+ #define PR_ABRTACPTDIS	0
+@@ -158,7 +158,7 @@
+ 	.pr_init =		ip6_init,
+ 	.pr_slowtimo =		frag6_slowtimo,
+ 	.pr_drain =		frag6_drain,
+-	.pr_usrreqs =		&nousrreqs,
++	.pr_usrreqs =		&nousr_reqs,
+ },
+ {
+ 	.pr_type =		SOCK_DGRAM,
+@@ -216,7 +216,7 @@
+ 	.pr_protocol =		IPPROTO_DSTOPTS,
+ 	.pr_flags =		PR_ATOMIC|PR_ADDR,
+ 	.pr_input =		dest6_input,
+-	.pr_usrreqs =		&nousrreqs
++	.pr_usrreqs =		&nousr_reqs
+ },
+ {
+ 	.pr_type =		SOCK_RAW,
+@@ -224,7 +224,7 @@
+ 	.pr_protocol =		IPPROTO_ROUTING,
+ 	.pr_flags =		PR_ATOMIC|PR_ADDR,
+ 	.pr_input =		route6_input,
+-	.pr_usrreqs =		&nousrreqs
++	.pr_usrreqs =		&nousr_reqs
+ },
+ {
+ 	.pr_type =		SOCK_RAW,
+@@ -232,7 +232,7 @@
+ 	.pr_protocol =		IPPROTO_FRAGMENT,
+ 	.pr_flags =		PR_ATOMIC|PR_ADDR,
+ 	.pr_input =		frag6_input,
+-	.pr_usrreqs =		&nousrreqs
++	.pr_usrreqs =		&nousr_reqs
+ },
+ #ifdef IPSEC
+ {
+@@ -241,7 +241,7 @@
+ 	.pr_protocol =		IPPROTO_AH,
+ 	.pr_flags =		PR_ATOMIC|PR_ADDR,
+ 	.pr_input =		ah6_input,
+-	.pr_usrreqs =		&nousrreqs,
++	.pr_usrreqs =		&nousr_reqs,
+ },
+ #ifdef IPSEC_ESP
+ {
+@@ -251,7 +251,7 @@
+ 	.pr_flags =		PR_ATOMIC|PR_ADDR,
+ 	.pr_input =		esp6_input,
+ 	.pr_ctlinput =		esp6_ctlinput,
+-	.pr_usrreqs =		&nousrreqs,
++	.pr_usrreqs =		&nousr_reqs,
+ },
+ #endif
+ {
+@@ -260,7 +260,7 @@
+ 	.pr_protocol =		IPPROTO_IPCOMP,
+ 	.pr_flags =		PR_ATOMIC|PR_ADDR,
+ 	.pr_input =		ipcomp6_input,
+-	.pr_usrreqs =		&nousrreqs,
++	.pr_usrreqs =		&nousr_reqs,
+ },
+ #endif /* IPSEC */
+ #ifdef INET
+diff -ru sys/netinet6/ip6_mroute.c sys-gcc4.1/netinet6/ip6_mroute.c
+--- sys/netinet6/ip6_mroute.c	2006-04-20 13:05:17 -0300
++++ sys-gcc4.1/netinet6/ip6_mroute.c	2006-06-09 06:53:47 -0300
+@@ -188,7 +188,7 @@
+ static mifi_t nummifs = 0;
+ static mifi_t reg_mif_num = (mifi_t)-1;
+ 
+-static struct pim6stat pim6stat;
++static struct pim6stat pim6_stat;
+ static int pim6;
+ 
+ /*
+@@ -1622,7 +1622,7 @@
+ 		log(LOG_DEBUG, "** IPv6 register_send **\n src %s dst %s\n",
+ 		    ip6_sprintf(&ip6->ip6_src), ip6_sprintf(&ip6->ip6_dst));
+ #endif
+-	++pim6stat.pim6s_snd_registers;
++	++pim6_stat.pim6s_snd_registers;
+ 
+ 	/* Make a copy of the packet to send to the user level process */
+ 	MGETHDR(mm, M_DONTWAIT, MT_HEADER);
+@@ -1690,7 +1690,7 @@
+ 	int minlen;
+ 	int off = *offp;
+ 
+-	++pim6stat.pim6s_rcv_total;
++	++pim6_stat.pim6s_rcv_total;
+ 
+ 	ip6 = mtod(m, struct ip6_hdr *);
+ 	pimlen = m->m_pkthdr.len - *offp;
+@@ -1699,7 +1699,7 @@
+ 	 * Validate lengths
+ 	 */
+ 	if (pimlen < PIM_MINLEN) {
+-		++pim6stat.pim6s_rcv_tooshort;
++		++pim6_stat.pim6s_rcv_tooshort;
+ #ifdef MRT6DEBUG
+ 		if (mrt6debug & DEBUG_PIM)
+ 			log(LOG_DEBUG,"pim6_input: PIM packet too short\n");
+@@ -1732,7 +1732,7 @@
+ #else
+ 	IP6_EXTHDR_GET(pim, struct pim *, m, off, minlen);
+ 	if (pim == NULL) {
+-		pim6stat.pim6s_rcv_tooshort++;
++		pim6_stat.pim6s_rcv_tooshort++;
+ 		return (IPPROTO_DONE);
+ 	}
+ #endif
+@@ -1752,7 +1752,7 @@
+ 			cksumlen = pimlen;
+ 
+ 		if (in6_cksum(m, IPPROTO_PIM, off, cksumlen)) {
+-			++pim6stat.pim6s_rcv_badsum;
++			++pim6_stat.pim6s_rcv_badsum;
+ #ifdef MRT6DEBUG
+ 			if (mrt6debug & DEBUG_PIM)
+ 				log(LOG_DEBUG,
+@@ -1766,7 +1766,7 @@
+ 
+ 	/* PIM version check */
+ 	if (pim->pim_ver != PIM_VERSION) {
+-		++pim6stat.pim6s_rcv_badversion;
++		++pim6_stat.pim6s_rcv_badversion;
+ #ifdef MRT6DEBUG
+ 		log(LOG_ERR,
+ 		    "pim6_input: incorrect version %d, expecting %d\n",
+@@ -1789,7 +1789,7 @@
+ 		u_int32_t *reghdr;
+ 		int rc;
+ 
+-		++pim6stat.pim6s_rcv_registers;
++		++pim6_stat.pim6s_rcv_registers;
+ 
+ 		if ((reg_mif_num >= nummifs) || (reg_mif_num == (mifi_t) -1)) {
+ #ifdef MRT6DEBUG
+@@ -1811,8 +1811,8 @@
+ 		 * Validate length
+ 		 */
+ 		if (pimlen < PIM6_REG_MINLEN) {
+-			++pim6stat.pim6s_rcv_tooshort;
+-			++pim6stat.pim6s_rcv_badregisters;
++			++pim6_stat.pim6s_rcv_tooshort;
++			++pim6_stat.pim6s_rcv_badregisters;
+ #ifdef MRT6DEBUG
+ 			log(LOG_ERR,
+ 			    "pim6_input: register packet size too "
+@@ -1836,7 +1836,7 @@
+ 
+ 		/* verify the version number of the inner packet */
+ 		if ((eip6->ip6_vfc & IPV6_VERSION_MASK) != IPV6_VERSION) {
+-			++pim6stat.pim6s_rcv_badregisters;
++			++pim6_stat.pim6s_rcv_badregisters;
+ #ifdef MRT6DEBUG
+ 			log(LOG_DEBUG, "pim6_input: invalid IP version (%d) "
+ 			    "of the inner packet\n",
+@@ -1848,7 +1848,7 @@
+ 
+ 		/* verify the inner packet is destined to a mcast group */
+ 		if (!IN6_IS_ADDR_MULTICAST(&eip6->ip6_dst)) {
+-			++pim6stat.pim6s_rcv_badregisters;
++			++pim6_stat.pim6s_rcv_badregisters;
+ #ifdef MRT6DEBUG
+ 			if (mrt6debug & DEBUG_PIM)
+ 				log(LOG_DEBUG,
+diff -ru sys/sys/proc.h sys-gcc4.1/sys/proc.h
+--- sys/sys/proc.h	2006-03-10 16:37:35 -0300
++++ sys-gcc4.1/sys/proc.h	2006-06-09 05:15:08 -0300
+@@ -835,7 +835,7 @@
+ extern int nprocs, maxproc;		/* Current and max number of procs. */
+ extern int maxprocperuid;		/* Max procs per uid. */
+ extern u_long ps_arg_cache_limit;
+-extern int sched_quantum;		/* Scheduling quantum in ticks. */
++//extern int sched_quantum;		/* Scheduling quantum in ticks. */
+ 
+ LIST_HEAD(proclist, proc);
+ TAILQ_HEAD(procqueue, proc);
