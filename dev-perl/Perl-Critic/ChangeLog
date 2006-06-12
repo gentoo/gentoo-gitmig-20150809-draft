@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Perl-Critic
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.2 2006/05/22 22:05:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.3 2006/06/12 14:04:18 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Perl-Critic-0.16.ebuild:
+  Keywording ~amd64
 
 *Perl-Critic-0.16 (22 May 2006)
 
