@@ -1,0 +1,47 @@
+diff -ur SystemTray-0.2/src/main.c SystemTray/src/main.c
+--- SystemTray-0.2/src/main.c	2003-07-12 17:51:14.000000000 +0100
++++ SystemTray/src/main.c	2005-10-18 18:44:40.000000000 +0100
+@@ -118,7 +118,7 @@
+ 
+   if (event->type == GDK_BUTTON_PRESS && event->button == 3)
+     {
+-      applet_popup_menu(plug, menu, event);
++      rox_applet_popup_menu(plug, menu, event);
+       return TRUE;
+     }
+   return FALSE;
+@@ -160,12 +160,6 @@
+     return gdk_handler(display, error);
+ }
+ 
+-typedef struct applet_info {
+-  PanelLocation loc;
+-  int margin;
+-} AppletInfo;
+-AppletInfo *get_position(GtkWidget *plug);
+-
+ #define SHORT_OPS "hv"
+ 
+ #ifdef HAVE_GETOPT_LONG
+@@ -178,10 +172,10 @@
+ 
+ 
+ int main(int argc, char *argv[]) {
+-  AppletInfo *info = NULL;
++  ROXAppletInfo *info = NULL;
+   long window_id;
+   char c;
+-  PanelLocation location = PANEL_UNKNOWN;
++  ROXPanelLocation location = PANEL_UNKNOWN;
+   int long_index;
+   GtkWidget *align;
+   GtkWidget *eventbox;
+@@ -231,7 +225,7 @@
+       window_id = atol(argv[1]);
+       plug = gtk_plug_new(window_id);
+ 
+-      info = get_position(plug);
++      info = rox_applet_get_position(plug);
+       if (info) 
+ 	{
+ 	  location = info->loc;
