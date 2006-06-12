@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r4.ebuild,v 1.2 2006/06/12 19:25:09 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r4.ebuild,v 1.3 2006/06/12 20:47:22 chutzpah Exp $
 
 inherit eutils flag-o-matic gnuconfig linux-info libtool toolchain-funcs
 
@@ -49,6 +49,9 @@ src_unpack() {
 	# Use directly the same exact patch as flex as it works
 	epatch "${FILESDIR}/flex-configure-LANG.patch"
 
+	# Fix makefiles for parallel make
+	epatch "${FILESDIR}/${P}-parallel-fpic.patch"
+
 	# Let portage handle the stripping of binaries
 	sed -i -e "/strip cdparanoia/d" Makefile.in
 
@@ -64,7 +67,7 @@ src_compile() {
 	tc-export CC AR RANLIB
 	append-flags -I${S}/interface
 	econf || die
-	emake -j1 OPT="${CFLAGS}" || die
+	emake OPT="${CFLAGS}" || die
 }
 
 src_install() {
