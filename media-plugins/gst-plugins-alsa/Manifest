@@ -1,18 +1,80 @@
-MD5 d26d57ac6b55c2add5fdadac36f7123f ChangeLog 10018
-MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-alsa-0.10.4 277
-MD5 450e13cee4577b1b569d1ceefe9eabd4 files/digest-gst-plugins-alsa-0.10.6 277
-MD5 d940ec4125bf9095e8113f5771fb74f8 files/digest-gst-plugins-alsa-0.10.7 277
-MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-alsa-0.8.10 72
-MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-alsa-0.8.11 262
-MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-alsa-0.8.12 262
-MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-alsa-0.8.8 71
-MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-alsa-0.8.9 71
+DIST gst-plugins-0.8.10.tar.bz2 2397528
+DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90
+DIST gst-plugins-0.8.12.tar.bz2 2506926 RMD160 cc0bbf3d790cb5791ce982fe6493bf2d8496a507 SHA1 3b65fe96aa849c463f5f968830ad76143c4b9952 SHA256 8728da4f71bc87e10fb064d28154220d66a3d8332482fd2c8a7ed47c5f0a03ba
+DIST gst-plugins-0.8.8.tar.bz2 2214274
+DIST gst-plugins-0.8.9.tar.bz2 2356958
+DIST gst-plugins-base-0.10.4.tar.bz2 1097817 RMD160 da837968b10a130dbeaa1953a3ad9f27586ba683 SHA1 1874bfc701f75ff859615c6b6e5b65c50df6f53a SHA256 6c556051191364eacf05dcf01a9f3101240a6b6155e331e4cbcbfca55a91ca42
+DIST gst-plugins-base-0.10.6.tar.bz2 1195072 RMD160 69659a40113b38b7eb1569c1da49ee5c37a5fd24 SHA1 58c1177e530d2ff91ddfa3a9322ab5ba3e0ddbb4 SHA256 0ef1b8cbe6d7e898d0636342479de46a780f720033c1b4f7217c903aac6d80ad
+DIST gst-plugins-base-0.10.7.tar.bz2 1166071 RMD160 67957a8d62fcf2b3170c57ea8bc4b58ce227306b SHA1 832b54fc9f3bc7f4c0a5337363081a25171d2662 SHA256 7be5984162333dae48d8f7e58e6c7f4b43726c78e2ca13aca6618b1342af8d37
+DIST gst-plugins-base-0.10.8.tar.bz2 1234234 RMD160 41f5647fb0be2d0038ca925a0479e5c8ac57ab4a SHA1 b428fe9caa17edd78a87d50931691a6d47c20e72 SHA256 4e7c14f82b23f268ac053ad21a23cc637052eca72b8ea23d02c2e7a90521d74a
+EBUILD gst-plugins-alsa-0.10.4.ebuild 418 RMD160 b37beff2f12f1efb48fac7277d3abdddf6468379 SHA1 8996faf9383faf799a56af29d3c352482a05ab99 SHA256 9610d406d4bfa09777086c3c1dac7e148ea83281fde5e138c557096c7a61c8b6
 MD5 1fcf7f8e2308d9bc4a704e6596896856 gst-plugins-alsa-0.10.4.ebuild 418
+RMD160 b37beff2f12f1efb48fac7277d3abdddf6468379 gst-plugins-alsa-0.10.4.ebuild 418
+SHA256 9610d406d4bfa09777086c3c1dac7e148ea83281fde5e138c557096c7a61c8b6 gst-plugins-alsa-0.10.4.ebuild 418
+EBUILD gst-plugins-alsa-0.10.6.ebuild 428 RMD160 9cb6fd6463e447f7864fa633dfa7fa34d934b0aa SHA1 2a85ad82530f70cc87ed3069367aa37208f3c9aa SHA256 07fee752ab17bd529d01c32bcbae6c1dbd8fa0b81fe3be70ee130d05b6d5de7c
 MD5 9f52b941fd324b6daaf4464ce310f1c2 gst-plugins-alsa-0.10.6.ebuild 428
+RMD160 9cb6fd6463e447f7864fa633dfa7fa34d934b0aa gst-plugins-alsa-0.10.6.ebuild 428
+SHA256 07fee752ab17bd529d01c32bcbae6c1dbd8fa0b81fe3be70ee130d05b6d5de7c gst-plugins-alsa-0.10.6.ebuild 428
+EBUILD gst-plugins-alsa-0.10.7.ebuild 425 RMD160 50ce8b3b68d2829e6b3100063f0bb310dcbae6e9 SHA1 b98950e9b3e8a32ed6e6365d925f60b65f21a02c SHA256 0b6665aeafc96eee836d942eeb788338ce14f558025afefd116063298c4411ed
 MD5 f29533b2ff14a653525acf9ac6fac874 gst-plugins-alsa-0.10.7.ebuild 425
+RMD160 50ce8b3b68d2829e6b3100063f0bb310dcbae6e9 gst-plugins-alsa-0.10.7.ebuild 425
+SHA256 0b6665aeafc96eee836d942eeb788338ce14f558025afefd116063298c4411ed gst-plugins-alsa-0.10.7.ebuild 425
+EBUILD gst-plugins-alsa-0.10.8.ebuild 425 RMD160 ed04648f7efbf124ada063b03401664d8629e2df SHA1 2b3ddeb80cf21e9488173f794f850f582a6007ed SHA256 d556bcdcc260ae0d00b14c19059594b7f87404696b39d95843a5e69409e26e6c
+MD5 8e18192d75ea0aa8b49a9946bdf01120 gst-plugins-alsa-0.10.8.ebuild 425
+RMD160 ed04648f7efbf124ada063b03401664d8629e2df gst-plugins-alsa-0.10.8.ebuild 425
+SHA256 d556bcdcc260ae0d00b14c19059594b7f87404696b39d95843a5e69409e26e6c gst-plugins-alsa-0.10.8.ebuild 425
+EBUILD gst-plugins-alsa-0.8.10.ebuild 382 RMD160 14aea7afc47a1f22472485f40d4227b025bf74fc SHA1 cf46ec67d7e6647269d4e29c252859eb1cfec826 SHA256 8c6915b54321cdb4d7d24c6ee7af10442acef5dca46dab4d1c11877d44173c60
 MD5 e71865f8f646448ec2f305f8cfaf5e12 gst-plugins-alsa-0.8.10.ebuild 382
+RMD160 14aea7afc47a1f22472485f40d4227b025bf74fc gst-plugins-alsa-0.8.10.ebuild 382
+SHA256 8c6915b54321cdb4d7d24c6ee7af10442acef5dca46dab4d1c11877d44173c60 gst-plugins-alsa-0.8.10.ebuild 382
+EBUILD gst-plugins-alsa-0.8.11.ebuild 385 RMD160 ec4e2fc260d594f86b29f6b163a1171be94004e3 SHA1 63dacb87610c588f45557aa288817af3726a87cb SHA256 97ce8a241ac0a693953857922a947d7a0ad6d44593489a41c98e4737ea7dd942
 MD5 a28f59bd0a41662c5a614c69497f1a74 gst-plugins-alsa-0.8.11.ebuild 385
+RMD160 ec4e2fc260d594f86b29f6b163a1171be94004e3 gst-plugins-alsa-0.8.11.ebuild 385
+SHA256 97ce8a241ac0a693953857922a947d7a0ad6d44593489a41c98e4737ea7dd942 gst-plugins-alsa-0.8.11.ebuild 385
+EBUILD gst-plugins-alsa-0.8.12.ebuild 391 RMD160 64039f39e7b0b08492cc8fccd289d6d50108b690 SHA1 6c1df7fd9ff314d2a6f28bd63ea1850abecd7a30 SHA256 fd836b3437f741cf71e5646cffa094b9ef9c5d36a890edf43e421e741780e115
 MD5 f2ae717ca65cf4d4ed3299a77e4adcff gst-plugins-alsa-0.8.12.ebuild 391
+RMD160 64039f39e7b0b08492cc8fccd289d6d50108b690 gst-plugins-alsa-0.8.12.ebuild 391
+SHA256 fd836b3437f741cf71e5646cffa094b9ef9c5d36a890edf43e421e741780e115 gst-plugins-alsa-0.8.12.ebuild 391
+EBUILD gst-plugins-alsa-0.8.8.ebuild 376 RMD160 034d60f17241006e2cfdcbf058226f7b24a13314 SHA1 e385c9f1f5558e42f255cf6a1a89cea71bbaac59 SHA256 38fe51fd4cab46579c56f7a5257ef1a78ce286dc3d9c4fb245799c762154312c
 MD5 a7a3dabd62f144b71becaca404cf3a74 gst-plugins-alsa-0.8.8.ebuild 376
+RMD160 034d60f17241006e2cfdcbf058226f7b24a13314 gst-plugins-alsa-0.8.8.ebuild 376
+SHA256 38fe51fd4cab46579c56f7a5257ef1a78ce286dc3d9c4fb245799c762154312c gst-plugins-alsa-0.8.8.ebuild 376
+EBUILD gst-plugins-alsa-0.8.9.ebuild 382 RMD160 1134a4dd3345da2b61f7673d9707ffe1b28b1512 SHA1 5650802f59b23a4297437c68da9921e176373e50 SHA256 7388cef3fe9279f63e135ea762c714e412537bfd1b62bc5769d28e1718ce1cd2
 MD5 93094ed635568f46ed7c00a820bbc053 gst-plugins-alsa-0.8.9.ebuild 382
+RMD160 1134a4dd3345da2b61f7673d9707ffe1b28b1512 gst-plugins-alsa-0.8.9.ebuild 382
+SHA256 7388cef3fe9279f63e135ea762c714e412537bfd1b62bc5769d28e1718ce1cd2 gst-plugins-alsa-0.8.9.ebuild 382
+MISC ChangeLog 10166 RMD160 75f1242ca26e2f85ea9f4df1f4ad3154b89ece0d SHA1 b1f47c916c841a75d326e9e9a56d7cbb97e42544 SHA256 ec085e0fdf13b7057238be87fb77a96bdc51a617ff8032622ec6a23a2908d3b2
+MD5 dcb627892252e92d97fd86b31b95ed92 ChangeLog 10166
+RMD160 75f1242ca26e2f85ea9f4df1f4ad3154b89ece0d ChangeLog 10166
+SHA256 ec085e0fdf13b7057238be87fb77a96bdc51a617ff8032622ec6a23a2908d3b2 ChangeLog 10166
+MISC metadata.xml 181 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d SHA1 faf40c45bd66b0072b95556cf7ab097d3be19511 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
+SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
+MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-alsa-0.10.4 277
+RMD160 bee1889727ca635912779fbcac2958f0ceba48b0 files/digest-gst-plugins-alsa-0.10.4 277
+SHA256 f47f4fd7829d14012ef690db4a45f568549f7a5015a00bd9ba03a41f3584e654 files/digest-gst-plugins-alsa-0.10.4 277
+MD5 450e13cee4577b1b569d1ceefe9eabd4 files/digest-gst-plugins-alsa-0.10.6 277
+RMD160 5e1310345ad577c68dbd84b9b0795c6f5b8f42f7 files/digest-gst-plugins-alsa-0.10.6 277
+SHA256 dcc21aa385043adb673e23444665055b7558a862a57013376f5608bd20e857bc files/digest-gst-plugins-alsa-0.10.6 277
+MD5 d940ec4125bf9095e8113f5771fb74f8 files/digest-gst-plugins-alsa-0.10.7 277
+RMD160 20ce5bbbe8eeef887ec78430ac0235d0786364a3 files/digest-gst-plugins-alsa-0.10.7 277
+SHA256 f0c4ce198bed889fcd66c14e7bce6d8713a797d1f415462c61790d51cecb6678 files/digest-gst-plugins-alsa-0.10.7 277
+MD5 ac7ae1c61970db2fb01d3071ec606e87 files/digest-gst-plugins-alsa-0.10.8 277
+RMD160 b4c7872d0e2c53f8cf0f0297f62c1347cd3b5b18 files/digest-gst-plugins-alsa-0.10.8 277
+SHA256 818f2b5016a64f1415b9645eb70fb2e24adce4f920e2e81a9b2e4ee02e3f286f files/digest-gst-plugins-alsa-0.10.8 277
+MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-alsa-0.8.10 72
+RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-alsa-0.8.10 72
+SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-alsa-0.8.10 72
+MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-alsa-0.8.11 262
+RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-alsa-0.8.11 262
+SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-alsa-0.8.11 262
+MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-alsa-0.8.12 262
+RMD160 2131a3433f3081297079de64ac7f2335c1f82036 files/digest-gst-plugins-alsa-0.8.12 262
+SHA256 bac5ba90fbb314a2f7ea2a53506021944ec1b8707b20d47545a23a6fd5f4cefd files/digest-gst-plugins-alsa-0.8.12 262
+MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-alsa-0.8.8 71
+RMD160 74fb762aa4b4c37e0cf13ceb60aec1e2c80a83dd files/digest-gst-plugins-alsa-0.8.8 71
+SHA256 8c042a1f86509a2d902bbc3d63874d8347af12c132215e8c67582fa8835e6089 files/digest-gst-plugins-alsa-0.8.8 71
+MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-alsa-0.8.9 71
+RMD160 59910917ac9fe162d7686f1702fb5bdd98a25154 files/digest-gst-plugins-alsa-0.8.9 71
+SHA256 06e49fc70cfec9d2553ced28a9c9246324fdd21c25f6bea9142de83f1f5a8153 files/digest-gst-plugins-alsa-0.8.9 71
