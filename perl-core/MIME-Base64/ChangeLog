@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/MIME-Base64
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/ChangeLog,v 1.3 2006/01/13 15:08:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/ChangeLog,v 1.4 2006/06/12 17:06:21 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  MIME-Base64-3.07.ebuild:
+  Marking sparc stable
 
 *MIME-Base64-3.07 (13 Jan 2006)
 

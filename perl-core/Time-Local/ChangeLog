@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Time-Local
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.11 2006/04/23 21:33:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.12 2006/06/12 17:08:27 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Time-Local-1.12.ebuild:
+  Marking sparc stable
 
   23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> Time-Local-1.12.ebuild:
   Add ~x86-fbsd keyword.

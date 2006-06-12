@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Digest-MD5
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/ChangeLog,v 1.4 2006/02/13 15:03:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/ChangeLog,v 1.5 2006/06/12 17:04:25 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Digest-MD5-2.36.ebuild:
+  Marking sparc stable
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   Digest-MD5-2.33.ebuild, Digest-MD5-2.36.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Getopt-Long
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Getopt-Long/ChangeLog,v 1.6 2006/02/13 15:04:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Getopt-Long/ChangeLog,v 1.7 2006/06/12 17:05:09 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Getopt-Long-2.35.ebuild:
+  Marking sparc stable
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   Getopt-Long-2.34.ebuild, Getopt-Long-2.35.ebuild:
