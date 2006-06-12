@@ -1,6 +1,21 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.54 2006/06/12 17:20:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.55 2006/06/12 20:08:55 zzam Exp $
+
+*gentoo-vdr-scripts-0.3.4-r1 (12 Jun 2006)
+*gentoo-vdr-scripts-0.3.3-r1 (12 Jun 2006)
+*gentoo-vdr-scripts-0.3.0-r1 (12 Jun 2006)
+
+  12 Jun 2006; Matthias Schwarzott <zzam@gentoo.org>
+  -files/gentoo-vdr-scripts-0.2.2-config-comment.patch,
+  -files/gentoo-vdr-scripts-0.2.2-config-comment-irctrl.patch,
+  -files/gentoo-vdr-scripts-0.2.3-chuid-option.patch,
+  -files/gentoo-vdr-scripts-0.2.3-sed-path.patch,
+  +files/vdr-bg-quoting.patch, -gentoo-vdr-scripts-0.3.0.ebuild,
+  +gentoo-vdr-scripts-0.3.0-r1.ebuild, -gentoo-vdr-scripts-0.3.3.ebuild,
+  +gentoo-vdr-scripts-0.3.3-r1.ebuild, -gentoo-vdr-scripts-0.3.4.ebuild,
+  +gentoo-vdr-scripts-0.3.4-r1.ebuild:
+  Backported correction of missing quotes.
 
   12 Jun 2006; Matthias Schwarzott <zzam@gentoo.org>
   -gentoo-vdr-scripts-0.2.2-r1.ebuild, -gentoo-vdr-scripts-0.2.3-r1.ebuild,

@@ -1,0 +1,9 @@
+--- usr/lib/vdr/bin/vdr-bg.sh
++++ usr/lib/vdr/bin/vdr-bg.sh
+@@ -4,4 +4,5 @@
+ # Start command in background and disconnects outputs.
+ # Use this instead of echo "..." | at now
+ 
+-${@} >/dev/null 2>&1 &
++export EXECUTED_BY_VDR_BG=1
++"${@}" >/dev/null 2>&1 &
