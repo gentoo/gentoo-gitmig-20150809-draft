@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/Net-Pcap-0.10.ebuild,v 1.2 2006/02/20 19:38:21 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/Net-Pcap-0.10.ebuild,v 1.3 2006/06/12 16:00:06 mcummings Exp $
 
 inherit perl-module
 
@@ -11,4 +11,4 @@ IUSE=""
 DEPEND="net-libs/libpcap"
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="~amd64 ~ppc sparc ~x86"

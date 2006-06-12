@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/PPI-1.110.ebuild,v 1.2 2006/04/21 20:37:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/PPI-1.110.ebuild,v 1.3 2006/06/12 16:08:28 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/A/AD/ADAMK/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"

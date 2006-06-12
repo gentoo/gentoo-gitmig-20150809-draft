@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/POE
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.47 2006/05/01 21:52:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.48 2006/06/12 16:12:35 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org> POE-0.33.ebuild,
+  POE-0.34.01.ebuild:
+  Marking sparc stable
 
 *POE-0.34.01 (01 May 2006)
 

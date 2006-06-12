@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/net-sftp
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-sftp/ChangeLog,v 1.9 2006/03/31 20:27:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-sftp/ChangeLog,v 1.10 2006/06/12 16:02:46 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org> net-sftp-0.08.ebuild,
+  net-sftp-0.09.ebuild, net-sftp-0.10.ebuild:
+  Marking sparc stable
 
   31 Mar 2006; <mcummings@gentoo.org> net-sftp-0.08.ebuild,
   net-sftp-0.09.ebuild, net-sftp-0.10.ebuild:

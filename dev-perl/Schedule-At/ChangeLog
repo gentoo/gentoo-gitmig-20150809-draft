@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Schedule-At
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Schedule-At/ChangeLog,v 1.4 2006/03/30 23:16:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Schedule-At/ChangeLog,v 1.5 2006/06/12 16:13:54 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Schedule-At-1.06.ebuild:
+  Marking sparc stable
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Schedule-At-1.06.ebuild:
   Mark 1.06 ~ia64

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Pod-Coverage
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.25 2006/03/16 20:25:31 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.26 2006/06/12 16:10:17 mcummings Exp $
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Pod-Coverage-0.17.ebuild:
+  Marking sparc stable
 
   16 Mar 2006; Chris White <chriswhite@gentoo.org>
   -Pod-Coverage-0.13.ebuild, -Pod-Coverage-0.14.ebuild,
