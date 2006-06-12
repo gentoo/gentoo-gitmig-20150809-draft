@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.17 2006/06/11 19:01:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.18 2006/06/12 19:52:25 blubb Exp $
+
+  12 Jun 2006; Simon Stelling <blubb@gentoo.org> tenshi-0.4.ebuild:
+  stable on amd64
 
   11 Jun 2006; Jason Wever <weeve@gentoo.org> tenshi-0.4.ebuild:
   Stable on SPARC wrt bug #135451.
