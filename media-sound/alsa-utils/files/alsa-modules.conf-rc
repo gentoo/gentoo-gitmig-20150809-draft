@@ -1,5 +1,5 @@
 # Alsa 0.9.X kernel modules' configuration file.
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsa-modules.conf-rc,v 1.4 2004/11/16 01:31:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsa-modules.conf-rc,v 1.5 2006/06/13 10:18:25 uberlord Exp $
 
 # ALSA portion
 alias char-major-116 snd
@@ -9,7 +9,7 @@ alias char-major-14 soundcore
 ##
 ## IMPORTANT:
 ## You need to customise this section for your specific sound card(s)
-## and then run `update-modules' command.
+## and then run `modules-update' command.
 ## Read alsa-driver's INSTALL file in /usr/share/doc for more info.
 ##
 ##  ALSA portion
