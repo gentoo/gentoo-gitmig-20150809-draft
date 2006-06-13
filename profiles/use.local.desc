@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1945 2006/06/13 05:45:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1946 2006/06/13 13:54:06 pva Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -85,6 +85,8 @@ app-emacs/auctex:preview-latex - Use bundled preview-latex
 app-emacs/delicious:planner - Include support for app-emacs/planner
 app-emulation/bochs:debugger - Enable the bochs debugger
 app-emulation/bochs:vnc - Enable vnc support
+app-emulation/e-uae:capslib - Add CAPS library support.
+app-emulation/e-uae:sdl-sound - Use media-libs/sdl-sound for audio output.
 app-emulation/emul-linux-ppc-glibc:nptlonly - Disables installing the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 app-emulation/emul-linux-x86-glibc:nptlonly - Disables installing the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 app-emulation/emul-linux-x86-qtlibs:immqt-bc - Enable binary compatible version of immodule for Qt
