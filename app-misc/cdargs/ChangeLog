@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cdargs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/ChangeLog,v 1.11 2006/04/27 13:13:14 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/ChangeLog,v 1.12 2006/06/13 03:23:19 squinky86 Exp $
+
+  13 Jun 2006; Jon Hood <squinky86@gentoo.org> cdargs-1.35.ebuild:
+  Add ~amd64, #136586, thanks to Aaron Hagopian <airhead1@gmail.com>.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-cdargs-1.31,
   files/digest-cdargs-1.35, Manifest:
