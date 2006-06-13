@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.24 2006/06/05 08:56:59 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.25 2006/06/13 11:07:15 kugelfang Exp $
+
+  13 Jun 2006; Danny van Dyk <kugelfang@gentoo.org> cpufrequtils-001.ebuild:
+  Marked stable on amd64.
 
   05 Jun 2006; Henrik Brix Andersen <brix@gentoo.org>
   +files/cpufrequtils-002-parallel-make.patch, cpufrequtils-002.ebuild:
