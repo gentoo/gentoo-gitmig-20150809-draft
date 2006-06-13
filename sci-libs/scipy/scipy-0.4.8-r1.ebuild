@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.4.8-r1.ebuild,v 1.3 2006/06/13 23:37:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.4.8-r1.ebuild,v 1.4 2006/06/13 23:40:31 spyderous Exp $
 
 inherit distutils fortran
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 # did not use virtual/blas and virtual/lapack
 # because doc says scipy needs to compile all libraries with the same compiler
 RDEPEND=">=dev-lang/python-2.3.3
-	>=dev-python/numpy-0.9.6
+	>=dev-python/numpy-0.9.6-r1
 	sci-libs/blas-atlas
 	sci-libs/lapack-atlas
 	fftw? ( =sci-libs/fftw-2.1* )"
@@ -25,14 +25,14 @@ DEPEND="${RDEPEND}
 	=sys-devel/gcc-3*"
 
 # install doc claims fftw-2 is faster for complex ffts.
-# install doc claims gcc-4 not fully tested and blas-atlas is compiled
-# with g77 only, so force use of g77 here as well.
 # wxwindows seems to have disapeared : ?
 # f2py seems to be in numpy.
 
-FORTRAN="g77"
+FORTRAN="g77 gfortran"
 
 pkg_setup() {
+	fortran_pkg_setup
+
 	if built_with_use sci-libs/lapack-atlas ifc; then
 		echo
 		ewarn  "${PN} needs consistency among Fortran compilers."
@@ -96,6 +96,39 @@ src_unpack() {
 	else
 		export FFTW=None
 	fi
+}
+
+src_compile() {
+	# Map compilers to what scipy calls them
+	local SCIPY_FC
+	case "${FORTRANC}" in
+		gfortran)
+			SCIPY_FC="gnu95"
+			;;
+		g77)
+			SCIPY_FC="gnu"
+			;;
+		g95)
+			SCIPY_FC="g95"
+			;;
+		ifc|ifort)
+			if use ia64; then
+				SCIPY_FC="intele"
+			else
+				SCIPY_FC="intel"
+			fi
+			;;
+		*)
+			local msg="Invalid Fortran compiler \'${FORTRANC}\'"
+			eerror "${msg}"
+			die "${msg}"
+			;;
+	esac
+	distutils_src_compile \
+		config_fc \
+		--fcompiler=${SCIPY_FC} \
+		--opt="${CFLAGS}" \
+		|| die "compilation failed"
 }
 
 src_install() {
