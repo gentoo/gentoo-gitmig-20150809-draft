@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.5.ebuild,v 1.5 2006/06/06 11:55:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.5.ebuild,v 1.6 2006/06/13 12:46:11 caleb Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="Ruby bindings for QT4"
 HOMEPAGE="http://rubyforge.org/projects/korundum"
@@ -18,6 +18,13 @@ DEPEND=">=virtual/ruby-1.8
 # This is not currently able to install alongside the Qt3 version of QtRuby
 
 SLOT="0"
+
+src_unpack() {
+	unpack $A
+	cd ${S}
+	epatch ${FILESDIR}/style-fix.diff
+}
+
 
 src_compile() {
 	myconf="--with-qt-dir=/usr --with-qt-libraries=/usr/$(get_libdir)/qt4 --with-qt-includes=/usr/include/qt4"

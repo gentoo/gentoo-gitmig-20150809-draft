@@ -1,0 +1,18 @@
+--- smoke/qt/header_list	2006/06/02 19:11:49	547618
++++ smoke/qt/header_list	2006/06/06 16:08:19	548844
+@@ -92,7 +92,6 @@
+ QtGui/qboxlayout.h
+ QtGui/qbrush.h
+ QtGui/qbuttongroup.h
+-QtGui/qcdestyle.h
+ QtGui/qcheckbox.h
+ QtGui/qclipboard.h
+ QtGui/qcolordialog.h
+@@ -152,7 +151,6 @@
+ QtGui/qmenu.h
+ QtGui/qmessagebox.h
+ QtGui/qmime.h
+-QtGui/qmotifstyle.h
+ QtGui/qmovie.h
+ QtGui/qpagesetupdialog.h
+ QtGui/qpaintdevice.h
