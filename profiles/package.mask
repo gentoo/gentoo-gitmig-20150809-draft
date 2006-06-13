@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5501 2006/06/13 19:33:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5502 2006/06/13 20:23:13 kevquinn Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Kevin F. Quinn <kevquinn@gentoo.org> (13 Jun 2006)
+# Masked initially for testing
+=app-admin/eselect-oodict-20060613
 
 # Andrej Kacian <ticho@gentoo.org> (12 Jun 2006)
 # Masked until sylpheed-claws-2.3.0 is in portage
