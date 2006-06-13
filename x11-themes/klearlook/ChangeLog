@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/klearlook
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/klearlook/ChangeLog,v 1.1 2006/06/09 22:16:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/klearlook/ChangeLog,v 1.2 2006/06/13 18:21:37 genstef Exp $
+
+  13 Jun 2006; Stefan Schweizer <genstef@gentoo.org> ChangeLog:
+  Mark it ~x86, bug 120363
 
 *klearlook-0.9.9.2 (09 Jun 2006)
 
