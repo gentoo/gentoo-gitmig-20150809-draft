@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/davfs2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.20 2006/03/14 17:17:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.21 2006/06/13 10:47:05 uberlord Exp $
+
+  13 Jun 2006; Roy Marples <uberlord@gentoo.org> davfs2-0.2.4-r1.ebuild,
+  davfs2-0.2.4-r2.ebuild, davfs2-0.2.7.ebuild, davfs2-0.2.8.ebuild:
+  Change update-modules to modules-update and respect ${ROOT}
 
 *davfs2-0.2.8 (14 Mar 2006)
 

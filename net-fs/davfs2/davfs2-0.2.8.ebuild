@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-0.2.8.ebuild,v 1.1 2006/03/14 17:17:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-0.2.8.ebuild,v 1.2 2006/06/13 10:47:05 uberlord Exp $
 
 inherit linux-info eutils
 
@@ -62,5 +62,5 @@ EOF
 }
 
 pkg_postinst() {
-	update-modules
+	[[ ${ROOT} == / ]] && /sbin/modules-update
 }
