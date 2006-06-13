@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/engine_pkcs11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.4 2006/06/12 13:49:40 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.5 2006/06/13 15:18:27 gustavoz Exp $
+
+  13 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  engine_pkcs11-0.1.3.ebuild:
+  Keyworded ~sparc wrt #135397
 
   12 Jun 2006; Mike Doty <kingtaco@gentoo.org> engine_pkcs11-0.1.3.ebuild:
   marked ~amd64
