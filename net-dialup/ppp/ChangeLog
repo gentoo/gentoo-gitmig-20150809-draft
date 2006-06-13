@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.145 2006/05/23 04:44:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.146 2006/06/13 08:59:18 uberlord Exp $
+
+  13 Jun 2006; <uberlord@gentoo.org> ppp-2.4.2-r15.ebuild,
+  ppp-2.4.3-r15.ebuild:
+  Change update-modules to modules-update.
 
   23 May 2006; Alin Nastac <mrness@gentoo.org> -ppp-2.4.3-r14.ebuild,
   ppp-2.4.3-r15.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r15.ebuild,v 1.2 2006/05/23 04:44:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r15.ebuild,v 1.3 2006/06/13 08:59:18 uberlord Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -301,7 +301,7 @@ pkg_postinst() {
 		mknod "${ROOT}/dev/ppp" c 108 0
 	fi
 	if [ "$ROOT" = "/" ]; then
-		/sbin/update-modules
+		/sbin/modules-update
 	fi
 
 	#create *-secrets files if not exists
