@@ -15,7 +15,7 @@ $ USE_INCOMPATIBLE_SWITCH="yes" emerge e1000
 # load e1000 with parameters limiting its speed
 $ echo "alias eth0 e1000" > /etc/modules.d/e1000
 $ echo "options e1000 Speed=10 Duplex=2,1" >> /etc/modules.d/e1000
-$ update-modules
+$ modules-update
 
 # Start networking again
 $ modprobe e1000
