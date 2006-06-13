@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/serpentine
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/ChangeLog,v 1.8 2006/05/14 23:42:55 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/ChangeLog,v 1.9 2006/06/13 01:02:09 metalgod Exp $
+
+*serpentine-0.7 (13 Jun 2006)
+
+  13 Jun 2006; Luis Medinas <metalgod@gentoo.org> +serpentine-0.7.ebuild:
+  Version Bump from upstream.
 
 *serpentine-0.6.91 (14 May 2006)
 
