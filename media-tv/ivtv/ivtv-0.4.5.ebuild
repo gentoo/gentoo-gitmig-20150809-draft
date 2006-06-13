@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.4.5.ebuild,v 1.2 2006/06/11 15:41:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.4.5.ebuild,v 1.3 2006/06/13 10:25:23 uberlord Exp $
 
 inherit eutils linux-mod
 
@@ -126,7 +126,7 @@ pkg_postinst() {
 		for MODNAME in ${BADMODS}; do
 			if [ -f "${ROOT}/lib/modules/${KV_FULL}/kernel/drivers/media/video/${MODNAME}.ko" ] ; then
 				ewarn "You have the ${MODNAME} module that comes with the kernel. It isn't compatible"
-				ewarn "with ivtv. You need to back it up to somewhere else, then run 'update-modules'"
+				ewarn "with ivtv. You need to back it up to somewhere else, then run 'modules-update'"
 				ewarn "The file to remove is ${ROOT}/lib/modules/${KV_FULL}/kernel/drivers/media/video/${MODNAME}.ko"
 				echo
 			fi
