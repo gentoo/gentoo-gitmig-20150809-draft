@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.1-r1.ebuild,v 1.4 2006/06/13 01:19:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.1-r1.ebuild,v 1.5 2006/06/13 10:13:01 uberlord Exp $
 
 inherit eutils qt3
 
@@ -71,8 +71,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	# media-video/nvidia-kernel does the following:
-	[ -x /usr/sbin/update-modules ] && /usr/sbin/update-modules
+	[[ ${ROOT} == / ]] && /sbin/modules-update
 
 	echo
 	einfo "Now load the oprofile module by running:"
