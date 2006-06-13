@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p9163-r1.ebuild,v 1.9 2006/06/08 23:59:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p9163-r1.ebuild,v 1.10 2006/06/13 03:51:18 cardoe Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -18,8 +18,7 @@ KEYWORDS="amd64 ppc ~ppc64 x86"
 
 IUSE_VIDEO_CARDS="video_cards_i810 video_cards_nvidia video_cards_via"
 
-IUSE="alsa altivec arts backendonly debug dbox2 dvb dvd frontendonly ieee1394 jack joystick lcd
-lirc mmx vorbis opengl xvmc ${IUSE_VIDEO_CARDS}"
+IUSE="alsa altivec backendonly debug dbox2 dvb dvd frontendonly ieee1394 jack joystick lcd lirc mmx vorbis opengl xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -40,7 +39,6 @@ RDEPEND=">=media-libs/freetype-2.0
 	$(qt_min_version 3.3)
 	dev-db/mysql
 	alsa? ( >=media-libs/alsa-lib-0.9 )
-	arts? ( kde-base/arts )
 	dvd? ( 	media-libs/libdvdnav
 		media-libs/libdts )
 	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
@@ -66,22 +64,19 @@ MYTHTV_GROUPS="video,audio,games,tty"
 
 pkg_setup() {
 
-	if ! built_with_use x11-libs/qt mysql ; then
-		eerror "Qt is missing MySQL support. Please add"
-		eerror "'mysql' to your USE flags, and re-emerge Qt."
-		die "Qt needs MySQL support"
-	fi
-
-	if ! built_with_use x11-libs/qt opengl ; then
-		eerror "Qt requires OpenGL support. Please add"
-		eerror "'opengl' to your USE flags, and re-emerge Qt."
-		die "Qt needs OpenGL support."
+	local rip=0
+	if ! built_with_use =x11-libs/qt-3* mysql opengl ; then
+		echo
+		eerror "MythTV requires Qt to be built with mysql and opengl use flags enabled."
+		eerror "Please re-emerge =x11-libs/qt-3, after having the use flags set."
+		echo
+		rip=1
 	fi
 
 	if ! has_version x11-libs/libXv && ! built_with_use x11-base/xorg-x11 xv; then
-		eerror "xorg-x11 is missing XV support. Please add"
-		eerror "'xv' to your USE flags, and re-emerge xorg-x11."
-		die "xorg-x11 needs XV support"
+		eerror "MythTv requires xorg-x11 to be built with XV support. Please add"
+		eerror "'xv' to your USE flags, and re-emerge x11-base/xorg-x11."
+		rip=1
 	fi
 
 	if use xvmc && use video_cards_nvidia; then
@@ -101,20 +96,20 @@ pkg_setup() {
 
 	if has x11-libs/libX11 virtual/x11; then
 		echo
-		eerror "Congratulations. You've unmasked modular X but somehow managed"
-		eerror "to royally screw up its installation. This means you've broke"
-		eerror "dependancy checking for ALL your X based apps. You don't have"
-		eerror "to believe me but don't insist the dependancies for MythTV are"
-		eerror "broken, because it is you that is broken."
-		die "You are broken"
+		eerror "Your installation of Modular X is broken. Don't have a virtual/x11"
+		eerror "installed while using Modular X."
+		echo
+		rip=1
 	fi
 
-	einfo
+	[[ $rip == 1 ]] && die "Please fix the above issues, before continuing."
+
+	echo
 	einfo "This ebuild now uses a heavily stripped down version of your CFLAGS"
 	einfo "Don't complain because your -momfg-fast-speed CFLAG is being stripped"
 	einfo "Only additional CFLAG issues that will be addressed are for binary"
 	einfo "package building."
-	einfo
+	echo
 }
 
 src_unpack() {
@@ -137,7 +132,7 @@ src_compile() {
 	use altivec || myconf="${myconf} --disable-altivec"
 	use xvmc && myconf="${myconf} --enable-xvmc"
 	myconf="${myconf}
-		$(use_enable arts audio-arts)
+		--disable-audio-arts
 		$(use_enable lirc)
 		$(use_enable joystick joystick-menu)
 		$(use_enable dbox2)

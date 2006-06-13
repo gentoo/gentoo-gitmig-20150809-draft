@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.98 2006/06/08 23:59:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.99 2006/06/13 03:51:18 cardoe Exp $
+
+  13 Jun 2006; Doug Goldstein <cardoe@gentoo.org>
+  mythtv-0.19_p9163-r1.ebuild:
+  cleaning up pkg_setup()
 
   08 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
   mythtv-0.19_p9163-r1.ebuild:
