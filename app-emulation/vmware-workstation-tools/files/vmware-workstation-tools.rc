@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/files/vmware-workstation-tools.rc,v 1.2 2006/06/12 20:51:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/files/vmware-workstation-tools.rc,v 1.3 2006/06/13 22:07:13 wolf31o2 Exp $
 
 depend() {
 	before checkfs net
@@ -59,14 +59,14 @@ vmware-prettify() {
 }
 
 start() {
-	test -x /etc/vmware-tools/init.d/vmware || \
+	test -x /etc/vmware-tools/init.d/vmware-tools || \
 		eend 1 "vmware init script not found. Aborting" || return 1
 
-	/etc/vmware-tools/init.d/vmware start | vmware-prettify start
+	/etc/vmware-tools/init.d/vmware-tools start | vmware-prettify start
 	return $?
 }
 
 stop() {
-	/etc/vmware-tools/init.d/vmware stop | vmware-prettify stop
+	/etc/vmware-tools/init.d/vmware-tools stop | vmware-prettify stop
 	return $?
 }
