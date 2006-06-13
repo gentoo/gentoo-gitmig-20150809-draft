@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/googleearth
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.1 2006/06/13 00:47:34 genstef Exp $
+
+  13 Jun 2006; Stefan Schweizer <genstef@gentoo.org> ChangeLog:
+  New Google Earth ebuild for bug 136584, thanks to Natanael Copa
+  <natanael.copa@gmail.com> for opening the bug and Tristan Heaven
+  <tristanheaven@gmail.com> for the ebuild.
+
