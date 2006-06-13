@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0.ebuild,v 1.5 2006/03/12 18:50:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0.ebuild,v 1.6 2006/06/13 10:42:34 uberlord Exp $
 
 DESCRIPTION="User level application for IBM Mwave modem"
 HOMEPAGE="http://oss.software.ibm.com/acpmodem/"
@@ -40,7 +40,7 @@ src_install() {
 
 pkg_postinst() {
 	# Below is to get /etc/modules.d/mwave loaded into /etc/modules.conf
-	[ -x "${ROOT}/usr/sbin/update-modules" ] && "${ROOT}/usr/sbin/update-modules"
+	[[ ${ROOT} == / ]] && /sbin/modules-update
 
 	if [ -e "${ROOT}/dev/.devfsd" ]; then
 		# device node is created by devfs
