@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyopenal
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/ChangeLog,v 1.14 2006/06/13 21:08:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/ChangeLog,v 1.15 2006/06/13 21:18:02 wolf31o2 Exp $
+
+  13 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> pyopenal-0.1.6.ebuild:
+  Stable on x86 since this is the version that I tested with slune. Also, this
+  should resolve all of the compilation issues, as well as work with the new
+  split openal/freealut packages.
 
 *pyopenal-0.1.6 (13 Jun 2006)
 
