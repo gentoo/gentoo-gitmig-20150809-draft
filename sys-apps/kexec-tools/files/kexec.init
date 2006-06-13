@@ -1,13 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/files/kexec.init,v 1.6 2006/03/04 20:16:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/files/kexec.init,v 1.7 2006/06/13 20:48:55 dsd Exp $
 
 depend() {
 	need checkfs
 }
 
-start() {
+load_image() {
 	[ -z "$KNAME" ] && KNAME="bzImage"
 	[ -z "$BOOTPART" ] && BOOTPART="/boot"
 	[ -z "$BOOTMOUNT" ] && BOOTMOUNT=1
@@ -54,3 +54,22 @@ start() {
 
 	eend $RES
 }
+
+start() {
+	if [ "$LOAD_DURING_SHUTDOWN" == 'no' -o "$LOAD_DURING_SHUTDOWN" == '' ];
+	then
+		load_image
+	else
+		return 0
+	fi
+}
+
+stop() {
+	if ! [ "$LOAD_DURING_SHUTDOWN" == 'no' -o "$LOAD_DURING_SHUTDOWN" == '' ];
+	then
+		load_image
+	else
+		return 0
+	fi
+}
+

@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.8 2006/03/04 20:16:02 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.9 2006/06/13 20:48:55 dsd Exp $
+
+*kexec-tools-1.101-r3 (13 Jun 2006)
+
+  13 Jun 2006; Daniel Drake <dsd@gentoo.org> files/kexec.conf,
+  files/kexec.init, -kexec-tools-1.100-r1.ebuild,
+  -kexec-tools-1.101-r1.ebuild, -kexec-tools-1.101-r2.ebuild,
+  +kexec-tools-1.101-r3.ebuild:
+  Add new configuration variable, which allows you to load the kernel image
+  during shutdown rather than startup. This saves some memory during system
+  operation, but poses an inconvenience if you like to use 'kexec --unload'
+  during operation to disable kexec for the next reboot.
 
 *kexec-tools-1.101-r2 (04 Mar 2006)
 
