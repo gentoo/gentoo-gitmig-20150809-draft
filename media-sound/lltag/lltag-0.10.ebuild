@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/lltag-0.10.ebuild,v 1.3 2006/03/22 13:11:50 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/lltag-0.10.ebuild,v 1.4 2006/06/13 09:58:54 nattfodd Exp $
 
 DESCRIPTION="Automatic command-line mp3/ogg/flac file tagger and renamer"
 HOMEPAGE="http://home.gna.org/lltag"
@@ -15,7 +15,7 @@ RDEPEND="dev-lang/perl
 	mp3? ( media-sound/mp3info )
 	ogg? ( media-sound/vorbis-tools )
 	flac? ( media-libs/flac )
-	readline? ( || ( dev-perl/Term-ReadLine-Gnu dev-perl/Term-ReadLine-Perl ) )"
+	readline? ( dev-perl/Term-ReadLine-Perl )"
 
 src_compile() {
 	make PREFIX=/usr SYSCONFDIR=/etc MANDIR=/usr/share/man \
