@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/slune/slune-1.0.11.ebuild,v 1.1 2006/04/23 01:47:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/slune/slune-1.0.11.ebuild,v 1.2 2006/06/13 21:02:49 wolf31o2 Exp $
 
 inherit distutils
 
@@ -17,7 +17,7 @@ DEPEND="virtual/opengl
 	>=media-libs/libsdl-1.2.6
 	>=dev-lang/python-2.2.2
 	>=dev-python/soya-0.9
-	>=dev-python/py2play-0.1.6
+	>=dev-python/py2play-0.1.9
 	>=dev-python/pyopenal-0.1.3
 	>=dev-python/pyogg-1.1
 	>=dev-python/pyvorbis-1.1"
