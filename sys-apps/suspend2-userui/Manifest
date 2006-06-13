@@ -1,9 +1,43 @@
-MD5 dabed18396fef0ae8ee0f73798a1eb85 ChangeLog 2447
-MD5 4989e8ce8a7fa00ac2be8b099fb14c50 files/digest-suspend2-userui-0.6.3-r1 265
-MD5 8204deb1a5c4fe992e51df643620f2b7 files/digest-suspend2-userui-0.6.4 72
+AUX suspend2-userui-0.6.3-skewed-image.patch 1551 RMD160 e28e0b0b5072d6477e79f1f3116607de830fa8c9 SHA1 64d5ace21dd22bbcac5e0e9dfbc31f7775a3be20 SHA256 0f74c62af276072743d0b42de5b1adeddb6d8effdf21d144acd539485e7e28b1
 MD5 7ebbb292a7fc3672467e7f2fd7255c70 files/suspend2-userui-0.6.3-skewed-image.patch 1551
+RMD160 e28e0b0b5072d6477e79f1f3116607de830fa8c9 files/suspend2-userui-0.6.3-skewed-image.patch 1551
+SHA256 0f74c62af276072743d0b42de5b1adeddb6d8effdf21d144acd539485e7e28b1 files/suspend2-userui-0.6.3-skewed-image.patch 1551
+AUX suspend2-userui-0.6.3-skewed-text.patch 416 RMD160 09daa415e2e09958f5e4c8e6a7c9940732042e72 SHA1 a42f44a740f58fb9dbfac4d987557a17ffcca07c SHA256 a62cf316af1e9cc93afe3a50e627bbd56c4b06a8d7d56896835a5aa5db0dd427
 MD5 ad0e358f60075a903529f7e8d4b64d3f files/suspend2-userui-0.6.3-skewed-text.patch 416
+RMD160 09daa415e2e09958f5e4c8e6a7c9940732042e72 files/suspend2-userui-0.6.3-skewed-text.patch 416
+SHA256 a62cf316af1e9cc93afe3a50e627bbd56c4b06a8d7d56896835a5aa5db0dd427 files/suspend2-userui-0.6.3-skewed-text.patch 416
+AUX suspend2-userui-0.6.4-remove-debug.patch 580 RMD160 696462ca16cee491dc0dee1ae581b8c5a0d3b72f SHA1 e6be12ed9389e5abf2d67ae9fdd2355be7955171 SHA256 e0ddd798c53ff576fc5e3431cdf0b6c91686f5ede81388abca178ee64e4ed0a4
 MD5 914b309d095d1ba985ebb419a5fcabf8 files/suspend2-userui-0.6.4-remove-debug.patch 580
-MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
+RMD160 696462ca16cee491dc0dee1ae581b8c5a0d3b72f files/suspend2-userui-0.6.4-remove-debug.patch 580
+SHA256 e0ddd798c53ff576fc5e3431cdf0b6c91686f5ede81388abca178ee64e4ed0a4 files/suspend2-userui-0.6.4-remove-debug.patch 580
+DIST suspend2-userui-0.6.3.tar.gz 388915 RMD160 2a04eff1ff471770a1472d9e4f7075f5f4342acc SHA1 a58644e64ee9f0ded9a996fc548a33679b55b9f5 SHA256 08a98b3fc8388fb06b63d6367ddb5107efc9663ac6a7866f696a17935ecd4cb4
+DIST suspend2-userui-0.6.4.tar.gz 91817 RMD160 1f00e32ae28d0d19666db106dc2f64ff9ce99de5 SHA1 9bcfa2575ee10bde27f9d14d83ae1fb9a1143d01 SHA256 5b9b74832073df26d74158306ce673d1765246a2b630a8b68cd8ef21cb79b076
+EBUILD suspend2-userui-0.6.3-r1.ebuild 1642 RMD160 d2a8d53148d5b7714506d1f77646dd2032f6e165 SHA1 4796368e92c132f1a279a7a5c1c10beb8dc67928 SHA256 21204fdb947050d545c0d22133bbef73f9118793ecf973ffc9b02901041693fc
 MD5 5f15373b602355b6db9a66247405c4f0 suspend2-userui-0.6.3-r1.ebuild 1642
+RMD160 d2a8d53148d5b7714506d1f77646dd2032f6e165 suspend2-userui-0.6.3-r1.ebuild 1642
+SHA256 21204fdb947050d545c0d22133bbef73f9118793ecf973ffc9b02901041693fc suspend2-userui-0.6.3-r1.ebuild 1642
+EBUILD suspend2-userui-0.6.4-r1.ebuild 1771 RMD160 acee82a7db3a7c459ee57eac8a1d1e3fa5a62c73 SHA1 b971ab6547c9fbe0e9fbe6f2d9d1f080837d1df3 SHA256 d4852c6973364febdebef4f8cbfc51e276b0abcf6f82a81361b60986b0bbfb42
+MD5 45c76af5829527c1e4b233c9ce1271ea suspend2-userui-0.6.4-r1.ebuild 1771
+RMD160 acee82a7db3a7c459ee57eac8a1d1e3fa5a62c73 suspend2-userui-0.6.4-r1.ebuild 1771
+SHA256 d4852c6973364febdebef4f8cbfc51e276b0abcf6f82a81361b60986b0bbfb42 suspend2-userui-0.6.4-r1.ebuild 1771
+EBUILD suspend2-userui-0.6.4.ebuild 1597 RMD160 b197147a9d52e842ce9774f85a0d803872192fd8 SHA1 d520e444d0346770715476ccdb7eb0bfd2ad8ad0 SHA256 15a6c3a4b8831ef97347256429159e6ea8563be116d2929b184686fd4eb1ea10
 MD5 451b964a8d3b95567e5f888c53b1f6a8 suspend2-userui-0.6.4.ebuild 1597
+RMD160 b197147a9d52e842ce9774f85a0d803872192fd8 suspend2-userui-0.6.4.ebuild 1597
+SHA256 15a6c3a4b8831ef97347256429159e6ea8563be116d2929b184686fd4eb1ea10 suspend2-userui-0.6.4.ebuild 1597
+MISC ChangeLog 2695 RMD160 068fba9a968125e34751bba497c9bb3bad2b0a13 SHA1 8c5e31fd3fbf2459a882eae733d5c6f37081a43b SHA256 f11691ffef75f4376ec40779d274dcf6698996ee272b70df305d582a87f3ccb0
+MD5 8d38973869fedc1e45667e662398d1f4 ChangeLog 2695
+RMD160 068fba9a968125e34751bba497c9bb3bad2b0a13 ChangeLog 2695
+SHA256 f11691ffef75f4376ec40779d274dcf6698996ee272b70df305d582a87f3ccb0 ChangeLog 2695
+MISC metadata.xml 255 RMD160 e6f6333d659d443f0290a257c2b23772ab1cf526 SHA1 1258e0419f1fe7839c4db37602b5999d0e196bca SHA256 255c7b73ddde5e979b6b53de0f9f5b858e22e602e0495f484b2a33cd2987edf9
+MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
+RMD160 e6f6333d659d443f0290a257c2b23772ab1cf526 metadata.xml 255
+SHA256 255c7b73ddde5e979b6b53de0f9f5b858e22e602e0495f484b2a33cd2987edf9 metadata.xml 255
+MD5 4989e8ce8a7fa00ac2be8b099fb14c50 files/digest-suspend2-userui-0.6.3-r1 265
+RMD160 17ea9dd6f7739952fdc8a70de55348b487b138f8 files/digest-suspend2-userui-0.6.3-r1 265
+SHA256 be8981601c9a3ef3022498c45d37507b6dfc7321c2527237fcdb14715f0bde29 files/digest-suspend2-userui-0.6.3-r1 265
+MD5 a042dcb3843107867683e3a673af1ef7 files/digest-suspend2-userui-0.6.4 262
+RMD160 5b87fa9d284c99c6ab0e8781c2f421a1aa45733b files/digest-suspend2-userui-0.6.4 262
+SHA256 61eb66b0d1215949059ebef4b8c55ef87f0bb5264ba3e89d91f7dc943a17555f files/digest-suspend2-userui-0.6.4 262
+MD5 a042dcb3843107867683e3a673af1ef7 files/digest-suspend2-userui-0.6.4-r1 262
+RMD160 5b87fa9d284c99c6ab0e8781c2f421a1aa45733b files/digest-suspend2-userui-0.6.4-r1 262
+SHA256 61eb66b0d1215949059ebef4b8c55ef87f0bb5264ba3e89d91f7dc943a17555f files/digest-suspend2-userui-0.6.4-r1 262
