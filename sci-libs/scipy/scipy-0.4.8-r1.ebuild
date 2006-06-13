@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.4.8-r1.ebuild,v 1.2 2006/05/02 22:24:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.4.8-r1.ebuild,v 1.3 2006/06/13 23:37:54 spyderous Exp $
 
 inherit distutils fortran
 
@@ -46,14 +46,14 @@ pkg_setup() {
 	echo
 	einfo "Checking active BLAS implementations for ATLAS."
 	blas-config -p
-	if ! blas-config -p | grep "F77 BLAS:" | grep -q f77-ATLAS; then
+	if ! blas-config -p | grep "F77 BLAS:" | grep -q -i atlas; then
 		eerror "Your F77 BLAS profile is not set to the ATLAS implementation,"
 		eerror "which is required by ${PN} to compile and run properly."
 		eerror "Use: 'blas-config -f ATLAS' to activate ATLAS."
 		echo
 		bad_profile=1
 	fi
-	if ! blas-config -p | grep "C BLAS:" | grep -q c-ATLAS; then
+	if ! blas-config -p | grep "C BLAS:" | grep -q -i atlas; then
 		eerror "Your C BLAS profile is not set to the ATLAS implementation,"
 		eerror "Which is required by ${PN} to compile and run properly."
 		eerror "Use: 'blas-config -c ATLAS' to activate ATLAS."
@@ -62,7 +62,7 @@ pkg_setup() {
 	fi
 	einfo "Checking active LAPACK implementation for ATLAS."
 	lapack-config -p
-	if ! lapack-config -p | grep "F77 LAPACK:" | grep -q f77-ATLAS; then
+	if ! lapack-config -p | grep "F77 LAPACK:" | grep -q -i atlas; then
 		eerror "Your F77 LAPACK profile is not set to the ATLAS implementation,"
 		eerror "which is required by ${PN} to compile and run properly."
 		eerror "Use: 'lapack-config ATLAS' to activate ATLAS."
