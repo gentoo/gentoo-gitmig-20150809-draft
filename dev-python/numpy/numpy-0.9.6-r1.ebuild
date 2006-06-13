@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-0.9.6-r1.ebuild,v 1.2 2006/06/13 23:32:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-0.9.6-r1.ebuild,v 1.3 2006/06/13 23:32:54 spyderous Exp $
 
 inherit eutils distutils
 
@@ -12,7 +12,7 @@ DEPEND=">=dev-lang/python-2.3
 		virtual/lapack )"
 IUSE="lapack"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="BSD"
 
 src_unpack() {
