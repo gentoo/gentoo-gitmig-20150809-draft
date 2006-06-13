@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.1-r1.ebuild,v 1.3 2006/04/09 15:40:19 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.1-r1.ebuild,v 1.4 2006/06/13 01:19:42 lu_zero Exp $
 
 inherit eutils qt3
 
 DESCRIPTION="A transparent low-overhead system-wide profiler"
 HOMEPAGE="http://oprofile.sourceforge.net"
-SRC_URI="mirror://sourceforge/oprofile/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/oprofile/${P}.tar.gz
+		 mirror://gentoo/${P}-g4-counters.patch.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
@@ -23,6 +24,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/oprofile-0.9.1-opcontrol_path.diff
 	epatch ${FILESDIR}/oprofile-0.9.1-gcc41-compilation-fix.diff
+	epatch ${WORKDIR}/${P}-g4-counters.patch
 }
 
 src_compile() {

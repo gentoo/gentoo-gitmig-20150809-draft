@@ -1,12 +1,16 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.26 2006/04/09 15:40:19 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.27 2006/06/13 01:19:42 lu_zero Exp $
 
-  09 Apr 2006; Michał Januszewski <spock@gentoo.org>
+  13 Jun 2006; Luca Barbato <lu_zero@gentoo.org>
+  oprofile-0.9.1-r1.ebuild:
+  Partial support for PowerPC G4 counters
+
+  09 Apr 2006; MichaÅ Januszewski <spock@gentoo.org>
   oprofile-0.9.1-r1.ebuild:
   Don't apply oprofile-0.8.2.patch -- should fix bug #128781.
 
-  05 Mar 2006; Michał Januszewski <spock@gentoo.org>
+  05 Mar 2006; MichaÅ Januszewski <spock@gentoo.org>
   +files/oprofile-0.9.1-gcc41-compilation-fix.diff, metadata.xml,
   oprofile-0.9.1-r1.ebuild:
   Added a compilation fix for gcc 4.1. Patch provided by Francesco Biscani.
@@ -14,18 +18,18 @@
 *oprofile-0.9.1-r1 (12 Feb 2006)
 *oprofile-0.9-r1 (12 Feb 2006)
 
-  12 Feb 2006; Michał Januszewski <spock@gentoo.org>
+  12 Feb 2006; MichaÅ Januszewski <spock@gentoo.org>
   +files/oprofile-0.9.1-opcontrol_path.diff, +oprofile-0.9-r1.ebuild,
   +oprofile-0.9.1-r1.ebuild:
   Added a fix for bug #122310.
 
-  12 Feb 2006; Michał Januszewski <spock@gentoo.org>
+  12 Feb 2006; MichaÅ Januszewski <spock@gentoo.org>
   -oprofile-0.8.1.ebuild, -oprofile-0.8.2.ebuild:
   Removed old ebuilds.
 
 *oprofile-0.9.1 (21 Aug 2005)
 
-  21 Aug 2005; Michał Januszewski <spock@gentoo.org>
+  21 Aug 2005; MichaÅ Januszewski <spock@gentoo.org>
   +oprofile-0.9.1.ebuild:
   Version bump (bug #103006).
 
@@ -36,22 +40,22 @@
   18 Jul 2005; Joseph Jezak <josejx@gentoo.org> oprofile-0.9.ebuild:
   Marked ppc stable.
 
-  07 Jul 2005; Michał Januszewski <spock@gentoo.org> oprofile-0.9.ebuild:
+  07 Jul 2005; MichaÅ Januszewski <spock@gentoo.org> oprofile-0.9.ebuild:
   Marked stable on x86.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> oprofile-0.8.2.ebuild:
   Stable on ppc.
 
-  12 Jun 2005; Michał Januszewski <spock@gentoo.org> -oprofile-0.8.ebuild:
+  12 Jun 2005; MichaÅ Januszewski <spock@gentoo.org> -oprofile-0.8.ebuild:
   Removed old ebuild.
 
 *oprofile-0.9 (12 Jun 2005)
 
-  12 Jun 2005; Michał Januszewski <spock@gentoo.org> oprofile-0.8.2.ebuild,
+  12 Jun 2005; MichaÅ Januszewski <spock@gentoo.org> oprofile-0.8.2.ebuild,
   +oprofile-0.9.ebuild:
   Version bump. Marked 0.8.2 stable on x86.
 
-  27 Apr 2005; Michał Januszewski <spock@gentoo.org>
+  27 Apr 2005; MichaÅ Januszewski <spock@gentoo.org>
   +files/oprofile-0.8.2.patch, oprofile-0.8.2.ebuild:
   Added a patch that fixes compilation issues with 2.4 kernels (bug #89566).
 
@@ -63,7 +67,7 @@
 
 *oprofile-0.8.2 (25 Mar 2005)
 
-  25 Mar 2005; Michał Januszewski <spock@gentoo.org> -oprofile-0.7.ebuild,
+  25 Mar 2005; MichaÅ Januszewski <spock@gentoo.org> -oprofile-0.7.ebuild,
   -oprofile-0.7.1.ebuild, +oprofile-0.8.2.ebuild:
   Version bump. Removed old ebuilds.
 

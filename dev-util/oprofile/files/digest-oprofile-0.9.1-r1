@@ -1,3 +1,6 @@
+MD5 206bfcbe18a4488b72957e0a991e62a3 oprofile-0.9.1-g4-counters.patch.gz 5427
+RMD160 46685bcf38065aa60d1ef3c374c168f1167e1504 oprofile-0.9.1-g4-counters.patch.gz 5427
+SHA256 0cc300f9db9d26b8298274262f5f16dbe1a97ff5fa225e30e089ccbfd35aada7 oprofile-0.9.1-g4-counters.patch.gz 5427
 MD5 c25a05406e30e81a6afbd3264191fa37 oprofile-0.9.1.tar.gz 673244
 RMD160 620d06dabc913b426e0eb7e488ba9e8ec5c75321 oprofile-0.9.1.tar.gz 673244
 SHA256 b3ec27967f072409f692583a6fdbede5cf3dddc89ef0a7102292d8517ffb4a31 oprofile-0.9.1.tar.gz 673244
