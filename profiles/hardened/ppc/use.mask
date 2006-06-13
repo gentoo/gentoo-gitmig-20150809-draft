@@ -6,6 +6,7 @@ afs
 avi
 birdstep
 cg
+clvm
 cmucl
 cpdflib
 db2
