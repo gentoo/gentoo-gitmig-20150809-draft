@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5498 2006/06/12 19:19:32 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5499 2006/06/13 06:57:39 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -141,7 +141,17 @@ perl-core/ExtUtils-MakeMaker
 sys-apps/resmgr
 
 # Doug Goldstein <cardoe@gentoo.org> (26 May 2006)
-# it doesn't work for me but people want it..
+# it doesn't work for many people but others want it
+# by doesn't work I mean one of the following:
+# - does not compile
+# - can't find tuner (tuners are renumbered in this version.. remember that)
+# - can't change channels
+# - can't see all the channels
+# - can't hear sound
+# Gentoo users wanting 0.6.x have caused lots of noise on multiple mailing lists
+# and IRC. They have insulted upstream developers and users alike because they want
+# there latest version and they want it NOW!!!!111oneoneoneeleven Knock it off..
+# it's not endearing. Use kernel 2.6.15 & ivtv 0.4.5.
 =media-tv/ivtv-0.6.2
 
 # Diego Pettenò <flameeyes@gentoo.org> (26 May 2006)
