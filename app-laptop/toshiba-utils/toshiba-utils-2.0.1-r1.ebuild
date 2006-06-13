@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/toshiba-utils-2.0.1-r1.ebuild,v 1.6 2005/04/21 19:50:45 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/toshiba-utils-2.0.1-r1.ebuild,v 1.7 2006/06/13 10:04:33 uberlord Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_install() {
 pkg_postinst() {
 	ewarn "Dont forget Toshiba Laptop Support for your kernel."
 	ewarn "(under Processor Type and Features, CONFIG_TOSHIBA)"
-	/usr/sbin/update-modules || return 0
+	[[ ${ROOT} == / ]] && /sbin/modules-update || return 0
 }
 
 pkg_config() {

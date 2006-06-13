@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/toshiba-utils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/ChangeLog,v 1.7 2005/04/21 19:50:45 wormo Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/ChangeLog,v 1.8 2006/06/13 10:04:33 uberlord Exp $
+
+  13 Jun 2006; Roy Marples <uberlord@gentoo.org>
+  toshiba-utils-2.0.1-r1.ebuild:
+  Use modules-update instead of update-modules
 
   21 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   toshiba-utils-2.0.1-r1.ebuild:
