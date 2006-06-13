@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.39 2006/06/12 19:29:59 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.40 2006/06/13 21:28:37 calchan Exp $
+
+  13 Jun 2006; Denis Dupeyron <calchan@gentoo.org> kino-0.9.0.ebuild:
+  Replaced all use_with by use_enable as upstream changed configuration options.
 
 *kino-0.9.0 (12 Jun 2006)
 
