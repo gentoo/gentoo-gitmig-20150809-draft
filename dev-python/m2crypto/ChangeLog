@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.16 2006/04/01 15:08:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.17 2006/06/13 22:02:22 mr_bones_ Exp $
+
+  13 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -m2crypto-0.07_alpha3.ebuild:
+  clean out old crufty version
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> m2crypto-0.13.1.ebuild:
   Mark 0.13.1 ~ia64
