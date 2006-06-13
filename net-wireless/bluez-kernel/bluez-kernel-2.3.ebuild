@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-kernel/bluez-kernel-2.3.ebuild,v 1.9 2004/07/15 05:22:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-kernel/bluez-kernel-2.3.ebuild,v 1.10 2006/06/13 10:58:27 uberlord Exp $
 
 DESCRIPTION="bluetooth kernel drivers"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -50,6 +50,6 @@ pkg_setup() {
 pkg_postinst() {
 	if [ "${ROOT}" = / ]
 	then
-		[ -x /usr/sbin/update-modules ] && /usr/sbin/update-modules
+		/sbin/modules-update
 	fi
 }

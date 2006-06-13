@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.16.ebuild,v 1.1 2006/05/28 12:05:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.16.ebuild,v 1.2 2006/06/13 11:01:55 uberlord Exp $
 
 inherit eutils linux-mod
 
@@ -78,7 +78,7 @@ pkg_postinst() {
 	einfo "to function. Download these to /root for example, then"
 	einfo "run 'ndiswrapper -i /root/foo.inf'. After that you can delete them."
 	einfo "They will be copied to the proper location."
-	einfo "Once done, please run 'update-modules'."
+	einfo "Once done, please run 'modules-update'."
 	echo
 	einfo "check http://ndiswrapper.sf.net/mediawiki/index.php/List for drivers"
 	I=$(lspci -n | egrep 'Class (0280|0200):' |  cut -d' ' -f4)
