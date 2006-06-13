@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.13.0.ebuild,v 1.5 2004/07/14 21:34:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.13.0.ebuild,v 1.6 2006/06/13 10:34:05 uberlord Exp $
 
 S="${WORKDIR}/${P}/modules"
 DESCRIPTION="em8300 (RealMagic Hollywood+/Creative DXR3) video decoder card kernel modules"
@@ -67,7 +67,7 @@ pkg_postinst () {
 
 	if [ "${ROOT}" = "/" ]
 	then
-		[ -x /usr/sbin/update-modules ] && /usr/sbin/update-modules
+		/sbin/modules-update
 	fi
 
 	einfo

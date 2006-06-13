@@ -1,6 +1,10 @@
 # ChangeLog for media-video/usb-pwcx
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/ChangeLog,v 1.14 2005/03/09 07:27:20 phosphan Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/ChangeLog,v 1.15 2006/06/13 10:31:53 uberlord Exp $
+
+  13 Jun 2006; Roy Marples <uberlord@gentoo.org> usb-pwcx-8.2.2.ebuild,
+  usb-pwcx-8.4.ebuild:
+  Change update-modules to modules-update
 
   09 Mar 2005; Patrick Kursawe <phosphan@gentoo.org> usb-pwcx-8.2.2.ebuild,
   usb-pwcx-8.4.ebuild:

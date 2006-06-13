@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr2-driver/dxr2-driver-1.0.4.ebuild,v 1.9 2004/06/25 00:39:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr2-driver/dxr2-driver-1.0.4.ebuild,v 1.10 2006/06/13 10:37:02 uberlord Exp $
 
 DESCRIPTION="Driver and minimal DVD player(s) for the Creative Labs Dxr2 Card"
 HOMEPAGE="http://dxr2.sourceforge.net/"
@@ -62,9 +62,11 @@ src_install () {
 }
 
 pkg_postinst() {
-	depmod -a
-	ldconfig >/dev/null 2>&1
-	/usr/sbin/update-modules || return 0
+	if [[ ${ROOT} == / ]] ; then
+		/sbin/modules-update
+		depmod -a
+		ldconfig >/dev/null 2>&1
+	fi
 	einfo
 	einfo "To load the dxr2 device automaticallly at boot time:"
 	einfo "	echo dxr2 >> /etc/modules.autoload"

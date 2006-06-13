@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.2.ebuild,v 1.1 2006/01/14 15:39:27 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.2.ebuild,v 1.2 2006/06/13 10:34:05 uberlord Exp $
 
 inherit eutils linux-info
 
@@ -69,7 +69,7 @@ pkg_postinst () {
 
 	if [ "${ROOT}" = "/" ]
 	then
-		[ -x /usr/sbin/update-modules ] && /usr/sbin/update-modules
+		/sbin/modules-update
 	fi
 
 	einfo
