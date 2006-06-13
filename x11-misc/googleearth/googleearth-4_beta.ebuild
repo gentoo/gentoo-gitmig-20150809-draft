@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4_beta.ebuild,v 1.4 2006/06/13 16:29:45 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4_beta.ebuild,v 1.5 2006/06/13 18:42:11 genstef Exp $
 
 inherit eutils fdo-mime
 
@@ -51,6 +51,7 @@ src_unpack() {
 src_install() {
 	make_wrapper ${PN} ./${PN} /opt/${PN} . || die "make_wrapper failed"
 
+	unset XDG_DATA_DIRS
 	dodir /usr/share/{appl{ications,nk},gnome/apps,mime/packages}
 	./postinstall.sh
 	doicon ${PN}-icon.png
