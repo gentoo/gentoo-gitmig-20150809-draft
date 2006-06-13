@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-gui
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-gui/ChangeLog,v 1.8 2006/06/06 18:33:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-gui/ChangeLog,v 1.9 2006/06/13 14:53:11 gustavoz Exp $
+
+  13 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  foomatic-gui-0.7.5.ebuild:
+  Keyworded ~sparc wrt #135613
 
   06 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   foomatic-gui-0.7.5.ebuild:
