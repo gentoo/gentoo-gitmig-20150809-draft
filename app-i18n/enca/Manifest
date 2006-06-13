@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 94166810f777cd7aaedf52680b5b40e4 ChangeLog 1090
-MD5 af161b8b2517d347b492075c99adf3d3 enca-1.0.ebuild 594
-MD5 224458b6437613a5d5b8ee41d8598491 enca-1.7.ebuild 525
-MD5 d08e74486a62ad30215b176d679e94c9 enca-1.9.ebuild 528
+MD5 a659bb778ed26abe6758c950ae96ba6f ChangeLog 1218
+MD5 b885e64c71c66a44581d678614666703 enca-1.0.ebuild 598
+MD5 cc5f2abbb847f5edc343b20a783a72c9 enca-1.7.ebuild 531
+MD5 5a9157f9f579c4cbc7274fd1a91b1fa3 enca-1.9.ebuild 531
 MD5 9a22b96a8e98ea8a7497f24e0cd26411 files/digest-enca-1.0 61
 MD5 0a1a75fc159d55ca37ad49fcf23774b0 files/digest-enca-1.7 61
 MD5 5b3a1da4b44a9c2cdaf8e2b96c3ec195 files/digest-enca-1.9 61
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD03G4mdTrptrqvGERAhhLAKCf+b4Js3sWWLc6Q8Js3fEaPhN3/gCgmokB
-ftVnROmPgcn3K9lUXd2dAiE=
-=IX92
------END PGP SIGNATURE-----

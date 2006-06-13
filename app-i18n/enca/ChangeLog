@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/enca
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.9 2006/01/22 11:30:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.10 2006/06/13 19:20:04 corsair Exp $
+
+  13 Jun 2006; Markus Rothe <corsair@gentoo.org> enca-1.0.ebuild,
+  enca-1.7.ebuild, enca-1.9.ebuild:
+  Added ~ppc64; bug #136520
 
 *enca-1.9 (22 Jan 2006)
 
