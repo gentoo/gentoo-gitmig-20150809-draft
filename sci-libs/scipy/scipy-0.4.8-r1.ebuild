@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.4.8-r1.ebuild,v 1.4 2006/06/13 23:40:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.4.8-r1.ebuild,v 1.5 2006/06/13 23:41:07 spyderous Exp $
 
 inherit distutils fortran
 
@@ -11,7 +11,7 @@ LICENSE="BSD"
 
 SLOT="0"
 IUSE="fftw"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 # did not use virtual/blas and virtual/lapack
 # because doc says scipy needs to compile all libraries with the same compiler
