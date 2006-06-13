@@ -6,7 +6,11 @@
   <email>dholm@gentoo.org</email>
   <name>David Holm</name>
 </maintainer>
-<longdescription>
+<maintainer>
+  <email>pva@gentoo.org</email>
+  <name>Peter Volkov</name>
+</maintainer>
+<longdescription lang="en">
 E-UAE is a fork of UAE which intends to merge all the new features of WinUAE with UAE.
 </longdescription>
 </pkgmetadata>
