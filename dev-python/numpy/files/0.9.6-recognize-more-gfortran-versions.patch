@@ -1,0 +1,17 @@
+diff -urN numpy-0.9.6.orig/numpy/distutils/fcompiler/gnu.py numpy-0.9.6/numpy/distutils/fcompiler/gnu.py
+--- numpy-0.9.6.orig/numpy/distutils/fcompiler/gnu.py	2006-06-13 15:48:53.000000000 -0700
++++ numpy-0.9.6/numpy/distutils/fcompiler/gnu.py	2006-06-13 15:49:26.000000000 -0700
+@@ -222,10 +222,12 @@
+ class Gnu95FCompiler(GnuFCompiler):
+ 
+     compiler_type = 'gnu95'
+-    version_pattern = r'GNU Fortran 95 \(GCC (?P<version>[^\s*\)]+)'
++    version_pattern = r'GNU Fortran ((\(GCC[^\)]*(\)\)|\)))|)\s*'\
++                      '(?P<version>[^\s*\)]+)'
+ 
+     # 'gfortran --version' results:
+     # Debian: GNU Fortran 95 (GCC 4.0.3 20051023 (prerelease) (Debian 4.0.2-3))
++	# Gentoo: GNU Fortran 95 (GCC) 4.1.1 (Gentoo 4.1.1)
+ 
+     for fc_exe in map(find_executable,['gfortran','f95']):
+         if os.path.isfile(fc_exe):
