@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.4 2006/06/13 23:27:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.5 2006/06/13 23:32:22 spyderous Exp $
+
+  13 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  numpy-0.9.6-r1.ebuild:
+  Fix up weird dep syntax.
 
 *numpy-0.9.6-r1 (13 Jun 2006)
 

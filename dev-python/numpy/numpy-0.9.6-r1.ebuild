@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-0.9.6-r1.ebuild,v 1.1 2006/06/13 23:27:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-0.9.6-r1.ebuild,v 1.2 2006/06/13 23:32:22 spyderous Exp $
 
 inherit eutils distutils
 
@@ -8,8 +8,8 @@ DESCRIPTION="Numpy contains a powerful N-dimensional array object for Python."
 SRC_URI="mirror://sourceforge/numpy/${P}.tar.gz"
 HOMEPAGE="http://numeric.scipy.org/"
 DEPEND=">=dev-lang/python-2.3
-	lapack? ( virtual/blas )
-	lapack? ( virtual/lapack )"
+	lapack? ( virtual/blas
+		virtual/lapack )"
 IUSE="lapack"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
