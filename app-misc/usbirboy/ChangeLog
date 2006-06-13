@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/usbirboy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/ChangeLog,v 1.1 2006/06/13 21:43:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/ChangeLog,v 1.2 2006/06/13 21:56:08 zzam Exp $
+
+  13 Jun 2006; Matthias Schwarzott <zzam@gentoo.org> usbirboy-0.2.1.ebuild:
+  Used wrong name for function from eclass.
 
 *usbirboy-0.2.1 (13 Jun 2006)
 

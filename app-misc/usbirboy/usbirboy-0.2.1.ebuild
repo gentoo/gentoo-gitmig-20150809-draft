@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/usbirboy-0.2.1.ebuild,v 1.1 2006/06/13 21:43:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/usbirboy-0.2.1.ebuild,v 1.2 2006/06/13 21:56:08 zzam Exp $
 
 inherit linux-mod
 
@@ -43,7 +43,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	linux-mod_pkg_postinstall
+	linux-mod_pkg_postinst
 	einfo
 	einfo "Firmware file has been installed to /usr/share/${PN}"
 	einfo
