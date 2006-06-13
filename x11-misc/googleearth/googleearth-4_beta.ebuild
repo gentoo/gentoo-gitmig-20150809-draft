@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4_beta.ebuild,v 1.1 2006/06/13 00:47:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4_beta.ebuild,v 1.2 2006/06/13 01:11:45 genstef Exp $
 
 inherit eutils
 
@@ -11,8 +11,21 @@ SRC_URI="http://dl.google.com/earth/GE4/GoogleEarthLinux.bin"
 LICENSE="googleearth MIT X11 SGI-B-1.1 openssl as-is ZLIB"
 SLOT="0"
 KEYWORDS="~x86"
-RESTRICT=""
+RESTRICT="mirror"
 IUSE=""
+
+RDEPEND="media-libs/fontconfig
+	media-libs/freetype
+	virtual/opengl
+	|| ( ( x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXcursor
+	x11-libs/libXext
+	x11-libs/libXft
+	x11-libs/libXrender )
+	virtual/x11
+	)"
 
 S=${WORKDIR}
 
