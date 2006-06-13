@@ -1,6 +1,14 @@
 # ChangeLog for app-text/bibletime
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.26 2005/11/20 02:59:36 josejx Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.27 2006/06/13 21:25:59 squinky86 Exp $
+
+*bibletime-1.6_beta2 (13 Jun 2006)
+
+  13 Jun 2006; Jon Hood <squinky86@gentoo.org> metadata.xml,
+  -bibletime-1.4.2_pre1.ebuild, -bibletime-1.5.ebuild,
+  -bibletime-1.5.1.ebuild, +bibletime-1.6_beta2.ebuild:
+  Remove old versions, add testing version and new language packs, readd
+  myself as maintainer.
 
   20 Nov 2005; Joseph Jezak <josejx@gentoo.org> bibletime-1.5.2.ebuild:
   Marked ppc stable for bug #112834.
