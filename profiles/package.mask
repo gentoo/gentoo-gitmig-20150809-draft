@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5502 2006/06/13 20:23:13 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5503 2006/06/13 21:27:28 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -883,7 +883,6 @@ games-rpg/nwn-data
 # Bryan Østergaard <kloeri@gentoo.org> (12 Sep 2005)
 # Masked for security reasons, bug 103524
 <dev-python/py2play-0.1.9
-games-action/slune
 
 # Joshua Baergen <joshuabaergen@gentoo.org> (08 Sep 2005)
 # Donnie Berkholz <spyderous@gentoo.org> (14 May 2006)
