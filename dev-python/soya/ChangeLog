@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/soya
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.16 2006/04/26 18:25:31 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.17 2006/06/13 21:11:52 wolf31o2 Exp $
+
+  13 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> soya-0.10.2.ebuild:
+  Stable on x86 since this was the version I tested with the new
+  slune/openal/freealut.
 
 *soya-0.10.2 (26 Apr 2006)
 
