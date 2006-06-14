@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.4.8-r1.ebuild,v 1.5 2006/06/13 23:41:07 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.4.8-r1.ebuild,v 1.6 2006/06/14 00:35:35 spyderous Exp $
 
 inherit distutils fortran
 
@@ -21,8 +21,7 @@ RDEPEND=">=dev-lang/python-2.3.3
 	sci-libs/lapack-atlas
 	fftw? ( =sci-libs/fftw-2.1* )"
 
-DEPEND="${RDEPEND}
-	=sys-devel/gcc-3*"
+DEPEND="${RDEPEND}"
 
 # install doc claims fftw-2 is faster for complex ffts.
 # wxwindows seems to have disapeared : ?
