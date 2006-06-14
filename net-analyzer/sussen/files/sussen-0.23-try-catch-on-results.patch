@@ -1,0 +1,18 @@
+diff -Naur sussen-0.23.orig/applet/ActionDialog.cs sussen-0.23/applet/ActionDialog.cs
+--- sussen-0.23.orig/applet/ActionDialog.cs	2006-06-05 17:03:35.000000000 +0400
++++ sussen-0.23/applet/ActionDialog.cs	2006-06-14 18:20:26.000000000 +0400
+@@ -203,8 +203,12 @@
+ 
+ 			if (scanResultsFilename != null) {
+ 				UriBuilder ub = new UriBuilder (scanResultsFilename);
+-				Gnome.Url.Show (ub.ToString());				
+-//				new SummaryDialog (scanResultsFilename);
++
++				try {
++					Gnome.Url.Show (ub.ToString());
++				} catch (Exception e) {
++					ShowErrorDialog ("Error displaying results", e.Message);
++				}
+ 			} else
+ 				Console.WriteLine ("scanResultsFilename is null");
+ 				

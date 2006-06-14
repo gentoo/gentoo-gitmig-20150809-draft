@@ -1,4 +1,4 @@
-MD5 a6ca63adeb68f40f9ea894a76d0e0185 ChangeLog 2986
+MD5 ab838bf484350f0af1ed7ea6e4e19b72 ChangeLog 3188
 MD5 913a9112332add1b07f8e13567ef78c6 files/digest-sussen-0.10 63
 MD5 6bbd8221dae260aa294014e79587f74d files/digest-sussen-0.12 63
 MD5 034a05b578eae1d70b56349b853e5d92 files/digest-sussen-0.15 63
@@ -9,6 +9,7 @@ MD5 1aa4b5628ba6f84e2c4da720eba31a49 files/digest-sussen-0.23 63
 MD5 5dd20ca6159958efc7303bd449ea592e files/digest-sussen-0.5.3 64
 MD5 06d36be407bde33246cc4cea8ded89b9 files/sussen-0.22-applet-cancel-scan-crash.patch 752
 MD5 4a32ed3facb737fe788b06ce6301e3cd files/sussen-0.22-panel-applet-crash.patch 1116
+MD5 ba28414d13225934d3ffd42240ef28e6 files/sussen-0.23-try-catch-on-results.patch 674
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
 MD5 284a33f91290e58dc976067ff9438ae5 sussen-0.10.ebuild 745
 MD5 eb4b0f734206dfbff9990d9a1edb216f sussen-0.12.ebuild 745
@@ -16,5 +17,5 @@ MD5 b1481061b30678b085039bd5c9952ef8 sussen-0.15.ebuild 855
 MD5 60d350134a4ad2790feccb71a4e472a9 sussen-0.19.ebuild 1139
 MD5 7d6ed18daf3a7e934469d3cbe9d78e97 sussen-0.21.ebuild 1478
 MD5 8da09b5cd46cc334ed718acce259ac13 sussen-0.22-r2.ebuild 1588
-MD5 1dbeb67e9483fe72b4ad48ca892dd101 sussen-0.23.ebuild 1667
+MD5 9e0dd15409684e21548e4d1926cddc2b sussen-0.23.ebuild 1761
 MD5 606a391d68a2efbd6f306c20cd73fdbe sussen-0.5.3.ebuild 1118
