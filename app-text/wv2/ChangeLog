@@ -1,6 +1,13 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.31 2006/03/19 22:39:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.32 2006/06/14 11:29:45 ehmsen Exp $
+
+*wv2-0.2.3 (14 Jun 2006)
+
+  14 Jun 2006; Martin Ehmsen <ehmsen@gentoo.org>
+  +files/wv2-0.2.3-respectflags.patch, metadata.xml, +wv2-0.2.3.ebuild:
+  Added text-markup as herd.
+  Version bump to deal with security bug #136759.
 
   19 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/wv2-0.2.2-respectflags.patch, wv2-0.2.2.ebuild:
