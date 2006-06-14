@@ -45,3 +45,4 @@ suse		http://ftp.iinet.net.au/pub/suse  http://mirror.pacific.net.au/linux/suse/
 tinyfugue	ftp://tf.tcp.com/pub/tinyfugue ftp://laurel.actlab.utexas.edu/pub/tinyfugue http://ftp.tcp.com/pub/mud/Clients/tinyfugue ftp://ftp.progsoc.uts.edu.au/pub/tinyfugue ftp://ftp.minet.uni-jena.de/pub/tf ftp://ftp.mud.de/pub/software/clients/unix/tinyfugue 
 transcode	http://www.jakemsr.com/transcode http://dl.fkb.wormulon.net/transcode http://mirror.kraymer.de/ http://dl.kel.wormulon.net/transcode 
 vdrfiles	http://gentoo.fh-luh.de/files
+vmware	http://vmware-svca.www.conxion.com http://download3.vmware.com/software http://download.vmware.com http://www.vmware.com/download1 ftp://download1.vmware.com/pub http://vmware-chil.www.conxion.com http://vmware-heva.www.conxion.com http://vmware.wespe.de ftp://vmware.wespe.de
