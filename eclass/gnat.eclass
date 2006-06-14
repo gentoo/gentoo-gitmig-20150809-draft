@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.17 2006/06/10 16:19:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.18 2006/06/14 18:41:50 george Exp $
 #
 # This eclass provides the framework for ada lib installation with the split and
 # SLOTted gnat compilers (gnat-xxx, gnatbuild.eclass). Each lib gets built once
@@ -16,7 +16,7 @@
 
 inherit flag-o-matic eutils
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile
+EXPORT_FUNCTIONS pkg_setup pkg_postinst src_unpack src_compile
 
 DESCRIPTION="Common procedures for building Ada libs using split gnat compilers"
 
@@ -56,7 +56,7 @@ BuildEnv=${WORKDIR}/BuildEnv
 LibEnv=${WORKDIR}/LibEnv
 
 
-# env file prepared by gnat.eselect only listsnew settings for env vars
+# env file prepared by gnat.eselect only lists new settings for env vars
 # we need to change that to prepend, rather than replace action..
 # Takes one argument - the file to expand. This file should contain only
 # var=value like lines.. (commenst are Ok)
@@ -131,7 +131,9 @@ filter_env_var() {
 	local libName=${2:-${PN}}
 	local env_str
 	for entry in ${entries[@]} ; do
-		if [[ ${entry:$((-${#libName}))} != ${libName} ]] ; then
+		# this simply checks if $libname is a substring of the $entry, should
+		# work fine with all the present libs
+		if [[ ${entry/${libName}/} == ${entry} ]] ; then
 			env_str="${env_str}:${entry}"
 		fi
 	done
@@ -191,6 +193,21 @@ gnat_pkg_setup() {
 	export ADAMAKE=${ADAMAKE:-gnatmake}
 	export ADABIND=${ADABIND:-gnatbind}
 }
+
+
+gnat_pkg_postinst() {
+	einfo "Updating gnat configuration to pick up ${PN} library..."
+	eselect gnat update
+	einfo "The environment has been set up to make gnat automatically find files"
+	einfo "for the installed library. In order to immediately activate these"
+	einfo "settings please run:"
+	einfo
+	einfo "env-update"
+	einfo "source /etc/profile"
+	einfo
+	einfo "Otherwise the settings will become active next time you login"
+}
+
 
 
 gnat_src_unpack() {
