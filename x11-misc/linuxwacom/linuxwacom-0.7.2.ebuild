@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.7.2.ebuild,v 1.3 2006/02/15 22:31:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.7.2.ebuild,v 1.4 2006/06/14 17:57:13 squinky86 Exp $
 
 IUSE="dlloader gtk gtk2 tcltk sdk usb"
 
@@ -47,6 +47,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+
+	# Fix multilib-strict error for Tcl/Tk library install
+	sed -i -e "s:WCM_EXECDIR/lib:WCM_EXECDIR/$(get_libdir):" configure.in
 
 	if use sdk && ! has_version ">=x11-base/xorg-server-0.1" ; then
 		cd ${S}
@@ -60,9 +64,12 @@ src_unpack() {
 	if has_version ">=x11-base/xorg-server-0.1"; then
 		cd ${S}
 		epatch ${FILESDIR}/${P}-modular-x.patch
-		autoreconf -v --install
-		libtoolize --force --copy
+	# moved to end of src_unpack to fix multilib issue -Jon <squinky86@gentoo.org>
+	#	autoreconf -v --install
+	#	libtoolize --force --copy
 	fi
+	autoreconf -v --install
+	libtoolize --force --copy
 }
 
 src_compile() {
