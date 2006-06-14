@@ -22,3 +22,4 @@ move app-i18n/scim-chinese app-i18n/scim-pinyin
 move games-fps/avp-cvs games-fps/avp
 move net-libs/nfsidmap net-libs/libnfsidmap
 move net-misc/resolvconf-gentoo net-dns/resolvconf-gentoo
+move x11-misc/matchbox-nest x11-misc/xoo
