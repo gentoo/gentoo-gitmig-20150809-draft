@@ -1,41 +1,41 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX 0.0.1/dvdchanger_readdvd.sh 128 RMD160 27ae9aee90152165d9300b4d6187bb5424d986c2 SHA1 c06c49023109862e5ac649e2827bed331abe1cc6 SHA256 57b8c6d991adcfbbf257db7c78dd268f074899a852f0c4bf2e16f95468772c93
-MD5 8fefc6f4e655ea287128a1a1b517d44f files/0.0.1/dvdchanger_readdvd.sh 128
-RMD160 27ae9aee90152165d9300b4d6187bb5424d986c2 files/0.0.1/dvdchanger_readdvd.sh 128
-SHA256 57b8c6d991adcfbbf257db7c78dd268f074899a852f0c4bf2e16f95468772c93 files/0.0.1/dvdchanger_readdvd.sh 128
-AUX 0.0.1/dvdchanger_readdvd_real.sh 553 RMD160 9ef10b5503636ee2d6c210204617cf55759a5e72 SHA1 f722a7c02c351c575b22a724c81282fd23ff09c6 SHA256 e30d5556fe5bd8855e55d58e2a999b97aced348d372dd3c810471317ed0a3755
-MD5 15cdf3e7ee2f3f9ad62dd8bbb98656a2 files/0.0.1/dvdchanger_readdvd_real.sh 553
-RMD160 9ef10b5503636ee2d6c210204617cf55759a5e72 files/0.0.1/dvdchanger_readdvd_real.sh 553
-SHA256 e30d5556fe5bd8855e55d58e2a999b97aced348d372dd3c810471317ed0a3755 files/0.0.1/dvdchanger_readdvd_real.sh 553
-AUX 0.0.1/dvdchanger_writedvd.sh 129 RMD160 9de5d1b1c6bf75e94759cd4fb982ca545ac76388 SHA1 8940892c4c8a037b9338bbb6a00a155d648ff4d7 SHA256 5a85e13ed58a8243856f025a4a4b181fca45b14edd596984a731fc8a163885e4
-MD5 ebd66aa7dae02f50b401693a777e7bf3 files/0.0.1/dvdchanger_writedvd.sh 129
-RMD160 9de5d1b1c6bf75e94759cd4fb982ca545ac76388 files/0.0.1/dvdchanger_writedvd.sh 129
-SHA256 5a85e13ed58a8243856f025a4a4b181fca45b14edd596984a731fc8a163885e4 files/0.0.1/dvdchanger_writedvd.sh 129
-AUX 0.0.1/dvdchanger_writedvd_real.sh 704 RMD160 9a1481220c195c118defe1df95e8c3951d532b31 SHA1 5a242fe434455cf59c5df36138d828431e34567b SHA256 87fc18903697c2f7024f690c7afc588dd29067a167e3a71ff301c4bd411ad654
-MD5 b5106e564d41d38d51f8be79799a5d5e files/0.0.1/dvdchanger_writedvd_real.sh 704
-RMD160 9a1481220c195c118defe1df95e8c3951d532b31 files/0.0.1/dvdchanger_writedvd_real.sh 704
-SHA256 87fc18903697c2f7024f690c7afc588dd29067a167e3a71ff301c4bd411ad654 files/0.0.1/dvdchanger_writedvd_real.sh 704
-EBUILD vdr-dvd-scripts-0.0.1-r4.ebuild 581 RMD160 1174dcb2591ca8f95abee8958aa5214170116c95 SHA1 084a1d5303964fc855295d50e418f566d124a407 SHA256 6ec0e43a39882b0b84f8f6af7a840d5c423f13de7119747973ee2b0f81f21e03
-MD5 a5a846193f2cdf000d00d7faf24eea14 vdr-dvd-scripts-0.0.1-r4.ebuild 581
-RMD160 1174dcb2591ca8f95abee8958aa5214170116c95 vdr-dvd-scripts-0.0.1-r4.ebuild 581
-SHA256 6ec0e43a39882b0b84f8f6af7a840d5c423f13de7119747973ee2b0f81f21e03 vdr-dvd-scripts-0.0.1-r4.ebuild 581
-MISC ChangeLog 1538 RMD160 ed9274ae23118a7d7ff95e93acc83550fc4edaaf SHA1 600eb3230b127ca1ce453bc950a14236e2b17cbf SHA256 31b77c44b98a7403dde97ca18274c06325b34888aa62bd349b0a5ec992289d43
-MD5 6a34abef4e418bd33ed953a5dd5ae38c ChangeLog 1538
-RMD160 ed9274ae23118a7d7ff95e93acc83550fc4edaaf ChangeLog 1538
-SHA256 31b77c44b98a7403dde97ca18274c06325b34888aa62bd349b0a5ec992289d43 ChangeLog 1538
+AUX 0.0.1/dvdchanger_readdvd.sh 130 RMD160 8e1820dce67977cdc3254356d485fe1a92889e95 SHA1 f47bf0d8415b2e9e27d465ae3b32fdaec1aa7e17 SHA256 3cb671cd4a76e17ab04b70c62f05c34c6d9a972660ab3dbca538de9e33ca074b
+MD5 ab45080bb6de2f76302aa446440a3bc2 files/0.0.1/dvdchanger_readdvd.sh 130
+RMD160 8e1820dce67977cdc3254356d485fe1a92889e95 files/0.0.1/dvdchanger_readdvd.sh 130
+SHA256 3cb671cd4a76e17ab04b70c62f05c34c6d9a972660ab3dbca538de9e33ca074b files/0.0.1/dvdchanger_readdvd.sh 130
+AUX 0.0.1/dvdchanger_readdvd_real.sh 559 RMD160 678bff2f367594c07eff18bc7b6c5e41f5f17a65 SHA1 045bf4c202d4bee9e969c9f93e9d97d1092266ff SHA256 72cb07f7091538977c9324ae682354699c95bae5dfd4b181d3539742141b434f
+MD5 3ccbe8de2210e3b298aeb0836eb02655 files/0.0.1/dvdchanger_readdvd_real.sh 559
+RMD160 678bff2f367594c07eff18bc7b6c5e41f5f17a65 files/0.0.1/dvdchanger_readdvd_real.sh 559
+SHA256 72cb07f7091538977c9324ae682354699c95bae5dfd4b181d3539742141b434f files/0.0.1/dvdchanger_readdvd_real.sh 559
+AUX 0.0.1/dvdchanger_writedvd.sh 131 RMD160 4a4c3b1da7a6d9c6586a1914bf37bf1289efea0d SHA1 589138066121d80ab9172deb4493d2e33ed216e7 SHA256 6b2f400bd22dd14c932ee6c3baa3760c524c7c0745421514e2855cef0974b984
+MD5 79ed676b8cf585ff930fbe8d8be290b2 files/0.0.1/dvdchanger_writedvd.sh 131
+RMD160 4a4c3b1da7a6d9c6586a1914bf37bf1289efea0d files/0.0.1/dvdchanger_writedvd.sh 131
+SHA256 6b2f400bd22dd14c932ee6c3baa3760c524c7c0745421514e2855cef0974b984 files/0.0.1/dvdchanger_writedvd.sh 131
+AUX 0.0.1/dvdchanger_writedvd_real.sh 686 RMD160 f68fd6e4768ba72d4e813565eb6bd36f40092b23 SHA1 f332f22660a6d779b90bbf9a3971513f7c32c158 SHA256 b34e03aba328ea42370d92e68bfe5b53598c630e2602dc30889bfecb202d63e3
+MD5 2621388ee46eddcb76a66d52f9a41f1b files/0.0.1/dvdchanger_writedvd_real.sh 686
+RMD160 f68fd6e4768ba72d4e813565eb6bd36f40092b23 files/0.0.1/dvdchanger_writedvd_real.sh 686
+SHA256 b34e03aba328ea42370d92e68bfe5b53598c630e2602dc30889bfecb202d63e3 files/0.0.1/dvdchanger_writedvd_real.sh 686
+EBUILD vdr-dvd-scripts-0.0.1-r5.ebuild 586 RMD160 feb8dd60fd60bd17c35afe8841cdd5eada71aab9 SHA1 2aa93fe66494945863842b321a9398d3dc5d9989 SHA256 f35d7d9b96c5adac59fba7486ced99174eee1b7c7816d1b9ff780bae06603c7c
+MD5 6c414fcb225bfaaefaffd744bae3ea9c vdr-dvd-scripts-0.0.1-r5.ebuild 586
+RMD160 feb8dd60fd60bd17c35afe8841cdd5eada71aab9 vdr-dvd-scripts-0.0.1-r5.ebuild 586
+SHA256 f35d7d9b96c5adac59fba7486ced99174eee1b7c7816d1b9ff780bae06603c7c vdr-dvd-scripts-0.0.1-r5.ebuild 586
+MISC ChangeLog 1953 RMD160 5f407b4bb5bbdf8bc880594feff56d722db35e57 SHA1 01c6ff6776198812d6e89353177a4e08a2f3015e SHA256 0f0839360c9ec0101e06369c99235d036b96954848316a0e1ffc1c8cbf66d945
+MD5 f6275bfa78d9aa8eeaff6098a4d3f496 ChangeLog 1953
+RMD160 5f407b4bb5bbdf8bc880594feff56d722db35e57 ChangeLog 1953
+SHA256 0f0839360c9ec0101e06369c99235d036b96954848316a0e1ffc1c8cbf66d945 ChangeLog 1953
 MISC metadata.xml 377 RMD160 3c2423cbf742e73126961095654e872a9d7ee202 SHA1 b94250e520aee21c1ac388d538c7ba4d494eddb1 SHA256 51eb89b56f16aff9e94542aaa593ebd16d7994a746bbec826ce4d42216783484
 MD5 88b0ef99877dcc60ca92f9e29d6233e2 metadata.xml 377
 RMD160 3c2423cbf742e73126961095654e872a9d7ee202 metadata.xml 377
 SHA256 51eb89b56f16aff9e94542aaa593ebd16d7994a746bbec826ce4d42216783484 metadata.xml 377
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-vdr-dvd-scripts-0.0.1-r4 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-vdr-dvd-scripts-0.0.1-r4 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-vdr-dvd-scripts-0.0.1-r4 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-vdr-dvd-scripts-0.0.1-r5 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-vdr-dvd-scripts-0.0.1-r5 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-vdr-dvd-scripts-0.0.1-r5 1
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEciYCZfSl1Kp5KmoRAqmnAJ9CT14v9QDlkEKkMpievn6iST2KIQCgvFbh
-cURKtZcK49sbEqDrWpQ/yHs=
-=Mity
+iD8DBQFEj/1sZfSl1Kp5KmoRAuruAKDI+5ePB9xG024Mh8K5fiYk5pzyrgCg1Tac
+bAIPK0utnxzZjo1wkmjLURo=
+=yqXn
 -----END PGP SIGNATURE-----
