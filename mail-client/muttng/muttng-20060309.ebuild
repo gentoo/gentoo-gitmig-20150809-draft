@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20060309.ebuild,v 1.1 2006/03/18 12:13:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20060309.ebuild,v 1.2 2006/06/14 16:11:23 grobian Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,7 +37,7 @@ RDEPEND="nls? ( sys-devel/gettext )
 		dev-libs/libxslt
 		app-text/htmltidy
 		app-text/openjade
-		app-text/tetex
+		virtual/tetex
 	)"
 DEPEND="${RDEPEND}
 	sys-devel/automake
