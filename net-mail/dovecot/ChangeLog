@@ -1,8 +1,10 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.51 2006/06/14 15:36:06 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.52 2006/06/14 22:22:05 uberlord Exp $
 
   14 Jun 2006; Roy Marples <uberlord@gentoo.org> dovecot-1.0_beta9.ebuild:
+  Documentation now installed via the doc USE flag.
+  Example configs for ldap and sql are now copied instead of moved, #136812.
   Set ssl_listen = * when emerged without ipv6, #136781
 
 *dovecot-1.0_beta9 (13 Jun 2006)

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_beta9.ebuild,v 1.2 2006/06/14 15:36:06 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_beta9.ebuild,v 1.3 2006/06/14 22:22:05 uberlord Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
-IUSE="debug ipv6 kerberos ldap mbox mysql pop3d pam postgres ssl vpopmail"
+IUSE="debug doc ipv6 kerberos ldap mbox mysql pop3d pam postgres ssl vpopmail"
 
 DEPEND=">=sys-apps/sed-4
 	kerberos? ( virtual/krb5 )
@@ -106,7 +106,7 @@ src_install () {
 
 	# Install SQL configuration
 	if use mysql || use postgres ; then
-		mv doc/dovecot-sql.conf "${D}"/etc
+		cp doc/dovecot-sql.conf "${D}"/etc
 		fperms 600 /etc/dovecot-sql.conf
 		sed -i -e '/db sql/,/args/ s|=|= /etc/dovecot-sql.conf|' \
 			"${D}"/etc/dovecot.conf
@@ -114,7 +114,7 @@ src_install () {
 
 	# Install LDAP configuration
 	if use ldap ; then
-		mv doc/dovecot-ldap.conf "${D}"/etc
+		cp doc/dovecot-ldap.conf "${D}"/etc
 		fperms 600 /etc/dovecot-ldap.conf
 		sed -i -e '/db ldap/,/args/ s|=|= /etc/dovecot-ldap.conf|' \
 			"${D}"/etc/dovecot.conf
@@ -122,8 +122,10 @@ src_install () {
 
 	# Documentation
 	rm -rf "${D}"/usr/share/doc/dovecot
-	dodoc AUTHORS NEWS README TODO dovecot-example.conf
-	dodoc doc/*.txt doc/*.conf doc/*.cnf doc/mkcert.sh
+	if use doc ; then
+		dodoc AUTHORS NEWS README TODO dovecot-example.conf
+		dodoc doc/*.txt doc/*.conf doc/*.cnf doc/mkcert.sh
+	fi
 
 	# Create SSL certificates
 	if use ssl ; then
