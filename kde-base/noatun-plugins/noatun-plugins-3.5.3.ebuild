@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/noatun-plugins-3.5.3.ebuild,v 1.2 2006/06/12 22:20:32 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/noatun-plugins-3.5.3.ebuild,v 1.3 2006/06/14 22:29:12 carlo Exp $
 KMNAME=kdeaddons
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
@@ -20,7 +20,8 @@ src_compile() {
 	local myconf="$(use_with sdl)"
 
 	if use berkdb; then
-		myconf="${myconf} --with-berkeley-db --with-db-lib=$(db_libname)
+		dblib="$(db_libname)"
+		myconf="${myconf} --with-berkeley-db --with-db-lib=${dblib/-/_cxx-}
 			--with-extra-includes=${ROOT}$(db_includedir)"
 	else
 		myconf="${myconf} --without-berkeley-db"
