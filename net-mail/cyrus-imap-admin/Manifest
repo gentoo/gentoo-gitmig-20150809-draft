@@ -1,49 +1,51 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fb356617d11028d28df66a470c1fa3e7 ChangeLog 6406
-RMD160 d2351e17dee8d9cdb12397dac5584a3f53637f16 ChangeLog 6406
-SHA256 f45f7c3c1d4a8804a5deb46d8748040dcd26205fae408a66d4ec5f5753a3b456 ChangeLog 6406
-MD5 4e849da55bb77ace50565fad72f2621f cyrus-imap-admin-2.2.10.ebuild 2033
-RMD160 0eb9036773c337e9eab659217af8ff96f78bc52d cyrus-imap-admin-2.2.10.ebuild 2033
-SHA256 6a7ef323fcaec0db5b64c4aeda4bb8e2392a675de1cb9635b6bde5aa56e1bd51 cyrus-imap-admin-2.2.10.ebuild 2033
-MD5 ba8570c48d42d192c1eca556feed8b87 cyrus-imap-admin-2.2.12-r1.ebuild 2113
-RMD160 a3fc94a6c5a03530615663b95c599650e97c8fac cyrus-imap-admin-2.2.12-r1.ebuild 2113
-SHA256 45abda470406aa54712055530c6a90cbba5de0e355bf15e765feb567b83dd3a0 cyrus-imap-admin-2.2.12-r1.ebuild 2113
-MD5 a378d114b78c41566ba7e951bd4b03d3 cyrus-imap-admin-2.2.12.ebuild 2069
-RMD160 69cb6a884a4d5f2370c7e9a97732ca6ad6bb83c4 cyrus-imap-admin-2.2.12.ebuild 2069
-SHA256 fb4fd3996c23361af78ab3eda031d0a315fb600ce6b760b14e29477393fa6fb9 cyrus-imap-admin-2.2.12.ebuild 2069
-MD5 ca6521974928ec98be72f1c1359a3075 cyrus-imap-admin-2.3.1.ebuild 2110
-RMD160 0671d5d9ddbfa23d12b2c8be60b13bedee0f0ce3 cyrus-imap-admin-2.3.1.ebuild 2110
-SHA256 66d1beeb2512686162505a9388dd5cbeefb5cad68f50dec75210e93913ac2ef5 cyrus-imap-admin-2.3.1.ebuild 2110
+AUX cyrus-imap-admin-2.2.10-fPIC.patch 584 RMD160 b66b94eacafb2f4bd59584701aa3e4a1f028984f SHA1 b43dc5f38abfc98220ce7ea5b2167376c8b7ed4b SHA256 958fa87050cd5eea811dc33343ef052b0a58d42597cdc3936b58d0a9b6e705dc
 MD5 dd34152fac580be8cccb1d1b69bb1ebc files/cyrus-imap-admin-2.2.10-fPIC.patch 584
 RMD160 b66b94eacafb2f4bd59584701aa3e4a1f028984f files/cyrus-imap-admin-2.2.10-fPIC.patch 584
 SHA256 958fa87050cd5eea811dc33343ef052b0a58d42597cdc3936b58d0a9b6e705dc files/cyrus-imap-admin-2.2.10-fPIC.patch 584
+AUX cyrus-imap-admin-2.2.12-fPIC.patch 584 RMD160 b66b94eacafb2f4bd59584701aa3e4a1f028984f SHA1 b43dc5f38abfc98220ce7ea5b2167376c8b7ed4b SHA256 958fa87050cd5eea811dc33343ef052b0a58d42597cdc3936b58d0a9b6e705dc
 MD5 dd34152fac580be8cccb1d1b69bb1ebc files/cyrus-imap-admin-2.2.12-fPIC.patch 584
 RMD160 b66b94eacafb2f4bd59584701aa3e4a1f028984f files/cyrus-imap-admin-2.2.12-fPIC.patch 584
 SHA256 958fa87050cd5eea811dc33343ef052b0a58d42597cdc3936b58d0a9b6e705dc files/cyrus-imap-admin-2.2.12-fPIC.patch 584
+AUX cyrus-imap-admin-2.2.12-gcc4.patch 396 RMD160 b01f76386facd436cd9db247a7a4c31129ae55b8 SHA1 daf5672ab93c6bcc5bdb4807537c9f5617b21855 SHA256 f5c8e11355df0ac41ede1fa18381241097e143669ba5903c90ff4b20aeed273c
 MD5 77413f5bcf777e10908f9a755e6ff55e files/cyrus-imap-admin-2.2.12-gcc4.patch 396
 RMD160 b01f76386facd436cd9db247a7a4c31129ae55b8 files/cyrus-imap-admin-2.2.12-gcc4.patch 396
 SHA256 f5c8e11355df0ac41ede1fa18381241097e143669ba5903c90ff4b20aeed273c files/cyrus-imap-admin-2.2.12-gcc4.patch 396
-MD5 5a1c49cf6018aa400e8836ee03238140 files/digest-cyrus-imap-admin-2.2.10 71
-RMD160 e7f87504cf2587b42ddde07e835bcf2f237a0a16 files/digest-cyrus-imap-admin-2.2.10 71
-SHA256 74c37507adf78f57b3dd433e2be38e7d71c5664be6b868be2756400a6902226e files/digest-cyrus-imap-admin-2.2.10 71
-MD5 28d9bdef56c61af75a28f8ae2ea2b5c7 files/digest-cyrus-imap-admin-2.2.12 71
-RMD160 0b5fcc75e58ca8cfc21069205bb6e63381622ba8 files/digest-cyrus-imap-admin-2.2.12 71
-SHA256 a662da942213a1f3444e9d11a0853a7bb500d7a211a915ad0cf460185e87b328 files/digest-cyrus-imap-admin-2.2.12 71
+DIST cyrus-imapd-2.2.10.tar.gz 1946803 RMD160 2cc1bb11af57e77ad701eac7efe85bb396ee350c SHA1 460ff6e9fb9a69190661516a5a2217f14366dd15 SHA256 f592cda734a5060ac82077cb74178fbd9a9d029dcbae6fb5478b5b37319a60eb
+DIST cyrus-imapd-2.2.12.tar.gz 1961161 RMD160 ff4a95e519ea066ed9b21b515b18bdacaf0d1852 SHA256 3c6f41255ba15d8b2ea78320dd5e0c98e07fe0b5c3c4b84bc20f503427bd1b7b
+DIST cyrus-imapd-2.3.1.tar.gz 2212999
+EBUILD cyrus-imap-admin-2.2.10.ebuild 2033 RMD160 d2786cc0e44be2f222e9a34353e22d2462506978 SHA1 a4db524fe0195a84ec44c90bb70ac52dcb51f1ee SHA256 ddf00a9164f7fefa6f724ec95c4f82ea578ce919e1473bed853ec9c3b8eddf30
+MD5 9a85cf6732f40e0f48034e6cf1cfd7be cyrus-imap-admin-2.2.10.ebuild 2033
+RMD160 d2786cc0e44be2f222e9a34353e22d2462506978 cyrus-imap-admin-2.2.10.ebuild 2033
+SHA256 ddf00a9164f7fefa6f724ec95c4f82ea578ce919e1473bed853ec9c3b8eddf30 cyrus-imap-admin-2.2.10.ebuild 2033
+EBUILD cyrus-imap-admin-2.2.12-r1.ebuild 2113 RMD160 a3fc94a6c5a03530615663b95c599650e97c8fac SHA1 aa4847681382f4cf89b6d01a168d6344bcad9e23 SHA256 45abda470406aa54712055530c6a90cbba5de0e355bf15e765feb567b83dd3a0
+MD5 ba8570c48d42d192c1eca556feed8b87 cyrus-imap-admin-2.2.12-r1.ebuild 2113
+RMD160 a3fc94a6c5a03530615663b95c599650e97c8fac cyrus-imap-admin-2.2.12-r1.ebuild 2113
+SHA256 45abda470406aa54712055530c6a90cbba5de0e355bf15e765feb567b83dd3a0 cyrus-imap-admin-2.2.12-r1.ebuild 2113
+EBUILD cyrus-imap-admin-2.2.12.ebuild 2069 RMD160 69cb6a884a4d5f2370c7e9a97732ca6ad6bb83c4 SHA1 5cc359c17105ead1673b3920272d4066be7276ef SHA256 fb4fd3996c23361af78ab3eda031d0a315fb600ce6b760b14e29477393fa6fb9
+MD5 a378d114b78c41566ba7e951bd4b03d3 cyrus-imap-admin-2.2.12.ebuild 2069
+RMD160 69cb6a884a4d5f2370c7e9a97732ca6ad6bb83c4 cyrus-imap-admin-2.2.12.ebuild 2069
+SHA256 fb4fd3996c23361af78ab3eda031d0a315fb600ce6b760b14e29477393fa6fb9 cyrus-imap-admin-2.2.12.ebuild 2069
+EBUILD cyrus-imap-admin-2.3.1.ebuild 2110 RMD160 0671d5d9ddbfa23d12b2c8be60b13bedee0f0ce3 SHA1 7d864925976a9a39cb4ee8c45dc7abf663c414e4 SHA256 66d1beeb2512686162505a9388dd5cbeefb5cad68f50dec75210e93913ac2ef5
+MD5 ca6521974928ec98be72f1c1359a3075 cyrus-imap-admin-2.3.1.ebuild 2110
+RMD160 0671d5d9ddbfa23d12b2c8be60b13bedee0f0ce3 cyrus-imap-admin-2.3.1.ebuild 2110
+SHA256 66d1beeb2512686162505a9388dd5cbeefb5cad68f50dec75210e93913ac2ef5 cyrus-imap-admin-2.3.1.ebuild 2110
+MISC ChangeLog 6511 RMD160 255c7684fc032b56ea5d86a3fd7556c10051fd57 SHA1 944a448249e45b588f0b16b0bf7aa5099a8b9a59 SHA256 00300ba9cfec3cef9bd59b5daff420aefc442490d6e370771a4f7da19056bcbe
+MD5 b3223acd36252876e0a79f35f5152adf ChangeLog 6511
+RMD160 255c7684fc032b56ea5d86a3fd7556c10051fd57 ChangeLog 6511
+SHA256 00300ba9cfec3cef9bd59b5daff420aefc442490d6e370771a4f7da19056bcbe ChangeLog 6511
+MISC metadata.xml 161 RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 SHA1 a1fecd2f7b169d621b88c6ccab9d758209fc8f19 SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
+SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
+MD5 64f9bd0539e056fb1107165fa7698935 files/digest-cyrus-imap-admin-2.2.10 259
+RMD160 2fb24d5976d467e5d773cfa0b7fd3297f2b2673c files/digest-cyrus-imap-admin-2.2.10 259
+SHA256 58ffe81f7797539bbbb813b8ffec6c2aa54a79bc51207a65fbff3ea76be507b2 files/digest-cyrus-imap-admin-2.2.10 259
+MD5 8c219986e0c374c302460c7204eb96fe files/digest-cyrus-imap-admin-2.2.12 259
+RMD160 c3b34254e2030756e02decdb2593e4ebb3604994 files/digest-cyrus-imap-admin-2.2.12 259
+SHA256 ad62d41892313174ffa09db9b0f48fdbc5a1feb33e2ba0bf6d9f1b7e06ce62d5 files/digest-cyrus-imap-admin-2.2.12 259
 MD5 8c219986e0c374c302460c7204eb96fe files/digest-cyrus-imap-admin-2.2.12-r1 259
 RMD160 c3b34254e2030756e02decdb2593e4ebb3604994 files/digest-cyrus-imap-admin-2.2.12-r1 259
 SHA256 ad62d41892313174ffa09db9b0f48fdbc5a1feb33e2ba0bf6d9f1b7e06ce62d5 files/digest-cyrus-imap-admin-2.2.12-r1 259
 MD5 0b3de6cdb50c6422f35588a9f8a5c5dc files/digest-cyrus-imap-admin-2.3.1 70
 RMD160 3de6653d436856d1046fbf66f549d8d8b8e9f165 files/digest-cyrus-imap-admin-2.3.1 70
 SHA256 3e653ad62d023a08d3810d757c0f171ca024969d9e8553b8ff050c2568ebddc8 files/digest-cyrus-imap-admin-2.3.1 70
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-RMD160 273e570423fa3cd9d3f15f7967a43307c8ee9661 metadata.xml 161
-SHA256 4ebf9a8f60040bfb95f13790c1d146a49c69f791f9c421e02a5d96fd6fcb2b32 metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEKDug5FrxP71izLARAoDyAJ9KRMfc+1PydPrBsryMG86GhyOj1ACdEdDs
-zLoOfkA9ZFdmahvWIAC95eI=
-=PUCr
------END PGP SIGNATURE-----

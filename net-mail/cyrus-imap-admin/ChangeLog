@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.42 2006/03/27 19:23:14 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.43 2006/06/14 08:32:22 dertobi123 Exp $
+
+  14 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  cyrus-imap-admin-2.2.10.ebuild:
+  ppc stable
 
 *cyrus-imap-admin-2.2.12-r1 (27 Mar 2006)
 
