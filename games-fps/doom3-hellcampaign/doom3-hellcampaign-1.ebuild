@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-hellcampaign/doom3-hellcampaign-1.ebuild,v 1.2 2006/03/31 20:46:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-hellcampaign/doom3-hellcampaign-1.ebuild,v 1.3 2006/06/14 18:28:05 wolf31o2 Exp $
 
 inherit games
 
@@ -17,18 +17,26 @@ IUSE=""
 RESTRICT="mirror strip"
 
 RDEPEND="games-fps/doom3"
-DEPEND="${RDEPEND}
-	app-arch/unzip"
+DEPEND="app-arch/unzip"
 
 S=${WORKDIR}
+dir=${GAMES_PREFIX_OPT}/doom3
 
-src_install() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
 	# Prevent "non-portable" upper-case-filename warnings in Doom 3
 	mv "Hardcore Hell Campaign.pk4" hardcore_hell_campaign.pk4
 	mv Q2Textures.pk4 q2Textures.pk4
 	mv Q3Textures.pk4 q3Textures.pk4
 
-	insinto "${GAMES_PREFIX_OPT}"/doom3/${MOD}
+	# Show nice description in "mods" menu within Doom 3
+	echo 'Hell Campaign' > description.txt
+}
+
+src_install() {
+	insinto "${dir}/${MOD}"
 	doins -r * || die "doins failed"
 
 	games_make_wrapper ${PN} "doom3 +set fs_game ${MOD}"

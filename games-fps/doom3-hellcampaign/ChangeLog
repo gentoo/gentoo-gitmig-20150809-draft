@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/doom3-hellcampaign
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-hellcampaign/ChangeLog,v 1.2 2006/03/31 20:46:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-hellcampaign/ChangeLog,v 1.3 2006/06/14 18:28:05 wolf31o2 Exp $
+
+  14 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  doom3-hellcampaign-1.ebuild:
+  Changed dependencies and otherwise tidied up the ebuild. Patch submitted by
+  Paul Bredbury <brebs@sent.com>. Closing bug #134075.
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   doom3-hellcampaign-1.ebuild:
