@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/vzquota
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/ChangeLog,v 1.14 2006/04/27 23:09:37 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/ChangeLog,v 1.15 2006/06/14 11:42:46 phreak Exp $
+
+*vzquota-3.0.8 (14 Jun 2006)
+
+  14 Jun 2006; Christian Heim <phreak@gentoo.org> +vzquota-3.0.8.ebuild:
+  Version bump, the OpenVZ finally decided to use a sane version scheme,
+  reworked the ebuild (no inherit calls needed anymore). For a detailed
+  ChangeLog see http://openvz.org/news/updates/vzquota-3.0.8-1!
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
