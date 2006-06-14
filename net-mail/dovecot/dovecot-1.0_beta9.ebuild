@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_beta9.ebuild,v 1.1 2006/06/13 16:28:32 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_beta9.ebuild,v 1.2 2006/06/14 15:36:06 uberlord Exp $
 
 inherit eutils
 
@@ -95,6 +95,12 @@ src_install () {
 	# Listen on ipv6 and ipv4
 	if use ipv6 ; then
 		sed -i -e 's/^#listen = \*/listen = \[::\]/g' \
+			"${D}"/etc/dovecot.conf
+	else
+		# BETA9 FIX ONLY - REMOVE IF NOT BETA9
+		# Beta9 has issues when compiled without ipv6
+		# setting ssl_listen = * fixes the issue
+		sed -i -e 's/^#ssl_listen =/ssl_listen = */g' \
 			"${D}"/etc/dovecot.conf
 	fi
 
