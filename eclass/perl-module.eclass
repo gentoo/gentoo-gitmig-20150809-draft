@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.96 2006/06/12 20:11:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.97 2006/06/14 00:31:44 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -60,7 +60,7 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm src_com
 #
 # 2005.07.19 mcummings
 # Providing an override var for the use of Module::Build. While it is being
-# incorporated in more and more modules, not module authors have working
+# incorporated in more and more modules, not all module authors have working
 # Build.PL's in place. The override is to allow for a fallback to the "classic"
 # Makfile.PL - example is Class::MethodMaker, which provides a Build.PL that is
 # severely broken.
@@ -69,6 +69,16 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm src_com
 # Per a conversation with solar, adding a change to the dep/rdep lines for
 # minimal. Should fix bug 68367 and bug 83622, as well as other embedded builds
 # that use perl components without providing perl
+#
+# 2006.06.13 mcummings
+# I've reordered and extended the logic on when to invoke module-build versus
+# MakeMaker. The problem that has arisen is that some modules provide a
+# Makefile.PL that passes all arguments on to a Build.PL - including PREFIX,
+# which causes module-build to build with a target of /usr/usr/
+# (how broken is that?). Current logic is if there is a Build.PL and we aren't
+# overriding, use it; otherwise use the Makefile.PL; otherwise return (maybe we
+# want all the functionality of the perl-module eclass without needing to
+# compile??).
 
 
 IUSE="minimal"
@@ -76,7 +86,7 @@ DEPEND=">=dev-lang/perl-5.8.2 !<perl-core/ExtUtils-MakeMaker-6.17"
 RDEPEND="!minimal? ( ${DEPEND} )"
 SRC_PREP="no"
 SRC_TEST="skip"
-USE_BUILDER="yes"
+PREFER_BUILDPL="yes"
 
 PERL_VERSION=""
 SITE_ARCH=""
@@ -97,15 +107,14 @@ perl-module_src_prep() {
 
 
 	SRC_PREP="yes"
-	if [ -f Makefile.PL ] && [ ! ${PN} == "module-build" ]; then
+	if [ "${PREFER_BUILDPL}" == "yes" ] && ( [ -f Build.PL ] || [ ${PN} == "module-build" ] ); then
+		einfo "Using Module::Build"
+		perl Build.PL --installdirs=vendor --destdir=${D} --libdoc= || die "Unable to build! (are you using USE=\"build\"?)"
+	elif [ -f Makefile.PL ] && [ ! ${PN} == "module-build" ]; then
 		einfo "Using ExtUtils::MakeMaker"
 		#perl Makefile.PL ${myconf} \
 		perl Makefile.PL ${myconf} INSTALLMAN3DIR='none'\
 		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D} || die "Unable to build! (are you using USE=\"build\"?)"
-	fi
-	if [ -f Build.PL ] && ( [ ! -f Makefile.PL ] || [ ${PN} == "module-build" ]); then
-		einfo "Using Module::Build"
-		perl Build.PL --installdirs=vendor --destdir=${D} --libdoc= || die "Unable to build! (are you using USE=\"build\"?)"
 	fi
 	if [ ! -f Build.PL ] && [ ! -f Makefile.PL ]; then
 		einfo "No Make or Build file detected..."
@@ -217,7 +226,7 @@ perlinfo() {
 	eval `perl '-V:installvendorarch'`
 	VENDOR_ARCH=${installvendorarch}
 
-	if [ "${USE_BUILDER}" == "yes" ]; then
+	if [ "${PREFER_BUILDPL}" == "yes" ]; then
 	   if [ ! -f ${S}/Makefile.PL ] || [ ${PN} == "module-build" ]; then
 		if [ -f ${S}/Build.PL ]; then
 			if [ ${PN} == "module-build" ]; then
