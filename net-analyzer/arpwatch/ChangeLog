@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/arpwatch
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.21 2006/04/27 21:28:45 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.22 2006/06/14 10:36:22 pva Exp $
+
+  14 Jun 2006; Peter Volkov <pva@gentoo.org> arpwatch-2.1.11-r1.ebuild,
+  arpwatch-2.1.13-r2.ebuild, arpwatch-2.1.13-r3.ebuild:
+  Fixed RDEPEND as reported in bug 136261. Thank Petre Rodan.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-arpwatch-2.1.11-r1, files/digest-arpwatch-2.1.13-r2,

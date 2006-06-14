@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.16 2006/01/28 19:23:06 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.17 2006/06/14 10:36:22 pva Exp $
 
 MY_P=arpwatch-2.1a11
 S="${WORKDIR}/${MY_P}"
@@ -17,7 +17,8 @@ IUSE="selinux"
 DEPEND="virtual/libpcap
 	sys-libs/ncurses"
 
-RDEPEND="selinux? ( sec-policy/selinux-arpwatch )"
+RDEPEND="${DEPEND}
+		selinux? ( sec-policy/selinux-arpwatch )"
 
 src_unpack() {
 	unpack ${A}

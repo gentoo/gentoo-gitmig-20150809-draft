@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.13-r2.ebuild,v 1.2 2006/01/28 19:23:06 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.13-r2.ebuild,v 1.3 2006/06/14 10:36:22 pva Exp $
 
 inherit eutils versionator
 
@@ -19,7 +19,8 @@ IUSE="selinux"
 DEPEND="virtual/libpcap
 	sys-libs/ncurses"
 
-RDEPEND="selinux? ( sec-policy/selinux-arpwatch )"
+RDEPEND="${DEPEND}
+		selinux? ( sec-policy/selinux-arpwatch )"
 
 pkg_setup() {
 	enewgroup arpwatch
