@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.23.ebuild,v 1.1 2006/06/14 07:01:47 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.23.ebuild,v 1.2 2006/06/14 07:16:13 pva Exp $
 
 inherit eutils gnome2 mono autotools
 
@@ -28,8 +28,10 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog README TODO"
 
 pkg_setup() {
-	built_with_use -a sys-apps/dbus mono || die \
-	"${PN} requires dbus build with mono support. Please, reemerge dbus with USE=\"mono\""
+	if use dbus ; then
+		built_with_use -a sys-apps/dbus mono || die \
+		"${PN} requires dbus build with mono support. Please, reemerge dbus with USE=\"mono\""
+	fi
 }
 
 src_compile () {
