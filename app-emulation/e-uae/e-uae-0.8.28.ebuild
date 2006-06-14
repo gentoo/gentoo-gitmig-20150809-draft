@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28.ebuild,v 1.1 2006/06/13 14:00:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28.ebuild,v 1.2 2006/06/14 14:17:05 pva Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,8 +13,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X dga ncurses sdl gtk alsa oss sdl-sound capslib"
 
-# app-emulation/e-uae:sdl-sound - Use media-libs/sdl-sound for audio output.
-# app-emulation/e-uae:capslib - Add CAPS library support.
 # Note: opposed to ./configure --help zlib support required! Check
 # src/Makefile.am that includes zfile.c unconditionaly.
 RDEPEND="X? ( || ( ( x11-libs/libXt
@@ -65,7 +63,7 @@ pkg_setup() {
 
 	# VIDEO setup. X is autodetected (there is no --with-X option).
 	if use X ; then
-		myconf="$myconf --without-curses --without-sdl-gfx --enable-vidmode"
+		myconf="$myconf --without-curses --without-sdl-gfx"
 		use dga && myconf="$myconf --enable-dga --enable-vidmode"
 	elif use sdl ; then
 		myconf="$myconf --with-sdl --with-sdl-gfx --without-curses"
@@ -91,12 +89,15 @@ pkg_setup() {
 	myconf="$myconf --enable-bsdsock"
 }
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/e-uae-0.8.28-shm-crash.patch
+}
+
 src_compile() {
 	strip-flags
-
-#	export WANT_AUTOMAKE=1.7
-#	export WANT_AUTOCONF=2.5
-#	./bootstrap.sh || die "bootstrap failed"
 
 	econf ${myconf} \
 		--with-libscg-includedir=/usr/include/scsilib \
