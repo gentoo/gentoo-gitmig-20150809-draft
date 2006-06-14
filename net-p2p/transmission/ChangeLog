@@ -1,0 +1,11 @@
+# ChangeLog for net-p2p/transmission
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.1 2006/06/14 03:21:36 squinky86 Exp $
+
+*transmission-0.5 (14 Jun 2006)
+
+  14 Jun 2006; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +transmission-0.5.ebuild:
+  Initial import. Thanks to Eric Johney <ericjohney@gmail.com> for this ebuild
+  in #124721.
+
