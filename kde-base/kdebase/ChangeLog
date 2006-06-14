@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.285 2006/06/11 15:04:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.286 2006/06/14 18:23:59 carlo Exp $
+
+*kdebase-3.5.2-r2 (14 Jun 2006)
+*kdebase-3.4.3-r2 (14 Jun 2006)
+
+  14 Jun 2006; Carsten Lohrke <carlo@gentoo.org> +kdebase-3.4.3-r2.ebuild,
+  +kdebase-3.5.2-r2.ebuild:
+  Fix KDM symlink attack vulnerability, bug #136201.
 
   11 Jun 2006; Carsten Lohrke <carlo@gentoo.org> kdebase-3.5.2-r1.ebuild:
   Restore keywords.

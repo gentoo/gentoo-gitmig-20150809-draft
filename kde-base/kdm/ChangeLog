@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.55 2006/06/11 14:59:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.56 2006/06/14 18:20:26 carlo Exp $
+
+*kdm-3.5.3-r1 (14 Jun 2006)
+*kdm-3.5.2-r1 (14 Jun 2006)
+*kdm-3.4.3-r2 (14 Jun 2006)
+
+  14 Jun 2006; Carsten Lohrke <carlo@gentoo.org> +kdm-3.4.3-r2.ebuild,
+  +kdm-3.5.2-r1.ebuild, +kdm-3.5.3-r1.ebuild:
+  Fix KDM symlink attack vulnerability, bug #136201.
 
   11 Jun 2006; Carsten Lohrke <carlo@gentoo.org> kdm-3.5.2.ebuild:
   Restore keywords.
