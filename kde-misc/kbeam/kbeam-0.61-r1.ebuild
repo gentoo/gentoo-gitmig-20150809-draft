@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbeam/kbeam-0.61-r1.ebuild,v 1.1 2006/04/21 08:44:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbeam/kbeam-0.61-r1.ebuild,v 1.2 2006/06/14 14:28:37 cryos Exp $
 
 inherit kde autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.kde-apps.org/content/show.php?content=${KLV}"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 SLOT="0"
 
