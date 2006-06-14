@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r1.ebuild,v 1.3 2006/06/14 21:28:46 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r1.ebuild,v 1.4 2006/06/14 21:48:36 genstef Exp $
 
 inherit eutils pam flag-o-matic multilib autotools
 
@@ -76,7 +76,6 @@ src_compile() {
 		--with-cups-group=lp \
 		--with-system-groups=lpadmin \
 		--localstatedir=/var \
-		# location of files for the cups web interface
 		--with-docdir=/usr/share/cups/html \
 		--with-bindnow=$(bindnow-flags) \
 		$(use_enable pam) \
@@ -147,7 +146,7 @@ pkg_postinst() {
 	ewarn "# mv /etc/cups /etc/cups.orig; emerge -va cups"
 	ewarn
 	ewarn "If you are updating from cups-1.1.* you need to remerge every ebuild"
-	ewarn "that installed into /usr/lib/cups and /etc/cups:"
+	ewarn "that installed into /usr/lib/cups and /etc/cups, qfile is in portage-utils:"
 	ewarn "# emerge -va \$(qfile -qC /usr/lib/cups /etc/cups | sed \"s:net-print/cups$::\")"
 	ewarn
 	ewarn "You should also run revdep-rebuild"
