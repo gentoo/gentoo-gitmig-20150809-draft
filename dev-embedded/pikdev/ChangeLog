@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/pikdev
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.24 2006/05/13 07:11:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.25 2006/06/14 00:09:06 robbat2 Exp $
+
+  14 Jun 2006; Robin H. Johnson <robbat2@gentoo.org> pikdev-0.7.1.ebuild,
+  pikdev-0.7.1-r2.ebuild:
+  Re-fix bug #132368.
 
   13 May 2006; Robin H. Johnson <robbat2@gentoo.org> pikdev-0.7.1-r1.ebuild:
   Bug #132368, fix SRC_URI since author no longer hosts tarball.

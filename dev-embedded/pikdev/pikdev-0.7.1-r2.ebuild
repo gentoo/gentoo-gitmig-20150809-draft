@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.7.1-r2.ebuild,v 1.1 2005/05/01 23:11:32 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.7.1-r2.ebuild,v 1.2 2006/06/14 00:09:06 robbat2 Exp $
 
 inherit kde
 
@@ -13,7 +13,8 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 IUSE=""
 # restrict at Authors request
-RESTRICT="nomirror"
+# RESTRICT="nomirror"
+# but he has since stopped hosting it, it's on the gentoo mirrors now
 
 DEPEND="dev-embedded/gputils"
 need-kde 3
