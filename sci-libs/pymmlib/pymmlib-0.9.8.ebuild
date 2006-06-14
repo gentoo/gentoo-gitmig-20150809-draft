@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-0.9.8.ebuild,v 1.1 2006/06/14 00:05:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-0.9.8.ebuild,v 1.2 2006/06/14 01:28:29 spyderous Exp $
 
 inherit python
 
@@ -13,7 +13,7 @@ KEYWORDS="~ppc ~x86"
 IUSE=""
 RDEPEND="virtual/glut
 	dev-python/pygtkglext
-	dev-python/numpy
+	<dev-python/numpy-0.9.8
 	virtual/opengl
 	virtual/glu
 	|| ( x11-libs/libXmu virtual/x11 )"
