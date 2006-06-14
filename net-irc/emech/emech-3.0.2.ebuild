@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/emech-3.0.2.ebuild,v 1.1 2006/06/12 00:48:44 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/emech-3.0.2.ebuild,v 1.2 2006/06/14 18:20:55 dertobi123 Exp $
 
 inherit toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.energymech.net/"
 SRC_URI="http://www.energymech.net/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="ppc ~x86"
 IUSE="debug session tcltk"
 
 DEPEND=""

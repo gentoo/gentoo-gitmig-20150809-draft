@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/emech
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/ChangeLog,v 1.6 2006/06/12 00:48:44 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/ChangeLog,v 1.7 2006/06/14 18:20:55 dertobi123 Exp $
+
+  14 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org> emech-3.0.2.ebuild:
+  ppc stable, bug #132749
 
 *emech-3.0.2 (12 Jun 2006)
 
