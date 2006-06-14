@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/openbox-themes
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/openbox-themes/ChangeLog,v 1.17 2005/08/24 14:31:02 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/openbox-themes/ChangeLog,v 1.18 2006/06/14 13:05:45 gustavoz Exp $
+
+  14 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  openbox-themes-0.6-r1.ebuild:
+  Stable on sparc
 
   24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   openbox-themes-0.6-r1.ebuild:
