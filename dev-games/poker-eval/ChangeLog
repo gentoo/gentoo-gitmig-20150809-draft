@@ -1,0 +1,10 @@
+# ChangeLog for dev-games/poker-eval
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/poker-eval/ChangeLog,v 1.1 2006/06/14 01:34:17 tcort Exp $
+
+*poker-eval-131.0 (14 Jun 2006)
+
+  14 Jun 2006; Thomas Cort <tcort@gentoo.org> +metadata.xml,
+  +poker-eval-131.0.ebuild:
+  Initial commit. Ebuild from Bug #92515.
+
