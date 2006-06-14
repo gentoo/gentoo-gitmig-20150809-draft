@@ -1,8 +1,8 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/matchbox-window-manager-1.0.ebuild,v 1.1 2006/06/04 21:47:11 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/matchbox-window-manager-1.0.ebuild,v 1.2 2006/06/14 21:50:45 yvasilev Exp $
 
-inherit versionator
+inherit eutils versionator
 
 DESCRIPTION="Light weight WM designed for use on PDA computers"
 HOMEPAGE="http://projects.o-hand.com/matchbox/"
@@ -22,6 +22,14 @@ DEPEND=">=x11-libs/libmatchbox-1.5
 	xcomposite? ( || ( (	x11-libs/libXcomposite
 				x11-libs/libXdamage )
 			virtual/x11 ) )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Allows to build with USE=-png
+	epatch "${FILESDIR}/${P}-use-nopng.patch"
+}
 
 src_compile() {
 	econf 	--enable-keyboard \
