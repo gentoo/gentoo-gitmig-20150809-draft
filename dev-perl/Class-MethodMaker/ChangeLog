@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-MethodMaker
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/ChangeLog,v 1.28 2006/05/28 09:34:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/ChangeLog,v 1.29 2006/06/14 00:24:10 mcummings Exp $
+
+  14 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Class-MethodMaker-2.07-r2.ebuild, Class-MethodMaker-2.08.ebuild:
+  Updating the ignore build file stuff
 
   28 May 2006; Bryan Østergaard <kloeri@gentoo.org>
   Class-MethodMaker-2.08.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/Class-MethodMaker-2.08.ebuild,v 1.9 2006/05/28 09:34:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/Class-MethodMaker-2.08.ebuild,v 1.10 2006/06/14 00:24:10 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha ~amd64 arm hppa ia64 m68k ppc s390 sh sparc x86"
 IUSE=""
 
 SRC_TEST="do"
-USE_BUILDER="no"
+PREFER_BUILDPL="no"
 
 
 DEPEND=">=dev-perl/module-build-0.26"
