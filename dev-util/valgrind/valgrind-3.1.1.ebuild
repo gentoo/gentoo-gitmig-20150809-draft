@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.1.1.ebuild,v 1.3 2006/06/09 20:01:40 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.1.1.ebuild,v 1.4 2006/06/14 17:07:34 griffon26 Exp $
 
-inherit autotools eutils flag-o-matic
+inherit autotools eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="An open-source memory debugger for GNU/Linux"
 HOMEPAGE="http://www.valgrind.org"
@@ -52,6 +52,12 @@ src_compile() {
 	filter-flags -fpie
 	filter-flags -fstack-protector
 	replace-flags -ggdb3 -ggdb2
+
+	# gcc 3.3.x fails to compile valgrind with -O3 (bug #129776)
+	if [ "$(gcc-version)" == "3.3" ] && is-flagq -O3; then
+		ewarn "GCC 3.3 cannot compile valgrind with -O3 in CFLAGS, using -O2 instead."
+		replace-flags -O3 -O2
+	fi
 
 	# Optionally build in X suppression files
 	use X && myconf="--with-x" || myconf="--with-x=no"

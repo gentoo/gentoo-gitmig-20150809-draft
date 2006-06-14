@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.62 2006/06/11 12:12:37 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.63 2006/06/14 17:07:34 griffon26 Exp $
+
+  14 Jun 2006; Maurice van der Pot <griffon26@gentoo.org>
+  valgrind-3.1.1.ebuild, valgrind-3.2.0.ebuild:
+  Now replacing -O3 with -O2 if compiling with gcc 3.3.x for bug #129776
+  reported by Fabian Groffen <grobian@gentoo.org>. Also corrected location 
+  of docs for valgrind-3.2.0.
 
   11 Jun 2006; Maurice van der Pot <griffon26@gentoo.org>
   valgrind-3.2.0.ebuild:
