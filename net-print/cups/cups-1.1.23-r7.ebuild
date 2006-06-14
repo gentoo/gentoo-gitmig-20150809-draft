@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.15 2006/04/02 16:30:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.16 2006/06/14 20:43:33 vapier Exp $
 
 inherit eutils flag-o-matic pam autotools
 
@@ -123,6 +123,7 @@ src_install() {
 		-e "s:^#\(SystemGroup\).*:\1 lp:" \
 		-e "s:^#\(User\).*:\1 lp:" \
 		-e "s:^#\(Group\).*:\1 lp:" \
+		-e "/^Port/s|Port 631|Port localhost:631|" \
 		${D}/etc/cups/cupsd.conf
 
 	pamd_mimic_system cups auth account
