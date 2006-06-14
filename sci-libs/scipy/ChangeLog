@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.7 2006/06/14 00:35:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.8 2006/06/14 01:09:34 spyderous Exp $
+
+*scipy-0.4.9 (14 Jun 2006)
+
+  14 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; +scipy-0.4.9.ebuild:
+  Bump. Incorporates many changes from the science overlay, mainly from bicatali.
 
   14 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
   scipy-0.4.8-r1.ebuild:
