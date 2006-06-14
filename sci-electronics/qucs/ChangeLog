@@ -1,6 +1,13 @@
 # ChangeLog for sci-electronics/qucs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.6 2006/01/23 16:00:22 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.7 2006/06/14 13:53:50 cryos Exp $
+
+*qucs-0.0.9 (14 Jun 2006)
+
+  14 Jun 2006; Marcus D. Hanwell <cryos@gentoo.org> -qucs-0.0.7.ebuild,
+  qucs-0.0.8.ebuild, +qucs-0.0.9.ebuild:
+  Version bump, closes bug 136095. Prune old version and mark 0.0.8 stable on
+  amd64.
 
 *qucs-0.0.8 (23 Jan 2006)
 
