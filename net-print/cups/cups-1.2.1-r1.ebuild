@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r1.ebuild,v 1.1 2006/06/13 18:30:35 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r1.ebuild,v 1.2 2006/06/14 17:03:48 genstef Exp $
 
 inherit eutils pam flag-o-matic multilib autotools
 
@@ -14,7 +14,7 @@ SRC_URI="http://ftp.easysw.com/pub/cups/${PV}/${MY_P}-source.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="ssl slp pam samba nls gnutls dbus"
+IUSE="ssl slp pam samba nls gnutls dbus tiff png jpeg"
 
 DEP="pam? ( virtual/pam )
 	ssl? (
@@ -23,9 +23,9 @@ DEP="pam? ( virtual/pam )
 		)
 	slp? ( >=net-libs/openslp-1.0.4 )
 	dbus? ( sys-apps/dbus )
-	>=media-libs/libpng-1.2.1
-	>=media-libs/tiff-3.5.5
-	>=media-libs/jpeg-6b
+	png? ( >=media-libs/libpng-1.2.1 )
+	tiff? ( >=media-libs/tiff-3.5.5 )
+	jpeg? ( >=media-libs/jpeg-6b )
 	app-text/libpaper"
 DEPEND="${DEP}
 	nls? ( sys-devel/gettext )"
@@ -82,6 +82,9 @@ src_compile() {
 		$(use_enable slp) \
 		$(use_enable nls) \
 		$(use_enable dbus) \
+		$(use_enable png) \
+		$(use_enable jpeg) \
+		$(use_enable tiff) \
 		--enable-libpaper \
 		--enable-threads \
 		--enable-static \
@@ -122,14 +125,14 @@ src_install() {
 
 pkg_preinst() {
 	# cleanups
-	[ -n "${PN}" ] && rm -fR /usr/share/doc/${PN}-*
+	[ -n "${PN}" ] && rm -fR ${ROOT}/usr/share/doc/${PN}-*
 }
 
 pkg_postinst() {
 	einfo "Remote printing: change "
-	echo "Listen localhost:631"
+	einfo "Listen localhost:631"
 	einfo "to"
-	echo "Listen *:631"
+	einfo "Listen *:631"
 	einfo "in /etc/cups/cupsd.conf"
 	einfo
 	einfo "For more information about installing a printer take a look at:"
@@ -137,6 +140,19 @@ pkg_postinst() {
 	einfo
 	einfo "You need to emerge ghostscript with the cups-USEflag turned on"
 	ewarn
+	ewarn "The configuration changed with cups-1.2, you may want to save the old"
+	ewarn "one and start from scratch:"
+	ewarn "# mv /etc/cups /etc/cups.orig; emerge -va cups"
+	ewarn
 	ewarn "If you are updating from cups-1.1.* you need to remerge every ebuild"
-	ewarn "that installed into /usr/lib/cups: \"emerge -va \$(qfile -qC /usr/lib/cups)\""
+	ewarn "that installed into /usr/lib/cups and /etc/cups:"
+	ewarn "# emerge -va \$(qfile -qC /usr/lib/cups /etc/cups | sed \"s:net-print/cups$::\")"
+	ewarn
+	ewarn "You should also run revdep-rebuild"
+
+	# place symlinks to make the update smoothless
+	for i in ${ROOT}/usr/lib/cups/{backend,filter}/*; do
+		[ "${i/\*}" != "${i}" ] && continue;
+		ln -s ${i} ${i/lib/libexec}
+	done
 }

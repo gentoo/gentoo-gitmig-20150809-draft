@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.173 2006/06/13 18:30:35 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.174 2006/06/14 17:03:48 genstef Exp $
+
+  14 Jun 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.2.1-r1.ebuild:
+  Add more useflags thanks to Gilles Dartiguelongue <dartigug@esiee.fr> in bug
+  136787, also improve postinst and add automatic update-help-symlinks
 
 *cups-1.2.1-r1 (13 Jun 2006)
 
