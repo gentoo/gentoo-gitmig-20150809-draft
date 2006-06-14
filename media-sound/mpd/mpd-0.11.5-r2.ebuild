@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5-r2.ebuild,v 1.9 2006/05/08 04:32:52 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5-r2.ebuild,v 1.10 2006/06/14 18:44:07 vapier Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ DEPEND=">=media-libs/libao-0.8.4
 upgrade_warning() {
 	echo
 	ewarn "This package now correctly uses 'vorbis' USE flag, instead of 'ogg'."
-	ewarn "See http://bugs.gentoo.org/show_bug.cgi?id=101877 for details."
+	ewarn "See http://bugs.gentoo.org/101877 for details."
 	echo
 	ewarn "Home directory of user mpd, as well as default locations in mpd.conf have"
 	ewarn "been changed to /var/lib/mpd, please bear that in mind while updating."
@@ -66,17 +66,16 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failed"
+	make install DESTDIR="${D}" || die "make install failed"
 
-	rm -rf ${D}/usr/share/doc/mpd/
+	rm -rf "${D}"/usr/share/doc/mpd/
 	dodoc ChangeLog README TODO UPGRADING
 	dodoc doc/COMMANDS doc/mpdconf.example
 
 	insinto /etc
 	newins doc/mpdconf.example mpd.conf
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/mpd.rc6 mpd
+	newinitd "${FILESDIR}"/mpd.rc6 mpd
 
 	if use unicode; then
 		dosed 's:^#filesystem_charset.*$:filesystem_charset "UTF-8":' /etc/mpd.conf
