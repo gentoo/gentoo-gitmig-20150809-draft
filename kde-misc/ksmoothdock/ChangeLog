@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/ksmoothdock
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ChangeLog,v 1.13 2006/06/07 05:16:59 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ChangeLog,v 1.14 2006/06/14 14:54:55 cryos Exp $
+
+  14 Jun 2006; Marcus D. Hanwell <cryos@gentoo.org>
+  -ksmoothdock-3.5.1.ebuild, ksmoothdock-3.6.1.ebuild:
+  Stable on amd64, bug 135660. Removed old version.
 
   07 Jun 2006; Joshua Jackson <tsunam@gentoo.org> ksmoothdock-3.6.1.ebuild:
   Stable on x86; bug #135660
