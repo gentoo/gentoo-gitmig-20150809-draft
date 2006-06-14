@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.142 2006/06/13 03:20:20 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.143 2006/06/14 10:58:22 jer Exp $
+
+  14 Jun 2006; Jeroen Roovers <jer@gentoo.org> xterm-212-r3.ebuild:
+  Stable for hppa (bug #136546).
 
   13 Jun 2006; Jon Hood <squinky86@gentoo.org> xterm-212-r3.ebuild:
   Stable on amd64, #136546.
