@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/boson
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.19 2006/06/09 01:55:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.20 2006/06/14 16:22:30 wolf31o2 Exp $
+
+  14 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> boson-0.12.ebuild:
+  Stable on x86 wrt bug #133498.
 
 *boson-0.12 (09 Jun 2006)
 
