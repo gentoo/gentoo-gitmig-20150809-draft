@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation and Thomas Capricelli <orzel@kde.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.12.ebuild,v 1.2 2006/06/14 16:22:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.12.ebuild,v 1.3 2006/06/14 20:46:28 wolf31o2 Exp $
 
 inherit eutils kde-functions toolchain-funcs
 
@@ -16,8 +16,8 @@ IUSE=""
 RDEPEND="virtual/opengl
 	virtual/glu
 	media-libs/openal"
-#DEPEND="${RDEPEND}
-#	>=dev-util/cmake-2.4.2"
+DEPEND="${RDEPEND}
+	dev-util/cmake"
 need-kde 3
 
 S=${WORKDIR}/${PN}-all-${PV}
