@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/serpentine-0.7.ebuild,v 1.1 2006/06/13 01:02:09 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/serpentine-0.7.ebuild,v 1.2 2006/06/14 21:01:14 metalgod Exp $
 
 inherit gnome2 mono
 
@@ -18,11 +18,9 @@ RDEPEND=">=dev-lang/python-2.4
 	>=dev-python/pygtk-2.6
 	>=dev-python/gnome-python-desktop-2.14.0
 	>=dev-python/pyxml-0.8.4
-	=dev-python/gst-python-0.8*
+	>=dev-python/gst-python-0.10
 	gnome-base/gconf
-	|| ( =media-plugins/gst-plugins-gnomevfs-0.8.10
-	=media-plugins/gst-plugins-gnomevfs-0.8.11
-	=media-plugins/gst-plugins-gnomevfs-0.8.12 )
+	>=media-plugins/gst-plugins-gnomevfs-0.10
 	muine? ( media-sound/muine )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
