@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/excido
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/ChangeLog,v 1.12 2006/06/14 14:14:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/ChangeLog,v 1.13 2006/06/14 14:16:26 wolf31o2 Exp $
+
+  14 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  excido-0.1.5c-r1.ebuild:
+  Added ~alpha since the previous version had it and somehow the KEYWORDS got
+  dropped along the way. This will also facilitate being able to remove the
+  older versions once the new openal/freealut work is complete.
 
   14 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   excido-0.1.5c-r1.ebuild:
