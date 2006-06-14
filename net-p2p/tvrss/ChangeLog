@@ -1,0 +1,11 @@
+# ChangeLog for net-p2p/tvrss
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tvrss/ChangeLog,v 1.1 2006/06/14 00:02:39 squinky86 Exp $
+
+*tvrss-1.8_beta (13 Jun 2006)
+
+  13 Jun 2006; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +tvrss-1.8_beta.ebuild:
+  Initial import. Thanks to Andreas Noteng <andreas@noteng.no> in bug #91091
+  for this package.
+
