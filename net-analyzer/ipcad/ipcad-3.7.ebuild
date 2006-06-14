@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ipcad-3.7.ebuild,v 1.2 2006/02/15 23:06:54 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ipcad-3.7.ebuild,v 1.3 2006/06/14 13:33:31 pva Exp $
+
+inherit eutils
 
 DESCRIPTION="IP Cisco Accounting Daemon"
 HOMEPAGE="http://ipcad.sourceforge.net/"
@@ -10,10 +12,15 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
 
-DEPEND=">=sys-apps/sed-4"
-
-RDEPEND="net-libs/libpcap
+DEPEND="net-libs/libpcap
 	net-firewall/iptables"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-20060614-cvs.patch
+}
 
 src_install() {
 	sed -i -e "s/^chroot = \/adm\/tmp;/chroot = \/var\/ipcad;/" ipcad.conf.default
