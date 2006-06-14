@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.85 2006/06/09 21:02:48 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.86 2006/06/14 08:22:57 ian Exp $
+
+  14 Jun 2006; Christian Hartmann <ian@gentoo.org>
+  amavisd-new-2.3.3-r2.ebuild:
+  Fixed chown troubles (Commit authorized by Ticho)
 
   09 Jun 2006; Andrej Kacian <ticho@gentoo.org>
   -files/amavisd-new-2.4.0-amavisd.conf-gentoo.patch,

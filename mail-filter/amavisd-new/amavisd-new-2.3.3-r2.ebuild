@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.3-r2.ebuild,v 1.11 2006/04/10 20:35:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.3-r2.ebuild,v 1.12 2006/06/14 08:22:57 ian Exp $
 
 inherit eutils
 
@@ -102,7 +102,6 @@ src_install() {
 	insinto /etc
 	insopts -m0640
 	newins amavisd.conf-sample amavisd.conf
-	fowners root:amavis /etc/amavisd.conf
 	dosed "s:^#\\?\\\$MYHOME[^;]*;:\$MYHOME = '$AMAVIS_ROOT';:" \
 		/etc/amavisd.conf
 	if [ "$(dnsdomainname)" = "(none)" ] ; then
@@ -165,7 +164,6 @@ src_install() {
 		fi
 	fi
 
-	chown -R amavis:amavis ${D}/${AMAVIS_ROOT}
 	find ${D}/${AMAVIS_ROOT} -name "*" -type d -exec chmod 0750 \{\} \;
 	find ${D}/${AMAVIS_ROOT} -name "*" -type f -exec chmod 0640 \{\} \;
 }
@@ -184,4 +182,5 @@ pkg_postinst() {
 	echo
 	chmod o-rwx /etc/amavisd.conf
 	chown root:amavis /etc/amavisd.conf
+	chown -R amavis:amavis ${AMAVIS_ROOT}
 }
