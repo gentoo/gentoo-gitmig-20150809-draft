@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SNPP
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNPP/ChangeLog,v 1.8 2006/03/30 23:07:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNPP/ChangeLog,v 1.9 2006/06/14 15:52:14 superlag Exp $
+
+  14 Jun 2006; Aaron Kulbe <superlag@gentoo.org> Net-SNPP-1.17.ebuild:
+  Adding ~amd64 keyword.
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Net-SNPP-1.17.ebuild:
   Mark 1.17 ~ia64
