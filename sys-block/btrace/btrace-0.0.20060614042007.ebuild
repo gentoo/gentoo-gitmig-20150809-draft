@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-0.0.20060428050322.ebuild,v 1.3 2006/06/14 05:23:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-0.0.20060614042007.ebuild,v 1.1 2006/06/14 05:23:53 robbat2 Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="btrace can show detailed info about what is happening on a block device io queue."
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/axboe/blktrace/"
@@ -23,7 +23,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_PN}"
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} -Wall -W" || die "emake failed"
+	append-flags -DLVM_REMAP_WORKAROUND -W -I${S}
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
 	if use doc; then
 		emake docs || die "emake docs failed"
 	fi
