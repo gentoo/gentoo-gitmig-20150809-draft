@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.7 2006/06/13 23:34:12 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.8 2006/06/14 01:06:59 spyderous Exp $
+
+*numpy-0.9.8 (14 Jun 2006)
+
+  14 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; +numpy-0.9.8.ebuild:
+  Bump. Incorporates many changes from the science overlay, mainly from bicatali.
 
   13 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
   Add sci herd as co-maintainer.
