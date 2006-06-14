@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2-r1.ebuild,v 1.1 2006/06/09 08:53:24 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2-r1.ebuild,v 1.2 2006/06/14 09:57:55 keri Exp $
 
 inherit eutils
 
@@ -8,7 +8,8 @@ MY_P=${PN}-compiler-${PV}
 
 DESCRIPTION="Mercury is a modern general-purpose logic/functional programming language"
 HOMEPAGE="http://www.cs.mu.oz.au/research/mercury/index.html"
-SRC_URI="ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/${MY_P}.tar.gz
+	ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/mercury-tests-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,15 +20,20 @@ IUSE="debug minimal readline"
 DEPEND="readline? ( sys-libs/readline )"
 
 S="${WORKDIR}"/${MY_P}
+TESTDIR="${WORKDIR}"/${PN}-tests-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-portage.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-portage-r1.patch
 	epatch "${FILESDIR}"/${P}-CFLAGS.patch
 	epatch "${FILESDIR}"/${P}-LIBDIR.patch
 	epatch "${FILESDIR}"/${P}-docs.patch
+
+	cd "${TESTDIR}"
+	epatch "${FILESDIR}"/${P}-tests.patch
+	sed -i -e "s:MDB_DOC:${S}/doc/mdb_doc:" mdbrc
 }
 
 src_compile() {
@@ -39,6 +45,17 @@ src_compile() {
 		PACKAGE_VERSION=${PV} \
 		|| die "econf failed"
 	emake || die "emake failed"
+}
+
+src_test() {
+	cd "${TESTDIR}"
+
+	PATH="${S}"/scripts:"${S}"/util:"${PATH}" \
+	WORKSPACE="${S}" \
+	MERCURY_COMPILER="${S}"/compiler/${PN}_compile \
+	MMAKE_DIR="${S}"/scripts \
+	MERCURY_DEBUGGER_INIT="${TESTDIR}"/mdbrc \
+	mmake || die "mmake test failed"
 }
 
 src_install() {

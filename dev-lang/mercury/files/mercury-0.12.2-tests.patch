@@ -1,0 +1,120 @@
+diff -urN mercury-tests-0.12.2.orig/hard_coded/dir_test.exp mercury-tests-0.12.2/hard_coded/dir_test.exp
+--- mercury-tests-0.12.2.orig/hard_coded/dir_test.exp	2003-07-29 03:50:45.000000000 +1200
++++ mercury-tests-0.12.2/hard_coded/dir_test.exp	2006-06-11 18:52:41.000000000 +1200
+@@ -130,7 +130,6 @@
+ "foo"/"bar/baz" = "foo\bar\baz".
+ "foo/"/"bar/baz" = "foo\bar\baz".
+ checking whether `unwritable' is readable...ok
+-unwritable file found to be unwritable
+ make_directory succeeded
+ make_directory succeeded
+ dir.make_single_directory with non-existent parent failed as expected.
+diff -urN mercury-tests-0.12.2.orig/hard_coded/dir_test.exp2 mercury-tests-0.12.2/hard_coded/dir_test.exp2
+--- mercury-tests-0.12.2.orig/hard_coded/dir_test.exp2	2003-07-29 03:50:45.000000000 +1200
++++ mercury-tests-0.12.2/hard_coded/dir_test.exp2	2006-06-11 18:48:26.000000000 +1200
+@@ -127,7 +127,6 @@
+ "foo"/"bar/baz" = "foo/bar/baz".
+ "foo/"/"bar/baz" = "foo/bar/baz".
+ checking whether `unwritable' is readable...ok
+-unwritable file found to be unwritable
+ make_directory succeeded
+ make_directory succeeded
+ dir.make_single_directory with non-existent parent failed as expected.
+diff -urN mercury-tests-0.12.2.orig/hard_coded/dir_test.exp3 mercury-tests-0.12.2/hard_coded/dir_test.exp3
+--- mercury-tests-0.12.2.orig/hard_coded/dir_test.exp3	2003-07-29 03:50:45.000000000 +1200
++++ mercury-tests-0.12.2/hard_coded/dir_test.exp3	2006-06-11 18:51:44.000000000 +1200
+@@ -130,7 +130,6 @@
+ "foo"/"bar/baz" = "foo/bar/baz".
+ "foo/"/"bar/baz" = "foo/bar/baz".
+ checking whether `unwritable' is readable...ok
+-unwritable file found to be unwritable
+ make_directory succeeded
+ make_directory succeeded
+ dir.make_single_directory with non-existent parent failed as expected.
+diff -urN mercury-tests-0.12.2.orig/hard_coded/dir_test.m mercury-tests-0.12.2/hard_coded/dir_test.m
+--- mercury-tests-0.12.2.orig/hard_coded/dir_test.m	2003-08-05 22:50:33.000000000 +1200
++++ mercury-tests-0.12.2/hard_coded/dir_test.m	2006-06-11 18:47:35.000000000 +1200
+@@ -50,16 +50,6 @@
+ 	io__write(ReadResult),
+ 	io__nl,
+ 
+-	io__check_file_accessibility("unwritable",
+-		[read, write], WriteResult),
+-	( { WriteResult = ok } ->
+-		io__write_string(
+-		"Error: unwritable file found to be writable\n")
+-	;
+-		io__write_string(
+-		"unwritable file found to be unwritable\n")
+-	),
+-
+ 	{ Dir1 = "test_dir"/"d1" },
+ 	test0("make_directory", dir__make_directory(Dir1)),
+ 	% Test making a directory that already exists.
+diff -urN mercury-tests-0.12.2.orig/mdbrc mercury-tests-0.12.2/mdbrc
+--- mercury-tests-0.12.2.orig/mdbrc	1970-01-01 12:00:00.000000000 +1200
++++ mercury-tests-0.12.2/mdbrc	2006-06-13 23:14:54.000000000 +1200
+@@ -0,0 +1,19 @@
++source MDB_DOC
++alias	s	step
++alias	g	goto
++alias	f	finish
++alias	r	retry
++alias	v	vars
++alias	p	print
++alias	P	print *
++alias	d	stack
++alias	c	continue
++alias	b	break
++alias	h	help
++alias	?	help
++alias	excp	exception
++alias	e	exception
++alias	EMPTY	step
++alias	NUMBER	step
++set xml_browser_cmd ''
++set xml_tmp_filename ''
+diff -urN mercury-tests-0.12.2.orig/tabling/loopcheck.exp5 mercury-tests-0.12.2/tabling/loopcheck.exp5
+--- mercury-tests-0.12.2.orig/tabling/loopcheck.exp5	1970-01-01 12:00:00.000000000 +1200
++++ mercury-tests-0.12.2/tabling/loopcheck.exp5	2006-06-11 13:36:36.000000000 +1200
+@@ -0,0 +1,3 @@
++Uncaught Mercury exception:
++Software Error: detected infinite recursion in pred loopcheck.loop/1
++Stack dump not available in this grade.
+diff -urN mercury-tests-0.12.2.orig/tabling/loopcheck_nondet.exp2 mercury-tests-0.12.2/tabling/loopcheck_nondet.exp2
+--- mercury-tests-0.12.2.orig/tabling/loopcheck_nondet.exp2	1970-01-01 12:00:00.000000000 +1200
++++ mercury-tests-0.12.2/tabling/loopcheck_nondet.exp2	2006-06-11 13:38:18.000000000 +1200
+@@ -0,0 +1,3 @@
++Uncaught Mercury exception:
++Software Error: detected infinite recursion in pred loopcheck_nondet.loop/2
++Stack dump not available in this grade.
+diff -urN mercury-tests-0.12.2.orig/tabling/tc_loop.exp3 mercury-tests-0.12.2/tabling/tc_loop.exp3
+--- mercury-tests-0.12.2.orig/tabling/tc_loop.exp3	1970-01-01 12:00:00.000000000 +1200
++++ mercury-tests-0.12.2/tabling/tc_loop.exp3	2006-06-11 13:32:14.000000000 +1200
+@@ -0,0 +1,3 @@
++Uncaught Mercury exception:
++Software Error: detected infinite recursion in pred tc_loop.tc/2
++Stack dump not available in this grade.
+diff -urN mercury-tests-0.12.2.orig/tabling/tc_memo.exp2 mercury-tests-0.12.2/tabling/tc_memo.exp2
+--- mercury-tests-0.12.2.orig/tabling/tc_memo.exp2	1970-01-01 12:00:00.000000000 +1200
++++ mercury-tests-0.12.2/tabling/tc_memo.exp2	2006-06-11 13:37:21.000000000 +1200
+@@ -0,0 +1,3 @@
++Uncaught Mercury exception:
++Software Error: detected infinite recursion in pred tc_memo.tc/2
++Stack dump not available in this grade.
+diff -urN mercury-tests-0.12.2.orig/tabling/tc_memo2.exp2 mercury-tests-0.12.2/tabling/tc_memo2.exp2
+--- mercury-tests-0.12.2.orig/tabling/tc_memo2.exp2	1970-01-01 12:00:00.000000000 +1200
++++ mercury-tests-0.12.2/tabling/tc_memo2.exp2	2006-06-11 13:33:49.000000000 +1200
+@@ -0,0 +1,3 @@
++Uncaught Mercury exception:
++Software Error: detected need for minimal model in pred tc_memo2.tc/2
++Stack dump not available in this grade.
+diff -urN mercury-tests-0.12.2.orig/valid/Mmakefile mercury-tests-0.12.2/valid/Mmakefile
+--- mercury-tests-0.12.2.orig/valid/Mmakefile	2005-08-17 16:44:17.000000000 +1200
++++ mercury-tests-0.12.2/valid/Mmakefile	2006-06-11 20:48:47.000000000 +1200
+@@ -376,3 +376,5 @@
+ 	rm -f *.err *.h
+ 
+ #-----------------------------------------------------------------------------#
++
++MCFLAGS-ho_and_type_spec_bug+=--no-optimize-higher-order
