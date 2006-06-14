@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/nss_ldap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.23 2006/06/11 10:20:23 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.24 2006/06/14 09:27:42 robbat2 Exp $
+
+*nss_ldap-250-r1 (14 Jun 2006)
+
+  14 Jun 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/nss_ldap-250-reconnect-timeouts.patch, +nss_ldap-250-r1.ebuild:
+  Commit 250-r1 with modified timeout values. Please see my blog posting
+  http://tinyurl.com/qewur for a detailed explaination.
 
   11 Jun 2006; Simon Stelling <blubb@gentoo.org> nss_ldap-249.ebuild:
   stable on amd64
