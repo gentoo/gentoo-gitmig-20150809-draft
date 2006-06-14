@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.33 2006/06/14 13:25:35 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.34 2006/06/14 18:03:57 dertobi123 Exp $
+
+  14 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org> wv2-0.2.3.ebuild:
+  ppc stable, bug #136759
 
   14 Jun 2006; Jon Hood <squinky86@gentoo.org> wv2-0.2.3.ebuild:
   Stable on amd64 wrt security bug #136759.
