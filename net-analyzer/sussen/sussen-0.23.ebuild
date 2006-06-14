@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.22-r2.ebuild,v 1.3 2006/06/14 07:01:47 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.23.ebuild,v 1.1 2006/06/14 07:01:47 pva Exp $
 
 inherit eutils gnome2 mono autotools
 
@@ -8,7 +8,7 @@ DESCRIPTION="Sussen is a tool that checks for vulnerabilities and configuration 
 HOMEPAGE="http://dev.mmgsecurity.com/projects/sussen/"
 SRC_URI="http://dev.mmgsecurity.com/downloads//${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
-IUSE="doc"
+IUSE="doc dbus"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
@@ -17,7 +17,8 @@ RDEPEND="=dev-lang/mono-1.1*
 	>=dev-dotnet/gnome-sharp-2.4
 	>=dev-dotnet/gconf-sharp-2.4
 	>=dev-dotnet/glade-sharp-2.4
-	gnome-base/gnome-panel"
+	gnome-base/gnome-panel
+	dbus? (sys-apps/dbus) "
 
 DEPEND="${RDEPEND}
 	doc? ( >=dev-util/monodoc-1.1.8 )
@@ -26,16 +27,14 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog README TODO"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	epatch ${FILESDIR}/${P}-applet-cancel-scan-crash.patch
-	epatch ${FILESDIR}/${P}-panel-applet-crash.patch
+pkg_setup() {
+	built_with_use -a sys-apps/dbus mono || die \
+	"${PN} requires dbus build with mono support. Please, reemerge dbus with USE=\"mono\""
 }
 
 src_compile () {
-	econf ${myconf} || die "./configure failed"
+	econf ${myconf} \
+	$(use_enable dbus) || die "./configure failed"
 	LANG=C emake -j1 || die
 }
 
