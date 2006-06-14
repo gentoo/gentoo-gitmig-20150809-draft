@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.027.ebuild,v 1.18 2006/01/17 04:06:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.027.ebuild,v 1.19 2006/06/14 03:06:45 mcummings Exp $
 
-inherit perl-module eutils
+inherit perl-module eutils multilib
 
 MY_P=Tk-${PV}
 S=${WORKDIR}/${MY_P}
@@ -17,6 +17,14 @@ IUSE=""
 
 DEPEND="|| ( x11-libs/libX11 virtual/x11 )"
 
-myconf="X11LIB=/usr/$(get_libdir)"
+myconf="-I/usr/include/ -l/usr/$(get_libdir)"
 
 mydoc="ToDo VERSIONS"
+
+export X11ROOT=/usr
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/xorg.patch
+}

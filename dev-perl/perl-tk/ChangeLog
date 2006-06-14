@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/perl-tk
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.36 2005/12/12 08:55:44 spyderous Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.37 2006/06/14 03:06:45 mcummings Exp $
+
+  14 Jun 2006; Michael Cummings <mcummings@gentoo.org> +files/xorg.patch,
+  perl-tk-804.027.ebuild:
+  Bug 128326 - modified to build for users that didn't install xorg meta
 
   12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
   perl-tk-804.027.ebuild:
