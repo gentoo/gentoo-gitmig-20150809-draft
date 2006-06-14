@@ -16,9 +16,9 @@
 # $2 = name of dvd
 # $3 = original dvd-device
 
-rm -f $1/$2
+rm -f "$1/$2"
   
 svdrpsend.pl -d localhost "MESG DVD einlesen gestartet"
-dd if=$3 of=$1/$2
+dd if="$3" of="$1/$2"
 svdrpsend.pl -d localhost "MESG DVD $2 fertig"
 
