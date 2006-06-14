@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/hashcash
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/ChangeLog,v 1.13 2006/06/01 21:59:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/ChangeLog,v 1.14 2006/06/14 17:01:45 kloeri Exp $
+
+*hashcash-1.22 (14 Jun 2006)
+
+  14 Jun 2006; Bryan Østergaard <kloeri@gentoo.org> +hashcash-1.22.ebuild:
+  Bump version, fixes bug 134960.
 
   01 Jun 2006; Daniel Black <dragonheart@gentoo.org> -hashcash-0.27.ebuild,
   -hashcash-1.02.ebuild, -hashcash-1.13.ebuild, -hashcash-1.16.ebuild:
