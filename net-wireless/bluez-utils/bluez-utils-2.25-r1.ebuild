@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.25-r1.ebuild,v 1.1 2006/05/15 11:25:32 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.25-r1.ebuild,v 1.2 2006/06/14 21:41:24 genstef Exp $
 
 inherit eutils
 
@@ -49,6 +49,9 @@ src_unpack() {
 		sed -i -e "s:\(pin_helper \).*:\1/etc/bluetooth/pin-helper;:" \
 			${S}/hcid/hcid.conf
 	fi
+
+	# fix cups-1.2
+	sed -i -e "s:\$(libdir)/cups:$(cups-config --serverbin):" ${S}/cups/Makefile.{am,in}
 }
 
 src_compile() {
