@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/kseg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kseg/ChangeLog,v 1.1 2006/01/14 17:14:18 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kseg/ChangeLog,v 1.2 2006/06/14 14:11:40 cryos Exp $
+
+*kseg-0.403 (14 Jun 2006)
+
+  14 Jun 2006; Marcus D. Hanwell <cryos@gentoo.org> kseg-0.402.ebuild,
+  +kseg-0.403.ebuild:
+  Version bump, closes bug 131091. Marked 0.403 stable on amd64.
 
 *kseg-0.402 (14 Jan 2006)
 
