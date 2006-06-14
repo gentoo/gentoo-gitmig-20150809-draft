@@ -1,6 +1,13 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.15 2006/06/02 16:07:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.16 2006/06/14 23:14:18 genstef Exp $
+
+  14 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
+  -files/foo2zjs-udevfwld-20060523.diff,
+  +files/foo2zjs-udevfwld-20060607.diff:
+  New version, digest fix, udev fix thanks to Kai Blaschke
+  <webmaster@thw-theorie.de> and Ian Stakenvicius
+  <ian@syndicated-productions.com> in bug 136550
 
   02 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
   -files/foo2zjs-Makefile-20060501.diff,
