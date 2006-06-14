@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/e-uae
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.9 2006/06/14 14:17:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.10 2006/06/14 17:08:23 pva Exp $
+
+*e-uae-0.8.28-r1 (14 Jun 2006)
+
+  14 Jun 2006; Peter Volkov <pva@gentoo.org>
+  +files/e-uae-0.8.28-fix-JIT-cache-on-NX-cpu.patch,
+  +files/e-uae-0.8.28-fix-atoscroll-screen-support.patch,
+  +files/e-uae-0.8.28-fix-joystick-conflicts.patch, +e-uae-0.8.28-r1.ebuild:
+  A bunch of fixes suggested by upstream developer Richard Drummond!
 
   14 Jun 2006; Peter Volkov <pva@gentoo.org>
   +files/e-uae-0.8.28-shm-crash.patch, e-uae-0.8.28.ebuild:
