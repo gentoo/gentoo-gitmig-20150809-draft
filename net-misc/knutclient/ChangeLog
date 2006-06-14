@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.16 2006/06/14 14:19:28 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.17 2006/06/14 14:21:46 cryos Exp $
+
+  14 Jun 2006; Marcus D. Hanwell <cryos@gentoo.org>
+  -knutclient-0.8.5.ebuild:
+  Pruned old version.
 
   14 Jun 2006; Marcus D. Hanwell <cryos@gentoo.org> knutclient-0.8.6.ebuild:
   Stable on amd64, closes bug 124073.
