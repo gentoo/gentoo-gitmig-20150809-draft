@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5504 2006/06/14 07:27:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5505 2006/06/14 14:34:52 pva Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,10 +21,6 @@
 ##   End example
 ##
 
-# Peter Volkov <pva@gentoo.org> (14 Jun 2006)
-# Masked for testing.
->=net-analyzer/sussen-0.23
-
 # Kevin F. Quinn <kevquinn@gentoo.org> (13 Jun 2006)
 # Masked initially for testing
 =app-admin/eselect-oodict-20060613
@@ -32,11 +28,6 @@
 # Andrej Kacian <ticho@gentoo.org> (12 Jun 2006)
 # Masked until sylpheed-claws-2.3.0 is in portage
 =mail-client/sylpheed-claws-rssyl-0.5
-
-# Peter Volkov <pva@gentoo.org> (12 Jun 2006)
-# This stuff needs some testing.
->=games-emulation/caps-20060612
->=app-emulation/e-uae-0.8.28
 
 # Gustavo Felisberto <humpback@gentoo.org> (12 Jun 2006)
 # release candidate
