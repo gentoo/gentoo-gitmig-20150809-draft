@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.60 2006/06/01 17:12:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.61 2006/06/14 18:39:35 carlo Exp $
+
+*kcontrol-3.5.3-r1 (14 Jun 2006)
+
+  14 Jun 2006; Carsten Lohrke <carlo@gentoo.org> +kcontrol-3.5.3-r1.ebuild:
+  A few KDE 3.5 branch fixes.
 
 *kcontrol-3.5.3 (01 Jun 2006)
 
