@@ -1,9 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-23.ebuild,v 1.2 2005/06/23 07:29:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-23.ebuild,v 1.3 2006/06/14 23:45:01 hanno Exp $
 
 DESCRIPTION="MirBSD KSH Shell"
-HOMEPAGE="http://wiki.mirbsd.org/MirbsdKsh/"
+HOMEPAGE="http://mirbsd.de/mksh/"
 SRC_URI="http://mirbsd.mirsolutions.de/MirOS/distfiles/${PN}-R${PV}.cpio.gz"
 LICENSE="BSD"
 SLOT="0"
