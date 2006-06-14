@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.13.ebuild,v 1.2 2006/06/14 10:10:24 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.14.ebuild,v 1.1 2006/06/14 10:10:24 keri Exp $
 
 inherit autotools eutils flag-o-matic
 
