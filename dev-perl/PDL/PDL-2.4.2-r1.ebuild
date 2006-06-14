@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.2-r1.ebuild,v 1.2 2006/06/13 01:11:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.2-r1.ebuild,v 1.3 2006/06/14 00:46:21 mcummings Exp $
 
-inherit perl-module eutils
+inherit perl-module eutils multilib
 
 DESCRIPTION="PDL Perl Module"
 HOMEPAGE="http://search.cpan.org/~csoe/${P}/"
@@ -61,7 +61,7 @@ src_install() {
 	PERLVERSION=${version}
 	eval `perl '-V:archname'`
 	ARCHVERSION=${archname}
-	mv ${D}/usr/lib/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/HtmlDocs/PDL \
+	mv ${D}/usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/HtmlDocs/PDL \
 		${D}/usr/share/doc/${PF}/html
 
 	mydir=${D}/usr/share/doc/${PF}/html/PDL
@@ -70,15 +70,15 @@ src_install() {
 	do
 		dosed ${i/${D}}
 	done
-	cp ${S}/Doc/scantree.pl ${D}/usr/lib/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/
-	cp ${S}/Doc/mkhtmldoc.pl ${D}/usr/lib/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/
+	cp ${S}/Doc/scantree.pl ${D}/usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/
+	cp ${S}/Doc/mkhtmldoc.pl ${D}/usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/
 }
 
 pkg_postinst() {
-	perl /usr/lib/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/scantree.pl
+	perl /usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/scantree.pl
 	einfo "Building perldl.db done. You can recreate this at any time"
 	einfo "by running"
-	einfo "perl /usr/lib/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/scantree.pl"
+	einfo "perl /usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/scantree.pl"
 	epause 3
 	einfo "PDL requires that glx and dri support be enabled in"
 	einfo "your X configuration for certain parts of the graphics"
