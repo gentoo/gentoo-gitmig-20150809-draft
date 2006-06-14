@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.2 2006/06/13 21:16:39 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.3 2006/06/14 17:47:50 nixnut Exp $
+
+  14 Jun 2006; <nixnut@gentoo.org> clucene-0.9.10.ebuild:
+  Added ~ppc wrt bug #136709
 
 *clucene-0.9.10 (13 Jun 2006)
 
