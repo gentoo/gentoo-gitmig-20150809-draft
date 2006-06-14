@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netstat-nat
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.17 2005/09/30 11:56:38 joker Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.18 2006/06/14 04:01:44 squinky86 Exp $
+
+  14 Jun 2006; Jon Hood <squinky86@gentoo.org> netstat-nat-1.4.6.ebuild:
+  Add ~amd64, #114306. Thanks to Amit Kotlovski <krallkrall@gmail.com> for
+  testing.
 
   30 Sep 2005; Christian Birchinger <joker@gentoo.org>
   netstat-nat-1.4.5.ebuild:
