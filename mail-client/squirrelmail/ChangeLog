@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.52 2006/06/13 19:59:14 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.53 2006/06/14 13:03:51 wolf31o2 Exp $
+
+  14 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  squirrelmail-1.4.6-r3.ebuild:
+  Stable on x86 wrt bug #135921.
 
 *squirrelmail-1.4.6-r3 (13 Jun 2006)
 
