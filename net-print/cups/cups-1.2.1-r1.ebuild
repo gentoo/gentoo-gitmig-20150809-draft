@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r1.ebuild,v 1.2 2006/06/14 17:03:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r1.ebuild,v 1.3 2006/06/14 21:28:46 rajiv Exp $
 
 inherit eutils pam flag-o-matic multilib autotools
 
@@ -76,6 +76,8 @@ src_compile() {
 		--with-cups-group=lp \
 		--with-system-groups=lpadmin \
 		--localstatedir=/var \
+		# location of files for the cups web interface
+		--with-docdir=/usr/share/cups/html \
 		--with-bindnow=$(bindnow-flags) \
 		$(use_enable pam) \
 		$(use_enable ssl) \
