@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6_beta2.ebuild,v 1.1 2006/06/13 21:25:59 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6_beta2.ebuild,v 1.2 2006/06/15 04:52:30 squinky86 Exp $
 
 inherit kde eutils versionator
 
@@ -45,6 +45,7 @@ pkg_setup() {
 
 src_unpack() {
 	kde_src_unpack
+	epatch ${FILESDIR}/${P}-gcc4.patch
 
 	local MAKE_LANGS MAKE_LANGS_DOC
 	for X in ${LANGS}; do

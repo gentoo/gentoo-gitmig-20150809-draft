@@ -1,0 +1,12 @@
+diff -Naur bibletime-1.6beta2/bibletime/frontend/searchdialog/csearchdialogpages.h bibletime-1.6beta2.orig/bibletime/frontend/searchdialog/csearchdialogpages.h
+--- bibletime-1.6beta2/bibletime/frontend/searchdialog/csearchdialogpages.h	2006-06-14 23:39:55.000000000 -0500
++++ bibletime-1.6beta2.orig/bibletime/frontend/searchdialog/csearchdialogpages.h	2006-06-14 23:35:37.000000000 -0500
+@@ -180,7 +180,7 @@
+ 	/**
+ 	* This function breakes the queryString into clucene tokens
+ 	*/	
+-	QStringList CSearchResultPage::QueryParser(const QString& queryString);
++	QStringList QueryParser(const QString& queryString);
+ 	/**
+ 	* This function highlights the searched text in the content using the search type given by search flags
+ 	*/
