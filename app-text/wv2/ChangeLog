@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.35 2006/06/14 18:29:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.36 2006/06/15 02:11:02 tcort Exp $
+
+  15 Jun 2006; Thomas Cort <tcort@gentoo.org> wv2-0.2.3.ebuild:
+  Stable on alpha wrt security Bug #136759.
 
   14 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> wv2-0.2.3.ebuild:
   Stable on sparc wrt security #136759
