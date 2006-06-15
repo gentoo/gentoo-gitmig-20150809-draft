@@ -1,11 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.2-r1.ebuild,v 1.10 2006/06/01 05:27:48 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.2-r1.ebuild,v 1.11 2006/06/15 00:29:12 carlo Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
+
+SRC_URI="${SRC_URI}
+	mirror://gentoo/kdemultimedia-3.5-patchset-01.tar.bz2"
 
 DESCRIPTION="Jukebox and music manager for KDE"
 KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
@@ -26,9 +29,6 @@ RDEPEND="${DEPEND}
 		     flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
 
 KMEXTRACTONLY="arts/configure.in.in"
-
-PATCHES="${FILESDIR}/juk-3.5.2-filerename.diff
-	${FILESDIR}/juk-3.5.2-do_not_use_gstreamer-0.10.diff"
 
 pkg_setup() {
 	kde_pkg_setup
