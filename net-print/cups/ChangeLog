@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.177 2006/06/15 09:54:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.178 2006/06/15 15:46:39 genstef Exp $
+
+  15 Jun 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.2.1-r1.ebuild:
+  Remove all arches that have libpaper not keyworded
 
   15 Jun 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.2.1-r1.ebuild:
   Mention FEATURES=-collision-protect in the pkg-postinst einfo notes, thanks
