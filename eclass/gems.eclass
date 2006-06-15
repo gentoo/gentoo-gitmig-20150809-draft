@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.8 2006/04/06 23:36:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.9 2006/06/15 12:40:08 caleb Exp $
 #
 # Author: Rob Cakebread <pythonhead@gentoo.org>
-# Current Maintainer: Rob Cakebread <pythonhead@gentoo.org>
+# Current Maintainer: Ruby Herd <ruby@gentoo.org>
 #
 # The gems eclass is designed to allow easier installation of
 # gems-based ruby packagess and their incorporation into
