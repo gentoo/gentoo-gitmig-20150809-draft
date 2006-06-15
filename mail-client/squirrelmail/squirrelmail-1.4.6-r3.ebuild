@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.6-r3.ebuild,v 1.5 2006/06/15 00:16:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.6-r3.ebuild,v 1.6 2006/06/15 21:25:09 langthang Exp $
 
 IUSE="crypt ldap spell ssl filter mysql postgres nls"
 
@@ -91,6 +91,7 @@ src_unpack() {
 		unpack all_locales-${LOCALES_VER}.tar.bz2
 
 	# security patch. Bug #135921.
+	cd "${S}"
 	epatch "${FILESDIR}"/sec-135921.patch
 }
 
