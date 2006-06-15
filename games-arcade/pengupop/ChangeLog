@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/pengupop
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/ChangeLog,v 1.1 2006/06/15 18:17:18 mr_bones_ Exp $
+
+*pengupop-2.0.1 (15 Jun 2006)
+
+  15 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +pengupop-2.0.1.ebuild:
+  initial commit - ebuild submitted by Paul Bredbury via bug #136724
+
