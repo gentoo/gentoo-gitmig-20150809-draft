@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.15.ebuild,v 1.5 2006/06/11 10:17:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.15.ebuild,v 1.6 2006/06/15 08:03:09 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -56,7 +56,6 @@ DEPEND="${RDEPEND}
 			virtual/x11
 		)
 	)
-	amd64? ( app-admin/eselect-compiler )
 	sys-devel/bison
 	sys-devel/flex"
 
