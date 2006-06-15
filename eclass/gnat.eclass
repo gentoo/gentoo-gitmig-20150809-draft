@@ -1,6 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.18 2006/06/14 18:41:50 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.19 2006/06/15 15:20:26 george Exp $
+#
+# Author: George Shapovalov <george@gentoo.org>
+# Belongs to: ada herd <ada@gentoo.org>
 #
 # This eclass provides the framework for ada lib installation with the split and
 # SLOTted gnat compilers (gnat-xxx, gnatbuild.eclass). Each lib gets built once

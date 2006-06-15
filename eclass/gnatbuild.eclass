@@ -1,10 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.14 2006/05/02 22:32:54 swegener Exp $
-
-# ATTN!
-# set HOMEPAGE and LICENSE in appropriate ebuild, as we have
-# gnat developed at two locations now.
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.15 2006/06/15 15:19:37 george Exp $
+#
+# Author: George Shapovalov <george@gentoo.org>
+# Belongs to: ada herd <ada@gentoo.org>
+#
+# Note: HOMEPAGE and LICENSE are set in appropriate ebuild, as 
+# gnat is developed by FSF and AdaCore "in parallel"
 
 inherit eutils versionator toolchain-funcs flag-o-matic multilib libtool fixheadtails gnuconfig
 
