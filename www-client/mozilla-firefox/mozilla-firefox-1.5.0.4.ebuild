@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.4.ebuild,v 1.4 2006/06/06 17:02:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.4.ebuild,v 1.5 2006/06/15 00:51:39 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
@@ -33,7 +33,8 @@ RDEPEND="java? ( virtual/jre )
 	>=www-client/mozilla-launcher-1.39
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.10
-	>=dev-libs/nspr-4.6.1"
+	>=dev-libs/nspr-4.6.1
+	~sys-devel/autoconf-2.13"
 
 DEPEND="${RDEPEND}
 	java? ( >=dev-java/java-config-0.2.0 )"
@@ -95,7 +96,7 @@ src_unpack() {
 			${S}/security/coreconf/arch.mk
 	fi
 
-	WANT_AUTOCONF="2.13" \
+	WANT_AUTOCONF="2.1" \
 		eautoreconf || die "failed  running eautoreconf"
 }
 
