@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.31 2006/06/15 14:45:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.32 2006/06/15 18:33:45 vapier Exp $
 #
 # THIS ECLASS IS DEAD: It has been integrated into portage
 #
@@ -29,6 +29,10 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # config.sub and config.guess (old default behavior), otherwise update the
 # named files.
 gnuconfig_update() {
+	echo
+	ewarn "QA Notice: Please stop using me, portage updates files for you."
+	echo
+
 	local startdir	# declared here ... used in gnuconfig_do_update
 
 	if [[ $1 == /* ]] ; then
