@@ -1,12 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.0.ebuild,v 1.1 2006/06/14 19:17:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.0.ebuild,v 1.2 2006/06/15 18:29:44 wolf31o2 Exp $
 
 inherit eutils games
 
 MY_PN="gorky17"
-# Specified here, so it can be used in QA_EXECSTACK
-dir=${GAMES_PREFIX_OPT}/${PN}
 
 DESCRIPTION="Horror conspiracy game mixing elements of strategy and role-playing"
 HOMEPAGE="http://www.linuxgamepublishing.com/info.php?id=gorky17"
@@ -18,9 +16,6 @@ KEYWORDS="~x86"
 IUSE=""
 RESTRICT="strip"
 
-QA_EXECSTACK="${dir:1}/gorky17_demo ${dir:1}/gorky17_demo.dynamic"
-
-# This multilib stuff is a mystery
 RDEPEND="media-libs/alsa-lib
 	x86? (
 		media-libs/libsdl
@@ -40,7 +35,10 @@ RDEPEND="media-libs/alsa-lib
 
 S=${WORKDIR}
 
+dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
+
+QA_EXECSTACK="${dir:1}/gorky17_demo ${dir:1}/gorky17_demo.dynamic"
 
 src_unpack() {
 	unpack_makeself
