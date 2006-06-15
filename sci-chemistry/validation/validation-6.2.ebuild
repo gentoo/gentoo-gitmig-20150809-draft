@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/validation/validation-6.2.ebuild,v 1.2 2006/02/23 23:17:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/validation/validation-6.2.ebuild,v 1.3 2006/06/15 02:34:38 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -9,7 +9,7 @@ inherit eutils toolchain-funcs multilib
 MY_PN="pdb-extract"
 MY_PV="1.700"
 MY_P="${MY_PN}-v${MY_PV}-prod-src"
-DESCRIPTION="Set of tools used by the PDB for processing and checking structure data"
+DESCRIPTION="Set of tools used by the Protein Data Base (PDB) for processing and checking structure data"
 HOMEPAGE="http://sw-tools.pdb.org/apps/VAL/index.html"
 SRC_URI="http://sw-tools.pdb.org/apps/PDB_EXTRACT/${MY_P}.tar.gz"
 LICENSE="PDB"
