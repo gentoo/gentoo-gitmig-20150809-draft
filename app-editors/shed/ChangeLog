@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/shed
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/shed/ChangeLog,v 1.13 2006/06/10 09:22:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/shed/ChangeLog,v 1.14 2006/06/15 02:14:35 deltacow Exp $
+
+  15 Jun 2006; Scott Stoddard <deltacow@gentoo.org> shed-1.12.ebuild:
+  Stable on amd64. (re. bug 136755)
 
   10 Jun 2006; Michael Hanselmann <hansmi@gentoo.org> shed-1.12.ebuild:
   Stable on ppc.
