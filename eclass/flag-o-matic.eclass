@@ -1,7 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.107 2006/04/15 00:44:16 vapier Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.108 2006/06/15 14:45:59 vapier Exp $
+#
+# Maintainer: base-system@gentoo.org
 
 # need access to emktemp()
 inherit eutils toolchain-funcs multilib

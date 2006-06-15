@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.30 2005/08/05 02:39:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.31 2006/06/15 14:45:59 vapier Exp $
+#
+# THIS ECLASS IS DEAD: It has been integrated into portage
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #

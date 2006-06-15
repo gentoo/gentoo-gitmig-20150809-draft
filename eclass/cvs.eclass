@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.63 2006/01/07 23:46:57 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.64 2006/06/15 14:45:59 vapier Exp $
+#
+# Maintainer: vapier@gentoo.org (and anyone who wants to help)
 
 inherit eutils
 

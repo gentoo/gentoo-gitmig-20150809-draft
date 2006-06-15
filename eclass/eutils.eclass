@@ -1,11 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.240 2006/06/09 15:36:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.241 2006/06/15 14:45:59 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
 #
 # NB:  If you add anything, please comment it!
+#
+# Maintainer: see each individual function, base-system@gentoo.org as default
 
 inherit multilib portability
 
