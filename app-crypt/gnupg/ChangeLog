@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.196 2006/06/07 13:01:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.197 2006/06/15 00:09:14 robbat2 Exp $
+
+*gnupg-1.9.20-r4 (15 Jun 2006)
+*gnupg-1.4.3-r1 (15 Jun 2006)
+
+  15 Jun 2006; Robin H. Johnson <robbat2@gentoo.org> +gnupg-1.4.3-r1.ebuild,
+  +gnupg-1.9.20-r4.ebuild:
+  Bug #85263 - Disable capabilities code, as it's broken :-(.
 
   07 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/gnupg-1.9.20-fbsd-gcc41.patch, gnupg-1.9.20-r3.ebuild:
