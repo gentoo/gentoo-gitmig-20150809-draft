@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.4.ebuild,v 1.5 2006/06/06 17:05:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.4.ebuild,v 1.6 2006/06/15 00:55:02 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools
@@ -20,7 +20,8 @@ IUSE="ldap crypt"
 
 RDEPEND=">=www-client/mozilla-launcher-1.39
 	>=dev-libs/nss-3.10
-	>=dev-libs/nspr-4.6.1"
+	>=dev-libs/nspr-4.6.1
+	~sys-devel/autoconf-2.13"
 
 PDEPEND="crypt? ( x11-plugins/enigmail ) "
 
@@ -55,8 +56,7 @@ src_unpack() {
 			${S}/security/coreconf/arch.mk
 	fi
 
-	WANT_AUTOCONF="2.13" \
-		WANT_AUTOMAKE="2.13" \
+	WANT_AUTOCONF="2.1" \
 		eautoreconf || die "failed running autoreconf"
 }
 
