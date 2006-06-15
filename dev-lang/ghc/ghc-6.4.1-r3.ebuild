@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r3.ebuild,v 1.8 2006/05/19 16:06:10 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r3.ebuild,v 1.9 2006/06/15 12:18:36 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -172,6 +172,10 @@ src_unpack() {
 
 	# Patch to fix make-3.81 hanging (backport of the fix in ghc-6.4.2)
 	sed -i -e 's/.SECONDARY://' "${S}/mk/suffix.mk"
+
+	# Patch to fix a mis-compilation in the rts due to strict aliasing,
+	# should be fixed upstream for 6.4.3 and 6.6. Fixes bug #135651.
+	echo 'GC_HC_OPTS += -optc-fno-strict-aliasing' >> "${S}/ghc/rts/Makefile"
 }
 
 src_compile() {
