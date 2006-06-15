@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.289 2006/06/15 02:06:17 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.290 2006/06/15 06:59:28 corsair Exp $
+
+  15 Jun 2006; Markus Rothe <corsair@gentoo.org> kdebase-3.4.3-r2.ebuild,
+  kdebase-3.5.2-r2.ebuild:
+  Stable on ppc64; bug #136201
 
   15 Jun 2006; Thomas Cort <tcort@gentoo.org> kdebase-3.4.3-r2.ebuild,
   kdebase-3.5.2-r2.ebuild:
