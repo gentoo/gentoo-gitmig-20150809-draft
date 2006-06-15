@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.72 2006/06/10 19:46:00 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.73 2006/06/15 12:49:21 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -36,6 +36,7 @@ oci8
 pbs
 pcmcia
 pic
+pmount
 rar
 real
 svga
