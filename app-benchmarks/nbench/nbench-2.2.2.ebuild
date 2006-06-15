@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/nbench-2.2.2.ebuild,v 1.8 2005/09/09 15:12:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/nbench-2.2.2.ebuild,v 1.9 2006/06/15 02:24:21 ranger Exp $
 
 MY_P="${PN}-byte-${PV}"
 DESCRIPTION="Linux/Unix of release 2 of BYTE Magazine's BYTEmark benchmark"
@@ -9,7 +9,7 @@ SRC_URI="http://www.tux.org/~mayer/linux/${MY_P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~mips ppc sh sparc x86"
+KEYWORDS="alpha amd64 hppa ~mips ppc ~ppc64 sh sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
