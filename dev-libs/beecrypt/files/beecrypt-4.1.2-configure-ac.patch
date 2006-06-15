@@ -1,0 +1,56 @@
+--- beecrypt-4.1.2/configure.ac	2004-12-21 12:37:56.000000000 +0100
++++ beecrypt-cvs/configure.ac	2006-01-07 09:48:07.000000000 +0100
+@@ -502,8 +513,7 @@
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_ARM"
+     ;;
+   athlon*)
+-    CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I386 -DOPTIMIZE_MMX"
+-    CFLAGS="$CFLAGS -mmmx"
++    CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I686 -DOPTIMIZE_MMX"
+     ;;
+   i386)
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I386"
+@@ -526,24 +536,23 @@
+   pentium)
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I586"
+     ;;
++  pentium-m)
++    CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I686 -DOPTIMIZE_MMX -DOPTIMIZE_SSE -DOPTIMIZE_SSE2"
++    ;;
+   pentium-mmx)
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I586 -DOPTIMIZE_MMX"
+-    CFLAGS="$CFLAGS -mmmx"
+     ;;
+   pentiumpro)
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I686"
+     ;;
+   pentium2)
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I686 -DOPTIMIZE_MMX"
+-    CFLAGS="$CFLAGS -mmmx"
+     ;;
+   pentium3)
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I686 -DOPTIMIZE_MMX -DOPTIMIZE_SSE"
+-    CFLAGS="$CFLAGS -msse"
+     ;;
+   pentium4)
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I686 -DOPTIMIZE_MMX -DOPTIMIZE_SSE -DOPTIMIZE_SSE2"
+-    CFLAGS="$CFLAGS -msse2"
+     ;;
+   powerpc)
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_POWERPC"
+@@ -556,15 +565,12 @@
+     ;;
+   sparcv8)
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_SPARCV8"
+-    CFLAGS="$CFLAGS -Wa,-xarch=v8"
+     ;;
+   sparcv8plus*)
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_SPARCV8PLUS"
+-    CFLAGS="$CFLAGS -Wa,-xarch=v8plus"
+     ;;
+   sparcv9*)
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_SPARCV9"
+-    CFLAGS="$CFLAGS -Wa,-xarch=v9"
+     ;;
+   x86_64)
+     CPPFLAGS="$CPPFLAGS -DOPTIMIZE_X86_64"

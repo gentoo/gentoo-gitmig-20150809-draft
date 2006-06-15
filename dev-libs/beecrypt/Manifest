@@ -1,24 +1,80 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f559fc12fb134d6fc4ea94eafc20097f ChangeLog 4257
-MD5 7437e6ee38f80ea81754bca5de8e8c86 beecrypt-3.1.0-r1.ebuild 1402
-MD5 b6c457c06f2f7babce8779dc33405e21 beecrypt-3.1.0-r2.ebuild 1723
-MD5 175fd15e60fb2b2d9e02019bb0cc41f4 beecrypt-4.1.2-r1.ebuild 1673
-MD5 4f40a1b10e6111cd51d5d054174bc856 beecrypt-4.1.2.ebuild 1569
+AUX beecrypt-3.1.0-alpha.patch 321 RMD160 d97ac1d5c57cb10adf623947f556d4f0edce7928 SHA1 17b56b54a11366beef462e3d4c5a075d48f57c04 SHA256 da7c655286db874a5b96ae4413bf86d02e14d759a54d68e4de4e22e4adf10027
 MD5 9801ec0e3201addd45f08dea31ac5324 files/beecrypt-3.1.0-alpha.patch 321
+RMD160 d97ac1d5c57cb10adf623947f556d4f0edce7928 files/beecrypt-3.1.0-alpha.patch 321
+SHA256 da7c655286db874a5b96ae4413bf86d02e14d759a54d68e4de4e22e4adf10027 files/beecrypt-3.1.0-alpha.patch 321
+AUX beecrypt-3.1.0-athlon.diff 391 RMD160 877b9fa53414d8d8aa017eea4e11f625eabdabac SHA1 24e6587a970d9ca1ca284c6c81dbed7c491e01c3 SHA256 0f406c35faef501e581f796cdd1b36d14711cb199102e011e3f0772d54cb9c9b
 MD5 4662ac258eb0f491d0b32ef0ad1cfeeb files/beecrypt-3.1.0-athlon.diff 391
+RMD160 877b9fa53414d8d8aa017eea4e11f625eabdabac files/beecrypt-3.1.0-athlon.diff 391
+SHA256 0f406c35faef501e581f796cdd1b36d14711cb199102e011e3f0772d54cb9c9b files/beecrypt-3.1.0-athlon.diff 391
+AUX beecrypt-3.1.0-python2.3.patch 769 RMD160 28cc17cbb871689df4f18acc2702e4acbbb79bd7 SHA1 e1a0237c02c2118f1b6b758352d7a9a48f6e4ae8 SHA256 322410d9a2e6777fce554deeddb1e34011143918a8da306269440c9a06b9ae0f
 MD5 a1ec8219f4c2e7e3185f2cd869ddae33 files/beecrypt-3.1.0-python2.3.patch 769
+RMD160 28cc17cbb871689df4f18acc2702e4acbbb79bd7 files/beecrypt-3.1.0-python2.3.patch 769
+SHA256 322410d9a2e6777fce554deeddb1e34011143918a8da306269440c9a06b9ae0f files/beecrypt-3.1.0-python2.3.patch 769
+AUX beecrypt-4.1.2-athlon.patch 700 RMD160 f5026638df29a94f5a77ca42d29a5d9dd3d7e103 SHA1 7faca3ef443441629fad21751ba176108012088a SHA256 cc3eacd51054126b101c43592f75ed755161b680bdf5ab0c1b7ffef8f076534f
 MD5 1790137c0aa51e5978f813f06f74f9f5 files/beecrypt-4.1.2-athlon.patch 700
+RMD160 f5026638df29a94f5a77ca42d29a5d9dd3d7e103 files/beecrypt-4.1.2-athlon.patch 700
+SHA256 cc3eacd51054126b101c43592f75ed755161b680bdf5ab0c1b7ffef8f076534f files/beecrypt-4.1.2-athlon.patch 700
+AUX beecrypt-4.1.2-configure-ac.patch 1608 RMD160 4d72532820c5ee958aad90c7d4a5774dd2fe09fd SHA1 3b9172a5ddf883aa925d2e7ccad55465deee7276 SHA256 8d912f80d43d5b05178a830d169e919ed23829e21bc164c132d6910b5e92cf10
+MD5 5a9ba1240e9e33434627900dbef3239e files/beecrypt-4.1.2-configure-ac.patch 1608
+RMD160 4d72532820c5ee958aad90c7d4a5774dd2fe09fd files/beecrypt-4.1.2-configure-ac.patch 1608
+SHA256 8d912f80d43d5b05178a830d169e919ed23829e21bc164c132d6910b5e92cf10 files/beecrypt-4.1.2-configure-ac.patch 1608
+AUX beecrypt-4.1.2-custom-cflags.patch 1923 RMD160 29270a2fd07996a2362ff3344a95929385b119d7 SHA1 9a1a5e5f4efdc35d967207e2420e8723749b2ad5 SHA256 474b2c61885e68af31e489adadb0130c47437022b05050c9a2c7fe98e4444cb3
 MD5 d9df55b27ad44b732ee01ee84bca5919 files/beecrypt-4.1.2-custom-cflags.patch 1923
-MD5 1c56cad20612ef6cbb3d1b56fa3c0b2e files/digest-beecrypt-3.1.0-r1 66
-MD5 1c56cad20612ef6cbb3d1b56fa3c0b2e files/digest-beecrypt-3.1.0-r2 66
-MD5 1088d87436deafc76d2114137c9a6330 files/digest-beecrypt-4.1.2 66
-MD5 1088d87436deafc76d2114137c9a6330 files/digest-beecrypt-4.1.2-r1 66
+RMD160 29270a2fd07996a2362ff3344a95929385b119d7 files/beecrypt-4.1.2-custom-cflags.patch 1923
+SHA256 474b2c61885e68af31e489adadb0130c47437022b05050c9a2c7fe98e4444cb3 files/beecrypt-4.1.2-custom-cflags.patch 1923
+AUX beecrypt-4.1.2-python-Makefile-am.patch 311 RMD160 dd271f87a2cff9042007e69e1238513e8c4fffa0 SHA1 b7b262aa484925ef57ed1869c2a548c564810d96 SHA256 fba9950605602ae777c540c7a0c07d90547cb26edfa36df481c767be11d2c9b3
+MD5 9de86bdf34c8d29393d14a80c299fa14 files/beecrypt-4.1.2-python-Makefile-am.patch 311
+RMD160 dd271f87a2cff9042007e69e1238513e8c4fffa0 files/beecrypt-4.1.2-python-Makefile-am.patch 311
+SHA256 fba9950605602ae777c540c7a0c07d90547cb26edfa36df481c767be11d2c9b3 files/beecrypt-4.1.2-python-Makefile-am.patch 311
+AUX beecrypt-4.1.2-python-debug-py-c.patch 887 RMD160 414bc978cae368facdcb6fbaae9f80edd1c2ec16 SHA1 b53bed1526ffd3671955558461d5059ed9c912ed SHA256 4a31c4f7591334e9ea1dffc314f924e6379aed2818ce95c85e3f970054538c98
+MD5 fdd692868cf8ae58fc39b626ea5bcb4f files/beecrypt-4.1.2-python-debug-py-c.patch 887
+RMD160 414bc978cae368facdcb6fbaae9f80edd1c2ec16 files/beecrypt-4.1.2-python-debug-py-c.patch 887
+SHA256 4a31c4f7591334e9ea1dffc314f924e6379aed2818ce95c85e3f970054538c98 files/beecrypt-4.1.2-python-debug-py-c.patch 887
+DIST beecrypt-3.1.0.tar.gz 452555 RMD160 da5f1ad11f8724ee75c2860252a881d1591ccb43 SHA1 1dd2bde0c5551248750ad4cdc8214cc1364e874b SHA256 50b574d330fecbc9faed81746a1abfcec903c264ae753ac64d4edf22c701519f
+DIST beecrypt-4.1.2.tar.gz 774280 RMD160 fe26e5429738450fa2ef00b37e9725eec29bda08 SHA1 71cebd3329bb2561ffba24a2004dfac50b143f59 SHA256 f29eb246947677a9e7870521e3d576fd0d91a7072210a4404ed137e40cfc18fd
+EBUILD beecrypt-3.1.0-r1.ebuild 1402 RMD160 03c6b77ac915087f4dcd6116a1dc59cd08c532fd SHA1 9d9da4870adf0533a0e14bd6ab929d121916fd33 SHA256 1970672ee4db318921e4c5a959481015087bc3dc4eb524e6aeb66c6813b1a030
+MD5 e25a6186d73f6bd67537537dd40f2287 beecrypt-3.1.0-r1.ebuild 1402
+RMD160 03c6b77ac915087f4dcd6116a1dc59cd08c532fd beecrypt-3.1.0-r1.ebuild 1402
+SHA256 1970672ee4db318921e4c5a959481015087bc3dc4eb524e6aeb66c6813b1a030 beecrypt-3.1.0-r1.ebuild 1402
+EBUILD beecrypt-3.1.0-r2.ebuild 1723 RMD160 8d23c514408cb5447401b94a65b8834c87922187 SHA1 2d444385462090a8fdaf8cd1a655d8663fe8ae25 SHA256 ce7a18ed0154803578ba50d9964add3573367af04c1e55905ed43815aa417dc8
+MD5 b6c457c06f2f7babce8779dc33405e21 beecrypt-3.1.0-r2.ebuild 1723
+RMD160 8d23c514408cb5447401b94a65b8834c87922187 beecrypt-3.1.0-r2.ebuild 1723
+SHA256 ce7a18ed0154803578ba50d9964add3573367af04c1e55905ed43815aa417dc8 beecrypt-3.1.0-r2.ebuild 1723
+EBUILD beecrypt-4.1.2-r1.ebuild 2211 RMD160 1cc19341e3cb5b69175b2580d8358f5c6de8bd49 SHA1 3e6cd37b35215ede1b6b5eaea12a235e0805dfd1 SHA256 a4fbc2ec8e2c17544265000a0c9c376f7f02b0a64d35bf9371694cfea4d93d48
+MD5 d4dfc647b9681f76e12b6f6fc69051dc beecrypt-4.1.2-r1.ebuild 2211
+RMD160 1cc19341e3cb5b69175b2580d8358f5c6de8bd49 beecrypt-4.1.2-r1.ebuild 2211
+SHA256 a4fbc2ec8e2c17544265000a0c9c376f7f02b0a64d35bf9371694cfea4d93d48 beecrypt-4.1.2-r1.ebuild 2211
+EBUILD beecrypt-4.1.2.ebuild 1571 RMD160 a81510f782805e7a69dd3fc21c3b6ad3491ec0c9 SHA1 2b15ccdc2de2fb69d131c85a179f0e3cfa93a941 SHA256 acc9b6321c2dc67140e1a0cdfc6b666779f0580fe5b473fb2a1f7ca9a1baa33e
+MD5 58efa38295c5d97f1bac7465fa9b87de beecrypt-4.1.2.ebuild 1571
+RMD160 a81510f782805e7a69dd3fc21c3b6ad3491ec0c9 beecrypt-4.1.2.ebuild 1571
+SHA256 acc9b6321c2dc67140e1a0cdfc6b666779f0580fe5b473fb2a1f7ca9a1baa33e beecrypt-4.1.2.ebuild 1571
+MISC ChangeLog 4927 RMD160 ad30e0a733340e49a0d8fabc7751daccb84377cd SHA1 430d3f6ef3ab701f39bb4360a5977d2d8b5a5a9a SHA256 cd76708e16597b6b46714631384458b66d751873c726efe2d16c711c38070b53
+MD5 0fb80baf7e876148cf8a3a72f83d23a8 ChangeLog 4927
+RMD160 ad30e0a733340e49a0d8fabc7751daccb84377cd ChangeLog 4927
+SHA256 cd76708e16597b6b46714631384458b66d751873c726efe2d16c711c38070b53 ChangeLog 4927
+MISC metadata.xml 441 RMD160 78ec9e33fd6ae832d800ba544f5474e36cafd48c SHA1 0061a112b5252de7a4803ecb7b201e48be7dc5b7 SHA256 5675e81fe2ef6bb6949439f5c88e041c614a2ad8c554c685e745a457c116279d
+MD5 ca48fb502dfc8284bdf1dad98f1f1f93 metadata.xml 441
+RMD160 78ec9e33fd6ae832d800ba544f5474e36cafd48c metadata.xml 441
+SHA256 5675e81fe2ef6bb6949439f5c88e041c614a2ad8c554c685e745a457c116279d metadata.xml 441
+MD5 5e89c22f1c896c7f858a106c0d0db568 files/digest-beecrypt-3.1.0-r1 244
+RMD160 ae96333d9000d0e124f19917912ffd08e8515ca3 files/digest-beecrypt-3.1.0-r1 244
+SHA256 c5e9f555fa1274112afc634fdef81cf428a9889c1a74a9a1a754b5de7373cb20 files/digest-beecrypt-3.1.0-r1 244
+MD5 5e89c22f1c896c7f858a106c0d0db568 files/digest-beecrypt-3.1.0-r2 244
+RMD160 ae96333d9000d0e124f19917912ffd08e8515ca3 files/digest-beecrypt-3.1.0-r2 244
+SHA256 c5e9f555fa1274112afc634fdef81cf428a9889c1a74a9a1a754b5de7373cb20 files/digest-beecrypt-3.1.0-r2 244
+MD5 f036930b8f9b568a6d4f0be92dfd660a files/digest-beecrypt-4.1.2 244
+RMD160 95f2cc2b7b670f7e7ebfcdb7b320386305e49ab7 files/digest-beecrypt-4.1.2 244
+SHA256 99d90cfdcd84ee178ff78f76c1a75b7ea12bc89a29cf633a585d884de57413b8 files/digest-beecrypt-4.1.2 244
+MD5 f036930b8f9b568a6d4f0be92dfd660a files/digest-beecrypt-4.1.2-r1 244
+RMD160 95f2cc2b7b670f7e7ebfcdb7b320386305e49ab7 files/digest-beecrypt-4.1.2-r1 244
+SHA256 99d90cfdcd84ee178ff78f76c1a75b7ea12bc89a29cf633a585d884de57413b8 files/digest-beecrypt-4.1.2-r1 244
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFDzs+X2+ySkm8kpY0RAkMkAJ9bQGy4vZ4wx92BC5soOr4atVu7agCgk23N
-DFVRCdYF/XBVxrHybW7Dow4=
-=cO9x
+iD8DBQFEkbpZ1c24p4LpXH8RAkDcAJ4yeBmaa7NqzxXs6U3BDTBjGpnM8QCeMbC0
+tr2HAlLPu2I7fgVCG0UfaeE=
+=95fC
 -----END PGP SIGNATURE-----

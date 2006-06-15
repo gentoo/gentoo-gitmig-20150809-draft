@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+	<email>sanchan@gentoo.org</email>
+	<description>I actually don't use this packages, but since I'm working on rpm bump I'll take care of this for now.
+		Feel free to contact me if you want to take over the maintainership of this package.
+	</description>
+</maintainer>
+</pkgmetadata>

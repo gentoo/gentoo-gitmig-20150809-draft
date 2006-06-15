@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.29 2006/01/18 23:26:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.30 2006/06/15 19:55:07 sanchan Exp $
+
+  15 Jun 2006; Sandro Bonazzola <sanchan@gentoo.org>
+  +files/beecrypt-4.1.2-configure-ac.patch,
+  +files/beecrypt-4.1.2-python-Makefile-am.patch,
+  +files/beecrypt-4.1.2-python-debug-py-c.patch, +metadata.xml,
+  beecrypt-4.1.2-r1.ebuild:
+  Fixing ebuild headers, adding metadata.xml. Updated without bumping
+  beecrypt-4.1.2-r1 ebuild.
+  This ebuild uses upstream patches from cvs. Fixes python test failures on
+  pentium3, athlon-xp, pentium-mmx; provides a workaround for pentium-m and
+  athlon64. The ebuild is far from perfection, see bug #124900 for known
+  issues. Thanks to Benedikt Boehm, #gentoo-python, #gentoo-amd64-dev, 
+  #gentoo-java for their support.
 
 *beecrypt-4.1.2-r1 (18 Jan 2006)
 
