@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.24-r1.ebuild,v 1.8 2006/06/12 06:30:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.24-r1.ebuild,v 1.9 2006/06/15 19:22:35 jokey Exp $
 
 inherit autotools eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -107,7 +107,7 @@ openldap_find_versiontags() {
 				# are we on the same branch?
 				if [ "${OLD_MAJOR}" != "${PV:0:3}" ] ; then
 					ewarn "   Versiontag doesn't match current major release!"
-					if [[ `ls -a ${CURRENT_TAGDIR} | wc -l` > 5 ]] ; then
+					if [[ `ls -a ${CURRENT_TAGDIR} | wc -l` -gt 5 ]] ; then
 						eerror "   Versiontag says other major and you (probably) have datafiles!"
 						echo
 						openldap_upgrade_howto
