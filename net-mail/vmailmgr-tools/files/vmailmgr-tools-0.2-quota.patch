@@ -1,0 +1,46 @@
+diff -Nru vmailmgr-tools-0.2.orig/vcheckquota.c vmailmgr-tools-0.2/vcheckquota.c
+--- vmailmgr-tools-0.2.orig/vcheckquota.c	2006-06-15 06:22:31.000000000 +0300
++++ vmailmgr-tools-0.2/vcheckquota.c	2006-06-15 07:25:14.936298750 +0300
+@@ -33,10 +33,10 @@
+ const char program[] = "vcheckquota";
+ const int msg_show_pid = 0;
+ const char cli_help_prefix[] = "vmailmgr quota enforcement program\n";
+-const char cli_help_suffix[] = "\
+-Warning: the soft-message is linked into the users maildir once for each\
+-message that is received while the account is over its soft quota.  This may\
+-result in multiple warning messages.\n";
++const char cli_help_suffix[] = "\n"
++"Warning: the soft-message is linked into the users maildir once for each\n"
++"message that is received while the account is over its soft quota.  This may\n"
++"result in multiple warning messages.\n";
+ const char cli_args_usage[] = "";
+ const int cli_args_min = 0;
+ const int cli_args_max = 0;
+@@ -58,8 +58,13 @@
+ static struct stat st;
+ static void wrap_stat(const char* path)
+ {
+-  if (stat(path, &st) == -1)
+-    die3sys(111, "Cannot stat '", path, "'");
++  if (stat(path, &st) < 0) {
++    if (errno == ENOENT) {
++      st.st_blocks = 0;
++      st.st_mode = 0;
++    } else
++      die3sys(111, "Cannot stat '", path, "'");
++  }
+ }
+ 
+ static unsigned long stat_size(const char* path)
+@@ -77,8 +82,10 @@
+   DIR* dir;
+   direntry* entry;
+   
+-  if ((dir = opendir(path)) == 0)
++  if ((dir = opendir(path)) == 0) {
++    if (errno == ENOENT) return;
+     die3sys(111, "Could not open directory '", path, "'");
++  }
+ 
+   while((entry = readdir(dir)) != 0) {
+     const char* name = entry->d_name;
