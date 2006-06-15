@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.2-r2.ebuild,v 1.12 2006/06/07 20:05:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.2-r2.ebuild,v 1.13 2006/06/15 00:45:10 carlo Exp $
 
 inherit kde-dist flag-o-matic
+
+SRC_URI="${SRC_URI}
+	mirror://gentoo/kdemultimedia-3.5-patchset-01.tar.bz2"
 
 DESCRIPTION="KDE multimedia apps: Noatun, KsCD, Juk..."
 
@@ -31,13 +34,6 @@ RDEPEND="${DEPEND}
 		     vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
 		               =media-plugins/gst-plugins-vorbis-0.8* )
 		     flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
-
-DEPEND="${DEPEND}
-	dev-util/pkgconfig"
-
-PATCHES="${FILESDIR}/artsplugin-akode-${PV}-memleak.patch
-	${FILESDIR}/juk-3.5.2-filerename.diff
-	${FILESDIR}/juk-3.5.2-do_not_use_gstreamer-0.10.diff"
 
 pkg_setup() {
 	kde_pkg_setup
