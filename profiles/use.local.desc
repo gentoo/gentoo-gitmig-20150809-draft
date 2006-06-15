@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1950 2006/06/15 09:52:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1951 2006/06/15 16:17:58 chainsaw Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1063,6 +1063,8 @@ net-im/gaim:bonjour - Enable bonjour support
 net-im/gaim:silc - Enable SILC protocol support
 net-im/gaim:xscreensaver - Enable X idle time support instead of gaim idle time.
 net-im/gajim:srv -  SRV capabilities
+net-im/gossip:libgalago - Enable galago presence framework support
+net-im/gossip:libnotify - Enable libnotify popup balloons
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/kadu:amarok - Enables amarok support in kadu
 net-im/kadu:config_wizard - Enables configuration wizard module
