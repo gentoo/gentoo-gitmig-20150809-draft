@@ -29,6 +29,7 @@ mono
 beagle
 rar
 nvtv
+mmx
 
 # should be ok
 jikes
