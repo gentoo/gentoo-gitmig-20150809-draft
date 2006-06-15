@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kppp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.48 2006/06/01 19:39:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.49 2006/06/15 00:04:16 carlo Exp $
+
+*kppp-3.5.3-r1 (15 Jun 2006)
+
+  15 Jun 2006; Carsten Lohrke <carlo@gentoo.org> +kppp-3.5.3-r1.ebuild:
+  Missing return value checks.
 
 *kppp-3.5.3 (01 Jun 2006)
 
