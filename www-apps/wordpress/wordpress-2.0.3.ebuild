@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-2.0.3.ebuild,v 1.5 2006/06/03 09:31:23 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-2.0.3.ebuild,v 1.6 2006/06/15 05:46:38 superlag Exp $
 
 inherit webapp eutils
 
@@ -59,7 +59,7 @@ src_install() {
 	ewarn
 	ewarn If you are upgrading from a previous version BACK UP your
 	ewarn database.  Once you are done with that, browse to
-	ewarn http://localhost/wordpress/admin/wp-upgrade.php and follow
+	ewarn http://localhost/wordpress/wp-admin/upgrade.php and follow
 	ewarn the instructions on the screen.
 	ewarn
 
