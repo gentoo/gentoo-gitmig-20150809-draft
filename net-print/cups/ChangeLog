@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.176 2006/06/15 00:07:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.177 2006/06/15 09:54:09 genstef Exp $
+
+  15 Jun 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.2.1-r1.ebuild:
+  Mention FEATURES=-collision-protect in the pkg-postinst einfo notes, thanks
+  to Michael Cramer <bigmichi1@bigmichi1.dyndns.org> in bug 136859
 
   15 Jun 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.1.23-r1.ebuild,
   cups-1.1.23-r7.ebuild:

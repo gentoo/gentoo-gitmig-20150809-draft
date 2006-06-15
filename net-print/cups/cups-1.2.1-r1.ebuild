@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r1.ebuild,v 1.4 2006/06/14 21:48:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r1.ebuild,v 1.5 2006/06/15 09:54:09 genstef Exp $
 
 inherit eutils pam flag-o-matic multilib autotools
 
@@ -147,8 +147,10 @@ pkg_postinst() {
 	ewarn
 	ewarn "If you are updating from cups-1.1.* you need to remerge every ebuild"
 	ewarn "that installed into /usr/lib/cups and /etc/cups, qfile is in portage-utils:"
-	ewarn "# emerge -va \$(qfile -qC /usr/lib/cups /etc/cups | sed \"s:net-print/cups$::\")"
+	ewarn "# FEATURES=-collision-protect emerge -va \$(qfile -qC /usr/lib/cups /etc/cups | sed \"s:net-print/cups$::\")"
 	ewarn
+	einfo "FEATURES=-collision-protect is needed to overwrite the compatibility"
+	einfo "symlinks installed by this package, it wont be needed on later merges."
 	ewarn "You should also run revdep-rebuild"
 
 	# place symlinks to make the update smoothless
