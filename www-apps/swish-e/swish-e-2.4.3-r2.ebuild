@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/swish-e-2.4.3-r2.ebuild,v 1.2 2006/02/07 16:46:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/swish-e-2.4.3-r2.ebuild,v 1.3 2006/06/15 03:50:42 vapier Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.swish-e.org/distribution/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc perl pdf mp3"
 
 DEPEND=">=sys-libs/zlib-1.1.3
@@ -29,26 +29,24 @@ DEPEND=">=sys-libs/zlib-1.1.3
 
 src_unpack() {
 	if has_version 'www-apps/swish-e'; then
-		ewarn "Your old swish-e indexes may not be compatible with this"
-		ewarn "version."
+		ewarn "Your old swish-e indexes may not be compatible with this version."
 		epause 10
 	fi
 	unpack ${A}
-	cd ${S}
 }
 src_compile() {
-	cd ${S}
 	econf || die "configuration failed"
-	make || die "emake failed"
+	# XXX: is this -j1 really needed ?
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
 	dobin src/swish-e || die "dobin failed"
 	dodoc INSTALL README
-	make DESTDIR="${D}" install
+	make DESTDIR="${D}" install || die
 
 	if use doc; then
-		mkdir -p "${D}"/usr/share/doc/${PF}
+		dodir /usr/share/doc/${PF}
 		cp -r html conf "${D}"/usr/share/doc/${PF} || die "cp failed"
 	fi
 
@@ -63,12 +61,10 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	einfo "If you wish to be able to index MS Word documents, "
 	einfo "emerge app-text/catdoc"
 	einfo
 	einfo "If you wish to be able to index MS Excel Spreadsheets,"
 	einfo "emerge dev-perl/SpreadSheet-ParseExcel and"
 	einfo "dev-perl/HTML-Parser"
-
 }
