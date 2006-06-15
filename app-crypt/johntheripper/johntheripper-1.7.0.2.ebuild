@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.0.2.ebuild,v 1.2 2006/06/04 21:33:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.0.2.ebuild,v 1.3 2006/06/15 14:27:15 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -80,7 +80,7 @@ src_compile() {
 		# as per the Makefile comments
 	elif use ppc; then
 		if use altivec; then
-			emake ${OPTIONS} linux-ppc32-altivec:  || die "Make failed"
+			emake ${OPTIONS} linux-ppc32-altivec  || die "Make failed"
 		else
 			emake ${OPTIONS} linux-ppc32 || die "Make failed"
 		fi
