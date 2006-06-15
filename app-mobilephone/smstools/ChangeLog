@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/smstools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.2 2006/06/15 09:56:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.3 2006/06/15 12:52:19 chainsaw Exp $
+
+*smstools-2.2.1-r2 (15 Jun 2006)
+
+  15 Jun 2006; Tony Vroon <chainsaw@gentoo.org> files/smsd.initd,
+  -smstools-2.2.1-r1.ebuild, +smstools-2.2.1-r2.ebuild:
+  Run the daemon as an unprivileged user.
 
 *smstools-2.2.1-r1 (15 Jun 2006)
 
