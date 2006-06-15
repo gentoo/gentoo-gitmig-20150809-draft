@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.36 2006/06/15 18:06:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.37 2006/06/15 23:31:33 genstef Exp $
+
+  15 Jun 2006; Stefan Schweizer <genstef@gentoo.org> ChangeLog:
+  version bump thanks to Daniel Webert <rockoo@gmail.com> in bug 136293
 
   15 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org> ivman-0.6.11.ebuild:
   ppc stable, bug #136292
