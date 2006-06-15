@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/ruby-bz2
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bz2/ChangeLog,v 1.1 2006/06/15 10:49:37 flameeyes Exp $
+
+*ruby-bz2-0.2.2 (15 Jun 2006)
+
+  15 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +ruby-bz2-0.2.2.ebuild:
+  Initial import, requested by Jon Hood (squinky86) in bug #136204, loosely
+  based on work by Josip Dzolonga in the same bug.
+
