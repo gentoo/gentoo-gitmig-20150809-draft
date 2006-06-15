@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.2a.ebuild,v 1.1 2006/06/11 10:11:34 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.2a.ebuild,v 1.2 2006/06/15 09:40:02 carlo Exp $
 
 inherit kde
 
@@ -19,7 +19,7 @@ IUSE="gstreamer mplayer xine"
 DEPEND="xine? ( >=media-libs/xine-lib-1.1.1 )
 	gstreamer? ( || ( =media-libs/gst-plugins-base-0.10* =media-libs/gst-plugins-0.8* ) )"
 
-RDEPEND="mplayer? ( >=media-video/mplayer-1.0 )
+RDEPEND="mplayer? ( media-video/mplayer )
 	xine? ( >=media-libs/xine-lib-1.1.1 )
 	gstreamer? ( || ( =media-libs/gst-plugins-base-0.10*	=media-libs/gst-plugins-0.8* ) )"
 
