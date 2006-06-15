@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/horde-kronolith
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.19 2006/04/04 17:24:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.20 2006/06/15 21:20:10 chtekk Exp $
+
+*horde-kronolith-2.1.1 (15 Jun 2006)
+
+  15 Jun 2006; Luca Longinotti <chtekk@gentoo.org>
+  +horde-kronolith-2.1.1.ebuild:
+  Version bump
 
   04 Apr 2006; <blubb@gentoo.org> horde-kronolith-2.1.ebuild:
   stable on amd64 wrt bug 126435
