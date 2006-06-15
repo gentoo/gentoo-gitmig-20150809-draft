@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.53 2006/04/27 21:50:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.54 2006/06/15 00:54:51 robbat2 Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -440,6 +440,8 @@ src_install() {
 	for i in smtp qmtp qmqp pop3; do
 		newins ${FILESDIR}/tcp.${i}.sample tcp.qmail-${i}
 	done
+	# this script does the hard work
+	newins ${FILESDIR}/tcprules.d-Makefile.qmail Makefile.qmail
 
 	einfo "Installing the qmail startup file ..."
 	insinto /var/qmail
@@ -467,7 +469,9 @@ src_install() {
 		einfo "RSA key generation cronjob"
 		insinto /etc/${CRON_FOLDER}
 		doins ${FILESDIR}/qmail-genrsacert.sh
-		chmod +x ${D}/etc/${CRON_FOLDER}/qmail-genrsacert.sh
+		fperms +x /etc/${CRON_FOLDER}/qmail-genrsacert.sh
+		doins ${FILESDIR}/qmail-dhparam.sh
+		fperms +x /etc/${CRON_FOLDER}/qmail-dhparam.sh
 
 		# for some files
 		keepdir /var/qmail/control/tlshosts/
