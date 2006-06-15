@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.167 2006/06/11 12:57:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.168 2006/06/15 16:33:39 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -223,7 +223,7 @@ kde_src_compile() {
 					done
 					if [ -f "$makefile" ]; then
 						debug-print "$FUNCNAME: configure: generating configure script, running make -f $makefile"
-						make -f $makefile
+						emake -j1 -f $makefile
 					fi
 					[ -f "./configure" ] || die "no configure script found, generation unsuccessful"
 				fi
@@ -318,7 +318,7 @@ kde_src_install() {
 		case $1 in
 			make)
 				debug-print-section make
-				make install DESTDIR=${D} destdir=${D} || die "died running make install, $FUNCNAME:make"
+				emake install DESTDIR=${D} destdir=${D} || die "died running make install, $FUNCNAME:make"
 				;;
 	    	dodoc)
 				debug-print-section dodoc
