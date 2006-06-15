@@ -1,6 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myspell.eclass,v 1.3 2006/05/22 18:09:00 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myspell.eclass,v 1.4 2006/06/15 11:25:18 kevquinn Exp $
+
+# Author: Kevin F. Quinn <kevquinn@gentoo.org>
+# Packages: app-dicts/myspell-*
+# Herd: app-dicts
 
 EXPORT_FUNCTIONS src_install pkg_preinst pkg_postinst
 
@@ -11,9 +15,9 @@ SLOT="0"
 # tar, gzip, bzip2 are included in the base profile, but not unzip
 DEPEND="app-arch/unzip"
 
-# The console application for using myspell dictionaries is
-# hunspell (which is making myspell itself obsolete).
-RDEPEND="app-text/hunspell"
+# Dictionaries don't have any runtime dependencies
+# Myspell dictionaries can be used by hunspell, openoffice and others
+RDEPEND=""
 
 # The destination directory for myspell dictionaries
 MYSPELL_DICTBASE="/usr/share/myspell"
@@ -146,6 +150,12 @@ myspell_src_install() {
 # Add entries in dictionary.lst.<lang> to OOo dictionary.lst
 # and create softlinks indicated by dictionary.lst.<lang>
 myspell_pkg_postinst() {
+	has_version eselect-oodict &&
+		eselect oodict set myspell-$(get_myspell_lang)
+
+	# Legacy code for dictionaries installed before eselect-oodict existed
+	# so has to remain for binpkg support.  This code is unmaintained -
+	# if you have a problem with it, emerge eselect-oodict.
 	[[ -d ${MYSPELL_OOOBASE} ]] || return
 	# This stuff is here, not in src_install, as the softlinks are
 	# deliberately _not_ listed in the package database.
@@ -178,6 +188,13 @@ myspell_pkg_postinst() {
 # Done in preinst (prerm happens after postinst, which overwrites
 # the dictionary.<lang>.lst file)
 myspell_pkg_preinst() {
+	if has_version app-admin/eselect-oodict; then
+		eselect oodict unset myspell-$(get_myspell_lang)
+		return
+	fi
+
+	# Legacy code for dictionaries installed before eselect-oodict existed
+	# Don't delete this; needed for uninstalls and binpkg support.
 	local filen dictlst entry fields removeentry suffix
 	dictlst="dictionary.lst.$(get_myspell_lang)"
 	[[ -d ${MYSPELL_OOOBASE} ]] || return
