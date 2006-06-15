@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.457 2006/05/30 19:45:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.458 2006/06/15 16:27:44 kumba Exp $
+
+  15 Jun 2006; Joshua Kinard <kumba@gentoo.org> glibc-2.4-r3.ebuild:
+  Add ~mips to KEYWORDS for testing purposes.
 
   30 May 2006; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.4.20041102-r2.ebuild, glibc-2.3.4.20050125-r1.ebuild,
