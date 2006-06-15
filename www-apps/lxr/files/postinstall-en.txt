@@ -1,4 +1,5 @@
 0. Create a db for lxr:
+
  MySQL: run mysql and read in the initdb file using:
    \. ${MY_SQLSCRIPTSDIR}/mysql/${PVR}_create.sql
 
@@ -6,7 +7,7 @@
    createuser lxr
    createdb -U lxr lxr
    psql -U lxr lxr
-   \i ${MY_SQLSCRIPTSDIR}/postgressql/${PVR}_create.sql
+   \i ${MY_SQLSCRIPTSDIR}/postgresql/${PVR}_create.sql
 
 1. Edit ${MY_INSTALLDIR}/lxr.conf and set:
  - db settings
@@ -38,6 +39,6 @@ you must take special care not to make lxr.conf visible to the world. If you
 are not using mod_perl, use .htaccess_cgi instead.
 
 5. Create the index:
- ${MY_INSTALLDIR}/genxref --url http://${VHOST_HOSTNAME}/${VHOST_APPDIR}
+ ${MY_INSTALLDIR}/genxref --url http://${VHOST_HOSTNAME}${VHOST_APPDIR}
 
-6. Browse to http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/source
+6. Browse to http://${VHOST_HOSTNAME}${VHOST_APPDIR}/source

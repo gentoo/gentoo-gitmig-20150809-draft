@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/lxr
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.9 2006/02/13 15:16:11 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.10 2006/06/15 03:50:38 vapier Exp $
+
+*lxr-0.9.5 (15 Jun 2006)
+
+  15 Jun 2006; Mike Frysinger <vapier@gentoo.org> files/postinstall-en.txt,
+  files/reconfig, +lxr-0.9.5.ebuild:
+  Version bump and webapp-config cleanups.
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org> lxr-0.3.1.ebuild:
   Virtuals for perl-core
