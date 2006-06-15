@@ -13,3 +13,6 @@
 -sys-cluster/gfs-kernel
 -sys-cluster/gnbd-kernel
 -x11-misc/linuxwacom
+-sys-cluster/cman
+-sys-cluster/fence
+-sys-cluster/gfs-headers
