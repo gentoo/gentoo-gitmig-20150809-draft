@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.2.3.ebuild,v 1.5 2006/06/15 02:11:02 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.2.3.ebuild,v 1.6 2006/06/15 07:01:32 corsair Exp $
 
 inherit eutils autotools
 
@@ -8,7 +8,7 @@ DESCRIPTION="Excellent MS Word filter lib, used in most Office suites"
 SRC_URI="mirror://sourceforge/wvware/${P}.tar.bz2"
 HOMEPAGE="http://wvware.sourceforge.net/"
 
-KEYWORDS="alpha amd64 ~ia64 ppc ~ppc64 sparc ~x86"
+KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc ~x86"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
