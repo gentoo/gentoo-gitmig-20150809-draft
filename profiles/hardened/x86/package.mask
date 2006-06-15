@@ -12,4 +12,7 @@ sys-cluster/cman-kernel
 sys-cluster/dlm-kernel
 sys-cluster/gfs-kernel
 sys-cluster/gnbd-kernel
+sys-cluster/cman
+sys-cluster/fence
+sys-cluster/gfs-headers
 x11-misc/linuxwacom
