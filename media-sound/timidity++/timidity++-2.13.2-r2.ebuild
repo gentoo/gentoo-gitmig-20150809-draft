@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r2.ebuild,v 1.9 2006/03/15 16:33:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r2.ebuild,v 1.10 2006/06/15 15:32:34 flameeyes Exp $
 
 inherit eutils
 
@@ -39,6 +39,8 @@ DEPEND="${RDEPEND}
 
 RDEPEND="${RDEPEND}
 	emacs? ( virtual/emacs )"
+
+PDEPEND="|| ( media-sound/timidity-eawpatches media-sound/timidity-shompatches )"
 
 src_unpack() {
 	unpack ${MY_P}.tar.bz2

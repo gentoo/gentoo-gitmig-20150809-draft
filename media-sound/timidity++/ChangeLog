@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.55 2006/03/15 16:33:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.56 2006/06/15 15:32:34 flameeyes Exp $
+
+  15 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  timidity++-2.13.2-r2.ebuild:
+  Depend on one of the two patchsets, as per bug #109375. Thanks to Santtu
+  Pajukanta for reporting.
 
   15 Mar 2006; Markus Rothe <corsair@gentoo.org>
   timidity++-2.13.2-r2.ebuild:
