@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-compiler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.23 2006/06/10 12:41:58 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.24 2006/06/15 19:03:06 kumba Exp $
+
+  16 Jun 2006; Joshua Kinard <kumba@gentoo.org>
+  eselect-compiler-2.0.0_rc1-r6.ebuild:
+  De-keywording for now on mips. Will stay with gcc-config-1.3.x and see how
+  2.x and its eselect tool mature.
 
   10 Jun 2006; Harald van Dĳk <truedfx@gentoo.org>
   eselect-compiler-2.0.0_rc1-r6.ebuild:
