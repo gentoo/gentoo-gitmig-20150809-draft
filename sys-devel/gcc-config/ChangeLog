@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.128 2006/06/06 01:48:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.129 2006/06/15 19:10:43 kumba Exp $
+
+  16 Jun 2006; Joshua Kinard <kumba@gentoo.org> gcc-config-2.0.0_rc1.ebuild:
+  De-keywording for now on mips. Will stay with gcc-config-1.3.x and see how
+  2.x and its eselect tool mature.
 
 *gcc-config-2.0.0_rc1 (06 Jun 2006)
 
