@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r3.ebuild,v 1.4 2006/05/23 20:34:03 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r3.ebuild,v 1.5 2006/06/15 15:44:32 ehmsen Exp $
 
 inherit tetex-3 flag-o-matic versionator virtualx
 
@@ -85,14 +85,6 @@ src_install() {
 
 	# Create Gentoo site texmf directory
 	keepdir /usr/share/texmf-site
-
-	# virtex was removed from tetex-3
-	# The links has to be relative, since the targets
-	# is not present at this stage and MacOS doesn't
-	# like non-existing targets, bug #106886.
-	cd ${D}/usr/bin/
-	ln -snf tex virtex
-	ln -snf pdftex pdfvirtex
 }
 
 pkg_postinst() {
