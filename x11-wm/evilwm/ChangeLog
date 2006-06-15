@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/evilwm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.32 2006/02/11 14:56:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.33 2006/06/15 20:51:45 tove Exp $
+
+*evilwm-0.99.25 (15 Jun 2006)
+
+  15 Jun 2006; Torsten Veller <tove@gentoo.org> -evilwm-0.99.23.ebuild,
+  +evilwm-0.99.25.ebuild:
+  Version bump.
 
 *evilwm-0.99.23 (11 Feb 2006)
 
