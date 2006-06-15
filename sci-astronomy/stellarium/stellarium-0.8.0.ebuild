@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.8.0.ebuild,v 1.5 2006/06/05 20:14:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.8.0.ebuild,v 1.6 2006/06/15 19:13:34 dertobi123 Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/stellarium/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="nls"
 
 RDEPEND="virtual/opengl
