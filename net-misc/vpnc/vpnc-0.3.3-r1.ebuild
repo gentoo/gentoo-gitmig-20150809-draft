@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.3.3-r1.ebuild,v 1.6 2006/04/21 02:10:51 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.3.3-r1.ebuild,v 1.7 2006/06/15 23:55:07 hanno Exp $
 
 inherit eutils
 
@@ -32,5 +32,5 @@ src_install() {
 	doins vpnc.conf
 	exeinto /etc/vpnc
 	doexe vpnc-script
-	dodir /var/run/vpnc
+	keepdir /var/run/vpnc
 }

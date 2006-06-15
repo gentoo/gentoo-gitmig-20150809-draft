@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.18 2006/04/27 22:12:27 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.19 2006/06/15 23:55:07 hanno Exp $
+
+  15 Jun 2006; Hanno Boeck <hanno@gentoo.org> vpnc-0.3.3-r1.ebuild:
+  Add keepdir for /var/run/vpnc.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-vpnc-0.3.2,
   files/digest-vpnc-0.3.3, files/digest-vpnc-0.3.3-r1, Manifest:
