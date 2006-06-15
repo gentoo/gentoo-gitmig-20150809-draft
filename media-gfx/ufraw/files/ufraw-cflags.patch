@@ -1,0 +1,18 @@
+--- ufraw-0.8.1/configure.ac.old	2006-06-15 19:30:30.000000000 +0200
++++ ufraw-0.8.1/configure.ac	2006-06-15 19:30:54.000000000 +0200
+@@ -32,10 +32,11 @@
+     AC_MSG_ERROR([size of double must be 8])
+ fi
+ 
+-UFRAW_CFLAGS="-ffast-math -fomit-frame-pointer"
+-if test "x$GCC" = "xyes"; then
+-    UFRAW_CFLAGS="$UFRAW_CFLAGS -W -Wall -O3"
+-fi
++dnl UFRAW_CFLAGS="-ffast-math -fomit-frame-pointer"
++dnl if test "x$GCC" = "xyes"; then
++dnl     UFRAW_CFLAGS="$UFRAW_CFLAGS -W -Wall -O3"
++dnl fi
++UFRAW_CFLAGS="$CFLAGS"
+ 
+ # windows will require some special attention
+ case $host_os in
