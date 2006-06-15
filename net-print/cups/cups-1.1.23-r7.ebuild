@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.16 2006/06/14 20:43:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.17 2006/06/15 00:07:10 genstef Exp $
 
 inherit eutils flag-o-matic pam autotools
 
@@ -23,7 +23,7 @@ DEP="pam? ( virtual/pam )
 		gnutls? ( net-libs/gnutls )
 		)
 	slp? ( >=net-libs/openslp-1.0.4 )
-	>=media-libs/libpng-1.2.1
+	<media-libs/libpng-1.2.10
 	>=media-libs/tiff-3.5.5
 	>=media-libs/jpeg-6b"
 DEPEND="${DEP}

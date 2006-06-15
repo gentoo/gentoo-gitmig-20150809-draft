@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.175 2006/06/14 21:28:46 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.176 2006/06/15 00:07:10 genstef Exp $
+
+  15 Jun 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.1.23-r1.ebuild,
+  cups-1.1.23-r7.ebuild:
+  Make libpng depend correctly a <1.2.10 one thanks to Friedrich Oslage
+  <bluebird@mnet-online.de>, Rob Couto <rob@cafe4111.org> and moesasji
+  <henkjans_bagger@hotmail.com> in bug 136346
 
   14 Jun 2006; Rajiv Aaron Manglani <rajiv@gentoo.org> cups-1.2.1-r1.ebuild:
   install web interface files in data dir so FEATURES=nodoc works.
