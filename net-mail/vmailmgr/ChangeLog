@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vmailmgr
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.24 2006/03/06 17:17:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.25 2006/06/15 04:59:25 mrness Exp $
+
+  15 Jun 2006; Alin Nastac <mrness@gentoo.org> vmailmgr-0.97.ebuild:
+  Warn users about utilities moved to net-mail/vmailmgr-tools (#136475).
 
   06 Mar 2006; Alin Nastac <mrness@gentoo.org> vmailmgr-0.97.ebuild:
   Added to ~amd64. Stable on x86.
