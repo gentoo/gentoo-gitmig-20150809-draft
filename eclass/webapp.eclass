@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.41 2006/05/19 19:24:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.42 2006/06/15 07:01:01 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -378,14 +378,11 @@ function webapp_pkg_setup ()
 		local my_output
 
 		if [ -d "${my_dir}" ] ; then
-			einfo "You already have something installed in ${my_dir}"
-			einfo "Are you trying to install over the top of something I cannot upgrade?"
-
 			my_output="$(webapp_check_installedat)"
 
 			if [ "$?" != "0" ]; then
-
 				# okay, whatever is there, it isn't webapp-config-compatible
+			    ewarn "You already have something installed in ${my_dir}"
 				ewarn
 				ewarn "Whatever is in ${my_dir}, it's not"
 				ewarn "compatible with webapp-config."
@@ -396,10 +393,6 @@ function webapp_pkg_setup ()
 				eerror "${my_dir} contains ${my_output}"
 				eerror "I cannot upgrade that"
 				die "Cannot upgrade contents of ${my_dir}"
-			else
-				einfo
-				einfo "I can upgrade the contents of ${my_dir}"
-				einfo
 			fi
 		fi
 	fi
