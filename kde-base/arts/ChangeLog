@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.223 2006/06/14 18:14:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.224 2006/06/15 16:17:04 tcort Exp $
+
+  15 Jun 2006; Thomas Cort <tcort@gentoo.org> arts-3.4.3-r1.ebuild,
+  arts-3.5.2-r1.ebuild:
+  Stable on alpha and amd64 wrt security Bug #135970.
 
   14 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   arts-3.4.3-r1.ebuild:
