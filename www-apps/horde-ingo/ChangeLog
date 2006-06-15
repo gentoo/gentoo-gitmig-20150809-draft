@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde-ingo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.10 2006/04/04 17:24:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.11 2006/06/15 21:08:23 chtekk Exp $
+
+*horde-ingo-1.1.1 (15 Jun 2006)
+
+  15 Jun 2006; Luca Longinotti <chtekk@gentoo.org> +horde-ingo-1.1.1.ebuild:
+  Version bump
 
   04 Apr 2006; <blubb@gentoo.org> horde-ingo-1.1.ebuild:
   stable on amd64 wrt bug 126435
