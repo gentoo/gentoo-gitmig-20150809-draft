@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_beta9.ebuild,v 1.3 2006/06/14 22:22:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_beta9.ebuild,v 1.4 2006/06/15 08:50:41 uberlord Exp $
 
 inherit eutils
 
@@ -42,8 +42,12 @@ src_compile() {
 	# Enable Linux or FreeBSD only features
 	if use kernel_linux ; then
 		myconf="${myconf} --with-ioloop=epoll"
+		# OK, this is nasty - inotify requires glibc-2.4 is built against
+		# linux-headers-2.6.16, but we have no way of knowing this
 		if has_version ">=sys-libs/glibc-2.4" ; then
-			myconf="${myconf} --with-notify=inotify"
+			if has_version ">=sys-kernel/linux-headers-2.6.16" ; then
+				myconf="${myconf} --with-notify=inotify"
+			fi
 		fi
 	elif use kernel_FreeBSD ; then
 		myconf="${myconf} --with-ioloop=kqueue"

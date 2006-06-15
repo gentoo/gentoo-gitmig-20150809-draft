@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.52 2006/06/14 22:22:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.53 2006/06/15 08:50:41 uberlord Exp $
+
+  15 Jun 2006; Roy Marples <uberlord@gentoo.org>
+  dovecot-1.0_beta8-r1.ebuild, dovecot-1.0_beta9.ebuild:
+  We now only enable inotify support if you have >=linux-headers-2.6.16 and
+  >=glibc-2.4 - hopefully glibc-2.4 has been emerged against
+  >=linux-headers-2.6.16, but we have no way of knowing this :/
 
   14 Jun 2006; Roy Marples <uberlord@gentoo.org> dovecot-1.0_beta9.ebuild:
   Documentation now installed via the doc USE flag.
