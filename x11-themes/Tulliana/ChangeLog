@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/Tulliana
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/Tulliana/ChangeLog,v 1.1 2006/06/09 22:11:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/Tulliana/ChangeLog,v 1.2 2006/06/15 14:11:50 genstef Exp $
+
+  15 Jun 2006; Stefan Schweizer <genstef@gentoo.org> Tulliana-2.0.ebuild:
+  Add the ~x86 KEYWORD
 
 *Tulliana-2.0 (09 Jun 2006)
 
