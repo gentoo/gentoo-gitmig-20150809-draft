@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.36 2006/04/09 12:59:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.37 2006/06/15 22:29:25 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -10,7 +10,7 @@
 #
 # NB:  If you add anything, please comment it!
 
-inherit eutils gnuconfig libtool
+inherit eutils libtool
 
 DEPEND="sys-devel/automake
 	sys-devel/autoconf
@@ -19,8 +19,6 @@ DEPEND="sys-devel/automake
 # Variables:
 #
 #   AT_M4DIR          - Additional director(y|ies) aclocal should search
-#   AT_GNUCONF_UPDATE - Should gnuconfig_update() be run (normally handled by
-#                       econf()) [yes|no]
 #   AM_OPTS           - Additional options to pass to automake during
 #                       eautoreconf call.
 
@@ -46,8 +44,6 @@ AT_GNUCONF_UPDATE="no"
 # This function mimes the behavior of autoreconf, but uses the different
 # eauto* functions to run the tools. It doesn't accept parameters, but
 # the directory with include files can be specified with AT_M4DIR variable.
-#
-# Note: doesn't run autopoint right now, but runs gnuconfig_update.
 eautoreconf() {
 	local pwd=$(pwd) x
 
@@ -67,9 +63,6 @@ eautoreconf() {
 	eautoheader
 	FROM_EAUTORECONF="yes" eautomake ${AM_OPTS}
 
-	# Normally run by econf()
-	[[ ${AT_GNUCONF_UPDATE} == "yes" ]] && gnuconfig_update
-
 	[[ ${AT_NOELIBTOOLIZE} == "yes" ]] && return 0
 
 	# Call it here to prevent failures due to elibtoolize called _before_
@@ -85,9 +78,6 @@ eautoreconf() {
 # They also force installing the support files for safety.
 eaclocal() {
 	local aclocal_opts
-
-	# XXX: M4DIR should be depreciated
-	AT_M4DIR=${AT_M4DIR:-${M4DIR}}
 
 	if [[ -n ${AT_M4DIR} ]] ; then
 		for x in ${AT_M4DIR} ; do
