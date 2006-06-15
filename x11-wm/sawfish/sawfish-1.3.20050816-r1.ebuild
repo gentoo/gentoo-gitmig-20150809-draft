@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20050816-r1.ebuild,v 1.1 2006/02/17 14:36:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20050816-r1.ebuild,v 1.2 2006/06/15 20:32:59 truedfx Exp $
 
 # detect cvs snapshots; fex. 1.3.20040120
 [[ $PV == *.[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
 (( snapshot = !$? ))
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="Extensible window manager using a Lisp-based scripting language"
 HOMEPAGE="http://sawmill.sourceforge.net/"
@@ -43,8 +43,6 @@ src_unpack() {
 	epatch "${FILESDIR}/libtool.patch"
 	# Fix utf8 with xft #121772
 	epatch "${FILESDIR}/sawfish-xft-menu-utf8.patch"
-	# This is for alpha, but there's no reason to restrict it
-	gnuconfig_update
 }
 
 src_compile() {

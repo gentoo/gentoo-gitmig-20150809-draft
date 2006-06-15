@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.64 2006/04/28 00:06:27 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.65 2006/06/15 20:32:59 truedfx Exp $
+
+  15 Jun 2006; Harald van Dĳk <truedfx@gentoo.org>
+  sawfish-1.3.20040120.ebuild, sawfish-1.3.20040120-r1.ebuild,
+  sawfish-1.3.20050816.ebuild, sawfish-1.3.20050816-r1.ebuild:
+  Remove gnuconfig_update call as it's now forced by portage
 
   28 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-sawfish-1.0.1-r6, files/digest-sawfish-1.3.20040120,

@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20040120-r1.ebuild,v 1.5 2005/09/02 19:16:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20040120-r1.ebuild,v 1.6 2006/06/15 20:32:59 truedfx Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 IUSE="gnome esd nls audiofile"
 
@@ -38,13 +38,6 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 if $sawfishsnapshot; then
 	DEPEND="${DEPEND} sys-devel/automake sys-devel/autoconf"
 fi
-
-src_unpack() {
-	unpack ${A} && cd ${S} || die "unpack failed"
-
-	# This is for alpha, but there's no reason to restrict it
-	gnuconfig_update
-}
 
 src_compile() {
 	local myconf
