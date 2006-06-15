@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pouetchess/pouetchess-0.2.0.ebuild,v 1.1 2006/06/14 18:19:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pouetchess/pouetchess-0.2.0.ebuild,v 1.2 2006/06/15 10:26:47 genstef Exp $
 
 inherit eutils games
 
@@ -25,7 +25,8 @@ RDEPEND=">=media-libs/libsdl-1.2.8
 			x11-libs/libXau
 			x11-libs/libXdmcp
 			x11-libs/libXext
-		virtual/x11 ) )"
+		)
+		virtual/x11 )"
 
 DEPEND="${RDEPEND}
 	dev-util/scons"
