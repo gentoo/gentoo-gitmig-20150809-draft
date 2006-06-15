@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/exiftool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.5 2006/05/12 14:03:31 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.6 2006/06/15 18:34:17 dertobi123 Exp $
+
+  15 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  exiftool-6.17.ebuild:
+  Added ~ppc, bug #136864
 
 *exiftool-6.17 (12 May 2006)
 
