@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1.ebuild,v 1.4 2006/03/21 14:33:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1.ebuild,v 1.5 2006/06/15 13:58:29 zzam Exp $
 
 inherit vdr-plugin
 
@@ -22,7 +22,8 @@ PATCHES="${FILESDIR}/${P}-*.diff"
 pkg_setup() {
 	vdr-plugin_pkg_setup
 
-	if grep -q cSubMenuNode /usr/include/vdr/submenu.h && [[ -f /usr/share/vdr/setup/menu.c ]]; then
+	local header=/usr/include/vdr/submenu.h
+	if [[ -f ${header} ]] && grep -q cSubMenuNode ${header} && [[ -f /usr/share/vdr/setup/menu.c ]]; then
 		einfo "Patched vdr found"
 	else
 		echo

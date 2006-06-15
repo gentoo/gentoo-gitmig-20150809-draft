@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-submenu/vdr-submenu-0.0.2.ebuild,v 1.1 2006/03/29 21:52:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-submenu/vdr-submenu-0.0.2.ebuild,v 1.2 2006/06/15 13:56:11 zzam Exp $
 
 inherit vdr-plugin
 
@@ -21,7 +21,8 @@ PATCHES="${FILESDIR}/${P}-asprintf.patch"
 pkg_setup() {
 	vdr-plugin_pkg_setup
 
-	if grep -q "class cSubMenuItemInfo" /usr/include/vdr/submenu.h 2>/dev/null; then
+	local header=/usr/include/vdr/submenu.h
+	if [[ -e ${header} ]] && grep -q "class cSubMenuItemInfo" ${header} 2>/dev/null; then
 		einfo "Patched vdr found"
 	else
 		einfo "Unpatched vdr found"
