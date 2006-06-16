@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.195 2006/06/15 19:22:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.196 2006/06/16 10:20:26 jokey Exp $
+
+  16 Jun 2006; Markus Ullmann <jokey@gentoo.org> openldap-2.3.24-r1.ebuild,
+  openldap-2.3.24-r2.ebuild:
+  Minor fix on migration howto wrt bug #136863 and arm love
 
   15 Jun 2006; Markus Ullmann <jokey@gentoo.org> openldap-2.3.24-r1.ebuild:
   Minor fix for populated tree detection, thanks to cardoe on #gentoo-dev for
