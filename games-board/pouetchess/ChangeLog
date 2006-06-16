@@ -1,0 +1,19 @@
+# ChangeLog for games-puzzle/pouetchess
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/ChangeLog,v 1.1 2006/06/16 04:07:00 mr_bones_ Exp $
+
+  15 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  pouetchess-0.2.0.ebuild:
+  tidy up after wolf31o2; stable for x86
+
+*pouetchess-0.2.0 (14 Jun 2006)
+
+  14 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/pouetchess-0.2.0-nvidia_glext.patch,
+  +files/pouetchess-0.2.0-sconstruct-sandbox.patch, +metadata.xml,
+  +pouetchess-0.2.0.ebuild:
+  Initial import. Original ebuild by Benoit Giraudou <bgiraudou@gmail.com>.
+  Ebuild modified by Adrian Fruehwirth <adrian.fruehwirth@gmx.at>, Bernard
+  Cafareli <voyageur@operamail.com>, Gorch(?) <gorch@12move.de>, and myself.
+  Closing bug #121937.
+
