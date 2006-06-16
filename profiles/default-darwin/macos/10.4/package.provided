@@ -53,6 +53,7 @@ mail-client/squirrelmail-1.4.1
 mail-filter/procmail-3.23
 mail-mta/postfix-2.0.8
 media-gfx/gimp-print-5.0.0_beta2
+media-libs/openal-0.0.8
 media-libs/fontconfig-1.0.1
 media-libs/freetype-2.1.1
 media-libs/glut-3.7
