@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwtplot3d
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.7 2006/05/07 07:33:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.8 2006/06/16 20:50:15 corsair Exp $
+
+  16 Jun 2006; Markus Rothe <corsair@gentoo.org> qwtplot3d-0.2.6-r2.ebuild:
+  Stable on ppc64
 
   07 May 2006; Markus Rothe <corsair@gentoo.org> qwtplot3d-0.2.6-r2.ebuild:
   Added ~ppc64
