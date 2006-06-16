@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.17 2006/06/14 14:21:46 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.18 2006/06/16 19:34:27 flameeyes Exp $
+
+*knutclient-0.9_pre1 (16 Jun 2006)
+
+  16 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +knutclient-0.9_pre1.ebuild:
+  Version bump, thanks to Thomas Kear in bug #136903.
 
   14 Jun 2006; Marcus D. Hanwell <cryos@gentoo.org>
   -knutclient-0.8.5.ebuild:
