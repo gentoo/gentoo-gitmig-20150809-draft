@@ -1,0 +1,10 @@
+# ChangeLog for dev-scheme/guile-gui
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gui/ChangeLog,v 1.1 2006/06/16 22:07:18 spyderous Exp $
+
+*guile-gui-0.2 (16 Jun 2006)
+
+  16 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  +guile-gui-0.2.ebuild:
+  Add Guile code to implement a GUI, needed for sci-chemistry/coot.
+
