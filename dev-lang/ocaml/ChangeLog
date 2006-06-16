@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.80 2006/05/21 17:52:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.81 2006/06/16 01:24:41 deltacow Exp $
+
+  16 Jun 2006; Scott Stoddard <deltacow@gentoo.org> ocaml-3.09.2.ebuild:
+  Added ~amd64 re bug #126724
 
   21 May 2006; Markus Rothe <corsair@gentoo.org> ocaml-3.08.3.ebuild:
   Stable on ppc64
