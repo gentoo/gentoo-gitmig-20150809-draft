@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28-r1.ebuild,v 1.1 2006/06/14 17:08:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28-r1.ebuild,v 1.2 2006/06/16 19:55:35 pva Exp $
 
 inherit eutils flag-o-matic
 
-DESCRIPTION="The Eggplant Umiquious Amiga Emulator"
+DESCRIPTION="The Ubiquitous Amiga Emulator with an emulation core largely based on WinUAE"
 HOMEPAGE="http://www.rcdrummond.net/uae/"
 SRC_URI="http://www.rcdrummond.net/uae/${P}/${P}.tar.bz2"
 
