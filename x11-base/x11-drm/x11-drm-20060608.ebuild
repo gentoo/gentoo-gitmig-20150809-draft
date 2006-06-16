@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608.ebuild,v 1.1 2006/06/08 22:51:33 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608.ebuild,v 1.2 2006/06/16 07:09:43 battousai Exp $
 
 inherit eutils x11 linux-mod
 
@@ -46,16 +46,26 @@ DEPEND=">=sys-devel/automake-1.7
 pkg_setup() {
 	get_version
 
-	if linux_chkconfig_builtin "DRM"
+	if is_kernel 2 6
 	then
-		die "Please disable or modularize DRM in the kernel config. (CONFIG_DRM = n or m)"
-	fi
+		if linux_chkconfig_builtin "DRM"
+		then
+			die "Please disable or modularize DRM in the kernel config. (CONFIG_DRM = n or m)"
+		fi
 
-	if ! linux_chkconfig_present "AGP"
+		if ! linux_chkconfig_present "AGP"
+		then
+			einfo "AGP support is not enabled in your kernel config. This may be needed for DRM to"
+			einfo "work, so you might want to double-check that setting. (CONFIG_AGP)"
+			echo
+		fi
+	elif is_kernel 2 4
 	then
-		einfo "AGP support is not enabled in your kernel config. This may be needed for DRM to"
-		einfo "work, so you might want to double-check that setting. (CONFIG_AGP)"
-		echo
+		if ! linux_chkconfig_present "DRM"
+		then
+			die "Please enable DRM support in your kernel configuration. (CONFIG_DRM = y or m)."
+			echo
+		fi
 	fi
 
 	# Set video cards to build for.
@@ -123,11 +133,12 @@ src_install() {
 	cd ${SRC_BUILD}
 
 	unset ARCH
+	is_kernel 2 6 && DRM_KMOD="drm.${KV_OBJ}"
 	make KV="${KV_FULL}" \
 		LINUXDIR="${KERNEL_DIR}" \
 		DESTDIR="${D}" \
 		RUNNING_REL="${KV_FULL}" \
-		MODULE_LIST="${VIDCARDS} drm.${KV_OBJ}" \
+		MODULE_LIST="${VIDCARDS} ${DRM_KMOD}" \
 		install || die "Install failed."
 
 	dodoc README.drm
