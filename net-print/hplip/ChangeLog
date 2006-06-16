@@ -1,6 +1,12 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.34 2006/06/04 13:56:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.35 2006/06/16 00:44:34 vanquirius Exp $
+
+*hplip-1.6.6 (16 Jun 2006)
+
+  16 Jun 2006; Marcelo Goes <vanquirius@gentoo.org> +hplip-1.6.6.ebuild:
+  1.6.6 version bump. Fixes bug 136937, reported by Kenton Groombridge
+  <kenton.groombridge at us.army dot mil>.
 
   04 Jun 2006; Stefan Schweizer <genstef@gentoo.org> hplip-0.9.7-r3.ebuild,
   hplip-0.9.8-r2.ebuild, -hplip-0.9.9.ebuild, -hplip-0.9.10-r1.ebuild,
