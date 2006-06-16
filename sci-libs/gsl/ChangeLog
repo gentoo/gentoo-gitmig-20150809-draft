@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gsl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.13 2006/05/23 20:14:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.14 2006/06/16 20:47:03 corsair Exp $
+
+  16 Jun 2006; Markus Rothe <corsair@gentoo.org> gsl-1.7.ebuild:
+  Stable on ppc64
 
   23 May 2006; Markus Rothe <corsair@gentoo.org> gsl-1.4.ebuild:
   Stable on ppc64
