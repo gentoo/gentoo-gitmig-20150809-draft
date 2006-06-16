@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.4 2006/05/09 01:05:09 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.5 2006/06/16 10:52:37 corsair Exp $
+
+  16 Jun 2006; Markus Rothe <corsair@gentoo.org> libpaper-1.1.14.8.ebuild:
+  Added ~ppc64; bug #136902
 
   09 May 2006; Emanuele Giaquinta <exg@gentoo.org> libpaper-1.1.14.8.ebuild:
   Add ~ppc
