@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.179 2006/06/11 16:28:29 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.180 2006/06/16 16:46:28 zmedico Exp $
+
+*portage-2.1.1_pre1 (16 Jun 2006)
+
+  16 Jun 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1.1_pre1.ebuild:
+  2.1.1_pre1 release. This fixes bugs #85576, #96331, #116637, #123677,
+  #126793, #132385, #133740, #136199, #136208, #136236, #136278, #136285,
+  #136313, #136404, #136532, #136705, and #136947.
 
   11 Jun 2006; Zac Medico <zmedico@gentoo.org> portage-2.1.ebuild:
   Add einfo about the default USE_ORDER change.
