@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.55 2006/05/26 20:31:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.56 2006/06/16 10:50:17 corsair Exp $
+
+  16 Jun 2006; Markus Rothe <corsair@gentoo.org> libcdio-0.77.ebuild:
+  Stable on ppc64; bug #136890
 
   26 May 2006; Diego Pettenò <flameeyes@gentoo.org> -libcdio-0.70.ebuild:
   Drop another old version.
