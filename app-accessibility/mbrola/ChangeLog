@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/mbrola
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.27 2006/06/05 08:13:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.28 2006/06/16 13:03:50 squinky86 Exp $
+
+  16 Jun 2006; Jon Hood <squinky86@gentoo.org> mbrola-3.0.1h-r3.ebuild,
+  mbrola-3.0.1h-r4.ebuild:
+  Add missing IUSE linguas wrt #136953.
 
   05 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
   mbrola-3.0.1h-r4.ebuild:

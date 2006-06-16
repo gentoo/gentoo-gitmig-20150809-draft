@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r3.ebuild,v 1.6 2006/04/28 19:30:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r3.ebuild,v 1.7 2006/06/16 13:03:50 squinky86 Exp $
 
-IUSE=""
+IUSE="linguas_de linguas_es linguas_fr"
 
 S=${WORKDIR}
 
