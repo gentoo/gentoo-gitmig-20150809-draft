@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.6-r1.ebuild,v 1.4 2005/05/28 16:08:31 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.6-r1.ebuild,v 1.5 2006/06/16 21:06:17 flameeyes Exp $
 
 IUSE="ogg mad encode alsa"
 
-inherit gnuconfig flag-o-matic eutils
+inherit flag-o-matic eutils
 
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
@@ -25,8 +25,6 @@ src_unpack() {
 
 	cd ${S}
 
-	# Needed on mips and probablly others
-	gnuconfig_update
 
 	epatch ${FILESDIR}/sox-12.17.6-destdir.patch
 }

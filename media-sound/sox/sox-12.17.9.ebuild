@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.9.ebuild,v 1.7 2006/04/09 16:26:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.9.ebuild,v 1.8 2006/06/16 21:06:17 flameeyes Exp $
 
-inherit gnuconfig flag-o-matic eutils
+inherit flag-o-matic eutils
 
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
@@ -24,8 +24,6 @@ src_unpack() {
 
 	cd ${S}
 
-	# Needed on mips and probably others
-	gnuconfig_update
 
 	epatch ${FILESDIR}/${P}-destdir.patch
 	epatch ${FILESDIR}/${P}-largefile.patch
