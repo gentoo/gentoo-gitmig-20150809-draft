@@ -1,0 +1,11 @@
+# ChangeLog for x11-libs/gtk-canvas
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-canvas/ChangeLog,v 1.1 2006/06/16 22:14:43 spyderous Exp $
+
+*gtk-canvas-0.1.1 (16 Jun 2006)
+
+  16 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/dont-build-libart_lgpl.patch, +metadata.xml,
+  +gtk-canvas-0.1.1.ebuild:
+  Add port of GnomeCanvas widget to GTK+, needed for sci-chemistry/coot.
+
