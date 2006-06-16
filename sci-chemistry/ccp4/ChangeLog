@@ -1,0 +1,20 @@
+# ChangeLog for sci-chemistry/ccp4
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ChangeLog,v 1.1 2006/06/16 20:46:02 spyderous Exp $
+
+*ccp4-6.0.1 (16 Jun 2006)
+
+  16 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/6.0.1-dont-make-dirs-in-configure.patch,
+  +files/6.0.1-ppc-double-define-gerror.patch,
+  +files/ccp4i-default-to-firefox.patch,
+  +files/check-blas-lapack-pthread.patch,
+  +files/clipper-find-mccp4-includes.patch,
+  +files/create-mosflm-bindir.patch, +files/dont-build-rasmol.patch,
+  +files/make-ipmosflm-dir.patch, +files/make-mosflm-cbf-libdir.patch,
+  +files/make-mosflm-index-libdir.patch, +files/make-mosflm-libdir.patch,
+  +files/pass-clipper-enablevals.patch, +metadata.xml, +ccp4-6.0.1.ebuild:
+  Add CCP4, a popular protein X-ray crystallography toolkit. Relies on portage
+  auto-fixing RPATHs for now, because its build system consists of a bunch of
+  stuff thrown together into the same tarball.
+
