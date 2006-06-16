@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5508 2006/06/15 21:28:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5509 2006/06/16 00:46:11 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -410,10 +410,6 @@ games-roguelike/noegnud-nethack
 # Donnie Berkholz <spyderous@gentoo.org>
 # Keeping masked so ~arch/arch users move from 6.8.2 to 7.0
 =x11-base/xorg-x11-6.9*
-
-# Marcelo Goes <vanquirius@gentoo.org> (15 Mar 2006)
-# Masked for bug 126256 (broken?)
->=net-print/hplip-0.9.9
 
 # Michael Sterrett <mr_bones_@gentoo.org> (12 Mar 2006)
 # masked due to security issues: bug #125990
