@@ -1,0 +1,23 @@
+diff -u -r8.944 main.c
+--- sendmail/main.c	21 Apr 2006 23:56:42 -0000	8.944
++++ sendmail/main.c	15 Jun 2006 18:38:35 -0000
+@@ -2408,6 +2408,8 @@
+ 	{
+ 		char dtype[200];
+ 
++		/* avoid cleanup in finis(), DaemonPid will be set below */
++		DaemonPid = 0;
+ 		if (!run_in_foreground && !tTd(99, 100))
+ 		{
+ 			/* put us in background */
+@@ -2440,7 +2442,10 @@
+ 
+ 		dtype[0] = '\0';
+ 		if (OpMode == MD_DAEMON)
++		{
+ 			(void) sm_strlcat(dtype, "+SMTP", sizeof dtype);
++			DaemonPid = CurrentPid;
++		}
+ 		if (QueueIntvl > 0)
+ 		{
+ 			(void) sm_strlcat2(dtype,

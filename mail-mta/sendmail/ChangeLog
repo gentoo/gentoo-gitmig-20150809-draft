@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.53 2006/06/15 09:39:15 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.54 2006/06/16 09:09:20 lcars Exp $
+
+*sendmail-8.13.7-r1 (16 Jun 2006)
+
+  16 Jun 2006; Andrea Barisani <lcars@gentoo.org>
+  +files/errata-8.13.7-1.patch, +files/errata-8.13.7-2.patch,
+  +sendmail-8.13.7-r1.ebuild:
+  Revision bump with 2 errata published by sendmail.org.
 
   15 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   sendmail-8.13.7.ebuild:
