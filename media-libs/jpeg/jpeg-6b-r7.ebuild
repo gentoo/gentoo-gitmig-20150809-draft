@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r7.ebuild,v 1.10 2006/06/10 19:42:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r7.ebuild,v 1.11 2006/06/16 19:02:27 grobian Exp $
 
 inherit libtool eutils toolchain-funcs
 
-PATCH_VER=1.3
+PATCH_VER=1.4
 DESCRIPTION="Library to load, handle and manipulate images in the JPEG format"
 HOMEPAGE="http://www.ijg.org/"
 SRC_URI="ftp://ftp.uu.net/graphics/jpeg/${PN}src.v${PV}.tar.gz
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.uu.net/graphics/jpeg/${PN}src.v${PV}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc-macos ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc-macos ppc64 ~s390 ~sh sparc x86"
 IUSE=""
 
 RDEPEND=""
