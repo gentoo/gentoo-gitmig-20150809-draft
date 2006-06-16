@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.6.2.ebuild,v 1.6 2005/04/27 16:55:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.6.2.ebuild,v 1.7 2006/06/16 21:21:54 flameeyes Exp $
 
 IUSE="libsamplerate"
 
-inherit gnuconfig eutils
+inherit eutils
 
 DESCRIPTION="GNUsound is a sound editor for Linux/x86"
 HOMEPAGE="http://gnusound.sourceforge.net/"
@@ -36,7 +36,6 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-destdir.patch
 
-	gnuconfig_update
 }
 
 src_compile() {

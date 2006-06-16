@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.193 2006/05/05 11:28:43 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.194 2006/06/16 21:20:38 flameeyes Exp $
+
+  16 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> xmms-1.2.10-r14.ebuild,
+  xmms-1.2.10-r15.ebuild, xmms-1.2.10-r16.ebuild:
+  Remove gnuconfig update.
 
   05 May 2006; Marius Mauch <genone@gentoo.org> xmms-1.2.10-r14.ebuild,
   xmms-1.2.10-r15.ebuild, xmms-1.2.10-r16.ebuild:

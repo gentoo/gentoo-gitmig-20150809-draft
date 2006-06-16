@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gnusound
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.9 2006/02/25 14:43:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.10 2006/06/16 21:21:54 flameeyes Exp $
+
+  16 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> gnusound-0.6.2.ebuild,
+  gnusound-0.7.ebuild:
+  Remove gnuconfig update.
 
   25 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> gnusound-0.7.ebuild:
   Move to using GNU mirrors instead of ftp.gnu.org directly. Thanks to Thomas

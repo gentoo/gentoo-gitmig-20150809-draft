@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/DBMix
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/DBMix/ChangeLog,v 1.5 2004/07/04 09:29:49 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/DBMix/ChangeLog,v 1.6 2006/06/16 21:22:59 flameeyes Exp $
+
+  16 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> DBMix-0.9.8.ebuild:
+  Remove gnuconfig update.
 
   04 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> DBMix-0.9.8.ebuild:
   -sparc -amd64.

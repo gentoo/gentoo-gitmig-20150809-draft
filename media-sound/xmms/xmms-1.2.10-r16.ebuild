@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r16.ebuild,v 1.2 2006/05/05 11:28:43 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r16.ebuild,v 1.3 2006/06/16 21:20:39 flameeyes Exp $
 
-inherit flag-o-matic eutils libtool gnuconfig
+inherit flag-o-matic eutils libtool
 
 PATCH_VER="2.3.1"
 M4_VER="1.1"
@@ -82,9 +82,6 @@ src_unpack() {
 		cp ${FILESDIR}/po-update.pl update.pl
 		perl update.pl --pot
 	fi
-
-	cd ${S}
-	gnuconfig_update
 }
 
 src_compile() {

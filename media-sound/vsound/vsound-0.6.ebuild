@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/vsound-0.6.ebuild,v 1.4 2005/11/07 12:14:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/vsound-0.6.ebuild,v 1.5 2006/06/16 21:15:53 flameeyes Exp $
 
 IUSE=""
 
-inherit gnuconfig
+inherit
 
 DESCRIPTION="A virtual audio loopback cable"
 HOMEPAGE="http://www.zorg.org/${PN}/"
@@ -14,12 +14,6 @@ DEPEND=">=media-sound/sox-12.17.1"
 KEYWORDS="x86 amd64 sparc ~ppc"
 SLOT="0"
 SRC_URI="http://www.zorg.org/${PN}/${P}.tar.gz"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	gnuconfig_update
-}
 
 src_install() {
 	make DESTDIR="${D}" install || die

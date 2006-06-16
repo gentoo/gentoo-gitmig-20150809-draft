@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r3.ebuild,v 1.15 2006/05/16 18:22:36 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r3.ebuild,v 1.16 2006/06/16 21:26:01 flameeyes Exp $
 
-inherit eutils flag-o-matic gnuconfig linux-info libtool
+inherit eutils flag-o-matic linux-info libtool
 
 MY_P=${PN}-III-alpha9.8
 S=${WORKDIR}/${MY_P}
@@ -48,7 +48,6 @@ src_unpack() {
 
 	ln -s configure.guess config.guess
 	ln -s configure.sub config.sub
-	gnuconfig_update
 	rm config.{guess,sub}
 
 	elibtoolize

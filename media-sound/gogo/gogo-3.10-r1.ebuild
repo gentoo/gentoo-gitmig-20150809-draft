@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.17 2005/12/26 14:26:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.18 2006/06/16 21:24:28 flameeyes Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 IUSE="debug"
 
 MY_PV=310pl3
@@ -25,12 +25,6 @@ DEPEND="dev-lang/nasm"
 #	vorbis? ( >=media-libs/libvorbis-1.0_rc3 )"
 
 S=${WORKDIR}/petit${MY_PV}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	gnuconfig_update
-}
 
 src_compile() {
 	local myconf=""

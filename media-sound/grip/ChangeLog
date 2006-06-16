@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.63 2006/04/03 16:13:04 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.64 2006/06/16 21:12:06 flameeyes Exp $
+
+  16 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> grip-3.3.0.ebuild,
+  grip-3.3.1.ebuild:
+  Remove gnuconfig update.
 
   03 Apr 2006; Patrick McLean <chutzpah@gentoo.org> grip-3.3.0.ebuild,
   grip-3.3.1.ebuild:

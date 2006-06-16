@@ -1,10 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/DBMix/DBMix-0.9.8.ebuild,v 1.5 2004/07/08 07:56:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/DBMix/DBMix-0.9.8.ebuild,v 1.6 2006/06/16 21:22:59 flameeyes Exp $
 
 IUSE="xmms"
-
-inherit gnuconfig
 
 DESCRIPTION="Mix several xmms and other sound streams like a DJ"
 HOMEPAGE="http://dbmix.sourceforge.net"
@@ -41,8 +39,6 @@ src_unpack() {
 	einfo "Fixing naked . in include"
 	sed -i~ 's/^INCLUDES = ./INCLUDES = -I./' dbfsd_src/Makefile* \
 		|| die
-
-	gnuconfig_update
 }
 
 src_compile() {

@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/imp3sh-0.2.3.ebuild,v 1.13 2005/12/26 15:24:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/imp3sh-0.2.3.ebuild,v 1.14 2006/06/16 21:28:53 flameeyes Exp $
 
 IUSE="vorbis"
 
-inherit gnuconfig toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="flexible playlist manipulation shell and song player/streamer"
 HOMEPAGE="http://www.geocities.com/kman_can/"
@@ -17,13 +17,6 @@ KEYWORDS="x86"
 DEPEND="sys-libs/ncurses
 	vorbis? ( media-libs/libvorbis
 	             media-libs/libao )"
-
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-	gnuconfig_update
-}
 
 src_compile() {
 	econf || die

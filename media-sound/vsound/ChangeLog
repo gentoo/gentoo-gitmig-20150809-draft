@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/vsound
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/ChangeLog,v 1.12 2005/11/07 12:14:36 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/ChangeLog,v 1.13 2006/06/16 21:15:53 flameeyes Exp $
+
+  16 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> vsound-0.6.ebuild:
+  Remove gnuconfig update.
 
   07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> vsound-0.5.ebuild,
   vsound-0.6.ebuild:

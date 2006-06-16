@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.0.ebuild,v 1.11 2006/04/03 16:13:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.0.ebuild,v 1.12 2006/06/16 21:12:06 flameeyes Exp $
 
 inherit gnuconfig flag-o-matic eutils toolchain-funcs
 
@@ -34,8 +34,6 @@ src_unpack() {
 	cd ${S}
 	# see #84704
 	epatch ${FILESDIR}/${PV}-crashfix.patch
-
-	gnuconfig_update
 }
 
 src_compile() {

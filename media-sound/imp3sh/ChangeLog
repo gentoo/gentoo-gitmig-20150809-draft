@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/imp3sh
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/ChangeLog,v 1.9 2005/12/26 15:24:51 lu_zero Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/ChangeLog,v 1.10 2006/06/16 21:28:53 flameeyes Exp $
+
+  16 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> imp3sh-0.2.3.ebuild:
+  Remove gnuconfig update.
 
   26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> imp3sh-0.2.3.ebuild:
   oggvorbis Cleanup

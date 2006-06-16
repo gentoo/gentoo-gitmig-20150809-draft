@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r2.ebuild,v 1.12 2006/03/07 13:42:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r2.ebuild,v 1.13 2006/06/16 21:26:01 flameeyes Exp $
 
 IUSE=""
 
-inherit eutils flag-o-matic gnuconfig
+inherit eutils flag-o-matic
 
 MY_P=${PN}-III-alpha9.8
 S=${WORKDIR}/${MY_P}
@@ -36,7 +36,6 @@ src_unpack() {
 
 	ln -s configure.guess config.guess
 	ln -s configure.sub config.sub
-	gnuconfig_update
 	rm config.{guess,sub}
 }
 
