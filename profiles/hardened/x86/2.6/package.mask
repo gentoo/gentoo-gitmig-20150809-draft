@@ -16,3 +16,16 @@
 -sys-cluster/cman
 -sys-cluster/fence
 -sys-cluster/gfs-headers
+-sys-cluster/gulm
+-sys-cluster/magma-plugins
+-sys-fs/gfs
+-sys-power/kpowersave
+-sys-power/powersave
+-media-libs/libipoddevice
+-media-sound/banshee
+-media-video/thoggen
+-gnome-base/gnome-mount
+-gnome-base/gnome-volume-manager
+-gnome-extra/hal-device-manager
+-sys-apps/pmount
+-sys-apps/keyutils
