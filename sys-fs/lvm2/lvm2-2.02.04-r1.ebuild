@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.04-r1.ebuild,v 1.2 2006/04/24 13:58:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.04-r1.ebuild,v 1.3 2006/06/16 22:48:50 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://sources.redhat.com/lvm2/"
@@ -22,7 +24,6 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${PN/lvm/LVM}.${PV}"
 
-inherit eutils
 src_unpack() {
 	unpack ${A}
 	cd ${S} || die
