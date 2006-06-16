@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5509 2006/06/16 00:46:11 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5510 2006/06/16 19:33:36 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (16 Jun 2006)
+# Pre-release
+>=net-misc/knutclient-0.9_pre1
 
 # Gustavo Zacarias <gustavoz@gentoo.org> (15 Jun 2006)
 # Masked because of crash issues bug #131686
