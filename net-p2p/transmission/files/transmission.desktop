@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Transmission
+Comment=A free, lightweight BitTorrent client
+Exec=/usr/bin/transmission-gtk
+Type=Application
+Encoding=UTF-8
+Icon=/usr/share/pixmaps/transmission.png
+Categories=Application;Network;Internet;GNOME;GTK;X-Red-Hat-Base;
+X-Desktop-File-Install-Version=0.10
