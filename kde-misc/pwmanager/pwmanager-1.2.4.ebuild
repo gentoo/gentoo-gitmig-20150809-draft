@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/pwmanager-1.2.4.ebuild,v 1.3 2006/06/07 05:12:15 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/pwmanager-1.2.4.ebuild,v 1.4 2006/06/16 12:12:26 flameeyes Exp $
 
 inherit kde
 
@@ -24,6 +24,7 @@ LANGS="ca da de el es et fr hu it lt nl pl ro sv"
 
 for X in ${LANGS}; do
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/passwordmanager/${LANGS_PKG}.tar.bz2 )"
+	IUSE="${IUSE} linguas_${X}"
 done
 
 src_compile() {
