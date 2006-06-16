@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/module-build-0.28.ebuild,v 1.4 2006/06/14 16:50:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/module-build-0.28.ebuild,v 1.5 2006/06/16 14:13:52 mcummings Exp $
 
 inherit perl-module
 
@@ -16,9 +16,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE=""
 
+# Removing these as hard deps. They are listed as recommended in the Build.PL,
+# but end up causing a dep loop since they require module-build to be built.
+# ~mcummings 06.16.06
+#>=dev-perl/ExtUtils-CBuilder-0.15
+#>=dev-perl/extutils-parsexs-1.02
 DEPEND="dev-perl/yaml
-	>=dev-perl/ExtUtils-CBuilder-0.15
-	>=dev-perl/extutils-parsexs-1.02
 	>=dev-perl/Archive-Tar-1.09"
 
 SRC_TEST="do"
