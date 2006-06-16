@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.9.ebuild,v 1.12 2005/04/05 02:28:10 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.9.ebuild,v 1.13 2006/06/16 21:51:19 flameeyes Exp $
 
-inherit flag-o-matic gnuconfig
+inherit flag-o-matic
 
 DESCRIPTION="Library of cd audio related routines."
 SRC_URI="mirror://sourceforge/libcdaudio/${P}.tar.gz"
@@ -12,13 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~mips ~amd64 ia64 ppc64"
 IUSE=""
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	gnuconfig_update
-
-}
 
 src_compile() {
 	# -fPIC is required for this library on alpha, see bug #17192

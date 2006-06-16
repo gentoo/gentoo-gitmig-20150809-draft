@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.0.ebuild,v 1.22 2006/03/06 15:07:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.0.ebuild,v 1.23 2006/06/16 21:49:18 flameeyes Exp $
 
-inherit flag-o-matic gnuconfig
+inherit flag-o-matic
 
 DESCRIPTION="MPEG-1 and MPEG-4 video encoding library"
 HOMEPAGE="http://fame.sourceforge.net/"
@@ -16,10 +16,6 @@ IUSE="mmx sse"
 src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
-
-	# This is needed for alpha and probably other newer arches
-	# (13 Jan 2004 agriffis)
-	gnuconfig_update
 
 	[[ "${ARCH}" == "amd64" ]] && libtoolize -c -f
 }

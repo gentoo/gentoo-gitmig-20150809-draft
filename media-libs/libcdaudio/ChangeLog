@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcdaudio
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.32 2005/12/24 16:48:39 killerfox Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.33 2006/06/16 21:51:19 flameeyes Exp $
+
+  16 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libcdaudio-0.99.9.ebuild:
+  Remove gnuconfig update.
 
   24 Dec 2005; Rene Nussbaumer <killerfox@gentoo.org>
   libcdaudio-0.99.12.ebuild:
