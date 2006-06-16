@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.14 2006/06/16 19:55:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.15 2006/06/16 22:49:24 mr_bones_ Exp $
 
 # We don't have any ppc sub profiles yet. bug #74103
 altivec
@@ -36,3 +36,4 @@ v4l2
 ipod
 uml
 cman
+gulm
