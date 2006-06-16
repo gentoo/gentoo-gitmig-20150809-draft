@@ -22,6 +22,7 @@ sys-fs/gfs
 sys-power/kpowersave
 sys-power/powersave
 media-libs/libipoddevice
+dev-dotnet/ipod-sharp
 media-sound/banshee
 media-video/thoggen
 gnome-base/gnome-mount
