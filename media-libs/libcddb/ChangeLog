@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcddb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/ChangeLog,v 1.23 2006/06/16 10:48:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/ChangeLog,v 1.24 2006/06/16 10:55:35 exg Exp $
+
+  16 Jun 2006; Emanuele Giaquinta <exg@gentoo.org> libcddb-1.2.1.ebuild:
+  Stable on ppc; bug #136890
 
   16 Jun 2006; Markus Rothe <corsair@gentoo.org> libcddb-1.2.1.ebuild:
   Stable on ppc64; bug #136890
