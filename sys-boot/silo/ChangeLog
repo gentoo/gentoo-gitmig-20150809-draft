@@ -1,6 +1,15 @@
 # ChangeLog for sys-boot/silo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.28 2006/04/24 20:41:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.29 2006/06/16 20:32:54 gustavoz Exp $
+
+*silo-1.4.12 (16 Jun 2006)
+
+  16 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  -files/silo-1.4.9-sparc_cpu.patch, -silo-1.3.1.ebuild,
+  -silo-1.3.1-r1.ebuild, -silo-1.3.2.ebuild, -silo-1.3.2-r1.ebuild,
+  -silo-1.4.8.ebuild, -silo-1.4.9.ebuild, -silo-1.4.10.ebuild,
+  +silo-1.4.12.ebuild:
+  Major cleanup & revbump
 
   24 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> silo-1.4.11-r1.ebuild:
   Stable on sparc
