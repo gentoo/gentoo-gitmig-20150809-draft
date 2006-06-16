@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.115 2006/06/09 06:46:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.116 2006/06/16 15:03:34 redhatter Exp $
+
+  16 Jun 2006; Stuart Longland <redhatter@gentoo.org>
+  -files/webmin-1.130-webalizer.patch, -webmin-1.170-r3.ebuild:
+  Ditched stale version of webmin -- dropping ~mips keyword.
 
   09 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
   webmin-1.270.ebuild:
