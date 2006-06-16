@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.113 2006/05/02 03:15:46 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.114 2006/06/16 05:26:45 leonardop Exp $
+
+*gnome-terminal-2.14.2 (16 Jun 2006)
+
+  16 Jun 2006; Leonardo Boshell <leonardop@gentoo.org>
+  +gnome-terminal-2.14.2.ebuild:
+  New release. Dropped 'static' USE flag.
 
 *gnome-terminal-2.14.1 (02 May 2006)
 
