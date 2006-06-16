@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.31 2006/05/07 07:30:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.32 2006/06/16 20:44:45 corsair Exp $
+
+  16 Jun 2006; Markus Rothe <corsair@gentoo.org> qwt-4.2.0-r1.ebuild:
+  Stable on ppc64
 
   07 May 2006; Markus Rothe <corsair@gentoo.org> qwt-4.2.0-r1.ebuild,
   qwt-5_pre20060130.ebuild:
