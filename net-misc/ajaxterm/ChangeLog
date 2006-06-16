@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ajaxterm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ajaxterm/ChangeLog,v 1.2 2006/05/30 11:34:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ajaxterm/ChangeLog,v 1.3 2006/06/16 09:02:06 genstef Exp $
+
+  16 Jun 2006; Stefan Schweizer <genstef@gentoo.org> -ajaxterm-0.6.ebuild,
+  +ajaxterm-0.7.ebuild:
+  version bump and init script fix thanks to Jon Hood <squinky86@gentoo.org>
+  in bugs 136945 and 136946
 
 *ajaxterm-0.6 (28 May 2006)
 
