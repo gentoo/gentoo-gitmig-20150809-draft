@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/libxfcegui4
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.73 2006/04/22 10:26:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.74 2006/06/17 00:42:21 mr_bones_ Exp $
+
+  17 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  libxfcegui4-4.2.2-r1.ebuild:
+  move inherit to the top
 
   22 Apr 2006; Markus Rothe <corsair@gentoo.org> libxfcegui4-4.2.3.ebuild:
   Stable on ppc64
