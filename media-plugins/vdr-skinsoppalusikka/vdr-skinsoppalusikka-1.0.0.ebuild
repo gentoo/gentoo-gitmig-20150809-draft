@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinsoppalusikka/vdr-skinsoppalusikka-1.0.0.ebuild,v 1.2 2006/05/31 22:05:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinsoppalusikka/vdr-skinsoppalusikka-1.0.0.ebuild,v 1.3 2006/06/17 22:01:42 zzam Exp $
 
 inherit vdr-plugin
 
@@ -25,4 +25,6 @@ src_install() {
 
 	insinto /etc/vdr/themes
 	doins ${S}/themes/*
+
+	chown vdr:vdr -R ${D}/etc/vdr
 }
