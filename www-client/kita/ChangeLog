@@ -1,6 +1,13 @@
 # ChangeLog for www-client/kita
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kita/ChangeLog,v 1.26 2005/08/13 23:10:45 hansmi Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/kita/ChangeLog,v 1.27 2006/06/17 09:01:18 usata Exp $
+
+*kita-0.177.3 (17 Jun 2006)
+
+  17 Jun 2006; Mamoru KOMACHI <usata@gentoo.org> -kita-0.175.1.ebuild,
+  +kita-0.177.3.ebuild:
+  Version bumped. Use this version if you have a problem in posting to the
+  BBS.
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> kita-0.176.0.ebuild:
   Stable on ppc.
@@ -10,7 +17,7 @@
   02 Aug 2005; Mamoru KOMACHI <usata@gentoo.org> +kita-0.177.0.ebuild:
   Version bumped.
 
-  19 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> kita-0.176.0.ebuild:
+  19 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org> kita-0.176.0.ebuild:
   Stable on alpha.
 
   07 Jul 2005; Markus Rothe <corsair@gentoo.org> kita-0.176.0.ebuild:
@@ -23,7 +30,7 @@
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> kita-0.175.1.ebuild:
   Stable on ppc.
 
-  12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> kita-0.175.1.ebuild:
+  12 Jun 2005; Bryan Ãstergaard <kloeri@gentoo.org> kita-0.175.1.ebuild:
   Stable on alpha.
 
   06 Jun 2005; Markus Rothe <corsair@gentoo.org> kita-0.175.1.ebuild:
@@ -38,7 +45,7 @@
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> kita-0.175.0.ebuild:
   Stable on ppc.
 
-  27 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> kita-0.175.0.ebuild:
+  27 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> kita-0.175.0.ebuild:
   Stable on alpha.
 
   12 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> kita-0.175.0.ebuild:
@@ -49,7 +56,7 @@
   28 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> +kita-0.175.1.ebuild:
   Version bumped.
 
-  19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> kita-0.174.0.ebuild:
+  19 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org> kita-0.174.0.ebuild:
   Stable on alpha.
 
 *kita-0.175.0 (17 Mar 2005)
