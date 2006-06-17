@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cproto/cproto-4.7e.ebuild,v 1.5 2006/06/17 04:24:35 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cproto/cproto-4.7e.ebuild,v 1.6 2006/06/17 12:02:50 tcort Exp $
 
 MY_PV="4_7e"
-MY_P="${PN}-${MY_PV}"
-S="${WORKDIR}/${MY_P}"
+MY_P=${PN}-${MY_PV}
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Generate C function prototypes from C source code"
 HOMEPAGE="http://invisible-island.net/cproto/"
