@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.74 2006/06/11 10:27:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.75 2006/06/17 16:26:47 flameeyes Exp $
+
+*faad2-2.0-r13 (17 Jun 2006)
+
+  17 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> +faad2-2.0-r13.ebuild:
+  Add new revision that passes -fno-strict-aliasing on the library to avoid
+  strict aliasing rules.
 
   11 Jun 2006; Guy Martin <gmsoft@gentoo.org> faad2-2.0-r11.ebuild:
   Stable on hppa.
