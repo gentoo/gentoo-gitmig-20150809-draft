@@ -1,28 +1,27 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.6.6.ebuild,v 1.1 2006/06/16 00:44:34 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.6.6.ebuild,v 1.2 2006/06/17 00:15:05 genstef Exp $
 
 inherit eutils
 
-DB_V=1.5-20060211
+DB_V=20060615
 DESCRIPTION="HP Linux Imaging and Printing System. Includes net-print/hpijs, scanner drivers and service tools."
 HOMEPAGE="http://hplip.sourceforge.net/"
 SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
-	foomaticdb? ( mirror://gentoo/foomatic-db-hpijs-${DB_V}.tar.gz )"
+	foomaticdb? ( http://gentooexperimental.org/~genstef/dist/foomatic-db-hpijs-${DB_V}.tar.gz )"
 	#http://www.linuxprinting.org/download/foomatic/foomatic-db-hpijs-${DB_V}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="foomaticdb snmp X qt ppds scanner cups"
+IUSE="foomaticdb snmp X qt ppds scanner"
 
-DEPEND="dev-lang/python
+DEPEND=">=dev-lang/python-2.2.0
 	snmp? ( >=net-analyzer/net-snmp-5.0.9 )
 	!net-print/hpijs
 	!net-print/hpoj"
 
 RDEPEND="virtual/ghostscript
-	>=dev-lang/python-2.2.0
 	scanner? (
 		>=media-gfx/sane-backends-1.0.9
 		|| (
@@ -38,29 +37,46 @@ RDEPEND="virtual/ghostscript
 	>=net-print/foomatic-filters-3.0.2
 	${DEPEND}"
 
+pkg_setup() {
+	# avoid collisions
+	if [ -e ${ROOT}/usr/lib/cups/backend/hp ] && [ -e ${ROOT}/usr/libexec/cups/backend/hp ]; then
+		rm ${ROOT}/usr/libexec/cups/backend/hp;
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	sed -i -e "s:(uint32_t)0xff000000) >> 24))):(uint32_t)0xff000000) >> 24):" \
-		"${S}"/scan/sane/mfpdtf.h
-
 	# bug 98428
 	sed -i -e "s:/usr/bin/env python:/usr/bin/python:g" \
-		"${S}"/hpssd.py
+		hpssd.py
 }
 src_compile() {
-	myconf="${myconf} --disable-cups-install --disable-foomatic-install"
+	econf \
+		$(use_enable snmp network-build) \
+		$(use_enable cups cups-install) \
+		$(use_enable ppds foomatic-install) \
+		|| die "econf failed"
+	emake || die "emake failed"
 
-	use snmp || myconf="${myconf} --disable-network-build"
-
-	econf ${myconf} || die "Error: econf failed!"
-	emake || die "Error: emake failed!"
+	if use foomaticdb ; then
+		cd ../foomatic-db-hpijs-${DB_V}
+		econf || die "econf failed"
+		rm -fR data-generators/hpijs-rss
+		emake || die "emake failed"
+	fi
 }
 
 
 src_install() {
-	make DESTDIR="${D}" install
+	# cups-1.2 installation paths, make sure that the .desktop is installed
+	sed -i -e "s:/usr/lib/cups:$(cups-config --serverbin):" \
+		-e 's:\(ICON_FILE = \).*:\1hplip.desktop:' \
+		-e 's:\(ICON_PATH = \).*:\1/usr/share/applications:' \
+		Makefile
+
+	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 
 	newinitd "${FILESDIR}"/hplip.init.d hplip
 
@@ -87,34 +103,14 @@ src_install() {
 		rm -f "${D}"/usr/bin/hp-toolbox
 		rm -f "${D}"/usr/share/hplip/print
 		rm -f "${D}"/usr/share/hplip/toolbox
-		rm -f "${D}"/usr/share/hplip/data/hplip.desktop
 		rm -f "${D}"/usr/share/applications/hplip.desktop
+		rm -f "${D}"/usr/lib/menu/hplip
 	fi
 
-	if use ppds; then
-		dodir /usr/share
-		mv "${S}"/prnt/hpijs/ppd/* "${D}"/usr/share/ppd
-	fi
-
-	if use cups && use ppds ; then
-		dodir /usr/share/cups/model
-		dosym /usr/share/ppd /usr/share/cups/model/foomatic-ppds
-	fi
-
-	[ -e /usr/bin/foomatic-rip ] && rm -f "${D}"/usr/bin/foomatic-rip
+	rm -rf ${D}/$(cups-config --serverbin)/filter ${D}/usr/bin/foomatic-rip
 
 	if use foomaticdb ; then
 		cd ../foomatic-db-hpijs-${DB_V}
-		econf || die "econf failed"
-		rm -fR data-generators/hpijs-rss
-		make || die
-		make DESTDIR="${D}" install || die
-	fi
-
-	# desktop entry, bug 122758
-	if use qt; then
-		dodir /usr/share/applications
-		mv "${D}"/usr/share/hplip/data/hplip.desktop \
-		"${D}"/usr/share/applications
+		emake DESTDIR="${D}" install || die "emake install failed"
 	fi
 }

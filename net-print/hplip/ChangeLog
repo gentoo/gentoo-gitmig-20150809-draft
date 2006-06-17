@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.35 2006/06/16 00:44:34 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.36 2006/06/17 00:15:05 genstef Exp $
+
+  17 Jun 2006; Stefan Schweizer <genstef@gentoo.org> hplip-1.6.6.ebuild:
+  cups-1.2 fixes and major ebuild cleanups
 
 *hplip-1.6.6 (16 Jun 2006)
 
