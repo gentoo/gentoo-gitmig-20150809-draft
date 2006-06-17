@@ -1,25 +1,100 @@
-MD5 1fda6f96aad2729af0a5f1da29c3592a ChangeLog 24175
-MD5 4a2765d028f354ecf9ce42311c68d02e files/digest-nautilus-1.0.6-r9 250
-MD5 2f6d773deecd7c3f65b6bd271f159634 files/digest-nautilus-2.10.1-r1 253
-MD5 b76d77e026f3ccc67595784176ef8518 files/digest-nautilus-2.12.1-r1 253
-MD5 6d2910c0d22cdc27feb2d63184bc6798 files/digest-nautilus-2.12.2 253
-MD5 efe9dde5c9d6be5de12d2a64c4ed8cad files/digest-nautilus-2.14.1 69
+AUX macros/gnome.m4 16426 RMD160 d1e90c27d9b40c5c1d4f364794a39aa42aaba16f SHA1 ae123bad7103c88a6f850c25203d270ccbe30884 SHA256 635f8c7e29b3bb1f92de64e0fb4c94afe02391cc2e1ee0c60843a43697c69873
 MD5 7cb2f285f24e86a90c6a65b0b9356d39 files/macros/gnome.m4 16426
+RMD160 d1e90c27d9b40c5c1d4f364794a39aa42aaba16f files/macros/gnome.m4 16426
+SHA256 635f8c7e29b3bb1f92de64e0fb4c94afe02391cc2e1ee0c60843a43697c69873 files/macros/gnome.m4 16426
+AUX macros/nautilus-macros.m4 7993 RMD160 125b449cd4236b5490ac9bb3cec1818e7a6ae177 SHA1 a8cb272d342f4c14468bff9beb872c82d13ebcd0 SHA256 7a3daa5993a5de8a391fa193700cdd23dd450fb5d2d08801629e6dd16b5ee089
 MD5 486b971d706aec59655a72282d3feb0b files/macros/nautilus-macros.m4 7993
+RMD160 125b449cd4236b5490ac9bb3cec1818e7a6ae177 files/macros/nautilus-macros.m4 7993
+SHA256 7a3daa5993a5de8a391fa193700cdd23dd450fb5d2d08801629e6dd16b5ee089 files/macros/nautilus-macros.m4 7993
+AUX nautilus-1.0.6-hyperbola.diff 1632 RMD160 d17a5e2b1cd4fdee8945e24fa0f052960b8a0946 SHA1 d0138331c740b2a339f1401150c03f0219dc7e55 SHA256 0cec081a4fee0c14127314d3a1c430df84763da7fa8ba607d85bd077ee7bcce3
 MD5 4c62404b0162ab39572cb522fed222c4 files/nautilus-1.0.6-hyperbola.diff 1632
+RMD160 d17a5e2b1cd4fdee8945e24fa0f052960b8a0946 files/nautilus-1.0.6-hyperbola.diff 1632
+SHA256 0cec081a4fee0c14127314d3a1c430df84763da7fa8ba607d85bd077ee7bcce3 files/nautilus-1.0.6-hyperbola.diff 1632
+AUX nautilus-1.0.6-mozilla-1.0_rc1.diff 920 RMD160 54d7f115eccf0d82b7ef08484f8ea8cc5cf2ad41 SHA1 ea9dc34170f4f13ca9171e815b4180b9f3dc9a40 SHA256 54e66e61b2f89280f64a362858807ce51f48b7882801e1ac4d1b588ec5dd4cf8
 MD5 47ad4a802bbd17967708599cda1b7aaf files/nautilus-1.0.6-mozilla-1.0_rc1.diff 920
+RMD160 54d7f115eccf0d82b7ef08484f8ea8cc5cf2ad41 files/nautilus-1.0.6-mozilla-1.0_rc1.diff 920
+SHA256 54e66e61b2f89280f64a362858807ce51f48b7882801e1ac4d1b588ec5dd4cf8 files/nautilus-1.0.6-mozilla-1.0_rc1.diff 920
+AUX nautilus-1.0.6-mozilla-1.0_rc3.diff 1709 RMD160 2251c281823c3c7bb0d7f40c6c86af0777abd8b8 SHA1 c55bd0098019cce37a059a7676fd160f168efffb SHA256 67462234f17e692234cbc4f1cb5748100fae1d6e20b14dcc71491db1311af361
 MD5 d7ad0d83dbafefa25a34a50e2ee34806 files/nautilus-1.0.6-mozilla-1.0_rc3.diff 1709
+RMD160 2251c281823c3c7bb0d7f40c6c86af0777abd8b8 files/nautilus-1.0.6-mozilla-1.0_rc3.diff 1709
+SHA256 67462234f17e692234cbc4f1cb5748100fae1d6e20b14dcc71491db1311af361 files/nautilus-1.0.6-mozilla-1.0_rc3.diff 1709
+AUX nautilus-1.0.6-mozilla-embed-1.0_rc3.diff 526 RMD160 53c9860f9be855a83e790a78dda59d74f6b8ecaf SHA1 6f2f260778f7560bb21065e408db6f089f97a9e0 SHA256 0edb6789ff30c46c58f5c0062138db8010c5a713fd2d90098eb88a11f0691b58
 MD5 ddc1abbf275436c7fa5fd5c04a27cc94 files/nautilus-1.0.6-mozilla-embed-1.0_rc3.diff 526
+RMD160 53c9860f9be855a83e790a78dda59d74f6b8ecaf files/nautilus-1.0.6-mozilla-embed-1.0_rc3.diff 526
+SHA256 0edb6789ff30c46c58f5c0062138db8010c5a713fd2d90098eb88a11f0691b58 files/nautilus-1.0.6-mozilla-embed-1.0_rc3.diff 526
+AUX nautilus-2.10.1-deselect.patch 802 RMD160 64bb9c2ccadc997cde31b44c6b3202f4d6dbddfa SHA1 4ee453f75135c80b02af02eb8946d6ba6f38604c SHA256 e214ff8bc14e0ba1d97afeaf11e01196a82d3d31d5864b38e6cd9f918ae4e423
 MD5 889a29f6bea75973eafb3d64a1801a5f files/nautilus-2.10.1-deselect.patch 802
+RMD160 64bb9c2ccadc997cde31b44c6b3202f4d6dbddfa files/nautilus-2.10.1-deselect.patch 802
+SHA256 e214ff8bc14e0ba1d97afeaf11e01196a82d3d31d5864b38e6cd9f918ae4e423 files/nautilus-2.10.1-deselect.patch 802
+AUX nautilus-2.10.1-font_sizes.patch 1532 RMD160 31d87ac7f8ad6b12d090584cdead96f5b0ec0b40 SHA1 925cbce7d5403dc065006c4049bdab8ef57ca0fb SHA256 7cddbf0f88d72166164a8dcf22d290151faee587902f9164166f9bd8e32c6f2b
 MD5 29bf62fc0e7eaa6cd6aa5cf4e2dd291d files/nautilus-2.10.1-font_sizes.patch 1532
+RMD160 31d87ac7f8ad6b12d090584cdead96f5b0ec0b40 files/nautilus-2.10.1-font_sizes.patch 1532
+SHA256 7cddbf0f88d72166164a8dcf22d290151faee587902f9164166f9bd8e32c6f2b files/nautilus-2.10.1-font_sizes.patch 1532
+AUX nautilus-2.11.91-icon_view_gst.patch 8321 RMD160 ad76e498a3e26e84337c1b589c086f44048d2ed4 SHA1 b3b87cea7803cf1098e171ba11985938b83fcc9d SHA256 dc61794d08f8de088ed23ac8265c334b4c184fff5a94b24b55ef9e901eef7d16
 MD5 48ff9ab600b9230470a12bb5b60ff68f files/nautilus-2.11.91-icon_view_gst.patch 8321
+RMD160 ad76e498a3e26e84337c1b589c086f44048d2ed4 files/nautilus-2.11.91-icon_view_gst.patch 8321
+SHA256 dc61794d08f8de088ed23ac8265c334b4c184fff5a94b24b55ef9e901eef7d16 files/nautilus-2.11.91-icon_view_gst.patch 8321
+AUX nautilus-2.12.1-symlink-del.patch 1906 RMD160 64d6ed8c42b160c46356e752b29caaff7c4fa65d SHA1 91a693d54ade4e724c0b44702b091ccca336fa3d SHA256 f30b70428e25c79c769353b8963b3342e69ec0b4dd114f3002f8a913cf51649e
 MD5 6656801883a1b7be0c2f4f5b660c84c3 files/nautilus-2.12.1-symlink-del.patch 1906
+RMD160 64d6ed8c42b160c46356e752b29caaff7c4fa65d files/nautilus-2.12.1-symlink-del.patch 1906
+SHA256 f30b70428e25c79c769353b8963b3342e69ec0b4dd114f3002f8a913cf51649e files/nautilus-2.12.1-symlink-del.patch 1906
+AUX nautilus-2.13.4-no-desktop.patch 1068 RMD160 a93b790c83317c78860196bcbb315567fba6cc49 SHA1 eb77297c06d40bc9de00b8400b60d481ae6e49a6 SHA256 c26db48959f7949afe78658c2a4d8e561e7aaed68877aa510b5f28f79a2543e2
 MD5 960a9426b4468f4f4c4eaad973674022 files/nautilus-2.13.4-no-desktop.patch 1068
+RMD160 a93b790c83317c78860196bcbb315567fba6cc49 files/nautilus-2.13.4-no-desktop.patch 1068
+SHA256 c26db48959f7949afe78658c2a4d8e561e7aaed68877aa510b5f28f79a2543e2 files/nautilus-2.13.4-no-desktop.patch 1068
+AUX nautilus-2.14-idl_include.patch 384 RMD160 0b040794d5b90baf662ff9d5fbdd8ab3168af5e4 SHA1 b7b0b325df513f63f83526d5e848d97e88e33a50 SHA256 f82e430fd9366e8d2306b586df90efc721f0cf17ea51987b747849c85f6b0116
 MD5 51f1e68a3c1b45c4b2188200398960f0 files/nautilus-2.14-idl_include.patch 384
+RMD160 0b040794d5b90baf662ff9d5fbdd8ab3168af5e4 files/nautilus-2.14-idl_include.patch 384
+SHA256 f82e430fd9366e8d2306b586df90efc721f0cf17ea51987b747849c85f6b0116 files/nautilus-2.14-idl_include.patch 384
+AUX nautilus-2.9.90-icon_view_gst.patch 8136 RMD160 adc024c514ce2dd2af2962caa8941fce250ab2b1 SHA1 ca768f9ba16908d487abbdbc941082a58a528ed9 SHA256 b6e7eef6e3ff11a9e3490e371ec06a9cd24b9251b7cad7262204071ff67a8a31
 MD5 76cc1af40c4dc75ce99179ae9b25a2cd files/nautilus-2.9.90-icon_view_gst.patch 8136
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 8e061199c4d970f6be1f361e090977af nautilus-1.0.6-r9.ebuild 3368
+RMD160 adc024c514ce2dd2af2962caa8941fce250ab2b1 files/nautilus-2.9.90-icon_view_gst.patch 8136
+SHA256 b6e7eef6e3ff11a9e3490e371ec06a9cd24b9251b7cad7262204071ff67a8a31 files/nautilus-2.9.90-icon_view_gst.patch 8136
+DIST nautilus-1.0.6.tar.gz 11481232 RMD160 01c2d5412ccf9998d8de24dcf6aef75db9d8b3b9 SHA256 d7f0e91a4c1f73124b09e13e69b9709dfd7886981447b0b7d66196f96e405629
+DIST nautilus-2.10.1.tar.bz2 5960278 RMD160 d3e7e0f66e972087d45975f2efa0fe3bfcb7620e SHA256 3bf0841e8d53ab5014807fc85eef9b16f077453910d2168c5baa747b4ec7201e
+DIST nautilus-2.12.1.tar.bz2 4056062 RMD160 e5e3c10ff88c49109bf204cfb00959c4aef2b241 SHA256 256ebd70c3e2fd6aae3ddf5cb43a8ca808cfeb840279e8fdfdc54f2e3c5821a8
+DIST nautilus-2.12.2.tar.bz2 4057461 RMD160 6fedb1880febead00e5d4f4e71fb3cf219e1942e SHA256 9b1a11fde474d0bc0891afeef912aaa01bf8189e453bb555b2977f60f98d5455
+DIST nautilus-2.14.1.tar.bz2 4057351
+EBUILD nautilus-1.0.6-r9.ebuild 3396 RMD160 b7d521b616bc81e0b6412f7f7c9b0af236e0fde0 SHA1 9b0f98161eb14849ed0d08635e0f153738f11caa SHA256 9df292833052f960e3efa86fe48130ef5815fdffa56d095d068b67d8b9217e02
+MD5 3d6c41d63b220a10294364f0f79f0340 nautilus-1.0.6-r9.ebuild 3396
+RMD160 b7d521b616bc81e0b6412f7f7c9b0af236e0fde0 nautilus-1.0.6-r9.ebuild 3396
+SHA256 9df292833052f960e3efa86fe48130ef5815fdffa56d095d068b67d8b9217e02 nautilus-1.0.6-r9.ebuild 3396
+EBUILD nautilus-2.10.1-r1.ebuild 2554 RMD160 9ddd0c797ad0ace3276dc2abd80f1d309464d05a SHA1 b4f77ae346c109a174c95600e61d9703eab200cd SHA256 eca1fc8e60e7dd0e04840aeb4e209dea54d2212fe93a077b8d1b7dcc9b30876e
 MD5 f7d00aeb5e458b7a34f9d39f9a508c79 nautilus-2.10.1-r1.ebuild 2554
+RMD160 9ddd0c797ad0ace3276dc2abd80f1d309464d05a nautilus-2.10.1-r1.ebuild 2554
+SHA256 eca1fc8e60e7dd0e04840aeb4e209dea54d2212fe93a077b8d1b7dcc9b30876e nautilus-2.10.1-r1.ebuild 2554
+EBUILD nautilus-2.12.1-r1.ebuild 1891 RMD160 9c2c38ee8d5dcb984e1c3c24a10563e17f2beeb8 SHA1 1dfa4ffac6ad8abc99c720d752b918936c4d65b1 SHA256 3c555b1e7b8264e25e997fdcce29e111f7a7b2791889712b58c4c53e6ca1c509
 MD5 e32b9dca56cdd213e985fca3066ded30 nautilus-2.12.1-r1.ebuild 1891
+RMD160 9c2c38ee8d5dcb984e1c3c24a10563e17f2beeb8 nautilus-2.12.1-r1.ebuild 1891
+SHA256 3c555b1e7b8264e25e997fdcce29e111f7a7b2791889712b58c4c53e6ca1c509 nautilus-2.12.1-r1.ebuild 1891
+EBUILD nautilus-2.12.2.ebuild 1906 RMD160 5bf56a63ccb19f07842c4041deffab7ad4d1066a SHA1 5b22de3b107368c550cc6744931dc60585fdc7df SHA256 7c437bffe569bb08c96fbf44c2bb37ff3470147ff433305e60eba39ce4b112e6
 MD5 2fab2391cd8020b9a80771d635a31576 nautilus-2.12.2.ebuild 1906
+RMD160 5bf56a63ccb19f07842c4041deffab7ad4d1066a nautilus-2.12.2.ebuild 1906
+SHA256 7c437bffe569bb08c96fbf44c2bb37ff3470147ff433305e60eba39ce4b112e6 nautilus-2.12.2.ebuild 1906
+EBUILD nautilus-2.14.1.ebuild 2042 RMD160 5a055c1e24b0324b3dbf30d7ace677525176c743 SHA1 6b3edd1a364e9eae0418ee6838e8bf23d5081e59 SHA256 412d9a2eb8e420d1d295f41d972a3c5526b592e4d4f848a949a2389bc8f32a6f
 MD5 519e2be84a9312074c2e59caa4d11167 nautilus-2.14.1.ebuild 2042
+RMD160 5a055c1e24b0324b3dbf30d7ace677525176c743 nautilus-2.14.1.ebuild 2042
+SHA256 412d9a2eb8e420d1d295f41d972a3c5526b592e4d4f848a949a2389bc8f32a6f nautilus-2.14.1.ebuild 2042
+MISC ChangeLog 24293 RMD160 0881df51e9e91fa014f0ec37f388c8621007fd38 SHA1 f4690396112600c4c7b6a146fe47fb6e8d3796ee SHA256 5b844181fc056654f2212cd5e261bfc4598349d3d8e120055212fc1cc07f5de7
+MD5 040d9497a3c0a8d41927fe18f47948f2 ChangeLog 24293
+RMD160 0881df51e9e91fa014f0ec37f388c8621007fd38 ChangeLog 24293
+SHA256 5b844181fc056654f2212cd5e261bfc4598349d3d8e120055212fc1cc07f5de7 ChangeLog 24293
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 4a2765d028f354ecf9ce42311c68d02e files/digest-nautilus-1.0.6-r9 250
+RMD160 dc7c7c6a0ee885cc1bf4f6e996b8556b50a4c576 files/digest-nautilus-1.0.6-r9 250
+SHA256 882a0f1b7b3c7a35e56b4bc60b1b6447c7fcab526b7278e9b506954dd44175cb files/digest-nautilus-1.0.6-r9 250
+MD5 2f6d773deecd7c3f65b6bd271f159634 files/digest-nautilus-2.10.1-r1 253
+RMD160 5cb6c0ddd53794f52a5725b0c0731abeb5b41294 files/digest-nautilus-2.10.1-r1 253
+SHA256 b5c0a618f57f5819f44a6af363a05811b0dcf4780065fd93ee39cb3a67bf5329 files/digest-nautilus-2.10.1-r1 253
+MD5 b76d77e026f3ccc67595784176ef8518 files/digest-nautilus-2.12.1-r1 253
+RMD160 11a6598cfa2c97a9241b1ea7d4ee05e93bdf74f3 files/digest-nautilus-2.12.1-r1 253
+SHA256 186de163d8bee4e0e69a4f88f868affd46b36037c2ac43f8bec8abb9e382e08f files/digest-nautilus-2.12.1-r1 253
+MD5 6d2910c0d22cdc27feb2d63184bc6798 files/digest-nautilus-2.12.2 253
+RMD160 a3d55b8d579d1a97c4e1afa96ac99daa7cb79fe3 files/digest-nautilus-2.12.2 253
+SHA256 aadee03162fb1380bc4c73cb482cdbec5ef84e1d416516757a3eed2d883bc98d files/digest-nautilus-2.12.2 253
+MD5 efe9dde5c9d6be5de12d2a64c4ed8cad files/digest-nautilus-2.14.1 69
+RMD160 1ad84388a9672167489b05388e5c645f768dbcaf files/digest-nautilus-2.14.1 69
+SHA256 2520c4bc9f26111d3ba4d588ec1af77616b116a9b1be28de064dc107e75ab1bf files/digest-nautilus-2.14.1 69
