@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.19 2006/06/16 10:49:22 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.20 2006/06/17 09:35:18 lcars Exp $
+
+  17 Jun 2006; Andrea Barisani <lcars@gentoo.org> tenshi-0.5.ebuild:
+  Fixed invalid target in Makefile.
 
 *tenshi-0.5 (16 Jun 2006)
 
