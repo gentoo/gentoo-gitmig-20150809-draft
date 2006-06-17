@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.20060601.ebuild,v 1.1 2006/06/04 14:55:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.20060601.ebuild,v 1.2 2006/06/17 14:07:43 genstef Exp $
 
 inherit perl-app eutils versionator autotools
 
 MY_P=${PN}-$(replace_version_separator 2 '-')
-DESCRIPTION="Foomatic printer database engine"
+DESCRIPTION="Generates ppds out of xml foomatic printer description files"
 HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
 SRC_URI="http://gentooexperimental.org/~genstef/dist/${MY_P}.tar.gz"
 #http://www.linuxprinting.org/download/foomatic/
