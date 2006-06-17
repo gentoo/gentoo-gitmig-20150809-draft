@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5511 2006/06/17 00:39:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5512 2006/06/17 07:51:55 vapier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Mike Frysinger <games@gentoo.org> (17 Jun 2006)
+# Use quakeforge or another quake1 client
+games-fps/quake1
 
 # Diego Pettenò <flameeyes@gentoo.org> (16 Jun 2006)
 # Pre-release
