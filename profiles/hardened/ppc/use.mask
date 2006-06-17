@@ -31,6 +31,7 @@ informix
 ingres
 interbase
 ip28
+kqemu
 lm_sensors
 mbrola
 nvtv
@@ -50,4 +51,3 @@ xvmc
 -pbbuttonsd
 -ppcsha1
 -x264
-
