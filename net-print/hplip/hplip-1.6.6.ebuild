@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.6.6.ebuild,v 1.2 2006/06/17 00:15:05 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.6.6.ebuild,v 1.3 2006/06/17 11:19:09 genstef Exp $
 
 inherit eutils
 
@@ -38,9 +38,9 @@ RDEPEND="virtual/ghostscript
 	${DEPEND}"
 
 pkg_setup() {
-	# avoid collisions
+	# avoid collisions with cups-1.2 compat symlinks
 	if [ -e ${ROOT}/usr/lib/cups/backend/hp ] && [ -e ${ROOT}/usr/libexec/cups/backend/hp ]; then
-		rm ${ROOT}/usr/libexec/cups/backend/hp;
+		rm -f ${ROOT}/usr/libexec/cups/backend/hp{,fax};
 	fi
 }
 
