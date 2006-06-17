@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/ghemical
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.18 2006/05/14 05:56:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.19 2006/06/17 01:02:47 spyderous Exp $
+
+  17 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml,
+  ghemical-1.00.ebuild, ghemical-1.01.ebuild, ghemical-1.02.ebuild,
+  ghemical-2.01.ebuild:
+  (#136391) Move long description into metadata.
 
   14 May 2006; Donnie Berkholz <spyderous@gentoo.org>; ghemical-1.00.ebuild,
   ghemical-1.01.ebuild, ghemical-1.02.ebuild, ghemical-2.01.ebuild:

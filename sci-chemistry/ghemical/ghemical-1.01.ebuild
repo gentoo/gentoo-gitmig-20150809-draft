@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ghemical-1.01.ebuild,v 1.2 2006/05/14 05:56:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ghemical-1.01.ebuild,v 1.3 2006/06/17 01:02:47 spyderous Exp $
 
 inherit eutils
 
-DESCRIPTION="Ghemical supports both quantum-mechanics (semi-empirical and ab initio) models and molecular mechanics models (there is an experimental Tripos 5.2-like force field for organic molecules). Also a tool for reduced protein models is included. Geometry optimization, molecular dynamics and a large set of visualization tools are currently available."
+DESCRIPTION="Chemical quantum mechanics and molecular mechanics"
 HOMEPAGE="http://bioinformatics.org/ghemical/"
 SRC_URI="http://www.uku.fi/~thassine/ghemical/download/${P}.tgz"
 
