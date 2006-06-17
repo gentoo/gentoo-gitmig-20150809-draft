@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.14 2006/05/29 19:33:40 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.15 2006/06/17 08:02:09 mr_bones_ Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # New toys enabled by 2.6 headers
@@ -47,3 +47,4 @@ app-pda/dopi
 # Masked since it requires udev
 net-dialup/speedtouch-usb
 sys-fs/multipath-tools
+app-emulation/domi
