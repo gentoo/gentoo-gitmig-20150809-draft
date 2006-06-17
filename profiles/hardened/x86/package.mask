@@ -18,6 +18,7 @@ sys-cluster/gfs-headers
 x11-misc/linuxwacom
 sys-cluster/gulm
 sys-cluster/magma-plugins
+sys-cluster/rgmanager
 sys-fs/gfs
 sys-power/kpowersave
 sys-power/powersave
