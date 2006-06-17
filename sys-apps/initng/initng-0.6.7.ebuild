@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-0.6.7.ebuild,v 1.1 2006/06/11 19:05:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-0.6.7.ebuild,v 1.2 2006/06/17 08:30:54 vapier Exp $
 
 DESCRIPTION="A next generation init replacement"
 HOMEPAGE="http://initng.org/"
@@ -26,6 +26,12 @@ plugin_warning() {
 
 pkg_setup() {
 	plugin_warning
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i -e 's:-Werror::' CMakeLists.txt #136992
 }
 
 src_compile() {
