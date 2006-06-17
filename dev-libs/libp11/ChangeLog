@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.6 2006/06/13 15:17:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.7 2006/06/17 09:56:36 kaiowas Exp $
+
+*libp11-0.2.2 (17 Jun 2006)
+
+  17 Jun 2006; Petre Rodan <kaiowas@gentoo.org> +libp11-0.2.2.ebuild:
+  version bump
 
   13 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> libp11-0.2.1.ebuild:
   Keyworded ~sparc wrt #135397
