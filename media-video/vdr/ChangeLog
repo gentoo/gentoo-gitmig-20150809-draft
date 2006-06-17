@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.63 2006/06/13 06:04:50 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.64 2006/06/17 14:55:13 zzam Exp $
+
+*vdr-1.4.1-r1 (17 Jun 2006)
+
+  17 Jun 2006; Matthias Schwarzott <zzam@gentoo.org> +vdr-1.4.1-r1.ebuild:
+  Search the plugins using multilib-generated path (lib/lib32/lib64). See Bug
+  #136605. Moved capability file to /usr/share.
 
 *vdr-1.4.1 (13 Jun 2006)
 
