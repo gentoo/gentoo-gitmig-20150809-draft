@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.3-r1.ebuild,v 1.5 2006/01/01 22:01:59 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.3-r1.ebuild,v 1.6 2006/06/17 22:32:15 plasmaroo Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils toolchain-funcs
 
 BIN_V="binutils-2.14"
 GDB_V="gdb-5.3"
@@ -45,6 +45,7 @@ src_unpack() {
 	echo -n " "; epatch ${P}/${GDB_V}.palmos.diff || die
 	echo -n " "; EPATCH_OPTS="-l" epatch ${P}/../MsectGdb2.3-1.diff || die
 	echo -n " "; epatch ${FILESDIR}/${P}-compilefix.patch || die
+	echo -n " "; epatch ${FILESDIR}/${P}-gcc4.patch || die
 
 		# This last patch disables dummy headers being copied.
 			# a) They're not needed
@@ -76,7 +77,18 @@ src_config() {
 	ALLOWED_FLAGS="-pipe -0 -01 -02"
 	strip-flags
 
-	../${P}/configure --enable-targets=m68k-palmos,arm-palmos \
+	local targets
+	if [ "$(gcc-major-version)" -ge '4' ]
+	then
+		ewarn "Disabling ARM support as the 3.3 GCC prc-tools uses can't be"
+		ewarn "compiled using your GCC4+ compiler. Switch to GCC 3.x and rerun"
+		ewarn "the merge to get ARM support."
+		echo
+	else
+		targets=',arm-palmos'
+	fi
+
+	../${P}/configure --enable-targets=m68k-palmos"${targets}" \
 	--enable-languages=c,c++ \
 	--with-headers=${WORKDIR}/build/empty --enable-html-docs \
 	--with-palmdev-prefix=/opt/palmdev --prefix=/usr || die
