@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5512 2006/06/17 07:51:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5513 2006/06/17 07:55:04 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+#  Michael Sterrett <mr_bones_@gentoo.org> (17 Jun 2006)
+# Needs newer linux-headers.  masked until then
+>=sys-process/audit-1.1.6
 
 # Mike Frysinger <games@gentoo.org> (17 Jun 2006)
 # Use quakeforge or another quake1 client
