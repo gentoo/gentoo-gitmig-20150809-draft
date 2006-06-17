@@ -19,6 +19,7 @@
 -sys-cluster/gulm
 -sys-cluster/magma-plugins
 -sys-cluster/rgmanager
+-sys-fs/clvm
 -sys-fs/gfs
 -sys-power/kpowersave
 -sys-power/powersave
