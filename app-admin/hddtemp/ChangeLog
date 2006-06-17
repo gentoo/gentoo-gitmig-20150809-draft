@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.38 2006/05/30 19:41:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.39 2006/06/17 17:28:52 gmsoft Exp $
+
+  17 Jun 2006; Guy Martin <gmsoft@gentoo.org> hddtemp-0.3_beta15.ebuild:
+  Stable on hppa.
 
   26 May 2006; Robin H. Johnson <robbat2@gentoo.org> files/hddtemp.db,
   hddtemp-0.3_beta15.ebuild:
