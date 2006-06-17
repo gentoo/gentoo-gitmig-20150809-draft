@@ -24,6 +24,7 @@
 -sys-power/powersave
 -media-libs/libipoddevice
 -dev-dotnet/ipod-sharp
+-app-pda/dopi
 -media-sound/banshee
 -media-video/thoggen
 -gnome-base/gnome-mount
