@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.132 2006/03/29 12:29:23 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.133 2006/06/17 13:34:00 usata Exp $
+
+*uim-1.1.0 (17 Jun 2006)
+
+  17 Jun 2006; Mamoru KOMACHI <usata@gentoo.org> +uim-1.1.0.ebuild:
+  Version bumped.
 
   29 Mar 2006; Akinori Hattori <hattya@gentoo.org> uim-0.5.0.1.ebuild,
   uim-1.0.0.ebuild, uim-1.0.1.ebuild:
