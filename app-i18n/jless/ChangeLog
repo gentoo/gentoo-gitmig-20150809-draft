@@ -1,0 +1,46 @@
+# ChangeLog for app-i18n/jless-iso254
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless/ChangeLog,v 1.1 2006/06/17 14:10:35 usata Exp $
+
+*jless-382.258 (17 Jun 2006)
+*jless-358.254 (17 Jun 2006)
+
+  17 Jun 2006; Mamoru KOMACHI <usata@gentoo.org> +files/70jless,
+  +files/lesspipe.sh-r1, +metadata.xml, +jless-358.254.ebuild,
+  +jless-382.258.ebuild:
+  Moved from jless-iso254 (its package name contains version number
+  incorrectly). Also bumped version.
+
+  29 Nov 2005; Jeroen Roovers <jer@gentoo.org> jless-iso254-358.ebuild:
+  Marked ~hppa wrt bug 109187.
+
+  12 Jul 2004; Tom Gall <tgall@gentoo.org> jless-is0254-358.ebuild:
+  stable on ppc64, bug #55324
+
+*jless-iso254-358 (09 Jul 2002)
+
+  18 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> jless-iso254-358.ebuild,
+  files/70jless:
+  Added env.d file.
+
+  30 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> jless-iso254-358.ebuild:
+  Stable for ppc, sparc and alpha
+
+  08 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> jless-iso254-358.ebuild,
+  metadata.xml:
+  Changed DESCRIPTION (jless is not Japanese less but Jam less).
+  Removed ${A} redefinition (reported in Bug #28161). Use mirror://gnu/
+  instead of GNU master site. Added original less HOMEPAGE. Changed
+  LICENSE because Jam less is distributed under BSD license. Read
+  ${EDITOR} from /etc/profile rather than hardcode it to /usr/bin/nano.
+  Install lesspipe.sh as jlesspipe.sh and make a symlink to lesspipe.sh
+  if original less is not installed (try epm -qf /usr/bin/lesspipe.sh !).
+  Added pkg_postinst() to make sure /usr/bin/lesspipe.sh is present.
+  Added <longdescription> to metadata.xml.
+
+  31 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> jless-iso254-358.ebuild:
+  Added ~alpha, ~sparc and ~ppc keywords
+
+  09 Jul 2002; Stuart Bouyer <stubear@gentoo.org> jless-iso254-358.ebuild :
+  Initial addition of jless pacakge. Shamelessly ripped from Brandon form
+  bug #3685. Thanks lostlogic :)
