@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5510 2006/06/16 19:33:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5511 2006/06/17 00:39:00 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -365,10 +365,6 @@ dev-python/PyQt4
 # Markus Ullmann <jokey@gentoo.org> (06 Apr 2006)
 # adding language pack builder, needs testing
 =app-text/acroread-7.0.5-r3
-
-# Jonathan Smith <smithj@gentoo.org> (03 Apr 2006)
-# Depends on app-misc/colortail which is currently unmaintained and also masked
-x11-misc/paralogger
 
 # Michael Sterrett <mr_bones_@gentoo.org> (02 Apr 2006)
 # masked pending unresolved security issues #122845
