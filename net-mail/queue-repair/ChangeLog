@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/queue-repair
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-repair/ChangeLog,v 1.2 2006/02/13 15:47:38 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-repair/ChangeLog,v 1.3 2006/06/17 12:13:50 hansmi Exp $
+
+  17 Jun 2006; Michael Hanselmann <hansmi@gentoo.org>
+  queue-repair-0.9.0.ebuild:
+  Stable on hppa, mips, ppc, sparc, x86.
 
   13 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
   queue-repair-0.9.0.ebuild:
