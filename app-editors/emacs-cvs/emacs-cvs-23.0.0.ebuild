@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0.ebuild,v 1.8 2006/02/26 21:48:47 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0.ebuild,v 1.9 2006/06/17 01:50:10 mkennedy Exp $
 
 ECVS_AUTH="pserver"
 export CVS_RSH="ssh"
@@ -14,7 +14,7 @@ ECVS_SSH_HOST_KEY="savannah.gnu.org,199.232.41.3 ssh-rsa AAAAB3NzaC1yc2EAAAABIwA
 
 inherit elisp-common cvs alternatives flag-o-matic eutils
 
-IUSE="X Xaw3d aqua gif gnome gtk jpeg nls png spell tiff"
+IUSE="X Xaw3d aqua gif gnome gtk jpeg nls png spell tiff xft"
 
 S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="Emacs is the extensible, customizable, self-documenting real-time display editor."
@@ -36,7 +36,8 @@ DEPEND=">=sys-libs/ncurses-5.3
 		png? ( >=media-libs/libpng-1.2.5 )
 		gtk? ( =x11-libs/gtk+-2* )
 		!gtk? ( Xaw3d? ( x11-libs/Xaw3d ) )
-		gnome? ( gnome-base/gnome-desktop ) )
+		gnome? ( gnome-base/gnome-desktop )
+		xft? ( media-libs/fontconfig virtual/xft >=dev-libs/libotf-0.9.4 ) )
 	nls? ( >=sys-devel/gettext-0.11.5 )
 	>=sys-apps/portage-2.0.51_rc1"
 
@@ -67,6 +68,9 @@ src_compile() {
 	if use X; then
 		myconf="${myconf} --with-x"
 		myconf="${myconf} --with-xpm --with-toolkit-scroll-bars"
+		myconf="${myconf} $(use_enable xft font-backend)"
+		myconf="${myconf} $(use_with xft freetype)"
+		myconf="${myconf} $(use_with xft)"
 		myconf="${myconf} $(use_with jpeg) $(use_with tiff)"
 		myconf="${myconf} $(use_with gif) $(use_with png)"
 		if use gtk; then
@@ -89,6 +93,7 @@ src_compile() {
 			--without-x \
 			$(use_with jpeg) $(use_with tiff) \
 			$(use_with gif) $(use_with png) \
+			$(use_enable xft font-backend) \
 			 || die "econf carbon emacs failed"
 		make bootstrap || die "make carbon emacs bootstrap failed"
 	fi
@@ -138,7 +143,7 @@ src_install () {
 		mv ${m} ${m/.1/.emacs-${SLOT}.1} || die "mv man failed"
 	done
 
-	dodoc BUGS ChangeLog README
+	dodoc BUGS ChangeLog ChangeLog.unicode README README.unicode
 
 	if use gnome; then
 		insinto /usr/share/applications

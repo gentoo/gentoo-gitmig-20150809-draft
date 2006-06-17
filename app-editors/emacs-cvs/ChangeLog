@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.45 2006/04/29 05:07:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.46 2006/06/17 01:50:10 mkennedy Exp $
+
+  17 Jun 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  emacs-cvs-23.0.0.ebuild:
+  Support for XFT options; Resolves Bug #136922.
 
   29 Apr 2006; Matthew Kennedy <mkennedy@gentoo.org>
   emacs-cvs-22.0.50-r2.ebuild:
