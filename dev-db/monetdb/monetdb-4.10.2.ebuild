@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.10.2.ebuild,v 1.4 2006/05/22 14:17:24 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.10.2.ebuild,v 1.5 2006/06/17 18:23:43 grobian Exp $
 
 inherit flag-o-matic eutils
 
@@ -146,13 +146,13 @@ src_compile() {
 src_install() {
 	# The tar has capitals, the ebuild doesn't...
 	cd "${WORKDIR}/MonetDB-${PV_M}"
-	make DESTDIR="${D}" install || die "failed to install monetdb"
+	emake -j1 DESTDIR="${D}" install || die "failed to install monetdb"
 
 	cd "${WORKDIR}/sql-${PV_SQL}"
-	make DESTDIR="${D}" install || die "failed to install sql"
+	emake -j1 DESTDIR="${D}" install || die "failed to install sql"
 
 	cd "${WORKDIR}/pathfinder-${PV_XQ}"
-	make DESTDIR="${D}" install || die "failed to install xquery"
+	emake -j1 DESTDIR="${D}" install || die "failed to install xquery"
 
 	exeinto /etc/init.d/
 	newexe "${FILESDIR}/${PN}.init-4.8.2" monetdb || die "init.d script"
