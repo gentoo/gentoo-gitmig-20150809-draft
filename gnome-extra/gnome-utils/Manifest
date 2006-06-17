@@ -1,15 +1,60 @@
-MD5 f6eb4d6354eaf549767795650840b621 ChangeLog 14228
-MD5 5ed644c587beafb4c4a1461bbe322a1d files/digest-gnome-utils-1.4.1.2 72
-MD5 536b1103c2a53ca7485697352a308809 files/digest-gnome-utils-2.10.0 72
-MD5 caf01bac7da4888355b1c173652d2525 files/digest-gnome-utils-2.10.1-r1 72
-MD5 9b3eac0bc78d177675af9a85728b1dc5 files/digest-gnome-utils-2.12.1 72
-MD5 2633b9963cc038dd5f2c4569ddb3091b files/digest-gnome-utils-2.12.2 72
-MD5 d89da0043c6be44a948c6a55beb9d969 files/digest-gnome-utils-2.14.0 262
+AUX gnome-utils-2.10.1-gdict_pref.patch 6856 RMD160 2d73ffaed4443c29d7a4b6164098554cb077873c SHA1 6273ddb669b835b4f0d525366a0ad7ab574aaba4 SHA256 4bcc83e05f80ffc89b4ea0c18171aff8f4e7ae4b03147f71c714e43741c912a6
 MD5 f72b26ca184501563846835353e2750e files/gnome-utils-2.10.1-gdict_pref.patch 6856
-MD5 62292c35e7929905ad1e54d64faf457f gnome-utils-1.4.1.2.ebuild 1770
+RMD160 2d73ffaed4443c29d7a4b6164098554cb077873c files/gnome-utils-2.10.1-gdict_pref.patch 6856
+SHA256 4bcc83e05f80ffc89b4ea0c18171aff8f4e7ae4b03147f71c714e43741c912a6 files/gnome-utils-2.10.1-gdict_pref.patch 6856
+DIST gnome-utils-1.4.1.2.tar.gz 4632458
+DIST gnome-utils-2.10.0.tar.bz2 2012166
+DIST gnome-utils-2.10.1.tar.bz2 2049143
+DIST gnome-utils-2.12.1.tar.bz2 1714248
+DIST gnome-utils-2.12.2.tar.bz2 1726889
+DIST gnome-utils-2.14.0.tar.bz2 1881962 RMD160 799c47e836ed478734e3c42359b0c97fa3e3f319 SHA256 44586246763c9bfb2b67baedff8c800abde0898012e646ee580ce7a4c2d57e7e
+EBUILD gnome-utils-1.4.1.2.ebuild 1793 RMD160 8be37781bb257bc38ae0792996d67120b663c0b3 SHA1 5bb8e35fa30a66de2c651ed8ef71a86eba537714 SHA256 d0d4446a758d9637c50561085dbf8aaa62f9d3da398d5c5c75fd1cebf5d70db8
+MD5 509c8584bc8415997588c8cc0681cee9 gnome-utils-1.4.1.2.ebuild 1793
+RMD160 8be37781bb257bc38ae0792996d67120b663c0b3 gnome-utils-1.4.1.2.ebuild 1793
+SHA256 d0d4446a758d9637c50561085dbf8aaa62f9d3da398d5c5c75fd1cebf5d70db8 gnome-utils-1.4.1.2.ebuild 1793
+EBUILD gnome-utils-2.10.0.ebuild 1193 RMD160 8451e8dce4bf2f9787beb734482e3f59e72e6243 SHA1 35c93c6b55d3f154d553d0b569d787208a924690 SHA256 95fd66f8212ef290a57a991ab33b917e00c41c35d94dfc86860f4fb8cac194aa
 MD5 8c33499309a1ece4481fb6d161058609 gnome-utils-2.10.0.ebuild 1193
+RMD160 8451e8dce4bf2f9787beb734482e3f59e72e6243 gnome-utils-2.10.0.ebuild 1193
+SHA256 95fd66f8212ef290a57a991ab33b917e00c41c35d94dfc86860f4fb8cac194aa gnome-utils-2.10.0.ebuild 1193
+EBUILD gnome-utils-2.10.1-r1.ebuild 1242 RMD160 3cdc50c0cea99bf6bf88e2841f96a1e5fe19a56f SHA1 d9887b47bfbaae8649083c14f88e9d95aa4cce34 SHA256 71d8929f367b339c94131ab81f68b9934e898518cc4947dc7035ebe56c3ddafb
 MD5 a653a07cb22fae39673ad47d0987eef5 gnome-utils-2.10.1-r1.ebuild 1242
+RMD160 3cdc50c0cea99bf6bf88e2841f96a1e5fe19a56f gnome-utils-2.10.1-r1.ebuild 1242
+SHA256 71d8929f367b339c94131ab81f68b9934e898518cc4947dc7035ebe56c3ddafb gnome-utils-2.10.1-r1.ebuild 1242
+EBUILD gnome-utils-2.12.1.ebuild 1058 RMD160 78ff47aa8bc8aa24596f79f51e3336a2fa32a1d6 SHA1 0af72df4fe28d1b0f3e912c8b85fbd0615d2daf2 SHA256 45387267e16ff08f3b5a53a636d4d0f0e90fdab737985485b2d517eb1c4ae526
 MD5 e6042e58b3bd26539db98046d5eaf679 gnome-utils-2.12.1.ebuild 1058
+RMD160 78ff47aa8bc8aa24596f79f51e3336a2fa32a1d6 gnome-utils-2.12.1.ebuild 1058
+SHA256 45387267e16ff08f3b5a53a636d4d0f0e90fdab737985485b2d517eb1c4ae526 gnome-utils-2.12.1.ebuild 1058
+EBUILD gnome-utils-2.12.2.ebuild 1048 RMD160 ec1a2e7ee73b038286ea593e2de39aa920237a2d SHA1 9e696211a0bd40a47c5c8db315b4c3e8d7f69c26 SHA256 c44c339ea8ae6b83bdaae0c6c61f4e521d5a5958643aa955dd5c9cc00aee9779
 MD5 09642ba7fff4aca68113a6c449dfdabb gnome-utils-2.12.2.ebuild 1048
+RMD160 ec1a2e7ee73b038286ea593e2de39aa920237a2d gnome-utils-2.12.2.ebuild 1048
+SHA256 c44c339ea8ae6b83bdaae0c6c61f4e521d5a5958643aa955dd5c9cc00aee9779 gnome-utils-2.12.2.ebuild 1048
+EBUILD gnome-utils-2.14.0.ebuild 1068 RMD160 0cbcf4752c854fb72a9c2f38f347fee0350976bf SHA1 336e7690371e38f54c41a4b9cbacf7c8def99720 SHA256 a9d956da48462670b95ecba984e287d14c7afde4f1170c3d797867053991cb33
 MD5 6abf9fba31f98036f81542caa722cf1d gnome-utils-2.14.0.ebuild 1068
+RMD160 0cbcf4752c854fb72a9c2f38f347fee0350976bf gnome-utils-2.14.0.ebuild 1068
+SHA256 a9d956da48462670b95ecba984e287d14c7afde4f1170c3d797867053991cb33 gnome-utils-2.14.0.ebuild 1068
+MISC ChangeLog 14346 RMD160 57ed608cd9077653020f5d7eb9ae45a10ceeb3e1 SHA1 d6da0b0b9c752eebb06b3e8e09a7b93d34d0f3c0 SHA256 682bc00b9428af9d49fc0881bfb197c5f321043e9f10a6c9beb1e7eda8822a1a
+MD5 46a1ceb75d455a54ed822ae431cf38ce ChangeLog 14346
+RMD160 57ed608cd9077653020f5d7eb9ae45a10ceeb3e1 ChangeLog 14346
+SHA256 682bc00b9428af9d49fc0881bfb197c5f321043e9f10a6c9beb1e7eda8822a1a ChangeLog 14346
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 5ed644c587beafb4c4a1461bbe322a1d files/digest-gnome-utils-1.4.1.2 72
+RMD160 9385b7683e5c88a9874d89fea65c753c2351ed25 files/digest-gnome-utils-1.4.1.2 72
+SHA256 42ad6a25a41e3b41ca96ade62309777b1d3f62d4273610ccd50e227a166b4cf2 files/digest-gnome-utils-1.4.1.2 72
+MD5 536b1103c2a53ca7485697352a308809 files/digest-gnome-utils-2.10.0 72
+RMD160 c36bcae93ac4db35b82eaba1a6011f9f4a1484dd files/digest-gnome-utils-2.10.0 72
+SHA256 d7e8d761d23a8a834d4bc70d0b53b6fc6e952af2501b78a9bd3aac6ea0ab3420 files/digest-gnome-utils-2.10.0 72
+MD5 caf01bac7da4888355b1c173652d2525 files/digest-gnome-utils-2.10.1-r1 72
+RMD160 449f444930705a4ccda7dc855a65522acdce916a files/digest-gnome-utils-2.10.1-r1 72
+SHA256 0b8060211095143d630f54f5525a9eb86461d55fe766017c334c9a1f1cd81054 files/digest-gnome-utils-2.10.1-r1 72
+MD5 9b3eac0bc78d177675af9a85728b1dc5 files/digest-gnome-utils-2.12.1 72
+RMD160 a4da582fb91739f2f532f0facf3f93ce91973068 files/digest-gnome-utils-2.12.1 72
+SHA256 0dab395b1f8fa76ceb8620d4a3c96ce056920b0a0338041726ac75ce9389f041 files/digest-gnome-utils-2.12.1 72
+MD5 2633b9963cc038dd5f2c4569ddb3091b files/digest-gnome-utils-2.12.2 72
+RMD160 a7e1f80346967f312a380756f04a5a108bbab159 files/digest-gnome-utils-2.12.2 72
+SHA256 366dc6e3489bc36a2a638254a961e244abfe64b8ef7f7d4520c5957f79ecbe88 files/digest-gnome-utils-2.12.2 72
+MD5 d89da0043c6be44a948c6a55beb9d969 files/digest-gnome-utils-2.14.0 262
+RMD160 afb284ff21399e2abebcbca73c93e8629bd59c7d files/digest-gnome-utils-2.14.0 262
+SHA256 6182f36a38ccdc07169271f99ac29693fdf4f2b7ecd76a3563d8f2743d53a22f files/digest-gnome-utils-2.14.0 262
