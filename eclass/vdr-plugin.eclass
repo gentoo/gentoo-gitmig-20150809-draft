@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.22 2006/06/17 14:51:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.23 2006/06/17 20:35:02 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -218,8 +218,10 @@ vdr-plugin_src_install() {
 
 	insinto "${VDR_PLUGIN_DIR}"
 	doins libvdr-*.so.*
-	dodoc README* HISTORY CHANGELOG
-
+	local docfile
+	for docfile in README* HISTORY CHANGELOG; do
+		[[ -f ${docfile} ]] && dodoc ${docfile}
+	done
 
 	# if VDR_CONFD_FILE is empty and ${FILESDIR}/confd exists take it
 	[[ -z ${VDR_CONFD_FILE} ]] && [[ -e ${FILESDIR}/confd ]] && VDR_CONFD_FILE=${FILESDIR}/confd
