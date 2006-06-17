@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5513 2006/06/17 07:55:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5514 2006/06/17 15:35:41 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Doug Goldstein <cardoe@gentoo.org> (17 Jun 2006)
+# Retiring these packages... masking them so depends
+# can be fixed first... see bug #137084
+<sys-apps/dbus-0.60
+<sys-apps/hal-0.5.0
 
 #  Michael Sterrett <mr_bones_@gentoo.org> (17 Jun 2006)
 # Needs newer linux-headers.  masked until then
