@@ -1,3 +1,0 @@
-PAGER="/usr/bin/jless"
-JLESSCHARSET="ja"
-JLESS="-R"
