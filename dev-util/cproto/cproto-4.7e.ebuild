@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cproto/cproto-4.7e.ebuild,v 1.4 2006/06/14 16:59:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cproto/cproto-4.7e.ebuild,v 1.5 2006/06/17 04:24:35 tcort Exp $
 
 MY_PV="4_7e"
 MY_P="${PN}-${MY_PV}"
@@ -14,8 +14,6 @@ LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc ~ppc-macos x86"
 IUSE=""
-
-DEPEND="virtual/libc"
 
 src_install() {
 	dobin cproto || die
