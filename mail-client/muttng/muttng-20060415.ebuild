@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20060415.ebuild,v 1.2 2006/06/14 16:11:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20060415.ebuild,v 1.3 2006/06/17 18:39:40 grobian Exp $
 
 inherit eutils flag-o-matic
 
@@ -40,9 +40,9 @@ RDEPEND="nls? ( sys-devel/gettext )
 		virtual/tetex
 	)"
 DEPEND="${RDEPEND}
-	sys-devel/automake
-	>=sys-devel/autoconf-2.5
 	net-mail/mailbase"
+#	sys-devel/automake
+#	>=sys-devel/autoconf-2.5
 
 src_unpack() {
 	unpack ${A}                     || die "unpack failed"
@@ -143,8 +143,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
-	find ${D}/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
+	emake DESTDIR="${D}" install || die "install failed"
+	find "${D}"/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
 
 	dodoc COPYRIGHT ChangeLog NEWS OPS* PATCHES README* TODO
 }

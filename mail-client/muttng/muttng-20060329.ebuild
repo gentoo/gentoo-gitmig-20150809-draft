@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20060329.ebuild,v 1.2 2006/06/14 16:11:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20060329.ebuild,v 1.3 2006/06/17 18:39:40 grobian Exp $
 
 inherit eutils flag-o-matic
 
@@ -40,8 +40,6 @@ RDEPEND="nls? ( sys-devel/gettext )
 		virtual/tetex
 	)"
 DEPEND="${RDEPEND}
-	sys-devel/automake
-	>=sys-devel/autoconf-2.5
 	net-mail/mailbase"
 
 src_unpack() {
@@ -51,12 +49,6 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-20060317-sigremovereply.patch"
 
 	use doc || epatch "${FILESDIR}/${PN}-20060309-nodoc.patch"
-
-#	aclocal -I m4					|| die "aclocal failed"
-#	autoheader						|| die "autoheader failed"
-#	emake -C m4 -f Makefile.am.in	|| die "emake in m4 failed"
-#	automake --foreign				|| die "automake failed"
-#	WANT_AUTOCONF=2.5 autoconf		|| die "autoconf failed"
 }
 
 src_compile() {
@@ -143,8 +135,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
-	find ${D}/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
+	emake DESTDIR="${D}" install || die "install failed"
+	find "${D}"/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
 
 	dodoc COPYRIGHT ChangeLog NEWS OPS* PATCHES README* TODO
 }
