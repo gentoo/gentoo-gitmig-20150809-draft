@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/shelx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/ChangeLog,v 1.1 2006/06/05 09:01:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/ChangeLog,v 1.2 2006/06/17 00:56:16 spyderous Exp $
+
+  17 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  shelx-20060317.ebuild:
+  (#75384) Add the dosformat USE flag, useful for mixed Linux/Windows
+  environments.
 
 *shelx-20060317 (05 Jun 2006)
 

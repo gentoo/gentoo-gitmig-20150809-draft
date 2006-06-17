@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317.ebuild,v 1.1 2006/06/05 09:01:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317.ebuild,v 1.2 2006/06/17 00:56:16 spyderous Exp $
 
 inherit autotools eutils fortran
 
@@ -14,7 +14,7 @@ RESTRICT="fetch"
 LICENSE="free-noncomm"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="dosformat"
 RDEPEND=""
 DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
@@ -35,6 +35,12 @@ src_unpack() {
 	sed -i \
 		-e "s:CIFDIR='/usr/local/bin/':CIFDIR='${ROOT}usr/share/${PN}/':g" \
 		"${S}"/ciftab.f
+
+	if use dosformat; then
+		sed -i \
+			-e "s/KD=CHAR(32)/KD=CHAR(13)/g" \
+			"${S}"/*f
+	fi
 
 	cd "${S}"
 	eautoreconf
