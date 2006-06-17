@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/myspell-hu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/ChangeLog,v 1.5 2006/06/04 10:38:58 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/ChangeLog,v 1.6 2006/06/17 11:48:57 kevquinn Exp $
+
+*myspell-hu-20060531 (17 Jun 2006)
+
+  17 Jun 2006; Kevin F. Quinn <kevquinn@gentoo.org>
+  myspell-hu-20060509.ebuild, +myspell-hu-20060531.ebuild:
+  rev-bump for new hyphenation dictionary release; fix stale homepage link
+  Thanks to Andras for the prompts - bug 132256#c7
 
   04 Jun 2006; Kevin F. Quinn <kevquinn@gentoo.org>
   -myspell-hu-20060316.ebuild:
