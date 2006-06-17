@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-be
-# Copyright 2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-be/ChangeLog,v 1.1 2006/05/14 14:01:28 arj Exp $
+# Copyright 2006-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-be/ChangeLog,v 1.2 2006/06/17 05:25:54 mr_bones_ Exp $
+
+  17 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  aspell-be-0.01.ebuild:
+  aspell-dict needs to be last on inherit line for proper DESCRIPTION
 
 *aspell-be-0.01 (12 May 2006)
 
