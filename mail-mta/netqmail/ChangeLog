@@ -1,6 +1,15 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.10 2006/06/11 22:31:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.11 2006/06/17 00:29:29 hansmi Exp $
+
+  17 Jun 2006; Michael Hanselmann <hansmi@gentoo.org>
+  -netqmail-1.05-r2.ebuild, +netqmail-1.05-r4.ebuild:
+  Added support for noauthcram USE flag, bug #137015.
+
+*netqmail-1.05-r4 (17 Jun 2006)
+
+  17 Jun 2006;  <>  netqmail-1.05-r4.ebuild files/digest-netqmail-1.05-r4
+  # INSERT ENTRY HERE
 
 *netqmail-1.05-r3 (11 Jun 2006)
 
