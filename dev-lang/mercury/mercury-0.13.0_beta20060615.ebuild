@@ -1,15 +1,20 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2-r2.ebuild,v 1.3 2006/06/17 09:28:37 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.0_beta20060615.ebuild,v 1.1 2006/06/17 09:28:37 keri Exp $
 
-inherit eutils
+inherit eutils versionator
 
-MY_P=${PN}-compiler-${PV}
+BETA_V=$(get_version_component_range 4 $PV)
+BETA_V_YYYY=${BETA_V:4:4}
+BETA_V_MM=${BETA_V:8:2}
+BETA_V_DD=${BETA_V:10:2}
+MY_PV=$(get_version_component_range 1-3 $PV)-beta-${BETA_V_YYYY}-${BETA_V_MM}-${BETA_V_DD}
+MY_P=${PN}-compiler-${MY_PV}
 
 DESCRIPTION="Mercury is a modern general-purpose logic/functional programming language"
 HOMEPAGE="http://www.cs.mu.oz.au/research/mercury/index.html"
-SRC_URI="ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/${MY_P}.tar.gz
-	ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/mercury-tests-${PV}.tar.gz"
+SRC_URI="ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/beta-releases/0.13.0-beta/${MY_P}-unstable.tar.gz
+	ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/beta-releases/0.13.0-beta/mercury-tests-${MY_PV}-unstable.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,19 +25,18 @@ IUSE="debug minimal readline threads"
 DEPEND="readline? ( sys-libs/readline )"
 
 S="${WORKDIR}"/${MY_P}
-TESTDIR="${WORKDIR}"/${PN}-tests-${PV}
+TESTDIR="${WORKDIR}"/${PN}-tests-${MY_PV}
 
 src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-portage-r2.patch
-	epatch "${FILESDIR}"/${P}-CFLAGS.patch
-	epatch "${FILESDIR}"/${P}-LIBDIR.patch
-	epatch "${FILESDIR}"/${P}-docs.patch
+	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-portage.patch
+	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-CFLAGS.patch
+	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-docs.patch
 
 	cd "${TESTDIR}"
-	epatch "${FILESDIR}"/${P}-tests.patch
+	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-tests.patch
 	sed -i -e "s:MDB_DOC:${S}/doc/mdb_doc:" mdbrc
 }
 
@@ -61,7 +65,7 @@ src_test() {
 
 src_install() {
 	make \
-		MERCURY_COMPILER="${D}"/usr/lib/${P}/bin/${CHOST}/${PN}_compile \
+		MERCURY_COMPILER="${D}"/usr/bin/${PN}_compile \
 		INSTALL_PREFIX="${D}"/usr \
 		INSTALL_MAN_DIR="${D}"/usr/share/man \
 		INSTALL_INFO_DIR="${D}"/usr/share/info \

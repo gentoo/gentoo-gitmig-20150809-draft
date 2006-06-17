@@ -18,9 +18,9 @@
  
  # `mmake clean' has a different meaning to the usual GNU standard `make clean':
  # it removes the .c files, which makes bootstrapping impossible unless you
---- mercury-compiler-0.13.0-beta-2006-04-03.orig/Mmakefile	2005-08-12 03:56:57.000000000 +1200
-+++ mercury-compiler-0.13.0-beta-2006-04-03/Mmakefile	2006-04-04 22:34:34.000000000 +1200
-@@ -483,21 +483,6 @@
+--- mercury-compiler-0.13.0-beta-2006-06-09.orig/Mmakefile	2005-08-12 03:56:57.000000000 +1200
++++ mercury-compiler-0.13.0-beta-2006-06-09/Mmakefile	2006-06-14 22:46:40.000000000 +1200
+@@ -483,28 +483,13 @@
  	@echo
  	@echo "-- Installation complete."
  	@echo
@@ -42,3 +42,77 @@
  
  .PHONY: install_main
  install_main: all \
+ 		install_scripts install_util install_runtime install_boehm_gc \
+ 		install_library install_mdbcomp install_browser install_trace \
+ 		install_compiler install_slice install_profiler \
+-		install_deep_profiler install_doc install_config
++		install_deep_profiler install_doc
+ 
+ .PHONY: install_scripts
+ install_scripts: scripts
+--- mercury-compiler-0.13.0-beta-2006-06-09.orig/runtime/Mmakefile	2006-03-30 18:13:48.000000000 +1200
++++ mercury-compiler-0.13.0-beta-2006-06-09/runtime/Mmakefile	2006-06-14 22:49:57.000000000 +1200
+@@ -434,8 +434,6 @@
+ 	-[ -d $(INSTALL_MODULE_DIR) ] || mkdir -p $(INSTALL_MODULE_DIR)
+ 	-[ -d $(INSTALL_MERC_LIB_DIR) ] || mkdir -p $(INSTALL_MERC_LIB_DIR)
+ 	-[ -d $(INSTALL_CONF_DIR) ] || mkdir -p $(INSTALL_CONF_DIR)
+-	-[ -d $(INSTALL_RECONF_DIR)/runtime ] || \
+-		mkdir -p $(INSTALL_RECONF_DIR)/runtime
+ 
+ ifeq ($(findstring java,$(GRADE)),java)
+ 
+@@ -481,7 +479,6 @@
+ 	rm -f $(INSTALL_INC_DIR)/mercury_conf.h
+ 	cp `vpath_find mercury_conf.h` $(INSTALL_CONF_DIR)
+ 	-chmod u+w $(INSTALL_CONF_DIR)/mercury_conf.h
+-	cp `vpath_find mercury_conf.h.in` $(INSTALL_RECONF_DIR)/runtime
+ 	cp `vpath_find $(MACHHDRS)` $(INSTALL_INC_DIR)/machdeps
+ 
+ .PHONY: install_init
+--- mercury-compiler-0.13.0-beta-2006-06-09.orig/scripts/Mmakefile	2006-04-04 19:41:49.000000000 +1200
++++ mercury-compiler-0.13.0-beta-2006-06-09/scripts/Mmakefile	2006-06-14 22:53:13.000000000 +1200
+@@ -26,16 +26,12 @@
+ 	canonical_grade \
+ 	mdb \
+ 	mdprof \
+-	mercury.bat \
+-	mercury_config \
+ 	mercury_update_interface \
+ 	mgnuc \
+-	mkfifo_using_mknod \
+ 	ml \
+ 	mmake \
+ 	mmc \
+-	mprof \
+-	prepare_tmp_dir_fixed_part
++	mprof
+ 
+ SCRIPTS = $(NONCONF_SCRIPTS) $(CONF_SCRIPTS)
+ 
+@@ -103,8 +99,6 @@
+ 	[ -d $(INSTALL_LIBDIR)/mdb ] || mkdir -p $(INSTALL_LIBDIR)/mdb
+ 	[ -d $(INSTALL_CONF_DIR) ] || mkdir -p $(INSTALL_CONF_DIR)
+ 	[ -d $(INSTALL_ELISP_DIR) ] || mkdir -p $(INSTALL_ELISP_DIR)
+-	[ -d $(INSTALL_RECONF_DIR)/scripts ] || \
+-		mkdir -p $(INSTALL_RECONF_DIR)/scripts
+ 
+ .PHONY: install_mmake
+ install_mmake: Mmake.vars Mmake.rules install_dirs
+@@ -122,7 +116,6 @@
+ 	-for file in $(SCRIPTS); do \
+ 		chmod u+w $(INSTALL_BINDIR)/$$file ;\
+ 	done
+-	cp *.in *.sh-subr $(SCRIPTS) $(INSTALL_RECONF_DIR)/scripts
+ 	-rm -f $(INSTALL_BINDIR)/mmake.old
+ 
+ .PHONY: install_config
+--- mercury-compiler-0.13.0-beta-2006-06-15.orig/configure	2006-06-15 22:36:38.000000000 +1200
++++ mercury-compiler-0.13.0-beta-2006-06-15/configure	2006-06-17 20:49:30.000000000 +1200
+@@ -9140,7 +9140,6 @@
+ 	enable_mm_grades=no
+ 	enable_dmm_grades=no
+ 	enable_hlc_prof_grades=no
+-	enable_par_grades=no
+ 	enable_dotnet_grades=no
+ 	enable_java_grade=no
+ fi

@@ -1,0 +1,76 @@
+diff -urN mercury-tests-0.13.0-beta-2006-06-09.orig/hard_coded/dir_test.exp mercury-tests-0.13.0-beta-2006-06-09/hard_coded/dir_test.exp
+--- mercury-tests-0.13.0-beta-2006-06-09.orig/hard_coded/dir_test.exp	2003-07-29 03:50:45.000000000 +1200
++++ mercury-tests-0.13.0-beta-2006-06-09/hard_coded/dir_test.exp	2006-06-14 23:21:55.000000000 +1200
+@@ -130,7 +130,6 @@
+ "foo"/"bar/baz" = "foo\bar\baz".
+ "foo/"/"bar/baz" = "foo\bar\baz".
+ checking whether `unwritable' is readable...ok
+-unwritable file found to be unwritable
+ make_directory succeeded
+ make_directory succeeded
+ dir.make_single_directory with non-existent parent failed as expected.
+diff -urN mercury-tests-0.13.0-beta-2006-06-09.orig/hard_coded/dir_test.exp2 mercury-tests-0.13.0-beta-2006-06-09/hard_coded/dir_test.exp2
+--- mercury-tests-0.13.0-beta-2006-06-09.orig/hard_coded/dir_test.exp2	2003-07-29 03:50:45.000000000 +1200
++++ mercury-tests-0.13.0-beta-2006-06-09/hard_coded/dir_test.exp2	2006-06-14 23:22:25.000000000 +1200
+@@ -127,7 +127,6 @@
+ "foo"/"bar/baz" = "foo/bar/baz".
+ "foo/"/"bar/baz" = "foo/bar/baz".
+ checking whether `unwritable' is readable...ok
+-unwritable file found to be unwritable
+ make_directory succeeded
+ make_directory succeeded
+ dir.make_single_directory with non-existent parent failed as expected.
+diff -urN mercury-tests-0.13.0-beta-2006-06-09.orig/hard_coded/dir_test.exp3 mercury-tests-0.13.0-beta-2006-06-09/hard_coded/dir_test.exp3
+--- mercury-tests-0.13.0-beta-2006-06-09.orig/hard_coded/dir_test.exp3	2003-07-29 03:50:45.000000000 +1200
++++ mercury-tests-0.13.0-beta-2006-06-09/hard_coded/dir_test.exp3	2006-06-14 23:22:52.000000000 +1200
+@@ -130,7 +130,6 @@
+ "foo"/"bar/baz" = "foo/bar/baz".
+ "foo/"/"bar/baz" = "foo/bar/baz".
+ checking whether `unwritable' is readable...ok
+-unwritable file found to be unwritable
+ make_directory succeeded
+ make_directory succeeded
+ dir.make_single_directory with non-existent parent failed as expected.
+diff -urN mercury-tests-0.13.0-beta-2006-06-09.orig/hard_coded/dir_test.m mercury-tests-0.13.0-beta-2006-06-09/hard_coded/dir_test.m
+--- mercury-tests-0.13.0-beta-2006-06-09.orig/hard_coded/dir_test.m	2006-03-29 20:08:00.000000000 +1200
++++ mercury-tests-0.13.0-beta-2006-06-09/hard_coded/dir_test.m	2006-06-14 23:21:10.000000000 +1200
+@@ -50,16 +50,6 @@
+ 	io__write(ReadResult),
+ 	io__nl,
+ 
+-	io__check_file_accessibility("unwritable",
+-		[read, write], WriteResult),
+-	( { WriteResult = ok } ->
+-		io__write_string(
+-		"Error: unwritable file found to be writable\n")
+-	;
+-		io__write_string(
+-		"unwritable file found to be unwritable\n")
+-	),
+-
+ 	{ Dir1 = "test_dir"/"d1" },
+ 	test0("make_directory", dir__make_directory(Dir1)),
+ 	% Test making a directory that already exists.
+diff -urN mercury-tests-0.13.0-beta-2006-06-09.orig/mdbrc mercury-tests-0.13.0-beta-2006-06-09/mdbrc
+--- mercury-tests-0.13.0-beta-2006-06-09.orig/mdbrc	1970-01-01 12:00:00.000000000 +1200
++++ mercury-tests-0.13.0-beta-2006-06-09/mdbrc	2006-06-14 22:59:49.000000000 +1200
+@@ -0,0 +1,19 @@
++source MDB_DOC
++alias	s	step
++alias	g	goto
++alias	f	finish
++alias	r	retry
++alias	v	vars
++alias	p	print
++alias	P	print *
++alias	d	stack
++alias	c	continue
++alias	b	break
++alias	h	help
++alias	?	help
++alias	excp	exception
++alias	e	exception
++alias	EMPTY	step
++alias	NUMBER	step
++xml_browser_cmd ''
++xml_tmp_filename ''
