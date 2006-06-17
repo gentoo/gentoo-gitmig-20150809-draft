@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXfixes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.24 2006/05/13 08:45:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.25 2006/06/17 15:31:46 joshuabaergen Exp $
+
+  17 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  libXfixes-4.0.1.ebuild:
+  Add missing x11-proto/xextproto dep.  (Volkov Peter, bug #136651)
 
 *libXfixes-4.0.1 (13 May 2006)
 
