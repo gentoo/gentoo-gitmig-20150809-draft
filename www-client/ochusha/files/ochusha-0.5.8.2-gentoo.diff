@@ -1,0 +1,33 @@
+diff -urN ochusha-0.5.8.2/lib/ochusha_board_2ch.c ochusha-0.5.8.2-cookie/lib/ochusha_board_2ch.c
+--- ochusha-0.5.8.2/lib/ochusha_board_2ch.c	2005-08-21 00:01:15.000000000 +0900
++++ ochusha-0.5.8.2-cookie/lib/ochusha_board_2ch.c	2006-06-17 21:11:07.000000000 +0900
+@@ -981,7 +981,7 @@
+   if (board->cookie != NULL)
+     G_FREE(board->cookie);
+   if (cookie != NULL)
+-    board->cookie = G_STRDUP(cookie);
++    board->cookie = g_strconcat(cookie, "; hana=mogera", NULL);
+   else
+     board->cookie = NULL;
+ }
+diff -urN ochusha-0.5.8.2/lib/ochusha_thread_2ch.c ochusha-0.5.8.2-cookie/lib/ochusha_thread_2ch.c
+--- ochusha-0.5.8.2/lib/ochusha_thread_2ch.c	2005-09-09 22:18:20.000000000 +0900
++++ ochusha-0.5.8.2-cookie/lib/ochusha_thread_2ch.c	2006-06-17 21:10:22.000000000 +0900
+@@ -1883,7 +1883,7 @@
+ 	  && broker->config->login_2ch)
+ 	query = g_strdup_printf("submit=%%8F%%91%%82%%AB%%8D%%9E%%82%%DE&FROM=%s&mail=%s&MESSAGE=%s&bbs=%s&key=%s&sid=%s&time=%ld", from, mail, message, bbs, key, broker->config->session_id_2ch, time);
+       else
+-	query = g_strdup_printf("submit=%%8F%%91%%82%%AB%%8D%%9E%%82%%DE&FROM=%s&mail=%s&MESSAGE=%s&bbs=%s&key=%s&time=%ld", from, mail, message, bbs, key, time);
++	query = g_strdup_printf("hana=mogera&submit=%%8F%%91%%82%%AB%%8D%%9E%%82%%DE&FROM=%s&mail=%s&MESSAGE=%s&bbs=%s&key=%s&time=%ld", from, mail, message, bbs, key, time);
+     }
+ 
+   if (query == NULL)
+@@ -1903,7 +1903,7 @@
+ 		  && broker->config->login_2ch)
+ 		query = g_strdup_printf("submit=%%91%%53%%90%%D3%%94%%43%%82%%F0%%95%%89%%82%%A4%%82%%B1%%82%%C6%%82%%F0%%8F%%B3%%91%%F8%%82%%B5%%82%%C4%%8F%%91%%82%%AB%%8D%%9E%%82%%DE&FROM=%s&mail=%s&MESSAGE=%s&bbs=%s&key=%s&sid=%s&time=%ld", from, mail, message, bbs, key, broker->config->session_id_2ch, time);
+ 	      else
+-		query = g_strdup_printf("submit=%%91%%53%%90%%D3%%94%%43%%82%%F0%%95%%89%%82%%A4%%82%%B1%%82%%C6%%82%%F0%%8F%%B3%%91%%F8%%82%%B5%%82%%C4%%8F%%91%%82%%AB%%8D%%9E%%82%%DE&FROM=%s&mail=%s&MESSAGE=%s&bbs=%s&key=%s&time=%ld", from, mail, message, bbs, key, time);
++		query = g_strdup_printf("hana=mogera&submit=%%91%%53%%90%%D3%%94%%43%%82%%F0%%95%%89%%82%%A4%%82%%B1%%82%%C6%%82%%F0%%8F%%B3%%91%%F8%%82%%B5%%82%%C4%%8F%%91%%82%%AB%%8D%%9E%%82%%DE&FROM=%s&mail=%s&MESSAGE=%s&bbs=%s&key=%s&time=%ld", from, mail, message, bbs, key, time);
+ 	    }
+ 	  sleep(30);
+ 	  post_result = ochusha_utils_2ch_try_post(broker, thread->board,
