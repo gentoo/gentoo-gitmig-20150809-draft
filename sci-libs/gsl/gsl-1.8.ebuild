@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.8.ebuild,v 1.1 2006/04/11 15:02:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.8.ebuild,v 1.2 2006/06/17 01:34:52 spyderous Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="The GNU Scientific Library"
 HOMEPAGE="http://www.gnu.org/software/gsl/"
@@ -14,6 +14,13 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch ${FILESDIR}/gsl-1.6-deps.diff
+	eautoreconf
+}
 
 src_compile() {
 	replace-cpu-flags k6 k6-2 k6-3 i586
