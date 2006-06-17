@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.2.ebuild,v 1.21 2006/04/01 14:58:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.2.ebuild,v 1.22 2006/06/17 05:10:10 mr_bones_ Exp $
 
 IUSE="gnome opengl"
 
-DESCRIPTION="gnome-python"
+DESCRIPTION="GNOME 1 bindings for Python"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/latest/sources/${P}.tar.gz"
 HOMEPAGE="http://www.pygtk.org/"
 
