@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.292 2006/06/16 03:52:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.293 2006/06/17 19:56:18 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -873,6 +873,10 @@ gcc-compiler_pkg_postinst() {
 
 	if ! is_crosscompile ; then
 		# hack to prevent collisions between SLOT
+		[[ ! -d ${ROOT}/lib/rcscripts/awk ]] \
+			&& mkdir -p "${ROOT}"/lib/rcscripts/awk
+		[[ ! -d ${ROOT}/sbin ]] \
+			&& mkdir -p "${ROOT}"/sbin
 		cp "${ROOT}/${DATAPATH}"/fixlafiles.awk "${ROOT}"/lib/rcscripts/awk/ || die "installing fixlafiles.awk"
 		cp "${ROOT}/${DATAPATH}"/fix_libtool_files.sh "${ROOT}"/sbin/ || die "installing fix_libtool_files.sh"
 	fi
