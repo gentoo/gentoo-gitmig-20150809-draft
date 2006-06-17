@@ -1,0 +1,10 @@
+--- /var/tmp/portage/blas-atlas-3.7.11/work/ATLAS/config.c.orig	2006-06-13 18:26:29.000000000 +0200
++++ /var/tmp/portage/blas-atlas-3.7.11/work/ATLAS/config.c	2006-06-13 20:23:47.000000000 +0200
+@@ -3088,6 +3088,7 @@
+             else if (strstr(ln2, "7410")) mach = PPCG4;
+             else if (strstr(ln2, "7455")) mach = PPCG4;
+             else if (strstr(ln2, "PPC970FX")) mach = PPCG5;
++            else if (strstr(ln2, "altivec") && !Use64Bits) mach = PPCG4;
+          }
+          break;
+       case LASPARC:  /* don't know here anymore */

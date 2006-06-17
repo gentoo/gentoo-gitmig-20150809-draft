@@ -1,0 +1,10 @@
+--- ATLAS/config.c.old	2006-06-17 01:57:32.000000000 +0200
++++ ATLAS/config.c	2006-06-17 01:55:45.000000000 +0200
+@@ -2877,6 +2877,7 @@
+             else if (strstr(ln2, "7400")) mach = PPCG4;
+             else if (strstr(ln2, "7410")) mach = PPCG4;
+             else if (strstr(ln2, "7455")) mach = PPCG4;
++            else if (strstr(ln2, "altivec")) mach = PPCG4;
+          }
+          break;
+       case LASPARC:  /* don't know here anymore */

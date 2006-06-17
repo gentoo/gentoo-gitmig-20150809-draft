@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11.ebuild,v 1.6 2006/04/01 19:59:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11.ebuild,v 1.7 2006/06/17 00:34:47 lu_zero Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -33,6 +33,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/unbuffered.patch
 	epatch "${FILESDIR}"/${PV}-allow-any-gcc-version.patch
 	epatch "${DISTDIR}"/atlas3.6.0-shared-libs.1.patch.bz2
+	epatch "${FILESDIR}"/${PV}-ppc-configure.patch
 	sed -i \
 		-e "s:ASM:ASM VOLATILE:" \
 		include/contrib/camm_dpa.h \

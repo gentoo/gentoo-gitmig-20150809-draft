@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.6.0-r1.ebuild,v 1.10 2006/05/23 20:13:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.6.0-r1.ebuild,v 1.11 2006/06/17 00:34:47 lu_zero Exp $
 
 inherit eutils toolchain-funcs
 
@@ -44,6 +44,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/unbuffered.patch
 	epatch ${DISTDIR}/atlas3.6.0-shared-libs.1.patch.bz2
+	epatch ${FILESDIR}/${PV}-ppc-configure.patch
 	sed -i -e "s:ASM:ASM VOLATILE:" include/contrib/camm_dpa.h || die "sed failed to fix clobbering"
 	cp ${FILESDIR}/war ${S}
 	chmod a+x ${S}/war
