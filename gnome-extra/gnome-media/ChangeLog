@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.111 2006/05/16 04:36:14 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.112 2006/06/17 05:17:41 mr_bones_ Exp $
+
+  17 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  gnome-media-1.2.3-r2.ebuild:
+  make DESCRIPTION consistent
 
   16 May 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   gnome-media-2.14.0-r1.ebuild:
