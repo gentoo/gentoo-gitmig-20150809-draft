@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-0.6.7.ebuild,v 1.2 2006/06/17 08:30:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-0.6.7.ebuild,v 1.3 2006/06/17 21:32:39 vapier Exp $
 
 DESCRIPTION="A next generation init replacement"
 HOMEPAGE="http://initng.org/"
@@ -14,6 +14,7 @@ IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.1"
+PDEPEND="sys-apps/initng-ifiles"
 
 plugin_warning() {
 	if [[ -z ${INITNG_PLUGINS} ]] ; then

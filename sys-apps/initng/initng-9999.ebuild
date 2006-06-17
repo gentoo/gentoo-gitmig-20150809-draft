@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-9999.ebuild,v 1.9 2006/06/11 19:02:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-9999.ebuild,v 1.10 2006/06/17 21:32:39 vapier Exp $
 
 ESVN_REPO_URI="http://svn.initng.org/initng/trunk"
 ESVN_PROJECT="initng"
@@ -18,6 +18,7 @@ IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.1"
+PDEPEND="sys-apps/initng-ifiles"
 
 S=${WORKDIR}/${PN}
 
