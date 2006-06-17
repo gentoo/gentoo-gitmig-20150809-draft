@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.21 2006/05/02 15:04:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.22 2006/06/17 14:51:32 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -38,14 +38,14 @@
 #     If ${VDR_RCADDON_FILE} is set install this file
 #     else install ${FILESDIR}/rc-addon.sh if it exists.
 #
-#     Gets installed under /usr/lib/vdr/rcscript/plugin-${VDRPLUGIN}.sh
+#     Gets installed under ${VDR_RC_DIR}/plugin-${VDRPLUGIN}.sh
 #     (in example vdr-femon this would be /usr/lib/vdr/rcscript/plugin-femon.sh)
 #
 #     This file is sourced by the startscript when plugin is activated in /etc/conf.d/vdr
 #     It could be used for special startup actions for this plugins, or to create the
 #     plugin command line options from a nicer version of a conf.d file.
 
-inherit base eutils flag-o-matic
+inherit base multilib eutils flag-o-matic
 
 IUSE="debug"
 
@@ -62,15 +62,6 @@ S="${WORKDIR}/${VDRPLUGIN}-${PV}"
 # depend on headers for DVB-driver
 RDEPEND=""
 DEPEND="media-tv/linuxtv-dvb-headers"
-
-# Where should the plugins live in the filesystem
-VDR_PLUGIN_DIR="/usr/lib/vdr/plugins"
-
-VDR_RC_DIR="/usr/lib/vdr/rcscript"
-
-# Pathes to includes
-VDR_INCLUDE_DIR="/usr/include"
-DVB_INCLUDE_DIR="/usr/include"
 
 
 # this code is from linux-mod.eclass
@@ -101,8 +92,20 @@ vdr-plugin_pkg_setup() {
 	append-flags -fPIC
 	use debug && append-flags -g
 
-	VDRVERSION=$(awk -F'"' '/define VDRVERSION/ {print $2}' /usr/include/vdr/config.h)
-	APIVERSION=$(awk -F'"' '/define APIVERSION/ {print $2}' /usr/include/vdr/config.h)
+	# Where should the plugins live in the filesystem
+	VDR_PLUGIN_DIR="/usr/$(get_libdir)/vdr/plugins"
+	VDR_CHECKSUM_DIR="${VDR_PLUGIN_DIR%/plugins}/checksums"
+
+	# transition to /usr/share/... will need new vdr-scripts version stable
+	VDR_RC_DIR="/usr/lib/vdr/rcscript"
+
+	# Pathes to includes
+	VDR_INCLUDE_DIR="/usr/include"
+	DVB_INCLUDE_DIR="/usr/include"
+
+
+	VDRVERSION=$(awk -F'"' '/define VDRVERSION/ {print $2}' ${VDR_INCLUDE_DIR}/vdr/config.h)
+	APIVERSION=$(awk -F'"' '/define APIVERSION/ {print $2}' ${VDR_INCLUDE_DIR}/vdr/config.h)
 	[[ -z ${APIVERSION} ]] && APIVERSION="${VDRVERSION}"
 
 	einfo "Building ${PF} against vdr-${VDRVERSION}"
@@ -129,6 +132,7 @@ vdr-plugin_src_unpack() {
 
 			ebegin "Patching Makefile"
 			[[ -e Makefile ]] || die "Makefile of plugin can not be found!"
+			cp Makefile Makefile.orig
 			sed -i.orig Makefile \
 				-e "s:^VDRDIR.*$:VDRDIR = ${VDR_INCLUDE_DIR}:" \
 				-e "s:^DVBDIR.*$:DVBDIR = ${DVB_INCLUDE_DIR}:" \
@@ -194,6 +198,24 @@ vdr-plugin_src_install() {
 	[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin_install_source_tree
 	cd ${S}
 
+	if [[ -n ${VDR_MAINTAINER_MODE} ]]; then
+		local mname=${P}-Makefile
+		cp Makefile ${mname}.patched
+		cp Makefile.orig ${mname}.before
+
+		diff -u ${mname}.before ${mname}.patched > ${mname}.diff
+
+		insinto "/usr/share/vdr/maintainer-data/makefile-changes"
+		doins ${mname}.diff
+
+		insinto "/usr/share/vdr/maintainer-data/makefile-before"
+		doins ${mname}.before
+
+		insinto "/usr/share/vdr/maintainer-data/makefile-patched"
+		doins ${mname}.patched
+
+	fi
+
 	insinto "${VDR_PLUGIN_DIR}"
 	doins libvdr-*.so.*
 	dodoc README* HISTORY CHANGELOG
@@ -218,9 +240,9 @@ vdr-plugin_src_install() {
 
 
 
-	insinto /usr/lib/vdr/checksums
-	if [[ -f ${ROOT}/usr/lib/vdr/checksums/header-md5-vdr ]]; then
-		newins ${ROOT}/usr/lib/vdr/checksums/header-md5-vdr header-md5-${PN}
+	insinto ${VDR_CHECKSUM_DIR}
+	if [[ -f ${ROOT}${VDR_CHECKSUM_DIR}/header-md5-vdr ]]; then
+		newins ${ROOT}${VDR_CHECKSUM_DIR}/header-md5-vdr header-md5-${PN}
 	else
 		if which md5sum >/dev/null 2>&1; then
 			cd ${S}
