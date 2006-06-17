@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-1.5.ebuild,v 1.3 2006/06/17 16:20:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-1.7.ebuild,v 1.1 2006/06/17 16:20:26 usata Exp $
 
 inherit autotools eutils
 
@@ -40,8 +40,6 @@ DEPEND="${RDEPEND}
 			)"
 
 src_compile() {
-	epatch "${FILESDIR}/${P}-configure.in.patch"
-	eautoconf
 	econf \
 		$(use_enable debug) \
 		$(use_enable png) \
