@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r4.ebuild,v 1.2 2006/06/17 11:30:25 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r4.ebuild,v 1.3 2006/06/17 14:56:38 hansmi Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -25,7 +25,7 @@ SRC_URI="
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~ppc ~sparc ~x86"
-IUSE="gencertdaily highvolume mailwrapper qmail-spp ssl vanilla"
+IUSE="gencertdaily highvolume mailwrapper noauthcram qmail-spp ssl vanilla"
 RESTRICT="test"
 
 DEPEND="
