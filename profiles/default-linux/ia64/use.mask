@@ -1,5 +1,9 @@
 # This is a list of USE flags that should not be used on ia64.
 
+# There is no stable blas/lapack implementation on ia64 (yet)
+blas
+lapack
+
 # These will probably never be supported, for obvious reasons (wrong arch)
 svga
 icc
