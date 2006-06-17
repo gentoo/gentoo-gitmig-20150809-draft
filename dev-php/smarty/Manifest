@@ -1,4 +1,6 @@
-MD5 59803e9316082eae69c799647c86ddc5 ChangeLog 7180
+MD5 fdd82838640f012a50bc928cbc52987c ChangeLog 7346
 MD5 aba467f36d22bb04d321841b6b586c20 files/digest-smarty-2.6.13 241
+MD5 20eda70f75444f1e7449224fbee38037 files/digest-smarty-2.6.14 65
 MD5 614fc58a3eb857c656b39f39e330a79e metadata.xml 245
 MD5 cdafddc45ba08dbb8bbf4518c77868cf smarty-2.6.13.ebuild 1502
+MD5 3586e77a9d6e688569fdf5e6e1014977 smarty-2.6.14.ebuild 1561
