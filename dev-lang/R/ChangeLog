@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.74 2006/06/10 09:22:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.75 2006/06/17 21:13:18 kugelfang Exp $
+
+  17 Jun 2006; Danny van Dyk <kugelfang@gentoo.org> R-2.2.1.ebuild:
+  Marked stable on ia64.
 
   10 Jun 2006; Michael Hanselmann <hansmi@gentoo.org> R-2.2.1.ebuild:
   Stable on ppc.
