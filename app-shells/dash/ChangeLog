@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/dash
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.31 2005/10/27 17:10:53 ka0ttic Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.32 2006/06/18 21:04:04 exg Exp $
+
+*dash-0.5.3.3 (18 Jun 2006)
+
+  18 Jun 2006; Emanuele Giaquinta <exg@gentoo.org> +dash-0.5.3.3.ebuild:
+  Version bump.
 
 *dash-0.5.2.8 (27 Oct 2005)
 
