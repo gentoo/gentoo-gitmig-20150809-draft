@@ -1,0 +1,48 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-0.10.ebuild,v 1.1 2006/06/18 17:43:57 brix Exp $
+
+MY_P=${P/gimp-help/gimp-help-2}
+S=${WORKDIR}/${MY_P}
+
+DESCRIPTION="GNU Image Manipulation Program help files"
+HOMEPAGE="http://docs.gimp.org/"
+SRC_URI="ftp://ftp.gimp.org/pub/gimp/help/${MY_P}.tar.gz"
+
+LICENSE="FDL-1.2"
+SLOT="2"
+KEYWORDS="~x86"
+
+IUSE="imagemagick linguas_cs linguas_de linguas_en linguas_fr linguas_hr linguas_it linguas_nl linguas_sv linguas_zh_CN"
+DEPEND="=app-text/docbook-xml-dtd-4.3*
+		dev-libs/libxml2
+		dev-libs/libxslt
+		imagemagick? ( media-gfx/imagemagick )"
+RDEPEND="!<=media-gfx/gimp-2.2*"
+
+src_compile() {
+	local ALL_LINGUAS=""
+
+	use linguas_cs && ALL_LINGUAS="${ALL_LINGUAS} cs"
+	use linguas_de && ALL_LINGUAS="${ALL_LINGUAS} de"
+	use linguas_en && ALL_LINGUAS="${ALL_LINGUAS} en"
+	use linguas_fr && ALL_LINGUAS="${ALL_LINGUAS} fr"
+	use linguas_hr && ALL_LINGUAS="${ALL_LINGUAS} hr"
+	use linguas_it && ALL_LINGUAS="${ALL_LINGUAS} it"
+	use linguas_nl && ALL_LINGUAS="${ALL_LINGUAS} nl"
+	use linguas_sv && ALL_LINGUAS="${ALL_LINGUAS} sv"
+	use linguas_zh_CN && ALL_LINGUAS="${ALL_LINGUAS} zh_CN"
+
+	ALL_LINGUAS=${ALL_LINGUAS} \
+		econf \
+		--without-gimp \
+		$(use_enable imagemagick convert) \
+		|| die "econf failed"
+	emake || die "emake failed"
+}
+
+src_install() {
+	make DESTDIR="${D}" install || die "make install failed"
+
+	dodoc AUTHORS ChangeLog HACKING NEWS README TERMINOLOGY TODO
+}

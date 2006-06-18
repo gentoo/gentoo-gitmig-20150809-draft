@@ -1,0 +1,11 @@
+# ChangeLog for app-doc/gimp-help
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.1 2006/06/18 17:43:57 brix Exp $
+
+*gimp-help-0.10 (18 Jun 2006)
+
+  18 Jun 2006; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml,
+  +gimp-help-0.10.ebuild:
+  Initial import, split out from media-gfx/gimp. Starting with
+  media-gfx/gimp-2.4 the HTML help pages will be provided by this ebuild.
+
