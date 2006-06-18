@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.123 2006/06/09 13:48:52 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.124 2006/06/18 16:57:09 sekretarz Exp $
+
+*mldonkey-2.7.6-r1 (18 Jun 2006)
+
+  18 Jun 2006; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/mldonkey-2.7.6-magic.patch, +mldonkey-2.7.6-r1.ebuild:
+  Add patch which fixes a serious performance problem when MLDonkey
+  downloads lots of new files or torrents with a lot (>100) subfiles, bug #136700
 
   09 Jun 2006; Karol Wojtaszek <sekretarz@gentoo.org>
   -mldonkey-2.5.21-r2.ebuild, -mldonkey-2.6.5.ebuild,

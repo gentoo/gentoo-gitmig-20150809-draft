@@ -1,0 +1,173 @@
+diff -uwNr ./org/src/daemon/common/commonFile.ml ./mldonkey-2.7.6/src/daemon/common/commonFile.ml
+--- src/daemon/common/commonFile.ml	2006-05-20 01:43:54.000000000 +0200
++++ src/daemon/common/commonFile.ml	2006-06-13 21:50:56.000000000 +0200
+@@ -450,6 +450,18 @@
+     None -> ()
+   | Some magic -> (as_file_impl file).impl_file_magic <- Some (HashMagic.merge files_magic magic)
+     
++let check_magic file =
++  let check file =
++    match Magic.M.magic_fileinfo (file_disk_name file) false with
++      None -> ()
++    | Some magic -> set_file_magic file (Some magic)
++  in
++  let magic = file_magic file in
++    match magic with
++      None -> check file
++    | Some magic when magic = "data" || magic = "empty" -> check file
++    | _ -> ()
++
+ let set_file_last_seen file age =
+   let impl = as_file_impl file in
+   impl.impl_file_last_seen <- age
+diff -uwNr ./org/src/daemon/common/commonFile.mli ./mldonkey-2.7.6/src/daemon/common/commonFile.mli
+--- src/daemon/common/commonFile.mli	2006-05-12 23:08:30.000000000 +0200
++++ src/daemon/common/commonFile.mli	2006-06-13 21:50:56.000000000 +0200
+@@ -119,7 +119,7 @@
+ val file_comment : CommonTypes.file -> string
+ val file_magic : CommonTypes.file -> string option
+ val set_file_magic : CommonTypes.file -> string option -> unit
+-  
++val check_magic : CommonTypes.file -> unit  
+ val recover_bytes : CommonTypes.file -> (int64 * int64) list
+ val file_write : CommonTypes.file -> int64 -> string -> int -> int -> unit
+ val file_verify : CommonTypes.file ->
+diff -uwNr ./org/src/daemon/common/commonSwarming.ml ./mldonkey-2.7.6/src/daemon/common/commonSwarming.ml
+--- src/daemon/common/commonSwarming.ml	2006-05-20 01:43:54.000000000 +0200
++++ src/daemon/common/commonSwarming.ml	2006-06-13 21:52:52.000000000 +0200
+@@ -1073,6 +1073,7 @@
+ let set_verified_chunk t i =
+   t.t_nverified_blocks <- t.t_nverified_blocks + 1;
+   t.t_converted_verified_bitmap.[i] <- '3';
++  if i = 0 && !Autoconf.magic_works then check_magic t.t_file;
+   let s = t.t_s in
+   if t.t_primary then begin
+     (* The primary is supposed to propagate verified chunks to the file *)
+diff -uwNr ./org/src/daemon/driver/driverInteractive.ml ./mldonkey-2.7.6/src/daemon/driver/driverInteractive.ml
+--- src/daemon/driver/driverInteractive.ml	2006-05-21 09:50:05.000000000 +0200
++++ src/daemon/driver/driverInteractive.ml	2006-06-13 21:50:56.000000000 +0200
+@@ -123,23 +123,6 @@
+     close_log ()
+   end
+ 
+-let file_magic_check () =
+-  if !Autoconf.magic_works then begin
+-    if !verbose then lprintf_nl "computing file magic values";
+-    let check_magic file =
+-      match Magic.M.magic_fileinfo (file_disk_name file) false with
+-        None -> ()
+-      | Some magic -> set_file_magic file (Some magic)
+-    in
+-    List.iter (fun file ->
+-      let magic = file_magic file in
+-      match magic with
+-        None -> check_magic file
+-      | Some magic when magic = "data" -> check_magic file
+-      | _ -> ()
+-    ) !!files
+-  end
+-
+ (* ripped from gui_downloads *)
+ 
+ let calc_file_eta f =
+diff -uwNr ./org/src/daemon/driver/driverMain.ml ./mldonkey-2.7.6/src/daemon/driver/driverMain.ml
+--- src/daemon/driver/driverMain.ml	2006-05-20 01:43:54.000000000 +0200
++++ src/daemon/driver/driverMain.ml	2006-06-13 21:50:56.000000000 +0200
+@@ -68,7 +68,6 @@
+ 
+ let minute_timer () =
+   DriverInteractive.hdd_check ();
+-  DriverInteractive.file_magic_check ();
+   CommonShared.shared_check_files ();
+   CommonUploads.upload_credit_timer ();
+   CommonInteractive.force_download_quotas ();
+@@ -436,7 +435,6 @@
+ 
+ (*  lprintf "(1) CommonComplexOptions.load\n"; *)
+   CommonComplexOptions.load ();
+-  DriverInteractive.file_magic_check ();
+   CommonUploads.load ();
+ 
+ (*  lprintf "(2) CommonComplexOptions.load done\n"; *)
+diff -uwNr ./org/src/networks/bittorrent/bTInteractive.ml ./mldonkey-2.7.6/src/networks/bittorrent/bTInteractive.ml
+--- src/networks/bittorrent/bTInteractive.ml	2006-05-20 01:43:54.000000000 +0200
++++ src/networks/bittorrent/bTInteractive.ml	2006-06-13 21:50:56.000000000 +0200
+@@ -256,14 +256,24 @@
+ 	  end in
+   print_first_tracker file.file_trackers;
+ 
++  let check_magic file =
++    match Magic.M.magic_fileinfo file false with
++      None -> None
++    | Some s -> Some (HashMagic.merge CommonGlobals.files_magic s)
++  in
+   let cntr = ref 0 in
+-  List.iter (fun (filename, size, magic) ->
++  List.iter (fun (filename, size, _) ->
+     Printf.bprintf buf "\\</tr\\>\\<tr class=\\\"dl-%d\\\"\\>" (html_mods_cntr ());
+     let fs = Printf.sprintf "File %d" !cntr in
+     let magic_string =
+-      match magic with
++      if !Autoconf.magic_works then
++	begin
++          let subfile = Filename.concat (file_disk_name file) filename in
++          match check_magic subfile with
+         None -> ""
+       | Some magic -> Printf.sprintf " / %s" magic
++	end
++      else ""
+     in
+     html_mods_td buf [
+       (fs, "sr br", fs);
+@@ -623,32 +633,6 @@
+           lprintf_nl "ft_retry: exception %s" (Printexc2.to_string e)
+   ) ft_by_num
+ 
+-let file_magic_check () =
+-  if !Autoconf.magic_works then begin
+-    if !verbose then lprintf_nl "computing sub_file magic values";
+-    let check_magic file = 
+-      match Magic.M.magic_fileinfo file false with
+-        None -> None
+-      | Some s -> Some (HashMagic.merge CommonGlobals.files_magic s)
+-    in
+-    Hashtbl.iter (fun _ file ->
+-      let updated = ref false in
+-      let new_file_files = ref [] in
+-      List.iter (fun (filename, size, magic) ->
+-        let subfile = Filename.concat (file_disk_name file) filename in
+-        let new_magic =
+-          match magic with
+-            None -> check_magic subfile
+-          | Some magic when magic = "data" || magic = "empty" -> check_magic subfile
+-          | _ -> magic
+-        in
+-        if new_magic <> magic then updated := true;
+-        new_file_files := (filename, size, new_magic) :: !new_file_files
+-        ) file.file_files;
+-        if !updated then file.file_files <- !new_file_files
+-    ) files_by_uid
+-  end
+-
+ let load_torrent_from_web r ft =
+   if !verbose then
+       lprintf_nl "Loading torrent from web";
+diff -uwNr ./org/src/networks/bittorrent/bTMain.ml ./mldonkey-2.7.6/src/networks/bittorrent/bTMain.ml
+--- src/networks/bittorrent/bTMain.ml	2006-05-20 01:43:54.000000000 +0200
++++ src/networks/bittorrent/bTMain.ml	2006-06-13 21:50:56.000000000 +0200
+@@ -115,7 +115,6 @@
+     BTClients.recover_files ();
+     add_session_timer enabler 60.0 (fun timer ->
+         BTClients.recover_files ();
+-        BTInteractive.file_magic_check ()
+     );
+ 
+     add_session_timer enabler 120.0 (fun timer ->
+@@ -131,7 +130,6 @@
+ 	      ) !current_files;
+   );
+ 
+-  BTInteractive.file_magic_check ();
+   BTClients.listen ();
+   ()
+ 
