@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5520 2006/06/18 17:14:11 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5521 2006/06/18 20:57:35 spyderous Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Donnie Berkholz <spyderous@gentoo.org> (18 Jun 2006)
+# Masked, pending release of eselect 1.0.3 with skel.bash library
+app-admin/eselect-blas
+app-admin/eselect-cblas
+app-admin/eselect-lapack
 
 # Danny van Dyk <kugelfang@gentoo.org> (18 Jun 2006)
 # Masked pending removal, due to open bug #88302 and
