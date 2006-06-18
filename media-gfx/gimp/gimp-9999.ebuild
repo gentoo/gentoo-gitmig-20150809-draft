@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.3 2006/06/18 17:53:51 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.4 2006/06/18 20:03:59 brix Exp $
 
 inherit alternatives cvs eutils fdo-mime flag-o-matic
 
@@ -80,6 +80,9 @@ src_compile() {
 
 	"${S}"/autogen.sh $(use_enable doc gtk-doc) || die "autogen.sh failed"
 
+	# Workaround portage variable leakage
+	local AA=
+
 	econf \
 		--disable-default-binary \
 		--with-x \
@@ -117,7 +120,8 @@ src_install() {
 pkg_postinst() {
 	local binary
 
-	for binary in gimp gimp-console gimp-remote gimptool; do
+	# install symlinks for everything but gimptool (bug #136012)
+	for binary in gimp gimp-console gimp-remote; do
 		alternatives_auto_makesym "/usr/bin/${binary}" "/usr/bin/${binary}-[0-9].[0-9]"
 	done
 
