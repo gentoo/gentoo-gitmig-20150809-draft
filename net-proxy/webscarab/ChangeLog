@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/webscarab
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/webscarab/ChangeLog,v 1.7 2006/04/14 12:01:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/webscarab/ChangeLog,v 1.8 2006/06/18 17:35:25 mrness Exp $
+
+  18 Jun 2006; Alin Nastac <mrness@gentoo.org> -webscarab-20050620.ebuild:
+  Remove old version.
 
   14 Apr 2006; Alin Nastac <mrness@gentoo.org> -webscarab-20050519.ebuild,
   webscarab-20051017.ebuild:
