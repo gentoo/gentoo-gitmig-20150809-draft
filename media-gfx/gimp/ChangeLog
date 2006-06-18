@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.147 2006/06/16 13:50:37 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.148 2006/06/18 17:53:51 brix Exp $
+
+  18 Jun 2006; Henrik Brix Andersen <brix@gentoo.org> gimp-2.2.6-r1.ebuild,
+  gimp-2.2.8-r1.ebuild, gimp-2.2.9.ebuild, gimp-2.2.10.ebuild,
+  gimp-2.2.11.ebuild, gimp-2.2.11-r1.ebuild, gimp-9999.ebuild:
+  Updated for addition of the split-out app-doc/gimp-help ebuilds.
 
 *gimp-2.2.11-r1 (16 Jun 2006)
 

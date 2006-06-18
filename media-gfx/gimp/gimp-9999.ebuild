@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.2 2006/05/03 21:14:45 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.3 2006/06/18 17:53:51 brix Exp $
 
 inherit alternatives cvs eutils fdo-mime flag-o-matic
 
@@ -33,6 +33,7 @@ RDEPEND=">=dev-libs/glib-2.8.2
 		x11-themes/hicolor-icon-theme
 		aalib? ( media-libs/aalib )
 		alsa? ( >=media-libs/alsa-lib-1.0.0 )
+		doc? ( app-doc/gimp-help )
 		gimpprint? ( =media-gfx/gimp-print-4.2* )
 		gnome? ( >=gnome-base/gnome-vfs-2.10.0
 				>=gnome-base/libgnomeui-2.10.0
@@ -78,9 +79,6 @@ src_compile() {
 	filter-flags "-fno-inline" "-ffast-math"
 
 	"${S}"/autogen.sh $(use_enable doc gtk-doc) || die "autogen.sh failed"
-
-	# X isn't optional (#58003) at the moment
-	#	$(use_with X x) \
 
 	econf \
 		--disable-default-binary \
@@ -128,10 +126,6 @@ pkg_postinst() {
 
 	einfo
 	einfo "If you want Postscript file support, emerge ghostscript."
-	einfo
-	einfo "Due to its CVS nature, this ebuild does not include the"
-	einfo "gimp-help package. The manual is available at online at"
-	einfo "http://docs.gimp.org/"
 	einfo
 }
 

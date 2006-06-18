@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.6-r1.ebuild,v 1.13 2006/02/01 08:53:30 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.6-r1.ebuild,v 1.14 2006/06/18 17:53:51 brix Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime
 
@@ -47,7 +47,8 @@ RDEPEND="
 
 	aalib?	( media-libs/aalib )
 	python?	( >=dev-lang/python-2.2
-		>=dev-python/pygtk-2 )"
+		>=dev-python/pygtk-2 )
+	!app-doc/gimp-help"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
