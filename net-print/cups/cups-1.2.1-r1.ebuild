@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r1.ebuild,v 1.7 2006/06/16 22:47:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r1.ebuild,v 1.8 2006/06/18 01:09:16 genstef Exp $
 
 inherit eutils pam flag-o-matic multilib autotools
 
@@ -114,6 +114,8 @@ src_install() {
 	newinitd ${FILESDIR}/cupsd.rc6 cupsd
 
 	sed -i -e "s:server = .*:server = /usr/libexec/cups/daemon/cups-lpd:" ${D}/etc/xinetd.d/cups-lpd
+	grep -w 'disable' ${D}/etc/xinetd.d/cups-lpd || \
+		sed -i -e "s:}:\tdisable = yes\n}:" ${D}/etc/xinetd.d/cups-lpd
 
 	# install pdftops filter
 	exeinto /usr/libexec/cups/filter/
