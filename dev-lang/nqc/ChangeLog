@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/nqc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.9 2005/12/14 00:59:32 griffon26 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.10 2006/06/18 14:06:51 pylon Exp $
+
+*nqc-3.1_p4 (18 Jun 2006)
+
+  18 Jun 2006; Lars Weiler <pylon@gentoo.org> +files/nqc-3.1_p4-amd64.patch,
+  +files/nqc-3.1_p4-usb.patch, +metadata.xml, +nqc-3.1_p4.ebuild:
+  Version bump; thanks to all contributors in bug #89257.
 
   14 Dec 2005; Maurice van der Pot <griffon26@gentoo.org>
   +files/nqc-2.5.1-gcc34-fix.patch, nqc-2.5.1.ebuild:
