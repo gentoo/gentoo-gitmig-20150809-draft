@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.72 2006/04/23 06:43:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.73 2006/06/18 06:35:03 vapier Exp $
+
+*gmp-4.2.1 (18 Jun 2006)
+
+  18 Jun 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/4.2.1/aix.m4-RW.diff, +files/4.2.1/ia64-popcount.diff,
+  +files/gmp-4.2.1-ABI-multilib.patch, +files/4.2.1/configure-ppc.diff,
+  +files/4.2.1/x86-fat.diff, +gmp-4.2.1.ebuild:
+  Version bump #136824 by Nuno Lopes.
 
   23 Apr 2006; Markus Rothe <corsair@gentoo.org> gmp-4.2.ebuild:
   gmp-4.1.4-ppc64-asm-dots.patch does not apply on top of 4.2, but is also no
