@@ -1,4 +1,5 @@
  - drop ldconfig junk
+ - fix types used in socket functions (socklen_t, not int)
 
 http://bugs.gentoo.org/126977
  - respect user LDFLAGS
@@ -7,6 +8,20 @@ http://bugs.gentoo.org/126695
  - add missing headers
  - add missing comma to supp_entry
 
+http://bugs.gentoo.org/137134
+ - don't show traditional warnings
+
+--- Makefile
++++ Makefile
+@@ -71,7 +71,7 @@
+ 
+ WARNINGS += -ansi -D_POSIX_SOURCE -Wall -Wwrite-strings \
+ 	-Wcast-qual -Wcast-align \
+-	-Wtraditional -Wstrict-prototypes -Wmissing-prototypes \
++	-Wstrict-prototypes -Wmissing-prototypes \
+ 	-Wnested-externs -Winline -Wshadow 
+ INCLUDEDIR=-I$(CRTDIR)/include
+ 
 --- libpwdb/Makefile
 +++ libpwdb/Makefile
 @@ -50,7 +50,7 @@
@@ -18,7 +33,7 @@ http://bugs.gentoo.org/126695
  	@ln -sf $(LIBFILENAME) $@
  
  $(LIBSTATIC): $(LIBOBJ)
-@@ -69,7 +69,7 @@
+@@ -68,7 +68,7 @@
  	$(INSTALL) -m 644 radius.h $(INCLUDED)/radius.h
  	$(INSTALL) -m 644 _pwdb_macros.h $(INCLUDED)/_pwdb_macros.h
  	$(INSTALL) -m 755 $(LIBFILENAME) $(LIBDIR)
@@ -68,3 +83,32 @@ http://bugs.gentoo.org/126695
      "groups",               /* these are serviced by requests */
      NULL
      };
+--- libpwdb/radius/radius.c
++++ libpwdb/radius/radius.c
+@@ -145,7 +145,7 @@
+ 		      const char* password,
+ 		      RADIUS_RESULT *rad_result)
+ {
+-    int                salen;
++    socklen_t          salen;
+     int                sockfd;
+     struct sockaddr    saremote;
+     struct sockaddr_in *s_in;
+@@ -333,7 +333,7 @@
+                        const char* new_password,
+ 		       RADIUS_RESULT *rad_result)
+ {
+-    int salen;
++    socklen_t salen;
+     int sockfd;
+     struct sockaddr saremote;
+     struct sockaddr_in *s_in;
+@@ -535,7 +535,7 @@
+                       int sense,
+                       int session_time)
+ {
+-    int salen;
++    socklen_t salen;
+     int sockfd;
+     struct sockaddr saremote;
+     struct sockaddr_in *s_in;
