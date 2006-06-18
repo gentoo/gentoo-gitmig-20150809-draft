@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-PodParser
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-PodParser/ChangeLog,v 1.13 2006/06/07 23:40:40 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-PodParser/ChangeLog,v 1.14 2006/06/18 17:01:42 kloeri Exp $
+
+  18 Jun 2006; Bryan Østergaard <kloeri@gentoo.org>
+  perl-PodParser-1.34.ebuild:
+  Stable on ia64.
 
   07 Jun 2006; Thomas Cort <tcort@gentoo.org> perl-PodParser-1.34.ebuild:
   Stable on alpha.
