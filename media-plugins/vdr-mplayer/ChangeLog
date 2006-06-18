@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-mplayer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.2 2006/04/17 17:13:59 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.3 2006/06/18 21:38:35 zzam Exp $
+
+*vdr-mplayer-0.9.14-r1 (18 Jun 2006)
+
+  18 Jun 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-mplayer-0.9.14-resume.diff, +vdr-mplayer-0.9.14-r1.ebuild:
+  Added patch to fix continuing from resume-position.
 
   17 Apr 2006; Matthias Schwarzott <zzam@gentoo.org>
   vdr-mplayer-0.9.14.ebuild:

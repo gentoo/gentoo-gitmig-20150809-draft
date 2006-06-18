@@ -1,0 +1,22 @@
+Patch from http://www.vdr-portal.de/board/thread.php?postid=411371#post411371
+
+diff -u mp3-0.9.14-orig/player-mplayer.c mp3-0.9.14/player-mplayer.c
+--- mp3-0.9.14-orig/player-mplayer.c	2006-06-18 23:29:35.696587731 +0200
++++ mp3-0.9.14/player-mplayer.c	2006-06-18 23:33:09.501196623 +0200
+@@ -465,7 +465,7 @@
+               nextTime=nextPos=0;
+               d(printf("PLAYBACK STARTED\n"))
+               if(resPos>=0.0) {
+-                if(!currentName || !strcmp(currentName,file->Path()))
++                if(!currentName || !strcmp(currentName,file->FullPath()))
+                   MPlayerControl("seek %.1f 1",resPos);
+                 else
+                   d(printf("mplayer: no resume, seems to be playlist\n"))
+@@ -480,6 +480,7 @@
+             LOCK_THREAD;
+             free(currentName);
+             currentName=strdup(::index(buff,' ')+1);
++            if(currentName[0]) currentName[strlen(currentName)-1]=0; // skip trailing dot
+             d(printf("PLAYING %s\n",currentName))
+             }
+           else if(sscanf(buff,"ANS_LENGTH=%d",&itime)==1) {
