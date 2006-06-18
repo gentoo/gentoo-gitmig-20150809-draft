@@ -1,6 +1,42 @@
-MD5 0b8d0c45fa44f31bf4c848ef6b42432e ChangeLog 1120
-MD5 42b9d917b2857228cfc0225c811be300 files/digest-sylpheed-claws-rssyl-0.3 229
-MD5 b59a4a79c4d74da4b7cd005303055878 files/digest-sylpheed-claws-rssyl-0.4 229
-MD5 392c658e5dc9532cceaaf2a2d63c6d8b metadata.xml 270
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST rssyl-0.3.tar.gz 390916 RMD160 d09a317e2760b953f83b1116ec3c7a464870121e SHA1 621a95a56283a3666e53117f9158290fcd2b99b1 SHA256 225f78b9f611a269c9a50ecc7405c9ef8a8d57c27166b80f5afdd37f561d359f
+DIST rssyl-0.4.tar.gz 419198 RMD160 5efe0e4599e70ef0e273d40aebc18af8480bdf80 SHA1 0bfb510d9f449dfdcb8432e19109de3d5230fd74 SHA256 762f09b0d1fa07a52fb1c52c159f6c18f10236637546dcfaa98522e08580b897
+DIST sylpheed-claws-extra-plugins-2.3.0.tar.bz2 3901667 RMD160 64f026271d993de2c5895c251abf18c529b0244d SHA1 3bcee7f99ad5addd2aeea2bac4e8d63e8eff136f SHA256 45e30623f3908577518a474a2f308453654d1f6422a2f15ff27ec4fb934aa438
+EBUILD sylpheed-claws-rssyl-0.3.ebuild 828 RMD160 5ab34e896bbbd346f21b122ffe5a2f3734d6d674 SHA1 f8af22fe928cc6f0e7ca99c48a0d24e053a129b6 SHA256 22ed4cef9a1ee0c32d44b475daa73ad39548318eec1472fe846e898719ca770a
 MD5 d841acb1787be4ef5561067e1103c7fb sylpheed-claws-rssyl-0.3.ebuild 828
+RMD160 5ab34e896bbbd346f21b122ffe5a2f3734d6d674 sylpheed-claws-rssyl-0.3.ebuild 828
+SHA256 22ed4cef9a1ee0c32d44b475daa73ad39548318eec1472fe846e898719ca770a sylpheed-claws-rssyl-0.3.ebuild 828
+EBUILD sylpheed-claws-rssyl-0.4.ebuild 976 RMD160 43f4eec2cf0cdab31ce5a65dd51b4abecd6dc910 SHA1 ebcb4717550db0252cc29b06bb0c7a358644da21 SHA256 123112764b8353bb6707259532f96d4d653dc5f3df0f7b2ffa1a1227f49038d9
 MD5 c7a3e2bf8a7423eaee3ff7feb04a36f2 sylpheed-claws-rssyl-0.4.ebuild 976
+RMD160 43f4eec2cf0cdab31ce5a65dd51b4abecd6dc910 sylpheed-claws-rssyl-0.4.ebuild 976
+SHA256 123112764b8353bb6707259532f96d4d653dc5f3df0f7b2ffa1a1227f49038d9 sylpheed-claws-rssyl-0.4.ebuild 976
+EBUILD sylpheed-claws-rssyl-0.5.ebuild 1056 RMD160 c502f5a8f723d6e5e62fcc15bf2f185e6da3dce0 SHA1 ec3e7d0d3369d49ff6447487f1a93443d6266ceb SHA256 20978e8edd51513c67f1e0f963cd889b3341e71baaa571afb30f764aef951c57
+MD5 7f596d2f4b2548e18106e8584e9cb81e sylpheed-claws-rssyl-0.5.ebuild 1056
+RMD160 c502f5a8f723d6e5e62fcc15bf2f185e6da3dce0 sylpheed-claws-rssyl-0.5.ebuild 1056
+SHA256 20978e8edd51513c67f1e0f963cd889b3341e71baaa571afb30f764aef951c57 sylpheed-claws-rssyl-0.5.ebuild 1056
+MISC ChangeLog 1260 RMD160 f55e82ba58545a583c6bd17247c746d9703372aa SHA1 76a39d6c02dd2319ecc75245064ab3f00a094190 SHA256 bd66941d8f2a22d63fbf2998e3f16c4914b5c988146b2c8e60a4d28a9dbc57e4
+MD5 e8065a3676b986c8c81c093e1b067543 ChangeLog 1260
+RMD160 f55e82ba58545a583c6bd17247c746d9703372aa ChangeLog 1260
+SHA256 bd66941d8f2a22d63fbf2998e3f16c4914b5c988146b2c8e60a4d28a9dbc57e4 ChangeLog 1260
+MISC metadata.xml 270 RMD160 f48a27c1a64ed036bcb030d0a62638906fdb8ecd SHA1 62f7b7b3453b3e9e32911ed76fa0f3751af353a2 SHA256 384109085a75ab2b172fa816ef2dd853a88467d9ee153ca55e623806b1ad3c30
+MD5 392c658e5dc9532cceaaf2a2d63c6d8b metadata.xml 270
+RMD160 f48a27c1a64ed036bcb030d0a62638906fdb8ecd metadata.xml 270
+SHA256 384109085a75ab2b172fa816ef2dd853a88467d9ee153ca55e623806b1ad3c30 metadata.xml 270
+MD5 42b9d917b2857228cfc0225c811be300 files/digest-sylpheed-claws-rssyl-0.3 229
+RMD160 e4d5ffadb1ab9f62f5eb0d728d43038232beb764 files/digest-sylpheed-claws-rssyl-0.3 229
+SHA256 084c5b3b810868857f16dc3b33b8a75d8a1c0d69b264d4c0b202898eafe86577 files/digest-sylpheed-claws-rssyl-0.3 229
+MD5 b59a4a79c4d74da4b7cd005303055878 files/digest-sylpheed-claws-rssyl-0.4 229
+RMD160 b3868526726b184ee05191eaa3c2faedf3a21c96 files/digest-sylpheed-claws-rssyl-0.4 229
+SHA256 67b42b4734c672a4b29ae5a8847a4ae3a033d0b2f7f5dff01e8a7715f9fd93a0 files/digest-sylpheed-claws-rssyl-0.4 229
+MD5 1501d40d43dfd903395e7b22ed0e67b2 files/digest-sylpheed-claws-rssyl-0.5 310
+RMD160 20b0fdb7e91f86506806175b41bc16e93f8757a1 files/digest-sylpheed-claws-rssyl-0.5 310
+SHA256 2affdaf11cde193787ad60825dadfdc3a54087bdd5f0b0c8ced4cd4510ff06fc files/digest-sylpheed-claws-rssyl-0.5 310
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFElYZDQlM6RnzZP+IRAvuKAKCsAvCDDjIF/GmWp3UaCLEMBUr+qACfeuaV
+JRSZcPSD+7BGhpnpxoJvBrM=
+=YTw4
+-----END PGP SIGNATURE-----
