@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/phpBB-2.0.21.ebuild,v 1.1 2006/06/09 22:19:00 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/phpBB-2.0.21.ebuild,v 1.2 2006/06/18 00:52:07 rl03 Exp $
 
 inherit webapp
 
@@ -24,8 +24,7 @@ src_install() {
 	cp -pPR * "${D}/${MY_HTDOCSDIR}"
 	rm -rf ${D}/${MY_HTDOCSDIR}/docs
 
-	echo "<?php trigger_error('Please use install/install.php to configure phpBB for your system!', E_USER_ERROR); ?>" > "${D}/${MY_HTDOCSDIR}/config.php"
-	webapp_serverowned "${MY_HTDOCSDIR}/config.php"
+	webapp_serverowned ${MY_HTDOCSDIR}/config.php
 	webapp_serverowned ${MY_HTDOCSDIR}/images
 	webapp_serverowned ${MY_HTDOCSDIR}/images/avatars
 	webapp_serverowned ${MY_HTDOCSDIR}/images/avatars/gallery
