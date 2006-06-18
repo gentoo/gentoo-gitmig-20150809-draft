@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Sys-Syslog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/ChangeLog,v 1.9 2006/05/26 14:50:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/ChangeLog,v 1.10 2006/06/18 22:00:29 kloeri Exp $
+
+  19 Jun 2006; Bryan Østergaard <kloeri@gentoo.org>
+  perl-Sys-Syslog-0.13.ebuild:
+  Stable on ia64.
 
   26 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   perl-Sys-Syslog-0.13.ebuild:
