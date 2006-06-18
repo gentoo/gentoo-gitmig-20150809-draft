@@ -1,0 +1,10 @@
+# ChangeLog for net-p2p/eztorrent
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eztorrent/ChangeLog,v 1.1 2006/06/18 06:05:06 squinky86 Exp $
+
+*eztorrent-1.3 (18 Jun 2006)
+
+  18 Jun 2006; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +eztorrent-1.3.ebuild:
+  Initial import, #96859. Thanks to MAL <mal@komcept.com> for this ebuild.
+
