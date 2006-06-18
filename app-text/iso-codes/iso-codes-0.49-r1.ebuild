@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.49-r1.ebuild,v 1.1 2006/02/17 21:27:27 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.49-r1.ebuild,v 1.2 2006/06/18 14:51:41 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -24,6 +24,8 @@ src_unpack() {
 
 	# patch to fix up version reporting (bug #118240)
 	epatch ${FILESDIR}/${PN}-0.49-fix-version.patch
+
+	epatch "${FILESDIR}/${P}-bsd-install.patch"
 
 	# fix install location for multilib machines
 	sed -i -e 's:(datadir)/pkgconfig:(libdir)/pkgconfig:g' Makefile.am
