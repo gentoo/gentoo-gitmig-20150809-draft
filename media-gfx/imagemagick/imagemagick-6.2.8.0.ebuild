@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.8.0.ebuild,v 1.1 2006/06/18 15:46:36 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.8.0.ebuild,v 1.2 2006/06/18 15:50:09 sekretarz Exp $
 
 inherit eutils perl-app multilib
 
@@ -64,6 +64,7 @@ src_compile() {
 		--with-modules \
 		--without-perl \
 		--with-gs-font-dir=/usr/share/fonts/default/ghostscript \
+		--with-windows-font-dir=/usr/share/fonts/corefonts \
 		$(use_with !nocxx magick-plus-plus) \
 		$(use_with bzip2 bzlib) \
 		$(use_with fpx) \
