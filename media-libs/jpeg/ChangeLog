@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.54 2006/06/18 12:54:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.55 2006/06/18 17:27:35 kloeri Exp $
+
+  18 Jun 2006; Bryan Østergaard <kloeri@gentoo.org> jpeg-6b-r7.ebuild:
+  Stable on ia64, bug 130889.
 
   18 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> jpeg-6b-r7.ebuild:
   Re-add ~x86-fbsd keyword now.
