@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.25 2006/04/12 16:46:13 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.26 2006/06/18 04:42:06 mkennedy Exp $
+
+*slime-2.0.0.20060617 (18 Jun 2006)
+
+  18 Jun 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/2.0.0.20060617/70slime-gentoo.el,
+  +files/2.0.0.20060617/README.Gentoo, +files/2.0.0.20060617/swank.asd,
+  +files/2.0.0.20060617/swank-loader.lisp, +slime-2.0.0.20060617.ebuild:
+  New upstream version; Resolves Bug #137050.
 
   12 Apr 2006; Matthew Kennedy <mkennedy@gentoo.org>
   files/1.2.1.20060205/70slime-gentoo.el:
