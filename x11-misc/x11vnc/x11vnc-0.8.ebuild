@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.8.ebuild,v 1.3 2006/06/12 23:24:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.8.ebuild,v 1.4 2006/06/18 20:10:59 ticho Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.karlrunge.com/x11vnc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ~sh ~sparc x86 ~x86-fbsd"
 IUSE="jpeg zlib threads"
 
 RDEPEND="zlib? ( sys-libs/zlib )
