@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/legousbtower
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/legousbtower/ChangeLog,v 1.1 2006/06/18 13:59:30 pylon Exp $
+
+*legousbtower-0.5.4 (18 Jun 2006)
+
+  18 Jun 2006; Lars Weiler <pylon@gentoo.org> +files/20-lego.rules,
+  +metadata.xml, +legousbtower-0.5.4.ebuild:
+  Initial commit; thanks to all contributors in Bug #89257.
+
