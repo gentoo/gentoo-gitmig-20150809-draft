@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/xinetd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.39 2006/04/13 13:01:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.40 2006/06/18 17:11:07 ticho Exp $
+
+  18 Jun 2006; Andrej Kacian <ticho@gentoo.org> xinetd-2.3.14.ebuild:
+  Stable on x86. Bug #137141.
 
   13 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> xinetd-2.3.14.ebuild:
   Add ~x86-fbsd keyword.
