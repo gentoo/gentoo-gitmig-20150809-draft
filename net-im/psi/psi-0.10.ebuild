@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.2 2006/01/22 11:26:57 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.3 2006/06/18 16:11:17 humpback Exp $
 
 inherit eutils qt3
 
@@ -108,6 +108,7 @@ src_unpack() {
 
 			# from http://machekku.uaznia.net/jabber/psi/patches/
 			epatch ${PATCHDIR}/psi-machekku-smart_reply_and_forward-0.5_psi-gentoo.diff
+			sed -i ${S}/src/options/opt_messages-ui.ui -e 's#<includehint>fortuneslistbox.h</includehint>##'
 			epatch ${PATCHDIR}/psi-machekku-keep_message_in_auto_away_status.diff
 			epatch ${PATCHDIR}/psi-machekku-quote_emoticons.diff
 			epatch ${PATCHDIR}/psi-machekku-emoticons_advanced_toggle.diff
