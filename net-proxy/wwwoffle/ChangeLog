@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/wwwoffle
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.10 2006/05/06 08:04:07 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.11 2006/06/18 17:39:15 mrness Exp $
+
+  18 Jun 2006; Alin Nastac <mrness@gentoo.org> wwwoffle-2.9.ebuild:
+  Stable on x86.
 
   06 May 2006; Alin Nastac <mrness@gentoo.org>
   +files/wwwoffle-2.9-gcc41.patch, metadata.xml, wwwoffle-2.9.ebuild:
