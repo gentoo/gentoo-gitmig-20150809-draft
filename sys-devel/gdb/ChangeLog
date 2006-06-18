@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.90 2006/05/03 14:32:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.91 2006/06/18 23:38:16 chainsaw Exp $
+
+*gdb-6.4-r5 (18 Jun 2006)
+
+  18 Jun 2006; Tony Vroon <chainsaw@gentoo.org>
+  +files/gdb-6.4-ppc-stack.patch, +gdb-6.4-r5.ebuild:
+  Apply upstream patch to get usable backtraces on PPC. Research by illusion
+  <morgoth6@box43.pl> in bug #137125.
 
   03 May 2006; Diego Pettenò <flameeyes@gentoo.org> gdb-6.4-r4.ebuild:
   Add ~x86-fbsd keyword.

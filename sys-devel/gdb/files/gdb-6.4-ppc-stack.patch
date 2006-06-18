@@ -1,0 +1,27 @@
+Index: gdb-6.4/gdb/rs6000-tdep.c
+===================================================================
+--- gdb-6.4.orig/gdb/rs6000-tdep.c	2005-11-01 14:32:36.000000000 -0500
++++ gdb-6.4/gdb/rs6000-tdep.c	2005-12-10 00:22:15.000000000 -0500
+@@ -911,7 +911,7 @@ skip_prologue (CORE_ADDR pc, CORE_ADDR l
+ 
+ 	     remember just the first one, but skip over additional
+ 	     ones.  */
+-	  if (lr_reg < 0)
++	  if (lr_reg == -1)
+ 	    lr_reg = (op & 0x03e00000);
+           if (lr_reg == 0)
+             r0_contains_arg = 0;
+@@ -1024,6 +1024,13 @@ skip_prologue (CORE_ADDR pc, CORE_ADDR l
+ 	  continue;
+ 
+ 	}
++      else if ((op & 0xfe80ffff) == 0x42800005 && lr_reg != -1)
++	{
++	  /* bcl 20,xx,.+4 is used to get the current PC, with or without
++	     prediction bits.  If the LR has already been saved, we can
++	     skip it.  */
++	  continue;
++	}
+       else if (op == 0x48000005)
+ 	{			/* bl .+4 used in 
+ 				   -mrelocatable */
