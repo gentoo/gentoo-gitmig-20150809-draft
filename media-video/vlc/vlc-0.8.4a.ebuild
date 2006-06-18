@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a.ebuild,v 1.15 2006/05/04 01:01:57 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a.ebuild,v 1.16 2006/06/18 12:00:56 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
+
+RESTRICT="confcache"
 
 MY_P="${P/_beta/-test}"
 
