@@ -1,0 +1,21 @@
+--- Acrobat7.0/bin/acroread.orig	2006-05-21 11:21:23.000000000 +0200
++++ Acrobat7.0/bin/acroread	2006-05-21 11:30:06.000000000 +0200
+@@ -424,13 +424,13 @@
+             continue
+         fi
+ 
+-        len_version=`expr length $version`
+-        base_version=`expr substr "${base_version}0000000000" 1 $len_version`
+-        len_base_version=`expr length $base_version`
++        len_version=`expr length "$version"`
++        base_version=`expr substr "${base_version}0000000000" 1 "$len_version"`
++        len_base_version=`expr length "$base_version"`
+ 
+         while [ $len_version -gt $len_base_version ]; do
+-            base_version=`expr substr "${base_version}0000000000" 1 $len_version`
+-            len_base_version=`expr length $base_version`
++            base_version=`expr substr "${base_version}0000000000" 1 "$len_version"`
++            len_base_version=`expr length "$base_version"`
+         done
+ 
+     	if [ $version -ge $base_version ]; then
