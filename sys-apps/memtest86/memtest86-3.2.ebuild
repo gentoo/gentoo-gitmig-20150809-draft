@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.2.ebuild,v 1.6 2006/06/06 20:17:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.2.ebuild,v 1.7 2006/06/18 16:11:54 vapier Exp $
 
-inherit mount-boot eutils flag-o-matic
+inherit mount-boot eutils
 
 DESCRIPTION="A stand alone memory test for x86 computers"
 HOMEPAGE="http://www.memtest86.com/"
@@ -14,14 +14,13 @@ KEYWORDS="-* ~amd64 x86"
 IUSE="serial"
 RESTRICT="test"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	test_flag -fno-stack-protector && \
-		epatch "${FILESDIR}"/${P}-solar.patch #66630
+	epatch "${FILESDIR}"/${P}-solar.patch #66630
 
 	sed -i \
 		-e '/DISCARD/d' memtest_shared.lds \
