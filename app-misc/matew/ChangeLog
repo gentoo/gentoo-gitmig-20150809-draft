@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/matew
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/matew/ChangeLog,v 1.3 2005/01/01 15:13:34 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/matew/ChangeLog,v 1.4 2006/06/18 00:16:39 rl03 Exp $
+
+  18 Jun 2006; Renat Lumpau <rl03@gentoo.org> matew-1.9.ebuild:
+  Remove invalid dep (bug #136436).
 
 *matew-1.9 (08 Apr 2004)
 

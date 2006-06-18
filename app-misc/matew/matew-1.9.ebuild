@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/matew/matew-1.9.ebuild,v 1.4 2005/01/01 15:13:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/matew/matew-1.9.ebuild,v 1.5 2006/06/18 00:16:39 rl03 Exp $
 
 DESCRIPTION="Make Album The Easy Way"
 HOMEPAGE="http://matew.sourceforge.net/"
@@ -15,10 +15,8 @@ DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	media-gfx/imagemagick
 	app-shells/bash
-	|| (
-		sys-apps/coreutils
-		sys-apps/sh-utils
-	)"
+	sys-apps/coreutils
+"
 
 src_install() {
 	dobin ${S}/src/matew ${S}/src/matew-cleanup ${S}/src/matew-wizard
