@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-RegExp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RegExp/ChangeLog,v 1.16 2006/04/24 15:44:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RegExp/ChangeLog,v 1.17 2006/06/18 09:15:41 killerfox Exp $
+
+  18 Jun 2006; Rene Nussbaumer <killerfox@gentoo.org>
+  XML-RegExp-0.03-r1.ebuild:
+  Unstable on hppa.
 
   24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   XML-RegExp-0.03-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-XSLT
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XSLT/ChangeLog,v 1.26 2006/02/06 20:41:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XSLT/ChangeLog,v 1.27 2006/06/18 09:17:34 killerfox Exp $
+
+  18 Jun 2006; Rene Nussbaumer <killerfox@gentoo.org> XML-XSLT-0.48.ebuild:
+  Unstable on hppa.
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> XML-XSLT-0.48.ebuild:
   stable on amd64
