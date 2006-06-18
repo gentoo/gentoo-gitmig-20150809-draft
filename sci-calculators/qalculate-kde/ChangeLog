@@ -1,6 +1,13 @@
 # ChangeLog for sci-calculators/qalculate-kde
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/ChangeLog,v 1.12 2006/01/11 14:41:43 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/ChangeLog,v 1.13 2006/06/18 14:07:02 markusle Exp $
+
+*qalculate-kde-0.9.4 (18 Jun 2006)
+
+  18 Jun 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/qalculate-kde-makefile.patch, +qalculate-kde-0.9.4.ebuild:
+  Version bump. Thanks much to Kalidarn <dcecchin@gmail.com> for
+  testing. This fixes bug #135426.
 
   11 Jan 2006; Olivier Fisette <ribosome@gentoo.org>
   -qalculate-kde-0.8.0.ebuild:

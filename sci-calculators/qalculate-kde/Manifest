@@ -1,6 +1,36 @@
-MD5 e6ab4d8a7adaccb96a92eccf3028a04e ChangeLog 1879
-MD5 2449d0e1697835773125280715e953b9 files/digest-qalculate-kde-0.9.0 72
-MD5 42251a42f5f6ae01278deeac60995e9d files/digest-qalculate-kde-0.9.2 72
-MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
+AUX qalculate-kde-makefile.patch 8788 RMD160 c6ea37cb3e21780d1ec0f4fd155f7eec07947c67 SHA1 86c265f73672c1dbb5b6049c35c611f50780b11b SHA256 c83daf0632cb6de3a02b551d61a969d737bdde3b945dacc7c2bca6d8cb22d76e
+MD5 b0bdc35068d29ffba2eeb61e7f35ed44 files/qalculate-kde-makefile.patch 8788
+RMD160 c6ea37cb3e21780d1ec0f4fd155f7eec07947c67 files/qalculate-kde-makefile.patch 8788
+SHA256 c83daf0632cb6de3a02b551d61a969d737bdde3b945dacc7c2bca6d8cb22d76e files/qalculate-kde-makefile.patch 8788
+DIST qalculate-kde-0.9.0.tar.gz 1474208
+DIST qalculate-kde-0.9.2.tar.gz 1479233
+DIST qalculate-kde-0.9.4.tar.gz 1575881 RMD160 98e888a602aef74560e1f6fcd324cb50de8e237b SHA1 2646a7d53a741e43422de4f973392f54e995d785 SHA256 5f9b00603e01db4b26d6ed3878a85be2b4449477c10ccfd5e35c0dc84d624618
+EBUILD qalculate-kde-0.9.0.ebuild 613 RMD160 71e66613f722c52ebe5c4d6bf9d8415d9621d8aa SHA1 9b9f57e270038f449d854f719799651ae9aee454 SHA256 3ea8b6a5e4b5177aec096cc8b705a53163020dec150bb248043c6480ebd50aff
 MD5 ee8bf7debdd9de0dec31e0fb88e122b5 qalculate-kde-0.9.0.ebuild 613
+RMD160 71e66613f722c52ebe5c4d6bf9d8415d9621d8aa qalculate-kde-0.9.0.ebuild 613
+SHA256 3ea8b6a5e4b5177aec096cc8b705a53163020dec150bb248043c6480ebd50aff qalculate-kde-0.9.0.ebuild 613
+EBUILD qalculate-kde-0.9.2.ebuild 615 RMD160 49f1614bd7c567058c1ae5d2b6d259bf07f48e49 SHA1 8fb4a28b9d62c6d8db7d4014eff7829e7b68a5ca SHA256 4f7b8187cbff62aa28f2dbde9fae390f853de816b4b6d26853ee9844e95d618d
 MD5 62e56de0be5bf696529843cc14e93a97 qalculate-kde-0.9.2.ebuild 615
+RMD160 49f1614bd7c567058c1ae5d2b6d259bf07f48e49 qalculate-kde-0.9.2.ebuild 615
+SHA256 4f7b8187cbff62aa28f2dbde9fae390f853de816b4b6d26853ee9844e95d618d qalculate-kde-0.9.2.ebuild 615
+EBUILD qalculate-kde-0.9.4.ebuild 693 RMD160 b85d65d09b14e12267679c449b29b823a556305d SHA1 fdf7196abd0921d5514566de922aa526d5eb2d4f SHA256 855dda30e2185839ed4c83001eff941e59f89f20a39004e95566016e53a66ff3
+MD5 6837c0362ccdd8b55f9e24602b4e938f qalculate-kde-0.9.4.ebuild 693
+RMD160 b85d65d09b14e12267679c449b29b823a556305d qalculate-kde-0.9.4.ebuild 693
+SHA256 855dda30e2185839ed4c83001eff941e59f89f20a39004e95566016e53a66ff3 qalculate-kde-0.9.4.ebuild 693
+MISC ChangeLog 2137 RMD160 adb666d24aa074af0ce89d9c14da03babe147eb2 SHA1 7c22af072e02ff25ea5ff3fd57f6a0a0620b1eab SHA256 8f2983ca25536d79eeb89bc84fb7e47507a111e637f6c5fee6ef80bcf461eabe
+MD5 128869aad9c5456c7b17128ea3ab42c4 ChangeLog 2137
+RMD160 adb666d24aa074af0ce89d9c14da03babe147eb2 ChangeLog 2137
+SHA256 8f2983ca25536d79eeb89bc84fb7e47507a111e637f6c5fee6ef80bcf461eabe ChangeLog 2137
+MISC metadata.xml 157 RMD160 ed43b99e7bf8bbf62cf4e46152138ab42d3a88c5 SHA1 2182a6de0b10959aad51af2990f1a6c69e34dd97 SHA256 750cb9e46ac2b77e1adf73de43c186a8c2d2234a9c6a89d9358d0969dc5cf8ac
+MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
+RMD160 ed43b99e7bf8bbf62cf4e46152138ab42d3a88c5 metadata.xml 157
+SHA256 750cb9e46ac2b77e1adf73de43c186a8c2d2234a9c6a89d9358d0969dc5cf8ac metadata.xml 157
+MD5 2449d0e1697835773125280715e953b9 files/digest-qalculate-kde-0.9.0 72
+RMD160 dcf1268772b9af7a94969a5436ada957f6cd4a7a files/digest-qalculate-kde-0.9.0 72
+SHA256 2325e43ee3f4ff479ba96175f37b60506a08b1f3e6456d0cd00cdb34e703c810 files/digest-qalculate-kde-0.9.0 72
+MD5 42251a42f5f6ae01278deeac60995e9d files/digest-qalculate-kde-0.9.2 72
+RMD160 6ee1e21ec1c17f13b683500d1860317b067b5123 files/digest-qalculate-kde-0.9.2 72
+SHA256 605b212e3dfd83c8a414157a0bcb2b40753e246d9622ed24d9cf3f0c976578b8 files/digest-qalculate-kde-0.9.2 72
+MD5 5af15f9b4afedd6629d0d288cb69754f files/digest-qalculate-kde-0.9.4 262
+RMD160 8f1c699de3e0461fb35bbb0c394057b9993db315 files/digest-qalculate-kde-0.9.4 262
+SHA256 b823b0c6f637f93bba635c49ec629cfc297062e1f448671fe1f76d80d0d30aee files/digest-qalculate-kde-0.9.4 262
