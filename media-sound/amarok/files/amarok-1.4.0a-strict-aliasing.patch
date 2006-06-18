@@ -1,0 +1,14 @@
+Index: amarok-1.4.0/amarok/src/sqlite/Makefile.am
+===================================================================
+--- amarok-1.4.0.orig/amarok/src/sqlite/Makefile.am
++++ amarok-1.4.0/amarok/src/sqlite/Makefile.am
+@@ -7,7 +7,8 @@ KDE_CFLAGS = \
+ libsqlite_la_CFLAGS = \
+     $(all_includes) \
+     -DTHREADSAFE=1 \
+-    -DHAVE_USLEEP=1
++    -DHAVE_USLEEP=1 \
++    -fno-strict-aliasing
+ 
+ libsqlite_la_LDFLAGS = \
+     $(LIBPTHREAD)
