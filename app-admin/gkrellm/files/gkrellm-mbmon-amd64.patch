@@ -1,0 +1,11 @@
+--- src/sysdeps/sensors-common.orig	2006-06-18 14:57:44.000000000 +0100
++++ src/sysdeps/sensors-common.c	2006-06-18 14:57:58.000000000 +0100
+@@ -195,7 +195,7 @@
+ gboolean
+ gkrellm_sys_sensors_mbmon_check(gboolean force)
+ 	{
+-#if defined(__i386__)
++#if defined(__i386__) || defined(__x86_64__)
+ 	GList			*list;
+ 	MbmonSensor		*mb;
+ 	gboolean		result = TRUE;

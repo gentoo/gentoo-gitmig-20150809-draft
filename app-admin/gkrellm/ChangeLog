@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.121 2006/05/02 12:41:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.122 2006/06/18 14:32:21 malc Exp $
+
+  18 Jun 2006; <malc@gentoo.org> +files/gkrellm-mbmon-amd64.patch,
+  gkrellm-2.2.9.ebuild:
+  Add patch to compile mbmon support on x86_64 platforms - bug #137082
 
 *gkrellm-2.2.9 (17 Apr 2006)
 

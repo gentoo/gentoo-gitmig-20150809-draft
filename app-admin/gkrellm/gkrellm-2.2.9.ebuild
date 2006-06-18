@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.2.9.ebuild,v 1.1 2006/05/02 12:41:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.2.9.ebuild,v 1.2 2006/06/18 14:32:21 malc Exp $
 
 inherit eutils
 
@@ -31,6 +31,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-gnutls.patch
+	epatch "${FILESDIR}"/gkrellm-mbmon-amd64.patch
 
 	sed -e 's:#user\tnobody:user\tgkrellmd:' \
 		-e 's:#group\tproc:group\tgkrellmd:' \
