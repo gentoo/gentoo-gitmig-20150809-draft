@@ -9,6 +9,7 @@ DIST linux-2.4.31.tar.bz2 31129841
 DIST linux-2.4.32.tar.bz2 31132159
 DIST linux-2.6.15.tar.bz2 39832836 RMD160 e65904bf253b3515f8dd2a480c7e99ec7117cf60 SHA256 066ec56ce5f57c79a526b6bb3541d32dbf796c11c26c32073fc64b93f09825db
 DIST linux-2.6.16.tar.bz2 40845005 RMD160 af5c2f55733fadd2fdf8b00da55e7b31d516d4e8 SHA1 bef21cd5063a648f33a99a26f4742dd05eb4dca2 SHA256 1200dcc7e60fcdaf68618dba991917a47e41e67099e8b22143976ec972e2cad7
+DIST linux-2.6.17.tar.bz2 41272919 RMD160 26aad30c9a6610665c6c7d62401d79bf56a6a699 SHA1 0605c975b9dead2af31a3decf09dd4138fadaf2b SHA256 ab0f647d52f124958439517df9e1ae0efda90cdb851f59f522fa1749f1d87d58
 DIST patch-2.6.15.1.bz2 6738 RMD160 cd1fb9ef3f53f5f9dd2bd3df8ac10770238330ab SHA256 8e8ccfdad416844c707e6c5d00ccb9f4ca5a843c0b49865db56165e7b820ab30
 DIST patch-2.6.15.4.bz2 18466
 DIST patch-2.6.15.6.bz2 28654
@@ -56,10 +57,6 @@ EBUILD vanilla-sources-2.6.15.6.ebuild 498 RMD160 1352c9ddc93fd07a305e4cce69e4ec
 MD5 88bf5f724c4618aa92ea255a9dee36e8 vanilla-sources-2.6.15.6.ebuild 498
 RMD160 1352c9ddc93fd07a305e4cce69e4eccb9da9d713 vanilla-sources-2.6.15.6.ebuild 498
 SHA256 0edcefb4e754dcf2d14adc7b6a6c3ec1c6d00ef150312a27961b6ad852cb1a8d vanilla-sources-2.6.15.6.ebuild 498
-EBUILD vanilla-sources-2.6.15.ebuild 489 RMD160 1ab643eed15ad48fd87da8ee4f2703c58a1bb2a5 SHA1 a1aea127d48bfdeabfc5f1e609bc59491e24ef92 SHA256 69c39fe10583e7c546e5bd06d16e5e9eb93572325847cc9c81d84f2ef8d72625
-MD5 a6d1e6f6a3dd468c9363b300fb1ffde0 vanilla-sources-2.6.15.ebuild 489
-RMD160 1ab643eed15ad48fd87da8ee4f2703c58a1bb2a5 vanilla-sources-2.6.15.ebuild 489
-SHA256 69c39fe10583e7c546e5bd06d16e5e9eb93572325847cc9c81d84f2ef8d72625 vanilla-sources-2.6.15.ebuild 489
 EBUILD vanilla-sources-2.6.16.14.ebuild 506 RMD160 e55c8001555623914bccedf23a39f1176240dc24 SHA1 b01f5a26df5a8bf45d5474d6f5f862d1453e9f0a SHA256 29237d275bf27afef39e1303f086eabdaa091d7549bf19f98c7c7a1a02d3a000
 MD5 2cf181ca76735c61a965ad0c3bc95203 vanilla-sources-2.6.16.14.ebuild 506
 RMD160 e55c8001555623914bccedf23a39f1176240dc24 vanilla-sources-2.6.16.14.ebuild 506
@@ -84,6 +81,10 @@ EBUILD vanilla-sources-2.6.16.20.ebuild 505 RMD160 4151f58906e040d807cc33454b3bf
 MD5 79e00ee3124ecac481c95aa4ba935b4e vanilla-sources-2.6.16.20.ebuild 505
 RMD160 4151f58906e040d807cc33454b3bfa0e6166a86e vanilla-sources-2.6.16.20.ebuild 505
 SHA256 d481dc3379e02dfc8c7018831e6673398689dbcf01d04804416236abba105967 vanilla-sources-2.6.16.20.ebuild 505
+EBUILD vanilla-sources-2.6.17.ebuild 493 RMD160 3860d02fa2c234ddcdfe2ff4faaa7b0ec0a02525 SHA1 85e3c08e35b66d419d50f20498c1b71cefd0b6d5 SHA256 23f78225204c8ac14266ad82e65881286fe73ec8512b4fa3f211608fcb381b83
+MD5 8015dcdf242384fe8937566c1bb46594 vanilla-sources-2.6.17.ebuild 493
+RMD160 3860d02fa2c234ddcdfe2ff4faaa7b0ec0a02525 vanilla-sources-2.6.17.ebuild 493
+SHA256 23f78225204c8ac14266ad82e65881286fe73ec8512b4fa3f211608fcb381b83 vanilla-sources-2.6.17.ebuild 493
 EBUILD vanilla-sources-2.6.17_rc5.ebuild 493 RMD160 a0272d7d36f46002e58a0a641db3309375532f03 SHA1 6e56a65cdb42a16f437afa08fad4f76e6364d433 SHA256 319461a4b4eafd553a857356d6c25beca7a148d3c65441fb879b1e08401b1771
 MD5 eb435178d10f97414f0b5658d0f24fb8 vanilla-sources-2.6.17_rc5.ebuild 493
 RMD160 a0272d7d36f46002e58a0a641db3309375532f03 vanilla-sources-2.6.17_rc5.ebuild 493
@@ -92,10 +93,10 @@ EBUILD vanilla-sources-2.6.17_rc6.ebuild 493 RMD160 4552b4415c31738f284f3cf35495
 MD5 c648ba70b45d4a582d4b4223ef57dcc3 vanilla-sources-2.6.17_rc6.ebuild 493
 RMD160 4552b4415c31738f284f3cf3549568106b111c93 vanilla-sources-2.6.17_rc6.ebuild 493
 SHA256 00898931966e42a97a7afddad252dc8beb4847c68c3c17d40310725572b7ad67 vanilla-sources-2.6.17_rc6.ebuild 493
-MISC ChangeLog 34266 RMD160 fc16e72bdc00621dbdd4479ecb5a207b6e53e26e SHA1 6cd1a2704a37ba12020a62744957aeb6e18dacbf SHA256 bae6d7552fa8896e14936288420c75d8774ee592959632d6ed5bfaeff4695ea5
-MD5 96fb2ce528e6337e2c8562a0e75053f7 ChangeLog 34266
-RMD160 fc16e72bdc00621dbdd4479ecb5a207b6e53e26e ChangeLog 34266
-SHA256 bae6d7552fa8896e14936288420c75d8774ee592959632d6ed5bfaeff4695ea5 ChangeLog 34266
+MISC ChangeLog 34455 RMD160 3d4ed8c15780a15a1d00628d3a26cd171b765f41 SHA1 09598640b33cada417c7372d5bc044b8054814ad SHA256 49fba24ab79dbf078eb2218b8c088b110cd4f7d1cf5da5272ac238aec1b25949
+MD5 62b7284564db014d4db8eebef7281275 ChangeLog 34455
+RMD160 3d4ed8c15780a15a1d00628d3a26cd171b765f41 ChangeLog 34455
+SHA256 49fba24ab79dbf078eb2218b8c088b110cd4f7d1cf5da5272ac238aec1b25949 ChangeLog 34455
 MISC metadata.xml 556 RMD160 c75c5b3fb38d516d34abe6b7e439e80ff86a076f SHA1 09c039058117b8bb356d9b7dcc2b6f97fe83b607 SHA256 dffa98f5a6da754ae1b142d863f071aece25513ab3a44a974cb00ccd0e9a8b8a
 MD5 ae78ce25f5831340cd4ec9b07d03db64 metadata.xml 556
 RMD160 c75c5b3fb38d516d34abe6b7e439e80ff86a076f metadata.xml 556
@@ -118,9 +119,6 @@ SHA256 eab8876d7730e829a79d63e25a8ef38d3ad2766a66ba0b79a2d4ddab1d374ce3 files/di
 MD5 9846e3cd64adb4374ac39cbb80fa2a5f files/digest-vanilla-sources-2.4.32 67
 RMD160 b6970ed7f968b68f7fbdca930942c8f93a8af747 files/digest-vanilla-sources-2.4.32 67
 SHA256 fc5d19229036495b33dae062f3a26b5eb37606fd78196afe28b7cd97f7a9ce12 files/digest-vanilla-sources-2.4.32 67
-MD5 14c24485e27a22fbe2ef14c5546fff05 files/digest-vanilla-sources-2.6.15 247
-RMD160 c7fecea22e3df0b4ab5bd97d558ddcc894f5960c files/digest-vanilla-sources-2.6.15 247
-SHA256 9c771a73cef3ebff6767470982a9aa174f80c12faf62785fe108ddd28404558b files/digest-vanilla-sources-2.6.15 247
 MD5 24b6eeca1102bf28080022a7c86c5345 files/digest-vanilla-sources-2.6.15.1 476
 RMD160 30a9fd51a113fc8a8fb92bc1c2a800ff3761c220 files/digest-vanilla-sources-2.6.15.1 476
 SHA256 e2d5293bda602087bc5ec08b2d6225379f79b2a5f08ce4a079120bebe99ed733 files/digest-vanilla-sources-2.6.15.1 476
@@ -148,6 +146,9 @@ SHA256 04195e28e6c5bc09fceac03c56a5cda4ccd03b9a495ee1a727006813a30cbfdc files/di
 MD5 9271f02efc47db92b034ddb2427f56f2 files/digest-vanilla-sources-2.6.16.20 310
 RMD160 3f6baf732cac8e4f96d247741cfb992a9f26d1a6 files/digest-vanilla-sources-2.6.16.20 310
 SHA256 912ac6531f40367744cf3c160617a7422e3990e3b0ff7a0abe2b13b4dfaf0ecc files/digest-vanilla-sources-2.6.16.20 310
+MD5 6ea4a239f3e7dfaaa226a2863211d2b9 files/digest-vanilla-sources-2.6.17 247
+RMD160 d6b787eeb69b01db36ea8ffcf3975b1f5a314658 files/digest-vanilla-sources-2.6.17 247
+SHA256 ed5557ec8fb31e52c9c362abbf7a3d9aefdd93e44a70ff0ee4e5449f7cd62d5c files/digest-vanilla-sources-2.6.17 247
 MD5 32e99f40b43e4fd2999a40bff5a855b1 files/digest-vanilla-sources-2.6.17_rc5 313
 RMD160 7a2a6d7d53e84840479e9e461639293fa1d1f0dd files/digest-vanilla-sources-2.6.17_rc5 313
 SHA256 02030601b97843be131551e0b84a68b00eba35ed31fd495c8cdb0d14a60b3a19 files/digest-vanilla-sources-2.6.17_rc5 313
@@ -155,9 +156,9 @@ MD5 0ca083742b5f119f195b007e5de12e28 files/digest-vanilla-sources-2.6.17_rc6 313
 RMD160 0825bd5476a811699c5290c8270031f7d2f5b8ac files/digest-vanilla-sources-2.6.17_rc6 313
 SHA256 eaa97eb227d29ab9154508dbe8343926bb3f45588bd01a16e75d681aa9b87beb files/digest-vanilla-sources-2.6.17_rc6 313
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
+Version: GnuPG v1.4.3-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEjaM0kT4lNIS36YERAgMZAJ40LTRRonIqhxiqZyfnlGlHwAzXiACcCbj3
-18+OA7ZjTJZ9KZ30w/GhPbU=
-=xIyK
+iD8DBQFElcy4p5vW4rUFj5oRAi4IAKCTpDr7UCQSsYDTNxJY9oadBQnFIgCgjcn9
+fNPsJCDaVXCh0ahEnGsXG2c=
+=egez
 -----END PGP SIGNATURE-----
