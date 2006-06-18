@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1956 2006/06/18 12:38:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1957 2006/06/18 19:23:22 nerdboy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1327,6 +1327,7 @@ sci-libs/gdal:hdf5 - Adds support for the Hierarchical Data Format v 5
 sci-libs/gdal:ogdi - Enables support for the open geographic datastore interface
 sci-libs/gerris:dx - Enables support for opendx
 sci-libs/hdf5:hlapi - Enables support for high-level library
+sci-libs/hdf5:cxx - Builds C++ library support (conflicts with mpi support)
 sci-libs/itpp:cblas - Adds support for the cblas numerical library
 sci-libs/libghemical:mopac7 - Use the MOPAC7 package for semi-empirical calculations
 sci-libs/libghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
