@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-2.0_rc1.ebuild,v 1.1 2006/05/08 11:24:31 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-2.0_rc1.ebuild,v 1.2 2006/06/18 16:22:35 uberlord Exp $
 
 inherit eutils webapp
 
@@ -13,6 +13,7 @@ IUSE="enscript"
 KEYWORDS="~amd64 ~sparc ~x86"
 
 RDEPEND="virtual/php
+	dev-php/PEAR-XML_Parser
 	dev-util/subversion
 	sys-apps/sed
 	enscript? ( app-text/enscript )"
