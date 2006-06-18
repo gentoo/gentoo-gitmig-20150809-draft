@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/eselect-cblas
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cblas/ChangeLog,v 1.1 2006/06/18 21:04:41 spyderous Exp $
+
+*eselect-cblas-0.1 (18 Jun 2006)
+
+  18 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/cblas.eselect-0.1, +files/cblas.eselect.5, +metadata.xml,
+  +eselect-cblas-0.1.ebuild:
+  New eselect module for switching C-language BLAS implementations.
+
