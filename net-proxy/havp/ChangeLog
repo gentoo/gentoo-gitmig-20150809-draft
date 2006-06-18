@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/havp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.4 2006/04/14 09:05:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.5 2006/06/18 15:58:48 mrness Exp $
+
+*havp-0.81 (18 Jun 2006)
+
+  18 Jun 2006; Alin Nastac <mrness@gentoo.org>
+  -files/havp-0.77-gentoo.patch, -files/havp-0.78-gentoo.patch,
+  +files/havp-0.81-gentoo.patch, -havp-0.77.ebuild, -havp-0.78.ebuild,
+  +havp-0.81.ebuild:
+  Version bump. Remove obsolete versions.
 
 *havp-0.79 (14 Apr 2006)
 
