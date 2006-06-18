@@ -1,0 +1,18 @@
+Index: kdebase-startkde-3.5.3/startkde
+===================================================================
+--- kdebase-startkde-3.5.3.orig/startkde
++++ kdebase-startkde-3.5.3/startkde
+@@ -188,6 +188,13 @@ for prefix in `echo "$exepath" | sed -n 
+   done
+ done
+ 
++# Source scripts in /etc/X11/xinit/xinitrc.d/ for system-level defined stuff
++if test -d "/etc/X11/xinit/xinitrc.d/"; then
++  for file in "/etc/X11/xinit/xinitrc.d/"*; do
++    test -x "$file" && . "$file"
++  done
++fi
++
+ # Activate the kde font directories.
+ #
+ # There are 4 directories that may be used for supplying fonts for KDE.
