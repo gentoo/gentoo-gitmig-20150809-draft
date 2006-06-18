@@ -1,8 +1,0 @@
-# ChangeLog for app-doc/ebook-find
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/ebook-find/ChangeLog,v 1.4 2005/01/01 13:08:18 eradicator Exp $
-
-*ebook-find-4.1 (06 May 2003)
-
-  06 May 2003; Martin Holzer <mholzer@gentoo.org> ebook-find-4.1:
-  Initial version.

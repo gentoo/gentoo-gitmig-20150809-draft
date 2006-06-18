@@ -1,8 +1,0 @@
-# ChangeLog for app-doc/ebook-cpp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/ebook-cpp/ChangeLog,v 1.6 2005/01/01 13:07:40 eradicator Exp $
-
-*ebook-cpp-3.2 (06 May 2003)
-
-  06 May 2003; Martin Holzer <mholzer@gentoo.org> ebook-cpp-3.2.ebuild:
-  Initial version.
