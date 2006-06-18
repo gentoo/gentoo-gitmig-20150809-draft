@@ -1,0 +1,11 @@
+# ChangeLog for app-arch/torrentzip
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/torrentzip/ChangeLog,v 1.1 2006/06/18 05:14:50 squinky86 Exp $
+
+*torrentzip-0.2 (18 Jun 2006)
+
+  18 Jun 2006; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +torrentzip-0.2.ebuild:
+  Initial import. Thanks to Avuton Olrich <avuton@gmail.com> and Timothy
+  Redaelli <drizzt@gufi.org> for this package, #91493.
+
