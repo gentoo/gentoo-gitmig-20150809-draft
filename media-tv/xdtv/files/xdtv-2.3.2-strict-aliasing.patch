@@ -1,0 +1,237 @@
+Index: xdtv-2.3.2-sa/alevt/Makefile.am
+===================================================================
+--- xdtv-2.3.2-sa.orig/alevt/Makefile.am
++++ xdtv-2.3.2-sa/alevt/Makefile.am
+@@ -1,5 +1,6 @@
+ noinst_LIBRARIES = libalevt.a
+ 
++libalevt_a_CFLAGS = $(AM_CFLAGS) -fno-strict-aliasing
+ libalevt_a_SOURCES = \
+ alevt_main.c \
+ cache.c \
+Index: xdtv-2.3.2-sa/libavcodec/libpostproc/Makefile
+===================================================================
+--- xdtv-2.3.2-sa.orig/libavcodec/libpostproc/Makefile
++++ xdtv-2.3.2-sa/libavcodec/libpostproc/Makefile
+@@ -10,7 +10,7 @@ PPLIB = $(LIBPREF)postproc$(LIBSUF)
+ 
+ PPOBJS=postprocess.o
+ 
+-CFLAGS  = $(OPTFLAGS) $(MLIB_INC) -I. -I.. -I$(SRC_PATH)/libavcodec $(EXTRA_INC)
++CFLAGS  = $(OPTFLAGS) $(MLIB_INC) -I. -I.. -I$(SRC_PATH)/libavcodec $(EXTRA_INC) -fno-strict-aliasing
+ 
+ %.o: %.c
+ 	$(CC) -c $(CFLAGS) $(LIBOBJFLAGS) -I$(SRC_PATH)/libavcodec -I../.. -o $@ $<
+Index: xdtv-2.3.2-sa/libavcodec/Makefile
+===================================================================
+--- xdtv-2.3.2-sa.orig/libavcodec/Makefile
++++ xdtv-2.3.2-sa/libavcodec/Makefile
+@@ -10,7 +10,7 @@ include ../config.mak
+ VPATH=$(SRC_PATH)/libavcodec
+ 
+ # NOTE: -I.. is needed to include config.h
+-CFLAGS=$(OPTFLAGS) -DHAVE_AV_CONFIG_H -I.. -I$(SRC_PATH)/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE $(AMR_CFLAGS)
++CFLAGS=$(OPTFLAGS) -DHAVE_AV_CONFIG_H -I.. -I$(SRC_PATH)/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE $(AMR_CFLAGS) -fno-strict-aliasing
+ 
+ OBJS= bitstream.o utils.o mem.o allcodecs.o \
+       mpegvideo.o jrevdct.o jfdctfst.o jfdctint.o\
+Index: xdtv-2.3.2-sa/libavformat/Makefile
+===================================================================
+--- xdtv-2.3.2-sa.orig/libavformat/Makefile
++++ xdtv-2.3.2-sa/libavformat/Makefile
+@@ -9,7 +9,7 @@ include ../config.mak
+ 
+ VPATH=$(SRC_PATH)/libavformat
+ 
+-CFLAGS=$(OPTFLAGS) -I.. -I$(SRC_PATH) -I$(SRC_PATH)/libavutil -I$(SRC_PATH)/libavcodec -DHAVE_AV_CONFIG_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE
++CFLAGS=$(OPTFLAGS) -I.. -I$(SRC_PATH) -I$(SRC_PATH)/libavutil -I$(SRC_PATH)/libavcodec -DHAVE_AV_CONFIG_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -fno-strict-aliasing
+ 
+ OBJS= utils.o cutils.o os_support.o allformats.o
+ PPOBJS=
+Index: xdtv-2.3.2-sa/libavutil/Makefile
+===================================================================
+--- xdtv-2.3.2-sa.orig/libavutil/Makefile
++++ xdtv-2.3.2-sa/libavutil/Makefile
+@@ -9,7 +9,7 @@ include ../config.mak
+ VPATH=$(SRC_PATH)/libavutil
+ 
+ # NOTE: -I.. is needed to include config.h
+-CFLAGS=$(OPTFLAGS) -DHAVE_AV_CONFIG_H -I.. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE
++CFLAGS=$(OPTFLAGS) -DHAVE_AV_CONFIG_H -I.. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -fno-strict-aliasing
+ 
+ OBJS= mathematics.o \
+       integer.o \
+Index: xdtv-2.3.2-sa/src/audio-alsa.c
+===================================================================
+--- xdtv-2.3.2-sa.orig/src/audio-alsa.c
++++ xdtv-2.3.2-sa/src/audio-alsa.c
+@@ -49,7 +49,7 @@ static int alsa_check(void) {
+ }
+ 
+ static int alsa_configure(snd_pcm_t *handle,unsigned int *rate,
+-			  int fmtsample, int nchannels, unsigned int nfrags, int fragsize) {
++			  int fmtsample, int nchannels, unsigned int nfrags, snd_pcm_uframes_t fragsize) {
+   snd_pcm_hw_params_t *hw_params = NULL;
+   int err;
+   err = snd_pcm_nonblock(handle, 0);
+@@ -72,7 +72,7 @@ static int alsa_configure(snd_pcm_t *han
+   err = snd_pcm_hw_params_set_access(handle, hw_params,SND_PCM_ACCESS_RW_INTERLEAVED);
+   CHECKALSA(err,"snd_pcm_hw_params_set_access");
+ #ifdef ALSA_NEW_PARAMS
+-  err = snd_pcm_hw_params_set_period_size_near(handle, hw_params,(snd_pcm_uframes_t*)&fragsize, 0);
++  err = snd_pcm_hw_params_set_period_size_near(handle, hw_params, &fragsize, 0);
+ #else
+   err = snd_pcm_hw_params_set_period_size_near(handle, hw_params, fragsize, 0);
+ #endif
+@@ -93,7 +93,7 @@ static int alsa_configure(snd_pcm_t *han
+ }
+ 
+ static int alsa_open(int mode, int fmtsample, int nchannels, int freq,
+-		     int nfrags, int fragsize) {
++		     int nfrags, snd_pcm_uframes_t fragsize) {
+   int err;
+   unsigned int rate_in = freq, rate_out = freq;
+   if(audio_dev) card=audio_dev;
+Index: xdtv-2.3.2-sa/src/main.c
+===================================================================
+--- xdtv-2.3.2-sa.orig/src/main.c
++++ xdtv-2.3.2-sa/src/main.c
+@@ -1452,8 +1452,12 @@ set_float (Widget widget, char *name, fl
+        * Convince C not to perform an automatic conversion, which
+        * would truncate 0.5 to 0.
+        */
+-      XtArgVal *l_top = (XtArgVal *) & value;
+-      XtSetArg (args[0], name, *l_top);
++      union {
++      	float val;
++	XtArgVal arg;
++      } u;
++      u.val = value;
++      XtSetArg (args[0], name, u.arg);
+     }
+   XtSetValues (widget, args, 1);
+ }
+Index: xdtv-2.3.2-sa/src/pixmaps_loader.c
+===================================================================
+--- xdtv-2.3.2-sa.orig/src/pixmaps_loader.c
++++ xdtv-2.3.2-sa/src/pixmaps_loader.c
+@@ -116,25 +116,25 @@ load_lib(char* name, int exit_on_error)
+       if(exit_on_error) exit(1);
+   }  else {
+ 	  
+-    *(void **) (&create_main_pix)   = dlsym(handle, "create_main_action_pixmap");
+-    *(void **) (&create_editor_pix) = dlsym(handle, "create_editor_pixmap");
+-    *(void **) (&create_divx_pix) = dlsym(handle, "create_divx_pixmap");
+-    *(void **) (&create_divxaudio_pix) = dlsym(handle, "create_divxaudio_pixmap");
+-    *(void **) (&create_divxstream_common_pix) = dlsym(handle, "create_divxstream_common_pixmap");
+-    *(void **) (&create_divxstream_on_pix) = dlsym(handle, "create_divxstream_on_pixmap");
+-    *(void **) (&create_divxstream_off_pix) = dlsym(handle, "create_divxstream_off_pixmap");
+-    *(void **) (&create_fileselector_pix) = dlsym(handle, "create_fileselector_pixmap");
+-    *(void **) (&create_fileselector_menu_pix) = dlsym(handle, "create_fileselector_menu_pixmap");
+-    *(void **) (&create_alevt_pix) = dlsym(handle, "create_alevt_pixmap");
+-    *(void **) (&create_grab_pix) = dlsym(handle, "create_grab_pixmap");
+-    *(void **) (&create_xosd_pix) = dlsym(handle, "create_xosd_pixmap");
+-    *(void **) (&create_plugin_pix) = dlsym(handle, "create_plugin_pixmap");
+-    *(void **) (&create_x11_pix) = dlsym(handle, "create_x11_pixmap");
+-    *(void **) (&create_popup_pix) = dlsym(handle, "create_popup_pixmap");
+-    *(void **) (&create_help_pix) = dlsym(handle, "create_help_pixmap");
+-    *(void **) (&create_subtitle_pix) = dlsym(handle, "create_subtitle_pixmap");
+-    *(void **) (&create_ffmpeg_pix) = dlsym(handle, "create_ffmpeg_pixmap");
+-    *(void **) (&create_xvid_pix) = dlsym(handle, "create_xvid_pixmap");
++    create_main_pix  = dlsym(handle, "create_main_action_pixmap");
++    create_editor_pix = dlsym(handle, "create_editor_pixmap");
++    create_divx_pix = dlsym(handle, "create_divx_pixmap");
++    create_divxaudio_pix = dlsym(handle, "create_divxaudio_pixmap");
++    create_divxstream_common_pix = dlsym(handle, "create_divxstream_common_pixmap");
++    create_divxstream_on_pix = dlsym(handle, "create_divxstream_on_pixmap");
++    create_divxstream_off_pix = dlsym(handle, "create_divxstream_off_pixmap");
++    create_fileselector_pix = dlsym(handle, "create_fileselector_pixmap");
++    create_fileselector_menu_pix = dlsym(handle, "create_fileselector_menu_pixmap");
++    create_alevt_pix = dlsym(handle, "create_alevt_pixmap");
++    create_grab_pix = dlsym(handle, "create_grab_pixmap");
++    create_xosd_pix = dlsym(handle, "create_xosd_pixmap");
++    create_plugin_pix = dlsym(handle, "create_plugin_pixmap");
++    create_x11_pix = dlsym(handle, "create_x11_pixmap");
++    create_popup_pix = dlsym(handle, "create_popup_pixmap");
++    create_help_pix = dlsym(handle, "create_help_pixmap");
++    create_subtitle_pix = dlsym(handle, "create_subtitle_pixmap");
++    create_ffmpeg_pix = dlsym(handle, "create_ffmpeg_pixmap");
++    create_xvid_pix = dlsym(handle, "create_xvid_pixmap");
+ 
+     if ((error = dlerror()) != NULL){
+       if (debug||1)
+Index: xdtv-2.3.2-sa/src/stringuty.c
+===================================================================
+--- xdtv-2.3.2-sa.orig/src/stringuty.c
++++ xdtv-2.3.2-sa/src/stringuty.c
+@@ -411,7 +411,7 @@ int VaGetPointorsLink(const PointorsLink
+ 	va_start(argument, linkBuffer);
+ 
+ 	argc = 0;
+-	argv_ptr = (void**)&argv_ptr;
++	argv_ptr = &argv_ptr;
+ 
+ 	while(linkBuffer != NULL && argv_ptr != NULL) {
+ 
+Index: xdtv-2.3.2-sa/src/xdtv_v4l-conf.c
+===================================================================
+--- xdtv-2.3.2-sa.orig/src/xdtv_v4l-conf.c
++++ xdtv-2.3.2-sa/src/xdtv_v4l-conf.c
+@@ -237,7 +237,7 @@ displayinfo_dga(Display *dpy, struct DIS
+ 	fprintf(stderr,"WARNING: No DGA support available for this display.\n");
+ 	return;
+     }
+-    XF86DGAGetVideoLL(dpy,XDefaultScreen(dpy),(int*)&base,&width,&foo,&bar);
++    XF86DGAGetVideoLL(dpy,XDefaultScreen(dpy),&base,&width,&foo,&bar);
+     d->bpl  = width * d->bpp/8;
+     d->base = base;
+ #else
+Index: xdtv-2.3.2-sa/src/xscreensaver.c
+===================================================================
+--- xdtv-2.3.2-sa.orig/src/xscreensaver.c
++++ xdtv-2.3.2-sa/src/xscreensaver.c
+@@ -124,7 +124,7 @@ find_screensaver_window (Display *dpy, c
+                                    XA_SCREENSAVER_VERSION,
+                                    0, 200, False, XA_STRING,
+                                    &type, &format, &nitems, &bytesafter,
+-                                   (unsigned char **) &v);
++                                   &v);
+       XSync (dpy, False);
+       XSetErrorHandler (old_handler);
+       old_handler = 0;
+@@ -227,7 +227,7 @@ send_xscreensaver_command (Display *dpy,
+ 				  XA_SCREENSAVER_STATUS,
+ 				  0, 999, False, XA_INTEGER,
+ 				  &type, &format, &nitems, &bytesafter,
+-				  (unsigned char **) &data)
++				  &data)
+ 	      == Success
+ 	      && type
+ 	      && data)
+@@ -419,7 +419,7 @@ xscreensaver_command_response (Display *
+ 					0, 1024, True,
+ 					AnyPropertyType,
+ 					&type, &format, &nitems, &bytesafter,
+-					(unsigned char **) &msg);
++					&msg);
+ 	      XSync (dpy, False);
+               XSetErrorHandler (old_handler);
+               old_handler = 0;
+@@ -532,7 +532,7 @@ server_xscreensaver_version (Display *dp
+       char *v = 0;
+       XGetWindowProperty (dpy, window, XA_SCREENSAVER_VERSION, 0, 1,
+ 			  False, XA_STRING, &type, &format, &nitems,
+-			  &bytesafter, (unsigned char **) &v);
++			  &bytesafter, &v);
+       if (v)
+ 	{
+ 	  *version_ret = strdup (v);
+@@ -548,7 +548,7 @@ server_xscreensaver_version (Display *dp
+ 
+       XGetWindowProperty (dpy, window, XA_SCREENSAVER_ID, 0, 512,
+ 			  False, XA_STRING, &type, &format, &nitems,
+-			  &bytesafter, (unsigned char **) &id);
++			  &bytesafter, &id);
+       if (id && *id)
+ 	{
+ 	  const char *old_tag = " on host ";
