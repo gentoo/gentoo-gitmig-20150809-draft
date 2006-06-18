@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r3.ebuild,v 1.12 2006/04/11 20:13:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r3.ebuild,v 1.13 2006/06/18 10:04:23 grobian Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install install.man || die
+	emake DESTDIR="${D}" install install.man || die
 
 	if use perl ; then
 		perl tcsh.man2html || die
