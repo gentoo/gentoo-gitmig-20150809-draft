@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.20-r1.ebuild,v 1.1 2006/06/18 16:55:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.20-r1.ebuild,v 1.2 2006/06/18 16:59:22 swegener Exp $
 
 inherit multilib eutils autotools
 
@@ -88,7 +88,7 @@ pkg_postinst() {
 	ewarn
 	ewarn "ATTENTION: The config files have moved from /etc to /etc/powerdns!"
 	ewarn
-	ewarn "ATTENTION: The recursor component has been split out to net-dns(pdns-recursor!"
+	ewarn "ATTENTION: The recursor component has been split out to net-dns/pdns-recursor!"
 	ewarn
 	einfo
 	einfo "pdns now provides multiple instances support. You can create more instances"
