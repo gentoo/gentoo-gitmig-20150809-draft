@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-0.10.ebuild,v 1.1 2006/06/18 17:43:57 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-0.10.ebuild,v 1.2 2006/06/18 18:30:18 brix Exp $
 
 MY_P=${P/gimp-help/gimp-help-2}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="GNU Image Manipulation Program help files"
 HOMEPAGE="http://docs.gimp.org/"
-SRC_URI="ftp://ftp.gimp.org/pub/gimp/help/${MY_P}.tar.gz"
+SRC_URI="mirror://gimp/help/${MY_P}.tar.gz"
 
 LICENSE="FDL-1.2"
 SLOT="2"
