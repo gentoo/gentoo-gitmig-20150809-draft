@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/eselect-lapack
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/ChangeLog,v 1.1 2006/06/18 21:06:09 spyderous Exp $
+
+*eselect-lapack-0.1 (18 Jun 2006)
+
+  18 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/lapack.eselect-0.1, +files/lapack.eselect.5, +metadata.xml,
+  +eselect-lapack-0.1.ebuild:
+  New eselect module for switching LAPACK implementations.
+
