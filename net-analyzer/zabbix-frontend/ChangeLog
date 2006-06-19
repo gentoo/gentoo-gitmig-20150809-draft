@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/zabbix-frontend
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-frontend/ChangeLog,v 1.4 2006/06/06 14:23:48 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-frontend/ChangeLog,v 1.5 2006/06/19 23:41:17 wschlich Exp $
+
+  19 Jun 2006; Wolfram Schlich <wschlich@gentoo.org>
+  files/postinstall-en-1.1.txt:
+  fix postinstall textfile
 
   06 Jun 2006; Wolfram Schlich <wschlich@gentoo.org> metadata.xml:
   update metadata.xml

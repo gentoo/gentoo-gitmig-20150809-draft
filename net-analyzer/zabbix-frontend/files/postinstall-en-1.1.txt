@@ -1,4 +1,4 @@
-Change these values in ${VHOST_ROOT}/${PN}/include/db.inc.php:
+Change these values in ${MY_HTDOCSDIR}/include/db.inc.php:
 
 	$DB_TYPE
 	$DB_SERVER
