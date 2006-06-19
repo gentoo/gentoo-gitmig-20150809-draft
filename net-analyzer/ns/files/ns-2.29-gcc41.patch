@@ -1,0 +1,113 @@
+--- sctp/sctp.h.orig	2006-06-16 16:41:37.000000000 -0400
++++ sctp/sctp.h	2006-06-16 16:42:04.000000000 -0400
+@@ -702,7 +702,7 @@
+ 
+   /* debugging functions
+    */
+-  void SctpAgent::DumpSendBuffer();
++  void DumpSendBuffer();
+ 
+   /* sctp association state variable
+    */
+--- ./mobile/god.h.orig	2006-06-16 16:43:19.000000000 -0400
++++ ./mobile/god.h	2006-06-16 16:43:41.000000000 -0400
+@@ -85,20 +85,20 @@
+ 		return sqrt(X*X + Y*Y + Z*Z);
+ 	}
+ 
+-	inline void vector::operator=(const vector a) {
++	inline void operator=(const vector a) {
+ 		X = a.X;
+ 		Y = a.Y;
+ 		Z = a.Z;
+ 	}
+-	inline void vector::operator+=(const vector a) {
++	inline void operator+=(const vector a) {
+ 		X += a.X;
+ 		Y += a.Y;
+ 		Z += a.Z;
+ 	}
+-	inline int vector::operator==(const vector a) {
++	inline int operator==(const vector a) {
+ 		return (X == a.X && Y == a.Y && Z == a.Z);
+ 	}
+-	inline int vector::operator!=(const vector a) {
++	inline int operator!=(const vector a) {
+ 		return (X != a.X || Y != a.Y || Z != a.Z);
+ 	}
+ 	inline vector operator-(const vector a) {
+--- dsr/dsragent.h.orig	2006-06-16 17:04:40.000000000 -0400
++++ dsr/dsragent.h	2006-06-16 17:05:47.000000000 -0400
+@@ -284,4 +284,7 @@
+ 	static DSRAgent_List agthead;
+ };
+ 
++void XmitFlowFailureCallback(Packet *pkt, void *data);
++void XmitFailureCallback(Packet *pkt, void *data);
++
+ #endif // _DSRAgent_h
+--- diffusion/diffusion.h.orig	2006-06-16 17:08:27.000000000 -0400
++++ diffusion/diffusion.h	2006-06-16 17:08:45.000000000 -0400
+@@ -208,6 +208,8 @@
+   friend class SendBufTimer;
+ };
+ 
++void XmitFailedCallback(Packet *pkt, void *data);
++
+ #endif
+ 
+ 
+--- diffusion/omni_mcast.h.orig	2006-06-16 17:10:46.000000000 -0400
++++ diffusion/omni_mcast.h	2006-06-16 17:11:00.000000000 -0400
+@@ -225,6 +225,7 @@
+ 
+ };
+ 
++void OmniMcastXmitFailedCallback(Packet *pkt, void *data);
+ 
+ 
+ #endif
+--- tcp/tcp-sack-rh.cc.orig	2006-06-16 17:11:33.000000000 -0400
++++ tcp/tcp-sack-rh.cc	2006-06-16 17:11:45.000000000 -0400
+@@ -65,7 +65,7 @@
+ 	virtual void estadjust();
+ 	virtual void rhclear();
+ 	virtual void computefack();
+-	virtual void SackRHTcpAgent::newack(Packet* pkt);
++	virtual void newack(Packet* pkt);
+  protected:
+ 	int fack_;	          /* the FACK state variable  */
+ 	int retran_data_;         /* the number of retransmitted packets in the pipe  */
+--- pgm/pgm-agent.cc.orig	2006-06-16 17:12:44.000000000 -0400
++++ pgm/pgm-agent.cc	2006-06-16 17:12:56.000000000 -0400
+@@ -304,7 +304,7 @@
+ 
+   void print_stats();
+ 
+-  void PgmAgent::trace_event(char *evType, double evTime);
++  void trace_event(char *evType, double evTime);
+ 
+ #ifdef PGM_DEBUG
+   void display_packet(Packet *pkt);
+--- pgm/pgm-sender.cc.orig	2006-06-16 17:13:32.000000000 -0400
++++ pgm/pgm-sender.cc	2006-06-16 17:13:41.000000000 -0400
+@@ -186,7 +186,7 @@
+ 
+   void display_packet(Packet *pkt); // For debugging.
+ 
+-  void PgmSender::trace_event(char *evType, nsaddr_t daddr, double evTime); 
++  void trace_event(char *evType, nsaddr_t daddr, double evTime); 
+ 
+   EventTrace * et_; 	//Trace Object for custom Event Traces
+ 
+--- pgm/pgm-receiver.cc.orig	2006-06-16 17:14:37.000000000 -0400
++++ pgm/pgm-receiver.cc	2006-06-16 17:14:52.000000000 -0400
+@@ -183,7 +183,7 @@
+   void print_stats();
+   void display_packet(Packet *pkt); // For debugging.
+ 
+-  void PgmReceiver::trace_event(char *evType, double evTime);
++  void trace_event(char *evType, double evTime);
+ 
+   EventTrace * et_;  //Trace Object for Custom Event Trace
+ 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.29.ebuild,v 1.1 2006/05/15 20:50:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.29.ebuild,v 1.2 2006/06/19 15:12:54 chutzpah Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -31,7 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 #	epatch ${FILESDIR}/${P}-gentoo.diff
-#	epatch ${FILESDIR}/${P}-gcc41.patch
+	epatch "${FILESDIR}/${P}-gcc41.patch"
 	sed '/$(CC)/s!-g!$(CFLAGS)!g' ${S}/indep-utils/model-gen/Makefile
 }
 
