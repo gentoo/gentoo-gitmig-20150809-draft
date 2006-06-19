@@ -1,12 +1,12 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-1.0.ebuild,v 1.1 2006/06/04 22:08:57 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-1.0.ebuild,v 1.2 2006/06/19 20:19:57 yvasilev Exp $
 
 DESCRIPTION="Meta package for the Matchbox desktop, a light weight desktop environment designed for use on PDA computers"
 HOMEPAGE="http://projects.o-hand.com/matchbox/"
 LICENSE="as-is"
 SLOT="0"
-IUSE="minimal xine"
+IUSE="minimal"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
@@ -24,6 +24,7 @@ RDEPEND="x11-wm/matchbox-common
 		x11-plugins/matchbox-applet-volume )"
 
 # Alpha quality plug-ins:
+#IUSE="$IUSE xine"
 #		x11-plugins/matchbox-desktop-image-browser  
 #		xine? ( x11-plugins/matchbox-desktop-xine ) )"
 
