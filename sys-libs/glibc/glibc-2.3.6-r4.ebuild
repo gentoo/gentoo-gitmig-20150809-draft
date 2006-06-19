@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.10 2006/06/18 22:14:43 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.11 2006/06/19 01:36:47 kumba Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -27,7 +27,7 @@ GLIBC_MANPAGE_VERSION="2.3.6-1"
 GLIBC_INFOPAGE_VERSION="2.3.6"
 
 # Gentoo patchset
-PATCH_VER="1.13"
+PATCH_VER="1.14"
 
 # Fedora addons (like c_stubs) ... sniped from RHEL's glibc-2.4-4.src.rpm
 # http://download.fedora.redhat.com/pub/fedora/linux/core/
