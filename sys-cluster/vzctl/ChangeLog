@@ -1,6 +1,18 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.24 2006/04/24 14:53:35 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.25 2006/06/19 20:29:50 phreak Exp $
+
+*vzctl-3.0.10 (19 Jun 2006)
+
+  19 Jun 2006; Christian Heim <phreak@gentoo.org>
+  +files/vzctl-3.0.10-Makefile.patch, +files/vzctl-3.0.10-as-needed.patch,
+  +vzctl-3.0.10.ebuild:
+  Version bump, the OpenVZ finally decided to use a sane version scheme,
+  reworked the ebuild (fixed the quoting on user-influence-able variables) and
+  also added a patch to remove all those nifty unneeded things from the
+  Makefile. Another addition is the --as-needed patch from Igor Sukhih
+  <igor@openvz.org>. For a detailed ChangeLog see
+  http://openvz.org/news/updates/vzctl-3.0.10-1!
 
 *vzctl-3.0.0.8 (24 Apr 2006)
 

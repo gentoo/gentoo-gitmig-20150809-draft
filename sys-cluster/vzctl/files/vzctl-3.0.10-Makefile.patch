@@ -1,0 +1,59 @@
+Index: vzctl-3.0.10/src/Makefile
+===================================================================
+--- vzctl-3.0.10.orig/src/Makefile
++++ vzctl-3.0.10/src/Makefile
+@@ -23,7 +23,6 @@
+   VPSCONFDIR = /etc/vz/conf
+ LIBSCRIPTSDIR = /usr/lib/vzctl/scripts/
+   SCRIPTSDIR = /usr/share/vzctl/scripts
+-NETSCRIPTDIR = /etc/sysconfig/network-scripts
+     CRONDDIR = /etc/cron.d
+     INITDDIR = /etc/init.d
+        VZDIR = /vz
+@@ -70,10 +69,8 @@ LIBSCRIPTS = vps-create vps-postcreate v
+ PROGS = vzctl vzlist arpsend vzsplit vzcfgvalidate vzmemcheck vzcalc
+ LIBS = $(LIB_vzctl) $(LIB_simfs)
+ 
+-INITSCRIPTS = vz
+ CRONSCRIPTS = vpsreboot vpsnetclean
+ SCRIPTS = vpsreboot vpsnetclean
+-NETSCRIPTS = ifcfg-venet0 ifdown-venet ifup-venet
+ VE0CONFIG = 0.conf
+ VECONFIG = ve-light.conf-sample ve-vps.basic.conf-sample 
+ VECONFIG_IA64 = ve-light.conf-sample ve-vps.basic.conf-sample
+@@ -155,13 +152,6 @@ inst-scripts:
+ 	for file in $(SCRIPTS); do \
+ 		$(INSTALL) -m755 ../etc/$$file $(DESTDIR)$(SCRIPTSDIR)/$$file; \
+ 	done
+-inst-netscripts:
+-ifneq "" "$(NETSCRIPTS)"
+-	$(INSTALL) -d $(DESTDIR)$(NETSCRIPTDIR)
+-	for file in $(NETSCRIPTS); do \
+-		$(INSTALL) -m 755 ../etc/$$file $(DESTDIR)$(NETSCRIPTDIR)/$$file; \
+-	done
+-endif
+ inst-configs:
+ 	$(INSTALL) -m 644 ../etc/vz.conf $(DESTDIR)$(GLBCONFIG)
+ ifeq ($(ARCH),ia64)
+@@ -182,11 +172,6 @@ else
+ 	$(INSTALL) -m 644 ../etc/$(VE0CONFIG) $(DESTDIR)$(VPSCONFDIR)/$(VE0CONFIG)
+ endif
+ endif
+-inst-initd:
+-	for file in $(INITSCRIPTS); do \
+-		$(INSTALL) -m 755 ../etc/init.d/$$file $(DESTDIR)$(INITDDIR)/$$file; \
+-	done
+-
+ inst-cron:
+ 	for file in $(CRONSCRIPTS); do \
+ 		$(INSTALL) -m 644 ../etc/cron.d/$$file $(DESTDIR)$(CRONDDIR)/$$file; \
+@@ -208,8 +193,7 @@ inst-dirs:
+ 	$(INSTALL) -d $(DESTDIR)$(IPSTATEDIR)
+ 	$(INSTALL) -m 644 ../etc/logrotate.d/vzctl $(DESTDIR)$(LOGRDIR)/vzctl
+ 
+-install: $(PROGS) inst-dirs install-lib inst-sbin inst-scripts \
+-	inst-netscripts inst-configs inst-initd inst-cron 
++install: $(PROGS) inst-dirs install-lib inst-sbin inst-configs inst-cron
+ clean:
+ 	rm -f *.o lib/*.lo $(PROGS) $(LIB_vzctl) $(LIB_fs) $(LIB_simfs) .depend
+ 
