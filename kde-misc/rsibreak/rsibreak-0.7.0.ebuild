@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.7.0.ebuild,v 1.1 2006/06/19 20:06:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.7.0.ebuild,v 1.2 2006/06/19 22:23:09 flameeyes Exp $
 
 USE_KEG_PACKAGING="yes"
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.rsibreak.org/"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
