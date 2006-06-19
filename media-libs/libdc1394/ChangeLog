@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.22 2006/06/08 20:02:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.23 2006/06/19 17:31:04 seemant Exp $
+
+*libdc1394-2.0.0_pre7-r1 (19 Jun 2006)
+
+  19 Jun 2006; Seemant Kulleen <seemant@gentoo.org>
+  +files/libdc1394-2.0.0_pre7-config.h-include-fix.patch,
+  +libdc1394-2.0.0_pre7-r1.ebuild:
+  patch to fix the location of the include directive for config.h. submitted
+  upstream as well
 
 *libdc1394-2.0.0_pre7 (08 Jun 2006)
 
