@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cc-mode/cc-mode-5.31.3.ebuild,v 1.1 2006/06/18 19:08:51 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cc-mode/cc-mode-5.31.3.ebuild,v 1.2 2006/06/19 03:23:33 mkennedy Exp $
 
 inherit elisp
 
 IUSE=""
 
-DESCRIPTION="An Emacs mode for editing and C and other languages with similar syntax."
+DESCRIPTION="An Emacs mode for editing C and other languages with similar syntax."
 HOMEPAGE="http://cc-mode.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
