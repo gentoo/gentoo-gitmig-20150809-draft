@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/darkplaces
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/ChangeLog,v 1.1 2006/06/19 20:53:12 wolf31o2 Exp $
+
+*darkplaces-20060616_beta1 (19 Jun 2006)
+
+  19 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +darkplaces-20060616_beta1.ebuild:
+  Initial import. Ebuild by Paul Bredbury <brebs@sent.com>. Closing bug
+  #106344.
+
