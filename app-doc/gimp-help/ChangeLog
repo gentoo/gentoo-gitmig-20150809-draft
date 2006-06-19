@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.4 2006/06/19 01:29:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.5 2006/06/19 19:00:51 squinky86 Exp $
+
+  19 Jun 2006; Jon Hood <squinky86@gentoo.org> gimp-help-0.10.ebuild:
+  Add ~amd64, #137192.
 
   19 Jun 2006; Luca Barbato <lu_zero@gentoo.org> gimp-help-0.10.ebuild:
   Marked ~ppc
