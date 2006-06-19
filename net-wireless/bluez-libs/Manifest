@@ -1,24 +1,32 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c9068e348c28873324d2ce46054fc7d3 ChangeLog 8454
-MD5 7bf99a228717805d212ebf45e536c534 bluez-libs-2.19.ebuild 568
-MD5 ce1932c628f7ce277a37eafe3237c327 bluez-libs-2.21.ebuild 627
+DIST bluez-libs-2.22.tar.gz 285122
+DIST bluez-libs-2.24.tar.gz 285427
+DIST bluez-libs-2.25.tar.gz 291439 RMD160 34bd71a974cd8e2c1df1c5f71d271f8ee939c1e4 SHA1 b7bce6eb431635db61fca969442ab5c355890352 SHA256 0acce2bac854588d2597cbcdb60a6ec4de5fe3e16d224bdfab8f2dd96ad242fb
+EBUILD bluez-libs-2.22.ebuild 624 RMD160 460822fa0c1f21a80ac5b032a5f6aebbadd3e2d9 SHA1 854d99467268815c2152e7b9a4e6c63c1f51195e SHA256 04645a4213261951f26928b2bf0ba3799e1602b0d7b25d7ed24299f4c4ff905f
 MD5 1151af5976eb79939fb7b78d014abb47 bluez-libs-2.22.ebuild 624
+RMD160 460822fa0c1f21a80ac5b032a5f6aebbadd3e2d9 bluez-libs-2.22.ebuild 624
+SHA256 04645a4213261951f26928b2bf0ba3799e1602b0d7b25d7ed24299f4c4ff905f bluez-libs-2.22.ebuild 624
+EBUILD bluez-libs-2.24.ebuild 625 RMD160 d96a0626637e1dcf1ad3b41aa82c3b9b33abc8fe SHA1 ca5d2fe3882b0b09ba1de9adc34c1cff0bea9e96 SHA256 68103b2a2343a6b33af7113f8ae5da1945bc2e54cda631d008f8c919a651c652
 MD5 7805d27b5e0d09003474a86d493f2c37 bluez-libs-2.24.ebuild 625
+RMD160 d96a0626637e1dcf1ad3b41aa82c3b9b33abc8fe bluez-libs-2.24.ebuild 625
+SHA256 68103b2a2343a6b33af7113f8ae5da1945bc2e54cda631d008f8c919a651c652 bluez-libs-2.24.ebuild 625
+EBUILD bluez-libs-2.25.ebuild 630 RMD160 d1428fdd8e56e7151210fe679f4a4de7afa3af7f SHA1 ab972010fdf9aa71f49931c4ee2c344efdf26a7a SHA256 61cf8b037e94ce9b35b8f617f2c9ce09ed38e5fd02faae1525d8bd5a4ab84fa8
 MD5 19198afd86ddebf03816160bfd592b2e bluez-libs-2.25.ebuild 630
-MD5 d8ae1c76ebaed0d5c69e90b4aade8624 files/2.16-bluetooth.h.patch 269
-MD5 de3e6042ceea4fbca926d59617ffdb36 files/bluez-libs-2.10-handsfree.patch 1030
-MD5 2179cb867e0877152871bb390fa4a772 files/digest-bluez-libs-2.19 67
-MD5 b6bfa99265bf1f4e626ff183c1532cdd files/digest-bluez-libs-2.21 67
-MD5 73903e2d7b846d67e8d966cf6bfa1d0a files/digest-bluez-libs-2.22 67
-MD5 ea03fa9f1953d9866d2b134a8dab34bf files/digest-bluez-libs-2.24 67
-MD5 36a4cfdd84cdcc34a5206e54f4f5f6c7 files/digest-bluez-libs-2.25 67
+RMD160 d1428fdd8e56e7151210fe679f4a4de7afa3af7f bluez-libs-2.25.ebuild 630
+SHA256 61cf8b037e94ce9b35b8f617f2c9ce09ed38e5fd02faae1525d8bd5a4ab84fa8 bluez-libs-2.25.ebuild 630
+MISC ChangeLog 8667 RMD160 917060b1a4927cdfc72bc464ec73d903a0108d32 SHA1 c0266c7b9f214e8ddff6373fe5dff35630a573b8 SHA256 138d40a2181af0ea47ae2bc2882eee6ee330a901e5db716f71b8dcc7184f9600
+MD5 f58236e38a57badce994d839cd96f70e ChangeLog 8667
+RMD160 917060b1a4927cdfc72bc464ec73d903a0108d32 ChangeLog 8667
+SHA256 138d40a2181af0ea47ae2bc2882eee6ee330a901e5db716f71b8dcc7184f9600 ChangeLog 8667
+MISC metadata.xml 235 RMD160 fb83fc852c808450a2cc256fa9b9c7c784b884e2 SHA1 4d6be75db06dc110a472d910e8edeb03ba99e4f9 SHA256 492cfc1c578fed368c8ae0ed98fbf455f9a5fa097235004b6cf3a3981d6fa983
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEF1KgKRy60XGEcJIRAv90AKCW5NCQKYpIQZnmKYe6+MzlJSoTbgCfReny
-4EAsi8lXq7Aq8HGEVqou/Hs=
-=rNQn
------END PGP SIGNATURE-----
+RMD160 fb83fc852c808450a2cc256fa9b9c7c784b884e2 metadata.xml 235
+SHA256 492cfc1c578fed368c8ae0ed98fbf455f9a5fa097235004b6cf3a3981d6fa983 metadata.xml 235
+MD5 73903e2d7b846d67e8d966cf6bfa1d0a files/digest-bluez-libs-2.22 67
+RMD160 128f5f1e65b35df0823a11fa988f3d07b9a799c7 files/digest-bluez-libs-2.22 67
+SHA256 553365bf854d0f57af88a2beedc667e5a2e6fe03854acae92f5c74727edba4b5 files/digest-bluez-libs-2.22 67
+MD5 ea03fa9f1953d9866d2b134a8dab34bf files/digest-bluez-libs-2.24 67
+RMD160 66e4692f5b26b0741c59592100f08a1734ea0119 files/digest-bluez-libs-2.24 67
+SHA256 5d20ddc808965a0be276b4a2063dd6a8ff17f5a9a8a21c5d7eca5551165f597a files/digest-bluez-libs-2.24 67
+MD5 dc2df730db453cf4a272587285941257 files/digest-bluez-libs-2.25 247
+RMD160 b798da53a5ba1e66a4bb446befcc539169e71ce5 files/digest-bluez-libs-2.25 247
+SHA256 7c389662d2282fc7de0bf977db8aa7d3fafafd12cd8d28bc86cb7a1cc9c81f2f files/digest-bluez-libs-2.25 247
