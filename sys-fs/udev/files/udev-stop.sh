@@ -51,8 +51,8 @@ main() {
 		if [[ -s ${devices_totar} ]]; then
 			# we dont want to descend into mounted filesystems (e.g. devpts)
 			# looking up username may involve NIS/network, and net may be down
-			try tar --one-file-system --numeric-owner -jcpf "${device_tarball}" -T "${devices_totar}"
-			try mv -f "${device_tarball}" /lib/udev-state/devices.tar.bz2
+			tar --one-file-system --numeric-owner -jcpf "${device_tarball}" -T "${devices_totar}"
+			mv -f "${device_tarball}" /lib/udev-state/devices.tar.bz2
 		else
 			rm -f /lib/udev-state/devices.tar.bz2
 		fi
