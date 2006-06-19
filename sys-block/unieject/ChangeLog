@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/unieject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.26 2006/06/16 12:39:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.27 2006/06/19 22:22:19 flameeyes Exp $
+
+  19 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> unieject-5.2-r1.ebuild,
+  unieject-5.3.ebuild:
+  Add missing eutils inherit, thanks to Alberto Zennaro for letting me know.
 
 *unieject-5.3 (16 Jun 2006)
 
