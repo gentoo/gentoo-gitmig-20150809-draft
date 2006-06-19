@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.6 2006/06/18 19:16:21 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.7 2006/06/19 01:24:05 lu_zero Exp $
+
+  19 Jun 2006; Luca Barbato <lu_zero@gentoo.org> seamonkey-1.0.2.ebuild:
+  Marked ppc as per bug #137198
 
 *seamonkey-1.0.2 (18 Jun 2006)
 
