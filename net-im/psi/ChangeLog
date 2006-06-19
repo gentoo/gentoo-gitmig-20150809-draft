@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.90 2006/06/18 18:52:19 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.91 2006/06/19 11:55:31 fmccor Exp $
+
+  19 Jun 2006; Ferris McCormick <fmccor@gentoo.org> psi-0.10.ebuild:
+  Stable on sparc.  Removing sparc from Bug #137181 list.
 
   18 Jun 2006; Andrej Kacian <ticho@gentoo.org> psi-0.10.ebuild:
   Stable on x86. Bug #137181.
