@@ -1,6 +1,15 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.5 2006/05/19 22:26:16 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.6 2006/06/19 08:55:26 zzam Exp $
+
+*noad-0.6.0-r3 (19 Jun 2006)
+
+  19 Jun 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/0.6.0-r3/noad-reccmd, +files/noad-0.6.0-as-needed.diff,
+  +files/noad-0.6.0-cflags.diff, +files/0.6.0-r3/record-50-noad.sh,
+  +files/0.6.0-r3/confd_vdraddon.noad, +files/0.6.0-r3/reccmds.noad.conf,
+  +noad-0.6.0-r3.ebuild:
+  Added patches for as-needed, save CXXFLAGS in configure, new script-set.
 
   19 May 2006; Joerg Bornkessel <hd_brummy@gentoo.org> noad-0.6.0-r2.ebuild:
   typo fixed; set stabel on x86
