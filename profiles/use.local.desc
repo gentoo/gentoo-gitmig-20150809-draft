@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1960 2006/06/19 21:20:05 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1961 2006/06/19 21:25:19 wolf31o2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -473,6 +473,11 @@ games-emulation/mupen64:asm - Enable use of asm routines to improve performance
 games-emulation/xmame:net - Add network support
 games-emulation/xmess:net - Add network support
 games-engines/exult:timidity - Add sound support (timidity)
+games-fps/darkplaces:cdsound - Enables using CD audio in the engine
+games-fps/darkplaces:demo - Uses the demo data from quake1 (quake1-demodata)
+games-fps/darkplaces:dpmod - Sets up the darkplaces mod from icculus
+games-fps/darkplaces:lights - Install and setup the updated light maps
+games-fps/darkplaces:textures - Install and setup the updated textures
 games-fps/doom3:roe - Adds support for the Resurrection of Evil expansion
 games-fps/quake2-icculus:noqmax - Do not build the pretty version (quake max)
 games-fps/quake2-icculus:rogue - Build support for the 'Ground Zero' Mission Pack (rogue)
