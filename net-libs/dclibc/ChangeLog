@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/dclibc
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/dclibc/ChangeLog,v 1.1 2006/06/19 06:49:43 squinky86 Exp $
+
+*dclibc-0.1.1_beta1 (19 Jun 2006)
+
+  19 Jun 2006; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +dclibc-0.1.1_beta1.ebuild:
+  Initial import in preparation of #135273 (gtkdc). This library provides
+  functionality to create a direct connect client.
+
