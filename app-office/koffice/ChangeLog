@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.167 2006/05/28 21:12:37 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.168 2006/06/19 03:58:05 tcort Exp $
+
+  19 Jun 2006; Thomas Cort <tcort@gentoo.org> koffice-1.5.1-r1.ebuild:
+  Added ~alpha keyword wrt Bug #122204.
 
 *koffice-1.5.1-r1 (28 May 2006)
 
