@@ -1,0 +1,304 @@
+diff -uNr -x '*.orig' freetype-2.1.10/include/freetype/fterrdef.h freetype-2.1.10.patched/include/freetype/fterrdef.h
+--- freetype-2.1.10/include/freetype/fterrdef.h	2004-02-12 09:33:20.000000000 +0100
++++ freetype-2.1.10.patched/include/freetype/fterrdef.h	2006-06-19 19:16:07.000000000 +0200
+@@ -52,6 +52,8 @@
+                 "broken table" )
+   FT_ERRORDEF_( Invalid_Offset,                              0x09, \
+                 "broken offset within table" )
++  FT_ERRORDEF_( Array_Too_Large,                             0x0A, \
++                "array allocation size too large" )
+ 
+   /* glyph/character errors */
+ 
+@@ -226,6 +228,8 @@
+                 "`ENCODING' field missing" )
+   FT_ERRORDEF_( Missing_Bbx_Field,                           0xB6, \
+                 "`BBX' field missing" )
++  FT_ERRORDEF_( Bbx_Too_Big,                                 0xB7, \
++                "`BBX' too big" )
+ 
+ 
+ /* END */
+diff -uNr -x '*.orig' freetype-2.1.10/src/base/ftmac.c freetype-2.1.10.patched/src/base/ftmac.c
+--- freetype-2.1.10/src/base/ftmac.c	2004-08-28 10:02:46.000000000 +0200
++++ freetype-2.1.10.patched/src/base/ftmac.c	2006-06-19 19:16:07.000000000 +0200
+@@ -430,6 +430,7 @@
+     short          res_id;
+     unsigned char  *buffer, *p, *size_p = NULL;
+     FT_ULong       total_size = 0;
++    FT_ULong       old_total_size = 0;
+     FT_ULong       post_size, pfb_chunk_size;
+     Handle         post_data;
+     char           code, last_code;
+@@ -460,6 +461,15 @@
+ 
+       total_size += GetHandleSize( post_data ) - 2;
+       last_code = code;
++
++      /* detect integer overflows */
++      if ( total_size < old_total_size )
++      {
++        error = FT_Err_Array_Too_Large;
++        goto Error;
++      }
++
++      old_total_size = total_size;
+     }
+ 
+     if ( FT_ALLOC( buffer, (FT_Long)total_size ) )
+diff -uNr -x '*.orig' freetype-2.1.10/src/base/ftstream.c freetype-2.1.10.patched/src/base/ftstream.c
+--- freetype-2.1.10/src/base/ftstream.c	2005-03-16 02:15:07.000000000 +0100
++++ freetype-2.1.10.patched/src/base/ftstream.c	2006-06-19 19:16:07.000000000 +0200
+@@ -213,7 +213,12 @@
+       FT_Memory  memory = stream->memory;
+ 
+ 
++#ifdef FT_DEBUG_MEMORY
++      ft_mem_free( memory, *pbytes );
++      *pbytes = NULL;
++#else
+       FT_FREE( *pbytes );
++#endif
+     }
+     *pbytes = 0;
+   }
+@@ -299,7 +304,12 @@
+       FT_Memory  memory = stream->memory;
+ 
+ 
++#ifdef FT_DEBUG_MEMORY
++      ft_mem_free( memory, stream->base );
++      stream->base = NULL;
++#else
+       FT_FREE( stream->base );
++#endif
+     }
+     stream->cursor = 0;
+     stream->limit  = 0;
+diff -uNr -x '*.orig' freetype-2.1.10/src/base/ftutil.c freetype-2.1.10.patched/src/base/ftutil.c
+--- freetype-2.1.10/src/base/ftutil.c	2005-03-03 23:59:06.000000000 +0100
++++ freetype-2.1.10.patched/src/base/ftutil.c	2006-06-19 19:15:53.000000000 +0200
+@@ -52,6 +52,8 @@
+             FT_Long    size,
+             void*     *P )
+   {
++    FT_Error  error = FT_Err_Ok;
++
+     FT_ASSERT( P != 0 );
+ 
+     if ( size > 0 )
+@@ -68,13 +70,17 @@
+       FT_MEM_ZERO( *P, size );
+     }
+     else
++    {
+       *P = NULL;
++      if ( size < 0 )
++	error = FT_Err_Invalid_Argument;
++    }
+ 
+     FT_TRACE7(( "FT_Alloc:" ));
+     FT_TRACE7(( " size = %ld, block = 0x%08p, ref = 0x%08p\n",
+                 size, *P, P ));
+ 
+-    return FT_Err_Ok;
++    return error;
+   }
+ 
+ 
+@@ -128,12 +134,15 @@
+       return FT_Alloc( memory, size, P );
+ 
+     /* if the new block if zero-sized, clear the current one */
+-    if ( size <= 0 )
++    if ( size == 0 )
+     {
+       FT_Free( memory, P );
+       return FT_Err_Ok;
+     }
+ 
++    if ( size < 0 || current < 0 )
++      return FT_Err_Invalid_Argument;
++
+     Q = memory->realloc( memory, current, size, *P );
+     if ( !Q )
+       goto Fail;
+diff -uNr -x '*.orig' freetype-2.1.10/src/bdf/bdflib.c freetype-2.1.10.patched/src/bdf/bdflib.c
+--- freetype-2.1.10/src/bdf/bdflib.c	2005-05-21 19:19:52.000000000 +0200
++++ freetype-2.1.10.patched/src/bdf/bdflib.c	2006-06-19 19:16:01.000000000 +0200
+@@ -1092,6 +1092,7 @@
+ #define ERRMSG1  "[line %ld] Missing \"%s\" line.\n"
+ #define ERRMSG2  "[line %ld] Font header corrupted or missing fields.\n"
+ #define ERRMSG3  "[line %ld] Font glyphs corrupted or missing fields.\n"
++#define ERRMSG4  "[line %ld] BBX too big.\n"
+ 
+ 
+   static FT_Error
+@@ -1561,6 +1562,14 @@
+ 
+       p->glyph_enc = _bdf_atol( p->list.field[1], 0, 10 );
+ 
++      /* Check that the encoding is in the range [0,65536] because        */
++      /* otherwise p->have (a bitmap with static size) overflows.         */
++      if ( p->glyph_enc >= sizeof(p->have)*8 )
++      {
++        error = BDF_Err_Invalid_File_Format;
++        goto Exit;
++      }
++
+       /* Check to see whether this encoding has already been encountered. */
+       /* If it has then change it to unencoded so it gets added if        */
+       /* indicated.                                                       */
+@@ -1805,6 +1814,8 @@
+     /* And finally, gather up the bitmap. */
+     if ( ft_memcmp( line, "BITMAP", 6 ) == 0 )
+     {
++      unsigned long  bitmap_size;
++
+       if ( !( p->flags & _BDF_BBX ) )
+       {
+         /* Missing BBX field. */
+@@ -1815,7 +1826,16 @@
+ 
+       /* Allocate enough space for the bitmap. */
+       glyph->bpr   = ( glyph->bbx.width * p->font->bpp + 7 ) >> 3;
+-      glyph->bytes = (unsigned short)( glyph->bpr * glyph->bbx.height );
++
++      bitmap_size = glyph->bpr * glyph->bbx.height;
++      if ( bitmap_size > 0xFFFFU )
++      {
++        FT_ERROR(( "_bdf_parse_glyphs: " ERRMSG4, lineno ));
++        error = BDF_Err_Bbx_Too_Big;
++        goto Exit;
++      }
++      else
++        glyph->bytes = (unsigned short)bitmap_size;
+ 
+       if ( FT_NEW_ARRAY( glyph->bitmap, glyph->bytes ) )
+         goto Exit;
+diff -uNr -x '*.orig' freetype-2.1.10/src/cff/cffgload.c freetype-2.1.10.patched/src/cff/cffgload.c
+--- freetype-2.1.10/src/cff/cffgload.c	2005-04-18 06:53:05.000000000 +0200
++++ freetype-2.1.10.patched/src/cff/cffgload.c	2006-06-19 19:16:01.000000000 +0200
+@@ -2284,7 +2284,7 @@
+   FT_LOCAL_DEF( FT_Error )
+   cff_slot_load( CFF_GlyphSlot  glyph,
+                  CFF_Size       size,
+-                 FT_Int         glyph_index,
++                 FT_UInt        glyph_index,
+                  FT_Int32       load_flags )
+   {
+     FT_Error      error;
+diff -uNr -x '*.orig' freetype-2.1.10/src/cff/cffgload.h freetype-2.1.10.patched/src/cff/cffgload.h
+--- freetype-2.1.10/src/cff/cffgload.h	2004-05-13 23:59:17.000000000 +0200
++++ freetype-2.1.10.patched/src/cff/cffgload.h	2006-06-19 19:16:01.000000000 +0200
+@@ -196,7 +196,7 @@
+   FT_LOCAL( FT_Error )
+   cff_slot_load( CFF_GlyphSlot  glyph,
+                  CFF_Size       size,
+-                 FT_Int         glyph_index,
++                 FT_UInt        glyph_index,
+                  FT_Int32       load_flags );
+ 
+ 
+diff -uNr -x '*.orig' freetype-2.1.10/src/cff/cffload.c freetype-2.1.10.patched/src/cff/cffload.c
+--- freetype-2.1.10/src/cff/cffload.c	2005-05-06 07:49:46.000000000 +0200
++++ freetype-2.1.10.patched/src/cff/cffload.c	2006-06-19 19:15:46.000000000 +0200
+@@ -1235,7 +1235,7 @@
+       }
+ 
+       /* access element */
+-      if ( off1 )
++      if ( off1 && off2 > off1 )
+       {
+         *pbyte_len = off2 - off1;
+ 
+@@ -2011,7 +2011,7 @@
+ 
+     if ( error )
+       goto Exit;
+-
++ 
+     /* if it is a CID font, we stop there */
+     if ( top->cid_registry != 0xFFFFU )
+       goto Exit;
+diff -uNr -x '*.orig' freetype-2.1.10/src/pshinter/pshglob.c freetype-2.1.10.patched/src/pshinter/pshglob.c
+--- freetype-2.1.10/src/pshinter/pshglob.c	2004-04-02 09:13:53.000000000 +0200
++++ freetype-2.1.10.patched/src/pshinter/pshglob.c	2006-06-19 19:15:46.000000000 +0200
+@@ -150,7 +150,7 @@
+     FT_UNUSED( target );
+ 
+ 
+-    for ( ; read_count > 0; read_count -= 2 )
++    for ( ; read_count > 1; read_count -= 2 )
+     {
+       FT_Int         reference, delta;
+       FT_UInt        count;
+diff -uNr -x '*.orig' freetype-2.1.10/src/raster/ftrend1.c freetype-2.1.10.patched/src/raster/ftrend1.c
+--- freetype-2.1.10/src/raster/ftrend1.c	2005-05-11 17:01:49.000000000 +0200
++++ freetype-2.1.10.patched/src/raster/ftrend1.c	2006-06-19 19:16:07.000000000 +0200
+@@ -21,6 +21,7 @@
+ #include FT_OUTLINE_H
+ #include "ftrend1.h"
+ #include "ftraster.h"
++#include <limits.h>
+ 
+ #include "rasterrs.h"
+ 
+@@ -175,6 +176,9 @@
+     bitmap->rows  = height;
+     bitmap->pitch = pitch;
+ 
++    if ((FT_ULong)pitch > LONG_MAX/height)
++      goto Exit;
++
+     if ( FT_ALLOC( bitmap->buffer, (FT_ULong)pitch * height ) )
+       goto Exit;
+ 
+diff -uNr -x '*.orig' freetype-2.1.10/src/sfnt/ttcmap.c freetype-2.1.10.patched/src/sfnt/ttcmap.c
+--- freetype-2.1.10/src/sfnt/ttcmap.c	2005-05-11 16:37:40.000000000 +0200
++++ freetype-2.1.10.patched/src/sfnt/ttcmap.c	2006-06-19 19:16:01.000000000 +0200
+@@ -2144,9 +2144,7 @@
+       charmap.encoding    = FT_ENCODING_NONE;  /* will be filled later */
+       offset              = TT_NEXT_ULONG( p );
+ 
+-      if ( offset                     &&
+-           table + offset + 2 < limit &&
+-           table + offset >= table    )
++      if ( offset && offset <= face->cmap_size - 2 )
+       {
+         FT_Byte*                       cmap   = table + offset;
+         volatile FT_UInt               format = TT_PEEK_USHORT( cmap );
+diff -uNr -x '*.orig' freetype-2.1.10/src/sfnt/ttpost.c freetype-2.1.10.patched/src/sfnt/ttpost.c
+--- freetype-2.1.10/src/sfnt/ttpost.c	2003-10-29 22:43:51.000000000 +0100
++++ freetype-2.1.10.patched/src/sfnt/ttpost.c	2006-06-19 19:16:07.000000000 +0200
+@@ -292,7 +292,7 @@
+       goto Exit;
+     }
+ 
+-    if ( FT_ALLOC( offset_table, num_glyphs )       ||
++    if ( FT_NEW_ARRAY( offset_table, num_glyphs )   ||
+          FT_STREAM_READ( offset_table, num_glyphs ) )
+       goto Fail;
+ 
+diff -uNr -x '*.orig' freetype-2.1.10/src/winfonts/winfnt.c freetype-2.1.10.patched/src/winfonts/winfnt.c
+--- freetype-2.1.10/src/winfonts/winfnt.c	2004-06-15 16:13:10.000000000 +0200
++++ freetype-2.1.10.patched/src/winfonts/winfnt.c	2006-06-19 19:16:07.000000000 +0200
+@@ -27,6 +27,8 @@
+ #include FT_SERVICE_WINFNT_H
+ #include FT_SERVICE_XFREE86_NAME_H
+ 
++#include <limits.h>
++
+   /*************************************************************************/
+   /*                                                                       */
+   /* The macro FT_COMPONENT is used in trace mode.  It is an implicit      */
+@@ -633,6 +635,9 @@
+ 
+       /* note: since glyphs are stored in columns and not in rows we */
+       /*       can't use ft_glyphslot_set_bitmap                     */
++      if (pitch > LONG_MAX/bitmap->rows)
++	goto Exit;
++
+       if ( FT_ALLOC( bitmap->buffer, pitch * bitmap->rows ) )
+         goto Exit;
+ 

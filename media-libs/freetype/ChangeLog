@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.80 2006/06/19 17:10:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.81 2006/06/19 21:17:11 foser Exp $
+
+*freetype-2.1.10-r1 (19 Jun 2006)
+
+  19 Jun 2006; Marinus Schraal <foser@gentoo.org> freetype-2.1.10-r1.ebuild,
+  freetype-2.1.10-security_batch.patch, freetype-2.1.10-revert_pointer.patch,
+  freetype-2.1.10-fix_synth.patch :
+  Add patch to fix overflows (#124828)
+  Add patch to ensure compatability with <xorg-7 (#99089)
+  Add patch to fix artificial bold alignment (#127872)
 
 *freetype-2.2.1 (19 Jun 2006)
 

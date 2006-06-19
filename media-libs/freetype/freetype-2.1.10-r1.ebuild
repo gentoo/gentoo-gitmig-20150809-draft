@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.2.1.ebuild,v 1.2 2006/06/19 21:17:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.10-r1.ebuild,v 1.1 2006/06/19 21:17:11 foser Exp $
 
 inherit eutils flag-o-matic gnuconfig libtool
 
@@ -30,9 +30,18 @@ src_unpack() {
 
 	unpack ${A}
 
-	# disable BCI when distributing binaries (patent issues)
-	use bindist || epatch ${FILESDIR}/${PN}-2-enable_bci.patch
+	# fix internal header cast which gets used by pango (bad)
+	epatch ${FILESDIR}/${P}-internal_header.patch
+	# fix bunch of overflows etc. (#124828)
+	epatch ${FILESDIR}/${P}-security_batch.patch
+	# revert pointer
+	epatch ${FILESDIR}/${P}-revert_pointer.patch
+	# fix artificial bold bug (#127872)
+	cd ${S}/src/base
+	epatch ${FILESDIR}/${P}-fix_synth.patch
 
+	gnuconfig_update ${S}
+	elibtoolize
 	epunt_cxx
 
 }
@@ -42,7 +51,9 @@ src_compile() {
 	# https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=118021
 	append-flags "-fno-strict-aliasing"
 
-	econf `use_with zlib` || die
+	use bindist || append-flags -DTT_CONFIG_OPTION_BYTECODE_INTERPRETER
+
+	make setup CFG="--host=${CHOST} --prefix=/usr `use_with zlib` --libdir=/usr/$(get_libdir)" unix || die
 
 	emake || die
 
