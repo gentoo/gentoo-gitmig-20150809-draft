@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tn5250
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/ChangeLog,v 1.8 2006/03/19 22:21:09 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/ChangeLog,v 1.9 2006/06/19 14:43:16 ranger Exp $
+
+  19 Jun 2006; Brent Baude <ranger@gentoo.org> tn5250-0.16.5.ebuild:
+  stablizing tn5250-0.16.5 for ppc
 
   19 Mar 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   tn5250-0.16.5.ebuild:
