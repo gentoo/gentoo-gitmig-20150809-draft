@@ -1,0 +1,32 @@
+--- src/shell.cpp.orig	2006-06-19 15:33:54.000000000 -0400
++++ src/shell.cpp	2006-06-19 15:37:16.000000000 -0400
+@@ -643,10 +643,10 @@
+       }
+     else
+       {
+-        int x = int (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "x"));
+-        int y = int (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "y"));
+-        int w = int (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "w"));
+-        int h = int (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "h"));
++        int x = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "x"));
++        int y = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "y"));
++        int w = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "w"));
++        int h = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "h"));
+ 
+ 	gtk_window_resize (GTK_WINDOW (Bmp::w_playlist->window), w, h);
+ 
+@@ -1286,10 +1286,10 @@
+       }
+     else 
+       {
+-        x = int (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "x"));
+-        y = int (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "y"));
+-        w = int (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "w"));
+-        h = int (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "h"));
++        x = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "x"));
++        y = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "y"));
++        w = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "w"));
++        h = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (Bmp::w_playlist->window), "h"));
+       }
+ 
+     mcs->key_set<int>("playlist-window", "width",  w);
