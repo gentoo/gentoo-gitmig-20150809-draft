@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5525 2006/06/19 15:57:56 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5526 2006/06/19 16:38:28 foser Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Marinus Schraal <foser@gentoo.org> (19 Jun 2006)
+# removes internal API headers, breaks stuff that depends on internals
+>=media-libs/freetype-2.2
 
 # Diego Pettenò <flameeyes@gentoo.org> (19 Jun 2006)
 # 0.4.2 release is badly broken, and previous 0.4 aren't at usable state
