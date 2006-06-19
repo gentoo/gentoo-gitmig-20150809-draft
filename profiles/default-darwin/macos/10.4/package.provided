@@ -118,9 +118,7 @@ sys-devel/libtool-1.5.10-r4
 sys-devel/m4-1.4.2
 sys-devel/make-3.80
 sys-devel/patch-2.5.8
-sys-libs/db-4.2.52.1
-sys-libs/db-6
-sys-libs/ncurses-8.1
+sys-libs/ncurses-5.4
 sys-libs/pam-1.9
 sys-libs/pam-modules-13
 sys-libs/yacc-1.1.4
