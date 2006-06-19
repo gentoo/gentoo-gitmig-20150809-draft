@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/hashcash-1.22.ebuild,v 1.1 2006/06/14 17:01:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/hashcash-1.22.ebuild,v 1.2 2006/06/19 20:32:25 ticho Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.hashcash.org/source/${P}.tgz"
 
 LICENSE="CPL-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 DEPEND="virtual/libc"
 RDEPEND=""
