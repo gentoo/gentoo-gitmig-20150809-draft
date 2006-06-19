@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.106 2006/06/09 09:58:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.107 2006/06/19 12:33:29 flameeyes Exp $
+
+  19 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/pam-0.99.3.0-parallel-make.patch, -pam-0.99.3.0.ebuild,
+  pam-0.99.4.0.ebuild:
+  Remove 0.99.3.0, mark ~amd64 (under package.mask) the new version.
 
 *pam-0.99.4.0 (09 Jun 2006)
 

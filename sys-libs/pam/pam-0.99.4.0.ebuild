@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.4.0.ebuild,v 1.1 2006/06/09 09:58:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.4.0.ebuild,v 1.2 2006/06/19 12:33:29 flameeyes Exp $
 
 inherit libtool multilib eutils autotools pam
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/${MY_P}.tar.bz2"
 
 LICENSE="PAM"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS="~amd64"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
