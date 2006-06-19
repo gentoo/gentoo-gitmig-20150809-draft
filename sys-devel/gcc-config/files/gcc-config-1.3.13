@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.13,v 1.7 2006/04/25 00:20:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.13,v 1.8 2006/06/19 20:10:12 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -82,7 +82,11 @@ cmd_setup() {
 	ENV_UPDATE=$(find_path env-update)
 }
 
-cheap_portageq_envvar() {
+try_real_hard_to_find_CHOST() {
+	#
+	# First we read make.conf
+	#
+
 	local varname=$1
 	local conf=${ROOT}/etc/make.conf
 	local ret=$(source "${conf}" 2>/dev/null ; echo ${!varname})
@@ -97,7 +101,19 @@ cheap_portageq_envvar() {
 			) ; echo ${!varname}
 		)
 	fi
-	echo ${ret}
+
+	if [[ -n ${ret} ]] ; then
+		echo ${ret}
+		return 0
+	fi
+
+	#
+	# Then we try /etc/env.d/gcc/config
+	#
+	if [[ -s ${ROOT}/etc/env.d/gcc/config ]] ; then
+		ret=$(split_gcc_ver $(<"${ROOT}"/etc/env.d/gcc/config))
+		echo ${ret% *}
+	fi
 }
 
 get_real_chost() {
@@ -113,7 +129,7 @@ get_real_chost() {
 	if ${PYTHON} -V &>/dev/null ; then
 		export REAL_CHOST=$(${ENV} -i ${PORTAGEQ} envvar CHOST 2>/dev/null)
 	else
-		export REAL_CHOST=$(cheap_portageq_envvar CHOST)
+		export REAL_CHOST=$(try_real_hard_to_find_CHOST)
 	fi
 
 	if [[ -z ${REAL_CHOST} ]] ; then
@@ -477,7 +493,7 @@ split_gcc_ver() {
 	# target [1]
 	#    accept everything we have left
 	#
-	echo "$@" | awk -F- '
+	echo "$@" | ${AWK:-awk} -F- '
 	function pushit(onme, pushee) {
 		return (onme == "" ? pushee : pushee"-"onme);
 	}
