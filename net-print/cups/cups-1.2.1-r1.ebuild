@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r1.ebuild,v 1.8 2006/06/18 01:09:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r1.ebuild,v 1.9 2006/06/19 18:00:00 genstef Exp $
 
 inherit eutils pam flag-o-matic multilib autotools
 
@@ -154,6 +154,7 @@ pkg_postinst() {
 	einfo "FEATURES=-collision-protect is needed to overwrite the compatibility"
 	einfo "symlinks installed by this package, it wont be needed on later merges."
 	ewarn "You should also run revdep-rebuild"
+	einfo "Rebuilding kdelibs is also a good idea when you want to use it for cups"
 
 	# place symlinks to make the update smoothless
 	for i in ${ROOT}/usr/lib/cups/{backend,filter}/*; do
