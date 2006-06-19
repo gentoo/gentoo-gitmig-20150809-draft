@@ -1,10 +1,47 @@
-MD5 6ebedb12a862140b9be60aaed69bbc4d ChangeLog 8833
-MD5 b98db67b5f97020d9e5149ebf6dc363b files/digest-gst-plugins-ffmpeg-0.10.1 71
-MD5 7a94bdb0f81ff1bb5d568333930d5b20 files/digest-gst-plugins-ffmpeg-0.8.7-r1 70
+AUX ffmpeg_dos.patch 3467 RMD160 27b9d67aba8e3361b243d667dbdca02922f38d12 SHA1 89ccd3ef66a7bd1fa3c10f713c5f5baa15cf744e SHA256 e76bf74120640437102be9cf1484c2fcc5a56ec4c94a037f0db2f138b37202a9
 MD5 622065818c9e4ae7054c4230d3205d5f files/ffmpeg_dos.patch 3467
+RMD160 27b9d67aba8e3361b243d667dbdca02922f38d12 files/ffmpeg_dos.patch 3467
+SHA256 e76bf74120640437102be9cf1484c2fcc5a56ec4c94a037f0db2f138b37202a9 files/ffmpeg_dos.patch 3467
+AUX gst-ffmpeg-gcc4.patch 4606 RMD160 ab7797090e5571a54bb4abac55cd9ffabb2fd3a5 SHA1 ccdb3a3f55dd1a273f1a96ab7a1e76665d2b4725 SHA256 98f6a225a49c349eb26dea18eadc3dc4dbd1d0369d9f16c2c6023a36fa96585c
 MD5 59ef3574f3e888dd1353990d7b3c74ba files/gst-ffmpeg-gcc4.patch 4606
+RMD160 ab7797090e5571a54bb4abac55cd9ffabb2fd3a5 files/gst-ffmpeg-gcc4.patch 4606
+SHA256 98f6a225a49c349eb26dea18eadc3dc4dbd1d0369d9f16c2c6023a36fa96585c files/gst-ffmpeg-gcc4.patch 4606
+AUX gst-plugins-ffmpeg-0.8.4-eoshangfix.patch 905 RMD160 8ffab5fa8892bdd00b45a90c9b2beaed00eb4e84 SHA1 ae13c2eb7543c589acd5e44f442fbbc4cde9d084 SHA256 30455208cf8c0ecc1d7ec2df01e4770e28793ffd1d7f3b1efabb474c4f756e7d
 MD5 17bff3394f5317a370ff75f983c76d16 files/gst-plugins-ffmpeg-0.8.4-eoshangfix.patch 905
+RMD160 8ffab5fa8892bdd00b45a90c9b2beaed00eb4e84 files/gst-plugins-ffmpeg-0.8.4-eoshangfix.patch 905
+SHA256 30455208cf8c0ecc1d7ec2df01e4770e28793ffd1d7f3b1efabb474c4f756e7d files/gst-plugins-ffmpeg-0.8.4-eoshangfix.patch 905
+AUX gst-plugins-ffmpeg-0.8.5-gmake.patch 322 RMD160 e7c91a5daea308d991a2cb36314a10edaaef24db SHA1 89fb9070ebd76b18c6da3ec5c325ef1983cd1a68 SHA256 15d17051747b52e56f0c566e60d694ce86ab0622fb0853b8f3c257742964e0c2
 MD5 2963f26bd29fbec176f2e0fb08213e75 files/gst-plugins-ffmpeg-0.8.5-gmake.patch 322
+RMD160 e7c91a5daea308d991a2cb36314a10edaaef24db files/gst-plugins-ffmpeg-0.8.5-gmake.patch 322
+SHA256 15d17051747b52e56f0c566e60d694ce86ab0622fb0853b8f3c257742964e0c2 files/gst-plugins-ffmpeg-0.8.5-gmake.patch 322
+DIST gst-ffmpeg-0.10.1.tar.bz2 2246682 RMD160 8106a431926c14411ce252f440ec6d1fbdd127d9 SHA1 a3bafaf83db1aadc14abc94c7d89cd7d2f739f0a SHA256 a2c877c38d057875c7dfbf1803030c5cc9707020b77f91673500d6ea8d858607
+DIST gst-ffmpeg-0.8.7.tar.bz2 2110685 RMD160 919163d3fb8cdcf401e0acfe951b24cbdfc81f1f SHA1 b854726e74a642e428373fe1645fb77388a293c8 SHA256 42c5c1ce64ac1ca382e1d95cc48d5e1d6aa48391f22d99c3dc0dc4cd5ab1a414
+EBUILD gst-plugins-ffmpeg-0.10.1-r1.ebuild 1342 RMD160 c51476fb84cb9d8ef90e5c6679bbdeaf78fad459 SHA1 333447a040a4337ebbb9f3b4edfcbfe1724cf5ae SHA256 1d3d64ff907f16d9e301732b8bcbce54629150d0483187bdfe4248643ae05694
+MD5 ee45f4677a5c90d8d93d48428cc1646b gst-plugins-ffmpeg-0.10.1-r1.ebuild 1342
+RMD160 c51476fb84cb9d8ef90e5c6679bbdeaf78fad459 gst-plugins-ffmpeg-0.10.1-r1.ebuild 1342
+SHA256 1d3d64ff907f16d9e301732b8bcbce54629150d0483187bdfe4248643ae05694 gst-plugins-ffmpeg-0.10.1-r1.ebuild 1342
+EBUILD gst-plugins-ffmpeg-0.10.1.ebuild 1326 RMD160 9b22a69b4c2666d8bef047c540c3107b84b51ac2 SHA1 7aba2ea3cee1ca03021067a7c7b037a46e7aaa97 SHA256 91a8b0631f34c972a649af06b18225258fe31a29882b0d854b8215362b89aadf
 MD5 7aeb2717b84120d748ceab549a93d9ab gst-plugins-ffmpeg-0.10.1.ebuild 1326
+RMD160 9b22a69b4c2666d8bef047c540c3107b84b51ac2 gst-plugins-ffmpeg-0.10.1.ebuild 1326
+SHA256 91a8b0631f34c972a649af06b18225258fe31a29882b0d854b8215362b89aadf gst-plugins-ffmpeg-0.10.1.ebuild 1326
+EBUILD gst-plugins-ffmpeg-0.8.7-r1.ebuild 1639 RMD160 4688893c3f34bf05fecc30c0afb94176e1c28174 SHA1 9197fc9a801035333110d21b71b3176cb0620a7e SHA256 05c087516324008fd3765a2d16747f38ae0a72fba5e34226c3f061a1358f2c71
 MD5 40c7a2ab85c7d6b2389c4b51b187a4f2 gst-plugins-ffmpeg-0.8.7-r1.ebuild 1639
+RMD160 4688893c3f34bf05fecc30c0afb94176e1c28174 gst-plugins-ffmpeg-0.8.7-r1.ebuild 1639
+SHA256 05c087516324008fd3765a2d16747f38ae0a72fba5e34226c3f061a1358f2c71 gst-plugins-ffmpeg-0.8.7-r1.ebuild 1639
+MISC ChangeLog 9017 RMD160 878e5b0e0b099e189c228a1f90cf1b7d7223c190 SHA1 292d562463791871125103be4e0d3af54cbf86e3 SHA256 95220cf7960fa2fb68518dc36fe8fa58b4c77f4568ff2b4f95cfa7469538261d
+MD5 9ada669ef00227f25a3470db57ab638c ChangeLog 9017
+RMD160 878e5b0e0b099e189c228a1f90cf1b7d7223c190 ChangeLog 9017
+SHA256 95220cf7960fa2fb68518dc36fe8fa58b4c77f4568ff2b4f95cfa7469538261d ChangeLog 9017
+MISC metadata.xml 181 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d SHA1 faf40c45bd66b0072b95556cf7ab097d3be19511 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
+SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
+MD5 8c7dc824f560834f84afb8d0ede86c4e files/digest-gst-plugins-ffmpeg-0.10.1 259
+RMD160 4736498118d51b30f29fcb639e7bbd994d2f38a8 files/digest-gst-plugins-ffmpeg-0.10.1 259
+SHA256 c34389d9be028e32dbccc2f26095e288bf0be0e0f9f3a3a14f519584c542679d files/digest-gst-plugins-ffmpeg-0.10.1 259
+MD5 8c7dc824f560834f84afb8d0ede86c4e files/digest-gst-plugins-ffmpeg-0.10.1-r1 259
+RMD160 4736498118d51b30f29fcb639e7bbd994d2f38a8 files/digest-gst-plugins-ffmpeg-0.10.1-r1 259
+SHA256 c34389d9be028e32dbccc2f26095e288bf0be0e0f9f3a3a14f519584c542679d files/digest-gst-plugins-ffmpeg-0.10.1-r1 259
+MD5 050d0cbb82f2b0fe9bdd8c28efacf23f files/digest-gst-plugins-ffmpeg-0.8.7-r1 256
+RMD160 2811f9f47c68785a9044dda6361c2ad1a8a8417e files/digest-gst-plugins-ffmpeg-0.8.7-r1 256
+SHA256 afb9f52b08645956d08972b180666be6e33ff9565f9ea79836e1bbaba95412c2 files/digest-gst-plugins-ffmpeg-0.8.7-r1 256
