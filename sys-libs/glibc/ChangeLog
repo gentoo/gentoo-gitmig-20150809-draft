@@ -1,11 +1,6 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.460 2006/06/19 01:36:47 kumba Exp $
-
-  19 Jun 2006; Joshua Kinard <kumba@gentoo.org> glibc-2.3.6-r4.ebuild:
-  Added a patch from Debian to fix a build error in
-  sysdeps/unix/sysv/linux/getcwd.c where the MAX macro is undefined and bumped
-  patchver to 1.14.
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.461 2006/06/19 03:21:38 vapier Exp $
 
   18 Jun 2006; Andrej Kacian <ticho@gentoo.org> glibc-2.3.6-r4.ebuild:
   Stable on x86. Bug #137121.
