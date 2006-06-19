@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.37 2006/02/01 16:06:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.38 2006/06/19 04:11:58 mkennedy Exp $
+
+*auctex-11.83 (19 Jun 2006)
+
+  19 Jun 2006; Matthew Kennedy <mkennedy@gentoo.org> +auctex-11.83.ebuild:
+  New upstream; Resolves Bug #136138; Depend on app-text/dvipng when
+  preview-latex in USE; Resolves Bug #131761.
 
 *auctex-11.82 (01 Feb 2006)
 
