@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/vserver-sources
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.112 2006/06/13 19:01:39 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.113 2006/06/19 18:43:18 phreak Exp $
+
+  19 Jun 2006; Christian Heim <phreak@gentoo.org>
+  -vserver-sources-2.0.2_rc21.ebuild, -vserver-sources-2.0.2_rc22.ebuild,
+  -vserver-sources-2.1.1_rc21-r3.ebuild, -vserver-sources-2.1.1_rc22.ebuild:
+  Moving the release candidates to the overlay at
+  http://overlays.gentoo.org/proj/vps/browser/
 
 *vserver-sources-2.1.1_rc22 (13 Jun 2006)
 *vserver-sources-2.0.2_rc22 (13 Jun 2006)
