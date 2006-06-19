@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.77 2006/05/25 16:03:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.78 2006/06/19 18:52:59 mrness Exp $
+
+*squid-2.5.14 (19 Jun 2006)
+
+  19 Jun 2006; Alin Nastac <mrness@gentoo.org> +squid-2.5.14.ebuild:
+  Version bump. Add nis global USE flag; add pf-transparent and
+  ipf-transparent local USE flags (#134823).
 
   25 May 2006; Guy Martin <gmsoft@gentoo.org> squid-2.5.13.ebuild:
   Stable on hppa.
