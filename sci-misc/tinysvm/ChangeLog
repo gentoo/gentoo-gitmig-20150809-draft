@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/tinysvm
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/tinysvm/ChangeLog,v 1.2 2005/12/25 17:15:25 usata Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/tinysvm/ChangeLog,v 1.3 2006/06/19 23:45:41 usata Exp $
+
+  19 Jun 2006; Mamoru KOMACHI <usata@gentoo.org>
+  +files/tinysvm-0.09-pm.patch, tinysvm-0.09-r1.ebuild:
+  Fixed perl module compilation for the first time; bug #132581.
 
 *tinysvm-0.09-r1 (25 Dec 2005)
 
