@@ -1,19 +1,19 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.10.ebuild,v 1.6 2006/03/19 13:17:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.10.ebuild,v 1.7 2006/06/19 18:58:37 squinky86 Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="foreign function call libraries"
 HOMEPAGE="http://www.haible.de/bruno/packages-ffcall.html"
-SRC_URI="http://www.haible.de/bruno/gnu/${P}.tar.gz"
+SRC_URI="ftp://ftp.santafe.edu/pub/gnu/${P}.tar.gz"
 
 # "Ffcall is under GNU GPL. As a special exception, if used in GNUstep
 # or in derivate works of GNUstep, the included parts of ffcall are
 # under GNU LGPL." -ffcall author
 LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
-KEYWORDS="alpha ~hppa ppc ~ppc-macos sparc x86"
+KEYWORDS="alpha ~amd64 ~hppa ppc ~ppc-macos sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
@@ -32,7 +32,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc ChangeLog NEWS README
+	dodoc NEWS README
 	dohtml avcall/avcall.html \
 		callback/callback.html \
 		callback/trampoline_r/trampoline_r.html \

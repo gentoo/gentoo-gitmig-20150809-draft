@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ffcall
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.25 2006/03/19 13:17:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.26 2006/06/19 18:58:37 squinky86 Exp $
+
+  19 Jun 2006; Jon Hood <squinky86@gentoo.org> ffcall-1.10.ebuild:
+  Remove ChangeLog from the dodoc (it doesn't exist). Change SRC_URI to a
+  location that does have the file. Add ~amd64, #137123.
 
   19 Mar 2006; Fabian Groffen <grobian@gentoo.org> ffcall-1.10.ebuild:
   Marked ~ppc-macos
