@@ -1,0 +1,27 @@
+--- configure.in.old	2006-06-18 20:40:45.000000000 +0200
++++ configure.in	2006-06-18 20:41:50.000000000 +0200
+@@ -237,14 +237,7 @@
+ release=$enableval,release=no)
+ if test "x$release" == xyes
+ then
+-    CFLAGS="-fomit-frame-pointer -ffast-math"
+-    CPPFLAGS="-fomit-frame-pointer -ffast-math"
+-    CXXFLAGS="-fomit-frame-pointer -ffast-math"
+     AC_DEFINE(dNODEBUG,,[Disable debug output])
+-else
+-    CFLAGS="-g"
+-    CPPFLAGS="-g"
+-    CXXFLAGS="-g"
+ fi
+ AC_MSG_RESULT($release)
+ 
+@@ -346,9 +339,6 @@
+ gprof=$enableval,gprof=no)
+ if test "$gprof" != no
+ then
+-    CFLAGS="-pg $CFLAGS"
+-    CPPFLAGS="-pg $CPPFLAGS"
+-    CXXFLAGS="-pg $CXXFLAGS"
+     AC_CHECK_LIB(gmon, main,[LIBS="$LIBS -lgmon"])
+     AC_MSG_RESULT(enabled)
+ else
