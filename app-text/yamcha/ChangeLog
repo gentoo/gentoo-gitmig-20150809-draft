@@ -1,6 +1,12 @@
 # ChangeLog for app-text/yamcha
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yamcha/ChangeLog,v 1.1 2005/05/22 16:32:08 usata Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/yamcha/ChangeLog,v 1.2 2006/06/19 23:12:19 usata Exp $
+
+*yamcha-0.33 (19 Jun 2006)
+
+  19 Jun 2006; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  +yamcha-0.33.ebuild:
+  Version bumped.
 
 *yamcha-0.32 (22 May 2005)
 
