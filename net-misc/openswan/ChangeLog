@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.28 2006/02/16 09:10:50 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.29 2006/06/19 05:20:32 mrness Exp $
+
+  19 Jun 2006; Alin Nastac <mrness@gentoo.org> files/ipsec:
+  Start ipsec after dns.
 
   16 Feb 2006; Jay Pfeifer <pfeifer@gentoo.org> -openswan-1.0.7.ebuild:
   Remove unsupported version 1.0.7.
