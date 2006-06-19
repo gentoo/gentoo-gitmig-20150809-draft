@@ -1,0 +1,19 @@
+--- rsibreak/src/rsiwidget.cpp       (revision 553033)
++++ rsibreak/src/rsiwidget.cpp       (working copy)
+@@ -167,7 +167,6 @@
+     connect( m_dcopIface, SIGNAL( signalSuspend( bool) ),
+              m_relaxpopup, SLOT( setVisible( bool ) ) );
+
+-    setIcon( 0 );
+     srand ( time(NULL) );
+
+     QBoxLayout *topLayout = new QVBoxLayout( this, 5);
+@@ -203,6 +202,8 @@
+
+     readConfig();
+
++    setIcon( 0 );
++
+     // if there are no images found, the break will appear in black.
+     // if the text color is black (default) then change that.
+     if (m_files.count() == 0 &&
