@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.10.ebuild,v 1.7 2005/08/05 14:26:13 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.10.ebuild,v 1.8 2006/06/20 04:24:18 latexer Exp $
 
 DESCRIPTION="Portable. NET runtime, compiler, tools"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -22,8 +22,8 @@ src_install() {
 	dohtml doc/*.html
 
 	# init script
-	exeinto /etc/init.d ; newexe ${PORTDIR}/dev-lang/mono/files/dotnet.init dotnet
-	insinto /etc/conf.d ; newins ${PORTDIR}/dev-lang/mono/files/dotnet.conf dotnet
+	exeinto /etc/init.d ; newexe ${FILESDIR}/dotnet.init dotnet
+	insinto /etc/conf.d ; newins ${FILESDIR}/dotnet.conf dotnet
 }
 
 pkg_postinst() {
