@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62.ebuild,v 1.1 2006/06/20 01:35:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62.ebuild,v 1.2 2006/06/20 01:49:52 cardoe Exp $
 
 inherit eutils mono python multilib debug qt3 autotools
 
@@ -137,6 +137,7 @@ pkg_postinst() {
 	einfo "you should add it to the default runlevel :"
 	einfo "\`rc-update add dbus default\`"
 	echo
+	einfo "Currently have it installed and running?"
 	einfo "Run etc-update and then run the following:"
 	einfo "\`/etc/init.d/dbus reload\`"
 }
