@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.124 2006/06/18 16:57:09 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.125 2006/06/20 14:57:07 squinky86 Exp $
+
+*mldonkey-2.7.7 (20 Jun 2006)
+
+  20 Jun 2006; Jon Hood <squinky86@gentoo.org> -mldonkey-2.7.6.ebuild,
+  +mldonkey-2.7.7.ebuild:
+  Version bump, remove buggy version. Resolves #137314. Thanks spiralvoice
+  <spiralvoice@hotmail.com>!
 
 *mldonkey-2.7.6-r1 (18 Jun 2006)
 
