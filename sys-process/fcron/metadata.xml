@@ -3,7 +3,8 @@
 <pkgmetadata>
 	<herd>cron</herd>
 	<maintainer>
-		<email>ka0ttic@gentoo.org</email>
-		<name>Aaron Walker</name>
+		<email>wschlich@gentoo.org</email>
+		<name>Wolfram Schlich</name>
+		<description>Primary maintainer</description>
 	</maintainer>
 </pkgmetadata>

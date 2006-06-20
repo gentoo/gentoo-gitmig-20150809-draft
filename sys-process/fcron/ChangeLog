@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/fcron
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.14 2006/06/20 19:44:58 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.15 2006/06/20 20:01:45 wschlich Exp $
+
+  20 Jun 2006; Wolfram Schlich <wschlich@gentoo.org> metadata.xml:
+  maintainership takeover (ka0ttic is MIA)
 
 *fcron-3.0.1-r1 (20 Jun 2006)
 
