@@ -2,6 +2,7 @@
  - touch up the Makefile to let the ebuild handle the module details
  - fix support with io remap stuff in newer kernels
  - dont include headers that dont exist in 2.4.x kernels
+ - use module_param() for 2.6.x and MODULE_PARM() for all others
 
 --- svgalib/kernel/svgalib_helper/Makefile
 +++ svgalib/kernel/svgalib_helper/Makefile
@@ -121,3 +122,21 @@
  
  #define __KERNEL_SYSCALLS__
  #include <linux/unistd.h>
+@@ -770,10 +770,15 @@
+ 
+ }
+ 
++#ifdef KERNEL_2_6
++module_param(debug, int, 0);
++module_param(all_devices, int, 0);
++#else
+ MODULE_PARM(debug, "i");
+-MODULE_PARM_DESC(debug, "Debug output level.");
+-
+ MODULE_PARM(all_devices, "i");
++#endif
++
++MODULE_PARM_DESC(debug, "Debug output level.");
+ MODULE_PARM_DESC(all_devices, "Give access to all PCI devices, regardless of class.");
+ 
+ 
