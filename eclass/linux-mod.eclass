@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.65 2006/05/22 09:27:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.66 2006/06/20 19:47:37 vapier Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -90,9 +90,9 @@ IUSE="" # don't put pcmcia here, rather in the ebuilds that actually support pcm
 SLOT="0"
 DESCRIPTION="Based on the $ECLASS eclass"
 RDEPEND="kernel_linux? ( virtual/modutils
-		pcmcia? ( virtual/pcmcia ) )"
+	pcmcia? ( virtual/pcmcia ) )"
 DEPEND="${RDEPEND}
-		sys-apps/sed"
+	sys-apps/sed"
 
 # eclass utilities
 # ----------------------------------
@@ -512,8 +512,7 @@ linux-mod_src_compile() {
 
 			emake HOSTCC=${CC_HOSTCC} CC=${CC_CC}\
 				  ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS} \
-				|| die "Unable to make \
-				   ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS}."
+				|| die "Unable to make ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS}."
 			touch ${srcdir}/.built
 			cd ${OLDPWD}
 		fi
