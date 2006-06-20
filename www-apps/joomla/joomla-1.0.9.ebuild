@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.0.8.ebuild,v 1.3 2006/06/20 19:18:25 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.0.9.ebuild,v 1.1 2006/06/20 19:18:25 chtekk Exp $
 
 inherit webapp depend.php
 
