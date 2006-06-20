@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ed2k_hash
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.13 2006/04/29 00:36:40 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.14 2006/06/20 16:27:55 squinky86 Exp $
+
+  20 Jun 2006; Jon Hood <squinky86@gentoo.org> ed2k_hash-0.4.0-r1.ebuild:
+  Stable on amd64, remove redundant COPYING from dodoc, as LICENSE identifies
+  the license.
 
   29 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-ed2k_hash-0.4.0, Manifest:
