@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/confluence
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/confluence/ChangeLog,v 1.4 2005/09/10 10:53:35 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/confluence/ChangeLog,v 1.5 2006/06/20 14:34:49 kingtaco Exp $
+
+  20 Jun 2006; Mike Doty <kingtaco@gentoo.org> confluence-0.9.1.ebuild:
+  ~amd64 added
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org> confluence-0.9.1.ebuild:
   Mark 0.9.1 stable on alpha
