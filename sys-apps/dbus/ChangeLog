@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.115 2006/06/20 06:34:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.116 2006/06/20 14:54:42 cardoe Exp $
+
+  20 Jun 2006; <dougg@gentoo.org> dbus-0.62.ebuild:
+  Unfortunately genstef was wrong and didn't speak to anyone before making the
+  change that he did. Now he understand it, switching back.
 
   20 Jun 2006; Stefan Schweizer <genstef@gentoo.org> dbus-0.62.ebuild:
   qt3 -> qt, fix digest
