@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.50 2006/06/20 08:48:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.51 2006/06/20 18:27:50 vapier Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -656,8 +656,8 @@ multilib_env() {
 	esac
 }
 
-# This is for the single package in the tree whose maintainer believes it is so important to
-# provide a compiled-from-source version before portage is able to support it (app-emul/wine)
+# Hide multilib details here for packages which are forced to be compiled for a
+# specific ABI when run on another ABI (like x86-specific packages on amd64)
 multilib_toolchain_setup() {
 	export ABI=$1
 
