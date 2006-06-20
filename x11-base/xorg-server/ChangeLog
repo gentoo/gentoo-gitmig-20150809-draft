@@ -1,6 +1,20 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.125 2006/06/17 15:21:59 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.126 2006/06/20 16:37:28 spyderous Exp $
+
+*xorg-server-1.1.0-r1 (20 Jun 2006)
+*xorg-server-1.0.2-r6 (20 Jun 2006)
+
+  20 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/xorg-server-1.1.0-setuid.diff, +files/x11r7.0-setuid.diff,
+  -xorg-server-1.0.2-r4.ebuild, -xorg-server-1.0.2-r5.ebuild,
+  +xorg-server-1.0.2-r6.ebuild, -xorg-server-1.1.0.ebuild,
+  +xorg-server-1.1.0-r1.ebuild:
+  Security bump. Failure to check the return value of setuid() in a privileged
+  process could be used by a local user for file overwriting and possible
+  privilege escalation in corner cases. See
+  http://lists.freedesktop.org/archives/xorg/2006-June/016146.html for more
+  information.
 
   17 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.1.0.ebuild:
