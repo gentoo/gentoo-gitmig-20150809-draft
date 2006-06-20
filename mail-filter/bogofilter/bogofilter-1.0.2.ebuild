@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.0.2.ebuild,v 1.1 2006/03/04 13:29:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.0.2.ebuild,v 1.2 2006/06/20 20:13:55 tove Exp $
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
@@ -12,8 +12,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 #KEYWORDS="${KEYWORDS} ~arm ~mips" # missing, see bug #74046
 IUSE="gsl berkdb sqlite"
 
-DEPEND="
-	|| ( sys-libs/glibc dev-libs/libiconv )
+DEPEND="virtual/libiconv
 	berkdb?  ( >=sys-libs/db-3.2 )
 	!berkdb? (
 		sqlite?  ( >=dev-db/sqlite-3.2.6 )
