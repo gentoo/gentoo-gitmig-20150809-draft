@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.225 2006/06/12 19:56:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.226 2006/06/20 17:23:17 suka Exp $
+
+  20 Jun 2006; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.0.2-r1.ebuild, openoffice-2.0.2-r2.ebuild:
+  Add dev-perl/Compress-Zlib to the dependencies, see bug #136961
 
   12 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   openoffice-2.0.2-r2.ebuild:
