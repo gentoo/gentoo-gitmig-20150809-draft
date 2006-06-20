@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/snd-aoa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd-aoa/ChangeLog,v 1.5 2006/06/08 23:53:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd-aoa/ChangeLog,v 1.6 2006/06/20 12:13:29 josejx Exp $
+
+*snd-aoa-060620 (20 Jun 2006)
+
+  20 Jun 2006; Joseph Jezak <josejx@gentoo.org> +snd-aoa-060620.ebuild:
+  Added latest version.
 
 *snd-aoa-060608 (08 Jun 2006)
 
