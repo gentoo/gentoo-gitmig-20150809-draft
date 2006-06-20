@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.14 2006/06/20 19:16:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.15 2006/06/20 22:12:50 eradicator Exp $
 
 inherit eutils toolchain-funcs flag-o-matic multilib games
 
@@ -26,6 +26,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${WORKDIR}"/${PATCH} "${FILESDIR}"/${P}-exec-stack.patch
 	append-ldflags -Wl,-z,noexecstack
+	use amd64 && multilib_toolchain_setup x86
 	sed -i \
 		-e "s:-L/usr/X11R6/lib:${LDFLAGS}:" \
 		-e 's:-O2 ::' \
