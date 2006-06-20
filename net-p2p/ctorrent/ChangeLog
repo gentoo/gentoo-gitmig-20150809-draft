@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ctorrent
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.12 2006/05/12 02:51:09 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.13 2006/06/20 16:38:46 squinky86 Exp $
+
+  20 Jun 2006; Jon Hood <squinky86@gentoo.org> -ctorrent-1.3.4-r1.ebuild,
+  ctorrent-1.3.4-r3.ebuild:
+  Stable on amd64. Remove buggy versions.
 
   12 May 2006; Joshua Jackson <tsunam@gentoo.org> ctorrent-1.3.4-r2.ebuild:
   Stable on x86; bug #132394
