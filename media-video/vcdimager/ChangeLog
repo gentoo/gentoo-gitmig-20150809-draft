@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vcdimager
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.44 2006/05/26 20:29:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.45 2006/06/20 21:56:47 genstef Exp $
+
+  20 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
+  vcdimager-0.7.21.ebuild, vcdimager-0.7.23.ebuild:
+  QA: xml2 -> xml use flag
 
   26 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/vcdimager-0.7.20-libvcd.patch, -files/cdio.patch,
