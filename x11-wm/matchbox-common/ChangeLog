@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/matchbox-common
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-common/ChangeLog,v 1.2 2006/04/28 00:03:07 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-common/ChangeLog,v 1.3 2006/06/20 17:39:22 yvasilev Exp $
+
+*matchbox-common-0.9.1-r1 (20 Jun 2006)
+
+  20 Jun 2006; <yvasilev@gentoo.org> +matchbox-common-0.9.1-r1.ebuild:
+  Fixed the way xsessions files are created, fixes bug #137058.
 
   28 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
