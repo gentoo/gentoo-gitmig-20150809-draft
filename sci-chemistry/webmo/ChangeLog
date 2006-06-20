@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/webmo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/ChangeLog,v 1.6 2006/06/20 15:12:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/ChangeLog,v 1.7 2006/06/20 15:13:06 spyderous Exp $
+
+  20 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  -webmo-6.0.003.ebuild:
+  Pull old version.
 
 *webmo-6.1.010 (20 Jun 2006)
 
