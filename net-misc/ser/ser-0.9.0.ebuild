@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.0.ebuild,v 1.9 2005/09/16 14:21:56 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.0.ebuild,v 1.10 2006/06/20 19:55:48 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -36,6 +36,11 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=sys-devel/bison-1.35
 	>=sys-devel/flex-2.5.4a"
+
+pkg_setup() {
+	enewgroup ser
+	enewuser  ser -1 -1 /dev/null ser
+}
 
 src_unpack() {
 	local modules extmodules MY_A
@@ -135,12 +140,6 @@ src_install () {
 	newexe scripts/harv_ser.sh harv_ser.sh
 	newexe scripts/sc serctl
 	newexe scripts/ser_mysql.sh ser_mysql.sh
-
-	#
-	# non-root
-	#
-	enewgroup ser
-	enewuser  ser -1 -1 /dev/null ser
 
 	chown -R root:ser ${D}/etc/ser
 	chmod 750 ${D}/etc/ser
