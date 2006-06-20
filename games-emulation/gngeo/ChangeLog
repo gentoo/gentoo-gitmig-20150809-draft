@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/gngeo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.13 2006/05/21 03:44:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.14 2006/06/20 20:28:22 mr_bones_ Exp $
+
+*gngeo-0.6.12 (20 Jun 2006)
+
+  20 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/gngeo-0.6.12-execstacks.patch, +gngeo-0.6.12.ebuild:
+  version bump
 
   21 May 2006; Michael Sterrett <mr_bones_@gentoo.org> gngeo-0.6.11.ebuild:
   force newer gcc for bug #128587
