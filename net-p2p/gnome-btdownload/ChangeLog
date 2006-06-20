@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/gnome-btdownload
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnome-btdownload/ChangeLog,v 1.8 2005/10/03 00:56:44 mkay Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnome-btdownload/ChangeLog,v 1.9 2006/06/20 16:55:15 squinky86 Exp $
+
+*gnome-btdownload-0.0.23 (20 Jun 2006)
+
+  20 Jun 2006; Jon Hood <squinky86@gentoo.org>
+  gnome-btdownload-0.0.11.ebuild, -gnome-btdownload-0.0.16.ebuild,
+  -gnome-btdownload-0.0.17.ebuild, -gnome-btdownload-0.0.20.ebuild,
+  +gnome-btdownload-0.0.23.ebuild:
+  Version bump, fix dependency issue with 0.0.11 and bittorrent, #137387.
 
 *gnome-btdownload-0.0.22 (03 Oct 2005)
 
