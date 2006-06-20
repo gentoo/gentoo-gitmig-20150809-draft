@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.30 2006/06/20 02:06:34 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.31 2006/06/20 02:19:47 metalgod Exp $
+
+*beagle-0.2.7 (20 Jun 2006)
+
+  20 Jun 2006; Luis Medinas <metalgod@gentoo.org>
+  +files/beagle-0.2.7-crawltweek.patch, +beagle-0.2.7.ebuild:
+  Version bump from upstream. This release includes again chm support and a
+  few important fixes.
 
   20 Jun 2006; Luis Medinas <metalgod@gentoo.org>
   -files/beagle-0.2.1-multilib.patch,
