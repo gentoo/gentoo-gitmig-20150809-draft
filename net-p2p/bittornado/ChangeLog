@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bittornado
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.46 2006/04/27 22:15:11 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.47 2006/06/20 15:49:57 squinky86 Exp $
+
+  20 Jun 2006; Jon Hood <squinky86@gentoo.org> -bittornado-0.3.13.ebuild,
+  -bittornado-0.3.14.ebuild, bittornado-0.3.15.ebuild:
+  Mark amd64, fix mailcap copying, remove old versions.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-bittornado-0.3.12, files/digest-bittornado-0.3.13,
