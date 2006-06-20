@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/winefish-1.3.3.ebuild,v 1.2 2006/04/30 17:11:45 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/winefish-1.3.3.ebuild,v 1.3 2006/06/20 08:50:29 pclouds Exp $
 
 inherit eutils fdo-mime
 
@@ -18,7 +18,6 @@ IUSE="spell"
 
 DEPEND=">=x11-libs/gtk+-2.4
 	>=dev-libs/libpcre-6.3
-	>=app-text/tetex-2.0.2-r8
 	spell? ( virtual/aspell-dict )"
 
 #S=${WORKDIR}/${PN}-${MY_PV}
@@ -37,4 +36,6 @@ src_install() {
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
+
+	einfo "You need to emerge a TeX distribution to gain winfish's full capacity"
 }
