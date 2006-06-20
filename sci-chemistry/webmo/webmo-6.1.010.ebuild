@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/webmo-6.1.010.ebuild,v 1.1 2006/06/20 15:12:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/webmo-6.1.010.ebuild,v 1.2 2006/06/20 15:14:24 spyderous Exp $
 
 inherit eutils webapp
 
@@ -94,6 +94,8 @@ pkg_postinst() {
 	einfo
 	einfo "The diagnose.pl script can be run if WebMO doesn't work properly."
 	einfo
+	ewarn "Be careful never to overwrite your user, group or job databases"
+	ewarn "when using etc-update after an upgrade."
 
 	webapp_pkg_postinst
 }
