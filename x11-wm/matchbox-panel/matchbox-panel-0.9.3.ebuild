@@ -1,8 +1,8 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-panel/matchbox-panel-0.9.3.ebuild,v 1.1 2006/06/04 21:42:08 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-panel/matchbox-panel-0.9.3.ebuild,v 1.2 2006/06/20 18:59:46 yvasilev Exp $
 
-inherit versionator
+inherit eutils versionator
 
 DESCRIPTION="The Matchbox Panel"
 HOMEPAGE="http://projects.o-hand.com/matchbox/"
@@ -19,6 +19,13 @@ DEPEND=">=x11-libs/libmatchbox-1.5
 
 RDEPEND="${DEPEND}
 	x11-wm/matchbox-common"
+
+src_unpack () {
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${P}-gcc4-no-nested-functions.patch"
+}
 
 src_compile() {
 	econf	$(use_enable debug) \
