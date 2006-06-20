@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.49 2006/05/28 19:31:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.50 2006/06/20 08:48:24 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -193,9 +193,9 @@ get_abi_var() {
 }
 
 get_abi_CFLAGS() { get_abi_var CFLAGS "$@"; }
+get_abi_ASFLAGS() { get_abi_var ASFLAGS "$@"; }
 get_abi_LDFLAGS() { get_abi_var LDFLAGS "$@"; }
 get_abi_CHOST() { get_abi_var CHOST "$@"; }
-get_abi_CTARGET() { get_abi_var CTARGET "$@"; }
 get_abi_FAKE_TARGETS() { get_abi_var FAKE_TARGETS "$@"; }
 get_abi_CDEFINE() { get_abi_var CDEFINE "$@"; }
 get_abi_LIBDIR() { get_abi_var LIBDIR "$@"; }
@@ -654,4 +654,18 @@ multilib_env() {
 			export DEFAULT_ABI="default"
 		;;
 	esac
+}
+
+# This is for the single package in the tree whose maintainer believes it is so important to
+# provide a compiled-from-source version before portage is able to support it (app-emul/wine)
+multilib_toolchain_setup() {
+	export ABI=$1
+
+	# Binutils doesn't have wrappers for ld and as (yet).  Eventually it
+	# will, and all this can just be handled with CHOST.
+	export LD="ld $(get_abi_LDFLAGS)"
+	export AS="as $(get_abi_ASFLAGS)"
+
+	export CHOST=$(get_abi_CHOST)
+	export CBUILD=$(get_abi_CHOST)
 }
