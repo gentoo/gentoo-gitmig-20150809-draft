@@ -1,10 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.0.40-r1.ebuild,v 1.1 2005/03/16 09:34:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.0.40-r1.ebuild,v 1.2 2006/06/20 08:07:41 brix Exp $
 #OKV=original kernel version, KV=patched kernel version. They can be the same.
 
-#we use this next variable to avoid duplicating stuff on cvs
-GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
 OKV=${PV}
 KV=${PV}
 S=${WORKDIR}/linux-${KV}
