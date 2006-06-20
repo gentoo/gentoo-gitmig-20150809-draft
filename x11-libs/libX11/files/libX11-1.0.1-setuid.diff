@@ -1,0 +1,17 @@
+diff --git a/src/xlibi18n/lcFile.c b/src/xlibi18n/lcFile.c
+index f8b3404..bb1ee20 100644
+--- a/src/xlibi18n/lcFile.c
++++ b/src/xlibi18n/lcFile.c
+@@ -269,7 +269,11 @@ #else
+ 	    if (seteuid(0) != 0) {
+ 		priv = 0;
+ 	    } else {
+-		seteuid(oldeuid);
++		if (seteuid(oldeuid) == -1) {
++		    /* XXX ouch, coudn't get back to original uid 
++		     what can we do ??? */
++		    _exit(127);
++		}
+ 		priv = 1;
+ 	    }
+ #endif
