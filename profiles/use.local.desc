@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1961 2006/06/19 21:25:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1962 2006/06/20 00:17:03 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1371,6 +1371,8 @@ sys-apps/baselayout-vserver:fakelog - install a fake logger init script
 sys-apps/busybox:floppyboot - builds a busybox binary for use on floppy drives.
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
+sys-apps/dbus:qt3 - Compile QT3 based bindings for D-Bus (allows QT3 apps to talk via D-BUS)
+sys-apps/dbus:qt4 - Compile QT4 (Trolltech written) based bindings for D-Bus (needed for KDE4 since DCOP is gone)
 sys-apps/hal:dmi - Adds support for DMI (Desktop Management Interface)
 sys-apps/hal:pam_console - Adds support for pam console from PAM
 sys-apps/iproute2:atm - Add support for ATM qdisc manager
