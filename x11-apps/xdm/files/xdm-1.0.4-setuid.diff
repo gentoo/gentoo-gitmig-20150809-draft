@@ -1,0 +1,44 @@
+Index: session.c
+===================================================================
+RCS file: /cvs/xorg/app/xdm/session.c,v
+retrieving revision 1.7
+diff -u -r1.7 session.c
+--- session.c	3 Jun 2006 00:05:24 -0000	1.7
++++ session.c	19 Jun 2006 21:30:50 -0000
+@@ -492,8 +492,14 @@
+     else
+ 	ResetServer (d);
+     if (removeAuth) {
+-	setgid (verify.gid);
+-	setuid (verify.uid);
++	if (setgid (verify.gid) == -1) {
++	    LogError( "SessionExit: setgid: %s\n", strerror(errno));
++	    exit(status);
++	}
++	if (setuid (verify.uid) == -1) {
++	    LogError( "SessionExit: setuid: %s\n", strerror(errno));
++	    exit(status);
++	}
+ 	RemoveUserAuthorization (d, &verify);
+ #if defined(K5AUTH) && !defined(USE_PAM)   /* PAM modules should handle this */
+ 	/* do like "kdestroy" program */
+Index: xdmshell.c
+===================================================================
+RCS file: /cvs/xorg/app/xdm/xdmshell.c,v
+retrieving revision 1.3
+diff -u -r1.3 xdmshell.c
+--- xdmshell.c	14 Jul 2005 22:58:25 -0000	1.3
++++ xdmshell.c	19 Jun 2006 21:30:50 -0000
+@@ -183,7 +183,11 @@
+ #endif
+ 
+     /* make xdm run in a non-setuid environment */
+-    setuid (geteuid());
++    if (setuid (geteuid()) == -1) {
++	fprintf(stderr, "%s: cannot setuid (error %d, %s)\r\n",
++		ProgramName, errno, strerror(errno));
++	exit(1);
++    }
+ 
+     /*
+      * exec /usr/bin/X11/xdm -nodaemon -udpPort 0

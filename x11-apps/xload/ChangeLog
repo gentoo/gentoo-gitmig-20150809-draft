@@ -1,6 +1,17 @@
 # ChangeLog for x11-apps/xload
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xload/ChangeLog,v 1.12 2006/05/20 10:46:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xload/ChangeLog,v 1.13 2006/06/20 16:18:26 spyderous Exp $
+
+*xload-1.0.1-r1 (20 Jun 2006)
+
+  20 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/xload-1.0.1-setuid.diff, -xload-1.0.1.ebuild,
+  +xload-1.0.1-r1.ebuild:
+  Security bump. Failure to check the return value of setuid() in a privileged
+  process could be used by a local user for file overwriting and possible
+  privilege escalation in corner cases. See
+  http://lists.freedesktop.org/archives/xorg/2006-June/016146.html for more
+  information.
 
   20 May 2006; Robin H. Johnson <robbat2@gentoo.org> xload-1.0.1.ebuild:
   Added ~ppc after testing.
