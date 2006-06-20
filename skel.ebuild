@@ -79,7 +79,7 @@ IUSE="X gnome"
 
 # A space delimited list of portage features to restrict. man 5 ebuild
 # for details.  Usually not needed.
-#RESTRICT="nostrip"
+#RESTRICT="strip"
 
 # Build-time dependencies, such as
 #    ssl? ( >=dev-libs/openssl-0.9.6b )
