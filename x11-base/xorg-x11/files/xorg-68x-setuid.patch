@@ -1,0 +1,404 @@
+Index: xc/config/util/chownxterm.c
+===================================================================
+RCS file: /cvs/xorg/xc/config/util/chownxterm.c,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 chownxterm.c
+--- xc/config/util/chownxterm.c	14 Nov 2003 16:48:20 -0000	1.1.1.1
++++ xc/config/util/chownxterm.c	19 Jun 2006 20:15:19 -0000
+@@ -41,8 +41,10 @@
+ 
+ void help()
+ {
+-    setgid(getgid());
+-    setuid(getuid());
++    if (setgid(getgid()) == -1) 
++	exit(1);
++    if (setuid(getuid()) == -1)
++	exit(1);
+     printf("chown-xterm makes %s suid root\n", XTERM_PATH);
+     printf("This is necessary on Ultrix for /dev/tty operation.\n");
+     exit(0);
+@@ -51,8 +53,10 @@
+ void print_error(err_string)
+     char *err_string;
+ {
+-    setgid(getgid());
+-    setuid(getuid());
++    if (setgid(getgid()) == -1)
++	exit(1);
++    if (setuid(getuid()) == -1)
++	exit(1);
+     fprintf(stderr, "%s: \"%s\"", prog_name, err_string);
+     perror(" failed");
+     exit(1);
+Index: xc/lib/X11/lcFile.c
+===================================================================
+RCS file: /cvs/xorg/xc/lib/X11/lcFile.c,v
+retrieving revision 1.2
+diff -u -r1.2 lcFile.c
+--- xc/lib/X11/lcFile.c	23 Apr 2004 18:43:24 -0000	1.2
++++ xc/lib/X11/lcFile.c	19 Jun 2006 20:15:22 -0000
+@@ -230,7 +230,11 @@
+ 	    if (seteuid(0) != 0) {
+ 		priv = 0;
+ 	    } else {
+-		seteuid(oldeuid);
++		if (seteuid(oldeuid) == -1) {
++		    /* XXX ouch, coudn't get back to original uid 
++		     what can we do ??? */
++		    _exit(127);
++		}
+ 		priv = 1;
+ 	    }
+ #endif
+Index: xc/lib/xtrans/Xtranslcl.c
+===================================================================
+RCS file: /cvs/xorg/xc/lib/xtrans/Xtranslcl.c,v
+retrieving revision 1.2
+diff -u -r1.2 Xtranslcl.c
+--- xc/lib/xtrans/Xtranslcl.c	23 Apr 2004 18:44:27 -0000	1.2
++++ xc/lib/xtrans/Xtranslcl.c	19 Jun 2006 20:15:24 -0000
+@@ -348,7 +348,10 @@
+ 	uid_t       saved_euid;
+ 
+ 	saved_euid = geteuid();
+-	setuid( getuid() ); /** sets the euid to the actual/real uid **/
++	/** sets the euid to the actual/real uid **/
++	if (setuid( getuid() ) == -1) {
++		exit(1);
++	}
+ 	if( chown( slave, saved_euid, -1 ) < 0 ) {
+ 		exit( 1 );
+ 		}
+@@ -357,7 +360,13 @@
+     }
+ 
+     waitpid(saved_pid, &exitval, 0);
+-
++    if (WIFEXITED(exitval) && WEXITSTATUS(exitval) != 0) {
++	close(fd);
++	close(server);
++	PRMSG(1, "PTSOpenClient: cannot set the owner of %s\n",
++	      slave, 0, 0);
++	return(-1);
++    }
+     if (chmod(slave, 0666) < 0) {
+ 	close(fd);
+ 	close(server);
+Index: xc/programs/Xserver/hw/xfree86/common/xf86Init.c
+===================================================================
+RCS file: /cvs/xorg/xc/programs/Xserver/hw/xfree86/common/xf86Init.c,v
+retrieving revision 1.12.2.2
+diff -u -r1.12.2.2 xf86Init.c
+--- xc/programs/Xserver/hw/xfree86/common/xf86Init.c	17 Dec 2004 02:01:21 -0000	1.12.2.2
++++ xc/programs/Xserver/hw/xfree86/common/xf86Init.c	19 Jun 2006 20:15:25 -0000
+@@ -1861,7 +1861,11 @@
+           FatalError("xf86RunVtInit: fork failed (%s)\n", strerror(errno));
+           break;
+       case 0:  /* child */
+-          setuid(getuid());
++	  if (setuid(getuid()) == -1) {
++	      xf86Msg(X_ERROR, "xf86RunVtInit: setuid failed (%s)\n",
++			 strerror(errno));
++	      exit(255);
++	  }
+           /* set stdin, stdout to the consoleFd */
+           for (i = 0; i < 2; i++) {
+             if (xf86Info.consoleFd != i) {
+Index: xc/programs/Xserver/hw/xfree86/os-support/shared/libc_wrapper.c
+===================================================================
+RCS file: /cvs/xorg/xc/programs/Xserver/hw/xfree86/os-support/shared/libc_wrapper.c,v
+retrieving revision 1.3
+diff -u -r1.3 libc_wrapper.c
+--- xc/programs/Xserver/hw/xfree86/os-support/shared/libc_wrapper.c	30 Jul 2004 20:51:08 -0000	1.3
++++ xc/programs/Xserver/hw/xfree86/os-support/shared/libc_wrapper.c	19 Jun 2006 20:15:26 -0000
+@@ -1226,7 +1226,10 @@
+ #ifndef SELF_CONTAINED_WRAPPER
+ 	xf86DisableIO();
+ #endif
+-        setuid(getuid());
++        if (setuid(getuid()) == -1) {
++		ErrorF("xf86Execl: setuid() failed: %s\n", strerror(errno));
++		exit(255);
++	}
+ #if !defined(SELF_CONTAINED_WRAPPER)
+         /* set stdin, stdout to the consoleFD, and leave stderr alone */
+         for (i = 0; i < 2; i++)
+Index: xc/programs/Xserver/hw/xfree86/parser/write.c
+===================================================================
+RCS file: /cvs/xorg/xc/programs/Xserver/hw/xfree86/parser/write.c,v
+retrieving revision 1.2
+diff -u -r1.2 write.c
+--- xc/programs/Xserver/hw/xfree86/parser/write.c	31 Jul 2004 09:14:06 -0000	1.2
++++ xc/programs/Xserver/hw/xfree86/parser/write.c	19 Jun 2006 20:15:26 -0000
+@@ -166,7 +166,10 @@
+ 					strerror(errno));
+ 			return 0;
+ 		case 0: /* child */
+-			setuid(getuid());
++			if (setuid(getuid() == -1) 
++			    FatalError("xf86writeConfigFile(): "
++				"setuid failed(%s)\n", 
++				strerror(errno));
+ 			ret = doWriteConfigFile(filename, cptr);
+ 			exit(ret);
+ 			break;
+Index: xc/programs/Xserver/os/utils.c
+===================================================================
+RCS file: /cvs/xorg/xc/programs/Xserver/os/utils.c,v
+retrieving revision 1.6.2.3
+diff -u -r1.6.2.3 utils.c
+--- xc/programs/Xserver/os/utils.c	8 Dec 2004 06:34:31 -0000	1.6.2.3
++++ xc/programs/Xserver/os/utils.c	19 Jun 2006 20:15:26 -0000
+@@ -1,4 +1,4 @@
+-/* $XdotOrg: xc/programs/Xserver/os/utils.c,v 1.6.2.3 2004/12/08 06:34:31 gisburn Exp $ */
++/* $XdotOrg: xc/programs/Xserver/os/utils.c,v 1.21 2005/11/08 06:33:30 jkj Exp $ */
+ /* $Xorg: utils.c,v 1.5 2001/02/09 02:05:24 xorgcvs Exp $ */
+ /*
+ 
+@@ -1707,8 +1707,10 @@
+     case -1:	/* error */
+ 	p = -1;
+     case 0:	/* child */
+-	setgid(getgid());
+-	setuid(getuid());
++	if (setgid(getgid()) == -1)
++	    _exit(127);
++	if (setuid(getuid()) == -1)
++	    _exit(127);
+ 	execl("/bin/sh", "sh", "-c", command, (char *)NULL);
+ 	_exit(127);
+     default:	/* parent */
+@@ -1759,8 +1761,10 @@
+ 	xfree(cur);
+ 	return NULL;
+     case 0:	/* child */
+-	setgid(getgid());
+-	setuid(getuid());
++	if (setgid(getgid()) == -1)
++	    _exit(127);
++	if (setuid(getuid()) == -1)
++	    _exit(127);
+ 	if (*type == 'r') {
+ 	    if (pdes[1] != 1) {
+ 		/* stdout */
+@@ -1834,8 +1838,10 @@
+ 	xfree(cur);
+ 	return NULL;
+     case 0:	/* child */
+-	setgid(getgid());
+-	setuid(getuid());
++	if (setgid(getgid()) == -1)
++	    _exit(127);
++	if (setuid(getuid()) == -1)
++	    _exit(127);
+ 	if (*type == 'r') {
+ 	    if (pdes[1] != 1) {
+ 		/* stdout */
+Index: xc/programs/xdm/session.c
+===================================================================
+RCS file: /cvs/xorg/xc/programs/xdm/session.c,v
+retrieving revision 1.2
+diff -u -r1.2 session.c
+--- xc/programs/xdm/session.c	23 Apr 2004 19:54:42 -0000	1.2
++++ xc/programs/xdm/session.c	19 Jun 2006 20:15:26 -0000
+@@ -1,4 +1,4 @@
+-/* $XdotOrg: xc/programs/xdm/session.c,v 1.2 2004/04/23 19:54:42 eich Exp $ */
++/* $XdotOrg: xc/programs/xdm/session.c,v 1.3 2005/11/08 06:33:31 jkj Exp $ */
+ /* $Xorg: session.c,v 1.8 2001/02/09 02:05:40 xorgcvs Exp $ */
+ /*
+ 
+@@ -484,8 +484,14 @@
+     else
+ 	ResetServer (d);
+     if (removeAuth) {
+-	setgid (verify.gid);
+-	setuid (verify.uid);
++	if (setgid (verify.gid) == -1) {
++	    LogError( "SessionExit: setgid: %s\n", strerror(errno));
++	    exit(status);
++	}
++	if (setuid (verify.uid) == -1) {
++	    LogError( "SessionExit: setuid: %s\n", strerror(errno));
++	    exit(status);
++	}
+ 	RemoveUserAuthorization (d, &verify);
+ #ifdef K5AUTH
+ 	/* do like "kdestroy" program */
+Index: xc/programs/xdm/xdmshell.c
+===================================================================
+RCS file: /cvs/xorg/xc/programs/xdm/xdmshell.c,v
+retrieving revision 1.2
+diff -u -r1.2 xdmshell.c
+--- xc/programs/xdm/xdmshell.c	23 Apr 2004 19:54:42 -0000	1.2
++++ xc/programs/xdm/xdmshell.c	19 Jun 2006 20:15:26 -0000
+@@ -179,7 +179,11 @@
+ #endif
+ 
+     /* make xdm run in a non-setuid environment */
+-    setuid (geteuid());
++    if (setuid (geteuid()) == -1) {
++	fprintf(stderr, "%s: cannot setuid (error %d, %s)\r\n",
++		ProgramName, errno, strerror(errno));
++	exit(1);
++    }
+ 
+     /*
+      * exec /usr/bin/X11/xdm -nodaemon -udpPort 0
+Index: xc/programs/xf86dga/dga.c
+===================================================================
+RCS file: /cvs/xorg/xc/programs/xf86dga/dga.c,v
+retrieving revision 1.2
+diff -u -r1.2 dga.c
+--- xc/programs/xf86dga/dga.c	23 Apr 2004 19:54:47 -0000	1.2
++++ xc/programs/xf86dga/dga.c	19 Jun 2006 20:15:27 -0000
+@@ -16,6 +16,7 @@
+ #include <X11/Xmd.h>
+ #include <X11/extensions/xf86dga.h>
+ #include <ctype.h>
++#include <errno.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <signal.h>
+@@ -141,7 +142,10 @@
+ 
+ #ifndef __UNIXOS2__
+    /* Give up root privs */
+-   setuid(getuid());
++   if (setuid(getuid()) == -1) {
++      fprintf(stderr, "Unable to change uid: %s\n", strerror(errno));
++      exit(2);
++   }
+ #endif
+ 
+    XF86DGASetViewPort(dis, DefaultScreen(dis), 0, 0);
+Index: xc/programs/xinit/xinit.c
+===================================================================
+RCS file: /cvs/xorg/xc/programs/xinit/xinit.c,v
+retrieving revision 1.2
+diff -u -r1.2 xinit.c
+--- xc/programs/xinit/xinit.c	23 Apr 2004 19:54:49 -0000	1.2
++++ xc/programs/xinit/xinit.c	19 Jun 2006 20:15:27 -0000
+@@ -678,7 +678,10 @@
+ startClient(char *client[])
+ {
+ 	if ((clientpid = vfork()) == 0) {
+-		setuid(getuid());
++		if (setuid(getuid()) == -1) {
++			Error("cannot change uid: %s\n", strerror(errno));
++			_exit(ERR_EXIT);
++		}
+ 		setpgrp(0, getpid());
+ 		environ = newenviron;
+ #ifdef __UNIXOS2__
+Index: xc/programs/xload/xload.c
+===================================================================
+RCS file: /cvs/xorg/xc/programs/xload/xload.c,v
+retrieving revision 1.2
+diff -u -r1.2 xload.c
+--- xc/programs/xload/xload.c	23 Apr 2004 19:54:57 -0000	1.2
++++ xc/programs/xload/xload.c	19 Jun 2006 20:15:27 -0000
+@@ -34,7 +34,7 @@
+  * xload - display system load average in a window
+  */
+ 
+-
++#include <errno.h>
+ #include <stdio.h> 
+ #include <stdlib.h>
+ #include <unistd.h>
+@@ -162,8 +162,17 @@
+     /* For security reasons, we reset our uid/gid after doing the necessary
+        system initialization and before calling any X routines. */
+     InitLoadPoint();
+-    setgid(getgid());		/* reset gid first while still (maybe) root */
+-    setuid(getuid());
++    /* reset gid first while still (maybe) root */
++    if (setgid(getgid()) == -1) {
++	    fprintf(stderr, "%s: setgid failed: %s\n", 
++		ProgramName, strerror(errno));
++	    exit(1);
++    }
++    if (setuid(getuid()) == -1) {
++	    fprintf(stderr, "%s: setuid failed: %s\n", 
++		ProgramName, strerror(errno));
++	    exit(1);
++    }
+ 
+     XtSetLanguageProc(NULL, (XtLanguageProc) NULL, NULL);
+ 
+Index: xc/programs/xterm/main.c
+===================================================================
+RCS file: /cvs/xorg/xc/programs/xterm/main.c,v
+retrieving revision 1.4.2.1
+diff -u -r1.4.2.1 main.c
+--- xc/programs/xterm/main.c	12 Jan 2005 21:45:10 -0000	1.4.2.1
++++ xc/programs/xterm/main.c	19 Jun 2006 20:15:28 -0000
+@@ -2789,8 +2789,10 @@
+ #ifdef USE_PTY_DEVICE
+ 	set_pty_id(ptydev, passedPty);
+ #endif
+-	setgid(screen->gid);
+-	setuid(screen->uid);
++	if (setgid(screen->gid) == -1) 
++	    SysError(ERROR_SETUID);
++	if (setuid(screen->uid) == -1)
++	    SysError(ERROR_SETUID);
+     } else {
+ 	Bool tty_got_hung;
+ 
+Index: xc/programs/xterm/misc.c
+===================================================================
+RCS file: /cvs/xorg/xc/programs/xterm/misc.c,v
+retrieving revision 1.3.2.1
+diff -u -r1.3.2.1 misc.c
+--- xc/programs/xterm/misc.c	12 Jan 2005 21:45:10 -0000	1.3.2.1
++++ xc/programs/xterm/misc.c	19 Jun 2006 20:15:28 -0000
+@@ -1045,8 +1045,10 @@
+     pid = fork();
+     switch (pid) {
+     case 0:			/* child */
+-	setgid(gid);
+-	setuid(uid);
++	if (setgid(gid) == -1)
++	    _exit(ERROR_SETUID);
++	if (setuid(uid) == -1) 
++	    _exit(ERROR_SETUID);
+ 	fd = open(pathname,
+ 		  O_WRONLY | O_CREAT | (append ? O_APPEND : O_EXCL),
+ 		  mode);
+@@ -1212,8 +1214,10 @@
+ 	    signal(SIGCHLD, SIG_DFL);
+ 
+ 	    /* (this is redundant) */
+-	    setgid(screen->gid);
+-	    setuid(screen->uid);
++	    if (setgid(screen->gid) == -1)
++		exit(ERROR_SETUID);
++	    if (setuid(screen->uid) == -1)
++		exit(ERROR_SETUID);
+ 
+ 	    execl(shell, shell, "-c", &screen->logfile[1], (void *) 0);
+ 
+Index: xc/programs/xterm/print.c
+===================================================================
+RCS file: /cvs/xorg/xc/programs/xterm/print.c,v
+retrieving revision 1.3.2.1
+diff -u -r1.3.2.1 print.c
+--- xc/programs/xterm/print.c	12 Jan 2005 21:45:10 -0000	1.3.2.1
++++ xc/programs/xterm/print.c	19 Jun 2006 20:15:28 -0000
+@@ -381,9 +381,11 @@
+ 		dup2(fileno(stderr), 2);
+ 		close(fileno(stderr));
+ 	    }
+-
+-	    setgid(screen->gid);	/* don't want privileges! */
+-	    setuid(screen->uid);
++	    /* don't want privileges! */
++	    if (setgid(screen->gid) == -1)
++		    exit(2);
++	    if (setuid(screen->uid) == -1)
++		    exit(2);
+ 
+ 	    Printer = popen(screen->printer_command, "w");
+ 	    input = fdopen(my_pipe[0], "r");

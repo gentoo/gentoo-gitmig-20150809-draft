@@ -1,6 +1,19 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.543 2006/05/28 16:46:31 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.544 2006/06/20 20:00:51 spyderous Exp $
+
+*xorg-x11-6.9.0-r2 (20 Jun 2006)
+*xorg-x11-6.8.2-r8 (20 Jun 2006)
+
+  20 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/xorg-68x-setuid.patch, +files/x11r6.9.0-setuid.diff,
+  +xorg-x11-6.8.2-r8.ebuild, -xorg-x11-6.9.0-r1.ebuild,
+  +xorg-x11-6.9.0-r2.ebuild:
+  Security bump. Failure to check the return value of setuid() in a privileged
+  process could be used by a local user for file overwriting and possible
+  privilege escalation in corner cases. See
+  http://lists.freedesktop.org/archives/xorg/2006-June/016146.html for more
+  information.
 
 *xorg-x11-7.1 (28 May 2006)
 
