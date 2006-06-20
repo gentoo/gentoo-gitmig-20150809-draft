@@ -7,9 +7,13 @@
 1. Create config.inc.php. You can use the web-based installer:
    http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/scripts/setup.php
 
-   Alternatively, use the default config file in libraries/config.default.php:
+   Alternatively, use the default config file in libraries/config.default.php
 
-     cp ${MY_INSTALLDIR}/libraries/config.default.php ${MY_INSTALLDIR}/config.inc.php
+   mkdir ${MY_INSTALLDIR}/config
+   chmod o+rw ${MY_INSTALLDIR}/config
+   # if you want to edit existing configuration:
+   cp ${MY_INSTALLDIR}/config.inc.php ${MY_INSTALLDIR}/config/
+   chown -R VHOST_SERVER_GID:VHOST_SERVER_UID ${MY_INSTALLDIR}/config
 
 2. Be sure that the libraries/ directory is not visible. You can use the
 provided .htaccess file.
