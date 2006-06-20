@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.38 2006/06/20 04:54:04 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.39 2006/06/20 17:28:58 tcort Exp $
+
+  20 Jun 2006; Thomas Cort <tcort@gentoo.org> horde-3.1.1-r1.ebuild:
+  Stable on alpha and amd64 wrt security Bug #136830.
 
   20 Jun 2006; Joshua Jackson <tsunam@gentoo.org> horde-3.1.1-r1.ebuild:
   Stable x86; bug #136830
