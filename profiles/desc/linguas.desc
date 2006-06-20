@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.5 2006/06/18 22:15:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.6 2006/06/20 18:21:49 suka Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -8,6 +8,7 @@
 
 af - Afrikaans locale
 ar - Arabic locale
+as_IN - Assamese locale for India
 az - Azeri locale
 be - Belarusian locale
 bg - Bulgarian locale
@@ -22,6 +23,7 @@ de - German locale
 el - Greek locale
 en - English locale
 en_GB - English locale for Britain
+en_ZA - English locale for South Africa
 eo - Esperanto locale
 es - Spanish locale
 et - Estonian locale
@@ -32,6 +34,7 @@ fr - French locale
 fy - Frisian locale
 ga - Irish locale
 gl - Galician locale
+gu_IN - Gujarati locale for India
 he - Hebrew locale
 hi - Hindi locale
 hr - Croatian locale
@@ -51,6 +54,8 @@ lo - Lao locale
 lt - Lithuanian locale
 lv - Latvian locale
 mk - Macedonian locale
+ml_IN - Malayalam locale for India
+mr_IN - Marathi locale for India
 mn - Mongolian locale
 ms - Malay locale
 mt - Maltese locale
@@ -58,7 +63,10 @@ nb - Norwegian (Bokmal) locale
 nds - Low Saxon locale
 nl - Dutch locale
 nn - Nynorsk locale
-pa - Punjabi locale
+nr - Ndebele (South) locale
+ns - Northern Sotho locale
+or_IN - Oriya  for India
+pa - Punjabi locale for India
 pl - Polish locale
 pt_BR - Portuguese locale for Brasil
 pt - Portuguese locale
@@ -66,19 +74,29 @@ ro - Romanian locale
 ru - Russian locale
 rw - Kinyarwanda locale
 se - Northern Saami locale
+sh_YU - Serbo-Croatian locale
 sk - Slovak locale
 sl - Slovenian locale
 sq - Albanian locale
 sr@Latn - Serbian (latin) locale
 sr - Serbian locale
 ss - Swati locale
+st - Southern Sotho locale
 sv - Swedish locale
+sw_TZ - Swahili locale for Tanzania
 ta - Tamil locale
+te_IN - Telugu locale for India
 tg - Tajik locale
 th - Thai locale
+ti_ER - Tigrinya locale for Eritrea
+tn - Tswana locale
 tr - Turkish locale
+ts - Tsonga locale
+ur_IN - Urdu locale for India
 uk - Ukrainian locale
 uz - Uzbek locale
 vi - Vietnamese locale
+xh - Xhosa locale
 zh_CN - Chinese locale for Peoples Republic of China
 zh_TW - Chinese locale for Taiwan
+zu - Zulu locale
