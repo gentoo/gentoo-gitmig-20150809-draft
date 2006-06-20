@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.13 2006/02/11 04:44:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.14 2006/06/20 19:16:06 vapier Exp $
 
-inherit eutils toolchain-funcs flag-o-matic games
+inherit eutils toolchain-funcs flag-o-matic multilib games
 
 PATCH="${P/-/_}-7.diff"
 DESCRIPTION="NES emulation for Linux/x86"
@@ -21,11 +21,6 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}
 
-pkg_setup() {
-	games_pkg_setup
-	use amd64 && export ABI=x86
-}
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -38,6 +33,11 @@ src_unpack() {
 		-e "s:ld:$(tc-getLD) $(raw-ldflags):" \
 		Makefile \
 		|| die "sed failed"
+}
+
+src_compile() {
+	use amd64 && multilib_toolchain_setup x86
+	games_src_compile
 }
 
 src_install() {
