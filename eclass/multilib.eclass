@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.51 2006/06/20 18:27:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.52 2006/06/20 20:16:34 vapier Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -196,6 +196,7 @@ get_abi_CFLAGS() { get_abi_var CFLAGS "$@"; }
 get_abi_ASFLAGS() { get_abi_var ASFLAGS "$@"; }
 get_abi_LDFLAGS() { get_abi_var LDFLAGS "$@"; }
 get_abi_CHOST() { get_abi_var CHOST "$@"; }
+get_abi_CTARGET() { get_abi_var CTARGET "$@"; }
 get_abi_FAKE_TARGETS() { get_abi_var FAKE_TARGETS "$@"; }
 get_abi_CDEFINE() { get_abi_var CDEFINE "$@"; }
 get_abi_LIBDIR() { get_abi_var LIBDIR "$@"; }
