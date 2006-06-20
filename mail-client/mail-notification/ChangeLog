@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.31 2006/04/26 18:02:19 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.32 2006/06/20 16:24:54 slarti Exp $
+
+*mail-notification-3.0 (20 Jun 2006)
+
+  20 Jun 2006; Tom Martin <slarti@gentoo.org> +mail-notification-3.0.ebuild:
+  Version bump, resolves bug #136330. Thanks to Patrick van Staveren
+  <trick@vanstaveren.us> and Frittella Laurento <mrfree@infinito.it> for
+  ebuild submissions.
 
   26 Apr 2006; Tom Martin <slarti@gentoo.org> mail-notification-2.0.ebuild:
   Below changes didn't work. Second try.
