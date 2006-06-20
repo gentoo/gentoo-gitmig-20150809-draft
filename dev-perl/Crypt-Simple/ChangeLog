@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Crypt-Simple
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Simple/ChangeLog,v 1.1 2006/06/20 12:50:13 ian Exp $
+
+*Crypt-Simple-0.06 (20 Jun 2006)
+
+  20 Jun 2006; Christian Hartmann <ian@gentoo.org> +metadata.xml,
+  +Crypt-Simple-0.06.ebuild:
+  New package; dep for bug #137293
+
