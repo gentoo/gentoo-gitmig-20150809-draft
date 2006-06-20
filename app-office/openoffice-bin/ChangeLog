@@ -1,6 +1,15 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.131 2006/06/04 14:00:21 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.132 2006/06/20 17:48:55 suka Exp $
+
+*openoffice-bin-2.0.3_rc6 (20 Jun 2006)
+
+  20 Jun 2006; Andreas Proschofsky <suka@gentoo.org>
+  -files/2.0.3_rc5/50-openoffice-bin, +files/2.0.3_rc6/50-openoffice-bin,
+  -files/2.0.3_rc5/ooo-wrapper2, +files/2.0.3_rc6/ooo-wrapper2,
+  -openoffice-bin-2.0.3_rc5.ebuild, +openoffice-bin-2.0.3_rc6.ebuild:
+  Another release candidate for OOo 2.0.3, this also adds the supported
+  LINGUAS to IUSE, see bug #136953
 
 *openoffice-bin-2.0.3_rc5 (04 Jun 2006)
 
