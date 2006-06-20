@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.111 2006/06/11 18:28:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.112 2006/06/20 12:26:32 fmccor Exp $
+
+  20 Jun 2006; Ferris McCormick <fmccor@gentoo.org> sqlite-2.8.16-r4.ebuild:
+  Stable on sparc --- Bug #118429 --- has worked fine for me for six or seven
+  weeks.
 
   11 Jun 2006; Fabian Groffen <grobian@gentoo.org> sqlite-2.8.16-r1.ebuild:
   Marked ppc-macos stable for progressive users (bug #109044)
