@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.15.ebuild,v 1.6 2006/06/15 08:03:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.15.ebuild,v 1.7 2006/06/20 21:38:46 eradicator Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -59,9 +59,6 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
-# this will not build as 64bit code 	 
-export ABI=x86
-
 src_unpack() {
 	unpack wine-${PV}.tar.bz2
 	cd "${S}"
@@ -104,9 +101,10 @@ src_compile() {
 
 	strip-flags
 
+	use amd64 && multilib_toolchain_setup x86
+
 	#	$(use_enable amd64 win64)
 	econf \
-		CC="$(tc-getCC)" \
 		--sysconfdir=/etc/wine \
 		$(use_with ncurses curses) \
 		$(use_with opengl) \
