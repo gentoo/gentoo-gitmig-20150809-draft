@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.35 2006/05/29 21:44:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.36 2006/06/21 17:51:40 vapier Exp $
+
+*ntfsprogs-1.13.1 (21 Jun 2006)
+
+  21 Jun 2006; Mike Frysinger <vapier@gentoo.org> +ntfsprogs-1.13.1.ebuild:
+  Version bump.
 
   29 May 2006; Simon Stelling <blubb@gentoo.org> ntfsprogs-1.13.0.ebuild:
   stable on amd64
