@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r1.ebuild,v 1.2 2006/06/07 05:38:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r1.ebuild,v 1.3 2006/06/21 16:15:40 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -209,6 +209,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-kernel-2.6.16.diff
+	epatch ${FILESDIR}/${P}-kernel-2.6.17.diff
 
 	use lirc_devices_xboxusb && epatch ${FILESDIR}/lirc-0.8.0pre4-xbox-remote.diff
 	use lirc_devices_imon_pad2keys && epatch ${FILESDIR}/${P}-imon-pad2keys.patch

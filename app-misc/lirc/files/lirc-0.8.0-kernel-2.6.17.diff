@@ -1,0 +1,29 @@
+diff -ru lirc-0.8.0/drivers/lirc_gpio/lirc_gpio.c lirc-0.8.0-kernel-2.6.17/drivers/lirc_gpio/lirc_gpio.c
+--- lirc-0.8.0/drivers/lirc_gpio/lirc_gpio.c	2006-01-01 14:43:46.000000000 +0100
++++ lirc-0.8.0-kernel-2.6.17/drivers/lirc_gpio/lirc_gpio.c	2006-06-21 17:20:32.000000000 +0200
+@@ -48,9 +48,12 @@
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2,4,0)
+ #include "../drivers/char/bttv.h"
+ #include "../drivers/char/bttvp.h"
+-#else
++#elif LINUX_VERSION_CODE < KERNEL_VERSION(2,6,17)
+ #include "../drivers/media/video/bttv.h"
+ #include "../drivers/media/video/bttvp.h"
++#else
++#include "../drivers/media/video/bt8xx/bttv.h"
++#include "../drivers/media/video/bt8xx/bttvp.h"
+ #endif
+ 
+ #if BTTV_VERSION_CODE < KERNEL_VERSION(0,7,45)
+diff -ru lirc-0.8.0/drivers/Makefile.common lirc-0.8.0-kernel-2.6.17/drivers/Makefile.common
+--- lirc-0.8.0/drivers/Makefile.common	2005-12-27 13:59:01.000000000 +0100
++++ lirc-0.8.0-kernel-2.6.17/drivers/Makefile.common	2006-06-21 17:47:14.000000000 +0200
+@@ -10,7 +10,7 @@
+ KBUILD_VERBOSE = 1
+ LIRC_EXTRA_CFLAGS = -DIRCTL_DEV_MAJOR=$(lirc_major) -DEXPORT_SYMTAB $(DEFS) \
+ 		$(DEFAULT_INCLUDES) -I$(LIRC_DEVDIR)/../.. \
+-		-I$(KERNEL_LOCATION)/include/
++		-I$(KERNEL_LOCATION)/include/ -Idrivers/media/video
+ export LIRC_EXTRA_CFLAGS KERNEL_LOCATION module_DATA
+ 
+ $(module_DATA): $(automake_dummy_SOURCES) $(top_srcdir)/config.h ../lirc.h

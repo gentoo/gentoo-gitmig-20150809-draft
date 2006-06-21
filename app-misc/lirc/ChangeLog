@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.90 2006/06/07 05:38:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.91 2006/06/21 16:15:40 zzam Exp $
+
+  21 Jun 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/lirc-0.8.0-kernel-2.6.17.diff, lirc-0.8.0.ebuild,
+  lirc-0.8.0-r1.ebuild:
+  Make it compile with Kernel 2.6.17, solving Bug #137409.
 
   07 Jun 2006; Markus Rothe <corsair@gentoo.org> lirc-0.8.0-r1.ebuild:
   Added ~ppc64; bug #131306
