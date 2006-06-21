@@ -58,7 +58,7 @@
  	cp ~/tree/pciids/pci.ids pci.ids
 --- pciutils-2.2.0/pcimodules.c
 +++ pciutils-dsd/pcimodules.c
-@@ -0,0 +1,183 @@
+@@ -0,0 +1,182 @@
 +/*
 + *	pcimodules:  Load all kernel modules for PCI device currently
 + *      plugged into any PCI slot.
@@ -77,7 +77,6 @@
 +
 +#include <stdlib.h>
 +#include <stdio.h>
-+#include <malloc.h>
 +#include <string.h>
 +#include <unistd.h>
 +#include <sys/utsname.h>

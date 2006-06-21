@@ -59,7 +59,7 @@
        /* For cardbus bridges, we need to fetch 64 bytes more to get the full standard header... */
 --- ./pcimodules.c.orig	2003-02-20 23:22:36.000000000 -0800
 +++ ./pcimodules.c	2003-02-20 23:22:36.000000000 -0800
-@@ -0,0 +1,183 @@
+@@ -0,0 +1,182 @@
 +/*
 + *	pcimodules:  Load all kernel modules for PCI device currently
 + *      plugged into any PCI slot.
@@ -78,7 +78,6 @@
 +
 +#include <stdlib.h>
 +#include <stdio.h>
-+#include <malloc.h>
 +#include <string.h>
 +#include <unistd.h>
 +#include <sys/utsname.h>
