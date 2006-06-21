@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/libXaw-1.0.2.ebuild,v 1.1 2006/04/29 15:24:54 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/libXaw-1.0.2.ebuild,v 1.2 2006/06/21 05:57:25 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -24,3 +24,13 @@ DEPEND="${RDEPEND}
 	sys-apps/ed"
 
 CONFIGURE_OPTIONS="`use_enable xprint xaw8`"
+
+pkg_setup() {
+	# No such function yet
+	# x-modular_pkg_setup
+
+	# (#125465) Broken with Bdirect support
+	filter-flags -Wl,-Bdirect
+	filter-ldflags -Bdirect
+	filter-ldflags -Wl,-Bdirect
+}
