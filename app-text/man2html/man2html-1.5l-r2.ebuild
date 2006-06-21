@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/man2html-1.5l-r2.ebuild,v 1.11 2005/10/13 17:30:07 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/man2html-1.5l-r2.ebuild,v 1.12 2006/06/21 17:33:29 vapier Exp $
 
 inherit eutils webapp
 
@@ -14,7 +14,7 @@ IUSE=""
 
 DEPEND="app-misc/glimpse
 	sys-apps/gawk
-	sys-apps/man"
+	virtual/man"
 
 S=${WORKDIR}/man-${PV}
 
@@ -25,13 +25,14 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/mansearch-gentoo.patch
-	epatch ${FILESDIR}/manwhatis-gentoo.patch
-	epatch ${FILESDIR}/mansec.patch
-	find man2html -type f | xargs sed -i -e  "s:/home/httpd/htdocs/:/var/www/localhost/:g"
-	find man2html -type f | xargs sed -i -e  "s:/home/httpd/cgi-bin/:/var/www/localhost/cgi-bin/man:g"
-	find man2html -type f | xargs sed -i -e  "s:/home/httpd/cgi-aux/man:/var/www/localhost/cgi-aux/man:g"
+	cd "${S}"
+	epatch "${FILESDIR}"/mansearch-gentoo.patch
+	epatch "${FILESDIR}"/manwhatis-gentoo.patch
+	epatch "${FILESDIR}"/mansec.patch
+	find man2html -type f | xargs sed -i \
+		-e "s:/home/httpd/htdocs/:/var/www/localhost/:g" \
+		-e "s:/home/httpd/cgi-bin/:/var/www/localhost/cgi-bin/man:g" \
+		-e "s:/home/httpd/cgi-aux/man:/var/www/localhost/cgi-aux/man:g"
 }
 
 src_compile() {
@@ -50,7 +51,7 @@ src_install() {
 	newins glimpse_filters .glimpse_filters
 	fperms 1777 /var/man2html
 	exeinto /etc/cron.daily
-	doexe ${FILESDIR}/man2html.cron
+	newexe "${FILESDIR}"/man2html.cron man2html
 
 	webapp_src_install
 }
