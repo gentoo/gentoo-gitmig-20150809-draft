@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.13.1.ebuild,v 1.2 2006/05/07 22:08:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.13.1.ebuild,v 1.3 2006/06/21 07:09:30 genstef Exp $
 
 inherit eutils libtool kde-functions autotools
 
@@ -15,11 +15,14 @@ IUSE="pam_console doc"
 
 RDEPEND=">=sys-apps/dbus-0.30
 	>=sys-apps/hal-0.5.3
-	>=sys-power/cpufrequtils-0.4
+	>=sys-power/cpufrequtils-001
 	pam_console? ( sys-libs/pam )"
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen
-		app-text/tetex )"
+	doc? (
+		app-doc/doxygen
+		virtual/tetex
+		www-client/lynx
+	)"
 
 pkg_setup() {
 	if use pam_console && ! built_with_use sys-libs/pam pam_console ; then
