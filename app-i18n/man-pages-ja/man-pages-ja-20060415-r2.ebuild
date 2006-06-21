@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20060415-r2.ebuild,v 1.1 2006/05/17 10:54:52 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20060415-r2.ebuild,v 1.2 2006/06/21 17:25:42 vapier Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ SLOT="0"
 
 DEPEND="!>=sys-apps/groff-1.19
 	=sys-apps/groff-1.18*
-	sys-apps/man"
+	virtual/man"
 
 pkg_setup() {
 
