@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/mtxdrivers-pro
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/mtxdrivers-pro/ChangeLog,v 1.2 2006/05/03 09:01:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/mtxdrivers-pro/ChangeLog,v 1.3 2006/06/21 06:57:27 spyderous Exp $
+
+  21 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  I no longer have time to maintain this, so it'll drop back to x11-drivers.
 
   03 May 2006; Jeremy Huddleston <eradicator@gentoo.org>
   -mtxdrivers-pro-1.1.0_beta-r2.ebuild, mtxdrivers-pro-1.1.0_beta-r3.ebuild:

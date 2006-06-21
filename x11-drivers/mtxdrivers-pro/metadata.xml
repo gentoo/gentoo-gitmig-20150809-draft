@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>X11-drivers</herd>
-<maintainer>
-  <email>spyderous@gentoo.org</email>
-  <name>Donnie Berkholz</name>
-</maintainer>
 </pkgmetadata>
