@@ -1,0 +1,11 @@
+--- kalyptus/kalyptus	2006-04-20 14:29:57.000000000 -0400
++++ kalyptus/kalyptus.orig	2006-06-21 10:25:16.000000000 -0400
+@@ -462,6 +462,8 @@
+ 		$p =~ s/QT_MODULE\(\w+\)//;
+ 		$p =~ s/QT_STATIC_CONST/static const/;
+ 		$p =~ s/QT_WEAK_SYMBOL//;
++		$p =~ s/QT_BEGIN_HEADER//;
++		$p =~ s/QT_END_HEADER//;
+ 		$p =~ s/QT_MOC_COMPAT//;
+ 		$p =~ s/Q_EXPORT_CODECS_BIG5//;
+ 		$p =~ s/QT_COMPAT / /;

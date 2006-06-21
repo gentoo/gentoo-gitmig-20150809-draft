@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/qt4-qtruby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.3 2006/06/13 12:46:11 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.4 2006/06/21 14:49:27 caleb Exp $
+
+  21 Jun 2006; Caleb Tennis <caleb@gentoo.org> +files/kalyptus-fix.diff,
+  -files/style-fix.diff, qt4-qtruby-1.4.5.ebuild:
+  A fix for kalpytus to work with qt-4.1.3 and use -j1 per bug #132584
 
   13 Jun 2006; Caleb Tennis <caleb@gentoo.org> +files/style-fix.diff,
   qt4-qtruby-1.4.5.ebuild:
