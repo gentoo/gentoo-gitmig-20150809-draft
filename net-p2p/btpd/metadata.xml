@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+<email>ricardo.cordeiro@iscte.pt</email>
+<name> Ricardo Cordeiro</name>
+</maintainer>
+<maintainer>
+<email>metalgod@gentoo.org</email>
+<name>Luis Medinas</name>
+</maintainer>
+<longdescription lang="en">
+Ricardo is the maintainer for this application. I only will act as his proxy.
+</longdescription>
+</pkgmetadata>
+
