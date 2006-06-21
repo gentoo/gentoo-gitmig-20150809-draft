@@ -1,0 +1,60 @@
+#!/sbin/runscript
+
+#NB: Config is in /etc/conf.d/icecream
+
+depend() {
+        need net
+}
+
+start() {
+
+	netname=
+	if test -n "$ICECREAM_NETNAME"; then
+		netname="-n $ICECREAM_NETNAME"
+	fi
+	if test "$ICECREAM_RUN_SCHEDULER" == "yes"; then
+		logfile=""
+		if test -z "$ICECREAM_SCHEDULER_LOG_FILE"; then
+			ICECREAM_SCHEDULER_LOG_FILE="/var/log/icecc_scheduler"
+		fi
+		logfile="-l $ICECREAM_SCHEDULER_LOG_FILE"
+		: > $ICECREAM_SCHEDULER_LOG_FILE
+		chown icecream:icecream $ICECREAM_SCHEDULER_LOG_FILE
+		
+		ebegin "Starting Distributed Compiler Scheduler"
+	        start-stop-daemon -u icecream --start --quiet --exec /usr/sbin/scheduler -- -d $logfile $netname
+		eend ${?}
+        fi
+	logfile=""
+	if test -n "$ICECREAM_LOG_FILE"; then
+		logfile="-l $ICECREAM_LOG_FILE"
+		: > $ICECREAM_LOG_FILE
+		chown icecream:icecream $ICECREAM_LOG_FILE
+	fi
+	nice=
+	if test -n "$ICECREAM_NICE_LEVEL"; then
+		nice="--nice $ICECREAM_NICE_LEVEL"
+	fi
+	scheduler=
+	if test -n "$ICECREAM_SCHEDULER_HOST"; then
+		scheduler="-s $ICECREAM_SCHEDULER_HOST"
+	fi
+	maxjobs=
+	if test -n "$ICECREAM_MAX_JOBS"; then
+		maxjobs="-m $ICECREAM_MAX_JOBS"
+	fi
+	ebegin "Starting Distributed Compiler Daemon"
+	start-stop-daemon --start --quiet --exec /usr/sbin/iceccd -- -d $logfile $nice $scheduler $netname -u icecream -b "$ICECREAM_BASEDIR" $maxjobs
+	eend ${?}
+}
+
+stop() {
+	ebegin "Stopping Distributed Compiler Daemon"
+	start-stop-daemon --stop --quiet --name iceccd
+	eend ${?}
+	if test "$ICECREAM_RUN_SCHEDULER" == "yes"; then
+		ebegin "Stopping Distributed Compiler Scheduler"
+		start-stop-daemon --stop --quiet --name scheduler
+		eend ${?}
+	fi
+}

@@ -1,0 +1,28 @@
+--- icecream/client/main.cpp.dist	2005-12-18 10:20:11.000000000 -0500
++++ icecream/client/main.cpp	2005-12-18 10:24:29.000000000 -0500
+@@ -72,6 +72,7 @@
+ "   --help                     explain usage and exit\n"
+ "   --version                  show version and exit\n"
+ "Environment Variables:\n"
++"   ICECC_DISABLE              if set the local compiler is used.\n"
+ "   ICECC_VERSION              use a specific icecc environment, see create-env\n"
+ "   ICECC_REPEAT_RATE          the number of jobs out of 1000 that should be\n"
+ "                              compiled on multiple hosts to ensure that they're\n"
+@@ -117,6 +118,7 @@
+ int main(int argc, char **argv)
+ {
+     char *env = getenv( "ICECC_DEBUG" );
++    char *icecc_disable = getenv( "ICECC_DISABLE" );
+     int debug_level = Error;
+     if ( env ) {
+         if ( !strcasecmp( env, "info" ) )  {
+@@ -161,6 +163,9 @@
+     CompileJob job;
+     local = analyse_argv( argv, job );
+ 
++    if(icecc_disable != NULL)
++      local = true;
++                                                                              
+     pid_t pid = 0;
+ 
+     /* for local jobs, we fork off a child that tells the scheduler that we got something

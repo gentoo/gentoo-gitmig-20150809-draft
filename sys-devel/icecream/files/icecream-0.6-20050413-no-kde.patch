@@ -1,0 +1,76 @@
+--- icecream.orig/configure.in	2005-04-13 03:29:41.000000000 -0400
++++ icecream/configure.in	2005-12-18 14:02:24.000000000 -0500
+@@ -156,13 +156,13 @@
+ dnl === END LZO
+ 
+ UIC_NOT_NEEDED=1
+-KDE_CHECK_FINAL
++#KDE_CHECK_FINAL
+ dnl =======================================================
+ dnl FILE: ./mon/configure.in.in
+ dnl =======================================================
+ 
+-KDE_SET_PREFIX
+-AC_PATH_KDE
++#KDE_SET_PREFIX
++#AC_PATH_KDE
+ 
+ dnl =======================================================
+ dnl FILE: ./services/configure.in.in
+@@ -193,9 +193,9 @@
+ AC_CONFIG_FILES([ client/Makefile ])
+ AC_CONFIG_FILES([ daemon/Makefile ])
+ AC_CONFIG_FILES([ minilzo/Makefile ])
+-AC_CONFIG_FILES([ mon/Makefile ])
+-AC_CONFIG_FILES([ mon/doc/Makefile ])
+-AC_CONFIG_FILES([ mon/doc/icemon/Makefile ])
++#AC_CONFIG_FILES([ mon/Makefile ])
++#AC_CONFIG_FILES([ mon/doc/Makefile ])
++#AC_CONFIG_FILES([ mon/doc/icemon/Makefile ])
+ AC_CONFIG_FILES([ services/Makefile ])
+ if test "$prefix" = NONE; then
+   prefix=$ac_default_prefix
+@@ -206,22 +206,22 @@
+ 
+ AC_OUTPUT
+ # Check if KDE_SET_PREFIX was called, and --prefix was passed to configure
+-if test -n "$kde_libs_prefix" -a -n "$given_prefix"; then
++#if test -n "$kde_libs_prefix" -a -n "$given_prefix"; then
+   # And if so, warn when they don't match
+-  if test "$kde_libs_prefix" != "$given_prefix"; then
++#  if test "$kde_libs_prefix" != "$given_prefix"; then
+     # And if kde doesn't know about the prefix yet
+-    echo ":"`kde-config --path exe`":" | grep ":$given_prefix/bin/:" 2>&1 >/dev/null
+-    if test $? -ne 0; then
+-      echo ""
+-      echo "Warning: you chose to install this package in $given_prefix,"
+-      echo "but KDE was found in $kde_libs_prefix."
+-      echo "For this to work, you will need to tell KDE about the new prefix, by ensuring"
+-      echo "that KDEDIRS contains it, e.g. export KDEDIRS=$given_prefix:$kde_libs_prefix"
+-      echo "Then restart KDE."
+-      echo ""
+-    fi
+-  fi
+-fi
++#    echo ":"`kde-config --path exe`":" | grep ":$given_prefix/bin/:" 2>&1 >/dev/null
++#    if test $? -ne 0; then
++#      echo ""
++#      echo "Warning: you chose to install this package in $given_prefix,"
++#      echo "but KDE was found in $kde_libs_prefix."
++#      echo "For this to work, you will need to tell KDE about the new prefix, by ensuring"
++#      echo "that KDEDIRS contains it, e.g. export KDEDIRS=$given_prefix:$kde_libs_prefix"
++#      echo "Then restart KDE."
++#      echo ""
++#    fi
++#  fi
++#fi
+ 
+ if test "$all_tests" = "bad"; then
+   if test ! "$cache_file" = "/dev/null"; then
+--- icecream.orig/subdirs	2004-08-04 04:49:45.000000000 -0400
++++ icecream/subdirs	2005-12-18 14:11:36.000000000 -0500
+@@ -2,4 +2,3 @@
+ services
+ client
+ daemon
+-mon
