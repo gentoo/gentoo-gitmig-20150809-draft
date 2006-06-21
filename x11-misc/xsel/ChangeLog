@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xsel
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.1 2006/03/16 17:21:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.2 2006/06/21 06:44:44 spyderous Exp $
+
+  21 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; xsel-0.9.6.ebuild:
+  Add missing keywords, this was previously built within app-shells/fish which
+  is keyworded for ppc and amd64.
 
 *xsel-0.9.6 (16 Mar 2006)
 
