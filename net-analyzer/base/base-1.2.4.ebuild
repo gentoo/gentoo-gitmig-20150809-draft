@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.2.4.ebuild,v 1.1 2006/03/27 00:08:04 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.2.4.ebuild,v 1.2 2006/06/21 19:00:26 nixnut Exp $
 
 inherit webapp versionator eutils depend.apache depend.php
 
@@ -13,7 +13,7 @@ DESCRIPTION="A web-based front-end to the Snort IDS."
 HOMEPAGE="http://base.secureideas.net"
 SRC_URI="mirror://sourceforge/secureideas/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 # SLOT is intentionally omitted because this package uses webapp-config
 
 DBTYPES="mssql mysql oracle postgres"
