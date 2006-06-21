@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.217 2006/06/19 13:41:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.218 2006/06/21 20:19:07 flameeyes Exp $
+
+  21 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-driver-1.0.11.ebuild:
+  Remove asihpi driver when building for 2.6.17 as it's not fixed to work on
+  that and upstream hasn't released a new version yet.
 
   19 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/alsa-driver-1.0.11-kernel-2.6.17.patch, alsa-driver-1.0.11.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.11.ebuild,v 1.11 2006/06/19 13:41:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.11.ebuild,v 1.12 2006/06/21 20:19:07 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils multilib
 
@@ -74,7 +74,13 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.0.10_rc1-include.patch
 
 	if kernel_is ge 2 6 17 ; then
+		# These are needed for some drivers to build with kernel 2.6.17
+		# until a refreshed release of alsa-driver is done
 		epatch "${FILESDIR}/${P}-kernel-2.6.17.patch"
+
+		# asihpi driver is broken, skip it until upstream releases something
+		# working.
+		sed -i -e 's:asihpi/::' "${S}/pci/Makefile"
 	fi
 
 	convert_to_m "${S}/Makefile"
