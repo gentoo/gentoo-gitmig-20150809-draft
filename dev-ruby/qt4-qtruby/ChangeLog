@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/qt4-qtruby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.4 2006/06/21 14:49:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.5 2006/06/21 16:35:29 fmccor Exp $
+
+  21 Jun 2006; Ferris McCormick <fmccor@gentoo.org> qt4-qtruby-1.4.5.ebuild:
+  Add ~amd64 keyword.  With the fixes noted for Bug #132584 this builds with
+  qt-4.1.3 and runs the "ruboids" example just fine.
 
   21 Jun 2006; Caleb Tennis <caleb@gentoo.org> +files/kalyptus-fix.diff,
   -files/style-fix.diff, qt4-qtruby-1.4.5.ebuild:
