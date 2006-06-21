@@ -1,14 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f8fb5796120ab058c8faf97bdee72f8f funny-manpages-1.3_rc5-r1.ebuild 888
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+DIST funny-manpages_1.3-5.diff.gz 2639
+DIST funny-manpages_1.3.orig.tar.gz 22691
+EBUILD funny-manpages-1.3_rc5-r1.ebuild 887 RMD160 eb1d5cc43ccf31ac7be510d4b761da289b38aa45 SHA1 4d2c454597f73f8566ccd6db057566238d626a53 SHA256 65fcd7d92919615b01dae9c74feebbd27d3a0d612ab8e3eef95406d6a765fffb
+MD5 3a7e9f88c06b68c33abd589277eaac0d funny-manpages-1.3_rc5-r1.ebuild 887
+RMD160 eb1d5cc43ccf31ac7be510d4b761da289b38aa45 funny-manpages-1.3_rc5-r1.ebuild 887
+SHA256 65fcd7d92919615b01dae9c74feebbd27d3a0d612ab8e3eef95406d6a765fffb funny-manpages-1.3_rc5-r1.ebuild 887
+MISC ChangeLog 1065 RMD160 f8895acf3abefbee00e7e95a7f912dd724751231 SHA1 0973a52bb9622d1f61bb808c574ed75be2cd8f9e SHA256 65e6e5574f17423ee325e287439c0b19d1af093e2abfedd27a50d00f5e4cfa29
 MD5 d533623e206f7f7f12436ef589990d42 ChangeLog 1065
+RMD160 f8895acf3abefbee00e7e95a7f912dd724751231 ChangeLog 1065
+SHA256 65e6e5574f17423ee325e287439c0b19d1af093e2abfedd27a50d00f5e4cfa29 ChangeLog 1065
+MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
 MD5 d8e3e4aa04aaf6a41f8e35a6750a073c files/digest-funny-manpages-1.3_rc5-r1 145
+RMD160 2d1230d441a14cf4a2ec267493f16c488ed6f399 files/digest-funny-manpages-1.3_rc5-r1 145
+SHA256 59139eb38f5b5a26b702b106abd3b62f04e7bb863658dd1d385e592d0724bdfe files/digest-funny-manpages-1.3_rc5-r1 145
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFDQaZ7gIKl8Uu19MoRAgtiAJ0WwFLGJ3qM/2dnEiFTVklM2OEjlwCff29t
-KjoKrHY6jwna032Miyb9tkU=
-=mZvL
+iD8DBQFEmYLlamhnQswr0vIRArknAKCCkWnZZ93DOsTmFi7YaA06p/LgagCeO52z
+212md149ekhuTI+39MjL9sk=
+=ejT8
 -----END PGP SIGNATURE-----
