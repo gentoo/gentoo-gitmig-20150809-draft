@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.52 2006/06/21 20:42:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.53 2006/06/21 21:26:29 dang Exp $
+
+  21 Jun 2006; Daniel Gryniewicz <dang@gentoo.org> bogofilter-1.0.2.ebuild:
+  Un-keyword amd64.  I don't know why repoman succeeded the first time
 
   21 Jun 2006; Markus Rothe <corsair@gentoo.org> bogofilter-1.0.2.ebuild:
   Stable on ppc64; bug #133817
