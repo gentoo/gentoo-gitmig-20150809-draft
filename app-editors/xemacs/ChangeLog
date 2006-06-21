@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.60 2006/01/26 05:45:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.61 2006/06/21 04:11:15 mkennedy Exp $
+
+*xemacs-21.4.19 (21 Jun 2006)
+
+  21 Jun 2006; Matthew Kennedy <mkennedy@gentoo.org> +xemacs-21.4.19.ebuild:
+  New upstream version.
 
   26 Jan 2006; Robin H. Johnson <robbat2@gentoo.org> xemacs-21.4.17.ebuild:
   Fix modular-X deps properly. "use? || (...)" is not valid, it should be
