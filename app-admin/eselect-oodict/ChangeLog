@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-oodict
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.5 2006/06/13 20:25:55 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.6 2006/06/21 11:00:18 kevquinn Exp $
+
+*eselect-oodict-20060621 (21 Jun 2006)
+
+  21 Jun 2006; Kevin F. Quinn <kevquinn@gentoo.org>
+  +eselect-oodict-20060621.ebuild:
+  Fix update action (variable name typo), and handle missing OOo dictionary.lst
+  properly - thanks to suka for pointing out the errors.
 
 *eselect-oodict-20060613 (13 Jun 2006)
 
