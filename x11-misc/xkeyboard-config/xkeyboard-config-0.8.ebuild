@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-0.8.ebuild,v 1.1 2006/04/16 20:51:44 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-0.8.ebuild,v 1.2 2006/06/21 05:47:21 spyderous Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="X keyboard configuration database"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
@@ -14,6 +14,16 @@ RDEPEND="x11-apps/xkbcomp
 	!x11-misc/xkbdata"
 DEPEND="${RDEPEND}
 	dev-perl/XML-Parser"
+
+pkg_setup() {
+	# (#130590) The old XKB directory can screw stuff up
+	local DIR="${ROOT}usr/$(get_libdir)/X11/xkb"
+	if [[ -d ${DIR} ]] ; then
+		eerror "Directory ${DIR} should be"
+		eerror "manually deleted/renamed/relocated before installing!"
+		die "Manually remove ${DIR}"
+	fi
+}
 
 src_compile() {
 	econf \
