@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.9.0-r2.ebuild,v 1.1 2006/06/20 20:00:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.9.0-r2.ebuild,v 1.2 2006/06/21 05:36:26 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -745,6 +745,11 @@ host_def_setup() {
 		use_build font-server BuildFontServer
 
 		use_build insecure-drivers BuildDevelDRIDrivers
+
+		# (#134604) sunffb compile broken
+		use insecure-drivers \
+			&& echo "#define DevelDRIDrivers mach64 unichrome" \
+			>> ${HOSTCONF}
 
 		if use ipv6; then
 			# In case Gentoo ever works on a system with IPv6 sockets that don't
