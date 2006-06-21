@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-dummy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-dummy/ChangeLog,v 1.19 2006/06/05 21:25:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-dummy/ChangeLog,v 1.20 2006/06/21 02:29:10 geoman Exp $
+
+  21 Jun 2006; Stephen P. Becker <geoman@gentoo.org>
+  xf86-video-dummy-0.2.0.ebuild:
+  added ~mips keyword
 
   05 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   xf86-video-dummy-0.2.0.ebuild:
