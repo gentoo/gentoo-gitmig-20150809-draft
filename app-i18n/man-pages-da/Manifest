@@ -1,13 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1e1a4633fc08c8b6c383422eabc21478 man-pages-da-0.1.1.ebuild 733
+DIST manpages-da-0.1.1.tar.gz 8873
+EBUILD man-pages-da-0.1.1.ebuild 732 RMD160 20045b0a6dec6fd96e602ac12122b5c6af26db7f SHA1 8bd7bf89bd98f57c664e0a412cc0cabdc4edda98 SHA256 679b9a7dda97194b29a139cc4724db9faaccdf0b1145cf73be8fe384b6bc281b
+MD5 9c40fca5b932a8112303ecbcd1e7b108 man-pages-da-0.1.1.ebuild 732
+RMD160 20045b0a6dec6fd96e602ac12122b5c6af26db7f man-pages-da-0.1.1.ebuild 732
+SHA256 679b9a7dda97194b29a139cc4724db9faaccdf0b1145cf73be8fe384b6bc281b man-pages-da-0.1.1.ebuild 732
+MISC ChangeLog 345 RMD160 8b28cbb404ec7495d59e473b6177f60239a5da2f SHA1 d268bee6ac283127f4975d99972d2e6b817c34eb SHA256 be235ef48582057aec626dad4e471e8f45f2447a3abd598c32adfd4c967f40c9
 MD5 130752bf8ef6b70675f2a9abe83b8c19 ChangeLog 345
+RMD160 8b28cbb404ec7495d59e473b6177f60239a5da2f ChangeLog 345
+SHA256 be235ef48582057aec626dad4e471e8f45f2447a3abd598c32adfd4c967f40c9 ChangeLog 345
 MD5 a764b14ad1e501acfeb36a57f7727aa1 files/digest-man-pages-da-0.1.1 67
+RMD160 431604e7eb5302495e262ec5bab5476e505980dc files/digest-man-pages-da-0.1.1 67
+SHA256 67ecf9336804c2c01d64c327ace24073f3952f64b64b54a3607ced3a3e132931 files/digest-man-pages-da-0.1.1 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFDF9R7gIKl8Uu19MoRAuVKAJ0cWA6lcp4MYCSlR0aZ+mhcImDvAgCfTNmK
-ju04y5LW53G+jdYggswma0c=
-=SQo5
+iD8DBQFEmYIiamhnQswr0vIRAm3wAJ9usHp/xvjqavUyH5yGptoa5ZthbQCgi9m8
+svkovTJnvM3BHB0Vio3bK8Q=
+=7wdW
 -----END PGP SIGNATURE-----
