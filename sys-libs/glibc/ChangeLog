@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.461 2006/06/19 03:21:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.462 2006/06/21 15:02:05 gustavoz Exp $
+
+  21 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> glibc-2.3.6-r4.ebuild:
+  Stable on sparc wrt #137121
 
   18 Jun 2006; Andrej Kacian <ticho@gentoo.org> glibc-2.3.6-r4.ebuild:
   Stable on x86. Bug #137121.
