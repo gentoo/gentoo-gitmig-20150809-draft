@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.117 2006/06/18 17:27:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.118 2006/06/21 22:24:43 gustavoz Exp $
+
+  21 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  mit-krb5-1.4.3-r1.ebuild:
+  Stable on sparc wrt #137040
 
   18 Jun 2006; Markus Rothe <corsair@gentoo.org> mit-krb5-1.4.3-r1.ebuild:
   Stable on ppc64; bug #137040
