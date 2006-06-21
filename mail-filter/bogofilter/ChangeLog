@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.50 2006/06/21 14:13:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.51 2006/06/21 20:39:38 dang Exp $
+
+  21 Jun 2006; Daniel Gryniewicz <dang@gentoo.org> bogofilter-1.0.2.ebuild:
+  Marked stable on amd64 per bug#133817
 
   21 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   bogofilter-1.0.2.ebuild:
