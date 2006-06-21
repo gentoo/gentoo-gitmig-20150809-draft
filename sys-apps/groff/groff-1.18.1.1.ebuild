@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1.1.ebuild,v 1.6 2006/05/25 21:55:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1.1.ebuild,v 1.7 2006/06/21 17:21:21 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -16,7 +16,6 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="X cjk"
 
 DEPEND=">=sys-apps/texinfo-4.0"
-PDEPEND=">=sys-apps/man-1.5k-r1"
 
 src_unpack() {
 	unpack ${A}
