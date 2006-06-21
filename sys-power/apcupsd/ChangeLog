@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.18 2006/05/20 11:45:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.19 2006/06/21 18:28:36 tantive Exp $
+
+*apcupsd-3.12.3 (21 Jun 2006)
+
+  21 Jun 2006; Michael Imhof <tantive@gentoo.org>
+  +files/3.12.3/apcupsd.in.patch, +files/3.12.3/etc.patch,
+  +apcupsd-3.12.3.ebuild:
+  Version bumped. Closes #130714, #132157.
 
   20 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   apcupsd-3.12.2-r1.ebuild:
