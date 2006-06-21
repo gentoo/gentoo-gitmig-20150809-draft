@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-4.2.ebuild,v 1.2 2005/12/03 20:29:18 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-4.2.ebuild,v 1.3 2006/06/21 06:55:41 spyderous Exp $
 
 inherit fortran toolchain-funcs
 
-FORTRAN="ifc g77"
+FORTRAN="g77 gfortran ifc"
 
 DESCRIPTION="TINKER is a molecular modeling package that includes force fields for handing large molecules and large systems, such as AMBER and CHARMM.  A Java based visualization front end is included."
 HOMEPAGE="http://dasher.wustl.edu/tinker/"
@@ -43,7 +43,7 @@ src_compile() {
 		cp ../apple/gnu/* .
 	elif [ "${FORTRANC}" = "ifc" ]; then
 		cp ../linux/intel/* .
-	elif [ "${FORTRANC}" = "g77" ]; then
+	else
 		cp ../linux/gnu/* .
 	fi
 
