@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.14.ebuild,v 1.5 2006/04/22 14:59:59 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.14.ebuild,v 1.6 2006/06/21 00:09:07 flameeyes Exp $
 
 inherit kde eutils
 
@@ -96,26 +96,20 @@ src_compile() {
 	kde_src_compile
 
 	# Build process of K3b-i18n
-	local _S=${S}
 	if [ -d "${WORKDIR}/${I18N}" ]; then
-		S="${WORKDIR}/${I18N}"
-		cd "${S}"
+		KDE_S="${WORKDIR}/${I18N}" \
 		kde_src_compile
 	fi
-	S=${_S}
 }
 
 src_install() {
 	kde_src_install
 	dodoc FAQ KNOWNBUGS PERMISSIONS
 
-	local _S=${S}
 	if [ -d "${WORKDIR}/${I18N}" ]; then
-		S="${WORKDIR}/${I18N}"
-		cd "${S}"
+		KDE_S="${WORKDIR}/${I18N}" \
 		kde_src_install
 	fi
-	S=${_S}
 
 	# Move menu entry
 	if use kde; then
