@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.94 2006/06/02 15:17:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.95 2006/06/21 14:32:58 spyderous Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -15,6 +15,7 @@ virtual/baselayout			sys-apps/baselayout
 virtual/bittorrent			net-p2p/bittorrent
 virtual/blackbox			x11-wm/blackbox
 virtual/blas				sci-libs/blas-atlas
+virtual/cblas				sci-libs/blas-atlas
 virtual/cdrtools			app-cdr/cdrtools
 virtual/commonlisp			dev-lisp/sbcl
 virtual/cron				sys-process/vixie-cron
