@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/funny-manpages/funny-manpages-1.3_rc5-r1.ebuild,v 1.1 2005/10/03 21:44:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/funny-manpages/funny-manpages-1.3_rc5-r1.ebuild,v 1.2 2006/06/21 17:28:15 vapier Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh x86"
 IUSE=""
 
-RDEPEND="sys-apps/man"
+RDEPEND="virtual/man"
 
 S=${WORKDIR}/${MY_P/_/-}.orig
 
