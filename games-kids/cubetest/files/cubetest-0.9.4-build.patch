@@ -1,0 +1,52 @@
+--- configure
++++ configure
+@@ -19741,13 +19741,16 @@
+ if test -n "$PKG_CONFIG"; then
+         if test -n "$PKG_CONFIG" && \
+     { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"QtGui >= \$QT_REQUIRED_VERSION
++	QtCore >= \$QT_REQUIRED_VERSION
+ 	Qt3Support >= \$QT_REQUIRED_VERSION\"") >&5
+   ($PKG_CONFIG --exists --print-errors "QtGui >= $QT_REQUIRED_VERSION
++	QtCore >= $QT_REQUIRED_VERSION
+ 	Qt3Support >= $QT_REQUIRED_VERSION") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+   pkg_cv_QT_CFLAGS=`$PKG_CONFIG --cflags "QtGui >= $QT_REQUIRED_VERSION
++	QtCore >= $QT_REQUIRED_VERSION
+ 	Qt3Support >= $QT_REQUIRED_VERSION" 2>/dev/null`
+ else
+   pkg_failed=yes
+@@ -19758,13 +19761,16 @@
+ if test -n "$PKG_CONFIG"; then
+         if test -n "$PKG_CONFIG" && \
+     { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"QtGui >= \$QT_REQUIRED_VERSION
++	QtCore >= \$QT_REQUIRED_VERSION
+ 	Qt3Support >= \$QT_REQUIRED_VERSION\"") >&5
+   ($PKG_CONFIG --exists --print-errors "QtGui >= $QT_REQUIRED_VERSION
++	QtCore >= $QT_REQUIRED_VERSION
+ 	Qt3Support >= $QT_REQUIRED_VERSION") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+   pkg_cv_QT_LIBS=`$PKG_CONFIG --libs "QtGui >= $QT_REQUIRED_VERSION
++	QtCore >= $QT_REQUIRED_VERSION
+ 	Qt3Support >= $QT_REQUIRED_VERSION" 2>/dev/null`
+ else
+   pkg_failed=yes
+@@ -19775,6 +19781,7 @@
+ 
+ if test $pkg_failed = yes; then
+ 	QT_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "QtGui >= $QT_REQUIRED_VERSION
++	QtCore >= $QT_REQUIRED_VERSION
+ 	Qt3Support >= $QT_REQUIRED_VERSION"`
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$QT_PKG_ERRORS" 1>&5
+@@ -19849,6 +19842,7 @@
+ 
+ fi
+ 
++    QT_CXXFLAGS="$QT_CFLAGS $QT_CXXFLAGS"
+     { echo "$as_me:$LINENO: Set QT_CXXFLAGS... $QT_CXXFLAGS" >&5
+ echo "$as_me: Set QT_CXXFLAGS... $QT_CXXFLAGS" >&6;}
+     { echo "$as_me:$LINENO: Set QT_LIBS... $QT_LIBS" >&5
