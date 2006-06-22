@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-docs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-docs/ChangeLog,v 1.19 2006/02/02 19:30:11 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-docs/ChangeLog,v 1.20 2006/06/22 19:15:06 marienz Exp $
+
+  22 Jun 2006; Marien Zwart <marienz@gentoo.org> -twisted-docs-1.1.0.ebuild,
+  -twisted-docs-1.1.1.ebuild, twisted-docs-1.2.0.ebuild,
+  -twisted-docs-1.2.1_alpha2.ebuild, twisted-docs-1.3.0.ebuild:
+  Remove some old versions, add a block for twisted-2.
 
   02 Feb 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fix rmd160 digests.

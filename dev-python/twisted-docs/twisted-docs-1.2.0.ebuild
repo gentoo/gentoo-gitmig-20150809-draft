@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-docs/twisted-docs-1.2.0.ebuild,v 1.9 2005/04/24 03:29:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-docs/twisted-docs-1.2.0.ebuild,v 1.10 2006/06/22 19:15:06 marienz Exp $
 
 #inherit distutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 amd64 ppc alpha"
 IUSE=""
 
-DEPEND=""
+DEPEND="!>=dev-python/twisted-2"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
