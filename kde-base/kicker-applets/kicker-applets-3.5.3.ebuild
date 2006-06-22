@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker-applets/kicker-applets-3.5.3.ebuild,v 1.1 2006/06/01 18:38:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker-applets/kicker-applets-3.5.3.ebuild,v 1.2 2006/06/22 13:37:54 flameeyes Exp $
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="kicker-applets doc/kicker-applets"
@@ -14,4 +14,7 @@ IUSE="xmms"
 DEPEND="xmms? ( media-sound/xmms )
 $(deprange-dual $PV $MAXKDEVER kde-base/kicker)"
 
-myconf="$(use_with xmms)"
+src_compile() {
+	myconf="$(use_with xmms)"
+	kde-meta_src_compile
+}

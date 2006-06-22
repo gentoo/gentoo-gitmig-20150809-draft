@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.4.3.ebuild,v 1.8 2006/03/26 19:13:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.4.3.ebuild,v 1.9 2006/06/22 13:36:13 flameeyes Exp $
 
 KMNAME=kdebase
 KMMODULE=kioslave
@@ -29,5 +29,7 @@ PATCHES="$PATCHES $FILESDIR/configure-fix-kdebase-openexr.patch"
 # Use the kubuntu patch to allow the kioslave to work with the new hal/dbus
 PATCHES="${PATCHES} ${DISTDIR}/kdebase-3.4.3-kubuntu-hal.patch.gz"
 
-myconf="$myconf `use_with ldap` `use_with samba` `use_with hal` `use_with openexr`"
-
+src_compile() {
+	myconf="$myconf `use_with ldap` `use_with samba` `use_with hal` `use_with openexr`"
+	kde-meta_src_compile
+}

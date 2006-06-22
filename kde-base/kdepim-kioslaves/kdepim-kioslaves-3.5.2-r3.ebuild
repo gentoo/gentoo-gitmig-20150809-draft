@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/kdepim-kioslaves-3.5.2-r3.ebuild,v 1.7 2006/06/01 09:33:50 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/kdepim-kioslaves-3.5.2-r3.ebuild,v 1.8 2006/06/22 13:34:41 flameeyes Exp $
 
 KMNAME=kdepim
 KMMODULE=kioslaves
@@ -15,10 +15,13 @@ IUSE="sasl"
 DEPEND="sasl? ( >=dev-libs/cyrus-sasl-2 )
 	$(deprange 3.5.0 $MAXKDEVER kde-base/libkmime)"
 
-myconf="$myconf $(use_with sasl)"
-
 KMCOPYLIB="libkmime libkmime/"
 KMEXTRACTONLY="libkmime/"
 KMCOMPILEONLY="libemailfunctions"
 
 PATCHES="${FILESDIR}/kdepim-kioslaves-3.5.2-fixes-2.diff ${FILESDIR}/imap-dos.diff"
+
+src_compile() {
+	myconf="$myconf $(use_with sasl)"
+	kde-meta_src_compile
+}
