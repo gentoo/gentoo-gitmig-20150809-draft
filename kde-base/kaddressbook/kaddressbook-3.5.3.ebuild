@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-3.5.3.ebuild,v 1.1 2006/06/01 16:41:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-3.5.3.ebuild,v 1.2 2006/06/22 12:57:23 flameeyes Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -16,8 +16,6 @@ $(deprange $PV $MAXKDEVER kde-base/certmanager)
 $(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
 $(deprange $PV $MAXKDEVER kde-base/kontact)
 gnokii? ( app-mobilephone/gnokii )"
-
-myconf="$myconf $(use_with gnokii)"
 
 KMCOPYLIB="
 	libkdepim libkdepim
@@ -44,6 +42,7 @@ KMEXTRA="
 	kontact/plugins/kaddressbook"
 
 src_compile() {
+	myconf="$myconf $(use_with gnokii)"
 	export DO_NOT_COMPILE="libical" && kde-meta_src_compile myconf configure
 	# generate "ical.h"
 	cd ${S}/libkcal/libical/src/libical && make ical.h

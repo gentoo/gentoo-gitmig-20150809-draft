@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/kooka-3.4.3.ebuild,v 1.9 2006/03/27 22:41:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/kooka-3.4.3.ebuild,v 1.10 2006/06/22 12:55:07 flameeyes Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -22,4 +22,8 @@ PATCHES1="${FILESDIR}/kdegraphics-3.4.1-gocr.patch"
 
 # There's no ebuild for kadmos, and likely will never be since it isn't free.
 PATCHES="$FILESDIR/configure-fix-kdegraphics-kadmos.patch"
-myconf="$myconf --without-kadmos"
+
+src_compile() {
+	myconf="$myconf --without-kadmos"
+	kde-meta_src_compile
+}

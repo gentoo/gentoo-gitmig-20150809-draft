@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/kooka-3.5.3.ebuild,v 1.1 2006/06/01 19:25:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/kooka-3.5.3.ebuild,v 1.2 2006/06/22 12:55:07 flameeyes Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -17,5 +17,8 @@ DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkscan)
 KMCOPYLIB="libkscan libkscan"
 KMEXTRACTONLY="libkscan"
 
-# There's no ebuild for kadmos, and likely will never be since it isn't free.
-myconf="$myconf --without-kadmos"
+src_compile() {
+	# There's no ebuild for kadmos, and likely will never be since it isn't free.
+	myconf="$myconf --without-kadmos"
+	kde-meta_src_compile
+}

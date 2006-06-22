@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.4.3.ebuild,v 1.10 2006/03/25 01:23:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.4.3.ebuild,v 1.11 2006/06/22 12:48:38 flameeyes Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -30,4 +30,8 @@ PATCHES="$FILESDIR/disable-meanwhile.diff"
 
 # The nowlistening plugin has xmms support
 PATCHES="$PATCHES $FILESDIR/configure-fix-kdenetwork-xmms.patch"
-myconf="$myconf $(use_with xmms)"
+
+src_compile() {
+	myconf="$myconf $(use_with xmms)"
+	kde-meta_src_compile
+}

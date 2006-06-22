@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.4.3.ebuild,v 1.9 2006/03/26 01:55:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.4.3.ebuild,v 1.10 2006/06/22 12:52:41 flameeyes Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -25,7 +25,6 @@ RDEPEND="${DEPEND}
 		     flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
 
 PATCHES="$FILESDIR/configure-fix-kdemultimedia-juk.patch"
-myconf="$myconf $(use_with gstreamer) $(use_with musicbrainz)"
 
 KMCOPYLIB="
 	libakode akode/lib/"
@@ -37,4 +36,9 @@ pkg_setup() {
 		eerror "${PN} needs USE=\"arts\" (and kdelibs compiled with USE=\"arts\") or USE=\"gstreamer\""
 		die
 	fi
+}
+
+src_compile() {
+	myconf="$myconf $(use_with gstreamer) $(use_with musicbrainz)"
+	kde-meta_src_compile
 }

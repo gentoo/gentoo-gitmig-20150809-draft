@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.65 2006/06/15 00:00:01 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.66 2006/06/22 12:48:38 flameeyes Exp $
+
+  22 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> kopete-3.4.3.ebuild:
+  Move myconf population in src_compile rather than global scope.
 
 *kopete-3.5.3-r1 (14 Jun 2006)
 
