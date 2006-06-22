@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4_beta.ebuild,v 1.5 2006/06/13 18:42:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4_beta.ebuild,v 1.6 2006/06/22 07:30:21 genstef Exp $
 
 inherit eutils fdo-mime
 
@@ -59,12 +59,16 @@ src_install() {
 	dodoc README.linux
 
 	cd bin
-	tar xpf ${WORKDIR}/${PN}-linux-x86.tar
+	tar xf ${WORKDIR}/${PN}-linux-x86.tar
 	exeinto /opt/${PN}
 	doexe *
 
 	cd ${D}/opt/${PN}
-	tar xpf ${WORKDIR}/${PN}-data.tar
+	tar xf ${WORKDIR}/${PN}-data.tar
+
+	# make sure we install with correct permissions
+	fowners -R root:root /opt/${PN}
+	fperms -R a-x,a+X /opt/googleearth/{xml,res{,ources}}
 }
 
 pkg_postinst() {
