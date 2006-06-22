@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-3.1.1-r1.ebuild,v 1.6 2006/06/20 17:28:58 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-3.1.1-r1.ebuild,v 1.7 2006/06/22 00:51:12 vapier Exp $
 
 HORDE_PHP_FEATURES="session xml"
 
@@ -23,6 +23,12 @@ RDEPEND="virtual/php
 	dev-php/PEAR-Log
 	dev-php/PEAR-Mail_Mime
 	mysql? ( dev-php/PEAR-DB )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	chmod 600 scripts/sql/create.*.sql #137510
+}
 
 pkg_postinst() {
 	horde_pkg_postinst
