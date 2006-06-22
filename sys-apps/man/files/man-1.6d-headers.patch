@@ -1,0 +1,57 @@
+--- src/makemsg.c
++++ src/makemsg.c
+@@ -18,6 +18,7 @@
+  *	makemsg -c input message_catalog
+  */
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <unistd.h>
+ #ifdef __QNX__
+ #include <unix.h>
+--- gencat/gencat.c
++++ gencat/gencat.c
+@@ -41,6 +41,7 @@
+ */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <sys/types.h>
+ #ifdef SYSV
+ #include <sys/fcntl.h>
+@@ -48,6 +49,10 @@
+ #else
+ #include <strings.h>
+ #endif
++#ifdef __linux__
++#include <string.h>
++#include <unistd.h>
++#endif
+ #include <sys/file.h>
+ #include <sys/stat.h>
+ #include "gencat.h"
+--- gencat/genlib.c
++++ gencat/genlib.c
+@@ -48,9 +48,11 @@
+ */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #ifdef SYSV
+ #include <sys/types.h>
+ #include <unistd.h>
++#endif
+ 
+ #ifndef __linux__
+ #include <memory.h>
+@@ -66,9 +68,10 @@
+ {
+     memset(b, '\0', length);
+ }
++#else
++#include <string.h>
+ #endif
+ 
+-#endif
+ #include <sys/file.h>
+ #include <ctype.h>
+ #include "msgcat.h"
