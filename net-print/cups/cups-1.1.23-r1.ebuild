@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r1.ebuild,v 1.12 2006/06/15 00:07:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r1.ebuild,v 1.13 2006/06/22 07:04:36 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -114,7 +114,7 @@ src_install() {
 		insinto /etc/pam.d ; newins ${FILESDIR}/cups.pam cups
 	fi
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/cupsd.rc6 cupsd
+	exeinto /etc/init.d ; newexe ${FILESDIR}/cupsd.init cupsd
 	insinto /etc/xinetd.d ; newins ${FILESDIR}/cups.xinetd cups-lpd
 
 	# allow raw printing

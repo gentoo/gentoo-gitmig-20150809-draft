@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r1.ebuild,v 1.10 2006/06/20 17:17:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r1.ebuild,v 1.11 2006/06/22 07:04:36 genstef Exp $
 
-inherit eutils pam flag-o-matic multilib autotools
+inherit eutils flag-o-matic multilib autotools
 
 MY_P=${P/_/}
 
@@ -55,6 +55,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/cups-1.2.0-bindnow.patch
+	epatch ${FILESDIR}/cups-1.2.1-ssldir.patch
 
 	# upstream has refused to fix this for me
 	sed -i -e "s:#if defined(__linux) && defined(LP_POUTPA):#if 0:" backend/usb-unix.c
@@ -103,17 +104,17 @@ src_compile() {
 }
 
 src_install() {
-	make BUILDROOT=${D} install || die "make install failed"
+	emake BUILDROOT=${D} install || die "emake install failed"
+	dodoc {CHANGES{,-1.{0,1}},CREDITS,LICENSE,README}.txt
 
-	# cleanups
-	rm -rf ${D}/etc/init.d ${D}/etc/pam.d ${D}/etc/rc* ${D}/usr/share/man/cat*
+	# clean out cups init scripts
+	rm -rf ${D}/etc/init.d/cups ${D}/etc/rc*
+	# install our init scripts
+	newinitd ${FILESDIR}/cupsd.init cupsd
 
-	dodoc {CHANGES,CREDITS,LICENSE,README}.txt
-
-	pamd_mimic_system cups auth account
-	newinitd ${FILESDIR}/cupsd.rc6 cupsd
-
+	# correct path
 	sed -i -e "s:server = .*:server = /usr/libexec/cups/daemon/cups-lpd:" ${D}/etc/xinetd.d/cups-lpd
+	# it is safer to disable this by default, bug 137130
 	grep -w 'disable' ${D}/etc/xinetd.d/cups-lpd || \
 		sed -i -e "s:}:\tdisable = yes\n}:" ${D}/etc/xinetd.d/cups-lpd
 
@@ -121,9 +122,8 @@ src_install() {
 	exeinto /usr/libexec/cups/filter/
 	newexe ${FILESDIR}/pdftops.pl pdftops
 
-	fowners lp:lp /var/log/cups /var/run/cups/certs /var/cache/cups \
-		/var/spool/cups/tmp /var/spool/cups /etc/cups/{,interfaces,ppd}
-	keepdir /var/log/cups /var/run/cups/certs /var/cache/cups /var/spool/cups/tmp
+	keepdir /usr/share/cups/profiles /usr/libexec/cups/driver /var/log/cups \
+		/var/run/cups/certs /var/cache/cups /var/spool/cups/tmp
 }
 
 pkg_preinst() {
