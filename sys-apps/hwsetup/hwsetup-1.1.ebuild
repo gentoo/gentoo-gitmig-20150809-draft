@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.1.ebuild,v 1.13 2006/02/09 19:43:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.1.ebuild,v 1.14 2006/06/22 19:06:43 wolf31o2 Exp $
 
 inherit eutils
 
@@ -17,8 +17,7 @@ IUSE=""
 
 DEPEND="sys-libs/libkudzu
 	sys-apps/pciutils"
-RDEPEND="sys-libs/libkudzu
-	sys-apps/pciutils
+RDEPEND="${DEPEND}
 	|| ( sys-apps/hwdata-gentoo
 		sys-apps/hwdata )"
 
