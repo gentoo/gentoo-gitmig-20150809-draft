@@ -1,0 +1,11 @@
+--- src/libxosd/xosd.c.orig	2006-06-22 23:42:29.000000000 +0200
++++ src/libxosd/xosd.c	2006-06-22 23:44:56.000000000 +0200
+@@ -68,7 +68,7 @@
+ 
+ const char *osd_default_font =
+   "-misc-fixed-medium-r-semicondensed--*-*-*-*-c-*-*-*";
+-static const char *osd_default_colour = "green";
++const char *osd_default_colour = "green";
+ 
+ // const char* osd_default_font="adobe-helvetica-bold-r-*-*-10-*";
+ // const char* osd_default_font="-adobe-helvetica-bold-r-*-*-10-*";
