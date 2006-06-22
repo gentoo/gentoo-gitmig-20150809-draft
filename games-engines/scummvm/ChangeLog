@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.30 2006/04/27 19:49:31 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.31 2006/06/22 07:51:48 mr_bones_ Exp $
+
+  22 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org> scummvm-0.8.2.ebuild:
+  Add support for fluidsynth (bug #137547)
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-scummvm-0.8.0,
   files/digest-scummvm-0.8.1, Manifest:

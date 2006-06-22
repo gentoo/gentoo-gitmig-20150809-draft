@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.8.2.ebuild,v 1.1 2006/02/10 20:48:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.8.2.ebuild,v 1.2 2006/06/22 07:51:48 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scummvm/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="alsa debug flac mp3 ogg vorbis sdl zlib"
+IUSE="alsa debug flac fluidsynth mp3 ogg vorbis sdl zlib"
 RESTRICT="test"  # it only looks like there's a test there #77507
 
 RDEPEND=">=media-libs/libsdl-1.2.2
@@ -21,6 +21,7 @@ RDEPEND=">=media-libs/libsdl-1.2.2
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	mp3? ( media-libs/libmad )
 	flac? ( media-libs/flac )
+	fluidsynth? ( media-sound/fluidsynth )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
@@ -45,9 +46,12 @@ EOF
 src_compile() {
 	local myconf="--backend=sdl" # x11 backend no worky (bug #83502)
 
-	(use vorbis || use ogg) \
+	( use vorbis || use ogg ) \
 		&& myconf="${myconf} --enable-vorbis" \
 		|| myconf="${myconf} --disable-vorbis --disable-mpeg2"
+
+	# bug #137547
+	use fluidsynth || myconf="${myconf} --disable-fluidsynth"
 
 	# NOT AN AUTOCONF SCRIPT SO DONT CALL ECONF
 	# mpeg2 support needs vorbis (bug #79149) so turn it off if -oggvorbis
