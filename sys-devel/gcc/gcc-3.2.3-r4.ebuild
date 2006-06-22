@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.20 2006/04/13 05:54:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.21 2006/06/22 05:38:55 vapier Exp $
 
 inherit eutils flag-o-matic libtool versionator
 
@@ -113,7 +113,7 @@ DEPEND=">=sys-libs/glibc-2.3.2-r3
 	!mips? ( >=sys-devel/binutils-2.13.90.0.18 )
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
 	!build? ( >=sys-libs/ncurses-5.2-r2
-	          nls? ( sys-devel/gettext ) )"
+		nls? ( sys-devel/gettext ) )"
 
 # this glibc has the glibc guard symbols which are needed for the propolice functions to get moved to glibc
 # out of the libgcc in this gcc release, however, the propolice patch itself is not defused by this removal

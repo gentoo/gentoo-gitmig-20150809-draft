@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.23 2006/04/13 05:54:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.24 2006/06/22 05:38:55 vapier Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened n32 n64 emul-linux-x86"
 
@@ -230,10 +230,10 @@ check_option_validity() {
 		mips64-*)
 		;;
 		*)
-		    if use n32 || use n64; then
-		     eerror "n32/n64 can only be used when target host is mips64-*-linux-*";
-		     die "Invalid USE flags for CCHOST ($CCHOST)";
-		    fi
+		if use n32 || use n64; then
+			eerror "n32/n64 can only be used when target host is mips64-*-linux-*";
+			die "Invalid USE flags for CCHOST ($CCHOST)";
+		fi
 		;;
 	esac
 
@@ -491,11 +491,11 @@ src_unpack() {
 	# (That implied somebody has to add appropriate support to portage
 	# first).
 	if ! use multilib; then
-	    if [ "${ABI}" = "n32" ]; then
-		epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
-	    elif [ "${ABI}" = n64 ]; then
-		epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n64only.patch
-	    fi
+		if [ "${ABI}" = "n32" ]; then
+			epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
+		elif [ "${ABI}" = n64 ]; then
+			epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n64only.patch
+		fi
 	fi
 
 	# Misdesign in libstdc++ (Redhat)
@@ -585,11 +585,11 @@ src_compile() {
 
 	# Add --with-abi flags to enable respective MIPS ABIs
 	case "${CCHOST}" in
-	    mips*)
-		use multilib && myconf="${myconf} --with-abi=32"
-		[ "${ABI}" = n64 ] && myconf="${myconf} --with-abi=n64"
-		[ "${ABI}" = n32 ] && myconf="${myconf} --with-abi=n32"
-	    ;;
+		mips*)
+			use multilib && myconf="${myconf} --with-abi=32"
+			[ "${ABI}" = n64 ] && myconf="${myconf} --with-abi=n64"
+			[ "${ABI}" = n32 ] && myconf="${myconf} --with-abi=n32"
+		;;
 	esac
 
 	do_filter_flags

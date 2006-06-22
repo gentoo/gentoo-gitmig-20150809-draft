@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.3.ebuild,v 1.7 2006/04/23 06:22:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.3.ebuild,v 1.8 2006/06/22 05:38:55 vapier Exp $
 
 PATCH_VER="1.3"
 UCLIBC_VER="1.0"
@@ -27,8 +27,8 @@ KEYWORDS="-* ~ia64"
 RDEPEND=">=sys-libs/zlib-1.1.4
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )
 	fortran? (
-	  dev-libs/gmp
-	  dev-libs/mpfr
+		dev-libs/gmp
+		dev-libs/mpfr
 	)
 	!build? (
 		gcj? (

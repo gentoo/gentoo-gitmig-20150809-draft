@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1.1-r2.ebuild,v 1.8 2006/04/13 05:54:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1.1-r2.ebuild,v 1.9 2006/06/22 05:38:55 vapier Exp $
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
@@ -38,7 +38,7 @@ IUSE="static nls bootstrap java build"
 
 DEPEND="virtual/libc
 	!build? ( >=sys-libs/ncurses-5.2-r2
-	          nls? ( sys-devel/gettext ) )"
+		nls? ( sys-devel/gettext ) )"
 RDEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
@@ -299,18 +299,18 @@ src_install() {
 		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS \
 			README* SERVICE
 		cd ${S}/libf2c
-	    docinto libf2c
-	    dodoc ChangeLog README TODO changes.netlib disclaimer.netlib \
+		docinto libf2c
+		dodoc ChangeLog README TODO changes.netlib disclaimer.netlib \
 			permission.netlib readme.netlib
 		cd ${S}/libffi
-	    docinto libffi
-	    dodoc ChangeLog* README
-	    cd ${S}/libiberty
-	    docinto libiberty
-	    dodoc ChangeLog README
-	    cd ${S}/libobjc
-	    docinto libobjc
-	    dodoc ChangeLog README* THREADS*
+		docinto libffi
+		dodoc ChangeLog* README
+		cd ${S}/libiberty
+		docinto libiberty
+		dodoc ChangeLog README
+		cd ${S}/libobjc
+		docinto libobjc
+		dodoc ChangeLog README* THREADS*
 		cd ${S}/libstdc++-v3
 		docinto libstdc++-v3
 		dodoc ChangeLog* README

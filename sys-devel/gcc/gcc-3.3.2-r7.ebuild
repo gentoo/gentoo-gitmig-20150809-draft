@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.27 2006/04/13 05:54:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.28 2006/06/22 05:38:55 vapier Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj emul-linux-x86"
 
@@ -123,7 +123,7 @@ DEPEND="virtual/libc
 	>=sys-devel/bison-1.875
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
 	!build? ( >=sys-libs/ncurses-5.2-r2
-	          nls? ( sys-devel/gettext ) )"
+		nls? ( sys-devel/gettext ) )"
 
 RDEPEND="virtual/libc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
