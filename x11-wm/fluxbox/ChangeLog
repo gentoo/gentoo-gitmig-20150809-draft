@@ -1,6 +1,17 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.188 2006/04/28 06:15:38 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.189 2006/06/22 01:56:50 antarus Exp $
+
+*fluxbox-1.0_rc1 (22 Jun 2006)
+*fluxbox-0.9.15.1-r1 (22 Jun 2006)
+*fluxbox-0.9.14-r2 (22 Jun 2006)
+
+  22 Jun 2006; Alec Warner <antarus@gentoo.org>
+  +files/1.0_rc1/fluxbox-1.0_rc1-our-styles-go-over-here.patch,
+  +fluxbox-0.9.14-r2.ebuild, +fluxbox-0.9.15.1-r1.ebuild,
+  +fluxbox-1.0_rc1.ebuild:
+  Fixes bug 127069, 130784, 136780, thanks to Martin von Gagern, miste78 AT
+  web DOT de, and Patrik Larsson respectively.
 
 *fluxbox-0.9.15.1 (28 Apr 2006)
 
