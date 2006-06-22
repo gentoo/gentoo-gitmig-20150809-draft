@@ -15,7 +15,7 @@ app-text/htmltidy
 app-vim/phpdocs
 app-vim/gentoo-syntax
 app-vim/taglist
-dev-db/sqlite
+=dev-db/sqlite-3*
 dev-lang/perl
 dev-lang/python
 dev-lang/ruby
@@ -57,10 +57,6 @@ sys-apps/baselayout-darwin
 # libidn needs java-config.  When shut up about that, it persists on
 # using jikes, then continues complaining jikes isn't good enough.
 net-dns/libidn
-
-# wants sqlite2 which we can't install
-dev-python/pysqlite
-=dev-ruby/sqlite-ruby-2.2.3*
 
 # wants readline (and I don't want to !ppc-macos? it)
 net-p2p/mutella
