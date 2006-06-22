@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r2.ebuild,v 1.1 2006/06/22 17:54:14 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r2.ebuild,v 1.2 2006/06/22 18:09:59 genstef Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -143,22 +143,24 @@ pkg_postinst() {
 	einfo
 	einfo "You need to emerge ghostscript with the cups-USEflag turned on"
 	ewarn
-	ewarn "The configuration changed with cups-1.2, you may want to save the old"
-	ewarn "one and start from scratch:"
-	ewarn "# mv /etc/cups /etc/cups.orig; emerge -va1 cups"
-	ewarn
-	ewarn "If you are updating from cups-1.1.* you need to remerge every ebuild"
-	ewarn "that installed into /usr/lib/cups and /etc/cups, qfile is in portage-utils:"
-	ewarn "# FEATURES=-collision-protect emerge -va1 \$(qfile -qC /usr/lib/cups /etc/cups | sed \"s:net-print/cups$::\")"
-	ewarn
-	einfo "FEATURES=-collision-protect is needed to overwrite the compatibility"
-	einfo "symlinks installed by this package, it wont be needed on later merges."
-	ewarn "You should also run revdep-rebuild"
-	einfo "Rebuilding kdelibs is also a good idea when you want to use it for cups"
+	if has_version =net-print/cups-1.1*; then
+		ewarn "The configuration changed with cups-1.2, you may want to save the old"
+		ewarn "one and start from scratch:"
+		ewarn "# mv /etc/cups /etc/cups.orig; emerge -va1 cups"
+		ewarn
+		ewarn "If you are updating from cups-1.1.* you need to remerge every ebuild"
+		ewarn "that installed into /usr/lib/cups and /etc/cups, qfile is in portage-utils:"
+		ewarn "# FEATURES=-collision-protect emerge -va1 \$(qfile -qC /usr/lib/cups /etc/cups | sed \"s:net-print/cups$::\")"
+		ewarn
+		einfo "FEATURES=-collision-protect is needed to overwrite the compatibility"
+		einfo "symlinks installed by this package, it wont be needed on later merges."
+		ewarn "You should also run revdep-rebuild"
+		einfo "Rebuilding kdelibs is also a good idea when you want to use it for cups"
 
-	# place symlinks to make the update smoothless
-	for i in ${ROOT}/usr/lib/cups/{backend,filter}/*; do
-		[ "${i/\*}" != "${i}" ] && continue;
-		ln -s ${i} ${i/lib/libexec}
-	done
+		# place symlinks to make the update smoothless
+		for i in ${ROOT}/usr/lib/cups/{backend,filter}/*; do
+			[ "${i/\*}" != "${i}" ] && continue;
+			ln -s ${i} ${i/lib/libexec}
+		done
+	fi
 }
