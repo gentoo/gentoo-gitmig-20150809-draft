@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.3.ebuild,v 1.1 2006/05/31 07:00:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.3.ebuild,v 1.2 2006/06/22 17:47:25 exg Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -19,8 +19,7 @@ RDEPEND=">=media-libs/freetype-2.1.8
 	!app-text/pdftohtml"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	>=sys-devel/automake-1.9.6"
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
