@@ -28,13 +28,13 @@
 +  struct type *type;
 +  char *str_num = NULL;
 +  char *string_to_seek = NULL;
-+  char *tmp = strdup(exp);
++  char *tmp = NULL;
 +  char *c;
 +
-+  if (!exp && !*exp)
++  if (!exp || !*exp)
 +    return;
 +
-+  c = tmp;
++  c = tmp = strdup(exp);
 +  if (*c == ' ')
 +    while (*c && *c == ' ')
 +      c++;
