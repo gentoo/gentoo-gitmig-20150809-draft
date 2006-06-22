@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.3.ebuild,v 1.6 2006/06/06 19:03:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.3.ebuild,v 1.7 2006/06/22 21:00:22 joker Exp $
 
 IUSE="debug"
 
@@ -18,14 +18,15 @@ DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	cat << EOF > make/config.txt
 include make/unix.inc
 ALL_TARGETS := core core-examples core-headers
 PREFIX := /usr
 EOF
 
-	epatch ${FILESDIR}/${PN}-0.9.2-PIC.patch
+	epatch "${FILESDIR}"/${PN}-0.9.2-PIC.patch
+	sed -i '/= -s/d' Makefile || die "sed failed"
 	cp Makefile Makefile.rdy
 }
 
