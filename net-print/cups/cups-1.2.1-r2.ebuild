@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r2.ebuild,v 1.3 2006/06/22 18:45:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r2.ebuild,v 1.4 2006/06/22 19:47:19 genstef Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -162,8 +162,9 @@ pkg_postinst() {
 
 		# place symlinks to make the update smoothless
 		for i in ${ROOT}/usr/lib/cups/{backend,filter}/*; do
-			[ "${i/\*}" != "${i}" ] && continue;
-			ln -s ${i} ${i/lib/libexec}
+			if [ "${i/\*}" == "${i}" ] && ! [ -e ${i/lib/libexec} ]; then
+				ln -s ${i} ${i/lib/libexec}
+			fi
 		done
 	fi
 }
