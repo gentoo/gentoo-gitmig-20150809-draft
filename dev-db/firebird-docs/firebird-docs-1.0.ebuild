@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird-docs/firebird-docs-1.0.ebuild,v 1.16 2006/03/19 19:14:49 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird-docs/firebird-docs-1.0.ebuild,v 1.17 2006/06/22 22:15:56 gustavoz Exp $
 
 S="${WORKDIR}"
 DESCRIPTION="A relational database offering many ANSI SQL-92 features"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/firebird/Firebird_v1_ReleaseNotes.pdf
 HOMEPAGE="http://firebird.sourceforge.net/"
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 IUSE=""
 DEPEND="app-arch/unzip"
 RDEPEND=""
