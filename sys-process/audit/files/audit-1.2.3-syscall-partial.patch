@@ -1,0 +1,11 @@
+--- audit-1.2.3/lib/libaudit.h~	2006-05-24 08:19:30.000000000 -0700
++++ audit-1.2.3/lib/libaudit.h	2006-06-21 23:01:18.219583784 -0700
+@@ -91,6 +91,8 @@
+ #define AUDIT_FS_INODE		1308	/* File system inode */
+ #ifndef AUDIT_EXECVE
+ #define AUDIT_EXECVE		1309
++#endif
++#ifndef AUDIT_SYSCALL_PARTIAL
+ #define AUDIT_SYSCALL_PARTIAL   1310    /* Partial syscall event */
+ #endif
+ #ifndef AUDIT_IPC_SET_PERM

@@ -1,6 +1,16 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.11 2006/04/19 23:17:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.12 2006/06/22 07:41:46 robbat2 Exp $
+
+*audit-1.2.3 (22 Jun 2006)
+
+  22 Jun 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/auditd-conf.d-1.2.3, +files/auditd-init.d-1.2.3,
+  +files/audit-1.2.3-syscall-partial.patch, +files/audit.rules,
+  +files/audit.rules.stop.post, +files/audit.rules.stop.pre,
+  +audit-1.2.3.ebuild:
+  Version bump to 1.2.3. The kernel is close to being usable, I've now been
+  able to use this for the first time in a very long way.
 
 *audit-1.2.1 (19 Apr 2006)
 *audit-1.1.6 (19 Apr 2006)
