@@ -22,9 +22,9 @@ if [ $1 = "install" ]; then
 	echo "You may need to update your database."
 	echo "For each item in the output below"
 	echo "whose name is greater than your previously installed RT version,"
-	echo "rt-setup-database --action schema --datadir ${VHOST_ROOT}/${PF}/upgrade/<version>"
-	echo "rt-setup-database --action acl --datadir ${VHOST_ROOT}/${PF}/upgrade/<version>"
-	echo "rt-setup-database --action insert --datadir ${VHOST_ROOT}/${PF}/upgrade/<version>"
+	echo "${VHOST_ROOT}/${PF}/sbin/rt-setup-database --action schema --datadir ${VHOST_ROOT}/${PF}/upgrade/<version> --prompt-for-dba-password"
+	echo "${VHOST_ROOT}/${PF}/sbin/rt-setup-database --action acl --datadir ${VHOST_ROOT}/${PF}/upgrade/<version> -prompt-for-dba-password"
+	echo "${VHOST_ROOT}/${PF}/sbin/rt-setup-database --action insert --datadir ${VHOST_ROOT}/${PF}/upgrade/<version> -prompt-for-dba-password"
 	echo "Don't forget to read the online installation guide for more details"
 	ls
 
