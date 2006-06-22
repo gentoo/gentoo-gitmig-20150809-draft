@@ -1,10 +1,20 @@
 # ChangeLog for dev-libs/libproccpuinfo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/ChangeLog,v 1.4 2006/06/20 20:06:17 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/ChangeLog,v 1.5 2006/06/22 18:25:37 tcort Exp $
+
+*libproccpuinfo-0.0.5 (22 Jun 2006)
+
+  22 Jun 2006; Thomas Cort <tcort@gentoo.org> -libproccpuinfo-0.0.3.ebuild,
+  +libproccpuinfo-0.0.5.ebuild:
+  Version bump to 0.0.5
+
+*libproccpuinfo-0.0.4 (20 Jun 2006)
 
   20 Jun 2006; Thomas Cort <tcort@gentoo.org> -libproccpuinfo-0.0.2.ebuild,
   +libproccpuinfo-0.0.4.ebuild:
   Version bump to 0.0.4.
+
+*libproccpuinfo-0.0.3 (18 Jun 2006)
 
   18 Jun 2006; Thomas Cort <tcort@gentoo.org> +libproccpuinfo-0.0.3.ebuild:
   Version bump to 0.0.3.
