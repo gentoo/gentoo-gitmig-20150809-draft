@@ -12,7 +12,7 @@ Index: libdts-0.0.2/libdts/bitstream.h
 +static inline uint32_t swab32(uint32_t x) {
 +	union {
 +		uint32_t x32;
-+		uint16_t x8[4];
++		uint8_t x8[4];
 +	} u;
 +	u.x32 = x;
 +	return u.x8[0] << 24 | u.x8[1] << 16 | u.x8[2] << 8 | u.x8[3];
@@ -28,7 +28,7 @@ Index: libdts-0.0.2/libdts/bitstream.h
 +static inline uint32_t swable32(uint32_t x) {
 +	union {
 +		uint32_t x32;
-+		uint16_t x8[4];
++		uint8_t x8[4];
 +	} u;
 +	u.x32 = x;
 +	return u.x8[0] << 16 | u.x8[1] << 24 | u.x8[2] | u.x8[3] << 8;
