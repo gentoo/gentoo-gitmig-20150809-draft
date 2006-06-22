@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/pdf2html-1.4.ebuild,v 1.13 2006/03/16 14:23:55 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/pdf2html-1.4.ebuild,v 1.14 2006/06/22 21:52:54 gustavoz Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/local/clock/pdf2html/${P}.tgz"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~clock/twibright/pdf2html/"
 LICENSE="GPL-2"
 
-KEYWORDS="alpha ~amd64 ~ppc ~ppc-macos ~sparc x86"
+KEYWORDS="alpha ~amd64 ~ppc ~ppc-macos sparc x86"
 IUSE=""
 SLOT="0"
 

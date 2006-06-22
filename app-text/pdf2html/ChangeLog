@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdf2html
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/ChangeLog,v 1.12 2006/03/16 14:23:55 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/ChangeLog,v 1.13 2006/06/22 21:52:54 gustavoz Exp $
+
+  22 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> pdf2html-1.4.ebuild:
+  Stable on sparc
 
   16 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org> pdf2html-1.4.ebuild:
   Don't install INSTALL, found by QA script.
