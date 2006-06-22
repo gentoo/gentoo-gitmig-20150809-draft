@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r11.ebuild,v 1.5 2006/06/22 02:40:36 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r11.ebuild,v 1.6 2006/06/22 16:04:30 grobian Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.mpg123.de/mpg123/${PN}-pre${PV}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ppc-macos ppc64 sparc x86"
 IUSE="mmx 3dnow esd nas oss"
 
 RDEPEND="esd? ( media-sound/esound )
@@ -79,13 +79,13 @@ src_compile() {
 			;;
 		ppc)
 			if use ppc-macos; then
-				[[ -z "${styles}" ]] && styles="macos"
+				[ -z "${styles}" ] && styles="macos"
 				atype=""
 			else
 				use esd && styles="${styles} -ppc-esd"
 				use oss && styles="${styles} -ppc"
 
-				[[ -z "${styles}" ]] && styles="-ppc"
+				[ -z "${styles}" ] && styles="-ppc"
 			fi
 			;;
 		x86)
