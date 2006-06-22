@@ -1,69 +1,65 @@
-diff -urN kasumi-2.0/KasumiAddWindow.cxx kasumi-2.0-gcc41/KasumiAddWindow.cxx
---- kasumi-2.0/KasumiAddWindow.cxx	2006-05-29 03:53:18.000000000 +0900
-+++ kasumi-2.0-gcc41/KasumiAddWindow.cxx	2006-06-21 09:54:07.000000000 +0900
-@@ -45,6 +45,21 @@
- 
- using namespace std;
- 
-+void _call_back_add_window_delete_event(GtkWidget *widget,
-+                                            GdkEvent *event,
-+                                            gpointer data);
-+void _call_back_add_window_quit(GtkWidget *widget,
-+                                gpointer data);
-+void _call_back_add_window_add(GtkWidget *widget,
-+                               gpointer data);
-+void _call_back_manage_mode(GtkWidget *widget,
-+                            gpointer data);
-+void _call_back_add_window_changed_word_class_combo(GtkWidget *widget,
-+                                                    gpointer data);
-+void _call_back_selection_data_received(GtkWidget *widget,
-+                                        GtkSelectionData *selection_data,
-+                                        gpointer data);
-+
- KasumiAddWindow::KasumiAddWindow(KasumiDic *aDictionary,
-                                  KasumiConfiguration *conf){
-     this->conf = conf;
-diff -urN kasumi-2.0/KasumiMainWindow.cxx kasumi-2.0-gcc41/KasumiMainWindow.cxx
---- kasumi-2.0/KasumiMainWindow.cxx	2006-05-29 13:56:20.000000000 +0900
-+++ kasumi-2.0-gcc41/KasumiMainWindow.cxx	2006-06-21 09:54:37.000000000 +0900
-@@ -46,6 +46,40 @@
- 
- using namespace std;
- 
-+void _call_back_delete_event(GtkWidget *widget,
-+                             GdkEvent *event,
-+                             gpointer data);
-+void _call_back_quit(GtkWidget *widget,
-+                     gpointer data);
-+void _call_back_store(GtkWidget *widget,
-+                      gpointer data);
-+void _call_back_add(GtkWidget *widget,
-+                    gpointer data);
-+void _call_back_remove(GtkWidget *widget,
-+                       gpointer data);
-+void _call_back_adding_mode(GtkWidget *widget,
-+                            gpointer data);
-+void _call_back_changed_list_cursor(GtkWidget *widget,
-+                                    gpointer data);
-+void _call_back_changed_sound_entry(GtkWidget *widget,
-+                                    gpointer data);
-+void _call_back_changed_spelling_entry(GtkWidget *widget,
-+                                       gpointer data);
-+void _call_back_changed_frequency_spin(GtkWidget *widget,
-+                                       gpointer data);
-+void _call_back_changed_word_class_combo(GtkWidget *widget,
+*** kasumi-2.0.orig/KasumiMainWindow.hxx	2006-05-29 13:56:45.000000000 +0900
+--- kasumi-2.0/KasumiMainWindow.hxx	2006-06-18 17:04:29.000000000 +0900
+***************
+*** 64,69 ****
+--- 64,123 ----
+  typedef _TextColumnEnum SearchBy;
+  typedef _TextColumnEnum TextColumn;
+  
++ void _call_back_changed_wordtype_column(GtkComboBox *combo,
 +                                         gpointer data);
-+void _call_back_changed_verb_type_combo(GtkWidget *widget,
-+                                         gpointer data);
-+void _call_back_toggled_check(GtkWidget *widget,
-+                              gpointer data);
-+void _call_back_changed_search_entry(GtkWidget *widget,
-+                                       gpointer data);
-+void _call_back_activate_search_entry(GtkWidget *widget,
-+                                       gpointer data);
-+void _call_back_clicked_column_header(GtkTreeViewColumn *column,
++ gboolean _call_back_key_pressed_text_column(GtkWidget *widget,
++                                             GdkEventKey *event,
 +                                             gpointer data);
-+
- KasumiMainWindow::KasumiMainWindow(KasumiDic *aDictionary,
-                                    KasumiConfiguration *conf){
-   this->conf = conf;
++ void _call_back_activate_search_entry(GtkWidget *widget,
++                                        gpointer data);
++ void _call_back_changed_search_entry(GtkWidget *widget,
++                                        gpointer data);
++ void _call_back_remove(GtkWidget *widget,
++                        gpointer data);
++ void _call_back_delete_event(GtkWidget *widget,
++                              GdkEvent *event,
++                              gpointer data);
++ void _call_back_quit(GtkWidget *widget,
++                      gpointer data);
++ void _call_back_store(GtkWidget *widget,
++                       gpointer data);
++ void _call_back_add(GtkWidget *widget,
++                     gpointer data);
++ void _call_back_clicked_column_header(GtkTreeViewColumn *column,
++                                              gpointer data);
++ gboolean _call_back_key_pressed_text_column(GtkWidget *widget,
++ 					    GdkEventKey *event,
++ 					    gpointer data);
++ void _call_back_editing_started_sound_column(GtkCellRenderer *render,
++ 					     GtkCellEditable *editable,
++ 					     gchar *path,
++ 					     gpointer data);
++ void _call_back_edited_sound_column(GtkCellRendererText *renderer,
++ 				    gchar *arg1,
++ 				    gchar *arg2,
++ 				    gpointer data);
++ void _call_back_editing_started_spelling_column(GtkCellRenderer *render,
++ 						GtkCellEditable *editable,
++ 						gchar *path,
++ 						gpointer data);
++ void _call_back_edited_spelling_column(GtkCellRendererText *renderer,
++ 				       gchar *arg1,
++ 				       gchar *arg2,
++ 				       gpointer data);
++ void _call_back_editing_started_freq_column(GtkCellRenderer *render,
++ 					    GtkCellEditable *editable,
++ 					    gchar *path,
++ 					    gpointer data);
++ void _call_back_edited_freq_column(GtkCellRendererText *renderer,
++ 				   gchar *arg1,
++ 				   gchar *arg2,
++ 				   gpointer data);
++ void _call_back_editing_started_wordtype_column(GtkCellRenderer *render,
++ 						GtkCellEditable *editable,
++ 						gchar *path,
++ 						gpointer data);
++ 
+  class KasumiMainWindow : public KasumiDicEventListener{
+      friend void _call_back_delete_event(GtkWidget *widget,
+  					GdkEvent *event,
