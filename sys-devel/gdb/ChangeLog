@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.95 2006/06/22 07:59:23 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.96 2006/06/22 19:38:17 flameeyes Exp $
+
+  22 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> gdb-6.5-r1.ebuild:
+  Remove the -locale patch as gdb crashes elseway, reopen bug #125264.
 
   22 Jun 2006; <solar@gentoo.org> files/gdb-6.4-scanmem.patch,
   files/gdb-6.5-scanmem.patch, gdb-6.5-r1.ebuild:
