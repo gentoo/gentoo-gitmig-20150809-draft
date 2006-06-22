@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/xf86-input-evdev-1.1.2-r1.ebuild,v 1.1 2006/05/20 08:14:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/xf86-input-evdev-1.1.2-r1.ebuild,v 1.2 2006/06/22 21:50:01 geoman Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -15,4 +15,4 @@ DEPEND="${RDEPEND}
 	x11-proto/randrproto
 	x11-proto/xproto"
 
-PATCHES="${FILESDIR}/${PV}-CVS-20060520.patch"
+PATCHES="${FILESDIR}/${PV}-CVS-20060520.patch ${PN}-${PV}-mips-syscalls.patch"
