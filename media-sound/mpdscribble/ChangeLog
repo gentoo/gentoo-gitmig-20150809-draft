@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpdscribble
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.11 2006/06/03 10:22:06 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.12 2006/06/22 20:47:20 slarti Exp $
+
+  22 Jun 2006; Tom Martin <slarti@gentoo.org> files/mpdscribble.rc:
+  Add 'use mpd' to depend() part of initscript. Resolves bug #135129.
 
 *mpdscribble-0.2.10 (03 Jun 2006)
 
