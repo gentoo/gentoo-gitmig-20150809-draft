@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.109 2006/06/18 19:27:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.110 2006/06/22 21:01:23 gustavoz Exp $
+
+  22 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  screen-4.0.2-r5.ebuild:
+  Stable on sparc
 
   18 Jun 2006; Andrej Kacian <ticho@gentoo.org> screen-4.0.2-r5.ebuild:
   Stable on x86. Bug #137188.
