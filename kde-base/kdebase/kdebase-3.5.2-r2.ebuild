@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.2-r2.ebuild,v 1.5 2006/06/17 12:01:14 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.2-r2.ebuild,v 1.6 2006/06/22 12:45:10 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -77,6 +77,16 @@ DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
 PATCHES="${WORKDIR}/kdebase-3.5.2-patchset.diff"
+
+pkg_setup() {
+	kde_pkg_setup
+	if use hal && ! built_with_use sys-apps/dbus qt3; then
+		eerror "To enable HAL support in this package is required to have"
+		eerror "sys-apps/dbus compiled with Qt 3 support."
+		eerror "Please reemerge sys-apps/dbus with USE=\"qt3\"."
+		die "Please reemerge sys-apps/dbus with USE=\"qt3\"."
+	fi
+}
 
 src_unpack() {
 	kde_src_unpack
