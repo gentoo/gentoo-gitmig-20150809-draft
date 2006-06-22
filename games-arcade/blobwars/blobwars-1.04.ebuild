@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.04.ebuild,v 1.7 2006/04/23 11:22:28 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.04.ebuild,v 1.8 2006/06/22 16:27:10 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -24,6 +24,10 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PV}-be_pak.diff \
 		"${FILESDIR}/${P}"-gcc41.patch
+	# bug #137588
+	sed -i \
+		-e '/strip/d' makefile \
+		|| die "sed failed"
 }
 
 src_compile() {
