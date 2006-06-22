@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.143 2006/05/22 19:28:12 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.144 2006/06/22 17:00:11 marineam Exp $
+
+*ck-sources-2.6.17_p1 (22 Jun 2006)
+*ck-sources-2.6.16_p12 (22 Jun 2006)
+
+  22 Jun 2006; Michael Marineau <marineam@gentoo.org>
+  -ck-sources-2.6.16_p11.ebuild, +ck-sources-2.6.16_p12.ebuild,
+  +ck-sources-2.6.17_p1.ebuild:
+  Bump to 2.6.16-ck12 (includes 2.6.16.20) and 2.6.17-ck1.
+  Thanks go to Peter Hyman in bug #136109 for cleaning up the ebuild.
 
 *ck-sources-2.6.16_p11 (22 May 2006)
 
