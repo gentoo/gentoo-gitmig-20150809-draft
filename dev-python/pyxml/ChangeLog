@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxml
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.31 2005/11/24 18:27:51 corsair Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.32 2006/06/22 19:10:40 grobian Exp $
+
+  22 Jun 2006; Fabian Groffen <grobian@gentoo.org> files/digest-pyxml-0.8.3,
+  files/digest-pyxml-0.8.3-r1, files/digest-pyxml-0.8.4, Manifest:
+  Marked ~ppc-macos (bug #133717)
 
   24 Nov 2005; Markus Rothe <corsair@gentoo.org> pyxml-0.8.4.ebuild:
   Stable on ppc64
