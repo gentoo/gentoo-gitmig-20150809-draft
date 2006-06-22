@@ -1,12 +1,47 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 169df046b7c9a97668ecd501d957edef ChangeLog 2155
-RMD160 0f443b9f89b0d3fbb09958380d24af7993e50c74 ChangeLog 2155
-SHA256 486ec784eb708b5b43a6f996b43e2fd2ba0da0eefb6933b91d1691626092c6a3 ChangeLog 2155
+AUX 0.8.9/synce-libsynce-0.8.9-gcc33.patch 431 RMD160 58d864993ee0739032d993d363e817bd0412bb07 SHA1 a02bf999f16ad65a33207ae4fa6726bc42f42054 SHA256 139fedab8820af22b443b64a5ba26d57967e37454ba5652e6e3927fca049ac2a
 MD5 32106e3bd72b88a593e10392242917fa files/0.8.9/synce-libsynce-0.8.9-gcc33.patch 431
 RMD160 58d864993ee0739032d993d363e817bd0412bb07 files/0.8.9/synce-libsynce-0.8.9-gcc33.patch 431
 SHA256 139fedab8820af22b443b64a5ba26d57967e37454ba5652e6e3927fca049ac2a files/0.8.9/synce-libsynce-0.8.9-gcc33.patch 431
+AUX synce-libsynce-0.9.1-amd64.patch 542 RMD160 f74b84132c17587fff7d6d67b3174b07656f718b SHA1 8054a36ce99f79ca6ffc22d0eaa0ade8c5dc1adb SHA256 fe07a2ae20b66104b70ce089e849a020f87330085ce415e8ca51a0163dcf2bae
+MD5 b18275998c52eb4e60ffedd56fe8468f files/synce-libsynce-0.9.1-amd64.patch 542
+RMD160 f74b84132c17587fff7d6d67b3174b07656f718b files/synce-libsynce-0.9.1-amd64.patch 542
+SHA256 fe07a2ae20b66104b70ce089e849a020f87330085ce415e8ca51a0163dcf2bae files/synce-libsynce-0.9.1-amd64.patch 542
+DIST synce-libsynce-0.7.tar.gz 233065
+DIST synce-libsynce-0.8.1.tar.gz 327866
+DIST synce-libsynce-0.8.9.tar.gz 249719
+DIST synce-libsynce-0.9.0.tar.gz 348860
+DIST synce-libsynce-0.9.1.tar.gz 356343 RMD160 a8c9d68196dec1b7555f56e8aab622a2817e1cf3 SHA1 603930b41fa987fa7e5e709a40360a616eac231c SHA256 78f342a77bd3b58b70377beb3eea8dd3319ead72300c66fc7ceda3139207ede5
+EBUILD synce-libsynce-0.7.ebuild 624 RMD160 de70265cfa1b519fcfa947ff669327f4af9ab193 SHA1 54213d3f82738c5fe044a813b849d3d44fc86521 SHA256 3177749daf349a1e1b2eb3e4192a4f45d41cdaad6f8ea7ee30985459fd7f3fce
+MD5 51cce255cb3aead6049836d64ab54036 synce-libsynce-0.7.ebuild 624
+RMD160 de70265cfa1b519fcfa947ff669327f4af9ab193 synce-libsynce-0.7.ebuild 624
+SHA256 3177749daf349a1e1b2eb3e4192a4f45d41cdaad6f8ea7ee30985459fd7f3fce synce-libsynce-0.7.ebuild 624
+EBUILD synce-libsynce-0.8.1.ebuild 622 RMD160 01b422f2fa4ecb753034bdb1d3d7e88fb2df8848 SHA1 c8c3741700d19bb18b345e3652a9c2fb0dd30fba SHA256 6afaebd53060aea98ceae65e3e9923e1f753cd29f39540404ad07d0ebe99ee78
+MD5 61b330b4ebe07e5e240ba0b00b6fcb7a synce-libsynce-0.8.1.ebuild 622
+RMD160 01b422f2fa4ecb753034bdb1d3d7e88fb2df8848 synce-libsynce-0.8.1.ebuild 622
+SHA256 6afaebd53060aea98ceae65e3e9923e1f753cd29f39540404ad07d0ebe99ee78 synce-libsynce-0.8.1.ebuild 622
+EBUILD synce-libsynce-0.8.9.ebuild 674 RMD160 f1471af94583d6b01d5814843a15342170a5546d SHA1 414b1a6ea5c2c9d26081bcd50ed8cc767bda4f10 SHA256 9fd5a5b03eea5e56ef4789c437791387beafac0a45f092170c12603bad4e294e
+MD5 1123cd75d25e2b539772f510ca2e4176 synce-libsynce-0.8.9.ebuild 674
+RMD160 f1471af94583d6b01d5814843a15342170a5546d synce-libsynce-0.8.9.ebuild 674
+SHA256 9fd5a5b03eea5e56ef4789c437791387beafac0a45f092170c12603bad4e294e synce-libsynce-0.8.9.ebuild 674
+EBUILD synce-libsynce-0.9.0.ebuild 584 RMD160 44edec78a31b0bb00844cf4d4c191fdc1a07a22a SHA1 c26d6c58ebcedb8a2dcd3c58a451a63cb78980fc SHA256 56422107d54b95c774c4fec07b902017bcfdfe74fa0e655e0bd970ef573315b9
+MD5 af170c1a8e6a2b084bb2c72d7d916df8 synce-libsynce-0.9.0.ebuild 584
+RMD160 44edec78a31b0bb00844cf4d4c191fdc1a07a22a synce-libsynce-0.9.0.ebuild 584
+SHA256 56422107d54b95c774c4fec07b902017bcfdfe74fa0e655e0bd970ef573315b9 synce-libsynce-0.9.0.ebuild 584
+EBUILD synce-libsynce-0.9.1.ebuild 672 RMD160 c35902e9bc44e09da5892bbf39be2172e3231e60 SHA1 da604f4fd380a1f0ead09f4cef847f6e6603e11e SHA256 9c78e3ba69506e9d5d28df84f389b4a4e84bce4ad5e11d3f1c5a30c6934ec7a5
+MD5 a7c15ffbdb87631121a2fbe0c1d3fc82 synce-libsynce-0.9.1.ebuild 672
+RMD160 c35902e9bc44e09da5892bbf39be2172e3231e60 synce-libsynce-0.9.1.ebuild 672
+SHA256 9c78e3ba69506e9d5d28df84f389b4a4e84bce4ad5e11d3f1c5a30c6934ec7a5 synce-libsynce-0.9.1.ebuild 672
+MISC ChangeLog 2327 RMD160 12f7e62451e7fc71bed457e6adf3de7991f31737 SHA1 dc4fcc05b16c9120657968f9d970592c0ba420ca SHA256 0bcff0a747e69f1104a3cddfbe55772d99dbbe405cef967e8f23a815e4e58396
+MD5 44037579203ecd0abcbd596d77f35a9a ChangeLog 2327
+RMD160 12f7e62451e7fc71bed457e6adf3de7991f31737 ChangeLog 2327
+SHA256 0bcff0a747e69f1104a3cddfbe55772d99dbbe405cef967e8f23a815e4e58396 ChangeLog 2327
+MISC metadata.xml 156 RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe SHA1 5b9cb277159d763c133920e483df8d3d587cf7e2 SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb
+MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
+RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe metadata.xml 156
+SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata.xml 156
 MD5 7d9811314c87ae1229c45598d0bb2c95 files/digest-synce-libsynce-0.7 70
 RMD160 e586a6c30e21fddebfda40bd73baca332e745992 files/digest-synce-libsynce-0.7 70
 SHA256 ecba22af24e7798fd42a97bab316157418c2f4ca87dc876bce3049ab2a115163 files/digest-synce-libsynce-0.7 70
@@ -19,31 +54,13 @@ SHA256 dd809e5707cc2d77145b4737c29579a53f28a00edcb3b762cdb0692ad24fa0cf files/di
 MD5 aeb7b4bf53b2d175dfa22980a8698163 files/digest-synce-libsynce-0.9.0 72
 RMD160 863d2068ca2c5788ab75df149e534edcbb69a689 files/digest-synce-libsynce-0.9.0 72
 SHA256 150d039fccf559f18fb8d6978ea9593b96db704a7a2f509f74a3a3c8edd186a3 files/digest-synce-libsynce-0.9.0 72
-MD5 f771aca0b426cd7d8642e9dcc382eb1e files/digest-synce-libsynce-0.9.1 72
-RMD160 9ec5bc4c25ee4a8fdfc50001c169a56febaa1414 files/digest-synce-libsynce-0.9.1 72
-SHA256 01f5ad34856c830b86e6b5d47eee637f027e68c3bcbe474ab496d6387fd0c8b9 files/digest-synce-libsynce-0.9.1 72
-MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
-RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe metadata.xml 156
-SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata.xml 156
-MD5 51cce255cb3aead6049836d64ab54036 synce-libsynce-0.7.ebuild 624
-RMD160 de70265cfa1b519fcfa947ff669327f4af9ab193 synce-libsynce-0.7.ebuild 624
-SHA256 3177749daf349a1e1b2eb3e4192a4f45d41cdaad6f8ea7ee30985459fd7f3fce synce-libsynce-0.7.ebuild 624
-MD5 61b330b4ebe07e5e240ba0b00b6fcb7a synce-libsynce-0.8.1.ebuild 622
-RMD160 01b422f2fa4ecb753034bdb1d3d7e88fb2df8848 synce-libsynce-0.8.1.ebuild 622
-SHA256 6afaebd53060aea98ceae65e3e9923e1f753cd29f39540404ad07d0ebe99ee78 synce-libsynce-0.8.1.ebuild 622
-MD5 1123cd75d25e2b539772f510ca2e4176 synce-libsynce-0.8.9.ebuild 674
-RMD160 f1471af94583d6b01d5814843a15342170a5546d synce-libsynce-0.8.9.ebuild 674
-SHA256 9fd5a5b03eea5e56ef4789c437791387beafac0a45f092170c12603bad4e294e synce-libsynce-0.8.9.ebuild 674
-MD5 af170c1a8e6a2b084bb2c72d7d916df8 synce-libsynce-0.9.0.ebuild 584
-RMD160 44edec78a31b0bb00844cf4d4c191fdc1a07a22a synce-libsynce-0.9.0.ebuild 584
-SHA256 56422107d54b95c774c4fec07b902017bcfdfe74fa0e655e0bd970ef573315b9 synce-libsynce-0.9.0.ebuild 584
-MD5 70dd2892eeb0635958773b541e1e6bee synce-libsynce-0.9.1.ebuild 593
-RMD160 63e1436c9e410c5ca54c994f991d1253b6729fa2 synce-libsynce-0.9.1.ebuild 593
-SHA256 c23fa8bbe1ceb2baa243e237eb8b76512c69b48d0aa3e58118eaca03ee705871 synce-libsynce-0.9.1.ebuild 593
+MD5 d14f4a4a55c67a35fdec507dee484249 files/digest-synce-libsynce-0.9.1 262
+RMD160 33b4d144464fb86e0d4f55cc68a07b08f28825a3 files/digest-synce-libsynce-0.9.1 262
+SHA256 2090b26a2ed968ee87a1e8d2ff602dd32fefd47d2b658c3e8ecb34ebeec94dba files/digest-synce-libsynce-0.9.1 262
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFELFaAJrHF4yAQTrARAsTmAJwLQXZmJmRZMpt11mIdUMtHVe0KmQCeIJxB
-q98pmDfJDSAAb9f37MiN/7U=
-=Ufvu
+iD8DBQFEmnG0ub4+zaPCR/oRAsTMAKCpFK4daTY9dg82k1l5DLVgQd/ySgCgn3Z/
+kFnz3YOLiZ3n7xgQ4sEbmow=
+=qH8G
 -----END PGP SIGNATURE-----

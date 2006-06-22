@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-libsynce/synce-libsynce-0.9.1.ebuild,v 1.2 2006/03/30 22:06:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-libsynce/synce-libsynce-0.9.1.ebuild,v 1.3 2006/06/22 10:31:55 sekretarz Exp $
 
 inherit eutils
 
@@ -14,6 +14,13 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-libs/check-0.8.3.1"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-amd64.patch
+}
 
 src_install() {
 	make DESTDIR=${D} install || die
