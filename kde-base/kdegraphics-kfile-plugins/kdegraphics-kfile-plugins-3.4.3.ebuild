@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/kdegraphics-kfile-plugins-3.4.3.ebuild,v 1.9 2006/03/27 14:59:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/kdegraphics-kfile-plugins-3.4.3.ebuild,v 1.10 2006/06/22 13:19:46 flameeyes Exp $
 
 KMNAME=kdegraphics
 KMMODULE=kfile-plugins
@@ -18,4 +18,8 @@ DEPEND="tiff? ( media-libs/tiff )
 KMEXTRACTONLY="kfile-plugins/ps kfile-plugins/pdf"
 
 PATCHES="$FILESDIR/configure-fix-kdegraphics-openexr.patch"
-myconf="$myconf $(use_with openexr)"
+
+src_compile() {
+	myconf="$myconf $(use_with openexr)"
+	kde-meta_src_compile
+}
