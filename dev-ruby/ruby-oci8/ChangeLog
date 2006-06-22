@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ruby-oci8
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oci8/ChangeLog,v 1.1 2006/06/22 13:38:53 mattm Exp $
+
+*ruby-oci8-0.1.15 (22 Jun 2006)
+
+  22 Jun 2006; Matthew Marlowe <mattm@gentoo.org> +metadata.xml,
+  +ruby-oci8-0.1.15.ebuild:
+  initial commit and test
+
