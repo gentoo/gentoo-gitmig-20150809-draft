@@ -1,0 +1,227 @@
+--- gdb/printcmd.c	2005-02-24 14:51:34.000000000 +0100
++++ gdb/printcmd.c	2005-12-11 01:38:27.000000000 +0100
+@@ -942,6 +942,187 @@ print_command (char *exp, int from_tty)
+   print_command_1 (exp, 0, 1);
+ }
+ 
++int partial_memory_read (CORE_ADDR memaddr, char *myaddr, int len, int *errnoptr);
++
++static void 
++scanmem_command(char *exp, int from_tty)
++{
++  struct expression *expr;
++  struct value *val;
++  struct format_data fmt;
++  CORE_ADDR addr;
++  unsigned char *data;
++  unsigned char *size;
++  unsigned char *pattern;
++  unsigned char typ;
++  unsigned int typc;
++  unsigned char my_buf[4];
++  unsigned int nfetch;
++  unsigned int len = 10;
++  unsigned int memsize;
++  unsigned int i;
++  int typi;
++  int errcode;
++  struct type *type;
++  char *str_num = NULL;
++  char *string_to_seek = NULL;
++  char *tmp = strdup(exp);
++  char *c;
++
++  if (!exp && !*exp)
++    return;
++
++  c = tmp;
++  if (*c == ' ')
++    while (*c && *c == ' ')
++      c++;
++
++  while (*c && *c != ' ')
++    c++;
++
++  *c = '\0';
++  c++;
++
++  while (*c && *c == ' ')
++    c++;
++
++  size = c;
++
++  while (*c && *c != ' ')
++    c++;
++
++  *c = '\0';
++  c++;
++
++  while (*c && *c == ' ')
++    c++;
++
++  typ = *c;
++  c++;
++
++  *c = '\0';
++  c++;
++
++  while (*c && *c == ' ')
++    c++;
++  pattern = c;
++
++  printf_filtered(">>addr %s: size %s: type:%c pattern:%s<< \n", tmp, size, typ, pattern);
++
++  expr = parse_expression(tmp);
++  val = evaluate_expression(expr);
++
++  if (TYPE_CODE(value_type(val)) == TYPE_CODE_REF)
++    val = value_ind(val);
++
++  if (TYPE_CODE(value_type(val)) == TYPE_CODE_FUNC && VALUE_LVAL(val) == lval_memory)
++    addr = VALUE_ADDRESS(val);
++  else
++     addr = value_as_address(val);
++
++  len = atoi(size);
++  data = xmalloc(len);
++  nfetch = partial_memory_read(addr, data, len, &errcode);
++
++  if (nfetch != len)
++    printf_filtered("we can read only %i bytes\n", nfetch);
++
++  switch (typ) {
++  case 's':
++    memsize = strlen(pattern);
++    if (nfetch < memsize) {
++      printf_filtered("we read only %i bytes and we seek for a pattern of %i bytes\n",
++			nfetch, memsize);
++      break;
++    }
++    for (i = 0; i <= (nfetch - memsize); i++, addr++) {
++      if (memcmp(data + i, pattern, memsize) == 0) {
++	printf_filtered("pattern match at ");
++	deprecated_print_address_numeric(addr, 1, gdb_stdout);
++	printf_filtered("\n");
++      }
++    }
++    break;
++
++  case 'i':
++    memsize = sizeof(int);
++    typi = atoi(pattern);
++
++    if (nfetch < memsize) {
++      printf_filtered("we read only %i bytes and we seek for a pattern of %i bytes\n",
++			nfetch, memsize);
++       break;
++    }
++    for (i = 0; i <= (nfetch - memsize); i++, addr++) {
++      int *pint;
++      pint = (unsigned int *) (data + i);
++      if (*pint == typi) {
++	printf_filtered("pattern match at ");
++	deprecated_print_address_numeric(addr, 1, gdb_stdout);
++	printf_filtered("\n");
++      }
++    }
++    break;
++
++  case 'a':
++    memsize = sizeof(unsigned long);
++    if (sscanf(pattern, "0x%x", &i) == 0) {
++      printf_filtered("cant convert to hexa %s\n", pattern);
++      break;
++    }
++    my_buf[0] = (unsigned char) ((i & 0x000000FF));
++    my_buf[1] = (unsigned char) ((i & 0x0000FF00) >> 8);
++    my_buf[2] = (unsigned char) ((i & 0x00FF0000) >> 16);
++    my_buf[3] = (unsigned char) ((i & 0xFF000000) >> 24);
++    if (nfetch < memsize) {
++      printf_filtered("we read only %i bytes and we seek for a pattern of %i bytes\n",
++			nfetch, memsize);
++       break;
++    }
++    for (i = 0; i <= (nfetch - memsize); i++, addr++) {
++      if (memcmp(data + i, my_buf, memsize) == 0) {
++	printf_filtered("pattern match at ");
++	deprecated_print_address_numeric(addr, 1, gdb_stdout);
++	printf_filtered("\n");
++      }
++    }
++    break;
++
++  case 'b':
++  case 'c':
++    memsize = sizeof(char);
++    if (typ == 'c')
++      typc = *pattern;
++    else {
++      if (strncmp("0x", pattern, 2) == 0)
++	sscanf(pattern, "0x%02x", &typc);
++      else
++	typc = (unsigned char)atoi(pattern);
++    }
++    printf_filtered(">>>%0x2\n", typc);
++    if (nfetch < memsize) {
++      printf_filtered("we read only %i bytes and we seek for a pattern of %i bytes\n",
++			nfetch, memsize);
++      break;
++    }
++    for (i = 0; i <= (nfetch - memsize); i++, addr++) {
++      if (data[i] == typc) {
++	printf_filtered("pattern match at ");
++	deprecated_print_address_numeric(addr, 1, gdb_stdout);
++	printf_filtered("\n");
++      }
++    }
++    break;
++
++  default:
++    printf_filtered("'%c' is not a valid type\n", typ);
++    break;
++  }
++  free(data);
++  free(tmp);
++  return;
++}
++
+ /* Same as print, except in epoch, it gets its own window */
+ static void
+ inspect_command (char *exp, int from_tty)
+@@ -2138,6 +2319,16 @@ EXP may be preceded with /FMT, where FMT
+ but no count or size letter (see \"x\" command)."));
+   set_cmd_completer (c, location_completer);
+   add_com_alias ("p", "print", class_vars, 1);
++  c = add_com ("scanmem", class_vars, scanmem_command, _("\
++scanmem  <addr> <num> <type> <string>\n\
++example: scanmem  $esp 100 a 0x8048434\n\
++ scan for this addr on the stack\n\n\
++ scanmem  0x08048434 100 s fsck\n\
++ seek for a string\n\
++ scanmem  0x8048434 100 b 0x75\n\
++ scan for the char 0x75\n\
++ a = address c = char b = byte i = int  s = string")); /* antilove@zolo.freelsd.net */
++  set_cmd_completer (c, location_completer);
+ 
+   c = add_com ("inspect", class_vars, inspect_command, _("\
+ Same as \"print\" command, except that if you are running in the epoch\n\
+--- gdb/valprint.c	2006-06-21 19:38:30.000000000 -0400
++++ gdb/valprint.c	2006-06-21 19:42:13.000000000 -0400
+@@ -39,7 +39,7 @@
+ 
+ /* Prototypes for local functions */
+ 
+-static int partial_memory_read (CORE_ADDR memaddr, gdb_byte *myaddr,
++int partial_memory_read (CORE_ADDR memaddr, gdb_byte *myaddr,
+ 				int len, int *errnoptr);
+ 
+ static void show_print (char *, int);
+@@ -1058,7 +1058,7 @@
+ /* FIXME: cagney/1999-10-14: Only used by val_print_string.  Can this
+    function be eliminated.  */
+ 
+-static int
++int
+ partial_memory_read (CORE_ADDR memaddr, gdb_byte *myaddr, int len, int *errnoptr)
+ {
+   int nread;			/* Number of bytes actually read. */

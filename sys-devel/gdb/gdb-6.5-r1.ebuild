@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.4-r1.ebuild,v 1.2 2006/06/22 00:38:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.5-r1.ebuild,v 1.1 2006/06/22 00:38:44 solar Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 	fi
 fi
 
-#DEB_VER=6
+#DEB_VER=1
 DESCRIPTION="GNU debugger"
 HOMEPAGE="http://sources.redhat.com/gdb/"
 SRC_URI="http://ftp.gnu.org/gnu/gdb/${P}.tar.bz2
@@ -22,7 +22,7 @@ LICENSE="GPL-2 LGPL-2"
 [[ ${CTARGET} != ${CHOST} ]] \
 	&& SLOT="${CTARGET}" \
 	|| SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
 IUSE="nls test vanilla"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
@@ -44,18 +44,13 @@ src_unpack() {
 			done
 		fi
 		epatch "${FILESDIR}"/gdb-6.4-uclibc.patch
-		epatch "${FILESDIR}"/gdb-6.4-relative-paths.patch
 		#epatch "${FILESDIR}"/gdb-6.x-crash.patch
 		epatch "${FILESDIR}"/gdb-6.2.1-pass-libdir.patch
-		epatch "${FILESDIR}"/gdb-6.4-scanmem.patch
+		epatch "${FILESDIR}"/gdb-6.5-scanmem.patch
 		epatch "${FILESDIR}"/gdb-6.3-gdbinit-stat.patch
-		epatch "${FILESDIR}"/bfd-malloc-wrap.patch #91398
-
-		epatch "${FILESDIR}"/gdb-6.2.1-200-uclibc-readline-conf.patch
-		epatch "${FILESDIR}"/gdb-6.2.1-400-mips-coredump.patch
-		epatch "${FILESDIR}"/gdb-6.2.1-libiberty-pic.patch
 	fi
 
+	epatch "${FILESDIR}"/gdb-configure-LANG.patch
 	strip-linguas -u bfd/po opcodes/po
 }
 
@@ -65,7 +60,7 @@ src_compile() {
 		--disable-werror \
 		$(use_enable nls) \
 		|| die
-	emake -j1 || die
+	emake || die
 }
 
 src_test() {
@@ -74,13 +69,10 @@ src_test() {
 
 src_install() {
 	make \
-		prefix="${D}"/usr \
-		mandir="${D}"/usr/share/man \
-		infodir="${D}"/usr/share/info \
-		libdir="${D}"/nukeme includedir="${D}"/nukeme \
-		install || die "install"
-	# The includes and libs are in binutils already
-	rm -r "${D}"/nukeme
+		DESTDIR="${D}" \
+		libdir=/nukeme includedir=/nukeme \
+		install || die
+	rm -r "${D}"/nukeme || die
 
 	# Don't install docs when building a cross-gdb
 	if [[ ${CTARGET} != ${CHOST} ]] ; then
@@ -91,11 +83,9 @@ src_install() {
 	dodoc README
 	docinto gdb
 	dodoc gdb/CONTRIBUTE gdb/README gdb/MAINTAINERS \
-		gdb/NEWS gdb/ChangeLog* gdb/TODO
+		gdb/NEWS gdb/ChangeLog gdb/PROBLEMS
 	docinto sim
 	dodoc sim/ChangeLog sim/MAINTAINERS sim/README-HACKING
-	docinto mmalloc
-	dodoc mmalloc/MAINTAINERS mmalloc/ChangeLog mmalloc/TODO
 
 	if use x86 ; then
 		dodir /etc/skel/
@@ -103,12 +93,6 @@ src_install() {
 			|| die "install ${D}/etc/skel/.gdbinit"
 	fi
 
-	if ! has noinfo ${FEATURES} ; then
-		make \
-			infodir="${D}"/usr/share/info \
-			install-info \
-			|| die "install doc info"
-		# Remove shared info pages
-		rm -f "${D}"/usr/share/info/{annotate,bfd,configure,standards}.info*
-	fi
+	# Remove shared info pages
+	rm -f "${D}"/usr/share/info/{annotate,bfd,configure,standards}.info*
 }
