@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/zsh-completion
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.13 2006/06/17 16:04:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.14 2006/06/22 22:04:31 gustavoz Exp $
+
+  22 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  zsh-completion-20050120.ebuild:
+  Stable on sparc
 
 *zsh-completion-20060618 (17 Jun 2006)
 
