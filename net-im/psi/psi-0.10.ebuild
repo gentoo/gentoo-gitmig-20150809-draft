@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.7 2006/06/19 21:01:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.8 2006/06/22 12:05:47 humpback Exp $
 
 inherit eutils qt3
 
@@ -38,7 +38,7 @@ SRC_URI="mirror://sourceforge/psi/${MY_P}.tar.bz2
 		linguas_nl? ( ${HTTPMIRR}/psi_nl-0.10-a.tar.bz2 )
 		linguas_pl? ( ${HTTPMIRR}/psi_pl-0.9.3-1.tar.bz2 )
 		linguas_pt? ( ${HTTPMIRR}/psi_pt-0.9.3.tar.bz2 )
-		linguas_ptBR? ( ${HTTPMIRR}/psi_ptBR-0.10-a.tar.bz2 )
+		linguas_pt_BR? ( ${HTTPMIRR}/psi_ptBR-0.10-a.tar.bz2 )
 		linguas_ru? ( ${HTTPMIRR}/psi_ru-0.9.3-a.tar.bz2 )
 		linguas_se? ( ${HTTPMIRR}/psi_se-0.9.3_rc1.tar.bz2 )
 		linguas_sk? ( ${HTTPMIRR}/psi_sk-0.9.3-a.tar.bz2 )
