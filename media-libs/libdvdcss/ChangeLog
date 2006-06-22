@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.55 2006/05/25 02:43:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.56 2006/06/22 16:10:49 grobian Exp $
+
+  22 Jun 2006; Fabian Groffen <grobian@gentoo.org> libdvdcss-1.2.9.ebuild:
+  Marked ppc-macos stable (bug #111132)
 
   25 May 2006; Diego Pettenò <flameeyes@gentoo.org> libdvdcss-1.2.9.ebuild:
   Add ~x86-fbsd keyword.
