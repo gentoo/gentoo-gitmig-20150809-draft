@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.182 2006/06/21 07:06:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.183 2006/06/22 15:05:19 gustavoz Exp $
+
+  22 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> portage-2.1-r1.ebuild:
+  Stable on sparc wrt #137445
 
 *portage-2.1-r1 (21 Jun 2006)
 
