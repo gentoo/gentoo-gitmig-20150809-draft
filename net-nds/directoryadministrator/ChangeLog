@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/directoryadministrator
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/directoryadministrator/ChangeLog,v 1.7 2006/06/01 11:32:25 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/directoryadministrator/ChangeLog,v 1.8 2006/06/22 04:41:10 tsunam Exp $
+
+  22 Jun 2006; Joshua Jackson <tsunam@gentoo.org>
+  directoryadministrator-1.5.1.ebuild:
+  Stable on x86; bug #93847
 
   01 Jun 2006; Markus Ullmann <jokey@gentoo.org>
   directoryadministrator-1.4.ebuild, directoryadministrator-1.5.1.ebuild,
