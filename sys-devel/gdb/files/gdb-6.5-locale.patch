@@ -9,9 +9,10 @@
  	@rm -f init.c-tmp init.l-tmp
  	@touch init.c-tmp
  	@echo gdbtypes > init.l-tmp
-+	LANG=c ; export LANG ; \
++	@-LANG=c ; export LANG ; \
 +	LC_ALL=c ; export LC_ALL ; \
- 	@-echo $(INIT_FILES) | \
+-	@-echo $(INIT_FILES) | \
++	echo $(INIT_FILES) | \
  	tr ' ' '\012' | \
  	sed \
 --- gdb/gdb_indent.sh
