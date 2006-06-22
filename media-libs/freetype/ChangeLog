@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.82 2006/06/20 12:35:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.83 2006/06/22 14:21:10 foser Exp $
+
+*freetype-2.1.10-r2 (22 Jun 2006)
+
+  22 Jun 2006; Marinus Schraal <foser@gentoo.org> freetype-2.1.10-r1.ebuild :
+  Updated security patchset to deal with crashers (#124828,#137388)
 
   20 Jun 2006; Marinus Schraal <foser@gentoo.org> metadata.xml :
   Add fonts@gentoo.org as herd
