@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mtp-target-bin/mtp-target-bin-1.2.0.ebuild,v 1.6 2006/03/01 22:40:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mtp-target-bin/mtp-target-bin-1.2.0.ebuild,v 1.7 2006/06/22 23:59:20 mr_bones_ Exp $
 
 inherit games
 
@@ -13,6 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
+RESTRICT="strip"
 
 DEPEND=""
 RDEPEND="dev-libs/STLport
