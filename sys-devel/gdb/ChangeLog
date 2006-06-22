@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.93 2006/06/22 00:38:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.94 2006/06/22 04:02:43 vapier Exp $
+
+  22 Jun 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/gdb-6.5-locale.patch, gdb-6.5.ebuild:
+  Fix issues with funky locales #125264 by J.
 
 *gdb-6.5-r1 (21 Jun 2006)
 
