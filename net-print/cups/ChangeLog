@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.183 2006/06/22 07:04:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.184 2006/06/22 17:54:14 genstef Exp $
+
+*cups-1.2.1-r2 (22 Jun 2006)
+
+  22 Jun 2006; Stefan Schweizer <genstef@gentoo.org> -cups-1.2.1-r1.ebuild,
+  +cups-1.2.1-r2.ebuild:
+  revision bump to allow remote administration with USE="ssl", recommend
+  emerge -va1 in postinst thanks to jakub
 
   22 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
   +files/cups-1.2.1-ssldir.patch, +files/cupsd.init, -files/cupsd.rc6,
