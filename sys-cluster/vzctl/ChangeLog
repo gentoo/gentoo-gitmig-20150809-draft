@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.25 2006/06/19 20:29:50 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.26 2006/06/22 04:28:44 hollow Exp $
+
+  22 Jun 2006; Benedikt Böhm <hollow@gentoo.org> vzctl-3.0.10.ebuild:
+  fix libdir; add warning
 
 *vzctl-3.0.10 (19 Jun 2006)
 
