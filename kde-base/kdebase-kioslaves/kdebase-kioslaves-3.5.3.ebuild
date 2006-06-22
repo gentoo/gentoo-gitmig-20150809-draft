@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.3.ebuild,v 1.1 2006/06/01 17:34:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.3.ebuild,v 1.2 2006/06/22 12:43:46 flameeyes Exp $
 
 KMNAME=kdebase
 KMMODULE=kioslave
@@ -21,5 +21,17 @@ DEPEND="ldap? ( net-nds/openldap )
 RDEPEND="${DEPEND}
 	$(deprange $PV $MAXKDEVER kde-base/kdialog)"  # for the kdeeject script used by the devices/mounthelper ioslave
 
-myconf="$myconf `use_with ldap` `use_with samba` `use_with hal` `use_with openexr`"
+pkg_setup() {
+	kde_pkg_setup
+	if use hal && ! built_with_use sys-apps/dbus qt3; then
+		eerror "To enable HAL support in this package is required to have"
+		eerror "sys-apps/dbus compiled with Qt 3 support."
+		eerror "Please reemerge sys-apps/dbus with USE=\"qt3\"."
+		die "Please reemerge sys-apps/dbus with USE=\"qt3\"."
+	fi
+}
 
+src_compile() {
+	myconf="$myconf `use_with ldap` `use_with samba` `use_with hal` `use_with openexr`"
+	kde-meta_src_compile
+}
