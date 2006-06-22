@@ -1,5 +1,5 @@
---- Makefile.orig	2005-03-03 11:12:07.000000000 -0500
-+++ Makefile	2005-03-03 11:50:42.000000000 -0500
+--- Makefile
++++ Makefile
 @@ -12,9 +12,8 @@
  
  FC = f2c
@@ -11,3 +11,20 @@
  	$(FC) $(FFLAGS) $<
  
  all:	dungeon textcnv bin2txt
+@@ -24,13 +23,13 @@
+ 	random.C dungeon.o gdt.o objects.o rooms.o timefnc.o \
+ 	game.o machdep.o parser.o subr.o verbs.o gettim.o \
+ 	random.o libdungeon.a
+-	$(CC) -s -o dungeon dungeon.o -L. -ldungeon -lf2c -lm
++	$(CC) -o dungeon dungeon.o -L. -ldungeon -lf2c -lm
+ 
+ textcnv: textcnv.c
+-	$(CC) -s -o textcnv textcnv.c -lf2c -lm
++	$(CC) -o textcnv textcnv.c -lf2c -lm
+ 
+ bin2txt: bin2txt.c
+-	$(CC) -s -o bin2txt bin2txt.c -lf2c -lm
++	$(CC) -o bin2txt bin2txt.c -lf2c -lm
+ 
+ # The gettim.C and random.C functions enable Dungeon to keep track of the elapsed
+ # time in the game and to access random number functions.  The uppercase suffix
