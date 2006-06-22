@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5530 2006/06/22 04:22:39 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5531 2006/06/22 05:33:33 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Alec Warner <antarus@gentoo.org> (21 Jun 2006)
+# Masked for removal by treecleaners
+# bug # 32779, 63710, 94283, 102947, 118942
+net-misc/freenet6
 
 # Alec Warner <antarus@gentoo.org> (21 Jun 2006)
 # Masked for removal by treecleaners
