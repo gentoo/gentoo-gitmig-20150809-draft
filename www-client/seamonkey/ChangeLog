@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.9 2006/06/23 01:12:50 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.10 2006/06/23 05:17:38 tcort Exp $
+
+  23 Jun 2006; Thomas Cort <tcort@gentoo.org> seamonkey-1.0.2.ebuild:
+  Stable on alpha wrt Bug #137198.
 
   23 Jun 2006; <anarchy@gentoo.org> seamonkey-1.0.2.ebuild:
   Marked amd64 as per bug #137198
