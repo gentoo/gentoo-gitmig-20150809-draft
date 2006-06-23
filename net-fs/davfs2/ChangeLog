@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/davfs2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.23 2006/06/23 15:05:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.24 2006/06/23 16:23:02 wolf31o2 Exp $
+
+  23 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> davfs2-0.2.8.ebuild:
+  Stable on x86 wrt bug #105264.
 
   23 Jun 2006; Simon Stelling <blubb@gentoo.org> davfs2-0.2.8.ebuild:
   readding ~amd64 per bug 119877
