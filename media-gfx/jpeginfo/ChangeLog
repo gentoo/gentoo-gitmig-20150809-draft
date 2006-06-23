@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jpeginfo
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/ChangeLog,v 1.9 2005/11/25 22:21:09 cryos Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/ChangeLog,v 1.10 2006/06/23 18:25:48 gustavoz Exp $
+
+  23 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> jpeginfo-1.6.0.ebuild:
+  Stable on sparc
 
   25 Nov 2005; Marcus D. Hanwell <cryos@gentoo.org> jpeginfo-1.6.0.ebuild:
   Stable on amd64.
