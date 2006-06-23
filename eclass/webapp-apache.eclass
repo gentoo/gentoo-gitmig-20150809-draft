@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.25 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.26 2006/06/23 17:20:34 chtekk Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 #
@@ -108,33 +108,4 @@ function webapp-pkg_setup ()
 	ewarn
 	ewarn "Please file a bug on http://bugs.gentoo.org/, stating that this"
 	ewarn "ebuild needs converting to use the new approach."
-}
-
-# shamelessly stolen from Max Kalika <max@gentoo.org>'s horde stuff ;-)
-#
-# call this from your ebuild's pkg_setup() function!!
-
-function webapp-check-php ()
-{
-	local missing=""
-	local php_use="$(</var/db/pkg/`best_version dev-php/mod_php`/USE)"
-	local i
-
-	for i in $* ; do
-		if [ ! "`has ${i} ${php_use}`" ] ; then
-			missing="${missing} ${i}"
-		fi
-	done
-
-	# let's tell the user how to fix these problems
-
-	if [ -n "${missing}" ]; then
-		eerror "PHP is missing support for one or more options:"
-		eerror " ${missing}"
-		eerror
-		eerror "Please add '${missing}' to your USE flags, and re-install mod_php"
-		die "mod_php needs re-compiling with missing options"
-	fi
-
-	return 0
 }
