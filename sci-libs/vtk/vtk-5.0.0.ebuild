@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.6 2006/06/12 12:38:38 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.7 2006/06/23 01:13:23 markusle Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
@@ -36,6 +36,16 @@ DEPEND="${RDEPEND}
 		qt4? ( >=x11-libs/qt-4.1.0 )"
 
 S="${WORKDIR}"/VTK
+
+
+pkg_setup() {
+	if use qt3 && use qt4; then
+		echo
+		ewarn "qt3 and qt4 support for vtk are mutually exclusive and"
+		ewarn "qt4 support has therefore been enabled by default."
+		echo
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
