@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.50 2006/06/05 20:40:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.51 2006/06/23 19:55:53 flameeyes Exp $
+
+  23 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> libevent-1.1a.ebuild:
+  Forgot to actually add the keyword.
 
   05 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> libevent-1.1a.ebuild:
   Add ~x86-fbsd keyword and elibtoolize.
