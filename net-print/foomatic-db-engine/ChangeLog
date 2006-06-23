@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-db-engine
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.28 2006/06/04 14:55:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.29 2006/06/23 20:46:12 genstef Exp $
+
+  23 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
+  foomatic-db-engine-3.0.20060601.ebuild:
+  Ebuild cleanups and new path for cups-1.2, thanks to jakub.
 
 *foomatic-db-engine-3.0.20060601 (04 Jun 2006)
 
