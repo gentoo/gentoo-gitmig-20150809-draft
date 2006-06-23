@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r3.ebuild,v 1.5 2006/06/05 10:38:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r3.ebuild,v 1.6 2006/06/23 23:54:49 cardoe Exp $
 
 inherit flag-o-matic qt3 multilib eutils autotools
 
@@ -11,11 +11,11 @@ SRC_URI="mirror://gnupg/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ppc64 ~sparc ~x86"
-IUSE="gtk ncurses qt caps"
+IUSE="gtk ncurses qt3 caps"
 
 DEPEND="gtk? ( =x11-libs/gtk+-2* )
 	ncurses? ( sys-libs/ncurses )
-	qt? ( $(qt_min_version 3.3) )
+	qt3? ( $(qt_min_version 3.3) )
 	!gtk? ( !qt? ( !ncurses? ( sys-libs/ncurses ) ) )
 	caps? ( sys-libs/libcap )"
 
@@ -30,7 +30,7 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 
-	if ! ( use qt || use gtk || use ncurses )
+	if ! ( use qt3 || use gtk || use ncurses )
 	then
 		myconf="--enable-pinentry-curses --enable-fallback-curses"
 	fi
@@ -45,7 +45,7 @@ src_compile() {
 		--enable-maintainer-mode \
 		--disable-pinentry-gtk \
 		$(use_enable gtk pinentry-gtk2) \
-		$(use_enable qt pinentry-qt) \
+		$(use_enable qt3 pinentry-qt) \
 		$(use_enable ncurses pinentry-curses) \
 		$(use_enable ncurses fallback-curses) \
 		$(use_with caps libcap) \
