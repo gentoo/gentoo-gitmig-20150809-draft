@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Cache-Cache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Cache/ChangeLog,v 1.29 2006/02/13 10:45:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Cache/ChangeLog,v 1.30 2006/06/23 13:26:20 mcummings Exp $
+
+*Cache-Cache-1.05 (23 Jun 2006)
+
+  23 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  +Cache-Cache-1.05.ebuild:
+  Version bump upstream
 
   13 Feb 2006; <mcumming@gentoo.org> Cache-Cache-1.03.ebuild,
   Cache-Cache-1.04.ebuild:
