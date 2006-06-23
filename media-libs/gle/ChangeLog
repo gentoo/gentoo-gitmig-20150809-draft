@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/gle
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.18 2006/05/18 13:46:05 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.19 2006/06/23 13:00:15 betelgeuse Exp $
+
+*gle-3.0.1-r3 (23 Jun 2006)
+
+  23 Jun 2006; Petteri Räty <betelgeuse@gentoo.org> +gle-3.0.1-r3.ebuild:
+  Added a doc use flag for the html documentation that was previously always
+  installed.
 
   18 May 2006; Harald van Dĳk <truedfx@gentoo.org>
   +files/configure-LANG.patch, gle-3.0.1-r2.ebuild:
