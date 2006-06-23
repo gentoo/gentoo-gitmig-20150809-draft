@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20060222.2.ebuild,v 1.5 2006/05/23 13:29:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20060222.2.ebuild,v 1.6 2006/06/23 15:06:19 markusle Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -43,7 +43,10 @@ pkg_setup() {
 
 	# blas and ifc don't go together
 	if use blas && [[ "${FORTRANC}" = "ifc" ]]; then
-		die  "${PN} can not be compiled with USE=blas and ifc"
+		echo
+		ewarn "${PN} can not be compiled with USE=blas and ifc."
+		ewarn "Linking against GAMESS' internal blas instead."
+		echo
 	fi
 }
 
@@ -112,7 +115,7 @@ src_unpack() {
 	fi
 
 	# use proper blas 
-	if ! use blas; then
+	if ! use blas || [[ "${FORTRANC}" = "ifc" ]]; then
 		sed -e "s|/usr/lib/libblas.a|/usr/lib/dontuselibblas.a|" \
 			-i lked || die "Failed to adjust blas in lked"
 	fi

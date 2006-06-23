@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.13 2006/05/23 13:29:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.14 2006/06/23 15:06:19 markusle Exp $
+
+  23 Jun 2006; Markus Dittrich <markusle@gentoo.org>
+  gamess-20060222.2.ebuild:
+  Disable linking against external blas when compiling with ifc and
+  print out a warning.
 
   23 May 2006; Markus Dittrich <markusle@gentoo.org>
   gamess-20060222.2.ebuild:
