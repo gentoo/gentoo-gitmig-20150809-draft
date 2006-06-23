@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.46 2006/06/16 06:54:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.47 2006/06/23 19:54:18 eldad Exp $
+
+  23 Jun 2006; Eldad Zack <eldad@gentoo.org> nagios-2.3.1.ebuild,
+  nagios-2.4.ebuild:
+  fixed nagios-imagepack dep, bug #137668
 
   16 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org> -nagios-2.3.ebuild:
   removed due to broken deps
