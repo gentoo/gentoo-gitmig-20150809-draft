@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/perltidy
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/ChangeLog,v 1.19 2005/10/02 13:43:21 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/ChangeLog,v 1.20 2006/06/23 20:38:13 mcummings Exp $
+
+*perltidy-20060614 (23 Jun 2006)
+
+  23 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  +perltidy-20060614.ebuild:
+  Version bump upstream
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> perltidy-20031021.ebuild:
   Mark 20031021 stable on ia64
