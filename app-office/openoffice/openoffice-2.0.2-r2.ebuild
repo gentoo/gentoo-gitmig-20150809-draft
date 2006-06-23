@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r2.ebuild,v 1.14 2006/06/20 17:23:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.2-r2.ebuild,v 1.15 2006/06/23 07:40:33 suka Exp $
 
 inherit check-reqs eutils fdo-mime flag-o-matic java-pkg kde-functions mono toolchain-funcs
 
-IUSE="binfilter cairo eds firefox gnome gtk java kde ldap mono mozilla xml"
+IUSE="binfilter cairo eds firefox gnome gtk java kde ldap mono xml"
 
 MY_PV="${PV}.11"
 PATCHLEVEL="OOB680"
@@ -47,8 +47,7 @@ RDEPEND="!app-office/openoffice-bin
 		>=x11-libs/gtk+-2.8 )
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
 	kde? ( >=kde-base/kdelibs-3.2 )
-	mozilla? ( !firefox? ( >=www-client/mozilla-1.7.12 )
-		firefox? ( >=www-client/mozilla-firefox-1.5-r9 ) )
+	firefox? ( >=www-client/mozilla-firefox-1.5-r9 )
 	>=x11-libs/startup-notification-0.5
 	>=media-libs/freetype-2.1.10
 	>=media-libs/fontconfig-2.2.0
@@ -164,8 +163,8 @@ src_unpack() {
 	echo "`use_enable binfilter`" >> ${CONFFILE}
 	echo "`use_with xml system-libxml`" >> ${CONFFILE}
 
-	echo "`use_with mozilla system-mozilla`" >> ${CONFFILE}
-	echo "`use_enable mozilla`" >> ${CONFFILE}
+	echo "`use_enable firefox mozilla`" >> ${CONFFILE}
+	echo "`use_with firefox system-mozilla`" >> ${CONFFILE}
 	echo "`use_with firefox`" >> ${CONFFILE}
 
 	echo "`use_enable ldap openldap`" >> ${CONFFILE}

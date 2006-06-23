@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1-r1.ebuild,v 1.4 2006/04/04 19:45:33 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.1-r1.ebuild,v 1.5 2006/06/23 07:40:34 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
-IUSE="binfilter eds gnome gtk java kde ldap mozilla xml"
+IUSE="binfilter eds gnome gtk java kde ldap xml"
 
 MY_PV="${PV}.3"
 PATCHLEVEL="OOA680"
@@ -42,7 +42,6 @@ RDEPEND="!app-office/openoffice-bin
 	gtk? ( >=x11-libs/gtk+-2.4 )
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
 	kde? ( kde-base/kdelibs )
-	mozilla? ( >=www-client/mozilla-1.7.10 )
 	>=x11-libs/startup-notification-0.5
 	>=media-libs/freetype-2.1.4
 	>=media-libs/fontconfig-2.2.0
@@ -147,8 +146,7 @@ src_unpack() {
 	echo "`use_enable binfilter`" >> ${CONFFILE}
 	echo "`use_with xml system-libxml`" >> ${CONFFILE}
 
-	echo "`use_with mozilla system-mozilla`" >> ${CONFFILE}
-	echo "`use_enable mozilla`" >> ${CONFFILE}
+	echo "--without-system-mozilla --disable-mozilla" >> ${CONFFILE}
 
 	echo "`use_enable ldap openldap`" >> ${CONFFILE}
 	echo "`use_enable eds evolution2`" >> ${CONFFILE}
