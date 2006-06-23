@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/adom/adom-1.1.1-r1.ebuild,v 1.8 2005/09/26 18:15:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/adom/adom-1.1.1-r1.ebuild,v 1.9 2006/06/23 00:14:20 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -12,12 +12,12 @@ LICENSE="adom"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
+RESTRICT="strip" #bug #137340
 
-DEPEND="virtual/libc
-	>=sys-libs/ncurses-5.0
+DEPEND=">=sys-libs/ncurses-5.0
 	amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_install() {
 	exeinto "${GAMES_PREFIX_OPT}/bin"
