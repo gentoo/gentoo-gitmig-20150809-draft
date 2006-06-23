@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.2.ebuild,v 1.1 2006/06/07 00:18:42 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.2.ebuild,v 1.2 2006/06/23 23:53:58 vericgar Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -285,7 +285,7 @@ src_install () {
 	done
 
 	# needed for suexec2-config
-	insinto /usr/${get_libdir}/apache2/build
+	insinto /usr/$(get_libdir)/apache2/build
 	doins ${GENTOO_PATCHDIR}/scripts/Makefile.suexec
 	doins support/suexec.c
 
