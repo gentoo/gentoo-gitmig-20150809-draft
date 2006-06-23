@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pinfo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.24 2006/06/23 12:03:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.25 2006/06/23 12:33:45 jer Exp $
+
+  23 Jun 2006; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Taking up maintainership.
 
   23 Jun 2006; Jeroen Roovers <jer@gentoo.org> -pinfo-0.6.5_p2-r1.ebuild,
   -pinfo-0.6.7.ebuild:
