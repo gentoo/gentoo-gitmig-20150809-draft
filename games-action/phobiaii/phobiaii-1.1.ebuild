@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.8 2005/08/11 11:58:02 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.9 2006/06/23 05:15:51 mr_bones_ Exp $
 
 inherit games
 
@@ -13,6 +13,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
+RESTRICT="strip"
 
 DEPEND=""
 RDEPEND="media-libs/sdl-mixer
@@ -27,10 +28,9 @@ src_install() {
 	dodoc README
 	rm setup-link.sh README
 
-	dodir ${GAMES_PREFIX_OPT}/${PN}
-	mv * ${D}/${GAMES_PREFIX_OPT}/${PN}/
+	dodir "${GAMES_PREFIX_OPT}"/${PN}
+	mv * "${D}/${GAMES_PREFIX_OPT}"/${PN}/
 
-	dogamesbin ${FILESDIR}/phobiaII
-
+	dogamesbin "${FILESDIR}"/phobiaII || die "dogamesbin failed"
 	prepgamesdirs
 }
