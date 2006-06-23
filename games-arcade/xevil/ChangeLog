@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/xevil
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/ChangeLog,v 1.9 2006/04/27 21:50:15 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/ChangeLog,v 1.10 2006/06/23 05:00:28 mr_bones_ Exp $
+
+  23 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/xevil-2.02_p2-gcc41.patch, xevil-2.02_p2.ebuild:
+  add patch from Tristan Heaven via bug #137673 to avoid prestripping binary and
+  tidy ebuild; bump to latest debian patch
 
   27 Apr 2006; <Tupone@gentoo.org> +files/xevil-2.02_p2-gcc41.patch,
   xevil-2.02_p2.ebuild:
