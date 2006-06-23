@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1966 2006/06/23 15:27:49 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1967 2006/06/23 22:51:14 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -205,7 +205,6 @@ app-text/namazu:kakasi - Enable kakasi support for namazu
 app-text/noweb:icon - Enable icon language support for noweb
 app-text/pdftk:nodrm - Decrypt a document with the user_pw even if it has an owner_pw set
 app-text/poppler-bindings:cairo - Enable the cairo backend for poppler
-app-text/poppler-bindings:qt4 - Enable the Qt4 backend for poppler
 app-text/poppler:cairo - Enable the cairo backend for poppler
 app-text/sword-modules:intl - Enable different languages
 app-text/sword:icu - Enable icu support for sword
@@ -1352,8 +1351,6 @@ sci-libs/libghemical:mpqc - Use the MPQC package for quantum-mechanical calculat
 sci-libs/plplot:itcl - Support for itcl bindings.
 sci-libs/plplot:octave - Support for Octave bindings.
 sci-libs/vtk:patented - Builds patented classes.
-sci-libs/vtk:qt3 - Adds support for the Qt3 GUI/Application Toolkit.
-sci-libs/vtk:qt4 - Adds support for the Qt4 GUI/Application Toolkit.
 sci-mathematics/coq:ide - Build the Coq IDE, a clone of proof general using lablgtk2.
 sci-mathematics/coq:norealanalysis - Do not build real analysis modules (faster compilation).
 sci-mathematics/coq:translator - Install the translator script from coq-7.4 to coq-8.0, and its documentation if doc is set too.
@@ -1379,8 +1376,6 @@ sys-apps/baselayout-vserver:fakelog - install a fake logger init script
 sys-apps/busybox:floppyboot - builds a busybox binary for use on floppy drives.
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
-sys-apps/dbus:qt3 - Compile QT3 based bindings for D-Bus (allows QT3 apps to talk via D-BUS)
-sys-apps/dbus:qt4 - Compile QT4 (Trolltech written) based bindings for D-Bus (needed for KDE4 since DCOP is gone)
 sys-apps/hal:dmi - Adds support for DMI (Desktop Management Interface)
 sys-apps/hal:pam_console - Adds support for pam console from PAM
 sys-apps/iproute2:atm - Add support for ATM qdisc manager
