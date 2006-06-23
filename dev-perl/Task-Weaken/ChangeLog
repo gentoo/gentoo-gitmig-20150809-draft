@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Task-Weaken
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Task-Weaken/ChangeLog,v 1.1 2006/06/23 23:42:09 mcummings Exp $
+
+*Task-Weaken-0.99 (23 Jun 2006)
+
+  23 Jun 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Task-Weaken-0.99.ebuild:
+  New dep for dev-perl/PPI
+
