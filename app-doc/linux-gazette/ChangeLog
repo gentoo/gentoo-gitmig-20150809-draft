@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/linux-gazette
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette/ChangeLog,v 1.14 2006/04/28 02:57:48 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette/ChangeLog,v 1.15 2006/06/23 18:30:42 antarus Exp $
+
+  23 Jun 2006; <antarus@gentoo.org> +metadata.xml:
+  Fix Digests for bug # 137262
 
   28 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-linux-gazette-01, files/digest-linux-gazette-77,
@@ -56,6 +59,56 @@
   files/digest-linux-gazette-97, files/digest-linux-gazette-98,
   files/digest-linux-gazette-105, files/digest-linux-gazette-111, Manifest:
   Fix SHA256 digests.
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org>
+  files/digest-linux-gazette-01, files/digest-linux-gazette-09,
+  files/digest-linux-gazette-10, files/digest-linux-gazette-11,
+  files/digest-linux-gazette-12, files/digest-linux-gazette-13,
+  files/digest-linux-gazette-14, files/digest-linux-gazette-15,
+  files/digest-linux-gazette-16, files/digest-linux-gazette-17,
+  files/digest-linux-gazette-18, files/digest-linux-gazette-19,
+  files/digest-linux-gazette-20, files/digest-linux-gazette-21,
+  files/digest-linux-gazette-22, files/digest-linux-gazette-23,
+  files/digest-linux-gazette-24, files/digest-linux-gazette-25,
+  files/digest-linux-gazette-26, files/digest-linux-gazette-27,
+  files/digest-linux-gazette-28, files/digest-linux-gazette-29,
+  files/digest-linux-gazette-30, files/digest-linux-gazette-31,
+  files/digest-linux-gazette-32, files/digest-linux-gazette-33,
+  files/digest-linux-gazette-34, files/digest-linux-gazette-35,
+  files/digest-linux-gazette-36, files/digest-linux-gazette-37,
+  files/digest-linux-gazette-38, files/digest-linux-gazette-39,
+  files/digest-linux-gazette-40, files/digest-linux-gazette-41,
+  files/digest-linux-gazette-42, files/digest-linux-gazette-43,
+  files/digest-linux-gazette-44, files/digest-linux-gazette-45,
+  files/digest-linux-gazette-46, files/digest-linux-gazette-47,
+  files/digest-linux-gazette-48, files/digest-linux-gazette-49,
+  files/digest-linux-gazette-50, files/digest-linux-gazette-51,
+  files/digest-linux-gazette-52, files/digest-linux-gazette-53,
+  files/digest-linux-gazette-54, files/digest-linux-gazette-55,
+  files/digest-linux-gazette-56, files/digest-linux-gazette-57,
+  files/digest-linux-gazette-58, files/digest-linux-gazette-59,
+  files/digest-linux-gazette-60, files/digest-linux-gazette-61,
+  files/digest-linux-gazette-62, files/digest-linux-gazette-63,
+  files/digest-linux-gazette-64, files/digest-linux-gazette-65,
+  files/digest-linux-gazette-66, files/digest-linux-gazette-67,
+  files/digest-linux-gazette-68, files/digest-linux-gazette-69,
+  files/digest-linux-gazette-70, files/digest-linux-gazette-71,
+  files/digest-linux-gazette-72, files/digest-linux-gazette-73,
+  files/digest-linux-gazette-74, files/digest-linux-gazette-75,
+  files/digest-linux-gazette-76, files/digest-linux-gazette-77,
+  files/digest-linux-gazette-78, files/digest-linux-gazette-79,
+  files/digest-linux-gazette-80, files/digest-linux-gazette-81,
+  files/digest-linux-gazette-82, files/digest-linux-gazette-83,
+  files/digest-linux-gazette-84, files/digest-linux-gazette-85,
+  files/digest-linux-gazette-86, files/digest-linux-gazette-87,
+  files/digest-linux-gazette-88, files/digest-linux-gazette-89,
+  files/digest-linux-gazette-90, files/digest-linux-gazette-91,
+  files/digest-linux-gazette-92, files/digest-linux-gazette-93,
+  files/digest-linux-gazette-94, files/digest-linux-gazette-95,
+  files/digest-linux-gazette-96, files/digest-linux-gazette-97,
+  files/digest-linux-gazette-98, files/digest-linux-gazette-105,
+  files/digest-linux-gazette-111, Manifest:
+  Fixing duff SHA256 digests: Bug # 131293
 
 *linux-gazette-* (21 Aug 2003)
 
