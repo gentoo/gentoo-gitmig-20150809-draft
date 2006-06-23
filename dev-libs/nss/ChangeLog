@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.58 2006/06/09 18:33:37 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.59 2006/06/23 05:13:47 tcort Exp $
+
+  23 Jun 2006; Thomas Cort <tcort@gentoo.org> nss-3.11-r1.ebuild:
+  Stable on alpha wrt Bug #137198.
 
 *nss-3.11.1-r1 (09 Jun 2006)
 
