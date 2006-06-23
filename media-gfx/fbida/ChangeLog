@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.18 2006/06/14 02:14:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.19 2006/06/23 17:04:26 blubb Exp $
+
+  23 Jun 2006; Simon Stelling <blubb@gentoo.org> fbida-2.03-r3.ebuild:
+  added ~amd64 keyword
 
   14 Jun 2006; Jeroen Roovers <jer@gentoo.org> fbida-2.03-r3.ebuild:
   Stable on hppa (bug #119923).
