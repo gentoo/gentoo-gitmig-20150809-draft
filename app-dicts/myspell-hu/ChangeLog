@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-hu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/ChangeLog,v 1.6 2006/06/17 11:48:57 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/ChangeLog,v 1.7 2006/06/23 18:08:52 gustavoz Exp $
+
+  23 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  myspell-hu-20060509.ebuild:
+  Stable on sparc
 
 *myspell-hu-20060531 (17 Jun 2006)
 
