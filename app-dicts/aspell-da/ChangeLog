@@ -1,8 +1,13 @@
 # ChangeLog for app-dicts/aspell-da
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/ChangeLog,v 1.26 2006/03/26 17:24:43 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/ChangeLog,v 1.27 2006/06/23 21:14:17 arj Exp $
 
-*aspell-da-1.4.52 (26 Mar 2006)
+*aspell-da-1.4.54 (23 Jun 2006)
+
+  23 Jun 2006; Anders Rune Jensen <arj@gentoo.org> +aspell-da-1.4.54.ebuild:
+  Version bump.
+
+*aspell-da-1.4.53 (26 Mar 2006)
 
   26 Mar 2006; Anders Rune Jensen <arj@gentoo.org> +aspell-da-1.4.53.ebuild:
   Version bump.
