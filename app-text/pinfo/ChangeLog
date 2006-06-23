@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pinfo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.23 2006/02/17 01:06:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.24 2006/06/23 12:03:04 jer Exp $
+
+  23 Jun 2006; Jeroen Roovers <jer@gentoo.org> -pinfo-0.6.5_p2-r1.ebuild,
+  -pinfo-0.6.7.ebuild:
+  Cleaned up deprecated versions.
 
   17 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
   pinfo-0.6.5_p2-r1.ebuild, pinfo-0.6.7.ebuild, pinfo-0.6.8.ebuild:
