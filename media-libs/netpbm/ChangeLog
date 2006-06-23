@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.120 2006/06/22 05:58:56 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.121 2006/06/23 04:01:29 tcort Exp $
+
+  23 Jun 2006; Thomas Cort <tcort@gentoo.org> netpbm-10.34.ebuild:
+  Stable on alpha and amd64 wrt security Bug #137344
 
   22 Jun 2006; Joshua Jackson <tsunam@gentoo.org> netpbm-10.34.ebuild:
   Stable x86; bug #137344
