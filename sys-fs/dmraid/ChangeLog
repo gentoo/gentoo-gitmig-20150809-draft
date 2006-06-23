@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dmraid
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.2 2005/10/19 21:44:57 solar Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.3 2006/06/23 13:19:12 blubb Exp $
+
+  23 Jun 2006; Simon Stelling <blubb@gentoo.org> metadata.xml:
+  it's maintainer-needed, not -wanted
 
   19 Oct 2005; <solar.@gentoo.org> metadata.xml:
   - changed metadata status to maintainer-wanted and removed base-system as

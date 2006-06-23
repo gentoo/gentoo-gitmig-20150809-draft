@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-wanted@gentoo.org</email>
+		<email>maintainer-needed@gentoo.org</email>
 		<description>housemate needed it</description>
 	</maintainer>
 	<longdescription>This software discovers, activates, deactivates and displays properties of software RAID sets eg: ATARAID and contained DOS partitions.</longdescription>
