@@ -1,16 +1,30 @@
-DIST mb-applet-startup-monitor-0.1.tar.bz2 206232 RMD160 61228819983835162f7dc998dc0f8b79c7a628e6 SHA256 d0f1ba8275f688e7619c8a570e2a99f889e54efff8cb79d348827e2cb753d864 size 206232
-EBUILD matchbox-applet-startup-monitor-0.1.ebuild 958 RMD160 f29412fa6c06395dcc8467062fb77c5cef28af4c SHA1 f3146cc1c6aeff7ae69e0f730cc36e0fd1753e33 SHA256 11b2545422719a80cea4cf89a6663c8cee1816161e0bd26eaf45b20166b13dc6 size 958
-MD5 5c511d91a94328c08ca9068df3f5da5b matchbox-applet-startup-monitor-0.1.ebuild 958
-RMD160 f29412fa6c06395dcc8467062fb77c5cef28af4c matchbox-applet-startup-monitor-0.1.ebuild 958
-SHA256 11b2545422719a80cea4cf89a6663c8cee1816161e0bd26eaf45b20166b13dc6 matchbox-applet-startup-monitor-0.1.ebuild 958
-MISC ChangeLog 619 RMD160 4d56e91eabea3ce6100c844714acb93400f03183 SHA1 12f43b47b64ad74153a1c77c8b3db298f8a3567d SHA256 b1c841a59501b0f66d37f6fb39d76ca4bf83463a3e5fe9ca597154cde270a04b size 619
-MD5 0983b2a713094a6b4b8bdf83d1d83293 ChangeLog 619
-RMD160 4d56e91eabea3ce6100c844714acb93400f03183 ChangeLog 619
-SHA256 b1c841a59501b0f66d37f6fb39d76ca4bf83463a3e5fe9ca597154cde270a04b ChangeLog 619
-MISC metadata.xml 247 RMD160 49e7f36b66be574d7f3341589ebff702e1c8c8a9 SHA1 af1f5473be400926e7bf9a98a354866150c8b7a7 SHA256 09c798d19a28d8e2ee2b8494e011929f5fc1617190315d82bd03c32e911def55 size 247
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX matchbox-applet-startup-monitor-0.1-false-true-fix.patch 556 RMD160 cf382c14b0ec1bedf98583d458a10591805c0241 SHA1 188f44b9287fd6c964e95c898782649c81c05e78 SHA256 5c9e63d1573d5f53b053ca5ffc205d5f06eab07ed867219c9714d5a1463b6d06
+MD5 5fd074f4dc7b00603bc17fe1f25cb678 files/matchbox-applet-startup-monitor-0.1-false-true-fix.patch 556
+RMD160 cf382c14b0ec1bedf98583d458a10591805c0241 files/matchbox-applet-startup-monitor-0.1-false-true-fix.patch 556
+SHA256 5c9e63d1573d5f53b053ca5ffc205d5f06eab07ed867219c9714d5a1463b6d06 files/matchbox-applet-startup-monitor-0.1-false-true-fix.patch 556
+DIST mb-applet-startup-monitor-0.1.tar.bz2 206232 RMD160 61228819983835162f7dc998dc0f8b79c7a628e6 SHA1 328a914c448db873b98f175244272f00b15317b3 SHA256 d0f1ba8275f688e7619c8a570e2a99f889e54efff8cb79d348827e2cb753d864
+EBUILD matchbox-applet-startup-monitor-0.1.ebuild 1055 RMD160 9cb604bc4726a9e24793cef91689cab905e02a65 SHA1 fa0aaa4bd0563b29d4f27788ce23aba534d668e1 SHA256 251fd4674c21e95d3efa4b0bf8f546afcbe2db4fb861e62c7d66191d86577e90
+MD5 b7ad0e0ab1c666356b35299fcf7a4d53 matchbox-applet-startup-monitor-0.1.ebuild 1055
+RMD160 9cb604bc4726a9e24793cef91689cab905e02a65 matchbox-applet-startup-monitor-0.1.ebuild 1055
+SHA256 251fd4674c21e95d3efa4b0bf8f546afcbe2db4fb861e62c7d66191d86577e90 matchbox-applet-startup-monitor-0.1.ebuild 1055
+MISC ChangeLog 891 RMD160 b7b4ef58fbf8cf92f27b8d65e3b0cd19b3f61e08 SHA1 87e7b69fbcbebac54dfe7be8af5dfd0825994e8b SHA256 c5b361d30c8c9298e7b248e057fa4890ec167b0d36724f9838a0faf562fbe852
+MD5 84f94e6124afa526bdb16501784c4859 ChangeLog 891
+RMD160 b7b4ef58fbf8cf92f27b8d65e3b0cd19b3f61e08 ChangeLog 891
+SHA256 c5b361d30c8c9298e7b248e057fa4890ec167b0d36724f9838a0faf562fbe852 ChangeLog 891
+MISC metadata.xml 247 RMD160 49e7f36b66be574d7f3341589ebff702e1c8c8a9 SHA1 af1f5473be400926e7bf9a98a354866150c8b7a7 SHA256 09c798d19a28d8e2ee2b8494e011929f5fc1617190315d82bd03c32e911def55
 MD5 a80bc50cf196a9e5a2764d6f6081b56a metadata.xml 247
 RMD160 49e7f36b66be574d7f3341589ebff702e1c8c8a9 metadata.xml 247
 SHA256 09c798d19a28d8e2ee2b8494e011929f5fc1617190315d82bd03c32e911def55 metadata.xml 247
 MD5 4c57fb70374915b9692f7ccb49ffc373 files/digest-matchbox-applet-startup-monitor-0.1 292
 RMD160 3c934d9a24fc86db1aa6d60fa8764cb33f54b5f8 files/digest-matchbox-applet-startup-monitor-0.1 292
 SHA256 04e190d06a7d379234a42e9e83ba9cf8a071fc8e5174975cd410cdb67f341b62 files/digest-matchbox-applet-startup-monitor-0.1 292
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEnB/HyZl4piiTjjYRAiVXAKD5FIkaDEDJG1+JKEHBH60b28KjZACfevJl
+3PlVMZVt1aWWOXLLUR+1yz0=
+=kO3B
+-----END PGP SIGNATURE-----

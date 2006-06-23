@@ -1,8 +1,8 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-startup-monitor/matchbox-applet-startup-monitor-0.1.ebuild,v 1.1 2006/03/13 00:26:46 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-startup-monitor/matchbox-applet-startup-monitor-0.1.ebuild,v 1.2 2006/06/23 17:08:56 yvasilev Exp $
 
-inherit versionator
+inherit eutils versionator
 
 MY_PN=${PN/matchbox/mb}
 MY_P=${MY_PN}-${PV}
@@ -23,6 +23,13 @@ RDEPEND="${DEPEND}
 	x11-wm/matchbox-panel"
 
 S="${WORKDIR}/${MY_P}"
+
+src_unpack () {
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${P}-false-true-fix.patch"
+}
 
 src_compile() {
 	econf || die "Configuration failed"
