@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.5-r3.ebuild,v 1.2 2006/06/18 12:00:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.5-r3.ebuild,v 1.3 2006/06/23 00:25:14 flameeyes Exp $
 
-inherit eutils wxwidgets nsplugins multilib autotools toolchain-funcs
+inherit eutils wxwidgets multilib autotools toolchain-funcs
 
 RESTRICT="confcache"
 
@@ -26,7 +26,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="a52 3dfx nls debug altivec httpd vlm gnutls live v4l cdda ogg matroska
 dvb dvd vcd ffmpeg dts flac mpeg vorbis theora X opengl truetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc stream
-mp3 xv bidi sdl png xml samba daap corba screen mod speex nsplugin shout rtsp
+mp3 xv bidi sdl png xml samba daap corba screen mod speex shout rtsp
 win32codecs skins hal avahi xinerama cddb directfb upnp"
 
 RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
@@ -80,7 +80,6 @@ RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 		mod? ( media-libs/libmodplug )
 		speex? ( media-libs/speex )
 		svg? ( >=gnome-base/librsvg-2.5.0 )
-		nsplugin? ( >=net-libs/gecko-sdk-1.7.8 )
 		shout? ( media-libs/libshout )
 		win32codecs? ( media-libs/win32codecs )
 		hal? ( sys-apps/hal )
@@ -128,8 +127,6 @@ src_unpack() {
 }
 
 src_compile () {
-	use nsplugin && myconf="${myconf} --with-mozilla-sdk-path=/usr/$(get_libdir)/gecko-sdk"
-
 	use wxwindows && \
 		myconf="${myconf} --with-wx-config=$(basename ${WX_CONFIG}) --with-wx-config-path=$(dirname ${WX_CONFIG})"
 
@@ -194,7 +191,6 @@ src_compile () {
 		$(use_enable corba) \
 		$(use_enable mod) \
 		$(use_enable speex) \
-		$(use_enable nsplugin mozilla) \
 		$(use_enable shout) \
 		$(use_enable rtsp) $(use_enable rtsp realrtsp) \
 		$(use_enable win32codecs loader) \
@@ -203,6 +199,7 @@ src_compile () {
 		$(use_enable avahi bonjour) \
 		$(use_enable ffmpeg) \
 		$(use_enable upnp) \
+		--disable-mozilla \
 		--disable-faad \
 		--disable-jack \
 		--disable-dv \
@@ -223,7 +220,7 @@ src_compile () {
 }
 
 src_install() {
-	make DESTDIR="${D}" plugindir="/usr/$(get_libdir)/${PLUGINS_DIR}" install || die "Installation failed!"
+	emake DESTDIR="${D}" install || die "Installation failed!"
 
 	dodoc AUTHORS MAINTAINERS HACKING THANKS TODO NEWS README \
 		doc/fortunes.txt doc/intf-cdda.txt doc/intf-vcd.txt
