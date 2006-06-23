@@ -2,7 +2,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.41 2006/06/04 21:51:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.42 2006/06/23 05:02:57 mrness Exp $
+
+  23 Jun 2006; Alin Nastac <mrness@gentoo.org> quagga-0.98.6-r1.ebuild,
+  quagga-0.99.4.ebuild:
+  Sanitize dependencies.
 
   04 Jun 2006; Alin Nastac <mrness@gentoo.org> quagga-0.99.4.ebuild:
   Fixed zebra link order. Original order caused build failure on a uclibc

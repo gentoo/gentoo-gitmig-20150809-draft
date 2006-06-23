@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r1.ebuild,v 1.6 2006/05/17 08:09:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r1.ebuild,v 1.7 2006/06/23 05:02:57 mrness Exp $
 
-inherit eutils multilib
+inherit eutils multilib autotools
 
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP. Includes OSPFAPI, NET-SNMP and IPV6 support."
 HOMEPAGE="http://quagga.net/"
@@ -15,15 +15,11 @@ KEYWORDS="alpha ~amd64 ~arm hppa ppc ~s390 ~sparc x86"
 IUSE="ipv6 snmp pam tcpmd5 bgpclassless ospfapi realms fix-connected-rt multipath tcp-zebra"
 RESTRICT="userpriv"
 
-RDEPEND="sys-apps/iproute2
-	>=sys-libs/libcap-1.10-r5
+DEPEND=">=sys-libs/libcap-1.10-r5
 	snmp? ( net-analyzer/net-snmp )
 	pam? ( sys-libs/pam )"
-DEPEND="${RDEPEND}
-	virtual/libc
-	sys-devel/binutils
-	sys-devel/autoconf-wrapper
-	sys-devel/libtool"
+RDEPEND="${DEPEND}
+	sys-apps/iproute2"
 
 src_unpack() {
 	unpack ${A} || die "failed to unpack sources"
@@ -49,15 +45,12 @@ src_unpack() {
 
 	# Realms support (Calin Velea) - http://vcalinus.gemenii.ro/quaggarealms.html
 	use realms && epatch "${WORKDIR}/patch/${P}-realms.diff"
+
+	# regenerate configure and co if we touch .ac or .am files
+	eautoreconf
 }
 
 src_compile() {
-	# regenerate configure and co if we touch .ac or .am files
-	#export WANT_AUTOMAKE=1.7
-	#./update-autotools || die
-	autoreconf
-	libtoolize --copy --force
-
 	local myconf="--disable-static --enable-dynamic"
 
 	use ipv6 \

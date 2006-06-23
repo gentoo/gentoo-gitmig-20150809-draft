@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.4.ebuild,v 1.2 2006/06/04 21:51:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.4.ebuild,v 1.3 2006/06/23 05:02:57 mrness Exp $
 
 inherit eutils multilib autotools
 
@@ -15,10 +15,11 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~s390 ~sparc ~x86"
 IUSE="ipv6 snmp pam tcpmd5 bgpclassless ospfapi realms multipath tcp-zebra"
 RESTRICT="userpriv"
 
-RDEPEND="sys-apps/iproute2
-	>=sys-libs/libcap-1.10-r5
+DEPEND=">=sys-libs/libcap-1.10-r5
 	snmp? ( net-analyzer/net-snmp )
 	pam? ( sys-libs/pam )"
+RDEPEND="${DEPEND}
+	sys-apps/iproute2"
 
 src_unpack() {
 	unpack ${A} || die "failed to unpack sources"
