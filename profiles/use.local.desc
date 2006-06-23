@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1965 2006/06/22 07:37:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1966 2006/06/23 15:27:49 humpback Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1044,11 +1044,17 @@ net-fs/samba:syslog - Enables support for syslog
 net-fs/samba:winbind - Enables support for the winbind auth daemon
 net-fs/shfs:amd - Enable automounter support
 net-ftp/proftpd:authfile - Enable support for auth-file module
+net-ftp/proftpd:ifsession - Enable support for the ifsession module
 net-ftp/proftpd:noauthunix - Disable support for auth-unix module
 net-ftp/proftpd:sendfile - Enable support for sendfile()
+net-ftp/proftpd:rewrite - Enable support for rewrite module
+net-ftp/proftpd:sitemisc - Enable support for sitemisc module
 net-ftp/proftpd:shaper - Enable support for the mod_shaper
 net-ftp/proftpd:softquota - Enable support for the mod_quotatab
+net-ftp/proftpd:sendfile - Enable support for sendfile()
+net-ftp/proftpd:vroot - Enable support for virtual root module
 net-ftp/proftpd:xinetd - Enable support for starting from xinetd
+net-ftp/proftpd:opensslcrypt - Enable support for openssly crypto
 net-ftp/pure-ftpd:vchroot - Enable support for virtual chroot (possible security risc)
 net-ftp/vsftpd:logrotate - Use logrotate for rotating logs
 net-ftp/vsftpd:xinetd - Add support for running under xinetd
