@@ -1,54 +1,45 @@
-MD5 cf66b1a1d9f0f3de8f64fa8aef8187ed ChangeLog 8797
-RMD160 97aa8134de4cc9a7ee3768cdf1bf0cfc8ae717a4 ChangeLog 8797
-SHA256 7181d07822dbc4297794222664c8aff45fb33dacdda72def12f93bb2067ff08a ChangeLog 8797
-MD5 9dc3a4becd0063a7acaad9ca632dad21 ati-drivers-extra-8.18.6.ebuild 2644
-RMD160 10bf4917d74db9af58ad8163a70c327e5a721d46 ati-drivers-extra-8.18.6.ebuild 2644
-SHA256 60280afe3d892115935baa347e7ef03cbb36c562de56a07f2ecc78f732d5d97a ati-drivers-extra-8.18.6.ebuild 2644
-MD5 da07a0a357b482a32503c59faf88070f ati-drivers-extra-8.18.8.ebuild 2530
-RMD160 d8750c378707c0b2fdad73276da46fd20f7a08d7 ati-drivers-extra-8.18.8.ebuild 2530
-SHA256 abf602cff897d504ccd496b9fd497e482e42ee2c55e4e106d26047288212ae44 ati-drivers-extra-8.18.8.ebuild 2530
-MD5 239cbaca4d0e84a5ecf5d506e832fc20 ati-drivers-extra-8.19.10.ebuild 2531
-RMD160 05ce1bbb3cc587e3f6503e93754e016158986bc4 ati-drivers-extra-8.19.10.ebuild 2531
-SHA256 405fede6c39ad764af23436846e28cb89f2a1fbeeca6ecc3006ed5e8919bb679 ati-drivers-extra-8.19.10.ebuild 2531
-MD5 cb558847de69e1997514b6ac0310dc53 ati-drivers-extra-8.20.8.ebuild 2603
-RMD160 10fc14c2010329d8ff3bc881e6d1d5e5c4a697f4 ati-drivers-extra-8.20.8.ebuild 2603
-SHA256 58677b1df283504ce3457aac416c7b276a6d6392e696a5be48f73d3a1ceb063f ati-drivers-extra-8.20.8.ebuild 2603
-MD5 86a8414ec43ad933f2e5571c937f4696 ati-drivers-extra-8.21.7.ebuild 2632
-RMD160 81fd58d2f14dc691831607a05415ee2474185f43 ati-drivers-extra-8.21.7.ebuild 2632
-SHA256 084559201eca855f1b1671e5b1e8c1d2278428d0a77dccea58d1963b27f4b67a ati-drivers-extra-8.21.7.ebuild 2632
-MD5 8ba9825696e46374b57dc76c67485d72 ati-drivers-extra-8.22.5.ebuild 2632
-RMD160 c371f927440e716e901c72d75f68cde17eb1cd82 ati-drivers-extra-8.22.5.ebuild 2632
-SHA256 b84f0ae95890fb93463e80cae14005f2a4b7e9754917201e3108d5fb7f0b32c2 ati-drivers-extra-8.22.5.ebuild 2632
-MD5 4aedbe47dcfa6ffc12f2d4bdf748342d ati-drivers-extra-8.23.7.ebuild 2632
-RMD160 647c55c43ca89d63f5183ffbf5ea84cf1a77f6e6 ati-drivers-extra-8.23.7.ebuild 2632
-SHA256 abc502cdeeda7414d57e122855e7735a429acdca757aa6d6a7ac59cd2f0cb833 ati-drivers-extra-8.23.7.ebuild 2632
-MD5 8a748797b3d76cd265e70a73f757e664 files/digest-ati-drivers-extra-8.18.6 156
-RMD160 e99a974e62da2d6034cd5f11f1a921f60e1c329d files/digest-ati-drivers-extra-8.18.6 156
-SHA256 04eb7285668adff1b3a02a39862610205f3fea6e8729261b8b6aed34390b274d files/digest-ati-drivers-extra-8.18.6 156
-MD5 9445a9fca1fcb213c6b29479a3bbbb84 files/digest-ati-drivers-extra-8.18.8 260
-RMD160 cf5df3590651457e686cc92a4d6fa223a933c7d8 files/digest-ati-drivers-extra-8.18.8 260
-SHA256 904581cdfcd31522f5bdc86528a1a2ef14318d3e198ac4106739ffb89ded6bd8 files/digest-ati-drivers-extra-8.18.8 260
-MD5 2bcb0458b44921c7327e12400a2fb2bf files/digest-ati-drivers-extra-8.19.10 262
-RMD160 e1513a38ae87c6ca65688ea7079ff1a36cb24251 files/digest-ati-drivers-extra-8.19.10 262
-SHA256 ad4f4cc01a66877eb754d5b62d9553e0d288a891e82e38daa643fa83fb2bf4bc files/digest-ati-drivers-extra-8.19.10 262
-MD5 e1d04448f960def7ecf6fd142b5c2a7a files/digest-ati-drivers-extra-8.20.8 260
-RMD160 6206b682bdcf42f96296fc56ad9254a8e57aa6bb files/digest-ati-drivers-extra-8.20.8 260
-SHA256 5783bcb0b15983dc28cca76f6e78b77f64a32436ab3c8ae49b30037eaba7810c files/digest-ati-drivers-extra-8.20.8 260
-MD5 6bcac6dced2d281f72772788a949b39e files/digest-ati-drivers-extra-8.21.7 260
-RMD160 dcfb5e8ae0912057831a16d3ef5e055505010340 files/digest-ati-drivers-extra-8.21.7 260
-SHA256 34432a7ddc5e3b9851f7598af7fba143b64ef62b189c692576656016a119fa9b files/digest-ati-drivers-extra-8.21.7 260
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX fglrx_pp_proto.h 4342 RMD160 416bc03daaf2b804891aab3658929109a1db33a9 SHA1 e788148d3eeab22c8fd7e60bbf8101b50ad78197 SHA256 317714d23c8941e087162948dddf860689db2000b36dbae14004adf3eb9d9a30
+MD5 965bb91f2860cd9b3518ef46ffbfbdcc files/fglrx_pp_proto.h 4342
+RMD160 416bc03daaf2b804891aab3658929109a1db33a9 files/fglrx_pp_proto.h 4342
+SHA256 317714d23c8941e087162948dddf860689db2000b36dbae14004adf3eb9d9a30 files/fglrx_pp_proto.h 4342
+AUX fireglcontrol.desktop 149 RMD160 c76b19b8a14ae58b781479f5b135fbd76d36cdff SHA1 32c696e6c2c74d29c87df9a32ae6901540ffb96a SHA256 d606a7359034d83acdfddd393631e64b6fa4f1a6c3b82e915aabcc5688c1ea55
+MD5 41782adae08060611f324e8c8ddf3de9 files/fireglcontrol.desktop 149
+RMD160 c76b19b8a14ae58b781479f5b135fbd76d36cdff files/fireglcontrol.desktop 149
+SHA256 d606a7359034d83acdfddd393631e64b6fa4f1a6c3b82e915aabcc5688c1ea55 files/fireglcontrol.desktop 149
+DIST ati-driver-installer-8.22.5-i386.run 37222832 RMD160 57ad6f7dc118aa1e10f7a83548a49501964fc219 SHA256 347b36e3ece945f7d635f2b8d4b6a94010c7049ededa697d89c2839500f4d014
+DIST ati-driver-installer-8.22.5-x86_64.run 28274358 RMD160 baa9f546fb7e0f73d993e9fd2f9100aaf5df8a6e SHA256 a8a4d011dc31998aee43b535e1d1d2bfab37237a628e448801bcd61dd429c9f9
+DIST ati-driver-installer-8.23.7-i386.run 34448865 RMD160 f4f31ed77e84e9dc5a2885635488f3d582e1b474 SHA256 b7226f640d08b583f05fc95dea75238aeedcd13d1252d3911b40f6fd3a064c24
+DIST ati-driver-installer-8.23.7-x86_64.run 28293314 RMD160 97c7b027622c2382be39751ddb249840d8269243 SHA256 a28e01b46c7187cb9542754a1b9621e1ba7f86d8803e44fed1a8c773ecf4341d
+DIST ati-drivers-extra-8.22.5-improvements.patch.bz2 10488 RMD160 ce131f4f82f71e7e4d4dfcc8c3c190bce668c120 SHA256 eabc5b7b76d0c4dce06976645595a2d0bf5b0b861274b8838dc879d38712b1c3
+EBUILD ati-drivers-extra-8.22.5.ebuild 2635 RMD160 5a0fedb4ef74ae2208a66d8f4994a4f62a9c97d8 SHA1 e6b9323073c6538dac1817cc94b22d14646a40c2 SHA256 721b68214098351ad90263ab628864e2e550582fc6e7a28d7f653fbd28974d88
+MD5 a9e294477538365153c55234c7ef713f ati-drivers-extra-8.22.5.ebuild 2635
+RMD160 5a0fedb4ef74ae2208a66d8f4994a4f62a9c97d8 ati-drivers-extra-8.22.5.ebuild 2635
+SHA256 721b68214098351ad90263ab628864e2e550582fc6e7a28d7f653fbd28974d88 ati-drivers-extra-8.22.5.ebuild 2635
+EBUILD ati-drivers-extra-8.23.7.ebuild 2635 RMD160 8abf33e093333f6ef77ddbdce69950dccfbf1c30 SHA1 e47090966b64967016124e9a690518ba5473d862 SHA256 2680bc56235db738406734faebe36d2061f9f1f2605417d1e606f08e83328440
+MD5 097b6bac2f00c280fe770195d33675de ati-drivers-extra-8.23.7.ebuild 2635
+RMD160 8abf33e093333f6ef77ddbdce69950dccfbf1c30 ati-drivers-extra-8.23.7.ebuild 2635
+SHA256 2680bc56235db738406734faebe36d2061f9f1f2605417d1e606f08e83328440 ati-drivers-extra-8.23.7.ebuild 2635
+MISC ChangeLog 9016 RMD160 341ffbd5a2c9433653f5430bacf431920fa61970 SHA1 e093a21f89558d65cf83ac05e6756930323652df SHA256 2e7d7a024a0aec4991f7aadc6a75f0066ba48536e43b8a06d59e2e1c1fb855f8
+MD5 1cece43a6174abe63f406e1bd51ff4bb ChangeLog 9016
+RMD160 341ffbd5a2c9433653f5430bacf431920fa61970 ChangeLog 9016
+SHA256 2e7d7a024a0aec4991f7aadc6a75f0066ba48536e43b8a06d59e2e1c1fb855f8 ChangeLog 9016
+MISC metadata.xml 227 RMD160 e2ed1445a0405b39e40741d3d1f67746daab8fff SHA1 47e1824ff5e7e3789fcbb4ca5de9c3ccd9162b76 SHA256 4fbed7030b32bcdc95b70000adbbcb6f1d73092c4a2f20e6cfb737a1b44d6e07
+MD5 c306bb93866a4dd8913899229dd20726 metadata.xml 227
+RMD160 e2ed1445a0405b39e40741d3d1f67746daab8fff metadata.xml 227
+SHA256 4fbed7030b32bcdc95b70000adbbcb6f1d73092c4a2f20e6cfb737a1b44d6e07 metadata.xml 227
 MD5 07ca38208f458bb19a92546ed6b26690 files/digest-ati-drivers-extra-8.22.5 915
 RMD160 7f11484fc07cd730f6b6e029fd22a3eb8c410360 files/digest-ati-drivers-extra-8.22.5 915
 SHA256 016aea0153beb270378952ab3531404b09cc8caa1ee29396574bd742ba214166 files/digest-ati-drivers-extra-8.22.5 915
 MD5 571d0ceb200a5eeeabf4de6dd8959d5d files/digest-ati-drivers-extra-8.23.7 915
 RMD160 089dc32463892653b328d89ee99b91fb7d18daab files/digest-ati-drivers-extra-8.23.7 915
 SHA256 acebf29d969a0c1d076191abaa557e1c003e0ab0ba336847e63ef152fa8884ec files/digest-ati-drivers-extra-8.23.7 915
-MD5 965bb91f2860cd9b3518ef46ffbfbdcc files/fglrx_pp_proto.h 4342
-RMD160 416bc03daaf2b804891aab3658929109a1db33a9 files/fglrx_pp_proto.h 4342
-SHA256 317714d23c8941e087162948dddf860689db2000b36dbae14004adf3eb9d9a30 files/fglrx_pp_proto.h 4342
-MD5 41782adae08060611f324e8c8ddf3de9 files/fireglcontrol.desktop 149
-RMD160 c76b19b8a14ae58b781479f5b135fbd76d36cdff files/fireglcontrol.desktop 149
-SHA256 d606a7359034d83acdfddd393631e64b6fa4f1a6c3b82e915aabcc5688c1ea55 files/fireglcontrol.desktop 149
-MD5 c306bb93866a4dd8913899229dd20726 metadata.xml 227
-RMD160 e2ed1445a0405b39e40741d3d1f67746daab8fff metadata.xml 227
-SHA256 4fbed7030b32bcdc95b70000adbbcb6f1d73092c4a2f20e6cfb737a1b44d6e07 metadata.xml 227
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEnH1WoeSe8B0zEfwRAiZ+AJ4v3taomVZCMr8brw9rCZkFf4la8ACeOFMj
+K/0jg+R8EboQX7B6tSBhHK4=
+=0mbn
+-----END PGP SIGNATURE-----
