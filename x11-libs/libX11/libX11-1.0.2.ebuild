@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.0.2.ebuild,v 1.1 2006/06/23 07:05:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.0.2.ebuild,v 1.2 2006/06/23 13:47:48 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -16,7 +16,7 @@ RDEPEND="x11-libs/xtrans
 	x11-libs/libXdmcp
 	x11-proto/kbproto
 	x11-proto/inputproto
-	x11-proto/xproto"
+	>=x11-proto/xproto-7.0.6"
 DEPEND="${RDEPEND}
 	x11-proto/xf86bigfontproto
 	x11-proto/bigreqsproto
