@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.23.7.ebuild,v 1.1 2006/03/13 02:27:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.23.7.ebuild,v 1.2 2006/06/23 23:46:02 cardoe Exp $
 
-IUSE="qt"
+IUSE="qt3"
 
 inherit eutils rpm
 
@@ -16,7 +16,7 @@ LICENSE="ATI GPL-2 QPL-1.0"
 KEYWORDS="-amd64 ~x86"  # (~amd64 yet to be fixed)(see bug 95684)
 
 DEPEND="=x11-drivers/ati-drivers-${PV}*
-	qt? ( >=x11-libs/qt-3.0 )"
+	qt3? ( >=x11-libs/qt-3.0 )"
 
 ATIBIN="${D}/opt/ati/bin"
 SLOT="0"
@@ -59,7 +59,7 @@ src_compile() {
 	cd ${WORKDIR}/extra/fgl_glxgears
 	make -f Makefile.Linux || ewarn "fgl_glxgears not build!"
 
-	if use qt
+	if use qt3
 	then
 		einfo "Building the QT fglx panel..."
 		cd ${WORKDIR}/extra/fglrx_panel
@@ -74,7 +74,7 @@ src_install() {
 	exeinto /opt/ati/bin
 	doexe ${WORKDIR}/extra/fgl_glxgears/fgl_glxgears
 
-	if use qt
+	if use qt3
 	then
 		doexe ${WORKDIR}/extra/fglrx_panel/fireglcontrol
 
