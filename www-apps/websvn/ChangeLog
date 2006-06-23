@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.12 2006/06/18 16:22:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.13 2006/06/23 12:35:36 uberlord Exp $
+
+  23 Jun 2006; Roy Marples <uberlord@gentoo.org> websvn-2.0_rc1.ebuild:
+  Drop invalid DEPEND on PEAR-XML_Parser, replace with check to see if php
+  has been built with the xml USE flag.
 
   18 Jun 2006; Roy Marples <uberlord@gentoo.org> websvn-2.0_rc1.ebuild:
   RDEPEND on dev-php/PEAR-XML_Parser, #137074 thanks to Michael P.
