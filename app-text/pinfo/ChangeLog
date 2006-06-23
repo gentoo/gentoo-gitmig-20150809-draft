@@ -1,6 +1,13 @@
 # ChangeLog for app-text/pinfo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.25 2006/06/23 12:33:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.26 2006/06/23 12:46:43 jer Exp $
+
+*pinfo-0.6.9 (23 Jun 2006)
+
+  23 Jun 2006; Jeroen Roovers <jer@gentoo.org>
+  +files/pinfo-0.6.9-FTPVIEWER.patch, +pinfo-0.6.9.ebuild:
+  SRC_URI and HOMEPAGE changed. Bugs #65829, #91760 fixed in new release and
+  #136843 fixed by patch submitted by jieryn (thank you!).
 
   23 Jun 2006; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Taking up maintainership.
