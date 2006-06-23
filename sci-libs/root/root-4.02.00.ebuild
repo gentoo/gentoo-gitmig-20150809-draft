@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/root-4.02.00.ebuild,v 1.6 2006/02/03 11:07:46 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/root-4.02.00.ebuild,v 1.7 2006/06/23 23:49:45 cardoe Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://root.cern.ch/"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 -sparc -ppc"
-IUSE="afs kerberos ldap mysql opengl postgres python qt"
+IUSE="afs kerberos ldap mysql opengl postgres python qt3"
 
 RDEPEND="|| (
 				virtual/x11
@@ -28,7 +28,7 @@ RDEPEND="|| (
 	!amd64? ( afs? ( net-fs/openafs ) )
 	kerberos? ( app-crypt/mit-krb5 )
 	ldap? ( net-nds/openldap )
-	qt? ( =x11-libs/qt-3* )
+	qt3? ( =x11-libs/qt-3* )
 	python? ( dev-lang/python )"
 
 DEPEND="${RDEPEND}
@@ -162,7 +162,7 @@ src_compile() {
 		`use_enable postgres pgsql` \
 		$USEPYTHIA \
 		$USEPYTHIA6 \
-		`use_enable qt` \
+		$(use_enable qt3 qt) \
 		`use_enable python` \
 		--disable-rfio \
 		--disable-rpath \
