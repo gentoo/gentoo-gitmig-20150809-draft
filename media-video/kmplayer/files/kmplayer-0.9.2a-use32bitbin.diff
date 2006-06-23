@@ -1,0 +1,187 @@
+diff -U 4 -H -b -w -B -E -d -i -r -- kmplayer-0.9.2-orig/src/kmplayerapp.cpp kmplayer-0.9.2/src/kmplayerapp.cpp
+--- kmplayer-0.9.2-orig/src/kmplayerapp.cpp	2006-04-21 21:08:29.000000000 +0200
++++ kmplayer-0.9.2/src/kmplayerapp.cpp	2006-05-20 19:45:59.605492750 +0200
+@@ -97,9 +97,9 @@
+     connect (m_broadcastconfig, SIGNAL (broadcastStopped()), this, SLOT (broadcastStopped()));
+     initStatusBar();
+     m_player->init (actionCollection ());
+     m_player->players () ["xvideo"] = new XVideo(m_player,m_player->settings());
+-    m_player->setProcess ("mplayer");
++    m_player->setProcess (MPLAYER_BIN);
+     m_player->setRecorder ("mencoder");
+     m_player->sources () ["dvdsource"] = new ::KMPlayerDVDSource(this, m_dvdmenu);
+     m_player->sources () ["dvdnavsource"] = new KMPlayerDVDNavSource (this, m_dvdnavmenu);
+     m_player->sources () ["vcdsource"] = new KMPlayerVCDSource(this, m_vcdmenu);
+@@ -1032,9 +1032,9 @@
+         return true;
+     if (m_identified)
+         return false;
+     //kdDebug () << "scanning " << cstr << endl;
+-    QRegExp * patterns = static_cast <KMPlayer::MPlayer *> (m_player->players () ["mplayer"])->configPage ()->m_patterns;
++    QRegExp * patterns = static_cast <KMPlayer::MPlayer *> (m_player->players () [MPLAYER_BIN])->configPage ()->m_patterns;
+     QRegExp & langRegExp = patterns[KMPlayer::MPlayerPreferencesPage::pat_dvdlang];
+     QRegExp & subtitleRegExp = patterns[KMPlayer::MPlayerPreferencesPage::pat_dvdsub];
+     QRegExp & titleRegExp = patterns[KMPlayer::MPlayerPreferencesPage::pat_dvdtitle];
+     QRegExp & chapterRegExp = patterns[KMPlayer::MPlayerPreferencesPage::pat_dvdchapter];
+@@ -1335,9 +1335,9 @@
+         return true;
+     if (m_identified)
+         return false;
+     //kdDebug () << "scanning " << cstr << endl;
+-    QRegExp * patterns = static_cast<KMPlayer::MPlayer *> (m_player->players () ["mplayer"])->configPage ()->m_patterns;
++    QRegExp * patterns = static_cast<KMPlayer::MPlayer *> (m_player->players () [MPLAYER_BIN])->configPage ()->m_patterns;
+     QRegExp & trackRegExp = patterns [KMPlayer::MPlayerPreferencesPage::pat_vcdtrack];
+     if (trackRegExp.search (str) > -1) {
+         if (m_document->state != KMPlayer::Element::state_deferred)
+             m_document->defer ();
+diff -U 4 -H -b -w -B -E -d -i -r -- kmplayer-0.9.2-orig/src/kmplayerconfig.cpp kmplayer-0.9.2/src/kmplayerconfig.cpp
+--- kmplayer-0.9.2-orig/src/kmplayerconfig.cpp	2006-04-21 21:08:29.000000000 +0200
++++ kmplayer-0.9.2/src/kmplayerconfig.cpp	2006-05-20 19:45:59.621493750 +0200
+@@ -117,9 +117,9 @@
+     // configdialog should be destroyed when the view is destroyed
+     //delete configdialog;
+ }
+ 
+-KDE_EXPORT const char * strMPlayerGroup = "MPlayer";
++KDE_EXPORT const char * strMPlayerGroup = MPLAYER_BIN;
+ const char * strGeneralGroup = "General Options";
+ static const char * strKeepSizeRatio = "Keep Size Ratio";
+ static const char * strRememberSize = "Remember Size";
+ static const char * strAutoResize = "Auto Resize";
+diff -U 4 -H -b -w -B -E -d -i -r -- kmplayer-0.9.2-orig/src/kmplayer_def.h kmplayer-0.9.2/src/kmplayer_def.h
+--- kmplayer-0.9.2-orig/src/kmplayer_def.h	2006-04-21 21:08:29.000000000 +0200
++++ kmplayer-0.9.2/src/kmplayer_def.h	2006-05-20 19:47:10.541926000 +0200
+@@ -55,6 +55,6 @@
+   #define KMPLAYER_EXPORT
+   #define KMPLAYER_NO_EXPORT
+ #endif
+ 
+-
++#define MPLAYER_BIN "mplayer-bin"
+ #endif //_KMPLAYER_DEF_H_
+Only in kmplayer-0.9.2/src: kmplayer_def.h~
+diff -U 4 -H -b -w -B -E -d -i -r -- kmplayer-0.9.2-orig/src/kmplayerpartbase.cpp kmplayer-0.9.2/src/kmplayerpartbase.cpp
+--- kmplayer-0.9.2-orig/src/kmplayerpartbase.cpp	2006-04-21 21:08:29.000000000 +0200
++++ kmplayer-0.9.2/src/kmplayerpartbase.cpp	2006-05-20 19:45:59.653495750 +0200
+@@ -119,9 +119,9 @@
+    m_auto_controls (true),
+    m_bPosSliderPressed (false),
+    m_in_update_tree (false)
+ {
+-    m_players ["mplayer"] = new MPlayer (this, m_settings);
++    m_players [MPLAYER_BIN] = new MPlayer (this, m_settings);
+     Xine * xine = new Xine (this, m_settings);
+     m_players ["xine"] = xine;
+     m_players ["gstreamer"] = new GStreamer (this, m_settings);
+     m_recorders ["mencoder"] = new MEncoder (this, m_settings);
+diff -U 4 -H -b -w -B -E -d -i -r -- kmplayer-0.9.2-orig/src/kmplayer_part.cpp kmplayer-0.9.2/src/kmplayer_part.cpp
+--- kmplayer-0.9.2-orig/src/kmplayer_part.cpp	2006-04-21 21:08:29.000000000 +0200
++++ kmplayer-0.9.2/src/kmplayer_part.cpp	2006-05-20 19:45:59.577491000 +0200
+@@ -312,9 +312,9 @@
+     }
+     bool group_member = !m_group.isEmpty () && m_group != QString::fromLatin1("_unique") && m_features != Feat_Unknown;
+     if (!group_member || m_features & Feat_Viewer) {
+         // not part of a group or we're the viewer
+-        setProcess ("mplayer");
++        setProcess (MPLAYER_BIN);
+         setRecorder ("mencoder");
+         connectPanel (m_view->controlPanel ());
+         if (m_features & Feat_StatusBar) {
+             last_time_left = 0;
+@@ -332,9 +332,9 @@
+                 i = std::find_if (++i, e, pred)) {
+             // found viewer and control part, exchange players now
+             KMPlayerPart * vp = (m_features & Feat_Viewer) ? this : *i;
+             KMPlayerPart * cp = (m_features & Feat_Viewer) ? *i : this;
+-            setProcess ("mplayer");
++            setProcess (MPLAYER_BIN);
+             cp->connectToPart (vp);
+         }
+     } else
+         m_group.truncate (0);
+@@ -1074,9 +1074,9 @@
+         QTimer::singleShot (0, this, SLOT (finished ()));
+         return;
+     }
+     init ();
+-    m_player->setProcess ("mplayer");
++    m_player->setProcess (MPLAYER_BIN);
+     if (m_player->process ()->grabPicture (m_url, 0))
+         connect (m_player->process (), SIGNAL (grabReady (const QString &)),
+                  this, SLOT (grabReady (const QString &)));
+     else {
+diff -U 4 -H -b -w -B -E -d -i -r -- kmplayer-0.9.2-orig/src/kmplayerprocess.cpp kmplayer-0.9.2/src/kmplayerprocess.cpp
+--- kmplayer-0.9.2-orig/src/kmplayerprocess.cpp	2006-04-21 21:08:29.000000000 +0200
++++ kmplayer-0.9.2/src/kmplayerprocess.cpp	2006-05-20 20:54:06.764924250 +0200
+@@ -345,9 +345,9 @@
+     "dvdsource", "exitsource", "hrefsource", "introsource", "pipesource", "tvscanner", "tvsource", "urlsource", "vcdsource", 0L
+ };
+ 
+ KDE_NO_CDTOR_EXPORT MPlayer::MPlayer (QObject * parent, Settings * settings)
+- : MPlayerBase (parent, settings, "mplayer"),
++ : MPlayerBase (parent, settings, MPLAYER_BIN),
+    m_widget (0L),
+    m_configpage (new MPlayerPreferencesPage (this)),
+    aid (-1), sid (-1),
+    m_needs_restarted (false) {
+@@ -511,10 +511,10 @@
+     if (!m_use_slave) {
+         fprintf (stderr, "%s | ", pipe);
+         *m_process << pipe << " | ";
+     }
+-    fprintf (stderr, "mplayer -wid %lu ", (unsigned long) widget ());
+-    *m_process << "mplayer -wid " << QString::number (widget ());
++    fprintf (stderr, "mplayer-bin -wid %lu ", (unsigned long) widget ());
++    *m_process << "mplayer-bin -wid " << QString::number (widget ());
+ 
+     if (m_use_slave) {
+         fprintf (stderr, "-slave ");
+         *m_process << "-slave ";
+@@ -599,9 +599,9 @@
+     QString outdir = locateLocal ("data", "kmplayer/");
+     m_grabfile = outdir + QString ("00000001.jpg");
+     unlink (m_grabfile.ascii ());
+     QString myurl (url.isLocalFile () ? getPath (url) : url.url ());
+-    QString args ("mplayer ");
++    QString args ("mplayer-bin ");
+     if (m_settings->mplayerpost090)
+         args += "-vo jpeg:outdir=";
+     else
+         args += "-vo jpeg -jpeg outdir=";
+@@ -920,9 +920,9 @@
+ 
+ KDE_NO_EXPORT void MPlayerPreferencesPage::prefLocation (QString & item, QString & icon, QString & tab) {
+     item = i18n ("General Options");
+     icon = QString ("kmplayer");
+-    tab = i18n ("MPlayer");
++    tab = i18n (MPLAYER_BIN);
+ }
+ 
+ KDE_NO_EXPORT QFrame * MPlayerPreferencesPage::prefPage (QWidget * parent) {
+     m_configframe = new MPlayerPreferencesFrame (parent);
+@@ -1020,9 +1020,9 @@
+     QString args;
+     m_use_slave = m_source->pipeCmd ().isEmpty ();
+     if (!m_use_slave)
+         args = m_source->pipeCmd () + QString (" | ");
+-    args += QString ("mplayer ") + m_source->recordCmd ();
++    args += QString ("mplayer-bin ") + m_source->recordCmd ();
+     // FIXME if (m_player->source () == source) // ugly
+     //    m_player->stop ();
+     QString myurl = url.isLocalFile () ? getPath (url) : url.url ();
+     bool post090 = m_settings->mplayerpost090;
+Only in kmplayer-0.9.2/src: kmplayerprocess.cpp~
+diff -U 4 -H -b -w -B -E -d -i -r -- kmplayer-0.9.2-orig/src/kmplayertvsource.cpp kmplayer-0.9.2/src/kmplayertvsource.cpp
+--- kmplayer-0.9.2-orig/src/kmplayertvsource.cpp	2006-04-21 21:08:29.000000000 +0200
++++ kmplayer-0.9.2/src/kmplayertvsource.cpp	2006-05-20 19:45:59.737501000 +0200
+@@ -702,9 +702,9 @@
+     QString args;
+     args.sprintf ("tv:// -tv driver=%s:device=%s -identify -frames 0", m_driver.ascii (), m_tvdevice->src.ascii ());
+     m_tvsource->player ()->stop ();
+     m_tvsource->player ()->process ()->initProcess (m_player->settings ()->defaultView ()->viewer ());
+-    KMPlayer::Process *proc = m_tvsource->player ()->players () ["mplayer"];
++    KMPlayer::Process *proc = m_tvsource->player ()->players () [MPLAYER_BIN];
+     proc->setSource (this);
+     if (!static_cast <KMPlayer::MPlayer *> (proc)->run (args.ascii()))
+         deactivate ();
+ }
