@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.49 2006/06/08 20:26:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.50 2006/06/23 17:44:45 geoman Exp $
 
 # 2006/03/07 - Donnie Berkholz <spyderous@gentoo.org>
 # Modular X: mask for architectures lacking direct rendering
@@ -45,7 +45,6 @@ input_devices_wacom
 input_devices_joystick
 video_cards_chips
 video_cards_cirrus
-video_cards_dummy
 video_cards_fglrx
 video_cards_glint
 video_cards_nvidia
@@ -60,7 +59,6 @@ video_cards_suncg6
 video_cards_sunleo
 video_cards_suntcx
 video_cards_trident
-video_cards_v4l
 video_cards_vmware
 video_cards_voodoo
 
