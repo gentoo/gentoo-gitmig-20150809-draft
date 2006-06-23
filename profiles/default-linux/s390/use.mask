@@ -2,6 +2,8 @@
 pcmcia
 cdr
 qt
+qt3
+qt4
 gpm
 3dfx
 acpi
