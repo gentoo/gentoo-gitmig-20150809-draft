@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.2-r1.ebuild,v 1.1 2006/06/18 12:37:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.2-r1.ebuild,v 1.2 2006/06/23 22:42:05 flameeyes Exp $
 
 inherit font multilib autotools flag-o-matic
 
@@ -95,7 +95,7 @@ extension_compile() {
 extension_install() {
 	einfo "Installing ${1}"
 	cd ${WORKDIR}/${1} \
-		&& make DESTDIR=${D} LIBDIR="/usr/$(get_libdir)/${PN}" install
+		&& emake DESTDIR=${D} LIBDIR="/usr/$(get_libdir)/${PN}" install
 }
 
 src_unpack() {
@@ -108,6 +108,13 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-2.3.0-setXid.patch"
 	epatch "${FILESDIR}/${P}-strict-aliasing.patch"
+
+	# ffmpeg doesn'g use libtool, so the condition for PIC code
+	# is __PIC__, not PIC.
+	sed -i -e 's/#\(\(.*def *\)\|\(.*defined *\)\|\(.*defined(*\)\)PIC/#\1__PIC__/' \
+		libavcodec/i386/dsputil_mmx{.c,_rnd.h,_avg.h} \
+		libavcodec/msmpeg4.c \
+		|| die "sed failed (__PIC__)"
 
 	eautomake
 }
@@ -163,7 +170,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Installation failed."
+	emake DESTDIR=${D} install || die "Installation failed."
 
 	# .desktop file and default icon
 	domenu gentoo/xdtv.desktop
