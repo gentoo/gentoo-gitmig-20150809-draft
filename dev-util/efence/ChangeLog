@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/efence
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/ChangeLog,v 1.29 2006/05/21 18:25:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/ChangeLog,v 1.30 2006/06/23 12:42:34 blubb Exp $
+
+  23 Jun 2006; Simon Stelling <blubb@gentoo.org> efence-2.4.14.ebuild:
+  fix multilib-strict; bug 136685
 
   21 May 2006; Markus Rothe <corsair@gentoo.org> efence-2.4.13-r1.ebuild:
   Stable on ppc64
