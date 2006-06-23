@@ -1,0 +1,40 @@
+--- MonetDB-4.12.0/conf/MonetDB.conf.in
++++ MonetDB-4.12.0/conf/MonetDB.conf.in
+@@ -20,7 +20,7 @@
+ # the name of the database to use below.  Note that you can use
+ # multiple databases, but that you have to edit the database name
+ # and restart MonetDB.
+-gdk_dbname=demo
++gdk_dbname=default
+ 
+ # The options below deal with various aspects of memory usage behaviour.
+ # If you don't know what these values mean, you should leave them alone.
+@@ -70,10 +70,6 @@
+ # 4194304 = show result size estimations (for join,select)
+ # 8388608 = extended property checking: tells also about not set properties
+ 
+-# General client Section
+-#=======================
+-#host=localhost				#the host the server runs on
+-
+ # MonetDB Section
+ #================
+ # Administrator user name 
+@@ -86,7 +82,7 @@
+ # Where do the MonetDB modules reside? The second path is for windows dlls.
+ monet_mod_path=@Xlibdir@@DIRSEP@@PACKAGE@@PATHSEP@@Xlibdir@@DIRSEP@bin
+ # Start Mserver in daemon mode, or start with MIL interactive interface?
+-monet_daemon=no
++monet_daemon=yes
+ 
+ # Monet Application Interface Section
+ #====================================
+@@ -98,7 +94,7 @@
+ mapi_debug=0
+ # The number of concurrent clients can be set using mapi_clients
+ # (smaller than 1 is not very useful)
+-#mapi_clients=2
++mapi_clients=10
+ 
+ # SQL Interface Section
+ #======================

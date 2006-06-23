@@ -1,0 +1,11 @@
+--- MonetDB-4.12.0/src/mapi/clients/C/MapiClient.c
++++ MonetDB-4.12.0/src/mapi/clients/C/MapiClient.c
+@@ -35,7 +35,7 @@
+ #endif
+ 
+ static FILE *toConsole;
+-static char *language = "mil";
++static char *language = "sql";
+ 
+ char *command = NULL;
+ 

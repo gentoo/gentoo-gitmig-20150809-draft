@@ -1,0 +1,25 @@
+# Gentoo MonetDB startup.mil script -- Fabian Groffen grobian@gentoo.org
+#
+# This script starts the SQL, XQuery and Mapi modules and activates a
+# listening socket for all of them on their default port.  This results
+# in three ports of your system being occupied.  By default the ports
+# are as follows:
+# SQL server:    45123
+# XQuery server: 45789
+# Mapi server:   50000
+
+# should connections be bound to localhost or 0.0.0.0?  Set to true here
+# to allow foreign connections.  Defaults to false (only local).
+var allow_foreign_connections := false;
+
+#
+# If were only looking for whatever you could change, you can stop
+# reading at this point and save your changes.  Don't change anything
+# below if you don't know what you're doing.
+#
+
+module(sql_server);
+module(pathfinder);
+mapi_start(allow_foreign_connections);
+mapi_register(sql_frontend());
+mapi_register(xquery_frontend());
