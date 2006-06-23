@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.4.ebuild,v 1.4 2006/03/19 23:03:07 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.4.ebuild,v 1.5 2006/06/23 14:57:01 blubb Exp $
 
 inherit eutils multilib
 
@@ -12,6 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ~amd64 ~ppc x86"
 IUSE="doc gd python tcltk X"
+
+RESTRICT="test"
 
 RDEPEND="virtual/libc
 	gd? ( media-libs/gd )
