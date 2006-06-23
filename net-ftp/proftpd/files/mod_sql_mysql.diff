@@ -1,0 +1,60 @@
+--- /var/tmp/portage/proftpd-1.3.0_rc5/work/proftpd-1.3.0rc5/contrib/mod_sql_mysql.c	2005-06-27 22:41:14.000000000 +0200
++++ /contrib/mod_sql_mysql.c	2006-04-18 04:00:14.000000000 +0200
+@@ -158,7 +158,8 @@
+   char *pass;
+   char *db;
+   char *port;
+-
++  char *unix_socket;
++  
+   MYSQL *mysql;
+ 
+ };
+@@ -431,7 +432,7 @@
+   mysql_options(conn->mysql, MYSQL_READ_DEFAULT_GROUP, "client");
+ 
+   if (!mysql_real_connect(conn->mysql, conn->host, conn->user, conn->pass,
+-      conn->db, (int) strtol(conn->port, (char **) NULL, 10), NULL,
++      conn->db, (int) strtol(conn->port, (char **) NULL, 10), conn->unix_socket,
+       CLIENT_INTERACTIVE)) {
+ 
+     /* If it didn't work, return an error. */
+@@ -575,6 +576,7 @@
+   char *db = NULL;
+   char *host = NULL;
+   char *port = NULL;
++  char *unix_socket = NULL;
+ 
+   char *havehost = NULL;
+   char *haveport = NULL;
+@@ -630,6 +632,20 @@
+   conn->db   = pstrdup(conn_pool, db);
+   conn->port = pstrdup(conn_pool, port);
+ 
++  /* if host is a unix socket perse it, otherwise default it. 
++   * from dovecot 1.0 beta 7 driver-mysql.c
++   */ 
++ 
++  if (*conn->host == '/') {
++    unix_socket = conn->host;
++    host = NULL;
++    conn->host = pstrdup(conn_pool, host);
++  } else {
++    unix_socket = NULL;
++  }
++  
++  conn->unix_socket = pstrdup(conn_pool, unix_socket);
++
+   /* insert the new conn_info into the connection hash */
+   if (!(entry = _sql_add_connection(conn_pool, name, (void *) conn))) {
+     sql_log(DEBUG_FUNC, "%s", "exiting \tmysql cmd_defineconnection");
+@@ -650,8 +666,8 @@
+   sql_log(DEBUG_INFO, " host: '%s'", conn->host);
+   sql_log(DEBUG_INFO, "   db: '%s'", conn->db);
+   sql_log(DEBUG_INFO, " port: '%s'", conn->port);
++  sql_log(DEBUG_INFO, "unix_socket: '%s'", conn->unix_socket);
+   sql_log(DEBUG_INFO, "  ttl: '%d'", entry->ttl);
+-
+   sql_log(DEBUG_FUNC, "%s", "exiting \tmysql cmd_defineconnection");
+   return HANDLED(cmd);
+ }
