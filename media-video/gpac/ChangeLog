@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.17 2006/06/07 20:47:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.18 2006/06/23 12:23:46 blubb Exp $
+
+  23 Jun 2006; Simon Stelling <blubb@gentoo.org>
+  gpac-0.4.1_pre20060122.ebuild:
+  adding missing 'inherit multilib'
 
   07 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   gpac-0.4.1_pre20060122.ebuild:
