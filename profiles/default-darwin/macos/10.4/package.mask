@@ -2,7 +2,6 @@
 # These packages will, or depend on packages that will overwrite
 # collision-protected files 
 ##
-app-arch/cpio
 app-arch/unzip
 app-arch/zip
 app-editors/nano
