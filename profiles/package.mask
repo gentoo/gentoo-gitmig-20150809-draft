@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5533 2006/06/23 12:39:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5534 2006/06/23 13:02:59 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (23 Jun 2006)
+# 0.2 Beta version of Kerry
+>=kde-misc/kerry-0.1.90
 
 # Diego Pettenò <flameeyes@gentoo.org> (23 Jun 2006)
 # ALSA 1.0.12_rc1 released today, masked for testing.
