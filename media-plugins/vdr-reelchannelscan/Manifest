@@ -5,39 +5,24 @@ AUX vdr-reelchannelscan-0.3.0-empty-channellist.diff 657 RMD160 8c179b5c1f794954
 MD5 c2aa3c93eda6d6de6cedff2f19a88e9f files/vdr-reelchannelscan-0.3.0-empty-channellist.diff 657
 RMD160 8c179b5c1f7949549354d6344bfa85e67a78b81f files/vdr-reelchannelscan-0.3.0-empty-channellist.diff 657
 SHA256 b292bb280564f7fed3b9cb2981bcd6e403c4603d8aaceeae639c5e215781889d files/vdr-reelchannelscan-0.3.0-empty-channellist.diff 657
-DIST vdr-reelchannelscan-0.2.0.tgz 62614 RMD160 f82701c3eff8b47209223cb16df3790143ae2f8e SHA1 92d4dd7815b4b07c1aa4934cdd9e5bea580ecb6b SHA256 9dab37d88eb0b4fbbec32e394e96d08135421ea1ae6dc7c32b79a6ea1231ade5
 DIST vdr-reelchannelscan-0.3.0.tgz 67760 RMD160 7a8ec42efa43d7cb3dbd7dbb86198a42ab246281 SHA1 1e6e9db90ac49b1a376a8ca37481b24c790a6432 SHA256 3010742a09e0e5cfdadf0030ef1c841026cc30dde605f10d37e6148db17831a2
 DIST vdr-reelchannelscan-0.3.3.tgz 69313 RMD160 bcdb3327d610f27045e4cb0fc8d8bb82c1030fec SHA1 db24e7e35c70129b6e1aedf3e87f36bc8a9f624f SHA256 8ed4e17d456b881da1646f1963c189723f84351753460c96e8c3b56b3deab305
-EBUILD vdr-reelchannelscan-0.2.0.ebuild 1148 RMD160 4dec8bdec106210db2a116ac7c4c5222c4d7a5a8 SHA1 fc7da03ea27189559145ceb1301001199bafe377 SHA256 6d69991acdfc78bf2d6b514391e0e1703a5df124f7ee91d06f19e6542b7f77ec
-MD5 f75ef4bc459bb2b1cf3366d6b40f86f1 vdr-reelchannelscan-0.2.0.ebuild 1148
-RMD160 4dec8bdec106210db2a116ac7c4c5222c4d7a5a8 vdr-reelchannelscan-0.2.0.ebuild 1148
-SHA256 6d69991acdfc78bf2d6b514391e0e1703a5df124f7ee91d06f19e6542b7f77ec vdr-reelchannelscan-0.2.0.ebuild 1148
-EBUILD vdr-reelchannelscan-0.3.0-r1.ebuild 1091 RMD160 83c77d7f8a17d9230354f3576add4316040e25d0 SHA1 c72290c6e4f8900f0a52f3633bf1458ab4349889 SHA256 212640f5d2f6830833c0762dabce2dc9c0c3785652d9220e10fd0b52ddb11c72
-MD5 6058cbf0c29dedd737dea24b45761bf7 vdr-reelchannelscan-0.3.0-r1.ebuild 1091
-RMD160 83c77d7f8a17d9230354f3576add4316040e25d0 vdr-reelchannelscan-0.3.0-r1.ebuild 1091
-SHA256 212640f5d2f6830833c0762dabce2dc9c0c3785652d9220e10fd0b52ddb11c72 vdr-reelchannelscan-0.3.0-r1.ebuild 1091
-EBUILD vdr-reelchannelscan-0.3.0.ebuild 1042 RMD160 634ad834888c9fb613769f12e7301698d71fdbf1 SHA1 10655c29292469309cfa4a371d4634738da097a5 SHA256 cf2b7554e4e9ccd54af3b6bae97720ac12cce99e527b793ed62c9c31767a9d2c
-MD5 07bbbea72f4e69fe79afabfe23dab630 vdr-reelchannelscan-0.3.0.ebuild 1042
-RMD160 634ad834888c9fb613769f12e7301698d71fdbf1 vdr-reelchannelscan-0.3.0.ebuild 1042
-SHA256 cf2b7554e4e9ccd54af3b6bae97720ac12cce99e527b793ed62c9c31767a9d2c vdr-reelchannelscan-0.3.0.ebuild 1042
+EBUILD vdr-reelchannelscan-0.3.0-r1.ebuild 1090 RMD160 d90ea63be80bd30d1c89264e0aefd20a373f5f5f SHA1 e2a1c6f1b92381103121f7753b0e78726448423f SHA256 21874e518d3ff9dce121ef6873bc460d2c2c98f8298fe2a8bc2ce46c0a0afc53
+MD5 5fbd90156ed47f96ffad74b4f9969860 vdr-reelchannelscan-0.3.0-r1.ebuild 1090
+RMD160 d90ea63be80bd30d1c89264e0aefd20a373f5f5f vdr-reelchannelscan-0.3.0-r1.ebuild 1090
+SHA256 21874e518d3ff9dce121ef6873bc460d2c2c98f8298fe2a8bc2ce46c0a0afc53 vdr-reelchannelscan-0.3.0-r1.ebuild 1090
 EBUILD vdr-reelchannelscan-0.3.3.ebuild 1037 RMD160 37c0631b6a64fff945c8cb2da97f0cdd5fb456f1 SHA1 cf9773b65b7f11709e1a8a4f31ce6f9a2fdba3fe SHA256 9fc237d56dee24384e116ce79374df32fe6f0ce814989551a5a2f91c844cf0fc
 MD5 a5850a9d18057b6d2730090554577d9a vdr-reelchannelscan-0.3.3.ebuild 1037
 RMD160 37c0631b6a64fff945c8cb2da97f0cdd5fb456f1 vdr-reelchannelscan-0.3.3.ebuild 1037
 SHA256 9fc237d56dee24384e116ce79374df32fe6f0ce814989551a5a2f91c844cf0fc vdr-reelchannelscan-0.3.3.ebuild 1037
-MISC ChangeLog 1077 RMD160 3e61338b9ef98a614e7fc39d364b6ce61da42223 SHA1 9d675079109760c7efd4922a7dae5f22088e537c SHA256 ea7d3d596fb18040ff5e1e84d38b78329eb892ba04d7d84d4bfdbd833278ad58
-MD5 c26d28f0fd2b2c5ce48736fd3fce8d8a ChangeLog 1077
-RMD160 3e61338b9ef98a614e7fc39d364b6ce61da42223 ChangeLog 1077
-SHA256 ea7d3d596fb18040ff5e1e84d38b78329eb892ba04d7d84d4bfdbd833278ad58 ChangeLog 1077
+MISC ChangeLog 1299 RMD160 7839995eef32bebee84258c556448cad55870969 SHA1 94d44971571b1e8d2e47d4501e441d15c1ef3601 SHA256 2bb053ceb1baae0b246b5f301a64b9db1ef3b444b9f2754f69e399164e72bf00
+MD5 2899775596a6551c7335776a9f7f7187 ChangeLog 1299
+RMD160 7839995eef32bebee84258c556448cad55870969 ChangeLog 1299
+SHA256 2bb053ceb1baae0b246b5f301a64b9db1ef3b444b9f2754f69e399164e72bf00 ChangeLog 1299
 MISC metadata.xml 414 RMD160 69e3b0864427a1c85ed9d6d0788fef9b6b50e99c SHA1 6dd589863838d4dc8957804da568eef172eb9c04 SHA256 bd74f2a6e566b211a82b8ea53295894c8f3a2f8a6bb3fcb51a47851b25d86603
 MD5 4bd2f6d639706e548820ed3bd4e9d2c8 metadata.xml 414
 RMD160 69e3b0864427a1c85ed9d6d0788fef9b6b50e99c metadata.xml 414
 SHA256 bd74f2a6e566b211a82b8ea53295894c8f3a2f8a6bb3fcb51a47851b25d86603 metadata.xml 414
-MD5 f2e963aef69cd80124485e362ecdf302 files/digest-vdr-reelchannelscan-0.2.0 265
-RMD160 98ef5dc54572d9833478f9d54b0ba793079f3925 files/digest-vdr-reelchannelscan-0.2.0 265
-SHA256 146a01adbf2fe5ca4eb089400c2d6b0fcbb332a9240df71b9b484da8eca0bc93 files/digest-vdr-reelchannelscan-0.2.0 265
-MD5 b98e0b6a895346b68b9bf72b66c0e79e files/digest-vdr-reelchannelscan-0.3.0 265
-RMD160 c274527bcf82cf6938a2e562831a72d6a09e48a7 files/digest-vdr-reelchannelscan-0.3.0 265
-SHA256 514d99c5972ae7433c2cbc3c6d6ee215a0245b9ff2948580abef7972336137c0 files/digest-vdr-reelchannelscan-0.3.0 265
 MD5 b98e0b6a895346b68b9bf72b66c0e79e files/digest-vdr-reelchannelscan-0.3.0-r1 265
 RMD160 c274527bcf82cf6938a2e562831a72d6a09e48a7 files/digest-vdr-reelchannelscan-0.3.0-r1 265
 SHA256 514d99c5972ae7433c2cbc3c6d6ee215a0245b9ff2948580abef7972336137c0 files/digest-vdr-reelchannelscan-0.3.0-r1 265
@@ -47,7 +32,7 @@ SHA256 c15af2466be6d88c81899a9b6a79e47b159ad9a5d08184b82ab8786c65aea0d6 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFElHqTZfSl1Kp5KmoRApuxAKCFyom7IE6oJSTeqrWBT3X4duyIuQCdFcIW
-/EHNxkeiflrPbyYhOaPuDPo=
-=Uno+
+iD8DBQFEm7E9ZfSl1Kp5KmoRAjcXAKCdjHyvHYE95LxHIJ2MPCvQPm/7EgCg2sQ1
+LPp/Q2xkTnlqOqDy4eFT4zM=
+=lhwl
 -----END PGP SIGNATURE-----
