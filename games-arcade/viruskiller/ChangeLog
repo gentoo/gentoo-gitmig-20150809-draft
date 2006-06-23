@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/viruskiller
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/viruskiller/ChangeLog,v 1.9 2005/05/21 19:49:43 mr_bones_ Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/viruskiller/ChangeLog,v 1.10 2006/06/23 05:07:59 mr_bones_ Exp $
+
+  23 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  viruskiller-1.0.ebuild:
+  avoid prestripping binaries (bug #137586) - patch from Tristan Heaven
 
 *viruskiller-1.0 (21 May 2005)
 

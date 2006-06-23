@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/viruskiller/viruskiller-1.0.ebuild,v 1.1 2005/05/21 19:49:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/viruskiller/viruskiller-1.0.ebuild,v 1.2 2006/06/23 05:07:59 mr_bones_ Exp $
 
 inherit flag-o-matic games
 
@@ -29,6 +29,7 @@ src_unpack() {
 		-e "/^BINDIR = /s:/$:/bin/:" \
 		-e "/^DOCDIR = /s:doc/.*:doc/${PF}/html/:" \
 		-e "/^\(KDE\|GNOME\) = /s:=.*:= \$(DESTDIR)/usr/share/applications:" \
+		-e "/strip/d" \
 		makefile \
 		|| die "sed failed"
 	rm -f doc/LICENSE
