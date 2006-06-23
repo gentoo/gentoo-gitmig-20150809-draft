@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xpaint
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/ChangeLog,v 1.13 2006/02/04 09:51:53 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/ChangeLog,v 1.14 2006/06/23 18:36:04 gustavoz Exp $
+
+  23 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> xpaint-2.7.0.ebuild:
+  Stable on sparc
 
   04 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   -files/Local.config-2.6.2.diff, -xpaint-2.6.2-r1.ebuild,
