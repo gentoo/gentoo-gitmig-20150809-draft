@@ -23,6 +23,8 @@ ffmpeg
 
 # havent tested yet
 qt
+qt3
+qt4
 arts
 kde
 diet

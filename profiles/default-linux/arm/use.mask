@@ -20,6 +20,8 @@ fdftk
 
 # havent tested yet
 qt
+qt3
+qt4
 arts
 kde
 afs
