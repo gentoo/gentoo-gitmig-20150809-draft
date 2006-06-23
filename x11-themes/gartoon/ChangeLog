@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gartoon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gartoon/ChangeLog,v 1.3 2006/01/11 20:14:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gartoon/ChangeLog,v 1.4 2006/06/23 21:46:21 gustavoz Exp $
+
+  23 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> gartoon-0.5.ebuild:
+  Stable on sparc
 
   11 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> gartoon-0.5.ebuild:
   Keyworded ~sparc
