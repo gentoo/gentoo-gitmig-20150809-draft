@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r1.ebuild,v 1.4 2006/04/13 20:25:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r1.ebuild,v 1.5 2006/06/23 00:01:53 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -40,6 +40,7 @@ src_unpack() {
 		-e '/^CC/d' \
 		-e '/^MARCH/d' \
 		-e "/^CFLAGS/s/=.*$/= ${CFLAGS} \$(SDL_FLAGS)/" \
+		-e "/^LDFLAGS/s/-s$/${LDFLAGS}/" \
 		-e "/^MPKDIR = /s:./:${GAMES_DATADIR}/${PN}/:" \
 		-e "/^MUSICDIR = /s:./music/:${GAMES_DATADIR}/${PN}/music/:" \
 		-e "/^HISCOREDIR = /s:./:${GAMES_STATEDIR}/${PN}/:" \
@@ -48,7 +49,7 @@ src_unpack() {
 		makefile \
 		|| die "sed failed"
 
-	epatch ${FILESDIR}/${P}-c_str.patch
+	epatch "${FILESDIR}"/${P}-c_str.patch
 }
 
 src_install() {
