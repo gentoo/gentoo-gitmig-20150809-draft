@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p10281.ebuild,v 1.1 2006/06/23 01:25:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p10281.ebuild,v 1.2 2006/06/23 23:57:10 cardoe Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -98,6 +98,14 @@ pkg_setup() {
 		echo
 		eerror "Your installation of Modular X is broken. Don't have a virtual/x11"
 		eerror "installed while using Modular X."
+		echo
+		rip=1
+	fi
+	
+	if use xvmc && ! ( use video_cards_i810 || use video_cards_nvidia || use video_cards_via ); then
+		echo
+		eerror "You enabled the XvMC USE flag but did not configure VIDEO_CARDS with either"
+		eerror "a Nvidia, i810, or VIA video card."
 		echo
 		rip=1
 	fi
