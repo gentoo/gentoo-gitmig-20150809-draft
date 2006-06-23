@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.292 2006/06/11 20:30:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.293 2006/06/23 21:21:39 cardoe Exp $
 
 # Keep them sorted
 
@@ -310,6 +310,7 @@ sybase-ct - Adds support for Sybase-CT
 symlink - Force kernel ebuilds to automatically update the /usr/src/linux symlink.
 sysvipc - Support for System V-compatible inter-process communication
 szip - Use the szip compression library
+tcl - Adds support the Tcl language
 tcltk - Support for Tcl and/or Tk GUI toolkits
 tcpd - Adds support for TCP wrappers
 test - Workaround to pull in packages needed to run with FEATURES=maketest / FEATURES=test
@@ -318,6 +319,7 @@ theora - Adds support for the Theora Video Compression Codec
 threads - Adds threads support for various packages. Usually pthreads
 tidy - Adds support for HTML Tidy
 tiff - Adds support for the tiff image format
+tk - Adds support for Tk GUI toolkit
 tokenizer - Adds support for the PHP file parser
 truetype - Adds support for FreeType and/or FreeType2 fonts
 uclibc - Enable uclibc specific patches and build or link uclibc
