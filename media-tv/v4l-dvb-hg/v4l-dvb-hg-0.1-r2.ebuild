@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.1 2006/06/18 12:29:30 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.2 2006/06/23 11:06:44 zzam Exp $
 
 
 : ${EHG_REPO_URI:=http://linuxtv.org/hg/v4l-dvb}
@@ -76,6 +76,7 @@ src_unpack() {
 	fi
 	echo
 
+	einfo "Removing autoload-entry from stradis-driver."
 	sed -i ${WORKDIR}/v4l-dvb/linux/drivers/media/video/stradis.c -e '/MODULE_DEVICE_TABLE/d'
 
 	cd ${S}
