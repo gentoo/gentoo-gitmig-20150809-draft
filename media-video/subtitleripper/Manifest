@@ -1,6 +1,33 @@
-MD5 eddf9b022fc19ae8295d3a208324c841 ChangeLog 1639
-MD5 f31d83714c7ad3ac1a2e44c4f96fc2f3 files/digest-subtitleripper-0.3.4 68
-MD5 f31d83714c7ad3ac1a2e44c4f96fc2f3 files/digest-subtitleripper-0.3.4-r1 68
-MD5 71d5fd4d13e0c7036447e796c292131d metadata.xml 228
-MD5 7711ef5f0e6114af15a6519b6a128577 subtitleripper-0.3.4-r1.ebuild 1285
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST subtitleripper-0.3-4.tgz 47299
+EBUILD subtitleripper-0.3.4-r1.ebuild 1285 RMD160 09540b8be67f161ea0c4f0b5f8e85d8c84c8d745 SHA1 f7e7e92d35e83b9d68cd873ab233e175701403e6 SHA256 19ccdde392801a907df312fb5686b6f27d5fb2b409ca95a7b19ef66c3080e957
+MD5 14e8eb455e5ac60bdba3ab71bcce7825 subtitleripper-0.3.4-r1.ebuild 1285
+RMD160 09540b8be67f161ea0c4f0b5f8e85d8c84c8d745 subtitleripper-0.3.4-r1.ebuild 1285
+SHA256 19ccdde392801a907df312fb5686b6f27d5fb2b409ca95a7b19ef66c3080e957 subtitleripper-0.3.4-r1.ebuild 1285
+EBUILD subtitleripper-0.3.4.ebuild 763 RMD160 ebba558a9d10904f74a3d971bccbe2db3b072b5e SHA1 e555573b59d45ab9a15e381e7c89e9b4c287e6dc SHA256 753ba1a270ef21f641092b64202ce9c2ddbf0df128895cb80145b0bae34512d4
 MD5 801e72f2e970f4d42d05a6fc5d037f22 subtitleripper-0.3.4.ebuild 763
+RMD160 ebba558a9d10904f74a3d971bccbe2db3b072b5e subtitleripper-0.3.4.ebuild 763
+SHA256 753ba1a270ef21f641092b64202ce9c2ddbf0df128895cb80145b0bae34512d4 subtitleripper-0.3.4.ebuild 763
+MISC ChangeLog 1747 RMD160 ffc8e86cf83ae3ee4207c137ee7c2900cdd89ea5 SHA1 c0b31125f6a2e0f34815675f3fd10dd3b25e0669 SHA256 fa953d94d920df75b99ad717895ed20117db357be53a53f3203e3d2e3745439d
+MD5 decbdad233d3f841b652f47bed69be7e ChangeLog 1747
+RMD160 ffc8e86cf83ae3ee4207c137ee7c2900cdd89ea5 ChangeLog 1747
+SHA256 fa953d94d920df75b99ad717895ed20117db357be53a53f3203e3d2e3745439d ChangeLog 1747
+MISC metadata.xml 228 RMD160 f46510d126d427224df28e4140e05412ad589db5 SHA1 c8d8cbd730e5661e6570d70a2b5f57e945241834 SHA256 6f5a94dbd7a65c9076fc1378c6ae86969579e11d1b8cd1ed5de3cb8fbd9fc83c
+MD5 71d5fd4d13e0c7036447e796c292131d metadata.xml 228
+RMD160 f46510d126d427224df28e4140e05412ad589db5 metadata.xml 228
+SHA256 6f5a94dbd7a65c9076fc1378c6ae86969579e11d1b8cd1ed5de3cb8fbd9fc83c metadata.xml 228
+MD5 f31d83714c7ad3ac1a2e44c4f96fc2f3 files/digest-subtitleripper-0.3.4 68
+RMD160 ea12a0fdb9f7e66dac7017b78470cb919e83bff5 files/digest-subtitleripper-0.3.4 68
+SHA256 f205507d49fbf58f0345c818846534fa7fc7452e342cf98fb7dba94b994a99ee files/digest-subtitleripper-0.3.4 68
+MD5 f31d83714c7ad3ac1a2e44c4f96fc2f3 files/digest-subtitleripper-0.3.4-r1 68
+RMD160 ea12a0fdb9f7e66dac7017b78470cb919e83bff5 files/digest-subtitleripper-0.3.4-r1 68
+SHA256 f205507d49fbf58f0345c818846534fa7fc7452e342cf98fb7dba94b994a99ee files/digest-subtitleripper-0.3.4-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEnF67KRy60XGEcJIRAvWBAKCTbxEekltXP2vdxL2Y0TxtlayBugCcDVPl
+pJ8KMsV91s4stAYMLy5iK0o=
+=ZxaN
+-----END PGP SIGNATURE-----
