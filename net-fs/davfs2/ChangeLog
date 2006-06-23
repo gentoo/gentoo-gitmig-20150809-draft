@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/davfs2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.22 2006/06/14 15:57:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.23 2006/06/23 15:05:35 blubb Exp $
+
+  23 Jun 2006; Simon Stelling <blubb@gentoo.org> davfs2-0.2.8.ebuild:
+  readding ~amd64 per bug 119877
 
   14 Jun 2006; Stefan Schweizer <genstef@gentoo.org> davfs2-0.2.8.ebuild:
   inherit linux-mod.eclass instead of doing it manually
