@@ -1,15 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.29 2006/02/17 22:18:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.30 2006/06/24 18:36:59 nichoj Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
 inherit eutils
 
 DESCRIPTION="Based on the $ECLASS eclass"
-DEPEND=">=dev-java/java-config-1.2.11
+JAVA_CONFIG_DEP="|| ( =dev-java/java-config-1.3* =dev-java/java-config-1.2* )"
+DEPEND="${JAVA_CONFIG_DEP}
 	sys-apps/findutils"
-RDEPEND=">=dev-java/java-config-1.2.11"
+RDEPEND="${JAVA_CONFIG_DEP}"
+
+export WANT_JAVA_CONFIG="1"
 
 VMHANDLE=${PN}-${PV}
 
@@ -116,7 +119,7 @@ java_remove-libjsoundalsa() {
 	fi
 }
 
-# Symlinks i386 to i?86. Updates env file to then use i?86
+# Symlinks i386 to i?86. Updates env file to then use i?86 
 # for LD_LIBRARY_PATH. See bug #23579.
 #
 # Takes an argument, which is a directory living in ${D}
@@ -128,12 +131,12 @@ fix-i386-dir() {
 	if use x86; then
 		local host=${CTARGET:-${CHOST}}
 		host=${host%%-*}
-
+		
 		if [[ ${host} != i386 ]]; then
 			local orig_dir="${libdir}/i386"
 			local new_dir="${libdir}/${host}"
 			dosym i386 ${new_dir} || die "Failed to dosym"
-
+			
 
 			sed -i -e "s/i386/${host}/g" \
 				${D}/etc/env.d/java/20${VMHANDLE} || die "Failed to sed"

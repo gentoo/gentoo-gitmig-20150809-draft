@@ -11,7 +11,11 @@ inherit eutils
 
 DESCRIPTION="Based on the $ECLASS eclass"
 
-DEPEND=">=dev-java/java-config-1.2.7"
+JAVA_CONFIG_DEP="|| ( =dev-java/java-config-1.3* =dev-java/java-config-1.2* )"
+DEPEND="${JAVA_CONFIG_DEP}"
+RDEPEND="${JAVA_CONFIG_DEP}"
+
+export WANT_JAVA_CONFIG="1"
 
 EXPORT_FUNCTIONS pkg_setup
 

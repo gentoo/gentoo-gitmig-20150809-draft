@@ -1,12 +1,54 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.35 2006/05/22 01:26:51 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.36 2006/06/24 18:36:59 nichoj Exp $
+
+inherit multilib
+
+JAVA_CONFIG_DEP="|| ( =dev-java/java-config-1.3* =dev-java/java-config-1.2* )"
+DEPEND="${JAVA_CONFIG_DEP}"
+RDEPEND="${JAVA_CONFIG_DEP}"
 
 
-# Skeleton pkg_setup, needed to provide compatibility for migration-overlay.
+EXPORT_FUNCTIONS pkg_setup
+
+# We need to do a few things to add compatibility between
+# generation-1 and generation-2.
+
+# First we make sure java-config-1 will be used
+export WANT_JAVA_CONFIG="1"
+
+# VMHANDLE is defined in /etc/env.d/20java. This is the handle java-config-2
+# uses for determining which VM to use.
+#
+# We set GENTOO_VM to this, to ensure that /usr/bin/java and company are using
+# the right VM.
+export GENTOO_VM="${VMHANDLE}"
+
+# During pkg_setup, we need to live some crumb trails that we're using
+# in a mixed generation-1/generation-2 environment
+# TODO need to make sure everything that inherits java-pkg and has a pkg_setup
+# uses java-pkg_pkg_setup
 java-pkg_pkg_setup() {
-	:;
+	java-pkg_announce-qa-violation "using deprecated eclass java-pkg"
+	
+	# We need to do a little magic if java-config-2 is around
+	if has_version "=dev-java/java-config-2*"; then
+		ebegin "Enabling generation-2 compatibility"
+		if [[ -n ${GENTOO_VM} ]]; then
+			einfo "Using ${GENTOO_VM}"
+			eend 0
+		else
+			eerror "There was a problem determining which VM to use for Generation-1"
+			eerror "See the list of available VMs by using: java-config-1 -L"
+			eerror "Then select on of those by using: java-config-1 -S <selected vm>"
+			eerror "And once that is done, run: env-update && source /etc/profile"
+			eerror "Then to continue the emerge: emerge --resume"
+			eend 1
+			die "Couldn't determine VM for generation-1"
+		fi
+	fi
 }
+
 
 pkglistpath="${T}/java-pkg-list"
 
@@ -22,7 +64,7 @@ java-pkg_do_init_()
 
 	if [ -z "${JARDESTTREE}" ] ; then
 		JARDESTTREE="lib"
-		SODESTTREE="lib"
+		SODESTTREE=$(get_libdir)
 	fi
 
 	# Set install paths
@@ -52,17 +94,17 @@ java-pkg_do_init_()
 	debug-print "jardest=${jardest}"
 	debug-print "sodest=${sodest}"
 	debug-print "package_env=${package_env}"
+
 }
 
 java-pkg_do_write_()
 {
 	# Create directory for package.env
-	if [ ! -d "${D}${shareroot}" ] ; then
-		install -d "${D}${shareroot}"
-	fi
+	dodir "${shareroot}"
 
 	# Create package.env
 	echo "DESCRIPTION=${DESCRIPTION}" > "${package_env}"
+	echo "GENERATION=1" >> "${package_env}"
 	if [ -n "${cp_pkg}" ]; then
 		echo "CLASSPATH=${cp_prepend}:${cp_pkg}:${cp_append}" >> "${package_env}"
 	fi
@@ -175,9 +217,7 @@ java-pkg_dojar()
 	fi
 
 	# Make sure directory is created
-	if [ ! -d "${D}${jardest}" ] ; then
-		install -d "${D}${jardest}"
-	fi
+	dodir ${jardest}
 
 	for i in $* ; do
 		mysrc=$(java-pkg_do_getsrc_)
@@ -374,4 +414,9 @@ java-pkg_dosrc() {
 		|| die "failed to install sources"
 }
 
-EXPORT_FUNCTIONS pkg_setup
+
+java-pkg_announce-qa-violation() {
+	if hasq java-strict ${FEATURES}; then
+		echo "Java QA Notice: $@" >&2
+	fi
+}
