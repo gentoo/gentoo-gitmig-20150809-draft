@@ -41,7 +41,7 @@
  # -c is ignored on Linux, but required on FreeBSD
  	$(DIRINSTALL) -m 755 $(SBINDIR) $(IDSDIR) $(MANDIR)/man8
 -	$(INSTALL) -c -m 755 -s lspci setpci $(SBINDIR)
-+	$(INSTALL) -c -m 755 -s lspci setpci pcimodules $(SBINDIR)
++	$(INSTALL) -c -m 755 lspci setpci pcimodules $(SBINDIR)
  	$(INSTALL) -c -m 755 update-pciids $(SBINDIR)
  	$(INSTALL) -c -m 644 pci.ids $(IDSDIR)
 -	$(INSTALL) -c -m 644 lspci.8 setpci.8 update-pciids.8 $(MANDIR)/man8

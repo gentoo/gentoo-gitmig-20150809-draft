@@ -1,0 +1,39 @@
+ - fix some build paths
+ - dont strip binaries
+ - build libpci.a with PIC (yes this sucks, but a non-stable ABI in
+    libpic.so sucks too and libpci.a is how Debian goes about it)
+
+--- Makefile
++++ Makefile
+@@ -7,10 +7,10 @@
+ VERSION=2.2.3
+ DATE=2006-05-05
+ 
+-PREFIX=/usr/local
++PREFIX=/usr
+ SBINDIR=$(PREFIX)/sbin
+ SHAREDIR=$(PREFIX)/share
+-IDSDIR=$(SHAREDIR)
++IDSDIR=$(SHAREDIR)/misc
+ MANDIR:=$(shell if [ -d $(PREFIX)/share/man ] ; then echo $(PREFIX)/share/man ; else echo $(PREFIX)/man ; fi)
+ INSTALL=install
+ DIRINSTALL=install -d
+--- lib/Makefile
++++ lib/Makefile
+@@ -51,10 +51,14 @@
+ 
+ all: $(PCILIB)
+ 
++AR ?= ar
++RANLIB ?= ranlib
++CFLAGS += -fPIC
++
+ $(PCILIB): $(OBJS)
+ 	rm -f $@
+-	ar rcs $@ $^
+-	ranlib $@
++	$(AR) rcs $@ $^
++	$(RANLIB) $@
+ 
+ access.o: access.c $(INCL)
+ i386-ports.o: i386-ports.c $(INCL) i386-io-hurd.h i386-io-linux.h i386-io-sunos.h

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.74 2006/06/08 10:30:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.75 2006/06/24 20:40:45 vapier Exp $
+
+*pciutils-2.2.3-r1 (24 Jun 2006)
+
+  24 Jun 2006; Mike Frysinger <vapier@gentoo.org>
+  files/pcimodules-pciutils-2.2.0.patch, +files/pciutils-2.2.3-build.patch,
+  +pciutils-2.2.3-r1.ebuild:
+  Dont install libpci.so anymore, but install a PIC libpci.a like Debian.
 
 *pciutils-2.2.3 (08 Jun 2006)
 
