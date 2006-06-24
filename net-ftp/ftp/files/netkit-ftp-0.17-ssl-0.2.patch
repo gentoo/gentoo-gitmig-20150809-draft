@@ -17,22 +17,20 @@
  	*) echo "Unrecognized option: $1"; exit 1;;
  esac 
  shift
-@@ -152,3 +155,17 @@
+@@ -152,3 +155,15 @@
  rm -f __conftest*
  
 +##################################################
 +## Enable SSL
 +echo -n "Whether to enable SSL support... "
 +if [ x"$ENABLE_SSL" = x"yes" ]; then
-+    echo yes
-+    CFLAGS="$CFLAGS -DUSE_SSL"
++	echo yes
++	CFLAGS="$CFLAGS -DUSE_SSL"
++	## we should do tests here, but screw it, i'm lazy :P
++	LIBS="$LIBS -lssl -lcrypto"
 +else
-+    echo no
++	echo no
 +fi
-+
-+## we should do tests here, but screw it, i'm lazy :P
-+LIBS="$LIBS -lssl -lcrypto"
-+
 +
  ##################################################
 --- netkit-ftp-0.17/ftp/cmds.c
@@ -42,7 +40,7 @@
  	port = ftp_port;
  	if (argc > 2) {
 +#ifdef USE_SSL
-+                /* not really an SSL enhancement but something that
++		/* not really an SSL enhancement but something that
 +		 * should have always been here --tjh
 +		 */
 +		if (!isdigit(argv[2][0])) {
@@ -147,10 +145,10 @@
  static sigjmp_buf ptabort;
  static int ptabflg = 0;
  static int abrtflag = 0;
-+#ifdef USE_SSL
-+static int	pdata = -1;
 +static int
 +auth_user(char *u,char *p);
++#ifdef USE_SSL
++static int	pdata = -1;
 +static int 
 +ssl_getc(SSL *ssl_con);
 +static int
