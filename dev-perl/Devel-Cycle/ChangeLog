@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-Cycle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Cycle/ChangeLog,v 1.9 2006/06/23 17:43:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Cycle/ChangeLog,v 1.10 2006/06/24 13:52:54 mcummings Exp $
+
+  24 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  -Devel-Cycle-1.05.ebuild:
+  Cleaning up - 1.05 had problems in the weak ref support
 
 *Devel-Cycle-1.07 (23 Jun 2006)
 
