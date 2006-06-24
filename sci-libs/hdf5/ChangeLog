@@ -1,10 +1,20 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.13 2006/06/14 15:20:27 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.14 2006/06/24 16:13:48 nerdboy Exp $
+
+*hdf5-1.6.5-r1 (24 Jun 2006)
+
+  24 Jun 2006; Steve Arnold <nerdboy@gentoo.org> +files/mpd.conf,
+  hdf5-1.6.5.ebuild, +hdf5-1.6.5-r1.ebuild:
+  Updated for bug 134439, fortran support, tests, and creeping complexity.
+  Added use flags and logic for incompatible configure options, and support
+  for additional Fortran compilers (currently only tested with gfortran).
+  See comments and einfo for more details.  Backport install fixes.  Also
+  made SHLIB change for issue below (bug #118777).
 
   14 Jun 2006; Ferris McCormick <fmccor@gentoo.org> hdf5-1.6.5.ebuild:
-  Add ~sparc keyword, closing Bug #118777 --- but please see Comments 4 and 5 on
-  the bug for conditions under which hdf5 should be built.  (USE flags and
+  Add ~sparc keyword, closing Bug #118777 --- but please see Comments 4 and 5
+  on the bug for conditions under which hdf5 should be built.  (USE flags and
   environment variables curiosities.)
 
 *hdf5-1.6.5 (25 May 2006)

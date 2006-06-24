@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.5.ebuild,v 1.2 2006/06/14 15:20:27 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.5.ebuild,v 1.3 2006/06/24 16:13:48 nerdboy Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_compile() {
 	#myconf="${myconf} $(use_enable fortran)"
 	use threads && myconf="${myconf} --with-pthread"
 	use debug && myconf="${myconf} --enable-debug=all"
-	use mpi && myconf="${myconf} --enable-parallel"
+	use mpi && myconf="${myconf} --enable-parallel --disable-cxx"
 	use hlapi || myconf="${myconf} --disable-hl"
 
 	# NOTE: the hdf5 configure script has its own interpretation of
@@ -39,8 +39,9 @@ src_compile() {
 	EBUILD_ARCH=${ARCH}
 	unset ARCH
 
-	use mpi && \
-	export CC="/usr/bin/mpicc"
+	if use mpi ; then
+	    export CC="/usr/bin/mpicc"
+	fi
 	./configure --prefix=/usr ${myconf} \
 		$(use_enable zlib) \
 		$(use_with ssl) \
@@ -52,7 +53,7 @@ src_compile() {
 	# restore the ARCH environment variable
 	ARCH=${EBUILD_ARCH}
 
-	emake || die "emake failed"
+	make || die "make failed"
 }
 
 src_install() {
@@ -64,6 +65,26 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		install || die "make install failed"
 
+	dolib.so ${S}/test/.libs/lib*so* || die "dolib.so failed"
+
+	if use static ; then
+	    dolib.a ${S}/tools/lib/.libs/libh5tools.a \
+		${S}/test/.libs/libh5test.a || die "dolib.a failed"
+	    insinto /usr/$(get_libdir)
+	    doins ${S}/tools/lib/libh5tools.la \
+		${S}/test/libh5test.la || die "doins failed"
+	fi
+
+	dobin ${S}/bin/iostats || die "dobin failed"
+
 	dodoc README.txt COPYING MANIFEST
 	dohtml doc/html/*
+
+	if use mpi ; then
+	    mv ${D}usr/bin/h5pcc ${D}usr/bin/h5cc
+	fi
+	# change the SHLIB default for C
+	if ! use static ; then
+	    dosed "s/SHLIB:-no/SHLIB:-yes/g" ${D}usr/bin/h5cc || die "dosed failed"
+	fi
 }
