@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cuecue
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/ChangeLog,v 1.1 2006/02/28 23:52:19 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/ChangeLog,v 1.2 2006/06/24 10:10:11 sbriesen Exp $
+
+  24 Jun 2006; Stefan Briesenick <sbriesen@gentoo.org> cuecue-0.2.2.ebuild:
+  fixing dependencies, solving bug #137781.
 
 *cuecue-0.2.2 (28 Feb 2006)
 
