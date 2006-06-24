@@ -17,6 +17,32 @@
  ifneq ($(shell $(LD) --help 2| grep -- --as-needed), )
  	LDFLAGS+= -Wl,--as-needed
  endif
+@@ -48,7 +49,6 @@
+ 
+ $(PACKAGENAME)-static: core core/lib$(PACKAGENAME).a $(PACKAGENAME).o
+ 	$(CXX) $(LDSTATIC) $(LDFLAGS) -o $@ $(PACKAGENAME).o $(LIBS)
+-	strip $@
+ 
+ .PHONY: compressed
+ compressed: $(PACKAGENAME)-compressed
+@@ -73,7 +73,7 @@
+ 
+ install: all
+ 	$(INSTALL) -d -m 0755 $(DESTDIR)/$(SBINDIR)
+-	$(INSTALL) -m 0755 -s $(PACKAGENAME) $(DESTDIR)/$(SBINDIR)
++	$(INSTALL) -m 0755 $(PACKAGENAME) $(DESTDIR)/$(SBINDIR)
+ 	$(INSTALL) -d -m 0755 $(DESTDIR)/$(MANDIR)/man1
+ 	$(INSTALL) -m 0644 $(PACKAGENAME).1 $(DESTDIR)/$(MANDIR)/man1
+ 	$(INSTALL) -d -m 0755 $(DESTDIR)/$(DATADIR)/$(PACKAGENAME)
+@@ -81,7 +81,7 @@
+ 
+ install-gui: gui
+ 	$(INSTALL) -d -m 0755 $(DESTDIR)/$(SBINDIR)
+-	$(INSTALL) -m 0755 -s gui/gtk-$(PACKAGENAME) $(DESTDIR)/$(SBINDIR)
++	$(INSTALL) -m 0755 gui/gtk-$(PACKAGENAME) $(DESTDIR)/$(SBINDIR)
+ 	$(INSTALL) -d -m 0755 $(DESTDIR)/$(DATADIR)/$(PACKAGENAME)/artwork
+ 	$(INSTALL) -m 0644 gui/artwork/*.svg $(DESTDIR)/$(DATADIR)/$(PACKAGENAME)/artwork
+ 	
 --- lshw-B.02.08.01/src/core/Makefile
 +++ lshw-B.02.08.01/src/core/Makefile
 @@ -1,9 +1,10 @@
@@ -58,3 +84,11 @@
  ifneq ($(shell $(LD) --help 2| grep -- --as-needed), )
  	LDFLAGS+= -Wl,--as-needed
  endif
+@@ -33,7 +35,6 @@
+ 	$(CXX) $(LDFLAGS) -o $@ $^ $(LIBS)
+ 
+ install: all
+-	strip gtk-$(PACKAGENAME)
+ 	
+ clean:
+ 	rm -f $(OBJS) gtk-$(PACKAGENAME) gtk-lshw.glade.bak gtk-lshw.gladep.bak interface.c.bak interface.h.bak callbacks.c.bak callbacks.h.bak Makefile.bak
