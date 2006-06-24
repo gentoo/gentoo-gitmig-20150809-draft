@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.175 2006/06/24 04:48:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.176 2006/06/24 19:32:45 flameeyes Exp $
+
+  24 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  openssh-4.3_p2-r2.ebuild:
+  Put shadow under conditional userland_GNU, unbreak non-GNU userlands.
 
   24 Jun 2006; Joshua Kinard <kumba@gentoo.org> openssh-4.3_p2-r2.ebuild:
   Eh, shadow belongs in RDEPEND instead, duh.
