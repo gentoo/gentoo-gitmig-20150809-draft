@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/xmlrpc-c
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.12 2005/09/17 15:07:22 kloeri Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.13 2006/06/24 09:14:51 hollow Exp $
+
+*xmlrpc-c-1.05 (24 Jun 2006)
+*xmlrpc-c-1.03.14 (24 Jun 2006)
+
+  24 Jun 2006; Benedikt Böhm <hollow@gentoo.org> -files/gentoo-0.9.9.patch,
+  -files/gentoo-1.2.patch, +files/xmlrpc-c-1.05-iostream.patch,
+  metadata.xml, -xmlrpc-c-0.9.9.ebuild, -xmlrpc-c-1.2.ebuild,
+  +xmlrpc-c-1.03.14.ebuild, +xmlrpc-c-1.05.ebuild:
+  version bumps; update metadata
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org> xmlrpc-c-0.9.9-r1.ebuild:
   Mark 0.9.9-r1 stable on alpha

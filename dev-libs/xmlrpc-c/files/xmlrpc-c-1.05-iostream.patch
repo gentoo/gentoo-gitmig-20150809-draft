@@ -1,0 +1,12 @@
+Index: xmlrpc-c-1.05/examples/cpp/xmlrpc_loop_server.cpp
+===================================================================
+--- xmlrpc-c-1.05.orig/examples/cpp/xmlrpc_loop_server.cpp
++++ xmlrpc-c-1.05/examples/cpp/xmlrpc_loop_server.cpp
+@@ -7,6 +7,7 @@
+ */
+ 
+ #include <cassert>
++#include <iostream>
+ 
+ #include <xmlrpc-c/base.hpp>
+ #include <xmlrpc-c/registry.hpp>
