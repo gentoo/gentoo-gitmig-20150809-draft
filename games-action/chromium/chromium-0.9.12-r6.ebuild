@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r6.ebuild,v 1.1 2006/05/20 00:16:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r6.ebuild,v 1.2 2006/06/24 04:53:45 cardoe Exp $
 
 inherit flag-o-matic eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.reptilelabour.com/software/files/chromium/chromium-src-${PV}
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="vorbis qt sdl"
+IUSE="vorbis qt3 sdl"
 
 DEPEND="|| ( x11-libs/libXext virtual/x11 )
 	|| (
@@ -21,7 +21,7 @@ DEPEND="|| ( x11-libs/libXext virtual/x11 )
 		virtual/glut
 	)
 	vorbis? ( media-libs/libvorbis )
-	qt? ( =x11-libs/qt-3* )
+	qt3? ( =x11-libs/qt-3* )
 	~media-libs/openal-0.0.8
 	media-libs/freealut"
 
@@ -35,7 +35,7 @@ src_unpack() {
 		"${FILESDIR}"/${PV}-gcc3-gentoo.patch \
 		"${FILESDIR}"/${PV}-freealut.patch \
 		"${FILESDIR}"/${PV}-configure.patch
-	if use qt ; then
+	if use qt3 ; then
 		epatch "${FILESDIR}/${PV}-qt3.patch"
 	fi
 	append-flags -DPKGDATADIR="'\"${GAMES_DATADIR}/${PN}\"'"
@@ -63,7 +63,7 @@ src_compile() {
 	use vorbis \
 		&& export ENABLE_VORBIS="yes" \
 		|| export ENABLE_VORBIS="no"
-	if use qt ; then
+	if use qt3 ; then
 		export ENABLE_SETUP="yes"
 		export QTDIR=/usr/qt/3
 	else
