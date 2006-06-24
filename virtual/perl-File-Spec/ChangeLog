@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-File-Spec
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Spec/ChangeLog,v 1.7 2006/04/24 15:57:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Spec/ChangeLog,v 1.8 2006/06/24 16:38:51 mcummings Exp $
+
+*perl-File-Spec-3.18 (24 Jun 2006)
+
+  24 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  +perl-File-Spec-3.18.ebuild:
+  File-Spec bump
 
   24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   perl-File-Spec-3.15.ebuild:
