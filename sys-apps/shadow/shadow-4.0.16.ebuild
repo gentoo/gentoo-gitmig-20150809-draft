@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.16.ebuild,v 1.4 2006/06/24 08:05:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.16.ebuild,v 1.5 2006/06/24 23:54:20 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic autotools pam
 
@@ -183,11 +183,11 @@ src_install() {
 		insinto /etc
 		insopts -m0644
 		newins etc/login.defs login.defs
-
-		# libshadow_getpass() is only used sometimes now which means
-		# GETPASS_ASTERISKS may not always be applicable
-		use skey || sed -i -e '/^GETPASS_ASTERISKS/s:^:#:' "${D}"/etc/login.defs
 	fi
+
+	# libshadow_getpass() is only used sometimes now which means
+	# GETPASS_ASTERISKS may not always be applicable
+	use skey || sed -i -e '/^GETPASS_ASTERISKS/s:^:#:' "${D}"/etc/login.defs
 
 	# Remove manpages that are handled by other packages
 	find "${D}"/usr/share/man \
