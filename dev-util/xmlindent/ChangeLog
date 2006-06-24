@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/xmlindent
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmlindent/ChangeLog,v 1.1 2005/12/28 13:35:30 slarti Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmlindent/ChangeLog,v 1.2 2006/06/24 14:55:15 ticho Exp $
+
+  24 Jun 2006; Andrej Kacian <ticho@gentoo.org> xmlindent-0.2.17.ebuild:
+  Added ~x86 keyword. Bug #137456, by Gilles Dartiguelongue <dartigug at
+  esiee.fr>.
 
   17 Dec 2005; Tom Martin <slarti@gentoo.org> ChangeLog:
   Initial import, thanks to Sascha Herrmann <starfox899@web.de> in bug #113535.
