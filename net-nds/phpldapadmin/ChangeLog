@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/phpldapadmin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.37 2006/05/21 19:56:39 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.38 2006/06/24 19:26:22 chtekk Exp $
+
+  24 Jun 2006; Luca Longinotti <chtekk@gentoo.org>
+  phpldapadmin-0.9.8.2.ebuild, phpldapadmin-0.9.8.3.ebuild,
+  phpldapadmin-1.0.1.ebuild:
+  Add some other PHP requirements to the checks.
 
   21 May 2006; Luca Longinotti <chtekk@gentoo.org>
   phpldapadmin-0.9.8.2.ebuild:
