@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.11 2006/04/02 20:11:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.12 2006/06/24 07:46:36 vapier Exp $
 
 ECVS_SERVER="cvs.winehq.org:/home/wine"
 ECVS_MODULE="wine"
@@ -23,14 +23,9 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	media-fonts/corefonts
 	ncurses? ( >=sys-libs/ncurses-5.2 )
 	jack? ( media-sound/jack-audio-connection-kit )
-	X? ( || ( ( x11-libs/libXrandr
-				x11-libs/libXi
-				x11-libs/libXmu
-				x11-libs/libXxf86dga
-				x11-libs/libXxf86vm
-			)
-			virtual/x11
-		)
+	X? ( || ( ( x11-libs/libXrandr x11-libs/libXi x11-libs/libXmu
+				x11-libs/libXxf86dga x11-libs/libXxf86vm x11-apps/xmessage )
+		virtual/x11 )
 	)
 	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
