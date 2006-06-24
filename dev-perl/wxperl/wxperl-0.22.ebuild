@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/wxperl/wxperl-0.22.ebuild,v 1.7 2006/02/13 14:26:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/wxperl/wxperl-0.22.ebuild,v 1.8 2006/06/24 15:35:51 mcummings Exp $
 
 inherit perl-module eutils wxwidgets
 
@@ -17,8 +17,7 @@ IUSE="unicode"
 
 DEPEND="x11-libs/wxGTK
 		>=dev-lang/perl-5.8.4
-		>=virtual/perl-File-Spec-0.82
-		!=perl-core/ExtUtils-MakeMaker-6.21"
+		>=virtual/perl-File-Spec-0.82"
 
 src_compile() {
 	WX_GTK_VER="2.6"

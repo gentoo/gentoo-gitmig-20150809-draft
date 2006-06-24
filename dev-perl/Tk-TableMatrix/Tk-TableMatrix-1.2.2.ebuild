@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/Tk-TableMatrix-1.2.2.ebuild,v 1.2 2006/06/12 16:54:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/Tk-TableMatrix-1.2.2.ebuild,v 1.3 2006/06/24 15:36:25 mcummings Exp $
 
 inherit versionator perl-module eutils
 
@@ -18,8 +18,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc sparc ~x86"
 IUSE=""
 
-DEPEND="dev-perl/perl-tk
-	!=perl-core/ExtUtils-MakeMaker-6.15"
+DEPEND="dev-perl/perl-tk"
 
 src_unpack() {
 	unpack ${A}

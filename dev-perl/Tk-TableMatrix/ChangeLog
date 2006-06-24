@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Tk-TableMatrix
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/ChangeLog,v 1.29 2006/06/12 16:54:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/ChangeLog,v 1.30 2006/06/24 15:36:25 mcummings Exp $
+
+  24 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Tk-TableMatrix-1.1.ebuild, Tk-TableMatrix-1.1-r1.ebuild,
+  Tk-TableMatrix-1.2.ebuild, Tk-TableMatrix-1.2.2.ebuild:
+  Removing perl-core/ExtUtils-MakeMaker
 
   12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   Tk-TableMatrix-1.2.2.ebuild:
