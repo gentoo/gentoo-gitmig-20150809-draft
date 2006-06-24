@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.294 2006/06/23 22:51:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.295 2006/06/24 23:38:21 vapier Exp $
 
 # Keep them sorted
 
@@ -344,7 +344,6 @@ xface - Adds xface support used to allow a small image of xface format to be inc
 xine - Add support for the XINE movie libraries
 xinerama - Add support for the xinerama X11 extension, which allows you to stretch your display across multiple monitors
 xml - Add support for XML files
-xml2 - Check/Support flag for XML library (version 2) (deprecated, use xml)
 xmlrpc - Support for xml-rpc library
 xmms - Check/Support for XMMS (X MultiMedia System) player
 xosd - Sends display using the X On Screen Display library
