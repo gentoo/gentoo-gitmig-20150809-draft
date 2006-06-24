@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r4.ebuild,v 1.14 2006/04/09 16:56:28 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.60-r4.ebuild,v 1.15 2006/06/24 02:02:21 cardoe Exp $
 
 inherit eutils mono python multilib debug qt3 autotools toolchain-funcs
 
@@ -11,14 +11,14 @@ SRC_URI="http://dbus.freedesktop.org/releases/${P}.tar.gz"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="doc gcj gtk mono python qt selinux X xml"
+IUSE="doc gcj gtk mono python qt3 selinux X xml"
 
 RDEPEND=">=dev-libs/glib-2.6
 	X? ( || ( ( x11-libs/libXt x11-libs/libX11 ) virtual/x11 ) )
 	gtk? ( >=x11-libs/gtk+-2.6 )
 	mono? ( >=dev-lang/mono-0.95 )
 	python? ( >=dev-lang/python-2.4 >=dev-python/pyrex-0.9.3-r2 )
-	qt? ( $(qt_min_version 3.3) )
+	qt3? ( $(qt_min_version 3.3) )
 	selinux? ( sys-libs/libselinux )
 	xml? ( >=dev-libs/libxml2-2.6.21 )
 	!xml? ( dev-libs/expat )"
@@ -73,7 +73,7 @@ src_compile() {
 	# Only enable mono-docs if both mono and doc is defined
 	use mono && myconf="${myconf} $(use_enable doc mono-docs)"
 
-	if use qt; then
+	if use qt3; then
 		myconf="${myconf} --enable-qt3=${QTDIR} QT_MOC=/usr/bin/moc QT3_MOC=${QTDIR}/bin/moc"
 	else
 		myconf="${myconf} --disable-qt --disable-qt3"
