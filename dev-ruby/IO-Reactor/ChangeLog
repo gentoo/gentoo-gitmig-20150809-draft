@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/IO-Reactor
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IO-Reactor/ChangeLog,v 1.1 2006/06/24 19:36:20 flameeyes Exp $
+
+*IO-Reactor-0.0.6 (24 Jun 2006)
+
+  24 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +IO-Reactor-0.0.6.ebuild:
+  Initial import, needed for Ruby-MemCache.
+
