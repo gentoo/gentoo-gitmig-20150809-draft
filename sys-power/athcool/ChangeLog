@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/athcool
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/athcool/ChangeLog,v 1.3 2005/06/27 13:19:22 lisa Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/athcool/ChangeLog,v 1.4 2006/06/24 05:29:04 vapier Exp $
+
+  24 Jun 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/athcool-0.3.11-build.patch, athcool-0.3.11.ebuild:
+  Fix cleanup ebuild #137576 by Tristan Heaven.
 
 *athcool-0.3.11 (27 Jun 2005)
 
