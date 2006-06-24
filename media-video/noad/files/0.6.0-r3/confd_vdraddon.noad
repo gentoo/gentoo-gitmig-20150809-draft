@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.6.0-r3/confd_vdraddon.noad,v 1.2 2006/06/24 08:58:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.6.0-r3/confd_vdraddon.noad,v 1.3 2006/06/24 14:45:00 zzam Exp $
 
 #########
 ##
@@ -8,7 +8,7 @@
 # 	available Parameter
 # 	no | yes
 #
-VDR_USE_NOAD="no"
+VDR_USE_NOAD="yes"
 
 ##	do online scan while recording
 #	you can choose between
