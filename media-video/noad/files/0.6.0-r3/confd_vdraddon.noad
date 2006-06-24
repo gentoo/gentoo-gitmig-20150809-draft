@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.6.0-r3/confd_vdraddon.noad,v 1.1 2006/06/19 08:55:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.6.0-r3/confd_vdraddon.noad,v 1.2 2006/06/24 08:58:53 zzam Exp $
 
 #########
 ##
@@ -10,9 +10,13 @@
 #
 VDR_USE_NOAD="no"
 
-##	do scan while recording
+##	do online scan while recording
+#	you can choose between
+#		no   - disable online scan
+#		live - scan only live recordings online (named @...)
+#		all  - scan all recordings with online mode
 #	available Parameter
-#	yes | no
+#	no | live | all
 #
 NOAD_ONLINE="no"
 

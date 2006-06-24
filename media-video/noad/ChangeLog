@@ -1,6 +1,14 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.6 2006/06/19 08:55:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.7 2006/06/24 08:58:53 zzam Exp $
+
+*noad-0.6.0-r4 (24 Jun 2006)
+
+  24 Jun 2006; Matthias Schwarzott <zzam@gentoo.org>
+  files/0.6.0-r3/confd_vdraddon.noad, files/0.6.0-r3/record-50-noad.sh,
+  -noad-0.6.0-r3.ebuild, +noad-0.6.0-r4.ebuild:
+  Give the user the choice for which recordings an online scan should be done.
+  See Bug #137778.
 
 *noad-0.6.0-r3 (19 Jun 2006)
 

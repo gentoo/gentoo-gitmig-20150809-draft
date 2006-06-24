@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.6.0-r3/record-50-noad.sh,v 1.1 2006/06/19 08:55:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.6.0-r3/record-50-noad.sh,v 1.2 2006/06/24 08:58:53 zzam Exp $
 #
 # Joerg Bornkessel <hd_brummy@gentoo.org>
 # Mathias Schwarzott <zzam@gentoo.org>
@@ -28,13 +28,20 @@ fi
 case "${VDR_RECORD_STATE}" in
 after)	: ;;
 
-before)	[[ "${NOAD_ONLINE}" == "yes" ]] || return ;;
+before)	[[ "${NOAD_ONLINE}" == "no" ]] && return ;;
 
 *)	return ;;
 esac
 
 if [[ ${ALLOW_ONLINE} == yes ]]; then
-	[[ "${NOAD_ONLINE}" == "yes" ]] && CMD="${CMD} --online"
+	case "${NOAD_ONLINE}" in
+		live|yes)
+			CMD="${CMD} --online=1"
+			;;
+		all)
+			CMD="${CMD} --online=2"
+			;;
+	esac
 fi
 
 if [[ ${NOAD_ONLY_SCAN_IF_NO_PTSMARKS} == yes ]]; then
