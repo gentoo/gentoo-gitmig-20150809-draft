@@ -1,21 +1,55 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ec3a6d25f785a15a0d6fa6576029666f point2play-2.0.3.ebuild 1216
-MD5 086d7322b591c18822e6a6ef25213c3b metadata.xml 465
-MD5 3760371f9abee746c28253e464dc209f point2play-2.0.1.ebuild 1008
-MD5 15d1bcecd833e6ed26649dd488d399c3 point2play-1.3.3.ebuild 1075
-MD5 f8aa617f1df1e2237b16567a74fa0b95 point2play-2.0.2.ebuild 1211
-MD5 e2dfbc306547fe5db7edf652eba69661 ChangeLog 3270
-MD5 3f9b82889b2f4bb9145ffbb4c6fbfb7f files/digest-point2play-2.0.1 72
+AUX 1.3.2-fix-sound-test.patch 1032 RMD160 74145900d670d16dce6087c87fbe552a19211f7f SHA1 8bad31d211573e98cdfa06c3bf9b222cdf9f8dc1 SHA256 dab60722dfd970fd899f50e1c674bd11b5f4c479df9ebcead0e6196d2e967ce0
 MD5 d7589e80ac0d830c971c8f43268eb558 files/1.3.2-fix-sound-test.patch 1032
-MD5 d6ed9fa9551938b1be6699024149744d files/digest-point2play-2.0.2 152
-MD5 9734745c645e3236c9af9d4e6dcd9efe files/digest-point2play-2.0.3 72
+RMD160 74145900d670d16dce6087c87fbe552a19211f7f files/1.3.2-fix-sound-test.patch 1032
+SHA256 dab60722dfd970fd899f50e1c674bd11b5f4c479df9ebcead0e6196d2e967ce0 files/1.3.2-fix-sound-test.patch 1032
+DIST point2play-small-1.3.3-1.tgz 824377
+DIST point2play-small-2.0.1.tgz 1270826
+DIST point2play-small-2.0.2.tgz 1273958
+DIST point2play-small-2.0.2_emerald.tgz 1278420
+DIST point2play-small-2.0.3.tgz 1293081
+EBUILD point2play-1.3.3.ebuild 1114 RMD160 abf685809c90010cb6cda64cb9fe1bcffc187d15 SHA1 29c2ca8bbb31314be5e21f226a6cd648bcf22a1b SHA256 5ed14645bf364d5c1f8115f2e4eb73449e5228709ad552ee70a8e6cb99c08197
+MD5 3570519dd2142cbf5103af9ad57ee18d point2play-1.3.3.ebuild 1114
+RMD160 abf685809c90010cb6cda64cb9fe1bcffc187d15 point2play-1.3.3.ebuild 1114
+SHA256 5ed14645bf364d5c1f8115f2e4eb73449e5228709ad552ee70a8e6cb99c08197 point2play-1.3.3.ebuild 1114
+EBUILD point2play-2.0.1.ebuild 1047 RMD160 772c33fdabb4d30eac05552daa2bd3cf26d97970 SHA1 848168a900d34cff416b6ce3be59052b56165926 SHA256 f48fcb8ad2a23653a18d976ec1710fc54cf275a605f550a0ed9d6a81f3c22065
+MD5 cf1092f2eb3927661d00a06b357463c8 point2play-2.0.1.ebuild 1047
+RMD160 772c33fdabb4d30eac05552daa2bd3cf26d97970 point2play-2.0.1.ebuild 1047
+SHA256 f48fcb8ad2a23653a18d976ec1710fc54cf275a605f550a0ed9d6a81f3c22065 point2play-2.0.1.ebuild 1047
+EBUILD point2play-2.0.2.ebuild 1250 RMD160 6daeaf9aa8629900359d0f0fb9ba9a8eb5a1a1bc SHA1 4e8104d31b4796a627630cb31bcaf5e35265bc32 SHA256 46b0716f8f192d53389b5edb140a6d2982c158456d349ae45885a1ab26044923
+MD5 693882844a6a7d08af95debcd49cad7f point2play-2.0.2.ebuild 1250
+RMD160 6daeaf9aa8629900359d0f0fb9ba9a8eb5a1a1bc point2play-2.0.2.ebuild 1250
+SHA256 46b0716f8f192d53389b5edb140a6d2982c158456d349ae45885a1ab26044923 point2play-2.0.2.ebuild 1250
+EBUILD point2play-2.0.3.ebuild 1280 RMD160 630ea613ddd87e29d8e1757dedd4b23a78f5fa64 SHA1 3549e49a61be062b18f50d926aa2fc4b13e0acc4 SHA256 72a1bc5697e9cd86bb5bf174515e5d49cd119e3a56bcdb77eeecf3152eada4c8
+MD5 842ff5f0441d190bb2fa125db28b2f54 point2play-2.0.3.ebuild 1280
+RMD160 630ea613ddd87e29d8e1757dedd4b23a78f5fa64 point2play-2.0.3.ebuild 1280
+SHA256 72a1bc5697e9cd86bb5bf174515e5d49cd119e3a56bcdb77eeecf3152eada4c8 point2play-2.0.3.ebuild 1280
+MISC ChangeLog 3270 RMD160 11e3563a0348a2772063f286ddeb8d08789ce9ca SHA1 ddd03706cf4e300fab58010c4bac8ea5c4ae13f6 SHA256 29a9d5e01e28919f15268406372bf1efc1bc2f0a4fde9ca6f9bca14b79f69f86
+MD5 e2dfbc306547fe5db7edf652eba69661 ChangeLog 3270
+RMD160 11e3563a0348a2772063f286ddeb8d08789ce9ca ChangeLog 3270
+SHA256 29a9d5e01e28919f15268406372bf1efc1bc2f0a4fde9ca6f9bca14b79f69f86 ChangeLog 3270
+MISC metadata.xml 465 RMD160 cb444341c79771aa1e3392c0b7d1ae187657e90c SHA1 4df273c65746a90080d8e6537692ce6f487b87b1 SHA256 84db2d6b7ca20cccb37fb73077bc813fcf977df15d238864d00af72c943d514b
+MD5 086d7322b591c18822e6a6ef25213c3b metadata.xml 465
+RMD160 cb444341c79771aa1e3392c0b7d1ae187657e90c metadata.xml 465
+SHA256 84db2d6b7ca20cccb37fb73077bc813fcf977df15d238864d00af72c943d514b metadata.xml 465
 MD5 f7671ce19e085f88c3681e920d9286cc files/digest-point2play-1.3.3 73
+RMD160 df031884399f02e632d6f299bf197b66995c7c10 files/digest-point2play-1.3.3 73
+SHA256 dd749124eb85c6efd10c20b100b217c39a780bd5ac4851a99d94dc7fb6ba2d7e files/digest-point2play-1.3.3 73
+MD5 3f9b82889b2f4bb9145ffbb4c6fbfb7f files/digest-point2play-2.0.1 72
+RMD160 d5bce4b2e70b61a49918a74e1ab4360b33f549d6 files/digest-point2play-2.0.1 72
+SHA256 858bc4f2635d3fd17d152eb9a93a29d9dde60d8d53af20cd9ad6b2e1bc1726a8 files/digest-point2play-2.0.1 72
+MD5 d6ed9fa9551938b1be6699024149744d files/digest-point2play-2.0.2 152
+RMD160 c6f9566c5c4bcd84e1a98255c5023ee120f11e3c files/digest-point2play-2.0.2 152
+SHA256 a9b35bb908a5d345edcaac35102b051ebddd612c968219352aeffbb6d0dc69f4 files/digest-point2play-2.0.2 152
+MD5 9734745c645e3236c9af9d4e6dcd9efe files/digest-point2play-2.0.3 72
+RMD160 eac21986d085d6a0f6711036690ab115b02cea64 files/digest-point2play-2.0.3 72
+SHA256 898836a03f07d21e6d2dfdbf064b8f3de9428b78cbc29c57a26598e5e5573ace files/digest-point2play-2.0.3 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFDL2hegIKl8Uu19MoRAs00AJwPNCeZMuV33VCveAELSkQyDuuOhACfZlCK
-83wUnj39Vc3guK8wMepEiWQ=
-=HMQ3
+iD8DBQFEnO1BamhnQswr0vIRAsllAKCrtRroyjIbYN0w/GREkp+mbhM8IgCfTtG5
+F6DUbEjydGqAnx5PAh6pJzU=
+=oh8D
 -----END PGP SIGNATURE-----
