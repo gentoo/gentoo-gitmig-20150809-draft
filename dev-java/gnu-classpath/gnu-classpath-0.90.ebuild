@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.90.ebuild,v 1.8 2006/06/24 20:48:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.90.ebuild,v 1.9 2006/06/24 20:49:51 betelgeuse Exp $
 
 inherit eutils
 
@@ -66,7 +66,7 @@ src_compile() {
 		$(use_enable xml xmlj) \
 		$(use_enable dssi ) \
 		--enable-jni \
-		--without-fasjar \
+		--without-fastjar \
 		--disable-dependency-tracking \
 		|| die "configure failed"
 # disabled for now... see above.
