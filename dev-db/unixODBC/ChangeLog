@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.54 2006/01/14 08:16:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.55 2006/06/24 15:08:38 cardoe Exp $
+
+  24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> unixODBC-2.2.2.ebuild,
+  unixODBC-2.2.6.ebuild, unixODBC-2.2.6-r1.ebuild, unixODBC-2.2.8.ebuild,
+  unixODBC-2.2.11.ebuild, unixODBC-2.2.11-r1.ebuild:
+  USE flag change qt->qt3/qt4 bug #137785
 
   14 Jan 2006; Mike Frysinger <vapier@gentoo.org>
   +files/unixODBC-2.2.11-flex.patch, unixODBC-2.2.11-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.2.ebuild,v 1.21 2005/07/07 04:31:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.2.ebuild,v 1.22 2006/06/24 15:08:38 cardoe Exp $
 
 inherit eutils
 
@@ -11,12 +11,12 @@ SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~hppa ~alpha amd64"
-IUSE="qt"
+IUSE="qt3"
 
 DEPEND="virtual/libc
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
-	qt? ( =x11-libs/qt-3* )"
+	qt3? ( =x11-libs/qt-3* )"
 
 src_unpack() {
 	unpack ${A}
@@ -30,7 +30,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	if use qt ; then
+	if use qt3 ; then
 		myconf="--enable-gui=yes"
 	else
 		myconf="--enable-gui=no"

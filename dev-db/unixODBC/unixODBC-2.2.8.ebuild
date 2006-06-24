@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.8.ebuild,v 1.21 2005/07/07 04:31:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.8.ebuild,v 1.22 2006/06/24 15:08:38 cardoe Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -11,17 +11,17 @@ SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ppc ~sparc mips ~alpha arm hppa ~amd64 s390 ppc64"
-IUSE="qt gnome"
+IUSE="qt3 gnome"
 
 DEPEND="virtual/libc
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
 	!mips? (
 		gnome? ( gnome-base/gnome-libs )
-		qt? ( =x11-libs/qt-3* )
+		qt3? ( =x11-libs/qt-3* )
 	)"
 
-# the configure.in patch is required for 'use qt'
+# the configure.in patch is required for 'use qt3'
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
@@ -36,7 +36,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	if use qt && ! use mips
+	if use qt3 && ! use mips
 	then
 		myconf="--enable-gui=yes --x-libraries=/usr/$(get_libdir) "
 	else

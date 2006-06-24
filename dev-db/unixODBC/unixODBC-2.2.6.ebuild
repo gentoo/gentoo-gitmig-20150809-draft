@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6.ebuild,v 1.18 2005/07/07 04:31:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6.ebuild,v 1.19 2006/06/24 15:08:38 cardoe Exp $
 
 DESCRIPTION="ODBC Interface for Linux"
 HOMEPAGE="http://www.unixodbc.org/"
@@ -9,18 +9,18 @@ SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc hppa alpha amd64 sparc ia64"
-IUSE="qt gnome"
+IUSE="qt3 gnome"
 
 DEPEND="virtual/libc
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
-	qt? ( =x11-libs/qt-3* )
+	qt3? ( =x11-libs/qt-3* )
 	gnome? ( gnome-base/gnome-libs )"
 
 src_compile() {
 	local myconf
 
-	if use qt
+	if use qt3
 	then
 		myconf="--enable-gui=yes --x-libraries=/usr/lib --x-includes=/usr/include/X11"
 	else
