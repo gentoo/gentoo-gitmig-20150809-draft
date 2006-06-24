@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.44.ebuild,v 1.1 2006/06/24 15:20:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.44.ebuild,v 1.2 2006/06/24 16:10:12 lu_zero Exp $
 
 inherit gnome2 eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="gnome mmx bonobo inkjar lcms boost doc plugin spell jabber"
+IUSE="gnome mmx bonobo inkjar lcms boost doc plugin spell"
 
 RDEPEND=">=x11-libs/gtk+-2.4.1
 	>=dev-libs/glib-2.6.5
@@ -20,7 +20,7 @@ RDEPEND=">=x11-libs/gtk+-2.4.1
 	>=x11-libs/pango-1.4.0
 	>=dev-libs/libxslt-1.0.15
 	dev-perl/XML-Parser
-	dev-perl/XML-XQL 
+	dev-perl/XML-XQL
 	dev-python/pyxml
 	virtual/xft
 	dev-libs/popt
@@ -39,8 +39,7 @@ RDEPEND=">=x11-libs/gtk+-2.4.1
 	          >=media-gfx/skencil-0.6.16
 		  media-libs/libwmf
 		  app-office/dia )
-	spell? ( app-text/gtkspell )
-	jabber? ( >=net-libs/loudmouth-1 )"
+	spell? ( app-text/gtkspell )"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
@@ -49,7 +48,7 @@ DEPEND="${RDEPEND}
 
 G2CONF="${G2CONF} --with-xft"
 G2CONF="${G2CONF} `use_with spell gtkspell`"
-G2CONF="${G2CONF} `use_with jabber inkboard`"
+#G2CONF="${G2CONF} `use_with jabber inkboard`"
 use mmx || G2CONF="${G2CONF} --disable-mmx"
 use inkjar || G2CONF="${G2CONF} --without-inkjar"
 use gnome && G2CONF="${G2CONF} --with-gnome-vfs"
