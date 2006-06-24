@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5537 2006/06/24 16:04:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5538 2006/06/24 16:32:04 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -48,10 +48,6 @@ dev-java/javatoolkit
 =media-sound/alsa-firmware-1.0.12_rc*
 =media-libs/alsa-lib-1.0.12_rc*
 =media-plugins/alsa-plugins-1.0.12_rc*
-
-# Doug Goldstein <cardoe@gentoo.org> (22 Jun 2006)
-# Testing version
-=media-tv/mythtv-0.19_p10281
 
 # Alec Warner <antarus@gentoo.org> (21 Jun 2006)
 # Masked for removal by treecleaners
