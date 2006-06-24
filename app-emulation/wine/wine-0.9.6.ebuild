@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.6.ebuild,v 1.10 2006/04/02 20:11:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.6.ebuild,v 1.11 2006/06/24 07:41:47 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -80,7 +80,6 @@ src_unpack() {
 	unpack wine-${PV}.tar.bz2
 	cd "${S}"
 
-	epatch "${FILESDIR}"/wine-0.9.6-force-ddraw-gamma.patch #119931
 	epatch "${FILESDIR}"/wine-20050524-alsa-headers.patch
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
 	epatch "${FILESDIR}"/wine-no-ssp.patch #66002
