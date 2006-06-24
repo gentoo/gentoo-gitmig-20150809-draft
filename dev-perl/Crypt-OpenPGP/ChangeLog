@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-OpenPGP
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/ChangeLog,v 1.10 2006/02/13 10:58:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/ChangeLog,v 1.11 2006/06/24 19:22:50 mcummings Exp $
+
+  24 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Crypt-OpenPGP-1.03.ebuild:
+  Disabled tests, keyworing amd64. Another case of older tests.
 
   13 Feb 2006; <mcumming@gentoo.org> Crypt-OpenPGP-1.03.ebuild:
   Virtual for perl-core dep

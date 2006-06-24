@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/Crypt-OpenPGP-1.03.ebuild,v 1.11 2006/02/13 10:58:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/Crypt-OpenPGP-1.03.ebuild,v 1.12 2006/06/24 19:22:50 mcummings Exp $
 
 inherit perl-module
 
@@ -11,10 +11,10 @@ SRC_URI="mirror://cpan/authors/id/B/BT/BTROTT/${P}.tar.gz"
 LICENSE="Artistic"
 #LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
-SRC_TEST="do"
+#SRC_TEST="do"
 
 # Core dependancies are:
 # >=Data-Buffer 0.04
