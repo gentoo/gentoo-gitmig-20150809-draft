@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/freebsd-baselayout-20060624.ebuild,v 1.2 2006/06/24 19:16:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/freebsd-baselayout-20060624.ebuild,v 1.3 2006/06/24 19:57:52 flameeyes Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools
 
@@ -548,7 +548,9 @@ pkg_postinst() {
 	if [[ ${CHOST} == ${CBUILD} && ${CHOST} == *-freebsd* ]]; then
 		pwd_mkdb -d "${ROOT}/etc" "${ROOT}/etc/master.passwd"
 		# This adds the .db to the -f file.
-		cap_mkdb -f "${ROOT}/etc/login.conf.db" "${ROOT}/etc/login.conf"
+		# Note: although it adds the .db as it should to the filename,
+		# it _still_ needs write access to /etc/login.conf.
+		cap_mkdb -f "${ROOT}/etc/login.conf" "${ROOT}/etc/login.conf"
 	fi
 
 	# Under what circumstances would mtab be a symlink?  It would be

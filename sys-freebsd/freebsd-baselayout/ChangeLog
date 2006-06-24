@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.13 2006/06/24 19:16:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.14 2006/06/24 19:57:52 flameeyes Exp $
+
+  24 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-baselayout-20060624.ebuild:
+  Nop, Javier was right, but it require write access to login.conf too.
 
   24 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-baselayout-20060624.ebuild:
