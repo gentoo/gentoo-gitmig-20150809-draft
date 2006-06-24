@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vconfig
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.18 2005/12/24 21:04:21 blubb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.19 2006/06/24 23:57:05 solar Exp $
+
+  24 Jun 2006; <solar@gentoo.org> vconfig-1.8.ebuild, vconfig-1.9.ebuild:
+  - keyword vconfig for alpha bug 137891
 
   24 Dec 2005; Simon Stelling <blubb@gentoo.org> vconfig-1.8.ebuild:
   stable on amd64
