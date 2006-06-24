@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.97 2006/06/14 00:31:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.98 2006/06/24 21:54:02 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -157,6 +157,13 @@ perl-module_src_install() {
 		perl ${S}/Build install
 	fi
 
+
+	einfo "Cleaning out stray man files"
+	for FILE in `find ${D} -type f -name "*.3pm*"`; do
+		rm -rf ${FILE}
+	done
+	find ${D}/usr/share/man -depth -type d 2>/dev/null | xargs -r rmdir 2>/dev/null
+	
 	fixlocalpod
 
 	for FILE in `find ${D} -type f |grep -v '.so'`; do
@@ -246,35 +253,19 @@ perlinfo() {
 
 fixlocalpod() {
 	perlinfo
-	dodir ${POD_DIR}
 
 	if [ -f ${D}${ARCH_LIB}/perllocal.pod ];
 	then
-		touch ${D}/${POD_DIR}/${P}.pod
-		sed -e "s:${D}::g" \
-			${D}${ARCH_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
-		touch ${D}/${POD_DIR}/${P}.pod.arch
-		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.arch
 		rm -f ${D}/${ARCH_LIB}/perllocal.pod
 	fi
 
 	if [ -f ${D}${SITE_LIB}/perllocal.pod ];
 	then
-		touch ${D}/${POD_DIR}/${P}.pod
-		sed -e "s:${D}::g" \
-			${D}${SITE_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
-		touch ${D}/${POD_DIR}/${P}.pod.site
-		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.site
 		rm -f ${D}/${SITE_LIB}/perllocal.pod
 	fi
 
 	if [ -f ${D}${VENDOR_LIB}/perllocal.pod ];
 	then
-		touch ${D}/${POD_DIR}/${P}.pod
-		sed -e "s:${D}::g" \
-			${D}${VENDOR_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
-		touch ${D}/${POD_DIR}/${P}.pod.vendor
-		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.vendor
 		rm -f ${D}/${VENDOR_LIB}/perllocal.pod
 	fi
 }
