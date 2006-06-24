@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta3.ebuild,v 1.9 2006/04/13 22:34:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta3.ebuild,v 1.10 2006/06/24 01:26:00 cardoe Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -12,9 +12,9 @@ SRC_URI="http://rt2x00.serialmonkey.com/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
 KEYWORDS="amd64 ppc x86"
-IUSE="qt"
+IUSE="qt3"
 DEPEND="net-wireless/wireless-tools
-	qt? ( =x11-libs/qt-3* )"
+	qt3? ( =x11-libs/qt-3* )"
 
 S=${WORKDIR}/${MY_P}
 MODULE_NAMES="rt2500(net:${S}/Module)"
@@ -39,7 +39,7 @@ src_compile() {
 	sed -i 's:MODULE_PARM(debug, "i"):module_param(debug, int, 0):'	Module/rtmp_main.c || die "module parameter sed failed"
 	sed -i 's:MODULE_PARM(ifname, "s"):module_param(ifname, charp, 0):'	Module/rtmp_main.c || die "module parameter sed failed"
 
-	if use qt; then
+	if use qt3; then
 		cd ${S}/Utilitys
 		${QTDIR}/bin/qmake -o Makefile raconfig2500.pro
 		emake || die "make Utilities failed"
@@ -51,7 +51,7 @@ src_compile() {
 src_install() {
 	linux-mod_src_install
 
-	if use qt; then
+	if use qt3; then
 		dobin ${S}/Utilitys/RaConfig2500
 		doicon Utilitys/ico/RaConfig2500.xpm
 		make_desktop_entry RaConfig2500 "RaLink RT2500 Config" RaConfig2500.xpm

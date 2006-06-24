@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2400/rt2400-1.2.2_beta3.ebuild,v 1.2 2005/08/20 13:55:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2400/rt2400-1.2.2_beta3.ebuild,v 1.3 2006/06/24 01:23:51 cardoe Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -12,9 +12,9 @@ SRC_URI="http://rt2x00.serialmonkey.com/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
 KEYWORDS="~x86"
-IUSE="qt"
+IUSE="qt3"
 DEPEND="net-wireless/wireless-tools
-	qt? ( =x11-libs/qt-3* )"
+	qt3? ( =x11-libs/qt-3* )"
 
 S=${WORKDIR}/${MY_P}
 MODULE_NAMES="rt2400(net:${S}/Module)"
@@ -33,7 +33,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	if use qt; then
+	if use qt3; then
 		cd ${S}/Utility
 		${QTDIR}/bin/qmake -o Makefile raconfig2400.pro
 		emake || die "make Utilities failed"
@@ -45,7 +45,7 @@ src_compile() {
 src_install() {
 	linux-mod_src_install
 
-	if use qt; then
+	if use qt3; then
 		dobin ${S}/Utility/RaConfig2400
 		doicon Utility/ico/raconfig.xpm
 		make_desktop_entry RaConfig2400 "RaLink RT2400 Config" raconfig.xpm
