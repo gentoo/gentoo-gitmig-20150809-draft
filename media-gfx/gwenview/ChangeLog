@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gwenview
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.39 2006/05/31 13:19:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.40 2006/06/24 20:47:26 flameeyes Exp $
+
+*gwenview-1.3.91 (24 Jun 2006)
+
+  24 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +gwenview-1.3.91.ebuild:
+  Version bump to latest development version.
 
   31 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   gwenview-1.3.1-r1.ebuild:
