@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.1.ebuild,v 1.5 2006/05/12 00:25:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.1.ebuild,v 1.6 2006/06/24 14:21:49 markusle Exp $
 
 inherit flag-o-matic eutils toolchain-funcs autotools
 
@@ -22,6 +22,10 @@ src_unpack() {
 	if [[ "${ARCH}" == "ppc-macos" ]];then
 		epatch "${FILESDIR}"/${PN}-ppc-macos.patch
 	fi
+
+	# fix info file
+	sed -e 's/Texinfo documentation system/Libraries/' \
+		-i doc/fftw3.info || die "failed to fix info file"
 
 	# fix altivec compilation problems (bug #129304)
 	epatch "${FILESDIR}"/${PN}-altivec-headers.patch
