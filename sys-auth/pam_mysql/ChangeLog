@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/pam_mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.7 2006/05/19 18:56:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.8 2006/06/24 13:47:06 vivo Exp $
+
+*pam_mysql-0.7_rc1-r1 (24 Jun 2006)
+
+  24 Jun 2006; Francesco Riosa <vivo@gentoo.org>
+  +pam_mysql-0.7_rc1-r1.ebuild:
+  Added "openssl" USE flag, add support for md5 and sha1 encryption.
+  Fix bug #137806, thanks to the reporter Carsten Tschense.
 
   19 May 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   pam_mysql-0.7_rc1.ebuild:
