@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.43 2006/06/12 00:01:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.44 2006/06/24 20:46:46 mcummings Exp $
+
+*DBD-Pg-1.49 (24 Jun 2006)
+
+  24 Jun 2006; Michael Cummings <mcummings@gentoo.org> +DBD-Pg-1.49.ebuild:
+  Version bump
 
   12 Jun 2006; Michael Cummings <mcummings@gentoo.org> DBD-Pg-1.48.ebuild:
   Marking stable sparc
