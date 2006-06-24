@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdbus/kdbus-0.8.6.ebuild,v 1.1 2006/06/24 17:33:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdbus/kdbus-0.8.6.ebuild,v 1.2 2006/06/24 17:38:52 betelgeuse Exp $
 
 inherit kde
 
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND=">=sys-apps/dbus-0.50"
+RDEPEND="${DEPEND}"
 
 need-kde 3.3
 
