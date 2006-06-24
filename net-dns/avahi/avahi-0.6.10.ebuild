@@ -1,6 +1,6 @@
 # Copyright 2000-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.10.ebuild,v 1.7 2006/06/10 13:31:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.10.ebuild,v 1.8 2006/06/24 00:14:45 cardoe Exp $
 
 inherit eutils qt3 mono python
 
@@ -11,7 +11,7 @@ SRC_URI="http://avahi.org/download/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ppc64 ~sh sparc x86"
-IUSE="bookmarks howl-compat mdnsresponder-compat gdbm dbus doc mono gtk python qt"
+IUSE="bookmarks howl-compat mdnsresponder-compat gdbm dbus doc mono gtk python qt3"
 
 # We have USE flags depending on each other, which leads to this logic. We
 # prefer an activated USE flag and override the dependent USE flags.
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/libdaemon-0.5
 	dev-libs/expat
 	>=dev-libs/glib-2
 	gdbm? ( sys-libs/gdbm )
-	qt? ( $(qt_min_version 3.3) )
+	qt3? ( $(qt_min_version 3.3) )
 	gtk? (
 		>=x11-libs/gtk+-2
 		>=gnome-base/libglade-2
@@ -122,7 +122,7 @@ src_compile() {
 		$(use_enable dbus) \
 		$(use_enable python) \
 		$(use_enable gtk) \
-		$(use_enable qt qt3) \
+		$(use_enable qt3) \
 		$(use_enable gdbm) \
 		${myconf} \
 		|| die "econf failed"
