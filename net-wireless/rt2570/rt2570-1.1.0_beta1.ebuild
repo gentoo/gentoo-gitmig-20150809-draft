@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/rt2570-1.1.0_beta1.ebuild,v 1.4 2006/04/08 10:40:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/rt2570-1.1.0_beta1.ebuild,v 1.5 2006/06/24 01:31:25 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -12,7 +12,7 @@ SRC_URI="http://rt2x00.serialmonkey.com/${MY_P}.tar.gz
 LICENSE="GPL-2"
 
 KEYWORDS="~x86"
-IUSE="qt"
+IUSE=""
 DEPEND="net-wireless/wireless-tools"
 
 S=${WORKDIR}/${MY_P}
