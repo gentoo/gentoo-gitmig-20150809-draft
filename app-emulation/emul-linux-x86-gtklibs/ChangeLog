@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.21 2006/04/05 15:53:08 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.22 2006/06/24 05:03:42 cardoe Exp $
+
+  24 Jun 2006; Doug Goldstein <cardoe@gentoo.org>
+  emul-linux-x86-gtklibs-2.8.8.ebuild:
+  USE flag change qt->qt3/qt4 bug #137785
 
   05 Apr 2006; Patrick McLean <chutzpah@gentoo.org>
   emul-linux-x86-gtklibs-2.8.8.ebuild:
