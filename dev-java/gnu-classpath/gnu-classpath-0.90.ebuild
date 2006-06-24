@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.90.ebuild,v 1.9 2006/06/24 20:49:51 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.90.ebuild,v 1.10 2006/06/24 20:57:16 betelgeuse Exp $
 
 inherit eutils
 
@@ -55,8 +55,10 @@ src_compile() {
 	# Another possibility would be ECJ (from Eclipse).
 	local compiler="--with-jikes"
 
-	# Disabling fastjar as some people have broken wrappers in /usr/bin
-	# Also lowers the combination of used tools to help debugging.
+	# Now this detects fastjar automatically and some people have broken
+	# wrappers in /usr/bin by eselect-compiler. Unfortunately 
+	# --without-fastjar does not seem to work.
+	# http://bugs.gentoo.org/show_bug.cgi?id=135688
 	econf ${compiler} \
 		$(use_enable alsa) \
 		$(use_enable cairo gtk-cairo) \
@@ -66,7 +68,6 @@ src_compile() {
 		$(use_enable xml xmlj) \
 		$(use_enable dssi ) \
 		--enable-jni \
-		--without-fastjar \
 		--disable-dependency-tracking \
 		|| die "configure failed"
 # disabled for now... see above.
