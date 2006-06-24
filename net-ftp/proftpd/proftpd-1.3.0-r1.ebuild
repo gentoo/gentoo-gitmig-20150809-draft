@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.0-r1.ebuild,v 1.1 2006/06/24 12:37:59 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.0-r1.ebuild,v 1.2 2006/06/24 13:41:04 humpback Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 IUSE="acl authfile clamav hardened ifsession ipv6 ldap mysql ncurses noauthunix opensslcrypt pam postgres
-	radius rewrite sendfile selinux shaper sitemisc softquota ssl tcpd vroot xinetd"
+	radius rewrite selinux shaper sitemisc softquota ssl tcpd vroot xinetd"
 
 SHAPER_VER="0.5.6"
 VROOT_VER="0.7.1"
@@ -142,7 +142,6 @@ src_compile() {
 		$(use_enable authfile auth-file) \
 		$(use_enable ncurses) \
 		$(use_enable ipv6) \
-		$(use_with sendfile) \
 		$(use_enable acl facl ) \
 		${myconf} || die "bad ./configure"
 
@@ -180,14 +179,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use sendfile; then
-		einfo
-		einfo 'Please note that ProFTPD now uses the sendfile() system calls when possible to'
-		einfo 'improve performance. The downside of this is that the scoreboard file cannot be'
-		einfo 'updated during a download, so tools like ftpwho and ftptop will not show the'
-		einfo 'transfer rates for them. Upload transfer rates will still be displayed.'
-	fi
-
 	einfo
 	einfo 'You can find the config files in /etc/proftpd'
 	einfo
