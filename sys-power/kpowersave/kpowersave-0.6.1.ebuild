@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/kpowersave-0.6.1.ebuild,v 1.1 2006/05/14 21:41:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/kpowersave-0.6.1.ebuild,v 1.2 2006/06/24 09:59:06 genstef Exp $
 
 inherit kde
 
@@ -18,10 +18,10 @@ RDEPEND=">=sys-apps/hal-0.5.4
 	kde-base/unsermake"
 
 pkg_setup() {
-	if ! built_with_use sys-apps/dbus qt; then
-		eerror "dbus is missing qt support. Please add"
-		eerror "'qt' to your USE flags, and re-emerge sys-apps/dbus."
-		die "dbus needs qt support"
+	if ! built_with_use sys-apps/dbus qt3; then
+		eerror "dbus is missing qt3 support. Please add"
+		eerror "'qt3' to your USE flags, and re-emerge sys-apps/dbus."
+		die "dbus needs qt3 support"
 	fi
 
 	set-kdedir
