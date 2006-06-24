@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.107 2006/06/23 15:28:34 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.108 2006/06/24 12:32:00 humpback Exp $
+
+  24 Jun 2006; Gustavo Felisberto <humpback@gentoo.org>;
+  proftpd-1.3.0.ebuild:
+  Updated to fix vroot and ifesession issues. Comments in bug 111668
 
 *proftpd-1.3.0 (23 Jun 2006)
 

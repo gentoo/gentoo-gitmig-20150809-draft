@@ -1,19 +1,23 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.0.ebuild,v 1.1 2006/06/23 15:28:34 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.0.ebuild,v 1.2 2006/06/24 12:32:00 humpback Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 IUSE="hardened ipv6 ldap mysql pam postgres shaper softquota ssl tcpd
-	selinux sendfile noauthunix authfile ncurses xinetd acl sitemisc rewrite clamav opensslcrypt ifsession radius vroot"
+	selinux sendfile noauthunix authfile ncurses xinetd acl sitemisc rewrite clamav opensslcrypt
+	  ifsession radius vroot"
 
 SHAPER_VER="0.5.6"
+VROOT_VER="0.7.1"
+
 S=${WORKDIR}/${P}
 
 DESCRIPTION="An advanced and very configurable FTP server"
 SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P}.tar.bz2
 		shaper? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-shaper-${SHAPER_VER}.tar.gz )
-		clamav? ( http://www.uglyboxindustries.com/mod_clamav.c http://www.uglyboxindustries.com/mod_clamav.html )"
+		clamav? ( http://www.uglyboxindustries.com/mod_clamav.c http://www.uglyboxindustries.com/mod_clamav.html )
+		vroot?	 ( http://www.castaglia.org/${PN}/modules/${PN}-mod-vroot-${VROOT_VER}.tar.gz )"
 HOMEPAGE="http://www.proftpd.org/
 		http://www.castaglia.org/proftpd/
 		http://www.uglyboxindustries.com/open-source.php"
@@ -45,11 +49,16 @@ src_unpack() {
 	epatch "${FILESDIR}"/mod_sql_mysql.diff
 	if use shaper; then
 		unpack ${PN}-mod-shaper-${SHAPER_VER}.tar.gz
-		mv mod_shaper/mod_shaper.c contrib/
+		cp mod_shaper/mod_shaper.c contrib/
 	fi
 	if use clamav; then
 		cp "${DISTDIR}"/mod_clamav.c contrib/
 		cp "${DISTDIR}"/mod_clamav.html doc/
+	fi
+	if use vroot; then
+		unpack ${PN}-mod-vroot-${VROOT_VER}.tar.gz
+		cp mod_vroot/mod_vroot.c contrib/
+		cp mod_vroot/mod_vroot.html doc/
 	fi
 }
 
@@ -65,22 +74,16 @@ src_compile() {
 	use sitemisc && modules="${modules}:mod_site_misc"
 	use rewrite && modules="${modules}:mod_rewrite"
 	use clamav && modules="${modules}:mod_clamav"
+	use radius && modules="${modules}:mod_radius"
+	use vroot && modules="${modules}:mod_vroot"
+	use ssl && modules="${modules}:mod_tls"
 
 	if use ldap; then
-		einfo ldap
 		modules="${modules}:mod_ldap"
 		append-ldflags "-lresolv"
 	fi
 
-	if use ssl; then
-		einfo ssl
-		# enable mod_tls
-		modules="${modules}:mod_tls"
-	fi
-
 	if use opensslcrypt; then
-		einfo OpenSSL crypt
-		# enable OpenSSL crypt
 		append-ldflags "-lcrypto"
 		myconf="${myconf} --with-includes=/usr/include/openssl"
 		CFLAGS="${CFLAGS} -DHAVE_OPENSSL"
@@ -115,20 +118,8 @@ src_compile() {
 		fi
 	fi
 
-	if use ifsession; then
-		einfo ifsession
-		modules="${modules}:mod_ifsession"
-	fi
-
-	if use radius; then
-		einfo radius
-		modules="${modules}:mod_radius"
-	fi
-
-	if use vroot; then
-		einfo radius
-		modules="${modules}:mod_vroot"
-	fi
+	#This should be the last module
+	use ifsession && modules="${modules}:mod_ifsession"
 
 	# bug #30359
 	use hardened && echo > lib/libcap/cap_sys.c

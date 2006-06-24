@@ -10,3 +10,6 @@ SHA256 83f220cba64455a2b1701b97ce9896f66a0020b179c50daf4860cdf362464ffe proftpd-
 MD5 a81c3ed2d45f7c938416a970fd559703 proftpd-mod-shaper-0.5.6.tar.gz 18099
 RMD160 3727e4407728727da4e6546e01b86c6b2cb68657 proftpd-mod-shaper-0.5.6.tar.gz 18099
 SHA256 b846b9f4d8601a7ce426afa049b26db4da4ee8226ff61af97b0ca86b2fb8c827 proftpd-mod-shaper-0.5.6.tar.gz 18099
+MD5 bafd6c9ecfdf352641465b866be12f27 proftpd-mod-vroot-0.7.1.tar.gz 5613
+RMD160 b9677793f7cf6075467d7f41e4b8a9dfef89a847 proftpd-mod-vroot-0.7.1.tar.gz 5613
+SHA256 30d58c326bb30c080048662db0c4ffaf28f478fce40452c0c3c217cb5d2124e1 proftpd-mod-vroot-0.7.1.tar.gz 5613
