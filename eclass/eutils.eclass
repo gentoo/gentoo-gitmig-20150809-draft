@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.241 2006/06/15 14:45:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.242 2006/06/24 04:36:33 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -1436,7 +1436,7 @@ _cdrom_locate_file_on_cd() {
 # The -u builds a list of po files found in all the
 #   directories and uses the union of the lists.
 strip-linguas() {
-	local ls newls
+	local ls newls nols
 	if [[ $1 == "-i" ]] || [[ $1 == "-u" ]] ; then
 		local op=$1; shift
 		ls=$(find "$1" -name '*.po' -exec basename {} .po \;); shift
@@ -1460,14 +1460,17 @@ strip-linguas() {
 		ls="$@"
 	fi
 
+	nols=""
 	newls=""
 	for f in ${LINGUAS} ; do
 		if hasq ${f} ${ls} ; then
 			newls="${newls} ${f}"
 		else
-			ewarn "Sorry, but ${PN} does not support the ${f} LINGUA"
+			nols="${nols} ${f}"
 		fi
 	done
+	[[ -n ${newls} ]] \
+		&& ewarn "Sorry, but ${PN} does not support the LINGUAs:" ${nols}
 	export LINGUAS=${newls:1}
 }
 
