@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvclock
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.16 2005/08/31 01:10:45 malverian Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.17 2006/06/24 01:35:13 cardoe Exp $
+
+  24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> nvclock-0.7-r1.ebuild,
+  nvclock-0.8b.ebuild:
+  USE flag qt->qt3/qt4 change bug #137785
 
   31 Aug 2005; <malverian@gentoo.org> nvclock-0.8b.ebuild:
   Explicitly disable qt support unless use flag is set

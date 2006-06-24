@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.8b.ebuild,v 1.2 2005/08/31 01:10:45 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.8b.ebuild,v 1.3 2006/06/24 01:35:13 cardoe Exp $
 
 inherit eutils
 
@@ -13,11 +13,11 @@ SRC_URI="http://www.linuxhardware.org/nvclock/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="gtk qt"
+IUSE="gtk qt3"
 
 RDEPEND="virtual/libc
 	gtk? ( =x11-libs/gtk+-2* )
-	qt? ( =x11-libs/qt-3* )"
+	qt3? ( =x11-libs/qt-3* )"
 DEPEND="${RDEPEND}
 	sys-devel/autoconf"
 
@@ -30,7 +30,7 @@ src_compile() {
 	local myconf
 
 	use gtk || myconf="${myconf} --disable-gtk"
-	use qt || myconf="${myconf} --disable-qt"
+	use qt3 || myconf="${myconf} --disable-qt"
 
 	./configure ${myconf} || die
 	make || die
