@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/plruby
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plruby/ChangeLog,v 1.4 2005/01/12 18:45:25 nakano Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plruby/ChangeLog,v 1.5 2006/06/24 07:11:40 superlag Exp $
+
+*plruby-0.4.7 (24 Jun 2006)
+
+  24 Jun 2006; Aaron Kulbe <superlag@gentoo.org> +plruby-0.4.7.ebuild:
+  Bumping to 0.4.7 wrt Bug #134678, adding ~amd64
 
 *plruby-0.4.3 (12 Jan 2005)
 
