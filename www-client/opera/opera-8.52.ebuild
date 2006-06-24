@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.52.ebuild,v 1.6 2006/04/11 14:28:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.52.ebuild,v 1.7 2006/06/24 01:56:10 cardoe Exp $
 
 inherit eutils
 
-IUSE="qt-static spell qt kde"
+IUSE="qt-static spell qt3 kde"
 
 OPERAVER="8.52-20060201"
 OPERAFTPDIR="852/final/en"
@@ -122,7 +122,7 @@ src_install() {
 		echo "Spell Check Engine=/opt/opera/lib/opera/${DIR}/spellcheck.so" >> ${D}/opt/opera/share/opera/ini/spellcheck.ini
 	fi
 
-	#if use qt || use kde; then
+	#if use qt3 || use kde; then
 	#	cd ${D}/opt/opera/bin
 	#	epatch ${FILESDIR}/opera-qt.2.patch
 	#fi
