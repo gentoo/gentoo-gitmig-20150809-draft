@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.19 2005/07/07 04:52:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.20 2006/06/24 00:29:47 cardoe Exp $
 
 inherit eutils kde-functions
 
@@ -11,7 +11,7 @@ SRC_URI="http://download.sourceforge.net/licq/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="x86 ppc sparc alpha ia64 ~amd64"
-IUSE="ssl socks5 qt kde ncurses"
+IUSE="ssl socks5 qt3 kde ncurses"
 
 # we can't have conditional dependencies so "use kde && inherit kde"
 # won't work -- messes up dep caching.
@@ -22,7 +22,7 @@ IUSE="ssl socks5 qt kde ncurses"
 RDEPEND="kde? ( >=kde-base/kdelibs-3.0 )"
 DEPEND="kde? ( >=kde-base/kdelibs-3.0 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	qt? ( =x11-libs/qt-3* )
+	qt3? ( =x11-libs/qt-3* )
 	ncurses? ( sys-libs/ncurses )"
 
 src_unpack() {
@@ -37,7 +37,7 @@ src_unpack() {
 			${T}/licq.conf.h > ${S}/src/licq.conf.h
 		eend $?
 	else
-		if ! use qt
+		if ! use qt3
 		then
 				ebegin "Setting console plugin as default..."
 				cp ${S}/src/licq.conf.h ${T}
@@ -62,7 +62,7 @@ src_compile() {
 	# Create the various plug-ins
 
 	# First, the Qt plug-in
-	if use qt
+	if use qt3
 	then
 		set-qtdir 3
 		set-kdedir 3
@@ -108,7 +108,7 @@ src_install() {
 	dodoc ChangeLog INSTALL README* doc/*
 
 	# Install the plug-ins
-	if use qt
+	if use qt3
 	then
 		cd ${S}/plugins/qt-gui
 		make DESTDIR=${D} install || die
