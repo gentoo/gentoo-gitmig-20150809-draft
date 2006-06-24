@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Crypt-CAST5_PP
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-CAST5_PP/ChangeLog,v 1.4 2006/03/30 22:24:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-CAST5_PP/ChangeLog,v 1.5 2006/06/24 18:01:37 mcummings Exp $
+
+  24 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Crypt-CAST5_PP-1.03.ebuild:
+  Keywording ~amd64. Tests are currently broken (upstream) due to changes in
+  crypt-cbc (which isn't even a dep)
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   Crypt-CAST5_PP-1.03.ebuild:
