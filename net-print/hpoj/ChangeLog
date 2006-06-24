@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hpoj
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.23 2006/01/28 13:54:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.24 2006/06/24 04:48:21 cardoe Exp $
+
+  24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> hpoj-0.91-r3.ebuild:
+  USE flag change qt->qt3/qt4 bug #137785
 
   28 Jan 2006; Simon Stelling <blubb@gentoo.org>
   +files/hpoj-0.91-kernel26.patch, -files/hpoj-0.91-kernel26.patch.bz2,

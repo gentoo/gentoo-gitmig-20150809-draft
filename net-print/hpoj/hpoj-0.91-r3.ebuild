@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.12 2006/01/28 13:54:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.13 2006/06/24 04:48:21 cardoe Exp $
 
 inherit eutils qt3
 
@@ -10,9 +10,9 @@ SRC_URI="mirror://sourceforge/hpoj/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc"
-IUSE="ssl scanner qt X snmp cups usb"
+IUSE="ssl scanner qt3 X snmp cups usb"
 
-DEPEND="qt?      ( $(qt_min_version 3.1) )
+DEPEND="qt3?      ( $(qt_min_version 3.1) )
 	ssl?     ( >=dev-libs/openssl-0.9.6h )
 	scanner? ( >=media-gfx/sane-backends-1.0.9 )
 	scanner? ( || ( X? ( >=media-gfx/xsane-0.89 ) >=media-gfx/sane-frontends-1.0.9 ) )
@@ -33,7 +33,7 @@ src_compile() {
 	|| myconf="${myconf} --without-cups"
 
 	# xojpanel
-	use qt \
+	use qt3 \
 	&& myconf="${myconf} --with-qt=/usr/qt/3" \
 	|| myconf="${myconf} --without-qt"
 
@@ -54,7 +54,7 @@ src_install() {
 	dohtml *html
 	cd ..
 	dodoc COPYING LICENSE LICENSE.OpenSSL README
-	use qt && dobin apps/xojpanel/xojpanel
+	use qt3 && dobin apps/xojpanel/xojpanel
 	dodir /usr/include
 	insinto /usr/include
 	doins include/hpojip.h include/ptal.h
