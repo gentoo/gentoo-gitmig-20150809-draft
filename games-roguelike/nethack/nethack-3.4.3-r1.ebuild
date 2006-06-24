@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.13 2006/05/22 20:59:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.14 2006/06/24 05:06:23 cardoe Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/nethack/${PN}-${MY_PV}-src.tgz"
 LICENSE="nethack"
 SLOT="0"
 KEYWORDS="amd64 ~hppa ppc ~ppc-macos sparc x86 ~x86-fbsd"
-IUSE="X qt gnome"
+IUSE="X qt3 gnome"
 
 RDEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r5
@@ -24,7 +24,7 @@ RDEPEND="virtual/libc
 				x11-libs/libXpm
 				x11-libs/libXt )
 			virtual/x11 ) )
-	qt? ( =x11-libs/qt-3* )
+	qt3? ( =x11-libs/qt-3* )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.4-r2 )"
 DEPEND="${RDEPEND}
 	X? (
@@ -68,7 +68,7 @@ src_unpack() {
 
 	if use X ; then
 		epatch "${FILESDIR}/${PV}-X-support.patch"
-		if use qt ; then
+		if use qt3 ; then
 			epatch "${FILESDIR}/${PV}-QT-support.patch"
 			use gnome && epatch "${FILESDIR}/${PV}-QT-GNOME-support.patch"
 		elif use gnome ; then
@@ -141,7 +141,7 @@ src_install() {
 
 	local windowtypes="tty"
 	use gnome && windowtypes="${windowtypes} gnome"
-	use qt && windowtypes="${windowtypes} qt"
+	use qt3 && windowtypes="${windowtypes} qt"
 	use X && windowtypes="${windowtypes} x11"
 	set -- ${windowtypes}
 	sed -i \
@@ -184,7 +184,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	if use qt && has_version '=x11-libs/qt-3.1*' ; then
+	if use qt3 && has_version '=x11-libs/qt-3.1*' ; then
 		ewarn "the qt frontend may be a little unstable with this version of qt"
 		ewarn "please see Bug 32629 for more information"
 	fi
