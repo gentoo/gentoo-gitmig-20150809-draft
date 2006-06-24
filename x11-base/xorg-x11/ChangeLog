@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.547 2006/06/22 16:23:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.548 2006/06/24 08:56:16 corsair Exp $
+
+  24 Jun 2006; Markus Rothe <corsair@gentoo.org> xorg-x11-6.8.2-r8.ebuild:
+  Stable on ppc64; bug #135974
 
   22 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   xorg-x11-6.8.2-r8.ebuild:
