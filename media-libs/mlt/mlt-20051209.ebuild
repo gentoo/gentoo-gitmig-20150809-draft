@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-20051209.ebuild,v 1.5 2006/05/31 13:37:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-20051209.ebuild,v 1.6 2006/06/24 23:47:14 flameeyes Exp $
 
 DESCRIPTION="MLT is an open source multimedia framework, designed and developed
 for television broadcasting"
@@ -10,11 +10,11 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="dv xml2 jack gtk sdl vorbis sox quicktime mmx"
+IUSE="dv xml jack gtk sdl vorbis sox quicktime mmx"
 
 DEPEND="media-video/ffmpeg
 		dv?		( >=media-libs/libdv-0.102 )
-		xml2?	( >=dev-libs/libxml2-2.5 )
+		xml?	( >=dev-libs/libxml2-2.5 )
 		vorbis?	( >=media-libs/libvorbis-1.0.1 )
 		sdl?	( >=media-libs/libsdl-1.2
 				  media-libs/sdl-image )
@@ -35,7 +35,7 @@ src_compile() {
 	fi
 	if ! use gtk ; 		then myconf="${myconf} --disable-gtk2"
 	fi
-	if ! use xml2 ; 	then myconf="${myconf} --disable-westley"
+	if ! use xml ;		then myconf="${myconf} --disable-westley"
 	fi
 	if ! use vorbis ; 	then myconf="${myconf} --disable-vorbis"
 	fi
