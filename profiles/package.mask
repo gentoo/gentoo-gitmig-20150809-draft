@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5536 2006/06/24 16:02:53 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5537 2006/06/24 16:04:31 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# Petteri Räty <betelgeuse@gentoo.org> (24 Jun 2006)
+# package.masked pending removal
+# http://bugs.gentoo.org/show_bug.cgi?id=75674
+net-wireless/gtkskan
+
 # Joshua Nichols<nichoj@gentoo.org> (24 Jun 2006)
 # Masked while updates to the Java system are being
 # moved from subversion into the tree.
@@ -29,7 +34,6 @@ dev-java/java-config-wrapper
 dev-java/javatoolkit
 >=dev-java/ant-core-1.6.5-r13
 >=dev-java/ant-tasks-1.6.5-r2
-
 
 # Diego Pettenò <flameeyes@gentoo.org> (23 Jun 2006)
 # 0.2 Beta version of Kerry
