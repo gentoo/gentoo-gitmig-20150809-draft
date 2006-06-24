@@ -1,0 +1,12 @@
+diff -Naurp Crypt-Rijndael-0.05.orig/rijndael.h Crypt-Rijndael-0.05/rijndael.h
+--- Crypt-Rijndael-0.05.orig/rijndael.h	2001-09-17 04:52:05.000000000 -0400
++++ Crypt-Rijndael-0.05/rijndael.h	2006-06-24 13:35:04.000000000 -0400
+@@ -27,7 +27,7 @@
+ 
+ #include <stdlib.h>
+ 
+-typedef unsigned long UINT32;
++typedef unsigned int UINT32;
+ typedef unsigned char UINT8;
+ 
+ /* Other block sizes and key lengths are possible, but in the context of

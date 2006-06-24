@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-Rijndael
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Rijndael/ChangeLog,v 1.6 2006/04/21 21:05:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Rijndael/ChangeLog,v 1.7 2006/06/24 17:37:55 mcummings Exp $
+
+  24 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  +files/crypt-rijndael-amd64.patch, Crypt-Rijndael-0.05.ebuild:
+  Keywording ~amd64, including patch derived from rt#9514
 
   21 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   Crypt-Rijndael-0.05.ebuild:
