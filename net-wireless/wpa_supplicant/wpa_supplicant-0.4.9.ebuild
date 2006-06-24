@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.9.ebuild,v 1.1 2006/05/27 20:01:35 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.9.ebuild,v 1.2 2006/06/24 16:10:09 brix Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,16 +14,25 @@ LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="gsm madwifi qt readline ssl"
+IUSE="gsm madwifi qt3 qt4 readline ssl"
 
 RDEPEND="gsm? ( sys-apps/pcsc-lite )
-		qt? ( || ( =x11-libs/qt-3* =x11-libs/qt-4* ) )
+		qt4? ( =x11-libs/qt-4* )
+		!qt4? ( qt3? ( =x11-libs/qt-3* ) )
 		readline? ( sys-libs/ncurses sys-libs/readline )
 		ssl? ( dev-libs/openssl )
 		kernel_linux? ( madwifi? ( || ( net-wireless/madwifi-ng net-wireless/madwifi-old ) ) )
 		!kernel_linux? ( net-libs/libpcap )"
 DEPEND="sys-apps/sed
 		${RDEPEND}"
+
+pkg_setup() {
+	if use qt3 && use qt4; then
+		einfo
+		einfo "You have USE=\"qt3 qt4\" selected, defaulting to USE=\"qt4\""
+		einfo
+	fi
+}
 
 src_unpack() {
 	local CONFIG=${S}/.config
@@ -106,15 +115,13 @@ src_unpack() {
 src_compile() {
 	emake || die "emake failed"
 
-	if use qt; then
-		if has_version '=x11-libs/qt-4*'; then
-			qmake -o "${S}"/wpa_gui-qt4/Makefile "${S}"/wpa_gui-qt4/wpa_gui.pro
-			cd "${S}"/wpa_gui-qt4
-			emake || die "emake wpa_gui-qt4 failed"
-		else
-			[[ -d ${QTDIR}/etc/settings ]] && addwrite ${QTDIR}/etc/settings
-			emake wpa_gui || die "emake wpa_gui failed"
-		fi
+	if use qt4; then
+		qmake -o "${S}"/wpa_gui-qt4/Makefile "${S}"/wpa_gui-qt4/wpa_gui.pro
+		cd "${S}"/wpa_gui-qt4
+		emake || die "emake wpa_gui-qt4 failed"
+	elif use qt3; then
+		[[ -d ${QTDIR}/etc/settings ]] && addwrite ${QTDIR}/etc/settings
+		emake wpa_gui || die "emake wpa_gui failed"
 	fi
 }
 
@@ -126,17 +133,15 @@ src_install() {
 	exeinto /etc/wpa_supplicant/
 	newexe ${FILESDIR}/${MY_P}-wpa_cli.sh wpa_cli.sh
 
-	# compatibility symlink for older baselayout
+	# compatibility symlink for =baselayout-1.11*
 	dosym /etc/wpa_supplicant/wpa_cli.sh /sbin/wpa_cli.action
 
-	if use qt; then
+	if use qt4; then
 		into /usr
-
-		if has_version '=x11-libs/qt-4*'; then
-			dobin wpa_gui-qt4/wpa_gui
-		else
-			dobin wpa_gui/wpa_gui
-		fi
+		dobin wpa_gui-qt4/wpa_gui
+	elif use qt3; then
+		into /usr
+		dobin wpa_gui/wpa_gui
 	fi
 
 	dodoc ChangeLog COPYING eap_testing.txt README todo.txt
