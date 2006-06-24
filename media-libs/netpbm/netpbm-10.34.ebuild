@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.34.ebuild,v 1.6 2006/06/24 18:09:25 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.34.ebuild,v 1.7 2006/06/24 23:37:00 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -13,11 +13,12 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ppc64 ~sh sparc x86 ~x86-fbsd"
-IUSE="svga jpeg tiff png zlib"
+IUSE="svga jpeg tiff png xml zlib"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	png? ( >=media-libs/libpng-1.2.1 )
+	xml? ( dev-libs/libxml2 )
 	zlib? ( sys-libs/zlib )
 	svga? ( media-libs/svgalib )
 	media-libs/jbigkit
@@ -50,6 +51,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/netpbm-10.31-build.patch
 	epatch "${FILESDIR}"/netpbm-10.33-memmem.patch
+	epatch "${FILESDIR}"/netpbm-10.34-xml2.patch #137871
 
 	rm -f configure
 	cp Makefile.config.in Makefile.config
@@ -75,6 +77,7 @@ src_unpack() {
 	PNGLIB = $(netpbm_config png)
 	ZLIB = $(netpbm_config zlib z)
 	LINUXSVGALIB = $(netpbm_config svga vga)
+	XML2_LIBS = $(netpbm_config xml xml2)
 
 	# Use system versions instead of bundled
 	JBIGLIB = -ljbig
