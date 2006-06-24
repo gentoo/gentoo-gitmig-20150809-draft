@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/inkscape
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.47 2005/12/25 16:12:14 vanquirius Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.48 2006/06/24 15:20:18 lu_zero Exp $
+
+*inkscape-0.44 (24 Jun 2006)
+
+  24 Jun 2006; Luca Barbato <lu_zero@gentoo.org> +inkscape-0.44.ebuild:
+  New version, ebuild provided by R Stephan <ralf@ark.in-berlin.de> on behalf
+  of upstream in bug #135030
 
   25 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> -inkscape-0.37.ebuild,
   -inkscape-0.38.ebuild, -inkscape-0.38.1.ebuild, -inkscape-0.39.ebuild,
