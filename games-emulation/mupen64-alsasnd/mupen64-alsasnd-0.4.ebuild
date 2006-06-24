@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/mupen64-alsasnd-0.4.ebuild,v 1.14 2006/04/14 04:06:37 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/mupen64-alsasnd-0.4.ebuild,v 1.15 2006/06/24 04:56:28 cardoe Exp $
 
 inherit eutils games
 
@@ -11,12 +11,12 @@ SRC_URI="mirror://gentoo/alsa-plugin-${PV}fix.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86"
-IUSE="gtk qt"
+IUSE="gtk qt3"
 
 DEPEND=">=media-libs/alsa-lib-0.9.0
 	|| (
 		gtk? ( =x11-libs/gtk+-2* )
-		qt? ( =x11-libs/qt-3* )
+		qt3? ( =x11-libs/qt-3* )
 		=x11-libs/gtk+-2*
 	)"
 
@@ -38,7 +38,7 @@ src_unpack() {
 
 src_compile() {
 	export GRAPHICAL_INTERFACE=gtk2
-	use qt && export GRAPHICAL_INTERFACE=qt3
+	use qt3 && export GRAPHICAL_INTERFACE=qt3
 	use gtk && export GRAPHICAL_INTERFACE=gtk2
 	emake || die "make failed"
 }
