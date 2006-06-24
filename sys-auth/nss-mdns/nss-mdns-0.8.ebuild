@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.8.ebuild,v 1.3 2006/06/22 05:07:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.8.ebuild,v 1.4 2006/06/24 03:20:03 compnerd Exp $
 
 inherit eutils
 
@@ -35,16 +35,17 @@ pkg_postinst() {
 	ewarn "You must modify your name service switch look up file to enable"
 	ewarn "multicast DNS lookups.  If you wish to resolve only IPv6 addresses"
 	ewarn "use mdns6.  For IPv4 addresses only, use mdns4.  To resolve both"
-	ewarn "use mdns2.  Keep in mind that mdns2 will be slower if there are no"
-	ewarn "IPv6 addresses on the network.  There are minimal (mdns?_minimal)"
-	ewarn "for slightly faster resolution which do not wait for timeouts."
+	ewarn "use mdns.  Keep in mind that mdns will be slower if there are no"
+	ewarn "IPv6 addresses published via mDNS on the network.  There are also"
+	ewarn "minimal (mdns?_minimal) libraries which only lookup .local hosts"
+	ewarn "and 169.254.x.x addresses."
 	ewarn
 	ewarn "Add the appropriate mdns into the hosts line in /etc/nsswitch.conf"
 	ewarn "An example line looks like:"
-	einfo "hosts:	files mdns4 dns"
+	einfo "hosts:	files mdns4_minimal [NOTFOUND=return] dns mdns4"
 	ewarn
-	ewarn "Add any domains other than those ending in .local to"
-	ewarn "/etc/mdns.allow"
+	ewarn "If you want to perform mDNS lookups for domains other than the ones"
+	ewarn "ending in .local, add them to /etc/mdns.allow"
 	ewarn
 	ebeep 5
 	epause 10
