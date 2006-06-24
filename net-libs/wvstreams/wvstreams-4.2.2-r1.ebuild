@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.2.2-r1.ebuild,v 1.1 2006/05/06 07:54:19 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.2.2-r1.ebuild,v 1.2 2006/06/24 00:49:20 cardoe Exp $
 
 inherit eutils fixheadtails
 
@@ -11,13 +11,13 @@ SRC_URI="http://open.nit.ca/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="gtk qt qdbm pam slp doc tcltk debug"
+IUSE="gtk qt3 qdbm pam slp doc tcltk debug"
 
 RDEPEND=">=sys-libs/db-3
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/openssl-0.9.7
 	>=dev-libs/xplc-0.3.13
-	qt? ( =x11-libs/qt-3* )
+	qt3? ( =x11-libs/qt-3* )
 	qdbm? ( dev-db/qdbm )
 	pam? ( >=sys-libs/pam-0.75 )
 	slp? ( >=net-libs/openslp-1.0.9a )
@@ -48,7 +48,7 @@ src_unpack() {
 		|| die "failed to set current xplc version"
 	rm -r "${S}/xplc"
 
-	use qt && epatch "${FILESDIR}/${P}-MOC-fix.patch"
+	use qt3 && epatch "${FILESDIR}/${P}-MOC-fix.patch"
 
 	ht_fix_file "${S}/configure.ac"
 }
@@ -60,7 +60,7 @@ src_compile() {
 	touch include/wvautoconf.h.in configure
 
 	local myconf
-	if use qt; then
+	if use qt3; then
 		myconf="--with-qt=/usr/qt/3/"
 		export MOC="/usr/qt/3/bin/moc"
 	else

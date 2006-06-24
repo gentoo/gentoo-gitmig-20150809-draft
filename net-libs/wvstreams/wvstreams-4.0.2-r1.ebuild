@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2-r1.ebuild,v 1.6 2005/11/11 23:08:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2-r1.ebuild,v 1.7 2006/06/24 00:49:20 cardoe Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.csclub.uwaterloo.ca/~ja2morri/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc sparc x86"
-IUSE="gtk qt vorbis speex fam qdbm pam slp doc fftw tcltk debug"
+IUSE="gtk qt3 vorbis speex fam qdbm pam slp doc fftw tcltk debug"
 
 RDEPEND="virtual/libc
 	>=sys-libs/db-3
@@ -19,7 +19,7 @@ RDEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.7
 	dev-libs/xplc
 	gtk? ( >=x11-libs/gtk+-2.2.0 )
-	qt? ( =x11-libs/qt-3* )
+	qt3? ( =x11-libs/qt-3* )
 	vorbis? ( >=media-libs/libvorbis-1.0 )
 	speex? ( media-libs/speex !=media-libs/speex-1.1.4 )
 	fam? ( virtual/fam )
@@ -52,14 +52,14 @@ src_unpack() {
 	sed -i -e "s:^xplc_version=.*:xplc_version='${XPLC_VER}':" "${S}/configure.ac" \
 		|| die "failed to set current xplc version"
 
-	useq qt && epatch ${FILESDIR}/${P}-MOC-fix.patch
+	useq qt3 && epatch ${FILESDIR}/${P}-MOC-fix.patch
 }
 
 src_compile() {
 	env WANT_AUTOCONF=2.59 autoconf || die "autoconf failed" #needed by xplc and tcl patch
 
 	local myconf
-	if useq qt; then
+	if useq qt3; then
 		myconf="--with-qt=/usr/qt/3/"
 		export MOC="/usr/qt/3/bin/moc"
 	else
