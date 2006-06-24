@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/perlmenu
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmenu/ChangeLog,v 1.1 2006/06/24 20:01:18 mcummings Exp $
+
+*perlmenu-4.0 (24 Jun 2006)
+
+  24 Jun 2006; Michael Cummings <mcummings@gentoo.org> +files/Makefile.PL,
+  +metadata.xml, +perlmenu-4.0.ebuild:
+  Bug 136223, perlmenu dep
+
