@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.3.ebuild,v 1.5 2005/01/01 17:35:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.3.ebuild,v 1.6 2006/06/24 05:09:12 cardoe Exp $
 DESCRIPTION="Libodbc++ is a c++ class library that provides a subset of the well-known JDBC 2.0(tm) and runs on top of ODBC."
 SRC_URI="mirror://sourceforge/libodbcxx/${P}.tar.gz"
 HOMEPAGE="http://libodbcxx.sourceforge.net/"
 LICENSE="LGPL-2.1"
 DEPEND="dev-db/unixODBC"
 KEYWORDS="~x86 ~ppc ~hppa ~alpha amd64"
-IUSE="qt"
+IUSE="qt3"
 SLOT=0
 
 src_compile() {
@@ -16,7 +16,7 @@ src_compile() {
 	commonconf="${commonconf} --enable-static --enable-shared"
 	# " --enable-threads"
 
-	if use qt; then
+	if use qt3; then
 		einfo "Cloning to build with qt"
 		einfo "ccache would really help you compiling this package..."
 		cp -ra ${S} ${S}_qt
@@ -29,7 +29,7 @@ src_compile() {
 	# using without-qt breaks the build
 	#--without-qt \
 
-	if use qt; then
+	if use qt3; then
 		cd ${S}_qt
 		econf \
 			${commonconf} \
@@ -43,7 +43,7 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install || die "make install failed"
 	dodoc AUTHORS BUGS ChangeLog COPYING INSTALL NEWS README THANKS TODO
-	if use qt; then
+	if use qt3; then
 		cd ${S}_qt
 		make DESTDIR=${D} install || die "make install failed"
 	fi

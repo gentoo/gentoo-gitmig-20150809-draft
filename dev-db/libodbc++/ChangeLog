@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/libodbc++
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.8 2006/04/14 00:07:27 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.9 2006/06/24 05:09:12 cardoe Exp $
+
+  24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> libodbc++-0.2.3.ebuild,
+  libodbc++-0.2.3-r1.ebuild:
+  USE flag change qt->qt3/qt4 bug #137785
 
   14 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/libodbc++-0.2.3-doxygen.patch, +files/libodbc++-0.2.3-gcc41.patch,
