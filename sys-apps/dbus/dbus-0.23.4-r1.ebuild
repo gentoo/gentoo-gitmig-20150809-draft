@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23.4-r1.ebuild,v 1.16 2006/04/09 16:56:28 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23.4-r1.ebuild,v 1.17 2006/06/24 15:04:23 cardoe Exp $
 
 # because of the experimental nature debug by default
 inherit debug eutils mono python multilib qt3
 
 # FIXME : fix docs
 #IUSE="X gtk qt python mono doc xml"
-IUSE="X gtk qt python mono xml"
+IUSE="X gtk qt3 python mono xml"
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to eachother"
 HOMEPAGE="http://dbus.freedesktop.org/"
@@ -29,7 +29,7 @@ RDEPEND=">=dev-libs/glib-2
 	gtk? ( >=x11-libs/gtk+-2 )
 	python? ( >=dev-lang/python-2.2
 		>=dev-python/pyrex-0.9 )
-	qt? ( $(qt_min_version 3.3) )
+	qt3? ( $(qt_min_version 3.3) )
 	!ppc64? (
 		mono? ( >=dev-lang/mono-0.95 )
 	)"
@@ -76,7 +76,7 @@ src_compile() {
 		myconf="--with-xml=expat";
 	fi
 
-	if use qt; then
+	if use qt3; then
 		myconf="${myconf} --enable-qt=${QTDIR} QT_MOC=${QTDIR}/bin/moc"
 	else
 		myconf="${myconf} --disable-qt"
@@ -86,7 +86,7 @@ src_compile() {
 		--localstatedir=/var \
 		`use_with X x` \
 		`use_enable gtk` \
-		`use_enable qt` \
+		`use_enable qt3 qt` \
 		`use_enable python` \
 		`use_enable mono` \
 		--enable-glib \

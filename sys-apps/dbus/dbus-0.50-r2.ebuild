@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.50-r2.ebuild,v 1.7 2006/04/09 16:56:28 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.50-r2.ebuild,v 1.8 2006/06/24 15:04:23 cardoe Exp $
 
 inherit eutils mono python multilib autotools debug qt3
 
-IUSE="X gtk qt python mono doc xml"
+IUSE="X gtk qt3 python mono doc xml"
 # gcj - this still doesnt work properly
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to eachother"
@@ -27,7 +27,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	gtk? ( >=x11-libs/gtk+-2.6 )
 	python? ( >=dev-lang/python-2.4
 		>=dev-python/pyrex-0.9.3-r2 )
-	qt? ( $(qt_min_version 3.3) )
+	qt3? ( $(qt_min_version 3.3) )
 	mono? ( >=dev-lang/mono-0.95 )"
 
 
@@ -73,7 +73,7 @@ src_compile() {
 	# Only enable mono-docs if both mono and doc is defined
 	use mono && myconf="${myconf} `use_enable doc mono-docs`"
 
-	if use qt; then
+	if use qt3; then
 		myconf="${myconf} --enable-qt=${QTDIR} QT_MOC=${QTDIR}/bin/moc"
 	else
 		myconf="${myconf} --disable-qt"

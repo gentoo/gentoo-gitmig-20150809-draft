@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.117 2006/06/24 02:02:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.118 2006/06/24 15:04:23 cardoe Exp $
+
+  24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> dbus-0.23.4-r1.ebuild,
+  dbus-0.50-r2.ebuild:
+  USE flag change qt->qt3/qt4 bug #137785
 
   23 Jun 2006; <dougg@gentoo.org> -dbus-0.50-r1.ebuild,
   -dbus-0.60-r3.ebuild, dbus-0.60-r4.ebuild, dbus-0.61-r1.ebuild:
