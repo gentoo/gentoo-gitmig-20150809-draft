@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.0.1.ebuild,v 1.2 2006/03/29 12:29:23 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.0.1.ebuild,v 1.3 2006/06/24 00:07:28 cardoe Exp $
 
 inherit eutils kde-functions flag-o-matic multilib elisp-common
 
@@ -14,7 +14,7 @@ SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="gtk qt immqt immqt-bc nls X m17n-lib canna emacs"
+IUSE="gtk qt3 immqt immqt-bc nls X m17n-lib canna emacs"
 
 RDEPEND="
 	X? ( || ( (
@@ -33,7 +33,7 @@ RDEPEND="
 	canna? ( app-i18n/canna )
 	immqt? ( $(qt_min_version 3.3.4) )
 	immqt-bc? ( $(qt_min_version 3.3.4) )
-	qt? ( $(qt_min_version 3.3.4) )
+	qt3? ( $(qt_min_version 3.3.4) )
 	emacs? ( virtual/emacs )
 	!<app-i18n/prime-0.9.4"
 
@@ -67,7 +67,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	use qt && set-qtdir 3
+	use qt3 && set-qtdir 3
 	if use immqt || use immqt-bc ; then
 		myconf="${myconf} --with-qt-immodule"
 		export CPPFLAGS="${CPPFLAGS} -DQT_THREAD_SUPPORT"
@@ -79,7 +79,7 @@ src_compile() {
 		$(use_with gtk gtk2)
 		$(use_with m17n-lib m17nlib)
 		$(use_with canna)
-		$(use_with qt)
+		$(use_with qt3 qt)
 		$(use_enable emacs)"
 
 	autoreconf

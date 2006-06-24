@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.4 2006/04/28 14:04:07 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.5 2006/06/24 00:09:11 cardoe Exp $
 
 inherit elisp-common flag-o-matic kde-functions multilib subversion
 
-IUSE="X canna dict eb emacs fep gtk immqt libedit m17n-lib nls qt"
+IUSE="X canna dict eb emacs fep gtk immqt libedit m17n-lib nls qt3"
 
 ESVN_REPO_URI="http://anonsvn.freedesktop.org/svn/uim/trunk"
 ESVN_BOOTSTRAP="./autogen.sh"
@@ -40,7 +40,7 @@ RDEPEND="!app-i18n/uim
 	gtk? ( >=x11-libs/gtk+-2 )
 	immqt? ( $(qt_min_version 3.3.4) )
 	libedit? ( dev-libs/libedit )
-	qt? ( $(qt_min_version 3.3.4) )
+	qt3? ( $(qt_min_version 3.3.4) )
 	m17n-lib? ( dev-libs/m17n-lib )"
 
 pkg_setup() {
@@ -60,7 +60,7 @@ pkg_setup() {
 
 src_compile() {
 
-	if use qt || use immqt; then
+	if use qt3 || use immqt; then
 		set-qtdir 3
 	fi
 
@@ -74,7 +74,7 @@ src_compile() {
 		`use_with eb` \
 		`use_with immqt qt-immodule` \
 		`use_with libedit "" /usr` \
-		`use_with qt` \
+		`use_with qt3 qt` \
 		`use_with gtk gtk2` \
 		`use_with m17n-lib m17nlib` \
 		|| die
