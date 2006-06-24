@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-Twofish
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Twofish/ChangeLog,v 1.3 2006/03/30 22:26:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Twofish/ChangeLog,v 1.4 2006/06/24 17:56:25 mcummings Exp $
+
+  24 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Crypt-Twofish-2.12.ebuild:
+  Keywording ~amd64
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Crypt-Twofish-2.12.ebuild:
   Mark 2.12 ~ia64
