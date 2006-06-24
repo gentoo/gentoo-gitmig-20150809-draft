@@ -1,27 +1,32 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.9.ebuild,v 1.5 2006/06/24 18:02:52 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-4_beta0.ebuild,v 1.1 2006/06/24 18:02:52 tercel Exp $
 
-inherit distutils
+inherit distutils versionator
+
+MY_P=$(replace_version_separator _ . ${P})
+
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="An easy to use Real-time 3D graphics library for Python."
-SRC_URI="http://www.vpython.org/download/${P}.tar.bz2"
+SRC_URI="http://www.vpython.org/download/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.vpython.org/"
 
 IUSE="doc examples numeric numarray"
 SLOT="0"
-KEYWORDS="~ia64 ~ppc x86"
+KEYWORDS="~x86"
 LICENSE="visual"
 
-DEPEND=">=dev-lang/python-2.3
-		virtual/opengl
-		=x11-libs/gtk+-1.2*
-		=x11-libs/gtkglarea-1.2*
-		dev-util/pkgconfig
+DEPEND=">=dev-lang/python-2.2
 		>=dev-libs/boost-1.31
+		virtual/opengl
+		=dev-cpp/gtkglextmm-1.2*
+		dev-cpp/libglademm
 		numeric? ( dev-python/numeric )
 		numarray? ( >=dev-python/numarray-1.0 )
 		!numeric? ( !numarray? ( dev-python/numeric ) )"
+
+RDEPEND=${DEPEND}
 
 src_compile() {
 	local myconf="--without-numarray --without-numeric"
@@ -49,6 +54,8 @@ src_compile() {
 	$(use_enable examples ) \
 	${myconf} \
 	|| die "configure failed"
+
+	sed -i s/boost_thread/boost_thread-mt/ src/Makefile
 
 	emake || die "emake failed"
 }
