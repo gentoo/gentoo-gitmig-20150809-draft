@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.16.ebuild,v 1.3 2006/06/10 16:54:22 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.16.ebuild,v 1.4 2006/06/24 08:05:59 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic autotools pam
 
@@ -83,7 +83,7 @@ src_compile() {
 src_install() {
 	local perms=4711
 	use nousuid && perms=711
-	make DESTDIR=${D} suiduperms=${perms} install || die "install problem"
+	make DESTDIR="${D}" suiduperms=${perms} install || die "install problem"
 	dosym useradd /usr/sbin/adduser
 
 	# Remove libshadow and libmisc; see bug 37725 and the following
@@ -97,26 +97,22 @@ src_install() {
 	# Using a securetty with devfs device names added
 	# (compat names kept for non-devfs compatibility)
 	insopts -m0600 ; doins "${FILESDIR}"/securetty
-	if ! use pam; then
+	if ! use pam ; then
 		insopts -m0600
 		doins etc/login.access etc/limits
 	else
 		newpamd "${FILESDIR}/login.pamd" login
-		use selinux || sed -i -e '/@selinux@/d' ${D}/etc/pam.d/login
-		use selinux && sed -i -e 's:@selinux@::g' ${D}/etc/pam.d/login
-
-		cp "${FILESDIR}/login.defs.4.0.16" "${T}/login.defs"
-
-		use skey && sed -i -e 's:^# GETPASS_ASTERISKS 0$:GETPASS_ASTERISKS 0:'
+		use selinux || sed -i -e '/@selinux@/d' "${D}"/etc/pam.d/login
+		use selinux && sed -i -e 's:@selinux@::g' "${D}"/etc/pam.d/login
 
 		insinto /etc
 		insopts -m0644
-		doins "${T}/login.defs"
+		newins "${FILESDIR}/login.defs" login.defs
 
 		# Also install another one that we can use to check if
 		# we need to update it if FORCE_LOGIN_DEFS = "yes"
 		[ "${FORCE_LOGIN_DEFS}" = "yes" ] \
-			&& newins "${T}/login.defs" login.defs.new
+			&& newins "${FILESDIR}/login.defs" login.defs.new
 	fi
 	# Output arch-specific cruft
 	case $(tc-arch) in
@@ -187,6 +183,10 @@ src_install() {
 		insinto /etc
 		insopts -m0644
 		newins etc/login.defs login.defs
+
+		# libshadow_getpass() is only used sometimes now which means
+		# GETPASS_ASTERISKS may not always be applicable
+		use skey || sed -i -e '/^GETPASS_ASTERISKS/s:^:#:' "${D}"/etc/login.defs
 	fi
 
 	# Remove manpages that are handled by other packages
