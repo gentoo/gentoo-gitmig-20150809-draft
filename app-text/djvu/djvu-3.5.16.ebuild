@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.16.ebuild,v 1.13 2006/06/08 12:43:33 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.16.ebuild,v 1.14 2006/06/24 05:27:42 cardoe Exp $
 
 inherit nsplugins flag-o-matic fdo-mime eutils multilib toolchain-funcs
 
@@ -13,11 +13,11 @@ SRC_URI="mirror://sourceforge/djvu/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ia64 ppc ppc64 sparc x86"
-IUSE="xml qt jpeg tiff debug threads nls nsplugin kde"
+IUSE="xml qt3 jpeg tiff debug threads nls nsplugin kde"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( media-libs/tiff )
-	qt? ( <x11-libs/qt-4 )"
+	qt3? ( <x11-libs/qt-4 )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -49,7 +49,7 @@ src_compile() {
 	fi
 
 	# When enabling qt it must be compiled with threads. See bug #89544.
-	if use qt ; then
+	if use qt3 ; then
 		QTCONF=" --with-qt --enable-threads "
 	elif use threads ; then
 		QTCONF=" --enable-threads "

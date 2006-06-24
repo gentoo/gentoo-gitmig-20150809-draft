@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.12.ebuild,v 1.10 2005/07/21 15:32:08 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.12.ebuild,v 1.11 2006/06/24 05:27:42 cardoe Exp $
 
 inherit nsplugins flag-o-matic
 
@@ -13,10 +13,10 @@ SRC_URI="mirror://sourceforge/djvu/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc ~amd64"
-IUSE="xml qt"
+IUSE="xml qt3"
 
 DEPEND=">=media-libs/jpeg-6b-r2
-	qt? ( <x11-libs/qt-4 )"
+	qt3? ( <x11-libs/qt-4 )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -28,7 +28,7 @@ src_compile() {
 	local myconf=""
 	use xml \
 		&& myconf="${myconf} --enable-xmltools"
-	use qt \
+	use qt3 \
 		|| myconf="${myconf} --without-qt"
 
 	econf ${myconf} || die
