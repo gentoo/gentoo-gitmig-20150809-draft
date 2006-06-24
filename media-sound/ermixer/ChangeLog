@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ermixer
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.22 2005/07/28 20:55:22 caleb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.23 2006/06/24 01:37:36 cardoe Exp $
+
+  24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> ermixer-0.8.ebuild:
+  USE flag qt->qt3/qt4 change bug #137785
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org> ermixer-0.8.ebuild:
   made qt dep qt3 explicit per bug #100235
