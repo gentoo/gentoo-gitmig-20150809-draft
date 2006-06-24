@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/yate/yate-0.8.7.ebuild,v 1.5 2005/07/28 21:00:05 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/yate/yate-0.8.7.ebuild,v 1.6 2006/06/24 01:04:51 cardoe Exp $
 
-IUSE="h323 postgres zaptel fax qt gtk gsm ortp"
+IUSE="h323 postgres zaptel fax qt3 gtk gsm ortp"
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND="media-sound/sox
 	       >=net-misc/zaptel-1.0.0 )
 	h323? ( >=net-libs/openh323-1.13.0 )
 	fax? ( media-libs/spandsp )
-	qt? ( =x11-libs/qt-3* )
+	qt3? ( =x11-libs/qt-3* )
 	gtk? ( <x11-libs/gtk+-2.0.0 )
 	gsm? ( media-sound/gsm )
 	ortp? ( net-libs/ortp )"
@@ -39,7 +39,7 @@ src_compile() {
 	econf \
 		$(use_with postgres libpq /usr) \
 		$(use_with fax spandsp /usr) \
-		$(use_with qt libqt "${QTDIR}") \
+		$(use_with qt3 libqt "${QTDIR}") \
 		$(use_with gtk libgtk) \
 		$(use_with h323 openh323 /usr) \
 		$(use_with h323 pwlib /usr) \
