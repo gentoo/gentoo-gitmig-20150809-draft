@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/ez-ipupdate
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.17 2006/04/27 21:42:28 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.18 2006/06/24 11:41:10 sbriesen Exp $
+
+*ez-ipupdate-3.0.11_beta8-r4 (24 Jun 2006)
+
+  24 Jun 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/ez-ipupdate-3.0.11_beta8-3322.diff,
+  +ez-ipupdate-3.0.11_beta8-r4.ebuild:
+  adding patch for www.3322.net, solving bug #69090.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-ez-ipupdate-3.0.11_beta8-r1,
