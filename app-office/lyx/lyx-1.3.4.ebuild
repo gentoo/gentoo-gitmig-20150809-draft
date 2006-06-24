@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.16 2006/04/05 07:32:03 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.17 2006/06/24 01:17:29 cardoe Exp $
 
 inherit kde-functions eutils libtool
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
-IUSE="nls cups qt debug gnome"
+IUSE="nls cups qt3 debug gnome"
 
 # these dependencies need looking at.
 # does lyx only need qt to compile but not run ?
@@ -32,7 +32,7 @@ DEPEND="|| (
 	>=dev-lang/perl-5
 	nls? ( sys-devel/gettext )
 	app-text/aiksaurus
-	qt? ( =x11-libs/qt-3* ) !qt? ( =x11-libs/xforms-1* )"
+	qt3? ( =x11-libs/qt-3* ) !qt3? ( =x11-libs/xforms-1* )"
 
 RDEPEND="${DEPEND}
 	|| (
@@ -69,7 +69,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	if use qt ; then
+	if use qt3 ; then
 		set-qtdir 3
 		myconf="$myconf --with-frontend=qt --with-qt-dir=${QTDIR}"
 	else
@@ -125,10 +125,10 @@ pkg_postinst() {
 	einfo "2. unzip /usr/share/doc/${P}/preferences.gz into ~/.lyx/preferences"
 	einfo "or, read http://www.math.tau.ac.il/~dekelts/lyx/instructions2.html"
 	einfo "for instructions on using lyx's own preferences dialog to equal effect."
-	einfo "3. use lyx's qt interface (compile with USE=qt) for maximum effect."
+	einfo "3. use lyx's qt interface (compile with USE=qt3) for maximum effect."
 	einfo ""
 
-	if ! useq qt ; then
+	if ! useq qt3; then
 	draw_line
 	einfo ""
 	einfo "If you have a multi-head setup not using xinerama you can only use lyx"

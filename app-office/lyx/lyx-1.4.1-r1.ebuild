@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.1-r1.ebuild,v 1.5 2006/05/23 06:16:58 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.1-r1.ebuild,v 1.6 2006/06/24 01:17:29 cardoe Exp $
 
 inherit kde-functions fdo-mime eutils libtool flag-o-matic
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
-IUSE="cjk cups debug gtk nls qt gnome"
+IUSE="cjk cups debug gtk nls qt3 gnome"
 
 RDEPEND="|| (
 		virtual/x11
@@ -57,8 +57,8 @@ DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58
 	cjk? ( =x11-libs/qt-3* )
 	!cjk? (
-		qt? ( =x11-libs/qt-3* )
-		!qt? ( =x11-libs/xforms-1* )
+		qt3? ( =x11-libs/qt-3* )
+		!qt3? ( =x11-libs/xforms-1* )
 	)
 	gtk? (
 		>=dev-cpp/gtkmm-2.4
@@ -86,7 +86,7 @@ src_compile() {
 	local myconf=""
 
 	# Choose qt over gtk, since gtk is not feature complete
-	if use qt || use cjk ; then
+	if use qt3 || use cjk ; then
 		set-qtdir 3
 		myconf="$myconf --with-frontend=qt --with-qt-dir=${QTDIR}"
 	elif use gtk ; then
@@ -167,10 +167,10 @@ pkg_postinst() {
 	einfo "2. unzip /usr/share/doc/${P}/preferences.gz into ~/.lyx/preferences"
 	einfo "or, read http://www.math.tau.ac.il/~dekelts/lyx/instructions2.html"
 	einfo "for instructions on using lyx's own preferences dialog to equal effect."
-	einfo "3. use lyx's qt interface (compile with USE=qt) for maximum effect."
+	einfo "3. use lyx's qt interface (compile with USE=qt3) for maximum effect."
 	einfo ""
 
-	if ! useq qt ; then
+	if ! useq qt3 ; then
 		einfo ""
 		einfo "If you have a multi-head setup not using xinerama you can only use lyx"
 		einfo "on the 2nd head if not using qt (maybe due to a xforms bug). See bug #40392."

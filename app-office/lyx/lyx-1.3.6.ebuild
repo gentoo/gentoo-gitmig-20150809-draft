@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.6.ebuild,v 1.3 2006/04/05 07:32:03 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.6.ebuild,v 1.4 2006/06/24 01:17:29 cardoe Exp $
 
 inherit kde-functions eutils libtool flag-o-matic
 
@@ -10,13 +10,13 @@ SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2
 	http://movementarian.org/latex-xft-fonts-0.1.tar.gz
 	http://www.math.tau.ac.il/~dekelts/lyx/files/hebrew.bind
 	http://www.math.tau.ac.il/~dekelts/lyx/files/preferences
-	cjk? ( qt? ( ftp://cellular.phys.pusan.ac.kr/CJK-LyX/qt/CJK-LyX-qt-${PV}-1.patch )
-		!qt? ( ftp://cellular.phys.pusan.ac.kr/CJK-LyX/xforms/CJK-LyX-xforms-${PV}-1.patch ) )"
+	cjk? ( qt3? ( ftp://cellular.phys.pusan.ac.kr/CJK-LyX/qt/CJK-LyX-qt-${PV}-1.patch )
+		!qt3? ( ftp://cellular.phys.pusan.ac.kr/CJK-LyX/xforms/CJK-LyX-xforms-${PV}-1.patch ) )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="cjk cups debug nls qt"
+IUSE="cjk cups debug nls qt3"
 
 RDEPEND="|| ( (
 			x11-libs/libXi
@@ -51,8 +51,8 @@ DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
 	nls? ( sys-devel/gettext )
 	app-text/aiksaurus
-	qt? ( =x11-libs/qt-3* )
-	!qt? ( cjk? ( =x11-libs/xforms-1.0-r1 )
+	qt3? ( =x11-libs/qt-3* )
+	!qt3? ( cjk? ( =x11-libs/xforms-1.0-r1 )
 		!cjk? ( =x11-libs/xforms-1* ) )
 	>=sys-devel/autoconf-2.58"
 
@@ -62,17 +62,17 @@ src_unpack() {
 	unpack latex-xft-fonts-0.1.tar.gz
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
-	if use cjk && use qt ; then
+	if use cjk && use qt3 ; then
 		epatch ${DISTDIR}/CJK-LyX-qt-${PV}-1.patch
 	elif use cjk && built_with_use '=x11-libs/xforms-1.0-r1' cjk ; then
 		epatch ${DISTDIR}/CJK-LyX-xforms-${PV}-1.patch
 	elif use cjk ; then
 		eerror
-		eerror 'CJK-LyX requires qt USE flag enabled or x11-libs/xforms-1.0-r1'
+		eerror 'CJK-LyX requires qt3 USE flag enabled or x11-libs/xforms-1.0-r1'
 		eerror 'built with cjk USE flag. You should either'
-		eerror '1) USE="cjk qt" emerge lyx'
+		eerror '1) USE="cjk qt3" emerge lyx'
 		eerror 'or'
-		eerror '2) USE="cjk" emerge xforms-1.0-r1; USE="cjk -qt" emerge lyx'
+		eerror '2) USE="cjk" emerge xforms-1.0-r1; USE="cjk -qt3" emerge lyx'
 		eerror 'or'
 		eerror '3) USE="-cjk" emerge lyx (normal LyX will be built)'
 		eerror
@@ -83,7 +83,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	if use qt ; then
+	if use qt3 ; then
 		set-qtdir 3
 		myconf="$myconf --with-frontend=qt --with-qt-dir=${QTDIR}"
 	else
@@ -147,10 +147,10 @@ pkg_postinst() {
 	einfo "2. unzip /usr/share/doc/${P}/preferences.gz into ~/.lyx/preferences"
 	einfo "or, read http://www.math.tau.ac.il/~dekelts/lyx/instructions2.html"
 	einfo "for instructions on using lyx's own preferences dialog to equal effect."
-	einfo "3. use lyx's qt interface (compile with USE=qt) for maximum effect."
+	einfo "3. use lyx's qt interface (compile with USE=qt3) for maximum effect."
 	einfo ""
 
-	if ! useq qt ; then
+	if ! useq qt3 ; then
 	draw_line
 	einfo ""
 	einfo "If you have a multi-head setup not using xinerama you can only use lyx"
