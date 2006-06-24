@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-0.9.ebuild,v 1.2 2006/01/04 17:38:07 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-0.9.ebuild,v 1.3 2006/06/24 00:25:18 cardoe Exp $
 
 inherit eutils multilib
 
-IUSE="qt"
+IUSE="qt3"
 
 DESCRIPTION="DSSI Soft Synth Interface"
 HOMEPAGE="http://dssi.sourceforge.net/"
@@ -22,7 +22,7 @@ DEPEND=">=media-libs/alsa-lib-1.0
 	>=media-libs/libsamplerate-0.1.1-r1
 	sys-apps/sed
 	dev-util/pkgconfig
-	qt? ( >=x11-libs/qt-3 )"
+	qt3? ( >=x11-libs/qt-3 )"
 
 src_unpack() {
 	unpack ${A}
@@ -34,7 +34,7 @@ src_unpack() {
 
 src_compile() {
 	emake OPTFLAGS="${CFLAGS}" -C jack-dssi-host || die "emake failed"
-	if use qt; then
+	if use qt3; then
 		emake OPTFLAGS="${CFLAGS}" -C examples || die "emake faild"
 	fi
 }
@@ -44,7 +44,7 @@ src_install() {
 	insinto /usr/include; doins dssi/dssi.h
 	insinto /usr/$(get_libdir)/pkgconfig; doins dssi.pc
 
-	if use qt; then
+	if use qt3; then
 		emake -C examples \
 			PREFIX=${D}/usr \
 			LIBDIR=${D}/usr/$(get_libdir) \

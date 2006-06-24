@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-0.9.1.ebuild,v 1.7 2006/06/11 19:11:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-0.9.1.ebuild,v 1.8 2006/06/24 00:25:18 cardoe Exp $
 
 inherit multilib
 
-IUSE="qt"
+IUSE="qt3"
 
 DESCRIPTION="Plugin API for software instruments with user interfaces"
 HOMEPAGE="http://dssi.sourceforge.net/"
@@ -20,7 +20,7 @@ RDEPEND=">=media-libs/alsa-lib-1.0
 	>=media-libs/ladspa-sdk-1.12-r2
 	>=media-libs/libsndfile-1.0.11
 	>=media-libs/libsamplerate-0.1.1-r1
-	qt? ( >=x11-libs/qt-3 )"
+	qt3? ( >=x11-libs/qt-3 )"
 DEPEND="${RDEPEND}
 	sys-apps/sed
 	dev-util/pkgconfig"
@@ -32,7 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
-	use qt || QTDIR=/WONT_BE_FOUND
+	use qt3 || QTDIR=/WONT_BE_FOUND
 	econf || die "configure failed"
 	emake || die "emake failed"
 }
