@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-6.08-r1.ebuild,v 1.4 2005/07/25 17:41:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-6.08-r1.ebuild,v 1.5 2006/06/24 04:50:35 cardoe Exp $
 
 inherit eutils qt3
 
-IUSE="qt"
+IUSE="qt3"
 
 DESCRIPTION="Electric is a sophisticated electrical CAD system that can  handle many forms of circuit design"
 HOMEPAGE="http://www.gnu.org/software/electric/electric.html"
@@ -15,13 +15,13 @@ SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
 
 DEPEND="virtual/libc
-	!qt? ( virtual/motif )
-	qt? ( $(qt_min_version 3.1) )"
+	!qt3? ( virtual/motif )
+	qt3? ( $(qt_min_version 3.1) )"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
 	epatch ${FILESDIR}/${PV}-fix-sandbox-r1.patch
-	use qt && epatch ${FILESDIR}/${PV}-qt.patch
+	use qt3 && epatch ${FILESDIR}/${PV}-qt.patch
 }
 
 src_compile() {

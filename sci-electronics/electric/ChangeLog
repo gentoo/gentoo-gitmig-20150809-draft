@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/electric
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.8 2006/03/16 04:58:20 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.9 2006/06/24 04:50:35 cardoe Exp $
+
+  24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> electric-6.08-r1.ebuild,
+  electric-7.00.ebuild:
+  USE flag change qt->qt3/qt4 bug #137785
 
   16 Mar 2006; Markus Dittrich <markusle@gentoo.org>
   +files/electric-7.00-gcc4.1-gentoo.patch,
