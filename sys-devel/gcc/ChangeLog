@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.556 2006/06/22 05:42:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.557 2006/06/24 09:34:02 corsair Exp $
+
+  24 Jun 2006; Markus Rothe <corsair@gentoo.org> gcc-4.1.1.ebuild:
+  Added ~ppc64 to get more user response for bugs
 
   22 Jun 2006; Mike Frysinger <vapier@gentoo.org> gcc-4.1.1.ebuild:
   Fix uclibc support #134412.
