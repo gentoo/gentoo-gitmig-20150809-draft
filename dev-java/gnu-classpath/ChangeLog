@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.60 2006/06/23 17:25:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.61 2006/06/24 20:48:25 betelgeuse Exp $
+
+  24 Jun 2006; Petteri Räty <betelgeuse@gentoo.org>
+  gnu-classpath-0.90.ebuild:
+  Disabled fastjar for now to workaround things like bug #135688.
 
   23 Jun 2006; Simon Stelling <blubb@gentoo.org> gnu-classpath-0.90.ebuild:
   stable on amd64
