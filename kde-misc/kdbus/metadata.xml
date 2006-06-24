@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+
+<maintainer>
+	<email>betelgeuse@gentoo.org</email>
+	<name>Petteri Räty</name>
+	<description>Feel free to take this package if you want</description>
+</maintainer>
+
+<longdescription lang="en">
+kdbus is a D-BUS service browser for KDE. Like kdcop, but for D-BUS instead.
+</longdescription>
+</pkgmetadata>

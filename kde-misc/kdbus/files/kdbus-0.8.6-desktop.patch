@@ -1,0 +1,23 @@
+diff -Naur kdbus-0.8.6-orig/src/kdbus.desktop kdbus-0.8.6/src/kdbus.desktop
+--- kdbus-0.8.6-orig/src/kdbus.desktop	2006-02-22 22:32:56.000000000 +0000
++++ kdbus-0.8.6/src/kdbus.desktop	2006-02-22 22:41:20.000000000 +0000
+@@ -4,11 +4,13 @@
+ Exec=kdbus
+ Icon=kdbus
+ Type=Application
+-Comment=A D-BUS service browser
+-Comment[bg]=Браузър за услугата D-BUS
+-Comment[da]=En tjenestebrowser for D-BUS
+-Comment[es]=Un navegador del servicio D-BUS
+-Comment[pt]=Um navegador de serviços de D-BUS
+-Comment[sv]=En tjänstbläddrare för D-BUS
++GenericName=A D-BUS service browser
++GenericName[bg]=Браузър за услугата D-BUS
++GenericName[da]=En tjenestebrowser for D-BUS
++GenericName[es]=Un navegador del servicio D-BUS
++GenericName[pl]=Przeglądarka usług D-BUS
++GenericName[pt]=Um navegador de serviços de D-BUS
++GenericName[sv]=En tjänstbläddrare för D-BUS
++Terminal=false
+ Categories=Qt;KDE;System;
+ 
