@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.0.7.ebuild,v 1.1 2006/06/03 14:49:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.0.7.ebuild,v 1.2 2006/06/24 12:06:26 markusle Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -29,7 +29,7 @@ src_unpack() {
 
 src_compile() {
 	econf || die "failed to configure"
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
