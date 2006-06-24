@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.8-r2.ebuild,v 1.4 2006/06/04 13:56:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.8-r2.ebuild,v 1.5 2006/06/24 04:40:36 cardoe Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/hpinkjet/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="foomaticdb snmp X qt ppds scanner cups usb"
+IUSE="foomaticdb snmp X qt3 ppds scanner cups usb"
 
 DEPEND="dev-lang/python
 	snmp? ( >=net-analyzer/net-snmp-5.0.9 )
@@ -31,7 +31,7 @@ RDEPEND="virtual/ghostscript
 			>=media-gfx/sane-frontends-1.0.9
 		)
 	)
-	qt? ( >=dev-python/PyQt-3.11 =x11-libs/qt-3* )
+	qt3? ( >=dev-python/PyQt-3.11 =x11-libs/qt-3* )
 	usb? ( >=dev-libs/libusb-0.1.10a sys-apps/hotplug )
 	net-print/cups
 	foomaticdb? ( net-print/foomatic-db-engine )
@@ -84,7 +84,7 @@ src_install() {
 	fi
 
 	# bug 106035
-	if ! use qt ; then
+	if ! use qt3 ; then
 		rm -f "${D}"/usr/bin/hp-print
 		rm -f "${D}"/usr/bin/hp-toolbox
 		rm -f "${D}"/usr/share/hplip/print
@@ -114,7 +114,7 @@ src_install() {
 	fi
 
 	# desktop entry, bug 122758
-	if use qt; then
+	if use qt3; then
 		dodir /usr/share/applications
 		mv "${D}"/usr/share/hplip/data/hplip.desktop \
 		"${D}"/usr/share/applications

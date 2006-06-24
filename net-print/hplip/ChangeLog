@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.36 2006/06/17 00:15:05 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.37 2006/06/24 04:40:36 cardoe Exp $
+
+  24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> hplip-0.9.7-r3.ebuild,
+  hplip-0.9.8-r2.ebuild, hplip-0.9.11-r1.ebuild, hplip-1.6.6.ebuild:
+  USE flag change qt->qt3/qt4 bug #137785
 
   17 Jun 2006; Stefan Schweizer <genstef@gentoo.org> hplip-1.6.6.ebuild:
   cups-1.2 fixes and major ebuild cleanups
