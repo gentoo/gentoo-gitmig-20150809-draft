@@ -1,0 +1,41 @@
+let portage strip the binaries
+
+http://bugs.gentoo.org/137574
+
+--- ip/Makefile
++++ ip/Makefile
+@@ -16,7 +16,7 @@
+ rtmon: $(RTMONOBJ) $(LIBNETLINK)
+ 
+ install: all
+-	install -m 0755 -s $(TARGETS) $(DESTDIR)$(SBINDIR)
++	install -m 0755 $(TARGETS) $(DESTDIR)$(SBINDIR)
+ 	install -m 0755 $(SCRIPTS) $(DESTDIR)$(SBINDIR)
+ 
+ clean:
+
+--- misc/Makefile
++++ misc/Makefile
+@@ -27,7 +27,7 @@
+ lnstat: $(LNSTATOBJ)
+ 
+ install: all
+-	install -m 0755 -s $(TARGETS) $(DESTDIR)$(SBINDIR)
++	install -m 0755 $(TARGETS) $(DESTDIR)$(SBINDIR)
+ 	ln -sf lnstat $(DESTDIR)$(SBINDIR)/rtstat
+ 	ln -sf lnstat $(DESTDIR)$(SBINDIR)/ctstat
+ 
+--- tc/Makefile
++++ tc/Makefile
+@@ -70,9 +70,9 @@
+ 
+ install: all
+ 	mkdir -p $(DESTDIR)/usr/lib/tc
+-	install -m 0755 -s tc $(DESTDIR)$(SBINDIR)
++	install -m 0755 tc $(DESTDIR)$(SBINDIR)
+ 	for i in $(TCSO); \
+-	do install -m 755 -s $$i $(DESTDIR)/usr/lib/tc; \
++	do install -m 755 $$i $(DESTDIR)/usr/lib/tc; \
+ 	done
+ 
+ clean:
