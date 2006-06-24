@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/orsa-0.6.1.ebuild,v 1.7 2006/01/04 23:19:16 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/orsa-0.6.1.ebuild,v 1.8 2006/06/23 23:59:31 cardoe Exp $
 
 inherit base flag-o-matic qt3
 
@@ -11,13 +11,13 @@ SRC_URI="mirror://sourceforge/orsa/${P/_/-}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
-IUSE="opengl mpi fftw ginac cln gsl qt"
+IUSE="opengl mpi fftw ginac cln gsl qt3"
 
 S="${WORKDIR}/${P/_/-}"
 
 DEPEND="fftw? ( =sci-libs/fftw-2.1* )
 	>=sci-libs/gsl-1.3
-	qt? ( $(qt_min_version 3.3) )
+	qt3? ( $(qt_min_version 3.3) )
 	>=sys-libs/readline-4.2
 	mpi? ( sys-cluster/lam-mpi )
 	ginac? ( >=sci-mathematics/ginac-1.2.0 )
@@ -45,7 +45,7 @@ src_compile() {
 	if ! use fftw; then
 		sed -e 's/have_fftw=yes/have_fftw=no/' -i configure
 	fi
-	if ! use qt; then
+	if ! use qt3; then
 		myconf="${myconf} --with-qt-dir=/no/such/file"
 	else
 		addwrite "${QTDIR}/etc/settings"
