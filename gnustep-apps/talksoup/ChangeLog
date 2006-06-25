@@ -1,0 +1,8 @@
+# ChangeLog for gnustep-apps/talksoup
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/talksoup/ChangeLog,v 1.5 2006/06/25 14:16:27 grobian Exp $
+
+  25 Jun 2006; Fabian Groffen <grobian@gentoo.org> ChangeLog:
+  Added new talksoup ebuild, with thanks to <sourav at) sourav [dot. net> (bug
+  #135381)
+
