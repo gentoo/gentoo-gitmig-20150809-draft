@@ -1,0 +1,12 @@
+diff -ru java-config-wrapper-0.8-orig/src/shell/java-1.5-fixer java-config-wrapper-0.8/src/shell/java-1.5-fixer
+--- java-config-wrapper-0.8-orig/src/shell/java-1.5-fixer	2006-04-21 13:42:49.000000000 -0400
++++ java-config-wrapper-0.8/src/shell/java-1.5-fixer	2006-04-21 13:43:11.000000000 -0400
+@@ -105,7 +105,7 @@
+ 		if has_bad_bytecode ${jar}; then
+ 			debug_print "${jar} has bad bytecode!"
+ 			# determine what package it belongs to
+-			package="$(QFILE -C -q -v ${jar})"
++			package="$(${QFILE} -C -q -v ${jar})"
+ 			# add it to the list of packages, with an =,
+ 			# so we can emerge it
+ 			broken_packages="${broken_packages} =${package}"
