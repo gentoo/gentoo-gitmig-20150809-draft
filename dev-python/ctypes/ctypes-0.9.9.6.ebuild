@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ctypes-0.9.9.3.ebuild,v 1.5 2006/06/25 13:10:48 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ctypes-0.9.9.6.ebuild,v 1.1 2006/06/25 13:10:48 lucass Exp $
 
-inherit eutils distutils
+inherit distutils
 
 DESCRIPTION="Python module allowing to create and manipulate C data types."
 HOMEPAGE="http://starship.python.net/crew/theller/ctypes/"
@@ -13,7 +13,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 DEPEND=">=dev-lang/python-2.3.3"
 
-DOCS="README.txt NEWS.txt LICENSE.txt docs/*"
+DOCS="ACKS ANNOUNCE LICENSE.txt"
 
 src_test() {
 	mkdir "${T}/tests"
@@ -25,6 +25,7 @@ src_test() {
 
 src_install() {
 	distutils_src_install
-	insinto /usr/share/doc/${PF}
-	doins -r samples/*
+
+	insinto /usr/share/doc/${PF}/manual
+	doins -r docs/manual/*
 }
