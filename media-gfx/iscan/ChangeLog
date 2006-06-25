@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.8 2006/04/27 22:57:44 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.9 2006/06/25 12:36:00 sbriesen Exp $
+
+*iscan-2.1.0 (25 Jun 2006)
+
+  25 Jun 2006; Stefan Briesenick <sbriesen@gentoo.org> +iscan-2.1.0.ebuild:
+  version bump, some ebuild improvements regarding udev/hotplug.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
