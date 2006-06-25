@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/nevow
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.14 2006/04/10 11:21:50 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.15 2006/06/25 15:03:36 lordvan Exp $
+
+  25 Jun 2006; Thomas Raschbacher <lordvan@gentoo.org> nevow-0.8.0.ebuild:
+  fixed dep for nevow-0.8.0 as it requires twisted-2.4 (using
+  twisted.python.versions)
 
 *nevow-0.8.0 (10 Apr 2006)
 
