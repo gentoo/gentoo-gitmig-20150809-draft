@@ -1,6 +1,6 @@
 # ChangeLog for sci-geosciences/gmt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/ChangeLog,v 1.13 2006/04/10 00:28:49 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/ChangeLog,v 1.14 2006/06/25 19:24:42 cryos Exp $
 
 *gmt-4.1.1 (10 Apr 2006)
 
@@ -30,7 +30,7 @@
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
 
-  29 May 2005; Marcus D. Hanwell <marcus@gentoo.org> gmt-4.0.ebuild:
+  29 May 2005; Marcus D. Hanwell <cryos@gentoo.org> gmt-4.0.ebuild:
   Stable on amd64 and x86.
 
   23 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org> :
