@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.55 2006/05/14 08:29:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.56 2006/06/25 14:08:10 vivo Exp $
+
+*libwww-5.4.0-r6 (25 Jun 2006)
+
+  25 Jun 2006; Francesco Riosa <vivo@gentoo.org>
+  +files/libwww-5.4.0-mysql-4.0.patch, +libwww-5.4.0-r6.ebuild:
+  Updated patch to apply also in MySQL 4.0.27, thanks to Dan Christensen, for
+  reporting it, bug #56328
 
   14 May 2006; Fabian Groffen <grobian@gentoo.org> libwww-5.4.0-r5.ebuild:
   Removed ppc-macos, it doesn't eautoreconf (bug #117919)
