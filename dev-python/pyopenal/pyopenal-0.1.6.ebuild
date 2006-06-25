@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/pyopenal-0.1.6.ebuild,v 1.2 2006/06/13 21:18:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/pyopenal-0.1.6.ebuild,v 1.3 2006/06/25 13:13:54 dertobi123 Exp $
 
 inherit distutils eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.gna.org/pyopenal/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.2.2

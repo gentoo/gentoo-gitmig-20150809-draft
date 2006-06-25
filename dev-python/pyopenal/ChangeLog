@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyopenal
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/ChangeLog,v 1.15 2006/06/13 21:18:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/ChangeLog,v 1.16 2006/06/25 13:13:54 dertobi123 Exp $
+
+  25 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  pyopenal-0.1.6.ebuild:
+  ppc stable
 
   13 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> pyopenal-0.1.6.ebuild:
   Stable on x86 since this is the version that I tested with slune. Also, this
