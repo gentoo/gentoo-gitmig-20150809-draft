@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/paxctl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.15 2006/03/29 19:38:06 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.16 2006/06/25 15:22:24 solar Exp $
+
+*paxctl-0.4 (25 Jun 2006)
+
+  25 Jun 2006; <solar@gentoo.org> -paxctl-0.2.ebuild, +paxctl-0.4.ebuild:
+  - new version. This version obsoletes the need for chpax all together with the
+  introduction of the -C flag which can create a new PT_PAX_FLAGS phdr in ELF
+  32/64 bit files
 
   29 Mar 2006; Kevin F. Quinn <kevquinn@gentoo.org> paxctl-0.3-r1.ebuild:
   Set ${S} and contents to group & world readable - bug #127998
