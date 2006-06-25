@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.1 2006/06/24 18:36:59 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.2 2006/06/25 16:28:09 nichoj Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -77,7 +77,7 @@ set_java_env() {
 	local platform="$(get_system_arch)"
 	local env_file="${D}${JAVA_VM_CONFIG_DIR}/${VMHANDLE}"
 	local old_env_file="${D}/etc/env.d/java/20${P}"
-	local source_env_file="${FILESDIR}/${VMHANDLE}"
+	local source_env_file="${FILESDIR}/${VMHANDLE}.env"
 
 	if [[ ! -f ${source_env_file} ]]; then
 		die "Unable to find the env file: ${source_env_file}"
