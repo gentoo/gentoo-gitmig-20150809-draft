@@ -1,12 +1,20 @@
-DIST sylpheed-claws-extra-plugins-2.0.0.tar.bz2 2935762 RMD160 09ba59e1da4eacf0a50c2271cbadd0b44212285f SHA256 88b01ccdece05adf3b1046c3ddcbd20ca3455d20e97f59bf1ea8d3fcbe1baf29
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST sylpheed-claws-extra-plugins-2.0.0.tar.bz2 2935762 RMD160 09ba59e1da4eacf0a50c2271cbadd0b44212285f SHA1 68c96367942b0dab14a62e8fe3f0fdb2dc4cdd32 SHA256 88b01ccdece05adf3b1046c3ddcbd20ca3455d20e97f59bf1ea8d3fcbe1baf29
+DIST sylpheed-claws-extra-plugins-2.3.0.tar.bz2 3901667 RMD160 64f026271d993de2c5895c251abf18c529b0244d SHA1 3bcee7f99ad5addd2aeea2bac4e8d63e8eff136f SHA256 45e30623f3908577518a474a2f308453654d1f6422a2f15ff27ec4fb934aa438
 EBUILD sylpheed-claws-att-remover-0.4.ebuild 916 RMD160 ce8873dd7a00d3844b782530760bf3476a5c461d SHA1 121436a0bb14830817e99f183830c19ee0560146 SHA256 08e01a40560fef18c3d9f97d907de1c792693d2f2eebe355e49fa0a786877ca4
 MD5 083db8d4765f5754bc58aeceb8d1b1b4 sylpheed-claws-att-remover-0.4.ebuild 916
 RMD160 ce8873dd7a00d3844b782530760bf3476a5c461d sylpheed-claws-att-remover-0.4.ebuild 916
 SHA256 08e01a40560fef18c3d9f97d907de1c792693d2f2eebe355e49fa0a786877ca4 sylpheed-claws-att-remover-0.4.ebuild 916
-MISC ChangeLog 977 RMD160 c9099ff1e8442a722d1e61069de61d8d656bf512 SHA1 60d49340b8243a4da3a029f2fd2d2afdfa8fabbe SHA256 5f8a907d1b1087fc85884c773594dfa1b1c9038171b80ab8d7cbea6791cf3e8f
-MD5 74dc8b31c9614d411b6658bd36041b3c ChangeLog 977
-RMD160 c9099ff1e8442a722d1e61069de61d8d656bf512 ChangeLog 977
-SHA256 5f8a907d1b1087fc85884c773594dfa1b1c9038171b80ab8d7cbea6791cf3e8f ChangeLog 977
+EBUILD sylpheed-claws-att-remover-1.0.2.ebuild 917 RMD160 30daae312b6fafcadce5143edb8e4861679e977f SHA1 6ceef3397713bec44e0fd25c8bda858b57906f24 SHA256 bc77d8a928fee123951de46d15bee34f033f35a38fe339ab9c8af69c558ce589
+MD5 3b3c999b0da8cdf7b01a1bd465cf7f75 sylpheed-claws-att-remover-1.0.2.ebuild 917
+RMD160 30daae312b6fafcadce5143edb8e4861679e977f sylpheed-claws-att-remover-1.0.2.ebuild 917
+SHA256 bc77d8a928fee123951de46d15bee34f033f35a38fe339ab9c8af69c558ce589 sylpheed-claws-att-remover-1.0.2.ebuild 917
+MISC ChangeLog 1130 RMD160 3478b53249fd4e8dbfb75c038475395e1b5a05fa SHA1 5ed02b11bbff1d73f4f1db8613a06611fe82ad33 SHA256 823485ecb68dad58175a07664a9a38fd8433857c7eb8a83c634180b6bf52b325
+MD5 6520c46650d28f502cfbc66d002f969c ChangeLog 1130
+RMD160 3478b53249fd4e8dbfb75c038475395e1b5a05fa ChangeLog 1130
+SHA256 823485ecb68dad58175a07664a9a38fd8433857c7eb8a83c634180b6bf52b325 ChangeLog 1130
 MISC metadata.xml 392 RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 SHA1 8fb3309b9af5ec084343baccfcdb7a391785bcc3 SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
 RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
@@ -14,3 +22,13 @@ SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata
 MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-att-remover-0.4 310
 RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-att-remover-0.4 310
 SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-att-remover-0.4 310
+MD5 1501d40d43dfd903395e7b22ed0e67b2 files/digest-sylpheed-claws-att-remover-1.0.2 310
+RMD160 20b0fdb7e91f86506806175b41bc16e93f8757a1 files/digest-sylpheed-claws-att-remover-1.0.2 310
+SHA256 2affdaf11cde193787ad60825dadfdc3a54087bdd5f0b0c8ced4cd4510ff06fc files/digest-sylpheed-claws-att-remover-1.0.2 310
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEnfwF6J2i8a8J4okRAiLbAJ9Upwp5BFvxjvofae0aQ8iChZrQAQCgjdca
+o2YSUeGc+6DZShoARxbwMy8=
+=/cEM
+-----END PGP SIGNATURE-----

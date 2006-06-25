@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/sylpheed-claws-acpi-notifier
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-acpi-notifier/ChangeLog,v 1.2 2006/02/10 18:09:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-acpi-notifier/ChangeLog,v 1.3 2006/06/25 02:54:14 genone Exp $
+
+*sylpheed-claws-acpi-notifier-1.0.2 (25 Jun 2006)
+
+  25 Jun 2006; Marius Mauch <genone@gentoo.org>
+  +sylpheed-claws-acpi-notifier-1.0.2.ebuild:
+  Version bump, removing default postinst message as it's not really correct
+  anymore as the plugin now also supports userspace tools.
 
 *sylpheed-claws-acpi-notifier-0.8 (10 Feb 2006)
 

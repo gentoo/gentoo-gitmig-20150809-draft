@@ -1,22 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b0e3d65fdfdb8e500235f0145a0711e6 ChangeLog 769
-RMD160 760d32e8961af37187abd010f5bd84e0576ccda4 ChangeLog 769
-SHA256 3b984cf8e588de198a86eccf37ae08f0d9beaaf15c4230212eaa3846edb6a739 ChangeLog 769
-MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-acpi-notifier-0.8 310
-RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-acpi-notifier-0.8 310
-SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-acpi-notifier-0.8 310
-MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
-SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
+DIST sylpheed-claws-extra-plugins-2.0.0.tar.bz2 2935762 RMD160 09ba59e1da4eacf0a50c2271cbadd0b44212285f SHA1 68c96367942b0dab14a62e8fe3f0fdb2dc4cdd32 SHA256 88b01ccdece05adf3b1046c3ddcbd20ca3455d20e97f59bf1ea8d3fcbe1baf29
+DIST sylpheed-claws-extra-plugins-2.3.0.tar.bz2 3901667 RMD160 64f026271d993de2c5895c251abf18c529b0244d SHA1 3bcee7f99ad5addd2aeea2bac4e8d63e8eff136f SHA256 45e30623f3908577518a474a2f308453654d1f6422a2f15ff27ec4fb934aa438
+EBUILD sylpheed-claws-acpi-notifier-0.8.ebuild 1468 RMD160 37b622cf9dd131586e0517382d38ffc4c177bf63 SHA1 9e6974ee138748e40ee7106cae91ee876ad2e4b9 SHA256 7e0e79f10a3ccfde2ad5d94b3d15853172aab53303b74d1f4d2dfcee6182bbde
 MD5 ca9166aec1413f7d140e384c864c0589 sylpheed-claws-acpi-notifier-0.8.ebuild 1468
 RMD160 37b622cf9dd131586e0517382d38ffc4c177bf63 sylpheed-claws-acpi-notifier-0.8.ebuild 1468
 SHA256 7e0e79f10a3ccfde2ad5d94b3d15853172aab53303b74d1f4d2dfcee6182bbde sylpheed-claws-acpi-notifier-0.8.ebuild 1468
+EBUILD sylpheed-claws-acpi-notifier-1.0.2.ebuild 1243 RMD160 6459e53b89db9a71ae0a6d9928c80c3f6fa13809 SHA1 cc017c29c6e1c0f2f1cb2abf812d721178974db8 SHA256 3916467bda4cf5e0dc4897cd052f1868ab46c65caaac60c49e2428c2821a7149
+MD5 faa5766556044e04ddd9b1a0a255f0c3 sylpheed-claws-acpi-notifier-1.0.2.ebuild 1243
+RMD160 6459e53b89db9a71ae0a6d9928c80c3f6fa13809 sylpheed-claws-acpi-notifier-1.0.2.ebuild 1243
+SHA256 3916467bda4cf5e0dc4897cd052f1868ab46c65caaac60c49e2428c2821a7149 sylpheed-claws-acpi-notifier-1.0.2.ebuild 1243
+MISC ChangeLog 1051 RMD160 3119e56c66f936b8dd0d7dba2b3a221c37257d98 SHA1 2e6ca122718169321c58ae62acc21eb837acfa1f SHA256 a4db55a1982de8888b976abe907f27a8dba4eecbbf5d60ee6d1c733844282f69
+MD5 71a17665c65f81af445425a0e078e5b3 ChangeLog 1051
+RMD160 3119e56c66f936b8dd0d7dba2b3a221c37257d98 ChangeLog 1051
+SHA256 a4db55a1982de8888b976abe907f27a8dba4eecbbf5d60ee6d1c733844282f69 ChangeLog 1051
+MISC metadata.xml 392 RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 SHA1 8fb3309b9af5ec084343baccfcdb7a391785bcc3 SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3
+MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
+RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
+SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
+MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-acpi-notifier-0.8 310
+RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-acpi-notifier-0.8 310
+SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-acpi-notifier-0.8 310
+MD5 1501d40d43dfd903395e7b22ed0e67b2 files/digest-sylpheed-claws-acpi-notifier-1.0.2 310
+RMD160 20b0fdb7e91f86506806175b41bc16e93f8757a1 files/digest-sylpheed-claws-acpi-notifier-1.0.2 310
+SHA256 2affdaf11cde193787ad60825dadfdc3a54087bdd5f0b0c8ced4cd4510ff06fc files/digest-sylpheed-claws-acpi-notifier-1.0.2 310
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFD7Ndo6J2i8a8J4okRAuy1AJ0em9pbQmcSataMJ2il9a9qqmM6MQCg19YR
-iiK0KNel9R6O4px/EX4ym3w=
-=b7Jq
+iD8DBQFEnftX6J2i8a8J4okRAnvhAKDXEYNMuZwxA6vfMVgfrvivDFdUdwCeOX7/
+B/SJdb3jSqvCUARv5eg5mFs=
+=ktbZ
 -----END PGP SIGNATURE-----
