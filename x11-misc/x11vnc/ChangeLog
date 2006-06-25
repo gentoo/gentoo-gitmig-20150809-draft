@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.20 2006/06/18 20:10:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.21 2006/06/25 13:45:06 dertobi123 Exp $
+
+  25 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org> x11vnc-0.8.ebuild:
+  ppc stable
 
   18 Jun 2006; Andrej Kacian <ticho@gentoo.org> x11vnc-0.8.ebuild:
   Stable on x86. Bug #136375.
