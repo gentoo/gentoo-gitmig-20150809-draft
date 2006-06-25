@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/leo
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.6 2005/09/16 03:06:41 mr_bones_ Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.7 2006/06/25 21:46:40 lucass Exp $
+
+*leo-4.4.1_beta2 (25 Jun 2006)
+
+  25 Jun 2006; Lukasz Strzygowski <lucass@gentoo.org>
+  +files/leoGlobals-4.4.1_beta2.patch, +leo-4.4.1_beta2.ebuild:
+  Version bump: marked ~amd64, updated patch, ebuild cleanup, bug #137952.
 
   16 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> leo-4.2.ebuild:
   needs app-arch/unzip; tidy

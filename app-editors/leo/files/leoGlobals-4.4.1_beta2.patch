@@ -1,0 +1,26 @@
+--- src/leoGlobals.py.old	2006-06-25 22:50:52.000000000 +0200
++++ src/leoGlobals.py	2006-06-25 23:03:23.000000000 +0200
+@@ -118,20 +118,9 @@
+     
+     encoding = g.startupEncoding()
+ 
+-    try:
+-        theDir = sys.leo_config_directory
+-    except AttributeError:
+-        theDir = g.os_path_join(g.app.loadDir,"..","config")
+-        
+-    if theDir:
+-        theDir = g.os_path_abspath(theDir)
+-        
+-    if (
+-        not theDir or
+-        not g.os_path_exists(theDir,encoding) or
+-        not g.os_path_isdir(theDir,encoding)
+-    ):
+-        theDir = None
++    theDir = os.path.expanduser("~/.leo")
++    if not os.path.exists(theDir):
++        os.mkdir(theDir)
+     
+     return theDir
+ #@nonl
