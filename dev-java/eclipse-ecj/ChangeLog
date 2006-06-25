@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/eclipse-ecj
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.5 2006/03/10 19:48:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.6 2006/06/25 01:16:06 nichoj Exp $
+
+  25 Jun 2006; <nichoj@gentoo.org> +files/compiler-settings-3.1:
+  Revision bump to add support for new Java system.
 
   10 Mar 2006; Markus Rothe <corsair@gentoo.org> eclipse-ecj-3.1-r2.ebuild:
   Added ~ppc64; bug #125715
