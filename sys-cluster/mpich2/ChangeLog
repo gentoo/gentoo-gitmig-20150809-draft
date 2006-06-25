@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.5 2006/06/17 00:04:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.6 2006/06/25 11:48:19 corsair Exp $
+
+  25 Jun 2006; Markus Rothe <corsair@gentoo.org> mpich2-1.0.3.ebuild:
+  Stable on ppc64; bug #133999
 
   17 Jun 2006; Jason Wever <weeve@gentoo.org> mpich2-1.0.3.ebuild:
   Added ~sparc keyword wrt bug #133999.
