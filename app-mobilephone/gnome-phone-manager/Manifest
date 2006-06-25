@@ -1,18 +1,42 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b8143392007cf3f0509b19c887d9df1b ChangeLog 2028
-MD5 596786c32d3fc69b6689d77546e49a52 files/digest-gnome-phone-manager-0.6 76
-MD5 8b6f3ed78e9842269e0a21ccf72258d1 files/digest-gnome-phone-manager-0.7 76
+AUX gnome-phone-manager-0.7-as-needed.patch 2980 RMD160 46de39976432baf8bb5b99d655db0b4ee7adb70b SHA1 a0627b38d7ecaecc9c9a1719525a3539d38609f9 SHA256 3ae772c4923c568399f6be2d441a52c484f7150571166f23c81abb5de516f263
 MD5 f2cac74142fe9c7eb73da341fc7e9886 files/gnome-phone-manager-0.7-as-needed.patch 2980
+RMD160 46de39976432baf8bb5b99d655db0b4ee7adb70b files/gnome-phone-manager-0.7-as-needed.patch 2980
+SHA256 3ae772c4923c568399f6be2d441a52c484f7150571166f23c81abb5de516f263 files/gnome-phone-manager-0.7-as-needed.patch 2980
+AUX gnome-phone-manager-0.7-pixmaps.patch 264 RMD160 770c29462438a3cfa5c296a0500349a532952bf8 SHA1 330da8e091f52950116cf3513d4d8e970001327c SHA256 55ac397070dfffdb420f97d8b86baa3266e7ffdba5aa7f169fa267603279ab13
 MD5 8e5ac58c297ecfe0770df57de5cba23d files/gnome-phone-manager-0.7-pixmaps.patch 264
+RMD160 770c29462438a3cfa5c296a0500349a532952bf8 files/gnome-phone-manager-0.7-pixmaps.patch 264
+SHA256 55ac397070dfffdb420f97d8b86baa3266e7ffdba5aa7f169fa267603279ab13 files/gnome-phone-manager-0.7-pixmaps.patch 264
+DIST gnome-phone-manager-0.6.tar.bz2 650105 RMD160 340b114fd487b51700af6cb4d06c2e910b0176a9 SHA1 a4c17995e974c6caae5092089dcbaa752da829e2 SHA256 0d3c94114c05a14e440feac2edaf004035169912a0b5cd17230b1f096e7a6481
+DIST gnome-phone-manager-0.7.tar.bz2 672618 RMD160 dfcfd9e9b93efdc374c420430fd1c339d6c6ce51 SHA1 74f87d00be92739a3e0b1f7f83989c60bc8afb64 SHA256 e4ee0b10fc1894e39bac13b343b01ef0cb7d615698c768bfd0b5ef8e3fd0f92f
+EBUILD gnome-phone-manager-0.6.ebuild 1015 RMD160 dd6cb1a18b65932dba7e7defeba84ac1eac4bf7b SHA1 3699710107771f5934eac20437ca9ba2ecd65d57 SHA256 cf1afbed8edfdfe5d9593f5b317f7a0bb18c0513a01ebf6ed8e9f253f37662ee
 MD5 fdaf673a63683d861ecce4cd68546d6c gnome-phone-manager-0.6.ebuild 1015
+RMD160 dd6cb1a18b65932dba7e7defeba84ac1eac4bf7b gnome-phone-manager-0.6.ebuild 1015
+SHA256 cf1afbed8edfdfe5d9593f5b317f7a0bb18c0513a01ebf6ed8e9f253f37662ee gnome-phone-manager-0.6.ebuild 1015
+EBUILD gnome-phone-manager-0.7.ebuild 1125 RMD160 fb12c15de9f8ec3fc4b7e3e7a913bc4ca50c82a6 SHA1 ff5192387c57b94afc4deabddb0d292c9bf943c7 SHA256 f05cb48e6f90aa8c380dc588cf37cda963fb0ae23e62ac96923501013e463f7b
 MD5 1208f208545b2173bdf3bbee30930752 gnome-phone-manager-0.7.ebuild 1125
+RMD160 fb12c15de9f8ec3fc4b7e3e7a913bc4ca50c82a6 gnome-phone-manager-0.7.ebuild 1125
+SHA256 f05cb48e6f90aa8c380dc588cf37cda963fb0ae23e62ac96923501013e463f7b gnome-phone-manager-0.7.ebuild 1125
+MISC ChangeLog 2115 RMD160 f638438f795a4993a016ad54e3946552b66bfba5 SHA1 ca9f2563088e00c5085c5607c5445fa6cca4923a SHA256 3431f8f24c462ea28469d942bc46d8151a926ad9690c191e94ff1c5c81d9b999
+MD5 90b5b485ea55a53ae0ccaa4be8e4686c ChangeLog 2115
+RMD160 f638438f795a4993a016ad54e3946552b66bfba5 ChangeLog 2115
+SHA256 3431f8f24c462ea28469d942bc46d8151a926ad9690c191e94ff1c5c81d9b999 ChangeLog 2115
+MISC metadata.xml 735 RMD160 c4a26d0a861a02a327f9adf71e1df9b4d9aedc38 SHA1 0484199b0fb459388f1bd7531a70208a80c8c62e SHA256 6432a2d6b381e076ef9aa857b86ee4d4d76a72b81307e17267cc5c33cfb81583
 MD5 8e68d11b191a36c6430cb32308a182c4 metadata.xml 735
+RMD160 c4a26d0a861a02a327f9adf71e1df9b4d9aedc38 metadata.xml 735
+SHA256 6432a2d6b381e076ef9aa857b86ee4d4d76a72b81307e17267cc5c33cfb81583 metadata.xml 735
+MD5 ffd67df221fd848ef6ab5b7124af39e4 files/digest-gnome-phone-manager-0.6 274
+RMD160 8b1857e4e85e79b7033ccde8e0845e82de4a5513 files/digest-gnome-phone-manager-0.6 274
+SHA256 0a50a5ffb34da32ef6bd59be237d8c19c734b4ce0cd5160b801b9c43d226cc43 files/digest-gnome-phone-manager-0.6 274
+MD5 7d29539b936e10ca384c745b2d5b7956 files/digest-gnome-phone-manager-0.7 274
+RMD160 697c149ad78c66f4bb595fb450c291bf470842e7 files/digest-gnome-phone-manager-0.7 274
+SHA256 677e04c35b1606809aed6202884c67dc6d16edd458e5fa652ed58e8362400db2 files/digest-gnome-phone-manager-0.7 274
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEY4UzjG8pv1lIUX4RArCyAKC0/7ciWDxStDNDLkSUxk/Y/Tm0+ACgwI8L
-5RrCoas9an+4NaiuLZfnwgw=
-=3jdD
+iD8DBQFEnidojG8pv1lIUX4RAhD4AJ9+6GGrxgaxLcYYMiQGN0YWNxKJhwCZARsM
+FXhmL7iq0iXBye1GfZLOi6E=
+=9nq3
 -----END PGP SIGNATURE-----
