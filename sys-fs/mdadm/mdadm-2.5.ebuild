@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-2.5.ebuild,v 1.3 2006/06/18 20:19:23 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-2.5.ebuild,v 1.4 2006/06/25 00:21:12 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,11 +24,13 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.3.1-endian.patch #122269
 	epatch "${FILESDIR}"/${PN}-1.9.0-dont-make-man.patch
 	epatch "${FILESDIR}"/${PN}-2.4.1-syslog-updates.patch
+	epatch "${FILESDIR}"/${PN}-2.5-build.patch #137823
 	use static && append-ldflags -static
+	use ssl && export USE_SSL=1 || export USE_SSL=0
+	sed -i -e 1iUSE_SSL=${USE_SSL} Makefile
 }
 
 src_compile() {
-	use ssl && export USE_SSL=1 || export USE_SSL=0
 	emake \
 		CWFLAGS="-Wall" \
 		CXFLAGS="${CFLAGS}" \
@@ -36,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	exeinto /$(get_libdir)/rcscripts/addons
 	doexe "${FILESDIR}"/raid-{start,stop}.sh || die "addon failed"
 	dodoc INSTALL TODO "ANNOUNCE-${PV}"

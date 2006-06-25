@@ -1,0 +1,23 @@
+Remove bogus depend otherwise things get rebuilt way too often
+
+http://bugs.gentoo.org/137823
+
+--- Makefile
++++ Makefile
+@@ -91,14 +91,12 @@
+ everything: all mdadm.static mdadm.uclibc swap_super test_stripe  mdassemble mdassemble.uclibc mdassemble.static mdassemble.man
+ # mdadm.tcc doesn't work..
+ 
+-mdadm : rmconf $(OBJS)
++mdadm : $(OBJS)
+ 	$(CC) $(LDFLAGS) -o mdadm $(OBJS) $(LDLIBS)
+ 
+ mdadm.static : STATIC=-DSTATIC
+-mdadm.static : rmconf $(OBJS)
++mdadm.static : $(OBJS)
+ 	$(CC) $(LDFLAGS) -DSTATIC -static -o mdadm.static $(OBJS) SHA1.o sha1.o
+-rmconf:
+-	rm -f config.o
+ 
+ mdadm.tcc : $(SRCS) mdadm.h
+ 	$(TCC) -o mdadm.tcc $(SRCS)

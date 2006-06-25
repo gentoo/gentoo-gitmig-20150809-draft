@@ -14,15 +14,27 @@
  
  KLIBC=/home/src/klibc/klibc-0.77
  
-@@ -72,6 +76,11 @@
+@@ -72,6 +76,12 @@
  	Create.c Detail.c Examine.c Grow.c Monitor.c dlink.c Kill.c Query.c \
  	mdopen.c super0.c super1.c bitmap.c restripe.c sysfs.c
  
 +ifneq ($(USE_SSL),1)
 +OBJS += SHA1.o sha1.o
 +SRCS += SHA1.c sha1.c
++CPPFLAGS += -DNO_SSL
 +endif
 +
  ASSEMBLE_SRCS := mdassemble.c Assemble.c config.c dlink.c util.c super0.c super1.c
  ASSEMBLE_FLAGS:= -DMDASSEMBLE
  ifdef MDASSEMBLE_AUTO
+--- super0.c
++++ super0.c
+@@ -28,7 +28,7 @@
+  */
+ 
+ #include "mdadm.h"
+-#ifndef UCLIBC
++#ifndef NO_SSL
+ #include <openssl/sha.h> /* for SHA1 */
+ #else
+ extern unsigned char *SHA1(unsigned char *buf, int len, unsigned char *dest);
