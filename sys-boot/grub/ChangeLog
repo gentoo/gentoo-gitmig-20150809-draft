@@ -1,6 +1,6 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.63 2006/06/18 16:44:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.64 2006/06/25 01:22:57 vapier Exp $
 
 *grub-1.94 (18 Jun 2006)
 
@@ -8,7 +8,7 @@
   Version bump.
 
   13 May 2006; Mike Frysinger <vapier@gentoo.org> grub-0.97-r2.ebuild:
-  Add a pkg_config() foby Petteri Räty for users to configure other devices
+  Add a pkg_config() by Petteri Räty for users to configure other devices
   #133129.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-grub-0.92-r1,
