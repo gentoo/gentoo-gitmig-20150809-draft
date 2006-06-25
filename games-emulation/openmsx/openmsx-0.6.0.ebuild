@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.6.0.ebuild,v 1.1 2006/01/21 22:44:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.6.0.ebuild,v 1.2 2006/06/25 00:48:59 chainsaw Exp $
 
 inherit flag-o-matic eutils games
 
@@ -23,8 +23,9 @@ DEPEND="dev-lang/tcl
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${PV}-custom.mk.patch"
+	sed -i '/LINK_FLAGS+=/s/-s//' build/main.mk || die "sed failed"
 }
 
 src_compile() {
@@ -39,7 +40,7 @@ src_install() {
 	egamesinstall \
 		OPENMSX_INSTALL="${D}/usr/games/openmsx" || die
 
-	dogamesbin ${D}/usr/games/openmsx/bin/openmsx
+	dogamesbin "${D}"/usr/games/openmsx/bin/openmsx
 	dodoc README AUTHORS
 	dohtml -r doc/*
 
