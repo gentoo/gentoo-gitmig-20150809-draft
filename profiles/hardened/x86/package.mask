@@ -15,7 +15,7 @@ sys-cluster/gnbd-kernel
 sys-cluster/cman
 sys-cluster/fence
 sys-cluster/gfs-headers
-x11-misc/linuxwacom
+#x11-misc/linuxwacom
 sys-cluster/gulm
 sys-cluster/magma-plugins
 sys-cluster/rgmanager
