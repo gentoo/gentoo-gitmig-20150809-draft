@@ -13,12 +13,20 @@ AUX eselect-compiler-2.0.0_rc1-inherit.patch 645 RMD160 67805308fc7dacb16730873b
 MD5 41ae1c7a156d13710a458bd1a70078f3 files/eselect-compiler-2.0.0_rc1-inherit.patch 645
 RMD160 67805308fc7dacb16730873b2cc72f902b0ed61f files/eselect-compiler-2.0.0_rc1-inherit.patch 645
 SHA256 b22f15cf016ee3e4314a88c148c3b2fd02fc97128a94af5eab0fb015939a61fe files/eselect-compiler-2.0.0_rc1-inherit.patch 645
+AUX eselect-compiler-2.0.0_rc2-bug135688.patch 629 RMD160 be1fd106a4c0786164ad2c0b8419b75081750ced SHA1 60fa40a1877aed95135beab5f72214606790e591 SHA256 8b7d1da1523882cb89971a1148d712096ca40d3ed3402d6776372e4bc991d0b0
+MD5 5345327d24f6f34afc433ac7514f8ff7 files/eselect-compiler-2.0.0_rc2-bug135688.patch 629
+RMD160 be1fd106a4c0786164ad2c0b8419b75081750ced files/eselect-compiler-2.0.0_rc2-bug135688.patch 629
+SHA256 8b7d1da1523882cb89971a1148d712096ca40d3ed3402d6776372e4bc991d0b0 files/eselect-compiler-2.0.0_rc2-bug135688.patch 629
 DIST compiler-config-2.0.0_rc1.tar.gz 117180 RMD160 dbcd8120139c75f40ae2405746ab2a5f26e810b4 SHA1 3a1a1605dd0e8b59ba5d796c4583244f46f97a03 SHA256 a911a7b0a1184c576500df8530e77823f976dce387001c581ba89ac8edfe30c2
 DIST eselect-compiler-2.0.0_rc2.tar.gz 117489 RMD160 03e6a8aa2d04a2c0b931325213ce224e5dceb7fe SHA1 97084a5a00357247c6158c72047f7254a42501d6 SHA256 fbd953c79e7d74636d16b70324f4f6573a0993d257212f5f6c04fe866d458eb9
 EBUILD eselect-compiler-2.0.0_rc1-r6.ebuild 5066 RMD160 c5346c23d35bc3bde6a76537bd00c31f1d565c63 SHA1 75c7329de06e51d5e5f931201feed2922edecb59 SHA256 8890b2609456b997b4b9b75df3111e40279ff20a4f831a4fc5e6f7613205c36d
 MD5 bf165cf2ee7eaa1bd65691d8e5f3c22c eselect-compiler-2.0.0_rc1-r6.ebuild 5066
 RMD160 c5346c23d35bc3bde6a76537bd00c31f1d565c63 eselect-compiler-2.0.0_rc1-r6.ebuild 5066
 SHA256 8890b2609456b997b4b9b75df3111e40279ff20a4f831a4fc5e6f7613205c36d eselect-compiler-2.0.0_rc1-r6.ebuild 5066
+EBUILD eselect-compiler-2.0.0_rc2-r1.ebuild 4932 RMD160 a083cb40256fb2b6d18debe4b53e02dd95c40cfe SHA1 46c4f19d2cb5e4bcd819d5fde3dd2f2536f6ec40 SHA256 84c2de73fbea361707d4d2a5403d6a10085f7e37b87494858989698562b04177
+MD5 a58f51c357a8db3f00c01a80e63b6eb1 eselect-compiler-2.0.0_rc2-r1.ebuild 4932
+RMD160 a083cb40256fb2b6d18debe4b53e02dd95c40cfe eselect-compiler-2.0.0_rc2-r1.ebuild 4932
+SHA256 84c2de73fbea361707d4d2a5403d6a10085f7e37b87494858989698562b04177 eselect-compiler-2.0.0_rc2-r1.ebuild 4932
 EBUILD eselect-compiler-2.0.0_rc2.ebuild 4825 RMD160 9e792be05eb294c68c99cc2e4514be3ea9d5d095 SHA1 0ca7b2181b1073aeafde8337436fab5a782e8b95 SHA256 e66505a6f948bd2d35e99ee331d8eadadca02b281a70b4ebfc35a619fc3803de
 MD5 49db11dd442261945dad44d05714ab9c eselect-compiler-2.0.0_rc2.ebuild 4825
 RMD160 9e792be05eb294c68c99cc2e4514be3ea9d5d095 eselect-compiler-2.0.0_rc2.ebuild 4825
@@ -37,10 +45,13 @@ SHA256 ba21ae92f613fd0a6f34b3fda34d1d82c6b284c045481b9686b66fd9e373c21e files/di
 MD5 fd67966cee9d0e3df4074312e90890f7 files/digest-eselect-compiler-2.0.0_rc2 280
 RMD160 fd9726bdf30b04feab248c39a251eb2970abd6e0 files/digest-eselect-compiler-2.0.0_rc2 280
 SHA256 bb2674b9c7b6583e433282c764ec02799852867226fec4708f62c60825ecaf43 files/digest-eselect-compiler-2.0.0_rc2 280
+MD5 fd67966cee9d0e3df4074312e90890f7 files/digest-eselect-compiler-2.0.0_rc2-r1 280
+RMD160 fd9726bdf30b04feab248c39a251eb2970abd6e0 files/digest-eselect-compiler-2.0.0_rc2-r1 280
+SHA256 bb2674b9c7b6583e433282c764ec02799852867226fec4708f62c60825ecaf43 files/digest-eselect-compiler-2.0.0_rc2-r1 280
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEnFE1AiZjviIA2XgRApy3AJ43iDJQ1Xqost2hhvffv1KBNMfq6wCgktYq
-fnBkRf3wrjWIZSNDfeWHKU4=
-=5lIV
+iD8DBQFEniMjOpjtAl+gMRURAs7qAJ9capprXGrhq14iarpPn/2egmrsagCeO+dU
+LGOviP7a/JmdDRlKhYsCIz0=
+=IX8M
 -----END PGP SIGNATURE-----
