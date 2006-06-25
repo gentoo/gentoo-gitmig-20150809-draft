@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.59d.ebuild,v 1.1 2006/06/25 02:50:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.59d.ebuild,v 1.2 2006/06/25 06:24:54 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Used to create autoconfiguration files"
 HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
-SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
+SRC_URI="ftp://alpha.gnu.org/gnu/autoconf/${P}.tar.gz
+	mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="${PV:0:3}"
