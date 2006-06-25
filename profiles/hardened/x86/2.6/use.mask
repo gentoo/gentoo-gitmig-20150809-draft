@@ -1,15 +1,30 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.7 2006/06/22 16:22:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.8 2006/06/25 21:23:48 kevquinn Exp $
 
-# Unmasking this *here* since it requires a 2.6 setup
--input_devices_wacom
 
--nptl
--nptlonly
--hal
--v4l2
--ipod
--uml
--cman
--gulm
+altivec
+
+-mmx
+-mmx2
+-mmxext
+-sse
+-sse2
+-3dnow
+-3dnowext
+-win32codecs
+-real
+
+# nVidia XvMC support
+-nvidia
+
+# Copied from default-linux/x86 2006-04-02; bug #128490
+# Modular X: unmask for architectures on which they are available
+-input_devices_synaptics
+-input_devices_vmmouse
+-video_cards_nvidia
+-video_cards_fglrx
+-video_cards_vmware
+# Modular X: mask for architectures on which they aren't available
+video_cards_newport
+
