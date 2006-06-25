@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.17.ebuild,v 1.1 2006/06/24 08:00:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.17.ebuild,v 1.2 2006/06/25 12:52:59 corsair Exp $
 
 PATCHVER="1.0"
 UCLIBC_PATCHVER="1.0"
@@ -8,4 +8,4 @@ ELF2FLT_VER=""
 inherit toolchain-binutils
 
 # ARCH - packages to test before marking
-KEYWORDS="-*"
+KEYWORDS="-* ~ppc64"
