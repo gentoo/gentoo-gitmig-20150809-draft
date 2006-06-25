@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/sylpheed-claws-att-remover
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-att-remover/ChangeLog,v 1.7 2006/06/08 20:19:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-att-remover/ChangeLog,v 1.8 2006/06/25 02:57:14 genone Exp $
+
+*sylpheed-claws-att-remover-1.0.2 (25 Jun 2006)
+
+  25 Jun 2006; Marius Mauch <genone@gentoo.org>
+  +sylpheed-claws-att-remover-1.0.2.ebuild:
+  Version bump
 
   08 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   sylpheed-claws-att-remover-0.4.ebuild:
