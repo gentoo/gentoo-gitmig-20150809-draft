@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.48 2006/03/12 12:41:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.49 2006/06/25 20:01:38 nichoj Exp $
+
+  25 Jun 2006; Joshua Nichols <nichoj@gentoo.org>
+  +files/sun-jre-bin-1.4.env, +files/sun-jre-bin-1.5.env:
+  Version bumps, plus support for new Java system.
 
   12 Mar 2006; Petteri Räty <betelgeuse@gentoo.org>
   -sun-jre-bin-1.4.2.10-r1.ebuild, -sun-jre-bin-1.5.0.06-r1.ebuild:
