@@ -15,7 +15,7 @@
 #   limitations under the License.
 
 #   Edited for Gentoo Linux
-#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/files/1.6.5-ant,v 1.5 2005/12/21 20:45:29 betelgeuse Exp $
+#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/files/1.6.5-ant,v 1.6 2006/06/25 01:25:32 nichoj Exp $
 
 # Extract launch and ant arguments, (see details below).
 ant_exec_args=
@@ -68,15 +68,9 @@ else
   fi
 fi
 
-
-if [ -z $JAVA_HOME ] ; then
-	if [ -f $HOME/.gentoo/java-env ] ; then
-		source $HOME/.gentoo/java-env
-	else
-		JAVA_HOME=`java-config --jdk-home`
-		CLASSPATH=`java-config --classpath`:${CLASSPATH}
-	fi
-fi
+# Always get JAVA_HOME from java-config.
+# Use GENTOO_VM to change which VM is used instead.
+export JAVA_HOME="$(java-config -g JAVA_HOME)"
 
 if [ -z $JAVA_HOME ] ; then
   echo 'Error: No JDK found!'
@@ -90,7 +84,16 @@ ANT_HOME=/usr/share/ant-core
 # set ANT_LIB location
 ANT_LIB="${ANT_HOME}/lib"
 
-JAVACMD="`java-config --java`"
+if [ -z "$JAVACMD" ] ; then
+  if [ -n "$JAVA_HOME"  ] ; then
+      JAVACMD="$JAVA_HOME/bin/java"
+  else
+    JAVACMD=`which java 2> /dev/null `
+    if [ -z "$JAVACMD" ] ; then
+        JAVACMD=java
+    fi
+  fi
+fi
 
 if [ ! -x "$JAVACMD" ] ; then
   echo "Error: JAVA_HOME is not defined correctly."
@@ -148,7 +151,6 @@ fi
 # java options, and ant args
 ant_sys_opts=
 
-
 if [ -n "$JIKESPATH" ]; then
 	ant_sys_opts="-Djikes.class.path=\"$JIKESPATH\""
 fi
@@ -156,7 +158,7 @@ fi
 # 2002-11-02, karltk@gentoo.org:
 # The Blackdown JDK on PPC hiccups with native threads
 #
-if [ "`arch`" == "ppc" ] ; then
+if [ "$(arch)" == "ppc" ] ; then
 	export THREADS_FLAG="green"
 fi
 
@@ -164,6 +166,6 @@ fi
 ant_exec_command="exec \"$JAVACMD\" $ANT_OPTS -classpath \"$LOCALCLASSPATH\" -Dant.home=\"$ANT_HOME\" -Dant.library.dir=\"$ANT_LIB\" $ant_sys_opts org.apache.tools.ant.launch.Launcher $ANT_ARGS -cp \"$CLASSPATH\" $ant_exec_args"
 
 if $ant_exec_debug ; then
-  echo $ant_exec_command
+    echo $ant_exec_command
 fi
 eval $ant_exec_command
