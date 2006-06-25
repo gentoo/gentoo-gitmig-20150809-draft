@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.27 2006/06/09 09:52:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.28 2006/06/25 09:19:43 nigoro Exp $
+
+  25 Jun 2006; Yuta SATOH <nigoro@gentoo.org> racc-1.4.5.ebuild:
+  added ~ppc64
 
 *racc-1.4.5 (09 Jun 2006)
 
