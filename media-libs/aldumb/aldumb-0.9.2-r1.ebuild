@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/aldumb-0.9.2-r1.ebuild,v 1.9 2006/02/07 20:07:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/aldumb-0.9.2-r1.ebuild,v 1.10 2006/06/25 01:06:17 joker Exp $
 
 inherit eutils multilib
 
@@ -27,6 +27,7 @@ ALL_TARGETS := allegro allegro-examples allegro-headers
 PREFIX := /usr
 EOF
 	epatch "${FILESDIR}/${P}-PIC.patch"
+	sed -i '/= -s/d' Makefile || die "sed failed"
 }
 
 src_compile() {
