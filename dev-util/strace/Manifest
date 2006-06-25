@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX strace-4.5.11-alpha-stat64.patch 1418 RMD160 a136a80eac15bca87fe6b2d39d65949fc2249d0a SHA1 09bfdf92442b9ac694b98c3c8710af9947f49521 SHA256 33ce8bf0b266c2741607907460686a82e23df0ac79fdb7fe5b4436d119b101de
 MD5 cbd6857cb3c5b57e1364ca621fb1a5b3 files/strace-4.5.11-alpha-stat64.patch 1418
 RMD160 a136a80eac15bca87fe6b2d39d65949fc2249d0a files/strace-4.5.11-alpha-stat64.patch 1418
@@ -6,10 +9,10 @@ AUX strace-4.5.11-fbsd.patch 4767 RMD160 aa04c24f5dc8dd6baee0286e1901f31aee54f10
 MD5 3eb9b0a09aef20e2fd45e7f6e73557d1 files/strace-4.5.11-fbsd.patch 4767
 RMD160 aa04c24f5dc8dd6baee0286e1901f31aee54f10a files/strace-4.5.11-fbsd.patch 4767
 SHA256 15e78c360ab72210b2e168d50e80b88e0188c149364545c9ff3f06d6b3b6f1fb files/strace-4.5.11-fbsd.patch 4767
-AUX strace-4.5.12-libaio.patch 2592 RMD160 03a16d54aec99f8585f12537c52c2955f9e80c39 SHA1 c5e45d697396fd443d86cc42bc90fa1bdba1f51e SHA256 1f3a391fa5f580cf33a25442c42df0a7c1ec4153f6b70a6b6682f601f97fb2d1
-MD5 a7d7842ae1d4d47bd0f7351b9859a20c files/strace-4.5.12-libaio.patch 2592
-RMD160 03a16d54aec99f8585f12537c52c2955f9e80c39 files/strace-4.5.12-libaio.patch 2592
-SHA256 1f3a391fa5f580cf33a25442c42df0a7c1ec4153f6b70a6b6682f601f97fb2d1 files/strace-4.5.12-libaio.patch 2592
+AUX strace-4.5.12-libaio.patch 2592 RMD160 c276367985097494c8b804f54344f5b5f88c86a0 SHA1 9a7da61ac70a436575790013f8cde9253078dafe SHA256 37894c1ec4192ee14e1013789ab194b530e2d2ecf11d9b51ea2835b61dce0bd9
+MD5 426249ff0c82016c0f642ebd3e52c760 files/strace-4.5.12-libaio.patch 2592
+RMD160 c276367985097494c8b804f54344f5b5f88c86a0 files/strace-4.5.12-libaio.patch 2592
+SHA256 37894c1ec4192ee14e1013789ab194b530e2d2ecf11d9b51ea2835b61dce0bd9 files/strace-4.5.12-libaio.patch 2592
 AUX strace-4.5.12-quota.patch 2947 RMD160 2c2773c1ea16fef1e0ce9e7350861a5e6e2b7e37 SHA1 a1d0c1dcd8abb04e195aed3f4285095b4cb8caa3 SHA256 1ecab1a88be09da7047e6a07749303bd1f306a9b0af095c61c707b0ff8c6ef08
 MD5 a60a27ad25c9a4be8f74cac3b50d26e1 files/strace-4.5.12-quota.patch 2947
 RMD160 2c2773c1ea16fef1e0ce9e7350861a5e6e2b7e37 files/strace-4.5.12-quota.patch 2947
@@ -70,3 +73,10 @@ SHA256 796b8ccab880098bf5f8534a7f263ed641b07d15ea3b2ca0d736ada2ea72abf1 files/di
 MD5 3d24c4fda96efb8d9c51c4666b80a980 files/digest-strace-4.5.14 66
 RMD160 bc859354174300f4a9fd8cc116db73008a528834 files/digest-strace-4.5.14 66
 SHA256 9297e60841d7a33ced2dd328456f3f1e715f62ce890c5466b23dea6d347896f7 files/digest-strace-4.5.14 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEnkpoamhnQswr0vIRAocXAJ9XZD5YHeW16OUyHSEKmv4C72vP4wCfU0Om
+FLJg5RKIt1KDO4qlRav2BzE=
+=iDRg
+-----END PGP SIGNATURE-----

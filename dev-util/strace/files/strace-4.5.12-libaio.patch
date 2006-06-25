@@ -48,7 +48,7 @@ http://bugs.gentoo.org/103427
  				}
  				tprintf("{%p, %u, %hu, %hu, %d}",
 +#ifdef HAVE_STRUCT_IOCB_AIO_DATA
-+					iocb.aio_data, iocb.key_data,
++					iocb.aio_data, iocb.aio_data,
 +#else
  					iocb.data, iocb.key,
 +#endif
@@ -60,7 +60,7 @@ http://bugs.gentoo.org/103427
  		if (umove(tcp, tcp->u_arg[1], &iocb) == 0) {
  			tprintf("{%p, %u, %hu, %hu, %d}, ",
 +#ifdef HAVE_STRUCT_IOCB_AIO_DATA
-+				iocb.aio_data, iocb.key_data,
++				iocb.aio_data, iocb.aio_data,
 +#else
  				iocb.data, iocb.key,
 +#endif
