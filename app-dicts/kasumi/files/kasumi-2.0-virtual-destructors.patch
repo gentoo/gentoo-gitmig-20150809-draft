@@ -1,0 +1,24 @@
+Index: kasumi-2.0/KasumiDicEventListener.hxx
+===================================================================
+--- kasumi-2.0.orig/KasumiDicEventListener.hxx
++++ kasumi-2.0/KasumiDicEventListener.hxx
+@@ -35,6 +35,7 @@
+ class KasumiDicEventListener{
+ private:
+ public:
++  virtual ~KasumiDicEventListener() { };
+   virtual void removedWord(size_t id) = 0;
+   virtual void appendedWord(KasumiWord *word) = 0;
+   virtual void modifiedWord(KasumiWord *word) = 0;
+Index: kasumi-2.0/KasumiWordEventListener.hxx
+===================================================================
+--- kasumi-2.0.orig/KasumiWordEventListener.hxx
++++ kasumi-2.0/KasumiWordEventListener.hxx
+@@ -37,6 +37,7 @@ class KasumiWord;
+ class KasumiWordEventListener{
+ private:
+ public:
++    virtual ~KasumiWordEventListener() { }
+     virtual void changedFrequency(KasumiWord *word) = 0;
+     virtual void changedSpelling(KasumiWord *word) = 0;
+     virtual void changedSound(KasumiWord *word) = 0;

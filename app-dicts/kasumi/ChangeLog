@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/kasumi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.20 2006/06/23 18:46:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.21 2006/06/25 20:49:55 flameeyes Exp $
+
+  25 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kasumi-2.0-fbsd.patch, +files/kasumi-2.0-format.patch,
+  +files/kasumi-2.0-nls.patch, +files/kasumi-2.0-virtual-destructors.patch,
+  kasumi-2.0.ebuild:
+  Add a few patches to fix nls handling, warnings and FreeBSD/non-Gnu support;
+  add dependency on virtual/libiconv.
 
   23 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> kasumi-2.0.ebuild:
   Fix quoting, add die messages, use emake for install, add missing dependency

@@ -1,0 +1,70 @@
+Index: kasumi-2.0/configure.in
+===================================================================
+--- kasumi-2.0.orig/configure.in
++++ kasumi-2.0/configure.in
+@@ -1,5 +1,5 @@
+ dnl Process this file with autoconf to produce a configure script.
+-AC_INIT(main.cxx)
++AC_INIT(main.cxx, 2.0)
+ AM_INIT_AUTOMAKE(kasumi, 2.0)
+ AM_CONFIG_HEADER(config.h)
+ 
+@@ -10,14 +10,6 @@ AC_PROG_CXX
+ dnl Checks for gettext
+ ALL_LINGUAS="ja"
+ AM_GNU_GETTEXT
+-LDFLAGS="$LDFLAGS $INTLLIBS"
+-localedir='${prefix}/share/locale'
+-AC_SUBST(localedir)
+-AC_DEFINE(HAVE_CATGETS, 1,Define as 1 if you have catgets and don't want to use GNU gettext.)
+-AC_DEFINE(HAVE_GETTEXT, 1, Define as 1 if you have GNU gettext.)
+-AC_DEFINE(HAVE_LC_MESSAGES, 1, Define as 1 if you have LC_MESSAGES.)
+-AC_DEFINE(HAVE_STPCPY, 1, Define as 1 if you have stpcpy() function.)
+-AC_DEFINE(ENABLE_NLS, 1, Define as 1 if you want to use NLS.)
+ 
+ dnl Checks for libraries.
+ AM_PATH_GTK_2_0(2.4.0, CFLAGS="$CFLAGS $GTK_CFLAGS" CPPFLAGS="$CPPFLAGS $GTK_CFLAGS" LIBS="$LIBS $GTK_LIBS", AC_MSG_ERROR(GTK+ 2.0 not found.))
+Index: kasumi-2.0/main.cxx
+===================================================================
+--- kasumi-2.0.orig/main.cxx
++++ kasumi-2.0/main.cxx
+@@ -185,11 +185,13 @@ int main(int argc, char *argv[])
+ {
+   gtk_init(&argc, &argv);
+ 
++#ifdef ENABLE_NLS
+   // for gettext
+   setlocale(LC_ALL, "");
+   bindtextdomain(PACKAGE, LOCALEDIR);
+   bind_textdomain_codeset(PACKAGE, "UTF-8");
+   textdomain(PACKAGE);
++#endif
+ 
+   GtkWidget *server = check_duplicated_process (argc, argv);
+   if (!server)
+Index: kasumi-2.0/Makefile.am
+===================================================================
+--- kasumi-2.0.orig/Makefile.am
++++ kasumi-2.0/Makefile.am
+@@ -13,10 +13,13 @@ kasumi_SOURCES = main.cxx intl.h \
+ 		 KasumiConfiguration.cxx KasumiConfiguration.hxx \
+ 		cellrendererspin.c cellrendererspin.h \
+                  kasumi.png
++kasumi_LDADD = $(INTLLIBS)
+ 
+ pkgdata_DATA = kasumi.png
+ 
+-AM_CPPFLAGS=-DLOCALEDIR='"$(localedir)"'
++localedir = $(datadir)/locale
++
++AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\"
+ SUBDIRS = intl m4 po
+ 
+ ACLOCAL_AMFLAGS = -I m4
+Index: kasumi-2.0/acconfig.h
+===================================================================
+--- kasumi-2.0.orig/acconfig.h
++++ /dev/null
+@@ -1,2 +0,0 @@
+-#undef PACKAGE
+-#undef VERSION
