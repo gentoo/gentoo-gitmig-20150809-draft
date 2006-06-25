@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.20 2006/05/25 19:27:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.21 2006/06/25 09:24:47 corsair Exp $
+
+  25 Jun 2006; Markus Rothe <corsair@gentoo.org> libaio-0.3.106-r1.ebuild:
+  Stable on ppc64; bug #137915
 
   25 May 2006; Guy Martin <gmsoft@gentoo.org> libaio-0.3.15.ebuild,
   libaio-0.3.15-r1.ebuild:
