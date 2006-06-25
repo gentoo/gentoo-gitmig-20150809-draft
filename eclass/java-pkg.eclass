@@ -1,13 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.36 2006/06/24 18:36:59 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.37 2006/06/25 21:01:36 nichoj Exp $
 
 inherit multilib
-
-JAVA_CONFIG_DEP="|| ( =dev-java/java-config-1.3* =dev-java/java-config-1.2* )"
-DEPEND="${JAVA_CONFIG_DEP}"
-RDEPEND="${JAVA_CONFIG_DEP}"
-
 
 EXPORT_FUNCTIONS pkg_setup
 
