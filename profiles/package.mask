@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5540 2006/06/24 19:59:00 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5541 2006/06/25 01:06:08 nichoj Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -38,6 +38,8 @@ dev-java/java-config-wrapper
 >dev-java/javatoolkit-0.1.0
 >=dev-java/ant-core-1.6.5-r13
 >=dev-java/ant-tasks-1.6.5-r2
+>=dev-java/jikes-1.22-r12
+>=dev-java/eclipse-ecj-3.1-r13
 
 # Diego Pettenò <flameeyes@gentoo.org> (23 Jun 2006)
 # 0.2 Beta version of Kerry
