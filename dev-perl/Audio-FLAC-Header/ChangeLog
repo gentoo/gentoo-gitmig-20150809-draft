@@ -1,10 +1,10 @@
 # ChangeLog for dev-perl/Audio-FLAC-Header
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-FLAC-Header/ChangeLog,v 1.1 2006/06/25 04:06:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-FLAC-Header/ChangeLog,v 1.2 2006/06/25 04:07:18 mcummings Exp $
 
 *Audio-FLAC-Header-1.4 (25 Jun 2006)
 
   25 Jun 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Audio-FLAC-Header-1.4.ebuild:
-  Bug 103940
+  Bug 103940. Original version of this ebuild submitted by Paul Marks.
 
