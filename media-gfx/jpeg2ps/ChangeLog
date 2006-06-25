@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jpeg2ps
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/ChangeLog,v 1.12 2005/12/03 06:45:23 pclouds Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/ChangeLog,v 1.13 2006/06/25 19:40:40 blubb Exp $
+
+  25 Jun 2006; Simon Stelling <blubb@gentoo.org> jpeg2ps-1.9-r1.ebuild:
+  stable on amd64
 
   03 Dec 2005; <pclouds@gentoo.org> jpeg2ps-1.9-r1.ebuild:
   Fix minor issue (comment #8 bug #61922), closing #61922
