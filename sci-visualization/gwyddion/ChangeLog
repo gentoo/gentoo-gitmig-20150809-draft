@@ -1,6 +1,6 @@
 # ChangeLog for sci-visualization/gwyddion
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.2 2006/02/16 19:27:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.3 2006/06/25 19:23:47 cryos Exp $
 
   29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org> +metadata.xml,
   +gwyddion-1.15.ebuild:
@@ -25,7 +25,7 @@
 
 *gwyddion-1.12 (24 Aug 2005)
 
-  24 Aug 2005; Marcus D. Hanwell <marcus@gentoo.org> +metadata.xml,
+  24 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org> +metadata.xml,
   +gwyddion-1.12.ebuild:
   Initial import of ebuild, thanks to Aaron Rubinstein <mrodenstein@web.de>
   for the original ebuild, closes bug 54327.

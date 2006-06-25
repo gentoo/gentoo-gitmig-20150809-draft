@@ -1,6 +1,6 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.3 2006/03/26 20:16:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.4 2006/06/25 19:23:10 cryos Exp $
 
   23 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; grace-5.1.18.ebuild,
   grace-5.1.19.ebuild:
@@ -42,7 +42,7 @@
   grace-5.1.18.ebuild:
   Stable on amd64, pruned old version.
 
-  16 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org> grace-5.1.14.ebuild:
+  16 Jun 2005; Marcus D. Hanwell <cryos@gentoo.org> grace-5.1.14.ebuild:
   Stable on amd64.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> grace-5.1.14.ebuild:
