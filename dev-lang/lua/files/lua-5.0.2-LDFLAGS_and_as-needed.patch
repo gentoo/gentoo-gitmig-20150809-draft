@@ -1,0 +1,47 @@
+--- lua-5.0.2/config.orig	2006-05-07 17:22:47.000000000 +0200
++++ lua-5.0.2/config	2006-05-07 17:25:35.000000000 +0200
+@@ -35,6 +35,9 @@
+ #
+ #MYLDFLAGS= -Wl,-E
+ #
++# Gentoo addition: this ones will be used for both the binaries and the libs.
++#LDFLAGS=
++#
+ # On Windows systems. support for dynamic loading is enabled by default.
+ # To disable this support, uncomment the next line.
+ #
+--- lua-5.0.2/src/lua/Makefile.orig	2006-05-07 17:30:09.000000000 +0200
++++ lua-5.0.2/src/lua/Makefile	2006-05-07 17:30:32.000000000 +0200
+@@ -13,7 +13,7 @@
+ all:	$T
+ 
+ $T:	$(OBJS) $(LIB)/liblua.a $(LIB)/liblualib.a
+-	$(CC) -o $@ $(MYLDFLAGS) $(OBJS) -L$(LIB) -llua -llualib $(EXTRA_LIBS) $(DLLIB)
++	$(CC) -o $@ $(MYLDFLAGS) $(LDFLAGS) $(OBJS) -L$(LIB) -llua -llualib $(EXTRA_LIBS) $(DLLIB)
+ 
+ $(LIB)/liblua.a:
+ 	cd ..; $(MAKE)
+--- lua-5.0.2/src/luac/Makefile.orig	2006-05-07 17:37:19.000000000 +0200
++++ lua-5.0.2/src/luac/Makefile	2006-05-07 17:37:41.000000000 +0200
+@@ -13,7 +13,7 @@
+ all:	$T
+ 
+ $T:	$(OBJS) $(LIB)/liblua.a $(LIB)/liblualib.a
+-	$(CC) -o $@ $(MYLDFLAGS) $(OBJS) -L$(LIB) -llua -llualib $(EXTRA_LIBS) $(DLLIB)
++	$(CC) -o $@ $(MYLDFLAGS) $(LDFLAGS) $(OBJS) -L$(LIB) -llua -llualib $(EXTRA_LIBS) $(DLLIB)
+ 
+ # print.c needs opcode names from lopcodes.c
+ lopcodes.o:	../lopcodes.c ../lopcodes.h
+--- lua-5.0.2/Makefile.orig	2006-05-07 16:50:37.000000000 +0200
++++ lua-5.0.2/Makefile	2006-05-07 17:29:45.000000000 +0200
+@@ -38,8 +38,8 @@
+ 
+ # shared libraries (for Linux)
+ so:
+-	gcc -o lib/liblua.so.$V -shared src/*.o
+-	gcc -o lib/liblualib.so.$V -shared src/lib/*.o
++	$(CC) -shared $(LDFLAGS) src/*.o -o lib/liblua.so.$V 
++	$(CC) -shared $(LDFLAGS) src/lib/*.o -L$(LIB) -llua $(DLLIB) $(EXTRA_LIBS) -o lib/liblualib.so.$V
+ 	cd lib; ln -fs liblua.so.$V liblua.so; ln -fs liblualib.so.$V liblualib.so
+ 
+ # binaries using shared libraries

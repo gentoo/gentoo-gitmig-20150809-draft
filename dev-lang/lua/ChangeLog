@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.42 2006/03/01 19:24:55 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.43 2006/06/25 16:55:35 genstef Exp $
+
+  25 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/lua-5.0.2-LDFLAGS_and_as-needed.patch, lua-5.0.2.ebuild:
+  as-needed patch thanks to TGL <degrenier@easyconnect.fr> in bug 122128 from
+  Benjamin Schindler <config@gentoo.org>
 
   01 Mar 2006; Tom Payne <twp@gentoo.org> -lua-4.0.ebuild, -lua-5.0.ebuild,
   -lua-5.0.1_beta20031003-r2.ebuild:
