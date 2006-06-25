@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-libs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/ChangeLog,v 1.35 2006/01/16 03:58:47 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/ChangeLog,v 1.36 2006/06/25 20:16:31 corsair Exp $
+
+  25 Jun 2006; Markus Rothe <corsair@gentoo.org> gnome-libs-1.4.2.ebuild:
+  gnome-libs don't like parallel building. restrict to -j1. bug #117644
 
   16 Jan 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/gnome-libs-1.4.2-ppc64.patch, gnome-libs-1.4.2.ebuild:
