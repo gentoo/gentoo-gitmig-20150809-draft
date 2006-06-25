@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-kioslaves
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.49 2006/06/01 17:53:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.50 2006/06/25 21:26:10 flameeyes Exp $
+
+  25 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdemultimedia-kioslaves-3.5.3.ebuild:
+  Add missing ~x86-fbsd.
 
 *kdemultimedia-kioslaves-3.5.3 (01 Jun 2006)
 
