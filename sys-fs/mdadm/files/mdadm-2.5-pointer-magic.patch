@@ -1,0 +1,35 @@
+Clean up strict alias warnings:
+config.c: In function 'free_line':
+config.c:192: warning: dereferencing type-punned pointer will break strict-aliasing rules
+config.c:192: warning: dereferencing type-punned pointer will break strict-aliasing rules
+
+http://bugs.gentoo.org/137440
+
+--- mdadm-2.5/dlink.c
++++ mdadm-2.5/dlink.c
+@@ -8,6 +8,7 @@
+ #ifdef __dietlibc__
+ char *strncpy(char *dest, const char *src, size_t n) __THROW;
+ #endif
++#define __IN_DLINK
+ #include	"dlink.h"
+ 
+ 
+--- mdadm-2.5/dlink.h
++++ mdadm-2.5/dlink.h
+@@ -12,8 +12,13 @@
+ #define	dl_new(t)	((t*)dl_alloc(sizeof(t)))
+ #define	dl_newv(t,n)	((t*)dl_alloc(sizeof(t)*n))
+ 
+-#define dl_next(p) *((void**)&(((struct __dl_head*)(p))[-1].dh_next))
+-#define dl_prev(p) *((void**)&(((struct __dl_head*)(p))[-1].dh_prev))
++#ifdef __IN_DLINK
++#define __DLINK_CAST
++#else
++#define __DLINK_CAST (void*)
++#endif
++#define dl_next(p) (__DLINK_CAST (((struct __dl_head*)(p))[-1].dh_next))
++#define dl_prev(p) (__DLINK_CAST (((struct __dl_head*)(p))[-1].dh_prev))
+ 
+ void *dl_head(void);
+ char *dl_strdup(char *);
