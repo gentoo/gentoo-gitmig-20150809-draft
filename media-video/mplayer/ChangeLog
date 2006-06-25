@@ -1,6 +1,15 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.391 2006/06/22 18:35:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.392 2006/06/25 01:49:45 lu_zero Exp $
+
+  25 Jun 2006; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre8.ebuild:
+  phase out nls, unicode triggers iconv dep
+
+  25 Jun 2006; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre8.ebuild:
+  set charset to noconv if you disable unicode
+
+  25 Jun 2006; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre8.ebuild:
+  make debug more useful
 
   22 Jun 2006; Fabian Groffen <grobian@gentoo.org> mplayer-1.0_pre8.ebuild:
   Marked ~ppc-macos, I'm stunned (bug #107795)

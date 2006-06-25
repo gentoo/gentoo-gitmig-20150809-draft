@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8.ebuild,v 1.12 2006/06/22 18:35:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8.ebuild,v 1.13 2006/06/25 01:49:45 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,10 +8,10 @@ RESTRICT="nostrip"
 IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts bidi bl bindist
 cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dv
 dvdread encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca
-lirc live livecd lzo mad matrox mmx mmxext musepack nas nls nvidia
-unicode vorbis opengl openal oss png real rtc samba sdl speex sse sse2 svga tga
-theora truetype v4l v4l2 win32codecs X x264 xanim xinerama xmms xv xvid xvmc"
-# openal
+lirc live livecd lzo mad matrox mmx mmxext musepack nas nvidia unicode vorbis
+opengl openal oss png real rtc samba sdl speex sse sse2 svga tga theora
+truetype v4l v4l2 win32codecs X x264 xanim xinerama xmms xv xvid xvmc"
+
 BLUV=1.5
 SVGV=1.9.17
 
@@ -70,7 +70,6 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	mad? ( media-libs/libmad )
 	musepack? ( >=media-libs/libmpcdec-1.2.2 )
 	nas? ( media-libs/nas )
-	nls? ( virtual/libintl )
 	opengl? ( virtual/opengl )
 	png? ( media-libs/libpng )
 	samba? ( >=net-fs/samba-2.2.8a )
@@ -112,7 +111,6 @@ DEPEND="${RDEPEND}
 		   >=app-text/docbook-xml-simple-dtd-1.50.0
 		   dev-libs/libxslt
 		   )
-	nls? ( sys-devel/gettext )
 	dga? ( || ( x11-proto/xf86dgaproto virtual/x11 ) )
 	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
 	xv? ( || ( ( x11-proto/videoproto
@@ -132,7 +130,8 @@ DEPEND="${RDEPEND}
 			)
 			virtual/x11
 		)
-	)"
+	)
+	unicode? ( virtual/libiconv )"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -259,7 +258,10 @@ src_compile() {
 	myconf="${myconf} $(use_enable bidi fribidi)"
 	if use unicode; then
 		myconf="${myconf} --charset=UTF-8"
+	else
+		myconf="${myconf} --charset=noconv"
 	fi
+
 	##to be added in -r1
 	myconf="${myconf} --disable-enca"
 
@@ -420,7 +422,7 @@ src_compile() {
 	use x86 && myconf="${myconf} $(use_enable sse2)"
 	use x86 && myconf="${myconf} $(use_enable mmx)"
 	use x86 && myconf="${myconf} $(use_enable mmxext)"
-	myconf="${myconf} $(use_enable debug)"
+	use debug && myconf="${myconf} --enable-debug=3"
 
 	# mplayer now contains SIMD assembler code for amd64
 	# AMD64 Team decided to hardenable SIMD assembler for all users
