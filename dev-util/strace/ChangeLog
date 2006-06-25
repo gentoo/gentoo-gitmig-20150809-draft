@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.82 2006/06/25 09:23:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.83 2006/06/25 09:46:32 dertobi123 Exp $
+
+  25 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  strace-4.5.14.ebuild:
+  ppc stable, bug #137914
 
   25 Jun 2006; Markus Rothe <corsair@gentoo.org> strace-4.5.14.ebuild:
   Stable on ppc64; bug #137914
