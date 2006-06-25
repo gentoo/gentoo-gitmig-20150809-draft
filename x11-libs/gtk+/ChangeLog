@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.240 2006/06/16 04:16:40 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.241 2006/06/25 20:33:15 the_paya Exp $
+
+  25 Jun 2006; Javier Villavicencio <the_paya@gentoo.org>
+  gtk+-2.8.19.ebuild:
+  Add ~x86-fbsd keyword.
 
 *gtk+-2.8.19 (16 Jun 2006)
 
