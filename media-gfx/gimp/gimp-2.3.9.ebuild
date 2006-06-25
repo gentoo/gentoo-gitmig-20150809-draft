@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.3.9.ebuild,v 1.1 2006/06/25 11:55:49 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.3.9.ebuild,v 1.2 2006/06/25 18:10:08 brix Exp $
 
 inherit alternatives eutils fdo-mime flag-o-matic
 
@@ -52,10 +52,10 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	if use pdf && ! built_with_use app-text/poppler-bindings gtk; then
 		eerror
-		eerror "This package requires app-text/poppler compiled with GTK+ support."
-		eerror "Please reemerge app-text/poppler with USE=\"gtk\"."
+		eerror "This package requires app-text/poppler-bindings compiled with GTK+ support."
+		eerror "Please reemerge app-text/poppler-bindings with USE=\"gtk\"."
 		eerror
-		die "Please reemerge app-text/poppler with USE=\"gtk\"."
+		die "Please reemerge app-text/poppler-bindings with USE=\"gtk\"."
 	fi
 }
 
