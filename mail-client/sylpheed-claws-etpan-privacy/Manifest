@@ -1,4 +1,34 @@
-MD5 a0e004d4748e3ba0efb1d712264eaaa1 ChangeLog 952
-MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-etpan-privacy-0.13 310
-MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST sylpheed-claws-extra-plugins-2.0.0.tar.bz2 2935762 RMD160 09ba59e1da4eacf0a50c2271cbadd0b44212285f SHA1 68c96367942b0dab14a62e8fe3f0fdb2dc4cdd32 SHA256 88b01ccdece05adf3b1046c3ddcbd20ca3455d20e97f59bf1ea8d3fcbe1baf29
+DIST sylpheed-claws-extra-plugins-2.3.0.tar.bz2 3901667 RMD160 64f026271d993de2c5895c251abf18c529b0244d SHA1 3bcee7f99ad5addd2aeea2bac4e8d63e8eff136f SHA256 45e30623f3908577518a474a2f308453654d1f6422a2f15ff27ec4fb934aa438
+EBUILD sylpheed-claws-etpan-privacy-0.13.ebuild 991 RMD160 10b0862b5d646713e26b2d5904d05f03194a039b SHA1 f2d01b82090657b6dd3f31a7c1e0e03dc2a09c2a SHA256 c29c8fadd692d247f0693f35654fbb82e281dc7e4751afb644452c059fd5ecd0
 MD5 43a908c4463106044e8375be24a927bc sylpheed-claws-etpan-privacy-0.13.ebuild 991
+RMD160 10b0862b5d646713e26b2d5904d05f03194a039b sylpheed-claws-etpan-privacy-0.13.ebuild 991
+SHA256 c29c8fadd692d247f0693f35654fbb82e281dc7e4751afb644452c059fd5ecd0 sylpheed-claws-etpan-privacy-0.13.ebuild 991
+EBUILD sylpheed-claws-etpan-privacy-0.15.1.ebuild 992 RMD160 d5b177afdf3771dd899ea54bcef7bccf77a7bdd3 SHA1 2a85a57720d8777eaef9d5a25b9f61b676a86711 SHA256 80b4f617ee7bf543e71871f112268ec1ed40f4b865ab38366a0273327bbe2161
+MD5 a77f66bfa7f0c832846ab9f335535957 sylpheed-claws-etpan-privacy-0.15.1.ebuild 992
+RMD160 d5b177afdf3771dd899ea54bcef7bccf77a7bdd3 sylpheed-claws-etpan-privacy-0.15.1.ebuild 992
+SHA256 80b4f617ee7bf543e71871f112268ec1ed40f4b865ab38366a0273327bbe2161 sylpheed-claws-etpan-privacy-0.15.1.ebuild 992
+MISC ChangeLog 1114 RMD160 46aece09a9cb5b943456473ce3a5c2ba9506e2d7 SHA1 2f7a3ff35097cb3bf193a8157a6206f03f0af1b1 SHA256 dfade688293fbd2e4d5bd1510eb76b4b531ab82d6a9cb53cb98a6caf322b3894
+MD5 510335f5a9d01454fa1966f5e600a179 ChangeLog 1114
+RMD160 46aece09a9cb5b943456473ce3a5c2ba9506e2d7 ChangeLog 1114
+SHA256 dfade688293fbd2e4d5bd1510eb76b4b531ab82d6a9cb53cb98a6caf322b3894 ChangeLog 1114
+MISC metadata.xml 392 RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 SHA1 8fb3309b9af5ec084343baccfcdb7a391785bcc3 SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3
+MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
+RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
+SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
+MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-etpan-privacy-0.13 310
+RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-etpan-privacy-0.13 310
+SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-etpan-privacy-0.13 310
+MD5 1501d40d43dfd903395e7b22ed0e67b2 files/digest-sylpheed-claws-etpan-privacy-0.15.1 310
+RMD160 20b0fdb7e91f86506806175b41bc16e93f8757a1 files/digest-sylpheed-claws-etpan-privacy-0.15.1 310
+SHA256 2affdaf11cde193787ad60825dadfdc3a54087bdd5f0b0c8ced4cd4510ff06fc files/digest-sylpheed-claws-etpan-privacy-0.15.1 310
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEnglY6J2i8a8J4okRAg/wAKDAly+dQqUoWEzbGYtkIH4E7fzwFgCfagel
+kegA1w3pdlg9QbTnGA7EaiE=
+=pAsQ
+-----END PGP SIGNATURE-----
