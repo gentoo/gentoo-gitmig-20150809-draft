@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.38 2006/06/19 04:11:58 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.39 2006/06/25 12:18:45 dertobi123 Exp $
+
+  25 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org> auctex-11.83.ebuild:
+  Added ~ppc, bug #131761
 
 *auctex-11.83 (19 Jun 2006)
 
