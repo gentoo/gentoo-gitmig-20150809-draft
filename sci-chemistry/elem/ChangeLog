@@ -1,6 +1,6 @@
 # ChangeLog for sci-chemistry/elem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/elem/ChangeLog,v 1.5 2006/01/25 13:45:28 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/elem/ChangeLog,v 1.6 2006/06/25 19:16:24 cryos Exp $
 
   25 Jan 2006; Patrick Kursawe <phosphan@gentoo.org> elem-1.0.3-r1.ebuild,
   -elem-1.0.3-r2.ebuild:
@@ -11,7 +11,7 @@
   20 Jan 2006; Patrick Kursawe <phosphan@gentoo.org> +elem-1.0.3-r2.ebuild:
   Porting to modular X
 
-  29 May 2005; Marcus D. Hanwell <marcus@gentoo.org> elem-1.0.3-r1.ebuild:
+  29 May 2005; Marcus D. Hanwell <cryos@gentoo.org> elem-1.0.3-r1.ebuild:
   Stable on amd64.
 
 *elem-1.0.3-r1 (24 Dec 2004)

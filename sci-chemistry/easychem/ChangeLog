@@ -1,6 +1,6 @@
 # ChangeLog for sci-chemistry/easychem
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/ChangeLog,v 1.7 2006/04/13 19:01:41 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/ChangeLog,v 1.8 2006/06/25 19:15:45 cryos Exp $
 
   13 Apr 2006; Patrick McLean <chutzpah@gentoo.org> easychem-0.6.ebuild:
   Remove amd64 keyword, this deps on media-gfx/pstoedit which deps on
@@ -11,7 +11,7 @@
   Remove depend on \!<app-text/ghostscript-7.07.1-r2 because we no longer have
   such an old ghostscript
 
-  26 Jul 2005; Marcus D. Hanwell <marcus@gentoo.org> easychem-0.6.ebuild:
+  26 Jul 2005; Marcus D. Hanwell <cryos@gentoo.org> easychem-0.6.ebuild:
   Stable on amd64 and x86.
 
   13 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>; easychem-0.6.ebuild:
