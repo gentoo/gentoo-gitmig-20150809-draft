@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/xkeyval-2.4-r1.ebuild,v 1.1 2005/11/28 18:38:23 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/xkeyval-2.4-r1.ebuild,v 1.2 2006/06/25 15:09:54 grobian Exp $
 
 inherit latex-package
 
@@ -15,7 +15,7 @@ DEPEND="!>=app-text/tetex-3.0"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
 
 src_install() {
 	insinto /usr/share/texmf/tex/generic/${PN}
