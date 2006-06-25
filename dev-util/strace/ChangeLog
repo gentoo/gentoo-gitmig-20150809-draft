@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.84 2006/06/25 10:52:46 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.85 2006/06/25 14:08:36 gmsoft Exp $
+
+  25 Jun 2006; Guy Martin <gmsoft@gentoo.org> strace-4.5.14.ebuild:
+  Stable on hppa.
 
   25 Jun 2006; Marcus D. Hanwell <cryos@gentoo.org> strace-4.5.14.ebuild:
   Marked stable on amd64, bug 137914.
