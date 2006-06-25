@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.7.0-r1.ebuild,v 1.3 2006/05/10 21:26:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.7.0-r1.ebuild,v 1.4 2006/06/25 06:02:03 mrness Exp $
 
 inherit distutils gnome2 eutils multilib autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://usefulinc.com/software/gnome-bluetooth/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/libgnomeui-2

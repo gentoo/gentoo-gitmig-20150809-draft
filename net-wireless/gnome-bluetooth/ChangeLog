@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.28 2006/05/10 21:26:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.29 2006/06/25 06:02:03 mrness Exp $
+
+  25 Jun 2006; Alin Nastac <mrness@gentoo.org>
+  gnome-bluetooth-0.7.0-r1.ebuild:
+  Stable on x86 (#122262).
 
   10 May 2006; Alin Nastac <mrness@gentoo.org>
   +files/gnome-bluetooth-0.7.0-as-needed.patch,
