@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.152 2006/06/25 00:29:26 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.153 2006/06/25 11:55:49 brix Exp $
+
+*gimp-2.3.9 (25 Jun 2006)
+
+  25 Jun 2006; Henrik Brix Andersen <brix@gentoo.org> +gimp-2.3.9.ebuild:
+  New development snapshot.
 
   25 Jun 2006; Henrik Brix Andersen <brix@gentoo.org> gimp-9999.ebuild:
   The gimp-print and gnome-print plug-ins were removed upstream, new GTK+
