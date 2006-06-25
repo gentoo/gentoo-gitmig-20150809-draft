@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.4 2006/06/18 20:03:59 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.5 2006/06/25 00:29:26 brix Exp $
 
 inherit alternatives cvs eutils fdo-mime flag-o-matic
 
@@ -19,8 +19,11 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="-*"
 
-IUSE="alsa aalib altivec debug doc gtkhtml gimpprint gnome jpeg lcms mmx mng pdf png python smp sse svg tiff wmf"
+# add 'print' when >=x11-libs/gtk+-2.9.3 hits portage
+IUSE="alsa aalib altivec debug doc gtkhtml gnome jpeg lcms mmx mng pdf png python smp sse svg tiff wmf"
 
+# not yet in portage:
+#		print? ( >=x11-libs/gtk+-2.9.3 )
 RDEPEND=">=dev-libs/glib-2.8.2
 		>=x11-libs/gtk+-2.8.8
 		>=x11-libs/pango-1.4
@@ -34,14 +37,12 @@ RDEPEND=">=dev-libs/glib-2.8.2
 		aalib? ( media-libs/aalib )
 		alsa? ( >=media-libs/alsa-lib-1.0.0 )
 		doc? ( app-doc/gimp-help )
-		gimpprint? ( =media-gfx/gimp-print-4.2* )
 		gnome? ( >=gnome-base/gnome-vfs-2.10.0
 				>=gnome-base/libgnomeui-2.10.0
-				>=gnome-base/gnome-keyring-0.4.5
-				>=gnome-base/libgnomeprint-2.10.0 )
+				>=gnome-base/gnome-keyring-0.4.5 )
 		gtkhtml? ( =gnome-extra/gtkhtml-2* )
 		jpeg? ( >=media-libs/jpeg-6b-r2
-				media-libs/libexif )
+				>=media-libs/libexif-0.6.0 )
 		lcms? ( media-libs/lcms )
 		mng? ( media-libs/libmng )
 		pdf? ( >=app-text/poppler-bindings-0.3.1 )
@@ -50,7 +51,7 @@ RDEPEND=">=dev-libs/glib-2.8.2
 				>=dev-python/pygtk-2 )
 		tiff? ( >=media-libs/tiff-3.5.7 )
 		svg? ( >=gnome-base/librsvg-2.2 )
-		wmf? ( >=media-libs/libwmf-0.2.8.2 )"
+		wmf? ( >=media-libs/libwmf-0.2.8 )"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.12.0
 		>=dev-util/intltool-0.31
@@ -59,10 +60,10 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	if use pdf && ! built_with_use app-text/poppler-bindings gtk; then
 		eerror
-		eerror "This package requires app-text/poppler compiled with GTK+ support."
-		eerror "Please reemerge app-text/poppler with USE=\"gtk\"."
+		eerror "This package requires app-text/poppler-bindings compiled with GTK+ support."
+		eerror "Please reemerge app-text/poppler-bindings with USE=\"gtk\"."
 		eerror
-		die "Please reemerge app-text/poppler with USE=\"gtk\"."
+		die "Please reemerge app-text/poppler-bindings with USE=\"gtk\"."
 	fi
 }
 
@@ -74,14 +75,17 @@ src_unpack() {
 }
 
 src_compile() {
-	# gimp uses inline functions (plug-ins/common/grid.c) (#23078)
+	# workaround portage variable leakage
+	local AA=
+
+	# gimp uses inline functions (e.g. plug-ins/common/grid.c) (#23078)
 	# gimp uses floating point math, needs accuracy (#98685)
 	filter-flags "-fno-inline" "-ffast-math"
 
 	"${S}"/autogen.sh $(use_enable doc gtk-doc) || die "autogen.sh failed"
 
-	# Workaround portage variable leakage
-	local AA=
+	# requires >=x11-libs/gtk+-2.9.3, which is not yet in portaqe
+	# $(use_with print) \
 
 	econf \
 		--disable-default-binary \
@@ -91,8 +95,6 @@ src_compile() {
 		$(use_enable altivec) \
 		$(use_enable debug) \
 		$(use_enable doc gtk-doc) \
-		$(use_enable gimpprint print) \
-		$(use_with gnome gnome-print) \
 		$(use_with gtkhtml gtkhtml2) \
 		$(use_with jpeg libjpeg) \
 		$(use_with jpeg libexif) \
@@ -120,7 +122,7 @@ src_install() {
 pkg_postinst() {
 	local binary
 
-	# install symlinks for everything but gimptool (bug #136012)
+	# install symlinks for everything but gimptool (#136012)
 	for binary in gimp gimp-console gimp-remote; do
 		alternatives_auto_makesym "/usr/bin/${binary}" "/usr/bin/${binary}-[0-9].[0-9]"
 	done
