@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-0.10.ebuild,v 1.7 2006/06/20 22:30:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-0.10.ebuild,v 1.8 2006/06/25 21:45:16 brix Exp $
 
 MY_P=${P/gimp-help/gimp-help-2}
 S=${WORKDIR}/${MY_P}
@@ -38,7 +38,9 @@ src_compile() {
 		--without-gimp \
 		$(use_enable imagemagick convert) \
 		|| die "econf failed"
-	emake || die "emake failed"
+
+	# not parallel make safe (#137192)
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
