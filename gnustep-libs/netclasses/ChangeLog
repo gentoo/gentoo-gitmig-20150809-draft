@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-libs/netclasses
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/netclasses/ChangeLog,v 1.1 2006/06/25 14:11:45 grobian Exp $
+
+*netclasses-1.06 (25 Jun 2006)
+
+  25 Jun 2006; Fabian Groffen <grobian@gentoo.org> +netclasses-1.06.ebuild:
+  Added new netclasses ebuild, with thanks to <sourav at) sourav [dot. net>
+  (bug #135379)
+
