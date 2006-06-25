@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r2.ebuild,v 1.12 2006/04/20 14:08:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r2.ebuild,v 1.13 2006/06/25 19:00:52 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -68,6 +68,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-bigdir.patch"
 	epatch "${FILESDIR}/${P}-lzo2.patch"
 	epatch "${DISTDIR}/${PN}-types.patch.bz2"
+	epatch "${FILESDIR}/${P}-autoconf259d.patch"
 
 	eautoreconf
 }

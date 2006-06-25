@@ -1,6 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.147 2006/05/26 17:54:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.148 2006/06/25 19:00:52 flameeyes Exp $
+
+  25 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/transcode-1.0.2-autoconf259d.patch, transcode-1.0.2-r2.ebuild:
+  Add patch for compatibility with autoconf 2.59d, fixes bug #137953. Thanks
+  to Jabari R. Roberts for reporting.
 
   26 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   -transcode-0.6.14-r3.ebuild:
