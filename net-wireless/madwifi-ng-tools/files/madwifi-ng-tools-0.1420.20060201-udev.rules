@@ -1,9 +1,0 @@
-# Madwifi devices
-#
-# See wlanconfig(8) for more information
-#
-# Access Point configuration
-#KERNEL=="wifi[0-9]*", DRIVER=="ath_pci", ACTION=="add", RUN+="/sbin/wlanconfig ath create wlandev %k wlanmode ap"
-#
-# Normal station configuration
-KERNEL=="wifi[0-9]*", DRIVER=="ath_pci", ACTION=="add", RUN+="/sbin/wlanconfig ath create wlandev %k wlanmode sta"
