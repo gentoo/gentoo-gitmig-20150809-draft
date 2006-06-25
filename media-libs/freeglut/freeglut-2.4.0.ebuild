@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.4.0.ebuild,v 1.11 2006/06/06 18:02:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.4.0.ebuild,v 1.12 2006/06/25 22:09:32 spyderous Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="A completely OpenSourced alternative to the OpenGL Utility Toolkit (GLUT) library"
 HOMEPAGE="http://freeglut.sourceforge.net/"
@@ -20,8 +20,12 @@ DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
+
 	# fixes bug #97390
 	epatch ${FILESDIR}/${P}-macos.patch
+
+	# bug #134586
+	replace-flags -O3 -O2
 }
 
 src_install() {

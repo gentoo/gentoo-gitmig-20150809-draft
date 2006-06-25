@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.32 2006/06/06 18:02:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.33 2006/06/25 22:09:32 spyderous Exp $
+
+  25 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  freeglut-2.4.0.ebuild:
+  (#134586) Replace -O3 with -O2.
 
   06 Jun 2006; Simon Stelling <blubb@gentoo.org> freeglut-2.4.0.ebuild:
   stable on amd64
