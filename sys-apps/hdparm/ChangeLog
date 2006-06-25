@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.77 2006/03/19 22:01:58 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.78 2006/06/25 04:43:52 vapier Exp $
+
+*hdparm-6.6 (25 Jun 2006)
+
+  25 Jun 2006; Mike Frysinger <vapier@gentoo.org> files/hdparm-init-7,
+  files/hdparm-conf.d.3, +hdparm-6.6.ebuild:
+  Version bump and add initial support for SATA drives #130330.
 
   19 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> hdparm-6.3.ebuild:
   Stable on alpha as per bug #125656

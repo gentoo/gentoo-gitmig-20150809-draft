@@ -25,7 +25,7 @@ depend() {
 }
 
 do_hdparm() {
-	if [[ ${args:=$all_args} ]] ; then
+	if [[ -n ${args:=${all_args} ${!extra_args}} ]] ; then
 		local orgdevice=$(readlink -f ${device})
 		if [[ -b ${orgdevice} ]] ; then
 			ebegin "Running hdparm on ${device}"
@@ -35,96 +35,105 @@ do_hdparm() {
 	fi
 }
 
-start() {
+scan_devfs() {
+	extra_args="pata_all_args"
 
-	if [ -e /dev/.devfs ] && [ -d /dev/ide ]
-	then
+	# devfs compatible systems
+	for device in $(find /dev/ide -name disc)
+	do
+		args=''
 
-		# devfs compatible systems
-		for device in $(find /dev/ide -name disc)
+		for alias in /dev/hd?
 		do
-
-			args=''
-
-			for alias in /dev/hd?
-			do
-				if [ $alias -ef $device ]
-				then
-					device=$alias
-					eval args=\${`basename $alias`_args}
-					break
-				fi
-			done
-
-			[ -z "$args" ] && for alias in /dev/discs/*
-			do
-				if [ $alias/disc -ef $device ]
-				then
-					device=$alias/disc
-					eval args=\${`basename $alias`_args}
-					break
-				fi
-			done
-
-			do_hdparm
-
-		done
-
-		for device in $(find /dev/ide -name cd)
-		do
-
-			args=''
-
-			for alias in /dev/hd?
-			do
-				if [ $alias -ef $device ]
-				then
-					device=$alias
-					eval args=\${`basename $alias`_args}
-					break
-				fi
-			done
-
-			[ -z "$args" ] && for alias in /dev/cdroms/*
-			do
-				if [ $alias -ef $device ]
-				then
-					device=$alias
-					eval args=\${`basename $alias`_args}
-					break
-				fi
-			done
-
-			do_hdparm
-
-		done
-
-		let count=0
-		# of course, the sort approach would fail here if any of the
-		# host/bus/target/lun numbers reached 2 digits..
-		for device in $(find /dev/ide -name generic | sort)
-		do
-			eval args=\${generic${count}_args}
-			do_hdparm
-			let count=count+1
-		done
-
-	else
-
-		# non-devfs compatible system
-		for device in /dev/hd?
-		do
-			# check that the block device really exists
-			# by opening it for reading
-			local errmsg status
-			errmsg=$(: 2>&1 <$device)
-			status=$?
-			if [[ -b $device ]] && [[ ${status} == 0 || ${errmsg} == *": No medium found" ]]
+			if [ $alias -ef $device ]
 			then
-				eval args=\${`basename $device`_args}
-				do_hdparm
+				device=$alias
+				eval args=\${`basename $alias`_args}
+				break
 			fi
 		done
 
+		[ -z "$args" ] && for alias in /dev/discs/*
+		do
+			if [ $alias/disc -ef $device ]
+			then
+				device=$alias/disc
+				eval args=\${`basename $alias`_args}
+				break
+			fi
+		done
+
+		do_hdparm
+
+	done
+
+	for device in $(find /dev/ide -name cd)
+	do
+
+		args=''
+
+		for alias in /dev/hd?
+		do
+			if [ $alias -ef $device ]
+			then
+				device=$alias
+				eval args=\${`basename $alias`_args}
+				break
+			fi
+		done
+
+		[ -z "$args" ] && for alias in /dev/cdroms/*
+		do
+			if [ $alias -ef $device ]
+			then
+				device=$alias
+				eval args=\${`basename $alias`_args}
+				break
+			fi
+		done
+
+		do_hdparm
+	done
+
+	local count=0
+	# of course, the sort approach would fail here if any of the
+	# host/bus/target/lun numbers reached 2 digits..
+	for device in $(find /dev/ide -name generic | sort)
+	do
+		eval args=\${generic${count}_args}
+		do_hdparm
+		((++count))
+	done
+}
+
+scan_nondevfs() {
+	# non-devfs compatible system
+	for device in /dev/hd? /dev/sd? ; do
+		case ${device} in
+			/dev/hd*)  extra_args="pata_all_args" ;;
+			/dev/sd*)  extra_args="sata_all_args" ;;
+			*)         extra_args="" ;;
+		esac
+
+		# check that the block device really exists by
+		# opening it for reading
+		local errmsg status
+		errmsg=$(: 2>&1 <$device)
+		status=$?
+		if [[ -b $device ]] && \
+		   [[ ${status} == 0 || ${errmsg} == *": No medium found" ]]
+		then
+			local conf_var="${device##*/}_args"
+			args=${!conf_var}
+			do_hdparm
+		fi
+	done
+}
+
+start() {
+	if [[ -e /dev/.devfs ]] && [[ -d /dev/ide ]] ; then
+		scan_devfs
+	else
+		scan_nondevfs
 	fi
 }
