@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.25 2006/06/25 09:14:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.26 2006/06/25 09:16:09 corsair Exp $
+
+  25 Jun 2006; Markus Rothe <corsair@gentoo.org> ChangeLog:
+  machine freezed before digest have been commited. fixing
 
   25 Jun 2006; Markus Rothe <corsair@gentoo.org>
   autoconf-wrapper-3.2.ebuild:
