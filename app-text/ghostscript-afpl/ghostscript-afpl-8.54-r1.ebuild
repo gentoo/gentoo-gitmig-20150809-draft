@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.54-r1.ebuild,v 1.2 2006/06/25 11:18:13 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.54-r1.ebuild,v 1.3 2006/06/25 14:15:21 dertobi123 Exp $
 
 inherit autotools elisp-common eutils versionator
 
@@ -18,7 +18,7 @@ SRC_URI="cjk? ( ftp://ftp.gyve.org/pub/gs-cjk/adobe-cmaps-200406.tar.gz
 
 LICENSE="Aladdin"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE="X cups cjk emacs gtk jpeg2k"
 
 DEP="virtual/libc
