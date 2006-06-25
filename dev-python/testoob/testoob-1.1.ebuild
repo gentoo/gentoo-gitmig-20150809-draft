@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/testoob-1.1.ebuild,v 1.1 2006/06/25 08:18:52 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/testoob-1.1.ebuild,v 1.2 2006/06/25 12:30:38 lucass Exp $
 
 inherit distutils eutils
 
@@ -23,6 +23,5 @@ DOCS="docs/*"
 
 src_test() {
 	distutils_python_version
-	PYTHONPATH="${D}/usr/$(get_libdir)/python${PYVER}/site-packages" \
-		${python} tests/alltests.py || die "alltests.py failed"
+	PYTHONPATH="src" "${python}" tests/alltests.py || die "alltests.py failed"
 }
