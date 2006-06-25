@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.54 2006/04/16 07:15:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.55 2006/06/25 18:07:17 nichoj Exp $
+
+  25 Jun 2006; Joshua Nichols <nichoj@gentoo.org>
+  +files/ibm-jdk-bin-1.4.env, +files/ibm-jdk-bin-1.5.env:
+  Revision bumps to add support for new Java system.
 
   16 Apr 2006; Mike Frysinger <vapier@gentoo.org>
   ibm-jdk-bin-1.4.2.04.ebuild, ibm-jdk-bin-1.5.0.ebuild:
