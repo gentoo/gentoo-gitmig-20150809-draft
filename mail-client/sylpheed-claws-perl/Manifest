@@ -1,6 +1,42 @@
-MD5 a50f800a0bcfd4f2bda72459dd9fb457 ChangeLog 1366
-MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-perl-0.6 310
-MD5 fa04e7a7dbee249f59e65a2ebba15d0f files/digest-sylpheed-claws-perl-0.9 310
-MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST sylpheed-claws-extra-plugins-2.0.0.tar.bz2 2935762 RMD160 09ba59e1da4eacf0a50c2271cbadd0b44212285f SHA1 68c96367942b0dab14a62e8fe3f0fdb2dc4cdd32 SHA256 88b01ccdece05adf3b1046c3ddcbd20ca3455d20e97f59bf1ea8d3fcbe1baf29
+DIST sylpheed-claws-extra-plugins-2.1.0.tar.bz2 3769926 RMD160 ca36b8b7972dd3e9f8ad843945fa377662819ac7 SHA1 de0492ca11f5b5f6969a904c62207e5878c75438 SHA256 3972f32bb37cd20da4489b18d886db9e1970231e39cf590570b2fa6f43013a71
+DIST sylpheed-claws-extra-plugins-2.3.0.tar.bz2 3901667 RMD160 64f026271d993de2c5895c251abf18c529b0244d SHA1 3bcee7f99ad5addd2aeea2bac4e8d63e8eff136f SHA256 45e30623f3908577518a474a2f308453654d1f6422a2f15ff27ec4fb934aa438
+EBUILD sylpheed-claws-perl-0.6.ebuild 1329 RMD160 314b04615e57c11e7d11665dff9891eaa7f87b54 SHA1 ab7e7a4330634b86a9497fc1e0548ba215ed7195 SHA256 6b478181bb4644f7984495ba8218513b3c2fe40743573aa8ca9c0a0921e02e1f
 MD5 1cedaef1bfe8d0a63222762f9523788a sylpheed-claws-perl-0.6.ebuild 1329
+RMD160 314b04615e57c11e7d11665dff9891eaa7f87b54 sylpheed-claws-perl-0.6.ebuild 1329
+SHA256 6b478181bb4644f7984495ba8218513b3c2fe40743573aa8ca9c0a0921e02e1f sylpheed-claws-perl-0.6.ebuild 1329
+EBUILD sylpheed-claws-perl-0.9.4.ebuild 1330 RMD160 ceb8936a517799c27f99f02fcaf8fd0f890fe505 SHA1 7bae990786ee0adbb1988c95b797da90af659d83 SHA256 e510e90ff5ef4ea45c06c4e4693b8453bc805b1b07375446ad37cc3d11866da9
+MD5 31265de88e3077f3f12c3dd528a0e196 sylpheed-claws-perl-0.9.4.ebuild 1330
+RMD160 ceb8936a517799c27f99f02fcaf8fd0f890fe505 sylpheed-claws-perl-0.9.4.ebuild 1330
+SHA256 e510e90ff5ef4ea45c06c4e4693b8453bc805b1b07375446ad37cc3d11866da9 sylpheed-claws-perl-0.9.4.ebuild 1330
+EBUILD sylpheed-claws-perl-0.9.ebuild 1329 RMD160 1682b8fce74b08b51fdc5aa2ce8275da43f4058d SHA1 f97ca8f756025095900e177177aa8b498d6ad72a SHA256 dfcd9802dcbd3aae236756f5eeecb9cc4b9efa8a7ba892340894239263dcbd9c
 MD5 88f56b882a3e3ff73026adb036759925 sylpheed-claws-perl-0.9.ebuild 1329
+RMD160 1682b8fce74b08b51fdc5aa2ce8275da43f4058d sylpheed-claws-perl-0.9.ebuild 1329
+SHA256 dfcd9802dcbd3aae236756f5eeecb9cc4b9efa8a7ba892340894239263dcbd9c sylpheed-claws-perl-0.9.ebuild 1329
+MISC ChangeLog 1508 RMD160 22eeb24dcf1cb26dfddf29af886a615034e8af88 SHA1 c243ea7eed317feeee3def975a884fc691ab28e0 SHA256 d942c0c96e17ada0c1079342b9af25d034b99f3a70fb5a0efedb480409206037
+MD5 63aad5795a030360ffb8bc4819900b34 ChangeLog 1508
+RMD160 22eeb24dcf1cb26dfddf29af886a615034e8af88 ChangeLog 1508
+SHA256 d942c0c96e17ada0c1079342b9af25d034b99f3a70fb5a0efedb480409206037 ChangeLog 1508
+MISC metadata.xml 392 RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 SHA1 8fb3309b9af5ec084343baccfcdb7a391785bcc3 SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3
+MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
+RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
+SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
+MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-perl-0.6 310
+RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-perl-0.6 310
+SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-perl-0.6 310
+MD5 fa04e7a7dbee249f59e65a2ebba15d0f files/digest-sylpheed-claws-perl-0.9 310
+RMD160 e2553b3aa387cab2aa9eb1999b189f0d56ba0db4 files/digest-sylpheed-claws-perl-0.9 310
+SHA256 6ee49111a07e33722bf03636866deb76857ab654485b0c22c20d2e3a1e7c04df files/digest-sylpheed-claws-perl-0.9 310
+MD5 1501d40d43dfd903395e7b22ed0e67b2 files/digest-sylpheed-claws-perl-0.9.4 310
+RMD160 20b0fdb7e91f86506806175b41bc16e93f8757a1 files/digest-sylpheed-claws-perl-0.9.4 310
+SHA256 2affdaf11cde193787ad60825dadfdc3a54087bdd5f0b0c8ced4cd4510ff06fc files/digest-sylpheed-claws-perl-0.9.4 310
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEng6h6J2i8a8J4okRAnhtAKCMJTOy0L6BmRPDZ3NLgVDYUeEacACeLDdT
+JgH1bA83FPmGKDPJj9IdwZo=
+=VJp/
+-----END PGP SIGNATURE-----
