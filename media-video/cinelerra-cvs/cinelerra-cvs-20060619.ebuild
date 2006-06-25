@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20060619.ebuild,v 1.1 2006/06/25 23:02:14 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20060619.ebuild,v 1.2 2006/06/25 23:12:53 zypher Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -19,7 +19,7 @@ IUSE="3dnow alsa esd mmx oss static"
 
 RDEPEND="!media-video/cinelerra
 	media-libs/libpng
-	media-libs/libdv
+	>=media-libs/libdv-0.104
 	media-libs/faad2
 	media-libs/faac
 	media-libs/a52dec
