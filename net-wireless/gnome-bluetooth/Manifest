@@ -1,36 +1,110 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d997ecdfffcde0eb59ef6e1af80740b3 ChangeLog 4953
+AUX 0.6.0-segv.patch 458 RMD160 601a86e3a80d4a6c5f0a2cbdbb85c103f4cb07e7 SHA1 e708ce7a8608b842cfaa09f343a9deeda9515f52 SHA256 f4ff281c9edffe1fb57552f11353adf3ee07f6616c01bd664a8f28927ba6ecf5
 MD5 54d3d1f463b503f1ad2fe16ab183fe4b files/0.6.0-segv.patch 458
-MD5 ff63b2b07eb50db8962f544a45028bee files/digest-gnome-bluetooth-0.4.1 73
-MD5 6da6c9018b79e0077f1a3bb071a01cef files/digest-gnome-bluetooth-0.5.1 73
-MD5 6da6c9018b79e0077f1a3bb071a01cef files/digest-gnome-bluetooth-0.5.1-r1 73
-MD5 6da6c9018b79e0077f1a3bb071a01cef files/digest-gnome-bluetooth-0.5.1-r2 73
-MD5 b81e2da1f32ba9db780ac8fbf3cf848a files/digest-gnome-bluetooth-0.6.0 74
-MD5 b81e2da1f32ba9db780ac8fbf3cf848a files/digest-gnome-bluetooth-0.6.0-r1 74
-MD5 a2f731c566d5d79f128c327be6c1b5fc files/digest-gnome-bluetooth-0.7.0 74
-MD5 a2f731c566d5d79f128c327be6c1b5fc files/digest-gnome-bluetooth-0.7.0-r1 74
+RMD160 601a86e3a80d4a6c5f0a2cbdbb85c103f4cb07e7 files/0.6.0-segv.patch 458
+SHA256 f4ff281c9edffe1fb57552f11353adf3ee07f6616c01bd664a8f28927ba6ecf5 files/0.6.0-segv.patch 458
+AUX gnome-bluetooth-0.4.1-gtk24.patch 2340 RMD160 59471ec69c77ce211f442df726597df58d48a8a6 SHA1 f6aea2075b4539acfd9285fb9d379326428b4304 SHA256 278dc6857281b3f94e2d99e7c54e5443811a1ba9d824b85f9092c005ada7b7ff
 MD5 9c859b033ee9e338893bc5bc3ea21d5a files/gnome-bluetooth-0.4.1-gtk24.patch 2340
+RMD160 59471ec69c77ce211f442df726597df58d48a8a6 files/gnome-bluetooth-0.4.1-gtk24.patch 2340
+SHA256 278dc6857281b3f94e2d99e7c54e5443811a1ba9d824b85f9092c005ada7b7ff files/gnome-bluetooth-0.4.1-gtk24.patch 2340
+AUX gnome-bluetooth-0.5.1-gnome.patch 602 RMD160 0b31b612abb5ee4dcac5d7c1e4368b4b2e6749e6 SHA1 5f492913fb5b3bcea415e47190cfa5169f235538 SHA256 0ccd064487ba8a903e63c4172dbff31d9393da89b68427c3210306f849b2dc99
 MD5 c9cdf6988fe751bbd26baf8b6eba1a34 files/gnome-bluetooth-0.5.1-gnome.patch 602
+RMD160 0b31b612abb5ee4dcac5d7c1e4368b4b2e6749e6 files/gnome-bluetooth-0.5.1-gnome.patch 602
+SHA256 0ccd064487ba8a903e63c4172dbff31d9393da89b68427c3210306f849b2dc99 files/gnome-bluetooth-0.5.1-gnome.patch 602
+AUX gnome-bluetooth-0.5.1-gobcrash.patch 1099 RMD160 8c399cb2be8c85634370cd15ff76477a3095dbc2 SHA1 606673f5f87ec7747e40973e30360a8b70cc40a2 SHA256 a8d9669b3f14bcae9549e575e6f2cdd2aa46367b49a2cefae2abb6d72aba4fac
 MD5 1b075164be0f7aab81714a3efd302a65 files/gnome-bluetooth-0.5.1-gobcrash.patch 1099
+RMD160 8c399cb2be8c85634370cd15ff76477a3095dbc2 files/gnome-bluetooth-0.5.1-gobcrash.patch 1099
+SHA256 a8d9669b3f14bcae9549e575e6f2cdd2aa46367b49a2cefae2abb6d72aba4fac files/gnome-bluetooth-0.5.1-gobcrash.patch 1099
+AUX gnome-bluetooth-0.5.1-obex_xfer_rate.patch 2108 RMD160 dcf65207e3c2b0af4a5232b6d6039390f42f2c4b SHA1 df5670fb1e203e92fd389dbde230011a44b355c6 SHA256 ad76c931c2cb869f06e696abd7efd20ebc01b5b2ff5a8917b9d5c2b2c9228bd0
 MD5 a254aa9cdd6ad1e9e5f2e7a78c636b25 files/gnome-bluetooth-0.5.1-obex_xfer_rate.patch 2108
+RMD160 dcf65207e3c2b0af4a5232b6d6039390f42f2c4b files/gnome-bluetooth-0.5.1-obex_xfer_rate.patch 2108
+SHA256 ad76c931c2cb869f06e696abd7efd20ebc01b5b2ff5a8917b9d5c2b2c9228bd0 files/gnome-bluetooth-0.5.1-obex_xfer_rate.patch 2108
+AUX gnome-bluetooth-0.6.0-libdir.patch 3089 RMD160 d2ee05b37df426790185f0c582672c843ad43327 SHA1 77a9f17f237ec3adcd04b16ab9123c660fca5dfd SHA256 3a7660d4e24f2303e06660d9fa64bacd47a3286e880893f7f3ebcf04cc11f010
 MD5 7a336fcfbc8755f917c623b810172ef5 files/gnome-bluetooth-0.6.0-libdir.patch 3089
+RMD160 d2ee05b37df426790185f0c582672c843ad43327 files/gnome-bluetooth-0.6.0-libdir.patch 3089
+SHA256 3a7660d4e24f2303e06660d9fa64bacd47a3286e880893f7f3ebcf04cc11f010 files/gnome-bluetooth-0.6.0-libdir.patch 3089
+AUX gnome-bluetooth-0.7.0-aclocal_openobex.patch 2501 RMD160 da41d9e36e7d3ef0507a7e62c2ef92234fdc8503 SHA1 c0cc772346dfcdb272f4e95a7efa3922b8411461 SHA256 2cbe140b226702efe64a57fc304468698556f8294e22bb6e87f0b01370d79f26
 MD5 8cc59eb7dff1c8ee2161394f174d84fa files/gnome-bluetooth-0.7.0-aclocal_openobex.patch 2501
+RMD160 da41d9e36e7d3ef0507a7e62c2ef92234fdc8503 files/gnome-bluetooth-0.7.0-aclocal_openobex.patch 2501
+SHA256 2cbe140b226702efe64a57fc304468698556f8294e22bb6e87f0b01370d79f26 files/gnome-bluetooth-0.7.0-aclocal_openobex.patch 2501
+AUX gnome-bluetooth-0.7.0-as-needed.patch 2288 RMD160 6989beb7890c1381e2b95cef26a8bd13cebbb6e1 SHA1 44b2eb6784f8d88d8a224ddd3047e382aa010683 SHA256 8f50737ccee66a813e5674f5775c4100bf5888d29fd5c5fc44b68d283883f50e
 MD5 8afe2d71f2823ecf6db9f3db8a17b121 files/gnome-bluetooth-0.7.0-as-needed.patch 2288
+RMD160 6989beb7890c1381e2b95cef26a8bd13cebbb6e1 files/gnome-bluetooth-0.7.0-as-needed.patch 2288
+SHA256 8f50737ccee66a813e5674f5775c4100bf5888d29fd5c5fc44b68d283883f50e files/gnome-bluetooth-0.7.0-as-needed.patch 2288
+DIST gnome-bluetooth-0.4.1.tar.gz 660510 RMD160 57a37e50f7b0b41a13cf21623aa5c91cd81fc392 SHA1 46b647880dadfb93deca9109983ab8d79dbbce41 SHA256 2cefbd1f7aa6ca29ccd4a0c430f1fc68005239923d64ea6ede61091c7b91b742
+DIST gnome-bluetooth-0.5.1.tar.gz 821273 RMD160 5ab7ffb139557ea208ce3c820cc05613e972c540 SHA1 e6aa74d1957de3cdcc15a14ceb9b4b776d1544ed SHA256 ed0709c5ca6fbd03a87b9e132013a989ee3ce57575000a32a4c4e4a9e948bee9
+DIST gnome-bluetooth-0.6.0.tar.bz2 752169 RMD160 9ec10d2087eb49498211b1f1c7aa9e0bedf2f81b SHA1 7a2b4623cb5da0ee00fbe6d78c9b664df785e831 SHA256 1d874a1a4ad102528a09d40d4354abc817a0d6955baa6f25d0e930bd14d34cc1
+DIST gnome-bluetooth-0.7.0.tar.bz2 812924 RMD160 595870a218c92c0a88a3bf3416af5d7fe91e1987 SHA1 0962ca45d8a119b52bbf49fb3667d987181bc2d3 SHA256 a5ff31fc9a12e40409200574301c536a8cd823d61610028054022e1323c0c69a
+EBUILD gnome-bluetooth-0.4.1.ebuild 1261 RMD160 c9733f724661d0b87d56312a3e476db2ed9776f2 SHA1 8ef1705ec9f42bcd3f128f98a8412dae376dc94d SHA256 057b23207ad6db4a7f5c626d11f75f5a84b3d1a09fff17db9765ac6ac5aac5e8
 MD5 37d60d0c9b935e84bf52f93e2438dfc9 gnome-bluetooth-0.4.1.ebuild 1261
+RMD160 c9733f724661d0b87d56312a3e476db2ed9776f2 gnome-bluetooth-0.4.1.ebuild 1261
+SHA256 057b23207ad6db4a7f5c626d11f75f5a84b3d1a09fff17db9765ac6ac5aac5e8 gnome-bluetooth-0.4.1.ebuild 1261
+EBUILD gnome-bluetooth-0.5.1-r1.ebuild 1347 RMD160 c5160054b42c57427a249599ba8ad053d98b0214 SHA1 10b304873cff4189495f84c71841bd4e24e91fc9 SHA256 4a319bf72cc55c6ec8b4904ab0dc79662425ad028b9cbd3f21fe8732e65742b0
 MD5 471bab257c095d36741706ce573a08d3 gnome-bluetooth-0.5.1-r1.ebuild 1347
+RMD160 c5160054b42c57427a249599ba8ad053d98b0214 gnome-bluetooth-0.5.1-r1.ebuild 1347
+SHA256 4a319bf72cc55c6ec8b4904ab0dc79662425ad028b9cbd3f21fe8732e65742b0 gnome-bluetooth-0.5.1-r1.ebuild 1347
+EBUILD gnome-bluetooth-0.5.1-r2.ebuild 1382 RMD160 a3cb6edc5251a4349a207849ded6697d23889265 SHA1 0135fd4607870784a6a980ef4cadaec8269ec06f SHA256 22fa313da39553e782062c0eb3b6ce33d253ca53c9dd53748897441c0763f324
 MD5 8be3b2e5c4ab65eb0947646d0cf4f88a gnome-bluetooth-0.5.1-r2.ebuild 1382
+RMD160 a3cb6edc5251a4349a207849ded6697d23889265 gnome-bluetooth-0.5.1-r2.ebuild 1382
+SHA256 22fa313da39553e782062c0eb3b6ce33d253ca53c9dd53748897441c0763f324 gnome-bluetooth-0.5.1-r2.ebuild 1382
+EBUILD gnome-bluetooth-0.5.1.ebuild 1289 RMD160 56e445e0ab17e10aacab34ff19fc43d24e0721b2 SHA1 811b6a87a6bb330fbc98eeee5039691dbd3c3fe4 SHA256 58f53b914df8a0430be51c663ca5167e1ebbca1aabfc98e6ff4758ed34c73f77
 MD5 ca451d450412e5dad4d0ca6c058b6891 gnome-bluetooth-0.5.1.ebuild 1289
+RMD160 56e445e0ab17e10aacab34ff19fc43d24e0721b2 gnome-bluetooth-0.5.1.ebuild 1289
+SHA256 58f53b914df8a0430be51c663ca5167e1ebbca1aabfc98e6ff4758ed34c73f77 gnome-bluetooth-0.5.1.ebuild 1289
+EBUILD gnome-bluetooth-0.6.0-r1.ebuild 1433 RMD160 919ea5f94c64a6ec6295ee7d9b2c858b4d465ccb SHA1 4e94912709ef5154a00d4d629f0fb1f1383124e9 SHA256 d1829204533e162e105a7a98f30525da9b9900d03c1ba6a6d13fc8967a8f99ab
 MD5 79a7f6c060b36fef60a48e584567c7f6 gnome-bluetooth-0.6.0-r1.ebuild 1433
+RMD160 919ea5f94c64a6ec6295ee7d9b2c858b4d465ccb gnome-bluetooth-0.6.0-r1.ebuild 1433
+SHA256 d1829204533e162e105a7a98f30525da9b9900d03c1ba6a6d13fc8967a8f99ab gnome-bluetooth-0.6.0-r1.ebuild 1433
+EBUILD gnome-bluetooth-0.6.0.ebuild 1404 RMD160 9fa0c377c0bc0624741f9fe4e402aee56fa67ac9 SHA1 98f90936956470996d30df40aae99b5ab4f520c8 SHA256 148d0d4a2f8a2457fa04c336a7ba1c4d69e48812fd3231dbf56ba9c8ffbf7c13
 MD5 05d959e26d478b4c14acf590e58bdbfa gnome-bluetooth-0.6.0.ebuild 1404
-MD5 35ce162760c0deac3789b0c024bc0a73 gnome-bluetooth-0.7.0-r1.ebuild 1517
+RMD160 9fa0c377c0bc0624741f9fe4e402aee56fa67ac9 gnome-bluetooth-0.6.0.ebuild 1404
+SHA256 148d0d4a2f8a2457fa04c336a7ba1c4d69e48812fd3231dbf56ba9c8ffbf7c13 gnome-bluetooth-0.6.0.ebuild 1404
+EBUILD gnome-bluetooth-0.7.0-r1.ebuild 1516 RMD160 4a522c85fbea5e1763d8d98e7bd1e4495f05ec2e SHA1 7f2e2f69c6d3dcf8f52123d440c737755b0b2505 SHA256 61cd864175943312523573059b6b3b1cb2ace341e20c1e07b5361c4cea9d7e60
+MD5 47c63c1ae6bb315439edaae5d198d2e0 gnome-bluetooth-0.7.0-r1.ebuild 1516
+RMD160 4a522c85fbea5e1763d8d98e7bd1e4495f05ec2e gnome-bluetooth-0.7.0-r1.ebuild 1516
+SHA256 61cd864175943312523573059b6b3b1cb2ace341e20c1e07b5361c4cea9d7e60 gnome-bluetooth-0.7.0-r1.ebuild 1516
+EBUILD gnome-bluetooth-0.7.0.ebuild 1511 RMD160 a64a80f3e67da8e2a9b3a85587242446fd5c3d1d SHA1 3c038708f44c726c5c848647cceafe6b28223f8c SHA256 de5bacfe5f7140bb07463ec4a8cff5026d110bcb3c4f470a9f8334c83d75015f
 MD5 7b69b6ce2c9525ab14dee0e15bd971ff gnome-bluetooth-0.7.0.ebuild 1511
+RMD160 a64a80f3e67da8e2a9b3a85587242446fd5c3d1d gnome-bluetooth-0.7.0.ebuild 1511
+SHA256 de5bacfe5f7140bb07463ec4a8cff5026d110bcb3c4f470a9f8334c83d75015f gnome-bluetooth-0.7.0.ebuild 1511
+MISC ChangeLog 5063 RMD160 221270c2f0c5e64a79665f19531e0c98d3ce98cf SHA1 3d9f583244d9408036fb6a71ff17ba15d377f9fb SHA256 a7ec26ca55196e648a5fa675f8cb08fd87fc1c6a07b9c8bc5cfff4d8abbeb00d
+MD5 aaa5c31fb7f2af14cd8c412126effa33 ChangeLog 5063
+RMD160 221270c2f0c5e64a79665f19531e0c98d3ce98cf ChangeLog 5063
+SHA256 a7ec26ca55196e648a5fa675f8cb08fd87fc1c6a07b9c8bc5cfff4d8abbeb00d ChangeLog 5063
+MISC metadata.xml 235 RMD160 fb83fc852c808450a2cc256fa9b9c7c784b884e2 SHA1 4d6be75db06dc110a472d910e8edeb03ba99e4f9 SHA256 492cfc1c578fed368c8ae0ed98fbf455f9a5fa097235004b6cf3a3981d6fa983
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
+RMD160 fb83fc852c808450a2cc256fa9b9c7c784b884e2 metadata.xml 235
+SHA256 492cfc1c578fed368c8ae0ed98fbf455f9a5fa097235004b6cf3a3981d6fa983 metadata.xml 235
+MD5 9343ecdc872803b81a8b8060209fcab1 files/digest-gnome-bluetooth-0.4.1 265
+RMD160 22bdc3bc6e149ad8229fb2df67664ed4ac088386 files/digest-gnome-bluetooth-0.4.1 265
+SHA256 47686719656d48cab5c2c46908809c04112556c4b3bbb8935fbb23173a045397 files/digest-gnome-bluetooth-0.4.1 265
+MD5 53a35be3720edc69345e0ec929acdeaf files/digest-gnome-bluetooth-0.5.1 265
+RMD160 32754ae7288b54095334470117d388b4723650cc files/digest-gnome-bluetooth-0.5.1 265
+SHA256 6265445b98e5a2976951546e79b07014ae2b0006cd5527222ab0a63630859793 files/digest-gnome-bluetooth-0.5.1 265
+MD5 53a35be3720edc69345e0ec929acdeaf files/digest-gnome-bluetooth-0.5.1-r1 265
+RMD160 32754ae7288b54095334470117d388b4723650cc files/digest-gnome-bluetooth-0.5.1-r1 265
+SHA256 6265445b98e5a2976951546e79b07014ae2b0006cd5527222ab0a63630859793 files/digest-gnome-bluetooth-0.5.1-r1 265
+MD5 53a35be3720edc69345e0ec929acdeaf files/digest-gnome-bluetooth-0.5.1-r2 265
+RMD160 32754ae7288b54095334470117d388b4723650cc files/digest-gnome-bluetooth-0.5.1-r2 265
+SHA256 6265445b98e5a2976951546e79b07014ae2b0006cd5527222ab0a63630859793 files/digest-gnome-bluetooth-0.5.1-r2 265
+MD5 14bb54eecc8242c9578f44954ef99b43 files/digest-gnome-bluetooth-0.6.0 268
+RMD160 29fb4f0e1a2713af9c33beb817fcee5f78c87bbb files/digest-gnome-bluetooth-0.6.0 268
+SHA256 f650f33584ef4def2fcedddaed517d87aa3cfc0052091ca23af7628a15231711 files/digest-gnome-bluetooth-0.6.0 268
+MD5 14bb54eecc8242c9578f44954ef99b43 files/digest-gnome-bluetooth-0.6.0-r1 268
+RMD160 29fb4f0e1a2713af9c33beb817fcee5f78c87bbb files/digest-gnome-bluetooth-0.6.0-r1 268
+SHA256 f650f33584ef4def2fcedddaed517d87aa3cfc0052091ca23af7628a15231711 files/digest-gnome-bluetooth-0.6.0-r1 268
+MD5 5eb2b186978a3ab1161bcef4ce460688 files/digest-gnome-bluetooth-0.7.0 268
+RMD160 0d96d2ccf259a891ae85523598a529673d3b104b files/digest-gnome-bluetooth-0.7.0 268
+SHA256 c66d0be2020c73826b8fdbc9253343cf01c26253024f97461bd3f4fb6d41ceb3 files/digest-gnome-bluetooth-0.7.0 268
+MD5 5eb2b186978a3ab1161bcef4ce460688 files/digest-gnome-bluetooth-0.7.0-r1 268
+RMD160 0d96d2ccf259a891ae85523598a529673d3b104b files/digest-gnome-bluetooth-0.7.0-r1 268
+SHA256 c66d0be2020c73826b8fdbc9253343cf01c26253024f97461bd3f4fb6d41ceb3 files/digest-gnome-bluetooth-0.7.0-r1 268
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEYlqsjG8pv1lIUX4RArTcAKDZVvUMv1Q0vVvKQb5VnN1Vp3oxLwCg6IFF
-+jT5s1O71CMw/E7FD5vxPk4=
-=n1DX
+iD8DBQFEnibxjG8pv1lIUX4RAvfTAJ9OM7vdDkXZXo+Vs8RvlHfJfYE4iwCeIwxs
+Mlv8+zCjQaKgc6v0d9nquXA=
+=4Rzr
 -----END PGP SIGNATURE-----
