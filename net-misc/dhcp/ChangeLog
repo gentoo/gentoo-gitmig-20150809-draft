@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.105 2006/06/25 13:20:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.106 2006/06/25 14:11:53 gmsoft Exp $
+
+  25 Jun 2006; Guy Martin <gmsoft@gentoo.org> dhcp-3.0.3-r9.ebuild:
+  Stable on hppa.
 
   25 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   dhcp-3.0.3-r9.ebuild:
