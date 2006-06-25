@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.3.1-r1.ebuild,v 1.1 2006/06/08 11:09:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.3.1-r1.ebuild,v 1.2 2006/06/25 03:15:06 vapier Exp $
 
 inherit multilib
 
@@ -20,14 +20,6 @@ DEPEND="dev-libs/libusb
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e 's:/reader.conf.d::' \
-		etc/Makefile.in #135612
-}
 
 src_compile() {
 	econf \
