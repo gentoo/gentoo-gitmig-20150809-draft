@@ -75,7 +75,7 @@ KEYWORDS="~x86"
 # with the exception of any ARCH specific flags, i.e. "ppc", "sparc",
 # "x86" and "alpha".  This is a required variable.  If the ebuild doesn't 
 # use any USE flags, set to "".
-IUSE="X gnome"
+IUSE="gnome X"
 
 # A space delimited list of portage features to restrict. man 5 ebuild
 # for details.  Usually not needed.
@@ -134,7 +134,7 @@ src_install() {
 	# anything outside of DESTDIR; do this by reading and
 	# understanding the install part of the Makefiles.
 	# This is the preferred way to install.
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# When you hit a failure with emake, do not just use make. It is
 	# better to fix the Makefiles to allow proper parallelization.
@@ -146,10 +146,10 @@ src_install() {
 	# passed to ./configure as absolute paths (overriding the prefix
 	# setting).
 	#emake \
-	#	prefix=${D}/usr \
-	#	mandir=${D}/usr/share/man \
-	#	infodir=${D}/usr/share/info \
-	#	libdir=${D}/usr/$(get_libdir) \
+	#	prefix="${D}"/usr \
+	#	mandir="${D}"/usr/share/man \
+	#	infodir="${D}"/usr/share/info \
+	#	libdir="${D}"/usr/$(get_libdir) \
 	#	install || die "emake install failed"
 	# Again, verify the Makefiles!  We don't want anything falling
 	# outside of ${D}.
