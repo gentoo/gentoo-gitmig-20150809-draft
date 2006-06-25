@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/alien
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.13 2005/10/13 17:59:04 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.14 2006/06/25 15:21:49 lordvan Exp $
+
+*alien-8.64 (25 Jun 2006)
+
+  25 Jun 2006; Thomas Raschbacher <lordvan@gentoo.org> +alien-8.64.ebuild:
+  Version bump. fixes bug #135269 Thanks to Boris Fersing
+  <kernelsensei@gentoo.org> for reporting this.
 
   13 Oct 2005; Aron Griffis <agriffis@gentoo.org> alien-8.47.ebuild:
   Mark 8.47 stable on alpha
