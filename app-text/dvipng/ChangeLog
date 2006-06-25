@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.7 2006/06/19 06:33:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.8 2006/06/25 12:16:14 dertobi123 Exp $
+
+  25 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org> dvipng-1.8.ebuild:
+  Added ~ppc, bug #131761
 
   19 Jun 2006; Markus Rothe <corsair@gentoo.org> dvipng-1.8.ebuild:
   Added ~ppc64; bug #131761
