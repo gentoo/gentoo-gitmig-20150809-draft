@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.295 2006/06/24 23:38:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.296 2006/06/25 22:13:32 cardoe Exp $
 
 # Keep them sorted
 
@@ -264,7 +264,6 @@ prelude - Adds support/bindings for the Prelude Intrusion Detection System
 profile - Adds profile support to builds of packages (will likely vary from ebuild to ebuild in support)
 python - Adds support/bindings for the Python language
 qdbm - Adds support for the qdbm (Quick Database Manager) library
-qt - Adds support for the Qt GUI/Application Toolkit
 qt3 - Adds support for the Qt GUI/Application Toolkit version 3.x
 qt4 - Adds support for the Qt GUI/Application Toolkit version 4.x
 quicktime - Adds support for OpenQuickTime
