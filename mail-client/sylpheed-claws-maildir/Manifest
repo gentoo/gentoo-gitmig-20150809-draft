@@ -1,6 +1,42 @@
-MD5 03ffa9e95f3aac3498c4c2ce08834545 ChangeLog 3794
-MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-maildir-0.19 310
-MD5 5ca5fb343f8db75bb3935347183d5e5d files/digest-sylpheed-claws-maildir-0.7 64
-MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST maildir-0.7.tar.bz2 217732 RMD160 65932bfdc6c213723b55a89187fecb5f3f14c5a9 SHA1 d86f0acf9831532867c9603ad42746c491fd71ae SHA256 e34b857e742ec3a658062e7d8644ed99527e7a9f75c3f2ba7e715d6014ac11d0
+DIST sylpheed-claws-extra-plugins-2.0.0.tar.bz2 2935762 RMD160 09ba59e1da4eacf0a50c2271cbadd0b44212285f SHA1 68c96367942b0dab14a62e8fe3f0fdb2dc4cdd32 SHA256 88b01ccdece05adf3b1046c3ddcbd20ca3455d20e97f59bf1ea8d3fcbe1baf29
+DIST sylpheed-claws-extra-plugins-2.3.0.tar.bz2 3901667 RMD160 64f026271d993de2c5895c251abf18c529b0244d SHA1 3bcee7f99ad5addd2aeea2bac4e8d63e8eff136f SHA256 45e30623f3908577518a474a2f308453654d1f6422a2f15ff27ec4fb934aa438
+EBUILD sylpheed-claws-maildir-0.19.ebuild 909 RMD160 92847a217b6e8d6a4bda4019d1c75dd2564b2bc6 SHA1 5f22521d644dab1405a5a034269b20aca098a114 SHA256 6eda0e3a55c06249d3fc8b474214fa36366e4acc053243d4ea7b5b374a8223d9
 MD5 6fa37ca89d6e4db25783a0aef193c0e8 sylpheed-claws-maildir-0.19.ebuild 909
+RMD160 92847a217b6e8d6a4bda4019d1c75dd2564b2bc6 sylpheed-claws-maildir-0.19.ebuild 909
+SHA256 6eda0e3a55c06249d3fc8b474214fa36366e4acc053243d4ea7b5b374a8223d9 sylpheed-claws-maildir-0.19.ebuild 909
+EBUILD sylpheed-claws-maildir-0.24.1.ebuild 914 RMD160 6bf8913083caa744f3759f5b186f40f27ada5c62 SHA1 9d6d949047520c8519b00c042ebdbbf803eaa2e2 SHA256 9bb82be2fa26b30f7a1715e1d27d8807baa628867dd73c7a6ba25a07501ceca7
+MD5 df74bb00faa03ff9721112d2024627ce sylpheed-claws-maildir-0.24.1.ebuild 914
+RMD160 6bf8913083caa744f3759f5b186f40f27ada5c62 sylpheed-claws-maildir-0.24.1.ebuild 914
+SHA256 9bb82be2fa26b30f7a1715e1d27d8807baa628867dd73c7a6ba25a07501ceca7 sylpheed-claws-maildir-0.24.1.ebuild 914
+EBUILD sylpheed-claws-maildir-0.7.ebuild 748 RMD160 e6e2f56d23a57c4880bd5caf41cb316ab3e4d1dd SHA1 54b48ea45f2e5178c4b7fd540967d5e5ff8ef558 SHA256 e0a7e507aafe355127836229f90a7affebb5e6e0eab924df8d63091936e10b55
 MD5 576b6f595b1304a0ad6b262464bf3bbf sylpheed-claws-maildir-0.7.ebuild 748
+RMD160 e6e2f56d23a57c4880bd5caf41cb316ab3e4d1dd sylpheed-claws-maildir-0.7.ebuild 748
+SHA256 e0a7e507aafe355127836229f90a7affebb5e6e0eab924df8d63091936e10b55 sylpheed-claws-maildir-0.7.ebuild 748
+MISC ChangeLog 3944 RMD160 e285cee6f463a430c5d392d300af8f7d419c0a69 SHA1 028811c3e66a85a43e8d0afbdc4babc94c25371c SHA256 7abc238bd3c2ba2b7752bd5791257c47966e1f36d3ec6029b251cafb455694d9
+MD5 12e8df267e29a8352ea808fd1bfaea36 ChangeLog 3944
+RMD160 e285cee6f463a430c5d392d300af8f7d419c0a69 ChangeLog 3944
+SHA256 7abc238bd3c2ba2b7752bd5791257c47966e1f36d3ec6029b251cafb455694d9 ChangeLog 3944
+MISC metadata.xml 392 RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 SHA1 8fb3309b9af5ec084343baccfcdb7a391785bcc3 SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3
+MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
+RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
+SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
+MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-maildir-0.19 310
+RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-maildir-0.19 310
+SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-maildir-0.19 310
+MD5 1501d40d43dfd903395e7b22ed0e67b2 files/digest-sylpheed-claws-maildir-0.24.1 310
+RMD160 20b0fdb7e91f86506806175b41bc16e93f8757a1 files/digest-sylpheed-claws-maildir-0.24.1 310
+SHA256 2affdaf11cde193787ad60825dadfdc3a54087bdd5f0b0c8ced4cd4510ff06fc files/digest-sylpheed-claws-maildir-0.24.1 310
+MD5 7ca4bc7c1565c170158505c0f9000f7c files/digest-sylpheed-claws-maildir-0.7 238
+RMD160 09d7884d7926d962ad9a900c6971bb2a7bc6ba2f files/digest-sylpheed-claws-maildir-0.7 238
+SHA256 eda49442560363c8f58f5e8e787779d463ecd0b1edcf97ca43e21ff97b8ba42e files/digest-sylpheed-claws-maildir-0.7 238
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEngxM6J2i8a8J4okRAhUsAKCiiY0ov6/g2sxyFJ414oJJQnhe+ACfX8YH
+98llI7hO38O7F+xyH2ENpe0=
+=Q2Bx
+-----END PGP SIGNATURE-----

@@ -1,5 +1,13 @@
-DIST mailmbox-0.9.tar.gz 366757
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST mailmbox-0.9.tar.gz 366757 RMD160 a616b0eb131e2217b803df30aede91af5ab6e115 SHA1 d161b3cb56410418d219f3714d8d09afa784d45c SHA256 8503aa15171588d447375356c9980766f8ccb64f96e686deff847f012f5d1d37
 DIST sylpheed-claws-extra-plugins-2.0.0.tar.bz2 2935762 RMD160 09ba59e1da4eacf0a50c2271cbadd0b44212285f SHA1 68c96367942b0dab14a62e8fe3f0fdb2dc4cdd32 SHA256 88b01ccdece05adf3b1046c3ddcbd20ca3455d20e97f59bf1ea8d3fcbe1baf29
+DIST sylpheed-claws-extra-plugins-2.3.0.tar.bz2 3901667 RMD160 64f026271d993de2c5895c251abf18c529b0244d SHA1 3bcee7f99ad5addd2aeea2bac4e8d63e8eff136f SHA256 45e30623f3908577518a474a2f308453654d1f6422a2f15ff27ec4fb934aa438
+EBUILD sylpheed-claws-mailmbox-0.12.1.ebuild 894 RMD160 9c7ee3c489b53670323d828bbb0d756cbc4031e7 SHA1 2f5e9dd0c01749759d91a7eed6e52d0ee15fc838 SHA256 8900f58820f742229e02eb3794e27f1bf715edca2311f79be5747ff1ab10026e
+MD5 27ba93f93c4bbb9d9641a4d44540105d sylpheed-claws-mailmbox-0.12.1.ebuild 894
+RMD160 9c7ee3c489b53670323d828bbb0d756cbc4031e7 sylpheed-claws-mailmbox-0.12.1.ebuild 894
+SHA256 8900f58820f742229e02eb3794e27f1bf715edca2311f79be5747ff1ab10026e sylpheed-claws-mailmbox-0.12.1.ebuild 894
 EBUILD sylpheed-claws-mailmbox-0.9.ebuild 770 RMD160 9a90e52695876bec22c0ed17eba5bce173c22f8e SHA1 147e7db9c742f26e2a289526fcd560585af24454 SHA256 ede2fbebdd50078dec740899987f917ca55494be7f8d1cdb75c3b598a617609f
 MD5 5c814bac5c79c1d894f3281242f5cb9a sylpheed-claws-mailmbox-0.9.ebuild 770
 RMD160 9a90e52695876bec22c0ed17eba5bce173c22f8e sylpheed-claws-mailmbox-0.9.ebuild 770
@@ -8,17 +16,27 @@ EBUILD sylpheed-claws-mailmbox-1.10.ebuild 888 RMD160 8befb64b679bb05ad9c88cc40a
 MD5 a36dc73f9b263d81a8cc9b5b9e9b3fc1 sylpheed-claws-mailmbox-1.10.ebuild 888
 RMD160 8befb64b679bb05ad9c88cc40ab9f93bc5c7612a sylpheed-claws-mailmbox-1.10.ebuild 888
 SHA256 140bef62ad690535ff1f52dbfc839b094842d2ed70e3f4fdc2252f2a2fb648ba sylpheed-claws-mailmbox-1.10.ebuild 888
-MISC ChangeLog 2530 RMD160 0945759954d0334e670b578922d903bb2b92212b SHA1 3821a36f1f92dfcd4dbe016409634351a2eb5280 SHA256 f717e0c37ec6e73c53d4ceeab772bd1c888ec396b072a9c1dbc11a2c5f6e5adc
-MD5 c2d29e414f43be7d9bee8ab539d5719c ChangeLog 2530
-RMD160 0945759954d0334e670b578922d903bb2b92212b ChangeLog 2530
-SHA256 f717e0c37ec6e73c53d4ceeab772bd1c888ec396b072a9c1dbc11a2c5f6e5adc ChangeLog 2530
+MISC ChangeLog 2684 RMD160 ef389527d423114fd2d07ad7b06c1dcdf6ddf2ac SHA1 d4fec8bd51e30f3106f25fc1ff22d06b4c97df30 SHA256 5e9667f2071401a720cae1f19acf8e0f56bcdb0da7248848cae56efb24f3bafb
+MD5 9fbe6490ca2cb88a242db7b183b41772 ChangeLog 2684
+RMD160 ef389527d423114fd2d07ad7b06c1dcdf6ddf2ac ChangeLog 2684
+SHA256 5e9667f2071401a720cae1f19acf8e0f56bcdb0da7248848cae56efb24f3bafb ChangeLog 2684
 MISC metadata.xml 392 RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 SHA1 8fb3309b9af5ec084343baccfcdb7a391785bcc3 SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
 RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
 SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3 metadata.xml 392
-MD5 72109419685fb54ad908a857ff95a3f0 files/digest-sylpheed-claws-mailmbox-0.9 64
-RMD160 84b5632a9b69caa4c48549410f65ca093ea9762b files/digest-sylpheed-claws-mailmbox-0.9 64
-SHA256 570077bf67c8a13a092c2e95fb15c2d316e22a891dd457710137b5be4906431a files/digest-sylpheed-claws-mailmbox-0.9 64
+MD5 1501d40d43dfd903395e7b22ed0e67b2 files/digest-sylpheed-claws-mailmbox-0.12.1 310
+RMD160 20b0fdb7e91f86506806175b41bc16e93f8757a1 files/digest-sylpheed-claws-mailmbox-0.12.1 310
+SHA256 2affdaf11cde193787ad60825dadfdc3a54087bdd5f0b0c8ced4cd4510ff06fc files/digest-sylpheed-claws-mailmbox-0.12.1 310
+MD5 1430c245cd1eb34b7f1fd5ac05c98731 files/digest-sylpheed-claws-mailmbox-0.9 238
+RMD160 ce32fabc025c3ce899d99c39cbc9c842a6990474 files/digest-sylpheed-claws-mailmbox-0.9 238
+SHA256 f5abcee591df138c373d6310e3fefc597780b1baace9231eca4b6779da177d36 files/digest-sylpheed-claws-mailmbox-0.9 238
 MD5 5c2df7ccbafb5be7d3a4df7623487d33 files/digest-sylpheed-claws-mailmbox-1.10 310
 RMD160 3a461576fea7f0d5cc22e8f69ec336f15533942e files/digest-sylpheed-claws-mailmbox-1.10 310
 SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/digest-sylpheed-claws-mailmbox-1.10 310
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEng1S6J2i8a8J4okRAtspAJ0YRrVSp3OUN0AB1KB2QC3irzxtpgCfetvA
+gYTsDiRvV+tiGc5E/FWJivc=
+=FrBr
+-----END PGP SIGNATURE-----
