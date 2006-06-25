@@ -1192,8 +1192,6 @@ eant() {
 		fi
 	fi
 	
-	antflags="${antflags} -nouserlib -noclasspath"
-
 	if [[ -n ${JAVA_PKG_DEBUG} ]]; then
 		antflags="${antflags} -debug"
 	fi
