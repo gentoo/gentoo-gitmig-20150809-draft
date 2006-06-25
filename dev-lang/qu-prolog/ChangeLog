@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.8 2006/05/27 08:05:28 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.9 2006/06/25 10:34:25 keri Exp $
+
+  25 Jun 2006; Keri Harris <keri@gentoo.org> qu-prolog-7.1.ebuild,
+  qu-prolog-7.2.ebuild, qu-prolog-7.2-r1.ebuild:
+  USE flag qt->qt3/qt4 change. Bug #137785.
 
   27 May 2006; Keri Harris <keri@gentoo.org>
   +files/qu-prolog-7.2-configure.patch, +files/qu-prolog-7.2-qt4.patch,

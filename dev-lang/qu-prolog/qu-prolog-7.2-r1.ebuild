@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.2-r1.ebuild,v 1.2 2006/05/27 08:05:28 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.2-r1.ebuild,v 1.3 2006/06/25 10:34:25 keri Exp $
 
 inherit autotools eutils versionator
 
@@ -13,18 +13,12 @@ SRC_URI="http://www.itee.uq.edu.au/~pjr/HomePages/QPFiles/${MY_P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="debug doc qt threads"
+IUSE="debug doc qt3 qt4 threads"
 
-DEPEND="qt? ( x11-libs/qt )"
+DEPEND="qt3? ( =x11-libs/qt-3* )
+	qt4? ( >=x11-libs/qt-4* )"
 
 S="${WORKDIR}"/${MY_P}
-
-get_qt_ver() {
-	qt_ver="$(best_version x11-libs/qt)"
-	qt_ver=${qt_ver//*qt-}
-	qt_ver=${qt_ver//-*}
-	qt_ver=$(get_major_version ${qt_ver})
-}
 
 src_unpack() {
 	unpack ${A}
@@ -34,8 +28,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gcc4.patch
 	epatch "${FILESDIR}"/${P}-debug.patch
 
-	get_qt_ver
-	[[ ${qt_ver} -eq 4 ]] && epatch "${FILESDIR}"/${P}-qt4.patch
+	use qt4 && epatch "${FILESDIR}"/${P}-qt4.patch
 }
 
 src_compile() {
@@ -48,12 +41,12 @@ src_compile() {
 		|| die "econf failed"
 	emake || die "emake failed"
 
-	if use qt ; then
+	if use qt3 || use qt4; then
 		cd "${S}"/src/xqp
-		if [ ${qt_ver} -eq 4 ] ; then \
-			qmake || die "qmake xqp failed"
-		else
+		if use qt3; then
 			"${QTDIR}"/bin/qmake || die "qmake xqp failed"
+		else
+			qmake || die "qmake xqp failed"
 		fi
 		emake || die "emake xqp failed"
 	fi
@@ -64,7 +57,9 @@ src_install() {
 	doexe src/qa src/qdeal src/qem src/ql
 	doexe bin/qc bin/qecat bin/qp bin/qppp
 
-	use qt && doexe src/xqp/xqp
+	if use qt3 || use qt4; then
+		doexe src/xqp/xqp
+	fi
 
 	insinto /usr/lib/${PN}/bin
 	doins prolog/qc1/qc1.qx \

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.2.ebuild,v 1.2 2006/05/26 09:49:36 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.2.ebuild,v 1.3 2006/06/25 10:34:25 keri Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,9 +13,9 @@ SRC_URI="http://www.itee.uq.edu.au/~pjr/HomePages/QPFiles/${MY_P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="doc qt threads"
+IUSE="doc qt3 threads"
 
-DEPEND="qt? ( =x11-libs/qt-3* )"
+DEPEND="qt3? ( =x11-libs/qt-3* )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -37,7 +37,7 @@ src_compile() {
 		|| die "econf failed"
 	emake || die "emake failed"
 
-	if use qt ; then
+	if use qt3 ; then
 		cd "${S}"/src/xqp
 		"${QTDIR}"/bin/qmake || die "qmake xqp failed"
 		emake || die "emake xqp failed"
@@ -49,7 +49,7 @@ src_install() {
 	doexe src/qa src/qdeal src/qem src/ql
 	doexe bin/qc bin/qecat bin/qp bin/qppp
 
-	use qt && doexe src/xqp/xqp
+	use qt3 && doexe src/xqp/xqp
 
 	insinto /usr/lib/${PN}/bin
 	doins prolog/qc1/qc1.qx \
