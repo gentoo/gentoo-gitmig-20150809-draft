@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pgf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.22 2006/02/07 04:04:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.23 2006/06/25 15:10:54 grobian Exp $
+
+  25 Jun 2006; Fabian Groffen <grobian@gentoo.org> pgf-1.01.ebuild:
+  Marked ~ppc-macos (bug #124653)
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> pgf-0.64-r1.ebuild:
   Mark 0.64-r1 stable on alpha
