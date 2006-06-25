@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.50 2006/06/14 08:04:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.51 2006/06/25 12:11:13 dertobi123 Exp $
+
+  25 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org> rails-1.1.2.ebuild:
+  ppc stable, bug #133003
 
   14 Jun 2006; Robin H. Johnson <robbat2@gentoo.org> rails-1.1.2.ebuild:
   Somebody left out ppc. It works fine here.
