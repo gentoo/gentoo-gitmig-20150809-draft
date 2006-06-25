@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.2.1-r1.ebuild,v 1.3 2006/05/07 19:43:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.2.1-r1.ebuild,v 1.4 2006/06/25 00:28:25 spyderous Exp $
 
 inherit eutils
 
-IUSE="altivec mpi xml2"
+IUSE="altivec mpi xml"
 
 DESCRIPTION="The ultimate molecular dynamics simulation package"
 SRC_URI="ftp://ftp.gromacs.org/pub/${PN}/${P}.tar.gz"
@@ -20,7 +20,7 @@ DEPEND="=sci-libs/fftw-2.1*
 	mpi? ( >=sys-cluster/lam-mpi-6.5.6 )
 	>=sys-devel/binutils-2.10.91.0.2
 	app-shells/tcsh
-	xml2? ( dev-libs/libxml2 )"
+	xml? ( dev-libs/libxml2 )"
 
 src_unpack() {
 	unpack ${A}
@@ -45,7 +45,7 @@ src_compile() {
 		--datadir=/usr/share/${P} \
 		--bindir=/usr/bin \
 		--libdir=/usr/lib \
-		$(use_with xml2 xml) \
+		$(use_with xml) \
 		$(use_enable mpi) \
 		$(use_enable altivec ppc-altivec) \
 		$(use_enable alpha axp-asm) || die "configure failed"

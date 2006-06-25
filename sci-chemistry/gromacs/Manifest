@@ -1,9 +1,35 @@
-MD5 846f6d01cb3f7ee491f5a28b9d19fcfb ChangeLog 3841
-MD5 e6cada3bcb0c80d058e7be754fde4612 files/digest-gromacs-3.2.1 66
-MD5 e6cada3bcb0c80d058e7be754fde4612 files/digest-gromacs-3.2.1-r1 66
-MD5 b35c347e16c4563524f8cacd04a61f33 files/digest-gromacs-3.3 64
+AUX gromacs-ppc64-altivec.patch 571 RMD160 e6bdccd29a29fb9ee85f0ca4a15f2ea229b6f52a SHA1 fe059c262d4fdbc9b918769dc88dd8a2ed177b6b SHA256 1e60a3a12cfd706af1860ca2ff36074291540f8ffa3616636eb612037f0611c3
 MD5 46d715de402fc04d726086455ba7f074 files/gromacs-ppc64-altivec.patch 571
-MD5 cad5187c7f11516e0cbc83257058426d gromacs-3.2.1-r1.ebuild 1980
-MD5 e2ac581b7af5fc0b74fee0411ca827aa gromacs-3.2.1.ebuild 1903
-MD5 b46f91924b29c10c1b1b7e04164bbea3 gromacs-3.3.ebuild 1963
+RMD160 e6bdccd29a29fb9ee85f0ca4a15f2ea229b6f52a files/gromacs-ppc64-altivec.patch 571
+SHA256 1e60a3a12cfd706af1860ca2ff36074291540f8ffa3616636eb612037f0611c3 files/gromacs-ppc64-altivec.patch 571
+DIST gromacs-3.2.1.tar.gz 3302723
+DIST gromacs-3.3.tar.gz 5906342
+EBUILD gromacs-3.2.1-r1.ebuild 1975 RMD160 ff5dfc572d27eda698c76845a88f58422bfabccc SHA1 c0b27b9543c669cb59d65a0c6cf4d4994c51acef SHA256 b5b43f7f1d032e64f95b1247530404556db7a57e623c9ceaf4384f2c7f65b0ef
+MD5 9b6492c32d8c96d94266e78f314fdcf4 gromacs-3.2.1-r1.ebuild 1975
+RMD160 ff5dfc572d27eda698c76845a88f58422bfabccc gromacs-3.2.1-r1.ebuild 1975
+SHA256 b5b43f7f1d032e64f95b1247530404556db7a57e623c9ceaf4384f2c7f65b0ef gromacs-3.2.1-r1.ebuild 1975
+EBUILD gromacs-3.2.1.ebuild 1897 RMD160 1abe85e471969fcde5ee6a714b76d820418178f0 SHA1 6e34da780f6b86863f4aa0d5ba4b70c831b3cb6e SHA256 7785a56bace8bbef4bdec432128c9d88d2427b667645790ea78df90929074c20
+MD5 5af09df5d0c864672c46c64a841c0177 gromacs-3.2.1.ebuild 1897
+RMD160 1abe85e471969fcde5ee6a714b76d820418178f0 gromacs-3.2.1.ebuild 1897
+SHA256 7785a56bace8bbef4bdec432128c9d88d2427b667645790ea78df90929074c20 gromacs-3.2.1.ebuild 1897
+EBUILD gromacs-3.3.ebuild 1956 RMD160 3ff47faef23a3860b42d2fec7c2fa0f845ccab2a SHA1 862e3823e1439a00d6c217e7c8ae40a25570a2cf SHA256 4c51f3241c5d14d8aec8037c2f07f6a17ccbbb4189684c9f67a3a55d7fe02eeb
+MD5 d963556dde12c545dc60726f29fd3128 gromacs-3.3.ebuild 1956
+RMD160 3ff47faef23a3860b42d2fec7c2fa0f845ccab2a gromacs-3.3.ebuild 1956
+SHA256 4c51f3241c5d14d8aec8037c2f07f6a17ccbbb4189684c9f67a3a55d7fe02eeb gromacs-3.3.ebuild 1956
+MISC ChangeLog 4009 RMD160 f7d5e0050ceb5968bd6c28d50805bed85a76b2b4 SHA1 71c7446287a2379ffaf8dd0fe5516e06d49b7ea7 SHA256 7c21701f12f71be07398de2dbefbd5590fae60aa3a4e62fc6366c437c161a293
+MD5 de53cef6e934692b2912364d4220635b ChangeLog 4009
+RMD160 f7d5e0050ceb5968bd6c28d50805bed85a76b2b4 ChangeLog 4009
+SHA256 7c21701f12f71be07398de2dbefbd5590fae60aa3a4e62fc6366c437c161a293 ChangeLog 4009
+MISC metadata.xml 248 RMD160 6488d9f1ef3e05e6ac5a29ddcc818e5ead0a5230 SHA1 75a648fddef9922cdfe21fb0298a1c746190fd82 SHA256 de0ad7dc383b462c407cae015684d27c090455eac87c6f0f9ff581ef6e0b5b27
 MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248
+RMD160 6488d9f1ef3e05e6ac5a29ddcc818e5ead0a5230 metadata.xml 248
+SHA256 de0ad7dc383b462c407cae015684d27c090455eac87c6f0f9ff581ef6e0b5b27 metadata.xml 248
+MD5 e6cada3bcb0c80d058e7be754fde4612 files/digest-gromacs-3.2.1 66
+RMD160 c92c68bbcc6f9c7085125e30af17d94e0d7b19d3 files/digest-gromacs-3.2.1 66
+SHA256 11594869d0d2e577ac45db9f6a208e9fcc4ccb33ae341461187297b8d5c2f8cf files/digest-gromacs-3.2.1 66
+MD5 e6cada3bcb0c80d058e7be754fde4612 files/digest-gromacs-3.2.1-r1 66
+RMD160 c92c68bbcc6f9c7085125e30af17d94e0d7b19d3 files/digest-gromacs-3.2.1-r1 66
+SHA256 11594869d0d2e577ac45db9f6a208e9fcc4ccb33ae341461187297b8d5c2f8cf files/digest-gromacs-3.2.1-r1 66
+MD5 b35c347e16c4563524f8cacd04a61f33 files/digest-gromacs-3.3 64
+RMD160 47474a9eacd1d4e08149437b2f7ce587044c68f3 files/digest-gromacs-3.3 64
+SHA256 590f94df114cae1a0a53387dfead13fadd4cad00003a6b3f454f2ae1a7f3e6e9 files/digest-gromacs-3.3 64
