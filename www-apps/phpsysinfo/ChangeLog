@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpsysinfo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.19 2006/06/25 10:38:40 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.20 2006/06/25 14:05:06 gmsoft Exp $
+
+  25 Jun 2006; Guy Martin <gmsoft@gentoo.org> phpsysinfo-2.5.1-r2.ebuild:
+  Stable on hppa.
 
   25 Jun 2006; Marcus D. Hanwell <cryos@gentoo.org>
   phpsysinfo-2.5.1-r2.ebuild:
