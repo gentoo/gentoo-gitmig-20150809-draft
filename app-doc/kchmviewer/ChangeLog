@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/kchmviewer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.13 2006/04/07 11:12:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.14 2006/06/25 09:16:26 blubb Exp $
+
+  25 Jun 2006; Simon Stelling <blubb@gentoo.org> kchmviewer-2.0-r1.ebuild:
+  stable on amd64
 
   07 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/kchmviewer-2.5-gcc41.patch, kchmviewer-2.5.ebuild:

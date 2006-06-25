@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-2.0-r1.ebuild,v 1.1 2006/02/12 16:22:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-2.0-r1.ebuild,v 1.2 2006/06/25 09:16:26 blubb Exp $
 
 inherit kde-functions eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/kchmviewer/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="arts kde"
 
 DEPEND="=x11-libs/qt-3*
