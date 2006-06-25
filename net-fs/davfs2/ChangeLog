@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/davfs2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.25 2006/06/25 15:51:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.26 2006/06/25 16:17:38 dertobi123 Exp $
+
+  25 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  -files/include-compiler.patch, -files/makefile_0.2.7.patch,
+  -davfs2-0.2.4-r1.ebuild, -davfs2-0.2.4-r2.ebuild, -davfs2-0.2.7.ebuild,
+  davfs2-0.2.8.ebuild:
+  ppc stable, #105264. Housekeeping.
 
   25 Jun 2006; Stefan Schweizer <genstef@gentoo.org> davfs2-0.2.8.ebuild:
   RESTRICT="test", because the test can fail thanks to Tobias Scherbaum
