@@ -1,6 +1,14 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.391 2006/06/24 15:34:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.392 2006/06/25 18:27:45 gothgirl Exp $
+
+*gaim-2.0.0_beta3-r1 (25 Jun 2006)
+
+  25 Jun 2006; Kathryn Kulick <gothgirl@gentoo.org>
+  -gaim-2.0.0_beta2-r2.ebuild, -gaim-2.0.0_beta3.ebuild,
+  +gaim-2.0.0_beta3-r1.ebuild:
+  fix silc use flag wrt bug#133644, added custom-flags use flag, cleaned up
+  use variables
 
   24 Jun 2006; Michael Cummings <mcummings@gentoo.org> gaim-1.5.0.ebuild,
   gaim-2.0.0_beta2-r2.ebuild, gaim-2.0.0_beta3.ebuild:
