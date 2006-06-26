@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config-wrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.1 2006/06/25 00:28:16 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.2 2006/06/26 11:34:19 nichoj Exp $
+
+  26 Jun 2006; Joshua Nichols <nichoj@gentoo.org>
+  -files/java-config-wrapper-0.8-qfile.patch:
+  Version bump to fix bug #138015
 
   25 Jun 2006; <nichoj@gentoo.org>
   +files/java-config-wrapper-0.8-qfile.patch:
