@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.25 2006/03/20 22:25:47 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.26 2006/06/26 17:08:05 mr_bones_ Exp $
+
+*ogre-1.2.1 (26 Jun 2006)
+
+  26 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org> +ogre-1.2.1.ebuild:
+  version bump (bug #126191) - ebuild submitted by Sergey Belyashov and Kevin
+  Eeckman
 
 *ogre-1.0.7 (20 Mar 2006)
 
