@@ -1,0 +1,22 @@
+Index: /trunk/twisted/lore/latex.py
+===================================================================
+--- /trunk/twisted/lore/latex.py (revision 11450)
++++ /trunk/twisted/lore/latex.py (revision 13880)
+@@ -5,5 +5,5 @@
+ 
+ from twisted.web import microdom, domhelpers
+-from twisted.python import text
++from twisted.python import text, procutils
+ import os, os.path, re, string
+ from cStringIO import StringIO
+@@ -104,9 +104,5 @@
+ 
+     baseLevel = 0
+-    try:
+-        diaHack = not not os.popen('which dia').read()
+-    except:
+-        # That's a no, then.
+-        diaHack = 0
++    diaHack = bool(procutils.which("dia"))
+ 
+     def writeNodeData(self, node):
