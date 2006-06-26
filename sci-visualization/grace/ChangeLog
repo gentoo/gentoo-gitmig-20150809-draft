@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.4 2006/06/25 19:23:10 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.5 2006/06/26 17:54:45 ribosome Exp $
+
+*grace-5.1.20 (26 Jun 2006)
+
+  26 Jun 2006; Olivier Fisette <ribosome@gentoo.org> +grace-5.1.20.ebuild:
+  New upstream version. See announcement at:
+  http://plasma-gate.weizmann.ac.il/Grace/phpbb/viewtopic.php?t=610. Thanks
+  to Pierre-Yves Savard <pys@rsvs.ulaval.ca> for reporting.
 
   23 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; grace-5.1.18.ebuild,
   grace-5.1.19.ebuild:
