@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.2-r1.ebuild,v 1.11 2006/06/26 12:13:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.2-r1.ebuild,v 1.12 2006/06/26 12:15:29 blubb Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 sparc x86 ~x86-fbsd"
 IUSE="nls"
 
-RDEPEND="sys-libs/ncurses"
+RDEPEND="sys-libs/ncurses
+		sys-apps/xinetd"
 DEPEND="${RDEPEND}
 	!net-misc/netkit-telnetd"
 
