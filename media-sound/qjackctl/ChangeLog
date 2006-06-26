@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qjackctl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.36 2006/06/15 18:36:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.37 2006/06/26 12:48:34 blubb Exp $
+
+  26 Jun 2006; Simon Stelling <blubb@gentoo.org> qjackctl-0.2.19a.ebuild:
+  stable on amd64
 
   15 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   qjackctl-0.2.19a.ebuild:
