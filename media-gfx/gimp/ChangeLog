@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.154 2006/06/25 18:10:08 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.155 2006/06/26 05:24:29 gmsoft Exp $
+
+  25 Jun 2006; Guy Martin <gmsoft@gentoo.org> gimp-2.3.9.ebuild:
+  Added ~hppa to KEYWORDS.
 
   25 Jun 2006; Henrik Brix Andersen <brix@gentoo.org> gimp-2.3.9.ebuild:
   Fix libpoppler-bindings instructions, thanks to Jan Waldmann in bug #137950.
