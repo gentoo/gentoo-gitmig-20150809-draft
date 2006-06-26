@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.86 2006/06/25 14:35:22 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.87 2006/06/26 00:51:12 ticho Exp $
+
+  26 Jun 2006; Andrej Kacian <ticho@gentoo.org> strace-4.5.14.ebuild:
+  Stable on x86, bug #137914.
 
   25 Jun 2006; Christian Birchinger <joker@gentoo.org> strace-4.5.14.ebuild:
   Added sparc stable keyword
