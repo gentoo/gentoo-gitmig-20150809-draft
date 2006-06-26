@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.20_pre6.ebuild,v 1.1 2006/06/25 16:32:28 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.20_pre6.ebuild,v 1.2 2006/06/26 20:30:58 corsair Exp $
 
 inherit eutils gnome2
 
@@ -13,7 +13,7 @@ SRC_URI="http://files.beep-media-player.org/releases/0.20/pre-releases/${MY_P}.t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="alsa amazon cdparanoia debug flac ffmpeg hal mad nls ogg oss theora vorbis"
 
 S=${WORKDIR}/${MY_P}
