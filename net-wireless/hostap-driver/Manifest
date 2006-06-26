@@ -1,8 +1,32 @@
-MD5 cede5168d736cab76951391fe969b78b ChangeLog 10056
-MD5 c5800b90593d3826c5cef81cca46526a files/digest-hostap-driver-0.4.7 71
-MD5 b7a0ab3af34f51bdaa93f5a8d9b2ec66 files/digest-hostap-driver-0.4.9 71
+AUX hostap-driver-0.4.7-firmware.patch 739 RMD160 0bc9c949723fb7b1c16c954f284f3cf7ce049af9 SHA1 fd0b4e476a9c544c41da65b5a482549a1aa77a7e SHA256 a3a2a5323ca4ff802ab8d93dfe65130e1d542a3ded30f3fd0bab32650fbdd28a
 MD5 3b2078eb6aa3c5754d282f6537ecd771 files/hostap-driver-0.4.7-firmware.patch 739
+RMD160 0bc9c949723fb7b1c16c954f284f3cf7ce049af9 files/hostap-driver-0.4.7-firmware.patch 739
+SHA256 a3a2a5323ca4ff802ab8d93dfe65130e1d542a3ded30f3fd0bab32650fbdd28a files/hostap-driver-0.4.7-firmware.patch 739
+AUX hostap-driver-0.4.9-firmware.patch 739 RMD160 0bc9c949723fb7b1c16c954f284f3cf7ce049af9 SHA1 fd0b4e476a9c544c41da65b5a482549a1aa77a7e SHA256 a3a2a5323ca4ff802ab8d93dfe65130e1d542a3ded30f3fd0bab32650fbdd28a
 MD5 3b2078eb6aa3c5754d282f6537ecd771 files/hostap-driver-0.4.9-firmware.patch 739
+RMD160 0bc9c949723fb7b1c16c954f284f3cf7ce049af9 files/hostap-driver-0.4.9-firmware.patch 739
+SHA256 a3a2a5323ca4ff802ab8d93dfe65130e1d542a3ded30f3fd0bab32650fbdd28a files/hostap-driver-0.4.9-firmware.patch 739
+DIST hostap-driver-0.4.7.tar.gz 202602
+DIST hostap-driver-0.4.9.tar.gz 202959
+EBUILD hostap-driver-0.4.7.ebuild 3186 RMD160 b1eed2a461a54fa98c5aa40967e1bb17f84cf6a5 SHA1 fd14faab12b498e4c4b43fc77fe5dce77398fe57 SHA256 7327a64eb5b9dbea52af4d08c37af86c22b144c0b0ad998a560a24728c360b7b
 MD5 934bdf885e6f3a37723bf711c61cdb7a hostap-driver-0.4.7.ebuild 3186
-MD5 87ab0a606f82aa729e84155c514f3c50 hostap-driver-0.4.9.ebuild 2994
+RMD160 b1eed2a461a54fa98c5aa40967e1bb17f84cf6a5 hostap-driver-0.4.7.ebuild 3186
+SHA256 7327a64eb5b9dbea52af4d08c37af86c22b144c0b0ad998a560a24728c360b7b hostap-driver-0.4.7.ebuild 3186
+EBUILD hostap-driver-0.4.9.ebuild 2993 RMD160 485d9d67d1afa01add2d961e6b0198ee75734567 SHA1 e250c1d9709654031a33a9272322f92b82b8ebea SHA256 cc35bdc8e9d2ef24d35ab91cf4999f361d779a87397361545075ac2ab2284ce6
+MD5 007076a699f2b74eafa8259bcfe47b4e hostap-driver-0.4.9.ebuild 2993
+RMD160 485d9d67d1afa01add2d961e6b0198ee75734567 hostap-driver-0.4.9.ebuild 2993
+SHA256 cc35bdc8e9d2ef24d35ab91cf4999f361d779a87397361545075ac2ab2284ce6 hostap-driver-0.4.9.ebuild 2993
+MISC ChangeLog 10158 RMD160 7f0bd58bba844992526b966dca6af198a4c46a1c SHA1 373cb33d57d75a49c288f26b8db6509ab0392c77 SHA256 5a3418433c392d0ef7a81c96a67924ab962fd2ecac151bee43234a9317e8e8d7
+MD5 627593e4dde203b4545d8e1991a5456c ChangeLog 10158
+RMD160 7f0bd58bba844992526b966dca6af198a4c46a1c ChangeLog 10158
+SHA256 5a3418433c392d0ef7a81c96a67924ab962fd2ecac151bee43234a9317e8e8d7 ChangeLog 10158
+MISC metadata.xml 722 RMD160 7f6836aecf7103706d56513ee7592668c38555d0 SHA1 ff280214649d738f30bb99941107f1bf2980638b SHA256 609e6addfb708308c251d776a6f556c8d5c5a2da6ff855bb2e3cbcfb201a59d5
 MD5 5f6ec5c50fa3a91a429fec8670cf241b metadata.xml 722
+RMD160 7f6836aecf7103706d56513ee7592668c38555d0 metadata.xml 722
+SHA256 609e6addfb708308c251d776a6f556c8d5c5a2da6ff855bb2e3cbcfb201a59d5 metadata.xml 722
+MD5 c5800b90593d3826c5cef81cca46526a files/digest-hostap-driver-0.4.7 71
+RMD160 5b43b90577802dd343b08856d63fe44bb318fcff files/digest-hostap-driver-0.4.7 71
+SHA256 f90cd0a85e210c7bd92636fa6411d6c57a7541970c2b74c97c033b722d21c239 files/digest-hostap-driver-0.4.7 71
+MD5 b7a0ab3af34f51bdaa93f5a8d9b2ec66 files/digest-hostap-driver-0.4.9 71
+RMD160 d67f40c8cb44f4ccaa6b32473916f4e856b8decd files/digest-hostap-driver-0.4.9 71
+SHA256 0a5b145106654dd8a76f08ba8faec0f59698b2f955d9aaf9f400cf7563f3834a files/digest-hostap-driver-0.4.9 71
