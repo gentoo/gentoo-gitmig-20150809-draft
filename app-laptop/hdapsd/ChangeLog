@@ -1,0 +1,9 @@
+# ChangeLog for app-laptop/hdapsd
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.1 2006/06/26 20:07:24 uberlord Exp $
+
+*hdapsd-20060409 (26 Jun 2006)
+
+  26 Jun 2006; Roy Marples <uberlord@gentoo.org> +files/hdapsd.conf,
+  +files/hdapsd.init, +metadata.xml, +hdapsd-20060409.ebuild:
+  Initial import based on the work by Michael Gaber and Jeff Grafton, #119845.
