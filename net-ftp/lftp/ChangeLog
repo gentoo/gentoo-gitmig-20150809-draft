@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.106 2006/05/16 20:04:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.107 2006/06/26 02:34:02 the_paya Exp $
+
+  26 Jun 2006; Javier Villavicencio <the_paya@gentoo.org> lftp-3.4.6.ebuild:
+  Add ~x86-fbsd keyword.
 
   16 May 2006; Markus Rothe <corsair@gentoo.org> lftp-3.4.6.ebuild:
   Stable on ppc64; bug #132525
