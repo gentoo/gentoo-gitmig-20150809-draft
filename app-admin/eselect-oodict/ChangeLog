@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-oodict
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.6 2006/06/21 11:00:18 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.7 2006/06/26 20:07:18 gustavoz Exp $
+
+  26 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  eselect-oodict-20060621.ebuild:
+  Keyworded ~sparc wrt #135520
 
 *eselect-oodict-20060621 (21 Jun 2006)
 
