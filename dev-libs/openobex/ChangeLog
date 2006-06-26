@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openobex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.32 2006/06/25 04:48:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.33 2006/06/26 15:10:01 gustavoz Exp $
+
+  26 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  openobex-1.2-r1.ebuild:
+  Stable on sparc
 
   25 Jun 2006; Alin Nastac <mrness@gentoo.org> -openobex-1.2.ebuild,
   openobex-1.2-r1.ebuild:
