@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libemf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.18 2006/04/13 19:25:03 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.19 2006/06/26 22:54:57 gustavoz Exp $
+
+  26 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> libemf-1.0.3.ebuild:
+  Keyworded ~sparc wrt #127328
 
   13 Apr 2006; Patrick McLean <chutzpah@gentoo.org>
   -files/libEMF-1.0.3-amd64.patch, libemf-1.0.ebuild, libemf-1.0.3.ebuild:
