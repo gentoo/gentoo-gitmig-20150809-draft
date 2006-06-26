@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/scw
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/ChangeLog,v 1.3 2006/06/09 11:05:38 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/ChangeLog,v 1.4 2006/06/26 08:15:39 ticho Exp $
+
+  26 Jun 2006; Andrej Kacian <ticho@gentoo.org> scw-0.4.3.ebuild:
+  Stable on x86.
 
 *scw-0.4.4 (09 Jun 2006)
 
