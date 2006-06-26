@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/tailor
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tailor/ChangeLog,v 1.2 2006/05/14 17:24:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tailor/ChangeLog,v 1.3 2006/06/26 14:39:53 marienz Exp $
+
+*tailor-0.9.23 (26 Jun 2006)
+
+  26 Jun 2006; Marien Zwart <marienz@gentoo.org> +tailor-0.9.23.ebuild:
+  Version bump, thanks to Brian Harring for reporting (bug #137903).
 
   14 May 2006; Diego Pettenò <flameeyes@gentoo.org> tailor-0.9.22.ebuild:
   Add ~amd64 and ~x86-fbsd keywords.
