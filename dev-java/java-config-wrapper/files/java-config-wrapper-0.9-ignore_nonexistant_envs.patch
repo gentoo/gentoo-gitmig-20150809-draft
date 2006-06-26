@@ -1,0 +1,23 @@
+Only in java-config-wrapper-0.9/src/shell: .java-1.5-fixer.swp
+diff -ru java-config-wrapper-0.9-orig/src/shell/java-1.5-fixer java-config-wrapper-0.9/src/shell/java-1.5-fixer
+--- java-config-wrapper-0.9-orig/src/shell/java-1.5-fixer	2006-06-26 16:47:58.000000000 -0400
++++ java-config-wrapper-0.9/src/shell/java-1.5-fixer	2006-06-26 17:03:15.000000000 -0400
+@@ -82,10 +82,14 @@
+ 	local all_jars
+ 	# for each package.env file
+ 	for package_env in ${package_envs}; do
+-		debug_print "parsing ${package_env}"
+-		# figure out what jars are in it
+-		local jars=$(get_jars_from_package_env ${package_env})
+-		all_jars="${all_jars} ${jars}"
++        if [[ -f ${package_env} ]]; then
++    		debug_print "parsing ${package_env}"
++    		# figure out what jars are in it
++    		local jars=$(get_jars_from_package_env ${package_env})
++    		all_jars="${all_jars} ${jars}"
++        else
++            debug_print "${package_env} doesn't exist... skipping"
++        fi
+ 	done
+ 
+ 	echo ${all_jars}
