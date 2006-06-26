@@ -1,14 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.68.ebuild,v 1.3 2006/06/26 19:47:13 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.70.ebuild,v 1.1 2006/06/26 19:47:13 pythonhead Exp $
 
 inherit toolchain-funcs
 
 MY_PV=${PV//./}
 DESCRIPTION="A very powerful editor for programmers"
 HOMEPAGE="http://www.scintilla.org"
-# No .tgz file available for 1.68
-SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.zip"
+SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.tgz"
 
 LICENSE="Scintilla"
 SLOT="0"
@@ -18,8 +17,7 @@ IUSE="lua"
 RDEPEND=">=x11-libs/gtk+-2
 	lua? ( >=dev-lang/lua-5 )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
-	app-arch/unzip"
+	>=sys-apps/sed-4"
 
 S=${WORKDIR}/${PN}/gtk
 
