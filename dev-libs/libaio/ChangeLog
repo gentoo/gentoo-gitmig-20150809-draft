@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.23 2006/06/25 10:55:10 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.24 2006/06/26 01:15:18 ticho Exp $
+
+  26 Jun 2006; Andrej Kacian <ticho@gentoo.org> libaio-0.3.106-r1.ebuild:
+  Stable on x86, bug #137915.
 
   25 Jun 2006; Marcus D. Hanwell <cryos@gentoo.org> libaio-0.3.106.ebuild:
   Marked stable on amd64, bug 137915.
