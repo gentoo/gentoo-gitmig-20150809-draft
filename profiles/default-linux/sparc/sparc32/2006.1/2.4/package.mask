@@ -1,10 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.1/2.4/package.mask,v 1.1 2006/04/11 21:27:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.1/2.4/package.mask,v 1.2 2006/06/26 19:59:07 gustavoz Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # We mask core 2.6 stuff to avoid bootstrap issues
 >=sys-kernel/gentoo-sources-2.6.0
+>=sys-kernel/hardened-sources-2.6.0
 >=sys-kernel/vanilla-sources-2.6.0
 sys-fs/udev
 
