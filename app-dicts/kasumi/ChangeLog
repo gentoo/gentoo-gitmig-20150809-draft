@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/kasumi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.21 2006/06/25 20:49:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.22 2006/06/26 10:14:59 flameeyes Exp $
+
+  26 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/kasumi-2.0-fbsd.patch:
+  Forgot to refresh the fbsd patch before copying and committing, now fixed.
 
   25 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/kasumi-2.0-fbsd.patch, +files/kasumi-2.0-format.patch,
