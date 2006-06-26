@@ -1,0 +1,22 @@
+--- libpcap-ringbuffer-0.9.20060417/work/libpcap-0.9.20060417/Makefile.am	2006-04-18 01:03:18.000000000 +0200
++++ libpcap-ringbuffer-0.9.20060417-fixed/work/libpcap-0.9.20060417/Makefile.am	2006-05-19 11:54:24.000000000 +0200
+@@ -77,6 +77,8 @@ CSRC                    = pcap.c inet.c 
+ 
+ PCAPSRC			= $(GENSRC) $(PSRC) $(FSRC) $(CSRC)
+ 
++include_HEADERS		= pcap-bpf.h pcap.h pcap-namedb.h
++
+ lib_LTLIBRARIES		= libpcap.la
+ 
+ libpcap_la_LDFLAGS      = -release $(LTRELEASE)
+@@ -105,8 +107,8 @@ clean-local:
+ #	rm -f libpcap.a; $(LN_S) .libs/libpcap.a libpcap.a
+ all-local: libpcap.a
+ 
+-libpcap.a: .libs/libpcap.a
+-	cp .libs/libpcap.a libpcap.a
++libpcap.a:
++#	cp .libs/libpcap.a libpcap.a
+ 
+ install-data-local:
+ 
