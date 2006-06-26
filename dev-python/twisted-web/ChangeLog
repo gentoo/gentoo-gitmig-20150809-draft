@@ -1,6 +1,19 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.16 2006/06/04 02:43:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.17 2006/06/26 21:13:50 marienz Exp $
+
+*twisted-web-0.6.0-r1 (26 Jun 2006)
+*twisted-web-0.5.0-r3 (26 Jun 2006)
+
+  26 Jun 2006; Marien Zwart <marienz@gentoo.org>
+  -files/twisted-web-0.5.0-tests-2.2-compat-14780.patch,
+  -files/twisted-web-0.5.0-tests-2.2-compat-14782.patch,
+  -files/twisted-web-0.5.0-tests-2.2-compat-14786.patch,
+  -twisted-web-0.5.0-r2.ebuild, +twisted-web-0.5.0-r3.ebuild,
+  +twisted-web-0.6.0-r1.ebuild:
+  Remove twisted-web-0.5.0-r2 (the version with extra test patches for
+  twisted-2.2.0): use twisted-2.4.0 and web 0.6.0 instead. Add new revisions
+  with the nonworking websetroot removed.
 
   04 Jun 2006; Brent Baude <ranger@gentoo.org> twisted-web-0.6.0.ebuild:
   Marking twisted-web-0.6.0 ppc64 stable as a dep to avahi per Mr Bones request
