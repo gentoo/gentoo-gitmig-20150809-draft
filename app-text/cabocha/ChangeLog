@@ -1,6 +1,10 @@
 # ChangeLog for app-text/cabocha
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cabocha/ChangeLog,v 1.2 2006/02/02 22:48:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cabocha/ChangeLog,v 1.3 2006/06/26 19:37:30 usata Exp $
+
+  26 Jun 2006; Mamoru KOMACHI <usata@gentoo.org>
+  +files/cabocha-0.53-pm.patch, cabocha-0.53.ebuild:
+  Fixed compilation for the first time.
 
 *cabocha-0.53 (02 Feb 2006)
 
