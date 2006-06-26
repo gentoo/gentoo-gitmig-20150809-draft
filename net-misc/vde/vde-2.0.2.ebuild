@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-2.0.2.ebuild,v 1.1 2006/06/26 09:10:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-2.0.2.ebuild,v 1.2 2006/06/26 09:17:38 genstef Exp $
+
+inherit eutils
 
 DESCRIPTION="vde2 is a virtual distributed ethernet emulator for emulators like qemu, bochs, and uml."
 SRC_URI="mirror://sourceforge/vde/${P}.tar.bz2"
