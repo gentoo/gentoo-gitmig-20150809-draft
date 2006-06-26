@@ -1,0 +1,23 @@
+--- test/mpi/attr/Makefile.in.orig	2006-06-11 16:52:54.000000000 -0700
++++ test/mpi/attr/Makefile.in	2006-06-11 17:14:38.000000000 -0700
+@@ -26,7 +26,7 @@
+ LDFLAGS     =  @LDFLAGS@ ../util/mtest.o
+ 
+ VPATH = .:@srcdir@
+-INCLUDES = -I../include -I${srcdir}/../include
++INCLUDES = -I../include
+ 
+ .SUFFIXES:
+ .SUFFIXES: .o .c .txt 
+--- test/mpi/util/Makefile.in.orig	2006-06-11 16:52:54.000000000 -0700
++++ test/mpi/util/Makefile.in	2006-06-11 17:09:42.000000000 -0700
+@@ -21,8 +21,7 @@
+ C_COMPILE       = $(CC) $(DEFS) $(INCLUDES) $(CFLAGS) $(CPPFLAGS)
+ 
+ VPATH = .:@srcdir@
+-INCLUDES = -I../../../src/include -I${top_srcdir}/src/include -I../include \
+-	 -I${srcdir}/../include
++INCLUDES = -I../include
+ 
+ .SUFFIXES:
+ .SUFFIXES: .o .c .txt 

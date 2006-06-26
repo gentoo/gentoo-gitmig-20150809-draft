@@ -1,0 +1,11 @@
+--- src/mpe2/sbin/mpeinstall.orig	2006-06-10 22:51:48.000000000 -0700
++++ src/mpe2/sbin/mpeinstall	2006-06-10 23:57:02.000000000 -0700
+@@ -457,7 +457,7 @@
+          CopyDirRecurP $etcbuild_dir $sysconfdir $MODE
+          cd $etcbuild_dir && \
+          for file in *.conf ; do \
+-             FixInstallFile $file $DESTDIR$sysconfdir/$file ; \
++             FixInstallFile $file $sysconfdir/$file ; \
+          done
+     fi
+ fi
