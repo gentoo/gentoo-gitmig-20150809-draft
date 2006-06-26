@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/hostap-driver
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.54 2006/05/27 19:55:00 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.55 2006/06/26 22:09:46 brix Exp $
+
+  26 Jun 2006; Henrik Brix Andersen <brix@gentoo.org>
+  hostap-driver-0.4.9.ebuild:
+  Stable on x86.
 
 *hostap-driver-0.4.9 (27 May 2006)
 

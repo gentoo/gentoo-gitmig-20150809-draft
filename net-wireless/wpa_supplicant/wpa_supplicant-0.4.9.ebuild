@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.9.ebuild,v 1.3 2006/06/24 16:35:52 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.9.ebuild,v 1.4 2006/06/26 22:12:11 brix Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://hostap.epitest.fi/releases/${MY_P}.tar.gz"
 LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="gsm madwifi qt3 qt4 readline ssl"
 
 RDEPEND="gsm? ( sys-apps/pcsc-lite )
