@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-hcidump
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.25 2006/04/19 20:42:42 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.26 2006/06/26 14:53:45 gustavoz Exp $
+
+  26 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  bluez-hcidump-1.30.ebuild:
+  Stable on sparc
 
   19 Apr 2006; <malc@gentoo.org> bluez-hcidump-1.30.ebuild:
   ~amd64 - closes bug #109279
