@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.12_rc1.ebuild,v 1.1 2006/06/23 12:46:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.12_rc1.ebuild,v 1.2 2006/06/26 22:27:47 flameeyes Exp $
 
-inherit eutils autotools
+inherit eutils autotools libtool
 
 MY_P="${P/_rc/rc}"
 S="${WORKDIR}/${MY_P}"
@@ -28,6 +28,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-1.0.10-no-wordexp-header.patch"
 
 	eautomake
+	elibtoolize
+	epunt_cxx
 }
 
 src_compile() {

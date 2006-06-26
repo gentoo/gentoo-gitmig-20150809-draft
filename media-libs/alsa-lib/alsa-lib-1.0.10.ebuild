@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.10.ebuild,v 1.14 2006/05/20 10:24:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.10.ebuild,v 1.15 2006/06/26 22:27:47 flameeyes Exp $
 
-inherit eutils autotools
+inherit eutils autotools libtool
 
 MY_P="${P/_rc/rc}"
 S="${WORKDIR}/${MY_P}"
@@ -30,6 +30,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-test-ppc.patch"
 
 	eautoreconf
+	elibtoolize
+	epunt_cxx
 }
 
 src_compile() {
@@ -57,5 +59,5 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "Please use media-sound/alsa-driver rather than in-kernel drivers as there"
-	ewarn "have been some problems recently with the in-kernel drivers.  See bug #87544."
+	ewarn "have been some problems recently with the in-kernel drivers.	 See bug #87544."
 }
