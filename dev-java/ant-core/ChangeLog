@@ -1,10 +1,13 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.39 2006/06/25 01:25:32 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.40 2006/06/26 11:38:21 nichoj Exp $
 
 # Ant-core blocks lower/older versions of ant-tasks, 
 # since it will not run when there is a version mismatch betwean the 2 packages
 # Please unemerge ant-tasks when updating ant-core.
+
+  26 Jun 2006; Joshua Nichols <nichoj@gentoo.org> ant-core-1.6.5-r13.ebuild:
+  Fixed patch location.
 
   25 Jun 2006; <nichoj@gentoo.org> files/1.6.5-ant:
   Revision bump to add support for new Java system.
