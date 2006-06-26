@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.242.ebuild,v 1.6 2005/11/25 17:05:22 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.242.ebuild,v 1.7 2006/06/26 15:11:23 gustavoz Exp $
 
 # TODO
 #        ->   linux-arm            (32bit)   <-
@@ -27,7 +27,7 @@ SRC_URI="http://www.iozone.org/src/current/${PN}${PV/./_}.tar"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="amd64 ~arm ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ~arm ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="sys-devel/gcc
