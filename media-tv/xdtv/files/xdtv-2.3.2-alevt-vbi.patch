@@ -1,0 +1,11 @@
+--- a/alevt/vbi.c	2005-08-12 02:09:05.000000000 +0200
++++ b/alevt/vbi.c.new	2006-06-19 23:30:26.000000000 +0200
+@@ -628,6 +628,8 @@
+ #endif
+     }
+ 
++    vbifmt->offset = 244;
++
+     if (set_decode_parms(vbi, vbifmt) == -1)
+ 	return -1;
+ 
