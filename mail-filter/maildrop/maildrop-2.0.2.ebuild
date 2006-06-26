@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.2.ebuild,v 1.3 2006/05/29 10:28:08 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.2.ebuild,v 1.4 2006/06/26 06:28:20 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,11 +23,11 @@ DEPEND="!mail-mta/courier
 	ldap?     ( net-libs/courier-authlib )
 	authlib?  ( net-libs/courier-authlib )
 	fam?      ( virtual/fam )
-	!fam?     ( ~sys-devel/autoconf-2.59 )
+	!fam?     ( =sys-devel/autoconf-2.59* )
 	!gdbm? (
 		berkdb? (
 			>=sys-libs/db-3
-			~sys-devel/autoconf-2.59
+			=sys-devel/autoconf-2.59*
 		)
 	)
 	>=sys-devel/automake-1.9.3"
