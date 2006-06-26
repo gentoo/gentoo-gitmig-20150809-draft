@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/podbrowser-0.09.ebuild,v 1.3 2006/01/08 15:15:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/podbrowser-0.09.ebuild,v 1.4 2006/06/26 20:14:56 mcummings Exp $
 
 DESCRIPTION="PodBrowser is a documentation browser for Perl."
 HOMEPAGE="http://jodrell.net/projects/podbrowser"
@@ -8,7 +8,7 @@ SRC_URI="http://jodrell.net/files/podbrowser/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 SRC_TEST="do"
 
