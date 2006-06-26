@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.9.ebuild,v 1.1 2006/06/23 12:46:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.9.ebuild,v 1.2 2006/06/26 22:44:12 jer Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Hypertext info and man viewer based on (n)curses"
 HOMEPAGE="http:/pinfo.alioth.debian.org"
@@ -25,6 +25,8 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-FTPVIEWER.patch
+	epatch ${FILESDIR}/${P}-as-needed.patch
+	AT_M4DIR="${S}/macros" eautoreconf
 }
 
 src_compile() {

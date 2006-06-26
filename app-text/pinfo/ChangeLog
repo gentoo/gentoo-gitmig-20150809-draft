@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pinfo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.26 2006/06/23 12:46:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.27 2006/06/26 22:44:12 jer Exp $
+
+  26 Jun 2006; Jeroen Roovers <jer@gentoo.org>
+  +files/pinfo-0.6.9-as-needed.patch, pinfo-0.6.9.ebuild:
+  Fixing --as-needed as reported in bug #138106. Thanks to TGL for reporting
+  and the patch, and Flameeyes and exg for their kind advice.
 
 *pinfo-0.6.9 (23 Jun 2006)
 
