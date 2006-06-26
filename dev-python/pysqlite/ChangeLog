@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.55 2006/06/22 19:26:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.56 2006/06/26 17:51:38 the_paya Exp $
+
+  26 Jun 2006; Javier Villavicencio <the_paya@gentoo.org>
+  pysqlite-2.3.1.ebuild:
+  Add ~x86-fbsd keyword.
 
   22 Jun 2006; Fabian Groffen <grobian@gentoo.org> pysqlite-2.2.2-r1.ebuild:
   Marked ~ppc-macos
