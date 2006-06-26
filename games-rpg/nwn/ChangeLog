@@ -1,15 +1,16 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.45 2006/06/20 15:19:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.46 2006/06/26 22:11:20 wolf31o2 Exp $
+
+  26 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> files/digest-nwn-1.67,
+  files/digest-nwn-1.67-r1, ChangeLog, Manifest:
+  Fixing ChangeLog and Manifest. Upstream keeps changing these files, because
+  they were fine when I last downloaded them. Closing bug #137941.
 
   20 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> -nwn-1.66.ebuild,
   -nwn-1.66-r1.ebuild, nwn-1.67.ebuild:
   Marking stable on amd64 and x86. Removing older ebuilds. Fixing Manifest.
   Closing bug #136756.
-
-  25 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.66-r1.ebuild,
-  nwn-1.67-r1.ebuild:
-  Added a small fix for users with HotU or SoU.
 
   25 May 2006; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.66-r1.ebuild,
   nwn-1.67-r1.ebuild:
