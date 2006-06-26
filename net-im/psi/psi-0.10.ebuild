@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.10 2006/06/25 20:34:16 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.11 2006/06/26 11:16:28 blubb Exp $
 
 inherit eutils qt3
 
@@ -13,7 +13,7 @@ IUSE="ssl crypt xscreensaver extras xmms insecure-patches"
 QV="2.0"
 
 DESCRIPTION="QT 3.x Jabber Client, with Licq-like interface"
-HOMEPAGE="http:/psi-im.org/"
+HOMEPAGE="http://psi-im.org/"
 # translations from http://tanoshi.net/language.html
 # polish translation contains special texts for patches from extras-version
 SRC_URI="mirror://sourceforge/psi/${MY_P}.tar.bz2
