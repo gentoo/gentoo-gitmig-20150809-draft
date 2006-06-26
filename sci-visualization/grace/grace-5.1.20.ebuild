@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.20.ebuild,v 1.1 2006/06/26 17:54:45 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.20.ebuild,v 1.2 2006/06/26 18:32:46 ribosome Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="debug png jpeg pdf fftw netcdf"
 
-DEPEND="virtual/motif
+RDEPEND="virtual/motif
 	>=sys-libs/zlib-1.0.3
 	>=media-libs/t1lib-1.3.1
 	>=media-libs/tiff-3.5
@@ -21,7 +21,9 @@ DEPEND="virtual/motif
 	netcdf? ( >=sci-libs/netcdf-3.0 )
 	png? ( >=media-libs/libpng-0.9.6 )
 	jpeg? ( media-libs/jpeg )
-	pdf? ( >=media-libs/pdflib-4.0.3 )
+	pdf? ( >=media-libs/pdflib-4.0.3 )"
+
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_compile() {
@@ -32,13 +34,14 @@ src_compile() {
 		gracehelpviewer="dillo"
 	elif has_version 'www-client/opera' ; then
 		gracehelpviewer="opera"
-	elif has_version 'net-www/mozilla-firebird' \
-		|| has_version 'net-www/mozilla-firebird-bin' \
-		|| has_version 'net-www/mozilla-firebird-cvs' ; then
-		gracehelpviewer="MozillaFirebird"
+	elif has_version 'www-client/mozilla-firefox' \
+		|| has_version 'www-client/mozilla-firefox-bin' \
+		|| has_version 'www-client/mozilla-firefox-cvs' ; then
+		gracehelpviewer="firefox"
 	elif has_version 'www-client/mozilla' ; then
 		gracehelpviewer="mozilla"
-	elif has_version 'kde-base/kdebase' ; then
+	elif has_version 'kde-base/kdebase' \
+		|| has_version 'kde-base/konqueror' ; then
 		gracehelpviewer="konqueror"
 	elif has_version 'www-client/galeon' ; then
 		gracehelpviewer="galeon"
@@ -48,8 +51,8 @@ src_compile() {
 		gracehelpviewer="netscape"
 	fi
 
-	sed -i -e "s%doc/%/usr/share/doc/${PF}/html/%g" src/*
-	sed -i -e "s%examples/%/usr/share/doc/${PF}/examples/%g" src/xmgrace.c
+	sed -i -e "s%doc/%${ROOT}usr/share/doc/${PF}/html/%g" src/*
+	sed -i -e "s%examples/%${ROOT}usr/share/doc/${PF}/examples/%g" src/xmgrace.c
 
 	econf \
 		--enable-grace-home=/usr/share/grace \
