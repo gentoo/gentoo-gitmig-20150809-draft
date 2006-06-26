@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.24.ebuild,v 1.1 2006/06/25 00:31:41 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.24.ebuild,v 1.2 2006/06/26 23:28:14 nichoj Exp $
 
 inherit distutils eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="virtual/python"
 RDEPEND="virtual/python
-	~dev-java/java-config-wrapper"
+	dev-java/java-config-wrapper"
 
 src_install() {
 	distutils_src_install
