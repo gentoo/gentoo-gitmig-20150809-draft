@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50-r2.ebuild,v 1.3 2006/04/29 05:07:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50-r2.ebuild,v 1.4 2006/06/26 22:21:03 flameeyes Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -38,7 +38,7 @@ PROVIDE="virtual/emacs virtual/editor"
 
 SLOT="22.0.50"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc-macos"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~x86 ~x86-fbsd"
 
 DFILE=emacs-${SLOT}.desktop
 
