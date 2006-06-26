@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/eclipse-cdt-bin
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/ChangeLog,v 1.12 2004/06/25 02:30:08 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/ChangeLog,v 1.13 2006/06/26 19:04:09 ribosome Exp $
+
+*eclipse-cdt-bin-3.0.2 (26 Jun 2006)
+
+  26 Jun 2006; Olivier Fisette <ribosome@gentoo.org>
+  +eclipse-cdt-bin-3.0.2.ebuild:
+  New upstream version. Thanks to Luc Grenier <luc.grenier@rsvs.ulaval.ca> for
+  this new ebuild.
 
   04 Jun 2004; Jason Wever <weeve@gentoo.org> eclipse-cdt-bin-1.2.0.ebuild:
   Added ~sparc keywords to help resolve bug #53019.
