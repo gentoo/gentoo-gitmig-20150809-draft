@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_pre1.ebuild,v 1.1 2006/06/26 20:00:35 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_pre1.ebuild,v 1.2 2006/06/26 21:09:55 flameeyes Exp $
 
 ONIGURUMA="onigd2_5_4"
 
-inherit flag-o-matic alternatives eutils gnuconfig multilib
+inherit flag-o-matic alternatives eutils multilib autotools
 
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
@@ -28,8 +28,6 @@ RDEPEND="virtual/libc
 	!dev-ruby/rdoc
 	!dev-ruby/rexml"
 
-DEPEND="sys-devel/autoconf
-	${RDEPEND}"
 PROVIDE="virtual/ruby"
 
 S="${WORKDIR}/ruby-${PV/_pre*/}"
@@ -42,18 +40,17 @@ src_unpack() {
 		pushd "${WORKDIR}/oniguruma"
 #		epatch ${FILESDIR}/oniguruma-2.3.1-gentoo.patch
 		econf --with-rubydir="${S}" || die "econf failed"
-		make ${SLOT/./}
+		emake ${SLOT/./}
 		popd
 	fi
-
-	# Enable build on alpha EV67 (but run gnuconfig_update everywhere)
-	gnuconfig_update || die "gnuconfig_update failed"
 
 	cd "${S}"
 
 	# Fix a hardcoded lib path in configure script
 	sed -i -e "s:\(RUBY_LIB_PREFIX=\"\${prefix}/\)lib:\1$(get_libdir):" \
 		configure.in || die "sed failed"
+
+	eautoreconf
 }
 
 src_compile() {
@@ -63,6 +60,8 @@ src_compile() {
 	filter-flags -Wl,-Bdirect
 	filter-ldflags -Wl,-Bdirect
 	filter-ldflags -Bdirect
+
+	append-flags -fno-strict-aliasing
 
 	# Socks support via dante
 	if use socks5; then
