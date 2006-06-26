@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.1 2006/05/05 17:07:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.2 2006/06/26 14:49:23 caleb Exp $
+
+*PyQt4-4.0 (26 Jun 2006)
+
+  26 Jun 2006; Caleb Tennis <caleb@gentoo.org> +PyQt4-4.0.ebuild:
+  adding the release version
 
 *PyQt4-4.0_beta1 (05 May 2006)
 
