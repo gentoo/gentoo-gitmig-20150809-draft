@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/vde
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.4 2006/04/04 02:03:11 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.5 2006/06/26 09:10:46 genstef Exp $
+
+*vde-2.0.2 (26 Jun 2006)
+
+  26 Jun 2006; Stefan Schweizer <genstef@gentoo.org> +files/vde.conf,
+  +files/vde.init, metadata.xml, +vde-2.0.2.ebuild:
+  Take over maintainer and version bump thanks to Lorenzo Grandi
+  <popposoft@gmail.com> in bug 113554 also allows to set a group in the init
+  script, thanks to Jean-François Richard <jean-francois@richard.name> in bug
+  113482 and works with qemu 0.8, thanks to Tim Redman
+  <tredman1@tampabay.rr.com> and Nico Baggus <mlspamcb@noci.xs4all.nl> in bug
+  116840, big thanks to Rob M. (Adamant) <thehandoftyr@gmail.com> to notify me
+  of this one in IRC #gentoo-dev-help.
 
   04 Apr 2006; <rphillips@gentoo.org> +files/vde-1.5.8-makefile.patch:
   Committed halycon's patches from bug #125135
