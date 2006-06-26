@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.103 2006/06/01 22:13:26 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.104 2006/06/26 02:54:57 the_paya Exp $
+
+  26 Jun 2006; Javier Villavicencio <the_paya@gentoo.org>
+  mc-4.6.1-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
   01 Jun 2006; Andrej Kacian <ticho@gentoo.org> mc-4.6.1-r1.ebuild:
   Prevent lazy bindings in cons.saver binary (bug #135009, opened by me).
