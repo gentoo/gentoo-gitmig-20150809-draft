@@ -1,0 +1,11 @@
+--- src/vc.c	2003-06-13 20:03:39.000000000 -0400
++++ src/vc.c	2006-03-27 12:56:07.000000000 -0500
+@@ -835,7 +835,7 @@
+   char buf[256];
+   int counter = 0;
+ 
+-  while (EOF != fscanf (fp, "%s\n", buf))
++  while ((fgets(buf, sizeof(buf), fp)) != NULL)
+     {
+       if (0 == strcasecmp (buf, "BEGIN:VCARD"))
+         counter++;
