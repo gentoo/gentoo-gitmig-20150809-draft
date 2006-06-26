@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvd9to5
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvd9to5/ChangeLog,v 1.4 2005/09/10 15:42:09 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvd9to5/ChangeLog,v 1.5 2006/06/26 19:05:22 blubb Exp $
+
+  26 Jun 2006; Simon Stelling <blubb@gentoo.org> dvd9to5-0.1.7.ebuild:
+  stable on amd64
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> dvd9to5-0.1.7.ebuild:
   Don't install INSTALL file.

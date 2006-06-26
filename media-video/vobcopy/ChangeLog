@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vobcopy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.16 2006/05/03 21:05:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.17 2006/06/26 19:03:55 blubb Exp $
+
+  26 Jun 2006; Simon Stelling <blubb@gentoo.org> vobcopy-0.5.14.ebuild:
+  stable on amd64
 
   03 May 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata to list media-video@gentoo.org as maintainer.

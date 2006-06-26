@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cpvts
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cpvts/ChangeLog,v 1.6 2006/04/01 12:37:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cpvts/ChangeLog,v 1.7 2006/06/26 19:07:34 blubb Exp $
+
+  26 Jun 2006; Simon Stelling <blubb@gentoo.org> cpvts-1.2.ebuild:
+  stable on amd64
 
   01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> cpvts-1.2.ebuild:
   Adding a || die is not a bad idea.
