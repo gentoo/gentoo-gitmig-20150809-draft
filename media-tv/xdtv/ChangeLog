@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.32 2006/06/23 22:42:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.33 2006/06/26 08:39:54 flameeyes Exp $
+
+  26 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/xdtv-2.3.2-parallel-install.patch, xdtv-2.3.2-r1.ebuild:
+  Add patch to fix installation when using parallel make.
 
   23 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> xdtv-2.3.2-r1.ebuild:
   Replace PIC conditionals with __PIC__ conditionals, as suggested by

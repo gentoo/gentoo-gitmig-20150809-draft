@@ -1,0 +1,13 @@
+Index: xdtv-2.3.2/src/Makefile.am
+===================================================================
+--- xdtv-2.3.2.orig/src/Makefile.am
++++ xdtv-2.3.2/src/Makefile.am
+@@ -149,7 +149,7 @@ xdtv_v4l_conf_LDADD = @X_LIBS@ -lX11 @LI
+ xdtv_wizard_SOURCES = xdtv_wizard.c translation.c 
+ xdtv_wizard_LDADD = @X_LIBS@ @LIBXAW@ @LIBXMU@ @LIBXT@ @LIBXPM@ @LIBXEXT@ -lX11
+ 
+-install-exec-local:
++install-exec-local: install-binPROGRAMS
+ 	chmod u+s $(DESTDIR)$(prefix)/bin/xdtv_v4l-conf
+ 
+ xdtv_scantv_LDADD = @LIBZVBI@ @LIBM@ @LIBPTHREAD@

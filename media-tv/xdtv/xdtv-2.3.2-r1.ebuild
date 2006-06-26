@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.2-r1.ebuild,v 1.2 2006/06/23 22:42:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.2-r1.ebuild,v 1.3 2006/06/26 08:39:54 flameeyes Exp $
 
 inherit font multilib autotools flag-o-matic
 
@@ -108,6 +108,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-2.3.0-setXid.patch"
 	epatch "${FILESDIR}/${P}-strict-aliasing.patch"
+	epatch "${FILESDIR}/${P}-parallel-install.patch"
 
 	# ffmpeg doesn'g use libtool, so the condition for PIC code
 	# is __PIC__, not PIC.
