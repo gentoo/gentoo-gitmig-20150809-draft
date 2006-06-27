@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boehm-gc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.50 2006/06/19 08:21:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.51 2006/06/27 15:18:02 exg Exp $
+
+  27 Jun 2006; Emanuele Giaquinta <exg@gentoo.org> boehm-gc-6.7.ebuild:
+  Stable on ppc.
 
   19 Jun 2006; Guy Martin <gmsoft@gentoo.org> boehm-gc-6.7.ebuild:
   Stable on hppa.
