@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.98 2006/06/10 22:16:52 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.99 2006/06/27 13:34:25 ferdy Exp $
+
+*git-1.4.0-r1 (27 Jun 2006)
+
+  27 Jun 2006; Fernando J. Pereda <ferdy@gentoo.org> +git-1.4.0-r1.ebuild:
+  Install gitview and git-svn. Fixes bug #137942, thanks to Nguyen Thai Ngoc
+  Duy <pclouds@gentoo.org>.
 
 *git-1.4.0 (10 Jun 2006)
 
