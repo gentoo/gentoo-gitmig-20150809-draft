@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/use.mask,v 1.19 2006/04/19 21:46:19 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/use.mask,v 1.20 2006/06/27 19:20:21 wolf31o2 Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -25,7 +25,7 @@ kqemu
 
 # x86/amd64 only:
 mmx
-mmx2
+mmxext
 sse
 sse2
 3dnow
