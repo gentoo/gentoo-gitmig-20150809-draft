@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/java-config-wrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.4 2006/06/26 21:37:44 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.5 2006/06/27 02:01:57 nichoj Exp $
+
+*java-config-wrapper-0.9-r3 (27 Jun 2006)
+
+  27 Jun 2006; Joshua Nichols <jnichols@gentoo.org>
+  +files/java-config-wrapper-0.9-check_env_files.patch,
+  -java-config-wrapper-0.9-r2.ebuild, +java-config-wrapper-0.9-r3.ebuild:
+  Adding a fix for java-check-environment
 
 *java-config-wrapper-0.9-r2 (26 Jun 2006)
 

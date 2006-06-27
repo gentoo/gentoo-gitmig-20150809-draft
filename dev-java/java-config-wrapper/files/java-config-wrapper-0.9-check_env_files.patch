@@ -1,0 +1,38 @@
+diff -ru java-config-wrapper-0.9-orig/src/shell/java-check-environment java-config-wrapper-0.9/src/shell/java-check-environment
+--- java-config-wrapper-0.9-orig/src/shell/java-check-environment	2006-06-26 16:47:58.000000000 -0400
++++ java-config-wrapper-0.9/src/shell/java-check-environment	2006-06-26 21:56:02.000000000 -0400
+@@ -66,7 +66,13 @@
+ 		handle=${env#*20}
+ 	
+ 		if [[ "${generation}z" != "2z" ]]; then
+-			local ATOM="=${handle}*"
++            local ATOM
++            if [[ ${handle} =~ "^kaffe" ]]; then
++                ATOM="kaffe"
++            elif [[ ${handle} =~ "^(\w+-)+[0-9]+\.[0-9]+" ]]; then 
++
++			    ATOM="=${BASH_REMATCH}*"
++            fi
+ 			packages_to_merge="${packages_to_merge} ${ATOM}"
+ 			old_configs="${old_configs} ${env}"
+ 			this_result=1
+@@ -175,6 +181,11 @@
+ 	return ${this_result}
+ }
+ 
++#if [[ ${UID} != 0 ]]; then
++#    eerror "Must be root to run"
++#    exit 1
++#fi
++
+ qeinfo "=== Java Environment Checker ==="
+ qeinfo "The purpose of this script is to check the sanity of your Java Environment."
+ qeinfo "We have significantly changed and improved the way Java is handled in many respects."
+@@ -208,6 +219,7 @@
+ 
+ if [[ ${RESULT} == 0 ]]; then
+ 	qeinfo "Java environment is sane. Congratulations!"
++    #touch "/etc/java-config-2/environment-ok"
+ fi
+ 
+ exit ${RESULT}
