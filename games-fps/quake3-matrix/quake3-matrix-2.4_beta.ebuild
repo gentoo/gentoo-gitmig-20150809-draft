@@ -1,12 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-matrix/quake3-matrix-2.4_beta.ebuild,v 1.1 2004/12/27 04:20:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-matrix/quake3-matrix-2.4_beta.ebuild,v 1.2 2006/06/27 19:27:41 wolf31o2 Exp $
 
 MOD_DESC="Matrix"
 MOD_NAME=matrix
 inherit games games-q3mod
 
-HOMEPAGE="http://www.public.iastate.edu/~areinot/matrix/matrix.html"
+# All other HOMEPAGE have disappeared
+HOMEPAGE="http://mods.moddb.com/3388/matrix-quake-3/"
 SRC_URI="matrix24.zip"
 
 LICENSE="Q3AEULA"

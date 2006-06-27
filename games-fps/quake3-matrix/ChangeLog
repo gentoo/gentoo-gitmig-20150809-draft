@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-matrix
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-matrix/ChangeLog,v 1.1 2004/12/27 04:20:40 vapier Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-matrix/ChangeLog,v 1.2 2006/06/27 19:27:41 wolf31o2 Exp $
+
+  27 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake3-matrix-2.4_beta.ebuild:
+  Changed HOMEPAGE and closing bug #136939.
 
 *quake3-matrix-2.4_beta (26 Dec 2004)
 
