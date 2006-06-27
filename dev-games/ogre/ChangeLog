@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.26 2006/06/26 17:08:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.27 2006/06/27 20:50:58 mr_bones_ Exp $
+
+  27 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org> -ogre-1.0.1.ebuild,
+  -ogre-1.0.2.ebuild, -ogre-1.0.3_p1.ebuild, -ogre-1.0.4.ebuild,
+  -ogre-1.0.5.ebuild, -ogre-1.0.6.ebuild, -ogre-1.0.7.ebuild:
+  remove old 1.0.* ebuilds
 
 *ogre-1.2.1 (26 Jun 2006)
 
