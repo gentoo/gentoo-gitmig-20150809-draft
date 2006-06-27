@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.62 2006/04/26 09:02:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.63 2006/06/27 13:30:15 flameeyes Exp $
+
+  27 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/xvid-1.1.0_beta2-amd64-gcc4.patch, -xvid-1.1.0_beta2-r1.ebuild:
+  Remove 1.1.0_beat2 that had an hardcoded dep on autoconf.
 
   26 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> xvid-1.1.0-r1.ebuild:
   Fix patch naming, thanks to Nick Hadaway in bug #131298.
