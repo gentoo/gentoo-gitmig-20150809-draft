@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.1.ebuild,v 1.3 2006/05/29 18:17:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.1.ebuild,v 1.4 2006/06/27 22:30:40 hanno Exp $
 
 inherit eutils kde
 
@@ -17,7 +17,8 @@ RDEPEND="|| ( x11-base/xorg-server
 	      >=x11-base/xorg-x11-6.8.0-r4 )
 	>=media-libs/xine-lib-1
 	gstreamer? ( =media-libs/gstreamer-0.8*
-		=media-libs/gst-plugins-0.8* )
+		=media-libs/gst-plugins-0.8*
+		=media-plugins/gst-plugins-xvideo-0.8* )
 	media-sound/cdparanoia
 	encode? ( media-sound/lame )
 	vorbis? ( media-libs/libvorbis )
