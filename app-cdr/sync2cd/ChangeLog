@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/sync2cd
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/sync2cd/ChangeLog,v 1.9 2005/06/25 14:37:52 dragonheart Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/sync2cd/ChangeLog,v 1.10 2006/06/27 15:26:08 lisa Exp $
+
+*sync2cd-1.1 (27 Jun 2006)
+
+  27 Jun 2006; Lisa Seelye <lisa@gentoo.org> +sync2cd-1.1.ebuild:
+  Version bump for bug #92843
 
 *sync2cd-0.9 (25 Jun 2005)
 
