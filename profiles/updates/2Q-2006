@@ -25,3 +25,4 @@ move net-misc/resolvconf-gentoo net-dns/resolvconf-gentoo
 move x11-misc/matchbox-nest x11-misc/xoo
 move games-puzzle/pouetchess games-board/pouetchess
 move app-i18n/jless-iso254 app-i18n/jless
+move app-text/ghostscript-afpl app-text/ghostscript-gpl
