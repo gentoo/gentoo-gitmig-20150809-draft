@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.25.18.ebuild,v 1.5 2006/06/27 23:56:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.26.18.ebuild,v 1.1 2006/06/27 23:56:44 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -32,7 +32,7 @@ MODULE_NAMES="fglrx(video:${WORKDIR}/common/lib/modules/fglrx/build_mod)"
 QA_EXECSTACK_x86="usr/lib/xorg/modules/dri/fglrx_dri.so"
 QA_EXECSTACK_amd64="usr/lib64/xorg/modules/dri/fglrx_dri.so usr/lib32/xorg/modules/dri/fglrx_dri.so"
 QA_TEXTREL_x86="usr/lib/xorg/modules/dri/fglrx_dri.so usr/lib/opengl/ati/lib/libGL.so.1.2"
-QA_TEXTREL_amd64="usr/lib64/xorg/modules/dri/fglrx_dri.so usr/lib32/opengl/ati/lib/libGL.so.1.2"
+QA_TEXTREL_amd64="usr/lib64/xorg/modules/dri/fglrx_dri.so usr/lib32/opengl/ati/lib/libGL.so.1.2 usr/lib32/xorg/modules/dri/fglrx_dri.so usr/lib32/xorg/modules/dri/atiogl_a_dri.so"
 
 choose_driver_paths() {
 	ARCH_DIR="${WORKDIR}/arch"
