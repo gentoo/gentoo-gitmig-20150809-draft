@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r5.ebuild,v 1.1 2006/06/01 23:31:14 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r5.ebuild,v 1.2 2006/06/27 09:50:06 genstef Exp $
 
 inherit gnuconfig eutils autotools
 
@@ -56,6 +56,9 @@ src_unpack() {
 
 	# fix psset with sed-4.1, bug #126403
 	epatch ${FILESDIR}/a2ps-4.13c-psset.patch
+
+	# fix >=autoconf-2.60, bug 138161
+	epatch ${FILESDIR}/a2ps-4.13-fixcachecheck.patch
 
 	gnuconfig_update || die "gnuconfig_update failed"
 	AT_M4DIR="m4" eautoreconf || die "eautoreconf failed"

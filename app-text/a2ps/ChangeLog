@@ -1,6 +1,11 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.47 2006/06/01 23:31:14 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.48 2006/06/27 09:50:06 genstef Exp $
+
+  27 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/a2ps-4.13-fixcachecheck.patch, a2ps-4.13c-r5.ebuild:
+  Fix cachecheck to make it work with autoconf-2.60, thanks to flameeyes, bug
+  138161
 
 *a2ps-4.13c-r5 (01 Jun 2006)
 
