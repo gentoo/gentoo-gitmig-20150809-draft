@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/diffball
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.18 2005/11/05 09:02:19 ferringb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.19 2006/06/27 05:24:56 zmedico Exp $
+
+*diffball-1.0 (27 Jun 2006)
+
+  27 Jun 2006; Zac Medico <zmedico@gentoo.org> +diffball-1.0.ebuild:
+  1.0 version bump for bug #138030.
 
 *diffball-0.7.1 (05 Nov 2005)
 
