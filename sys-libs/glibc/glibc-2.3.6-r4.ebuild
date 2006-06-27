@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.16 2006/06/25 21:35:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.17 2006/06/27 00:02:23 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -27,13 +27,7 @@ GLIBC_MANPAGE_VERSION="2.3.6-1"
 GLIBC_INFOPAGE_VERSION="2.3.6"
 
 # Gentoo patchset
-PATCH_VER="1.15"
-
-# Fedora addons (like c_stubs) ... sniped from RHEL's glibc-2.4-4.src.rpm
-# http://download.fedora.redhat.com/pub/fedora/linux/core/
-FEDORA_VER="20060501T0751"
-FEDORA_TARBALL="glibc-fedora-${FEDORA_VER}.tar.bz2"
-FEDORA_URI="mirror://gentoo/${FEDORA_TARBALL}"
+PATCH_VER="1.16"
 
 GENTOO_TOOLCHAIN_BASE_URI="mirror://gentoo"
 GENTOO_TOOLCHAIN_DEV_URI="http://dev.gentoo.org/~azarah/glibc/XXX http://dev.gentoo.org/~vapier/dist/XXX"
@@ -148,8 +142,6 @@ get_glibc_src_uri() {
 			${GENTOO_TOOLCHAIN_DEV_URI//XXX/glibc-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2}"
 	fi
 
-	GLIBC_SRC_URI="${GLIBC_SRC_URI} ${FEDORA_URI}"
-
 	echo "${GLIBC_SRC_URI}"
 }
 
@@ -167,19 +159,14 @@ toolchain-glibc_src_unpack() {
 	unpack glibc-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
 	unpack glibc-libidn-${GLIBC_RELEASE_VER}.tar.bz2
 
-	if [[ -n ${FEDORA_TARBALL} ]] ; then
-		# only pull out the stuff we actually want
-		mkdir "${WORKDIR}"/fedora
-		cd "${WORKDIR}"/fedora || die
-		unpack ${FEDORA_TARBALL}
-		mv c_stubs "${S}"/ || die
-		cd "${S}"
-		rm -r "${WORKDIR}"/fedora
-	fi
-
 	if [[ -n ${PATCH_VER} ]] ; then
 		cd "${WORKDIR}"
 		unpack glibc-${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
+		# pull out all the addons
+		local d
+		for d in extra/*/configure ; do
+			mv "${d%/configure}" "${S}" || die "moving ${d}"
+		done
 	fi
 
 	# XXX: We should do the branchupdate, before extracting the manpages and

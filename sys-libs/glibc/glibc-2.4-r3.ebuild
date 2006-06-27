@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.9 2006/06/24 09:35:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.10 2006/06/27 00:02:23 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -27,13 +27,7 @@ GLIBC_MANPAGE_VERSION="none"
 GLIBC_INFOPAGE_VERSION="none"
 
 # Gentoo patchset
-PATCH_VER="1.16"
-
-# Fedora addons (like c_stubs) ... sniped from RHEL's glibc-2.4-4.src.rpm
-# http://download.fedora.redhat.com/pub/fedora/linux/core/
-FEDORA_VER="20060501T0751"
-FEDORA_TARBALL="glibc-fedora-${FEDORA_VER}.tar.bz2"
-FEDORA_URI="mirror://gentoo/${FEDORA_TARBALL}"
+PATCH_VER="1.17"
 
 # PPC cpu addon
 # http://penguinppc.org/dev/glibc/glibc-powerpc-cpu-addon.html
@@ -161,7 +155,6 @@ get_glibc_src_uri() {
 
 	[[ -n ${LT_VER} ]] && GLIBC_SRC_URI="${GLIBC_SRC_URI} ${LT_URI}"
 
-	GLIBC_SRC_URI="${GLIBC_SRC_URI} ${FEDORA_URI}"
 	GLIBC_SRC_URI="${GLIBC_SRC_URI} ${PPC_CPU_ADDON_URI}"
 
 	echo "${GLIBC_SRC_URI}"
@@ -190,15 +183,6 @@ toolchain-glibc_src_unpack() {
 	unpack_addon libidn
 	unpack_addon ports
 
-	if [[ -n ${FEDORA_TARBALL} ]] ; then
-		# only pull out the stuff we actually want
-		mkdir "${WORKDIR}"/fedora
-		cd "${WORKDIR}"/fedora || die
-		unpack ${FEDORA_TARBALL}
-		mv c_stubs "${S}"/ || die
-		cd "${S}"
-		rm -r "${WORKDIR}"/fedora
-	fi
 	if [[ -n ${PPC_CPU_ADDON_TARBALL} ]] ; then
 		cd "${S}"
 		unpack ${PPC_CPU_ADDON_TARBALL}
@@ -207,6 +191,11 @@ toolchain-glibc_src_unpack() {
 	if [[ -n ${PATCH_VER} ]] ; then
 		cd "${WORKDIR}"
 		unpack glibc-${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
+		# pull out all the addons
+		local d
+		for d in extra/*/configure ; do
+			mv "${d%/configure}" "${S}" || die "moving ${d}"
+		done
 	fi
 
 	# XXX: We should do the branchupdate, before extracting the manpages and

@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.466 2006/06/25 21:35:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.467 2006/06/27 00:02:23 vapier Exp $
+
+  27 Jun 2006; Mike Frysinger <vapier@gentoo.org> glibc-2.3.6-r4.ebuild,
+  glibc-2.4-r3.ebuild:
+  Punt Fedora tarballs in favor of packaging c_stubs/glibc-compat ourselves
+  #138028 by je_fro.
 
   25 Jun 2006; Guy Martin <gmsoft@gentoo.org> glibc-2.3.6-r4.ebuild:
   Stable on hppa.
