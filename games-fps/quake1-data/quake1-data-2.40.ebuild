@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.7 2006/04/13 21:05:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.8 2006/06/27 19:54:48 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -20,6 +20,12 @@ S=${WORKDIR}
 
 pkg_setup() {
 	games_pkg_setup
+
+	if built_with_use "games-fps/quake1-demodata" symlink ; then
+		eerror "The symlink for the demo data conflicts with the cdinstall data"
+		die "Unmerge games-fps/quake1-demodata to remove the conflict"
+	fi
+
 	export CDROM_SET_NAMES=("Existing Install" "Quake CD" "Ultimate Quake Collection")
 	cdrom_get_cds id1:q101_int.1:Setup/ID1
 }
