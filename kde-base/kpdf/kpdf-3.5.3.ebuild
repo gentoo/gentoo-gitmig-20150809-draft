@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.3.ebuild,v 1.3 2006/06/02 00:47:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.3.ebuild,v 1.4 2006/06/27 20:54:20 genstef Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -26,7 +26,9 @@ PATCHES="${DISTDIR}/${P}-poppler-bis.patch.bz2"
 
 pkg_setup() {
 	kde_pkg_setup
-	if ! built_with_use app-text/poppler-bindings qt; then
+	# check for qt still until it had a revision bump in both ~arch and stable.
+	if ! built_with_use app-text/poppler-bindings qt && \
+		! built_with_use app-text/poppler-bindings qt3; then
 		eerror "This package requires app-text/poppler-bindings compiled with Qt support."
 		eerror "Please reemerge app-text/poppler-bindings with USE=\"qt\"."
 		die "Please reemerge app-text/poppler-bindings with USE=\"qt\"."
