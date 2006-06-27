@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.8762.ebuild,v 1.1 2006/05/23 15:57:42 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.8762.ebuild,v 1.2 2006/06/27 18:04:52 azarah Exp $
 
 inherit eutils linux-mod
 
@@ -85,6 +85,14 @@ src_unpack() {
 	#if kernel_is 2 6 ; then
 	#	einfo "Applying 2.6 kernel patches"
 	#fi
+
+	# Fix building with post 2.6.17 kernels (I assume that it will be the
+	# case with 2.6.18-rc1, but its not out at this time)
+	# NB!!!! You need to check if this is still needed with next release
+	# azarah@gentoo.org (27 June 2006)
+	sed -i \
+	    -e 's:\(echo "\)\(#include.*\):\1#include <linux/autoconf.h>\n\t\2:g' \
+	    ${S}/conftest.sh
 
 	# Quiet down warnings the user do not need to see
 	sed -i \
