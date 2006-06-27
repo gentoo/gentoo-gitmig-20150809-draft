@@ -21,10 +21,10 @@ EBUILD autoconf-wrapper-3-r1.ebuild 815 RMD160 32e487693e182a1871bf0035a4d1298f9
 MD5 740f55bd9ef30e2958b762e60d3ef0e7 autoconf-wrapper-3-r1.ebuild 815
 RMD160 32e487693e182a1871bf0035a4d1298f9934986b autoconf-wrapper-3-r1.ebuild 815
 SHA256 cd39f71e75cb869756921beabf3e4be39b50be0b6c6269c2041f3c76477abc4c autoconf-wrapper-3-r1.ebuild 815
-EBUILD autoconf-wrapper-3.2-r1.ebuild 900 RMD160 cc1ceecff56b3680dd2bdabf6bf7f3758b53074c SHA1 847f627d56fb4991e7700319489f74e5edd31ac0 SHA256 42cd408578c46d62cb0a74c724c4b79ad862db4af59cfafdf2e6cc8b260b72e9
-MD5 63021c1913218d1722cbec0963988302 autoconf-wrapper-3.2-r1.ebuild 900
-RMD160 cc1ceecff56b3680dd2bdabf6bf7f3758b53074c autoconf-wrapper-3.2-r1.ebuild 900
-SHA256 42cd408578c46d62cb0a74c724c4b79ad862db4af59cfafdf2e6cc8b260b72e9 autoconf-wrapper-3.2-r1.ebuild 900
+EBUILD autoconf-wrapper-3.2-r2.ebuild 898 RMD160 9c90f83d3ce6cedfccf6327e5b213769685b92ee SHA1 ed0fff0f7328525e3801e42bbdba1d8d87a61ffd SHA256 6626e7e0fdbbf2b257941703417544e29d9ed3c199caccb31ac5690785252ebc
+MD5 c79a2205c56d39f58849fd8eb7228056 autoconf-wrapper-3.2-r2.ebuild 898
+RMD160 9c90f83d3ce6cedfccf6327e5b213769685b92ee autoconf-wrapper-3.2-r2.ebuild 898
+SHA256 6626e7e0fdbbf2b257941703417544e29d9ed3c199caccb31ac5690785252ebc autoconf-wrapper-3.2-r2.ebuild 898
 EBUILD autoconf-wrapper-3.2.ebuild 820 RMD160 2aecb862b0eb3393e4f431dc04f4ffd29e37ae84 SHA1 5391282b9844f17edb833f09955fc9a3e60c56ae SHA256 bdaca9fdcd95df64a489d65c40aed7890d96da9b8eb55cc15d98e1731823f4fa
 MD5 df37e87175614b28930f207bd1a04473 autoconf-wrapper-3.2.ebuild 820
 RMD160 2aecb862b0eb3393e4f431dc04f4ffd29e37ae84 autoconf-wrapper-3.2.ebuild 820
@@ -33,10 +33,10 @@ EBUILD autoconf-wrapper-3.ebuild 821 RMD160 66e720049f26fa66733d11cb64a282f21e39
 MD5 5893addbc67d6e0d2fff9560a7e5198f autoconf-wrapper-3.ebuild 821
 RMD160 66e720049f26fa66733d11cb64a282f21e3920ef autoconf-wrapper-3.ebuild 821
 SHA256 22c571655bd8e6005b76c16255ee837db318f780db871062d58e043ef5aff2d9 autoconf-wrapper-3.ebuild 821
-MISC ChangeLog 4114 RMD160 2c95cd6660905b83ed867899f555fa5c0fc8a744 SHA1 a28af465ebd4ebac30f6feb43ffdc77c3dfe49f8 SHA256 6c0cca1e19e8128b7b410c8f0005be7bde2f5852a352a3c430aa49cb3aac5aec
-MD5 567e6db4f6389ab22e0504fd7892c814 ChangeLog 4114
-RMD160 2c95cd6660905b83ed867899f555fa5c0fc8a744 ChangeLog 4114
-SHA256 6c0cca1e19e8128b7b410c8f0005be7bde2f5852a352a3c430aa49cb3aac5aec ChangeLog 4114
+MISC ChangeLog 4275 RMD160 06b720bbfcff7048c0c56fec71089626c18305be SHA1 0aa486723a4e2d96752109665230c86342f2e30b SHA256 0f1d46622be1c3556a04106c65fad76c422dad3c85411513b4b889c15d32419d
+MD5 0c27034cc5ed1e7113391fad1ead1e01 ChangeLog 4275
+RMD160 06b720bbfcff7048c0c56fec71089626c18305be ChangeLog 4275
+SHA256 0f1d46622be1c3556a04106c65fad76c422dad3c85411513b4b889c15d32419d ChangeLog 4275
 MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
@@ -53,13 +53,13 @@ SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/di
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-autoconf-wrapper-3.2 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-autoconf-wrapper-3.2 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-autoconf-wrapper-3.2 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-autoconf-wrapper-3.2-r1 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-autoconf-wrapper-3.2-r1 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-autoconf-wrapper-3.2-r1 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-autoconf-wrapper-3.2-r2 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-autoconf-wrapper-3.2-r2 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-autoconf-wrapper-3.2-r2 1
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEnzKoQlM6RnzZP+IRAj/kAJ4mz3npLln9zu3T9ko1t3fxMYdtJgCfY+OG
-fDeF2Aqs/FM+6IpYjtaIflU=
-=5yve
+iD8DBQFEoIJKamhnQswr0vIRAiRoAJ9IuErIIuzfMNZLt5KGx9hOiI7BXwCeMAqv
+ADrYaZZQIS8qd8K8kmft70c=
+=aOb8
 -----END PGP SIGNATURE-----
