@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ndsad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ChangeLog,v 1.4 2006/02/19 22:56:18 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ChangeLog,v 1.5 2006/06/27 18:13:46 pva Exp $
+
+  27 Jun 2006; Peter Volkov <pva@gentoo.org> ndsad-1.33.ebuild:
+  Removed system packages from DEPEND (autoconf/automake). Fix for bug 138202.
 
   19 Feb 2006; Joshua Jackson <tsunam@gentoo.org> ndsad-1.33.ebuild:
   Stable on x86; bug #123188
