@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/bio2jack
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.22 2006/02/07 20:09:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.23 2006/06/27 16:58:51 corsair Exp $
+
+  27 Jun 2006; Markus Rothe <corsair@gentoo.org> bio2jack-0.7.ebuild:
+  Stable on ppc64; bug #138227
 
   07 Feb 2006; Aron Griffis <agriffis@gentoo.org> bio2jack-0.4.ebuild:
   Mark 0.4 stable on alpha
