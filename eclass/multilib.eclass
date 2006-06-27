@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.52 2006/06/20 20:16:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.53 2006/06/27 09:11:46 vapier Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -660,13 +660,16 @@ multilib_env() {
 # Hide multilib details here for packages which are forced to be compiled for a
 # specific ABI when run on another ABI (like x86-specific packages on amd64)
 multilib_toolchain_setup() {
-	export ABI=$1
+	if has_version app-admin/eselect-compiler ; then
+		# Binutils doesn't have wrappers for ld and as (yet).  Eventually it
+		# will, and all this can just be handled with CHOST.
+		export LD="ld $(get_abi_LDFLAGS)"
+		export AS="as $(get_abi_ASFLAGS)"
 
-	# Binutils doesn't have wrappers for ld and as (yet).  Eventually it
-	# will, and all this can just be handled with CHOST.
-	export LD="ld $(get_abi_LDFLAGS)"
-	export AS="as $(get_abi_ASFLAGS)"
-
-	export CHOST=$(get_abi_CHOST)
-	export CBUILD=$(get_abi_CHOST)
+		export CHOST=$(get_abi_CHOST)
+		export CBUILD=$(get_abi_CHOST)
+	else
+		tc-export CC
+		export ABI=$1
+	fi
 }
