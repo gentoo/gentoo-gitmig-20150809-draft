@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.76 2006/06/11 12:57:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.77 2006/06/27 10:52:04 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -330,9 +330,11 @@ function kde-meta_src_unpack() {
 		fi
 		cd $WORKDIR
 
-		echo ">>> Extracting from tarball..."
+		echo ">>> Unpacking parts of ${TARBALL} to ${WORKDIR}"
 		# Note that KMTARPARAMS is also used by an ebuild
 		tar -xpf $TARFILE $KMTARPARAMS $extractlist	2> /dev/null
+
+		unpack ${A/${TARBALL}/}
 
 		# Avoid syncing if possible
 		# No idea what the above comment means...

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.168 2006/06/15 16:33:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.169 2006/06/27 10:52:04 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -87,12 +87,14 @@ kde_pkg_setup() {
 kde_src_unpack() {
 	debug-print-function $FUNCNAME $*
 
+	[[ -z ${KDE_S} ]] && KDE_S="${S}"
+
 	local PATCHDIR="${WORKDIR}/patches/"
 	if [[ -z $* ]] ; then
 		# Unpack first and deal with KDE patches after examing possible patch sets.
-		# To be picked up, patches need to be named $PN-$PV-*{diff,patch} and be 
+		# To be picked up, patches need to be named $PN-$PV-*{diff,patch} and be
 		# placed in $PATCHDIR. Monolithic ebuilds will use the split ebuild patches.
-		base_src_unpack unpack
+		[[ -d ${KDE_S} ]] || base_src_unpack unpack
 		if [[ -d "${PATCHDIR}" ]] ; then
 			if is-parent-package ${CATEGORY}/${PN} ; then
 				packages="$(get-child-packages ${CATEGORY}/${PN})"
@@ -113,8 +115,6 @@ kde_src_unpack() {
 		# step by step transparently as defined in the ebuild.
 		base_src_unpack $*
 	fi
-
-	[[ -z ${KDE_S} ]] && KDE_S="${S}"
 
 	# if extragear-like packaging is enabled, set the translations and the
 	# documentation depending on LINGUAS settings
