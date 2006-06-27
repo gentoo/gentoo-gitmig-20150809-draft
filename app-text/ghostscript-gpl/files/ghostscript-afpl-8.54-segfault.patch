@@ -1,0 +1,13 @@
+Index: gs/src/gxfcopy.c
+===================================================================
+--- gs/src/gxfcopy.c	(revision 6764)
++++ gs/src/gxfcopy.c	(working copy)
+@@ -2391,7 +2391,7 @@
+ 	    a[j++] = &cfdata->names[i];
+ 	}
+     }
+-    qsort(a, cfdata->num_glyphs, sizeof(int), compare_glyph_names);
++    qsort(a, cfdata->num_glyphs, sizeof(*a), compare_glyph_names);
+     for (; j >= 0; j--)
+ 	cfdata->glyphs[j].order_index = a[j] - cfdata->names;    
+     gs_free_object(memory, a, "order_font_data");

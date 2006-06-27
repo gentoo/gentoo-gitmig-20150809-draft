@@ -1,0 +1,21 @@
+# ChangeLog for app-text/ghostscript-gpl
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.1 2006/06/27 08:13:40 genstef Exp $
+
+*ghostscript-gpl-8.54 (27 Jun 2006)
+
+  27 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/ghostscript-esp-8.15.2-FAPIcidfmap.cjk,
+  +files/ghostscript-esp-8.15.2-cidfmap.cjk,
+  +files/ghostscript-afpl-8.54-big-cmap-post.patch,
+  +files/ghostscript-afpl-8.54-cups-destdir.diff,
+  +files/ghostscript-afpl-8.54-cups-lib.patch,
+  +files/ghostscript-afpl-8.54-destdir.diff,
+  +files/ghostscript-afpl-8.54-gtk2.patch,
+  +files/ghostscript-afpl-8.54-ps2epsi-afpl.diff,
+  +files/ghostscript-afpl-8.54-rinkj.patch,
+  +files/ghostscript-afpl-8.54-segfault.patch, +files/gdevcups.patch,
+  +files/gdevhl12-hl1250.mak, +metadata.xml, +ghostscript-gpl-8.54.ebuild:
+  Move ghostscript-afpl to ghostscript-gpl and change the license, thanks to
+  Ernst Rohlicek <ernst.rohlicek@inode.at> in bug 137289
+
