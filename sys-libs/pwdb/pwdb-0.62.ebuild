@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.24 2006/03/22 03:27:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.25 2006/06/27 20:45:13 kanaka Exp $
 
 inherit eutils flag-o-matic
 
@@ -27,8 +27,9 @@ src_unpack () {
 	sed -i \
 		-e "s/^DIRS = .*/DIRS = libpwdb/" \
 		-e "s:EXTRAS += :EXTRAS += ${CFLAGS} :" \
-		Makefile
-	sed -i -e "s/=gcc/=$(tc-getCC)/g" default.defs
+		Makefile || die "sed of Makefile failed"
+	sed -i -e "s:=gcc:=$(tc-getCC):g" default.defs \
+		|| die "sed of default.defs failed"
 }
 
 src_compile() {
