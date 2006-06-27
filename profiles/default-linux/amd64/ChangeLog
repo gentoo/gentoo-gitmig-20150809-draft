@@ -1,6 +1,18 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.4 2006/06/26 03:13:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.5 2006/06/27 15:32:37 wolf31o2 Exp $
+
+  27 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> 2005.0/make.defaults,
+  2005.1/make.defaults, 2006.0/make.defaults, 2006.1/desktop/make.defaults,
+  2006.1/make.defaults:
+  I made a few changes to the AMD64 profiles.  This brings the profiles mostly
+  in line with the x86 profiles.
+  
+  * Added qt3 and qt4 to default USE on 2005.0, 2005.1, and 2006.0 profiles
+  * Replaced qt with qt3 and qt4 on the 2006.1/desktop profile
+  * Added firefox to the default USE on the 2006.1/desktop profile
+  * Removed foomaticdb from the default USE on the 2006.1 profile
+  * Added ppds to the default USE on the 2006.1 profile
 
   20 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org> make.defaults:
   Added ASFLAGS_x86
