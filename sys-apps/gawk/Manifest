@@ -1,12 +1,90 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a61f515a05b6ba4e482ea862ac92f519 ChangeLog 11850
-RMD160 ffcf2be9d2b23fc2ad580a4d92ca6cb3d4fffed5 ChangeLog 11850
-SHA256 5d7c0ab2fc7e43bf9df2f78fb7a1a3ff78fa03f779cd74b3b98efb550f9df73e ChangeLog 11850
+AUX 64bitnumfile.patch 340 RMD160 8a664f7b8a97852302bc341571446668ae16d966 SHA1 84ec9b3fc5d015869748b298d63f0c03cf74c33a SHA256 655d50ce49fefd24eb1fe1e940de0e9b1fe4de29468abfd373855eedbaedf7fa
 MD5 c40ec6dfabda5864b7f62fa57d2329bd files/64bitnumfile.patch 340
 RMD160 8a664f7b8a97852302bc341571446668ae16d966 files/64bitnumfile.patch 340
 SHA256 655d50ce49fefd24eb1fe1e940de0e9b1fe4de29468abfd373855eedbaedf7fa files/64bitnumfile.patch 340
+AUX filefuncs/Makefile 1212 RMD160 7b94f136f4a1e5cbfeade53c952c353378584c22 SHA1 e23965d28e8ae856b20211faedaca22cee613c11 SHA256 954bc6e837240b8d756cf6bd1460a24cae2a1cc5c738daf53746a0cff23791a1
+MD5 bcc8ea75aa8f87927bb5e498f4222d2e files/filefuncs/Makefile 1212
+RMD160 7b94f136f4a1e5cbfeade53c952c353378584c22 files/filefuncs/Makefile 1212
+SHA256 954bc6e837240b8d756cf6bd1460a24cae2a1cc5c738daf53746a0cff23791a1 files/filefuncs/Makefile 1212
+AUX filefuncs/filefuncs.c 10992 RMD160 326a54ea0cc42c819d44cf2a749cb141388c4ef0 SHA1 e31aa18db51077d6dc8aeaf979ecb02471f9175a SHA256 c647aa27170ef8e001d47bdf86c47809afd7f6d5a89be2f9769ce05b55ed8309
+MD5 3159f74841ac19ed6237645e562f60c0 files/filefuncs/filefuncs.c 10992
+RMD160 326a54ea0cc42c819d44cf2a749cb141388c4ef0 files/filefuncs/filefuncs.c 10992
+SHA256 c647aa27170ef8e001d47bdf86c47809afd7f6d5a89be2f9769ce05b55ed8309 files/filefuncs/filefuncs.c 10992
+AUX gawk-3.1.2-dec-alpha-compiler.diff 461 RMD160 6a27630fe5096cd617860e51e3f625c8a53930a5 SHA1 8ab7edaac862da75af0a93e6f8d613fe3dbf379b SHA256 89167dddd66d78d000673dc7be4b3a482459310c50d1868f5b9c021c16a3aa34
+MD5 1a6ff83a6dd7c5f300803cae1cabd4ae files/gawk-3.1.2-dec-alpha-compiler.diff 461
+RMD160 6a27630fe5096cd617860e51e3f625c8a53930a5 files/gawk-3.1.2-dec-alpha-compiler.diff 461
+SHA256 89167dddd66d78d000673dc7be4b3a482459310c50d1868f5b9c021c16a3aa34 files/gawk-3.1.2-dec-alpha-compiler.diff 461
+AUX gawk-3.1.3-getpgrp_void.patch 1225 RMD160 ea06ae87acd4d8df1a9a7c160c00b2d13d3ab564 SHA1 427caed0827f2c694fc230fab1b6b993210da6fb SHA256 2e43682e4c86e6f50eeca42b3fc333c1c9c080838b29f3020c88f1d95dc02767
+MD5 8a25d43ff539b0c949fc5bbce8488e06 files/gawk-3.1.3-getpgrp_void.patch 1225
+RMD160 ea06ae87acd4d8df1a9a7c160c00b2d13d3ab564 files/gawk-3.1.3-getpgrp_void.patch 1225
+SHA256 2e43682e4c86e6f50eeca42b3fc333c1c9c080838b29f3020c88f1d95dc02767 files/gawk-3.1.3-getpgrp_void.patch 1225
+AUX gawk-3.1.4-disable-DFA.patch 1837 RMD160 327f9fcec9a00a8d14cd897787e48a0fc1dd78db SHA1 7e3e1766fa8ccff63b917222088c5dfdf679a0e2 SHA256 fbd75950d40a2d02700d36ea584133df3f9051b6dd8645420c1493f2c16ee967
+MD5 3cca4692ffa1c396bff698d02f1a41e0 files/gawk-3.1.4-disable-DFA.patch 1837
+RMD160 327f9fcec9a00a8d14cd897787e48a0fc1dd78db files/gawk-3.1.4-disable-DFA.patch 1837
+SHA256 fbd75950d40a2d02700d36ea584133df3f9051b6dd8645420c1493f2c16ee967 files/gawk-3.1.4-disable-DFA.patch 1837
+AUX gawk-3.1.4-flonum.patch 3341 RMD160 0deb7fd892ab4e5ff318a017727f5424d477f1d6 SHA1 257c5e0e1393bcab55732f1722476829e9d188ba SHA256 da3464cffbfb688c0719172737e6f5f8c4b2e47e19bf83e5ef2e1a586d512ed3
+MD5 6778659e2892fddf115cee2c244e60a8 files/gawk-3.1.4-flonum.patch 3341
+RMD160 0deb7fd892ab4e5ff318a017727f5424d477f1d6 files/gawk-3.1.4-flonum.patch 3341
+SHA256 da3464cffbfb688c0719172737e6f5f8c4b2e47e19bf83e5ef2e1a586d512ed3 files/gawk-3.1.4-flonum.patch 3341
+AUX gawk-3.1.4-nextc.patch 716 RMD160 e2251ab1467c1f474aaa4cff5f538003cbe78619 SHA1 dd1bfa4daf762cc4d03b136aead28243a389c199 SHA256 f12a56397330a6abe4c60cb56365d572c3e1f8a1c49e095e4325eedc749150e0
+MD5 334e1cf92033c20c5e401f5ae5f498cc files/gawk-3.1.4-nextc.patch 716
+RMD160 e2251ab1467c1f474aaa4cff5f538003cbe78619 files/gawk-3.1.4-nextc.patch 716
+SHA256 f12a56397330a6abe4c60cb56365d572c3e1f8a1c49e095e4325eedc749150e0 files/gawk-3.1.4-nextc.patch 716
+AUX gawk-3.1.4-uplow.patch 5636 RMD160 623c4c86ceb45cf7e021ee88b3559cbebe37a433 SHA1 bd1a728681825f5648011ec605d785eba2e2dec3 SHA256 92a026f634f54a844536c527addc23bce45efeeb4ce7e6748bd1dc827e953cf8
+MD5 513af85f3e12197f97b42c3fee7c491c files/gawk-3.1.4-uplow.patch 5636
+RMD160 623c4c86ceb45cf7e021ee88b3559cbebe37a433 files/gawk-3.1.4-uplow.patch 5636
+SHA256 92a026f634f54a844536c527addc23bce45efeeb4ce7e6748bd1dc827e953cf8 files/gawk-3.1.4-uplow.patch 5636
+AUX gawk-3.1.5-binmode.patch 694 RMD160 da518848ea916a6f39a33fa1cc00ae11c185fb3f SHA1 7eec7cf07bcb0b1c4be1ca32ae54d5f381e8048f SHA256 e4dae2f48d444ce628aed9280840d8e92dec45f10ca99daf8eab3a7c2321612d
+MD5 289bd104c6e8f65d6385ae1987b394f3 files/gawk-3.1.5-binmode.patch 694
+RMD160 da518848ea916a6f39a33fa1cc00ae11c185fb3f files/gawk-3.1.5-binmode.patch 694
+SHA256 e4dae2f48d444ce628aed9280840d8e92dec45f10ca99daf8eab3a7c2321612d files/gawk-3.1.5-binmode.patch 694
+AUX gawk-3.1.5-core.patch 845 RMD160 21fff34a7893b3be56136c095ed7e64379a72a79 SHA1 8a333e15840c1383607cc555b7be9a90aa1f417d SHA256 2634c7156f4d718c2ff6529cddd64c8d5ca0c8f8092e904c83024e3c3b604b5f
+MD5 abb678ccf6a5f5c77553476066efb8b7 files/gawk-3.1.5-core.patch 845
+RMD160 21fff34a7893b3be56136c095ed7e64379a72a79 files/gawk-3.1.5-core.patch 845
+SHA256 2634c7156f4d718c2ff6529cddd64c8d5ca0c8f8092e904c83024e3c3b604b5f files/gawk-3.1.5-core.patch 845
+AUX gawk-3.1.5-fieldwidths.patch 1009 RMD160 8780aa76799f29b2050ae55d4587bf0e549158e8 SHA1 fb207a9b66cc7e3471221f87b960f12290586f14 SHA256 09689141e2c391e8b48208a59f9440b3d7da127ee3ddf6cc70c2cbbc2867a84b
+MD5 1088ba2d88976e2e9049a87f6f264ce6 files/gawk-3.1.5-fieldwidths.patch 1009
+RMD160 8780aa76799f29b2050ae55d4587bf0e549158e8 files/gawk-3.1.5-fieldwidths.patch 1009
+SHA256 09689141e2c391e8b48208a59f9440b3d7da127ee3ddf6cc70c2cbbc2867a84b files/gawk-3.1.5-fieldwidths.patch 1009
+AUX gawk-3.1.5-gcc4.patch 826 RMD160 a68e7ed7c70aa6be454961aa25903fe236650227 SHA1 8908a11d8e0e3d0ee1cc5ae5b9c31ebc0341cdc8 SHA256 7b7d37a6ecb51300f46ad611d486a074eb522dabb949e500664943df7f52b0e3
+MD5 499e2881f167a17f2123ca338836e91d files/gawk-3.1.5-gcc4.patch 826
+RMD160 a68e7ed7c70aa6be454961aa25903fe236650227 files/gawk-3.1.5-gcc4.patch 826
+SHA256 7b7d37a6ecb51300f46ad611d486a074eb522dabb949e500664943df7f52b0e3 files/gawk-3.1.5-gcc4.patch 826
+AUX gawk-3.1.5-num2str.patch 1319 RMD160 869a086ff89e25adfbf56e68de5df9d3aae7f61f SHA1 5dbe975164582ba564d235b3eeea924e86e85086 SHA256 2cadd540e4d3a5afc63fcaca3d797df18a668ff91c5a1f94fa4a2b4cb1600762
+MD5 4d820de101fcc80c3041506c5635227c files/gawk-3.1.5-num2str.patch 1319
+RMD160 869a086ff89e25adfbf56e68de5df9d3aae7f61f files/gawk-3.1.5-num2str.patch 1319
+SHA256 2cadd540e4d3a5afc63fcaca3d797df18a668ff91c5a1f94fa4a2b4cb1600762 files/gawk-3.1.5-num2str.patch 1319
+DIST gawk-3.1.3.tar.gz 2078246
+DIST gawk-3.1.4.tar.gz 2260582
+DIST gawk-3.1.5.tar.gz 2310919 RMD160 8d875f4ea9e9ef5c932468cf43c691f6e082b197 SHA256 463dcb9d0ca398b1d4f5a332f6cd9cec56441265fca616f2ea1b44d459e9f0f8
+DIST patch_3.1.4__xml_20040920 79433
+EBUILD gawk-3.1.3-r2.ebuild 2764 RMD160 c4d3aeb0e1215cf8d70cea91adfab727f98ec4a9 SHA1 37375a03391b0048d1ed0bf842356b0c43ecd9c2 SHA256 b7943e60e2abb13c5078197e51443f744904d2c63622929f9e78b5d2f4233482
+MD5 e0f9b7570483cbca8caa3706b334416c gawk-3.1.3-r2.ebuild 2764
+RMD160 c4d3aeb0e1215cf8d70cea91adfab727f98ec4a9 gawk-3.1.3-r2.ebuild 2764
+SHA256 b7943e60e2abb13c5078197e51443f744904d2c63622929f9e78b5d2f4233482 gawk-3.1.3-r2.ebuild 2764
+EBUILD gawk-3.1.4-r4.ebuild 3856 RMD160 67025a744155d92ff6f3509d2ec2e3debc788931 SHA1 3dc396188069e3311a35bb3b54eaa16dab77cbf4 SHA256 8c00d64de905e8849a3075a0f5b6b3d187a1debfabebb584c0f458a2e7f27c74
+MD5 09fbc4e3606506a36a62d00e0a4a4dea gawk-3.1.4-r4.ebuild 3856
+RMD160 67025a744155d92ff6f3509d2ec2e3debc788931 gawk-3.1.4-r4.ebuild 3856
+SHA256 8c00d64de905e8849a3075a0f5b6b3d187a1debfabebb584c0f458a2e7f27c74 gawk-3.1.4-r4.ebuild 3856
+EBUILD gawk-3.1.5-r1.ebuild 3261 RMD160 5c94d1bd22a7d0dc22f8a44452b945b69ebffaf8 SHA1 fde035d1d62b94419f7d6b90a0f03a8ab3dcd699 SHA256 f747abaad0a4385effad5c3f9790c71c255df02008ba4ce7a047e636d0df0c65
+MD5 c66dfc84b63a513d2f33ed27a229c682 gawk-3.1.5-r1.ebuild 3261
+RMD160 5c94d1bd22a7d0dc22f8a44452b945b69ebffaf8 gawk-3.1.5-r1.ebuild 3261
+SHA256 f747abaad0a4385effad5c3f9790c71c255df02008ba4ce7a047e636d0df0c65 gawk-3.1.5-r1.ebuild 3261
+EBUILD gawk-3.1.5.ebuild 3101 RMD160 ef53669f26cc8c5ee79f253eb84c344b95ed7972 SHA1 11926d1be607daead3bc44f3cdf82dcec79119c2 SHA256 4e3e000902e32afb1e5ea0a126d8b8f4821f4ecab449791ced7d8c2bf7186390
+MD5 20bc8c2ff1c75817ddd31c773fb68a99 gawk-3.1.5.ebuild 3101
+RMD160 ef53669f26cc8c5ee79f253eb84c344b95ed7972 gawk-3.1.5.ebuild 3101
+SHA256 4e3e000902e32afb1e5ea0a126d8b8f4821f4ecab449791ced7d8c2bf7186390 gawk-3.1.5.ebuild 3101
+MISC ChangeLog 11850 RMD160 ffcf2be9d2b23fc2ad580a4d92ca6cb3d4fffed5 SHA1 d542bdae61fcca38cd9da923971d6257636a5b9c SHA256 5d7c0ab2fc7e43bf9df2f78fb7a1a3ff78fa03f779cd74b3b98efb550f9df73e
+MD5 a61f515a05b6ba4e482ea862ac92f519 ChangeLog 11850
+RMD160 ffcf2be9d2b23fc2ad580a4d92ca6cb3d4fffed5 ChangeLog 11850
+SHA256 5d7c0ab2fc7e43bf9df2f78fb7a1a3ff78fa03f779cd74b3b98efb550f9df73e ChangeLog 11850
+MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 MD5 a3d79dbed6a930b14071084a6c2dbcc7 files/digest-gawk-3.1.3-r2 63
 RMD160 7c40d89b3ff61953f18aabfe2cf70f091f43943f files/digest-gawk-3.1.3-r2 63
 SHA256 83b1b6f52c39ec78f2006a936f5bdd368d7579e63171660e2037afa55d1c6b21 files/digest-gawk-3.1.3-r2 63
@@ -19,64 +97,10 @@ SHA256 01e8243cf09dada7e4b9a224466042712149a3e32a8941dd0c2319064daf6e3b files/di
 MD5 5717d8332bd2e98dbded1334cc76bee2 files/digest-gawk-3.1.5-r1 235
 RMD160 3d116e6731687336128135022efa9fa0e506dbad files/digest-gawk-3.1.5-r1 235
 SHA256 01e8243cf09dada7e4b9a224466042712149a3e32a8941dd0c2319064daf6e3b files/digest-gawk-3.1.5-r1 235
-MD5 bcc8ea75aa8f87927bb5e498f4222d2e files/filefuncs/Makefile 1212
-RMD160 7b94f136f4a1e5cbfeade53c952c353378584c22 files/filefuncs/Makefile 1212
-SHA256 954bc6e837240b8d756cf6bd1460a24cae2a1cc5c738daf53746a0cff23791a1 files/filefuncs/Makefile 1212
-MD5 3159f74841ac19ed6237645e562f60c0 files/filefuncs/filefuncs.c 10992
-RMD160 326a54ea0cc42c819d44cf2a749cb141388c4ef0 files/filefuncs/filefuncs.c 10992
-SHA256 c647aa27170ef8e001d47bdf86c47809afd7f6d5a89be2f9769ce05b55ed8309 files/filefuncs/filefuncs.c 10992
-MD5 1a6ff83a6dd7c5f300803cae1cabd4ae files/gawk-3.1.2-dec-alpha-compiler.diff 461
-RMD160 6a27630fe5096cd617860e51e3f625c8a53930a5 files/gawk-3.1.2-dec-alpha-compiler.diff 461
-SHA256 89167dddd66d78d000673dc7be4b3a482459310c50d1868f5b9c021c16a3aa34 files/gawk-3.1.2-dec-alpha-compiler.diff 461
-MD5 8a25d43ff539b0c949fc5bbce8488e06 files/gawk-3.1.3-getpgrp_void.patch 1225
-RMD160 ea06ae87acd4d8df1a9a7c160c00b2d13d3ab564 files/gawk-3.1.3-getpgrp_void.patch 1225
-SHA256 2e43682e4c86e6f50eeca42b3fc333c1c9c080838b29f3020c88f1d95dc02767 files/gawk-3.1.3-getpgrp_void.patch 1225
-MD5 3cca4692ffa1c396bff698d02f1a41e0 files/gawk-3.1.4-disable-DFA.patch 1837
-RMD160 327f9fcec9a00a8d14cd897787e48a0fc1dd78db files/gawk-3.1.4-disable-DFA.patch 1837
-SHA256 fbd75950d40a2d02700d36ea584133df3f9051b6dd8645420c1493f2c16ee967 files/gawk-3.1.4-disable-DFA.patch 1837
-MD5 6778659e2892fddf115cee2c244e60a8 files/gawk-3.1.4-flonum.patch 3341
-RMD160 0deb7fd892ab4e5ff318a017727f5424d477f1d6 files/gawk-3.1.4-flonum.patch 3341
-SHA256 da3464cffbfb688c0719172737e6f5f8c4b2e47e19bf83e5ef2e1a586d512ed3 files/gawk-3.1.4-flonum.patch 3341
-MD5 334e1cf92033c20c5e401f5ae5f498cc files/gawk-3.1.4-nextc.patch 716
-RMD160 e2251ab1467c1f474aaa4cff5f538003cbe78619 files/gawk-3.1.4-nextc.patch 716
-SHA256 f12a56397330a6abe4c60cb56365d572c3e1f8a1c49e095e4325eedc749150e0 files/gawk-3.1.4-nextc.patch 716
-MD5 513af85f3e12197f97b42c3fee7c491c files/gawk-3.1.4-uplow.patch 5636
-RMD160 623c4c86ceb45cf7e021ee88b3559cbebe37a433 files/gawk-3.1.4-uplow.patch 5636
-SHA256 92a026f634f54a844536c527addc23bce45efeeb4ce7e6748bd1dc827e953cf8 files/gawk-3.1.4-uplow.patch 5636
-MD5 289bd104c6e8f65d6385ae1987b394f3 files/gawk-3.1.5-binmode.patch 694
-RMD160 da518848ea916a6f39a33fa1cc00ae11c185fb3f files/gawk-3.1.5-binmode.patch 694
-SHA256 e4dae2f48d444ce628aed9280840d8e92dec45f10ca99daf8eab3a7c2321612d files/gawk-3.1.5-binmode.patch 694
-MD5 abb678ccf6a5f5c77553476066efb8b7 files/gawk-3.1.5-core.patch 845
-RMD160 21fff34a7893b3be56136c095ed7e64379a72a79 files/gawk-3.1.5-core.patch 845
-SHA256 2634c7156f4d718c2ff6529cddd64c8d5ca0c8f8092e904c83024e3c3b604b5f files/gawk-3.1.5-core.patch 845
-MD5 1088ba2d88976e2e9049a87f6f264ce6 files/gawk-3.1.5-fieldwidths.patch 1009
-RMD160 8780aa76799f29b2050ae55d4587bf0e549158e8 files/gawk-3.1.5-fieldwidths.patch 1009
-SHA256 09689141e2c391e8b48208a59f9440b3d7da127ee3ddf6cc70c2cbbc2867a84b files/gawk-3.1.5-fieldwidths.patch 1009
-MD5 499e2881f167a17f2123ca338836e91d files/gawk-3.1.5-gcc4.patch 826
-RMD160 a68e7ed7c70aa6be454961aa25903fe236650227 files/gawk-3.1.5-gcc4.patch 826
-SHA256 7b7d37a6ecb51300f46ad611d486a074eb522dabb949e500664943df7f52b0e3 files/gawk-3.1.5-gcc4.patch 826
-MD5 4d820de101fcc80c3041506c5635227c files/gawk-3.1.5-num2str.patch 1319
-RMD160 869a086ff89e25adfbf56e68de5df9d3aae7f61f files/gawk-3.1.5-num2str.patch 1319
-SHA256 2cadd540e4d3a5afc63fcaca3d797df18a668ff91c5a1f94fa4a2b4cb1600762 files/gawk-3.1.5-num2str.patch 1319
-MD5 e0f9b7570483cbca8caa3706b334416c gawk-3.1.3-r2.ebuild 2764
-RMD160 c4d3aeb0e1215cf8d70cea91adfab727f98ec4a9 gawk-3.1.3-r2.ebuild 2764
-SHA256 b7943e60e2abb13c5078197e51443f744904d2c63622929f9e78b5d2f4233482 gawk-3.1.3-r2.ebuild 2764
-MD5 09fbc4e3606506a36a62d00e0a4a4dea gawk-3.1.4-r4.ebuild 3856
-RMD160 67025a744155d92ff6f3509d2ec2e3debc788931 gawk-3.1.4-r4.ebuild 3856
-SHA256 8c00d64de905e8849a3075a0f5b6b3d187a1debfabebb584c0f458a2e7f27c74 gawk-3.1.4-r4.ebuild 3856
-MD5 3a4da0583ded3bec4bc2e8de9c77cfb9 gawk-3.1.5-r1.ebuild 3267
-RMD160 aec0284086c6c6ad23735c84de656f4f2c61d2d2 gawk-3.1.5-r1.ebuild 3267
-SHA256 59e329fb1070e87fbb6469f448ecd1bab29512d5336b7c1822bb017459aa61d7 gawk-3.1.5-r1.ebuild 3267
-MD5 20bc8c2ff1c75817ddd31c773fb68a99 gawk-3.1.5.ebuild 3101
-RMD160 ef53669f26cc8c5ee79f253eb84c344b95ed7972 gawk-3.1.5.ebuild 3101
-SHA256 4e3e000902e32afb1e5ea0a126d8b8f4821f4ecab449791ced7d8c2bf7186390 gawk-3.1.5.ebuild 3101
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
-SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEPEYR2+ySkm8kpY0RAox5AJ4h90WeOELzzo25H9+23Lbm7e++ngCcD5VL
-NdCN93lnq1XSG3NyOb5fRVE=
-=Hlz3
+iD8DBQFEoMU+amhnQswr0vIRAi+vAKC3VI4asdr0omtjnuG1o8jp70w2ogCfRVbd
+oBdlMW7cJG0uZqeSmCu3nkg=
+=2fR6
 -----END PGP SIGNATURE-----
