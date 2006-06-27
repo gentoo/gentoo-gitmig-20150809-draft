@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.17 2006/06/21 05:07:12 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.18 2006/06/27 02:04:01 tcort Exp $
+
+*mutagen-1.5.1 (27 Jun 2006)
+
+  27 Jun 2006; Thomas Cort <tcort@gentoo.org> -mutagen-1.2-r1.ebuild,
+  -mutagen-1.4.ebuild, +mutagen-1.5.1.ebuild:
+  Version bump to 1.5.1.
 
   21 Jun 2006; Thomas Cort <tcort@gentoo.org> mutagen-1.5.ebuild:
   I accidentally missed copying the ~sparc KEYWORD in the last revision bump,
