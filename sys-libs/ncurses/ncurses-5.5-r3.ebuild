@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.5-r3.ebuild,v 1.1 2006/06/27 06:14:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.5-r3.ebuild,v 1.2 2006/06/27 06:17:16 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/ncurses/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="5"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="gpm build bootstrap debug doc minimal unicode nocxx"
+IUSE="bootstrap build debug doc gpm minimal nocxx trace unicode"
 
 DEPEND="gpm? ( sys-libs/gpm )"
 RDEPEND="${DEPEND}"
@@ -80,6 +80,7 @@ do_compile() {
 		--with-mmask-t='long' \
 		$(use_with debug) \
 		$(use_with gpm) \
+		$(use_with trace) \
 		"$@" \
 		|| die "configure failed"
 

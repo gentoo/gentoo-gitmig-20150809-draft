@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.117 2006/06/27 06:14:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.118 2006/06/27 06:17:16 vapier Exp $
+
+  27 Jun 2006; Mike Frysinger <vapier@gentoo.org> ncurses-5.5-r3.ebuild:
+  Add support for USE=trace #136977 by Fredrik Klasson.
 
 *ncurses-5.5-r3 (27 Jun 2006)
 
