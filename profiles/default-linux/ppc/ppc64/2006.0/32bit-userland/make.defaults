@@ -11,6 +11,6 @@ CXXFLAGS=${CFLAGS}
 ACCEPT_KEYWORDS="${ARCH}"
 
 STAGE1_USE="gcc64 unicode"
-USE="${STAGE1_USE} alsa apache2 apm arts berkdb bitmap-fonts cups eds emboss encode esd fortran foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 ibm imlib ipv6 jpeg kde libg++ libwww mad mikmod motif mp3 mpeg ncurses nls nptl nptlonly ogg opengl oss pam perl pdflib png python qt quicktime readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts udev vorbis X xml xmms xv zlib"
+USE="${STAGE1_USE} alsa apache2 apm arts berkdb bitmap-fonts cups eds emboss encode esd fortran foomaticdb gdbm gif gnome gpm gstreamer gtk ibm imlib ipv6 jpeg kde libg++ libwww mad mikmod motif mp3 mpeg ncurses nls nptl nptlonly ogg opengl oss pam perl pdflib png python qt qt3 qt4 quicktime readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts udev vorbis X xml xmms xv zlib"
 
 FEATURES="autoconfig sandbox sfperms"
