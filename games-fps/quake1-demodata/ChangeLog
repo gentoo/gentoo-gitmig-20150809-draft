@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake1-demodata
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/ChangeLog,v 1.2 2006/06/19 20:46:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/ChangeLog,v 1.3 2006/06/27 20:02:06 wolf31o2 Exp $
+
+  27 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake1-demodata-1.06.ebuild:
+  Added a patch from Paul Bredbury <brebs@sent.com> to make sure we don't
+  conflict with games-fps/quake1-data. Closing bug #137402.
 
   19 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   quake1-demodata-1.06.ebuild:

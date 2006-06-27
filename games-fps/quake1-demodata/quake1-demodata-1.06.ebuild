@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/quake1-demodata-1.06.ebuild,v 1.2 2006/06/19 20:46:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/quake1-demodata-1.06.ebuild,v 1.3 2006/06/27 20:02:06 wolf31o2 Exp $
 
 inherit eutils versionator games
 
@@ -16,12 +16,27 @@ LICENSE="quake1-demodata"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="symlink"
-RESTRICT=""
 
 DEPEND="app-arch/lha"
 
 S=${WORKDIR}
 dir=${GAMES_DATADIR}/${MY_PN}1
+
+pkg_setup() {
+	games_pkg_setup
+
+	if has_version "games-fps/quake1-data" ; then
+		ewarn "games-fps/quake1-data already includes the demo data,"
+		ewarn "so this installation is not very useful."
+		echo
+		if use symlink ; then
+			eerror "The symlink for the demo data conflicts with the cdinstall data"
+			die "Remove the 'symlink' USE flag for this package"
+		fi
+		ebeep
+		epause
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
