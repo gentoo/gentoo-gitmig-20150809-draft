@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.11-r2.ebuild,v 1.1 2006/06/27 10:23:11 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.11-r2.ebuild,v 1.2 2006/06/27 13:25:37 ferdy Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -50,9 +50,7 @@ RDEPEND="nls? ( sys-devel/gettext )
 	smime?   ( >=dev-libs/openssl-0.9.6 )
 	app-misc/mime-types"
 DEPEND="${RDEPEND}
-	net-mail/mailbase
-	=sys-devel/autoconf-2.59*
-	!vanilla? ( sys-devel/automake )"
+	net-mail/mailbase"
 
 pkg_setup() {
 	if ! use imap; then
@@ -93,7 +91,7 @@ src_unpack() {
 		# automake --foreign				|| die "automake failed"
 		AT_M4DIR="m4" eautoreconf
 	else
-		WANT_AUTOCONF=2.59 eautoconf
+		eautoconf
 	fi
 }
 
