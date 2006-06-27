@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.2 2006/06/21 02:40:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.3 2006/06/27 02:43:54 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -227,7 +227,7 @@ PDEPEND="
 				input_devices_synaptics? ( x11-drivers/synaptics )
 				input_devices_wacom? ( x11-misc/linuxwacom )
 			)
-			(
+			!minimal? (
 				>=x11-drivers/xf86-input-acecad-1.1.0
 				>=x11-drivers/xf86-input-calcomp-1.1.0
 				>=x11-drivers/xf86-input-citron-2.2.0
@@ -326,7 +326,7 @@ PDEPEND="
 
 				video_cards_3dfx? ( 3dfx? ( >=media-libs/glide-v3-3.10 ) )
 			)
-			(
+			!minimal? (
 				>=x11-drivers/xf86-video-dummy-0.2.0
 				>=x11-drivers/xf86-video-fbdev-0.2.0
 
@@ -496,7 +496,7 @@ PDEPEND="
 LICENSE="${LICENSE} MIT"
 
 pkg_setup() {
-	ensure_a_server_is_building
+	use minimal || ensure_a_server_is_building
 
 	# localstatedir is used for the log location; we need to override the default
 	# from ebuild.sh
