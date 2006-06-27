@@ -8,6 +8,8 @@ MD5 8bd12eb073ef94712f3a88eb8493f195 mutt-cvs-header-cache.29 5120
 RMD160 b9c84cdc699ca8b053cc1b39cbccb225b5701749 mutt-cvs-header-cache.29 5120
 SHA256 5e7877d41480c07f2b8be146bda18261d78f42f51da5434bc5242362ad761ff0 mutt-cvs-header-cache.29 5120
 MD5 44df2038c3cb03b1f6f5d0b998a64aed patch-1.5.5.1.cd.edit_threads.9.5-gentoo-r1.bz2 6269
+RMD160 e2ffc8f99bb944ca8699c5c81e44f4886454e4bb patch-1.5.5.1.cd.edit_threads.9.5-gentoo-r1.bz2 6269
+SHA256 f27e3a8e132b463561e8871113e2b802854b00a9a4bc76e3a04172ef8e3aa09d patch-1.5.5.1.cd.edit_threads.9.5-gentoo-r1.bz2 6269
 MD5 1ea285e44d0fe45eb841559914b57170 patch-1.5.6.dw.mbox-hook.1 6445
 RMD160 baa6e066fd834720ce02ad335c97d37982bcfab7 patch-1.5.6.dw.mbox-hook.1 6445
 SHA256 eaaa1b8279e358b47dca189721fb7fdcbe63576203b76e879868b30206b6166c patch-1.5.6.dw.mbox-hook.1 6445
@@ -18,4 +20,8 @@ MD5 c20f30c8cb6002a503aa373c5934f3bb patch-1.5.6.tt.assumed_charset.1.gz 4640
 RMD160 ab9a74d01a13499b0e122a7a1200bf3cbcb35014 patch-1.5.6.tt.assumed_charset.1.gz 4640
 SHA256 b9cafe5c32718ea6f952fa11397a9da72d8cc85d3ba2e9ae552606060d87303b patch-1.5.6.tt.assumed_charset.1.gz 4640
 MD5 994108508f9890329ff4ee07604a374d patch-1.5.8.rr.compressed.gz 10230
+RMD160 15e6a9029229b11a1b70d911917e59fe9c5515e6 patch-1.5.8.rr.compressed.gz 10230
+SHA256 14ab4ebd2e65908aa174cd2f37429fc4c00a503204301fe09fd37e042ec5eea4 patch-1.5.8.rr.compressed.gz 10230
 MD5 fb20d001bb7102cf78f8e1c734eabbdf patch-1.5.8.vvv.nntp-gentoo-r2.bz2 71752
+RMD160 616740af44b0a71b6cc1481c7718168c1a7fa4dc patch-1.5.8.vvv.nntp-gentoo-r2.bz2 71752
+SHA256 89171755d3decd131ab90084a571a82a786dc6576ed81fd156677c81758068d2 patch-1.5.8.vvv.nntp-gentoo-r2.bz2 71752
