@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/kasumi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.23 2006/06/27 17:14:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.24 2006/06/27 18:01:16 flameeyes Exp $
+
+  27 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kasumi-2.0-format.patch, -kasumi-0.7.ebuild, -kasumi-2.0.ebuild:
+  Remove old version.
 
 *kasumi-2.0.1 (27 Jun 2006)
 
