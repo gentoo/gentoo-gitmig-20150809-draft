@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.169 2006/06/27 10:52:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.170 2006/06/27 11:00:06 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -320,13 +320,13 @@ kde_src_install() {
 				debug-print-section make
 				emake install DESTDIR=${D} destdir=${D} || die "died running make install, $FUNCNAME:make"
 				;;
-	    	dodoc)
+			dodoc)
 				debug-print-section dodoc
 				for doc in AUTHORS ChangeLog* README* NEWS TODO; do
 					[ -s "$doc" ] && dodoc $doc
 				done
 				;;
-	    	all)
+			all)
 				debug-print-section all
 				kde_src_install make dodoc
 				;;
@@ -387,7 +387,7 @@ slot_rebuild() {
 		cd ${VDB_PATH}
 		for i in ${REBUILD_LIST} ; do
 			i="$(echo ${i%-*} | cut -d= -f2)"
-			temp="${temp} $(find .  -iname "DEPEND" -exec grep -H ${i} '{}' \; | cut -f2-3 -d/ | grep -v ${CATEGORY}/${PN})"
+			temp="${temp} $(find .	-iname "DEPEND" -exec grep -H ${i} '{}' \; | cut -f2-3 -d/ | grep -v ${CATEGORY}/${PN})"
 		done
 		temp="$(echo ${temp} | fmt -w 1 | sort -u)"
 		for i in ${temp} ; do

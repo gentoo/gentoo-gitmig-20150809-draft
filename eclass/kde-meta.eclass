@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.77 2006/06/27 10:52:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.78 2006/06/27 11:00:06 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -73,7 +73,7 @@ if [[ "$KDEBASE" = "true" ]]; then
 		3.4.0_rc1)	XDELTA_BASE="mirror://kde/unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
 				XDELTA_DELTA="mirror://kde/unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta mirror://kde/unstable/3.3.91/src/$KMNAME-3.3.91-3.3.92.tar.xdelta mirror://kde/unstable/3.4.0-rc1/src/$KMNAME-3.3.92-3.4.0-rc1.tar.xdelta"
 				;;
-		3.4.0)		;; 	# xdeltas break off at first stable version, since most people
+		3.4.0)		;;	# xdeltas break off at first stable version, since most people
 					# don't have prerelease tarballs handy
 		3.4.1)		XDELTA_BASE="mirror://kde/stable/3.4/src/$KMNAME-3.4.0.tar.bz2"
 				XDELTA_DELTA="mirror://kde/stable/3.4.1/src/$KMNAME-3.4.0-3.4.1.tar.xdelta"
@@ -420,7 +420,7 @@ function kde-meta_src_install() {
 	fi
 	while [[ -n "$1" ]]; do
 		case $1 in
-		    make)
+			make)
 				for dir in $KMMODULE $KMEXTRA $DOCS; do
 					if [[ -d $S/$dir ]]; then
 						cd $S/$dir
@@ -428,10 +428,10 @@ function kde-meta_src_install() {
 					fi
 				done
 				;;
-		    dodoc)
+			dodoc)
 				kde_src_install dodoc
 				;;
-		    all)
+			all)
 				kde-meta_src_install make dodoc
 				;;
 		esac
