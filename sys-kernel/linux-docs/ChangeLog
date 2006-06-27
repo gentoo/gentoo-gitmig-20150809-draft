@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-docs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.6 2006/05/30 19:48:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.7 2006/06/27 15:31:07 gmsoft Exp $
+
+  27 Jun 2006; Guy Martin <gmsoft@gentoo.org> linux-docs-2.6.16.ebuild:
+  Added ~hppa to KEYWORDS.
 
   30 May 2006; Markus Rothe <corsair@gentoo.org> linux-docs-2.6.16.ebuild:
   Added ~ppc64; bug #134615
