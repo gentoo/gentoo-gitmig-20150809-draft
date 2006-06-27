@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.71 2006/05/18 09:32:11 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.72 2006/06/27 10:23:11 ferdy Exp $
+
+*mutt-1.5.11-r2 (27 Jun 2006)
+
+  27 Jun 2006; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/mutt-1.5.11-imap-browse.patch, +mutt-1.5.11-r2.ebuild:
+  Add a patch to fix security bug #138125. Also use autotools.eclass to
+  reconfigure the build framework when needed.
 
 *mutt-1.5.11-r30 (18 May 2006)
 

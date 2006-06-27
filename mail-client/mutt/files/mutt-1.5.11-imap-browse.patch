@@ -1,0 +1,38 @@
+commit 850d4a6b78730344ad7bb1d2a04cfcd35def3fec
+Author: brendan <brendan>
+Date:   Mon Jun 19 18:14:03 2006 +0000
+
+    From: TAKAHASHI Tamotsu <tamo@momonga-linux.org>
+    
+    Fix browse_get_namespace() which could overflow ns[LONG_STRING].
+    (Possible remote vulnerability)
+
+diff --git a/imap/browse.c b/imap/browse.c
+index bc2d036..43463ba 100644
+--- a/imap/browse.c
++++ b/imap/browse.c
+@@ -505,7 +505,7 @@ static int browse_get_namespace (IMAP_DA
+ 	    if (*s == '\"')
+ 	    {
+ 	      s++;
+-	      while (*s && *s != '\"') 
++	      while (*s && *s != '\"' && n < sizeof (ns) - 1) 
+ 	      {
+ 		if (*s == '\\')
+ 		  s++;
+@@ -516,12 +516,14 @@ static int browse_get_namespace (IMAP_DA
+ 		s++;
+ 	    }
+ 	    else
+-	      while (*s && !ISSPACE (*s)) 
++	      while (*s && !ISSPACE (*s) && n < sizeof (ns) - 1)
+ 	      {
+ 		ns[n++] = *s;
+ 		s++;
+ 	      }
+ 	    ns[n] = '\0';
++	    if (n == sizeof (ns) - 1)
++	      dprint (1, (debugfile, "browse_get_namespace: too long: [%s]\n", ns));
+ 	    /* delim? */
+ 	    s = imap_next_word (s);
+ 	    /* delimiter is meaningless if namespace is "". Why does
