@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/miau
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/miau/ChangeLog,v 1.7 2006/01/12 19:37:51 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/miau/ChangeLog,v 1.8 2006/06/27 09:15:54 jokey Exp $
+
+*miau-0.6.1 (27 Jun 2006)
+
+  27 Jun 2006; Markus Ullmann <jokey@gentoo.org> +miau-0.6.1.ebuild:
+  Version bump wrt bug #136246, thanks to Aidan Taniane <aidanjt@gmail.com>
 
   12 Jan 2006; Luis Medinas <metalgod@gentoo.org> miau-0.6.0.2.ebuild:
   Added ~amd64 keyword. Closes bug #118338.
