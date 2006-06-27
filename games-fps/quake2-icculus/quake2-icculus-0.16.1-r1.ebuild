@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.1 2006/06/27 21:09:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.2 2006/06/27 21:46:02 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -88,6 +88,7 @@ src_unpack() {
 	if use rogue ; then
 		cd "${S}"/src
 		epatch "${FILESDIR}"/0.16-rogue-nan.patch
+		epatch "${FILESDIR}"/0.16-rogue-armor.patch
 	fi
 }
 

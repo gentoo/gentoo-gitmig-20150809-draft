@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake2-icculus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.22 2006/06/27 21:09:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.23 2006/06/27 21:46:02 wolf31o2 Exp $
+
+  27 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/0.16-rogue-armor.patch, quake2-icculus-0.16.1.ebuild,
+  quake2-icculus-0.16.1-r1.ebuild:
+  Added patch to fix compiling of rogue.  Closing bug #137855.
 
 *quake2-icculus-0.16.1-r1 (27 Jun 2006)
 
