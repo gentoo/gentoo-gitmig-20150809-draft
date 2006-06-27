@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.07.ebuild,v 1.1 2006/06/25 20:06:24 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.07.ebuild,v 1.2 2006/06/27 12:07:34 nichoj Exp $
 
 inherit java-vm-2 eutils
 
@@ -27,7 +27,7 @@ SLOT="1.5"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="~x86 ~amd64 -*"
 RESTRICT="fetch nostrip "
-IUSE="X alsa doc nsplugin jce"
+IUSE="X alsa doc examples nsplugin jce"
 
 JAVA_VM_NO_GENERATION1=true
 
