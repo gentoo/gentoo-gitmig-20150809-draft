@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/darkplaces
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/ChangeLog,v 1.1 2006/06/19 20:53:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/ChangeLog,v 1.2 2006/06/27 19:53:04 wolf31o2 Exp $
+
+  27 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  darkplaces-20060616_beta1.ebuild:
+  Sync dependencies with Nexuiz 2.0, since they're the same engine. Closing
+  bug #137436.
 
 *darkplaces-20060616_beta1 (19 Jun 2006)
 
