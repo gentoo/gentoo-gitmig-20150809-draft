@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/kxkb-3.5.2.ebuild,v 1.14 2006/06/11 15:01:36 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/kxkb-3.5.2.ebuild,v 1.15 2006/06/27 08:29:43 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -28,5 +28,8 @@ src_unpack() {
 
 	# Avoid using imake (kde bug 114466)
 	epatch "${WORKDIR}/patches/kdebase-3.5.0_beta2-noimake.patch"
-}
 
+	# Remove reference to kde.desktop in AC_OUTPUT to allow building with
+	# autoconf 2.59d
+	sed -i -e '/kde.desktop/ s:^:#:g' "${S}/kdm/configure.in.in"
+}
