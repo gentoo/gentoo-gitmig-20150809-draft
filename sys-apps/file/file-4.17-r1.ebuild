@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.17-r1.ebuild,v 1.11 2006/06/27 16:57:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.17-r1.ebuild,v 1.12 2006/06/27 19:12:48 wolf31o2 Exp $
 
 inherit distutils libtool
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="python build"
 
 DEPEND=""
