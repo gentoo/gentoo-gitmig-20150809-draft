@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5554 2006/06/27 02:56:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5555 2006/06/27 03:22:16 rl03 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Renat Lumpau <rl03@gentoo.org> (26 Jun 2006)
+# pending removal on 26 Jul 2006; see bug #74951.
+www-apps/phpmp2
 
 # Diego Pettenò <flameeyes@gentoo.org> (25 Jun 2006)
 # confcache really needs more work before prime-time
