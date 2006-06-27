@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDL
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.53 2006/06/26 08:13:57 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.54 2006/06/27 23:22:42 tcort Exp $
+
+  27 Jun 2006; Thomas Cort <tcort@gentoo.org> PDL-2.4.2-r1.ebuild:
+  Stable on alpha wrt Bug #137427.
 
   26 Jun 2006; Andrej Kacian <ticho@gentoo.org> PDL-2.4.2-r1.ebuild:
   Stable on x86, bug #137131.
