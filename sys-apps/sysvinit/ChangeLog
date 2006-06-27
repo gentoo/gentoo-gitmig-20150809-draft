@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sysvinit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.28 2006/06/27 16:54:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.29 2006/06/27 19:16:12 wolf31o2 Exp $
+
+  27 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  sysvinit-2.86-r5.ebuild:
+  Stable on x86 wrt bug #138151.
 
   27 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   sysvinit-2.86-r5.ebuild:
