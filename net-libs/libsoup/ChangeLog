@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.91 2006/06/06 10:36:47 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.92 2006/06/27 16:12:11 dang Exp $
+
+*libsoup-2.2.94 (27 Jun 2006)
+
+  27 Jun 2006; Daniel Gryniewicz <dang@gentoo.org> +libsoup-2.2.94.ebuild:
+  Bump for libsoup; add static flag
 
 *libsoup-2.2.93 (06 Jun 2006)
 
