@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.73 2006/06/27 13:25:37 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.74 2006/06/27 15:56:17 exg Exp $
+
+  27 Jun 2006; Emanuele Giaquinta <exg@gentoo.org> mutt-1.5.11-r2.ebuild:
+  Stable on ppc; bug #138125
 
   27 Jun 2006; Fernando J. Pereda <ferdy@gentoo.org> mutt-1.5.11-r2.ebuild:
   Remove explicit autoconf and automake dependencies.
