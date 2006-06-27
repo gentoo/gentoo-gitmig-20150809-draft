@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/onphp
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/ChangeLog,v 1.23 2006/06/24 21:33:21 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/ChangeLog,v 1.24 2006/06/27 11:41:18 voxus Exp $
+
+*onphp-0.4.7-r1 (27 Jun 2006)
+
+  27 Jun 2006; Konstantin Arkhipov <voxus@gentoo.org> +onphp-0.4.7-r1.ebuild:
+  Now installs metaconfiguration too.
 
 *onphp-0.4.7 (25 Jun 2006)
 *onphp-0.2.15 (25 Jun 2006)
