@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.52 2006/05/24 19:08:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.53 2006/06/27 15:59:51 exg Exp $
+
+  27 Jun 2006; Emanuele Giaquinta <exg@gentoo.org> musicbrainz-2.1.2.ebuild:
+  Stable on ppc.
 
   24 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   musicbrainz-2.1.2.ebuild:
