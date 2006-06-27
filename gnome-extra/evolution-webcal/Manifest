@@ -1,10 +1,58 @@
-MD5 fd8252fbc366009ed0ae8b5ec61a812a ChangeLog 5406
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST evolution-webcal-2.2.0.tar.bz2 139078
+DIST evolution-webcal-2.2.1.tar.bz2 148574
+DIST evolution-webcal-2.4.1.tar.bz2 155367
+DIST evolution-webcal-2.5.90.tar.bz2 154694 RMD160 c322f74ff8ccccd998eff2b933ab9c67a520f5c4 SHA256 0fd89744637efa976032a6ca62867b2682a7bf8c61bf98b5487ee2f4d5665b3c
+DIST evolution-webcal-2.6.0.tar.bz2 151657 RMD160 f915f86a918f84ed38b0516c55b68e8640df6d70 SHA1 2391b51776e49e33b94f6121ac2faa4c1e433c1d SHA256 93f3ecb53a0ef30d04e7113355f6566cbac939ca2f995d3347e7bb1b3f5f5a80
+EBUILD evolution-webcal-2.2.0.ebuild 717 RMD160 f1967cc7730601f30ff1de072f62ae6ff686b03d SHA1 d13cd85e46c1dac69824a552e94c2e17a75e06e6 SHA256 0776bdb0a816fe0958c27bbe278455d5141917db982f8ddc89a174ee905e7898
 MD5 ce560caa553ee7f23ef1c115ad20463c evolution-webcal-2.2.0.ebuild 717
+RMD160 f1967cc7730601f30ff1de072f62ae6ff686b03d evolution-webcal-2.2.0.ebuild 717
+SHA256 0776bdb0a816fe0958c27bbe278455d5141917db982f8ddc89a174ee905e7898 evolution-webcal-2.2.0.ebuild 717
+EBUILD evolution-webcal-2.2.1.ebuild 715 RMD160 123bcd1dae5f43e340c535f501a6af3edabb3157 SHA1 d9555111312671e17e621de7166e4ba7bb0892cc SHA256 b9b4d78e3fab801ce44164e9ef6e60075e2d574998fe65028e30d1d8a67f6104
 MD5 d40edf71744b747be01e061e1848b4ff evolution-webcal-2.2.1.ebuild 715
+RMD160 123bcd1dae5f43e340c535f501a6af3edabb3157 evolution-webcal-2.2.1.ebuild 715
+SHA256 b9b4d78e3fab801ce44164e9ef6e60075e2d574998fe65028e30d1d8a67f6104 evolution-webcal-2.2.1.ebuild 715
+EBUILD evolution-webcal-2.4.1.ebuild 721 RMD160 daf3033d2cb1a8386c1be70fc7ed051db1bacb1b SHA1 a8c2a01d06a5c898a7f87ad215f562de9dbc8e86 SHA256 ce09b1053195255e6c5ecf588886fba08af73daa1ee28fd4d1c5baf3b1b2da21
 MD5 e85e3080bd7465e5826c85064bcc35cc evolution-webcal-2.4.1.ebuild 721
+RMD160 daf3033d2cb1a8386c1be70fc7ed051db1bacb1b evolution-webcal-2.4.1.ebuild 721
+SHA256 ce09b1053195255e6c5ecf588886fba08af73daa1ee28fd4d1c5baf3b1b2da21 evolution-webcal-2.4.1.ebuild 721
+EBUILD evolution-webcal-2.5.90.ebuild 716 RMD160 cb9bc21dd6480ab0f6a52229dc20a96e3908c3ac SHA1 50fd9fa0daf66b8209a611fe3cda7b7ee44d36a8 SHA256 49cf902806bd22f67c9921d91e4467d53822ed534e19bc0311d6a0fdc82dd2b3
 MD5 55619da240f51fc9ac18c191074ae2e3 evolution-webcal-2.5.90.ebuild 716
-MD5 81473745179587b420446621b5344a4b files/digest-evolution-webcal-2.2.0 75
-MD5 9f6faeb1745918c02fcc2629df67905b files/digest-evolution-webcal-2.2.1 75
-MD5 83a5ccf943a33144192452c8e6b41b97 files/digest-evolution-webcal-2.4.1 75
-MD5 8a0f57b813ef64d857e9f974563463bb files/digest-evolution-webcal-2.5.90 274
+RMD160 cb9bc21dd6480ab0f6a52229dc20a96e3908c3ac evolution-webcal-2.5.90.ebuild 716
+SHA256 49cf902806bd22f67c9921d91e4467d53822ed534e19bc0311d6a0fdc82dd2b3 evolution-webcal-2.5.90.ebuild 716
+EBUILD evolution-webcal-2.6.0.ebuild 710 RMD160 24011af5b9af5b83c033a3413cb427d434c823cf SHA1 9d19724638857c10277f219f20df56b73f29717c SHA256 c880f39816b6d5f2d5074be2dd7d202442e9a035b3997938e703ec28a4615fac
+MD5 d53a80bf5fdee55d39772816f1478d07 evolution-webcal-2.6.0.ebuild 710
+RMD160 24011af5b9af5b83c033a3413cb427d434c823cf evolution-webcal-2.6.0.ebuild 710
+SHA256 c880f39816b6d5f2d5074be2dd7d202442e9a035b3997938e703ec28a4615fac evolution-webcal-2.6.0.ebuild 710
+MISC ChangeLog 5546 RMD160 434507507e8ec194c4012344840f7f8e1ee01159 SHA1 62750f8229eb13924475d6db377683dc44ddfc6c SHA256 77d3299bed23b838e27a7d6f274ec40632adfd41076057425d98975b1be16a6e
+MD5 31f2d9847da9ca55e73f57dd43fe209f ChangeLog 5546
+RMD160 434507507e8ec194c4012344840f7f8e1ee01159 ChangeLog 5546
+SHA256 77d3299bed23b838e27a7d6f274ec40632adfd41076057425d98975b1be16a6e ChangeLog 5546
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 81473745179587b420446621b5344a4b files/digest-evolution-webcal-2.2.0 75
+RMD160 99e6526fe0e19ce91b3dfb56c44f15d02c3a1817 files/digest-evolution-webcal-2.2.0 75
+SHA256 98371a0ed2a07f4f0c9759ab36057109fdd2e4a3a897a80e3346b58098af8876 files/digest-evolution-webcal-2.2.0 75
+MD5 9f6faeb1745918c02fcc2629df67905b files/digest-evolution-webcal-2.2.1 75
+RMD160 cc96525000e7ad4a5446c1a05f2232958fede724 files/digest-evolution-webcal-2.2.1 75
+SHA256 ca3db429d90441103e6a3d3a25170b71fe58fa92963dfddaddeffc052dd4417f files/digest-evolution-webcal-2.2.1 75
+MD5 83a5ccf943a33144192452c8e6b41b97 files/digest-evolution-webcal-2.4.1 75
+RMD160 86575a9c1c1dc1b01405a5f7f49bbb726f4253d0 files/digest-evolution-webcal-2.4.1 75
+SHA256 45d50d6180921136465ec1b984ba5523663fbe030ca91de31fd923e17c7200a3 files/digest-evolution-webcal-2.4.1 75
+MD5 8a0f57b813ef64d857e9f974563463bb files/digest-evolution-webcal-2.5.90 274
+RMD160 e05dcec8a628bc011b4c329d2a4a532f995f97f3 files/digest-evolution-webcal-2.5.90 274
+SHA256 44603d9f2384e5662c3b008343faff47119e83747fe9c16f6687c8a378ead7e5 files/digest-evolution-webcal-2.5.90 274
+MD5 36e3e35de4968d4b25d8049f480d6371 files/digest-evolution-webcal-2.6.0 271
+RMD160 a92c47860b420b3a4b4d9a53458464ba01c5aa5a files/digest-evolution-webcal-2.6.0 271
+SHA256 3adf5cde5e06ecdac291b50f2afae81e1e0dedb966041fd0fe9f4729d1a9a717 files/digest-evolution-webcal-2.6.0 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEoX+gomPajV0RnrERAmFHAJ9bKwa9vIjsSNjcNwcaK+J9i4wFVwCfR0Fb
+mcCTGWLn5k4mvv1tiQoVHoE=
+=r6ME
+-----END PGP SIGNATURE-----
