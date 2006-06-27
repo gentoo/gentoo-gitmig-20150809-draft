@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.67 2006/06/27 07:21:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.68 2006/06/27 08:08:10 vapier Exp $
 
 cd /
 
@@ -387,7 +387,8 @@ fi
 # grab user settings
 for v in ABI UCLIBC_CPU USE BVER GVER KVER LVER STAGE CFLAGS LDFLAGS ASFLAGS ; do
 	if [[ -e /etc/portage/crossdev/${CTARGET}/${v} ]] ; then
-		export ${v}=$(</etc/portage/crossdev/${CTARGET}/${v})
+		# yes, quotes are needed in this instance (export $var="...")
+		export ${v}="$(</etc/portage/crossdev/${CTARGET}/${v})"
 		einfo "Restoring user setting '${v}' to '${!v}'"
 	fi
 	if [[ -e /etc/portage/crossdev/${CTARGET}/env ]] ; then
