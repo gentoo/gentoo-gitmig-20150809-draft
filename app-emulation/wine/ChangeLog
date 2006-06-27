@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.147 2006/06/27 09:21:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.148 2006/06/27 09:28:43 vapier Exp $
+
+  27 Jun 2006; Mike Frysinger <vapier@gentoo.org> wine-0.9.16.ebuild:
+  Force truetype support since users dont know what a fontless wine actually
+  means (it's useless) #137788.
 
 *wine-0.9.16 (27 Jun 2006)
 

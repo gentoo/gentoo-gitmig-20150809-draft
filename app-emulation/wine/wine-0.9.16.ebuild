@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.16.ebuild,v 1.1 2006/06/27 09:21:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.16.ebuild,v 1.2 2006/06/27 09:28:43 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/wine-${PV}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="alsa arts cups debug esd gif glut jack jpeg lcms ldap nas ncurses opengl oss scanner truetype xml X"
+IUSE="alsa arts cups debug esd gif glut jack jpeg lcms ldap nas ncurses opengl oss scanner xml X"
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -39,7 +39,6 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	glut? ( virtual/glut )
 	lcms? ( media-libs/lcms )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
-	truetype? ( media-libs/freetype )
 	>=media-gfx/fontforge-20060406
 	scanner? ( media-gfx/sane-backends )
 	amd64? (
@@ -96,7 +95,6 @@ src_compile() {
 	config_cache jpeg jpeglib.h
 	config_cache oss sys/soundcard.h machine/soundcard.h soundcard.h
 	config_cache lcms lcms.h
-	use x86 && config_cache truetype freetype:FT_Init_FreeType
 
 	strip-flags
 
