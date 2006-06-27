@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20050605-r2.ebuild,v 1.3 2006/02/02 02:51:41 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20050605-r2.ebuild,v 1.4 2006/06/27 01:44:20 ribosome Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -40,7 +40,7 @@ src_unpack() {
 
 	if use ppc64; then
 		cd "${S}"
-		epatch "${FILESDIR}"/${P}-lop.patch
+		epatch "${FILESDIR}"/${PN}-lop.patch
 	fi
 
 	if use mpi; then

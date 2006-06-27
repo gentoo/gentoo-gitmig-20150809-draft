@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20050605.ebuild,v 1.11 2006/02/01 09:10:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20050605.ebuild,v 1.12 2006/06/27 01:44:20 ribosome Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -36,7 +36,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	use ppc64 && cd ${S} && epatch ${FILESDIR}/${P}-lop.patch
+	use ppc64 && cd ${S} && epatch ${FILESDIR}/${PN}-lop.patch
 
 	if ! use X; then
 		cd ${S}/make
