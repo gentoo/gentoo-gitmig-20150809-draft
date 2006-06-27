@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.0.ebuild,v 1.1 2006/06/27 19:09:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.0.ebuild,v 1.2 2006/06/27 19:49:51 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -45,17 +45,13 @@ RDEPEND="media-libs/jpeg
 	opengl? (
 		virtual/opengl
 		${UIRDEPEND} )
-	!dedicated? (
-		!sdl? (
-			!opengl? (
-				virtual/opengl
-				${UIRDEPEND} ) ) )"
+	!dedicated? ( !sdl? ( !opengl? ( virtual/opengl ${UIRDEPEND} ) ) )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	app-arch/unzip
 	sdl? ( ${UIDEPEND} )
 	opengl? ( ${UIRDEPEND} )
-	!dedicated? ( !sdl? ( !opengl? ( ${UIRDEPEND} ) ) )"
+	!dedicated? ( !sdl? ( !opengl? ( virtual/opengl ${UIRDEPEND} ) ) )"
 
 S=${WORKDIR}/darkplaces
 # This is the right dir, so that e.g. "darkplaces -game nexuiz" will work
