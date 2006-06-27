@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1975 2006/06/27 21:08:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1976 2006/06/27 21:27:16 wolf31o2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -480,7 +480,11 @@ games-fps/darkplaces:dpmod - Sets up the darkplaces mod from icculus
 games-fps/darkplaces:lights - Install and setup the updated light maps
 games-fps/darkplaces:textures - Install and setup the updated textures
 games-fps/doom3:roe - Adds support for the Resurrection of Evil expansion
-games-fps/quake2-icculus:demo - Install the demo files and configure for use
+games-fps/qudos:demo - Install the demo files (quake2-demodata) and configure for use
+games-fps/qudos:mods - Build support for the quake2 mission packs
+games-fps/qudos:qmax - Build the pretty version (quake max)
+games-fps/qudos:textures - Install the enchanced textures (quake2-textures)
+games-fps/quake2-icculus:demo - Install the demo files (quake2-demodata) and configure for use
 games-fps/quake2-icculus:noqmax - Do not build the pretty version (quake max)
 games-fps/quake2-icculus:qmax - Build the pretty version (quake max)
 games-fps/quake2-icculus:rogue - Build support for the 'Ground Zero' Mission Pack (rogue)
