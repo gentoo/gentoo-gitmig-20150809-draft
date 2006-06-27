@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.0-r1.ebuild,v 1.1 2006/06/15 11:33:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.0-r1.ebuild,v 1.2 2006/06/27 08:23:38 flameeyes Exp $
 
 inherit kde eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://kopete.kde.org/"
 LICENSE="GPL-2"
 
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="jingle sametime ssl xmms xscreensaver kdehiddenvisibility slp"
+IUSE="jingle sametime ssl xmms xscreensaver kdehiddenvisibility slp kernel_linux"
 
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
@@ -59,6 +59,14 @@ need-kde 3.4
 #dev-libs/ilbc-rfc3951: could not see any benifit in it
 #sed -i 's:ilbc_found="no":ilbc_found="yes":' ${S}/kopete/protocols/jabber/jingle/configure.in.in
 
+pkg_setup() {
+	if use kernel_linux && ! built_with_use =x11-libs/qt-3* opengl; then
+		eerror "To support Video4Linux webcams in this package is required to have"
+		eerror "=x11-libs/qt-3* compiled with OpenGL support."
+		eerror "Please reemerge =x11-libs/qt-3* with USE=\"opengl\"."
+		die "Please reemerge =x11-libs/qt-3* with USE=\"opengl\"."
+	fi
+}
 
 src_unpack() {
 	kde_src_unpack
