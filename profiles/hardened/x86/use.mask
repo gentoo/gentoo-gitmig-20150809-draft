@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.18 2006/06/25 19:11:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.19 2006/06/27 20:07:14 kevquinn Exp $
 
 # We don't have any ppc sub profiles yet. bug #74103
 altivec
 
 -mmx
--mmx2
 -mmxext
 -sse
 -sse2
