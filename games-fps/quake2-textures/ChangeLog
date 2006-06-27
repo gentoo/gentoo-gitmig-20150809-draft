@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/quake2-textures
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-textures/ChangeLog,v 1.1 2006/06/27 20:22:47 wolf31o2 Exp $
+
+*quake2-textures-0_beta8 (27 Jun 2006)
+
+  27 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +quake2-textures-0_beta8.ebuild:
+  Initial import. Ebuild by Paul Bredbury <brebs@sent.com>. Closing bug
+  #137529.
+
