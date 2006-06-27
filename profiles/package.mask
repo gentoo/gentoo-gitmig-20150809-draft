@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5556 2006/06/27 09:21:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5557 2006/06/27 13:48:13 dsd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -360,10 +360,6 @@ sys-kernel/kurobox-sources
 # Stefan Cornelius <dercorny@gentoo.org> (30 Apr 2006)
 # Masking due to security issue described in bug 129874
 www-client/amaya
-
-# Saleem Abdulrasool <compnerd@gentoo.org> (25 Apr 2006)
-# Initial import
-gnome-extra/gnome-power-manager
 
 # Diego Pettenò <flameeyes@gentoo.org> (24 Apr 2006)
 # Pre-release snapshots
