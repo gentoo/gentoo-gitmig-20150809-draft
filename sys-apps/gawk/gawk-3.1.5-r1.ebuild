@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.5-r1.ebuild,v 1.2 2006/06/27 05:36:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.5-r1.ebuild,v 1.3 2006/06/27 09:17:56 corsair Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/gawk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc-macos ~ppc64 s390 sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc-macos ppc64 s390 sh ~sparc ~x86 ~x86-fbsd"
 IUSE="nls build"
 
 RDEPEND=""
