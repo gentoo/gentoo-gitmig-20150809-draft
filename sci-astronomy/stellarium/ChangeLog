@@ -1,6 +1,6 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.21 2006/06/27 14:52:16 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.22 2006/06/27 15:01:19 mr_bones_ Exp $
 
 *stellarium-0.8.1 (27 Jun 2006)
 
@@ -8,6 +8,12 @@
   +stellarium-0.8.1.ebuild:
   New upstream version. GCC 4.1 patch no longer required. (Fixes bug #138168;
   thanks to Damien Gombault <desintegr@gmail.com> for reporting.)
+
+*stellarium-0.8.1 (27 Jun 2006)
+
+  27 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +stellarium-0.8.1.ebuild:
+  version bump (bug #138168)
 
   15 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   stellarium-0.8.0.ebuild:
