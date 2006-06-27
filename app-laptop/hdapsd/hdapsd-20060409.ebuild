@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20060409.ebuild,v 1.1 2006/06/26 20:07:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20060409.ebuild,v 1.2 2006/06/27 09:51:45 uberlord Exp $
 
 inherit eutils linux-info
 
@@ -34,7 +34,7 @@ src_install() {
 	newinitd "${FILESDIR}"/hdapsd.init hdapsd
 
 	# Install our kernel patches
-	dodoc *.patch
+	dodoc *.patch "${FILESDIR}"/hdaps-Z60m.patch
 }
 
 kernel_patched() {
@@ -62,6 +62,15 @@ pkg_config() {
 
 	cd "${KERNEL_DIR}"
 	epatch "${docdir}/${p}"
+
+	# This is just a nice to have for me as I use a Z60m myself
+	if ! grep "Z60m" "${KERNEL_DIR}"/drivers/hwmon/hdaps.c ; then
+		epatch "${docdir}"/hdaps-Z60m.patch.gz
+	fi
+
+	echo
+	einfo "Now you should rebuild your kernel, its modules"
+	einfo "and then install them."
 }
 
 pkg_postinst(){
