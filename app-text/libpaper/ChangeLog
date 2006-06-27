@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.6 2006/06/16 22:46:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.7 2006/06/27 11:22:39 gmsoft Exp $
+
+  27 Jun 2006; Guy Martin <gmsoft@gentoo.org> libpaper-1.1.14.8.ebuild:
+  Added ~hppa to KEYWORDS.
 
   16 Jun 2006; Jason Wever <weeve@gentoo.org> libpaper-1.1.14.8.ebuild:
   Added ~sparc keyword wrt bug #136902.
