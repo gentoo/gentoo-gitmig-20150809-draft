@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.16.ebuild,v 1.1 2006/02/19 17:36:48 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.16.ebuild,v 1.2 2006/06/27 16:41:24 metalgod Exp $
 
 inherit eutils libtool autotools
 
@@ -20,7 +20,7 @@ RDEPEND="media-sound/xmms
 
 DEPEND="${RDEPEND}
 	=sys-devel/automake-1.8*
-	=sys-devel/autoconf-2.5*"
+	>=sys-devel/autoconf-2.5*"
 
 S=${WORKDIR}/${PN}
 
