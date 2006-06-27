@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.255 2006/06/25 12:52:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.256 2006/06/27 09:14:53 flameeyes Exp $
+
+  27 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> binutils-2.17.ebuild:
+  Add ~x86-fbsd keyword.
 
   25 Jun 2006; Markus Rothe <corsair@gentoo.org> binutils-2.17.ebuild:
   Added ~ppc64
