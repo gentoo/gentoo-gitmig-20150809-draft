@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.170 2006/06/27 11:00:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.171 2006/06/27 11:44:22 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -214,6 +214,13 @@ kde_src_compile() {
 			configure)
 				debug-print-section configure
 				debug-print "$FUNCNAME::configure: myconf=$myconf"
+
+				# This is needed to fix building with autoconf 2.60.
+				# Many thanks to who preferred such a stupid check rather
+				# than a working arithmetic comparison.
+				[[ -f admin/cvs.sh ]] &&
+					sed -i -e '/case $AUTO\(CONF\|HEADER\)_VERSION in/,+1 s/2\.5/2.[56]/g' \
+						admin/cvs.sh
 
 				# rebuild configure script, etc
 				# This can happen with e.g. a cvs snapshot
