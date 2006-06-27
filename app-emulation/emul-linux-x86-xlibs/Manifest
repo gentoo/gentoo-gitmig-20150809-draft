@@ -3,7 +3,7 @@ Hash: SHA1
 
 DIST emul-linux-x86-xlibs-2.2.2.tar.bz2 4735717 RMD160 c6b67da6ed6042c34c67703bac2d3088da11dd55 SHA256 477327f1d13aebba57a06406e3fc08b7f1d44d49d6e28b9316de3c933ff15c4d
 DIST emul-linux-x86-xlibs-7.0-r1.tar.bz2 3232719 RMD160 ba99f0ba6e1e24dac60d6f4c12bdd7b4a33fefc5 SHA1 d6621596bdfe1489f6b3d54ff676170408c0a546 SHA256 667ed56f6cd492ac7bc2252e846c5afc78ffa4cc9a573b437bba9a6d36519fb7
-DIST emul-linux-x86-xlibs-ati_dri-7.0.tar.bz2 3743164 RMD160 4bd8ac76725230b4c05ab06bcf194de93e4ab4ca SHA256 febb86cc07eaee8d449f9e4d994ae29c7f3c4e9067d8f93fd14b4e4c5b5a063d
+DIST emul-linux-x86-xlibs-ati_dri-7.0.tar.bz2 3743164 RMD160 4bd8ac76725230b4c05ab06bcf194de93e4ab4ca SHA1 3b939e76680efcfda313a0fc7234a944d9951ce4 SHA256 febb86cc07eaee8d449f9e4d994ae29c7f3c4e9067d8f93fd14b4e4c5b5a063d
 DIST emul-linux-x86-xlibs-i810_dri-7.0.tar.bz2 2242803 RMD160 85257df90616c65f9ee28c87c478a07d6bb08dea SHA256 e7b88b4b9a0071d5fccccb9185c4392c6119da84131530aa9194a57997f59d6f
 DIST emul-linux-x86-xlibs-mga_dri-7.0.tar.bz2 749975 RMD160 3b8ccce3aae0ed508fbd8c24d513bdb33b8af23b SHA256 159650c0df35b2a1b627a4c5a0f4ffbdd1d8192fac35ef378fd75d11ab7038fe
 DIST emul-linux-x86-xlibs-s3virge_dri-7.0.tar.bz2 716284 RMD160 3df360b409e0432234f37c7662d8fca7fe74c5cd SHA256 18fc5da1288a623ff2c0cd6ee5b177d90d3e634209c96675d244f8b435cdae93
@@ -38,13 +38,13 @@ SHA256 b9fb15ae79bdd68fd6f24d9eb3134946b3185ea4ea22d2a9849ab718c31b90ea files/di
 MD5 db234ca6317b37de497f2d1433116e6c files/digest-emul-linux-x86-xlibs-2.2.2-r1 286
 RMD160 45c0a9982e1d94b4a07b1e66193705e118d8fb41 files/digest-emul-linux-x86-xlibs-2.2.2-r1 286
 SHA256 b9fb15ae79bdd68fd6f24d9eb3134946b3185ea4ea22d2a9849ab718c31b90ea files/digest-emul-linux-x86-xlibs-2.2.2-r1 286
-MD5 c9caed7a3a90e086cc5843aef5508195 files/digest-emul-linux-x86-xlibs-7.0-r1 2437
-RMD160 654b6b790c8ccaba1ffec49f2018ad084651adb6 files/digest-emul-linux-x86-xlibs-7.0-r1 2437
-SHA256 f4049407bb8dd639b846a7828d240235a6b67cc4966a64e346b7ffd5595bff03 files/digest-emul-linux-x86-xlibs-7.0-r1 2437
+MD5 b12d5bae30d1388241b12d14c145e8c2 files/digest-emul-linux-x86-xlibs-7.0-r1 3043
+RMD160 a6fc192a15ba95ab0e7f6b454a549e0217ab8e40 files/digest-emul-linux-x86-xlibs-7.0-r1 3043
+SHA256 3970c2daf7d10cce816df8db8b58b088210720e9fb6a9ecead4dabe16bf10066 files/digest-emul-linux-x86-xlibs-7.0-r1 3043
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEfZtp0K3RJaeXx6cRAmS+AKDQUrf6i4Smq4T3VKp5U/DAcLc0hwCfQ5r6
-z6Mwhl54sPD6j9PVPBNKL3E=
-=mJvp
+iD8DBQFEoIpP/ejvha5XGaMRAkBnAKDv4B9w1tLmQdCFdj5cJRf30/WLggCgviP2
+udBTg4lENyE97IVGpQH/zsI=
+=18/K
 -----END PGP SIGNATURE-----
