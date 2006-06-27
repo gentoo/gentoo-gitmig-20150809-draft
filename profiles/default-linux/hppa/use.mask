@@ -1,3 +1,7 @@
+# 2006/05/25 Jeroen Roovers <jer@gentoo.org>
+# libemf is not ported to hppa
+emf
+
 # 2006/05/25 Guy Martin <gmsoft@gentoo.org>
 # libaio is not ported on hppa
 aio
