@@ -1,0 +1,13 @@
+diff -Naur sussen-0.24.orig/applet/ActionDialog.cs sussen-0.24/applet/ActionDialog.cs
+--- sussen-0.24.orig/applet/ActionDialog.cs	2006-06-22 18:11:00.000000000 +0400
++++ sussen-0.24/applet/ActionDialog.cs	2006-06-27 01:54:38.000000000 +0400
+@@ -102,7 +102,8 @@
+ 			
+ 			hbox13.PackEnd (ovalDefinitionsCombo, true, true, 5);
+ 			
+-			hbox22.HideAll ();
++			if (ovalDefinitionsHash.Count != 0)
++				hbox22.HideAll ();
+ 			
+ 			if (dialogType == ActionDialogType.Scan) {
+ 			

@@ -1,0 +1,62 @@
+diff -Naur sussen-0.24.orig/applet/Defines.cs.in sussen-0.24/applet/Defines.cs.in
+--- sussen-0.24.orig/applet/Defines.cs.in	2006-06-22 20:16:52.000000000 +0400
++++ sussen-0.24/applet/Defines.cs.in	2006-06-27 01:51:53.000000000 +0400
+@@ -27,8 +27,8 @@
+ 		public static string PACKAGE = "@PACKAGE@";
+ 		public static string VERSION = "@VERSION@";
+ 		
+-		public static string DEFAULT_XML_DIRECTORY = "/etc/sussen/xml";
+-		public static string DEFAULT_DOWNLOAD_DIRECTORY = "/etc/sussen/download";
++		public static string DEFAULT_XML_DIRECTORY = "@prefix@/share/sussen/xml";
++		public static string DEFAULT_DOWNLOAD_DIRECTORY = "@prefix@/share/sussen/download";
+ 		
+ 		public static string MENU_XML = 
+ 			"<popup name=\"button3\">" + 
+diff -Naur sussen-0.24.orig/ChangeLog sussen-0.24/ChangeLog
+--- sussen-0.24.orig/ChangeLog	2006-06-22 20:21:33.000000000 +0400
++++ sussen-0.24/ChangeLog	2006-06-27 01:52:25.000000000 +0400
+@@ -2,7 +2,7 @@
+ 
+ 	* agent: Minor changes to command line syntax
+ 	* misc: Added OVAL definitions for RHEL v3 and v4
+-	* misc: Install xml files into sysconfdir (e.g /etc/sussen)
++	* misc: Install XML files into pkgdatadir (eg. /usr/share/sussen)
+ 	* oval: Added variable support to tests
+ 	* oval: Verify IDs for tests, objects, states, definitions and variables
+ 	* oval: Implemented DpkgInfo and Inetd tests
+diff -Naur sussen-0.24.orig/debian/rules sussen-0.24/debian/rules
+--- sussen-0.24.orig/debian/rules	2006-06-22 20:31:48.000000000 +0400
++++ sussen-0.24/debian/rules	2006-06-27 01:51:53.000000000 +0400
+@@ -27,7 +27,7 @@
+ config.status: configure
+ 	dh_testdir
+ 	# Add here commands to configure the package.
+-	CFLAGS="$(CFLAGS)" ./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --sysconfdir=/etc --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info
++	CFLAGS="$(CFLAGS)" ./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info
+ 
+ 
+ build: build-stamp
+diff -Naur sussen-0.24.orig/sussen.spec.in sussen-0.24/sussen.spec.in
+--- sussen-0.24.orig/sussen.spec.in	2006-06-22 19:54:43.000000000 +0400
++++ sussen-0.24/sussen.spec.in	2006-06-27 01:51:53.000000000 +0400
+@@ -46,7 +46,7 @@
+ %{_mandir}/man1/*.gz
+ %{_datadir}/applications/*
+ %{_datadir}/application-registry/*
+-%{_sysconfdir}/*
++%{_datadir}/sussen/*
+ 
+ %changelog
+ * Wed Feb 01 2006 Loren Bandiera <lorenb@mmgsecurity.com>
+diff -Naur sussen-0.24.orig/xml/Makefile.am sussen-0.24/xml/Makefile.am
+--- sussen-0.24.orig/xml/Makefile.am	2006-06-22 19:34:18.000000000 +0400
++++ sussen-0.24/xml/Makefile.am	2006-06-27 01:51:53.000000000 +0400
+@@ -22,7 +22,7 @@
+ 	windows-system-characteristics-schema.xsd \
+ 	xmldsig-core-schema.xsd
+ 
+-ovaldir = $(sysconfdir)/sussen/xml
++ovaldir = $(pkgdatadir)/xml
+ oval_DATA = $(OVAL_XML)
+ 
+ EXTRA_DIST = \
