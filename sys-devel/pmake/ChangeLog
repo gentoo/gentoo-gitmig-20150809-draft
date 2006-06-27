@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/pmake
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.28 2006/05/22 22:27:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.29 2006/06/27 01:13:45 ranger Exp $
+
+  27 Jun 2006; Brent Baude <ranger@gentoo.org> pmake-1.98.ebuild:
+  Marking pmake-1.98 ~ppc64 for bug 138082
 
   22 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/pmake-1.111.1-obsd-inttypes.patch, pmake-1.111.1.ebuild:
