@@ -31,5 +31,6 @@ media-video/thoggen
 gnome-base/gnome-mount
 gnome-base/gnome-volume-manager
 gnome-extra/hal-device-manager
+gnome-extra/gnome-power-manager
 sys-apps/pmount
 sys-apps/keyutils
