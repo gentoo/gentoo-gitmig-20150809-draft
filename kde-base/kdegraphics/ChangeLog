@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.260 2006/06/03 12:42:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.261 2006/06/27 21:04:19 genstef Exp $
+
+  27 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
+  kdegraphics-3.4.3-r4.ebuild, kdegraphics-3.5.2.ebuild,
+  kdegraphics-3.5.3.ebuild:
+  Change built_with_use poppler-bindings check to also allow qt3
 
   03 Jun 2006; Guy Martin <gmsoft@gentoo.org> kdegraphics-3.5.2.ebuild:
   Stable on hppa.

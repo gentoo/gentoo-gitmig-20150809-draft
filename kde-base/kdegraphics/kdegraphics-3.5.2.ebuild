@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.2.ebuild,v 1.13 2006/06/03 12:42:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.2.ebuild,v 1.14 2006/06/27 21:04:19 genstef Exp $
 
 inherit kde-dist eutils
 
@@ -50,7 +50,9 @@ pkg_setup() {
 			die "Please reemerge ${ghostscript} with USE=\"X\"."
 		fi
 	done
-	if use pdf && ! built_with_use app-text/poppler-bindings qt; then
+	# check for qt still until it had a revision bump in both ~arch and stable.
+	if use pdf && ! built_with_use app-text/poppler-bindings qt && \
+		! built_with_use app-text/poppler-bindings qt3; then
 		eerror "This package requires app-text/poppler-bindings compiled with Qt support."
 		eerror "Please reemerge app-text/poppler-bindings with USE=\"qt\"."
 		die "Please reemerge app-text/poppler-bindings with USE=\"qt\"."

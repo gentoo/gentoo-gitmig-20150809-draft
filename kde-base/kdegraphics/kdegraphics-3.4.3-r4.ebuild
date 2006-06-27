@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.3-r4.ebuild,v 1.10 2006/04/04 20:53:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.3-r4.ebuild,v 1.11 2006/06/27 21:04:19 genstef Exp $
 
 inherit kde-dist eutils
 
@@ -37,7 +37,9 @@ DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	if ! built_with_use app-text/poppler-bindings qt; then
+	# check for qt still until it had a revision bump in both ~arch and stable.
+	if ! built_with_use app-text/poppler-bindings qt && \
+		! built_with_use app-text/poppler-bindings qt3; then
 		eerror "This package requires app-text/poppler-bindings compiled with Qt support."
 		eerror "Please reemerge app-text/poppler-bindings with USE=\"qt\"."
 		die "Please reemerge app-text/poppler-bindings with USE=\"qt\"."
