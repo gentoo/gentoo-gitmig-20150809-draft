@@ -1,6 +1,12 @@
 # ChangeLog for www-client/galeon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.22 2006/02/28 04:34:15 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.23 2006/06/27 22:56:22 hanno Exp $
+
+*galeon-2.0.1-r1 (27 Jun 2006)
+
+  27 Jun 2006; Hanno Boeck <hanno@gentoo.org> +galeon-2.0.1-r1.ebuild:
+  Default to firefox, as mozilla will be removed from portage soon. Clean up
+  ebuild.
 
 *galeon-2.0.1 (28 Feb 2006)
 
