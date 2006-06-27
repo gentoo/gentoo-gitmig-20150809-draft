@@ -1,0 +1,20 @@
+# ChangeLog for Gentoo/x86 profile directory
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.1 2006/06/27 15:26:22 wolf31o2 Exp $
+
+  27 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> 2005.0/make.defaults,
+  dev/2006.1/desktop/make.defaults, 2005.1/make.defaults,
+  gcc2/make.defaults, 2006.0/make.defaults, dev/2006.1/make.defaults,
+  no-nptl/make.defaults, xbox/make.defaults:
+  This is the initial version of the x86 profile ChangeLog.  The idea here is
+  that we keep track of changes made to the profiles so we have a decent and
+  easy-to-find history.  I've made a few changes to the profiles, which I'll
+  document here.
+  
+  * Added qt3 and qt4 to default USE on the 2005.0, 2005.1, 2006.0, gcc2,
+    no-nptl and xbox profiles
+  * Replaced qt with qt3 and qt4 on the dev/2006.1/desktop profile
+  * Added firefox to default USE on the dev/2006.1/desktop profile
+  * Removed foomaticdb from the default USE on the dev/2006.1 profile
+  * Added ppds to the default USE on the dev/2006.1 profile
+
