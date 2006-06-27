@@ -1,0 +1,8 @@
+# ChangeLog for sys-devel/bfin-toolchain
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/ChangeLog,v 1.1 2006/06/27 06:57:21 vapier Exp $
+
+*bfin-toolchain-2006.1_rc4 (27 Jun 2006)
+
+  27 Jun 2006; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
