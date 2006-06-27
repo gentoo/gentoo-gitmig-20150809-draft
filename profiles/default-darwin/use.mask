@@ -21,7 +21,7 @@ hardened
 icc
 icc-pgo
 mmx
-mmx2
+mmxext
 on-the-fly-crypt  # requires device-mapper
 oss
 solid
