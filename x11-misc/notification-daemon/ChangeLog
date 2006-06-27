@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.7 2006/04/28 00:18:24 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.8 2006/06/27 05:37:18 corsair Exp $
+
+  27 Jun 2006; Markus Rothe <corsair@gentoo.org>
+  notification-daemon-0.3.5.ebuild:
+  Added ~ppc64
 
   28 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
