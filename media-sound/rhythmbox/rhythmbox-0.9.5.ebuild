@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.5.ebuild,v 1.1 2006/06/19 01:32:17 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.5.ebuild,v 1.2 2006/06/27 13:28:34 joem Exp $
 
 inherit gnome2 eutils
 
@@ -24,6 +24,7 @@ RDEPEND=">=x11-libs/gtk+-2.5.4
 	>=gnome-extra/nautilus-cd-burner-2.9.0
 	>=media-video/totem-1.1.5
 	>=x11-libs/libsexy-0.1.5
+	>=gnome-extra/gnome-media-2.14.0
 	musicbrainz? ( >=media-libs/musicbrainz-2.1 )
 	>=net-libs/libsoup-2.2
 	hal? ( ipod? ( >=media-libs/libgpod-0.2.0 )
@@ -91,4 +92,10 @@ DOCS="AUTHORS COPYING ChangeLog DOCUMENTERS INSTALL INTERNALS \
 
 export GST_INSPECT=/bin/true
 USE_DESTDIR=1
+}
+
+src_compile() {
+	addpredict "$(unset HOME; echo ~)/.gconf"
+	addpredict "$(unset HOME; echo ~)/.gconfd"
+	gnome2_src_compile
 }
