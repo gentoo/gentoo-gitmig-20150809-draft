@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r2.ebuild,v 1.5 2006/06/24 19:32:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r2.ebuild,v 1.6 2006/06/27 01:09:53 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -54,6 +54,7 @@ src_unpack() {
 		-e '/_PATH_XAUTH/s:/usr/X11R6/bin/xauth:/usr/bin/xauth:' \
 		pathnames.h || die
 
+	epatch "${FILESDIR}"/openssh-4.3_p2-configure.patch #137921
 	epatch "${FILESDIR}"/openssh-4.3_p1-krb5-typos.patch #124494
 	use X509 && epatch "${DISTDIR}"/${X509_PATCH} "${FILESDIR}"/${P}-x509-hpn-glue.patch
 	use sftplogging && epatch "${FILESDIR}"/openssh-4.2_p1-sftplogging-1.4-gentoo.patch.bz2

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.177 2006/06/24 19:34:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.178 2006/06/27 01:09:53 vapier Exp $
+
+  27 Jun 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-4.3_p2-configure.patch, openssh-4.3_p1.ebuild,
+  openssh-4.3_p2-r1.ebuild, openssh-4.3_p2-r2.ebuild:
+  Fix broken configure script #137921 by Adam Potter.
 
   24 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   openssh-4.3_p2-r1.ebuild:

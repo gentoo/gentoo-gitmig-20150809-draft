@@ -4,4 +4,6 @@ MD5 c60e16b0bdf3a825f2a2b501b34cdef4 openssh-4.3p2+x509-5.3.diff.gz 131147
 MD5 7e9880ac20a9b9db0d3fea30a9ff3d46 openssh-4.3p2.tar.gz 941455
 RMD160 ccd5967e3296347e6dd2be43c3d6caacde2b6833 openssh-4.3p2.tar.gz 941455
 SHA256 4ba757d6c933e7d075b6424124d92d197eb5d91e4a58794596b67f5f0ca21d4f openssh-4.3p2.tar.gz 941455
-MD5 d9eacb819a73daddb3d21ca7aa8e5c25 openssh-lpk-4.3p1-0.3.7.patch 60451
+MD5 f01af3895c2399c9fd12bfd8e3119732 openssh-lpk-4.3p1-0.3.7.patch 60597
+RMD160 071261fca176f95ebadc78b6167c63b4644c848f openssh-lpk-4.3p1-0.3.7.patch 60597
+SHA256 ef2028474ac8a5239b583f257cc3439d36e9c2aa72f0cf895fe9a9d5df7d8f13 openssh-lpk-4.3p1-0.3.7.patch 60597
