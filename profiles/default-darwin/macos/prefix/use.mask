@@ -1,6 +1,3 @@
-# tcl ebuild overwrites Apple's tcl, so we mask it (dev-lang/ruby)
-tcltk
-
 # gtk+ pulls in XML-Parser with USE="nls xml", so Perl issue should
 # be resolved first before keywording them
 gtk

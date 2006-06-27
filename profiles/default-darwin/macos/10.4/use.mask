@@ -1,5 +1,7 @@
 # tcl ebuild overwrites Apple's tcl, so we mask it (dev-lang/ruby)
 tcltk
+tcl
+tk
 
 # Collision-protect
 a52
