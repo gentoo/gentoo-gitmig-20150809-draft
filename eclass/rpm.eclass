@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.14 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.15 2006/06/27 06:49:09 vapier Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org> (21 Jun 2003)
 #
@@ -66,7 +66,7 @@ rpm_src_unpack() {
 		ext=${x##*.}
 		case "$ext" in
 		rpm)
-			echo ">>> Unpacking ${x}"
+			echo ">>> Unpacking ${x} to ${WORKDIR}"
 			prefix=${x%.rpm}
 			cd ${WORKDIR}
 			rpm_unpack ${DISTDIR}/${x} || die "${myfail}"
