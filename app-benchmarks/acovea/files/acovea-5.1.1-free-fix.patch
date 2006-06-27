@@ -1,0 +1,12 @@
+--- benchmarks/treebench.c.old	2006-06-28 01:08:11.190117519 +0200
++++ benchmarks/treebench.c	2006-06-28 01:08:22.124975364 +0200
+@@ -201,8 +201,8 @@
+         if (page->m_links[n] != NULL)
+             recursive_destroy_page(page->m_links[n]);
+         
+-        free(page);
+     }
++    free(page);
+ }
+ 
+ static void free_btree(btree * btree)

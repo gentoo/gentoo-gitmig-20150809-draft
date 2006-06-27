@@ -1,6 +1,14 @@
 # ChangeLog for app-benchmarks/acovea
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/ChangeLog,v 1.6 2005/01/01 12:02:57 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/ChangeLog,v 1.7 2006/06/27 23:46:07 exg Exp $
+
+*acovea-5.1.1 (27 Jun 2006)
+
+  27 Jun 2006; Emanuele Giaquinta <exg@gentoo.org>
+  +files/acovea-5.1.1-asneeded.patch, +files/acovea-5.1.1-free-fix.patch,
+  +acovea-5.1.1.ebuild:
+  Version bump, bug #86142. Add ~ppc keyword. Fix linking with --as-needed. Fix
+  double free issue by kristiaan.lenaerts@gmail.com.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
