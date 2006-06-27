@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.149 2006/06/26 19:55:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.150 2006/06/27 13:21:52 tcort Exp $
+
+  27 Jun 2006; Thomas Cort <tcort@gentoo.org> xterm-212-r3.ebuild:
+  Stable on alpha wrt Bug #136546.
 
   26 Jun 2006; Guy Martin <gmsoft@gentoo.org> xterm-215.ebuild:
   Stable on hppa.
