@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pinfo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.27 2006/06/26 22:44:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.28 2006/06/27 11:50:08 flameeyes Exp $
+
+  27 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> pinfo-0.6.9.ebuild:
+  Add ~x86-fbsd keyword.
 
   26 Jun 2006; Jeroen Roovers <jer@gentoo.org>
   +files/pinfo-0.6.9-as-needed.patch, pinfo-0.6.9.ebuild:
