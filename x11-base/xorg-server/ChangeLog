@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.128 2006/06/27 02:43:54 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.129 2006/06/27 03:49:50 joshuabaergen Exp $
+
+  26 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-server-1.1.0-r1.ebuild:
+  Fix kdrive+ATI build.  (Priit Laes, bug #136370)
 
   26 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.1.0-r1.ebuild:
