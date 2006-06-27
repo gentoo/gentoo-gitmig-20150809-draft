@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-jack
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.32 2006/06/27 17:00:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.33 2006/06/27 22:13:45 gustavoz Exp $
+
+  27 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> xmms-jack-0.16.ebuild:
+  Stable on sparc wrt #138227
 
   27 Jun 2006; Markus Rothe <corsair@gentoo.org> xmms-jack-0.16.ebuild:
   Stable on ppc64; bug #138227
