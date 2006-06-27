@@ -1,14 +1,14 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netherearth/netherearth-0.52.ebuild,v 1.2 2005/09/08 19:03:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netherearth/netherearth-0.52.ebuild,v 1.3 2006/06/27 20:48:31 wolf31o2 Exp $
 
 inherit eutils games
 
 MY_PV="${PV/./}"
 DESCRIPTION="A remake of the SPECTRUM game Nether Earth."
-HOMEPAGE="http://braingames.getput.com/nether/"
-SRC_URI="http://braingames.getput.com/nether/sources.zip
-	http://braingames.getput.com/nether/${PN}${MY_PV}.zip"
+HOMEPAGE="http://www.braingames.getput.com/nether/"
+SRC_URI="http://www.braingames.getput.com/nether/sources.zip
+	http://www.braingames.getput.com/nether/${PN}${MY_PV}.zip"
 
 LICENSE="as-is"
 SLOT="0"
