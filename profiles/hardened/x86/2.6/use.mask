@@ -1,12 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.8 2006/06/25 21:23:48 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.9 2006/06/27 20:06:24 kevquinn Exp $
 
 
 altivec
 
 -mmx
--mmx2
 -mmxext
 -sse
 -sse2
