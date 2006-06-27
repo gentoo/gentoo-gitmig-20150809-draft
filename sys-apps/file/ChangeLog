@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.101 2006/06/27 12:00:06 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.102 2006/06/27 12:34:12 tester Exp $
+
+  27 Jun 2006; Olivier Crête <tester@gentoo.org> file-4.17-r1.ebuild:
+  Stable on amd64 per bug #138150
 
   27 Jun 2006; Thomas Cort <tcort@gentoo.org> file-4.17-r1.ebuild:
   Stable on alpha wrt Bug #138150.
