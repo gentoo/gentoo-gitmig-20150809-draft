@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ed2k_hash
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.15 2006/06/25 10:11:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.16 2006/06/28 21:40:13 tsunam Exp $
+
+  28 Jun 2006; Joshua Jackson <tsunam@gentoo.org> ed2k_hash-0.4.0-r1.ebuild:
+  stable x86; bug #137385
 
   25 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   ed2k_hash-0.4.0-r1.ebuild:
