@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1977 2006/06/28 00:48:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1978 2006/06/28 02:11:34 antarus Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -863,6 +863,8 @@ media-tv/xmltv:uk_be - Britain tv listing grabber
 media-tv/xmltv:uk_bleb - Britain alternative tv listing grabber
 media-tv/xmltv:uk_rt - Britain alternative tv listing grabber
 media-tv/xmltv:za - South Africa tv listing grabber
+media-tv/zapping:vdr - Enable Real Time Encoding support (librte)
+media-tv/zapping:zvbi - Enable VBI Decoding Library
 media-video/avifile:dmalloc - Enable support for the Debug Malloc Library
 media-video/avifile:dpms - Enable support for DPMS
 media-video/avifile:sblive - Enable the AC3 passthrough plugin for SBlive soundcards
