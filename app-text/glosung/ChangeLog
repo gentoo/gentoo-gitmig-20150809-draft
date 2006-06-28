@@ -1,6 +1,9 @@
 # ChangeLog for app-text/glosung
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/ChangeLog,v 1.2 2006/06/28 03:43:41 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/ChangeLog,v 1.3 2006/06/28 17:16:19 tsunam Exp $
+
+  28 Jun 2006; Joshua Jackson <tsunam@gentoo.org> glosung-2.1.3.ebuild:
+  Stable x86; bug #138291
 
   28 Jun 2006; Jon Hood <squinky86@gentoo.org> glosung-2.1.3.ebuild:
   Stable on amd64, allow compiling with newer libraries.
