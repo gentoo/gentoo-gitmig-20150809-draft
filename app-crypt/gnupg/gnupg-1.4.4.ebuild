@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.4.ebuild,v 1.1 2006/06/26 22:34:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.4.ebuild,v 1.2 2006/06/28 02:58:28 robbat2 Exp $
 
 inherit eutils flag-o-matic linux-info
 
 ECCVER=0.1.6
-ECCVER_GNUPG=1.4.3
+ECCVER_GNUPG=1.4.4
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
@@ -139,6 +139,9 @@ src_install() {
 	dodoc doc/*.sgml
 
 	dohtml doc/faq.html
+
+	exeinto /usr/libexec/gnupg
+	doexe tools/make-dns-cert
 
 	# install RU documentation in right location
 	if use linguas_ru
