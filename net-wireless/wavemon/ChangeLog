@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wavemon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.18 2006/06/25 13:44:08 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.19 2006/06/28 15:29:51 dang Exp $
+
+  28 Jun 2006; Daniel Gryniewicz <dang@gentoo.org> wavemon-0.4.0b-r1.ebuild:
+  Marked stable on amd64 per bug# 137977
 
   25 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   wavemon-0.4.0b-r1.ebuild:
