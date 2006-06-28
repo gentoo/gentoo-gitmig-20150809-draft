@@ -1,6 +1,10 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.5 2006/01/13 17:59:07 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.6 2006/06/28 17:17:00 mcummings Exp $
+
+  28 Jun 2006; Michael Cummings <mcummings@gentoo.org> po4a-0.21.ebuild:
+  Bug 138332, the Makefile being distributed was causing sandbox problems.
+  Also, keyworded ~amd64.
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org> po4a-0.21.ebuild:
   Marking stable x86
