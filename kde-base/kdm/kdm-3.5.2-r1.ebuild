@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.2-r1.ebuild,v 1.4 2006/06/17 12:02:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.2-r1.ebuild,v 1.5 2006/06/28 02:25:43 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -18,12 +18,13 @@ KMEXTRA="kdmlib/"
 # kioslave/thumbnail/configure.in.in is to have HAVE_LIBART. Can be dropped on
 # 3.5_beta1.
 KMEXTRACTONLY="libkonq/konq_defaults.h"
-#	    kioslave/thumbnail/configure.in.in"
+#		kioslave/thumbnail/configure.in.in"
 KMCOMPILEONLY="kcontrol/background"
 DEPEND="pam? ( kde-base/kdebase-pam )
 	$(deprange $PV $MAXKDEVER kde-base/kcontrol)"
 	# Requires the desktop background settings and kdm kcontrol modules
 RDEPEND="${DEPEND}
+	|| ( x11-apps/xinit virtual/x11 )
 	kde-base/kdepasswd"
 
 
@@ -68,7 +69,7 @@ pkg_postinst() {
 	if [ ! -e "${ROOT}${KDEDIR}/share/apps/kdm/faces/.default.face.icon" ];	then
 		mkdir -p "${ROOT}${KDEDIR}/share/apps/kdm/faces"
 		cp "${ROOT}${KDEDIR}/share/apps/kdm/pics/users/default1.png" \
-		    "${ROOT}${KDEDIR}/share/apps/kdm/faces/.default.face.icon"
+			"${ROOT}${KDEDIR}/share/apps/kdm/faces/.default.face.icon"
 	fi
 	if [ ! -e "${ROOT}${KDEDIR}/share/apps/kdm/faces/root.face.icon" ]; then
 		mkdir -p "${ROOT}${KDEDIR}/share/apps/kdm/faces"

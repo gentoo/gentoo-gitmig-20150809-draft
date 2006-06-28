@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.61 2006/06/17 23:08:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.62 2006/06/28 02:25:43 flameeyes Exp $
+
+  28 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> -kdm-3.5.2.ebuild,
+  kdm-3.5.2-r1.ebuild, -kdm-3.5.3.ebuild, -kdm-3.5.3-r1.ebuild,
+  kdm-3.5.3-r2.ebuild:
+  Add dependency over xinit or x11 for the xdm init.d script. Thanks to
+  Michael Weyershäuser for reporting.
 
 *kdm-3.5.3-r2 (17 Jun 2006)
 
