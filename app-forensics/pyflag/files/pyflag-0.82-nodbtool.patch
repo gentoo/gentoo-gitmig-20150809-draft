@@ -1,0 +1,34 @@
+diff -ru pyflag-0.82.orig/configure.in pyflag-0.82/configure.in
+--- pyflag-0.82.orig/configure.in	2006-06-25 20:20:30.000000000 +1000
++++ pyflag-0.82/configure.in	2006-06-29 08:38:25.000000000 +1000
+@@ -15,6 +15,7 @@
+ AC_CHECK_HEADER(pcap.h,,AC_MSG_ERROR([You Must install libpcap-dev to build pyflag]))
+ AC_CHECK_HEADER(magic.h,,AC_MSG_ERROR([You Must install libmagic-dev to build pyflag this may be part of file the package for some distros]))
+ #AC_CHECK_FILE($srcdir/src/filesystems/sleuthkit-2.03.tar.gz,,AC_MSG_ERROR([You Must download sleuthkit-2.03.tar.gz and place in src/filesystems ]))
++AM_CONDITIONAL(HAVE_DBTOOL, test x$HAVE_DBTOOL = xyes)
+ 
+ # python checks 
+ # (requires autoconf 1.5+ and the macros in acinclude.m4)
+@@ -40,7 +41,7 @@
+ fi
+ 
+ # try to find magic files
+-AC_ARG_WITH(magic, AC_HELP_STRING([--with-magic], [specify a colon-separated list of system magic files, default autodetect]),,[magic=$(file -v | tail -1 | awk '{print $4}')])
++AC_ARG_WITH(magic, AC_HELP_STRING([--with-magic], [specify a colon-separated list of system magic files, default autodetect]),,[magic=$(file -v | tail -n 1 | awk '{print $4}')])
+ AC_SUBST(magic)
+             
+ 
+diff -ru pyflag-0.82.orig/src/Makefile.am pyflag-0.82/src/Makefile.am
+--- pyflag-0.82.orig/src/Makefile.am	2006-03-17 22:05:58.000000000 +1100
++++ pyflag-0.82/src/Makefile.am	2006-06-29 08:37:43.000000000 +1000
+@@ -1,4 +1,9 @@
+-SUBDIRS = lib mailtools indextools_ng network regtools virustools filesystems include
++SUBDIRS = lib mailtools indextools_ng network regtools virustools include
++
++if HAVE_DBTOOL
++else
++SUBDIRS+=filesystems
++endif
+ 
+ # main pyflag (python) application
+ ## The pyflag directory goes in the system site-packages
