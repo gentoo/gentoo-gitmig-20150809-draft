@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.11.ebuild,v 1.3 2005/12/10 23:43:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.11.ebuild,v 1.4 2006/06/28 10:59:12 blubb Exp $
 
 inherit python apache-module
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://apache/httpd/modpython/${P}.tgz"
 HOMEPAGE="http://www.modpython.org/"
 
 LICENSE="as-is"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 SLOT="0"
 IUSE=""
 
@@ -28,7 +28,7 @@ src_compile() {
 	sed -ie 's:OPT=:OPT=$(OPTFLAGS):' ${S}/src/Makefile.in
 	sed -ie 's/\(\\"thread\\" in sys.builtin_module_names\)/int(\1)/' ${S}/configure
 
-	export OPTFLAGS="`/usr/sbin/apxs -q CFLAGS`"
+	export OPTFLAGS="`/usr/sbin/apxs -q CFLAGS` -fPIC"
 	econf --with-apxs=${APXS1}
 
 	sed -ie 's:LIBEXECDIR=:LIBEXECDIR=${D}:' Makefile
