@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvsps
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsps/ChangeLog,v 1.13 2006/02/09 00:34:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsps/ChangeLog,v 1.14 2006/06/28 17:36:08 grobian Exp $
+
+  28 Jun 2006; Fabian Groffen <grobian@gentoo.org> cvsps-2.1.ebuild:
+  Marked ~ppc-macos
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> cvsps-2.1.ebuild:
   stable on amd64
