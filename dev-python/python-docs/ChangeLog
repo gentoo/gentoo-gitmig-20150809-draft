@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.80 2006/06/28 14:46:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.81 2006/06/28 17:34:39 dertobi123 Exp $
+
+  28 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  python-docs-2.4.3.ebuild:
+  ppc stable, #138268
 
   28 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   python-docs-2.4.3.ebuild:
