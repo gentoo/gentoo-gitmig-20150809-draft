@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gift
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.62 2006/05/04 02:16:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.63 2006/06/28 03:24:06 squinky86 Exp $
+
+  28 Jun 2006; Jon Hood <squinky86@gentoo.org> -gift-0.11.6.ebuild,
+  -gift-0.11.6-r1.ebuild, -gift-0.11.7_pre20040627.ebuild,
+  -gift-0.11.7-r1.ebuild:
+  Cleaning up old versions that no longer work.
 
   04 May 2006; Jason Wever <weeve@gentoo.org> gift-0.11.8.1.ebuild:
   Stable on SPARC wrt bug #126631.
