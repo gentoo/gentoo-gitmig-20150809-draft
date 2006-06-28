@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.4_p1-r1.ebuild,v 1.6 2005/03/02 23:22:27 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.4_p1-r1.ebuild,v 1.7 2006/06/28 23:32:56 chtekk Exp $
 
 # eutils must be inherited since get_libdir() is only
 # globally available on baselayout-1.11 (still on ~arch)
-inherit eutils java-pkg
+inherit eutils java-pkg flag-o-matic
 
 MY_PN="${PN/pdf/PDF}-Lite"
 MY_PV="${PV/_p1/p1}"
@@ -27,6 +27,10 @@ DEPEND=">=sys-apps/sed-4
 
 src_compile() {
 	local myconf=
+
+	# Bug #87004
+	filter-flags -mcpu=*
+	filter-flags -mtune=*
 
 	PYVER="$(/usr/bin/python -V 2>&1 | cut -d ' ' -f 2 | cut -d '.' -f 1,2)"
 	# Necessary for multilib on amd64. Please keep this in future releases.
