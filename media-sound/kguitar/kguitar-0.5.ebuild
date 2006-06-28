@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kguitar/kguitar-0.5.ebuild,v 1.3 2006/04/17 01:33:43 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kguitar/kguitar-0.5.ebuild,v 1.4 2006/06/28 01:45:30 metalgod Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ DESCRIPTION="An efficient and easy-to-use environment for a guitarist"
 HOMEPAGE="http://kguitar.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
 

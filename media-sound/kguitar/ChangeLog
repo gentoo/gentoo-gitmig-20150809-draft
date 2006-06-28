@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kguitar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kguitar/ChangeLog,v 1.2 2006/04/17 01:33:43 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kguitar/ChangeLog,v 1.3 2006/06/28 01:45:30 metalgod Exp $
+
+  28 Jun 2006; Luis Medinas <metalgod@gentoo.org> kguitar-0.5.ebuild:
+  Added ~amd64 keyword. Closes bug #130095.
 
   17 Apr 2006; Eldad Zack <eldad@gentoo.org> kguitar-0.5.ebuild:
   Removed tetex support, see bug #130153
