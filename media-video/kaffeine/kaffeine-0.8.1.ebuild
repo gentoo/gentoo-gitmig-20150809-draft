@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.1.ebuild,v 1.4 2006/06/27 22:30:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.1.ebuild,v 1.5 2006/06/28 19:45:51 flameeyes Exp $
 
 inherit eutils kde
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dvb gstreamer xinerama vorbis encode kdehiddenvisibility"
 
 RDEPEND="|| ( x11-base/xorg-server
-	      >=x11-base/xorg-x11-6.8.0-r4 )
+		  >=x11-base/xorg-x11-6.8.0-r4 )
 	>=media-libs/xine-lib-1
 	gstreamer? ( =media-libs/gstreamer-0.8*
 		=media-libs/gst-plugins-0.8*
@@ -41,6 +41,9 @@ DEPEND="${RDEPEND}
 need-kde 3.2
 
 src_compile() {
+	# It re-runs configure because of messed-up timestamps
+	rm -f "${S}/configure"
+
 	myconf="${myconf}
 		$(use_with xinerama)
 		$(use_with dvb)
