@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5557 2006/06/27 13:48:13 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5558 2006/06/28 00:52:53 anarchy Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Jory A Pratt <anarchy@gentoo.org> (27 Jun 2006)
+# Package is busted, does not build against seamonkey
+# Removal from tree (27 July 2006
+www-client/skipstone
 
 # Mike Frysinger <vapier@gentoo.org> (27 Jun 2006)
 # Package is obsolete, use the bundled wine setup code #120575
