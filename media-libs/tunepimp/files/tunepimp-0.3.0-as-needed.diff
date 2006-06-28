@@ -1,0 +1,10 @@
+--- libtunepimp-0.3.0/lib/Makefile.am~	2006-06-28 19:57:33.080201500 +0200
++++ libtunepimp-0.3.0/lib/Makefile.am	2006-06-28 19:57:33.080201500 +0200
+@@ -44,6 +44,6 @@
+ #  6. If any interfaces have been removed since the last public release, then 
+ #     set age to 0. 
+ libtunepimp_la_LDFLAGS = -version-info 2:0:0
+-libtunepimp_la_LIBADD = threads/posix/libtpthread.la utf8/libutf8.la id3tag/libid3tag.la @TP_LIBS@
++libtunepimp_la_LIBADD = threads/posix/libtpthread.la utf8/libutf8.la id3tag/libid3tag.la -lz @TP_LIBS@
+ 
+ noinst_HEADERS = analyzer.h dirsearch.h fstrcmp.h i18n.h id3_meta.h lookup.h mp3_trm.h flac_trm.h flac_meta.h ov_trm.h submit.h trm.h vcedit.h vorbis_meta.h wav_trm.h ape_meta.h ape_trm.h filecache.h filelookup.h file_meta.h fstrcmp.h lookuptools.h write.h metadata.h watchdog.h
