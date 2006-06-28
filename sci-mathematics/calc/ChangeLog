@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/calc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/ChangeLog,v 1.8 2006/02/08 22:52:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/ChangeLog,v 1.9 2006/06/28 02:19:02 metalgod Exp $
+
+  28 Jun 2006; Luis Medinas <metalgod@gentoo.org> calc-2.11.10.1.ebuild:
+  Stable on amd64. Bug #138153.
 
   08 Feb 2006; Aron Griffis <agriffis@gentoo.org> calc-2.11.10.1.ebuild:
   Mark 2.11.10.1 stable on alpha
