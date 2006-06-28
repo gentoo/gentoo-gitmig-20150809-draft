@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.8.2-r1.ebuild,v 1.1 2006/06/28 03:57:00 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.8.2-r1.ebuild,v 1.2 2006/06/28 10:49:29 genstef Exp $
 
 inherit eutils libtool
 
 DESCRIPTION="Library for manipulation of TIFF (Tag Image File Format) images"
 HOMEPAGE="http://www.libtiff.org/"
-SRC_URI="ftp://ftp.remotesensing.org/pub/libtiff/${P}.tar.gz"
+SRC_URI="ftp://ftp.remotesensing.org/pub/libtiff/${P}.tar.gz
+	mirror://gentoo/${P}-tiff2pdf.patch.bz2"
 
 LICENSE="as-is"
 SLOT="0"
@@ -20,9 +21,11 @@ DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${DISTDIR}/${P}-tiff2pdf.patch.bz2 || die "epatch tiff2pdf failed"
+	epatch ${WORKDIR}/${P}-tiff2pdf.patch || die "epatch tiff2pdf failed"
 	epatch ${FILESDIR}/${P}-tiffsplit.patch || die "epatch tiffsplit failed"
-	use jbig && epatch "${FILESDIR}"/${PN}-jbig.patch || die "epatch jbig failed"
+	if use jbig; then
+		epatch "${FILESDIR}"/${PN}-jbig.patch || die "epatch jbig failed"
+	fi
 	use ppc-macos || elibtoolize
 }
 
