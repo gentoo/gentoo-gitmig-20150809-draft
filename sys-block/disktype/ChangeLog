@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/disktype
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/disktype/ChangeLog,v 1.4 2006/06/07 12:22:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/disktype/ChangeLog,v 1.5 2006/06/28 13:49:17 kingtaco Exp $
+
+  28 Jun 2006; Mike Doty <kingtaco@gentoo.org> disktype-9.ebuild:
+  ~amd64
 
 *disktype-9 (07 Jun 2006)
 
