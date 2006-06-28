@@ -53,7 +53,7 @@ Index: vzctl-3.0.10/src/Makefile
  
 -install: $(PROGS) inst-dirs install-lib inst-sbin inst-scripts \
 -	inst-netscripts inst-configs inst-initd inst-cron 
-+install: $(PROGS) inst-dirs install-lib inst-sbin inst-configs inst-cron
++install: $(PROGS) inst-dirs install-lib inst-sbin inst-configs inst-cron inst-scripts
  clean:
  	rm -f *.o lib/*.lo $(PROGS) $(LIB_vzctl) $(LIB_fs) $(LIB_simfs) .depend
  

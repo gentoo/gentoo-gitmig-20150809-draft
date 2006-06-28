@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.26 2006/06/22 04:28:44 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.27 2006/06/28 14:39:09 phreak Exp $
+
+*vzctl-3.0.10-r1 (28 Jun 2006)
+
+  28 Jun 2006; Christian Heim <phreak@gentoo.org>
+  files/vzctl-3.0.10-Makefile.patch, +files/vz-3.0.10.initd,
+  vzctl-3.0.10.ebuild, +vzctl-3.0.10-r1.ebuild:
+  Revision bump, fixing vzctl-3.0.10-Makefile.patch. Now also installs
+  vpsnetclean and vpsreboot scripts into /usr/share/vzctl/scripts. Including
+  initscript changes from Kir Kolyshkin <kir@openvz.org>
 
   22 Jun 2006; Benedikt Böhm <hollow@gentoo.org> vzctl-3.0.10.ebuild:
   fix libdir; add warning
