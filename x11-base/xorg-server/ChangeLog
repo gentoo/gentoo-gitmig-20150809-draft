@@ -1,10 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.130 2006/06/28 02:19:00 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.131 2006/06/28 02:32:56 spyderous Exp $
 
   27 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.1.0-r1.ebuild:
   Only pull in loadable drivers if the xorg USE-flag is set. (bug #135873)
+
+  28 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-1.1.0-r1.ebuild:
+  Fix typo video_cards_3dfx > video_cards_tdfx (Jakub Moc).
 
   26 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.1.0-r1.ebuild:
