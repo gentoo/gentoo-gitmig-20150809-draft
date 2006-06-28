@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.47 2006/06/24 00:14:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.48 2006/06/28 02:37:04 metalgod Exp $
+
+  28 Jun 2006; Luis Medinas <metalgod@gentoo.org> avahi-0.6.10.ebuild:
+  Stable on amd64. See bug #124293.
 
   24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> avahi-0.6.10.ebuild:
   USE flag qt->qt3/qt4 change
