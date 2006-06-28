@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.199 2006/06/28 20:04:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.200 2006/06/28 20:06:11 azarah Exp $
+
+  28 Jun 2006; Martin Schlemmer <azarah@gentoo.org> Manifest:
+  Bah, repoman.
 
 *udev-094 (28 Jun 2006)
 
