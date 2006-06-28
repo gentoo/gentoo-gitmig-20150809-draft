@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_krb5
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.5 2006/02/19 21:08:35 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.6 2006/06/28 13:41:44 exg Exp $
+
+  28 Jun 2006; Emanuele Giaquinta <exg@gentoo.org> -pam_krb5-1.0.ebuild,
+  pam_krb5-1.0-r1.ebuild, -pam_krb5-20030601.ebuild:
+  Cleanup.
 
   19 Feb 2006; Joshua Kinard <kumba@gentoo.org> pam_krb5-1.0-r1.ebuild:
   Added ~mips to KEYWORDS.
