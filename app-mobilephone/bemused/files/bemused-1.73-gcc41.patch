@@ -1,0 +1,29 @@
+diff -Nru bemusedlinuxserver1.73.orig/BemusedServerDlg.h bemusedlinuxserver1.73/BemusedServerDlg.h
+--- bemusedlinuxserver1.73.orig/BemusedServerDlg.h	2004-05-01 17:24:32.000000000 +0300
++++ bemusedlinuxserver1.73/BemusedServerDlg.h	2006-06-28 20:47:58.812926250 +0300
+@@ -63,11 +63,11 @@
+ 	void HandleBluetooth();
+ 
+ 	bool CheckWinamp(const char* aWindowName);
+-  bool CBemusedServerDlg::ReadFile(int handle,char* buffer,int maxbytes,long unsigned int* bytesread,int* bla);
+-  bool CBemusedServerDlg::ReadFile(int handle,unsigned char* buffer,int maxbytes,long unsigned int* bytesread,int* bla);
+-  bool CBemusedServerDlg::WriteFile(int handle, char* buffer,int maxbytes, long unsigned int* byteswritten,int* bla);
+-  bool CBemusedServerDlg::WriteFile(int handle,unsigned char* buffer,int maxbytes, long unsigned int* byteswritten,int* bla);
+-  char* CBemusedServerDlg::GetLastError();
++  bool ReadFile(int handle,char* buffer,int maxbytes,long unsigned int* bytesread,int* bla);
++  bool ReadFile(int handle,unsigned char* buffer,int maxbytes,long unsigned int* bytesread,int* bla);
++  bool WriteFile(int handle, char* buffer,int maxbytes, long unsigned int* byteswritten,int* bla);
++  bool WriteFile(int handle,unsigned char* buffer,int maxbytes, long unsigned int* byteswritten,int* bla);
++  char* GetLastError();
+ 
+ 	void WriteListToPhone();
+ 	void WriteDirectoryListToPhone();
+@@ -99,7 +99,7 @@
+ 	void FadeOut();
+ 	void ReadIniFile();
+ 
+-	void CBemusedServerDlg::AddBookmarks(CDirTreeNode* aNode, CDirTreeNode* pNode, bool aRecursive);
++	void AddBookmarks(CDirTreeNode* aNode, CDirTreeNode* pNode, bool aRecursive);
+ 	void GenerateFileList(const char* aRoot, bool aRecursive);
+ 	void ReadDir(char* aDir, CDirTreeNode* aNode, bool aRecursive);
+ 	bool WriteNodeToBuffer(CDirTreeNode* aNode, unsigned char*& aBufferPtr, int& aSizeRemaining);

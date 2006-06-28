@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bemused/bemused-1.73.ebuild,v 1.3 2006/05/05 14:37:10 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bemused/bemused-1.73.ebuild,v 1.4 2006/06/28 17:51:45 mrness Exp $
+
+inherit eutils
 
 MY_P=${PN}linuxserver-${PV/./_}
 
@@ -17,6 +19,12 @@ S="${WORKDIR}/${PN}linuxserver${PV}"
 
 DEPEND="media-sound/xmms
 	net-wireless/bluez-libs"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch "${FILESDIR}/${P}-gcc41.patch"
+}
 
 src_install() {
 	dobin bemusedlinuxserver
