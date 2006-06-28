@@ -1,15 +1,60 @@
-MD5 291be2d74929bcb0b137ca5db17dcbcc ChangeLog 1063
-MD5 8db9bb315b405ab2c9790e11ec768389 files/digest-lm_sensors-2.10.0 69
-MD5 edf2235c80b178421142d5a8d04e50fa files/digest-lm_sensors-2.9.2 68
+AUX lm_sensors-2.10.0-fancontrol-init.d 742 RMD160 5764496bbf458a198e9fd33deaf8d29436b5f74e SHA1 6d46a6c6524217f14ce823a7aa3b897fde1b3493 SHA256 a7d118ef835b86a0b69c983f53fdaa386714bf70d5785746476f626d636dbfa0
 MD5 9256ad9507e5277c37efac49a28335e9 files/lm_sensors-2.10.0-fancontrol-init.d 742
+RMD160 5764496bbf458a198e9fd33deaf8d29436b5f74e files/lm_sensors-2.10.0-fancontrol-init.d 742
+SHA256 a7d118ef835b86a0b69c983f53fdaa386714bf70d5785746476f626d636dbfa0 files/lm_sensors-2.10.0-fancontrol-init.d 742
+AUX lm_sensors-2.10.0-lm_sensors-init.d 2452 RMD160 e98288285811fd6008ebc96c6cae707340e3a856 SHA1 2b0f35e98ed3a0c6d68f5b213e8bd7e8bcf414b6 SHA256 4426801b022ab0450dff7af30090b14607e375ba8791e0dc6e1dac3036e1d6d1
 MD5 b63e425d42e60a7339ad36fe595e8f7c files/lm_sensors-2.10.0-lm_sensors-init.d 2452
+RMD160 e98288285811fd6008ebc96c6cae707340e3a856 files/lm_sensors-2.10.0-lm_sensors-init.d 2452
+SHA256 4426801b022ab0450dff7af30090b14607e375ba8791e0dc6e1dac3036e1d6d1 files/lm_sensors-2.10.0-lm_sensors-init.d 2452
+AUX lm_sensors-2.10.0-sensord-conf.d 104 RMD160 c4a06a8492d6c0fd966dea64d92f798a9b716a92 SHA1 43090c58c918969caa359d3b6e89237585759f46 SHA256 02230edf5efbb0a4de3840cd76f9ebf431c57a246fa7388e9dbeb0fe26fe7b8d
 MD5 82e075236a61334abb3adf46280380d3 files/lm_sensors-2.10.0-sensord-conf.d 104
+RMD160 c4a06a8492d6c0fd966dea64d92f798a9b716a92 files/lm_sensors-2.10.0-sensord-conf.d 104
+SHA256 02230edf5efbb0a4de3840cd76f9ebf431c57a246fa7388e9dbeb0fe26fe7b8d files/lm_sensors-2.10.0-sensord-conf.d 104
+AUX lm_sensors-2.10.0-sensord-init.d 724 RMD160 973005ed0248af3c9ab489ac3e5f980da712f8df SHA1 740e248a5f113fece2946a076aae29d485244af9 SHA256 fd11c388093f1363b8d67b25b504f7a2b0336d23dfa692a77ba3b8005d662c72
 MD5 4f35fb739509b088af4c43bcc513a789 files/lm_sensors-2.10.0-sensord-init.d 724
+RMD160 973005ed0248af3c9ab489ac3e5f980da712f8df files/lm_sensors-2.10.0-sensord-init.d 724
+SHA256 fd11c388093f1363b8d67b25b504f7a2b0336d23dfa692a77ba3b8005d662c72 files/lm_sensors-2.10.0-sensord-init.d 724
+AUX lm_sensors-2.10.0-sensors-detect-gentoo.patch 5422 RMD160 1e3b66a8223bf8faf9d255550d88ea375015c114 SHA1 c122f815d95ba1af4f6a83d917d862170f28ac0c SHA256 fbc79f9f93a4e21a2a1755c481d1630612f908049a457077baf0e1d631fa5baa
 MD5 40a7140c570d5c5ac82a5643a3ed0137 files/lm_sensors-2.10.0-sensors-detect-gentoo.patch 5422
+RMD160 1e3b66a8223bf8faf9d255550d88ea375015c114 files/lm_sensors-2.10.0-sensors-detect-gentoo.patch 5422
+SHA256 fbc79f9f93a4e21a2a1755c481d1630612f908049a457077baf0e1d631fa5baa files/lm_sensors-2.10.0-sensors-detect-gentoo.patch 5422
+AUX lm_sensors-2.9.2-lm_sensors-init.d 2451 RMD160 9e083d404726183ff9b140a7daed892d7c92b3b7 SHA1 941298f9920fc76c24191cce8911bf8022923762 SHA256 8fd54f9682a135ca3c694d565fa3fb0cf8f3b6c56baf355a32135cbe25b4a3f4
 MD5 1820ac1922d3df87cc3627a3dd587cf6 files/lm_sensors-2.9.2-lm_sensors-init.d 2451
+RMD160 9e083d404726183ff9b140a7daed892d7c92b3b7 files/lm_sensors-2.9.2-lm_sensors-init.d 2451
+SHA256 8fd54f9682a135ca3c694d565fa3fb0cf8f3b6c56baf355a32135cbe25b4a3f4 files/lm_sensors-2.9.2-lm_sensors-init.d 2451
+AUX lm_sensors-2.9.2-sensord-conf.d 342 RMD160 70019e0becd5c410e12425eace4b6309bde7fc83 SHA1 a11cfd06966149c928bf75997d3a520c1f262639 SHA256 8c199e206536392e1e98eff63088f5f2a20b46d9921cd25a411363a7d3bf53f8
 MD5 8c53cf91a74a24b3c2187c551df425aa files/lm_sensors-2.9.2-sensord-conf.d 342
+RMD160 70019e0becd5c410e12425eace4b6309bde7fc83 files/lm_sensors-2.9.2-sensord-conf.d 342
+SHA256 8c199e206536392e1e98eff63088f5f2a20b46d9921cd25a411363a7d3bf53f8 files/lm_sensors-2.9.2-sensord-conf.d 342
+AUX lm_sensors-2.9.2-sensord-init.d 739 RMD160 05e23310ea01ee679353a27f8580337a65757e50 SHA1 1511e9ef1fa5f80634331a154bbba9c46a3e38c3 SHA256 849a45926a7daada1a8d68fbc79780e7f6f4ebb119b5916309341e2ce20b190d
 MD5 c4ff4510a7e5d2d4e3b9e5e2848f5834 files/lm_sensors-2.9.2-sensord-init.d 739
+RMD160 05e23310ea01ee679353a27f8580337a65757e50 files/lm_sensors-2.9.2-sensord-init.d 739
+SHA256 849a45926a7daada1a8d68fbc79780e7f6f4ebb119b5916309341e2ce20b190d files/lm_sensors-2.9.2-sensord-init.d 739
+AUX lm_sensors-2.9.2-sensors-detect-gentoo.patch 5446 RMD160 67912fd5dbb75ef7c7e2ceba4b42cb817e6c1f15 SHA1 e6d365f124d596cb3cd4d69554734a49159ba85d SHA256 524178ae9648be66ae161598394aec26c51f3b2b17e30df1b347efc58c317c61
 MD5 ca1a12423f60961873fad394f9bba183 files/lm_sensors-2.9.2-sensors-detect-gentoo.patch 5446
-MD5 1ddf586222309cbfc19faeae20ca4fd3 lm_sensors-2.10.0.ebuild 4177
+RMD160 67912fd5dbb75ef7c7e2ceba4b42cb817e6c1f15 files/lm_sensors-2.9.2-sensors-detect-gentoo.patch 5446
+SHA256 524178ae9648be66ae161598394aec26c51f3b2b17e30df1b347efc58c317c61 files/lm_sensors-2.9.2-sensors-detect-gentoo.patch 5446
+DIST lm_sensors-2.10.0.tar.gz 879631
+DIST lm_sensors-2.9.2.tar.gz 860624
+EBUILD lm_sensors-2.10.0.ebuild 4177 RMD160 85e9509c39f2561c0a314a57754aa17629c35758 SHA1 82d0b7e44d71062f73aa90150ba5909492184e7f SHA256 a27c1a4534a4479d8c6e794a1da14efcfd717c35c1cb7ea19c5d052632a168fa
+MD5 18ce35b08911f3e274ed09d523ca9985 lm_sensors-2.10.0.ebuild 4177
+RMD160 85e9509c39f2561c0a314a57754aa17629c35758 lm_sensors-2.10.0.ebuild 4177
+SHA256 a27c1a4534a4479d8c6e794a1da14efcfd717c35c1cb7ea19c5d052632a168fa lm_sensors-2.10.0.ebuild 4177
+EBUILD lm_sensors-2.9.2.ebuild 4098 RMD160 c1bbedc0efb1e077c18e020ad2bd2b23a2325742 SHA1 a51f60cf05cf1626c50787c625d2153608696659 SHA256 f98ad018ee5a3df4e1ae460f653de7ffdcd0a64af4aab14901b2b2dde8fccc13
 MD5 8126d1594f4dcd7b40544f8dfeef9c0b lm_sensors-2.9.2.ebuild 4098
+RMD160 c1bbedc0efb1e077c18e020ad2bd2b23a2325742 lm_sensors-2.9.2.ebuild 4098
+SHA256 f98ad018ee5a3df4e1ae460f653de7ffdcd0a64af4aab14901b2b2dde8fccc13 lm_sensors-2.9.2.ebuild 4098
+MISC ChangeLog 1158 RMD160 f62da27f92cbe3b74d63539930305a1399b4d1db SHA1 5521b036ca548179a810f9a151dc7e6bb708594e SHA256 a5499ba443f746235567ffc7c313786e2a6627ebbe07854c2114017ef2c57eb3
+MD5 c11a4ed3d4a86cb9d1e486a1c1a68487 ChangeLog 1158
+RMD160 f62da27f92cbe3b74d63539930305a1399b4d1db ChangeLog 1158
+SHA256 a5499ba443f746235567ffc7c313786e2a6627ebbe07854c2114017ef2c57eb3 ChangeLog 1158
+MISC metadata.xml 255 RMD160 e6f6333d659d443f0290a257c2b23772ab1cf526 SHA1 1258e0419f1fe7839c4db37602b5999d0e196bca SHA256 255c7b73ddde5e979b6b53de0f9f5b858e22e602e0495f484b2a33cd2987edf9
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
+RMD160 e6f6333d659d443f0290a257c2b23772ab1cf526 metadata.xml 255
+SHA256 255c7b73ddde5e979b6b53de0f9f5b858e22e602e0495f484b2a33cd2987edf9 metadata.xml 255
+MD5 8db9bb315b405ab2c9790e11ec768389 files/digest-lm_sensors-2.10.0 69
+RMD160 81e98fa2c648e4293dcd0d214c8bcd890024a9f3 files/digest-lm_sensors-2.10.0 69
+SHA256 67503d4fe39d8a3b8f6deac7eda60681a34741206037e87db02514984f06db0c files/digest-lm_sensors-2.10.0 69
+MD5 edf2235c80b178421142d5a8d04e50fa files/digest-lm_sensors-2.9.2 68
+RMD160 ec4a7cee978efd39b5c62a30b8d27770ed861106 files/digest-lm_sensors-2.9.2 68
+SHA256 fb41ae752eb370a7af748f62db9f49ccc22fb2b3c59aeec775b6d05f595f25e1 files/digest-lm_sensors-2.9.2 68

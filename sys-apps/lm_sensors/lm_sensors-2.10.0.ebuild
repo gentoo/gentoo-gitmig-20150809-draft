@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.0.ebuild,v 1.3 2006/05/28 14:57:00 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.0.ebuild,v 1.4 2006/06/28 11:07:34 blubb Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://secure.netroedge.com/~lm78/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 IUSE="sensord"
 
