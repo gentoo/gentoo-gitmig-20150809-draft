@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.12.3.ebuild,v 1.9 2006/04/21 20:41:26 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.12.3.ebuild,v 1.10 2006/06/28 15:32:17 compnerd Exp $
 
 inherit eutils gnome2
 
@@ -65,6 +65,9 @@ src_unpack() {
 
 	# add hal configure switch
 	epatch ${FILESDIR}/${PN}-2.12.1-hal-switch.patch
+
+	# patch ICAO locations (bug #132035)
+	epatch ${FILESDIR}/gweather-2.12.3-locations-update.patch
 
 	autoconf || die "autoconf failed"
 }

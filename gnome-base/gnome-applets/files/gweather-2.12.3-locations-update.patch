@@ -1,0 +1,18 @@
+--- gweather/Locations.xml.orig	2006-06-27 23:45:15.000000000 -0500
++++ gweather/Locations.xml	2006-06-27 23:45:23.000000000 -0500
+@@ -82697,7 +82697,7 @@
+         <name xml:lang="vi">Cheboygan</name>
+         <name xml:lang="zh_CN">Cheboygan</name>
+         <name xml:lang="zh_TW">希波伊干</name>
+-        <code>KY15</code>
++        <code>KSLH</code>
+         <coordinates>45-39-13N 084-31-09W</coordinates>
+       </location>
+       <location>
+@@ -393257,4 +393257,4 @@
+ 
+ 
+ 
+-</gweather>
+\ No newline at end of file
++</gweather>
