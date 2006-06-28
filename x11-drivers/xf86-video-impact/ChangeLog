@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-impact
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-impact/ChangeLog,v 1.1 2006/06/28 16:05:39 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-impact/ChangeLog,v 1.2 2006/06/28 17:39:57 geoman Exp $
+
+  28 Jun 2006; Stephen P. Becker <geoman@gentoo.org>
+  +files/xf86-video-impact-0.2.0-DCACHE.patch,
+  xf86-video-impact-0.2.0.ebuild:
+  add patch to fix compilation on non-mips arches where linux-mips tree
+  headers are not present
 
 *xf86-video-impact-0.2.0 (28 Jun 2006)
 
