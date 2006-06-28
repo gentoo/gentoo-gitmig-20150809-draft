@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.37 2006/06/15 22:29:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.38 2006/06/28 00:15:32 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -18,22 +18,22 @@ DEPEND="sys-devel/automake
 
 # Variables:
 #
-#   AT_M4DIR          - Additional director(y|ies) aclocal should search
-#   AM_OPTS           - Additional options to pass to automake during
-#                       eautoreconf call.
+#	AT_M4DIR		  - Additional director(y|ies) aclocal should search
+#	AM_OPTS			  - Additional options to pass to automake during
+#						eautoreconf call.
 
 # Functions:
 #
-#   eautoreconf()  - Should do a full autoreconf - normally what most people
-#                    will be interested in.  Also should handle additional
-#                    directories specified by AC_CONFIG_SUBDIRS.
-#   eaclocal()     - Runs aclocal.  Respects AT_M4DIR for additional directories
-#                    to search for macro's.
-#   _elibtoolize() - Runs libtoolize.  Note the '_' prefix .. to not collide
-#                    with elibtoolize() from libtool.eclass
-#   eautoconf      - Runs autoconf.
-#   eautoheader    - Runs autoheader.
-#   eautomake      - Runs automake
+#	eautoreconf()  - Should do a full autoreconf - normally what most people
+#					 will be interested in.	 Also should handle additional
+#					 directories specified by AC_CONFIG_SUBDIRS.
+#	eaclocal()	   - Runs aclocal.	Respects AT_M4DIR for additional directories
+#					 to search for macro's.
+#	_elibtoolize() - Runs libtoolize.  Note the '_' prefix .. to not collide
+#					 with elibtoolize() from libtool.eclass
+#	eautoconf	   - Runs autoconf.
+#	eautoheader	   - Runs autoheader.
+#	eautomake	   - Runs automake
 #
 
 # XXX: M4DIR should be depreciated
@@ -45,7 +45,7 @@ AT_GNUCONF_UPDATE="no"
 # eauto* functions to run the tools. It doesn't accept parameters, but
 # the directory with include files can be specified with AT_M4DIR variable.
 eautoreconf() {
-	local pwd=$(pwd) x
+	local pwd=$(pwd) x auxdir
 
 	# Take care of subdirs
 	for x in $(autotools_get_subdirs); do
@@ -56,7 +56,10 @@ eautoreconf() {
 		fi
 	done
 
+	auxdir=$(autotools_get_auxdir)
+
 	einfo "Running eautoreconf in '$(pwd)' ..."
+	[[ -n ${auxdir} ]] && mkdir -p ${auxdir}
 	eaclocal
 	_elibtoolize --copy --force
 	eautoconf
@@ -212,3 +215,17 @@ autotools_get_subdirs() {
 	return 0
 }
 
+autotools_get_auxdir() {
+	local auxdir_scan_out
+
+	auxdir_scan_out=$(autotools_check_macro "AC_CONFIG_AUX_DIR")
+	[[ -n ${auxdir_scan_out} ]] || return 0
+
+	echo ${auxdir_scan_out} | gawk \
+	'($0 !~ /^[[:space:]]*(#|dnl)/) {
+		if (match($0, /AC_CONFIG_AUX_DIR:(.*)$/, res))
+			print res[1]
+	}' | uniq
+
+	return 0
+}
