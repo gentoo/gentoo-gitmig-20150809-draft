@@ -1,19 +1,84 @@
-MD5 3d0019972e30e743703da17fe68ef997 ChangeLog 6690
+AUX Makefile.in.in.patch 502 RMD160 b5be9300fee514b6bf492b99bd41c413ce27dddd SHA1 524bfef02e15934eec08be81366fb81cf277d65c SHA256 760e5c4f5ffc1548733a61d5c270ec94bfcd44b1aa0f4309ff229814e60f24c0
 MD5 fed2190383ce65b52a43f42fafa17f6f files/Makefile.in.in.patch 502
-MD5 bf9914d8c2032ae9e2c6d375a2eb71a8 files/digest-gnome-backgrounds-2.10.0 78
-MD5 c547e18a1541ee20308a075e7c49b66f files/digest-gnome-backgrounds-2.10.1 78
-MD5 e6b3decb3b0dcc7326beaeb08559538d files/digest-gnome-backgrounds-2.10.2 78
-MD5 923cb2ea690b6972e5ab285f4e3243ea files/digest-gnome-backgrounds-2.12.1 78
-MD5 ca21973597ffc5c364c15522a5e46972 files/digest-gnome-backgrounds-2.12.2 78
-MD5 d50a5b9863d6f956017e9115d9dbd466 files/digest-gnome-backgrounds-2.12.3.1 80
-MD5 53d2d224d6d94b4ff0f88a9316beae0d files/digest-gnome-backgrounds-2.14.0 280
-MD5 28c7938b350c5cd37ce74e3981547799 files/digest-gnome-backgrounds-2.14.1 280
+RMD160 b5be9300fee514b6bf492b99bd41c413ce27dddd files/Makefile.in.in.patch 502
+SHA256 760e5c4f5ffc1548733a61d5c270ec94bfcd44b1aa0f4309ff229814e60f24c0 files/Makefile.in.in.patch 502
+DIST gnome-backgrounds-2.10.0.tar.bz2 2249259
+DIST gnome-backgrounds-2.10.1.tar.bz2 2250278
+DIST gnome-backgrounds-2.10.2.tar.bz2 2264170
+DIST gnome-backgrounds-2.12.1.tar.bz2 1756483
+DIST gnome-backgrounds-2.12.2.tar.bz2 1782630 RMD160 47ff39d71b40219d76f55e076a1a3b3f63041265 SHA1 029a6c11e9b30e710d990235b8a85c857b368022 SHA256 23f50725e1693c7c555f2ba8989bfc821b7e5909236c517537a4a22efb8b4b4e
+DIST gnome-backgrounds-2.12.3.1.tar.bz2 1792219 RMD160 b728d50e1600d9cc8cea62ec19f70345be0ab31a SHA1 e53bda766244c63487a272887f41a19215b5d854 SHA256 52061b76915a1584c3dffbefa50c17e165460d93a50b9765d2e67b50b2c47e76
+DIST gnome-backgrounds-2.14.0.tar.bz2 1191881 RMD160 afa19b26ff61855156cf9ad0f3a1d8318d2d98ad SHA1 6deaa7a24bfac4f76c9ee5e76bb6df6d061ba4c1 SHA256 61919046c6e7c5ce6e072a905644c18d1b527336a8e2ccc7d19438157b12aa88
+DIST gnome-backgrounds-2.14.1.tar.bz2 1193821 RMD160 d69162b9b45054d31ebd7ef57e2556047774f57f SHA1 7e21f8908f7b40f7008ae3b3ec1a68dd4647821c SHA256 7cd07e0ec597219b3632db00749709f334238a2532b65a6a31d0e038e732bfc5
+DIST gnome-backgrounds-2.14.2.1.tar.bz2 1193909 RMD160 5202537180f5bac0d9b3f90fe7bd4f06c23be514 SHA1 5f247e3a731d51eec0801cc66c13e6fb95ff86d1 SHA256 1e5ad1c36001dbc9f843bb521e7ab58bc0a664ad3a7b29d3c0ab337d417ebfa3
+EBUILD gnome-backgrounds-2.10.0.ebuild 550 RMD160 67114568bbcf87831e9762ddf181f5cc560b0e7e SHA1 4277caa8719d15b3a53b9cb15dac2dd3f2f3acf8 SHA256 9377a4726fa53b54f55e573fe5ac76192f4044ebd05beffa6b6cb6b1e1110d59
 MD5 7c86767974461d3fab6c7a948b090fa1 gnome-backgrounds-2.10.0.ebuild 550
+RMD160 67114568bbcf87831e9762ddf181f5cc560b0e7e gnome-backgrounds-2.10.0.ebuild 550
+SHA256 9377a4726fa53b54f55e573fe5ac76192f4044ebd05beffa6b6cb6b1e1110d59 gnome-backgrounds-2.10.0.ebuild 550
+EBUILD gnome-backgrounds-2.10.1.ebuild 546 RMD160 69f8db386bd862b978ef23e818288fd309096eba SHA1 caa94d16a991725233e4445c8461b74cd526ec34 SHA256 079e5e02eac92ff1fe6f570c1697b9002907bda47e198ef70f5e1991bd2f5e69
 MD5 f87765f6933edb3626cc347c7cd78ea2 gnome-backgrounds-2.10.1.ebuild 546
+RMD160 69f8db386bd862b978ef23e818288fd309096eba gnome-backgrounds-2.10.1.ebuild 546
+SHA256 079e5e02eac92ff1fe6f570c1697b9002907bda47e198ef70f5e1991bd2f5e69 gnome-backgrounds-2.10.1.ebuild 546
+EBUILD gnome-backgrounds-2.10.2.ebuild 559 RMD160 6075d201a81c6af849111259556c7d7b87f13517 SHA1 48f8aefea6588b79438a2f1d73edcbf8d1b7c621 SHA256 bb6a00ed91a115f14e02ed61cf4f41af829a20494b64b7e8f22a5a8555c92bb5
 MD5 f907b730d0bad22dc6bb63d181b6d13c gnome-backgrounds-2.10.2.ebuild 559
+RMD160 6075d201a81c6af849111259556c7d7b87f13517 gnome-backgrounds-2.10.2.ebuild 559
+SHA256 bb6a00ed91a115f14e02ed61cf4f41af829a20494b64b7e8f22a5a8555c92bb5 gnome-backgrounds-2.10.2.ebuild 559
+EBUILD gnome-backgrounds-2.12.1.ebuild 568 RMD160 9094e37f0a5cd6a837e9ae5ad0fc42914fe5faf4 SHA1 a222ec71bdb7ab310898e8b60fe4e7264e944f62 SHA256 b33eb245a034586fa1953c74e968f70c7ee98031e77bbb8e84a427ba9f79f8c7
 MD5 e8c325b8de110bf04ae6ad338abf07a6 gnome-backgrounds-2.12.1.ebuild 568
+RMD160 9094e37f0a5cd6a837e9ae5ad0fc42914fe5faf4 gnome-backgrounds-2.12.1.ebuild 568
+SHA256 b33eb245a034586fa1953c74e968f70c7ee98031e77bbb8e84a427ba9f79f8c7 gnome-backgrounds-2.12.1.ebuild 568
+EBUILD gnome-backgrounds-2.12.2.ebuild 562 RMD160 a18aea70949513141636b96d03ac46ccfc10682d SHA1 1e51abd7d31cf2d6ea144635f8b1b6c373a10db8 SHA256 041883704ef8b29fd3ea36618dd10135d733d8a2c0c208ab13cc95b3c2cdb57f
 MD5 7ac6568210e806bbefed50366cdea5ae gnome-backgrounds-2.12.2.ebuild 562
+RMD160 a18aea70949513141636b96d03ac46ccfc10682d gnome-backgrounds-2.12.2.ebuild 562
+SHA256 041883704ef8b29fd3ea36618dd10135d733d8a2c0c208ab13cc95b3c2cdb57f gnome-backgrounds-2.12.2.ebuild 562
+EBUILD gnome-backgrounds-2.12.3.1.ebuild 561 RMD160 ece727063af0f4a3792a47aaa56639e220321221 SHA1 f6248e3229cb22277e10ce548595404bb539b0bc SHA256 61c97b0f99d42fe22990032f840cf9fc9b8515dbce53215bff67afe1391385d0
 MD5 d96aa96f16f5238e4046dcd84d6145ed gnome-backgrounds-2.12.3.1.ebuild 561
+RMD160 ece727063af0f4a3792a47aaa56639e220321221 gnome-backgrounds-2.12.3.1.ebuild 561
+SHA256 61c97b0f99d42fe22990032f840cf9fc9b8515dbce53215bff67afe1391385d0 gnome-backgrounds-2.12.3.1.ebuild 561
+EBUILD gnome-backgrounds-2.14.0.ebuild 661 RMD160 7526077d14ba49231dd355ef859e99915fa89bf4 SHA1 0d98fc26aaed521b52bd745e6fe7bf08f8921e04 SHA256 0748a1b768d8b18e9be95f0f8b85c6fc683d6d4666eb96dd1e5a82864009a1c4
 MD5 fac5cc53863fc09a031fd3d6de22c86a gnome-backgrounds-2.14.0.ebuild 661
+RMD160 7526077d14ba49231dd355ef859e99915fa89bf4 gnome-backgrounds-2.14.0.ebuild 661
+SHA256 0748a1b768d8b18e9be95f0f8b85c6fc683d6d4666eb96dd1e5a82864009a1c4 gnome-backgrounds-2.14.0.ebuild 661
+EBUILD gnome-backgrounds-2.14.1.ebuild 665 RMD160 4f6cc7fd827131d813cccb02664109694f8824b0 SHA1 733f640d8d02fd1012dfec5369aa2ecd97bc2ed1 SHA256 2c14502181e6a010a8c4ddae630961d8f337c11166595ee1f001a1797b4909fe
 MD5 b278350a97955575ec9f1451029d1905 gnome-backgrounds-2.14.1.ebuild 665
+RMD160 4f6cc7fd827131d813cccb02664109694f8824b0 gnome-backgrounds-2.14.1.ebuild 665
+SHA256 2c14502181e6a010a8c4ddae630961d8f337c11166595ee1f001a1797b4909fe gnome-backgrounds-2.14.1.ebuild 665
+EBUILD gnome-backgrounds-2.14.2.1.ebuild 579 RMD160 98608ca5154d3881c7a22ab2a1c792139e29bd54 SHA1 3350e9d7638a1e399fefbd85ae67e7b3f62b0744 SHA256 f2e0129bf17640af509f04e8bcb3737f69916bfcfcf3e417eac9ee48b1ce93e9
+MD5 df1d61a50a2fde93adac317d42f83cd6 gnome-backgrounds-2.14.2.1.ebuild 579
+RMD160 98608ca5154d3881c7a22ab2a1c792139e29bd54 gnome-backgrounds-2.14.2.1.ebuild 579
+SHA256 f2e0129bf17640af509f04e8bcb3737f69916bfcfcf3e417eac9ee48b1ce93e9 gnome-backgrounds-2.14.2.1.ebuild 579
+MISC ChangeLog 6874 RMD160 2c448cd686a442c6a9e8864c677f0f36b29e4e34 SHA1 1f0aeffe4e75bb101d584cc40f9fadb00691268e SHA256 909976c4fc722327d514fa70e5a18a6e53a6c67021db723ba039d3e3c71e506e
+MD5 3f2052eed3fd782fb19b5bc3b871341c ChangeLog 6874
+RMD160 2c448cd686a442c6a9e8864c677f0f36b29e4e34 ChangeLog 6874
+SHA256 909976c4fc722327d514fa70e5a18a6e53a6c67021db723ba039d3e3c71e506e ChangeLog 6874
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 bf9914d8c2032ae9e2c6d375a2eb71a8 files/digest-gnome-backgrounds-2.10.0 78
+RMD160 6a38ec31a066e85c15c818d15fa7b91cb8432339 files/digest-gnome-backgrounds-2.10.0 78
+SHA256 56447ef2abfc16ff7ee124a7f0f39e2ce9b4543fe23ca3112f8735870b471ee3 files/digest-gnome-backgrounds-2.10.0 78
+MD5 c547e18a1541ee20308a075e7c49b66f files/digest-gnome-backgrounds-2.10.1 78
+RMD160 d8a694f70e3d83329a1f24077c68577066ecebf9 files/digest-gnome-backgrounds-2.10.1 78
+SHA256 719dec0d8a870c339401a1ee76c54d2ff401c4cf31fb15286b8e0e5435788321 files/digest-gnome-backgrounds-2.10.1 78
+MD5 e6b3decb3b0dcc7326beaeb08559538d files/digest-gnome-backgrounds-2.10.2 78
+RMD160 9f538603208e94cad51fd56941e2d15fc18497e7 files/digest-gnome-backgrounds-2.10.2 78
+SHA256 7445f086430ed3e33f148cdf10871d85a03067f655e7803928779a3c7f280818 files/digest-gnome-backgrounds-2.10.2 78
+MD5 923cb2ea690b6972e5ab285f4e3243ea files/digest-gnome-backgrounds-2.12.1 78
+RMD160 cec5fb0c1b8e38ef06146d93a13e76a4c8a76b20 files/digest-gnome-backgrounds-2.12.1 78
+SHA256 0ec6fcc7fbb504d86fe516976461f8ae7bd6f28154c1951aa65f6390d9fca533 files/digest-gnome-backgrounds-2.12.1 78
+MD5 a9bb17fa70486c46fabf5685d6acdc39 files/digest-gnome-backgrounds-2.12.2 280
+RMD160 23d58bfc42beeed5bfe37b34cbcbaa14408d76c2 files/digest-gnome-backgrounds-2.12.2 280
+SHA256 bb20400acc3fb085a5e1a47536fba69e70336e056e45b41d03d95e519f6efff7 files/digest-gnome-backgrounds-2.12.2 280
+MD5 5b9e3c75ced57047a52f9745c766753f files/digest-gnome-backgrounds-2.12.3.1 286
+RMD160 be5359980f54fdcf69887a61bba07aaeb00c41f2 files/digest-gnome-backgrounds-2.12.3.1 286
+SHA256 aecf5cedb31f727dd3d78a78545075b8ef4984c39207366ccb5db710b6f47d28 files/digest-gnome-backgrounds-2.12.3.1 286
+MD5 53d2d224d6d94b4ff0f88a9316beae0d files/digest-gnome-backgrounds-2.14.0 280
+RMD160 e2883b9ec8585b6d97a11cbbc10a59e5a88312c8 files/digest-gnome-backgrounds-2.14.0 280
+SHA256 b30f1cb405da1bb137dbc6073184c3c6af029d39bf2bc1c0e242bfe149be4e69 files/digest-gnome-backgrounds-2.14.0 280
+MD5 28c7938b350c5cd37ce74e3981547799 files/digest-gnome-backgrounds-2.14.1 280
+RMD160 5b4bd84ab9d4bcc21536b5eab5f70d79fb1c3dd1 files/digest-gnome-backgrounds-2.14.1 280
+SHA256 db09a3d4a61f99d342ca36a79771b2411f7789eaadd37559ee294a76014b33ed files/digest-gnome-backgrounds-2.14.1 280
+MD5 4a5cc04d7328a8d1a69a88f4a4534990 files/digest-gnome-backgrounds-2.14.2.1 286
+RMD160 584ea09f8e34140a50fae3a06faacb2188f715cf files/digest-gnome-backgrounds-2.14.2.1 286
+SHA256 bc3fce9a4d3693882e614cc7f23aea6e5233e9e9bedba3bcead97e5db6339d7a files/digest-gnome-backgrounds-2.14.2.1 286
