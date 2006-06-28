@@ -14,7 +14,7 @@ MD5 854e24ef0e50b53915629f226e76b43c files/mod_security.conf 3399
 RMD160 e68dd188b6be79aa225cbb39867bcc3b93dc2c3a files/mod_security.conf 3399
 SHA256 e674c61610ad561ab0cf9200b298c5f7594b1ab684bc322a1708cfb5b80f6d19 files/mod_security.conf 3399
 DIST modsecurity-1.8.7.tar.gz 313004 RMD160 ee5e6566dda8c932e5e01833af290186f22af773 SHA1 59296d4c2776b0beb3ee65e4d5b7dc51f36142a5 SHA256 7314a0c6ebe50d8c71e44fcc520969a60d1d01a3c1a2e0a1d08b2b166eabf8ce
-DIST modsecurity-apache-1.9.1.tar.gz 395659 RMD160 7e3da9ec9a2ccfeec195d7c41328f085c071e56f SHA256 b8ef27d4bdfa652884217592c1c17d31a78a1b97978a9d9e2b7dcdf6e969cd6b
+DIST modsecurity-apache-1.9.1.tar.gz 395659 RMD160 7e3da9ec9a2ccfeec195d7c41328f085c071e56f SHA1 6575846f985aacb8922ded19ba6ffacc4b6886b8 SHA256 b8ef27d4bdfa652884217592c1c17d31a78a1b97978a9d9e2b7dcdf6e969cd6b
 DIST modsecurity-apache_1.9.4.tar.gz 496805 RMD160 2fd5e3f43fa94836a4845f106285bed68c704aef SHA1 8f34540a8dfa8374d9b2446cf9b17c4acc69e59f SHA256 9ca6e614c58783faec9b14f58f569a96de420b25ab23063387a1ab51ce3f5171
 EBUILD mod_security-1.8.7.ebuild 987 RMD160 41d012e4bbc2b005aa3bae84b620a0997fb86db4 SHA1 08485f4da89f081702aeb365729f2d35e3e17858 SHA256 03c3817e976d37e9f383527fefc6a61c7d77ce365bb22c74041418f55ad794e3
 MD5 f52d11d8c3d77f51818250f611b9a775 mod_security-1.8.7.ebuild 987
@@ -36,19 +36,19 @@ MISC metadata.xml 255 RMD160 a80959a97f317179745aa51dc813fc77fc12f431 SHA1 202b1
 MD5 351176c1ea97204ce6b3a7516ee9f889 metadata.xml 255
 RMD160 a80959a97f317179745aa51dc813fc77fc12f431 metadata.xml 255
 SHA256 deef3dd2faff775a34529a8909b6e003cce31ee1a9858ace880da761f463ab65 metadata.xml 255
-MD5 ce455cf63314e1fb9eaee262a9b1d544 files/digest-mod_security-1.8.7 184
-RMD160 7fa051aaf139d13811e1e66ffc87cb94e2375ce2 files/digest-mod_security-1.8.7 184
-SHA256 408be59c0a2332d8e35ac63de82f5acc2dcd854cea9143102dc0784dad82455c files/digest-mod_security-1.8.7 184
-MD5 68994418a7b08b157def23fcdc8ad00b files/digest-mod_security-1.9.1 198
-RMD160 6f3451c5670add3ffdf7faf09ceb6eb6c0fefba4 files/digest-mod_security-1.9.1 198
-SHA256 2cbcba27199e5eeda541bb64394388e741f2651d0f24b3e2315a95e4f9cf7913 files/digest-mod_security-1.9.1 198
+MD5 8c4e1e4e66aea15c00413b25ebfa5743 files/digest-mod_security-1.8.7 253
+RMD160 e47d4f2750e52352444e1bc1a7171fac532b5120 files/digest-mod_security-1.8.7 253
+SHA256 213963e27e0d3834b032c587f0045c3f75670f586d3e5f7bf3cc6bdc40b477a2 files/digest-mod_security-1.8.7 253
+MD5 40c5503db8d7f9714e55ca30a47e798c files/digest-mod_security-1.9.1 274
+RMD160 88dcf1cfdea0d7c0ddeb4b5c64ed1e5b288b6c86 files/digest-mod_security-1.9.1 274
+SHA256 6bbaf5b90a0e4decc7b9d20f1806b86eff1d5c5457639c0e8440d6676359ad53 files/digest-mod_security-1.9.1 274
 MD5 97b7aedea9ae3e7a9f1860e686d24c3d files/digest-mod_security-1.9.4 274
 RMD160 d52e1a24b3277f8016f746bac6a3cdaea63b638a files/digest-mod_security-1.9.4 274
 SHA256 53acccec6f7f67ae628633bd127400295d38e1ce8b0e60173db7a5e6a5a1f022 files/digest-mod_security-1.9.4 274
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEhH04mPFBzbX68WERAp2WAJ4gF7uU3YVYz/Z5uE70P6bPHuqTuQCfRXk4
-o2VmO+L8jCYSpUZRcweEmdU=
-=fXnZ
+iD8DBQFEoeXh/ejvha5XGaMRAiNEAKClx+3dG6qnHKBpU7GQRM1hqRlFQQCg9CBG
+Ur2ME/WKpMIKc5qIueqkNOI=
+=hGx+
 -----END PGP SIGNATURE-----
