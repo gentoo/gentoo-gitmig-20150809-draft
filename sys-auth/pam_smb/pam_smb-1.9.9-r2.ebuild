@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/pam_smb-1.9.9-r2.ebuild,v 1.1 2006/04/27 11:33:46 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/pam_smb-1.9.9-r2.ebuild,v 1.2 2006/06/28 14:58:40 wolf31o2 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://samba/pam_smb/devel/${P}.tar.gz"
 
 DEPEND=">=sys-libs/pam-0.75"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 SLOT="0"
 
