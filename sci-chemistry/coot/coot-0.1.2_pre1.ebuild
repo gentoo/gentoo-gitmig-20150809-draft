@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.1.2_pre1.ebuild,v 1.1 2006/06/16 22:19:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.1.2_pre1.ebuild,v 1.2 2006/06/28 08:24:00 spyderous Exp $
 
 inherit autotools
 
@@ -21,6 +21,7 @@ IUSE=""
 RDEPEND=">=sci-libs/gsl-1.3
 	=dev-libs/glib-1.2*
 	=x11-libs/gtkglarea-1.2*
+	x11-libs/gtkglext
 	virtual/glut
 	virtual/opengl
 	sci-chemistry/ccp4
