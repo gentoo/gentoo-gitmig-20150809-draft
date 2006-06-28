@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.1.ebuild,v 1.6 2006/06/24 14:21:49 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.1.ebuild,v 1.7 2006/06/28 10:31:39 robbat2 Exp $
 
 inherit flag-o-matic eutils toolchain-funcs autotools
 
@@ -11,9 +11,9 @@ SRC_URI="http://www.fftw.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="3.0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
-IUSE="altivec sse sse2"
+IUSE="altivec sse sse2 test"
 
-DEPEND=""
+DEPEND="test? ( dev-lang/perl )"
 
 src_unpack() {
 	unpack ${A}
@@ -87,13 +87,13 @@ src_install () {
 	#all builds are installed in the same place
 	#libs have distinuguished names; include files, docs etc. identical.
 	cd "${S}-single"
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
 	cd "${S}-double"
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
 	cd "${S}-longdouble"
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
 	# Install documentation.
 	cd "${S}-single"
@@ -102,4 +102,19 @@ src_install () {
 
 	cd doc/html
 	dohtml -r .
+}
+
+src_test () {
+	# We want this to be a reasonably quick test, but that is still hard...
+	ewarn "This test series will take 30 minutes on a modern 2.5Ghz machine"
+	# Do not increase the number of threads, it will not help your performance
+	local testbase="perl check.pl --nthreads=1 --estimate"
+	for d in single double longdouble; do
+		cd "${S}-${d}"/tests
+		for p in 0 1 2; do
+			n="${d/longdouble/long double} / ${p}-D"
+			einfo "Testing $n"
+			${testbase} -${p}d || die "Failure: $n"
+		done
+	done
 }
