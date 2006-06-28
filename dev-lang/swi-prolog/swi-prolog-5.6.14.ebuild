@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.14.ebuild,v 1.1 2006/06/14 10:10:24 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.14.ebuild,v 1.2 2006/06/28 23:32:16 yoswink Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://gollem.science.uva.nl/cgi-bin/nph-download/SWI-Prolog/pl-${PV}.t
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~x86"
 IUSE="berkdb doc gmp java minimal odbc readline ssl static tetex threads X"
 
 DEPEND="!dev-lang/swi-prolog-lite
