@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hwdata-gentoo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/ChangeLog,v 1.10 2006/06/09 01:09:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/ChangeLog,v 1.11 2006/06/28 15:21:51 wolf31o2 Exp $
+
+  28 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  hwdata-gentoo-0.3.ebuild:
+  Changed livecd USE flag to binary-drivers USE flag. This will keep us from
+  requiring the binary drivers on the LiveCD unless we expressly request it.
 
   09 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   -files/0.2-fglrx.patch, -files/0.2-nvidia.patch,
