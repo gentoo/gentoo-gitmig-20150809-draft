@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.44 2006/06/10 19:47:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.45 2006/06/28 15:15:47 solar Exp $
+
+*kbd-1.12-r7 (28 Jun 2006)
+
+  28 Jun 2006; <solar@gentoo.org> +files/kbd-1.12-xcompile.patch,
+  +kbd-1.12-r7.ebuild:
+  - fix  cross-compile failing for powerpc targets bug #133856
 
   10 Jun 2006; Mike Frysinger <vapier@gentoo.org>
   +files/kbd-1.12-configure-LANG.patch, kbd-1.12-r6.ebuild:
