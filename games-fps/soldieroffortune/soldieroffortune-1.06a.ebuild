@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.16 2006/05/15 19:59:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.17 2006/06/28 14:31:05 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -48,10 +48,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack_makeself
-	dodir ${dir}
-	tar xzf ${CDROM_ROOT}/paks.tar.gz -C ${Ddir} \
+	tar xzf ${CDROM_ROOT}/paks.tar.gz -C ${T} \
 		|| die "uncompressing data"
-	tar xzf ${CDROM_ROOT}/binaries.tar.gz -C ${Ddir} \
+	tar xzf ${CDROM_ROOT}/binaries.tar.gz -C ${T} \
 		|| die "uncompressing binaries"
 }
 
@@ -59,9 +58,10 @@ src_install() {
 	dodir ${dir}
 	einfo "Copying files... this may take a while..."
 	exeinto ${dir}
-	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/sof
+	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/sof || die "doexe"
 	insinto ${dir}
-	doins ${CDROM_ROOT}/{README,kver.pub,sof.xpm}
+	doins -r ${T}/* || die "doins data"
+	doins ${CDROM_ROOT}/{README,kver.pub,sof.xpm} || die "doins"
 
 	cd ${S}
 	loki_patch --verify patch.dat
