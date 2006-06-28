@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20060409.ebuild,v 1.2 2006/06/27 09:51:45 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20060409.ebuild,v 1.3 2006/06/28 08:58:14 uberlord Exp $
 
 inherit eutils linux-info
 
@@ -37,6 +37,8 @@ src_install() {
 	dodoc *.patch "${FILESDIR}"/hdaps-Z60m.patch
 }
 
+# Yes, this sucks as the source location may change, kernel sources may not be
+# installed, but we try our best anyway
 kernel_patched() {
 	get_version
 
@@ -56,7 +58,12 @@ pkg_config() {
 
 	# We need to find our FILESDIR as it's now lost
 	if [[ ! -e ${docdir}/${p} ]] ; then
-		ewarn "We don't have a patch for kernel ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH} yet"
+		eerror "We don't have a patch for kernel ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH} yet"
+		return 1
+	fi
+
+	if [[ ! -d ${KERNEL_DIR} ]] ; then
+		eerror "Kernel sources not found!"
 		return 1
 	fi
 
@@ -74,17 +81,8 @@ pkg_config() {
 }
 
 pkg_postinst(){
-	einfo "If you use syslog-ng you might want to add the following "
-	einfo "to /etc/syslog-ng/syslog-ng.conf to prevent your logfile"
-	einfo "getting flooded with the output of hdapsd:"
-	einfo "filter f_not_hdapsd { not match(queue_protect_store)"
-	einfo "                      and not match(idedisk_issue_protect_fn)"
-	einfo "                      and not match (ide_protect_queue);"
-	einfo "};"
-	einfo "log { source(src); filter(f_not_hdapsd); destination(messages); };"
-	einfo "log { source(src); destination(console_all); };"
+	[[ -n $(ls "${ROOT}"/sys/block/*/queue/protect 2>/dev/null) ]] && return 0
 
-	echo
 	if ! kernel_patched ; then
 		ewarn "Your kernel has NOT been patched for blk_freeze"
 		einfo "The ebuild can attempt to patch your kernel like so"

@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/hdapsd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.2 2006/06/27 09:51:45 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.3 2006/06/28 08:58:14 uberlord Exp $
+
+  28 Jun 2006; Roy Marples <uberlord@gentoo.org> hdapsd-20060409.ebuild:
+  Remove syslog stuff as it was invalid for scsi/sata systems.
+  Detect patched kernel via /sys in pkg_postinst as kernel sources may not be
+  installed and the warning may be in error.
 
   27 Jun 2006; Roy Marples <uberlord@gentoo.org> +files/hdaps-Z60m.patch,
   hdapsd-20060409.ebuild:
