@@ -1,0 +1,91 @@
+# Fix 64 bit machines, Gentoo bug #133905
+
+--- dhcp-3.0.4/includes/dhcpd.h
++++ dhcp-3.0.4/includes/dhcpd.h
+@@ -339,7 +339,7 @@
+ 	struct option_state *options;
+ 	struct data_string parameter_request_list;
+ 	int max_message_size;
+-	TIME expiry, renewal, rebind;
++	unsigned char expiry[4], renewal[4], rebind[4];
+ 	struct data_string filename, server_name;
+ 	int got_requested_address;
+ 	int got_server_identifier;
+--- dhcp-3.0.4/server/dhcp.c
++++ dhcp-3.0.4/server/dhcp.c
+@@ -34,7 +34,7 @@
+ 
+ #ifndef lint
+ static char copyright[] =
+-"$Id: dhcp-3.0.4-64bit.patch,v 1.1 2006/06/28 09:50:14 uberlord Exp $ Copyright (c) 2004-2006 Internet Systems Consortium.  All rights reserved.\n";
++"$Id: dhcp-3.0.4-64bit.patch,v 1.1 2006/06/28 09:50:14 uberlord Exp $ Copyright (c) 2004-2006 Internet Systems Consortium.  All rights reserved.\n";
+ #endif /* not lint */
+ 
+ #include "dhcpd.h"
+@@ -2442,18 +2442,15 @@
+ 		offered_lease_time =
+ 			state -> offered_expiry - cur_time;
+ 
+-		putULong ((unsigned char *)&state -> expiry,
+-			  (unsigned long)offered_lease_time);
++		putULong(state->expiry, (u_int32_t)offered_lease_time);
+ 		i = DHO_DHCP_LEASE_TIME;
+ 		if (lookup_option (&dhcp_universe, state -> options, i))
+ 			log_error ("dhcp-lease-time option for %s overridden.",
+ 			      inet_ntoa (state -> ciaddr));
+ 		oc = (struct option_cache *)0;
+ 		if (option_cache_allocate (&oc, MDL)) {
+-			if (make_const_data (&oc -> expression,
+-					     (unsigned char *)&state -> expiry,
+-					     sizeof state -> expiry,
+-					     0, 0, MDL)) {
++			if (make_const_data(&oc->expression, state->expiry,
++					    4, 0, 0, MDL)) {
+ 				oc -> option = dhcp_universe.options [i];
+ 				save_option (&dhcp_universe,
+ 					     state -> options, oc);
+@@ -2463,19 +2460,15 @@
+ 
+ 		/* Renewal time is lease time * 0.5. */
+ 		offered_lease_time /= 2;
+-		putULong ((unsigned char *)&state -> renewal,
+-			  (unsigned long)offered_lease_time);
++		putULong(state->renewal, (u_int32_t)offered_lease_time);
+ 		i = DHO_DHCP_RENEWAL_TIME;
+ 		if (lookup_option (&dhcp_universe, state -> options, i))
+ 			log_error ("overriding dhcp-renewal-time for %s.",
+ 				   inet_ntoa (state -> ciaddr));
+ 		oc = (struct option_cache *)0;
+ 		if (option_cache_allocate (&oc, MDL)) {
+-			if (make_const_data (&oc -> expression,
+-					     (unsigned char *)
+-					     &state -> renewal,
+-					     sizeof state -> renewal,
+-					     0, 0, MDL)) {
++			if (make_const_data(&oc->expression, state->renewal,
++					    4, 0, 0, MDL)) {
+ 				oc -> option = dhcp_universe.options [i];
+ 				save_option (&dhcp_universe,
+ 					     state -> options, oc);
+@@ -2486,18 +2479,15 @@
+ 		/* Rebinding time is lease time * 0.875. */
+ 		offered_lease_time += (offered_lease_time / 2
+ 				       + offered_lease_time / 4);
+-		putULong ((unsigned char *)&state -> rebind,
+-			  (unsigned)offered_lease_time);
++		putULong(state->rebind, (u_int32_t)offered_lease_time);
+ 		i = DHO_DHCP_REBINDING_TIME;
+ 		if (lookup_option (&dhcp_universe, state -> options, i))
+ 			log_error ("overriding dhcp-rebinding-time for %s.",
+ 			      inet_ntoa (state -> ciaddr));
+ 		oc = (struct option_cache *)0;
+ 		if (option_cache_allocate (&oc, MDL)) {
+-			if (make_const_data (&oc -> expression,
+-					     (unsigned char *)&state -> rebind,
+-					     sizeof state -> rebind,
+-					     0, 0, MDL)) {
++			if (make_const_data(&oc->expression, state->rebind,
++					    4, 0, 0, MDL)) {
+ 				oc -> option = dhcp_universe.options [i];
+ 				save_option (&dhcp_universe,
+ 					     state -> options, oc);
