@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.21 2006/06/28 02:16:27 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.22 2006/06/28 09:36:30 metalgod Exp $
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Luis Medinas	<metalgod@gentoo.org>
@@ -42,7 +42,7 @@ S="${WORKDIR}/xmms-${PV}"
 RDEPEND="${RDEPEND+${RDEPEND}}${RDEPEND-${DEPEND}}"
 DEPEND="${DEPEND}
 	=sys-devel/automake-1.7*
-	>=sys-devel/autoconf-2.5*
+	>=sys-devel/autoconf-2.59
 	sys-devel/libtool"
 
 xmms-plugin_src_unpack() {
