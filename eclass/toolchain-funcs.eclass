@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.58 2006/04/02 10:10:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.59 2006/06/28 16:19:46 kanaka Exp $
 #
 # Author: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -41,12 +41,18 @@ tc-getCPP() { tc-getPROG CPP cpp "$@"; }
 tc-getCXX() { tc-getPROG CXX g++ "$@"; }
 # Returns the name of the linker
 tc-getLD() { tc-getPROG LD ld "$@"; }
+# Returns the name of the strip prog
+tc-getSTRIP() { tc-getPROG STRIP strip "$@"; }
 # Returns the name of the symbol/object thingy
 tc-getNM() { tc-getPROG NM nm "$@"; }
 # Returns the name of the archiver indexer
 tc-getRANLIB() { tc-getPROG RANLIB ranlib "$@"; }
-# Returns the name of the fortran compiler
+# Returns the name of the fortran 77 compiler
 tc-getF77() { tc-getPROG F77 f77 "$@"; }
+# Returns the name of the fortran 90 compiler
+tc-getF90() { tc-getPROG F90 gfortran "$@"; }
+# Returns the name of the fortran compiler
+tc-getFORTRAN() { tc-getPROG FORTRAN gfortran "$@"; }
 # Returns the name of the java compiler
 tc-getGCJ() { tc-getPROG GCJ gcj "$@"; }
 
