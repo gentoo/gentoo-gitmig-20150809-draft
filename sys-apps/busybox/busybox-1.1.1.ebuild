@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.1.1.ebuild,v 1.4 2006/04/10 03:18:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.1.1.ebuild,v 1.5 2006/06/28 06:52:04 corsair Exp $
 
 inherit eutils
 
@@ -127,6 +127,7 @@ src_unpack() {
 
 src_compile() {
 	busybox_set_env
+	use ppc64 && CFLAGS="${CFLAGS} -mminimal-toc"
 	emake CROSS="${CROSS}" busybox || die "build failed"
 	if ! use static ; then
 		mv busybox_unstripped{,.bak}
