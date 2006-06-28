@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.296 2006/06/25 22:13:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.297 2006/06/28 03:51:27 nerdboy Exp $
 
 # Keep them sorted
 
@@ -155,6 +155,7 @@ jabber - Enable jabber IM protocol support
 jack - Adds support for the JACK Audio Connection Kit
 java - Adds support for Java
 javascript - Enables javascript support
+jbig - enables jbig-kit support for tiff, Hylafax, ImageMagick, etc
 jikes - Compile Java source code with jikes (faster)
 joystick - Add support for joysticks in all packages
 jpeg - Adds JPEG image support
