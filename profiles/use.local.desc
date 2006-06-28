@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1980 2006/06/28 15:19:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1981 2006/06/28 18:16:08 mattepiu Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -833,6 +833,7 @@ media-tv/xdtv:aqua_theme - Enable graphic theme Aqua-style
 media-tv/xdtv:carbone_theme - Adds the Carbone pixmaps theme for the GUI
 media-tv/xdtv:x264 - Enables h264 encoding using x264 (FFmpeg code)
 media-tv/xdtv:zvbi - Enable VBI Decoding Library for Zapping
+media-tv/xmltv:be - Belgium and Luxemburg tv listing grabber
 media-tv/xmltv:br - Brazil tv listing grabber
 media-tv/xmltv:brnet - Brazil cable tv listing grabber
 media-tv/xmltv:ch - Switzerland tv listing grabber
@@ -857,8 +858,7 @@ media-tv/xmltv:re - Reunion Island (France) tv listing grabber
 media-tv/xmltv:se_swedb - Sweden tv listing grabber
 media-tv/xmltv:tv_check - enable GUI checking
 media-tv/xmltv:tv_pick_cgi - enable CGI support
-media-tv/xmltv:uk_be - Britain tv listing grabber
-media-tv/xmltv:uk_bleb - Britain alternative tv listing grabber
+media-tv/xmltv:uk_bleb - Britain tv listing grabber
 media-tv/xmltv:uk_rt - Britain alternative tv listing grabber
 media-tv/xmltv:za - South Africa tv listing grabber
 media-tv/zapping:vdr - Enable Real Time Encoding support (librte)
