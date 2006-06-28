@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-0.99_rc5.ebuild,v 1.1 2006/06/27 17:19:06 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-0.99_rc5.ebuild,v 1.2 2006/06/28 12:30:17 zzam Exp $
 
-inherit vdr-plugin eutils
+inherit vdr-plugin eutils multilib
 
 MY_PV=${PV/_/}
 MY_P=${PN}-${MY_PV}
@@ -67,9 +67,8 @@ src_install() {
 	dobin vdr-fbfe vdr-sxfe
 
 	insinto ${VDR_PLUGIN_DIR}
-	doins ${WORKDIR}/lib/xineplug_inp_xvdr.so
 	doins *.so.${MY_PV}
 
-	insinto /usr/lib/xine/plugins/${XINE_LIB_VERSION}
+	insinto /usr/$(get_libdir)/xine/plugins/${XINE_LIB_VERSION}
 	doins xineplug_inp_xvdr.so
 }
