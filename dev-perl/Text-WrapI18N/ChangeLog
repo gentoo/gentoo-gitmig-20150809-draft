@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-WrapI18N
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WrapI18N/ChangeLog,v 1.4 2006/03/30 23:31:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WrapI18N/ChangeLog,v 1.5 2006/06/28 17:15:56 mcummings Exp $
+
+  28 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Text-WrapI18N-0.06.ebuild:
+  Keywording ~amd64
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Text-WrapI18N-0.06.ebuild:
   Mark 0.06 ~ia64
