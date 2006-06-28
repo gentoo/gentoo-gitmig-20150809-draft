@@ -1,9 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST install-crossover-standard-3.0.1.sh 11818406
 DIST install-crossover-standard-4.0.sh 12792374
 DIST install-crossover-standard-4.1.sh 12794303
 DIST install-crossover-standard-4.2.sh 12876096
 DIST install-crossover-standard-5.0.0.sh 15936867
 DIST install-crossover-standard-5.0.1.sh 16160351
+DIST install-crossover-standard-5.0.3.sh 17275401 RMD160 db2f650968f486f32558b0316ff5b62418b3a37c SHA256 88421ddb62ad00f6b8bb82552af94f236dcbcaf1a86fd69993e4761c3e561bd9
 EBUILD crossover-office-bin-3.0.1.ebuild 1174 RMD160 118a6c2a429be22ea2812f67f88c022dc7bfb1ec SHA1 4afafd2076eb5ab6d338cb78124c8c1618f639ce SHA256 3084b0a96b20997bc4604d7b936db0949c32235e6e7145429aef4476841fe103
 MD5 522c90b86d563eda2241dad0935fae2a crossover-office-bin-3.0.1.ebuild 1174
 RMD160 118a6c2a429be22ea2812f67f88c022dc7bfb1ec crossover-office-bin-3.0.1.ebuild 1174
@@ -28,10 +32,14 @@ EBUILD crossover-office-bin-5.0.1.ebuild 1229 RMD160 2da8f42ab17c5810b43334af2aa
 MD5 3905a2018024bcf875793d99f6c1eaa3 crossover-office-bin-5.0.1.ebuild 1229
 RMD160 2da8f42ab17c5810b43334af2aa95d518db8bb97 crossover-office-bin-5.0.1.ebuild 1229
 SHA256 b6846f1bfd8bfb29fa781607ace91f92abb97b67f7ee39bd2c77cee5d850c58a crossover-office-bin-5.0.1.ebuild 1229
-MISC ChangeLog 1522 RMD160 0239548b258a1d29ed92a1ff5be8c2d107c9793a SHA1 35646c73db349f9eecfd3ea5daf4559bc1ee95b3 SHA256 2c387527ad12ed95f78241e80c04646c8bc446c1ff695645adc9cb794c98bbc4
-MD5 56e97f6637fbc1fb714d8cf262881cb5 ChangeLog 1522
-RMD160 0239548b258a1d29ed92a1ff5be8c2d107c9793a ChangeLog 1522
-SHA256 2c387527ad12ed95f78241e80c04646c8bc446c1ff695645adc9cb794c98bbc4 ChangeLog 1522
+EBUILD crossover-office-bin-5.0.3.ebuild 1229 RMD160 9697a8705fbc03bc31a6032773126dd7a32da0d5 SHA1 16e5327df685f308c651398e4bd39d8ecc7b45cf SHA256 736326d7dd793344fce21f920e2968da359ff3e696598482337a4d5f69e3e140
+MD5 e02d13941301ab6cb633dd3574e20700 crossover-office-bin-5.0.3.ebuild 1229
+RMD160 9697a8705fbc03bc31a6032773126dd7a32da0d5 crossover-office-bin-5.0.3.ebuild 1229
+SHA256 736326d7dd793344fce21f920e2968da359ff3e696598482337a4d5f69e3e140 crossover-office-bin-5.0.3.ebuild 1229
+MISC ChangeLog 1697 RMD160 3e5727c4dda3efb39be77c1139e1446a15bf6836 SHA1 d12fa095f59c387a41d30c1652ce047cd6396280 SHA256 d83e851bd06684d537c44be5505875382fa3420ae69f3fe89a9c0df69bb38ed2
+MD5 d348f5a65950338fd3ef3211d04b0441 ChangeLog 1697
+RMD160 3e5727c4dda3efb39be77c1139e1446a15bf6836 ChangeLog 1697
+SHA256 d83e851bd06684d537c44be5505875382fa3420ae69f3fe89a9c0df69bb38ed2 ChangeLog 1697
 MISC metadata.xml 157 RMD160 b892a0c64131e9d8668b2aac5920c256bf64b0b1 SHA1 64f437370b4a6e795b5eb37d4f5a4c45d9159551 SHA256 4bc5b7df954a173f1b0a30195797200b7a638f25f3442f2a97ce9a6f0cd7ccdc
 MD5 6e817c3f6b82338028366853fddccf5f metadata.xml 157
 RMD160 b892a0c64131e9d8668b2aac5920c256bf64b0b1 metadata.xml 157
@@ -54,3 +62,13 @@ SHA256 49d22edd344df51f3863fd2512971c4c1cf781435f039d4dbc4e23ba475601b4 files/di
 MD5 b18d5fe39eb10c26bd181e2b184ee114 files/digest-crossover-office-bin-5.0.1 82
 RMD160 4d34825e2950c885b467a4f8115b54b89ff34e03 files/digest-crossover-office-bin-5.0.1 82
 SHA256 3db413b39692412f00a7a82ce362d17632050afd25b7fd06d265237027e1ce3b files/digest-crossover-office-bin-5.0.1 82
+MD5 30f15782200eba9a81752a826c4708ea files/digest-crossover-office-bin-5.0.3 292
+RMD160 4468b85d26da51dd600ffe873c33ac3d3639400e files/digest-crossover-office-bin-5.0.3 292
+SHA256 46ffd39cf1c9c0fcc07a1cda27b41c1864fb91f06e1c83224e39674ba1f73a82 files/digest-crossover-office-bin-5.0.3 292
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEofiAamhnQswr0vIRAvKqAKCg3BIcwcxPEEz3M7OI48/dcQGEEgCgvKnt
+MxRrwNmjcz3ouC8asfiAsgE=
+=91DX
+-----END PGP SIGNATURE-----
