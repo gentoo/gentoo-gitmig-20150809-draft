@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/lazylist/lazylist-1.0a.ebuild,v 1.9 2006/05/21 17:32:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/lazylist/lazylist-1.0a.ebuild,v 1.10 2006/06/28 11:03:55 blubb Exp $
 
 inherit latex-package
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ctan.org/tex-archive/macros/latex/contrib/lazylist/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="LPPL-1.2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="amd64 ~ppc ppc64 sparc x86"
 IUSE=""
 DEPEND=""
 #RDEPEND=""

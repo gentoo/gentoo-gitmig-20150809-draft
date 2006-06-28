@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/polytable
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/polytable/ChangeLog,v 1.10 2006/05/21 17:32:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/polytable/ChangeLog,v 1.11 2006/06/28 11:05:27 blubb Exp $
+
+  28 Jun 2006; Simon Stelling <blubb@gentoo.org> polytable-0.7.2.ebuild:
+  stable on amd64
 
   21 May 2006; Markus Rothe <corsair@gentoo.org> polytable-0.7.2.ebuild:
   Stable on ppc64
