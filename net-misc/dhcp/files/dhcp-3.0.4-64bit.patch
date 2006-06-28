@@ -13,15 +13,6 @@
  	int got_server_identifier;
 --- dhcp-3.0.4/server/dhcp.c
 +++ dhcp-3.0.4/server/dhcp.c
-@@ -34,7 +34,7 @@
- 
- #ifndef lint
- static char copyright[] =
--"$Id: dhcp-3.0.4-64bit.patch,v 1.1 2006/06/28 09:50:14 uberlord Exp $ Copyright (c) 2004-2006 Internet Systems Consortium.  All rights reserved.\n";
-+"$Id: dhcp-3.0.4-64bit.patch,v 1.1 2006/06/28 09:50:14 uberlord Exp $ Copyright (c) 2004-2006 Internet Systems Consortium.  All rights reserved.\n";
- #endif /* not lint */
- 
- #include "dhcpd.h"
 @@ -2442,18 +2442,15 @@
  		offered_lease_time =
  			state -> offered_expiry - cur_time;

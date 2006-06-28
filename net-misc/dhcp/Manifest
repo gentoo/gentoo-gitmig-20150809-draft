@@ -58,10 +58,10 @@ AUX dhcp-3.0.3-x-option.patch 6478 RMD160 a0fa5b3c7caf2d303a76c3d6fc135783cfa2bb
 MD5 1145d8fd3020b1997955cd84b9730702 files/dhcp-3.0.3-x-option.patch 6478
 RMD160 a0fa5b3c7caf2d303a76c3d6fc135783cfa2bbc6 files/dhcp-3.0.3-x-option.patch 6478
 SHA256 6628629a95ee7e711f9dbce6b7d527b15f98eaf7592a1d0855d7bf65961bc3f7 files/dhcp-3.0.3-x-option.patch 6478
-AUX dhcp-3.0.4-64bit.patch 3516 RMD160 66c2c6bfb73e8704c05716f2c2b48be7df2ac295 SHA1 177ae97949ac1ccd51ec8fb8b66accd2e872a2d3 SHA256 0a657ad5870fa4392891bcdcba9a1d08974ef68a6d4b08556fe359e8ec8f942a
-MD5 59ce7f8438e1c8bec5b70b3776a97690 files/dhcp-3.0.4-64bit.patch 3516
-RMD160 66c2c6bfb73e8704c05716f2c2b48be7df2ac295 files/dhcp-3.0.4-64bit.patch 3516
-SHA256 0a657ad5870fa4392891bcdcba9a1d08974ef68a6d4b08556fe359e8ec8f942a files/dhcp-3.0.4-64bit.patch 3516
+AUX dhcp-3.0.4-64bit.patch 3110 RMD160 a98c38d7346e93e0c18973e0ee48cdc24c1ae6f7 SHA1 ebffb19e02a89f773a750081061f44ce4da3382b SHA256 f1e2ccc54600aa9e09aab308863234016a0fae81502f08a1723341d3cac608cf
+MD5 902137e63d140df01a8377f02f18401f files/dhcp-3.0.4-64bit.patch 3110
+RMD160 a98c38d7346e93e0c18973e0ee48cdc24c1ae6f7 files/dhcp-3.0.4-64bit.patch 3110
+SHA256 f1e2ccc54600aa9e09aab308863234016a0fae81502f08a1723341d3cac608cf files/dhcp-3.0.4-64bit.patch 3110
 AUX dhcp-3.0.4-dhclient-stdin-conf.patch 2176 RMD160 fae08899f6b57da3ec7ab0068e288bbdf2fbf2ae SHA1 c10c35dcf4a94f45f4bc98147a70e9dcf3f01dd5 SHA256 80141fe71e52774f1c7b1a02f2cbd49bc646f19753ceefc1c3605104df0cae5f
 MD5 f47ef574359340021a78f5c2f67e4954 files/dhcp-3.0.4-dhclient-stdin-conf.patch 2176
 RMD160 fae08899f6b57da3ec7ab0068e288bbdf2fbf2ae files/dhcp-3.0.4-dhclient-stdin-conf.patch 2176
