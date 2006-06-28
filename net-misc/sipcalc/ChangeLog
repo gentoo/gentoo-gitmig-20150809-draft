@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sipcalc
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sipcalc/ChangeLog,v 1.5 2005/10/03 11:45:36 ticho Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sipcalc/ChangeLog,v 1.6 2006/06/28 18:22:14 gustavoz Exp $
+
+  28 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> sipcalc-1.1.2.ebuild:
+  Stable on sparc
 
   03 Oct 2005; Andrej Kacian <ticho@gentoo.org> sipcalc-1.1.2.ebuild:
   Stable on amd64, do not install generic INSTALL document.
