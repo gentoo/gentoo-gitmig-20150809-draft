@@ -1,7 +1,0 @@
-MD5 8685c5bfdc6187df4b27603b6004de74 ChangeLog 942
-MD5 3ff31b5479b2a0244f5711fff3155aed metadata.xml 221
-MD5 25e4a50aacd5471529aae921a510d9dd netscape-7.2.ebuild 2634
-MD5 8aab3ccd56477ea2b79713285b08830a netscape-7.2-r1.ebuild 2698
-MD5 1356e62f21a99bbf8c79bedc63e14299 files/digest-netscape-7.2 84
-MD5 71c745b03c433608bca1a64797c1adba files/netscape-7.2-gentoo.diff 2252
-MD5 1356e62f21a99bbf8c79bedc63e14299 files/digest-netscape-7.2-r1 84
