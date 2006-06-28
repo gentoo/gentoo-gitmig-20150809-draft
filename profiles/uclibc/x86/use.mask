@@ -1,5 +1,4 @@
 -mmx
--mmx2
 -mmxext
 -sse
 -sse2
