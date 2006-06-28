@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/netkit-rsh
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.27 2005/12/25 15:18:13 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.28 2006/06/28 17:28:03 kanaka Exp $
+
+  28 Jun 2006; Joel Martin <kanaka@gentoo.org> netkit-rsh-0.17-r6.ebuild,
+  netkit-rsh-0.17-r7.ebuild:
+  Allow cross-compiling by sed-removing runtime tests from lame non-autoconf
+  configure script.
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/netkit-rsh-0.16-rlogin-rsh.patch,

@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r7.ebuild,v 1.3 2005/12/25 15:18:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r7.ebuild,v 1.4 2006/06/28 17:28:03 kanaka Exp $
 
-inherit eutils pam flag-o-matic
+inherit eutils pam flag-o-matic toolchain-funcs
 
 DESCRIPTION="Netkit's Remote Shell Suite: rexec{,d} rlogin{,d} rsh{,d}"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
@@ -33,12 +33,17 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use pam || myconf="--without-pam"
+	if tc-is-cross-compiler; then
+		tc-export CC
+		# Can't do runtime tests when cross-compiling
+		sed -i -e "s|./__conftest|: ./__conftest|" configure
+	fi
 	./configure ${myconf} || die
 
 	sed -i \
 		-e "s:-pipe -O2:${CFLAGS}:" \
 		-e "s:-Wpointer-arith::" \
-		MCONFIG
+		MCONFIG || die "could not sed MCONFIG"
 	make || die
 }
 
