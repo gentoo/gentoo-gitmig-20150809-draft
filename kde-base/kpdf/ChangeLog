@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.105 2006/06/27 20:54:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.106 2006/06/28 10:41:11 flameeyes Exp $
+
+  28 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> kpdf-3.5.2.ebuild,
+  kpdf-3.5.3.ebuild:
+  Check only for qt3, as qt is no more pertinent.
 
   27 Jun 2006; Stefan Schweizer <genstef@gentoo.org> kpdf-3.4.3-r4.ebuild,
   kpdf-3.5.2.ebuild, kpdf-3.5.3.ebuild:

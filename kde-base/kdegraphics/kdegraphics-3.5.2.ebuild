@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.2.ebuild,v 1.14 2006/06/27 21:04:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.2.ebuild,v 1.15 2006/06/28 10:45:53 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -29,9 +29,9 @@ DEPEND="~kde-base/kdebase-${PV}
 RDEPEND="${DEPEND}
 	tetex? (
 	|| ( >=app-text/tetex-2
-	     app-text/ptex
-	     app-text/cstetex
-	     app-text/dvipdfm ) )"
+		 app-text/ptex
+		 app-text/cstetex
+		 app-text/dvipdfm ) )"
 
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
@@ -50,18 +50,16 @@ pkg_setup() {
 			die "Please reemerge ${ghostscript} with USE=\"X\"."
 		fi
 	done
-	# check for qt still until it had a revision bump in both ~arch and stable.
-	if use pdf && ! built_with_use app-text/poppler-bindings qt && \
-		! built_with_use app-text/poppler-bindings qt3; then
-		eerror "This package requires app-text/poppler-bindings compiled with Qt support."
-		eerror "Please reemerge app-text/poppler-bindings with USE=\"qt\"."
-		die "Please reemerge app-text/poppler-bindings with USE=\"qt\"."
+	if use pdf && ! built_with_use app-text/poppler-bindings qt3; then
+		eerror "This package requires app-text/poppler-bindings compiled with Qt 3.x support."
+		eerror "Please reemerge app-text/poppler-bindings with USE=\"qt3\"."
+		die "Please reemerge app-text/poppler-bindings with USE=\"qt3\"."
 	fi
 }
 
 src_compile() {
 	local myconf="$(use_with openexr) $(use_with pdf poppler)
-	              $(use_with gphoto2 kamera)"
+				  $(use_with gphoto2 kamera)"
 
 	use imlib || export DO_NOT_COMPILE="${DO_NOT_COMPILE} kuickshow"
 	use scanner || export DO_NOT_COMPILE="${DO_NOT_COMPILE} kooka libkscan"
