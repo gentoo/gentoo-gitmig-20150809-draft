@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.108 2006/06/20 06:22:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.109 2006/06/28 13:27:41 flameeyes Exp $
+
+*pam-0.99.5.0 (28 Jun 2006)
+
+  28 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/Linux-PAM-0.99.3.0-prelude.patch, -pam-0.99.4.0.ebuild,
+  +pam-0.99.5.0.ebuild:
+  Bump to latest version, prelude is now fixed upstream.
 
   20 Jun 2006; Stefan Schweizer <genstef@gentoo.org> pam-0.99.4.0.ebuild:
   Add ~x86
