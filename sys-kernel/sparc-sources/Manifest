@@ -1,20 +1,51 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 77ef92c19aed90a98150b28403146e7a ChangeLog 16947
-MD5 f473bbbb717ca6c5f07465e3d83df2ae files/digest-sparc-sources-2.4.32-r2 143
-MD5 4500e92fdfd8cbcf0d735fcc94300254 files/digest-sparc-sources-2.4.32-r3 143
-MD5 c0d2d8ed6a9d3d0131602b04c9ffac15 files/digest-sparc-sources-2.4.32-r4 143
-MD5 0e723d7d36c673538b18ff605801698a files/digest-sparc-sources-2.4.32-r5 143
-MD5 6706a601c155869440dcb544e3759a04 metadata.xml 381
+DIST linux-2.4.32.tar.bz2 31132159
+DIST patches-2.4.32-sparc-r2.tar.bz2 183974
+DIST patches-2.4.32-sparc-r3.tar.bz2 194498
+DIST patches-2.4.32-sparc-r4.tar.bz2 200234
+DIST patches-2.4.32-sparc-r5.tar.bz2 202863
+EBUILD sparc-sources-2.4.32-r2.ebuild 1201 RMD160 554d435b276ae8aa8ffec361bd3b29b2847a1f0f SHA1 9c4868668598434b28d5df6682fa7e362922fb15 SHA256 51703a6bcd4668c966bd73a72eb8eb2d1c5768732b8305d2250ae10b41747407
 MD5 4061b259f49dd15e31de63261657e92b sparc-sources-2.4.32-r2.ebuild 1201
+RMD160 554d435b276ae8aa8ffec361bd3b29b2847a1f0f sparc-sources-2.4.32-r2.ebuild 1201
+SHA256 51703a6bcd4668c966bd73a72eb8eb2d1c5768732b8305d2250ae10b41747407 sparc-sources-2.4.32-r2.ebuild 1201
+EBUILD sparc-sources-2.4.32-r3.ebuild 1202 RMD160 4e991420b3d03518baa94376358af858c7034cd1 SHA1 1dfa1b1a2f7144d72d6fda86df7ba2fe9b1355ad SHA256 dbf1d6b864cbba931dc0db1f26d44d694fff8cdf2218f30a493d69c0e39be556
 MD5 1421ab83858a3113c0271867b298c70f sparc-sources-2.4.32-r3.ebuild 1202
+RMD160 4e991420b3d03518baa94376358af858c7034cd1 sparc-sources-2.4.32-r3.ebuild 1202
+SHA256 dbf1d6b864cbba931dc0db1f26d44d694fff8cdf2218f30a493d69c0e39be556 sparc-sources-2.4.32-r3.ebuild 1202
+EBUILD sparc-sources-2.4.32-r4.ebuild 1201 RMD160 237cdbd99a5c587c6e0157d3038c471d4ec30d76 SHA1 560cc19bc30179f6b66f4a9eb161a256ebb7465a SHA256 2cd4dbd2f9964232336d2a1fcbafd9b97f664220e338d4bf1f5406faf62f9b68
 MD5 b8150aa6ac28de38446625c3d5a02e01 sparc-sources-2.4.32-r4.ebuild 1201
-MD5 6ab4d50138912dafe6b619d77cdf51bd sparc-sources-2.4.32-r5.ebuild 1202
+RMD160 237cdbd99a5c587c6e0157d3038c471d4ec30d76 sparc-sources-2.4.32-r4.ebuild 1201
+SHA256 2cd4dbd2f9964232336d2a1fcbafd9b97f664220e338d4bf1f5406faf62f9b68 sparc-sources-2.4.32-r4.ebuild 1201
+EBUILD sparc-sources-2.4.32-r5.ebuild 1201 RMD160 deb98cbe3eb5d5b7f9266500548cabfaf60bd27f SHA1 f5d5e0c478e0bb5e2f44e45000a5425efcabbba9 SHA256 62f3ea27ae19b1dd28a69a7dc847a215e897d5b64b1cbebbefef05291a674fe2
+MD5 be1c83feea97fd5865a859589dc98552 sparc-sources-2.4.32-r5.ebuild 1201
+RMD160 deb98cbe3eb5d5b7f9266500548cabfaf60bd27f sparc-sources-2.4.32-r5.ebuild 1201
+SHA256 62f3ea27ae19b1dd28a69a7dc847a215e897d5b64b1cbebbefef05291a674fe2 sparc-sources-2.4.32-r5.ebuild 1201
+MISC ChangeLog 17055 RMD160 22a0099120a6e5c1610c6122f741554c60ab7bcc SHA1 147eec956678583898022d73c1e45d58e180fa13 SHA256 309e11fa15b5d988da8141cbab3cbee6359fb64105b85e0e2065315b26ed6f48
+MD5 122d13eb3d19bebb2345030e98692580 ChangeLog 17055
+RMD160 22a0099120a6e5c1610c6122f741554c60ab7bcc ChangeLog 17055
+SHA256 309e11fa15b5d988da8141cbab3cbee6359fb64105b85e0e2065315b26ed6f48 ChangeLog 17055
+MISC metadata.xml 381 RMD160 e7d2ee3600538e5f9cebbf852991ffc934dd4d8d SHA1 9807909002008834ffe09c7d6ac37a88e570adec SHA256 dae741ed215a2cc8d9eba192d6a46d1c51cd1fec10ef25e34eb22631016fbdc1
+MD5 6706a601c155869440dcb544e3759a04 metadata.xml 381
+RMD160 e7d2ee3600538e5f9cebbf852991ffc934dd4d8d metadata.xml 381
+SHA256 dae741ed215a2cc8d9eba192d6a46d1c51cd1fec10ef25e34eb22631016fbdc1 metadata.xml 381
+MD5 f473bbbb717ca6c5f07465e3d83df2ae files/digest-sparc-sources-2.4.32-r2 143
+RMD160 308748afd1f56935246e707bac07b32f861f0b7a files/digest-sparc-sources-2.4.32-r2 143
+SHA256 ae71c8fe68b7ef08845cecf1de3bd28d38d7d70d7eeec5598d96f68cadfa8b4f files/digest-sparc-sources-2.4.32-r2 143
+MD5 4500e92fdfd8cbcf0d735fcc94300254 files/digest-sparc-sources-2.4.32-r3 143
+RMD160 22572d5e8e2cfda3f0c19cd3259bcf933ccfb82b files/digest-sparc-sources-2.4.32-r3 143
+SHA256 218b36c192450ffbb55574b7b77e829ffd1b47e2a48f2f1609ebca7853c14d85 files/digest-sparc-sources-2.4.32-r3 143
+MD5 c0d2d8ed6a9d3d0131602b04c9ffac15 files/digest-sparc-sources-2.4.32-r4 143
+RMD160 7e867f5bbe88cccb0f3e3170135fc624b26bf938 files/digest-sparc-sources-2.4.32-r4 143
+SHA256 79095c1c27dc50499f504d0d7fcc1f8e826cad55c252fd11c256d4b6f64c14ba files/digest-sparc-sources-2.4.32-r4 143
+MD5 0e723d7d36c673538b18ff605801698a files/digest-sparc-sources-2.4.32-r5 143
+RMD160 9a63c7f3288a1ed19b5f845222369d0de894facb files/digest-sparc-sources-2.4.32-r5 143
+SHA256 abaa963713fbffd39d7edbbb2cc26a8cd5469542c40b1374053e15307f15e5a9 files/digest-sparc-sources-2.4.32-r5 143
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEZNzyKRy60XGEcJIRAjiKAJ9lsfy+hDE5CDnQToQf2ro4ewZ4ZACcDzY+
-BqqBy/FY+c4oSUwAouHYr7Y=
-=Lyuc
+iD8DBQFEorl3KRy60XGEcJIRAoOHAKCp4lQMT4cjyjMGbgy5S8VFeuR2qwCfXdvw
+XilxecU043r2XmIOhmBfH2w=
+=RfHc
 -----END PGP SIGNATURE-----
