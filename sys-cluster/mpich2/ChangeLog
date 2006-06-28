@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.7 2006/06/26 06:15:00 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.8 2006/06/28 07:32:39 nerdboy Exp $
+
+  28 Jun 2006; Steve Arnold <nerdboy@gentoo.org> mpich2-1.0.3-r1.ebuild:
+  reverted to original (and standard) library location
 
 *mpich2-1.0.3-r1 (26 Jun 2006)
 

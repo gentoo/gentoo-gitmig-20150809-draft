@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.1 2006/06/26 06:15:00 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.2 2006/06/28 07:32:39 nerdboy Exp $
 
 inherit fortran distutils eutils autotools kde-functions toolchain-funcs
 
@@ -63,7 +63,6 @@ src_unpack() {
 	eend
 	epatch ${FILESDIR}/${P}-make.patch || die "make patch failed"
 	#epatch ${FILESDIR}/${P}-make-test.patch || die "make test patch failed"
-	echo "LDPATH=\"/usr/$(get_libdir)/${PN}\"" > 42mpich2
 }
 
 src_compile() {
@@ -98,7 +97,7 @@ src_compile() {
 		$(use_enable mpe) \
 		$(use_enable threads) \
 		--includedir=/usr/include \
-		--libdir=/usr/$(get_libdir)/${PN} \
+		--libdir=/usr/$(get_libdir) \
 		--mandir=/usr/share/man \
 		--with-docdir=/usr/share/doc/${PF} \
 		--with-htmldir=/usr/share/doc/${PF}/html \
@@ -163,7 +162,7 @@ src_install() {
 	dodir /etc/${PN}
 	rm -rf src/mpe2/etc/*.in
 	make install DESTDIR=${D} \
-	    LIBDIR=${D}usr/$(get_libdir)/${PN} || die "make install failed"
+	    LIBDIR=${D}usr/$(get_libdir) || die "make install failed"
 
 	dodir /usr/share/${PN}
 	mv ${D}usr/examples/cpi ${D}usr/share/${PN}/cpi
@@ -180,7 +179,6 @@ src_install() {
 		rm -rf ${D}usr/share/man/
 		dodoc README CHANGES COPYRIGHT RELEASE_NOTES
 	fi
-	doenvd 42mpich2
 }
 
 pkg_postinst() {
