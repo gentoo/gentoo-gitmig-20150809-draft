@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.43-r4.ebuild,v 1.4 2006/06/11 10:01:59 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.43-r4.ebuild,v 1.5 2006/06/28 18:25:19 mattepiu Exp $
 
 inherit eutils perl-module
 
@@ -27,7 +27,7 @@ PREFIX="/usr"
 # enable graphical front-end, Italy grabber
 #  in /etc/portage/package.use : media-tv/xmltv tv_check it
 
-IUSE="br brnet ch uk_rt uk_bleb uk_be is it na_dd na_icons fi es ee il re nl nl_wolf huro dk jp de_tvtoday se_swedb fr no pt za tv_pick_cgi tv_check"
+IUSE="be br brnet ch uk_rt uk_bleb is it na_dd na_icons fi es ee il re nl nl_wolf huro dk jp de_tvtoday se_swedb fr no pt za tv_pick_cgi tv_check"
 
 RDEPEND=">=dev-perl/libwww-perl-5.65
 	>=dev-perl/XML-Parser-2.34
@@ -84,7 +84,7 @@ make_config() {
 	# Enable Alternate Brittain 2
 	use uk_bleb && echo "yes" || echo "no"
 	# Enable Belgium and Luxemburg 
-	use uk_be && echo "yes" || echo "no"
+	use be && echo "yes" || echo "no"
 	#Enable Iceland
 	use is && echo "yes" || echo "no"
 	# Enable Italy

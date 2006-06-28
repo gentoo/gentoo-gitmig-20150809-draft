@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.48 2006/06/11 10:01:59 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.49 2006/06/28 18:25:19 mattepiu Exp $
+
+  28 Jun 2006; Matteo Azzali <mattepiu@gentoo.org> xmltv-0.5.43-r4.ebuild:
+  fixed use flag for Belgium users.
 
   11 Jun 2006; Matteo Azzali <mattepiu@gentoo.org> xmltv-0.5.43-r4.ebuild:
   Cleaned the ebuild and use of the perl-module functions, thanks to
