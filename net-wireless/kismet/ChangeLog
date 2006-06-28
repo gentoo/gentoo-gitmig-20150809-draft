@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.86 2006/06/26 22:19:03 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.87 2006/06/28 15:25:26 dang Exp $
+
+  28 Jun 2006; Daniel Gryniewicz <dang@gentoo.org> kismet-2006.04.1.ebuild:
+  Marked stable on amd64 per bug#137976
 
   26 Jun 2006; Henrik Brix Andersen <brix@gentoo.org>
   -files/kismet-2005.08.1-acx100.patch, -files/kismet-2005.08.1-conf.d,
