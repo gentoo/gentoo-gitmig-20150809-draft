@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-1.0.0.ebuild,v 1.8 2006/05/09 07:35:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-1.0.0.ebuild,v 1.9 2006/06/28 16:32:10 wolf31o2 Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="Client to configure an IPv6 tunnel to freenet6"
+DESCRIPTION="Client to configure an IPv6 tunnel to freenet6 (tspc)"
 HOMEPAGE="http://www.freenet6.net/"
 SRC_URI="mirror://gentoo/${P}.tgz"
 
