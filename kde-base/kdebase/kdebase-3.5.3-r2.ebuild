@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.3-r2.ebuild,v 1.2 2006/06/22 12:45:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.3-r2.ebuild,v 1.3 2006/06/28 02:31:34 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -29,7 +29,7 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )
 	ieee1394? ( sys-libs/libraw1394 )
 	hal? ( >=sys-apps/dbus-0.33
-	       =sys-apps/hal-0.5*
+		   =sys-apps/hal-0.5*
 		   sys-apps/pmount )
 	zeroconf? ( net-misc/mDNSResponder )
 	xcomposite? ( || ( (
@@ -58,6 +58,7 @@ RDEPEND="${DEPEND}
 			x11-apps/xset
 			x11-apps/xrandr
 			x11-apps/mkfontdir
+			x11-apps/xinit
 			|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
 			x11-apps/setxkbmap
 		) virtual/x11 )"
@@ -102,12 +103,12 @@ src_unpack() {
 
 src_compile() {
 	local myconf="--with-dpms
-	              $(use_with arts) $(use_with ldap)
-	              $(use_with opengl gl) $(use_with ssl)
-	              $(use_with samba) $(use_with openexr)
-	              $(use_with lm_sensors sensors) $(use_with logitech-mouse libusb)
-	              $(use_with ieee1394 libraw1394) $(use_with hal)
-	              $(use_enable zeroconf dnssd)
+				  $(use_with arts) $(use_with ldap)
+				  $(use_with opengl gl) $(use_with ssl)
+				  $(use_with samba) $(use_with openexr)
+				  $(use_with lm_sensors sensors) $(use_with logitech-mouse libusb)
+				  $(use_with ieee1394 libraw1394) $(use_with hal)
+				  $(use_enable zeroconf dnssd)
 				  $(use_with xcomposite composite)
 				  $(use_with xscreensaver)
 				  $(use_with xinerama)
