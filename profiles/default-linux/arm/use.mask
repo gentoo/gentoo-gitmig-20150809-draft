@@ -1,3 +1,7 @@
+# Saleem Abdulrasool <compnerd@gentoo.org>
+# With vapier's permission masking this.
+mozilla
+
 hardened
 
 # Saleem Abdulrasool <compnerd@gentoo.org>
