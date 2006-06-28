@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.89 2006/06/26 23:28:14 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.90 2006/06/28 15:32:43 nichoj Exp $
+
+*java-config-2.0.25 (28 Jun 2006)
+
+  28 Jun 2006; Joshua Nichols <jnichols@gentoo.org>
+  -java-config-2.0.24.ebuild, +java-config-2.0.25.ebuild:
+  Fixed man page collision (bug #138352) and improved run-java-tool.
 
   26 Jun 2006; Joshua Nichols <nichoj@gentoo.org>
   java-config-1.3.0-r2.ebuild, java-config-2.0.24.ebuild:
