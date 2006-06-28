@@ -1,0 +1,47 @@
+--- include/AudioMp3.h
++++ include/AudioMp3.h
+@@ -11,7 +11,7 @@
+ class AudioMp3: public MyAudioFile
+ {
+ public:
+-  AudioMp3::AudioMp3( std::string filename );
++  AudioMp3( std::string filename );
+   std::string	&getTitle()	{ return _title; };
+   void		setTitle( std::string str ) { _title = str; };
+   std::string	&getArtist()	{ return _artist;} ;
+
+--- include/AudioOgg.h
++++ include/AudioOgg.h
+@@ -11,7 +11,7 @@
+ class AudioOgg: public MyAudioFile
+ {
+ public:
+-  AudioOgg::AudioOgg( std::string filename );
++  AudioOgg( std::string filename );
+   std::string	&getTitle()	{ return _title; };
+   void		setTitle( std::string str ) { _title = str; }
+   std::string	&getArtist()	{ return _artist;} ;
+
+--- include/AudioWav.h
++++ include/AudioWav.h
+@@ -11,7 +11,7 @@
+ class AudioWav: public MyAudioFile
+ {
+ public:
+-  AudioWav::AudioWav( std::string filename );
++  AudioWav( std::string filename );
+   std::string	&getTitle()	{ return _title; };
+   std::string	&getArtist()	{ return _artist;} ;
+ //  std::string	&getAlbum()	{ return _album; };
+
+--- include/BitTorrent.h
++++ include/BitTorrent.h
+@@ -67,7 +67,7 @@
+ public:
+ 	~BitTorrent();
+ 	static BitTorrent* decode( const char* buf, int len );
+-	static BitTorrent* BitTorrent::bt_decode_file( const char* filename );
++	static BitTorrent* bt_decode_file( const char* filename );
+ 	void setAnnounce( const std::string& announce );
+ 	const std::string& getAnnounce() const;
+ 	void setSingleFile( bool s );

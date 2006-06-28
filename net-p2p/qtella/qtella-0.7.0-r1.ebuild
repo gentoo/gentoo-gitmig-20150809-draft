@@ -1,44 +1,48 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0-r1.ebuild,v 1.4 2005/09/12 17:31:55 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0-r1.ebuild,v 1.5 2006/06/28 03:09:05 squinky86 Exp $
 
-inherit eutils kde-functions
+inherit eutils qt3 multilib kde-functions
 
-SRC_URI="mirror://sourceforge/qtella/${P}.tar.gz"
-HOMEPAGE="http://www.qtella.net"
+need-kde 3
+
+SRC_URI="mirror://sourceforge/qtella/${P}.tar.gz
+	http://squinky.gotdns.com/${P}-libyahoo.patch.gz"
+HOMEPAGE="http://qtella.sourceforge.net/"
 DESCRIPTION="Excellent QT/KDE Gnutella Client"
 
 LICENSE="GPL-2"
 IUSE="kde"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~ppc ~sparc ~x86"
 SLOT="3" # why??
 
-DEPEND="=x11-libs/qt-3*
+DEPEND="$(qt_min_version 3)
 	kde? ( >=kde-base/kdelibs-3 )"
 
-export MAKEOPTS="$MAKEOPTS -j1"
-
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack ${P}.tar.gz
+	cd "${S}"
 	if ! use kde; then
-		epatch ${FILESDIR}/${PV}-nokde.patch
+		epatch "${FILESDIR}"/${PV}-nokde.patch
 	fi
-	epatch ${FILESDIR}/${P}-errno.patch
+	epatch "${FILESDIR}"/${P}-errno.patch
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+	epatch "${DISTDIR}"/${P}-libyahoo.patch.gz
 }
 
 src_compile() {
-	set-qtdir 3
-	set-kdedir 3
-
 	local myconf
-	use kde || myconf="--with-kde=no"
+	if use kde ; then
+		myconf="--with-kde=yes --with-kde-libs=${KDEDIR}"
+	else
+		myconf="--with-kde=no"
+	fi
 
-	econf ${myconf} || die
-	emake || die
+	econf ${myconf} || die "econf failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
+	make DESTDIR=${D} install || die "make install failed"
+	dodoc AUTHORS ChangeLog THANKS
 }
