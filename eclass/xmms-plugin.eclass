@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.20 2005/10/15 19:12:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.21 2006/06/28 02:16:27 metalgod Exp $
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
+# Luis Medinas	<metalgod@gentoo.org>
 
 # Usage:
 # This eclass is used to create ebuilds for xmms plugins which are contained
@@ -11,7 +12,7 @@
 # PATCH_VER:
 # M4_VER:
 # GENTOO_URI:
-GENTOO_URI=${GENTOO_URI-"http://dev.gentoo.org/~eradicator/xmms"}
+GENTOO_URI=${GENTOO_URI-"http://dev.gentoo.org/~metalgod/xmms"}
 # Set this variable if you want to use a gentoo specific patchset.  This adds
 # ${GENTOO_URI}/xmms-${PV}-gentoo-patches-${PATCH_VER}.tar.bz2 to the SRC_URI
 
@@ -41,7 +42,7 @@ S="${WORKDIR}/xmms-${PV}"
 RDEPEND="${RDEPEND+${RDEPEND}}${RDEPEND-${DEPEND}}"
 DEPEND="${DEPEND}
 	=sys-devel/automake-1.7*
-	=sys-devel/autoconf-2.5*
+	>=sys-devel/autoconf-2.5*
 	sys-devel/libtool"
 
 xmms-plugin_src_unpack() {
