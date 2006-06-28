@@ -68,7 +68,7 @@ ipconfig=/sbin/ip
 rtadvd=/usr/sbin/radvd
 sysctl=/sbin/sysctl
 rtadvdconfigfilename=radvd.conf
-rtadvdconfigfile=/etc/radvd/$rtadvdconfigfilename
+rtadvdconfigfile=/etc/$rtadvdconfigfilename
 
 if [ -z $TSP_HOME_DIR ]; then
    echo "TSP_HOME_DIR variable not specified!;"
