@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsmount,v 1.6 2005/03/23 04:12:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsmount,v 1.7 2006/06/28 03:28:58 vapier Exp $
 
 depend() {
 	need net portmap
@@ -39,9 +39,4 @@ stop() {
 	umount -a -t nfs
 	eend $? "Error unmounting NFS filesystems"
 	stop_statd
-}
-
-restart() {
-	svc_stop
-	svc_start
 }
