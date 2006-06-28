@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/gpodder
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/ChangeLog,v 1.1 2006/06/28 20:12:01 hanno Exp $
+
+*gpodder-0.7 (28 Jun 2006)
+
+  28 Jun 2006; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
+  +gpodder-0.7.ebuild:
+  Initial commit.
+
