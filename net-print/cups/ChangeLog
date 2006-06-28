@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.186 2006/06/27 12:22:18 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.187 2006/06/28 07:57:44 genstef Exp $
+
+  28 Jun 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.2.1-r2.ebuild:
+  use pamd_mimic_system again thanks to robbat2 in bug 138315
 
   27 Jun 2006; Guy Martin <gmsoft@gentoo.org> cups-1.2.1-r2.ebuild:
   Added ~hppa to KEYWORDS.

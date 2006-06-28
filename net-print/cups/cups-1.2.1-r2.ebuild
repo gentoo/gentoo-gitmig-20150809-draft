@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r2.ebuild,v 1.5 2006/06/27 12:22:18 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r2.ebuild,v 1.6 2006/06/28 07:57:44 genstef Exp $
 
-inherit eutils flag-o-matic multilib autotools
+inherit autotools eutils flag-o-matic multilib pam
 
 MY_P=${P/_/}
 
@@ -108,9 +108,11 @@ src_install() {
 	dodoc {CHANGES{,-1.{0,1}},CREDITS,LICENSE,README}.txt
 
 	# clean out cups init scripts
-	rm -rf ${D}/etc/init.d/cups ${D}/etc/rc*
+	rm -rf ${D}/etc/{init.d/cups,rc*,pam.d/cups}
 	# install our init scripts
 	newinitd ${FILESDIR}/cupsd.init cupsd
+	# install our pam script
+	pamd_mimic_system cups auth account
 
 	# correct path
 	sed -i -e "s:server = .*:server = /usr/libexec/cups/daemon/cups-lpd:" ${D}/etc/xinetd.d/cups-lpd
