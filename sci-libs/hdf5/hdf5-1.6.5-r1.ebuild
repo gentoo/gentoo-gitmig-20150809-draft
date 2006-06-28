@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.5-r1.ebuild,v 1.1 2006/06/24 16:13:48 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.5-r1.ebuild,v 1.2 2006/06/28 07:29:31 nerdboy Exp $
 
 inherit fortran eutils toolchain-funcs
 
@@ -126,7 +126,7 @@ src_compile() {
 		--enable-linux-lfs  \
 		--sysconfdir=/etc \
 		--infodir=/usr/share/info \
-		--libdir=/usr/$(get_libdir)/${PN} \
+		--libdir=/usr/$(get_libdir) \
 		--mandir=/usr/share/man || die "configure failed"
 
 	# restore the ARCH environment variable
@@ -134,7 +134,6 @@ src_compile() {
 
 	# emake has occasional segfaults
 	make || die "make failed"
-	echo "LDPATH=\"/usr/$(get_libdir)/${PN}\"" > 50hdf5
 }
 
 src_test() {
@@ -152,7 +151,7 @@ src_install() {
 		prefix=${D}usr \
 		mandir=${D}usr/share/man \
 		docdir=${D}usr/share/doc/${PF} \
-		libdir=${D}usr/$(get_libdir)/${PN} \
+		libdir=${D}usr/$(get_libdir) \
 		infodir=${D}usr/share/info \
 		install || die "make install failed"
 
@@ -161,11 +160,10 @@ src_install() {
 	if use static ; then
 	    dolib.a ${S}/tools/lib/.libs/libh5tools.a \
 		${S}/test/.libs/libh5test.a || die "dolib.a failed"
-	    insinto /usr/$(get_libdir)/${PN}
+	    insinto /usr/$(get_libdir)
 	    doins ${S}/tools/lib/libh5tools.la \
 		 ${S}/test/libh5test.la || die "doins failed"
 	fi
-	mv ${D}usr/$(get_libdir)/libh5* ${D}usr/$(get_libdir)/${PN}/
 
 	dobin ${S}/bin/iostats || die "dobin failed"
 	dodoc README.txt COPYING MANIFEST
@@ -181,8 +179,6 @@ src_install() {
 	if ! use static ; then
 	    dosed "s/SHLIB:-no/SHLIB:-yes/g" ${D}usr/bin/h5cc || die "dosed failed"
 	fi
-
-	doenvd 50hdf5
 }
 
 pkg_postinst() {

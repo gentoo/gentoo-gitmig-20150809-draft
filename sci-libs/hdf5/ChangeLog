@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.14 2006/06/24 16:13:48 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.15 2006/06/28 07:29:31 nerdboy Exp $
+
+  28 Jun 2006; Steve Arnold <nerdboy@gentoo.org> hdf5-1.6.5-r1.ebuild:
+  Reverted to original (and standard) library location; even though it
+  was much tidier, it was causing linkage issues...
 
 *hdf5-1.6.5-r1 (24 Jun 2006)
 
