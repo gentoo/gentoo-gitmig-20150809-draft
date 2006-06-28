@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.3.ebuild,v 1.2 2006/06/28 09:19:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.4.ebuild,v 1.1 2006/06/28 09:19:26 dragonheart Exp $
 
 
 DESCRIPTION="Multi-platform tool to check and undelete partition, supports reiserfs, ntfs, fat32, ext2/3 and many others. Also includes PhotoRec to recover pictures from digital camera memory."

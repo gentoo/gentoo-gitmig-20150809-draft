@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.18 2006/05/25 05:50:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.19 2006/06/28 09:19:26 dragonheart Exp $
+
+*testdisk-6.4 (28 Jun 2006)
+
+  28 Jun 2006; Daniel Black <dragonheart@gentoo.org> testdisk-6.3.ebuild,
+  +testdisk-6.4.ebuild:
+  version bump thanks to Christophe Grenier bug #137515. Cleaned old version
+  and fixed HOMEPAGE too
 
 *testdisk-6.3 (25 May 2006)
 
