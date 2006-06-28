@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>media-tv</herd>
 <maintainer>
-<email>media-tv@gentoo.org</email>
-<name>Television related Applications in Gentoo's Portage</name>
+    <email>maintained-needed@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
