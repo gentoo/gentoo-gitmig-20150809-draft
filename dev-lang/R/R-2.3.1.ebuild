@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.3.1.ebuild,v 1.2 2006/06/02 20:13:01 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.3.1.ebuild,v 1.3 2006/06/28 10:11:03 lu_zero Exp $
 
 inherit fortran toolchain-funcs flag-o-matic
 
@@ -46,6 +46,11 @@ pkg_setup() {
 	fortran_pkg_setup
 
 	filter-ldflags -Wl,-Bdirect -Bdirect
+}
+
+src_unpack() {
+	unpack ${A}
+	sed -i -e "s:-fpic:-fPIC:g" ${S}/configure
 }
 
 src_compile() {
