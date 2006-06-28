@@ -54,3 +54,7 @@ pike
 
 # xattr pulls in some deps that probably won't ever fly on OSX #121092
 xattr
+
+# ppcsha1 of dev-util/git tries to do some PPC/Linux stuff which doesn't
+# work for us
+ppcsha1
