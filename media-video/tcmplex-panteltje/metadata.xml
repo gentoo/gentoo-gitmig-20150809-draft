@@ -5,4 +5,8 @@
 <maintainer>
   <email>lordvan@gentoo.org</email>
 </maintainer>
+<maintainer>
+  <email>hd_brummy@gentoo.org</email>
+  <name>Joerg Bornkessel</name>
+</maintainer>
 </pkgmetadata>
