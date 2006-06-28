@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5558 2006/06/28 00:52:53 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5559 2006/06/28 02:06:22 anarchy Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1172,10 +1172,6 @@ app-portage/abeni
 # missing dependencies, see #89893
 =app-misc/freemind-0.8.0_rc2
 
-# Mamoru KOMACHI <usata@gentoo.org>
-# No fix available for bug #87906
-www-client/netscape
-
 # Konstantin Arkhipov <voxus@gentoo.org> (15 Apr 2005)
 # Masked until arrival of userland tools. At least.
 >=sys-kernel/openmosix-sources-2.5
@@ -1275,12 +1271,6 @@ media-video/jahshaka
 # portage for better observation (and users are clamoring)
 app-office/mozilla-sunbird-bin
 #app-office/mozilla-sunbird
-
-# <agriffis@gentoo.org> (18 Aug 2004)
-# Masking due to security issues that will never be solved since there
-# are no new versions forthcoming, bug 56109
-www-client/netscape-navigator
-www-client/netscape-communicator
 
 # <pfeifer@gentoo.org> (12 Aug 2004)
 # Masked for following ebuilds for testing:
