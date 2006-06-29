@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/fargoal/fargoal-20040629.ebuild,v 1.2 2005/06/27 18:50:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/fargoal/fargoal-20040629.ebuild,v 1.3 2006/06/29 19:24:31 wolf31o2 Exp $
 
 inherit eutils games
 
 DESCRIPTION="The Sword of Fargoal - a remake of C64's old dungeon crawler game"
 HOMEPAGE="http://squidfighter.sourceforge.net/fargoal/"
-SRC_URI="mirror://sourceforge/squidfighter/${PN}${PV}.zip"
+SRC_URI="mirror://sourceforge/squidfighter/${P/-}.zip"
 
 LICENSE="as-is"
 SLOT="0"
@@ -24,7 +24,8 @@ src_unpack() {
 	cd "${S}/src"
 	epatch "${FILESDIR}/gentoo-home-write.patch"
 	sed -i \
-		-e "s/^\(C\(XX\)\?FLAGS =\).*/\1 ${CFLAGS} /g" Makefile \
+		-e "s/-O3/${CFLAGS}/" \
+		-e '/^LDFLAGS/d' Makefile \
 		|| die "sed failed"
 	sed -i \
 		-e "s:sfx/:${GAMES_DATADIR}/${PN}/sfx/:g" \
@@ -44,9 +45,8 @@ src_install() {
 	# install as fargoal instead of sword since that may conflict with
 	# other packages.
 	newgamesbin sword fargoal || die "newgamesbin failed"
-	dodir "${GAMES_DATADIR}/${PN}"
-	cp -r agreement.txt {data,gfx,sfx} "${D}/${GAMES_DATADIR}/${PN}" \
-		|| die "cp failed"
+	insinto "${GAMES_DATADIR}"/${PN}
+	doins -r agreement.txt {data,gfx,sfx} || die "doins failed"
 	dohtml readme.html
 	prepgamesdirs
 }
