@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20060528.ebuild,v 1.5 2006/06/04 09:23:47 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20060528.ebuild,v 1.6 2006/06/29 23:04:00 weeve Exp $
 
 inherit nsplugins kde-functions autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc -sparc ~x86"
 IUSE="dmalloc mad nsplugin nptl xml kde video_cards_i810"
 
 RDEPEND="dmalloc? ( dev-libs/dmalloc )
