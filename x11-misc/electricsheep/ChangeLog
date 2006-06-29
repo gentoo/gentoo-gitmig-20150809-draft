@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/electricsheep
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.32 2006/06/06 01:17:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.33 2006/06/29 06:44:00 dragonheart Exp $
+
+  29 Jun 2006; Daniel Black <dragonheart@gentoo.org>
+  electricsheep-2.6.7.ebuild:
+  libpng dependency changed to <1.2.10 due to bug #137059 by Rob Couto. Next
+  release will work with libpng-1.2.10
 
 *electricsheep-2.6.7 (06 Jun 2006)
 

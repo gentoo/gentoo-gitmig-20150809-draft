@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.7.ebuild,v 1.1 2006/06/06 01:17:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.7.ebuild,v 1.2 2006/06/29 06:44:00 dragonheart Exp $
 
 inherit eutils flag-o-matic kde-functions
 
@@ -21,7 +21,7 @@ RDEPEND="|| ( ( x11-libs/libXv
 	dev-libs/expat
 	net-misc/curl
 	media-libs/jpeg
-	media-libs/libpng
+	<media-libs/libpng-1.2.10
 	media-libs/libsdl
 	virtual/libc
 	sys-libs/zlib"
