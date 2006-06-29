@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ngstar-2.1.8-r2.ebuild,v 1.1 2006/06/01 20:39:10 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ngstar-2.1.8-r2.ebuild,v 1.2 2006/06/29 16:03:10 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -23,7 +23,8 @@ src_unpack() {
 		-e "s:@GENTOO_DATA@:${GAMES_DATADIR}:" \
 		-e "s:@GENTOO_BIN@:${GAMES_BINDIR}:" \
 		-e "/^CPPFLAGS/s:+=:+= ${CXXFLAGS}:" \
-		configure
+		configure || die "sed configure failed"
+	sed -i '/strip/d' src/Makefile || die "sed makefile failed"
 }
 
 src_compile() {

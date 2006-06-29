@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/ngstar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ChangeLog,v 1.4 2006/06/01 20:39:10 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ChangeLog,v 1.5 2006/06/29 16:03:10 wolf31o2 Exp $
+
+  29 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  ngstar-2.1.8-r2.ebuild:
+  Fixed binaries being pre-stripped. Thanks to Tristan Heaven
+  <tristanheaven@gmail.com> for the patch. Closing bug #137720.
 
 *ngstar-2.1.8-r2 (01 Jun 2006)
 
