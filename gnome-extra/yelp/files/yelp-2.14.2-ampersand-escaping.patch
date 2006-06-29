@@ -1,0 +1,15 @@
+Already merged into upstream gnome-2-14 branch
+
+Index: yelp-2.14.2/src/yelp-toc-pager.c
+===================================================================
+--- yelp-2.14.2.orig/src/yelp-toc-pager.c
++++ yelp-2.14.2/src/yelp-toc-pager.c
+@@ -1166,7 +1166,7 @@ process_info_pending (YelpTocPager *page
+ 			    xmlNewNsProp (new_node, NULL, BAD_CAST "id",
+ 					  BAD_CAST g_strdup_printf ("infosect%d", sectno));
+ 			    sectno++;
+-			    xmlNewChild (new_node, NULL, BAD_CAST "title",
++			    xmlNewTextChild (new_node, NULL, BAD_CAST "title",
+ 					 BAD_CAST *ptr);
+ 			    g_hash_table_insert (categories, 
+ 						 g_strdup (*ptr),

@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.12.2.ebuild,v 1.10 2006/06/29 15:26:33 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.14.2-r1.ebuild,v 1.1 2006/06/29 15:26:33 dsd Exp $
 
-inherit eutils gnome2
+inherit eutils gnome2 autotools
 
 DESCRIPTION="Help browser for GNOME"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="firefox"
 
 RDEPEND=">=dev-libs/glib-2
@@ -22,8 +22,11 @@ RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnome-2.0.2
 	>=gnome-base/libgnomeui-1.103
+	>=gnome-base/libgnomeprint-2.2
+	>=gnome-base/libgnomeprintui-2.2
 	>=dev-libs/libxml2-2.6.5
 	>=dev-libs/libxslt-1.1.4
+	>=x11-libs/startup-notification-0.8
 	!firefox? ( >=www-client/mozilla-1.7.3 )
 	firefox? ( >=www-client/mozilla-firefox-1.0.2-r1 )
 	dev-libs/popt
@@ -39,7 +42,7 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 
 pkg_setup() {
-	G2CONF="--enable-man --enable-info"
+	G2CONF="${G2CONF} --enable-man --enable-info"
 
 	if use firefox; then
 		G2CONF="${G2CONF} --with-mozilla=firefox"
@@ -49,8 +52,13 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
-	cd "${S}"
+	gnome2_src_unpack
 
-	epatch ${FILESDIR}/${PN}-2.6.4-makedepfix.patch
+	epatch ${FILESDIR}/${PN}-2.14.0-mozilla-include-fix.patch
+
+	# Fixes bug #132527, already merged upstream into next 2.14 release
+	epatch ${FILESDIR}/${P}-ampersand-escaping.patch
+
+	mv aclocal.m4 old_macros.m4
+	AT_M4DIR="m4 ." eautoreconf
 }
