@@ -1,0 +1,12 @@
+diff -Naurp Video-DVDRip-0.97.10.orig/lib/Video/DVDRip/Config.pm Video-DVDRip-0.97.10/lib/Video/DVDRip/Config.pm
+--- Video-DVDRip-0.97.10.orig/lib/Video/DVDRip/Config.pm	2006-06-28 20:39:45.000000000 -0400
++++ Video-DVDRip-0.97.10/lib/Video/DVDRip/Config.pm	2006-06-28 20:40:37.000000000 -0400
+@@ -405,7 +405,7 @@ my %CONFIG_PARAMETER = (
+     workaround_nptl_bugs => {
+         label => __ "Workaround transcode NPTL bugs",
+         type  => 'switch',
+-        value => 1,
++        value => 0,
+     },
+     nptl_ld_assume_kernel => {
+         label   => __ "Set LD_ASSUME_KERNEL to",
