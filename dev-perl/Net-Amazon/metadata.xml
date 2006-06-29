@@ -3,7 +3,8 @@
 <pkgmetadata>
 	<herd>perl</herd>
 	<maintainer>
-		<email>pclouds@gentoo.org</email>
-		<name>Nguyễn Thái Ngọc Duy</name>
+		<email>perl@gentoo.org</email>
+		<description>Primary Maintainer</description>
 	</maintainer>
+	<longdescription></longdescription>
 </pkgmetadata>
