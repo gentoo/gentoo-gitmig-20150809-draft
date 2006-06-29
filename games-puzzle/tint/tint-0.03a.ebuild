@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/tint-0.03a.ebuild,v 1.6 2005/12/23 11:07:41 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/tint-0.03a.ebuild,v 1.7 2006/06/29 16:09:02 wolf31o2 Exp $
 
 inherit eutils games
 
 MY_P=${P/-/_}
 DESCRIPTION="Tint Is Not Tetris, a ncurses based clone of the original Tetris(tm) game"
 HOMEPAGE="http://oasis.frogfoot.net/code/tint/"
-SRC_URI="http://oasis.frogfoot.net/code/tint/download/$PV/$MY_P.tar.gz"
+SRC_URI="http://oasis.frogfoot.net/code/tint/download/${PV}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
@@ -17,14 +17,16 @@ IUSE=""
 DEPEND=">=sys-libs/ncurses-5.4-r1"
 
 src_unpack() {
-	unpack $A
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PV}-warnings.patch"
+	sed -i '/STRIP/d' Makefile || die "sed failed"
 }
 
 src_compile() {
 	emake \
 		CFLAGS="${CFLAGS}" \
+		LDFLAGS="${LDFLAGS}" \
 		localstatedir="${GAMES_STATEDIR}" \
 		|| die "emake failed"
 }
