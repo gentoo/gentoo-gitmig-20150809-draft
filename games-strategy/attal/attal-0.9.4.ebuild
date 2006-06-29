@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.9.4.ebuild,v 1.4 2006/05/30 20:42:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.9.4.ebuild,v 1.5 2006/06/29 13:39:04 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -15,7 +15,9 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
 
-DEPEND="=x11-libs/qt-3*"
+DEPEND="=x11-libs/qt-3*
+	media-libs/libsdl
+	media-libs/sdl-mixer"
 
 S=${WORKDIR}/${MY_P}
 
