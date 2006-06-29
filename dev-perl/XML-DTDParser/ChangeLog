@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-DTDParser
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DTDParser/ChangeLog,v 1.6 2006/03/30 23:40:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DTDParser/ChangeLog,v 1.7 2006/06/29 23:42:02 gustavoz Exp $
+
+  29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  XML-DTDParser-2.01.ebuild:
+  Keyworded ~hppa
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> XML-DTDParser-2.01.ebuild:
   Mark 2.01 ~ia64

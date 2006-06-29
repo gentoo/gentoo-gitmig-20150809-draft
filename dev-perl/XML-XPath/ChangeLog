@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-XPath
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/ChangeLog,v 1.23 2006/04/24 15:47:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/ChangeLog,v 1.24 2006/06/29 23:31:45 gustavoz Exp $
+
+  29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> XML-XPath-1.13.ebuild:
+  Keyworded ~hppa
 
   24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> XML-XPath-1.13.ebuild:
   Add ~x86-fbsd keyword.

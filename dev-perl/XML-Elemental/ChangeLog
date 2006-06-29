@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Elemental
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Elemental/ChangeLog,v 1.5 2006/06/09 15:58:10 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Elemental/ChangeLog,v 1.6 2006/06/29 23:46:23 gustavoz Exp $
+
+  29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  XML-Elemental-2.0.ebuild:
+  Keyworded ~hppa
 
   09 Jun 2006; Jon Hood <squinky86@gentoo.org> XML-Elemental-2.0.ebuild:
   Add ~amd64 in preparation of bug #91091.
