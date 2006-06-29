@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/dpkg
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.35 2005/08/29 23:35:25 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.36 2006/06/29 21:38:34 antarus Exp $
+
+  29 Jun 2006; Alec Warner <antarus@gentoo.org> metadata.xml,
+  dpkg-1.10.28.ebuild, dpkg-1.13.11.ebuild:
+  removing duff dependency on gettext for bug # 134561
 
 *dpkg-1.13.11 (29 Aug 2005)
 

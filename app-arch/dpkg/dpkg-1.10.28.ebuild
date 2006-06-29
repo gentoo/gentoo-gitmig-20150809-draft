@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.28.ebuild,v 1.3 2005/06/17 01:02:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.28.ebuild,v 1.4 2006/06/29 21:38:34 antarus Exp $
 
 inherit eutils
 
@@ -16,9 +16,8 @@ IUSE="zlib bzip2"
 RDEPEND=">=dev-lang/perl-5.6.0
 	>=sys-libs/ncurses-5.2-r7
 	zlib? ( >=sys-libs/zlib-1.1.4 )
-	bzip2? ( app-arch/bzip2 )" #app-text/sgmltools-lite?
-DEPEND="${RDEPEND}
-	>=sys-devel/gettext-0.11.5"
+	bzip2? ( app-arch/bzip2 )"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
