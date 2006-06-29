@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r9.ebuild,v 1.6 2006/06/29 09:54:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r9.ebuild,v 1.7 2006/06/29 09:55:14 flameeyes Exp $
 
 inherit eutils libtool flag-o-matic multilib autotools
 
@@ -26,8 +26,6 @@ RDEPEND="virtual/libc
 	>=x11-libs/motif-config-0.9"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
-	!ppc-macos? ( =sys-devel/automake-1.4* )
-	sys-devel/autoconf
 	|| ( ( x11-proto/printproto
 			x11-proto/xextproto
 			x11-misc/xbitmaps
