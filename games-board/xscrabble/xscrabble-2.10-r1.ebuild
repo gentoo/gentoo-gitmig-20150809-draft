@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/xscrabble-2.10-r1.ebuild,v 1.4 2006/04/23 07:05:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/xscrabble-2.10-r1.ebuild,v 1.5 2006/06/29 19:21:15 wolf31o2 Exp $
 
 inherit eutils multilib games
 
@@ -29,6 +29,7 @@ src_unpack() {
 	use linguas_fr && cp "${DISTDIR}"/xscrabble_fr.tgz .
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-path-fixes.patch
+	sed -i '/install/s/-s //' build || die "sed failed"
 }
 
 src_compile() {
