@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.88 2006/05/15 21:07:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.89 2006/06/29 09:34:46 uberlord Exp $
+
+*openvpn-2.0.7 (29 Jun 2006)
+
+  29 Jun 2006; Roy Marples <uberlord@gentoo.org> +openvpn-2.0.7.ebuild:
+  Bump, #138250, thanks to Armando Di Cianno.
 
   15 May 2006; Brent Baude <ranger@gentoo.org> openvpn-2.0.6.ebuild:
   Marking openvpn-2.0.6 ~ppc64 per bug request 133417
