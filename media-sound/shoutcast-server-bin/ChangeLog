@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/shoutcast-server-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/ChangeLog,v 1.14 2006/06/25 13:48:30 dercorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/ChangeLog,v 1.15 2006/06/29 19:27:00 wolf31o2 Exp $
+
+  29 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  shoutcast-server-bin-1.9.7.ebuild:
+  Stable on amd64 and x86 wrt bug #136721.
 
 *shoutcast-server-bin-1.9.7 (25 Jun 2006)
 
