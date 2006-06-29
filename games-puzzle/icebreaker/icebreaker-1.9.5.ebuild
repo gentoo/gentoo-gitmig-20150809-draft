@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/icebreaker-1.9.5.ebuild,v 1.9 2006/03/13 00:27:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/icebreaker-1.9.5.ebuild,v 1.10 2006/06/29 15:59:40 wolf31o2 Exp $
 
 inherit games
 
@@ -16,8 +16,15 @@ IUSE=""
 DEPEND="media-libs/libsdl
 	media-libs/sdl-mixer"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i '/install/s/-s //' Makefile || die "sed failed"
+}
+
 src_compile() {
 	emake \
+		OPTIMIZE="${CFLAGS}" \
 		prefix=/usr \
 		bindir="${GAMES_BINDIR}" \
 		datadir="${GAMES_DATADIR}" \

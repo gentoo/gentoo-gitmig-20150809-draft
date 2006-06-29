@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/icebreaker
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.9 2006/03/13 00:27:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.10 2006/06/29 15:59:40 wolf31o2 Exp $
+
+  29 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  icebreaker-1.9.5.ebuild:
+  Fixed binaries being pre-stripped. Thanks to Tristan Heaven
+  <tristanheaven@gmail.com> for the patch. Closing bug #137718.
 
   13 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org>
   icebreaker-1.9.5.ebuild:
