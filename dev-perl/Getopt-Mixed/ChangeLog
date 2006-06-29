@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Getopt-Mixed
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Mixed/ChangeLog,v 1.9 2005/10/02 12:44:33 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Mixed/ChangeLog,v 1.10 2006/06/29 18:13:25 gustavoz Exp $
+
+  29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  Getopt-Mixed-1.008.ebuild:
+  Stable on hppa
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> Getopt-Mixed-1.008.ebuild:
   Mark 1.008 stable on ia64
