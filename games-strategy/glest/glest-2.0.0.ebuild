@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-2.0.0.ebuild,v 1.1 2006/04/14 22:05:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-2.0.0.ebuild,v 1.2 2006/06/29 13:29:42 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -24,7 +24,7 @@ IUSE=""
 RDEPEND=">=media-libs/libsdl-1.2.5
 	media-libs/libogg
 	media-libs/libvorbis
-	>=media-libs/openal-20040303
+	media-libs/openal
 	dev-libs/xerces-c
 	virtual/opengl
 	virtual/glu
