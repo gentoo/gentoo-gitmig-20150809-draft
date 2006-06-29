@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.84 2006/06/12 15:58:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.85 2006/06/29 17:20:28 gustavoz Exp $
+
+  29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> Net-DNS-0.57.ebuild:
+  Stable on hppa
 
   12 Jun 2006; Michael Cummings <mcummings@gentoo.org> Net-DNS-0.55.ebuild,
   Net-DNS-0.57.ebuild:
