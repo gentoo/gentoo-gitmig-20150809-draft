@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.206 2006/06/28 19:18:03 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.207 2006/06/29 22:25:56 robbat2 Exp $
+
+*gnupg-1.9.21 (29 Jun 2006)
+
+  29 Jun 2006; Robin H. Johnson <robbat2@gentoo.org> +gnupg-1.9.21.ebuild:
+  Version bump to 1.9.21 for security bug #137622, please note the newer
+  version of libksba that is required!.
 
   28 Jun 2006; Rene Nussbaumer <killerfox@gentoo.org> gnupg-1.4.4.ebuild:
   Stable on hppa. See bug #137622.
