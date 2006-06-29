@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5563 2006/06/29 14:48:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5564 2006/06/29 19:26:24 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Stefan Schweizer <genstef@gentoo.org> (29 Jun 2006)
+# 1.0.* is the stable version, we do not want to break any users
+>=net-libs/loudmouth-1.1.0
 
 # Jory A Pratt <anarchy@gentoo.org> (27 Jun 2006)
 # Package is busted, does not build against seamonkey
