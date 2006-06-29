@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Convert-ASN1
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-ASN1/ChangeLog,v 1.26 2006/06/11 23:54:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-ASN1/ChangeLog,v 1.27 2006/06/29 16:48:33 gustavoz Exp $
+
+  29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  Convert-ASN1-0.20.ebuild:
+  Stable on hppa
 
   11 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   Convert-ASN1-0.20.ebuild:

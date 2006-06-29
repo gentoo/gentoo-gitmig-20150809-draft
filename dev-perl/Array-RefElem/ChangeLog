@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Array-RefElem
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-RefElem/ChangeLog,v 1.8 2005/11/23 10:47:42 metalgod Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-RefElem/ChangeLog,v 1.9 2006/06/29 17:01:52 gustavoz Exp $
+
+  29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  Array-RefElem-1.00.ebuild:
+  Stable on hppa
 
   23 Nov 2005; Luis Medinas <metalgod@gentoo.org> Array-RefElem-1.00.ebuild:
   Stable on amd64.
