@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon/Net-Amazon-0.35.ebuild,v 1.1 2006/06/29 03:51:53 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon/Net-Amazon-0.35.ebuild,v 1.2 2006/06/29 04:18:38 pclouds Exp $
 
 inherit perl-module
 
@@ -15,6 +15,6 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~x86"
 
 DEPEND="dev-perl/libwww-perl
-	dev-perl/XML-Simple
-	perl-core/Time-HiRes
-	dev-perl/Log-Log4perl"
+	>=dev-perl/XML-Simple-2.08
+	>=perl-core/Time-HiRes-1.0
+	>=dev-perl/Log-Log4perl-0.3"

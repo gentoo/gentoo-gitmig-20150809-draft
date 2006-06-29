@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Amazon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon/ChangeLog,v 1.1 2006/06/29 03:51:53 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon/ChangeLog,v 1.2 2006/06/29 04:18:38 pclouds Exp $
+
+  29 Jun 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  Net-Amazon-0.35.ebuild:
+  Updated dependencies from bug #136142 (John <acocaracha@gmail.com>)
 
 *Net-Amazon-0.35 (29 Jun 2006)
 
