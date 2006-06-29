@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r9.ebuild,v 1.5 2006/06/27 18:04:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r9.ebuild,v 1.6 2006/06/29 09:54:07 flameeyes Exp $
 
-inherit eutils libtool flag-o-matic multilib
+inherit eutils libtool flag-o-matic multilib autotools
 
 MY_P=${P/m/M}
 S=${WORKDIR}/${MY_P}
@@ -60,23 +60,15 @@ src_unpack() {
 	epatch ${FILESDIR}/CAN-2005-0605.patch
 	epatch ${FILESDIR}/openmotif-2.2.3-uil.patch
 
-	use ppc-macos && epatch ${FILESDIR}/${P}-automake.patch
+	epatch ${FILESDIR}/${P}-automake.patch
 
-	# autotool stuff
-	export WANT_AUTOCONF=2.5
+	# This replaces deprecated, obsoleted and now invalid AC_DEFINE
+	# with their proper alternatives.
+	sed -i -e 's:AC_DEFINE(\([^)]*\)):AC_DEFINE(\1, [], [\1]):g' \
+		"${S}/configure.in" "${S}/acinclude.m4"
 
-	# Patched Makefile.am to work with version 1.6 on ppc-macos.
-	# Untested elsewhere
-	use ppc-macos || export WANT_AUTOMAKE=1.4
-
-	libtoolize --force --copy
-	aclocal || die
-	AUTOMAKE_OPTS="--foreign"
-	# For some reason ppc-macos complains about missing depcomp and compile
-	# files
-	use ppc-macos && AUTOMAKE_OPTS="-a -c -f ${AUTOMAKE_OPTS}"
-	automake ${AUTOMAKE_OPTS} || die
-	autoconf || die
+	# automake 1.4 is giving problems.
+	WANT_AUTOMAKE="1.6" eautoreconf
 }
 
 
@@ -86,6 +78,8 @@ src_compile() {
 
 	# bug #80421
 	filter-flags -ftracer
+
+	append-flags -fno-strict-aliasing
 
 	econf --with-x || die "configuration failed"
 
