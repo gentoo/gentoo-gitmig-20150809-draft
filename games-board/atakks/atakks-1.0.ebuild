@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/atakks/atakks-1.0.ebuild,v 1.6 2006/01/09 00:35:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/atakks/atakks-1.0.ebuild,v 1.7 2006/06/29 19:22:15 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -32,6 +32,7 @@ src_unpack() {
 	# Modify Makefile (CFLAGS and language)
 	sed -i \
 		-e 's:^CFLAGS=:CFLAGS= $(E_CFLAGS) -DUS:' \
+		-e "s:^LDFLAGS.*$:LDFLAGS+=$(sdl-config --libs):" \
 		Makefile || die "sed failed"
 
 	epatch "${FILESDIR}/${PV}-warnings.patch"

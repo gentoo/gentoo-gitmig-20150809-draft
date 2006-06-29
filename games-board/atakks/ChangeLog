@@ -1,6 +1,10 @@
 # ChangeLog for games-board/atakks
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/atakks/ChangeLog,v 1.6 2006/01/09 00:35:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/atakks/ChangeLog,v 1.7 2006/06/29 19:22:15 wolf31o2 Exp $
+
+  29 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> atakks-1.0.ebuild:
+  Fixed binaries being pre-stripped. Thanks to Tristan Heaven
+  <tristanheaven@gmail.com> for the patch. Closing bug #137747.
 
   09 Jan 2006; Michael Sterrett <mr_bones_@gentoo.org> atakks-1.0.ebuild:
   touchups
