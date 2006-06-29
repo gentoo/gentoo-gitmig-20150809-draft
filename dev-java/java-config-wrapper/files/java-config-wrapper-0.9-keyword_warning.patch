@@ -1,0 +1,14 @@
+diff -ru java-config-wrapper-0.9-orig/src/shell/java-check-environment java-config-wrapper-0.9/src/shell/java-check-environment
+--- java-config-wrapper-0.9-orig/src/shell/java-check-environment	2006-06-26 16:47:58.000000000 -0400
++++ java-config-wrapper-0.9/src/shell/java-check-environment	2006-06-29 15:15:42.000000000 -0400
+@@ -83,6 +83,10 @@
+ 		qeerror "You must then update your VMs to Generation-2 by running:"
+ 		qecho "# emerge -atv ${packages_to_merge}"
+ 		qecho
++        qeerror "If you've done this already, but java-check-environment"
++        qeerror "still prompts you to emerge the same things, be sure that"
++        qeerror "you have the latest version of each package unmasked and"
++        qeerror "keyworded properly."
+ 
+ 	fi
+ 

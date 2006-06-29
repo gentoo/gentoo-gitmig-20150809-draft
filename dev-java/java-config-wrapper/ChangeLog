@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/java-config-wrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.6 2006/06/27 15:15:28 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.7 2006/06/29 20:10:24 nichoj Exp $
+
+*java-config-wrapper-0.9-r5 (29 Jun 2006)
+
+  29 Jun 2006; Joshua Nichols <jnichols@gentoo.org>
+  +files/java-config-wrapper-0.9-keyword_warning.patch,
+  -java-config-wrapper-0.9-r4.ebuild, +java-config-wrapper-0.9-r5.ebuild:
+  Updated messages displayed during java-check-environment.
 
 *java-config-wrapper-0.9-r4 (27 Jun 2006)
 
