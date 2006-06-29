@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libksba
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.48 2006/06/10 09:20:40 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.49 2006/06/29 22:15:00 robbat2 Exp $
+
+*libksba-0.9.15 (29 Jun 2006)
+
+  29 Jun 2006; Robin H. Johnson <robbat2@gentoo.org> +libksba-0.9.15.ebuild:
+  Version bump, upstream broke the BER decoder, and this broke gnupg-1.9*.
 
   10 Jun 2006; Michael Hanselmann <hansmi@gentoo.org> libksba-0.9.14.ebuild:
   Stable on ppc.
