@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/xye-0.7.6.ebuild,v 1.2 2006/05/20 09:25:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/xye-0.7.6.ebuild,v 1.3 2006/06/29 16:20:23 wolf31o2 Exp $
 
-inherit eutils games
+inherit autotools eutils games
 
 DESCRIPTION="Free version of the classic game Kye"
 HOMEPAGE="http://xye.sourceforge.net/"
@@ -28,7 +28,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	aclocal && automake -a -c && autoconf || die "autotools failed"
+	sed -i '/^xye_LDFLAGS/d' Makefile.am || die "sed failed"
+	eautoreconf
 }
 
 src_install() {
