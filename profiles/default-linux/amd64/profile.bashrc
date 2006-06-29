@@ -73,17 +73,17 @@ if [[ ${EBUILD_PHASE} == "setup" ]]; then
 	for flag in "${BAD_FLAGS[@]}"; do
 		if bashrc_has ${flag} ${CFLAGS}; then
 			trigger=1
-			ewarn "Your CFLAGS contain(s) \"${flag}\" which can break packages."
+			eerror "Your CFLAGS contain(s) \"${flag}\" which can break packages."
 		fi
 		if bashrc_has ${flag} ${CXXFLAGS}; then
 			trigger=1
-			ewarn "Your CXXFLAGS contain(s) \"${flag}\" which can break packages."
+			eerror "Your CXXFLAGS contain(s) \"${flag}\" which can break packages."
 		fi
 	done
 	if [[ ${trigger} ]]; then
-		ewarn ""
-		ewarn "Before you file a bug please remove these flags and "
-		ewarn "re-compile the package in question as well as all its dependencies"
+		eerror ""
+		eerror "Before you file a bug please remove these flags and "
+		eerror "re-compile the package in question as well as all its dependencies"
 		sleep 5
 	fi
 
