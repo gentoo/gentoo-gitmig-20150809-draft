@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.12.7.ebuild,v 1.11 2006/03/15 00:47:04 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.12.7.ebuild,v 1.12 2006/06/29 13:58:21 dsd Exp $
 
 inherit eutils multilib gnome2
 
@@ -50,8 +50,9 @@ pkg_setup() {
 	if use nsplugin && ( \
 		( has_version net-libs/gecko-sdk && \
 		  built_with_use net-libs/gecko-sdk mozsvg ) || \
-		( has_version www-client/mozilla-firefox && \
+		( has_version '<www-client/mozilla-firefox-1.5-r4' && \
 		  built_with_use www-client/mozilla-firefox mozsvg ) || \
+		( has_version '>=www-client/mozilla-firefox-1.5-r4' ) || \
 		( has_version www-client/mozilla && \
 		  built_with_use www-client/mozilla mozsvg ) ); then
 
