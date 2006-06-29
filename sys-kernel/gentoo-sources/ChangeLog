@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.296 2006/06/20 17:35:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.297 2006/06/29 19:24:47 gustavoz Exp $
+
+  29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gentoo-sources-2.6.16-r10.ebuild, gentoo-sources-2.6.17.ebuild:
+  Stable on sparc, run for the hills
 
   20 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   gentoo-sources-2.6.17.ebuild:
