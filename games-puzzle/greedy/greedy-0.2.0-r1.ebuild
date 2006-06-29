@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/greedy-0.2.0-r1.ebuild,v 1.6 2004/07/01 05:24:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/greedy-0.2.0-r1.ebuild,v 1.7 2006/06/29 15:39:40 wolf31o2 Exp $
 
 inherit games
 
@@ -10,14 +10,14 @@ SRC_URI="http://www.kotinet.com/juhamattin/linux/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="virtual/libc
 	sys-libs/ncurses"
 
 src_compile() {
-	emake FLAGS="${CFLAGS}" || die "emake failed"
+	emake FLAGS="${CFLAGS}" STRIP=ls || die "emake failed"
 }
 
 src_install() {
@@ -31,5 +31,5 @@ src_install() {
 
 	prepgamesdirs
 	# We need to set the permissions correctly
-	chmod 664 "${D}/${GAMES_STATEDIR}/greedy.scores" || die "chmod failed"
+	fperms 664 "${GAMES_STATEDIR}/greedy.scores" || die "fperms failed"
 }
