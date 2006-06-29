@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/sdlsasteroids
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/ChangeLog,v 1.6 2005/05/31 20:58:23 cryos Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/ChangeLog,v 1.7 2006/06/29 15:22:02 wolf31o2 Exp $
+
+  29 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  sdlsasteroids-3.0.1.ebuild:
+  Fixed binaries being pre-stripped. Thanks to Tristan Heaven
+  <tristanheaven@gmail.com> for the patch. Closing bug #137674.
 
   31 May 2005; Marcus D. Hanwell <marcus@gentoo.org>
   sdlsasteroids-3.0.1.ebuild:

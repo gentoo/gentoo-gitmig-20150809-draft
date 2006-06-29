@@ -1,16 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+DIST SDLSasteroids-3.0.1.tar.gz 531781
+DIST sasteroids-3.0.tar.gz 566287
+EBUILD sdlsasteroids-3.0.1.ebuild 1176 RMD160 84ace6dfa44aa2afaa679e84d67ca6168b52e115 SHA1 be92d2e67c7e8ef518607532637867054b2fb380 SHA256 edd4bfa923dcf753014ad5bd9bc05655da5ce847132b8741172c37bfc1d3db6d
+MD5 1b0381372e96365cae88ffb1db9c664c sdlsasteroids-3.0.1.ebuild 1176
+RMD160 84ace6dfa44aa2afaa679e84d67ca6168b52e115 sdlsasteroids-3.0.1.ebuild 1176
+SHA256 edd4bfa923dcf753014ad5bd9bc05655da5ce847132b8741172c37bfc1d3db6d sdlsasteroids-3.0.1.ebuild 1176
+EBUILD sdlsasteroids-3.0.ebuild 1188 RMD160 d252d6f7fe8b2f854df0441b1af5661aefa57be0 SHA1 50621d133532e8b7f4ce7b8a4eedcdb8389e24eb SHA256 cbde1af21818f02967ef20a13fcccd9e5a27078ca385f80caffb0e5d559a82f8
 MD5 2b26f4ec9444d9667e324b56fe49b1f9 sdlsasteroids-3.0.ebuild 1188
-MD5 959f3d1823e366b2ba8e071fc96bc916 ChangeLog 1106
+RMD160 d252d6f7fe8b2f854df0441b1af5661aefa57be0 sdlsasteroids-3.0.ebuild 1188
+SHA256 cbde1af21818f02967ef20a13fcccd9e5a27078ca385f80caffb0e5d559a82f8 sdlsasteroids-3.0.ebuild 1188
+MISC ChangeLog 1320 RMD160 70e583b48f8a5d5733a8c830fa5bf855ee457d5a SHA1 670708e192e10fb7c0425657e045bd2d28c015cd SHA256 b642e5c0cd9fc0f9880a91eeea9958e7321f909d3b2ca1a09cccffffe9b47124
+MD5 755a6e0f491c21685d92aae408a2b0e8 ChangeLog 1320
+RMD160 70e583b48f8a5d5733a8c830fa5bf855ee457d5a ChangeLog 1320
+SHA256 b642e5c0cd9fc0f9880a91eeea9958e7321f909d3b2ca1a09cccffffe9b47124 ChangeLog 1320
+MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 3c3aaa9f744a7d735d30601fd15a9f79 sdlsasteroids-3.0.1.ebuild 1153
-MD5 c86a258d418bf42aab1af60f31635fb1 files/digest-sdlsasteroids-3.0.1 71
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
 MD5 10d43bd02238bad6d222f9cf78e78b08 files/digest-sdlsasteroids-3.0 66
+RMD160 7eb259f015d1d17857c1c550210872bc01fd6a8b files/digest-sdlsasteroids-3.0 66
+SHA256 836c7c584b11ebc0553cf82746569ae9f96e213df9279f45bcdcde5774ea9e0e files/digest-sdlsasteroids-3.0 66
+MD5 c86a258d418bf42aab1af60f31635fb1 files/digest-sdlsasteroids-3.0.1 71
+RMD160 b274c6bf843978074553f2cde7d3287fb21a2e7b files/digest-sdlsasteroids-3.0.1 71
+SHA256 ded2f629c5d9661128f4d40a1d00ab18ede204be56e5ad91b114896f4bfba3df files/digest-sdlsasteroids-3.0.1 71
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFCnNAbntT9W3vfTuoRAqOTAJ4g4S2lhADtSbIg5i++TRlM4UBNKACfZxGb
-KBkG3aecwkyjPxhBV1IC64g=
-=nKJ6
+iD8DBQFEo/AkkT4lNIS36YERAgsAAJsF9dSSvQNkqiYri1VgwaRgStS6+gCeLQci
+NQO3dpPFr1An8blulYRYwLU=
+=65IQ
 -----END PGP SIGNATURE-----
