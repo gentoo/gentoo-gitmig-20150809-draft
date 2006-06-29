@@ -1,10 +1,10 @@
 # ChangeLog for sys-fs/lufs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.24 2006/06/29 07:56:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.25 2006/06/29 07:57:42 genstef Exp $
 
   29 Jun 2006; Stefan Schweizer <genstef@gentoo.org> lufs-0.9.7-r3.ebuild:
   remove version from auto[conf,make} depend, thanks to Mike Auty
-  <ikelos@gentoo.org> in bug 138198, thanks to padde in irc for ppointing out
+  <ikelos@gentoo.org> in bug 138198, thanks to padde in irc for pointing out
 
   20 Feb 2005; Stefan Schweizer <genstef@gentoo.org>
   -files/gentoo-gcc332fix-0.9.7.patch, -files/lufs-0.7.0-init,
