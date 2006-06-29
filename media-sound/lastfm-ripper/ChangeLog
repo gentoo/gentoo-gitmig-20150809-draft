@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/lastfm-ripper
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-ripper/ChangeLog,v 1.1 2006/06/29 04:07:24 pclouds Exp $
+
+*lastfm-ripper-1.2.1 (29 Jun 2006)
+
+  29 Jun 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  +files/CoverOutputDirectoryFix.patch, +files/UnescapedVariableFix.patch,
+  +metadata.xml, +lastfm-ripper-1.2.1.ebuild:
+  Initial version from John <acocaracha@gmail.com>. Closing #136147
+

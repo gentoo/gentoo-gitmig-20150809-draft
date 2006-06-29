@@ -1,0 +1,11 @@
+--- last.fm-ripper	2006-06-09 01:11:27.000000000 -0400
++++ last.fm-ripper	2006-06-09 01:17:08.000000000 -0400
+@@ -189,7 +189,7 @@
+       } ($track_info{'albumcover_small'},$track_info{'albumcover_medium'},$track_info{'albumcover_large'});
+       if ($cover ne '')
+       {
+-        $cover_file = "$track_info{'artist'}-$track_info{'album'}-$track_info{'track'}.jpg";
++        $cover_file = $output_directory."/"."$track_info{'artist'}-$track_info{'album'}-$track_info{'track'}.jpg";
+         if(system("wget -O \"$cover_file\" $cover > /dev/null 2>&1 &")>0){print "failed to retrieve cover art\n"};
+         $cover = '';
+         }

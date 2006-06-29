@@ -1,0 +1,11 @@
+--- last.fm-ripper	2006-03-04 12:45:40.000000000 -0500
++++ last.fm-ripper	2006-06-09 01:11:27.000000000 -0400
+@@ -38,7 +38,7 @@
+ Getopt::Long::Configure("pass_through");
+ GetOptions(  'help|?' => \$help,
+              'debug|d' => \$debug,
+-             'no_covers|n' => $no_covers,
++             'no_covers|n' => \$no_covers,
+              'artist|a=s' => \$artist,
+              'username|u=s' => \$username,
+              'password|p=s' => \$password,
