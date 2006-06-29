@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-wnn
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wnn/ChangeLog,v 1.7 2005/04/16 13:05:18 usata Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wnn/ChangeLog,v 1.8 2006/06/29 00:37:34 usata Exp $
+
+*scim-wnn-1.0.0 (29 Jun 2006)
+
+  29 Jun 2006; Mamoru KOMACHI <usata@gentoo.org> +scim-wnn-1.0.0.ebuild:
+  Version bumped.
 
   16 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> -scim-wnn-0.2.2.ebuild,
   -scim-wnn-0.2.3.ebuild, scim-wnn-0.2.4.ebuild:
