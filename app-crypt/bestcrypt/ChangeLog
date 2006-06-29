@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.43 2006/05/29 09:07:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.44 2006/06/29 12:56:17 dragonheart Exp $
+
+  29 Jun 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/bestcrypt-1.6_p5-gcc41.patch, bestcrypt-1.6_p5.ebuild:
+  clean up hardened flag filtering for gcc41 compatability bug #137146 thanks
+  to Craig
 
   29 May 2006; Daniel Black <dragonheart@gentoo.org>
   -files/bestcrypt-1.5_p10-makefile_fix.patch,

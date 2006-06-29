@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p5.ebuild,v 1.2 2006/05/29 00:30:09 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p5.ebuild,v 1.3 2006/06/29 12:56:17 dragonheart Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs
 
@@ -38,6 +38,7 @@ MODULE_NAMES="bc(block:"${S}"/mod)
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${P}-makefile_fix.patch
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 	epatch "${FILESDIR}"/${PN}-1.6_p2-path.patch
 
 	if use x86;
@@ -56,7 +57,7 @@ src_compile() {
 	emake -C src CC="$(tc-getCC)"  EXTRA_CFLAGS="${CFLAGS} -I../kgsha256" || die "bctool compile failed"
 
 	# Don't put stack protection in the kernel - it just is bad
-	append-flags -fno-stack-protector-all -fno-stack-protector
+	_filter-hardened -fstack-protector-all -fstack-protector
 
 	emake  -C mod SYMSRC=bc_dev${KV_MAJOR}${KV_MINOR}.c bc_dev.ver EXTRA_CFLAGS="${CFLAGS}" \
 		|| die "compile failed"

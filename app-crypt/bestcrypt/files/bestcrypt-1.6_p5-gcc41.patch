@@ -1,0 +1,22 @@
+--- bcrypt/kgsha/Makefile	2006-06-29 22:51:13.000000000 +1000
++++ /tmp/bcrypt-nowarnerror/kgsha/Makefile	2006-06-29 22:40:16.000000000 +1000
+@@ -19,7 +19,7 @@
+ LD = ld -d -shared
+ 
+ CPP=g++
+-CPPFLAGS = -fPIC -Wall -Werror -fno-strength-reduce -I../include -g
++CPPFLAGS = -fPIC -Wall -fno-strength-reduce -I../include -g
+ CPPFLAGS += $(EXTRA_CXXFLAGS)
+ 
+ TARGET = libkgsha.so
+--- bcrypt/kgsha256/Makefile	2006-06-29 22:51:13.000000000 +1000
++++ /tmp/bcrypt-nowarnerror/kgsha256/Makefile	2006-06-29 22:40:30.000000000 +1000
+@@ -19,7 +19,7 @@
+ LD = ld -d -shared
+ 
+ CPP=g++
+-CPPFLAGS = -fPIC -Wall -Werror -fno-strength-reduce -I../include -g
++CPPFLAGS = -fPIC -Wall -fno-strength-reduce -I../include -g
+ CPPFLAGS += $(EXTRA_CXXFLAGS)
+ 
+ TARGET = libkgsha256.so
