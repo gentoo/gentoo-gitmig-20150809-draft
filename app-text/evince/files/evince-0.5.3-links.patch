@@ -1,0 +1,12 @@
+diff --exclude-from=/home/dang/.diffrc -u -ruN evince-0.5.3.orig/shell/ev-jobs.c evince-0.5.3/shell/ev-jobs.c
+--- evince-0.5.3.orig/shell/ev-jobs.c	2006-05-02 23:44:28.000000000 -0400
++++ evince-0.5.3/shell/ev-jobs.c	2006-06-29 14:33:58.000000000 -0400
+@@ -271,7 +271,7 @@
+ 				  G_CALLBACK (render_finished_cb), job);
+ 	} else {
+ 		job->pixbuf = ev_document_render_pixbuf (EV_JOB (job)->document, job->rc);
+-		if (job->include_links)
++		if (job->include_links && EV_IS_DOCUMENT_LINKS (EV_JOB (job)->document))
+ 			job->link_mapping =
+ 				ev_document_links_get_links (EV_DOCUMENT_LINKS (EV_JOB (job)->document),
+ 							     job->rc->page);
