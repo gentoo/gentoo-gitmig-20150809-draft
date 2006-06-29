@@ -131,7 +131,7 @@ scan_nondevfs() {
 }
 
 start() {
-	if [[ -e /dev/.devfs ]] && [[ -d /dev/ide ]] ; then
+	if [[ -e /dev/.devfsd ]] && [[ -d /dev/ide ]] ; then
 		scan_devfs
 	else
 		scan_nondevfs
