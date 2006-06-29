@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.2-r1.ebuild,v 1.3 2006/06/25 10:34:25 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.2-r1.ebuild,v 1.4 2006/06/29 08:18:51 keri Exp $
 
 inherit autotools eutils versionator
 
@@ -16,7 +16,7 @@ KEYWORDS="~ppc ~x86"
 IUSE="debug doc qt3 qt4 threads"
 
 DEPEND="qt3? ( =x11-libs/qt-3* )
-	qt4? ( >=x11-libs/qt-4* )"
+	qt4? ( >=x11-libs/qt-4.1.0 )"
 
 S="${WORKDIR}"/${MY_P}
 
