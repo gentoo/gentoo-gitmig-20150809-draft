@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.2.ebuild,v 1.2 2006/05/13 17:01:31 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.2.ebuild,v 1.3 2006/06/29 21:02:07 gmsoft Exp $
 
 inherit webapp depend.php
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.eGroupWare.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}-1.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="gd jpgraph ldap mysql postgres"
 
 RDEPEND="
