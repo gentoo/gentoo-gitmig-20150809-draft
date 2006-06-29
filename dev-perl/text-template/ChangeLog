@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/text-template
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-template/ChangeLog,v 1.10 2005/09/17 03:12:19 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-template/ChangeLog,v 1.11 2006/06/29 19:35:44 gustavoz Exp $
+
+  29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  text-template-1.44.ebuild:
+  Stable on hppa
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> ChangeLog:
   Mark 1.44 stable on ia64
