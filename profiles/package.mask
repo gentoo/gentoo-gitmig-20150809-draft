@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5562 2006/06/28 19:04:40 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5563 2006/06/29 14:48:14 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -941,18 +941,11 @@ games-rpg/nwn-data
 =games-rpg/nwn-cep-1.52-r1
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (19 Sep 2005)
-# Adding new GGZ ebuilds to portage.  I am masking them all
-# here until they can all be added and will unmask them all
-# at once since some of them need a little work.
->=dev-games/ggz-client-libs-0.0.11
->=dev-games/libggz-0.0.11
->=games-board/ggz-gnome-client-0.0.11
->=games-board/ggz-gtk-client-0.0.11
->=games-board/ggz-gtk-games-0.0.11
+# Adding new GGZ ebuilds to portage.  These are still masked simply because I
+# have been unable to make newer versions that actually work, and I'm not a KDE
+# guy.
 >=games-board/ggz-kde-client-0.0.11
 >=games-board/ggz-kde-games-0.0.11
->=games-board/ggz-sdl-games-0.0.11
->=games-board/ggz-txt-client-0.0.11
 
 # Gregorio Guidi <greg_g@gentoo.org> (19 Sep 2005)
 # Qt-3.3.5 causes a lot of compilation failures.
