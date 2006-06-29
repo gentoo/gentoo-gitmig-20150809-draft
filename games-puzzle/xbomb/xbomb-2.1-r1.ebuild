@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/xbomb-2.1-r1.ebuild,v 1.13 2006/02/17 22:35:49 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/xbomb-2.1-r1.ebuild,v 1.14 2006/06/29 16:17:57 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -19,12 +19,13 @@ src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${P}.diff
 	sed -i \
+		-e '/strip/d' \
 		-e "/^CFLAGS/ { s:=.*:=${CFLAGS}: }" \
 		-e "s:/usr/bin:${GAMES_BINDIR}:" \
 		"${S}"/Makefile \
 		|| die "sed Makefile failed"
 	sed -i \
-		-e "s:/var/tmp:/var/games:g" \
+		-e "s:/var/tmp:${GAMES_STATEDIR}/${PN}:g" \
 		"${S}"/hiscore.c \
 		|| die "sed hiscore.c failed"
 }
@@ -32,11 +33,8 @@ src_unpack() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc README LSM
-	# FIXME: need to use GAMES_STATEDIR here
-	dodir /var/games
-	touch ${D}/var/games/xbomb{3,4,6}.hi || die "touch failed"
-	fperms 664 /var/games/xbomb{3,4,6}.hi || die
-
-	prepall
+	dodir "${GAMES_STATEDIR}"/${PN}
+	touch "${D}/${GAMES_STATEDIR}"/${PN}/${PN}{3,4,6}.hi || die "touch failed"
+	fperms 660 "${GAMES_STATEDIR}"/${PN}/${PN}{3,4,6}.hi || die "fperms failed"
 	prepgamesdirs
 }
