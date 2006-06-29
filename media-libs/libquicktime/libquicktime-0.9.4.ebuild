@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.4.ebuild,v 1.10 2005/12/26 12:34:58 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.4.ebuild,v 1.11 2006/06/29 18:09:29 flameeyes Exp $
 
 inherit libtool eutils
 
@@ -28,7 +28,7 @@ DEPEND=">=sys-apps/sed-4.0.5
 PROVIDE="virtual/quicktime"
 
 pkg_setup() {
-	if has_version x11-base/xorg-x11 && ! built_with_use x11-base/xorg-x11 opengl; then
+	if has_version '=x11-base/xorg-x11-6*' && ! built_with_use x11-base/xorg-x11 xv; then
 		die "You need xv support to compile ${PN}."
 	fi
 }
@@ -36,10 +36,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-cflags.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-cflags.patch"
 
-	sed -i "s:\(have_libavcodec=\)true:\1false:g" configure.ac
+	sed -i -e "s:\(have_libavcodec=\)true:\1false:g" configure.ac
 
 	ebegin "Regenerating configure script..."
 	autoconf || die
@@ -50,10 +50,10 @@ src_unpack() {
 
 src_compile() {
 	econf --enable-shared \
-	      --enable-static \
-	      $(use_enable mmx) \
-	      $(use_enable gtk) \
-	      $(use_enable ieee1394 firewire)
+		  --enable-static \
+		  $(use_enable mmx) \
+		  $(use_enable gtk) \
+		  $(use_enable ieee1394 firewire)
 
 	emake -j1 || die "make failed"
 }

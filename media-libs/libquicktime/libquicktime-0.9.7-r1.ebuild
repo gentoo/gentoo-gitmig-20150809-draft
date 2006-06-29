@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.9 2006/04/02 11:15:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.10 2006/06/29 18:09:29 flameeyes Exp $
 
 inherit libtool eutils autotools
 
@@ -35,7 +35,7 @@ DEPEND=">=sys-apps/sed-4.0.5
 PROVIDE="virtual/quicktime"
 
 pkg_setup() {
-	if has_version x11-base/xorg-x11 && ! built_with_use x11-base/xorg-x11 opengl; then
+	if has_version '=x11-base/xorg-x11-6*' && ! built_with_use x11-base/xorg-x11 xv; then
 		die "You need xv support to compile ${PN}."
 	fi
 }
@@ -43,11 +43,12 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	sed -i "s:\(have_libavcodec=\)true:\1false:g" configure.ac
+	cd "${S}"
+	sed -i -e "s:\(have_libavcodec=\)true:\1false:g" configure.ac
 	epatch "${FILESDIR}/${P}-dv.patch"
+	epatch "${FILESDIR}/${P}-unrice.patch"
 
-	eautoconf
+	AT_M4DIR="m4" eautoreconf
 	elibtoolize
 }
 
@@ -58,13 +59,13 @@ src_compile() {
 		$(use_enable ieee1394 firewire) \
 		$(use_with dv libdv) \
 		$(use_with X x) \
-		--without-cpuflags
+		--without-cpuflags || die "econf failed"
 
-	emake || die "make failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# Compatibility with software that uses quicktime prefix, but
 	# don't do that when building for Darwin/MacOS

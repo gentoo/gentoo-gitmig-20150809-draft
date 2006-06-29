@@ -1,0 +1,27 @@
+Index: libquicktime-0.9.7/configure.ac
+===================================================================
+--- libquicktime-0.9.7.orig/configure.ac
++++ libquicktime-0.9.7/configure.ac
+@@ -581,11 +581,11 @@ dnl
+ dnl Build CFLAGS
+ dnl
+ 
+-COMMON_CFLAGS="-finline-functions -Wall -Winline"
++COMMON_CFLAGS="-Wall -Winline"
+ 
+ dnl Optimizing flags
+ 
+-LQT_OPT_CFLAGS($host_cpu, ["-O3 -funroll-all-loops -fomit-frame-pointer"])
++LQT_OPT_CFLAGS($host_cpu)
+ 
+ AH_TEMPLATE([NDEBUG],
+             [Causes debug code to e removed])
+@@ -594,7 +594,7 @@ if test x$LQT_DEBUG != xtrue; then
+ AC_DEFINE(NDEBUG)
+ fi
+ 
+-CFLAGS="$OPT_CFLAGS $COMMON_CFLAGS"
++CFLAGS="$CFLAGS $OPT_CFLAGS $COMMON_CFLAGS"
+ 
+ # -L is required so that linker can find libquicktime when DESTDIR is used.
+ # libtool bug, documented at: http://www.geocrawler.com/mail/thread.php3?subject=install+phase+fails&list=404
