@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.7 2005/02/20 16:24:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.8 2006/06/29 07:56:43 genstef Exp $
 
 inherit eutils
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
 IUSE="debug"
 DEPEND="sys-fs/lufis
-		=sys-devel/automake-1.7*
-		=sys-devel/autoconf-2.5*"
+		sys-devel/automake
+		sys-devel/autoconf"
 
 src_unpack() {
 	unpack ${A}
