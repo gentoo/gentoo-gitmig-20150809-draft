@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.54 2006/06/30 07:45:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.55 2006/06/30 20:09:21 pylon Exp $
+
+  30 Jun 2006; Lars Weiler <pylon@gentoo.org> ChangeLog:
+  Stable on ppc; gcc-4 related; bug #138099.
 
   30 Jun 2006; Markus Rothe <corsair@gentoo.org> musicbrainz-2.1.2.ebuild:
   Stable on ppc64

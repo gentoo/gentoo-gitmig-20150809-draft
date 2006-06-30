@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.54 2006/06/29 18:09:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.55 2006/06/30 20:15:20 pylon Exp $
+
+  30 Jun 2006; Lars Weiler <pylon@gentoo.org> libquicktime-0.9.7-r1.ebuild:
+  Stable on ppc; gcc-4 related; bug #138099.
 
   29 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/libquicktime-0.9.7-unrice.patch, libquicktime-0.9.4.ebuild,

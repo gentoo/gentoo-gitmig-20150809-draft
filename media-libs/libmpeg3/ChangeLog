@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.43 2006/05/03 20:42:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.44 2006/06/30 20:14:01 pylon Exp $
+
+  30 Jun 2006; Lars Weiler <pylon@gentoo.org> libmpeg3-1.5.2-r3.ebuild:
+  Stable on ppc; gcc-4 related; bug #138099.
 
   03 May 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata to list media-video@gentoo.org as maintainer.
