@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.120 2006/06/30 14:20:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.121 2006/06/30 19:21:53 corsair Exp $
+
+  30 Jun 2006; Markus Rothe <corsair@gentoo.org> dbus-0.61-r1.ebuild:
+  Stable on ppc64; bug #137325
 
   30 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> dbus-0.61-r1.ebuild:
   Stable on sparc wrt #137325
