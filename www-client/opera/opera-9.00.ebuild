@@ -1,31 +1,31 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.00.ebuild,v 1.1 2006/06/25 13:49:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.00.ebuild,v 1.2 2006/06/30 18:56:57 carlo Exp $
 
-GCONF_DEBUG="no"
 inherit eutils gnome2
 
 IUSE="qt-static spell gnome"
 
-OPERALNG="en"
 OPERAVER="9.0-20060616"
-OPERAFTPDIR="900/final/${OPERALNG}"
-OPERASUFF="344"
+OPERAFTPDIR="900/final/en"
+OPERASUFF="en"
 
+S="${WORKDIR}/${A/.tar.bz2/}-344"
 
 DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com"
 
+# that's an ugly workaround for the broken src_uri syntax
 OPERA_URI="mirror://opera/linux/${OPERAFTPDIR}/"
 SRC_URI="
-	x86? ( qt-static? ( ${OPERA_URI}i386/static/${PN}-${OPERAVER}.1-static-qt.i386-${OPERALNG}.tar.bz2 ) )
-	x86? ( !qt-static? ( ${OPERA_URI}i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-${OPERALNG}.tar.bz2 ) )
-	amd64? ( qt-static? ( ${OPERA_URI}i386/static/${PN}-${OPERAVER}.1-static-qt.i386-${OPERALNG}.tar.bz2 ) )
-	amd64? ( !qt-static? ( ${OPERA_URI}i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-${OPERALNG}.tar.bz2 ) )
-	sparc? ( ${OPERA_URI}sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-${OPERALNG}.tar.bz2 )
-	ppc? ( ${OPERA_URI}ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-${OPERALNG}.tar.bz2 )"
+	x86? ( qt-static? ( ${OPERA_URI}i386/static/${PN}-${OPERAVER}.1-static-qt.i386-${OPERASUFF}.tar.bz2 ) )
+	x86? ( !qt-static? ( ${OPERA_URI}i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-${OPERASUFF}.tar.bz2 ) )
+	amd64? ( qt-static? ( ${OPERA_URI}i386/static/${PN}-${OPERAVER}.1-static-qt.i386-${OPERASUFF}.tar.bz2 ) )
+	amd64? ( !qt-static? ( ${OPERA_URI}i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-${OPERASUFF}.tar.bz2 ) )
+	sparc? ( ${OPERA_URI}sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-${OPERASUFF}.tar.bz2 )
+	ppc? ( ${OPERA_URI}ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-${OPERASUFF}.tar.bz2 )"
 
-S=${WORKDIR}/${A/.tar.bz2/}-${OPERASUFF}
+# Dependencies may be augmented later (see below).
 DEPEND=">=sys-apps/sed-4
 	amd64? ( sys-apps/setarch )"
 

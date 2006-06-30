@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.48 2006/06/25 13:49:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.49 2006/06/30 18:56:57 carlo Exp $
+
+  30 Jun 2006; Carsten Lohrke <carlo@gentoo.org>
+  files/opera-9.00-install.patch, opera-9.00.ebuild:
+  Version bump. Bug #137634.
 
 *opera-9.00 (25 Jun 2006)
 
