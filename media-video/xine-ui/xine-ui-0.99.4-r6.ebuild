@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.4-r6.ebuild,v 1.1 2006/06/07 19:48:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.4-r6.ebuild,v 1.2 2006/06/30 23:41:50 flameeyes Exp $
 
 inherit eutils toolchain-funcs flag-o-matic autotools
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/xine/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="X nls lirc aalib libcaca readline curl ncurses xinerama vdr"
+IUSE="X nls lirc aalib libcaca readline curl ncurses vdr"
 
 RDEPEND="media-libs/libpng
 	>=media-libs/xine-lib-1.0
@@ -32,7 +32,7 @@ RDEPEND="media-libs/libpng
 			x11-libs/libXv
 			x11-libs/libXtst
 			x11-libs/libXft
-			xinerama? ( x11-libs/libXinerama )
+			x11-libs/libXinerama
 		) virtual/x11 ) )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
@@ -44,7 +44,7 @@ DEPEND="${RDEPEND}
 			x11-proto/xextproto
 			x11-proto/xproto
 			x11-proto/xf86vidmodeproto
-			xinerama? ( x11-proto/xineramaproto )
+			x11-proto/xineramaproto
 		) virtual/x11 ) )"
 
 src_unpack() {
@@ -73,7 +73,6 @@ src_compile() {
 	econf \
 		$(use_enable lirc) \
 		$(use_enable nls) \
-		$(use_enable xinerama) \
 		$(use_enable vdr vdr-keys) \
 		$(use_with X x) \
 		$(use_with aalib) \

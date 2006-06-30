@@ -1,6 +1,11 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.125 2006/06/07 19:48:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.126 2006/06/30 23:41:50 flameeyes Exp $
+
+  30 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xine-ui-0.99.4-r5.ebuild, xine-ui-0.99.4-r6.ebuild:
+  Don't make xinerama optional as the configure does not support
+  --disable-xinerama (yet).
 
 *xine-ui-0.99.4-r6 (07 Jun 2006)
 
