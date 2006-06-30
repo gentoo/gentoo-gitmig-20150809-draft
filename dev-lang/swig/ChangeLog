@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.65 2006/05/22 05:46:19 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.66 2006/06/30 20:23:07 pylon Exp $
+
+  30 Jun 2006; Lars Weiler <pylon@gentoo.org> swig-1.3.25.ebuild:
+  Stable on ppc; gcc-4 related; bug #138099.
 
 *swig-1.3.29 (22 May 2006)
 
