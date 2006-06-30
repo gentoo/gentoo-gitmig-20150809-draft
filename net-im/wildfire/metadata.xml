@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>net-im</herd>
 <maintainer>
-  <email>lostlogic@gentoo.org</email>
-  <description>Original importer and de-facto maintainer</description>
+  <email>humpback@gentoo.org</email>
+  <description>Changed from lostlogic after move from Jive to Wildfire</description>
 </maintainer>
-<longdescription>Jive Messenger is a Java implementation of a complete Jabber
+<longdescription>Wildfire is a Java implementation of a complete Jabber
 server.  It includes a web based administration interface, and conference
 support.</longdescription>
 </pkgmetadata>
