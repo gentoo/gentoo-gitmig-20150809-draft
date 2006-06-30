@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1984 2006/06/30 13:18:19 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1985 2006/06/30 15:38:12 zzam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -146,6 +146,7 @@ app-misc/booh:transcode - Use transcode to extract video thumbnails
 app-misc/lirc:hardware-carrier - The transmitter device generates its clock signal in hardware
 app-misc/lirc:streamzap - add the streamzap driver to lirc
 app-misc/lirc:transmitter - add transmitter support to some lirc-drivers (e.g. serial)
+app-misc/lirc:udev - Enable udev rules file installation
 app-misc/mc:7zip - add support for 7zip archives
 app-misc/note:general - add support for ascii flatfile backend
 app-misc/note:text - add support for text backend
