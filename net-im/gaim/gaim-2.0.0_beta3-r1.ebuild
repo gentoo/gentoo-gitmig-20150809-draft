@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.1 2006/06/25 18:27:45 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.2 2006/06/30 12:19:35 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-module
 
@@ -96,6 +96,14 @@ print_gaim_warning() {
 		einfo
 	else
 		einfo "Note that we are now filtering all unstable flags in C[XX]FLAGS."
+		einfo
+	fi
+
+	if use silc; then
+		einfo "To be able to connect to silc network, you need to run"
+		einfo "\`usermod -c \"comment\"\` as user as which you are running gaim,"
+		einfo "where \"comment\" is either your real name if you want show it"
+		einfo "on silc or any othe not empty string."
 		einfo
 	fi
 	ebeep 5

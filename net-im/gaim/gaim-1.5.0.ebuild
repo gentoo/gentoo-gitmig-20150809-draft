@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.12 2006/06/24 15:34:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.13 2006/06/30 12:19:35 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib perl-module
 
@@ -69,6 +69,10 @@ print_gaim_warning() {
 	ewarn
 	einfo
 	einfo "Note that we are now filtering all unstable flags in C[XX]FLAGS."
+	einfo
+	einfo "In order to connect to the SILC protocol, please run the"
+	einfo "command usermod <yourusername> -c \"yourusername\" where"
+	einfo "yourusername is your user's name on your system."
 	einfo
 	ebeep 5
 	epause 3
