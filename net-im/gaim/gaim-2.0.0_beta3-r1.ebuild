@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.2 2006/06/30 12:19:35 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.3 2006/06/30 15:51:09 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-module
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/gaim/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="audiofile bonjour cjk dbus debug eds gnutls krb4 mono nas nls perl silc spell startup-notification tcltk xscreensaver custom-flags"
+IUSE="audiofile bonjour cjk dbus debug eds gadu gnutls krb4 mono nas nls perl silc spell startup-notification tcltk xscreensaver custom-flags"
 
 RDEPEND="
 	audiofile? ( media-libs/libao
@@ -27,6 +27,7 @@ RDEPEND="
 	nas? ( >=media-libs/nas-1.4.1-r1 )
 	perl? ( >=dev-lang/perl-5.8.2-r1 )
 	spell? ( >=app-text/gtkspell-2.0.2 )
+	gadu?  ( net-libs/libgadu )
 	gnutls? ( net-libs/gnutls )
 	!gnutls? ( >=dev-libs/nss-3.11
 		>=dev-libs/nspr-4.6.1 )
@@ -42,6 +43,7 @@ RDEPEND="
 DEPEND="$RDEPEND
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
+
 
 S="${WORKDIR}/${MY_P}"
 
@@ -119,6 +121,14 @@ pkg_setup() {
 	eerror
 	die "Configure failed"
 	fi
+
+	if use gadu && built_with_use net-libs/libgadu ssl ; then
+	eerror
+	eerror You need to rebuild net-libs/libgadu with USE=-ssl in order
+	eerror enable gadu gadu support in gaim.
+	eerror
+	die "Configure failed"
+	fi
 }
 
 src_unpack() {
@@ -151,6 +161,11 @@ src_compile() {
 		einfo "Disabling SILC protocol"
 		myconf="${myconf} --with-silc-includes=."
 		myconf="${myconf} --with-silc-libs=."
+	fi
+
+	if ! use gadu ; then
+		myconf="${myconf} --with-gadu-includes=."
+		myconf="${myconf} --with-gadu-libs=."
 	fi
 
 	if use gnutls ; then
