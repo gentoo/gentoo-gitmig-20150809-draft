@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.19 2006/05/18 14:22:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.20 2006/06/30 21:01:34 spyderous Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -31,3 +31,7 @@ USE="${USE} cli pcre reflection session spl"
 # 2006/04/21 - Donnie Berkholz <spyderous@gentoo.org>
 # Modular X: Build the Xorg X server by default
 USE="${USE} xorg"
+
+# 2006/06/30 - Donnie Berkholz <spyderous@gentoo.org>
+# Sane defaults for input drivers
+INPUT_DEVICES="keyboard mouse evdev"

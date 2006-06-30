@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/make.defaults,v 1.3 2006/06/27 15:32:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/make.defaults,v 1.4 2006/06/30 21:01:34 spyderous Exp $
 
 ABI=amd64
 
@@ -14,4 +14,3 @@ STAGE1_USE="nptl nptlonly unicode"
 USE="cups gdbm gpm libg++ nptl nptlonly ppds udev unicode"
 
 # By default, we enable keyboard and mouse support for the modular X.Org server.
-INPUT_DEVICES="evdev mouse keyboard"

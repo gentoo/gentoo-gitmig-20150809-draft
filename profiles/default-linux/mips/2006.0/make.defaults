@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2006.0/make.defaults,v 1.6 2006/06/21 02:56:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2006.0/make.defaults,v 1.7 2006/06/30 21:01:34 spyderous Exp $
 
 ARCH="mips"
 
@@ -15,4 +15,3 @@ CXXFLAGS=${CFLAGS}
 ACCEPT_KEYWORDS="mips"
 
 USE="readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips -multilib nomultilib -n32 -n64"
-INPUT_DEVICES="keyboard mouse evdev"
