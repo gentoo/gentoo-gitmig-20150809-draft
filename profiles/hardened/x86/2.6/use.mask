@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.9 2006/06/27 20:06:24 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.10 2006/06/30 21:58:24 flameeyes Exp $
 
 
 altivec
@@ -14,14 +14,10 @@ altivec
 -win32codecs
 -real
 
-# nVidia XvMC support
--nvidia
-
 # Copied from default-linux/x86 2006-04-02; bug #128490
 # Modular X: unmask for architectures on which they are available
 -input_devices_synaptics
 -input_devices_vmmouse
--video_cards_nvidia
 -video_cards_fglrx
 -video_cards_vmware
 # Modular X: mask for architectures on which they aren't available

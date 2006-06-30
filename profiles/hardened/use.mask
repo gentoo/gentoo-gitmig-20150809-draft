@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.9 2006/06/03 18:32:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.10 2006/06/30 21:58:24 flameeyes Exp $
 
 # uclibc only in uclibc profiles.
 uclibc
@@ -13,3 +13,6 @@ emul-linux-x86
 
 # suggested by GMsoft
 pbbuttonsd
+
+# nvidia-glx is masked, this has to be too
+video_cards_nvidia

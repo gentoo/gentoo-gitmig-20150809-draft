@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.10 2006/06/13 13:29:25 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.11 2006/06/30 21:58:24 flameeyes Exp $
 
 # 2006/06/13 - Danny van Dyk <kugelfang@gentoo.org>
 # Mask clvm on amd64, as it isn't keyworded at all.
@@ -18,10 +18,6 @@ drac
 # this flag makes media-gfx/inkscape dep on media-gfx/pstoedit
 # which deps on libemf
 plugin
-
-# 2005/09/14 - Diego Pettenò <flameeyes@gentoo.org>
-# nVidia XvMC support works on amd64
--nvidia
 
 # 2005/12/01 - Daniel Gryniewicz <dang@gentoo.org>
 # There is now a kqemu that works and is stable on amd64
@@ -43,7 +39,6 @@ video_cards_nsc
 -input_devices_synaptics
 -input_devices_vmmouse
 -input_devices_wacom
--video_cards_nvidia
 -video_cards_fglrx
 -video_cards_vmware
 
