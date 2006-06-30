@@ -6,7 +6,7 @@
 # Licensed under the GNU General Public License, v2.
 #
 
-[[ -z ${BOOTCLASSPATH} ]] && export BOOTCLASSPATH=$(java-config --runtime)
+[[ -z ${BOOTCLASSPATH} ]] && export BOOTCLASSPATH=$(java-config-2 --runtime)
 
 if [[ -z "${BOOTCLASSPATH}" ]]; then
 	echo "!!! Could not find runtime classes" > /dev/stderr

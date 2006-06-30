@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jikes
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.41 2006/06/25 01:12:45 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.42 2006/06/30 23:38:23 nichoj Exp $
+
+*jikes-1.22-r13 (30 Jun 2006)
+
+  30 Jun 2006; Joshua Nichols <jnichols@gentoo.org> files/jikes,
+  -jikes-1.22-r12.ebuild, +jikes-1.22-r13.ebuild:
+  Fixed wrapper script to address bug #138281
 
   25 Jun 2006; <nichoj@gentoo.org> +files/compiler-settings, +files/jikes:
   Revision bump to add support for new Java system.
