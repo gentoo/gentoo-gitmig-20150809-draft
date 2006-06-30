@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.8.ebuild,v 1.8 2006/05/07 20:31:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.8.ebuild,v 1.9 2006/06/30 00:35:52 lu_zero Exp $
 
 inherit eutils python multilib
 
@@ -34,7 +34,7 @@ src_unpack() {
 }
 
 src_compile() {
-	scons prefix="/usr" || die
+	scons ${MAKEOPTS} prefix="/usr" || die
 }
 
 src_install() {
