@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.30 2006/06/30 22:26:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.31 2006/06/30 22:27:02 spyderous Exp $
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; -xproto-7.0.4.ebuild:
+  Pull old ebuild.
 
   30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; xproto-7.0.5.ebuild:
   ppc/sparc/mips/alpha stable
