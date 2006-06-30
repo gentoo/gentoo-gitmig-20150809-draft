@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/fontcacheproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/fontcacheproto/ChangeLog,v 1.23 2006/06/30 08:37:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/fontcacheproto/ChangeLog,v 1.24 2006/06/30 16:04:17 wolf31o2 Exp $
+
+  30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  fontcacheproto-0.1.2.ebuild:
+  Stable on amd64.
 
   30 Jun 2006; Markus Rothe <corsair@gentoo.org>
   fontcacheproto-0.1.2.ebuild:

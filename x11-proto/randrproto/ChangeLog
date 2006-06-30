@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/randrproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/randrproto/ChangeLog,v 1.21 2006/06/30 08:41:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/randrproto/ChangeLog,v 1.22 2006/06/30 16:07:12 wolf31o2 Exp $
+
+  30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  randrproto-1.1.2.ebuild:
+  Stable on amd64.
 
   30 Jun 2006; Markus Rothe <corsair@gentoo.org> randrproto-1.1.2.ebuild:
   Stable on ppc64

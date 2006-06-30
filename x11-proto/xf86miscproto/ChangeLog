@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xf86miscproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86miscproto/ChangeLog,v 1.19 2006/06/30 08:51:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86miscproto/ChangeLog,v 1.20 2006/06/30 16:13:03 wolf31o2 Exp $
+
+  30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  xf86miscproto-0.9.2.ebuild:
+  Stable on amd64.
 
   30 Jun 2006; Markus Rothe <corsair@gentoo.org> xf86miscproto-0.9.2.ebuild:
   Stable on ppc64

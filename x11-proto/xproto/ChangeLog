@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.25 2006/06/30 08:29:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.26 2006/06/30 16:15:00 wolf31o2 Exp $
+
+  30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> xproto-7.0.7.ebuild:
+  Stable on amd64.
 
   30 Jun 2006; Markus Rothe <corsair@gentoo.org> xproto-7.0.5.ebuild:
   Stable on ppc64
