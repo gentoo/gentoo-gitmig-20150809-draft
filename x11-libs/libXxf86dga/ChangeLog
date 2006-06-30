@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXxf86dga
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/ChangeLog,v 1.23 2006/06/30 09:32:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/ChangeLog,v 1.24 2006/06/30 15:55:09 wolf31o2 Exp $
+
+  30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  libXxf86dga-1.0.1.ebuild:
+  Stable on amd64.
 
   30 Jun 2006; Markus Rothe <corsair@gentoo.org> libXxf86dga-1.0.1.ebuild:
   Stable on ppc64

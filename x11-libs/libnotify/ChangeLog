@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.9 2006/06/26 20:07:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.10 2006/06/30 15:37:12 wolf31o2 Exp $
+
+  30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  libnotify-0.4.2.ebuild:
+  Stable on amd64.
 
   26 Jun 2006; Markus Rothe <corsair@gentoo.org> libnotify-0.4.2.ebuild:
   Added ~ppc64; bug #136906

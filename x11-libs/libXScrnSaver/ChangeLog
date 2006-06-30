@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXScrnSaver
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXScrnSaver/ChangeLog,v 1.27 2006/06/30 09:28:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXScrnSaver/ChangeLog,v 1.28 2006/06/30 15:52:05 wolf31o2 Exp $
+
+  30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  libXScrnSaver-1.1.0.ebuild:
+  Stable on amd64.
 
   30 Jun 2006; Markus Rothe <corsair@gentoo.org> libXScrnSaver-1.1.0.ebuild:
   Stable on ppc64
