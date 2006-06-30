@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.257 2006/06/27 22:31:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.258 2006/06/30 03:12:05 vapier Exp $
+
+*binutils-2.16.1-r3 (30 Jun 2006)
+
+  30 Jun 2006; Mike Frysinger <vapier@gentoo.org>
+  +binutils-2.16.1-r3.ebuild:
+  Backport -z lazy patch to make solar happy #134514.
 
   27 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> binutils-2.17.ebuild:
   Keyworded ~sparc
