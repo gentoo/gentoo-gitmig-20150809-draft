@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.66 2006/03/14 20:35:00 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.67 2006/06/30 20:50:48 dang Exp $
+
+*gtk-engines-2.6.9 (30 Jun 2006)
+
+  30 Jun 2006; <dang@gentoo.org> +gtk-engines-2.6.9.ebuild:
+  Bump for 2.14.2
 
 *gtk-engines-2.6.8 (14 Mar 2006)
 
