@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.36 2006/06/23 13:47:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.37 2006/06/30 04:42:41 spyderous Exp $
+
+*libX11-1.0.3 (30 Jun 2006)
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; -libX11-1.0.2.ebuild,
+  +libX11-1.0.3.ebuild:
+  Bump. 1.0.2 missed one of the setuid fixes, and this also fixes the Compose
+  cache.
 
   23 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
   libX11-1.0.1-r1.ebuild, libX11-1.0.2.ebuild:
