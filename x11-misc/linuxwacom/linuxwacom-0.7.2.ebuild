@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.7.2.ebuild,v 1.7 2006/06/30 16:53:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.7.2.ebuild,v 1.8 2006/06/30 17:09:33 spyderous Exp $
 
 IUSE="dlloader gtk gtk2 tcltk sdk usb"
 
-inherit multilib eutils
+inherit multilib eutils linux-info
 
 DESCRIPTION="Input driver for Wacom tablets and drawing devices"
 HOMEPAGE="http://linuxwacom.sourceforge.net/"
@@ -43,7 +43,7 @@ pkg_setup() {
 		ewarn "the USE=sdk flag enabled."
 	fi
 
-	if use usb && ! has_version >=sys-kernel/linux-headers-2.6; then
+	if use usb && ! has_version >=sys-kernel/linux-headers-2.6 && kernel_is 2 6; then
 		local msg
 		msg="USB Wacom tablets require 2.6 linux-headers. Please upgrade."
 		eerror "$msg"
