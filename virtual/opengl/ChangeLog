@@ -1,6 +1,9 @@
 # ChangeLog for virtual/opengl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/opengl/ChangeLog,v 1.4 2006/04/12 16:35:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/opengl/ChangeLog,v 1.5 2006/06/30 06:26:51 spyderous Exp $
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; opengl-7.0.ebuild:
+  x86 stable.
 
   12 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> opengl-7.0.ebuild:
   Add ~x86-fbsd keyword.
