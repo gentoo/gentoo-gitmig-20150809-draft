@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.8 2006/06/30 20:42:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.9 2006/06/30 22:05:52 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -458,8 +458,6 @@ PDEPEND="
 					>=x11-drivers/xf86-video-sunleo-1.1.0
 					>=x11-drivers/xf86-video-suntcx-1.1.0
 					>=x11-drivers/xf86-video-tdfx-1.2.1
-					>=x11-drivers/xf86-video-vesa-1.1.0
-					>=x11-drivers/xf86-video-vga-4.1.0
 					>=x11-drivers/xf86-video-voodoo-1.1.0 )
 				x86? ( >=x11-drivers/xf86-video-apm-1.1.1
 					>=x11-drivers/xf86-video-ark-0.6.0
