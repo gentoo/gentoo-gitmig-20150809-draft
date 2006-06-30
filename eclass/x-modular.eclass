@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.61 2006/06/28 02:20:31 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.62 2006/06/30 03:37:53 solar Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -171,12 +171,7 @@ RDEPEND="${RDEPEND}
 
 x-modular_specs_check() {
 	if [[ ${PN:0:11} = "xorg-server" ]] || [[ -n "${DRIVER}" ]]; then
-		if gcc-specs-now; then
-			msg="${PN} does not work with hardened gcc specs. Switch to vanilla gcc specs to emerge ${PN}."
-			eerror "$msg"
-			die "$msg"
-		fi
-
+		append-ldflags -Wl,-z,lazy
 		# (#116698) breaks loading
 		filter-ldflags -Wl,-z,now
 	fi
