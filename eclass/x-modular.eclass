@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.63 2006/06/30 03:52:57 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.64 2006/06/30 07:34:11 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -157,8 +157,7 @@ if [[ -z "${FONT}" ]] \
 fi
 
 DEPEND="${DEPEND}
-	>=dev-util/pkgconfig-0.18
-	>=sys-devel/binutils-2.16.1-r3"
+	>=dev-util/pkgconfig-0.18"
 
 if [[ "${PN/util-macros}" = "${PN}" ]]; then
 	DEPEND="${DEPEND}
