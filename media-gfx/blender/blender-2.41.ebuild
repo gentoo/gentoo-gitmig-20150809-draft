@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.41.ebuild,v 1.2 2006/01/27 19:23:51 reb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.41.ebuild,v 1.3 2006/06/30 17:04:01 wolf31o2 Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.blender.org/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="|| ( GPL-2 BL )"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 
 RDEPEND="media-libs/libsdl
 	media-libs/jpeg
@@ -85,6 +85,10 @@ src_compile() {
 		config.opts
 	fi
 
+	sed -i \
+		-e "s:'openal':'openal','alut':" \
+		config.opts
+
 #	use blender-game || \
 #	( einfo "disabling game engine"
 #	sed -i -e "s:BUILD_GAMEENGINE = 'true':BUILD_GAMEENGINE = 'false':" \
@@ -106,14 +110,12 @@ src_compile() {
 src_install() {
 	exeinto /usr/bin/
 	doexe ${S}/blender
-	doexe ${S}/blenderplayer
-
 
 	exeinto /usr/$(get_libdir)/${PN}/textures
 	doexe ${S}/release/plugins/texture/*.so
 	exeinto /usr/$(get_libdir)/${PN}/sequences
 	doexe ${S}/release/plugins/sequence/*.so
-	cp -pPR ${S}/release/{datafile,plugins,scripts} \
+	cp -pPR ${S}/release/{datafiles,plugins,scripts} \
 		${D}/usr/$(get_libdir)/${PN}
 	use nls && \
 	cp -pPR ${S}/bin/.blender/{.Blanguages,.bfont.ttf,locale} \
@@ -123,7 +125,7 @@ src_install() {
 	insinto /usr/share/applications
 	doins ${FILESDIR}/${PN}.desktop
 
-	dodoc COPYING INSTALL README release_*.txt
+	dodoc COPYING INSTALL README
 
 }
 
