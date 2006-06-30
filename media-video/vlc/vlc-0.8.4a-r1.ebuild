@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a-r1.ebuild,v 1.12 2006/06/29 19:17:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a-r1.ebuild,v 1.13 2006/06/30 23:42:20 tcort Exp $
 
 inherit eutils wxwidgets multilib autotools toolchain-funcs gnome2
 
@@ -22,7 +22,7 @@ SRC_URI="${SRC_URI}
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~alpha ~amd64 ~ppc sparc x86"
+KEYWORDS="alpha ~amd64 ~ppc sparc x86"
 IUSE="a52 3dfx nls debug altivec httpd vlm gnutls live v4l cdda ogg matroska
 dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl truetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick stream
