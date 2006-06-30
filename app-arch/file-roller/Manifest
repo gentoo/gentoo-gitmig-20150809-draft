@@ -1,27 +1,88 @@
-MD5 e92e46b32ed917eea3bcac430fb35b1a ChangeLog 19970
-MD5 6a822233a7d4799925d086c7fe2b743e file-roller-2.10.0-r1.ebuild 1489
-MD5 fab7851231fc02801db3f51c775a447a file-roller-2.10.3.ebuild 1354
-MD5 ca9d6d105d2d3b03f4e87a84e637a1de file-roller-2.10.4.ebuild 1408
-MD5 e50968e75d2b69cc87787c176ef6ced4 file-roller-2.12.1.ebuild 1385
-MD5 cbf7f180540094b2de81c5973c412ac7 file-roller-2.12.2.ebuild 1376
-MD5 d00efb898884e6475f494c1545788cde file-roller-2.12.3.ebuild 1373
-MD5 6f27ddf243d1e2fe2850875afab10acf file-roller-2.14.0.ebuild 1708
-MD5 38fddc857debbde3abb1920e4f0f4d21 file-roller-2.14.1.ebuild 1364
-MD5 d779986864325c09e5caba951a634f9a files/digest-file-roller-2.10.0-r1 72
-MD5 be190f54f0aaa0ff36a6d17c56e1a5b6 files/digest-file-roller-2.10.3 72
-MD5 639fd7660e2205b9a529b1df15ff765b files/digest-file-roller-2.10.4 72
-MD5 96336d41df5f3f5a10fb946b1418a9f9 files/digest-file-roller-2.12.1 72
-MD5 e5e3fd5829a2e5fe5b51b8cf4d9b7b17 files/digest-file-roller-2.12.2 71
-MD5 ff5c1fc8b7070c9b8678df3f7f37a0f6 files/digest-file-roller-2.12.3 71
-MD5 2806a65ed08779ba71c66ef9b3f5f2c2 files/digest-file-roller-2.14.0 262
-MD5 e31c9774ac7737090a591d1eaeb5fe98 files/digest-file-roller-2.14.1 262
+AUX file-roller-2.10-use_fr_rpm2cpio.patch 1113 RMD160 b15170f4df67a5aa5a2c9ba5d845f544ac6961f7 SHA1 b5305143f251b2dda7fb46533b017023b354f89c SHA256 08d0fdb57d507fbfcbaf3367ea0a08575b74570d94f64a6698589921d13bde0e
 MD5 cb207c4a86910d9e23948e4fb15d5d8d files/file-roller-2.10-use_fr_rpm2cpio.patch 1113
+RMD160 b15170f4df67a5aa5a2c9ba5d845f544ac6961f7 files/file-roller-2.10-use_fr_rpm2cpio.patch 1113
+SHA256 08d0fdb57d507fbfcbaf3367ea0a08575b74570d94f64a6698589921d13bde0e files/file-roller-2.10-use_fr_rpm2cpio.patch 1113
+AUX file-roller-2.10.0-fix_whitespace.patch 1713 RMD160 f1ea47f8ac3e064decf2e9a274bf3726ea6dd9be SHA1 1d4ff684d53f6d400e4536f5c787b04eea0a0392 SHA256 3c151c8eb90f1c736c6af6ffd1ce542dfa896fdc5ccb897fc2d601f5a66e2a9e
 MD5 d12176c3351e047a90fc4740f4b09237 files/file-roller-2.10.0-fix_whitespace.patch 1713
+RMD160 f1ea47f8ac3e064decf2e9a274bf3726ea6dd9be files/file-roller-2.10.0-fix_whitespace.patch 1713
+SHA256 3c151c8eb90f1c736c6af6ffd1ce542dfa896fdc5ccb897fc2d601f5a66e2a9e files/file-roller-2.10.0-fix_whitespace.patch 1713
+AUX file-roller-2.10.2-fix_unrar.patch 858 RMD160 4234661240301e1c62e2d30390ad4c4e0908e530 SHA1 aa4be5713a320eef2598d635d01c9fd5e29a5663 SHA256 60a32146132f6ccd5839bf6fa2077896b41d0d3ddb397a4ee1fe6deee8577dcb
 MD5 b3c29c8524d0b4485f2b5abc64d003fe files/file-roller-2.10.2-fix_unrar.patch 858
+RMD160 4234661240301e1c62e2d30390ad4c4e0908e530 files/file-roller-2.10.2-fix_unrar.patch 858
+SHA256 60a32146132f6ccd5839bf6fa2077896b41d0d3ddb397a4ee1fe6deee8577dcb files/file-roller-2.10.2-fix_unrar.patch 858
+AUX file-roller-2.10.3-use_bin_tar.patch 504 RMD160 0af7af1c83953554e58c3a2f82ae3edb2e6b7e55 SHA1 a40077b5ace4be970dae46b44aa5b8ce19a75780 SHA256 c22e742893800c4302df40af66b1eabeab700fea7326eada849f919bdd76c052
 MD5 52258671fa0060fb4c537665f1be68b6 files/file-roller-2.10.3-use_bin_tar.patch 504
-MD5 90d9bf0e5affc3ce79f6a0c4c88e0af7 files/file-roller-2.13.2-xmllint.patch 976
-MD5 e7f4941936f91f5c5bd890567676403c files/file-roller-2.14.0-double_unpack.patch 590
-MD5 8bdebffa2e4304365dbc00d0e7a15db5 files/file-roller-2.14.0-drag_move.patch 526
+RMD160 0af7af1c83953554e58c3a2f82ae3edb2e6b7e55 files/file-roller-2.10.3-use_bin_tar.patch 504
+SHA256 c22e742893800c4302df40af66b1eabeab700fea7326eada849f919bdd76c052 files/file-roller-2.10.3-use_bin_tar.patch 504
+AUX file-roller-2.8.0-use_bin_tar.patch 405 RMD160 4564fbca0d9643dec5e3d1e892d17117fe5b78a9 SHA1 7b4b5e71014e5e5814798c2de8a9d0f0287514ff SHA256 f76a2d4acd87291ac0ee9becb679c8f87063119ffdc8d53b93cee79dcd2245ac
 MD5 67f58f96b7c00be703c9bf9cf38cd191 files/file-roller-2.8.0-use_bin_tar.patch 405
+RMD160 4564fbca0d9643dec5e3d1e892d17117fe5b78a9 files/file-roller-2.8.0-use_bin_tar.patch 405
+SHA256 f76a2d4acd87291ac0ee9becb679c8f87063119ffdc8d53b93cee79dcd2245ac files/file-roller-2.8.0-use_bin_tar.patch 405
+AUX rpm2cpio-file-roller 2556 RMD160 c123c4f046a5844d75a90f4a1edb308b17d99bd9 SHA1 81558e086339f4bdb373ebd4bc33215ec31debae SHA256 75dc7413d516d1f315534662c5a098c7973866b4d125547cd2696190818b8b6a
 MD5 d23f66e1c734a44ce6ee89b0e724b371 files/rpm2cpio-file-roller 2556
+RMD160 c123c4f046a5844d75a90f4a1edb308b17d99bd9 files/rpm2cpio-file-roller 2556
+SHA256 75dc7413d516d1f315534662c5a098c7973866b4d125547cd2696190818b8b6a files/rpm2cpio-file-roller 2556
+DIST file-roller-2.10.0.tar.bz2 1311026
+DIST file-roller-2.10.3.tar.bz2 1314482 RMD160 b77516ca943589e681183cc381e7941269f9675c SHA1 5467aec1f69d755f9223045d95024a23fd148c83 SHA256 72ea712b80e9688db142271048e1b52aebf876038a24fddc123a2d249aef18d4
+DIST file-roller-2.10.4.tar.bz2 1307330 RMD160 222d8517a2d2ab867ca534b0f5916e721a050b9b SHA1 2b2ab70553a31a81902a4e59f8bb317b29b56caf SHA256 15cac29a675ed2150b02c7dd27a8ce102660f5d52c437ae247ac4ebe105ce538
+DIST file-roller-2.12.1.tar.bz2 1162479
+DIST file-roller-2.12.2.tar.bz2 921755 RMD160 3e975761b2c00c62bdc2cf6889067491fb19b149 SHA1 b317cf2f7bd937a3c8d30f89857b8074f7ff65a6 SHA256 e57a16ec78f715d6fa6be4134cd20699fef9e5ff0a3c4fd87179f996f08f06a1
+DIST file-roller-2.12.3.tar.bz2 936371 RMD160 64805fd7698173018aa4381c53f389f9c411a14c SHA1 82e00ff4a2b053963f0c5d1c5710bb6f7a669028 SHA256 983f10a76fa228bcb8beb7dde7feacab4d3033357e59b4548a4bc0ba8dad0e14
+DIST file-roller-2.14.3.tar.bz2 1039009 RMD160 17039fc4ac41b1c1519122d4c9c7a08b3fc20738 SHA1 d032c9493cc27484a2d237ed41885c38483fe0d5 SHA256 f4fa0041cb0cb8c8341b7f5054329a8550390b6331a21b509c61d98c556f5af7
+EBUILD file-roller-2.10.0-r1.ebuild 1489 RMD160 54d3b9c6228ebb4c581647517c6894a4e60c6ed3 SHA1 c83418d4ece936be6a0362921049aaa777a7b836 SHA256 6b29ef346e55a44a4f8cdebe60f6030f206f1227ae8762bf296c130061459e8e
+MD5 6a822233a7d4799925d086c7fe2b743e file-roller-2.10.0-r1.ebuild 1489
+RMD160 54d3b9c6228ebb4c581647517c6894a4e60c6ed3 file-roller-2.10.0-r1.ebuild 1489
+SHA256 6b29ef346e55a44a4f8cdebe60f6030f206f1227ae8762bf296c130061459e8e file-roller-2.10.0-r1.ebuild 1489
+EBUILD file-roller-2.10.3.ebuild 1354 RMD160 fefa015df6e6eea081b21f4104c7b6250192bed3 SHA1 6f93dc7460cb25e3178a2d1467d2606a9c3996ac SHA256 36f73c92e784330a16e5b13cbd3f74aa97de6e0b5b306db9cf22e1f547843d49
+MD5 fab7851231fc02801db3f51c775a447a file-roller-2.10.3.ebuild 1354
+RMD160 fefa015df6e6eea081b21f4104c7b6250192bed3 file-roller-2.10.3.ebuild 1354
+SHA256 36f73c92e784330a16e5b13cbd3f74aa97de6e0b5b306db9cf22e1f547843d49 file-roller-2.10.3.ebuild 1354
+EBUILD file-roller-2.10.4.ebuild 1408 RMD160 b8da44cfbce234e338fc3a6ab254e5728cad5d0d SHA1 20bafc31f78523172ff16b8b57ddb37b5a9a1682 SHA256 b9fc43bb4c17d8eea184fe06a4e4efc3f643a87580082a16f5fe8abe7c1b986d
+MD5 ca9d6d105d2d3b03f4e87a84e637a1de file-roller-2.10.4.ebuild 1408
+RMD160 b8da44cfbce234e338fc3a6ab254e5728cad5d0d file-roller-2.10.4.ebuild 1408
+SHA256 b9fc43bb4c17d8eea184fe06a4e4efc3f643a87580082a16f5fe8abe7c1b986d file-roller-2.10.4.ebuild 1408
+EBUILD file-roller-2.12.1.ebuild 1385 RMD160 a8cb7f96c036d559a230e34a6c628f923acef54e SHA1 217c8a94a80d1fb8a67964868a066878a98ee84b SHA256 4a5b981a7dba02cffe11582dcdb7055c00e2cc19e0514023400b5b0a20ca5300
+MD5 e50968e75d2b69cc87787c176ef6ced4 file-roller-2.12.1.ebuild 1385
+RMD160 a8cb7f96c036d559a230e34a6c628f923acef54e file-roller-2.12.1.ebuild 1385
+SHA256 4a5b981a7dba02cffe11582dcdb7055c00e2cc19e0514023400b5b0a20ca5300 file-roller-2.12.1.ebuild 1385
+EBUILD file-roller-2.12.2.ebuild 1376 RMD160 d6796e0c3a8e22da9dcd18af6ea4aea0e33b3f2f SHA1 980752946ea90738f3ff219ef07c0a008cdbb6f5 SHA256 b655deca2da47cf090b569fda9a99c0ba15e47759ef3b6a74fdff55dca61005b
+MD5 cbf7f180540094b2de81c5973c412ac7 file-roller-2.12.2.ebuild 1376
+RMD160 d6796e0c3a8e22da9dcd18af6ea4aea0e33b3f2f file-roller-2.12.2.ebuild 1376
+SHA256 b655deca2da47cf090b569fda9a99c0ba15e47759ef3b6a74fdff55dca61005b file-roller-2.12.2.ebuild 1376
+EBUILD file-roller-2.12.3.ebuild 1373 RMD160 a4b98d8e15e5d539531edbec96a1db33f0d58275 SHA1 5bfef9fa170582b24a61af14942df8751ddb7df8 SHA256 9ecbbadc41d20982829212a32cd9d225d478046d56509ca03fc38145568e66cf
+MD5 d00efb898884e6475f494c1545788cde file-roller-2.12.3.ebuild 1373
+RMD160 a4b98d8e15e5d539531edbec96a1db33f0d58275 file-roller-2.12.3.ebuild 1373
+SHA256 9ecbbadc41d20982829212a32cd9d225d478046d56509ca03fc38145568e66cf file-roller-2.12.3.ebuild 1373
+EBUILD file-roller-2.14.3.ebuild 1362 RMD160 cd69a42b0627d2fd0de03ad7bc41ab35206d8b2c SHA1 415e47ea7cd6bd35f4c5f277e28a863b267075d7 SHA256 2104862315354de1632a8f2fb09ebe4b51a292a86e78c43da3506ec29bfbcd7a
+MD5 a864cf5750c12ee42854769227f1d9ea file-roller-2.14.3.ebuild 1362
+RMD160 cd69a42b0627d2fd0de03ad7bc41ab35206d8b2c file-roller-2.14.3.ebuild 1362
+SHA256 2104862315354de1632a8f2fb09ebe4b51a292a86e78c43da3506ec29bfbcd7a file-roller-2.14.3.ebuild 1362
+MISC ChangeLog 20353 RMD160 3fac3058abc2adf700c4411c62f10c63df5a1a49 SHA1 4a3d1c7e6e8e4ad1fcc863d876b0145bc6311a90 SHA256 10d7cd277fc7a914ca1e981e2334b77ccc865b0a0390d568289f4b3abca982bb
+MD5 e96e4d7096cb64d21c4ad61f2d64028b ChangeLog 20353
+RMD160 3fac3058abc2adf700c4411c62f10c63df5a1a49 ChangeLog 20353
+SHA256 10d7cd277fc7a914ca1e981e2334b77ccc865b0a0390d568289f4b3abca982bb ChangeLog 20353
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 d779986864325c09e5caba951a634f9a files/digest-file-roller-2.10.0-r1 72
+RMD160 8f38431eddb180265461a7767523aadfd9bfa49e files/digest-file-roller-2.10.0-r1 72
+SHA256 bddb639eebed7acac505fb1a0a90e9c00ae1b689b17f83d6ddb16be67d2c196e files/digest-file-roller-2.10.0-r1 72
+MD5 d0ad88d068bae56d3793ba35fcc881c0 files/digest-file-roller-2.10.3 262
+RMD160 ca40325c003f362cd504357977a62043513a0748 files/digest-file-roller-2.10.3 262
+SHA256 8b6f46448de403ca3010aec6dbf57c3fe26aef607067dad43d1a1d4391a761c7 files/digest-file-roller-2.10.3 262
+MD5 7c32e1e53c72491c0f8c5d3a75aa8029 files/digest-file-roller-2.10.4 262
+RMD160 3f541fccc6c5417acd07c17360f611c93b6e653a files/digest-file-roller-2.10.4 262
+SHA256 7fa3663a4e53a94eece56eece5dfee52d29bdaf2930b9fef0464b753b473d297 files/digest-file-roller-2.10.4 262
+MD5 96336d41df5f3f5a10fb946b1418a9f9 files/digest-file-roller-2.12.1 72
+RMD160 15cf55a786e88dfd1e4dda19b00951ccaa55af39 files/digest-file-roller-2.12.1 72
+SHA256 eeb40bc2766da5c83c720317f617377af5d0a76ef42967ff5c739391ad8f55a9 files/digest-file-roller-2.12.1 72
+MD5 10df2e17f728caa82340bac0f5841d82 files/digest-file-roller-2.12.2 259
+RMD160 173ef4a06b1af75bd259b9e8075c6939eea13726 files/digest-file-roller-2.12.2 259
+SHA256 0b24236c07670b3e525871cba34a00a8c69ebd831f5ff922adbfbe64d9e5cffa files/digest-file-roller-2.12.2 259
+MD5 82585aee7f6320a7e88537815196e682 files/digest-file-roller-2.12.3 259
+RMD160 ff5c656dd5bcded18f257cdb7334bd919b2f88e8 files/digest-file-roller-2.12.3 259
+SHA256 22860b9a9ee40c9e5bcbb17554b045b97c2e104f30914213293b1a63616225c1 files/digest-file-roller-2.12.3 259
+MD5 0d721fb3aca2f06e7920176a07d15ad2 files/digest-file-roller-2.14.3 262
+RMD160 c4d1ea150c62196b2ef08c8fac9876d49cdde78d files/digest-file-roller-2.14.3 262
+SHA256 f56bd9ab490a40733a65632a5f63d39317abba09d1e5f00743429ec1e121122d files/digest-file-roller-2.14.3 262
