@@ -1,6 +1,9 @@
 # ChangeLog for virtual/xft
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/xft/ChangeLog,v 1.2 2006/06/10 16:03:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/xft/ChangeLog,v 1.3 2006/06/30 08:07:12 spyderous Exp $
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; xft-7.0.ebuild:
+  x86 stable.
 
 *xft-7.0 (24 Apr 2006)
 *xft-6.8 (24 Apr 2006)
