@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcddb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/ChangeLog,v 1.27 2006/06/27 14:46:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/ChangeLog,v 1.28 2006/06/30 23:40:55 tcort Exp $
+
+  30 Jun 2006; Thomas Cort <tcort@gentoo.org> libcddb-1.2.1.ebuild:
+  Stable on alpha.
 
   27 Jun 2006; Guy Martin <gmsoft@gentoo.org> libcddb-1.2.1.ebuild:
   Stable on hppa.
