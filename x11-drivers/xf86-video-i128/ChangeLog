@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-i128
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i128/ChangeLog,v 1.14 2006/06/05 21:26:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i128/ChangeLog,v 1.15 2006/06/30 06:44:46 spyderous Exp $
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xf86-video-i128-1.1.0.5.ebuild:
+  x86 stable.
 
   05 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   xf86-video-i128-1.2.0.ebuild:
