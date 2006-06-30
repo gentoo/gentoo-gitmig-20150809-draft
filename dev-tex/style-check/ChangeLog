@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/style-check
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/style-check/ChangeLog,v 1.4 2006/06/12 19:47:11 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/style-check/ChangeLog,v 1.5 2006/06/30 04:59:51 tsunam Exp $
+
+  30 Jun 2006; Joshua Jackson <tsunam@gentoo.org> style-check-0.7.ebuild:
+  Stable x86; bug #136571
 
   12 Jun 2006; Simon Stelling <blubb@gentoo.org> style-check-0.7.ebuild:
   stable on amd64
