@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-ReadPassword
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadPassword/ChangeLog,v 1.1 2006/06/29 03:56:32 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadPassword/ChangeLog,v 1.2 2006/06/30 00:36:18 mcummings Exp $
+
+  30 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Term-ReadPassword-0.07.ebuild:
+  Bug 138437, ~amd64 keywording
 
 *Term-ReadPassword-0.07 (29 Jun 2006)
 
