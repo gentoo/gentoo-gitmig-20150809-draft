@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svnmailer/svnmailer-1.0.8.ebuild,v 1.1 2006/06/30 09:21:20 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svnmailer/svnmailer-1.0.8.ebuild,v 1.2 2006/06/30 11:25:36 sebastian Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://opensource.perlig.de/svnmailer/"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 LICENSE="Apache-2.0"
 DEPEND=">=dev-lang/python-2.3"
 RDEPEND="${DEPEND}
