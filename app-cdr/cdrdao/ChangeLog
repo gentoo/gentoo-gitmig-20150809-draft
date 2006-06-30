@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.88 2006/04/02 22:25:49 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.89 2006/06/30 20:16:55 pylon Exp $
+
+  30 Jun 2006; Lars Weiler <pylon@gentoo.org> cdrdao-1.2.1-r1.ebuild:
+  Stable on ppc; gcc-4 related; bug #138099.
 
   02 Apr 2006; Thomas Cort <tcort@gentoo.org> cdrdao-1.2.1-r1.ebuild:
   Added ~alpha keyword wrt bug #117451
