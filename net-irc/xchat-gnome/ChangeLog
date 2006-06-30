@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.21 2006/04/20 20:13:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.22 2006/06/30 13:12:59 jokey Exp $
+
+*xchat-gnome-0.12 (30 Jun 2006)
+
+  30 Jun 2006; Markus Ullmann <jokey@gentoo.org> +xchat-gnome-0.12.ebuild:
+  Version bump wrt bug #138298
 
   20 Apr 2006; Sven Wegener <swegener@gentoo.org>
   +files/0.10-libnotify-libsexy-configure.patch, +xchat-gnome-0.10.ebuild,
