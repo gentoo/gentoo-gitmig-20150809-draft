@@ -19,12 +19,14 @@ if [ $1 = "install" ]; then
 
 	# check for upgrades
 	cd ${VHOST_ROOT}/${PF}/upgrade
-	echo "You may need to update your database."
-	echo "For each item in the output below"
+	echo "You may need to update your database. For each item in the output below"
 	echo "whose name is greater than your previously installed RT version,"
-	echo "${VHOST_ROOT}/${PF}/sbin/rt-setup-database --action schema --datadir ${VHOST_ROOT}/${PF}/upgrade/<version> --prompt-for-dba-password"
-	echo "${VHOST_ROOT}/${PF}/sbin/rt-setup-database --action acl --datadir ${VHOST_ROOT}/${PF}/upgrade/<version> -prompt-for-dba-password"
-	echo "${VHOST_ROOT}/${PF}/sbin/rt-setup-database --action insert --datadir ${VHOST_ROOT}/${PF}/upgrade/<version> -prompt-for-dba-password"
+	echo "run the following commands, specifying YOUR_DBA_USER:"
+	echo "${VHOST_ROOT}/${PF}/sbin/rt-setup-database --action schema --datadir ${VHOST_ROOT}/${PF}/upgrade/<version> --dba YOUR_DBA_USER --prompt-for-dba-password"
+	echo "${VHOST_ROOT}/${PF}/sbin/rt-setup-database --action acl --datadir ${VHOST_ROOT}/${PF}/upgrade/<version> --dba YOUR_DBA_USER -prompt-for-dba-password"
+	echo "${VHOST_ROOT}/${PF}/sbin/rt-setup-database --action insert --datadir ${VHOST_ROOT}/${PF}/upgrade/<version> --dba YOUR_DBA_USER --prompt-for-dba-password"
+	echo "Note that some upgrade directories don't have all 3 items (schema, acl, insert)"
+	echo "You can skip missing items safely"
 	echo "Don't forget to read the online installation guide for more details"
 	ls
 
