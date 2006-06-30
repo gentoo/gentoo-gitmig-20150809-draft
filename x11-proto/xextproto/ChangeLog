@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xextproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xextproto/ChangeLog,v 1.20 2006/06/30 16:11:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xextproto/ChangeLog,v 1.21 2006/06/30 18:30:58 marienz Exp $
+
+  30 Jun 2006; Marien Zwart <marienz@gentoo.org>
+  files/digest-xextproto-7.0.2, Manifest:
+  Fix digest.
 
   30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   xextproto-7.0.2.ebuild:
