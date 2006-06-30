@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62.ebuild,v 1.6 2006/06/27 03:17:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62.ebuild,v 1.7 2006/06/30 14:13:50 cardoe Exp $
 
 inherit eutils mono python multilib debug qt3 autotools
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	mono? ( >=dev-lang/mono-0.95 )
 	python? ( >=dev-lang/python-2.4 >=dev-python/pyrex-0.9.3-r2 )
 	qt3? ( $(qt_min_version 3.3) )
-	qt4? ( >=x11-libs/qt-4.1.0 )
+	qt4? ( >=x11-libs/qt-4.1.3 )
 	selinux? ( sys-libs/libselinux )
 	>=dev-libs/libxml2-2.6.21"
 	# expat code now sucks.. libxml2 is the default
