@@ -1,0 +1,5 @@
+--- contrib/lirc.rules	25 Sep 2004 09:14:12 -0000	1.1
++++ contrib/lirc.rules	30 Jun 2006 14:46:49 -0000
+@@ -1 +1 @@
+-KERNEL="lirc[0-9]*",	NAME="lirc/%n"
++KERNEL=="lirc[0-9]*",	NAME="lirc/%n"

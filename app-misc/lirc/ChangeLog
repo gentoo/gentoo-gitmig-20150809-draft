@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.95 2006/06/30 15:48:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.96 2006/06/30 16:07:31 zzam Exp $
+
+*lirc-0.8.0-r3 (30 Jun 2006)
+
+  30 Jun 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/lirc-udev-094.diff, lirc-0.8.0-r1.ebuild, -lirc-0.8.0-r2.ebuild,
+  +lirc-0.8.0-r3.ebuild:
+  Added patch to solve Bug #138532. Install udev-rules-file conditionally by
+  use-flag udev and not based on existance of sys-fs/udev.
 
   30 Jun 2006; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.0.ebuild,
   lirc-0.8.0-r1.ebuild, lirc-0.8.0-r2.ebuild:

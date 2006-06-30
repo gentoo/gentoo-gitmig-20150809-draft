@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r1.ebuild,v 1.5 2006/06/30 16:07:31 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r3.ebuild,v 1.1 2006/06/30 16:07:31 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.lirc.org"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="alsa debug doc X usb hardware-carrier transmitter udev"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~ppc64 ~x86"
 SRC_URI="mirror://sourceforge/lirc/${P/_pre/pre}.tar.bz2"
 
 S=${WORKDIR}/${P/_pre/pre}
@@ -42,7 +42,7 @@ IUSE_LIRC_DEVICES_DIRECT="
 	tekram_bt829 tira tvbox udp uirt2
 	uirt2_raw"
 
-IUSE_LIRC_DEVICES_SPECIAL="imon_pad2keys serial_igor_cesko xboxusb"
+IUSE_LIRC_DEVICES_SPECIAL="imon_pad2keys serial_igor_cesko xboxusb usbirboy"
 IUSE_LIRC_DEVICES="${IUSE_LIRC_DEVICES_DIRECT} ${IUSE_LIRC_DEVICES_SPECIAL}"
 
 
@@ -67,10 +67,17 @@ for dev in ${LIBUSB_USED_BY_DEV}; do
 	RDEPEND="${RDEPEND} lirc_devices_${dev}? ( dev-libs/libusb )"
 done
 
+# adding only compile-time depends
 DEPEND="${RDEPEND}
 	virtual/linux-sources
 	sys-devel/autoconf
 	sys-devel/libtool"
+
+
+# adding only run-time depends
+RDEPEND="${RDEPEND}
+	lirc_devices_usbirboy? ( app-misc/usbirboy )"
+
 
 
 # add all devices to IUSE
@@ -133,6 +140,10 @@ pkg_setup() {
 
 		if use lirc_devices_xboxusb; then
 			add_device atiusb "device xboxusb"
+		fi
+
+		if use lirc_devices_usbirboy; then
+			add_device userspace "device usbirboy"
 		fi
 
 		if [[ "${MY_OPTS}" == "" ]]; then
@@ -235,7 +246,7 @@ src_install() {
 	newconfd ${FILESDIR}/lircd.conf lircd
 
 	if use udev; then
-		insinto /etc/udev/rules.d/
+		insinto /etc/udev/rules.d/;
 		newins ${S}/contrib/lirc.rules 10-lirc.rules
 	fi
 
