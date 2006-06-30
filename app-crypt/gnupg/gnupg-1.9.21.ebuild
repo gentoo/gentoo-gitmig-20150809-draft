@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.21.ebuild,v 1.1 2006/06/29 22:25:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.21.ebuild,v 1.2 2006/06/30 01:01:56 robbat2 Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -47,6 +47,10 @@ src_unpack() {
 		./autogen.sh
 	fi
 	sed -i -e 's/PIC/__PIC__/g' intl/relocatable.c || die "PIC patching failed"
+
+	# this warning is only available on gcc4!
+	sed -i -e '/AM_CFLAGS/s!-Wno-pointer-sign!!g' ${S}/g10/Makefile.am
+	sed -i -e '/AM_CFLAGS/s!-Wno-pointer-sign!!g' ${S}/g10/Makefile.in
 
 	epatch "${FILESDIR}/${PN}-1.9.20-fbsd.patch"
 	#epatch "${FILESDIR}/${P}-fbsd-gcc41.patch"
