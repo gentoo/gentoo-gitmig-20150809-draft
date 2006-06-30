@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.74 2006/06/27 15:28:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.75 2006/06/30 22:02:17 spyderous Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -163,6 +163,8 @@ video_cards_chips
 video_cards_apm
 video_cards_i810
 video_cards_nv
+video_cards_vesa
+video_cards_vga
 
 # Jason Wever <weeve@gentoo.org> - 10 April 2006
 # Mask ifp use flag for amarok until someone can confirm it works
