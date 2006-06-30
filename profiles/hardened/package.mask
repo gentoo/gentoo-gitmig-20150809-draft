@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.4 2006/06/30 03:44:01 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.5 2006/06/30 07:58:47 kevquinn Exp $
 
 # This file is additional masking for the hardened profile
 
@@ -27,3 +27,8 @@
 media-video/nvidia-kernel
 media-video/nvidia-glx
 
+# Temporary mask until stable binutils-2.16.1-r3 (with -z,lazy support) is
+# ready and x-modular builds ok.  Without -z,lazy support in binutils it'll
+# build without failure but will not run.
+>=x11-base/xorg-x11-7
+x11-base/xorg-server
