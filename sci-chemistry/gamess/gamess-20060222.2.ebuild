@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20060222.2.ebuild,v 1.6 2006/06/23 15:06:19 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20060222.2.ebuild,v 1.7 2006/06/30 14:33:50 markusle Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -145,6 +145,11 @@ src_unpack() {
 		sed -e "s/gentoo-F77_OPTS/F77_OPTS/" \
 			-i ddi/compddi || die "Failed fixing underscores in compddi"
 	fi
+
+	# fix up the checker scripts for gamess tests
+	sed -e "s:set GMSPATH:#set GMSPATH:g" \
+		-e "s:\$GMSPATH/tools/checktst:.:g" \
+		-i tools/checktst/checktst
 }
 
 src_compile() {
@@ -206,6 +211,10 @@ src_install() {
 	doins tests/* || die "Failed installing tests"
 	insopts -m0744
 	doins runall || die "Failed installing tests"
+	doins tools/checktst/checktst tools/checktst/chkabs || \
+		die "Failed to install main test checker"
+	doins tools/checktst/exam* || \
+		die "Failed to install individual test files"
 }
 
 pkg_postinst() {
@@ -217,18 +226,9 @@ pkg_postinst() {
 	einfo "your GAMESS runs should be immediately rejected :)"
 	einfo "To do so copy the content of /usr/share/gamess/tests"
 	einfo "to some temporary location and execute './runall'. "
+	einfo "Then run the checktst script in the same directory to"
+	einfo "validate the tests."
 	einfo "Please consult TEST.DOC and the other docs!"
-
-	if [[ ${FORTRANC} == gfortran ]]; then
-		echo
-		ewarn "If you are using gcc-4.0.x, then due to a gfortran "
-		ewarn "implementation issue the TDHF code currently does not"
-		ewarn "work and exam39 will, therefore, fail."
-		ewarn "If you are using gcc-4.1.x, the resulting binaries "
-		ewarn "will likely not run properly. We strongly recommend"
-		ewarn "to stick with gcc-3.x or gcc-4.0.x until these issues"
-		ewarn "have been addressed."
-	fi
 
 	if [[ "${FORTRANC}" == "ifc" ]]; then
 		echo

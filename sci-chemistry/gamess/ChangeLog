@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.14 2006/06/23 15:06:19 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.15 2006/06/30 14:33:50 markusle Exp $
+
+  30 Jun 2006; Markus Dittrich <markusle@gentoo.org>
+  gamess-20060222.2.ebuild:
+  Changed the ebuild to provide the test scripts used to validate 
+  the gamess test runs. This fixes bug #138516.
 
   23 Jun 2006; Markus Dittrich <markusle@gentoo.org>
   gamess-20060222.2.ebuild:
