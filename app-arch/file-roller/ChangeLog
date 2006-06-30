@@ -1,6 +1,15 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.165 2006/04/21 20:37:44 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.166 2006/06/30 19:09:46 allanonjl Exp $
+
+*file-roller-2.14.3 (30 Jun 2006)
+
+  30 Jun 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -files/file-roller-2.13.2-xmllint.patch,
+  -files/file-roller-2.14.0-double_unpack.patch,
+  -files/file-roller-2.14.0-drag_move.patch, -file-roller-2.14.0.ebuild,
+  -file-roller-2.14.1.ebuild, +file-roller-2.14.3.ebuild:
+  new version, fixes #138485. cleanup old patches and versions.
 
   21 Apr 2006; Thomas Cort <tcort@gentoo.org> file-roller-2.12.3.ebuild:
   Stable on alpha wrt Bug #126321.
