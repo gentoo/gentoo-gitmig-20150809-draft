@@ -1,11 +1,11 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.138 2006/06/30 17:40:53 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.139 2006/06/30 18:10:01 allanonjl Exp $
 
 *pango-1.12.3 (30 Jun 2006)
 
-  30 Jun 2006; <allanonl@gentoo.org> -pango-1.12.2.ebuild,
-  +pango-1.12.3.ebuild:
+  30 Jun 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -pango-1.12.2.ebuild, +pango-1.12.3.ebuild:
   new version.
 
   25 Jun 2006; Javier Villavicencio <the_paya@gentoo.org>
