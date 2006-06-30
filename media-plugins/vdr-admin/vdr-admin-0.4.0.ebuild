@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/vdr-admin-0.4.0.ebuild,v 1.1 2006/03/15 18:13:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/vdr-admin-0.4.0.ebuild,v 1.2 2006/06/30 16:16:39 zzam Exp $
 
 inherit vdr-plugin
 
-DESCRIPTION="Video Disk Recorder Admin PlugIn"
+DESCRIPTION="VDR plugin: Admin OSD - This is not! the webadmin program called vdradmin."
 HOMEPAGE="http://htpc-forum.de"
 SRC_URI="mirror://vdrfiles/${PN}/${P}.tgz"
 
