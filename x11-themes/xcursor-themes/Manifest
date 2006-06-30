@@ -1,22 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f5c7ad13cb401550c8188b77b7662d79 ChangeLog 2634
-RMD160 cd8c16f2052c45089717cb612c5fb6c8b0a56c47 ChangeLog 2634
-SHA256 42eae9c03966e15517d01a12ca3ffbfc9ea0d9075521bcfd9c63e2eec90f67b7 ChangeLog 2634
-MD5 61cc70e87a24dbc503299ca21827804a files/digest-xcursor-themes-1.0.1 74
-RMD160 fb13d76e09fe82459e074d287149ce4ccc33e508 files/digest-xcursor-themes-1.0.1 74
-SHA256 b52fed128320b9c0aec1327895fbb050358b97c708c6c090aa35669e9c234e00 files/digest-xcursor-themes-1.0.1 74
+DIST xcursor-themes-1.0.1.tar.bz2 2257899
+EBUILD xcursor-themes-1.0.1.ebuild 581 RMD160 25d1b0ce4e435b6251ccf8f8553e7e4a58c1e49b SHA1 7f07cc1e4f49fe0937ad5aed82010fddb6a04e63 SHA256 bb8d51878d3fe1aa70a54613fee5c677d85b60b5c9ccbb5efcb6785d3a2dc97d
+MD5 1a242900d74c1432653ca1ff879cc2be xcursor-themes-1.0.1.ebuild 581
+RMD160 25d1b0ce4e435b6251ccf8f8553e7e4a58c1e49b xcursor-themes-1.0.1.ebuild 581
+SHA256 bb8d51878d3fe1aa70a54613fee5c677d85b60b5c9ccbb5efcb6785d3a2dc97d xcursor-themes-1.0.1.ebuild 581
+MISC ChangeLog 2737 RMD160 09ff6855292f5a1df1f5ded34383ed08056937aa SHA1 f9db0c4ddc4bdf030f6cece6aec0036f8b9916af SHA256 3c3c8c2affddd2c1081ad4460fce2f99f92c68a5447f2714ff849726f172c3cb
+MD5 a8c94e86d8c3acfdc57d1357cd561a49 ChangeLog 2737
+RMD160 09ff6855292f5a1df1f5ded34383ed08056937aa ChangeLog 2737
+SHA256 3c3c8c2affddd2c1081ad4460fce2f99f92c68a5447f2714ff849726f172c3cb ChangeLog 2737
+MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 f0b90c5522f02ea0a15ccf9ae08f60c5 xcursor-themes-1.0.1.ebuild 579
-RMD160 4cd86ea542fc7ad44aeb4e605b96ebb5816724ed xcursor-themes-1.0.1.ebuild 579
-SHA256 4ccfafd9231c6aeff38d8325d78c64f7ffd39973c5dfbb54987abcc3e6ce50d9 xcursor-themes-1.0.1.ebuild 579
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD/Um72+ySkm8kpY0RAnebAKCwOgVD95p7GSN4WbUrngvf3ts/agCfT7kj
-8bAZzgo9+4SfxRG0PxMPiAI=
-=VgkQ
------END PGP SIGNATURE-----
+MD5 61cc70e87a24dbc503299ca21827804a files/digest-xcursor-themes-1.0.1 74
+RMD160 fb13d76e09fe82459e074d287149ce4ccc33e508 files/digest-xcursor-themes-1.0.1 74
+SHA256 b52fed128320b9c0aec1327895fbb050358b97c708c6c090aa35669e9c234e00 files/digest-xcursor-themes-1.0.1 74
