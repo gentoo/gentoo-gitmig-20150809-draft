@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.6 2006/06/28 02:32:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.7 2006/06/30 02:01:56 geoman Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -70,6 +70,7 @@ IUSE_VIDEO_CARDS="
 	video_cards_i128
 	video_cards_i740
 	video_cards_i810
+	video_cards_impact
 	video_cards_imstt
 	video_cards_mach64
 	video_cards_mga
@@ -290,6 +291,7 @@ PDEPEND="
 				video_cards_i128? ( >=x11-drivers/xf86-video-i128-1.2.0 )
 				video_cards_i740? ( >=x11-drivers/xf86-video-i740-1.1.0 )
 				video_cards_i810? ( >=x11-drivers/xf86-video-i810-1.6.0 )
+				video_cards_impact? ( >=x11-drivers/xf86-video-impact-0.2.0 )
 				video_cards_imstt? ( >=x11-drivers/xf86-video-imstt-1.1.0 )
 				video_cards_mach64? ( >=x11-drivers/xf86-video-ati-6.6.0 )
 				video_cards_mga? ( >=x11-drivers/xf86-video-mga-1.4.1 )
@@ -422,7 +424,8 @@ PDEPEND="
 					>=x11-drivers/xf86-video-vga-4.1.0
 					>=x11-drivers/xf86-video-via-0.2.1
 					>=x11-drivers/xf86-video-voodoo-1.1.0 )
-				mips? ( >=x11-drivers/xf86-video-newport-0.2.0 )
+				mips? ( >=x11-drivers/xf86-video-impact-0.2.0
+					>=x11-drivers/xf86-video-newport-0.2.0 )
 				ppc? ( >=x11-drivers/xf86-video-ati-6.6.0
 					>=x11-drivers/xf86-video-chips-1.1.1
 					>=x11-drivers/xf86-video-glint-1.1.1

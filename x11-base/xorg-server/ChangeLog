@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.131 2006/06/28 02:32:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.132 2006/06/30 02:01:56 geoman Exp $
+
+  30 Jun 2006; Stephen P. Becker <geoman@gentoo.org>
+  xorg-server-1.1.0-r1.ebuild:
+  added video_cards_impact to IUSE_VIDEO_CARDS, enable it for mips users
 
   27 Jun 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.1.0-r1.ebuild:
