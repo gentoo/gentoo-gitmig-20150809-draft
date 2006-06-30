@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXrender
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrender/ChangeLog,v 1.23 2006/06/30 05:07:28 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrender/ChangeLog,v 1.24 2006/06/30 09:17:32 corsair Exp $
+
+  30 Jun 2006; Markus Rothe <corsair@gentoo.org> libXrender-0.9.1.ebuild:
+  Stable on ppc64
 
   30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
   libXrender-0.9.1.ebuild:

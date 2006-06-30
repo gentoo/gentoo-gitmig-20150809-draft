@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXfixes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.26 2006/06/30 05:49:44 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.27 2006/06/30 09:15:12 corsair Exp $
+
+  30 Jun 2006; Markus Rothe <corsair@gentoo.org> libXfixes-4.0.1.ebuild:
+  Stable on ppc64
 
   30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
   libXfixes-4.0.1.ebuild:
