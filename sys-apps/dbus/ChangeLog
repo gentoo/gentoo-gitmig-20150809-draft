@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.119 2006/06/30 14:13:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.120 2006/06/30 14:20:48 gustavoz Exp $
+
+  30 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> dbus-0.61-r1.ebuild:
+  Stable on sparc wrt #137325
 
   30 Jun 2006; <dougg@gentoo.org> dbus-0.62.ebuild:
   updating qt4 depends bug #138391
