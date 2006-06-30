@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r17.ebuild,v 1.9 2006/04/30 00:30:51 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r17.ebuild,v 1.10 2006/06/30 00:59:55 robbat2 Exp $
 
 IUSE="aliaschain cnamefix doc fwdzone ipv6 \
 	multipleip roundrobin semanticfix static selinux \
@@ -41,7 +41,7 @@ RDEPEND=">=sys-process/daemontools-0.70
 	selinux? ( sec-policy/selinux-djbdns )"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tar.gz
 	cd ${S}
 
 	use ipv6 && use cnamefix && \
@@ -97,7 +97,7 @@ src_unpack() {
 		      "be compiled without IPv6 support."
 		cp -pR ${S} ${S}-noipv6
 		# Careful -- >=test21 of the ipv6 patch includes the errno patch
-		epatch ${WORKDIR}/${P}-${IPV6_PATCH}.diff
+		epatch ${DISTDIR}/${P}-${IPV6_PATCH}.diff.bz2
 		cd ${S}-noipv6
 	fi
 
