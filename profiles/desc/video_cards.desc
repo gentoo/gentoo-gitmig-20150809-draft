@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.1 2006/04/24 06:49:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.2 2006/06/30 01:31:28 geoman Exp $
 
 # This file contains descriptions of VIDEO_CARDS USE_EXPAND flags.
 
@@ -20,6 +20,7 @@ i128 - VIDEO_CARDS setting to build driver for i128 video cards
 i740 - VIDEO_CARDS setting to build driver for i740 video cards
 i810 - VIDEO_CARDS setting to build driver for i810 video cards
 imstt - VIDEO_CARDS setting to build driver for imstt video cards
+impact - VIDEO_CARDS setting to build driver for impact video cards
 mach64 - VIDEO_CARDS setting to build driver for mach64 video cards
 mga - VIDEO_CARDS setting to build driver for mga video cards
 neomagic - VIDEO_CARDS setting to build driver for neomagic video cards
