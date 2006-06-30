@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice-data
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.38 2006/06/19 04:00:16 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.39 2006/06/30 20:27:05 pylon Exp $
+
+  30 Jun 2006; Lars Weiler <pylon@gentoo.org> koffice-data-1.5.1.ebuild:
+  Stable on ppc; gcc-4 related; bug #138099.
 
   19 Jun 2006; Thomas Cort <tcort@gentoo.org> koffice-data-1.5.1.ebuild:
   Added ~alpha keyword wrt Bug #122204.
