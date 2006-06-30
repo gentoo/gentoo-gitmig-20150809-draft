@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5564 2006/06/29 19:26:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5565 2006/06/30 07:20:57 kevquinn Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Kevin F. Quinn <kevquinn@gentoo.org> (30 Jun 2006)
+# Mask until SpanKY uploads the new patch tarball
+=sys-devel/binutils-2.16.1-r3
 
 # Stefan Schweizer <genstef@gentoo.org> (29 Jun 2006)
 # 1.0.* is the stable version, we do not want to break any users
