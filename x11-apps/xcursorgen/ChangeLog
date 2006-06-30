@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xcursorgen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcursorgen/ChangeLog,v 1.21 2006/05/20 07:26:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcursorgen/ChangeLog,v 1.22 2006/06/30 06:34:04 spyderous Exp $
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xcursorgen-1.0.1.ebuild:
+  x86 stable.
 
 *xcursorgen-1.0.1 (20 May 2006)
 
