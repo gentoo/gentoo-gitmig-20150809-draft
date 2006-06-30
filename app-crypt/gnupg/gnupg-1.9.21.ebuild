@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.21.ebuild,v 1.2 2006/06/30 01:01:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.21.ebuild,v 1.3 2006/06/30 20:43:00 tcort Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnupg/alpha/gnupg/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1.9"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="X gpg2-experimental ldap nls smartcard selinux"
 #IUSE+=caps
 
