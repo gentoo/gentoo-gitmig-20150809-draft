@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.38 2006/06/30 16:46:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.39 2006/06/30 16:53:45 spyderous Exp $
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.6.7.ebuild, linuxwacom-0.6.8.ebuild, linuxwacom-0.6.9.ebuild,
+  linuxwacom-0.7.2.ebuild:
+  Work around 2.4 kernels by changing from a dep to checking for 2.4
+  linux-headers and USE=usb.
 
   30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
   linuxwacom-0.7.2.ebuild:
