@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-5.3.1-r1.ebuild,v 1.1 2006/06/26 05:31:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-5.3.1-r1.ebuild,v 1.2 2006/06/30 14:28:21 gustavoz Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="nls pmount"
 
 RDEPEND=">=dev-libs/libcdio-0.75-r1
