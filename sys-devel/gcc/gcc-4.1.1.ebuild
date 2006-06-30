@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.1.ebuild,v 1.13 2006/06/27 14:50:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.1.ebuild,v 1.14 2006/06/30 02:48:38 vapier Exp $
 
 PATCH_VER="1.6"
 UCLIBC_VER="1.0"
@@ -37,17 +37,15 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 		>=sys-libs/ncurses-5.2-r2
 		nls? ( sys-devel/gettext )
 	)"
-if [[ ${CATEGORY} != cross-* ]] ; then
-	RDEPEND="${RDEPEND} elibc_glibc? ( >=sys-libs/glibc-2.3.6 )"
-fi
 DEPEND="${RDEPEND}
 	test? ( sys-devel/autogen )
 	>=sys-apps/texinfo-4.2-r4
 	>=sys-devel/bison-1.875
 	>=${CATEGORY}/binutils-2.15.94"
-
-PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )
-	x86? ( !nocxx? ( !elibc_uclibc? ( !build? ( =virtual/libstdc++-3.3 ) ) ) )"
+PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )"
+if [[ ${CATEGORY} != cross-* ]] ; then
+	PDEPEND="${PDEPEND} elibc_glibc? ( >=sys-libs/glibc-2.3.6 )"
+fi
 
 src_unpack() {
 	gcc_src_unpack
