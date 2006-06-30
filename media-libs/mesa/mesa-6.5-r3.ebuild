@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.2 2006/06/21 06:07:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.3 2006/06/30 06:16:05 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -31,6 +31,7 @@ IUSE_VIDEO_CARDS="
 	video_cards_via"
 IUSE="${IUSE_VIDEO_CARDS}
 	debug
+	hardened
 	motif
 	nptl"
 
@@ -180,6 +181,12 @@ src_unpack() {
 
 	# Set drivers to everything on which we ran add_drivers()
 	echo "DRI_DIRS = ${DRI_DRIVERS}" >> ${HOSTCONF}
+
+	if use hardened; then
+		einfo "Deactivating assembly code for hardened build"
+		echo "ASM_FLAGS =" >> ${HOSTCONF}
+		echo "ASM_SOURCES =" >> ${HOSTCONF}
+	fi
 
 	if use sparc; then
 		einfo "Sparc assembly code is not working; deactivating"

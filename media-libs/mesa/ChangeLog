@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.89 2006/06/21 06:07:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.90 2006/06/30 06:16:05 spyderous Exp $
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; mesa-6.4.2-r2.ebuild,
+  mesa-6.5-r3.ebuild:
+  Add hardened USE flag to deactivate assembly code.
 
   21 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; mesa-6.5-r3.ebuild:
   (#130951) Fix libGLU symlink (Torsten Veller).
