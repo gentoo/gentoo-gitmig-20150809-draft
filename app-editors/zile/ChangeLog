@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/zile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.21 2006/06/29 21:42:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.22 2006/06/30 19:57:00 tcort Exp $
+
+  30 Jun 2006; Thomas Cort <tcort@gentoo.org> zile-2.2.13.ebuild:
+  Stable on alpha wrt Bug #138435.
 
   29 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> zile-2.2.13.ebuild:
   Add ~x86-fbsd keyword.

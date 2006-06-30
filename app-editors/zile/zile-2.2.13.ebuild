@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.2.13.ebuild,v 1.5 2006/06/29 21:42:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.2.13.ebuild,v 1.6 2006/06/30 19:57:00 tcort Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/zile/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="sys-libs/ncurses
