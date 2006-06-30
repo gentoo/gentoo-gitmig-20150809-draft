@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.3 2006/06/30 12:15:35 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.4 2006/06/30 15:00:07 nichoj Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -8,7 +8,8 @@ inherit eutils
 
 DEPEND="
 	=dev-java/java-config-2.0*
-	=dev-java/java-config-1.3*"
+	=dev-java/java-config-1.3*
+	>=sys-apps/portage-2.1"
 RDEPEND="
 	=dev-java/java-config-2.0*
 	=dev-java/java-config-1.3*"
