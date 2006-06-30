@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/iceauth
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/iceauth/ChangeLog,v 1.18 2006/03/31 19:52:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/iceauth/ChangeLog,v 1.19 2006/06/30 05:18:24 spyderous Exp $
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; iceauth-1.0.1.ebuild:
+  x86 stable.
 
   31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> iceauth-1.0.1.ebuild:
   Add ~x86-fbsd keyword.
