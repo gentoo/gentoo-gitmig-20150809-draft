@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxkbui
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbui/ChangeLog,v 1.28 2006/06/30 22:56:53 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbui/ChangeLog,v 1.29 2006/06/30 23:30:07 spyderous Exp $
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  libxkbui-1.0.2.ebuild:
+  ppc/sparc/mips/alpha/arm/sh stable
 
   30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
   -libxkbui-1.0.1.ebuild:

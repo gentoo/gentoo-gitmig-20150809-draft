@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.36 2006/06/30 15:44:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.37 2006/06/30 23:28:01 spyderous Exp $
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  libXfont-1.1.0-r1.ebuild:
+  ppc/sparc/mips/alpha/arm/sh stable
 
   30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   libXfont-1.1.0-r1.ebuild:
