@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/twisted-lore-0.1.0-r2.ebuild,v 1.1 2006/06/26 22:18:10 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/twisted-lore-0.1.0-r2.ebuild,v 1.2 2006/06/30 23:06:31 tcort Exp $
 
 MY_PACKAGE=Lore
 
@@ -8,7 +8,7 @@ inherit twisted eutils
 
 DESCRIPTION="Twisted documentation system"
 
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 DEPEND=">=dev-python/twisted-2
 	<dev-python/twisted-2.4

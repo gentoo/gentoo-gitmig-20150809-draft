@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.18 2006/06/28 02:35:24 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.19 2006/06/30 23:03:46 tcort Exp $
+
+  30 Jun 2006; Thomas Cort <tcort@gentoo.org> twisted-web-0.5.0-r1.ebuild:
+  Stable on alpha wrt Bug #128688.
 
   28 Jun 2006; Luis Medinas <metalgod@gentoo.org> twisted-web-0.6.0.ebuild:
   Stable on amd64. See bug #124293.

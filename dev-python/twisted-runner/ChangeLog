@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-runner
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.9 2006/05/26 18:46:24 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.10 2006/06/30 23:11:52 tcort Exp $
+
+  30 Jun 2006; Thomas Cort <tcort@gentoo.org>
+  twisted-runner-0.1.0-r1.ebuild:
+  Stable on alpha wrt Bug #128688.
 
 *twisted-runner-0.2.0 (26 May 2006)
 
