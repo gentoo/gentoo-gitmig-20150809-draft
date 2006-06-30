@@ -1,22 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 71d7c03512490022caeb3bae5ad6e3b1 ChangeLog 2700
-RMD160 de9ddf646e56bfcd1f6dc04f0886c527346d3c30 ChangeLog 2700
-SHA256 554a028d3d0e145d01e0e5d2c49604e192a7e2ef425e2618b1c22fe163e35726 ChangeLog 2700
-MD5 ceeb5a95ffa99a1dfd77da5a5ba98454 files/digest-xf86-input-magictouch-1.0.0.5 338
-RMD160 e872457936fca0b9b4badaf95986c9830dfde711 files/digest-xf86-input-magictouch-1.0.0.5 338
-SHA256 c05d76464b21d97c8bf5287b4ca42b0bfac7fd03a225cb2732f7ab9d8b5bbe14 files/digest-xf86-input-magictouch-1.0.0.5 338
+DIST x11-driver-patches-1.tar.bz2 389 RMD160 0c57d4b235d83f3d7c46691c13857fd121ddec2d SHA1 6e2ac0cd255d3c4dc97d35092fe3ef64a71d7ac5 SHA256 64787d5b57d2845c0fa9297a9d924093ba191fc3551798239d9983f0bcca9b3e
+DIST xf86-input-magictouch-1.0.0.5.tar.bz2 218289
+EBUILD xf86-input-magictouch-1.0.0.5.ebuild 588 RMD160 c958d4ebfcafcbecdc18d3666f2263267b0c56ad SHA1 6c0734dce3b984775b92605e8bba433f8ff8b7f2 SHA256 3b2bae947af46c3d4caf89d7b14b7c54ff0374fe0323be020eeffdad9b88ddb9
+MD5 01deda330f72f4274bb5e6872e816dbd xf86-input-magictouch-1.0.0.5.ebuild 588
+RMD160 c958d4ebfcafcbecdc18d3666f2263267b0c56ad xf86-input-magictouch-1.0.0.5.ebuild 588
+SHA256 3b2bae947af46c3d4caf89d7b14b7c54ff0374fe0323be020eeffdad9b88ddb9 xf86-input-magictouch-1.0.0.5.ebuild 588
+MISC ChangeLog 2810 RMD160 877ae1f1bf9737ed9929c627436f4a36fc4689f4 SHA1 908494a6654c715951ed29e1f370036cb196b5bd SHA256 434339993d87254c20ab3605efc5311a09261d6c4a1da8a4d52ff3b6d2147a6e
+MD5 b45abaf04a5ea59c929690d646b658d0 ChangeLog 2810
+RMD160 877ae1f1bf9737ed9929c627436f4a36fc4689f4 ChangeLog 2810
+SHA256 434339993d87254c20ab3605efc5311a09261d6c4a1da8a4d52ff3b6d2147a6e ChangeLog 2810
+MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 5b355bcb4689b2bd036453f20b39ae7c xf86-input-magictouch-1.0.0.5.ebuild 589
-RMD160 33fc1bd336d16a9637101a5c311367fc0f7e17e8 xf86-input-magictouch-1.0.0.5.ebuild 589
-SHA256 9f6412797f1ed2df7da62fdc23d044b13d54b96474ffde16df02cef4e1f1260d xf86-input-magictouch-1.0.0.5.ebuild 589
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEQj5lAiZjviIA2XgRAj4uAJ4+QoUbMrNMuTNIn6T/Eh+g3C2h0QCgk++K
-vrgAICA11Fqkj8T9h+noawc=
-=sA+0
------END PGP SIGNATURE-----
+MD5 ceeb5a95ffa99a1dfd77da5a5ba98454 files/digest-xf86-input-magictouch-1.0.0.5 338
+RMD160 e872457936fca0b9b4badaf95986c9830dfde711 files/digest-xf86-input-magictouch-1.0.0.5 338
+SHA256 c05d76464b21d97c8bf5287b4ca42b0bfac7fd03a225cb2732f7ab9d8b5bbe14 files/digest-xf86-input-magictouch-1.0.0.5 338
