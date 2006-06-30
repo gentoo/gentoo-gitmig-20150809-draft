@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.2 2006/06/25 16:28:09 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.3 2006/06/30 12:15:35 nichoj Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -44,6 +44,12 @@ java-vm-2_pkg_postinst() {
 		    java-config-1 --set-system-vm=${P}
 		fi
 		# else... some other VM is being updated, so we don't have to worry
+	fi
+
+	if has nsplugin ${IUSE} && use nsplugin; then
+		if [[ ! -f /usr/lib/nsbrowser/plugins/javaplugin.so ]]; then
+			eselect java-nsplugin set ${VMHANDLE}
+		fi
 	fi
 
 	java_mozilla_clean_
@@ -129,9 +135,9 @@ install_mozilla_plugin() {
 		die "Cannot find mozilla plugin at ${D}/${plugin}"
 	fi
 
-	local plugin_dir=$(java_get_plugin_dir_)
+	local plugin_dir=/usr/share/java-config-2/nsplugin
 	dodir ${plugin_dir}
-	dosym ${plugin} ${plugin_dir}/javaplugin.so
+	dosym ${plugin} ${plugin_dir}/${VMHANDLE}-javaplugin.so
 }
 
 java_mozilla_clean_() {
