@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.3-r1.ebuild,v 1.6 2006/06/28 17:35:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.3-r1.ebuild,v 1.7 2006/06/30 18:39:06 kanaka Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -93,7 +93,6 @@ src_unpack() {
 	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i ${S}/configure
 
 	if tc-is-cross-compiler ; then
-		epatch "${WORKDIR}/${PATCHTAR}"/python-2.4.1-bindir-libdir.patch
 		epatch "${WORKDIR}/${PATCHTAR}"/python-2.4.1-crosscompile.patch
 	fi
 
@@ -155,7 +154,7 @@ src_compile() {
 	src_configure
 
 	if tc-is-cross-compiler ; then
-		OPT="-O1" CFLAGS="" LDFLAGS="" \
+		OPT="-O1" CFLAGS="" LDFLAGS="" CC="" \
 		./configure --with-cxx=no || die "cross-configure failed"
 		emake python Parser/pgen || die "cross-make failed"
 		mv python hostpython
