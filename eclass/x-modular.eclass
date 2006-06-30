@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.65 2006/06/30 07:55:53 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.66 2006/06/30 16:21:38 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -200,9 +200,11 @@ x-modular_server_supports_drivers_check() {
 	# (#135873) Only certain servers will actually use or be capable of
 	# building external drivers, including binary drivers.
 	if [[ -n "${DRIVER}" ]]; then
-		if ! built_with_use x11-base/xorg-server xorg; then
-			eerror "x11-base/xorg-server is not built with support for external drivers."
-			die "You must build x11-base/xorg-server with USE=xorg."
+		if has_version >=x11-base/xorg-server-1.1; then
+			if ! built_with_use x11-base/xorg-server xorg; then
+				eerror "x11-base/xorg-server is not built with support for external drivers."
+				die "You must build x11-base/xorg-server with USE=xorg."
+			fi
 		fi
 	fi
 }
