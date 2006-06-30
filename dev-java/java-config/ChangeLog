@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.90 2006/06/28 15:32:43 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.91 2006/06/30 12:16:01 nichoj Exp $
+
+  30 Jun 2006; Joshua Nichols <nichoj@gentoo.org>
+  -java-config-2.0.25.ebuild, +java-config-2.0.26.ebuild:
+  Version bump which adds a new eselect module, java-nsplugin
 
 *java-config-2.0.25 (28 Jun 2006)
 
