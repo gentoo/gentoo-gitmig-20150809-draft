@@ -1,6 +1,15 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.70 2006/05/11 00:32:24 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.71 2006/06/30 18:41:49 allanonjl Exp $
+
+*epiphany-2.14.2.1 (30 Jun 2006)
+
+  30 Jun 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -files/epiphany-2.14.1-as-needed.patch, -epiphany-1.8.2.ebuild,
+  -epiphany-1.8.3.ebuild, -epiphany-2.14.1-r1.ebuild,
+  +epiphany-2.14.2.1.ebuild:
+  new version, remove as-needed patch since it was applied in this version.
+  remove old versions
 
 *epiphany-2.14.1-r1 (11 May 2006)
 
