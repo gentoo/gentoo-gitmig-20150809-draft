@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.36 2006/06/14 17:57:13 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.37 2006/06/30 15:58:20 wolf31o2 Exp $
+
+  30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  linuxwacom-0.7.2.ebuild:
+  Stable on amd64.
 
   14 Jun 2006; Jon Hood <squinky86@gentoo.org> linuxwacom-0.7.2.ebuild:
   Add multilib fixings from Malcomb Lashley <malc@gentoo.org>, #132191.
