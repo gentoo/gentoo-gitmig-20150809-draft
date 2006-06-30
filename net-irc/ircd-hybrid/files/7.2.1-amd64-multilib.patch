@@ -1,0 +1,23 @@
+diff -urN ircd-hybrid-7.2.1.orig/src/lex.yy.c ircd-hybrid-7.2.1/src/lex.yy.c
+--- ircd-hybrid-7.2.1.orig/src/lex.yy.c	2006-06-24 18:44:37.000000000 +0200
++++ ircd-hybrid-7.2.1/src/lex.yy.c	2006-06-24 18:45:39.000000000 +0200
+@@ -7,8 +7,9 @@
+ 
+ #if defined(__FreeBSD__)
+ #include <sys/cdefs.h>
++#define REALLOC_SUFFIX __unused
+ #else
+-#define __unused
++#define REALLOC_SUFFIX
+ #endif
+ 
+ #define FLEX_SCANNER
+@@ -247,7 +248,7 @@
+ YY_BUFFER_STATE yy_scan_bytes YY_PROTO(( yyconst char *bytes, int len ));
+ 
+ static void *yy_flex_alloc YY_PROTO(( yy_size_t ));
+-static void *yy_flex_realloc YY_PROTO(( void *, yy_size_t )) __unused;
++static void *yy_flex_realloc YY_PROTO(( void *, yy_size_t )) REALLOC_SUFFIX;
+ static void yy_flex_free YY_PROTO(( void * ));
+ 
+ #define yy_new_buffer yy_create_buffer

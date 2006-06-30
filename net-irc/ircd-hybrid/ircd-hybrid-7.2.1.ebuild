@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.2.1.ebuild,v 1.1 2006/06/05 19:45:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.2.1.ebuild,v 1.2 2006/06/30 14:54:22 jokey Exp $
 
 inherit eutils toolchain-funcs
 
@@ -37,6 +37,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/7.2.1-default-config.patch
+	epatch "${FILESDIR}"/7.2.1-amd64-multilib.patch
 }
 
 src_compile() {
