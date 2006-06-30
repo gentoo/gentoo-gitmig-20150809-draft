@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-alias
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-alias/ChangeLog,v 1.20 2006/06/30 09:42:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-alias/ChangeLog,v 1.21 2006/06/30 14:44:58 wolf31o2 Exp $
+
+  30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  font-alias-1.0.1.ebuild:
+  Stable on amd64.
 
   30 Jun 2006; Markus Rothe <corsair@gentoo.org> font-alias-1.0.1.ebuild:
   Stable on ppc64
