@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xf86driproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86driproto/ChangeLog,v 1.17 2006/06/30 16:12:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86driproto/ChangeLog,v 1.18 2006/06/30 22:20:39 spyderous Exp $
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xf86driproto-2.0.3.ebuild:
+  ppc/sparc/mips/alpha stable
 
   30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   xf86driproto-2.0.3.ebuild:
