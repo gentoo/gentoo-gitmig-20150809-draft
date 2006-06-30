@@ -1,49 +1,62 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 92ec1e71ede80f8a83ce4fd2d565b061 ChangeLog 931
-RMD160 4aa01a3fa683ae3bd6c3bfd83ea4c51035e83b60 ChangeLog 931
-SHA256 7886cf6b20ea894e6da9ebad1ce70ecd87845b94d565e34417c30789902873d7 ChangeLog 931
-MD5 ca434e3472d0fc8b9da24dc053a7929f files/digest-pcalc-1.0.0-r1 61
-RMD160 40762f1b6e38795a1c5fdfc6393aee7a3f4f6a71 files/digest-pcalc-1.0.0-r1 61
-SHA256 ca24031b79f1dab7e237bf5e6365aab3eb1b0ca91fecfc4f7f1529173e43c8ca files/digest-pcalc-1.0.0-r1 61
+AUX pcalc-1.0.0-duplicated-case.patch 653 RMD160 21bb6c5f2f0a858e023270c7b395eba6beb5e915 SHA1 66dcc42214f7193d14e83b570a87f525fbdbaebc SHA256 2eba75bc477f5ff6211f2dd5c4dca68561d2c38637a2bbfd9e655984d4c69644
 MD5 e36de7ac01ab409f77bf06a356099b38 files/pcalc-1.0.0-duplicated-case.patch 653
 RMD160 21bb6c5f2f0a858e023270c7b395eba6beb5e915 files/pcalc-1.0.0-duplicated-case.patch 653
 SHA256 2eba75bc477f5ff6211f2dd5c4dca68561d2c38637a2bbfd9e655984d4c69644 files/pcalc-1.0.0-duplicated-case.patch 653
+AUX pcalc-1.0.0-error-handler.patch 746 RMD160 f430df7bc9e14bd7aa986d565bcb4864c6f0d8b7 SHA1 14bcefe30bf9b5f804f08aac0352a9baa910e35e SHA256 186855aa88a28111bc9feb2e772fee1e3d55a32a193aba11175f78df7136db79
 MD5 b6ec72ff82cd4a5d80a40e5f8ccc6d67 files/pcalc-1.0.0-error-handler.patch 746
 RMD160 f430df7bc9e14bd7aa986d565bcb4864c6f0d8b7 files/pcalc-1.0.0-error-handler.patch 746
 SHA256 186855aa88a28111bc9feb2e772fee1e3d55a32a193aba11175f78df7136db79 files/pcalc-1.0.0-error-handler.patch 746
+AUX pcalc-1.0.0-flex.patch 645 RMD160 d85c9b20647580491d471752040d426e586b97b8 SHA1 c41bd8081cb11b362b4fbcb3224b7eea26fee5ab SHA256 ac6e6408dc4a33b8dfd35d96c0ef6b106ece7a64b10b54891bab2d49b203bfc7
 MD5 79bec86d6f28e3b33ac3bc5ccf040af1 files/pcalc-1.0.0-flex.patch 645
 RMD160 d85c9b20647580491d471752040d426e586b97b8 files/pcalc-1.0.0-flex.patch 645
 SHA256 ac6e6408dc4a33b8dfd35d96c0ef6b106ece7a64b10b54891bab2d49b203bfc7 files/pcalc-1.0.0-flex.patch 645
+AUX pcalc-1.0.0-input-overflow-check.patch 974 RMD160 7112eda3d179332038c30077a83f85e4a09f6412 SHA1 c26d48794c894afa4eea971d2c76a91dfa65a66f SHA256 d3c42e13aca741eda4340b83bbe4daa7b80bc324d023ef4c9ceb11194e7444a5
 MD5 4d66ff33f60981fcadd27d915a6c0c7f files/pcalc-1.0.0-input-overflow-check.patch 974
 RMD160 7112eda3d179332038c30077a83f85e4a09f6412 files/pcalc-1.0.0-input-overflow-check.patch 974
 SHA256 d3c42e13aca741eda4340b83bbe4daa7b80bc324d023ef4c9ceb11194e7444a5 files/pcalc-1.0.0-input-overflow-check.patch 974
+AUX pcalc-1.0.0-operator-updates.patch 3712 RMD160 15bf174c2d24173deb99a92817cea6f093b9b442 SHA1 d1a034368d6276135636de4d7abd9122ed6856bc SHA256 af7bdeaccfc30d6d51c79707666bbbc192aedb544506cd67d7fad8567c857ea3
 MD5 37048896f8eadea6e20d6d4ba67c2d5f files/pcalc-1.0.0-operator-updates.patch 3712
 RMD160 15bf174c2d24173deb99a92817cea6f093b9b442 files/pcalc-1.0.0-operator-updates.patch 3712
 SHA256 af7bdeaccfc30d6d51c79707666bbbc192aedb544506cd67d7fad8567c857ea3 files/pcalc-1.0.0-operator-updates.patch 3712
+AUX pcalc-1.0.0-static-vars.patch 1118 RMD160 e8a09b326d801fd65790a69ac1b426535a8718da SHA1 1bbfab8536caec7e7e3c40b4d3245df431cc8124 SHA256 3547c94a997d3f17c280f782a3e7848f625143ae37b46e43aee58e72094e2b34
 MD5 44100658fc8c1627d8d7833fa95ad814 files/pcalc-1.0.0-static-vars.patch 1118
 RMD160 e8a09b326d801fd65790a69ac1b426535a8718da files/pcalc-1.0.0-static-vars.patch 1118
 SHA256 3547c94a997d3f17c280f782a3e7848f625143ae37b46e43aee58e72094e2b34 files/pcalc-1.0.0-static-vars.patch 1118
+AUX pcalc-1.0.0-string-overflow-checks.patch 935 RMD160 d95128c766010f3485dbb7a7d0b346664a430f10 SHA1 9cee30e067b3b011bb911fd879aff61a830bd8f8 SHA256 3a5bf2cb19daaa70d67c38f50a894788e51bc873afd7043cb567751759d51587
 MD5 127ca758677a0ee0e12a564d390f1de6 files/pcalc-1.0.0-string-overflow-checks.patch 935
 RMD160 d95128c766010f3485dbb7a7d0b346664a430f10 files/pcalc-1.0.0-string-overflow-checks.patch 935
 SHA256 3a5bf2cb19daaa70d67c38f50a894788e51bc873afd7043cb567751759d51587 files/pcalc-1.0.0-string-overflow-checks.patch 935
+AUX pcalc-1.0.0-tmpfile.patch 2110 RMD160 155876cd3550fb16a01cb03bf56f144d145d4bf9 SHA1 c12498663b96bb72a6e753a7380fd1d38299636a SHA256 2d59891f068c3bef9fa6aace64f8484c3474d48ed4882cd538cf81288399b109
 MD5 a7bff3af96ba061b61898f898ee3a1ab files/pcalc-1.0.0-tmpfile.patch 2110
 RMD160 155876cd3550fb16a01cb03bf56f144d145d4bf9 files/pcalc-1.0.0-tmpfile.patch 2110
 SHA256 2d59891f068c3bef9fa6aace64f8484c3474d48ed4882cd538cf81288399b109 files/pcalc-1.0.0-tmpfile.patch 2110
+AUX pcalc-1.0.0-usage.patch 785 RMD160 70ba29d399df8eb5a91a92199fd637fc28b15af7 SHA1 3755f005a626a85e6955a1ab46c7345e881559c4 SHA256 f3a51b1ea5e195d13762426c66cfcbac47d40e17cf633a4efc4a4fb5de874d02
 MD5 800c5fe897cd8901c8b5671fcb17b11f files/pcalc-1.0.0-usage.patch 785
 RMD160 70ba29d399df8eb5a91a92199fd637fc28b15af7 files/pcalc-1.0.0-usage.patch 785
 SHA256 f3a51b1ea5e195d13762426c66cfcbac47d40e17cf633a4efc4a4fb5de874d02 files/pcalc-1.0.0-usage.patch 785
+DIST pcalc-000.tar.gz 103437
+EBUILD pcalc-1.0.0-r1.ebuild 1210 RMD160 67923fcb922f61def72982e04d2b4a4e95bb600f SHA1 3a2f853d90aa6ffc3edcae9d0f8a0051930b6786 SHA256 9e18afffc235abb288cdf21c1ed666ff878952fd8179dfeb39e8eb5938dc74a8
+MD5 cb73e63b1fe3b03cb8a5dfccf7c94192 pcalc-1.0.0-r1.ebuild 1210
+RMD160 67923fcb922f61def72982e04d2b4a4e95bb600f pcalc-1.0.0-r1.ebuild 1210
+SHA256 9e18afffc235abb288cdf21c1ed666ff878952fd8179dfeb39e8eb5938dc74a8 pcalc-1.0.0-r1.ebuild 1210
+MISC ChangeLog 931 RMD160 4aa01a3fa683ae3bd6c3bfd83ea4c51035e83b60 SHA1 cfdb011b92415b0fba963ca46d71ebc0ef44e2cc SHA256 7886cf6b20ea894e6da9ebad1ce70ecd87845b94d565e34417c30789902873d7
+MD5 92ec1e71ede80f8a83ce4fd2d565b061 ChangeLog 931
+RMD160 4aa01a3fa683ae3bd6c3bfd83ea4c51035e83b60 ChangeLog 931
+SHA256 7886cf6b20ea894e6da9ebad1ce70ecd87845b94d565e34417c30789902873d7 ChangeLog 931
+MISC metadata.xml 217 RMD160 e59c012ba8ec27b36439e65a1b5bbf0ff095353e SHA1 b036cf281dafc05a23dd9e447afa2b2c97d38d4d SHA256 0ae4a6bf75b6b017febdd961c518071b702eaddde696b88720d0d40ba569255b
 MD5 25822404d543970f374c03c190602347 metadata.xml 217
 RMD160 e59c012ba8ec27b36439e65a1b5bbf0ff095353e metadata.xml 217
 SHA256 0ae4a6bf75b6b017febdd961c518071b702eaddde696b88720d0d40ba569255b metadata.xml 217
-MD5 093a7056ce352c1b5ecfcc4f276b3930 pcalc-1.0.0-r1.ebuild 1203
-RMD160 8f69a2dde5b496dabc24719e5cece108ab6b1c92 pcalc-1.0.0-r1.ebuild 1203
-SHA256 98bd671cb56ec961bfd98a9cef97166cb615bcdc0e3030d7d827be1675106de4 pcalc-1.0.0-r1.ebuild 1203
+MD5 ca434e3472d0fc8b9da24dc053a7929f files/digest-pcalc-1.0.0-r1 61
+RMD160 40762f1b6e38795a1c5fdfc6393aee7a3f4f6a71 files/digest-pcalc-1.0.0-r1 61
+SHA256 ca24031b79f1dab7e237bf5e6365aab3eb1b0ca91fecfc4f7f1529173e43c8ca files/digest-pcalc-1.0.0-r1 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEBi0P2+ySkm8kpY0RAgP5AJsFY/eOPPycByVoAQWBA7V2awiwbACbB+1/
-AwyX72d171ARA1KhLZbyM6U=
-=z546
+iD8DBQFEpbG5amhnQswr0vIRAsEBAKCYaV0hM+lsMmgZULhYrU4UiEenvACfTRB7
+xXnm8ucwjRnigjxCkpdpd90=
+=x6z2
 -----END PGP SIGNATURE-----
