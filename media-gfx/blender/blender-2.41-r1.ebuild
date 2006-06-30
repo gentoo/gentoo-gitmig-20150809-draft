@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.41-r1.ebuild,v 1.2 2006/06/18 16:45:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.41-r1.ebuild,v 1.3 2006/06/30 10:09:57 lu_zero Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -111,14 +111,12 @@ src_compile() {
 src_install() {
 	exeinto /usr/bin/
 	doexe ${S}/blender
-	doexe ${S}/blenderplayer
-
 
 	exeinto /usr/$(get_libdir)/${PN}/textures
 	doexe ${S}/release/plugins/texture/*.so
 	exeinto /usr/$(get_libdir)/${PN}/sequences
 	doexe ${S}/release/plugins/sequence/*.so
-	cp -pPR ${S}/release/{datafile,plugins,scripts} \
+	cp -pPR ${S}/release/{datafiles,plugins,scripts} \
 		${D}/usr/$(get_libdir)/${PN}
 	use nls && \
 	cp -pPR ${S}/bin/.blender/{.Blanguages,.bfont.ttf,locale} \
@@ -128,7 +126,7 @@ src_install() {
 	insinto /usr/share/applications
 	doins ${FILESDIR}/${PN}.desktop
 
-	dodoc COPYING INSTALL README release_*.txt
+	dodoc COPYING INSTALL README
 
 }
 
