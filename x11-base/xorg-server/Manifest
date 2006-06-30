@@ -6,6 +6,10 @@ AUX 1.0.2-fix-readKernelMapping-overrun.patch 468 RMD160 6d1f528b14df15b1ff6b658
 MD5 a8fb013a42270146a12186aeb0651071 files/1.0.2-fix-readKernelMapping-overrun.patch 468
 RMD160 6d1f528b14df15b1ff6b658ff611550c39014838 files/1.0.2-fix-readKernelMapping-overrun.patch 468
 SHA256 28b0502d4e151813455a10a522488d1dddce8671492022433507ff61df277c12 files/1.0.2-fix-readKernelMapping-overrun.patch 468
+AUX 1.0.2-fix-rom-read-dualhead.patch 3344 RMD160 8e908ee65c4afdf78d8a8eb35af3a3d7f0288eca SHA1 fa406b2e5027e072d67f63c5b2193b5b0871e5cc SHA256 e7e10432b87a692a9d9e6a69299eaaff4b8ed150508f4df2b1342ee07fc5af5a
+MD5 bfe540b7dff88d33ed771535a7a1dc5b files/1.0.2-fix-rom-read-dualhead.patch 3344
+RMD160 8e908ee65c4afdf78d8a8eb35af3a3d7f0288eca files/1.0.2-fix-rom-read-dualhead.patch 3344
+SHA256 e7e10432b87a692a9d9e6a69299eaaff4b8ed150508f4df2b1342ee07fc5af5a files/1.0.2-fix-rom-read-dualhead.patch 3344
 AUX 1.0.2-fix-xorgconfig-rgbpath-and-mouse.patch 2021 RMD160 5cffbd24fc7d3d817b050de268ce23e64ed83b5d SHA1 838913c520e5fa4a62a06afb9882e9117458e181 SHA256 6c32348b9c8460250b2600ae8672c5cadce4b5cca5577b9937a703afbfc57620
 MD5 6d3ecb7a2b6736047a08447cda7f8ed6 files/1.0.2-fix-xorgconfig-rgbpath-and-mouse.patch 2021
 RMD160 5cffbd24fc7d3d817b050de268ce23e64ed83b5d files/1.0.2-fix-xorgconfig-rgbpath-and-mouse.patch 2021
@@ -71,14 +75,18 @@ EBUILD xorg-server-1.0.2-r6.ebuild 6140 RMD160 48eb86bf38ce9029e33d20c504d0be6eb
 MD5 65ebbfe3b11ecbc256d305d02aa215e7 xorg-server-1.0.2-r6.ebuild 6140
 RMD160 48eb86bf38ce9029e33d20c504d0be6eb114ef0e xorg-server-1.0.2-r6.ebuild 6140
 SHA256 3b10c1c7d6b1cac5b679baf1881107079d945c81c26e75a997ff3ae333ef019c xorg-server-1.0.2-r6.ebuild 6140
+EBUILD xorg-server-1.0.2-r7.ebuild 6187 RMD160 546cd232b59779a73be08a87cbe2ae4851cdf1b3 SHA1 cd4c5cb03a196501186500ea1c1cea1d2dfe7349 SHA256 b26d2196f00b7e640f5fd3a7cca47e31afc4a048505ffe5b8914e8c4c8930cec
+MD5 248595a1eded262db04cbfc02d64b9e3 xorg-server-1.0.2-r7.ebuild 6187
+RMD160 546cd232b59779a73be08a87cbe2ae4851cdf1b3 xorg-server-1.0.2-r7.ebuild 6187
+SHA256 b26d2196f00b7e640f5fd3a7cca47e31afc4a048505ffe5b8914e8c4c8930cec xorg-server-1.0.2-r7.ebuild 6187
 EBUILD xorg-server-1.1.0-r1.ebuild 24126 RMD160 0fa524a061fd536e5dac47e84b5535ff52c0a7d4 SHA1 ae20032b4981bb7102d524697c27fefec38f3d8e SHA256 82bcba6e52f57f1345a1154eb8ce13d109e662be327a6e09bbe28fb15556f03b
 MD5 3e3ef30169fe83b3b0b4a711d06b1aa1 xorg-server-1.1.0-r1.ebuild 24126
 RMD160 0fa524a061fd536e5dac47e84b5535ff52c0a7d4 xorg-server-1.1.0-r1.ebuild 24126
 SHA256 82bcba6e52f57f1345a1154eb8ce13d109e662be327a6e09bbe28fb15556f03b xorg-server-1.1.0-r1.ebuild 24126
-MISC ChangeLog 28677 RMD160 5786529792747ff1acc3e7fc3e9bdc524a7bd3cb SHA1 99a9ff19153b1ea79d987718d6c7652e002bb986 SHA256 0f216fc48c795b4ee71463b6307ec44b119a582f411b0f7ed2747a8813a644d3
-MD5 9c9c484585cc00543d45ed5c5eb6b529 ChangeLog 28677
-RMD160 5786529792747ff1acc3e7fc3e9bdc524a7bd3cb ChangeLog 28677
-SHA256 0f216fc48c795b4ee71463b6307ec44b119a582f411b0f7ed2747a8813a644d3 ChangeLog 28677
+MISC ChangeLog 28864 RMD160 8bc17fac09b7a497db2cf44af4c7c922546b5dd0 SHA1 0448b84799560f7a0e060526bfdc7f15e9e9910e SHA256 c29a59f32742ac5479ed63b6da58945f4ecf78accab2278fb32d6774d26765ae
+MD5 938257e46d5097b05f07607d762c24cb ChangeLog 28864
+RMD160 8bc17fac09b7a497db2cf44af4c7c922546b5dd0 ChangeLog 28864
+SHA256 c29a59f32742ac5479ed63b6da58945f4ecf78accab2278fb32d6774d26765ae ChangeLog 28864
 MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
@@ -86,6 +94,9 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 a36a121279d71c130aefdf8f84e432cf files/digest-xorg-server-1.0.2-r6 771
 RMD160 1e76b7ca2a6430d0901f036dc90692bb1bf14546 files/digest-xorg-server-1.0.2-r6 771
 SHA256 8d9ab78da2938d08246fae35c4f61a04a7b9932cd722a549707731c9d9a87ab8 files/digest-xorg-server-1.0.2-r6 771
+MD5 a36a121279d71c130aefdf8f84e432cf files/digest-xorg-server-1.0.2-r7 771
+RMD160 1e76b7ca2a6430d0901f036dc90692bb1bf14546 files/digest-xorg-server-1.0.2-r7 771
+SHA256 8d9ab78da2938d08246fae35c4f61a04a7b9932cd722a549707731c9d9a87ab8 files/digest-xorg-server-1.0.2-r7 771
 MD5 0b4a5b66471e1dcc4176e5e3eac4e47f files/digest-xorg-server-1.1.0-r1 500
 RMD160 5b942d1403fee2bf47c380017eed89ad1bf6121c files/digest-xorg-server-1.1.0-r1 500
 SHA256 356da215b18f2bbfa4e1509d15d26e56ba0372f28390d3c1903375f6c2f7abae files/digest-xorg-server-1.1.0-r1 500
