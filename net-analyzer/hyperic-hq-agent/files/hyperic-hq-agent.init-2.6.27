@@ -1,0 +1,17 @@
+#!/sbin/runscript
+
+depend() {
+	need net clock hostname
+}
+
+start() {
+	ebegin "Starting Hyperic HQ Agent"
+	start-stop-daemon --start --quiet --exec /opt/hyperic-hq-agent-2.6.22/hq-agent.sh -- start
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Hyperic HQ Agent"
+	start-stop-daemon --start --quiet -exec /opt/hyperic-hq-agent-2.6.22/hq-agent.sh -- stop	
+	eend $?
+}
