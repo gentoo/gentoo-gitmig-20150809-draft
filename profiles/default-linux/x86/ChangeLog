@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.3 2006/06/27 19:19:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.4 2006/06/30 22:27:39 wolf31o2 Exp $
+
+  30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  dev/2006.1/make.defaults:
+  Removed comment about the keyboard/mouse stuff since spyderous moved it all
+  to default-linux.
 
   27 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> use.mask:
   Removed mmx2 from unmask since it is not valid. This removes x86 from bug
