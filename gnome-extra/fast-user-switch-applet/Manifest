@@ -1,6 +1,16 @@
-MD5 fa2362db8d5c4c24be76b9f057082a54 ChangeLog 1186
-MD5 5835c068004061239442bba56f1e4a2d fast-user-switch-applet-2.14.0.ebuild 1302
-MD5 183a53d7c953acc8ac20d1c44419b8cc fast-user-switch-applet-2.14.1.ebuild 1317
-MD5 cc3c1a7a6f3661189a2f3ec08e453327 files/digest-fast-user-switch-applet-2.14.0 295
-MD5 9921f90f3435658024fd8b96d50a2de3 files/digest-fast-user-switch-applet-2.14.1 295
+DIST fast-user-switch-applet-2.14.2.tar.bz2 497832 RMD160 d469ef520998dead060d64b38bb710c350b957f4 SHA1 e4792fc611ba02059b0e6c3ee8f5c1f1ef729763 SHA256 1e5b7e2ebeb54b828f00dc3e6e6387ea10d3b47df6c73f7c722b26cf3fcf147f
+EBUILD fast-user-switch-applet-2.14.2.ebuild 1305 RMD160 599bbe9dcdd29f24708dd8694e9f03df4f66d911 SHA1 4cc63264fc2e310dc2456ed8c663f8742b652f73 SHA256 c31c37bf7d552328b888034457b9c04b6c95450853cffa371898c280c3dd93d8
+MD5 1bea36863ff5b42581ede69ff6ac6907 fast-user-switch-applet-2.14.2.ebuild 1305
+RMD160 599bbe9dcdd29f24708dd8694e9f03df4f66d911 fast-user-switch-applet-2.14.2.ebuild 1305
+SHA256 c31c37bf7d552328b888034457b9c04b6c95450853cffa371898c280c3dd93d8 fast-user-switch-applet-2.14.2.ebuild 1305
+MISC ChangeLog 1449 RMD160 303dcd5ff4eabd3f3bb8afdea9f28cb22392542a SHA1 e85c78c0091573662cbdc4f271b61d59f93c5735 SHA256 a7cb0e729466e1f22daac94dd1129caea0f24435d4de41cfbe9f01335abbff9d
+MD5 7958575b8e24c42a43e3db787486e63b ChangeLog 1449
+RMD160 303dcd5ff4eabd3f3bb8afdea9f28cb22392542a ChangeLog 1449
+SHA256 a7cb0e729466e1f22daac94dd1129caea0f24435d4de41cfbe9f01335abbff9d ChangeLog 1449
+MISC metadata.xml 159 RMD160 4aba844314249b872aefa0ef14d652f127e6334f SHA1 210583dd46159c21ce4f3289960d5014ce57e01a SHA256 d6e10a30ac9423eb5a9ba4e7b2a76322683f40b2fb428d2f310dcdbd1cfde235
 MD5 8b0560553235cfd96801898935f8ff94 metadata.xml 159
+RMD160 4aba844314249b872aefa0ef14d652f127e6334f metadata.xml 159
+SHA256 d6e10a30ac9423eb5a9ba4e7b2a76322683f40b2fb428d2f310dcdbd1cfde235 metadata.xml 159
+MD5 a48d78e23edbf7de924ed0900034e19a files/digest-fast-user-switch-applet-2.14.2 295
+RMD160 86faf7a6165ee233f16d99b2b7f7119e721ae005 files/digest-fast-user-switch-applet-2.14.2 295
+SHA256 ed0827b8062ff01308226e2f35bc6ee534bbae4bbd8a5bbc5957fd02ca86f6b5 files/digest-fast-user-switch-applet-2.14.2 295
