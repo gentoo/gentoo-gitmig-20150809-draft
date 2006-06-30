@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5565 2006/06/30 07:20:57 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5566 2006/06/30 17:42:11 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (30 Jun 2006)
+# beta versions.
+>=dev-util/kdevelop-3.3.90
 
 # Kevin F. Quinn <kevquinn@gentoo.org> (30 Jun 2006)
 # Mask until SpanKY uploads the new patch tarball
