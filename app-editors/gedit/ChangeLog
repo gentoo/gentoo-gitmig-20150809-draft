@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.143 2006/05/18 14:34:38 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.144 2006/06/30 19:35:30 allanonjl Exp $
+
+*gedit-2.14.3 (30 Jun 2006)
+
+  30 Jun 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -gedit-2.14.2.ebuild, +gedit-2.14.3.ebuild:
+  new version
 
   18 May 2006; Thomas Cort <tcort@gentoo.org> gedit-2.14.2.ebuild:
   Added ~alpha keyword wrt Bug #131739.
