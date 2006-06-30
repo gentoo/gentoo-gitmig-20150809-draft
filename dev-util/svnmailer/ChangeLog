@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/svnmailer
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svnmailer/ChangeLog,v 1.1 2006/06/30 09:21:20 sebastian Exp $
+
+*svnmailer-1.0.8 (30 Jun 2006)
+
+  30 Jun 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +svnmailer-1.0.8.ebuild:
+  Initial ebuild, based upon work by Andre Malo <nd@apache.org>.
+
