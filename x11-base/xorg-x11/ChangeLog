@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.557 2006/07/01 01:35:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.558 2006/07/01 06:41:31 spyderous Exp $
+
+*xorg-x11-6.9.0-r3 (01 Jul 2006)
+
+  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/6.9.0-fix-rom-read-dualhead.patch, -xorg-x11-6.9.0-r2.ebuild,
+  +xorg-x11-6.9.0-r3.ebuild:
+  Fix dual-head.
 
   01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-7.1.ebuild:
   alpha/arm/mips/ppc/sh stable. Holding off on sparc for now, gustavoz is
