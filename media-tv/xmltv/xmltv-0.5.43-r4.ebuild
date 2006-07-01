@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.43-r4.ebuild,v 1.5 2006/06/28 18:25:19 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.43-r4.ebuild,v 1.6 2006/07/01 15:49:09 mattepiu Exp $
 
 inherit eutils perl-module
 
@@ -144,7 +144,7 @@ src_unpack() {
 
 src_compile() {
 	sed -i "s:\$VERSION = '${PV}':\$VERSION = '${PVR}':" Makefile.PL || die
-	make_config | perl-module_src_compile
+	make_config | perl-module_src_compile || die "error compiling"
 }
 
 src_install() {
@@ -153,14 +153,14 @@ src_install() {
 	# make test
 	#make
 	#make DESTDIR=${D} install
-	perl-module_src_install
+	perl-module_src_install || die "error installing"
 
 	for i in `grep -rl "${D}" "${D}"` ; do
 		sed -e "s:${D}::g" -i "${i}"
 	done
 
 	if use tv_pick_cgi ; then
-		dobin choose/tv_pick/tv_pick_cgi
+		dobin choose/tv_pick/tv_pick_cgi || die "error creating tv_pick_cgi"
 	fi
 }
 
