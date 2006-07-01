@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/libupnp
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libupnp/ChangeLog,v 1.1 2006/07/01 18:38:25 genstef Exp $
+
+*libupnp-1.4.0 (01 Jul 2006)
+
+  01 Jul 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/libupnp-1.4.0-va_list.patch, +metadata.xml, +libupnp-1.4.0.ebuild:
+  New ebuild, successor of upnp, thanks to kaouete <kaouete@crazydwarves.org>
+  in bug 136283
+

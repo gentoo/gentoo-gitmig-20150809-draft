@@ -1,0 +1,20 @@
+--- libupnp-1.4.0/upnp/src/api/upnptools.c	2006-06-06 07:37:44.000000000 +0200
++++ patched_libupnp-1.4.0/upnp/src/api/upnptools.c	2006-07-01 14:31:31.000000000 +0200
+@@ -345,7 +345,7 @@
+                 const char *Arg,
+                 ... )
+ {
+-    va_list ArgList=NULL;
++    va_list ArgList;
+     IXML_Document *out = NULL;
+ 
+     if( NumArg > 0 ) {
+@@ -387,7 +387,7 @@
+                         const char *Arg,
+                         ... )
+ {
+-    va_list ArgList=NULL;
++    va_list ArgList;
+     IXML_Document *out = NULL;
+ 
+     if( NumArg > 0 ) {
