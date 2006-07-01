@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.151 2006/05/02 01:58:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.152 2006/07/01 14:55:59 allanonjl Exp $
+
+*gnome-games-2.14.2.1 (01 Jul 2006)
+
+  01 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -gnome-games-2.14.0.ebuild, -gnome-games-2.14.1.ebuild,
+  +gnome-games-2.14.2.1.ebuild:
+  new version, cleanup pkg_setup
 
 *gnome-games-2.14.1 (02 May 2006)
 
