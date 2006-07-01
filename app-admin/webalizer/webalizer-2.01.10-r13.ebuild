@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r13.ebuild,v 1.2 2006/04/24 15:46:58 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r13.ebuild,v 1.3 2006/07/01 19:53:54 rl03 Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
-inherit eutils webapp
+inherit eutils webapp db-use autotools
 
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
@@ -25,7 +25,7 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="apache2 geoip nls search xtended"
 
-DEPEND="!geoip? ( =sys-libs/db-4.2* )
+DEPEND="!geoip? ( >=sys-libs/db-4.2 )
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.2
 	>=media-libs/gd-1.8.3
@@ -76,8 +76,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf=" --enable-dns \
-		--with-db=/usr/include/db4.2/ \
-		--with-dblib=db-4.2"
+		--with-db=$(db_includedir) \
+		--with-dblib=$(db_libname)"
 	use geoip && myconf="${myconf} --enable-geoip"
 
 	# really dirty hack; necessary due to a really gross ./configure
@@ -93,11 +93,11 @@ src_compile() {
 	fi
 
 	# stupid broken configuration file
-	autoconf
+	eautoreconf
 
 	econf ${myconf} || die "econf failed"
 
-	emake || die "make failed"
+	emake || die "emake failed"
 }
 
 src_install() {
