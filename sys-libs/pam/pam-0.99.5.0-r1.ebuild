@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.5.0-r1.ebuild,v 1.2 2006/07/01 19:57:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.5.0-r1.ebuild,v 1.3 2006/07/01 21:27:14 azarah Exp $
 
 inherit libtool multilib eutils autotools pam toolchain-funcs gnuconfig
 
@@ -171,6 +171,9 @@ src_install() {
 			die "${mod_name} have dependencies in /usr."
 		fi
 	done
+
+	# Need to be suid
+	fperms u+s /sbin/unix_chkpwd
 
 	dodir /$(get_libdir)
 	mv "${D}/usr/$(get_libdir)/libpam.so"* "${D}/$(get_libdir)/"
