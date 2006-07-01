@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.14.2.ebuild,v 1.1 2006/06/30 18:19:01 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.14.2.ebuild,v 1.2 2006/07/01 17:59:42 allanonjl Exp $
 
 inherit eutils gnome2 autotools
 
@@ -23,6 +23,7 @@ RDEPEND=">=gnome-base/gnome-vfs-2.5.91
 	>=gnome-base/libgnomeprint-2.2
 	>=gnome-base/gnome-desktop-2.10
 	dev-libs/popt
+	>=gnome-base/gnome-common-2.12.0
 	jpeg? (
 		>=media-libs/libexif-0.6.12
 		media-libs/jpeg )
@@ -30,7 +31,7 @@ RDEPEND=">=gnome-base/gnome-vfs-2.5.91
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
-	>=dev-util/intltool-0.28
+	>=dev-util/intltool-0.34
 	>=dev-util/pkgconfig-0.17"
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README THANKS TODO"
