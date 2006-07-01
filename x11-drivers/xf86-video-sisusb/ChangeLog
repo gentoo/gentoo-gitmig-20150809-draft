@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-sisusb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sisusb/ChangeLog,v 1.21 2006/06/30 20:25:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sisusb/ChangeLog,v 1.22 2006/07/01 01:02:31 spyderous Exp $
+
+  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xf86-video-sisusb-0.8.1.ebuild:
+  stable on ppc sparc alpha arm sh
 
   30 Jun 2006; Markus Rothe <corsair@gentoo.org>
   xf86-video-sisusb-0.8.1.ebuild:
