@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/otter
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/ChangeLog,v 1.6 2005/07/24 03:55:54 dang Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/ChangeLog,v 1.7 2006/07/01 12:05:09 nattfodd Exp $
+
+  01 Jul 2006; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
+  Replaced sci herd by newly created math-proof herd in metadata.xml, as a
+  consequence of sci reorg.
 
   24 Jul 2005; <dang@gentoo.org> otter-3.3-r1.ebuild:
   Add ~amd64
