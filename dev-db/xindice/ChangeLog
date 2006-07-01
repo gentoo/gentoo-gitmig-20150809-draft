@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/xindice
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/ChangeLog,v 1.10 2005/09/05 13:05:43 phosphan Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/ChangeLog,v 1.11 2006/07/01 18:46:15 nichoj Exp $
+
+  01 Jul 2006; Joshua Nichols <nichoj@gentoo.org> metadata.xml,
+  xindice-1.0-r3.ebuild:
+  Claiming for java herd. Revision bump to support new Java system. Should
+  address bug #132765
 
   05 Sep 2005; Patrick Kursawe <phosphan@gentoo.org> xindice-1.0-r3.ebuild:
   Using POSIX options for cp

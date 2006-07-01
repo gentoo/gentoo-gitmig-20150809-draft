@@ -1,29 +1,33 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0-r3.ebuild,v 1.5 2006/07/01 18:46:15 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0-r4.ebuild,v 1.1 2006/07/01 18:46:15 nichoj Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="A native java XML database"
 HOMEPAGE="http://xml.apache.org/xindice"
-SRC_URI="http://xml.apache.org/xindice/dist/xml-${P}.tar.gz"
+SRC_URI="http://xml.apache.org/${PN}/dist/xml-${P}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="doc"
 
-DEPEND=">=virtual/jdk-1.3
+# breaks with XML apis of Java 1.5
+DEPEND="|| ( =virtual/jdk-1.4* =virtual/jdk-1.3* )
 	dev-java/ant"
+RDEPEND="|| ( =virtual/jre-1.4* =virtual/jre-1.3* )"
 
-S="${WORKDIR}/xml-${P}"
+S=${WORKDIR}/xml-${P}
 
-pkg_preinst() {
-	enewgroup xindice || die "Adding group xindice failed"
-	enewuser xindice -1 /bin/sh /var/run/xindice xindice || die "Adding user xindice failed"
+pkg_setup() {
+	enewgroup ${PN} || die "Adding group ${PN} failed"
+	enewuser ${PN} -1 /bin/sh /var/run/${PN} ${PN} || die "Adding user ${PN} failed"
+
+	java-pkg-2_pkg_setup
 }
 
-src_unpack() {
+ant_src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-r3.patch
@@ -31,7 +35,7 @@ src_unpack() {
 
 src_compile() {
 	export XINDICE_HOME=${S}
-	eant main $(use_doc docs)
+	eant $(use doc docs)
 }
 
 src_install() {
@@ -56,5 +60,5 @@ src_install() {
 	insinto ${TARGET}
 	doins start
 	keepdir /opt/${PN}/db
-	chown -R xindice:xindice ${D}/opt/xindice
+	chown -R ${PN}:${PN} ${D}/opt/${PN}
 }
