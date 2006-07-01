@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.7.2.ebuild,v 1.9 2006/07/01 00:18:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.7.2.ebuild,v 1.10 2006/07/01 02:18:36 spyderous Exp $
 
 IUSE="dlloader gtk gtk2 tcltk sdk usb"
 
@@ -43,11 +43,15 @@ pkg_setup() {
 		ewarn "the USE=sdk flag enabled."
 	fi
 
-	if use usb && ! has_version >=sys-kernel/linux-headers-2.6 && kernel_is 2 6; then
-		local msg
-		msg="USB Wacom tablets require 2.6 linux-headers. Please upgrade."
-		eerror "$msg"
-		die "$msg"
+	if use usb; then
+		if ! has_version >=sys-kernel/linux-headers-2.6; then
+			if kernel_is 2 6; then
+				local msg
+				msg="USB Wacom tablets require 2.6 linux-headers. Please upgrade."
+				eerror "$msg"
+				die "$msg"
+			fi
+		fi
 	fi
 }
 

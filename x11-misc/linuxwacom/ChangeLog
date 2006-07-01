@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.41 2006/07/01 00:18:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.42 2006/07/01 02:18:36 spyderous Exp $
+
+  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.6.7.ebuild, linuxwacom-0.6.8.ebuild, linuxwacom-0.6.9.ebuild,
+  linuxwacom-0.7.2.ebuild:
+  Apparently the boolean logic was broken for detecting 2.6 headers on 2.4
+  kernels. Reported by wa1ter@myrealbox.com.
 
   01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
   linuxwacom-0.7.2.ebuild:
