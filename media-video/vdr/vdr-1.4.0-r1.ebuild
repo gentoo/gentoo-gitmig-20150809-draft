@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.0-r1.ebuild,v 1.2 2006/06/28 09:08:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.0-r1.ebuild,v 1.3 2006/07/01 15:34:26 zzam Exp $
 
 inherit eutils flag-o-matic
 
@@ -112,12 +112,15 @@ apply_vdr_patchset() {
 
 src_unpack() {
 	unpack ${P}.tar.bz2
-	if [[ -n "${VDR_LOCAL_PATCHSET}" && -d "${ROOT}/${VDR_LOCAL_PATCHSET}" ]]; then
-		ewarn "Using local developer patchset."
-		PATCHSET_DIR="${ROOT}/${VDR_LOCAL_PATCHSET}"
-	else
-		unpack ${PATCHSET_NAME}.tar.bz2
-		PATCHSET_DIR=${WORKDIR}/${PATCHSET_NAME}
+
+	if ! use vanilla; then
+		if [[ -n "${VDR_LOCAL_PATCHSET}" && -d "${ROOT}/${VDR_LOCAL_PATCHSET}" ]]; then
+			ewarn "Using local developer patchset."
+			PATCHSET_DIR="${ROOT}/${VDR_LOCAL_PATCHSET}"
+		else
+			unpack ${PATCHSET_NAME}.tar.bz2
+			PATCHSET_DIR=${WORKDIR}/${PATCHSET_NAME}
+		fi
 	fi
 
 	cd ${S}
