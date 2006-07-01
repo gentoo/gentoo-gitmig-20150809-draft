@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-MapUTF8/Unicode-MapUTF8-1.11.ebuild,v 1.9 2006/06/27 19:53:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-MapUTF8/Unicode-MapUTF8-1.11.ebuild,v 1.10 2006/07/01 01:13:03 mcummings Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Unicode/${P}.readme"
 SRC_URI="mirror://cpan/authors/id/S/SN/SNOWHARE/${P}.tar.gz"
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha hppa ~ia64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 DEPEND="dev-perl/module-build
 	dev-perl/Unicode-Map

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Lingua-Stem-Fr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-Fr/ChangeLog,v 1.5 2006/03/30 22:57:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-Fr/ChangeLog,v 1.6 2006/07/01 01:07:08 mcummings Exp $
+
+  01 Jul 2006; Michael Cummings <mcummings@gentoo.org>
+  Lingua-Stem-Fr-0.02.ebuild:
+  Keywording ~amd64
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   Lingua-Stem-Fr-0.02.ebuild:
