@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.9 2006/06/30 22:05:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.10 2006/07/01 01:08:57 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -24,7 +24,7 @@ SRC_URI="${SRC_URI}
 DESCRIPTION="X.Org X servers"
 # It's suid and has lazy bindings, so FEATURES="stricter" doesn't work
 RESTRICT="stricter"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm ~hppa ~ia64 mips ppc ppc64 sh sparc ~x86 ~x86-fbsd"
 IUSE_INPUT_DEVICES="
 	input_devices_acecad
 	input_devices_aiptek
@@ -42,7 +42,6 @@ IUSE_INPUT_DEVICES="
 	input_devices_joystick
 	input_devices_keyboard
 	input_devices_magellan
-	input_devices_magictouch
 	input_devices_microtouch
 	input_devices_mouse
 	input_devices_mutouch
@@ -212,7 +211,6 @@ PDEPEND="
 				input_devices_joystick? ( >=x11-drivers/xf86-input-joystick-1.1.0 )
 				input_devices_keyboard? ( >=x11-drivers/xf86-input-keyboard-1.1.0 )
 				input_devices_magellan? ( >=x11-drivers/xf86-input-magellan-1.1.0 )
-				input_devices_magictouch? ( x11-drivers/xf86-input-magictouch )
 				input_devices_microtouch? ( >=x11-drivers/xf86-input-microtouch-1.1.0 )
 				input_devices_mouse? ( >=x11-drivers/xf86-input-mouse-1.1.0 )
 				input_devices_mutouch? ( >=x11-drivers/xf86-input-mutouch-1.1.0 )
@@ -243,7 +241,6 @@ PDEPEND="
 				>=x11-drivers/xf86-input-joystick-1.1.0
 				>=x11-drivers/xf86-input-keyboard-1.1.0
 				>=x11-drivers/xf86-input-magellan-1.1.0
-				x11-drivers/xf86-input-magictouch
 				>=x11-drivers/xf86-input-microtouch-1.1.0
 				>=x11-drivers/xf86-input-mouse-1.1.0
 				>=x11-drivers/xf86-input-mutouch-1.1.0
