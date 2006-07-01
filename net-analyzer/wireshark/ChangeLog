@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.1 2006/06/30 13:27:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.2 2006/07/01 23:49:28 weeve Exp $
+
+  01 Jul 2006; Jason Wever <weeve@gentoo.org> wireshark-0.99.1_pre1.ebuild:
+  Added ~sparc keyword.
 
 *wireshark-0.99.1_pre1 (30 Jun 2006)
 
