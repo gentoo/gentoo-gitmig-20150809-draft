@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.5.ebuild,v 1.1 2006/05/05 23:08:34 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.5.ebuild,v 1.2 2006/07/01 05:01:07 vanquirius Exp $
 
 inherit distutils
 
@@ -17,7 +17,7 @@ DEPEND=">=dev-lang/python-2.3
 	>=dev-python/cheetah-0.9.18"
 
 RDEPEND="${DEPEND}
-	>=dev-libs/libprelude-0.9.0
+	>=dev-libs/libprelude-0.9.9
 	>=dev-libs/libpreludedb-0.9.0"
 
 pkg_setup() {
