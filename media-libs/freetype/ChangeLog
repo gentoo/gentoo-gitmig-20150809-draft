@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.84 2006/06/30 19:24:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.85 2006/07/01 08:05:34 pylon Exp $
+
+  01 Jul 2006; Lars Weiler <pylon@gentoo.org> freetype-2.1.10-r2.ebuild:
+  Stable on ppc; bug #124828.
 
   30 Jun 2006; Markus Rothe <corsair@gentoo.org> freetype-2.1.10-r2.ebuild:
   Stable on ppc64; bug #124828
