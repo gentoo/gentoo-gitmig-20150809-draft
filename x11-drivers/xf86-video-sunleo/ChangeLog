@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-sunleo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sunleo/ChangeLog,v 1.13 2006/04/14 17:30:44 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sunleo/ChangeLog,v 1.14 2006/07/01 00:51:28 spyderous Exp $
+
+  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xf86-video-sunleo-1.1.0.ebuild:
+  stable on sparc
 
 *xf86-video-sunleo-1.1.0 (14 Apr 2006)
 
