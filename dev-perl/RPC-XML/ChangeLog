@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/RPC-XML
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.28 2006/05/14 10:32:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.29 2006/07/01 07:21:25 superlag Exp $
+
+*RPC-XML-0.59 (01 Jul 2006)
+
+  01 Jul 2006; Aaron Kulbe <superlag@gentoo.org> +RPC-XML-0.59.ebuild:
+  Bumping to version 0.59, keywording ~ for all arches.
 
   14 May 2006; Diego Pettenò <flameeyes@gentoo.org> RPC-XML-0.58.ebuild:
   Add ~x86-fbsd keyword.
