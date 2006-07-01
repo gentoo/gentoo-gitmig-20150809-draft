@@ -1,7 +1,0 @@
-MD5 0ca534de76bacabf01e5a1b234ebce79 ChangeLog 789
-MD5 bd5f465f30f1fe63a1671db23223352f cl-clx-sbcl-0.5.4-r1.ebuild 996
-MD5 4ba42aefb4164b33e411d793a0223013 cl-clx-sbcl-0.5.4.ebuild 1129
-MD5 989b4c6defae80da8e15d0efbce5e330 metadata.xml 642
-MD5 ea70376acc7982db3dbd73c532d3af5f files/0.5.4-gentoo.patch 387
-MD5 d5f5a9b9df7741bf9ad6ec36bb68ccb5 files/digest-cl-clx-sbcl-0.5.4 61
-MD5 d5f5a9b9df7741bf9ad6ec36bb68ccb5 files/digest-cl-clx-sbcl-0.5.4-r1 61
