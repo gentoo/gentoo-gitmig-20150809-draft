@@ -1,24 +1,52 @@
-MD5 31933a39589dd244251c035aaea59ea1 ChangeLog 1850
-RMD160 3a3162cbb703e7b4abe6300f77a6b01e59efd4c6 ChangeLog 1850
-SHA256 8e61b1a0958cfaa5ffdc21797d8f3da9bad4c7700c53b4557c1acf09dcdd7023 ChangeLog 1850
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX gnomesu-0.3.1-desktopfix.patch 361 RMD160 96039be1de65f6774eee83910164e25d5cbb0158 SHA1 0e7ed64e5894482cf76e1d765faa40469cb7dda0 SHA256 dd27c0f818dfecf4a326bb80bfc42be5ac0dabd7c029b687c53d321d6ef11ecd
+MD5 6a9d98cc7e10e1a9355d93dcc2590019 files/gnomesu-0.3.1-desktopfix.patch 361
+RMD160 96039be1de65f6774eee83910164e25d5cbb0158 files/gnomesu-0.3.1-desktopfix.patch 361
+SHA256 dd27c0f818dfecf4a326bb80bfc42be5ac0dabd7c029b687c53d321d6ef11ecd files/gnomesu-0.3.1-desktopfix.patch 361
+AUX gnomesu-0.3.1-export-dynamic.patch 499 RMD160 c11f04c0593fa8abb99038212fdd51e9df0a1676 SHA1 88bd7f3504fbb1a4fe1787ae4ab8e438fc82b8e7 SHA256 74dd69a6f58ce46560fa6be23d964aa0352cbcf6925a0dd75d8fb9c84271ee5e
+MD5 ac292966847cae7df92375d1c63639ca files/gnomesu-0.3.1-export-dynamic.patch 499
+RMD160 c11f04c0593fa8abb99038212fdd51e9df0a1676 files/gnomesu-0.3.1-export-dynamic.patch 499
+SHA256 74dd69a6f58ce46560fa6be23d964aa0352cbcf6925a0dd75d8fb9c84271ee5e files/gnomesu-0.3.1-export-dynamic.patch 499
+AUX gnomesu-0.3.1-r1-desktopfix.patch 873 RMD160 c1dbd2cbaba3337e7966de62965b1de60ec9881b SHA1 ffe0916c06eee833a276c59ade7f011ee36cb193 SHA256 8bed37e1622c89cb9c518359edcd71acf3175361641bae62aeebf348f1359c61
+MD5 b05babeec19a7c9703e18c9eb55740ae files/gnomesu-0.3.1-r1-desktopfix.patch 873
+RMD160 c1dbd2cbaba3337e7966de62965b1de60ec9881b files/gnomesu-0.3.1-r1-desktopfix.patch 873
+SHA256 8bed37e1622c89cb9c518359edcd71acf3175361641bae62aeebf348f1359c61 files/gnomesu-0.3.1-r1-desktopfix.patch 873
+DIST gnomesu-0.3.1.tar.gz 222738 RMD160 34076f45c5bccbe2471118e939a21f86c9c3a866 SHA1 5feafcdb2e250d1830a9b34a9c7390dd2ba6f9fa SHA256 e20a388a7295ed7b0e6fb64656d02f59a6c3853258e467abb9df54e21614c939
+EBUILD gnomesu-0.3.1-r1.ebuild 921 RMD160 cbd7d070800cd7068784adcdc6475ab20ad29a1e SHA1 8634e55a03dba918a684411a213556ab6def9818 SHA256 ae9dc08c66b4c3846c946f7b729d4e0a8e764b579003275cc2270d91cedce595
+MD5 312956266f91412550e6a0fc4a9af2fb gnomesu-0.3.1-r1.ebuild 921
+RMD160 cbd7d070800cd7068784adcdc6475ab20ad29a1e gnomesu-0.3.1-r1.ebuild 921
+SHA256 ae9dc08c66b4c3846c946f7b729d4e0a8e764b579003275cc2270d91cedce595 gnomesu-0.3.1-r1.ebuild 921
+EBUILD gnomesu-0.3.1-r2.ebuild 1038 RMD160 c39952f7b3da0104bfe1dce9dddd2a9769b5681f SHA1 25e6469e20a64cae34601b2c14fe4604a8fdf888 SHA256 38b23fdb309a62285b728de18d5d8dcbea93ff050c2e56268c3e2ef13c76e7ad
+MD5 33ade42e088e79c03818642900b31ec4 gnomesu-0.3.1-r2.ebuild 1038
+RMD160 c39952f7b3da0104bfe1dce9dddd2a9769b5681f gnomesu-0.3.1-r2.ebuild 1038
+SHA256 38b23fdb309a62285b728de18d5d8dcbea93ff050c2e56268c3e2ef13c76e7ad gnomesu-0.3.1-r2.ebuild 1038
+EBUILD gnomesu-0.3.1.ebuild 799 RMD160 f535986755ae5d644fd4d55e659cb8dd29e77b25 SHA1 6040bd9022c8febf699d2c2ca669162d9c4e59de SHA256 7d3da368df701003e72c172f0c9d9edfdf05b104ee465d4c1a0a0ad4b7dd3677
+MD5 89dc4ef3860625237f932af3f7182719 gnomesu-0.3.1.ebuild 799
+RMD160 f535986755ae5d644fd4d55e659cb8dd29e77b25 gnomesu-0.3.1.ebuild 799
+SHA256 7d3da368df701003e72c172f0c9d9edfdf05b104ee465d4c1a0a0ad4b7dd3677 gnomesu-0.3.1.ebuild 799
+MISC ChangeLog 2043 RMD160 c94262368d51a015686fcb707109eddccfc95906 SHA1 1e619d08dd0a3e9c1da8f89d34dbed0f5269fd8b SHA256 b9e974e6cb26c7f916b861c0a552da98702bf17081dd4229afee2d3a13427cf6
+MD5 899533c0e5e6911b935bdada7ca12006 ChangeLog 2043
+RMD160 c94262368d51a015686fcb707109eddccfc95906 ChangeLog 2043
+SHA256 b9e974e6cb26c7f916b861c0a552da98702bf17081dd4229afee2d3a13427cf6 ChangeLog 2043
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 MD5 1701d445d7a67fdefa9002557310db15 files/digest-gnomesu-0.3.1 241
 RMD160 bf325d712326aacc93d2684e00debbb888ed1e0b files/digest-gnomesu-0.3.1 241
 SHA256 2d82b1de6df8b0c62cb89c5e5a55d50b58f55ea630e459eb524e4971e2305e0e files/digest-gnomesu-0.3.1 241
 MD5 1701d445d7a67fdefa9002557310db15 files/digest-gnomesu-0.3.1-r1 241
 RMD160 bf325d712326aacc93d2684e00debbb888ed1e0b files/digest-gnomesu-0.3.1-r1 241
 SHA256 2d82b1de6df8b0c62cb89c5e5a55d50b58f55ea630e459eb524e4971e2305e0e files/digest-gnomesu-0.3.1-r1 241
-MD5 6a9d98cc7e10e1a9355d93dcc2590019 files/gnomesu-0.3.1-desktopfix.patch 361
-RMD160 96039be1de65f6774eee83910164e25d5cbb0158 files/gnomesu-0.3.1-desktopfix.patch 361
-SHA256 dd27c0f818dfecf4a326bb80bfc42be5ac0dabd7c029b687c53d321d6ef11ecd files/gnomesu-0.3.1-desktopfix.patch 361
-MD5 b05babeec19a7c9703e18c9eb55740ae files/gnomesu-0.3.1-r1-desktopfix.patch 873
-RMD160 c1dbd2cbaba3337e7966de62965b1de60ec9881b files/gnomesu-0.3.1-r1-desktopfix.patch 873
-SHA256 8bed37e1622c89cb9c518359edcd71acf3175361641bae62aeebf348f1359c61 files/gnomesu-0.3.1-r1-desktopfix.patch 873
-MD5 312956266f91412550e6a0fc4a9af2fb gnomesu-0.3.1-r1.ebuild 921
-RMD160 cbd7d070800cd7068784adcdc6475ab20ad29a1e gnomesu-0.3.1-r1.ebuild 921
-SHA256 ae9dc08c66b4c3846c946f7b729d4e0a8e764b579003275cc2270d91cedce595 gnomesu-0.3.1-r1.ebuild 921
-MD5 89dc4ef3860625237f932af3f7182719 gnomesu-0.3.1.ebuild 799
-RMD160 f535986755ae5d644fd4d55e659cb8dd29e77b25 gnomesu-0.3.1.ebuild 799
-SHA256 7d3da368df701003e72c172f0c9d9edfdf05b104ee465d4c1a0a0ad4b7dd3677 gnomesu-0.3.1.ebuild 799
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 1701d445d7a67fdefa9002557310db15 files/digest-gnomesu-0.3.1-r2 241
+RMD160 bf325d712326aacc93d2684e00debbb888ed1e0b files/digest-gnomesu-0.3.1-r2 241
+SHA256 2d82b1de6df8b0c62cb89c5e5a55d50b58f55ea630e459eb524e4971e2305e0e files/digest-gnomesu-0.3.1-r2 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEpem6omPajV0RnrERAvS3AJ9sHpyBbz+dIOMDOt1bWpfbtqj0egCfZ7pR
+N4lNRKaVLYrM+xpUQ8J+bYg=
+=6wD1
+-----END PGP SIGNATURE-----

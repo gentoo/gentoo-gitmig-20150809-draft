@@ -1,0 +1,13 @@
+diff --exclude-from=/home/dang/.diffrc -u -ruN gnomesu-0.3.1.orig/configure.in gnomesu-0.3.1/configure.in
+--- gnomesu-0.3.1.orig/configure.in	2003-04-10 16:40:22.000000000 -0400
++++ gnomesu-0.3.1/configure.in	2006-06-30 23:10:58.000000000 -0400
+@@ -55,7 +55,8 @@
+ 	gtk+-2.0 >= $GTK_REQUIRED
+ 	libgnomeui-2.0 >= $LIBGNOMEUI_REQUIRED
+ 	libzvt-2.0 >= $ZVT_REQUIRED
+-	libglade-2.0 >= $GLADE2_REQUIRED)
++	libglade-2.0 >= $GLADE2_REQUIRED
++	gmodule-export-2.0)
+ 
+ AC_SUBST(XSU_CFLAGS)
+ AC_SUBST(XSU_LIBS)
