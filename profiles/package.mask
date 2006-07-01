@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5567 2006/06/30 22:44:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5568 2006/07/01 01:39:08 anarchy Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -593,11 +593,6 @@ www-apache/mod_csv
 # so upgrading to it will probably break lots of things that rely on lua
 # import it into the tree anyhow for testing and development
 =dev-lang/lua-5.1
-
-# Jory A. Pratt <anarchy@gentoo.org> (27 Feb 2006)
-# Initial Import to tree, testing needed, refer to bug #130269
-# For security problems that are not patched as of yet!!
-www-client/seamonkey
 
 # Chris White <chriswhite@gentoo.org> (26 Feb 2006)
 # Dead upstream, breaks with recent mono versions
