@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.0.5.ebuild,v 1.5 2006/07/01 01:28:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.0.5.ebuild,v 1.6 2006/07/01 01:48:58 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -17,7 +17,8 @@ RDEPEND="x11-apps/xrdb
 	x11-libs/libXaw
 	>=x11-apps/xinit-1.0.2-r3
 	x11-libs/libX11
-	x11-libs/libXt"
+	x11-libs/libXt
+	x11-apps/sessreg"
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
@@ -51,12 +52,4 @@ pkg_preinst() {
 		ewarn "/usr/lib/X11/xdm is a symlink; deleting."
 		rm /usr/lib/X11/xdm
 	fi
-}
-
-pkg_postinst() {
-	x-modular_pkg_postinst
-
-	ewarn "Install x11-apps/sessreg, or you won't be able to log in."
-	ewarn "It cannot be added as a dependency yet, because it isn't"
-	ewarn "tested on all architectures."
 }
