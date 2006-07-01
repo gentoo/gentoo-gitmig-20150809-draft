@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.14.2.1.ebuild,v 1.3 2006/07/01 17:29:00 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.14.2.1.ebuild,v 1.4 2006/07/01 17:51:50 sebastian Exp $
 
 inherit eutils gnome2 autotools
 
@@ -27,6 +27,7 @@ RDEPEND=">=gnome-base/gconf-2
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.29
+	>=dev-util/gob-2.0.0
 	>=sys-devel/gettext-0.10.40
 	>=app-text/scrollkeeper-0.3.8"
 
