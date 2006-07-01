@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/driconf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/ChangeLog,v 1.6 2006/04/12 14:53:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/ChangeLog,v 1.7 2006/07/01 21:46:21 spyderous Exp $
+
+  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>; driconf-0.2.7.ebuild:
+  x86 stable.
 
   12 Apr 2006; Daniel Gryniewicz <dang@gentoo.org> driconf-0.9.0.ebuild:
   Mark ~amd64

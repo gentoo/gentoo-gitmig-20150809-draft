@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/driconf-0.2.7.ebuild,v 1.4 2006/01/28 03:38:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/driconf-0.2.7.ebuild,v 1.5 2006/07/01 21:46:21 spyderous Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=x11-libs/gtk+-2.4
 	>=dev-lang/python-2.3
