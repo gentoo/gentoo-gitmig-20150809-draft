@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.5-r1.ebuild,v 1.4 2006/06/22 23:41:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.5-r1.ebuild,v 1.5 2006/07/01 10:39:11 solar Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,7 +16,7 @@ DESCRIPTION="GNU debugger"
 HOMEPAGE="http://sources.redhat.com/gdb/"
 SRC_URI="http://ftp.gnu.org/gnu/gdb/${P}.tar.bz2
 	ftp://sources.redhat.com/pub/gdb/releases/${P}.tar.bz2
-	mirror://gentoo/gdb_init.txt.bz2"
+	mirror://gentoo/gdbinit-6.2.txt.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 [[ ${CTARGET} != ${CHOST} ]] \
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	mv "${WORKDIR}"/gdb_init.txt . || die
+	cp "${WORKDIR}"/gdbinit-6.2.txt . || die
 
 	if ! use vanilla ; then
 		if [[ -n ${DEB_VER} ]] ; then
@@ -90,7 +90,7 @@ src_install() {
 
 	if use x86 ; then
 		dodir /etc/skel/
-		cp "${S}"/gdb_init.txt "${D}"/etc/skel/.gdbinit \
+		cp "${S}"/gdbinit-6.2.txt "${D}"/etc/skel/.gdbinit \
 			|| die "install ${D}/etc/skel/.gdbinit"
 	fi
 
