@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.2.3.20060511-r5.ebuild,v 1.1 2006/06/02 12:18:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.2.3.20060511-r5.ebuild,v 1.2 2006/07/01 08:42:36 zzam Exp $
 
 inherit vdr-plugin versionator
 
@@ -34,6 +34,7 @@ RDEPEND=">=media-video/vdr-1.3.36
 DEPEND="${RDEPEND}
 	xv? ( || ( ( x11-proto/xproto
 				x11-proto/xextproto
+				x11-libs/libXv
 			)
 			virtual/x11
 	) )

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-softdevice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.6 2006/06/02 12:18:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.7 2006/07/01 08:42:36 zzam Exp $
+
+  01 Jul 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-softdevice-0.2.3.20060511-r5.ebuild:
+  Added missing dependency to libXv.
 
 *vdr-softdevice-0.2.3.20060511-r5 (02 Jun 2006)
 
