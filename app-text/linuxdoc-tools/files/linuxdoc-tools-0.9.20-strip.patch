@@ -1,0 +1,10 @@
+--- linuxdoc-tools-0.9.20/Makefile.in.strip	Mon Apr 22 17:30:06 2002
++++ linuxdoc-tools-0.9.20/Makefile.in	Mon Apr 22 17:30:19 2002
+@@ -87,7 +87,6 @@
+ 	( cd iso-entities; \
+ 	  $(MAKE) install )
+ endif
+-	strip sgmlpre/sgmlpre
+ 	for ii in sgmlpre/sgmlpre rtf-fix/rtf2rtf; do \
+ 	  bn=`basename $$ii`; \
+ 	  $(INSTALL_PROGRAM) $$ii $(bindir)/$$bn; \

@@ -1,0 +1,50 @@
+--- linuxdoc-tools-0.9.21/lib/LinuxDocTools/Lang.pm.fi	2001-05-24 16:57:41.000000000 +0100
++++ linuxdoc-tools-0.9.21/lib/LinuxDocTools/Lang.pm	2005-06-30 13:09:18.000000000 +0100
+@@ -64,6 +64,7 @@
+   ja japanese japanese
+   pl polski polish
+   ko korean korean
++  fi suomi finnish
+ );
+ 
+ 
+@@ -170,7 +171,8 @@
+      "ro" => "Înapoi",
+      "ja" => "Á°¤Î¥Ú¡¼¥¸",
+      "pl" => "Poprzedni",
+-     "ko" => "ÀÌÀü"
++     "ko" => "ÀÌÀü",
++     "fi" => "Edellinen"
+   },
+   "Next" => {
+      "nl" => "Verder",
+@@ -186,7 +188,8 @@
+      "ro" => "Înainte",
+      "ja" => "¼¡¤Î¥Ú¡¼¥¸",
+      "pl" => "Nastny",
+-     "ko" => "´ÙÀ½"
++     "ko" => "´ÙÀ½",
++     "fi" => "Seuraava"
+   },
+   "Contents" => {
+      "nl" => "Inhoud",
+@@ -202,7 +205,8 @@
+      "ro" => "Cuprins",
+      "ja" => "ÌÜ¼¡¤Ø",
+      "pl" => "Spis Trei",
+-     "ko" => "Â÷·Ê"
++     "ko" => "Â÷·Ê",
++     "fi" => "Sisällys"
+   },
+   "Table of Contents" => {
+      "nl" => "Inhoudsopgave",
+@@ -218,7 +222,8 @@
+      "ro" => "Cuprins",
+      "ja" => "ÌÜ¼¡",
+      "pl" => "Spis Trei",
+-     "ko" => "Â÷·Ê"
++     "ko" => "Â÷·Ê",
++     "fi" => "Sisällysluettelo"
+   }
+ };
+ 
