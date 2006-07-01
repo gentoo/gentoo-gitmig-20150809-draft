@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.21 2006/07/01 06:12:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.22 2006/07/01 10:04:34 pylon Exp $
+
+  01 Jul 2006; Lars Weiler <pylon@gentoo.org> netcdf-3.6.1.ebuild:
+  Stable on ppc; bug #82431.
 
   01 Jul 2006; Markus Rothe <corsair@gentoo.org> netcdf-3.6.1.ebuild:
   Stable on ppc64; bug #82431
