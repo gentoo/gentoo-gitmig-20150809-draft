@@ -1,0 +1,11 @@
+# ChangeLog for net-wireless/rt61
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt61/ChangeLog,v 1.1 2006/07/01 12:12:16 genstef Exp $
+
+*rt61-1.1.0_beta1 (01 Jul 2006)
+
+  01 Jul 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +rt61-1.1.0_beta1.ebuild:
+  New Ebuild - driver for RaLink RT61 WLAN cards, thanks to Sebastian
+  <sebastian_ml@gmx.net> in bug 138644
+
