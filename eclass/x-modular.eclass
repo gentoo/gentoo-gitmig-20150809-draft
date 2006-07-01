@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.69 2006/07/01 06:46:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.70 2006/07/01 20:41:12 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -27,7 +27,7 @@
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_postrm
 
-inherit eutils libtool toolchain-funcs flag-o-matic autotools
+inherit eutils libtool multilib toolchain-funcs flag-o-matic autotools
 
 # Directory prefix to use for everything
 XDIR="/usr"
@@ -345,8 +345,8 @@ x-modular_src_install() {
 	prepalldocs
 
 	# Don't install libtool archives for server modules
-	if [[ -e ${D}/usr/lib/xorg/modules ]]; then
-		find ${D}/usr/lib/xorg/modules -name '*.la' \
+	if [[ -e ${D}/usr/$(get_libdir)/xorg/modules ]]; then
+		find ${D}/usr/$(get_libdir)/xorg/modules -name '*.la' \
 			| xargs rm -f
 	fi
 
