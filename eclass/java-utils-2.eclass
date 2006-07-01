@@ -1663,8 +1663,8 @@ java-pkg_switch-vm() {
 		
 		java-pkg_setup-vm
 
-		export JAVA=$(java-config -java)
-		export JAVAC=$(java-config -javac)
+		export JAVA=$(java-config --java)
+		export JAVAC=$(java-config --javac)
 		export JAVACFLAGS="$(java-pkg_javac-args)" 
 		[[ -n ${JAVACFLAGS_EXTRA} ]] && export JAVACFLAGS="${JAVACFLAGS_EXTRA} ${JAVACFLAGS}"
 
