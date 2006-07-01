@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc3-postgresql
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/ChangeLog,v 1.10 2005/12/20 05:22:00 nichoj Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/ChangeLog,v 1.11 2006/07/01 15:31:11 nichoj Exp $
+
+  01 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
+  +jdbc3-postgresql-8.1_p404-r1.ebuild:
+  Supports new Java system. Filters jikes compiler (bug #132799)
 
 *jdbc3-postgresql-8.1_p404 (20 Dec 2005)
 

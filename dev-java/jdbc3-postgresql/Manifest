@@ -1,22 +1,55 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6d2651223769763f104bb5e71320671a ChangeLog 1564
-MD5 927470f50a83ea9bf353f3d3e8c68c4f files/digest-jdbc3-postgresql-7.3 58
-MD5 e71acb8b196dc2466141bfe8dabe0eee files/digest-jdbc3-postgresql-7.4.5 73
-MD5 68212c0fc3f178e7dcd29a128bc6dbb5 files/digest-jdbc3-postgresql-8.0_p311 79
-MD5 fed5ba078df8a2fef6f75ca29be58503 files/digest-jdbc3-postgresql-8.0_p312 79
-MD5 a6eccc6d199c87b687b1a5ebe49424e8 files/digest-jdbc3-postgresql-8.1_p404 79
+DIST pg73jdbc3.jar 184176
+DIST postgresql-jdbc-8.0-311.src.tar.gz 389944
+DIST postgresql-jdbc-8.0-312.src.tar.gz 414003
+DIST postgresql-jdbc-8.1-404.src.tar.gz 474266 RMD160 2258d2ab1d743afbfeacb60e0d53b7d58de519a7 SHA1 60872374660228966b723f03bfa2ae63bd7e2b4a SHA256 db11ec57331ab005162b01cfb9caf16b7cfa78c9d1540ae8a11afb72293246f8
+DIST postgresql-opt-7.4.5.tar.bz2 332174
+EBUILD jdbc3-postgresql-7.3.ebuild 577 RMD160 9fd040b600e1dc76d8e8f8b9b1045040e822da7e SHA1 eaad2c587367be0e0de351c099bbfbd8ab3c38f8 SHA256 1a4e18d06ac79644cf21cb72a35c0e24685ef54ab81bab8efb533a2b0578c82a
 MD5 3d80aae0ac6bc38c96a1eb2756a7d62b jdbc3-postgresql-7.3.ebuild 577
+RMD160 9fd040b600e1dc76d8e8f8b9b1045040e822da7e jdbc3-postgresql-7.3.ebuild 577
+SHA256 1a4e18d06ac79644cf21cb72a35c0e24685ef54ab81bab8efb533a2b0578c82a jdbc3-postgresql-7.3.ebuild 577
+EBUILD jdbc3-postgresql-7.4.5.ebuild 1115 RMD160 086ab0c5f59a18501a921aae61a04a936488417b SHA1 70cc18c636c11ddf97476821dcedebd53fb9eb3d SHA256 f2f4ad02ba563dffa7d02511f89508afdcf24104d4bbb7c1257e0a246e4f6cbb
 MD5 d48c8950c95796f70666b0874df8f4d6 jdbc3-postgresql-7.4.5.ebuild 1115
+RMD160 086ab0c5f59a18501a921aae61a04a936488417b jdbc3-postgresql-7.4.5.ebuild 1115
+SHA256 f2f4ad02ba563dffa7d02511f89508afdcf24104d4bbb7c1257e0a246e4f6cbb jdbc3-postgresql-7.4.5.ebuild 1115
+EBUILD jdbc3-postgresql-8.0_p311.ebuild 1213 RMD160 a4361cba1ff1477c7cfff252bfc25ec00359e111 SHA1 a6cb644e4c6bd98bfeabdb102ffdc0d4ff22d08f SHA256 6571b507709a4ff975fb23a5f353e68a355b243bc7827444cb48ee738fe97bc0
 MD5 aafcc49fe60193eedeb00150bdcc2b60 jdbc3-postgresql-8.0_p311.ebuild 1213
+RMD160 a4361cba1ff1477c7cfff252bfc25ec00359e111 jdbc3-postgresql-8.0_p311.ebuild 1213
+SHA256 6571b507709a4ff975fb23a5f353e68a355b243bc7827444cb48ee738fe97bc0 jdbc3-postgresql-8.0_p311.ebuild 1213
+EBUILD jdbc3-postgresql-8.0_p312.ebuild 1213 RMD160 fa71ae45c363ced19f6355bd5a900b9c5ded0d78 SHA1 8daa667c07b4b83388c798edeeca3da8fdb18a1d SHA256 e34f25a834f4b28431edb5cd65800ccc4e71a8eeefdbd58ada374455142c9a96
 MD5 383b03657aca36b9aa418e36d08724bb jdbc3-postgresql-8.0_p312.ebuild 1213
+RMD160 fa71ae45c363ced19f6355bd5a900b9c5ded0d78 jdbc3-postgresql-8.0_p312.ebuild 1213
+SHA256 e34f25a834f4b28431edb5cd65800ccc4e71a8eeefdbd58ada374455142c9a96 jdbc3-postgresql-8.0_p312.ebuild 1213
+EBUILD jdbc3-postgresql-8.1_p404-r1.ebuild 1396 RMD160 6537eed733846317680a27ccfda49f2095416765 SHA1 38bb0e66b0ae171c01dd202ac09e5461ba4e20e4 SHA256 40a3be19e3ae9b6564bbcf9df2a9c8ccdde7fe8eb091eff9315932e5d242c656
+MD5 589ce7b51e10a09a2a13dcf59dea41b3 jdbc3-postgresql-8.1_p404-r1.ebuild 1396
+RMD160 6537eed733846317680a27ccfda49f2095416765 jdbc3-postgresql-8.1_p404-r1.ebuild 1396
+SHA256 40a3be19e3ae9b6564bbcf9df2a9c8ccdde7fe8eb091eff9315932e5d242c656 jdbc3-postgresql-8.1_p404-r1.ebuild 1396
+EBUILD jdbc3-postgresql-8.1_p404.ebuild 1244 RMD160 ea3aeb3748abb1e3acc229b2c7b5346950c9619d SHA1 b3b8817e700770fed68a4a7547d588daf1c3bb3a SHA256 d6d86c360eb17a668bce6589c8715b7c5b93545df5ba4b96a0f303cd155522e7
 MD5 ca2d6af106ac3c5bd9c7507df6bbb259 jdbc3-postgresql-8.1_p404.ebuild 1244
+RMD160 ea3aeb3748abb1e3acc229b2c7b5346950c9619d jdbc3-postgresql-8.1_p404.ebuild 1244
+SHA256 d6d86c360eb17a668bce6589c8715b7c5b93545df5ba4b96a0f303cd155522e7 jdbc3-postgresql-8.1_p404.ebuild 1244
+MISC ChangeLog 1720 RMD160 22da47e65a05d4d2c380be965eeded1137269304 SHA1 068cfd1a537b6dcfe78fc4d7840700dd193b66db SHA256 e48d4a3a0c708432cd2461a613483aa42c2f9a0544074e20e17764cb32e1d321
+MD5 b349bf5320fe044e1f56d5de1d254fe7 ChangeLog 1720
+RMD160 22da47e65a05d4d2c380be965eeded1137269304 ChangeLog 1720
+SHA256 e48d4a3a0c708432cd2461a613483aa42c2f9a0544074e20e17764cb32e1d321 ChangeLog 1720
+MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDp5VQndWRXhKOboURAjq1AJ49NHyU5Pg6dnqbQhu/FKIseeBydQCg71eT
-YPJGQYANCqhV/IfBy0cXdnQ=
-=+R19
------END PGP SIGNATURE-----
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
+MD5 927470f50a83ea9bf353f3d3e8c68c4f files/digest-jdbc3-postgresql-7.3 58
+RMD160 9001bb6770dc5b52b6a12a308042bf74111c571d files/digest-jdbc3-postgresql-7.3 58
+SHA256 8e7b83e1c2b6616093f05345bdc46988cdd85cd09dd593c7a78c79f50f018fe5 files/digest-jdbc3-postgresql-7.3 58
+MD5 e71acb8b196dc2466141bfe8dabe0eee files/digest-jdbc3-postgresql-7.4.5 73
+RMD160 bb3b667d2bbfbe464aecf6c66428405846092932 files/digest-jdbc3-postgresql-7.4.5 73
+SHA256 bb1e254d84363c650055ef92c05ae66c40ac95e66e4b2b99d252d1abf635564e files/digest-jdbc3-postgresql-7.4.5 73
+MD5 68212c0fc3f178e7dcd29a128bc6dbb5 files/digest-jdbc3-postgresql-8.0_p311 79
+RMD160 cb7ebd0a4b9a5db7dadcb7a1553cfc45a5c14275 files/digest-jdbc3-postgresql-8.0_p311 79
+SHA256 9624795d49cdc3babb59f2ccb1f9657c0de8853d24788e9c76997e07ebacefda files/digest-jdbc3-postgresql-8.0_p311 79
+MD5 fed5ba078df8a2fef6f75ca29be58503 files/digest-jdbc3-postgresql-8.0_p312 79
+RMD160 dc7fe1c5b4776770199c7271e7ebaa3f714487a6 files/digest-jdbc3-postgresql-8.0_p312 79
+SHA256 c53a436b067966a3aa07a1bc15f93128a749dde904f7d1848ac0139428eed640 files/digest-jdbc3-postgresql-8.0_p312 79
+MD5 c3ad4027947aa2246124f76156014e5c files/digest-jdbc3-postgresql-8.1_p404 283
+RMD160 19a4f42c92b555cbbb27dcae90ed05ab95376081 files/digest-jdbc3-postgresql-8.1_p404 283
+SHA256 bda361880108ac7b2742626c6f7d6d58da79668e6f237522b6b5802cf7b89672 files/digest-jdbc3-postgresql-8.1_p404 283
+MD5 c3ad4027947aa2246124f76156014e5c files/digest-jdbc3-postgresql-8.1_p404-r1 283
+RMD160 19a4f42c92b555cbbb27dcae90ed05ab95376081 files/digest-jdbc3-postgresql-8.1_p404-r1 283
+SHA256 bda361880108ac7b2742626c6f7d6d58da79668e6f237522b6b5802cf7b89672 files/digest-jdbc3-postgresql-8.1_p404-r1 283
