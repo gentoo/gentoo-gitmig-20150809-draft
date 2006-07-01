@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gjdoc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.10 2006/05/15 07:36:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.11 2006/07/01 17:28:47 nichoj Exp $
+
+  01 Jul 2006; Joshua Nichols <nichoj@gentoo.org> +gjdoc-0.7.7-r1.ebuild:
+  Revision bump to support new Java system.
 
   15 May 2006; Petteri Räty <betelgeuse@gentoo.org> gjdoc-0.7.7.ebuild:
   Changed SRC_URI to use mirror://gnu.
