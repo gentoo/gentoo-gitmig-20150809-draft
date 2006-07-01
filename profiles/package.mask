@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5571 2006/07/01 13:52:26 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5572 2006/07/01 14:14:18 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -847,10 +847,6 @@ games-strategy/scorched3d
 =app-portage/flagedit-0.0.3
 =app-portage/flagedit-0.0.4
 
-# Matthew Kennedy <mkennedy@gentoo.org> (18 Oct 2005)
-# Preparation for removal
-dev-lisp/cmucl-source
-
 # Michael Sterrett <mr_bones_@gentoo.org> (17 Oct 2005)
 # Buggy and seemingly not maintained upstream
 # Using media-gfx/gqview is a much better choice.
@@ -869,12 +865,6 @@ media-gfx/gtksee
 dev-java/eclipse-osgi
 dev-java/eclipse-core
 dev-java/eclipse-jface
-
-# Marcin Kryczek <mkay@gentoo.org> (25 Sep 2005)
-# This project seems to be dead. The last "stable" (and broken) version
-# was released 1,5 year ago and it's CVS is empty. I'll remove it from
-# the tree soon
-net-p2p/dc-gui
 
 # Jeremy Huddleston <eradicator@gentoo.org> (24 Sep 2005)
 # Not quite ready for prime time...
@@ -957,11 +947,6 @@ dev-lisp/cl-blog
 # issues
 net-misc/zsync
 
-# Brian Jackson <iggy@gentoo.org> (29 Jul 2005)
-# original maintainer dropped off the face of the planet and it has security
-# issues, etc.
-net-misc/powerd
-
 # Karl Trygve Kalleberg <karltk@gentoo.org> (23 Jul 2005)
 # Not available to the general public
 =dev-lang/icc-9.0.023
@@ -1011,12 +996,6 @@ www-apps/phpBB
 # Thierry Carrez <koon@gentoo.org> (27 Jun 2005)
 # Package contains insecure tmpfile handling, bug #93792
 dev-db/xmysqladmin
-
-# John N. Laliberte <allanonjl@gentoo.org> (24 Jun 2005)
-# old, unmaintained ebuilds with dead upstream
-# pending removal
-app-office/gnofin
-gnome-extra/gnobog
 
 # Aaron Walker <ka0ttic@gentoo.org> (20 Jun 2005)
 # testing releases/cvs snaps
@@ -1167,10 +1146,6 @@ dev-lisp/cl-imho
 # <ribosome@gentoo.org> (09 Jan 2005)
 # Beta release
 =sci-biology/vienna-rna-1.5_beta
-
-# <mkennedy@gentoo.org> (14 Dec 2004)
-# Masked pending removal
-dev-lisp/cl-clx-sbcl
 
 # <danarmak@gentoo.org> (11 Dec 2004)
 # Considered broken by upstream; future to be decided
