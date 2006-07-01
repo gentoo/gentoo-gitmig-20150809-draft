@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xhost
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xhost/ChangeLog,v 1.26 2006/07/01 01:15:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xhost/ChangeLog,v 1.27 2006/07/01 01:15:50 spyderous Exp $
+
+  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>; xhost-1.0.1.ebuild:
+  ppc/sparc/mips/alpha/arm/sh stable
 
   01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>; -xhost-1.0.0.ebuild:
   Pull old version.
