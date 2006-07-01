@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.219 2006/06/23 12:48:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.220 2006/07/01 23:16:18 flameeyes Exp $
+
+*alsa-driver-1.0.12_rc1-r1 (01 Jul 2006)
+
+  01 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/alsa-driver-mcp55.patch, +alsa-driver-1.0.12_rc1-r1.ebuild:
+  Add patch to support MCP55 sound boards, thanks to Doug Goldstein (cardoe)
+  in bug #138780.
 
 *alsa-driver-1.0.12_rc1 (23 Jun 2006)
 
