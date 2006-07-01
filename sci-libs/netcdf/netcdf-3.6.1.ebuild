@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.1.ebuild,v 1.2 2006/05/25 20:30:08 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.1.ebuild,v 1.3 2006/07/01 05:04:47 nerdboy Exp $
 
 inherit fortran eutils
 
@@ -15,12 +15,22 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 S="${WORKDIR}/${P}/src"
 
-fortran_pkg_setup() {
+pkg_setup() {
 	if use fortran ; then
-		FORTRAN="g77 gfortran pgf90"
-		need_fortran "g77 gfortran pgf90"
+	    if built_with_use sys-devel/gcc fortran ; then
+		FORTRAN="g77 gfortran"
+		need_fortran "g77 gfortran"
+		einfo "Configuring for GNU fortran..."
+	    elif test -f `which pgf90` ; then
+		FORTRAN="pgf90"
+		need_fortran "pgf90"
+		einfo "Configuring for PGI fortran..."
+	    else
+		ewarn "Can't find a usable fortran compiler."
+		die "Please adjust your use flags."
+	    fi
 	else
-		FORTRAN=""
+	    FORTRAN=""
 	fi
 }
 src_unpack() {
@@ -42,6 +52,9 @@ src_compile() {
 
 	econf ${myconf} || die "econf failed"
 	make || die "make failed"
+}
+
+src_test() {
 	make test || die "make test failed"
 }
 
