@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.67 2006/06/30 23:15:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.68 2006/07/01 05:36:26 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -161,7 +161,8 @@ DEPEND="${DEPEND}
 
 if [[ "${PN/util-macros}" = "${PN}" ]]; then
 	DEPEND="${DEPEND}
-		>=x11-misc/util-macros-0.99.2"
+		>=x11-misc/util-macros-0.99.2
+		>=sys-devel/binutils-2.16.1-r3"
 fi
 
 RDEPEND="${RDEPEND}
@@ -171,12 +172,6 @@ RDEPEND="${RDEPEND}
 
 x-modular_specs_check() {
 	if [[ ${PN:0:11} = "xorg-server" ]] || [[ -n "${DRIVER}" ]]; then
-		if gcc-specs-now; then
-			msg="${PN} does not work with hardened gcc specs. Switch to vanilla gcc specs to emerge ${PN}."
-			eerror "$msg"
-			die "$msg"
-		fi
-
 		append-ldflags -Wl,-z,lazy
 		# (#116698) breaks loading
 		filter-ldflags -Wl,-z,now
