@@ -136,7 +136,7 @@ diff -u -r1.2 write.c
  			return 0;
  		case 0: /* child */
 -			setuid(getuid());
-+			if (setuid(getuid() == -1) 
++			if (setuid(getuid()) == -1) 
 +			    FatalError("xf86writeConfigFile(): "
 +				"setuid failed(%s)\n", 
 +				strerror(errno));

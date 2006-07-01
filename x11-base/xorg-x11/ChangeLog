@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.558 2006/07/01 06:41:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.559 2006/07/01 19:32:58 spyderous Exp $
+
+  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  files/x11r6.9.0-setuid.diff, files/xorg-68x-setuid.patch:
+  (#138688) Missing close parenthesis on one of the getuid() calls (Rudo Thomas).
 
 *xorg-x11-6.9.0-r3 (01 Jul 2006)
 
