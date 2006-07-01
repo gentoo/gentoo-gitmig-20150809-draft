@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.2.ebuild,v 1.1 2006/06/27 18:00:08 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.2.ebuild,v 1.2 2006/07/01 19:58:13 dang Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -148,6 +148,9 @@ src_unpack() {
 
 	# Add widescreen mode, if requested
 	use widescreen && epatch ${FILESDIR}/${PN}-2.5.5.1-sideview.patch
+
+	# Fix --as-needed
+	epatch ${FILESDIR}/${P}-as-needed.patch
 
 	eaclocal || die
 	_elibtoolize --copy --force || die
