@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2006g.ebuild,v 1.3 2006/06/27 20:32:43 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2006g.ebuild,v 1.4 2006/07/01 17:20:34 kanaka Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -21,6 +21,7 @@ S=${WORKDIR}
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${PN}-2005n-makefile.patch
+	tc-is-cross-compiler && cp -pR ${S} ${S}-native
 }
 
 src_compile() {
@@ -31,7 +32,12 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	local zic=""
+	if tc-is-cross-compiler; then
+		make -C ${S}-native CC=$(tc-getBUILD_CC) zic || die
+		zic="zic=${S}-native/zic"
+	fi
+	make install ${zic} DESTDIR="${D}" || die
 	rm -rf "${D}"/usr/share/zoneinfo-leaps
 	dodoc README Theory
 	dohtml *.htm *.jpg
