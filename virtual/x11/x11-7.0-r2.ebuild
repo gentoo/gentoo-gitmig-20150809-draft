@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/x11/x11-7.0-r2.ebuild,v 1.4 2006/07/01 01:38:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/x11/x11-7.0-r2.ebuild,v 1.5 2006/07/01 21:45:31 spyderous Exp $
 
 DESCRIPTION="Virtual for the core X11 implementation"
 HOMEPAGE="http://www.gentoo.org/proj/en/desktop/x/x11/"
@@ -13,6 +13,7 @@ RDEPEND="app-text/rman
 			>=x11-base/xorg-x11-7
 			x11-apps/xdm
 			x11-apps/xdpyinfo
+			x11-apps/xdriinfo
 			x11-apps/xrdb
 			x11-apps/xsetroot
 			x11-libs/libFS

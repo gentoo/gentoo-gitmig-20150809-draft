@@ -1,6 +1,9 @@
 # ChangeLog for virtual/x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/x11/ChangeLog,v 1.10 2006/07/01 01:38:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/x11/ChangeLog,v 1.11 2006/07/01 21:45:31 spyderous Exp $
+
+  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>; x11-7.0-r2.ebuild:
+  Add x11-apps/xdriinfo to the list.
 
   01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>; x11-7.0-r2.ebuild:
   alpha/arm/mips/ppc/sh stable. Holding off on sparc for now, gustavoz is
