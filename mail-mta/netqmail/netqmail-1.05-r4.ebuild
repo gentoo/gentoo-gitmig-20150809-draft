@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r4.ebuild,v 1.4 2006/07/01 11:07:40 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r4.ebuild,v 1.5 2006/07/01 19:38:14 hansmi Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -29,6 +29,7 @@ IUSE="gencertdaily highvolume mailwrapper noauthcram qmail-spp ssl vanilla"
 RESTRICT="test"
 
 DEPEND="
+	!mail-mta/qmail
 	sys-apps/groff
 	net-mail/queue-repair
 	ssl? ( dev-libs/openssl )
@@ -240,6 +241,7 @@ src_install() {
 
 	dodir ${TCPRULES_DIR}
 	insinto ${TCPRULES_DIR}
+	newins ${FILESDIR}/tcprules.d-Makefile.qmail Makefile.qmail
 	for i in smtp qmtp qmqp pop3; do
 		newins ${FILESDIR}/tcp.${i}.sample tcp.qmail-${i}
 	done
