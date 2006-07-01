@@ -1,12 +1,15 @@
-1. If you are upgrading, you will need to run the zmupdate.pl script:
+0. If you are upgrading, you will need to run the zmupdate.pl script:
 
   /usr/bin/zmupdate.pl version=<from version> [--user=<database user> --pass=<database password>]
 
-2.  Edit /etc/zm.conf:
+1.  Edit /etc/zm.conf:
   ZM_PATH_BUILD => /usr/share/${PN}
   ZM_PATH_WEB   => ${MY_INSTALLDIR}
   ZM_PATH_CGI   => ${VHOST_CGIBINDIR}
 
   Also set your database settings.
+
+2.  Start the zoneminder daemon:
+  /etc/init.d/zoneminder start
 
 3. Login: http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/zm.php

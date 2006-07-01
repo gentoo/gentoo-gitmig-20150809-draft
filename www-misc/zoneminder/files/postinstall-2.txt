@@ -1,4 +1,4 @@
-1. If this is a new installation, you will need to create a database for ZM to
+0. If this is a new installation, you will need to create a database for ZM to
    use. Execute the following:
 
  cd /usr/share/${PN}
@@ -8,12 +8,15 @@
   > quit
  mysqladmin reload
 
-2.  Edit /etc/zm.conf:
+1.  Edit /etc/zm.conf:
   ZM_PATH_BUILD => /usr/share/${PN}
   ZM_PATH_WEB   => ${MY_INSTALLDIR}
   ZM_PATH_CGI   => ${VHOST_CGIBINDIR}
 
   Also set your database settings.
+
+2.  Start the zoneminder daemon:
+  /etc/init.d/zoneminder stop
 
 3. Login: http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/zm.php
 
