@@ -1,0 +1,29 @@
+Index: ipkg-utils-1.7/Makefile
+===================================================================
+--- ipkg-utils-1.7/Makefile	{cset 1fe36b83-662c-4d43-b5df-915184007abf}
++++ ipkg-utils-1.7/Makefile	{local clone}
+@@ -1,20 +1,19 @@
+ UTILS = ipkg-build ipkg-deb-unbuild ipkg-unbuild ipkg-compare-versions ipkg-upload
+ 
+-PREFIX=/usr/local
++PREFIX=/usr
+ 
+ all: build
+ 
+ build: ipkg-compare-versions
+-	python setup.py build
+ 
+ ipkg-compare-versions: ipkg-compare-versions.c
+ 	$(CC) $(CFLAGS) -o ipkg-compare-versions ipkg-compare-versions.c
+ 
+ install: ${UTILS}
+-	cp ${UTILS} $(PREFIX)/bin
+-	python setup.py install
++	mkdir -p $(DESTDIR)$(PREFIX)/bin
++	cp ${UTILS} $(DESTDIR)$(PREFIX)/bin
+ 	chmod agu+rx ipkg-make-index
+-	cp -f ipkg-make-index $(PREFIX)/bin
++	cp -f ipkg-make-index $(DESTDIR)$(PREFIX)/bin
+ 
+ binary: build
+ 	mkdir -p ipkg-build-binary/usr/bin

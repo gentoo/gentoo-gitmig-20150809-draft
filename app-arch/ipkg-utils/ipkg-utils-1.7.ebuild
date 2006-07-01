@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ipkg-utils-1.7.ebuild,v 1.5 2006/01/20 22:03:21 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ipkg-utils-1.7.ebuild,v 1.6 2006/07/01 16:06:06 seemant Exp $
 
-inherit distutils
+inherit distutils eutils toolchain-funcs
 
 DESCRIPTION="Tools for working with the ipkg binary package format"
 HOMEPAGE="http://www.openembedded.org/"
@@ -14,13 +14,15 @@ KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~x86"
 
 DEPEND="dev-lang/python"
 
+src_unpack() {
+	unpack ${A}; cd ${S}
+
+	epatch ${FILESDIR}/${P}-build_fixes.patch
+}
+
 src_compile() {
-	sed -i -e 's#^PREFIX=.*#PREFIX=/usr#' Makefile || die 'prefix fix failed'
-	sed -i -e 's#$(PREFIX)#$(DESTDIR)$(PREFIX)#' Makefile || die 'destdir fix failed'
-	sed -i -e '/^install:/s#^\(.*\)$#\1\n\tmkdir -p $(DESTDIR)$(PREFIX)/bin#' Makefile || die 'mkdir fix failed'
-	sed -i -e '/python setup.py/d' Makefile || die 'sandbox fix failed'
 	distutils_src_compile
-	emake || die "emake failed"
+	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
