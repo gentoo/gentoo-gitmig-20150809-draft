@@ -1326,7 +1326,13 @@ java-pkg_init-compiler_() {
 		return
 	fi
 
-	local compilers="$(source ${JAVA_PKG_COMPILERS_CONF} 1>/dev/null 2>&1; echo	${COMPILERS})"
+	local compilers;
+	if [[ -z ${JAVA_PKG_FORCE_COMPILER} ]]; then
+		compilers="$(source ${JAVA_PKG_COMPILERS_CONF} 1>/dev/null 2>&1; echo	${COMPILERS})"
+	else
+		compilers=${JAVA_PKG_FORCE_COMPILER}
+	fi
+	
 	debug-print "Read \"${compilers}\" from ${JAVA_PKG_COMPILERS_CONF}"
 
 	# Figure out if we should announce what compiler we're using
@@ -1657,6 +1663,8 @@ java-pkg_switch-vm() {
 		
 		java-pkg_setup-vm
 
+		export JAVA=$(java-config -java)
+		export JAVAC=$(java-config -javac)
 		export JAVACFLAGS="$(java-pkg_javac-args)" 
 		[[ -n ${JAVACFLAGS_EXTRA} ]] && export JAVACFLAGS="${JAVACFLAGS_EXTRA} ${JAVACFLAGS}"
 
