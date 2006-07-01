@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.2.1-r1.ebuild,v 1.2 2006/02/09 09:22:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.2.1-r1.ebuild,v 1.3 2006/07/01 10:26:27 pylon Exp $
 
 inherit eutils linux-info
 
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/libs/klibc/${P}.tar.bz2
 	ftp://ftp.kernel.org/pub/linux/libs/klibc/Testing/${P}.tar.bz2"
 LICENSE="|| ( GPL-2 LGPL-2 )"
 # Mips patches needs updating ...
-KEYWORDS="~amd64 -mips ~ppc ~x86"
+KEYWORDS="~amd64 -mips ppc ~x86"
 IUSE="n32"
 RESTRICT="nostrip"
 

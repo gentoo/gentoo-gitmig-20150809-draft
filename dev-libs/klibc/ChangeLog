@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.22 2006/04/27 16:30:23 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.23 2006/07/01 10:26:27 pylon Exp $
+
+  01 Jul 2006; Lars Weiler <pylon@gentoo.org> klibc-1.2.1-r1.ebuild:
+  Stable on ppc; bug #130175.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-klibc-1.0.14-r1, files/digest-klibc-1.1,
