@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.37 2006/06/25 21:01:36 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.38 2006/07/01 20:28:43 nichoj Exp $
 
 inherit multilib
 
@@ -33,11 +33,10 @@ java-pkg_pkg_setup() {
 			einfo "Using ${GENTOO_VM}"
 			eend 0
 		else
-			eerror "There was a problem determining which VM to use for Generation-1"
-			eerror "See the list of available VMs by using: java-config-1 -L"
-			eerror "Then select on of those by using: java-config-1 -S <selected vm>"
-			eerror "And once that is done, run: env-update && source /etc/profile"
-			eerror "Then to continue the emerge: emerge --resume"
+			eerror "There was a problem determining which VM to use for generation-1"
+			eerror "You may need to set your generation-1 VM again, and run env-update && source/etc/profile"
+			eerror "Also, make sure you have followed the Java Upgrade Guide:"
+			eerror "http://www.gentoo.org/proj/en/java/java-upgrade.xml"
 			eend 1
 			die "Couldn't determine VM for generation-1"
 		fi
