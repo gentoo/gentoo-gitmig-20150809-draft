@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-20060203.ebuild,v 1.2 2006/02/04 21:00:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-20060203.ebuild,v 1.3 2006/07/01 01:06:35 spyderous Exp $
 
 inherit multilib eutils
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://glide.sourceforge.net/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 LICENSE="3DFX"
 SLOT="0"
-KEYWORDS="~x86 -sparc"
+KEYWORDS="-sparc x86"
 IUSE="voodoo5 voodoo3 voodoo2 voodoo1"
 
 RDEPEND="|| ( x11-libs/libX11 virtual/x11 )"
