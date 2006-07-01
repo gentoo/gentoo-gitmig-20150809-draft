@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-neomagic/xf86-video-neomagic-1.1.1.ebuild,v 1.2 2006/06/05 21:22:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-neomagic/xf86-video-neomagic-1.1.1.ebuild,v 1.3 2006/07/01 00:49:13 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="X.Org driver for neomagic cards"
-KEYWORDS="~amd64 ~ia64 ~sh ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 sh ~x86 ~x86-fbsd"
 RDEPEND=">=x11-base/xorg-server-1.0.99"
 DEPEND="${RDEPEND}
 	x11-proto/fontsproto
