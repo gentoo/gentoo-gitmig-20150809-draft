@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.26.ebuild,v 1.1 2006/06/30 12:16:01 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.26.ebuild,v 1.2 2006/07/01 19:11:13 nichoj Exp $
 
 inherit distutils eutils
 
@@ -38,4 +38,11 @@ pkg_postinst() {
 
 pkg_postrm() {
 	python_mod_cleanup /usr/share/java-config-2/pym/java_config
+}
+
+pkg_postinst() {
+	einfo "The way Java is handled on Gentoo has been recently updated."
+	einfo "If you have not done so already, you should follow the"
+	einfo "instructions available at:"
+	einfo "http://www.gentoo.org/proj/en/java/java-upgrade.xml"
 }
