@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gccmakedep
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gccmakedep/ChangeLog,v 1.16 2006/06/30 15:57:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gccmakedep/ChangeLog,v 1.17 2006/07/01 01:30:13 spyderous Exp $
+
+  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  gccmakedep-1.0.2.ebuild:
+  ppc/sparc/mips/alpha/arm/sh stable
 
   30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   gccmakedep-1.0.2.ebuild:
