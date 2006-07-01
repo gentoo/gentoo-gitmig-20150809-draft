@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.3 2006/06/30 15:51:09 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.4 2006/07/01 19:16:17 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-module
 
@@ -14,12 +14,13 @@ SRC_URI="mirror://sourceforge/gaim/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="audiofile bonjour cjk dbus debug eds gadu gnutls krb4 mono nas nls perl silc spell startup-notification tcltk xscreensaver custom-flags"
+IUSE="avahi audiofile bonjour cjk dbus debug eds gadu gnutls krb4 meanwhile mono nas nls perl silc spell startup-notification tcltk xscreensaver custom-flags"
 
 RDEPEND="
 	audiofile? ( media-libs/libao
 		media-libs/audiofile )
-	bonjour? ( net-misc/howl )
+	bonjour? ( !avahi? ( net-misc/howl )
+		   avahi? ( net-dns/avahi ) )
 	dbus? ( >=sys-apps/dbus-0.35
 		>=dev-lang/python-2.4 )
 	>=x11-libs/gtk+-2.0
@@ -31,6 +32,7 @@ RDEPEND="
 	gnutls? ( net-libs/gnutls )
 	!gnutls? ( >=dev-libs/nss-3.11
 		>=dev-libs/nspr-4.6.1 )
+	meanwhile? ( net-libs/meanwhile )
 	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )
 	eds? ( gnome-extra/evolution-data-server )
 	krb4? ( >=app-crypt/mit-krb5-1.3.6-r1 )
@@ -93,7 +95,7 @@ print_gaim_warning() {
 	ewarn
 	einfo
 	if  use custom-flags; then
-		einfo "Note that you have shown NOT TO FILTER UNSTABLE C[XX]FLAGS."
+		einfo "Note that you have chosen NOT TO FILTER UNSTABLE C[XX]FLAGS."
 		einfo "DO NOT file bugs with GENTOO or UPSTREAM while using custom-flags"
 		einfo
 	else
@@ -114,10 +116,19 @@ print_gaim_warning() {
 
 pkg_setup() {
 	print_gaim_warning
+
 	if use krb4 && ! built_with_use app-crypt/mit-krb5 krb4 ; then
 	eerror
 	eerror You need to rebuild app-crypt/mit-krb5 with USE=krb4 in order to
 	eerror enable krb4 support for the zephyr protocol in gaim.
+	eerror
+	die "Configure failed"
+	fi
+
+	if use avahi && ! built_with_use net-dns/avahi howl-compat ; then
+	eerror
+	eerror You need to rebuild net-dns/avavhi with USE=howl-compat in order
+	eerror to enable howl support for the bonjour protocol in gaim.
 	eerror
 	die "Configure failed"
 	fi
@@ -136,6 +147,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-as-needed.patch
+	epatch ${FILESDIR}/${P}-avahi-compat.patch
 
 	eautomake || die "Failed running eautomake"
 }
@@ -190,6 +202,7 @@ src_compile() {
 		$(use_enable krb4) \
 		$(use_enable debug) \
 		$(use_enable dbus) \
+		$(use_enable meanwhile) \
 		$(use_enable nas) \
 		$(use_enable eds gevolution) \
 		$(use_enable audiofile audio) \
