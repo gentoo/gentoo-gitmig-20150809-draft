@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10.ebuild,v 1.2 2006/07/01 19:52:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r1.ebuild,v 1.1 2006/07/01 19:52:46 hansmi Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,8 +10,8 @@ SRC_URI="http://www.fefe.de/fnord/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="hppa ppc sparc x86"
-IUSE=""
+KEYWORDS="~hppa ~ppc ~sparc ~x86"
+IUSE="auth"
 
 DEPEND=""
 RDEPEND="${DEPEND}
@@ -25,13 +25,15 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A} && cd ${S}
-	#epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/${PN}-1.9-gentoo.diff
 }
 
 src_compile() {
 	# Fix for bug #45716
 	replace-sparc64-flags
+
+	use auth && \
+		append-flags -DAUTH
 
 	emake DIET="" CFLAGS="${CFLAGS}" || die "emake failed"
 }

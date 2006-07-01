@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/fnord
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.14 2006/01/05 21:40:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.15 2006/07/01 19:52:46 hansmi Exp $
+
+*fnord-1.10-r1 (01 Jul 2006)
+
+  01 Jul 2006; Michael Hanselmann <hansmi@gentoo.org> -fnord-1.8.ebuild,
+  -fnord-1.9.ebuild, fnord-1.10.ebuild, +fnord-1.10-r1.ebuild:
+  Marked 1.10 stable on hppa, ppc, sparc, x86. Removed older versions.
+  Add 1.10-r1 with support for HTTP authentication.
 
   05 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> fnord-1.9.ebuild:
   Back to ~hppa, ~sparc because of reproducible problems, 1.10 works.
