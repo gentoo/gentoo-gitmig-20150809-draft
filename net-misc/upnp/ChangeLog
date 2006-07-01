@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/upnp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/ChangeLog,v 1.16 2006/05/08 13:28:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/ChangeLog,v 1.17 2006/07/01 17:48:37 genstef Exp $
+
+*upnp-1.3.1 (01 Jul 2006)
+
+  01 Jul 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +upnp-1.3.1.ebuild:
+  add metadata: new maintainer maq, new version thanks to Rüpel
+  <ruepel@gmx.li> in bug 130465, als fixes tetex dep, thanks to David Klempner
+  <klempner@uiuc.edu> in bug 105411
 
   08 May 2006; Markus Rothe <corsair@gentoo.org> upnp-1.2.1a.ebuild:
   Added ~ppc64
