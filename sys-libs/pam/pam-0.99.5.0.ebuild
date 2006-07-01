@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.5.0.ebuild,v 1.1 2006/06/28 13:27:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.5.0.ebuild,v 1.2 2006/07/01 19:57:29 azarah Exp $
 
 inherit libtool multilib eutils autotools pam
 
@@ -74,7 +74,7 @@ src_install() {
 
 	dodoc CHANGELOG ChangeLog README AUTHORS Copyright
 
-	for x in "${FILESDIR}/pam.d/"*; do
+	for x in "${FILESDIR}/pam.d-0.99/"*; do
 		[[ -f "${x}" ]] && dopamd "${x}"
 	done
 }
