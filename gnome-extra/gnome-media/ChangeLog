@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.112 2006/06/17 05:17:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.113 2006/07/01 15:11:12 allanonjl Exp $
+
+*gnome-media-2.14.2 (01 Jul 2006)
+
+  01 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -files/gnome-media-2.14.0-as-needed.patch, -gnome-media-2.14.0-r1.ebuild,
+  +gnome-media-2.14.2.ebuild:
+  new version. bump intltool/gstreamer deps, remove static useflag, remove
+  as-needed patch since it was applied upstream.
 
   17 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
   gnome-media-1.2.3-r2.ebuild:
