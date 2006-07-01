@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.20 2006/06/30 21:01:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.21 2006/07/01 21:53:14 spyderous Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -35,3 +35,7 @@ USE="${USE} xorg"
 # 2006/06/30 - Donnie Berkholz <spyderous@gentoo.org>
 # Sane defaults for input drivers
 INPUT_DEVICES="keyboard mouse evdev"
+
+# 2006/07/01 - Donnie Berkholz <spyderous@gentoo.org>
+# X: Build dlloader-using drivers, since >=6.9 uses dlloader, not elfloader
+USE="${USE} dlloader"
