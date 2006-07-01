@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.169 2006/06/30 04:19:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.170 2006/07/01 05:34:33 weeve Exp $
+
+  01 Jul 2006; Jason Wever <weeve@gentoo.org> openssl-0.9.7j.ebuild:
+  Fixed typo when I added filtering for -mv8 CFLAG, solves bug #138583.
 
   30 Jun 2006; Jason Wever <weeve@gentoo.org> openssl-0.9.7j.ebuild:
   Filtered out the assumed -mv8 use flag as it was removed in >=gcc-4.0.0

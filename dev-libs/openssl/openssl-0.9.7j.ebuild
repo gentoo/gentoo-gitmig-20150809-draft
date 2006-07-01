@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7j.ebuild,v 1.11 2006/06/30 04:19:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7j.ebuild,v 1.12 2006/07/01 05:34:33 weeve Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -61,9 +61,9 @@ src_unpack() {
 	for a in $( grep -n -e "^\"linux-" Configure ); do
 		LINE=$( echo $a | awk -F: '{print $1}' )
 		CUR_CFLAGS=$( echo $a | awk -F: '{print $3}' )
-		NEW_CFLAGS=$(echo $CUR_CFLAGS | LC_ALL=C sed -r -e "s|-O[23]||" -e
-		"s:-fomit-frame-pointer::" -e "s:-mcpu=[-a-z0-9]+::" -e "s:-m486::" -e
-		"s:-mv8::")
+		NEW_CFLAGS=$(echo $CUR_CFLAGS | LC_ALL=C sed -r -e "s|-O[23]||" -e \
+		"s:-fomit-frame-pointer::" -e "s:-mcpu=[-a-z0-9]+::" -e "s:-m486::" \
+		-e "s:-mv8::")
 		# ppc64's current toolchain sucks at optimization and will break this package
 		[[ $(tc-arch) != "ppc64" ]] && NEW_CFLAGS="${NEW_CFLAGS} ${CFLAGS}"
 
