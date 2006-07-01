@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mindterm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/ChangeLog,v 1.5 2006/02/19 00:04:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/ChangeLog,v 1.6 2006/07/01 16:09:41 nichoj Exp $
+
+  01 Jul 2006; Joshua Nichols <nichoj@gentoo.org> +mindterm-3.0.1.ebuild:
+  Version bump (bug #134528) and updated to support new Java system.
 
   19 Feb 2006; Petteri Räty <betelgeuse@gentoo.org> mindterm-2.4.2.ebuild:
   Removed dependency on virtual/x11 to make mindterm work with modular X.
