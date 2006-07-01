@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/aspell-da
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/ChangeLog,v 1.27 2006/06/23 21:14:17 arj Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/ChangeLog,v 1.28 2006/07/01 16:13:07 dragonheart Exp $
+
+  01 Jul 2006; Daniel Black <dragonheart@gentoo.org>
+  aspell-da-1.4.50.ebuild, aspell-da-1.4.51.ebuild, aspell-da-1.4.52.ebuild,
+  aspell-da-1.4.53.ebuild, aspell-da-1.4.54.ebuild:
+  spelling spelt wrong in HOMEPAGE - should be speling (really!). Thanks
+  <arkanoid> for noticing
 
 *aspell-da-1.4.54 (23 Jun 2006)
 
