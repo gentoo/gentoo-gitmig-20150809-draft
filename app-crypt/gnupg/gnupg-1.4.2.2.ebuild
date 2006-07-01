@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2.2.ebuild,v 1.16 2006/05/23 16:15:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2.2.ebuild,v 1.17 2006/07/01 08:29:42 dragonheart Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -54,7 +54,7 @@ src_unpack() {
 	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-1.4.2-jari.patch
 
 	if use idea; then
-		ewarn "Please read http://www.gnupg.org/why-not-idea.html"
+		ewarn "Please read http://www.gnupg.org/(en)/faq/why-not-idea.html"
 		mv "${WORKDIR}"/idea.c "${S}"/cipher/idea.c || \
 			ewarn "failed to insert IDEA module"
 	fi
@@ -209,7 +209,7 @@ pkg_postinst() {
 		ewarn "is distributed under the GPL in countries where it is permitted to do so"
 		ewarn "by law."
 		einfo
-		einfo "Please read http://www.gnupg.org/why-not-idea.html for more information."
+		einfo "Please read http://www.gnupg.org/(en)/faq/why-not-idea.html for more information."
 		einfo
 		ewarn "If you are in a country where the IDEA algorithm is patented, you are permitted"
 		ewarn "to use it at no cost for 'non revenue generating data transfer between private"

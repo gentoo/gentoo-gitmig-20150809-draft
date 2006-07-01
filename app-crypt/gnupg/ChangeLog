@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.210 2006/06/30 20:43:00 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.211 2006/07/01 08:29:42 dragonheart Exp $
+
+  01 Jul 2006; Daniel Black <dragonheart@gentoo.org> gnupg-1.4.2.2.ebuild,
+  gnupg-1.4.3.ebuild, gnupg-1.4.3-r1.ebuild, gnupg-1.4.4.ebuild:
+  correct URL in postinstall. bug #138663 thanks to Ilya Hegai
 
   30 Jun 2006; Thomas Cort <tcort@gentoo.org> gnupg-1.9.21.ebuild:
   Stable on alpha wrt Bug #137622.
