@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.50 2006/07/01 12:05:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.51 2006/07/01 12:15:16 pylon Exp $
+
+  01 Jul 2006; Lars Weiler <pylon@gentoo.org> opera-9.00.ebuild:
+  Stable on ppc; security bug #137634.
 
   01 Jul 2006; Carsten Lohrke <carlo@gentoo.org> opera-9.00.ebuild:
   Restore previous ebuild.
