@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.2.11-r1.ebuild,v 1.12 2006/06/03 18:31:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.2.11-r1.ebuild,v 1.13 2006/07/01 18:16:10 nichoj Exp $
 
 inherit distutils
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
-RDEPEND="virtual/python"
+DEPEND="!dev-java/java-config-wrapper"
+RDEPEND="${DEPEND} virtual/python"
 
 src_unpack() {
 	unpack ${A}
