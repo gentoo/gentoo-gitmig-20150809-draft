@@ -1,6 +1,6 @@
 # Copyright 2001-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc32/2006.0/packages,v 1.4 2006/07/01 01:40:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc32/2006.0/packages,v 1.5 2006/07/01 10:56:11 pylon Exp $
 
 # For instructions on how this file works (as an inclusion mask, primarily),
 # please refer to ${PORTDIR}/profiles/base/packages
@@ -15,7 +15,3 @@
 >=sys-devel/binutils-2.16.1
 >=sys-devel/gcc-3.4.4-r1
 >=sys-libs/glibc-2.3.5-r2
-<sys-devel/gcc-4
-<sys-libs/glibc-2.4
-<x11-base/xorg-x11-7
-<virtual/x11-7
