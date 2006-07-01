@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.42 2006/04/23 16:40:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.43 2006/07/01 17:33:09 kanaka Exp $
+
+  01 Jul 2006; Joel Martin <kanaka@gentoo.org> bzip2-1.0.3-r6.ebuild:
+  Make install phase idempotent by moving files in .../bin instead of
+  directory itself.
 
   28 Apr 2006; Joshua Kinard <kumba@gentoo.org> bzip2-1.0.3-r6.ebuild:
   Marked stable on mips.

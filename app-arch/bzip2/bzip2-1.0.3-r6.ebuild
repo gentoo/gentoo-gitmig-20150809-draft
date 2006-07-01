@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.3-r6.ebuild,v 1.12 2006/04/23 16:40:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.3-r6.ebuild,v 1.13 2006/07/01 17:33:09 kanaka Exp $
 
 inherit eutils multilib toolchain-funcs flag-o-matic
 
@@ -58,8 +58,9 @@ src_install() {
 	if ! use build ; then
 		make PREFIX="${D}"/usr LIBDIR=$(get_libdir) install || die
 
-		# move bzip2 binaries to / and use the shared libbz2.so
-		mv "${D}"/usr/bin "${D}"/
+		# move bzip2 binaries to /bin and use the shared libbz2.so
+		mkdir -p "${D}"/bin
+		mv "${D}"/usr/bin/* "${D}"/bin/
 		into /
 		if ! use static ; then
 			newbin bzip2-shared bzip2 || die "dobin shared"
