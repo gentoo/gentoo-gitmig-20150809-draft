@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.146 2006/06/27 12:07:34 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.147 2006/07/01 02:54:15 nichoj Exp $
+
+  01 Jul 2006; Joshua Nichols <jnichols@gentoo.org> -files/sun-jdk-1.5.0.06,
+  -sun-jdk-1.5.0.06-r2.ebuild:
+  Removing unmigrated sun-jdk-1.5
 
   27 Jun 2006; Joshua Nichols <nichoj@gentoo.org> sun-jdk-1.5.0.07.ebuild:
   Added missing examples USE flag (bug #138179)
