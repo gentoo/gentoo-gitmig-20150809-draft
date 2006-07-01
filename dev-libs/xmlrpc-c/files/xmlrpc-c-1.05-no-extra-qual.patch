@@ -1,0 +1,17 @@
+Index: xmlrpc-c-1.05/include/xmlrpc-c/server_abyss.hpp
+===================================================================
+--- xmlrpc-c-1.05.orig/include/xmlrpc-c/server_abyss.hpp
++++ xmlrpc-c-1.05/include/xmlrpc-c/server_abyss.hpp
+@@ -84,10 +84,10 @@ private:
+     TServer cServer;
+ 
+     void
+-    serverAbyss::setAdditionalServerParms(constrOpt const& opt);
++    setAdditionalServerParms(constrOpt const& opt);
+ 
+     void
+-    serverAbyss::initialize(constrOpt const& opt);
++    initialize(constrOpt const& opt);
+ };
+ 
+ 
