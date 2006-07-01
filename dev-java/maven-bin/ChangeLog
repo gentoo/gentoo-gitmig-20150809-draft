@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/maven-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.19 2006/05/29 17:22:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.20 2006/07/01 14:55:23 nichoj Exp $
+
+  01 Jul 2006; Joshua Nichols <nichoj@gentoo.org> +maven-bin-2.0.4.ebuild:
+  Version bump (bug #127952), and removing use of Java eclasses, since they
+  aren't needed / used.
 
   29 May 2006; Simon Stelling <blubb@gentoo.org> maven-bin-2.0.2.ebuild:
   stable on amd64
