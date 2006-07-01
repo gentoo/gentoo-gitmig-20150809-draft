@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/pwm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/ChangeLog,v 1.10 2004/06/28 02:54:34 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/ChangeLog,v 1.11 2006/07/01 20:56:45 nelchael Exp $
+
+  01 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -pwm-1.0.20010309.ebuild, pwm-1.0.20030617.ebuild:
+  Ported to modular X, see bug #136597. Stable on x86, removed old version.
 
   27 Jun 2004; Aron Griffis <agriffis@gentoo.org> pwm-1.0.20010309.ebuild,
   pwm-1.0.20030617.ebuild:

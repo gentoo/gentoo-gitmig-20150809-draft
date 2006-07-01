@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20030617.ebuild,v 1.7 2005/04/26 23:36:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20030617.ebuild,v 1.8 2006/07/01 20:56:45 nelchael Exp $
 
 MY_P=${PN}-${PV/1.0./}
 DESCRIPTION="A lightweight window manager"
@@ -9,10 +9,14 @@ SRC_URI="http://modeemi.fi/~tuomov/dl/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="ppc sparc ~x86"
+KEYWORDS="ppc sparc x86"
 IUSE="gnome"
 
-DEPEND="virtual/x11"
+RDEPEND="|| ( x11-libs/libX11 virtual/x11 )"
+DEPEND="|| ( ( x11-libs/libX11
+		x11-libs/libXmu
+		x11-proto/xproto )
+	virtual/x11 )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -21,17 +25,17 @@ src_unpack() {
 	cd ${S}
 	cp Makefile Makefile.orig
 	sed -e "s:\$(DOCDIR)/pwm:\$(DOCDIR)/${PF}:g" \
-	    -e "s:^MANDIR=.*$::" \
-	    -e "s:^DOCDIR=.*$::" \
-	    -e "s:^ETCDIR=.*$::" \
-	    Makefile.orig >Makefile
+		-e "s:^MANDIR=.*$::" \
+		-e "s:^DOCDIR=.*$::" \
+		-e "s:^ETCDIR=.*$::" \
+		Makefile.orig >Makefile
 	cp system.mk system.orig
 	sed -e "s:-g -O2:${CFLAGS}:" \
-	    -e 's:\$(WARN)::' \
-	    system.orig >system.mk
+		-e 's:\$(WARN)::' \
+		system.orig >system.mk
 	cp config.h config.orig
 	sed -e "s:^#define CF_SYS_CONFIG_LOCATION.*$:#define CF_SYS_CONFIG_LOCATION \"/etc/X11/pwm/\":" \
-	    config.orig >config.h
+		config.orig >config.h
 }
 
 src_compile() {
