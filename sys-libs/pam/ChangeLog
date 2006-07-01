@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.109 2006/06/28 13:27:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.110 2006/07/01 19:27:06 azarah Exp $
+
+*pam-0.99.5.0-r1 (01 Jul 2006)
+
+  01 Jul 2006; Martin Schlemmer <azarah@gentoo.org> +pam-0.99.5.0-r1.ebuild:
+  Build pam_userdb against internal db again. Add module checks that no
+  dependencies are in /usr lib back. Enable building of documentation. Varios
+  patches from Fedora.
 
 *pam-0.99.5.0 (28 Jun 2006)
 
