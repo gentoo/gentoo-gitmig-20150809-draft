@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.26 2006/01/14 21:46:11 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.27 2006/07/01 20:00:41 betelgeuse Exp $
 
 inherit java
 
@@ -16,8 +16,7 @@ SLOT="1.3"
 KEYWORDS="x86 ~ppc sparc -*"
 IUSE="doc browserplugin nsplugin mozilla"
 
-DEPEND="virtual/libc
-	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
+DEPEND="doc? ( =dev-java/java-sdk-docs-1.3.1* )"
 
 PROVIDE="virtual/jdk
 	virtual/jre"
