@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/pdb2pqr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.3 2006/07/01 16:57:48 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.4 2006/07/01 18:28:02 markusle Exp $
+
+  01 Jul 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/pdb2pqr-1.1.2-fpic-gentoo.patch, pdb2pqr-1.1.2.ebuild:
+  Replaced global appending of -fPIC to CFLAGS/FFLAGS by a local patch
+  to Makefile.in.
 
 *pdb2pqr-1.1.2 (01 Jul 2006)
 

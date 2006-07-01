@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.1.2.ebuild,v 1.1 2006/07/01 16:57:48 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.1.2.ebuild,v 1.2 2006/07/01 18:28:02 markusle Exp $
 
 inherit eutils fortran multilib flag-o-matic distutils
 
@@ -22,11 +22,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-gcc4-gentoo.patch
-
-	# need to add -fPIC to CFLAGS and FFLAGS to avoid TEXTRELS 
-	# in _propkalib.so
-	append-flags -fPIC
-	FFLAGS="${FFLAGS} -fPIC"
+	epatch "${FILESDIR}"/${P}-fpic-gentoo.patch
 }
 
 src_compile() {
