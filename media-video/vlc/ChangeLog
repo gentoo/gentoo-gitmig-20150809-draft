@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.177 2006/07/01 15:36:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.178 2006/07/01 16:04:01 flameeyes Exp $
+
+  01 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> -vlc-0.8.2-r2.ebuild:
+  Remove obsolete version.
 
   01 Jul 2006; Seemant Kulleen <seemant@gentoo.org> vlc-0.8.4a-r1.ebuild:
   stable for bug #121558
