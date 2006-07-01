@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.55 2006/06/17 11:34:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.56 2006/07/01 19:31:55 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -470,8 +470,6 @@ src_install() {
 		insinto /etc/${CRON_FOLDER}
 		doins ${FILESDIR}/qmail-genrsacert.sh
 		fperms +x /etc/${CRON_FOLDER}/qmail-genrsacert.sh
-		doins ${FILESDIR}/qmail-dhparam.sh
-		fperms +x /etc/${CRON_FOLDER}/qmail-dhparam.sh
 
 		# for some files
 		keepdir /var/qmail/control/tlshosts/
@@ -556,6 +554,14 @@ pkg_postinst() {
 		einfo "follow those URLs:"
 		einfo "http://cr.yp.to/qmail/faq/admin.html#copies"
 		einfo "http://www.cyber-sentry.com/index.php?id=35"
+	fi
+
+	if [[ -f /etc/${CRON_FOLDER}/qmail-dhparam.sh ]]; then
+		echo
+		ewarn "You have the file /etc/${CRON_FOLDER}/qmail-dhparam.sh from an"
+		ewarn "earlier qmail installation. Please remove it, because its"
+		ewarn "functionality is in qmail-genrsacert.sh already."
+		echo
 	fi
 }
 
