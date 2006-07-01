@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.43 2006/06/30 23:24:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.44 2006/07/01 04:45:37 spyderous Exp $
+
+  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>; Manifest:
+  Fix manifest.
 
   30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
   libX11-1.0.1-r1.ebuild:
