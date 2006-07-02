@@ -28,3 +28,4 @@ move app-i18n/jless-iso254 app-i18n/jless
 move app-text/ghostscript-afpl app-text/ghostscript-gpl
 move sci-misc/camfr sci-physics/camfr
 move sci-misc/lightspeed sci-physics/lightspeed
+move sci-misc/mpb sci-physics/mpb
