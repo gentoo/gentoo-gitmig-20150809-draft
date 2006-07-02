@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.8.0.ebuild,v 1.6 2006/06/15 19:13:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.8.0.ebuild,v 1.7 2006/07/02 16:16:21 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Stellarium renders 3D photo-realistic skies in real time."
-HOMEPAGE="http://stellarium.free.fr/"
+HOMEPAGE="http://www.stellarium.org/"
 SRC_URI="mirror://sourceforge/stellarium/${P}.tar.gz"
 
 LICENSE="GPL-2"
