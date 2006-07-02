@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.300 2006/07/02 08:48:37 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.301 2006/07/02 15:16:16 plasmaroo Exp $
+
+*gentoo-sources-2.4.32-r6 (02 Jul 2006)
+
+  02 Jul 2006; <plasmaroo@gentoo.org> -gentoo-sources-2.4.31-r1.ebuild,
+  -gentoo-sources-2.4.32-r4.ebuild, gentoo-sources-2.4.32-r5.ebuild,
+  +gentoo-sources-2.4.32-r6.ebuild:
+  Add security patches for #138617; remove stale versions.
 
 *gentoo-sources-2.6.17-r1 (02 Jul 2006)
 
