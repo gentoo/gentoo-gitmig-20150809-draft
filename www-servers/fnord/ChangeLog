@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/fnord
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.15 2006/07/01 19:52:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.16 2006/07/02 23:07:56 hansmi Exp $
+
+  02 Jul 2006; Michael Hanselmann <hansmi@gentoo.org> fnord-1.10-r1.ebuild:
+  Don't install licence file, install all readme files instead.
 
 *fnord-1.10-r1 (01 Jul 2006)
 

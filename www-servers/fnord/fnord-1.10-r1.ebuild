@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r1.ebuild,v 1.1 2006/07/01 19:52:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r1.ebuild,v 1.2 2006/07/02 23:07:56 hansmi Exp $
 
 inherit flag-o-matic eutils
 
@@ -40,5 +40,5 @@ src_compile() {
 
 src_install () {
 	dobin fnord-conf fnord || die
-	dodoc TODO README SPEED COPYING CHANGES
+	dodoc TODO README* SPEED CHANGES
 }
