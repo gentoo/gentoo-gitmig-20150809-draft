@@ -58,6 +58,7 @@ gtk
 gtk2
 gnome
 X
+opengl
 xpm
 vim-with-x
 
