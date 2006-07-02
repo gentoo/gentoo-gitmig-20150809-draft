@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.200 2006/06/28 20:06:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.201 2006/07/02 22:41:52 kanaka Exp $
+
+  02 Jul 2006; Joel Martin <kanaka@gentoo.org> udev-084.ebuild,
+  udev-085.ebuild, udev-086.ebuild, udev-087.ebuild, udev-087-r1.ebuild,
+  udev-089.ebuild, udev-089-r1.ebuild, udev-089-r2.ebuild, udev-090.ebuild,
+  udev-090-r1.ebuild, udev-094.ebuild:
+  From version 84 the CROSS variable changed to CROSS_COMPILE. Change
+  everything 084 and later.
 
   28 Jun 2006; Martin Schlemmer <azarah@gentoo.org> Manifest:
   Bah, repoman.
