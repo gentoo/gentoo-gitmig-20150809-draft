@@ -1,1 +1,1 @@
-KERNEL="svga*", NAME="%k", MODE="0660", GROUP="video"
+KERNEL=="svga*", NAME="%k", MODE="0660", GROUP="video"

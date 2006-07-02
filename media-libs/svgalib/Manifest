@@ -37,10 +37,10 @@ AUX svgalib.udev.perms.d 22 RMD160 c94dd5e5f4e39040ecbfeee196f2f4c752fb7ea2 SHA1
 MD5 80fafe8076ab52d6f02f90b7f9580ddd files/svgalib.udev.perms.d 22
 RMD160 c94dd5e5f4e39040ecbfeee196f2f4c752fb7ea2 files/svgalib.udev.perms.d 22
 SHA256 e58a8fae377ff99f49ebe1d0d517706cc27d31020cb40dac2b624569ef2bda60 files/svgalib.udev.perms.d 22
-AUX svgalib.udev.rules.d 54 RMD160 0a6ce70c635f495a40ca41e5d334a8bf8e4031e6 SHA1 e1be3734f2f1ba51ba004fe069a6f9a743685ab4 SHA256 b8096fa68fdd9e0fe0da9af2ce8b771c0de33f8b42961d9722a717b7c9d6e868
-MD5 a4acf43a776fa24036c8bde9d951ee60 files/svgalib.udev.rules.d 54
-RMD160 0a6ce70c635f495a40ca41e5d334a8bf8e4031e6 files/svgalib.udev.rules.d 54
-SHA256 b8096fa68fdd9e0fe0da9af2ce8b771c0de33f8b42961d9722a717b7c9d6e868 files/svgalib.udev.rules.d 54
+AUX svgalib.udev.rules.d 55 RMD160 05987efb133e53358a8f1aeb69895b8f44fb9f80 SHA1 a0851d5de96c9e3933515fcbdb0fb6de9a07339e SHA256 ae60596a1b5fdc0e6cc9d625f363d869f8674e4da631cc341e663b22870f7d81
+MD5 d15d5d3cf26776d90faa44da5c9fa02a files/svgalib.udev.rules.d 55
+RMD160 05987efb133e53358a8f1aeb69895b8f44fb9f80 files/svgalib.udev.rules.d 55
+SHA256 ae60596a1b5fdc0e6cc9d625f363d869f8674e4da631cc341e663b22870f7d81 files/svgalib.udev.rules.d 55
 DIST svgalib-1.9.21.tar.gz 950274
 DIST svgalib-1.9.23.tar.gz 982053
 DIST svgalib-1.9.24.tar.gz 986612 RMD160 5ecab1a6945b8b3747850a0fa283fb2bf558e24d SHA256 12f74fd44c13991ece0fb4bb0d4d95366ba1de2758c7eec10b59290bc6237ca1
@@ -74,9 +74,9 @@ MD5 2fade38f6280418b878fc9ec6425b611 files/digest-svgalib-1.9.24 244
 RMD160 cb17655aaf1caf0ec167a2faaf38fb1e9ced5e83 files/digest-svgalib-1.9.24 244
 SHA256 e9aeec91a16ef008173ec45162e2680a29fdabee914c2a516acc1da133a98c86 files/digest-svgalib-1.9.24 244
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEmFJTamhnQswr0vIRAiaQAJ0ZNC8QwMmgsAd4FZF/6IculY3J1QCZAWWo
-N7q0gcq67hvJiu3a5nx47XU=
-=cKQp
+iD8DBQFEp2lfamhnQswr0vIRAlY8AJwICdALIh5xgAHGfPYGmpuDAcQStQCgoPAO
+jWEnfCiDWtNmWIuFdI0nTfE=
+=9nJJ
 -----END PGP SIGNATURE-----
