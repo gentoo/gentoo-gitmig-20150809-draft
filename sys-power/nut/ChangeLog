@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.8 2006/06/28 23:13:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.9 2006/07/02 17:09:04 pylon Exp $
+
+  02 Jul 2006; Lars Weiler <pylon@gentoo.org> nut-2.0.3-r1.ebuild:
+  Stable on ppc; bug #138389.
 
   28 Jun 2006; Jason Wever <weeve@gentoo.org> nut-2.0.3-r1.ebuild:
   Stable on SPARC wrt bug #138389.
