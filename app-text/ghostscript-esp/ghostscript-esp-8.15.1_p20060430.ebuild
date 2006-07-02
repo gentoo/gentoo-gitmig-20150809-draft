@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1_p20060430.ebuild,v 1.9 2006/05/15 00:57:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1_p20060430.ebuild,v 1.10 2006/07/02 19:37:39 vapier Exp $
 
 inherit eutils autotools flag-o-matic versionator
 
@@ -16,7 +16,7 @@ SRC_URI="cjk? ( http://www.matsusaka-u.ac.jp/mirror/gs-cjk/adobe-cmaps-200204.ta
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="X cups cjk emacs gtk threads xml"
 
 DEP="virtual/libc
