@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7i.ebuild,v 1.23 2006/05/14 15:09:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7i.ebuild,v 1.24 2006/07/02 04:55:08 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -154,16 +154,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	local BN_H="${ROOT}$(gcc-config -L)/include/openssl/bn.h"
-	# Breaks things one some boxen, bug #13795.  The problem is that
-	# if we have a 'gcc fixed' version in $(gcc-config -L) from 0.9.6,
-	# then breaks as it was defined as 'int BN_mod(...)' and in 0.9.7 it
-	# is a define with BN_div(...) - <azarah@gentoo.org> (24 Sep 2003)
-	if [ -f "${BN_H}" ] && [ -n "$(grep '^int[[:space:]]*BN_mod(' "${BN_H}")" ]
-	then
-		rm -f "${BN_H}"
-	fi
-
 	if [[ -e ${ROOT}/usr/lib/libcrypto.so.0.9.6 ]] ; then
 		ewarn "You must re-compile all packages that are linked against"
 		ewarn "OpenSSL 0.9.6 by using revdep-rebuild from gentoolkit:"
