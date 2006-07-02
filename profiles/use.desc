@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.297 2006/06/28 03:51:27 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.298 2006/07/02 00:10:38 anarchy Exp $
 
 # Keep them sorted
 
@@ -277,6 +277,7 @@ sapdb - Adds support for SAP DB
 sasl - Adds support for the Simple Authentication and Security Layer
 scanner - Adds support for scanner hardware (e.g. build the sane frontend in kdegraphics)
 sdl - Adds support for Simple Direct Layer (media library)
+seamonkey - Adds support for the Seamonkey web-browser
 selinux - !!internal use only!! Security Enhanced Linux support, this must be set by the selinux profile or breakage will occur
 session - Adds persistent session support
 sharedext - Adds support for building shared extensions in php
