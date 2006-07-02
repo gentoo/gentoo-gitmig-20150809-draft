@@ -30,3 +30,4 @@ move sci-misc/camfr sci-physics/camfr
 move sci-misc/lightspeed sci-physics/lightspeed
 move sci-misc/mpb sci-physics/mpb
 move sci-misc/xfoil sci-physics/xfoil
+move sci-chemistry/abinit sci-physics/abinit
