@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.5.ebuild,v 1.1 2006/07/01 03:25:42 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.5.ebuild,v 1.2 2006/07/02 18:03:38 latexer Exp $
 
 inherit gnome2 mono eutils multilib autotools
 
@@ -23,6 +23,7 @@ RDEPEND=">=dev-lang/mono-1.1
 	!xine? (
 		=media-libs/gstreamer-0.10*
 		=media-libs/gst-plugins-base-0.10*
+		=media-libs/gst-plugins-good-0.10*
 		=media-plugins/gst-plugins-gnomevfs-0.10*
 		=media-plugins/gst-plugins-gconf-0.10*
 		mad? ( =media-plugins/gst-plugins-mad-0.10* )
@@ -80,6 +81,7 @@ src_unpack() {
 	sed -i "s:libdir)/dbus-1.0:datadir)/dbus-1:" \
 		${S}/data/Makefile.am || die "sed failed"
 
+	intltoolize --force --copy || die "intltoolize failed"
 	eautoreconf
 }
 
