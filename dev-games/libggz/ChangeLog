@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/libggz
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.11 2006/03/24 16:36:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.12 2006/07/02 14:55:08 pylon Exp $
+
+  02 Jul 2006; Lars Weiler <pylon@gentoo.org> libggz-0.0.9.ebuild:
+  Stable on ppc; bug #138482.
 
 *libggz-0.0.13 (24 Mar 2006)
 

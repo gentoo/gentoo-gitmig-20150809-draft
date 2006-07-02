@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ggz-client-libs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ChangeLog,v 1.9 2006/03/24 16:37:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ChangeLog,v 1.10 2006/07/02 14:55:43 pylon Exp $
+
+  02 Jul 2006; Lars Weiler <pylon@gentoo.org> ggz-client-libs-0.0.9.ebuild:
+  Stable on ppc; bug #138482.
 
 *ggz-client-libs-0.0.13 (24 Mar 2006)
 
