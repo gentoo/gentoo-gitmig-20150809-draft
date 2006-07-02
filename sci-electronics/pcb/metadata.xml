@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
+  <herd>sci-electronics</herd>
+  <longdescription>
+  pcb is free software for designing printed circuit board layouts. It has many
+  features and is capable of professional-quality output. It is available only
+  for *NIX operating systems e.g. GNU/Linux.
+  </longdescription>
 </pkgmetadata>
