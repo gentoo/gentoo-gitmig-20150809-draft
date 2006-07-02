@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/spice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/ChangeLog,v 1.5 2006/05/21 22:20:52 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/ChangeLog,v 1.6 2006/07/02 15:43:20 calchan Exp $
+
+  02 Jul 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
+  Adjusted metadata, see bug #138062.
 
   21 May 2006; Denis Dupeyron <calchan@gentoo.org> spice-3.5.5.ebuild:
   Replace -O* flags with -O1, bug #84034.

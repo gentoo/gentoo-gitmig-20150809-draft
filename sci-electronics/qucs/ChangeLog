@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/qucs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.8 2006/06/25 19:25:36 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.9 2006/07/02 15:38:23 calchan Exp $
+
+  02 Jul 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
+  Adjusted metadata, see bug #138062.
 
 *qucs-0.0.9 (14 Jun 2006)
 
