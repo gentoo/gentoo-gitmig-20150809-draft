@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vobcopy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.18 2006/06/29 03:39:58 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.19 2006/07/02 13:07:26 pylon Exp $
+
+  02 Jul 2006; Lars Weiler <pylon@gentoo.org> vobcopy-0.5.14.ebuild:
+  Stable on ppc; bug #138001.
 
   29 Jun 2006; Joshua Jackson <tsunam@gentoo.org> vobcopy-0.5.14.ebuild:
   stable x86; bug #138001
