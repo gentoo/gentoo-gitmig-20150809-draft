@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/onphp
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/ChangeLog,v 1.24 2006/06/27 11:41:18 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/ChangeLog,v 1.25 2006/07/02 16:41:30 voxus Exp $
+
+  02 Jul 2006; Konstantin Arkhipov <voxus@gentoo.org> onphp-0.4.7-r1.ebuild,
+  onphp-0.2.15.ebuild, -onphp-0.2.12.ebuild, -onphp-0.2.13.ebuild,
+  -onphp-0.2.14.ebuild, -onphp-0.4.2.ebuild, -onphp-0.4.3.ebuild,
+  -onphp-0.4.4.ebuild, -onphp-0.4.5.ebuild, -onphp-0.4.6.ebuild,
+  -onphp-0.4.7.ebuild:
+  0.2.15 and 0.4.7-r1 goes stable on x86 and amd64, wiped out old ebuilds.
 
 *onphp-0.4.7-r1 (27 Jun 2006)
 
