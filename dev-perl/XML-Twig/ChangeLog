@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-Twig
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.36 2006/05/21 18:14:18 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.37 2006/07/02 10:49:12 ian Exp $
+
+*XML-Twig-3.26 (02 Jul 2006)
+
+  02 Jul 2006; Christian Hartmann <ian@gentoo.org> +XML-Twig-3.26.ebuild:
+  Version bump; added RDEPEND
 
 *XML-Twig-3.25 (21 May 2006)
 
