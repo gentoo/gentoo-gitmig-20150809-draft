@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.20.ebuild,v 1.9 2006/06/18 17:39:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.20.ebuild,v 1.10 2006/07/02 19:40:38 vapier Exp $
 
 # Leave this empty
 MYSQL_VERSION_ID=""
@@ -9,7 +9,7 @@ MYSQL_PATCHSET_REV="1"
 
 inherit mysql
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
 src_test() {
 	cd "${S}"
