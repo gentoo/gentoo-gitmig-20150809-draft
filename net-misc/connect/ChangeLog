@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/connect
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connect/ChangeLog,v 1.1 2005/09/19 18:02:42 wschlich Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connect/ChangeLog,v 1.2 2006/07/02 20:58:09 chriswhite Exp $
+
+  02 Jul 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Japanese metadata.xml translation.  Thanks to Yoshino-san in bug #134207.
 
 *connect-1.95 (19 Sep 2005)
 
