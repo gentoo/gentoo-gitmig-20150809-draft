@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/aspectwerkz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.4 2006/02/09 03:03:42 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.5 2006/07/02 19:52:39 nichoj Exp $
+
+  02 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
+  +aspectwerkz-2.0_rc2-r1.ebuild:
+  Revision bump to support new Java system.
 
   09 Feb 2006; Joshua Nichols <nichoj@gentoo.org>
   aspectwerkz-2.0_rc2.ebuild:
