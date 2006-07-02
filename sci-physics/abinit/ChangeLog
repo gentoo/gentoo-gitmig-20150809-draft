@@ -1,0 +1,21 @@
+# ChangeLog for sci-chemistry/abinit
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/ChangeLog,v 1.1 2006/07/02 23:26:18 metalgod Exp $
+
+  02 Jul 2006; Luis Medinas <metalgod@gentoo.org>
+  +files/fix-64bit-detection.patch,
+  +files/5.1.3-fix-blas-lapack-check.patch,
+  +files/change-default-directories.patch, +files/fix-test-tarball.patch,
+  +metadata.xml, +abinit-5.1.3.ebuild:
+  Moved from sci-chemistry/abinit to sci-physics/abinit.
+
+*abinit-5.1.3 (04 Jun 2006)
+
+  04 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/fix-64bit-detection.patch,
+  +files/5.1.3-fix-blas-lapack-check.patch,
+  +files/change-default-directories.patch, +files/fix-test-tarball.patch,
+  +metadata.xml, +abinit-5.1.3.ebuild:
+  New package for ab initio calculations using density functional theory.
+  Requires gcc 4.1 to build, which is why I haven't added it until now.
+
