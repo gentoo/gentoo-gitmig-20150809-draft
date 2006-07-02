@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-contrib
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.9 2005/12/18 00:13:36 betelgeuse Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.10 2006/07/02 04:48:31 nichoj Exp $
+
+  02 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
+  +ant-contrib-1.0_beta2-r1.ebuild:
+  Revision bump to support new Java system. Added source use flag.
 
   18 Dec 2005; Petteri Räty <betelgeuse@gentoo.org>
   ant-contrib-1.0_beta2.ebuild:
