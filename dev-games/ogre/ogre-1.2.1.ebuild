@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.2.1.ebuild,v 1.2 2006/07/02 05:29:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.2.1.ebuild,v 1.3 2006/07/02 06:10:14 vapier Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/zziplib-0.13.36
 	>=media-libs/freetype-2.1.10
 	threads? ( >=dev-libs/boost-1.33.0 )
 	cegui? ( >=dev-games/cegui-0.4.0 )
-	devil?	( >=media-libs/devil-1.6.7 )
+	devil? ( >=media-libs/devil-1.6.7 )
 	openexr? ( >=media-libs/openexr-1.2 )
 	sdl? ( >=media-libs/libsdl-1.2.8 )
 	virtual/opengl
@@ -36,6 +36,14 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-autoconf.patch
 	./bootstrap || die "bootstrap failed"
+
+	if use examples ; then
+		cp -r Samples install-examples || die
+		find install-examples \
+			'(' -name 'Makefile*' -o -name CVS -o -name obj -o \
+			    -name bin -o -name '*.cbp' -o -name '*.vcproj*' ')' \
+			-print0 | xargs -0 rm -rf
+	fi
 }
 
 src_compile() {
@@ -65,7 +73,7 @@ src_install() {
 	if use examples ; then
 		dohtml -r Docs/* Docs/Tutorials/*
 		insinto /usr/share/doc/${PF}/Samples
-		doins -r Samples/*
+		doins -r install-examples/*
 	fi
 	dodoc AUTHORS BUGS LINUX.DEV README Docs/README.linux
 	dohtml Docs/*.html
