@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvd9to5
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvd9to5/ChangeLog,v 1.6 2006/06/30 03:41:27 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvd9to5/ChangeLog,v 1.7 2006/07/02 13:30:42 pylon Exp $
+
+  02 Jul 2006; Lars Weiler <pylon@gentoo.org> dvd9to5-0.1.7.ebuild:
+  Stable on ppc; bug #138003.
 
   30 Jun 2006; Joshua Jackson <tsunam@gentoo.org> dvd9to5-0.1.7.ebuild:
   stable x86; bug #138003
