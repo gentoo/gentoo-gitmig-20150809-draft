@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bo2k_plugins
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bo2k_plugins/ChangeLog,v 1.4 2004/06/24 23:37:23 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bo2k_plugins/ChangeLog,v 1.5 2006/07/02 20:31:08 chriswhite Exp $
+
+  02 Jul 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Japanese metadata.xml translation.  Thanks to Yoshino san in bug #133893.
 
 *bo2k_plugins-0.2.1 (11 Sep 2003)
     11 Sep 2003; Thomas Raschbacher <lordvan@gentoo.org>: bo2k_plugins-0.2.1, ChangeLog, metadata.xml:
