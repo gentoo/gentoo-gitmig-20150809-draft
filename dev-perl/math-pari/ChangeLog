@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/math-pari
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.25 2006/06/29 23:23:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.26 2006/07/02 21:39:58 mcummings Exp $
+
+  02 Jul 2006; Michael Cummings <mcummings@gentoo.org>
+  math-pari-2.010704.ebuild:
+  Marking amd64 stable
 
   29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   math-pari-2.010704.ebuild:
