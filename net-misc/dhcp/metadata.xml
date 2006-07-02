@@ -7,4 +7,5 @@
 		<name>Roy Marples</name>
 	</maintainer>
 	<longdescription>The ISC DHCP client/server package.</longdescription>
+	<longdescription lang="ja">ISC DHCP クライアント/サーバ・パッケージです。</longdescription>
 </pkgmetadata>
