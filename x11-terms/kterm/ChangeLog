@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/kterm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.20 2006/03/29 23:59:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.21 2006/07/02 09:38:21 usata Exp $
+
+  02 Jul 2006; Mamoru KOMACHI <usata@gentoo.org> kterm-6.2.0-r4.ebuild:
+  Marked stable for x86.
 
   29 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> kterm-6.2.0-r4.ebuild:
   Fix missing dependency over gccmakedep and imake (thanks to Benigno B.

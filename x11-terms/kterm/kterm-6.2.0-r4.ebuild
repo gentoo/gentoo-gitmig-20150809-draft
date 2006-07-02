@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r4.ebuild,v 1.2 2006/03/29 23:59:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r4.ebuild,v 1.3 2006/07/02 09:38:21 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.x.org/contrib/applications/${P}.tar.gz
 HOMEPAGE="http://www.asahi-net.or.jp/~hc3j-tkg/kterm/"
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="-alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="-alpha ~amd64 ~ppc ~sparc x86"
 
 RDEPEND="app-text/rman
 	sys-libs/ncurses
