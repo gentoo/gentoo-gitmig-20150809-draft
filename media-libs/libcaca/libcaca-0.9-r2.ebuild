@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9-r2.ebuild,v 1.8 2006/06/27 08:05:29 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9-r2.ebuild,v 1.9 2006/07/02 20:19:49 vapier Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://sam.zoy.org/projects/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="ncurses slang doc imlib X"
 
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
