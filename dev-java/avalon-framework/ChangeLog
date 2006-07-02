@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-framework
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.8 2005/07/09 15:58:54 axxo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.9 2006/07/02 20:14:51 nichoj Exp $
+
+  02 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
+  +avalon-framework-4.1.5-r1.ebuild, +avalon-framework-4.2.0-r1.ebuild:
+  Revision bumps to support new Java system.
 
   09 Jul 2005; Thomas Matthijs <axxo@gentoo.org>
   avalon-framework-4.1.5.ebuild, avalon-framework-4.2.0.ebuild:

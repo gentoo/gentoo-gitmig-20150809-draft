@@ -1,17 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f401af1c9ebbad50be05c6df0228022c avalon-framework-4.1.5.ebuild 1281
-MD5 fc7d5d8ebceea202dfea400e9de9a0a8 avalon-framework-4.2.0.ebuild 1286
-MD5 67379ec79d85b07ea811769b54717ea5 ChangeLog 1492
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+AUX build.xml 1838 RMD160 a8ab0340a5999e8988c295f2317e66198e0d9284 SHA1 d4d3a60b53e78faf36b0c0c13ea32262eca85e79 SHA256 336dbf8253d921987528416da50b557c786313b2c0fd2454b2b25afb6d5a020d
 MD5 3c945053b5c79d286570b89c81418996 files/build.xml 1838
-MD5 5807e384e64fab8fd562ba9d3e171916 files/digest-avalon-framework-4.1.5 77
-MD5 56cf84c7d1a8b0f6e856ab1390bae920 files/digest-avalon-framework-4.2.0 77
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCz/RZ/rLF9B432nYRAsWwAJ42bJQNqfJhUHYSgT8BoVZtZcT6pwCfeBq0
-UadAno/jOwuBZJCJpEOGBp8=
-=gvO3
------END PGP SIGNATURE-----
+RMD160 a8ab0340a5999e8988c295f2317e66198e0d9284 files/build.xml 1838
+SHA256 336dbf8253d921987528416da50b557c786313b2c0fd2454b2b25afb6d5a020d files/build.xml 1838
+DIST avalon-framework-4.1.5.src.tar.gz 99475 RMD160 2399c240446694d99fbf39c43279c00decd55342 SHA1 932ea06702beee4124eaa7103b77ac949dc81f83 SHA256 29ec054ff5da5dede98e90156fb2f3037c617a04f9fa2753ab034718031e058d
+DIST avalon-framework-4.2.0-src.tar.gz 68887 RMD160 03b49287a05c95fabe70aaeacfc2103e4cfc8436 SHA1 0a9dc2b80c4cc6365134a8f3b06f1d1c84ddd8c4 SHA256 16374c0a1f67e21c5d44030ba2a01df614775a9c3ec3a387632c3c6e592d8e7d
+EBUILD avalon-framework-4.1.5-r1.ebuild 1142 RMD160 7729137f785e29238bd3949e32b0fae5d1a6d182 SHA1 5ddfc0125b7fc33a0eb86ee03800205c99393720 SHA256 ae80a88238a65d0624d84cee0286aee0bdab3caaf888f1ee43e2524db239975d
+MD5 c7367dd42da49e81678d11770e624edf avalon-framework-4.1.5-r1.ebuild 1142
+RMD160 7729137f785e29238bd3949e32b0fae5d1a6d182 avalon-framework-4.1.5-r1.ebuild 1142
+SHA256 ae80a88238a65d0624d84cee0286aee0bdab3caaf888f1ee43e2524db239975d avalon-framework-4.1.5-r1.ebuild 1142
+EBUILD avalon-framework-4.1.5.ebuild 1281 RMD160 0a3b9e0a8d49bc8092c075bfab47baf5936099f9 SHA1 0e473f77f539de698ad53d5bf5e3f4fd6cf8aa1e SHA256 6f5c314bee20e65b3038c41f4a2ca6471374907fcd85cd6b90c79259f3322d7f
+MD5 f401af1c9ebbad50be05c6df0228022c avalon-framework-4.1.5.ebuild 1281
+RMD160 0a3b9e0a8d49bc8092c075bfab47baf5936099f9 avalon-framework-4.1.5.ebuild 1281
+SHA256 6f5c314bee20e65b3038c41f4a2ca6471374907fcd85cd6b90c79259f3322d7f avalon-framework-4.1.5.ebuild 1281
+EBUILD avalon-framework-4.2.0-r1.ebuild 1165 RMD160 05db6df54a73a9f52184174d78f70e043fe61979 SHA1 5726537f595b652382bdc50b5854d0755bace224 SHA256 a175e66a4aae3fa132fa36ede63a2fac343fd2100aba153c2f6cbcaeaadb2ef7
+MD5 27934655a0b6e4292238fcb09881007c avalon-framework-4.2.0-r1.ebuild 1165
+RMD160 05db6df54a73a9f52184174d78f70e043fe61979 avalon-framework-4.2.0-r1.ebuild 1165
+SHA256 a175e66a4aae3fa132fa36ede63a2fac343fd2100aba153c2f6cbcaeaadb2ef7 avalon-framework-4.2.0-r1.ebuild 1165
+EBUILD avalon-framework-4.2.0.ebuild 1286 RMD160 ce048ff7206fd6d6fbb3f99a79989af59ade6efb SHA1 20db9feabb6781302546980ab3a5d30b1f2e6d1d SHA256 b1b3f9b97b6c68ac7e2c27a71f8aab2ff77ab87cbf85ce9fc8edcec7c98144b7
+MD5 fc7d5d8ebceea202dfea400e9de9a0a8 avalon-framework-4.2.0.ebuild 1286
+RMD160 ce048ff7206fd6d6fbb3f99a79989af59ade6efb avalon-framework-4.2.0.ebuild 1286
+SHA256 b1b3f9b97b6c68ac7e2c27a71f8aab2ff77ab87cbf85ce9fc8edcec7c98144b7 avalon-framework-4.2.0.ebuild 1286
+MISC ChangeLog 1662 RMD160 9b5fb418253052df7db1d9e8f433c10a097b6086 SHA1 3d1ec38dbce620fe575e9ee48f87081af5c0e540 SHA256 407d79c32e272009daba6279f7bd80a55493fb23ccfdd0b8eda606e6e2ede3f7
+MD5 c29c7271ff57c3be9767a58fa2541586 ChangeLog 1662
+RMD160 9b5fb418253052df7db1d9e8f433c10a097b6086 ChangeLog 1662
+SHA256 407d79c32e272009daba6279f7bd80a55493fb23ccfdd0b8eda606e6e2ede3f7 ChangeLog 1662
+MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
+MD5 0d3f1a097d4de682e611c358063fca99 files/digest-avalon-framework-4.1.5 277
+RMD160 e78cce816adc88b3c82329f6028dfbe1edf348a2 files/digest-avalon-framework-4.1.5 277
+SHA256 f75328db850ee2c4d90003ffff5de39572c4b8d8a363e9357fd56f15d25b9fa6 files/digest-avalon-framework-4.1.5 277
+MD5 0d3f1a097d4de682e611c358063fca99 files/digest-avalon-framework-4.1.5-r1 277
+RMD160 e78cce816adc88b3c82329f6028dfbe1edf348a2 files/digest-avalon-framework-4.1.5-r1 277
+SHA256 f75328db850ee2c4d90003ffff5de39572c4b8d8a363e9357fd56f15d25b9fa6 files/digest-avalon-framework-4.1.5-r1 277
+MD5 61835ed35499ac399b002b2d83f7c9b3 files/digest-avalon-framework-4.2.0 277
+RMD160 1a2136f3e60ae14d2a3bd31b243dd8b2bbcfd393 files/digest-avalon-framework-4.2.0 277
+SHA256 3d2d738b596fd368ea6fb1c4cdbf972e24dbd37178bb8223ea1599bef653df3f files/digest-avalon-framework-4.2.0 277
+MD5 61835ed35499ac399b002b2d83f7c9b3 files/digest-avalon-framework-4.2.0-r1 277
+RMD160 1a2136f3e60ae14d2a3bd31b243dd8b2bbcfd393 files/digest-avalon-framework-4.2.0-r1 277
+SHA256 3d2d738b596fd368ea6fb1c4cdbf972e24dbd37178bb8223ea1599bef653df3f files/digest-avalon-framework-4.2.0-r1 277
