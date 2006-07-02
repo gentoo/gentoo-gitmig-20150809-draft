@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.187 2006/06/28 07:57:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.188 2006/07/02 22:19:37 genstef Exp $
+
+  02 Jul 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.2.1-r2.ebuild:
+  Add ppds useflag to drag in the linuxprinting.org ppds as suggested by
+  spyderous
 
   28 Jun 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.2.1-r2.ebuild:
   use pamd_mimic_system again thanks to robbat2 in bug 138315
