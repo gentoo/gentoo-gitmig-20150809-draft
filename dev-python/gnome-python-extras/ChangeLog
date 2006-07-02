@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.31 2006/07/02 00:14:36 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.32 2006/07/02 16:52:39 allanonjl Exp $
+
+*gnome-python-extras-2.12.1-r1 (02 Jul 2006)
+
+  02 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -gnome-python-extras-2.10.2.ebuild, +gnome-python-extras-2.12.1-r1.ebuild,
+  gnome-python-extras-2.14.0-r1.ebuild:
+  clean up logic since seamonkey flag is masked on ia64, sparc, and ppc64. add
+  stable revision for 2.12.1 to remove mozilla support and add seamonkey
+  support. remove old revision.
 
 *gnome-python-extras-2.14.0-r1 (02 Jul 2006)
 
