@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-2.4.0.ebuild,v 1.4 2006/06/28 02:34:03 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-2.4.0.ebuild,v 1.5 2006/07/02 20:17:53 vapier Exp $
 
 inherit eutils distutils versionator
 
@@ -12,7 +12,7 @@ SRC_URI="http://tmrc.mit.edu/mirror/twisted/Twisted/$(get_version_component_rang
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~ppc ppc64 s390 sh ~sparc ~x86"
 IUSE="gtk serial crypt"
 
 DEPEND=">=dev-lang/python-2.3
