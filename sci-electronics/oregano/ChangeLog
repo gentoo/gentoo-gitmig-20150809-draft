@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.18 2006/02/20 18:03:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.19 2006/07/02 15:13:42 calchan Exp $
+
+  02 Jul 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
+  Adjusted metadata, see bug #138062.
 
   20 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   -oregano-0.40.3.ebuild:
