@@ -86,6 +86,7 @@ portaudio
 # mask mozilla/firefox (bug #108020)
 mozilla
 firefox
+seamonkey
 
 # 2006/03/20 - Donnie Berkholz <spyderous@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
