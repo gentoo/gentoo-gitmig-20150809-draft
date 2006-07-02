@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.64 2006/04/21 00:59:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.65 2006/07/02 06:52:43 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -79,6 +79,9 @@ case ${EURI_STATE:-${ECVS_STATE}} in
 esac
 
 enlightenment_warning_msg() {
+	if [[ -n ${E17_ECVS_SERVER} ]] ; then
+		einfo "Using user cvs server: ${E17_ECVS_SERVER}"
+	fi
 	if [[ ${ECVS_STATE} == "snap" ]] ; then
 		ewarn "Please do not contact the E team about bugs in Gentoo."
 		ewarn "Only contact vapier@gentoo.org via e-mail or bugzilla."
