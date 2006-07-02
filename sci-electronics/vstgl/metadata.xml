@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
+  <herd>sci-electronics</herd>
+  <longdescription>
+  This application is intended to improve the overall design flow for people who
+  are often working with Signal Transition Graphs (STG). From our own experience
+  designing control circuits using the STG model, we recognized the need for a
+  tool that could streamline the path from initial idea to final circuit
+  specification. Usually people working in this field also depend heavily on
+  Petrify.
+  </longdescription>
 </pkgmetadata>
