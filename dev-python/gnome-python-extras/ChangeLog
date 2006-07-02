@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.30 2006/06/06 22:35:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.31 2006/07/02 00:14:36 allanonjl Exp $
+
+*gnome-python-extras-2.14.0-r1 (02 Jul 2006)
+
+  02 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
+  +gnome-python-extras-2.14.0-r1.ebuild:
+  Add initial version without mozilla support, but with seamonkey support. See
+  comments in ebuild for explanation of logic. Includes configure fix to add
+  seamonkey support.
 
   06 Jun 2006; Carsten Lohrke <carlo@gentoo.org>
   gnome-python-extras-2.12.1.ebuild, gnome-python-extras-2.14.0.ebuild:

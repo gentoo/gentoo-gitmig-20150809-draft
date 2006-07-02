@@ -2,10 +2,10 @@ AUX gnome-python-extras-nogda.patch 469 RMD160 85825fb94a49e72f5110343753538bd10
 MD5 7b23c53f1b63e82632bff46795e87506 files/gnome-python-extras-nogda.patch 469
 RMD160 85825fb94a49e72f5110343753538bd10363aa4a files/gnome-python-extras-nogda.patch 469
 SHA256 f65484fa95ba2ccfb2f17714a6a73328c4efbf0fea91255785413ccd12cdff40 files/gnome-python-extras-nogda.patch 469
-DIST gnome-python-extras-2.10.2.tar.bz2 351085
-DIST gnome-python-extras-2.12.0.tar.bz2 473850 RMD160 26b48bcfd37b6759c79f238aac27e83686edf13d SHA256 32e978cd063940f34299a9f199d46c1e2bfe9d358d19d70ef25494713ae5e3ae
-DIST gnome-python-extras-2.12.1.tar.bz2 476483
-DIST gnome-python-extras-2.14.0.tar.bz2 347462
+DIST gnome-python-extras-2.10.2.tar.bz2 351085 RMD160 991d8ce3f3766d38a6098b33393b1b6f4f37b831 SHA1 c554345541c4d56533ff622576cc8c34d584ccae SHA256 1559c6f60d0a61dfb349e81e4948507d48ee731f941cc853f83eb1e795caab1e
+DIST gnome-python-extras-2.12.0.tar.bz2 473850 RMD160 26b48bcfd37b6759c79f238aac27e83686edf13d SHA1 4b20dfbdedf82f3e6f025e63783ac5b35e4cbd83 SHA256 32e978cd063940f34299a9f199d46c1e2bfe9d358d19d70ef25494713ae5e3ae
+DIST gnome-python-extras-2.12.1.tar.bz2 476483 RMD160 278bf74c35644ea27689dddbd89d6c0cd8ca7706 SHA1 4cb49f8f86f6201d71dcbe7e3b54a9449ae26f35 SHA256 d1f93adf096bd739cba988d9cdea8978faa97ac928bad26352e62830e8806ab5
+DIST gnome-python-extras-2.14.0.tar.bz2 347462 RMD160 bc8652aa285ca5af2b57fae97907e7dd06c11e66 SHA1 3d10804511870d6db7211ad1b16720bf7f22991c SHA256 72108b6327b1894cc302b423aa18c0aad14d066c3befad403c7247148745aef3
 EBUILD gnome-python-extras-2.10.2.ebuild 1678 RMD160 8bbb4d5447c70f2e21202e15d9107a97734ae2ff SHA1 5313e1b79b0f405ea9d7fdbc29cd248ec6be4973 SHA256 e11ec266edb003f69d6146c0d6a030961033d87fe8dc0aca72d7947bb4eb45c3
 MD5 390328416983a72b9d3241bcc005879f gnome-python-extras-2.10.2.ebuild 1678
 RMD160 8bbb4d5447c70f2e21202e15d9107a97734ae2ff gnome-python-extras-2.10.2.ebuild 1678
@@ -18,27 +18,34 @@ EBUILD gnome-python-extras-2.12.1.ebuild 1759 RMD160 50b3824723d5a82a2b2b8dc5491
 MD5 93cade50680ae68c7080ab80ca5c31aa gnome-python-extras-2.12.1.ebuild 1759
 RMD160 50b3824723d5a82a2b2b8dc54912c42409dc5176 gnome-python-extras-2.12.1.ebuild 1759
 SHA256 4e2f20c6cdb6bdb173f94ee9ec4beee142f7dbe562024f825a8b352e966b02e9 gnome-python-extras-2.12.1.ebuild 1759
+EBUILD gnome-python-extras-2.14.0-r1.ebuild 1988 RMD160 fa011b3b71b91b5c9841b156ff842f2235206e92 SHA1 8f9d30ce41038a7a279c47b1a9e8c84dddea4fd4 SHA256 75fa87197c02af96c92e3e15510c7f0c14c0c4a0b786f51eb0481cca2e313852
+MD5 ffaf326caa92e1f682743e2784812a08 gnome-python-extras-2.14.0-r1.ebuild 1988
+RMD160 fa011b3b71b91b5c9841b156ff842f2235206e92 gnome-python-extras-2.14.0-r1.ebuild 1988
+SHA256 75fa87197c02af96c92e3e15510c7f0c14c0c4a0b786f51eb0481cca2e313852 gnome-python-extras-2.14.0-r1.ebuild 1988
 EBUILD gnome-python-extras-2.14.0.ebuild 1502 RMD160 096bf92d445bb2721365c40e85e169bbd742450d SHA1 1d6c1e611739b0526ce6982ac40f6c908285d577 SHA256 4496e087d3f54b58250234715680c7defd08bd48c2db6bff030423300d1e5bdc
 MD5 d3b3f2e7d19410adcb319614d0ec7cc8 gnome-python-extras-2.14.0.ebuild 1502
 RMD160 096bf92d445bb2721365c40e85e169bbd742450d gnome-python-extras-2.14.0.ebuild 1502
 SHA256 4496e087d3f54b58250234715680c7defd08bd48c2db6bff030423300d1e5bdc gnome-python-extras-2.14.0.ebuild 1502
-MISC ChangeLog 4509 RMD160 88546baa5cd6888a81c7d244fc68c87e5231264a SHA1 6dd467e00a98db6141e21d10d4e3955803eb8636 SHA256 26317a917eb8bc0a8093fcd3faeea9b2584d7a749c04334c3e2db16d1cbb4a30
-MD5 08eef86767cf650f1e9722bcd617cc84 ChangeLog 4509
-RMD160 88546baa5cd6888a81c7d244fc68c87e5231264a ChangeLog 4509
-SHA256 26317a917eb8bc0a8093fcd3faeea9b2584d7a749c04334c3e2db16d1cbb4a30 ChangeLog 4509
+MISC ChangeLog 4834 RMD160 c6c47ec8851a32e85324bf09f9da92c364d9056d SHA1 5e8c4b8b932493d95aa6a287141e367fd209107a SHA256 83f9ab4b3094ec39ef9760794eab4c39157d3373503d69e6a73612ea265542c0
+MD5 c9c1dae0609e483bb671f671a7483067 ChangeLog 4834
+RMD160 c6c47ec8851a32e85324bf09f9da92c364d9056d ChangeLog 4834
+SHA256 83f9ab4b3094ec39ef9760794eab4c39157d3373503d69e6a73612ea265542c0 ChangeLog 4834
 MISC metadata.xml 243 RMD160 744a2788cbe20380a4d1652d0de573cddd0aa35f SHA1 e899eb0d52086c912d1987f339d00c60046a889c SHA256 1f38898a4be9f039c909d729aca8dbbe5c5c6a8340a6448ab3c4c69a7ff4ccc6
 MD5 7815efa8e3c1eece4b748785c644df85 metadata.xml 243
 RMD160 744a2788cbe20380a4d1652d0de573cddd0aa35f metadata.xml 243
 SHA256 1f38898a4be9f039c909d729aca8dbbe5c5c6a8340a6448ab3c4c69a7ff4ccc6 metadata.xml 243
-MD5 dee99b75f4b766a4a588ddb6b8a086c0 files/digest-gnome-python-extras-2.10.2 79
-RMD160 f87879a97dbea64c4dd6f100fdcd78d4050423f0 files/digest-gnome-python-extras-2.10.2 79
-SHA256 5e1fad2231e98098eb52741a5231a3847b85fd824da90cfaa75d4af31a47e3be files/digest-gnome-python-extras-2.10.2 79
+MD5 43114103b7a47806911be8747f63ad91 files/digest-gnome-python-extras-2.10.2 283
+RMD160 54752b205389be24d7b2d4e4eec414b4f0621c3f files/digest-gnome-python-extras-2.10.2 283
+SHA256 dfea469f9eb8abfd743220e6a8f8ed30fd96fe2cb51ae1568222267379f34129 files/digest-gnome-python-extras-2.10.2 283
 MD5 6c58944e47af3b3b32364749b4c97dbe files/digest-gnome-python-extras-2.12.0 283
 RMD160 ce4c5ce5de4c1460a369f54acffe2034d39eb8af files/digest-gnome-python-extras-2.12.0 283
 SHA256 c6908c45b95ca4d1dd00be9960292bb6c2f35442bf4f06cb8e4b3529472df502 files/digest-gnome-python-extras-2.12.0 283
-MD5 f6b648dacaa5c2cfe66a073f44957bef files/digest-gnome-python-extras-2.12.1 79
-RMD160 2ba41728ea8d243ffa374acd320749f92490db7c files/digest-gnome-python-extras-2.12.1 79
-SHA256 7b74d80764f58dda02df554365fbfb5eec527e8495e3f6e900d65d71af935236 files/digest-gnome-python-extras-2.12.1 79
-MD5 8c63d696e4c3085ecfb7a1069e141174 files/digest-gnome-python-extras-2.14.0 79
-RMD160 bc26b515eceea232c35ff9c222c8288a74eb634d files/digest-gnome-python-extras-2.14.0 79
-SHA256 f1288cd5f3b0cb669fda5d8e69fbeb8193f3f28447b4950fbd51d5f22b7bb9b4 files/digest-gnome-python-extras-2.14.0 79
+MD5 40b537dd27545436b5cb2fb1b57ede9e files/digest-gnome-python-extras-2.12.1 283
+RMD160 250a78abcef50a40bedee77f6b7de441bd50364b files/digest-gnome-python-extras-2.12.1 283
+SHA256 3f912ceea28704fc9fc42a5c8b5498fe6943cf178f5b83ac14012a81e905c8ee files/digest-gnome-python-extras-2.12.1 283
+MD5 91c4075c780ec4dcc51ca34f66d8f26c files/digest-gnome-python-extras-2.14.0 283
+RMD160 1b5bdab12ebca66d15962b30c0b778d7f6057592 files/digest-gnome-python-extras-2.14.0 283
+SHA256 f0cd0d420cc101e7d46f2986918b3bee0d38b9f83c9649d4dd31936f23053d5c files/digest-gnome-python-extras-2.14.0 283
+MD5 91c4075c780ec4dcc51ca34f66d8f26c files/digest-gnome-python-extras-2.14.0-r1 283
+RMD160 1b5bdab12ebca66d15962b30c0b778d7f6057592 files/digest-gnome-python-extras-2.14.0-r1 283
+SHA256 f0cd0d420cc101e7d46f2986918b3bee0d38b9f83c9649d4dd31936f23053d5c files/digest-gnome-python-extras-2.14.0-r1 283
