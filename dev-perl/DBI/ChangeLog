@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBI
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.61 2006/06/20 06:49:42 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.62 2006/07/02 13:20:43 mcummings Exp $
+
+  02 Jul 2006; Michael Cummings <mcummings@gentoo.org> DBI-1.50.ebuild:
+  Marking stable amd64
 
 *DBI-1.51 (20 Jun 2006)
 
