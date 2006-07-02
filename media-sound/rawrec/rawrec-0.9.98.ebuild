@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/rawrec-0.9.98.ebuild,v 1.10 2006/03/07 15:39:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/rawrec-0.9.98.ebuild,v 1.11 2006/07/02 19:08:59 pylon Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/rawrec/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 
 S=${S}/src
 
