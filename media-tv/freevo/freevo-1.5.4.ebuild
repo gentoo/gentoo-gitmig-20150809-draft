@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.5.4.ebuild,v 1.3 2006/04/08 00:14:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.5.4.ebuild,v 1.4 2006/07/02 23:21:21 pylon Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ppc ~x86"
 
 DEPEND=">=dev-python/pygame-1.5.6
 	>=dev-python/imaging-1.1.3
