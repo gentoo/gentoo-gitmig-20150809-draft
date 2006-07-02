@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/check-0.9.3-r1.ebuild,v 1.3 2006/06/22 20:20:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/check-0.9.3-r1.ebuild,v 1.4 2006/07/02 19:58:28 vapier Exp $
 
 inherit autotools eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 m68k ~ppc ~ppc-macos ~ppc64 s390 sh ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
