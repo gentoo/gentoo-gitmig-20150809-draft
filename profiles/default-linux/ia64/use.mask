@@ -93,3 +93,7 @@ video_cards_newport
 
 # dev-db/firebird-1.5.x entirely lacks ia64 support
 firebird
+
+# 01 july 2006 - Gustavo Zacarias <gustavoz@gentoo.org>
+# Seamonkey isn't keyworded for ia64, see bug #137198
+seamonkey
