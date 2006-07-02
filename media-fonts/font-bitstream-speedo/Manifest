@@ -1,4 +1,16 @@
-MD5 879f5b6594daaf45e863cd9858eb2ed8 ChangeLog 1970
-MD5 f3f1e938e50463b9b9cfbda55ea6d80c files/digest-font-bitstream-speedo-1.0.0 80
-MD5 3adfe718c4d13eaa569d7d7f79e0cdb1 font-bitstream-speedo-1.0.0.ebuild 492
+DIST font-bitstream-speedo-1.0.0.tar.bz2 337770
+EBUILD font-bitstream-speedo-1.0.0.ebuild 491 RMD160 712625117fd872392c648db36ef6fc13801cb05f SHA1 9671513951549fa1abffdb30f020160220e5cb67 SHA256 d9b333d4a3a4c7ef9fda35b398519826a09d32dae72e61f60fbbf57a66268603
+MD5 468d7f4506720ad21835682640919447 font-bitstream-speedo-1.0.0.ebuild 491
+RMD160 712625117fd872392c648db36ef6fc13801cb05f font-bitstream-speedo-1.0.0.ebuild 491
+SHA256 d9b333d4a3a4c7ef9fda35b398519826a09d32dae72e61f60fbbf57a66268603 font-bitstream-speedo-1.0.0.ebuild 491
+MISC ChangeLog 2076 RMD160 58669f86cec40edb5ffb4dce8e06476461cf07fc SHA1 ee3b2d0b5225c227b5104c7580f01a7f948a106a SHA256 01d6913f350c8515f346a95f0fe8e5292cfa83cd87a857ef6595c62617bbb9ff
+MD5 8aeaa802f8bcf8a001e1bceebb96f034 ChangeLog 2076
+RMD160 58669f86cec40edb5ffb4dce8e06476461cf07fc ChangeLog 2076
+SHA256 01d6913f350c8515f346a95f0fe8e5292cfa83cd87a857ef6595c62617bbb9ff ChangeLog 2076
+MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
+SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
+MD5 f3f1e938e50463b9b9cfbda55ea6d80c files/digest-font-bitstream-speedo-1.0.0 80
+RMD160 3f63260fa4646535544f11aed27ca48ec2c2f8e9 files/digest-font-bitstream-speedo-1.0.0 80
+SHA256 02c4ac1f3d997b4cb007b14b6c685f4eb1aca2619eb6fdfffef3abb6e8938ca6 files/digest-font-bitstream-speedo-1.0.0 80
