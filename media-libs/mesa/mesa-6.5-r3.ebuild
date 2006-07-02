@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.5 2006/06/30 23:42:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.6 2006/07/02 18:45:39 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -186,6 +186,7 @@ src_unpack() {
 		einfo "Deactivating assembly code for hardened build"
 		echo "ASM_FLAGS =" >> ${HOSTCONF}
 		echo "ASM_SOURCES =" >> ${HOSTCONF}
+		echo "ASM_API =" >> ${HOSTCONF}
 	fi
 
 	if use sparc; then
