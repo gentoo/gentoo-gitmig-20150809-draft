@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/File-Spec
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.22 2006/06/24 16:37:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.23 2006/07/02 03:15:46 mcummings Exp $
+
+  02 Jul 2006; Michael Cummings <mcummings@gentoo.org>
+  File-Spec-3.12.ebuild, File-Spec-3.15.ebuild, File-Spec-3.18.ebuild:
+  Bug 137098 - deping ExtUtils-CBuilder
 
 *File-Spec-3.18 (24 Jun 2006)
 
