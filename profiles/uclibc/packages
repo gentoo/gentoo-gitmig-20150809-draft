@@ -13,13 +13,8 @@ app-misc/pax-utils
 # added by readline
 -*sys-libs/readline
 
-#
-# busybox/uclibc w/o shadow support
-#-*sys-apps/shadow
-#-*sys-libs/cracklib
-# 
-
-#no idea why this is in base system
+# glib-2.x requires working locale/iconv which
+# isn't available atm in uclibc
 <dev-libs/glib-2.5
 
 -*sys-apps/hdparm
