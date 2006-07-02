@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/netcat6-0.5.ebuild,v 1.3 2005/10/18 02:02:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/netcat6-0.5.ebuild,v 1.4 2006/07/02 20:22:50 vapier Exp $
 
 DESCRIPTION="netcat clone with better IPv6 support, improved code, etc..."
 HOMEPAGE="http://netcat6.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="http://ftp.deepspace6.net/pub/sources/nc6/nc6-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~m68k ~ppc ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 m68k ~ppc s390 sh ~sparc x86"
 IUSE="ipv6 nls"
 
 DEPEND=""
