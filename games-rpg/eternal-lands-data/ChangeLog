@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/eternal-lands-data
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/ChangeLog,v 1.4 2006/05/21 11:29:20 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/ChangeLog,v 1.5 2006/07/02 12:52:11 uberlord Exp $
+
+  02 Jul 2006; Roy Marples <uberlord@gentoo.org>
+  eternal-lands-data-1.2.0_p1-r3.ebuild:
+  Make files group writeable before install.
 
 *eternal-lands-data-1.2.0_p1-r3 (21 May 2006)
 
