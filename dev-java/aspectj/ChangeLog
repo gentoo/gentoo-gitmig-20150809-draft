@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/aspectj
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.16 2006/01/16 04:47:42 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.17 2006/07/02 06:51:52 nichoj Exp $
+
+  02 Jul 2006; Joshua Nichols <nichoj@gentoo.org> +aspectj-1.2-r2.ebuild:
+  Revision bump to support new Java system.
 
   16 Jan 2006; Mark Loeser <halcy0n@gentoo.org> aspectj-1.2-r1.ebuild:
   Whitespace fix
