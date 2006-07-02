@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-ProgressBar
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/ChangeLog,v 1.22 2006/06/06 00:38:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/ChangeLog,v 1.23 2006/07/02 17:07:24 mcummings Exp $
+
+  02 Jul 2006; Michael Cummings <mcummings@gentoo.org>
+  Term-ProgressBar-2.09.ebuild:
+  Marking stable amd64
 
   06 Jun 2006; <mcummings@gentoo.org> Term-ProgressBar-2.06-r1.ebuild,
   Term-ProgressBar-2.09.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-perl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.51 2006/06/23 18:12:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.52 2006/07/02 17:09:03 mcummings Exp $
+
+  02 Jul 2006; Michael Cummings <mcummings@gentoo.org>
+  gtk2-perl-1.102.ebuild:
+  Marking stable amd64
 
 *gtk2-perl-1.122 (23 Jun 2006)
 
