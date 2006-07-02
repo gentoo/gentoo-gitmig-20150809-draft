@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/asfrecorder-1.1.ebuild,v 1.11 2005/10/29 11:16:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/asfrecorder-1.1.ebuild,v 1.12 2006/07/02 13:53:35 pylon Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}.zip"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~ppc ~ppc-macos x86"
+KEYWORDS="ppc ~ppc-macos x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
