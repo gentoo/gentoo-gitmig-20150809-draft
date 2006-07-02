@@ -57,9 +57,9 @@ MD5 c3b64945a68ae0b3219543fffb423863 files/digest-portage-utils-0.1.18 262
 RMD160 ec163ae3dff11f4030ea5582ec0167f2599bf8c8 files/digest-portage-utils-0.1.18 262
 SHA256 6ad7bc7dcd78894b29eaa6860955f301234f7cc8d514387cfd68244e5ca5c5ac files/digest-portage-utils-0.1.18 262
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEoy4fKRy60XGEcJIRApbaAJwMP+VSzeVexWijo2UWmYnDMWYupACfe451
-GRq3r9zhw13qNzvG1RoExtc=
-=ff5u
+iD8DBQFEqCGcamhnQswr0vIRArKRAKCePs0T94y9XwA04/95ucTi0yIaxQCfWWHi
+wzCM4QL/AOdtvmJGdo9bhxQ=
+=V8ek
 -----END PGP SIGNATURE-----
