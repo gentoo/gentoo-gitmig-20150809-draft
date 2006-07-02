@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/xcircuit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.16 2006/06/06 16:10:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.17 2006/07/02 16:15:24 calchan Exp $
+
+  02 Jul 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
+  Adjusted metadata, see bug #138062.
 
   06 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   xcircuit-3.4.18.ebuild:
