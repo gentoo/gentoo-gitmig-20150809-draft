@@ -20,4 +20,14 @@
 	a gaming agent. It is ideal for cluster management and has been adopted for
 	use all over the world in small and huge organizations alike.
 	</longdescription>
+	<longdescription lang="ja">
+	Cfengine 、つまり the configuration engine (設定エンジン)は大規模
+	コンピュータ・ネットワークの管理と設定を行うエキスパート・システム
+	を構築するためのハイレベルなポリシ言語の自律型エージェントとその
+	ミドルを指します。莫大な設定を軽減するため、Cfengineはクラス概念と
+	プリミティブ・インテリジェンスの導入及びシステム状態の設定と保守を
+	自動化します。Cfengine は免疫型システムの一部としてデザインされ、
+	ゲーム・エージェントにもなります。クラスタ制御には最適で、世界中
+	の小さな組織および大きな組織で採用されています。
+	</longdescription>
 </pkgmetadata>
