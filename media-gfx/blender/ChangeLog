@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.82 2006/06/30 17:04:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.83 2006/07/02 03:28:07 lu_zero Exp $
+
+  02 Jul 2006; Luca Barbato <lu_zero@gentoo.org> -blender-2.40.ebuild,
+  -blender-2.41.ebuild:
+  Cleanup
 
   30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> blender-2.41.ebuild,
   blender-2.41-r1.ebuild:
