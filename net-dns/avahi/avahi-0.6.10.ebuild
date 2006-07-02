@@ -1,6 +1,6 @@
 # Copyright 2000-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.10.ebuild,v 1.10 2006/06/30 23:26:24 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.10.ebuild,v 1.11 2006/07/02 20:24:08 vapier Exp $
 
 inherit eutils qt3 mono python
 
@@ -10,7 +10,7 @@ SRC_URI="http://avahi.org/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ~ppc ppc64 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm ~hppa ~ppc ppc64 sh sparc x86"
 IUSE="bookmarks howl-compat mdnsresponder-compat gdbm dbus doc mono gtk python qt3"
 
 # We have USE flags depending on each other, which leads to this logic. We
