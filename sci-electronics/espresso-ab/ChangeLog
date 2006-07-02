@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/espresso-ab
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/espresso-ab/ChangeLog,v 1.2 2004/12/27 20:54:18 swegener Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/espresso-ab/ChangeLog,v 1.3 2006/07/02 11:07:12 calchan Exp $
+
+  02 Jul 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
+  Adjusted metadata, see bug #138062.
 
 *espresso-ab-1.0 (27 Dec 2004)
 
