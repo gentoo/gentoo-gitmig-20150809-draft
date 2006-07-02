@@ -1,0 +1,28 @@
+--- root/config/Makefile.linux.old	2003-02-22 02:30:14.000000000 -0600
++++ root/config/Makefile.linux	2003-02-22 02:31:00.000000000 -0600
+@@ -8,13 +8,13 @@
+ OPT           = -g
+ NOOPT         =
+ else
+-OPT           = -O
++OPT           = 
+ NOOPT         =
+ endif
+ 
+ # Compiler:
+-CXX           = g++
+-CC            = gcc
++CXX           = g++ $(GENTOO_CXXFLAGS)
++CC            = gcc $(GENTOO_CFLAGS)
+ CXXFLAGS      = -pipe -Wall -Woverloaded-virtual -fPIC $(EXTRA_CXXFLAGS)
+ CFLAGS        = -pipe -Wall -fPIC $(EXTRA_CFLAGS)
+ CINTCXXFLAGS  = -pipe -Wall -Woverloaded-virtual -fPIC $(EXTRA_CXXFLAGS) \
+@@ -38,7 +38,7 @@
+ 
+ # Fortran:
+ F77           = g77
+-F77FLAGS      =
++F77FLAGS      = $(GENTOO_CFLAGS)
+ F77LIBS       = -lg2c -lnsl
+ 
+ # Extras
