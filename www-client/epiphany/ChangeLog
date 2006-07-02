@@ -1,6 +1,20 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.71 2006/06/30 18:41:49 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.72 2006/07/02 19:28:10 allanonjl Exp $
+
+*epiphany-2.14.2.1-r1 (02 Jul 2006)
+*epiphany-1.8.4.1-r1 (02 Jul 2006)
+
+  02 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -files/epiphany-1.6.0-fix_includes.patch,
+  -files/epiphany-1.6.0-view_source.patch,
+  -files/epiphany-1.6.0-wallet_fix.patch,
+  -files/epiphany-1.6.0-wallet_password.patch,
+  -files/epiphany-1.6.3-fix_includes.patch, -epiphany-1.6.0-r3.ebuild,
+  -epiphany-1.6.3.ebuild, -epiphany-1.6.4.ebuild,
+  +epiphany-1.8.4.1-r1.ebuild, -epiphany-2.14.2.1.ebuild,
+  +epiphany-2.14.2.1-r1.ebuild:
+  migrate to using seamonkey instead of mozilla.  cleanup old ebuilds.
 
 *epiphany-2.14.2.1 (30 Jun 2006)
 
