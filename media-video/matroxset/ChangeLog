@@ -1,6 +1,9 @@
 # ChangeLog for media-video/matroxset
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/matroxset/ChangeLog,v 1.10 2005/09/01 14:55:38 kanaka Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/matroxset/ChangeLog,v 1.11 2006/07/02 23:20:14 pylon Exp $
+
+  02 Jul 2006; Lars Weiler <pylon@gentoo.org> matroxset-0.4.ebuild:
+  Stable on ppc.
 
   01 Sep 2005; Joel Martin <kanaka@gentoo.org> matroxset-0.4.ebuild:
   0.4 stable on x86
