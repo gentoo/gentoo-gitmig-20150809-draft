@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hdbc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/ChangeLog,v 1.6 2006/03/30 15:35:07 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/ChangeLog,v 1.7 2006/07/02 19:08:39 dcoutts Exp $
+
+*hdbc-1.0.0 (02 Jul 2006)
+
+  02 Jul 2006; Duncan Coutts <dcoutts@gentoo.org> +hdbc-1.0.0.ebuild:
+  New 1.0 version of HDBC and backends.
 
 *hdbc-0.99.2 (30 Mar 2006)
 
