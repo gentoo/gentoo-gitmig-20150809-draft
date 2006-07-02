@@ -1,6 +1,18 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.25 2006/05/05 16:17:43 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.26 2006/07/02 19:49:39 allanonjl Exp $
+
+*epiphany-extensions-2.14.1-r1 (02 Jul 2006)
+*epiphany-extensions-1.8.1-r1 (02 Jul 2006)
+
+  02 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -files/epiphany-extensions-1.6.0-disable_bookmarks-tray_label.patch,
+  -files/epiphany-extensions-1.6.0-fix_includes.patch,
+  -epiphany-extensions-1.6.0.ebuild, -epiphany-extensions-1.6.4-r1.ebuild,
+  +epiphany-extensions-1.8.1-r1.ebuild,
+  -epiphany-extensions-2.14.0.1.ebuild,
+  +epiphany-extensions-2.14.1-r1.ebuild:
+  migrate to seamonkey.  require firefox if you are sparc.  cleanup old versions.
 
   05 May 2006; John N. Laliberte <allanonjl@gentoo.org>
   epiphany-extensions-2.14.1.ebuild:
