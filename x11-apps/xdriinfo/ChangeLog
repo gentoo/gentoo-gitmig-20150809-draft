@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xdriinfo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.17 2006/07/01 21:44:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.18 2006/07/02 18:55:11 spyderous Exp $
+
+  02 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xdriinfo-1.0.1.ebuild:
+  Unkeyword for arm hppa mips sh, as they don't support direct rendering.
 
   01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
   xdriinfo-1.0.1.ebuild:
