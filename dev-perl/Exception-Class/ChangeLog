@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Exception-Class
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/ChangeLog,v 1.38 2006/05/28 10:30:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/ChangeLog,v 1.39 2006/07/02 13:50:52 mcummings Exp $
+
+  02 Jul 2006; Michael Cummings <mcummings@gentoo.org>
+  -Exception-Class-1.22.ebuild, Exception-Class-1.23.ebuild:
+  Marking stable amd64
 
   28 May 2006; Bryan Østergaard <kloeri@gentoo.org>
   Exception-Class-1.23.ebuild:
