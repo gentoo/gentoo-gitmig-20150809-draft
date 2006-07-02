@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/camfr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.1 2006/07/02 22:59:39 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.2 2006/07/02 23:07:48 metalgod Exp $
+
+  02 Jul 2006; Luis Medinas <metalgod@gentoo.org> metadata.xml:
+  Update metadata to sci-physics.
 
 *camfr-1.2 (02 Jul 2006)
 
