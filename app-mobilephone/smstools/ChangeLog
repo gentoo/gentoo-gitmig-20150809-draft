@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/smstools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.4 2006/06/21 10:10:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.5 2006/07/02 14:02:23 chainsaw Exp $
+
+*smstools-2.2.3 (02 Jul 2006)
+
+  02 Jul 2006; Tony Vroon <chainsaw@gentoo.org> +smstools-2.2.3.ebuild:
+  Version bump thanks to Jorma Rus <jormarus@operamail.com>, closes bug
+  #138791. Add ~ppc keyword.
 
 *smstools-2.2.1-r3 (21 Jun 2006)
 
