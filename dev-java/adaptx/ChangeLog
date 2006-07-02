@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/adaptx
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/ChangeLog,v 1.17 2006/05/14 20:27:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/ChangeLog,v 1.18 2006/07/02 04:01:41 nichoj Exp $
+
+  02 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
+  +adaptx-0.9.13_p20041105-r2.ebuild:
+  Revision bump to support new Java system.
 
   14 May 2006; Petteri Räty <betelgeuse@gentoo.org>
   adaptx-0.9.13_p20041105-r1.ebuild:
