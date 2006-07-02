@@ -8,4 +8,9 @@
 <longdescription>
 This is the client configuration utility for the Cisco Aironet series of cards.  It allows you to use functionality of the card which is not available elsewhere.
 </longdescription>
+<longdescription lang="ja">
+これは Cisco 社製品の Aironetカード・シリーズのクライアント用設定
+ユーティリティです。他所のソフトウェアでは利用できないカードの機能も
+使えるようにします。
+</longdescription>
 </pkgmetadata>
