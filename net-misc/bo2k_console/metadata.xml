@@ -8,4 +8,5 @@
   <name>Thomas Raschbacher</name>
 </maintainer>
  <longdescription>Command-line client based on LibBO2K.</longdescription>
+ <longdescription lang="ja">LibBO2K を基準にしたコマンドライン操作のクライアントです。</longdescription>
 </pkgmetadata>
