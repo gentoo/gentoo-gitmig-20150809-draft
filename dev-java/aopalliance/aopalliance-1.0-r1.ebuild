@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aopalliance/aopalliance-1.0-r1.ebuild,v 1.1 2006/07/01 16:36:59 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aopalliance/aopalliance-1.0-r1.ebuild,v 1.2 2006/07/02 05:01:54 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -15,19 +15,14 @@ HOMEPAGE="http://aopalliance.sourceforge.net/"
 LICENSE="public-domain"
 SLOT="1"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc jikes source"
+IUSE="doc source"
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
-	jikes? ( dev-java/jikes )
 	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4"
 
 src_compile() {
-	local antflags="jar"
-	use jikes && antflags="-Dbuild.compiler=jikes ${antflags}"
-	use doc && antflags="${antflags} javadoc"
-
-	eant ${antflags} || die "ant failed"
+	eant jar $(use_doc) 
 }
 
 src_install() {

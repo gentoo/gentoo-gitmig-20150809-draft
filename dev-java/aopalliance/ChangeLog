@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/aopalliance
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aopalliance/ChangeLog,v 1.3 2006/07/01 16:36:59 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aopalliance/ChangeLog,v 1.4 2006/07/02 05:01:54 nichoj Exp $
+
+  02 Jul 2006; Joshua Nichols <nichoj@gentoo.org> aopalliance-1.0-r1.ebuild:
+  Cleanups for migration to new Java system.
 
 *aopalliance-1.0-r1 (01 Jul 2006)
 
