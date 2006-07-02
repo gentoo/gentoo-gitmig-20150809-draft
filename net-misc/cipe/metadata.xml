@@ -9,4 +9,7 @@
 <longdescription>
 Cryptographic IP tunneling daemon/module
 </longdescription>
+<longdescription lang="ja">
+暗号化された IP トンネルを行うためのデーモン/モジュールです。
+</longdescription>
 </pkgmetadata>
