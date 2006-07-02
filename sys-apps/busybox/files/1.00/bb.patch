@@ -1,6 +1,0 @@
---- include/applets.h
-+++ include/applets.h
-@@ -78,2 +78,3 @@
- #endif
-+	APPLET_NOUSAGE("bb", ash_main, _BB_DIR_BIN, _BB_SUID_NEVER)
- #ifdef CONFIG_BUNZIP2
