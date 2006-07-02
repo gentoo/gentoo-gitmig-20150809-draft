@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-daemon
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.15 2006/05/12 12:59:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.16 2006/07/02 20:52:07 betelgeuse Exp $
+
+  02 Jul 2006; Petteri Räty <betelgeuse@gentoo.org>
+  commons-daemon-1.0.ebuild, commons-daemon-1.0.1.ebuild:
+  Removed useless dependencies on virtual/libc.
 
   12 May 2006; Petteri Räty <betelgeuse@gentoo.org>
   +files/1.0.1-as-needed.patch, commons-daemon-1.0.1.ebuild:
