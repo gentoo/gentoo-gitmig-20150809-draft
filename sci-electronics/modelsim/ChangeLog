@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/modelsim
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/modelsim/ChangeLog,v 1.2 2004/12/27 21:02:54 swegener Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/modelsim/ChangeLog,v 1.3 2006/07/02 14:59:18 calchan Exp $
+
+  02 Jul 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
+  Adjusted metadata, see bug #138062.
 
 *modelsim-5.7d (27 Dec 2004)
 

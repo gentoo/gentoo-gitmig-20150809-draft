@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
+  <herd>sci-electronics</herd>
+  <longdescription>
+  ModelSim is a commercial tool providing a comprehensive simulation and debug
+  environment for complex ASIC and FPGA designs. Support is provided for
+  multiple languages including Verilog, SystemVerilog, VHDL and SystemC.
+  </longdescription>
 </pkgmetadata>
