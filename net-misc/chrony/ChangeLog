@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/chrony
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.25 2006/04/26 18:30:53 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.26 2006/07/02 20:52:45 chriswhite Exp $
+
+  02 Jul 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Japanese metdata.xml translation.  Thanks to Yoshino-san in bug #134047.
 
   26 Apr 2006; Jon Hood <squinky86@gentoo.org> chrony-1.21.ebuild:
   Add ~amd64, #131023.

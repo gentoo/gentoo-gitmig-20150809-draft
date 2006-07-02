@@ -12,4 +12,10 @@ written to work well for systems which have only an intermittent (e.g. dial-up)
 connection to the network where the NTP servers are. It still works well
 in a "permanently connected" mode.
 </longdescription>
+<longdescription lang="ja">
+Chrony はコンピュータのシステム・クロックの精度を保つために使われるプログラムの
+ペア(chronyd と chronyc)です。chronyd は NTP サーバがあるネットワークと断続的な
+接続(e.g. dial-up)しか持たないシステムで機能するよう書かれています。ですが永続的
+な接続でも機能します。
+</longdescription>
 </pkgmetadata>
