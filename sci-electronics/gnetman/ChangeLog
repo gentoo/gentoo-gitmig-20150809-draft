@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gnetman
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/ChangeLog,v 1.5 2006/01/18 14:20:20 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/ChangeLog,v 1.6 2006/07/02 13:41:57 calchan Exp $
+
+  02 Jul 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
+  Adjusted metadata, see bug #138062.
 
   18 Jan 2006; Luis Medinas <metalgod@gentoo.org>
   gnetman-0.0.1_pre20050429.ebuild:
