@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.27 2006/06/27 20:50:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.28 2006/07/02 05:29:48 vapier Exp $
+
+  02 Jul 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/ogre-1.2.1-autoconf.patch, ogre-1.2.1.ebuild:
+  Fix building with autoconf-2.60 #138360 by Petr Kocmid.
 
   27 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org> -ogre-1.0.1.ebuild,
   -ogre-1.0.2.ebuild, -ogre-1.0.3_p1.ebuild, -ogre-1.0.4.ebuild,

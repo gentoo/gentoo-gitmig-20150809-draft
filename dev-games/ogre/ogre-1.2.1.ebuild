@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.2.1.ebuild,v 1.1 2006/06/26 17:08:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.2.1.ebuild,v 1.2 2006/07/02 05:29:48 vapier Exp $
 
 inherit eutils
 
 MY_PV=${PV//./-}
-
+MY_PV=${MY_PV/_/}
 DESCRIPTION="Object-oriented Graphics Rendering Engine"
 HOMEPAGE="http://www.ogre3d.org/"
 SRC_URI="mirror://sourceforge/ogre/${PN}-linux_osx-v${MY_PV}.tar.bz2"
@@ -24,7 +24,6 @@ RDEPEND=">=dev-libs/zziplib-0.13.36
 	sdl? ( >=media-libs/libsdl-1.2.8 )
 	virtual/opengl
 	sys-libs/zlib"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/flex
@@ -35,6 +34,7 @@ S=${WORKDIR}/ogrenew
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-autoconf.patch
 	./bootstrap || die "bootstrap failed"
 }
 
