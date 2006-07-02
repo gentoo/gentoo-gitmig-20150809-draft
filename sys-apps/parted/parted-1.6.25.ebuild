@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.25.ebuild,v 1.11 2006/06/30 14:40:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.25.ebuild,v 1.12 2006/07/02 20:29:45 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
 IUSE="nls static readline debug"
 
 # specific version for gettext needed
