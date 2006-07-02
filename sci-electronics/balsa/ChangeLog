@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/balsa
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.5 2005/08/23 20:44:53 chrb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.6 2006/07/02 10:46:39 calchan Exp $
+
+  02 Jul 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
+  Adjusted metadata, see bug #138062.
 
   23 Aug 2005; Chris Bainbridge <chrb@gentoo.org> balsa-3.4.3.ebuild:
   cp -a bad. #103487
