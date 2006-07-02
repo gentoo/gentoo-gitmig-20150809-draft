@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.179 2006/06/30 00:17:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.180 2006/07/02 21:07:04 robbat2 Exp $
+
+  02 Jul 2006; Robin H. Johnson <robbat2@gentoo.org>
+  files/digest-openssh-3.9_p1-r3, files/digest-openssh-4.0_p1-r2,
+  files/digest-openssh-4.1_p1-r1, files/digest-openssh-4.2_p1-r1,
+  files/digest-openssh-4.3_p1, files/digest-openssh-4.3_p2-r1,
+  files/digest-openssh-4.3_p2-r2, Manifest:
+  Fix digest weirdness.
 
   30 Jun 2006; Robin H. Johnson <robbat2@gentoo.org>
   files/digest-openssh-4.3_p1, files/digest-openssh-4.3_p2-r1,
