@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-misc-ethiopic
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-ethiopic/ChangeLog,v 1.10 2006/04/28 00:49:08 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-ethiopic/ChangeLog,v 1.11 2006/07/02 19:00:00 corsair Exp $
+
+  02 Jul 2006; Markus Rothe <corsair@gentoo.org>
+  font-misc-ethiopic-1.0.0.ebuild:
+  Stable on ppc64
 
   28 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four

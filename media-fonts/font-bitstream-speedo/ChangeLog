@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bitstream-speedo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-speedo/ChangeLog,v 1.8 2006/02/14 19:59:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-speedo/ChangeLog,v 1.9 2006/07/02 18:55:51 corsair Exp $
+
+  02 Jul 2006; Markus Rothe <corsair@gentoo.org>
+  font-bitstream-speedo-1.0.0.ebuild:
+  Stable on ppc64
 
   14 Feb 2006; Markus Rothe <corsair@gentoo.org>
   font-bitstream-speedo-1.0.0.ebuild:
