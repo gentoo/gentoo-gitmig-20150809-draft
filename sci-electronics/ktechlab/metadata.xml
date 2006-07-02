@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>sci</herd>
+  <herd>sci-electronics</herd>
   <maintainer>
     <email>lanius@gentoo.org</email>
     <name>Heinrich Wendel</name>
   </maintainer>
+  <longdescription>
+  KTechlab provides a powerful environment for electronic circuits and
+  microcontrollers. This includes simulation of a variety of components (logic,
+  integrated, linear, nonlinear and reactive), simulation and debugging of PIC
+  microcontrollers via gpsim, and its own closely-linked and complementary high
+  level languages: FlowCode and Microbe.
+  </longdescription>
 </pkgmetadata>
