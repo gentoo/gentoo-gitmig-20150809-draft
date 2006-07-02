@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/mpb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/ChangeLog,v 1.1 2006/07/02 23:17:07 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/ChangeLog,v 1.2 2006/07/02 23:19:20 metalgod Exp $
+
+  02 Jul 2006; Luis Medinas <metalgod@gentoo.org> metadata.xml:
+  Update metadata to sci-physics.
 
   02 Jul 2006; Luis Medinas <metalgod@gentoo.org> +metadata.xml,
   +mpb-1.4.2.ebuild:

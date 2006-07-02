@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/xfoil
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/ChangeLog,v 1.1 2006/07/02 23:22:00 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/ChangeLog,v 1.2 2006/07/02 23:24:02 metalgod Exp $
+
+  02 Jul 2006; Luis Medinas <metalgod@gentoo.org> metadata.xml:
+  Update metadata to sci-physics.
 
   02 Jul 2006; Luis Medinas <metalgod@gentoo.org> +metadata.xml,
   +xfoil-6.94-r1.ebuild:

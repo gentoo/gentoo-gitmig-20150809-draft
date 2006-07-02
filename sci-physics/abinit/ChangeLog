@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/abinit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/ChangeLog,v 1.1 2006/07/02 23:26:18 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/ChangeLog,v 1.2 2006/07/02 23:28:51 metalgod Exp $
+
+  02 Jul 2006; Luis Medinas <metalgod@gentoo.org> metadata.xml:
+  Update metadata to sci-physics.
 
   02 Jul 2006; Luis Medinas <metalgod@gentoo.org>
   +files/fix-64bit-detection.patch,
