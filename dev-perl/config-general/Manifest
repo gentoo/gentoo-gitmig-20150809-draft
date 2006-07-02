@@ -1,12 +1,58 @@
-MD5 80f9b6c607bcb3bfe38dbb236f4a3b46 ChangeLog 3346
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST Config-General-2.21.tar.gz 34707
+DIST Config-General-2.27.tar.gz 36127
+DIST Config-General-2.29.tar.gz 38896
+DIST Config-General-2.30.tar.gz 40032
+DIST Config-General-2.31.tar.gz 45236 RMD160 078c29b3b82ea8485c10915200fd883eed0194c9 SHA1 4f6399506706a1bc244ccae7baafd81f800fda77 SHA256 e05ed57e91b19a10feadf801e780cda0b1b6dace353a6a9cbf96fb7707052dc9
+EBUILD config-general-2.21.ebuild 538 RMD160 589df6a3d161484f072c5ed773005a0c8d3bcfbd SHA1 ce549368e88c6a87a4a13c6f2a81ef56c4b5de45 SHA256 1b97e4e0dbec9afd48bf7afddbbb5e402d21f0aa9d3fe03b6babea7e352f727c
 MD5 85798865ac66b13a7085132b310be7b9 config-general-2.21.ebuild 538
+RMD160 589df6a3d161484f072c5ed773005a0c8d3bcfbd config-general-2.21.ebuild 538
+SHA256 1b97e4e0dbec9afd48bf7afddbbb5e402d21f0aa9d3fe03b6babea7e352f727c config-general-2.21.ebuild 538
+EBUILD config-general-2.27.ebuild 548 RMD160 0abbc63b864d9c8aeee3c01f63519a4b0b5a847a SHA1 6ded7b947adaabcf4c6e8b84b9b899fc6fe396c5 SHA256 eefdee8e84bcb30492d8c5682f0e19cae2b9a9b215f7c41d9cddd61a0cd4f11f
 MD5 74c75377c02b622bc6568111ccc6eb6b config-general-2.27.ebuild 548
+RMD160 0abbc63b864d9c8aeee3c01f63519a4b0b5a847a config-general-2.27.ebuild 548
+SHA256 eefdee8e84bcb30492d8c5682f0e19cae2b9a9b215f7c41d9cddd61a0cd4f11f config-general-2.27.ebuild 548
+EBUILD config-general-2.29.ebuild 563 RMD160 60e7e34d673375dfa159fd4a0ce7ac10ecb67194 SHA1 edab89116d0753fab43b075da4c86d8bd19a0fb1 SHA256 91e0ffac0822401751b50f1a17c9953dcc2200780679ecb01a96e25aef65349f
 MD5 b07244411e437506901a52e216717a76 config-general-2.29.ebuild 563
+RMD160 60e7e34d673375dfa159fd4a0ce7ac10ecb67194 config-general-2.29.ebuild 563
+SHA256 91e0ffac0822401751b50f1a17c9953dcc2200780679ecb01a96e25aef65349f config-general-2.29.ebuild 563
+EBUILD config-general-2.30.ebuild 553 RMD160 1520d8a728dfbd417e5c6c35e52f8c3160fbc68e SHA1 e4077afeb7a02f80b5b9b12a36f787e7438ad4d9 SHA256 8ab167cb744d83606f38fb4485cf2f73fa34d9e53fe438674d90493b347ca20f
 MD5 b6d5ca38674d46810f3afa2a961b8787 config-general-2.30.ebuild 553
-MD5 053f377bc610975807ce8dae5621894c config-general-2.31.ebuild 558
-MD5 214984e441e1a76252a3a17f8ada0e35 files/digest-config-general-2.21 70
-MD5 9ab5d871612b2f207deb51ada8a49c98 files/digest-config-general-2.27 70
-MD5 e235fe7d3d95d178e8650d688953d8fe files/digest-config-general-2.29 70
-MD5 9b374299f6d470ffec3ed9fe894325c6 files/digest-config-general-2.30 70
-MD5 663d8c5b8c2777089ff307b1afcfc993 files/digest-config-general-2.31 70
+RMD160 1520d8a728dfbd417e5c6c35e52f8c3160fbc68e config-general-2.30.ebuild 553
+SHA256 8ab167cb744d83606f38fb4485cf2f73fa34d9e53fe438674d90493b347ca20f config-general-2.30.ebuild 553
+EBUILD config-general-2.31.ebuild 558 RMD160 b43e847a2c2677fefafb5d2ada4e4a8feccef865 SHA1 633e43b060f38f2064f2cf33d66601a0642b338d SHA256 ba879015b9f1e767cdf60e4005050fa3037a88850cfbbe79357c3726ef9d482a
+MD5 ca3c9b403becbefcbb0ab13709e03b72 config-general-2.31.ebuild 558
+RMD160 b43e847a2c2677fefafb5d2ada4e4a8feccef865 config-general-2.31.ebuild 558
+SHA256 ba879015b9f1e767cdf60e4005050fa3037a88850cfbbe79357c3726ef9d482a config-general-2.31.ebuild 558
+MISC ChangeLog 3456 RMD160 e4e2e0565555017411d86357dbb0eb1c9c5125bb SHA1 0b4a8c622bf0696513ee6202b4b3b8ffe8d4f260 SHA256 67eb6c373e5797bdccbbf05c9a102e547a18a1c67043b808a52802c3f3e24409
+MD5 f76157eddaf630cd60c6aa3a0e8bc690 ChangeLog 3456
+RMD160 e4e2e0565555017411d86357dbb0eb1c9c5125bb ChangeLog 3456
+SHA256 67eb6c373e5797bdccbbf05c9a102e547a18a1c67043b808a52802c3f3e24409 ChangeLog 3456
+MISC metadata.xml 305 RMD160 647980838c590f54441a053916ea629e53e551c0 SHA1 99ef1deeae9a934fb6e46cf5fc4a5fcb8379a74a SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
+MD5 214984e441e1a76252a3a17f8ada0e35 files/digest-config-general-2.21 70
+RMD160 ab0b5bfdebd662ac58c4c66b4b24aa0e1158159e files/digest-config-general-2.21 70
+SHA256 ea13f66f6d99260f763ea8bf16f9d512edbd085444d98bf85ac31ae67fe14fdb files/digest-config-general-2.21 70
+MD5 9ab5d871612b2f207deb51ada8a49c98 files/digest-config-general-2.27 70
+RMD160 060c6b77097b909350621f31a5149959cebda65f files/digest-config-general-2.27 70
+SHA256 40576fc3b0aef7c584d3871b139f3ce9c66ed3f81a42a373fec74f1c084f34b3 files/digest-config-general-2.27 70
+MD5 e235fe7d3d95d178e8650d688953d8fe files/digest-config-general-2.29 70
+RMD160 61988912604e8545397240acc99e208d0c411e04 files/digest-config-general-2.29 70
+SHA256 ab489f04b084578d89c4839383995da4606eb0d91c2f5a07a2a298f54880f472 files/digest-config-general-2.29 70
+MD5 9b374299f6d470ffec3ed9fe894325c6 files/digest-config-general-2.30 70
+RMD160 fe90941103be54f16359c36c30774bc6e75a73d0 files/digest-config-general-2.30 70
+SHA256 26778dccd9f2b3b0419484015e8953e3973869c0123460f1887d34df43a1b488 files/digest-config-general-2.30 70
+MD5 9617b7faf3b4d1fa369062db3688b6ea files/digest-config-general-2.31 256
+RMD160 48586c8d46a9eea78117911fdb00fde5895abbb1 files/digest-config-general-2.31 256
+SHA256 0ea678016e4a402c284b52b3486a74251c99dd781a71d189e19855d4ba4a69dc files/digest-config-general-2.31 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEqDxjtG5z4I8BtQoRAoLdAJ0TltLtwPDfCDibkkL33rLZVMqqJwCeO9rT
+qkIXVPRY2GEI/9iAm+HZgEw=
+=cWyY
+-----END PGP SIGNATURE-----
