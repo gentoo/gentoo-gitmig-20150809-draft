@@ -4,3 +4,4 @@
 # mask mozilla/firefox (bug #108020) - corsair
 mozilla
 firefox
+seamonkey
