@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.87 2006/06/30 07:31:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.88 2006/07/02 16:21:41 pylon Exp $
+
+  02 Jul 2006; Lars Weiler <pylon@gentoo.org> tiff-3.8.2-r1.ebuild:
+  Stable on ppc; bug #131857.
 
   30 Jun 2006; Markus Rothe <corsair@gentoo.org> tiff-3.8.2-r1.ebuild:
   Stable on ppc64; bug #131857
