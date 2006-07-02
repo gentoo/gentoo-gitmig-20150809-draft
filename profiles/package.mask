@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5574 2006/07/01 22:37:10 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5575 2006/07/02 08:28:36 suka Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -294,10 +294,6 @@ games-mud/kmc
 # Tim Yamin <plasmaroo@gentoo.org> (18 May 2006)
 # Security mask; bug #112791.
 sys-kernel/kurobox-sources
-
-# Andreas Proschofsky <suka@gentoo.org> (18 May 2006)
-# Release candidates, masked for testing
->=app-office/openoffice-bin-2.0.3_rc1
 
 # Fernando J. Pereda <ferdy@gentoo.org> (18 May 2006)
 # This ebuild is for patch testing purposes. Things might break.
