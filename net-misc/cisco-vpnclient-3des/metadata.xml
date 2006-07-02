@@ -8,4 +8,8 @@
 <longdescription>
 This is the Cisco VPN Client, which is used to connect to Cisco VPN hardware, such as a VPN Concentrator, VPN Accelerator, or a PIX Firewall.  This client is bound by export restrictions.
 </longdescription>
+<longdescription lang="ja">
+これは Cisco 社の VPN Concentrator、VPN Accelerator、PIX Firewall といった VPN 
+製品と接続するのに使われる VPN クライアントです。このクライアントは輸出制限の範囲にあります。
+</longdescription>
 </pkgmetadata>
