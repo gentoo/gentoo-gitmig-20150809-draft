@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/corkscrew
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/ChangeLog,v 1.3 2005/02/18 03:28:48 weeve Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/ChangeLog,v 1.4 2006/07/02 20:59:48 chriswhite Exp $
+
+  02 Jul 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Japanese metadata.xml translation.  Thanks to Yoshino-san in bug #134208.
 
   17 Feb 2005; Jason Wever <weeve@gentoo.org> corkscrew-2.0.ebuild:
   Added ~sparc keyword.

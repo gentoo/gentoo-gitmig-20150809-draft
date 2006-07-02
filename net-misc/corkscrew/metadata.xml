@@ -9,4 +9,7 @@
 <longdescription>
 Corkscrew is a tool for tunneling SSH through HTTP proxies.
 </longdescription>
+<longdescription lang="ja">
+Corkscrew は HTTP プロクシ経由の SSH トンネルを構築するツールです。
+</longdescription>
 </pkgmetadata>
