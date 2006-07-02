@@ -1,0 +1,29 @@
+--- camfr_1.2/camfr/camfr_wrap.cpp	2003-11-03 16:03:13.000000000 +0100
++++ camfr_1.2_new/camfr/camfr_wrap.cpp	2006-02-23 15:29:36.000000000 +0100
+@@ -352,7 +352,7 @@
+   {
+     PyErr_SetString(PyExc_ValueError, 
+                     "set_inc_field_function only implemented for slabs.");
+-    throw boost::python::argument_error();
++    exit (-1); //throw boost::python::argument_error();
+   }
+ 
+   PythonFunction f(o);
+@@ -395,7 +395,7 @@
+   {
+     PyErr_SetString(PyExc_ValueError, 
+                     "set_inc_field_gaussian only implemented for slabs.");
+-    throw boost::python::argument_error();
++    exit (-1); //throw boost::python::argument_error();
+   }
+ 
+   GaussianFunction f(height,width,pos);
+@@ -442,7 +442,7 @@
+   {
+     PyErr_SetString(PyExc_ValueError, 
+                     "set_inc_field_plane_Wave only implemented for slabs.");
+-    throw boost::python::argument_error();
++    exit (-1); //throw boost::python::argument_error();
+   }
+ 
+   Complex index = slab->get_core()->n();

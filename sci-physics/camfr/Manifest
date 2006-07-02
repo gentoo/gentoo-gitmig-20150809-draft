@@ -1,0 +1,31 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9c6587893b3ea167b7346993d2afa6e3 ChangeLog 648
+RMD160 27321052ac3b723b6d268b2f233aa1e339246bd2 ChangeLog 648
+SHA256 18d5bd96bfc7385fb3339b622c91067f4307afaff41ec7a4ba79a8fdb8afd556 ChangeLog 648
+MD5 0d379edc1c14fefa39bcd085eeb6f95d camfr-1.2.ebuild 1513
+RMD160 6ae0da6068fa9b23d5bc1059c681f0813ee514db camfr-1.2.ebuild 1513
+SHA256 3e7a0302fa372e34996d72864a786dfe399c8bb1791098b6ec9cc0d2e38ffaf3 camfr-1.2.ebuild 1513
+MD5 85926d5ac680e6e8b6c0271a4527f030 files/SConstruct 611
+RMD160 5918f74d17e0d01f643515b7ef6e8d0eb3c167d8 files/SConstruct 611
+SHA256 bc290cff89ba361838f94e96e42c793b08909655d8a3f9b2028de452c031ca8a files/SConstruct 611
+MD5 3d16ef7bebd101504e1fbb87eb86e19d files/digest-camfr-1.2 220
+RMD160 80e4084ce09a13f7f9956659c089bf1dbe0b60cc files/digest-camfr-1.2 220
+SHA256 24d2c70815f051f72108f55b7c1287ddf9bad16542df1226a7fc4852253e021a files/digest-camfr-1.2 220
+MD5 4cd973de864f783144eabf5983da3f59 files/machine_cfg.py 1272
+RMD160 ae91d457ed7c28aaf94d05209e149bd84f672364 files/machine_cfg.py 1272
+SHA256 44031c5deda4bfb515b8a6157e9c7c25e986cb12898d525266f736a8fc92801c files/machine_cfg.py 1272
+MD5 b63f9b364f119af0e7b51e9aacc16cc7 files/throw_patch.diff 1002
+RMD160 ed477645fcbc0d3e9caa09c403003391a37d99bf files/throw_patch.diff 1002
+SHA256 b063115ed23cb9be14e83d8e2ffa4e394f510e7ccf59600a2b7bd8a7a08eb879 files/throw_patch.diff 1002
+MD5 b29bc1bc900b3946fa0120f24f1061df metadata.xml 254
+RMD160 96e9d6bbf53b188945c21047837988dd9684ea6e metadata.xml 254
+SHA256 9c33299de944cb2d0da1adb55447f6fa68dcf52e4b85385810cf136361c7e9ec metadata.xml 254
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFD/dh7CRZPokWLroQRAvh3AKC9D6QV9WYk5PFuSRqbuIQrwa5ppwCgrS4D
+IksWyg0KxkLi4Wb5jg51dRg=
+=Alhc
+-----END PGP SIGNATURE-----

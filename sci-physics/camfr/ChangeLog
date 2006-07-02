@@ -1,0 +1,24 @@
+# ChangeLog for sci-misc/camfr
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.1 2006/07/02 22:59:39 metalgod Exp $
+
+*camfr-1.2 (02 Jul 2006)
+
+  02 Jul 2006; Luis Medinas <metalgod@gentoo.org> +files/SConstruct,
+  +files/machine_cfg.py, +files/throw_patch.diff, +metadata.xml,
+  +camfr-1.2.ebuild:
+  Moved from sci-misc/camfr to sci-physics/camfr.
+
+  23 Feb 2006; Peter Bienstman <pbienst@gentoo.org> -files/camfr_wrap.cpp,
+  files/machine_cfg.py, +files/throw_patch.diff:
+  Remove big file.
+
+  02 Nov 2005; Stefan Schweizer <genstef@gentoo.org> camfr-1.2.ebuild:
+  app-text/ghostscript -> virtual/ghostscript
+
+  31 Oct 2005; Peter Bienstman <pbienst@gentoo.org> camfr-1.2.ebuild:
+  Use fortran eclass.
+
+  05 Apr 2005; Peter Bienstman <pbienst@gentoo.org> :
+  Initial import. Closes bug 36560.
+
