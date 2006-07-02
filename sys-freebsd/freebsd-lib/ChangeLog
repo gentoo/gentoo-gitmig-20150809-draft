@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.21 2006/05/31 06:01:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.22 2006/07/02 00:40:15 flameeyes Exp $
+
+  02 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-lib-6.1-csu-amd64.patch, freebsd-lib-6.1.ebuild:
+  Add patch to fix csu's makefile on amd64, from Victor Roman Archidona
+  <daijo@unixevil.info> who's working on amd64-fbsd support.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org> freebsd-lib-6.1.ebuild:
   Use testflags to avoid adding -fno-stack-protector-all when using GCC 4.1.

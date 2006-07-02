@@ -1,0 +1,10 @@
+--- lib-orig/csu/amd64/Makefile 2003-06-30 12:53:39 +0000
++++ lib-mod/csu/amd64/Makefile  2006-07-01 03:10:53 +0000
+@@ -16,6 +16,7 @@
+        ${CC} ${CFLAGS} -DGCRT -c -o gcrt1.o ${.CURDIR}/crt1.c
+
+ realinstall:
++       mkdir ${DESTDIR}${LIBDIR}
+        ${INSTALL} -o ${LIBOWN} -g ${LIBGRP} -m ${LIBMODE} \
+            ${OBJS} ${DESTDIR}${LIBDIR}
+
