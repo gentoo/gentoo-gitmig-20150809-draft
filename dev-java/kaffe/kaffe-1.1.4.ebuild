@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4.ebuild,v 1.19 2006/06/03 18:28:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4.ebuild,v 1.20 2006/07/02 20:00:06 betelgeuse Exp $
 
 inherit java flag-o-matic
 
@@ -10,7 +10,6 @@ HOMEPAGE="http://www.kaffe.org/"
 DEPEND=">=dev-libs/gmp-3.1
 		>=media-libs/jpeg-6b
 		>=media-libs/libpng-1.2.1
-		virtual/libc
 		virtual/x11
 		app-arch/zip
 		alsa? ( >=media-libs/alsa-lib-1.0.1 )

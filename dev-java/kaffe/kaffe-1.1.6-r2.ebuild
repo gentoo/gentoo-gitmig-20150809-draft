@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.6-r2.ebuild,v 1.4 2006/01/20 05:32:03 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.6-r2.ebuild,v 1.5 2006/07/02 20:00:06 betelgeuse Exp $
 
 inherit base eutils java flag-o-matic
 
@@ -18,7 +18,6 @@ HOMEPAGE="http://www.kaffe.org/"
 DEPEND="
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
-	virtual/libc
 	app-arch/zip
 	dev-java/jikes
 	dev-libs/libxml2

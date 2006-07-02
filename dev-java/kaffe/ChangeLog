@@ -1,9 +1,17 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.46 2006/06/25 19:49:23 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.47 2006/07/02 20:00:06 betelgeuse Exp $
 
-  25 Jun 2006; Joshua Nichols <nichoj@gentoo.org> +files/kaffe.env:
-  Version bump, plus support for new Java system.
+  02 Jul 2006; Petteri Räty <betelgeuse@gentoo.org> kaffe-1.1.4.ebuild,
+  kaffe-1.1.4-r1.ebuild, kaffe-1.1.5-r1.ebuild, kaffe-1.1.6-r2.ebuild,
+  kaffe-1.1.7_rc1.ebuild, kaffe-1.1.7.ebuild:
+  Removed useless dependencies on virtual/libc.
+
+*kaffe-1.1.7 (25 Jun 2006)
+
+  25 Jun 2006; Joshua Nichols <nichoj@gentoo.org> +files/kaffe.env,
+  +kaffe-1.1.7.ebuild:
+  Version bump, plus support for the new Java system.
 
   03 Jun 2006; Guy Martin <gmsoft@gentoo.org> kaffe-1.1.4.ebuild,
   kaffe-1.1.4-r1.ebuild:
