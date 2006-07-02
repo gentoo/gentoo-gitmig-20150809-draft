@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
+  <herd>sci-electronics</herd>
+  <longdescription>
+  KLogic is an application for building and simulating digital circuits easily.
+  It provides an easy way for building circuits containing standard components
+  like AND, OR, XOR and flipflops like RS and JK. In order to build more
+  complex, more structured and reuseable circuits, sub circuits can be used. 
+  </longdescription>
 </pkgmetadata>
