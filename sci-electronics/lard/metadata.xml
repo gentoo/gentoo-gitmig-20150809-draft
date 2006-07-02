@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
+  <herd>sci-electronics</herd>
+  <longdescription>
+  LARD is a hardware description language developed for describing asynchronous
+  systems - though little is specific to that purpose, so you could use it to
+  descibe synchronous systems if you wanted, or even as a general purpose
+  programming language.
+  </longdescription>
 </pkgmetadata>
