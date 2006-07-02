@@ -1,27 +1,36 @@
-MD5 ebad31eaa4e7f1f6910d6a96998ea815 ChangeLog 1533
-RMD160 7a97f190601249f8547a3d7d707a8c6cbb9270f3 ChangeLog 1533
-SHA256 f77e3b35b905939ecd7b5e6f6da796e4eac8755f43672815653dd63b560bcffd ChangeLog 1533
+AUX ggz-client-libs-0.0.5-gcc32.diff 649 RMD160 57f8fed6b1284dbc27fd8c3edeb4568722913161 SHA1 de3e07b6a912a8332331f1c92093470f4cccca11 SHA256 af47ed243e8da79eec5ab59d3714328b4b0a5de4181f23cee65d4e725308ef1c
+MD5 104ad789b738ff6ee3b1408cdc37bbf4 files/ggz-client-libs-0.0.5-gcc32.diff 649
+RMD160 57f8fed6b1284dbc27fd8c3edeb4568722913161 files/ggz-client-libs-0.0.5-gcc32.diff 649
+SHA256 af47ed243e8da79eec5ab59d3714328b4b0a5de4181f23cee65d4e725308ef1c files/ggz-client-libs-0.0.5-gcc32.diff 649
+DIST ggz-client-libs-0.0.13.tar.gz 586977 RMD160 2090cb1e3b7fde7fd6175718334f0e1cf66925b8 SHA256 7b6572aa5c64951d5d850f73debf1bb60cf59a92ef743aa19977c307c79d35fd
+DIST ggz-client-libs-0.0.5.tar.gz 256281
+DIST ggz-client-libs-0.0.9.tar.gz 495462 RMD160 c90799d7f800fd32eb30aeeb1475c0c0ac34ca39 SHA1 86f2ded258e7f5951fa56b266ceb9f49961fee1c SHA256 4c95873b25c5e2dc2074b8e06aaeebc351ec8339650abd6fbbfd6c04002d2be8
+EBUILD ggz-client-libs-0.0.13.ebuild 837 RMD160 b2e8b86718aea850388dbbd16c048cb08ed33622 SHA1 5dd13afa986f0eb7c90d5cbdac8057ff9e87a98e SHA256 c065391d263b3ffd0c42ec8d4e0ed4a6efa06cf69689163bab5863b8adfa71b9
+MD5 c2f2942533519c255651d102a3647ccc ggz-client-libs-0.0.13.ebuild 837
+RMD160 b2e8b86718aea850388dbbd16c048cb08ed33622 ggz-client-libs-0.0.13.ebuild 837
+SHA256 c065391d263b3ffd0c42ec8d4e0ed4a6efa06cf69689163bab5863b8adfa71b9 ggz-client-libs-0.0.13.ebuild 837
+EBUILD ggz-client-libs-0.0.5-r1.ebuild 718 RMD160 407ab96279bd24ef20532be83f157e99ac94f046 SHA1 967ade507d572504e01e40aef2384e76f8cd1aa6 SHA256 2e11750e976303c98f6446fc7807f12cd05f6774a42d6446a4efbbc2a75253e3
+MD5 0551000a9689c569f7e0cd358c3edb1c ggz-client-libs-0.0.5-r1.ebuild 718
+RMD160 407ab96279bd24ef20532be83f157e99ac94f046 ggz-client-libs-0.0.5-r1.ebuild 718
+SHA256 2e11750e976303c98f6446fc7807f12cd05f6774a42d6446a4efbbc2a75253e3 ggz-client-libs-0.0.5-r1.ebuild 718
+EBUILD ggz-client-libs-0.0.9.ebuild 715 RMD160 d43b3e4ca2942f80a844f335a325ae764bfc68be SHA1 a9396a08f61fc3a56bca0ad018a226a271a21101 SHA256 1a600266a38ba4a424c86cba34b58ccee7629bb71777a7fe6b33f863e24303fb
+MD5 faf66620d01c70d9ac6ab97e865aeeec ggz-client-libs-0.0.9.ebuild 715
+RMD160 d43b3e4ca2942f80a844f335a325ae764bfc68be ggz-client-libs-0.0.9.ebuild 715
+SHA256 1a600266a38ba4a424c86cba34b58ccee7629bb71777a7fe6b33f863e24303fb ggz-client-libs-0.0.9.ebuild 715
+MISC ChangeLog 1638 RMD160 7192e520c70255a38a790d23e99fc5a80008dde9 SHA1 79d13980311148cee71d331ba56cdd978f0316bb SHA256 72e98e5fbe4ef7695c394dcac84270512bf358799235cbf1c7627e5664a6e45b
+MD5 c96d9f8e5dffc1bb83a6ad38c59df6d1 ChangeLog 1638
+RMD160 7192e520c70255a38a790d23e99fc5a80008dde9 ChangeLog 1638
+SHA256 72e98e5fbe4ef7695c394dcac84270512bf358799235cbf1c7627e5664a6e45b ChangeLog 1638
+MISC metadata.xml 428 RMD160 742fed788e2947ca9ba85b5d9c234778fda310fc SHA1 c003bb872b0ba384f9e45d56431f149dd94c649b SHA256 ca242ceeaf7a146b8ce0ad3ce0a7f1761edaf7324b735a2e910619ad9c6d29af
+MD5 665c31fd905d36415b61c101784ff673 metadata.xml 428
+RMD160 742fed788e2947ca9ba85b5d9c234778fda310fc metadata.xml 428
+SHA256 ca242ceeaf7a146b8ce0ad3ce0a7f1761edaf7324b735a2e910619ad9c6d29af metadata.xml 428
 MD5 89baccfb79cb39516b54095d17a113ae files/digest-ggz-client-libs-0.0.13 268
 RMD160 c96ea899de260545129084dd2989627b976875ef files/digest-ggz-client-libs-0.0.13 268
 SHA256 46173a27aafc1f650b57a4446ec9f663fee1cb8edfbe14a19569a76e5ccd3bf3 files/digest-ggz-client-libs-0.0.13 268
 MD5 3cfe0db81adbb18f98e13933004ef522 files/digest-ggz-client-libs-0.0.5-r1 73
 RMD160 446c2f994473a38bdc1500461a6981be015a9bca files/digest-ggz-client-libs-0.0.5-r1 73
 SHA256 d7eb77b41381acc5251b3248cc41e24aba0e60cd9af5de763011ceaf8b58a57e files/digest-ggz-client-libs-0.0.5-r1 73
-MD5 0b3623a2d12cead86ed543fad7d9f491 files/digest-ggz-client-libs-0.0.9 73
-RMD160 330655ebee063b42dd2fe8fb9e809d3bb91e7e34 files/digest-ggz-client-libs-0.0.9 73
-SHA256 0e17c8837931c39d23228b996d4b062137c6af331e53bf2c539f4d393fdcdb47 files/digest-ggz-client-libs-0.0.9 73
-MD5 104ad789b738ff6ee3b1408cdc37bbf4 files/ggz-client-libs-0.0.5-gcc32.diff 649
-RMD160 57f8fed6b1284dbc27fd8c3edeb4568722913161 files/ggz-client-libs-0.0.5-gcc32.diff 649
-SHA256 af47ed243e8da79eec5ab59d3714328b4b0a5de4181f23cee65d4e725308ef1c files/ggz-client-libs-0.0.5-gcc32.diff 649
-MD5 c2f2942533519c255651d102a3647ccc ggz-client-libs-0.0.13.ebuild 837
-RMD160 b2e8b86718aea850388dbbd16c048cb08ed33622 ggz-client-libs-0.0.13.ebuild 837
-SHA256 c065391d263b3ffd0c42ec8d4e0ed4a6efa06cf69689163bab5863b8adfa71b9 ggz-client-libs-0.0.13.ebuild 837
-MD5 0551000a9689c569f7e0cd358c3edb1c ggz-client-libs-0.0.5-r1.ebuild 718
-RMD160 407ab96279bd24ef20532be83f157e99ac94f046 ggz-client-libs-0.0.5-r1.ebuild 718
-SHA256 2e11750e976303c98f6446fc7807f12cd05f6774a42d6446a4efbbc2a75253e3 ggz-client-libs-0.0.5-r1.ebuild 718
-MD5 e4bd74d42934f43796fb0cf8f80b7796 ggz-client-libs-0.0.9.ebuild 719
-RMD160 8a193c2b440b91606b5d7592c74e972b05ea0b7f ggz-client-libs-0.0.9.ebuild 719
-SHA256 2fd9f4356a8c99cd102375574c943a0bc9fbc143103a2c1e6a27daea91a5cf15 ggz-client-libs-0.0.9.ebuild 719
-MD5 665c31fd905d36415b61c101784ff673 metadata.xml 428
-RMD160 742fed788e2947ca9ba85b5d9c234778fda310fc metadata.xml 428
-SHA256 ca242ceeaf7a146b8ce0ad3ce0a7f1761edaf7324b735a2e910619ad9c6d29af metadata.xml 428
+MD5 7567d731d029c1e313844a34bbad47fe files/digest-ggz-client-libs-0.0.9 265
+RMD160 6dd2df41fce602f99b1174b753133ed42945a487 files/digest-ggz-client-libs-0.0.9 265
+SHA256 631f9ac51f90745e83006664182221b7276850586511b3b19fa71620b5aac128 files/digest-ggz-client-libs-0.0.9 265
