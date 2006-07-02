@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.5.ebuild,v 1.1 2006/07/01 21:03:11 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.5.ebuild,v 1.2 2006/07/02 03:58:36 nichoj Exp $
 
 inherit java-vm-2 eutils versionator rpm
 
@@ -26,7 +26,7 @@ DESCRIPTION="IBM Java Development Kit"
 HOMEPAGE="http://www-106.ibm.com/developerworks/java/jdk/"
 DOWNLOADPAGE="${HOMEPAPGE}/linux/download.html"
 # bug #125178
-ALT_HOMEPAGE="http://www-106.ibm.com/developerworks/java/jdk/linux/older_download.html"
+ALT_DOWNLOADPAGE="${HOMEPAGE}/older_download.html"
 SRC_URI="x86? ( IBMJava2-142-ia32-SDK-${RPM_PV}.i386.rpm )
 		 amd64? ( IBMJava2-AMD64-142-SDK-${RPM_PV}.x86_64.rpm )
 		 ppc? ( IBMJava2-142-ppc32-SDK-${RPM_PV}.ppc.rpm )
@@ -91,10 +91,13 @@ pkg_nofetch() {
 		einfo "${JAVACOMM_DIST}"
 	fi
 	einfo "Place the file(s) in: ${DISTDIR}"
-	einfo "Then run emerge ${PN}"
+	einfo "Then run emerge =${VMHANDLE}*"
+
+	einfo "Note: if SR${SERVICE_RELEASE} is not available at ${DOWNLOADPAGE}"
+	einfo "it may have been moved to ${ALT_DOWNLOADPAGE}"
 }
 
-src_compile() { :; }
+src_compile() { true; }
 
 src_install() {
 	# The javaws execution script is 777 why?
