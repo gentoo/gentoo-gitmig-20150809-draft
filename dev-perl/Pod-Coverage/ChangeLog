@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Pod-Coverage
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.27 2006/06/29 23:43:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.28 2006/07/02 03:06:58 mcummings Exp $
+
+  02 Jul 2006; Michael Cummings <mcummings@gentoo.org>
+  Pod-Coverage-0.16.ebuild, Pod-Coverage-0.17.ebuild:
+  Bug 137098 - deping ExtUtils-CBuilder
 
   29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   Pod-Coverage-0.17.ebuild:
