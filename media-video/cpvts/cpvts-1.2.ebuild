@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cpvts/cpvts-1.2.ebuild,v 1.7 2006/06/30 04:45:42 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cpvts/cpvts-1.2.ebuild,v 1.8 2006/07/02 13:37:39 pylon Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.lallafa.de/bp/cpvts.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 DEPEND="media-libs/libdvdread"
 

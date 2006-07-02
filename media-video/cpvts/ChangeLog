@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cpvts
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cpvts/ChangeLog,v 1.8 2006/06/30 04:45:42 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cpvts/ChangeLog,v 1.9 2006/07/02 13:37:40 pylon Exp $
+
+  02 Jul 2006; Lars Weiler <pylon@gentoo.org> cpvts-1.2.ebuild:
+  Stable on ppc; bug #138007.
 
   30 Jun 2006; Joshua Jackson <tsunam@gentoo.org> cpvts-1.2.ebuild:
   Stable on x86; bug #138007
