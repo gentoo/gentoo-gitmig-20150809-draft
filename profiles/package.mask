@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5579 2006/07/03 08:03:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5580 2006/07/03 08:51:05 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -131,10 +131,6 @@ app-admin/scotty
 # Diego Pettenò <flameeyes@gentoo.org> (19 Jun 2006)
 # 0.4.2 release is badly broken, and previous 0.4 aren't at usable state
 =media-libs/tunepimp-0.4*
-
-# Diego Pettenò <flameeyes@gentoo.org> (19 Jun 2006)
-# Beta release
-=media-sound/amarok-1.4.1_beta*
 
 # Danny van Dyk <kugelfang@gentoo.org> (18 Jun 2006)
 # Masked pending removal, due to open bug #88302 and
