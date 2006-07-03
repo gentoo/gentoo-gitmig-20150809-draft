@@ -1,0 +1,12 @@
+Index: src/eselect/java-nsplugin.eselect
+===================================================================
+--- src/eselect/java-nsplugin.eselect	(revision 2404)
++++ src/eselect/java-nsplugin.eselect	(working copy)
+@@ -25,6 +25,7 @@
+ 
+ 		for (( i = 0 ; i < ${#targets[@]} ; i = i + 1 )) ; do
+ 			local vm=${targets[${i}]}
++			local mark=""
+ 			if [[ ${vm} == ${system_name} ]]; then
+ 				mark="${mark} $(highlight 'current')"
+ 			fi
