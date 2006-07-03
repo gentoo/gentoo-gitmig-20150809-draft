@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.13 2006/06/30 12:19:35 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.14 2006/07/03 12:07:22 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gaim/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
-IUSE="nls perl spell nas cjk gnutls silc eds krb4 tcltk debug"
+IUSE="nls perl spell nas cjk gnutls silc eds tcltk debug"
 
 RDEPEND=">=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0
@@ -24,9 +24,8 @@ RDEPEND=">=x11-libs/gtk+-2.0
 	!gnutls? ( >=dev-libs/nss-3.9.2-r2 )
 	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )
 	eds? ( gnome-extra/evolution-data-server )
-	krb4? ( >=app-crypt/mit-krb5-1.3.6-r1 )
 	tcltk? ( dev-lang/tcl
-			dev-lang/tk )
+		dev-lang/tk )
 	x11-libs/startup-notification"
 
 DEPEND="$RDEPEND
@@ -80,13 +79,6 @@ print_gaim_warning() {
 
 pkg_setup() {
 	print_gaim_warning
-	if use krb4 && ! built_with_use app-crypt/mit-krb5 krb4 ; then
-		eerror
-		eerror You need to rebuild app-crypt/mit-krb5 with USE=krb4 in order to
-		eerror enable krb4 support for the zephyr protocol in gaim.
-		eerror
-		die "Configure failed"
-	fi
 }
 
 src_unpack() {
@@ -110,7 +102,6 @@ src_compile() {
 	use nls  || myconf="${myconf} --disable-nls"
 	use nas && myconf="${myconf} --enable-nas" || myconf="${myconf} --disable-nas"
 	use eds || myconf="${myconf} --disable-gevolution"
-	use krb4 && myconf="${myconf} --with-krb4"
 	use tcltk || myconf="${myconf} --disable-tcl --disable-tk"
 
 	if use gnutls ; then

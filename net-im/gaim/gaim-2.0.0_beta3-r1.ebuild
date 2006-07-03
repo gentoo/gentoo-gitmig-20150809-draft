@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.4 2006/07/01 19:16:17 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.5 2006/07/03 12:07:22 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-module
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/gaim/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="avahi audiofile bonjour cjk dbus debug eds gadu gnutls krb4 meanwhile mono nas nls perl silc spell startup-notification tcltk xscreensaver custom-flags"
+IUSE="avahi audiofile bonjour cjk dbus debug eds gadu gnutls meanwhile mono nas nls perl silc spell startup-notification tcltk xscreensaver custom-flags"
 
 RDEPEND="
 	audiofile? ( media-libs/libao
@@ -35,7 +35,6 @@ RDEPEND="
 	meanwhile? ( net-libs/meanwhile )
 	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )
 	eds? ( gnome-extra/evolution-data-server )
-	krb4? ( >=app-crypt/mit-krb5-1.3.6-r1 )
 	tcltk? ( dev-lang/tcl
 		dev-lang/tk )
 	startup-notification? ( >=x11-libs/startup-notification-0.5 )
@@ -117,14 +116,6 @@ print_gaim_warning() {
 pkg_setup() {
 	print_gaim_warning
 
-	if use krb4 && ! built_with_use app-crypt/mit-krb5 krb4 ; then
-	eerror
-	eerror You need to rebuild app-crypt/mit-krb5 with USE=krb4 in order to
-	eerror enable krb4 support for the zephyr protocol in gaim.
-	eerror
-	die "Configure failed"
-	fi
-
 	if use avahi && ! built_with_use net-dns/avahi howl-compat ; then
 	eerror
 	eerror You need to rebuild net-dns/avavhi with USE=howl-compat in order
@@ -199,7 +190,6 @@ src_compile() {
 		$(use_enable tcltk tk) \
 		$(use_enable xscreensaver screensaver) \
 		$(use_enable mono) \
-		$(use_enable krb4) \
 		$(use_enable debug) \
 		$(use_enable dbus) \
 		$(use_enable meanwhile) \
