@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.05.ebuild,v 1.6 2006/01/15 19:40:49 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.05.ebuild,v 1.7 2006/07/03 13:14:25 betelgeuse Exp $
 
 IUSE=""
 
@@ -25,8 +25,7 @@ HOMEPAGE="http://commerce.bea.com/downloads/weblogic_jrockit.jsp"
 LICENSE="jrockit"
 SLOT="1.4"
 KEYWORDS="~x86 ~ia64"
-DEPEND="virtual/libc
-	>=app-arch/unzip-5.50-r1"
+DEPEND=">=app-arch/unzip-5.50-r1"
 
 PROVIDE="virtual/jre
 	virtual/jdk"

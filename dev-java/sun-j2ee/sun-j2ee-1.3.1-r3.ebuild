@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r3.ebuild,v 1.1 2005/12/26 23:53:13 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r3.ebuild,v 1.2 2006/07/03 13:13:13 betelgeuse Exp $
 
 inherit java-pkg eutils
 
@@ -9,8 +9,7 @@ MY_PN="j2sdkee"
 DESCRIPTION="Sun's Java 2 Enterprise Edition Development Kit"
 SRC_URI="${MY_PN}-1_3_1-linux.tar.gz"
 HOMEPAGE="http://java.sun.com/j2ee/download.html#sdk"
-DEPEND="virtual/libc
-		>=sys-libs/lib-compat-1.1"
+DEPEND=">=sys-libs/lib-compat-1.1"
 RDEPEND=">=virtual/jre-1.3.1"
 PROVIDE="virtual/j2ee"
 LICENSE="sun-bcla-j2ee"
