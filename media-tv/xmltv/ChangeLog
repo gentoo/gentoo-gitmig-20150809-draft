@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.54 2006/07/01 16:29:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.55 2006/07/03 09:14:30 mattepiu Exp $
+
+  03 Jul 2006; Matteo Azzali <mattepiu@gentoo.org> xmltv-0.5.44.ebuild:
+  Fixed XML::Write dependancy, bug #138838 , thanks to Pierre Cassimans
 
   01 Jul 2006; Michael Cummings <mcummings@gentoo.org> xmltv-0.5.44.ebuild:
   Keyworded ~amd64
