@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.144 2006/07/03 08:50:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.145 2006/07/03 17:09:44 flameeyes Exp $
+
+*amarok-1.4.1-r1 (03 Jul 2006)
+
+  03 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> -amarok-1.4.1.ebuild,
+  +amarok-1.4.1-r1.ebuild:
+  Rename lastfm.protocol file to amaroklasfm.protocol to avoid collisions with
+  lastfmplayer. Thanks to Michael Weyershäuser in bug #139032.
 
 *amarok-1.4.1 (03 Jul 2006)
 
