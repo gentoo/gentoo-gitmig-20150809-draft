@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.13.ebuild,v 1.8 2006/06/02 15:36:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.13.ebuild,v 1.9 2006/07/03 01:03:45 anarchy Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -43,7 +43,8 @@ IUSE="crypt gnome java ldap mozcalendar mozdevelop moznocompose moznoirc moznoma
 RDEPEND="java? ( virtual/jre )
 	mozsvg? ( !<x11-base/xorg-x11-6.7.0-r2 )
 	crypt? ( !moznomail? ( >=app-crypt/gnupg-1.2.1 ) )
-	>=www-client/mozilla-launcher-1.42"
+	>=www-client/mozilla-launcher-1.42
+	!www-client/seamonkey"
 
 DEPEND="${RDEPEND}
 	~sys-devel/autoconf-2.13

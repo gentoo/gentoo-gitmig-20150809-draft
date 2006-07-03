@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.98 2006/06/12 02:22:49 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.99 2006/07/03 01:03:45 anarchy Exp $
+
+  03 Jul 2006; anarchy <anarchy@gentoo.org> mozilla-1.7.13.ebuild:
+  block on seamonkey
 
   12 Jun 2006; Jory A. Pratt <anarchy@gentoo.org> -mozilla-1.7.10-r1.ebuild,
   -mozilla-1.7.10-r2.ebuild, -mozilla-1.7.10-r3.ebuild,
