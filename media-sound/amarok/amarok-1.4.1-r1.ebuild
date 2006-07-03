@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.1-r1.ebuild,v 1.1 2006/07/03 17:09:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.1-r1.ebuild,v 1.2 2006/07/03 19:37:56 flameeyes Exp $
 
 LANGS="az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja ka
 km ko lt ms nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tg th tr uk uz
 zh_CN zh_TW"
-LANGS_DOC="da de es et fr it nl pl pt pt_BR ru sv"
+LANGS_DOC="da de es et fr it nl pt pt_BR ru sv"
 
 USE_KEG_PACKAGING=1
 
