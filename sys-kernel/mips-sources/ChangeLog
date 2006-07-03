@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.97 2006/06/07 22:13:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.98 2006/07/03 05:09:32 kumba Exp $
+
+*mips-sources-2.6.17.3 (03 Jul 2006)
+*mips-sources-2.6.16.22 (03 Jul 2006)
+
+  03 Jul 2006; Joshua Kinard <kumba@gentoo.org>
+  mips-sources-2.6.15.7-r1.ebuild, -mips-sources-2.6.16.20.ebuild,
+  +mips-sources-2.6.16.22.ebuild, +mips-sources-2.6.17.3.ebuild:
+  Update 2.6.16.20 to 2.6.16.22, import 2.6.17.3, and mask 2.6.15-r7 for all
+  systems except IP22, as this is the last known kernel that worked on IP22 in
+  64bit mode. 2.6.16.22 and 2.6.17.3 include SquashFS for the first time, as
+  well as being the barrier between linuxthreads and nptl support. This means
+  2.6.17 is enabled only in the 2006.1 nptl sub-profiles, and masked in all
+  other profiles. It is intended to be used with a transitional
+  linuxthreads->nptl userland, as linuxthreads support will die with 2.6.16*.
 
 *mips-sources-2.6.16.20 (07 Jun 2006)
 

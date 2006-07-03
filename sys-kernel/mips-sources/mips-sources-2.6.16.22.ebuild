@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.15.7-r1.ebuild,v 1.2 2006/07/03 05:09:32 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.16.22.ebuild,v 1.1 2006/07/03 05:09:32 kumba Exp $
 
 
 # INCLUDED:
@@ -20,9 +20,9 @@
 
 # Version Data
 OKV=${PV/_/-}
-GITDATE="20060109"			# Date of diff between kernel.org and lmo GIT
+GITDATE="20060320"			# Date of diff between kernel.org and lmo GIT
 SECPATCHVER="1.15"			# Tarball version for security patches
-GENPATCHVER="1.21"			# Tarball version for generic patches
+GENPATCHVER="1.22"			# Tarball version for generic patches
 EXTRAVERSION="-mipsgit-${GITDATE}"
 KV="${OKV}${EXTRAVERSION}"
 F_KV="${OKV}"				# Fetch KV, used to know what mipsgit diff to grab.
@@ -44,27 +44,28 @@ SLOT="${OKV}"
 PROVIDE="virtual/linux-sources virtual/alsa"
 KEYWORDS="-* mips"
 IUSE="cobalt ip27 ip28 ip30 ip32r10k"
-DEPEND="<=sys-devel/gcc-3.4.5-r1"
+DEPEND=">=sys-devel/gcc-3.4.6"
+
 
 # Version Control Variables
 USE_RC="no"				# If set to "yes", then attempt to use an RC kernel
 USE_PNT="yes"				# If set to "yes", then attempt to use a point-release (2.6.x.y)
 
 # Machine Support Control Variables
-DO_IP22="yes"				# If "yes", enable IP22 support		(SGI Indy, Indigo2 R4x00)
-DO_IP27="no"				# 		   IP27 support		(SGI Origin)
-DO_IP28="no"				# 		   IP28 support		(SGI Indigo2 Impact R10000)
-DO_IP30="no"				# 		   IP30 support		(SGI Octane)
-DO_IP32="no"				# 		   IP32 support		(SGI O2, R5000/RM5200 Only)
-DO_CBLT="no"				# 		   Cobalt Support	(Cobalt Microsystems)
+DO_IP22="no"				# If "yes", enable IP22 support		(SGI Indy, Indigo2 R4x00)
+DO_IP27="yes"				# 		   IP27 support		(SGI Origin)
+DO_IP28="yes"				# 		   IP28 support		(SGI Indigo2 Impact R10000)
+DO_IP30="yes"				# 		   IP30 support		(SGI Octane)
+DO_IP32="yes"				# 		   IP32 support		(SGI O2, R5000/RM5200 Only)
+DO_CBLT="yes"				# 		   Cobalt Support	(Cobalt Microsystems)
 
 # Machine Stable Version Variables 
-SV_IP22=""				# If set && DO_IP22 == "no", indicates last "good" IP22 version
-SV_IP27="2.6.16.22"			# 	    DO_IP27 == "no", 			   IP27
-SV_IP28="2.6.16.22"			# 	    DO_IP28 == "no", 			   IP28
-SV_IP30="2.6.16.22"			# 	    DO_IP30 == "no", 			   IP30
-SV_IP32="2.6.16.22"			# 	    DO_IP32 == "no", 			   IP32
-SV_CBLT="2.6.16.22"			# 	    DO_CBLT == "no", 			   Cobalt
+SV_IP22="2.6.15.7-r1"			# If set && DO_IP22 == "no", indicates last "good" IP22 version
+SV_IP27=""				# 	    DO_IP27 == "no", 			   IP27
+SV_IP28=""				# 	    DO_IP28 == "no", 			   IP28
+SV_IP30=""				# 	    DO_IP30 == "no", 			   IP30
+SV_IP32=""				# 	    DO_IP32 == "no", 			   IP32
+SV_CBLT=""				# 	    DO_CBLT == "no", 			   Cobalt
 
 
 # If USE_RC == "yes", use a release candidate kernel (2.6.X-rcY)
@@ -214,6 +215,9 @@ show_ip30_info() {
 	einfo "\t- VPro (Odyssey) console works, but no X driver exists yet."
 	einfo "\t- PCI Card Cages should work for many devices, except certain types like"
 	einfo "\t\040\040PCI-to-PCI bridges (USB hubs, USB flash card readers for example)."
+	einfo "\t- Do not plug more than two devices into a OHCI-based USB PCI card, as"
+	einfo "\t\040\040there is a known problem with OHCI USB cards and Octane, which will"
+	einfo "\t\040\040prevent the machine from booting into userland."
 	einfo "\t- Other XIO-based devices like MENET and various Impact addons remain"
 	einfo "\t\040\040untested and are not guaranteed to work.  This applies to various"
 	einfo "\t\040\040digital video conversion boards as well."
@@ -357,32 +361,32 @@ do_generic_patches() {
 		echo -e ""
 
 		# IP22 Patches
-		epatch ${MIPS_PATCHES}/misc-2.6.11-ip22-chk-consoleout-is-serial.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.15-ip22-hal2-kconfig-tweaks.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.16-ip22-vino-64bit-ioctl-fixes.patch
 
 		# IP32 Patches
-		epatch ${MIPS_PATCHES}/misc-2.6.10-ip32-tweak-makefile.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.11-ip32-mace-is-always-eth0.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.15-ip32-fix-another-gbefb-typo.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.15-ip32-fix-rm52xx-support.patch
 
 		# Cobalt Patches
-		epatch ${MIPS_PATCHES}/misc-2.6.15-cobalt-bits.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.16-cobalt-bits.patch
 
 		# Generic
-		epatch ${MIPS_PATCHES}/misc-2.6.15-ths-mips-tweaks.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.16-ths-mips-tweaks.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.15-mips-iomap-functions.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.12-seccomp-no-default.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.11-add-byteorder-to-proc.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.13-n32-fix-sigsuspend.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.15-r14k-cpu-prid.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.15-add-4k_cache_defines.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.15-rev-i18n.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.16-rev-i18n.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.15-fix-4k-cache-macros.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.15-__always_inline-for-__xchg.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.15-remove-wrong-__user-tags.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.15-vgacon-accesses-unmapped-space.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.15-add-__user-tags-to-signal-funcs.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.16-fix-futex_atomic_op_inuser.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.16-fix-fpu_save_double-on-64bit.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.16-disable-stupid-nls-cruft.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.16-def-arch_has_irq_per_cpu-for-smp.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.16-fix-mempolicy.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.16-tweak-makefiles.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.17-squashfs-3.0.patch
 	eend
 }
 
@@ -396,7 +400,7 @@ do_sekrit_patches() {
 		# Modified version of the IP28 cache barriers patch for the kernel
 		# that removes all the IP28 specific pieces and leaves behind only
 		# the generic segments.
-		epatch ${MIPS_PATCHES}/misc-2.6.15-ip32-r10k-support.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.16-ip32-r10k-support.patch
 	fi
 
 ##	# No Sekrit Patches!
@@ -428,16 +432,18 @@ do_security_patches() {
 do_ip27_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Origin (IP27) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.15-ioc3-metadriver-r26.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.16-ioc3-metadriver-r26.patch
 	epatch ${MIPS_PATCHES}/misc-2.6.13-ip27-horrible-hacks_may-eat-kittens.patch
 	epatch ${MIPS_PATCHES}/misc-2.6.14-ip27-rev-pci-tweak.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.16-ip27-fix-collision-with-hardcode.patch
 }
 
 # SGI Indigo2 Impact R10000 (IP28)
 do_ip28_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Indigo2 Impact R10000 (IP28) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.15-ip28-i2_impact-support.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.16-ip28-i2_impact-support.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.17-ip28-impact-mmapfix.patch
 }
 
 
@@ -445,8 +451,9 @@ do_ip28_support() {
 do_ip30_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Octane (IP30) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.15-ioc3-metadriver-r26.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.15-ip30-octane-support-r27.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.16-ioc3-metadriver-r26.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.16-ip30-octane-support-r27.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.17-ip30-impact-vpro-mmapfix.patch
 }
 
 
