@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/acml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.9 2006/05/15 15:41:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.10 2006/07/03 08:06:59 spyderous Exp $
+
+*acml-3.1.0-r1 (03 Jul 2006)
+
+  03 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +acml-3.1.0-r1.ebuild:
+  Bumps to switch to new eselect modules.
 
   15 May 2006; Donnie Berkholz <spyderous@gentoo.org>; acml-2.5.0.ebuild:
   Update homepage to match the others. Some programs cache the first one they
