@@ -1,0 +1,8 @@
+# ChangeLog for media-tv/pcHDTV-extras
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/pcHDTV-extras/ChangeLog,v 1.1 2006/07/03 13:37:31 vapier Exp $
+
+*pcHDTV-extras-1.0 (03 Jul 2006)
+
+  03 Jul 2006; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
