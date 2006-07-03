@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060415.ebuild,v 1.18 2006/06/27 09:05:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060415.ebuild,v 1.19 2006/07/03 18:41:14 tcort Exp $
 
 inherit eutils flag-o-matic
 
@@ -134,7 +134,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 -hppa ~ia64 -ppc -ppc64 -sparc -x86"
+KEYWORDS="-alpha -amd64 -hppa ~ia64 -ppc -ppc64 -sparc -x86"
 
 pkg_setup() {
 	if use real && use x86; then

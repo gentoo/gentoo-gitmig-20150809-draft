@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.394 2006/06/28 04:20:08 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.395 2006/07/03 18:41:14 tcort Exp $
+
+  03 Jul 2006; Thomas Cort <tcort@gentoo.org> mplayer-1.0.20060102.ebuild,
+  mplayer-1.0.20060217.ebuild, mplayer-1.0.20060302.ebuild,
+  mplayer-1.0.20060408.ebuild, mplayer-1.0.20060415.ebuild:
+  -alpha and -amd64 all snapshots wrt Bug #136520.
 
   28 Jun 2006; Thomas Cort <tcort@gentoo.org> mplayer-1.0_pre8.ebuild:
   Stable on alpha wrt Bug #136520.
