@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.182 2006/06/17 05:13:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.183 2006/07/03 15:04:43 allanonjl Exp $
+
+*nautilus-1.0.6-r10 (03 Jul 2006)
+
+  03 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -nautilus-1.0.6-r9.ebuild, +nautilus-1.0.6-r10.ebuild:
+  always disable mozilla plugin for nautilus-1. if someone wants to backport
+  some fixes to work with seamonkey, it can be re-enabled.
 
   17 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
   nautilus-1.0.6-r9.ebuild:
