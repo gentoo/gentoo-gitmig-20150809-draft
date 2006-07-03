@@ -1,0 +1,15 @@
+Index: src/eselect/java-nsplugin.eselect
+===================================================================
+--- src/eselect/java-nsplugin.eselect	(revision 2422)
++++ src/eselect/java-nsplugin.eselect	(working copy)
+@@ -45,6 +45,10 @@
+ 	do_set() {
+ 		# TODO check for # of args
+ 		local vm=${1}
++		if is_number "${vm}" ; then
++			local targets=( $(get_targets) )
++			vm=${targets[$(( ${vm} - 1 ))]}
++		fi
+ 		local plugin="${PLUGINS_HOME}/${vm}-javaplugin.so"
+ 
+ 		if [[ ! -f ${plugin} ]]; then
