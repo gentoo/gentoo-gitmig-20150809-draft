@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.141 2006/06/11 10:28:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.142 2006/07/03 13:05:21 kevquinn Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -356,34 +356,38 @@ app-office/koffice app-office/kword
 '
 
 # accepts 1 parameter, the name of a split ebuild; echoes the name of its mother package
-get-parent-package () {
-	local target=$1 parent child
-	echo "$KDE_DERIVATION_MAP" | while read parent child; do
-		if [ "$target" == "$child" ]; then
-			echo $parent
-			return 1
+get-parent-package() {
+	local parent child
+	while read parent child; do
+		if [[ ${child} == $1 ]]; then
+			echo ${parent}
+			return 0
 		fi
-	done
-	[ "$?" == "0" ] && die "Package $target not found in KDE_DERIVATION_MAP, please report bug"
+	done <<EOF
+$KDE_DERIVATION_MAP
+EOF
+	die "Package $target not found in KDE_DERIVATION_MAP, please report bug"
 }
 
 # accepts 1 parameter, the name of a monolithic package; echoes the names of all ebuilds derived from it
-get-child-packages () {
-	local target=$1 parent child
-	echo "$KDE_DERIVATION_MAP" | while read parent child; do
-		if [ "$target" == "$parent" ]; then
-			echo -n "$child "
-		fi
-	done
+get-child-packages() {
+	local parent child
+	while read parent child; do
+		[[ ${parent} == $1 ]] && echo -n "${child} "
+	done <<EOF
+$KDE_DERIVATION_MAP
+EOF
 }
 
 is-parent-package() {
-	echo "$KDE_DERIVATION_MAP" | while read parent child; do
-		[[ "${parent}" == "$1" ]] && return 1
-	done
-	return 0
+	local parent child
+	while read parent child; do
+		[[ "${parent}" == "$1" ]] && return 0
+	done <<EOF
+$KDE_DERIVATION_MAP
+EOF
+	return 1
 }
-
 # convinience functions for requesting autotools versions
 need-automake() {
 
