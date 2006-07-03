@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.03.ebuild,v 1.9 2006/04/05 22:48:31 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.03.ebuild,v 1.10 2006/07/03 13:31:47 betelgeuse Exp $
 
 inherit java eutils
 
@@ -44,7 +44,7 @@ SLOT="1.4"
 KEYWORDS="-* amd64 ppc ppc64 x86"
 IUSE="X doc javacomm nsplugin"
 
-DEPEND="virtual/libc
+DEPEND="
 		X? ( || (
 					(
 						x11-libs/libXt

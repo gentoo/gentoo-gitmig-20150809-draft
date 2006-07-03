@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.25 2006/01/14 22:12:47 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.26 2006/07/03 13:19:34 betelgeuse Exp $
 
 inherit java toolchain-funcs
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="ppc -*"
 IUSE="browserplugin nsplugin mozilla"
 
-DEPEND="virtual/libc
-	>=sys-apps/sed-4
+DEPEND=">=sys-apps/sed-4
 	>=sys-devel/gcc-3.2"
 PROVIDE="virtual/jre"
 

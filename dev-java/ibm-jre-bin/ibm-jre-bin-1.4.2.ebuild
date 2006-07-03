@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.ebuild,v 1.16 2006/01/23 14:27:44 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.ebuild,v 1.17 2006/07/03 13:23:32 betelgeuse Exp $
 
 inherit java
 
@@ -17,7 +17,7 @@ LICENSE="IBM-J1.4"
 KEYWORDS="ppc ~x86 ppc64 -*"
 RESTRICT=fetch
 
-DEPEND="virtual/libc"
+DEPEND=""
 RDEPEND=""
 
 if use ppc; then

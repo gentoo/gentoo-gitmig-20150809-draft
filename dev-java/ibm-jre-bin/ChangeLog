@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.32 2006/07/01 22:33:46 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.33 2006/07/03 13:23:32 betelgeuse Exp $
+
+  03 Jul 2006; Petteri Räty <betelgeuse@gentoo.org>
+  ibm-jre-bin-1.4.2.ebuild, ibm-jre-bin-1.4.2.03.ebuild,
+  ibm-jre-bin-1.4.2.04.ebuild:
+  Removed useless dependencies on virtual/libc.
 
   01 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
   -ibm-jre-bin-1.4.2.05.ebuild, +ibm-jre-bin-1.4.2.5.ebuild:

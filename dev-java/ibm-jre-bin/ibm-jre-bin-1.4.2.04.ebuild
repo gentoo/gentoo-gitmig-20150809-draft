@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.04.ebuild,v 1.2 2006/03/12 13:36:26 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.04.ebuild,v 1.3 2006/07/03 13:23:32 betelgeuse Exp $
 
 inherit java eutils
 
@@ -30,7 +30,7 @@ SLOT="1.4"
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 IUSE="X nsplugin"
 
-DEPEND="virtual/libc
+DEPEND="
 		X? ( || (
 					(
 						x11-libs/libXt

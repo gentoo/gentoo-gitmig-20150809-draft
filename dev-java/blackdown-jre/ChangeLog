@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/blackdown-jre
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.76 2006/06/25 17:21:37 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.77 2006/07/03 13:19:34 betelgeuse Exp $
+
+  03 Jul 2006; Petteri Räty <betelgeuse@gentoo.org>
+  blackdown-jre-1.3.1-r9.ebuild, blackdown-jre-1.3.1-r20.ebuild,
+  blackdown-jre-1.4.1-r1.ebuild, blackdown-jre-1.4.1-r12.ebuild,
+  blackdown-jre-1.4.2.03.ebuild, blackdown-jre-1.4.2.03-r2.ebuild,
+  blackdown-jre-1.4.2.03-r11.ebuild:
+  Removed useless dependencies on virtual/libc.
 
   25 Jun 2006; Joshua Nichols <nichoj@gentoo.org>
   +files/blackdown-jre-1.3.env, +files/blackdown-jre-1.4.1.env,

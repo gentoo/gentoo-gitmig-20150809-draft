@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.17-r10.ebuild,v 1.1 2006/07/02 06:57:34 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.17-r10.ebuild,v 1.2 2006/07/03 13:29:42 betelgeuse Exp $
 
 inherit java-vm-2 eutils
 
@@ -13,7 +13,7 @@ S="${WORKDIR}/${MY_P}"
 SRC_URI="${At}"
 DESCRIPTION="Sun Java Development Kit"
 HOMEPAGE="http://java.sun.com/j2se/1.3/"
-DEPEND="virtual/libc
+DEPEND="
 	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
 RDEPEND="sys-libs/lib-compat
 	doc? ( =dev-java/java-sdk-docs-1.3.1* )

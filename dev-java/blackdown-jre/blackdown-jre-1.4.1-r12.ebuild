@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1-r12.ebuild,v 1.1 2006/06/25 17:21:37 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1-r12.ebuild,v 1.2 2006/07/03 13:19:34 betelgeuse Exp $
 
 inherit java-vm-2 toolchain-funcs
 
@@ -19,7 +19,7 @@ SRC_URI="
 		ftp://ftp.uk.linux.org/pub/linux/java/JDK-1.4.1/sparc/01/j2re-1.4.1-01-linux-sparc-gcc3.2.bin
 	)"
 HOMEPAGE="http://www.blackdown.org"
-DEPEND="virtual/libc
+DEPEND="
 	emul-linux-x86? ( >=app-emulation/emul-linux-x86-baselibs-1 )
 	>=dev-java/java-config-0.2.5
 	>=sys-apps/sed-4"

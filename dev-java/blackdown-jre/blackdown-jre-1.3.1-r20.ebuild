@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r20.ebuild,v 1.1 2006/06/25 17:21:37 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r20.ebuild,v 1.2 2006/07/03 13:19:34 betelgeuse Exp $
 
 inherit java-vm-2 toolchain-funcs
 
@@ -14,8 +14,7 @@ SLOT="1.3"
 KEYWORDS="~ppc -*"
 IUSE="nsplugin"
 
-DEPEND="virtual/libc
-	>=sys-apps/sed-4
+DEPEND=">=sys-apps/sed-4
 	>=sys-devel/gcc-3.2"
 PROVIDE="virtual/jre"
 

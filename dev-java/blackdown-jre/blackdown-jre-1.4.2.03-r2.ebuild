@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.03-r2.ebuild,v 1.1 2006/01/20 00:27:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.03-r2.ebuild,v 1.2 2006/07/03 13:19:34 betelgeuse Exp $
 
 inherit java versionator
 
@@ -20,7 +20,7 @@ SLOT="1.4.2"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="X alsa browserplugin nsplugin mozilla"
-DEPEND="virtual/libc
+DEPEND="
 	>=sys-apps/sed-4
 	alsa? ( media-libs/alsa-lib )
 	X? ( || ( (
