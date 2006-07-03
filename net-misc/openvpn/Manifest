@@ -6,10 +6,10 @@ AUX openvpn-2.0.4-darwin.patch 717 RMD160 66aa5ea349329cf3e6089aa75eb7c80e0d2106
 MD5 9f0fcb64287dc55bb770ca86415e5cdd files/openvpn-2.0.4-darwin.patch 717
 RMD160 66aa5ea349329cf3e6089aa75eb7c80e0d21063b files/openvpn-2.0.4-darwin.patch 717
 SHA256 ad70b77c10bb57a07af3d512e953fc8b5a07108df5bf9795e0cb12e1ba2b2136 files/openvpn-2.0.4-darwin.patch 717
-AUX openvpn-2.1.init 3151 RMD160 e5af61b4e77a52d953ca7338d8b57e2320216f26 SHA1 c7040ff42fcb4f4b67ea3c7a19efefa354176a72 SHA256 55514885589fb82c8fe885885537d3c4a73fbefb1aeace6e3c57cf2a002eb82f
-MD5 e1c44a7a423ea4061b046a43c31d8d12 files/openvpn-2.1.init 3151
-RMD160 e5af61b4e77a52d953ca7338d8b57e2320216f26 files/openvpn-2.1.init 3151
-SHA256 55514885589fb82c8fe885885537d3c4a73fbefb1aeace6e3c57cf2a002eb82f files/openvpn-2.1.init 3151
+AUX openvpn-2.1.init 3171 RMD160 f28e40b46dd09c4bf8aa0108b13b36ce198fe78a SHA1 17754de01c7a2851ea1b39671bdac822420cfce4 SHA256 3bfce1ecea5ab08f6014de21505253cb35e37e93bacaf6746b4b5b5d21642d2f
+MD5 edd65c3820a31e55fedcadd7a3b029be files/openvpn-2.1.init 3171
+RMD160 f28e40b46dd09c4bf8aa0108b13b36ce198fe78a files/openvpn-2.1.init 3171
+SHA256 3bfce1ecea5ab08f6014de21505253cb35e37e93bacaf6746b4b5b5d21642d2f files/openvpn-2.1.init 3171
 AUX openvpn.init 1458 RMD160 38e1c7ef3197bbb5d9f7fc764f6ce5149387a4e6 SHA1 6b6aef1a95177f68c20623c07198abd421502ad9 SHA256 54f33e766a455baeb5f8e1e318ad3be5fb0b88450ffad98f90812d64baef5e04
 MD5 a66a9752a2dce48aa7061a535ef2ab4d files/openvpn.init 1458
 RMD160 38e1c7ef3197bbb5d9f7fc764f6ce5149387a4e6 files/openvpn.init 1458
