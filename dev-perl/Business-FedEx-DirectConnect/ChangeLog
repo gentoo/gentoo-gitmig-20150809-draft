@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Business-FedEx-DirectConnect
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Business-FedEx-DirectConnect/ChangeLog,v 1.6 2006/03/30 22:13:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Business-FedEx-DirectConnect/ChangeLog,v 1.7 2006/07/03 20:27:27 ian Exp $
+
+  03 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Business-FedEx-DirectConnect-1.01.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   Business-FedEx-DirectConnect-1.01.ebuild:

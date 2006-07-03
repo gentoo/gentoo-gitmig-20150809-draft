@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/Archive-Tar-1.23-r1.ebuild,v 1.9 2006/02/13 10:39:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/Archive-Tar-1.23-r1.ebuild,v 1.10 2006/07/03 20:14:48 ian Exp $
 
 inherit perl-module
 
@@ -16,3 +16,4 @@ IUSE=""
 DEPEND="dev-perl/IO-Zlib
 	dev-perl/IO-String
 	>=virtual/perl-Test-Harness-2.26"
+RDEPEND="${DEPEND}"

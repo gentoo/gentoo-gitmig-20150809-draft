@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Authen-PAM
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-PAM/ChangeLog,v 1.26 2006/02/06 19:56:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-PAM/ChangeLog,v 1.27 2006/07/03 20:21:17 ian Exp $
+
+  03 Jul 2006; Christian Hartmann <ian@gentoo.org> Authen-PAM-0.14.ebuild,
+  Authen-PAM-0.16.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> Authen-PAM-0.16.ebuild:
   stable on amd64

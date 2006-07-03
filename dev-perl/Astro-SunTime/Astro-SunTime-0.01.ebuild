@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-SunTime/Astro-SunTime-0.01.ebuild,v 1.5 2006/06/08 21:04:23 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-SunTime/Astro-SunTime-0.01.ebuild,v 1.6 2006/07/03 20:18:10 ian Exp $
 
 inherit perl-module
 
@@ -15,3 +15,4 @@ IUSE=""
 
 SRC_TEST="do"
 DEPEND="dev-perl/Time-modules"
+RDEPEND="${DEPEND}"

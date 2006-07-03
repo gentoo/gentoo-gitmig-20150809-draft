@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/AppConfig
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.29 2006/04/24 15:10:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.30 2006/07/03 20:13:43 ian Exp $
+
+  03 Jul 2006; Christian Hartmann <ian@gentoo.org> AppConfig-1.56-r1.ebuild,
+  AppConfig-1.56-r2.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   AppConfig-1.56-r2.ebuild:
