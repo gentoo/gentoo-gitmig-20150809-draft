@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.343 2006/06/22 14:10:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.344 2006/07/03 12:20:53 caleb Exp $
+
+  03 Jul 2006; Caleb Tennis <caleb@gentoo.org> kdelibs-3.5.2-r6.ebuild,
+  kdelibs-3.5.3-r3.ebuild:
+  Add iceauth as a dep, as it is required by the dcopserver
 
 *kdelibs-3.5.3-r3 (22 Jun 2006)
 
