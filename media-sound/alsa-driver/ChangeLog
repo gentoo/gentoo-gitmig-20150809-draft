@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.220 2006/07/01 23:16:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.221 2006/07/03 17:07:37 flameeyes Exp $
+
+  03 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -alsa-driver-1.0.12_rc1.ebuild, alsa-driver-1.0.12_rc1-r1.ebuild:
+  Remove once again the broken driver, upstream didn't fix it yet. Closes bug
+  #139034.
 
 *alsa-driver-1.0.12_rc1-r1 (01 Jul 2006)
 

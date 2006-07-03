@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.12_rc1-r1.ebuild,v 1.1 2006/07/01 23:16:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.12_rc1-r1.ebuild,v 1.2 2006/07/03 17:07:37 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils multilib
 
@@ -82,7 +82,7 @@ src_unpack() {
 
 		# asihpi driver is broken, skip it until upstream releases something
 		# working.
-		# sed -i -e 's:asihpi/::' "${S}/pci/Makefile"
+		sed -i -e 's:asihpi/::' "${S}/pci/Makefile"
 	fi
 
 	convert_to_m "${S}/Makefile"
