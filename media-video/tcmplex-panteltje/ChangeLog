@@ -1,6 +1,11 @@
 # ChangeLog for media-video/tcmplex-panteltje
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tcmplex-panteltje/ChangeLog,v 1.7 2006/06/28 13:24:51 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tcmplex-panteltje/ChangeLog,v 1.8 2006/07/03 17:44:03 hd_brummy Exp $
+
+  03 Jul 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -files/tcmplex-panteltje-0.4.7_breakIfBrokenPatch.diff,
+  -tcmplex-panteltje-0.4.7-r1.ebuild:
+  -r1 removed; broken patch give seg faults
 
 *tcmplex-panteltje-0.4.7-r1 (28 Jun 2006)
 
