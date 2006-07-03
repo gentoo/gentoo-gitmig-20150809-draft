@@ -1,17 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b0e9bb49c26ae50cea0feb53ad9cebb8 ChangeLog 2728
-MD5 64bb5dfcbe16b1714d009dceabdadc43 files/digest-sun-j2ee-1.3.1-r2 73
-MD5 64bb5dfcbe16b1714d009dceabdadc43 files/digest-sun-j2ee-1.3.1-r3 73
+AUX sun-j2ee-1.3.1-scripts.patch 5202 RMD160 3b55b65a7e0c77c4ebc80fb1165046eae783740c SHA1 291b671d4492dc761dda80a11b111fabb7450b75 SHA256 9a783b9f7afa24e0a585dd3fa5b29af891fcd4fc22d40e3661f8035d69b0f6fc
 MD5 0e746d96b6bd83a7b3f23659bc73331d files/sun-j2ee-1.3.1-scripts.patch 5202
+RMD160 3b55b65a7e0c77c4ebc80fb1165046eae783740c files/sun-j2ee-1.3.1-scripts.patch 5202
+SHA256 9a783b9f7afa24e0a585dd3fa5b29af891fcd4fc22d40e3661f8035d69b0f6fc files/sun-j2ee-1.3.1-scripts.patch 5202
+DIST j2sdkee-1_3_1-linux.tar.gz 14863533
+EBUILD sun-j2ee-1.3.1-r2.ebuild 1341 RMD160 445adac5baecdbdbbc46c4a39f76a0ba32121d8c SHA1 41e3cb43daf1645a4cd48c0ccd330e132a9df798 SHA256 01384e6d6379570abad05258126adfa2192e1f6c279b5e4bf33949eaed5ceeb5
+MD5 4d9edbda78609104fca2b881d15746c9 sun-j2ee-1.3.1-r2.ebuild 1341
+RMD160 445adac5baecdbdbbc46c4a39f76a0ba32121d8c sun-j2ee-1.3.1-r2.ebuild 1341
+SHA256 01384e6d6379570abad05258126adfa2192e1f6c279b5e4bf33949eaed5ceeb5 sun-j2ee-1.3.1-r2.ebuild 1341
+EBUILD sun-j2ee-1.3.1-r3.ebuild 1421 RMD160 59d79b5ad07f8831a423a22aa12e0e7a3f8a6e98 SHA1 5ba5ec71bc0f67f39751e471d388fdf9852ad9fe SHA256 a09644fa7fe1b9682a91efedc0a4fc9040080902177f25b1ebe8b818aa59e7d3
+MD5 7f434c5c84aa046ff25f70c6796164af sun-j2ee-1.3.1-r3.ebuild 1421
+RMD160 59d79b5ad07f8831a423a22aa12e0e7a3f8a6e98 sun-j2ee-1.3.1-r3.ebuild 1421
+SHA256 a09644fa7fe1b9682a91efedc0a4fc9040080902177f25b1ebe8b818aa59e7d3 sun-j2ee-1.3.1-r3.ebuild 1421
+MISC ChangeLog 2888 RMD160 a003bee2dcfc606ce958fe53a72769fb17910b48 SHA1 add42f42aebedf82cc8a0f54b1f65ffc1c00952f SHA256 9403c260b236dfba54e928c953cfebba32fb0f83c308fc6d06a113f664893b0f
+MD5 d0bf872bc998a7bdf8841227a640fbbf ChangeLog 2888
+RMD160 a003bee2dcfc606ce958fe53a72769fb17910b48 ChangeLog 2888
+SHA256 9403c260b236dfba54e928c953cfebba32fb0f83c308fc6d06a113f664893b0f ChangeLog 2888
+MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 ea28f93154f04347a70fe369eefbaf70 sun-j2ee-1.3.1-r2.ebuild 1355
-MD5 137a01702493dbca2054faa75555a6e8 sun-j2ee-1.3.1-r3.ebuild 1432
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
+MD5 64bb5dfcbe16b1714d009dceabdadc43 files/digest-sun-j2ee-1.3.1-r2 73
+RMD160 cc92d9e81bb2957b42f064818834a40456571dca files/digest-sun-j2ee-1.3.1-r2 73
+SHA256 b6ca6abde21ad418a430b5909a6be5aae95be1d5df790eb2b0c1a873d2ff0d6a files/digest-sun-j2ee-1.3.1-r2 73
+MD5 64bb5dfcbe16b1714d009dceabdadc43 files/digest-sun-j2ee-1.3.1-r3 73
+RMD160 cc92d9e81bb2957b42f064818834a40456571dca files/digest-sun-j2ee-1.3.1-r3 73
+SHA256 b6ca6abde21ad418a430b5909a6be5aae95be1d5df790eb2b0c1a873d2ff0d6a files/digest-sun-j2ee-1.3.1-r3 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFDsIIOndWRXhKOboURAlTnAJwJVj9c0zPV0csEvHlKw2ixhMyuEQCgyRo+
-GC4bS+nEI5iAw53gGArsVsU=
-=h5tx
+iD8DBQFEqRf1cxLzpIGCsLQRApfoAJ44WsNmFOWsNasmxnYn5dOCOawcWQCffGBr
+SPLW3PekNgYEopzpuJ1Ijj4=
+=aM3m
 -----END PGP SIGNATURE-----
