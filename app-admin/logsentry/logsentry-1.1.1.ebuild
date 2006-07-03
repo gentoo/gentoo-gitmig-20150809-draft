@@ -1,17 +1,17 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.23 2005/08/07 20:44:04 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.24 2006/07/03 01:44:16 vapier Exp $
 
 DESCRIPTION="automatically monitor system logs and mail security violations on a periodic basis"
-
 # Seems that the project has been discontinued by CISCO?
 HOMEPAGE="http://sourceforge.net/projects/sentrytools/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~mips ppc sparc x86"
+SLOT="0"
+KEYWORDS="amd64 ~arm ~mips ppc ~s390 ~sh sparc x86"
 IUSE=""
+
 DEPEND=">=sys-apps/sed-4"
 RDEPEND="virtual/mailx"
 
