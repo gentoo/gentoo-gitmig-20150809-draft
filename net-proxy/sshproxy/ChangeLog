@@ -1,0 +1,11 @@
+# ChangeLog for net-proxy/sshproxy
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/ChangeLog,v 1.1 2006/07/03 18:35:00 mrness Exp $
+
+*sshproxy-0.4.2 (03 Jul 2006)
+
+  03 Jul 2006; Alin Nastac <mrness@gentoo.org> +files/sshproxyd.initd,
+  +metadata.xml, +sshproxy-0.4.2.ebuild:
+  Initial import from bug #138058, thanks to David Guerizec
+  <david@guerizec.net> which is also the author of sshproxy.
+
