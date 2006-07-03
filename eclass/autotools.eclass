@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.38 2006/06/28 00:15:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.39 2006/07/03 18:42:54 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -47,14 +47,16 @@ AT_GNUCONF_UPDATE="no"
 eautoreconf() {
 	local pwd=$(pwd) x auxdir
 
-	# Take care of subdirs
-	for x in $(autotools_get_subdirs); do
-		if [[ -d ${x} ]] ; then
-			cd "${x}"
-			AT_NOELIBTOOLIZE="yes" eautoreconf
-			cd "${pwd}"
-		fi
-	done
+	if [[ -z ${AT_NO_RECURSIVE} ]]; then
+		# Take care of subdirs
+		for x in $(autotools_get_subdirs); do
+			if [[ -d ${x} ]] ; then
+				cd "${x}"
+				AT_NOELIBTOOLIZE="yes" eautoreconf
+				cd "${pwd}"
+			fi
+		done
+	fi
 
 	auxdir=$(autotools_get_auxdir)
 
