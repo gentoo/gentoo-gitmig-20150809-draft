@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.119 2006/06/30 19:53:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.120 2006/07/03 12:28:10 caleb Exp $
+
+  03 Jul 2006; Caleb Tennis <caleb@gentoo.org> kdevelop-3.3.3.ebuild,
+  kdevelop-3.3.91.ebuild:
+  Add graphviz support per bug #137686
 
 *kdevelop-3.3.91 (30 Jun 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.91.ebuild,v 1.1 2006/06/30 19:53:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.91.ebuild,v 1.2 2006/07/03 12:28:10 caleb Exp $
 
 inherit kde eutils db-use
 
@@ -16,7 +16,9 @@ IUSE="ada clearcase cvs fortran haskell java pascal perforce perl php python rub
 
 DEPEND="sys-devel/gdb
 	=sys-libs/db-4*
-	cvs? ( || ( kde-base/cervisia kde-base/kdesdk ) )"
+	cvs? ( || ( kde-base/cervisia kde-base/kdesdk ) )
+	graphviz? ( media-gfx/graphviz )"
+
 RDEPEND="${DEPEND}
 	subversion? ( || ( kde-base/kdesdk-kioslaves kde-base/kdesdk ) )"
 DEPEND="${DEPEND}
