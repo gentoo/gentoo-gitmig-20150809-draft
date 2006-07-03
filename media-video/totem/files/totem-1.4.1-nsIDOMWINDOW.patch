@@ -1,0 +1,12 @@
+diff -urN totem-1.4.1-orig/src/totem-mozilla-plugin.cpp totem-1.4.1/src/totem-mozilla-plugin.cpp
+--- totem-1.4.1-orig/src/totem-mozilla-plugin.cpp	2006-06-22 18:39:17.172913352 -0500
++++ totem-1.4.1/src/totem-mozilla-plugin.cpp	2006-06-22 18:39:37.162874416 -0500
+@@ -43,7 +43,7 @@
+ #include "npapi.h"
+ #include "npupp.h"
+ 
+-#include <nsIDOMWindow.h>
++#include <dom/nsIDOMWindow.h>
+ #include <nsIURI.h>
+ #include <nsEmbedString.h>
+ #include <nsIInterfaceRequestorUtils.h>

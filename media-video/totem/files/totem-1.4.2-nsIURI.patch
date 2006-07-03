@@ -1,0 +1,11 @@
+--- totem-1.4.2/src/totem-mozilla-plugin.cpp-orig	2006-07-01 11:52:26.000000000 -0500
++++ totem-1.4.2/src/totem-mozilla-plugin.cpp	2006-07-01 11:52:28.000000000 -0500
+@@ -44,7 +44,7 @@
+ #include "npupp.h"
+ 
+ #include <dom/nsIDOMWindow.h>
+-#include <nsIURI.h>
++#include <necko/nsIURI.h>
+ #include <nsEmbedString.h>
+ #include <nsIInterfaceRequestorUtils.h>
+ #include <docshell/nsIWebNavigation.h>

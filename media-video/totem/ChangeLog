@@ -1,6 +1,17 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.114 2006/07/01 19:41:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.115 2006/07/03 11:49:37 allanonjl Exp $
+
+*totem-1.4.2-r1 (03 Jul 2006)
+*totem-1.2.1-r1 (03 Jul 2006)
+
+  03 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -files/totem-1.0.4-fbsd.patch, -files/totem-1.2.0-gecko-sdk.patch,
+  -files/totem-1.2.0-gmoduledep.patch, -files/totem-1.2.0-lang_it_fix.patch,
+  +files/totem-1.4.1-nsIDOMWINDOW.patch, +files/totem-1.4.2-nsIURI.patch,
+  -totem-1.0.4.ebuild, -totem-1.2.0-r1.ebuild, -totem-1.2.0-r2.ebuild,
+  +totem-1.2.1-r1.ebuild, -totem-1.4.0.ebuild, +totem-1.4.2-r1.ebuild:
+  migrate from mozilla and gecko-sdk to seamonkey.  remove old versions.
 
   01 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> totem-1.4.2.ebuild:
   Fix bad gst-plugins-base dep.  Bug #138689
