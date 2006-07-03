@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.5.ebuild,v 1.2 2006/07/02 03:58:36 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.5.ebuild,v 1.3 2006/07/03 13:33:02 betelgeuse Exp $
 
 inherit java-vm-2 eutils versionator rpm
 
@@ -30,7 +30,7 @@ ALT_DOWNLOADPAGE="${HOMEPAGE}/older_download.html"
 SRC_URI="x86? ( IBMJava2-142-ia32-SDK-${RPM_PV}.i386.rpm )
 		 amd64? ( IBMJava2-AMD64-142-SDK-${RPM_PV}.x86_64.rpm )
 		 ppc? ( IBMJava2-142-ppc32-SDK-${RPM_PV}.ppc.rpm )
-		 ppc64? ( IBMJava2-142-ppc64-SDK-${RPM_PV}.ppc64.rpm ) 
+		 ppc64? ( IBMJava2-142-ppc64-SDK-${RPM_PV}.ppc64.rpm )
 		 javacomm? (
 		 			x86? ( IBMJava2-JAVACOMM-${RPM_PV}.i386.rpm )
 					amd64? ( IBMJava2-JAVACOMM-AMD64-${RPM_PV}.x86_64.rpm )
