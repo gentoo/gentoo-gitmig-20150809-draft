@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/javacc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.16 2006/01/22 05:08:34 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.17 2006/07/03 14:29:20 nichoj Exp $
+
+*javacc-4.0-r1 (03 Jul 2006)
+
+  03 Jul 2006; Joshua Nichols <nichoj@gentoo.org> +javacc-4.0-r1.ebuild:
+  Revision bump to support new Java system, and fixes bug #131137
 
 *javacc-4.0 (22 Jan 2006)
 
