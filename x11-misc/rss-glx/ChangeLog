@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.44 2006/07/03 10:09:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.45 2006/07/03 16:15:31 nelchael Exp $
+
+  03 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  files/digest-rss-glx-0.8.0-r2, files/digest-rss-glx-0.8.0-r3, Manifest:
+  Fix digest - see bug #138984.
 
 *rss-glx-0.8.1-r1 (03 Jul 2006)
 
