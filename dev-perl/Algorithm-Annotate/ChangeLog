@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Algorithm-Annotate
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Annotate/ChangeLog,v 1.10 2005/10/03 12:20:02 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Annotate/ChangeLog,v 1.11 2006/07/03 20:01:13 ian Exp $
+
+  03 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Algorithm-Annotate-0.10.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header; fixed DEPEND
 
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   Algorithm-Annotate-0.10.ebuild:
