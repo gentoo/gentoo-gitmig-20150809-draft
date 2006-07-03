@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.63 2006/06/05 02:00:18 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.64 2006/07/03 17:40:31 kanaka Exp $
+
+  03 Jul 2006; Joel Martin <kanaka@gentoo.org> libpq-8.0.8.ebuild,
+  libpq-8.1.2.ebuild, libpq-8.1.3.ebuild, libpq-8.1.3-r1.ebuild,
+  libpq-8.1.4.ebuild:
+  Add dep on sys-libs/pam if pam USE flag set
 
   04 Jun 2006; Thomas Cort <tcort@gentoo.org> libpq-8.0.8.ebuild:
   Stable on amd64 wrt security Bug #134168.
