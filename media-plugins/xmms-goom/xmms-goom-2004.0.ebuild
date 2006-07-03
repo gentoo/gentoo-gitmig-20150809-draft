@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-2004.0.ebuild,v 1.8 2006/05/23 19:44:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-2004.0.ebuild,v 1.9 2006/07/03 02:25:50 metalgod Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 MY_PN=${PN/xmms-/}
 MY_PV=2k4-0
@@ -22,6 +22,9 @@ DEPEND="media-sound/xmms
 S=${WORKDIR}/${MY_PN}${MY_PV}
 
 src_compile() {
+
+	strip-flags -fomit-frame-pointer
+
 	econf || die "econf failed"
 	emake OPT="$CFLAGS" || die "emake failed"
 }
