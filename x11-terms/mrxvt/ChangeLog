@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/mrxvt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.39 2006/07/03 17:24:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.40 2006/07/03 17:54:51 tcort Exp $
+
+  03 Jul 2006; Thomas Cort <tcort@gentoo.org> mrxvt-0.5.1.ebuild:
+  Stable on alpha and amd64 wrt Bug #138343.
 
   03 Jul 2006; Fabian Groffen <grobian@gentoo.org> mrxvt-0.5.1.ebuild:
   Marked ppc-macos stable (bug #138343)
