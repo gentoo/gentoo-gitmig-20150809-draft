@@ -1,0 +1,56 @@
+--- swig/geos.i.orig	2006-07-03 14:06:23.000000000 -0700
++++ swig/geos.i	2006-07-03 14:11:37.000000000 -0700
+@@ -163,7 +163,6 @@
+ %newobject GeometricShapeFactory::getEnvelope;
+ 
+ %newobject WKBReader::read;
+-%newobject WKBReader::readHEX;
+ %newobject WKTReader::read;
+ }
+ 
+@@ -183,12 +182,6 @@
+ 				 geos::MultiPoint, geos::MultiLineString,
+ 				 geos::MultiPolygon, geos::GeometryCollection);
+ 
+-%factory(geos::Geometry * geos::WKBReader::readHEX, geos::Point, 
+-				 geos::LinearRing, geos::LineString,
+-				 geos::Polygon, 
+-				 geos::MultiPoint, geos::MultiLineString,
+-				 geos::MultiPolygon, geos::GeometryCollection);
+-
+ %factory(geos::Geometry * geos::Geometry::downcast, geos::Point, 
+ 				 geos::LinearRing, geos::LineString,
+ 				 geos::Polygon, 
+@@ -294,32 +287,3 @@
+ 	 objects.  So create a global factory.*/
+ 
+ /* Add some helper methods to geometries */
+-%extend geos::Geometry {
+-	static geos::GeometryFactory& factory()
+-	{
+-		static geos::GeometryFactory factory;
+-		return factory;
+-	}
+-
+-	static geos::WKBReader& reader()
+-	{
+-		#if GEOS_VERSION_MAJOR == 2
+-		static geos::WKBReader reader(geos_Geometry_factory());
+-		#else
+-		static geos::io::WKBReader reader(geos_Geometry_factory());
+-		#endif
+-		return reader;
+-	}
+-
+-	static Geometry* fromWKT(std::string wkt)
+-	{
+-		std::stringstream in(wkt);
+-		return geos_Geometry_reader().read(in);
+-	}
+-	
+-	static Geometry* fromHEX(std::string hex)
+-	{
+-		std::stringstream in(hex);
+-		return geos_Geometry_reader().readHEX(in);
+-	}
+-};
