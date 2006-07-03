@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/Apache-Session-1.60.ebuild,v 1.15 2006/02/13 10:38:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/Apache-Session-1.60.ebuild,v 1.16 2006/07/03 20:10:11 ian Exp $
 
 inherit perl-module
 MY_PV=${PV/0/}
@@ -16,6 +16,6 @@ SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 
-DEPEND="${DEPEND}
-	virtual/perl-Digest-MD5
+DEPEND="virtual/perl-Digest-MD5
 	virtual/perl-Storable"
+RDEPEND="${DEPEND}"
