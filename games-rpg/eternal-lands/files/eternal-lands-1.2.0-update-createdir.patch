@@ -1,0 +1,86 @@
+--- update.c	2006-07-03 07:30:09.154559449 +0100
++++ update.c	2006-07-03 07:57:31.000000000 +0100
+@@ -7,6 +7,7 @@
+ #include    "asc.h"
+ #include    <stdio.h>
+ #include    <ctype.h>
++#include    <sys/stat.h>
+ #ifdef	WINDOWS
+ #define	strdup	_strdup
+ #endif	//WINDOWS
+@@ -153,6 +154,8 @@
+ 		++temp_counter;
+ 		fp= my_fopen(filename, "wb+");
+ 		if(fp){
++			chmod (filename,
++				S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP);
+ 			sprintf(filename, "http://%s/updates/files.lst", update_server);
+ 			http_threaded_get_file(update_server, filename, fp, NULL, EVENT_UPDATES_DOWNLOADED);
+ 		}
+@@ -265,6 +268,7 @@
+ 			buffer[sizeof(buffer)-1]= '\0';
+ 			fp= my_fopen(download_temp_file, "wb+");
+ 			if(fp){
++	
+ 				// build the prope URL to download
+ 				download_cur_file= download_queue[--download_queue_size];
+ 				download_cur_md5= download_MD5s[download_queue_size];
+@@ -291,9 +295,47 @@
+ 	if(get->status == 0){
+ 		// the download was successful
+ 		// replace the current file
+-		// TODO: check for remove/rename errors
++		// First, check directory exists
++		char *dir = (char *) malloc (strlen (download_cur_file) + 1);
++		char *slash;
++		struct stat stats;
++
++		strcpy (dir, download_cur_file);
++		slash = dir;
++
++		// Skip over leading slashes.
++		while (*slash == '/')
++			slash++;
++
++		while (1)
++		{
++			slash = strchr (slash, '/');
++			if (slash == NULL)
++				break;
++
++			*slash = '\0';
++			if (! (stat (dir, &stats) == 0 && S_ISDIR (stats.st_mode) ) )
++			{
++				if (mkdir (dir, 0770) != 0)
++				{
++					log_error("cannot create directory %s", dir);
++					break;
++				}
++				else
++					chmod (dir, S_IRWXU | S_IRWXG | S_ISGID);
++			}
++
++			*slash++ = '/';
++
++			// Avoid unnecessary calls to mkdir when given
++			// file names containing multiple adjacent slashes.
++			while (*slash == '/')
++				slash++;
++		}
++
+ 		remove(download_cur_file);
+-		rename(download_temp_file, download_cur_file);
++		if ( ! rename(download_temp_file, download_cur_file) )
++			remove(download_temp_file);
+ 
+ 		// TODO: make the restart more intelligent
+ 		if(allow_restart){
+@@ -325,6 +367,8 @@
+ 		sprintf(download_temp_file, "temp%03d.dat", ++temp_counter);
+ 		fp= my_fopen(download_temp_file, "wb+");
+ 		if(fp){
++			chmod (download_temp_file,
++				S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP);
+ 			// build the prope URL to download
+ 			download_cur_file= download_queue[--download_queue_size];
+ 			download_cur_md5= download_MD5s[download_queue_size];
