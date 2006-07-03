@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Container
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Container/ChangeLog,v 1.24 2006/03/02 20:24:15 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Container/ChangeLog,v 1.25 2006/07/03 21:04:27 ian Exp $
+
+  03 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Class-Container-0.11.ebuild, Class-Container-0.12.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed DEPEND
 
   02 Mar 2006; Chris White <chriswhite@gentoo.org>
   Class-Container-0.12.ebuild:
