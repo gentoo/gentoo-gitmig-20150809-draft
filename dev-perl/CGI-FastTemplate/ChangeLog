@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CGI-FastTemplate
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-FastTemplate/ChangeLog,v 1.10 2005/10/02 12:20:04 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-FastTemplate/ChangeLog,v 1.11 2006/07/03 20:29:49 ian Exp $
+
+  03 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  CGI-FastTemplate-1.09.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   CGI-FastTemplate-1.09.ebuild:

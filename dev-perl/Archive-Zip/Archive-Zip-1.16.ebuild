@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/Archive-Zip-1.16.ebuild,v 1.10 2006/04/24 03:09:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/Archive-Zip-1.16.ebuild,v 1.11 2006/07/03 20:15:41 ian Exp $
 
 inherit perl-module
 
@@ -15,3 +15,4 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND=">=dev-perl/Compress-Zlib-1.14"
+RDEPEND="${DEPEND}"

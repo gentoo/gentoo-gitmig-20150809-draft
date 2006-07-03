@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CORBA-ORBit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/ChangeLog,v 1.16 2006/02/06 19:59:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/ChangeLog,v 1.17 2006/07/03 20:31:36 ian Exp $
+
+  03 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  CORBA-ORBit-0.4.3-r4.ebuild, CORBA-ORBit-0.4.7.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> CORBA-ORBit-0.4.7.ebuild:
   stable on amd64

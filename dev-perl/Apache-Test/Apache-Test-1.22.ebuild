@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/Apache-Test-1.22.ebuild,v 1.4 2005/07/29 15:52:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/Apache-Test-1.22.ebuild,v 1.5 2006/07/03 20:12:32 ian Exp $
 
 inherit perl-module
 
@@ -13,6 +13,7 @@ LICENSE="Artistic"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ppc64 ~sparc ~x86"
 SRC_TEST="skip"
 DEPEND="net-www/apache"
+RDEPEND="${DEPEND}"
 
 src_install() {
 # This is to avoid conflicts with a deprecated Apache::Test stepping

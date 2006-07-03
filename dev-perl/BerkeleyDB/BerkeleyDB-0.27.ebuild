@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.27.ebuild,v 1.7 2006/02/06 19:56:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.27.ebuild,v 1.8 2006/07/03 20:23:30 ian Exp $
 
 inherit perl-module eutils
 
@@ -18,6 +18,7 @@ SRC_TEST="do"
 # supports less than 2.0.
 
 DEPEND=">=sys-libs/db-2.0"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
