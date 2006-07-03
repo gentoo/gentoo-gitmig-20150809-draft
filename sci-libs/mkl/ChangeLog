@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/mkl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.4 2005/08/24 16:27:00 phosphan Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.5 2006/07/03 08:30:38 spyderous Exp $
+
+*mkl-8.0.2.004 (03 Jul 2006)
+
+  03 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  +mkl-8.0.2.004.ebuild:
+  Bump to something relatively current, based on ebuild from the science
+  overlay by bicatali. Also switch to new eselect modules.
 
   24 Aug 2005; Patrick Kursawe <phosphan@gentoo.org> mkl-5.2.ebuild:
   No longer using cp -a (bug #103487)
