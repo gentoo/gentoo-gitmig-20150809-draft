@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-DBI
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.29 2006/06/11 23:52:07 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.30 2006/07/03 21:05:24 ian Exp $
+
+  03 Jul 2006; Christian Hartmann <ian@gentoo.org> Class-DBI-0.96.ebuild,
+  Class-DBI-3.0.1.ebuild, Class-DBI-3.0.13.ebuild, Class-DBI-3.0.14.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   11 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   Class-DBI-3.0.14.ebuild:

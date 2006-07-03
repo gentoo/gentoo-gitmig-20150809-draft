@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Cache-Memcached
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.21 2006/07/01 07:15:59 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.22 2006/07/03 20:53:45 ian Exp $
+
+  03 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Cache-Memcached-1.15.ebuild, Cache-Memcached-1.17.ebuild,
+  Cache-Memcached-1.18.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
 *Cache-Memcached-1.18 (01 Jul 2006)
 

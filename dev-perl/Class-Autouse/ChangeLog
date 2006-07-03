@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Class-Autouse
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Autouse/ChangeLog,v 1.42 2006/07/02 03:21:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Autouse/ChangeLog,v 1.43 2006/07/03 21:03:13 ian Exp $
+
+  03 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Class-Autouse-1.03.ebuild, Class-Autouse-1.12.ebuild,
+  Class-Autouse-1.17.ebuild, Class-Autouse-1.21.ebuild,
+  Class-Autouse-1.23.ebuild, Class-Autouse-1.24.ebuild,
+  Class-Autouse-1.26.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   02 Jul 2006; Michael Cummings <mcummings@gentoo.org>
   Class-Autouse-1.26.ebuild:

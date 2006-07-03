@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Carp-Assert-More
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Assert-More/ChangeLog,v 1.7 2006/06/23 23:55:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Assert-More/ChangeLog,v 1.8 2006/07/03 20:56:59 ian Exp $
+
+  03 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Carp-Assert-More-1.12.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   23 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   Carp-Assert-More-1.12.ebuild:

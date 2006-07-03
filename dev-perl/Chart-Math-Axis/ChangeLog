@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Chart-Math-Axis
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart-Math-Axis/ChangeLog,v 1.23 2006/06/29 20:01:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart-Math-Axis/ChangeLog,v 1.24 2006/07/03 21:00:59 ian Exp $
+
+  03 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Chart-Math-Axis-0.3.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   Chart-Math-Axis-0.3.ebuild:

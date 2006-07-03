@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Cisco-Reconfig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cisco-Reconfig/ChangeLog,v 1.2 2006/06/13 16:13:07 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cisco-Reconfig/ChangeLog,v 1.3 2006/07/03 21:01:44 ian Exp $
+
+  03 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Cisco-Reconfig-0.8.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   13 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   Cisco-Reconfig-0.8.ebuild:
