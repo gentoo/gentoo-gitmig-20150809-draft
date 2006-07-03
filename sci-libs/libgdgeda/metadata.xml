@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<maintainer>
-	<email>plasmaroo@gentoo.org</email>
-</maintainer>
+  <herd>sci-electronics</herd>
+  <longdescription>
+  libgdgeda is a modified version of the gd graphic library, with extra changes
+  for use by gschem. libgdgeda does not conflict with the regular gd library.
+  </longdescription>
 </pkgmetadata>
