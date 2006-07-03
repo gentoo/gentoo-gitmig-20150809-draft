@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.8.2.ebuild,v 1.1 2006/07/01 06:03:08 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.8.2.ebuild,v 1.2 2006/07/03 13:04:43 tcort Exp $
 
 inherit eutils webapp depend.php
 
@@ -10,7 +10,7 @@ DESCRIPTION="Web-based administration for MySQL database in PHP"
 HOMEPAGE="http://www.phpmyadmin.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=dev-db/mysql-3.23.32 <dev-db/mysql-5.1
 	sys-apps/findutils"
