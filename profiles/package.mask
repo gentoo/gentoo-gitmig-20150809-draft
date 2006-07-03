@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5580 2006/07/03 08:51:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5581 2006/07/03 14:36:02 nichoj Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Joshua Nichols <nichoj@gentoo.org> (28 Jun 2002)
+# Upstream discourages the use of 5.0.x, in favor of 5.5.x,
+# except in the cases where applications explicitly need 5.0.x
+<www-servers/tomcat-5.5
 
 # Danny van Dyk <kugelfang@gentoo.org>
 # Masked pending addition of new modules
