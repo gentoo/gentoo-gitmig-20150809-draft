@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mx4j
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/ChangeLog,v 1.6 2005/12/16 01:05:50 nichoj Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/ChangeLog,v 1.7 2006/07/03 01:48:17 nichoj Exp $
+
+  03 Jul 2006; Joshua Nichols <nichoj@gentoo.org> +mx4j-3.0.1.ebuild:
+  Version bump needed for tomcat-5.5.
 
   16 Dec 2005; Joshua Nichols <nichoj@gentoo.org> mx4j-2.1.0-r1.ebuild:
   Removed log4j dependency (bug #100275).
