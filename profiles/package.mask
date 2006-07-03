@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5576 2006/07/02 15:10:46 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5577 2006/07/03 00:53:06 kugelfang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Danny van Dyk <kugelfang@gentoo.org>
+# Masked pending addition of new modules
+=app-admin/eselect-1.0.3
 
 # Henrik Brix Andersen <brix@gentoo.org> (2. Jul 2006)
 # Masked pending removal, bug #132600
