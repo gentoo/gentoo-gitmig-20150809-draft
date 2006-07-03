@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4.ebuild,v 1.2 2006/03/09 17:01:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4.ebuild,v 1.3 2006/07/03 23:57:41 flameeyes Exp $
 
 inherit kde-functions eutils
 
@@ -12,39 +12,45 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="nls debug"
+IUSE="debug"
 
 RDEPEND="|| ( >=app-i18n/scim-1.4.2 >=app-i18n/scim-cvs-1.4.2 )
-	nls? ( virtual/libintl )
+	virtual/libintl
 	$(qt_min_version 3.3.4)"
 
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )"
+	sys-devel/gettext
+	dev-util/pkgconfig"
 
 pkg_setup() {
-	if [ ! -e /usr/qt/3/plugins/inputmethods/libqimsw-none.so ] ; then
+	if ! built_with_use =x11-libs/qt-3* immqt-bc && ! built_with_use =x11-libs/qt-3* immqt; then
 		die "You need to rebuild >=x11-libs/qt-3.3.4 with immqt-bc(recommended) or immqt USE flag enabled."
 	fi
 }
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-qtimm-check.patch"
 
-	make -f admin/Makefile.common || die "reautotooling failed"
+	# Fix for autoconf 2.60
+	sed -i -e '/case $AUTO\(CONF\|HEADER\)_VERSION in/,+1 s/2\.5/2.[56]/g' \
+		admin/cvs.sh
+
+	emake -j1 -f admin/Makefile.common || die "reautotooling failed"
 }
 
 src_compile() {
 	econf \
-		$(use_enable nls) \
-		$(use_enable debug scim-debug) || die
+		$(use_enable debug scim-debug) \
+		--disable-static \
+		--disable-dependency-tracking || die "econf failed"
 	emake || die "make failed."
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS ChangeLog README NEWS TODO
 }

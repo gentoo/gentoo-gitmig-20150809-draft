@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/scim-qtimm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.30 2006/03/09 17:01:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.31 2006/07/03 23:57:41 flameeyes Exp $
+
+  03 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  scim-qtimm-0.9.4.ebuild:
+  Fix building with autoconf 2.60, change the pkg_setup with a check
+  built_with_use that respects ${ROOT} and remove nls useflag, as this package
+  does not allow disabling it.
 
   09 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/scim-qtimm-0.9.4-qtimm-check.patch, scim-qtimm-0.9.4.ebuild:
