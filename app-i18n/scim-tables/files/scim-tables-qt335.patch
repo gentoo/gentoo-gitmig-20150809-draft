@@ -1,0 +1,21 @@
+Index: scim-tables-0.5.6/skim/setupui/generictableui.ui
+===================================================================
+--- scim-tables-0.5.6.orig/skim/setupui/generictableui.ui
++++ scim-tables-0.5.6/skim/setupui/generictableui.ui
+@@ -336,16 +336,4 @@
+     </connection>
+ </connections>
+ <layoutdefaults spacing="6" margin="11"/>
+-<includehints>
+-    <includehint>skimeditshortcutbutton.h</includehint>
+-    <includehint>klineedit.h</includehint>
+-    <includehint>skimeditshortcutbutton.h</includehint>
+-    <includehint>klineedit.h</includehint>
+-    <includehint>skimeditshortcutbutton.h</includehint>
+-    <includehint>klineedit.h</includehint>
+-    <includehint>skimeditshortcutbutton.h</includehint>
+-    <includehint>klineedit.h</includehint>
+-    <includehint>skimeditshortcutbutton.h</includehint>
+-    <includehint>klineedit.h</includehint>
+-</includehints>
+ </UI>
