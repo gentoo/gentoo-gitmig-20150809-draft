@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.50 2006/04/27 23:41:52 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.51 2006/07/03 02:13:09 nichoj Exp $
+
+  03 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
+  +files/5.5.17/catalinabuild-xml.patch,
+  +files/5.5.17/jasperbuild-xml.patch, +files/5.5.17/mainbuild-xml.patch,
+  +files/5.5.17/tomcat.conf, +files/5.5.17/tomcat.env,
+  +files/5.5.17/tomcat.init, +files/5.5.17/tomcatbuild-xml.patch:
+  Version bump.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-tomcat-5.0.27-r6, files/digest-tomcat-5.0.28-r12, Manifest:
