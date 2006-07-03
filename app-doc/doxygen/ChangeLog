@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.103 2006/07/03 08:31:19 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.104 2006/07/03 16:01:22 pylon Exp $
+
+  03 Jul 2006; Lars Weiler <pylon@gentoo.org> doxygen-1.4.6.ebuild:
+  Stable on ppc; bug #138937.
 
   03 Jul 2006; Markus Ullmann <jokey@gentoo.org> Manifest:
   Fixing digest
