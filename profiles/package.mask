@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5577 2006/07/03 00:53:06 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5578 2006/07/03 07:23:43 spyderous Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,6 +24,9 @@
 # Danny van Dyk <kugelfang@gentoo.org>
 # Masked pending addition of new modules
 =app-admin/eselect-1.0.3
+app-admin/eselect-blas
+app-admin/eselect-cblas
+app-admin/eselect-lapack
 
 # Henrik Brix Andersen <brix@gentoo.org> (2. Jul 2006)
 # Masked pending removal, bug #132600
@@ -123,12 +126,6 @@ app-admin/scotty
 # Diego Pettenò <flameeyes@gentoo.org> (19 Jun 2006)
 # Beta release
 =media-sound/amarok-1.4.1_beta*
-
-# Donnie Berkholz <spyderous@gentoo.org> (18 Jun 2006)
-# Masked, pending release of eselect 1.0.3 with skel.bash library
-app-admin/eselect-blas
-app-admin/eselect-cblas
-app-admin/eselect-lapack
 
 # Danny van Dyk <kugelfang@gentoo.org> (18 Jun 2006)
 # Masked pending removal, due to open bug #88302 and
