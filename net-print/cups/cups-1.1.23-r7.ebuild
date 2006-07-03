@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.18 2006/06/22 07:04:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r7.ebuild,v 1.19 2006/07/03 16:57:44 genstef Exp $
 
 inherit eutils flag-o-matic pam autotools
 
@@ -23,7 +23,7 @@ DEP="pam? ( virtual/pam )
 		gnutls? ( net-libs/gnutls )
 		)
 	slp? ( >=net-libs/openslp-1.0.4 )
-	<media-libs/libpng-1.2.10
+	media-libs/libpng
 	>=media-libs/tiff-3.5.5
 	>=media-libs/jpeg-6b"
 DEPEND="${DEP}
@@ -52,6 +52,11 @@ src_unpack() {
 	epatch ${FILESDIR}/cupsaddsmb.patch
 	epatch ${FILESDIR}/${P}-respectldflags.patch
 	eautoconf
+
+	# 1.2.10 compat thanks to kojiro in bug 136346
+	if has_version '>=media-libs/libpng-1.2.10'; then
+		epatch ${FILESDIR}/${P}-image-png.patch
+	fi
 
 	# disable builtin xpdf
 	sed -i -e "s:pdftops::" Makefile

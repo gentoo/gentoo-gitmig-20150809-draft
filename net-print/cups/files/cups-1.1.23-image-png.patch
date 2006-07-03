@@ -1,0 +1,12 @@
+--- filter/image-png.c.orig	2005-01-03 14:29:57.000000000 -0500
++++ filter/image-png.c	2006-07-03 11:40:25.000000000 -0400
+@@ -252,7 +252,8 @@
+     }
+
+   png_read_end(pp, info);
+-  png_read_destroy(pp, info, NULL);
++  png_destroy_read_struct(&pp, &info, NULL);
++  //png_read_destroy(pp, info, NULL);
+
+   fclose(fp);
+   free(in);
