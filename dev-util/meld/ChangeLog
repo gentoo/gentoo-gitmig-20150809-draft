@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.32 2006/02/21 18:29:33 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.33 2006/07/03 18:33:42 allanonjl Exp $
+
+  03 Jul 2006; John N. Laliberte <allanonjl@gentoo.org> meld-1.1.3.ebuild:
+  break out built_with_use test, wrap in has_version.  fixes #136402
 
 *meld-1.1.3 (21 Feb 2006)
 
