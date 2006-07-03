@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.72 2006/07/02 19:28:10 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.73 2006/07/03 19:48:13 allanonjl Exp $
+
+  03 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
+  +files/epiphany-1.8.4.1-seamonkey.patch, epiphany-1.8.4.1-r1.ebuild:
+  add patch to fix test in configure and fix include.  fixes #139021
 
 *epiphany-2.14.2.1-r1 (02 Jul 2006)
 *epiphany-1.8.4.1-r1 (02 Jul 2006)

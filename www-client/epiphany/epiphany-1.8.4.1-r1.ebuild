@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.8.4.1-r1.ebuild,v 1.1 2006/07/02 19:28:10 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.8.4.1-r1.ebuild,v 1.2 2006/07/03 19:48:13 allanonjl Exp $
 
-inherit eutils gnome2
+inherit eutils gnome2 autotools
 
 DESCRIPTION="GNOME webbrowser based on the mozilla rendering engine"
 HOMEPAGE="http://www.gnome.org/projects/epiphany/"
@@ -53,7 +53,6 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS COPYING.README ChangeLog* HACKING MAINTAINERS NEWS README TODO"
-USE_DESTDIR="1"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
@@ -68,4 +67,13 @@ pkg_setup() {
 	else
 		G2CONF="${G2CONF} --with-mozilla=seamonkey"
 	fi
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# include fix
+	epatch ${FILESDIR}/${PN}-1.8.4.1-seamonkey.patch
+
+	AT_M4DIR="m4" eautoreconf
 }
