@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.40 2006/07/03 15:45:29 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.41 2006/07/03 22:00:38 gustavoz Exp $
+
+  03 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  devhelp-0.11-r1.ebuild:
+  Stable on sparc wrt AllanonJL
 
   03 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> devhelp-0.11-r1.ebuild:
   Marked stable on amd64 New version to get rid of mozilla deps
