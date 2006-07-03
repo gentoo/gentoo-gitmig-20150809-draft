@@ -1,0 +1,43 @@
+--- bin/package-ooo 
++++ bin/package-ooo 
+@@ -57,6 +57,7 @@
+ #!/bin/sh
+ export OOO_EXTRA_ARG='$2'
++unset PYTHONPATH
+ $OOINSTBASE/program/ooqstart $3 "\$@"
+ EOT
+     chmod 755 $1
+ }
+--- bin/ooo-wrapper.in 
++++ bin/ooo-wrapper.in 
+@@ -92,6 +89,9 @@
+     print STDERR "\n\n --- Warning - OO.o will not work without a mounted /proc filesystem --- \n\n\n";
+ }
+ 
++# Clear PYTHONPATH, otherwise Python scripting does not work
++delete $ENV{'PYTHONPATH'};
++
+ # And here we go.
+ exec "$SystemInstallDir/program/$Binary", @ooo_argv
+ 
+--- distro-configs/Gentoo.conf.in 
++++ distro-configs/Gentoo.conf.in.new 
+@@ -9,5 +9,7 @@
+ --disable-qadevooo
+ --with-dynamic-xinerama
+ --without-myspell-dicts
++--with-intro-bitmaps=\"${SRCDIR}/openintro_gentoo.bmp\"
++--with-vendor=\"Gentoo Foundation\"
+ 
+ 
+--- patches/src680/apply 
++++ patches/src680/apply
+@@ -1046,7 +1046,7 @@
+ SectionOwner => aprosky
+ 
+ version-2-0-pre.diff, pmladek
+-gentoo-splash.diff, pmladek
++#gentoo-splash.diff, pmladek
+ # Fix for build breakage on PPC
+ stlport-ppc-buildfix.diff, aprosky
+ # Allow build to proceed with PaX enabled

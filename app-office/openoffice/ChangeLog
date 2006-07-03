@@ -1,6 +1,15 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.227 2006/06/23 07:40:33 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.228 2006/07/03 05:45:36 suka Exp $
+
+*openoffice-2.0.3 (03 Jul 2006)
+
+  03 Jul 2006; Andreas Proschofsky <suka@gentoo.org>
+  +files/2.0.3/gentoo-2.0.3.diff, +openoffice-2.0.3.ebuild:
+  version bump to 2.0.3, this also now uses the myspell-*-ebuilds for
+  spell-checking instead of the OOoDict-script, besides that it is now
+  possible to build a debug set, build the OOo SDK and do the compile without
+  pam.
 
   23 Jun 2006; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.1-r1.ebuild, openoffice-2.0.2-r1.ebuild,
