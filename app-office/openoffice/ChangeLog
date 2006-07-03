@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.228 2006/07/03 05:45:36 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.229 2006/07/03 14:41:03 suka Exp $
+
+  03 Jul 2006; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.0.3.ebuild:
+  Fix building with -ldap, see bug #138959
 
 *openoffice-2.0.3 (03 Jul 2006)
 
