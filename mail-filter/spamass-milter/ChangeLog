@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/spamass-milter
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.15 2006/06/12 19:40:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.16 2006/07/03 21:03:27 gustavoz Exp $
+
+  03 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  -files/spamass-milter.conf, -files/spamass-milter.rc,
+  -spamass-milter-0.3.0.ebuild, -spamass-milter-0.3.1.ebuild:
+  Remove old
 
   12 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   spamass-milter-0.3.1-r1.ebuild:
