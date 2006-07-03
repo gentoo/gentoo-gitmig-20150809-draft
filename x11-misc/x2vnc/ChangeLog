@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/x2vnc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.30 2006/05/22 08:56:50 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.31 2006/07/03 09:05:39 phosphan Exp $
+
+*x2vnc-1.7.2 (03 Jul 2006)
+
+  03 Jul 2006; Patrick Kursawe <phosphan@gentoo.org> +x2vnc-1.7.2.ebuild:
+  Version bump
 
 *x2vnc-1.7.1 (22 May 2006)
 
