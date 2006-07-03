@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7.ebuild,v 1.3 2006/07/03 16:46:40 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7.ebuild,v 1.4 2006/07/03 17:22:28 betelgeuse Exp $
 
 inherit base eutils java-vm-2 flag-o-matic
 
@@ -106,7 +106,8 @@ src_install() {
 	emake DESTDIR="${D}" install || die "Failed to install"
 	set_java_env
 
-	local javadoc"=${D}/opt/${P}/bin/javadoc"
+	local javadoc="${D}/opt/${P}/bin/javadoc"
+
 	# xno append here to zero the kaffe installed one
 	echo '#!/bin/bash' > ${javadoc}
 	echo 'exec /usr/bin/gjdoc "${@}"' >> ${javadoc}
