@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionwebservice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.36 2006/07/03 11:47:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.37 2006/07/03 14:36:37 pylon Exp $
+
+  03 Jul 2006; Lars Weiler <pylon@gentoo.org> actionwebservice-1.1.4.ebuild:
+  Stable on ppc; security bug #138323.
 
 *actionwebservice-1.1.4 (03 Jul 2006)
 

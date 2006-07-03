@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.35 2006/07/03 11:45:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.36 2006/07/03 14:34:26 pylon Exp $
+
+  03 Jul 2006; Lars Weiler <pylon@gentoo.org> actionpack-1.12.3.ebuild:
+  Stable on ppc; security bug #138323.
 
 *actionpack-1.12.3 (03 Jul 2006)
 
