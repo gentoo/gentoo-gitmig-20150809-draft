@@ -1,0 +1,103 @@
+diff -urN hsfmodem-7.47.00.01full/modules/GPL/hda/Makefile hsfmodem-7.47.00.01full-hda_2.6.17/modules/GPL/hda/Makefile
+--- hsfmodem-7.47.00.01full/modules/GPL/hda/Makefile	2006-04-28 09:37:22.000000000 -0400
++++ hsfmodem-7.47.00.01full-hda_2.6.17/modules/GPL/hda/Makefile	2006-06-22 11:51:23.000000000 -0400
+@@ -4,4 +4,6 @@
+ snd-hda-codec-objs += hda_proc.o
+ endif
+ 
++CFLAGS += $(HDA_CFLAGS)
++
+ obj-$(CONFIG_SND_HDA_INTEL) += snd-hda-intel.o snd-hda-codec.o
+diff -urN hsfmodem-7.47.00.01full/modules/GPL/hda/patch_cnxthsf.c hsfmodem-7.47.00.01full-hda_2.6.17/modules/GPL/hda/patch_cnxthsf.c
+--- hsfmodem-7.47.00.01full/modules/GPL/hda/patch_cnxthsf.c	2006-04-28 09:37:22.000000000 -0400
++++ hsfmodem-7.47.00.01full-hda_2.6.17/modules/GPL/hda/patch_cnxthsf.c	2006-06-22 11:09:49.000000000 -0400
+@@ -507,13 +507,21 @@
+ 
+ //printk(KERN_DEBUG"%s: pcm=%p hw_param_buffer_bytes=%d\n", __FUNCTION__, pcm, hw_param_buffer_bytes);
+ 
++#ifdef FOUND_OPEN_SUBSTREAM_FILE
++	if ((err = snd_pcm_open_substream(pcm, SNDRV_PCM_STREAM_PLAYBACK, NULL,
++#else
+ 	if ((err = snd_pcm_open_substream(pcm, SNDRV_PCM_STREAM_PLAYBACK,
++#endif
+ 					&psubstream)) < 0) {
+ 		printk(KERN_ERR"%s: snd_pcm_open_substream STREAM_PLAYBACK failed (%d)\n", __FUNCTION__, err);
+ 		return err;
+ 	}
+ 
+-	if ((err = snd_pcm_open_substream(pcm, SNDRV_PCM_STREAM_CAPTURE, 
++#ifdef FOUND_OPEN_SUBSTREAM_FILE
++	if ((err = snd_pcm_open_substream(pcm, SNDRV_PCM_STREAM_CAPTURE, NULL,
++#else
++	if ((err = snd_pcm_open_substream(pcm, SNDRV_PCM_STREAM_CAPTURE,
++#endif
+ 					&csubstream)) < 0) {
+ 		printk(KERN_ERR"%s: snd_pcm_open_substream STREAM_CAPTURE failed (%d)\n", __FUNCTION__, err);
+ 		return err;
+@@ -717,14 +725,14 @@
+ 			//csubstream->ops->trigger(csubstream, SNDRV_PCM_TRIGGER_STOP);
+ 			/*FALLTHROUGH*/
+ 		default:
+-			err = snd_pcm_kernel_playback_ioctl(psubstream, cmd, NULL);
++			err = snd_pcm_kernel_ioctl(psubstream, cmd, NULL);
+ 			if (err < 0) {
+-				printk(KERN_ERR"%s: snd_pcm_kernel_playback_ioctl failed (%d)\n", __FUNCTION__, err);
++				printk(KERN_ERR"%s: snd_pcm_kernel_ioctl (playback) failed (%d)\n", __FUNCTION__, err);
+ 			}
+ 
+-			err = snd_pcm_kernel_capture_ioctl(csubstream, cmd, NULL);
++			err = snd_pcm_kernel_ioctl(csubstream, cmd, NULL);
+ 			if (err < 0) {
+-				printk(KERN_ERR"%s: snd_pcm_kernel_capture_ioctl failed (%d)\n", __FUNCTION__, err);
++				printk(KERN_ERR"%s: snd_pcm_kernel_ioctl (capture) failed (%d)\n", __FUNCTION__, err);
+ 			}
+ 			break;
+ 	}
+diff -urN hsfmodem-7.47.00.01full/modules/Makefile hsfmodem-7.47.00.01full-hda_2.6.17/modules/Makefile
+--- hsfmodem-7.47.00.01full/modules/Makefile	2006-04-10 17:19:49.000000000 -0400
++++ hsfmodem-7.47.00.01full-hda_2.6.17/modules/Makefile	2006-06-22 11:50:51.000000000 -0400
+@@ -90,9 +90,13 @@
+ FOUND_PCI_REGISTER_DRIVER := $(shell grep -q 'pci_register_driver' ${REAL_KERNELSRC}/include/linux/pci.h 2>/dev/null && echo -DFOUND_PCI_REGISTER_DRIVER)
+ FOUND_TTY_NEW_API := $(shell grep -q 'tty_buffer_request_room' ${REAL_KERNELSRC}/include/linux/tty_flip.h 2>/dev/null && echo -DFOUND_TTY_NEW_API)
+ FOUND_TOUCH_ATIME := $(shell grep -q 'touch_atime' ${REAL_KERNELSRC}/include/linux/fs.h 2>/dev/null && echo -DFOUND_TOUCH_ATIME)
++
++CFLAGS+= $(FOUND_CLASS_SIMPLE) $(FOUND_UART_REGISTER_PORT) $(FOUND_TTY_START_STOP) $(FOUND_CLASS_DEVICE_PARENT) $(FOUND_MODULE_PARAM) $(FOUND_PM_MESSAGE_T) $(FOUND_PM_MESSAGE_STRUCT) $(FOUND_PCI_CHOOSE_STATE) $(FOUND_LINUX_SUSPEND) $(FOUND_USB_DRIVER_OWNER) $(FOUND_PCI_REGISTER_DRIVER) $(FOUND_TTY_NEW_API) $(FOUND_TOUCH_ATIME)
++
+ FOUND_KZALLOC := $(shell grep -q 'kzalloc' ${REAL_KERNELSRC}/include/linux/slab.h 2>/dev/null && echo -DFOUND_KZALLOC)
++FOUND_OPEN_SUBSTREAM_FILE := $(shell grep -q 'snd_pcm_open_substream.*struct[ \t]*file' ${REAL_KERNELSRC}/include/sound/pcm.h 2>/dev/null && echo -DFOUND_OPEN_SUBSTREAM_FILE)
+ 
+-CFLAGS+= $(FOUND_CLASS_SIMPLE) $(FOUND_UART_REGISTER_PORT) $(FOUND_TTY_START_STOP) $(FOUND_CLASS_DEVICE_PARENT) $(FOUND_MODULE_PARAM) $(FOUND_PM_MESSAGE_T) $(FOUND_PM_MESSAGE_STRUCT) $(FOUND_PCI_CHOOSE_STATE) $(FOUND_LINUX_SUSPEND) $(FOUND_USB_DRIVER_OWNER) $(FOUND_PCI_REGISTER_DRIVER) $(FOUND_TTY_NEW_API) $(FOUND_TOUCH_ATIME) $(FOUND_KZALLOC)
++HDA_CFLAGS := $(FOUND_KZALLOC) $(FOUND_OPEN_SUBSTREAM_FILE)
+ 
+ else
+ KO= o
+@@ -158,12 +162,12 @@
+ ifeq ($(KBUILD_EXTMOD_SUPPORTED),yes)
+ 	-(cd ${CNXT_KERNELSRC} && make "CNXT_KERNELSRC=${CNXT_KERNELSRC}" "M=$(MODULES_SRC_DIR)" "CC=$(CC)" clean)
+ ifeq ($(CNXTDRIVER),hsf)
+-	-(cd ${CNXT_KERNELSRC} && make "CNXT_KERNELSRC=${CNXT_KERNELSRC}" "M=$(MODULES_SRC_DIR)/GPL/hda" "CC=$(CC)" clean)
++	-(cd ${CNXT_KERNELSRC} && make "CNXT_KERNELSRC=${CNXT_KERNELSRC}" "M=$(MODULES_SRC_DIR)/GPL/hda" "CC=$(CC)" "HDA_CFLAGS=$(HDA_CFLAGS)" clean)
+ endif
+ else
+ 	-(cd ${CNXT_KERNELSRC} && make "CNXT_KERNELSRC=${CNXT_KERNELSRC}" "SUBDIRS+=$(MODULES_SRC_DIR)" "SUBDIRS+=$(MODULES_SRC_DIR)" "CC=$(CC)" clean)
+ ifeq ($(CNXTDRIVER),hsf)
+-	-(cd ${CNXT_KERNELSRC} && make "CNXT_KERNELSRC=${CNXT_KERNELSRC}" "SUBDIRS+=$(MODULES_SRC_DIR)/GPL/hda" "SUBDIRS+=$(MODULES_SRC_DIR)/GPL/hda" "CC=$(CC)" clean)
++	-(cd ${CNXT_KERNELSRC} && make "CNXT_KERNELSRC=${CNXT_KERNELSRC}" "SUBDIRS+=$(MODULES_SRC_DIR)/GPL/hda" "SUBDIRS+=$(MODULES_SRC_DIR)/GPL/hda" "CC=$(CC)" "HDA_CFLAGS=$(HDA_CFLAGS)" clean)
+ endif
+ endif
+ endif
+@@ -221,12 +225,12 @@
+ ifeq ($(KBUILD_EXTMOD_SUPPORTED),yes)
+ 	(cd ${CNXT_KERNELSRC} && make "CNXT_KERNELSRC=${CNXT_KERNELSRC}" "M=$(MODULES_SRC_DIR)" "CC=$(CC)" modules)
+ ifeq ($(CNXTDRIVER),hsf)
+-	-(cd ${CNXT_KERNELSRC} && make "CNXT_KERNELSRC=${CNXT_KERNELSRC}" "M=$(MODULES_SRC_DIR)/GPL/hda" "CC=$(CC)" modules)
++	-(cd ${CNXT_KERNELSRC} && make "CNXT_KERNELSRC=${CNXT_KERNELSRC}" "M=$(MODULES_SRC_DIR)/GPL/hda" "CC=$(CC)" "HDA_CFLAGS=$(HDA_CFLAGS)" modules)
+ endif
+ else
+ 	(cd ${CNXT_KERNELSRC} && make "CNXT_KERNELSRC=${CNXT_KERNELSRC}" "SUBDIRS+=$(MODULES_SRC_DIR)" "SUBDIRS+=$(MODULES_SRC_DIR)" "CC=$(CC)" modules)
+ ifeq ($(CNXTDRIVER),hsf)
+-	-(cd ${CNXT_KERNELSRC} && make "CNXT_KERNELSRC=${CNXT_KERNELSRC}" "SUBDIRS+=$(MODULES_SRC_DIR)/GPL/hda" "SUBDIRS+=$(MODULES_SRC_DIR)/GPL/hda" "CC=$(CC)" modules)
++	-(cd ${CNXT_KERNELSRC} && make "CNXT_KERNELSRC=${CNXT_KERNELSRC}" "SUBDIRS+=$(MODULES_SRC_DIR)/GPL/hda" "SUBDIRS+=$(MODULES_SRC_DIR)/GPL/hda" "CC=$(CC)" "HDA_CFLAGS=$(HDA_CFLAGS)" modules)
+ endif
+ endif
+ else

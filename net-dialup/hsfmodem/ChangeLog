@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/hsfmodem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.26 2006/05/07 11:28:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.27 2006/07/03 18:45:44 mrness Exp $
+
+*hsfmodem-7.47.00.01-r1 (03 Jul 2006)
+
+  03 Jul 2006; Alin Nastac <mrness@gentoo.org>
+  +files/hsfmodem-7.47.00.01-hda_2.6.17.patch,
+  +hsfmodem-7.47.00.01-r1.ebuild:
+  Add HDA support for the 2.6.17.x kernels (#138785).
 
 *hsfmodem-7.47.00.01 (07 May 2006)
 
