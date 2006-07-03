@@ -5,28 +5,20 @@ AUX tcmplex-panteltje-0.3.patch 706 RMD160 1a38dd84e61246f32682f6a894de23bb22135
 MD5 756b3fcdeaa3f83bd28532561dae5701 files/tcmplex-panteltje-0.3.patch 706
 RMD160 1a38dd84e61246f32682f6a894de23bb2213522b files/tcmplex-panteltje-0.3.patch 706
 SHA256 2667a9718349dbab225065bd5939be495ceecb56a5da719f6beb8a59d54810bd files/tcmplex-panteltje-0.3.patch 706
-AUX tcmplex-panteltje-0.4.7_breakIfBrokenPatch.diff 750 RMD160 a5bdefb85a0a043b6219cfa9283349540d3d97f6 SHA1 d4a5c1d7a9a0dad78bcbf18ed210ce19ce54659a SHA256 36999cda314c074e525f6cc184205d1feaf077c3b61bcc206cbc06db6f8786c1
-MD5 e155561fcf012bad086e3e0a9ff9db33 files/tcmplex-panteltje-0.4.7_breakIfBrokenPatch.diff 750
-RMD160 a5bdefb85a0a043b6219cfa9283349540d3d97f6 files/tcmplex-panteltje-0.4.7_breakIfBrokenPatch.diff 750
-SHA256 36999cda314c074e525f6cc184205d1feaf077c3b61bcc206cbc06db6f8786c1 files/tcmplex-panteltje-0.4.7_breakIfBrokenPatch.diff 750
 DIST tcmplex-panteltje-0.3.tgz 78132
 DIST tcmplex-panteltje-0.4.7.tgz 81185 RMD160 4d6378a4a7201f1f4a91974502d93d47cdf56286 SHA1 0cbfe1a8e126ac04d9e494df93265ffc38d36325 SHA256 29c1ea339551fa0acdf078e7a3dcaae857ba6b35bc3381f0741730d07f34380d
 EBUILD tcmplex-panteltje-0.3.ebuild 780 RMD160 d0c454bc0164e8b412737eb82b783dbcb7142c0a SHA1 1e9ce738c48ce948915c90322ab4dd38f14b1d53 SHA256 92157db0aa96af27f2b68eb3490acf4fd1b56dcf12d82ab54bf95fb0bb159c5e
 MD5 82366dd2aca4cfed2095f40202473504 tcmplex-panteltje-0.3.ebuild 780
 RMD160 d0c454bc0164e8b412737eb82b783dbcb7142c0a tcmplex-panteltje-0.3.ebuild 780
 SHA256 92157db0aa96af27f2b68eb3490acf4fd1b56dcf12d82ab54bf95fb0bb159c5e tcmplex-panteltje-0.3.ebuild 780
-EBUILD tcmplex-panteltje-0.4.7-r1.ebuild 758 RMD160 e502c91caae6b30e629977f40cd2138bab267a68 SHA1 10f55cb0bc5d95bcb92e46d0e4e816c0ed5b66aa SHA256 05161c6f4a0e4f025a0666d36fa915326f7f99490322ba5d37d6759ee2ce235f
-MD5 2f4f2521e4014a8ef71067c945d99298 tcmplex-panteltje-0.4.7-r1.ebuild 758
-RMD160 e502c91caae6b30e629977f40cd2138bab267a68 tcmplex-panteltje-0.4.7-r1.ebuild 758
-SHA256 05161c6f4a0e4f025a0666d36fa915326f7f99490322ba5d37d6759ee2ce235f tcmplex-panteltje-0.4.7-r1.ebuild 758
 EBUILD tcmplex-panteltje-0.4.7.ebuild 663 RMD160 5ceee2ec768d78100f863d323aeb68254062ccc3 SHA1 2fcee05bea989490a46301ebc2adc2d744151380 SHA256 d4727fa71e863ba21b93bccb13f7c5f5789bafcb34da7be9ea965c7840ea44ff
 MD5 e9c342b761c18e9f2c22699f400386b4 tcmplex-panteltje-0.4.7.ebuild 663
 RMD160 5ceee2ec768d78100f863d323aeb68254062ccc3 tcmplex-panteltje-0.4.7.ebuild 663
 SHA256 d4727fa71e863ba21b93bccb13f7c5f5789bafcb34da7be9ea965c7840ea44ff tcmplex-panteltje-0.4.7.ebuild 663
-MISC ChangeLog 1351 RMD160 bd0bf63cbbc490efc634f6af77143317a0339676 SHA1 c21442ec60399916e8bff62f4969e026f5841ad3 SHA256 89f21a93d764f10c6747e7359387fdd704f5c3f17b1130662467917d0a894361
-MD5 e7413d8fb1a0b168d7fe230b8d6c609c ChangeLog 1351
-RMD160 bd0bf63cbbc490efc634f6af77143317a0339676 ChangeLog 1351
-SHA256 89f21a93d764f10c6747e7359387fdd704f5c3f17b1130662467917d0a894361 ChangeLog 1351
+MISC ChangeLog 1547 RMD160 20db3c17af42bdbd72617999fba0773f76d68e82 SHA1 0daa600711c8eedb06e9d7790293b2ba488fb33f SHA256 5bfb41371b045ab90956edb1b258f11220de24039c7537142c4c606555f9aa22
+MD5 292b72c230cf88a837e898933a9aabee ChangeLog 1547
+RMD160 20db3c17af42bdbd72617999fba0773f76d68e82 ChangeLog 1547
+SHA256 5bfb41371b045ab90956edb1b258f11220de24039c7537142c4c606555f9aa22 ChangeLog 1547
 MISC metadata.xml 318 RMD160 860a95bcf71d853a1a10a61256cd1b04c4948f17 SHA1 c2e2757dd3cc73b89b08c33bd48d26d75c2d9903 SHA256 e4672a0f0e3d3396c1e152d91c14a6d24d9f4acd92e11dac0282d95538af464d
 MD5 ed9709591e18d6b38c44675d04e2df4c metadata.xml 318
 RMD160 860a95bcf71d853a1a10a61256cd1b04c4948f17 metadata.xml 318
@@ -37,14 +29,11 @@ SHA256 9b3799d8977d8d070a28e189de0183fcb2e8055d5b70bee414ef13b675643d92 files/di
 MD5 74da699367fadca3c3f5499fe97108de files/digest-tcmplex-panteltje-0.4.7 259
 RMD160 b1e2857ab40d8e0ad74c7cc50b696014e91478fe files/digest-tcmplex-panteltje-0.4.7 259
 SHA256 64103efac8695a65edfb14eef23e4f23f3ef00acca1e5ce718add671055fd99a files/digest-tcmplex-panteltje-0.4.7 259
-MD5 74da699367fadca3c3f5499fe97108de files/digest-tcmplex-panteltje-0.4.7-r1 259
-RMD160 b1e2857ab40d8e0ad74c7cc50b696014e91478fe files/digest-tcmplex-panteltje-0.4.7-r1 259
-SHA256 64103efac8695a65edfb14eef23e4f23f3ef00acca1e5ce718add671055fd99a files/digest-tcmplex-panteltje-0.4.7-r1 259
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2.2 (GNU/Linux)
 Comment: no further Information
 
-iD8DBQFEooM0dn07HTTCgIoRAlmCAJ9Z/W/bx22JS8eNWrTkbUJkbqpDugCeIEH0
-RJnBRU2jqmm4fwUyFFF0k94=
-=Hm4k
+iD8DBQFEqVdudn07HTTCgIoRArkHAJ99jHVgokCUcaX2bzyn9pheaSPaAQCgtw6O
+OVBzVFt6lO4vX00iI80gA9w=
+=r8bK
 -----END PGP SIGNATURE-----
