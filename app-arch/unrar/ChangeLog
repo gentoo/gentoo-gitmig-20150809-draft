@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.65 2006/07/03 19:13:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.66 2006/07/03 19:32:55 grobian Exp $
+
+  03 Jul 2006; Fabian Groffen <grobian@gentoo.org> unrar-3.6.2.ebuild:
+  Marked ppc-macos stable (bug #135853)
 
 *unrar-3.6.6 (03 Jul 2006)
 
