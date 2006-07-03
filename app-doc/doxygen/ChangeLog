@@ -1,6 +1,15 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.100 2006/06/24 01:44:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.101 2006/07/03 01:26:31 nerdboy Exp $
+
+*doxygen-1.4.7 (03 Jul 2006)
+
+  03 Jul 2006; Steve Arnold <nerdboy@gentoo.org>
+  +files/1.4.7/01_all_cp1251.patch, +files/1.4.7/05_all_system-libpng.patch,
+  +files/1.4.7/06_all_qtools.patch, +doxygen-1.4.7.ebuild:
+  Version bump for bug #137283, need arch testing and graphviz answers (see
+  bug #134575) before package cleanup can occur.  Filed bug #138937 on the
+  doxygen stablization issue.
 
   24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> doxygen-1.4.2.ebuild,
   doxygen-1.4.3-r1.ebuild, doxygen-1.4.4.ebuild, doxygen-1.4.5.ebuild,
