@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.00.ebuild,v 1.5 2006/07/03 04:02:10 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.00.ebuild,v 1.6 2006/07/03 21:43:23 gustavoz Exp $
 
 GCONF_DEBUG="no"
 inherit eutils gnome2
@@ -52,7 +52,7 @@ RDEPEND="|| ( ( x11-libs/libXrandr
 
 SLOT="0"
 LICENSE="OPERA-9.0"
-KEYWORDS="amd64 ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc sparc ~x86"
 
 src_unpack() {
 	unpack ${A}
