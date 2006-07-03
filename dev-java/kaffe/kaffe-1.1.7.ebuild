@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7.ebuild,v 1.2 2006/07/02 20:00:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7.ebuild,v 1.3 2006/07/03 16:46:40 nichoj Exp $
 
 inherit base eutils java-vm-2 flag-o-matic
 
@@ -65,7 +65,8 @@ src_compile() {
 	local confargs=""
 
 	# see #88330
-	strip-flags "-fomit-frame-pointer"
+	filter-flags "-fomit-frame-pointer"
+	append-flags "-fno-strict-aliasing"
 
 	if ! use alsa && ! use esd; then
 		confargs="${confargs} --disable-sound"
@@ -83,7 +84,7 @@ src_compile() {
 	use ppc && confargs="${confargs} --with-engine=intrp"
 
 	# --with-rt-jar in 1.1.7 to use the system installed classpath
-	./configure \
+	econf \
 		--disable-dependency-tracking \
 		--prefix=/opt/${P} \
 		--host=${CHOST} \
@@ -98,14 +99,14 @@ src_compile() {
 
 	# --with-bcel
 	# --with-profiling
-	make || die "Failed to compile"
+	emake || die "Failed to compile"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Failed to install"
+	emake DESTDIR="${D}" install || die "Failed to install"
 	set_java_env
 
-	local javadoc=${D}/opt/${P}/bin/javadoc
+	local javadoc"=${D}/opt/${P}/bin/javadoc"
 	# xno append here to zero the kaffe installed one
 	echo '#!/bin/bash' > ${javadoc}
 	echo 'exec /usr/bin/gjdoc "${@}"' >> ${javadoc}
