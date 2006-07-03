@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.9-r1.ebuild,v 1.5 2006/05/06 21:15:53 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.10.9-r1.ebuild,v 1.6 2006/07/03 02:21:42 metalgod Exp $
 
 inherit eutils gnome2 mono
 
@@ -13,7 +13,7 @@ SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="aac doc daap ipod flac mad njb vorbis"
+IUSE="aac doc daap encode ipod flac mad njb vorbis"
 
 RDEPEND=">=dev-lang/mono-1.1.13
 	>=dev-dotnet/gtk-sharp-2.8.0
@@ -35,7 +35,6 @@ RDEPEND=">=dev-lang/mono-1.1.13
 		>=media-libs/faad2-2.0-r4 )
 	>=media-plugins/gst-plugins-cdparanoia-0.10.0
 	>=media-libs/musicbrainz-2.1.1
-	real? ( media-video/realplayer )
 	njb? ( >=dev-dotnet/njb-sharp-0.2.2 )
 	daap? ( >=net-dns/avahi-0.6.9 )
 	>=dev-libs/glib-2.0
