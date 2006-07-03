@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1-r3.ebuild,v 1.9 2006/01/15 00:21:11 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1-r3.ebuild,v 1.10 2006/07/03 13:27:13 betelgeuse Exp $
 
 inherit java fixheadtails
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/jdk${PV}
 SRC_URI="ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/jdk-${PV}-1-linux-alpha.rpm"
 HOMEPAGE="ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/"
 DESCRIPTION="Compaq Java Development Kit ${PV} for Alpha/Linux/GNU"
-DEPEND="virtual/libc
+DEPEND="
 	app-arch/rpm2targz
 	dev-libs/libots
 	dev-libs/libcpml
