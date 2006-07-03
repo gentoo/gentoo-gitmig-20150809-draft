@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.201 2006/07/02 22:41:52 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.202 2006/07/03 16:38:19 plasmaroo Exp $
+
+  03 Jul 2006; <plasmaroo@gentoo.org> udev-090-r1.ebuild:
+  Stable on IA64.
 
   02 Jul 2006; Joel Martin <kanaka@gentoo.org> udev-084.ebuild,
   udev-085.ebuild, udev-086.ebuild, udev-087.ebuild, udev-087-r1.ebuild,
