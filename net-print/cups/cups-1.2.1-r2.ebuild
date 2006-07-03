@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r2.ebuild,v 1.7 2006/07/02 22:19:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.1-r2.ebuild,v 1.8 2006/07/03 01:37:12 vapier Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.easysw.com/pub/cups/${PV}/${MY_P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="ssl slp pam samba nls gnutls dbus tiff png ppds jpeg"
 
 DEP="pam? ( virtual/pam )
@@ -33,7 +33,7 @@ RDEPEND="${DEP}
 	nls? ( virtual/libintl )
 	!virtual/lpr
 	>=app-text/poppler-0.4.3-r1
-	ppds? ( || ( 
+	ppds? ( || (
 		(
 			net-print/foomatic-filters-ppds
 			net-print/foomatic-db-ppds
@@ -43,7 +43,7 @@ RDEPEND="${DEP}
 		net-print/hplip
 		media-gfx/gimp-print
 		net-print/foo2zjs
-		net-print/cups-pdf	
+		net-print/cups-pdf
 	) )"
 PDEPEND="samba? ( >=net-fs/samba-3.0.8 )
 	virtual/ghostscript"
