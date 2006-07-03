@@ -1,0 +1,22 @@
+--- configure.ac-orig	2006-07-03 16:41:42.000000000 -0500
++++ configure.ac	2006-07-03 16:48:12.000000000 -0500
+@@ -29,7 +29,7 @@
+ AC_ARG_ENABLE(gtkhtml2,  AS_HELP_STRING([--disable-gtkhtml2],[don't compile the gtkhtml2 backend]),,enable_gtkhtml2=yes)
+ AC_ARG_ENABLE(xulrunner, AS_HELP_STRING([--disable-xulrunner],[don't compile the xulrunner backend]),,enable_xulrunner=yes)
+ AC_ARG_ENABLE(gecko,     AS_HELP_STRING([--disable-gecko],[don't compile the Gecko backend]),,enable_gecko=yes)
+-AC_ARG_ENABLE(gecko,     AS_HELP_STRING([--enable-gecko=ARG],[specify which Gecko provider to use ("mozilla" or "firefox")]),,enable_gecko=yes)
++AC_ARG_ENABLE(gecko,     AS_HELP_STRING([--enable-gecko=ARG],[specify which Gecko provider to use ("seamonkey" or "firefox")]),,enable_gecko=yes)
+ 
+ AC_CHECK_FUNCS([strsep getaddrinfo])
+ 
+@@ -118,8 +118,8 @@
+ dnl Mozilla
+ dnl *******
+ 
+-if test "x$enable_gecko" = "xyes" -o "x$enable_gecko" = "xmozilla" ; then
+-   gecko_provider=mozilla
++if test "x$enable_gecko" = "xyes" -o "x$enable_gecko" = "xseamonkey" ; then
++   gecko_provider=seamonkey
+    PKG_CHECK_MODULES(MOZILLA, $gecko_provider-gtkmozembed, enable_mozilla=yes, enable_mozilla=no)
+    AC_MSG_RESULT($gecko_provider: $enable_mozilla)
+ fi
