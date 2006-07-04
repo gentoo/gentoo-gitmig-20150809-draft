@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/unison
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.37 2006/07/04 10:37:22 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.38 2006/07/04 10:52:13 mattam Exp $
+
+  04 Jul 2006; Matthieu Sozeau <mattam@gentoo.org> unison-2.13.16.ebuild,
+  -unison-2.17.1.ebuild:
+  Fix latest stable version, removing old beta.
 
 *unison-2.17.1-r1 (04 Jul 2006)
 
