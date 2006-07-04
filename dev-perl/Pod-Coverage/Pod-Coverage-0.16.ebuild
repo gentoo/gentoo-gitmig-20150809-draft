@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/Pod-Coverage-0.16.ebuild,v 1.11 2006/07/02 03:06:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/Pod-Coverage-0.16.ebuild,v 1.12 2006/07/04 18:57:43 ian Exp $
 
 inherit perl-module
 
@@ -18,3 +18,4 @@ DEPEND="dev-perl/module-build
 		dev-perl/ExtUtils-CBuilder
 		perl-core/PodParser
 		dev-perl/Devel-Symdump"
+RDEPEND="${DEPEND}"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Pod-Coverage
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.28 2006/07/02 03:06:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.29 2006/07/04 18:57:43 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> Pod-Coverage-0.16.ebuild,
+  Pod-Coverage-0.17.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   02 Jul 2006; Michael Cummings <mcummings@gentoo.org>
   Pod-Coverage-0.16.ebuild, Pod-Coverage-0.17.ebuild:
