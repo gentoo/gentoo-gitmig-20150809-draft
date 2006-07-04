@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.17.1.ebuild,v 1.3 2006/07/04 10:37:22 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.17.1-r1.ebuild,v 1.1 2006/07/04 10:37:22 mattam Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND=">=dev-lang/ocaml-3.04
 RDEPEND="gtk? ( >=dev-ml/lablgtk-2.2
 || ( net-misc/x11-ssh-askpass net-misc/gtk2-ssh-askpass ) )"
 
-PDEPEND="|| ( media-font/font-schumacher-misc <virtual/x11-7 )"
+PDEPEND="gtk? ( || ( media-font/font-schumacher-misc <virtual/x11-7 ) )"
 
 SRC_URI="http://www.cis.upenn.edu/~bcpierce/unison/download/releases/${P}/${P}.tar.gz
 doc? ( http://www.cis.upenn.edu/~bcpierce/unison/download/releases/${P}/${P}-manual.pdf
