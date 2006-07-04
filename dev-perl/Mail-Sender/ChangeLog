@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-Sender
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sender/ChangeLog,v 1.6 2006/05/15 14:55:19 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sender/ChangeLog,v 1.7 2006/07/04 12:25:02 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Mail-Sender-0.8.10.ebuild, Mail-Sender-0.8.13.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   15 May 2006; Jon Hood <squinky86@gentoo.org> Mail-Sender-0.8.13.ebuild:
   Add ~amd64, #121762.
