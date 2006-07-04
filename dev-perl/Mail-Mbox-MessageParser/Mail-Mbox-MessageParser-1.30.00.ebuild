@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Mbox-MessageParser/Mail-Mbox-MessageParser-1.30.00.ebuild,v 1.2 2006/05/01 16:05:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Mbox-MessageParser/Mail-Mbox-MessageParser-1.30.00.ebuild,v 1.3 2006/07/04 11:57:38 ian Exp $
 
 inherit perl-module
 
@@ -16,9 +16,9 @@ SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 
-DEPEND="${DEPEND}
-	dev-perl/Text-Diff
+DEPEND="dev-perl/Text-Diff
 	dev-perl/FileHandle-Unget"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	echo "" | perl-module_src_compile
