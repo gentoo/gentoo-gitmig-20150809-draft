@@ -1,0 +1,28 @@
+diff -u gnash/libbase/Makefile.am.orig gnash/libbase/Makefile.am
+--- gnash/libbase/Makefile.am.orig	2006-06-07 22:28:25.000000000 +0200
++++ gnash/libbase/Makefile.am	2006-06-07 22:35:51.000000000 +0200
+@@ -94,8 +94,8 @@
+ 	$(JPEG_LIBS) \
+ 	$(ZLIB_LIBS) \
+ 	$(CURL_LIBS) \
+-	$(SDL_LIBS)
+-#	$(OPENGL_LIBS)
++	$(SDL_LIBS) \
++	$(OPENGL_LIBS)
+ 
+ noinst_HEADERS = \
+ 	container.h \
+diff -u gnash/server/Makefile.am.orig gnash/server/Makefile.am
+--- gnash/server/Makefile.am.orig	2006-06-07 22:28:28.000000000 +0200
++++ gnash/server/Makefile.am	2006-06-07 22:36:00.000000000 +0200
+@@ -233,8 +233,8 @@
+ 	libgnashasobjs.la \
+ 	$(ZLIB_LIBS) \
+ 	$(LIBXML_LIBS) \
+-	$(MP3_LIBS)
+-#	$(OPENGL_LIBS)
++	$(MP3_LIBS) \
++	$(OPENGL_LIBS)
+ 
+ #libserver_la_LDFLAGS = -module -avoid-version -no-undefined
+ #libserver_la_LIBDADD =  #@DL_LIB@  # $(LIBLTDL)
