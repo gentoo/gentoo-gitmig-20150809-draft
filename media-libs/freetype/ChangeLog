@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.88 2006/07/03 17:52:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.89 2006/07/04 05:24:28 tsunam Exp $
+
+  04 Jul 2006; Joshua Jackson <tsunam@gentoo.org> freetype-2.1.10-r2.ebuild:
+  Stable x86; bug #124828
 
   03 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   freetype-2.1.10-r2.ebuild:
