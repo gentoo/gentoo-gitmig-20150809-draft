@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-HTMLDoc/HTML-HTMLDoc-0.09.ebuild,v 1.1 2005/11/22 03:33:49 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-HTMLDoc/HTML-HTMLDoc-0.09.ebuild,v 1.2 2006/07/04 09:53:52 ian Exp $
 
 inherit perl-module
 
@@ -16,3 +16,4 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="app-text/htmldoc"
+RDEPEND="${DEPEND}"
