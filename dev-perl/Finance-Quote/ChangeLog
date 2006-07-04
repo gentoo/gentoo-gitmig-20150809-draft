@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Finance-Quote
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.30 2006/06/12 15:24:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.31 2006/07/04 08:45:35 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Finance-Quote-1.08-r1.ebuild, Finance-Quote-1.10.ebuild,
+  Finance-Quote-1.11.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   Finance-Quote-1.11.ebuild:

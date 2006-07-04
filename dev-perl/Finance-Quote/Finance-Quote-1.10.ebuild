@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/Finance-Quote-1.10.ebuild,v 1.6 2006/02/06 20:18:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/Finance-Quote-1.10.ebuild,v 1.7 2006/07/04 08:45:35 ian Exp $
 
 inherit perl-module eutils
 
@@ -18,5 +18,6 @@ SRC_TEST="do"
 
 DEPEND="dev-perl/libwww-perl
 	dev-perl/HTML-TableExtract"
+RDEPEND="${DEPEND}"
 
 mydoc="TODO"
