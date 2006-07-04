@@ -1,0 +1,63 @@
+=== modified file 'configure.ac'
+--- configure.ac	
++++ configure.ac	
+@@ -33,6 +33,12 @@
+             [AC_HELP_STRING([--with-pygtk], [support pygtk [default=yes]])],
+ 	    [],
+ 	    [with_pygtk="yes"])
++AC_ARG_WITH([svg],
++            AS_HELP_STRING([--without-svg],
++                           [Build without libsvg-cairo library (default: test)]))
++AC_ARG_WITH([numeric],
++            AS_HELP_STRING([--without-numeric],
++                           [Build without numeric support (default: test)]))
+ 
+ 
+ # put the ACLOCAL flags in the makefile
+@@ -77,11 +83,16 @@
+ AM_CONDITIONAL(WITH_PYGTK, test x$with_pygtk = xyes)
+ 
+ # is libsvg-cairo installed?
+-PKG_CHECK_MODULES(LIBSVG_CAIRO,
+-  libsvg-cairo >= libsvg_cairo_required_version,
+-  [have_libsvg_cairo=yes],[have_libsvg_cairo=no])
+-if test -n "$export_dynamic"; then
+-  LIBSVG_CAIRO_LIBS=`echo $LIBSVG_CAIRO_LIBS | sed -e "s/$export_dynamic//"`
++if test "x$with_svg" != "xno"; then
++  PKG_CHECK_MODULES(LIBSVG_CAIRO,
++    libsvg-cairo >= libsvg_cairo_required_version,
++    [have_libsvg_cairo=yes],[have_libsvg_cairo=no])
++  if test -n "$export_dynamic"; then
++    LIBSVG_CAIRO_LIBS=`echo $LIBSVG_CAIRO_LIBS | sed -e "s/$export_dynamic//"`
++  fi
++else
++  # only needed for the summary printed at the end of configure
++  have_libsvg_cairo=no
+ fi
+ AM_CONDITIONAL(HAVE_LIBSVG_CAIRO, test x$have_libsvg_cairo = xyes)
+ 
+@@ -89,12 +100,17 @@
+ AM_CHECK_PYTHON_HEADERS(,[AC_MSG_ERROR(could not find Python headers)])
+ 
+ # Numeric Python
+-save_CPPFLAGS="$CPPFLAGS"
+-CPPFLAGS="$CPPFLAGS $PYTHON_INCLUDES"
+-AC_CHECK_HEADER([Numeric/arrayobject.h],
+-  [have_numpy=yes], [have_numpy=no],
+-  [#include <Python.h>])
+-CPPFLAGS="$save_CPPFLAGS"
++if test "x$with_numeric" != "xno"; then
++  save_CPPFLAGS="$CPPFLAGS"
++  CPPFLAGS="$CPPFLAGS $PYTHON_INCLUDES"
++  AC_CHECK_HEADER([Numeric/arrayobject.h],
++    [have_numpy=yes], [have_numpy=no],
++    [#include <Python.h>])
++  CPPFLAGS="$save_CPPFLAGS"
++else
++  # only needed for the summary printed at the end of configure
++  have_numpy=no
++fi
+ if test x$have_numpy = xyes; then
+   AC_DEFINE(HAVE_NUMPY, [1], [Define to 1 if Numeric python is found])
+ fi
+
