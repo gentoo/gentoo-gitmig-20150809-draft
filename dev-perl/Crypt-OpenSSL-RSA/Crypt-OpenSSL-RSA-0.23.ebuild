@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/Crypt-OpenSSL-RSA-0.23.ebuild,v 1.4 2006/07/02 20:07:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/Crypt-OpenSSL-RSA-0.23.ebuild,v 1.5 2006/07/04 07:03:37 ian Exp $
 
 inherit perl-module
 
@@ -17,6 +17,7 @@ IUSE=""
 DEPEND="dev-perl/Crypt-OpenSSL-Bignum
 	dev-perl/Crypt-OpenSSL-Random
 	dev-libs/openssl"
+RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
 
