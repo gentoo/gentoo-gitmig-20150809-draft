@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Class-Trigger
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.17 2006/03/30 22:20:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.18 2006/07/04 04:48:22 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Class-Trigger-0.08.ebuild, Class-Trigger-0.09.ebuild,
+  Class-Trigger-0.10.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Class-Trigger-0.10.ebuild:
   Mark 0.10 ~ia64
