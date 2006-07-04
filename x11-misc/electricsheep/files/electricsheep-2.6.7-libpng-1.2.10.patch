@@ -1,0 +1,123 @@
+--- electricsheep/client/flam3/png.c	2005/07/20 06:06:16	1.8
++++ electricsheep/client/flam3/png.c	2006/06/26 19:36:49	1.9
+@@ -14,6 +14,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <png.h>
++#include <setjmp.h>
+ 
+ #include "img.h"
+ 
+@@ -67,7 +68,7 @@
+   unsigned char sig_buf [SIG_CHECK_SIZE];
+   png_struct *png_ptr;
+   png_info *info_ptr;
+-  png_byte **png_image;
++  png_byte **png_image = NULL;
+   int linesize, x, y;
+   unsigned char *p, *q;
+ 
+@@ -85,6 +86,16 @@
+     fprintf (stderr, "cannot allocate LIBPNG structure\n");
+     return 0;
+   }
++  if (setjmp(png_jmpbuf(png_ptr))) {
++     if (png_image) {
++	 for (y = 0 ; y < info_ptr->height ; y++)
++	     free (png_image[y]);
++	 free (png_image);
++     }
++     png_destroy_read_struct(&png_ptr, &info_ptr, (png_infopp)NULL);
++     perror("reading file");
++     return;
++  }
+   info_ptr = png_create_info_struct (png_ptr);
+   if (info_ptr == NULL) {
+     png_destroy_read_struct (&png_ptr, (png_infopp)NULL, (png_infopp)NULL);
+@@ -155,9 +166,7 @@
+   for (y = 0 ; y < info_ptr->height ; y++)
+     free (png_image[y]);
+   free (png_image);
+-  png_read_destroy (png_ptr, info_ptr, (png_info *)0);  
+-  free (png_ptr);
+-  free (info_ptr);
++  png_destroy_read_struct (&png_ptr, &info_ptr, (png_infopp)NULL);  
+ 
+   return q;
+ }
+--- electricsheep/client/mpeg2dec/libvo/video_out_x11.c	2005/07/20 03:03:00	1.6
++++ electricsheep/client/mpeg2dec/libvo/video_out_x11.c	2006/06/26 19:36:49	1.7
+@@ -39,6 +39,8 @@
+ #include <X11/extensions/XShm.h>
+ #include <inttypes.h>
+ #include <sys/time.h>
++#include <png.h>
++#include <setjmp.h>
+ 
+ #include "vroot.h"
+ #include <sys/types.h>
+@@ -124,8 +126,6 @@
+     tv_rate = tv_end;
+ }
+ 
+-#include <png.h>
+-
+ static char *overlay_luma = NULL;
+ static char *overlay_alpha = NULL;
+ static int overlay_width;
+@@ -165,7 +165,7 @@
+   unsigned char sig_buf [SIG_CHECK_SIZE];
+   png_struct *png_ptr;
+   png_info *info_ptr;
+-  png_byte **png_image;
++  png_byte **png_image = NULL;
+   int linesize, x, y;
+   unsigned char *p, *q;
+ 
+@@ -183,6 +183,16 @@
+     fprintf (stderr, "cannot allocate LIBPNG structure\n");
+     return;
+   }
++  if (setjmp(png_jmpbuf(png_ptr))) {
++     if (png_image) {
++	 for (y = 0 ; y < info_ptr->height ; y++)
++	     free (png_image[y]);
++	 free (png_image);
++     }
++     png_destroy_read_struct(&png_ptr, &info_ptr, (png_infopp)NULL);
++     perror("reading file");
++     return;
++  }
+   info_ptr = png_create_info_struct (png_ptr);
+   if (info_ptr == NULL) {
+     png_destroy_read_struct (&png_ptr, (png_infopp)NULL, (png_infopp)NULL);
+@@ -271,10 +281,7 @@
+   for (y = 0 ; y < info_ptr->height ; y++)
+     free (png_image[y]);
+   free (png_image);
+-  png_read_destroy (png_ptr, info_ptr, (png_info *)0);  
+-  free (png_ptr);
+-  free (info_ptr);
+-
++  png_destroy_read_struct (&png_ptr, &info_ptr, (png_infopp)NULL);  
+ }
+ 
+ static void overlay_read_ppm(FILE *fin)
+@@ -535,6 +542,8 @@
+       instance->corner_x = (w - instance->width)/2;
+       instance->corner_y = (h - instance->height)/2;
+     } else if (window_id == -1) {
++      XTextProperty xname;
++      char *nm = "Electric Sheep";
+       /* create a window the same size as the video */
+       instance->window =
+ 	XCreateWindow (instance->display,
+@@ -544,6 +553,8 @@
+ 		       InputOutput, instance->vinfo.visual,
+ 		       (CWBackPixmap | CWBackingStore | CWBorderPixel |
+ 			CWEventMask | CWColormap), &attr);
++      XStringListToTextProperty(&nm, 1, &xname);
++      XSetWMName(instance->display, instance->window, &xname);
+     } else {
+ 	/* zoomed to fit the window specified on the command line */
+ 	XWindowAttributes xgwa;
