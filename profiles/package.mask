@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5582 2006/07/04 02:12:33 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5583 2006/07/04 14:42:38 marienz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Marien Zwart <marienz@gentoo.org> (4 Jul 2006)
+# pycairo for the currently masked cairo-1.2.0, unmask when cairo-1.2.0 is
+>=dev-python/pycairo-1.2.0
 
 # Joshua Nichols <nichoj@gentoo.org> (28 Jun 2002)
 # Upstream discourages the use of 5.0.x, in favor of 5.5.x,
