@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/PPI-1.115.ebuild,v 1.1 2006/06/23 23:44:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/PPI-1.115.ebuild,v 1.2 2006/07/04 14:36:22 ian Exp $
 
 inherit perl-module
 
@@ -24,3 +24,4 @@ DEPEND="dev-perl/File-Remove
 		>=dev-perl/Clone-0.17
 		dev-perl/Task-Weaken
 		dev-perl/List-MoreUtils"
+RDEPEND="${DEPEND}"

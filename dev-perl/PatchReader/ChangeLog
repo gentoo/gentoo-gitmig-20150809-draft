@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PatchReader
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/ChangeLog,v 1.20 2006/04/27 18:53:48 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/ChangeLog,v 1.21 2006/07/04 14:39:54 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> PatchReader-0.9.4.ebuild,
+  PatchReader-0.9.5.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-PatchReader-0.9.4, Manifest:

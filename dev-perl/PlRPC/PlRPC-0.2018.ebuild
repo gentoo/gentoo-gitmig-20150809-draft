@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/PlRPC-0.2018.ebuild,v 1.12 2006/04/24 15:42:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/PlRPC-0.2018.ebuild,v 1.13 2006/07/04 14:48:43 ian Exp $
 
 inherit perl-module
 
@@ -15,3 +15,4 @@ IUSE=""
 
 DEPEND=">=virtual/perl-Storable-1.0.7
 	>=dev-perl/Net-Daemon-0.34"
+RDEPEND="${DEPEND}"

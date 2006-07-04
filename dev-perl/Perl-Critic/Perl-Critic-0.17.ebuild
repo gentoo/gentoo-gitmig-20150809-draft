@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/Perl-Critic-0.17.ebuild,v 1.1 2006/06/23 20:28:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/Perl-Critic-0.17.ebuild,v 1.2 2006/07/04 14:44:01 ian Exp $
 
 inherit perl-module
 
@@ -23,3 +23,4 @@ DEPEND="dev-perl/Module-Pluggable
 		dev-perl/String-Format
 		dev-perl/perltidy
 		dev-perl/PPI"
+RDEPEND="${DEPEND}"

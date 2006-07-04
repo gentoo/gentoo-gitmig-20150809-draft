@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/Plucene-1.24.ebuild,v 1.6 2006/07/01 01:07:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/Plucene-1.24.ebuild,v 1.7 2006/07/04 14:52:15 ian Exp $
 
 inherit perl-module
 
@@ -29,3 +29,4 @@ DEPEND=">=dev-lang/perl-5.8.4
 		dev-perl/Lingua-Stem
 		dev-perl/Bit-Vector-Minimal
 		dev-perl/IO-stringy"
+RDEPEND="${DEPEND}"

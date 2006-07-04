@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Perl-Critic
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.5 2006/06/23 20:28:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.6 2006/07/04 14:44:01 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> Perl-Critic-0.15.ebuild,
+  Perl-Critic-0.16.ebuild, Perl-Critic-0.17.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
 *Perl-Critic-0.17 (23 Jun 2006)
 

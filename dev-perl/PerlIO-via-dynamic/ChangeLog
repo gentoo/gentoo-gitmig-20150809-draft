@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PerlIO-via-dynamic
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-dynamic/ChangeLog,v 1.14 2006/06/12 16:07:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-dynamic/ChangeLog,v 1.15 2006/07/04 14:45:51 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  PerlIO-via-dynamic-0.11.ebuild, PerlIO-via-dynamic-0.12.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   PerlIO-via-dynamic-0.12.ebuild:

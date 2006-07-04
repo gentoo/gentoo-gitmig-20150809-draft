@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Util/Params-Util-0.11.ebuild,v 1.3 2006/06/29 17:59:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Util/Params-Util-0.11.ebuild,v 1.4 2006/07/04 14:37:32 ian Exp $
 
 inherit perl-module
 
@@ -16,3 +16,4 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND=">=virtual/perl-Scalar-List-Utils-1.11"
+RDEPEND="${DEPEND}"
