@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/SVN-Mirror-0.57.ebuild,v 1.4 2006/06/12 16:44:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/SVN-Mirror-0.57.ebuild,v 1.5 2006/07/04 19:54:52 ian Exp $
 
 inherit perl-module
 
@@ -13,11 +13,11 @@ LICENSE="Artistic"
 KEYWORDS="~amd64 sparc ~x86"
 IUSE=""
 
-DEPEND="${DEPEND}
-	>=dev-util/subversion-1.0.4
+DEPEND=">=dev-util/subversion-1.0.4
 	dev-perl/URI
 	dev-perl/TermReadKey
 	dev-perl/SVN-Simple"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	if ! perl -MSVN::Core < /dev/null 2> /dev/null
