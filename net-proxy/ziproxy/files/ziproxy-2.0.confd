@@ -1,0 +1,12 @@
+# configuraton file for /etc/init.d/ziproxy
+
+# Full path to ziproxy.conf file (instead of default one).
+#
+#CONFIG="/etc/ziproxy.conf"
+
+# Limit incoming connections only from the specified address(es).
+# This option has the same meaning, but higher precedence as
+# "OnlyFrom=" option in configuration file. Uncomment it
+# if you want to set it.
+#
+#ONLYFROM="<IP.address or hostname>"

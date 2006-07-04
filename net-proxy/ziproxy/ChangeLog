@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/ziproxy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ChangeLog,v 1.4 2006/03/06 22:58:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ChangeLog,v 1.5 2006/07/04 17:33:10 sbriesen Exp $
+
+*ziproxy-2.0.0 (04 Jul 2006)
+
+  04 Jul 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/ziproxy-2.0.confd, +files/ziproxy-2.0.initd, +ziproxy-2.0.0.ebuild:
+  version bump, solving bug #139135.
 
   06 Mar 2006; Alin Nastac <mrness@gentoo.org> -ziproxy-1.5.1.ebuild:
   Remove old version.
