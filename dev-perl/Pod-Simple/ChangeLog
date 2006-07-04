@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Pod-Simple
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/ChangeLog,v 1.18 2006/06/29 23:40:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/ChangeLog,v 1.19 2006/07/04 19:47:48 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> Pod-Simple-3.02.ebuild,
+  Pod-Simple-3.03.ebuild, Pod-Simple-3.04.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   Pod-Simple-3.04.ebuild:
