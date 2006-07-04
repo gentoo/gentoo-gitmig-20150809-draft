@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.123 2006/07/03 17:30:51 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.124 2006/07/04 04:00:27 cardoe Exp $
+
+  04 Jul 2006; Doug Goldstein <cardoe@gentoo.org> dbus-0.62.ebuild:
+  Fix typo that shouldn't really affect compiles
 
   03 Jul 2006; Luis Medinas <metalgod@gentoo.org> dbus-0.61-r1.ebuild:
   Stable on amd64. Bug #137325.
