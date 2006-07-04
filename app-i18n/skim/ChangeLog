@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.43 2006/07/03 23:29:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.44 2006/07/04 18:47:25 corsair Exp $
+
+  04 Jul 2006; Markus Rothe <corsair@gentoo.org> skim-1.4.5.ebuild:
+  Added ~ppc64
 
   03 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> -skim-1.2.3.ebuild,
   -skim-1.4.1.ebuild, -skim-1.4.3.ebuild, -skim-1.4.4.ebuild:
