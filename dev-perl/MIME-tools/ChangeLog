@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MIME-tools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.42 2006/06/29 17:29:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.43 2006/07/04 11:48:25 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> MIME-tools-5.415.ebuild,
+  MIME-tools-5.416.ebuild, MIME-tools-5.417.ebuild, MIME-tools-5.420.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed DEPEND
 
   29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   MIME-tools-5.420.ebuild:
