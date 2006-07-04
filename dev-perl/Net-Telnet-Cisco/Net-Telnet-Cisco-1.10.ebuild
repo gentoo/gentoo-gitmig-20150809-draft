@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet-Cisco/Net-Telnet-Cisco-1.10.ebuild,v 1.14 2005/11/27 22:07:37 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet-Cisco/Net-Telnet-Cisco-1.10.ebuild,v 1.15 2006/07/04 14:01:20 ian Exp $
 
 inherit perl-module
 
@@ -15,3 +15,4 @@ IUSE=""
 
 DEPEND="dev-perl/Net-Telnet
 	dev-perl/TermReadKey"
+RDEPEND="${DEPEND}"
