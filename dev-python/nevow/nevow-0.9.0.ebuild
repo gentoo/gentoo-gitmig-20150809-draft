@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.8.0.ebuild,v 1.3 2006/07/04 15:33:43 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.9.0.ebuild,v 1.1 2006/07/04 15:33:43 marienz Exp $
 
 inherit distutils
 
@@ -15,7 +15,7 @@ IUSE="doc"
 
 DEPEND=">=dev-lang/python-2.4
 	>=dev-python/twisted-2.4
-	net-zope/zopeinterface
+	dev-python/twisted-web
 	doc? ( dev-python/docutils )"
 
 S=${WORKDIR}/Nevow-${PV}
@@ -23,12 +23,8 @@ S=${WORKDIR}/Nevow-${PV}
 PYTHON_MODNAME="nevow formless"
 
 src_test() {
-	local trialopts
-	if ! has_version ">=dev-python/twisted-2.1"; then
-		trialopts=-R
-	fi
-	trial ${trialopts} nevow || die "nevow trial failed"
-	trial ${trialopts} formless || die "formless trial failed"
+	PYTHONPATH=. trial nevow || die "nevow trial failed"
+	PYTHONPATH=. trial formless || die "formless trial failed"
 }
 
 src_compile() {
