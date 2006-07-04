@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/Date-Calc-5.4.ebuild,v 1.7 2005/10/03 09:54:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/Date-Calc-5.4.ebuild,v 1.8 2006/07/04 07:38:14 ian Exp $
 
 inherit perl-module
 
@@ -15,6 +15,7 @@ IUSE=""
 
 DEPEND=">=dev-perl/Bit-Vector-6.4
 	>=dev-perl/Carp-Clan-5.3"
+RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
 export OPTIMIZE="$CFLAGS"
