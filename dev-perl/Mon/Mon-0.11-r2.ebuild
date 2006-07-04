@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mon/Mon-0.11-r2.ebuild,v 1.9 2005/10/03 10:00:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mon/Mon-0.11-r2.ebuild,v 1.10 2006/07/04 13:20:29 ian Exp $
 
 inherit perl-module
 
@@ -13,10 +13,10 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE=""
 
-DEPEND="${DEPEND}
-	>=net-analyzer/fping-2.2_beta1
+DEPEND=">=net-analyzer/fping-2.2_beta1
 	>=dev-perl/Convert-BER-1.31
 	>=dev-perl/Net-Telnet-3.02
 	>=dev-perl/Period-1.20"
+RDEPEND="${DEPEND}"
 
 mydoc="COPYING COPYRIGHT VERSION"
