@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.009_beta1.ebuild,v 1.3 2006/01/16 14:03:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.009_beta1.ebuild,v 1.4 2006/07/04 14:47:41 ian Exp $
 
 inherit perl-module kde
 
@@ -24,6 +24,7 @@ S=${WORKDIR}/${P/_beta1/}
 
 DEPEND="=x11-libs/qt-3*
 		kde-base/kdelibs"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -63,5 +64,3 @@ src_install() {
 		chmod +x ${file}
 	done
 }
-
-
