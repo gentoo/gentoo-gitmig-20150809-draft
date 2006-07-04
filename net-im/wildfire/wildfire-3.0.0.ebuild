@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.0.0.ebuild,v 1.1 2006/07/04 13:50:47 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.0.0.ebuild,v 1.2 2006/07/04 16:20:55 humpback Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -19,28 +19,26 @@ IUSE="doc"
 PROVIDE="virtual/jabber-server"
 
 RDEPEND=" >=virtual/jre-1.5 "
+# Doesn't build against Java 1.6 due to changes in JDBC API
 DEPEND="net-im/jabber-base
-		>=virtual/jdk-1.5
+		=virtual/jdk-1.5*
 		dev-java/ant
 		>=dev-java/commons-net-1.4"
 
 S=${WORKDIR}/${PN//-/_}_src
 
+ant_src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-for.patch
+	# TODO should replace jars in build/lib with ones packaged by us -nichoj
+}
 
 src_compile() {
-	java-pkg_ensure-vm-version-sufficient 1.5
-	#I am preaty shure it does not work with jikes as jikes
-	#gives an error about: Error: "-source" only recognizes Java releases 1.3
-	#(JLS 2 features) and 1.4 (assert statement).
+	# Jikes doesn't support -source 1.5
 	java-pkg_filter-compiler jikes
 
-	eant -f build/build.xml || die
-	eant -f build/build.xml jar || die
-
-	einfo
-	einfo "Building plugins..."
-	einfo
-	eant -f build/build.xml plugins || die
+	eant -f build/build.xml jar plugins $(use_doc)
 }
 
 src_install() {

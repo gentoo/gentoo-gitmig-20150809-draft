@@ -1,0 +1,20 @@
+Only in wildfire_src-patched/build: .build.xml.swp
+diff -ru wildfire_src/build/build.xml wildfire_src-patched/build/build.xml
+--- wildfire_src/build/build.xml	2006-06-29 20:19:49.000000000 -0500
++++ wildfire_src-patched/build/build.xml	2006-07-04 09:42:58.000000000 -0500
+@@ -904,6 +904,7 @@
+     <target name="-plugins-impl" if="dirlist">
+ 
+         <!-- For each plugin in the main src dir, call the 'buildplugin' macro -->
++	<taskdef classname="net.sf.antcontrib.logic.For" name="for"/> 
+         <for list="${dirlist}" param="plugin" trim="true">
+             <sequential>
+                 <buildplugin plugin="@{plugin}" pluginsrc="${plugin.src.dir}"/>
+@@ -922,6 +923,7 @@
+     <target name="-plugin-impl-dev-build" if="dirlist2">
+ 
+         <!-- For each list of plugins in the dev dir call the 'buildplugin' macro -->
++	<taskdef classname="net.sf.antcontrib.logic.For" name="for"/> 
+         <for list="${dirlist2}" param="plugin" trim="true">
+             <sequential>
+                 <buildplugin plugin="@{plugin}" pluginsrc="${plugin.dev.dir}"/>
