@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.32 2006/06/23 23:42:08 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.33 2006/07/04 16:34:49 brix Exp $
+
+  04 Jul 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +files/cpufreqd-2.1.1-init.d:
+  Added missing file, bug #138906.
 
 *cpufreqd-2.1.1 (23 Jun 2006)
 
