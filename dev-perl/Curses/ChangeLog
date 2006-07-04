@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Curses
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/ChangeLog,v 1.29 2006/06/07 06:05:11 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/ChangeLog,v 1.30 2006/07/04 07:08:23 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> Curses-1.13.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed DEPEND
 
 *Curses-1.14 (07 Jun 2006)
 
