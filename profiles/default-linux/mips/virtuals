@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/virtuals,v 1.10 2006/06/08 20:26:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/virtuals,v 1.11 2006/07/04 16:57:25 kumba Exp $
 
 virtual/alsa			sys-kernel/mips-sources
 virtual/linux-sources		sys-kernel/mips-sources
@@ -8,3 +8,9 @@ virtual/os-headers		sys-kernel/mips-headers
 virtual/dev-manager		sys-fs/udev
 virtual/modutils		sys-apps/module-init-tools
 virtual/logger			app-admin/syslog-ng
+virtual/glu			media-libs/mesa
+virtual/opengl			x11-base/xorg-x11
+virtual/x11			x11-base/xorg-x11
+virtual/xft			x11-base/xorg-x11
+virtual/glut			media-libs/freeglut
+
