@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.1-r1.ebuild,v 1.1 2006/06/27 22:56:22 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.1-r1.ebuild,v 1.2 2006/07/04 19:20:55 gustavoz Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://galeon.sourceforge.net"
 SRC_URI="mirror://sourceforge/galeon/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc sparc ~x86"
 SLOT="0"
 RDEPEND=">=www-client/mozilla-firefox-1.0.2-r1
 	>=dev-libs/glib-2
