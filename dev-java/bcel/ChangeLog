@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/bcel
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.32 2005/11/13 21:27:29 compnerd Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.33 2006/07/04 18:50:30 nichoj Exp $
+
+*bcel-5.1-r3 (04 Jul 2006)
+
+  04 Jul 2006; Joshua Nichols <nichoj@gentoo.org> +bcel-5.1-r3.ebuild:
+  Revision bump to support new Java system.
 
 *bcel-5.1-r2 (13 Nov 2005)
 
