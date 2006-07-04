@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.14 2006/07/03 23:49:22 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.15 2006/07/04 00:40:09 nerdboy Exp $
+
+  04 Jul 2006; Steve Arnold <nerdboy@gentoo.org> geos-2.2.2.ebuild:
+  dodoc ordering got messed up (wrong working directory)
 
   03 Jul 2006; Steve Arnold <nerdboy@gentoo.org>
   +files/geos-2.2.2-swig.patch, +files/python.i, geos-2.2.2.ebuild:
