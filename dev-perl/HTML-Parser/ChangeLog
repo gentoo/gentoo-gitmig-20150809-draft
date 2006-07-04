@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/HTML-Parser
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/ChangeLog,v 1.74 2006/07/02 13:57:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/ChangeLog,v 1.75 2006/07/04 09:57:54 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  HTML-Parser-3.36-r1.ebuild, HTML-Parser-3.45.ebuild,
+  HTML-Parser-3.46.ebuild, HTML-Parser-3.48.ebuild, HTML-Parser-3.51.ebuild,
+  HTML-Parser-3.52.ebuild, HTML-Parser-3.54.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   02 Jul 2006; Michael Cummings <mcummings@gentoo.org>
   HTML-Parser-3.54.ebuild:
