@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-daemon
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.16 2006/07/02 20:52:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.17 2006/07/04 05:26:13 squinky86 Exp $
+
+  04 Jul 2006; Jon Hood <squinky86@gentoo.org> commons-daemon-1.0.1.ebuild:
+  Stable on amd64, bug #138759.
 
   02 Jul 2006; Petteri Räty <betelgeuse@gentoo.org>
   commons-daemon-1.0.ebuild, commons-daemon-1.0.1.ebuild:
