@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Msql-Mysql-modules
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Msql-Mysql-modules/ChangeLog,v 1.15 2006/06/12 15:49:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Msql-Mysql-modules/ChangeLog,v 1.16 2006/07/04 13:28:34 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Msql-Mysql-modules-1.2219-r1.ebuild, Msql-Mysql-modules-1.2219-r2.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header; fixed DEPEND
 
   12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   Msql-Mysql-modules-1.2219-r2.ebuild:
