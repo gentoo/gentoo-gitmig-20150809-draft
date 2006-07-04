@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.146 2006/07/03 19:37:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.147 2006/07/04 08:37:14 corsair Exp $
+
+  04 Jul 2006; Markus Rothe <corsair@gentoo.org> amarok-1.4.0a-r1.ebuild:
+  Stable on ppc64; bug #139095
 
   03 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> amarok-1.4.1-r1.ebuild:
   Remove pl docs, as they were broken on release.
