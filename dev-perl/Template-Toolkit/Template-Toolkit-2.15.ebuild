@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.15.ebuild,v 1.2 2006/07/01 16:18:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.15.ebuild,v 1.3 2006/07/04 20:51:49 ian Exp $
 
 inherit perl-module
 
@@ -12,8 +12,7 @@ SLOT="0"
 LICENSE="Artistic GPL-2"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
-DEPEND="${DEPEND}
-	dev-perl/text-autoformat
+DEPEND="dev-perl/text-autoformat
 	xml? ( dev-perl/XML-DOM
 	dev-perl/XML-RSS
 	dev-perl/XML-XPath )
@@ -26,6 +25,7 @@ DEPEND="${DEPEND}
 	postgres? ( dev-perl/DBI
 	dev-perl/DBD-Pg )
 	>=dev-perl/AppConfig-1.55"
+RDEPEND="${DEPEND}"
 
 #The installer tries to install to /usr/local/tt2...,
 #and asks for user input, so we change myconf to ensure that
@@ -47,5 +47,3 @@ mydoc="README Changes"
 #    Most of the changes are in the more obscure features and
 #    directives so hopefully you will find the upgrade process fairly
 #    painless.  If you're feeling brave, then answer 'y', otherwise 'n'.
-
-
