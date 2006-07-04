@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.13,v 1.9 2006/07/03 18:57:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.13,v 1.10 2006/07/04 19:10:31 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -129,6 +129,7 @@ get_real_chost() {
 	if ${PYTHON} -V &>/dev/null ; then
 		export REAL_CHOST=$(${ENV} -i ${PORTAGEQ} envvar CHOST 2>/dev/null)
 	else
+		ewarn "Python seems to be broken, attempting to locate CHOST ourselves ..."
 		export REAL_CHOST=$(try_real_hard_to_find_CHOST)
 	fi
 
