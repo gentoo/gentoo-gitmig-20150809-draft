@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0_pre8.ebuild,v 1.1 2006/06/17 23:04:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0_pre8.ebuild,v 1.2 2006/07/04 15:39:23 dang Exp $
 
 inherit multilib
 
@@ -15,7 +15,7 @@ IUSE="lirc"
 
 RDEPEND=">=app-emulation/emul-linux-x86-baselibs-2.0
 	>=app-emulation/emul-linux-x86-soundlibs-2.2
-	>=app-emulation/emul-linux-x86-gtklibs-2.1
+	>=app-emulation/emul-linux-x86-gtklibs-2.8
 	>=app-emulation/emul-linux-x86-sdl-2.1
 	>=app-emulation/emul-linux-x86-medialibs-1.2
 	>=media-libs/win32codecs-20050412
