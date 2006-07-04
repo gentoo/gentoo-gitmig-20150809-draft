@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/HTML-Tree-3.18.ebuild,v 1.14 2005/08/13 23:07:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/HTML-Tree-3.18.ebuild,v 1.15 2006/07/04 10:21:54 ian Exp $
 
 inherit perl-module
 
@@ -20,3 +20,4 @@ SRC_TEST="do"
 mydoc="Changes MANIFEST README"
 DEPEND=">=dev-perl/HTML-Tagset-3.03
 	>=dev-perl/HTML-Parser-2.19"
+RDEPEND="${DEPEND}"
