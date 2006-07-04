@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Schedule-At
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Schedule-At/ChangeLog,v 1.5 2006/06/12 16:13:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Schedule-At/ChangeLog,v 1.6 2006/07/04 19:56:46 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> Schedule-At-1.05.ebuild,
+  Schedule-At-1.06.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   Schedule-At-1.06.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Spreadsheet-ParseExcel
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.3 2006/03/30 23:19:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.4 2006/07/04 19:58:50 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Spreadsheet-ParseExcel-0.2603.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   Spreadsheet-ParseExcel-0.2603.ebuild:

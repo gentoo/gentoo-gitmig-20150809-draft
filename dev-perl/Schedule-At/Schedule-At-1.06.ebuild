@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Schedule-At/Schedule-At-1.06.ebuild,v 1.3 2006/06/12 16:13:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Schedule-At/Schedule-At-1.06.ebuild,v 1.4 2006/07/04 19:56:46 ian Exp $
 
 inherit perl-module
 
@@ -16,3 +16,4 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="sys-process/at"
+RDEPEND="${DEPEND}"
