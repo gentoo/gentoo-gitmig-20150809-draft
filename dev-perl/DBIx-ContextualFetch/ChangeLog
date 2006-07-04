@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBIx-ContextualFetch
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-ContextualFetch/ChangeLog,v 1.17 2006/04/27 18:02:00 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-ContextualFetch/ChangeLog,v 1.18 2006/07/04 07:22:58 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  DBIx-ContextualFetch-1.01.ebuild, DBIx-ContextualFetch-1.02.ebuild,
+  DBIx-ContextualFetch-1.03.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-DBIx-ContextualFetch-1.01,
