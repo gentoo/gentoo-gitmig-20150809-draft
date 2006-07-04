@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SOAP-Lite
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.26 2006/07/04 13:27:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.27 2006/07/04 19:53:22 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> SOAP-Lite-0.55.ebuild,
+  SOAP-Lite-0.60a-r1.ebuild, SOAP-Lite-0.66.ebuild, SOAP-Lite-0.67.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header; fixed DEPEND
 
 *SOAP-Lite-0.67 (04 Jul 2006)
 
