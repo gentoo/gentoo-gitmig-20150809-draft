@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.57.ebuild,v 1.1 2006/06/06 21:26:57 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.57.ebuild,v 1.2 2006/07/04 14:28:43 squinky86 Exp $
 
 inherit eutils
 
@@ -46,6 +46,10 @@ src_install() {
 
 	dodir /etc/env.d
 	echo -e "PATH=/opt/sancho\n" > ${D}/etc/env.d/20sancho
+
+	insinto /etc/revdep-rebuild
+	doins ${FILESDIR}/50-${PN}
+
 	make_desktop_entry sancho sancho /opt/sancho/distrib/sancho-32.xpm
 }
 
