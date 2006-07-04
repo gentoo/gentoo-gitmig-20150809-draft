@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.202 2006/07/03 16:38:19 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.203 2006/07/04 15:16:25 marienz Exp $
+
+  04 Jul 2006; Marien Zwart <marienz@gentoo.org> Manifest:
+  Fix Manifest (a couple of files mysteriously ended up with an off-by-one
+  size and different checksums).
 
   03 Jul 2006; <plasmaroo@gentoo.org> udev-090-r1.ebuild:
   Stable on IA64.
