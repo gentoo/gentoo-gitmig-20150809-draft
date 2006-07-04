@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Test-NoWarnings
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-NoWarnings/ChangeLog,v 1.1 2006/07/04 01:12:40 mcummings Exp $
+
+*Test-NoWarnings-0.082 (04 Jul 2006)
+
+  04 Jul 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Test-NoWarnings-0.082.ebuild:
+  Dep for Test::Deep
+
