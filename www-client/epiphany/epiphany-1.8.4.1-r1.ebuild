@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.8.4.1-r1.ebuild,v 1.2 2006/07/03 19:48:13 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.8.4.1-r1.ebuild,v 1.3 2006/07/04 13:14:40 allanonjl Exp $
 
 inherit eutils gnome2 autotools
 
@@ -43,7 +43,8 @@ RDEPEND=">=dev-libs/glib-2.8
 		>=dev-lang/python-2.3
 		>=dev-python/pygtk-2.7.1
 		>=dev-python/gnome-python-2.6 )
-	x11-themes/gnome-icon-theme"
+	x11-themes/gnome-icon-theme
+	>=gnome-base/gnome-common-2.8.0"
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper

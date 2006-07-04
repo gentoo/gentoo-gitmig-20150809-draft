@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.73 2006/07/03 19:48:13 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.74 2006/07/04 13:14:40 allanonjl Exp $
+
+  04 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
+  epiphany-1.8.4.1-r1.ebuild:
+  add dep on gnome-common for macros
 
   03 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
   +files/epiphany-1.8.4.1-seamonkey.patch, epiphany-1.8.4.1-r1.ebuild:
