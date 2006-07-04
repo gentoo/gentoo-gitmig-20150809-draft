@@ -5,3 +5,7 @@ WILDFIRE_CLASS="-classpath ${WILDFIRE_LIB}/startup.jar"
 WILDFIRE_JAR="-jar ${WILDFIRE_LIB}/startup.jar"
 WILDFIRE_ARGS="-server ${WILDFIRE_OPTS} ${WILDFIRE_CLASS} ${WILDFIRE_JAR}"
 
+
+#JVM used by the wildfire server. You can see a list of available vm's in /usr/lib/jvm/
+#But remenber that wildfire needs a 1.5 jvm
+GENTOO_VM=sun-jdk-1.5

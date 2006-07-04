@@ -10,7 +10,7 @@ depend() {
 start() {
 	#source /etc/env.d/java/20sun-jdk-1.5.0.06
 	#WILDFIRE_CMD="${JAVA_HOME}/bin/java"
-	WILDFIRE_CMD=`java-config -J`
+	WILDFIRE_CMD=`GENTOO_VM=${GENTOO_VM} java-config -J`
 
 	ebegin "Starting Wildfire Server"
         start-stop-daemon --chuid jabber --background --make-pidfile --pidfile /var/run/jabber/wildfire.pid --start --startas ${WILDFIRE_CMD} -- ${WILDFIRE_ARGS} > /var/log/wildfire.log 2>&1
