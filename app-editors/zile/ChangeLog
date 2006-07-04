@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/zile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.22 2006/06/30 19:57:00 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.23 2006/07/04 15:21:52 squinky86 Exp $
+
+  04 Jul 2006; Jon Hood <squinky86@gentoo.org> zile-2.2.13.ebuild:
+  Stable on amd64, bug #138435.
 
   30 Jun 2006; Thomas Cort <tcort@gentoo.org> zile-2.2.13.ebuild:
   Stable on alpha wrt Bug #138435.
