@@ -47,29 +47,29 @@ java-pkg-opt-2_pkg_setup() {
 # ------------------------------------------------------------------------------
 
 pre_pkg_setup() {
-	java-pkg-opt_pkg_setup
+	java-pkg-opt-2_pkg_setup
 }
 
 pre_src_unpack() {
-	java-pkg-opt_pkg_setup
+	java-pkg-opt-2_pkg_setup
 }
 
 pre_src_compile() {
-	java-pkg-opt_pkg_setup
+	java-pkg-opt-2_pkg_setup
 }
 
 pre_src_install() {
-	java-pkg-opt_pkg_setup
+	java-pkg-opt-2_pkg_setup
 }
 
 pre_src_test() {
-	java-pkg-opt_pkg_setup
+	java-pkg-opt-2_pkg_setup
 }
 
 pre_pkg_preinst() {
-	java-pkg-opt_pkg_setup
+	java-pkg-opt-2_pkg_setup
 }
 
 pre_pkg_postinst() {
-	java-pkg-opt_pkg_setup
+	java-pkg-opt-2_pkg_setup
 }
