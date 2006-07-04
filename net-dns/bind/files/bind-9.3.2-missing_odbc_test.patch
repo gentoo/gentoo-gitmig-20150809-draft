@@ -1,0 +1,20 @@
+--- configure.in	2006-07-09 22:00:54.000000000 +0000
++++ configure.in	2006-07-09 22:01:05.000000000 +0000
+@@ -686,17 +686,7 @@
+ 				fi
+ 			done
+ 			
+-			if   test -z "`${CC} contrib/sdb/test//test.c -lodbc -o contrib/sdb/test/test.ok 2>&1`"; then
+ 			    DLZ_ODBC_LIB="-lodbc"
+-			elif test -z "`${CC} contrib/sdb/test//test.c -liodbc -o contrib/sdb/test/test.ok 2>&1`"; then
+-			    DLZ_ODBC_LIB="-liodbc"
+-			else 
+-			    DLZ_ODBC_LIB=""
+-			    use_dlz_odbc="no"
+-			    AC_MSG_RESULT("no ODBC libraries found")
+-			fi
+-			rm -f contrib/sdb/test/test.ok
+-			
+ 			
+ 			if test "$use_dlz_odbc" = "yes"
+ 			then
