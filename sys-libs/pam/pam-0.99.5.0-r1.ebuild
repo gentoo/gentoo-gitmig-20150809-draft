@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.5.0-r1.ebuild,v 1.3 2006/07/01 21:27:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.5.0-r1.ebuild,v 1.4 2006/07/04 08:02:28 azarah Exp $
 
 inherit libtool multilib eutils autotools pam toolchain-funcs gnuconfig
 
@@ -26,7 +26,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="berkdb doc nls selinux"
 
 DEPEND="nls? ( sys-devel/gettext )
-	doc? ( app-text/ghostscript
+	doc? ( virtual/ghostscript
 	       app-text/tetex
 	       >=app-text/linuxdoc-tools-0.9.21_p4
 	       www-client/w3m
