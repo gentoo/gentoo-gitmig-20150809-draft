@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.101 2006/06/30 20:11:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.102 2006/07/04 01:26:03 gustavoz Exp $
+
+  04 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  sparc-sources-2.4.32-r6.ebuild:
+  Stable on sparc
 
 *sparc-sources-2.4.32-r6 (30 Jun 2006)
 
