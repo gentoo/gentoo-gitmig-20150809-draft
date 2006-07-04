@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Find/Email-Find-0.09.ebuild,v 1.15 2006/02/13 12:55:24 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Find/Email-Find-0.09.ebuild,v 1.16 2006/07/04 07:52:47 ian Exp $
 
 inherit perl-module
 
@@ -18,3 +18,4 @@ SRC_TEST="do"
 DEPEND="dev-perl/MailTools
 	dev-perl/Email-Valid
 	virtual/perl-Test-Simple"
+RDEPEND="${DEPEND}"

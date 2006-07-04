@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-DBSchema/DBIx-DBSchema-0.28.ebuild,v 1.9 2006/05/20 17:41:19 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-DBSchema/DBIx-DBSchema-0.28.ebuild,v 1.10 2006/07/04 07:32:28 ian Exp $
 
 inherit perl-module
 
@@ -17,3 +17,4 @@ SRC_TEST="do"
 
 DEPEND="dev-perl/DBI
 		dev-perl/FreezeThaw"
+RDEPEND="${DEPEND}"

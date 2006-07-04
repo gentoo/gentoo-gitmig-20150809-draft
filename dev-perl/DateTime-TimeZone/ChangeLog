@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DateTime-TimeZone
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.28 2006/06/12 00:00:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.29 2006/07/04 07:45:39 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  DateTime-TimeZone-0.44.ebuild, DateTime-TimeZone-0.45.ebuild,
+  DateTime-TimeZone-0.46.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   DateTime-TimeZone-0.44.ebuild, DateTime-TimeZone-0.45.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/DateTime-TimeZone-0.45.ebuild,v 1.2 2006/06/12 00:00:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/DateTime-TimeZone-0.45.ebuild,v 1.3 2006/07/04 07:45:39 ian Exp $
 
 inherit perl-module
 
@@ -17,4 +17,4 @@ SRC_TEST="do"
 DEPEND="dev-perl/module-build
 		>=dev-perl/Params-Validate-0.72
 		>=dev-perl/Class-Singleton-1.03"
-
+RDEPEND="${DEPEND}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/Eidetic-2.003003.ebuild,v 1.5 2006/03/30 22:33:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/Eidetic-2.003003.ebuild,v 1.6 2006/07/04 07:51:11 ian Exp $
 
 inherit perl-module webapp eutils
 
@@ -25,7 +25,7 @@ DEPEND="dev-lang/perl
 		dev-perl/Crypt-SmbHash
 		mysql? ( dev-db/mysql )
 		auth? ( dev-perl/Apache-AuthTicket )"
-RDEPEND=""
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
