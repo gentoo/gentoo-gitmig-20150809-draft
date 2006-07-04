@@ -1,0 +1,21 @@
+http://bugs.gentoo.org/139148
+
+e-mailed upstream
+
+Index: libmisc/copydir.c
+===================================================================
+RCS file: /cvsroot/shadow/libmisc/copydir.c,v
+retrieving revision 1.14
+diff -u -p -r1.14 copydir.c
+--- libmisc/copydir.c	7 May 2006 18:10:10 -0000	1.14
++++ libmisc/copydir.c	4 Jul 2006 19:42:22 -0000
+@@ -396,7 +396,8 @@ int remove_tree (const char *root)
+ 	 * is made set-ID.
+ 	 */
+ 
+-	dir = opendir (root);
++	if (!(dir = opendir (root)))
++		return -1;
+ 
+ 	while ((ent = readdir (dir))) {
+ 

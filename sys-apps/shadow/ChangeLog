@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.151 2006/06/10 16:54:22 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.152 2006/07/04 19:55:18 vapier Exp $
+
+*shadow-4.0.16-r1 (04 Jul 2006)
+
+  04 Jul 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/shadow-4.0.16-check-opendir.patch,
+  +files/shadow-4.0.16-fix-useradd-usergroups.patch,
+  +shadow-4.0.16-r1.ebuild:
+  Fix useradd behavior when using -g #128715 by Max Lorenz and fix segfault in
+  userdel with -r and /dev/null #139148 by David Roussel.
 
   10 Jun 2006; <roy@gentoo.org> shadow-4.0.14-r1.ebuild,
   shadow-4.0.15-r2.ebuild, shadow-4.0.16.ebuild:
