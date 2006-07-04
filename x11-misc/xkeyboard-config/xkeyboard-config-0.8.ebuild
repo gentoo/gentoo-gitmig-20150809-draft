@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-0.8.ebuild,v 1.5 2006/06/30 23:50:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-0.8.ebuild,v 1.6 2006/07/04 04:26:03 spyderous Exp $
 
 inherit eutils multilib
 
@@ -22,6 +22,15 @@ pkg_setup() {
 		eerror "Directory ${DIR} should be"
 		eerror "manually deleted/renamed/relocated before installing!"
 		die "Manually remove ${DIR}"
+	fi
+
+	# The old xkbdata 'pc' directory can screw stuff up, because portage won't
+	# let us overwrite a directory with a file
+	local PC="${ROOT}usr/share/X11/xkb/symbols/pc"
+	if [[ -d ${PC} ]] ; then
+		eerror "Directory ${PC} should be"
+		eerror "manually deleted/renamed/relocated before installing!"
+		die "Manually remove ${PC}"
 	fi
 }
 

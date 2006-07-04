@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.16 2006/06/30 23:50:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.17 2006/07/04 04:26:03 spyderous Exp $
+
+  04 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xkeyboard-config-0.8.ebuild:
+  Some old XKB thing (xkbdata?) installed /usr/share/X11/xkb/symbols/pc as a
+  directory. Now we install it as a file, but portage won't let a file replace
+  a directory so it doesn't get installed. This breaks XKB setups, with
+  numerous reports. Check for the directory in pkg_setup().
 
   30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
   xkeyboard-config-0.8.ebuild:
