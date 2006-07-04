@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/scim-anthy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/ChangeLog,v 1.31 2006/04/02 01:17:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/ChangeLog,v 1.32 2006/07/04 00:06:52 flameeyes Exp $
+
+  04 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -scim-anthy-0.8.0.ebuild, -scim-anthy-0.9.0.ebuild,
+  scim-anthy-1.0.0.ebuild:
+  Add nls useflag and related dependencies, disable static libraries and
+  dependency tracking, remove old versions.
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   scim-anthy-1.0.0.ebuild:

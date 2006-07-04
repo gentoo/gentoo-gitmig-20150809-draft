@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.0.0.ebuild,v 1.2 2006/04/02 01:17:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.0.0.ebuild,v 1.3 2006/07/04 00:06:52 flameeyes Exp $
 
 inherit libtool
 
@@ -11,12 +11,16 @@ SRC_URI="mirror://sourceforge.jp/scim-imengine/19544/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="nls"
 
 DEPEND="|| ( >=app-i18n/scim-1.2 >=app-i18n/scim-cvs-1.2 )
-	|| ( >=app-i18n/anthy-5900 >=app-i18n/anthy-ss-5911 )"
+	|| ( >=app-i18n/anthy-5900 >=app-i18n/anthy-ss-5911 )
+	nls? ( virtual/libintl )"
 RDEPEND="${DEPEND}
 	app-dicts/kasumi"
+DEPEND="${DEPEND}
+	nls? ( sys-devel/gettext )
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
@@ -25,8 +29,16 @@ src_unpack() {
 	elibtoolize
 }
 
+src_compile() {
+	econf \
+		$(use_enable nls) \
+		--disable-static \
+		--disable-dependency-tracking || die "econf failed"
+	emake || die "emake failed"
+}
+
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc AUTHORS THANKS README
 }
