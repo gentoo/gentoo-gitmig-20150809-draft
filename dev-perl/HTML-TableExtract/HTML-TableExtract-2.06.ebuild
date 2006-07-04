@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/HTML-TableExtract-2.06.ebuild,v 1.11 2006/03/10 12:34:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/HTML-TableExtract-2.06.ebuild,v 1.12 2006/07/04 10:17:46 ian Exp $
 
 inherit perl-module
 
@@ -17,3 +17,4 @@ IUSE=""
 mydoc="TODO"
 
 DEPEND=">=dev-perl/HTML-Element-Extended-1.13"
+RDEPEND="${DEPEND}"

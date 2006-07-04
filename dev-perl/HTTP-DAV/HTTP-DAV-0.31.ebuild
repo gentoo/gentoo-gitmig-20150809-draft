@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-DAV/HTTP-DAV-0.31.ebuild,v 1.9 2006/03/30 22:51:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-DAV/HTTP-DAV-0.31.ebuild,v 1.10 2006/07/04 10:23:54 ian Exp $
 
 inherit perl-module
 
@@ -17,3 +17,4 @@ SRC_TEST="do"
 
 DEPEND="dev-perl/libwww-perl
 		dev-perl/XML-DOM"
+RDEPEND="${DEPEND}"

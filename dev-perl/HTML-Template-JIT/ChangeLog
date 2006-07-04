@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Template-JIT
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-JIT/ChangeLog,v 1.3 2006/06/12 15:31:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-JIT/ChangeLog,v 1.4 2006/07/04 10:19:51 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  HTML-Template-JIT-0.05.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   HTML-Template-JIT-0.05.ebuild:

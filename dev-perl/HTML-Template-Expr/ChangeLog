@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/HTML-Template-Expr
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-Expr/ChangeLog,v 1.14 2006/06/12 15:31:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-Expr/ChangeLog,v 1.15 2006/07/04 10:18:59 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  HTML-Template-Expr-0.04.ebuild, HTML-Template-Expr-0.05.ebuild,
+  HTML-Template-Expr-0.07.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   HTML-Template-Expr-0.07.ebuild:
