@@ -1,4 +1,16 @@
-MD5 95780190a233d1a2cfc7e85852591467 ChangeLog 1033
-MD5 222b4c8ee3a7125ba0a9e275d2ee3a45 files/digest-libifp-module-1.0.0.2 66
-MD5 d23a2e2e2a63c570ee9dfb43587f7b3b libifp-module-1.0.0.2.ebuild 697
+DIST libifp-1.0.0.2.tar.gz 358550
+EBUILD libifp-module-1.0.0.2.ebuild 696 RMD160 b2a4a96a7fef060c9bd1c89737dfc84469a8d9c1 SHA1 fd670deede333fd00f8f845341afaebe148c29c3 SHA256 e1a4c43f2efbace9cad5f48b3b7971ce64b6cfa837e4e087f00f6a11031378bb
+MD5 ce0604574a397bb90c9502c1aba82eef libifp-module-1.0.0.2.ebuild 696
+RMD160 b2a4a96a7fef060c9bd1c89737dfc84469a8d9c1 libifp-module-1.0.0.2.ebuild 696
+SHA256 e1a4c43f2efbace9cad5f48b3b7971ce64b6cfa837e4e087f00f6a11031378bb libifp-module-1.0.0.2.ebuild 696
+MISC ChangeLog 1146 RMD160 4e3d75e2ae66e15d88809dc5adc1dfcf4f0ef7b6 SHA1 dad0c2d5c1f51d8e82415acfbd849ac3bef02a11 SHA256 43586546de18c7e7787eb89077121f46ce1614bfec9f028d56669424cc650dde
+MD5 dea489f9952dcb9b23c3916c5ae9feda ChangeLog 1146
+RMD160 4e3d75e2ae66e15d88809dc5adc1dfcf4f0ef7b6 ChangeLog 1146
+SHA256 43586546de18c7e7787eb89077121f46ce1614bfec9f028d56669424cc650dde ChangeLog 1146
+MISC metadata.xml 365 RMD160 99b93bef6f818027873fc8cd9d10bf5593bdab2b SHA1 c4ef2b59d6678681295330a6ba482d42839f9155 SHA256 19952326d3d012a44c485c875f064ef9bfa7a22cbc4ce4164f0483e0bfc6159a
 MD5 2a8fbd9c7f76cf00c7ebbb94ff62bceb metadata.xml 365
+RMD160 99b93bef6f818027873fc8cd9d10bf5593bdab2b metadata.xml 365
+SHA256 19952326d3d012a44c485c875f064ef9bfa7a22cbc4ce4164f0483e0bfc6159a metadata.xml 365
+MD5 222b4c8ee3a7125ba0a9e275d2ee3a45 files/digest-libifp-module-1.0.0.2 66
+RMD160 c2a39cb8642896a65b316949dff94cdbc29dacd6 files/digest-libifp-module-1.0.0.2 66
+SHA256 59829518269c099723991662b99bd7146b7cdd780acba3fb80daa327f21a3bae files/digest-libifp-module-1.0.0.2 66
