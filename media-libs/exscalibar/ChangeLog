@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/exscalibar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/ChangeLog,v 1.10 2006/07/04 08:36:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/ChangeLog,v 1.11 2006/07/04 17:56:13 gustavoz Exp $
+
+  04 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  exscalibar-1.0.4.ebuild:
+  Stable on sparc
 
   04 Jul 2006; Markus Rothe <corsair@gentoo.org> exscalibar-1.0.4.ebuild:
   Stable on ppc64; bug #139095
