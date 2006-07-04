@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xvattr
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvattr/ChangeLog,v 1.14 2006/07/03 16:23:47 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvattr/ChangeLog,v 1.15 2006/07/04 02:08:41 dang Exp $
+
+  04 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> xvattr-1.3-r1.ebuild:
+  Marked stable on amd64 per bug #139010
 
   03 Jul 2006; Lars Weiler <pylon@gentoo.org> xvattr-1.3-r1.ebuild:
   Stable on ppc; bug #139010.
