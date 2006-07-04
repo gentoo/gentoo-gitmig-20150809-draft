@@ -1,0 +1,67 @@
+will fix some errors in syslog for "no translation found for ...."
+
+hd_brummy@gentoo.org < Joerg Bornkessel> 04 Jul 2006 for German Translation
+
+diff -Naur osdteletext-0.5.1.orig/i18n.c osdteletext-0.5.1/i18n.c
+--- osdteletext-0.5.1.orig/i18n.c	2006-07-04 15:48:13.175709500 +0200
++++ osdteletext-0.5.1/i18n.c	2006-07-04 15:54:06.077764500 +0200
+@@ -441,5 +441,59 @@
+     "Visualitza el teletext en l'OSD",        //Catalan
+     "Показ телетекста в меню",                //Russian
+   },
++  { "Play",       //English
++    "Abspielen",  //German
++    "",           //Slovenian
++    "",           //Italian
++    "",           //Dutch
++    "",           //Portuguese
++    "",           //French
++    "",           //Norwegian
++    "",           //Finnish
++    "",           //Polish
++    "",           //Spanish
++    "",           //Greek
++    "",           //Swedish
++    "",           //Romanian
++    "",           //Hugarian
++    "",           //Catalan
++    "",           //Russian
++  },
++  { "FastFwd",    //English
++    "Schneller Vorlauf",      //German
++    "",           //Slovenian
++    "",           //Italian
++    "",           //Dutch
++    "",           //Portuguese
++    "",           //French
++    "",           //Norwegian
++    "",           //Finnish
++    "",           //Polish
++    "",           //Spanish
++    "",           //Greek
++    "",           //Swedish
++    "",           //Romanian
++    "",           //Hugarian
++    "",           //Catalan
++    "",           //Russian
++  },
++  { "FastRew",    //English
++    "Schneller Rќcklauf",      //German
++    "",           //Slovenian
++    "",           //Italian
++    "",           //Dutch
++    "",           //Portuguese
++    "",           //French
++    "",           //Norwegian
++    "",           //Finnish
++    "",           //Polish
++    "",           //Spanish
++    "",           //Greek
++    "",           //Swedish
++    "",           //Romanian
++    "",           //Hugarian
++    "",           //Catalan
++    "",           //Russian
++  },
+   { NULL }
+   };

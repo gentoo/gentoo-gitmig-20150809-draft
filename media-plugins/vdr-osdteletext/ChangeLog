@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-osdteletext
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/ChangeLog,v 1.3 2006/04/24 19:44:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/ChangeLog,v 1.4 2006/07/04 14:14:52 hd_brummy Exp $
+
+  04 Jul 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/i18n_german_lang.diff, vdr-osdteletext-0.5.1.ebuild:
+  add lang fix, fix errors in logfile -> no translation found for...
 
   24 Apr 2006; Matthias Schwarzott <zzam@gentoo.org>
   vdr-osdteletext-0.5.1.ebuild:
