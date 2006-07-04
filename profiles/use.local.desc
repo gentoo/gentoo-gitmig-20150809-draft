@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1996 2006/07/03 20:34:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1997 2006/07/04 16:59:33 sbriesen Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1299,6 +1299,7 @@ net-proxy/squid:pf-transparent - Adds transparent proxy support for systems usin
 net-proxy/squid:underscores - Enables support for domain names containing underscores
 net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch (http://www.it-academy.bg/zph/)
 net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
+net-proxy/ziproxy:xinetd - If you want inetd version instead of a superserver (daemon)
 net-wireless/bluez-utils:udev - Enable udev rules file installation
 net-wireless/hostapd:logwatch - Install support files for logwatch
 net-wireless/hostapd:madwifi - Add support for madwifi (Atheros chipset)
