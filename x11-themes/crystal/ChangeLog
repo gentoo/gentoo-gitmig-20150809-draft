@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/crystal
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.23 2006/07/04 17:21:25 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.24 2006/07/04 17:54:43 voxus Exp $
+
+  04 Jul 2006; Konstantin Arkhipov <voxus@gentoo.org> crystal-1.0.0.ebuild:
+  Stable on amd64 wrt bug #138048.
 
 *crystal-1.0.1 (04 Jul 2006)
 
