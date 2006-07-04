@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/File-MimeInfo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.21 2006/06/12 15:11:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.22 2006/07/04 08:38:52 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  File-MimeInfo-0.10.ebuild, File-MimeInfo-0.11.ebuild,
+  File-MimeInfo-0.12.ebuild, File-MimeInfo-0.13.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   File-MimeInfo-0.13.ebuild:
