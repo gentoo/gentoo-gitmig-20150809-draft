@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/Net-RawIP-0.1.ebuild,v 1.6 2006/02/20 19:41:45 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/Net-RawIP-0.1.ebuild,v 1.7 2006/07/04 13:43:25 ian Exp $
 
 inherit perl-module
 
@@ -9,7 +9,9 @@ DESCRIPTION="Perl Net::RawIP - Raw IP packets manipulation Module"
 SRC_URI="mirror://cpan/authors/id/S/SK/SKOLYCHEV/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/"
 
-DEPEND="net-libs/libpcap >=sys-apps/sed-4"
+DEPEND="net-libs/libpcap
+	>=sys-apps/sed-4"
+RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="Artistic"

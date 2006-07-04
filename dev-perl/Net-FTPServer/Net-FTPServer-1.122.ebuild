@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/Net-FTPServer-1.122.ebuild,v 1.5 2006/03/30 23:04:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/Net-FTPServer-1.122.ebuild,v 1.6 2006/07/04 13:37:04 ian Exp $
 
 inherit perl-module
 
@@ -25,6 +25,7 @@ DEPEND="dev-perl/Archive-Zip
 		dev-perl/File-Sync
 		dev-perl/IO-stringy
 		postgres? ( dev-perl/DBI )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

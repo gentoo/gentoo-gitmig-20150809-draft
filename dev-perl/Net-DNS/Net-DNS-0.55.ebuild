@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.55.ebuild,v 1.7 2006/06/12 15:58:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.55.ebuild,v 1.8 2006/07/04 13:34:37 ian Exp $
 
 inherit perl-module
 
@@ -19,6 +19,7 @@ DEPEND="virtual/perl-Digest-MD5
 	ipv6? ( dev-perl/IO-Socket-INET6 )
 	virtual/perl-MIME-Base64
 	virtual/perl-Test-Simple"
+RDEPEND="${DEPEND}"
 
 #SRC_TEST="do"
 mydoc="TODO"

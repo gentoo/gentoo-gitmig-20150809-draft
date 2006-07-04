@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.85 2006/06/29 17:20:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.86 2006/07/04 13:34:37 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> Net-DNS-0.48.ebuild,
+  Net-DNS-0.49.ebuild, Net-DNS-0.53.ebuild, Net-DNS-0.53-r1.ebuild,
+  Net-DNS-0.55.ebuild, Net-DNS-0.57.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> Net-DNS-0.57.ebuild:
   Stable on hppa
