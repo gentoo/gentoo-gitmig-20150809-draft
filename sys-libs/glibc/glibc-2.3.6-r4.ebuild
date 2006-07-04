@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.21 2006/06/30 02:51:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.22 2006/07/04 21:06:59 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1023,6 +1023,16 @@ else
 fi
 
 pkg_setup() {
+	# prevent native builds from downgrading ... maybe update to allow people
+	# to change between diff -r versions ? (2.3.6-r4 -> 2.3.6-r2)
+	if ! is_crosscompile && ! tc-is-cross-compiler ; then
+		if has_version '>'${CATEGORY}/${PF} ; then
+			eerror "Sanity check to keep you from breaking your system:"
+			eerror " Downgrading glibc is not supported and a sure way to destruction"
+			die "aborting to save your system"
+		fi
+	fi
+
 	if use nptlonly && ! use nptl ; then
 		eerror "If you want nptlonly, add nptl to your USE too ;p"
 		die "nptlonly without nptl"

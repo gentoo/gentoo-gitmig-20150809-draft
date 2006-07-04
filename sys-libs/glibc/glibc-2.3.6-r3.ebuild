@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r3.ebuild,v 1.20 2006/05/30 19:45:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r3.ebuild,v 1.21 2006/07/04 21:06:59 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -1092,6 +1092,16 @@ else
 fi
 
 pkg_setup() {
+	# prevent native builds from downgrading ... maybe update to allow people
+	# to change between diff -r versions ? (2.3.6-r4 -> 2.3.6-r2)
+	if ! is_crosscompile && ! tc-is-cross-compiler ; then
+		if has_version '>'${CATEGORY}/${PF} ; then
+			eerror "Sanity check to keep you from breaking your system:"
+			eerror " Downgrading glibc is not supported and a sure way to destruction"
+			die "aborting to save your system"
+		fi
+	fi
+
 	if has_version '>=sys-libs/glibc-2.3.5.20050201' && \
 	   has_version '<sys-libs/glibc-2.3.6' ; then
 		eerror "Portage have a serious bug in regards to symlinks, and merging"
