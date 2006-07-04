@@ -1,0 +1,11 @@
+# ChangeLog for app-accessibility/sphinx3
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/ChangeLog,v 1.1 2006/07/04 04:33:50 squinky86 Exp $
+
+*sphinx3-0.6 (04 Jul 2006)
+
+  04 Jul 2006; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +sphinx3-0.6.ebuild:
+  Initial import, bug #129149 with help from Franklin Marmon
+  <marmon@montana.com>.
+
