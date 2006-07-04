@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fe3d
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/ChangeLog,v 1.4 2006/03/25 17:11:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/ChangeLog,v 1.5 2006/07/04 05:50:18 squinky86 Exp $
+
+  04 Jul 2006; Jon Hood <squinky86@gentoo.org> fe3d-0.8.3.ebuild:
+  Add ~amd64, bug #138915.
 
   25 Mar 2006; Bryan Østergaard <kloeri@gentoo.org fe3d-0.8.3.ebuild:
   Add ~alpha keyword, bug 127497.
