@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-Random
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Random/ChangeLog,v 1.17 2006/04/16 22:54:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Random/ChangeLog,v 1.18 2006/07/04 07:04:48 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Crypt-OpenSSL-Random-0.03-r1.ebuild, Crypt-OpenSSL-Random-0.03-r2.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header; fixed DEPEND
 
   16 Apr 2006; Michael Hanselmann <hansmi@gentoo.org>
   Crypt-OpenSSL-Random-0.03-r2.ebuild:
