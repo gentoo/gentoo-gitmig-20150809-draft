@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8.ebuild,v 1.5 2006/05/26 16:54:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8.ebuild,v 1.6 2006/07/04 02:15:56 dang Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.openal.org/openal_webstf/downloads/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86"
 IUSE="alsa arts esd sdl debug vorbis mp3"
 
 RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0.2 )
