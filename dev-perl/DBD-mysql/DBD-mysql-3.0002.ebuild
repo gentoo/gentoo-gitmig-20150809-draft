@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/DBD-mysql-3.0002.ebuild,v 1.1 2006/01/15 17:03:07 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/DBD-mysql-3.0002.ebuild,v 1.2 2006/07/04 07:17:34 ian Exp $
 
 inherit eutils perl-module
 
@@ -19,5 +19,6 @@ IUSE=""
 
 DEPEND="dev-perl/DBI
 	dev-db/mysql"
+RDEPEND="${DEPEND}"
 
 mydoc="ToDo"
