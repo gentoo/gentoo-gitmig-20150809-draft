@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5581 2006/07/03 14:36:02 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5582 2006/07/04 02:12:33 humpback Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -42,7 +42,15 @@ app-admin/eselect-lapack
 =sci-libs/lapack-atlas-3.7.11-r1
 =sci-libs/mkl-8.0.2.004
 
-# Henrik Brix Andersen <brix@gentoo.org> (2. Jul 2006)
+# Gustavo Felisberto <humpback@gentoo.org> (4 Jul 2006)
+# Still masked wildfire because needs testing of Java 2. If you unmask and have problems building please file a bug to me and add dev-java@gentoo.org to the CC list
+net-im/wildfire
+
+# Gustavo Felisberto <humpback@gentoo.org> (4 Jul 2006)
+# This is now net-im/wildfire
+net-im/jive-messenger
+
+# Henrik Brix Andersen <brix@gentoo.org> (2 Jul 2006)
 # Masked pending removal, bug #132600
 net-wireless/bluez-kernel
 
@@ -927,11 +935,6 @@ games-rpg/nwn-data
 # Gustavo Felisberto <humpback@gentoo.org> (03 Sep 2005)
 # Beta code
 =net-im/psi-0.10_rc2
-
-# Brandon Low <lostlogic@lostlogicx.com> (29 Aug 2005)
-# Masked because it needs java 1.5
-net-im/jive-messenger
-net-im/wildfire
 
 # Luis F. Araujo <araujo@gentoo.org> (24 Aug 2005)
 # This is a binary package version.
