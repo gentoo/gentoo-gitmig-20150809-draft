@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Newt
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Newt/ChangeLog,v 1.1 2005/05/09 13:43:26 mcummings Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Newt/ChangeLog,v 1.2 2006/07/04 14:09:17 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> Newt-1.08.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
 *Newt-1.08 (09 May 2005)
 

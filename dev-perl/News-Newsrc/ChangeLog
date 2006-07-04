@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/News-Newsrc
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/News-Newsrc/ChangeLog,v 1.9 2005/10/03 10:02:28 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/News-Newsrc/ChangeLog,v 1.10 2006/07/04 14:07:56 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> News-Newsrc-1.08.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org> News-Newsrc-1.08.ebuild:
   Mark 1.08 stable on ia64
