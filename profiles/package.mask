@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5584 2006/07/04 16:02:40 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5585 2006/07/04 18:52:58 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Saleem Abdulrasool <compnerd@gentoo.org> (4 Jul 2006)
+# Initial import mask
+>=gnome-extra/gsynaptics-0.9.7
 
 # Marien Zwart <marienz@gentoo.org> (4 Jul 2006)
 # pycairo for the currently masked cairo-1.2.0, unmask when cairo-1.2.0 is
