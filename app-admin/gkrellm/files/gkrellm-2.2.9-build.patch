@@ -1,0 +1,105 @@
+--- server/Makefile
++++ server/Makefile
+@@ -18,9 +18,8 @@
+ MANMODE ?= 644
+ MANDIRMODE ?= 755
+ INSTALL ?= install
+-LINK_FLAGS ?= -Wl,-E
++LDFLAGS += -Wl,-E
+ CC ?= gcc
+-STRIP ?= -s
+ 
+ GKRELLMD_INCLUDES = gkrellmd.h
+ 
+@@ -30,7 +29,7 @@
+ GLIB12_INCLUDE = `glib-config --cflags`
+ GLIB12_LIB = `glib-config --libs glib gmodule`
+ 
+-FLAGS = -O2 -I.. $(PKG_INCLUDE) $(GTOP_INCLUDE)
++FLAGS = -I.. $(PKG_INCLUDE) $(GTOP_INCLUDE)
+ ifeq ($(glib12),1)
+ FLAGS = -O2 -I.. $(GLIB12_INCLUDE) $(GTOP_INCLUDE)
+ endif
+@@ -88,11 +87,11 @@
+ all:	gkrellmd
+ 
+ gkrellmd: $(OBJS)
+-	$(CC) $(OBJS) -o gkrellmd $(LIBS) $(LINK_FLAGS)
++	$(CC) $(OBJS) -o gkrellmd $(LIBS) $(LDFLAGS)
+ 
+ static: $(OBJS)
+ 	$(CC) $(OBJS) -o gkrellmd.static -static \
+-		$(LIBS) $(LINK_FLAGS)
++		$(LIBS) $(LDFLAGS)
+ 
+ freebsd2:
+ 	$(MAKE) GTK_CONFIG=gtk12-config \
+@@ -129,11 +128,9 @@
+ 
+ install:
+ 	$(INSTALL) -d -m $(INSTALLDIRMODE) $(SINSTALLDIR)
+-	$(INSTALL) -c $(STRIP) -m $(BINMODE) gkrellmd $(SINSTALLDIR)/$(PACKAGE_D)
++	$(INSTALL) -c -m $(BINMODE) gkrellmd $(SINSTALLDIR)/$(PACKAGE_D)
+ 	$(INSTALL) -d -m $(INCLUDEDIRMODE) $(INCLUDEDIR)/gkrellm2
+ 	$(INSTALL) -c -m $(INCLUDEMODE) $(GKRELLMD_INCLUDES) $(INCLUDEDIR)/gkrellm2
+-	$(INSTALL) -d -m $(MANDIRMODE) $(SMANDIR)
+-	$(INSTALL) -c -m $(MANMODE) ../gkrellmd.1 $(SMANDIR)/$(PACKAGE_D).1
+ 
+ uninstall:
+ 	rm -f $(SINSTALLDIR)/$(PACKAGE_D)
+
+--- src/Makefile
++++ src/Makefile
+@@ -16,7 +16,7 @@
+ MANMODE ?= 644
+ MANDIRMODE ?= 755
+ INSTALL ?= install
+-LINK_FLAGS ?= -Wl,-E
++LDFLAGS += -Wl,-E
+ SMC_LIBS ?= -L/usr/X11R6/lib -lSM -lICE
+ 
+ ifeq ($(without-gnutls),1)
+@@ -48,7 +48,6 @@
+ endif
+ 
+ CC ?= gcc
+-STRIP ?= -s
+ 
+ GKRELLM_INCLUDES = gkrellm.h gkrellm-public-proto.h
+ 
+@@ -56,7 +55,7 @@
+ 
+ PKG_LIB = `$(PKG_CONFIG) --libs gtk+-2.0 gthread-2.0`
+ 
+-FLAGS = -O2 -I.. $(PKG_INCLUDE) $(GTOP_INCLUDE)
++FLAGS = -I.. $(PKG_INCLUDE) $(GTOP_INCLUDE)
+ FLAGS+= $(PTHREAD_INC)
+ 
+ LIBS = $(PKG_LIB) $(GTOP_LIBS) $(SMC_LIBS) $(SYS_LIBS) $(SSL_LIBS)
+@@ -95,11 +94,11 @@
+ all:	gkrellm
+ 
+ gkrellm: $(OBJS) $(EXTRAOBJS)
+-	$(CC) $(OBJS) $(EXTRAOBJS) -o gkrellm $(LIBS) $(LINK_FLAGS)
++	$(CC) $(OBJS) $(EXTRAOBJS) -o gkrellm $(LIBS) $(LDFLAGS)
+ 
+ static: $(OBJS) $(EXTRAOBJS)
+ 	$(CC) $(OBJS) $(EXTRAOBJS) -o gkrellm.static -static \
+-		$(LIBS) $(LINK_FLAGS)
++		$(LIBS) $(LDFLAGS)
+ 
+ freebsd2:
+ ifeq ($(HAVE_SSL),1)
+@@ -144,11 +143,9 @@
+ 
+ install:
+ 	$(INSTALL) -d -m $(INSTALLDIRMODE) $(INSTALLDIR)
+-	$(INSTALL) -c $(STRIP) -m $(BINMODE) gkrellm $(INSTALLDIR)/$(PACKAGE)
++	$(INSTALL) -c -m $(BINMODE) gkrellm $(INSTALLDIR)/$(PACKAGE)
+ 	$(INSTALL) -d -m $(INCLUDEDIRMODE) $(INCLUDEDIR)/gkrellm2
+ 	$(INSTALL) -c -m $(INCLUDEMODE) $(GKRELLM_INCLUDES) $(INCLUDEDIR)/gkrellm2
+-	$(INSTALL) -d -m $(MANDIRMODE) $(MANDIR)
+-	$(INSTALL) -c -m $(MANMODE) ../gkrellm.1 $(MANDIR)/$(PACKAGE).1
+ 
+ uninstall:
+ 	rm -f $(INSTALLDIR)/$(PACKAGE)
