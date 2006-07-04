@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-ExecFlow/Event-ExecFlow-0.62.ebuild,v 1.1 2006/06/23 17:44:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-ExecFlow/Event-ExecFlow-0.62.ebuild,v 1.2 2006/07/04 08:06:56 ian Exp $
 
 inherit perl-module
 
@@ -16,3 +16,4 @@ SRC_TEST="do"
 
 DEPEND="dev-perl/AnyEvent
 		dev-perl/libintl-perl"
+RDEPEND="${DEPEND}"
