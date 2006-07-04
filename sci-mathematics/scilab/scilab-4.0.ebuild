@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.4 2006/06/01 15:34:16 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.5 2006/07/04 15:17:32 markusle Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools
 
@@ -48,6 +48,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${P}-gtk-fix.patch
 
 	# fix gfortran problems on ppc
 	if [[ "${ARCH}" == "ppc" ]];then
