@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-GMP/Math-GMP-2.04.ebuild,v 1.7 2005/10/02 12:58:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-GMP/Math-GMP-2.04.ebuild,v 1.8 2006/07/04 12:33:09 ian Exp $
 
 inherit perl-module
 
@@ -14,3 +14,4 @@ KEYWORDS="alpha amd64 ia64 ~mips ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-libs/gmp"
+RDEPEND="${DEPEND}"

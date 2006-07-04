@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Math-GMP
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-GMP/ChangeLog,v 1.15 2005/10/02 12:58:20 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-GMP/ChangeLog,v 1.16 2006/07/04 12:33:09 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> Math-GMP-2.03.ebuild,
+  Math-GMP-2.04.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> Math-GMP-2.04.ebuild:
   Mark 2.04 stable on ia64
