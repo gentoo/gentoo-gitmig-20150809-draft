@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Fuse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Fuse/ChangeLog,v 1.2 2006/06/23 17:58:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Fuse/ChangeLog,v 1.3 2006/07/04 08:47:55 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> Fuse-0.06.ebuild,
+  Fuse-0.07.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
 *Fuse-0.07 (23 Jun 2006)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GDTextUtil
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/ChangeLog,v 1.14 2006/04/24 15:35:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/ChangeLog,v 1.15 2006/07/04 08:57:01 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> GDTextUtil-0.86.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> GDTextUtil-0.86.ebuild:
   Add ~x86-fbsd keyword.

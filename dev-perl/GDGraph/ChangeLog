@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/GDGraph
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.16 2006/06/23 18:03:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.17 2006/07/04 08:56:03 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> GDGraph-1.43.ebuild,
+  GDGraph-1.43.07.ebuild, GDGraph-1.43.08.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
 *GDGraph-1.43.08 (23 Jun 2006)
 

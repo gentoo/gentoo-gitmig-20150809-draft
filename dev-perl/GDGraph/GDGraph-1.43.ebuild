@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/GDGraph-1.43.ebuild,v 1.13 2006/04/24 15:35:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/GDGraph-1.43.ebuild,v 1.14 2006/07/04 08:56:03 ian Exp $
 
 inherit perl-module
 
@@ -15,6 +15,7 @@ IUSE=""
 
 DEPEND="dev-perl/GDTextUtil
 	media-libs/gd"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

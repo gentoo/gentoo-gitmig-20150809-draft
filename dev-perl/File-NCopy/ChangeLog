@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-NCopy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/ChangeLog,v 1.16 2006/02/13 12:58:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/ChangeLog,v 1.17 2006/07/04 08:39:51 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> File-NCopy-0.34.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   File-NCopy-0.34.ebuild:

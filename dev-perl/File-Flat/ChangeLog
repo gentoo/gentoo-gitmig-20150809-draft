@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Flat
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/ChangeLog,v 1.28 2006/03/03 21:06:21 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/ChangeLog,v 1.29 2006/07/04 08:37:31 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> File-Flat-0.8.ebuild,
+  File-Flat-0.94.ebuild, File-Flat-0.95.ebuild, File-Flat-0.95-r1.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   03 Mar 2006; Chris White <chriswhite@gentoo.org> File-Flat-0.95-r1.ebuild:
   File-Flat-0.95-r1 to amd64 stable.

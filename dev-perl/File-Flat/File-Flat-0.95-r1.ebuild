@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/File-Flat-0.95-r1.ebuild,v 1.12 2006/03/03 21:06:21 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/File-Flat-0.95-r1.ebuild,v 1.13 2006/07/04 08:37:31 ian Exp $
 
 inherit perl-module
 
@@ -25,3 +25,4 @@ DEPEND=">=dev-perl/Class-Autouse-1
 	dev-perl/File-Slurp
 	dev-perl/prefork
 	dev-perl/Class-Inspector"
+RDEPEND="${DEPEND}"
