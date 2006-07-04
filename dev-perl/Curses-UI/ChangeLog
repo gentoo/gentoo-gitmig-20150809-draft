@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Curses-UI
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.14 2006/03/30 22:26:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.15 2006/07/04 07:09:27 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> Curses-UI-0.94.ebuild,
+  Curses-UI-0.95.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Curses-UI-0.95.ebuild:
   Mark 0.95 ~ia64

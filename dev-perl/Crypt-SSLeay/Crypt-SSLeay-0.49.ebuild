@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.49.ebuild,v 1.16 2005/06/04 05:00:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.49.ebuild,v 1.17 2006/07/04 07:06:09 ian Exp $
 
 inherit perl-module
 
@@ -16,6 +16,7 @@ DEPEND="virtual/libc
 	>=dev-lang/perl-5
 	dev-perl/libwww-perl
 	>=dev-libs/openssl-0.9.6g"
+RDEPEND="${DEPEND}"
 
 export OPTIMIZE="${CFLAGS}"
 myconf="${myconf} /usr"

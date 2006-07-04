@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-SSLeay
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.29 2006/04/24 15:34:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.30 2006/07/04 07:06:09 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> Crypt-SSLeay-0.49.ebuild,
+  Crypt-SSLeay-0.51.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   Crypt-SSLeay-0.51.ebuild:

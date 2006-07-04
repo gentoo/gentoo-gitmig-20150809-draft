@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/DBD-SQLite-1.08.ebuild,v 1.5 2005/11/12 12:17:59 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/DBD-SQLite-1.08.ebuild,v 1.6 2006/07/04 07:12:35 ian Exp $
 
 inherit perl-module eutils
 
@@ -16,3 +16,4 @@ SRC_TEST="do"
 
 DEPEND=">=dev-perl/DBI-1.42
 		!<dev-perl/DBD-SQLite-1"
+RDEPEND="${DEPEND}"
