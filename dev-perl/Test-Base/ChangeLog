@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Base
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.16 2006/06/29 16:52:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.17 2006/07/04 20:53:19 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> Test-Base-0.46.ebuild,
+  Test-Base-0.47.ebuild, Test-Base-0.50.ebuild, Test-Base-0.52.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> Test-Base-0.50.ebuild:
   Stable on hppa
