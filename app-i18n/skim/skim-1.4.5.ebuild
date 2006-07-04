@@ -1,6 +1,6 @@
 # Copyright 2000-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5.ebuild,v 1.3 2006/07/04 18:47:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5.ebuild,v 1.4 2006/07/04 22:38:33 flameeyes Exp $
 
 inherit kde-functions multilib toolchain-funcs
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-RDEPEND="|| ( >=app-i18n/scim-1.3.3 >=app-i18n/scim-cvs-1.3.3 )"
+RDEPEND="|| ( >=app-i18n/scim-1.4.4 >=app-i18n/scim-cvs-1.4.4 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
