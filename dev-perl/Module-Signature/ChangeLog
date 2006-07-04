@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Module-Signature
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.9 2006/06/24 19:23:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.10 2006/07/04 12:46:19 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Module-Signature-0.44.ebuild, Module-Signature-0.51.ebuild,
+  Module-Signature-0.54.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
 *Module-Signature-0.54 (24 Jun 2006)
 

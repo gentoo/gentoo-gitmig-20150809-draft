@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.54.ebuild,v 1.1 2006/06/24 19:23:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.54.ebuild,v 1.2 2006/07/04 12:46:19 ian Exp $
 
 inherit perl-module
 
@@ -36,6 +36,7 @@ DEPEND="virtual/perl-MIME-Base64
 		dev-perl/Convert-ASN1
 		dev-perl/convert-pem
 		dev-perl/Crypt-OpenPGP"
+RDEPEND="${DEPEND}"
 
 src_test() {
 	use test && export TEST_SIGNATURE="1"
