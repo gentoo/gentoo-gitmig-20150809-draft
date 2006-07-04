@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/Mail-IMAPClient-2.2.9.ebuild,v 1.12 2006/05/20 17:44:39 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/Mail-IMAPClient-2.2.9.ebuild,v 1.13 2006/07/04 11:54:11 ian Exp $
 
 inherit perl-module eutils
 
@@ -19,6 +19,7 @@ IUSE=""
 
 DEPEND=">=virtual/perl-libnet-1.0703
 	dev-perl/Parse-RecDescent"
+RDEPEND="${DEPEND}"
 
 mydoc="FAQ"
 

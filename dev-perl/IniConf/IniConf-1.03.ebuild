@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IniConf/IniConf-1.03.ebuild,v 1.4 2006/03/30 22:55:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IniConf/IniConf-1.03.ebuild,v 1.5 2006/07/04 11:34:18 ian Exp $
 
 inherit perl-module
 
@@ -16,3 +16,4 @@ KEYWORDS="~ia64 sparc x86"
 SRC_TEST="do"
 
 DEPEND="dev-perl/Config-IniFiles"
+RDEPEND="${DEPEND}"

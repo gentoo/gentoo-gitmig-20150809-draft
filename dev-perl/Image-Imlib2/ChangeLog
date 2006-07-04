@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Image-Imlib2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/ChangeLog,v 1.18 2006/07/02 03:04:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/ChangeLog,v 1.19 2006/07/04 11:31:14 ian Exp $
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> Image-Imlib2-1.03.ebuild,
+  Image-Imlib2-1.07.ebuild, Image-Imlib2-1.08.ebuild,
+  Image-Imlib2-1.09.ebuild, Image-Imlib2-1.10.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   02 Jul 2006; Michael Cummings <mcummings@gentoo.org>
   Image-Imlib2-1.03.ebuild, Image-Imlib2-1.07.ebuild,
