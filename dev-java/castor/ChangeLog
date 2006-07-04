@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/castor
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.22 2006/03/12 05:52:01 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.23 2006/07/04 19:49:09 nichoj Exp $
+
+*castor-0.9.9.1-r1 (04 Jul 2006)
+
+  04 Jul 2006; Joshua Nichols <nichoj@gentoo.org> +castor-0.9.9.1-r1.ebuild:
+  Revision bump to support new Java system.
 
   12 Mar 2006; <nichoj@gentoo.org> -castor-0.9.7.ebuild,
   -castor-0.9.9.ebuild:
