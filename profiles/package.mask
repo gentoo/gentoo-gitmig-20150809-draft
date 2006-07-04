@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5585 2006/07/04 18:52:58 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5586 2006/07/04 20:18:40 rl03 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -833,10 +833,6 @@ app-backup/mondo-rescue
 # unless you're sure they're gentoo-specific or they're already
 # fixed by upstream
 =net-im/kadu-0.5*
-
-# Stuart Herbert <stuart@gentoo.org> (20 Nov 2005)
-# Masked pending removal from Portage
-www-apps/phpgroupware
 
 # Stefan Knoblich <stkn@gentoo.org> (18 Nov 2005)
 # Asterisk-1.2.0 is up-to-date, mask packages that need testing
