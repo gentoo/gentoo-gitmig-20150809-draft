@@ -1,9 +1,17 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.15 2006/07/04 00:40:09 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.16 2006/07/04 17:00:09 nerdboy Exp $
+
+*geos-2.2.2-r1 (04 Jul 2006)
+
+  04 Jul 2006; Steve Arnold <nerdboy@gentoo.org> +geos-2.2.2-r1.ebuild:
+  Updated for ruby support (such as it is) and cleaned up old version.  Note
+  the tests are not complete (only the basic framework is there).  Needs more
+  testing by a ruby-ish person (including the tests :)  The ruby eclass also
+  needs more helper functions...
 
   04 Jul 2006; Steve Arnold <nerdboy@gentoo.org> geos-2.2.2.ebuild:
-  dodoc ordering got messed up (wrong working directory)
+  The dodoc ordering got messed up (wrong working directory).
 
   03 Jul 2006; Steve Arnold <nerdboy@gentoo.org>
   +files/geos-2.2.2-swig.patch, +files/python.i, geos-2.2.2.ebuild:
