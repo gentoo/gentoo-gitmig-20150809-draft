@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/bsh
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.28 2005/09/11 11:45:27 axxo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.29 2006/07/04 19:26:05 nichoj Exp $
+
+*bsh-2.0_beta4-r1 (04 Jul 2006)
+
+  04 Jul 2006; Joshua Nichols <nichoj@gentoo.org> +bsh-2.0_beta4-r1.ebuild:
+  Revision bump to support new Java system.
 
   11 Sep 2005; Thomas Matthijs <axxo@gentoo.org> bsh-2.0_beta4.ebuild:
   fix icon
