@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/hugs98
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/ChangeLog,v 1.31 2006/05/21 17:29:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/ChangeLog,v 1.32 2006/07/04 22:54:43 jer Exp $
+
+  04 Jul 2006; Jeroen Roovers <jer@gentoo.org> hugs98-2005.3-r2.ebuild:
+  Marked ~hppa (bug #126324).
 
   21 May 2006; Markus Rothe <corsair@gentoo.org> hugs98-2005.3-r2.ebuild:
   Stable on ppc64
