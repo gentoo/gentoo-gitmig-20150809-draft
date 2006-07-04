@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.4.0.ebuild,v 1.5 2006/04/26 00:00:29 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.4.0.ebuild,v 1.6 2006/07/04 15:36:00 marienz Exp $
 
 inherit distutils eutils
 
@@ -17,7 +17,7 @@ DEPEND=">=dev-lang/python-2.4
 	>=dev-db/sqlite-3.2.7
 	>=dev-python/twisted-2.2
 	>=dev-python/pysqlite-2.0
-	>=dev-python/epsilon-0.4"
+	=dev-python/epsilon-0.4*"
 
 S="${WORKDIR}/Axiom-${PV}"
 

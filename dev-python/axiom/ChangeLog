@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.7 2006/04/27 19:06:50 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.8 2006/07/04 15:36:00 marienz Exp $
+
+  04 Jul 2006; Marien Zwart <marienz@gentoo.org> axiom-0.4.0.ebuild:
+  Tighten epsilon dependency (this does not work with the epsilon-0.5 I will
+  add in a bit).
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-axiom-0.4.0,
   Manifest:
