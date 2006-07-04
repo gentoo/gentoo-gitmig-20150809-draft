@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.70 2006/07/01 20:41:12 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.71 2006/07/04 02:11:26 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -162,7 +162,7 @@ DEPEND="${DEPEND}
 if [[ "${PN/util-macros}" = "${PN}" ]]; then
 	DEPEND="${DEPEND}
 		>=x11-misc/util-macros-0.99.2
-		!alpha? ( >=sys-devel/binutils-2.16.1-r3 )"
+		>=sys-devel/binutils-2.16.1-r3"
 fi
 
 RDEPEND="${RDEPEND}
