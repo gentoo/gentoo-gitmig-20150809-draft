@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.51 2006/05/21 08:45:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.52 2006/07/04 19:59:46 dertobi123 Exp $
+
+  04 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org> +files/gcc41.patch,
+  tora-1.3.18.ebuild, tora-1.3.21.ebuild:
+  Add patch to allow building with gcc-4.1, bug #137060
 
   21 May 2006; Tobias Scherbaum <dertobi123@gentoo.org> tora-1.3.21.ebuild:
   Disable parallel builds for now, see bug #133326. The bug has been reported

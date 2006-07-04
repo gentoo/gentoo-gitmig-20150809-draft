@@ -1,0 +1,11 @@
+--- tora-1.3.21/tothread.cpp.wiget	2006-05-22 16:29:32.000000000 +0200
++++ tora-1.3.21/tothread.cpp	2006-05-22 16:31:40.000000000 +0200
+@@ -156,6 +156,8 @@
+ #define THREAD_ASSERT(x) if((x)!=0) { \
+   throw (qApp->translate("toThread","Thread function \"%1\" failed.").arg(QString::fromLatin1( #x ))); }
+ 
++void *toThreadStartWrapper(void *t);
++
+ void toThread::initAttr()
+ {
+     //create the thread detached, so everything is cleaned up

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21.ebuild,v 1.3 2006/05/21 08:45:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21.ebuild,v 1.4 2006/07/04 19:59:46 dertobi123 Exp $
 
 inherit debug eutils kde-functions
 
@@ -32,6 +32,12 @@ pkg_setup() {
 		eerror "http://otn.oracle.com/software/content.html"
 		die
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/gcc41.patch
 }
 
 src_compile() {
