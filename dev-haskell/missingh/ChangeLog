@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/missingh
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.1 2006/07/04 19:55:39 kolmodin Exp $
+
+*missingh-0.14.4 (04 Jul 2006)
+
+  04 Jul 2006; <kolmodin@gentoo.org> +metadata.xml, +missingh-0.14.4.ebuild:
+  Initial import.
+
