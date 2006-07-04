@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.2.13.ebuild,v 1.8 2006/07/04 22:36:17 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.2.13.ebuild,v 1.9 2006/07/04 23:04:45 exg Exp $
 
 inherit eutils
 
@@ -24,5 +24,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc FAQ dotzile.sample TUTORIAL NEWS README THANKS AUTHORS INSTALL COPYING
+	dodoc AUTHORS NEWS README THANKS
 }
