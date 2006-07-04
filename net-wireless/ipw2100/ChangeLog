@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.101 2006/04/30 17:30:34 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.102 2006/07/04 17:18:40 brix Exp $
+
+  04 Jul 2006; Henrik Brix Andersen <brix@gentoo.org>
+  +files/ipw2100-1.2.1-double-parentheses.patch, ipw2100-1.2.1-r1.ebuild:
+  Fix compilation with KBUILD_OUTPUT, thanks to Myk Taylor in bug #136518.
 
   30 Apr 2006; Henrik Brix Andersen <brix@gentoo.org>
   -files/ipw2100-1.1.4-old_kernel_fix2.patch,

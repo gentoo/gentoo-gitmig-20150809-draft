@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.2.1-r1.ebuild,v 1.3 2006/04/22 14:41:58 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.2.1-r1.ebuild,v 1.4 2006/07/04 17:18:40 brix Exp $
 
 inherit eutils linux-mod
 
@@ -62,6 +62,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-cflags.patch
+	epatch ${FILESDIR}/${P}-double-parentheses.patch
 
 	use debug && debug="y"
 	sed -i -e "s:^\(CONFIG_IPW2100_DEBUG\)=.*:\1=$debug:" ${S}/Makefile
