@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/ChangeLog,v 1.17 2006/06/17 23:04:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/ChangeLog,v 1.18 2006/07/04 02:43:41 dang Exp $
+
+  04 Jul 2006; Daniel Gryniewicz <dang@gentoo.org>
+  mplayer-bin-1.0.20060415.ebuild:
+  Mark -* to force upgrade
 
 *mplayer-bin-1.0_pre8 (17 Jun 2006)
 

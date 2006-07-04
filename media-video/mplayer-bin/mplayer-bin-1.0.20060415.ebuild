@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0.20060415.ebuild,v 1.1 2006/04/18 21:21:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0.20060415.ebuild,v 1.2 2006/07/04 02:43:41 dang Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${PF}.tbz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-*"
 IUSE="lirc"
 
 RDEPEND=">=app-emulation/emul-linux-x86-baselibs-2.0
