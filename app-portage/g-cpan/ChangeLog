@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/g-cpan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.15 2006/06/06 22:02:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.16 2006/07/05 04:12:13 mcummings Exp $
+
+*g-cpan-0.14.0_rc3 (05 Jul 2006)
+
+  05 Jul 2006; Michael Cummings <mcummings@gentoo.org>
+  -g-cpan-0.14.0_rc1.ebuild, -g-cpan-0.14.0_rc2.ebuild,
+  +g-cpan-0.14.0_rc3.ebuild:
+  Version update, closes bugs, etc
 
 *g-cpan-0.14.0_rc2 (06 Jun 2006)
 
