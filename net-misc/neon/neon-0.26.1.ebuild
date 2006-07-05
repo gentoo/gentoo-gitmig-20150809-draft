@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.26.1.ebuild,v 1.1 2006/07/05 03:19:17 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.26.1.ebuild,v 1.2 2006/07/05 05:19:15 nerdboy Exp $
 
 inherit eutils libtool
 
@@ -73,7 +73,6 @@ src_compile() {
 src_test() {
 	cd ${S}
 	make check || die "Trying make check without success."
-	make clean || die "make clean failed"
 }
 
 src_install() {
