@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/gnome2-wnck-0.04-r1.ebuild,v 1.9 2006/04/26 20:18:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/gnome2-wnck-0.04-r1.ebuild,v 1.10 2006/07/05 17:26:27 ian Exp $
 
 IUSE=""
 inherit perl-module eutils
@@ -19,6 +19,7 @@ DEPEND=">=dev-perl/glib-perl-1.042
 	<x11-libs/libwnck-2.10.0
 	dev-perl/extutils-pkgconfig
 	>=dev-perl/extutils-depends-0.2"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

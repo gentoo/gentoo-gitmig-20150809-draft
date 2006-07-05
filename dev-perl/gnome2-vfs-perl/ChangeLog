@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gnome2-vfs-perl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.22 2006/04/27 18:32:00 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.23 2006/07/05 17:24:31 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  gnome2-vfs-perl-1.00.ebuild, gnome2-vfs-perl-1.021.ebuild,
+  gnome2-vfs-perl-1.041.ebuild, gnome2-vfs-perl-1.060.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-gnome2-vfs-perl-1.00, files/digest-gnome2-vfs-perl-1.021,
