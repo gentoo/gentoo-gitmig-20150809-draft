@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.23 2006/06/17 20:35:02 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.24 2006/07/05 17:08:54 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -60,7 +60,7 @@ DESCRIPTION="vdr Plugin: ${VDRPLUGIN} (based on vdr-plugin.eclass)"
 S="${WORKDIR}/${VDRPLUGIN}-${PV}"
 
 # depend on headers for DVB-driver
-RDEPEND=""
+RDEPEND=">=media-tv/gentoo-vdr-scripts-0.3.4-r1"
 DEPEND="media-tv/linuxtv-dvb-headers"
 
 
