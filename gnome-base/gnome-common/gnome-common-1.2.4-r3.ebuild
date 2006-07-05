@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/gnome-common-1.2.4-r3.ebuild,v 1.21 2005/01/25 09:55:42 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/gnome-common-1.2.4-r3.ebuild,v 1.22 2006/07/05 06:05:55 vapier Exp $
 
 inherit flag-o-matic gnome.org
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sh sparc x86"
 IUSE=""
 RESTRICT="nostrip" # Do _NOT_ strip symbols in the build!
 
