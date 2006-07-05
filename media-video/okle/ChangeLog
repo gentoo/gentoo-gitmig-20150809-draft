@@ -1,6 +1,9 @@
 # ChangeLog for media-video/okle
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/okle/ChangeLog,v 1.7 2005/06/19 18:39:33 kugelfang Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/okle/ChangeLog,v 1.8 2006/07/05 07:28:45 tsunam Exp $
+
+  05 Jul 2006; Joshua Jackson <tsunam@gentoo.org> okle-0.4.ebuild:
+  Stable x86; bug #138936
 
   19 Jun 2005; Danny van Dyk <kugelfang@gentoo.org> okle-0.4.ebuild:
   Marked ~amd64.
