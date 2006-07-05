@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/resolvconf-gentoo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/ChangeLog,v 1.2 2006/06/12 10:55:21 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/ChangeLog,v 1.3 2006/07/05 12:21:10 nixnut Exp $
+
+  05 Jul 2006; <nixnut@gentoo.org> resolvconf-gentoo-1.0.ebuild:
+  Stable on ppc. Bug #139205
 
   12 Jun 2006; <uberlord@gentoo.org> +metadata.xml,
   +resolvconf-gentoo-1.0.ebuild:
