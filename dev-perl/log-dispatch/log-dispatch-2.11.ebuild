@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/log-dispatch-2.11.ebuild,v 1.4 2006/07/03 00:06:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/log-dispatch-2.11.ebuild,v 1.5 2006/07/05 18:25:46 ian Exp $
 
 inherit perl-module
 
@@ -17,6 +17,6 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="${DEPEND}
-		dev-perl/module-build
+DEPEND="dev-perl/module-build
 		dev-perl/Params-Validate"
+RDEPEND="${DEPEND}"
