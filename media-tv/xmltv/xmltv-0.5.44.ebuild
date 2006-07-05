@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.44.ebuild,v 1.3 2006/07/03 09:14:30 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.44.ebuild,v 1.4 2006/07/05 16:46:59 mattepiu Exp $
 
 inherit eutils perl-module
 
@@ -47,7 +47,7 @@ RDEPEND=">=dev-perl/libwww-perl-5.65
 
 DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.50-r1
-	na_dd? ( dev-perl/HTML-TableExtract >=dev-perl/WWW-Mechanize-1.02 )
+	na_dd? ( na_icons? ( dev-perl/HTML-TableExtract >=dev-perl/WWW-Mechanize-1.02 ) )
 	de_tvtoday? ( >=dev-perl/HTML-Parser-3.34 dev-perl/HTML-Tree )
 	dk? ( dev-perl/HTML-Tree )
 	es? ( dev-perl/HTML-Tree )
@@ -92,7 +92,7 @@ make_config() {
 	# Enable North America using DataDirect
 	use na_dd && echo "yes" || echo "no"
 	# Enable North America channel icons
-	use na_icons  && echo "yes" || echo "no"
+	use na_icons  && use na_dd && echo "yes" || echo "no"
 	# Enable Finland
 	use fi  && echo "yes" || echo "no"
 	# Enable Spain
@@ -170,5 +170,12 @@ pkg_postinst() {
 		einfo "To use tv_pick_cgi, please link it from /usr/bin/tv_pick_cgi"
 		einfo "to where the ScriptAlias directive is configured."
 	fi
+	if use na_icons ; then
+		if use na_dd ; then
+			einfo "na_icons set for na_dd grabber user."
+		else
+			einfo "na_icons works only when na_dd is set, "
+			einfo "otherwise it does nothing."
+		fi
+	fi
 }
-
