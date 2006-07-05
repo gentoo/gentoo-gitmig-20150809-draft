@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/siefs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.6 2006/04/01 10:03:32 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.7 2006/07/05 16:48:45 tsunam Exp $
+
+  05 Jul 2006; Joshua Jackson <tsunam@gentoo.org> siefs-0.5.ebuild:
+  Stable x86; thanks tO Evgeniy Rivniy
 
   01 Apr 2006; Stefan Schweizer <genstef@gentoo.org> siefs-0.5.ebuild:
   Fix building thanks to Jens Pranaitis <hans.maulwurf@gmail.com> in bug 128141
