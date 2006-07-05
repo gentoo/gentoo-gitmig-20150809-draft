@@ -31,11 +31,6 @@ lirc
 afs
 lesstif
 mono
-gtk
-gnome
-emacs
-doc
-xmms
 lm_sensors
 firebird
 qdbm
