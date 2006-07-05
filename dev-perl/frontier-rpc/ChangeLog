@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/frontier-rpc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/frontier-rpc/ChangeLog,v 1.8 2006/03/30 23:47:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/frontier-rpc/ChangeLog,v 1.9 2006/07/05 14:55:15 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  frontier-rpc-0.07_beta4.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   frontier-rpc-0.07_beta4.ebuild:
