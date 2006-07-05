@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XSLT/XML-XSLT-0.48.ebuild,v 1.13 2006/06/29 17:00:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XSLT/XML-XSLT-0.48.ebuild,v 1.14 2006/07/05 14:00:09 ian Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="${DEPEND}
-	>=dev-perl/XML-Parser-2.29
+DEPEND=">=dev-perl/XML-Parser-2.29
 	>=dev-perl/XML-DOM-1.25
 	>=dev-perl/libwww-perl-5.48"
+RDEPEND="${DEPEND}"

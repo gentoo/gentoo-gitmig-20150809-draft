@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-SimpleObject
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SimpleObject/ChangeLog,v 1.10 2005/10/03 12:17:19 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SimpleObject/ChangeLog,v 1.11 2006/07/05 13:55:46 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  XML-SimpleObject-0.53.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header; fixed DEPEND
 
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   XML-SimpleObject-0.53.ebuild:
