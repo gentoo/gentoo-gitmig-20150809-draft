@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1-r1.ebuild,v 1.2 2006/04/29 01:29:09 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1-r1.ebuild,v 1.3 2006/07/05 20:27:54 genstef Exp $
+
+inherit eutils
 
 DESCRIPTION="Scriptable DVD copy software"
 HOMEPAGE="http://dvdshrink.sourceforge.net/"
@@ -21,6 +23,13 @@ RDEPEND=">=media-video/transcode-1.0.2-r2
 	>=app-cdr/dvd+rw-tools-6.1
 	X? ( >=dev-perl/gtk2-perl-1.104 )
 	>=app-text/gocr-0.40"
+
+pkg_setup() {
+	if ! built_with_use media-video/transcode dvdread; then
+		einfo "Please re-emerge transcode with the dvdread USE flag."
+		die  "transcode needs dvdread support builtin."
+	fi
+}
 
 src_install() {
 
