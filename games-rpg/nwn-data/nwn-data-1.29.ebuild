@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.14 2006/06/03 03:56:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.15 2006/07/05 18:35:50 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -18,6 +18,7 @@ SRC_URI="http://nwdownloads.bioware.com/neverwinternights/linux/${MY_PV}/nwclien
 	linguas_de? (
 		http://xfer06.fileplanet.com/%5E389272944/082003/nwgerman${MY_PV}.tar.gz )
 	nowin? (
+		http://files.bioware.com/neverwinternights/updates/linux/nwresources${MY_PV}.tar.gz
 		http://bsd.mikulas.com/nwresources${MY_PV}.tar.gz
 		http://163.22.12.40/FreeBSD/distfiles/nwresources${MY_PV}.tar.gz
 		ftp://jeuxlinux.com/bioware/Neverwinter_Nights/nwresources${MY_PV}.tar.gz )
