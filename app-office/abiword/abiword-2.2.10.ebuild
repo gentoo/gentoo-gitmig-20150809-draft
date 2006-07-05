@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.10.ebuild,v 1.10 2005/12/14 15:21:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.10.ebuild,v 1.11 2006/07/05 07:51:25 mr_bones_ Exp $
 
 inherit eutils fdo-mime alternatives
 
-IUSE="gnome jpeg spell xml2 debug"
+IUSE="gnome jpeg spell xml debug"
 
 S_P=${S}/${PN}-plugins
 S=${WORKDIR}/${P}/abi
@@ -26,8 +26,8 @@ RDEPEND="virtual/xft
 	>=app-text/wv-1
 	>=dev-libs/fribidi-0.10.4
 	jpeg?  ( >=media-libs/jpeg-6b-r2 )
-	xml2? ( >=dev-libs/libxml2-2.4.10 )
-	!xml2? ( dev-libs/expat )
+	xml? ( >=dev-libs/libxml2-2.4.10 )
+	!xml? ( dev-libs/expat )
 	spell? ( >=app-text/enchant-1.1 )
 	gnome? ( >=gnome-base/libgnomeui-2.2
 		>=gnome-base/libgnomeprint-2.2.1
@@ -48,7 +48,7 @@ src_compile() {
 	econf \
 		`use_enable gnome` \
 		`use_enable gnome gucharmap` \
-		`use_with xml2 libxml2` \
+		`use_with xml libxml2` \
 		`use_enable spell enchant` \
 		`use_enable debug` \
 		--enable-threads \

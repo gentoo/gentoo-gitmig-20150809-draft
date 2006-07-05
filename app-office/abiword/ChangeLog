@@ -1,6 +1,11 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.151 2006/05/17 17:24:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.152 2006/07/05 07:51:25 mr_bones_ Exp $
+
+  05 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  abiword-2.2.10.ebuild, abiword-2.2.11.ebuild, abiword-2.4.1.ebuild,
+  abiword-2.4.2.ebuild, abiword-2.4.2-r1.ebuild, abiword-2.4.4.ebuild:
+  xml2 use flag changed to xml
 
 *abiword-2.4.4 (17 May 2006)
 

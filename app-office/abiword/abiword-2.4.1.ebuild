@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.1.ebuild,v 1.3 2005/12/13 22:01:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.1.ebuild,v 1.4 2006/07/05 07:51:25 mr_bones_ Exp $
 
 inherit eutils fdo-mime alternatives
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.abisource.com/"
 SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/source/${P}.tar.bz2"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug gnome spell xml2"
+IUSE="debug gnome spell xml"
 
 LICENSE="GPL-2"
 SLOT="2"
@@ -30,8 +30,8 @@ RDEPEND="virtual/xft
 	>=media-libs/fontconfig-2.1
 	>=app-text/wv-1
 	>=dev-libs/fribidi-0.10.4
-	xml2? ( >=dev-libs/libxml2-2.4.10 )
-	!xml2? ( dev-libs/expat )
+	xml? ( >=dev-libs/libxml2-2.4.10 )
+	!xml? ( dev-libs/expat )
 	spell? ( >=app-text/enchant-1.1 )
 	gnome? (
 		>=gnome-base/libbonobo-2
@@ -52,7 +52,7 @@ src_compile() {
 		$(use_enable gnome gucharmap) \
 		$(use_enable spell enchant)   \
 		$(use_enable debug)           \
-		$(use_with xml2 libxml2)      \
+		$(use_with xml libxml2)      \
 		--enable-threads    \
 		--disable-scripting \
 		--with-sys-wv"
