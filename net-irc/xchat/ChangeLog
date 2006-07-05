@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.199 2006/06/10 03:06:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.200 2006/07/05 07:40:15 jokey Exp $
+
+*xchat-2.6.4 (05 Jul 2006)
+
+  05 Jul 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/xchat-2.6.4-fix-cursor.patch, +files/xchat-2.6.4-fix-proxy.patch,
+  +xchat-2.6.4.ebuild:
+  Version bump wrt bug #136124
 
   10 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org> xchat-2.4.3.ebuild,
   xchat-2.4.5.ebuild, xchat-2.4.5-r1.ebuild, xchat-2.6.1.ebuild,
