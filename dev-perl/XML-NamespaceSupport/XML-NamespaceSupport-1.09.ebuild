@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/XML-NamespaceSupport-1.09.ebuild,v 1.12 2006/07/05 05:53:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/XML-NamespaceSupport-1.09.ebuild,v 1.13 2006/07/05 13:32:14 ian Exp $
 
 inherit perl-module
 
@@ -14,5 +14,6 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-libs/libxml2-2.4.1"
+RDEPEND="${DEPEND}"
 
 SRC_TEST="do"

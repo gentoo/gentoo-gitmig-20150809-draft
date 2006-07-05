@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/XML-Parser-2.34.ebuild,v 1.17 2006/03/31 19:42:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/XML-Parser-2.34.ebuild,v 1.18 2006/07/05 13:33:10 ian Exp $
 
 inherit perl-module multilib
 
@@ -14,6 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 s390 sh sparc x86 
 IUSE=""
 
 DEPEND=">=dev-libs/expat-1.95.1-r1"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

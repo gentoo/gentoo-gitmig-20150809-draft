@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Parser
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.26 2006/03/31 19:42:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.27 2006/07/05 13:33:10 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> XML-Parser-2.31.ebuild,
+  XML-Parser-2.31-r1.ebuild, XML-Parser-2.34.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header; fixed DEPEND
 
   31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> XML-Parser-2.34.ebuild:
   Add ~x86-fbsd keyword.

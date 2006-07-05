@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-LibXSLT
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.38 2006/02/06 20:39:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.39 2006/07/05 13:31:25 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> XML-LibXSLT-1.50.ebuild,
+  XML-LibXSLT-1.50-r1.ebuild, XML-LibXSLT-1.53.ebuild,
+  XML-LibXSLT-1.57.ebuild, XML-LibXSLT-1.58.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header; fixed DEPEND
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org> XML-LibXSLT-1.58.ebuild:
   stable on amd64
