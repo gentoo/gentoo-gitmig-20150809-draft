@@ -1,18 +1,42 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e0dd3963ee3d987f4f115047beb10bb7 gnome-common-2.12.0.ebuild 588
-MD5 362e50e7f15938a17783d53b2a1e023d gnome-common-1.2.4-r3.ebuild 1040
-MD5 a712b7f555484b48e77c289c29910168 gnome-common-2.8.0.ebuild 581
+DIST gnome-common-1.2.4.tar.bz2 155757
+DIST gnome-common-2.12.0.tar.bz2 60283
+DIST gnome-common-2.8.0.tar.bz2 58694
+EBUILD gnome-common-1.2.4-r3.ebuild 1046 RMD160 ffba0ac1130b9c374fc67fb6f8859a36a0f01a14 SHA1 ccc37c0c43f5aa57fcc553d83e1d402b865527e1 SHA256 a0a29273023b41815b511ebc04dcb85c2c4f6808245b8901848cf99f7bc38a65
+MD5 3d0e77ca42cafb5f38532d365dc3cc07 gnome-common-1.2.4-r3.ebuild 1046
+RMD160 ffba0ac1130b9c374fc67fb6f8859a36a0f01a14 gnome-common-1.2.4-r3.ebuild 1046
+SHA256 a0a29273023b41815b511ebc04dcb85c2c4f6808245b8901848cf99f7bc38a65 gnome-common-1.2.4-r3.ebuild 1046
+EBUILD gnome-common-2.12.0.ebuild 595 RMD160 d883a06bfd4e6f267fdbe6478a01ba13a982c24a SHA1 15bf48e628e56d3496bb6606160ce71ebd0da167 SHA256 fe421105679550140ecd00a2476363988f834c144171cf180bdb76500d1bb7cc
+MD5 4ea868bb6b45b33e58c1ef081fea978b gnome-common-2.12.0.ebuild 595
+RMD160 d883a06bfd4e6f267fdbe6478a01ba13a982c24a gnome-common-2.12.0.ebuild 595
+SHA256 fe421105679550140ecd00a2476363988f834c144171cf180bdb76500d1bb7cc gnome-common-2.12.0.ebuild 595
+EBUILD gnome-common-2.8.0.ebuild 585 RMD160 e3f301ac6d5b662c2d6096c2fc01af75f0bc2bcb SHA1 a4acd3fbb078722661b7155b08f7101017a44a39 SHA256 42bcce3fd78178732ad35551cf61a73045d677844f11ba1ba3e783799d96bbe3
+MD5 767d42d93f6f89529dccefce17129b7d gnome-common-2.8.0.ebuild 585
+RMD160 e3f301ac6d5b662c2d6096c2fc01af75f0bc2bcb gnome-common-2.8.0.ebuild 585
+SHA256 42bcce3fd78178732ad35551cf61a73045d677844f11ba1ba3e783799d96bbe3 gnome-common-2.8.0.ebuild 585
+MISC ChangeLog 3326 RMD160 bff5a53e1af26e8509ebd2623859ba360aeb2933 SHA1 49a1c8e61f35f64a1c336171ae13238d56482e29 SHA256 5db8e07fc338bba850f5fd8ff7a459420df8dc33f4c0aa1bbbf32ea8921d1f7f
 MD5 caf4f7ac21e0efab2d56fd6785060419 ChangeLog 3326
+RMD160 bff5a53e1af26e8509ebd2623859ba360aeb2933 ChangeLog 3326
+SHA256 5db8e07fc338bba850f5fd8ff7a459420df8dc33f4c0aa1bbbf32ea8921d1f7f ChangeLog 3326
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 f07928a6c379d8d4193288cc987c8101 files/digest-gnome-common-2.8.0 70
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 MD5 3bc13d6705b8399b69cf981e230f92ad files/digest-gnome-common-1.2.4-r3 71
+RMD160 e83f041bef3156e4ba99398967f6db39de5e3eb3 files/digest-gnome-common-1.2.4-r3 71
+SHA256 21716960caa06a711a79fab199b646687e452ec2d342ee3e4e8b99a5ccea4be8 files/digest-gnome-common-1.2.4-r3 71
 MD5 4fb032575d45df73ae5c65714f8f58f9 files/digest-gnome-common-2.12.0 71
+RMD160 336519904c501b443be729ec0e8a7d4aacde7a39 files/digest-gnome-common-2.12.0 71
+SHA256 d67cd389f83dcf04f42a47080c72139d7d15ad85f03aabe8d64f89dd1be2ad63 files/digest-gnome-common-2.12.0 71
+MD5 f07928a6c379d8d4193288cc987c8101 files/digest-gnome-common-2.8.0 70
+RMD160 180bae96bb7ca0815620dec5e83b993be12f252d files/digest-gnome-common-2.8.0 70
+SHA256 303099a9e72748a1170b0646bcb1377eab843d0924bcf929c0d35056bd248153 files/digest-gnome-common-2.8.0 70
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFDNDpIomPajV0RnrERAu1cAJ9+45oU2GUEjXQbq2cyIummukxkngCfQ6bm
-Q8fX0girxbuIP1FsC0gMMgk=
-=ZfU+
+iD8DBQFEq1bUamhnQswr0vIRAkHIAJ9rKThs1KEJqvGlqISYOLzfL7oPjQCfYjCb
+QOg7BxdzjjoNxbOUP4bWJA8=
+=KuEc
 -----END PGP SIGNATURE-----
