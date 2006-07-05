@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-docklet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-docklet/ChangeLog,v 1.6 2006/07/03 16:58:57 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-docklet/ChangeLog,v 1.7 2006/07/05 19:53:36 wolf31o2 Exp $
+
+  05 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  audacious-docklet-0.1.1-r1.ebuild:
+  Stable on x86 wrt bug #139037.
 
   03 Jul 2006; Thomas Cort <tcort@gentoo.org>
   audacious-docklet-0.1.1-r1.ebuild:
