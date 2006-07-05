@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.30 2005/07/24 15:49:26 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.31 2006/07/05 05:40:18 vapier Exp $
 
 #provide Xmake and Xemake
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
 IUSE="nls bonobo"
 
 #please dont add gnome-libs as an optional DEPEND, as
@@ -46,12 +46,12 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/usr \
-	     libdir=${D}/usr/$(get_libdir) \
-	     sysconfdir=${D}/etc \
-	     localstatedir=${D}/var/lib \
+	make prefix="${D}"/usr \
+	     libdir="${D}"/usr/$(get_libdir) \
+	     sysconfdir="${D}"/etc \
+	     localstatedir="${D}"/var/lib \
 	     install || die
 
-	dodoc AUTHORS COPYING* ChangeLog NEWS
+	dodoc AUTHORS ChangeLog NEWS
 	dodoc doc/*.txt
 }

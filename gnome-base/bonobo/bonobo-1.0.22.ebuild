@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.24 2006/03/31 14:14:02 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.25 2006/07/05 05:39:38 vapier Exp $
 
-inherit gnome.org libtool gnuconfig eutils multilib
+inherit gnome.org libtool eutils multilib
 
 DESCRIPTION="A set of language and system independent CORBA interfaces"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
 IUSE="nls"
 
 RDEPEND=">=gnome-base/oaf-0.6.8
@@ -23,29 +23,23 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-gcc4.patch
-	sed -i -e "s:libdir=@prefix@/lib:libdir=@prefix@/$(get_libdir):" \
-		libefs/libefs.pc.in
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+	sed -i \
+		-e "s:libdir=@prefix@/lib:libdir=@prefix@/$(get_libdir):" \
+		libefs/libefs.pc.in || die
+
+	# libtoolize to fix relink bug
+	elibtoolize
 }
 
 src_compile() {
-	#libtoolize to fix relink bug
-	elibtoolize
-
-	use ppc64 && gnuconfig_update
-
-	local myconf=""
-	use nls || myconf="${myconf} --disable-nls"
-
-	econf ${myconf} || die
-
-	make || die # make -j 4 didn't work
+	econf $(use_enable nls) || die
+	emake -j1 || die # make -j 4 didn't work
 }
 
 src_install() {
 	einstall || die
-
-	dodoc AUTHORS COPYING* ChangeLog README NEWS TODO
+	dodoc AUTHORS ChangeLog README NEWS TODO
 }

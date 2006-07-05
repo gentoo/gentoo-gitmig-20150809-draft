@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-0.5.17-r1.ebuild,v 1.10 2006/03/24 16:23:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-0.5.17-r1.ebuild,v 1.11 2006/07/05 05:38:36 vapier Exp $
 
-inherit gnome.org libtool gnuconfig eutils multilib
+inherit gnome.org libtool eutils multilib
 
 MY_P="ORBit-${PV}"
 PVP=(${PV//[-\._]/ })
@@ -14,12 +14,12 @@ SRC_URI="mirror://gnome/sources/ORBit/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE=""
 
 DEPEND="sys-devel/gettext
-		>=sys-apps/tcp-wrappers-7.6
-		=dev-libs/glib-1.2*"
+	>=sys-apps/tcp-wrappers-7.6
+	=dev-libs/glib-1.2*"
 RDEPEND="=dev-libs/glib-1.2*
 	dev-util/indent"
 
@@ -28,7 +28,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-m4.patch
 	epatch "${FILESDIR}"/${P}-rpath-security-fix.patch
-	gnuconfig_update
 	# Libtoolize to fix "relink bug" in older libtool's distributed
 	# with packages.
 	elibtoolize
@@ -36,7 +35,6 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		--host=${CHOST} \
 		--prefix=/usr \
 		--libdir=/usr/$(get_libdir) \
 		--infodir=/usr/share/info \
@@ -48,12 +46,6 @@ src_compile() {
 }
 
 src_install() {
-	#make prefix=${D}/usr \
-	#	libdir=${D}/usr/$(get_libdir) \
-	#	sysconfdir=${D}/etc \
-	#	infodir=${D}/usr/share/info \
-	#	localstatedir=${D}/var/lib \
-	#	install || die
 	make install DESTDIR="${D}" || die
 
 	dodoc AUTHORS ChangeLog README NEWS TODO
@@ -67,6 +59,7 @@ src_install() {
 	cd ../popt
 	dodoc CHANGES README
 
-	sed -i -e 's:-I/usr/include":-I/usr/include/libIDL-1.0":' \
-		${D}/usr/$(get_libdir)/libIDLConf.sh || die
+	sed -i \
+		-e 's:-I/usr/include":-I/usr/include/libIDL-1.0":' \
+		"${D}"/usr/$(get_libdir)/libIDLConf.sh || die
 }
