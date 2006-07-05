@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-0.9.9.ebuild,v 1.2 2006/03/06 20:57:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-0.9.9.ebuild,v 1.3 2006/07/05 19:12:06 mrness Exp $
 
 inherit eutils
 
@@ -14,8 +14,6 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="sys-apps/texinfo"
-RDEPEND="${DEPEND}
-	app-admin/sudo"
 
 pkg_setup() {
 	enewgroup polipo

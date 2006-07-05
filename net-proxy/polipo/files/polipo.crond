@@ -1,4 +1,4 @@
 #!/bin/bash
 
 #Expire old cached objects
-nice -n 15 sudo -u polipo polipo -x
+nice -n 15 su -s /bin/sh -c 'polipo -x' polipo
