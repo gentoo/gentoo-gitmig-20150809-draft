@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.14.0.ebuild,v 1.2 2006/03/23 18:31:32 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.14.0.ebuild,v 1.3 2006/07/05 05:49:42 vapier Exp $
 
 inherit gnome2
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.10
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 # FIXME : consider merging the tree (?)
-DOCS="ABOUT-NLS AUTHORS ChangeLog NEWS README TODO"
+DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --enable-gtk"
@@ -42,8 +42,8 @@ src_install() {
 	# hack hack
 	dodir /etc/gconf/gconf.xml.mandatory
 	dodir /etc/gconf/gconf.xml.defaults
-	touch ${D}/etc/gconf/gconf.xml.mandatory/.keep${SLOT}
-	touch ${D}/etc/gconf/gconf.xml.defaults/.keep${SLOT}
+	touch "${D}"/etc/gconf/gconf.xml.mandatory/.keep${SLOT}
+	touch "${D}"/etc/gconf/gconf.xml.defaults/.keep${SLOT}
 
 	dodir /etc/env.d
 	dodir /root/.gconfd
