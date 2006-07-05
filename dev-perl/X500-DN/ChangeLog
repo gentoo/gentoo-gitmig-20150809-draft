@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/X500-DN
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/ChangeLog,v 1.9 2005/09/17 00:46:59 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/ChangeLog,v 1.10 2006/07/05 13:09:56 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> X500-DN-0.28.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> X500-DN-0.28.ebuild:
   Mark 0.28 stable on ia64
