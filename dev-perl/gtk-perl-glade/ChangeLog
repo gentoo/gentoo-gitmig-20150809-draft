@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gtk-perl-glade
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/ChangeLog,v 1.18 2005/10/03 12:35:48 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/ChangeLog,v 1.19 2006/07/05 17:30:38 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  gtk-perl-glade-0.7004-r2.ebuild, gtk-perl-glade-0.7004-r3.ebuild,
+  gtk-perl-glade-0.7008.ebuild, gtk-perl-glade-0.7008-r1.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header; fixed DEPEND
 
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   gtk-perl-glade-0.7008-r1.ebuild:

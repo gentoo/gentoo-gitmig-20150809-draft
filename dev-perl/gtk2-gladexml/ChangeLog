@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gtk2-gladexml
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/ChangeLog,v 1.24 2006/07/03 00:03:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/ChangeLog,v 1.25 2006/07/05 17:34:04 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  gtk2-gladexml-0.94.ebuild, gtk2-gladexml-1.00.ebuild,
+  gtk2-gladexml-1.004.ebuild, gtk2-gladexml-1.005.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header; fixed DEPEND
 
   03 Jul 2006; Michael Cummings <mcummings@gentoo.org>
   gtk2-gladexml-1.005.ebuild:

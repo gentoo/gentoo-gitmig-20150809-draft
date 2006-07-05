@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7008.ebuild,v 1.8 2004/07/14 17:47:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7008.ebuild,v 1.9 2006/07/05 17:30:38 ian Exp $
 
 inherit perl-module
 
@@ -15,13 +15,13 @@ LICENSE="GPL-2"
 KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
 IUSE="gnome"
 
-DEPEND="${DEPEND}
-	media-libs/gdk-pixbuf
+DEPEND="media-libs/gdk-pixbuf
 	=x11-libs/gtk+-1.2*
 	dev-perl/XML-Writer
 	dev-perl/XML-Parser
 	gnome? ( gnome-base/gnome-libs )
 	dev-util/glade"
+RDEPEND="${DEPEND}"
 
 mydoc="VERSIONS WARNING NOTES"
 

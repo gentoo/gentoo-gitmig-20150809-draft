@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7004-r2.ebuild,v 1.17 2004/07/14 17:47:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7004-r2.ebuild,v 1.18 2006/07/05 17:30:38 ian Exp $
 
 inherit perl-module
 
@@ -15,9 +15,9 @@ LICENSE="GPL-2"
 KEYWORDS="x86 amd64 ppc sparc alpha"
 IUSE=""
 
-DEPEND="${DEPEND}
-	>=dev-perl/gtk-perl-${PV}
+DEPEND=">=dev-perl/gtk-perl-${PV}
 	dev-util/glade"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	perl Makefile.PL

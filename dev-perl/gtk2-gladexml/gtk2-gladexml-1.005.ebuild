@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/gtk2-gladexml-1.005.ebuild,v 1.8 2006/07/03 00:03:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/gtk2-gladexml-1.005.ebuild,v 1.9 2006/07/05 17:34:04 ian Exp $
 
 inherit perl-module
 
@@ -15,11 +15,11 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="${DEPEND}
-	>=x11-libs/gtk+-2
+DEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libglade-2
 	>=dev-util/glade-2.0.0-r1
 	>=dev-perl/glib-perl-1.012
 	>=dev-perl/gtk2-perl-1.012
 	dev-perl/extutils-depends
 	dev-perl/extutils-pkgconfig"
+RDEPEND="${DEPEND}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libvorbis-perl/libvorbis-perl-0.04.ebuild,v 1.13 2005/05/01 17:06:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libvorbis-perl/libvorbis-perl-0.04.ebuild,v 1.14 2006/07/05 17:41:38 ian Exp $
 
 inherit perl-module
 
@@ -14,6 +14,6 @@ LICENSE="Artistic"
 KEYWORDS="x86 sparc ppc amd64"
 IUSE=""
 
-DEPEND="${DEPEND}
-	media-libs/libogg
+DEPEND="media-libs/libogg
 	media-libs/libvorbis"
+RDEPEND="${DEPEND}"
