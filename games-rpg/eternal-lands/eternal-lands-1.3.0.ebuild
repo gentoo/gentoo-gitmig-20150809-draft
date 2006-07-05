@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.3.0.ebuild,v 1.1 2006/07/04 22:50:25 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.3.0.ebuild,v 1.2 2006/07/05 12:45:09 uberlord Exp $
 
 inherit eutils games
 
@@ -101,6 +101,11 @@ src_install() {
 }
 
 pkg_postinst() {
+	einfo "Auto Update is now enabled in Eternal Lands"
+	ewarn "If an update occurs then the client will suddenly exit"
+	einfo "Updates only happen when the game first loads"
+	einfo "Please don't report this behaviour as a bug ;"
+	
 	# Ensure that the files are writable by the game group for auto
 	# updating.
 	chmod -R g+rw "${ROOT}/${GAMES_DATADIR}/${MY_PN}"
