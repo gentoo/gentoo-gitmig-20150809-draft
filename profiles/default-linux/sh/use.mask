@@ -1,7 +1,6 @@
 hardened
 
-# Saleem Abdulrasool <compnerd@gentoo.org>
-# Masking this with vapier's blessings
+# dmidecode bios decoder
 dmi
 
 # Paul de Vrieze <pauldv@gentoo.org>
