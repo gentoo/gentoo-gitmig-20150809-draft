@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r6.ebuild,v 1.4 2006/07/05 01:16:34 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r6.ebuild,v 1.5 2006/07/05 19:41:07 dang Exp $
 
 inherit flag-o-matic eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.reptilelabour.com/software/files/chromium/chromium-src-${PV}
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="vorbis qt3 sdl"
 
 DEPEND="|| ( x11-libs/libXext virtual/x11 )
