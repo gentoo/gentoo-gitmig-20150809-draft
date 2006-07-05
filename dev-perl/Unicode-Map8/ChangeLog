@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unicode-Map8
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/ChangeLog,v 1.23 2006/05/21 18:04:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/ChangeLog,v 1.24 2006/07/05 12:49:47 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> Unicode-Map8-0.11.ebuild,
+  Unicode-Map8-0.11-r1.ebuild, Unicode-Map8-0.12.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header; fixed DEPEND
 
   21 May 2006; Markus Rothe <corsair@gentoo.org> Unicode-Map8-0.12.ebuild:
   Stable on ppc64
