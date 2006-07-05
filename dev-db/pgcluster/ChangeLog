@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/pgcluster
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/ChangeLog,v 1.4 2005/12/16 11:56:51 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/ChangeLog,v 1.5 2006/07/05 07:36:26 mr_bones_ Exp $
+
+  05 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  pgcluster-1.3.0b.ebuild, pgcluster-1.3.0c.ebuild:
+  xml2 use flag changed to xml
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   pgcluster-1.3.0c.ebuild:

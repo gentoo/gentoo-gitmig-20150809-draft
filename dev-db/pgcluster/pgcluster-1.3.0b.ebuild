@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0b.ebuild,v 1.4 2005/10/24 03:50:17 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0b.ebuild,v 1.5 2006/07/05 07:36:26 mr_bones_ Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib
 
@@ -13,7 +13,7 @@ SRC_URI="http://pgfoundry.org/frs/download.php/181/${P}.tar.gz"
 LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
-IUSE="doc libg++ nls pam perl pg-intdatetime python readline ssl tcltk xml2 zlib"
+IUSE="doc libg++ nls pam perl pg-intdatetime python readline ssl tcltk xml zlib"
 
 S=${WORKDIR}/${MY_P}
 DEPEND="virtual/libc
@@ -26,7 +26,7 @@ DEPEND="virtual/libc
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
-	xml2? ( dev-libs/libxml2 dev-libs/libxslt dev-util/pkgconfig )
+	xml? ( dev-libs/libxml2 dev-libs/libxslt dev-util/pkgconfig )
 	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/libc
 	zlib? ( >=sys-libs/zlib-1.1.3 )
@@ -34,7 +34,7 @@ RDEPEND="virtual/libc
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
-	xml2? ( dev-libs/libxml2 dev-libs/libxslt )
+	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	!dev-db/postgresql"
 
 PG_DIR="/var/lib/postgresql"
@@ -99,7 +99,7 @@ src_compile() {
 	make || die
 	cd contrib
 	make || die
-	if use xml2; then
+	if use xml; then
 		cd xml2
 		make || die
 	fi
@@ -119,7 +119,7 @@ src_install() {
 #	make DESTDIR=${D} install-all-headers || die
 	cd ${S}/contrib
 	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
-	if use xml2; then
+	if use xml; then
 		cd ${S}/contrib/xml2
 		make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
 	fi
