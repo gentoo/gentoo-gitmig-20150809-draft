@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.11-r2.ebuild,v 1.6 2006/05/14 22:03:58 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.11-r2.ebuild,v 1.7 2006/07/05 06:07:49 vapier Exp $
 
 inherit flag-o-matic eutils libtool autotools
 
@@ -11,7 +11,7 @@ SRC_URI="http://mikmod.raphnet.net/files/${P}.tar.gz
 
 LICENSE="|| ( LGPL-2.1 LGPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm ~hppa ~ia64 ~mips ppc ~ppc-macos ppc64 sh sparc x86"
 IUSE="oss esd alsa"
 
 DEPEND=">=media-libs/audiofile-0.2.3
@@ -21,12 +21,12 @@ DEPEND=">=media-libs/audiofile-0.2.3
 src_unpack() {
 	unpack ${A}
 
-	epatch "${DISTDIR}/${P}-esdm4.patch.bz2"
+	epatch "${DISTDIR}"/${P}-esdm4.patch.bz2
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-m4.patch
 	epatch "${FILESDIR}"/${P}-amd64-archdef.patch
-	epatch "${FILESDIR}/${P}-respectflags.patch"
+	epatch "${FILESDIR}"/${P}-respectflags.patch
 	AT_M4DIR="${S}/m4" eautoreconf
 }
 
