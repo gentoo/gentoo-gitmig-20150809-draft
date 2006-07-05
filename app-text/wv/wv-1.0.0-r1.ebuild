@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.0.0-r1.ebuild,v 1.4 2005/01/01 16:42:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.0.0-r1.ebuild,v 1.5 2006/07/05 07:34:00 mr_bones_ Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Tool for conversion of MSWord doc and rtf files to something readab
 SRC_URI="mirror://sourceforge/wvware/${P}.tar.gz"
 HOMEPAGE="http://wvware.sourceforge.net"
 
-IUSE="xml2 wmf"
+IUSE="xml wmf"
 KEYWORDS="x86 ppc sparc hppa alpha ia64 amd64 ppc64"
 SLOT="0"
 LICENSE="GPL-2"
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 DEPEND="sys-libs/zlib
 	media-libs/libpng
 	wmf? ( >=media-libs/libwmf-0.2.2 )
-	xml2? ( dev-libs/libxml2 )"
+	xml? ( dev-libs/libxml2 )"
 
 src_unpack() {
 
