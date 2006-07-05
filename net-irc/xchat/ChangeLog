@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.200 2006/07/05 07:40:15 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.201 2006/07/05 07:49:16 jokey Exp $
+
+  05 Jul 2006; Markus Ullmann <jokey@gentoo.org>
+  -files/xchat-dccserver-0.5.patch, xchat-2.4.5.ebuild,
+  xchat-2.4.5-r1.ebuild:
+  Moving dccserver patch to distfiles mirror
 
 *xchat-2.6.4 (05 Jul 2006)
 

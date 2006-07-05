@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.5-r1.ebuild,v 1.7 2006/06/10 03:06:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.5-r1.ebuild,v 1.8 2006/07/05 07:49:16 jokey Exp $
 
 inherit flag-o-matic eutils versionator
 
 DESCRIPTION="Graphical IRC client"
 SRC_URI="http://www.xchat.org/files/source/$(get_version_component_range 1-2)/${P}.tar.bz2
-	mirror://sourceforge/${PN}/${P}.tar.bz2"
+	mirror://sourceforge/${PN}/${P}.tar.bz2
+	mirror://gentoo/${PN}-dccserver-0.5.patch.bz2"
 HOMEPAGE="http://www.xchat.org/"
 
 LICENSE="GPL-2"
@@ -34,7 +35,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/xc245-fix-te-notify.diff
 	epatch "${FILESDIR}"/44_fix_alignment_endianess.dpatch
 
-	use xchatdccserver && epatch "${FILESDIR}"/xchat-dccserver-0.5.patch
+	use xchatdccserver && epatch "${DISTDIR}"/xchat-dccserver-0.5.patch.bz2
 
 	# use libdir/xchat/plugins as the plugin directory
 	if [ $(get_libdir) != "lib" ] ; then
