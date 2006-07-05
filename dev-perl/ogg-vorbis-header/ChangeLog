@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ogg-vorbis-header
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ChangeLog,v 1.15 2005/09/17 00:50:53 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ChangeLog,v 1.16 2006/07/05 18:53:05 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  ogg-vorbis-header-0.02.ebuild, ogg-vorbis-header-0.03.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   ogg-vorbis-header-0.03.ebuild:
