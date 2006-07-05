@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/gnome2-gconf-1.031.ebuild,v 1.1 2006/06/23 18:06:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/gnome2-gconf-1.031.ebuild,v 1.2 2006/07/05 15:08:07 ian Exp $
 
 inherit perl-module
 
@@ -16,12 +16,10 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 
-DEPEND="${DEPEND}
-	>=x11-libs/gtk+-2
+DEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/gconf-2
 	>=dev-perl/glib-perl-1.120
 	>=dev-perl/gtk2-perl-1.120
 	>=dev-perl/extutils-pkgconfig-1.03
 	>=dev-perl/extutils-depends-0.202"
-
-
+RDEPEND="${DEPEND}"
