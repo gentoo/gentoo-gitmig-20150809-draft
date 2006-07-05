@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.14.2.ebuild,v 1.1 2006/06/30 18:06:22 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.14.2.ebuild,v 1.2 2006/07/05 15:49:37 genstef Exp $
 
 inherit gnome2 eutils autotools
 
@@ -28,6 +28,9 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable eds evolution) --exec-prefix=/usr"
+
+	# fix ssh compile problems, bug 132993
+	export DISPLAY=""
 }
 
 src_unpack() {
