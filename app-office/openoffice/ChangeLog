@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.229 2006/07/03 14:41:03 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.230 2006/07/05 07:48:45 pylon Exp $
+
+  05 Jul 2006; Lars Weiler <pylon@gentoo.org> openoffice-2.0.3.ebuild:
+  Stable on ppc; security bug #138545.
 
   03 Jul 2006; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.3.ebuild:
