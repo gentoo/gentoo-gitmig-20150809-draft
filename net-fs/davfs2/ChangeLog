@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/davfs2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.26 2006/06/25 16:17:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.27 2006/07/05 18:04:18 genstef Exp $
+
+  05 Jul 2006; Stefan Schweizer <genstef@gentoo.org> davfs2-0.2.8.ebuild:
+  DEPEND on <neon-0.26, waiting for upstream to port it. Thanks to Armando Di
+  Cianno <armando@goodship.net> in bug 139324
 
   25 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   -files/include-compiler.patch, -files/makefile_0.2.7.patch,

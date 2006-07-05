@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-0.2.8.ebuild,v 1.7 2006/06/25 16:17:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-0.2.8.ebuild,v 1.8 2006/07/05 18:04:18 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -15,7 +15,7 @@ RESTRICT="test"
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6 )
 		socks5? ( >=net-proxy/dante-1.1.13 )
 		dev-libs/libxml2
-		net-misc/neon
+		<net-misc/neon-0.26
 		sys-libs/zlib"
 SLOT="0"
 
