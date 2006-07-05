@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/XML-SAX-0.14-r1.ebuild,v 1.1 2006/07/02 19:24:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/XML-SAX-0.14-r1.ebuild,v 1.2 2006/07/05 05:53:52 vapier Exp $
 
 inherit perl-module eutils
 
@@ -8,22 +8,25 @@ DESCRIPTION="Perl module for using and building Perl SAX2 XML parsers, filters, 
 SRC_URI="mirror://cpan/authors/id/M/MS/MSERGEANT/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~msergeant/${P}/"
 
-SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+SLOT="0"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 sh sparc ~x86 ~x86-fbsd"
 IUSE=""
-SRC_TEST="do"
 
-DEPEND="${DEPEND}
-	>=dev-perl/XML-NamespaceSupport-1.04
+DEPEND=">=dev-perl/XML-NamespaceSupport-1.04
 	>=dev-libs/libxml2-2.4.1
 	>=sys-apps/sed-4"
+
+SRC_TEST="do"
 
 src_unpack() {
 	local installvendorlib
 	eval $(perl '-V:installvendorlib')
 	unpack ${A}
-	sed -i -e "s,\(-MXML::SAX\),-I${D}/${installvendorlib} \1," ${S}/Makefile.PL
-	cd ${S}; epatch ${FILESDIR}/entities.patch
-	cd ${S}; epatch ${FILESDIR}/encodings.patch
+	cd "${S}"
+	sed -i \
+		-e "s,\(-MXML::SAX\),-I${D}/${installvendorlib} \1," \
+		Makefile.PL || die
+	epatch "${FILESDIR}"/entities.patch
+	epatch "${FILESDIR}"/encodings.patch
 }
