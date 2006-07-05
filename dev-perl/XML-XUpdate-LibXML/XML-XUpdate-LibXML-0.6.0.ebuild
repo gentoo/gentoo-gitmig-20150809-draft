@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XUpdate-LibXML/XML-XUpdate-LibXML-0.6.0.ebuild,v 1.5 2006/03/30 23:44:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XUpdate-LibXML/XML-XUpdate-LibXML-0.6.0.ebuild,v 1.6 2006/07/05 14:00:59 ian Exp $
 
 IUSE=""
 inherit perl-module
@@ -16,3 +16,4 @@ SRC_TEST="do"
 DEPEND=">=dev-perl/XML-LibXML-1.54
 		dev-perl/XML-LibXML-XPathContext
 		dev-perl/XML-LibXML-Iterator"
+RDEPEND="${DEPEND}"

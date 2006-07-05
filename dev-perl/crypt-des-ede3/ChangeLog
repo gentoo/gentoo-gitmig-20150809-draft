@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/crypt-des-ede3
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-des-ede3/ChangeLog,v 1.14 2006/02/08 23:53:36 tove Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-des-ede3/ChangeLog,v 1.15 2006/07/05 14:11:22 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  crypt-des-ede3-0.01.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   25 Nov 2005; Tom Gall <tgall@gentoo.org>
   crypt-des-ede3-0.01.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-des-ede3/crypt-des-ede3-0.01.ebuild,v 1.16 2005/11/25 22:52:48 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-des-ede3/crypt-des-ede3-0.01.ebuild,v 1.17 2006/07/05 14:11:22 ian Exp $
 
 inherit perl-module
 
@@ -16,3 +16,4 @@ KEYWORDS="alpha amd64 hppa ia64 ~mips ~ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="dev-perl/Crypt-DES"
+RDEPEND="${DEPEND}"
