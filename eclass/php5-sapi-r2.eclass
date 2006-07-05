@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.39 2006/01/26 06:06:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.40 2006/07/05 07:57:33 mr_bones_ Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -37,7 +37,7 @@ fi
 
 IUSE="adabas bcmath berkdb birdstep bzip2 calendar cdb pdf crypt
 ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx debug dio empress
-empress-bcs esoob exif fam firebird frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hardenedphp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg kerberos ldap libedit mcve memlimit mhash mime ming mkconfig mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc xpm zlib"
+empress-bcs esoob exif fam firebird frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hardenedphp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg kerberos ldap libedit mcve memlimit mhash mime ming mkconfig mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xsl xml xmlrpc xpm zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="$DEPEND
@@ -89,7 +89,7 @@ DEPEND="$DEPEND
 	xsl? ( dev-libs/libxslt )
 	zlib? ( sys-libs/zlib ) "
 
-# this would be xml2?, but PEAR requires XML support
+# this would be xml?, but PEAR requires XML support
 # this can become a USE flag when Gentoo bug #2272 has been resolved
 DEPEND="$DEPEND
 		dev-libs/libxml2"
@@ -401,7 +401,7 @@ php5-sapi-r2_src_compile() {
 	enable_extension_with		"curlwrappers"	"curlwrappers"	1
 	enable_extension_enable		"dbase"			"dbase"			1
 	enable_extension_enable		"dio"			"dio"			1
-	enable_extension_disable	"dom"			"xml2"			0
+	enable_extension_disable	"dom"			"xml"			0
 	enable_extension_enable		"exif"			"exif"			1
 	enable_extension_with		"fam"			"fam"			1
 	enable_extension_with		"fbsql"			"frontbase"		1
@@ -419,7 +419,7 @@ php5-sapi-r2_src_compile() {
 	enable_extension_with 		"iodbc" 		"iodbc" 		0 "/usr"
 	# ircg extension not supported on Gentoo at this time
 	enable_extension_with		"kerberos"		"kerberos"		0
-	enable_extension_disable	"libxml"		"xml2"			0
+	enable_extension_disable	"libxml"		"xml"			0
 	enable_extension_enable		"mbstring"		"nls"			1
 	enable_extension_with		"mcrypt"		"crypt"			1
 	enable_extension_with		"mcve"			"mcve"			1
@@ -458,7 +458,7 @@ php5-sapi-r2_src_compile() {
 	enable_extension_disable	"tokenizer"		"tokenizer"		1
 	enable_extension_enable		"wddx"			"wddx"			1
 	enable_extension_with		"xsl"			"xsl"			1
-	#enable_extension_disable	"xml"			"xml2"			1 # PEAR needs --enable-xml
+	#enable_extension_disable	"xml"			"xml"			1 # PEAR needs --enable-xml
 	enable_extension_with		"xmlrpc"		"xmlrpc"		1
 	enable_extension_enable		"yp"			"nis"			1
 	enable_extension_with		"zlib"			"zlib"			1
