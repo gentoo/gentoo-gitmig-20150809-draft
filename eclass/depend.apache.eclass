@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.26 2006/06/10 16:19:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.27 2006/07/05 14:12:51 chtekk Exp $
 
 inherit multilib
 
@@ -208,7 +208,7 @@ want_apache() {
 
 	IUSE="${IUSE} apache apache2"
 	DEPEND="${DEPEND} ${WANT_APACHE_DEPEND}"
-	RDEPEND="${DEPEND} ${WANT_APACHE_DEPEND}"
+	RDEPEND="${RDEPEND} ${WANT_APACHE_DEPEND}"
 	if useq apache2 ; then
 		uses_apache2
 	elif useq apache ; then
