@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Test
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test/ChangeLog,v 1.7 2006/02/09 21:40:37 tove Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test/ChangeLog,v 1.8 2006/07/05 20:01:29 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> Test-1.24.ebuild,
+  Test-1.25.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   03 Dec 2005; Tom Gall <tgall@gentoo.org> Test-1.25.ebuild:
   stable on ppc64

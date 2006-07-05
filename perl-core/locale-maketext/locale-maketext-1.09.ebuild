@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/locale-maketext/locale-maketext-1.09.ebuild,v 1.1 2005/05/25 15:38:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/locale-maketext/locale-maketext-1.09.ebuild,v 1.2 2006/07/05 20:05:40 ian Exp $
 
 inherit perl-module
 
@@ -16,5 +16,6 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc s390 sparc x86"
 IUSE=""
 
 DEPEND=">=perl-core/i18n-langtags-0.30"
+RDEPEND="${DEPEND}"
 
 SRC_TEST="do"

@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/digest-base
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/ChangeLog,v 1.20 2006/05/21 17:39:59 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/ChangeLog,v 1.21 2006/07/05 20:04:01 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> digest-base-1.08.ebuild,
+  digest-base-1.10.ebuild, digest-base-1.13.ebuild, digest-base-1.15.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
 *digest-base-1.15 (21 May 2006)
 
