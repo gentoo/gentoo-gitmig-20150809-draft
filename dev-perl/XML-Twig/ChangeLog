@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Twig
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.37 2006/07/02 10:49:12 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.38 2006/07/05 13:57:26 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> XML-Twig-3.17.ebuild,
+  XML-Twig-3.22.ebuild, XML-Twig-3.25.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
 *XML-Twig-3.26 (02 Jul 2006)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/YAML-Parser-Syck
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Parser-Syck/ChangeLog,v 1.2 2006/01/13 22:41:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Parser-Syck/ChangeLog,v 1.3 2006/07/05 14:02:41 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  YAML-Parser-Syck-0.01.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
   YAML-Parser-Syck-0.01.ebuild:
