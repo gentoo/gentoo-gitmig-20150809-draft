@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.22 2005/08/19 06:05:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.23 2006/07/05 05:26:42 vapier Exp $
 
 inherit eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc sh sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
