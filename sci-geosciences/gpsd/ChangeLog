@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.15 2006/06/24 04:18:26 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.16 2006/07/05 07:31:50 mr_bones_ Exp $
+
+  05 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org> -gpsd-2.30-r1.ebuild:
+  clean old dep-broken ebuild
 
   23 June 2006; Tom Gall <tgall@gentoo.org> gpsd-2.31.ebuild:
   stable on ppc64
