@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3-r1.ebuild,v 1.12 2006/06/29 20:31:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3-r1.ebuild,v 1.13 2006/07/05 23:27:41 exg Exp $
 
 inherit eutils flag-o-matic versionator autotools
 
@@ -38,6 +38,7 @@ src_unpack() {
 	ebegin "Reconfiguring configure scripts (be patient)"
 	cd ${S}/appl/telnet
 	autoreconf --force -I ${S}
+	sed -i 's/^# \(@lib\(obj\)\?_frag@\)/\1/' libtelnet/Makefile.in
 	eend $?
 }
 
@@ -133,9 +134,9 @@ pkg_postinst() {
 	fi
 	echo ""
 	ewarn "PLEASE READ THIS"
-	einfo "This release of mit-krb5 now depends on an external version"
-	einfo "of the com_err library.  Please make sure to run revdep-rebuild"
-	einfo "to ensure the integrity of the linking on your system"
+	ewarn "This release of mit-krb5 now depends on an external version"
+	ewarn "of the com_err library.  Please make sure to run revdep-rebuild"
+	ewarn "to ensure the integrity of the linking on your system"
 	echo ""
 	epause 10
 	ebeep
