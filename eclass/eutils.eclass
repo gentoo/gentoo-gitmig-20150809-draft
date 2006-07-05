@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.242 2006/06/24 04:36:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.243 2006/07/05 01:16:18 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -1244,7 +1244,11 @@ EOF
 #
 # normally the cdrom functions will refer to the cds as 'cd #1', 'cd #2',
 # etc...  if you want to give the cds better names, then just export
-# the CDROM_NAME_X variables before calling cdrom_get_cds().
+# the appropriate CDROM_NAME variable before calling cdrom_get_cds().
+#  - CDROM_NAME="fooie cd"     - for when you only want 1 cd
+#  - CDROM_NAME_1="install cd" - for when you want more than 1 cd
+#    CDROM_NAME_2="data cd"
+#  - CDROM_NAME_SET=( "install cd" "data cd" ) - short hand for CDROM_NAME_#
 #
 # for those multi cd ebuilds, see the cdrom_load_next_cd() below.
 #
@@ -1305,6 +1309,15 @@ cdrom_get_cds() {
 		einfo "export CD_ROOT=/mnt/cdrom"
 		echo
 	else
+		if [[ -n ${CDROM_NAME_SET} ]] ; then
+			# Translate the CDROM_NAME_SET array into CDROM_NAME_#
+			cdcnt=0
+			while [[ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ]] ; do
+				((++cdcnt))
+				export CDROM_NAME_${cdcnt}="${CDROM_NAME_SET[$((${cdcnt}-1))]}"
+			done
+		fi
+
 		einfo "This package will need access to ${CDROM_TOTAL_CDS} cds."
 		cdcnt=0
 		while [[ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ]] ; do
