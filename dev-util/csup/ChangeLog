@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/csup
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/csup/ChangeLog,v 1.1 2006/07/05 14:24:44 flameeyes Exp $
+
+*csup-20060318 (05 Jul 2006)
+
+  05 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +csup-20060318.ebuild:
+  Initial import, based on the work of Robert Sebastian Gerus and David Somers
+  in bug #132058.
+
