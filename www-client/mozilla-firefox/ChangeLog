@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.159 2006/06/12 02:09:16 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.160 2006/07/05 00:32:23 anarchy Exp $
+
+  05 Jul 2006; anarchy <anarchy@gentoo.org> mozilla-firefox-1.5.0.4.ebuild:
+  arm support stable via vapier bug #137580
 
   12 Jun 2006; Jory A. Pratt <anarchy@gentoo.org>
   -mozilla-firefox-1.0.8.ebuild, -mozilla-firefox-1.5-r9.ebuild,
