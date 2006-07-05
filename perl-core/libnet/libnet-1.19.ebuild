@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/libnet/libnet-1.19.ebuild,v 1.2 2006/01/15 01:39:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/libnet/libnet-1.19.ebuild,v 1.3 2006/07/05 20:04:53 ian Exp $
 
 inherit perl-module
 
@@ -14,6 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="sasl"
 
 DEPEND="sasl? ( dev-perl/Authen-SASL )"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	cp ${O}/files/libnet.cfg .
