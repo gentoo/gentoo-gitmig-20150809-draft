@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/DB_File
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/ChangeLog,v 1.13 2006/02/25 23:36:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/ChangeLog,v 1.14 2006/07/05 19:42:53 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> DB_File-1.811.ebuild,
+  DB_File-1.811-r1.ebuild, DB_File-1.813.ebuild, DB_File-1.814.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   25 Feb 2006; Joshua Kinard <kumba@gentoo.org> DB_File-1.814.ebuild:
   Marked stable on mips.
