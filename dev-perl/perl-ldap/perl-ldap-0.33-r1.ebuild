@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/perl-ldap-0.33-r1.ebuild,v 1.9 2006/06/27 19:54:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/perl-ldap-0.33-r1.ebuild,v 1.10 2006/07/05 18:59:48 ian Exp $
 
 inherit perl-module
 
@@ -21,6 +21,7 @@ DEPEND="dev-perl/Convert-ASN1
 			dev-perl/XML-SAX
 			dev-perl/XML-SAX-Writer )
 	ssl? ( >=dev-perl/IO-Socket-SSL-0.81 )"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	if [ "${MMSIXELEVEN}" ]; then

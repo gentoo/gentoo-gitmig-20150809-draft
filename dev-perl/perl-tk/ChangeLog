@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.37 2006/06/14 03:06:45 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.38 2006/07/05 19:04:22 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> perl-tk-804.027.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   14 Jun 2006; Michael Cummings <mcummings@gentoo.org> +files/xorg.patch,
   perl-tk-804.027.ebuild:
