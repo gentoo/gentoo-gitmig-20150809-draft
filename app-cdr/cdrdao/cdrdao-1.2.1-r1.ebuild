@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.1-r1.ebuild,v 1.5 2006/07/05 00:27:03 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.1-r1.ebuild,v 1.6 2006/07/05 03:36:14 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cdrdao/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 sh ~sparc ~x86"
 IUSE="gnome debug encode pccts"
 RESTRICT="nostrip"
 
@@ -27,14 +27,17 @@ DEPEND="pccts? ( >=dev-util/pccts-1.33.24-r1 )
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-gcc41.patch
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 
 	# Display better SCSI messages (advise from Bug 43003)
 	cd scsilib/include
 	sed -i -e 's:HAVE_SCANSTACK:NO_FRIGGING_SCANSTACK:g' xmconfig.h
 	sed -i -e 's:HAVE_SCANSTACK:NO_FRIGGING_SCANSTACK:g' mconfig.h
+
+	cd "${S}"/scsilib/RULES
+	cp x86_64-linux-cc.rul sh4-linux-cc.rul
 }
 
 src_compile() {
@@ -55,8 +58,5 @@ src_compile() {
 
 src_install() {
 	einstall || die "could not install"
-
-	cd ${S}
-
 	dodoc AUTHORS CREDITS ChangeLog NEWS README*
 }
