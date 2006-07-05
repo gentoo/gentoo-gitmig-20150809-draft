@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/xmms-mad-0.8-r2.ebuild,v 1.1 2006/05/24 03:29:34 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/xmms-mad-0.8-r2.ebuild,v 1.2 2006/07/05 06:09:38 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/xmms-mad/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 -mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 -mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE=""
 
 RDEPEND="media-sound/xmms
@@ -21,9 +21,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-mp3-header.patch
-	epatch ${FILESDIR}/${P}-song_change.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-mp3-header.patch
+	epatch "${FILESDIR}"/${P}-song_change.patch
 	touch configure
 }
 
