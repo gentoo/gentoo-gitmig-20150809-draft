@@ -1,21 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/XML-Simple-2.14.ebuild,v 1.12 2006/06/29 16:46:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/XML-Simple-2.14.ebuild,v 1.13 2006/07/05 05:53:20 vapier Exp $
 
 inherit perl-module
 
-IUSE=""
 DESCRIPTION="XML::Simple - Easy API to read/write XML (esp config files)"
-SRC_URI="mirror://cpan/authors/id/G/GR/GRANTM/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/XML/${P}.readme"
-SLOT="0"
+SRC_URI="mirror://cpan/authors/id/G/GR/GRANTM/${P}.tar.gz"
+
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
+IUSE=""
 
-SRC_TEST="do"
-
-DEPEND="${DEPEND}
-	virtual/perl-Storable
+DEPEND="virtual/perl-Storable
 	dev-perl/XML-SAX
 	>=dev-perl/XML-NamespaceSupport-1.04
 	>=dev-perl/XML-Parser-2.30"
+
+SRC_TEST="do"
