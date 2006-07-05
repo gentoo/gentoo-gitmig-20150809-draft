@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glade-perl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glade-perl/ChangeLog,v 1.11 2006/03/25 00:45:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glade-perl/ChangeLog,v 1.12 2006/07/05 14:58:38 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> glade-perl-0.61.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed DEPEND
 
   25 Mar 2006; Aron Griffis <agriffis@gentoo.org> glade-perl-0.61.ebuild:
   Remove ia64 keyword since we're not doing gnome-1 on ia64
