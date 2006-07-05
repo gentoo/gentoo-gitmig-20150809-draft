@@ -1,0 +1,44 @@
+diff -Nru skinelchi-0.1.1pre1/vdrstatus.c skinelchi-0.1.1pre1_vdr-1.3.38/vdrstatus.c
+--- skinelchi-0.1.1/vdrstatus.c	Mon Nov 14 11:50:12 2005
++++ skinelchi-0.1.1pre1_vdr-1.3.38/vdrstatus.c	Sun Jan  8 16:34:13 2006
+@@ -135,7 +135,11 @@
+ #endif
+     }
+ 
++#if VDRVERSNUM >= 10338
++void cSkinElchiStatus::Recording(const cDevice *Device, const char *Name, const char *FileName, bool On) {
++#else
+ void cSkinElchiStatus::Recording(const cDevice * Device, const char * Name) {
++#endif
+     int i = Device->CardIndex();
+     VdrStatus.RecordingDevice[i] = Device;
+     if (Name) {
+@@ -155,7 +159,11 @@
+ 	}
+     }
+ 
++#if VDRVERSNUM >= 10338
++void cSkinElchiStatus::Replaying(const cControl *Control, const char *Name, const char *FileName, bool On) {
++#else
+ void cSkinElchiStatus::Replaying(const cControl * Control, const char * Name) {
++#endif
+     if (Name)
+ 	asprintf(&VdrStatus.ReplayingName,"%s",Name);
+     else
+diff -Nru skinelchi-0.1.1pre1/vdrstatus.h skinelchi-0.1.1pre1_vdr-1.3.38/vdrstatus.h
+--- skinelchi-0.1.1/vdrstatus.h	Wed Nov  2 11:06:02 2005
++++ skinelchi-0.1.1pre1_vdr-1.3.38/vdrstatus.h	Sun Jan  8 16:27:31 2006
+@@ -55,8 +55,13 @@
+ private:
+ protected:
+   virtual void ChannelSwitch(const cDevice *Device, int ChannelNumber);
++#if VDRVERSNUM >= 10338
++  virtual void Recording(const cDevice *Device, const char *Name, const char *FileName, bool On);
++  virtual void Replaying(const cControl *Control, const char *Name, const char *FileName, bool On);
++#else
+   virtual void Recording(const cDevice *Device, const char *Name);
+   virtual void Replaying(const cControl *Control, const char *Name);
++#endif
+   virtual void SetVolume(int Volume, bool Absolute);
+   virtual void SetAudioTrack(int Index, const char * const *Tracks);
+   virtual void SetAudioChannel(int AudioChannel);
