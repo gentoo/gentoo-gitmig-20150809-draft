@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.56 2006/05/07 20:11:52 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.57 2006/07/05 22:39:55 dang Exp $
+
+  05 Jul 2006; Daniel Gryniewicz <dang@gentoo.org>
+  +files/gthumb-2.6.9-as-needed.patch, gthumb-2.6.9.ebuild:
+  Link libphotoimporter.so against libgphoto, so that it can load at runtime
+  with --as-needed
 
 *gthumb-2.6.9 (07 May 2006)
 
