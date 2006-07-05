@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/resolvconf-gentoo-1.0.ebuild,v 1.2 2006/07/05 12:21:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/resolvconf-gentoo-1.0.ebuild,v 1.3 2006/07/05 18:49:59 ticho Exp $
 
 DESCRIPTION="A framework for managing DNS information"
 HOMEPAGE="http://www.gentoo.org"
@@ -8,7 +8,7 @@ SRC_URI="http://dev.gentoo.org/~uberlord/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE=""
 
 DEPEND=""
