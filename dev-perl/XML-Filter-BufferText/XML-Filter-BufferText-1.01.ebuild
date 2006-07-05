@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Filter-BufferText/XML-Filter-BufferText-1.01.ebuild,v 1.18 2006/05/21 18:05:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Filter-BufferText/XML-Filter-BufferText-1.01.ebuild,v 1.19 2006/07/05 13:21:40 ian Exp $
 
 inherit perl-module
 
@@ -14,5 +14,5 @@ LICENSE="Artistic"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="${DEPEND}
-		>=dev-perl/XML-SAX-0.12"
+DEPEND=">=dev-perl/XML-SAX-0.12"
+RDEPEND="${DEPEND}"
