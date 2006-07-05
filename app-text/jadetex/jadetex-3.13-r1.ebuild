@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13-r1.ebuild,v 1.3 2005/07/12 03:55:30 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13-r1.ebuild,v 1.4 2006/07/05 06:53:36 vapier Exp $
 
 inherit latex-package
 
@@ -10,8 +10,9 @@ SRC_URI="mirror://sourceforge/jadetex/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
+RESTRICT="test"
 
 # virtual/tetex comes from latex-package
 DEPEND=">=app-text/openjade-1.3.1"
@@ -41,7 +42,7 @@ src_install() {
 	addwrite /usr/share/texmf/fonts
 	addwrite /var/cache/fonts
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc ChangeLog*
 	doman *.1
@@ -51,17 +52,13 @@ src_install() {
 		dosym /usr/bin/latex /usr/bin/jadetex
 		dosym /usr/bin/pdftex /usr/bin/pdfjadetex
 		insinto /etc/texmf/texmf.d
-		doins ${FILESDIR}/80jadetex.cnf
+		doins "${FILESDIR}"/80jadetex.cnf
 	else
 		dosym /usr/bin/virtex /usr/bin/jadetex
 		dosym /usr/bin/pdfvirtex /usr/bin/pdfjadetex
 	fi
 
 	dohtml -r .
-}
-
-src_test() {
-	return
 }
 
 pkg_postinst() {

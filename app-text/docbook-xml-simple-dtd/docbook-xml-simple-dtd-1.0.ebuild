@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/docbook-xml-simple-dtd-1.0.ebuild,v 1.10 2005/06/07 14:04:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/docbook-xml-simple-dtd-1.0.ebuild,v 1.11 2006/07/05 06:54:42 vapier Exp $
 
 MY_PN="docbook-simple"
 MY_P=${MY_PN}-${PV}
@@ -11,7 +11,7 @@ SRC_URI="http://www.oasis-open.org/docbook/xml/simple/${PV}/${MY_P}.zip"
 
 LICENSE="X11"
 SLOT="1.0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND="dev-libs/libxml2"
