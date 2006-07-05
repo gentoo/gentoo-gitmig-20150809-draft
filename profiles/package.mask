@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5589 2006/07/05 19:57:42 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5590 2006/07/05 22:41:13 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1290,7 +1290,3 @@ net-dialup/hcfusbmodem
 # and should work in both mozilla and phoenix.
 =net-www/netscape-plugger-4.0-r2
 
-# <dang@gentoo.org> (05 Jul 2006)
-# Mask because of lib numbering
-=media-libs/libgphoto2-2.2.0
-=media-gfx/gphoto2-2.2.0
