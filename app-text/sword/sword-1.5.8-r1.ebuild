@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.8-r1.ebuild,v 1.1 2006/06/13 22:25:33 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.8-r1.ebuild,v 1.2 2006/07/05 09:45:22 nixnut Exp $
 
 DESCRIPTION="Library for Bible reading software."
 HOMEPAGE="http://www.crosswire.org/sword/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.crosswire.org/ftpmirror/pub/sword/source/v1.5/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="curl debug icu lucene"
 
 RDEPEND="sys-libs/zlib
