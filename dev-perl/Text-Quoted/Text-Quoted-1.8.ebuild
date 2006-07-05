@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Quoted/Text-Quoted-1.8.ebuild,v 1.3 2006/03/30 23:29:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Quoted/Text-Quoted-1.8.ebuild,v 1.4 2006/07/05 11:21:20 ian Exp $
 
 # this is an RT dependency
 
@@ -17,4 +17,5 @@ KEYWORDS="~ia64 ~ppc sparc x86"
 
 DEPEND="dev-perl/text-autoformat
 	dev-perl/Text-Tabs+Wrap"
+RDEPEND="${DEPEND}"
 IUSE=""
