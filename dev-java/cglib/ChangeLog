@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/cglib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.10 2006/02/09 03:06:23 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.11 2006/07/05 05:19:25 nichoj Exp $
+
+*cglib-2.1.3 (05 Jul 2006)
+*cglib-2.0.2-r2 (05 Jul 2006)
+
+  05 Jul 2006; Joshua Nichols <nichoj@gentoo.org> +cglib-2.0.2-r2.ebuild,
+  +cglib-2.1.3.ebuild:
+  Version and revision bumps to support new Java system.
 
   09 Feb 2006; Joshua Nichols <nichoj@gentoo.org> cglib-2.0.2-r1.ebuild:
   Marked stable on amd64 and x86.
