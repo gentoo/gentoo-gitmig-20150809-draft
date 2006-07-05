@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/guifications
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/ChangeLog,v 1.36 2006/06/06 19:26:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/ChangeLog,v 1.37 2006/07/05 12:24:02 gothgirl Exp $
+
+  05 Jul 2006; gothgirl <gothgirl@gentoo.org> -guifications-2.8.ebuild,
+  -guifications-2.13_beta2.ebuild:
+  Clean up, removed old/unusable ebuilds.
 
   06 Jun 2006; Seemant Kulleen <seemant@gentoo.org>
   -guifications-2.13_beta1.ebuild:
