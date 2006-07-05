@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-LibXML
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.40 2006/06/29 17:09:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.41 2006/07/05 13:27:24 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> XML-LibXML-1.58.ebuild,
+  XML-LibXML-1.58-r1.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   XML-LibXML-1.58-r1.ebuild:

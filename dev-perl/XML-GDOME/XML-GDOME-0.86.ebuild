@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/XML-GDOME-0.86.ebuild,v 1.14 2006/03/30 23:42:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/XML-GDOME-0.86.ebuild,v 1.15 2006/07/05 13:24:07 ian Exp $
 
 inherit perl-module eutils
 
@@ -16,6 +16,7 @@ IUSE=""
 DEPEND=">=dev-libs/gdome2-0.7.2
 		dev-perl/XML-LibXML-Common
 		dev-perl/XML-SAX"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

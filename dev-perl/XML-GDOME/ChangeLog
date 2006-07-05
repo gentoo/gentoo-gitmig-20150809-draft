@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-GDOME
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/ChangeLog,v 1.17 2006/03/30 23:42:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/ChangeLog,v 1.18 2006/07/05 13:24:07 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> XML-GDOME-0.85.ebuild,
+  XML-GDOME-0.86.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> XML-GDOME-0.86.ebuild:
   Mark 0.86 ~ia64
