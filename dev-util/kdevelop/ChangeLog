@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.120 2006/07/03 12:28:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.121 2006/07/05 13:54:22 cryos Exp $
+
+  05 Jul 2006; Marcus D. Hanwell <cryos@gentoo.org> kdevelop-3.3.2.ebuild:
+  Marked stable on amd64, bug 135093.
 
   03 Jul 2006; Caleb Tennis <caleb@gentoo.org> kdevelop-3.3.3.ebuild,
   kdevelop-3.3.91.ebuild:
