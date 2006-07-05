@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/Math-BigInt-1.77-r1.ebuild,v 1.4 2006/07/02 20:27:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/Math-BigInt-1.77-r1.ebuild,v 1.5 2006/07/05 19:59:08 ian Exp $
 
 inherit perl-module eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~ppc s390 sh sparc ~x86"
 IUSE=""
 
 DEPEND=">=virtual/perl-Scalar-List-Utils-1.14"
+RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
 
