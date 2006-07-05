@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-ClassAPI/Test-ClassAPI-1.02.ebuild,v 1.12 2006/03/03 20:54:34 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-ClassAPI/Test-ClassAPI-1.02.ebuild,v 1.13 2006/07/05 10:23:36 ian Exp $
 
 inherit perl-module
 
@@ -17,3 +17,4 @@ DEPEND=">=virtual/perl-File-Spec-0.83
 		virtual/perl-Test-Simple
 		>=dev-perl/Class-Inspector-1.06
 		dev-perl/Config-Tiny"
+RDEPEND="${DEPEND}"

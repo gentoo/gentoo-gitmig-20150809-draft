@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-SubCalls/Test-SubCalls-1.06.ebuild,v 1.1 2006/06/23 23:53:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-SubCalls/Test-SubCalls-1.06.ebuild,v 1.2 2006/07/05 10:40:11 ian Exp $
 
 inherit perl-module
 
@@ -16,3 +16,4 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND=">=dev-perl/Hook-LexWrap-0.20"
+RDEPEND="${DEPEND}"
