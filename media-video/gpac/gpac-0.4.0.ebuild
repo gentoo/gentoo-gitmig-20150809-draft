@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.0.ebuild,v 1.4 2006/05/12 19:27:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.0.ebuild,v 1.5 2006/07/05 07:54:24 mr_bones_ Exp $
 
 inherit wxwidgets flag-o-matic eutils
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="amr debug jpeg mad ffmpeg javascript aac ogg vorbis oss png sdl theora
-truetype wxwindows xml2 xvid mozilla"
+truetype wxwindows xml xvid mozilla"
 S=${WORKDIR}/${PN}
 
 RDEPEND="jpeg? ( media-libs/jpeg )
@@ -29,7 +29,7 @@ RDEPEND="jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )
 	truetype? ( >=media-libs/freetype-2.1 )
 	sdl? ( media-libs/libsdl )
-	xml2? ( >=dev-libs/libxml2-2.6.0 )
+	xml? ( >=dev-libs/libxml2-2.6.0 )
 	xvid? ( >=media-libs/xvid-1.0.1 )
 	wxwindows? ( >=x11-libs/wxGTK-2.5.2 )"
 
@@ -85,7 +85,7 @@ src_compile() {
 		$(use_enable oss oss-audio) \
 		$(use_enable png) \
 		$(use_enable truetype ft) \
-		$(use_enable xml2 svg) \
+		$(use_enable xml svg) \
 		$(use_enable xvid) ||
 		die "configure failed"
 

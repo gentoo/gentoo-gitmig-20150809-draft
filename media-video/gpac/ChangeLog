@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.18 2006/06/23 12:23:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.19 2006/07/05 07:54:24 mr_bones_ Exp $
+
+  05 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org> gpac-0.2.1.ebuild,
+  gpac-0.4.0.ebuild, gpac-0.4.1_pre20060122.ebuild:
+  xml2 use flag changed to xml
 
   23 Jun 2006; Simon Stelling <blubb@gentoo.org>
   gpac-0.4.1_pre20060122.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.2.1.ebuild,v 1.5 2005/10/30 19:18:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.2.1.ebuild,v 1.6 2006/07/05 07:54:24 mr_bones_ Exp $
 
 inherit wxwidgets flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="amr debug jpeg mad mozilla mpeg oss png sdl truetype xml2 xvid"
+IUSE="amr debug jpeg mad mozilla mpeg oss png sdl truetype xml xvid"
 S=${WORKDIR}/${PN}
 
 DEPEND="jpeg? ( media-libs/jpeg )
@@ -23,7 +23,7 @@ DEPEND="jpeg? ( media-libs/jpeg )
 		>=media-video/ffmpeg-0.4.9_pre1 )
 	png? ( media-libs/libpng )
 	truetype? ( >=media-libs/freetype-2.1 )
-	xml2? ( >=dev-libs/libxml2-2.6.0 )
+	xml? ( >=dev-libs/libxml2-2.6.0 )
 	xvid? ( >=media-libs/xvid-1.0.1 )
 	sdl? ( media-libs/libsdl )"
 

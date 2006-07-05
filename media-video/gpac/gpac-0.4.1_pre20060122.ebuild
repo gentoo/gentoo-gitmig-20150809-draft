@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.1_pre20060122.ebuild,v 1.10 2006/06/23 12:23:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.1_pre20060122.ebuild,v 1.11 2006/07/05 07:54:24 mr_bones_ Exp $
 
 inherit wxwidgets flag-o-matic multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
-IUSE="aac amr debug ffmpeg jpeg mad mozilla ogg opengl oss png sdl ssl theora truetype vorbis wxwindows xml2 xvid"
+IUSE="aac amr debug ffmpeg jpeg mad mozilla ogg opengl oss png sdl ssl theora truetype vorbis wxwindows xml xvid"
 
 S="${WORKDIR}/${PN}"
 
@@ -27,7 +27,7 @@ RDEPEND="aac? ( media-libs/faad2 )
 	theora? ( media-libs/libtheora )
 	truetype? ( >=media-libs/freetype-2.1 )
 	wxwindows? ( >=x11-libs/wxGTK-2.6.0 )
-	xml2? ( >=dev-libs/libxml2-2.6.0 )
+	xml? ( >=dev-libs/libxml2-2.6.0 )
 	xvid? ( >=media-libs/xvid-1.0.1 )
 	sdl? ( media-libs/libsdl )
 		|| ( (
