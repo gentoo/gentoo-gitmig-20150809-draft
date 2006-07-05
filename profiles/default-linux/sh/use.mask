@@ -34,6 +34,7 @@ mono
 lm_sensors
 firebird
 qdbm
+fftw
 
 # Luca Longinotti <chtekk@gentoo.org>
 # mask Oracle
