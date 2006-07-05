@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2003.11.ebuild,v 1.11 2005/03/18 18:06:34 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2003.11.ebuild,v 1.12 2006/07/05 14:33:18 dcoutts Exp $
 
 inherit base flag-o-matic eutils
 
@@ -19,6 +19,9 @@ LICENSE="as-is"
 DEPEND="virtual/libc
 	opengl? ( virtual/opengl virtual/glu virtual/glut )
 	~app-text/docbook-sgml-dtd-4.2"
+
+# the testsuite is not included in the tarball
+RESTRICT="test"
 
 src_unpack() {
 	base_src_unpack

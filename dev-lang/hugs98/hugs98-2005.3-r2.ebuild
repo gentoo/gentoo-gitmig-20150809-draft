@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2005.3-r2.ebuild,v 1.7 2006/07/04 22:54:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2005.3-r2.ebuild,v 1.8 2006/07/05 14:33:18 dcoutts Exp $
 
 inherit base flag-o-matic eutils versionator multilib
 
@@ -48,6 +48,9 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	opengl? ( x11-base/opengl-update )
 	~app-text/docbook-sgml-dtd-4.2"
+
+# the testsuite is not included in the tarball
+RESTRICT="test"
 
 src_unpack() {
 	base_src_unpack
