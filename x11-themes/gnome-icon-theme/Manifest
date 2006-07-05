@@ -1,10 +1,50 @@
-MD5 ea83fb4148d8d6b959df5965e4b99683 ChangeLog 11828
-MD5 d1793c0f86583b50b40d1c0fffec3732 files/digest-gnome-icon-theme-2.10.0 277
-MD5 a9063972876596be556afd8a13c9b100 files/digest-gnome-icon-theme-2.10.1 277
-MD5 0d2efa8d82f39a365b1cd53a85cecde7 files/digest-gnome-icon-theme-2.12.1 277
-MD5 d707f3c44525ecdcfb3ae29ede7faa86 files/digest-gnome-icon-theme-2.14.2 277
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST gnome-icon-theme-2.10.0.tar.bz2 2903792 RMD160 1f0309ef32a922aeac25735472ae759c8b8bc10a SHA256 c6b1e3527fb122b9b1f8620801b63c21144c94994ee024cdc45f05ebd95ee848
+DIST gnome-icon-theme-2.10.1.tar.bz2 2989029 RMD160 8c7df4ed6212861945c3db43cecc55d2db846121 SHA256 ae4b394a3f9a7438d2a274d4b2da5bb0f0848a4dc8aebc548fe16b0133a3cf91
+DIST gnome-icon-theme-2.12.1.tar.bz2 3113824 RMD160 787c82eab6b09b70e17ded64655f1be3ac7d20f2 SHA1 08bc2c63752df5c797e795cfe50fc7493a350254 SHA256 bb04706ac3154b8df1cbf434d6012e2d96453589c89aef2bf63d75906fee60c8
+DIST gnome-icon-theme-2.14.2.tar.bz2 2947288 RMD160 528a1514efa830e4aa577d1f58b4808812b73baa SHA1 c67bf80e1437204f88c79b0516bc378f46377b80 SHA256 7cd3124dc0f462617f282bb9cac8f6d4114c06ab552e2b26c4f3d818f5eb5379
+EBUILD gnome-icon-theme-2.10.0.ebuild 744 RMD160 01758b6ebd1670ae7df0a25e5a2c5bc350c5462e SHA1 df45c3022b51ab9fbeb488de24b639056f5842fc SHA256 141806abdba6cdafe5e7dc6381a85bd99c56961833fb4419db4c4c98577c8999
 MD5 1c774424ba0806e57967fd611977e2c2 gnome-icon-theme-2.10.0.ebuild 744
+RMD160 01758b6ebd1670ae7df0a25e5a2c5bc350c5462e gnome-icon-theme-2.10.0.ebuild 744
+SHA256 141806abdba6cdafe5e7dc6381a85bd99c56961833fb4419db4c4c98577c8999 gnome-icon-theme-2.10.0.ebuild 744
+EBUILD gnome-icon-theme-2.10.1.ebuild 745 RMD160 2104b0ccddfbb372ba41bf06bbe4e8c48b9c1732 SHA1 0893a6bdd236314daa18f4054859d3de4e607d63 SHA256 1d89262363cacbb0e758c5480e78a227dbc816ee8b258752cdf4a68f28825f2c
 MD5 77e8d42640702c977ade197236301f5a gnome-icon-theme-2.10.1.ebuild 745
-MD5 7a584618ed3e201382d596d92deb9d6e gnome-icon-theme-2.12.1.ebuild 596
-MD5 db26447ae1d0ac660bd81ae3f63ae59d gnome-icon-theme-2.14.2.ebuild 604
+RMD160 2104b0ccddfbb372ba41bf06bbe4e8c48b9c1732 gnome-icon-theme-2.10.1.ebuild 745
+SHA256 1d89262363cacbb0e758c5480e78a227dbc816ee8b258752cdf4a68f28825f2c gnome-icon-theme-2.10.1.ebuild 745
+EBUILD gnome-icon-theme-2.12.1.ebuild 597 RMD160 fb13a381d6f7092cd3c1b90c58602ade1d49d998 SHA1 402e68873e18ebfe0410ca4181a8fc655382b9a2 SHA256 b890b168dc7d153e158a39011b03cddd1104ee0d77e2459e0db4c3266b4d3a49
+MD5 32f6b115983ba8d5a9fe7a1fbda1239e gnome-icon-theme-2.12.1.ebuild 597
+RMD160 fb13a381d6f7092cd3c1b90c58602ade1d49d998 gnome-icon-theme-2.12.1.ebuild 597
+SHA256 b890b168dc7d153e158a39011b03cddd1104ee0d77e2459e0db4c3266b4d3a49 gnome-icon-theme-2.12.1.ebuild 597
+EBUILD gnome-icon-theme-2.14.2.ebuild 614 RMD160 fe1449eb86cbbff0f02a7332cf5c2d8028f59b9e SHA1 8695a1ba201410f690554f322e413ec514c47b04 SHA256 28f7c401e2a6bc5ae5f0614a361a4d3f2195560e7e6adfefd73bc491c9699f8d
+MD5 f972843d64bbe655fd261893446112f6 gnome-icon-theme-2.14.2.ebuild 614
+RMD160 fe1449eb86cbbff0f02a7332cf5c2d8028f59b9e gnome-icon-theme-2.14.2.ebuild 614
+SHA256 28f7c401e2a6bc5ae5f0614a361a4d3f2195560e7e6adfefd73bc491c9699f8d gnome-icon-theme-2.14.2.ebuild 614
+MISC ChangeLog 11828 RMD160 f2201808906426d42e48e815a1ce49436fed1e46 SHA1 835479f1e03469b12a1ad71f01590df693637c29 SHA256 1bae850a6cb341a50650a61ab4b81df4309259ac57c775328396dcf2d572f6f2
+MD5 ea83fb4148d8d6b959df5965e4b99683 ChangeLog 11828
+RMD160 f2201808906426d42e48e815a1ce49436fed1e46 ChangeLog 11828
+SHA256 1bae850a6cb341a50650a61ab4b81df4309259ac57c775328396dcf2d572f6f2 ChangeLog 11828
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 d1793c0f86583b50b40d1c0fffec3732 files/digest-gnome-icon-theme-2.10.0 277
+RMD160 9205687bae731285885e3debf0b0ce457cc19928 files/digest-gnome-icon-theme-2.10.0 277
+SHA256 247df366fd33c489c130f24ff8753382f0dc0116946f75dfc980472b22f9236c files/digest-gnome-icon-theme-2.10.0 277
+MD5 a9063972876596be556afd8a13c9b100 files/digest-gnome-icon-theme-2.10.1 277
+RMD160 f6d329ef573b2c0dae8d7b963fc97e13329813fe files/digest-gnome-icon-theme-2.10.1 277
+SHA256 7bd017394aea0da7016cff9f4df4778aadb880e0d861c35ee7ae91c39d240077 files/digest-gnome-icon-theme-2.10.1 277
+MD5 0d2efa8d82f39a365b1cd53a85cecde7 files/digest-gnome-icon-theme-2.12.1 277
+RMD160 b8d44deff2ca2bc90cbbe3791feb01fdbba79daf files/digest-gnome-icon-theme-2.12.1 277
+SHA256 acfd8fceb9ff64937e51edd520b53e6e3634634d3fba0c901dba0f9c80a87b14 files/digest-gnome-icon-theme-2.12.1 277
+MD5 d707f3c44525ecdcfb3ae29ede7faa86 files/digest-gnome-icon-theme-2.14.2 277
+RMD160 120548992fb7b4d0eb87e0be04a0dd8c371e83b8 files/digest-gnome-icon-theme-2.14.2 277
+SHA256 6c8b92c252a94b9e68d8e37b5bfdf6b2b6ad145a7f2691a1c73860a0904ee549 files/digest-gnome-icon-theme-2.14.2 277
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEq1VlamhnQswr0vIRAmMYAKCbzG8asYla3TxF4HgjrCqcIAj7SgCfZj4B
+zEa6JKDPm36jo07qC1tysPw=
+=H7a3
+-----END PGP SIGNATURE-----
