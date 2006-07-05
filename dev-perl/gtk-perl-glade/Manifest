@@ -1,11 +1,42 @@
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 503d13f0d93cf206173830a0b3e1f777 ChangeLog 2368
-MD5 9d5e748a966cc1fb4913fffc573b063d gtk-perl-glade-0.7004-r2.ebuild 791
-MD5 9c3acfb9d8631f0b664c3b6762080e66 gtk-perl-glade-0.7008.ebuild 1137
-MD5 8fadf6fa08229309f29e39076b37ac6b gtk-perl-glade-0.7008-r1.ebuild 1078
-MD5 fbd07df42d453f66416915403ef8e155 gtk-perl-glade-0.7004-r3.ebuild 790
+AUX gtk-perl-glade-0.7008-gdkpixbuf-detect-fix.patch 747 RMD160 a0a8e4350d889cb360f447918519d23d0cf73949 SHA1 cdf2345729ec27009e50b64961820e8908eef86e SHA256 885249f3cf22ba7f3f91a01a822761415c5b4aa5dddfe3bf8a1e147f95db7dc8
 MD5 b5f56ac7a91d56a578d02fab47146a79 files/gtk-perl-glade-0.7008-gdkpixbuf-detect-fix.patch 747
+RMD160 a0a8e4350d889cb360f447918519d23d0cf73949 files/gtk-perl-glade-0.7008-gdkpixbuf-detect-fix.patch 747
+SHA256 885249f3cf22ba7f3f91a01a822761415c5b4aa5dddfe3bf8a1e147f95db7dc8 files/gtk-perl-glade-0.7008-gdkpixbuf-detect-fix.patch 747
+DIST Gtk-Perl-0.7004.tar.gz 373480
+DIST Gtk-Perl-0.7008.tar.gz 455977
+EBUILD gtk-perl-glade-0.7004-r2.ebuild 794 RMD160 aa36652977976b4bce0973d0e216d08609d04c6a SHA1 3908507ad7e64d71aa415990adcd2e800cd25a7a SHA256 56fdb364334c4aaf231fe72cc3771124b4ef9dc3565d40a24bf5fa350d74f89b
+MD5 bbfa26d6af6b31cf2172d13ed6d18081 gtk-perl-glade-0.7004-r2.ebuild 794
+RMD160 aa36652977976b4bce0973d0e216d08609d04c6a gtk-perl-glade-0.7004-r2.ebuild 794
+SHA256 56fdb364334c4aaf231fe72cc3771124b4ef9dc3565d40a24bf5fa350d74f89b gtk-perl-glade-0.7004-r2.ebuild 794
+EBUILD gtk-perl-glade-0.7004-r3.ebuild 793 RMD160 0c47f3441dad7d4b4e225191171c25fdf18fed78 SHA1 882519bc9c84825b395baf46e955ec0d9eccb56f SHA256 334ad8dc1d03a601e583fcef58ccc4a31d451af512fbbe70d6fe0a9fe92a5fd5
+MD5 6930212a152255d50edac7726d9ecbb0 gtk-perl-glade-0.7004-r3.ebuild 793
+RMD160 0c47f3441dad7d4b4e225191171c25fdf18fed78 gtk-perl-glade-0.7004-r3.ebuild 793
+SHA256 334ad8dc1d03a601e583fcef58ccc4a31d451af512fbbe70d6fe0a9fe92a5fd5 gtk-perl-glade-0.7004-r3.ebuild 793
+EBUILD gtk-perl-glade-0.7008-r1.ebuild 1081 RMD160 cf3a4a9c11661efe40dbc6c2dcdf62c83f4432f8 SHA1 285f4c8d82c133e5e78480a98d1401a67117c3e2 SHA256 7009ff3d55815dd281391eaa7849336a73ae53327548a044e959785897fc22cd
+MD5 0130aa3f0730093f619d255401638142 gtk-perl-glade-0.7008-r1.ebuild 1081
+RMD160 cf3a4a9c11661efe40dbc6c2dcdf62c83f4432f8 gtk-perl-glade-0.7008-r1.ebuild 1081
+SHA256 7009ff3d55815dd281391eaa7849336a73ae53327548a044e959785897fc22cd gtk-perl-glade-0.7008-r1.ebuild 1081
+EBUILD gtk-perl-glade-0.7008.ebuild 1140 RMD160 6607f2e3e0d691539e97562c0fbb1b6e8712136e SHA1 1f7f3d0c8ef1187c053285ea0267512684f47ed8 SHA256 dedb706c7dc1c06c4ae6e2e0c7dca7943a6b2e35bafbb4256daceaa6ca1948ea
+MD5 3fbdd0a49ee7ca21ab101239be6f3330 gtk-perl-glade-0.7008.ebuild 1140
+RMD160 6607f2e3e0d691539e97562c0fbb1b6e8712136e gtk-perl-glade-0.7008.ebuild 1140
+SHA256 dedb706c7dc1c06c4ae6e2e0c7dca7943a6b2e35bafbb4256daceaa6ca1948ea gtk-perl-glade-0.7008.ebuild 1140
+MISC ChangeLog 2608 RMD160 a80b915d4bbab6e0eca68394a72ccdb70df3c920 SHA1 1aac4e71e7639af690b3e99f446e6fe81aa2ffa8 SHA256 c01c6dd55db6f707e77210b960caac9ebe3ec92f21b94803b2bd72019377cd8a
+MD5 8d5ff7aef8d981b4952bb29871a979e1 ChangeLog 2608
+RMD160 a80b915d4bbab6e0eca68394a72ccdb70df3c920 ChangeLog 2608
+SHA256 c01c6dd55db6f707e77210b960caac9ebe3ec92f21b94803b2bd72019377cd8a ChangeLog 2608
+MISC metadata.xml 305 RMD160 647980838c590f54441a053916ea629e53e551c0 SHA1 99ef1deeae9a934fb6e46cf5fc4a5fcb8379a74a SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 MD5 1d2297d4631bc29f6d6be65b6a723064 files/digest-gtk-perl-glade-0.7004-r2 67
+RMD160 c6c4b2cd3b2a1c131621d12fc5bcba7de240f393 files/digest-gtk-perl-glade-0.7004-r2 67
+SHA256 af020eb7baa76e594fa72f68555aa1759de2c5176cd38d1bc5a2bcb7e1463240 files/digest-gtk-perl-glade-0.7004-r2 67
 MD5 1d2297d4631bc29f6d6be65b6a723064 files/digest-gtk-perl-glade-0.7004-r3 67
+RMD160 c6c4b2cd3b2a1c131621d12fc5bcba7de240f393 files/digest-gtk-perl-glade-0.7004-r3 67
+SHA256 af020eb7baa76e594fa72f68555aa1759de2c5176cd38d1bc5a2bcb7e1463240 files/digest-gtk-perl-glade-0.7004-r3 67
 MD5 f598a6d1d7e60c583fe4a3a7e8b40a84 files/digest-gtk-perl-glade-0.7008 67
+RMD160 1c278f1b62ac64e0dd036f67d937883e961d83d5 files/digest-gtk-perl-glade-0.7008 67
+SHA256 3d521f9b26d43affb5f4e526e76f8b043d9f1e3f53e1cd8b98ad5d418e42d7fd files/digest-gtk-perl-glade-0.7008 67
 MD5 f598a6d1d7e60c583fe4a3a7e8b40a84 files/digest-gtk-perl-glade-0.7008-r1 67
+RMD160 1c278f1b62ac64e0dd036f67d937883e961d83d5 files/digest-gtk-perl-glade-0.7008-r1 67
+SHA256 3d521f9b26d43affb5f4e526e76f8b043d9f1e3f53e1cd8b98ad5d418e42d7fd files/digest-gtk-perl-glade-0.7008-r1 67
