@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ggz-client-libs-0.0.13.ebuild,v 1.1 2006/03/24 16:37:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ggz-client-libs-0.0.13.ebuild,v 1.2 2006/07/05 14:09:51 wolf31o2 Exp $
 
 DESCRIPTION="The client libraries for GGZ Gaming Zone"
 HOMEPAGE="http://www.ggzgamingzone.org/"
@@ -23,6 +23,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog HACKING NEWS Quick* README* TODO
+	dodoc AUTHORS ChangeLog NEWS Quick* README*
 }
 
