@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/cdk-perl-20031210.ebuild,v 1.3 2006/03/30 23:46:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/cdk-perl-20031210.ebuild,v 1.4 2006/07/05 14:05:51 ian Exp $
 
 inherit perl-module
 
@@ -14,8 +14,8 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~s390 ~sparc ~x86"
 
-DEPEND="${DEPEND}
-	>=dev-libs/cdk-4.9.10.20031210"
+DEPEND=">=dev-libs/cdk-4.9.10.20031210"
+RDEPEND="${DEPEND}"
 
 mydoc="CHANGES COPYING MANIFEST"
 
@@ -25,4 +25,3 @@ src_unpack()
 	cd ${S}
 	sed -i -e "s:/usr/local:/usr:g" Makefile.PL
 }
-
