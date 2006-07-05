@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/net-server-0.93.ebuild,v 1.5 2006/06/29 19:29:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/net-server-0.93.ebuild,v 1.6 2006/07/05 18:46:00 ian Exp $
 
 inherit perl-module
 
@@ -20,3 +20,4 @@ SRC_TEST="do"
 mydoc="README"
 
 DEPEND="dev-perl/IO-Multiplex"
+RDEPEND="${DEPEND}"

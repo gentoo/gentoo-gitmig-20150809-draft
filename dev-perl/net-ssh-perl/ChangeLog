@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/net-ssh-perl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.17 2006/06/12 16:02:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.18 2006/07/05 18:50:22 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> net-ssh-perl-1.25.ebuild,
+  net-ssh-perl-1.27.ebuild, net-ssh-perl-1.29.ebuild,
+  net-ssh-perl-1.30.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   net-ssh-perl-1.25.ebuild, net-ssh-perl-1.27.ebuild,

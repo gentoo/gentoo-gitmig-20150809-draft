@@ -1,6 +1,24 @@
+DIST Ogg-Vorbis-Header-0.02.tar.gz 32249
+DIST Ogg-Vorbis-Header-0.03.tar.gz 32410
+EBUILD ogg-vorbis-header-0.02.ebuild 688 RMD160 6e8e999c8e364a63ce79b5c600a5ce4ba0f207d6 SHA1 1125f2caa0135a65f83f2d3e382f52473e18efb8 SHA256 e0b0d4fa17a6809c2fc938b2433edefa25f228090e2f9d0fddd6e4a6ff6c811f
+MD5 c4e5a3b2379c22c8dc7544ffe64464b0 ogg-vorbis-header-0.02.ebuild 688
+RMD160 6e8e999c8e364a63ce79b5c600a5ce4ba0f207d6 ogg-vorbis-header-0.02.ebuild 688
+SHA256 e0b0d4fa17a6809c2fc938b2433edefa25f228090e2f9d0fddd6e4a6ff6c811f ogg-vorbis-header-0.02.ebuild 688
+EBUILD ogg-vorbis-header-0.03.ebuild 708 RMD160 c43ad1639b215c1ad5eb73f0cb103dce76f4a6fd SHA1 b7b811e4487539bb5d9d473604bbcccd774f3145 SHA256 f6c221477fc4a7bb950eafc8075e26439c975b76ea35e33035abd8c5965279da
+MD5 06f90bd2861343835570559fad84a29d ogg-vorbis-header-0.03.ebuild 708
+RMD160 c43ad1639b215c1ad5eb73f0cb103dce76f4a6fd ogg-vorbis-header-0.03.ebuild 708
+SHA256 f6c221477fc4a7bb950eafc8075e26439c975b76ea35e33035abd8c5965279da ogg-vorbis-header-0.03.ebuild 708
+MISC ChangeLog 2053 RMD160 5791e2913db5b2c2611c9cdb6efd378df2cd2783 SHA1 5304211ee3654922bf28e919db47c7abc39e3581 SHA256 511b6baebab217970ea88bc74b9dc753aef56472a00c21690919b9947bb51296
+MD5 15c189d154c55cd829bd5d4cb261961a ChangeLog 2053
+RMD160 5791e2913db5b2c2611c9cdb6efd378df2cd2783 ChangeLog 2053
+SHA256 511b6baebab217970ea88bc74b9dc753aef56472a00c21690919b9947bb51296 ChangeLog 2053
+MISC metadata.xml 305 RMD160 647980838c590f54441a053916ea629e53e551c0 SHA1 99ef1deeae9a934fb6e46cf5fc4a5fcb8379a74a SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 2dd42c3fd6aecd066f6fbe27262b86b1 ChangeLog 1896
-MD5 129b8a111b61e38e857cad28a0fa7971 ogg-vorbis-header-0.03.ebuild 693
-MD5 3d96e8771c5ceb1868cc169ad547006c ogg-vorbis-header-0.02.ebuild 673
-MD5 2328763fd8413f5dd745317864bf9902 files/digest-ogg-vorbis-header-0.03 73
+RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
+SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
 MD5 53ef8293adb4df3459ca51873e306e8f files/digest-ogg-vorbis-header-0.02 73
+RMD160 0ffc14aca9165e21374dc74c436ccc02bc02f9f0 files/digest-ogg-vorbis-header-0.02 73
+SHA256 d6398a6db34da99bb898332f05a28c61b240bb0d0ed25e9b0cf0ebcc88f9122f files/digest-ogg-vorbis-header-0.02 73
+MD5 2328763fd8413f5dd745317864bf9902 files/digest-ogg-vorbis-header-0.03 73
+RMD160 0c39427840a75943f2dddb7791e03e803be0d805 files/digest-ogg-vorbis-header-0.03 73
+SHA256 8dd90a745c9c1f3232ecc40e313090d141a5f938cdfde17b6d3bc60c778c1f82 files/digest-ogg-vorbis-header-0.03 73

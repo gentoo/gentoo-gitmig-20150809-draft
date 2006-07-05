@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.27.ebuild,v 1.6 2006/06/12 16:02:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.27.ebuild,v 1.7 2006/07/05 18:50:22 ian Exp $
 
 inherit perl-module
 
@@ -32,6 +32,7 @@ DEPEND="dev-perl/Math-GMP
 		dev-perl/Crypt-OpenSSL-RSA
 		dev-perl/crypt-rsa
 		dev-perl/digest-bubblebabble"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	echo "" | perl-module_src_compile
