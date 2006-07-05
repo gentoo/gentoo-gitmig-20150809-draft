@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Test-WWW-Mechanize
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-WWW-Mechanize/ChangeLog,v 1.7 2006/06/23 23:55:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-WWW-Mechanize/ChangeLog,v 1.8 2006/07/05 10:55:02 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Test-WWW-Mechanize-1.04.ebuild, Test-WWW-Mechanize-1.08.ebuild,
+  Test-WWW-Mechanize-1.10.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
 *Test-WWW-Mechanize-1.10 (23 Jun 2006)
 
