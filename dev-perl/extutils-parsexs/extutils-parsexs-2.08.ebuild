@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-parsexs/extutils-parsexs-2.08.ebuild,v 1.13 2005/04/01 18:05:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-parsexs/extutils-parsexs-2.08.ebuild,v 1.14 2006/07/05 14:54:27 ian Exp $
 
 inherit perl-module
 
@@ -17,5 +17,6 @@ IUSE=""
 
 DEPEND="dev-perl/ExtUtils-CBuilder
 		dev-perl/module-build"
+RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
