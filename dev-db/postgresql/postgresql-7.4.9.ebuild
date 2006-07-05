@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.9.ebuild,v 1.11 2006/02/19 20:57:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.9.ebuild,v 1.12 2006/07/05 07:45:33 mr_bones_ Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://postgresql/source/v${PV}/${PN}-base-${PV}.tar.bz2
 LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="ssl nls java python tcltk perl libg++ pam readline zlib doc pg-hier pg-vacuumdelay pg-intdatetime threads xml2 selinux"
+IUSE="ssl nls java python tcltk perl libg++ pam readline zlib doc pg-hier pg-vacuumdelay pg-intdatetime threads xml selinux"
 
 DEPEND="virtual/libc
 	=dev-db/libpq-7.4.9*
@@ -31,7 +31,7 @@ DEPEND="virtual/libc
 		dev-java/java-config )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 	nls? ( sys-devel/gettext )
-	xml2? ( dev-libs/libxml2 dev-libs/libxslt dev-util/pkgconfig )"
+	xml? ( dev-libs/libxml2 dev-libs/libxslt dev-util/pkgconfig )"
 # java dep workaround for portage bug
 # x86? ( java? ( =dev-java/sun-jdk-1.3* >=dev-java/ant-1.3 ) )
 RDEPEND="virtual/libc
@@ -43,7 +43,7 @@ RDEPEND="virtual/libc
 	java? ( >=virtual/jdk-1.3 )
 	selinux? ( sec-policy/selinux-postgresql )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
-	xml2? ( dev-libs/libxml2 dev-libs/libxslt )"
+	xml? ( dev-libs/libxml2 dev-libs/libxslt )"
 
 PG_DIR="/var/lib/postgresql"
 MAX_CONNECTIONS=1024
@@ -122,8 +122,8 @@ src_compile() {
 	# down, anything more aggressive fails (i.e. -mcpu or -Ox)
 	# Gerk - Nov 26, 2002
 	use ppc && CFLAGS="-pipe -fsigned-char"
-	use xml2 && CFLAGS="${CFLAGS} $(pkg-config --cflags libxml-2.0)"
-	use xml2 && LIBS="${LIBS} $(pkg-config --libs libxml-2.0)"
+	use xml && CFLAGS="${CFLAGS} $(pkg-config --cflags libxml-2.0)"
+	use xml && LIBS="${LIBS} $(pkg-config --libs libxml-2.0)"
 
 	# Detect mips systems properly
 	gnuconfig_update
@@ -141,7 +141,7 @@ src_compile() {
 	make LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
 	cd contrib
 	make LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
-	if use xml2; then
+	if use xml; then
 		make -C xml LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
 	fi
 }
@@ -160,7 +160,7 @@ src_install() {
 	make DESTDIR=${D} includedir_server=/usr/include/postgresql/server includedir_internal=/usr/include/postgresql/internal install-all-headers || die
 	cd ${S}/contrib
 	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
-	if use xml2; then
+	if use xml; then
 		make -C xml DESTDIR=${D} IBDIR=${D}/usr/lib install || die
 	fi
 	cd ${S}

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.4.ebuild,v 1.12 2006/02/04 17:43:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.4.ebuild,v 1.13 2006/07/05 07:45:33 mr_bones_ Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://postgresql/source/v${PV}/${PN}-base-${MY_PV}.tar.bz2
 LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="ssl nls python tcltk perl libg++ pam readline xml2 zlib doc selinux kerberos pg-intdatetime pg-hier"
+IUSE="ssl nls python tcltk perl libg++ pam readline xml zlib doc selinux kerberos pg-intdatetime pg-hier"
 
 S=${WORKDIR}/${MY_P}
 DEPEND="virtual/libc
@@ -31,7 +31,7 @@ DEPEND="virtual/libc
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
-	xml2? ( dev-libs/libxml2 dev-libs/libxslt dev-util/pkgconfig )
+	xml? ( dev-libs/libxml2 dev-libs/libxslt dev-util/pkgconfig )
 	nls? ( sys-devel/gettext )
 	kerberos? ( virtual/krb5 )"
 RDEPEND="virtual/libc
@@ -42,7 +42,7 @@ RDEPEND="virtual/libc
 	python? ( >=dev-lang/python-2.2 )
 	selinux? ( sec-policy/selinux-postgresql )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
-	xml2? ( dev-libs/libxml2 dev-libs/libxslt )
+	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	kerberos? ( virtual/krb5 )"
 
 PG_DIR="/var/lib/postgresql"
@@ -109,7 +109,7 @@ src_compile() {
 	make LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
 	cd contrib
 	make LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
-	if use xml2; then
+	if use xml; then
 		cd xml2
 		make LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
 	fi
@@ -129,7 +129,7 @@ src_install() {
 #	make DESTDIR=${D} install-all-headers || die
 	cd ${S}/contrib
 	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
-	if use xml2; then
+	if use xml; then
 		cd ${S}/contrib/xml2
 		make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
 	fi
