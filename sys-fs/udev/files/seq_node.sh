@@ -2,7 +2,7 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/files/seq_node.sh,v 1.1 2006/06/28 20:04:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/files/seq_node.sh,v 1.2 2006/07/05 09:06:06 azarah Exp $
 
 # Stupid little script to emulate the depriciated '%e' directive of udev.
 # I am not sure why its supposidly broken, so this might need fixing if it
@@ -36,16 +36,21 @@ get_filename() {
 	local symlink=$1
 	local filename=
 
+	if [[ ! -L ${root}/${symlink} ]] ; then
+		echo "${symlink}"
+		return 0
+	fi
+
 	if type -p readlink &>/dev/null ; then
-		filename=$(readlink "${root}/$1")
+		filename=$(readlink "${root}/${symlink}")
 	else
-		filename=`perl -e 'print readlink("${root}/cdrom")' 2>/dev/null`
+		filename=$(perl -e "print readlink(\"${root}/${symlink}\")" 2>/dev/null)
 	fi
 
 	echo "${filename}"
 }
 
-while [[ -f "${root}/${new_node}" || -L "${root}/${new_node}" ]] ; do
+while [[ -e "${root}/${new_node}" || -L "${root}/${new_node}" ]] ; do
 	# Check if existing node is the same as the kname we are looking
 	# for a new node, and return that instead
 	if [[ $(get_filename "${new_node}") == "${kname}" ]] ; then
