@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/tie-encryptedhash/tie-encryptedhash-1.21.ebuild,v 1.13 2005/10/03 13:29:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/tie-encryptedhash/tie-encryptedhash-1.21.ebuild,v 1.14 2006/07/05 19:37:54 ian Exp $
 
 inherit perl-module
 
@@ -18,7 +18,4 @@ IUSE=""
 DEPEND="dev-perl/Crypt-Blowfish
 	dev-perl/Crypt-DES
 	dev-perl/crypt-cbc"
-
-
-
-
+RDEPEND="${DEPEND}"

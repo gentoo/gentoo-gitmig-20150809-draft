@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-1.20.3-r1.ebuild,v 1.1 2005/04/26 23:47:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-1.20.3-r1.ebuild,v 1.2 2006/07/05 19:33:58 ian Exp $
 
 inherit perl-module eutils
 
@@ -21,6 +21,7 @@ DEPEND="virtual/opengl
 	media-libs/sdl-gfx
 	mpeg? ( media-libs/smpeg )
 	truetype? ( >=media-libs/sdl-ttf-2.0.5 )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
