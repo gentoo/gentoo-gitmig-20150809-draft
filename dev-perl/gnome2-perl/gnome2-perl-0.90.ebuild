@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/gnome2-perl-0.90.ebuild,v 1.8 2005/05/06 03:34:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/gnome2-perl-0.90.ebuild,v 1.9 2006/07/05 17:22:09 ian Exp $
 
 inherit perl-module
 
@@ -24,3 +24,4 @@ DEPEND=">=x11-libs/gtk+-2
 	dev-perl/extutils-pkgconfig
 	dev-perl/glib-perl
 	dev-perl/gnome2-vfs-perl"
+RDEPEND="${DEPEND}"
