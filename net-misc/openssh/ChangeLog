@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.181 2006/07/04 22:24:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.182 2006/07/05 11:09:21 lcars Exp $
+
+  05 Jul 2006; Andrea Barisani <lcars@gentoo.org> metadata.xml:
+  Making my metadata entry a bit more clear.
 
   04 Jul 2006; Mike Frysinger <vapier@gentoo.org> openssh-4.3_p2-r2.ebuild:
   Add x11-apps/xauth to RDEPEND for USE=X #139235 by Ian Stakenvicius.
