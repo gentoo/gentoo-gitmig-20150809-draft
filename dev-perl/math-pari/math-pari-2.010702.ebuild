@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010702.ebuild,v 1.5 2006/02/02 15:37:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010702.ebuild,v 1.6 2006/07/05 18:37:44 ian Exp $
 
 inherit perl-module eutils
 
@@ -23,6 +23,7 @@ SRC_TEST="do"
 # it does need to be the same version as is installed, hence the hard
 # DEPEND below
 DEPEND="~sci-mathematics/pari-2.1.7"
+RDEPEND="${DEPEND}"
 
 src_unpack () {
 	unpack ${A}
