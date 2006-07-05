@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5587 2006/07/05 02:38:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5588 2006/07/05 14:45:20 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Stefan Schweizer <genstef@gentoo.org> (5 Jul 2006)
+# Masked to allow proper testing of the old to-be-stable versions
+# Please unmask when that version is stable and cairo-1.20 unmasked
+>=x11-libs/gtk+-2.10.0
+>=x11-libs/pango-1.13.0
+>=dev-libs/glib-2.12.0
 
 # Diego Pettenò <flameeyes@gentoo.org> (5 Jul 2006)
 # Beta version
