@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.24 2006/04/09 13:51:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.25 2006/07/05 14:21:34 flameeyes Exp $
 
 inherit eutils gnuconfig flag-o-matic libtool
 
@@ -38,7 +38,8 @@ src_unpack() {
 	fi
 	use ppc-macos && darwintoolize
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch "${FILESDIR}/${P}-gentoo.diff"
+	epatch "${FILESDIR}/${P}-asneeded.patch"
 
 	sed -i -e "s:dvips:#dvips:" ${S}/doc/Makefile.in
 
