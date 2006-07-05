@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tk-JPEG-Lite
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-JPEG-Lite/ChangeLog,v 1.5 2006/03/30 23:33:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-JPEG-Lite/ChangeLog,v 1.6 2006/07/05 12:20:56 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  Tk-JPEG-Lite-2.01403.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   Tk-JPEG-Lite-2.01403.ebuild:
