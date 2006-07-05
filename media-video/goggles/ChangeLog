@@ -1,6 +1,9 @@
 # ChangeLog for media-video/goggles
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/ChangeLog,v 1.9 2006/05/03 20:52:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/ChangeLog,v 1.10 2006/07/05 06:16:14 tsunam Exp $
+
+  05 Jul 2006; Joshua Jackson <tsunam@gentoo.org> goggles-0.7.10.ebuild:
+  Stable x86; bug #138930
 
   03 May 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata to list media-video@gentoo.org as maintainer.
