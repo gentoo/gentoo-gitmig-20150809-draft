@@ -1,4 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST startup-notification-0.8.tar.bz2 236255 RMD160 23e0b3f05e68a8ac8d085ac63b26377949578674 SHA1 d2b5698b6209b5172d17222a3117db6447d7cdf1 SHA256 2d92306b8b9df7bf854b17e0a2b2f2f4121fa3c98007d04750b0e1b96bcbbe76
+EBUILD startup-notification-0.8.ebuild 757 RMD160 f4b76e26f6699dd579749cffd33e52f893010701 SHA1 921135fb6c763a451fabc12e5551a8cf42292011 SHA256 89c9bb8727c534812b49e77b8e5cb29e0c63b91a7ab7ca6604312df80cc7b837
+MD5 de22b5b5654b83d36fad5dceb1974a5c startup-notification-0.8.ebuild 757
+RMD160 f4b76e26f6699dd579749cffd33e52f893010701 startup-notification-0.8.ebuild 757
+SHA256 89c9bb8727c534812b49e77b8e5cb29e0c63b91a7ab7ca6604312df80cc7b837 startup-notification-0.8.ebuild 757
+MISC ChangeLog 5047 RMD160 850a0bd1cdc0ed2789eeeb125b9419e475e2bb98 SHA1 50c0360c46ed31a5e8c60977853fdc8664b20ddd SHA256 a29dbc7ef27a6084e99b6957d67acca551508f17b0fc8092b45cc7b6592060b1
 MD5 0070b92efa4b7da020ce9ee1ca91e576 ChangeLog 5047
-MD5 f78d0a1f0a150e24879f2979bd6e2059 files/digest-startup-notification-0.8 77
+RMD160 850a0bd1cdc0ed2789eeeb125b9419e475e2bb98 ChangeLog 5047
+SHA256 a29dbc7ef27a6084e99b6957d67acca551508f17b0fc8092b45cc7b6592060b1 ChangeLog 5047
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 6f10a7551ea40fc76792a5d81a41b461 startup-notification-0.8.ebuild 761
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 550aea5183fa5cc8af2a0b1bf885ede3 files/digest-startup-notification-0.8 277
+RMD160 1c36a673049e2f4ab110c7e66c4f6150c59e87ad files/digest-startup-notification-0.8 277
+SHA256 ce216149261524685a9faf9ad48977d3af7b1efaf71e055a4f0346359910a170 files/digest-startup-notification-0.8 277
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEq1ItamhnQswr0vIRAuLrAJwMpzuakgWGxGcGtQHb7Y+ERH+kyACgoMa8
+2cXs+OtqbAE3cdOLCha8vsU=
+=hrDo
+-----END PGP SIGNATURE-----
