@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Parser/XML-RSS-Parser-4.0.ebuild,v 1.4 2006/06/09 16:00:24 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Parser/XML-RSS-Parser-4.0.ebuild,v 1.5 2006/07/05 13:36:41 ian Exp $
 
 inherit perl-module
 
@@ -21,3 +21,4 @@ SRC_TEST="do"
 DEPEND="dev-perl/Class-ErrorHandler
 		>=dev-perl/Class-XPath-1.4
 		>=dev-perl/XML-Elemental-2.0"
+RDEPEND="${DEPEND}"

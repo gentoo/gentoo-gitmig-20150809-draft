@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/XML-RSS-Feed-2.2.ebuild,v 1.1 2006/06/23 23:59:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/XML-RSS-Feed-2.2.ebuild,v 1.2 2006/07/05 13:35:53 ian Exp $
 
 inherit perl-module
 
@@ -21,3 +21,4 @@ DEPEND="dev-perl/HTML-Parser
 		virtual/perl-Time-HiRes
 		dev-perl/URI
 		virtual/perl-Digest-MD5"
+RDEPEND="${DEPEND}"

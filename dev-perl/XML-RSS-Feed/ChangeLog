@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-RSS-Feed
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/ChangeLog,v 1.9 2006/06/23 23:59:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/ChangeLog,v 1.10 2006/07/05 13:35:53 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> XML-RSS-Feed-2.1.ebuild,
+  XML-RSS-Feed-2.2.ebuild, XML-RSS-Feed-2.04.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
 *XML-RSS-Feed-2.2 (23 Jun 2006)
 
