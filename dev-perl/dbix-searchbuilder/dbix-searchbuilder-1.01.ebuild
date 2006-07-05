@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/dbix-searchbuilder-1.01.ebuild,v 1.6 2006/02/07 16:51:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/dbix-searchbuilder-1.01.ebuild,v 1.7 2006/07/05 14:46:46 ian Exp $
 
 inherit perl-module
 
@@ -17,7 +17,7 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="${DEPEND}
-		dev-perl/DBI
+DEPEND="dev-perl/DBI
 		dev-perl/Want
 		>=dev-perl/class-returnvalue-0.4"
+RDEPEND="${DEPEND}"

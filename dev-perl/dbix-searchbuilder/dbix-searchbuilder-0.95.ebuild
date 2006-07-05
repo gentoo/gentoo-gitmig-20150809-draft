@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/dbix-searchbuilder-0.95.ebuild,v 1.8 2006/01/15 17:06:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/dbix-searchbuilder-0.95.ebuild,v 1.9 2006/07/05 14:46:46 ian Exp $
 
 inherit perl-module
 
@@ -15,5 +15,5 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 ~ppc sparc ~alpha ~hppa"
 IUSE=""
 
-DEPEND="${DEPEND}
-		dev-perl/class-returnvalue"
+DEPEND="dev-perl/class-returnvalue"
+RDEPEND="${DEPEND}"
