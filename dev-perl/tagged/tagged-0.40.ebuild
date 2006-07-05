@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/tagged/tagged-0.40.ebuild,v 1.8 2006/06/12 16:45:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/tagged/tagged-0.40.ebuild,v 1.9 2006/07/05 19:35:16 ian Exp $
 
 inherit perl-module
 
@@ -13,3 +13,4 @@ SLOT="0"
 IUSE=""
 
 DEPEND="dev-perl/Compress-Zlib"
+RDEPEND="${DEPEND}"
