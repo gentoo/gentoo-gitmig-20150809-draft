@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.6.2.ebuild,v 1.1 2006/06/27 17:02:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.6.2.ebuild,v 1.2 2006/07/05 08:20:57 vapier Exp $
 
 inherit eutils gnome2
 
@@ -44,9 +44,9 @@ RESTRICT="confcache"
 pkg_setup() {
 	G2CONF="$(use_with ldap openldap) \
 		$(use_with kerberos krb5 /usr) \
-		$(use_enable ssl nss)          \
-		$(use_enable ssl smime)        \
-		$(use_enable ipv6)             \
+		$(use_enable ssl nss) \
+		$(use_enable ssl smime) \
+		$(use_enable ipv6) \
 		$(use_enable nntp)"
 
 	if use krb4 && ! built_with_use virtual/krb5 krb4; then
@@ -66,7 +66,7 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 
-	epatch ${FILESDIR}/${PN}-1.2.0-gentoo_etc_services.patch
+	epatch "${FILESDIR}"/${PN}-1.2.0-gentoo_etc_services.patch
 
 	# Fix calandar crashing, bug #86174
 	epatch "${FILESDIR}"/${PN}-1.4.2.1-calandar-crash-fix.patch
