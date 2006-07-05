@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha07.ebuild,v 1.9 2006/06/30 14:04:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha07.ebuild,v 1.10 2006/07/05 02:55:24 vapier Exp $
 
 inherit eutils gnuconfig toolchain-funcs flag-o-matic
 
@@ -21,30 +21,31 @@ S=${WORKDIR}/${PN}-2.01.01
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# CAN-2004-0806 - Bug 63187
-	epatch ${FILESDIR}/${PN}-2.01-scsi-remote.patch
-	epatch ${FILESDIR}/${PN}-2.01a27-writemode.patch
-	epatch ${FILESDIR}/${PN}-2.01.01a03-warnings.patch
-	epatch ${FILESDIR}/${PN}-2.01.01a01-scanbus.patch
-	epatch ${FILESDIR}/${PN}-2.01.01a03-rezero.patch
+	epatch "${FILESDIR}"/${PN}-2.01-scsi-remote.patch
+	epatch "${FILESDIR}"/${PN}-2.01a27-writemode.patch
+	epatch "${FILESDIR}"/${PN}-2.01.01a03-warnings.patch
+	epatch "${FILESDIR}"/${PN}-2.01.01a01-scanbus.patch
+	epatch "${FILESDIR}"/${PN}-2.01.01a03-rezero.patch
 
 	# ppc-macos support
-	cd ${S}/DEFAULTS
+	cd "${S}"/DEFAULTS
 	use ppc-macos && MYARCH="mac-os10" || MYARCH="linux"
 
 	sed -i "s:/opt/schily:/usr:g" Defaults.${MYARCH}
 	sed -i "s:/usr/src/linux/include::g" Defaults.${MYARCH}
 
-	cd ${S}/librscg
+	cd "${S}"/librscg
 	sed -i "s:/opt/schily:/usr:g" scsi-remote.c
 
-	cd ${S}/RULES
+	cd "${S}"/RULES
 	ln -sf i386-linux-cc.rul x86_64-linux-cc.rul
 	ln -sf i386-linux-gcc.rul x86_64-linux-gcc.rul
 	ln -sf ppc-linux-cc.rul ppc64-linux-cc.rul
 	ln -sf mips-linux-cc.rul mips64-linux-cc.rul
+	ln -sf i586-linux-cc.rul sh4-linux-cc.rul
 }
 
 src_compile() {
@@ -63,8 +64,6 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}
-
 	dobin cdda2wav/OBJ/*-*-cc/cdda2wav || die "cdda2wav"
 	dobin cdrecord/OBJ/*-*-cc/cdrecord  || die "cdrecord"
 	dobin mkisofs/OBJ/*-*-cc/mkisofs || die "mkisofs"
@@ -77,26 +76,26 @@ src_install() {
 	cd mkisofs/diag/OBJ/*-*-cc
 	dobin devdump isodump isoinfo isovfy || die "dobin"
 
-	cd ${S}
+	cd "${S}"
 	insinto /etc/default
 	doins rscsi/rscsi.dfl
 	doins cdrecord/cdrecord.dfl
 
-	cd ${S}/libs/*-*-cc
+	cd "${S}"/libs/*-*-cc
 	dolib.a *.a || die "dolib failed"
 
-	cd ${S}
+	cd "${S}"
 	insinto /usr/include/scsilib
 	doins include/*.h
 	insinto /usr/include/scsilib/scg
 	doins include/scg/*.h
 
-	cd ${S}
+	cd "${S}"
 	dodoc ABOUT Changelog README README.{ATAPI,audio,cdplus,cdrw,cdtext,clone,copy,DiskT@2,linux-shm,multi,parallel,raw,rscsi,sony,verify} START READMEs/README.linux
 	doman */*.1
 	doman */*.8
 
-	cd ${S}/doc
+	cd "${S}"/doc
 	docinto print
 	dodoc *.ps
 }
