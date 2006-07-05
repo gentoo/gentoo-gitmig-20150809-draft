@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2000 2006/07/05 16:52:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2001 2006/07/05 19:57:00 dang Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -530,6 +530,8 @@ gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
 gnome-extra/libgda:xbase - Enable support for xbase databases (dBase, FoxPro, etc)
 gnome-extra/nautilus-sendto:gaim - Build a gaim plugin for nautilus-sendto
 gnome-extra/sensors-applet:hddtemp - Enable support the hddtemp daemon
+gnome-extra/sensors-applet:libnotify - Enable libnotify support
+gnome-extra/sensors-applet:nvidis - Enable support for nvidia sensors
 gnome-extra/yelp:firefox - Build against firefox instead of mozilla
 gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages.
 gnustep-base/gnustep-back-art:xim - Enable X11 XiM input method
