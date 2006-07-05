@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.10.0.ebuild,v 1.1 2006/07/05 15:06:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.10.0.ebuild,v 1.2 2006/07/05 17:20:33 genstef Exp $
 
 inherit gnome.org flag-o-matic eutils debug autotools virtualx
 
@@ -52,9 +52,9 @@ RESTRICT="confcache"
 
 pkg_setup() {
 
-	if ! built_with_use x11-libs/cairo X; then
-		einfo "Please re-emerge x11-libs/cairo with the X USE flag set"
-		die "cairo needs the X flag set"
+	if ! built_with_use x11-libs/cairo X pdf ; then
+		einfo "Please re-emerge x11-libs/cairo with the X and pdf USE flag set"
+		die "cairo needs the X and pdf flag set"
 	fi
 
 }
