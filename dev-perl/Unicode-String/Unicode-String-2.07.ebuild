@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-String/Unicode-String-2.07.ebuild,v 1.16 2006/04/21 21:08:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-String/Unicode-String-2.07.ebuild,v 1.17 2006/07/05 12:54:43 ian Exp $
 
 inherit perl-module
 
@@ -13,5 +13,5 @@ LICENSE="Artistic"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="${DEPEND}
-	>=virtual/perl-MIME-Base64-2.11"
+DEPEND=">=virtual/perl-MIME-Base64-2.11"
+RDEPEND="${DEPEND}"
