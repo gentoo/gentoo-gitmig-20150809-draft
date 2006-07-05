@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-ex-formfactory/gtk2-ex-formfactory-0.64.ebuild,v 1.1 2006/06/23 18:08:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-ex-formfactory/gtk2-ex-formfactory-0.64.ebuild,v 1.2 2006/07/05 17:31:36 ian Exp $
 
 inherit perl-module
 
@@ -16,4 +16,5 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-perl/gtk2-perl"
+RDEPEND="${DEPEND}"
 SRC_TEST="do"

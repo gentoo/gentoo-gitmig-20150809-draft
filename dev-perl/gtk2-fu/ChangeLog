@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gtk2-fu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.22 2006/01/16 04:39:36 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.23 2006/07/05 17:32:54 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> gtk2-fu-0.10.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
 
   16 Jan 2006; Mark Loeser <halcy0n@gentoo.org> -files/digest-gtk2-fu-0.01,
   -files/digest-gtk2-fu-0.02, -files/digest-gtk2-fu-0.03,
