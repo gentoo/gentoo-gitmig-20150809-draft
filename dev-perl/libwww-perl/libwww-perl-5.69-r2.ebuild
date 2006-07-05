@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.69-r2.ebuild,v 1.15 2006/04/26 15:20:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.69-r2.ebuild,v 1.16 2006/07/05 17:42:47 ian Exp $
 
 inherit perl-module eutils
 
@@ -18,6 +18,7 @@ DEPEND="virtual/perl-libnet
 	>=virtual/perl-Digest-MD5-2.12
 	>=virtual/perl-MIME-Base64-2.12
 	ssl? ( dev-perl/Crypt-SSLeay )"
+RDEPEND="${DEPEND}"
 
 mydoc="TODO"
 
