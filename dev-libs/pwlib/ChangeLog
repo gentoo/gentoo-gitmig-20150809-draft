@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.97 2006/06/06 18:50:13 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.98 2006/07/05 00:50:55 nerdboy Exp $
+
+  05 Jul 2006; Steve Arnold <nerdboy@gentoo.org>
+  +files/pwlib-1.8.7-gcc-4.1-v4l2.patch, pwlib-1.8.7.ebuild:
+  Added the rest of the gcc4 support (see bug 135909) since it's broken
+  without it.  Thanks to Zdenek Behan <behanz _at_ seznam.cz> for the patch.
 
   06 Jun 2006; Stefan Schweizer <genstef@gentoo.org> pwlib-1.10.1.ebuild:
   Make USE="-alsa oss" work, thanks to Christophe PEREZ <chris@novazur.fr> in

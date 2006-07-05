@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.7.ebuild,v 1.2 2006/05/01 17:48:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.7.ebuild,v 1.3 2006/07/05 00:50:55 nerdboy Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -52,6 +52,7 @@ src_unpack() {
 	# gcc-4 patch
 	epatch ${FILESDIR}/pwlib-1.8.4-gcc4.diff
 	epatch "${FILESDIR}"/${P}-gcc41.patch
+	epatch ${FILESDIR}/${P}-gcc-4.1-v4l2.patch
 
 }
 

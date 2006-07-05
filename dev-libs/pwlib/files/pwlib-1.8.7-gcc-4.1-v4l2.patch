@@ -1,0 +1,11 @@
+--- plugins/vidinput_v4l2/vidinput_v4l2.cxx.old	2006-06-06 21:34:31.000000000 +0200
++++ plugins/vidinput_v4l2/vidinput_v4l2.cxx	2006-06-06 21:35:17.000000000 +0200
+@@ -74,7 +74,7 @@
+   
+ protected:
+   
+-  virtual PString V4L2Names::BuildUserFriendly(PString devname);
++  virtual PString BuildUserFriendly(PString devname);
+ 
+   enum KernelVersionEnum {
+     K2_4, 
