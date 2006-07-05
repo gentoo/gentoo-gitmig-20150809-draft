@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.0_pre1.ebuild,v 1.1 2006/06/30 13:23:33 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.0_pre1.ebuild,v 1.2 2006/07/05 07:16:38 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -44,7 +44,7 @@ DEPEND="|| ( ( x11-libs/libXrandr
 	postgres? ( dev-db/libpq )
 	cups? ( net-print/cups )
 	zlib? ( sys-libs/zlib )
-	glib? ( sys-libs/glib )"
+	glib? ( dev-libs/glib )"
 
 pkg_setup() {
 	QTBASEDIR=/usr/$(get_libdir)/qt4
