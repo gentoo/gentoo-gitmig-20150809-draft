@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.23 2006/07/04 11:09:41 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.24 2006/07/05 15:18:59 the_paya Exp $
+
+  05 Jul 2006; Javier Villavicencio <the_paya@gentoo.org>
+  freebsd-lib-6.0-r3.ebuild, freebsd-lib-6.1.ebuild:
+  Fixes bug #139259. Thanks to Mike Kelly <pioto@pioto.org> for reporting.
 
   04 Jul 2006; Javier Villavicencio <the_paya@gentoo.org>
   files/freebsd-lib-6.1-csu-amd64.patch, freebsd-lib-6.1.ebuild:

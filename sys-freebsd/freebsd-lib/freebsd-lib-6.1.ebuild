@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.8 2006/07/04 11:09:41 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.9 2006/07/05 15:18:59 the_paya Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -23,7 +23,7 @@ SRC_URI="mirror://gentoo/${LIB}.tar.bz2
 		!kernel_FreeBSD? (
 			mirror://gentoo/${SYS}.tar.bz2 )"
 
-if [[ ${CATEGORY/cross-} == {CATEGORY} ]]; then
+if [[ ${CATEGORY/cross-} == ${CATEGORY} ]]; then
 	RDEPEND="ssl? ( dev-libs/openssl )
 		kerberos? ( virtual/krb5 )
 		!sys-freebsd/freebsd-headers"
