@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/libxml-perl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libxml-perl/ChangeLog,v 1.26 2006/06/29 16:57:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libxml-perl/ChangeLog,v 1.27 2006/07/05 18:19:27 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  libxml-perl-0.07-r1.ebuild, libxml-perl-0.07-r2.ebuild,
+  libxml-perl-0.08.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header; fixed DEPEND
 
   29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   libxml-perl-0.08.ebuild:
