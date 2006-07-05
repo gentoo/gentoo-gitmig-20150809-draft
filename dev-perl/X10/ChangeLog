@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/X10
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X10/ChangeLog,v 1.3 2006/03/30 23:38:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X10/ChangeLog,v 1.4 2006/07/05 13:07:58 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> X10-0.03.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> X10-0.03.ebuild:
   Mark 0.03 ~ia64

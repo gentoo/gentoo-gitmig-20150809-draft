@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Validate-Net
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Validate-Net/ChangeLog,v 1.14 2006/06/29 19:20:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Validate-Net/ChangeLog,v 1.15 2006/07/05 13:00:53 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org> Validate-Net-0.4.ebuild,
+  Validate-Net-0.5.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   Validate-Net-0.5.ebuild:

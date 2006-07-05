@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-Simple/Tree-Simple-1.16.ebuild,v 1.2 2006/06/24 14:16:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-Simple/Tree-Simple-1.16.ebuild,v 1.3 2006/07/05 12:47:05 ian Exp $
 
 # this is an RT dependency
 
@@ -18,4 +18,5 @@ KEYWORDS="~amd64 ~ia64 ~ppc sparc ~x86"
 DEPEND=">=virtual/perl-Test-Simple-0.47
 	dev-perl/module-build
 	>=dev-perl/Test-Exception-0.15"
+RDEPEND="${DEPEND}"
 IUSE=""

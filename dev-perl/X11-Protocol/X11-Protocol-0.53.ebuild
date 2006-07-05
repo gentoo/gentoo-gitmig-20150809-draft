@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/X11-Protocol-0.53.ebuild,v 1.12 2006/05/01 22:20:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/X11-Protocol-0.53.ebuild,v 1.13 2006/07/05 13:08:50 ian Exp $
 
 inherit perl-module eutils
 
@@ -18,3 +18,4 @@ DEPEND="|| ( ( x11-libs/libXrender
 		)
 		virtual/x11
 	)"
+RDEPEND="${DEPEND}"

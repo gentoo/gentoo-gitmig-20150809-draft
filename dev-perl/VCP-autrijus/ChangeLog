@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/VCP-autrijus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/VCP-autrijus/ChangeLog,v 1.6 2006/07/03 00:30:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/VCP-autrijus/ChangeLog,v 1.7 2006/07/05 12:56:17 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  VCP-autrijus-0.9_p20050110.ebuild, VCP-autrijus-0.9_p20050110-r1.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   03 Jul 2006; Michael Cummings <mcummings@gentoo.org>
   VCP-autrijus-0.9_p20050110-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-MapUTF8/Unicode-MapUTF8-1.11.ebuild,v 1.10 2006/07/01 01:13:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-MapUTF8/Unicode-MapUTF8-1.11.ebuild,v 1.11 2006/07/05 12:51:17 ian Exp $
 
 inherit perl-module
 
@@ -16,3 +16,4 @@ DEPEND="dev-perl/module-build
 	dev-perl/Unicode-Map8
 	dev-perl/Unicode-String
 	dev-perl/Jcode"
+RDEPEND="${DEPEND}"

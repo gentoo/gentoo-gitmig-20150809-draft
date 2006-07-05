@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/WWW-Mechanize
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.26 2006/06/12 16:58:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.27 2006/07/05 13:04:59 ian Exp $
+
+  05 Jul 2006; Christian Hartmann <ian@gentoo.org>
+  WWW-Mechanize-1.04.ebuild, WWW-Mechanize-1.12.ebuild,
+  WWW-Mechanize-1.16.ebuild, WWW-Mechanize-1.0301.ebuild:
+  Fixed RDEPEND wrt bug #134781
 
   12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   WWW-Mechanize-1.18.ebuild:

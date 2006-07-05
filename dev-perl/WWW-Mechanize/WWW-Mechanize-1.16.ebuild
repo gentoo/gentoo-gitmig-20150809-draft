@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.16.ebuild,v 1.4 2006/02/06 20:38:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.16.ebuild,v 1.5 2006/07/05 13:04:59 ian Exp $
 
 inherit perl-module
 
@@ -16,6 +16,7 @@ DEPEND="dev-perl/IO-Socket-SSL
 	>=dev-perl/libwww-perl-5.76
 	dev-perl/URI
 	dev-perl/HTML-Parser"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	echo "y" | perl-module_src_compile

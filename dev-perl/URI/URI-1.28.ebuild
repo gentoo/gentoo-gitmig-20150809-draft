@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/URI-1.28.ebuild,v 1.16 2006/02/13 14:11:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/URI-1.28.ebuild,v 1.17 2006/07/05 12:48:44 ian Exp $
 
 inherit perl-module
 
@@ -14,5 +14,6 @@ KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE=""
 
 DEPEND="virtual/perl-MIME-Base64"
+RDEPEND="${DEPEND}"
 
 mydoc="rfc2396.txt"
