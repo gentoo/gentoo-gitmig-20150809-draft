@@ -1,0 +1,11 @@
+--- usr/share/vdr/inc/commands-functions.sh	(Revision 299)
++++ usr/share/vdr/inc/commands-functions.sh	(Revision 300)
+@@ -41,6 +41,8 @@
+ 		echo >> "${mergedfile}"
+ 	done
+ 
++	chown vdr:vdr "${mergedfile}"
++
+ 	# link it to real location
+ 	if [[ -L "${destfile}" ]]; then
+ 		# remove link

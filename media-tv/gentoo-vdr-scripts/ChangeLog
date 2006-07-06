@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.58 2006/06/28 09:06:12 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.59 2006/07/06 13:02:34 zzam Exp $
+
+*gentoo-vdr-scripts-0.3.5-r2 (06 Jul 2006)
+
+  06 Jul 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/gentoo-vdr-scripts-0.3.5-merged-file-permissions.diff,
+  -gentoo-vdr-scripts-0.3.5-r1.ebuild, +gentoo-vdr-scripts-0.3.5-r2.ebuild:
+  Added patch to solve problems with restrictive umask, reported by timonator
+  on #gentoo-vdr.
 
   28 Jun 2006; Matthias Schwarzott <zzam@gentoo.org>
   gentoo-vdr-scripts-0.3.4-r1.ebuild:
