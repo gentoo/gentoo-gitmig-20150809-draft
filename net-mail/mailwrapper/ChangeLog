@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailwrapper
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.31 2006/05/10 20:35:59 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.32 2006/07/06 16:26:46 exg Exp $
+
+  06 Jul 2006; Emanuele Giaquinta <exg@gentoo.org> mailwrapper-0.2.1.ebuild:
+  Add ~ppc-macos keyword.
 
   10 May 2006; Fernando J. Pereda <ferdy@gentoo.org>
   mailwrapper-0.2.1-r1.ebuild:
