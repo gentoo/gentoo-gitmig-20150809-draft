@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1-r3.ebuild,v 1.11 2006/07/06 10:38:29 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1-r3.ebuild,v 1.12 2006/07/06 10:40:25 nelchael Exp $
 
 inherit java fixheadtails
 
@@ -15,8 +15,6 @@ DEPEND="
 	>=x11-libs/openmotif-2.1.30-r1
 	doc? ( ~dev-java/java-sdk-docs-${PV} )"
 RDEPEND="$DEPEND"
-PROVIDE="virtual/jre
-	virtual/jdk"
 LICENSE="compaq-sdla"
 SLOT="1.3"
 KEYWORDS="-* ~alpha"

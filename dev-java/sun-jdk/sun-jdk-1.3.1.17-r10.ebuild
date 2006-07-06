@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.17-r10.ebuild,v 1.2 2006/07/03 13:29:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.17-r10.ebuild,v 1.3 2006/07/06 10:46:51 nelchael Exp $
 
 inherit java-vm-2 eutils
 
@@ -29,8 +29,6 @@ RDEPEND="sys-libs/lib-compat
 			)
 		)"
 
-PROVIDE="virtual/jre
-	virtual/jdk"
 LICENSE="sun-bcla-java-vm"
 SLOT="1.3"
 KEYWORDS="-* ~x86"

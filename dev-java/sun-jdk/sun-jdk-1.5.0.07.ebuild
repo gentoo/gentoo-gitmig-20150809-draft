@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.07.ebuild,v 1.2 2006/06/27 12:07:34 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.07.ebuild,v 1.3 2006/07/06 10:46:51 nelchael Exp $
 
 inherit java-vm-2 eutils
 
@@ -54,8 +54,6 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 			)
 		)"
 
-PROVIDE="virtual/jre
-	virtual/jdk"
 JAVA_PROVIDE="jdbc-stdext jdbc-rowset"
 
 PACKED_JARS="lib/tools.jar jre/lib/rt.jar jre/lib/jsse.jar jre/lib/charsets.jar jre/lib/ext/localedata.jar jre/lib/plugin.jar jre/lib/javaws.jar jre/lib/deploy.jar"

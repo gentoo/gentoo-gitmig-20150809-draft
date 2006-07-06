@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.06-r2.ebuild,v 1.2 2006/03/12 13:32:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.06-r2.ebuild,v 1.3 2006/07/06 10:42:15 nelchael Exp $
 
 inherit java eutils
 
@@ -42,7 +42,6 @@ RDEPEND="sys-libs/glibc
 			)
 		)"
 
-PROVIDE="virtual/jre"
 
 PACKED_JARS="lib/rt.jar lib/jsse.jar lib/charsets.jar lib/ext/localedata.jar lib/plugin.jar lib/javaws.jar lib/deploy.jar"
 
