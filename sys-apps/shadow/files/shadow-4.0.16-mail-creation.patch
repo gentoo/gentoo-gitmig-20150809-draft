@@ -1,0 +1,64 @@
+rip out fixes from upstream for mail creation bug
+
+http://bugs.gentoo.org/139346
+
+Index: useradd.c
+===================================================================
+RCS file: /cvsroot/shadow/src/useradd.c,v
+retrieving revision 1.96
+retrieving revision 1.99
+diff -u -p -r1.96 -r1.99
+--- shadow/src/useradd.c	30 May 2006 18:28:45 -0000	1.96
++++ shadow/src/useradd.c	22 Jun 2006 11:30:32 -0000	1.99
+@@ -1246,6 +1247,11 @@ static void process_flags (int argc, cha
+ 
+ 	if (!sflg)
+ 		user_shell = def_shell;
++
++	/* TODO: add handle change default spool mail creation by 
++	   -K CREATE_MAIL_SPOOL={yes,no}. It need rewrite internal API for handle
++	   shadow tools configuration */
++	create_mail_spool = def_create_mail_spool;
+ }
+ 
+ /*
+@@ -1599,24 +1605,24 @@ static void create_mail (void)
+ 		if (fd < 0) {
+ 			perror (_("Creating mailbox file"));
+ 			return;
++		}
+ 
+-			gr = getgrnam ("mail");
+-			if (!gr) {
+-				fprintf (stderr,
+-					 _
+-					 ("Group 'mail' not found. Creating the user mailbox file with 0600 mode.\n"));
+-				gid = user_gid;
+-				mode = 0600;
+-			} else {
+-				gid = gr->gr_gid;
+-				mode = 0660;
+-			}
++		gr = getgrnam ("mail");
++		if (!gr) {
++			fprintf (stderr,
++				 _
++				 ("Group 'mail' not found. Creating the user mailbox file with 0600 mode.\n"));
++			gid = user_gid;
++			mode = 0600;
++		} else {
++			gid = gr->gr_gid;
++			mode = 0660;
++		}
+ 
+-			if (fchown (fd, user_id, gid) || fchmod (fd, mode))
+-				perror (_("Setting mailbox file permissions"));
++		if (fchown (fd, user_id, gid) || fchmod (fd, mode))
++			perror (_("Setting mailbox file permissions"));
+ 
+-			close (fd);
+-		}
++		close (fd);
+ 	}
+ }
+ 
