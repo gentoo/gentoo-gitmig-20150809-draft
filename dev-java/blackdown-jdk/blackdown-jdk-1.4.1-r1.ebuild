@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.18 2006/07/01 20:00:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.19 2006/07/06 11:22:49 nelchael Exp $
 
 
 inherit java
@@ -25,9 +25,6 @@ IUSE="doc emul-linux-x86 browserplugin nsplugin mozilla"
 
 DEPEND="doc? ( =dev-java/java-sdk-docs-1.4.1* )
 	emul-linux-x86? ( >=app-emulation/emul-linux-x86-baselibs-1.0 )"
-
-PROVIDE="virtual/jdk
-	virtual/jre"
 
 # Extract the 'skip' value (offset of tarball) we should pass to tail
 get_offset() {

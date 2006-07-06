@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.6 2006/04/16 07:15:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.7 2006/07/06 11:17:29 nelchael Exp $
 
 inherit java eutils
 
@@ -44,8 +44,6 @@ DEPEND="sys-libs/glibc
 				)
 			)"
 RDEPEND="${DEPEND}"
-PROVIDE="virtual/jdk
-	virtual/jre"
 
 if use x86; then
 	S="${WORKDIR}/ibm-java2-i386-50"

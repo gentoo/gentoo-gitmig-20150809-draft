@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.03.ebuild,v 1.10 2006/07/03 13:31:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.03.ebuild,v 1.11 2006/07/06 11:17:29 nelchael Exp $
 
 inherit java eutils
 
@@ -65,9 +65,6 @@ DEPEND="
 RDEPEND="${DEPEND}
 		 !ppc64? ( !amd64? ( sys-libs/lib-compat ) )"
 PDEPEND="doc? ( =dev-java/java-sdk-docs-1.4.2* )"
-
-PROVIDE="virtual/jdk
-		 virtual/jre"
 
 RESTRICT="fetch"
 

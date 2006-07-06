@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03-r2.ebuild,v 1.1 2006/01/19 03:57:06 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03-r2.ebuild,v 1.2 2006/07/06 11:22:49 nelchael Exp $
 
 inherit java versionator
 
@@ -37,9 +37,6 @@ RDEPEND="${DEPEND}
 			  virtual/x11
 			)
 		)"
-
-PROVIDE="virtual/jdk
-	virtual/jre"
 
 S="${WORKDIR}/j2sdk${JV}"
 
