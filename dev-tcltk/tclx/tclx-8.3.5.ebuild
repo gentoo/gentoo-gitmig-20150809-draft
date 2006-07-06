@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.5.ebuild,v 1.14 2006/05/12 04:17:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.5.ebuild,v 1.15 2006/07/06 05:11:34 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -53,7 +53,7 @@ src_compile() {
 		# configure and build tk
 		cd ${WORKDIR}/tk8.4.6/unix
 		econf || die "econf failed"
-		emake CFLAGS="${CFLAGS}" || die
+		emake CFLAGS="${CFLAGS}" || die "make X failed"
 		myconf="${myconf} --with-tk=${WORKDIR}/tk8.4.6/unix"
 	else
 		myconf="${myconf} --enable-tk=no"
@@ -62,7 +62,7 @@ src_compile() {
 	# configure and build tclx
 	cd ${S}/unix
 	econf ${myconf} || die "econf failed"
-	make CFLAGS="${CFLAGS}" || die
+	make CFLAGS="${CFLAGS}" || die "make tclx failed"
 }
 
 src_install() {
