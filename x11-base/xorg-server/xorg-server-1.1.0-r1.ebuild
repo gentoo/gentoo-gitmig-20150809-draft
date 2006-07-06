@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.10 2006/07/01 01:08:57 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.11 2006/07/06 21:00:42 wolf31o2 Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -145,6 +145,8 @@ RDEPEND="x11-libs/libXfont
 	x11-libs/liblbxutil
 	kdrive? ( sdl? ( media-libs/libsdl ) )
 	!media-video/nvidia-glx
+	!x11-drivers/nvidia-drivers
+	!x11-drivers/nvidia-legacy-drivers
 	!x11-drivers/ati-drivers"
 	# Xres is dmx-dependent, xkbui is xorgcfg-dependent
 	# Xaw is dmx- and xorgcfg-dependent
