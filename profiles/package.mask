@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5590 2006/07/05 22:41:13 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5591 2006/07/06 02:38:06 nichoj Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -62,7 +62,7 @@ app-admin/eselect-lapack
 =sci-libs/mkl-8.0.2.004
 
 # Gustavo Felisberto <humpback@gentoo.org> (4 Jul 2006)
-# Still masked wildfire because needs testing of Java 2. If you unmask and have problems building please file a bug to me and add dev-java@gentoo.org to the CC list
+# Still masked wildfire because needs testing of new Java systemJava 2. If you unmask and have problems building please file a bug to me and add java@gentoo.org to the CC list
 net-im/wildfire
 
 # Gustavo Felisberto <humpback@gentoo.org> (4 Jul 2006)
@@ -72,11 +72,6 @@ net-im/jive-messenger
 # Henrik Brix Andersen <brix@gentoo.org> (2 Jul 2006)
 # Masked pending removal, bug #132600
 net-wireless/bluez-kernel
-
-# Joshua Nichols <nichoj@gentoo.org> (1 Jul 2006)
-# Masked for testing.
-# and masked seamonkey stuff.
-=dev-util/eclipse-sdk-3.2*
 
 # Krzysiek Pawlik <nelchael@gentoo.org> (1 Jul 2006)
 # Pending removal, please use www-servers/resin.
