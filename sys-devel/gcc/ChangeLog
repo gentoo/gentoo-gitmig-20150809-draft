@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.560 2006/06/30 02:48:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.561 2006/07/06 18:40:08 kevquinn Exp $
+
+*gcc-3.4.6-r2 (06 Jul 2006)
+
+  06 Jul 2006; Kevin F. Quinn <kevquinn@gentoo.org> +gcc-3.4.6-r2.ebuild:
+  Eliminate ICE in ssp's sweep_string_variable (bug #74457), and stop
+  vanilla and hardenednossp compiler variants from auto-upgrading
+  fstack-protector to fstack-protector-all (bug #104754)
 
   30 Jun 2006; Mike Frysinger <vapier@gentoo.org> gcc-4.0.2-r3.ebuild,
   gcc-4.0.3.ebuild, gcc-4.1.0-r1.ebuild, gcc-4.1.1.ebuild,
