@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-ripper/lastfm-ripper-1.2.1.ebuild,v 1.1 2006/06/29 04:07:24 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-ripper/lastfm-ripper-1.2.1.ebuild,v 1.2 2006/07/06 07:59:21 blubb Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/J/JO/JOCHEN/last.fm-ripper-${PV}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="amazon tagwriting minimal"
 
 DEPEND="perl-core/Getopt-Long
