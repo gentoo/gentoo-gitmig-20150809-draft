@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.5-r1.ebuild,v 1.7 2006/07/02 20:00:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.5-r1.ebuild,v 1.8 2006/07/06 11:01:41 nelchael Exp $
 
 inherit eutils java flag-o-matic
 
@@ -35,8 +35,6 @@ KEYWORDS="amd64 -ppc sparc ~x86"
 #X qt
 IUSE="alsa esd gmp gtk nls"
 
-PROVIDE="virtual/jdk
-	virtual/jre"
 #S=${WORKDIR}/kaffe-${date}
 
 pkg_setup() {

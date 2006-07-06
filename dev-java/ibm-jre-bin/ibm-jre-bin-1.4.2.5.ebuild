@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.5.ebuild,v 1.2 2006/07/02 19:31:16 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.5.ebuild,v 1.3 2006/07/06 11:09:50 nelchael Exp $
 
 inherit java-vm-2 eutils versionator rpm
 
@@ -52,7 +52,6 @@ DEPEND="X? ( || (
 RDEPEND="${DEPEND}
 		 !ppc64? ( !amd64? ( sys-libs/lib-compat ) )"
 
-PROVIDE="virtual/jre"
 
 RESTRICT="fetch"
 

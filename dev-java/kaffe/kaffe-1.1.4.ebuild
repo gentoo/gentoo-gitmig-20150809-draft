@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4.ebuild,v 1.20 2006/07/02 20:00:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4.ebuild,v 1.21 2006/07/06 11:01:41 nelchael Exp $
 
 inherit java flag-o-matic
 
@@ -19,9 +19,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc ~ppc amd64"
 IUSE="alsa esd"
-
-PROVIDE="virtual/jdk
-		virtual/jre"
 
 src_compile() {
 	# see #88330

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.5.0.03.ebuild,v 1.9 2006/07/03 13:14:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.5.0.03.ebuild,v 1.10 2006/07/06 11:05:16 nelchael Exp $
 
 # WARNING: This is the default VM on ia64, so treat this ebuild
 # with proper care.
@@ -22,8 +22,6 @@ KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE=""
 
 DEPEND=">=app-arch/unzip-5.50-r1"
-PROVIDE="virtual/jre
-	virtual/jdk"
 
 pkg_nofetch() {
 	einfo "Please download ${A} by"

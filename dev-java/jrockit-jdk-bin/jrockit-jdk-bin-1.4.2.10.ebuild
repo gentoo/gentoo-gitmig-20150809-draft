@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.10.ebuild,v 1.2 2006/07/03 13:14:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.10.ebuild,v 1.3 2006/07/06 11:05:16 nelchael Exp $
 
 IUSE=""
 
@@ -30,9 +30,6 @@ SLOT="1.4"
 KEYWORDS="~x86 ~ia64 ~amd64"
 DEPEND=">=dev-java/java-config-0.2.5
 	>=app-arch/unzip-5.50-r1"
-
-PROVIDE="virtual/jre
-	virtual/jdk"
 
 pkg_nofetch() {
 	einfo "Please download ${A} from:"
