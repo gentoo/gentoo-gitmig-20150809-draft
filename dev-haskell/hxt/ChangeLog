@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hxt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.4 2006/04/27 15:17:17 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.5 2006/07/06 18:05:29 kolmodin Exp $
+
+*hxt-6.0 (06 Jul 2006)
+
+  06 Jul 2006; <kolmodin@gentoo.org> +hxt-6.0.ebuild:
+  Version bump.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-hxt-4.02,
   files/digest-hxt-4.02-r1, files/digest-hxt-5.00, Manifest:
