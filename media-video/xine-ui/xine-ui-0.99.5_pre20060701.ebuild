@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5_pre20060701.ebuild,v 1.1 2006/07/01 19:03:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5_pre20060701.ebuild,v 1.2 2006/07/06 10:29:52 flameeyes Exp $
 
 inherit eutils toolchain-funcs flag-o-matic autotools
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="X nls lirc aalib libcaca readline curl ncurses vdr xinerama debug"
 
 RDEPEND=">=media-libs/libpng-1.2.8
