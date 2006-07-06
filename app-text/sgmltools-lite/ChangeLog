@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.44 2006/07/06 06:22:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.45 2006/07/06 17:44:01 gustavoz Exp $
+
+  06 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  sgmltools-lite-3.0.3-r10.ebuild:
+  Stable on sparc wrt #139255
 
   06 Jul 2006; Markus Rothe <corsair@gentoo.org>
   sgmltools-lite-3.0.3-r10.ebuild:
