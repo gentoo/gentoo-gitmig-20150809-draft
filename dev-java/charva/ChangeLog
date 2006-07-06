@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/charva
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/ChangeLog,v 1.9 2005/04/22 08:18:16 blubb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/ChangeLog,v 1.10 2006/07/06 03:39:54 nichoj Exp $
+
+*charva-1.0.1-r1 (06 Jul 2006)
+
+  06 Jul 2006; Joshua Nichols <nichoj@gentoo.org> +charva-1.0.1-r1.ebuild:
+  Revision bump to support new Java system.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> charva-1.0.1.ebuild:
   stable on amd64
