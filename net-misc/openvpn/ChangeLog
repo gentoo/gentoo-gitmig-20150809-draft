@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.89 2006/06/29 09:34:46 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.90 2006/07/06 18:47:16 uberlord Exp $
+
+  06 Jul 2006; Roy Marples <uberlord@gentoo.org> files/openvpn-2.1.init,
+  files/openvpn.init:
+  Allow periods in config names, #139454 thanks to Ed Catmur.
 
 *openvpn-2.0.7 (29 Jun 2006)
 
