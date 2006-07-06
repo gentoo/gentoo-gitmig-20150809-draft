@@ -32,6 +32,15 @@
  
 --- patches/src680/apply 
 +++ patches/src680/apply
+@@ -15,7 +15,7 @@
+ 	 Icons, Branding, VBABits, VBAObjects, CalcFixes, Leaks, Egg
+ LinuxCommon : Common, BuildBitsLinuxOnly, LinuxOnly, SystemBits, CWSBackports, GCJ, \
+ 	      QPro, Lwp, cairocanvas, msaccess, KDE, \
+-	      64bitPatches, FPickers, Mono, AddressBooks, QuickStarter, SpeedImageList
++	      64bitPatches, FPickers, Mono, AddressBooks, QuickStarter
+ Win32Common : Common, Win32Only, NotDebian
+ 64bit : GCJExperimental, SystemJavaBits
+ # Binfilter patches: a special distro; applied only when building with binfilter
 @@ -1046,7 +1046,7 @@
  SectionOwner => aprosky
  
