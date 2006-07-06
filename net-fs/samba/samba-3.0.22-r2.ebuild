@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.22-r2.ebuild,v 1.3 2006/06/08 10:51:02 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.22-r2.ebuild,v 1.4 2006/07/06 19:59:34 seemant Exp $
 
 inherit eutils versionator
 
@@ -11,7 +11,7 @@ IUSE="acl async automount cups doc examples kerberos ldap ldapsam libclamav
 RESTRICT="test"
 
 VSCAN_VER="0.3.6b"
-PATCH_VER="0.3.11"
+PATCH_VER="0.3.12"
 MY_P=${PN}-${PV/_/}
 MY_PP=${PN}-$(get_major_version)-gentoo-${PATCH_VER}
 S2=${WORKDIR}/${MY_P}

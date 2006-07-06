@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.241 2006/06/08 10:51:02 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.242 2006/07/06 19:59:33 seemant Exp $
+
+  06 Jul 2006; Seemant Kulleen <seemant@gentoo.org> samba-3.0.22-r2.ebuild:
+  Add the fix for autoconf-2.60 reported by Polinik <polinik@lexx.eu.org> and
+  fixed by Canal Vorfeed in bug #138234
 
   08 Jun 2006; Christian Andreetta <satya@gentoo.org>
   samba-3.0.14a-r2.ebuild, samba-3.0.20b.ebuild, samba-3.0.21a.ebuild,
