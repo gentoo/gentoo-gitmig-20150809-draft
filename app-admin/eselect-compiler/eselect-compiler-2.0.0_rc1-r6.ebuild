@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1-r6.ebuild,v 1.3 2006/06/15 19:03:06 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1-r6.ebuild,v 1.4 2006/07/06 08:59:42 kugelfang Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="hardened"
 
-RDEPEND=">=app-admin/eselect-1.0_rc1"
+RDEPEND=">=app-admin/eselect-1.0_rc1
+	!>=app-admin/eselect-1.0.3"
 
 # We want to verify that compiler profiles exist for our toolchain
 pkg_setup() {
@@ -33,7 +34,7 @@ pkg_setup() {
 			eerror "eselect-compiler:"
 			eerror "# emerge -v --oneshot sys-devel/gcc"
 
-			die "Missing eselect-compiler profile for ${abi}"
+			[[ ${ROOT:-/} == / ]] || die "Missing eselect-compiler profile for ${abi}"
 		fi
 	done
 }
