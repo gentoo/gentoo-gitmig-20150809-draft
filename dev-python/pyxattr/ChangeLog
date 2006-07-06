@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxattr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.9 2006/04/01 19:01:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.10 2006/07/06 22:42:26 ranger Exp $
+
+  06 Jul 2006; Brent Baude <ranger@gentoo.org> pyxattr-0.2.ebuild:
+  Marking pyxattr-0.2 ~ppc64 to satisfy an rdiff-backup broken dep per Mr. Bones
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pyxattr-0.2.ebuild:
   Mark 0.2 ~ia64
