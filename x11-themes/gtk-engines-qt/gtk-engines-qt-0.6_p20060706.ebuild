@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.6_p20060706.ebuild,v 1.1 2006/07/05 22:34:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.6_p20060706.ebuild,v 1.2 2006/07/06 21:49:33 flameeyes Exp $
 
 inherit kde
 
@@ -19,3 +19,5 @@ need-kde 3
 SLOT="2"
 
 S=${WORKDIR}/${MY_P}
+
+PATCHES="${FILESDIR}/${P}-implicit.patch"
