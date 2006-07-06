@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/vblade
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.7 2006/06/19 14:52:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.8 2006/07/06 23:00:36 squinky86 Exp $
+
+  06 Jul 2006; Jon Hood <squinky86@gentoo.org> vblade-10.ebuild:
+  Mark ~amd64 wrt bug #139270.
 
   19 Jun 2006; Brent Baude <ranger@gentoo.org> vblade-10.ebuild:
   keywording vblade-10 ~ppc64
