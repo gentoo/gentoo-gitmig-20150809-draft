@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.95 2006/07/03 17:18:14 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.96 2006/07/06 16:01:24 nichoj Exp $
+
+*java-config-2.0.26-r3 (06 Jul 2006)
+
+  06 Jul 2006; Joshua Nichols <jnichols@gentoo.org>
+  -java-config-2.0.26-r2.ebuild, +java-config-2.0.26-r3.ebuild:
+  Fixed pkg_postinst.
 
 *java-config-2.0.26-r2 (03 Jul 2006)
 
