@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/djbfft-0.76.ebuild,v 1.6 2006/01/04 00:04:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/djbfft-0.76.ebuild,v 1.7 2006/07/06 20:17:50 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://cr.yp.to/djbfft/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm ~hppa ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="static"
 
 # the "check" target of the Makefile (version 0.76 at least) only checks if
