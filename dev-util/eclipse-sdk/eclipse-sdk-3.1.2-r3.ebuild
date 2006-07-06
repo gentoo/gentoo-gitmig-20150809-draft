@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1.2-r2.ebuild,v 1.2 2006/07/06 02:50:04 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1.2-r3.ebuild,v 1.1 2006/07/06 02:50:04 nichoj Exp $
 
 inherit eutils java-pkg java-utils flag-o-matic check-reqs
 
@@ -9,7 +9,7 @@ RELEASE_DATE="200601181600"
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download.eclipse.org/eclipse/downloads/drops/R-${PV}-${RELEASE_DATE}/${MY_A}"
-IUSE="nogecko-sdk gnome jikes nosrc nodoc atk"
+IUSE="gnome jikes nosrc nodoc atk"
 SLOT="3.1"
 LICENSE="CPL-1.0"
 KEYWORDS="~x86 ~ppc ~amd64"
@@ -17,7 +17,6 @@ S="${WORKDIR}"
 
 RDEPEND=">=virtual/jre-1.4.2
 	>=x11-libs/gtk+-2.2.4
-	!nogecko-sdk? ( net-libs/gecko-sdk )
 	atk? ( >=dev-libs/atk-1.6 )
 	gnome? ( =gnome-base/gnome-vfs-2* =gnome-base/libgnomeui-2* )"
 
@@ -43,6 +42,7 @@ ECLIPSE_LINKS_DIR="${ECLIPSE_DIR}/links"
 # - 
 
 pkg_setup() {
+	java-pkg_pkg_setup
 	debug-print "Checking for sufficient physical RAM"
 	CHECKREQS_MEMORY="768"
 	check_reqs
@@ -102,12 +102,12 @@ src_compile() {
 	# Figure out VM, set up ant classpath and native library paths
 	setup-jvm-opts
 
-	if use !nogecko-sdk ; then
-		einfo "Will compile embedded Mozilla support against net-libs/gecko-sdk"
-		setup-mozilla-opts
-	else
-		einfo "Not building embedded Mozilla support"
-	fi
+#	if use !nogecko-sdk ; then
+#		einfo "Will compile embedded Mozilla support against net-libs/gecko-sdk"
+#		setup-mozilla-opts
+#	else
+#		einfo "Not building embedded Mozilla support"
+#	fi
 
 	use jikes && bootstrap_ant_opts="-Dbuild.compiler=jikes"
 
@@ -200,10 +200,10 @@ fix_makefiles() {
 		libs="${libs} make_gnome"
 	fi
 
-	if use !nogecko-sdk ; then
-		einfo "Building Mozilla embed support"
-		libs="${libs} make_mozilla"
-	fi
+#	if use !nogecko-sdk ; then
+#		einfo "Building Mozilla embed support"
+#		libs="${libs} make_mozilla"
+#	fi
 
 	if use atk ; then
 		einfo "Building ATK support"

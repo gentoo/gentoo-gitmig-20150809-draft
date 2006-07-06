@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.107 2006/07/04 18:04:24 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.108 2006/07/06 02:50:04 nichoj Exp $
+
+*eclipse-sdk-3.2 (06 Jul 2006)
+*eclipse-sdk-3.1.2-r3 (06 Jul 2006)
+
+  06 Jul 2006; Joshua Nichols <jnichols@gentoo.org>
+  eclipse-sdk-3.1.2-r2.ebuild, +eclipse-sdk-3.1.2-r3.ebuild,
+  -eclipse-sdk-3.2_rc7-r1.ebuild, +eclipse-sdk-3.2.ebuild:
+  Revision bump for 3.1.2 to disable embedded browser support (bug #137665).
+  Version bump to 3.2 (bug #139191).
 
 *eclipse-sdk-3.2_rc7-r1 (04 Jul 2006)
 
