@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r2.ebuild,v 1.20 2005/01/09 14:56:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r2.ebuild,v 1.21 2006/07/06 01:01:42 vapier Exp $
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://libsigc.sourceforge.net/"
@@ -8,18 +8,12 @@ SRC_URI="http://download.sourceforge.net/libsigc/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="1.0"
-KEYWORDS="x86 ppc sparc hppa amd64 alpha ia64"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc sh sparc x86"
 IUSE="debug"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_compile() {
-	local myconf=""
-	if [ "$ARCH" = "amd64" ]
-	then
-		libtoolize -c -f
-	fi
-
 	use debug \
 		&& myconf="--enable-debug=yes" \
 		|| myconf="--enable-debug=no"
@@ -43,10 +37,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} \
-	     install || die
-
-	dodoc AUTHORS ChangeLog COPYING README* INSTALL NEWS
+	make DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog README* INSTALL NEWS
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.21 2005/05/18 11:45:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.22 2006/07/06 01:01:42 vapier Exp $
 
 DESCRIPTION="Typesafe callback system for standard C++"
 HOMEPAGE="http://libsigc.sourceforge.net/"
@@ -8,24 +8,21 @@ SRC_URI="mirror://sourceforge/libsigc/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="1.2"
-KEYWORDS="x86 ppc sparc hppa amd64 alpha ia64 ppc64 ~ppc-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc-macos ppc64 sh sparc x86"
 IUSE="debug"
 
-RDEPEND="virtual/libc"
-
+RDEPEND=""
 DEPEND="${RDEPEND}
 	amd64? ( >=sys-devel/automake-1.7 )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	if useq amd64 || useq ppc64; then
-		libtoolize -c -f --automake
-		WANT_AUTOMAKE=1.7 aclocal -I scripts ${ACLOCAL_FLAGS} || die "aclocal failed.  Are your \$ACLOCAL_FLAGS sane?"
-		WANT_AUTOMAKE=1.7 automake --add-missing --copy
-		WANT_AUTOCONF=2.5 autoconf
-	fi
+	libtoolize -c -f --automake
+	WANT_AUTOMAKE=1.7 aclocal -I scripts ${ACLOCAL_FLAGS} || die "aclocal failed.  Are your \$ACLOCAL_FLAGS sane?"
+	WANT_AUTOMAKE=1.7 automake --add-missing --copy || die
+	WANT_AUTOCONF=2.5 autoconf || die
 }
 
 src_compile() {
@@ -42,8 +39,7 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc AUTHORS ChangeLog FEATURES IDEAS COPYING* \
-		README INSTALL NEWS TODO
+	dodoc AUTHORS ChangeLog FEATURES IDEAS README INSTALL NEWS TODO
 }
 
 pkg_postinst() {

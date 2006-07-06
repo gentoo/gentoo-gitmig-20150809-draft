@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.17.ebuild,v 1.2 2006/04/23 09:27:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.17.ebuild,v 1.3 2006/07/06 01:01:42 vapier Exp $
 
 inherit eutils gnome.org flag-o-matic
 
@@ -9,12 +9,12 @@ HOMEPAGE="http://libsigc.sourceforge.net/"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc test"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# don't waste time building examples/docs
 	sed -i 's|^\(SUBDIRS =.*\)docs examples\(.*\)$|\1\2|' Makefile.in || \
@@ -51,12 +51,12 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed."
-	rm -fr ${D}/usr/share
+	rm -fr "${D}"/usr/share
 	dodoc AUTHORS ChangeLog README NEWS TODO
 
 	if use doc ; then
 		dohtml -r docs/reference/html/* docs/images/*
-		cp -R examples ${D}/usr/share/doc/${PF}/
+		cp -R examples "${D}"/usr/share/doc/${PF}/
 	fi
 }
 
