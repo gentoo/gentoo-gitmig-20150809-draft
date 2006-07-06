@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-clock/vdr-clock-0.0.5b-r1.ebuild,v 1.2 2006/04/17 13:40:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-clock/vdr-clock-0.0.5b-r1.ebuild,v 1.3 2006/07/06 13:27:58 zzam Exp $
 
 inherit vdr-plugin
 
@@ -18,5 +18,5 @@ DEPEND=">=media-video/vdr-1.2.0"
 
 S=${WORKDIR}/clock-0.0.5b1
 
-PATCHES="${FILESDIR}/${P}-makefile.diff"
+PATCHES="${FILESDIR}/${P}-makefile.diff ${FILESDIR}/${P}-gcc4.diff"
 
