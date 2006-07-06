@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.8 2006/07/06 01:00:43 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.9 2006/07/06 18:41:14 gothgirl Exp $
 
-inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-module
+inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-module perl-app
 
 MY_PV=${PV/_beta/beta}
 MY_P="${PN}-${MY_PV}"
