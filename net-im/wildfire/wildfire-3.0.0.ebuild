@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.0.0.ebuild,v 1.2 2006/07/04 16:20:55 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.0.0.ebuild,v 1.3 2006/07/06 17:44:59 nichoj Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -23,6 +23,7 @@ RDEPEND=" >=virtual/jre-1.5 "
 DEPEND="net-im/jabber-base
 		=virtual/jdk-1.5*
 		dev-java/ant
+		dev-java/ant-contrib
 		>=dev-java/commons-net-1.4"
 
 S=${WORKDIR}/${PN//-/_}_src
