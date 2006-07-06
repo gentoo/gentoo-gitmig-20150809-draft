@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.54-r2.ebuild,v 1.12 2006/05/29 17:35:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.54-r2.ebuild,v 1.13 2006/07/06 23:15:23 genone Exp $
 
 inherit toolchain-funcs eutils
 
@@ -21,10 +21,10 @@ PROVIDE="virtual/portage"
 S=${WORKDIR}/${PN}-${PV}
 
 portage_docs() {
-	einfo ""
-	einfo "For help with using portage please consult the Gentoo Handbook"
-	einfo "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
-	einfo ""
+	elog ""
+	elog "For help with using portage please consult the Gentoo Handbook"
+	elog "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
+	elog ""
 }
 
 src_unpack() {
@@ -35,7 +35,7 @@ src_unpack() {
 	done
 
 	if [ "${PR}" != "r0" ]; then
-		einfo "Setting portage.VERSION to ${PVR} ..."
+		elog "Setting portage.VERSION to ${PVR} ..."
 		sed -i "s/^VERSION=.*/VERSION=\"${PVR}\"/" pym/portage.py || \
 			die "Failed to patch portage.VERSION"
 	fi

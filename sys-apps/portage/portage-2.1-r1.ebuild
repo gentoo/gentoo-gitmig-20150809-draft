@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1-r1.ebuild,v 1.11 2006/07/02 20:30:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1-r1.ebuild,v 1.12 2006/07/06 23:15:23 genone Exp $
 
 inherit toolchain-funcs eutils
 
@@ -48,10 +48,10 @@ S="${WORKDIR}"/${PN}-${PV}
 S_PL="${WORKDIR}"/${PN}-${PV_PL}
 
 portage_docs() {
-	einfo ""
-	einfo "For help with using portage please consult the Gentoo Handbook"
-	einfo "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
-	einfo ""
+	elog ""
+	elog "For help with using portage please consult the Gentoo Handbook"
+	elog "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
+	elog ""
 }
 
 src_unpack() {
@@ -61,7 +61,7 @@ src_unpack() {
 		epatch "${WORKDIR}/${PN}-${PV}${PATCHVER}.patch"
 		use linguas_pl && \
 			epatch "${WORKDIR}/${PN}-man-pl-${PV_PL}${PATCHVER_PL}.patch"
-		einfo "Setting portage.VERSION to ${PVR} ..."
+		elog "Setting portage.VERSION to ${PVR} ..."
 		sed -i "s/^VERSION=.*/VERSION=\"${PVR}\"/" pym/portage.py || \
 			die "Failed to patch portage.VERSION"
 		eend 0
@@ -191,35 +191,35 @@ pkg_postinst() {
 	ewarn "the CDB cache module), portage will not work until they have"
 	ewarn "been disabled via /etc/portage/modules."
 	echo
-	einfo "The default cache format has changed between 2.0.x and 2.1"
-	einfo "versions. If you have upgraded from 2.0.x, before using"
-	einfo "emerge, run \`emerge --metadata\` to restore portage's local"
-	einfo "cache."
+	elog "The default cache format has changed between 2.0.x and 2.1"
+	elog "versions. If you have upgraded from 2.0.x, before using"
+	elog "emerge, run \`emerge --metadata\` to restore portage's local"
+	elog "cache."
 	echo
-	einfo "With the new metadata_overlay cache module, it is possible to"
-	einfo "disable FEATURES=\"metadata-transfer\" (see make.conf.5)."
-	einfo "When this module is used, eclasses in \${PORTDIR} must never"
-	einfo "be modified by the user because portage will not be able to"
-	einfo "detect that cache regeneration is necessary."
-	einfo "When metadata_overlay is initially enabled by setting"
-	einfo "portdbapi.auxdbmodule = cache.metadata_overlay.database"
-	einfo "in /etc/portage/modules, the user must completely remove"
-	einfo "/var/cache/edb/dep/\${PORTDIR} in order to avoid unecessary"
-	einfo "cache regeneration."
+	elog "With the new metadata_overlay cache module, it is possible to"
+	elog "disable FEATURES=\"metadata-transfer\" (see make.conf.5)."
+	elog "When this module is used, eclasses in \${PORTDIR} must never"
+	elog "be modified by the user because portage will not be able to"
+	elog "detect that cache regeneration is necessary."
+	elog "When metadata_overlay is initially enabled by setting"
+	elog "portdbapi.auxdbmodule = cache.metadata_overlay.database"
+	elog "in /etc/portage/modules, the user must completely remove"
+	elog "/var/cache/edb/dep/\${PORTDIR} in order to avoid unecessary"
+	elog "cache regeneration."
 	echo
-	einfo "Flag ordering has changed for \`emerge --pretend --verbose\`."
-	einfo "Add EMERGE_DEFAULT_OPTS=\"--alphabetical\" to /etc/make.conf"
-	einfo "to restore the previous ordering."
+	elog "Flag ordering has changed for \`emerge --pretend --verbose\`."
+	elog "Add EMERGE_DEFAULT_OPTS=\"--alphabetical\" to /etc/make.conf"
+	elog "to restore the previous ordering."
 	echo
-	einfo "The default USE_ORDER setting (see make.conf.5) has changed in"
-	einfo "2.1 so that auto USE flags (from use.defaults) are no longer"
-	einfo "enabled.  In order to find out which flags have been disabled,"
-	einfo "the command \`env USE_ORDER=auto portageq envvar USE\` may be"
-	einfo "helpful.  These flags can be manually added to make.conf by the"
-	einfo "user (the command output may contain a few other automatically"
-	einfo "generated flags that do not need to be added to make.conf)."
+	elog "The default USE_ORDER setting (see make.conf.5) has changed in"
+	elog "2.1 so that auto USE flags (from use.defaults) are no longer"
+	elog "enabled.  In order to find out which flags have been disabled,"
+	elog "the command \`env USE_ORDER=auto portageq envvar USE\` may be"
+	elog "helpful.  These flags can be manually added to make.conf by the"
+	elog "user (the command output may contain a few other automatically"
+	elog "generated flags that do not need to be added to make.conf)."
 	echo
-	einfo "See NEWS and RELEASE-NOTES for further changes."
+	elog "See NEWS and RELEASE-NOTES for further changes."
 
 	portage_docs
 }

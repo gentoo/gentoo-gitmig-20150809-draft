@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r3.ebuild,v 1.5 2006/02/02 11:36:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r3.ebuild,v 1.6 2006/07/06 23:15:23 genone Exp $
 
 inherit toolchain-funcs
 
@@ -136,11 +136,11 @@ pkg_postinst() {
 	fi
 
 	echo
-	einfo "Feature additions are noted in help and make.conf descriptions."
+	elog "Feature additions are noted in help and make.conf descriptions."
 	echo
-	einfo "Update configs using 'etc-update' please. Maintaining current configs"
-	einfo "for portage and other system packages is fairly important for the"
-	einfo "continued health of your system."
+	elog "Update configs using 'etc-update' please. Maintaining current configs"
+	elog "for portage and other system packages is fairly important for the"
+	elog "continued health of your system."
 	echo
 	ewarn "NOTICE: There have been changes in the location of some internal files"
 	ewarn "        to better match the FHS. The changes do not directly affect users"
@@ -148,11 +148,11 @@ pkg_postinst() {
 	ewarn "        with and without these changes may introduce some inconsistencies"
 	ewarn "        in package data regarding 'world' and 'virtuals' (provides)."
 	echo
-	einfo "        /var/cache/edb/world has moved to /var/lib/portage/world"
+	elog "        /var/cache/edb/world has moved to /var/lib/portage/world"
 	echo
-	einfo "        /var/cache/edb/virtuals has been deprecated and is now calculated"
-	einfo "        on demand. Strictly _USER_ modifications to virtuals may go into"
-	einfo "        /etc/portage/profile/virtuals and will not be modified by portage."
+	elog "        /var/cache/edb/virtuals has been deprecated and is now calculated"
+	elog "        on demand. Strictly _USER_ modifications to virtuals may go into"
+	elog "        /etc/portage/profile/virtuals and will not be modified by portage."
 	echo
 
 	for X in ${ROOT}etc/._cfg????_make.globals; do
@@ -160,8 +160,8 @@ pkg_postinst() {
 		[ -e "${X}" ] && mv -f "${X}" "${ROOT}etc/make.globals"
 	done
 
-	einfo "You may run 'emerge metadata' to perform cache updates if you have"
-	einfo "changed versions of portage. This will provide a fairly dramatic"
-	einfo "speedup. Alternatively, you may 'emerge sync' if it has been more"
-	einfo "than 30 minutes since your last sync."
+	elog "You may run 'emerge metadata' to perform cache updates if you have"
+	elog "changed versions of portage. This will provide a fairly dramatic"
+	elog "speedup. Alternatively, you may 'emerge sync' if it has been more"
+	elog "than 30 minutes since your last sync."
 }
