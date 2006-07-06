@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.204 2006/07/05 09:06:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.205 2006/07/06 02:57:33 kumba Exp $
+
+  06 Jul 2006; Joshua Kinard <kumba@gentoo.org> udev-090-r1.ebuild:
+  Marked stable on mips.
 
   05 Jul 2006; Martin Schlemmer <azarah@gentoo.org> files/seq_node.sh:
   Fix some logic issues and typo's.
