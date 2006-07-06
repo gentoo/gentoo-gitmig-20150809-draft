@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.45 2006/07/06 17:44:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.46 2006/07/06 23:43:53 squinky86 Exp $
+
+  06 Jul 2006; Jon Hood <squinky86@gentoo.org>
+  sgmltools-lite-3.0.3-r10.ebuild:
+  Stable on amd64, bug #139255.
 
   06 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   sgmltools-lite-3.0.3-r10.ebuild:
