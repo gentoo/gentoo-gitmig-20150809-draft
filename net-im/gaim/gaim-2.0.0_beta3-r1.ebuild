@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.7 2006/07/05 19:46:10 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.8 2006/07/06 01:00:43 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-module
 
@@ -189,7 +189,7 @@ src_compile() {
 	if use ssl || use msn ; then
 		if use gnutls ; then
 			einfo "Disabling NSS, using GnuTLS"
-			myconf="${myconf} --enable-nss=no enable-gnutls=yes"
+			myconf="${myconf} --enable-nss=no --enable-gnutls=yes"
 			myconf="${myconf} --with-gnutls-includes=/usr/include/gnutls"
 			myconf="${myconf} --with-gnutls-libs=/usr/$(get_libdir)"
 		else
