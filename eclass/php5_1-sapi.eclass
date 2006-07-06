@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.26 2006/06/04 22:59:15 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.27 2006/07/06 15:10:16 chtekk Exp $
 #
 # ########################################################################
 #
@@ -511,7 +511,7 @@ php5_1-sapi_src_compile() {
 		fi
 		phpconfutils_extension_with		"pdo-odbc"		"odbc"			1 "unixODBC,/usr"
 		phpconfutils_extension_with		"pdo-pgsql"		"postgres"		1
-		phpconfutils_extension_without	"pdo-sqlite"	"sqlite"		1
+		phpconfutils_extension_with		"pdo-sqlite"	"sqlite"		1
 	fi
 
 	# readline/libedit support
