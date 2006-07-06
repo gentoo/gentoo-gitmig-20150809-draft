@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.86 2006/04/23 09:27:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.87 2006/07/06 14:02:34 grobian Exp $
+
+  06 Jul 2006; Fabian Groffen <grobian@gentoo.org> libsigc++-2.0.17.ebuild:
+  Removing ppc-macos bogus conditional (bug #139380)
 
   23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   libsigc++-2.0.17.ebuild:
