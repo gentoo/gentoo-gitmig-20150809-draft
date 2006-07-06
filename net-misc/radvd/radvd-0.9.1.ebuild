@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.9.1.ebuild,v 1.4 2006/02/18 19:22:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.9.1.ebuild,v 1.5 2006/07/06 20:54:07 brix Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="sys-devel/bison
 	sys-devel/flex
 	sys-apps/sed"
-RDEPEND="sys-process/procps"
+RDEPEND=">=sys-process/procps-3.2"
 
 pkg_setup() {
 	enewgroup radvd
