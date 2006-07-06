@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/http
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.1 2006/07/06 17:33:43 kolmodin Exp $
+
+*http-2006.7.5 (06 Jul 2006)
+
+  06 Jul 2006; <kolmodin@gentoo.org> +metadata.xml, +http-2006.7.5.ebuild:
+  Initial import.
+
