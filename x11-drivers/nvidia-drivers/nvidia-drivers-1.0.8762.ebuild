@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.8762.ebuild,v 1.1 2006/07/06 19:52:04 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.8762.ebuild,v 1.2 2006/07/06 21:12:54 augustus Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -291,7 +291,8 @@ src_install-libs() {
 
 	exeinto ${X11_LIB_DIR}/modules/drivers
 
-	if use dlloader; then
+	if use dlloader || has_version ">=x11-base/xorg-x11-6.8.99.15" ||
+		has_version "x11-base/xorg-server"; then 
 		[[ -f ${drvdir}/nvidia_drv.so ]] && \
 			doexe ${drvdir}/nvidia_drv.so
 	else
