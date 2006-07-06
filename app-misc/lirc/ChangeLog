@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.97 2006/07/05 20:17:04 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.98 2006/07/06 06:21:03 corsair Exp $
+
+  06 Jul 2006; Markus Rothe <corsair@gentoo.org> lirc-0.8.0-r1.ebuild:
+  Stable on ppc64
 
   05 Jul 2006; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.0-r1.ebuild:
   Marked stable on x86.
