@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/filer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/ChangeLog,v 1.19 2006/02/11 21:14:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/ChangeLog,v 1.20 2006/07/06 13:01:35 ian Exp $
+
+  06 Jul 2006; Christian Hartmann <ian@gentoo.org> -filer-0.0.6.ebuild,
+  -filer-0.0.10.ebuild, filer-0.0.12.ebuild:
+  Fixed HOMEPAGE (thanks dakjo); removed obsolete versions
 
   11 Feb 2006; Michael Cummings <mcummings@gentoo.org> filer-0.0.6.ebuild,
   filer-0.0.10.ebuild, filer-0.0.12.ebuild:
