@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.173 2006/06/25 03:52:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.174 2006/07/06 19:19:32 flameeyes Exp $
+
+  06 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> coreutils-5.96.ebuild,
+  coreutils-5.97.ebuild:
+  Drop keyword from old version, and make acl deps being actual dep only on
+  Linux. *BSD does not require those deps although acl works fine.
 
 *coreutils-5.97 (25 Jun 2006)
 
