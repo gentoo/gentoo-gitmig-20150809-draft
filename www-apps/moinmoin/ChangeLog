@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/moinmoin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.15 2006/07/02 00:59:07 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.16 2006/07/06 22:43:39 weeve Exp $
+
+  06 Jul 2006; Jason Wever <weeve@gentoo.org> moinmoin-1.3.5-r1.ebuild:
+  Stable on SPARC wrt bug #134760.
 
 *moinmoin-1.5.4 (02 Jul 2006)
 
