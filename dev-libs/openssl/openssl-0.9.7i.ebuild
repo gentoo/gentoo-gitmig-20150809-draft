@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7i.ebuild,v 1.24 2006/07/02 04:55:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7i.ebuild,v 1.25 2006/07/06 13:56:05 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -124,7 +124,10 @@ src_test() {
 }
 
 src_install() {
-	make INSTALL_PREFIX="${D}" MANDIR=/usr/share/man install || die
+	make 	CC="$(tc-getCC)" MAKEDEPPROG="$(tc-getCC)" \
+		AR="$(tc-getAR) r" \
+		RANLIB="$(tc-getRANLIB)" \
+		INSTALL_PREFIX="${D}" MANDIR=/usr/share/man install || die
 	dodoc CHANGES* FAQ NEWS README
 	dodoc doc/*.txt
 	dohtml doc/*
