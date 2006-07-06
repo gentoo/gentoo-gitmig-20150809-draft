@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/tlf
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.10 2005/09/14 06:56:27 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.11 2006/07/06 23:39:07 squinky86 Exp $
+
+  06 Jul 2006; Jon Hood <squinky86@gentoo.org> tlf-0.9.23.ebuild:
+  Add ~amd64, bug #104935.
 
   14 Sep 2005; Aron Griffis <agriffis@gentoo.org> tlf-0.9.23.ebuild:
   Mark 0.9.23 stable on alpha

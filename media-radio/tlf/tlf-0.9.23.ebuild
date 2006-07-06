@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/tlf-0.9.23.ebuild,v 1.3 2005/09/14 06:56:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/tlf-0.9.23.ebuild,v 1.4 2006/07/06 23:39:07 squinky86 Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://sharon.esrac.ele.tue.nl/pub/linux/ham/tlf/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="alpha ~ppc x86"
+KEYWORDS="alpha ~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="virtual/libc
