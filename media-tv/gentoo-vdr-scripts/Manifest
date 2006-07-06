@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX gentoo-vdr-scripts-0.3.5-merged-file-permissions.diff 286 RMD160 30d147bba9c706aae99c9a3fd9b567bf1b0b32a7 SHA1 c96ca9b9a52599d9ae12bc81d23bcdaea78a3bf2 SHA256 744a2761b1b816c38a8b71827c7aea4b86974ad744e80aead75b3d3f052b755f
-MD5 caaceba95ef8d2cad8be52f72fa87dec files/gentoo-vdr-scripts-0.3.5-merged-file-permissions.diff 286
-RMD160 30d147bba9c706aae99c9a3fd9b567bf1b0b32a7 files/gentoo-vdr-scripts-0.3.5-merged-file-permissions.diff 286
-SHA256 744a2761b1b816c38a8b71827c7aea4b86974ad744e80aead75b3d3f052b755f files/gentoo-vdr-scripts-0.3.5-merged-file-permissions.diff 286
+AUX gentoo-vdr-scripts-0.3.5-merged-file-permissions.diff 336 RMD160 263aad626f433a461504dd698513dd2994734ebb SHA1 4ac8d764bac7c7fcbe0b998ca79c294a180c3070 SHA256 1262ef2aaccd6e5a82c45f9a93d2aba9aa7c07dc96ed05c089560d81f5ee07d3
+MD5 6db7cfbeb01efbcfcf5981173fd023be files/gentoo-vdr-scripts-0.3.5-merged-file-permissions.diff 336
+RMD160 263aad626f433a461504dd698513dd2994734ebb files/gentoo-vdr-scripts-0.3.5-merged-file-permissions.diff 336
+SHA256 1262ef2aaccd6e5a82c45f9a93d2aba9aa7c07dc96ed05c089560d81f5ee07d3 files/gentoo-vdr-scripts-0.3.5-merged-file-permissions.diff 336
 AUX gentoo-vdr-scripts-0.3.5-skip-plugin.diff 758 RMD160 7d887d26d27064db44ca03dfe589a8364c406eb9 SHA1 1f7858caf67a3a83b12ac4e8c69b72a1225d454e SHA256 d61f177162708398802eb644090f74f351e0595d60093f0d19272c6c09498af0
 MD5 ee33557bed3731d8baf7689e38025f1a files/gentoo-vdr-scripts-0.3.5-skip-plugin.diff 758
 RMD160 7d887d26d27064db44ca03dfe589a8364c406eb9 files/gentoo-vdr-scripts-0.3.5-skip-plugin.diff 758
@@ -23,10 +23,10 @@ EBUILD gentoo-vdr-scripts-0.3.5-r2.ebuild 2766 RMD160 ab579360fe5703e646a65b0a78
 MD5 e4d1bb4a798e5ba588f12dd1e88bda66 gentoo-vdr-scripts-0.3.5-r2.ebuild 2766
 RMD160 ab579360fe5703e646a65b0a7852e78048a207f8 gentoo-vdr-scripts-0.3.5-r2.ebuild 2766
 SHA256 e4af36b58f97ad2581415bb2562a7c58bd49556e314b27020385da699b57ead4 gentoo-vdr-scripts-0.3.5-r2.ebuild 2766
-MISC ChangeLog 12352 RMD160 a8eb7a00e1794a8faea4faa1b5fca1abe2d9edce SHA1 c7b22b05d8534232e1c3ff61e376e71127e8b10d SHA256 09a431c00f8daf845dd11037921ef42347a9df1a27e378dfa12b80a77246a034
-MD5 9915b6082037768f1401b306539820c8 ChangeLog 12352
-RMD160 a8eb7a00e1794a8faea4faa1b5fca1abe2d9edce ChangeLog 12352
-SHA256 09a431c00f8daf845dd11037921ef42347a9df1a27e378dfa12b80a77246a034 ChangeLog 12352
+MISC ChangeLog 12506 RMD160 d0351fd8f3c3799bcb78db396ac1707f65fafb0a SHA1 031c1240c63b50d5e8afa6ea60cb6d291d114048 SHA256 2dc3d931fa3ca3912b7f6e1d4220da76e86e123e8b694c0f30183a19d2afd560
+MD5 4ff2886fff82a45479315b5f60f46c14 ChangeLog 12506
+RMD160 d0351fd8f3c3799bcb78db396ac1707f65fafb0a ChangeLog 12506
+SHA256 2dc3d931fa3ca3912b7f6e1d4220da76e86e123e8b694c0f30183a19d2afd560 ChangeLog 12506
 MISC metadata.xml 259 RMD160 cc3cadd479ce9fb1e22948ac9f01f5725da33fa6 SHA1 71c8f0604523f99ac8b7849a01d861d721a191fd SHA256 313f79a460281914a7f72cb73e91eec5f5cfec67c79f657743d49036d04951fe
 MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
 RMD160 cc3cadd479ce9fb1e22948ac9f01f5725da33fa6 metadata.xml 259
@@ -40,7 +40,7 @@ SHA256 bbbc9f334c6a05dd546add518388a36d002f8d014e698484b4933bdabe27a38e files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFErQqmZfSl1Kp5KmoRAmFhAKCKm2XMoD1MkceVmgLQ1is6g7cl4wCg5Fyg
-8ZiJXsrUTPCAhwGqW1EPaFc=
-=BxGv
+iD8DBQFErRQDZfSl1Kp5KmoRAphuAKDEvyX3329M4DeySdQFZyKSNiyHjQCcDb7n
+DMwo7/nKW3V1VaZafDaoRxw=
+=dgdI
 -----END PGP SIGNATURE-----

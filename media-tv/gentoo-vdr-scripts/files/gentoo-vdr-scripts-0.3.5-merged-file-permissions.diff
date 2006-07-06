@@ -1,5 +1,5 @@
---- usr/share/vdr/inc/commands-functions.sh	(Revision 299)
-+++ usr/share/vdr/inc/commands-functions.sh	(Revision 300)
+--- gentoo-vdr-scripts-0.3.5/usr/share/vdr/inc/commands-functions.sh	(Revision 299)
++++ gentoo-vdr-scripts-0.3.5/usr/share/vdr/inc/commands-functions.sh	(Revision 300)
 @@ -41,6 +41,8 @@
  		echo >> "${mergedfile}"
  	done
