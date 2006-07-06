@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/sylpheed-claws-acpi-notifier
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-acpi-notifier/ChangeLog,v 1.3 2006/06/25 02:54:14 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-acpi-notifier/ChangeLog,v 1.4 2006/07/06 23:19:32 genone Exp $
+
+  06 Jul 2006; Marius Mauch <genone@gentoo.org>
+  sylpheed-claws-acpi-notifier-0.8.ebuild,
+  sylpheed-claws-acpi-notifier-1.0.2.ebuild:
+  replace einfo with elog
 
 *sylpheed-claws-acpi-notifier-1.0.2 (25 Jun 2006)
 

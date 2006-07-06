@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/sylpheed-claws-perl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-perl/ChangeLog,v 1.8 2006/06/25 04:16:35 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-perl/ChangeLog,v 1.9 2006/07/06 23:17:38 genone Exp $
+
+  06 Jul 2006; Marius Mauch <genone@gentoo.org>
+  sylpheed-claws-perl-0.6.ebuild, sylpheed-claws-perl-0.9.ebuild,
+  sylpheed-claws-perl-0.9.4.ebuild:
+  replace einfo with elog
 
 *sylpheed-claws-perl-0.9.4 (25 Jun 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-acpi-notifier/sylpheed-claws-acpi-notifier-0.8.ebuild,v 1.1 2006/02/10 18:09:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-acpi-notifier/sylpheed-claws-acpi-notifier-0.8.ebuild,v 1.2 2006/07/06 23:19:32 genone Exp $
 
 inherit eutils
 
@@ -39,14 +39,14 @@ pkg_postinst() {
 	echo
 	for procfile in ${PROC_IFACES}; do
 		if [[ -f ${procfile} ]]; then
-			einfo "Make sure ${procfile} is writable by users of this plugin."
+			elog "Make sure ${procfile} is writable by users of this plugin."
 			message_shown=true
 		fi
 	done
 	if ! $message_shown; then
-		einfo "To use this plugin, you will have to find the /proc interface"
-		einfo "that controls your LED. Whatever it is, make sure it's writable"
-		einfo "by users who will run this plugin."
+		elog "To use this plugin, you will have to find the /proc interface"
+		elog "that controls your LED. Whatever it is, make sure it's writable"
+		elog "by users who will run this plugin."
 	fi
 	echo
 }
