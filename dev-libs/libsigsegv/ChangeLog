@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libsigsegv
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.17 2005/09/02 08:10:39 grobian Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.18 2006/07/06 18:09:44 mkennedy Exp $
+
+*libsigsegv-2.4 (06 Jul 2006)
+
+  06 Jul 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/libsigsegv-2.4-ppc-macos.patch, +libsigsegv-2.4.ebuild:
+  New upstream version; Patch to configure.ac rather than configure.
 
   02 Sep 2005; Fabian Groffen <grobian@gentoo.org>
   +files/libsigsegv-2.2-ppc-macos.patch, libsigsegv-2.2.ebuild:
