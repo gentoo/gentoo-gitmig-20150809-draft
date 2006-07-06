@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/sun-fastinfoset-bin
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-fastinfoset-bin/ChangeLog,v 1.1 2006/07/06 17:36:35 nelchael Exp $
+
+*sun-fastinfoset-bin-1.0.1 (06 Jul 2006)
+
+  06 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
+  +sun-fastinfoset-bin-1.0.1.ebuild:
+  Initial version.
+
