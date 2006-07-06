@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.6.3.ebuild,v 1.6 2006/03/06 22:00:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.6.3.ebuild,v 1.7 2006/07/06 19:14:50 mrness Exp $
 
 DESCRIPTION="A lightweight HTTP/SSL proxy"
 HOMEPAGE="http://tinyproxy.sourceforge.net/"
@@ -38,4 +38,9 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe "${FILESDIR}/tinyproxy.rc" tinyproxy
+}
+
+pkg_postinst() {
+	einfo "For filtering domains and URLs, enable filter option in the configuration file"
+	einfo "and add them to the filter file (one domain or URL per line)."
 }
