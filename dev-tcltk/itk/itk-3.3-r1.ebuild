@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/itk-3.3-r1.ebuild,v 1.3 2006/03/10 22:59:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/itk-3.3-r1.ebuild,v 1.4 2006/07/06 02:43:19 weeve Exp $
 
 MY_P="${PN}${PV}"
 DESCRIPTION="Object Oriented Enhancements for Tcl/Tk"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/incrtcl/${MY_P}.tar.gz"
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ia64 ~ppc sparc ~x86"
 
 DEPEND="dev-lang/tk
 	~dev-tcltk/itcl-${PV}"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/itk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.8 2006/03/10 22:59:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.9 2006/07/06 02:43:19 weeve Exp $
+
+  06 Jul 2006; Jason Wever <weeve@gentoo.org> itk-3.3-r1.ebuild:
+  Stable on SPARC wrt bug #139367.
 
   10 Mar 2006; Aron Griffis <agriffis@gentoo.org> itk-3.3-r1.ebuild:
   Mark 3.3-r1 stable on ia64. #115177
