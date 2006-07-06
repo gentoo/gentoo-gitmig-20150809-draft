@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.122 2006/07/05 23:27:41 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.123 2006/07/06 16:18:52 exg Exp $
+
+*mit-krb5-1.4.3-r2 (06 Jul 2006)
+
+  06 Jul 2006; Emanuele Giaquinta <exg@gentoo.org>
+  +mit-krb5-1.4.3-r2.ebuild:
+  Do not override localstatedir, bug #137433. Use always the internal berkdb,
+  see bug #137438. Install more docs; tetex use flag is gone, use doc to build
+  the developer docs. Install upstream configuration files examples and correct
+  krb5.conf for stable ebuild, bug #53520.
 
   05 Jul 2006; Emanuele Giaquinta <exg@gentoo.org> files/krb5.conf,
   mit-krb5-1.4.3.ebuild, mit-krb5-1.4.3-r1.ebuild:
