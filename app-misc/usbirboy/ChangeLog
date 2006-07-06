@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/usbirboy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/ChangeLog,v 1.5 2006/07/03 08:39:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/ChangeLog,v 1.6 2006/07/06 09:54:30 zzam Exp $
+
+  06 Jul 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/usbirboy-0.2.1-nice-kernel-msgs.diff, usbirboy-0.2.1-r1.ebuild:
+  Added a patch to remove absolute filenames from printk statements.
 
   03 Jul 2006; Matthias Schwarzott <zzam@gentoo.org>
   +files/usbirboy-0.2.1-module_param.diff, -usbirboy-0.2.1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/usbirboy-0.2.1-r1.ebuild,v 1.2 2006/07/03 08:39:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/usbirboy-0.2.1-r1.ebuild,v 1.3 2006/07/06 09:54:30 zzam Exp $
 
 inherit linux-mod eutils
 
@@ -39,6 +39,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-kernel-2.6.16.diff
 	epatch ${FILESDIR}/${P}-module_param.diff
+	epatch ${FILESDIR}/${P}-nice-kernel-msgs.diff
 }
 
 src_install() {
