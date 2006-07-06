@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/2.4/use.mask,v 1.6 2006/06/26 06:14:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/2.4/use.mask,v 1.7 2006/07/06 20:57:55 wolf31o2 Exp $
 
 # Can't use these with 2.4 headers
 hal
@@ -9,6 +9,7 @@ udev
 alsa
 jack
 pmount
+input_devices_evdev
 
 # requires a JDK
 mpe-sdk
