@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.1.ebuild,v 1.7 2006/03/14 23:20:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.1.ebuild,v 1.8 2006/07/06 01:32:20 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
 IUSE="gnome debug encode pccts"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 RDEPEND="encode? ( >=media-sound/lame-3.90 )
 	gnome? ( >=dev-cpp/gtkmm-2.4
