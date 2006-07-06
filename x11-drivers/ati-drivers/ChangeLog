@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.42 2006/06/27 23:56:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.43 2006/07/06 13:04:05 lu_zero Exp $
+
+*ati-drivers-8.26.18-r1 (06 Jul 2006)
+
+  06 Jul 2006; Luca Barbato <lu_zero@gentoo.org> files/09ati,
+  +files/atieventsd.rc6, +ati-drivers-8.26.18-r1.ebuild:
+  Add support for acpi, thanks to Armando Di Cianno <armando@goodship.net> for
+  the initial ebuild, see bug #138414
 
 *ati-drivers-8.26.18 (27 Jun 2006)
 
