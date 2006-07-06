@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.10.1.ebuild,v 1.1 2006/07/06 15:57:54 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.10.1.ebuild,v 1.2 2006/07/06 16:30:12 humpback Exp $
 
 inherit virtualx multilib eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="dbus gnome libnotify nls spell srv"
 
-RDEPEND=">=dev-python/pygtk-2.8.2
+RDEPEND="!<=dev-python/gnome-python-2
+	>=dev-python/pygtk-2.8.2
 	>=dev-python/pysqlite-2.0.5
 	dbus? ( >=sys-apps/dbus-0.60 )
 	gnome? ( >=dev-python/gnome-python-extras-2.10 )
