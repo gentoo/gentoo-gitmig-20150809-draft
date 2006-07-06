@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.98 2006/07/03 05:09:32 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.99 2006/07/06 05:03:45 kumba Exp $
+
+*mips-sources-2.6.15.7-r2 (06 Jul 2006)
+
+  06 Jul 2006; Joshua Kinard <kumba@gentoo.org>
+  -mips-sources-2.6.15.7-r1.ebuild, +mips-sources-2.6.15.7-r2.ebuild,
+  mips-sources-2.6.16.22.ebuild, mips-sources-2.6.17.3.ebuild:
+  The 1.22 version of generic-patches tarball got damaged in getting out to
+  the mirrors, so rather than wait for that to be cleared, 1.23 is being
+  uploaded instead and all versions will reference it. Also updated 2.6.15.7
+  to pull in the squashfs patch and a hack to allow 64bit kernel builds on
+  ip22.
 
 *mips-sources-2.6.17.3 (03 Jul 2006)
 *mips-sources-2.6.16.22 (03 Jul 2006)
