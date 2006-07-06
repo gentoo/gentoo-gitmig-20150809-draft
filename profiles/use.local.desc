@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2003 2006/07/06 17:48:28 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2004 2006/07/06 21:16:39 chutzpah Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1341,6 +1341,7 @@ net-www/mod_auth_ldap:disk-cache - Enables support for disk cache.
 net-www/mod_auth_ldap:mem-cache - Enables support for memory cache.
 net-www/mod_ftpd:dbi - Enables support for libDBI
 net-www/mod_log_sql:dbi - Enables support for libDBI
+net-www/mozplugger:firefox - Depend on firefox rather than seamonkey
 net-www/mplayerplug-in:gecko-sdk - Forces use of Gecko-SDK instead of firefox/mozilla
 net-www/pwauth:domain-aware - Ignore leading domain names in username (Windows compat)
 net-www/pwauth:faillog - Log failed login attempts
