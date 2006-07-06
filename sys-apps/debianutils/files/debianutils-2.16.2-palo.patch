@@ -1,0 +1,30 @@
+--- mkboot
++++ mkboot
+@@ -85,7 +85,7 @@
+ # check whether PALO is installed
+ palocheck() {
+     printf "\nChecking for PALO..."
+-    if [ -f /etc/palo.conf ] && [ -x /sbin/palo ]; then
++    if [ -f /etc/palo.conf ] && which palo > /dev/null; then
+        echo "Yes"
+        return 0
+     fi
+@@ -380,9 +380,15 @@
+     fi
+ 
+     if palocheck; then
+-        printf "\nPALO is installed. To automatically switch to new kernels, point your\n"
+-        echo "default entry in palo.conf to $1"
+-        exit 0
++        palo=`which palo`
++        printf "\nShould I run $palo? (y/N) "
++        read input
++        if [ "$input" = "y" ]; then
++            palo && exit 0
++            echo "There was a problem running $palo."
++            exit 1
++        fi
++        exit 0
+     fi
+ 
+     printf "\nShould I make a bootdisk? (y/N) "
