@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jcs
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/ChangeLog,v 1.1 2006/07/06 20:54:04 nelchael Exp $
+
+*jcs-1.2.6.5-r1 (06 Jul 2006)
+
+  06 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/build-1.2.6.5.xml, +metadata.xml, +jcs-1.2.6.5-r1.ebuild:
+  Initial commit, this ebuild should be used rather than dev-java/jcs-bin.
+
