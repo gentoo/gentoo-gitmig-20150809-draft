@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5591 2006/07/06 02:38:06 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5592 2006/07/06 02:48:37 nichoj Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Joshua Nichols <nichoj@gentoo.org> (05 Jul 2006)
+# Masking Eclipse 3.2 until we get new virtuals in place.
+=dev-util/eclipse-sdk-3.2*
 
 # Stefan Schweizer <genstef@gentoo.org> (5 Jul 2006)
 # Masked to allow proper testing of the old to-be-stable versions
