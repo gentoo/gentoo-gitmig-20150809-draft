@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eclipse-cdt-bin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/ChangeLog,v 1.13 2006/06/26 19:04:09 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/ChangeLog,v 1.14 2006/07/06 18:55:32 mr_bones_ Exp $
+
+  06 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -eclipse-cdt-bin-1.2.0.ebuild:
+  remove dep-broken ebuild for Betelgeuse
 
 *eclipse-cdt-bin-3.0.2 (26 Jun 2006)
 
