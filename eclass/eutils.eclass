@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.243 2006/07/05 01:16:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.244 2006/07/06 23:53:57 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -1482,7 +1482,7 @@ strip-linguas() {
 			nols="${nols} ${f}"
 		fi
 	done
-	[[ -n ${newls} ]] \
+	[[ -n ${nols} ]] \
 		&& ewarn "Sorry, but ${PN} does not support the LINGUAs:" ${nols}
 	export LINGUAS=${newls:1}
 }
