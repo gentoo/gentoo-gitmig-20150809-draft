@@ -1,6 +1,26 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.139 2006/06/27 18:04:52 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.140 2006/07/06 20:58:56 augustus Exp $
+
+*nvidia-kernel-1.0.8762-r1 (06 Jul 2006)
+*nvidia-kernel-1.0.8756-r1 (06 Jul 2006)
+*nvidia-kernel-1.0.8178-r4 (06 Jul 2006)
+*nvidia-kernel-1.0.8174-r2 (06 Jul 2006)
+*nvidia-kernel-1.0.7676-r2 (06 Jul 2006)
+*nvidia-kernel-1.0.7667-r1 (06 Jul 2006)
+*nvidia-kernel-1.0.7174-r3 (06 Jul 2006)
+*nvidia-kernel-1.0.7167-r2 (06 Jul 2006)
+*nvidia-kernel-1.0.6629-r6 (06 Jul 2006)
+*nvidia-kernel-1.0.6111-r4 (06 Jul 2006)
+
+  06 Jul 2006; Kristopher Kersey <augustus@gentoo.org>
+  +nvidia-kernel-1.0.6111-r4.ebuild, +nvidia-kernel-1.0.6629-r6.ebuild,
+  +nvidia-kernel-1.0.7167-r2.ebuild, +nvidia-kernel-1.0.7174-r3.ebuild,
+  +nvidia-kernel-1.0.7667-r1.ebuild, +nvidia-kernel-1.0.7676-r2.ebuild,
+  +nvidia-kernel-1.0.8174-r2.ebuild, +nvidia-kernel-1.0.8178-r4.ebuild,
+  +nvidia-kernel-1.0.8756-r1.ebuild, +nvidia-kernel-1.0.8762-r1.ebuild:
+  Bumped kernel ebuilds to include blocking of new x11-drivers/nvidia-* ebuilds
+  and message about upgrading to the new ebuilds.
 
   27 Jun 2006; Martin Schlemmer <azarah@gentoo.org>
   nvidia-kernel-1.0.8762.ebuild:
