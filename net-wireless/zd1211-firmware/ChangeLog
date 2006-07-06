@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/zd1211-firmware
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211-firmware/ChangeLog,v 1.1 2006/07/06 19:17:20 dsd Exp $
+
+*zd1211-firmware-1.1 (06 Jul 2006)
+
+  06 Jul 2006; Daniel Drake <dsd@gentoo.org> +metadata.xml,
+  +zd1211-firmware-1.1.ebuild:
+  Initial import
+
