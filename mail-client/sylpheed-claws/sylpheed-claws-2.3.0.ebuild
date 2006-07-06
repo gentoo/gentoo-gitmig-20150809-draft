@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.3.0.ebuild,v 1.5 2006/07/03 14:40:21 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.3.0.ebuild,v 1.6 2006/07/06 06:25:59 corsair Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification"
 
@@ -19,7 +19,7 @@ fi
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~hppa ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ppc ppc64 sparc x86"
 
 COMMONDEPEND=">=x11-libs/gtk+-2.4
 	pda? ( >=app-pda/jpilot-0.99 )
