@@ -1,8 +1,6 @@
 # Copyright 2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/virtuals,v 1.3 2005/01/21 22:20:21 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/virtuals,v 1.4 2006/07/06 10:28:06 nelchael Exp $
 
 virtual/alsa            sys-kernel/hardened-sources
 virtual/bootloader      sys-boot/yaboot
-virtual/jdk             dev-java/ibm-jdk-bin
-virtual/jre             dev-java/ibm-jre-bin

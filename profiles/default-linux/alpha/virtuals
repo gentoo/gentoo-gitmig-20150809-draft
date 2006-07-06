@@ -1,9 +1,7 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/virtuals,v 1.16 2006/03/20 13:46:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/virtuals,v 1.17 2006/07/06 10:28:05 nelchael Exp $
 
 virtual/alsa				sys-kernel/vanilla-sources
 virtual/bootloader			sys-boot/aboot
-virtual/jre				dev-java/compaq-jre
-virtual/jdk				dev-java/compaq-jdk
 virtual/linux-sources		sys-kernel/vanilla-sources
