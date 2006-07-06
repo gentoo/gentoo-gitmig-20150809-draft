@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2001 2006/07/05 19:57:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2002 2006/07/06 15:38:43 humpback Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1102,6 +1102,7 @@ net-im/gaim:gadu - Enable Gadu Gadu protocol support.
 net-im/gaim:meanwhile - Enable meanwhile support for Sametime protocol.
 net-im/gaim:silc - Enable SILC protocol support
 net-im/gaim:xscreensaver - Enable X idle time support instead of gaim idle time.
+net-im/gajim:libnotify - Enable libnotify popup balloons
 net-im/gajim:srv -  SRV capabilities
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/gossip:galago - Enable galago presence framework support
