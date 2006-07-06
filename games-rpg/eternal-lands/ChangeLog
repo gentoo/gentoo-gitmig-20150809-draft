@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/eternal-lands
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.21 2006/07/06 13:28:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.22 2006/07/06 16:54:04 uberlord Exp $
+
+*eternal-lands-1.3.0-r1 (06 Jul 2006)
+
+  06 Jul 2006; Roy Marples <uberlord@gentoo.org>
+  +files/eternal-lands-1.3.0-counters.patch, +eternal-lands-1.3.0-r1.ebuild:
+  Added a patch to make the new counters actually work.
 
   06 Jul 2006; Roy Marples <uberlord@gentoo.org> eternal-lands-1.3.0.ebuild:
   Stop compiling with -DFONTS_FIX as it appears to be a bit wonky.
