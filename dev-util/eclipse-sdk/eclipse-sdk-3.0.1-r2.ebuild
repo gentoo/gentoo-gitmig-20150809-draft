@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.1-r2.ebuild,v 1.8 2005/04/21 19:09:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.1-r2.ebuild,v 1.9 2006/07/06 12:36:30 nichoj Exp $
 
 inherit eutils java-utils
 
@@ -14,7 +14,7 @@ SLOT="3"
 LICENSE="CPL-1.0"
 KEYWORDS="x86 ppc ~amd64"
 
-RDEPEND="|| ( >=virtual/jdk-1.4.2 =dev-java/blackdown-jdk-1.4.2* )
+RDEPEND="=virtual/jdk-1.4*
 	gtk? ( >=x11-libs/gtk+-2.2.4 )
 	!gtk? (	kde? ( kde-base/kdelibs x11-libs/openmotif )
 		!kde? ( motif? ( x11-libs/openmotif )
