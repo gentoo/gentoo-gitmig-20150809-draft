@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-20060203.ebuild,v 1.3 2006/07/01 01:06:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-20060203.ebuild,v 1.4 2006/07/06 08:11:57 spyderous Exp $
 
 inherit multilib eutils
 
@@ -11,7 +11,7 @@ MY_PN="${MY_PN/-v3/3}"
 MY_P="${MY_PN}-${PV}"
 
 S="${WORKDIR}/${MY_P}"
-DESCRIPTION="Hardware support for the voodoo3, voodoo4 and voodoo5"
+DESCRIPTION="Hardware support for 3dfx Voodoo cards"
 HOMEPAGE="http://glide.sourceforge.net/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 LICENSE="3DFX"
