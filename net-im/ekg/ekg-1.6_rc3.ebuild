@@ -1,14 +1,14 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.6_rc3.ebuild,v 1.6 2005/09/17 00:56:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.6_rc3.ebuild,v 1.7 2006/07/07 20:34:45 spock Exp $
 
 inherit eutils
 
 IUSE="ssl ncurses readline zlib python spell threads"
 
 DESCRIPTION="EKG (Eksperymentalny Klient Gadu-Gadu) - a text client for Polish instant messaging system Gadu-Gadu"
-HOMEPAGE="http://dev.null.pl/ekg/"
-SRC_URI="http://dev.null.pl/ekg/${P/_/}.tar.gz"
+HOMEPAGE="http://ekg.chmurka.net/"
+SRC_URI="http://ekg.chmurka.net/${P/_/}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
