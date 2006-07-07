@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.13 2006/05/27 11:19:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.14 2006/07/07 14:30:52 flameeyes Exp $
 
 # Someone who knows kerberos is needed to make sure that this works
 kerberos
@@ -32,3 +32,6 @@ kdexdeltas
 
 # Until GNOME is fully ported, mask the keyword so that we don't have .badindev
 gnome
+
+# LUA requires a complete cleanup before being usable
+lua
