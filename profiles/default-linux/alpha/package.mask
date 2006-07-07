@@ -8,6 +8,7 @@ app-misc/jitac
 app-misc/openjnlp
 dev-tex/ppower4
 net-p2p/xnap
+dev-util/jarwizard
 
 # Thomas Cort <tcort@gentoo.org> (10 Jun 2006)
 # Masked for security Bug #134792 ; latest version broken
