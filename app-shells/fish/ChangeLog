@@ -1,43 +1,46 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.20 2006/06/21 16:29:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.21 2006/07/07 05:52:32 dberkholz Exp $
 
-  21 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; -fish-1.20.0.ebuild,
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
+
+  21 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>; -fish-1.20.0.ebuild,
   -fish-1.20.1.ebuild, -fish-1.21.1.ebuild, -fish-1.21.3.ebuild,
   -fish-1.21.4.ebuild:
   Pull some old ebuilds.
 
 *fish-1.21.8 (21 Jun 2006)
 
-  21 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; +fish-1.21.8.ebuild:
+  21 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>; +fish-1.21.8.ebuild:
   Bump. (#131638) Add X USE flag to pull in external x11-misc/xsel. Adds lots
   of other features, see the package ChangeLog for details.
 
 *fish-1.21.4 (08 Apr 2006)
 
-  08 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; +fish-1.21.4.ebuild:
+  08 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>; +fish-1.21.4.ebuild:
   This version contains a fix for a build issue on some Power-based systems,
   as well as a fix for a bug causing fish to sometimes return from a job
   before all its processes finished.
 
-  08 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; fish-1.18.2.ebuild,
+  08 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>; fish-1.18.2.ebuild,
   fish-1.19.0.ebuild, fish-1.20.0.ebuild, fish-1.20.1.ebuild,
   fish-1.20.2.ebuild, fish-1.21.1.ebuild, fish-1.21.3.ebuild:
   (#129102) Add dep on htmlview, needed for help functions.
 
 *fish-1.21.3 (04 Apr 2006)
 
-  04 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; +fish-1.21.3.ebuild:
+  04 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>; +fish-1.21.3.ebuild:
   Bump. Fix for the ? wildcard, warning removal on completion. Add -n switch
   to suppress command execution. Add completion for telnet. Build fixes for
   icc.
 
-  01 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>; fish-1.21.1.ebuild:
+  01 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>; fish-1.21.1.ebuild:
   Add a note about move of completion files.
 
 *fish-1.21.1 (01 Mar 2006)
 
-  01 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>; +fish-1.21.1.ebuild:
+  01 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>; +fish-1.21.1.ebuild:
   Bump. Adds command completion for svn and darcs and 'a subsystem for
   dynamically loading shell script functions at startup, which should make
   developing and deploying shell scripts easier while reducing startup time
@@ -45,19 +48,19 @@
 
 *fish-1.20.2 (16 Feb 2006)
 
-  16 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; +fish-1.20.2.ebuild:
+  16 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>; +fish-1.20.2.ebuild:
   Bump. Performance tweaks, job control fixes, backtrace improvements, memory
   leak reductions from new allocation scheme.
 
 *fish-1.20.1 (26 Jan 2006)
 
-  26 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>; +fish-1.20.1.ebuild:
+  26 Jan 2006; Donnie Berkholz <dberkholz@gentoo.org>; +fish-1.20.1.ebuild:
   Adds emerge completion. Also, shellscript stack trace on errors, bugfix for
   fg, fallback for seq, new completions and more.
 
 *fish-1.20.0 (16 Jan 2006)
 
-  16 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>; +fish-1.20.0.ebuild:
+  16 Jan 2006; Donnie Berkholz <dberkholz@gentoo.org>; +fish-1.20.0.ebuild:
   This release contains fixes for two important bugs that caused large
   issues with running on OS X, NetBSD, and possibly other operating
   systems. It has i18n support, including the first translation
@@ -67,18 +70,18 @@
 
 *fish-1.19.0 (03 Jan 2006)
 
-  03 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>; +fish-1.19.0.ebuild:
+  03 Jan 2006; Donnie Berkholz <dberkholz@gentoo.org>; +fish-1.19.0.ebuild:
   This release contains new features for event blocking, improvements to the
   prompt parsing code, and a new default prompt. It also contains a large
   number of bugfixes.
 
 *fish-1.18.2 (12 Dec 2005)
 
-  12 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; -fish-1.18.1.ebuild,
+  12 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; -fish-1.18.1.ebuild,
   +fish-1.18.2.ebuild:
   Fix a crash on token history search.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; fish-1.18.1.ebuild:
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; fish-1.18.1.ebuild:
   Add postinst note about setting it as login shell.
 
   09 Dec 2005; Joseph Jezak <josejx@gentoo.org> fish-1.18.1.ebuild:
@@ -86,7 +89,7 @@
 
 *fish-1.18.1 (09 Dec 2005)
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; -fish-1.18.0.ebuild,
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; -fish-1.18.0.ebuild,
   +fish-1.18.1.ebuild:
   This version contains fixes for multiple bugs in 1.18.0. One of these bugs
   caused several types of programmable completions to fail.
@@ -96,21 +99,21 @@
 
 *fish-1.18.0 (07 Dec 2005)
 
-  07 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; -fish-1.17.0.ebuild,
+  07 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; -fish-1.17.0.ebuild,
   +fish-1.18.0.ebuild:
   Bump. Better error messages for sh-style syntax that doesn't work in fish.
   Also, don't execute command if wildcard expands to nothing.
 
-  06 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; fish-1.17.0.ebuild:
+  06 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; fish-1.17.0.ebuild:
   Add dep on sys-devel/bc, reported by user via upstream.
 
-  06 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; fish-1.17.0.ebuild:
+  06 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; fish-1.17.0.ebuild:
   Force the install on, because portage apparently stopped doing it by default
   at some point.
 
 *fish-1.17.0 (05 Dec 2005)
 
-  05 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  05 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
   +fish-1.17.0.ebuild:
   The Friendly Interactive SHell. Has command-line syntax highlighting, tab
   completion by default, 'open' to use .desktop files for opening any type of
