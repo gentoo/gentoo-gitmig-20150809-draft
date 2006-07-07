@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/quanta-docs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/ChangeLog,v 1.30 2006/06/27 15:03:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/ChangeLog,v 1.31 2006/07/07 15:53:50 tcort Exp $
+
+  07 Jul 2006; Thomas Cort <tcort@gentoo.org> quanta-docs-20051201.ebuild:
+  Stable on alpha wrt Bug #134761.
 
   27 Jun 2006; Guy Martin <gmsoft@gentoo.org> quanta-docs-20051201.ebuild:
   Stable on hppa.
