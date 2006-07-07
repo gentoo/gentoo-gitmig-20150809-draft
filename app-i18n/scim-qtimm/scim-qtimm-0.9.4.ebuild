@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4.ebuild,v 1.3 2006/07/03 23:57:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4.ebuild,v 1.4 2006/07/07 06:20:41 mr_bones_ Exp $
 
 inherit kde-functions eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
 
-RDEPEND="|| ( >=app-i18n/scim-1.4.2 >=app-i18n/scim-cvs-1.4.2 )
+RDEPEND=">=app-i18n/scim-1.4.2
 	virtual/libintl
 	$(qt_min_version 3.3.4)"
 
