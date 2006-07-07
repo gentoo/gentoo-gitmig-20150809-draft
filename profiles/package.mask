@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5596 2006/07/07 05:38:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5597 2006/07/07 15:14:06 azarah Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,17 @@
 ##
 ##   End example
 ##
+
+# Martin Schlemmer <azarah@gentoo.org> (07 Jul 2006)
+# Testing release to get some feedback.  New features include:
+# - more detailed log format
+# - non-hardcoded default config
+# - stacked per-package config support
+# In general it should behave for intended purposes as expected (except for the
+# log format change), but feedback on config system, etc would be appreciated.
+# Fairly limited comments about it in /etc/sandbox.conf and
+# /etc/sandbox.d/00default.
+=sys-apps/sandbox-1.2.20_alpha1
 
 #  Michael Sterrett <mr_bones_@gentoo.org> (07 Jul 2006)
 # Added back mask for dev-util/netbeans-4 until tomcat is fixed up
