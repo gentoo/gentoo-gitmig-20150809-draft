@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-3.4.ebuild,v 1.6 2005/05/06 14:07:31 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-3.4.ebuild,v 1.7 2006/07/07 17:16:41 calchan Exp $
 
 inherit eutils
 
@@ -142,11 +142,11 @@ src_install() {
 
 pkg_postinst() {
 	if [ ! $TECH_AMS ]; then
-		einfo "No tech libraries were installed."
-		einfo "If you have the appropriate licenses request"
-		einfo "the tech support files directly from balsa@cs.man.ac.uk"
-		einfo "and add them to /usr/portage/distfiles before emerging."
+		elog "No tech libraries were installed."
+		elog "If you have the appropriate licenses request"
+		elog "the tech support files directly from balsa@cs.man.ac.uk"
+		elog "and add them to /usr/portage/distfiles before emerging."
 	else
-		einfo "The AMS035 tech library was found and installed."
+		elog "The AMS035 tech library was found and installed."
 	fi
 }
