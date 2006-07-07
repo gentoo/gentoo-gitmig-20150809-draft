@@ -1,6 +1,12 @@
 # ChangeLog for dev-tinyos/tos-getenv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-getenv/ChangeLog,v 1.2 2006/03/13 18:43:24 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-getenv/ChangeLog,v 1.3 2006/07/07 22:18:10 sanchan Exp $
+
+*tos-getenv-1.1.15-r1 (07 Jul 2006)
+
+  07 Jul 2006; Sandro Bonazzola <sanchan@gentoo.org>
+  -tos-getenv-1.1.15.ebuild, +tos-getenv-1.1.15-r1.ebuild:
+  Updated for java generation 2. Removing generation 1 ebuild.
 
   13 Mar 2006; Sandro Bonazzola <sanchan@gentoo.org> metadata.xml,
   tos-getenv-1.1.15.ebuild:
