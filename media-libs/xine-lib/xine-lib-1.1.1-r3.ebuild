@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r3.ebuild,v 1.22 2006/07/07 13:12:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.1-r3.ebuild,v 1.23 2006/07/07 13:17:29 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -27,15 +27,15 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	X? ( || ( (
 			x11-libs/libXext
 			x11-libs/libX11 )
-		virtual/x11 ) )
-	xv? ( || ( x11-libs/libXv virtual/x11 ) )
+		<virtual/x11-7 ) )
+	xv? ( || ( x11-libs/libXv <virtual/x11-7 ) )
 	xvmc? (
-		|| ( x11-libs/libXvMC virtual/x11 )
+		|| ( x11-libs/libXvMC <virtual/x11-7 )
 		nvidia? ( || ( x11-drivers/nvidia-drivers
 			x11-drivers/nvidia-legacy-drivers media-video/nvidia-glx ) )
-		cle266? ( || ( x11-drivers/xf86-video-via virtual/x11 ) )
-		i8x0? ( || ( x11-drivers/xf86-video-i810 virtual/x11 ) ) )
-	xinerama? ( || ( x11-libs/libXinerama virtual/x11 ) )
+		cle266? ( || ( x11-drivers/xf86-video-via <virtual/x11-7 ) )
+		i8x0? ( || ( x11-drivers/xf86-video-i810 <virtual/x11-7 ) ) )
+	xinerama? ( || ( x11-libs/libXinerama <virtual/x11-7 ) )
 	win32codecs? ( >=media-libs/win32codecs-0.50 )
 	esd? ( media-sound/esound )
 	dvd? ( >=media-libs/libdvdcss-1.2.7 )
@@ -68,9 +68,9 @@ DEPEND="${RDEPEND}
 			x11-proto/xproto
 			x11-proto/videoproto
 			x11-proto/xf86vidmodeproto )
-		virtual/x11 )
+		<virtual/x11-7 )
 		)
-	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
+	xinerama? ( || ( x11-proto/xineramaproto <virtual/x11-7 ) )
 	v4l? ( virtual/os-headers )
 	dev-util/pkgconfig"
 
