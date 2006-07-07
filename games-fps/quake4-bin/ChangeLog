@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake4-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/ChangeLog,v 1.22 2006/06/06 18:48:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/ChangeLog,v 1.23 2006/07/07 19:58:49 augustus Exp $
+
+  07 Jul 2006; Kristopher Kersey <augustus@gentoo.org>
+  quake4-bin-1.2.1.ebuild:
+  Added RDEPEND for new x11-drivers/nvidia-drivers or
+  x11-drivers/nvidia-legacy-drivers.
 
   06 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   quake4-bin-1.2.1.ebuild:

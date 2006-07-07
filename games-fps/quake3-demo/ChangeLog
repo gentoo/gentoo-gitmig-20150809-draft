@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake3-demo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/ChangeLog,v 1.13 2006/06/06 18:53:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/ChangeLog,v 1.14 2006/07/07 19:56:25 augustus Exp $
+
+  07 Jul 2006; Kristopher Kersey <augustus@gentoo.org>
+  quake3-demo-1.11.ebuild:
+  Added RDEPEND for new x11-drivers/nvidia-drivers or
+  x11-drivers/nvidia-legacy-drivers.
 
   06 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   quake3-demo-1.11.ebuild:
