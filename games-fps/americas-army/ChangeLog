@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/americas-army
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.47 2006/06/06 18:43:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.48 2006/07/07 18:40:56 augustus Exp $
+
+  07 Jul 2006; Kristopher Kersey <augustus@gentoo.org>
+  americas-army-250.ebuild:
+  Added RDEPEND for new x11-drivers/nvidia-drivers or
+  x11-drivers/nvidia-legacy-drivers.
 
   06 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   americas-army-250.ebuild:
