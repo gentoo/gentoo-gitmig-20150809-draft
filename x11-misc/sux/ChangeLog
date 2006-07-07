@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/sux
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.15 2005/12/28 18:19:52 nelchael Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.16 2006/07/07 20:01:00 josejx Exp $
+
+  07 Jul 2006; Joseph Jezak <josejx@gentoo.org> sux-1.0-r3.ebuild:
+  Marked ppc stable for bug #128691.
 
 *sux-1.0-r3 (28 Dec 2005)
 
