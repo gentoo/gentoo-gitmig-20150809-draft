@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.16.ebuild,v 1.7 2006/07/05 06:13:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.16.ebuild,v 1.8 2006/07/07 04:24:08 tsunam Exp $
 
 inherit eutils libtool autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~ppc ppc64 sh sparc ~x86"
+KEYWORDS="amd64 arm ~ppc ppc64 sh sparc x86"
 IUSE=""
 
 RDEPEND="media-sound/xmms
