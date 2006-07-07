@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.40.5.ebuild,v 1.3 2006/01/09 18:01:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.40.5.ebuild,v 1.4 2006/07/07 17:35:38 calchan Exp $
 
 inherit eutils
 
@@ -35,11 +35,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You'll need to emerge your prefered simulation backend"
-	einfo "such as spice, ng-spice-rework or gnucap for simulation"
-	einfo "to work."
-	einfo
-	ebeep 5
-	epause 3
+	elog "You'll need to emerge your prefered simulation backend"
+	elog "such as spice, ng-spice-rework or gnucap for simulation"
+	elog "to work."
 }
