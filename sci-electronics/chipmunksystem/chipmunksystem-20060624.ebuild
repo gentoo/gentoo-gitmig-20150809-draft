@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/chipmunksystem/chipmunksystem-20060624.ebuild,v 1.1 2006/06/24 18:28:19 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/chipmunksystem/chipmunksystem-20060624.ebuild,v 1.2 2006/07/07 17:21:49 calchan Exp $
 
 inherit toolchain-funcs
 
@@ -156,9 +156,9 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "Please note that the sf, ss and vc executables have been renamed"
-	einfo "respectively chipmunk-sf, chipmunk-ss and chipmunk-vc in order to"
-	einfo "avoid collisions with other packages."
-	einfo "You may want to emerge xcircuit which integrates well with the"
-	einfo "Chipmunk tools."
+	elog "Please note that the sf, ss and vc executables have been renamed"
+	elog "respectively chipmunk-sf, chipmunk-ss and chipmunk-vc in order to"
+	elog "avoid collisions with other packages."
+	elog "You may want to emerge xcircuit which integrates well with the"
+	elog "Chipmunk tools."
 }

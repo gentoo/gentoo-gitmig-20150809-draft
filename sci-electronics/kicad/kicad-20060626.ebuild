@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20060626.ebuild,v 1.1 2006/07/06 05:42:50 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20060626.ebuild,v 1.2 2006/07/07 17:24:52 calchan Exp $
 
 inherit wxwidgets
 
@@ -92,10 +92,10 @@ pkg_postinst() {
 		ewarn "- Fix the libraries' locations in the 'Libs and Dir' preferences."
 		ewarn "- Emerge kicad without the 'minimal' USE flag."
 	else
-		einfo "Please note that the PDF datasheets that can be linked to components from the default libraries"
-		einfo "cannot be mirrored by Gentoo for legal reasons."
-		einfo "If you want them, you need to download them yourself from :"
-		einfo "${HOMEPAGE}"
-		einfo "and install them manually."
+		elog "Please note that the PDF datasheets that can be linked to components from the default libraries"
+		elog "cannot be mirrored by Gentoo for legal reasons."
+		elog "If you want them, you need to download them yourself from :"
+		elog "${HOMEPAGE}"
+		elog "and install them manually."
 	fi
 }

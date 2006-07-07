@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/chipmunksystem
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/chipmunksystem/ChangeLog,v 1.8 2006/07/02 10:51:27 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/chipmunksystem/ChangeLog,v 1.9 2006/07/07 17:21:49 calchan Exp $
+
+  07 Jul 2006; Denis Dupeyron <calchan@gentoo.org>
+  chipmunksystem-20060624.ebuild:
+  Replaced einfo occurences with elog.
 
   02 Jul 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
   Adjusted metadata, see bug #138062.

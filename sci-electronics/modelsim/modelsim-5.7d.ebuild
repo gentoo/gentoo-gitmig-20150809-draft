@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/modelsim/modelsim-5.7d.ebuild,v 1.1 2004/12/27 20:01:41 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/modelsim/modelsim-5.7d.ebuild,v 1.2 2006/07/07 17:28:03 calchan Exp $
 
 DESCRIPTION="VHDL and mixed-VHDL/Verilog simulator"
 HOMEPAGE="http://www.model.com/"
@@ -17,8 +17,8 @@ RESTRICT="nostrip fetch"
 DEPEND=""
 
 pkg_nofetch() {
-	einfo "You must download the files yourself and put them in ${DISTDIR}"
-	einfo "Goto http://www.model.com/products/release.asp"
+	elog "You must download the files yourself and put them in ${DISTDIR}"
+	elog "Goto http://www.model.com/products/release.asp"
 }
 
 src_unpack() {
@@ -38,7 +38,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Read the installation manual for details of configuring a"
-	einfo "standalone license server, or set LM_LICENSE_FILE=xxxx@host"
-	einfo "if you already have a running license server"
+	elog "Read the installation manual for details of configuring a"
+	elog "standalone license server, or set LM_LICENSE_FILE=xxxx@host"
+	elog "if you already have a running license server"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/kicad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.9 2006/07/06 05:42:50 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.10 2006/07/07 17:24:52 calchan Exp $
+
+  07 Jul 2006; Denis Dupeyron <calchan@gentoo.org> kicad-20060328.ebuild,
+  kicad-20060424.ebuild, kicad-20060626.ebuild:
+  Replaced einfo occurences with elog.
 
 *kicad-20060626 (05 Jul 2006)
 
