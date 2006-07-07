@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.1.0.ebuild,v 1.4 2005/09/30 16:23:36 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.1.0.ebuild,v 1.5 2006/07/07 06:49:53 mr_bones_ Exp $
 
 inherit eutils
 
@@ -18,8 +18,7 @@ IUSE="alsa gnome ipv6 xv"
 DEPEND="dev-libs/glib
 	dev-perl/XML-Parser
 	>=net-libs/libosip-2.2.0
-	|| ( >=media-libs/speex-1.1.6
-	     <media-libs/speex-1.1.0 )
+	>=media-libs/speex-1.1.6
 	x86? 	( xv? ( dev-lang/nasm ) )
 	gnome? 	( >=gnome-base/libgnome-2
 		  >=gnome-base/libgnomeui-2
