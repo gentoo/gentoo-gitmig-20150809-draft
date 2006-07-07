@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/libggz-0.0.13.ebuild,v 1.1 2006/03/24 16:36:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/libggz-0.0.13.ebuild,v 1.2 2006/07/07 21:40:02 wolf31o2 Exp $
 
 DESCRIPTION="The GGZ library, used by GGZ Gaming Zone"
 HOMEPAGE="http://www.ggzgamingzone.org/"
@@ -9,7 +9,7 @@ SRC_URI="http://ftp.belnet.be/packages/ggzgamingzone/ggz/${PV}/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="-amd64 ~ppc x86"
 IUSE="crypt ssl"
 
 DEPEND="virtual/libc
