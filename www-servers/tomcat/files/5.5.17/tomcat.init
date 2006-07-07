@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5.17/tomcat.init,v 1.1 2006/07/03 02:13:09 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5.17/tomcat.init,v 1.2 2006/07/07 20:08:51 nichoj Exp $
 
 init_env_vars() {
 	# Set some sane defaults
@@ -20,7 +20,7 @@ init_env_vars() {
 	if [[ -n "${JSSE_HOME}" ]]; then
 		CLASSPATH="${CLASSPATH}:${JSSE_HOME}/lib/jcert.jar:${JSSE_HOME}/lib/jnet.jar:${JSSE_HOME}/lib/jsse.jar"
 	fi
-	CLASSPATH="${CLASSPATH}:${CATALINA_HOME}/bin/bootstrap.jar:$(java-config -p commons-logging)"
+	CLASSPATH="${CLASSPATH}:${CATALINA_HOME}/bin/bootstrap.jar:${CATALINA_HOME}/bin/commons-logging-api.jar"
 
 	OPTS_CP="${JAVA_OPTS} ${CATALINA_OPTS} \
 			 -Djava.endorsed.dirs=${CATALINA_HOME}/common/endorsed \
