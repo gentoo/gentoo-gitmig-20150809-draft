@@ -1,30 +1,33 @@
 # ChangeLog for sci-chemistry/validation
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/validation/ChangeLog,v 1.5 2006/06/15 02:34:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/validation/ChangeLog,v 1.6 2006/07/07 05:39:38 dberkholz Exp $
 
-  15 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
+
+  15 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   validation-6.2.ebuild:
   Drop acronym in description.
 
-  23 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  23 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   validation-6.2.ebuild:
   Remove redundant src_compile(), reported by ciaranm.
 
 *validation-6.2 (20 Dec 2005)
 
-  20 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; +files/README,
+  20 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; +files/README,
   +files/README-source, +files/respect-cflags-and-fix-install.patch,
   -files/respect-flags-and-add-gcc4.patch, +validation-6.2.ebuild,
   -validation-8.061.ebuild:
   Add a fixed version; works with other RCSB apps and libraries.
 
-  19 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  19 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   validation-8.061.ebuild:
   Remove commented-out sections.
 
 *validation-8.061 (19 Dec 2005)
 
-  19 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  19 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/respect-flags-and-add-gcc4.patch, +metadata.xml,
   +validation-8.061.ebuild:
   Add a set of tools used by the PDB for processing and checking structure data.

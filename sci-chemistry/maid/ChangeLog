@@ -1,27 +1,30 @@
 # ChangeLog for sci-chemistry/maid
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maid/ChangeLog,v 1.6 2006/02/23 23:15:53 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maid/ChangeLog,v 1.7 2006/07/07 05:34:06 dberkholz Exp $
 
-  23 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; maid-20011112.ebuild:
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
+
+  23 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>; maid-20011112.ebuild:
   Remove redundant src_compile(), reported by ciaranm.
 
-  23 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  23 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/fix-compilation.patch:
   Forgot to cvs rm it.
 
-  23 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; maid-20011112.ebuild:
+  23 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>; maid-20011112.ebuild:
   (#123634) Push big patch to mirrors.
 
-  15 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; maid-20011112.ebuild:
+  15 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; maid-20011112.ebuild:
   Fix SRC_URI.
 
-  15 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; maid-20011112.ebuild:
+  15 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; maid-20011112.ebuild:
   Fix license. The author informed me by email that it's intended to be freely
   distributed, modified and redistributed.
 
 *maid-20011112 (15 Dec 2005)
 
-  15 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  15 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/fix-compilation.patch, +files/fix-warnings.patch, +metadata.xml,
   +maid-20011112.ebuild:
   MAID does automatic fitting of protein X-ray crystallography electron

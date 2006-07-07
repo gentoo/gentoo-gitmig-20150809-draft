@@ -1,14 +1,17 @@
 # ChangeLog for sci-chemistry/coot
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.2 2006/06/28 08:24:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.3 2006/07/07 05:31:23 dberkholz Exp $
 
-  28 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  07 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Update to my new email address.
+
+  28 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   coot-0.1.2_pre1.ebuild:
   Add missing dep on x11-libs/gtkglext.
 
 *coot-0.1.2_pre1 (16 Jun 2006)
 
-  16 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  16 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
   +coot-0.1.2_pre1.ebuild:
   Add the Crystallographic Object-Oriented Toolkit for model building,
   completion and validation.

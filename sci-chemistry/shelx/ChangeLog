@@ -1,15 +1,18 @@
 # ChangeLog for sci-chemistry/shelx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/ChangeLog,v 1.2 2006/06/17 00:56:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/ChangeLog,v 1.3 2006/07/07 05:38:33 dberkholz Exp $
 
-  17 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
+
+  17 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   shelx-20060317.ebuild:
   (#75384) Add the dosformat USE flag, useful for mixed Linux/Windows
   environments.
 
 *shelx-20060317 (05 Jun 2006)
 
-  05 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  05 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/20060317-autotool.patch, +metadata.xml, +shelx-20060317.ebuild:
   New program for X-ray crystallographic structure determination.
 

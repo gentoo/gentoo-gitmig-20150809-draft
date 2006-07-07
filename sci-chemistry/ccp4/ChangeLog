@@ -1,10 +1,13 @@
 # ChangeLog for sci-chemistry/ccp4
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ChangeLog,v 1.1 2006/06/16 20:46:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ChangeLog,v 1.2 2006/07/07 05:30:22 dberkholz Exp $
+
+  07 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Update to my new email address.
 
 *ccp4-6.0.1 (16 Jun 2006)
 
-  16 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  16 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/6.0.1-dont-make-dirs-in-configure.patch,
   +files/6.0.1-ppc-double-define-gerror.patch,
   +files/ccp4i-default-to-firefox.patch,

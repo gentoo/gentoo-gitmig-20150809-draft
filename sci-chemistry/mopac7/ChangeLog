@@ -1,17 +1,20 @@
 # ChangeLog for sci-chemistry/mopac7
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.7 2006/05/13 22:14:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.8 2006/07/07 05:36:30 dberkholz Exp $
+
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
 
 *mopac7-1.10-r1 (13 May 2006)
 
-  13 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  13 May 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +mopac7-1.10-r1.ebuild:
   Fix parallel build. Remove the really ugly LDFLAGS hack, it's no longer
   needed. Cleaner installation of executable and wrapper.
 
 *mopac7-1.10 (06 Dec 2005)
 
-  06 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; -mopac7-1.00.ebuild,
+  06 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; -mopac7-1.00.ebuild,
   +mopac7-1.10.ebuild:
   New version. GCC-4 and 64-bit fixes, as well as new libmopac7.h
 
@@ -20,20 +23,20 @@
 
 *mopac7-1.00-r1 (05 Aug 2005)
 
-  05 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  05 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +mopac7-1.00-r1.ebuild:
   (#101288) Fix run_mopac7 shell script, courtesy of Mathias Weigt
   <m.weigt@uni-bonn.de>.
 
-  10 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>; mopac7-1.00.ebuild:
+  10 Jul 2005; Donnie Berkholz <dberkholz@gentoo.org>; mopac7-1.00.ebuild:
   (#98457) Parallel build broken.
 
-  10 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>; mopac7-1.00.ebuild:
+  10 Jul 2005; Donnie Berkholz <dberkholz@gentoo.org>; mopac7-1.00.ebuild:
   Fix f2c dep to libf2c.
 
 *mopac7-1.00 (08 Jul 2005)
 
-  08 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  08 Jul 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
   +mopac7-1.00.ebuild:
   Initial commit, ebuild by me. This will be useful for the new ghemical. It's
   a quite solid semi-empirical package.

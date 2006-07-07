@@ -1,14 +1,17 @@
 # ChangeLog for sci-chemistry/viewmol
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/ChangeLog,v 1.2 2005/12/02 19:49:40 spyderous Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/ChangeLog,v 1.3 2006/07/07 05:39:55 dberkholz Exp $
 
-  02 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; viewmol-2.4.1.ebuild:
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
+
+  02 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; viewmol-2.4.1.ebuild:
   Fix up modular X deps -- add libXp and libXi, remove libX11 and libXt as
   redundant.
 
 *viewmol-2.4.1 (02 Dec 2005)
 
-  02 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  02 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/2.4.1-change-default-path-to-usr.patch,
   +files/2.4.1-look-for-python-in-right-place.patch,
   +files/2.4.1-remove-icc-check.patch,

@@ -1,14 +1,17 @@
 # ChangeLog for sci-chemistry/moldy
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/ChangeLog,v 1.7 2006/01/18 05:46:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/ChangeLog,v 1.8 2006/07/07 05:35:30 dberkholz Exp $
 
-  18 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>; moldy-2.16e.ebuild:
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
+
+  18 Jan 2006; Donnie Berkholz <dberkholz@gentoo.org>; moldy-2.16e.ebuild:
   Fix for modular X.
 
-  18 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>; moldy-2.16e.ebuild:
+  18 Jan 2006; Donnie Berkholz <dberkholz@gentoo.org>; moldy-2.16e.ebuild:
   Fix SRC_URI.
 
-  25 May 2005; Donnie Berkholz <spyderous@gentoo.org>; moldy-2.16e.ebuild:
+  25 May 2005; Donnie Berkholz <dberkholz@gentoo.org>; moldy-2.16e.ebuild:
   Fix HOMEPAGE.
 
   23 Jan 2005; <gongloo@gentoo.org> moldy-2.16e.ebuild:
@@ -27,13 +30,13 @@
   18 May 2004; Mamoru KOMACHI <usata@gentoo.org> moldy-2.16e.ebuild:
   Changed app-text/tetex to virutal/tetex.
 
-  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; moldy-2.16e.ebuild:
+  30 Mar 2004; Donnie Berkholz <dberkholz@gentoo.org>; moldy-2.16e.ebuild:
   Change x11-base/xfree dependency to virtual/x11.
 
   27 Oct 2003; Patrick Kursawe <phosphan@gentoo.org> moldy-2.16e.ebuild:
   Fixing sandbox issue from bug 20657
 
-  04 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; moldy-2.16e.ebuild:
+  04 Oct 2003; Donnie Berkholz <dberkholz@gentoo.org>; moldy-2.16e.ebuild:
   Adding what appears to be a non-optional tetex dependency. However there are
   sandbox issues at present (bug #20657).
 

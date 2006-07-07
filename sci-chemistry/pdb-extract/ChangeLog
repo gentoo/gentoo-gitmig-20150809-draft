@@ -1,17 +1,20 @@
 # ChangeLog for sci-chemistry/pdb-extract
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/ChangeLog,v 1.3 2006/04/26 03:53:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/ChangeLog,v 1.4 2006/07/07 05:37:05 dberkholz Exp $
 
-  26 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
+
+  26 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   pdb-extract-1.700.ebuild:
   Keyword ~ppc.
 
-  24 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; ChangeLog:
+  24 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Keyword ~ppc.
 
 *pdb-extract-1.700 (20 Dec 2005)
 
-  20 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  20 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/respect-cflags-and-fix-install.patch, +metadata.xml,
   +pdb-extract-1.700.ebuild:
   Extract lots of information from Protein Data Bank files.

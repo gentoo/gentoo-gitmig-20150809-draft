@@ -1,23 +1,26 @@
 # ChangeLog for sci-chemistry/tinker
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/ChangeLog,v 1.4 2006/06/21 14:17:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/ChangeLog,v 1.5 2006/07/07 05:39:20 dberkholz Exp $
+
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
 
 *tinker-4.2-r1 (21 Jun 2006)
 
-  21 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; -tinker-4.2.ebuild,
+  21 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>; -tinker-4.2.ebuild,
   +tinker-4.2-r1.ebuild:
   (#119142) Make Java frontend work (Josh Nichols).
 
-  21 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; tinker-4.2.ebuild:
+  21 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>; tinker-4.2.ebuild:
   Port to gcc4.
 
-  03 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; tinker-4.2.ebuild:
+  03 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; tinker-4.2.ebuild:
   Note that tinker script has hardcoded blackdown in it. This is needed
   because java-config's exit codes return 0, even on failure.
 
 *tinker-4.2 (03 Dec 2005)
 
-  03 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  03 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
   +tinker-4.2.ebuild:
   (#35945) New molecular mechanics package. Heavily modified ebuild based on
   that of Jeremy Warren <jwarren@cheesefoam.dyndns.org>.

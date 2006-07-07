@@ -1,23 +1,26 @@
 # ChangeLog for sci-chemistry/platon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.3 2006/06/23 15:58:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.4 2006/07/07 05:37:22 dberkholz Exp $
+
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
 
 *platon-20060621 (23 Jun 2006)
 
-  23 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  23 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   -platon-20051215.ebuild, -platon-20060530.ebuild, +platon-20060621.ebuild:
   (#137734) Bump -- old versions no longer accessible.
 
 *platon-20060530 (03 Jun 2006)
 
-  03 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  03 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +platon-20060530.ebuild:
   Bump to latest. Fix for gcc4 by linking against libf2c in the non-gcc3 case.
   Keyword ~ppc.
 
 *platon-20051215 (16 Dec 2005)
 
-  16 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  16 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
   +platon-20051215.ebuild:
   Another crystallography package. This one considers itself a versatile,
   SHELX-97 compatible, multipurpose tool.

@@ -1,31 +1,34 @@
 # ChangeLog for sci-chemistry/webmo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/ChangeLog,v 1.8 2006/06/20 15:14:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/ChangeLog,v 1.9 2006/07/07 05:40:26 dberkholz Exp $
 
-  20 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; webmo-6.1.010.ebuild:
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
+
+  20 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>; webmo-6.1.010.ebuild:
   Add a warning about overwriting info with etc-update.
 
-  20 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  20 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   -webmo-6.0.003.ebuild:
   Pull old version.
 
 *webmo-6.1.010 (20 Jun 2006)
 
-  20 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; files/reconfig,
+  20 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>; files/reconfig,
   +webmo-6.1.010.ebuild:
   Bump. Significant enhancements to reconfig script to handle webapp-config
   upgrades properly via etc-update.
 
-  23 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; webmo-6.0.003.ebuild:
+  23 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>; webmo-6.0.003.ebuild:
   Remove redundant src_compile(), reported by ciaranm.
 
-  04 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; files/reconfig:
+  04 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; files/reconfig:
   Don't overwrite the actual .int file, copy into ._cfg* for etc-update.
 
-  04 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; +files/reconfig:
+  04 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; +files/reconfig:
   Add hook script, to be run when installing to live host.
 
-  04 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  04 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/dont-be-interactive-if-root.patch,
   +files/dont-be-interactive-or-diagnose.patch,
   -files/dont-check-unneeded-things.patch, webmo-6.0.003.ebuild:
@@ -33,7 +36,7 @@
 
 *webmo-6.0.003 (04 Dec 2005)
 
-  04 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  04 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/add-gamess-data-directory.patch,
   +files/dont-be-interactive-if-root.patch,
   +files/dont-check-unneeded-things.patch, +files/gentoo-locations.patch,

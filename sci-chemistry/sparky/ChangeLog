@@ -1,16 +1,19 @@
 # ChangeLog for sci-chemistry/sparky
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.3 2005/12/18 20:42:32 spyderous Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.4 2006/07/07 05:39:01 dberkholz Exp $
 
-  18 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; sparky-3.111.ebuild:
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
+
+  18 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; sparky-3.111.ebuild:
   Prefer RESTRICT=mirror over nomirror, as portage code does.
 
-  18 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; sparky-3.111.ebuild:
+  18 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; sparky-3.111.ebuild:
   We can't mirror this.
 
 *sparky-3.111 (18 Dec 2005)
 
-  18 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  18 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/fix-install.patch, +metadata.xml, +sparky-3.111.ebuild:
   A new graphical NMR assignment and integration program for proteins, nucleic
   acids, and other polymers. Very strange build system; takes lots of hacking
