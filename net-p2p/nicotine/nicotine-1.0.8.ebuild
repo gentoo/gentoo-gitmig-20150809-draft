@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/nicotine-1.0.8.ebuild,v 1.4 2005/12/17 15:07:56 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/nicotine-1.0.8.ebuild,v 1.5 2006/07/07 00:30:25 squinky86 Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://thegraveyard.org/nicotine/"
 SRC_URI="http://nicotine.thegraveyard.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~amd64"
+KEYWORDS="amd64 ~sparc x86"
 IUSE="vorbis geoip"
 
 DEPEND="virtual/python

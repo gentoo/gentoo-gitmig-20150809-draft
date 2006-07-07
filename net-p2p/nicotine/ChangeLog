@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/nicotine
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/ChangeLog,v 1.23 2006/05/23 18:23:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/ChangeLog,v 1.24 2006/07/07 00:30:25 squinky86 Exp $
+
+  07 Jul 2006; Jon Hood <squinky86@gentoo.org> metadata.xml,
+  -nicotine-1.0.6.ebuild, -nicotine-1.0.7.ebuild,
+  -nicotine-1.0.8_rc1.ebuild, nicotine-1.0.8.ebuild:
+  Stable on amd64. Remove old versions. Add net-p2p to metadata.
 
   23 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove port001 from metadata, bug 26349.
