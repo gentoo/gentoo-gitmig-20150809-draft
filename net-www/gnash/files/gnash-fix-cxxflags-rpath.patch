@@ -1,0 +1,50 @@
+diff -u gnash/libgeometry/Makefile.am.orig gnash/libgeometry/Makefile.am
+--- gnash/libgeometry/Makefile.am.orig	2006-07-07 01:39:00.000000000 +0200
++++ gnash/libgeometry/Makefile.am	2006-07-07 01:39:23.000000000 +0200
+@@ -38,7 +38,7 @@
+ 
+ AUTOMAKE_OPTIONS = 
+ 
+-AM_CXXFLAGS =  $(CFLAGS) $(SDL_CFLAGS) $(INCLUDES)
++AM_CXXFLAGS =  $(CXXFLAGS) $(SDL_CFLAGS) $(INCLUDES)
+ AM_CPPFLAGS = #-Wall
+ # AM_LDFLAGS  = $(OPENGL_LIBNS) $(SDL_LIBS)
+ 
+diff -u gnash/libamf/Makefile.am.orig gnash/libamf/Makefile.am
+--- gnash/libamf/Makefile.am.orig	2006-07-07 01:39:06.000000000 +0200
++++ gnash/libamf/Makefile.am	2006-07-07 01:39:37.000000000 +0200
+@@ -38,7 +38,7 @@
+ 
+ AUTOMAKE_OPTIONS = 
+ 
+-AM_CXXFLAGS =  $(CFLAGS) $(SDL_CFLAGS) $(INCLUDES)
++AM_CXXFLAGS =  $(CXXFLAGS) $(SDL_CFLAGS) $(INCLUDES)
+ AM_CPPFLAGS = 
+ AM_LDFLAGS = \
+ 	../libbase/libgnashbase.la \
+diff -u gnash/plugin/mozilla-sdk/Makefile.am.orig gnash/plugin/mozilla-sdk/Makefile.am
+--- gnash/plugin/mozilla-sdk/Makefile.am.orig	2006-07-07 01:39:12.000000000 +0200
++++ gnash/plugin/mozilla-sdk/Makefile.am	2006-07-07 01:39:52.000000000 +0200
+@@ -42,7 +42,7 @@
+         -I$(srcdir) \
+ 	-I$(srcdir)/include
+ 
+-AM_CXXFLAGS = $(CFLAGS) $(INCLUDES)
++AM_CXXFLAGS = $(CXXFLAGS) $(INCLUDES)
+ AM_CPPFLAGS = -DPLUGIN_TRACE -DXP_UNIX # $(FIREFOX_DEFS)
+ # AM_LDFLAGS  = $(FIREFOX_LIBS)
+ 
+diff -u gnash/plugin/Makefile.am.orig gnash/plugin/Makefile.am
+--- gnash/plugin/Makefile.am.orig	2006-07-07 01:40:02.000000000 +0200
++++ gnash/plugin/Makefile.am	2006-07-07 01:40:16.000000000 +0200
+@@ -152,8 +152,8 @@
+ # won't load due to errors with an undefined MaiAtkObject.
+ install-pluginLTLIBRARIES: $(plugin_LTLIBRARIES)
+ 	test -d "$(DESTDIR)$(plugindir)" || $(mkinstalldirs) "$(DESTDIR)$(plugindir)"
+-	cp .libs/libgnashplugin.so $(DESTDIR)$(plugindir)/libgnashplugin.so
+-#	$(LIBTOOL) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $(plugin_LTLIBRARIES) "$(DESTDIR)$(plugindir)/$(plugin_LTLIBRARIES)"
++#	cp .libs/libgnashplugin.so $(DESTDIR)$(plugindir)/libgnashplugin.so
++	$(LIBTOOL) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $(plugin_LTLIBRARIES) "$(DESTDIR)$(plugindir)/$(plugin_LTLIBRARIES)"
+ 	$(RM) $(DESTDIR)$(plugindir)/libgnashplugin.*a
+ 
+ 

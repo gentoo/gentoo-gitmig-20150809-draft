@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20060704.ebuild,v 1.1 2006/07/04 17:48:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20060704.ebuild,v 1.2 2006/07/07 00:51:16 genstef Exp $
 
 inherit nsplugins kde-functions autotools
 
@@ -50,10 +50,15 @@ set-kdedir
 
 src_unpack() {
 	unpack ${A}
-
-	#Fix a busted opengl as-needed
 	cd ${S}
+
+	# as-needed patch
+	# http://savannah.gnu.org/bugs/?func=detailitem&item_id=16684
 	epatch ${FILESDIR}/${P}-opengl.diff
+	# CXXFLAGS should be ussed for cpp code and libtool for installation
+	# http://savannah.gnu.org/bugs/?func=detailitem&item_id=17049
+	epatch ${FILESDIR}/gnash-fix-cxxflags-rpath.patch
+
 
 	# we want sound
 	sed -i -e "s:bool do_sound = .*:bool do_sound = true;:" backend/gnash.cpp
