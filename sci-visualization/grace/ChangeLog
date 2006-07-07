@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.6 2006/06/26 18:32:46 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.7 2006/07/07 05:47:30 dberkholz Exp $
+
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
 
   26 Jun 2006; Olivier Fisette <ribosome@gentoo.org> grace-5.1.20.ebuild:
   Fixed help viewer selection for Firefox (wrong category) and Konqueror
@@ -15,7 +18,7 @@
   http://plasma-gate.weizmann.ac.il/Grace/phpbb/viewtopic.php?t=610. Thanks
   to Pierre-Yves Savard <pys@rsvs.ulaval.ca> for reporting.
 
-  23 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; grace-5.1.18.ebuild,
+  23 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>; grace-5.1.18.ebuild,
   grace-5.1.19.ebuild:
   Remove redundant src_unpack(), reported by ciaranm. Also fix for modular X.
 
@@ -28,12 +31,12 @@
   grace-5.1.19.ebuild:
   Replacing pdflib use flag with pdf use flag
 
-  14 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>; grace-5.1.19.ebuild:
+  14 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>; grace-5.1.19.ebuild:
   Fix modular X dependencies. openmotif pulls in X libs.
 
 *grace-5.1.19 (30 Nov 2005)
 
-  30 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>; -files/10grace,
+  30 Nov 2005; Donnie Berkholz <dberkholz@gentoo.org>; -files/10grace,
   +grace-5.1.19.ebuild:
   (#113892) Grace update from Evgeny Stambulchik <fnevgeny@weizmann.ac.il>.
   Full list of changes at
@@ -64,18 +67,18 @@
   27 May 2005; Jason Wever <weeve@gentoo.org> grace-5.1.14.ebuild:
   Stable on SPARC.
 
-  25 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  25 May 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/grace-5.1.10-t1lib-fix-gentoo.patch,
   -files/grace-5.1.12-t1lib-fix-gentoo.patch, -grace-5.1.7-r2.ebuild,
   -grace-5.1.10-r1.ebuild, -grace-5.1.12-r1.ebuild:
   Pull old versions.
 
-  25 May 2005; Donnie Berkholz <spyderous@gentoo.org>; grace-5.1.14.ebuild:
+  25 May 2005; Donnie Berkholz <dberkholz@gentoo.org>; grace-5.1.14.ebuild:
   Stable on x86.
 
 *grace-5.1.18 (25 May 2005)
 
-  25 May 2005; Donnie Berkholz <spyderous@gentoo.org>; +grace-5.1.18.ebuild:
+  25 May 2005; Donnie Berkholz <dberkholz@gentoo.org>; +grace-5.1.18.ebuild:
   (#73898) Version bump. Highlights include PDF-1.4 support, pdflib-6
   compatibility, better TrueType font support.
 
@@ -106,11 +109,11 @@
 
 *grace-5.1.14 (18 Mar 2004)
 
-  18 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; grace-5.1.14.ebuild:
+  18 Mar 2004; Donnie Berkholz <dberkholz@gentoo.org>; grace-5.1.14.ebuild:
   Version bump. Upstream changes include fixes for 64-bit, for a race condition
   and for memory issues.
 
-  18 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; grace-5.1.12-r1.ebuild,
+  18 Mar 2004; Donnie Berkholz <dberkholz@gentoo.org>; grace-5.1.12-r1.ebuild,
   grace-5.1.13.ebuild:
   Fixing broken dependency on fftw. fftw-2 and fftw-3 are incompatible, so a >=
   dep doesn't work. It needs to be done like gtk+-1 and gtk+-2.
@@ -126,7 +129,7 @@
   10 Dec 2003; Patrick Kursawe <phosphan@gentoo.org> grace-5.1.13.ebuild:
   I guess ~ppc was removed by accident, at least there is no !ppc.
 
-  01 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  01 Nov 2003; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Adding metadata.xml for sci herd.
 
   30 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> grace-5.1.10-r1.ebuild,
@@ -136,7 +139,7 @@
   30 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> grace-5.1.12-r1.ebuild,
   grace-5.1.13.ebuild:
   Added fftw and netcdf local IUSE flags, as suggested by Donnie Berkholz
-  <spyderous@gentoo.org> in Bug #26842
+  <dberkholz@gentoo.org> in Bug #26842
 
 *grace-5.1.13 (27 Oct 2003)
 
