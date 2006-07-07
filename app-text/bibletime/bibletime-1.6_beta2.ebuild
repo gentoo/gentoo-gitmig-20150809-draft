@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6_beta2.ebuild,v 1.3 2006/06/21 13:51:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6_beta2.ebuild,v 1.4 2006/07/07 14:26:11 flameeyes Exp $
 
 inherit kde eutils versionator
 
@@ -59,7 +59,7 @@ src_unpack() {
 		cd "${WORKDIR}/${LANGS_PKG}"
 		sed -i -e "s,^POFILES.*,POFILES = ${MAKE_LANGS}," po/Makefile.am
 		sed -i -e "s,^SUBDIRS.*,SUBDIRS = ${MAKE_LANGS_DOC}," docs/Makefile.am
-		make -f admin/Makefile.common || die
+		rm configure
 	fi
 }
 
