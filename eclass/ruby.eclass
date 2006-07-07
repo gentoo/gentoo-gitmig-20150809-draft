@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.53 2006/05/28 21:39:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.54 2006/07/07 14:09:47 flameeyes Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -48,7 +48,10 @@ IUSE="examples"
 SLOT="0"
 LICENSE="Ruby"
 
-DEPEND="virtual/ruby"
+# If you specify RUBY_OPTIONAL you also need to take care of ruby useflag and dependency.
+if [[ ${RUBY_OPTIONAL} != "yes" ]]; then
+	DEPEND="virtual/ruby"
+fi
 
 [[ -z "${RUBY}" ]] && export RUBY=/usr/bin/ruby
 
