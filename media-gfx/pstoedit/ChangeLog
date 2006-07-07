@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.25 2006/05/23 16:58:52 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.26 2006/07/07 10:03:15 jer Exp $
+
+  07 Jul 2006; Jeroen Roovers <jer@gentoo.org> pstoedit-3.42.ebuild:
+  Marked ~hppa for media-gfx/inkscape.
 
   23 May 2006; Alexandre Buisse <nattfodd@gentoo.org>
   +files/pstoedit-m4-quoting.patch, pstoedit-3.42.ebuild:

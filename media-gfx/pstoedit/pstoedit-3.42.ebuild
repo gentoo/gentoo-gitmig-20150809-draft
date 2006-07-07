@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.42.ebuild,v 1.4 2006/05/23 16:58:52 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.42.ebuild,v 1.5 2006/07/07 10:03:15 jer Exp $
 
 inherit libtool eutils
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.pstoedit.net/pstoedit"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND="sys-libs/zlib
 	!amd64? ( emf? ( media-libs/libemf ) )
