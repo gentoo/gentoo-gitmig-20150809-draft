@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.3 2006/04/27 17:18:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.4 2006/07/07 01:18:52 genstef Exp $
 
 inherit linux-mod rpm eutils
 
@@ -62,6 +62,12 @@ pkg_setup() {
 					FRITZCAPI_BUILD_CARDS="${FRITZCAPI_BUILD_CARDS} ${FRITZCAPI_MODULES[CARD]}"
 					FRITZCAPI_BUILD_TARGETS="${FRITZCAPI_BUILD_TARGETS} ${FRITZCAPI_TARGETS[CARD]}"
 					MODULE_NAMES="${MODULE_NAMES} `get_card_module_name ${CARD}`"
+
+					if [ "${FRITZCAPI_MODULES[CARD]/pcmcia/}" != ${FRITZCAPI_MODULES[CARD]} ] && kernel_is ge 2 6 17; then
+						eerror "kernel 2.6.17 fails to build fcpcmcia"
+						eerror "Please use an older kernel or the isdn4linux drivers"
+						die "kernel 2.6.17 fails to build fcpcmcia"
+					fi
 					continue 2
 				fi
 			done
@@ -80,7 +86,7 @@ pkg_setup() {
 
 		#Filter build targets by USE
 		for ((CARD=0; CARD < ${#FRITZCAPI_MODULES[*]}; CARD++)); do
-			if [ "${FRITZCAPI_MODULES[CARD]/pcmcia/}" != ${FRITZCAPI_MODULES[CARD]} ] && ! use pcmcia; then
+			if [ "${FRITZCAPI_MODULES[CARD]/pcmcia/}" != ${FRITZCAPI_MODULES[CARD]} ] && (! use pcmcia || kernel_is ge 2 6 17); then
 				continue
 			fi
 			if [ "${FRITZCAPI_MODULES[CARD]/usb/}" != ${FRITZCAPI_MODULES[CARD]} ] && ! use usb; then
