@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.5-r2.ebuild,v 1.5 2006/06/01 18:30:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.5-r2.ebuild,v 1.6 2006/07/07 21:37:11 genstef Exp $
 
 inherit eutils nsplugins rpm versionator
 
@@ -28,7 +28,9 @@ SRC_URI="nls? ( linguas_de? ( ${SRC_HEAD}/deu/AdobeReader_deu${SRC_FOOT} )
 LICENSE="Adobe"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
-IUSE="cups ldap nsplugin nls"
+IUSE="cups ldap nsplugin nls linguas_de linguas_fr linguas_sv linguas_es
+linguas_pt linguas_no linguas_it linguas_fi linguas_nl linguas_da linguas_ja
+linguas_ko linguas_zh_CN linguas_zh_TW"
 RESTRICT="nostrip nomirror"
 
 RDEPEND="~virtual/libstdc++-3.3
