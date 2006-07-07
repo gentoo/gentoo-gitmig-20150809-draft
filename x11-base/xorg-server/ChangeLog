@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.141 2006/07/06 21:00:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.142 2006/07/07 02:38:04 dberkholz Exp $
+
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update to my new email address.
 
   06 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   xorg-server-1.1.0-r1.ebuild:
@@ -11,11 +14,11 @@
   files/x11r7.0-setuid.diff, files/xorg-server-1.1.0-setuid.diff:
   Fix the setuid patches.  (Thanks to Rudo Thomas for the catch in bug #138688)
 
-  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  01 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.1.0-r1.ebuild:
   ppc/sparc/mips/alpha/arm/sh stable
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.1.0-r1.ebuild:
   sparc shouldn't pull in vesa and vga.
 
@@ -31,13 +34,13 @@
   xorg-server-1.0.2-r7.ebuild:
   Stable on ppc64
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.0.2-r7.ebuild:
   x86 stable.
 
 *xorg-server-1.0.2-r7 (30 Jun 2006)
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/1.0.2-fix-rom-read-dualhead.patch, +xorg-server-1.0.2-r7.ebuild:
   Fix dual-head.
 
@@ -49,7 +52,7 @@
   xorg-server-1.1.0-r1.ebuild:
   Only pull in loadable drivers if the xorg USE-flag is set. (bug #135873)
 
-  28 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  28 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.1.0-r1.ebuild:
   Fix typo video_cards_3dfx > video_cards_tdfx (Jakub Moc).
 
@@ -62,14 +65,14 @@
   Allow USE="-* minimal" for xorg-server so that Xvfb can be built by itself.
   (Patch by Ed Catmur, bug #137991)
 
-  21 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  21 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.1.0-r1.ebuild:
   Fix up VIDEO_CARDS for mips, they don't want ati, mga, sisusb.
 
 *xorg-server-1.1.0-r1 (20 Jun 2006)
 *xorg-server-1.0.2-r6 (20 Jun 2006)
 
-  20 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  20 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/xorg-server-1.1.0-setuid.diff, +files/x11r7.0-setuid.diff,
   -xorg-server-1.0.2-r4.ebuild, -xorg-server-1.0.2-r5.ebuild,
   +xorg-server-1.0.2-r6.ebuild, -xorg-server-1.1.0.ebuild,
@@ -111,18 +114,18 @@
   -xorg-server-1.0.99.903.ebuild, +xorg-server-1.1.0.ebuild:
   Bump for 7.1 final.  Includes various crash fixes, etc.
 
-  14 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  14 May 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.0.2-r4.ebuild:
   Force on xorg-x11 opengl implem for compile, to ensure we have recent enough
   glxtokens.h. Reported by johey on freenode.
 
-  14 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  14 May 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.0.99.903.ebuild:
   (#133295) Fix kdrive build when s3 is on, because it also sedded out the s3
   from the middle of sis300. Also a fix for turning off sis300 at all. Fixes
   by Kent Fredric.
 
-  14 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  14 May 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.0.2-r4.ebuild, xorg-server-1.0.99.903.ebuild:
   Add RESTRICT=stricter, because FEATURES=stricter dies on installing anything
   suid with lazy bindings. The X server needs lazy bindings because of how its
@@ -136,13 +139,13 @@
 
 *xorg-server-1.0.99.903 (13 May 2006)
 
-  13 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  13 May 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   -xorg-server-1.0.99.902-r1.ebuild, +xorg-server-1.0.99.903.ebuild:
   Bump to 7.1RC3.
 
   13 May 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.0.2-r4.ebuild, xorg-server-1.0.99.902-r1.ebuild:
-  Force update to libxkbui-1.0.2 per spyderous' suggestion, hopefully fixing
+  Force update to libxkbui-1.0.2 per dberkholz' suggestion, hopefully fixing
   _XkbStrCaseCmp-related issues.
 
 *xorg-server-1.0.99.902-r1 (02 May 2006)
@@ -155,13 +158,13 @@
   Security bump and remove all affected versions. Please see Bug #130979 for
   details.
 
-  30 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/1.0.99.901-fix-kdrive-build.patch,
   -files/1.0.99.901-wrap-sdk-headers.patch,
   -xorg-server-1.0.99.901-r1.ebuild:
   Pull old 7.1RC ebuild.
 
-  30 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.0.99.902.ebuild:
   (#131817) Move the nptl diemsg out of an if, since we also use it in the else.
 
@@ -171,22 +174,22 @@
   +xorg-server-1.0.99.902.ebuild:
   Version bump.  Includes quite a few bugfixes.
 
-  24 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  24 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.0.99.901-r1.ebuild:
   We don't need to apply the xf86Sbus.h creation patch anymore. It was
   applying successfully by appending itself to the already-complete file in
   the tarball.
 
-  23 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  23 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.0.99.901-r1.ebuild:
   Fix the USE=-xorg build, can't do use_with() on mesa-source because it won't
   accept the --without option.
 
-  23 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  23 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   files/digest-xorg-server-1.0.99.901-r1:
   Fix digest.
 
-  23 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  23 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/xorg-server-1.0.2-Xprt-build.patch,
   +files/1.0.2-Xprint-xprintdir.patch,
   +files/xorg-server-1.0.2-xprint-init.patch,
@@ -197,7 +200,7 @@
 
 *xorg-server-1.0.99.901-r1 (21 Apr 2006)
 
-  21 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  21 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/1.0.99.901-fix-kdrive-build.patch,
   +files/1.0.99.901-wrap-sdk-headers.patch, -xorg-server-1.0.99.901.ebuild,
   +xorg-server-1.0.99.901-r1.ebuild:
@@ -215,7 +218,7 @@
   xorg-server-1.0.2-r3.ebuild:
   Drop the mesa version check since it shouldn't be required.
 
-  17 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  17 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.0.99.901.ebuild:
   AIGLX defaults on, don't need to enable it.
 
@@ -238,12 +241,12 @@
   xorg-server-1.0.2-r3.ebuild:
   Add ~x86-fbsd keyword.
 
-  31 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>; ChangeLog:
+  31 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Only need that ChangeLog message once.
 
 *xorg-server-1.0.2-r3 (31 Mar 2006)
 
-  31 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  31 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/xorg-server-1.0.2-64bit-fix-for-glx.patch,
   -xorg-server-1.0.2-r2.ebuild, +xorg-server-1.0.2-r3.ebuild:
   Really fix 64-bit direct rendering. glcontextmodes.[ch] doesn't include
@@ -251,38 +254,38 @@
 
 *xorg-server-1.0.2-r2 (28 Mar 2006)
 
-  28 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  28 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/xorg-server-1.0.2-64bit-fix-have-dix-config.patch,
   +files/xorg-server-1.0.2-64bit-fix-indirect-vertex-array.patch,
   -xorg-server-1.0.2-r1.ebuild, +xorg-server-1.0.2-r2.ebuild:
   Re-add 64-bit direct rendering patches that got lost in the 1.0.2 bump.
 
-  24 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>; +files/xprint.init,
+  24 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>; +files/xprint.init,
   xorg-server-1.0.2-r1.ebuild:
   (#127425) Install xprint init scripts and directories, patch by Ed Catmur.
 
-  24 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  24 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.0.2-r1.ebuild:
   Re-add font-adobe-75dpi to RDEPEND, caught by Jonathan Adamczewski.
 
-  24 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  24 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.0.2-r1.ebuild:
   Add deps on compositeproto 0.3 and fixesproto 4.0, otherwise build may break
   with overlay window patch.
 
 *xorg-server-1.0.2-r1 (24 Mar 2006)
 
-  24 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  24 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   -xorg-server-1.0.2.ebuild, +xorg-server-1.0.2-r1.ebuild:
   (#127333) Fix crashing of pretty much all gtk+-2 apps. We had the
   client-side updates to composite and fixes extensions, but we didn't let the
   server know about them, which resulted in lots of BadRequests.
 
-  23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  23 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.0.2.ebuild:
   Depends on media-fonts/font-adobe-75dpi for xorgcfg.
 
-  23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  23 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/1.0.2-fix-xorgconfig-rgbpath-and-mouse.patch,
   +files/1.0.2-try-to-fix-xorgcfg.patch, xorg-server-1.0.2.ebuild:
   (#117299) Fix xorgconfig, which was producing an invalid RgbPath setting.
@@ -292,7 +295,7 @@
 
 *xorg-server-1.0.2 (21 Mar 2006)
 
-  21 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  21 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/xorg-server-1.0.1-64bit-fix-have-dix-config.patch,
   -files/xorg-server-1.0.1-64bit-fix-indirect-vertex-array.patch,
   -files/xorg-server-1.0.1-Sbus.patch,
@@ -306,7 +309,7 @@
 
 *xorg-server-1.0.1-r4 (19 Feb 2006)
 
-  19 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  19 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/xorg-server-1.0.1-64bit-fix-have-dix-config.patch,
   +files/xorg-server-1.0.1-64bit-fix-indirect-vertex-array.patch,
   -xorg-server-1.0.1-r3.ebuild, +xorg-server-1.0.1-r4.ebuild:
@@ -318,19 +321,19 @@
 
 *xorg-server-1.0.1-r3 (13 Feb 2006)
 
-  13 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  13 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/xorg-server-1.0.1-amd64-fix-for-glx.patch,
   -xorg-server-1.0.1-r2.ebuild, +xorg-server-1.0.1-r3.ebuild:
   (#122140) Add patch to fix OpenGL on amd64, thanks to Igor V. Kovalenko
   <garrison@mail.ru>. Also update to Mesa 6.4.2 tarball so people only need to
   download one version of it.
 
-  06 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  06 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.0.1-r2.ebuild:
   Add an OR dependency with xkbdata for new x11-misc/xkeyboard-config, and
   prefer it over xkbdata.
 
-  03 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  03 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.0.1-r2.ebuild:
   (#121394) Filter -fweb, because it causes window corruption.
 
@@ -340,7 +343,7 @@
 
 *xorg-server-1.0.1-r2 (26 Jan 2006)
 
-  26 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  26 Jan 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/xorg-server-1.0.1-backtrace.patch, -xorg-server-1.0.1.ebuild,
   -xorg-server-1.0.1-r1.ebuild, +xorg-server-1.0.1-r2.ebuild:
   Fix the automatic backtraces at the bottom of /var/log/Xorg.*.log on segfaults.
@@ -349,11 +352,11 @@
   xorg-server-1.0.1.ebuild, xorg-server-1.0.1-r1.ebuild:
   Update the license.
 
-  04 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  04 Jan 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.0.1-r1.ebuild:
   No need to specify configure options that are the default.
 
-  04 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  04 Jan 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.0.1-r1.ebuild:
   No need to manually create Xorg -> X symlink anymore.
 
@@ -370,7 +373,7 @@
 
 *xorg-server-1.0.1 (23 Dec 2005)
 
-  23 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  23 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/xorg-server-1.0.1-Sbus.patch, -xorg-server-0.99.4-r2.ebuild,
   -xorg-server-1.0.0.ebuild, +xorg-server-1.0.1.ebuild:
   Bump for 7.0. (#111361) Add patch to fix sparc build.
@@ -381,11 +384,11 @@
   +xorg-server-1.0.0.ebuild:
   Bump for 7.0RC4.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/fix-xkb-compile-path-2.patch:
   Unused file.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -xorg-server-0.99.2-r2.ebuild, -xorg-server-0.99.3.ebuild,
   -xorg-server-0.99.3-r1.ebuild, -xorg-server-0.99.4.ebuild,
   -xorg-server-0.99.4-r1.ebuild:
@@ -421,7 +424,7 @@
 
   14 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   +files/fix-xkb-compile-path.patch, +xorg-server-0.99.3-r1.ebuild:
-  Fix xkb issue spotted by spyderous.
+  Fix xkb issue spotted by dberkholz.
 
 *xorg-server-0.99.3 (11 Nov 2005)
 
@@ -431,32 +434,32 @@
 
 *xorg-server-0.99.2-r2 (09 Nov 2005)
 
-  09 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Nov 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -xorg-server-0.99.2-r1.ebuild, +xorg-server-0.99.2-r2.ebuild:
   Build against mesa 6.4 instead of 6.3.2.
 
-  31 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  31 Oct 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -xorg-server-0.99.1_p20051013-r1.ebuild, -xorg-server-0.99.2.ebuild:
   Pull old versions.
 
-  29 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  29 Oct 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.2-r1.ebuild:
   Note that X->Xorg symlink will be taken care of for any new snapshots, so we
   can remove the line from the ebuild.
 
-  20 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  20 Oct 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.2-r1.ebuild:
   Use --enable-install-setuid instead of manually changing permissions.
 
 *xorg-server-0.99.2-r1 (20 Oct 2005)
 
-  20 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  20 Oct 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xorg-server-0.99.2-r1.ebuild:
   (#109926) No need to specify xkb path anymore, it's wrong now as well.
 
 *xorg-server-0.99.2 (20 Oct 2005)
 
-  20 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  20 Oct 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xorg-server-0.99.2.ebuild:
   Bump for 7.0 RC1.
 
@@ -464,12 +467,12 @@
   xorg-server-0.99.1_p20051013-r1.ebuild:
   added ~mips keyword
 
-  17 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  17 Oct 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1_p20051013-r1.ebuild:
   (#109354) In some mystical way all the dependency changes got reverted in
   the new revision.
 
-  16 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  16 Oct 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/0.99.1-r10-check-for-glproto.patch,
   -files/0.99.1-r10_CAN-2005-2495.patch, -files/fix-transparencies.patch,
   -xorg-server-0.99.1-r10.ebuild, -xorg-server-0.99.1_p20051013.ebuild:
@@ -477,24 +480,24 @@
 
 *xorg-server-0.99.1_p20051013-r1 (16 Oct 2005)
 
-  16 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  16 Oct 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xorg-server-0.99.1_p20051013-r1.ebuild:
   (#109467) Set a non-broken default font path so things like Xvfb actually work.
 
-  15 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  15 Oct 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1_p20051013.ebuild:
   Add x11-libs/libXtst for dmx.
 
-  15 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  15 Oct 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1_p20051013.ebuild:
   (#109354) Add lots of deps -- libXaw, libXpm, libXxf86misc, libXxf86vm. Add
   notes on which parts depend on them.
 
-  14 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  14 Oct 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1_p20051013.ebuild:
   Also wrap dmxproto dep in minimal USE.
 
-  14 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  14 Oct 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1_p20051013.ebuild:
   (#109124) Add dep on libdmx, within check for USE=minimal. Also move libXres
   dep within there, because it's for dmx.
@@ -503,14 +506,14 @@
   xorg-server-0.99.1_p20051013.ebuild:
   Add missing deps (x11-libs/libXres and x11-libs/libxkbui).
 
-  14 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  14 Oct 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/0.99.1-r9_CAN-2005-2495.patch,
   -files/0.99.1-r9-check-for-glproto.patch, -xorg-server-0.99.1-r9.ebuild:
   Drop old revision.
 
 *xorg-server-0.99.1_p20051013 (14 Oct 2005)
 
-  14 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  14 Oct 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xorg-server-0.99.1_p20051013.ebuild:
   Update to today's CVS. Enable xprint USE flag. Stop filtering
   -fomit-frame-pointer, because it works now. Add dep on
@@ -528,7 +531,7 @@
   Added fix for OO/wine transparencies from bug #96053.  Thanks to bartron for
   both patches.
 
-  27 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  27 Sep 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1-r9.ebuild:
   As of 20050927, xprint will require mkfontdir/mkfontscale for XpConfig.
 
@@ -546,23 +549,23 @@
   +files/0.99.1-r9-check-for-glproto.patch, +xorg-server-0.99.1-r9.ebuild:
   Bump to include security fix from bug #105688.
 
-  12 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  12 Sep 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1-r8.ebuild:
   Add some deps so we get a server that actually runs after emerging it. In
   specific: media-fonts/font-misc-misc media-fonts/font-cursor-misc
   x11-misc/xbitmaps x11-misc/xkbdata x11-apps/iceauth x11-apps/rgb
   x11-apps/xauth x11-apps/xinit.
 
-  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  09 Sep 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml:
   Add metadata.
 
 *xorg-server-0.99.1-r8 (08 Sep 2005)
 
-  08 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  08 Sep 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/0.99.1-r8-check-for-glproto.patch, +xorg-server-0.99.1-r8.ebuild:
   Update to CVS HEAD as of 20050907. Update glproto patch to apply cleanly.
 
-  06 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  06 Sep 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1-r7.ebuild:
   Make --enable-xcsecurity always on, remove nvidia USE.
 
@@ -598,12 +601,12 @@
   xorg-server-0.99.1-r5.ebuild:
   s/lib/$(get_libdir)
 
-  23 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  23 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/check-for-glproto.patch, -files/fix-xf86misc-typo.patch,
   -files/xorg-server-0.99.1-x86_64-1.patch, -xorg-server-0.99.1-r4.ebuild:
   Pull old version.
 
-  23 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  23 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/0.99.1-r5-check-for-glproto.patch, xorg-server-0.99.1-r5.ebuild:
   (#fd.o 3990) Add 0.99.1-r5-check-for-glproto.patch. Pass
   --with-xkb-path=/usr/lib/X11/xkb in attempt to get VT switching closer to
@@ -611,7 +614,7 @@
 
 *xorg-server-0.99.1-r5 (22 Aug 2005)
 
-  22 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  22 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/fix-xnest.patch, +xorg-server-0.99.1-r5.ebuild:
   Update to CVS as of 20050822. This should make amd64 and sparc work. Update
   included mesa to 6.3.2. Stop forcing glx on, it's on by default. Add
@@ -619,7 +622,7 @@
   fix-xnest.patch to fix breakage in the Xnest linking, caused by the
   configure.ac reworking a couple of days ago.
 
-  21 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  21 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1-r4.ebuild:
   xprint build is broken; force it off.
 
@@ -627,7 +630,7 @@
   xorg-server-0.99.1-r4.ebuild:
   Marked ~ppc
 
-  21 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  21 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/xorg-composite.patch, -files/xorg-server-fbmmx-local.patch,
   -xorg-server-0.99.1.ebuild, -xorg-server-0.99.1-r1.ebuild,
   -xorg-server-0.99.1-r2.ebuild, -xorg-server-0.99.1-r3.ebuild:
@@ -635,22 +638,22 @@
 
 *xorg-server-0.99.1-r4 (21 Aug 2005)
 
-  21 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  21 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xorg-server-0.99.1-r4.ebuild:
   Update to today's CVS. This adds a USE flag for xprint. Also, get rid of the
   glx USE flag, because everybody should get it.
 
-  20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  20 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1.ebuild, xorg-server-0.99.1-r1.ebuild,
   xorg-server-0.99.1-r2.ebuild, xorg-server-0.99.1-r3.ebuild:
   panoramixproto moved to xineramaproto.
 
-  17 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  17 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/xorg-server-fbmmx-local.patch, xorg-server-0.99.1-r3.ebuild:
   (fd.o #4073) Fix compilation failures at fbmmx.c. Patch from Diego Pettenò
   <flameeyes@gentoo.org>.
 
-  16 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  16 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1-r3.ebuild:
   Wrap opengl things in `if use glx..`
 
@@ -658,43 +661,43 @@
   xorg-server-0.99.1-r3.ebuild:
   Marked ~amd64.
 
-  14 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  14 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/xorg-server-0.99.1-x86_64-1.patch, xorg-server-0.99.1-r3.ebuild:
   Add xorg-server-0.99.1-x86_64-1.patch to fix configure.ac on amd64.
 
-  14 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  14 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1-r3.ebuild:
   Wrap pkg_postrm() module dir removal in ! has_version.
 
-  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  12 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1-r3.ebuild:
   No longer necessary to force --enable-composite; it's on by default.
 
-  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  12 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1-r3.ebuild:
   Update opengl-update dependency to 2.2.3 for proper handling of
   /usr/libdir/modules/extensions/.
 
-  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  12 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1-r3.ebuild:
   Remove xinerama USE flag; building without it causes major issues.
 
-  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  12 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1-r3.ebuild:
   Add pkg_postrm() to get rid of /usr/lib/xorg/modules. This should make
   things work better for people crazy enough to downgrade to monolithic.
 
 *xorg-server-0.99.1-r3 (12 Aug 2005)
 
-  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  12 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xorg-server-0.99.1-r3.ebuild:
   Set /usr/bin/Xorg suid so it starts.
 
-  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  12 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1-r2.ebuild:
   Fix the patch that mysteriously broke.
 
-  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  12 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/check-for-glproto.patch, +files/fix-xf86misc-typo.patch,
   +xorg-server-0.99.1-r2.ebuild:
   Re-add, this time with a huge patch on the mirror.
@@ -707,7 +710,7 @@
 
 *xorg-server-0.99.1-r2 (12 Aug 2005)
 
-  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  12 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/check-for-glproto.patch, +files/fix-xf86misc-typo.patch,
   +files/xorg-server-0.99.1-update-to-CVS-HEAD-20050811.patch,
   +xorg-server-0.99.1-r2.ebuild:
@@ -715,37 +718,37 @@
   breakage, composite, some other stuff. Split out non-composite things from
   xorg-composite.patch to check-for-glproto.patch and fix-xf86misc-typo.patch.
 
-  11 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  11 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1-r1.ebuild:
   Make an X->Xorg symlink in here until upstream can make one.
 
-  11 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  11 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1-r1.ebuild:
   Add more deps: inputproto, bigreqsproto, xcmiscproto. All reported by aaronf0.
 
-  10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  10 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1-r1.ebuild:
   Move confopts into pkg_setup(), and therefore also CONFIGURE_OPTIONS.
 
 *xorg-server-0.99.1-r1 (10 Aug 2005)
 
-  10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  10 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xorg-server-0.99.1-r1.ebuild:
   Rev bump to make sure people get working GL setup.
 
-  10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  10 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1.ebuild:
   Add GL handling, /usr/lib/opengl, opengl-update, etc.
 
-  10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  10 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1.ebuild:
   Add dep on x11-proto/kbproto, again from aaronf0.
 
-  10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  10 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1.ebuild:
   Add dep on fontsproto, reported by aaronf0 on irc.
 
-  09 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1.ebuild:
   (#101883) Add trapproto and panoramixproto as deps.
 
@@ -753,14 +756,14 @@
   xorg-server-0.99.1.ebuild:
   Add ~sparc keyword (prepare for X Modular testing).
 
-  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  08 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-0.99.1.ebuild:
   (#101749) Add dependencies on videoproto, scrnsaverproto and evieext.
   Reported by Georgi Georgiev <chutz@gg3.net>.
 
 *xorg-server-0.99.1 (08 Aug 2005)
 
-  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  08 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/xorg-composite.patch, +xorg-server-0.99.1.ebuild:
   Initial commit for modular X.
 

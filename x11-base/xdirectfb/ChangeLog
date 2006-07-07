@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xdirectfb
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/ChangeLog,v 1.25 2005/09/10 06:19:49 joshuabaergen Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/ChangeLog,v 1.26 2006/07/07 02:34:28 dberkholz Exp $
+
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update to my new email address.
 
   10 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   xdirectfb-1.0_rc5-r2.ebuild:
@@ -17,28 +20,28 @@
   xdirectfb-1.0_rc5-r1.ebuild:
   Changed cp -a to cp -pPR for BSD compatibility.
 
-  05 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>; :
+  05 Nov 2004; Donnie Berkholz <dberkholz@gentoo.org>; :
   Fix up digest -- remove unused entries.
 
   26 Mar 2004; David Holm <dholm@gentoo.org> xdirectfb-1.0_rc5-r1.ebuild:
   Added to ~ppc.
 
-  19 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  19 Mar 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   xdirectfb-1.0_rc5.ebuild:
   Pulling old revisions.
 
 *xdirectfb-1.0_rc5-r1 (19 Mar 2004)
 
-  19 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  19 Mar 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   xdirectfb-1.0_rc5-r1.ebuild:
   Removing PROVIDE=virtual/x11. This should be used for the libraries, not the
   servers, because it's what other packages build against.
 
-  17 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  17 Mar 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   xdirectfb-1.0_rc3-r1.ebuild, xdirectfb-1.0_rc4.ebuild:
   Pull old versions.
 
-  17 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  17 Mar 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   xdirectfb-1.0_rc5.ebuild:
   Stable on x86.
 
@@ -51,11 +54,11 @@
   xdirectfb-1.0_rc5.ebuild:
   Masked on sparc as DEPEND dev-libs/DirectFB is -sparc.
 
-  17 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>;
+  17 Nov 2003; Donnie Berkholz <dberkholz@gentoo.org>;
   xdirectfb-1.0_rc5.ebuild:
   Removing X430-{4,5,6,7}.tgz from SRC_URI, as they seem unnecessary.
 
-  15 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; files/host.def:
+  15 Nov 2003; Donnie Berkholz <dberkholz@gentoo.org>; files/host.def:
   Building a lot less redundant stuff ... e.g., fonts, other servers, drivers.
 
 *xdirectfb-1.0_rc5 (25 Jun 2003)

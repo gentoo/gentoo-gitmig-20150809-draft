@@ -1,13 +1,16 @@
 # ChangeLog for x11-base/kdrive
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.40 2006/04/24 06:35:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.41 2006/07/07 02:33:31 dberkholz Exp $
 
-  24 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update to my new email address.
+
+  24 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/make-xv-configable.patch, -kdrive-6.6.1_pre20050820.ebuild:
   Remove masked snapshot, build's broken. Use >=xorg-server-1.0.99.x with
   USE=kdrive instead.
 
-  14 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  14 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   kdrive-6.6.1_pre20050820.ebuild:
   Add a die after emake.
 
@@ -15,7 +18,7 @@
   kdrive-6.6.1_pre20050820.ebuild:
   Added ~ppc64
 
-  13 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  13 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   kdrive-4.3.0-r5.ebuild:
   (#122523) Fix SRC_URI.
 
@@ -27,27 +30,27 @@
   kdrive-6.6.1_pre20050820.ebuild:
   Use bindnow-flags function instead of -Wl,-z,now.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +kdrive-4.3.0-r5.ebuild:
   Automated script shouldn't have had this package as input, because it's not
   all hard-masked. Restore old version.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -kdrive-4.3.0-r5.ebuild:
   Pull old versions.
 
-  21 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  21 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/make-xv-configable.patch, kdrive-6.6.1_pre20050820.ebuild:
   Add minimal USE flag, which disables xv, composite, xrecord and xres. Make
   static USE flag actually build static servers -- this still works for
   neither Xati, Xephyr, Xepson, Xfake or Xi810 among kdrive servers nor Xglx.
 
-  21 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; files/startxkd:
+  21 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>; files/startxkd:
   Fix up startxkd so it works better for me.
 
 *kdrive-6.6.1_pre20050820 (21 Aug 2005)
 
-  21 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +files/startxkd,
+  21 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>; +files/startxkd,
   +kdrive-6.6.1_pre20050820.ebuild:
   New snapshot of kdrive, a pack of tiny X servers. Perhaps the most
   interesting part of this is Xglx, a server layered on top of OpenGL. It runs
@@ -60,7 +63,7 @@
   builds against the modular X framework, so you need to be using modular X to
   use it.
 
-  06 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  06 Jul 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   kdrive-4.3.0-r5.ebuild:
   (#74869) USE flag cleanup, from Diego Pettenò <flameeyes@gentoo.org>.
 
@@ -70,18 +73,18 @@
   26 Nov 2004; Andrew Bevitt <cyfred@gentoo.org> kdrive-4.3.0-r5.ebuild:
   Converted over to new linux-info eclass, bug #68455
 
-  23 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  23 Nov 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   kdrive-4.3.0-r5.ebuild:
   Change fs USE flag to font-server.
 
-  17 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  17 Nov 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   kdrive-4.3.0-r5.ebuild:
   Add debug to IUSE, and uncomment the video card listing, IUSE_VIDEO_CARDS.
 
-  20 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r5.ebuild:
+  20 Oct 2004; Donnie Berkholz <dberkholz@gentoo.org>; kdrive-4.3.0-r5.ebuild:
   Update inherit to toolchain-funcs instead of gcc and x11 instead of xfree.
 
-  26 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r5.ebuild:
+  26 Jul 2004; Donnie Berkholz <dberkholz@gentoo.org>; kdrive-4.3.0-r5.ebuild:
   /usr/src/linux needs ${ROOT}.
 
   23 Jun 2004; Andrew Bevitt <cyfred@gentoo.org>; kdrive-4.3.0-r5.ebuild:
@@ -90,34 +93,34 @@
   12 Jun 2004; Andrew Bevitt <cyfred@gentoo.org>; kdrive-4.3.0-r5.ebuild:
   Adding support for koutput in kernel tree
 
-  01 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r5.ebuild:
+  01 Jun 2004; Donnie Berkholz <dberkholz@gentoo.org>; kdrive-4.3.0-r5.ebuild:
   Move inherit up, above uses of flag-o-matic.
 
-  11 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r5.ebuild:
+  11 Apr 2004; Donnie Berkholz <dberkholz@gentoo.org>; kdrive-4.3.0-r5.ebuild:
   xorg-x11 compatibility update.
 
   24 Mar 2004; Martin Holzer <mholzer@gentoo.org> kdrive-4.3.0-r5.ebuild:
   now shows description. closes 45530
 
-  19 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r1.ebuild,
+  19 Mar 2004; Donnie Berkholz <dberkholz@gentoo.org>; kdrive-4.3.0-r1.ebuild,
   kdrive-4.3.0-r4.ebuild:
   Pulling old revisions.
 
 *kdrive-4.3.0-r5 (19 Mar 2004)
 
-  19 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r5.ebuild:
+  19 Mar 2004; Donnie Berkholz <dberkholz@gentoo.org>; kdrive-4.3.0-r5.ebuild:
   Removing PROVIDE=virtual/x11. This should be used for the libraries, not the
   servers, because it's what other packages build against. Mark -r5 x86 also,
   since only change from -r4 is the PROVIDE and that has no effect on stability.
 
-  24 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r1.ebuild:
+  24 Feb 2004; Donnie Berkholz <dberkholz@gentoo.org>; kdrive-4.3.0-r1.ebuild:
   Change is_kernel check so it defaults to running kernel if /usr/src/linux
   doesn't exist so it works on LiveCD.
 
-  15 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0.ebuild:
+  15 Feb 2004; Donnie Berkholz <dberkholz@gentoo.org>; kdrive-4.3.0.ebuild:
   Pulling old stable version, there's a newer one.
 
-  15 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r2.ebuild:
+  15 Feb 2004; Donnie Berkholz <dberkholz@gentoo.org>; kdrive-4.3.0-r2.ebuild:
   Pulling broken version, not here for any real reason I can see.
 
 *kdrive-4.3.0-r4 (28 Jan 2004)
@@ -134,7 +137,7 @@
 
 *kdrive-4.3.0-r2 (10 Nov 2003)
 
-  10 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r2.ebuild:
+  10 Nov 2003; Donnie Berkholz <dberkholz@gentoo.org>; kdrive-4.3.0-r2.ebuild:
   Add missing include patch to close bug #32368 and allow kdrive to compile
   without xfree installed. Remove LBX support, add support for speedo, type1,
   truetype, cid fonts, font server and xv. Clean up code -- Change M to MANDIR,
@@ -143,26 +146,26 @@
   issue if /usr/src/linux doesn't exist. Always install all KDrive man pages,
   since documentation on it is so slim.
 
-  12 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r1.ebuild:
+  12 Oct 2003; Donnie Berkholz <dberkholz@gentoo.org>; kdrive-4.3.0-r1.ebuild:
   Major reworking of ebuild, centered around removing repetitive statements.
   Also smaller fixes. Moved to USE_EXPAND from local vcards variable.
 
 *kdrive-4.3.0-r1 (16 Sep 2003)
 
-  16 Sep 2003; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r1.ebuild:
+  16 Sep 2003; Donnie Berkholz <dberkholz@gentoo.org>; kdrive-4.3.0-r1.ebuild:
   Added an update from Keith Packard's CVS as well as a startxkd script that
   works decently. KDrive is under heavy work so look forward to some new stuff
   in the not-too-distant future.
 
-  16 Sep 2003; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0.ebuild:
+  16 Sep 2003; Donnie Berkholz <dberkholz@gentoo.org>; kdrive-4.3.0.ebuild:
   Ebuild cleanup, disable type1 and truetype for now because they're useless in
   the current setup.
 
-  18 Jul 2003; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0.ebuild:
+  18 Jul 2003; Donnie Berkholz <dberkholz@gentoo.org>; kdrive-4.3.0.ebuild:
   Marked stable for x86.
 
 *kdrive-4.3.0 (07 Jul 2003)
 
-  07 Jul 2003; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0.ebuild:
+  07 Jul 2003; Donnie Berkholz <dberkholz@gentoo.org>; kdrive-4.3.0.ebuild:
   Initial commit. Thanks to jjosegutierrez@terra.es for submitting an ebuild.
 
