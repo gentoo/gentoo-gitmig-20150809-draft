@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.3.ebuild,v 1.3 2006/07/05 07:48:45 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.3.ebuild,v 1.4 2006/07/07 19:30:26 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg kde-functions mono toolchain-funcs
 
@@ -56,7 +56,7 @@ RDEPEND="!app-office/openoffice-bin
 	kde? ( >=kde-base/kdelibs-3.2 )
 	firefox? ( >=www-client/mozilla-firefox-1.5-r9 )
 	>=x11-libs/startup-notification-0.5
-	>=media-libs/freetype-2.1.10
+	>=media-libs/freetype-2.1.10-r2
 	>=media-libs/fontconfig-2.2.0
 	media-libs/libpng
 	sys-devel/flex
@@ -123,7 +123,7 @@ pkg_setup() {
 	use debug && CHECKREQS_DISK_BUILD="8192" || CHECKREQS_DISK_BUILD="5120"
 	check_reqs
 
-	strip-linguas "${LANGS}"
+	strip-linguas ${LANGS}
 
 	if [ -z "${LINGUAS}" ]; then
 		export LINGUAS_OOO="en-US"

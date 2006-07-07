@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.231 2006/07/06 19:17:46 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.232 2006/07/07 19:30:26 suka Exp $
+
+  07 Jul 2006; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.0.3.ebuild:
+  Raise dependency for freetype, also fix strip-linguas stuff
 
   06 Jul 2006; Andreas Proschofsky <suka@gentoo.org>
   files/2.0.3/gentoo-2.0.3.diff:
