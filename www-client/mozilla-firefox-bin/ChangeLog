@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.43 2006/06/12 01:33:40 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.44 2006/07/07 21:24:18 genstef Exp $
+
+  07 Jul 2006; Stefan Schweizer <genstef@gentoo.org>
+  mozilla-firefox-bin-1.5.0.4.ebuild:
+  Add linguas to IUSE, bug 136953
 
   12 Jun 2006; Jory A. Pratt <anarchy@gentoo.org>
   -mozilla-firefox-bin-1.0.7.ebuild, -mozilla-firefox-bin-1.0.8.ebuild,
