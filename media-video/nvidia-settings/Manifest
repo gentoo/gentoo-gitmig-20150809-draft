@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX icon/nvidia-settings.desktop 194 RMD160 a59dae254f65d9665118629b489b33b0fd87c8d5 SHA1 eac0735769b28d7c217d6ab15a3dca3e2adff9b1 SHA256 af43af5db203c1acf9301fa7fb285a7fdfe5aab5ce1aa30a239fd7db1b588168
 MD5 596d93feba5f2012ed21d3b44bfd0b10 files/icon/nvidia-settings.desktop 194
 RMD160 a59dae254f65d9665118629b489b33b0fd87c8d5 files/icon/nvidia-settings.desktop 194
@@ -41,6 +38,10 @@ EBUILD nvidia-settings-1.0.20051122.ebuild 1607 RMD160 b60790be2b6382765fbfa4ac5
 MD5 e7136664ccde2a8050e6b17b803fbdb0 nvidia-settings-1.0.20051122.ebuild 1607
 RMD160 b60790be2b6382765fbfa4ac5dbadd974210528d nvidia-settings-1.0.20051122.ebuild 1607
 SHA256 a8cce57fa8344a1d817509f7c3a2d91a3e9ebed5809f427f0b83daf90141e63a nvidia-settings-1.0.20051122.ebuild 1607
+EBUILD nvidia-settings-1.0.20060516-r1.ebuild 3138 RMD160 7d94af42e4fbe480ff8617c3ed25d659753f2808 SHA1 8696ee967047b7e4a0cdcd3d8a3cacb215cccb58 SHA256 5ee701ff6986e6b8a3bddfea9a525cb89c8d3abad1f659852ffd7772fbb3ee38
+MD5 d16fb4e86c7f7a8a9a865585da8a6958 nvidia-settings-1.0.20060516-r1.ebuild 3138
+RMD160 7d94af42e4fbe480ff8617c3ed25d659753f2808 nvidia-settings-1.0.20060516-r1.ebuild 3138
+SHA256 5ee701ff6986e6b8a3bddfea9a525cb89c8d3abad1f659852ffd7772fbb3ee38 nvidia-settings-1.0.20060516-r1.ebuild 3138
 EBUILD nvidia-settings-1.0.20060516.ebuild 2865 RMD160 45d260ea018ca64baa15b51dbcd174c5564dc3ee SHA1 a2e3c7ec5eba24153f971acc8cc913699a9d5d76 SHA256 9a368f127338aa74da3e510de0044fb3499bb8fe347e923d2fb4d300c22dae33
 MD5 765e85869ef7089d779bb43682b0455c nvidia-settings-1.0.20060516.ebuild 2865
 RMD160 45d260ea018ca64baa15b51dbcd174c5564dc3ee nvidia-settings-1.0.20060516.ebuild 2865
@@ -57,10 +58,10 @@ EBUILD nvidia-settings-1.0.7167.ebuild 1322 RMD160 6143fa709b600b5d0e15cf005efb8
 MD5 d7f90e0d8347493b76fad3613ccd4c91 nvidia-settings-1.0.7167.ebuild 1322
 RMD160 6143fa709b600b5d0e15cf005efb8758c3667303 nvidia-settings-1.0.7167.ebuild 1322
 SHA256 137ade9e89ccbf46cba0d2021042595868ab3df68adfc3318fb44297aaf3c75d nvidia-settings-1.0.7167.ebuild 1322
-MISC ChangeLog 4459 RMD160 3d50786c5f3faf0f11acccf284fe8989b891e5e9 SHA1 4cceed09cc3da365b46069682c9383e1b8801621 SHA256 edd40130508ce36e875c73d1b02619ee0954c4c0d88f9d6deb6e020ea5813e79
-MD5 29dc3328a38b559cb0081bd9d21f43e3 ChangeLog 4459
-RMD160 3d50786c5f3faf0f11acccf284fe8989b891e5e9 ChangeLog 4459
-SHA256 edd40130508ce36e875c73d1b02619ee0954c4c0d88f9d6deb6e020ea5813e79 ChangeLog 4459
+MISC ChangeLog 4686 RMD160 7e1b5bbafc336e14e8c6ed92a5d1b5323cce68d1 SHA1 751ec6c3a0b50ca47d583d7d79f6d4074fea309a SHA256 ed361716c2b7e1a237548de14afbbe3d576782a7cd9aec91353a88448e6f82d5
+MD5 9d8f07bceaa8a1409a43e50214720816 ChangeLog 4686
+RMD160 7e1b5bbafc336e14e8c6ed92a5d1b5323cce68d1 ChangeLog 4686
+SHA256 ed361716c2b7e1a237548de14afbbe3d576782a7cd9aec91353a88448e6f82d5 ChangeLog 4686
 MISC metadata.xml 300 RMD160 bd9f5911138f38787f7559ebfa93ffbeb05babaf SHA1 c09bb78e0f50c4c1baf741d6fc7abda39fdf338b SHA256 8e7d769dbca123b81bed99b71048e93a8f860219e894c8abc7569d0cc3e948e8
 MD5 b48738468061c96675a782947951d3d8 metadata.xml 300
 RMD160 bd9f5911138f38787f7559ebfa93ffbeb05babaf metadata.xml 300
@@ -86,6 +87,9 @@ SHA256 e9fe910e1bd16eb80e57cea532819984097376a6287b1f03e9f6cb90938ea009 files/di
 MD5 8f267f01d4240bae508663a667abdeb8 files/digest-nvidia-settings-1.0.20060516 289
 RMD160 1bfae97fa4662223c93eda89b37eac48616a32f7 files/digest-nvidia-settings-1.0.20060516 289
 SHA256 175d7bc1eb49f717f571325404133184bf1fd48abb7de5f235146fdeae0412b4 files/digest-nvidia-settings-1.0.20060516 289
+MD5 8f267f01d4240bae508663a667abdeb8 files/digest-nvidia-settings-1.0.20060516-r1 289
+RMD160 1bfae97fa4662223c93eda89b37eac48616a32f7 files/digest-nvidia-settings-1.0.20060516-r1 289
+SHA256 175d7bc1eb49f717f571325404133184bf1fd48abb7de5f235146fdeae0412b4 files/digest-nvidia-settings-1.0.20060516-r1 289
 MD5 ab13de81d2cbfad76dc62bf89b4c7671 files/digest-nvidia-settings-1.0.6111 485
 RMD160 deabb325a6032548272d7206e3e32c512ccd46f5 files/digest-nvidia-settings-1.0.6111 485
 SHA256 5632da957e40eedf12e7e5c1d0c6de7650abdfa67f0293bc284dc00778b35e85 files/digest-nvidia-settings-1.0.6111 485
@@ -95,10 +99,3 @@ SHA256 aae449265f321d357fe7aea7ed0c2033030c009fc1afe3f5e4b711a07f855dc3 files/di
 MD5 ce276d6edd87a8f9f2bfc81f2d4fcfed files/digest-nvidia-settings-1.0.7167 76
 RMD160 8d23a933330ada159d95b7aa9c75cd7b2d10ee6c files/digest-nvidia-settings-1.0.7167 76
 SHA256 d20f525816ba251a7bc49354fe138775788ff394c5e21292f6ad58c584d0adbc files/digest-nvidia-settings-1.0.7167 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-
-iD8DBQFEpJupoGcCqvCmTSIRApB9AJ4/PaoFUZYWHRyvnvKeNgM6RTqORQCdGzYI
-FanRPcf4gjB+LF2TMJfwBjc=
-=BeTt
------END PGP SIGNATURE-----
