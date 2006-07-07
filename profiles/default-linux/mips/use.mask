@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.52 2006/06/30 01:31:28 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.53 2006/07/07 06:25:28 mr_bones_ Exp $
 
 # 2006/03/07 - Donnie Berkholz <spyderous@gentoo.org>
 # Modular X: mask for architectures lacking direct rendering
@@ -204,6 +204,8 @@ netbeans
 # complaining
 acl
 
+# masked until gnome-extra/evolution-data-server is keyworded for mips
+eds
 
 # Flags which aren't applicable to mips (Mostly copied from sparc)
 3dfx
