@@ -1,10 +1,10 @@
 # ChangeLog for sci-electronics/balsa
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.7 2006/07/07 17:16:41 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.8 2006/07/07 17:38:13 calchan Exp $
 
   07 Jul 2006; Denis Dupeyron <calchan@gentoo.org> balsa-3.4.ebuild,
   balsa-3.4.3.ebuild:
-  Replacing some einfo occurences with elog.
+  Replaced some einfo occurences with elog.
 
   02 Jul 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
   Adjusted metadata, see bug #138062.
