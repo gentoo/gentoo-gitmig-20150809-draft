@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.8.0-r1.ebuild,v 1.7 2006/04/28 03:40:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.8.0-r1.ebuild,v 1.8 2006/07/07 06:55:58 mr_bones_ Exp $
 
 inherit versionator
 
@@ -18,7 +18,6 @@ KEYWORDS="~amd64 ~sparc ~x86"
 RDEPEND=">=dev-util/guile-1.6.5
 	|| (
 		>app-text/ghostscript-gnu-8
-		>app-text/ghostscript-afpl-8
 		>app-text/ghostscript-esp-8
 	)
 	virtual/tetex
