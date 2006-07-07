@@ -1,14 +1,17 @@
 # ChangeLog for app-admin/eselect-lapack
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/ChangeLog,v 1.2 2006/07/03 07:18:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/ChangeLog,v 1.3 2006/07/07 05:51:39 dberkholz Exp $
 
-  03 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
+
+  03 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   eselect-lapack-0.1.ebuild:
   We can depend on eselect 1.0.3 now that it's in the tree.
 
 *eselect-lapack-0.1 (18 Jun 2006)
 
-  18 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  18 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/lapack.eselect-0.1, +files/lapack.eselect.5, +metadata.xml,
   +eselect-lapack-0.1.ebuild:
   New eselect module for switching LAPACK implementations.
