@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20060329.ebuild,v 1.4 2006/05/27 15:53:58 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20060329.ebuild,v 1.5 2006/07/07 17:08:54 calchan Exp $
 
 inherit versionator flag-o-matic
 
@@ -41,5 +41,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Users should source /etc/alliance.env before working with Alliance tools."
+	elog "Users should source /etc/alliance.env before working with Alliance tools."
 }
