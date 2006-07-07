@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jvmstat/jvmstat-3.0.ebuild,v 1.1 2006/07/06 17:17:45 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jvmstat/jvmstat-3.0.ebuild,v 1.2 2006/07/07 04:13:15 mr_bones_ Exp $
 
 inherit java-pkg-2 versionator
 
@@ -17,7 +17,7 @@ IUSE="doc"
 RESTRICT="fetch nostrip"
 
 DEPEND=""
-RDEPEND=">=virtual/jre-1.5*"
+RDEPEND=">=virtual/jre-1.5"
 
 S="${WORKDIR}/jvmstat/"
 
