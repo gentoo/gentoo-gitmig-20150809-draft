@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.5.0-r1.ebuild,v 1.4 2006/07/04 08:02:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.5.0-r1.ebuild,v 1.5 2006/07/07 11:16:45 azarah Exp $
 
 inherit libtool multilib eutils autotools pam toolchain-funcs gnuconfig
 
@@ -154,6 +154,10 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
+	# Remove unwanted modules before checking dependencies
+	use berkdb || rm -f "${D}/$(get_libdir)/security/pam_userdb"*
+	use selinux || rm -f "${D}/$(get_libdir)/security/pam_selinux"*
+
 	# Make sure every module built.
 	# Do not remove this, as some module can fail to build
 	# and effectively lock the user out of his system.
@@ -183,9 +187,6 @@ src_install() {
 
 	# No, we don't really need .la files for PAM modules.
 	rm -f "${D}/$(get_libdir)/security/"*.la
-
-	use berkdb || rm -f "${D}/$(get_libdir)/security/pam_userdb*"
-	use selinux || rm -f "${D}/$(get_libdir)/security/pam_selinux*"
 
 	dodoc CHANGELOG ChangeLog README AUTHORS Copyright
 	docinto modules ; dodoc doc/txts/README.*
