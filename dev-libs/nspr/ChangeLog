@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.45 2006/06/02 23:52:38 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.46 2006/07/07 17:26:02 flameeyes Exp $
+
+  07 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> nspr-4.6.2.ebuild:
+  Add ~x86-fbsd keyword.
 
 *nspr-4.6.2 (02 Jun 2006)
 
