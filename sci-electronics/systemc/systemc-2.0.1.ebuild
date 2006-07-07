@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/systemc-2.0.1.ebuild,v 1.1 2004/12/27 20:23:41 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/systemc-2.0.1.ebuild,v 1.2 2006/07/07 17:30:32 calchan Exp $
 
 IUSE=""
 
@@ -16,9 +16,9 @@ DEPEND="virtual/libc"
 RESTRICT="fetch"
 
 pkg_nofetch() {
-	einfo "${PN} developes require end-users to accept their license agreement"
-	einfo "by registering on their site (http://www.systemc.org)"
-	einfo "Please download ${A} manually and place it in ${DISTDIR}"
+	elog "${PN} developers require end-users to accept their license agreement"
+	elog "by registering on their site (http://www.systemc.org)"
+	elog "Please download ${A} manually and place it in ${DISTDIR}"
 }
 
 src_unpack() {

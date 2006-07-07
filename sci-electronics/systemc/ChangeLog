@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/systemc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/ChangeLog,v 1.4 2006/07/02 16:00:14 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/ChangeLog,v 1.5 2006/07/07 17:30:32 calchan Exp $
+
+  07 Jul 2006; Denis Dupeyron <calchan@gentoo.org> systemc-2.0.1.ebuild,
+  systemc-2.0.1-r1.ebuild:
+  Replaced einfo occurences with elog. Fixed minor typo.
 
   02 Jul 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
   Adjusted metadata, see bug #138062.
