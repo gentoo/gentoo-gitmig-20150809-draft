@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.8762.ebuild,v 1.3 2006/07/07 18:54:48 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.8762-r1.ebuild,v 1.1 2006/07/07 18:54:48 augustus Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -107,7 +107,7 @@ src_unpack() {
 		unpack ${A}
 	fi
 
-	# Patchs go below here, add breif description
+	# Patches go below here, add breif description
 	use x86-fbsd \
 		&& cd "${WORKDIR}/${NV_PACKAGE}${PKG_V}/doc" \
 		|| cd "${WORKDIR}/${NV_PACKAGE}${PKG_V}"
@@ -117,6 +117,9 @@ src_unpack() {
 	epatch ${FILESDIR}/NVIDIA_glx-glheader.patch
 
 	if ! use x86-fbsd; then
+		# Zander kernel patch
+		epatch ${NV_PATCH_PREFIX}-U062606.diff
+
 		# Quiet down warnings the user do not need to see
 		sed -i \
 			-e 's:-Wpointer-arith::g' \
