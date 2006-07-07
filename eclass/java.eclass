@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.30 2006/06/24 18:36:59 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.31 2006/07/07 17:15:05 nelchael Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -37,7 +37,7 @@ java_pkg_postinst() {
 java_pkg_prerm() {
 	if java-config -J | grep -q ${P} ; then
 		ewarn "It appears you are removing your default system VM!"
-		ewarn "Please run java-config -L then java-config-S to set a new system VM!"
+		ewarn "Please run java-config -L then java-config -S to set a new system VM!"
 	fi
 }
 
