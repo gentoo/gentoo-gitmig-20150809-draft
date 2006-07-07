@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.25 2006/06/30 15:05:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.26 2006/07/07 14:04:56 augustus Exp $
 
 inherit eutils
 
@@ -281,7 +281,9 @@ RDEPEND="${RDEPEND}
 				video_cards_voodoo? ( x11-drivers/xf86-video-voodoo )
 
 				video_cards_3dfx? ( 3dfx? ( >=media-libs/glide-v3-3.10 ) )
-				video_cards_nvidia? ( media-video/nvidia-glx )
+				video_cards_nvidia? ( || ( media-video/nvidia-glx
+							x11-drivers/nvidia-drivers
+							x11-drivers/nvidia-legacy-drivers ) )
 				video_cards_fglrx? ( x11-drivers/ati-drivers )
 			)
 			(
