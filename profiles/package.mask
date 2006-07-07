@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5597 2006/07/07 15:14:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5598 2006/07/07 22:22:40 sanchan Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -631,10 +631,6 @@ net-libs/libpcap-ringbuffer
 =sys-kernel/rsbac-sources-2.6.99
 =sys-kernel/rsbac-sources-2.4.99
 =sys-apps/rsbac-admin-1.2.99
-
-# Sandro Bonazzola <sanchan@gentoo.org> (13 Feb 2006)
-# Masked for java package freeze.
-dev-tinyos/tos-getenv
 
 # Robin H. Johnson <robbat2@gentoo.org> (11 Feb 2006)
 # pending mailer-config
