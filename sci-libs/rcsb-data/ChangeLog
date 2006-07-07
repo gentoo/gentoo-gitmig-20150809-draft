@@ -1,14 +1,17 @@
 # ChangeLog for sci-libs/rcsb-data
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/rcsb-data/ChangeLog,v 1.2 2006/04/26 03:52:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rcsb-data/ChangeLog,v 1.3 2006/07/07 05:46:39 dberkholz Exp $
 
-  26 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
+
+  26 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   rcsb-data-1.700.ebuild:
   Keyword ~ppc.
 
 *rcsb-data-1.700 (20 Dec 2005)
 
-  20 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  20 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/respect-bindir.patch, +metadata.xml, +rcsb-data-1.700.ebuild:
   Part of the RCSB Protein Data Bank tools. Provides the data necessary to run
   the other applications.

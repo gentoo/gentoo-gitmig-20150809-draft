@@ -1,19 +1,22 @@
 # ChangeLog for sci-libs/mccp4
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mccp4/ChangeLog,v 1.4 2006/04/26 05:06:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mccp4/ChangeLog,v 1.5 2006/07/07 05:45:13 dberkholz Exp $
 
-  26 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; mccp4-0.7.1.ebuild:
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
+
+  26 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>; mccp4-0.7.1.ebuild:
   Really keyword ~ppc.
 
-  24 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; ChangeLog:
+  24 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Keyword ~ppc.
 
-  23 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; mccp4-0.7.1.ebuild:
+  23 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>; mccp4-0.7.1.ebuild:
   Add http:// to HOMEPAGE, reported by ciaranm.
 
 *mccp4-0.7.1 (08 Jan 2006)
 
-  08 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  08 Jan 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
   +mccp4-0.7.1.ebuild:
   Mini-CCP4 library including mtz and map I/O, required for clipper and coot.
 

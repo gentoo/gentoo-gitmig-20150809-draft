@@ -1,13 +1,16 @@
 # ChangeLog for sci-libs/pgplot
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.2 2006/03/30 23:55:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.3 2006/07/07 05:45:54 dberkholz Exp $
+
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> pgplot-5.2.2.ebuild:
   Mark 5.2.2 ~ia64
 
 *pgplot-5.2.2 (16 Dec 2005)
 
-  16 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  16 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/pgplot-compile-setup.patch, +files/pgplot-drivers.patch,
   +files/pgplot-makemake.patch, +metadata.xml, +pgplot-5.2.2.ebuild:
   A Fortran- or C-callable, device-independent graphics package for making

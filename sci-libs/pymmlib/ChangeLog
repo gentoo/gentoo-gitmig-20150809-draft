@@ -1,34 +1,37 @@
 # ChangeLog for sci-libs/pymmlib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.7 2006/06/14 03:02:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.8 2006/07/07 05:46:20 dberkholz Exp $
 
-  14 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; pymmlib-0.9.8.ebuild:
+  07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update to my new email address.
+
+  14 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>; pymmlib-0.9.8.ebuild:
   Proper fix for new numpy -- just depend on the new numpy, and always fix up
   the .py files to use the 'old' module. Also fix the python_mod_optimize()
   call, it was missing /usr in the location and wasn't multilib-friendly.
 
-  14 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; pymmlib-0.9.8.ebuild:
+  14 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>; pymmlib-0.9.8.ebuild:
   Force numpy dep to <0.9.8 -- 0.9.8 moves some functions into a deprecated
   old module and breaks lots of stuff. We'll fix that later.
 
 *pymmlib-0.9.8 (14 Jun 2006)
 
-  14 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  14 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +pymmlib-0.9.8.ebuild:
   Bump. Uses numpy instead of numarray, and other changes.
 
-  07 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; pymmlib-0.9.7.ebuild:
+  07 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>; pymmlib-0.9.7.ebuild:
   Use dobin instead of doexe.
 
-  07 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; pymmlib-0.9.7.ebuild:
+  07 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>; pymmlib-0.9.7.ebuild:
   Keyword ~ppc.
 
-  07 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>; pymmlib-0.9.7.ebuild:
+  07 Jan 2006; Donnie Berkholz <dberkholz@gentoo.org>; pymmlib-0.9.7.ebuild:
   Also install applications, examples and docs.
 
 *pymmlib-0.9.7 (07 Jan 2006)
 
-  07 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  07 Jan 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
   +pymmlib-0.9.7.ebuild:
   Software toolkit and library of routines for the analysis and manipulation
   of macromolecular structural models.
