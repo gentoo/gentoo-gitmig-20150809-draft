@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.4.ebuild,v 1.19 2005/06/17 20:02:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.4.ebuild,v 1.20 2006/07/07 11:20:59 flameeyes Exp $
 
 inherit libtool eutils
 
@@ -30,6 +30,8 @@ DEPEND="${RDEPEND}
 IUSE_CAMERAS="agfa-cl20 barbie canon casio digita dimera directory fuji gsmart300 jamcam jd11
 kodak konica mustek largan minolta panasonic pccam300 pccam600 polaroid ptp2 ricoh samsung
 smal sierra sipix sonydscf1 sonydscf55 soundvision spca50x sq905 stv0680 sx330z"
+
+RESTRICT="confcache"
 
 pkg_setup() {
 	if [ -z "${CAMERAS}" ] ; then

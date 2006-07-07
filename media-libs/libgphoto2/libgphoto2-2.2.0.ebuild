@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.0.ebuild,v 1.2 2006/07/06 19:50:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.0.ebuild,v 1.3 2006/07/07 11:20:59 flameeyes Exp $
 
 inherit libtool eutils
 
@@ -34,6 +34,8 @@ IUSE_CAMERAS="adc65 agfa-cl20 aox barbie canon casio clicksmart310 digigr8 digit
 	largan lg_gsm mars minolta mustek panasonic pccam300 pccam600 polaroid ptp2
 	ricoh samsung sierra sipix smal sonix sonydscf1 sonydscf55 soundvision
 	spca50x sq905 stv0674 stv0680 sx330z template toshiba"
+
+RESTRICT="confcache"
 
 pkg_setup() {
 	if [[ -z "${CAMERAS}" ]] ; then
