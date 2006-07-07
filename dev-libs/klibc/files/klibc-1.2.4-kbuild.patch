@@ -1,0 +1,14 @@
+diff -Naurp klibc-1.2.4-orig/scripts/Makefile.host klibc-1.2.4/scripts/Makefile.host
+--- klibc-1.2.4-orig/scripts/Makefile.host	2006-03-12 01:04:15.000000000 +0100
++++ klibc-1.2.4/scripts/Makefile.host	2006-03-12 01:17:08.000000000 +0100
+@@ -85,8 +85,8 @@ ifeq ($(KBUILD_SRC),)
+ __hostc_flags	= $(_hostc_flags)
+ __hostcxx_flags	= $(_hostcxx_flags)
+ else
+-__hostc_flags	= -I$(obj) $(call flags,_hostc_flags)
+-__hostcxx_flags	= -I$(obj) $(call flags,_hostcxx_flags)
++__hostc_flags	= -I$(obj) $(_hostc_flags)
++__hostcxx_flags	= -I$(obj) $(_hostcxx_flags)
+ endif
+ 
+ hostc_flags    = -Wp,-MD,$(depfile) $(__hostc_flags)
