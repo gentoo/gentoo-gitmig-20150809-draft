@@ -1,0 +1,12 @@
+diff -ru mp3-0.9.14-orig/setup-mplayer.c mp3-0.9.14/setup-mplayer.c
+--- mp3-0.9.14-orig/setup-mplayer.c	2006-07-07 09:56:27.000000000 +0200
++++ mp3-0.9.14/setup-mplayer.c	2006-07-07 09:56:35.000000000 +0200
+@@ -30,7 +30,7 @@
+ 
+ cMPlayerSetup::cMPlayerSetup(void)
+ {
+-  SlaveMode = 0;
++  SlaveMode = 1;
+   ResumeMode = 2;
+   HideMainMenu = 0;
+   OsdPos = 0;
