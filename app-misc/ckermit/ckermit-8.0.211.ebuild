@@ -1,32 +1,30 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211.ebuild,v 1.9 2005/06/27 07:38:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211.ebuild,v 1.10 2006/07/07 01:52:12 vapier Exp $
 
 MY_P=cku209
-S=${WORKDIR}
-DESCRIPTION="C-Kermit is a combined serial and network communication software package offering a consistent, medium-independent, cross-platform approach to connection establishment, terminal sessions, file transfer, character-set translation, numeric and alphanumeric paging, and automation of communication tasks."
+DESCRIPTION="combined serial and network communication software package"
 SRC_URI="ftp://kermit.columbia.edu/kermit/archives/${MY_P}.tar.gz"
 HOMEPAGE="http://www.kermit-project.org/"
 
-SLOT="0"
 LICENSE="Kermit"
-IUSE=""
+SLOT="0"
 KEYWORDS="amd64 ppc ppc64 ~x86"
+IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"
-
 RDEPEND="${DEPEND}
 	net-dialup/xc"
 
-src_unpack() {
+S=${WORKDIR}
 
+src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i -e "s:-O:${CFLAGS}:" makefile
 }
 
 src_compile() {
-
 	emake KFLAGS="-DCK_SHADOW" linux || die
 }
 
