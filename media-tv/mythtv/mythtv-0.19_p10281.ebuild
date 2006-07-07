@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p10281.ebuild,v 1.2 2006/06/23 23:57:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p10281.ebuild,v 1.3 2006/07/07 20:13:17 augustus Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -32,7 +32,9 @@ RDEPEND=">=media-libs/freetype-2.0
 	virtual/x11 )
 	xvmc? (
 		|| ( x11-libs/libXvMC virtual/x11 )
-		video_cards_nvidia? ( media-video/nvidia-glx )
+		video_cards_nvidia? ( || ( media-video/nvidia-glx
+								 x11-drivers/nvidia-drivers
+								 x11-drivers/nvidia-legacy-drivers ) )
 		video_cards_via? ( || ( x11-drivers/xf86-video-via virtual/x11 ) )
 		video_cards_i810? ( || ( x11-drivers/xf86-video-i810 virtual/x11 ) )
 	)
@@ -101,7 +103,7 @@ pkg_setup() {
 		echo
 		rip=1
 	fi
-	
+
 	if use xvmc && ! ( use video_cards_i810 || use video_cards_nvidia || use video_cards_via ); then
 		echo
 		eerror "You enabled the XvMC USE flag but did not configure VIDEO_CARDS with either"
