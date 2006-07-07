@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.29 2006/07/05 07:35:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.30 2006/07/07 21:01:50 lu_zero Exp $
+
+  07 Jul 2006; Luca Barbato <lu_zero@gentoo.org> wv-1.2.0.ebuild:
+  Marked ppc works with gcc-4.1 better
 
   05 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org> wv-1.0.0-r1.ebuild:
   change xml2 use flag to xml
