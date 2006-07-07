@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-wsdp.eclass,v 1.1 2006/07/06 12:25:05 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-wsdp.eclass,v 1.2 2006/07/07 09:20:20 nelchael Exp $
 
 #
 # Original Author: Krzysiek Pawlik <nelchael@gentoo.org>
@@ -77,7 +77,7 @@ java-wsdp_src_unpack() {
 	eend 0
 
 	# A little cleanup (remove unneeded files like uninstaller, images for it,
-	# bundled ant:
+	# bundled ant):
 	cd "${WORKDIR}/base"
 	rm -fr _uninst uninstall.sh images apache-ant
 
