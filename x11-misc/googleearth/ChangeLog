@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.5 2006/06/22 07:30:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.6 2006/07/07 20:20:32 augustus Exp $
+
+  07 Jul 2006; Kristopher Kersey <augustus@gentoo.org>
+  googleearth-4_beta.ebuild:
+  Added RDEPEND for new x11-drivers/nvidia-drivers or
+  x11-drivers/nvidia-legacy-drivers.
 
   22 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
   googleearth-4_beta.ebuild:
