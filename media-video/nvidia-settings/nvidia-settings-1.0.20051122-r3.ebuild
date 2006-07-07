@@ -1,10 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20051122-r3.ebuild,v 1.3 2006/04/19 14:49:39 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20051122-r3.ebuild,v 1.4 2006/07/07 22:51:09 azarah Exp $
 
 inherit eutils toolchain-funcs multilib
 
-NVIDIA_VERSION="1.0.7664"
+NVIDIA_VERSION="1.0.6629"
+# The following were added to work with the new nvidia-drivers and
+# nvidia-legacy-drivers ebuilds.  This will be cleaned up once we remove
+# nvidia-kernel and nvidia-glx from portage.
+NVIDIA_NEW_VERSION="1.0.8762"
+NVIDIA_LEGACY_VERSION="1.0.7182"
 S="${WORKDIR}/${PN}-1.0"
 DESCRIPTION="NVIDIA Linux X11 Settings Utility"
 HOMEPAGE="http://www.nvidia.com/"
@@ -14,7 +19,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86 amd64"
+KEYWORDS="-* amd64 x86"
 IUSE=
 
 # xorg-server is used in the depends as nvidia-settings builds against some
@@ -31,9 +36,9 @@ DEPEND="virtual/libc
 				x11-misc/gccmakedep )
 			virtual/x11
 		)"
-RDEPEND=">=media-video/nvidia-glx-${NVIDIA_VERSION}
-		|| ( >=media-video/nvidia-kernel-${NVIDIA_VERSION}
-			>=media-video/nvidia-freebsd-${NVIDIA_VERSION} )
+RDEPEND="|| ( >=media-video/nvidia-glx-${NVIDIA_VERSION}
+			>=x11-drivers/nvidia-drivers-${NVIDIA_NEW_VERSION}
+			>=x11-drivers/nvidia-legacy-drivers-${NVIDIA_LEGACY_VERSION} )
 		>=x11-libs/gtk+-2
 		|| ( (	x11-base/xorg-server
 				x11-libs/libXt )

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.24 2006/07/07 14:25:51 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.25 2006/07/07 22:51:09 azarah Exp $
+
+  07 Jul 2006; Martin Schlemmer <azarah@gentoo.org>
+  nvidia-settings-1.0.20051122-r3.ebuild:
+  Fix DEPEND for new nvidia stuff.  Stable x86.
 
 *nvidia-settings-1.0.20060516-r1 (07 Jul 2006)
 
