@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-9999.ebuild,v 1.1 2006/06/27 21:27:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-9999.ebuild,v 1.2 2006/07/07 23:25:02 wolf31o2 Exp $
 
 inherit eutils subversion toolchain-funcs games
 
@@ -17,7 +17,7 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-*"
-IUSE="alsa debug dedicated demo dga ipv6 joystick mods opengl qmax oss sdl textures xmms"
+IUSE="alsa cdinstall debug dedicated demo dga ipv6 joystick mods opengl qmax oss sdl textures xmms"
 
 UIDEPEND="alsa? ( media-libs/alsa-lib )
 	opengl? (
