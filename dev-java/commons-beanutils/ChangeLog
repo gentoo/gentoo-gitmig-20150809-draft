@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-beanutils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.24 2005/07/09 16:00:26 axxo Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.25 2006/07/07 02:33:33 nichoj Exp $
+
+*commons-beanutils-1.7.0-r2 (07 Jul 2006)
+*commons-beanutils-1.6.1-r3 (07 Jul 2006)
+
+  07 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
+  +commons-beanutils-1.6.1-r3.ebuild, +commons-beanutils-1.7.0-r2.ebuild:
+  Revision bump to add support for new Java system.
 
   09 Jul 2005; Thomas Matthijs <axxo@gentoo.org>
   commons-beanutils-1.6.1-r2.ebuild, commons-beanutils-1.7.0-r1.ebuild:
