@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.5.0-r1.ebuild,v 1.5 2006/07/07 11:16:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.5.0-r1.ebuild,v 1.6 2006/07/07 11:26:59 flameeyes Exp $
 
-inherit libtool multilib eutils autotools pam toolchain-funcs gnuconfig
+inherit libtool multilib eutils autotools pam toolchain-funcs
 
 P_VER="1.0"
 # BDB is internalized to get a non-threaded lib for pam_userdb.so to
@@ -27,12 +27,12 @@ IUSE="berkdb doc nls selinux"
 
 DEPEND="nls? ( sys-devel/gettext )
 	doc? ( virtual/ghostscript
-	       app-text/tetex
-	       >=app-text/linuxdoc-tools-0.9.21_p4
-	       www-client/w3m
-	       dev-libs/libxslt
-	       app-text/docbook-xsl-stylesheets
-	       app-text/docbook-xml-dtd )"
+		   app-text/tetex
+		   >=app-text/linuxdoc-tools-0.9.21_p4
+		   www-client/w3m
+		   dev-libs/libxslt
+		   app-text/docbook-xsl-stylesheets )
+	~app-text/docbook-xml-dtd-4.3"
 RDEPEND="nls? ( virtual/libintl )
 	>=sys-libs/cracklib-2.8.3
 	selinux? ( >=sys-libs/libselinux-1.28 )
@@ -69,12 +69,12 @@ src_compile() {
 
 	# If docs fails to generate with the following type of errors:
 	#
-	#   /usr/bin/nsgmls:.*:E: "X0393" is not a function name
+	#	/usr/bin/nsgmls:.*:E: "X0393" is not a function name
 	#
 	# then its is probably sgml-common that did not add all its on catalogs
 	# properly, namely:
 	#
-	#   /usr/share/sgml/sgml-iso-entities-8879.1986/catalog
+	#	/usr/share/sgml/sgml-iso-entities-8879.1986/catalog
 	#
 	if ! use doc ; then
 		export SGML2PS=no
@@ -95,17 +95,9 @@ src_compile() {
 		einfo "Building Berkley DB ${BDB_VER}..."
 		cd "${BDB_DIR}/build_unix" || die
 
-		# Pam uses berkdb, which db-4.1.x series can't detect mips64, so we fix it
-		if use mips ; then
-			einfo "Updating BDB config.{guess,sub} for mips"
-			S="${BDB_DIR}/dist" \
-			gnuconfig_update
-		fi
-
 		CFLAGS="${CFLAGS} -fPIC" \
-		../dist/configure \
-			--host=${CHOST} \
-			--cache-file=config.cache \
+		ECONF_SOURCE="../dist" \
+		econf \
 			--disable-compat185 \
 			--disable-cxx \
 			--disable-diagnostic \
@@ -123,10 +115,10 @@ src_compile() {
 			--libdir="${S}/lib" || die "Bad BDB ./configure"
 
 		# XXX: hack out O_DIRECT support in db4 for now.
-		#      (Done above now with --disable-o_direct now)
+		#	   (Done above now with --disable-o_direct now)
 
-		make CC="$(tc-getCC)" || die "BDB build failed"
-		make install || die
+		emake CC="$(tc-getCC)" || die "BDB build failed"
+		emake install || die
 
 		# We link against libdb_pam (*-dbpam.patch), else stupid libtool goes
 		# and relinks it during install to libdb in /usr/lib
