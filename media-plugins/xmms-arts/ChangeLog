@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-arts
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.37 2006/06/15 18:01:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.38 2006/07/07 04:28:03 tsunam Exp $
+
+  07 Jul 2006; Joshua Jackson <tsunam@gentoo.org> xmms-arts-0.7.1-r2.ebuild:
+  Stable x86; bug #136009
 
   15 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   xmms-arts-0.7.1-r2.ebuild:
