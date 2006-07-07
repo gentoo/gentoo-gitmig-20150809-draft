@@ -1,6 +1,14 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.134 2006/07/02 08:15:01 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.135 2006/07/07 19:03:48 suka Exp $
+
+  07 Jul 2006; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-bin-2.0.3.ebuild:
+  Add dependency on recent freetype to prevent start problems, see bug #132649
+
+  07 Jul 2006; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-bin-2.0.3.ebuild:
+  Small fix for strip-linguas
 
 *openoffice-bin-2.0.3 (02 Jul 2006)
 

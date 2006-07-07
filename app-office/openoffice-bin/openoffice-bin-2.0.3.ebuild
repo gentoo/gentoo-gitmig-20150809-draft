@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.3.ebuild,v 1.1 2006/07/02 08:15:01 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.3.ebuild,v 1.2 2006/07/07 19:03:48 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -35,6 +35,7 @@ RDEPEND="!app-office/openoffice
 	>=dev-lang/perl-5.0
 	app-arch/zip
 	app-arch/unzip
+	>=media-libs/freetype-2.1.10-r2
 	java? ( !amd64? ( >=virtual/jre-1.4.1 )
 		amd64? ( app-emulation/emul-linux-x86-java ) )
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )
@@ -62,7 +63,7 @@ src_unpack() {
 	use gnome && rpm_unpack ${S}/openoffice.org-gnome-integration-${MY_PV3}.i586.rpm
 	use java && rpm_unpack ${S}/openoffice.org-javafilter-${MY_PV3}.i586.rpm
 
-	strip-linguas "en ${LANGS}"
+	strip-linguas en ${LANGS}
 
 	for i in ${LINGUAS}; do
 		i="${i/_/-}"
