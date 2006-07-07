@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.135 2006/07/07 19:03:48 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.136 2006/07/07 19:58:58 nichoj Exp $
+
+  07 Jul 2006; Joshua Nichols <jnichols@gentoo.org>
+  openoffice-bin-2.0.2.ebuild, openoffice-bin-2.0.3.ebuild:
+  Fixed virtual/jre dependency.
 
   07 Jul 2006; Andreas Proschofsky <suka@gentoo.org>
   openoffice-bin-2.0.3.ebuild:
