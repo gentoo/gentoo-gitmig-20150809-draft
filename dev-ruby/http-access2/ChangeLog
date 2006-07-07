@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/http-access2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/ChangeLog,v 1.8 2006/03/30 03:30:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/ChangeLog,v 1.9 2006/07/07 02:56:33 flameeyes Exp $
+
+*http-access2-2.0.6 (07 Jul 2006)
+
+  07 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +http-access2-2.0.6.ebuild:
+  Add ebuild for new version, thanks to Markus Schirp and Armando Di Cianno in
+  bug #115668. Add ~amd64 and ~x86-fbsd keywords.
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> http-access2-0j-r1.ebuild:
   Mark 0j-r1 ~ia64
