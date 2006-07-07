@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.2.ebuild,v 1.10 2006/06/03 11:01:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.2.ebuild,v 1.11 2006/07/07 14:13:57 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -47,13 +47,22 @@ DEPEND="${BOTH_DEPEND}
 PATCHES="${FILESDIR}/kppp-3.5.0-bindnow.patch
 	${FILESDIR}/lisa-3.5.0-bindnow.patch"
 
+pkg_setup() {
+	if use kernel_linux && ! built_with_use =x11-libs/qt-3* opengl; then
+		eerror "To support Video4Linux webcams in this package is required to have"
+		eerror "=x11-libs/qt-3* compiled with OpenGL support."
+		eerror "Please reemerge =x11-libs/qt-3* with USE=\"opengl\"."
+		die "Please reemerge =x11-libs/qt-3* with USE=\"opengl\"."
+	fi
+}
+
 src_compile() {
 	export BINDNOW_FLAGS="$(bindnow-flags)"
 
 	local myconf="--with-libidn
-	              $(use_enable sametime sametime-plugin)
-	              $(use_enable slp) $(use_with wifi)
-	              $(use_with xmms) --without-external-libgadu"
+				  $(use_enable sametime sametime-plugin)
+				  $(use_enable slp) $(use_with wifi)
+				  $(use_with xmms) --without-external-libgadu"
 
 	kde_src_compile
 }

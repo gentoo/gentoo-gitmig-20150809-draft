@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.207 2006/06/15 00:07:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.208 2006/07/07 14:13:57 flameeyes Exp $
+
+  07 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdenetwork-3.5.2.ebuild, kdenetwork-3.5.3.ebuild,
+  kdenetwork-3.5.3-r1.ebuild:
+  Check for opengl useflag in Qt before compiling. See bug #139122.
 
 *kdenetwork-3.5.3-r1 (15 Jun 2006)
 
