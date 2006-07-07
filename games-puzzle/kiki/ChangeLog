@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/kiki
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/ChangeLog,v 1.10 2006/05/29 22:22:39 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/ChangeLog,v 1.11 2006/07/07 17:28:12 mr_bones_ Exp $
+
+*kiki-1.0.2-r1 (07 Jul 2006)
+
+  07 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/kiki-1.0.2-freeglut.patch, -kiki-0.9.0-r1.ebuild,
+  -kiki-1.0.2.ebuild, +kiki-1.0.2-r1.ebuild:
+  clean out cruft; add freeglut patch from Tristan Heaven for bug #139445
 
   29 May 2006; <Tupone@gentoo.org> Manifest:
   Fixing Manifest
