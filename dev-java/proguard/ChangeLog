@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/proguard
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.1 2006/07/07 09:07:44 nelchael Exp $
+
+*proguard-3.6 (07 Jul 2006)
+
+  07 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
+  +proguard-3.6.ebuild:
+  Initial version.
+
