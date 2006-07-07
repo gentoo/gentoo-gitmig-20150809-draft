@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-0.10.ebuild,v 1.9 2006/06/25 22:03:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-0.10.ebuild,v 1.10 2006/07/07 14:00:56 allanonjl Exp $
 
 MY_P=${P/gimp-help/gimp-help-2}
 S=${WORKDIR}/${MY_P}
@@ -18,7 +18,7 @@ DEPEND="=app-text/docbook-xml-dtd-4.3*
 		dev-libs/libxml2
 		dev-libs/libxslt
 		imagemagick? ( media-gfx/imagemagick )"
-RDEPEND="!<media-gfx/gimp-2.3"
+RDEPEND="!<media-gfx/gimp-2.2.12"
 
 src_compile() {
 	local ALL_LINGUAS=""
