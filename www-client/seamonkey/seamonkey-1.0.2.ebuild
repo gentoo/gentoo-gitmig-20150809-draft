@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.2.ebuild,v 1.7 2006/06/26 18:56:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.2.ebuild,v 1.8 2006/07/07 19:22:10 flameeyes Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
@@ -15,7 +15,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/${PN}/releases/${PV}/${P}.source
 	http://dev.gentoo.org/~anarchy/dist/${P}-patches-${PVER}.tar.bz2
 	crypt? ( !moznomail? ( http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz ) )"
 
-KEYWORDS="alpha amd64 hppa ppc ~ppc64 x86"
+KEYWORDS="alpha amd64 hppa ppc ~ppc64 x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="java ldap  mozcalendar mozdevelop moznocompose moznoirc moznomail moznoroaming postgres crypt"
