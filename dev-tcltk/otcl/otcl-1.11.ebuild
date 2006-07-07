@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.11.ebuild,v 1.1 2006/05/15 17:10:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.11.ebuild,v 1.2 2006/07/07 00:21:29 squinky86 Exp $
 
 inherit eutils autotools virtualx
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/otcl-tclcl/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/tcl-8.4.5
