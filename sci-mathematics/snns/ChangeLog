@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/snns
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.9 2006/01/25 14:23:49 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.10 2006/07/07 12:05:54 phosphan Exp $
+
+  07 Jul 2006; Patrick Kursawe <phosphan@gentoo.org> snns-4.2-r7.ebuild:
+  Changing dependencies because of bug #139239.
 
   25 Jan 2006; Patrick Kursawe <phosphan@gentoo.org> -snns-4.2-r4.ebuild,
   -snns-4.2-r6.ebuild, snns-4.2-r7.ebuild, -snns-4.2-r8.ebuild:

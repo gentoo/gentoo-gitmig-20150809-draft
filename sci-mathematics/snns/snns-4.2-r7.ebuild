@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r7.ebuild,v 1.5 2006/01/25 14:23:49 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r7.ebuild,v 1.6 2006/07/07 12:05:54 phosphan Exp $
 
 inherit eutils python
 
@@ -23,8 +23,8 @@ SLOT="0"
 IUSE="X doc python"
 
 DEPEND="X? ( || (
-					virtual/x11
 					x11-proto/xproto
+					<virtual/x11-7.0
 				)
 	x11-libs/Xaw3d )
 	>=sys-apps/sed-4
