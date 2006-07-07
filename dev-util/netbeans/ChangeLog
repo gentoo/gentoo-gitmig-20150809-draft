@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/netbeans
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.35 2005/12/11 19:08:33 betelgeuse Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.36 2006/07/07 07:41:04 nelchael Exp $
+
+  07 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> netbeans-3.4.1.ebuild,
+  netbeans-3.5.1.ebuild, netbeans-3.6-r1.ebuild:
+  Dropped alpha, due to alpha not having stable JRE/JDK.
 
   11 Dec 2005; Petteri Räty <betelgeuse@gentoo.org> netbeans-4.0-r2.ebuild:
   Loosened xerces dependency (bug #115158).
