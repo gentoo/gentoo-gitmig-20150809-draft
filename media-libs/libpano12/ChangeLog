@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libpano12
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano12/ChangeLog,v 1.14 2006/06/07 23:55:32 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano12/ChangeLog,v 1.15 2006/07/08 02:00:17 vanquirius Exp $
+
+*libpano12-2.8.4 (08 Jul 2006)
+
+  08 Jul 2006; Marcelo Goes <vanquirius@gentoo.org> metadata.xml,
+  -libpano12-2.7.0.10.ebuild, +libpano12-2.8.4.ebuild:
+  2.8.4 version bump for bug 137256. insertfilename patch is now in upstream.
+  Thanks to Jeremy Frey <jfrey at free dot fr>. Also, removing halcy0n from
+  metadata.xml.
 
   07 Jun 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/libpano12-2.8.3-insertfilename.patch, libpano12-2.8.3.ebuild:
