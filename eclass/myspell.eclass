@@ -1,10 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myspell.eclass,v 1.4 2006/06/15 11:25:18 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myspell.eclass,v 1.5 2006/07/08 15:20:13 kevquinn Exp $
 
 # Author: Kevin F. Quinn <kevquinn@gentoo.org>
 # Packages: app-dicts/myspell-*
 # Herd: app-dicts
+
+inherit multilib
 
 EXPORT_FUNCTIONS src_install pkg_preinst pkg_postinst
 
@@ -22,6 +24,9 @@ RDEPEND=""
 # The destination directory for myspell dictionaries
 MYSPELL_DICTBASE="/usr/share/myspell"
 
+# Legacy variable for dictionaries installed before eselect-oodict existed
+# so has to remain for binpkg support.  This variable is unmaintained -
+# if you have a problem with it, emerge app-admin/eselect-oodict.
 # The location for openoffice softlinks
 MYSPELL_OOOBASE="/usr/lib/openoffice/share/dict/ooo"
 
@@ -150,12 +155,26 @@ myspell_src_install() {
 # Add entries in dictionary.lst.<lang> to OOo dictionary.lst
 # and create softlinks indicated by dictionary.lst.<lang>
 myspell_pkg_postinst() {
-	has_version eselect-oodict &&
+	# Update for known applications
+	if has_version ">=app-admin/eselect-oodict-20060706"; then
+		if has_version app-office/openoffice; then
+			eselect oodict set myspell-$(get_myspell_lang)
+		fi
+		if has_version app-office/openoffice-bin; then
+			# On AMD64, openoffice-bin is 32-bit so force ABI
+			has_multilib_profile && ABI=x86
+			eselect oodict set myspell-$(get_myspell_lang) --libdir $(get_libdir)
+		fi
+		return
+	fi
+	if has_version app-admin/eselect-oodict; then
 		eselect oodict set myspell-$(get_myspell_lang)
+		return
+	fi
 
 	# Legacy code for dictionaries installed before eselect-oodict existed
 	# so has to remain for binpkg support.  This code is unmaintained -
-	# if you have a problem with it, emerge eselect-oodict.
+	# if you have a problem with it, emerge app-admin/eselect-oodict.
 	[[ -d ${MYSPELL_OOOBASE} ]] || return
 	# This stuff is here, not in src_install, as the softlinks are
 	# deliberately _not_ listed in the package database.
@@ -188,6 +207,21 @@ myspell_pkg_postinst() {
 # Done in preinst (prerm happens after postinst, which overwrites
 # the dictionary.<lang>.lst file)
 myspell_pkg_preinst() {
+	# Update for known applications
+	if has_version ">=app-admin/eselect-oodict-20060706"; then
+		if has_version app-office/openoffice; then
+			# When building from source, the default library path is correct
+			eselect oodict unset myspell-$(get_myspell_lang)
+		fi
+		if has_version app-office/openoffice-bin; then
+			# On AMD64, openoffice-bin is 32-bit, so get 32-bit library directory
+			has_multilib_profile && ABI=x86
+			eselect oodict unset myspell-$(get_myspell_lang) --libdir $(get_libdir)
+		fi
+		eselect oodict unset myspell-$(get_myspell_lang) --libdir $(get_libdir)
+		return
+	fi
+	# Previous versions of eselect-oodict didn't cater for -bin on amd64
 	if has_version app-admin/eselect-oodict; then
 		eselect oodict unset myspell-$(get_myspell_lang)
 		return
@@ -195,6 +229,8 @@ myspell_pkg_preinst() {
 
 	# Legacy code for dictionaries installed before eselect-oodict existed
 	# Don't delete this; needed for uninstalls and binpkg support.
+	# This code is unmaintained - if you have a problem with it,
+	# emerge app-admin/eselect-oodict.
 	local filen dictlst entry fields removeentry suffix
 	dictlst="dictionary.lst.$(get_myspell_lang)"
 	[[ -d ${MYSPELL_OOOBASE} ]] || return
