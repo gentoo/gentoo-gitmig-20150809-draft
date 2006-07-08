@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.16 2006/07/04 17:00:09 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.17 2006/07/08 08:34:16 corsair Exp $
+
+  08 Jul 2006; Markus Rothe <corsair@gentoo.org> geos-2.2.1.ebuild:
+  Stable on ppc64
 
 *geos-2.2.2-r1 (04 Jul 2006)
 

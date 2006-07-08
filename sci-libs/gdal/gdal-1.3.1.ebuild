@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.11 2006/06/09 19:22:52 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.12 2006/07/08 08:35:15 corsair Exp $
 
 inherit eutils libtool gnuconfig distutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://dl.maptools.org/dl/gdal/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 # need to get these arches updated on several libs first
 #KEYWORDS="~alpha ~hppa ~ppc64"
 
