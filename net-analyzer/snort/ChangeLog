@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.103 2006/06/10 15:39:14 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.104 2006/07/08 01:23:26 vanquirius Exp $
+
+  08 Jul 2006; Marcelo Goes <vanquirius@gentoo.org>
+  -files/2.3.0-libnet-1.0.patch, -files/snort-2.3.3-log.c.diff,
+  -files/snort-2.4.4-demarc-patch.diff, -files/snort.rc6,
+  -snort-2.3.3.ebuild, -snort-2.3.3-r1.ebuild, -snort-2.4.3.ebuild,
+  -snort-2.4.3-r1.ebuild, -snort-2.4.3-r2.ebuild, -snort-2.4.4.ebuild,
+  -snort-2.4.4-r1.ebuild:
+  Remove old ebuilds and unused files.
 
   10 Jun 2006; Thomas Cort <tcort@gentoo.org> snort-2.4.5.ebuild:
   Stable on amd64 wrt security Bug #135112.
