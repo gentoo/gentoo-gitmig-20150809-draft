@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.6.1.ebuild,v 1.5 2006/06/10 03:06:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.6.1.ebuild,v 1.6 2006/07/08 18:04:43 cardoe Exp $
 
 inherit eutils versionator gnome2
 
@@ -12,14 +12,14 @@ HOMEPAGE="http://www.xchat.org/"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="perl dbus tcltk python ssl mmx ipv6 nls xchattext xchatnogtk"
+IUSE="perl dbus tcl python ssl mmx ipv6 nls xchattext xchatnogtk"
 
 RDEPEND=">=dev-libs/glib-2.6.0
 	!xchatnogtk? ( >=x11-libs/gtk+-2.6.0 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( >=dev-lang/perl-5.6.1 )
 	python? ( >=dev-lang/python-2.2 )
-	tcltk? ( dev-lang/tcl )
+	tcl? ( dev-lang/tcl )
 	dbus? ( >=sys-apps/dbus-0.35 )
 	!<net-irc/xchat-gnome-0.9"
 
@@ -55,7 +55,7 @@ src_compile() {
 		$(use_enable ssl openssl) \
 		$(use_enable perl) \
 		$(use_enable python) \
-		$(use_enable tcltk tcl) \
+		$(use_enable tcl) \
 		$(use_enable mmx) \
 		$(use_enable ipv6) \
 		$(use_enable nls) \
