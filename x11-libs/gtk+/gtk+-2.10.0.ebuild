@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.10.0.ebuild,v 1.2 2006/07/05 17:20:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.10.0.ebuild,v 1.3 2006/07/08 08:49:35 genstef Exp $
 
 inherit gnome.org flag-o-matic eutils debug autotools virtualx
 
@@ -158,4 +158,7 @@ pkg_postinst() {
 	einfo "in your xorg.conf.  NVIDIA is working on this issue. "
 	einfo "See http://bugs.gentoo.org/113123 for more information."
 
+	if has_version "<x11-libs/gtk+-${PV:0:4}"; then
+		elog "After upgrading gtk+ minor versions you need to rebuild gtk-engines-*"
+	fi
 }
