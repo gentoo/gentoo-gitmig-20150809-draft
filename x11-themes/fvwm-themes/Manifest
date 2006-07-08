@@ -1,5 +1,20 @@
-MD5 2954fe9800fa47f27c8fa719fa04184a ChangeLog 1912
-MD5 bb635670857b6057a6a65ce5d2778a2a files/digest-fvwm-themes-0.7.0 70
+AUX fvwm-themes-0.7.0-gentoo.patch 903 RMD160 0be80245fb91d24ea9e7307480e40eb3ec07c028 SHA1 ed26dd33428f0909073a6cd08f55ffcb653bcd6e SHA256 d9e6facd31d9d84fc668a90dabd0c9801e3ca04f09e441f6090362857c41a9d9
 MD5 fe26baf3e5e1b12866fe888f9b54cbc7 files/fvwm-themes-0.7.0-gentoo.patch 903
+RMD160 0be80245fb91d24ea9e7307480e40eb3ec07c028 files/fvwm-themes-0.7.0-gentoo.patch 903
+SHA256 d9e6facd31d9d84fc668a90dabd0c9801e3ca04f09e441f6090362857c41a9d9 files/fvwm-themes-0.7.0-gentoo.patch 903
+AUX fvwm-themes-0.7.0-posix-sort.patch 772 RMD160 4f18bf0ef0d0b3d3a6ee1a8913d25ed923dec58a SHA1 1c759c7a86e469b324bd5457e9c001d3c6a4c27a SHA256 5839e87c9f2faa2ebe3712824c55106f6c333039fff8dbd575e7639c3c7e7468
 MD5 fc403291a24a48fd3bc7929d196d0004 files/fvwm-themes-0.7.0-posix-sort.patch 772
-MD5 770e6d7bad47755a0babc7ed6c7c4bd4 fvwm-themes-0.7.0.ebuild 1181
+RMD160 4f18bf0ef0d0b3d3a6ee1a8913d25ed923dec58a files/fvwm-themes-0.7.0-posix-sort.patch 772
+SHA256 5839e87c9f2faa2ebe3712824c55106f6c333039fff8dbd575e7639c3c7e7468 files/fvwm-themes-0.7.0-posix-sort.patch 772
+DIST fvwm-themes-0.7.0.tar.bz2 921517
+EBUILD fvwm-themes-0.7.0.ebuild 1180 RMD160 aedf6376e5b0a49735b2647e1214ecf8aef12c67 SHA1 8849643320c9695a2d9ade413deed8ca6c265322 SHA256 615b9e33db620814e2ed61fbf1dfc2835a59381b3d6ab3d99bdb70d879f999c8
+MD5 9bc047cece7fcdbed20a02a7badabbd7 fvwm-themes-0.7.0.ebuild 1180
+RMD160 aedf6376e5b0a49735b2647e1214ecf8aef12c67 fvwm-themes-0.7.0.ebuild 1180
+SHA256 615b9e33db620814e2ed61fbf1dfc2835a59381b3d6ab3d99bdb70d879f999c8 fvwm-themes-0.7.0.ebuild 1180
+MISC ChangeLog 2006 RMD160 be2b9e58d7db8cff0a63877341970b2c2e7eaf65 SHA1 35e47b1f8ef75d8c7cd53df2b20d0b239eb9e31f SHA256 aecdfadd76ab094e216783c00832ce738a7d84c5a60b563aaf903ab5822e852c
+MD5 ab187a79df2af26964f6b4f1df13f867 ChangeLog 2006
+RMD160 be2b9e58d7db8cff0a63877341970b2c2e7eaf65 ChangeLog 2006
+SHA256 aecdfadd76ab094e216783c00832ce738a7d84c5a60b563aaf903ab5822e852c ChangeLog 2006
+MD5 bb635670857b6057a6a65ce5d2778a2a files/digest-fvwm-themes-0.7.0 70
+RMD160 d79128b6504c28e26ec6617464a428bb09c1d974 files/digest-fvwm-themes-0.7.0 70
+SHA256 ddd0e508ff9ea59289c547e4306190071367885d290d52c24fd150e78f135cbc files/digest-fvwm-themes-0.7.0 70
