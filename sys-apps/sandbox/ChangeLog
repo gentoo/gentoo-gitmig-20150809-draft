@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.67 2006/07/07 15:15:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.68 2006/07/08 21:19:52 azarah Exp $
+
+*sandbox-1.2.20_alpha1-r2 (08 Jul 2006)
+*sandbox-1.2.20_alpha1-r1 (08 Jul 2006)
+
+  08 Jul 2006; Martin Schlemmer <azarah@gentoo.org>
+  +files/sandbox-1.2.20_alpha1-double-free.patch,
+  +sandbox-1.2.20_alpha1-r1.ebuild, +sandbox-1.2.20_alpha1-r2.ebuild:
+  More bugfixes.
 
 *sandbox-1.2.20_alpha1 (07 Jul 2006)
 
