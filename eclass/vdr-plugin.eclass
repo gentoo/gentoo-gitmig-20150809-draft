@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.24 2006/07/05 17:08:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.25 2006/07/08 14:31:35 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -130,22 +130,35 @@ vdr-plugin_src_unpack() {
 				die "Could not change to plugin-source-directory!"
 			fi
 
-			ebegin "Patching Makefile"
+			einfo "Patching Makefile"
 			[[ -e Makefile ]] || die "Makefile of plugin can not be found!"
 			cp Makefile Makefile.orig
-			sed -i.orig Makefile \
+
+			sed -i Makefile \
+				-e '1i\#Makefile was patched by vdr-plugin.eclass'
+
+			ebegin "  Setting Pathes"
+			sed -i Makefile \
 				-e "s:^VDRDIR.*$:VDRDIR = ${VDR_INCLUDE_DIR}:" \
 				-e "s:^DVBDIR.*$:DVBDIR = ${DVB_INCLUDE_DIR}:" \
 				-e "s:^LIBDIR.*$:LIBDIR = ${S}:" \
 				-e "s:^TMPDIR.*$:TMPDIR = ${T}:" \
-				-e 's:^CXXFLAGS:#CXXFLAGS:' \
 				-e 's:-I$(VDRDIR)/include:-I$(VDRDIR):' \
 				-e 's:-I$(DVBDIR)/include:-I$(DVBDIR):' \
 				-e 's:-I$(VDRDIR) -I$(DVBDIR):-I$(DVBDIR) -I$(VDRDIR):' \
-				-e 's:$(VDRDIR)/\([a-z]*\.h\|Make.config\):$(VDRDIR)/vdr/\1:' \
+				-e 's:$(VDRDIR)/\([a-z]*\.h\|Make.config\):$(VDRDIR)/vdr/\1:'
+			eend $?
+
+			ebegin "  Converting to APIVERSION"
+			sed -i Makefile \
 				-e 's:^APIVERSION = :APIVERSION ?= :' \
 				-e 's:$(LIBDIR)/$@.$(VDRVERSION):$(LIBDIR)/$@.$(APIVERSION):' \
-				-e '1i\APIVERSION = '"${APIVERSION}"
+				-e '2i\APIVERSION = '"${APIVERSION}"
+			eend $?
+
+			ebegin "  Correcting CXXFLAGS"
+			sed -i Makefile \
+				-e 's:^CXXFLAGS:#CXXFLAGS:'
 			eend $?
 			;;
 		esac
