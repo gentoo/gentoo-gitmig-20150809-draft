@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.6 2006/07/07 20:20:32 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.7 2006/07/08 16:08:16 genstef Exp $
+
+  08 Jul 2006; Stefan Schweizer <genstef@gentoo.org> ChangeLog:
+  redigest thanks to Marcel Campello Ferreira <marcel.o.bacharel@gmail.com>,
+  Rabbe Fogelholm <rabbe@gentoo.se>, Jakub Moc <jakub@gentoo.org> and Mike
+  <BluexSteel@gmail.com> in bug 139544
 
   07 Jul 2006; Kristopher Kersey <augustus@gentoo.org>
   googleearth-4_beta.ebuild:
