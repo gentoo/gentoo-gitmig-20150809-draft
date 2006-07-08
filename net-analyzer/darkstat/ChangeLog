@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.15 2006/02/25 23:46:38 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.16 2006/07/08 02:30:32 vanquirius Exp $
+
+*darkstat-3.0.524 (08 Jul 2006)
+
+  08 Jul 2006; Marcelo Goes <vanquirius@gentoo.org> +files/darkstat-confd2,
+  +files/darkstat-init2, +darkstat-3.0.524.ebuild:
+  3.0.524 version bump. Updated init scripts to use eth0 by default, not pass
+  --detach as an option. Also, new version does not use patch from version
+  2.6.
 
   26 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> -darkstat-2.6.ebuild,
   darkstat-2.6-r1.ebuild:

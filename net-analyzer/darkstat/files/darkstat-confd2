@@ -1,0 +1,8 @@
+# /etc/conf.d/darkstat
+# Config file for /etc/init.d/darkstat
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/files/darkstat-confd2,v 1.1 2006/07/08 02:30:32 vanquirius Exp $
+
+# Set preferred options here
+DARKSTAT_OPTS="-i eth0"
