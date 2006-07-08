@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-webcal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/ChangeLog,v 1.44 2006/06/27 18:57:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/ChangeLog,v 1.45 2006/07/08 02:49:11 mr_bones_ Exp $
+
+  08 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  evolution-webcal-2.2.0.ebuild, evolution-webcal-2.2.1.ebuild:
+  drop mips keyword per geoman
 
 *evolution-webcal-2.6.0 (27 Jun 2006)
 
