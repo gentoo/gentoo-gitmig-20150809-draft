@@ -1,11 +1,44 @@
-MD5 f7d9bb0ccf8f587bd7aa4a454f959564 ChangeLog 5103
-MD5 c83a0a49099d8d0393c0aaff4cfffcfa files/digest-libgnomeuimm-2.0.0 70
-MD5 54ee67315a4cf933ea1d674beece2ebf files/digest-libgnomeuimm-2.10.0 72
-MD5 fd192fe91c24de13d9cd374cae5fa4a6 files/digest-libgnomeuimm-2.12.0 72
-MD5 a31cbb5db3510846c6a7d2ecba43c4c3 files/digest-libgnomeuimm-2.6.0 71
+AUX libgnomeuimm-2.0.0-gcc2_fix.patch 1237 RMD160 ed5e5990dfb91a1d1f4080ece493dcfd01a9a0f8 SHA1 92c39fe67047a77c187e0ac4f352273fb9803662 SHA256 66e99c891a62a624b6896f3eaa14189e6dba94cef29a365839be84d602c7082d
 MD5 e4bafc3bf0fd1bb08c2fadcb67af456e files/libgnomeuimm-2.0.0-gcc2_fix.patch 1237
+RMD160 ed5e5990dfb91a1d1f4080ece493dcfd01a9a0f8 files/libgnomeuimm-2.0.0-gcc2_fix.patch 1237
+SHA256 66e99c891a62a624b6896f3eaa14189e6dba94cef29a365839be84d602c7082d files/libgnomeuimm-2.0.0-gcc2_fix.patch 1237
+DIST libgnomeuimm-2.0.0.tar.gz 429018
+DIST libgnomeuimm-2.10.0.tar.bz2 316808
+DIST libgnomeuimm-2.12.0.tar.bz2 322127
+DIST libgnomeuimm-2.6.0.tar.bz2 296521
+EBUILD libgnomeuimm-2.0.0.ebuild 990 RMD160 32295bd088b5db903ba0b9bfd627411763bf86e3 SHA1 6a8464bd663f289b4ec4e2516d8481e88e27a8fb SHA256 8163fd07727d808d55e0fac9ab1ff48f60b42766b20f5bbfb2dfed33c7790916
 MD5 e4861327af9d2365b3420e1fc10d594a libgnomeuimm-2.0.0.ebuild 990
+RMD160 32295bd088b5db903ba0b9bfd627411763bf86e3 libgnomeuimm-2.0.0.ebuild 990
+SHA256 8163fd07727d808d55e0fac9ab1ff48f60b42766b20f5bbfb2dfed33c7790916 libgnomeuimm-2.0.0.ebuild 990
+EBUILD libgnomeuimm-2.10.0.ebuild 846 RMD160 621255598aaa5f5e261fb74cdeecb9dd1e8eb760 SHA1 1d6914a8deab51adb6818fdfcc9c2829929a54b1 SHA256 b7fa35b5b5e0676617c247b856c52123176f46de539c7c79f495c8f7b7f874f6
 MD5 dd094025be28972da4f99329eea5a8ae libgnomeuimm-2.10.0.ebuild 846
-MD5 9c8b3d01f238719929dc4f58934e7b9c libgnomeuimm-2.12.0.ebuild 852
+RMD160 621255598aaa5f5e261fb74cdeecb9dd1e8eb760 libgnomeuimm-2.10.0.ebuild 846
+SHA256 b7fa35b5b5e0676617c247b856c52123176f46de539c7c79f495c8f7b7f874f6 libgnomeuimm-2.10.0.ebuild 846
+EBUILD libgnomeuimm-2.12.0.ebuild 852 RMD160 9dcdba0918f102475b99e49928d9eb155ddc916e SHA1 de5b72a801788deab11b95d0f1b411530a60bf44 SHA256 6e8ba4fcbc291808e086454d76ce6f7bf820b3542f24e8f834ebf0c6d7973d29
+MD5 678741da888d35dca44bd64611c5fad5 libgnomeuimm-2.12.0.ebuild 852
+RMD160 9dcdba0918f102475b99e49928d9eb155ddc916e libgnomeuimm-2.12.0.ebuild 852
+SHA256 6e8ba4fcbc291808e086454d76ce6f7bf820b3542f24e8f834ebf0c6d7973d29 libgnomeuimm-2.12.0.ebuild 852
+EBUILD libgnomeuimm-2.6.0.ebuild 840 RMD160 53edadbb77eafe29433a74d8dc2a5e10248c2991 SHA1 492d486ae1129edcec41486faff9b49b42b0328e SHA256 e6768c0a13452913b2d88ef8f3bf49f373119bd00591654a663353c0f8c6b6dc
 MD5 d99ab6a3009ebc35263ae26d66d4194e libgnomeuimm-2.6.0.ebuild 840
+RMD160 53edadbb77eafe29433a74d8dc2a5e10248c2991 libgnomeuimm-2.6.0.ebuild 840
+SHA256 e6768c0a13452913b2d88ef8f3bf49f373119bd00591654a663353c0f8c6b6dc libgnomeuimm-2.6.0.ebuild 840
+MISC ChangeLog 5197 RMD160 e67caac7ea6995a601a7416f394f85adff9debf6 SHA1 094708e708cd981e909f38b8f440b3eea1fd003e SHA256 09ece75bd2220a372a26970c307c4f87085382ed6180002f2bd50661006dd6b6
+MD5 af1b53f270cf359f06f8f9a5d03b9ebc ChangeLog 5197
+RMD160 e67caac7ea6995a601a7416f394f85adff9debf6 ChangeLog 5197
+SHA256 09ece75bd2220a372a26970c307c4f87085382ed6180002f2bd50661006dd6b6 ChangeLog 5197
+MISC metadata.xml 161 RMD160 1988530f97a742d78d3f3e99d15625f8a674260a SHA1 b034f3d668b50c57826ead5cfd17fcd2b68d19d6 SHA256 00ba82c241ad7007fe861877db3ae5aeaa967e05f0a6478e6ba9eb60ba31a3b6
 MD5 d55015f2e0ee69e92ab287320c27c5b2 metadata.xml 161
+RMD160 1988530f97a742d78d3f3e99d15625f8a674260a metadata.xml 161
+SHA256 00ba82c241ad7007fe861877db3ae5aeaa967e05f0a6478e6ba9eb60ba31a3b6 metadata.xml 161
+MD5 c83a0a49099d8d0393c0aaff4cfffcfa files/digest-libgnomeuimm-2.0.0 70
+RMD160 9b62e8e5196c964e095fade4db026928ad4dfbcb files/digest-libgnomeuimm-2.0.0 70
+SHA256 3730124efef98452cdc255321c244cf891db9c78d0b794280d79ea20fd8bdc8b files/digest-libgnomeuimm-2.0.0 70
+MD5 54ee67315a4cf933ea1d674beece2ebf files/digest-libgnomeuimm-2.10.0 72
+RMD160 9df0f86e21fa93c79567ee40f3d86c178f7f0c3a files/digest-libgnomeuimm-2.10.0 72
+SHA256 ac4b6bc1bc7516365769afb9201d8020fbc2fabd336471b7e1710a8232e794c1 files/digest-libgnomeuimm-2.10.0 72
+MD5 fd192fe91c24de13d9cd374cae5fa4a6 files/digest-libgnomeuimm-2.12.0 72
+RMD160 47f9853892dc6a1f17ff595da226ba0df0747fac files/digest-libgnomeuimm-2.12.0 72
+SHA256 9f59678458e2b7d5b68fbd2cb407df539725facb555525a31c608018dbce8a3d files/digest-libgnomeuimm-2.12.0 72
+MD5 a31cbb5db3510846c6a7d2ecba43c4c3 files/digest-libgnomeuimm-2.6.0 71
+RMD160 9e4a60327249c9829783ea3f50ccb1bcb2d01cf4 files/digest-libgnomeuimm-2.6.0 71
+SHA256 de800e89958659281e0dab700b9e08ddc68326002a465a403c79f059eefa8185 files/digest-libgnomeuimm-2.6.0 71
