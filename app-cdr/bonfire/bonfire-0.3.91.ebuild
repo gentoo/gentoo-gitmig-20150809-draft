@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bonfire/bonfire-0.3.91.ebuild,v 1.2 2006/07/08 13:40:20 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bonfire/bonfire-0.3.91.ebuild,v 1.3 2006/07/08 13:48:33 metalgod Exp $
 
 inherit gnome2
 
@@ -21,6 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	>=media-libs/gst-plugins-base-0.10.6
 	>=gnome-extra/nautilus-cd-burner-2.14.2
 	>=dev-libs/libxml2-2.6
+	>=sys-apps/hal-0.5.5
 	gdl? ( >=dev-libs/gdl-0.6 )
 	totem? ( >=media-video/totem-1.4.2 )
 	beagle? ( >=app-misc/beagle-0.2.5 )
