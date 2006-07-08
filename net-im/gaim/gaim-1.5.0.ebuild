@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.15 2006/07/06 18:41:14 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.16 2006/07/08 21:48:23 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib perl-module perl-app
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gaim/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
-IUSE="nls perl spell nas cjk gnutls silc eds tcltk debug"
+IUSE="nls perl spell nas cjk gnutls silc eds tcl tk debug"
 
 RDEPEND=">=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0
@@ -24,8 +24,8 @@ RDEPEND=">=x11-libs/gtk+-2.0
 	!gnutls? ( >=dev-libs/nss-3.9.2-r2 )
 	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )
 	eds? ( gnome-extra/evolution-data-server )
-	tcltk? ( dev-lang/tcl
-		dev-lang/tk )
+	tcl? ( dev-lang/tcl )
+	tk?	( dev-lang/tk )
 	x11-libs/startup-notification"
 
 DEPEND="$RDEPEND

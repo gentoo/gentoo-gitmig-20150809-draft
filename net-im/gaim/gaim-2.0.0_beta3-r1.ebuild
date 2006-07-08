@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.9 2006/07/06 18:41:14 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.10 2006/07/08 21:48:23 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-module perl-app
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/gaim/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="avahi audiofile bonjour cjk dbus debug eds gadu gnutls krb4 meanwhile mono nas nls perl silc spell startup-notification tcltk xscreensaver custom-flags ssl msn"
+IUSE="avahi audiofile bonjour cjk dbus debug eds gadu gnutls krb4 meanwhile mono nas nls perl silc spell startup-notification tcl tk xscreensaver custom-flags ssl msn"
 
 RDEPEND="
 	audiofile? ( media-libs/libao
@@ -41,8 +41,8 @@ RDEPEND="
 	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )
 	eds? ( gnome-extra/evolution-data-server )
 	krb4? ( >=app-crypt/mit-krb5-1.3.6-r1 )
-	tcltk? ( dev-lang/tcl
-		dev-lang/tk )
+	tcl? ( dev-lang/tcl )
+	tk? ( dev-lang/tk )
 	startup-notification? ( >=x11-libs/startup-notification-0.5 )
 	mono? ( dev-lang/mono )
 	xscreensaver? ( x11-misc/xscreensaver
