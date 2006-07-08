@@ -9,6 +9,15 @@
          done
  	@echo "*** Forcing update of library index ***"
  	rm -f $(DESTDIR)$(PLLIB)/INDEX.pl
+@@ -110,7 +110,7 @@
+ 	        echo "**********************"; \
+ 		echo "* Package $$p"; \
+ 		echo "**********************"; \
+-	        ( cd $$p && $(CONFIG) ); \
++	        ( cd $$p && $(CONFIG) ) || exit 1; \
+ 	    fi; \
+         done
+ 
 @@ -127,7 +127,7 @@
  
  check::
