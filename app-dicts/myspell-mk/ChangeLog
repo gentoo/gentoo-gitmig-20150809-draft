@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-mk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-mk/ChangeLog,v 1.4 2006/06/23 18:14:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-mk/ChangeLog,v 1.5 2006/07/08 23:42:41 pylon Exp $
+
+  08 Jul 2006; Lars Weiler <pylon@gentoo.org> myspell-mk-20060316.ebuild:
+  Stable on ppc.
 
   23 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   myspell-mk-20060316.ebuild:
