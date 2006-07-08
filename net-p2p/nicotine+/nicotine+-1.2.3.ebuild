@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.3.ebuild,v 1.1 2006/07/08 02:46:54 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.3.ebuild,v 1.2 2006/07/08 15:00:52 squinky86 Exp $
 
 inherit distutils eutils multilib toolchain-funcs
 
@@ -41,7 +41,7 @@ src_install() {
 		/usr/$(get_libdir)/python${PYVER}/site-packages
 
 	cd "${S}"/trayicon/
-	make DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	doicon ${FILESDIR}/nicotine-n.png
 	domenu ${FILESDIR}/${PN}.desktop
