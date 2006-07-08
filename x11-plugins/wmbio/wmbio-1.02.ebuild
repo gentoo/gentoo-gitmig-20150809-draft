@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/wmbio-1.02.ebuild,v 1.6 2006/01/24 22:23:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/wmbio-1.02.ebuild,v 1.7 2006/07/08 03:03:21 squinky86 Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ppc64 ~sparc"
+KEYWORDS="~amd64 ppc ppc64 ~sparc x86"
 
 src_unpack()
 {
