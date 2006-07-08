@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.14_pre20060409.ebuild,v 1.3 2006/06/02 20:51:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.14_pre20060409.ebuild,v 1.4 2006/07/08 15:28:55 vapier Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 MY_V=${PV/_pre/-CVS}
 DESCRIPTION="PALO : PArisc Linux Loader"
@@ -14,31 +14,36 @@ SLOT="0"
 KEYWORDS="-* hppa"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 PROVIDE="virtual/bootloader"
 
 S=${WORKDIR}/palo
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PN}-remove-HOME-TERM.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-remove-HOME-TERM.patch
+	epatch "${FILESDIR}"/${PN}-1.14-build.patch
 }
 
 src_compile() {
-	emake -C palo CFLAGS="${CFLAGS} -I../include -I../lib -D__KERNEL_STRICT_NAMES" || die "make palo failed."
-	emake -C ipl CFLAGS="${CFLAGS} -I. -I../lib -I../include -mdisable-fpregs -Wall -D__kernel_timer_t=int -D__kernel_clockid_t=int" || die "make ipl failed."
+	append-flags -D__KERNEL_STRICT_NAMES
+	emake -C palo || die "make palo failed"
+	append-flags -D__kernel_timer_t=int -D__kernel_clockid_t=int
+	emake -C ipl || die "make ipl failed"
 	emake MACHINE=parisc iplboot || die "make iplboot failed."
 }
 
 src_install() {
+	into /
 	dosbin palo/palo || die
 	doman palo.8
 	dohtml README.html
 	dodoc README palo.conf
 
 	insinto /etc
-	doins ${FILESDIR}/palo.conf
+	doins "${FILESDIR}"/palo.conf || die
 
 	insinto /usr/share/palo
-	doins iplboot
+	doins iplboot || die
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/palo
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.17 2006/06/02 20:51:52 gmsoft Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.18 2006/07/08 15:28:55 vapier Exp $
+
+  08 Jul 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/palo-1.14-build.patch, palo-1.14_pre20060409.ebuild:
+  Cleanup build and install palo into /sbin.
 
   02 Jun 2006; Guy Martin <gmsoft@gentoo.org> palo-1.14_pre20060409.ebuild:
   Stable on hppa.
