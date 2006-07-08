@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.4_p1-r1.ebuild,v 1.7 2006/06/28 23:32:56 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.4_p1-r1.ebuild,v 1.8 2006/07/08 22:46:30 cardoe Exp $
 
 # eutils must be inherited since get_libdir() is only
 # globally available on baselayout-1.11 (still on ~arch)
@@ -17,10 +17,10 @@ SRC_URI="http://www.pdflib.com/products/pdflib/download/504src/${MY_P}.tar.gz"
 LICENSE="Aladdin"
 SLOT="5"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 ppc-macos s390"
-IUSE="tcltk perl python java"
+IUSE="tcl perl python java"
 
 DEPEND=">=sys-apps/sed-4
-	tcltk? ( >=dev-lang/tk-8.2 )
+	tcl? ( >=dev-lang/tcl-8.2 )
 	perl? ( >=dev-lang/perl-5.1 )
 	python? ( >=dev-lang/python-2.2 )
 	java? ( >=virtual/jdk-1.3 )"
@@ -37,7 +37,7 @@ src_compile() {
 	# BUG #81197
 	# Danny van Dyk <kugelfang@gentoo.org> 2005/02/14
 	TCLVER="$(echo 'puts [info tclversion]' | $(which tclsh))"
-	use tcltk \
+	use tcl \
 		&& myconf="--with-tclpkg=/usr/$(get_libdir)/tcl${TCLVER}/" \
 		|| myconf="--with-tcl=no"
 	use perl || myconf="${myconf} --with-perl=no"
