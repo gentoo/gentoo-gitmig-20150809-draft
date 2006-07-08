@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.16 2006/06/30 21:59:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.17 2006/07/08 16:55:24 chtekk Exp $
 
 # Linux-dependant flags
 selinux
@@ -94,3 +94,6 @@ video_cards_v4l
 
 # PPC-specific
 altivec
+
+# Apache's MPM-itk requires sys-libs/libcap
+mpm-itk
