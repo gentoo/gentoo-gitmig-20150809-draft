@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.1-r2.ebuild,v 1.1 2006/07/08 15:47:28 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.1-r2.ebuild,v 1.2 2006/07/08 16:31:35 nelchael Exp $
 
 inherit flag-o-matic eutils
 
@@ -41,7 +41,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch ${FILESDIR}/${P}-r1-gentoo.patch
 	epatch ${FILESDIR}/${PN}-0.8.1-hyperspace-viewport.patch
 	cp ${FILESDIR}/jwz-vroot.h ${S}/include/vroot.h
 }
