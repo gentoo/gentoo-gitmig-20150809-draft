@@ -1,6 +1,15 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.94 2006/07/08 03:07:18 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.95 2006/07/08 10:06:15 pylon Exp $
+
+  08 Jul 2006; Lars Weiler <pylon@gentoo.org>
+  -files/cdrdao-1.1.7-gentoo-version.patch,
+  -files/cdrdao-1.1.7-r2-mp32dao-gentoo.diff,
+  -files/cdrdao-1.1.9-cast.patch, -files/cdrdao-1.1.9-ppc64.patch,
+  -files/1.1.8-gcc34.patch, -files/cdrdao-Project.h-gcc3.4.patch,
+  -cdrdao-1.1.7-r3.ebuild, -cdrdao-1.1.9.ebuild, -cdrdao-1.1.9-r2.ebuild,
+  -cdrdao-1.2.0.ebuild, -cdrdao-1.2.0-r1.ebuild:
+  Cleaned out old versions.
 
   08 Jul 2006; Thomas Cort <tcort@gentoo.org> cdrdao-1.2.1-r1.ebuild:
   Stable on alpha wrt Bug #139249.
