@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.98 2006/06/24 21:54:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.99 2006/07/08 16:46:19 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -81,8 +81,8 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm src_com
 # compile??).
 
 
-IUSE="minimal"
-DEPEND=">=dev-lang/perl-5.8.2 !<perl-core/ExtUtils-MakeMaker-6.17"
+IUSE="perl minimal"
+DEPEND="perl? ( dev-lang/perl )"
 RDEPEND="!minimal? ( ${DEPEND} )"
 SRC_PREP="no"
 SRC_TEST="skip"
