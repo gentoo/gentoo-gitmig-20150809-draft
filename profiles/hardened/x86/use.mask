@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.20 2006/06/30 21:58:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.21 2006/07/08 17:16:32 solar Exp $
 
 # We don't have any ppc sub profiles yet. bug #74103
 altivec
@@ -13,6 +13,7 @@ altivec
 -3dnowext
 -win32codecs
 -real
+-kqemu
 
 # Copied from default-linux/x86 2006-04-02; bug #128490
 # Modular X: unmask for architectures on which they are available
@@ -37,3 +38,4 @@ gulm
 pmount
 
 #input_devices_wacom
+-x264
