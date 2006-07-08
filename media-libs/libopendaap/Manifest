@@ -1,10 +1,40 @@
-MD5 871fd60f5cc5dd8594c452d6e8e3f50d ChangeLog 2627
-MD5 86148ed6cd259ca05147ab24675e5df3 files/digest-libopendaap-0.2.3 70
-MD5 fb7b43fda414c12b64540db818f4c497 files/digest-libopendaap-0.3.0 70
-MD5 c16e2833e4aa6d3ab76e63fd9a36bd09 files/digest-libopendaap-0.4.0 70
+AUX libopendaap-0.2.3-types.h 704 RMD160 b6e84695fb080eebdc5b75bf6e4f9534d10c8f0a SHA1 9dab156f48e63d087fd3cafa2eef3fa01176c779 SHA256 4dae32b3ee37146aad6568c8d28c3b3d8fc663d0bb48fe62b0e9861ab7d6e966
 MD5 fb066ffc6e3189f97e3b7b934d1604ed files/libopendaap-0.2.3-types.h 704
+RMD160 b6e84695fb080eebdc5b75bf6e4f9534d10c8f0a files/libopendaap-0.2.3-types.h 704
+SHA256 4dae32b3ee37146aad6568c8d28c3b3d8fc663d0bb48fe62b0e9861ab7d6e966 files/libopendaap-0.2.3-types.h 704
+AUX libopendaap-0.3.0-types.h 610 RMD160 b81782131cf643f34e729aab275be23fba7b1aeb SHA1 972e12e71852c17cb9951724626930195bd5e9d7 SHA256 60293bfa981ec124bdd6655bcecf250e4e2316aa7440cab2eed1463e5b47ff8f
 MD5 5d449c7e532679f6cb0aca9271b5c4c0 files/libopendaap-0.3.0-types.h 610
+RMD160 b81782131cf643f34e729aab275be23fba7b1aeb files/libopendaap-0.3.0-types.h 610
+SHA256 60293bfa981ec124bdd6655bcecf250e4e2316aa7440cab2eed1463e5b47ff8f files/libopendaap-0.3.0-types.h 610
+DIST libopendaap-0.2.3.tar.bz2 360110
+DIST libopendaap-0.3.0.tar.bz2 365682
+DIST libopendaap-0.4.0.tar.bz2 241953
+EBUILD libopendaap-0.2.3.ebuild 743 RMD160 aa74dcd1dc8e2dbda147bdf9aa9fbb16a9d77b3c SHA1 386886654f7ebb80449cc54b6735edece2410df0 SHA256 d93d702ca6e1362db57d9ac300041390ee263e5cc3213ab543af3c5d104803c0
 MD5 0267fcdc10785b38d793ee087e7210c6 libopendaap-0.2.3.ebuild 743
+RMD160 aa74dcd1dc8e2dbda147bdf9aa9fbb16a9d77b3c libopendaap-0.2.3.ebuild 743
+SHA256 d93d702ca6e1362db57d9ac300041390ee263e5cc3213ab543af3c5d104803c0 libopendaap-0.2.3.ebuild 743
+EBUILD libopendaap-0.3.0.ebuild 751 RMD160 bee46c64aa3c71a6b55a80846f8c71411a41a291 SHA1 c623207c48cf49dc2c305b2a06f23dcb184eb546 SHA256 0126319a98b834220e438aa4b11a883c2845de7cd421ae2058e3d2078eb4ffbf
 MD5 9e3954a4aa6939352f2fafb0c8429c8e libopendaap-0.3.0.ebuild 751
-MD5 1986ee5c70e3afe9f19ea1722278699b libopendaap-0.4.0.ebuild 684
+RMD160 bee46c64aa3c71a6b55a80846f8c71411a41a291 libopendaap-0.3.0.ebuild 751
+SHA256 0126319a98b834220e438aa4b11a883c2845de7cd421ae2058e3d2078eb4ffbf libopendaap-0.3.0.ebuild 751
+EBUILD libopendaap-0.4.0.ebuild 685 RMD160 4591353585e1494af2b6f7dcc400be5602953a47 SHA1 647a71fac704c8b8cd0c0bdf72f8b1bf8b96735b SHA256 27d42de616336f15de68adb675a6ea94c16c305a1bd22f6cbda737e8ee827f30
+MD5 36e66d9e23d1707c6013a4cc872c7d4e libopendaap-0.4.0.ebuild 685
+RMD160 4591353585e1494af2b6f7dcc400be5602953a47 libopendaap-0.4.0.ebuild 685
+SHA256 27d42de616336f15de68adb675a6ea94c16c305a1bd22f6cbda737e8ee827f30 libopendaap-0.4.0.ebuild 685
+MISC ChangeLog 2723 RMD160 10ac60e9d51e46842deb3f5b89506dd4deae2d5c SHA1 27e8d6b19cf547f63651bd7ffaefd8dc6b50f4ca SHA256 392d7f6819e2c3f83bbd1605fc282257e74e2d9f75634dad761c6f7469414dac
+MD5 4d274513cb12c8e6ac68e8ac98081409 ChangeLog 2723
+RMD160 10ac60e9d51e46842deb3f5b89506dd4deae2d5c ChangeLog 2723
+SHA256 392d7f6819e2c3f83bbd1605fc282257e74e2d9f75634dad761c6f7469414dac ChangeLog 2723
+MISC metadata.xml 160 RMD160 828887200387b28c37fc97111fc6bc3a0a2fcccd SHA1 813ef5bc57f6a8d95e7cab7a745a2a824858f49c SHA256 fe06593409e7f28665c032001005e94cb650299711a0af7f1a558bdb56c4004f
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+RMD160 828887200387b28c37fc97111fc6bc3a0a2fcccd metadata.xml 160
+SHA256 fe06593409e7f28665c032001005e94cb650299711a0af7f1a558bdb56c4004f metadata.xml 160
+MD5 86148ed6cd259ca05147ab24675e5df3 files/digest-libopendaap-0.2.3 70
+RMD160 396a5613f5fcb6337af42d36dd782cd524727f28 files/digest-libopendaap-0.2.3 70
+SHA256 a06c6416df093f661eed777674c2738b27921b5c99dba5310d12beebeffee26e files/digest-libopendaap-0.2.3 70
+MD5 fb7b43fda414c12b64540db818f4c497 files/digest-libopendaap-0.3.0 70
+RMD160 455d77b02e031edb0f5c9d7ec9684db0ec329606 files/digest-libopendaap-0.3.0 70
+SHA256 82ca94a34bff5410b862a9c8baa82d465950154e9039c2efaec41d17806f72a1 files/digest-libopendaap-0.3.0 70
+MD5 c16e2833e4aa6d3ab76e63fd9a36bd09 files/digest-libopendaap-0.4.0 70
+RMD160 80529a763122288839980782c8be66ea04bb040a files/digest-libopendaap-0.4.0 70
+SHA256 d1e924276ffa36f7ef3d88d55a109968083fad8bbd28a9d70df97e0d12342edc files/digest-libopendaap-0.4.0 70
