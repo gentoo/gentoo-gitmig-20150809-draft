@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/sun-j2me-bin-2.2-r2.ebuild,v 1.1 2006/07/06 17:30:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/sun-j2me-bin-2.2-r2.ebuild,v 1.2 2006/07/08 14:30:09 nelchael Exp $
 
 inherit java-pkg-2
 
@@ -17,7 +17,8 @@ RESTRICT="fetch"
 # Before going official with this all the jars should be checked for packed stuff
 # I think the lib/jsrXXX.jar probably are at least packed jars
 DEPEND=">=dev-java/sun-jaf-bin-1.0
-		>=dev-java/sun-javamail-bin-1.3"
+		>=dev-java/sun-javamail-bin-1.3
+		dev-java/xsdlib"
 RDEPEND="${DEPEND}
 		>=virtual/jdk-1.4.2"
 
@@ -44,8 +45,10 @@ src_unpack() {
 	fi
 
 	#extract compressed data and unpack
+	ebegin "Unpacking ${BINARY}"
 	dd bs=2048 if=${MY_FILE} of=install.zip skip=10 2>/dev/null || die
 	unzip install.zip >/dev/null || die
+	eend $?
 	rm install.zip
 
 	unpack ${PATCH}
@@ -57,38 +60,41 @@ src_unpack() {
 			${WORKDIR}/bin/${file} || die
 	done
 
-	#replace included jar files with local versions
-	cd bin
-	rm -f activation.jar mail.jar
-	java-pkg_jar-from sun-jaf-bin activation.jar
-	java-pkg_jar-from sun-javamail-bin mail.jar
+	cd ${S}/bin
+	rm -f activation.jar mail.jar xsdlib.jar
 
 }
 
 src_install() {
 
-	local BIN_DESTINATION=/opt/${P}/bin
+	local DIR=/opt/${P}
 	cd ${WORKDIR}
 
-	insinto /opt/${P}
-	exeinto ${BIN_DESTINATION}
+	einfo "Copying files"
+	dodir ${DIR}
+	cp -r appdb bin lib wtklib ${D}/${DIR}
+	use examples && cp -r apps ${D}/${DIR}
 
+	einfo "Setting permissions"
+	chmod 755 ${D}/${DIR}/bin/* || die
+	chmod 644 ${D}/${DIR}/bin/*.jar || die
+
+	einfo "Installing documentation"
 	dohtml *.html
-
 	use doc && java-pkg_dohtml -r docs/*
-	use examples && doins -r apps
 
-	doins -r appdb bin lib wtklib
+	cd ${D}/${DIR}/bin
+	java-pkg_jar-from sun-jaf-bin activation.jar
+	java-pkg_jar-from sun-javamail-bin mail.jar
+	java-pkg_jar-from xsdlib xsdlib.jar
 
-	fperms 755 ${BIN_DESTINATION}/*
-	fperms 644 ${BIN_DESTINATION}/*.jar
+	einfo "Registering jar files"
+	java-pkg_regjar \
+		${D}${DIR}/lib/*.jar \
+		${D}${DIR}/wtklib/kenv.zip \
+		${D}${DIR}/wtklib/*.jar
 
 	dodir /usr/bin
-	dosym ${BIN_DESTINATION}/ktoolbar /usr/bin/ktoolbar
-
-	java-pkg_regjar \
-		/opt/${P}/lib/*.jar \
-		/opt/${P}/wtklib/kenv.zip \
-		/opt/${P}/wtklib/*.jar
+	dosym ${DIR}/bin/ktoolbar /usr/bin/ktoolbar
 
 }
