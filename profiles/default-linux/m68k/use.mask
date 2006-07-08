@@ -42,6 +42,8 @@ emacs
 xemacs
 
 afs
+tcl
+tk
 tcltk
 ldap
 slang
