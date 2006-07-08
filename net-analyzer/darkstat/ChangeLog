@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.16 2006/07/08 02:30:32 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.17 2006/07/08 02:34:39 vanquirius Exp $
+
+  08 Jul 2006; Marcelo Goes <vanquirius@gentoo.org> darkstat-3.0.524.ebuild:
+  Dropping non-x86 keywords for version 3.0.524 as code base has changed a
+  lot. Opening a bug for rekeywording purposes.
 
 *darkstat-3.0.524 (08 Jul 2006)
 
