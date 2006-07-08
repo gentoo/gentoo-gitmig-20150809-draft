@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-fvl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-fvl/ChangeLog,v 1.10 2006/05/24 19:31:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-fvl/ChangeLog,v 1.11 2006/07/08 08:13:51 corsair Exp $
+
+  08 Jul 2006; Markus Rothe <corsair@gentoo.org>
+  fortune-mod-fvl-20030120.ebuild:
+  Stable on ppc64
 
   24 May 2006; Michael Hanselmann <hansmi@gentoo.org>
   fortune-mod-fvl-20030120.ebuild:
