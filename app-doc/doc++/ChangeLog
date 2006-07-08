@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doc++
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.10 2006/05/08 13:27:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.11 2006/07/08 08:03:35 corsair Exp $
+
+  08 Jul 2006; Markus Rothe <corsair@gentoo.org> doc++-3.4.10.ebuild:
+  Stable on ppc64
 
   08 May 2006; Markus Rothe <corsair@gentoo.org> doc++-3.4.10.ebuild:
   Added ~ppc64
