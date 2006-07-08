@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/gimp-user-manual
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-user-manual/ChangeLog,v 1.7 2005/01/01 13:12:46 eradicator Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-user-manual/ChangeLog,v 1.8 2006/07/08 22:21:32 kumba Exp $
+
+  09 Jul 2006; Joshua Kinard <kumba@gentoo.org> gimp-user-manual-2.0.ebuild:
+  Marked stable on mips.
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   gimp-user-manual-2.0.ebuild:
