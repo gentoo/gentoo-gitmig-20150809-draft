@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-2.02.ebuild,v 1.1 2006/03/17 15:07:12 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-2.02.ebuild,v 1.2 2006/07/08 16:43:25 spock Exp $
 
 inherit eutils
 
@@ -18,6 +18,12 @@ RDEPEND="media-libs/libao
 	audacious? ( >=media-sound/audacious-0.2 )"
 
 DEPEND="${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i -e 's@#include <audacious/configfile.h>@@' src/frontends/audacious/*
+}
 
 src_compile() {
 	./configure \
