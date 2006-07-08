@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.3.9.ebuild,v 1.3 2006/06/26 05:24:29 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.3.9.ebuild,v 1.4 2006/07/08 02:04:50 tcort Exp $
 
 inherit alternatives eutils fdo-mime flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gimp/v2.3/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="alsa aalib altivec debug doc gtkhtml gimpprint gnome jpeg lcms mmx mng pdf png python smp sse svg tiff wmf"
 
