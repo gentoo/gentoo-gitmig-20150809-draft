@@ -1,3 +1,4 @@
+app-cdr/bonfire
 dev-util/rootstrap
 media-plugins/gst-plugins-v4l2
 net-firewall/ipsec-tools

@@ -1,2 +1,3 @@
 # Masking this since it requires nptl
 >=sys-libs/glibc-2.4
+app-cdr/bonfire
