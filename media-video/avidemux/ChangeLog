@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.97 2006/04/14 05:28:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.98 2006/07/08 23:09:21 josejx Exp $
+
+  08 Jul 2006; Joseph Jezak <josejx@gentoo.org>
+  +files/avidemux-altivec.patch, avidemux-2.0.42-r1.ebuild:
+  Added altivec patch from bug #107209.
 
   14 Apr 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/avidemux-extra-qualification.diff, avidemux-2.0.42-r1.ebuild:
