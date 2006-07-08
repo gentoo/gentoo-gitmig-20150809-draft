@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.10.1.ebuild,v 1.4 2006/07/07 05:46:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.10.1.ebuild,v 1.5 2006/07/08 01:00:04 humpback Exp $
 
 inherit virtualx multilib eutils
 
@@ -37,6 +37,12 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/gajim-10.1-Makefile.patch
+}
+
 src_compile() {
 	targets="idle gajim.desktop"
 	! use gnome && targets="${targets} trayicon"
@@ -51,13 +57,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use x86; then
-		einfo "If you want to make Gajim run faster,"
-		einfo "emerge dev-python/psyco, an extension"
-		einfo "module which can speed up the execution"
-		einfo "of Python code."
-	fi
-
 	if use amd64; then
 		ewarn
 		ewarn "Because of an unresolved segmentation fault,"
@@ -70,5 +69,4 @@ pkg_postinst() {
 		ewarn "Please see bug #109298."
 		ewarn
 	fi
-
 }

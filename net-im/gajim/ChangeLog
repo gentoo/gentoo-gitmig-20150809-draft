@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.17 2006/07/07 05:46:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.18 2006/07/08 01:00:04 humpback Exp $
+
+  08 Jul 2006; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/gajim-10.1-Makefile.patch, gajim-0.10.1.ebuild:
+  Fixed problem with Makefile (thanks to Dimitur Kirov in bug #139446) and
+  removed psyco reference as gajim nolonger makes use of it.
 
   07 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org> gajim-0.10.1.ebuild:
   fix dep typo
