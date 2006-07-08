@@ -1,0 +1,10 @@
+# ChangeLog for app-cdr/bonfire
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bonfire/ChangeLog,v 1.1 2006/07/08 13:29:17 metalgod Exp $
+
+*bonfire-0.3.91 (08 Jul 2006)
+
+  08 Jul 2006; Luis Medinas <metalgod@gentoo.org> +metadata.xml,
+  +bonfire-0.3.91.ebuild:
+  New package. Thanks to all people involved on bug #116068.
+
