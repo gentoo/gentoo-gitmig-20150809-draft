@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4-r1.ebuild,v 1.3 2006/06/23 21:33:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4-r1.ebuild,v 1.4 2006/07/08 03:24:21 squinky86 Exp $
 
 DESCRIPTION="suid, sgid file and directory checking"
 SRC_URI="http://www.phunnypharm.org/pub/sxid/${P/-/_}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://freshmeat.net/projects/sxid"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc sparc"
+KEYWORDS="~amd64 ~ppc sparc ~x86"
 IUSE=""
 
 RDEPEND="virtual/libc
