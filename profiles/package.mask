@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5606 2006/07/08 16:19:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5607 2006/07/08 20:35:42 spock Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Michał Januszewski <spock@gentoo.org> (08 Jul 2006)
+# Deprecated and pending removal (bug #119923)
+# Please use media-gfx/fbida instead.
+media-gfx/fbi
 
 # Krzysiek Pawlik <nelchael@gentoo.org> (08 Jul 2006)
 # Testing, doesn't build yet.
