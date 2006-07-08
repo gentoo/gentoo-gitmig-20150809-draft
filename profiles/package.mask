@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5600 2006/07/08 01:35:35 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5601 2006/07/08 11:09:11 pylon Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,20 @@
 ##
 ##   End example
 ##
+
+# Lars Weiler <pylon@gentoo.org> (08 Jul 2006)
+# Use app-cdr/cdrtools for DVD burning (yes, it can do it now).
+app-cdr/cdrecord-prodvd
+app-cdr/dvdrtools
+
+# Lars Weiler <pylon@gentoo.org> (08 Jul 2006)
+# Old, rusty, unmaintained.  There are a lot of other gtk2-based
+# CD/DVD-Recording apps.
+app-cdr/xcdroast
+
+# Lars Weiler <pylon@gentoo.org> (08 Jul 2006)
+# Unmaintained in portage and missing dependency
+rox-extra/roxiso
 
 # Marcelo Goes <vanquirius@gentoo.org> (07 Jul 2006)
 # Masked for testing
