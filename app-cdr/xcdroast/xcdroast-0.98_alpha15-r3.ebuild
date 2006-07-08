@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.19 2005/10/14 14:09:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.20 2006/07/08 12:42:22 metalgod Exp $
 
 inherit eutils
 
@@ -12,16 +12,11 @@ SRC_URI="mirror://sourceforge/xcdroast/${P/_/}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
-IUSE="nls dvdr"
+IUSE="nls"
 
-DEPEND=">=x11-libs/gtk+-2.0.3
-	"
+DEPEND=">=x11-libs/gtk+-2.0.3"
 
-RDEPEND="
-	dvdr? (
-		x86? ( app-cdr/cdrecord-prodvd )
-	)
-	virtual/cdrtools"
+RDEPEND="virtual/cdrtools"
 
 src_unpack() {
 	unpack ${P/_/}.tar.gz

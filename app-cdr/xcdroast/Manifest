@@ -1,17 +1,39 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 70e4ada20ce048fa42c3ad8f5d78d491 ChangeLog 8101
+AUX 64bit_gsize.patch 471 RMD160 629cc85cf526801a077cc73ff6b597799418869c SHA1 fefe0b3b18e4df6e947fec7d5ba8c8e802970965 SHA256 71a46d1afb8ed22c1a5d49c4ad655bc273136cfad3d67624ea940a860d610e6e
 MD5 121eabf95d22bf4f85b5c0426bf133a5 files/64bit_gsize.patch 471
-MD5 c74d0c61a25d9eefcba4401b5ffdfa0d files/digest-xcdroast-0.98_alpha15-r3 159
+RMD160 629cc85cf526801a077cc73ff6b597799418869c files/64bit_gsize.patch 471
+SHA256 71a46d1afb8ed22c1a5d49c4ad655bc273136cfad3d67624ea940a860d610e6e files/64bit_gsize.patch 471
+AUX gtk2locale.patch 643 RMD160 65ae2d7db3862056622bc0120fe2d607dd991875 SHA1 bb3d2f2c7edede86af6c367c8b5b09339251250c SHA256 30f4daa092c9321f4d43d26541b7a4403e20104abdc766d00735f5972b443854
 MD5 ccb3a30dc25ffa6c7d78b64ea8cb7f75 files/gtk2locale.patch 643
+RMD160 65ae2d7db3862056622bc0120fe2d607dd991875 files/gtk2locale.patch 643
+SHA256 30f4daa092c9321f4d43d26541b7a4403e20104abdc766d00735f5972b443854 files/gtk2locale.patch 643
+AUX xcdroast-0.98alpha15-dvd.patch 15532 RMD160 0a871e0f4a52477a05347c5c7184b157e4c7a8ab SHA1 c6fc10ac94fa8b9826580a4fcf4e9d5466ea41c1 SHA256 0bfe89f5a18a990b5a20fec1ee1cb3129c8268000a5b039cff47fabeb2a953ab
 MD5 26768959e3621b77b59f887551742eba files/xcdroast-0.98alpha15-dvd.patch 15532
+RMD160 0a871e0f4a52477a05347c5c7184b157e4c7a8ab files/xcdroast-0.98alpha15-dvd.patch 15532
+SHA256 0bfe89f5a18a990b5a20fec1ee1cb3129c8268000a5b039cff47fabeb2a953ab files/xcdroast-0.98alpha15-dvd.patch 15532
+DIST xcdroast-0.98_alpha15_new_configure.tar.gz 82301
+DIST xcdroast-0.98alpha15.tar.gz 3282794
+EBUILD xcdroast-0.98_alpha15-r3.ebuild 1991 RMD160 b7dce014a1799ddfef84e8c4b8559d55297ddab6 SHA1 c1fd0bc42c9cc90ae3f17d9dac5158a188e552f9 SHA256 b3ffae34aeed397136a2bae03741b43ec128a2b2c51eaf5845869d38f670e522
+MD5 afc00edc1b84963f11b53dccff4cbf08 xcdroast-0.98_alpha15-r3.ebuild 1991
+RMD160 b7dce014a1799ddfef84e8c4b8559d55297ddab6 xcdroast-0.98_alpha15-r3.ebuild 1991
+SHA256 b3ffae34aeed397136a2bae03741b43ec128a2b2c51eaf5845869d38f670e522 xcdroast-0.98_alpha15-r3.ebuild 1991
+MISC ChangeLog 8101 RMD160 adf177eceb73d67a6fba5efc0e70c67a365eea8e SHA1 7fcdcd2ed634c43540ead366ba8fded984831fe2 SHA256 b5ea94f391f0e37863ee5ae171fbde2a7b2c02a456589bc3d8aa9c3a77ffcda3
+MD5 70e4ada20ce048fa42c3ad8f5d78d491 ChangeLog 8101
+RMD160 adf177eceb73d67a6fba5efc0e70c67a365eea8e ChangeLog 8101
+SHA256 b5ea94f391f0e37863ee5ae171fbde2a7b2c02a456589bc3d8aa9c3a77ffcda3 ChangeLog 8101
+MISC metadata.xml 247 RMD160 7a2b92c08eec2dc74474226529601870161ced75 SHA1 30e2f8e33a1a0ccd255272d40b84fadfe13c90d5 SHA256 4e1e94075219a6cc8cde9d7249eeacbb64f0ec101401aa58aec45e5ad901f2ed
 MD5 c7cf0bf2a01fd5bb41778f1941040287 metadata.xml 247
-MD5 0dfbe037ee5bfec359ad281f5d459e54 xcdroast-0.98_alpha15-r3.ebuild 2047
+RMD160 7a2b92c08eec2dc74474226529601870161ced75 metadata.xml 247
+SHA256 4e1e94075219a6cc8cde9d7249eeacbb64f0ec101401aa58aec45e5ad901f2ed metadata.xml 247
+MD5 c74d0c61a25d9eefcba4401b5ffdfa0d files/digest-xcdroast-0.98_alpha15-r3 159
+RMD160 e95fcb841df8f9f4a447fbdd5e4828a393058eea files/digest-xcdroast-0.98_alpha15-r3 159
+SHA256 bd7ffc1e9f8d2dabba18cd6c66a281a226ddc1ace079876cae0cdab731583434 files/digest-xcdroast-0.98_alpha15-r3 159
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFDT7xNKRy60XGEcJIRArGeAKCbZXxf6W4eEFNME5K9XmeB07AtrQCeOVcs
-eaMjRlRwxNg4gskvXIZobhE=
-=42CY
+iD8DBQFEr6hCwUpWvClEHQoRArKMAJsHUWaXk2+Ph7qHQqQH19gK6IilfwCfaGP2
+GJwIw09tuiXuspYZR3eKmwU=
+=c6wx
 -----END PGP SIGNATURE-----
