@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5603 2006/07/08 12:38:35 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5604 2006/07/08 13:02:07 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Krzysiek Pawlik <nelchael@gentoo.org> (08 Jul 2006)
+# Testing, doesn't build yet.
+dev-java/proguard
 
 # Luis Medinas <metalgod@gentoo.org> (08 Jul 2006)
 # Dead upstream it needs to be removed.
