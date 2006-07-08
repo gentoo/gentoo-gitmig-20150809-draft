@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/kmobiletools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.11 2006/06/07 19:51:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.12 2006/07/08 17:24:00 flameeyes Exp $
+
+*kmobiletools-0.5_pre20060707 (08 Jul 2006)
+
+  08 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +kmobiletools-0.5_pre20060707.ebuild:
+  Update snapshot as requested by Marco Gulino (upstream).
 
   07 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   kmobiletools-0.5_pre20060424.ebuild:
