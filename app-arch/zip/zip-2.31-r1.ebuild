@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.31-r1.ebuild,v 1.2 2006/07/07 15:35:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.31-r1.ebuild,v 1.3 2006/07/08 13:55:52 flameeyes Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -20,10 +20,10 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/zip-2.3-unix_configure-pic.patch
 	epatch "${FILESDIR}"/${P}-exec-stack.patch
+	epatch "${FILESDIR}"/${P}-make.patch
 	cd unix
 	use crypt || append-flags -DNO_CRYPT
 	sed -i -e "s:-O2:${CFLAGS}:" Makefile
-	[[ -n $(type -p gmake) ]] && sed -i -e '/^MAKE/ s:\<make\>:gmake:' Makefile
 }
 
 src_compile() {

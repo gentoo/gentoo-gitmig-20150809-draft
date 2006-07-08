@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/zip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.45 2006/07/07 15:35:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.46 2006/07/08 13:55:52 flameeyes Exp $
+
+  08 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/zip-2.31-make.patch, zip-2.31-r1.ebuild:
+  Replace gmake workaround with proper fix, thanks Mike in bug #139663.
 
   07 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> zip-2.31-r1.ebuild:
   Use gmake instead of make when available (non-intrusive fix for FreeBSD).
