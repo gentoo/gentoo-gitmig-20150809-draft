@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.25 2006/07/08 14:31:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.26 2006/07/08 15:28:15 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -159,6 +159,14 @@ vdr-plugin_src_unpack() {
 			ebegin "  Correcting CXXFLAGS"
 			sed -i Makefile \
 				-e 's:^CXXFLAGS:#CXXFLAGS:'
+			eend $?
+
+			ebegin "  Disabling file stripping"
+			sed -i Makefile \
+				-e '/@.*strip/d' \
+				-e '/strip \$(LIBDIR)\/\$@/d' \
+				-e '/^STRIP =/d' \
+				-e '/@.*\$(STRIP)/d'
 			eend $?
 			;;
 		esac
