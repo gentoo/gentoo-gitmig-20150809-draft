@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/polymer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/polymer/ChangeLog,v 1.11 2006/06/09 06:48:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/polymer/ChangeLog,v 1.12 2006/07/08 08:43:24 corsair Exp $
+
+  08 Jul 2006; Markus Rothe <corsair@gentoo.org> polymer-0.3.2.ebuild:
+  Stable on ppc64
 
   09 Jun 2006; Markus Rothe <corsair@gentoo.org> polymer-0.3.2.ebuild:
   Added ~ppc64

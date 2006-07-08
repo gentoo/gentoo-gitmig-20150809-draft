@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/polymer/polymer-0.3.2.ebuild,v 1.7 2006/06/09 06:48:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/polymer/polymer-0.3.2.ebuild,v 1.8 2006/07/08 08:43:24 corsair Exp $
 
 inherit qt3
 
@@ -10,7 +10,7 @@ SRC_URI="http://static.int.pl/~mig21/dev/releases/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="mmx sse2"
 
 DEPEND="$(qt_min_version 3.3)"

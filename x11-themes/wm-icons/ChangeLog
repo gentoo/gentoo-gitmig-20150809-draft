@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/wm-icons
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.15 2006/05/19 18:06:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.16 2006/07/08 08:44:11 corsair Exp $
+
+  08 Jul 2006; Markus Rothe <corsair@gentoo.org>
+  wm-icons-0.4.0_pre1-r1.ebuild:
+  Stable on ppc64
 
   19 May 2006; Markus Rothe <corsair@gentoo.org> wm-icons-0.3.0.ebuild,
   wm-icons-0.4.0_pre1.ebuild, wm-icons-0.4.0_pre1-r1.ebuild:
