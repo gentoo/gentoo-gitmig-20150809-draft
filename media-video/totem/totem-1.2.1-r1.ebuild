@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.1-r1.ebuild,v 1.1 2006/07/03 11:49:37 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.1-r1.ebuild,v 1.2 2006/07/08 03:03:36 mr_bones_ Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -32,8 +32,7 @@ RDEPEND=">=dev-libs/glib-2.6.3
 		=media-libs/gst-plugins-0.8*
 		=media-plugins/gst-plugins-gnomevfs-0.8*
 		=media-plugins/gst-plugins-pango-0.8*
-		|| ( =media-plugins/gst-plugins-ffmpeg-0.8.6
-			~media-plugins/gst-plugins-ffmpeg-0.8.7 )
+		~media-plugins/gst-plugins-ffmpeg-0.8.7
 		mad? ( =media-plugins/gst-plugins-mad-0.8* )
 		mpeg? ( =media-plugins/gst-plugins-mpeg2dec-0.8* )
 		ogg? ( =media-plugins/gst-plugins-ogg-0.8* )

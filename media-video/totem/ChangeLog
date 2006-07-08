@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.117 2006/07/07 16:36:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.118 2006/07/08 03:03:36 mr_bones_ Exp $
+
+  08 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  totem-1.2.1-r1.ebuild:
+  remove optional dep that is no longer in portage
 
   07 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> totem-1.4.2-r1.ebuild:
   Add dep for gst-plugins-good.  Bug #139440
