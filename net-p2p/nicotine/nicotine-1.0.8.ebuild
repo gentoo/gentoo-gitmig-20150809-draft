@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/nicotine-1.0.8.ebuild,v 1.5 2006/07/07 00:30:25 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/nicotine-1.0.8.ebuild,v 1.6 2006/07/08 02:46:33 squinky86 Exp $
 
 inherit distutils
 
@@ -18,7 +18,8 @@ DEPEND="virtual/python
 	vorbis? ( >=dev-python/pyvorbis-1.4-r1
 			  >=dev-python/pyogg-1 )
 	geoip? ( >=dev-python/geoip-python-0.2.0
-			 >=dev-libs/geoip-1.2.1 )"
+			 >=dev-libs/geoip-1.2.1 )
+	!net-p2p/nicotine+"
 
 src_install() {
 
