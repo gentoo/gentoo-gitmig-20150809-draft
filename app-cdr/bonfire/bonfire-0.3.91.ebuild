@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bonfire/bonfire-0.3.91.ebuild,v 1.1 2006/07/08 13:29:17 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bonfire/bonfire-0.3.91.ebuild,v 1.2 2006/07/08 13:40:20 metalgod Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="beagle libnotify totem nls"
+IUSE="beagle gdl libnotify totem nls"
 
 RDEPEND=">=x11-libs/gtk+-2.8
 	>=gnome-base/libgnome-2.14
@@ -21,6 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	>=media-libs/gst-plugins-base-0.10.6
 	>=gnome-extra/nautilus-cd-burner-2.14.2
 	>=dev-libs/libxml2-2.6
+	gdl? ( >=dev-libs/gdl-0.6 )
 	totem? ( >=media-video/totem-1.4.2 )
 	beagle? ( >=app-misc/beagle-0.2.5 )
 	libnotify? ( >=x11-libs/libnotify-0.3 )"
