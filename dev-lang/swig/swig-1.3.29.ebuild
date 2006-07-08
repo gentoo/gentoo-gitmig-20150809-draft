@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.29.ebuild,v 1.1 2006/05/22 05:46:19 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.29.ebuild,v 1.2 2006/07/08 22:34:28 cardoe Exp $
 
 inherit flag-o-matic mono eutils #48511
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
-IUSE="doc guile java lua mono ocaml perl php pike python ruby tcltk X"
+IUSE="doc guile java lua mono ocaml perl php pike python ruby tcl tk"
 RESTRICT="test"
 
 DEPEND="lua? ( dev-lang/lua )
@@ -24,10 +24,8 @@ DEPEND="lua? ( dev-lang/lua )
 	python? ( virtual/python )
 	ocaml? ( dev-lang/ocaml )
 	ruby? ( virtual/ruby )
-	tcltk? (
-		dev-lang/tcl
-		X? ( dev-lang/tk )
-	)"
+	tcl? ( dev-lang/tcl )
+	tk? ( dev-lang/tk )"
 
 src_compile() {
 	strip-flags
@@ -39,8 +37,8 @@ src_compile() {
 	fi
 
 	econf \
-		$(use_with X x) \
-		$(use_with tcltk tcl) \
+		$(use_with tk x) \
+		$(use_with tcl) \
 		$(use_with python python python) \
 		$(use_with perl perl5 /usr/bin/perl) \
 		$(use_with java java "${JAVA_HOME}") \

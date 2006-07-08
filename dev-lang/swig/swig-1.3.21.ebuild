@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.32 2006/01/07 19:04:31 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.33 2006/07/08 22:34:28 cardoe Exp $
 
 inherit flag-o-matic mono #48511
 
@@ -11,17 +11,15 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 sh ppc64"
-IUSE="doc java guile python tcltk ruby perl php X"
+IUSE="doc java guile python tcl tk ruby perl php"
 
 DEPEND="virtual/libc
 	python? ( >=dev-lang/python-2.0 )
 	java? ( virtual/jdk )
 	ruby? ( virtual/ruby )
 	guile? ( >=dev-util/guile-1.4 )
-	tcltk? (
-		dev-lang/tcl
-		X? ( dev-lang/tk )
-	)
+	tcl? ( dev-lang/tcl )
+	tk? ( dev-lang/tk )
 	perl? ( >=dev-lang/perl-5.6.1 )
 	php? ( virtual/php )"
 
@@ -48,13 +46,13 @@ src_compile() {
 		`use_with java javaincl "${JAVA_HOME}/include"` \
 		`use_with ruby ruby /usr/bin/ruby` \
 		`use_with guile` \
-		`use_with tcltk tcl` \
+		`use_with tcl` \
 		`use_with perl perl5 /usr/bin/perl` \
 		`use_with php php4` \
 		|| die
 
 	# fix the broken configure script
-	use tcltk || sed -i -e "s:am__append_1 =:#am__append_1 =:" Runtime/Makefile
+	use tcl || sed -i -e "s:am__append_1 =:#am__append_1 =:" Runtime/Makefile
 
 	`has_version dev-lisp/plt` && PLT=/usr/share/plt/collects
 	`has_version dev-lisp/mzscheme` && PLT=/usr/share/mzscheme/collects

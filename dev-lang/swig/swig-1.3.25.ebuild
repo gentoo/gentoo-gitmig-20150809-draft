@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.25.ebuild,v 1.9 2006/07/07 14:02:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.25.ebuild,v 1.10 2006/07/08 22:34:28 cardoe Exp $
 
 inherit flag-o-matic mono eutils #48511
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc-macos ppc64 ~s390 ~sparc x86"
-IUSE="doc guile java perl php python ruby tcltk X"
+IUSE="doc guile java perl php python ruby tcl tk"
 
 DEPEND="virtual/libc
 	guile? ( >=dev-util/guile-1.4 )
@@ -20,10 +20,8 @@ DEPEND="virtual/libc
 	php? ( virtual/php )
 	python? ( virtual/python )
 	ruby? ( virtual/ruby )
-	tcltk? (
-		dev-lang/tcl
-		X? ( dev-lang/tk )
-	)"
+	tcl? ( dev-lang/tcl )
+	tk? ( dev-lang/tk )"
 
 src_compile() {
 	strip-flags
@@ -42,7 +40,7 @@ src_compile() {
 		$(use_with php php4) \
 		$(use_with python python python) \
 		$(use_with ruby ruby /usr/bin/ruby) \
-		$(use_with tcltk tcl) \
+		$(use_with tcl) \
 		|| die
 
 	has_version dev-lisp/mzscheme && PLT=/usr/share/mzscheme/collects
