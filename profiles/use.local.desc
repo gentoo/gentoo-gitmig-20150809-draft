@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2006 2006/07/08 02:15:44 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2007 2006/07/08 13:25:52 metalgod Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -44,6 +44,9 @@ app-backup/dar:dar64 - Enables --enable-mode=64 option, which replace infinint b
 app-backup/kdar:dar32 - Support libdar32.so to use.
 app-backup/kdar:dar64 - Support libdar64.so to use.
 app-backup/rdiff-backup:xattr - if you want extended attributes enabled
+app-cdr/bonfire:beagle - Enable Beagle support for searches.
+app-cdr/bonfire:libnotify - Enable libinotify support for system notifications.
+app-cdr/bonfire:totem - Enable support for Totem playlists.
 app-cdr/cdrdao:pccts - Use dev-util/pccts instead of the built-in substitution.
 app-cdr/cdrtools:on-the-fly-crypt - On the fly AES encryption for CD-Rs.
 app-cdr/disc-cover:cdrom - Enable audio CD support. This is not needed to make www-apps/disc-cover work.
